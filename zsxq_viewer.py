@@ -11,7 +11,10 @@ PDFs open in a new browser tab when you click "Open PDF".
 """
 
 import argparse
+import json
 import sqlite3
+import traceback
+import urllib.error
 import urllib.request
 import uuid
 from pathlib import Path
@@ -356,24 +359,47 @@ def index():
     )
 
 
-def _post_to_boox(path: Path) -> None:
-    """Upload a file to the BOOX device via multipart POST."""
+def _post_to_boox(path: Path) -> str:
+    """Upload a file to the BOOX device via multipart POST.
+
+    Returns the device path on success; raises RuntimeError on failure.
+    """
+    size_mb = path.stat().st_size / 1_048_576
+    print(f"[BOOX] → uploading {path.name!r}  ({size_mb:.1f} MB)  to {BOOX_URL}")
+
     boundary = uuid.uuid4().hex
     with open(path, "rb") as fh:
         file_data = fh.read()
+
     body = (
         f"--{boundary}\r\n"
         f'Content-Disposition: form-data; name="file"; filename="{path.name}"\r\n'
         f"Content-Type: application/octet-stream\r\n\r\n"
     ).encode() + file_data + f"\r\n--{boundary}--\r\n".encode()
+
     req = urllib.request.Request(
         BOOX_URL,
         data=body,
         headers={"Content-Type": f"multipart/form-data; boundary={boundary}"},
         method="POST",
     )
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        resp.read()
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            raw = resp.read().decode()
+            print(f"[BOOX] ← HTTP {resp.status}  body: {raw}")
+            result = json.loads(raw)
+            if not result.get("successful"):
+                raise RuntimeError(f"BOOX rejected upload: {result.get('message', raw)}")
+            device_path = result.get("message", "")
+            print(f"[BOOX] ✓ success  device_path={device_path}")
+            return device_path
+    except urllib.error.HTTPError as exc:
+        body_text = exc.read().decode()
+        print(f"[BOOX] ✗ HTTP error {exc.code}: {body_text}")
+        raise RuntimeError(f"BOOX HTTP {exc.code}: {body_text}") from exc
+    except urllib.error.URLError as exc:
+        print(f"[BOOX] ✗ connection error: {exc.reason}")
+        raise RuntimeError(f"Cannot reach BOOX at {BOOX_URL}: {exc.reason}") from exc
 
 
 @app.route("/send-to-boox/<int:file_id>", methods=["POST"])
@@ -385,17 +411,25 @@ def send_to_boox(file_id: int):
     ).fetchone()
     conn.close()
 
+    print(f"[BOOX] request  file_id={file_id}")
+
     if not row or not row["local_path"]:
+        print(f"[BOOX] ✗ no local_path in DB for file_id={file_id}")
         return jsonify(ok=False, error="No local file recorded for this entry."), 404
 
     path = Path(row["local_path"])
+    print(f"[BOOX] local_path={path}  exists={path.exists()}")
+
     if not path.exists():
-        return jsonify(ok=False, error=f"File not found on disk: {path}"), 404
+        print(f"[BOOX] ✗ file missing on disk: {path}")
+        return jsonify(ok=False, error=f"File not found on disk: {path.name}"), 404
 
     try:
-        _post_to_boox(path)
-        return jsonify(ok=True)
+        device_path = _post_to_boox(path)
+        return jsonify(ok=True, device_path=device_path)
     except Exception as exc:
+        print(f"[BOOX] ✗ upload exception: {exc}")
+        traceback.print_exc()
         return jsonify(ok=False, error=str(exc)), 502
 
 
