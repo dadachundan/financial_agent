@@ -42,10 +42,25 @@ try:
         print(f"Could not find watchlist button: {e}")
         print("You may need to log in first or the watchlist is in a different location")
 
+    # Extract and print watchlist items
+    try:
+        # Wait for watchlist items to load
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_all_elements_located((By.XPATH, "//div[contains(@class, 'watchlist')]//tr"))
+        )
+
+        # Get all watchlist items
+        watchlist_items = driver.find_elements(By.XPATH, "//div[contains(@class, 'watchlist')]//tr")
+        print(f"\nWatchlist items ({len(watchlist_items)}):")
+        for item in watchlist_items:
+            print(f"  - {item.text}")
+    except Exception as e:
+        print(f"Could not extract watchlist items: {e}")
+
     # Keep browser open for inspection
     print("Browser will stay open for 60 seconds...")
     print(f"Current URL: {driver.current_url}")
-    time.sleep(60)
+    time.sleep(360)
 
 except Exception as e:
     print(f"Error occurred: {e}")
