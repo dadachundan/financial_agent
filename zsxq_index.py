@@ -46,6 +46,23 @@ DEFAULT_CHROME_PROFILE = SCRIPT_DIR / "chrome_profile"
 DEFAULT_DB = SCRIPT_DIR / "zsxq.db"
 DEFAULT_DOWNLOADS = Path("~/Downloads/zsxq_reports").expanduser()
 
+# ── Load config.py (search upward so worktree runs work too) ──────────────────
+def _find_project_root() -> Path | None:
+    """Walk up from SCRIPT_DIR until we find a directory containing config.py."""
+    for parent in [SCRIPT_DIR, *SCRIPT_DIR.parents]:
+        if (parent / "config.py").exists():
+            return parent
+    return None
+
+_CONFIG_MINIMAX_KEY: str = ""
+_project_root = _find_project_root()
+if _project_root and str(_project_root) not in sys.path:
+    sys.path.insert(0, str(_project_root))
+try:
+    from config import MINIMAX_API_KEY as _CONFIG_MINIMAX_KEY  # type: ignore
+except ImportError:
+    pass
+
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
                   "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
@@ -328,6 +345,35 @@ def upsert_entry(conn: sqlite3.Connection, row: dict):
     )
 
 
+# ── Download helpers (mirrors zsxq_downloader.py) ────────────────────────────
+
+def sanitize_filename(name: str) -> str:
+    import re
+    return re.sub(r'[\\/:*?"<>|]', '_', name)
+
+
+def get_download_url(session: requests.Session, file_id: int) -> str | None:
+    url = f"{API_BASE}/files/{file_id}/download_url"
+    resp = session.get(url, headers=HEADERS)
+    resp.raise_for_status()
+    data = resp.json()
+    if not data.get("succeeded"):
+        return None
+    return data["resp_data"]["download_url"]
+
+
+def download_file(session: requests.Session, download_url: str, dest_path: Path) -> int:
+    resp = session.get(download_url, stream=True, headers=HEADERS)
+    resp.raise_for_status()
+    dest_path.parent.mkdir(parents=True, exist_ok=True)
+    written = 0
+    with open(dest_path, "wb") as f:
+        for chunk in resp.iter_content(chunk_size=65536):
+            f.write(chunk)
+            written += len(chunk)
+    return written
+
+
 # ── Tracker (from zsxq_downloader.py) ────────────────────────────────────────
 
 def load_tracker(downloads_dir: Path) -> dict:
@@ -335,6 +381,11 @@ def load_tracker(downloads_dir: Path) -> dict:
     if path.exists():
         return json.loads(path.read_text())
     return {}
+
+
+def save_tracker(downloads_dir: Path, tracker: dict) -> None:
+    path = downloads_dir / "downloaded.json"
+    path.write_text(json.dumps(tracker, indent=2, ensure_ascii=False))
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -365,7 +416,8 @@ def main():
     parser.add_argument("--reclassify", action="store_true",
                         help="Re-run classification on ALL rows, overwriting existing results.")
     parser.add_argument("--minimax-key", default=None, metavar="KEY",
-                        help="MiniMax API key. Falls back to MINIMAX_API_KEY env var.")
+                        help="MiniMax API key. Falls back to config.py MINIMAX_API_KEY "
+                             "or MINIMAX_API_KEY env var.")
     parser.add_argument("--classify-delay", type=float, default=1.0,
                         help="Seconds between MiniMax API calls (default: 1.0)")
     args = parser.parse_args()
@@ -460,29 +512,34 @@ def main():
     # ── Optional MiniMax classification ──────────────────────────────────────
     if args.classify:
         import os
-        minimax_key = args.minimax_key or os.environ.get("MINIMAX_API_KEY", "")
+        minimax_key = (args.minimax_key
+                       or _CONFIG_MINIMAX_KEY
+                       or os.environ.get("MINIMAX_API_KEY", ""))
         if not minimax_key:
             print("\nERROR: --classify requires a MiniMax API key via "
-                  "--minimax-key or MINIMAX_API_KEY env var.")
+                  "--minimax-key, config.py MINIMAX_API_KEY, or MINIMAX_API_KEY env var.")
         else:
             if args.reclassify:
                 to_classify = conn.execute(
-                    "SELECT file_id, name, summary FROM pdf_files ORDER BY create_time DESC"
+                    "SELECT file_id, name, summary, local_path "
+                    "FROM pdf_files ORDER BY create_time DESC"
                 ).fetchall()
             else:
                 to_classify = conn.execute(
-                    "SELECT file_id, name, summary FROM pdf_files "
-                    "WHERE ai_robotics_related IS NULL ORDER BY create_time DESC"
+                    "SELECT file_id, name, summary, local_path "
+                    "FROM pdf_files WHERE ai_robotics_related IS NULL "
+                    "ORDER BY create_time DESC"
                 ).fetchall()
 
             print(f"\nClassifying {len(to_classify)} PDF(s) via MiniMax "
                   f"({'reclassify all' if args.reclassify else 'unclassified only'})...")
 
-            yes_count = no_count = err_count = 0
+            yes_count = no_count = err_count = dl_ok = dl_fail = 0
             for i, row in enumerate(to_classify, 1):
-                file_id = row["file_id"]
-                name    = row["name"]
-                summary = row["summary"] or ""
+                file_id    = row["file_id"]
+                name       = row["name"]
+                summary    = row["summary"] or ""
+                local_path = row["local_path"]
                 print(f"  [{i}/{len(to_classify)}] {name[:65]}")
 
                 analysis, is_related = classify_with_minimax(
@@ -501,14 +558,49 @@ def main():
 
                 print(f"           → {label}  |  {analysis[:80].strip()!r}")
 
+                # Auto-download if AI/Robotics-related and not yet on disk
+                if is_related is True and not local_path:
+                    print(f"           → AI-related: downloading...")
+                    dl_url = get_download_url(session, file_id)
+                    if dl_url:
+                        safe_name = sanitize_filename(name)
+                        dest = downloads_dir / safe_name
+                        try:
+                            written = download_file(session, dl_url, dest)
+                            local_path = str(dest)
+                            dl_ts = datetime.now().isoformat()
+                            # Update in-memory tracker and persist to JSON
+                            tracker[str(file_id)] = {
+                                "name": name,
+                                "path": local_path,
+                                "size": written,
+                                "downloaded_at": dl_ts,
+                            }
+                            save_tracker(downloads_dir, tracker)
+                            print(f"           → saved {written/1024/1024:.1f}MB → {dest.name}")
+                            dl_ok += 1
+                        except Exception as e:
+                            print(f"           → download failed: {e}")
+                            dl_fail += 1
+                    else:
+                        print(f"           → could not get download URL")
+                        dl_fail += 1
+
                 conn.execute(
                     """UPDATE pdf_files
                        SET ai_robotics_analysis = ?,
                            ai_robotics_related  = ?,
+                           local_path           = COALESCE(?, local_path),
+                           downloaded_at        = COALESCE(
+                               (SELECT downloaded_at FROM pdf_files WHERE file_id = ?),
+                               ?),
                            indexed_at           = ?
                      WHERE file_id = ?""",
                     (analysis,
                      1 if is_related is True else (0 if is_related is False else None),
+                     local_path,          # new local_path (None = keep existing)
+                     file_id,             # for the sub-select
+                     tracker.get(str(file_id), {}).get("downloaded_at"),
                      datetime.now().isoformat(),
                      file_id),
                 )
@@ -517,8 +609,9 @@ def main():
                 if i < len(to_classify):
                     time.sleep(args.classify_delay)
 
+            dl_msg = f"  Auto-downloaded: {dl_ok} OK, {dl_fail} failed\n" if (dl_ok or dl_fail) else ""
             print(f"\n  Classification done: {yes_count} YES, {no_count} NO, "
-                  f"{err_count} parse errors")
+                  f"{err_count} parse errors\n{dl_msg}")
 
     conn.close()
 
