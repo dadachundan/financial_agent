@@ -33,32 +33,14 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import requests
+from minimax import call_minimax, MINIMAX_API_KEY as _CONFIG_MINIMAX_KEY, project_root as _project_root  # type: ignore
 
 API_BASE = "https://api.zsxq.com/v2"
-MINIMAX_API_URL = "https://api.minimax.io/v1/text/chatcompletion_v2"
-MINIMAX_MODEL = "MiniMax-Text-01"
 
 SCRIPT_DIR = Path(__file__).parent
 DEFAULT_CHROME_PROFILE = SCRIPT_DIR / "chrome_profile"
 DEFAULT_DB = SCRIPT_DIR / "zsxq.db"
 DEFAULT_DOWNLOADS = Path("~/Downloads/zsxq_reports").expanduser()
-
-# ── Load config.py (search upward so worktree runs work too) ──────────────────
-def _find_project_root() -> Path | None:
-    """Walk up from SCRIPT_DIR until we find a directory containing config.py."""
-    for parent in [SCRIPT_DIR, *SCRIPT_DIR.parents]:
-        if (parent / "config.py").exists():
-            return parent
-    return None
-
-_CONFIG_MINIMAX_KEY: str = ""
-_project_root = _find_project_root()
-if _project_root and str(_project_root) not in sys.path:
-    sys.path.insert(0, str(_project_root))
-try:
-    from config import MINIMAX_API_KEY as _CONFIG_MINIMAX_KEY  # type: ignore
-except ImportError:
-    pass
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
@@ -289,65 +271,43 @@ def classify_with_minimax(name: str, summary: str, api_key: str,
         name=name,
         summary=summary.strip() if summary else "(no summary available)",
     )
-    payload = {
-        "model": MINIMAX_MODEL,
-        "messages": [
+    text, elapsed, raw_json = call_minimax(
+        messages=[
             {"role": "system", "name": "MiniMax AI", "content": CLASSIFY_SYSTEM},
             {"role": "user",   "name": "User",       "content": user_msg},
         ],
-        "stream": False,
-        "temperature": 0.2,
-        "max_completion_tokens": 300,
-    }
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {api_key}",
-    }
+        temperature=0.2,
+        max_completion_tokens=300,
+        retries=retries,
+        api_key=api_key,
+    )
 
-    for attempt in range(retries):
-        try:
-            t0 = time.monotonic()
-            resp = requests.post(MINIMAX_API_URL, json=payload, headers=headers, timeout=30)
-            elapsed = time.monotonic() - t0
-            resp.raise_for_status()
-            raw_json = resp.text          # full HTTP response body
-            data = resp.json()
-            text = (
-                data.get("choices", [{}])[0]
-                    .get("message", {})
-                    .get("content", "")
-            )
-            # Parse the mandatory "Answer: Yes/No" line
-            is_related: bool | None = None
-            for line in reversed(text.splitlines()):
-                line_stripped = line.strip().lower()
-                if line_stripped.startswith("answer:"):
-                    answer = line_stripped.replace("answer:", "").strip()
-                    if answer.startswith("yes"):
-                        is_related = True
-                    elif answer.startswith("no"):
-                        is_related = False
-                    break
-            if is_related is None:
-                print(f"    ⚠ Could not parse Answer from MiniMax response. "
-                      f"Raw reply:\n{text}")
-            # Parse "Tickers: TICK1, TICK2" line
-            tickers = ""
-            for line in text.splitlines():
-                ls = line.strip()
-                if ls.lower().startswith("tickers:"):
-                    raw_tickers = ls[len("tickers:"):].strip()
-                    if raw_tickers.lower() not in ("none", "n/a", ""):
-                        tickers = raw_tickers
-                    break
-            return text, is_related, elapsed, user_msg, raw_json, tickers
-        except Exception as e:
-            wait = 3 * (attempt + 1)
-            print(f"    MiniMax error (attempt {attempt+1}/{retries}): {e}, "
-                  f"retrying in {wait}s...")
-            time.sleep(wait)
+    # Parse the mandatory "Answer: Yes/No" line
+    is_related: bool | None = None
+    for line in reversed(text.splitlines()):
+        line_stripped = line.strip().lower()
+        if line_stripped.startswith("answer:"):
+            answer = line_stripped.replace("answer:", "").strip()
+            if answer.startswith("yes"):
+                is_related = True
+            elif answer.startswith("no"):
+                is_related = False
+            break
+    if is_related is None and text:
+        print(f"    ⚠ Could not parse Answer from MiniMax response. "
+              f"Raw reply:\n{text}")
 
-    return "", None, 0.0, user_msg, "", ""
+    # Parse "Tickers: TICK1, TICK2" line
+    tickers = ""
+    for line in text.splitlines():
+        ls = line.strip()
+        if ls.lower().startswith("tickers:"):
+            raw_tickers = ls[len("tickers:"):].strip()
+            if raw_tickers.lower() not in ("none", "n/a", ""):
+                tickers = raw_tickers
+            break
+
+    return text, is_related, elapsed, user_msg, raw_json, tickers
 
 
 def upsert_entry(conn: sqlite3.Connection, row: dict):
