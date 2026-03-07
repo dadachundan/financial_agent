@@ -3,10 +3,10 @@
 zsxq_downloader.py — Download latest PDFs from a 知识星球 (zsxq.com) group.
 
 Usage:
-    python zsxq_downloader.py --group-id 51111812185184 --count 10 --out ~/Downloads/zsxq
+    python zsxq_downloader.py --count 10 --out ~/Downloads/zsxq_reports
 
-Reads auth cookies automatically from chrome_profile/ (same as tradingview.py / fetch_news.py).
-No manual cookie copy-pasting needed — just make sure you're logged in to zsxq in that profile.
+Uses chrome_profile/ (same as tradingview.py / fetch_news.py) so no manual
+cookie setup is needed — just make sure you're logged in to wx.zsxq.com in that profile.
 
 API pattern:
     List files:    GET https://api.zsxq.com/v2/groups/{group_id}/files?count=N
@@ -21,9 +21,12 @@ import sys
 import time
 import re
 import requests
-import browser_cookie3
 from pathlib import Path
 from datetime import datetime
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 
 API_BASE = "https://api.zsxq.com/v2"
 SCRIPT_DIR = Path(__file__).parent
@@ -36,28 +39,38 @@ HEADERS = {
 }
 
 
-def load_cookies(chrome_profile: Path) -> requests.cookies.RequestsCookieJar:
-    """Load zsxq cookies from the Chrome profile directory."""
-    cookie_file = chrome_profile / "Default" / "Cookies"
-    if not cookie_file.exists():
-        raise FileNotFoundError(
-            f"Cookie file not found: {cookie_file}\n"
-            "Make sure chrome_profile/ exists and you are logged in to wx.zsxq.com."
-        )
-    cookies = browser_cookie3.chrome(
-        cookie_file=str(cookie_file),
-        domain_name=".zsxq.com",
+def get_session_via_selenium(chrome_profile: Path) -> requests.Session:
+    """Launch Chrome with the existing profile, visit zsxq, extract cookies into a requests Session."""
+    chrome_options = Options()
+    chrome_options.add_argument(f"user-data-dir={chrome_profile}")
+    chrome_options.add_argument("--headless=new")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+
+    print("Starting Chrome to load session cookies...")
+    driver = webdriver.Chrome(
+        service=Service(ChromeDriverManager().install()),
+        options=chrome_options,
     )
-    return cookies
+    try:
+        driver.get("https://wx.zsxq.com")
+        time.sleep(2)  # let cookies load
+
+        session = requests.Session()
+        for cookie in driver.get_cookies():
+            session.cookies.set(cookie["name"], cookie["value"], domain=cookie.get("domain", ""))
+    finally:
+        driver.quit()
+
+    print(f"Loaded {len(session.cookies)} cookies from Chrome profile.\n")
+    return session
 
 
 def sanitize_filename(name: str) -> str:
-    """Replace characters invalid in filenames."""
     return re.sub(r'[\\/:*?"<>|]', '_', name)
 
 
 def get_files(session: requests.Session, group_id: str, count: int) -> list[dict]:
-    """Return list of latest file objects from the group."""
     url = f"{API_BASE}/groups/{group_id}/files"
     resp = session.get(url, params={"count": count}, headers=HEADERS)
     resp.raise_for_status()
@@ -68,7 +81,6 @@ def get_files(session: requests.Session, group_id: str, count: int) -> list[dict
 
 
 def get_download_url(session: requests.Session, file_id: int) -> str | None:
-    """Get a fresh signed download URL for a file."""
     url = f"{API_BASE}/files/{file_id}/download_url"
     resp = session.get(url, headers=HEADERS)
     resp.raise_for_status()
@@ -79,7 +91,6 @@ def get_download_url(session: requests.Session, file_id: int) -> str | None:
 
 
 def download_file(session: requests.Session, download_url: str, dest_path: Path) -> int:
-    """Stream-download a file to dest_path. Returns bytes written."""
     resp = session.get(download_url, stream=True, headers=HEADERS)
     resp.raise_for_status()
     dest_path.parent.mkdir(parents=True, exist_ok=True)
@@ -113,22 +124,18 @@ def main():
     parser.add_argument("--delay", type=float, default=1.0, help="Seconds between downloads")
     args = parser.parse_args()
 
-    # Load cookies from Chrome profile
     chrome_profile = Path(args.chrome_profile).expanduser()
-    print(f"Loading cookies from {chrome_profile}...")
-    try:
-        cookies = load_cookies(chrome_profile)
-    except Exception as e:
-        print(f"ERROR: {e}")
+    if not chrome_profile.exists():
+        print(f"ERROR: Chrome profile not found at {chrome_profile}")
+        print("Make sure chrome_profile/ exists and you've logged into wx.zsxq.com with it.")
         sys.exit(1)
+
+    session = get_session_via_selenium(chrome_profile)
 
     out_dir = Path(args.out).expanduser()
     out_dir.mkdir(parents=True, exist_ok=True)
     tracker_path = out_dir / "downloaded.json"
     tracker = load_tracker(tracker_path)
-
-    session = requests.Session()
-    session.cookies.update(cookies)
 
     print(f"Fetching latest {args.count} files from group {args.group_id}...")
     files = get_files(session, args.group_id, args.count)
