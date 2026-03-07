@@ -13,6 +13,7 @@ PDFs open in a new browser tab when you click "Open PDF".
 import argparse
 import json
 import sqlite3
+import subprocess
 import traceback
 import urllib.error
 import urllib.request
@@ -379,63 +380,48 @@ def index():
 
 
 def _post_to_boox(path: Path) -> str:
-    """Upload a file to the BOOX device via multipart POST.
+    """Upload a file to the BOOX device via curl subprocess.
 
     Returns the device path on success; raises RuntimeError on failure.
+    Uses curl instead of urllib to avoid macOS routing quirks with large bodies.
     """
     size_mb = path.stat().st_size / 1_048_576
     print(f"[BOOX] → uploading {path.name!r}  ({size_mb:.1f} MB)  to {BOOX_URL}")
 
-    boundary = uuid.uuid4().hex
-    with open(path, "rb") as fh:
-        file_data = fh.read()
-
-    def _field(name: str, value: str) -> bytes:
-        return (
-            f"--{boundary}\r\n"
-            f'Content-Disposition: form-data; name="{name}"\r\n\r\n'
-            f"{value}\r\n"
-        ).encode()
-
-    body = (
-        _field("dir", "Recent") +
-        _field("sender", "web") +
-        (
-            f"--{boundary}\r\n"
-            f'Content-Disposition: form-data; name="file"; filename="{path.name}"\r\n'
-            f"Content-Type: application/octet-stream\r\n\r\n"
-        ).encode() + file_data + f"\r\n--{boundary}--\r\n".encode()
-    )
-
-    req = urllib.request.Request(
+    cmd = [
+        "curl", "-s", "--max-time", "60",
+        "-F", "dir=Recent",
+        "-F", "sender=web",
+        "-F", f"file=@{path}",
         BOOX_URL,
-        data=body,
-        headers={"Content-Type": f"multipart/form-data; boundary={boundary}"},
-        method="POST",
-    )
+    ]
+    print(f"[BOOX] cmd: {' '.join(cmd)}")
+
     try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            raw = resp.read().decode()
-            print(f"[BOOX] ← HTTP {resp.status}  body: {raw}")
-            result = json.loads(raw)
-            if not result.get("successful"):
-                raise RuntimeError(f"BOOX rejected upload: {result.get('message', raw)}")
-            device_path = result.get("message", "")
-            print(f"[BOOX] ✓ success  device_path={device_path}")
-            return device_path
-    except urllib.error.HTTPError as exc:
-        body_text = exc.read().decode()
-        print(f"[BOOX] ✗ HTTP error {exc.code}: {body_text}")
-        raise RuntimeError(f"BOOX HTTP {exc.code}: {body_text}") from exc
-    except urllib.error.URLError as exc:
-        reason = str(exc.reason)
-        print(f"[BOOX] ✗ connection error: {reason}")
-        # Errno 65 = No route to host, Errno 61 = Connection refused
-        if any(x in reason for x in ("65", "61", "No route", "refused", "timed out")):
-            msg = "BOOX unreachable — is the device awake and on the same WiFi?"
-        else:
-            msg = f"Network error: {reason}"
-        raise RuntimeError(msg) from exc
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+    except subprocess.TimeoutExpired:
+        raise RuntimeError("Upload timed out after 120 s")
+    except FileNotFoundError:
+        raise RuntimeError("curl not found — please install curl")
+
+    if result.returncode != 0:
+        print(f"[BOOX] ✗ curl exit {result.returncode}: {result.stderr}")
+        raise RuntimeError(f"curl error (exit {result.returncode}): {result.stderr.strip()}")
+
+    raw = result.stdout.strip()
+    print(f"[BOOX] ← {raw}")
+
+    try:
+        resp_json = json.loads(raw)
+    except json.JSONDecodeError:
+        raise RuntimeError(f"Unexpected BOOX response: {raw[:200]}")
+
+    if not resp_json.get("successful"):
+        raise RuntimeError(f"BOOX rejected upload: {resp_json.get('message', raw)}")
+
+    device_path = resp_json.get("message", "")
+    print(f"[BOOX] ✓ success  device_path={device_path}")
+    return device_path
 
 
 @app.route("/send-to-boox/<int:file_id>", methods=["POST"])
@@ -498,8 +484,8 @@ def main():
                         help=f"SQLite DB path (default: {DEFAULT_DB})")
     parser.add_argument("--port", type=int, default=8080,
                         help="Port to listen on (default: 8080)")
-    parser.add_argument("--host", default="127.0.0.1",
-                        help="Host to bind (default: 127.0.0.1)")
+    parser.add_argument("--host", default="0.0.0.0",
+                        help="Host to bind (default: 0.0.0.0 = all interfaces)")
     args = parser.parse_args()
 
     global DB_PATH
@@ -509,7 +495,10 @@ def main():
         print(f"ERROR: database not found at {DB_PATH}")
         raise SystemExit(1)
 
-    print(f"  zsxq viewer →  http://{args.host}:{args.port}")
+    import socket
+    local_ip = socket.gethostbyname(socket.gethostname())
+    print(f"  zsxq viewer →  http://127.0.0.1:{args.port}  (localhost)")
+    print(f"  zsxq viewer →  http://{local_ip}:{args.port}  (LAN)")
     print(f"  DB           →  {DB_PATH}")
     app.run(host=args.host, port=args.port, debug=False)
 
