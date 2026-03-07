@@ -5,13 +5,10 @@ zsxq_downloader.py — Download latest PDFs from a 知识星球 (zsxq.com) group
 Usage:
     python zsxq_downloader.py --group-id 51111812185184 --count 10 --out ~/Downloads/zsxq
 
-How to get your cookie:
-    1. Open https://wx.zsxq.com in Chrome, log in
-    2. Open DevTools → Application → Cookies → https://wx.zsxq.com
-    3. Copy the full cookie string (all key=value pairs joined by "; ")
-    4. Pass it via --cookie or set env var ZSXQ_COOKIE
+Reads auth cookies automatically from chrome_profile/ (same as tradingview.py / fetch_news.py).
+No manual cookie copy-pasting needed — just make sure you're logged in to zsxq in that profile.
 
-API pattern discovered:
+API pattern:
     List files:    GET https://api.zsxq.com/v2/groups/{group_id}/files?count=N
     Download URL:  GET https://api.zsxq.com/v2/files/{file_id}/download_url
     File CDN:      https://files.zsxq.com/{hash}?attname={name}&e={expiry}&token={token}
@@ -24,16 +21,34 @@ import sys
 import time
 import re
 import requests
+import browser_cookie3
 from pathlib import Path
 from datetime import datetime
 
 API_BASE = "https://api.zsxq.com/v2"
+SCRIPT_DIR = Path(__file__).parent
+DEFAULT_CHROME_PROFILE = SCRIPT_DIR / "chrome_profile"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
     "Referer": "https://wx.zsxq.com/",
     "Origin": "https://wx.zsxq.com",
 }
+
+
+def load_cookies(chrome_profile: Path) -> requests.cookies.RequestsCookieJar:
+    """Load zsxq cookies from the Chrome profile directory."""
+    cookie_file = chrome_profile / "Default" / "Cookies"
+    if not cookie_file.exists():
+        raise FileNotFoundError(
+            f"Cookie file not found: {cookie_file}\n"
+            "Make sure chrome_profile/ exists and you are logged in to wx.zsxq.com."
+        )
+    cookies = browser_cookie3.chrome(
+        cookie_file=str(cookie_file),
+        domain_name=".zsxq.com",
+    )
+    return cookies
 
 
 def sanitize_filename(name: str) -> str:
@@ -91,14 +106,20 @@ def main():
     parser.add_argument("--group-id", default="51111812185184", help="zsxq group ID")
     parser.add_argument("--count", type=int, default=10, help="Number of files to download")
     parser.add_argument("--out", default="~/Downloads/zsxq_reports", help="Output directory")
-    parser.add_argument("--cookie", default=os.environ.get("ZSXQ_COOKIE", ""), help="Cookie string from browser")
-    parser.add_argument("--skip-existing", action="store_true", default=True, help="Skip already-downloaded files")
+    parser.add_argument("--chrome-profile", default=str(DEFAULT_CHROME_PROFILE),
+                        help="Path to Chrome profile directory (default: ./chrome_profile)")
+    parser.add_argument("--skip-existing", action="store_true", default=True,
+                        help="Skip already-downloaded files")
     parser.add_argument("--delay", type=float, default=1.0, help="Seconds between downloads")
     args = parser.parse_args()
 
-    if not args.cookie:
-        print("ERROR: No cookie provided. Use --cookie or set ZSXQ_COOKIE env var.")
-        print("Get it from: Chrome DevTools → Application → Cookies → https://wx.zsxq.com")
+    # Load cookies from Chrome profile
+    chrome_profile = Path(args.chrome_profile).expanduser()
+    print(f"Loading cookies from {chrome_profile}...")
+    try:
+        cookies = load_cookies(chrome_profile)
+    except Exception as e:
+        print(f"ERROR: {e}")
         sys.exit(1)
 
     out_dir = Path(args.out).expanduser()
@@ -107,7 +128,7 @@ def main():
     tracker = load_tracker(tracker_path)
 
     session = requests.Session()
-    session.headers.update({"Cookie": args.cookie})
+    session.cookies.update(cookies)
 
     print(f"Fetching latest {args.count} files from group {args.group_id}...")
     files = get_files(session, args.group_id, args.count)
@@ -125,20 +146,17 @@ def main():
         print(f"[{i}/{len(files)}] {name[:70]}")
         print(f"         size={size_mb:.1f}MB  id={file_id}")
 
-        # Skip if already downloaded and size matches
         if args.skip_existing and str(file_id) in tracker:
             print(f"         → already downloaded, skipping.\n")
             results.append({"file_id": file_id, "name": name, "status": "skipped"})
             continue
 
-        # Get fresh signed download URL
         dl_url = get_download_url(session, file_id)
         if not dl_url:
             print(f"         → failed to get download URL.\n")
             results.append({"file_id": file_id, "name": name, "status": "no_url"})
             continue
 
-        # Download
         try:
             written = download_file(session, dl_url, dest)
             tracker[str(file_id)] = {
@@ -156,7 +174,6 @@ def main():
 
         time.sleep(args.delay)
 
-    # Summary
     ok = sum(1 for r in results if r["status"] == "ok")
     skipped = sum(1 for r in results if r["status"] == "skipped")
     failed = sum(1 for r in results if r["status"] not in ("ok", "skipped"))
