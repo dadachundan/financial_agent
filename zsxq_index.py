@@ -183,7 +183,9 @@ CREATE TABLE IF NOT EXISTS pdf_files (
     downloaded_at         TEXT,
     indexed_at            TEXT    NOT NULL,
     ai_robotics_analysis  TEXT,
-    ai_robotics_related   INTEGER
+    ai_robotics_related   INTEGER,
+    ai_prompt             TEXT,
+    ai_raw_response       TEXT
 );
 
 CREATE INDEX IF NOT EXISTS idx_create_time ON pdf_files(create_time);
@@ -197,6 +199,8 @@ MIGRATIONS: list[tuple[str, str]] = [
     ("ALTER TABLE pdf_files ADD COLUMN topic_json TEXT",            "duplicate column"),
     ("ALTER TABLE pdf_files ADD COLUMN ai_robotics_analysis TEXT",  "duplicate column"),
     ("ALTER TABLE pdf_files ADD COLUMN ai_robotics_related INTEGER","duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN ai_prompt TEXT",             "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN ai_raw_response TEXT",       "duplicate column"),
     ("CREATE INDEX IF NOT EXISTS idx_ai_related ON pdf_files(ai_robotics_related)", "already exists"),
 ]
 
@@ -264,11 +268,13 @@ Is this report primarily about Artificial Intelligence (AI), Machine Learning, o
 
 
 def classify_with_minimax(name: str, summary: str, api_key: str,
-                           retries: int = 3) -> tuple[str, bool | None, float]:
+                           retries: int = 3) -> tuple[str, bool | None, float, str, str]:
     """Call MiniMax to classify a PDF as AI/Robotics-related.
 
-    Returns (full_response_text, is_related, elapsed_seconds).
+    Returns (response_text, is_related, elapsed_seconds, prompt_sent, raw_json).
     is_related is True/False, or None if the answer could not be parsed.
+    prompt_sent is the full user message sent to MiniMax.
+    raw_json is the complete HTTP response body from MiniMax.
     """
     user_msg = CLASSIFY_USER_TMPL.format(
         name=name,
@@ -295,6 +301,7 @@ def classify_with_minimax(name: str, summary: str, api_key: str,
             resp = requests.post(MINIMAX_API_URL, json=payload, headers=headers, timeout=30)
             elapsed = time.monotonic() - t0
             resp.raise_for_status()
+            raw_json = resp.text          # full HTTP response body
             data = resp.json()
             text = (
                 data.get("choices", [{}])[0]
@@ -315,14 +322,14 @@ def classify_with_minimax(name: str, summary: str, api_key: str,
             if is_related is None:
                 print(f"    ⚠ Could not parse Answer from MiniMax response. "
                       f"Raw reply:\n{text}")
-            return text, is_related, elapsed
+            return text, is_related, elapsed, user_msg, raw_json
         except Exception as e:
             wait = 3 * (attempt + 1)
             print(f"    MiniMax error (attempt {attempt+1}/{retries}): {e}, "
                   f"retrying in {wait}s...")
             time.sleep(wait)
 
-    return "", None, 0.0
+    return "", None, 0.0, user_msg, ""
 
 
 def upsert_entry(conn: sqlite3.Connection, row: dict):
@@ -596,7 +603,7 @@ def main():
                 print(f"  [{i}/{total_to_classify}] ({pct:.0f}%){eta_str}")
                 print(f"    File: {name}")
 
-                analysis, is_related, api_elapsed = classify_with_minimax(
+                analysis, is_related, api_elapsed, prompt_sent, raw_json = classify_with_minimax(
                     name, summary, minimax_key
                 )
                 elapsed_times.append(api_elapsed + args.classify_delay)
@@ -649,6 +656,8 @@ def main():
                     """UPDATE pdf_files
                        SET ai_robotics_analysis = ?,
                            ai_robotics_related  = ?,
+                           ai_prompt            = ?,
+                           ai_raw_response      = ?,
                            local_path           = COALESCE(?, local_path),
                            downloaded_at        = COALESCE(
                                (SELECT downloaded_at FROM pdf_files WHERE file_id = ?),
@@ -657,6 +666,8 @@ def main():
                      WHERE file_id = ?""",
                     (analysis,
                      1 if is_related is True else (0 if is_related is False else None),
+                     prompt_sent,
+                     raw_json,
                      local_path,          # new local_path (None = keep existing)
                      file_id,             # for the sub-select
                      tracker.get(str(file_id), {}).get("downloaded_at"),
