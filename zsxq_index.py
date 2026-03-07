@@ -7,18 +7,19 @@ file's associated topic (topic.talk.text), then stores file metadata + summary +
 local download path in a SQLite database.
 
 Usage:
-    python zsxq_index.py                            # index all files
-    python zsxq_index.py --last-x-files 10         # index only the 10 most recent files
+    python zsxq_index.py                        # index all files
+    python zsxq_index.py --last-x-files 10     # index only the 10 most recent files
     python zsxq_index.py --group-id 51111812185184 --db zsxq.db
     python zsxq_index.py --downloads ~/Downloads/zsxq_reports --count 50
 
     # Classify already-indexed PDFs as AI/Robotics-related via MiniMax:
-    python zsxq_index.py --classify --minimax-key YOUR_KEY
-    python zsxq_index.py --classify --minimax-key YOUR_KEY --reclassify   # redo all
+    python zsxq_index.py --classify            # skips rows already classified
+    python zsxq_index.py --classify --reclassify   # redo all rows
 
     # Index + classify in one shot:
-    python zsxq_index.py --last-x-files 10 --classify --minimax-key YOUR_KEY
+    python zsxq_index.py --last-x-files 10 --classify
 
+MiniMax API key is read from config.py (MINIMAX_API_KEY) in the project root.
 The script also reads the tracker JSON written by zsxq_downloader.py to populate
 the local_path column for files that have already been downloaded.
 """
@@ -421,12 +422,10 @@ def main():
     # ── MiniMax classification ──
     parser.add_argument("--classify", action="store_true",
                         help="After indexing, classify each PDF as AI/Robotics-related "
-                             "via MiniMax. Skips rows that already have a classification.")
+                             "via MiniMax (key read from config.py). "
+                             "Skips rows that already have a classification.")
     parser.add_argument("--reclassify", action="store_true",
                         help="Re-run classification on ALL rows, overwriting existing results.")
-    parser.add_argument("--minimax-key", default=None, metavar="KEY",
-                        help="MiniMax API key. Falls back to config.py MINIMAX_API_KEY "
-                             "or MINIMAX_API_KEY env var.")
     parser.add_argument("--classify-delay", type=float, default=1.0,
                         help="Seconds between MiniMax API calls (default: 1.0)")
     args = parser.parse_args()
@@ -560,13 +559,10 @@ def main():
 
     # ── Optional MiniMax classification ──────────────────────────────────────
     if args.classify:
-        import os
-        minimax_key = (args.minimax_key
-                       or _CONFIG_MINIMAX_KEY
-                       or os.environ.get("MINIMAX_API_KEY", ""))
+        minimax_key = _CONFIG_MINIMAX_KEY
         if not minimax_key:
-            print("\nERROR: --classify requires a MiniMax API key via "
-                  "--minimax-key, config.py MINIMAX_API_KEY, or MINIMAX_API_KEY env var.")
+            print("\nERROR: --classify requires MINIMAX_API_KEY in config.py "
+                  f"(looked in: {_project_root or 'not found'})")
         else:
             if args.reclassify:
                 to_classify = conn.execute(
