@@ -206,8 +206,12 @@ MIGRATIONS: list[tuple[str, str]] = [
 
 
 def init_db(db_path: Path) -> sqlite3.Connection:
-    conn = sqlite3.connect(db_path)
+    # timeout=30: wait up to 30 s for the lock instead of raising immediately.
+    # WAL mode: readers don't block writers (and vice-versa), which prevents
+    # "database is locked" when another process still has the file open.
+    conn = sqlite3.connect(db_path, timeout=30)
     conn.row_factory = sqlite3.Row
+    conn.execute("PRAGMA journal_mode=WAL")
     conn.executescript(SCHEMA)
     # Apply any migrations that haven't been run yet
     for sql, ignore_fragment in MIGRATIONS:
