@@ -14,6 +14,10 @@ Usage:
     python zsxq_index.py --reclassify          # re-classify every row (even if done before)
     python zsxq_index.py --cleanup-non-ai      # delete local PDFs classified as NOT AI/Robotics
 
+    # Offline multi-category re-classification (no website scraping):
+    python zsxq_index.py --classify-db                  # classify unclassified rows only
+    python zsxq_index.py --classify-db --reclassify-categories  # reclassify all rows
+
 Classification via MiniMax runs automatically after indexing — unclassified rows only.
 MiniMax API key is read from config.py (MINIMAX_API_KEY) in the project root.
 The script also reads the tracker JSON written by zsxq_downloader.py to populate
@@ -180,13 +184,23 @@ CREATE INDEX IF NOT EXISTS idx_name        ON pdf_files(name);
 # Each entry is (sql, ignore_error_fragment) — the error fragment is matched
 # against the exception message to suppress expected "already exists" errors.
 MIGRATIONS: list[tuple[str, str]] = [
-    ("ALTER TABLE pdf_files ADD COLUMN topic_json TEXT",            "duplicate column"),
-    ("ALTER TABLE pdf_files ADD COLUMN ai_robotics_analysis TEXT",  "duplicate column"),
-    ("ALTER TABLE pdf_files ADD COLUMN ai_robotics_related INTEGER","duplicate column"),
-    ("ALTER TABLE pdf_files ADD COLUMN ai_prompt TEXT",             "duplicate column"),
-    ("ALTER TABLE pdf_files ADD COLUMN ai_raw_response TEXT",       "duplicate column"),
-    ("ALTER TABLE pdf_files ADD COLUMN tickers TEXT",               "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN topic_json TEXT",             "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN ai_robotics_analysis TEXT",   "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN ai_robotics_related INTEGER", "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN ai_prompt TEXT",              "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN ai_raw_response TEXT",        "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN tickers TEXT",                "duplicate column"),
     ("CREATE INDEX IF NOT EXISTS idx_ai_related ON pdf_files(ai_robotics_related)", "already exists"),
+    # v2 multi-category columns
+    ("ALTER TABLE pdf_files ADD COLUMN ai_related          INTEGER", "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN robotics_related    INTEGER", "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN semiconductor_related INTEGER","duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN energy_related      INTEGER", "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN categories_analysis TEXT",    "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN categories_prompt   TEXT",    "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN categories_raw      TEXT",    "duplicate column"),
+    ("CREATE INDEX IF NOT EXISTS idx_semiconductor ON pdf_files(semiconductor_related)", "already exists"),
+    ("CREATE INDEX IF NOT EXISTS idx_energy        ON pdf_files(energy_related)",        "already exists"),
 ]
 
 
@@ -310,6 +324,100 @@ def classify_with_minimax(name: str, summary: str, api_key: str,
     return text, is_related, elapsed, user_msg, raw_json, tickers
 
 
+# ── MiniMax multi-category classification (v2) ───────────────────────────────
+
+CATEGORIES_SYSTEM = (
+    "You are a financial research analyst. Given a research report summary, answer "
+    "five questions and extract tickers.\n\n"
+    "Respond in exactly this format (one item per line, nothing else):\n"
+    "  AI: Yes or No\n"
+    "  Robotics: Yes or No\n"
+    "  Semiconductor: Yes or No\n"
+    "  Energy: Yes or No\n"
+    "  Tickers: TICK1, TICK2, ...  (or Tickers: None)\n"
+    "  Analysis: <2-3 sentence summary of the report's focus>\n\n"
+    "Definitions:\n"
+    "- AI: covers artificial intelligence, machine learning, large language models, "
+    "generative AI, AI chips, AI software/services.\n"
+    "- Robotics: humanoid robots, industrial robots, autonomous vehicles, drones.\n"
+    "- Semiconductor: chips, fabs, EDA tools, memory, wafers, packaging.\n"
+    "- Energy: oil & gas, renewables, power grids, batteries, nuclear, energy storage."
+)
+
+CATEGORIES_USER_TMPL = """\
+Report filename: {name}
+
+Summary (Chinese):
+{summary}
+
+Answer all five questions and extract tickers for this report.
+"""
+
+
+def _parse_yes_no(text: str, label: str) -> bool | None:
+    """Find 'Label: Yes/No' in text, return True/False/None."""
+    for line in text.splitlines():
+        ls = line.strip().lower()
+        if ls.startswith(f"{label.lower()}:"):
+            val = ls.split(":", 1)[1].strip()
+            if val.startswith("yes"):
+                return True
+            if val.startswith("no"):
+                return False
+    return None
+
+
+def classify_categories_with_minimax(
+    name: str, summary: str, api_key: str, retries: int = 3
+) -> tuple[str, bool | None, bool | None, bool | None, bool | None, str, float, str, str]:
+    """Call MiniMax for multi-category classification.
+
+    Returns:
+        (analysis, ai, robotics, semiconductor, energy, tickers, elapsed, prompt, raw_json)
+    """
+    user_msg = CATEGORIES_USER_TMPL.format(
+        name=name,
+        summary=summary.strip() if summary else "(no summary available)",
+    )
+    text, elapsed, raw_json = call_minimax(
+        messages=[
+            {"role": "system", "name": "MiniMax AI", "content": CATEGORIES_SYSTEM},
+            {"role": "user",   "name": "User",       "content": user_msg},
+        ],
+        temperature=0.1,
+        max_completion_tokens=300,
+        retries=retries,
+        api_key=api_key,
+    )
+
+    ai_rel    = _parse_yes_no(text, "AI")
+    rob_rel   = _parse_yes_no(text, "Robotics")
+    semi_rel  = _parse_yes_no(text, "Semiconductor")
+    nrg_rel   = _parse_yes_no(text, "Energy")
+
+    # Extract tickers
+    tickers = ""
+    for line in text.splitlines():
+        ls = line.strip()
+        if ls.lower().startswith("tickers:"):
+            raw_t = ls[len("tickers:"):].strip()
+            if raw_t.lower() not in ("none", "n/a", ""):
+                tickers = raw_t
+            break
+
+    # Extract analysis line
+    analysis = ""
+    for line in text.splitlines():
+        ls = line.strip()
+        if ls.lower().startswith("analysis:"):
+            analysis = ls[len("analysis:"):].strip()
+            break
+    if not analysis:
+        analysis = text  # fallback: store full response
+
+    return analysis, ai_rel, rob_rel, semi_rel, nrg_rel, tickers, elapsed, user_msg, raw_json
+
+
 def upsert_entry(conn: sqlite3.Connection, row: dict):
     conn.execute(
         """
@@ -401,10 +509,19 @@ def main():
                         help="Seconds between paginated API calls")
     # ── MiniMax classification ──
     parser.add_argument("--reclassify", action="store_true",
-                        help="Re-classify ALL rows, overwriting existing results. "
-                             "By default only unclassified rows are processed.")
+                        help="Re-classify ALL rows with legacy AI/Robotics prompt, "
+                             "overwriting existing results.")
     parser.add_argument("--classify-delay", type=float, default=1.0,
                         help="Seconds between MiniMax API calls (default: 1.0)")
+    # ── Offline multi-category classification (no scraping) ──
+    parser.add_argument("--classify-db", action="store_true",
+                        help="Skip website scraping entirely. Read rows from the local DB "
+                             "and run multi-category classification (AI / Robotics / "
+                             "Semiconductor / Energy / Tickers). Auto-downloads any file "
+                             "that matches at least one category.")
+    parser.add_argument("--reclassify-categories", action="store_true",
+                        help="Used with --classify-db: reclassify ALL rows, not just "
+                             "unclassified ones.")
     # ── Cleanup ──
     parser.add_argument("--cleanup-non-ai", action="store_true",
                         help="Delete local PDF files that are classified as NOT AI/Robotics "
@@ -416,13 +533,167 @@ def main():
     if args.last_x_files:
         args.count = args.last_x_files
 
+    db_path       = Path(args.db).expanduser()
+    downloads_dir = Path(args.downloads).expanduser()
+
+    # ── Offline mode: --classify-db skips all scraping ───────────────────────
+    if args.classify_db:
+        if not _CONFIG_MINIMAX_KEY:
+            print("ERROR: MINIMAX_API_KEY not found in config.py")
+            sys.exit(1)
+        if not db_path.exists():
+            print(f"ERROR: DB not found at {db_path}. Run without --classify-db first.")
+            sys.exit(1)
+
+        conn = init_db(db_path)
+        tracker = load_tracker(downloads_dir)
+
+        print("=" * 65)
+        print("  zsxq_index.py  [--classify-db  offline mode]")
+        print(f"  Started  : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"  DB       : {db_path}")
+        print(f"  Downloads: {downloads_dir}")
+        mode_str = "reclassify ALL" if args.reclassify_categories else "unclassified only"
+        print(f"  Mode     : {mode_str}")
+        print("=" * 65)
+        print()
+
+        if args.reclassify_categories:
+            to_classify = conn.execute(
+                "SELECT file_id, name, summary, local_path FROM pdf_files "
+                "ORDER BY create_time DESC"
+            ).fetchall()
+        else:
+            to_classify = conn.execute(
+                "SELECT file_id, name, summary, local_path FROM pdf_files "
+                "WHERE ai_related IS NULL ORDER BY create_time DESC"
+            ).fetchall()
+
+        total = len(to_classify)
+        if total == 0:
+            print("All rows already classified. Use --reclassify-categories to redo.")
+            conn.close()
+            sys.exit(0)
+
+        print(f"Classifying {total} row(s) via MiniMax multi-category prompt...\n")
+        counts = {"ai": 0, "robotics": 0, "semiconductor": 0, "energy": 0,
+                  "dl_ok": 0, "dl_fail": 0, "err": 0}
+        elapsed_times: list[float] = []
+        t_start = time.monotonic()
+
+        for i, row in enumerate(to_classify, 1):
+            file_id    = row["file_id"]
+            name       = row["name"]
+            summary    = row["summary"] or ""
+            local_path = row["local_path"]
+
+            eta_str = ""
+            if elapsed_times:
+                avg_s = sum(elapsed_times) / len(elapsed_times)
+                eta_str = f"  ETA ~{(total - i + 1) * avg_s:.0f}s"
+
+            print(f"  [{i}/{total}] ({i/total*100:.0f}%){eta_str}")
+            print(f"    File: {name}")
+
+            analysis, ai_rel, rob_rel, semi_rel, nrg_rel, tickers, api_elapsed, prompt, raw_json = \
+                classify_categories_with_minimax(name, summary, _CONFIG_MINIMAX_KEY)
+
+            elapsed_times.append(api_elapsed + args.classify_delay)
+
+            any_err = any(v is None for v in [ai_rel, rob_rel, semi_rel, nrg_rel])
+            if any_err:
+                counts["err"] += 1
+
+            flags = []
+            if ai_rel:    flags.append("AI");            counts["ai"] += 1
+            if rob_rel:   flags.append("Robotics");      counts["robotics"] += 1
+            if semi_rel:  flags.append("Semiconductor"); counts["semiconductor"] += 1
+            if nrg_rel:   flags.append("Energy");        counts["energy"] += 1
+
+            label = ("✓ " + ", ".join(flags)) if flags else "✗ None"
+            print(f"    Categories : {label}  [{api_elapsed:.1f}s]")
+            if tickers:
+                print(f"    Tickers    : {tickers}")
+            if analysis:
+                print(f"    Analysis   : {analysis}")
+
+            # Auto-download if any category matched and not yet on disk
+            any_related = any([ai_rel, rob_rel, semi_rel, nrg_rel])
+            if any_related and not local_path:
+                print(f"           → category match: downloading...")
+                try:
+                    # Need a session — build a lightweight one without Selenium
+                    # (download URL endpoint is public once we have the file_id)
+                    import requests as _req
+                    _session = _req.Session()
+                    dl_url = get_download_url(_session, file_id)
+                    if dl_url:
+                        safe_name = sanitize_filename(name)
+                        dest = downloads_dir / safe_name
+                        written = download_file(_session, dl_url, dest)
+                        local_path = str(dest)
+                        dl_ts = datetime.now().isoformat()
+                        tracker[str(file_id)] = {
+                            "name": name, "path": local_path,
+                            "size": written, "downloaded_at": dl_ts,
+                        }
+                        save_tracker(downloads_dir, tracker)
+                        print(f"           → saved {written/1024/1024:.1f}MB → {dest.name}")
+                        counts["dl_ok"] += 1
+                    else:
+                        print(f"           → could not get download URL")
+                        counts["dl_fail"] += 1
+                except Exception as e:
+                    print(f"           → download failed: {e}")
+                    counts["dl_fail"] += 1
+
+            conn.execute(
+                """UPDATE pdf_files
+                   SET ai_related           = ?,
+                       robotics_related     = ?,
+                       semiconductor_related= ?,
+                       energy_related       = ?,
+                       tickers              = COALESCE(?, tickers),
+                       categories_analysis  = ?,
+                       categories_prompt    = ?,
+                       categories_raw       = ?,
+                       local_path           = COALESCE(?, local_path),
+                       indexed_at           = ?
+                 WHERE file_id = ?""",
+                (1 if ai_rel   is True else (0 if ai_rel   is False else None),
+                 1 if rob_rel  is True else (0 if rob_rel  is False else None),
+                 1 if semi_rel is True else (0 if semi_rel is False else None),
+                 1 if nrg_rel  is True else (0 if nrg_rel  is False else None),
+                 tickers or None,
+                 analysis, prompt, raw_json,
+                 local_path,
+                 datetime.now().isoformat(),
+                 file_id),
+            )
+            conn.commit()
+
+            if i < total:
+                time.sleep(args.classify_delay)
+
+        t_total = time.monotonic() - t_start
+        dl_msg = (f"\n  Auto-downloaded : {counts['dl_ok']} OK, {counts['dl_fail']} failed"
+                  if counts["dl_ok"] or counts["dl_fail"] else "")
+        print(f"\n{'='*65}")
+        print(f"  Classification done in {t_total:.1f}s  ({total} rows)")
+        print(f"    AI           : {counts['ai']}")
+        print(f"    Robotics     : {counts['robotics']}")
+        print(f"    Semiconductor: {counts['semiconductor']}")
+        print(f"    Energy       : {counts['energy']}")
+        print(f"    Parse errors : {counts['err']}{dl_msg}")
+        print(f"{'='*65}")
+        conn.close()
+        sys.exit(0)
+
+    # ── Normal mode: scrape website ───────────────────────────────────────────
     chrome_profile = Path(args.chrome_profile).expanduser()
     if not chrome_profile.exists():
         print(f"ERROR: Chrome profile not found at {chrome_profile}")
         sys.exit(1)
-
-    db_path = Path(args.db).expanduser()
-    downloads_dir = Path(args.downloads).expanduser()
 
     # ── Startup banner ────────────────────────────────────────────────────────
     print("=" * 65)
@@ -722,26 +993,30 @@ def main():
     # Final stats from DB
     import sqlite3 as _sq3
     conn2 = _sq3.connect(db_path, timeout=10)
-    conn2.row_factory = _sq3.Row          # ← needed so we can index by column name
+    conn2.row_factory = _sq3.Row
     final = conn2.execute(
         "SELECT COUNT(*) as total, "
         "SUM(CASE WHEN ai_robotics_related IS NULL THEN 1 ELSE 0 END) as unclassified, "
         "SUM(CASE WHEN ai_robotics_related = 1    THEN 1 ELSE 0 END) as yes_count, "
         "SUM(CASE WHEN ai_robotics_related = 0    THEN 1 ELSE 0 END) as no_count, "
-        "SUM(CASE WHEN local_path IS NOT NULL     THEN 1 ELSE 0 END) as downloaded "
+        "SUM(CASE WHEN local_path IS NOT NULL     THEN 1 ELSE 0 END) as downloaded, "
+        "SUM(CASE WHEN ai_related          = 1    THEN 1 ELSE 0 END) as cat_ai, "
+        "SUM(CASE WHEN robotics_related    = 1    THEN 1 ELSE 0 END) as cat_robotics, "
+        "SUM(CASE WHEN semiconductor_related=1    THEN 1 ELSE 0 END) as cat_semi, "
+        "SUM(CASE WHEN energy_related      = 1    THEN 1 ELSE 0 END) as cat_energy "
         "FROM pdf_files"
     ).fetchone()
     conn2.close()
 
     print(f"\n{'='*65}")
     print(f"  Done  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"  Indexing : inserted={inserted}  updated={updated}  skipped(non-PDF)={skipped}")
-    print(f"  DB totals: {final['total']} rows  "
-          f"| classified={( final['yes_count'] or 0)+(final['no_count'] or 0)}"
-          f"  (yes={final['yes_count'] or 0}, no={final['no_count'] or 0})"
-          f"  | unclassified={final['unclassified'] or 0}"
-          f"  | downloaded={final['downloaded'] or 0}")
-    print(f"  DB path  : {db_path}")
+    print(f"  Indexing   : inserted={inserted}  updated={updated}  skipped(non-PDF)={skipped}")
+    print(f"  Legacy cls : yes={final['yes_count'] or 0}  no={final['no_count'] or 0}"
+          f"  unclassified={final['unclassified'] or 0}")
+    print(f"  Categories : AI={final['cat_ai'] or 0}  Robotics={final['cat_robotics'] or 0}"
+          f"  Semiconductor={final['cat_semi'] or 0}  Energy={final['cat_energy'] or 0}")
+    print(f"  Downloaded : {final['downloaded'] or 0} / {final['total']} total")
+    print(f"  DB path    : {db_path}")
     print(f"{'='*65}")
 
 
