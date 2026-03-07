@@ -7,7 +7,8 @@ file's associated topic (topic.talk.text), then stores file metadata + summary +
 local download path in a SQLite database.
 
 Usage:
-    python zsxq_index.py
+    python zsxq_index.py                            # index all files
+    python zsxq_index.py --last-x-files 10         # index only the 10 most recent files
     python zsxq_index.py --group-id 51111812185184 --db zsxq.db
     python zsxq_index.py --downloads ~/Downloads/zsxq_reports --count 50
 
@@ -104,14 +105,23 @@ def fetch_files_page(session: requests.Session, group_id: str,
 
 def fetch_all_files(session: requests.Session, group_id: str,
                     max_files: int = 0, delay: float = 0.5) -> list[dict]:
-    """Paginate through all files, returning a flat list of entries."""
+    """Paginate through all files, returning a flat list of entries.
+
+    Args:
+        max_files: Stop after this many files (0 = fetch everything).
+                   When set, the first API page uses min(max_files, 20)
+                   as its count so small limits need only one round-trip.
+    """
     all_entries: list[dict] = []
     end_time: str | None = None
     page = 0
 
     while True:
         page += 1
-        entries = fetch_files_page(session, group_id, count=20, end_time=end_time)
+        # Optimise: if we only need a few files, ask for exactly that many
+        # on the first (and only) page rather than always asking for 20.
+        page_size = min(max_files, 20) if (max_files and not end_time) else 20
+        entries = fetch_files_page(session, group_id, count=page_size, end_time=end_time)
         if not entries:
             break
 
@@ -209,11 +219,19 @@ def main():
                         help="Directory used by zsxq_downloader.py "
                              f"(default: {DEFAULT_DOWNLOADS})")
     parser.add_argument("--count", type=int, default=0,
-                        help="Max files to index (0 = all)")
+                        help="Max files to index (0 = all). Alias: use --last-x-files.")
+    parser.add_argument("--last-x-files", type=int, default=0, metavar="N",
+                        help="Index only the N most recent files. "
+                             "Overrides --count when specified. "
+                             "For N≤20 a single API call is made.")
     parser.add_argument("--chrome-profile", default=str(DEFAULT_CHROME_PROFILE))
     parser.add_argument("--delay", type=float, default=0.5,
                         help="Seconds between paginated API calls")
     args = parser.parse_args()
+
+    # --last-x-files takes precedence over --count
+    if args.last_x_files:
+        args.count = args.last_x_files
 
     chrome_profile = Path(args.chrome_profile).expanduser()
     if not chrome_profile.exists():
@@ -234,8 +252,9 @@ def main():
     conn = init_db(db_path)
     print(f"Database: {db_path}\n")
 
-    # Fetch all files
-    print(f"Fetching files from group {args.group_id}...")
+    # Fetch files
+    limit_desc = f"last {args.count}" if args.count else "all"
+    print(f"Fetching {limit_desc} files from group {args.group_id}...")
     entries = fetch_all_files(session, args.group_id,
                               max_files=args.count, delay=args.delay)
     print(f"\nTotal files fetched: {len(entries)}\n")
