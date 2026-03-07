@@ -14,6 +14,7 @@ import argparse
 import json
 import sqlite3
 import subprocess
+import time
 import traceback
 import urllib.error
 import urllib.request
@@ -389,39 +390,56 @@ def _post_to_boox(path: Path) -> str:
     print(f"[BOOX] → uploading {path.name!r}  ({size_mb:.1f} MB)  to {BOOX_URL}")
 
     cmd = [
-        "curl", "-s", "--max-time", "60",
+        "curl", "--no-progress-meter", "--max-time", "60",
         "-F", "dir=Recent",
         "-F", "sender=web",
         "-F", f"file=@{path}",
         BOOX_URL,
     ]
-    print(f"[BOOX] cmd: {' '.join(cmd)}")
 
-    try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
-    except subprocess.TimeoutExpired:
-        raise RuntimeError("Upload timed out after 120 s")
-    except FileNotFoundError:
-        raise RuntimeError("curl not found — please install curl")
+    last_err = ""
+    for attempt in range(1, 4):          # up to 3 attempts
+        if attempt > 1:
+            print(f"[BOOX] retrying (attempt {attempt}/3) ...")
+            time.sleep(2)
 
-    if result.returncode != 0:
-        print(f"[BOOX] ✗ curl exit {result.returncode}: {result.stderr}")
-        raise RuntimeError(f"curl error (exit {result.returncode}): {result.stderr.strip()}")
+        try:
+            result = subprocess.run(
+                cmd,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+                timeout=120,
+            )
+        except subprocess.TimeoutExpired:
+            last_err = "Upload timed out after 120 s"
+            continue
+        except FileNotFoundError:
+            raise RuntimeError("curl not found — please install curl")
 
-    raw = result.stdout.strip()
-    print(f"[BOOX] ← {raw}")
+        if result.returncode != 0:
+            last_err = f"curl exit {result.returncode}: {result.stderr.strip()}"
+            print(f"[BOOX] ✗ attempt {attempt}: {last_err}")
+            continue                      # retry on connection errors
 
-    try:
-        resp_json = json.loads(raw)
-    except json.JSONDecodeError:
-        raise RuntimeError(f"Unexpected BOOX response: {raw[:200]}")
+        raw = result.stdout.strip()
+        print(f"[BOOX] ← {raw}")
 
-    if not resp_json.get("successful"):
-        raise RuntimeError(f"BOOX rejected upload: {resp_json.get('message', raw)}")
+        try:
+            resp_json = json.loads(raw)
+        except json.JSONDecodeError:
+            last_err = f"Unexpected BOOX response: {raw[:200]}"
+            print(f"[BOOX] ✗ attempt {attempt}: {last_err}")
+            continue
 
-    device_path = resp_json.get("message", "")
-    print(f"[BOOX] ✓ success  device_path={device_path}")
-    return device_path
+        if not resp_json.get("successful"):
+            raise RuntimeError(f"BOOX rejected upload: {resp_json.get('message', raw)}")
+
+        device_path = resp_json.get("message", "")
+        print(f"[BOOX] ✓ success  device_path={device_path}")
+        return device_path
+
+    raise RuntimeError(f"Upload failed after 3 attempts — last error: {last_err}")
 
 
 @app.route("/send-to-boox/<int:file_id>", methods=["POST"])
