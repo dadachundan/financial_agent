@@ -36,7 +36,8 @@ TEMPLATE = """
     body            { background:#f4f6f8; padding:24px 16px; }
     h2              { font-weight:700; }
     .stat-badges    { gap:8px; flex-wrap:wrap; margin-bottom:18px; }
-    .filter-bar     { gap:8px; flex-wrap:wrap; margin-bottom:14px; align-items:center; }
+    .filter-bar     { gap:8px; flex-wrap:wrap; margin-bottom:8px; align-items:center; }
+    .ticker-cloud   { margin-bottom:14px; display:flex; flex-wrap:wrap; gap:5px; align-items:center; }
     .table          { background:#fff; font-size:.83rem; }
     th              { white-space:nowrap; vertical-align:middle; }
     td              { vertical-align:middle; }
@@ -46,11 +47,21 @@ TEMPLATE = """
     .summary-col    { max-width:340px; white-space:pre-wrap; word-break:break-word; }
     .name-col       { max-width:200px; word-break:break-all; }
     .title-col      { max-width:220px; word-break:break-word; }
-    .analysis-col   { max-width:240px; word-break:break-word; }
+    .analysis-col   { max-width:220px; word-break:break-word; }
+    .ticker-badge   { font-size:.72rem; font-weight:600; margin:1px 2px; display:inline-block;
+                      background:#e8f0fe; color:#1a56db; border:1px solid #c3d3f7;
+                      border-radius:4px; padding:1px 5px; white-space:nowrap; }
+    .ticker-btn     { font-size:.72rem; font-weight:600; padding:2px 7px; border-radius:4px;
+                      white-space:nowrap; cursor:pointer; text-decoration:none; }
+    .ticker-btn-on  { background:#1a56db; color:#fff; border:1px solid #1a56db; }
+    .ticker-btn-off { background:#e8f0fe; color:#1a56db; border:1px solid #c3d3f7; }
+    .ticker-btn-off:hover { background:#c3d3f7; color:#1a56db; }
     .open-btn       { font-size:.75rem; padding:2px 8px; }
     #searchBox      { max-width:260px; }
     .page-footer    { margin-top:24px; font-size:.8rem; color:#888; }
     .count-badge    { font-size:.75rem; }
+    .cloud-label    { font-size:.75rem; color:#888; font-weight:600; white-space:nowrap; }
+    .active-ticker-pill { font-size:.8rem; }
   </style>
 </head>
 <body>
@@ -68,17 +79,41 @@ TEMPLATE = """
     <span class="badge bg-primary fs-6">Downloaded {{ stats.downloaded }}</span>
   </div>
 
-  <!-- Filters + search -->
+  <!-- AI/status filter buttons + search -->
   <div class="d-flex filter-bar">
-    <a href="?filter=all"          class="btn btn-sm {{ 'btn-dark'              if current_filter=='all'          else 'btn-outline-dark' }}">All ({{ stats.total }})</a>
-    <a href="?filter=ai"           class="btn btn-sm {{ 'btn-success'           if current_filter=='ai'           else 'btn-outline-success' }}">AI only ({{ stats.yes }})</a>
-    <a href="?filter=not_ai"       class="btn btn-sm {{ 'btn-secondary'         if current_filter=='not_ai'       else 'btn-outline-secondary' }}">Not AI ({{ stats.no }})</a>
-    <a href="?filter=unclassified" class="btn btn-sm {{ 'btn-warning text-dark' if current_filter=='unclassified' else 'btn-outline-warning' }}">Unclassified ({{ stats.unclassified }})</a>
-    <a href="?filter=downloaded"   class="btn btn-sm {{ 'btn-primary'           if current_filter=='downloaded'   else 'btn-outline-primary' }}">Downloaded ({{ stats.downloaded }})</a>
+    <a href="?filter=all{{ '&ticker=' ~ current_ticker if current_ticker else '' }}"
+       class="btn btn-sm {{ 'btn-dark' if current_filter=='all' else 'btn-outline-dark' }}">All ({{ stats.total }})</a>
+    <a href="?filter=ai{{ '&ticker=' ~ current_ticker if current_ticker else '' }}"
+       class="btn btn-sm {{ 'btn-success' if current_filter=='ai' else 'btn-outline-success' }}">AI only ({{ stats.yes }})</a>
+    <a href="?filter=not_ai{{ '&ticker=' ~ current_ticker if current_ticker else '' }}"
+       class="btn btn-sm {{ 'btn-secondary' if current_filter=='not_ai' else 'btn-outline-secondary' }}">Not AI ({{ stats.no }})</a>
+    <a href="?filter=unclassified{{ '&ticker=' ~ current_ticker if current_ticker else '' }}"
+       class="btn btn-sm {{ 'btn-warning text-dark' if current_filter=='unclassified' else 'btn-outline-warning' }}">Unclassified ({{ stats.unclassified }})</a>
+    <a href="?filter=downloaded{{ '&ticker=' ~ current_ticker if current_ticker else '' }}"
+       class="btn btn-sm {{ 'btn-primary' if current_filter=='downloaded' else 'btn-outline-primary' }}">Downloaded ({{ stats.downloaded }})</a>
     <input id="searchBox" type="text" class="form-control form-control-sm"
-           placeholder="Search name / title…" oninput="liveSearch(this.value)">
+           placeholder="Search name / title / ticker…" oninput="liveSearch(this.value)">
     <span id="matchCount" class="text-muted small align-self-center"></span>
   </div>
+
+  <!-- Ticker filter cloud -->
+  {% if all_tickers %}
+  <div class="ticker-cloud">
+    <span class="cloud-label">Ticker:</span>
+    {% if current_ticker %}
+      <a href="?filter={{ current_filter }}"
+         class="btn btn-sm btn-outline-secondary active-ticker-pill">
+        ✕ {{ current_ticker }}
+      </a>
+    {% endif %}
+    {% for t in all_tickers %}
+      {% if t != current_ticker %}
+        <a href="?filter={{ current_filter }}&ticker={{ t }}"
+           class="ticker-btn ticker-btn-off">{{ t }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
 
   <!-- Table -->
   <div class="table-responsive shadow-sm rounded">
@@ -90,6 +125,7 @@ TEMPLATE = """
           <th>File name</th>
           <th>Title</th>
           <th>AI?</th>
+          <th>Tickers</th>
           <th>Size</th>
           <th>Summary</th>
           <th>PDF</th>
@@ -99,7 +135,7 @@ TEMPLATE = """
       <tbody>
         {% for idx, row in rows %}
         <tr class="{{ 'row-ai' if row.ai_robotics_related == 1 else ('row-unclassed' if row.ai_robotics_related is none else 'row-not-ai') }}"
-            data-search="{{ (row.name ~ ' ' ~ (row.topic_title or ''))|lower }}">
+            data-search="{{ (row.name ~ ' ' ~ (row.topic_title or '') ~ ' ' ~ (row.tickers or ''))|lower }}">
           <td class="text-muted">{{ idx }}</td>
           <td class="text-nowrap">{{ (row.create_time or '')[:10] }}</td>
           <td class="name-col">{{ row.name }}</td>
@@ -111,6 +147,18 @@ TEMPLATE = """
               <span class="badge bg-secondary">No</span>
             {% else %}
               <span class="badge bg-warning text-dark">?</span>
+            {% endif %}
+          </td>
+          <td style="min-width:90px">
+            {% if row.tickers %}
+              {% for t in row.tickers.split(',') %}
+                {% set t = t.strip() %}
+                <a href="?filter={{ current_filter }}&ticker={{ t }}"
+                   class="ticker-badge" style="text-decoration:none"
+                   title="Filter by {{ t }}">{{ t }}</a>
+              {% endfor %}
+            {% else %}
+              <span class="text-muted">—</span>
             {% endif %}
           </td>
           <td class="text-end text-nowrap">
@@ -151,7 +199,7 @@ TEMPLATE = """
     new bootstrap.Tooltip(el, { html: false });
   });
 
-  // Live search
+  // Live search (client-side text filter, stacks on top of server-side filters)
   function liveSearch(q) {
     q = q.toLowerCase().trim();
     let visible = 0;
@@ -177,9 +225,25 @@ def get_conn() -> sqlite3.Connection:
     return conn
 
 
+def _get_all_tickers(conn: sqlite3.Connection) -> list[str]:
+    """Return sorted list of all unique tickers present in the DB."""
+    rows = conn.execute(
+        "SELECT tickers FROM pdf_files WHERE tickers IS NOT NULL AND tickers != ''"
+    ).fetchall()
+    seen: set[str] = set()
+    for r in rows:
+        for t in r["tickers"].split(","):
+            t = t.strip()
+            if t:
+                seen.add(t)
+    return sorted(seen)
+
+
 @app.route("/")
 def index():
-    f = request.args.get("filter", "all")
+    f      = request.args.get("filter", "all")
+    ticker = request.args.get("ticker", "").strip().upper()
+
     conn = get_conn()
 
     stats = conn.execute(
@@ -192,17 +256,31 @@ def index():
         "FROM pdf_files"
     ).fetchone()
 
-    where = {
-        "all":          "",
-        "ai":           "WHERE ai_robotics_related = 1",
-        "not_ai":       "WHERE ai_robotics_related = 0",
-        "unclassified": "WHERE ai_robotics_related IS NULL",
-        "downloaded":   "WHERE local_path IS NOT NULL",
-    }.get(f, "")
+    # Build WHERE clause (AI/status filter + optional ticker filter)
+    conditions: list[str] = []
+    params: list = []
+
+    ai_cond = {
+        "ai":           "ai_robotics_related = 1",
+        "not_ai":       "ai_robotics_related = 0",
+        "unclassified": "ai_robotics_related IS NULL",
+        "downloaded":   "local_path IS NOT NULL",
+    }.get(f)
+    if ai_cond:
+        conditions.append(ai_cond)
+
+    if ticker:
+        conditions.append("tickers LIKE ?")
+        params.append(f"%{ticker}%")
+
+    where_clause = ("WHERE " + " AND ".join(conditions)) if conditions else ""
 
     rows = conn.execute(
-        f"SELECT * FROM pdf_files {where} ORDER BY create_time DESC"
+        f"SELECT * FROM pdf_files {where_clause} ORDER BY create_time DESC",
+        params,
     ).fetchall()
+
+    all_tickers = _get_all_tickers(conn)
     conn.close()
 
     return render_template_string(
@@ -210,6 +288,8 @@ def index():
         rows=list(enumerate(rows, 1)),
         stats=stats,
         current_filter=f,
+        current_ticker=ticker,
+        all_tickers=all_tickers,
         db_path=DB_PATH,
     )
 
