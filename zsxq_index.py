@@ -12,6 +12,13 @@ Usage:
     python zsxq_index.py --group-id 51111812185184 --db zsxq.db
     python zsxq_index.py --downloads ~/Downloads/zsxq_reports --count 50
 
+    # Classify already-indexed PDFs as AI/Robotics-related via MiniMax:
+    python zsxq_index.py --classify --minimax-key YOUR_KEY
+    python zsxq_index.py --classify --minimax-key YOUR_KEY --reclassify   # redo all
+
+    # Index + classify in one shot:
+    python zsxq_index.py --last-x-files 10 --classify --minimax-key YOUR_KEY
+
 The script also reads the tracker JSON written by zsxq_downloader.py to populate
 the local_path column for files that have already been downloaded.
 """
@@ -31,6 +38,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 import requests
 
 API_BASE = "https://api.zsxq.com/v2"
+MINIMAX_API_URL = "https://api.minimax.io/v1/text/chatcompletion_v2"
+MINIMAX_MODEL = "MiniMax-Text-01"
+
 SCRIPT_DIR = Path(__file__).parent
 DEFAULT_CHROME_PROFILE = SCRIPT_DIR / "chrome_profile"
 DEFAULT_DB = SCRIPT_DIR / "zsxq.db"
@@ -148,26 +158,33 @@ def fetch_all_files(session: requests.Session, group_id: str,
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS pdf_files (
-    file_id     INTEGER PRIMARY KEY,
-    name        TEXT    NOT NULL,
-    topic_id    INTEGER,
-    topic_title TEXT,
-    summary     TEXT,
-    topic_json  TEXT,
-    local_path  TEXT,
-    file_size   INTEGER,
-    create_time TEXT,
-    downloaded_at TEXT,
-    indexed_at  TEXT    NOT NULL
+    file_id               INTEGER PRIMARY KEY,
+    name                  TEXT    NOT NULL,
+    topic_id              INTEGER,
+    topic_title           TEXT,
+    summary               TEXT,
+    topic_json            TEXT,
+    local_path            TEXT,
+    file_size             INTEGER,
+    create_time           TEXT,
+    downloaded_at         TEXT,
+    indexed_at            TEXT    NOT NULL,
+    ai_robotics_analysis  TEXT,
+    ai_robotics_related   INTEGER
 );
 
 CREATE INDEX IF NOT EXISTS idx_create_time ON pdf_files(create_time);
-CREATE INDEX IF NOT EXISTS idx_name ON pdf_files(name);
+CREATE INDEX IF NOT EXISTS idx_name        ON pdf_files(name);
 """
 
-# Columns added after the initial schema — applied as safe migrations
-MIGRATIONS = [
-    "ALTER TABLE pdf_files ADD COLUMN topic_json TEXT",
+# Columns/indexes added after the initial schema — applied as safe migrations.
+# Each entry is (sql, ignore_error_fragment) — the error fragment is matched
+# against the exception message to suppress expected "already exists" errors.
+MIGRATIONS: list[tuple[str, str]] = [
+    ("ALTER TABLE pdf_files ADD COLUMN topic_json TEXT",            "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN ai_robotics_analysis TEXT",  "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN ai_robotics_related INTEGER","duplicate column"),
+    ("CREATE INDEX IF NOT EXISTS idx_ai_related ON pdf_files(ai_robotics_related)", "already exists"),
 ]
 
 
@@ -175,12 +192,13 @@ def init_db(db_path: Path) -> sqlite3.Connection:
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     conn.executescript(SCHEMA)
-    # Apply any migrations that haven't been run yet (ignore "duplicate column" errors)
-    for sql in MIGRATIONS:
+    # Apply any migrations that haven't been run yet
+    for sql, ignore_fragment in MIGRATIONS:
         try:
             conn.execute(sql)
-        except sqlite3.OperationalError:
-            pass  # column already exists
+        except sqlite3.OperationalError as e:
+            if ignore_fragment.lower() not in str(e).lower():
+                raise
     conn.commit()
     return conn
 
@@ -206,6 +224,83 @@ def _full_title(topic: dict) -> str | None:
         return first_line
     # Fallback to the API title (may be truncated)
     return topic.get("title")
+
+
+# ── MiniMax classification ────────────────────────────────────────────────────
+
+CLASSIFY_SYSTEM = (
+    "You are a financial research analyst. "
+    "Your task is to determine whether a given research report is primarily about "
+    "Artificial Intelligence (AI), Machine Learning, or Robotics. "
+    "Respond with a brief analysis of 2-3 sentences, then on a new line write "
+    "exactly one of: 'Answer: Yes' or 'Answer: No'."
+)
+
+CLASSIFY_USER_TMPL = """\
+Report filename: {name}
+
+Summary (Chinese):
+{summary}
+
+Is this report primarily about Artificial Intelligence (AI), Machine Learning, or Robotics?
+"""
+
+
+def classify_with_minimax(name: str, summary: str, api_key: str,
+                           retries: int = 3) -> tuple[str, bool | None]:
+    """Call MiniMax to classify a PDF as AI/Robotics-related.
+
+    Returns (full_response_text, is_related).
+    is_related is True/False, or None if the answer could not be parsed.
+    """
+    user_msg = CLASSIFY_USER_TMPL.format(
+        name=name,
+        summary=summary.strip() if summary else "(no summary available)",
+    )
+    payload = {
+        "model": MINIMAX_MODEL,
+        "messages": [
+            {"role": "system", "name": "MiniMax AI", "content": CLASSIFY_SYSTEM},
+            {"role": "user",   "name": "User",       "content": user_msg},
+        ],
+        "stream": False,
+        "temperature": 0.2,
+        "max_completion_tokens": 300,
+    }
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {api_key}",
+    }
+
+    for attempt in range(retries):
+        try:
+            resp = requests.post(MINIMAX_API_URL, json=payload, headers=headers, timeout=30)
+            resp.raise_for_status()
+            data = resp.json()
+            text = (
+                data.get("choices", [{}])[0]
+                    .get("message", {})
+                    .get("content", "")
+            )
+            # Parse the mandatory "Answer: Yes/No" line
+            is_related: bool | None = None
+            for line in reversed(text.splitlines()):
+                line_stripped = line.strip().lower()
+                if line_stripped.startswith("answer:"):
+                    answer = line_stripped.replace("answer:", "").strip()
+                    if answer.startswith("yes"):
+                        is_related = True
+                    elif answer.startswith("no"):
+                        is_related = False
+                    break
+            return text, is_related
+        except Exception as e:
+            wait = 3 * (attempt + 1)
+            print(f"    MiniMax error (attempt {attempt+1}/{retries}): {e}, "
+                  f"retrying in {wait}s...")
+            time.sleep(wait)
+
+    return "", None
 
 
 def upsert_entry(conn: sqlite3.Connection, row: dict):
@@ -263,6 +358,16 @@ def main():
     parser.add_argument("--chrome-profile", default=str(DEFAULT_CHROME_PROFILE))
     parser.add_argument("--delay", type=float, default=0.5,
                         help="Seconds between paginated API calls")
+    # ── MiniMax classification ──
+    parser.add_argument("--classify", action="store_true",
+                        help="After indexing, classify each PDF as AI/Robotics-related "
+                             "via MiniMax. Skips rows that already have a classification.")
+    parser.add_argument("--reclassify", action="store_true",
+                        help="Re-run classification on ALL rows, overwriting existing results.")
+    parser.add_argument("--minimax-key", default=None, metavar="KEY",
+                        help="MiniMax API key. Falls back to MINIMAX_API_KEY env var.")
+    parser.add_argument("--classify-delay", type=float, default=1.0,
+                        help="Seconds between MiniMax API calls (default: 1.0)")
     args = parser.parse_args()
 
     # --last-x-files takes precedence over --count
@@ -351,6 +456,70 @@ def main():
             inserted += 1
 
     conn.commit()
+
+    # ── Optional MiniMax classification ──────────────────────────────────────
+    if args.classify:
+        import os
+        minimax_key = args.minimax_key or os.environ.get("MINIMAX_API_KEY", "")
+        if not minimax_key:
+            print("\nERROR: --classify requires a MiniMax API key via "
+                  "--minimax-key or MINIMAX_API_KEY env var.")
+        else:
+            if args.reclassify:
+                to_classify = conn.execute(
+                    "SELECT file_id, name, summary FROM pdf_files ORDER BY create_time DESC"
+                ).fetchall()
+            else:
+                to_classify = conn.execute(
+                    "SELECT file_id, name, summary FROM pdf_files "
+                    "WHERE ai_robotics_related IS NULL ORDER BY create_time DESC"
+                ).fetchall()
+
+            print(f"\nClassifying {len(to_classify)} PDF(s) via MiniMax "
+                  f"({'reclassify all' if args.reclassify else 'unclassified only'})...")
+
+            yes_count = no_count = err_count = 0
+            for i, row in enumerate(to_classify, 1):
+                file_id = row["file_id"]
+                name    = row["name"]
+                summary = row["summary"] or ""
+                print(f"  [{i}/{len(to_classify)}] {name[:65]}")
+
+                analysis, is_related = classify_with_minimax(
+                    name, summary, minimax_key
+                )
+
+                if is_related is True:
+                    label = "YES ✓"
+                    yes_count += 1
+                elif is_related is False:
+                    label = "NO  ✗"
+                    no_count += 1
+                else:
+                    label = "ERR ?"
+                    err_count += 1
+
+                print(f"           → {label}  |  {analysis[:80].strip()!r}")
+
+                conn.execute(
+                    """UPDATE pdf_files
+                       SET ai_robotics_analysis = ?,
+                           ai_robotics_related  = ?,
+                           indexed_at           = ?
+                     WHERE file_id = ?""",
+                    (analysis,
+                     1 if is_related is True else (0 if is_related is False else None),
+                     datetime.now().isoformat(),
+                     file_id),
+                )
+                conn.commit()
+
+                if i < len(to_classify):
+                    time.sleep(args.classify_delay)
+
+            print(f"\n  Classification done: {yes_count} YES, {no_count} NO, "
+                  f"{err_count} parse errors")
+
     conn.close()
 
     print(f"\nDone.")
