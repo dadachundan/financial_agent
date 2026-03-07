@@ -44,7 +44,11 @@ TEMPLATE = """
     .row-ai         { background:#d1f0d8 !important; }
     .row-not-ai     { background:#fff !important; }
     .row-unclassed  { background:#fff8e1 !important; }
-    .summary-col    { max-width:340px; white-space:pre-wrap; word-break:break-word; }
+    .summary-col    { max-width:300px; }
+    .summary-short  { display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;
+                      overflow:hidden; word-break:break-word; cursor:pointer; }
+    .summary-more   { font-size:.72rem; color:#1a56db; cursor:pointer; white-space:nowrap; }
+    .summary-more:hover { text-decoration:underline; }
     .name-col       { max-width:200px; word-break:break-all; }
     .title-col      { max-width:220px; word-break:break-word; }
     .analysis-col   { max-width:220px; word-break:break-word; }
@@ -166,10 +170,14 @@ TEMPLATE = """
           </td>
           <td class="summary-col">
             {% if row.summary %}
-              <span data-bs-toggle="tooltip" data-bs-placement="left"
-                    title="{{ row.summary|e }}">
-                {{ row.summary[:220] }}{% if row.summary|length > 220 %}…{% endif %}
-              </span>
+              <div class="summary-short"
+                   onclick="showSummary({{ row.file_id }}, this)"
+                   data-full="{{ row.summary|e }}"
+                   data-title="{{ (row.topic_title or row.name)|e }}"
+                   title="Click to expand">{{ row.summary }}</div>
+              {% if row.summary|length > 120 %}
+                <span class="summary-more" onclick="showSummary({{ row.file_id }}, this.previousElementSibling)">more ↗</span>
+              {% endif %}
             {% else %}—{% endif %}
           </td>
           <td class="text-center">
@@ -192,12 +200,29 @@ TEMPLATE = """
   <p class="page-footer">Showing <span id="visibleCount">{{ rows|length }}</span> of {{ rows|length }} rows.</p>
 </div>
 
+<!-- Summary modal -->
+<div class="modal fade" id="summaryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="summaryModalTitle" style="font-size:.95rem;word-break:break-word"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="summaryModalBody"
+           style="white-space:pre-wrap;word-break:break-word;font-size:.9rem;line-height:1.7"></div>
+    </div>
+  </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // Bootstrap tooltips
-  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
-    new bootstrap.Tooltip(el, { html: false });
-  });
+  // Summary modal
+  const _summaryModal = new bootstrap.Modal(document.getElementById('summaryModal'));
+  function showSummary(fileId, el) {
+    document.getElementById('summaryModalTitle').textContent = el.dataset.title || '';
+    document.getElementById('summaryModalBody').textContent  = el.dataset.full  || '';
+    _summaryModal.show();
+  }
 
   // Live search (client-side text filter, stacks on top of server-side filters)
   function liveSearch(q) {
