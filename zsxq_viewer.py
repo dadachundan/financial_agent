@@ -11,21 +11,13 @@ PDFs open in a new browser tab when you click "Open PDF".
 """
 
 import argparse
-import json
 import sqlite3
-import subprocess
-import time
-import traceback
-import urllib.error
-import urllib.request
-import uuid
 from pathlib import Path
 
-from flask import Flask, abort, jsonify, render_template_string, request, send_file
+from flask import Flask, abort, render_template_string, request, send_file
 
 SCRIPT_DIR = Path(__file__).parent
 DEFAULT_DB  = SCRIPT_DIR / "zsxq.db"
-BOOX_URL    = "http://192.168.1.108:8085/api/storage/upload"
 
 app = Flask(__name__)
 DB_PATH: Path = DEFAULT_DB
@@ -52,7 +44,7 @@ TEMPLATE = """
     .row-ai         { background:#d1f0d8 !important; }
     .row-not-ai     { background:#fff !important; }
     .row-unclassed  { background:#fff8e1 !important; }
-    .summary-col    { max-width:300px; }
+    .summary-col    { max-width:440px; }
     .summary-short  { display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;
                       overflow:hidden; word-break:break-word; cursor:pointer; }
     .summary-more   { font-size:.72rem; color:#1a56db; cursor:pointer; white-space:nowrap; }
@@ -69,8 +61,6 @@ TEMPLATE = """
     .ticker-btn-off { background:#e8f0fe; color:#1a56db; border:1px solid #c3d3f7; }
     .ticker-btn-off:hover { background:#c3d3f7; color:#1a56db; }
     .open-btn       { font-size:.75rem; padding:2px 8px; }
-    .boox-btn       { font-size:.75rem; padding:2px 6px; }
-    .action-btns    { display:flex; flex-direction:column; gap:3px; align-items:center; }
     #searchBox      { max-width:260px; }
     .page-footer    { margin-top:24px; font-size:.8rem; color:#888; }
     .count-badge    { font-size:.75rem; }
@@ -163,14 +153,18 @@ TEMPLATE = """
               <span class="badge bg-warning text-dark">?</span>
             {% endif %}
           </td>
-          <td style="min-width:90px">
+          <td style="max-width:80px">
             {% if row.tickers %}
-              {% for t in row.tickers.split(',') %}
+              {% set ticker_list = row.tickers.split(',') %}
+              {% for t in ticker_list[:5] %}
                 {% set t = t.strip() %}
                 <a href="?filter={{ current_filter }}&ticker={{ t }}"
                    class="ticker-badge" style="text-decoration:none"
                    title="Filter by {{ t }}">{{ t }}</a>
               {% endfor %}
+              {% if ticker_list|length > 5 %}
+                <span class="text-muted" style="font-size:.65rem">+{{ ticker_list|length - 5 }}</span>
+              {% endif %}
             {% else %}
               <span class="text-muted">—</span>
             {% endif %}
@@ -192,13 +186,8 @@ TEMPLATE = """
           </td>
           <td class="text-center">
             {% if row.local_path %}
-              <div class="action-btns">
-                <a href="/pdf/{{ row.file_id }}" target="_blank"
-                   class="btn btn-outline-danger open-btn">📄 Open</a>
-                <button class="btn btn-outline-primary boox-btn"
-                        onclick="sendToBoox({{ row.file_id }}, this)"
-                        title="Send to BOOX">📚 BOOX</button>
-              </div>
+              <a href="/pdf/{{ row.file_id }}" target="_blank"
+                 class="btn btn-outline-danger open-btn">📄 Open</a>
             {% else %}
               <span class="text-muted">—</span>
             {% endif %}
@@ -237,52 +226,6 @@ TEMPLATE = """
     document.getElementById('summaryModalTitle').textContent = el.dataset.title || '';
     document.getElementById('summaryModalBody').textContent  = el.dataset.full  || '';
     _summaryModal.show();
-  }
-
-  // Send PDF to BOOX device
-  async function sendToBoox(fileId, btn) {
-    const orig = btn.innerHTML;
-    // Remove any previous error label
-    const prev = btn.parentElement.querySelector('.boox-err');
-    if (prev) prev.remove();
-
-    btn.disabled = true;
-    btn.innerHTML = '⏳';
-    try {
-      const resp = await fetch('/send-to-boox/' + fileId, { method: 'POST' });
-      const data = await resp.json();
-      if (data.ok) {
-        btn.innerHTML = '✓ Sent';
-        btn.classList.replace('btn-outline-primary', 'btn-success');
-      } else {
-        btn.innerHTML = '✗ Fail';
-        btn.classList.replace('btn-outline-primary', 'btn-danger');
-        _booxShowErr(btn, data.error || 'Upload failed');
-        setTimeout(() => {
-          btn.innerHTML = orig; btn.disabled = false;
-          btn.classList.replace('btn-danger', 'btn-outline-primary');
-          const e = btn.parentElement.querySelector('.boox-err');
-          if (e) e.remove();
-        }, 5000);
-      }
-    } catch(e) {
-      btn.innerHTML = '✗ Err';
-      btn.classList.replace('btn-outline-primary', 'btn-danger');
-      _booxShowErr(btn, String(e));
-      setTimeout(() => {
-        btn.innerHTML = orig; btn.disabled = false;
-        btn.classList.replace('btn-danger', 'btn-outline-primary');
-        const el = btn.parentElement.querySelector('.boox-err');
-        if (el) el.remove();
-      }, 5000);
-    }
-  }
-  function _booxShowErr(btn, msg) {
-    const d = document.createElement('div');
-    d.className = 'boox-err';
-    d.style.cssText = 'font-size:.65rem;color:#dc3545;max-width:130px;word-break:break-word;margin-top:2px;text-align:center';
-    d.textContent = msg;
-    btn.parentElement.appendChild(d);
   }
 
   // Live search (client-side text filter, stacks on top of server-side filters)
@@ -378,99 +321,6 @@ def index():
         all_tickers=all_tickers,
         db_path=DB_PATH,
     )
-
-
-def _post_to_boox(path: Path) -> str:
-    """Upload a file to the BOOX device via curl subprocess.
-
-    Returns the device path on success; raises RuntimeError on failure.
-    Uses curl instead of urllib to avoid macOS routing quirks with large bodies.
-    """
-    size_mb = path.stat().st_size / 1_048_576
-    print(f"[BOOX] → uploading {path.name!r}  ({size_mb:.1f} MB)  to {BOOX_URL}")
-
-    cmd = [
-        "curl", "--no-progress-meter", "--max-time", "60",
-        "-F", "dir=Recent",
-        "-F", "sender=web",
-        "-F", f"file=@{path}",
-        BOOX_URL,
-    ]
-
-    last_err = ""
-    for attempt in range(1, 4):          # up to 3 attempts
-        if attempt > 1:
-            print(f"[BOOX] retrying (attempt {attempt}/3) ...")
-            time.sleep(2)
-
-        try:
-            result = subprocess.run(
-                cmd,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                text=True,
-                timeout=120,
-            )
-        except subprocess.TimeoutExpired:
-            last_err = "Upload timed out after 120 s"
-            continue
-        except FileNotFoundError:
-            raise RuntimeError("curl not found — please install curl")
-
-        if result.returncode != 0:
-            last_err = f"curl exit {result.returncode}: {result.stderr.strip()}"
-            print(f"[BOOX] ✗ attempt {attempt}: {last_err}")
-            continue                      # retry on connection errors
-
-        raw = result.stdout.strip()
-        print(f"[BOOX] ← {raw}")
-
-        try:
-            resp_json = json.loads(raw)
-        except json.JSONDecodeError:
-            last_err = f"Unexpected BOOX response: {raw[:200]}"
-            print(f"[BOOX] ✗ attempt {attempt}: {last_err}")
-            continue
-
-        if not resp_json.get("successful"):
-            raise RuntimeError(f"BOOX rejected upload: {resp_json.get('message', raw)}")
-
-        device_path = resp_json.get("message", "")
-        print(f"[BOOX] ✓ success  device_path={device_path}")
-        return device_path
-
-    raise RuntimeError(f"Upload failed after 3 attempts — last error: {last_err}")
-
-
-@app.route("/send-to-boox/<int:file_id>", methods=["POST"])
-def send_to_boox(file_id: int):
-    """Proxy-upload a local PDF to the BOOX device."""
-    conn = get_conn()
-    row = conn.execute(
-        "SELECT local_path, name FROM pdf_files WHERE file_id = ?", (file_id,)
-    ).fetchone()
-    conn.close()
-
-    print(f"[BOOX] request  file_id={file_id}")
-
-    if not row or not row["local_path"]:
-        print(f"[BOOX] ✗ no local_path in DB for file_id={file_id}")
-        return jsonify(ok=False, error="No local file recorded for this entry."), 404
-
-    path = Path(row["local_path"])
-    print(f"[BOOX] local_path={path}  exists={path.exists()}")
-
-    if not path.exists():
-        print(f"[BOOX] ✗ file missing on disk: {path}")
-        return jsonify(ok=False, error=f"File not found on disk: {path.name}"), 404
-
-    try:
-        device_path = _post_to_boox(path)
-        return jsonify(ok=True, device_path=device_path)
-    except Exception as exc:
-        print(f"[BOOX] ✗ upload exception: {exc}")
-        traceback.print_exc()
-        return jsonify(ok=False, error=str(exc)), 502
 
 
 @app.route("/pdf/<int:file_id>")
