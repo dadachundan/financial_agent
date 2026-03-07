@@ -452,12 +452,17 @@ def sanitize_filename(name: str) -> str:
 
 def get_download_url(session: requests.Session, file_id: int) -> str | None:
     url = f"{API_BASE}/files/{file_id}/download_url"
-    resp = session.get(url, headers=HEADERS)
-    resp.raise_for_status()
-    data = resp.json()
-    if not data.get("succeeded"):
+    try:
+        resp = session.get(url, headers=HEADERS, timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        if not data.get("succeeded"):
+            print(f"    ⚠ Download URL API error for file {file_id}: {data.get('info') or data}")
+            return None
+        return data["resp_data"]["download_url"]
+    except Exception as e:
+        print(f"    ⚠ Failed to get download URL for file {file_id}: {e}")
         return None
-    return data["resp_data"]["download_url"]
 
 
 def download_file(session: requests.Session, download_url: str, dest_path: Path) -> int:
@@ -883,15 +888,14 @@ def main():
                 # Auto-download if AI/Robotics-related and not yet on disk
                 if is_related is True and not local_path:
                     print(f"           → AI-related: downloading...")
-                    dl_url = get_download_url(session, file_id)
-                    if dl_url:
-                        safe_name = sanitize_filename(name)
-                        dest = downloads_dir / safe_name
-                        try:
+                    try:
+                        dl_url = get_download_url(session, file_id)
+                        if dl_url:
+                            safe_name = sanitize_filename(name)
+                            dest = downloads_dir / safe_name
                             written = download_file(session, dl_url, dest)
                             local_path = str(dest)
                             dl_ts = datetime.now().isoformat()
-                            # Update in-memory tracker and persist to JSON
                             tracker[str(file_id)] = {
                                 "name": name,
                                 "path": local_path,
@@ -901,11 +905,11 @@ def main():
                             save_tracker(downloads_dir, tracker)
                             print(f"           → saved {written/1024/1024:.1f}MB → {dest.name}")
                             dl_ok += 1
-                        except Exception as e:
-                            print(f"           → download failed: {e}")
+                        else:
+                            print(f"           → could not get download URL")
                             dl_fail += 1
-                    else:
-                        print(f"           → could not get download URL")
+                    except Exception as e:
+                        print(f"           → download failed: {e}")
                         dl_fail += 1
 
                 conn.execute(
