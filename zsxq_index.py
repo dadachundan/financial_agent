@@ -12,6 +12,7 @@ Usage:
     python zsxq_index.py --group-id 51111812185184 --db zsxq.db
     python zsxq_index.py --downloads ~/Downloads/zsxq_reports --count 50
     python zsxq_index.py --reclassify          # re-classify every row (even if done before)
+    python zsxq_index.py --cleanup-non-ai      # delete local PDFs classified as NOT AI/Robotics
 
 Classification via MiniMax runs automatically after indexing — unclassified rows only.
 MiniMax API key is read from config.py (MINIMAX_API_KEY) in the project root.
@@ -427,6 +428,11 @@ def main():
                              "By default only unclassified rows are processed.")
     parser.add_argument("--classify-delay", type=float, default=1.0,
                         help="Seconds between MiniMax API calls (default: 1.0)")
+    # ── Cleanup ──
+    parser.add_argument("--cleanup-non-ai", action="store_true",
+                        help="Delete local PDF files that are classified as NOT AI/Robotics "
+                             "(ai_robotics_related=0). Clears local_path in DB and tracker. "
+                             "Unclassified files are never touched.")
     args = parser.parse_args()
 
     # --last-x-files takes precedence over --count
@@ -689,11 +695,53 @@ def main():
             print(f"    Parse errors      : {err_count}{dl_msg}")
             print(f"{'='*65}")
 
+    # ── Cleanup: delete local PDFs that are NOT AI/Robotics-related ─────────
+    if args.cleanup_non_ai:
+        import os
+        non_ai = conn.execute(
+            "SELECT file_id, name, local_path FROM pdf_files "
+            "WHERE ai_robotics_related = 0 AND local_path IS NOT NULL"
+        ).fetchall()
+
+        if not non_ai:
+            print("\nCleanup: no non-AI PDFs with a local file found.")
+        else:
+            print(f"\nCleanup: {len(non_ai)} non-AI PDF(s) to delete:\n")
+            for r in non_ai:
+                print(f"  {r['name'][:70]}")
+                print(f"    {r['local_path']}")
+
+            print(f"\nDeleting {len(non_ai)} file(s)...")
+            deleted = skipped_missing = 0
+            for r in non_ai:
+                path = Path(r["local_path"])
+                if path.exists():
+                    path.unlink()
+                    deleted += 1
+                    print(f"  ✓ deleted  {path.name}")
+                else:
+                    skipped_missing += 1
+                    print(f"  ⚠ missing  {path.name}")
+
+                # Clear local_path in DB
+                conn.execute(
+                    "UPDATE pdf_files SET local_path = NULL, downloaded_at = NULL "
+                    "WHERE file_id = ?", (r["file_id"],)
+                )
+                # Remove from tracker JSON
+                tracker.pop(str(r["file_id"]), None)
+
+            conn.commit()
+            save_tracker(downloads_dir, tracker)
+            print(f"\n  Deleted: {deleted}  |  Already missing: {skipped_missing}")
+            print(f"  DB local_path cleared, tracker updated.")
+
     conn.close()
 
     # Final stats from DB
     import sqlite3 as _sq3
     conn2 = _sq3.connect(db_path, timeout=10)
+    conn2.row_factory = _sq3.Row          # ← needed so we can index by column name
     final = conn2.execute(
         "SELECT COUNT(*) as total, "
         "SUM(CASE WHEN ai_robotics_related IS NULL THEN 1 ELSE 0 END) as unclassified, "
