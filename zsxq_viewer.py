@@ -186,7 +186,7 @@ TEMPLATE = """
           </td>
           <td class="text-center">
             {% if row.local_path %}
-              <a href="/pdf/{{ row.file_id }}" target="_blank"
+              <a href="/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank"
                  class="btn btn-outline-danger open-btn">📄 Open</a>
             {% else %}
               <span class="text-muted">—</span>
@@ -324,7 +324,8 @@ def index():
 
 
 @app.route("/pdf/<int:file_id>")
-def serve_pdf(file_id: int):
+@app.route("/pdf/<int:file_id>/<filename>")   # URL ending in .pdf helps old Android browsers
+def serve_pdf(file_id: int, filename: str = ""):
     """Serve a local PDF file so the browser can open it in a new tab."""
     conn = get_conn()
     row = conn.execute(
@@ -339,7 +340,10 @@ def serve_pdf(file_id: int):
     if not path.exists():
         abort(404, f"File not found on disk: {path}")
 
-    return send_file(path, mimetype="application/pdf")
+    # download_name sets Content-Disposition: inline; filename="…pdf"
+    # which helps old Android WebKit sniff the correct MIME type.
+    return send_file(path, mimetype="application/pdf",
+                     download_name=path.name, as_attachment=False)
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────
