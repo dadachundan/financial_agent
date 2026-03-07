@@ -7,18 +7,13 @@ file's associated topic (topic.talk.text), then stores file metadata + summary +
 local download path in a SQLite database.
 
 Usage:
-    python zsxq_index.py                        # index all files
+    python zsxq_index.py                        # index + auto-classify all files
     python zsxq_index.py --last-x-files 10     # index only the 10 most recent files
     python zsxq_index.py --group-id 51111812185184 --db zsxq.db
     python zsxq_index.py --downloads ~/Downloads/zsxq_reports --count 50
+    python zsxq_index.py --reclassify          # re-classify every row (even if done before)
 
-    # Classify already-indexed PDFs as AI/Robotics-related via MiniMax:
-    python zsxq_index.py --classify            # skips rows already classified
-    python zsxq_index.py --classify --reclassify   # redo all rows
-
-    # Index + classify in one shot:
-    python zsxq_index.py --last-x-files 10 --classify
-
+Classification via MiniMax runs automatically after indexing — unclassified rows only.
 MiniMax API key is read from config.py (MINIMAX_API_KEY) in the project root.
 The script also reads the tracker JSON written by zsxq_downloader.py to populate
 the local_path column for files that have already been downloaded.
@@ -420,12 +415,9 @@ def main():
     parser.add_argument("--delay", type=float, default=0.5,
                         help="Seconds between paginated API calls")
     # ── MiniMax classification ──
-    parser.add_argument("--classify", action="store_true",
-                        help="After indexing, classify each PDF as AI/Robotics-related "
-                             "via MiniMax (key read from config.py). "
-                             "Skips rows that already have a classification.")
     parser.add_argument("--reclassify", action="store_true",
-                        help="Re-run classification on ALL rows, overwriting existing results.")
+                        help="Re-classify ALL rows, overwriting existing results. "
+                             "By default only unclassified rows are processed.")
     parser.add_argument("--classify-delay", type=float, default=1.0,
                         help="Seconds between MiniMax API calls (default: 1.0)")
     args = parser.parse_args()
@@ -451,8 +443,8 @@ def main():
     print(f"  Downloads: {downloads_dir}")
     limit_desc_banner = f"last {args.count}" if args.count else "all"
     print(f"  Fetch   : {limit_desc_banner} files")
-    if args.classify:
-        print(f"  Classify: YES (MiniMax, {'reclassify all' if args.reclassify else 'unclassified only'})")
+    classify_mode = "reclassify all" if args.reclassify else "unclassified only"
+    print(f"  Classify: {'MiniMax (' + classify_mode + ')' if _CONFIG_MINIMAX_KEY else 'skipped (no API key)'}")
     print("=" * 65)
     print()
 
@@ -557,26 +549,28 @@ def main():
 
     conn.commit()
 
-    # ── Optional MiniMax classification ──────────────────────────────────────
-    if args.classify:
-        minimax_key = _CONFIG_MINIMAX_KEY
-        if not minimax_key:
-            print("\nERROR: --classify requires MINIMAX_API_KEY in config.py "
-                  f"(looked in: {_project_root or 'not found'})")
+    # ── MiniMax classification (always runs; skips already-classified rows) ──
+    minimax_key = _CONFIG_MINIMAX_KEY
+    if not minimax_key:
+        print("\nSkipping classification: MINIMAX_API_KEY not found in config.py "
+              f"(looked in: {_project_root or 'not found'})")
+    else:
+        if args.reclassify:
+            to_classify = conn.execute(
+                "SELECT file_id, name, summary, local_path "
+                "FROM pdf_files ORDER BY create_time DESC"
+            ).fetchall()
         else:
-            if args.reclassify:
-                to_classify = conn.execute(
-                    "SELECT file_id, name, summary, local_path "
-                    "FROM pdf_files ORDER BY create_time DESC"
-                ).fetchall()
-            else:
-                to_classify = conn.execute(
-                    "SELECT file_id, name, summary, local_path "
-                    "FROM pdf_files WHERE ai_robotics_related IS NULL "
-                    "ORDER BY create_time DESC"
-                ).fetchall()
+            to_classify = conn.execute(
+                "SELECT file_id, name, summary, local_path "
+                "FROM pdf_files WHERE ai_robotics_related IS NULL "
+                "ORDER BY create_time DESC"
+            ).fetchall()
 
-            total_to_classify = len(to_classify)
+        total_to_classify = len(to_classify)
+        if total_to_classify == 0:
+            print("\nClassification: all rows already classified, nothing to do.")
+        else:
             print(f"\nClassifying {total_to_classify} PDF(s) via MiniMax "
                   f"({'reclassify all' if args.reclassify else 'unclassified only'})...\n")
 
