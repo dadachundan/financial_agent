@@ -240,6 +240,10 @@ TEMPLATE = """
   // Send PDF to BOOX device
   async function sendToBoox(fileId, btn) {
     const orig = btn.innerHTML;
+    // Remove any previous error label
+    const prev = btn.parentElement.querySelector('.boox-err');
+    if (prev) prev.remove();
+
     btn.disabled = true;
     btn.innerHTML = '⏳';
     try {
@@ -250,18 +254,33 @@ TEMPLATE = """
         btn.classList.replace('btn-outline-primary', 'btn-success');
       } else {
         btn.innerHTML = '✗ Fail';
-        btn.title = data.error || 'Upload failed';
         btn.classList.replace('btn-outline-primary', 'btn-danger');
-        setTimeout(() => { btn.innerHTML = orig; btn.disabled = false;
-          btn.classList.replace('btn-danger', 'btn-outline-primary'); }, 3000);
+        _booxShowErr(btn, data.error || 'Upload failed');
+        setTimeout(() => {
+          btn.innerHTML = orig; btn.disabled = false;
+          btn.classList.replace('btn-danger', 'btn-outline-primary');
+          const e = btn.parentElement.querySelector('.boox-err');
+          if (e) e.remove();
+        }, 5000);
       }
     } catch(e) {
       btn.innerHTML = '✗ Err';
-      btn.title = String(e);
       btn.classList.replace('btn-outline-primary', 'btn-danger');
-      setTimeout(() => { btn.innerHTML = orig; btn.disabled = false;
-        btn.classList.replace('btn-danger', 'btn-outline-primary'); }, 3000);
+      _booxShowErr(btn, String(e));
+      setTimeout(() => {
+        btn.innerHTML = orig; btn.disabled = false;
+        btn.classList.replace('btn-danger', 'btn-outline-primary');
+        const el = btn.parentElement.querySelector('.boox-err');
+        if (el) el.remove();
+      }, 5000);
     }
+  }
+  function _booxShowErr(btn, msg) {
+    const d = document.createElement('div');
+    d.className = 'boox-err';
+    d.style.cssText = 'font-size:.65rem;color:#dc3545;max-width:130px;word-break:break-word;margin-top:2px;text-align:center';
+    d.textContent = msg;
+    btn.parentElement.appendChild(d);
   }
 
   // Live search (client-side text filter, stacks on top of server-side filters)
@@ -398,8 +417,14 @@ def _post_to_boox(path: Path) -> str:
         print(f"[BOOX] ✗ HTTP error {exc.code}: {body_text}")
         raise RuntimeError(f"BOOX HTTP {exc.code}: {body_text}") from exc
     except urllib.error.URLError as exc:
-        print(f"[BOOX] ✗ connection error: {exc.reason}")
-        raise RuntimeError(f"Cannot reach BOOX at {BOOX_URL}: {exc.reason}") from exc
+        reason = str(exc.reason)
+        print(f"[BOOX] ✗ connection error: {reason}")
+        # Errno 65 = No route to host, Errno 61 = Connection refused
+        if any(x in reason for x in ("65", "61", "No route", "refused", "timed out")):
+            msg = "BOOX unreachable — is the device awake and on the same WiFi?"
+        else:
+            msg = f"Network error: {reason}"
+        raise RuntimeError(msg) from exc
 
 
 @app.route("/send-to-boox/<int:file_id>", methods=["POST"])
