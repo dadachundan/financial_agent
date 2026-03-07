@@ -268,10 +268,10 @@ Is this report primarily about Artificial Intelligence (AI), Machine Learning, o
 
 
 def classify_with_minimax(name: str, summary: str, api_key: str,
-                           retries: int = 3) -> tuple[str, bool | None]:
+                           retries: int = 3) -> tuple[str, bool | None, float]:
     """Call MiniMax to classify a PDF as AI/Robotics-related.
 
-    Returns (full_response_text, is_related).
+    Returns (full_response_text, is_related, elapsed_seconds).
     is_related is True/False, or None if the answer could not be parsed.
     """
     user_msg = CLASSIFY_USER_TMPL.format(
@@ -295,7 +295,9 @@ def classify_with_minimax(name: str, summary: str, api_key: str,
 
     for attempt in range(retries):
         try:
+            t0 = time.monotonic()
             resp = requests.post(MINIMAX_API_URL, json=payload, headers=headers, timeout=30)
+            elapsed = time.monotonic() - t0
             resp.raise_for_status()
             data = resp.json()
             text = (
@@ -314,14 +316,17 @@ def classify_with_minimax(name: str, summary: str, api_key: str,
                     elif answer.startswith("no"):
                         is_related = False
                     break
-            return text, is_related
+            if is_related is None:
+                print(f"    ⚠ Could not parse Answer from MiniMax response. "
+                      f"Raw reply:\n{text}")
+            return text, is_related, elapsed
         except Exception as e:
             wait = 3 * (attempt + 1)
             print(f"    MiniMax error (attempt {attempt+1}/{retries}): {e}, "
                   f"retrying in {wait}s...")
             time.sleep(wait)
 
-    return "", None
+    return "", None, 0.0
 
 
 def upsert_entry(conn: sqlite3.Connection, row: dict):
@@ -438,6 +443,20 @@ def main():
     db_path = Path(args.db).expanduser()
     downloads_dir = Path(args.downloads).expanduser()
 
+    # ── Startup banner ────────────────────────────────────────────────────────
+    print("=" * 65)
+    print("  zsxq_index.py")
+    print(f"  Started : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"  Group   : {args.group_id}")
+    print(f"  DB      : {db_path}")
+    print(f"  Downloads: {downloads_dir}")
+    limit_desc_banner = f"last {args.count}" if args.count else "all"
+    print(f"  Fetch   : {limit_desc_banner} files")
+    if args.classify:
+        print(f"  Classify: YES (MiniMax, {'reclassify all' if args.reclassify else 'unclassified only'})")
+    print("=" * 65)
+    print()
+
     # Load session
     session = get_session_via_selenium(chrome_profile)
 
@@ -447,19 +466,40 @@ def main():
 
     # Open / create DB
     conn = init_db(db_path)
-    print(f"Database: {db_path}\n")
+    # Show DB stats on open
+    stats = conn.execute(
+        "SELECT COUNT(*) as total, "
+        "SUM(CASE WHEN ai_robotics_related IS NULL THEN 1 ELSE 0 END) as unclassified, "
+        "SUM(CASE WHEN ai_robotics_related = 1    THEN 1 ELSE 0 END) as yes_count, "
+        "SUM(CASE WHEN ai_robotics_related = 0    THEN 1 ELSE 0 END) as no_count, "
+        "SUM(CASE WHEN local_path IS NOT NULL     THEN 1 ELSE 0 END) as downloaded "
+        "FROM pdf_files"
+    ).fetchone()
+    print(f"Database : {db_path}")
+    print(f"  Rows   : {stats['total']}  "
+          f"(classified: {(stats['yes_count'] or 0) + (stats['no_count'] or 0)}, "
+          f"unclassified: {stats['unclassified'] or 0}, "
+          f"downloaded: {stats['downloaded'] or 0})")
+    print()
 
     # Fetch files
     limit_desc = f"last {args.count}" if args.count else "all"
     print(f"Fetching {limit_desc} files from group {args.group_id}...")
+    t_fetch_start = time.monotonic()
     entries = fetch_all_files(session, args.group_id,
                               max_files=args.count, delay=args.delay)
-    print(f"\nTotal files fetched: {len(entries)}\n")
+    t_fetch = time.monotonic() - t_fetch_start
+    print(f"\nTotal files fetched: {len(entries)}  ({t_fetch:.1f}s)\n")
 
     now = datetime.now().isoformat()
     inserted = updated = skipped = 0
+    pdf_entries = [e for e in entries if e["file"]["name"].lower().endswith(".pdf")]
+    non_pdf    = len(entries) - len(pdf_entries)
+    print(f"Indexing {len(pdf_entries)} PDFs "
+          f"({'skipping ' + str(non_pdf) + ' non-PDF, ' if non_pdf else ''}"
+          f"writing to {db_path.name})...\n")
 
-    for entry in entries:
+    for idx, entry in enumerate(entries, 1):
         f = entry["file"]
         topic = entry.get("topic") or {}
         talk = topic.get("talk") or {}
@@ -470,6 +510,7 @@ def main():
         # Only index PDFs
         if not name.lower().endswith(".pdf"):
             skipped += 1
+            print(f"  [{idx}/{len(entries)}] SKIP (non-PDF) {name[:60]}")
             continue
 
         # Local path from tracker
@@ -477,13 +518,16 @@ def main():
         local_path = tracker_info.get("path")
         downloaded_at = tracker_info.get("downloaded_at")
 
+        size_mb = (f.get("size") or 0) / 1024 / 1024
+        summary_text = talk.get("text") or ""
+
         row = {
             "file_id": file_id,
             "name": name,
             "topic_id": topic.get("topic_id"),
             # Full title derived from first line of talk.text (API title is truncated)
             "topic_title": _full_title(topic),
-            "summary": talk.get("text"),
+            "summary": summary_text,
             # Complete raw topic payload for future use
             "topic_json": _topic_to_json(topic),
             "local_path": local_path,
@@ -501,10 +545,11 @@ def main():
         upsert_entry(conn, row)
 
         status = "updated" if existing else "inserted"
-        summary_len = len(row["summary"] or "")
         local_indicator = "✓ local" if local_path else "  remote"
-        print(f"  [{status}] {name[:60]}")
-        print(f"           summary={summary_len}chars  {local_indicator}")
+        create_date = (f.get("create_time") or "")[:10]
+        print(f"  [{idx}/{len(entries)}] [{status}] {name[:58]}")
+        print(f"           date={create_date}  size={size_mb:.1f}MB  "
+              f"summary={len(summary_text)}chars  {local_indicator}")
 
         if existing:
             updated += 1
@@ -535,32 +580,52 @@ def main():
                     "ORDER BY create_time DESC"
                 ).fetchall()
 
-            print(f"\nClassifying {len(to_classify)} PDF(s) via MiniMax "
-                  f"({'reclassify all' if args.reclassify else 'unclassified only'})...")
+            total_to_classify = len(to_classify)
+            print(f"\nClassifying {total_to_classify} PDF(s) via MiniMax "
+                  f"({'reclassify all' if args.reclassify else 'unclassified only'})...\n")
 
             yes_count = no_count = err_count = dl_ok = dl_fail = 0
+            elapsed_times: list[float] = []
+            t_classify_start = time.monotonic()
+
             for i, row in enumerate(to_classify, 1):
                 file_id    = row["file_id"]
                 name       = row["name"]
                 summary    = row["summary"] or ""
                 local_path = row["local_path"]
-                print(f"  [{i}/{len(to_classify)}] {name[:65]}")
 
-                analysis, is_related = classify_with_minimax(
+                # ETA
+                if elapsed_times:
+                    avg_s = sum(elapsed_times) / len(elapsed_times)
+                    remaining = (total_to_classify - i + 1) * avg_s
+                    eta_str = f"  ETA ~{remaining:.0f}s"
+                else:
+                    eta_str = ""
+
+                pct = i / total_to_classify * 100
+                print(f"  [{i}/{total_to_classify}] ({pct:.0f}%){eta_str}")
+                print(f"    File: {name}")
+
+                analysis, is_related, api_elapsed = classify_with_minimax(
                     name, summary, minimax_key
                 )
+                elapsed_times.append(api_elapsed + args.classify_delay)
 
                 if is_related is True:
-                    label = "YES ✓"
+                    label = "YES ✓  (AI/Robotics-related)"
                     yes_count += 1
                 elif is_related is False:
-                    label = "NO  ✗"
+                    label = "NO  ✗  (not AI/Robotics)"
                     no_count += 1
                 else:
-                    label = "ERR ?"
+                    label = "ERR ?  (could not parse answer)"
                     err_count += 1
 
-                print(f"           → {label}  |  {analysis[:80].strip()!r}")
+                print(f"    Result : {label}  [{api_elapsed:.1f}s]")
+                # Print full MiniMax analysis, indented
+                if analysis:
+                    for line in analysis.splitlines():
+                        print(f"    MiniMax: {line}")
 
                 # Auto-download if AI/Robotics-related and not yet on disk
                 if is_related is True and not local_path:
@@ -613,17 +678,41 @@ def main():
                 if i < len(to_classify):
                     time.sleep(args.classify_delay)
 
-            dl_msg = f"  Auto-downloaded: {dl_ok} OK, {dl_fail} failed\n" if (dl_ok or dl_fail) else ""
-            print(f"\n  Classification done: {yes_count} YES, {no_count} NO, "
-                  f"{err_count} parse errors\n{dl_msg}")
+            t_classify_total = time.monotonic() - t_classify_start
+            dl_msg = (f"\n  Auto-downloaded : {dl_ok} OK, {dl_fail} failed"
+                      if (dl_ok or dl_fail) else "")
+            print(f"\n{'='*65}")
+            print(f"  Classification done in {t_classify_total:.1f}s")
+            print(f"    YES (AI/Robotics) : {yes_count}")
+            print(f"    NO                : {no_count}")
+            print(f"    Parse errors      : {err_count}{dl_msg}")
+            print(f"{'='*65}")
 
     conn.close()
 
-    print(f"\nDone.")
-    print(f"  Inserted: {inserted}")
-    print(f"  Updated:  {updated}")
-    print(f"  Skipped (non-PDF): {skipped}")
-    print(f"  DB: {db_path}")
+    # Final stats from DB
+    import sqlite3 as _sq3
+    conn2 = _sq3.connect(db_path, timeout=10)
+    final = conn2.execute(
+        "SELECT COUNT(*) as total, "
+        "SUM(CASE WHEN ai_robotics_related IS NULL THEN 1 ELSE 0 END) as unclassified, "
+        "SUM(CASE WHEN ai_robotics_related = 1    THEN 1 ELSE 0 END) as yes_count, "
+        "SUM(CASE WHEN ai_robotics_related = 0    THEN 1 ELSE 0 END) as no_count, "
+        "SUM(CASE WHEN local_path IS NOT NULL     THEN 1 ELSE 0 END) as downloaded "
+        "FROM pdf_files"
+    ).fetchone()
+    conn2.close()
+
+    print(f"\n{'='*65}")
+    print(f"  Done  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"  Indexing : inserted={inserted}  updated={updated}  skipped(non-PDF)={skipped}")
+    print(f"  DB totals: {final['total']} rows  "
+          f"| classified={( final['yes_count'] or 0)+(final['no_count'] or 0)}"
+          f"  (yes={final['yes_count'] or 0}, no={final['no_count'] or 0})"
+          f"  | unclassified={final['unclassified'] or 0}"
+          f"  | downloaded={final['downloaded'] or 0}")
+    print(f"  DB path  : {db_path}")
+    print(f"{'='*65}")
 
 
 if __name__ == "__main__":
