@@ -12,12 +12,15 @@ PDFs open in a new browser tab when you click "Open PDF".
 
 import argparse
 import sqlite3
+import urllib.request
+import uuid
 from pathlib import Path
 
-from flask import Flask, abort, render_template_string, request, send_file
+from flask import Flask, abort, jsonify, render_template_string, request, send_file
 
 SCRIPT_DIR = Path(__file__).parent
 DEFAULT_DB  = SCRIPT_DIR / "zsxq.db"
+BOOX_URL    = "http://192.168.1.108:8085/api/storage/upload"
 
 app = Flask(__name__)
 DB_PATH: Path = DEFAULT_DB
@@ -61,6 +64,8 @@ TEMPLATE = """
     .ticker-btn-off { background:#e8f0fe; color:#1a56db; border:1px solid #c3d3f7; }
     .ticker-btn-off:hover { background:#c3d3f7; color:#1a56db; }
     .open-btn       { font-size:.75rem; padding:2px 8px; }
+    .boox-btn       { font-size:.75rem; padding:2px 6px; }
+    .action-btns    { display:flex; flex-direction:column; gap:3px; align-items:center; }
     #searchBox      { max-width:260px; }
     .page-footer    { margin-top:24px; font-size:.8rem; color:#888; }
     .count-badge    { font-size:.75rem; }
@@ -182,8 +187,13 @@ TEMPLATE = """
           </td>
           <td class="text-center">
             {% if row.local_path %}
-              <a href="/pdf/{{ row.file_id }}" target="_blank"
-                 class="btn btn-outline-danger open-btn">📄 Open</a>
+              <div class="action-btns">
+                <a href="/pdf/{{ row.file_id }}" target="_blank"
+                   class="btn btn-outline-danger open-btn">📄 Open</a>
+                <button class="btn btn-outline-primary boox-btn"
+                        onclick="sendToBoox({{ row.file_id }}, this)"
+                        title="Send to BOOX">📚 BOOX</button>
+              </div>
             {% else %}
               <span class="text-muted">—</span>
             {% endif %}
@@ -222,6 +232,33 @@ TEMPLATE = """
     document.getElementById('summaryModalTitle').textContent = el.dataset.title || '';
     document.getElementById('summaryModalBody').textContent  = el.dataset.full  || '';
     _summaryModal.show();
+  }
+
+  // Send PDF to BOOX device
+  async function sendToBoox(fileId, btn) {
+    const orig = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = '⏳';
+    try {
+      const resp = await fetch('/send-to-boox/' + fileId, { method: 'POST' });
+      const data = await resp.json();
+      if (data.ok) {
+        btn.innerHTML = '✓ Sent';
+        btn.classList.replace('btn-outline-primary', 'btn-success');
+      } else {
+        btn.innerHTML = '✗ Fail';
+        btn.title = data.error || 'Upload failed';
+        btn.classList.replace('btn-outline-primary', 'btn-danger');
+        setTimeout(() => { btn.innerHTML = orig; btn.disabled = false;
+          btn.classList.replace('btn-danger', 'btn-outline-primary'); }, 3000);
+      }
+    } catch(e) {
+      btn.innerHTML = '✗ Err';
+      btn.title = String(e);
+      btn.classList.replace('btn-outline-primary', 'btn-danger');
+      setTimeout(() => { btn.innerHTML = orig; btn.disabled = false;
+        btn.classList.replace('btn-danger', 'btn-outline-primary'); }, 3000);
+    }
   }
 
   // Live search (client-side text filter, stacks on top of server-side filters)
@@ -317,6 +354,49 @@ def index():
         all_tickers=all_tickers,
         db_path=DB_PATH,
     )
+
+
+def _post_to_boox(path: Path) -> None:
+    """Upload a file to the BOOX device via multipart POST."""
+    boundary = uuid.uuid4().hex
+    with open(path, "rb") as fh:
+        file_data = fh.read()
+    body = (
+        f"--{boundary}\r\n"
+        f'Content-Disposition: form-data; name="file"; filename="{path.name}"\r\n'
+        f"Content-Type: application/octet-stream\r\n\r\n"
+    ).encode() + file_data + f"\r\n--{boundary}--\r\n".encode()
+    req = urllib.request.Request(
+        BOOX_URL,
+        data=body,
+        headers={"Content-Type": f"multipart/form-data; boundary={boundary}"},
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        resp.read()
+
+
+@app.route("/send-to-boox/<int:file_id>", methods=["POST"])
+def send_to_boox(file_id: int):
+    """Proxy-upload a local PDF to the BOOX device."""
+    conn = get_conn()
+    row = conn.execute(
+        "SELECT local_path, name FROM pdf_files WHERE file_id = ?", (file_id,)
+    ).fetchone()
+    conn.close()
+
+    if not row or not row["local_path"]:
+        return jsonify(ok=False, error="No local file recorded for this entry."), 404
+
+    path = Path(row["local_path"])
+    if not path.exists():
+        return jsonify(ok=False, error=f"File not found on disk: {path}"), 404
+
+    try:
+        _post_to_boox(path)
+        return jsonify(ok=True)
+    except Exception as exc:
+        return jsonify(ok=False, error=str(exc)), 502
 
 
 @app.route("/pdf/<int:file_id>")
