@@ -153,6 +153,7 @@ CREATE TABLE IF NOT EXISTS pdf_files (
     topic_id    INTEGER,
     topic_title TEXT,
     summary     TEXT,
+    topic_json  TEXT,
     local_path  TEXT,
     file_size   INTEGER,
     create_time TEXT,
@@ -164,34 +165,69 @@ CREATE INDEX IF NOT EXISTS idx_create_time ON pdf_files(create_time);
 CREATE INDEX IF NOT EXISTS idx_name ON pdf_files(name);
 """
 
+# Columns added after the initial schema — applied as safe migrations
+MIGRATIONS = [
+    "ALTER TABLE pdf_files ADD COLUMN topic_json TEXT",
+]
+
 
 def init_db(db_path: Path) -> sqlite3.Connection:
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     conn.executescript(SCHEMA)
+    # Apply any migrations that haven't been run yet (ignore "duplicate column" errors)
+    for sql in MIGRATIONS:
+        try:
+            conn.execute(sql)
+        except sqlite3.OperationalError:
+            pass  # column already exists
     conn.commit()
     return conn
+
+
+def _topic_to_json(topic: dict) -> str | None:
+    """Serialize topic to JSON, stripping fields that contain personal/auth data."""
+    if not topic:
+        return None
+    exclude = {"user_specific", "latest_likes", "likes_detail", "group"}
+    clean = {k: v for k, v in topic.items() if k not in exclude}
+    return json.dumps(clean, ensure_ascii=False)
+
+
+def _full_title(topic: dict) -> str | None:
+    """Return the un-truncated topic title.
+
+    The API's ``title`` field is capped at ~15 chars and ends with '…'.
+    The real full title is always the first non-empty line of talk.text.
+    """
+    text = (topic.get("talk") or {}).get("text") or ""
+    first_line = text.split("\n")[0].strip()
+    if first_line:
+        return first_line
+    # Fallback to the API title (may be truncated)
+    return topic.get("title")
 
 
 def upsert_entry(conn: sqlite3.Connection, row: dict):
     conn.execute(
         """
         INSERT INTO pdf_files
-            (file_id, name, topic_id, topic_title, summary, local_path,
-             file_size, create_time, downloaded_at, indexed_at)
+            (file_id, name, topic_id, topic_title, summary, topic_json,
+             local_path, file_size, create_time, downloaded_at, indexed_at)
         VALUES
-            (:file_id, :name, :topic_id, :topic_title, :summary, :local_path,
-             :file_size, :create_time, :downloaded_at, :indexed_at)
+            (:file_id, :name, :topic_id, :topic_title, :summary, :topic_json,
+             :local_path, :file_size, :create_time, :downloaded_at, :indexed_at)
         ON CONFLICT(file_id) DO UPDATE SET
-            name         = excluded.name,
-            topic_id     = excluded.topic_id,
-            topic_title  = excluded.topic_title,
-            summary      = excluded.summary,
-            local_path   = COALESCE(excluded.local_path, pdf_files.local_path),
-            file_size    = excluded.file_size,
-            create_time  = excluded.create_time,
+            name          = excluded.name,
+            topic_id      = excluded.topic_id,
+            topic_title   = excluded.topic_title,
+            summary       = excluded.summary,
+            topic_json    = excluded.topic_json,
+            local_path    = COALESCE(excluded.local_path, pdf_files.local_path),
+            file_size     = excluded.file_size,
+            create_time   = excluded.create_time,
             downloaded_at = COALESCE(excluded.downloaded_at, pdf_files.downloaded_at),
-            indexed_at   = excluded.indexed_at
+            indexed_at    = excluded.indexed_at
         """,
         row,
     )
@@ -284,8 +320,11 @@ def main():
             "file_id": file_id,
             "name": name,
             "topic_id": topic.get("topic_id"),
-            "topic_title": topic.get("title"),
+            # Full title derived from first line of talk.text (API title is truncated)
+            "topic_title": _full_title(topic),
             "summary": talk.get("text"),
+            # Complete raw topic payload for future use
+            "topic_json": _topic_to_json(topic),
             "local_path": local_path,
             "file_size": f.get("size"),
             "create_time": f.get("create_time"),
