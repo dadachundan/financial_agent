@@ -257,10 +257,11 @@ def api_summarize():
     POST JSON { "url": "...", "entity_a": "...", "entity_b": "...", "rel_type": "bc"|"bb" }
     Returns   { "comment": "...", "explanation": "..." }
 
-    Uses Claude to read the web page and derive a concise relationship summary.
+    Uses MiniMax to read the web page and derive a concise relationship summary.
     Falls back gracefully if the API key is missing.
     """
-    import urllib.request, urllib.error
+    import re, urllib.request, urllib.error
+    from minimax import call_minimax, MINIMAX_API_KEY
 
     data = request.get_json(force=True)
     url      = (data.get("url")      or "").strip()
@@ -278,44 +279,39 @@ def api_summarize():
     except Exception as exc:
         return jsonify({"error": f"Could not fetch URL: {exc}"}), 502
 
-    # strip HTML tags with a simple regex
-    import re
     text = re.sub(r"<[^>]+>", " ", raw)
     text = re.sub(r"\s+", " ", text).strip()[:8000]
 
-    # 2) Call Claude
-    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
-    if not api_key:
+    # 2) Call MiniMax
+    if not MINIMAX_API_KEY:
         return jsonify({
             "comment":     f"[API key missing] Relationship between {entity_a} and {entity_b}",
             "explanation": text[:400],
         })
 
+    system_prompt = (
+        "You are analysing a web article about the semiconductor / tech industry. "
+        "Given article text and two entities, return a JSON object with exactly two keys: "
+        "\"comment\" (one sentence ≤ 20 words summarising the relationship) and "
+        "\"explanation\" (two to four sentences with detail, citing specific facts). "
+        "Return only valid JSON, no markdown fences."
+    )
+    user_msg = (
+        f"Article text (truncated):\n\"\"\"\n{text}\n\"\"\"\n\n"
+        f"Describe the relationship between \"{entity_a}\" and \"{entity_b}\" "
+        "based ONLY on the article above."
+    )
+
     try:
-        import anthropic
-        client = anthropic.Anthropic(api_key=api_key)
-        prompt = f"""You are analysing a web article about the semiconductor / tech industry.
-
-Article text (truncated):
-\"\"\"
-{text}
-\"\"\"
-
-Task: Describe the relationship between "{entity_a}" and "{entity_b}" based ONLY on the article above.
-
-Return a JSON object with exactly two keys:
-  "comment"     – one sentence (≤ 20 words) summarising the relationship
-  "explanation" – two to four sentences with more detail, citing specific facts from the article
-
-Return only valid JSON, no markdown fences."""
-
-        msg = client.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=512,
-            messages=[{"role": "user", "content": prompt}],
+        reply, _elapsed, _raw = call_minimax(
+            messages=[
+                {"role": "system", "name": "MiniMax AI", "content": system_prompt},
+                {"role": "user",   "name": "User",       "content": user_msg},
+            ],
+            temperature=0.2,
+            max_completion_tokens=512,
         )
-        raw_json = msg.content[0].text.strip()
-        result = json.loads(raw_json)
+        result = json.loads(reply.strip())
         return jsonify(result)
     except Exception as exc:
         return jsonify({"error": f"LLM error: {exc}"}), 500
@@ -1020,7 +1016,9 @@ def main():
     init_db()
     seed_db()
     print(f"Knowledge graph running at http://localhost:{args.port}")
-    print("Set ANTHROPIC_API_KEY env var to enable AI news mining.")
+    from minimax import MINIMAX_API_KEY
+    key_status = "set" if MINIMAX_API_KEY else "missing — add MINIMAX_API_KEY to config.py"
+    print(f"MiniMax API key: {key_status}")
     app.run(host=args.host, port=args.port, debug=False)
 
 
