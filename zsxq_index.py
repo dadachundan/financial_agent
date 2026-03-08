@@ -249,86 +249,8 @@ def _full_title(topic: dict) -> str | None:
 # ── MiniMax classification ────────────────────────────────────────────────────
 
 CLASSIFY_SYSTEM = (
-    "You are a financial research analyst. Given a research report summary, do two things:\n"
-    "1. Determine whether the report is primarily about Artificial Intelligence (AI), "
-    "Machine Learning, or Robotics.\n"
-    "2. Extract every stock ticker or symbol mentioned (A-share 6-digit codes, HK codes, "
-    "US symbols, etc.). Include only symbols explicitly referenced, not general sector names.\n\n"
-    "Respond with a brief analysis of 2-3 sentences, then on two separate new lines write "
-    "exactly:\n"
-    "  Answer: Yes   (or Answer: No)\n"
-    "  Tickers: TICK1, TICK2, ...   (or Tickers: None)"
-)
-
-CLASSIFY_USER_TMPL = """\
-Report filename: {name}
-
-Summary (Chinese):
-{summary}
-
-Task: (1) Is this report primarily about AI / Machine Learning / Robotics? \
-(2) List every stock ticker mentioned.
-"""
-
-
-def classify_with_minimax(name: str, summary: str, api_key: str,
-                           retries: int = 3) -> tuple[str, bool | None, float, str, str, str]:
-    """Call MiniMax to classify a PDF and extract stock tickers.
-
-    Returns (response_text, is_related, elapsed_seconds, prompt_sent, raw_json, tickers).
-    is_related : True/False, or None if the answer could not be parsed.
-    prompt_sent: the full user message sent to MiniMax.
-    raw_json   : the complete HTTP response body from MiniMax.
-    tickers    : comma-separated ticker string, e.g. "600519, NVDA" (empty string = none found).
-    """
-    user_msg = CLASSIFY_USER_TMPL.format(
-        name=name,
-        summary=summary.strip() if summary else "(no summary available)",
-    )
-    text, elapsed, raw_json = call_minimax(
-        messages=[
-            {"role": "system", "name": "MiniMax AI", "content": CLASSIFY_SYSTEM},
-            {"role": "user",   "name": "User",       "content": user_msg},
-        ],
-        temperature=0.2,
-        max_completion_tokens=300,
-        retries=retries,
-        api_key=api_key,
-    )
-
-    # Parse the mandatory "Answer: Yes/No" line
-    is_related: bool | None = None
-    for line in reversed(text.splitlines()):
-        line_stripped = line.strip().lower()
-        if line_stripped.startswith("answer:"):
-            answer = line_stripped.replace("answer:", "").strip()
-            if answer.startswith("yes"):
-                is_related = True
-            elif answer.startswith("no"):
-                is_related = False
-            break
-    if is_related is None and text:
-        print(f"    ⚠ Could not parse Answer from MiniMax response. "
-              f"Raw reply:\n{text}")
-
-    # Parse "Tickers: TICK1, TICK2" line
-    tickers = ""
-    for line in text.splitlines():
-        ls = line.strip()
-        if ls.lower().startswith("tickers:"):
-            raw_tickers = ls[len("tickers:"):].strip()
-            if raw_tickers.lower() not in ("none", "n/a", ""):
-                tickers = raw_tickers
-            break
-
-    return text, is_related, elapsed, user_msg, raw_json, tickers
-
-
-# ── MiniMax multi-category classification (v2) ───────────────────────────────
-
-CATEGORIES_SYSTEM = (
-    "You are a financial research analyst. Given a research report summary, answer "
-    "five questions and extract tickers.\n\n"
+    "You are a financial research analyst. Given a research report summary, classify it "
+    "across four categories and extract tickers.\n\n"
     "Respond in exactly this format (one item per line, nothing else):\n"
     "  AI: Yes or No\n"
     "  Robotics: Yes or No\n"
@@ -337,20 +259,21 @@ CATEGORIES_SYSTEM = (
     "  Tickers: TICK1, TICK2, ...  (or Tickers: None)\n"
     "  Analysis: <2-3 sentence summary of the report's focus>\n\n"
     "Definitions:\n"
-    "- AI: covers artificial intelligence, machine learning, large language models, "
+    "- AI: artificial intelligence, machine learning, large language models, "
     "generative AI, AI chips, AI software/services.\n"
     "- Robotics: humanoid robots, industrial robots, autonomous vehicles, drones.\n"
     "- Semiconductor: chips, fabs, EDA tools, memory, wafers, packaging.\n"
-    "- Energy: oil & gas, renewables, power grids, batteries, nuclear, energy storage."
+    "- Energy: oil & gas, renewables, power grids, batteries, nuclear, energy storage.\n"
+    "Tickers: A-share 6-digit codes, HK codes, US symbols explicitly referenced only."
 )
 
-CATEGORIES_USER_TMPL = """\
+CLASSIFY_USER_TMPL = """\
 Report filename: {name}
 
 Summary (Chinese):
 {summary}
 
-Answer all five questions and extract tickers for this report.
+Classify this report across all four categories and extract tickers.
 """
 
 
@@ -367,21 +290,23 @@ def _parse_yes_no(text: str, label: str) -> bool | None:
     return None
 
 
-def classify_categories_with_minimax(
+def classify_with_minimax(
     name: str, summary: str, api_key: str, retries: int = 3
 ) -> tuple[str, bool | None, bool | None, bool | None, bool | None, str, float, str, str]:
-    """Call MiniMax for multi-category classification.
+    """Call MiniMax to classify a PDF across 4 categories and extract tickers.
 
     Returns:
-        (analysis, ai, robotics, semiconductor, energy, tickers, elapsed, prompt, raw_json)
+        (analysis, ai_rel, robotics_rel, semiconductor_rel, energy_rel,
+         tickers, elapsed_seconds, prompt_sent, raw_json)
+    All bool fields are True/False, or None if the answer could not be parsed.
     """
-    user_msg = CATEGORIES_USER_TMPL.format(
+    user_msg = CLASSIFY_USER_TMPL.format(
         name=name,
         summary=summary.strip() if summary else "(no summary available)",
     )
     text, elapsed, raw_json = call_minimax(
         messages=[
-            {"role": "system", "name": "MiniMax AI", "content": CATEGORIES_SYSTEM},
+            {"role": "system", "name": "MiniMax AI", "content": CLASSIFY_SYSTEM},
             {"role": "user",   "name": "User",       "content": user_msg},
         ],
         temperature=0.1,
@@ -390,10 +315,13 @@ def classify_categories_with_minimax(
         api_key=api_key,
     )
 
-    ai_rel    = _parse_yes_no(text, "AI")
-    rob_rel   = _parse_yes_no(text, "Robotics")
-    semi_rel  = _parse_yes_no(text, "Semiconductor")
-    nrg_rel   = _parse_yes_no(text, "Energy")
+    ai_rel   = _parse_yes_no(text, "AI")
+    rob_rel  = _parse_yes_no(text, "Robotics")
+    semi_rel = _parse_yes_no(text, "Semiconductor")
+    nrg_rel  = _parse_yes_no(text, "Energy")
+
+    if any(v is None for v in [ai_rel, rob_rel, semi_rel, nrg_rel]) and text:
+        print(f"    ⚠ Could not parse all categories. Raw reply:\n{text}")
 
     # Extract tickers
     tickers = ""
@@ -491,6 +419,34 @@ def save_tracker(downloads_dir: Path, tracker: dict) -> None:
     path.write_text(json.dumps(tracker, indent=2, ensure_ascii=False))
 
 
+def _do_download(session: requests.Session, file_id: int, name: str,
+                 downloads_dir: Path, tracker: dict) -> tuple[str | None, bool]:
+    """Fetch download URL and save the file to disk. Updates tracker in-place.
+
+    Returns (local_path, success). local_path is None on failure.
+    """
+    dl_url = get_download_url(session, file_id)
+    if not dl_url:
+        print(f"           → could not get download URL")
+        return None, False
+    try:
+        safe_name = sanitize_filename(name)
+        dest = downloads_dir / safe_name
+        written = download_file(session, dl_url, dest)
+        local_path = str(dest)
+        dl_ts = datetime.now().isoformat()
+        tracker[str(file_id)] = {
+            "name": name, "path": local_path,
+            "size": written, "downloaded_at": dl_ts,
+        }
+        save_tracker(downloads_dir, tracker)
+        print(f"           → saved {written/1024/1024:.1f}MB → {dest.name}")
+        return local_path, True
+    except Exception as e:
+        print(f"           → download failed: {e}")
+        return None, False
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -540,6 +496,13 @@ def main():
 
     db_path       = Path(args.db).expanduser()
     downloads_dir = Path(args.downloads).expanduser()
+
+    # ── Shared: Chrome session (used by both modes for authenticated downloads) ─
+    chrome_profile = Path(args.chrome_profile).expanduser()
+    if not chrome_profile.exists():
+        print(f"ERROR: Chrome profile not found at {chrome_profile}")
+        sys.exit(1)
+    session = get_session_via_selenium(chrome_profile)
 
     # ── Offline mode: --classify-db skips all scraping ───────────────────────
     if args.classify_db:
@@ -601,12 +564,11 @@ def main():
             print(f"    File: {name}")
 
             analysis, ai_rel, rob_rel, semi_rel, nrg_rel, tickers, api_elapsed, prompt, raw_json = \
-                classify_categories_with_minimax(name, summary, _CONFIG_MINIMAX_KEY)
+                classify_with_minimax(name, summary, _CONFIG_MINIMAX_KEY)
 
             elapsed_times.append(api_elapsed + args.classify_delay)
 
-            any_err = any(v is None for v in [ai_rel, rob_rel, semi_rel, nrg_rel])
-            if any_err:
+            if any(v is None for v in [ai_rel, rob_rel, semi_rel, nrg_rel]):
                 counts["err"] += 1
 
             flags = []
@@ -623,33 +585,12 @@ def main():
                 print(f"    Analysis   : {analysis}")
 
             # Auto-download if any category matched and not yet on disk
-            any_related = any([ai_rel, rob_rel, semi_rel, nrg_rel])
-            if any_related and not local_path:
+            if any([ai_rel, rob_rel, semi_rel, nrg_rel]) and not local_path:
                 print(f"           → category match: downloading...")
-                try:
-                    # Need a session — build a lightweight one without Selenium
-                    # (download URL endpoint is public once we have the file_id)
-                    import requests as _req
-                    _session = _req.Session()
-                    dl_url = get_download_url(_session, file_id)
-                    if dl_url:
-                        safe_name = sanitize_filename(name)
-                        dest = downloads_dir / safe_name
-                        written = download_file(_session, dl_url, dest)
-                        local_path = str(dest)
-                        dl_ts = datetime.now().isoformat()
-                        tracker[str(file_id)] = {
-                            "name": name, "path": local_path,
-                            "size": written, "downloaded_at": dl_ts,
-                        }
-                        save_tracker(downloads_dir, tracker)
-                        print(f"           → saved {written/1024/1024:.1f}MB → {dest.name}")
-                        counts["dl_ok"] += 1
-                    else:
-                        print(f"           → could not get download URL")
-                        counts["dl_fail"] += 1
-                except Exception as e:
-                    print(f"           → download failed: {e}")
+                local_path, ok = _do_download(session, file_id, name, downloads_dir, tracker)
+                if ok:
+                    counts["dl_ok"] += 1
+                else:
                     counts["dl_fail"] += 1
 
             conn.execute(
@@ -695,11 +636,6 @@ def main():
         sys.exit(0)
 
     # ── Normal mode: scrape website ───────────────────────────────────────────
-    chrome_profile = Path(args.chrome_profile).expanduser()
-    if not chrome_profile.exists():
-        print(f"ERROR: Chrome profile not found at {chrome_profile}")
-        sys.exit(1)
-
     # ── Startup banner ────────────────────────────────────────────────────────
     print("=" * 65)
     print("  zsxq_index.py")
@@ -713,9 +649,6 @@ def main():
     print(f"  Classify: {'MiniMax (' + classify_mode + ')' if _CONFIG_MINIMAX_KEY else 'skipped (no API key)'}")
     print("=" * 65)
     print()
-
-    # Load session
-    session = get_session_via_selenium(chrome_profile)
 
     # Load local download tracker
     tracker = load_tracker(downloads_dir)
@@ -829,7 +762,7 @@ def main():
         else:
             to_classify = conn.execute(
                 "SELECT file_id, name, summary, local_path "
-                "FROM pdf_files WHERE ai_robotics_related IS NULL "
+                "FROM pdf_files WHERE ai_related IS NULL "
                 "ORDER BY create_time DESC"
             ).fetchall()
 
@@ -840,7 +773,8 @@ def main():
             print(f"\nClassifying {total_to_classify} PDF(s) via MiniMax "
                   f"({'reclassify all' if args.reclassify else 'unclassified only'})...\n")
 
-            yes_count = no_count = err_count = dl_ok = dl_fail = 0
+            counts = {"ai": 0, "robotics": 0, "semiconductor": 0, "energy": 0,
+                      "dl_ok": 0, "dl_fail": 0, "err": 0}
             elapsed_times: list[float] = []
             t_classify_start = time.monotonic()
 
@@ -850,11 +784,9 @@ def main():
                 summary    = row["summary"] or ""
                 local_path = row["local_path"]
 
-                # ETA
                 if elapsed_times:
                     avg_s = sum(elapsed_times) / len(elapsed_times)
-                    remaining = (total_to_classify - i + 1) * avg_s
-                    eta_str = f"  ETA ~{remaining:.0f}s"
+                    eta_str = f"  ETA ~{(total_to_classify - i + 1) * avg_s:.0f}s"
                 else:
                     eta_str = ""
 
@@ -862,77 +794,55 @@ def main():
                 print(f"  [{i}/{total_to_classify}] ({pct:.0f}%){eta_str}")
                 print(f"    File: {name}")
 
-                analysis, is_related, api_elapsed, prompt_sent, raw_json, tickers = classify_with_minimax(
-                    name, summary, minimax_key
-                )
+                analysis, ai_rel, rob_rel, semi_rel, nrg_rel, tickers, api_elapsed, prompt_sent, raw_json = \
+                    classify_with_minimax(name, summary, minimax_key)
                 elapsed_times.append(api_elapsed + args.classify_delay)
 
-                if is_related is True:
-                    label = "YES ✓  (AI/Robotics-related)"
-                    yes_count += 1
-                elif is_related is False:
-                    label = "NO  ✗  (not AI/Robotics)"
-                    no_count += 1
-                else:
-                    label = "ERR ?  (could not parse answer)"
-                    err_count += 1
+                if any(v is None for v in [ai_rel, rob_rel, semi_rel, nrg_rel]):
+                    counts["err"] += 1
 
-                print(f"    Result : {label}  [{api_elapsed:.1f}s]")
+                flags = []
+                if ai_rel:    flags.append("AI");            counts["ai"] += 1
+                if rob_rel:   flags.append("Robotics");      counts["robotics"] += 1
+                if semi_rel:  flags.append("Semiconductor"); counts["semiconductor"] += 1
+                if nrg_rel:   flags.append("Energy");        counts["energy"] += 1
+
+                label = ("✓ " + ", ".join(flags)) if flags else "✗ None"
+                print(f"    Categories : {label}  [{api_elapsed:.1f}s]")
                 if tickers:
-                    print(f"    Tickers: {tickers}")
-                # Print full MiniMax analysis, indented
+                    print(f"    Tickers    : {tickers}")
                 if analysis:
-                    for line in analysis.splitlines():
-                        print(f"    MiniMax: {line}")
+                    print(f"    Analysis   : {analysis}")
 
-                # Auto-download if AI/Robotics-related and not yet on disk
-                if is_related is True and not local_path:
-                    print(f"           → AI-related: downloading...")
-                    try:
-                        dl_url = get_download_url(session, file_id)
-                        if dl_url:
-                            safe_name = sanitize_filename(name)
-                            dest = downloads_dir / safe_name
-                            written = download_file(session, dl_url, dest)
-                            local_path = str(dest)
-                            dl_ts = datetime.now().isoformat()
-                            tracker[str(file_id)] = {
-                                "name": name,
-                                "path": local_path,
-                                "size": written,
-                                "downloaded_at": dl_ts,
-                            }
-                            save_tracker(downloads_dir, tracker)
-                            print(f"           → saved {written/1024/1024:.1f}MB → {dest.name}")
-                            dl_ok += 1
-                        else:
-                            print(f"           → could not get download URL")
-                            dl_fail += 1
-                    except Exception as e:
-                        print(f"           → download failed: {e}")
-                        dl_fail += 1
+                # Auto-download if any category matched and not yet on disk
+                if any([ai_rel, rob_rel, semi_rel, nrg_rel]) and not local_path:
+                    print(f"           → category match: downloading...")
+                    local_path, ok = _do_download(session, file_id, name, downloads_dir, tracker)
+                    if ok:
+                        counts["dl_ok"] += 1
+                    else:
+                        counts["dl_fail"] += 1
 
                 conn.execute(
                     """UPDATE pdf_files
-                       SET ai_robotics_analysis = ?,
-                           ai_robotics_related  = ?,
-                           ai_prompt            = ?,
-                           ai_raw_response      = ?,
-                           tickers              = ?,
-                           local_path           = COALESCE(?, local_path),
-                           downloaded_at        = COALESCE(
-                               (SELECT downloaded_at FROM pdf_files WHERE file_id = ?),
-                               ?),
-                           indexed_at           = ?
+                       SET ai_related            = ?,
+                           robotics_related      = ?,
+                           semiconductor_related = ?,
+                           energy_related        = ?,
+                           tickers               = COALESCE(?, tickers),
+                           categories_analysis   = ?,
+                           categories_prompt     = ?,
+                           categories_raw        = ?,
+                           local_path            = COALESCE(?, local_path),
+                           indexed_at            = ?
                      WHERE file_id = ?""",
-                    (analysis,
-                     1 if is_related is True else (0 if is_related is False else None),
-                     prompt_sent,
-                     raw_json,
-                     tickers or None,     # store NULL when empty
-                     local_path,          # new local_path (None = keep existing)
-                     file_id,             # for the sub-select
-                     tracker.get(str(file_id), {}).get("downloaded_at"),
+                    (1 if ai_rel   is True else (0 if ai_rel   is False else None),
+                     1 if rob_rel  is True else (0 if rob_rel  is False else None),
+                     1 if semi_rel is True else (0 if semi_rel is False else None),
+                     1 if nrg_rel  is True else (0 if nrg_rel  is False else None),
+                     tickers or None,
+                     analysis, prompt_sent, raw_json,
+                     local_path,
                      datetime.now().isoformat(),
                      file_id),
                 )
@@ -942,13 +852,15 @@ def main():
                     time.sleep(args.classify_delay)
 
             t_classify_total = time.monotonic() - t_classify_start
-            dl_msg = (f"\n  Auto-downloaded : {dl_ok} OK, {dl_fail} failed"
-                      if (dl_ok or dl_fail) else "")
+            dl_msg = (f"\n  Auto-downloaded : {counts['dl_ok']} OK, {counts['dl_fail']} failed"
+                      if (counts["dl_ok"] or counts["dl_fail"]) else "")
             print(f"\n{'='*65}")
             print(f"  Classification done in {t_classify_total:.1f}s")
-            print(f"    YES (AI/Robotics) : {yes_count}")
-            print(f"    NO                : {no_count}")
-            print(f"    Parse errors      : {err_count}{dl_msg}")
+            print(f"    AI           : {counts['ai']}")
+            print(f"    Robotics     : {counts['robotics']}")
+            print(f"    Semiconductor: {counts['semiconductor']}")
+            print(f"    Energy       : {counts['energy']}")
+            print(f"    Parse errors : {counts['err']}{dl_msg}")
             print(f"{'='*65}")
 
     # ── Cleanup: delete local PDFs that are NOT AI/Robotics-related ─────────
