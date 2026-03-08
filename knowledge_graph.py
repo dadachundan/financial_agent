@@ -45,8 +45,13 @@ ALLOWED_EXT     = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"}
 ALLOWED_PDF_EXT = {".pdf"}
 
 app = Flask(__name__)
-app.config["MAX_CONTENT_LENGTH"] = 16 * 1024 * 1024   # 16 MB
+app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024   # 50 MB
 DB_PATH: Path = DEFAULT_DB
+
+
+@app.errorhandler(413)
+def too_large(_e):
+    return jsonify({"error": "File too large (max 50 MB)"}), 413
 
 
 # ── Database helpers ───────────────────────────────────────────────────────────
@@ -1123,7 +1128,13 @@ async function importPDF() {
   spinner.classList.remove("d-none");
   try {
     const resp = await fetch("/api/pdf-import", { method: "POST", body: formData });
-    const data = await resp.json();
+    let data;
+    try {
+      data = await resp.json();
+    } catch (_) {
+      errDiv.textContent = `Server error (HTTP ${resp.status}) — check file size or server logs.`;
+      return;
+    }
 
     if (data.error) {
       errDiv.textContent = data.error;
