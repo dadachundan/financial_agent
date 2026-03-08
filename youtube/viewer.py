@@ -12,7 +12,8 @@ import sys
 import sqlite3
 import argparse
 from pathlib import Path
-from flask import Flask, render_template_string, request, jsonify
+from jinja2 import DictLoader, Environment
+from flask import Flask, request, jsonify
 
 SCRIPT_DIR = Path(__file__).parent
 DB_PATH    = SCRIPT_DIR / "video_summaries.db"
@@ -114,7 +115,7 @@ HTML_BASE = """
 """
 
 INDEX_CONTENT = """
-{% extends base %}
+{% extends "base.html" %}
 {% block content %}
 <div class="row mb-4 align-items-center">
   <div class="col">
@@ -170,7 +171,7 @@ INDEX_CONTENT = """
 """
 
 VIDEO_CONTENT = """
-{% extends base %}
+{% extends "base.html" %}
 {% block content %}
 <div class="d-flex align-items-center gap-3 mb-4 flex-wrap">
   <a href="/" class="btn btn-sm btn-outline-secondary">← Back</a>
@@ -262,26 +263,27 @@ searchInput.addEventListener('input', function() {
 """
 
 
+def _render(template_name: str, **ctx) -> str:
+    env = Environment(loader=DictLoader({
+        "base.html":  HTML_BASE,
+        "index.html": INDEX_CONTENT,
+        "video.html": VIDEO_CONTENT,
+    }), autoescape=True)
+    return env.get_template(template_name).render(**ctx)
+
+
 @app.route("/")
 def index():
     videos = list_videos()
-    return render_template_string(
-        INDEX_CONTENT, base=HTML_BASE, videos=videos, title="Video Summaries"
-    )
+    return _render("index.html", videos=videos, title="Video Summaries")
 
 
 @app.route("/video/<video_id>")
 def video_detail(video_id: str):
     chunks = get_chunks(video_id)
     summarized = sum(1 for c in chunks if c.get("summary"))
-    return render_template_string(
-        VIDEO_CONTENT,
-        base=HTML_BASE,
-        video_id=video_id,
-        chunks=chunks,
-        summarized=summarized,
-        title=f"Video {video_id}",
-    )
+    return _render("video.html", video_id=video_id, chunks=chunks,
+                   summarized=summarized, title=f"Video {video_id}")
 
 
 @app.route("/api/videos")
