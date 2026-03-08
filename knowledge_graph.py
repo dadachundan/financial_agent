@@ -408,8 +408,8 @@ TEMPLATE = r"""
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tech Knowledge Graph</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/dist/vis-network.min.js"></script>
+  <link href="/static/bootstrap.min.css" rel="stylesheet">
+  <script src="/static/vis-network.min.js"></script>
   <style>
     body { background:#f0f2f5; padding:20px 16px; }
     h2   { font-weight:700; }
@@ -820,7 +820,7 @@ TEMPLATE = r"""
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/static/bootstrap.bundle.min.js"></script>
 <script>
 // ── vis-network graph ──────────────────────────────────────────────────────
 const graphData = {{ graph_json | safe }};
