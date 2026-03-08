@@ -382,6 +382,13 @@ def api_pdf_import():
         "Extract companies, businesses, and their relationships as JSON."
     )
 
+    print("\n" + "="*60)
+    print("PDF IMPORT — MiniMax prompt")
+    print("="*60)
+    print("[SYSTEM]", system_prompt)
+    print("[USER]",   user_msg)
+    print("="*60 + "\n")
+
     try:
         reply, _elapsed, _raw = call_minimax(
             messages=[
@@ -391,6 +398,7 @@ def api_pdf_import():
             temperature=0.1,
             max_completion_tokens=1024,
         )
+        print("PDF IMPORT — MiniMax reply:", reply[:500])
         # Strip optional markdown fences
         clean = reply.strip()
         if clean.startswith("```"):
@@ -399,6 +407,7 @@ def api_pdf_import():
             clean = clean[: clean.rfind("```")]
         extracted = json.loads(clean.strip())
     except Exception as exc:
+        print(f"PDF IMPORT — MiniMax error: {exc}")
         return jsonify({"error": f"LLM/parse error: {exc}", "raw_reply": reply if 'reply' in dir() else ""}), 500
 
     # 3) Upsert into DB
