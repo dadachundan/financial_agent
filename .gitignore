@@ -3,3 +3,8 @@ __pycache__/
 *.pyc
 .DS_Store
 config.py
+node_modules/
+package.json
+package-lock.json
+*.db
+kg_uploads/
