@@ -41,7 +41,8 @@ from flask import (Flask, abort, jsonify, redirect,
 SCRIPT_DIR  = Path(__file__).parent
 DEFAULT_DB  = SCRIPT_DIR / "knowledge_graph.db"
 UPLOAD_DIR  = SCRIPT_DIR / "kg_uploads"
-ALLOWED_EXT = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"}
+ALLOWED_EXT     = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"}
+ALLOWED_PDF_EXT = {".pdf"}
 
 app = Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"] = 16 * 1024 * 1024   # 16 MB
@@ -317,6 +318,158 @@ def api_summarize():
         return jsonify({"error": f"LLM error: {exc}"}), 500
 
 
+# ── PDF import endpoint ────────────────────────────────────────────────────────
+
+@app.route("/api/pdf-import", methods=["POST"])
+def api_pdf_import():
+    """
+    POST multipart { "pdf": <file> }
+    Extracts text from first 3 pages, asks MiniMax to identify companies
+    (with tickers) and businesses, then upserts entities + relationships into DB.
+    Returns { "added": { "companies": [...], "businesses": [...], "bc_links": [...] },
+              "errors": [...] }
+    """
+    import io
+    import pdfplumber
+    from minimax import call_minimax, MINIMAX_API_KEY
+
+    pdf_file = request.files.get("pdf")
+    if not pdf_file or not pdf_file.filename:
+        return jsonify({"error": "No PDF file provided"}), 400
+    if Path(pdf_file.filename).suffix.lower() not in ALLOWED_PDF_EXT:
+        return jsonify({"error": "Only .pdf files are accepted"}), 400
+
+    # 1) Extract text from first 3 pages
+    try:
+        pdf_bytes = pdf_file.read()
+        pages_text = []
+        with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
+            for page in pdf.pages[:3]:
+                t = page.extract_text() or ""
+                pages_text.append(t.strip())
+        raw_text = "\n\n".join(pages_text).strip()
+    except Exception as exc:
+        return jsonify({"error": f"PDF extraction failed: {exc}"}), 500
+
+    if not raw_text:
+        return jsonify({"error": "No text could be extracted from the PDF"}), 422
+
+    # 2) Call MiniMax
+    if not MINIMAX_API_KEY:
+        return jsonify({"error": "MINIMAX_API_KEY not configured"}), 503
+
+    system_prompt = (
+        "You are a financial-document analyser specialising in the tech/semiconductor industry. "
+        "Given document text, extract:\n"
+        "  1. Companies mentioned — prefer ticker symbols (e.g. NVDA, AMD, TSMC); "
+        "     if a ticker is not obvious, use the company name.\n"
+        "  2. Business domains / verticals each company operates in "
+        "(e.g. GPU, CPU, Memory, Manufacturing, Cloud, AI, Networking, Storage, Mobile SoC, EUV Lithography, etc.).\n\n"
+        "Return ONLY valid JSON with this exact structure (no markdown fences):\n"
+        "{\n"
+        '  "companies": [{"ticker": "NVDA", "name": "NVIDIA", "description": "..."}],\n'
+        '  "businesses": [{"name": "GPU", "description": "..."}],\n'
+        '  "relationships": [{"company_ticker": "NVDA", "business": "GPU", "comment": "one-liner"}]\n'
+        "}"
+    )
+    user_msg = (
+        f"Document text (first 3 pages):\n\"\"\"\n{raw_text[:6000]}\n\"\"\"\n\n"
+        "Extract companies, businesses, and their relationships as JSON."
+    )
+
+    try:
+        reply, _elapsed, _raw = call_minimax(
+            messages=[
+                {"role": "system", "name": "MiniMax AI", "content": system_prompt},
+                {"role": "user",   "name": "User",       "content": user_msg},
+            ],
+            temperature=0.1,
+            max_completion_tokens=1024,
+        )
+        # Strip optional markdown fences
+        clean = reply.strip()
+        if clean.startswith("```"):
+            clean = "\n".join(clean.splitlines()[1:])
+        if clean.endswith("```"):
+            clean = clean[: clean.rfind("```")]
+        extracted = json.loads(clean.strip())
+    except Exception as exc:
+        return jsonify({"error": f"LLM/parse error: {exc}", "raw_reply": reply if 'reply' in dir() else ""}), 500
+
+    # 3) Upsert into DB
+    added_companies  = []
+    added_businesses = []
+    added_bc         = []
+    errors           = []
+
+    with get_db() as conn:
+        # Upsert companies
+        for co in extracted.get("companies", []):
+            ticker = (co.get("ticker") or co.get("name") or "").strip()
+            desc   = (co.get("description") or "").strip()
+            if not ticker:
+                continue
+            try:
+                conn.execute(
+                    "INSERT OR IGNORE INTO companies (name, description) VALUES (?,?)",
+                    (ticker, desc),
+                )
+                added_companies.append(ticker)
+            except Exception as exc:
+                errors.append(f"company {ticker}: {exc}")
+
+        # Upsert businesses
+        for biz in extracted.get("businesses", []):
+            bname = (biz.get("name") or "").strip()
+            bdesc = (biz.get("description") or "").strip()
+            if not bname:
+                continue
+            try:
+                conn.execute(
+                    "INSERT OR IGNORE INTO businesses (name, description) VALUES (?,?)",
+                    (bname, bdesc),
+                )
+                added_businesses.append(bname)
+            except Exception as exc:
+                errors.append(f"business {bname}: {exc}")
+
+        # Upsert relationships
+        for rel in extracted.get("relationships", []):
+            ticker  = (rel.get("company_ticker") or "").strip()
+            bname   = (rel.get("business") or "").strip()
+            comment = (rel.get("comment") or "").strip()
+            if not ticker or not bname:
+                continue
+            try:
+                co_row = conn.execute(
+                    "SELECT id FROM companies WHERE name=?", (ticker,)
+                ).fetchone()
+                biz_row = conn.execute(
+                    "SELECT id FROM businesses WHERE name=?", (bname,)
+                ).fetchone()
+                if co_row and biz_row:
+                    conn.execute(
+                        """INSERT OR IGNORE INTO business_company
+                           (business_id, company_id, comment, explanation, source_url)
+                           VALUES (?,?,?,?,?)""",
+                        (biz_row["id"], co_row["id"], comment, "", "pdf-import"),
+                    )
+                    added_bc.append(f"{ticker} ↔ {bname}")
+                else:
+                    errors.append(f"rel {ticker}↔{bname}: entity not found in DB")
+            except Exception as exc:
+                errors.append(f"rel {ticker}↔{bname}: {exc}")
+
+    return jsonify({
+        "added": {
+            "companies":  added_companies,
+            "businesses": added_businesses,
+            "bc_links":   added_bc,
+        },
+        "errors": errors,
+    })
+
+
 # ── Graph JSON builder ─────────────────────────────────────────────────────────
 
 def build_graph_json(conn):
@@ -488,6 +641,11 @@ TEMPLATE = r"""
     <li class="nav-item">
       <a class="nav-link {% if active_tab=='entities' %}active{% endif %}" data-bs-toggle="tab" href="#tab-entities">
         Manage Entities
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link {% if active_tab=='pdf' %}active{% endif %}" data-bs-toggle="tab" href="#tab-pdf">
+        Import from PDF
       </a>
     </li>
   </ul>
@@ -802,6 +960,59 @@ TEMPLATE = r"""
 
       </div>
     </div><!-- /tab-entities -->
+
+    <!-- ══ Tab: Import from PDF ══ -->
+    <div class="tab-pane fade {% if active_tab=='pdf' %}show active{% endif %}" id="tab-pdf">
+      <h5>Import entities &amp; relationships from PDF</h5>
+      <p class="text-muted" style="font-size:.85rem">
+        Upload a PDF report (e.g. annual report, earnings filing). Text from the first 3 pages
+        is sent to AI to extract companies (tickers), business domains, and their relationships,
+        which are then added to the knowledge graph.
+      </p>
+
+      <div class="border rounded p-3 mb-3" style="background:#fafafa;max-width:540px">
+        <div class="mb-3">
+          <label class="form-label" style="font-size:.85rem;font-weight:600">PDF file</label>
+          <input type="file" id="pdf-file-input" class="form-control form-control-sm" accept=".pdf">
+          <div class="form-text">Only the first 3 pages are analysed.</div>
+        </div>
+        <button class="btn btn-sm btn-primary" onclick="importPDF()">
+          <span id="pdf-spinner" class="spinner-border spinner-border-sm d-none me-1"></span>
+          Extract &amp; Import with AI
+        </button>
+        <span class="text-danger small ms-2" id="pdf-err"></span>
+      </div>
+
+      <!-- Results -->
+      <div id="pdf-results" class="d-none">
+        <h6>Import results</h6>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="card card-body p-2">
+              <div class="text-muted" style="font-size:.75rem;font-weight:600">COMPANIES ADDED</div>
+              <ul id="pdf-res-companies" class="mb-0 ps-3" style="font-size:.82rem"></ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-body p-2">
+              <div class="text-muted" style="font-size:.75rem;font-weight:600">BUSINESSES ADDED</div>
+              <ul id="pdf-res-businesses" class="mb-0 ps-3" style="font-size:.82rem"></ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-body p-2">
+              <div class="text-muted" style="font-size:.75rem;font-weight:600">RELATIONSHIPS ADDED</div>
+              <ul id="pdf-res-bc" class="mb-0 ps-3" style="font-size:.82rem"></ul>
+            </div>
+          </div>
+        </div>
+        <div id="pdf-res-errors" class="text-danger small mt-2"></div>
+        <div class="mt-3">
+          <a href="/" class="btn btn-sm btn-outline-secondary">Reload graph to see changes</a>
+        </div>
+      </div>
+    </div><!-- /tab-pdf -->
+
   </div><!-- /tab-content -->
 </div><!-- /container -->
 
@@ -889,6 +1100,66 @@ function mineBB() {
     document.getElementById("bb-mine-to").value,
     "bb-form-comment", "bb-form-expl", "bb-mine-err", "bb-mine-spinner"
   );
+}
+
+// ── PDF import ──────────────────────────────────────────────────────────────
+async function importPDF() {
+  const fileInput = document.getElementById("pdf-file-input");
+  const spinner   = document.getElementById("pdf-spinner");
+  const errDiv    = document.getElementById("pdf-err");
+  const resultsEl = document.getElementById("pdf-results");
+
+  errDiv.textContent = "";
+  resultsEl.classList.add("d-none");
+
+  if (!fileInput.files.length) {
+    errDiv.textContent = "Please select a PDF file first.";
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append("pdf", fileInput.files[0]);
+
+  spinner.classList.remove("d-none");
+  try {
+    const resp = await fetch("/api/pdf-import", { method: "POST", body: formData });
+    const data = await resp.json();
+
+    if (data.error) {
+      errDiv.textContent = data.error;
+      return;
+    }
+
+    // Populate results
+    function fillList(ulId, items) {
+      const ul = document.getElementById(ulId);
+      ul.innerHTML = "";
+      if (!items || !items.length) {
+        ul.innerHTML = "<li class='text-muted'>none</li>";
+        return;
+      }
+      items.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+    }
+
+    fillList("pdf-res-companies",  data.added.companies);
+    fillList("pdf-res-businesses", data.added.businesses);
+    fillList("pdf-res-bc",         data.added.bc_links);
+
+    const errEl = document.getElementById("pdf-res-errors");
+    errEl.textContent = (data.errors && data.errors.length)
+      ? "Warnings: " + data.errors.join("; ")
+      : "";
+
+    resultsEl.classList.remove("d-none");
+  } catch(e) {
+    errDiv.textContent = "Network error: " + e.message;
+  } finally {
+    spinner.classList.add("d-none");
+  }
 }
 </script>
 </body>
