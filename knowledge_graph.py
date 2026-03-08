@@ -327,7 +327,7 @@ def build_graph_json(conn):
             "label": row["name"],
             "title": row["description"],
             "color": {"background": "#0d6efd", "border": "#084298"},
-            "font":  {"color": "#fff"},
+            "font":  {"color": "#084298"},
             "group": "company",
         })
     for row in conn.execute("SELECT id, name, description FROM businesses"):
@@ -336,7 +336,7 @@ def build_graph_json(conn):
             "label": row["name"],
             "title": row["description"],
             "color": {"background": "#fd7e14", "border": "#a04c00"},
-            "font":  {"color": "#fff"},
+            "font":  {"color": "#a04c00"},
             "group": "business",
         })
     for row in conn.execute(
@@ -828,7 +828,7 @@ const network = new vis.Network(
   {
     nodes: { shape:"dot", size:18, font:{size:13,face:"system-ui,sans-serif"}, borderWidth:2 },
     edges: {
-      arrows: { to: {enabled:true, scaleFactor:.6} },
+      arrows: { to: {enabled:false} },
       font:   { size:10, align:"middle", color:"#666" },
       smooth: { type:"dynamic" },
     },
