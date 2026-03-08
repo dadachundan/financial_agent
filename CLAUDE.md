@@ -12,6 +12,7 @@ After completing a task and verifying that it works (by running tests or the app
 - Use **MiniMax** for simple summarisation tasks and other straightforward LLM calls.
 - The MiniMax API key is stored in `config.py` (gitignored, not checked in — already present locally).
 - Import and call via `minimax.py`:
+
   ```python
   from minimax import call_minimax, MINIMAX_API_KEY
   text, elapsed, raw_json = call_minimax(
@@ -23,3 +24,17 @@ After completing a task and verifying that it works (by running tests or the app
       max_completion_tokens=512,
   )
   ```
+
+# Hotspot / Network Push Limitations
+
+When working on a hotspot or restricted network, pushing directly to `main` may
+fail with HTTP 403. In that case:
+
+1. Push to the `claude/<branch-name>` feature branch instead (this always works).
+2. Open a Pull Request on GitHub to merge the feature branch into `main`.
+3. The PR link is printed by `git push` — share it with the user or open it manually.
+4. After the PR is merged on GitHub, sync local `main`:
+
+   ```bash
+   git checkout main && git pull origin main
+   ```
