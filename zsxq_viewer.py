@@ -419,9 +419,13 @@ def main():
         raise SystemExit(1)
 
     import socket
-    local_ip = socket.gethostbyname(socket.gethostname())
+    try:
+        local_ip = socket.gethostbyname(socket.gethostname())
+    except socket.gaierror:
+        local_ip = None
     print(f"  zsxq viewer →  http://127.0.0.1:{args.port}  (localhost)")
-    print(f"  zsxq viewer →  http://{local_ip}:{args.port}  (LAN)")
+    if local_ip:
+        print(f"  zsxq viewer →  http://{local_ip}:{args.port}  (LAN)")
     print(f"  DB           →  {DB_PATH}")
     app.run(host=args.host, port=args.port, debug=False)
 
