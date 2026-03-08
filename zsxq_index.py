@@ -586,12 +586,17 @@ def main():
 
             # Auto-download if any category matched and not yet on disk
             if any([ai_rel, rob_rel, semi_rel, nrg_rel]) and not local_path:
-                print(f"           → category match: downloading...")
-                local_path, ok = _do_download(session, file_id, name, downloads_dir, tracker)
-                if ok:
-                    counts["dl_ok"] += 1
+                dest = downloads_dir / sanitize_filename(name)
+                if dest.exists():
+                    local_path = str(dest)
+                    print(f"           → already on disk: {dest.name}")
                 else:
-                    counts["dl_fail"] += 1
+                    print(f"           → category match: downloading...")
+                    local_path, ok = _do_download(session, file_id, name, downloads_dir, tracker)
+                    if ok:
+                        counts["dl_ok"] += 1
+                    else:
+                        counts["dl_fail"] += 1
 
             conn.execute(
                 """UPDATE pdf_files
@@ -816,12 +821,17 @@ def main():
 
                 # Auto-download if any category matched and not yet on disk
                 if any([ai_rel, rob_rel, semi_rel, nrg_rel]) and not local_path:
-                    print(f"           → category match: downloading...")
-                    local_path, ok = _do_download(session, file_id, name, downloads_dir, tracker)
-                    if ok:
-                        counts["dl_ok"] += 1
+                    dest = downloads_dir / sanitize_filename(name)
+                    if dest.exists():
+                        local_path = str(dest)
+                        print(f"           → already on disk: {dest.name}")
                     else:
-                        counts["dl_fail"] += 1
+                        print(f"           → category match: downloading...")
+                        local_path, ok = _do_download(session, file_id, name, downloads_dir, tracker)
+                        if ok:
+                            counts["dl_ok"] += 1
+                        else:
+                            counts["dl_fail"] += 1
 
                 conn.execute(
                     """UPDATE pdf_files
