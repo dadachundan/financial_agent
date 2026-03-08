@@ -759,16 +759,17 @@ def main():
         print("\nSkipping classification: MINIMAX_API_KEY not found in config.py "
               f"(looked in: {_project_root or 'not found'})")
     else:
+        limit_sql = f" LIMIT {args.count}" if args.count > 0 else ""
         if args.reclassify:
             to_classify = conn.execute(
                 "SELECT file_id, name, summary, local_path "
-                "FROM pdf_files ORDER BY create_time DESC"
+                f"FROM pdf_files ORDER BY create_time DESC{limit_sql}"
             ).fetchall()
         else:
             to_classify = conn.execute(
                 "SELECT file_id, name, summary, local_path "
-                "FROM pdf_files WHERE ai_related IS NULL "
-                "ORDER BY create_time DESC"
+                f"FROM pdf_files WHERE ai_related IS NULL "
+                f"ORDER BY create_time DESC{limit_sql}"
             ).fetchall()
 
         total_to_classify = len(to_classify)
