@@ -250,34 +250,26 @@ def _full_title(topic: dict) -> str | None:
 
 CLASSIFY_SYSTEM = (
     "You are a financial research analyst. Given a research report summary, classify it "
-    "across four product-focused categories and extract tickers.\n\n"
+    "across four categories and extract tickers.\n\n"
     "Respond in exactly this format (one item per line, nothing else):\n"
     "  AI: Yes or No\n"
     "  Robotics: Yes or No\n"
     "  Semiconductor: Yes or No\n"
     "  Energy: Yes or No\n"
     "  Tickers: TICK1, TICK2, ...  (or Tickers: None)\n"
-    "  Analysis: <2-3 sentence summary of the report's specific product focus>\n\n"
-    "Mark Yes only when the report focuses on specific, commercially available or "
-    "near-market products — not just broad sector exposure or macro themes.\n\n"
+    "  Analysis: <2-3 sentence summary of the report's focus>\n\n"
+    "Mark Yes when the report covers a product market where multiple companies compete "
+    "— not a macro/policy theme only, and not a product line unique to one company.\n\n"
     "Category definitions:\n"
-    "- AI: specific AI products with market presence — LLMs and applications "
-    "(DeepSeek, Kimi, Doubao, Qwen, ChatGPT, Gemini, Claude, Grok), "
-    "AI inference/training chips (H100/B200/Blackwell, Ascend 910, Kunlun, Cambrian MLU), "
-    "AI agents or copilot software products with named deployments.\n"
-    "- Robotics: specific robot hardware products — humanoid robots "
-    "(Tesla Optimus, Figure 02, Unitree H1/G1/B2, Fourier GR1, 宇树/傅利叶/智元/开普勒), "
-    "commercial collaborative robots (cobots), commercially deployed autonomous-driving "
-    "systems (Waymo, 萝卜快跑), autonomous delivery drones.\n"
-    "- Semiconductor: specific chip or process products — advanced packaging "
-    "(CoWoS, SoIC, FOPLP, Chiplet interconnects), high-bandwidth memory "
-    "(HBM2e / HBM3 / HBM3E), leading-edge logic nodes (3 nm / 2 nm / 1.4 nm), "
-    "power semiconductors (SiC / GaN MOSFETs), NAND / DRAM product generations, "
-    "named EDA tools (Synopsys / Cadence / 华大九天).\n"
-    "- Energy: specific energy products — named battery chemistries (LFP, NCM, "
-    "solid-state, sodium-ion), large-scale BESS (battery energy storage systems), "
-    "grid inverters, solar module technologies (TOPCon / HJT / perovskite), "
-    "small modular reactors (SMR / 小型堆).\n"
+    "- AI: AI accelerator chips (GPU / NPU / TPU), LLM and foundation model products, "
+    "AI inference platforms, AI agent / copilot software.\n"
+    "- Robotics: humanoid robots, industrial collaborative robots (cobots), "
+    "commercially deployed autonomous-driving (robotaxi), autonomous drones.\n"
+    "- Semiconductor: advanced packaging (Chiplet / CoWoS / HBM), power semiconductors "
+    "(SiC / GaN), leading-edge logic foundry, EDA software, NAND / DRAM.\n"
+    "- Energy: battery cells (LFP / NCM / solid-state / sodium-ion), large-scale battery "
+    "energy storage (BESS), solar modules (TOPCon / HJT / perovskite), grid inverters, "
+    "small modular reactors (SMR).\n"
     "Tickers: A-share 6-digit codes, HK codes, US symbols explicitly referenced only."
 )
 
@@ -287,9 +279,9 @@ Report filename: {name}
 Summary (Chinese):
 {summary}
 
-Classify this report. Mark Yes only when the report discusses specific products \
-that are commercially available or near-market — not just broad sector themes or \
-macro policy discussion. Extract tickers that are explicitly named.
+Classify this report. Mark Yes only when the report covers a product market with \
+multiple competing companies — not just a single company's product line or a broad \
+macro/policy discussion. Extract tickers that are explicitly named.
 """
 
 
