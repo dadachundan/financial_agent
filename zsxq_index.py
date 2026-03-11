@@ -250,20 +250,34 @@ def _full_title(topic: dict) -> str | None:
 
 CLASSIFY_SYSTEM = (
     "You are a financial research analyst. Given a research report summary, classify it "
-    "across four categories and extract tickers.\n\n"
+    "across four product-focused categories and extract tickers.\n\n"
     "Respond in exactly this format (one item per line, nothing else):\n"
     "  AI: Yes or No\n"
     "  Robotics: Yes or No\n"
     "  Semiconductor: Yes or No\n"
     "  Energy: Yes or No\n"
     "  Tickers: TICK1, TICK2, ...  (or Tickers: None)\n"
-    "  Analysis: <2-3 sentence summary of the report's focus>\n\n"
-    "Definitions:\n"
-    "- AI: artificial intelligence, machine learning, large language models, "
-    "generative AI, AI chips, AI software/services.\n"
-    "- Robotics: humanoid robots, industrial robots, autonomous vehicles, drones.\n"
-    "- Semiconductor: chips, fabs, EDA tools, memory, wafers, packaging.\n"
-    "- Energy: oil & gas, renewables, power grids, batteries, nuclear, energy storage.\n"
+    "  Analysis: <2-3 sentence summary of the report's specific product focus>\n\n"
+    "Mark Yes only when the report focuses on specific, commercially available or "
+    "near-market products — not just broad sector exposure or macro themes.\n\n"
+    "Category definitions:\n"
+    "- AI: specific AI products with market presence — LLMs and applications "
+    "(DeepSeek, Kimi, Doubao, Qwen, ChatGPT, Gemini, Claude, Grok), "
+    "AI inference/training chips (H100/B200/Blackwell, Ascend 910, Kunlun, Cambrian MLU), "
+    "AI agents or copilot software products with named deployments.\n"
+    "- Robotics: specific robot hardware products — humanoid robots "
+    "(Tesla Optimus, Figure 02, Unitree H1/G1/B2, Fourier GR1, 宇树/傅利叶/智元/开普勒), "
+    "commercial collaborative robots (cobots), commercially deployed autonomous-driving "
+    "systems (Waymo, 萝卜快跑), autonomous delivery drones.\n"
+    "- Semiconductor: specific chip or process products — advanced packaging "
+    "(CoWoS, SoIC, FOPLP, Chiplet interconnects), high-bandwidth memory "
+    "(HBM2e / HBM3 / HBM3E), leading-edge logic nodes (3 nm / 2 nm / 1.4 nm), "
+    "power semiconductors (SiC / GaN MOSFETs), NAND / DRAM product generations, "
+    "named EDA tools (Synopsys / Cadence / 华大九天).\n"
+    "- Energy: specific energy products — named battery chemistries (LFP, NCM, "
+    "solid-state, sodium-ion), large-scale BESS (battery energy storage systems), "
+    "grid inverters, solar module technologies (TOPCon / HJT / perovskite), "
+    "small modular reactors (SMR / 小型堆).\n"
     "Tickers: A-share 6-digit codes, HK codes, US symbols explicitly referenced only."
 )
 
@@ -273,7 +287,9 @@ Report filename: {name}
 Summary (Chinese):
 {summary}
 
-Classify this report across all four categories and extract tickers.
+Classify this report. Mark Yes only when the report discusses specific products \
+that are commercially available or near-market — not just broad sector themes or \
+macro policy discussion. Extract tickers that are explicitly named.
 """
 
 
