@@ -374,8 +374,11 @@ def api_pdf_import():
     system_prompt = (
         "You are a financial-document analyser specialising in the tech/semiconductor industry. "
         "Given document text, extract:\n"
-        "  1. Companies mentioned — prefer ticker symbols (e.g. NVDA, AMD, TSMC); "
-        "     if a ticker is not obvious, use the company name.\n"
+        "  1. Companies mentioned — always provide BOTH the ticker AND the full company name.\n"
+        "     Use the standard ticker for each market: US symbols (NVDA, AMD), "
+        "     A-share 6-digit codes (600519), HK numeric codes (00700).\n"
+        "     The 'name' field must be the full human-readable company name "
+        "(e.g. 'Kweichow Moutai' for 600519, 'Tencent' for 00700, 'NVIDIA' for NVDA).\n"
         "  2. Business domains / verticals each company operates in "
         "(e.g. GPU, CPU, Memory, Manufacturing, Cloud, AI, Networking, Storage, Mobile SoC, EUV Lithography, etc.).\n\n"
         "Return ONLY valid JSON with this exact structure (no markdown fences):\n"
@@ -383,7 +386,8 @@ def api_pdf_import():
         '  "companies": [{"ticker": "NVDA", "name": "NVIDIA", "description": "..."}],\n'
         '  "businesses": [{"name": "GPU", "description": "..."}],\n'
         '  "relationships": [{"company_ticker": "NVDA", "business": "GPU", "comment": "one-liner"}]\n'
-        "}"
+        "}\n"
+        "Important: 'company_ticker' in relationships must exactly match a 'ticker' value in companies."
     )
     user_msg = (
         f"Document text (first 3 pages):\n\"\"\"\n{raw_text[:6000]}\n\"\"\"\n\n"
@@ -424,22 +428,32 @@ def api_pdf_import():
     added_bc          = []   # plain "A ↔ B" strings (legacy)
     added_bc_detail   = []   # "A ↔ B — comment" strings
     errors            = []
+    # Maps original ticker string → DB name actually stored (may differ for numeric tickers)
+    ticker_to_db_name: dict = {}
 
     with get_db() as conn:
         # Upsert companies
         for co in extracted.get("companies", []):
-            ticker = (co.get("ticker") or co.get("name") or "").strip()
-            desc   = (co.get("description") or "").strip()
-            if not ticker:
+            ticker    = (co.get("ticker") or "").strip()
+            full_name = (co.get("name")   or ticker).strip()
+            desc      = (co.get("description") or "").strip()
+            if not ticker and not full_name:
                 continue
+            # For purely numeric tickers (A-share / HK), store "FullName (ticker)"
+            # so the name is human-readable in the UI.
+            if ticker and ticker.isdigit():
+                db_name = f"{full_name} ({ticker})" if full_name and full_name != ticker else ticker
+            else:
+                db_name = ticker or full_name
+            ticker_to_db_name[ticker] = db_name
             try:
                 conn.execute(
                     "INSERT OR IGNORE INTO companies (name, description) VALUES (?,?)",
-                    (ticker, desc),
+                    (db_name, desc),
                 )
-                added_companies.append(ticker)
+                added_companies.append(db_name)
             except Exception as exc:
-                errors.append(f"company {ticker}: {exc}")
+                errors.append(f"company {db_name}: {exc}")
 
         # Upsert businesses
         for biz in extracted.get("businesses", []):
@@ -463,9 +477,11 @@ def api_pdf_import():
             comment = (rel.get("comment") or "").strip()
             if not ticker or not bname:
                 continue
+            # Resolve ticker → the DB name we actually stored
+            db_company_name = ticker_to_db_name.get(ticker, ticker)
             try:
                 co_row = conn.execute(
-                    "SELECT id FROM companies WHERE name=?", (ticker,)
+                    "SELECT id FROM companies WHERE name=?", (db_company_name,)
                 ).fetchone()
                 biz_row = conn.execute(
                     "SELECT id FROM businesses WHERE name=?", (bname,)
@@ -477,15 +493,15 @@ def api_pdf_import():
                            VALUES (?,?,?,?,?)""",
                         (biz_row["id"], co_row["id"], comment, "", pdf_source_url),
                     )
-                    added_bc.append(f"{ticker} ↔ {bname}")
-                    detail = f"{ticker} ↔ {bname}"
+                    added_bc.append(f"{db_company_name} ↔ {bname}")
+                    detail = f"{db_company_name} ↔ {bname}"
                     if comment:
                         detail += f" — {comment}"
                     added_bc_detail.append(detail)
                 else:
-                    errors.append(f"rel {ticker}↔{bname}: entity not found in DB")
+                    errors.append(f"rel {db_company_name}↔{bname}: entity not found in DB")
             except Exception as exc:
-                errors.append(f"rel {ticker}↔{bname}: {exc}")
+                errors.append(f"rel {db_company_name}↔{bname}: {exc}")
 
     return jsonify({
         "added": {
