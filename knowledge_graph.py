@@ -640,6 +640,13 @@ TEMPLATE = r"""
     </div>
   </div>
 
+  <!-- ── Active filter indicator ── -->
+  <div id="filter-bar" class="d-none mb-2 d-flex align-items-center gap-2">
+    <span style="font-size:.78rem;color:#555">Filtering by:</span>
+    <span id="filter-label" class="badge bg-secondary" style="font-size:.78rem"></span>
+    <button class="btn btn-sm btn-link p-0 text-muted" style="font-size:.75rem" onclick="clearFilter()">✕ clear</button>
+  </div>
+
   <!-- ── Tabs ── -->
   <ul class="nav nav-tabs" id="mainTab">
     <li class="nav-item">
@@ -1065,6 +1072,85 @@ const network = new vis.Network(
     interaction:{ hover:true, tooltipDelay:150 },
   }
 );
+
+// ── Table filtering from graph clicks ──────────────────────────────────────
+function switchTab(href) {
+  const el = document.querySelector('a[href="' + href + '"]');
+  if (el) bootstrap.Tab.getOrCreateInstance(el).show();
+}
+
+function filterTables(type, nameA, nameB) {
+  // BC table
+  document.querySelectorAll('#tab-bc tbody tr').forEach(row => {
+    if (!type) { row.style.display = ''; return; }
+    const biz = row.querySelector('.badge-business')?.textContent.trim();
+    const co  = row.querySelector('.badge-company')?.textContent.trim();
+    let show = false;
+    if (type === 'company')  show = co  === nameA;
+    if (type === 'business') show = biz === nameA;
+    if (type === 'bc-edge')  show = biz === nameA && co === nameB;
+    row.style.display = show ? '' : 'none';
+  });
+  // BB table
+  document.querySelectorAll('#tab-bb tbody tr').forEach(row => {
+    if (!type) { row.style.display = ''; return; }
+    const cells = row.querySelectorAll('.badge-business');
+    const from  = cells[0]?.textContent.trim();
+    const to    = cells[1]?.textContent.trim();
+    let show = false;
+    if (type === 'business') show = from === nameA || to === nameA;
+    if (type === 'bb-edge')  show = from === nameA && to === nameB;
+    row.style.display = show ? '' : 'none';
+  });
+}
+
+function showFilterBar(label) {
+  document.getElementById('filter-label').textContent = label;
+  document.getElementById('filter-bar').classList.remove('d-none');
+}
+
+function clearFilter() {
+  filterTables(null, null, null);
+  document.getElementById('filter-bar').classList.add('d-none');
+  network.unselectAll();
+}
+
+network.on('click', function(params) {
+  if (params.nodes.length > 0) {
+    const node  = nodes.get(params.nodes[0]);
+    const label = node.label;
+    const group = node.group;
+    if (group === 'company') {
+      filterTables('company', label, null);
+      showFilterBar('Company: ' + label);
+      switchTab('#tab-bc');
+    } else {
+      filterTables('business', label, null);
+      showFilterBar('Business: ' + label);
+      // Switch to whichever tab has visible rows
+      const bcVisible = [...document.querySelectorAll('#tab-bc tbody tr')]
+                        .some(r => r.style.display !== 'none');
+      switchTab(bcVisible ? '#tab-bc' : '#tab-bb');
+    }
+  } else if (params.edges.length > 0) {
+    const edge     = edges.get(params.edges[0]);
+    const fromNode = nodes.get(edge.from);
+    const toNode   = nodes.get(edge.to);
+    if (!edge.dashes) {
+      // bc edge: from=business → to=company
+      filterTables('bc-edge', fromNode.label, toNode.label);
+      showFilterBar(fromNode.label + ' → ' + toNode.label);
+      switchTab('#tab-bc');
+    } else {
+      // bb edge
+      filterTables('bb-edge', fromNode.label, toNode.label);
+      showFilterBar(fromNode.label + ' → ' + toNode.label);
+      switchTab('#tab-bb');
+    }
+  } else {
+    clearFilter();
+  }
+});
 
 // ── image lightbox ─────────────────────────────────────────────────────────
 function showImg(src) {
