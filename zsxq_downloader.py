@@ -36,6 +36,7 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
     "Referer": "https://wx.zsxq.com/",
     "Origin": "https://wx.zsxq.com",
+    "zsxq-platform": "Web",
 }
 
 
@@ -55,10 +56,16 @@ def get_session_via_selenium(chrome_profile: Path) -> requests.Session:
     try:
         driver.get("https://wx.zsxq.com")
         time.sleep(2)  # let cookies load
+        driver.get("https://api.zsxq.com")
+        time.sleep(1)
 
         session = requests.Session()
         for cookie in driver.get_cookies():
-            session.cookies.set(cookie["name"], cookie["value"], domain=cookie.get("domain", ""))
+            domain = cookie.get("domain", "")
+            session.cookies.set(cookie["name"], cookie["value"], domain=domain)
+            # Also set cookies for api.zsxq.com so API requests are authenticated
+            if "zsxq.com" in domain:
+                session.cookies.set(cookie["name"], cookie["value"], domain="api.zsxq.com")
     finally:
         driver.quit()
 
