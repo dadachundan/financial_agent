@@ -80,7 +80,12 @@ TEMPLATE = """
 <body>
 <div class="container-fluid">
 
-  <h2 class="mb-1">📄 zsxq PDF Index</h2>
+  <div class="d-flex align-items-center gap-2 mb-1">
+    <h2 class="mb-0">📄 zsxq PDF Index</h2>
+    <button id="fsBtn" onclick="toggleFullscreen()"
+            class="btn btn-outline-secondary btn-sm ms-auto"
+            title="Toggle fullscreen (F)">⛶ Fullscreen</button>
+  </div>
   <p class="text-muted mb-2" style="font-size:.85rem">DB: {{ db_path }}</p>
 
   <!-- Stats row -->
@@ -271,6 +276,31 @@ TEMPLATE = """
     document.getElementById('summaryModalBody').textContent  = el.dataset.full  || '';
     _summaryModal.show();
   }
+
+  // Fullscreen toggle
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+  }
+  document.addEventListener('fullscreenchange', () => {
+    const btn = document.getElementById('fsBtn');
+    if (document.fullscreenElement) {
+      btn.textContent = '✕ Exit Fullscreen';
+      btn.classList.replace('btn-outline-secondary', 'btn-secondary');
+    } else {
+      btn.textContent = '⛶ Fullscreen';
+      btn.classList.replace('btn-secondary', 'btn-outline-secondary');
+    }
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'f' || e.key === 'F') {
+      const tag = document.activeElement.tagName;
+      if (tag !== 'INPUT' && tag !== 'TEXTAREA') toggleFullscreen();
+    }
+  });
 
   function liveSearch(q) {
     q = q.toLowerCase().trim();
