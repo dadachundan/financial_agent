@@ -505,6 +505,7 @@ def build_graph_json(conn):
             "color": {"background": "#fd7e14", "border": "#a04c00"},
             "font":  {"color": "#a04c00"},
             "group": "business",
+            "shape": "square",
         })
     for row in conn.execute(
             "SELECT business_id, company_id, comment FROM business_company"):
