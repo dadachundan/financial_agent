@@ -501,14 +501,15 @@ def api_pdf_import():
             desc      = (co.get("description") or "").strip()
             if not ticker and not full_name:
                 continue
-            # For purely numeric tickers (A-share / HK), store "FullName (ticker)"
-            # so the name is human-readable in the UI.
-            if ticker and ticker.isdigit():
+            # For numeric tickers (A-share: 600519; HK: 9868.HK, 00700.HK; etc.)
+            # store "FullName (ticker)" so the name is human-readable in the UI.
+            # Check the root before any exchange suffix (e.g. "9868" in "9868.HK").
+            ticker_root = ticker.split(".")[0] if "." in ticker else ticker
+            is_numeric_ticker = bool(ticker_root and ticker_root.isdigit())
+            if is_numeric_ticker:
                 db_name = f"{full_name} ({ticker})" if full_name and full_name != ticker else ticker
-                is_numeric_ticker = True
             else:
                 db_name = ticker or full_name
-                is_numeric_ticker = False
             ticker_to_db_name[ticker] = db_name
             # Always enrich numeric tickers via Brave Search (MiniMax rarely knows
             # A-share / HK companies well); also enrich any other thin descriptions.
