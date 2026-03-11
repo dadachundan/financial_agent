@@ -255,6 +255,68 @@ def save_upload(file_field):
     return fname
 
 
+# ── Brave Search enrichment helper ────────────────────────────────────────────
+
+def brave_enrich(name: str, entity_type: str) -> str:
+    """
+    Look up `name` via Brave Search and return a short description string.
+    entity_type: 'company' or 'business'
+    Returns '' if the key is missing or the request fails.
+    Falls back to MiniMax summarisation when snippets are too long/messy.
+    """
+    import urllib.request as _ureq, urllib.parse as _uparse, json as _json
+    try:
+        from config import BRAVE_SEARCH_API_KEY as _KEY  # type: ignore
+    except Exception:
+        return ""
+    if not _KEY:
+        return ""
+
+    suffix = "company stock market investor" if entity_type == "company" \
+             else "technology industry domain"
+    query  = f"{name} {suffix}"
+    url    = ("https://api.search.brave.com/res/v1/web/search?"
+              + _uparse.urlencode({"q": query, "count": 5, "search_lang": "en"}))
+    try:
+        req = _ureq.Request(url, headers={
+            "X-Subscription-Token": _KEY,
+            "Accept": "application/json",
+        })
+        with _ureq.urlopen(req, timeout=8) as resp:
+            data = _json.loads(resp.read())
+        snippets = [
+            r.get("description", "").strip()
+            for r in data.get("web", {}).get("results", [])[:3]
+            if r.get("description", "").strip()
+        ]
+        if not snippets:
+            return ""
+        combined = " ".join(snippets)
+        # Short and clean — use directly
+        if len(combined) <= 300:
+            return combined[:250]
+        # Too messy — let MiniMax distil it into one sentence
+        from minimax import call_minimax, MINIMAX_API_KEY as _MM  # type: ignore
+        if not _MM:
+            return combined[:250]
+        reply, _, _ = call_minimax(
+            messages=[
+                {"role": "system", "name": "MiniMax AI", "content":
+                    "You are a concise analyst. Write exactly ONE sentence (≤25 words) "
+                    "describing what this entity is, based only on the web snippets provided. "
+                    "Return only the sentence, no preamble or punctuation other than a period."},
+                {"role": "user", "name": "User", "content":
+                    f"Entity: {name}\nWeb snippets:\n{combined[:2000]}"},
+            ],
+            temperature=0.1,
+            max_completion_tokens=80,
+        )
+        return reply.strip()
+    except Exception as exc:
+        print(f"brave_enrich({name!r}): {exc}")
+        return ""
+
+
 # ── LLM summarisation endpoint ─────────────────────────────────────────────────
 
 @app.route("/api/summarize", methods=["POST"])
@@ -446,6 +508,11 @@ def api_pdf_import():
             else:
                 db_name = ticker or full_name
             ticker_to_db_name[ticker] = db_name
+            # Enrich empty / thin descriptions via Brave Search
+            if len(desc) < 30:
+                enriched = brave_enrich(full_name or db_name, "company")
+                if enriched:
+                    desc = enriched
             try:
                 conn.execute(
                     "INSERT OR IGNORE INTO companies (name, description) VALUES (?,?)",
@@ -461,6 +528,11 @@ def api_pdf_import():
             bdesc = (biz.get("description") or "").strip()
             if not bname:
                 continue
+            # Enrich empty / thin descriptions via Brave Search
+            if len(bdesc) < 30:
+                enriched = brave_enrich(bname, "business")
+                if enriched:
+                    bdesc = enriched
             try:
                 conn.execute(
                     "INSERT OR IGNORE INTO businesses (name, description) VALUES (?,?)",
@@ -651,6 +723,14 @@ TEMPLATE = r"""
 
     /* modal image */
     #imgModal img { max-width:100%; }
+
+    /* clickable entity name in Manage Entities */
+    .entity-link {
+      cursor:pointer; color:#0d6efd;
+      text-decoration:underline dotted;
+      font-weight:600;
+    }
+    .entity-link:hover { text-decoration:underline; }
   </style>
 </head>
 <body>
@@ -1026,7 +1106,11 @@ TEMPLATE = r"""
             <tbody>
             {% for c in companies %}
             <tr>
-              <td><strong>{{c.name}}</strong></td>
+              <td>
+                <span class="entity-link"
+                      onclick="highlightNode('c{{c.id}}', '{{c.name|e}}', 'company')"
+                      title="Highlight in graph">{{c.name}}</span>
+              </td>
               <td style="color:#555;font-size:.8rem">{{c.description}}</td>
               <td>
                 <form method="post" action="/company/delete/{{c.id}}" style="display:inline">
@@ -1058,7 +1142,11 @@ TEMPLATE = r"""
             <tbody>
             {% for b in businesses %}
             <tr>
-              <td><strong>{{b.name}}</strong></td>
+              <td>
+                <span class="entity-link"
+                      onclick="highlightNode('b{{b.id}}', '{{b.name|e}}', 'business')"
+                      title="Highlight in graph">{{b.name}}</span>
+              </td>
               <td style="color:#555;font-size:.8rem">{{b.description}}</td>
               <td>
                 <form method="post" action="/business/delete/{{b.id}}" style="display:inline">
@@ -1230,6 +1318,21 @@ function clearFilter() {
   filterTables(null, null, null);
   document.getElementById('filter-bar').classList.add('d-none');
   network.unselectAll();
+}
+
+function highlightNode(nodeId, label, group) {
+  // Scroll the graph into view first
+  document.getElementById('graph-container').scrollIntoView({behavior:'smooth', block:'start'});
+  // Select and zoom to the node
+  network.selectNodes([nodeId]);
+  network.focus(nodeId, {
+    scale: 1.8,
+    animation: { duration: 600, easingFunction: 'easeInOutQuad' },
+  });
+  // Show filter bar label
+  showFilterBar((group === 'company' ? 'Company: ' : 'Business: ') + label);
+  // Also filter BC/BB tables so they're ready when user switches tabs
+  filterTables(group, label, null);
 }
 
 network.on('click', function(params) {
