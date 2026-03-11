@@ -505,11 +505,14 @@ def api_pdf_import():
             # so the name is human-readable in the UI.
             if ticker and ticker.isdigit():
                 db_name = f"{full_name} ({ticker})" if full_name and full_name != ticker else ticker
+                is_numeric_ticker = True
             else:
                 db_name = ticker or full_name
+                is_numeric_ticker = False
             ticker_to_db_name[ticker] = db_name
-            # Enrich empty / thin descriptions via Brave Search
-            if len(desc) < 30:
+            # Always enrich numeric tickers via Brave Search (MiniMax rarely knows
+            # A-share / HK companies well); also enrich any other thin descriptions.
+            if is_numeric_ticker or len(desc) < 30:
                 enriched = brave_enrich(full_name or db_name, "company")
                 if enriched:
                     desc = enriched
