@@ -655,6 +655,12 @@ def render_main(active_tab="bc"):
         JOIN businesses bt ON bt.id = bb.business_to
         ORDER BY bf.name, bt.name
     """).fetchall()
+    co_counts = {r["company_id"]: r["cnt"] for r in conn.execute(
+        "SELECT company_id, COUNT(*) AS cnt FROM business_company GROUP BY company_id"
+    ).fetchall()}
+    biz_counts = {r["business_id"]: r["cnt"] for r in conn.execute(
+        "SELECT business_id, COUNT(*) AS cnt FROM business_company GROUP BY business_id"
+    ).fetchall()}
     graph_json = build_graph_json(conn)
     conn.close()
     return render_template_string(
@@ -663,6 +669,8 @@ def render_main(active_tab="bc"):
         businesses=businesses,
         bc_links=bc_links,
         bb_links=bb_links,
+        co_counts=co_counts,
+        biz_counts=biz_counts,
         graph_json=graph_json,
         active_tab=active_tab,
     )
@@ -1102,8 +1110,15 @@ TEMPLATE = r"""
             </div>
           </form>
           <table class="table table-bordered table-sm">
-            <thead class="table-light"><tr><th>Name</th><th>Description</th><th></th></tr></thead>
-            <tbody>
+            <thead class="table-light"><tr>
+              <th>Name</th><th>Description</th>
+              <th data-label="# Biz" data-sort-dir=""
+                  onclick="sortEntityTable('co-tbody', 2, this)"
+                  style="cursor:pointer;user-select:none;white-space:nowrap;width:4rem"
+                  title="Sort by business count"># Biz ⇅</th>
+              <th></th>
+            </tr></thead>
+            <tbody id="co-tbody">
             {% for c in companies %}
             <tr>
               <td>
@@ -1113,6 +1128,7 @@ TEMPLATE = r"""
                       data-bs-title="{{c.description|e if c.description else 'No description'}}">{{c.name}}</span>
               </td>
               <td style="color:#555;font-size:.8rem">{{c.description}}</td>
+              <td class="text-center fw-bold">{{ co_counts.get(c.id, 0) }}</td>
               <td>
                 <form method="post" action="/company/delete/{{c.id}}" style="display:inline">
                   <button class="btn btn-sm btn-outline-danger">✕</button>
@@ -1139,8 +1155,15 @@ TEMPLATE = r"""
             </div>
           </form>
           <table class="table table-bordered table-sm">
-            <thead class="table-light"><tr><th>Name</th><th>Description</th><th></th></tr></thead>
-            <tbody>
+            <thead class="table-light"><tr>
+              <th>Name</th><th>Description</th>
+              <th data-label="# Co" data-sort-dir=""
+                  onclick="sortEntityTable('biz-tbody', 2, this)"
+                  style="cursor:pointer;user-select:none;white-space:nowrap;width:4rem"
+                  title="Sort by company count"># Co ⇅</th>
+              <th></th>
+            </tr></thead>
+            <tbody id="biz-tbody">
             {% for b in businesses %}
             <tr>
               <td>
@@ -1150,6 +1173,7 @@ TEMPLATE = r"""
                       data-bs-title="{{b.description|e if b.description else 'No description'}}">{{b.name}}</span>
               </td>
               <td style="color:#555;font-size:.8rem">{{b.description}}</td>
+              <td class="text-center fw-bold">{{ biz_counts.get(b.id, 0) }}</td>
               <td>
                 <form method="post" action="/business/delete/{{b.id}}" style="display:inline">
                   <button class="btn btn-sm btn-outline-danger">✕</button>
@@ -1394,6 +1418,22 @@ function showExpl(title, text) {
   new bootstrap.Modal(document.getElementById("explModal")).show();
 }
 
+// ── entity table sort ────────────────────────────────────────────────────────
+function sortEntityTable(tbodyId, colIdx, thEl) {
+  const tbody = document.getElementById(tbodyId);
+  const rows  = Array.from(tbody.querySelectorAll('tr'));
+  const asc   = thEl.dataset.sortDir !== 'asc';
+  rows.sort((a, b) => {
+    const va = parseInt(a.cells[colIdx].textContent.trim(), 10) || 0;
+    const vb = parseInt(b.cells[colIdx].textContent.trim(), 10) || 0;
+    return asc ? va - vb : vb - va;
+  });
+  rows.forEach(r => tbody.appendChild(r));
+  thEl.dataset.sortDir = asc ? 'asc' : 'desc';
+  const label = thEl.dataset.label || '#';
+  thEl.textContent = label + ' ' + (asc ? '▲' : '▼');
+}
+
 // ── helpers ─────────────────────────────────────────────────────────────────
 function toggleEl(id) {
   document.getElementById(id).classList.toggle('d-none');
@@ -1527,7 +1567,8 @@ async function importPDF() {
 
 @app.route("/")
 def index():
-    return render_main()
+    tab = request.args.get("tab", "bc")
+    return render_main(active_tab=tab)
 
 
 @app.route("/uploads/<path:fname>")
@@ -1543,7 +1584,7 @@ def company_add():
     if name:
         with get_db() as conn:
             conn.execute("INSERT OR IGNORE INTO companies (name, description) VALUES (?,?)", (name, desc))
-    return redirect(url_for("index") + "#tab-entities")
+    return redirect(url_for("index", tab="entities"))
 
 
 @app.route("/company/delete/<int:cid>", methods=["POST"])
@@ -1560,7 +1601,7 @@ def company_delete(cid):
             bb = conn.execute("SELECT COUNT(*) FROM business_business WHERE business_from=? OR business_to=?", (bid, bid)).fetchone()[0]
             if bc + bb == 0:
                 conn.execute("DELETE FROM businesses WHERE id=?", (bid,))
-    return redirect(url_for("index") + "#tab-entities")
+    return redirect(url_for("index", tab="entities"))
 
 
 # Business CRUD
@@ -1571,7 +1612,7 @@ def business_add():
     if name:
         with get_db() as conn:
             conn.execute("INSERT OR IGNORE INTO businesses (name, description) VALUES (?,?)", (name, desc))
-    return redirect(url_for("index") + "#tab-entities")
+    return redirect(url_for("index", tab="entities"))
 
 
 @app.route("/business/delete/<int:bid>", methods=["POST"])
@@ -1587,7 +1628,7 @@ def business_delete(bid):
             bc = conn.execute("SELECT COUNT(*) FROM business_company WHERE company_id=?", (cid,)).fetchone()[0]
             if bc == 0:
                 conn.execute("DELETE FROM companies WHERE id=?", (cid,))
-    return redirect(url_for("index") + "#tab-entities")
+    return redirect(url_for("index", tab="entities"))
 
 
 # Business ↔ Company CRUD
