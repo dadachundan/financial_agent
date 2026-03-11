@@ -345,7 +345,7 @@ def api_pdf_import():
     if Path(pdf_file.filename).suffix.lower() not in ALLOWED_PDF_EXT:
         return jsonify({"error": "Only .pdf files are accepted"}), 400
 
-    # 1) Extract text from first 3 pages
+    # 1) Extract text from first 3 pages and persist the PDF
     try:
         pdf_bytes = pdf_file.read()
         pages_text = []
@@ -359,6 +359,13 @@ def api_pdf_import():
 
     if not raw_text:
         return jsonify({"error": "No text could be extracted from the PDF"}), 422
+
+    # Save the PDF so the source link works later
+    safe_stem = Path(pdf_file.filename).stem[:60]  # keep original name prefix
+    pdf_fname = f"{uuid.uuid4().hex}_{safe_stem}.pdf"
+    UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
+    (UPLOAD_DIR / pdf_fname).write_bytes(pdf_bytes)
+    pdf_source_url = f"/uploads/{pdf_fname}"
 
     # 2) Call MiniMax
     if not MINIMAX_API_KEY:
@@ -468,7 +475,7 @@ def api_pdf_import():
                         """INSERT OR IGNORE INTO business_company
                            (business_id, company_id, comment, explanation, source_url)
                            VALUES (?,?,?,?,?)""",
-                        (biz_row["id"], co_row["id"], comment, "", "pdf-import"),
+                        (biz_row["id"], co_row["id"], comment, "", pdf_source_url),
                     )
                     added_bc.append(f"{ticker} ↔ {bname}")
                     detail = f"{ticker} ↔ {bname}"
@@ -816,7 +823,7 @@ TEMPLATE = r"""
               {% else %}—{% endif %}
             </td>
             <td>
-              {% if r.source_url and r.source_url.startswith('http') %}
+              {% if r.source_url and (r.source_url.startswith('http') or r.source_url.startswith('/')) %}
               <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem">link</a>
               {% else %}—{% endif %}
             </td>
@@ -964,7 +971,7 @@ TEMPLATE = r"""
               {% else %}—{% endif %}
             </td>
             <td>
-              {% if r.source_url and r.source_url.startswith('http') %}
+              {% if r.source_url and (r.source_url.startswith('http') or r.source_url.startswith('/')) %}
               <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem">link</a>
               {% else %}—{% endif %}
             </td>
