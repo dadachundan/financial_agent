@@ -640,6 +640,7 @@ def render_main(active_tab="bc"):
     bc_links = conn.execute("""
         SELECT bc.id, bc.business_id, bc.company_id,
                b.name AS business_name, c.name AS company_name,
+               b.description AS business_desc, c.description AS company_desc,
                bc.comment, bc.explanation, bc.image_path, bc.source_url
         FROM business_company bc
         JOIN businesses b ON b.id = bc.business_id
@@ -887,24 +888,29 @@ TEMPLATE = r"""
         <table class="table table-bordered table-hover table-sm">
           <thead class="table-light">
             <tr>
-              <th>Business</th><th>Company</th>
+              <th data-label="Business" data-sort-dir="" onclick="sortTable('bc-tbody',0,this,false)" style="cursor:pointer;user-select:none">Business ⇅</th>
+              <th data-label="Company"  data-sort-dir="" onclick="sortTable('bc-tbody',1,this,false)" style="cursor:pointer;user-select:none">Company ⇅</th>
               <th class="comment-col">Comment</th>
               <th class="expl-col">Explanation</th>
-              <th>Image</th><th>Source</th><th>Action</th>
+              <th>Image</th>
+              <th data-label="Source" data-sort-dir="" onclick="sortTable('bc-tbody',5,this,false)" style="cursor:pointer;user-select:none">Source ⇅</th>
+              <th>Action</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="bc-tbody">
           {% for r in bc_links %}
           <tr>
             <td>
-              <span class="badge-business">{{r.business_name}}</span>
+              <span class="badge-business" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-title="{{r.business_desc|e if r.business_desc else 'No description'}}">{{r.business_name}}</span>
               <form method="post" action="/business/delete/{{r.business_id}}" style="display:inline">
                 <button class="btn btn-link text-danger p-0 ms-1" style="font-size:.7rem;line-height:1"
                         title="Delete business {{r.business_name}}">✕</button>
               </form>
             </td>
             <td>
-              <span class="badge-company">{{r.company_name}}</span>
+              <span class="badge-company" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-title="{{r.company_desc|e if r.company_desc else 'No description'}}">{{r.company_name}}</span>
               <form method="post" action="/company/delete/{{r.company_id}}" style="display:inline">
                 <button class="btn btn-link text-danger p-0 ms-1" style="font-size:.7rem;line-height:1"
                         title="Delete company {{r.company_name}}">✕</button>
@@ -928,7 +934,13 @@ TEMPLATE = r"""
             </td>
             <td>
               {% if r.source_url and (r.source_url.startswith('http') or r.source_url.startswith('/')) %}
-              <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem">link</a>
+                {% if r.source_url.endswith('.pdf') %}
+                  {% set fname = r.source_url.split('/')[-1] %}
+                  {% set stem = fname[33:].replace('.pdf', '') %}
+                  <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem" title="{{stem}}">📄 {{stem[:20]}}{% if stem|length > 20 %}…{% endif %}</a>
+                {% else %}
+                  <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem">link</a>
+                {% endif %}
               {% else %}—{% endif %}
             </td>
             <td>
@@ -1035,13 +1047,16 @@ TEMPLATE = r"""
         <table class="table table-bordered table-hover table-sm">
           <thead class="table-light">
             <tr>
-              <th>From</th><th>To</th>
+              <th data-label="From"   data-sort-dir="" onclick="sortTable('bb-tbody',0,this,false)" style="cursor:pointer;user-select:none">From ⇅</th>
+              <th data-label="To"     data-sort-dir="" onclick="sortTable('bb-tbody',1,this,false)" style="cursor:pointer;user-select:none">To ⇅</th>
               <th class="comment-col">Comment</th>
               <th class="expl-col">Explanation</th>
-              <th>Image</th><th>Source</th><th>Action</th>
+              <th>Image</th>
+              <th data-label="Source" data-sort-dir="" onclick="sortTable('bb-tbody',5,this,false)" style="cursor:pointer;user-select:none">Source ⇅</th>
+              <th>Action</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="bb-tbody">
           {% for r in bb_links %}
           <tr>
             <td>
@@ -1076,7 +1091,13 @@ TEMPLATE = r"""
             </td>
             <td>
               {% if r.source_url and (r.source_url.startswith('http') or r.source_url.startswith('/')) %}
-              <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem">link</a>
+                {% if r.source_url.endswith('.pdf') %}
+                  {% set fname = r.source_url.split('/')[-1] %}
+                  {% set stem = fname[33:].replace('.pdf', '') %}
+                  <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem" title="{{stem}}">📄 {{stem[:20]}}{% if stem|length > 20 %}…{% endif %}</a>
+                {% else %}
+                  <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem">link</a>
+                {% endif %}
               {% else %}—{% endif %}
             </td>
             <td>
@@ -1113,7 +1134,7 @@ TEMPLATE = r"""
             <thead class="table-light"><tr>
               <th>Name</th><th>Description</th>
               <th data-label="# Biz" data-sort-dir=""
-                  onclick="sortEntityTable('co-tbody', 2, this)"
+                  onclick="sortTable('co-tbody', 2, this, true)"
                   style="cursor:pointer;user-select:none;white-space:nowrap;width:4rem"
                   title="Sort by business count"># Biz ⇅</th>
               <th></th>
@@ -1158,7 +1179,7 @@ TEMPLATE = r"""
             <thead class="table-light"><tr>
               <th>Name</th><th>Description</th>
               <th data-label="# Co" data-sort-dir=""
-                  onclick="sortEntityTable('biz-tbody', 2, this)"
+                  onclick="sortTable('biz-tbody', 2, this, true)"
                   style="cursor:pointer;user-select:none;white-space:nowrap;width:4rem"
                   title="Sort by company count"># Co ⇅</th>
               <th></th>
@@ -1418,15 +1439,24 @@ function showExpl(title, text) {
   new bootstrap.Modal(document.getElementById("explModal")).show();
 }
 
-// ── entity table sort ────────────────────────────────────────────────────────
-function sortEntityTable(tbodyId, colIdx, thEl) {
+// ── table sort (text or numeric) ─────────────────────────────────────────────
+function sortTable(tbodyId, colIdx, thEl, isNum) {
   const tbody = document.getElementById(tbodyId);
   const rows  = Array.from(tbody.querySelectorAll('tr'));
   const asc   = thEl.dataset.sortDir !== 'asc';
+  const getText = cell => {
+    // For badge spans (business/company), use the badge text; otherwise full cell text
+    const badge = cell.querySelector('.badge-business, .badge-company');
+    return (badge ? badge.textContent : cell.textContent).trim();
+  };
   rows.sort((a, b) => {
-    const va = parseInt(a.cells[colIdx].textContent.trim(), 10) || 0;
-    const vb = parseInt(b.cells[colIdx].textContent.trim(), 10) || 0;
-    return asc ? va - vb : vb - va;
+    const ta = getText(a.cells[colIdx]);
+    const tb = getText(b.cells[colIdx]);
+    if (isNum) {
+      const va = parseInt(ta, 10) || 0, vb = parseInt(tb, 10) || 0;
+      return asc ? va - vb : vb - va;
+    }
+    return asc ? ta.localeCompare(tb) : tb.localeCompare(ta);
   });
   rows.forEach(r => tbody.appendChild(r));
   thEl.dataset.sortDir = asc ? 'asc' : 'desc';
