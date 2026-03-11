@@ -1109,7 +1109,8 @@ TEMPLATE = r"""
               <td>
                 <span class="entity-link"
                       onclick="highlightNode('c{{c.id}}', '{{c.name|e}}', 'company')"
-                      title="Highlight in graph">{{c.name}}</span>
+                      data-bs-toggle="tooltip" data-bs-placement="right"
+                      data-bs-title="{{c.description|e if c.description else 'No description'}}">{{c.name}}</span>
               </td>
               <td style="color:#555;font-size:.8rem">{{c.description}}</td>
               <td>
@@ -1145,7 +1146,8 @@ TEMPLATE = r"""
               <td>
                 <span class="entity-link"
                       onclick="highlightNode('b{{b.id}}', '{{b.name|e}}', 'business')"
-                      title="Highlight in graph">{{b.name}}</span>
+                      data-bs-toggle="tooltip" data-bs-placement="right"
+                      data-bs-title="{{b.description|e if b.description else 'No description'}}">{{b.name}}</span>
               </td>
               <td style="color:#555;font-size:.8rem">{{b.description}}</td>
               <td>
@@ -1255,6 +1257,13 @@ TEMPLATE = r"""
 
 <script src="/static/bootstrap.bundle.min.js"></script>
 <script>
+// ── Bootstrap tooltips ──────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el =>
+    new bootstrap.Tooltip(el, { trigger: 'hover', delay: { show: 150, hide: 50 } })
+  );
+});
+
 // ── vis-network graph ──────────────────────────────────────────────────────
 const graphData = {{ graph_json | safe }};
 const nodes = new vis.DataSet(graphData.nodes);
