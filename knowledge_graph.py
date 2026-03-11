@@ -776,7 +776,7 @@ TEMPLATE = r"""
               {% else %}—{% endif %}
             </td>
             <td>
-              {% if r.source_url %}
+              {% if r.source_url and r.source_url.startswith('http') %}
               <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem">link</a>
               {% else %}—{% endif %}
             </td>
@@ -895,7 +895,7 @@ TEMPLATE = r"""
               {% else %}—{% endif %}
             </td>
             <td>
-              {% if r.source_url %}
+              {% if r.source_url and r.source_url.startswith('http') %}
               <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem">link</a>
               {% else %}—{% endif %}
             </td>
