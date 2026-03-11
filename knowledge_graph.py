@@ -800,7 +800,15 @@ TEMPLATE = r"""
               </form>
             </td>
             <td class="comment-col">{{r.comment}}</td>
-            <td class="expl-col">{{r.explanation[:120] if r.explanation else '—'}}{% if r.explanation|length > 120 %}…{% endif %}</td>
+            <td class="expl-col">
+              {% if r.explanation %}
+                {% if r.explanation|length > 120 %}
+                  <span class="expl-preview" onclick="showExpl('{{r.business_name}} → {{r.company_name}}', this.dataset.full)" data-full="{{r.explanation|e}}" style="cursor:pointer">{{r.explanation[:120]}}… <span class="text-primary" style="font-size:.75rem">▶ more</span></span>
+                {% else %}
+                  {{r.explanation}}
+                {% endif %}
+              {% else %}—{% endif %}
+            </td>
             <td>
               {% if r.image_path %}
               <img src="/uploads/{{r.image_path}}" class="img-thumb"
@@ -940,7 +948,15 @@ TEMPLATE = r"""
               </form>
             </td>
             <td class="comment-col">{{r.comment}}</td>
-            <td class="expl-col">{{r.explanation[:120] if r.explanation else '—'}}{% if r.explanation|length > 120 %}…{% endif %}</td>
+            <td class="expl-col">
+              {% if r.explanation %}
+                {% if r.explanation|length > 120 %}
+                  <span class="expl-preview" onclick="showExpl('{{r.from_name}} → {{r.to_name}}', this.dataset.full)" data-full="{{r.explanation|e}}" style="cursor:pointer">{{r.explanation[:120]}}… <span class="text-primary" style="font-size:.75rem">▶ more</span></span>
+                {% else %}
+                  {{r.explanation}}
+                {% endif %}
+              {% else %}—{% endif %}
+            </td>
             <td>
               {% if r.image_path %}
               <img src="/uploads/{{r.image_path}}" class="img-thumb"
@@ -1113,6 +1129,19 @@ TEMPLATE = r"""
   </div>
 </div>
 
+<!-- Explanation expand modal -->
+<div class="modal fade" id="explModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header py-2 px-3">
+        <h6 class="modal-title mb-0" id="explModalTitle"></h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body px-3 py-2" id="explModalBody" style="white-space:pre-wrap;font-size:.88rem;line-height:1.6"></div>
+    </div>
+  </div>
+</div>
+
 <script src="/static/bootstrap.bundle.min.js"></script>
 <script>
 // ── vis-network graph ──────────────────────────────────────────────────────
@@ -1221,6 +1250,13 @@ network.on('click', function(params) {
 function showImg(src) {
   document.getElementById("imgModalSrc").src = src;
   new bootstrap.Modal(document.getElementById("imgModal")).show();
+}
+
+// ── explanation expand ──────────────────────────────────────────────────────
+function showExpl(title, text) {
+  document.getElementById("explModalTitle").textContent = title;
+  document.getElementById("explModalBody").textContent  = text;
+  new bootstrap.Modal(document.getElementById("explModal")).show();
 }
 
 // ── helpers ─────────────────────────────────────────────────────────────────
