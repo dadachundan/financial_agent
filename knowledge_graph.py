@@ -318,6 +318,7 @@ def api_summarize():
             max_completion_tokens=512,
         )
         result = json.loads(reply.strip())
+        result["prompt"] = {"system": system_prompt, "user": user_msg}
         return jsonify(result)
     except Exception as exc:
         return jsonify({"error": f"LLM error: {exc}"}), 500
@@ -411,10 +412,11 @@ def api_pdf_import():
         return jsonify({"error": f"LLM/parse error: {exc}", "raw_reply": reply if 'reply' in dir() else ""}), 500
 
     # 3) Upsert into DB
-    added_companies  = []
-    added_businesses = []
-    added_bc         = []
-    errors           = []
+    added_companies   = []
+    added_businesses  = []
+    added_bc          = []   # plain "A ↔ B" strings (legacy)
+    added_bc_detail   = []   # "A ↔ B — comment" strings
+    errors            = []
 
     with get_db() as conn:
         # Upsert companies
@@ -469,6 +471,10 @@ def api_pdf_import():
                         (biz_row["id"], co_row["id"], comment, "", "pdf-import"),
                     )
                     added_bc.append(f"{ticker} ↔ {bname}")
+                    detail = f"{ticker} ↔ {bname}"
+                    if comment:
+                        detail += f" — {comment}"
+                    added_bc_detail.append(detail)
                 else:
                     errors.append(f"rel {ticker}↔{bname}: entity not found in DB")
             except Exception as exc:
@@ -476,11 +482,13 @@ def api_pdf_import():
 
     return jsonify({
         "added": {
-            "companies":  added_companies,
-            "businesses": added_businesses,
-            "bc_links":   added_bc,
+            "companies":     added_companies,
+            "businesses":    added_businesses,
+            "bc_links":      added_bc,
+            "bc_links_detail": added_bc_detail,
         },
         "errors": errors,
+        "prompt": {"system": system_prompt, "user": user_msg},
     })
 
 
@@ -535,7 +543,8 @@ def render_main(active_tab="bc"):
     companies  = conn.execute("SELECT * FROM companies  ORDER BY name").fetchall()
     businesses = conn.execute("SELECT * FROM businesses ORDER BY name").fetchall()
     bc_links = conn.execute("""
-        SELECT bc.id, b.name AS business_name, c.name AS company_name,
+        SELECT bc.id, bc.business_id, bc.company_id,
+               b.name AS business_name, c.name AS company_name,
                bc.comment, bc.explanation, bc.image_path, bc.source_url
         FROM business_company bc
         JOIN businesses b ON b.id = bc.business_id
@@ -543,7 +552,8 @@ def render_main(active_tab="bc"):
         ORDER BY b.name, c.name
     """).fetchall()
     bb_links = conn.execute("""
-        SELECT bb.id, bf.name AS from_name, bt.name AS to_name,
+        SELECT bb.id, bb.business_from, bb.business_to,
+               bf.name AS from_name, bt.name AS to_name,
                bb.comment, bb.explanation, bb.image_path, bb.source_url
         FROM business_business bb
         JOIN businesses bf ON bf.id = bb.business_from
@@ -706,6 +716,15 @@ TEMPLATE = r"""
           </div>
           <div class="col-auto text-danger small" id="bc-mine-err"></div>
         </div>
+        <div id="bc-mine-prompt-wrap" class="d-none mt-1">
+          <button class="btn btn-sm btn-link p-0 text-muted" style="font-size:.75rem" onclick="toggleEl('bc-mine-prompt-detail')">▶ Show prompt</button>
+          <div id="bc-mine-prompt-detail" class="d-none mt-1 border rounded p-2" style="background:#f8f9fa">
+            <div style="font-size:.7rem;font-weight:600;color:#555">SYSTEM</div>
+            <pre id="bc-mine-prompt-system" style="font-size:.7rem;white-space:pre-wrap;max-height:100px;overflow-y:auto;background:#fff;border:1px solid #ddd;padding:4px;border-radius:3px"></pre>
+            <div style="font-size:.7rem;font-weight:600;color:#555">USER</div>
+            <pre id="bc-mine-prompt-user"   style="font-size:.7rem;white-space:pre-wrap;max-height:130px;overflow-y:auto;background:#fff;border:1px solid #ddd;padding:4px;border-radius:3px"></pre>
+          </div>
+        </div>
       </div>
 
       <!-- Add form -->
@@ -766,8 +785,20 @@ TEMPLATE = r"""
           <tbody>
           {% for r in bc_links %}
           <tr>
-            <td><span class="badge-business">{{r.business_name}}</span></td>
-            <td><span class="badge-company">{{r.company_name}}</span></td>
+            <td>
+              <span class="badge-business">{{r.business_name}}</span>
+              <form method="post" action="/business/delete/{{r.business_id}}" style="display:inline">
+                <button class="btn btn-link text-danger p-0 ms-1" style="font-size:.7rem;line-height:1"
+                        title="Delete business {{r.business_name}}">✕</button>
+              </form>
+            </td>
+            <td>
+              <span class="badge-company">{{r.company_name}}</span>
+              <form method="post" action="/company/delete/{{r.company_id}}" style="display:inline">
+                <button class="btn btn-link text-danger p-0 ms-1" style="font-size:.7rem;line-height:1"
+                        title="Delete company {{r.company_name}}">✕</button>
+              </form>
+            </td>
             <td class="comment-col">{{r.comment}}</td>
             <td class="expl-col">{{r.explanation[:120] if r.explanation else '—'}}{% if r.explanation|length > 120 %}…{% endif %}</td>
             <td>
@@ -824,6 +855,15 @@ TEMPLATE = r"""
             </button>
           </div>
           <div class="col-auto text-danger small" id="bb-mine-err"></div>
+        </div>
+        <div id="bb-mine-prompt-wrap" class="d-none mt-1">
+          <button class="btn btn-sm btn-link p-0 text-muted" style="font-size:.75rem" onclick="toggleEl('bb-mine-prompt-detail')">▶ Show prompt</button>
+          <div id="bb-mine-prompt-detail" class="d-none mt-1 border rounded p-2" style="background:#f8f9fa">
+            <div style="font-size:.7rem;font-weight:600;color:#555">SYSTEM</div>
+            <pre id="bb-mine-prompt-system" style="font-size:.7rem;white-space:pre-wrap;max-height:100px;overflow-y:auto;background:#fff;border:1px solid #ddd;padding:4px;border-radius:3px"></pre>
+            <div style="font-size:.7rem;font-weight:600;color:#555">USER</div>
+            <pre id="bb-mine-prompt-user"   style="font-size:.7rem;white-space:pre-wrap;max-height:130px;overflow-y:auto;background:#fff;border:1px solid #ddd;padding:4px;border-radius:3px"></pre>
+          </div>
         </div>
       </div>
 
@@ -885,8 +925,20 @@ TEMPLATE = r"""
           <tbody>
           {% for r in bb_links %}
           <tr>
-            <td><span class="badge-business">{{r.from_name}}</span></td>
-            <td><span class="badge-business">{{r.to_name}}</span></td>
+            <td>
+              <span class="badge-business">{{r.from_name}}</span>
+              <form method="post" action="/business/delete/{{r.business_from}}" style="display:inline">
+                <button class="btn btn-link text-danger p-0 ms-1" style="font-size:.7rem;line-height:1"
+                        title="Delete business {{r.from_name}}">✕</button>
+              </form>
+            </td>
+            <td>
+              <span class="badge-business">{{r.to_name}}</span>
+              <form method="post" action="/business/delete/{{r.business_to}}" style="display:inline">
+                <button class="btn btn-link text-danger p-0 ms-1" style="font-size:.7rem;line-height:1"
+                        title="Delete business {{r.to_name}}">✕</button>
+              </form>
+            </td>
             <td class="comment-col">{{r.comment}}</td>
             <td class="expl-col">{{r.explanation[:120] if r.explanation else '—'}}{% if r.explanation|length > 120 %}…{% endif %}</td>
             <td>
@@ -1029,6 +1081,18 @@ TEMPLATE = r"""
           </div>
         </div>
         <div id="pdf-res-errors" class="text-danger small mt-2"></div>
+        <!-- Prompt viewer -->
+        <div class="mt-2">
+          <button class="btn btn-sm btn-link p-0 text-muted" onclick="toggleEl('pdf-prompt-detail')">
+            ▶ Show prompt sent to model
+          </button>
+          <div id="pdf-prompt-detail" class="d-none mt-2 border rounded p-2" style="background:#f8f9fa">
+            <div class="mb-1" style="font-size:.72rem;font-weight:600;color:#555">SYSTEM</div>
+            <pre id="pdf-prompt-system" class="mb-2" style="font-size:.72rem;white-space:pre-wrap;max-height:140px;overflow-y:auto;background:#fff;border:1px solid #ddd;padding:6px;border-radius:4px"></pre>
+            <div class="mb-1" style="font-size:.72rem;font-weight:600;color:#555">USER</div>
+            <pre id="pdf-prompt-user"   class="mb-0" style="font-size:.72rem;white-space:pre-wrap;max-height:200px;overflow-y:auto;background:#fff;border:1px solid #ddd;padding:6px;border-radius:4px"></pre>
+          </div>
+        </div>
         <div class="mt-3">
           <a href="/" class="btn btn-sm btn-outline-secondary">Reload graph to see changes</a>
         </div>
@@ -1159,12 +1223,13 @@ function showImg(src) {
   new bootstrap.Modal(document.getElementById("imgModal")).show();
 }
 
-// ── AI mine helpers ────────────────────────────────────────────────────────
-function nameToId(selectEl, nameMap) {
-  return selectEl.value;   // bc/bb selects already bind to name strings
+// ── helpers ─────────────────────────────────────────────────────────────────
+function toggleEl(id) {
+  document.getElementById(id).classList.toggle('d-none');
 }
 
-async function callMine(url, entityA, entityB, commentId, explId, errId, spinnerId) {
+// ── AI mine helpers ────────────────────────────────────────────────────────
+async function callMine(url, entityA, entityB, commentId, explId, errId, spinnerId, promptPrefix) {
   const spinner = document.getElementById(spinnerId);
   const errDiv  = document.getElementById(errId);
   spinner.classList.remove("d-none");
@@ -1179,6 +1244,12 @@ async function callMine(url, entityA, entityB, commentId, explId, errId, spinner
     if (data.error) { errDiv.textContent = data.error; return; }
     document.getElementById(commentId).value = data.comment    || "";
     document.getElementById(explId).value    = data.explanation || "";
+    // Show prompt
+    if (data.prompt && promptPrefix) {
+      document.getElementById(promptPrefix + '-prompt-system').textContent = data.prompt.system || '';
+      document.getElementById(promptPrefix + '-prompt-user').textContent   = data.prompt.user   || '';
+      document.getElementById(promptPrefix + '-prompt-wrap').classList.remove('d-none');
+    }
   } catch(e) {
     errDiv.textContent = "Network error: " + e.message;
   } finally {
@@ -1191,7 +1262,7 @@ function mineBC() {
     document.getElementById("bc-mine-url").value,
     document.getElementById("bc-mine-biz").value,
     document.getElementById("bc-mine-co").value,
-    "bc-form-comment", "bc-form-expl", "bc-mine-err", "bc-mine-spinner"
+    "bc-form-comment", "bc-form-expl", "bc-mine-err", "bc-mine-spinner", "bc-mine"
   );
 }
 function mineBB() {
@@ -1199,7 +1270,7 @@ function mineBB() {
     document.getElementById("bb-mine-url").value,
     document.getElementById("bb-mine-from").value,
     document.getElementById("bb-mine-to").value,
-    "bb-form-comment", "bb-form-expl", "bb-mine-err", "bb-mine-spinner"
+    "bb-form-comment", "bb-form-expl", "bb-mine-err", "bb-mine-spinner", "bb-mine"
   );
 }
 
@@ -1254,12 +1325,19 @@ async function importPDF() {
 
     fillList("pdf-res-companies",  data.added.companies);
     fillList("pdf-res-businesses", data.added.businesses);
-    fillList("pdf-res-bc",         data.added.bc_links);
+    // Relationships: show "Ticker ↔ Business — comment" if available
+    fillList("pdf-res-bc", (data.added.bc_links_detail || data.added.bc_links));
 
     const errEl = document.getElementById("pdf-res-errors");
     errEl.textContent = (data.errors && data.errors.length)
       ? "Warnings: " + data.errors.join("; ")
       : "";
+
+    // Populate prompt
+    if (data.prompt) {
+      document.getElementById("pdf-prompt-system").textContent = data.prompt.system || '';
+      document.getElementById("pdf-prompt-user").textContent   = data.prompt.user   || '';
+    }
 
     resultsEl.classList.remove("d-none");
   } catch(e) {
@@ -1300,7 +1378,17 @@ def company_add():
 @app.route("/company/delete/<int:cid>", methods=["POST"])
 def company_delete(cid):
     with get_db() as conn:
+        # Remember connected businesses before cascade-deleting the company
+        biz_ids = [r["business_id"] for r in conn.execute(
+            "SELECT business_id FROM business_company WHERE company_id=?", (cid,)
+        ).fetchall()]
         conn.execute("DELETE FROM companies WHERE id=?", (cid,))
+        # Clean up businesses that now have no relationships
+        for bid in biz_ids:
+            bc = conn.execute("SELECT COUNT(*) FROM business_company  WHERE business_id=?",  (bid,)).fetchone()[0]
+            bb = conn.execute("SELECT COUNT(*) FROM business_business WHERE business_from=? OR business_to=?", (bid, bid)).fetchone()[0]
+            if bc + bb == 0:
+                conn.execute("DELETE FROM businesses WHERE id=?", (bid,))
     return redirect(url_for("index") + "#tab-entities")
 
 
@@ -1318,7 +1406,16 @@ def business_add():
 @app.route("/business/delete/<int:bid>", methods=["POST"])
 def business_delete(bid):
     with get_db() as conn:
+        # Remember connected companies before cascade-deleting the business
+        co_ids = [r["company_id"] for r in conn.execute(
+            "SELECT company_id FROM business_company WHERE business_id=?", (bid,)
+        ).fetchall()]
         conn.execute("DELETE FROM businesses WHERE id=?", (bid,))
+        # Clean up companies that now have no relationships
+        for cid in co_ids:
+            bc = conn.execute("SELECT COUNT(*) FROM business_company WHERE company_id=?", (cid,)).fetchone()[0]
+            if bc == 0:
+                conn.execute("DELETE FROM companies WHERE id=?", (cid,))
     return redirect(url_for("index") + "#tab-entities")
 
 
@@ -1344,10 +1441,24 @@ def bc_add():
 @app.route("/bc/delete/<int:rid>", methods=["POST"])
 def bc_delete(rid):
     with get_db() as conn:
-        row = conn.execute("SELECT image_path FROM business_company WHERE id=?", (rid,)).fetchone()
-        if row and row["image_path"]:
+        row = conn.execute(
+            "SELECT business_id, company_id, image_path FROM business_company WHERE id=?", (rid,)
+        ).fetchone()
+        if not row:
+            return redirect(url_for("index"))
+        business_id = row["business_id"]
+        company_id  = row["company_id"]
+        if row["image_path"]:
             (UPLOAD_DIR / row["image_path"]).unlink(missing_ok=True)
         conn.execute("DELETE FROM business_company WHERE id=?", (rid,))
+        # Clean up orphaned company
+        if conn.execute("SELECT COUNT(*) FROM business_company WHERE company_id=?", (company_id,)).fetchone()[0] == 0:
+            conn.execute("DELETE FROM companies WHERE id=?", (company_id,))
+        # Clean up orphaned business
+        bc = conn.execute("SELECT COUNT(*) FROM business_company  WHERE business_id=?",  (business_id,)).fetchone()[0]
+        bb = conn.execute("SELECT COUNT(*) FROM business_business WHERE business_from=? OR business_to=?", (business_id, business_id)).fetchone()[0]
+        if bc + bb == 0:
+            conn.execute("DELETE FROM businesses WHERE id=?", (business_id,))
     return redirect(url_for("index"))
 
 
@@ -1373,10 +1484,22 @@ def bb_add():
 @app.route("/bb/delete/<int:rid>", methods=["POST"])
 def bb_delete(rid):
     with get_db() as conn:
-        row = conn.execute("SELECT image_path FROM business_business WHERE id=?", (rid,)).fetchone()
-        if row and row["image_path"]:
+        row = conn.execute(
+            "SELECT business_from, business_to, image_path FROM business_business WHERE id=?", (rid,)
+        ).fetchone()
+        if not row:
+            return redirect(url_for("index") + "#tab-bb")
+        bfrom = row["business_from"]
+        bto   = row["business_to"]
+        if row["image_path"]:
             (UPLOAD_DIR / row["image_path"]).unlink(missing_ok=True)
         conn.execute("DELETE FROM business_business WHERE id=?", (rid,))
+        # Clean up orphaned businesses (check both endpoints)
+        for bid in set([bfrom, bto]):
+            bc = conn.execute("SELECT COUNT(*) FROM business_company  WHERE business_id=?",  (bid,)).fetchone()[0]
+            bb = conn.execute("SELECT COUNT(*) FROM business_business WHERE business_from=? OR business_to=?", (bid, bid)).fetchone()[0]
+            if bc + bb == 0:
+                conn.execute("DELETE FROM businesses WHERE id=?", (bid,))
     return redirect(url_for("index") + "#tab-bb")
 
 
