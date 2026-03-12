@@ -290,6 +290,7 @@ MIGRATIONS: list[tuple[str, str]] = [
      "already exists"),
     ("CREATE INDEX IF NOT EXISTS idx_energy ON pdf_files(energy_related)",
      "already exists"),
+    ("ALTER TABLE pdf_files ADD COLUMN user_rating INTEGER", "duplicate column"),
 ]
 
 

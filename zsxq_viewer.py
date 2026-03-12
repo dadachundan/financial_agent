@@ -14,7 +14,7 @@ import argparse
 import sqlite3
 from pathlib import Path
 
-from flask import Flask, abort, render_template_string, request, send_file
+from flask import Flask, abort, jsonify, render_template_string, request, send_file
 
 SCRIPT_DIR = Path(__file__).parent
 DEFAULT_DB  = SCRIPT_DIR / "zsxq.db"
@@ -91,29 +91,30 @@ TEMPLATE = """
     <div class="d-flex filter-row">
       <span class="filter-label">Status:</span>
       {%- set sp = '&sort=' ~ current_sort if current_sort != 'desc' else '' %}
-    {%- set tp = ('&ticker=' ~ current_ticker) if current_ticker else '' %}
-    <a href="?filter=all{{ tp }}{{ sp }}"
+      {%- set tp = ('&ticker=' ~ current_ticker) if current_ticker else '' %}
+      {%- set dp = ('&date_from=' ~ current_date_from if current_date_from else '') ~ ('&date_to=' ~ current_date_to if current_date_to else '') %}
+    <a href="?filter=all{{ tp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-dark' if current_filter=='all' else 'btn-outline-dark' }}">All ({{ stats.total }})</a>
-      <a href="?filter=downloaded{{ tp }}{{ sp }}"
+      <a href="?filter=downloaded{{ tp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-primary' if current_filter=='downloaded' else 'btn-outline-primary' }}">Downloaded ({{ stats.downloaded }})</a>
-      <a href="?filter=unclassified{{ tp }}{{ sp }}"
+      <a href="?filter=unclassified{{ tp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-warning text-dark' if current_filter=='unclassified' else 'btn-outline-warning' }}">Unclassified ({{ stats.unclassified }})</a>
     </div>
 
     <!-- Category filters -->
     <div class="d-flex filter-row">
       <span class="filter-label">Category:</span>
-      <a href="?filter=cat_ai{{ tp }}{{ sp }}"
+      <a href="?filter=cat_ai{{ tp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-success' if current_filter=='cat_ai' else 'btn-outline-success' }}">🤖 AI ({{ stats.cat_ai }})</a>
-      <a href="?filter=cat_robotics{{ tp }}{{ sp }}"
+      <a href="?filter=cat_robotics{{ tp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-info' if current_filter=='cat_robotics' else 'btn-outline-info' }}">🦾 Robotics ({{ stats.cat_robotics }})</a>
-      <a href="?filter=cat_semi{{ tp }}{{ sp }}"
+      <a href="?filter=cat_semi{{ tp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-secondary' if current_filter=='cat_semi' else 'btn-outline-secondary' }}">💡 Semiconductor ({{ stats.cat_semi }})</a>
-      <a href="?filter=cat_energy{{ tp }}{{ sp }}"
+      <a href="?filter=cat_energy{{ tp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-warning text-dark' if current_filter=='cat_energy' else 'btn-outline-warning' }}">⚡ Energy ({{ stats.cat_energy }})</a>
-      <a href="?filter=cat_any{{ tp }}{{ sp }}"
+      <a href="?filter=cat_any{{ tp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-dark' if current_filter=='cat_any' else 'btn-outline-dark' }}">Any category ({{ stats.cat_any }})</a>
-      <a href="?filter=cat_none{{ tp }}{{ sp }}"
+      <a href="?filter=cat_none{{ tp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-light border' if current_filter=='cat_none' else 'btn-outline-secondary' }}">None ({{ stats.cat_none }})</a>
     </div>
 
@@ -132,6 +133,21 @@ TEMPLATE = """
              style="max-width:240px" oninput="liveSearch(this.value)">
       <span id="matchCount" class="text-muted small align-self-center ms-1"></span>
     </div>
+
+    <!-- Date filter row -->
+    <div class="d-flex filter-row">
+      <span class="filter-label">Date:</span>
+      <input type="date" id="dateFrom" class="form-control form-control-sm" style="max-width:150px"
+             value="{{ current_date_from }}">
+      <span class="text-muted align-self-center px-1">→</span>
+      <input type="date" id="dateTo" class="form-control form-control-sm" style="max-width:150px"
+             value="{{ current_date_to }}">
+      <button class="btn btn-sm btn-outline-secondary" onclick="applyDateFilter()">Apply</button>
+      {% if current_date_from or current_date_to %}
+      <a href="#" onclick="clearDateFilter();return false"
+         class="btn btn-sm btn-link text-muted p-0">✕ clear</a>
+      {% endif %}
+    </div>
   </div>
 
   <!-- Table -->
@@ -141,7 +157,7 @@ TEMPLATE = """
         <tr>
           <th>#</th>
           <th>
-            <a href="?filter={{ current_filter }}{% if current_ticker %}&ticker={{ current_ticker }}{% endif %}&sort={{ 'asc' if current_sort == 'desc' else 'desc' }}"
+            <a href="?filter={{ current_filter }}{% if current_ticker %}&ticker={{ current_ticker }}{% endif %}&sort={{ 'asc' if current_sort == 'desc' else 'desc' }}{{ dp }}"
                style="color:inherit;text-decoration:none;white-space:nowrap">
               Date {{ '↑' if current_sort == 'asc' else '↓' }}
             </a>
@@ -151,6 +167,7 @@ TEMPLATE = """
           <th>Categories</th>
           <th>Tickers</th>
           <th>Size</th>
+          <th>Rating</th>
           <th>Summary</th>
           <th>PDF</th>
           <th>Analysis</th>
@@ -204,6 +221,16 @@ TEMPLATE = """
 
           <td class="text-end text-nowrap">
             {{ '%.1f MB' % (row.file_size / 1048576) if row.file_size else '—' }}
+          </td>
+
+          <td class="text-nowrap" style="min-width:90px">
+            <span class="star-rating" data-id="{{ row.file_id }}" data-rating="{{ row.user_rating or 0 }}">
+              {% for s in range(1, 6) %}
+              <span class="star" data-val="{{ s }}"
+                    style="cursor:pointer;font-size:1.1rem;color:{{ '#f5a623' if (row.user_rating or 0) >= s else '#ccc' }}"
+                    onclick="setRating({{ row.file_id }}, {{ s }}, this.closest('.star-rating'))">★</span>
+              {% endfor %}
+            </span>
           </td>
 
           <td class="summary-col">
@@ -273,6 +300,39 @@ TEMPLATE = """
     window.location.href = '?' + params.toString();
   }
 
+  function setRating(fileId, rating, container) {
+    const current = parseInt(container.dataset.rating) || 0;
+    const newRating = (current === rating) ? 0 : rating;  // click same star = clear
+    fetch('/rate/' + fileId, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: 'rating=' + newRating,
+    }).then(r => {
+      if (r.ok) {
+        container.dataset.rating = newRating;
+        container.querySelectorAll('.star').forEach(s => {
+          s.style.color = (newRating >= parseInt(s.dataset.val)) ? '#f5a623' : '#ccc';
+        });
+      }
+    });
+  }
+
+  function applyDateFilter() {
+    const params = new URLSearchParams(window.location.search);
+    const from = document.getElementById('dateFrom').value;
+    const to   = document.getElementById('dateTo').value;
+    if (from) { params.set('date_from', from); } else { params.delete('date_from'); }
+    if (to)   { params.set('date_to',   to);   } else { params.delete('date_to');   }
+    window.location.href = '?' + params.toString();
+  }
+
+  function clearDateFilter() {
+    const params = new URLSearchParams(window.location.search);
+    params.delete('date_from');
+    params.delete('date_to');
+    window.location.href = '?' + params.toString();
+  }
+
   function liveSearch(q) {
     q = q.toLowerCase().trim();
     let visible = 0;
@@ -313,9 +373,11 @@ def _get_all_tickers(conn: sqlite3.Connection) -> list[str]:
 
 @app.route("/")
 def index():
-    f      = request.args.get("filter", "all")
-    ticker = request.args.get("ticker", "").strip().upper()
-    sort   = request.args.get("sort", "desc").lower()
+    f         = request.args.get("filter", "all")
+    ticker    = request.args.get("ticker", "").strip().upper()
+    sort      = request.args.get("sort", "desc").lower()
+    date_from = request.args.get("date_from", "").strip()
+    date_to   = request.args.get("date_to",   "").strip()
     if sort not in ("asc", "desc"):
         sort = "desc"
 
@@ -360,6 +422,13 @@ def index():
         conditions.append("tickers LIKE ?")
         params.append(f"%{ticker}%")
 
+    if date_from:
+        conditions.append("substr(create_time, 1, 10) >= ?")
+        params.append(date_from)
+    if date_to:
+        conditions.append("substr(create_time, 1, 10) <= ?")
+        params.append(date_to)
+
     where_clause = ("WHERE " + " AND ".join(conditions)) if conditions else ""
 
     order = "ASC" if sort == "asc" else "DESC"
@@ -378,9 +447,29 @@ def index():
         current_filter=f,
         current_ticker=ticker,
         current_sort=sort,
+        current_date_from=date_from,
+        current_date_to=date_to,
         all_tickers=all_tickers,
         db_path=DB_PATH,
     )
+
+
+@app.route("/rate/<int:file_id>", methods=["POST"])
+def rate_pdf(file_id: int):
+    try:
+        rating = int(request.form.get("rating", 0))
+        rating = max(0, min(5, rating))
+    except (TypeError, ValueError):
+        return jsonify(error="invalid rating"), 400
+
+    conn = get_conn()
+    conn.execute(
+        "UPDATE pdf_files SET user_rating = ? WHERE file_id = ?",
+        (rating if rating > 0 else None, file_id),
+    )
+    conn.commit()
+    conn.close()
+    return "", 204
 
 
 @app.route("/pdf/<int:file_id>")
