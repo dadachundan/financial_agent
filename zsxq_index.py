@@ -45,7 +45,7 @@ from zsxq_classify import classify_with_minimax
 from zsxq_common import (
     DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
     date_subfolder, do_download, get_session_via_selenium, init_db,
-    load_tracker, sanitize_filename,
+    sanitize_filename,
 )
 
 
@@ -84,8 +84,7 @@ def main() -> None:
         print("Run zsxq_downloader.py first to populate the database.")
         sys.exit(1)
 
-    conn    = init_db(db_path)
-    tracker = load_tracker(downloads_dir)
+    conn = init_db(db_path)
 
     # ── Lazy Chrome session (only if auto-download is needed) ──────────────
     _session = None
@@ -190,7 +189,7 @@ def main() -> None:
                 else:
                     print("           → category match: downloading…")
                     local_path, ok = do_download(
-                        get_session(), file_id, name, downloads_dir, tracker,
+                        get_session(), file_id, name, downloads_dir,
                         create_time=create_time,
                     )
                     if ok:
