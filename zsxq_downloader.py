@@ -106,8 +106,9 @@ def main() -> None:
         size_mb = (f.get("size") or 0) / 1024 / 1024
         summary = talk.get("text") or ""
 
+        date_str = (f.get("create_time") or "")[:10]
         print(f"[{i}/{len(pdf_entries)}] {name[:70]}")
-        print(f"         size={size_mb:.1f}MB  id={file_id}")
+        print(f"         date={date_str}  size={size_mb:.1f}MB  id={file_id}")
 
         # ── Upsert metadata (always, even if we skip the actual download) ──
         tracker_info  = tracker.get(str(file_id)) or {}
