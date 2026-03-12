@@ -98,28 +98,30 @@ TEMPLATE = """
   <div class="filter-section">
     <div class="d-flex filter-row">
       <span class="filter-label">Status:</span>
-      <a href="?filter=all{{ '&ticker=' ~ current_ticker if current_ticker else '' }}"
+      {%- set sp = '&sort=' ~ current_sort if current_sort != 'desc' else '' %}
+    {%- set tp = ('&ticker=' ~ current_ticker) if current_ticker else '' %}
+    <a href="?filter=all{{ tp }}{{ sp }}"
          class="btn btn-sm {{ 'btn-dark' if current_filter=='all' else 'btn-outline-dark' }}">All ({{ stats.total }})</a>
-      <a href="?filter=downloaded{{ '&ticker=' ~ current_ticker if current_ticker else '' }}"
+      <a href="?filter=downloaded{{ tp }}{{ sp }}"
          class="btn btn-sm {{ 'btn-primary' if current_filter=='downloaded' else 'btn-outline-primary' }}">Downloaded ({{ stats.downloaded }})</a>
-      <a href="?filter=unclassified{{ '&ticker=' ~ current_ticker if current_ticker else '' }}"
+      <a href="?filter=unclassified{{ tp }}{{ sp }}"
          class="btn btn-sm {{ 'btn-warning text-dark' if current_filter=='unclassified' else 'btn-outline-warning' }}">Unclassified ({{ stats.unclassified }})</a>
     </div>
 
     <!-- Category filters -->
     <div class="d-flex filter-row">
       <span class="filter-label">Category:</span>
-      <a href="?filter=cat_ai{{ '&ticker=' ~ current_ticker if current_ticker else '' }}"
+      <a href="?filter=cat_ai{{ tp }}{{ sp }}"
          class="btn btn-sm {{ 'btn-success' if current_filter=='cat_ai' else 'btn-outline-success' }}">🤖 AI ({{ stats.cat_ai }})</a>
-      <a href="?filter=cat_robotics{{ '&ticker=' ~ current_ticker if current_ticker else '' }}"
+      <a href="?filter=cat_robotics{{ tp }}{{ sp }}"
          class="btn btn-sm {{ 'btn-info' if current_filter=='cat_robotics' else 'btn-outline-info' }}">🦾 Robotics ({{ stats.cat_robotics }})</a>
-      <a href="?filter=cat_semi{{ '&ticker=' ~ current_ticker if current_ticker else '' }}"
+      <a href="?filter=cat_semi{{ tp }}{{ sp }}"
          class="btn btn-sm {{ 'btn-secondary' if current_filter=='cat_semi' else 'btn-outline-secondary' }}">💡 Semiconductor ({{ stats.cat_semi }})</a>
-      <a href="?filter=cat_energy{{ '&ticker=' ~ current_ticker if current_ticker else '' }}"
+      <a href="?filter=cat_energy{{ tp }}{{ sp }}"
          class="btn btn-sm {{ 'btn-warning text-dark' if current_filter=='cat_energy' else 'btn-outline-warning' }}">⚡ Energy ({{ stats.cat_energy }})</a>
-      <a href="?filter=cat_any{{ '&ticker=' ~ current_ticker if current_ticker else '' }}"
+      <a href="?filter=cat_any{{ tp }}{{ sp }}"
          class="btn btn-sm {{ 'btn-dark' if current_filter=='cat_any' else 'btn-outline-dark' }}">Any category ({{ stats.cat_any }})</a>
-      <a href="?filter=cat_none{{ '&ticker=' ~ current_ticker if current_ticker else '' }}"
+      <a href="?filter=cat_none{{ tp }}{{ sp }}"
          class="btn btn-sm {{ 'btn-light border' if current_filter=='cat_none' else 'btn-outline-secondary' }}">None ({{ stats.cat_none }})</a>
 
       <!-- Search box -->
@@ -134,14 +136,14 @@ TEMPLATE = """
   <div class="ticker-cloud">
     <span class="cloud-label">Ticker:</span>
     {% if current_ticker %}
-      <a href="?filter={{ current_filter }}"
+      <a href="?filter={{ current_filter }}{{ sp }}"
          class="btn btn-sm btn-outline-secondary active-ticker-pill">
         ✕ {{ current_ticker }}
       </a>
     {% endif %}
     {% for t in all_tickers %}
       {% if t != current_ticker %}
-        <a href="?filter={{ current_filter }}&ticker={{ t }}"
+        <a href="?filter={{ current_filter }}&ticker={{ t }}{{ sp }}"
            class="ticker-btn ticker-btn-off">{{ t }}</a>
       {% endif %}
     {% endfor %}
@@ -154,7 +156,12 @@ TEMPLATE = """
       <thead class="table-dark">
         <tr>
           <th>#</th>
-          <th>Date</th>
+          <th>
+            <a href="?filter={{ current_filter }}{% if current_ticker %}&ticker={{ current_ticker }}{% endif %}&sort={{ 'asc' if current_sort == 'desc' else 'desc' }}"
+               style="color:inherit;text-decoration:none;white-space:nowrap">
+              Date {{ '↑' if current_sort == 'asc' else '↓' }}
+            </a>
+          </th>
           <th>File name</th>
           <th>Title</th>
           <th>Categories</th>
@@ -173,7 +180,7 @@ TEMPLATE = """
         <tr class="{{ 'row-match' if any_cat else ('row-unclassed' if unclassed else 'row-no-match') }}"
             data-search="{{ (row.name ~ ' ' ~ (row.topic_title or '') ~ ' ' ~ (row.tickers or ''))|lower }}">
           <td class="text-muted">{{ idx }}</td>
-          <td class="text-nowrap">{{ (row.create_time or '')[:10] }}</td>
+          <td class="text-nowrap">{{ (row.create_time or '')[:16].replace('T', ' ') }}</td>
           <td class="name-col">{{ row.name }}</td>
           <td class="title-col">{{ row.topic_title or '—' }}</td>
 
@@ -199,7 +206,7 @@ TEMPLATE = """
               {% set ticker_list = row.tickers.split(',') %}
               {% for t in ticker_list[:5] %}
                 {% set t = t.strip() %}
-                <a href="?filter={{ current_filter }}&ticker={{ t }}"
+                <a href="?filter={{ current_filter }}&ticker={{ t }}{{ sp }}"
                    class="ticker-badge" style="text-decoration:none"
                    title="Filter by {{ t }}">{{ t }}</a>
               {% endfor %}
@@ -314,6 +321,9 @@ def _get_all_tickers(conn: sqlite3.Connection) -> list[str]:
 def index():
     f      = request.args.get("filter", "all")
     ticker = request.args.get("ticker", "").strip().upper()
+    sort   = request.args.get("sort", "desc").lower()
+    if sort not in ("asc", "desc"):
+        sort = "desc"
 
     conn = get_conn()
 
@@ -358,8 +368,9 @@ def index():
 
     where_clause = ("WHERE " + " AND ".join(conditions)) if conditions else ""
 
+    order = "ASC" if sort == "asc" else "DESC"
     rows = conn.execute(
-        f"SELECT * FROM pdf_files {where_clause} ORDER BY create_time DESC",
+        f"SELECT * FROM pdf_files {where_clause} ORDER BY create_time {order}",
         params,
     ).fetchall()
 
@@ -372,6 +383,7 @@ def index():
         stats=stats,
         current_filter=f,
         current_ticker=ticker,
+        current_sort=sort,
         all_tickers=all_tickers,
         db_path=DB_PATH,
     )
