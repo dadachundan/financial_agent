@@ -21,7 +21,8 @@ Usage
     python zsxq_downloader.py --group-id 51111812185184 --delay 1.5
     python zsxq_downloader.py --no-classify          # download only, skip LLM step
     python zsxq_downloader.py --from-date 2025-01-01 --to-date 2025-03-31
-    python zsxq_downloader.py --from-date 2025-06-01  # everything since a date
+    python zsxq_downloader.py --from-date 2025-06-01              # since a date, default --count 10
+    python zsxq_downloader.py --from-date 2025-06-01 --count 0   # since a date, no limit
 """
 
 import argparse
@@ -47,8 +48,7 @@ def main() -> None:
     )
     parser.add_argument("--group-id",       default=DEFAULT_GROUP_ID)
     parser.add_argument("--count",          type=int,   default=10,
-                        help="Number of most-recent files to process (0 = all); "
-                             "ignored when --from-date / --to-date is used")
+                        help="Max files to fetch (0 = unlimited); also applies with --from-date / --to-date")
     parser.add_argument("--from-date",      default=None, metavar="YYYY-MM-DD",
                         help="Only process files published on or after this date")
     parser.add_argument("--to-date",        default=None, metavar="YYYY-MM-DD",
@@ -104,19 +104,18 @@ def main() -> None:
                 print(f"ERROR: {label} must be in YYYY-MM-DD format, got: {val!r}")
                 sys.exit(1)
 
-    # When a date range is requested, ignore --count and fetch all pages back
-    # to from_date (fetch_all_files stops early once it passes that boundary).
+    fetch_max = args.count  # 0 = unlimited; respected even with date filters
+
     if from_date or to_date:
-        fetch_max = 0
-        if from_date and to_date:
-            limit_desc = f"files between {from_date} and {to_date}"
-        elif from_date:
-            limit_desc = f"files from {from_date} onwards"
-        else:
-            limit_desc = f"files up to {to_date}"
+        date_desc = (
+            f"between {from_date} and {to_date}" if (from_date and to_date)
+            else f"from {from_date} onwards"     if from_date
+            else f"up to {to_date}"
+        )
+        count_desc = f"up to {fetch_max} " if fetch_max else ""
+        limit_desc = f"{count_desc}files {date_desc}"
     else:
-        fetch_max  = args.count
-        limit_desc = f"last {args.count}" if args.count else "all"
+        limit_desc = f"last {fetch_max}" if fetch_max else "all"
 
     print(f"Fetching {limit_desc} from group {args.group_id}…")
     entries = fetch_all_files(
