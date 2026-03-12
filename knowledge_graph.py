@@ -31,8 +31,8 @@ import argparse
 import urllib.error
 from pathlib import Path
 
-from flask import (Flask, jsonify, redirect, render_template,
-                   request, send_file, send_from_directory, url_for)
+from flask import (Flask, Response, jsonify, redirect, render_template,
+                   request, send_file, send_from_directory, stream_with_context, url_for)
 
 import kg_db
 import kg_models
@@ -264,19 +264,27 @@ def api_pdf_import():
 @app.route("/api/zsxq-import", methods=["POST"])
 def api_zsxq_import():
     """
-    POST (no body required)
-    Reads unprocessed rows from zsxq.db, calls MiniMax on each summary,
-    upserts entities into knowledge_graph.db.
-    Returns { "processed": N, "skipped": N, "added": {...}, "errors": [...] }
+    POST → text/event-stream (SSE)
+    Streams progress lines then a final 'done' event with the summary JSON.
+    Each data payload is JSON: {"type": "log"|"done", ...}
     """
-    try:
-        with kg_db.get_db() as conn:
-            result = kg_services.zsxq_import_batch(conn)
-        return jsonify(result)
-    except RuntimeError as exc:
-        return jsonify({"error": str(exc)}), 503
-    except Exception as exc:
-        return jsonify({"error": f"Import error: {exc}"}), 500
+    conn = kg_db.get_db()
+
+    @stream_with_context
+    def generate():
+        try:
+            yield from kg_services.zsxq_import_stream(conn)
+        except RuntimeError as exc:
+            import json
+            yield f"data: {json.dumps({'type': 'error', 'msg': str(exc)})}\n\n"
+        except Exception as exc:
+            import json
+            yield f"data: {json.dumps({'type': 'error', 'msg': f'Import error: {exc}'})}\n\n"
+        finally:
+            conn.close()
+
+    return Response(generate(), mimetype="text/event-stream",
+                    headers={"X-Accel-Buffering": "no", "Cache-Control": "no-cache"})
 
 
 @app.route("/zsxq-pdf/<int:file_id>")
