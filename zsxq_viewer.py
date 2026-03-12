@@ -685,7 +685,7 @@ def rate_pdf(file_id: int):
 @app.route("/tags/<int:file_id>", methods=["POST"])
 def set_tags(file_id: int):
     raw = request.form.get("tags", "").strip()
-    normalized = ", ".join(t.strip() for t in raw.split(",") if t.strip())
+    normalized = ",".join(t.strip() for t in raw.split(",") if t.strip())
     conn = get_conn()
     conn.execute("UPDATE pdf_files SET tags = ? WHERE file_id = ?",
                  (normalized or None, file_id))
