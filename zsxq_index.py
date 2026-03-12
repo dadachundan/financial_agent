@@ -221,12 +221,12 @@ def main() -> None:
     limit_sql = f" LIMIT {args.count}" if args.count > 0 else ""
     if args.reclassify:
         to_classify = conn.execute(
-            f"SELECT file_id, name, summary, local_path "
+            f"SELECT file_id, name, summary, local_path, create_time "
             f"FROM pdf_files ORDER BY create_time DESC{limit_sql}"
         ).fetchall()
     else:
         to_classify = conn.execute(
-            f"SELECT file_id, name, summary, local_path "
+            f"SELECT file_id, name, summary, local_path, create_time "
             f"FROM pdf_files WHERE ai_related IS NULL "
             f"ORDER BY create_time DESC{limit_sql}"
         ).fetchall()
@@ -244,10 +244,11 @@ def main() -> None:
     t_start = time.monotonic()
 
     for i, row in enumerate(to_classify, 1):
-        file_id    = row["file_id"]
-        name       = row["name"]
-        summary    = row["summary"] or ""
-        local_path = row["local_path"]
+        file_id     = row["file_id"]
+        name        = row["name"]
+        summary     = row["summary"] or ""
+        local_path  = row["local_path"]
+        create_time = row["create_time"]
 
         eta_str = ""
         if elapsed_times:
@@ -284,14 +285,17 @@ def main() -> None:
             if args.no_autodownload:
                 print("           → category match (auto-download disabled)")
             else:
-                dest = downloads_dir / sanitize_filename(name)
+                from zsxq_common import date_subfolder as _date_sub
+                sub  = _date_sub(create_time)
+                dest = downloads_dir / sub / sanitize_filename(name)
                 if dest.exists():
                     local_path = str(dest)
-                    print(f"           → already on disk: {dest.name}")
+                    print(f"           → already on disk: {sub}/{dest.name}")
                 else:
                     print("           → category match: downloading…")
                     local_path, ok = do_download(
-                        get_session(), file_id, name, downloads_dir, tracker
+                        get_session(), file_id, name, downloads_dir, tracker,
+                        create_time=create_time,
                     )
                     if ok:
                         counts["dl_ok"] += 1
