@@ -40,7 +40,6 @@ TEMPLATE = """
     .filter-label   { font-size:.72rem; color:#888; font-weight:600; text-transform:uppercase;
                       letter-spacing:.04em; white-space:nowrap; align-self:center; }
     .filter-row     { gap:6px; flex-wrap:wrap; align-items:center; margin-bottom:6px; }
-    .ticker-cloud   { margin-bottom:14px; display:flex; flex-wrap:wrap; gap:5px; align-items:center; }
     .table          { background:#fff; font-size:.83rem; }
     th              { white-space:nowrap; vertical-align:middle; }
     td              { vertical-align:middle; }
@@ -59,17 +58,10 @@ TEMPLATE = """
     .ticker-badge   { font-size:.72rem; font-weight:600; margin:1px 2px; display:inline-block;
                       background:#e8f0fe; color:#1a56db; border:1px solid #c3d3f7;
                       border-radius:4px; padding:1px 5px; white-space:nowrap; }
-    .ticker-btn     { font-size:.72rem; font-weight:600; padding:2px 7px; border-radius:4px;
-                      white-space:nowrap; cursor:pointer; text-decoration:none; }
-    .ticker-btn-on  { background:#1a56db; color:#fff; border:1px solid #1a56db; }
-    .ticker-btn-off { background:#e8f0fe; color:#1a56db; border:1px solid #c3d3f7; }
-    .ticker-btn-off:hover { background:#c3d3f7; color:#1a56db; }
     .open-btn       { font-size:.75rem; padding:2px 8px; }
     #searchBox      { max-width:240px; }
     .page-footer    { margin-top:24px; font-size:.8rem; color:#888; }
     .count-badge    { font-size:.75rem; }
-    .cloud-label    { font-size:.75rem; color:#888; font-weight:600; white-space:nowrap; }
-    .active-ticker-pill { font-size:.8rem; }
     .cat-badge      { font-size:.65rem; font-weight:700; padding:1px 4px; border-radius:3px;
                       display:inline-block; margin:1px 0; white-space:nowrap; }
     .cat-yes        { background:#d1f0d8; color:#155724; border:1px solid #b7dfbf; }
@@ -123,32 +115,24 @@ TEMPLATE = """
          class="btn btn-sm {{ 'btn-dark' if current_filter=='cat_any' else 'btn-outline-dark' }}">Any category ({{ stats.cat_any }})</a>
       <a href="?filter=cat_none{{ tp }}{{ sp }}"
          class="btn btn-sm {{ 'btn-light border' if current_filter=='cat_none' else 'btn-outline-secondary' }}">None ({{ stats.cat_none }})</a>
+    </div>
 
-      <!-- Search box -->
+    <!-- Ticker + Search row -->
+    <div class="d-flex filter-row">
+      <span class="filter-label">Ticker:</span>
+      <select id="tickerSelect" class="form-select form-select-sm" style="max-width:200px"
+              onchange="applyTicker(this.value)">
+        <option value="">All tickers</option>
+        {% for t in all_tickers %}
+        <option value="{{ t }}" {{ 'selected' if t == current_ticker else '' }}>{{ t }}</option>
+        {% endfor %}
+      </select>
       <input id="searchBox" type="text" class="form-control form-control-sm ms-2"
-             placeholder="Search name / title / ticker…" oninput="liveSearch(this.value)">
+             placeholder="Search name / title / ticker…"
+             style="max-width:240px" oninput="liveSearch(this.value)">
       <span id="matchCount" class="text-muted small align-self-center ms-1"></span>
     </div>
   </div>
-
-  <!-- Ticker filter cloud -->
-  {% if all_tickers %}
-  <div class="ticker-cloud">
-    <span class="cloud-label">Ticker:</span>
-    {% if current_ticker %}
-      <a href="?filter={{ current_filter }}{{ sp }}"
-         class="btn btn-sm btn-outline-secondary active-ticker-pill">
-        ✕ {{ current_ticker }}
-      </a>
-    {% endif %}
-    {% for t in all_tickers %}
-      {% if t != current_ticker %}
-        <a href="?filter={{ current_filter }}&ticker={{ t }}{{ sp }}"
-           class="ticker-btn ticker-btn-off">{{ t }}</a>
-      {% endif %}
-    {% endfor %}
-  </div>
-  {% endif %}
 
   <!-- Table -->
   <div class="table-responsive shadow-sm rounded">
@@ -206,7 +190,7 @@ TEMPLATE = """
               {% set ticker_list = row.tickers.split(',') %}
               {% for t in ticker_list[:5] %}
                 {% set t = t.strip() %}
-                <a href="?filter={{ current_filter }}&ticker={{ t }}{{ sp }}"
+                <a href="#" onclick="applyTicker('{{ t }}');return false"
                    class="ticker-badge" style="text-decoration:none"
                    title="Filter by {{ t }}">{{ t }}</a>
               {% endfor %}
@@ -277,6 +261,16 @@ TEMPLATE = """
     document.getElementById('summaryModalTitle').textContent = el.dataset.title || '';
     document.getElementById('summaryModalBody').textContent  = el.dataset.full  || '';
     _summaryModal.show();
+  }
+
+  function applyTicker(ticker) {
+    const params = new URLSearchParams(window.location.search);
+    if (ticker) {
+      params.set('ticker', ticker);
+    } else {
+      params.delete('ticker');
+    }
+    window.location.href = '?' + params.toString();
   }
 
   function liveSearch(q) {
