@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-zsxq_index.py — Classify PDFs already stored in zsxq.db using MiniMax.
+zsxq_index.py — Batch-classify PDFs already stored in zsxq.db using MiniMax.
 
 Responsibilities
 ----------------
-  This script is purely an OFFLINE classifier: it reads rows from the local
-  SQLite database (written by zsxq_downloader.py) and calls MiniMax to
-  classify each PDF across four categories:
-    AI | Robotics | Semiconductor | Energy
+  Purely an OFFLINE classifier: reads rows from the local SQLite database
+  (written by zsxq_downloader.py) and calls MiniMax to classify each PDF
+  across four categories:  AI | Robotics | Semiconductor | Energy
 
   Because classification is decoupled from downloading, you can:
     • Change the prompt and re-run without re-downloading everything.
@@ -40,124 +39,14 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-from minimax import MINIMAX_API_KEY as _CONFIG_MINIMAX_KEY, call_minimax  # type: ignore
+from minimax import MINIMAX_API_KEY as _CONFIG_MINIMAX_KEY  # type: ignore
 
+from zsxq_classify import classify_with_minimax
 from zsxq_common import (
     DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
-    do_download, get_session_via_selenium, init_db, load_tracker,
-    sanitize_filename,
+    date_subfolder, do_download, get_session_via_selenium, init_db,
+    load_tracker, sanitize_filename,
 )
-
-# ── MiniMax classification prompt ─────────────────────────────────────────────
-
-CLASSIFY_SYSTEM = (
-    "You are a financial research analyst. Given a research report summary, classify it "
-    "across four categories and extract tickers.\n\n"
-    "Respond in exactly this format (one item per line, nothing else):\n"
-    "  AI: Yes or No\n"
-    "  Robotics: Yes or No\n"
-    "  Semiconductor: Yes or No\n"
-    "  Energy: Yes or No\n"
-    "  Tickers: TICK1, TICK2, ...  (or Tickers: None)\n"
-    "  Analysis: <2-3 sentence summary of the report's focus>\n\n"
-    "Mark Yes when the report covers a product market where multiple companies compete "
-    "— not a macro/policy theme only, and not a product line unique to one company.\n\n"
-    "Category definitions:\n"
-    "- AI: AI accelerator chips (GPU / NPU / TPU), LLM and foundation model products, "
-    "AI inference platforms, AI agent / copilot software.\n"
-    "- Robotics: humanoid robots, industrial collaborative robots (cobots), "
-    "commercially deployed autonomous-driving (robotaxi), autonomous drones.\n"
-    "- Semiconductor: advanced packaging (Chiplet / CoWoS / HBM), power semiconductors "
-    "(SiC / GaN), leading-edge logic foundry, EDA software, NAND / DRAM.\n"
-    "- Energy: battery cells (LFP / NCM / solid-state / sodium-ion), large-scale battery "
-    "energy storage (BESS), solar modules (TOPCon / HJT / perovskite), grid inverters, "
-    "small modular reactors (SMR).\n"
-    "Tickers: A-share 6-digit codes, HK codes, US symbols explicitly referenced only."
-)
-
-CLASSIFY_USER_TMPL = """\
-Report filename: {name}
-
-Summary (Chinese):
-{summary}
-
-Classify this report. Mark Yes only when the report covers a product market with \
-multiple competing companies — not just a single company's product line or a broad \
-macro/policy discussion. Extract tickers that are explicitly named.
-"""
-
-
-# ── Parsing helpers ───────────────────────────────────────────────────────────
-
-def _parse_yes_no(text: str, label: str) -> bool | None:
-    """Find 'Label: Yes/No' in text; return True/False/None."""
-    for line in text.splitlines():
-        ls = line.strip().lower()
-        if ls.startswith(f"{label.lower()}:"):
-            val = ls.split(":", 1)[1].strip()
-            if val.startswith("yes"):
-                return True
-            if val.startswith("no"):
-                return False
-    return None
-
-
-# ── Classification ────────────────────────────────────────────────────────────
-
-def classify_with_minimax(
-    name: str,
-    summary: str,
-    api_key: str,
-    retries: int = 3,
-) -> tuple[str, bool | None, bool | None, bool | None, bool | None, str, float, str, str]:
-    """Call MiniMax to classify a PDF across 4 categories and extract tickers.
-
-    Returns:
-        (analysis, ai_rel, robotics_rel, semiconductor_rel, energy_rel,
-         tickers, elapsed_seconds, prompt_sent, raw_json)
-    """
-    user_msg = CLASSIFY_USER_TMPL.format(
-        name=name,
-        summary=summary.strip() if summary else "(no summary available)",
-    )
-    text, elapsed, raw_json = call_minimax(
-        messages=[
-            {"role": "system", "name": "MiniMax AI", "content": CLASSIFY_SYSTEM},
-            {"role": "user",   "name": "User",       "content": user_msg},
-        ],
-        temperature=0.1,
-        max_completion_tokens=300,
-        retries=retries,
-        api_key=api_key,
-    )
-
-    ai_rel   = _parse_yes_no(text, "AI")
-    rob_rel  = _parse_yes_no(text, "Robotics")
-    semi_rel = _parse_yes_no(text, "Semiconductor")
-    nrg_rel  = _parse_yes_no(text, "Energy")
-
-    if any(v is None for v in [ai_rel, rob_rel, semi_rel, nrg_rel]) and text:
-        print(f"    ⚠ Could not parse all categories. Raw reply:\n{text}")
-
-    tickers = ""
-    for line in text.splitlines():
-        ls = line.strip()
-        if ls.lower().startswith("tickers:"):
-            raw_t = ls[len("tickers:"):].strip()
-            if raw_t.lower() not in ("none", "n/a", ""):
-                tickers = raw_t
-            break
-
-    analysis = ""
-    for line in text.splitlines():
-        ls = line.strip()
-        if ls.lower().startswith("analysis:"):
-            analysis = ls[len("analysis:"):].strip()
-            break
-    if not analysis:
-        analysis = text  # fallback: store the full response
-
-    return analysis, ai_rel, rob_rel, semi_rel, nrg_rel, tickers, elapsed, user_msg, raw_json
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -293,8 +182,7 @@ def main() -> None:
             if args.no_autodownload:
                 print("           → category match (auto-download disabled)")
             else:
-                from zsxq_common import date_subfolder as _date_sub
-                sub  = _date_sub(create_time)
+                sub  = date_subfolder(create_time)
                 dest = downloads_dir / sub / sanitize_filename(name)
                 if dest.exists():
                     local_path = str(dest)
