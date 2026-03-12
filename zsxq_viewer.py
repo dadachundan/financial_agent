@@ -67,6 +67,16 @@ TEMPLATE = """
     .cat-yes        { background:#d1f0d8; color:#155724; border:1px solid #b7dfbf; }
     .cat-no         { background:#f0f0f0; color:#999;    border:1px solid #ddd; }
     .cat-unk        { background:#fff8e1; color:#856404; border:1px solid #ffe083; }
+    .tag-badge      { font-size:.72rem; font-weight:600; margin:1px 2px; display:inline-block;
+                      background:#fce8d4; color:#8a3d00; border:1px solid #f0c090;
+                      border-radius:4px; padding:1px 5px; white-space:nowrap; text-decoration:none; }
+    .tag-badge:hover { background:#f5d0b0; }
+    .edit-icon      { cursor:pointer; color:#bbb; font-size:.75rem; margin-left:2px; }
+    .edit-icon:hover { color:#555; }
+    .inline-edit    { cursor:pointer; display:block; min-height:1.2em; }
+    .inline-edit:hover { background:rgba(0,0,0,.04); border-radius:3px; }
+    .tag-edit-input, .comment-edit-input { font-size:.78rem; padding:1px 4px;
+                      border:1px solid #999; border-radius:3px; width:100%; }
   </style>
 </head>
 <body>
@@ -94,31 +104,32 @@ TEMPLATE = """
   <div class="filter-section">
     <div class="d-flex filter-row">
       <span class="filter-label">Status:</span>
-      {%- set sp = '&sort=' ~ current_sort if current_sort != 'desc' else '' %}
-      {%- set tp = ('&ticker=' ~ current_ticker) if current_ticker else '' %}
-      {%- set dp = ('&date_from=' ~ current_date_from if current_date_from else '') ~ ('&date_to=' ~ current_date_to if current_date_to else '') %}
-    <a href="?filter=all{{ tp }}{{ sp }}{{ dp }}"
+      {%- set sp   = '&sort=' ~ current_sort if current_sort != 'desc' else '' %}
+      {%- set tp   = ('&ticker=' ~ current_ticker) if current_ticker else '' %}
+      {%- set tagp = ('&tag='    ~ current_tag)    if current_tag    else '' %}
+      {%- set dp   = ('&date_from=' ~ current_date_from if current_date_from else '') ~ ('&date_to=' ~ current_date_to if current_date_to else '') %}
+    <a href="?filter=all{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-dark' if current_filter=='all' else 'btn-outline-dark' }}">All ({{ stats.total }})</a>
-      <a href="?filter=downloaded{{ tp }}{{ sp }}{{ dp }}"
+      <a href="?filter=downloaded{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-primary' if current_filter=='downloaded' else 'btn-outline-primary' }}">Downloaded ({{ stats.downloaded }})</a>
-      <a href="?filter=unclassified{{ tp }}{{ sp }}{{ dp }}"
+      <a href="?filter=unclassified{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-warning text-dark' if current_filter=='unclassified' else 'btn-outline-warning' }}">Unclassified ({{ stats.unclassified }})</a>
     </div>
 
     <!-- Category filters -->
     <div class="d-flex filter-row">
       <span class="filter-label">Category:</span>
-      <a href="?filter=cat_ai{{ tp }}{{ sp }}{{ dp }}"
+      <a href="?filter=cat_ai{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-success' if current_filter=='cat_ai' else 'btn-outline-success' }}">🤖 AI ({{ stats.cat_ai }})</a>
-      <a href="?filter=cat_robotics{{ tp }}{{ sp }}{{ dp }}"
+      <a href="?filter=cat_robotics{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-info' if current_filter=='cat_robotics' else 'btn-outline-info' }}">🦾 Robotics ({{ stats.cat_robotics }})</a>
-      <a href="?filter=cat_semi{{ tp }}{{ sp }}{{ dp }}"
+      <a href="?filter=cat_semi{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-secondary' if current_filter=='cat_semi' else 'btn-outline-secondary' }}">💡 Semiconductor ({{ stats.cat_semi }})</a>
-      <a href="?filter=cat_energy{{ tp }}{{ sp }}{{ dp }}"
+      <a href="?filter=cat_energy{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-warning text-dark' if current_filter=='cat_energy' else 'btn-outline-warning' }}">⚡ Energy ({{ stats.cat_energy }})</a>
-      <a href="?filter=cat_any{{ tp }}{{ sp }}{{ dp }}"
+      <a href="?filter=cat_any{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-dark' if current_filter=='cat_any' else 'btn-outline-dark' }}">Any category ({{ stats.cat_any }})</a>
-      <a href="?filter=cat_none{{ tp }}{{ sp }}{{ dp }}"
+      <a href="?filter=cat_none{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-light border' if current_filter=='cat_none' else 'btn-outline-secondary' }}">None ({{ stats.cat_none }})</a>
     </div>
 
@@ -133,9 +144,25 @@ TEMPLATE = """
         {% endfor %}
       </select>
       <input id="searchBox" type="text" class="form-control form-control-sm ms-2"
-             placeholder="Search name / title / ticker…"
+             placeholder="Search name / title / ticker / tag…"
              style="max-width:240px" oninput="liveSearch(this.value)">
       <span id="matchCount" class="text-muted small align-self-center ms-1"></span>
+    </div>
+
+    <!-- Tag filter row -->
+    <div class="d-flex filter-row">
+      <span class="filter-label">Tag:</span>
+      <select id="tagSelect" class="form-select form-select-sm" style="max-width:200px"
+              onchange="applyTag(this.value)">
+        <option value="">All tags</option>
+        {% for t in all_tags %}
+        <option value="{{ t }}" {{ 'selected' if t == current_tag else '' }}>{{ t }}</option>
+        {% endfor %}
+      </select>
+      {% if current_tag %}
+      <a href="#" onclick="applyTag('');return false"
+         class="btn btn-sm btn-link text-muted p-0">✕ clear</a>
+      {% endif %}
     </div>
 
     <!-- Date filter row -->
@@ -170,10 +197,12 @@ TEMPLATE = """
           <th>Title</th>
           <th>Categories</th>
           <th>Tickers</th>
+          <th>Tags</th>
           <th>Size</th>
           <th>Rating</th>
           <th>Summary</th>
           <th>PDF</th>
+          <th>Comment</th>
           <th>Analysis</th>
         </tr>
       </thead>
@@ -183,7 +212,7 @@ TEMPLATE = """
                            or row.semiconductor_related == 1 or row.energy_related == 1) %}
         {%- set unclassed = (row.ai_related is none) %}
         <tr class="{{ 'row-match' if any_cat else ('row-unclassed' if unclassed else 'row-no-match') }}"
-            data-search="{{ (row.name ~ ' ' ~ (row.topic_title or '') ~ ' ' ~ (row.tickers or ''))|lower }}">
+            data-search="{{ (row.name ~ ' ' ~ (row.topic_title or '') ~ ' ' ~ (row.tickers or '') ~ ' ' ~ (row.tags or '') ~ ' ' ~ (row.comment or ''))|lower }}">
           <td class="text-muted">{{ idx }}</td>
           <td class="text-nowrap">{{ (row.create_time or '')[:16].replace('T', ' ') }}</td>
           <td class="name-col">{{ row.name }}</td>
@@ -223,6 +252,20 @@ TEMPLATE = """
             {% endif %}
           </td>
 
+          <!-- Tags cell -->
+          <td style="max-width:110px" id="tags-cell-{{ row.file_id }}">
+            <span data-tags="{{ (row.tags or '')|e }}">
+              {%- if row.tags %}
+                {%- for t in row.tags.split(',') %}
+                  {%- set t = t.strip() %}
+                  <a href="#" onclick="applyTag('{{ t|e }}');return false"
+                     class="tag-badge">{{ t }}</a>
+                {%- endfor %}
+              {%- endif %}
+              <span class="edit-icon" onclick="editTags({{ row.file_id }}, this)" title="Edit tags">✏</span>
+            </span>
+          </td>
+
           <td class="text-end text-nowrap">
             {{ '%.1f MB' % (row.file_size / 1048576) if row.file_size else '—' }}
           </td>
@@ -258,6 +301,13 @@ TEMPLATE = """
               <button class="btn btn-outline-secondary open-btn"
                       onclick="deleteRow({{ row.file_id }}, this)">🗑</button>
             {% endif %}
+          </td>
+
+          <!-- Comment cell -->
+          <td style="max-width:150px" id="comment-cell-{{ row.file_id }}">
+            <span class="inline-edit" data-comment="{{ (row.comment or '')|e }}"
+                  onclick="editComment({{ row.file_id }}, this)"
+                  title="Click to edit">{{ row.comment or '—' }}</span>
           </td>
 
           <td class="analysis-col text-muted">
@@ -370,6 +420,90 @@ TEMPLATE = """
     const mc = document.getElementById('matchCount');
     mc.textContent = q ? visible + ' match' + (visible !== 1 ? 'es' : '') : '';
   }
+
+  function applyTag(tag) {
+    const params = new URLSearchParams(window.location.search);
+    if (tag) { params.set('tag', tag); } else { params.delete('tag'); }
+    window.location.href = '?' + params.toString();
+  }
+
+  function editTags(fileId, btn) {
+    const wrapper = btn.closest('[data-tags]');
+    const cell    = btn.closest('td');
+    const current = wrapper ? wrapper.dataset.tags : '';
+    const input   = document.createElement('input');
+    input.className   = 'tag-edit-input';
+    input.value       = current;
+    input.placeholder = 'tag1, tag2, …';
+    cell.innerHTML = '';
+    cell.appendChild(input);
+    input.focus();
+    const save = () => {
+      fetch('/tags/' + fileId, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: 'tags=' + encodeURIComponent(input.value),
+      }).then(r => r.json()).then(data => renderTagsCell(cell, fileId, data.tags));
+    };
+    input.addEventListener('blur', save);
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter')  { e.preventDefault(); input.blur(); }
+      if (e.key === 'Escape') { renderTagsCell(cell, fileId, current); }
+    });
+  }
+
+  function renderTagsCell(cell, fileId, tagsStr) {
+    const tags = tagsStr ? tagsStr.split(',').map(t => t.trim()).filter(Boolean) : [];
+    const span = document.createElement('span');
+    span.dataset.tags = tagsStr || '';
+    tags.forEach(t => {
+      const a = document.createElement('a');
+      a.href = '#'; a.className = 'tag-badge'; a.textContent = t;
+      a.onclick = e => { e.preventDefault(); applyTag(t); };
+      span.appendChild(a);
+    });
+    const ei = document.createElement('span');
+    ei.className = 'edit-icon'; ei.textContent = ' ✏'; ei.title = 'Edit tags';
+    ei.onclick = () => editTags(fileId, ei);
+    span.appendChild(ei);
+    cell.innerHTML = ''; cell.appendChild(span);
+    // update row data-search
+    const tr = cell.closest('tr');
+    if (tr) tr.dataset.search = (tr.dataset.search || '').replace(/\btag:[^\s]*/g, '') + ' ' + tags.join(' ');
+  }
+
+  function editComment(fileId, span) {
+    const cell    = span.closest('td');
+    const current = span.dataset.comment || '';
+    const input   = document.createElement('input');
+    input.className   = 'comment-edit-input';
+    input.value       = current;
+    input.placeholder = 'Add a comment…';
+    cell.innerHTML = ''; cell.appendChild(input); input.focus();
+    const save = () => {
+      const val = input.value.trim();
+      fetch('/comment/' + fileId, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: 'comment=' + encodeURIComponent(val),
+      }).then(r => { if (r.ok) renderCommentCell(cell, fileId, val); });
+    };
+    input.addEventListener('blur', save);
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter')  { e.preventDefault(); input.blur(); }
+      if (e.key === 'Escape') { renderCommentCell(cell, fileId, current); }
+    });
+  }
+
+  function renderCommentCell(cell, fileId, comment) {
+    const span = document.createElement('span');
+    span.className      = 'inline-edit';
+    span.dataset.comment = comment || '';
+    span.textContent    = comment || '—';
+    span.title          = 'Click to edit';
+    span.onclick        = () => editComment(fileId, span);
+    cell.innerHTML = ''; cell.appendChild(span);
+  }
 </script>
 </body>
 </html>
@@ -382,6 +516,19 @@ def get_conn() -> sqlite3.Connection:
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA journal_mode=WAL")   # allow concurrent reads while downloader writes
     return conn
+
+
+def _get_all_tags(conn: sqlite3.Connection) -> list[str]:
+    rows = conn.execute(
+        "SELECT tags FROM pdf_files WHERE tags IS NOT NULL AND tags != ''"
+    ).fetchall()
+    seen: set[str] = set()
+    for r in rows:
+        for t in r["tags"].split(","):
+            t = t.strip()
+            if t:
+                seen.add(t)
+    return sorted(seen)
 
 
 def _get_all_tickers(conn: sqlite3.Connection) -> list[str]:
@@ -401,6 +548,7 @@ def _get_all_tickers(conn: sqlite3.Connection) -> list[str]:
 def index():
     f         = request.args.get("filter", "all")
     ticker    = request.args.get("ticker", "").strip().upper()
+    tag       = request.args.get("tag",    "").strip()
     sort      = request.args.get("sort", "desc").lower()
     date_from = request.args.get("date_from", "").strip()
     date_to   = request.args.get("date_to",   "").strip()
@@ -449,6 +597,10 @@ def index():
         conditions.append("tickers LIKE ?")
         params.append(f"%{ticker}%")
 
+    if tag:
+        conditions.append("(',' || COALESCE(tags,'') || ',') LIKE ?")
+        params.append(f"%,{tag},%")
+
     if date_from:
         conditions.append("substr(create_time, 1, 10) >= ?")
         params.append(date_from)
@@ -465,6 +617,7 @@ def index():
     ).fetchall()
 
     all_tickers = _get_all_tickers(conn)
+    all_tags    = _get_all_tags(conn)
     conn.close()
 
     return render_template_string(
@@ -473,10 +626,12 @@ def index():
         stats=stats,
         current_filter=f,
         current_ticker=ticker,
+        current_tag=tag,
         current_sort=sort,
         current_date_from=date_from,
         current_date_to=date_to,
         all_tickers=all_tickers,
+        all_tags=all_tags,
         db_path=DB_PATH,
     )
 
@@ -522,6 +677,29 @@ def rate_pdf(file_id: int):
         "UPDATE pdf_files SET user_rating = ? WHERE file_id = ?",
         (rating if rating > 0 else None, file_id),
     )
+    conn.commit()
+    conn.close()
+    return "", 204
+
+
+@app.route("/tags/<int:file_id>", methods=["POST"])
+def set_tags(file_id: int):
+    raw = request.form.get("tags", "").strip()
+    normalized = ", ".join(t.strip() for t in raw.split(",") if t.strip())
+    conn = get_conn()
+    conn.execute("UPDATE pdf_files SET tags = ? WHERE file_id = ?",
+                 (normalized or None, file_id))
+    conn.commit()
+    conn.close()
+    return jsonify(tags=normalized)
+
+
+@app.route("/comment/<int:file_id>", methods=["POST"])
+def set_comment(file_id: int):
+    comment = request.form.get("comment", "").strip()
+    conn = get_conn()
+    conn.execute("UPDATE pdf_files SET comment = ? WHERE file_id = ?",
+                 (comment or None, file_id))
     conn.commit()
     conn.close()
     return "", 204
