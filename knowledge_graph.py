@@ -794,7 +794,15 @@ TEMPLATE = r"""
       <select id="source-select" class="form-select form-select-sm" style="min-width:200px" onchange="applySourceFilter()">
         <option value="">All sources</option>
         {% for s in sources %}
-        <option value="{{s|e}}">{% if s.startswith('http') %}{{s[s.rfind('/')+1:][:60] or s[:60]}}{% else %}{{s[:60]}}{% endif %}</option>
+        <option value="{{s|e}}">
+          {%- if s.startswith('http') -%}
+            {{s[s.rfind('/')+1:][:60] or s[:60]}}
+          {%- elif s.startswith('/uploads/') -%}
+            {% set fname = s[9:] %}{{fname[33:] if fname|length > 33 else fname}}
+          {%- else -%}
+            {{s[:60]}}
+          {%- endif -%}
+        </option>
         {% endfor %}
       </select>
     </div>
