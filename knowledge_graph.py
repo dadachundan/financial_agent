@@ -31,8 +31,8 @@ import argparse
 import urllib.error
 from pathlib import Path
 
-from flask import (Flask, jsonify, redirect, render_template,
-                   request, send_from_directory, url_for)
+from flask import (Flask, Response, jsonify, redirect, render_template,
+                   request, send_file, send_from_directory, stream_with_context, url_for)
 
 import kg_db
 import kg_models
@@ -40,9 +40,10 @@ import kg_services
 
 # ── App & defaults ─────────────────────────────────────────────────────────────
 
-SCRIPT_DIR = Path(__file__).parent
-DEFAULT_DB  = SCRIPT_DIR / "knowledge_graph.db"
-UPLOAD_DIR  = SCRIPT_DIR / "kg_uploads"
+SCRIPT_DIR       = Path(__file__).parent
+DEFAULT_DB       = SCRIPT_DIR / "knowledge_graph.db"
+UPLOAD_DIR       = SCRIPT_DIR / "kg_uploads"
+DEFAULT_ZSXQ_DB  = SCRIPT_DIR / "zsxq.db"
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
 app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024   # 50 MB
@@ -258,6 +259,57 @@ def api_pdf_import():
     return jsonify({"added": added, "errors": errors})
 
 
+# ── API: zsxq.db batch import ──────────────────────────────────────────────────
+
+@app.route("/api/zsxq-import", methods=["POST"])
+def api_zsxq_import():
+    """
+    POST → text/event-stream (SSE)
+    Streams progress lines then a final 'done' event with the summary JSON.
+    Each data payload is JSON: {"type": "log"|"done", ...}
+    """
+    conn = kg_db.get_db()
+
+    @stream_with_context
+    def generate():
+        try:
+            yield from kg_services.zsxq_import_stream(conn)
+        except RuntimeError as exc:
+            import json
+            yield f"data: {json.dumps({'type': 'error', 'msg': str(exc)})}\n\n"
+        except Exception as exc:
+            import json
+            yield f"data: {json.dumps({'type': 'error', 'msg': f'Import error: {exc}'})}\n\n"
+        finally:
+            conn.close()
+
+    return Response(generate(), mimetype="text/event-stream",
+                    headers={"X-Accel-Buffering": "no", "Cache-Control": "no-cache"})
+
+
+@app.route("/zsxq-pdf/<int:file_id>")
+def zsxq_pdf(file_id: int):
+    """Serve a local PDF from zsxq.db by file_id."""
+    import sqlite3
+    try:
+        conn = sqlite3.connect(kg_services.get_zsxq_db_path())
+        row = conn.execute(
+            "SELECT local_path FROM pdf_files WHERE file_id=?", (file_id,)
+        ).fetchone()
+        conn.close()
+    except Exception as exc:
+        return f"DB error: {exc}", 500
+
+    if not row or not row[0]:
+        return "PDF not found", 404
+
+    local_path = Path(row[0])
+    if not local_path.exists():
+        return f"File not on disk: {local_path}", 404
+
+    return send_file(local_path, mimetype="application/pdf")
+
+
 # ── Page renderer ──────────────────────────────────────────────────────────────
 
 def _render_main(active_tab: str = "bc"):
@@ -302,12 +354,14 @@ def _render_main(active_tab: str = "bc"):
 
 def main():
     parser = argparse.ArgumentParser(description="Tech knowledge-graph web app")
-    parser.add_argument("--db",   default=str(DEFAULT_DB), help="SQLite DB path")
+    parser.add_argument("--db",      default=str(DEFAULT_DB),      help="SQLite DB path")
+    parser.add_argument("--zsxq-db", default=str(DEFAULT_ZSXQ_DB), help="zsxq.db path")
     parser.add_argument("--port", type=int, default=5001,  help="HTTP port (default 5001)")
     parser.add_argument("--host", default="0.0.0.0",       help="Bind host")
     args = parser.parse_args()
 
     kg_db.set_db_path(Path(args.db))
+    kg_services.set_zsxq_db_path(Path(args.zsxq_db))
     kg_db.init_db(UPLOAD_DIR)
     kg_db.seed_db()
 
