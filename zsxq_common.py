@@ -209,14 +209,25 @@ def save_tracker(downloads_dir: Path, tracker: dict) -> None:
     path.write_text(json.dumps(tracker, indent=2, ensure_ascii=False))
 
 
+def date_subfolder(create_time: str | None) -> str:
+    """Return a YYYY_MM_DD folder name from an ISO create_time string."""
+    if create_time and len(create_time) >= 10:
+        return create_time[:10].replace("-", "_")
+    return datetime.now().strftime("%Y_%m_%d")
+
+
 def do_download(
     session: requests.Session,
     file_id: int,
     name: str,
     downloads_dir: Path,
     tracker: dict,
+    create_time: str | None = None,
 ) -> tuple[str | None, bool]:
     """Fetch download URL and save the file. Updates *tracker* in-place.
+
+    Files are saved into a date-named subfolder (YYYY_MM_DD) derived from
+    create_time so downloads are grouped by publication date.
 
     Returns (local_path, success). local_path is None on failure.
     """
@@ -226,7 +237,8 @@ def do_download(
         return None, False
     try:
         safe_name = sanitize_filename(name)
-        dest = downloads_dir / safe_name
+        sub = date_subfolder(create_time)
+        dest = downloads_dir / sub / safe_name
         written = download_file(session, dl_url, dest)
         local_path = str(dest)
         dl_ts = datetime.now().isoformat()
@@ -235,7 +247,7 @@ def do_download(
             "size": written, "downloaded_at": dl_ts,
         }
         save_tracker(downloads_dir, tracker)
-        print(f"           → saved {written/1024/1024:.1f}MB → {dest.name}")
+        print(f"           → saved {written/1024/1024:.1f}MB → {sub}/{dest.name}")
         return local_path, True
     except Exception as exc:
         print(f"           → download failed: {exc}")
