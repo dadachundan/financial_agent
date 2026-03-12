@@ -7,11 +7,9 @@ Covers:
   - Filename sanitisation
   - Paginated file listing (with retry)
   - Download URL resolution and file download
-  - JSON download tracker (downloaded.json)
   - SQLite database init and upsert (zsxq.db)
 """
 
-import json
 import re
 import sqlite3
 import time
@@ -206,20 +204,6 @@ def download_file(
     return written
 
 
-# ── Download tracker (downloaded.json) ────────────────────────────────────────
-
-def load_tracker(downloads_dir: Path) -> dict:
-    path = downloads_dir / "downloaded.json"
-    if path.exists():
-        return json.loads(path.read_text())
-    return {}
-
-
-def save_tracker(downloads_dir: Path, tracker: dict) -> None:
-    path = downloads_dir / "downloaded.json"
-    path.write_text(json.dumps(tracker, indent=2, ensure_ascii=False))
-
-
 def date_subfolder(create_time: str | None) -> str:
     """Return a YYYY_MM_DD folder name from an ISO create_time string."""
     if create_time and len(create_time) >= 10:
@@ -232,10 +216,9 @@ def do_download(
     file_id: int,
     name: str,
     downloads_dir: Path,
-    tracker: dict,
     create_time: str | None = None,
 ) -> tuple[str | None, bool]:
-    """Fetch download URL and save the file. Updates *tracker* in-place.
+    """Fetch download URL and save the file.
 
     Files are saved into a date-named subfolder (YYYY_MM_DD) derived from
     create_time so downloads are grouped by publication date.
@@ -252,12 +235,6 @@ def do_download(
         dest = downloads_dir / sub / safe_name
         written = download_file(session, dl_url, dest)
         local_path = str(dest)
-        dl_ts = datetime.now().isoformat()
-        tracker[str(file_id)] = {
-            "name": name, "path": local_path,
-            "size": written, "downloaded_at": dl_ts,
-        }
-        save_tracker(downloads_dir, tracker)
         print(f"           → saved {written/1024/1024:.1f}MB → {sub}/{dest.name}")
         return local_path, True
     except Exception as exc:
