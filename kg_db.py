@@ -70,6 +70,11 @@ CREATE TABLE IF NOT EXISTS business_business (
 _MIGRATIONS = [
     "ALTER TABLE business_company ADD COLUMN rating INTEGER NOT NULL DEFAULT 0",
     "ALTER TABLE business_business ADD COLUMN rating INTEGER NOT NULL DEFAULT 0",
+    # Track which zsxq.db file_ids have already been imported
+    """CREATE TABLE IF NOT EXISTS zsxq_imported (
+        file_id     INTEGER PRIMARY KEY,
+        imported_at TEXT    NOT NULL DEFAULT (datetime('now'))
+    )""",
 ]
 
 
