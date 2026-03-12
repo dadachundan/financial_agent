@@ -19,7 +19,9 @@ Usage
     python zsxq_downloader.py --count 10
     python zsxq_downloader.py --count 50 --out ~/Downloads/zsxq_reports
     python zsxq_downloader.py --group-id 51111812185184 --delay 1.5
-    python zsxq_downloader.py --no-classify   # download only, skip LLM step
+    python zsxq_downloader.py --no-classify          # download only, skip LLM step
+    python zsxq_downloader.py --from-date 2025-01-01 --to-date 2025-03-31
+    python zsxq_downloader.py --from-date 2025-06-01  # everything since a date
 """
 
 import argparse
@@ -45,7 +47,12 @@ def main() -> None:
     )
     parser.add_argument("--group-id",       default=DEFAULT_GROUP_ID)
     parser.add_argument("--count",          type=int,   default=10,
-                        help="Number of most-recent files to process (0 = all)")
+                        help="Number of most-recent files to process (0 = all); "
+                             "ignored when --from-date / --to-date is used")
+    parser.add_argument("--from-date",      default=None, metavar="YYYY-MM-DD",
+                        help="Only process files published on or after this date")
+    parser.add_argument("--to-date",        default=None, metavar="YYYY-MM-DD",
+                        help="Only process files published on or before this date")
     parser.add_argument("--out",            default=str(DEFAULT_DOWNLOADS),
                         help="Download directory")
     parser.add_argument("--db",             default=str(DEFAULT_DB),
@@ -85,10 +92,48 @@ def main() -> None:
     session = get_session_via_selenium(chrome_profile)
     conn    = init_db(db_path)
 
-    limit_desc = f"last {args.count}" if args.count else "all"
-    print(f"Fetching {limit_desc} files from group {args.group_id}…")
-    entries     = fetch_all_files(session, args.group_id, max_files=args.count)
+    from_date = args.from_date
+    to_date   = args.to_date
+
+    # Validate date formats early
+    for label, val in [("--from-date", from_date), ("--to-date", to_date)]:
+        if val:
+            try:
+                datetime.strptime(val, "%Y-%m-%d")
+            except ValueError:
+                print(f"ERROR: {label} must be in YYYY-MM-DD format, got: {val!r}")
+                sys.exit(1)
+
+    # When a date range is requested, ignore --count and fetch all pages back
+    # to from_date (fetch_all_files stops early once it passes that boundary).
+    if from_date or to_date:
+        fetch_max = 0
+        if from_date and to_date:
+            limit_desc = f"files between {from_date} and {to_date}"
+        elif from_date:
+            limit_desc = f"files from {from_date} onwards"
+        else:
+            limit_desc = f"files up to {to_date}"
+    else:
+        fetch_max  = args.count
+        limit_desc = f"last {args.count}" if args.count else "all"
+
+    print(f"Fetching {limit_desc} from group {args.group_id}…")
+    entries = fetch_all_files(
+        session, args.group_id,
+        max_files=fetch_max,
+        from_date=from_date,
+    )
+
     pdf_entries = [e for e in entries if e["file"]["name"].lower().endswith(".pdf")]
+
+    # Apply to_date upper bound (fetch_all_files doesn't filter this end)
+    if to_date:
+        pdf_entries = [
+            e for e in pdf_entries
+            if (e["file"].get("create_time") or "")[:10] <= to_date
+        ]
+
     print(f"Found {len(pdf_entries)} PDF(s) (of {len(entries)} total files).\n")
 
     results: list[dict] = []
