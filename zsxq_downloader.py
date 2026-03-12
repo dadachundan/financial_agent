@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-zsxq_downloader.py — Download PDFs from a 知识星球 group into a local directory
-                      and record each file in zsxq.db.
+zsxq_downloader.py — Download PDFs from a 知识星球 group and classify them.
 
 Responsibilities
 ----------------
@@ -9,16 +8,18 @@ Responsibilities
   2. Fetch the N most-recent file listings from the zsxq API.
   3. Download each PDF that has not been downloaded before (tracked in
      downloaded.json and the SQLite database).
-  4. Write download metadata into zsxq.db (file_id, name, local_path, etc.)
-     so that zsxq_index.py can classify them offline without re-downloading.
+  4. Write download metadata into zsxq.db.
+  5. Classify each PDF via MiniMax immediately after download (unless
+     --no-classify is passed).  Already-classified rows are skipped.
 
-Classification is NOT done here — run zsxq_index.py after downloading.
+Run zsxq_index.py for bulk re-classification with a different prompt.
 
 Usage
 -----
     python zsxq_downloader.py --count 10
     python zsxq_downloader.py --count 50 --out ~/Downloads/zsxq_reports
     python zsxq_downloader.py --group-id 51111812185184 --delay 1.5
+    python zsxq_downloader.py --no-classify   # download only, skip LLM step
 """
 
 import argparse
@@ -27,6 +28,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
+from zsxq_classify import classify_one
 from zsxq_common import (
     DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
     do_download, fetch_all_files, get_session_via_selenium,
@@ -38,7 +40,8 @@ DEFAULT_GROUP_ID = "51111812185184"
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Download PDFs from a zsxq group and record them in zsxq.db."
+        description="Download PDFs from a zsxq group, record them in zsxq.db, "
+                    "and classify each one via MiniMax."
     )
     parser.add_argument("--group-id",       default=DEFAULT_GROUP_ID)
     parser.add_argument("--count",          type=int,   default=10,
@@ -50,9 +53,26 @@ def main() -> None:
     parser.add_argument("--chrome-profile", default=str(DEFAULT_CHROME_PROFILE))
     parser.add_argument("--delay",          type=float, default=1.0,
                         help="Seconds between downloads")
+    parser.add_argument("--classify-delay", type=float, default=1.0,
+                        help="Seconds between MiniMax API calls (default: 1.0)")
     parser.add_argument("--skip-existing",  action="store_true", default=True,
                         help="Skip files already in downloaded.json (default: on)")
+    parser.add_argument("--no-classify",    action="store_true",
+                        help="Skip MiniMax classification after download")
     args = parser.parse_args()
+
+    # ── Check API key early if we'll need it ──────────────────────────────
+    api_key = None
+    if not args.no_classify:
+        try:
+            from minimax import MINIMAX_API_KEY  # type: ignore
+            api_key = MINIMAX_API_KEY
+        except ImportError:
+            pass
+        if not api_key:
+            print("WARNING: MINIMAX_API_KEY not found in config.py — "
+                  "classification will be skipped (pass --no-classify to suppress this warning).")
+            args.no_classify = True
 
     chrome_profile = Path(args.chrome_profile).expanduser()
     if not chrome_profile.exists():
@@ -84,6 +104,7 @@ def main() -> None:
         file_id = f["file_id"]
         name    = f["name"]
         size_mb = (f.get("size") or 0) / 1024 / 1024
+        summary = talk.get("text") or ""
 
         print(f"[{i}/{len(pdf_entries)}] {name[:70]}")
         print(f"         size={size_mb:.1f}MB  id={file_id}")
@@ -97,8 +118,8 @@ def main() -> None:
             "file_id":      file_id,
             "name":         name,
             "topic_id":     topic.get("topic_id"),
-            "topic_title":  (talk.get("text") or "").split("\n")[0].strip() or topic.get("title"),
-            "summary":      talk.get("text") or "",
+            "topic_title":  (summary).split("\n")[0].strip() or topic.get("title"),
+            "summary":      summary,
             "topic_json":   None,
             "local_path":   local_path,
             "file_size":    f.get("size"),
@@ -109,27 +130,59 @@ def main() -> None:
         upsert_entry(conn, db_row)
         conn.commit()
 
-        # ── Skip if already downloaded ──
-        if args.skip_existing and str(file_id) in tracker:
-            print("         → already downloaded, skipping.\n")
+        # ── Skip download if already done ──
+        already_downloaded = args.skip_existing and str(file_id) in tracker
+        if already_downloaded:
+            print("         → already downloaded, skipping download.")
             results.append({"file_id": file_id, "name": name, "status": "skipped"})
-            continue
-
-        # ── Download ──
-        local_path, ok = do_download(session, file_id, name, out_dir, tracker,
-                                     create_time=f.get("create_time"))
-        if ok:
-            conn.execute(
-                "UPDATE pdf_files SET local_path=?, downloaded_at=? WHERE file_id=?",
-                (local_path, tracker[str(file_id)]["downloaded_at"], file_id),
-            )
-            conn.commit()
-            results.append({"file_id": file_id, "name": name, "status": "ok"})
         else:
-            results.append({"file_id": file_id, "name": name, "status": "error"})
-        print()
+            # ── Download ──
+            local_path, ok = do_download(session, file_id, name, out_dir, tracker,
+                                         create_time=f.get("create_time"))
+            if ok:
+                conn.execute(
+                    "UPDATE pdf_files SET local_path=?, downloaded_at=? WHERE file_id=?",
+                    (local_path, tracker[str(file_id)]["downloaded_at"], file_id),
+                )
+                conn.commit()
+                results.append({"file_id": file_id, "name": name, "status": "ok"})
+            else:
+                results.append({"file_id": file_id, "name": name, "status": "error"})
+                print()
+                if i < len(pdf_entries):
+                    time.sleep(args.delay)
+                continue
 
-        if i < len(pdf_entries):
+        # ── Classify (unless disabled or already classified) ──────────────
+        if not args.no_classify:
+            row = conn.execute(
+                "SELECT ai_related FROM pdf_files WHERE file_id = ?", (file_id,)
+            ).fetchone()
+            already_classified = row and row["ai_related"] is not None
+            if already_classified:
+                print("         → already classified, skipping LLM.")
+            else:
+                print("         → classifying via MiniMax…")
+                try:
+                    result = classify_one(
+                        conn, file_id, name, summary, api_key,
+                        local_path=local_path,
+                    )
+                    flags = [label for label, hit in [
+                        ("AI", result["ai"]), ("Robotics", result["robotics"]),
+                        ("Semi", result["semiconductor"]), ("Energy", result["energy"]),
+                    ] if hit]
+                    cat_str = ("✓ " + ", ".join(flags)) if flags else "✗ None"
+                    print(f"         → {cat_str}  [{result['elapsed']:.1f}s]")
+                    if result["tickers"]:
+                        print(f"         → Tickers: {result['tickers']}")
+                    if i < len(pdf_entries):
+                        time.sleep(args.classify_delay)
+                except Exception as exc:
+                    print(f"         ⚠ Classification failed: {exc}")
+
+        print()
+        if i < len(pdf_entries) and not already_downloaded:
             time.sleep(args.delay)
 
     conn.close()
@@ -140,7 +193,8 @@ def main() -> None:
     print(f"Done: {ok_count} downloaded, {skipped_count} skipped, {failed_count} failed.")
     print(f"Output : {out_dir}")
     print(f"DB     : {db_path}")
-    print("\nRun zsxq_index.py to classify the downloaded PDFs.")
+    if args.no_classify:
+        print("\nRun zsxq_index.py to classify the downloaded PDFs.")
 
 
 if __name__ == "__main__":
