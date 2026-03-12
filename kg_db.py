@@ -75,6 +75,8 @@ _MIGRATIONS = [
         file_id     INTEGER PRIMARY KEY,
         imported_at TEXT    NOT NULL DEFAULT (datetime('now'))
     )""",
+    "ALTER TABLE business_company ADD COLUMN created_at TEXT DEFAULT (datetime('now'))",
+    "ALTER TABLE business_business ADD COLUMN created_at TEXT DEFAULT (datetime('now'))",
 ]
 
 

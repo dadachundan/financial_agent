@@ -318,19 +318,21 @@ def _render_main(active_tab: str = "bc"):
     businesses = conn.execute("SELECT * FROM businesses ORDER BY name").fetchall()
     bc_links = conn.execute("""
         SELECT bc.id, b.name AS business_name, c.name AS company_name,
-               bc.comment, bc.explanation, bc.image_path, bc.source_url, bc.rating
+               bc.comment, bc.explanation, bc.image_path, bc.source_url, bc.rating,
+               bc.created_at
         FROM business_company bc
         JOIN businesses b ON b.id = bc.business_id
         JOIN companies  c ON c.id = bc.company_id
-        ORDER BY b.name, c.name
+        ORDER BY bc.created_at DESC, b.name, c.name
     """).fetchall()
     bb_links = conn.execute("""
         SELECT bb.id, bf.name AS from_name, bt.name AS to_name,
-               bb.comment, bb.explanation, bb.image_path, bb.source_url, bb.rating
+               bb.comment, bb.explanation, bb.image_path, bb.source_url, bb.rating,
+               bb.created_at
         FROM business_business bb
         JOIN businesses bf ON bf.id = bb.business_from
         JOIN businesses bt ON bt.id = bb.business_to
-        ORDER BY bf.name, bt.name
+        ORDER BY bb.created_at DESC, bf.name, bt.name
     """).fetchall()
     graph_json = kg_models.build_graph_json(conn)
     conn.close()
