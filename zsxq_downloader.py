@@ -6,8 +6,8 @@ Responsibilities
 ----------------
   1. Authenticate via Selenium (reuses existing Chrome profile).
   2. Fetch the N most-recent file listings from the zsxq API.
-  3. Download each PDF that has not been downloaded before (tracked in
-     downloaded.json and the SQLite database).
+  3. Download each PDF that has not been downloaded before (tracked via the
+     SQLite database — local_path IS NOT NULL means already downloaded).
   4. Write download metadata into zsxq.db.
   5. Classify each PDF via MiniMax immediately after download (unless
      --no-classify is passed).  Already-classified rows are skipped.
@@ -32,7 +32,7 @@ from zsxq_classify import classify_one
 from zsxq_common import (
     DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
     do_download, fetch_all_files, get_session_via_selenium,
-    init_db, load_tracker, upsert_entry,
+    init_db, upsert_entry,
 )
 
 DEFAULT_GROUP_ID = "51111812185184"
@@ -55,8 +55,6 @@ def main() -> None:
                         help="Seconds between downloads")
     parser.add_argument("--classify-delay", type=float, default=1.0,
                         help="Seconds between MiniMax API calls (default: 1.0)")
-    parser.add_argument("--skip-existing",  action="store_true", default=True,
-                        help="Skip files already in downloaded.json (default: on)")
     parser.add_argument("--no-classify",    action="store_true",
                         help="Skip MiniMax classification after download")
     args = parser.parse_args()
@@ -86,7 +84,6 @@ def main() -> None:
 
     session = get_session_via_selenium(chrome_profile)
     conn    = init_db(db_path)
-    tracker = load_tracker(out_dir)
 
     limit_desc = f"last {args.count}" if args.count else "all"
     print(f"Fetching {limit_desc} files from group {args.group_id}…")
@@ -110,11 +107,15 @@ def main() -> None:
         print(f"[{i}/{len(pdf_entries)}] {name[:70]}")
         print(f"         date={date_str}  size={size_mb:.1f}MB  id={file_id}")
 
-        # ── Upsert metadata (always, even if we skip the actual download) ──
-        tracker_info  = tracker.get(str(file_id)) or {}
-        local_path    = tracker_info.get("path")
-        downloaded_at = tracker_info.get("downloaded_at")
+        # ── Look up existing DB record for this file ──────────────────────
+        existing = conn.execute(
+            "SELECT local_path, downloaded_at FROM pdf_files WHERE file_id = ?",
+            (file_id,),
+        ).fetchone()
+        local_path    = existing["local_path"]    if existing else None
+        downloaded_at = existing["downloaded_at"] if existing else None
 
+        # ── Upsert metadata (always, even if we skip the actual download) ──
         db_row = {
             "file_id":      file_id,
             "name":         name,
@@ -125,25 +126,28 @@ def main() -> None:
             "local_path":   local_path,
             "file_size":    f.get("size"),
             "create_time":  f.get("create_time"),
-            "downloaded_at":downloaded_at,
+            "downloaded_at": downloaded_at,
             "indexed_at":   now,
         }
         upsert_entry(conn, db_row)
         conn.commit()
 
-        # ── Skip download if already done ──
-        already_downloaded = args.skip_existing and str(file_id) in tracker
+        # ── Skip download if already done (local_path exists in DB) ──────
+        already_downloaded = local_path is not None
         if already_downloaded:
             print("         → already downloaded, skipping download.")
             results.append({"file_id": file_id, "name": name, "status": "skipped"})
         else:
             # ── Download ──
-            local_path, ok = do_download(session, file_id, name, out_dir, tracker,
-                                         create_time=f.get("create_time"))
+            dl_ts = datetime.now().isoformat()
+            local_path, ok = do_download(
+                session, file_id, name, out_dir,
+                create_time=f.get("create_time"),
+            )
             if ok:
                 conn.execute(
                     "UPDATE pdf_files SET local_path=?, downloaded_at=? WHERE file_id=?",
-                    (local_path, tracker[str(file_id)]["downloaded_at"], file_id),
+                    (local_path, dl_ts, file_id),
                 )
                 conn.commit()
                 results.append({"file_id": file_id, "name": name, "status": "ok"})
