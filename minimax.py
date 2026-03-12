@@ -99,4 +99,4 @@ def call_minimax(
                   f"retrying in {wait}s...")
             time.sleep(wait)
 
-    return "", 0.0, ""
+    raise RuntimeError(f"MiniMax API failed after {retries} retries")
