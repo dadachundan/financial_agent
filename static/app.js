@@ -192,6 +192,62 @@ function mineBB() {
   );
 }
 
+// ── zsxq import ─────────────────────────────────────────────────────────────
+async function importZsxq() {
+  const spinner   = document.getElementById("zsxq-spinner");
+  const errDiv    = document.getElementById("zsxq-err");
+  const resultsEl = document.getElementById("zsxq-results");
+
+  errDiv.textContent = "";
+  resultsEl.classList.add("d-none");
+  spinner.classList.remove("d-none");
+
+  try {
+    const resp = await fetch("/api/zsxq-import", { method: "POST" });
+    let data;
+    try {
+      data = await resp.json();
+    } catch (_) {
+      errDiv.textContent = `Server error (HTTP ${resp.status}) — check server logs.`;
+      return;
+    }
+
+    if (data.error) { errDiv.textContent = data.error; return; }
+
+    document.getElementById("zsxq-stats").textContent =
+      `Processed ${data.processed} new rows, skipped ${data.skipped} already-imported.`;
+
+    function fillList(ulId, items) {
+      const ul = document.getElementById(ulId);
+      ul.innerHTML = "";
+      if (!items || !items.length) {
+        ul.innerHTML = "<li class='text-muted'>none</li>";
+        return;
+      }
+      items.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+    }
+
+    fillList("zsxq-res-companies",  data.added.companies);
+    fillList("zsxq-res-businesses", data.added.businesses);
+    fillList("zsxq-res-bc",         data.added.bc_links);
+
+    const errEl = document.getElementById("zsxq-res-errors");
+    errEl.textContent = (data.errors && data.errors.length)
+      ? "Warnings: " + data.errors.join("; ")
+      : "";
+
+    resultsEl.classList.remove("d-none");
+  } catch(e) {
+    errDiv.textContent = "Network error: " + e.message;
+  } finally {
+    spinner.classList.add("d-none");
+  }
+}
+
 // ── PDF import ──────────────────────────────────────────────────────────────
 async function importPDF() {
   const fileInput = document.getElementById("pdf-file-input");
