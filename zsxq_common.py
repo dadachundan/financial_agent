@@ -124,11 +124,15 @@ def fetch_all_files(
     group_id: str,
     max_files: int = 0,
     delay: float = 0.5,
+    from_date: str | None = None,
 ) -> list[dict]:
-    """Paginate through all files; return a flat list of entries.
+    """Paginate through files; return a flat list of entries.
 
     Args:
         max_files: Stop after this many files (0 = fetch everything).
+        from_date: YYYY-MM-DD lower bound.  Pagination stops as soon as the
+                   oldest entry on a page pre-dates this value; entries older
+                   than from_date are excluded from the result.
     """
     all_entries: list[dict] = []
     end_time: str | None = None
@@ -141,9 +145,19 @@ def fetch_all_files(
         if not entries:
             break
 
-        all_entries.extend(entries)
-        print(f"  Page {page}: fetched {len(entries)} files "
-              f"(total so far: {len(all_entries)})")
+        if from_date:
+            in_range = [e for e in entries
+                        if e["file"]["create_time"][:10] >= from_date]
+            all_entries.extend(in_range)
+            print(f"  Page {page}: fetched {len(entries)} files "
+                  f"(in range: {len(in_range)}, total so far: {len(all_entries)})")
+            # Any entry fell outside the window — we've gone far enough back
+            if len(in_range) < len(entries):
+                break
+        else:
+            all_entries.extend(entries)
+            print(f"  Page {page}: fetched {len(entries)} files "
+                  f"(total so far: {len(all_entries)})")
 
         if max_files and len(all_entries) >= max_files:
             all_entries = all_entries[:max_files]
