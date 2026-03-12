@@ -116,7 +116,8 @@ def main() -> None:
             continue
 
         # ── Download ──
-        local_path, ok = do_download(session, file_id, name, out_dir, tracker)
+        local_path, ok = do_download(session, file_id, name, out_dir, tracker,
+                                     create_time=f.get("create_time"))
         if ok:
             conn.execute(
                 "UPDATE pdf_files SET local_path=?, downloaded_at=? WHERE file_id=?",
