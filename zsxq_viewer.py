@@ -84,6 +84,10 @@ TEMPLATE = """
     <span class="badge text-dark fs-6" style="background:#d1ecf1;border:1px solid #bee5eb">🦾 Robotics {{ stats.cat_robotics }}</span>
     <span class="badge text-dark fs-6" style="background:#e2d9f3;border:1px solid #c5b3e6">💡 Semi {{ stats.cat_semi }}</span>
     <span class="badge text-dark fs-6" style="background:#fff3cd;border:1px solid #ffe083">⚡ Energy {{ stats.cat_energy }}</span>
+    {% if stats.no_pdf > 0 %}
+    <button class="btn btn-sm btn-outline-danger ms-2"
+            onclick="deleteNoPdf({{ stats.no_pdf }})">🗑 Delete {{ stats.no_pdf }} rows without PDF</button>
+    {% endif %}
   </div>
 
   <!-- Status filters -->
@@ -291,6 +295,14 @@ TEMPLATE = """
     _summaryModal.show();
   }
 
+  function deleteNoPdf(count) {
+    if (!confirm('Delete all ' + count + ' rows that have no local PDF?\nThis cannot be undone.')) return;
+    fetch('/delete-no-pdf', { method: 'POST' }).then(r => r.json()).then(data => {
+      alert('Deleted ' + data.deleted + ' rows.');
+      window.location.reload();
+    });
+  }
+
   function deleteRow(fileId, btn) {
     if (!confirm('Delete this entry from the database?')) return;
     fetch('/delete/' + fileId, { method: 'POST' }).then(r => {
@@ -410,7 +422,8 @@ def index():
         "               THEN 1 ELSE 0 END)                                  AS cat_any, "
         "  SUM(CASE WHEN (ai_related=0 AND robotics_related=0 "
         "               AND semiconductor_related=0 AND energy_related=0) "
-        "               THEN 1 ELSE 0 END)                                  AS cat_none "
+        "               THEN 1 ELSE 0 END)                                  AS cat_none, "
+        "  SUM(CASE WHEN local_path IS NULL              THEN 1 ELSE 0 END) AS no_pdf "
         "FROM pdf_files"
     ).fetchone()
 
@@ -465,6 +478,16 @@ def index():
         all_tickers=all_tickers,
         db_path=DB_PATH,
     )
+
+
+@app.route("/delete-no-pdf", methods=["POST"])
+def delete_no_pdf():
+    conn = get_conn()
+    cur = conn.execute("DELETE FROM pdf_files WHERE local_path IS NULL")
+    deleted = cur.rowcount
+    conn.commit()
+    conn.close()
+    return jsonify(deleted=deleted)
 
 
 @app.route("/delete/<int:file_id>", methods=["POST"])
