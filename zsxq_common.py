@@ -282,7 +282,10 @@ CREATE TABLE IF NOT EXISTS pdf_files (
     ai_robotics_related   INTEGER,
     ai_prompt             TEXT,
     ai_raw_response       TEXT,
-    tickers               TEXT
+    tickers               TEXT,
+    user_rating           INTEGER,
+    tags                  TEXT,
+    comment               TEXT
 );
 
 CREATE INDEX IF NOT EXISTS idx_create_time ON pdf_files(create_time);
@@ -312,6 +315,9 @@ MIGRATIONS: list[tuple[str, str]] = [
     ("CREATE INDEX IF NOT EXISTS idx_energy ON pdf_files(energy_related)",
      "already exists"),
     ("ALTER TABLE pdf_files ADD COLUMN user_rating INTEGER", "duplicate column"),
+    # v3 user annotations
+    ("ALTER TABLE pdf_files ADD COLUMN tags    TEXT", "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN comment TEXT", "duplicate column"),
 ]
 
 
