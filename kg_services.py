@@ -183,6 +183,127 @@ def llm_extract_entities(raw_text: str) -> dict:
     return json.loads(clean.strip())
 
 
+_ZSXQ_DB_PATH: "Path | None" = None
+
+
+def set_zsxq_db_path(path: "Path") -> None:
+    global _ZSXQ_DB_PATH
+    _ZSXQ_DB_PATH = path
+
+
+def get_zsxq_db_path() -> "Path":
+    if _ZSXQ_DB_PATH is None:
+        raise RuntimeError("zsxq DB path not set; pass --zsxq-db")
+    return _ZSXQ_DB_PATH
+
+
+def zsxq_import_stream(kg_conn: sqlite3.Connection):
+    """
+    Generator: yields SSE-formatted strings with live progress, then a final
+    'done' event carrying the summary JSON.
+
+    Each yielded line is either:
+      data: {"type": "log",  "msg": "..."}\\n\\n
+      data: {"type": "done", "processed": N, "skipped": N, "added": {...}, "errors": [...]}\\n\\n
+    """
+    import sqlite3 as _sq3
+
+    def _sse(obj: dict) -> str:
+        return f"data: {json.dumps(obj, ensure_ascii=False)}\n\n"
+
+    zsxq_conn = _sq3.connect(get_zsxq_db_path())
+    zsxq_conn.row_factory = _sq3.Row
+
+    imported_ids = {
+        r["file_id"]
+        for r in kg_conn.execute("SELECT file_id FROM zsxq_imported").fetchall()
+    }
+
+    all_rows = zsxq_conn.execute("""
+        SELECT file_id, name, summary, local_path
+        FROM pdf_files
+        WHERE summary IS NOT NULL AND summary != ''
+          AND local_path IS NOT NULL AND local_path != ''
+    """).fetchall()
+    zsxq_conn.close()
+
+    rows = [r for r in all_rows if r["file_id"] not in imported_ids]
+    total = len(rows)
+    skipped = len(all_rows) - total
+
+    yield _sse({"type": "log", "msg": f"Found {total} new rows to process, {skipped} already imported."})
+
+    total_companies: list[str]  = []
+    total_businesses: list[str] = []
+    total_bc: list[str]         = []
+    errors: list[str]           = []
+    processed = 0
+
+    for i, row in enumerate(rows, 1):
+        file_id    = row["file_id"]
+        name       = row["name"] or f"file_id={file_id}"
+        source_url = f"/zsxq-pdf/{file_id}"
+
+        short_name = name[:60] + ("…" if len(name) > 60 else "")
+        yield _sse({"type": "log", "msg": f"[{i}/{total}] Calling MiniMax for: {short_name}"})
+
+        user_msg = (
+            f"Document summary:\n\"\"\"\n{row['summary'][:6000]}\n\"\"\"\n\n"
+            "Extract companies, businesses, and their relationships as JSON."
+        )
+        try:
+            reply, elapsed, _ = call_minimax(
+                messages=[
+                    {"role": "system", "name": "MiniMax AI", "content": _PDF_SYSTEM},
+                    {"role": "user",   "name": "User",       "content": user_msg},
+                ],
+                temperature=0.1,
+                max_completion_tokens=1024,
+            )
+            clean = reply.strip()
+            if clean.startswith("```"):
+                clean = "\n".join(clean.splitlines()[1:])
+            if clean.endswith("```"):
+                clean = clean[: clean.rfind("```")]
+            extracted = json.loads(clean.strip())
+        except Exception as exc:
+            msg = f"  ✗ LLM/parse error: {exc}"
+            errors.append(f"file_id {file_id}: {exc}")
+            yield _sse({"type": "log", "msg": msg})
+            kg_conn.execute("INSERT OR IGNORE INTO zsxq_imported (file_id) VALUES (?)", (file_id,))
+            kg_conn.commit()
+            continue
+
+        added, row_errors = upsert_pdf_entities(kg_conn, extracted, source_url)
+        kg_conn.commit()
+
+        total_companies.extend(added["companies"])
+        total_businesses.extend(added["businesses"])
+        total_bc.extend(added["bc_links"])
+        errors.extend([f"file_id {file_id}: {e}" for e in row_errors])
+
+        cos  = ", ".join(added["companies"])  or "—"
+        bizs = ", ".join(added["businesses"]) or "—"
+        bcs  = ", ".join(added["bc_links"])   or "—"
+        yield _sse({"type": "log", "msg": f"  ✓ companies: {cos} | businesses: {bizs} | links: {bcs} ({elapsed:.1f}s)"})
+
+        kg_conn.execute("INSERT OR IGNORE INTO zsxq_imported (file_id) VALUES (?)", (file_id,))
+        kg_conn.commit()
+        processed += 1
+
+    yield _sse({
+        "type":      "done",
+        "processed": processed,
+        "skipped":   skipped,
+        "added": {
+            "companies":  list(dict.fromkeys(total_companies)),
+            "businesses": list(dict.fromkeys(total_businesses)),
+            "bc_links":   total_bc,
+        },
+        "errors": errors,
+    })
+
+
 def upsert_pdf_entities(
     conn: sqlite3.Connection,
     extracted: dict,
