@@ -232,7 +232,7 @@
               <th>Business</th><th>Company</th>
               <th class="comment-col">Comment</th>
               <th class="expl-col">Explanation</th>
-              <th>Image</th><th>Source</th><th>Rating</th><th>Action</th>
+              <th>Image</th><th>Source</th><th>Rating</th><th>Created</th><th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -264,6 +264,7 @@
                 <option value="5" {% if r.rating==5 %}selected{% endif %}>★★★★★</option>
               </select>
             </td>
+            <td style="font-size:.75rem;color:#888;white-space:nowrap">{{r.created_at[:10] if r.created_at else '—'}}</td>
             <td>
               <form method="post" action="/bc/delete/{{r.id}}" style="display:inline">
                 <button class="btn btn-sm btn-outline-danger">✕</button>
@@ -373,7 +374,7 @@
               <th>From</th><th>To</th>
               <th class="comment-col">Comment</th>
               <th class="expl-col">Explanation</th>
-              <th>Image</th><th>Source</th><th>Rating</th><th>Action</th>
+              <th>Image</th><th>Source</th><th>Rating</th><th>Created</th><th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -405,6 +406,7 @@
                 <option value="5" {% if r.rating==5 %}selected{% endif %}>★★★★★</option>
               </select>
             </td>
+            <td style="font-size:.75rem;color:#888;white-space:nowrap">{{r.created_at[:10] if r.created_at else '—'}}</td>
             <td>
               <form method="post" action="/bb/delete/{{r.id}}" style="display:inline">
                 <button class="btn btn-sm btn-outline-danger">✕</button>
