@@ -251,7 +251,8 @@ TEMPLATE = """
               <a href="/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank"
                  class="btn btn-outline-danger open-btn">📄 Open</a>
             {% else %}
-              <span class="text-muted">—</span>
+              <button class="btn btn-outline-secondary open-btn"
+                      onclick="deleteRow({{ row.file_id }}, this)">🗑</button>
             {% endif %}
           </td>
 
@@ -288,6 +289,18 @@ TEMPLATE = """
     document.getElementById('summaryModalTitle').textContent = el.dataset.title || '';
     document.getElementById('summaryModalBody').textContent  = el.dataset.full  || '';
     _summaryModal.show();
+  }
+
+  function deleteRow(fileId, btn) {
+    if (!confirm('Delete this entry from the database?')) return;
+    fetch('/delete/' + fileId, { method: 'POST' }).then(r => {
+      if (r.ok) {
+        const tr = btn.closest('tr');
+        tr.style.transition = 'opacity .3s';
+        tr.style.opacity = '0';
+        setTimeout(() => tr.remove(), 300);
+      }
+    });
   }
 
   function applyTicker(ticker) {
@@ -452,6 +465,24 @@ def index():
         all_tickers=all_tickers,
         db_path=DB_PATH,
     )
+
+
+@app.route("/delete/<int:file_id>", methods=["POST"])
+def delete_entry(file_id: int):
+    conn = get_conn()
+    row = conn.execute(
+        "SELECT local_path FROM pdf_files WHERE file_id = ?", (file_id,)
+    ).fetchone()
+    if not row:
+        conn.close()
+        return jsonify(error="not found"), 404
+    if row["local_path"]:
+        conn.close()
+        return jsonify(error="has local file — delete the PDF file first"), 409
+    conn.execute("DELETE FROM pdf_files WHERE file_id = ?", (file_id,))
+    conn.commit()
+    conn.close()
+    return "", 204
 
 
 @app.route("/rate/<int:file_id>", methods=["POST"])
