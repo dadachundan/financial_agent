@@ -75,8 +75,15 @@ _MIGRATIONS = [
         file_id     INTEGER PRIMARY KEY,
         imported_at TEXT    NOT NULL DEFAULT (datetime('now'))
     )""",
-    "ALTER TABLE business_company ADD COLUMN created_at TEXT DEFAULT (datetime('now'))",
-    "ALTER TABLE business_business ADD COLUMN created_at TEXT DEFAULT (datetime('now'))",
+    "ALTER TABLE business_company ADD COLUMN created_at TEXT",
+    "ALTER TABLE business_business ADD COLUMN created_at TEXT",
+    # Auto-set created_at on INSERT via triggers (SQLite doesn't allow datetime('now') as ALTER TABLE default)
+    """CREATE TRIGGER IF NOT EXISTS bc_set_created_at
+       AFTER INSERT ON business_company WHEN NEW.created_at IS NULL
+       BEGIN UPDATE business_company SET created_at = datetime('now') WHERE id = NEW.id; END""",
+    """CREATE TRIGGER IF NOT EXISTS bb_set_created_at
+       AFTER INSERT ON business_business WHEN NEW.created_at IS NULL
+       BEGIN UPDATE business_business SET created_at = datetime('now') WHERE id = NEW.id; END""",
 ]
 
 
