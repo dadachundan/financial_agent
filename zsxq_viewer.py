@@ -346,7 +346,7 @@ TEMPLATE = """
   }
 
   function deleteNoPdf(count) {
-    if (!confirm('Delete all ' + count + ' rows that have no local PDF?\nThis cannot be undone.')) return;
+    if (!confirm('Delete all ' + count + ' rows that have no local PDF?\\nThis cannot be undone.')) return;
     fetch('/delete-no-pdf', { method: 'POST' }).then(r => r.json()).then(data => {
       alert('Deleted ' + data.deleted + ' rows.');
       window.location.reload();
