@@ -1,192 +1,145 @@
 #!/usr/bin/env python3
 """
-zsxq_downloader.py — Download latest PDFs from a 知识星球 (zsxq.com) group.
+zsxq_downloader.py — Download PDFs from a 知识星球 group into a local directory
+                      and record each file in zsxq.db.
 
-Usage:
-    python zsxq_downloader.py --count 10 --out ~/Downloads/zsxq_reports
+Responsibilities
+----------------
+  1. Authenticate via Selenium (reuses existing Chrome profile).
+  2. Fetch the N most-recent file listings from the zsxq API.
+  3. Download each PDF that has not been downloaded before (tracked in
+     downloaded.json and the SQLite database).
+  4. Write download metadata into zsxq.db (file_id, name, local_path, etc.)
+     so that zsxq_index.py can classify them offline without re-downloading.
 
-Uses chrome_profile/ (same as tradingview.py / fetch_news.py) so no manual
-cookie setup is needed — just make sure you're logged in to wx.zsxq.com in that profile.
+Classification is NOT done here — run zsxq_index.py after downloading.
 
-API pattern:
-    List files:    GET https://api.zsxq.com/v2/groups/{group_id}/files?count=N
-    Download URL:  GET https://api.zsxq.com/v2/files/{file_id}/download_url
-    File CDN:      https://files.zsxq.com/{hash}?attname={name}&e={expiry}&token={token}
+Usage
+-----
+    python zsxq_downloader.py --count 10
+    python zsxq_downloader.py --count 50 --out ~/Downloads/zsxq_reports
+    python zsxq_downloader.py --group-id 51111812185184 --delay 1.5
 """
 
 import argparse
-import json
-import os
 import sys
 import time
-import re
-import requests
-from pathlib import Path
 from datetime import datetime
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
+from pathlib import Path
 
-API_BASE = "https://api.zsxq.com/v2"
-SCRIPT_DIR = Path(__file__).parent
-DEFAULT_CHROME_PROFILE = SCRIPT_DIR / "chrome_profile"
+from zsxq_common import (
+    DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
+    do_download, fetch_all_files, get_session_via_selenium,
+    init_db, load_tracker, upsert_entry,
+)
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-    "Referer": "https://wx.zsxq.com/",
-    "Origin": "https://wx.zsxq.com",
-}
+DEFAULT_GROUP_ID = "51111812185184"
 
 
-def get_session_via_selenium(chrome_profile: Path) -> requests.Session:
-    """Launch Chrome with the existing profile, visit zsxq, extract cookies into a requests Session."""
-    chrome_options = Options()
-    chrome_options.add_argument(f"user-data-dir={chrome_profile}")
-    chrome_options.add_argument("--headless=new")
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--disable-dev-shm-usage")
-
-    print("Starting Chrome to load session cookies...")
-    driver = webdriver.Chrome(
-        service=Service(ChromeDriverManager().install()),
-        options=chrome_options,
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Download PDFs from a zsxq group and record them in zsxq.db."
     )
-    try:
-        driver.get("https://wx.zsxq.com")
-        time.sleep(2)  # let cookies load
-
-        session = requests.Session()
-        for cookie in driver.get_cookies():
-            session.cookies.set(cookie["name"], cookie["value"], domain=cookie.get("domain", ""))
-    finally:
-        driver.quit()
-
-    print(f"Loaded {len(session.cookies)} cookies from Chrome profile.\n")
-    return session
-
-
-def sanitize_filename(name: str) -> str:
-    return re.sub(r'[\\/:*?"<>|]', '_', name)
-
-
-def get_files(session: requests.Session, group_id: str, count: int) -> list[dict]:
-    url = f"{API_BASE}/groups/{group_id}/files"
-    resp = session.get(url, params={"count": count}, headers=HEADERS)
-    resp.raise_for_status()
-    data = resp.json()
-    if not data.get("succeeded"):
-        raise RuntimeError(f"API error: {data.get('info') or data.get('error')}")
-    return data["resp_data"]["files"]
-
-
-def get_download_url(session: requests.Session, file_id: int) -> str | None:
-    url = f"{API_BASE}/files/{file_id}/download_url"
-    resp = session.get(url, headers=HEADERS)
-    resp.raise_for_status()
-    data = resp.json()
-    if not data.get("succeeded"):
-        return None
-    return data["resp_data"]["download_url"]
-
-
-def download_file(session: requests.Session, download_url: str, dest_path: Path) -> int:
-    resp = session.get(download_url, stream=True, headers=HEADERS)
-    resp.raise_for_status()
-    dest_path.parent.mkdir(parents=True, exist_ok=True)
-    written = 0
-    with open(dest_path, "wb") as f:
-        for chunk in resp.iter_content(chunk_size=65536):
-            f.write(chunk)
-            written += len(chunk)
-    return written
-
-
-def load_tracker(tracker_path: Path) -> dict:
-    if tracker_path.exists():
-        return json.loads(tracker_path.read_text())
-    return {}
-
-
-def save_tracker(tracker_path: Path, tracker: dict):
-    tracker_path.write_text(json.dumps(tracker, indent=2, ensure_ascii=False))
-
-
-def main():
-    parser = argparse.ArgumentParser(description="Download latest PDFs from a zsxq group.")
-    parser.add_argument("--group-id", default="51111812185184", help="zsxq group ID")
-    parser.add_argument("--count", type=int, default=10, help="Number of files to download")
-    parser.add_argument("--out", default="~/Downloads/zsxq_reports", help="Output directory")
-    parser.add_argument("--chrome-profile", default=str(DEFAULT_CHROME_PROFILE),
-                        help="Path to Chrome profile directory (default: ./chrome_profile)")
-    parser.add_argument("--skip-existing", action="store_true", default=True,
-                        help="Skip already-downloaded files")
-    parser.add_argument("--delay", type=float, default=1.0, help="Seconds between downloads")
+    parser.add_argument("--group-id",       default=DEFAULT_GROUP_ID)
+    parser.add_argument("--count",          type=int,   default=10,
+                        help="Number of most-recent files to process (0 = all)")
+    parser.add_argument("--out",            default=str(DEFAULT_DOWNLOADS),
+                        help="Download directory")
+    parser.add_argument("--db",             default=str(DEFAULT_DB),
+                        help="SQLite database path")
+    parser.add_argument("--chrome-profile", default=str(DEFAULT_CHROME_PROFILE))
+    parser.add_argument("--delay",          type=float, default=1.0,
+                        help="Seconds between downloads")
+    parser.add_argument("--skip-existing",  action="store_true", default=True,
+                        help="Skip files already in downloaded.json (default: on)")
     args = parser.parse_args()
 
     chrome_profile = Path(args.chrome_profile).expanduser()
     if not chrome_profile.exists():
         print(f"ERROR: Chrome profile not found at {chrome_profile}")
-        print("Make sure chrome_profile/ exists and you've logged into wx.zsxq.com with it.")
+        print("Make sure chrome_profile/ exists and you've logged into wx.zsxq.com.")
         sys.exit(1)
-
-    session = get_session_via_selenium(chrome_profile)
 
     out_dir = Path(args.out).expanduser()
     out_dir.mkdir(parents=True, exist_ok=True)
-    tracker_path = out_dir / "downloaded.json"
-    tracker = load_tracker(tracker_path)
+    db_path = Path(args.db).expanduser()
 
-    print(f"Fetching latest {args.count} files from group {args.group_id}...")
-    files = get_files(session, args.group_id, args.count)
-    print(f"Found {len(files)} files.\n")
+    session = get_session_via_selenium(chrome_profile)
+    conn    = init_db(db_path)
+    tracker = load_tracker(out_dir)
 
-    results = []
-    for i, entry in enumerate(files, 1):
-        f = entry["file"]
+    limit_desc = f"last {args.count}" if args.count else "all"
+    print(f"Fetching {limit_desc} files from group {args.group_id}…")
+    entries     = fetch_all_files(session, args.group_id, max_files=args.count)
+    pdf_entries = [e for e in entries if e["file"]["name"].lower().endswith(".pdf")]
+    print(f"Found {len(pdf_entries)} PDF(s) (of {len(entries)} total files).\n")
+
+    results: list[dict] = []
+    now = datetime.now().isoformat()
+
+    for i, entry in enumerate(pdf_entries, 1):
+        f       = entry["file"]
+        topic   = entry.get("topic") or {}
+        talk    = (topic.get("talk") or {})
         file_id = f["file_id"]
-        name = f["name"]
-        size_mb = f["size"] / 1024 / 1024
-        safe_name = sanitize_filename(name)
-        dest = out_dir / safe_name
+        name    = f["name"]
+        size_mb = (f.get("size") or 0) / 1024 / 1024
 
-        print(f"[{i}/{len(files)}] {name[:70]}")
+        print(f"[{i}/{len(pdf_entries)}] {name[:70]}")
         print(f"         size={size_mb:.1f}MB  id={file_id}")
 
+        # ── Upsert metadata (always, even if we skip the actual download) ──
+        tracker_info  = tracker.get(str(file_id)) or {}
+        local_path    = tracker_info.get("path")
+        downloaded_at = tracker_info.get("downloaded_at")
+
+        db_row = {
+            "file_id":      file_id,
+            "name":         name,
+            "topic_id":     topic.get("topic_id"),
+            "topic_title":  (talk.get("text") or "").split("\n")[0].strip() or topic.get("title"),
+            "summary":      talk.get("text") or "",
+            "topic_json":   None,
+            "local_path":   local_path,
+            "file_size":    f.get("size"),
+            "create_time":  f.get("create_time"),
+            "downloaded_at":downloaded_at,
+            "indexed_at":   now,
+        }
+        upsert_entry(conn, db_row)
+        conn.commit()
+
+        # ── Skip if already downloaded ──
         if args.skip_existing and str(file_id) in tracker:
-            print(f"         → already downloaded, skipping.\n")
+            print("         → already downloaded, skipping.\n")
             results.append({"file_id": file_id, "name": name, "status": "skipped"})
             continue
 
-        dl_url = get_download_url(session, file_id)
-        if not dl_url:
-            print(f"         → failed to get download URL.\n")
-            results.append({"file_id": file_id, "name": name, "status": "no_url"})
-            continue
+        # ── Download ──
+        local_path, ok = do_download(session, file_id, name, out_dir, tracker)
+        if ok:
+            conn.execute(
+                "UPDATE pdf_files SET local_path=?, downloaded_at=? WHERE file_id=?",
+                (local_path, tracker[str(file_id)]["downloaded_at"], file_id),
+            )
+            conn.commit()
+            results.append({"file_id": file_id, "name": name, "status": "ok"})
+        else:
+            results.append({"file_id": file_id, "name": name, "status": "error"})
+        print()
 
-        try:
-            written = download_file(session, dl_url, dest)
-            tracker[str(file_id)] = {
-                "name": name,
-                "path": str(dest),
-                "size": written,
-                "downloaded_at": datetime.now().isoformat(),
-            }
-            save_tracker(tracker_path, tracker)
-            print(f"         → saved {written/1024/1024:.1f}MB to {dest.name}\n")
-            results.append({"file_id": file_id, "name": name, "status": "ok", "size": written})
-        except Exception as e:
-            print(f"         → download error: {e}\n")
-            results.append({"file_id": file_id, "name": name, "status": "error", "error": str(e)})
+        if i < len(pdf_entries):
+            time.sleep(args.delay)
 
-        time.sleep(args.delay)
+    conn.close()
 
-    ok = sum(1 for r in results if r["status"] == "ok")
-    skipped = sum(1 for r in results if r["status"] == "skipped")
-    failed = sum(1 for r in results if r["status"] not in ("ok", "skipped"))
-    print(f"Done: {ok} downloaded, {skipped} skipped, {failed} failed.")
-    print(f"Output: {out_dir}")
-    print(f"Tracker: {tracker_path}")
+    ok_count      = sum(1 for r in results if r["status"] == "ok")
+    skipped_count = sum(1 for r in results if r["status"] == "skipped")
+    failed_count  = sum(1 for r in results if r["status"] not in ("ok", "skipped"))
+    print(f"Done: {ok_count} downloaded, {skipped_count} skipped, {failed_count} failed.")
+    print(f"Output : {out_dir}")
+    print(f"DB     : {db_path}")
+    print("\nRun zsxq_index.py to classify the downloaded PDFs.")
 
 
 if __name__ == "__main__":
