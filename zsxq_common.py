@@ -206,15 +206,22 @@ def get_download_url(session: requests.Session, file_id: int,
 def download_file(
     session: requests.Session, download_url: str, dest_path: Path
 ) -> int:
-    """Stream-download a file to dest_path. Returns bytes written."""
+    """Stream-download a file to dest_path. Returns bytes written.
+
+    Cleans up the partial file on any error (including KeyboardInterrupt).
+    """
     resp = session.get(download_url, stream=True, headers=HEADERS)
     resp.raise_for_status()
     dest_path.parent.mkdir(parents=True, exist_ok=True)
     written = 0
-    with open(dest_path, "wb") as fh:
-        for chunk in resp.iter_content(chunk_size=65536):
-            fh.write(chunk)
-            written += len(chunk)
+    try:
+        with open(dest_path, "wb") as fh:
+            for chunk in resp.iter_content(chunk_size=65536):
+                fh.write(chunk)
+                written += len(chunk)
+    except BaseException:
+        dest_path.unlink(missing_ok=True)
+        raise
     return written
 
 
