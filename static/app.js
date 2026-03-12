@@ -197,50 +197,70 @@ async function importZsxq() {
   const spinner   = document.getElementById("zsxq-spinner");
   const errDiv    = document.getElementById("zsxq-err");
   const resultsEl = document.getElementById("zsxq-results");
+  const logEl     = document.getElementById("zsxq-log");
 
   errDiv.textContent = "";
   resultsEl.classList.add("d-none");
+  logEl.textContent  = "";
+  logEl.classList.remove("d-none");
   spinner.classList.remove("d-none");
+
+  function appendLog(msg) {
+    logEl.textContent += msg + "\n";
+    logEl.scrollTop = logEl.scrollHeight;
+  }
+
+  function fillList(ulId, items) {
+    const ul = document.getElementById(ulId);
+    ul.innerHTML = "";
+    (items && items.length ? items : []).forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      ul.appendChild(li);
+    });
+    if (!items || !items.length) ul.innerHTML = "<li class='text-muted'>none</li>";
+  }
 
   try {
     const resp = await fetch("/api/zsxq-import", { method: "POST" });
-    let data;
-    try {
-      data = await resp.json();
-    } catch (_) {
-      errDiv.textContent = `Server error (HTTP ${resp.status}) — check server logs.`;
-      return;
-    }
+    if (!resp.ok) { errDiv.textContent = `Server error (HTTP ${resp.status})`; return; }
 
-    if (data.error) { errDiv.textContent = data.error; return; }
+    const reader  = resp.body.getReader();
+    const decoder = new TextDecoder();
+    let   buf     = "";
 
-    document.getElementById("zsxq-stats").textContent =
-      `Processed ${data.processed} new rows, skipped ${data.skipped} already-imported.`;
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buf += decoder.decode(value, { stream: true });
 
-    function fillList(ulId, items) {
-      const ul = document.getElementById(ulId);
-      ul.innerHTML = "";
-      if (!items || !items.length) {
-        ul.innerHTML = "<li class='text-muted'>none</li>";
-        return;
+      // SSE lines arrive as "data: {...}\n\n"
+      const parts = buf.split("\n\n");
+      buf = parts.pop();   // keep any incomplete tail
+
+      for (const part of parts) {
+        const line = part.trim();
+        if (!line.startsWith("data:")) continue;
+        let evt;
+        try { evt = JSON.parse(line.slice(5).trim()); } catch { continue; }
+
+        if (evt.type === "log") {
+          appendLog(evt.msg);
+        } else if (evt.type === "error") {
+          errDiv.textContent = evt.msg;
+        } else if (evt.type === "done") {
+          appendLog(`\nDone. Processed ${evt.processed}, skipped ${evt.skipped}.`);
+          document.getElementById("zsxq-stats").textContent =
+            `Processed ${evt.processed} new rows, skipped ${evt.skipped} already-imported.`;
+          fillList("zsxq-res-companies",  evt.added.companies);
+          fillList("zsxq-res-businesses", evt.added.businesses);
+          fillList("zsxq-res-bc",         evt.added.bc_links);
+          document.getElementById("zsxq-res-errors").textContent =
+            (evt.errors && evt.errors.length) ? "Warnings: " + evt.errors.join("; ") : "";
+          resultsEl.classList.remove("d-none");
+        }
       }
-      items.forEach(item => {
-        const li = document.createElement("li");
-        li.textContent = item;
-        ul.appendChild(li);
-      });
     }
-
-    fillList("zsxq-res-companies",  data.added.companies);
-    fillList("zsxq-res-businesses", data.added.businesses);
-    fillList("zsxq-res-bc",         data.added.bc_links);
-
-    const errEl = document.getElementById("zsxq-res-errors");
-    errEl.textContent = (data.errors && data.errors.length)
-      ? "Warnings: " + data.errors.join("; ")
-      : "";
-
-    resultsEl.classList.remove("d-none");
   } catch(e) {
     errDiv.textContent = "Network error: " + e.message;
   } finally {
