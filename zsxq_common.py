@@ -163,21 +163,32 @@ def fetch_all_files(
 
 # ── API: download URL + file download ─────────────────────────────────────────
 
-def get_download_url(session: requests.Session, file_id: int) -> str | None:
-    """Resolve a CDN download URL for a file. Returns None on failure."""
+def get_download_url(session: requests.Session, file_id: int,
+                     retries: int = 4) -> str | None:
+    """Resolve a CDN download URL for a file. Retries on transient 1059 errors."""
     url = f"{API_BASE}/files/{file_id}/download_url"
-    try:
-        resp = session.get(url, headers=HEADERS, timeout=30)
-        resp.raise_for_status()
-        data = resp.json()
-        if not data.get("succeeded"):
+    for attempt in range(retries):
+        try:
+            resp = session.get(url, headers=HEADERS, timeout=30)
+            resp.raise_for_status()
+            data = resp.json()
+            if data.get("succeeded"):
+                return data["resp_data"]["download_url"]
+            # 1059 = transient internal error — back off and retry
+            if data.get("code") == 1059:
+                wait = 3 * (attempt + 1)
+                print(f"    ⚠ Download URL transient error for {file_id} "
+                      f"(attempt {attempt+1}/{retries}), retrying in {wait}s…")
+                time.sleep(wait)
+                continue
             print(f"    ⚠ Download URL API error for file {file_id}: "
                   f"{data.get('info') or data}")
             return None
-        return data["resp_data"]["download_url"]
-    except Exception as exc:
-        print(f"    ⚠ Failed to get download URL for file {file_id}: {exc}")
-        return None
+        except Exception as exc:
+            print(f"    ⚠ Failed to get download URL for file {file_id}: {exc}")
+            return None
+    print(f"    ⚠ Download URL still failing after {retries} retries for file {file_id}")
+    return None
 
 
 def download_file(
