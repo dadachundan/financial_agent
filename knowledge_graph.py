@@ -103,6 +103,15 @@ def init_db():
             UNIQUE(business_from, business_to)
         );
         """)
+        # Safe migrations for existing databases
+        for stmt in [
+            "ALTER TABLE business_company ADD COLUMN rating INTEGER NOT NULL DEFAULT 0",
+            "ALTER TABLE business_business ADD COLUMN rating INTEGER NOT NULL DEFAULT 0",
+        ]:
+            try:
+                conn.execute(stmt)
+            except Exception:
+                pass  # column already exists
 
 
 def seed_db():
@@ -645,7 +654,7 @@ def render_main(active_tab="bc"):
         SELECT bc.id, bc.business_id, bc.company_id,
                b.name AS business_name, c.name AS company_name,
                b.description AS business_desc, c.description AS company_desc,
-               bc.comment, bc.explanation, bc.image_path, bc.source_url
+               bc.comment, bc.explanation, bc.image_path, bc.source_url, bc.rating
         FROM business_company bc
         JOIN businesses b ON b.id = bc.business_id
         JOIN companies  c ON c.id = bc.company_id
@@ -654,7 +663,7 @@ def render_main(active_tab="bc"):
     bb_links = conn.execute("""
         SELECT bb.id, bb.business_from, bb.business_to,
                bf.name AS from_name, bt.name AS to_name,
-               bb.comment, bb.explanation, bb.image_path, bb.source_url
+               bb.comment, bb.explanation, bb.image_path, bb.source_url, bb.rating
         FROM business_business bb
         JOIN businesses bf ON bf.id = bb.business_from
         JOIN businesses bt ON bt.id = bb.business_to
@@ -668,6 +677,9 @@ def render_main(active_tab="bc"):
     ).fetchall()}
     graph_json = build_graph_json(conn)
     conn.close()
+    sources = sorted(set(
+        r["source_url"] for r in list(bc_links) + list(bb_links) if r["source_url"]
+    ))
     return render_template_string(
         TEMPLATE,
         companies=companies,
@@ -678,6 +690,7 @@ def render_main(active_tab="bc"):
         biz_counts=biz_counts,
         graph_json=graph_json,
         active_tab=active_tab,
+        sources=sources,
     )
 
 
@@ -772,6 +785,30 @@ TEMPLATE = r"""
     <span style="font-size:.78rem;color:#555">Filtering by:</span>
     <span id="filter-label" class="badge bg-secondary" style="font-size:.78rem"></span>
     <button class="btn btn-sm btn-link p-0 text-muted" style="font-size:.75rem" onclick="clearFilter()">✕ clear</button>
+  </div>
+
+  <!-- ── Source + Rating filters ── -->
+  <div class="d-flex gap-3 mb-2 align-items-center flex-wrap">
+    <div class="d-flex align-items-center gap-2">
+      <label style="font-size:.78rem;color:#555;white-space:nowrap">Source:</label>
+      <select id="source-select" class="form-select form-select-sm" style="min-width:200px" onchange="applySourceFilter()">
+        <option value="">All sources</option>
+        {% for s in sources %}
+        <option value="{{s|e}}">{% if s.startswith('http') %}{{s[s.rfind('/')+1:][:60] or s[:60]}}{% else %}{{s[:60]}}{% endif %}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+      <label style="font-size:.78rem;color:#555;white-space:nowrap">Min rating:</label>
+      <select id="rating-select" class="form-select form-select-sm" style="min-width:110px" onchange="applyRatingFilter()">
+        <option value="0">All</option>
+        <option value="1">★+</option>
+        <option value="2">★★+</option>
+        <option value="3">★★★+</option>
+        <option value="4">★★★★+</option>
+        <option value="5">★★★★★</option>
+      </select>
+    </div>
   </div>
 
   <!-- ── Tabs ── -->
@@ -869,6 +906,17 @@ TEMPLATE = r"""
             <input name="source_url" id="bc-form-url" class="form-control form-control-sm"
                    placeholder="https://…">
           </div>
+          <div class="col-auto">
+            <label class="form-label mb-1" style="font-size:.78rem">Rating</label>
+            <select name="rating" class="form-select form-select-sm">
+              <option value="0">—</option>
+              <option value="1">★</option>
+              <option value="2">★★</option>
+              <option value="3">★★★</option>
+              <option value="4">★★★★</option>
+              <option value="5">★★★★★</option>
+            </select>
+          </div>
         </div>
         <div class="row g-2 align-items-end">
           <div class="col-6">
@@ -898,12 +946,13 @@ TEMPLATE = r"""
               <th class="expl-col">Explanation</th>
               <th>Image</th>
               <th data-label="Source" data-sort-dir="" onclick="sortTable('bc-tbody',5,this,false)" style="cursor:pointer;user-select:none">Source ⇅</th>
+              <th>Rating</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody id="bc-tbody">
           {% for r in bc_links %}
-          <tr>
+          <tr data-source="{{r.source_url|e}}" data-rating="{{r.rating}}">
             <td>
               <span class="badge-business" data-bs-toggle="tooltip" data-bs-placement="top"
                     data-bs-title="{{r.business_desc|e if r.business_desc else 'No description'}}">{{r.business_name}}</span>
@@ -946,6 +995,17 @@ TEMPLATE = r"""
                   <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem">link</a>
                 {% endif %}
               {% else %}—{% endif %}
+            </td>
+            <td style="white-space:nowrap">
+              <select style="font-size:.78rem;border:none;background:transparent;cursor:pointer"
+                      onchange="rateBC({{r.id}}, this.value, this)">
+                <option value="0" {% if r.rating==0 %}selected{% endif %}>—</option>
+                <option value="1" {% if r.rating==1 %}selected{% endif %}>★</option>
+                <option value="2" {% if r.rating==2 %}selected{% endif %}>★★</option>
+                <option value="3" {% if r.rating==3 %}selected{% endif %}>★★★</option>
+                <option value="4" {% if r.rating==4 %}selected{% endif %}>★★★★</option>
+                <option value="5" {% if r.rating==5 %}selected{% endif %}>★★★★★</option>
+              </select>
             </td>
             <td>
               <form method="post" action="/bc/delete/{{r.id}}" style="display:inline">
@@ -1028,6 +1088,17 @@ TEMPLATE = r"""
             <input name="source_url" id="bb-form-url" class="form-control form-control-sm"
                    placeholder="https://…">
           </div>
+          <div class="col-auto">
+            <label class="form-label mb-1" style="font-size:.78rem">Rating</label>
+            <select name="rating" class="form-select form-select-sm">
+              <option value="0">—</option>
+              <option value="1">★</option>
+              <option value="2">★★</option>
+              <option value="3">★★★</option>
+              <option value="4">★★★★</option>
+              <option value="5">★★★★★</option>
+            </select>
+          </div>
         </div>
         <div class="row g-2 align-items-end">
           <div class="col-6">
@@ -1057,12 +1128,13 @@ TEMPLATE = r"""
               <th class="expl-col">Explanation</th>
               <th>Image</th>
               <th data-label="Source" data-sort-dir="" onclick="sortTable('bb-tbody',5,this,false)" style="cursor:pointer;user-select:none">Source ⇅</th>
+              <th>Rating</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody id="bb-tbody">
           {% for r in bb_links %}
-          <tr>
+          <tr data-source="{{r.source_url|e}}" data-rating="{{r.rating}}">
             <td>
               <span class="badge-business">{{r.from_name}}</span>
               <form method="post" action="/business/delete/{{r.business_from}}" style="display:inline">
@@ -1103,6 +1175,17 @@ TEMPLATE = r"""
                   <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem">link</a>
                 {% endif %}
               {% else %}—{% endif %}
+            </td>
+            <td style="white-space:nowrap">
+              <select style="font-size:.78rem;border:none;background:transparent;cursor:pointer"
+                      onchange="rateBB({{r.id}}, this.value, this)">
+                <option value="0" {% if r.rating==0 %}selected{% endif %}>—</option>
+                <option value="1" {% if r.rating==1 %}selected{% endif %}>★</option>
+                <option value="2" {% if r.rating==2 %}selected{% endif %}>★★</option>
+                <option value="3" {% if r.rating==3 %}selected{% endif %}>★★★</option>
+                <option value="4" {% if r.rating==4 %}selected{% endif %}>★★★★</option>
+                <option value="5" {% if r.rating==5 %}selected{% endif %}>★★★★★</option>
+              </select>
             </td>
             <td>
               <form method="post" action="/bb/delete/{{r.id}}" style="display:inline">
@@ -1336,35 +1419,80 @@ const network = new vis.Network(
   }
 );
 
-// ── Table filtering from graph clicks ──────────────────────────────────────
+// ── Table filtering ─────────────────────────────────────────────────────────
+let activeSource     = '';
+let activeMinRating  = 0;
+let activeGraphType  = null, activeGraphA = null, activeGraphB = null;
+
 function switchTab(href) {
   const el = document.querySelector('a[href="' + href + '"]');
   if (el) bootstrap.Tab.getOrCreateInstance(el).show();
 }
 
-function filterTables(type, nameA, nameB) {
+function applyFilters() {
   // BC table
   document.querySelectorAll('#tab-bc tbody tr').forEach(row => {
-    if (!type) { row.style.display = ''; return; }
-    const biz = row.querySelector('.badge-business')?.textContent.trim();
-    const co  = row.querySelector('.badge-company')?.textContent.trim();
-    let show = false;
-    if (type === 'company')  show = co  === nameA;
-    if (type === 'business') show = biz === nameA;
-    if (type === 'bc-edge')  show = biz === nameA && co === nameB;
+    const src    = row.dataset.source || '';
+    const rating = parseInt(row.dataset.rating || '0', 10);
+    let show = true;
+    if (activeSource)    show = show && (src === activeSource);
+    if (activeMinRating) show = show && (rating >= activeMinRating);
+    if (activeGraphType) {
+      const biz = row.querySelector('.badge-business')?.textContent.trim();
+      const co  = row.querySelector('.badge-company')?.textContent.trim();
+      let g = false;
+      if (activeGraphType === 'company')  g = co  === activeGraphA;
+      if (activeGraphType === 'business') g = biz === activeGraphA;
+      if (activeGraphType === 'bc-edge')  g = biz === activeGraphA && co === activeGraphB;
+      show = show && g;
+    }
     row.style.display = show ? '' : 'none';
   });
   // BB table
   document.querySelectorAll('#tab-bb tbody tr').forEach(row => {
-    if (!type) { row.style.display = ''; return; }
-    const cells = row.querySelectorAll('.badge-business');
-    const from  = cells[0]?.textContent.trim();
-    const to    = cells[1]?.textContent.trim();
-    let show = false;
-    if (type === 'business') show = from === nameA || to === nameA;
-    if (type === 'bb-edge')  show = from === nameA && to === nameB;
+    const src    = row.dataset.source || '';
+    const rating = parseInt(row.dataset.rating || '0', 10);
+    let show = true;
+    if (activeSource)    show = show && (src === activeSource);
+    if (activeMinRating) show = show && (rating >= activeMinRating);
+    if (activeGraphType) {
+      const cells = row.querySelectorAll('.badge-business');
+      const from  = cells[0]?.textContent.trim();
+      const to    = cells[1]?.textContent.trim();
+      let g = false;
+      if (activeGraphType === 'business') g = from === activeGraphA || to === activeGraphA;
+      if (activeGraphType === 'bb-edge')  g = from === activeGraphA && to === activeGraphB;
+      show = show && g;
+    }
     row.style.display = show ? '' : 'none';
   });
+}
+
+function filterTables(type, nameA, nameB) {
+  activeGraphType = type; activeGraphA = nameA; activeGraphB = nameB;
+  applyFilters();
+}
+
+function applySourceFilter() {
+  activeSource = document.getElementById('source-select').value;
+  applyFilters();
+}
+
+function applyRatingFilter() {
+  activeMinRating = parseInt(document.getElementById('rating-select').value || '0', 10);
+  applyFilters();
+}
+
+function rateBC(id, val, el) {
+  el.closest('tr').dataset.rating = parseInt(val, 10);
+  fetch('/bc/rate/' + id, {method: 'POST', body: new URLSearchParams({rating: val})});
+  applyFilters();
+}
+
+function rateBB(id, val, el) {
+  el.closest('tr').dataset.rating = parseInt(val, 10);
+  fetch('/bb/rate/' + id, {method: 'POST', body: new URLSearchParams({rating: val})});
+  applyFilters();
 }
 
 function showFilterBar(label) {
@@ -1373,7 +1501,8 @@ function showFilterBar(label) {
 }
 
 function clearFilter() {
-  filterTables(null, null, null);
+  activeGraphType = null; activeGraphA = null; activeGraphB = null;
+  applyFilters();
   document.getElementById('filter-bar').classList.add('d-none');
   network.unselectAll();
 }
@@ -1673,15 +1802,24 @@ def bc_add():
     comment     = request.form.get("comment", "").strip()
     explanation = request.form.get("explanation", "").strip()
     source_url  = request.form.get("source_url", "").strip()
+    rating      = int(request.form.get("rating", 0) or 0)
     image_path  = save_upload("image")
     with get_db() as conn:
         conn.execute(
             """INSERT OR IGNORE INTO business_company
-               (business_id, company_id, comment, explanation, image_path, source_url)
-               VALUES (?,?,?,?,?,?)""",
-            (business_id, company_id, comment, explanation, image_path, source_url),
+               (business_id, company_id, comment, explanation, image_path, source_url, rating)
+               VALUES (?,?,?,?,?,?,?)""",
+            (business_id, company_id, comment, explanation, image_path, source_url, rating),
         )
     return redirect(url_for("index"))
+
+
+@app.route("/bc/rate/<int:rid>", methods=["POST"])
+def bc_rate(rid):
+    rating = int(request.form.get("rating", 0) or 0)
+    with get_db() as conn:
+        conn.execute("UPDATE business_company SET rating=? WHERE id=?", (rating, rid))
+    return "", 204
 
 
 @app.route("/bc/delete/<int:rid>", methods=["POST"])
@@ -1716,15 +1854,24 @@ def bb_add():
     comment     = request.form.get("comment", "").strip()
     explanation = request.form.get("explanation", "").strip()
     source_url  = request.form.get("source_url", "").strip()
+    rating      = int(request.form.get("rating", 0) or 0)
     image_path  = save_upload("image")
     with get_db() as conn:
         conn.execute(
             """INSERT OR IGNORE INTO business_business
-               (business_from, business_to, comment, explanation, image_path, source_url)
-               VALUES (?,?,?,?,?,?)""",
-            (bfrom, bto, comment, explanation, image_path, source_url),
+               (business_from, business_to, comment, explanation, image_path, source_url, rating)
+               VALUES (?,?,?,?,?,?,?)""",
+            (bfrom, bto, comment, explanation, image_path, source_url, rating),
         )
     return redirect(url_for("index") + "#tab-bb")
+
+
+@app.route("/bb/rate/<int:rid>", methods=["POST"])
+def bb_rate(rid):
+    rating = int(request.form.get("rating", 0) or 0)
+    with get_db() as conn:
+        conn.execute("UPDATE business_business SET rating=? WHERE id=?", (rating, rid))
+    return "", 204
 
 
 @app.route("/bb/delete/<int:rid>", methods=["POST"])
