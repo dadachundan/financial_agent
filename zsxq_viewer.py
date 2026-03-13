@@ -84,12 +84,22 @@ TEMPLATE = """
     .tag-edit-input, .comment-edit-input { font-size:.78rem; padding:1px 4px;
                       border:1px solid #999; border-radius:3px; width:100%; }
     /* Comment markdown preview in table cell */
-    .comment-preview { cursor:pointer; display:block; min-height:1.2em; }
-    .comment-preview:hover { background:rgba(0,0,0,.04); border-radius:3px; }
+    .comment-preview { cursor:pointer; display:block; min-height:1.2em; max-height:4.5em;
+                       overflow:hidden; position:relative; }
+    .comment-preview::after { content:''; position:absolute; bottom:0; left:0; right:0;
+                               height:1.2em; background:linear-gradient(transparent,#fff); }
+    .comment-preview:hover { background:rgba(0,0,0,.03); border-radius:3px; }
     .comment-preview p  { margin:0 0 .2em; }
     .comment-preview ul,.comment-preview ol { padding-left:1.2em; margin:0 0 .2em; }
-    .comment-preview img { max-width:100%; border-radius:3px; }
+    .comment-preview img { max-height:3em; border-radius:3px; }
     .comment-preview code { font-size:.8em; background:#f0f0f0; padding:1px 3px; border-radius:2px; }
+    /* Comment preview modal body */
+    #commentPreviewBody img  { max-width:100%; border-radius:6px; margin:.4em 0; display:block; }
+    #commentPreviewBody p    { margin-bottom:.6em; }
+    #commentPreviewBody ul,
+    #commentPreviewBody ol   { padding-left:1.4em; margin-bottom:.6em; }
+    #commentPreviewBody code { background:#f0f0f0; padding:1px 4px; border-radius:3px; font-size:.88em; }
+    #commentPreviewBody pre  { background:#f6f8fa; padding:.75em; border-radius:6px; overflow:auto; }
     /* EasyMDE inside modal */
     #commentModal .EasyMDEContainer { height:100%; }
     #commentModal .CodeMirror        { min-height:220px; font-size:.9rem; }
@@ -322,8 +332,8 @@ TEMPLATE = """
           <!-- Comment cell -->
           <td style="max-width:160px" id="comment-cell-{{ row.file_id }}">
             <span class="comment-preview" data-comment="{{ (row.comment or '')|e }}"
-                  onclick="editComment({{ row.file_id }}, this)"
-                  title="Click to edit comment"></span>
+                  onclick="viewComment({{ row.file_id }}, this)"
+                  title="Click to preview / edit"></span>
           </td>
 
           <td class="analysis-col text-muted">
@@ -348,6 +358,24 @@ TEMPLATE = """
       </div>
       <div class="modal-body" id="summaryModalBody"
            style="white-space:pre-wrap;word-break:break-word;font-size:.9rem;line-height:1.7"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Comment preview modal -->
+<div class="modal fade" id="commentPreviewModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">💬 Comment</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="commentPreviewBody"
+           style="font-size:.95rem;line-height:1.75;word-break:break-word"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="commentPreviewEditBtn">✏️ Edit</button>
+      </div>
     </div>
   </div>
 </div>
@@ -509,9 +537,11 @@ TEMPLATE = """
   }
 
   // ── Comment editor (EasyMDE modal) ───────────────────────────────────────
-  const _commentModal = new bootstrap.Modal(document.getElementById('commentModal'));
-  let _easyMDE      = null;
+  const _commentModal        = new bootstrap.Modal(document.getElementById('commentModal'));
+  const _commentPreviewModal = new bootstrap.Modal(document.getElementById('commentPreviewModal'));
+  let _easyMDE       = null;
   let _editingFileId = null;
+  let _previewSpan   = null;
 
   function _getEasyMDE() {
     if (_easyMDE) return _easyMDE;
@@ -558,6 +588,23 @@ TEMPLATE = """
     return _easyMDE;
   }
 
+  // Click on cell → preview modal
+  function viewComment(fileId, span) {
+    _editingFileId = fileId;
+    _previewSpan   = span;
+    const comment = span.dataset.comment || '';
+    const body    = document.getElementById('commentPreviewBody');
+    body.innerHTML = comment ? marked.parse(comment)
+                             : '<em class="text-muted">No comment yet. Click Edit to add one.</em>';
+    _commentPreviewModal.show();
+  }
+
+  // "Edit" button inside preview modal → switch to EasyMDE editor
+  document.getElementById('commentPreviewEditBtn').addEventListener('click', () => {
+    _commentPreviewModal.hide();
+    setTimeout(() => editComment(_editingFileId, _previewSpan), 300);
+  });
+
   function editComment(fileId, span) {
     _editingFileId = fileId;
     const mde = _getEasyMDE();
@@ -585,13 +632,13 @@ TEMPLATE = """
     const span = document.createElement('span');
     span.className       = 'comment-preview';
     span.dataset.comment = comment || '';
-    span.title           = 'Click to edit comment';
+    span.title           = 'Click to preview / edit';
     if (comment) {
       span.innerHTML = marked.parse(comment);
     } else {
       span.textContent = '—';
     }
-    span.onclick = () => editComment(fileId, span);
+    span.onclick = () => viewComment(fileId, span);
     cell.innerHTML = ''; cell.appendChild(span);
   }
 
@@ -605,7 +652,7 @@ TEMPLATE = """
       } else {
         span.textContent = '—';
       }
-      span.onclick = () => editComment(fileId, span);
+      span.onclick = () => viewComment(fileId, span);
     });
   });
 </script>
