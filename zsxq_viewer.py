@@ -533,6 +533,27 @@ TEMPLATE = """
           .catch(() => onError('Upload failed'));
       },
     });
+    // Clipboard paste: detect image data and upload it
+    _easyMDE.codemirror.on('paste', (cm, e) => {
+      const items = e.clipboardData && e.clipboardData.items;
+      if (!items) return;
+      for (const item of items) {
+        if (item.type.startsWith('image/')) {
+          e.preventDefault();
+          const file = item.getAsFile();
+          const fd = new FormData();
+          fd.append('image', file, 'pasted-image.png');
+          fetch('/upload-image', { method: 'POST', body: fd })
+            .then(r => r.json())
+            .then(d => {
+              if (d.data && d.data.filePath) {
+                cm.replaceSelection(`![image](${d.data.filePath})`);
+              }
+            });
+          break;
+        }
+      }
+    });
     return _easyMDE;
   }
 
