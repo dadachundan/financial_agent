@@ -12,12 +12,15 @@ PDFs open in a new browser tab when you click "Open PDF".
 
 import argparse
 import sqlite3
+import uuid
 from pathlib import Path
 
 from flask import Flask, abort, jsonify, render_template_string, request, send_file
 
-SCRIPT_DIR = Path(__file__).parent
+SCRIPT_DIR  = Path(__file__).parent
 DEFAULT_DB  = SCRIPT_DIR / "zsxq.db"
+UPLOADS_DIR = SCRIPT_DIR / "uploads"
+UPLOADS_DIR.mkdir(exist_ok=True)
 
 app = Flask(__name__)
 DB_PATH: Path = DEFAULT_DB
@@ -32,6 +35,8 @@ TEMPLATE = """
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>zsxq PDF Index</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     body            { background:#f4f6f8; padding:24px 16px; }
     h2              { font-weight:700; }
@@ -77,6 +82,16 @@ TEMPLATE = """
     .inline-edit:hover { background:rgba(0,0,0,.04); border-radius:3px; }
     .tag-edit-input, .comment-edit-input { font-size:.78rem; padding:1px 4px;
                       border:1px solid #999; border-radius:3px; width:100%; }
+    /* Comment markdown preview in table cell */
+    .comment-preview { cursor:pointer; display:block; min-height:1.2em; }
+    .comment-preview:hover { background:rgba(0,0,0,.04); border-radius:3px; }
+    .comment-preview p  { margin:0 0 .2em; }
+    .comment-preview ul,.comment-preview ol { padding-left:1.2em; margin:0 0 .2em; }
+    .comment-preview img { max-width:100%; border-radius:3px; }
+    .comment-preview code { font-size:.8em; background:#f0f0f0; padding:1px 3px; border-radius:2px; }
+    /* EasyMDE inside modal */
+    #commentModal .EasyMDEContainer { height:100%; }
+    #commentModal .CodeMirror        { min-height:220px; font-size:.9rem; }
   </style>
 </head>
 <body>
@@ -304,10 +319,10 @@ TEMPLATE = """
           </td>
 
           <!-- Comment cell -->
-          <td style="max-width:150px" id="comment-cell-{{ row.file_id }}">
-            <span class="inline-edit" data-comment="{{ (row.comment or '')|e }}"
+          <td style="max-width:160px" id="comment-cell-{{ row.file_id }}">
+            <span class="comment-preview" data-comment="{{ (row.comment or '')|e }}"
                   onclick="editComment({{ row.file_id }}, this)"
-                  title="Click to edit">{{ row.comment or '—' }}</span>
+                  title="Click to edit comment"></span>
           </td>
 
           <td class="analysis-col text-muted">
@@ -336,6 +351,26 @@ TEMPLATE = """
   </div>
 </div>
 
+<!-- Comment editor modal -->
+<div class="modal fade" id="commentModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">✏️ Edit Comment</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="min-height:340px">
+        <textarea id="commentEditorTextarea"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="commentSaveBtn">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   const _summaryModal = new bootstrap.Modal(document.getElementById('summaryModal'));
@@ -472,38 +507,85 @@ TEMPLATE = """
     if (tr) tr.dataset.search = (tr.dataset.search || '').replace(/\btag:[^\s]*/g, '') + ' ' + tags.join(' ');
   }
 
-  function editComment(fileId, span) {
-    const cell    = span.closest('td');
-    const current = span.dataset.comment || '';
-    const input   = document.createElement('input');
-    input.className   = 'comment-edit-input';
-    input.value       = current;
-    input.placeholder = 'Add a comment…';
-    cell.innerHTML = ''; cell.appendChild(input); input.focus();
-    const save = () => {
-      const val = input.value.trim();
-      fetch('/comment/' + fileId, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-        body: 'comment=' + encodeURIComponent(val),
-      }).then(r => { if (r.ok) renderCommentCell(cell, fileId, val); });
-    };
-    input.addEventListener('blur', save);
-    input.addEventListener('keydown', e => {
-      if (e.key === 'Enter')  { e.preventDefault(); input.blur(); }
-      if (e.key === 'Escape') { renderCommentCell(cell, fileId, current); }
+  // ── Comment editor (EasyMDE modal) ───────────────────────────────────────
+  const _commentModal = new bootstrap.Modal(document.getElementById('commentModal'));
+  let _easyMDE      = null;
+  let _editingFileId = null;
+
+  function _getEasyMDE() {
+    if (_easyMDE) return _easyMDE;
+    _easyMDE = new EasyMDE({
+      element: document.getElementById('commentEditorTextarea'),
+      spellChecker: false,
+      minHeight: '240px',
+      toolbar: [
+        'bold','italic','heading','|',
+        'quote','unordered-list','ordered-list','|',
+        'link','upload-image','|',
+        'preview','side-by-side','fullscreen'
+      ],
+      imageUploadFunction(file, onSuccess, onError) {
+        const fd = new FormData();
+        fd.append('image', file);
+        fetch('/upload-image', { method: 'POST', body: fd })
+          .then(r => r.json())
+          .then(d => d.data ? onSuccess(d.data.filePath) : onError(d.error || 'Upload failed'))
+          .catch(() => onError('Upload failed'));
+      },
     });
+    return _easyMDE;
   }
+
+  function editComment(fileId, span) {
+    _editingFileId = fileId;
+    const mde = _getEasyMDE();
+    mde.value(span.dataset.comment || '');
+    _commentModal.show();
+    setTimeout(() => mde.codemirror.focus(), 320);
+  }
+
+  document.getElementById('commentSaveBtn').addEventListener('click', () => {
+    const val = _easyMDE ? _easyMDE.value().trim() : '';
+    fetch('/comment/' + _editingFileId, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: 'comment=' + encodeURIComponent(val),
+    }).then(r => {
+      if (r.ok) {
+        const cell = document.getElementById('comment-cell-' + _editingFileId);
+        if (cell) renderCommentCell(cell, _editingFileId, val);
+        _commentModal.hide();
+      }
+    });
+  });
 
   function renderCommentCell(cell, fileId, comment) {
     const span = document.createElement('span');
-    span.className      = 'inline-edit';
+    span.className       = 'comment-preview';
     span.dataset.comment = comment || '';
-    span.textContent    = comment || '—';
-    span.title          = 'Click to edit';
-    span.onclick        = () => editComment(fileId, span);
+    span.title           = 'Click to edit comment';
+    if (comment) {
+      span.innerHTML = marked.parse(comment);
+    } else {
+      span.textContent = '—';
+    }
+    span.onclick = () => editComment(fileId, span);
     cell.innerHTML = ''; cell.appendChild(span);
   }
+
+  // Render markdown in all comment cells on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.comment-preview').forEach(span => {
+      const comment = span.dataset.comment || '';
+      const fileId  = span.closest('td').id.replace('comment-cell-', '');
+      if (comment) {
+        span.innerHTML = marked.parse(comment);
+      } else {
+        span.textContent = '—';
+      }
+      span.onclick = () => editComment(fileId, span);
+    });
+  });
 </script>
 </body>
 </html>
@@ -703,6 +785,27 @@ def set_comment(file_id: int):
     conn.commit()
     conn.close()
     return "", 204
+
+
+@app.route("/uploads/<path:filename>")
+def serve_upload(filename: str):
+    path = UPLOADS_DIR / filename
+    if not path.exists():
+        abort(404)
+    return send_file(path)
+
+
+@app.route("/upload-image", methods=["POST"])
+def upload_image():
+    f = request.files.get("image")
+    if not f:
+        return jsonify({"error": "no file"}), 400
+    ext = Path(f.filename).suffix.lower() if f.filename else ".jpg"
+    if ext not in {".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"}:
+        ext = ".jpg"
+    name = uuid.uuid4().hex + ext
+    f.save(UPLOADS_DIR / name)
+    return jsonify({"data": {"filePath": f"/uploads/{name}"}})
 
 
 @app.route("/pdf/<int:file_id>")
