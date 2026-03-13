@@ -11,6 +11,7 @@ PDFs open in a new browser tab when you click "Open PDF".
 """
 
 import argparse
+import datetime
 import sqlite3
 import uuid
 from pathlib import Path
@@ -824,9 +825,13 @@ def upload_image():
     ext = Path(f.filename).suffix.lower() if f.filename else ".jpg"
     if ext not in {".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"}:
         ext = ".jpg"
+    today = datetime.date.today()
+    subdir = UPLOADS_DIR / str(today.year) / f"{today.month:02d}" / f"{today.day:02d}"
+    subdir.mkdir(parents=True, exist_ok=True)
     name = uuid.uuid4().hex + ext
-    f.save(UPLOADS_DIR / name)
-    return jsonify({"data": {"filePath": f"/uploads/{name}"}})
+    f.save(subdir / name)
+    rel = f"{today.year}/{today.month:02d}/{today.day:02d}/{name}"
+    return jsonify({"data": {"filePath": f"/uploads/{rel}"}})
 
 
 @app.route("/pdf/<int:file_id>")
