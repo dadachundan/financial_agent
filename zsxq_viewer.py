@@ -263,21 +263,23 @@ TEMPLATE = """
             {{ cat_badge(row.energy_related,       '⚡ Nrg') }}
           </td>
 
-          <td style="max-width:80px">
-            {% if row.tickers %}
-              {% set ticker_list = row.tickers.split(',') %}
-              {% for t in ticker_list[:5] %}
-                {% set t = t.strip() %}
-                <a href="#" onclick="applyTicker('{{ t }}');return false"
-                   class="ticker-badge" style="text-decoration:none"
-                   title="Filter by {{ t }}">{{ t }}</a>
-              {% endfor %}
-              {% if ticker_list|length > 5 %}
-                <span class="text-muted" style="font-size:.65rem">+{{ ticker_list|length - 5 }}</span>
-              {% endif %}
-            {% else %}
-              <span class="text-muted">—</span>
-            {% endif %}
+          <!-- Tickers cell -->
+          <td style="max-width:110px" id="tickers-cell-{{ row.file_id }}">
+            <span data-tickers="{{ (row.tickers or '')|e }}">
+              {%- if row.tickers %}
+                {%- set ticker_list = row.tickers.split(',') %}
+                {%- for t in ticker_list[:5] %}
+                  {%- set t = t.strip() %}
+                  <a href="#" onclick="applyTicker('{{ t|e }}');return false"
+                     class="ticker-badge" style="text-decoration:none"
+                     title="Filter by {{ t }}">{{ t }}</a>
+                {%- endfor %}
+                {%- if ticker_list|length > 5 %}
+                  <span class="text-muted" style="font-size:.65rem">+{{ ticker_list|length - 5 }}</span>
+                {%- endif %}
+              {%- endif %}
+              <span class="edit-icon" onclick="editTickers({{ row.file_id }}, this)" title="Edit tickers">✏</span>
+            </span>
           </td>
 
           <!-- Tags cell -->
@@ -536,6 +538,57 @@ TEMPLATE = """
     // update row data-search
     const tr = cell.closest('tr');
     if (tr) tr.dataset.search = (tr.dataset.search || '').replace(/\btag:[^\s]*/g, '') + ' ' + tags.join(' ');
+  }
+
+  // ── Tickers inline editing (mirrors editTags) ────────────────────────────
+  function editTickers(fileId, btn) {
+    const wrapper = btn.closest('[data-tickers]');
+    const cell    = btn.closest('td');
+    const current = wrapper ? wrapper.dataset.tickers : '';
+    const input   = document.createElement('input');
+    input.className   = 'tag-edit-input';
+    input.value       = current;
+    input.placeholder = 'TICKER1, TICKER2, …';
+    cell.innerHTML = ''; cell.appendChild(input); input.focus();
+    const save = () => {
+      fetch('/tickers/' + fileId, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: 'tickers=' + encodeURIComponent(input.value),
+      }).then(r => r.json()).then(data => renderTickersCell(cell, fileId, data.tickers));
+    };
+    input.addEventListener('blur', save);
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter')  { e.preventDefault(); input.blur(); }
+      if (e.key === 'Escape') { renderTickersCell(cell, fileId, current); }
+    });
+  }
+
+  function renderTickersCell(cell, fileId, tickersStr) {
+    const tickers = tickersStr ? tickersStr.split(',').map(t => t.trim()).filter(Boolean) : [];
+    const span = document.createElement('span');
+    span.dataset.tickers = tickersStr || '';
+    tickers.slice(0, 5).forEach(t => {
+      const a = document.createElement('a');
+      a.href = '#'; a.className = 'ticker-badge'; a.style.textDecoration = 'none';
+      a.textContent = t; a.title = 'Filter by ' + t;
+      a.onclick = e => { e.preventDefault(); applyTicker(t); };
+      span.appendChild(a);
+    });
+    if (tickers.length > 5) {
+      const more = document.createElement('span');
+      more.className = 'text-muted'; more.style.fontSize = '.65rem';
+      more.textContent = '+' + (tickers.length - 5);
+      span.appendChild(more);
+    }
+    const ei = document.createElement('span');
+    ei.className = 'edit-icon'; ei.textContent = ' ✏'; ei.title = 'Edit tickers';
+    ei.onclick = () => editTickers(fileId, ei);
+    span.appendChild(ei);
+    cell.innerHTML = ''; cell.appendChild(span);
+    // update row data-search
+    const tr = cell.closest('tr');
+    if (tr) tr.dataset.search = (tr.dataset.search || '').replace(/\bticker:[^\s]*/g, '') + ' ' + tickers.join(' ');
   }
 
   // ── Comment editor (EasyMDE modal) ───────────────────────────────────────
@@ -974,6 +1027,18 @@ def set_tags(file_id: int):
     conn.commit()
     conn.close()
     return jsonify(tags=normalized)
+
+
+@app.route("/tickers/<int:file_id>", methods=["POST"])
+def set_tickers(file_id: int):
+    raw = request.form.get("tickers", "").strip()
+    normalized = ",".join(t.strip() for t in raw.split(",") if t.strip())
+    conn = get_conn()
+    conn.execute("UPDATE pdf_files SET tickers = ? WHERE file_id = ?",
+                 (normalized or None, file_id))
+    conn.commit()
+    conn.close()
+    return jsonify(tickers=normalized)
 
 
 @app.route("/comment/<int:file_id>", methods=["POST"])

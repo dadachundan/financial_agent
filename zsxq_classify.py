@@ -39,7 +39,11 @@ CLASSIFY_SYSTEM = (
     "- Robotics: humanoid robots, industrial robots, autonomous vehicles, drones.\n"
     "- Semiconductor: chips, fabs, EDA tools, memory, wafers, packaging.\n"
     "- Energy: oil & gas, renewables, power grids, batteries, nuclear, energy storage.\n"
-    "Tickers: A-share 6-digit codes, HK codes, US symbols explicitly referenced only."
+    "Tickers: list stock codes explicitly referenced in the report. "
+    "For Chinese-listed companies prefer the Chinese company name followed by the code "
+    "(e.g. '中芯国际 688981', '比亚迪 002594', '腾讯 00700.HK'). "
+    "For US/other stocks use the ticker symbol only (e.g. NVDA, TSMC). "
+    "Return 'None' if no specific company is mentioned."
 )
 
 CLASSIFY_USER_TMPL = """\
