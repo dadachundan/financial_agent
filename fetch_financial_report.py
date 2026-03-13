@@ -163,6 +163,56 @@ def _download_primary(cik: str, accession_no: str, primary_doc: str, dest: Path)
 _EXHIBIT_EXTS   = {".pdf", ".htm", ".html"}
 _EXHIBIT_HTML   = {".htm", ".html"}
 
+# 8-K item codes → short human-readable labels
+_8K_ITEMS = {
+    "1.01": "Agreement", "1.02": "Termination", "1.03": "Bankruptcy",
+    "1.04": "Mine Safety", "1.05": "Material Cybersecurity",
+    "2.01": "Asset Acquisition/Disposal", "2.02": "Earnings Results",
+    "2.03": "Debt Obligation", "2.04": "Debt Trigger", "2.05": "Costs",
+    "2.06": "Asset Impairment",
+    "3.01": "Exchange Delisting", "3.02": "Unregistered Sales",
+    "3.03": "Shareholder Rights",
+    "4.01": "Auditor Change", "4.02": "Restatement",
+    "5.01": "Shell Company Change", "5.02": "Director/Officer Change",
+    "5.03": "Charter Amendment", "5.04": "Bylaw Amendment",
+    "5.05": "Option Plan Amendment", "5.06": "Smaller Reporting",
+    "5.07": "Shareholder Vote", "5.08": "Director Vacancy",
+    "6.01": "Trust Funds", "6.02": "Asset Coverage",
+    "6.03": "Material Obligation", "6.04": "Exit Provision",
+    "6.05": "Loss of NAV", "6.10": "Alternative Fund",
+    "7.01": "Regulation FD",
+    "8.01": "Other Events",
+    "9.01": "Financial Statements",
+}
+
+
+def _8k_label(filing_date: str, items_str: str, ex_description: str) -> str:
+    """Return a meaningful period label for an 8-K exhibit row.
+
+    Priority: exhibit description → item codes → date fallback.
+    """
+    date = filing_date[:10] if filing_date else "?"
+
+    # Use the exhibit description if it's informative
+    desc = (ex_description or "").strip()
+    if desc and desc.upper() not in ("EX-99.1", "EX-99.2", "EX-99.3",
+                                      "EXHIBIT 99.1", "EXHIBIT 99.2"):
+        # Truncate to keep the badge readable
+        desc = desc[:40].rstrip()
+        return f"{date} {desc}"
+
+    # Derive from item codes (e.g. "2.02,9.01" → "Earnings Results")
+    items = [i.strip() for i in (items_str or "").split(",") if i.strip()]
+    # Skip 9.01 (just means "has exhibits") unless it's the only one
+    meaningful = [_8K_ITEMS.get(i, i) for i in items if i != "9.01"]
+    if not meaningful:
+        meaningful = [_8K_ITEMS.get(i, i) for i in items]
+    if meaningful:
+        label = " / ".join(dict.fromkeys(meaningful))[:40]  # dedup, truncate
+        return f"{date} {label}"
+
+    return f"{date} 8-K"
+
 
 def _inject_base_tag(path: Path, base_url: str) -> None:
     """Rewrite an HTML file on disk with a <base> tag so relative URLs resolve correctly."""
@@ -252,7 +302,8 @@ def _run_download(ticker: str, forms: list[str]):
         recent = fetch_all_filings(cik)
 
         # Build list of dicts from the parallel arrays
-        cols        = ["accessionNumber", "form", "reportDate", "filingDate", "primaryDocument"]
+        cols        = ["accessionNumber", "form", "reportDate", "filingDate",
+                       "primaryDocument", "items", "primaryDocDescription"]
         all_filings = [dict(zip(cols, v)) for v in zip(*[recent[k] for k in cols])]
 
         # Separate 8-K from regular forms
@@ -354,24 +405,30 @@ def _run_download(ticker: str, forms: list[str]):
                 counter += 1
                 acc    = filing["accessionNumber"]
                 form   = filing["form"]
-                period = _period_label(form, filing["filingDate"])
 
                 # Scan the filing index for EX-99.x exhibits
                 exhibits = _get_8k_exhibits(cik, acc)
                 if not exhibits:
                     yield _sse(
-                        f"  ·  {period} ({form}) filed {filing['filingDate']} — no EX-99 exhibits",
+                        f"  ·  {filing['filingDate']} ({form}) — no EX-99 exhibits",
                         count=counter, total=grand_total,
                     )
                     continue
 
                 yield _sse(
-                    f"  📎  {period} ({form}) filed {filing['filingDate']}"
+                    f"  📎  {filing['filingDate']} ({form})"
                     f" — {len(exhibits)} exhibit(s)",
                     count=counter, total=grand_total,
                 )
 
                 for ex in exhibits:
+                    # Per-exhibit meaningful label using item codes + description
+                    period = _8k_label(
+                        filing["filingDate"],
+                        filing.get("items", ""),
+                        ex["description"],
+                    )
+
                     # Unique key: accession/exhibit_filename
                     unique_key = f"{acc}/{ex['filename']}"
 
@@ -381,7 +438,7 @@ def _run_download(ticker: str, forms: list[str]):
                         yield _sse(f"       ⏭  {ex['filename']} — already downloaded")
                         continue
 
-                    # Build full URL for the PDF
+                    # Build full URL for the exhibit file
                     href = ex["href"]
                     if href.startswith("/"):
                         pdf_url = f"https://www.sec.gov{href}"
@@ -395,7 +452,7 @@ def _run_download(ticker: str, forms: list[str]):
                     safe_acc  = acc.replace("-", "_")
                     orig_ext  = Path(ex["filename"]).suffix.lower() or ".htm"
                     stem      = Path(ex["filename"]).stem
-                    filename  = f"{period}_{form.replace('/', '-')}_{safe_acc}_{stem}{orig_ext}"
+                    filename  = f"{period.replace(' ', '_').replace('/', '-')}_{form.replace('/', '-')}_{safe_acc}_{stem}{orig_ext}"
                     dest      = ticker_dir / filename
 
                     try:
@@ -762,29 +819,34 @@ def serve_file(report_id: int):
     if not path.exists():
         abort(404)
 
-    # For HTML 8-K exhibits: inject <base> so relative images/CSS load from SEC
+    # For HTML 8-K exhibits: inject <base> + responsive CSS so images load and fit
     acc_no = row["accession_no"] or ""
     if path.suffix.lower() in (".htm", ".html") and "/" in acc_no:
         try:
-            acc        = acc_no.split("/")[0]
-            cik, _     = resolve_cik(row["ticker"])
-            clean      = acc.replace("-", "")
-            base_url   = (
+            acc      = acc_no.split("/")[0]
+            cik, _   = resolve_cik(row["ticker"])
+            clean    = acc.replace("-", "")
+            base_url = (
                 f"https://www.sec.gov/Archives/edgar/data/{int(cik)}/{clean}/"
             )
-            html = path.read_bytes().decode("utf-8", errors="replace")
-            base_tag = f'<base href="{base_url}">'
-            # Insert after <head> if present, otherwise after <html ...>
+            html  = path.read_bytes().decode("utf-8", errors="replace")
             lower = html.lower()
+            inject = (
+                f'<base href="{base_url}">'
+                f'<style>'
+                f'img{{max-width:100%!important;height:auto!important}}'
+                f'div,table{{max-width:100%!important;overflow-x:hidden!important}}'
+                f'body{{overflow-x:hidden;margin:0 auto;padding:8px;box-sizing:border-box}}'
+                f'</style>'
+            )
             if "<head>" in lower:
                 pos  = lower.index("<head>") + len("<head>")
-                html = html[:pos] + base_tag + html[pos:]
             elif "<head" in lower:
                 pos  = lower.index("<head")
                 pos  = lower.index(">", pos) + 1
-                html = html[:pos] + base_tag + html[pos:]
             else:
-                html = base_tag + html
+                pos  = 0
+            html = html[:pos] + inject + html[pos:]
             from flask import make_response
             resp = make_response(html)
             resp.headers["Content-Type"] = "text/html; charset=utf-8"
