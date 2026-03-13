@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "zsxq-viewer",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["/Users/x/projects/financial_agent/zsxq_viewer.py", "--db", "/Users/x/projects/financial_agent/zsxq.db", "--port", "8080"],
+      "port": 8080
+    }
+  ,
+    {
+      "name": "financial-reports",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["/Users/x/projects/financial_agent/fetch_financial_report.py", "--port", "8081"],
+      "port": 8081
+    }
+  ]
+}

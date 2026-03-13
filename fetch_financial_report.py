@@ -1,0 +1,618 @@
+#!/usr/bin/env python3
+"""
+fetch_financial_report.py — Download and browse US company SEC 10-K / 10-Q filings.
+
+Features
+--------
+  • Enter any US ticker → streams download of all 10-K / 10-Q filings from SEC EDGAR
+  • Files stored under  financial_reports/<TICKER>/
+  • SQLite DB (financial_reports.db) tracks metadata
+  • Web UI: download with live progress, filter, open filings in new tab, delete
+
+Usage
+-----
+    python fetch_financial_report.py [--port 8081]
+    Then open  http://localhost:8081
+"""
+
+import argparse
+import datetime
+import json
+import sqlite3
+import time
+from pathlib import Path
+
+import requests
+from flask import Flask, Response, abort, jsonify, render_template_string, request, send_file
+
+# ── Paths & config ────────────────────────────────────────────────────────────
+
+SCRIPT_DIR  = Path(__file__).parent
+REPORTS_DIR = SCRIPT_DIR / "financial_reports"
+DB_FILE     = SCRIPT_DIR / "financial_reports.db"
+
+REPORTS_DIR.mkdir(exist_ok=True)
+
+# SEC EDGAR rate-limit: ≤ 10 req/sec; be polite
+_SEC_DELAY   = 0.12
+_SEC_HEADERS = {
+    "User-Agent": "FinancialReportDownloader contact@localhost.local",
+    "Accept-Encoding": "gzip, deflate",
+}
+
+app      = Flask(__name__)
+_DB_PATH = DB_FILE
+
+
+# ── Database ──────────────────────────────────────────────────────────────────
+
+def get_conn() -> sqlite3.Connection:
+    conn = sqlite3.connect(str(_DB_PATH))
+    conn.row_factory = sqlite3.Row
+    return conn
+
+
+def init_db() -> None:
+    with get_conn() as conn:
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS reports (
+                id               INTEGER PRIMARY KEY AUTOINCREMENT,
+                ticker           TEXT    NOT NULL,
+                company_name     TEXT,
+                period           TEXT    NOT NULL,
+                form_type        TEXT,
+                filed_date       TEXT,
+                period_of_report TEXT,
+                local_path       TEXT,
+                accession_no     TEXT    UNIQUE,
+                file_size        INTEGER,
+                created_at       TEXT    DEFAULT (datetime('now'))
+            )
+        """)
+        conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_reports_ticker ON reports(ticker)"
+        )
+
+
+# ── SEC EDGAR helpers ─────────────────────────────────────────────────────────
+
+_ticker_map_cache: dict | None = None
+
+
+def _sec_get(url: str, **kw) -> requests.Response:
+    """Rate-limited GET with SEC EDGAR headers."""
+    time.sleep(_SEC_DELAY)
+    r = requests.get(url, headers=_SEC_HEADERS, timeout=30, **kw)
+    r.raise_for_status()
+    return r
+
+
+def resolve_cik(ticker: str) -> tuple[str, str]:
+    """Return (cik_padded_10, company_name) for a ticker symbol."""
+    global _ticker_map_cache
+    if _ticker_map_cache is None:
+        _ticker_map_cache = _sec_get(
+            "https://www.sec.gov/files/company_tickers.json"
+        ).json()
+    tic = ticker.strip().upper()
+    for item in _ticker_map_cache.values():
+        if item["ticker"].upper() == tic:
+            return str(item["cik_str"]).zfill(10), item["title"]
+    raise ValueError(f"Ticker '{ticker}' not found in SEC EDGAR")
+
+
+def fetch_all_filings(cik: str) -> dict:
+    """Return the combined recent-filings dict (parallel lists) for a CIK.
+
+    The primary submissions JSON covers the most recent ~1 000 filings.
+    Older filings are in additional pages referenced in filings.files[].
+    """
+    data   = _sec_get(f"https://data.sec.gov/submissions/CIK{cik}.json").json()
+    recent = data["filings"]["recent"]
+
+    for fpage in data["filings"].get("files", []):
+        page = _sec_get(f"https://data.sec.gov/submissions/{fpage['name']}").json()
+        for key in recent:
+            recent[key].extend(page.get(key, []))
+
+    return recent
+
+
+def _period_label(form_type: str, report_date: str) -> str:
+    """Build a sortable label: '2024Q1', '2024_10K', '2024Q1_A', etc."""
+    try:
+        d     = datetime.date.fromisoformat(report_date[:10])
+        year  = d.year
+        month = d.month
+    except Exception:
+        return report_date[:7] if report_date else "unknown"
+
+    amendment = form_type.endswith("/A")
+    base      = form_type.rstrip("A").rstrip("/")
+    suffix    = "_A" if amendment else ""
+
+    if base == "10-K":
+        return f"{year}_10K{suffix}"
+    if base == "10-Q":
+        q = (month - 1) // 3 + 1
+        return f"{year}Q{q}{suffix}"
+    return f"{year}_{form_type.replace('/', '-')}"
+
+
+def _download_primary(cik: str, accession_no: str, primary_doc: str, dest: Path) -> int:
+    """Download the primary filing document; return bytes written."""
+    clean = accession_no.replace("-", "")
+    url   = (
+        f"https://www.sec.gov/Archives/edgar/data"
+        f"/{int(cik)}/{clean}/{primary_doc}"
+    )
+    r    = _sec_get(url, stream=True)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    size = 0
+    with open(dest, "wb") as fh:
+        for chunk in r.iter_content(65536):
+            fh.write(chunk)
+            size += len(chunk)
+    return size
+
+
+# ── SSE download stream ───────────────────────────────────────────────────────
+
+def _sse(msg: str, *, done: bool = False, error: bool = False,
+         count: int = 0, total: int = 0) -> str:
+    payload = json.dumps(
+        {"msg": msg, "done": done, "error": error, "count": count, "total": total}
+    )
+    return f"data: {payload}\n\n"
+
+
+def _run_download(ticker: str, forms: list[str]):
+    """Generator: stream SSE events while downloading filings."""
+    conn = get_conn()
+    try:
+        tic = ticker.strip().upper()
+
+        yield _sse(f"🔍  Resolving CIK for {tic}…")
+        cik, company_name = resolve_cik(tic)
+        yield _sse(f"✅  {company_name}  (CIK {cik})")
+
+        yield _sse("📋  Fetching filing history from SEC EDGAR…")
+        recent = fetch_all_filings(cik)
+
+        # Build list of dicts from the parallel arrays
+        cols        = ["accessionNumber", "form", "reportDate", "filingDate", "primaryDocument"]
+        all_filings = [dict(zip(cols, v)) for v in zip(*[recent[k] for k in cols])]
+
+        # Include /A amendments automatically for selected base forms
+        expanded = set(forms) | {f + "/A" for f in forms}
+        target   = [
+            f for f in all_filings
+            if f["form"] in expanded and f["primaryDocument"]
+        ]
+        target.sort(key=lambda f: f["filingDate"], reverse=True)
+
+        yield _sse(
+            f"📂  {len(target)} matching filing(s) found  ({', '.join(forms)})",
+            total=len(target),
+        )
+
+        ticker_dir = REPORTS_DIR / tic
+        ticker_dir.mkdir(exist_ok=True)
+
+        new_dl = 0
+        for i, filing in enumerate(target, 1):
+            acc     = filing["accessionNumber"]
+            form    = filing["form"]
+            period  = _period_label(form, filing["reportDate"])
+            primary = filing["primaryDocument"]
+            ext     = Path(primary).suffix or ".htm"
+
+            # Already downloaded?
+            if conn.execute(
+                "SELECT 1 FROM reports WHERE accession_no=?", (acc,)
+            ).fetchone():
+                yield _sse(
+                    f"  ⏭  {period} ({form}) — already in library",
+                    count=i, total=len(target),
+                )
+                continue
+
+            safe_acc = acc.replace("-", "_")
+            filename = f"{period}_{form.replace('/', '-')}_{safe_acc}{ext}"
+            dest     = ticker_dir / filename
+
+            yield _sse(
+                f"  ⬇  [{i}/{len(target)}]  {period} ({form})  filed {filing['filingDate']}…",
+                count=i, total=len(target),
+            )
+
+            try:
+                size = _download_primary(cik, acc, primary, dest)
+                conn.execute(
+                    """INSERT OR IGNORE INTO reports
+                       (ticker, company_name, period, form_type, filed_date,
+                        period_of_report, local_path, accession_no, file_size)
+                       VALUES (?,?,?,?,?,?,?,?,?)""",
+                    (tic, company_name, period, form, filing["filingDate"],
+                     filing["reportDate"], str(dest), acc, size),
+                )
+                conn.commit()
+                new_dl += 1
+                yield _sse(
+                    f"       ✅  {filename}  ({size // 1024:,} KB)",
+                    count=i, total=len(target),
+                )
+            except Exception as exc:
+                yield _sse(
+                    f"       ❌  {period} — {exc}",
+                    count=i, total=len(target),
+                )
+
+        yield _sse(
+            f"🎉  Done!  {new_dl} new filing(s) downloaded for {tic}.",
+            done=True, count=len(target), total=max(len(target), 1),
+        )
+
+    except Exception as exc:
+        yield _sse(f"❌  {exc}", done=True, error=True)
+    finally:
+        conn.close()
+
+
+# ── HTML template ─────────────────────────────────────────────────────────────
+
+TEMPLATE = """\
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>US Financial Reports</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <style>
+    body            { background:#f8f9fa; font-size:.9rem; }
+    h1              { font-size:1.5rem; }
+    #logBox         { font-family:monospace; font-size:.78rem; height:200px;
+                      overflow-y:auto; background:#1e1e1e; color:#d4d4d4;
+                      border-radius:6px; padding:8px 12px; }
+    .progress       { height:6px; }
+    .bp             { font-size:.72rem; font-weight:600; }
+    .b10k           { background:#cce5ff !important; color:#004085 !important; }
+    .b10q           { background:#d4edda !important; color:#155724 !important; }
+    .bamend         { background:#fff3cd !important; color:#856404 !important; }
+    .table th       { font-size:.78rem; color:#555; white-space:nowrap; }
+    .open-btn,.del-btn { font-size:.72rem; padding:.15rem .45rem; }
+    #search         { max-width:280px; }
+    code            { font-size:.78rem; }
+  </style>
+</head>
+<body>
+<div class="container-fluid py-3 px-4">
+  <h1 class="mb-0">📊 US Financial Reports</h1>
+  <p class="text-muted mb-3" style="font-size:.8rem">
+    SEC EDGAR 10-K / 10-Q downloader &mdash; files stored in
+    <code>financial_reports/&lt;TICKER&gt;/</code>
+  </p>
+
+  <!-- ── Download card ── -->
+  <div class="card mb-4" style="max-width:580px">
+    <div class="card-body pb-2">
+      <div class="d-flex flex-wrap gap-2 align-items-center mb-2">
+        <input id="tickerInput" class="form-control form-control-sm"
+               style="max-width:100px;font-size:1rem;font-weight:700;text-transform:uppercase"
+               placeholder="AAPL" maxlength="12"
+               onkeydown="if(event.key==='Enter') startDownload()"
+               oninput="this.value=this.value.toUpperCase()">
+        <div class="d-flex gap-3 ms-1">
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="chk10K" checked>
+            <label class="form-check-label fw-bold" for="chk10K"
+                   style="color:#004085">10-K (annual)</label>
+          </div>
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="chk10Q" checked>
+            <label class="form-check-label fw-bold" for="chk10Q"
+                   style="color:#155724">10-Q (quarterly)</label>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-sm ms-1" id="dlBtn"
+                onclick="startDownload()">⬇ Download All</button>
+      </div>
+
+      <div id="progressSection" style="display:none">
+        <div class="progress mb-2">
+          <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+               id="progressBar" style="width:0%"></div>
+        </div>
+        <div id="logBox"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Filter bar ── -->
+  <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+    <input id="search" class="form-control form-control-sm"
+           placeholder="Search ticker / company / period…"
+           oninput="applyFilters()">
+    <div id="tickerChips" class="d-flex gap-1 flex-wrap"></div>
+    <span id="rowCount" class="text-muted ms-auto" style="font-size:.78rem"></span>
+  </div>
+
+  <!-- ── Reports table ── -->
+  <div class="table-responsive">
+    <table class="table table-sm table-hover align-middle" id="reportsTable">
+      <thead class="table-light">
+        <tr>
+          <th style="width:2.5rem">#</th>
+          <th>Ticker</th>
+          <th>Company</th>
+          <th>Period ↓</th>
+          <th>Form</th>
+          <th>Filed</th>
+          <th>Size</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <p id="emptyMsg" class="text-center text-muted py-4" style="display:none">
+      No reports yet. Enter a ticker and click <strong>Download All</strong>.
+    </p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+let _rows    = [];
+let _actTick = null;
+
+// ── helpers ──────────────────────────────────────────────────────────────────
+function fmtSize(b) {
+  if (!b) return '—';
+  return b < 1048576 ? Math.round(b/1024)+'&nbsp;KB' : (b/1048576).toFixed(1)+'&nbsp;MB';
+}
+function badgeCls(f) {
+  if (!f) return 'bg-secondary';
+  if (f.endsWith('/A')) return 'bamend';
+  if (f.includes('10-K')) return 'b10k';
+  if (f.includes('10-Q')) return 'b10q';
+  return 'bg-secondary';
+}
+
+// ── load & render ─────────────────────────────────────────────────────────────
+function loadReports() {
+  fetch('/reports').then(r=>r.json()).then(data => {
+    _rows = data;
+    rebuildChips();
+    applyFilters();
+  });
+}
+
+function rebuildChips() {
+  const counts = {};
+  _rows.forEach(r => { counts[r.ticker] = (counts[r.ticker]||0)+1; });
+  const tickers = Object.keys(counts).sort();
+  const div = document.getElementById('tickerChips');
+  div.innerHTML = '';
+  tickers.forEach(t => {
+    const btn = document.createElement('button');
+    btn.className = 'btn btn-sm ' + (t===_actTick ? 'btn-dark' : 'btn-outline-secondary');
+    btn.style.cssText = 'font-size:.72rem;padding:.1rem .5rem';
+    btn.innerHTML = `${t} <span class="badge bg-light text-dark">${counts[t]}</span>`;
+    btn.onclick = () => { _actTick = _actTick===t ? null : t; rebuildChips(); applyFilters(); };
+    div.appendChild(btn);
+  });
+}
+
+function applyFilters() {
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  const filtered = _rows.filter(r => {
+    const txt = [r.ticker, r.company_name, r.period, r.form_type, r.filed_date]
+                  .join(' ').toLowerCase();
+    return (!q || txt.includes(q)) && (!_actTick || r.ticker===_actTick);
+  });
+  renderRows(filtered);
+}
+
+function renderRows(rows) {
+  const tbody = document.getElementById('tbody');
+  const empty = document.getElementById('emptyMsg');
+  document.getElementById('rowCount').textContent =
+    rows.length + ' report' + (rows.length!==1?'s':'');
+  if (!rows.length) { tbody.innerHTML=''; empty.style.display=''; return; }
+  empty.style.display = 'none';
+  tbody.innerHTML = rows.map((r,i) => `
+    <tr>
+      <td class="text-muted">${i+1}</td>
+      <td><strong>${r.ticker}</strong></td>
+      <td style="max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"
+          title="${(r.company_name||'').replace(/"/g,'&quot;')}">${r.company_name||'—'}</td>
+      <td><span class="badge bp bg-secondary">${r.period}</span></td>
+      <td><span class="badge bp ${badgeCls(r.form_type)}">${r.form_type||'—'}</span></td>
+      <td class="text-muted">${r.filed_date||'—'}</td>
+      <td class="text-muted">${fmtSize(r.file_size)}</td>
+      <td class="text-end pe-2 text-nowrap">
+        ${r.local_path
+          ? `<a href="/file/${r.id}" target="_blank"
+                class="btn btn-outline-primary open-btn me-1">📄 Open</a>`
+          : '<span class="text-muted me-1">—</span>'}
+        <button class="btn btn-outline-danger del-btn"
+                onclick="deleteReport(${r.id},this)">🗑</button>
+      </td>
+    </tr>`).join('');
+}
+
+// ── download ─────────────────────────────────────────────────────────────────
+function startDownload() {
+  const ticker = document.getElementById('tickerInput').value.trim().toUpperCase();
+  if (!ticker) { alert('Enter a ticker symbol (e.g. AAPL, NVDA, TSLA)'); return; }
+  const forms = [];
+  if (document.getElementById('chk10K').checked) forms.push('10-K');
+  if (document.getElementById('chk10Q').checked) forms.push('10-Q');
+  if (!forms.length) { alert('Select at least one form type.'); return; }
+
+  document.getElementById('progressSection').style.display = '';
+  document.getElementById('dlBtn').disabled = true;
+  const bar = document.getElementById('progressBar');
+  bar.style.width = '0%';
+  bar.className = 'progress-bar progress-bar-striped progress-bar-animated bg-primary';
+  const log = document.getElementById('logBox');
+  log.innerHTML = '';
+
+  const params = new URLSearchParams({ ticker, forms: forms.join(',') });
+  const es = new EventSource('/stream-download?' + params);
+
+  es.onmessage = e => {
+    const d = JSON.parse(e.data);
+    const line = document.createElement('div');
+    line.textContent = d.msg;
+    if (d.error) line.style.color = '#f48771';
+    log.appendChild(line);
+    log.scrollTop = log.scrollHeight;
+
+    if (d.total > 0)
+      bar.style.width = Math.round(d.count / d.total * 100) + '%';
+
+    if (d.done) {
+      es.close();
+      document.getElementById('dlBtn').disabled = false;
+      bar.style.width = '100%';
+      bar.classList.remove('progress-bar-animated');
+      if (!d.error) {
+        bar.classList.remove('bg-primary');
+        bar.classList.add('bg-success');
+      }
+      loadReports();
+    }
+  };
+  es.onerror = () => {
+    const line = document.createElement('div');
+    line.textContent = '⚠ Connection lost';
+    line.style.color = '#f48771';
+    log.appendChild(line);
+    es.close();
+    document.getElementById('dlBtn').disabled = false;
+  };
+}
+
+// ── delete ────────────────────────────────────────────────────────────────────
+function deleteReport(id) {
+  if (!confirm('Remove this report from the library? (The local file will also be deleted.)')) return;
+  fetch('/report/' + id, { method: 'DELETE' }).then(r => {
+    if (r.ok) { _rows = _rows.filter(r => r.id !== id); rebuildChips(); applyFilters(); }
+  });
+}
+
+// init
+loadReports();
+</script>
+</body>
+</html>
+"""
+
+
+# ── Flask routes ──────────────────────────────────────────────────────────────
+
+@app.route("/")
+def index():
+    return render_template_string(TEMPLATE)
+
+
+@app.route("/reports")
+def list_reports():
+    ticker = request.args.get("ticker", "").upper().strip()
+    conn   = get_conn()
+    if ticker:
+        rows = conn.execute(
+            "SELECT * FROM reports WHERE ticker=? ORDER BY period_of_report DESC, id DESC",
+            (ticker,),
+        ).fetchall()
+    else:
+        rows = conn.execute(
+            "SELECT * FROM reports ORDER BY ticker, period_of_report DESC, id DESC"
+        ).fetchall()
+    conn.close()
+    return jsonify([dict(r) for r in rows])
+
+
+@app.route("/stream-download")
+def stream_download_route():
+    ticker = request.args.get("ticker", "").strip()
+    forms  = [
+        f.strip()
+        for f in request.args.get("forms", "10-K,10-Q").split(",")
+        if f.strip()
+    ]
+    if not ticker:
+        return "ticker required", 400
+    return Response(
+        _run_download(ticker, forms),
+        content_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
+
+
+@app.route("/file/<int:report_id>")
+def serve_file(report_id: int):
+    conn = get_conn()
+    row  = conn.execute(
+        "SELECT local_path, form_type, ticker, period FROM reports WHERE id=?",
+        (report_id,),
+    ).fetchone()
+    conn.close()
+    if not row or not row["local_path"]:
+        abort(404)
+    path = Path(row["local_path"])
+    if not path.exists():
+        abort(404)
+    return send_file(path)
+
+
+@app.route("/report/<int:report_id>", methods=["DELETE"])
+def delete_report(report_id: int):
+    conn = get_conn()
+    row  = conn.execute(
+        "SELECT local_path FROM reports WHERE id=?", (report_id,)
+    ).fetchone()
+    if row and row["local_path"]:
+        p = Path(row["local_path"])
+        if p.exists():
+            p.unlink()
+    conn.execute("DELETE FROM reports WHERE id=?", (report_id,))
+    conn.commit()
+    conn.close()
+    return "", 204
+
+
+# ── Entry point ───────────────────────────────────────────────────────────────
+
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="US Financial Report downloader (SEC EDGAR 10-K / 10-Q)"
+    )
+    parser.add_argument("--port", type=int, default=8081,
+                        help="Port to listen on (default: 8081)")
+    parser.add_argument("--host", default="0.0.0.0")
+    args = parser.parse_args()
+
+    global _DB_PATH
+    _DB_PATH = DB_FILE
+
+    init_db()
+
+    import socket
+    try:
+        local_ip = socket.gethostbyname(socket.gethostname())
+    except socket.gaierror:
+        local_ip = None
+    print(f"  financial-reports →  http://127.0.0.1:{args.port}")
+    if local_ip:
+        print(f"  financial-reports →  http://{local_ip}:{args.port}")
+    print(f"  Reports folder    →  {REPORTS_DIR}")
+    print(f"  DB                →  {DB_FILE}")
+    app.run(host=args.host, port=args.port, debug=False)
+
+
+if __name__ == "__main__":
+    main()
