@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-fetch_financial_report.py — Download and browse US company SEC 10-K / 10-Q filings.
+fetch_financial_report.py — Download and browse US company SEC 10-K / 10-Q / 8-K filings.
 
 Features
 --------
-  • Enter any US ticker → streams download of all 10-K / 10-Q filings from SEC EDGAR
+  • Enter any US ticker → streams download of all 10-K / 10-Q / 8-K filings from SEC EDGAR
+  • 8-K: scans each filing index for EX-99.x PDF exhibits (investor presentations, etc.)
   • Files stored under  financial_reports/<TICKER>/
   • SQLite DB (financial_reports.db) tracks metadata
   • Web UI: download with live progress, filter, open filings in new tab, delete
@@ -23,6 +24,7 @@ import time
 from pathlib import Path
 
 import requests
+from bs4 import BeautifulSoup
 from flask import Flask, Response, abort, jsonify, render_template_string, request, send_file
 
 # ── Paths & config ────────────────────────────────────────────────────────────
@@ -119,13 +121,13 @@ def fetch_all_filings(cik: str) -> dict:
 
 
 def _period_label(form_type: str, report_date: str) -> str:
-    """Build a sortable label: '2024Q1', '2024_10K', '2024Q1_A', etc."""
+    """Build a sortable label: '2024Q1', '2024_10K', '2024-02-21_8K', etc."""
     try:
         d     = datetime.date.fromisoformat(report_date[:10])
         year  = d.year
         month = d.month
     except Exception:
-        return report_date[:7] if report_date else "unknown"
+        return report_date[:10] if report_date else "unknown"
 
     amendment = form_type.endswith("/A")
     base      = form_type.rstrip("A").rstrip("/")
@@ -136,6 +138,8 @@ def _period_label(form_type: str, report_date: str) -> str:
     if base == "10-Q":
         q = (month - 1) // 3 + 1
         return f"{year}Q{q}{suffix}"
+    if base == "8-K":
+        return f"{report_date[:10]}_8K{suffix}"
     return f"{year}_{form_type.replace('/', '-')}"
 
 
@@ -154,6 +158,52 @@ def _download_primary(cik: str, accession_no: str, primary_doc: str, dest: Path)
             fh.write(chunk)
             size += len(chunk)
     return size
+
+
+_EXHIBIT_EXTS = {".pdf", ".htm", ".html"}
+
+
+def _get_8k_exhibits(cik: str, accession_no: str) -> list[dict]:
+    """Return EX-99.x exhibits from an 8-K filing index page.
+
+    Supports PDF, HTM, and HTML exhibits (companies differ).
+    Each returned dict has keys: type, description, href, filename.
+    """
+    clean = accession_no.replace("-", "")
+    # EDGAR index uses original accession number (with dashes) + .html extension
+    url = (
+        f"https://www.sec.gov/Archives/edgar/data"
+        f"/{int(cik)}/{clean}/{accession_no}-index.html"
+    )
+    try:
+        r = _sec_get(url)
+    except Exception:
+        return []
+
+    soup    = BeautifulSoup(r.content, "html.parser")
+    results = []
+
+    for row in soup.select("table tr"):
+        cells = row.find_all("td")
+        if len(cells) < 4:
+            continue
+        doc_type    = cells[3].get_text(strip=True)
+        description = cells[1].get_text(strip=True)
+        link        = cells[2].find("a")
+        if not link or not doc_type.upper().startswith("EX-99"):
+            continue
+        href = link.get("href", "")
+        ext  = Path(href).suffix.lower()
+        if ext in _EXHIBIT_EXTS:
+            fname = href.rsplit("/", 1)[-1]
+            results.append({
+                "type":        doc_type,
+                "description": description,
+                "href":        href,
+                "filename":    fname,
+            })
+
+    return results
 
 
 # ── SSE download stream ───────────────────────────────────────────────────────
@@ -183,24 +233,50 @@ def _run_download(ticker: str, forms: list[str]):
         cols        = ["accessionNumber", "form", "reportDate", "filingDate", "primaryDocument"]
         all_filings = [dict(zip(cols, v)) for v in zip(*[recent[k] for k in cols])]
 
-        # Include /A amendments automatically for selected base forms
-        expanded = set(forms) | {f + "/A" for f in forms}
+        # Separate 8-K from regular forms
+        base_forms   = [f for f in forms if f != "8-K"]
+        include_8k   = "8-K" in forms
+
+        # ── Regular forms (10-K / 10-Q) ──────────────────────────────────────
+        expanded = set(base_forms) | {f + "/A" for f in base_forms}
         target   = [
             f for f in all_filings
             if f["form"] in expanded and f["primaryDocument"]
         ]
         target.sort(key=lambda f: f["filingDate"], reverse=True)
 
+        # 8-K filings (include 8-K/A amendments)
+        target_8k = []
+        if include_8k:
+            target_8k = [
+                f for f in all_filings
+                if f["form"] in ("8-K", "8-K/A")
+            ]
+            target_8k.sort(key=lambda f: f["filingDate"], reverse=True)
+
+        total_regular = len(target)
+        total_8k      = len(target_8k)
+        grand_total   = total_regular + total_8k   # approximate (8-K may have 0-N exhibits)
+
+        summary_parts = []
+        if target:
+            summary_parts.append(f"{total_regular} {', '.join(base_forms)} filing(s)")
+        if include_8k:
+            summary_parts.append(f"{total_8k} 8-K filing(s) to scan for EX-99 exhibits")
         yield _sse(
-            f"📂  {len(target)} matching filing(s) found  ({', '.join(forms)})",
-            total=len(target),
+            "📂  " + ("  •  ".join(summary_parts) if summary_parts else "No filings found"),
+            total=grand_total,
         )
 
         ticker_dir = REPORTS_DIR / tic
         ticker_dir.mkdir(exist_ok=True)
 
-        new_dl = 0
-        for i, filing in enumerate(target, 1):
+        new_dl  = 0
+        counter = 0   # overall progress counter
+
+        # ── Download regular filings ──────────────────────────────────────────
+        for filing in target:
+            counter += 1
             acc     = filing["accessionNumber"]
             form    = filing["form"]
             period  = _period_label(form, filing["reportDate"])
@@ -213,7 +289,7 @@ def _run_download(ticker: str, forms: list[str]):
             ).fetchone():
                 yield _sse(
                     f"  ⏭  {period} ({form}) — already in library",
-                    count=i, total=len(target),
+                    count=counter, total=grand_total,
                 )
                 continue
 
@@ -222,8 +298,8 @@ def _run_download(ticker: str, forms: list[str]):
             dest     = ticker_dir / filename
 
             yield _sse(
-                f"  ⬇  [{i}/{len(target)}]  {period} ({form})  filed {filing['filingDate']}…",
-                count=i, total=len(target),
+                f"  ⬇  {period} ({form})  filed {filing['filingDate']}…",
+                count=counter, total=grand_total,
             )
 
             try:
@@ -240,17 +316,97 @@ def _run_download(ticker: str, forms: list[str]):
                 new_dl += 1
                 yield _sse(
                     f"       ✅  {filename}  ({size // 1024:,} KB)",
-                    count=i, total=len(target),
+                    count=counter, total=grand_total,
                 )
             except Exception as exc:
                 yield _sse(
                     f"       ❌  {period} — {exc}",
-                    count=i, total=len(target),
+                    count=counter, total=grand_total,
                 )
 
+        # ── Download 8-K PDF exhibits ─────────────────────────────────────────
+        if include_8k and target_8k:
+            yield _sse(f"📑  Scanning {total_8k} 8-K filings for EX-99 exhibits…")
+
+            for filing in target_8k:
+                counter += 1
+                acc    = filing["accessionNumber"]
+                form   = filing["form"]
+                period = _period_label(form, filing["filingDate"])
+
+                # Scan the filing index for EX-99.x exhibits
+                exhibits = _get_8k_exhibits(cik, acc)
+                if not exhibits:
+                    yield _sse(
+                        f"  ·  {period} ({form}) filed {filing['filingDate']} — no EX-99 exhibits",
+                        count=counter, total=grand_total,
+                    )
+                    continue
+
+                yield _sse(
+                    f"  📎  {period} ({form}) filed {filing['filingDate']}"
+                    f" — {len(exhibits)} exhibit(s)",
+                    count=counter, total=grand_total,
+                )
+
+                for ex in exhibits:
+                    # Unique key: accession/exhibit_filename
+                    unique_key = f"{acc}/{ex['filename']}"
+
+                    if conn.execute(
+                        "SELECT 1 FROM reports WHERE accession_no=?", (unique_key,)
+                    ).fetchone():
+                        yield _sse(f"       ⏭  {ex['filename']} — already downloaded")
+                        continue
+
+                    # Build full URL for the PDF
+                    href = ex["href"]
+                    if href.startswith("/"):
+                        pdf_url = f"https://www.sec.gov{href}"
+                    else:
+                        clean   = acc.replace("-", "")
+                        pdf_url = (
+                            f"https://www.sec.gov/Archives/edgar/data"
+                            f"/{int(cik)}/{clean}/{ex['filename']}"
+                        )
+
+                    safe_acc  = acc.replace("-", "_")
+                    stem      = Path(ex["filename"]).stem
+                    filename  = f"{period}_{form.replace('/', '-')}_{safe_acc}_{stem}.pdf"
+                    dest      = ticker_dir / filename
+
+                    try:
+                        time.sleep(_SEC_DELAY)
+                        r    = requests.get(pdf_url, headers=_SEC_HEADERS,
+                                            stream=True, timeout=60)
+                        r.raise_for_status()
+                        dest.parent.mkdir(parents=True, exist_ok=True)
+                        size = 0
+                        with open(dest, "wb") as fh:
+                            for chunk in r.iter_content(65536):
+                                fh.write(chunk)
+                                size += len(chunk)
+
+                        conn.execute(
+                            """INSERT OR IGNORE INTO reports
+                               (ticker, company_name, period, form_type, filed_date,
+                                period_of_report, local_path, accession_no, file_size)
+                               VALUES (?,?,?,?,?,?,?,?,?)""",
+                            (tic, company_name, period, form, filing["filingDate"],
+                             filing["filingDate"], str(dest), unique_key, size),
+                        )
+                        conn.commit()
+                        new_dl += 1
+                        label = ex["description"] or ex["type"]
+                        yield _sse(
+                            f"       ✅  {label} — {filename}  ({size // 1024:,} KB)"
+                        )
+                    except Exception as exc:
+                        yield _sse(f"       ❌  {ex['filename']} — {exc}")
+
         yield _sse(
-            f"🎉  Done!  {new_dl} new filing(s) downloaded for {tic}.",
-            done=True, count=len(target), total=max(len(target), 1),
+            f"🎉  Done!  {new_dl} new file(s) downloaded for {tic}.",
+            done=True, count=grand_total, total=max(grand_total, 1),
         )
 
     except Exception as exc:
@@ -280,6 +436,7 @@ TEMPLATE = """\
     .bp             { font-size:.72rem; font-weight:600; }
     .b10k           { background:#cce5ff !important; color:#004085 !important; }
     .b10q           { background:#d4edda !important; color:#155724 !important; }
+    .b8k            { background:#e2d9f3 !important; color:#6610f2 !important; }
     .bamend         { background:#fff3cd !important; color:#856404 !important; }
     .table th       { font-size:.78rem; color:#555; white-space:nowrap; }
     .open-btn,.del-btn { font-size:.72rem; padding:.15rem .45rem; }
@@ -291,8 +448,8 @@ TEMPLATE = """\
 <div class="container-fluid py-3 px-4">
   <h1 class="mb-0">📊 US Financial Reports</h1>
   <p class="text-muted mb-3" style="font-size:.8rem">
-    SEC EDGAR 10-K / 10-Q downloader &mdash; files stored in
-    <code>financial_reports/&lt;TICKER&gt;/</code>
+    SEC EDGAR 10-K / 10-Q / 8-K downloader &mdash; 8-K scans EX-99 exhibits (press releases, presentations) &mdash;
+    files stored in <code>financial_reports/&lt;TICKER&gt;/</code>
   </p>
 
   <!-- ── Download card ── -->
@@ -314,6 +471,11 @@ TEMPLATE = """\
             <input class="form-check-input" type="checkbox" id="chk10Q" checked>
             <label class="form-check-label fw-bold" for="chk10Q"
                    style="color:#155724">10-Q (quarterly)</label>
+          </div>
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="chk8K">
+            <label class="form-check-label fw-bold" for="chk8K"
+                   style="color:#6610f2">8-K (EX-99 exhibits)</label>
           </div>
         </div>
         <button class="btn btn-primary btn-sm ms-1" id="dlBtn"
@@ -377,6 +539,7 @@ function badgeCls(f) {
   if (f.endsWith('/A')) return 'bamend';
   if (f.includes('10-K')) return 'b10k';
   if (f.includes('10-Q')) return 'b10q';
+  if (f.includes('8-K')) return 'b8k';
   return 'bg-secondary';
 }
 
@@ -450,6 +613,7 @@ function startDownload() {
   const forms = [];
   if (document.getElementById('chk10K').checked) forms.push('10-K');
   if (document.getElementById('chk10Q').checked) forms.push('10-Q');
+  if (document.getElementById('chk8K').checked)  forms.push('8-K');
   if (!forms.length) { alert('Select at least one form type.'); return; }
 
   document.getElementById('progressSection').style.display = '';
