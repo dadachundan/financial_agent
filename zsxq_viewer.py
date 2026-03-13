@@ -124,6 +124,8 @@ TEMPLATE = """
     <button class="btn btn-sm btn-outline-danger ms-2"
             onclick="deleteNoPdf({{ stats.no_pdf }})">🗑 Delete {{ stats.no_pdf }} rows without PDF</button>
     {% endif %}
+    <a href="/print-view?{{ query_string }}" target="_blank"
+       class="btn btn-sm btn-outline-secondary ms-2">📄 Export PDF</a>
   </div>
 
   <!-- Status filters -->
@@ -695,6 +697,167 @@ def _get_all_tickers(conn: sqlite3.Connection) -> list[str]:
     return sorted(seen)
 
 
+def _build_where(f: str, ticker: str, tag: str,
+                 date_from: str, date_to: str) -> tuple[str, list]:
+    """Build WHERE clause + params from filter args (shared by index and print-view)."""
+    conditions: list[str] = []
+    params: list = []
+    filter_cond = {
+        "downloaded":   "local_path IS NOT NULL",
+        "unclassified": "ai_related IS NULL",
+        "cat_ai":       "ai_related = 1",
+        "cat_robotics": "robotics_related = 1",
+        "cat_semi":     "semiconductor_related = 1",
+        "cat_energy":   "energy_related = 1",
+        "cat_any":      "(ai_related=1 OR robotics_related=1 OR semiconductor_related=1 OR energy_related=1)",
+        "cat_none":     "(ai_related=0 AND robotics_related=0 AND semiconductor_related=0 AND energy_related=0)",
+    }.get(f)
+    if filter_cond:
+        conditions.append(filter_cond)
+    if ticker:
+        conditions.append("tickers LIKE ?")
+        params.append(f"%{ticker}%")
+    if tag:
+        conditions.append("(',' || COALESCE(tags,'') || ',') LIKE ?")
+        params.append(f"%,{tag},%")
+    if date_from:
+        conditions.append("substr(create_time, 1, 10) >= ?")
+        params.append(date_from)
+    if date_to:
+        conditions.append("substr(create_time, 1, 10) <= ?")
+        params.append(date_to)
+    where = ("WHERE " + " AND ".join(conditions)) if conditions else ""
+    return where, params
+
+
+PRINT_TEMPLATE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comment Export</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+           font-size: 12pt; line-height: 1.7; color: #1a1a1a;
+           max-width: 800px; margin: 0 auto; padding: 24px 20px; }
+    .toolbar { display:flex; gap:8px; margin-bottom:24px; padding-bottom:16px;
+               border-bottom:2px solid #e0e0e0; }
+    .toolbar button { padding:6px 16px; border:1px solid #ccc; border-radius:4px;
+                      cursor:pointer; font-size:.9rem; background:#fff; }
+    .toolbar button:hover { background:#f5f5f5; }
+    .toolbar button.primary { background:#1a56db; color:#fff; border-color:#1a56db; }
+    .report-title { font-size:1.5rem; font-weight:700; margin-bottom:4px; }
+    .report-meta  { color:#888; font-size:.85rem; margin-bottom:32px; }
+    .entry { margin-bottom:2.5em; padding-bottom:2em; border-bottom:1px solid #e8e8e8; }
+    .entry:last-child { border-bottom:none; }
+    .entry-title { font-size:1.1rem; font-weight:700; margin-bottom:4px; }
+    .entry-meta   { color:#888; font-size:.8rem; margin-bottom:.8em; }
+    .entry-comment img  { max-width:100%; border-radius:4px; margin:.5em 0; display:block; }
+    .entry-comment p    { margin:.3em 0 .6em; }
+    .entry-comment h1,.entry-comment h2,.entry-comment h3
+                        { margin:.6em 0 .3em; font-size:1rem; }
+    .entry-comment ul,.entry-comment ol { padding-left:1.4em; margin:.3em 0; }
+    .entry-comment code { background:#f0f0f0; padding:1px 4px; border-radius:3px;
+                          font-size:.88em; font-family:monospace; }
+    .entry-comment pre  { background:#f6f8fa; padding:.75em; border-radius:6px;
+                          overflow:auto; font-size:.85em; }
+    .entry-comment blockquote { border-left:3px solid #ddd; margin:0;
+                                 padding-left:1em; color:#555; }
+    .no-comment { color:#bbb; font-style:italic; }
+    @media print {
+      .toolbar { display:none !important; }
+      body { padding:0; max-width:100%; }
+      .entry { page-break-inside: avoid; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button class="primary" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <button onclick="window.close()">✕ Close</button>
+    <span style="align-self:center;color:#888;font-size:.85rem;margin-left:8px">
+      {{ rows|length }} entr{{ 'y' if rows|length == 1 else 'ies' }} with comments
+    </span>
+  </div>
+
+  <div class="report-title">📋 Comment Export</div>
+  <div class="report-meta">
+    Generated {{ now }} &nbsp;·&nbsp;
+    Filter: {{ filter_label }}{% if current_ticker %} &nbsp;·&nbsp; Ticker: {{ current_ticker }}{% endif %}{% if current_tag %} &nbsp;·&nbsp; Tag: {{ current_tag }}{% endif %}
+  </div>
+
+  {% if rows %}
+    {% for row in rows %}
+    <div class="entry">
+      <div class="entry-title">{{ row.topic_title or row.name or '(untitled)' }}</div>
+      <div class="entry-meta">
+        {{ (row.create_time or '')[:10] }}
+        {% if row.tickers %}&nbsp;·&nbsp; {{ row.tickers }}{% endif %}
+        {% if row.tags %}&nbsp;·&nbsp; 🏷 {{ row.tags }}{% endif %}
+      </div>
+      <div class="entry-comment" data-md="{{ (row.comment or '')|e }}"></div>
+    </div>
+    {% endfor %}
+  {% else %}
+    <p style="color:#888;font-style:italic">No rows with comments match the current filter.</p>
+  {% endif %}
+
+  <script>
+    document.querySelectorAll('.entry-comment[data-md]').forEach(el => {
+      el.innerHTML = marked.parse(el.dataset.md || '');
+    });
+  </script>
+</body>
+</html>
+"""
+
+
+@app.route("/print-view")
+def print_view():
+    import datetime as dt
+    f         = request.args.get("filter", "all")
+    ticker    = request.args.get("ticker", "").strip().upper()
+    tag       = request.args.get("tag",    "").strip()
+    sort      = request.args.get("sort", "desc").lower()
+    date_from = request.args.get("date_from", "").strip()
+    date_to   = request.args.get("date_to",   "").strip()
+    if sort not in ("asc", "desc"):
+        sort = "desc"
+
+    where, params = _build_where(f, ticker, tag, date_from, date_to)
+    # Only rows that have a comment
+    comment_cond = "comment IS NOT NULL AND comment != ''"
+    if where:
+        where += f" AND {comment_cond}"
+    else:
+        where = f"WHERE {comment_cond}"
+
+    order = "ASC" if sort == "asc" else "DESC"
+    conn = get_conn()
+    rows = conn.execute(
+        f"SELECT * FROM pdf_files {where} ORDER BY create_time {order}", params
+    ).fetchall()
+    conn.close()
+
+    filter_labels = {
+        "all": "All", "downloaded": "Downloaded", "unclassified": "Unclassified",
+        "cat_ai": "AI", "cat_robotics": "Robotics", "cat_semi": "Semiconductor",
+        "cat_energy": "Energy", "cat_any": "Any Category", "cat_none": "No Category",
+    }
+
+    return render_template_string(
+        PRINT_TEMPLATE,
+        rows=rows,
+        filter_label=filter_labels.get(f, f),
+        current_ticker=ticker,
+        current_tag=tag,
+        now=dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
+    )
+
+
 @app.route("/")
 def index():
     f         = request.args.get("filter", "all")
@@ -727,40 +890,7 @@ def index():
         "FROM pdf_files"
     ).fetchone()
 
-    # Build WHERE clause
-    conditions: list[str] = []
-    params: list = []
-
-    filter_cond = {
-        "downloaded":   "local_path IS NOT NULL",
-        "unclassified": "ai_related IS NULL",
-        "cat_ai":       "ai_related = 1",
-        "cat_robotics": "robotics_related = 1",
-        "cat_semi":     "semiconductor_related = 1",
-        "cat_energy":   "energy_related = 1",
-        "cat_any":      "(ai_related=1 OR robotics_related=1 OR semiconductor_related=1 OR energy_related=1)",
-        "cat_none":     "(ai_related=0 AND robotics_related=0 AND semiconductor_related=0 AND energy_related=0)",
-    }.get(f)
-    if filter_cond:
-        conditions.append(filter_cond)
-
-    if ticker:
-        conditions.append("tickers LIKE ?")
-        params.append(f"%{ticker}%")
-
-    if tag:
-        conditions.append("(',' || COALESCE(tags,'') || ',') LIKE ?")
-        params.append(f"%,{tag},%")
-
-    if date_from:
-        conditions.append("substr(create_time, 1, 10) >= ?")
-        params.append(date_from)
-    if date_to:
-        conditions.append("substr(create_time, 1, 10) <= ?")
-        params.append(date_to)
-
-    where_clause = ("WHERE " + " AND ".join(conditions)) if conditions else ""
-
+    where_clause, params = _build_where(f, ticker, tag, date_from, date_to)
     order = "ASC" if sort == "asc" else "DESC"
     rows = conn.execute(
         f"SELECT * FROM pdf_files {where_clause} ORDER BY create_time {order}",
@@ -784,6 +914,7 @@ def index():
         all_tickers=all_tickers,
         all_tags=all_tags,
         db_path=DB_PATH,
+        query_string=request.query_string.decode(),
     )
 
 
