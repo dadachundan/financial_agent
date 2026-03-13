@@ -722,7 +722,7 @@ def stream_download_route():
 def serve_file(report_id: int):
     conn = get_conn()
     row  = conn.execute(
-        "SELECT local_path, form_type, ticker, period FROM reports WHERE id=?",
+        "SELECT local_path, form_type, ticker, period, accession_no FROM reports WHERE id=?",
         (report_id,),
     ).fetchone()
     conn.close()
@@ -731,6 +731,37 @@ def serve_file(report_id: int):
     path = Path(row["local_path"])
     if not path.exists():
         abort(404)
+
+    # For HTML 8-K exhibits: inject <base> so relative images/CSS load from SEC
+    acc_no = row["accession_no"] or ""
+    if path.suffix.lower() in (".htm", ".html") and "/" in acc_no:
+        try:
+            acc        = acc_no.split("/")[0]
+            cik, _     = resolve_cik(row["ticker"])
+            clean      = acc.replace("-", "")
+            base_url   = (
+                f"https://www.sec.gov/Archives/edgar/data/{int(cik)}/{clean}/"
+            )
+            html = path.read_bytes().decode("utf-8", errors="replace")
+            base_tag = f'<base href="{base_url}">'
+            # Insert after <head> if present, otherwise after <html ...>
+            lower = html.lower()
+            if "<head>" in lower:
+                pos  = lower.index("<head>") + len("<head>")
+                html = html[:pos] + base_tag + html[pos:]
+            elif "<head" in lower:
+                pos  = lower.index("<head")
+                pos  = lower.index(">", pos) + 1
+                html = html[:pos] + base_tag + html[pos:]
+            else:
+                html = base_tag + html
+            from flask import make_response
+            resp = make_response(html)
+            resp.headers["Content-Type"] = "text/html; charset=utf-8"
+            return resp
+        except Exception:
+            pass  # fall through to plain send_file
+
     return send_file(path)
 
 
