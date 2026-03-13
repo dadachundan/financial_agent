@@ -160,7 +160,29 @@ def _download_primary(cik: str, accession_no: str, primary_doc: str, dest: Path)
     return size
 
 
-_EXHIBIT_EXTS = {".pdf", ".htm", ".html"}
+_EXHIBIT_EXTS   = {".pdf", ".htm", ".html"}
+_EXHIBIT_HTML   = {".htm", ".html"}
+
+
+def _inject_base_tag(path: Path, base_url: str) -> None:
+    """Rewrite an HTML file on disk with a <base> tag so relative URLs resolve correctly."""
+    try:
+        html  = path.read_bytes().decode("utf-8", errors="replace")
+        lower = html.lower()
+        tag   = f'<base href="{base_url}">'
+        if tag in html:
+            return  # already injected
+        if "<head>" in lower:
+            pos = lower.index("<head>") + len("<head>")
+        elif "<head" in lower:
+            pos = lower.index("<head")
+            pos = lower.index(">", pos) + 1
+        else:
+            pos = 0
+        html = html[:pos] + tag + html[pos:]
+        path.write_bytes(html.encode("utf-8"))
+    except Exception:
+        pass
 
 
 def _get_8k_exhibits(cik: str, accession_no: str) -> list[dict]:
@@ -387,6 +409,14 @@ def _run_download(ticker: str, forms: list[str]):
                             for chunk in r.iter_content(65536):
                                 fh.write(chunk)
                                 size += len(chunk)
+
+                        # Bake <base> tag into HTML so file:// also renders images
+                        if orig_ext in _EXHIBIT_HTML:
+                            base_url = (
+                                f"https://www.sec.gov/Archives/edgar/data"
+                                f"/{int(cik)}/{clean}/"
+                            )
+                            _inject_base_tag(dest, base_url)
 
                         conn.execute(
                             """INSERT OR IGNORE INTO reports
