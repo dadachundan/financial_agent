@@ -527,7 +527,9 @@ TEMPLATE = """\
     .b8k            { background:#e2d9f3 !important; color:#6610f2 !important; }
     .bamend         { background:#fff3cd !important; color:#856404 !important; }
     .table th       { font-size:.78rem; color:#555; white-space:nowrap; }
-    .open-btn,.del-btn { font-size:.72rem; padding:.15rem .45rem; }
+    .del-btn   { font-size:.72rem; padding:.15rem .45rem; }
+    .bp-link   { cursor:pointer; text-decoration:none; }
+    .bp-link:hover { opacity:.75; }
     #search         { max-width:280px; }
     code            { font-size:.78rem; }
   </style>
@@ -679,15 +681,16 @@ function renderRows(rows) {
       <td><strong>${r.ticker}</strong></td>
       <td style="max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"
           title="${(r.company_name||'').replace(/"/g,'&quot;')}">${r.company_name||'—'}</td>
-      <td><span class="badge bp bg-secondary">${r.period}</span></td>
+      <td>
+        ${r.local_path
+          ? `<a href="/file/${r.id}" target="_blank" class="badge bp bg-secondary bp-link"
+               title="Click to open">${r.period}</a>`
+          : `<span class="badge bp bg-secondary">${r.period}</span>`}
+      </td>
       <td><span class="badge bp ${badgeCls(r.form_type)}">${r.form_type||'—'}</span></td>
       <td class="text-muted">${r.filed_date||'—'}</td>
       <td class="text-muted">${fmtSize(r.file_size)}</td>
       <td class="text-end pe-2 text-nowrap">
-        ${r.local_path
-          ? `<a href="/file/${r.id}" target="_blank"
-                class="btn btn-outline-primary open-btn me-1">📄 Open</a>`
-          : '<span class="text-muted me-1">—</span>'}
         <button class="btn btn-outline-danger del-btn"
                 onclick="deleteReport(${r.id},this)">🗑</button>
       </td>
