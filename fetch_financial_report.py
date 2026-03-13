@@ -371,8 +371,9 @@ def _run_download(ticker: str, forms: list[str]):
                         )
 
                     safe_acc  = acc.replace("-", "_")
+                    orig_ext  = Path(ex["filename"]).suffix.lower() or ".htm"
                     stem      = Path(ex["filename"]).stem
-                    filename  = f"{period}_{form.replace('/', '-')}_{safe_acc}_{stem}.pdf"
+                    filename  = f"{period}_{form.replace('/', '-')}_{safe_acc}_{stem}{orig_ext}"
                     dest      = ticker_dir / filename
 
                     try:
