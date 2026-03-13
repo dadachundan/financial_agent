@@ -8,3 +8,5 @@ package.json
 package-lock.json
 *.db
 kg_uploads/
+ticker_name_cache.json
+uploads/

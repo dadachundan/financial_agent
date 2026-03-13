@@ -17,6 +17,7 @@ import uuid
 from pathlib import Path
 
 from flask import Flask, abort, jsonify, render_template_string, request, send_file
+import ticker_names as _tn
 
 SCRIPT_DIR  = Path(__file__).parent
 DEFAULT_DB  = SCRIPT_DIR / "zsxq.db"
@@ -25,6 +26,9 @@ UPLOADS_DIR.mkdir(exist_ok=True)
 
 app = Flask(__name__)
 DB_PATH: Path = DEFAULT_DB
+
+# Kick off AKShare ticker-name cache load (instant if cache exists; bg thread if not)
+_tn.init()
 
 # ── HTML template ─────────────────────────────────────────────────────────────
 
@@ -126,6 +130,9 @@ TEMPLATE = """
     {% endif %}
     <a href="/print-view?{{ query_string }}" target="_blank"
        class="btn btn-sm btn-outline-secondary ms-2">📄 Export PDF</a>
+    <button class="btn btn-sm btn-outline-info ms-2"
+            onclick="enrichTickers(this)"
+            title="Look up Chinese company names for bare ticker codes (e.g. 688981 → 中芯国际 688981)">🏷 Enrich Tickers</button>
   </div>
 
   <!-- Status filters -->
@@ -419,6 +426,31 @@ TEMPLATE = """
       alert('Deleted ' + data.deleted + ' rows.');
       window.location.reload();
     });
+  }
+
+  function enrichTickers(btn) {
+    const orig = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = '⏳ Looking up names…';
+    fetch('/enrich-tickers', { method: 'POST' })
+      .then(r => r.json())
+      .then(d => {
+        btn.disabled = false;
+        btn.textContent = orig;
+        if (d.status === 'building') {
+          alert(d.message);
+        } else if (d.status === 'ok') {
+          if (d.updated > 0) {
+            alert('Enriched ' + d.updated + ' of ' + d.total + ' rows with Chinese ticker names.');
+            location.reload();
+          } else {
+            alert('All ticker codes already have Chinese names (or no matches found).');
+          }
+        } else {
+          alert(d.message || 'Unknown error');
+        }
+      })
+      .catch(() => { btn.disabled = false; btn.textContent = orig; alert('Request failed'); });
   }
 
   function deleteRow(fileId, btn) {
@@ -1039,6 +1071,37 @@ def set_tickers(file_id: int):
     conn.commit()
     conn.close()
     return jsonify(tickers=normalized)
+
+
+@app.route("/enrich-tickers", methods=["POST"])
+def enrich_tickers_route():
+    """Bulk-enrich bare ticker codes with Chinese company names via AKShare cache."""
+    if _tn.is_building():
+        return jsonify(
+            status="building",
+            message="Building ticker name cache from AKShare (~2 min). Please try again shortly.",
+        )
+    ticker_map = _tn.get_map()
+    if not ticker_map:
+        return jsonify(status="error", message="Ticker name cache not available.")
+
+    conn = get_conn()
+    rows = conn.execute(
+        "SELECT file_id, tickers FROM pdf_files WHERE tickers IS NOT NULL AND tickers != ''"
+    ).fetchall()
+
+    updated = 0
+    for file_id, tickers_str in rows:
+        enriched, n = _tn.enrich_ticker_string(tickers_str, ticker_map)
+        if n > 0:
+            conn.execute(
+                "UPDATE pdf_files SET tickers = ? WHERE file_id = ?",
+                (enriched, file_id),
+            )
+            updated += 1
+    conn.commit()
+    conn.close()
+    return jsonify(status="ok", updated=updated, total=len(rows))
 
 
 @app.route("/comment/<int:file_id>", methods=["POST"])
