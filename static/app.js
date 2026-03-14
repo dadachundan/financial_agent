@@ -178,7 +178,7 @@ window.setExplValue = window.setExplValue || function(id, val) {
   document.getElementById(id).value = val;
 };
 
-async function callMine(url, entityA, entityB, commentId, explId, urlFormId, errId, spinnerId) {
+async function callMine(url, entityA, entityB, commentId, explId, urlFormId, errId, spinnerId, sourceTextId) {
   const spinner = document.getElementById(spinnerId);
   const errDiv  = document.getElementById(errId);
   spinner.classList.remove("d-none");
@@ -194,7 +194,8 @@ async function callMine(url, entityA, entityB, commentId, explId, urlFormId, err
     document.getElementById(commentId).value = data.comment || "";
     window.setExplValue(explId, data.explanation || "");
     if (urlFormId) document.getElementById(urlFormId).value = url;
-    _showMinePrompt(errDiv, data._system_prompt, data._user_prompt);
+    if (sourceTextId) document.getElementById(sourceTextId).value = data.source_text || "";
+    _showMinePrompt(errDiv, data._system_prompt, data._user_prompt, data.source_text);
   } catch(e) {
     errDiv.textContent = "Network error: " + e.message;
   } finally {
@@ -202,16 +203,28 @@ async function callMine(url, entityA, entityB, commentId, explId, urlFormId, err
   }
 }
 
-function _showMinePrompt(container, systemPrompt, userPrompt) {
-  if (!systemPrompt && !userPrompt) return;
+function _showMinePrompt(container, systemPrompt, userPrompt, sourceText) {
+  if (!systemPrompt && !userPrompt && !sourceText) return;
   const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-  container.innerHTML =
-    `<details style="font-size:.75rem;margin-top:4px">` +
-    `<summary style="cursor:pointer;color:#6c757d">🔍 Prompt sent to MiniMax</summary>` +
-    `<div style="background:#f6f8fa;border-radius:4px;padding:8px;margin-top:4px;` +
-    `white-space:pre-wrap;word-break:break-word;font-family:monospace;color:#333">` +
-    `<strong>SYSTEM:</strong>\n${esc(systemPrompt||'')}\n\n<strong>USER:</strong>\n${esc(userPrompt||'')}` +
-    `</div></details>`;
+  let html = '';
+  if (sourceText) {
+    html +=
+      `<details style="font-size:.75rem;margin-top:4px">` +
+      `<summary style="cursor:pointer;color:#6c757d">📄 Fetched article text</summary>` +
+      `<div style="background:#f6f8fa;border-radius:4px;padding:8px;margin-top:4px;` +
+      `max-height:200px;overflow-y:auto;white-space:pre-wrap;word-break:break-word;font-family:monospace;color:#333">` +
+      `${esc(sourceText)}</div></details>`;
+  }
+  if (systemPrompt || userPrompt) {
+    html +=
+      `<details style="font-size:.75rem;margin-top:4px">` +
+      `<summary style="cursor:pointer;color:#6c757d">🔍 Prompt sent to MiniMax</summary>` +
+      `<div style="background:#f6f8fa;border-radius:4px;padding:8px;margin-top:4px;` +
+      `white-space:pre-wrap;word-break:break-word;font-family:monospace;color:#333">` +
+      `<strong>SYSTEM:</strong>\n${esc(systemPrompt||'')}\n\n<strong>USER:</strong>\n${esc(userPrompt||'')}` +
+      `</div></details>`;
+  }
+  container.innerHTML = html;
 }
 
 function mineBC() {
@@ -219,7 +232,8 @@ function mineBC() {
     document.getElementById("bc-mine-url").value,
     document.getElementById("bc-mine-biz").value,
     document.getElementById("bc-mine-co").value,
-    "bc-form-comment", "bc-form-expl", "bc-form-url", "bc-mine-err", "bc-mine-spinner"
+    "bc-form-comment", "bc-form-expl", "bc-form-url", "bc-mine-err", "bc-mine-spinner",
+    "bc-form-source-text"
   );
 }
 function mineBB() {
@@ -227,7 +241,8 @@ function mineBB() {
     document.getElementById("bb-mine-url").value,
     document.getElementById("bb-mine-from").value,
     document.getElementById("bb-mine-to").value,
-    "bb-form-comment", "bb-form-expl", "bb-form-url", "bb-mine-err", "bb-mine-spinner"
+    "bb-form-comment", "bb-form-expl", "bb-form-url", "bb-mine-err", "bb-mine-spinner",
+    "bb-form-source-text"
   );
 }
 
