@@ -594,13 +594,14 @@ TEMPLATE = """\
   </div>
 
   <!-- ── Filter bar ── -->
-  <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+  <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
     <input id="search" class="form-control form-control-sm"
            placeholder="Search ticker / company / period…"
            oninput="applyFilters()">
-    <div id="tickerChips" class="d-flex gap-1 flex-wrap"></div>
+    <div id="formBtns" class="d-flex gap-1"></div>
     <span id="rowCount" class="text-muted ms-auto" style="font-size:.78rem"></span>
   </div>
+  <div id="tickerChips" class="d-flex gap-1 flex-wrap mb-2"></div>
 
   <!-- ── Reports table ── -->
   <div class="table-responsive">
@@ -633,6 +634,7 @@ __MCW_FOOTER__
 <script>
 let _rows    = [];
 let _actTick = null;
+let _actForm = null;
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 function htmlEsc(s) {
@@ -655,8 +657,29 @@ function badgeCls(f) {
 function loadReports() {
   fetch('/reports').then(r=>r.json()).then(data => {
     _rows = data;
+    rebuildFormBtns();
     rebuildChips();
     applyFilters();
+  });
+}
+
+function rebuildFormBtns() {
+  const specs = [
+    { key:'10-K', label:'10-K', cls:'b10k', outline:'outline-primary'   },
+    { key:'10-Q', label:'10-Q', cls:'b10q', outline:'outline-success'   },
+    { key:'8-K',  label:'8-K',  cls:'b8k',  outline:'outline-secondary' },
+  ];
+  const div = document.getElementById('formBtns');
+  div.innerHTML = '';
+  specs.forEach(({key, label, cls, outline}) => {
+    const count = _rows.filter(r => r.form_type && r.form_type.includes(key)).length;
+    const active = _actForm === key;
+    const btn = document.createElement('button');
+    btn.className = 'btn btn-sm ' + (active ? `badge bp ${cls}` : `btn-${outline}`);
+    btn.style.cssText = 'font-size:.72rem;padding:.15rem .55rem;font-weight:600';
+    btn.innerHTML = `${label} <span class="badge bg-light text-dark">${count}</span>`;
+    btn.onclick = () => { _actForm = _actForm===key ? null : key; rebuildFormBtns(); applyFilters(); };
+    div.appendChild(btn);
   });
 }
 
@@ -681,7 +704,10 @@ function applyFilters() {
   const filtered = _rows.filter(r => {
     const txt = [r.ticker, r.company_name, r.period, r.form_type, r.filed_date]
                   .join(' ').toLowerCase();
-    return (!q || txt.includes(q)) && (!_actTick || r.ticker===_actTick);
+    const matchTxt  = !q       || txt.includes(q);
+    const matchTick = !_actTick || r.ticker === _actTick;
+    const matchForm = !_actForm || (r.form_type && r.form_type.includes(_actForm));
+    return matchTxt && matchTick && matchForm;
   });
   renderRows(filtered);
 }
