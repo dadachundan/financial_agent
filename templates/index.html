@@ -277,7 +277,13 @@
           <tr data-source="{{r.source_url|e}}" data-rating="{{r.rating}}">
             <td><span class="badge-business">{{r.business_name}}</span></td>
             <td><span class="badge-company">{{r.company_name}}</span></td>
-            <td class="comment-col">{{r.comment}}</td>
+            <td id="comment-cell-bc-{{r.id}}" class="comment-col"
+                data-val="{{r.comment|e}}"
+                title="Click to edit comment"
+                onclick="openCommentEditor('/bc/comment/{{r.id}}','comment-cell-bc-{{r.id}}',this.dataset.val)"
+                style="cursor:pointer"
+                onmouseenter="this.style.background='rgba(0,0,0,.03)'"
+                onmouseleave="this.style.background=''">{{r.comment}}</td>
             <td id="expl-cell-bc-{{r.id}}" class="expl-col"
                 data-md="{{r.explanation|e}}"
                 title="Click to view / edit explanation"
@@ -420,7 +426,13 @@
           <tr data-source="{{r.source_url|e}}" data-rating="{{r.rating}}">
             <td><span class="badge-business">{{r.from_name}}</span></td>
             <td><span class="badge-business">{{r.to_name}}</span></td>
-            <td class="comment-col">{{r.comment}}</td>
+            <td id="comment-cell-bb-{{r.id}}" class="comment-col"
+                data-val="{{r.comment|e}}"
+                title="Click to edit comment"
+                onclick="openCommentEditor('/bb/comment/{{r.id}}','comment-cell-bb-{{r.id}}',this.dataset.val)"
+                style="cursor:pointer"
+                onmouseenter="this.style.background='rgba(0,0,0,.03)'"
+                onmouseleave="this.style.background=''">{{r.comment}}</td>
             <td id="expl-cell-bb-{{r.id}}" class="expl-col"
                 data-md="{{r.explanation|e}}"
                 title="Click to view / edit explanation"
@@ -678,6 +690,27 @@
   </div>
 </div>
 
+<!-- Comment editor modal -->
+<div class="modal fade" id="commentEditModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">✏️ Edit Comment</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" id="commentEditInput" class="form-control"
+               placeholder="One-liner summary" maxlength="200">
+        <div class="form-text text-muted" style="font-size:.75rem">Short one-liner (≤20 words)</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="commentEditSaveBtn">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Entity description preview modal -->
 <div class="modal fade" id="entityDescPreviewModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-xl modal-dialog-scrollable">
@@ -733,6 +766,42 @@ window.graphData = {{ graph_json | safe }};
 <script src="/static/app.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
 <script>
+// ── Comment editor modal ─────────────────────────────────────────────────────
+const _commentEditModal = new bootstrap.Modal(document.getElementById('commentEditModal'));
+let   _commentSaveUrl   = null;
+let   _commentCell      = null;
+
+function openCommentEditor(saveUrl, cellId, currentValue) {
+  _commentSaveUrl = saveUrl;
+  _commentCell    = cellId ? document.getElementById(cellId) : null;
+  const input     = document.getElementById('commentEditInput');
+  input.value     = currentValue || '';
+  _commentEditModal.show();
+  setTimeout(() => input.focus(), 200);
+}
+
+document.getElementById('commentEditSaveBtn').addEventListener('click', () => {
+  const val = document.getElementById('commentEditInput').value.trim();
+  fetch(_commentSaveUrl, {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body:    'comment=' + encodeURIComponent(val),
+  }).then(r => {
+    if (r.ok) {
+      if (_commentCell) {
+        _commentCell.dataset.val = val;
+        _commentCell.textContent = val || '—';
+      }
+      _commentEditModal.hide();
+    }
+  });
+});
+
+// Allow Enter key to save
+document.getElementById('commentEditInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') document.getElementById('commentEditSaveBtn').click();
+});
+
 // ── Shared image upload helper ───────────────────────────────────────────────
 function _mdeImgUpload(file, onSuccess, onError) {
   const fd = new FormData();
