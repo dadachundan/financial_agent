@@ -90,11 +90,14 @@ def save_upload(request_files, file_field: str, upload_dir: Path) -> str:
 # ── URL summarisation ─────────────────────────────────────────────────────────
 
 def fetch_url_text(url: str, max_bytes: int = 200_000) -> str:
-    """Fetch a URL and return stripped plain text (HTML tags removed)."""
+    """Fetch a URL and return stripped plain text (script/style blocks and HTML tags removed)."""
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=15) as resp:
         raw = resp.read(max_bytes).decode("utf-8", errors="replace")
-    text = re.sub(r"<[^>]+>", " ", raw)
+    # Remove script/style blocks (content + tags) before stripping remaining tags
+    text = re.sub(r"<(script|style)[^>]*>.*?</(script|style)>", " ", raw,
+                  flags=re.IGNORECASE | re.DOTALL)
+    text = re.sub(r"<[^>]+>", " ", text)
     return re.sub(r"\s+", " ", text).strip()[:8000]
 
 
