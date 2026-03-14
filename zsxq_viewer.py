@@ -13,7 +13,7 @@ PDFs open in a new browser tab when you click "Open PDF".
 import argparse
 import datetime
 import sqlite3
-import uuid
+import md_comment_widget as mcw
 from pathlib import Path
 
 from flask import Flask, abort, jsonify, render_template_string, request, send_file
@@ -22,9 +22,9 @@ import ticker_names as _tn
 SCRIPT_DIR  = Path(__file__).parent
 DEFAULT_DB  = SCRIPT_DIR / "zsxq.db"
 UPLOADS_DIR = SCRIPT_DIR / "uploads"
-UPLOADS_DIR.mkdir(exist_ok=True)
 
 app = Flask(__name__)
+app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
 DB_PATH: Path = DEFAULT_DB
 
 # Kick off AKShare ticker-name cache load (instant if cache exists; bg thread if not)
@@ -40,8 +40,7 @@ TEMPLATE = """
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>zsxq PDF Index</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+__MCW_HEAD__
   <style>
     body            { background:#f4f6f8; padding:24px 16px; }
     h2              { font-weight:700; }
@@ -87,26 +86,7 @@ TEMPLATE = """
     .inline-edit:hover { background:rgba(0,0,0,.04); border-radius:3px; }
     .tag-edit-input, .comment-edit-input { font-size:.78rem; padding:1px 4px;
                       border:1px solid #999; border-radius:3px; width:100%; }
-    /* Comment markdown preview in table cell */
-    .comment-preview { cursor:pointer; display:block; min-height:1.2em; max-height:4.5em;
-                       overflow:hidden; position:relative; }
-    .comment-preview::after { content:''; position:absolute; bottom:0; left:0; right:0;
-                               height:1.2em; background:linear-gradient(transparent,#fff); }
-    .comment-preview:hover { background:rgba(0,0,0,.03); border-radius:3px; }
-    .comment-preview p  { margin:0 0 .2em; }
-    .comment-preview ul,.comment-preview ol { padding-left:1.2em; margin:0 0 .2em; }
-    .comment-preview img { max-height:3em; border-radius:3px; }
-    .comment-preview code { font-size:.8em; background:#f0f0f0; padding:1px 3px; border-radius:2px; }
-    /* Comment preview modal body */
-    #commentPreviewBody img  { max-width:100%; border-radius:6px; margin:.4em 0; display:block; }
-    #commentPreviewBody p    { margin-bottom:.6em; }
-    #commentPreviewBody ul,
-    #commentPreviewBody ol   { padding-left:1.4em; margin-bottom:.6em; }
-    #commentPreviewBody code { background:#f0f0f0; padding:1px 4px; border-radius:3px; font-size:.88em; }
-    #commentPreviewBody pre  { background:#f6f8fa; padding:.75em; border-radius:6px; overflow:auto; }
-    /* EasyMDE inside modal */
-    #commentModal .EasyMDEContainer { height:100%; }
-    #commentModal .CodeMirror        { min-height:220px; font-size:.9rem; }
+    __MCW_CSS__
   </style>
 </head>
 <body>
@@ -373,44 +353,9 @@ TEMPLATE = """
   </div>
 </div>
 
-<!-- Comment preview modal -->
-<div class="modal fade" id="commentPreviewModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">💬 Comment</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body" id="commentPreviewBody"
-           style="font-size:.95rem;line-height:1.75;word-break:break-word"></div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="commentPreviewEditBtn">✏️ Edit</button>
-      </div>
-    </div>
-  </div>
-</div>
+__MCW_MODALS__
 
-<!-- Comment editor modal -->
-<div class="modal fade" id="commentModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">✏️ Edit Comment</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body" style="min-height:340px">
-        <textarea id="commentEditorTextarea"></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary" id="commentSaveBtn">Save</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+__MCW_FOOTER__
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   const _summaryModal = new bootstrap.Modal(document.getElementById('summaryModal'));
@@ -623,129 +568,16 @@ TEMPLATE = """
     if (tr) tr.dataset.search = (tr.dataset.search || '').replace(/\bticker:[^\s]*/g, '') + ' ' + tickers.join(' ');
   }
 
-  // ── Comment editor (EasyMDE modal) ───────────────────────────────────────
-  const _commentModal        = new bootstrap.Modal(document.getElementById('commentModal'));
-  const _commentPreviewModal = new bootstrap.Modal(document.getElementById('commentPreviewModal'));
-  let _easyMDE       = null;
-  let _editingFileId = null;
-  let _previewSpan   = null;
-
-  function _getEasyMDE() {
-    if (_easyMDE) return _easyMDE;
-    _easyMDE = new EasyMDE({
-      element: document.getElementById('commentEditorTextarea'),
-      spellChecker: false,
-      minHeight: '240px',
-      toolbar: [
-        'bold','italic','heading','|',
-        'quote','unordered-list','ordered-list','|',
-        'link','upload-image','|',
-        'preview','side-by-side','fullscreen'
-      ],
-      imageUploadFunction(file, onSuccess, onError) {
-        const fd = new FormData();
-        fd.append('image', file);
-        fetch('/upload-image', { method: 'POST', body: fd })
-          .then(r => r.json())
-          .then(d => d.data ? onSuccess(d.data.filePath) : onError(d.error || 'Upload failed'))
-          .catch(() => onError('Upload failed'));
-      },
-    });
-    // Clipboard paste: detect image data and upload it
-    _easyMDE.codemirror.on('paste', (cm, e) => {
-      const items = e.clipboardData && e.clipboardData.items;
-      if (!items) return;
-      for (const item of items) {
-        if (item.type.startsWith('image/')) {
-          e.preventDefault();
-          const file = item.getAsFile();
-          const fd = new FormData();
-          fd.append('image', file, 'pasted-image.png');
-          fetch('/upload-image', { method: 'POST', body: fd })
-            .then(r => r.json())
-            .then(d => {
-              if (d.data && d.data.filePath) {
-                cm.replaceSelection(`![image](${d.data.filePath})`);
-              }
-            });
-          break;
-        }
-      }
-    });
-    return _easyMDE;
-  }
-
-  // Click on cell → preview modal
-  function viewComment(fileId, span) {
-    _editingFileId = fileId;
-    _previewSpan   = span;
-    const comment = span.dataset.comment || '';
-    const body    = document.getElementById('commentPreviewBody');
-    body.innerHTML = comment ? marked.parse(comment)
-                             : '<em class="text-muted">No comment yet. Click Edit to add one.</em>';
-    _commentPreviewModal.show();
-  }
-
-  // "Edit" button inside preview modal → switch to EasyMDE editor
-  document.getElementById('commentPreviewEditBtn').addEventListener('click', () => {
-    _commentPreviewModal.hide();
-    setTimeout(() => editComment(_editingFileId, _previewSpan), 300);
-  });
-
-  function editComment(fileId, span) {
-    _editingFileId = fileId;
-    const mde = _getEasyMDE();
-    mde.value(span.dataset.comment || '');
-    _commentModal.show();
-    setTimeout(() => mde.codemirror.focus(), 320);
-  }
-
-  document.getElementById('commentSaveBtn').addEventListener('click', () => {
-    const val = _easyMDE ? _easyMDE.value().trim() : '';
-    fetch('/comment/' + _editingFileId, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      body: 'comment=' + encodeURIComponent(val),
-    }).then(r => {
-      if (r.ok) {
-        const cell = document.getElementById('comment-cell-' + _editingFileId);
-        if (cell) renderCommentCell(cell, _editingFileId, val);
-        _commentModal.hide();
-      }
-    });
-  });
-
-  function renderCommentCell(cell, fileId, comment) {
-    const span = document.createElement('span');
-    span.className       = 'comment-preview';
-    span.dataset.comment = comment || '';
-    span.title           = 'Click to preview / edit';
-    if (comment) {
-      span.innerHTML = marked.parse(comment);
-    } else {
-      span.textContent = '—';
-    }
-    span.onclick = () => viewComment(fileId, span);
-    cell.innerHTML = ''; cell.appendChild(span);
-  }
-
-  // Render markdown in all comment cells on page load
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.comment-preview').forEach(span => {
-      const comment = span.dataset.comment || '';
-      const fileId  = span.closest('td').id.replace('comment-cell-', '');
-      if (comment) {
-        span.innerHTML = marked.parse(comment);
-      } else {
-        span.textContent = '—';
-      }
-      span.onclick = () => viewComment(fileId, span);
-    });
-  });
+  __MCW_JS__
 </script>
 </body>
 </html>
 """
+
+# Apply shared markdown comment widget substitutions
+for _k, _v in mcw.TEMPLATE_PARTS.items():
+    TEMPLATE = TEMPLATE.replace(_k, _v)
+
 
 # ── Routes ────────────────────────────────────────────────────────────────────
 
@@ -1114,30 +946,6 @@ def set_comment(file_id: int):
     conn.close()
     return "", 204
 
-
-@app.route("/uploads/<path:filename>")
-def serve_upload(filename: str):
-    path = UPLOADS_DIR / filename
-    if not path.exists():
-        abort(404)
-    return send_file(path)
-
-
-@app.route("/upload-image", methods=["POST"])
-def upload_image():
-    f = request.files.get("image")
-    if not f:
-        return jsonify({"error": "no file"}), 400
-    ext = Path(f.filename).suffix.lower() if f.filename else ".jpg"
-    if ext not in {".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"}:
-        ext = ".jpg"
-    today = datetime.date.today()
-    subdir = UPLOADS_DIR / str(today.year) / f"{today.month:02d}" / f"{today.day:02d}"
-    subdir.mkdir(parents=True, exist_ok=True)
-    name = uuid.uuid4().hex + ext
-    f.save(subdir / name)
-    rel = f"{today.year}/{today.month:02d}/{today.day:02d}/{name}"
-    return jsonify({"data": {"filePath": f"/uploads/{rel}"}})
 
 
 @app.route("/pdf/<int:file_id>")
