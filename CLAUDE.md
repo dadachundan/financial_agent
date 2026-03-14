@@ -8,6 +8,18 @@ After completing a task and verifying that it works (by running tests or the app
 4. Do not include the "Co-authored-by: Claude" footer in commits.
 5. After debugging is complete, stop any demo/preview servers to free the port (`preview_stop()`).
 
+# Editable Table Columns
+
+When the user asks to make a field in a table editable, always use the `md_comment_widget.py` pattern:
+
+1. The cell contains a `<span class="*-preview" data-raw="...html-escaped markdown...">` that renders markdown on load.
+2. Clicking the cell opens a **preview modal** (Bootstrap) showing the rendered markdown + an "Edit" button.
+3. Clicking "Edit" closes the preview modal and opens an **EasyMDE editor modal** (with image upload toolbar + clipboard-paste-to-upload support).
+4. Saving POSTs the markdown to the backend, then updates `span.dataset.raw` and re-renders the cell in place — no page reload.
+5. The backend save route accepts JSON `{"description": "..."}` (or whichever field name) and returns `{"ok": true}`.
+
+See `md_comment_widget.py` for the shared blueprint (`/upload-image`, `/uploads/<path>`) and reference the entity-description implementation in `templates/index.html` (search `viewEntityDesc`) as a concrete example.
+
 # LLM API Usage
 
 - Use **MiniMax** for simple summarisation tasks and other straightforward LLM calls.
