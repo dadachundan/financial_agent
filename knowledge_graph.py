@@ -32,9 +32,10 @@ import urllib.error
 from pathlib import Path
 
 from flask import (Flask, Response, jsonify, redirect, render_template,
-                   request, send_file, send_from_directory, stream_with_context, url_for)
+                   request, send_file, stream_with_context, url_for)
 
 import kg_db
+import md_comment_widget as mcw
 import kg_models
 import kg_services
 
@@ -47,6 +48,7 @@ DEFAULT_ZSXQ_DB  = SCRIPT_DIR / "zsxq.db"
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
 app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024   # 50 MB
+app.register_blueprint(mcw.create_blueprint(UPLOAD_DIR))
 
 
 @app.errorhandler(413)
@@ -59,11 +61,6 @@ def too_large(_e):
 @app.route("/")
 def index():
     return _render_main()
-
-
-@app.route("/uploads/<path:fname>")
-def serve_upload(fname):
-    return send_from_directory(UPLOAD_DIR, fname)
 
 
 # ── Company CRUD ───────────────────────────────────────────────────────────────
@@ -190,6 +187,28 @@ def bb_delete(rid):
             (UPLOAD_DIR / row["image_path"]).unlink(missing_ok=True)
         conn.execute("DELETE FROM business_business WHERE id=?", (rid,))
     return redirect(url_for("index") + "#tab-bb")
+
+
+# ── Explanation inline-edit (AJAX) ────────────────────────────────────────────
+
+@app.route("/bc/explanation/<int:rid>", methods=["POST"])
+def bc_explanation(rid):
+    explanation = request.form.get("explanation", "").strip()
+    with kg_db.get_db() as conn:
+        conn.execute(
+            "UPDATE business_company SET explanation=? WHERE id=?", (explanation, rid)
+        )
+    return "", 204
+
+
+@app.route("/bb/explanation/<int:rid>", methods=["POST"])
+def bb_explanation(rid):
+    explanation = request.form.get("explanation", "").strip()
+    with kg_db.get_db() as conn:
+        conn.execute(
+            "UPDATE business_business SET explanation=? WHERE id=?", (explanation, rid)
+        )
+    return "", 204
 
 
 # ── API: LLM summarisation ─────────────────────────────────────────────────────

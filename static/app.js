@@ -153,6 +153,12 @@ function showImg(src) {
 }
 
 // ── AI mine helpers ────────────────────────────────────────────────────────
+// setExplValue can be overridden by the inline script to redirect value
+// into an EasyMDE instance rather than the raw textarea.
+window.setExplValue = window.setExplValue || function(id, val) {
+  document.getElementById(id).value = val;
+};
+
 async function callMine(url, entityA, entityB, commentId, explId, errId, spinnerId) {
   const spinner = document.getElementById(spinnerId);
   const errDiv  = document.getElementById(errId);
@@ -166,8 +172,8 @@ async function callMine(url, entityA, entityB, commentId, explId, errId, spinner
     });
     const data = await resp.json();
     if (data.error) { errDiv.textContent = data.error; return; }
-    document.getElementById(commentId).value = data.comment    || "";
-    document.getElementById(explId).value    = data.explanation || "";
+    document.getElementById(commentId).value = data.comment || "";
+    window.setExplValue(explId, data.explanation || "");
   } catch(e) {
     errDiv.textContent = "Network error: " + e.message;
   } finally {
