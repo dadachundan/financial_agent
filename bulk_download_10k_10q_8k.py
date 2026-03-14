@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-bulk_download.py — Bulk download SEC 10-K / 10-Q / 8-K for a list of tickers.
+bulk_download_10k_10q_8k.py — Bulk download SEC 10-K / 10-Q / 8-K for a list of tickers.
 
 Directly calls fetch_financial_report._run_download() for each ticker in sequence,
-logging all output to bulk_download.log in addition to stdout.
+logging all output to bulk_download_10k_10q_8k.log in addition to stdout.
 
 Non-US tickers (TSX:GMIN, ASX:RMS) are skipped — not on SEC EDGAR.
 """
@@ -67,7 +67,7 @@ SKIPPED = [
 def main() -> None:
     fr.init_db()
 
-    log_path = Path(__file__).parent / "bulk_download.log"
+    log_path = Path(__file__).parent / "bulk_download_10k_10q_8k.log"
     total    = len(TICKERS)
     failed   = []
     skipped  = 0
