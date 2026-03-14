@@ -78,6 +78,14 @@ def company_add():
     return redirect(url_for("index") + "#tab-entities")
 
 
+@app.route("/company/update/<int:cid>", methods=["POST"])
+def company_update(cid):
+    desc = request.json.get("description", "").strip()
+    with kg_db.get_db() as conn:
+        conn.execute("UPDATE companies SET description=? WHERE id=?", (desc, cid))
+    return {"ok": True}
+
+
 @app.route("/company/delete/<int:cid>", methods=["POST"])
 def company_delete(cid):
     with kg_db.get_db() as conn:
@@ -98,6 +106,14 @@ def business_add():
                 (name, desc),
             )
     return redirect(url_for("index") + "#tab-entities")
+
+
+@app.route("/business/update/<int:bid>", methods=["POST"])
+def business_update(bid):
+    desc = request.json.get("description", "").strip()
+    with kg_db.get_db() as conn:
+        conn.execute("UPDATE businesses SET description=? WHERE id=?", (desc, bid))
+    return {"ok": True}
 
 
 @app.route("/business/delete/<int:bid>", methods=["POST"])

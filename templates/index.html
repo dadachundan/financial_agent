@@ -68,6 +68,9 @@
     #explModal .CodeMirror        { min-height:240px; font-size:.9rem; }
     /* EasyMDE inside add-link forms (compact) */
     .form-expl-mde .EasyMDEContainer .CodeMirror { min-height:80px; font-size:.82rem; }
+    /* Inline-editable entity description cells */
+    td.entity-desc[contenteditable]:hover { background:#fffbe6; cursor:text; }
+    td.entity-desc[contenteditable]:focus { outline:1px solid #ffc107; background:#fffbe6; }
   </style>
 </head>
 <body>
@@ -471,7 +474,11 @@
             {% for c in companies %}
             <tr>
               <td><strong>{{c.name}}</strong></td>
-              <td style="color:#555;font-size:.8rem">{{c.description}}</td>
+              <td style="color:#555;font-size:.8rem"
+                  contenteditable="true"
+                  class="entity-desc"
+                  data-url="/company/update/{{c.id}}"
+                  title="Click to edit">{{c.description}}</td>
               <td>
                 <form method="post" action="/company/delete/{{c.id}}" style="display:inline">
                   <button class="btn btn-sm btn-outline-danger">✕</button>
@@ -503,7 +510,11 @@
             {% for b in businesses %}
             <tr>
               <td><strong>{{b.name}}</strong></td>
-              <td style="color:#555;font-size:.8rem">{{b.description}}</td>
+              <td style="color:#555;font-size:.8rem"
+                  contenteditable="true"
+                  class="entity-desc"
+                  data-url="/business/update/{{b.id}}"
+                  title="Click to edit">{{b.description}}</td>
               <td>
                 <form method="post" action="/business/delete/{{b.id}}" style="display:inline">
                   <button class="btn btn-sm btn-outline-danger">✕</button>
@@ -782,6 +793,21 @@ window.setExplValue = function(id, val) {
   if (id === 'bb-form-expl' && _bbAddMDE) { _bbAddMDE.value(val); return; }
   document.getElementById(id).value = val;
 };
+
+// ── Inline editable entity descriptions ──────────────────────────────────────
+document.querySelectorAll('.entity-desc').forEach(function(cell) {
+  cell.addEventListener('blur', function() {
+    fetch(cell.dataset.url, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({description: cell.textContent.trim()}),
+    });
+  });
+  cell.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') { e.preventDefault(); cell.blur(); }
+    if (e.key === 'Escape') { cell.blur(); }
+  });
+});
 </script>
 </body>
 </html>
