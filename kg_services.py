@@ -116,6 +116,7 @@ def llm_summarize_url(url: str, entity_a: str, entity_b: str) -> dict:
         return {
             "comment":     f"[API key missing] Relationship between {entity_a} and {entity_b}",
             "explanation": text[:400],
+            "source_text": text,
         }
 
     user_msg = (
@@ -142,6 +143,7 @@ def llm_summarize_url(url: str, entity_a: str, entity_b: str) -> dict:
     result = json.loads(reply.strip())
     result["_system_prompt"] = _SUMMARIZE_SYSTEM
     result["_user_prompt"]   = user_msg
+    result["source_text"]    = text
     return result
 
 
