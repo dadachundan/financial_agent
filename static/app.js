@@ -68,6 +68,24 @@ function applyFilters() {
     }
     row.style.display = show ? '' : 'none';
   });
+  // CC table
+  document.querySelectorAll('#tab-cc tbody tr').forEach(row => {
+    const src    = row.dataset.source || '';
+    const rating = parseInt(row.dataset.rating || '0', 10);
+    let show = true;
+    if (activeSource)    show = show && (src === activeSource);
+    if (activeMinRating) show = show && (rating >= activeMinRating);
+    if (activeGraphType) {
+      const cells = row.querySelectorAll('.badge-company');
+      const from  = cells[0]?.textContent.trim();
+      const to    = cells[1]?.textContent.trim();
+      let g = false;
+      if (activeGraphType === 'company')  g = from === activeGraphA || to === activeGraphA;
+      if (activeGraphType === 'cc-edge')  g = from === activeGraphA && to === activeGraphB;
+      show = show && g;
+    }
+    row.style.display = show ? '' : 'none';
+  });
 }
 
 function filterTables(type, nameA, nameB) {
@@ -94,6 +112,12 @@ function rateBC(id, val, el) {
 function rateBB(id, val, el) {
   el.closest('tr').dataset.rating = parseInt(val, 10);
   fetch('/bb/rate/' + id, {method: 'POST', body: new URLSearchParams({rating: val})});
+  applyFilters();
+}
+
+function rateCC(id, val, el) {
+  el.closest('tr').dataset.rating = parseInt(val, 10);
+  fetch('/cc/rate/' + id, {method: 'POST', body: new URLSearchParams({rating: val})});
   applyFilters();
 }
 
@@ -136,11 +160,13 @@ network.on('click', function(params) {
     if (group === 'company') {
       filterTables('company', label, null);
       showFilterBar('Company: ' + label);
-      switchTab('#tab-bc');
+      // Switch to whichever tab has visible rows: bc or cc
+      const bcVisible = [...document.querySelectorAll('#tab-bc tbody tr')]
+                        .some(r => r.style.display !== 'none');
+      switchTab(bcVisible ? '#tab-bc' : '#tab-cc');
     } else {
       filterTables('business', label, null);
       showFilterBar('Business: ' + label);
-      // Switch to whichever tab has visible rows
       const bcVisible = [...document.querySelectorAll('#tab-bc tbody tr')]
                         .some(r => r.style.display !== 'none');
       switchTab(bcVisible ? '#tab-bc' : '#tab-bb');
@@ -154,6 +180,11 @@ network.on('click', function(params) {
       filterTables('bc-edge', fromNode.label, toNode.label);
       showFilterBar(fromNode.label + ' → ' + toNode.label);
       switchTab('#tab-bc');
+    } else if (fromNode.group === 'company' && toNode.group === 'company') {
+      // cc edge
+      filterTables('cc-edge', fromNode.label, toNode.label);
+      showFilterBar(fromNode.label + ' → ' + toNode.label);
+      switchTab('#tab-cc');
     } else {
       // bb edge
       filterTables('bb-edge', fromNode.label, toNode.label);
@@ -244,6 +275,71 @@ function mineBB() {
     "bb-form-comment", "bb-form-expl", "bb-form-url", "bb-mine-err", "bb-mine-spinner",
     "bb-form-source-text"
   );
+}
+function mineCC() {
+  callMine(
+    document.getElementById("cc-mine-url").value,
+    document.getElementById("cc-mine-from").value,
+    document.getElementById("cc-mine-to").value,
+    "cc-form-comment", "cc-form-expl", "cc-form-url", "cc-mine-err", "cc-mine-spinner",
+    "cc-form-source-text"
+  );
+}
+
+// ── BC row selection & compare ───────────────────────────────────────────────
+function _bcUpdateSelectBar() {
+  const checked = document.querySelectorAll('#tab-bc .bc-row-select:checked');
+  const bar     = document.getElementById('bc-compare-bar');
+  const count   = document.getElementById('bc-select-count');
+  bar.classList.toggle('d-none', checked.length < 1);
+  count.textContent = `${checked.length} row${checked.length === 1 ? '' : 's'} selected`;
+}
+
+document.getElementById('bc-select-all').addEventListener('change', function() {
+  document.querySelectorAll('#tab-bc .bc-row-select').forEach(cb => {
+    // only toggle visible rows
+    if (cb.closest('tr').style.display !== 'none') cb.checked = this.checked;
+  });
+  _bcUpdateSelectBar();
+});
+
+document.getElementById('tab-bc').addEventListener('change', function(e) {
+  if (e.target.classList.contains('bc-row-select')) _bcUpdateSelectBar();
+});
+
+function bcClearSelection() {
+  document.querySelectorAll('#tab-bc .bc-row-select').forEach(cb => cb.checked = false);
+  document.getElementById('bc-select-all').checked = false;
+  _bcUpdateSelectBar();
+}
+
+async function compareBC() {
+  const ids = [...document.querySelectorAll('#tab-bc .bc-row-select:checked')]
+              .map(cb => parseInt(cb.dataset.id));
+  if (ids.length < 2) {
+    document.getElementById('bc-compare-err').textContent = 'Select at least 2 rows.';
+    return;
+  }
+  const spinner = document.getElementById('bc-compare-spinner');
+  const errDiv  = document.getElementById('bc-compare-err');
+  spinner.classList.remove('d-none');
+  errDiv.textContent = '';
+  try {
+    const resp = await fetch('/api/bc-compare', {
+      method:  'POST',
+      headers: {'Content-Type': 'application/json'},
+      body:    JSON.stringify({ ids }),
+    });
+    const data = await resp.json();
+    if (data.error) { errDiv.textContent = data.error; return; }
+    document.getElementById('bcCompareBody').innerHTML = marked.parse(data.markdown || '');
+    document.getElementById('bcComparePrompt').textContent = data._user_prompt || '';
+    new bootstrap.Modal(document.getElementById('bcCompareModal')).show();
+  } catch(e) {
+    errDiv.textContent = 'Network error: ' + e.message;
+  } finally {
+    spinner.classList.add('d-none');
+  }
 }
 
 // ── zsxq import ─────────────────────────────────────────────────────────────
