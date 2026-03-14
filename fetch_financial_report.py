@@ -744,7 +744,7 @@ TEMPLATE = """\
           <th style="width:2.5rem">#</th>
           <th>Ticker</th>
           <th>Company</th>
-          <th>Period ↓</th>
+          <th>Period</th>
           <th>Form</th>
           <th>Filed</th>
           <th>Size</th>
