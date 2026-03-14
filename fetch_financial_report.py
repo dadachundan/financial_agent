@@ -722,6 +722,16 @@ TEMPLATE = """\
            placeholder="Search ticker / company / period…"
            oninput="applyFilters()">
     <div id="formBtns" class="d-flex gap-1"></div>
+    <div class="btn-group ms-1" role="group" style="font-size:.72rem">
+      <button id="sortFiledBtn" type="button"
+              class="btn btn-sm btn-dark"
+              onclick="setSort('filed')"
+              title="Sort by filed date (newest first)">📅 Filed ↓</button>
+      <button id="sortTickerBtn" type="button"
+              class="btn btn-sm btn-outline-secondary"
+              onclick="setSort('ticker')"
+              title="Sort by ticker then period">🔤 Ticker</button>
+    </div>
     <span id="rowCount" class="text-muted ms-auto" style="font-size:.78rem"></span>
   </div>
   <div id="tickerChips" class="d-flex gap-1 flex-wrap mb-2"></div>
@@ -755,9 +765,10 @@ __MCW_MODALS__
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 __MCW_FOOTER__
 <script>
-let _rows    = [];
-let _actTick = null;
-let _actForm = null;
+let _rows     = [];
+let _actTick  = null;
+let _actForm  = null;
+let _sortMode = 'filed';   // 'filed' | 'ticker'
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 function htmlEsc(s) {
@@ -828,6 +839,15 @@ function rebuildChips() {
   });
 }
 
+function setSort(mode) {
+  _sortMode = mode;
+  document.getElementById('sortFiledBtn').className  =
+    'btn btn-sm ' + (mode === 'filed'  ? 'btn-dark' : 'btn-outline-secondary');
+  document.getElementById('sortTickerBtn').className =
+    'btn btn-sm ' + (mode === 'ticker' ? 'btn-dark' : 'btn-outline-secondary');
+  applyFilters();
+}
+
 function applyFilters() {
   const q = document.getElementById('search').value.trim().toLowerCase();
   const filtered = _rows.filter(r => {
@@ -838,6 +858,20 @@ function applyFilters() {
     const matchForm = !_actForm || (r.form_type && r.form_type.includes(_actForm));
     return matchTxt && matchTick && matchForm;
   });
+
+  // Sort
+  if (_sortMode === 'filed') {
+    filtered.sort((a, b) =>
+      (b.filed_date || '').localeCompare(a.filed_date || '') || b.id - a.id
+    );
+  } else {
+    filtered.sort((a, b) =>
+      (a.ticker || '').localeCompare(b.ticker || '') ||
+      (b.period_of_report || '').localeCompare(a.period_of_report || '') ||
+      b.id - a.id
+    );
+  }
+
   renderRows(filtered);
 }
 
