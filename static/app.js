@@ -21,7 +21,10 @@ const network = new vis.Network(
   }
 );
 
-// ── Table filtering ─────────────────────────────────────────────────────────
+// ── Table filtering + pagination ─────────────────────────────────────────────
+const PAGE_SIZE = 20;
+const _pages    = { bc: 1, bb: 1, cc: 1 };
+
 let activeSource     = '';
 let activeMinRating  = 0;
 let activeGraphType  = null, activeGraphA = null, activeGraphB = null;
@@ -32,8 +35,7 @@ function switchTab(href) {
 }
 
 function applyFilters() {
-  // BC table
-  document.querySelectorAll('#tab-bc tbody tr').forEach(row => {
+  _filterTable('bc', row => {
     const src    = row.dataset.source || '';
     const rating = parseInt(row.dataset.rating || '0', 10);
     let show = true;
@@ -48,10 +50,9 @@ function applyFilters() {
       if (activeGraphType === 'bc-edge')  g = biz === activeGraphA && co === activeGraphB;
       show = show && g;
     }
-    row.style.display = show ? '' : 'none';
+    return show;
   });
-  // BB table
-  document.querySelectorAll('#tab-bb tbody tr').forEach(row => {
+  _filterTable('bb', row => {
     const src    = row.dataset.source || '';
     const rating = parseInt(row.dataset.rating || '0', 10);
     let show = true;
@@ -66,10 +67,9 @@ function applyFilters() {
       if (activeGraphType === 'bb-edge')  g = from === activeGraphA && to === activeGraphB;
       show = show && g;
     }
-    row.style.display = show ? '' : 'none';
+    return show;
   });
-  // CC table
-  document.querySelectorAll('#tab-cc tbody tr').forEach(row => {
+  _filterTable('cc', row => {
     const src    = row.dataset.source || '';
     const rating = parseInt(row.dataset.rating || '0', 10);
     let show = true;
@@ -84,8 +84,92 @@ function applyFilters() {
       if (activeGraphType === 'cc-edge')  g = from === activeGraphA && to === activeGraphB;
       show = show && g;
     }
-    row.style.display = show ? '' : 'none';
+    return show;
   });
+}
+
+// ── Pagination helpers ────────────────────────────────────────────────────────
+function _filterTable(prefix, matchFn) {
+  const tbody = document.querySelector(`#tab-${prefix} tbody`);
+  if (!tbody) return;
+  tbody.querySelectorAll('tr').forEach(row => {
+    row.dataset.match = matchFn(row) ? '1' : '0';
+  });
+  _pages[prefix] = 1;
+  _renderPage(prefix);
+  _renderPager(prefix);
+}
+
+function _renderPage(prefix) {
+  const tbody = document.querySelector(`#tab-${prefix} tbody`);
+  if (!tbody) return;
+  const page    = _pages[prefix];
+  const matched = [...tbody.querySelectorAll('tr')].filter(r => r.dataset.match === '1');
+  const start   = (page - 1) * PAGE_SIZE;
+  const end     = start + PAGE_SIZE;
+  tbody.querySelectorAll('tr').forEach(row => {
+    if (row.dataset.match !== '1') {
+      row.style.display = 'none';
+    } else {
+      const idx = matched.indexOf(row);
+      row.style.display = (idx >= start && idx < end) ? '' : 'none';
+    }
+  });
+}
+
+function _renderPager(prefix) {
+  const pager = document.getElementById(`${prefix}-pager`);
+  if (!pager) return;
+  const tbody   = document.querySelector(`#tab-${prefix} tbody`);
+  if (!tbody) return;
+  const matched = [...tbody.querySelectorAll('tr')].filter(r => r.dataset.match === '1').length;
+  const page    = _pages[prefix];
+  const total   = Math.max(1, Math.ceil(matched / PAGE_SIZE));
+  pager.classList.toggle('d-none', matched <= PAGE_SIZE);
+  if (matched === 0) { pager.innerHTML = ''; return; }
+  const start = (page - 1) * PAGE_SIZE + 1;
+  const end   = Math.min(page * PAGE_SIZE, matched);
+  let html = `<small class="text-muted me-2">${start}–${end} of ${matched}</small>`;
+  html += `<ul class="pagination pagination-sm mb-0">`;
+  html += `<li class="page-item${page === 1 ? ' disabled' : ''}">`;
+  html += `<a class="page-link" href="#" onclick="_goPage('${prefix}',${page - 1});return false">‹</a></li>`;
+  for (const p of _pageRange(page, total)) {
+    if (p === '…') {
+      html += `<li class="page-item disabled"><span class="page-link">…</span></li>`;
+    } else {
+      html += `<li class="page-item${p === page ? ' active' : ''}">`;
+      html += `<a class="page-link" href="#" onclick="_goPage('${prefix}',${p});return false">${p}</a></li>`;
+    }
+  }
+  html += `<li class="page-item${page === total ? ' disabled' : ''}">`;
+  html += `<a class="page-link" href="#" onclick="_goPage('${prefix}',${page + 1});return false">›</a></li>`;
+  html += `</ul>`;
+  pager.innerHTML = html;
+}
+
+function _pageRange(current, total) {
+  if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+  const set    = new Set([1, Math.max(1, current - 1), current,
+                          Math.min(total, current + 1), total]);
+  const sorted = [...set].sort((a, b) => a - b);
+  const result = [];
+  let prev = 0;
+  for (const p of sorted) {
+    if (p - prev > 1) result.push('…');
+    result.push(p);
+    prev = p;
+  }
+  return result;
+}
+
+function _goPage(prefix, page) {
+  const tbody = document.querySelector(`#tab-${prefix} tbody`);
+  if (!tbody) return;
+  const matched    = [...tbody.querySelectorAll('tr')].filter(r => r.dataset.match === '1').length;
+  const totalPages = Math.max(1, Math.ceil(matched / PAGE_SIZE));
+  _pages[prefix]   = Math.max(1, Math.min(page, totalPages));
+  _renderPage(prefix);
+  _renderPager(prefix);
 }
 
 function filterTables(type, nameA, nameB) {
@@ -489,3 +573,6 @@ async function importPDF() {
     spinner.classList.add("d-none");
   }
 }
+
+// ── Init: seed data-match + pagers on page load ─────────────────────────────
+applyFilters();
