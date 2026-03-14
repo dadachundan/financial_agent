@@ -14,5 +14,12 @@
       "runtimeArgs": ["/Users/x/projects/financial_agent/fetch_financial_report.py", "--port", "8081"],
       "port": 8081
     }
+  ,
+    {
+      "name": "cninfo-reports",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["/Users/x/projects/financial_agent/fetch_cninfo_report.py", "--port", "8082"],
+      "port": 8082
+    }
   ]
 }
