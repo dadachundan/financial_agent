@@ -109,6 +109,25 @@ function clearFilter() {
   network.unselectAll();
 }
 
+// Click a badge in the table → select & focus that node in the graph
+function focusGraphNode(label, group) {
+  const match = nodes.get({ filter: n => n.label === label && n.group === group });
+  if (!match.length) return;
+  const nodeId = match[0].id;
+  network.selectNodes([nodeId]);
+  network.focus(nodeId, { scale: 1.2, animation: { duration: 400, easingFunction: 'easeInOutQuad' } });
+}
+
+document.addEventListener('click', function(e) {
+  const badge = e.target.closest('.badge-business, .badge-company');
+  if (!badge) return;
+  // Only act on badges inside table rows (not the legend)
+  if (!badge.closest('tbody')) return;
+  const label = badge.textContent.trim();
+  const group = badge.classList.contains('badge-company') ? 'company' : 'business';
+  focusGraphNode(label, group);
+});
+
 network.on('click', function(params) {
   if (params.nodes.length > 0) {
     const node  = nodes.get(params.nodes[0]);
