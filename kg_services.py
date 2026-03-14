@@ -120,6 +120,14 @@ def llm_summarize_url(url: str, entity_a: str, entity_b: str) -> dict:
         f"Describe the relationship between \"{entity_a}\" and \"{entity_b}\" "
         "based ONLY on the article above."
     )
+
+    print("\n" + "=" * 60)
+    print("SUMMARIZE URL — MiniMax prompt")
+    print("=" * 60)
+    print("[SYSTEM]", _SUMMARIZE_SYSTEM)
+    print("[USER]",   user_msg[:1000])
+    print("=" * 60 + "\n")
+
     reply, _, _ = call_minimax(
         messages=[
             {"role": "system", "name": "MiniMax AI", "content": _SUMMARIZE_SYSTEM},
@@ -128,7 +136,10 @@ def llm_summarize_url(url: str, entity_a: str, entity_b: str) -> dict:
         temperature=0.2,
         max_completion_tokens=512,
     )
-    return json.loads(reply.strip())
+    result = json.loads(reply.strip())
+    result["_system_prompt"] = _SUMMARIZE_SYSTEM
+    result["_user_prompt"]   = user_msg
+    return result
 
 
 # ── PDF entity extraction ─────────────────────────────────────────────────────
@@ -251,6 +262,7 @@ def zsxq_import_stream(kg_conn: sqlite3.Connection):
             f"Document summary:\n\"\"\"\n{row['summary'][:6000]}\n\"\"\"\n\n"
             "Extract companies, businesses, and their relationships as JSON."
         )
+        print(f"\n[zsxq {i}/{total}] MiniMax prompt — SYSTEM: {_PDF_SYSTEM[:120]}… USER: {user_msg[:200]}…\n")
         try:
             reply, elapsed, _ = call_minimax(
                 messages=[

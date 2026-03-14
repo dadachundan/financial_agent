@@ -262,7 +262,7 @@
               <th>Business</th><th>Company</th>
               <th class="comment-col">Comment</th>
               <th class="expl-col">Explanation</th>
-              <th>Image</th><th>Source</th><th>Rating</th><th>Created</th><th>Action</th>
+              <th>Source</th><th>Rating</th><th>Created</th><th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -275,12 +275,6 @@
                 data-md="{{r.explanation|e}}"
                 title="Click to view / edit explanation"
                 onclick="openExplEditor('/bc/explanation/{{r.id}}','expl-cell-bc-{{r.id}}',this.dataset.md)"></td>
-            <td>
-              {% if r.image_path %}
-              <img src="/uploads/{{r.image_path}}" class="img-thumb"
-                   onclick="showImg('/uploads/{{r.image_path}}')" title="Click to enlarge">
-              {% else %}—{% endif %}
-            </td>
             <td>
               {% if r.source_url %}
               <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem">link</a>
@@ -404,7 +398,7 @@
               <th>From</th><th>To</th>
               <th class="comment-col">Comment</th>
               <th class="expl-col">Explanation</th>
-              <th>Image</th><th>Source</th><th>Rating</th><th>Created</th><th>Action</th>
+              <th>Source</th><th>Rating</th><th>Created</th><th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -417,12 +411,6 @@
                 data-md="{{r.explanation|e}}"
                 title="Click to view / edit explanation"
                 onclick="openExplEditor('/bb/explanation/{{r.id}}','expl-cell-bb-{{r.id}}',this.dataset.md)"></td>
-            <td>
-              {% if r.image_path %}
-              <img src="/uploads/{{r.image_path}}" class="img-thumb"
-                   onclick="showImg('/uploads/{{r.image_path}}')" title="Click to enlarge">
-              {% else %}—{% endif %}
-            </td>
             <td>
               {% if r.source_url %}
               <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem">link</a>

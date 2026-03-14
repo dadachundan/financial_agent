@@ -159,11 +159,11 @@ window.setExplValue = window.setExplValue || function(id, val) {
   document.getElementById(id).value = val;
 };
 
-async function callMine(url, entityA, entityB, commentId, explId, errId, spinnerId) {
+async function callMine(url, entityA, entityB, commentId, explId, urlFormId, errId, spinnerId) {
   const spinner = document.getElementById(spinnerId);
   const errDiv  = document.getElementById(errId);
   spinner.classList.remove("d-none");
-  errDiv.textContent = "";
+  errDiv.innerHTML = "";
   try {
     const resp = await fetch("/api/summarize", {
       method:"POST",
@@ -174,6 +174,8 @@ async function callMine(url, entityA, entityB, commentId, explId, errId, spinner
     if (data.error) { errDiv.textContent = data.error; return; }
     document.getElementById(commentId).value = data.comment || "";
     window.setExplValue(explId, data.explanation || "");
+    if (urlFormId) document.getElementById(urlFormId).value = url;
+    _showMinePrompt(errDiv, data._system_prompt, data._user_prompt);
   } catch(e) {
     errDiv.textContent = "Network error: " + e.message;
   } finally {
@@ -181,12 +183,24 @@ async function callMine(url, entityA, entityB, commentId, explId, errId, spinner
   }
 }
 
+function _showMinePrompt(container, systemPrompt, userPrompt) {
+  if (!systemPrompt && !userPrompt) return;
+  const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  container.innerHTML =
+    `<details style="font-size:.75rem;margin-top:4px">` +
+    `<summary style="cursor:pointer;color:#6c757d">🔍 Prompt sent to MiniMax</summary>` +
+    `<div style="background:#f6f8fa;border-radius:4px;padding:8px;margin-top:4px;` +
+    `white-space:pre-wrap;word-break:break-word;font-family:monospace;color:#333">` +
+    `<strong>SYSTEM:</strong>\n${esc(systemPrompt||'')}\n\n<strong>USER:</strong>\n${esc(userPrompt||'')}` +
+    `</div></details>`;
+}
+
 function mineBC() {
   callMine(
     document.getElementById("bc-mine-url").value,
     document.getElementById("bc-mine-biz").value,
     document.getElementById("bc-mine-co").value,
-    "bc-form-comment", "bc-form-expl", "bc-mine-err", "bc-mine-spinner"
+    "bc-form-comment", "bc-form-expl", "bc-form-url", "bc-mine-err", "bc-mine-spinner"
   );
 }
 function mineBB() {
@@ -194,7 +208,7 @@ function mineBB() {
     document.getElementById("bb-mine-url").value,
     document.getElementById("bb-mine-from").value,
     document.getElementById("bb-mine-to").value,
-    "bb-form-comment", "bb-form-expl", "bb-mine-err", "bb-mine-spinner"
+    "bb-form-comment", "bb-form-expl", "bb-form-url", "bb-mine-err", "bb-mine-spinner"
   );
 }
 
