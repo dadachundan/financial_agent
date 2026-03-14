@@ -208,7 +208,27 @@ def bb_delete(rid):
     return redirect(url_for("index", tab="bb"))
 
 
-# ── Explanation inline-edit (AJAX) ────────────────────────────────────────────
+# ── Comment & Explanation inline-edit (AJAX) ──────────────────────────────────
+
+@app.route("/bc/comment/<int:rid>", methods=["POST"])
+def bc_comment(rid):
+    comment = request.form.get("comment", "").strip()
+    with kg_db.get_db() as conn:
+        conn.execute(
+            "UPDATE business_company SET comment=? WHERE id=?", (comment, rid)
+        )
+    return "", 204
+
+
+@app.route("/bb/comment/<int:rid>", methods=["POST"])
+def bb_comment(rid):
+    comment = request.form.get("comment", "").strip()
+    with kg_db.get_db() as conn:
+        conn.execute(
+            "UPDATE business_business SET comment=? WHERE id=?", (comment, rid)
+        )
+    return "", 204
+
 
 @app.route("/bc/explanation/<int:rid>", methods=["POST"])
 def bc_explanation(rid):
