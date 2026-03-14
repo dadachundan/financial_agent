@@ -14,5 +14,19 @@
       "runtimeArgs": ["/Users/x/projects/financial_agent/fetch_financial_report.py", "--port", "8081"],
       "port": 8081
     }
+  ,
+    {
+      "name": "knowledge-graph",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["/Users/x/projects/financial_agent/.claude/worktrees/cranky-cohen/knowledge_graph.py"],
+      "port": 5001
+    }
+  ,
+    {
+      "name": "cninfo-reports",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["/Users/x/projects/financial_agent/.claude/worktrees/cranky-cohen/fetch_cninfo_report.py", "--port", "8082"],
+      "port": 8082
+    }
   ]
 }
