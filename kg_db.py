@@ -65,6 +65,20 @@ CREATE TABLE IF NOT EXISTS business_business (
     source_url    TEXT    NOT NULL DEFAULT '',
     UNIQUE(business_from, business_to)
 );
+
+-- Two companies compete / are related
+CREATE TABLE IF NOT EXISTS company_company (
+    id           INTEGER PRIMARY KEY AUTOINCREMENT,
+    company_from INTEGER NOT NULL REFERENCES companies(id) ON DELETE CASCADE,
+    company_to   INTEGER NOT NULL REFERENCES companies(id) ON DELETE CASCADE,
+    comment      TEXT    NOT NULL DEFAULT '',
+    explanation  TEXT    NOT NULL DEFAULT '',
+    source_url   TEXT    NOT NULL DEFAULT '',
+    source_text  TEXT    NOT NULL DEFAULT '',
+    rating       INTEGER NOT NULL DEFAULT 0,
+    created_at   TEXT,
+    UNIQUE(company_from, company_to)
+);
 """
 
 _MIGRATIONS = [
@@ -86,6 +100,9 @@ _MIGRATIONS = [
        BEGIN UPDATE business_business SET created_at = datetime('now') WHERE id = NEW.id; END""",
     "ALTER TABLE business_company ADD COLUMN source_text TEXT NOT NULL DEFAULT ''",
     "ALTER TABLE business_business ADD COLUMN source_text TEXT NOT NULL DEFAULT ''",
+    """CREATE TRIGGER IF NOT EXISTS cc_set_created_at
+       AFTER INSERT ON company_company WHEN NEW.created_at IS NULL
+       BEGIN UPDATE company_company SET created_at = datetime('now') WHERE id = NEW.id; END""",
 ]
 
 
