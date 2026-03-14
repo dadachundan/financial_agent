@@ -208,6 +208,42 @@ def bb_delete(rid):
     return redirect(url_for("index", tab="bb"))
 
 
+# ── Company ↔ Company CRUD ────────────────────────────────────────────────────
+
+@app.route("/cc/add", methods=["POST"])
+def cc_add():
+    cfrom       = int(request.form["company_from"])
+    cto         = int(request.form["company_to"])
+    comment     = request.form.get("comment", "").strip()
+    explanation = request.form.get("explanation", "").strip()
+    source_url  = request.form.get("source_url", "").strip()
+    source_text = request.form.get("source_text", "").strip()
+    rating      = kg_services._parse_rating(request.form.get("rating"))
+    with kg_db.get_db() as conn:
+        conn.execute(
+            "INSERT OR IGNORE INTO company_company "
+            "(company_from, company_to, comment, explanation, source_url, source_text, rating) "
+            "VALUES (?,?,?,?,?,?,?)",
+            (cfrom, cto, comment, explanation, source_url, source_text, rating),
+        )
+    return redirect(url_for("index", tab="cc"))
+
+
+@app.route("/cc/rate/<int:rid>", methods=["POST"])
+def cc_rate(rid):
+    rating = kg_services._parse_rating(request.form.get("rating"))
+    with kg_db.get_db() as conn:
+        conn.execute("UPDATE company_company SET rating=? WHERE id=?", (rating, rid))
+    return "", 204
+
+
+@app.route("/cc/delete/<int:rid>", methods=["POST"])
+def cc_delete(rid):
+    with kg_db.get_db() as conn:
+        conn.execute("DELETE FROM company_company WHERE id=?", (rid,))
+    return redirect(url_for("index", tab="cc"))
+
+
 # ── Comment & Explanation inline-edit (AJAX) ──────────────────────────────────
 
 @app.route("/bc/comment/<int:rid>", methods=["POST"])
@@ -250,6 +286,26 @@ def bb_explanation(rid):
     return "", 204
 
 
+@app.route("/cc/comment/<int:rid>", methods=["POST"])
+def cc_comment(rid):
+    comment = request.form.get("comment", "").strip()
+    with kg_db.get_db() as conn:
+        conn.execute(
+            "UPDATE company_company SET comment=? WHERE id=?", (comment, rid)
+        )
+    return "", 204
+
+
+@app.route("/cc/explanation/<int:rid>", methods=["POST"])
+def cc_explanation(rid):
+    explanation = request.form.get("explanation", "").strip()
+    with kg_db.get_db() as conn:
+        conn.execute(
+            "UPDATE company_company SET explanation=? WHERE id=?", (explanation, rid)
+        )
+    return "", 204
+
+
 # ── API: LLM summarisation ─────────────────────────────────────────────────────
 
 @app.route("/api/summarize", methods=["POST"])
@@ -271,6 +327,41 @@ def api_summarize():
         return jsonify(result)
     except urllib.error.URLError as exc:
         return jsonify({"error": f"Could not fetch URL: {exc}"}), 502
+    except Exception as exc:
+        return jsonify({"error": f"Error: {exc}"}), 500
+
+
+# ── API: BC comparison ────────────────────────────────────────────────────────
+
+@app.route("/api/bc-compare", methods=["POST"])
+def api_bc_compare():
+    """
+    POST JSON { "ids": [1, 2, 3] }
+    Returns   { "markdown": "...", "_user_prompt": "..." }
+    """
+    data = request.get_json(force=True)
+    ids  = [int(i) for i in (data.get("ids") or []) if str(i).isdigit()]
+    if len(ids) < 2:
+        return jsonify({"error": "Select at least 2 rows to compare"}), 400
+
+    with kg_db.get_db() as conn:
+        placeholders = ",".join("?" * len(ids))
+        rows = conn.execute(f"""
+            SELECT bc.id, b.name AS business_name, c.name AS company_name,
+                   bc.comment, bc.explanation, bc.source_text
+            FROM business_company bc
+            JOIN businesses b ON b.id = bc.business_id
+            JOIN companies  c ON c.id = bc.company_id
+            WHERE bc.id IN ({placeholders})
+            ORDER BY b.name, c.name
+        """, ids).fetchall()
+    rows_list = [dict(r) for r in rows]
+
+    try:
+        result = kg_services.llm_compare_bc(rows_list)
+        return jsonify(result)
+    except RuntimeError as exc:
+        return jsonify({"error": str(exc)}), 503 if "API key" in str(exc) else 500
     except Exception as exc:
         return jsonify({"error": f"Error: {exc}"}), 500
 
@@ -392,11 +483,20 @@ def _render_main(active_tab: str = "bc"):
         JOIN businesses bt ON bt.id = bb.business_to
         ORDER BY bb.created_at DESC, bf.name, bt.name
     """).fetchall()
+    cc_links = conn.execute("""
+        SELECT cc.id, cf.name AS from_name, ct.name AS to_name,
+               cc.comment, cc.explanation, cc.source_url, cc.rating,
+               cc.created_at, cc.source_text
+        FROM company_company cc
+        JOIN companies cf ON cf.id = cc.company_from
+        JOIN companies ct ON ct.id = cc.company_to
+        ORDER BY cc.created_at DESC, cf.name, ct.name
+    """).fetchall()
     graph_json = kg_models.build_graph_json(conn)
     conn.close()
 
     sources = sorted(set(
-        r["source_url"] for r in list(bc_links) + list(bb_links) if r["source_url"]
+        r["source_url"] for r in list(bc_links) + list(bb_links) + list(cc_links) if r["source_url"]
     ))
     return render_template(
         "index.html",
@@ -404,6 +504,7 @@ def _render_main(active_tab: str = "bc"):
         businesses=businesses,
         bc_links=bc_links,
         bb_links=bb_links,
+        cc_links=cc_links,
         graph_json=graph_json,
         active_tab=active_tab,
         sources=sources,

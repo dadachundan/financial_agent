@@ -31,6 +31,10 @@ EDGE_STYLE = {
         "color":  {"color": "#e64545", "highlight": "#e64545"},
         "dashes": True,
     },
+    "cc": {
+        "color":  {"color": "#6f42c1", "highlight": "#6f42c1"},
+        "dashes": [4, 3],
+    },
 }
 
 
@@ -72,6 +76,15 @@ def build_graph_json(conn: sqlite3.Connection) -> str:
             "to":    f"b{row['business_to']}",
             "title": row["comment"],
             **EDGE_STYLE["bb"],
+        })
+
+    for row in conn.execute(
+            "SELECT company_from, company_to, comment FROM company_company"):
+        edges.append({
+            "from":  f"c{row['company_from']}",
+            "to":    f"c{row['company_to']}",
+            "title": row["comment"],
+            **EDGE_STYLE["cc"],
         })
 
     return json.dumps({"nodes": nodes, "edges": edges})
