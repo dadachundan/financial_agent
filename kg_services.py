@@ -37,6 +37,15 @@ _SUMMARIZE_SYSTEM = (
     "Return only valid JSON, no markdown fences."
 )
 
+_COMPARE_SYSTEM = (
+    "You are a tech-industry analyst. Given several company–business relationship descriptions, "
+    "compare the companies' competitive positions in those business domains. "
+    "Return a concise structured Markdown report with sections: "
+    "## Overview, ## Competitive Strengths & Weaknesses (per company), ## Market Positioning Summary. "
+    "Be factual and cite specific details from the provided text. "
+    "Return only Markdown, no JSON or code fences."
+)
+
 _PDF_SYSTEM = (
     "You are a financial-document analyser specialising in the tech/semiconductor industry. "
     "Given document text, extract:\n"
@@ -145,6 +154,47 @@ def llm_summarize_url(url: str, entity_a: str, entity_b: str) -> dict:
     result["_user_prompt"]   = user_msg
     result["source_text"]    = text
     return result
+
+
+# ── BC comparison ────────────────────────────────────────────────────────────
+
+def llm_compare_bc(rows: list) -> dict:
+    """
+    Compare multiple BC relationships using MiniMax.
+    rows: list of dicts with keys business_name, company_name, comment, explanation, source_text.
+    Returns {"markdown": "...", "_user_prompt": "..."}.
+    """
+    if not MINIMAX_API_KEY:
+        raise RuntimeError("MINIMAX_API_KEY not configured")
+
+    sections = []
+    for i, r in enumerate(rows, 1):
+        text = (r.get("source_text") or r.get("explanation") or "").strip()
+        comment = (r.get("comment") or "").strip()
+        sections.append(
+            f"[{i}] {r['company_name']} in {r['business_name']}\n"
+            f"Comment: {comment}\n"
+            f"Article text: {text[:1500] if text else '(none)'}"
+        )
+
+    user_msg = "Relationships to compare:\n\n" + "\n\n---\n\n".join(sections)
+
+    print("\n" + "=" * 60)
+    print("COMPARE BC — MiniMax prompt")
+    print("=" * 60)
+    print("[SYSTEM]", _COMPARE_SYSTEM)
+    print("[USER]",   user_msg[:600])
+    print("=" * 60 + "\n")
+
+    reply, _, _ = call_minimax(
+        messages=[
+            {"role": "system", "name": "MiniMax AI", "content": _COMPARE_SYSTEM},
+            {"role": "user",   "name": "User",       "content": user_msg},
+        ],
+        temperature=0.3,
+        max_completion_tokens=1024,
+    )
+    return {"markdown": reply.strip(), "_user_prompt": user_msg}
 
 
 # ── PDF entity extraction ─────────────────────────────────────────────────────

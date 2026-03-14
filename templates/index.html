@@ -108,7 +108,8 @@
       <span class="dot" style="background:#0d6efd"></span>Company<br>
       <span class="dot" style="background:#fd7e14"></span>Business<br>
       <span style="border-bottom:2px solid #888;display:inline-block;width:20px;margin-right:5px;vertical-align:middle"></span>Biz → Company<br>
-      <span style="border-bottom:2px dashed #e64545;display:inline-block;width:20px;margin-right:5px;vertical-align:middle"></span>Biz → Biz
+      <span style="border-bottom:2px dashed #e64545;display:inline-block;width:20px;margin-right:5px;vertical-align:middle"></span>Biz → Biz<br>
+      <span style="border-bottom:2px dashed #6f42c1;display:inline-block;width:20px;margin-right:5px;vertical-align:middle"></span>Co → Co
     </div>
   </div>
 
@@ -153,6 +154,11 @@
     <li class="nav-item">
       <a class="nav-link {% if active_tab=='bb' %}active{% endif %}" data-bs-toggle="tab" href="#tab-bb">
         Business → Business
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link {% if active_tab=='cc' %}active{% endif %}" data-bs-toggle="tab" href="#tab-cc">
+        Company → Company
       </a>
     </li>
     <li class="nav-item">
@@ -266,6 +272,7 @@
         <table class="table table-bordered table-hover table-sm">
           <thead class="table-light">
             <tr>
+              <th style="width:32px"><input type="checkbox" id="bc-select-all" title="Select all visible rows"></th>
               <th>Business</th><th>Company</th>
               <th class="comment-col">Comment</th>
               <th class="expl-col">Explanation</th>
@@ -275,6 +282,9 @@
           <tbody>
           {% for r in bc_links %}
           <tr data-source="{{r.source_url|e}}" data-rating="{{r.rating}}">
+            <td onclick="event.stopPropagation()">
+              <input type="checkbox" class="bc-row-select" data-id="{{r.id}}">
+            </td>
             <td><span class="badge-business">{{r.business_name}}</span></td>
             <td><span class="badge-company">{{r.company_name}}</span></td>
             <td id="comment-cell-bc-{{r.id}}" class="comment-col"
@@ -320,6 +330,17 @@
           {% endfor %}
           </tbody>
         </table>
+      </div>
+
+      <!-- Compare selected bar -->
+      <div id="bc-compare-bar" class="d-none d-flex align-items-center gap-2 mt-2 flex-wrap">
+        <span id="bc-select-count" class="text-muted" style="font-size:.82rem"></span>
+        <button class="btn btn-sm btn-outline-primary" onclick="compareBC()">
+          <span id="bc-compare-spinner" class="spinner-border spinner-border-sm d-none"></span>
+          🤖 Compare selected with AI
+        </button>
+        <button class="btn btn-sm btn-outline-secondary" onclick="bcClearSelection()">Clear</button>
+        <span id="bc-compare-err" class="text-danger small"></span>
       </div>
     </div><!-- /tab-bc -->
 
@@ -471,6 +492,155 @@
         </table>
       </div>
     </div><!-- /tab-bb -->
+
+    <!-- ══ Tab: Company ↔ Company ══ -->
+    <div class="tab-pane fade {% if active_tab=='cc' %}show active{% endif %}" id="tab-cc">
+      <h5>Company → Company relationships</h5>
+
+      <!-- Mine from URL -->
+      <div class="mine-panel">
+        <h6>🔍 Mine from web news (optional)</h6>
+        <div class="row g-2 align-items-end">
+          <div class="col-3">
+            <label class="form-label mb-1" style="font-size:.78rem">News article URL</label>
+            <input id="cc-mine-url" class="form-control form-control-sm" placeholder="https://…">
+          </div>
+          <div class="col-auto">
+            <label class="form-label mb-1" style="font-size:.78rem">From Company</label>
+            <select id="cc-mine-from" class="form-select form-select-sm">
+              {% for c in companies %}<option value="{{c.name}}">{{c.name}}</option>{% endfor %}
+            </select>
+          </div>
+          <div class="col-auto">
+            <label class="form-label mb-1" style="font-size:.78rem">To Company</label>
+            <select id="cc-mine-to" class="form-select form-select-sm">
+              {% for c in companies %}<option value="{{c.name}}">{{c.name}}</option>{% endfor %}
+            </select>
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-sm btn-secondary" onclick="mineCC()">
+              <span id="cc-mine-spinner" class="spinner-border spinner-border-sm d-none"></span>
+              Summarise with AI
+            </button>
+          </div>
+          <div class="col-auto text-danger small" id="cc-mine-err"></div>
+        </div>
+      </div>
+
+      <!-- Add form -->
+      <form method="post" action="/cc/add" enctype="multipart/form-data"
+            class="border rounded p-3 mb-3" style="background:#fafafa">
+        <div class="row g-2 mb-2">
+          <div class="col-auto">
+            <label class="form-label mb-1" style="font-size:.78rem">From Company</label>
+            <select name="company_from" id="cc-form-from" class="form-select form-select-sm" required>
+              {% for c in companies %}<option value="{{c.id}}">{{c.name}}</option>{% endfor %}
+            </select>
+          </div>
+          <div class="col-auto">
+            <label class="form-label mb-1" style="font-size:.78rem">To Company</label>
+            <select name="company_to" id="cc-form-to" class="form-select form-select-sm" required>
+              {% for c in companies %}<option value="{{c.id}}">{{c.name}}</option>{% endfor %}
+            </select>
+          </div>
+          <div class="col-4">
+            <label class="form-label mb-1" style="font-size:.78rem">Short comment <span class="text-danger">*</span></label>
+            <input name="comment" id="cc-form-comment" class="form-control form-control-sm"
+                   placeholder="One-liner summary" required>
+          </div>
+          <div class="col-auto">
+            <label class="form-label mb-1" style="font-size:.78rem">Source URL (optional)</label>
+            <input name="source_url" id="cc-form-url" class="form-control form-control-sm"
+                   placeholder="https://…">
+          </div>
+          <div class="col-auto">
+            <label class="form-label mb-1" style="font-size:.78rem">Rating</label>
+            <select name="rating" class="form-select form-select-sm">
+              <option value="0">—</option>
+              <option value="1">★</option>
+              <option value="2">★★</option>
+              <option value="3">★★★</option>
+              <option value="4">★★★★</option>
+              <option value="5">★★★★★</option>
+            </select>
+          </div>
+        </div>
+        <div class="row g-2 align-items-end">
+          <div class="col-8 form-expl-mde">
+            <label class="form-label mb-1" style="font-size:.78rem">Detailed explanation (optional) — Markdown supported, paste images</label>
+            <textarea name="explanation" id="cc-form-expl"
+                      placeholder="Multi-paragraph detail…"></textarea>
+          </div>
+        </div>
+        <div class="row g-2 align-items-end mt-1">
+          <div class="col-auto">
+            <button class="btn btn-sm btn-primary">Add link</button>
+          </div>
+        </div>
+        <input type="hidden" name="source_text" id="cc-form-source-text">
+      </form>
+
+      <!-- Table -->
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover table-sm">
+          <thead class="table-light">
+            <tr>
+              <th>From</th><th>To</th>
+              <th class="comment-col">Comment</th>
+              <th class="expl-col">Explanation</th>
+              <th>Source</th><th>Rating</th><th>Created</th><th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for r in cc_links %}
+          <tr data-source="{{r.source_url|e}}" data-rating="{{r.rating}}">
+            <td><span class="badge-company">{{r.from_name}}</span></td>
+            <td><span class="badge-company">{{r.to_name}}</span></td>
+            <td id="comment-cell-cc-{{r.id}}" class="comment-col"
+                data-val="{{r.comment|e}}"
+                title="Click to edit comment"
+                onclick="openCommentEditor('/cc/comment/{{r.id}}','comment-cell-cc-{{r.id}}',this.dataset.val)"
+                style="cursor:pointer"
+                onmouseenter="this.style.background='rgba(0,0,0,.03)'"
+                onmouseleave="this.style.background=''">{{r.comment}}</td>
+            <td id="expl-cell-cc-{{r.id}}" class="expl-col"
+                data-md="{{r.explanation|e}}"
+                title="Click to view / edit explanation"
+                onclick="openExplEditor('/cc/explanation/{{r.id}}','expl-cell-cc-{{r.id}}',this.dataset.md)"></td>
+            <td>
+              {% if r.source_url %}
+              <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem">link</a>
+              {% else %}—{% endif %}
+              {% if r.source_text %}
+              <details style="font-size:.72rem;margin-top:2px">
+                <summary style="cursor:pointer;color:#6c757d">📄 article text</summary>
+                <div style="max-height:120px;overflow-y:auto;white-space:pre-wrap;word-break:break-word;background:#f6f8fa;padding:4px;border-radius:4px;font-family:monospace;color:#333;margin-top:3px">{{r.source_text|e}}</div>
+              </details>
+              {% endif %}
+            </td>
+            <td style="white-space:nowrap">
+              <select style="font-size:.78rem;border:none;background:transparent;cursor:pointer"
+                      onchange="rateCC({{r.id}}, this.value, this)">
+                <option value="0" {% if r.rating==0 %}selected{% endif %}>—</option>
+                <option value="1" {% if r.rating==1 %}selected{% endif %}>★</option>
+                <option value="2" {% if r.rating==2 %}selected{% endif %}>★★</option>
+                <option value="3" {% if r.rating==3 %}selected{% endif %}>★★★</option>
+                <option value="4" {% if r.rating==4 %}selected{% endif %}>★★★★</option>
+                <option value="5" {% if r.rating==5 %}selected{% endif %}>★★★★★</option>
+              </select>
+            </td>
+            <td style="font-size:.75rem;color:#888;white-space:nowrap">{{r.created_at[:10] if r.created_at else '—'}}</td>
+            <td>
+              <form method="post" action="/cc/delete/{{r.id}}" style="display:inline">
+                <button class="btn btn-sm btn-outline-danger">✕</button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div><!-- /tab-cc -->
 
     <!-- ══ Tab: Manage Entities ══ -->
     <div class="tab-pane fade {% if active_tab=='entities' %}show active{% endif %}" id="tab-entities">
@@ -690,6 +860,27 @@
   </div>
 </div>
 
+<!-- BC Compare result modal -->
+<div class="modal fade" id="bcCompareModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🤖 Company Comparison</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="bcCompareBody"
+           style="font-size:.92rem;line-height:1.75;word-break:break-word"></div>
+      <div class="modal-footer">
+        <details style="flex:1;font-size:.72rem;text-align:left">
+          <summary style="cursor:pointer;color:#6c757d">🔍 Prompt sent to MiniMax</summary>
+          <pre id="bcComparePrompt" style="white-space:pre-wrap;word-break:break-word;font-size:.72rem;color:#555;margin-top:4px;max-height:200px;overflow-y:auto"></pre>
+        </details>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Comment editor modal -->
 <div class="modal fade" id="commentEditModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
@@ -878,7 +1069,7 @@ function _renderExplCell(cell) {
 document.querySelectorAll('[id^="expl-cell-"]').forEach(_renderExplCell);
 
 // ── EasyMDE for "Add link" explanation fields ────────────────────────────────
-let _bcAddMDE = null, _bbAddMDE = null;
+let _bcAddMDE = null, _bbAddMDE = null, _ccAddMDE = null;
 
 function _addMDEOpts(elementId) {
   return {
@@ -905,6 +1096,13 @@ function _initBbMDE() {
     document.getElementById('bb-form-expl').value = _bbAddMDE.value();
   });
 }
+function _initCcMDE() {
+  if (_ccAddMDE) return;
+  _ccAddMDE = new EasyMDE(_addMDEOpts('cc-form-expl'));
+  document.querySelector('form[action="/cc/add"]').addEventListener('submit', () => {
+    document.getElementById('cc-form-expl').value = _ccAddMDE.value();
+  });
+}
 
 // Init whichever tab is currently active, lazily init + refresh on tab show
 _initBcMDE();  // BC is the default active tab
@@ -915,11 +1113,15 @@ document.querySelector('a[href="#tab-bc"]')?.addEventListener('shown.bs.tab', ()
 document.querySelector('a[href="#tab-bb"]')?.addEventListener('shown.bs.tab', () => {
   _initBbMDE(); _bbAddMDE.codemirror.refresh();
 });
+document.querySelector('a[href="#tab-cc"]')?.addEventListener('shown.bs.tab', () => {
+  _initCcMDE(); _ccAddMDE.codemirror.refresh();
+});
 
 // Override setExplValue so AI-mine fills EasyMDE instead of raw textarea
 window.setExplValue = function(id, val) {
   if (id === 'bc-form-expl' && _bcAddMDE) { _bcAddMDE.value(val); return; }
   if (id === 'bb-form-expl' && _bbAddMDE) { _bbAddMDE.value(val); return; }
+  if (id === 'cc-form-expl' && _ccAddMDE) { _ccAddMDE.value(val); return; }
   document.getElementById(id).value = val;
 };
 
