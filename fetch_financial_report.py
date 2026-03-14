@@ -26,11 +26,13 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 from flask import Flask, Response, abort, jsonify, render_template_string, request, send_file
+import md_comment_widget as mcw
 
 # ── Paths & config ────────────────────────────────────────────────────────────
 
 SCRIPT_DIR  = Path(__file__).parent
 REPORTS_DIR = SCRIPT_DIR / "financial_reports"
+UPLOADS_DIR = SCRIPT_DIR / "uploads"
 DB_FILE     = SCRIPT_DIR / "financial_reports.db"
 
 REPORTS_DIR.mkdir(exist_ok=True)
@@ -43,6 +45,7 @@ _SEC_HEADERS = {
 }
 
 app      = Flask(__name__)
+app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
 _DB_PATH = DB_FILE
 
 
@@ -68,12 +71,18 @@ def init_db() -> None:
                 local_path       TEXT,
                 accession_no     TEXT    UNIQUE,
                 file_size        INTEGER,
+                comment          TEXT,
                 created_at       TEXT    DEFAULT (datetime('now'))
             )
         """)
         conn.execute(
             "CREATE INDEX IF NOT EXISTS idx_reports_ticker ON reports(ticker)"
         )
+        # Migration: add comment column to existing DBs
+        try:
+            conn.execute("ALTER TABLE reports ADD COLUMN comment TEXT")
+        except Exception:
+            pass  # column already exists
 
 
 # ── SEC EDGAR helpers ─────────────────────────────────────────────────────────
@@ -439,11 +448,11 @@ def _run_download(ticker: str, forms: list[str]):
                         continue
 
                     # Build full URL for the exhibit file
-                    href = ex["href"]
+                    href  = ex["href"]
+                    clean = acc.replace("-", "")   # always needed for base_url below
                     if href.startswith("/"):
                         pdf_url = f"https://www.sec.gov{href}"
                     else:
-                        clean   = acc.replace("-", "")
                         pdf_url = (
                             f"https://www.sec.gov/Archives/edgar/data"
                             f"/{int(cik)}/{clean}/{ex['filename']}"
@@ -514,6 +523,7 @@ TEMPLATE = """\
   <title>US Financial Reports</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  __MCW_HEAD__
   <style>
     body            { background:#f8f9fa; font-size:.9rem; }
     h1              { font-size:1.5rem; }
@@ -532,6 +542,7 @@ TEMPLATE = """\
     .bp-link:hover { opacity:.75; }
     #search         { max-width:280px; }
     code            { font-size:.78rem; }
+    __MCW_CSS__
   </style>
 </head>
 <body>
@@ -603,6 +614,7 @@ TEMPLATE = """\
           <th>Form</th>
           <th>Filed</th>
           <th>Size</th>
+          <th>Comment</th>
           <th></th>
         </tr>
       </thead>
@@ -614,12 +626,18 @@ TEMPLATE = """\
   </div>
 </div>
 
+__MCW_MODALS__
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+__MCW_FOOTER__
 <script>
 let _rows    = [];
 let _actTick = null;
 
 // ── helpers ──────────────────────────────────────────────────────────────────
+function htmlEsc(s) {
+  return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
 function fmtSize(b) {
   if (!b) return '—';
   return b < 1048576 ? Math.round(b/1024)+'&nbsp;KB' : (b/1048576).toFixed(1)+'&nbsp;MB';
@@ -690,11 +708,16 @@ function renderRows(rows) {
       <td><span class="badge bp ${badgeCls(r.form_type)}">${r.form_type||'—'}</span></td>
       <td class="text-muted">${r.filed_date||'—'}</td>
       <td class="text-muted">${fmtSize(r.file_size)}</td>
+      <td id="comment-cell-${r.id}" style="max-width:160px">
+        <span class="comment-preview" data-comment="${htmlEsc(r.comment)}"
+              title="Click to preview / edit"></span>
+      </td>
       <td class="text-end pe-2 text-nowrap">
         <button class="btn btn-outline-danger del-btn"
                 onclick="deleteReport(${r.id},this)">🗑</button>
       </td>
     </tr>`).join('');
+  if (typeof renderAllCommentCells === 'function') renderAllCommentCells();
 }
 
 // ── download ─────────────────────────────────────────────────────────────────
@@ -761,10 +784,16 @@ function deleteReport(id) {
 
 // init
 loadReports();
+
+__MCW_JS__
 </script>
 </body>
 </html>
 """
+
+# Apply shared markdown comment widget substitutions
+for _k, _v in mcw.TEMPLATE_PARTS.items():
+    TEMPLATE = TEMPLATE.replace(_k, _v)
 
 
 # ── Flask routes ──────────────────────────────────────────────────────────────
@@ -858,6 +887,19 @@ def serve_file(report_id: int):
             pass  # fall through to plain send_file
 
     return send_file(path)
+
+
+@app.route("/comment/<int:report_id>", methods=["POST"])
+def set_comment(report_id: int):
+    comment = request.form.get("comment", "").strip()
+    conn = get_conn()
+    conn.execute(
+        "UPDATE reports SET comment = ? WHERE id = ?",
+        (comment or None, report_id),
+    )
+    conn.commit()
+    conn.close()
+    return "", 204
 
 
 @app.route("/report/<int:report_id>", methods=["DELETE"])
