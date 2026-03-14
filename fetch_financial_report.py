@@ -435,6 +435,32 @@ def _run_download(ticker: str, forms: list[str]):
             ]
             target_8k.sort(key=lambda f: f["filingDate"], reverse=True)
 
+        # ── Date-based pre-filter ─────────────────────────────────────────────
+        # Query the newest filed_date we already have for each form type.
+        # Filings at or before that date are already in the library — skip them
+        # immediately instead of doing a per-accession DB lookup for each one.
+        _max_rows = conn.execute(
+            "SELECT form_type, MAX(filed_date) FROM reports WHERE ticker=? GROUP BY form_type",
+            (tic,),
+        ).fetchall()
+        _max_by_form: dict[str, str] = {r[0]: r[1] for r in _max_rows}
+
+        def _date_cutoff(form_type: str) -> str | None:
+            """Return the latest filed_date we already have for this form type."""
+            return _max_by_form.get(form_type) or _max_by_form.get(form_type.replace("/A", ""))
+
+        before_reg = len(target)
+        before_8k  = len(target_8k)
+        target    = [f for f in target    if not _date_cutoff(f["form"]) or f["filingDate"] > _date_cutoff(f["form"])]
+        target_8k = [f for f in target_8k if not _date_cutoff(f["form"]) or f["filingDate"] > _date_cutoff(f["form"])]
+        skipped_by_date = (before_reg - len(target)) + (before_8k - len(target_8k))
+        if skipped_by_date:
+            yield _sse(
+                f"📅  Skipping {skipped_by_date} filing(s) already in library "
+                f"(filed_date ≤ latest date in DB)"
+            )
+        # ─────────────────────────────────────────────────────────────────────
+
         total_regular = len(target)
         total_8k      = len(target_8k)
         grand_total   = total_regular + total_8k   # approximate (8-K may have 0-N exhibits)
