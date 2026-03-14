@@ -133,14 +133,15 @@ def bc_add():
     comment     = request.form.get("comment", "").strip()
     explanation = request.form.get("explanation", "").strip()
     source_url  = request.form.get("source_url", "").strip()
+    source_text = request.form.get("source_text", "").strip()
     rating      = kg_services._parse_rating(request.form.get("rating"))
     image_path  = kg_services.save_upload(request.files, "image", UPLOAD_DIR)
     with kg_db.get_db() as conn:
         conn.execute(
             "INSERT OR IGNORE INTO business_company "
-            "(business_id, company_id, comment, explanation, image_path, source_url, rating) "
-            "VALUES (?,?,?,?,?,?,?)",
-            (business_id, company_id, comment, explanation, image_path, source_url, rating),
+            "(business_id, company_id, comment, explanation, image_path, source_url, rating, source_text) "
+            "VALUES (?,?,?,?,?,?,?,?)",
+            (business_id, company_id, comment, explanation, image_path, source_url, rating, source_text),
         )
     return redirect(url_for("index"))
 
@@ -174,14 +175,15 @@ def bb_add():
     comment     = request.form.get("comment", "").strip()
     explanation = request.form.get("explanation", "").strip()
     source_url  = request.form.get("source_url", "").strip()
+    source_text = request.form.get("source_text", "").strip()
     rating      = kg_services._parse_rating(request.form.get("rating"))
     image_path  = kg_services.save_upload(request.files, "image", UPLOAD_DIR)
     with kg_db.get_db() as conn:
         conn.execute(
             "INSERT OR IGNORE INTO business_business "
-            "(business_from, business_to, comment, explanation, image_path, source_url, rating) "
-            "VALUES (?,?,?,?,?,?,?)",
-            (bfrom, bto, comment, explanation, image_path, source_url, rating),
+            "(business_from, business_to, comment, explanation, image_path, source_url, rating, source_text) "
+            "VALUES (?,?,?,?,?,?,?,?)",
+            (bfrom, bto, comment, explanation, image_path, source_url, rating, source_text),
         )
     return redirect(url_for("index", tab="bb"))
 
@@ -355,7 +357,7 @@ def _render_main(active_tab: str = "bc"):
     bc_links = conn.execute("""
         SELECT bc.id, b.name AS business_name, c.name AS company_name,
                bc.comment, bc.explanation, bc.image_path, bc.source_url, bc.rating,
-               bc.created_at
+               bc.created_at, bc.source_text
         FROM business_company bc
         JOIN businesses b ON b.id = bc.business_id
         JOIN companies  c ON c.id = bc.company_id
@@ -364,7 +366,7 @@ def _render_main(active_tab: str = "bc"):
     bb_links = conn.execute("""
         SELECT bb.id, bf.name AS from_name, bt.name AS to_name,
                bb.comment, bb.explanation, bb.image_path, bb.source_url, bb.rating,
-               bb.created_at
+               bb.created_at, bb.source_text
         FROM business_business bb
         JOIN businesses bf ON bf.id = bb.business_from
         JOIN businesses bt ON bt.id = bb.business_to

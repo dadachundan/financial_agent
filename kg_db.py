@@ -84,6 +84,8 @@ _MIGRATIONS = [
     """CREATE TRIGGER IF NOT EXISTS bb_set_created_at
        AFTER INSERT ON business_business WHEN NEW.created_at IS NULL
        BEGIN UPDATE business_business SET created_at = datetime('now') WHERE id = NEW.id; END""",
+    "ALTER TABLE business_company ADD COLUMN source_text TEXT NOT NULL DEFAULT ''",
+    "ALTER TABLE business_business ADD COLUMN source_text TEXT NOT NULL DEFAULT ''",
 ]
 
 

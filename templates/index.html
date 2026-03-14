@@ -258,6 +258,7 @@
             <button class="btn btn-sm btn-primary">Add link</button>
           </div>
         </div>
+        <input type="hidden" name="source_text" id="bc-form-source-text">
       </form>
 
       <!-- Table -->
@@ -285,6 +286,12 @@
               {% if r.source_url %}
               <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem">link</a>
               {% else %}—{% endif %}
+              {% if r.source_text %}
+              <details style="font-size:.72rem;margin-top:2px">
+                <summary style="cursor:pointer;color:#6c757d">📄 article text</summary>
+                <div style="max-height:120px;overflow-y:auto;white-space:pre-wrap;word-break:break-word;background:#f6f8fa;padding:4px;border-radius:4px;font-family:monospace;color:#333;margin-top:3px">{{r.source_text|e}}</div>
+              </details>
+              {% endif %}
             </td>
             <td style="white-space:nowrap">
               <select style="font-size:.78rem;border:none;background:transparent;cursor:pointer"
@@ -394,6 +401,7 @@
             <button class="btn btn-sm btn-primary">Add link</button>
           </div>
         </div>
+        <input type="hidden" name="source_text" id="bb-form-source-text">
       </form>
 
       <!-- Table -->
@@ -421,6 +429,12 @@
               {% if r.source_url %}
               <a href="{{r.source_url}}" target="_blank" style="font-size:.75rem">link</a>
               {% else %}—{% endif %}
+              {% if r.source_text %}
+              <details style="font-size:.72rem;margin-top:2px">
+                <summary style="cursor:pointer;color:#6c757d">📄 article text</summary>
+                <div style="max-height:120px;overflow-y:auto;white-space:pre-wrap;word-break:break-word;background:#f6f8fa;padding:4px;border-radius:4px;font-family:monospace;color:#333;margin-top:3px">{{r.source_text|e}}</div>
+              </details>
+              {% endif %}
             </td>
             <td style="white-space:nowrap">
               <select style="font-size:.78rem;border:none;background:transparent;cursor:pointer"
