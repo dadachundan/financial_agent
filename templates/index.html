@@ -68,9 +68,14 @@
     #explModal .CodeMirror        { min-height:240px; font-size:.9rem; }
     /* EasyMDE inside add-link forms (compact) */
     .form-expl-mde .EasyMDEContainer .CodeMirror { min-height:80px; font-size:.82rem; }
-    /* Inline-editable entity description cells */
-    td.entity-desc[contenteditable]:hover { background:#fffbe6; cursor:text; }
-    td.entity-desc[contenteditable]:focus { outline:1px solid #ffc107; background:#fffbe6; }
+    /* Entity description cells */
+    td.entity-desc-cell { cursor:pointer; font-size:.8rem; color:#555; min-width:120px; }
+    td.entity-desc-cell:hover { background:#fffbe6; }
+    .entity-desc-preview img { max-height:3em; border-radius:3px; }
+    .entity-desc-preview p   { margin:0 0 .2em; }
+    /* EasyMDE inside entity-desc modal */
+    #entityDescModal .EasyMDEContainer { height:100%; }
+    #entityDescModal .CodeMirror       { min-height:220px; font-size:.9rem; }
   </style>
 </head>
 <body>
@@ -474,11 +479,11 @@
             {% for c in companies %}
             <tr>
               <td><strong>{{c.name}}</strong></td>
-              <td style="color:#555;font-size:.8rem"
-                  contenteditable="true"
-                  class="entity-desc"
-                  data-url="/company/update/{{c.id}}"
-                  title="Click to edit">{{c.description}}</td>
+              <td class="entity-desc-cell"
+                  onclick="editEntityDesc('/company/update/{{c.id}}', this)"
+                  title="Click to edit">
+                <span class="entity-desc-preview" data-raw="{{c.description|e}}">{{c.description}}</span>
+              </td>
               <td>
                 <form method="post" action="/company/delete/{{c.id}}" style="display:inline">
                   <button class="btn btn-sm btn-outline-danger">✕</button>
@@ -510,11 +515,11 @@
             {% for b in businesses %}
             <tr>
               <td><strong>{{b.name}}</strong></td>
-              <td style="color:#555;font-size:.8rem"
-                  contenteditable="true"
-                  class="entity-desc"
-                  data-url="/business/update/{{b.id}}"
-                  title="Click to edit">{{b.description}}</td>
+              <td class="entity-desc-cell"
+                  onclick="editEntityDesc('/business/update/{{b.id}}', this)"
+                  title="Click to edit">
+                <span class="entity-desc-preview" data-raw="{{b.description|e}}">{{b.description}}</span>
+              </td>
               <td>
                 <form method="post" action="/business/delete/{{b.id}}" style="display:inline">
                   <button class="btn btn-sm btn-outline-danger">✕</button>
@@ -668,6 +673,25 @@
   </div>
 </div>
 
+<!-- Entity description editor modal -->
+<div class="modal fade" id="entityDescModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">✏️ Edit Description</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="min-height:320px">
+        <textarea id="entityDescTextarea"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="entityDescSaveBtn">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="/static/bootstrap.bundle.min.js"></script>
 <script>window.graphData = {{ graph_json | safe }};</script>
 <script src="/static/app.js"></script>
@@ -794,19 +818,83 @@ window.setExplValue = function(id, val) {
   document.getElementById(id).value = val;
 };
 
-// ── Inline editable entity descriptions ──────────────────────────────────────
-document.querySelectorAll('.entity-desc').forEach(function(cell) {
-  cell.addEventListener('blur', function() {
-    fetch(cell.dataset.url, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({description: cell.textContent.trim()}),
-    });
+// ── Entity description editor (EasyMDE + image upload) ───────────────────────
+let _descMDE = null, _descSaveUrl = null, _descCell = null;
+const _entityDescModal = new bootstrap.Modal(document.getElementById('entityDescModal'));
+
+function _getDescMDE() {
+  if (_descMDE) return _descMDE;
+  _descMDE = new EasyMDE({
+    element: document.getElementById('entityDescTextarea'),
+    spellChecker: false,
+    minHeight: '220px',
+    toolbar: [
+      'bold','italic','heading','|',
+      'quote','unordered-list','ordered-list','|',
+      'link','upload-image','|',
+      'preview','side-by-side','fullscreen',
+    ],
+    imageUploadFunction(file, onSuccess, onError) {
+      const fd = new FormData();
+      fd.append('image', file);
+      fetch('/upload-image', { method: 'POST', body: fd })
+        .then(r => r.json())
+        .then(d => d.data ? onSuccess(d.data.filePath) : onError(d.error || 'Upload failed'))
+        .catch(() => onError('Upload failed'));
+    },
   });
-  cell.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') { e.preventDefault(); cell.blur(); }
-    if (e.key === 'Escape') { cell.blur(); }
+  _descMDE.codemirror.on('paste', (cm, e) => {
+    const items = e.clipboardData && e.clipboardData.items;
+    if (!items) return;
+    for (const item of items) {
+      if (item.type.startsWith('image/')) {
+        e.preventDefault();
+        const file = item.getAsFile();
+        const fd = new FormData();
+        fd.append('image', file, 'pasted-image.png');
+        fetch('/upload-image', { method: 'POST', body: fd })
+          .then(r => r.json())
+          .then(d => { if (d.data && d.data.filePath) cm.replaceSelection('![image](' + d.data.filePath + ')'); });
+        break;
+      }
+    }
   });
+  return _descMDE;
+}
+
+window.editEntityDesc = function(saveUrl, cell) {
+  _descSaveUrl = saveUrl;
+  _descCell    = cell;
+  const span   = cell.querySelector('.entity-desc-preview');
+  const mde    = _getDescMDE();
+  mde.value(span ? span.dataset.raw || '' : '');
+  _entityDescModal.show();
+  setTimeout(() => mde.codemirror.refresh(), 320);
+};
+
+document.getElementById('entityDescSaveBtn').addEventListener('click', () => {
+  const val = _descMDE ? _descMDE.value().trim() : '';
+  fetch(_descSaveUrl, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({description: val}),
+  }).then(r => {
+    if (r.ok && _descCell) {
+      const span = _descCell.querySelector('.entity-desc-preview');
+      if (span) {
+        span.dataset.raw = val;
+        span.innerHTML   = val ? marked.parse(val) : '<em class="text-muted">—</em>';
+      }
+      _entityDescModal.hide();
+    }
+  });
+});
+
+// Render existing entity descriptions as markdown on load
+document.querySelectorAll('.entity-desc-preview').forEach(function(span) {
+  const raw = span.dataset.raw || '';
+  if (raw) span.innerHTML = marked.parse(raw);
+  else     span.innerHTML = '<em class="text-muted">—</em>';
 });
 </script>
 </body>
