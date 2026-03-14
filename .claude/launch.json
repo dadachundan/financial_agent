@@ -16,6 +16,13 @@
     }
   ,
     {
+      "name": "knowledge-graph",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["/Users/x/projects/financial_agent/knowledge_graph.py"],
+      "port": 5001
+    }
+  ,
+    {
       "name": "cninfo-reports",
       "runtimeExecutable": "python",
       "runtimeArgs": ["/Users/x/projects/financial_agent/fetch_cninfo_report.py", "--port", "8082"],
