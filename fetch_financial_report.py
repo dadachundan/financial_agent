@@ -18,9 +18,12 @@ Usage
 
 import argparse
 import datetime
+import email.utils
 import json
+import re
 import sqlite3
 import time
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 import requests
@@ -149,6 +152,10 @@ def _period_label(form_type: str, report_date: str) -> str:
         return f"{year}Q{q}{suffix}"
     if base == "8-K":
         return f"{report_date[:10]}_8K{suffix}"
+    if base == "20-F":
+        return f"{year}_20F{suffix}"
+    if base == "6-K":
+        return f"{report_date[:10]}_6K{suffix}"
     return f"{year}_{form_type.replace('/', '-')}"
 
 
@@ -287,6 +294,97 @@ def _get_8k_exhibits(cik: str, accession_no: str) -> list[dict]:
     return results
 
 
+# ── Globe Newswire RSS download ───────────────────────────────────────────────
+
+_GNW_RSS_URLS = [
+    "https://www.globenewswire.com/Search?q={ticker}&inFormat=RSS",
+    "https://www.globenewswire.com/Search?q={ticker}&inCategory=Company+News&inFormat=RSS",
+]
+
+_GNW_HEADERS = {
+    "User-Agent": "FinancialReportDownloader contact@localhost.local",
+    "Accept": "text/html,application/xhtml+xml,application/xml",
+}
+
+
+def _run_gnw_download(ticker: str, company_name: str, ticker_dir: Path, conn):
+    """Generator: download Globe Newswire press releases for ticker via RSS."""
+    items = []
+    last_exc = None
+    for url_tmpl in _GNW_RSS_URLS:
+        rss_url = url_tmpl.format(ticker=ticker)
+        try:
+            r = requests.get(rss_url, headers=_GNW_HEADERS, timeout=30)
+            r.raise_for_status()
+            root = ET.fromstring(r.content)
+            items = root.findall(".//item")
+            if items:
+                break  # found results
+        except Exception as exc:
+            last_exc = exc
+
+    if not items:
+        msg = f"  ·  Globe Newswire: no releases found for {ticker}"
+        if last_exc:
+            msg += f" ({last_exc})"
+        yield _sse(msg)
+        return
+
+    yield _sse(f"  📰  {len(items)} Globe Newswire releases found")
+    new_dl = 0
+
+    for item in items:
+        title_text = (item.findtext("title") or "Release").strip()
+        link_url   = (item.findtext("link") or "").strip()
+        pub_text   = (item.findtext("pubDate") or "").strip()
+
+        if not link_url:
+            continue
+
+        # Parse RFC-2822 publish date → YYYY-MM-DD
+        try:
+            dt       = email.utils.parsedate_to_datetime(pub_text)
+            date_str = dt.date().isoformat()
+        except Exception:
+            date_str = pub_text[:10] if len(pub_text) >= 10 else "unknown"
+
+        unique_key = f"GNW/{link_url}"
+        if conn.execute(
+            "SELECT 1 FROM reports WHERE accession_no=?", (unique_key,)
+        ).fetchone():
+            yield _sse(f"       ⏭  {title_text[:60]} — already downloaded")
+            continue
+
+        safe_title = re.sub(r"[^\w\s-]", "_", title_text)[:60].strip()
+        filename   = f"{date_str}_GNW_{safe_title}.html"
+        dest       = ticker_dir / filename
+        period     = f"{date_str} {title_text[:60]}"
+
+        try:
+            time.sleep(_SEC_DELAY)
+            r2 = requests.get(link_url, headers=_GNW_HEADERS, timeout=30)
+            r2.raise_for_status()
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_bytes(r2.content)
+            size = len(r2.content)
+
+            conn.execute(
+                """INSERT OR IGNORE INTO reports
+                   (ticker, company_name, period, form_type, filed_date,
+                    period_of_report, local_path, accession_no, file_size)
+                   VALUES (?,?,?,?,?,?,?,?,?)""",
+                (ticker, company_name, period, "GNW", date_str, date_str,
+                 str(dest), unique_key, size),
+            )
+            conn.commit()
+            new_dl += 1
+            yield _sse(f"       ✅  {title_text[:60]}  ({size // 1024:,} KB)")
+        except Exception as exc:
+            yield _sse(f"       ❌  {title_text[:50]} — {exc}")
+
+    yield _sse(f"  📰  Globe Newswire done — {new_dl} new release(s) for {ticker}")
+
+
 # ── SSE download stream ───────────────────────────────────────────────────────
 
 def _sse(msg: str, *, done: bool = False, error: bool = False,
@@ -315,9 +413,10 @@ def _run_download(ticker: str, forms: list[str]):
                        "primaryDocument", "items", "primaryDocDescription"]
         all_filings = [dict(zip(cols, v)) for v in zip(*[recent[k] for k in cols])]
 
-        # Separate 8-K from regular forms
-        base_forms   = [f for f in forms if f != "8-K"]
+        # Separate 8-K and GNW from regular forms (10-K, 10-Q, 20-F, 6-K use base path)
+        base_forms   = [f for f in forms if f not in ("8-K", "GNW")]
         include_8k   = "8-K" in forms
+        include_gnw  = "GNW" in forms
 
         # ── Regular forms (10-K / 10-Q) ──────────────────────────────────────
         expanded = set(base_forms) | {f + "/A" for f in base_forms}
@@ -501,6 +600,11 @@ def _run_download(ticker: str, forms: list[str]):
                     except Exception as exc:
                         yield _sse(f"       ❌  {ex['filename']} — {exc}")
 
+        # ── Download Globe Newswire releases ──────────────────────────────────
+        if include_gnw:
+            yield _sse(f"📰  Fetching Globe Newswire releases for {tic}…")
+            yield from _run_gnw_download(tic, company_name, ticker_dir, conn)
+
         yield _sse(
             f"🎉  Done!  {new_dl} new file(s) downloaded for {tic}.",
             done=True, count=grand_total, total=max(grand_total, 1),
@@ -535,6 +639,9 @@ TEMPLATE = """\
     .b10k           { background:#cce5ff !important; color:#004085 !important; }
     .b10q           { background:#d4edda !important; color:#155724 !important; }
     .b8k            { background:#e2d9f3 !important; color:#6610f2 !important; }
+    .b20f           { background:#d1ecf1 !important; color:#0c5460 !important; }
+    .b6k            { background:#fde8d8 !important; color:#8a3a00 !important; }
+    .bgnw           { background:#fef3cd !important; color:#856404 !important; }
     .bamend         { background:#fff3cd !important; color:#856404 !important; }
     .table th       { font-size:.78rem; color:#555; white-space:nowrap; }
     .del-btn   { font-size:.72rem; padding:.15rem .45rem; }
@@ -549,7 +656,8 @@ TEMPLATE = """\
 <div class="container-fluid py-3 px-4">
   <h1 class="mb-0">📊 US Financial Reports</h1>
   <p class="text-muted mb-3" style="font-size:.8rem">
-    SEC EDGAR 10-K / 10-Q / 8-K downloader &mdash; 8-K scans EX-99 exhibits (press releases, presentations) &mdash;
+    SEC EDGAR 10-K / 10-Q / 8-K / 20-F / 6-K downloader &mdash; 8-K scans EX-99 exhibits &mdash;
+    20-F / 6-K for Foreign Private Issuers (TSM, ASML, SHEL…) &mdash; GNW: Globe Newswire press releases &mdash;
     files stored in <code>financial_reports/&lt;TICKER&gt;/</code>
   </p>
 
@@ -577,6 +685,21 @@ TEMPLATE = """\
             <input class="form-check-input" type="checkbox" id="chk8K">
             <label class="form-check-label fw-bold" for="chk8K"
                    style="color:#6610f2">8-K (EX-99 exhibits)</label>
+          </div>
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="chk20F">
+            <label class="form-check-label fw-bold" for="chk20F"
+                   style="color:#0c5460">20-F (FPI annual)</label>
+          </div>
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="chk6K">
+            <label class="form-check-label fw-bold" for="chk6K"
+                   style="color:#8a3a00">6-K (FPI reports)</label>
+          </div>
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="chkGNW">
+            <label class="form-check-label fw-bold" for="chkGNW"
+                   style="color:#856404">GNW (Globe Newswire)</label>
           </div>
         </div>
         <button class="btn btn-primary btn-sm ms-1" id="dlBtn"
@@ -649,7 +772,10 @@ function badgeCls(f) {
   if (f.endsWith('/A')) return 'bamend';
   if (f.includes('10-K')) return 'b10k';
   if (f.includes('10-Q')) return 'b10q';
-  if (f.includes('8-K')) return 'b8k';
+  if (f.includes('8-K'))  return 'b8k';
+  if (f.includes('20-F')) return 'b20f';
+  if (f.includes('6-K'))  return 'b6k';
+  if (f === 'GNW')        return 'bgnw';
   return 'bg-secondary';
 }
 
@@ -668,6 +794,9 @@ function rebuildFormBtns() {
     { key:'10-K', label:'10-K', cls:'b10k', outline:'outline-primary'   },
     { key:'10-Q', label:'10-Q', cls:'b10q', outline:'outline-success'   },
     { key:'8-K',  label:'8-K',  cls:'b8k',  outline:'outline-secondary' },
+    { key:'20-F', label:'20-F', cls:'b20f', outline:'outline-info'      },
+    { key:'6-K',  label:'6-K',  cls:'b6k',  outline:'outline-warning'   },
+    { key:'GNW',  label:'GNW',  cls:'bgnw', outline:'outline-warning'   },
   ];
   const div = document.getElementById('formBtns');
   div.innerHTML = '';
@@ -751,9 +880,12 @@ function startDownload() {
   const ticker = document.getElementById('tickerInput').value.trim().toUpperCase();
   if (!ticker) { alert('Enter a ticker symbol (e.g. AAPL, NVDA, TSLA)'); return; }
   const forms = [];
-  if (document.getElementById('chk10K').checked) forms.push('10-K');
-  if (document.getElementById('chk10Q').checked) forms.push('10-Q');
-  if (document.getElementById('chk8K').checked)  forms.push('8-K');
+  if (document.getElementById('chk10K').checked)  forms.push('10-K');
+  if (document.getElementById('chk10Q').checked)  forms.push('10-Q');
+  if (document.getElementById('chk8K').checked)   forms.push('8-K');
+  if (document.getElementById('chk20F').checked)  forms.push('20-F');
+  if (document.getElementById('chk6K').checked)   forms.push('6-K');
+  if (document.getElementById('chkGNW').checked)  forms.push('GNW');
   if (!forms.length) { alert('Select at least one form type.'); return; }
 
   document.getElementById('progressSection').style.display = '';

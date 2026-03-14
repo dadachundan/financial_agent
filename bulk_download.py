@@ -53,6 +53,11 @@ TICKERS = [
 
 FORMS = ["10-K", "10-Q", "8-K"]
 
+# Foreign Private Issuers on SEC EDGAR — file 20-F (annual) and 6-K (press releases)
+# instead of 10-K and 8-K.
+FPI_TICKERS = ["TSM", "ASML", "SHEL"]
+FPI_FORMS   = ["20-F", "6-K"]
+
 SKIPPED = [
     "TSX:GMIN — Toronto Stock Exchange, no SEC EDGAR filings",
     "ASX:RMS  — Australian Stock Exchange, no SEC EDGAR filings",
@@ -111,15 +116,59 @@ def main() -> None:
             if ticker_error:
                 failed.append(ticker)
 
+        # ── FPI tickers (20-F / 6-K) ───────────────────────────────────────
+        fpi_total  = len(FPI_TICKERS)
+        fpi_failed = []
+        fpi_header = (
+            f"\n{'─'*70}\n"
+            f"Foreign Private Issuers ({fpi_total}): {', '.join(FPI_TICKERS)}\n"
+            f"Forms: {', '.join(FPI_FORMS)}\n"
+            f"{'─'*70}\n"
+        )
+        print(fpi_header)
+        logf.write(fpi_header)
+        logf.flush()
+
+        for idx, ticker in enumerate(FPI_TICKERS, 1):
+            prefix = f"[FPI {idx:>2}/{fpi_total}] {ticker:<8}"
+            print(f"\n{prefix} ─────────────────────────────")
+            logf.write(f"\n{prefix} ─────────────────────────────\n")
+            logf.flush()
+
+            ticker_error = False
+            try:
+                for event in fr._run_download(ticker, FPI_FORMS):
+                    if not event.startswith("data: "):
+                        continue
+                    d   = json.loads(event[6:])
+                    msg = d.get("msg", "")
+                    line = f"  {msg}"
+                    print(line)
+                    logf.write(line + "\n")
+                    logf.flush()
+                    if d.get("error"):
+                        ticker_error = True
+            except Exception as exc:
+                err = f"  ❌  Unhandled exception: {exc}"
+                print(err)
+                logf.write(err + "\n")
+                ticker_error = True
+
+            if ticker_error:
+                fpi_failed.append(ticker)
+
         # ── Summary ────────────────────────────────────────────────────────
         done_ts = time.strftime("%Y-%m-%d %H:%M:%S")
         summary = (
             f"\n{'='*70}\n"
             f"Finished {done_ts}\n"
-            f"Success: {total - len(failed)}/{total}\n"
+            f"US  tickers: {total - len(failed)}/{total} succeeded\n"
+            f"FPI tickers: {fpi_total - len(fpi_failed)}/{fpi_total} succeeded\n"
         )
         if failed:
-            summary += f"Failed:  {', '.join(failed)}\n"
+            summary += f"Failed (US):  {', '.join(failed)}\n"
+        if fpi_failed:
+            summary += f"Failed (FPI): {', '.join(fpi_failed)}\n"
         summary += f"{'='*70}\n"
         print(summary)
         logf.write(summary)
