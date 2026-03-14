@@ -60,7 +60,8 @@ def too_large(_e):
 
 @app.route("/")
 def index():
-    return _render_main()
+    tab = request.args.get("tab", "bc")
+    return _render_main(active_tab=tab)
 
 
 # ── Company CRUD ───────────────────────────────────────────────────────────────
@@ -75,7 +76,7 @@ def company_add():
                 "INSERT OR IGNORE INTO companies (name, description) VALUES (?,?)",
                 (name, desc),
             )
-    return redirect(url_for("index") + "#tab-entities")
+    return redirect(url_for("index", tab="entities"))
 
 
 @app.route("/company/update/<int:cid>", methods=["POST"])
@@ -90,7 +91,7 @@ def company_update(cid):
 def company_delete(cid):
     with kg_db.get_db() as conn:
         conn.execute("DELETE FROM companies WHERE id=?", (cid,))
-    return redirect(url_for("index") + "#tab-entities")
+    return redirect(url_for("index", tab="entities"))
 
 
 # ── Business CRUD ──────────────────────────────────────────────────────────────
@@ -105,7 +106,7 @@ def business_add():
                 "INSERT OR IGNORE INTO businesses (name, description) VALUES (?,?)",
                 (name, desc),
             )
-    return redirect(url_for("index") + "#tab-entities")
+    return redirect(url_for("index", tab="entities"))
 
 
 @app.route("/business/update/<int:bid>", methods=["POST"])
@@ -120,7 +121,7 @@ def business_update(bid):
 def business_delete(bid):
     with kg_db.get_db() as conn:
         conn.execute("DELETE FROM businesses WHERE id=?", (bid,))
-    return redirect(url_for("index") + "#tab-entities")
+    return redirect(url_for("index", tab="entities"))
 
 
 # ── Business ↔ Company CRUD ────────────────────────────────────────────────────
@@ -182,7 +183,7 @@ def bb_add():
             "VALUES (?,?,?,?,?,?,?)",
             (bfrom, bto, comment, explanation, image_path, source_url, rating),
         )
-    return redirect(url_for("index") + "#tab-bb")
+    return redirect(url_for("index", tab="bb"))
 
 
 @app.route("/bb/rate/<int:rid>", methods=["POST"])
@@ -202,7 +203,7 @@ def bb_delete(rid):
         if row and row["image_path"]:
             (UPLOAD_DIR / row["image_path"]).unlink(missing_ok=True)
         conn.execute("DELETE FROM business_business WHERE id=?", (rid,))
-    return redirect(url_for("index") + "#tab-bb")
+    return redirect(url_for("index", tab="bb"))
 
 
 # ── Explanation inline-edit (AJAX) ────────────────────────────────────────────
