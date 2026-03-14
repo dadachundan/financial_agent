@@ -11,8 +11,10 @@ Covers:
 
 import io
 import json
+import platform
 import re
 import sqlite3
+import time
 import urllib.error
 import urllib.request
 import uuid
@@ -98,20 +100,111 @@ def save_upload(request_files, file_field: str, upload_dir: Path) -> str:
 
 # ── URL summarisation ─────────────────────────────────────────────────────────
 
-def fetch_url_text(url: str, max_bytes: int = 200_000) -> str:
-    """Fetch a URL and return stripped plain text (boilerplate elements and HTML tags removed)."""
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        raw = resp.read(max_bytes).decode("utf-8", errors="replace")
-    # Remove script/style blocks (content + tags)
+def _clean_html(raw: str, limit: int = 8000) -> str:
+    """Strip scripts, boilerplate blocks, and all HTML tags; return plain text."""
     text = re.sub(r"<(script|style)[^>]*>.*?</(script|style)>", " ", raw,
                   flags=re.IGNORECASE | re.DOTALL)
-    # Remove semantic boilerplate elements before stripping tags
     for tag in ("nav", "footer", "header", "aside", "form"):
         text = re.sub(rf"<{tag}[\s>].*?</{tag}>", " ", text,
                       flags=re.IGNORECASE | re.DOTALL)
     text = re.sub(r"<[^>]+>", " ", text)
-    return re.sub(r"\s+", " ", text).strip()[:8000]
+    return re.sub(r"\s+", " ", text).strip()[:limit]
+
+
+def _fetch_direct(url: str, max_bytes: int = 200_000) -> str:
+    """Plain urllib fetch — fast but blocked by some sites."""
+    req = urllib.request.Request(
+        url,
+        headers={"User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/124.0.0.0 Safari/537.36"
+        )},
+    )
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        raw = resp.read(max_bytes).decode("utf-8", errors="replace")
+    return _clean_html(raw)
+
+
+def _fetch_chrome(url: str, page_load_timeout: int = 20) -> str:
+    """
+    Open Chrome with the user's profile for cookies/auth; fall back to a
+    fresh profile if the profile directory is locked by a running Chrome.
+    """
+    from selenium import webdriver                          # type: ignore
+    from selenium.webdriver.chrome.options import Options  # type: ignore
+    from selenium.webdriver.chrome.service import Service  # type: ignore
+    from webdriver_manager.chrome import ChromeDriverManager  # type: ignore
+
+    service = Service(ChromeDriverManager().install())
+
+    # Build candidate (user-data-dir, profile-dir) pairs.
+    # Try the real Chrome profile first for cookies; fall back to a fresh one.
+    candidates: list[tuple[str | None, str | None]] = []
+    if platform.system() == "Darwin":
+        profile_root = Path.home() / "Library/Application Support/Google/Chrome"
+        if profile_root.exists():
+            candidates.append((str(profile_root), "Default"))
+    candidates.append((None, None))   # fresh temp profile as last resort
+
+    last_err: Exception = RuntimeError("Chrome fetch: no candidates tried")
+    for user_data_dir, profile_dir in candidates:
+        opts = Options()
+        opts.add_argument("--headless=new")
+        opts.add_argument("--no-sandbox")
+        opts.add_argument("--disable-dev-shm-usage")
+        opts.add_argument("--disable-blink-features=AutomationControlled")
+        opts.add_argument(
+            "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+        )
+        if user_data_dir:
+            opts.add_argument(f"--user-data-dir={user_data_dir}")
+            opts.add_argument(f"--profile-directory={profile_dir}")
+
+        try:
+            driver = webdriver.Chrome(service=service, options=opts)
+        except Exception as exc:
+            last_err = exc
+            print(f"[fetch_chrome] driver launch failed ({user_data_dir}): {exc}")
+            continue
+
+        try:
+            driver.set_page_load_timeout(page_load_timeout)
+            driver.get(url)
+            time.sleep(2)            # let JS render
+            return _clean_html(driver.page_source)
+        except Exception as exc:
+            last_err = exc
+            print(f"[fetch_chrome] navigation failed ({user_data_dir}): {exc}")
+        finally:
+            try:
+                driver.quit()
+            except Exception:
+                pass
+
+    raise RuntimeError(f"Chrome fetch failed for {url}: {last_err}") from last_err
+
+
+def fetch_url_text(url: str, max_bytes: int = 200_000) -> str:
+    """
+    Fetch URL and return stripped plain text.
+    Tries a direct HTTP request first; if that is blocked or fails, falls
+    back to opening headless Chrome with the user's Chrome profile so that
+    cookies / site logins are available.
+    """
+    try:
+        return _fetch_direct(url, max_bytes)
+    except Exception as direct_err:
+        print(f"[fetch_url_text] direct fetch failed ({direct_err}), trying Chrome…")
+        try:
+            return _fetch_chrome(url)
+        except Exception as chrome_err:
+            raise RuntimeError(
+                f"Both direct and Chrome fetch failed.\n"
+                f"  direct : {direct_err}\n"
+                f"  chrome : {chrome_err}"
+            ) from chrome_err
 
 
 def llm_summarize_url(url: str, entity_a: str, entity_b: str) -> dict:
