@@ -784,6 +784,7 @@ TEMPLATE = """\
       No reports yet. Enter a ticker and click <strong>Download All</strong>.
     </p>
   </div>
+  <div id="reports-pager" class="d-none d-flex align-items-center gap-2 mt-2 mb-1"></div>
 </div>
 
 __MCW_MODALS__
@@ -791,7 +792,10 @@ __MCW_MODALS__
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 __MCW_FOOTER__
 <script>
-let _rows     = [];
+let _rows         = [];
+let _filteredRows = [];
+let _page         = 1;
+const _pageSize   = 50;
 let _actTick  = null;
 let _actForm  = null;
 let _sortMode = 'filed';   // 'filed' | 'ticker'
@@ -876,7 +880,7 @@ function setSort(mode) {
 
 function applyFilters() {
   const q = document.getElementById('search').value.trim().toLowerCase();
-  const filtered = _rows.filter(r => {
+  _filteredRows = _rows.filter(r => {
     const txt = [r.ticker, r.company_name, r.period, r.form_type, r.filed_date]
                   .join(' ').toLowerCase();
     const matchTxt  = !q       || txt.includes(q);
@@ -887,30 +891,89 @@ function applyFilters() {
 
   // Sort
   if (_sortMode === 'filed') {
-    filtered.sort((a, b) =>
+    _filteredRows.sort((a, b) =>
       (b.filed_date || '').localeCompare(a.filed_date || '') || b.id - a.id
     );
   } else {
-    filtered.sort((a, b) =>
+    _filteredRows.sort((a, b) =>
       (a.ticker || '').localeCompare(b.ticker || '') ||
       (b.period_of_report || '').localeCompare(a.period_of_report || '') ||
       b.id - a.id
     );
   }
 
-  renderRows(filtered);
+  _page = 1;
+  _renderPage();
 }
 
-function renderRows(rows) {
+function _renderPage() {
+  const total    = _filteredRows.length;
+  const start    = (_page - 1) * _pageSize;
+  const end      = Math.min(start + _pageSize, total);
+  renderRows(_filteredRows.slice(start, end), start, total);
+  _renderPager();
+}
+
+function _renderPager() {
+  const pager = document.getElementById('reports-pager');
+  if (!pager) return;
+  const total      = _filteredRows.length;
+  const totalPages = Math.max(1, Math.ceil(total / _pageSize));
+  pager.classList.toggle('d-none', total <= _pageSize);
+  if (total === 0) { pager.innerHTML = ''; return; }
+  const start = (_page - 1) * _pageSize + 1;
+  const end   = Math.min(_page * _pageSize, total);
+  let html = `<small class="text-muted me-2">${start}\u2013${end} of ${total}</small>`;
+  html += `<ul class="pagination pagination-sm mb-0">`;
+  html += `<li class="page-item${_page === 1 ? ' disabled' : ''}">`;
+  html += `<a class="page-link" href="#" onclick="_goPage(${_page - 1});return false">\u2039</a></li>`;
+  for (const p of _pageRange(_page, totalPages)) {
+    if (p === '\u2026') {
+      html += `<li class="page-item disabled"><span class="page-link">\u2026</span></li>`;
+    } else {
+      html += `<li class="page-item${p === _page ? ' active' : ''}">`;
+      html += `<a class="page-link" href="#" onclick="_goPage(${p});return false">${p}</a></li>`;
+    }
+  }
+  html += `<li class="page-item${_page === totalPages ? ' disabled' : ''}">`;
+  html += `<a class="page-link" href="#" onclick="_goPage(${_page + 1});return false">\u203a</a></li>`;
+  html += `</ul>`;
+  pager.innerHTML = html;
+}
+
+function _pageRange(current, total) {
+  if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+  const set    = new Set([1, Math.max(1, current - 1), current,
+                          Math.min(total, current + 1), total]);
+  const sorted = [...set].sort((a, b) => a - b);
+  const result = [];
+  let prev = 0;
+  for (const p of sorted) {
+    if (p - prev > 1) result.push('\u2026');
+    result.push(p);
+    prev = p;
+  }
+  return result;
+}
+
+function _goPage(page) {
+  const totalPages = Math.max(1, Math.ceil(_filteredRows.length / _pageSize));
+  _page = Math.max(1, Math.min(page, totalPages));
+  _renderPage();
+}
+
+function renderRows(rows, startIndex, totalFiltered) {
+  if (startIndex   === undefined) startIndex    = 0;
+  if (totalFiltered === undefined) totalFiltered = rows.length;
   const tbody = document.getElementById('tbody');
   const empty = document.getElementById('emptyMsg');
   document.getElementById('rowCount').textContent =
-    rows.length + ' report' + (rows.length!==1?'s':'');
-  if (!rows.length) { tbody.innerHTML=''; empty.style.display=''; return; }
+    totalFiltered + ' report' + (totalFiltered!==1?'s':'');
+  if (!totalFiltered) { tbody.innerHTML=''; empty.style.display=''; return; }
   empty.style.display = 'none';
   tbody.innerHTML = rows.map((r,i) => `
     <tr>
-      <td class="text-muted">${i+1}</td>
+      <td class="text-muted">${startIndex + i + 1}</td>
       <td><strong>${r.ticker}</strong></td>
       <td style="max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"
           title="${(r.company_name||'').replace(/"/g,'&quot;')}">${r.company_name||'—'}</td>
