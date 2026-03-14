@@ -259,28 +259,34 @@ function _showMinePrompt(container, systemPrompt, userPrompt, sourceText) {
 }
 
 function mineBC() {
+  const bizSel = document.getElementById("bc-form-biz");
+  const coSel  = document.getElementById("bc-form-co");
   callMine(
     document.getElementById("bc-mine-url").value,
-    document.getElementById("bc-mine-biz").value,
-    document.getElementById("bc-mine-co").value,
+    bizSel.selectedOptions[0]?.text || bizSel.value,
+    coSel.selectedOptions[0]?.text  || coSel.value,
     "bc-form-comment", "bc-form-expl", "bc-form-url", "bc-mine-err", "bc-mine-spinner",
     "bc-form-source-text"
   );
 }
 function mineBB() {
+  const fromSel = document.getElementById("bb-form-from");
+  const toSel   = document.getElementById("bb-form-to");
   callMine(
     document.getElementById("bb-mine-url").value,
-    document.getElementById("bb-mine-from").value,
-    document.getElementById("bb-mine-to").value,
+    fromSel.selectedOptions[0]?.text || fromSel.value,
+    toSel.selectedOptions[0]?.text   || toSel.value,
     "bb-form-comment", "bb-form-expl", "bb-form-url", "bb-mine-err", "bb-mine-spinner",
     "bb-form-source-text"
   );
 }
 function mineCC() {
+  const fromSel = document.getElementById("cc-form-from");
+  const toSel   = document.getElementById("cc-form-to");
   callMine(
     document.getElementById("cc-mine-url").value,
-    document.getElementById("cc-mine-from").value,
-    document.getElementById("cc-mine-to").value,
+    fromSel.selectedOptions[0]?.text || fromSel.value,
+    toSel.selectedOptions[0]?.text   || toSel.value,
     "cc-form-comment", "cc-form-expl", "cc-form-url", "cc-mine-err", "cc-mine-spinner",
     "cc-form-source-text"
   );
