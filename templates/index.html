@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tech Knowledge Graph</title>
   <link href="/static/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="/static/vis-network.min.js"></script>
   <style>
     body { background:#f0f2f5; padding:20px 16px; }
@@ -50,6 +52,22 @@
 
     /* modal image */
     #imgModal img { max-width:100%; }
+
+    /* Explanation cells — rendered markdown preview */
+    .expl-col     { max-width:300px; cursor:pointer; }
+    .expl-col:hover { background:rgba(0,0,0,.02); }
+    .expl-preview { max-height:5em; overflow:hidden; position:relative; font-size:.78rem; color:#555; }
+    .expl-preview::after { content:''; position:absolute; bottom:0; left:0; right:0;
+                           height:1.4em; background:linear-gradient(transparent,#fff); }
+    .expl-preview p  { margin:0 0 .2em; }
+    .expl-preview ul,.expl-preview ol { padding-left:1.2em; margin:0 0 .2em; }
+    .expl-preview code { font-size:.8em; background:#f0f0f0; padding:1px 3px; border-radius:2px; }
+
+    /* EasyMDE inside the explanation editor modal */
+    #explModal .EasyMDEContainer { height:100%; }
+    #explModal .CodeMirror        { min-height:240px; font-size:.9rem; }
+    /* EasyMDE inside add-link forms (compact) */
+    .form-expl-mde .EasyMDEContainer .CodeMirror { min-height:80px; font-size:.82rem; }
   </style>
 </head>
 <body>
@@ -208,11 +226,13 @@
           </div>
         </div>
         <div class="row g-2 align-items-end">
-          <div class="col-6">
-            <label class="form-label mb-1" style="font-size:.78rem">Detailed explanation (optional)</label>
-            <textarea name="explanation" id="bc-form-expl" class="form-control form-control-sm"
-                      rows="3" placeholder="Multi-paragraph detail…"></textarea>
+          <div class="col-8 form-expl-mde">
+            <label class="form-label mb-1" style="font-size:.78rem">Detailed explanation (optional) — Markdown supported, paste images</label>
+            <textarea name="explanation" id="bc-form-expl"
+                      placeholder="Multi-paragraph detail…"></textarea>
           </div>
+        </div>
+        <div class="row g-2 align-items-end mt-1">
           <div class="col-3">
             <label class="form-label mb-1" style="font-size:.78rem">Image (optional, ≤16 MB)</label>
             <input type="file" name="image" class="form-control form-control-sm"
@@ -241,7 +261,10 @@
             <td><span class="badge-business">{{r.business_name}}</span></td>
             <td><span class="badge-company">{{r.company_name}}</span></td>
             <td class="comment-col">{{r.comment}}</td>
-            <td class="expl-col">{{r.explanation[:120] if r.explanation else '—'}}{% if r.explanation|length > 120 %}…{% endif %}</td>
+            <td id="expl-cell-bc-{{r.id}}" class="expl-col"
+                data-md="{{r.explanation|e}}"
+                title="Click to view / edit explanation"
+                onclick="openExplEditor('/bc/explanation/{{r.id}}','expl-cell-bc-{{r.id}}',this.dataset.md)"></td>
             <td>
               {% if r.image_path %}
               <img src="/uploads/{{r.image_path}}" class="img-thumb"
@@ -350,11 +373,13 @@
           </div>
         </div>
         <div class="row g-2 align-items-end">
-          <div class="col-6">
-            <label class="form-label mb-1" style="font-size:.78rem">Detailed explanation (optional)</label>
-            <textarea name="explanation" id="bb-form-expl" class="form-control form-control-sm"
-                      rows="3" placeholder="Multi-paragraph detail…"></textarea>
+          <div class="col-8 form-expl-mde">
+            <label class="form-label mb-1" style="font-size:.78rem">Detailed explanation (optional) — Markdown supported, paste images</label>
+            <textarea name="explanation" id="bb-form-expl"
+                      placeholder="Multi-paragraph detail…"></textarea>
           </div>
+        </div>
+        <div class="row g-2 align-items-end mt-1">
           <div class="col-3">
             <label class="form-label mb-1" style="font-size:.78rem">Image (optional, ≤16 MB)</label>
             <input type="file" name="image" class="form-control form-control-sm"
@@ -383,7 +408,10 @@
             <td><span class="badge-business">{{r.from_name}}</span></td>
             <td><span class="badge-business">{{r.to_name}}</span></td>
             <td class="comment-col">{{r.comment}}</td>
-            <td class="expl-col">{{r.explanation[:120] if r.explanation else '—'}}{% if r.explanation|length > 120 %}…{% endif %}</td>
+            <td id="expl-cell-bb-{{r.id}}" class="expl-col"
+                data-md="{{r.explanation|e}}"
+                title="Click to view / edit explanation"
+                onclick="openExplEditor('/bb/explanation/{{r.id}}','expl-cell-bb-{{r.id}}',this.dataset.md)"></td>
             <td>
               {% if r.image_path %}
               <img src="/uploads/{{r.image_path}}" class="img-thumb"
@@ -610,8 +638,150 @@
   </div>
 </div>
 
+<!-- Explanation editor modal -->
+<div class="modal fade" id="explModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">✏️ Explanation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="min-height:380px">
+        <textarea id="explEditorTextarea"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="explSaveBtn">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="/static/bootstrap.bundle.min.js"></script>
 <script>window.graphData = {{ graph_json | safe }};</script>
 <script src="/static/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+<script>
+// ── Shared image upload helper ───────────────────────────────────────────────
+function _mdeImgUpload(file, onSuccess, onError) {
+  const fd = new FormData();
+  fd.append('image', file);
+  fetch('/upload-image', { method: 'POST', body: fd })
+    .then(r => r.json())
+    .then(d => d.data ? onSuccess(d.data.filePath) : onError(d.error || 'Upload failed'))
+    .catch(() => onError('Upload failed'));
+}
+
+// ── Explanation editor modal ─────────────────────────────────────────────────
+const _explModal   = new bootstrap.Modal(document.getElementById('explModal'));
+let   _explMDE     = null;
+let   _explSaveUrl = null;
+let   _explCell    = null;
+
+function _getExplMDE() {
+  if (_explMDE) return _explMDE;
+  _explMDE = new EasyMDE({
+    element:      document.getElementById('explEditorTextarea'),
+    spellChecker: false,
+    minHeight:    '260px',
+    toolbar: ['bold','italic','heading','|','quote','unordered-list','ordered-list','|',
+              'link','upload-image','|','preview','side-by-side','fullscreen'],
+    imageUploadFunction: _mdeImgUpload,
+  });
+  _explMDE.codemirror.on('paste', (cm, e) => {
+    const items = e.clipboardData && e.clipboardData.items;
+    if (!items) return;
+    for (const item of items) {
+      if (item.type.startsWith('image/')) {
+        e.preventDefault();
+        _mdeImgUpload(item.getAsFile(), p => cm.replaceSelection('![image]('+p+')'), ()=>{});
+        break;
+      }
+    }
+  });
+  return _explMDE;
+}
+
+function openExplEditor(saveUrl, cellId, currentValue) {
+  _explSaveUrl = saveUrl;
+  _explCell    = cellId ? document.getElementById(cellId) : null;
+  const mde    = _getExplMDE();
+  mde.value(currentValue || '');
+  _explModal.show();
+  setTimeout(() => mde.codemirror.focus(), 320);
+}
+
+document.getElementById('explSaveBtn').addEventListener('click', () => {
+  const val = _explMDE ? _explMDE.value().trim() : '';
+  fetch(_explSaveUrl, {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body:    'explanation=' + encodeURIComponent(val),
+  }).then(r => {
+    if (r.ok) {
+      if (_explCell) {
+        _explCell.dataset.md  = val;
+        _renderExplCell(_explCell);
+      }
+      _explModal.hide();
+    }
+  });
+});
+
+// ── Render explanation cells ─────────────────────────────────────────────────
+function _renderExplCell(cell) {
+  const md = cell.dataset.md || '';
+  cell.innerHTML = md
+    ? '<div class="expl-preview">' + marked.parse(md) + '</div>'
+    : '<em class="text-muted" style="font-size:.78rem">—</em>';
+}
+document.querySelectorAll('[id^="expl-cell-"]').forEach(_renderExplCell);
+
+// ── EasyMDE for "Add link" explanation fields ────────────────────────────────
+let _bcAddMDE = null, _bbAddMDE = null;
+
+function _addMDEOpts(elementId) {
+  return {
+    element:      document.getElementById(elementId),
+    spellChecker: false,
+    minHeight:    '100px',
+    toolbar: ['bold','italic','|','quote','unordered-list','ordered-list','|',
+              'link','upload-image','|','preview'],
+    imageUploadFunction: _mdeImgUpload,
+  };
+}
+
+function _initBcMDE() {
+  if (_bcAddMDE) return;
+  _bcAddMDE = new EasyMDE(_addMDEOpts('bc-form-expl'));
+  document.querySelector('form[action="/bc/add"]').addEventListener('submit', () => {
+    document.getElementById('bc-form-expl').value = _bcAddMDE.value();
+  });
+}
+function _initBbMDE() {
+  if (_bbAddMDE) return;
+  _bbAddMDE = new EasyMDE(_addMDEOpts('bb-form-expl'));
+  document.querySelector('form[action="/bb/add"]').addEventListener('submit', () => {
+    document.getElementById('bb-form-expl').value = _bbAddMDE.value();
+  });
+}
+
+// Init whichever tab is currently active, lazily init + refresh on tab show
+_initBcMDE();  // BC is the default active tab
+
+document.querySelector('a[href="#tab-bc"]')?.addEventListener('shown.bs.tab', () => {
+  _initBcMDE(); _bcAddMDE.codemirror.refresh();
+});
+document.querySelector('a[href="#tab-bb"]')?.addEventListener('shown.bs.tab', () => {
+  _initBbMDE(); _bbAddMDE.codemirror.refresh();
+});
+
+// Override setExplValue so AI-mine fills EasyMDE instead of raw textarea
+window.setExplValue = function(id, val) {
+  if (id === 'bc-form-expl' && _bcAddMDE) { _bcAddMDE.value(val); return; }
+  if (id === 'bb-form-expl' && _bbAddMDE) { _bbAddMDE.value(val); return; }
+  document.getElementById(id).value = val;
+};
+</script>
 </body>
 </html>
