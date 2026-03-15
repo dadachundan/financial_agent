@@ -253,8 +253,8 @@ function renderResults(data, query) {
       <span class="score-badge">${e.score != null ? e.score.toFixed(2) : ''}</span>
       <div class="fact">${escHtml(e.fact || e.name || '')}</div>
       <div class="meta">
-        ${e.source_node_uuid ? `<span class="entity-badge" onclick="searchEntity('${escHtml(e.source_node_uuid)}')">→ source</span>` : ''}
-        ${e.target_node_uuid ? `<span class="entity-badge" onclick="searchEntity('${escHtml(e.target_node_uuid)}')">→ target</span>` : ''}
+        ${e.source_node_uuid ? `<span class="entity-badge" onclick="clickEntity('${escHtml(e.source_node_uuid)}','${escHtml(e.source_node_name||'')}')">↗ ${escHtml(e.source_node_name || e.source_node_uuid.slice(0,8))}</span>` : ''}
+        ${e.target_node_uuid ? `<span class="entity-badge" onclick="clickEntity('${escHtml(e.target_node_uuid)}','${escHtml(e.target_node_name||'')}')">↗ ${escHtml(e.target_node_name || e.target_node_uuid.slice(0,8))}</span>` : ''}
         ${(e.episodes||[]).slice(0,3).map(ep => `<span class="label-badge">📄 ${escHtml(ep.slice(0,8))}…</span>`).join('')}
       </div>
     </div>`;
