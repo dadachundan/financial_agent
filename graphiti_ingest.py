@@ -179,19 +179,23 @@ async def _build_graphiti():
     embedder._get_model()
     print("Embedder ready.\n")
 
-    # Guard against a stub DB left by a previous interrupted init.
-    # A valid KuzuDB file is always larger than 4 KB; a 4096-byte file
-    # is an uninitialised placeholder that cannot be opened.
+    # KuzuDB creates two files: graphiti_db (main) and graphiti_db.wal.
+    # If either is left in a bad state by a crash/interrupt, both must be deleted.
+    def _delete_db():
+        GRAPH_DIR.unlink(missing_ok=True)
+        Path(str(GRAPH_DIR) + ".wal").unlink(missing_ok=True)
+
+    # Stub guard: a valid DB is always > 4 KB; 4096-byte file = uninitialised.
     if GRAPH_DIR.exists() and GRAPH_DIR.stat().st_size <= 4096:
-        print(f"⚠  Detected incomplete/corrupt graphiti_db ({GRAPH_DIR.stat().st_size} bytes). "
+        print(f"⚠  Detected incomplete graphiti_db ({GRAPH_DIR.stat().st_size} bytes). "
               "Deleting and recreating …")
-        GRAPH_DIR.unlink()
+        _delete_db()
 
     try:
         driver = KuzuDriver(str(GRAPH_DIR))
     except Exception as e:
         print(f"⚠  Could not open graphiti_db ({e}). Deleting and retrying …")
-        GRAPH_DIR.unlink(missing_ok=True)
+        _delete_db()
         driver = KuzuDriver(str(GRAPH_DIR))
     driver._database = GROUP_ID
 
