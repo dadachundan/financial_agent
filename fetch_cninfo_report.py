@@ -545,15 +545,11 @@ __URLPATCH__
       <option value="SZSE">SZSE</option>
       <option value="HKEX">HKEX</option>
     </select>
-    <select id="filterForm" class="form-select form-select-sm" style="max-width:110px"
-            onchange="applyFilters()">
-      <option value="">All types</option>
-      <option value="年报">年报</option>
-      <option value="半年报">半年报</option>
-      <option value="季报">季报</option>
-    </select>
-    <span id="rowCount" class="text-muted" style="font-size:.78rem"></span>
+    <div id="formBtns" class="d-flex gap-1"></div>
+    <span id="rowCount" class="text-muted ms-auto" style="font-size:.78rem"></span>
   </div>
+  <!-- ── Company chips ── -->
+  <div id="companyChips" class="d-flex gap-1 flex-wrap mb-2"></div>
 
   <!-- ── Reports table ── -->
   <div class="table-responsive">
@@ -586,6 +582,8 @@ let _rows = [];
 let _filteredRows = [];
 let _page = 1;
 const PAGE_SIZE = 50;
+let _actForm = null;      // active form-type filter
+let _actTicker = null;    // active company/ticker filter
 
 // ── Colour badges ──────────────────────────────────────────────────────────────
 function badgeClass(ft) {
@@ -596,20 +594,66 @@ function badgeClass(ft) {
 }
 
 // ── Load reports ───────────────────────────────────────────────────────────────
-async function loadReports() {
-  const res = await fetch('/reports');
-  _rows = await res.json();
-  applyFilters();
+function loadReports() {
+  fetch('/reports').then(r => r.json()).then(data => {
+    _rows = data;
+    rebuildFormBtns();
+    rebuildCompanyChips();
+    applyFilters();
+  });
+}
+
+function rebuildFormBtns() {
+  const specs = [
+    { key: '年报',  cls: 'b-ndbg',  outline: 'outline-primary' },
+    { key: '半年报', cls: 'b-bndbg', outline: 'outline-success' },
+    { key: '季报',  cls: 'b-jdbg',  outline: 'outline-secondary' },
+  ];
+  const div = document.getElementById('formBtns');
+  div.innerHTML = '';
+  specs.forEach(({key, cls, outline}) => {
+    const count = _rows.filter(r => r.form_type === key).length;
+    if (!count) return;
+    const active = _actForm === key;
+    const btn = document.createElement('button');
+    btn.className = 'btn btn-sm ' + (active ? `badge bp ${cls}` : `btn-${outline}`);
+    btn.style.cssText = 'font-size:.72rem;padding:.15rem .55rem;font-weight:600';
+    btn.innerHTML = `${key} <span class="badge bg-light text-dark">${count}</span>`;
+    btn.onclick = () => { _actForm = _actForm === key ? null : key; rebuildFormBtns(); applyFilters(); };
+    div.appendChild(btn);
+  });
+}
+
+function rebuildCompanyChips() {
+  const counts = {};
+  const names  = {};
+  _rows.forEach(r => {
+    counts[r.ticker] = (counts[r.ticker] || 0) + 1;
+    if (r.company_name) names[r.ticker] = r.company_name;
+  });
+  const tickers = Object.keys(counts).sort();
+  const div = document.getElementById('companyChips');
+  div.innerHTML = '';
+  tickers.forEach(t => {
+    const btn = document.createElement('button');
+    const active = t === _actTicker;
+    btn.className = 'btn btn-sm ' + (active ? 'btn-dark' : 'btn-outline-secondary');
+    btn.style.cssText = 'font-size:.72rem;padding:.1rem .5rem';
+    const label = names[t] ? `${names[t]} <span style="opacity:.6;font-size:.68rem">${t}</span>` : t;
+    btn.innerHTML = `${label} <span class="badge bg-light text-dark">${counts[t]}</span>`;
+    btn.onclick = () => { _actTicker = _actTicker === t ? null : t; rebuildCompanyChips(); applyFilters(); };
+    div.appendChild(btn);
+  });
 }
 
 function applyFilters() {
-  const q   = document.getElementById('search').value.toLowerCase();
+  const q    = document.getElementById('search').value.toLowerCase();
   const exch = document.getElementById('filterExchange').value;
-  const ft  = document.getElementById('filterForm').value;
 
   _filteredRows = _rows.filter(r => {
-    if (exch && !(r.ticker || '').startsWith(exch + ':')) return false;
-    if (ft   && r.form_type !== ft) return false;
+    if (exch      && !(r.ticker || '').startsWith(exch + ':')) return false;
+    if (_actForm  && r.form_type !== _actForm)                  return false;
+    if (_actTicker && r.ticker !== _actTicker)                  return false;
     if (q) {
       const hay = [r.ticker, r.company_name, r.period, r.form_type, r.filed_date]
                    .join(' ').toLowerCase();

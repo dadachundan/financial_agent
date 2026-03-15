@@ -90,22 +90,46 @@ def _inject_base():
 if __name__ == "__main__":
     # Initialise all databases
     import sqlite3 as _sqlite3
-    def _zsxq_db_has_tables(p: Path) -> bool:
+    def _db_has_rows(p: Path, table: str) -> bool:
+        """Return True if the SQLite file exists and the table has at least one row."""
         try:
             con = _sqlite3.connect(p)
-            n = con.execute("SELECT count(*) FROM sqlite_master WHERE type='table'").fetchone()[0]
+            n = con.execute(
+                f"SELECT count(*) FROM sqlite_master WHERE type='table' AND name=?"
+                , (table,)
+            ).fetchone()[0]
+            if n == 0:
+                con.close()
+                return False
+            n = con.execute(f"SELECT count(*) FROM {table}").fetchone()[0]
             con.close()
             return n > 0
         except Exception:
             return False
 
-    _ZSXQ_DB = SCRIPT_DIR / "zsxq.db"
-    # Fall back to parent project's zsxq.db if the worktree copy has no tables
-    if not _ZSXQ_DB.exists() or not _zsxq_db_has_tables(_ZSXQ_DB):
-        _parent_zsxq = SCRIPT_DIR.parent.parent.parent / "zsxq.db"
-        if _parent_zsxq.exists():
-            _ZSXQ_DB = _parent_zsxq
+    # For each DB: if the local (worktree) copy is empty, fall back to the
+    # parent project's copy which has the real downloaded data.
+    _PARENT = SCRIPT_DIR.parent.parent.parent  # financial_agent/
+
+    def _resolve_db(filename: str, table: str) -> Path:
+        local = SCRIPT_DIR / filename
+        if not _db_has_rows(local, table):
+            parent_copy = _PARENT / filename
+            if parent_copy.exists() and _db_has_rows(parent_copy, table):
+                print(f"  [db] {filename}: using parent project copy ({parent_copy})")
+                return parent_copy
+        return local
+
+    _ZSXQ_DB    = _resolve_db("zsxq.db",              "pdf_files")
+    _SEC_DB     = _resolve_db("financial_reports.db",  "reports")
+    _CN_DB      = _resolve_db("cninfo_reports.db",     "cninfo_reports")
+
     _zsxq_viewer_mod.DB_PATH = _ZSXQ_DB
+
+    import fetch_financial_report as _sec_mod
+    import fetch_cninfo_report    as _cn_mod
+    _sec_mod._DB_PATH = _SEC_DB
+    _cn_mod._DB_PATH  = _CN_DB
 
     _kg_db.set_db_path(SCRIPT_DIR / "knowledge_graph.db")
     _kg_svc.set_zsxq_db_path(_ZSXQ_DB)
