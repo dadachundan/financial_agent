@@ -25,9 +25,27 @@ from graphiti_core.cross_encoder.client import CrossEncoderClient
 logger = logging.getLogger(__name__)
 
 SCRIPT_DIR      = Path(__file__).parent
-GRAPH_DIR       = SCRIPT_DIR / "graphiti_db"
 GROUP_ID        = "financial-pdfs"
-_LOCAL_MODEL_DIR = SCRIPT_DIR / "models" / "bge-m3"
+
+
+def _find_project_root() -> Path:
+    """Return the main git repo root, even when running from a worktree.
+
+    Worktrees have a .git FILE; the main repo has a .git DIRECTORY.
+    Walking up until we find a .git directory gives us the canonical root.
+    """
+    p = SCRIPT_DIR.resolve()
+    while p != p.parent:
+        git = p / ".git"
+        if git.exists() and git.is_dir():
+            return p
+        p = p.parent
+    return SCRIPT_DIR  # fallback (should not happen in normal use)
+
+
+_PROJECT_ROOT    = _find_project_root()
+GRAPH_DIR        = _PROJECT_ROOT / "graphiti_db"
+_LOCAL_MODEL_DIR = _PROJECT_ROOT / "models" / "bge-m3"
 
 # Set to True to print every LLM request and response to stdout (debug aid).
 PRINT_ALL_LLM_CALLS: bool = False
