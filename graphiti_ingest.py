@@ -387,9 +387,11 @@ def main() -> None:
                         help="Print every LLM request and response to stdout.")
     args = parser.parse_args()
 
+    import minimax_llm_client
     if args.debug_llm:
-        import minimax_llm_client
         minimax_llm_client.PRINT_ALL_LLM_CALLS = True
+    # Always write LLM calls to a log file for the web viewer
+    minimax_llm_client.LLM_LOG_FILE = _get_project_root() / "llm_calls.jsonl"
 
     root = _get_project_root()
     zsxq_db_path    = Path(args.db).expanduser()

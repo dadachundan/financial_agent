@@ -27,6 +27,31 @@ logger = logging.getLogger(__name__)
 SCRIPT_DIR      = Path(__file__).parent
 GROUP_ID        = "financial-pdfs"
 
+# LLM call log — every request/response is appended here as a JSON line.
+# Readable via the /zep/llm-log page in the Flask app.
+LLM_LOG_FILE: Path | None = None   # set by graphiti_ingest.py or zep_app.py
+
+def _log_llm_call(model_name: str, messages: list, response_text: str, elapsed_s: float) -> None:
+    """Append one JSONL record to LLM_LOG_FILE (no-op if not configured)."""
+    if LLM_LOG_FILE is None:
+        return
+    import time as _time
+    record = {
+        "ts":       _time.strftime("%Y-%m-%dT%H:%M:%S"),
+        "model":    model_name,
+        "elapsed":  round(elapsed_s, 2),
+        "messages": [
+            {"role": m.get("role", "?"), "content": m.get("content", "")}
+            for m in messages
+        ],
+        "response": response_text,
+    }
+    try:
+        with open(LLM_LOG_FILE, "a", encoding="utf-8") as f:
+            f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    except Exception:
+        pass
+
 
 def _find_project_root() -> Path:
     """Return the main git repo root, even when running from a worktree.
@@ -332,6 +357,10 @@ class MiniMaxLLMClient(LLMClient):
             import time as _time
             _elapsed_s = _time.monotonic() - _t0
             print(f"done ({_elapsed_s:.1f}s)", flush=True)
+        else:
+            _elapsed_s = 0.0  # already printed in debug mode
+
+        _log_llm_call(model_name, mm_messages, text, _elapsed_s)
 
         if PRINT_ALL_LLM_CALLS:
             print(f"  [RESPONSE] {text[:800]}{'…' if len(text) > 800 else ''}")
