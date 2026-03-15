@@ -17,7 +17,11 @@ import md_comment_widget as mcw
 import nav_widget2 as nw2
 from pathlib import Path
 
-from flask import Flask, Blueprint, abort, jsonify, render_template_string, request, send_file
+import subprocess
+import sys
+import json as _json
+
+from flask import Flask, Blueprint, Response, abort, jsonify, render_template_string, request, send_file
 import ticker_names as _tn
 
 SCRIPT_DIR  = Path(__file__).parent
@@ -118,6 +122,20 @@ __URLPATCH__
     <button class="btn btn-sm btn-outline-info ms-2"
             onclick="enrichTickers(this)"
             title="Look up Chinese company names for bare ticker codes (e.g. 688981 → 中芯国际 688981)">🏷 Enrich Tickers</button>
+    <!-- Download new posts -->
+    <div class="d-flex align-items-center gap-1 ms-2">
+      <input id="dlCount" type="number" value="20" min="1" max="500"
+             class="form-control form-control-sm" style="width:70px"
+             title="Number of posts to download">
+      <button class="btn btn-sm btn-outline-success" onclick="startZsxqDownload()"
+              id="dlBtn">⬇ Fetch new</button>
+    </div>
+  </div>
+  <!-- Download log (hidden until active) -->
+  <div id="dlPanel" style="display:none" class="mb-2">
+    <div id="dlLog" style="font-family:monospace;font-size:.75rem;height:140px;
+         overflow-y:auto;background:#1e1e1e;color:#d4d4d4;border-radius:6px;
+         padding:6px 10px"></div>
   </div>
 
   <!-- Status filters -->
@@ -341,7 +359,36 @@ __URLPATCH__
     </table>
   </div>
 
-  <p class="page-footer">Showing <span id="visibleCount">{{ rows|length }}</span> of {{ rows|length }} rows.</p>
+  <!-- Pagination -->
+  {% if total_pages > 1 %}
+  <nav class="mt-2 d-flex align-items-center gap-2">
+    <small class="text-muted">
+      {{ row_from }}–{{ row_to }} of {{ total_rows }} rows
+    </small>
+    <ul class="pagination pagination-sm mb-0">
+      {% if current_page > 1 %}
+        <li class="page-item">
+          <a class="page-link" href="?{{ base_qs }}&page={{ current_page - 1 }}">‹</a>
+        </li>
+      {% endif %}
+      {% for p in page_range %}
+        {% if p == '…' %}
+          <li class="page-item disabled"><span class="page-link">…</span></li>
+        {% else %}
+          <li class="page-item {{ 'active' if p == current_page else '' }}">
+            <a class="page-link" href="?{{ base_qs }}&page={{ p }}">{{ p }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+      {% if current_page < total_pages %}
+        <li class="page-item">
+          <a class="page-link" href="?{{ base_qs }}&page={{ current_page + 1 }}">›</a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+  {% endif %}
+  <p class="page-footer">Showing <span id="visibleCount">{{ rows|length }}</span> of {{ total_rows }} rows (page {{ current_page }}/{{ total_pages }}).</p>
 </div>
 
 <!-- Summary modal -->
@@ -376,6 +423,38 @@ __MCW_FOOTER__
       alert('Deleted ' + data.deleted + ' rows.');
       window.location.reload();
     });
+  }
+
+  function startZsxqDownload() {
+    const count = parseInt(document.getElementById('dlCount').value) || 20;
+    const btn   = document.getElementById('dlBtn');
+    const panel = document.getElementById('dlPanel');
+    const log   = document.getElementById('dlLog');
+    btn.disabled = true;
+    btn.textContent = '⏳ Downloading…';
+    panel.style.display = '';
+    log.innerHTML = '';
+
+    const src = new EventSource('/download-new?count=' + count);
+    src.onmessage = e => {
+      const d = JSON.parse(e.data);
+      const line = document.createElement('div');
+      line.textContent = d.msg;
+      if (d.error) line.style.color = '#ff6b6b';
+      log.appendChild(line);
+      log.scrollTop = log.scrollHeight;
+      if (d.done) {
+        src.close();
+        btn.disabled = false;
+        btn.textContent = '⬇ Fetch new';
+        setTimeout(() => window.location.reload(), 800);
+      }
+    };
+    src.onerror = () => {
+      src.close();
+      btn.disabled = false;
+      btn.textContent = '⬇ Fetch new';
+    };
   }
 
   function enrichTickers(btn) {
@@ -788,6 +867,24 @@ def print_view():
     )
 
 
+_PAGE_SIZE = 50
+
+
+def _page_range(cur: int, tot: int) -> list:
+    if tot <= 7:
+        return list(range(1, tot + 1))
+    pages: list = [1]
+    if cur > 3:
+        pages.append("…")
+    for p in range(max(2, cur - 1), min(tot, cur + 2)):
+        pages.append(p)
+    if cur < tot - 2:
+        pages.append("…")
+    if tot not in pages:
+        pages.append(tot)
+    return pages
+
+
 @zsxq_bp.route("/")
 def index():
     f         = request.args.get("filter", "all")
@@ -796,6 +893,10 @@ def index():
     sort      = request.args.get("sort", "desc").lower()
     date_from = request.args.get("date_from", "").strip()
     date_to   = request.args.get("date_to",   "").strip()
+    try:
+        page = max(1, int(request.args.get("page", 1)))
+    except ValueError:
+        page = 1
     if sort not in ("asc", "desc"):
         sort = "desc"
 
@@ -822,18 +923,34 @@ def index():
 
     where_clause, params = _build_where(f, ticker, tag, date_from, date_to)
     order = "ASC" if sort == "asc" else "DESC"
+
+    total_rows  = conn.execute(
+        f"SELECT COUNT(*) FROM pdf_files {where_clause}", params
+    ).fetchone()[0]
+    total_pages = max(1, (total_rows + _PAGE_SIZE - 1) // _PAGE_SIZE)
+    page        = min(page, total_pages)
+    offset      = (page - 1) * _PAGE_SIZE
+
     rows = conn.execute(
-        f"SELECT * FROM pdf_files {where_clause} ORDER BY create_time {order}",
-        params,
+        f"SELECT * FROM pdf_files {where_clause} ORDER BY create_time {order}"
+        f" LIMIT ? OFFSET ?",
+        params + [_PAGE_SIZE, offset],
     ).fetchall()
 
     all_tickers = _get_all_tickers(conn)
     all_tags    = _get_all_tags(conn)
     conn.close()
 
+    # Build base query string without "page" for pagination links
+    qs_params = {k: v for k, v in request.args.items() if k != "page"}
+    base_qs   = "&".join(f"{k}={v}" for k, v in qs_params.items())
+
+    row_from = offset + 1 if total_rows else 0
+    row_to   = min(offset + _PAGE_SIZE, total_rows)
+
     return render_template_string(
         TEMPLATE,
-        rows=list(enumerate(rows, 1)),
+        rows=list(enumerate(rows, offset + 1)),
         stats=stats,
         current_filter=f,
         current_ticker=ticker,
@@ -845,6 +962,54 @@ def index():
         all_tags=all_tags,
         db_path=DB_PATH,
         query_string=request.query_string.decode(),
+        # pagination
+        current_page=page,
+        total_pages=total_pages,
+        total_rows=total_rows,
+        row_from=row_from,
+        row_to=row_to,
+        page_range=_page_range(page, total_pages),
+        base_qs=base_qs,
+    )
+
+
+@zsxq_bp.route("/download-new")
+def download_new():
+    try:
+        count = max(1, min(500, int(request.args.get("count", 20))))
+    except ValueError:
+        count = 20
+
+    downloader = SCRIPT_DIR / "zsxq_downloader.py"
+
+    def generate():
+        def _sse(msg: str, *, done: bool = False, error: bool = False) -> str:
+            return "data: " + _json.dumps({"msg": msg, "done": done, "error": error}) + "\n\n"
+
+        yield _sse(f"🚀  Starting zsxq_downloader --count {count} …")
+        try:
+            proc = subprocess.Popen(
+                [sys.executable, str(downloader), "--count", str(count),
+                 "--db", str(DB_PATH)],
+                stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                text=True, bufsize=1,
+            )
+            for line in proc.stdout:
+                line = line.rstrip()
+                if line:
+                    yield _sse(line)
+            proc.wait()
+            if proc.returncode == 0:
+                yield _sse("✅  Download complete.", done=True)
+            else:
+                yield _sse(f"❌  Exited with code {proc.returncode}", done=True, error=True)
+        except Exception as exc:
+            yield _sse(f"❌  {exc}", done=True, error=True)
+
+    return Response(
+        generate(),
+        mimetype="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
     )
 
 
