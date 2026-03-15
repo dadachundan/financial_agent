@@ -11,13 +11,16 @@ Routes (all under /zep prefix when registered in main.py):
     GET  /entities  — JSON: list all entity nodes (paginated via KuzuDB)
     GET  /edges     — JSON: list all relationship edges (paginated via KuzuDB)
     GET  /stats     — JSON: {node_count, edge_count, episode_count}
-    GET  /ingest    — SSE stream: run graphiti_ingest.py for newly-added PDFs
+    GET  /ingest        — SSE stream: run graphiti_ingest.py for newly-added PDFs
+    POST /upload-pdf    — SSE stream: accept PDF upload and index it directly
 """
 
 import asyncio
 import os
 import subprocess
 import sys
+import tempfile
+from datetime import datetime, timezone
 from pathlib import Path
 
 from flask import Blueprint, render_template, render_template_string, jsonify, request, Response
@@ -304,6 +307,77 @@ def ingest_stream():
         # Reset the singleton so it reloads the updated graph
         global _graphiti
         _graphiti = None
+        yield "data: done: true\n\n"
+
+    return Response(_gen(), mimetype="text/event-stream")
+
+
+@zep_bp.route("/upload-pdf", methods=["POST"])
+def upload_pdf():
+    """Accept a PDF upload and index it into graphiti (SSE stream response)."""
+    import pdfplumber
+
+    f = request.files.get("pdf")
+    if f is None or not f.filename:
+        return jsonify({"error": "No PDF file provided"}), 400
+
+    orig_name = f.filename
+
+    # Save to temp file before entering the generator (request data is consumed here)
+    tmp = tempfile.NamedTemporaryFile(suffix=".pdf", delete=False)
+    f.save(tmp.name)
+    tmp.close()
+    tmp_path = Path(tmp.name)
+
+    def _gen():
+        yield f"data: Received: {orig_name}\n\n"
+        yield "data: Extracting text…\n\n"
+        try:
+            pages = []
+            with pdfplumber.open(tmp_path) as pdf:
+                for page in pdf.pages:
+                    t = page.extract_text()
+                    if t:
+                        pages.append(t.strip())
+            text = "\n\n".join(pages)[:80_000]
+        except Exception as e:
+            yield f"data: ✗ Text extraction failed: {e}\n\n"
+            yield "data: done: true\n\n"
+            tmp_path.unlink(missing_ok=True)
+            return
+
+        if len(text) < 200:
+            yield "data: ⚠  No extractable text (image-only or DRM PDF)\n\n"
+            yield "data: done: true\n\n"
+            tmp_path.unlink(missing_ok=True)
+            return
+
+        yield f"data: {len(text):,} chars extracted. Indexing…\n\n"
+
+        try:
+            global _graphiti
+            g = _get_graphiti()
+            if g is None:
+                from minimax_llm_client import get_graphiti as _gg
+                _graphiti = _gg()
+                g = _graphiti
+
+            result = asyncio.run(g.add_episode(
+                name=f"upload_{Path(orig_name).stem}",
+                episode_body=text,
+                source_description=f"PDF: {orig_name}",
+                reference_time=datetime.now(timezone.utc),
+                group_id=GROUP_ID,
+            ))
+            n_nodes = len(result.nodes)
+            n_edges = len(result.edges)
+            _graphiti = None  # reset so next read sees updated graph
+            yield f"data: ✓ Done — {n_nodes} entities, {n_edges} relationships extracted\n\n"
+        except Exception as e:
+            yield f"data: ✗ Indexing error: {e}\n\n"
+        finally:
+            tmp_path.unlink(missing_ok=True)
+
         yield "data: done: true\n\n"
 
     return Response(_gen(), mimetype="text/event-stream")
