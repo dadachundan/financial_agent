@@ -275,6 +275,8 @@ class MiniMaxLLMClient(LLMClient):
                         "  Quarterly Report, Proxy Statement, any document name"
                         "\n- Generic regulatory/accounting bodies mentioned in boilerplate:"
                         "  IRS, FASB, GAAP, IFRS, SEC (unless SEC is taking a specific named action)"
+                        "\n- Laws, acts, and legal frameworks: Securities Exchange Act, Securities Act,"
+                        "  Sarbanes-Oxley Act, Dodd-Frank Act, any Act of Congress, any regulation name"
                         "\n- Generic legal or accounting concepts: fiscal year, quarter, audit,"
                         "  depreciation, amortisation, revenue recognition"
                         "\n- Generic time periods: Q1, Q2, fiscal 2024, the period, the quarter"
