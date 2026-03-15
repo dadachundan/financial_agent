@@ -56,8 +56,12 @@
     /* ── graph panel ── */
     #graphPanel { margin:0 20px 20px; display:none; }
     #graphNet   { height:580px; background:#fafbff; border:1px solid #dee2e6;
-                  border-radius:8px; }
-    #graphInfo  { font-size:.78rem; color:#6c757d; padding:4px 0; }
+                  border-radius:8px; position:relative; }
+    #graphInfo  { font-size:.85rem; color:#6c757d; padding:4px 8px;
+                  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+                  background:#fff; border:1px solid #dee2e6; border-radius:6px;
+                  white-space:nowrap; display:none; }
+    #graphFooter { font-size:.78rem; color:#6c757d; padding:4px 0; }
 
     /* ── ingest log ── */
     #ingestLog { font-size:.78rem; max-height:260px; overflow-y:auto;
@@ -168,8 +172,10 @@
 
 <!-- ── Graph visualisation panel ── -->
 <div id="graphPanel">
-  <div id="graphNet"></div>
-  <div id="graphInfo">Click a node to search its relationships.</div>
+  <div id="graphNet">
+    <div id="graphInfo"></div>
+  </div>
+  <div id="graphFooter">Click a node to search its relationships.</div>
 </div>
 
 {% endif %}
@@ -380,16 +386,18 @@ let _graphBuilt = false;
 async function toggleGraph() {
   const panel = document.getElementById('graphPanel');
   const btn   = document.getElementById('graphToggleBtn');
-  if (panel.style.display !== 'none') {
+  if (getComputedStyle(panel).display !== 'none') {
     panel.style.display = 'none';
     btn.classList.remove('active');
     return;
   }
-  panel.style.display = '';
+  panel.style.display = 'block';
   btn.classList.add('active');
   if (_graphBuilt) return;
 
-  document.getElementById('graphInfo').textContent = 'Loading graph data…';
+  const graphInfo = document.getElementById('graphInfo');
+  graphInfo.textContent = 'Loading graph data…';
+  graphInfo.style.display = 'block';
 
   // Lazy-load vis-network from CDN
   if (!window.vis) {
@@ -418,10 +426,10 @@ async function toggleGraph() {
     const edgeList = ed.edges || [];
 
     if (nodeList.length === 0) {
-      document.getElementById('graphInfo').textContent =
-        'No entities in graph yet. Run the ingestor first.';
+      graphInfo.textContent = 'No entities yet — run the ingestor first.';
       return;
     }
+    graphInfo.style.display = 'none';
 
     const nodes = new vis.DataSet(nodeList.map(n => ({
       id:    n.uuid,
@@ -473,10 +481,11 @@ async function toggleGraph() {
     });
 
     _graphBuilt = true;
-    document.getElementById('graphInfo').textContent =
-      `${nodeList.length} entities · ${edgeList.length} relationships. Click a node to search.`;
+    document.getElementById('graphFooter').textContent =
+      `${nodeList.length} entities · ${edgeList.length} relationships  —  click a node to search`;
   } catch (e) {
-    document.getElementById('graphInfo').textContent = 'Error: ' + e.message;
+    graphInfo.textContent = 'Error: ' + e.message;
+    graphInfo.style.display = 'block';
   }
 }
 
