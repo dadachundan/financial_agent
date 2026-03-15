@@ -89,7 +89,7 @@
   <pre class="mt-2 mb-0">python graphiti_ingest.py</pre>
   <small>Uses <strong>KuzuDB</strong> (local graph DB) + <strong>bge-m3</strong> (local embeddings) +
   <strong>MiniMax</strong> (entity extraction). No cloud graph service needed.<br>
-  Or click <strong>"⬆ Index New PDFs"</strong> in the stats bar once the graph directory exists.</small>
+  Or click <strong>"⬆ Index New Documents"</strong> in the stats bar once the graph directory exists.</small>
 </div>
 {% else %}
 
@@ -121,7 +121,7 @@
   <span class="ms-auto">
     <button class="btn btn-sm btn-outline-primary" onclick="loadEntities()">Browse All Entities</button>
     <button class="btn btn-sm btn-outline-secondary ms-1" id="graphToggleBtn" onclick="toggleGraph()">🕸 Graph View</button>
-    <button class="btn btn-sm btn-outline-success ms-1" onclick="fetchNewPdfs()">⬆ Index New PDFs</button>
+    <button class="btn btn-sm btn-outline-success ms-1" onclick="fetchNewPdfs()">⬆ Index New Documents</button>
     <button class="btn btn-sm btn-outline-primary ms-1" onclick="document.getElementById('pdfFileInput').click()">📄 Upload PDF</button>
     <input type="file" id="pdfFileInput" accept=".pdf" style="display:none" onchange="uploadPdf(this)">
     <button class="btn btn-sm btn-outline-danger ms-1" onclick="clearGraph()">🗑 Clear All Data</button>
@@ -159,7 +159,7 @@
     <!-- Ingest / upload card -->
     <div class="card" id="ingestCard" style="display:none">
       <div class="card-header d-flex justify-content-between align-items-center py-2">
-        <span id="ingestCardTitle" style="font-size:.88rem;font-weight:600">Index New PDFs</span>
+        <span id="ingestCardTitle" style="font-size:.88rem;font-weight:600">Index New Documents</span>
         <button class="btn-close btn-sm" onclick="document.getElementById('ingestCard').style.display='none'"></button>
       </div>
       <div class="card-body p-2">
@@ -377,7 +377,7 @@ async function clearGraph() {
     const r = await fetch('/clear', {method: 'POST'});
     const d = await r.json();
     if (d.ok) {
-      alert('Graph cleared. Re-index with "Index New PDFs" or run graphiti_ingest.py.');
+      alert('Graph cleared. Re-index with "Index New Documents" or run graphiti_ingest.py.');
       loadStats();
       // reset graph view so it rebuilds next time
       window._graphBuilt = false;
@@ -417,7 +417,7 @@ function _appendLog(line) {
 }
 
 function fetchNewPdfs() {
-  _openIngestCard('Index New PDFs');
+  _openIngestCard('Index New Documents');
 }
 
 function startIngest() {
