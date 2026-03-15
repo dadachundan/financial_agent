@@ -28,6 +28,7 @@ Usage:
 
 import argparse
 import asyncio
+import logging
 import re
 import sqlite3
 import sys
@@ -35,6 +36,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pdfplumber
+
+# Suppress noisy but harmless graphiti-core warnings:
+#   "LLM did not return resolutions for IDs: [0, 1, ...]"
+#     → MiniMax returned empty NodeResolutions; all entities treated as new. Fine.
+#   "Source entity not found in nodes for edge relation: ..."
+#     → Handled by case-insensitive matching patch in edge_operations.py.
+#       Any remaining ones are genuinely unmatchable names (LLM hallucinations).
+logging.getLogger("graphiti_core.utils.maintenance.node_operations").setLevel(logging.ERROR)
+logging.getLogger("graphiti_core.utils.maintenance.edge_operations").setLevel(logging.ERROR)
 
 SCRIPT_DIR = Path(__file__).parent
 DEFAULT_DB  = SCRIPT_DIR / "zsxq.db"
