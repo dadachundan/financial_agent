@@ -35,14 +35,25 @@ GROUP_ID   = "financial-pdfs"
 # ── Text extraction ────────────────────────────────────────────────────────────
 
 def extract_text(pdf_path: Path, max_chars: int = MAX_CHARS) -> str:
-    """Extract all text from a PDF with pdfplumber (no page limit)."""
+    """Extract all text from a PDF with pdfplumber (no page limit).
+
+    Returns empty string for image-only or DRM-obfuscated PDFs so the caller
+    can skip them gracefully.  DRM-obfuscated PDFs typically have a short
+    garbled string on page 0 (the DRM marker) followed by all-image pages;
+    we treat any extraction shorter than 200 chars as unusable.
+    """
     pages = []
     with pdfplumber.open(pdf_path) as pdf:
         for page in pdf.pages:
             text = page.extract_text()
             if text:
                 pages.append(text.strip())
-    return "\n\n".join(pages)[:max_chars]
+    full = "\n\n".join(pages)
+    # DRM-obfuscated PDFs produce a short random-looking string (≤~100 chars).
+    # Treat anything under 200 chars as unextractable.
+    if len(full) < 200:
+        return ""
+    return full[:max_chars]
 
 
 # ── DB helpers ─────────────────────────────────────────────────────────────────
