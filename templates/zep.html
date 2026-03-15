@@ -552,11 +552,17 @@ async function toggleGraph() {
     }
     graphInfo.style.display = 'none';
 
-    const nodes = new vis.DataSet(nodeList.map(n => ({
-      id:    n.uuid,
-      label: n.name,
-      title: n.summary ? `<b>${escHtml(n.name)}</b><br>${escHtml(n.summary.slice(0,120))}` : n.name,
-    })));
+    const nodes = new vis.DataSet(nodeList.map(n => {
+      let tip;
+      if (n.summary) {
+        tip = document.createElement('div');
+        tip.style.cssText = 'max-width:260px;font-size:.8rem';
+        tip.innerHTML = `<b>${escHtml(n.name)}</b><br>${escHtml(n.summary.slice(0,120))}`;
+      } else {
+        tip = n.name;
+      }
+      return { id: n.uuid, label: n.name, title: tip };
+    }));
 
     const edges = new vis.DataSet(edgeList.map(e => ({
         id:    e.uuid,
