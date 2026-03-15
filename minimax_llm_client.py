@@ -235,13 +235,26 @@ class MiniMaxLLMClient(LLMClient):
                         "or invent any name. If no entity in EXISTING ENTITIES is a true duplicate, "
                         "use an empty string \"\"."
                     )
-                # For edge extraction: force exact entity name usage
+                # For edge extraction: force exact entity name usage + encourage comprehensive extraction
                 if response_model.__name__ == "ExtractedEdges":
                     extra += (
-                        "\n\nCRITICAL for source_entity_name and target_entity_name: "
-                        "copy the name CHARACTER-FOR-CHARACTER from the ENTITIES list provided. "
-                        "Do NOT rephrase, abbreviate, expand, or change capitalisation. "
-                        "If you cannot find a matching entity name in the list, skip the edge entirely."
+                        "\n\nRELATIONSHIP EXTRACTION RULES:"
+                        "\n\n1. CRITICAL — exact names: copy source_entity_name and target_entity_name "
+                        "CHARACTER-FOR-CHARACTER from the ENTITIES list. Do NOT rephrase, abbreviate, "
+                        "expand, or change capitalisation. If you cannot find a matching entity name, skip."
+                        "\n\n2. EXTRACT AGGRESSIVELY — aim for as many meaningful relationships as possible. "
+                        "Do not skip edges just because they seem obvious."
+                        "\n\n3. PRIORITISED relationship types to extract:"
+                        "\n   - Product/chip MADE_BY or DEVELOPED_BY company  (e.g. H100 → NVIDIA)"
+                        "\n   - Technology USED_BY or ENABLES company/market   (e.g. CUDA → data center)"
+                        "\n   - Company COMPETES_WITH company                  (e.g. NVIDIA → AMD)"
+                        "\n   - Company SUPPLIES or MANUFACTURES_FOR company   (e.g. TSMC → NVIDIA)"
+                        "\n   - Company OPERATES_IN market/sector/country"
+                        "\n   - Company HAS_REVENUE_FROM or SELLS_INTO market"
+                        "\n   - Ticker REPRESENTS company                      (e.g. NVDA → NVIDIA)"
+                        "\n   - Company ACQUIRED or INVESTED_IN company"
+                        "\n   - Company PARTNERS_WITH company"
+                        "\n\n4. relation_type should be a short ALL_CAPS verb phrase (e.g. MADE_BY, COMPETES_WITH)."
                     )
                 # For entity extraction: only meaningful business/market entities
                 if response_model.__name__ == "ExtractedEntities":
@@ -290,7 +303,9 @@ class MiniMaxLLMClient(LLMClient):
                 print(f"  [{i}] {role.upper()}: {body[:600]}{'…' if len(body) > 600 else ''}")
             print(f"{'─'*70}")
         else:
-            print(f"    · LLM → {model_name} …", flush=True)
+            import time as _time
+            _t0 = _time.monotonic()
+            print(f"    · LLM → {model_name} …", end=" ", flush=True)
 
         # Run the synchronous call_minimax in a thread so the event loop stays alive
         loop = asyncio.get_event_loop()
@@ -303,6 +318,11 @@ class MiniMaxLLMClient(LLMClient):
                 api_key=self._api_key,
             ),
         )
+
+        if not PRINT_ALL_LLM_CALLS:
+            import time as _time
+            _elapsed_s = _time.monotonic() - _t0
+            print(f"done ({_elapsed_s:.1f}s)", flush=True)
 
         if PRINT_ALL_LLM_CALLS:
             print(f"  [RESPONSE] {text[:800]}{'…' if len(text) > 800 else ''}")
