@@ -298,7 +298,8 @@ def _run_download(ticker: str, categories: dict[str, str]):
         yield _sse(f"✅  {company_name}  ({exchange}:{code_padded}  orgId={org_id})")
 
         stock_param = f"{code_padded},{org_id}"
-        ticker_dir  = REPORTS_DIR / exchange / code_padded
+        safe_name   = re.sub(r"[^\w\u4e00-\u9fff]", "_", company_name).strip("_")
+        ticker_dir  = REPORTS_DIR / exchange / f"{code_padded}_{safe_name}"
         ticker_dir.mkdir(parents=True, exist_ok=True)
 
         # Per-form-type latest date in DB → skip already-downloaded filings quickly
