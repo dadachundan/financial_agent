@@ -31,11 +31,12 @@ import argparse
 import urllib.error
 from pathlib import Path
 
-from flask import (Flask, Response, jsonify, redirect, render_template,
+from flask import (Flask, Blueprint, Response, jsonify, redirect, render_template,
                    request, send_file, stream_with_context, url_for)
 
 import kg_db
 import md_comment_widget as mcw
+import nav_widget2 as nw2
 import kg_models
 import kg_services
 
@@ -45,6 +46,8 @@ SCRIPT_DIR       = Path(__file__).parent
 DEFAULT_DB       = SCRIPT_DIR / "knowledge_graph.db"
 UPLOAD_DIR       = SCRIPT_DIR / "kg_uploads"
 DEFAULT_ZSXQ_DB  = SCRIPT_DIR / "zsxq.db"
+
+kg_bp = Blueprint("kg", __name__, template_folder="templates")
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
 app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024   # 50 MB
@@ -58,7 +61,7 @@ def too_large(_e):
 
 # ── Routes ─────────────────────────────────────────────────────────────────────
 
-@app.route("/")
+@kg_bp.route("/")
 def index():
     tab = request.args.get("tab", "bc")
     return _render_main(active_tab=tab)
@@ -66,7 +69,7 @@ def index():
 
 # ── Company CRUD ───────────────────────────────────────────────────────────────
 
-@app.route("/company/add", methods=["POST"])
+@kg_bp.route("/company/add", methods=["POST"])
 def company_add():
     name = request.form.get("name", "").strip()
     desc = request.form.get("description", "").strip()
@@ -76,10 +79,10 @@ def company_add():
                 "INSERT OR IGNORE INTO companies (name, description) VALUES (?,?)",
                 (name, desc),
             )
-    return redirect(url_for("index", tab="entities"))
+    return redirect(url_for("kg.index", tab="entities"))
 
 
-@app.route("/company/update/<int:cid>", methods=["POST"])
+@kg_bp.route("/company/update/<int:cid>", methods=["POST"])
 def company_update(cid):
     desc = request.json.get("description", "").strip()
     with kg_db.get_db() as conn:
@@ -87,16 +90,16 @@ def company_update(cid):
     return {"ok": True}
 
 
-@app.route("/company/delete/<int:cid>", methods=["POST"])
+@kg_bp.route("/company/delete/<int:cid>", methods=["POST"])
 def company_delete(cid):
     with kg_db.get_db() as conn:
         conn.execute("DELETE FROM companies WHERE id=?", (cid,))
-    return redirect(url_for("index", tab="entities"))
+    return redirect(url_for("kg.index", tab="entities"))
 
 
 # ── Business CRUD ──────────────────────────────────────────────────────────────
 
-@app.route("/business/add", methods=["POST"])
+@kg_bp.route("/business/add", methods=["POST"])
 def business_add():
     name = request.form.get("name", "").strip()
     desc = request.form.get("description", "").strip()
@@ -106,10 +109,10 @@ def business_add():
                 "INSERT OR IGNORE INTO businesses (name, description) VALUES (?,?)",
                 (name, desc),
             )
-    return redirect(url_for("index", tab="entities"))
+    return redirect(url_for("kg.index", tab="entities"))
 
 
-@app.route("/business/update/<int:bid>", methods=["POST"])
+@kg_bp.route("/business/update/<int:bid>", methods=["POST"])
 def business_update(bid):
     desc = request.json.get("description", "").strip()
     with kg_db.get_db() as conn:
@@ -117,16 +120,16 @@ def business_update(bid):
     return {"ok": True}
 
 
-@app.route("/business/delete/<int:bid>", methods=["POST"])
+@kg_bp.route("/business/delete/<int:bid>", methods=["POST"])
 def business_delete(bid):
     with kg_db.get_db() as conn:
         conn.execute("DELETE FROM businesses WHERE id=?", (bid,))
-    return redirect(url_for("index", tab="entities"))
+    return redirect(url_for("kg.index", tab="entities"))
 
 
 # ── Business ↔ Company CRUD ────────────────────────────────────────────────────
 
-@app.route("/bc/add", methods=["POST"])
+@kg_bp.route("/bc/add", methods=["POST"])
 def bc_add():
     business_id = int(request.form["business_id"])
     company_id  = int(request.form["company_id"])
@@ -143,10 +146,10 @@ def bc_add():
             "VALUES (?,?,?,?,?,?,?,?)",
             (business_id, company_id, comment, explanation, image_path, source_url, rating, source_text),
         )
-    return redirect(url_for("index"))
+    return redirect(url_for("kg.index"))
 
 
-@app.route("/bc/rate/<int:rid>", methods=["POST"])
+@kg_bp.route("/bc/rate/<int:rid>", methods=["POST"])
 def bc_rate(rid):
     rating = kg_services._parse_rating(request.form.get("rating"))
     with kg_db.get_db() as conn:
@@ -154,7 +157,7 @@ def bc_rate(rid):
     return "", 204
 
 
-@app.route("/bc/delete/<int:rid>", methods=["POST"])
+@kg_bp.route("/bc/delete/<int:rid>", methods=["POST"])
 def bc_delete(rid):
     with kg_db.get_db() as conn:
         row = conn.execute(
@@ -163,12 +166,12 @@ def bc_delete(rid):
         if row and row["image_path"]:
             (UPLOAD_DIR / row["image_path"]).unlink(missing_ok=True)
         conn.execute("DELETE FROM business_company WHERE id=?", (rid,))
-    return redirect(url_for("index"))
+    return redirect(url_for("kg.index"))
 
 
 # ── Business ↔ Business CRUD ───────────────────────────────────────────────────
 
-@app.route("/bb/add", methods=["POST"])
+@kg_bp.route("/bb/add", methods=["POST"])
 def bb_add():
     bfrom       = int(request.form["business_from"])
     bto         = int(request.form["business_to"])
@@ -185,10 +188,10 @@ def bb_add():
             "VALUES (?,?,?,?,?,?,?,?)",
             (bfrom, bto, comment, explanation, image_path, source_url, rating, source_text),
         )
-    return redirect(url_for("index", tab="bb"))
+    return redirect(url_for("kg.index", tab="bb"))
 
 
-@app.route("/bb/rate/<int:rid>", methods=["POST"])
+@kg_bp.route("/bb/rate/<int:rid>", methods=["POST"])
 def bb_rate(rid):
     rating = kg_services._parse_rating(request.form.get("rating"))
     with kg_db.get_db() as conn:
@@ -196,7 +199,7 @@ def bb_rate(rid):
     return "", 204
 
 
-@app.route("/bb/delete/<int:rid>", methods=["POST"])
+@kg_bp.route("/bb/delete/<int:rid>", methods=["POST"])
 def bb_delete(rid):
     with kg_db.get_db() as conn:
         row = conn.execute(
@@ -205,12 +208,12 @@ def bb_delete(rid):
         if row and row["image_path"]:
             (UPLOAD_DIR / row["image_path"]).unlink(missing_ok=True)
         conn.execute("DELETE FROM business_business WHERE id=?", (rid,))
-    return redirect(url_for("index", tab="bb"))
+    return redirect(url_for("kg.index", tab="bb"))
 
 
 # ── Company ↔ Company CRUD ────────────────────────────────────────────────────
 
-@app.route("/cc/add", methods=["POST"])
+@kg_bp.route("/cc/add", methods=["POST"])
 def cc_add():
     cfrom       = int(request.form["company_from"])
     cto         = int(request.form["company_to"])
@@ -226,10 +229,10 @@ def cc_add():
             "VALUES (?,?,?,?,?,?,?)",
             (cfrom, cto, comment, explanation, source_url, source_text, rating),
         )
-    return redirect(url_for("index", tab="cc"))
+    return redirect(url_for("kg.index", tab="cc"))
 
 
-@app.route("/cc/rate/<int:rid>", methods=["POST"])
+@kg_bp.route("/cc/rate/<int:rid>", methods=["POST"])
 def cc_rate(rid):
     rating = kg_services._parse_rating(request.form.get("rating"))
     with kg_db.get_db() as conn:
@@ -237,16 +240,16 @@ def cc_rate(rid):
     return "", 204
 
 
-@app.route("/cc/delete/<int:rid>", methods=["POST"])
+@kg_bp.route("/cc/delete/<int:rid>", methods=["POST"])
 def cc_delete(rid):
     with kg_db.get_db() as conn:
         conn.execute("DELETE FROM company_company WHERE id=?", (rid,))
-    return redirect(url_for("index", tab="cc"))
+    return redirect(url_for("kg.index", tab="cc"))
 
 
 # ── Comment & Explanation inline-edit (AJAX) ──────────────────────────────────
 
-@app.route("/bc/comment/<int:rid>", methods=["POST"])
+@kg_bp.route("/bc/comment/<int:rid>", methods=["POST"])
 def bc_comment(rid):
     comment = request.form.get("comment", "").strip()
     with kg_db.get_db() as conn:
@@ -256,7 +259,7 @@ def bc_comment(rid):
     return "", 204
 
 
-@app.route("/bb/comment/<int:rid>", methods=["POST"])
+@kg_bp.route("/bb/comment/<int:rid>", methods=["POST"])
 def bb_comment(rid):
     comment = request.form.get("comment", "").strip()
     with kg_db.get_db() as conn:
@@ -266,7 +269,7 @@ def bb_comment(rid):
     return "", 204
 
 
-@app.route("/bc/explanation/<int:rid>", methods=["POST"])
+@kg_bp.route("/bc/explanation/<int:rid>", methods=["POST"])
 def bc_explanation(rid):
     explanation = request.form.get("explanation", "").strip()
     with kg_db.get_db() as conn:
@@ -276,7 +279,7 @@ def bc_explanation(rid):
     return "", 204
 
 
-@app.route("/bb/explanation/<int:rid>", methods=["POST"])
+@kg_bp.route("/bb/explanation/<int:rid>", methods=["POST"])
 def bb_explanation(rid):
     explanation = request.form.get("explanation", "").strip()
     with kg_db.get_db() as conn:
@@ -286,7 +289,7 @@ def bb_explanation(rid):
     return "", 204
 
 
-@app.route("/cc/comment/<int:rid>", methods=["POST"])
+@kg_bp.route("/cc/comment/<int:rid>", methods=["POST"])
 def cc_comment(rid):
     comment = request.form.get("comment", "").strip()
     with kg_db.get_db() as conn:
@@ -296,7 +299,7 @@ def cc_comment(rid):
     return "", 204
 
 
-@app.route("/cc/explanation/<int:rid>", methods=["POST"])
+@kg_bp.route("/cc/explanation/<int:rid>", methods=["POST"])
 def cc_explanation(rid):
     explanation = request.form.get("explanation", "").strip()
     with kg_db.get_db() as conn:
@@ -308,7 +311,7 @@ def cc_explanation(rid):
 
 # ── API: LLM summarisation ─────────────────────────────────────────────────────
 
-@app.route("/api/summarize", methods=["POST"])
+@kg_bp.route("/api/summarize", methods=["POST"])
 def api_summarize():
     """
     POST JSON { "url": "...", "entity_a": "...", "entity_b": "..." }
@@ -333,7 +336,7 @@ def api_summarize():
 
 # ── API: BC comparison ────────────────────────────────────────────────────────
 
-@app.route("/api/bc-compare", methods=["POST"])
+@kg_bp.route("/api/bc-compare", methods=["POST"])
 def api_bc_compare():
     """
     POST JSON { "ids": [1, 2, 3] }
@@ -368,7 +371,7 @@ def api_bc_compare():
 
 # ── API: PDF import ────────────────────────────────────────────────────────────
 
-@app.route("/api/pdf-import", methods=["POST"])
+@kg_bp.route("/api/pdf-import", methods=["POST"])
 def api_pdf_import():
     """
     POST multipart { "pdf": <file> }
@@ -410,7 +413,7 @@ def api_pdf_import():
 
 # ── API: zsxq.db batch import ──────────────────────────────────────────────────
 
-@app.route("/api/zsxq-import", methods=["POST"])
+@kg_bp.route("/api/zsxq-import", methods=["POST"])
 def api_zsxq_import():
     """
     POST → text/event-stream (SSE)
@@ -436,7 +439,7 @@ def api_zsxq_import():
                     headers={"X-Accel-Buffering": "no", "Cache-Control": "no-cache"})
 
 
-@app.route("/zsxq-pdf/<int:file_id>")
+@kg_bp.route("/zsxq-pdf/<int:file_id>")
 def zsxq_pdf(file_id: int):
     """Serve a local PDF from zsxq.db by file_id."""
     import sqlite3
@@ -509,6 +512,10 @@ def _render_main(active_tab: str = "bc"):
         active_tab=active_tab,
         sources=sources,
     )
+
+
+# Register blueprint on the standalone app (after all routes are defined)
+app.register_blueprint(kg_bp)
 
 
 # ── Entry point ────────────────────────────────────────────────────────────────
