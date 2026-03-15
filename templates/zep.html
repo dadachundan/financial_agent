@@ -226,9 +226,10 @@ function renderResults(data, query) {
   list.innerHTML = '';
   document.getElementById('resultMsg').style.display = 'none';
 
-  const edges    = data.edges    || [];
-  const nodes    = data.nodes    || [];
-  const episodes = data.episodes || [];
+  // Only show the result type matching the active scope button
+  const edges    = currentScope === 'edges'    ? (data.edges    || []) : [];
+  const nodes    = currentScope === 'nodes'    ? (data.nodes    || []) : [];
+  const episodes = currentScope === 'episodes' ? (data.episodes || []) : [];
   const total = edges.length + nodes.length + episodes.length;
 
   if (total === 0) {
@@ -482,11 +483,15 @@ async function toggleGraph() {
     const nd = await nr.json();
     const ed = await er.json();
 
-    const nodeList = nd.nodes || [];
-    const edgeList = ed.edges || [];
+    const allEdges = (ed.edges || []).filter(e => e.source_node_uuid && e.target_node_uuid);
+
+    // Only show nodes that appear in at least one edge
+    const connectedIds = new Set(allEdges.flatMap(e => [e.source_node_uuid, e.target_node_uuid]));
+    const nodeList = (nd.nodes || []).filter(n => connectedIds.has(n.uuid));
+    const edgeList = allEdges;
 
     if (nodeList.length === 0) {
-      graphInfo.textContent = 'No entities yet — run the ingestor first.';
+      graphInfo.textContent = 'No relationships yet — run the ingestor first.';
       return;
     }
     graphInfo.style.display = 'none';
@@ -497,9 +502,7 @@ async function toggleGraph() {
       title: n.summary ? `<b>${escHtml(n.name)}</b><br>${escHtml(n.summary.slice(0,120))}` : n.name,
     })));
 
-    const edges = new vis.DataSet(edgeList
-      .filter(e => e.source_node_uuid && e.target_node_uuid)
-      .map(e => ({
+    const edges = new vis.DataSet(edgeList.map(e => ({
         id:    e.uuid,
         from:  e.source_node_uuid,
         to:    e.target_node_uuid,

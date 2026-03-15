@@ -223,11 +223,19 @@ class MiniMaxLLMClient(LLMClient):
                 schema = json.dumps(
                     response_model.model_json_schema(), ensure_ascii=False, indent=None
                 )
-                content = (
-                    content
-                    + "\n\nYou MUST reply with ONLY valid JSON (no markdown, no prose) "
+                extra = (
+                    "\n\nYou MUST reply with ONLY valid JSON (no markdown, no prose) "
                     "that matches this exact JSON schema:\n" + schema
                 )
+                # For deduplication: force exact name match from EXISTING ENTITIES
+                if response_model.__name__ == "NodeResolutions":
+                    extra += (
+                        "\n\nCRITICAL for duplicate_name: copy the name CHARACTER-FOR-CHARACTER "
+                        "from the EXISTING ENTITIES list. Do NOT abbreviate, translate, paraphrase, "
+                        "or invent any name. If no entity in EXISTING ENTITIES is a true duplicate, "
+                        "use an empty string \"\"."
+                    )
+                content = content + extra
                 mm_messages.append({
                     "role": "system", "name": "MiniMax AI", "content": content
                 })
