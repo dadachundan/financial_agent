@@ -15,13 +15,14 @@ Uses:
 No cloud graph service needed. The knowledge graph is stored in ./graphiti_db/.
 
 Usage:
-    python graphiti_ingest.py                                  # index new zsxq PDFs
-    python graphiti_ingest.py --source all                     # index new PDFs + 10-K/10-Q
-    python graphiti_ingest.py --source financial_reports       # index new 10-K/10-Q only
+    python graphiti_ingest.py                                          # index new zsxq PDFs
+    python graphiti_ingest.py --source all                             # index new PDFs + 10-K/10-Q
+    python graphiti_ingest.py --source financial_reports               # index new 10-K/10-Q only
     python graphiti_ingest.py --source financial_reports --ticker NVDA TSMC
-    python graphiti_ingest.py --form-type 10-K                 # annual reports only
-    python graphiti_ingest.py --reindex                        # clear graph and re-ingest
-    python graphiti_ingest.py --limit 5                        # process at most 5 docs
+    python graphiti_ingest.py --form-type 10-K                         # annual reports only
+    python graphiti_ingest.py --reindex                                # clear graph and re-ingest
+    python graphiti_ingest.py --limit 5                                # process at most 5 docs
+    python graphiti_ingest.py --limit 2 --debug-llm                   # print all LLM calls
     python graphiti_ingest.py --db zsxq.db
 """
 
