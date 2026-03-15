@@ -235,6 +235,14 @@ class MiniMaxLLMClient(LLMClient):
                         "or invent any name. If no entity in EXISTING ENTITIES is a true duplicate, "
                         "use an empty string \"\"."
                     )
+                # For edge extraction: force exact entity name usage
+                if response_model.__name__ == "ExtractedEdges":
+                    extra += (
+                        "\n\nCRITICAL for source_entity_name and target_entity_name: "
+                        "copy the name CHARACTER-FOR-CHARACTER from the ENTITIES list provided. "
+                        "Do NOT rephrase, abbreviate, expand, or change capitalisation. "
+                        "If you cannot find a matching entity name in the list, skip the edge entirely."
+                    )
                 # For entity extraction: strictly exclude all personal names
                 if response_model.__name__ == "ExtractedEntities":
                     extra += (
