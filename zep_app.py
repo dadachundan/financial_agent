@@ -197,6 +197,28 @@ def search():
     edges    = [_edge_to_dict(e)  for e in (results.edges    or [])[:limit]]
     episodes = [_ep_to_dict(ep)   for ep in (results.episodes or [])[:limit]]
 
+    # Attach source/target entity names to edges via KuzuDB lookup
+    missing_uuids = set()
+    for e in edges:
+        if e["source_node_uuid"]: missing_uuids.add(e["source_node_uuid"])
+        if e["target_node_uuid"]: missing_uuids.add(e["target_node_uuid"])
+    uuid_to_name = {n["uuid"]: n["name"] for n in nodes}
+    missing_uuids -= set(uuid_to_name)
+    if missing_uuids:
+        try:
+            conn, _kdb = _kuzu_conn()
+            placeholders = ",".join(f"'{u}'" for u in missing_uuids)
+            r = conn.execute(
+                f"MATCH (n:Entity) WHERE n.uuid IN [{placeholders}] RETURN n.uuid, n.name"
+            )
+            for row in _kuzu_rows(r):
+                uuid_to_name[row["n.uuid"]] = row["n.name"] or ""
+        except Exception:
+            pass
+    for e in edges:
+        e["source_node_name"] = uuid_to_name.get(e["source_node_uuid"], "")
+        e["target_node_name"] = uuid_to_name.get(e["target_node_uuid"], "")
+
     return jsonify({"nodes": nodes, "edges": edges, "episodes": episodes})
 
 
@@ -242,13 +264,13 @@ def edges():
         if cursor:
             q = (f"MATCH (s:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(t:Entity) "
                  f"WHERE e.group_id = $gid AND e.uuid > $cursor "
-                 f"RETURN e.uuid, e.name, e.fact, s.uuid AS src, t.uuid AS tgt "
+                 f"RETURN e.uuid, e.name, e.fact, s.uuid AS src, s.name AS src_name, t.uuid AS tgt, t.name AS tgt_name "
                  f"ORDER BY e.uuid LIMIT {limit}")
             rows = _kuzu_rows(conn.execute(q, {"gid": GROUP_ID, "cursor": cursor}))
         else:
             q = (f"MATCH (s:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(t:Entity) "
                  f"WHERE e.group_id = $gid "
-                 f"RETURN e.uuid, e.name, e.fact, s.uuid AS src, t.uuid AS tgt "
+                 f"RETURN e.uuid, e.name, e.fact, s.uuid AS src, s.name AS src_name, t.uuid AS tgt, t.name AS tgt_name "
                  f"ORDER BY e.uuid LIMIT {limit}")
             rows = _kuzu_rows(conn.execute(q, {"gid": GROUP_ID}))
     except Exception as e:
@@ -260,7 +282,9 @@ def edges():
             "name":             r["e.name"] or "",
             "fact":             r["e.fact"] or "",
             "source_node_uuid": r["src"],
+            "source_node_name": r["src_name"] or "",
             "target_node_uuid": r["tgt"],
+            "target_node_name": r["tgt_name"] or "",
         }
         for r in rows
     ]
