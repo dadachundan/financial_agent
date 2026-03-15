@@ -83,6 +83,26 @@ HK_CATEGORIES: dict[str, str] = {
 
 _DELAY = 0.6  # polite delay between CNINFO requests (seconds)
 
+MIN_FILED_YEAR = 2020  # skip filings filed before this year
+
+# Title whitelist per category.
+# CNINFO's category filter is loose — it can return cash-management notices,
+# share-reduction announcements, etc.  We only want actual financial reports.
+_REPORT_KEYWORDS: dict[str, list[str]] = {
+    "年报":  ["年度报告", "年报"],
+    "半年报": ["半年度报告", "半年报", "中期报告", "半年业绩", "中期业绩"],
+    "季报":  ["季度报告", "一季报", "二季报", "三季报",
+              "第一季度", "第二季度", "第三季度"],
+}
+
+
+def _is_report(title: str, cat_label: str) -> bool:
+    """Return True only if the title matches the expected pattern for cat_label."""
+    keywords = _REPORT_KEYWORDS.get(cat_label)
+    if not keywords:
+        return True  # no whitelist for unknown categories — allow through
+    return any(kw in title for kw in keywords)
+
 app      = Flask(__name__)
 app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
 _DB_PATH = DB_FILE
@@ -302,7 +322,7 @@ def _run_download(ticker: str, categories: dict[str, str]):
         total = len(all_anns)
         yield _sse(f"📂  {total} announcement(s) to process", total=total)
 
-        new_dl = skipped_date = counter = 0
+        new_dl = skipped_date = skipped_year = skipped_title = counter = 0
 
         for ann in all_anns:
             counter  += 1
@@ -319,7 +339,21 @@ def _run_download(ticker: str, categories: dict[str, str]):
             if not unique_key:
                 continue
 
-            # Date-based skip
+            # ── Year cutoff ───────────────────────────────────────────────────
+            if filed_date != "unknown" and int(filed_date[:4]) < MIN_FILED_YEAR:
+                skipped_year += 1
+                continue
+
+            # ── Title whitelist — skip non-report announcements ───────────────
+            if not _is_report(ann_title, cat_label):
+                skipped_title += 1
+                yield _sse(
+                    f"  ⏭  [not a report] {ann_title[:60]}",
+                    count=counter, total=total,
+                )
+                continue
+
+            # ── Date-based skip (already in DB cutoff) ────────────────────────
             cutoff = _max_by_form.get(cat_label)
             if cutoff and filed_date != "unknown" and filed_date <= cutoff:
                 skipped_date += 1
@@ -382,6 +416,10 @@ def _run_download(ticker: str, categories: dict[str, str]):
                     count=counter, total=total,
                 )
 
+        if skipped_year:
+            yield _sse(f"📅  Skipped {skipped_year} filing(s) filed before {MIN_FILED_YEAR}")
+        if skipped_title:
+            yield _sse(f"🚫  Skipped {skipped_title} non-report announcement(s) (title mismatch)")
         if skipped_date:
             yield _sse(
                 f"📅  Skipped {skipped_date} filing(s) already in library "
