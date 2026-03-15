@@ -53,6 +53,12 @@
     .entity-row .esumm { color:#6c757d; font-size:.75rem;
                          white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:240px; }
 
+    /* ── graph panel ── */
+    #graphPanel { margin:0 20px 20px; display:none; }
+    #graphNet   { height:580px; background:#fafbff; border:1px solid #dee2e6;
+                  border-radius:8px; }
+    #graphInfo  { font-size:.78rem; color:#6c757d; padding:4px 0; }
+
     /* ── ingest log ── */
     #ingestLog { font-size:.78rem; max-height:260px; overflow-y:auto;
                  background:#1e1e2e; color:#c9d1d9; padding:10px;
@@ -110,6 +116,7 @@
   <span><span class="stat-pill" id="statEpisodes">–</span> documents indexed</span>
   <span class="ms-auto">
     <button class="btn btn-sm btn-outline-primary" onclick="loadEntities()">Browse All Entities</button>
+    <button class="btn btn-sm btn-outline-secondary ms-1" id="graphToggleBtn" onclick="toggleGraph()">🕸 Graph View</button>
     <button class="btn btn-sm btn-outline-success ms-1" onclick="fetchNewPdfs()">⬆ Index New PDFs</button>
   </span>
 </div>
@@ -158,6 +165,12 @@
 
   </div><!-- /sideCol -->
 </div><!-- /mainWrap -->
+
+<!-- ── Graph visualisation panel ── -->
+<div id="graphPanel">
+  <div id="graphNet"></div>
+  <div id="graphInfo">Click a node to search its relationships.</div>
+</div>
 
 {% endif %}
 
@@ -358,6 +371,113 @@ function startIngest() {
     btn.style.display = '';
     btn.disabled = false;
   };
+}
+
+// ── Graph visualisation ────────────────────────────────────────────────────
+let _network = null;
+let _graphBuilt = false;
+
+async function toggleGraph() {
+  const panel = document.getElementById('graphPanel');
+  const btn   = document.getElementById('graphToggleBtn');
+  if (panel.style.display !== 'none') {
+    panel.style.display = 'none';
+    btn.classList.remove('active');
+    return;
+  }
+  panel.style.display = '';
+  btn.classList.add('active');
+  if (_graphBuilt) return;
+
+  document.getElementById('graphInfo').textContent = 'Loading graph data…';
+
+  // Lazy-load vis-network from CDN
+  if (!window.vis) {
+    await new Promise((resolve, reject) => {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://unpkg.com/vis-network@9.1.9/dist/dist/vis-network.min.css';
+      document.head.appendChild(link);
+      const script = document.createElement('script');
+      script.src = 'https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js';
+      script.onload = resolve;
+      script.onerror = () => reject(new Error('Failed to load vis-network'));
+      document.head.appendChild(script);
+    });
+  }
+
+  try {
+    const [nr, er] = await Promise.all([
+      fetch('/entities?limit=300'),
+      fetch('/edges?limit=300'),
+    ]);
+    const nd = await nr.json();
+    const ed = await er.json();
+
+    const nodeList = nd.nodes || [];
+    const edgeList = ed.edges || [];
+
+    if (nodeList.length === 0) {
+      document.getElementById('graphInfo').textContent =
+        'No entities in graph yet. Run the ingestor first.';
+      return;
+    }
+
+    const nodes = new vis.DataSet(nodeList.map(n => ({
+      id:    n.uuid,
+      label: n.name,
+      title: n.summary ? `<b>${escHtml(n.name)}</b><br>${escHtml(n.summary.slice(0,120))}` : n.name,
+    })));
+
+    const edges = new vis.DataSet(edgeList
+      .filter(e => e.source_node_uuid && e.target_node_uuid)
+      .map(e => ({
+        id:    e.uuid,
+        from:  e.source_node_uuid,
+        to:    e.target_node_uuid,
+        label: e.name || '',
+        title: e.fact ? escHtml(e.fact.slice(0, 120)) : '',
+      })));
+
+    const options = {
+      nodes: {
+        shape: 'dot', size: 14,
+        font: { size: 13, face: 'Arial' },
+        borderWidth: 2,
+        color: {
+          background: '#e8f0fe', border: '#1a73e8',
+          highlight: { background: '#c5d9f9', border: '#1565c0' },
+          hover:      { background: '#dce8fd', border: '#1a73e8' },
+        },
+      },
+      edges: {
+        arrows: { to: { enabled: true, scaleFactor: 0.6 } },
+        color:  { color: '#b0bec5', highlight: '#0d6efd', hover: '#0d6efd' },
+        font:   { size: 10, align: 'middle', color: '#555' },
+        smooth: { type: 'continuous' },
+      },
+      physics: {
+        stabilization: { iterations: 250, fit: true },
+        barnesHut: { gravitationalConstant: -8000, springLength: 130, damping: 0.2 },
+      },
+      interaction: { hover: true, tooltipDelay: 150, navigationButtons: true },
+    };
+
+    _network = new vis.Network(document.getElementById('graphNet'), { nodes, edges }, options);
+
+    _network.on('click', params => {
+      if (params.nodes.length > 0) {
+        const n = nodes.get(params.nodes[0]);
+        if (n) { document.getElementById('searchInput').value = n.label; doSearch(); }
+      }
+    });
+
+    _graphBuilt = true;
+    document.getElementById('graphInfo').textContent =
+      `${nodeList.length} entities · ${edgeList.length} relationships. Click a node to search.`;
+  } catch (e) {
+    document.getElementById('graphInfo').textContent = 'Error: ' + e.message;
+  }
 }
 
 // ── Utilities ──────────────────────────────────────────────────────────────
