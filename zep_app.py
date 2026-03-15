@@ -24,14 +24,20 @@ from flask import Blueprint, render_template, render_template_string, jsonify, r
 import nav_widget2 as _nw2
 
 SCRIPT_DIR = Path(__file__).parent
-_local_graph = SCRIPT_DIR / "graphiti_db"
-# If the local graphiti_db doesn't exist, fall back to the parent project's copy
-# (relevant when running from a git worktree).
-if not _local_graph.exists():
-    _parent_graph = SCRIPT_DIR.parent.parent.parent / "graphiti_db"
-    GRAPH_DIR = _parent_graph if _parent_graph.exists() else _local_graph
-else:
-    GRAPH_DIR = _local_graph
+
+
+def _find_project_root() -> Path:
+    """Return the main git repo root, even when running from a worktree."""
+    p = SCRIPT_DIR.resolve()
+    while p != p.parent:
+        git = p / ".git"
+        if git.exists() and git.is_dir():
+            return p
+        p = p.parent
+    return SCRIPT_DIR
+
+
+GRAPH_DIR = _find_project_root() / "graphiti_db"
 GROUP_ID   = "financial-pdfs"
 
 zep_bp = Blueprint(
