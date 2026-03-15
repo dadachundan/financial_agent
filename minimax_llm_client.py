@@ -235,6 +235,14 @@ class MiniMaxLLMClient(LLMClient):
                         "or invent any name. If no entity in EXISTING ENTITIES is a true duplicate, "
                         "use an empty string \"\"."
                     )
+                # For entity extraction: skip analyst/author names, focus on companies/products/concepts
+                if response_model.__name__ == "ExtractedEntities":
+                    extra += (
+                        "\n\nIMPORTANT: Do NOT extract individual people's names (analysts, authors, "
+                        "executives, researchers). Focus only on: companies, organisations, financial "
+                        "instruments, technologies, products, markets, economic concepts, and geopolitical "
+                        "entities. Skip any entity that is primarily a personal name."
+                    )
                 content = content + extra
                 mm_messages.append({
                     "role": "system", "name": "MiniMax AI", "content": content
