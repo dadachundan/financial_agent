@@ -85,11 +85,21 @@ def _graph_ready() -> bool:
 # Used for /entities, /edges, /stats (browsing, not semantic search).
 
 def _kuzu_conn():
-    """Open a fresh read-only KuzuDB connection.
+    """Return a KuzuDB connection that shares the graphiti instance's Database object.
+
+    Opening a second kuzu.Database in read-only mode fails with a shadow-pages
+    error whenever the graphiti instance (write mode) is also open.  Reusing the
+    same kuzu.Database avoids that conflict entirely.
     Returns (conn, kdb) — caller must hold kdb reference to prevent GC.
     """
     import kuzu
-    kdb  = kuzu.Database(str(GRAPH_DIR), read_only=True)
+    g = _get_graphiti()
+    if g is not None and hasattr(g, "graph_driver") and hasattr(g.graph_driver, "db"):
+        kdb  = g.graph_driver.db
+        conn = kuzu.Connection(kdb)
+        return conn, kdb
+    # Fallback: graphiti not yet initialised — open our own read-write connection.
+    kdb  = kuzu.Database(str(GRAPH_DIR))
     conn = kuzu.Connection(kdb)
     return conn, kdb
 
@@ -207,9 +217,9 @@ def search():
     if missing_uuids:
         try:
             conn, _kdb = _kuzu_conn()
-            placeholders = ",".join(f"'{u}'" for u in missing_uuids)
+            cond = " OR ".join(f"n.uuid = '{u}'" for u in missing_uuids)
             r = conn.execute(
-                f"MATCH (n:Entity) WHERE n.uuid IN [{placeholders}] RETURN n.uuid, n.name"
+                f"MATCH (n:Entity) WHERE {cond} RETURN n.uuid, n.name"
             )
             for row in _kuzu_rows(r):
                 uuid_to_name[row["n.uuid"]] = row["n.name"] or ""
