@@ -68,10 +68,13 @@ def _graph_ready() -> bool:
 # Used for /entities, /edges, /stats (browsing, not semantic search).
 
 def _kuzu_conn():
-    """Open a fresh read-only KuzuDB connection."""
+    """Open a fresh read-only KuzuDB connection.
+    Returns (conn, kdb) — caller must hold kdb reference to prevent GC.
+    """
     import kuzu
-    kdb = kuzu.Database(str(GRAPH_DIR), read_only=True)
-    return kuzu.Connection(kdb)
+    kdb  = kuzu.Database(str(GRAPH_DIR), read_only=True)
+    conn = kuzu.Connection(kdb)
+    return conn, kdb
 
 
 def _kuzu_rows(result) -> list[dict]:
@@ -171,16 +174,15 @@ def entities():
     cursor = request.args.get("cursor") or None
 
     try:
-        conn   = _kuzu_conn()
-        params = {"gid": GROUP_ID, "lim": limit}
+        conn, _kdb = _kuzu_conn()  # hold _kdb to prevent GC
         if cursor:
-            params["cursor"] = cursor
-            q = ("MATCH (n:Entity) WHERE n.group_id = $gid AND n.uuid > $cursor "
-                 "RETURN n.uuid, n.name, n.summary ORDER BY n.uuid LIMIT $lim")
+            q = (f"MATCH (n:Entity) WHERE n.group_id = $gid AND n.uuid > $cursor "
+                 f"RETURN n.uuid, n.name, n.summary ORDER BY n.uuid LIMIT {limit}")
+            rows = _kuzu_rows(conn.execute(q, {"gid": GROUP_ID, "cursor": cursor}))
         else:
-            q = ("MATCH (n:Entity) WHERE n.group_id = $gid "
-                 "RETURN n.uuid, n.name, n.summary ORDER BY n.uuid LIMIT $lim")
-        rows = _kuzu_rows(conn.execute(q, params))
+            q = (f"MATCH (n:Entity) WHERE n.group_id = $gid "
+                 f"RETURN n.uuid, n.name, n.summary ORDER BY n.uuid LIMIT {limit}")
+            rows = _kuzu_rows(conn.execute(q, {"gid": GROUP_ID}))
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
@@ -201,20 +203,19 @@ def edges():
     cursor = request.args.get("cursor") or None
 
     try:
-        conn   = _kuzu_conn()
-        params = {"gid": GROUP_ID, "lim": limit}
+        conn, _kdb = _kuzu_conn()  # hold _kdb to prevent GC
         if cursor:
-            params["cursor"] = cursor
-            q = ("MATCH (s:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(t:Entity) "
-                 "WHERE e.group_id = $gid AND e.uuid > $cursor "
-                 "RETURN e.uuid, e.name, e.fact, s.uuid AS src, t.uuid AS tgt "
-                 "ORDER BY e.uuid LIMIT $lim")
+            q = (f"MATCH (s:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(t:Entity) "
+                 f"WHERE e.group_id = $gid AND e.uuid > $cursor "
+                 f"RETURN e.uuid, e.name, e.fact, s.uuid AS src, t.uuid AS tgt "
+                 f"ORDER BY e.uuid LIMIT {limit}")
+            rows = _kuzu_rows(conn.execute(q, {"gid": GROUP_ID, "cursor": cursor}))
         else:
-            q = ("MATCH (s:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(t:Entity) "
-                 "WHERE e.group_id = $gid "
-                 "RETURN e.uuid, e.name, e.fact, s.uuid AS src, t.uuid AS tgt "
-                 "ORDER BY e.uuid LIMIT $lim")
-        rows = _kuzu_rows(conn.execute(q, params))
+            q = (f"MATCH (s:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(t:Entity) "
+                 f"WHERE e.group_id = $gid "
+                 f"RETURN e.uuid, e.name, e.fact, s.uuid AS src, t.uuid AS tgt "
+                 f"ORDER BY e.uuid LIMIT {limit}")
+            rows = _kuzu_rows(conn.execute(q, {"gid": GROUP_ID}))
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
@@ -241,22 +242,22 @@ def stats():
         })
 
     try:
-        conn = _kuzu_conn()
+        conn, _kdb = _kuzu_conn()  # hold _kdb to prevent GC
         node_count = _kuzu_rows(
             conn.execute("MATCH (n:Entity) WHERE n.group_id = $gid RETURN count(*)",
                          {"gid": GROUP_ID})
-        )[0]["count(*)"]
+        )[0]["COUNT_STAR()"]
         edge_count = _kuzu_rows(
             conn.execute(
                 "MATCH (:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(:Entity) "
                 "WHERE e.group_id = $gid RETURN count(*)",
                 {"gid": GROUP_ID},
             )
-        )[0]["count(*)"]
+        )[0]["COUNT_STAR()"]
         ep_count = _kuzu_rows(
             conn.execute("MATCH (e:Episodic) WHERE e.group_id = $gid RETURN count(*)",
                          {"gid": GROUP_ID})
-        )[0]["count(*)"]
+        )[0]["COUNT_STAR()"]
     except Exception as ex:
         return jsonify({
             "graph_exists": True,

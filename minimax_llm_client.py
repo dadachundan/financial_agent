@@ -64,6 +64,34 @@ def _extract_json(text: str) -> str:
     return text
 
 
+# ── LLM response normaliser ────────────────────────────────────────────────────
+
+def _normalize_llm_json(parsed: Any, response_model: type) -> Any:
+    """Fix common MiniMax JSON inconsistencies before Pydantic validation.
+
+    Known issues:
+    1. ExtractedEntity items use ``entity_id`` instead of ``entity_type_id``.
+    2. The model sometimes echoes the JSON schema back (``$defs`` key) instead
+       of generating data — return an empty valid envelope in that case.
+    """
+    # If the model returned its own schema, return an empty valid structure.
+    if isinstance(parsed, dict) and "$defs" in parsed:
+        name = response_model.__name__
+        if name == "ExtractedEntities":
+            return {"extracted_entities": []}
+        if name == "ExtractedEdges":
+            return {"edges": []}
+        return parsed  # unknown model — let Pydantic report the error
+
+    # Fix entity_id → entity_type_id in ExtractedEntities
+    if isinstance(parsed, dict) and "extracted_entities" in parsed:
+        for item in parsed.get("extracted_entities") or []:
+            if isinstance(item, dict) and "entity_id" in item and "entity_type_id" not in item:
+                item["entity_type_id"] = item.pop("entity_id")
+
+    return parsed
+
+
 # ── MiniMax LLM client ─────────────────────────────────────────────────────────
 
 class MiniMaxLLMClient(LLMClient):
@@ -145,6 +173,7 @@ class MiniMaxLLMClient(LLMClient):
             json_str = _extract_json(text)
             try:
                 parsed    = json.loads(json_str)
+                parsed    = _normalize_llm_json(parsed, response_model)
                 validated = response_model.model_validate(parsed)
                 return validated.model_dump()
             except Exception as exc:
