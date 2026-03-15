@@ -304,8 +304,8 @@ document.querySelectorAll('#_mainNav .nav-link').forEach(function(a){
             <td onclick="event.stopPropagation()">
               <input type="checkbox" class="bc-row-select" data-id="{{r.id}}">
             </td>
-            <td><span class="badge-business">{{r.business_name}}</span></td>
-            <td><span class="badge-company">{{r.company_name}}</span></td>
+            <td onclick="inlineEdit(this,'biz',{{r.id}},'bc')" title="Click to change business" style="cursor:pointer"><span class="badge-business">{{r.business_name}}</span></td>
+            <td onclick="inlineEdit(this,'co',{{r.id}},'bc')" title="Click to change company" style="cursor:pointer"><span class="badge-company">{{r.company_name}}</span></td>
             <td id="comment-cell-bc-{{r.id}}" class="comment-col"
                 data-val="{{r.comment|e}}"
                 title="Click to edit comment"
@@ -453,8 +453,8 @@ document.querySelectorAll('#_mainNav .nav-link').forEach(function(a){
           <tbody>
           {% for r in bb_links %}
           <tr data-source="{{r.source_url|e}}" data-rating="{{r.rating}}">
-            <td><span class="badge-business">{{r.from_name}}</span></td>
-            <td><span class="badge-business">{{r.to_name}}</span></td>
+            <td onclick="inlineEdit(this,'from',{{r.id}},'bb')" title="Click to change" style="cursor:pointer"><span class="badge-business">{{r.from_name}}</span></td>
+            <td onclick="inlineEdit(this,'to',{{r.id}},'bb')" title="Click to change" style="cursor:pointer"><span class="badge-business">{{r.to_name}}</span></td>
             <td id="comment-cell-bb-{{r.id}}" class="comment-col"
                 data-val="{{r.comment|e}}"
                 title="Click to edit comment"
@@ -591,8 +591,8 @@ document.querySelectorAll('#_mainNav .nav-link').forEach(function(a){
           <tbody>
           {% for r in cc_links %}
           <tr data-source="{{r.source_url|e}}" data-rating="{{r.rating}}">
-            <td><span class="badge-company">{{r.from_name}}</span></td>
-            <td><span class="badge-company">{{r.to_name}}</span></td>
+            <td onclick="inlineEdit(this,'from',{{r.id}},'cc')" title="Click to change" style="cursor:pointer"><span class="badge-company">{{r.from_name}}</span></td>
+            <td onclick="inlineEdit(this,'to',{{r.id}},'cc')" title="Click to change" style="cursor:pointer"><span class="badge-company">{{r.to_name}}</span></td>
             <td id="comment-cell-cc-{{r.id}}" class="comment-col"
                 data-val="{{r.comment|e}}"
                 title="Click to edit comment"
@@ -959,6 +959,74 @@ window.graphData = {{ graph_json | safe }};
 const _commentEditModal = new bootstrap.Modal(document.getElementById('commentEditModal'));
 let   _commentSaveUrl   = null;
 let   _commentCell      = null;
+
+// ── Inline business/company cell edit ────────────────────────────────────────
+// type: 'biz'|'co'|'from'|'to'   table: 'bc'|'bb'|'cc'
+function inlineEdit(td, type, rid, table) {
+  const span    = td.querySelector('span');
+  const current = span ? span.textContent.trim() : '';
+
+  // Determine which select to clone options from
+  const isBiz = (type === 'biz' || type === 'from' || (type === 'to' && table === 'bb'));
+  const isCo  = (type === 'co'  || type === 'from' && table === 'cc' || (type === 'to' && table === 'cc'));
+  let srcSelect;
+  if (table === 'cc') {
+    srcSelect = document.getElementById('cc-form-from') || document.getElementById('bc-form-co');
+  } else if (isBiz) {
+    srcSelect = document.getElementById('bc-form-biz') || document.getElementById('bb-form-from');
+  } else {
+    srcSelect = document.getElementById('bc-form-co');
+  }
+
+  // Determine save URL & field name
+  let saveUrl, fieldName;
+  if      (table === 'bc' && type === 'biz') { saveUrl = `/bc/update-biz/${rid}`;  fieldName = 'biz_id'; }
+  else if (table === 'bc' && type === 'co')  { saveUrl = `/bc/update-co/${rid}`;   fieldName = 'co_id';  }
+  else if (table === 'bb' && type === 'from'){ saveUrl = `/bb/update-from/${rid}`; fieldName = 'biz_id'; }
+  else if (table === 'bb' && type === 'to')  { saveUrl = `/bb/update-to/${rid}`;   fieldName = 'biz_id'; }
+  else if (table === 'cc' && type === 'from'){ saveUrl = `/cc/update-from/${rid}`; fieldName = 'co_id';  }
+  else if (table === 'cc' && type === 'to')  { saveUrl = `/cc/update-to/${rid}`;   fieldName = 'co_id';  }
+  else return;
+
+  // Build inline select
+  const sel = document.createElement('select');
+  sel.className = 'form-select form-select-sm';
+  sel.style.cssText = 'min-width:120px;font-size:.78rem;padding:1px 4px';
+  if (srcSelect) {
+    Array.from(srcSelect.options).forEach(o => {
+      const opt = new Option(o.text, o.value);
+      if (o.text === current) opt.selected = true;
+      sel.appendChild(opt);
+    });
+  }
+
+  td.innerHTML = '';
+  td.appendChild(sel);
+  sel.focus();
+
+  const restore = () => {
+    const cls   = (table === 'bc' && type === 'co') || table === 'cc' ? 'badge-company' : 'badge-business';
+    td.innerHTML = `<span class="${cls}">${current}</span>`;
+  };
+
+  const save = () => {
+    const newId   = sel.value;
+    const newName = sel.options[sel.selectedIndex]?.text || current;
+    if (!newId || newName === current) { restore(); return; }
+    const body = new URLSearchParams([[fieldName, newId]]);
+    fetch(saveUrl, { method: 'POST', body })
+      .then(r => r.json())
+      .then(d => {
+        const cls = (table === 'bc' && type === 'co') || table === 'cc' ? 'badge-company' : 'badge-business';
+        td.innerHTML = `<span class="${cls}">${d.name || newName}</span>`;
+      })
+      .catch(restore);
+  };
+
+  sel.addEventListener('change', save);
+  sel.addEventListener('blur',   () => { if (td.contains(sel)) restore(); });
+  sel.addEventListener('keydown', e => { if (e.key === 'Escape') restore(); });
+}
 
 function openCommentEditor(saveUrl, cellId, currentValue) {
   _commentSaveUrl = saveUrl;
