@@ -124,6 +124,7 @@
     <button class="btn btn-sm btn-outline-success ms-1" onclick="fetchNewPdfs()">⬆ Index New PDFs</button>
     <button class="btn btn-sm btn-outline-primary ms-1" onclick="document.getElementById('pdfFileInput').click()">📄 Upload PDF</button>
     <input type="file" id="pdfFileInput" accept=".pdf" style="display:none" onchange="uploadPdf(this)">
+    <button class="btn btn-sm btn-outline-danger ms-1" onclick="clearGraph()">🗑 Clear All Data</button>
   </span>
 </div>
 
@@ -337,6 +338,27 @@ async function loadEntities(reset) {
 }
 
 function loadMoreEntities() { loadEntities(false); }
+
+// ── Clear all graph data ───────────────────────────────────────────────────
+async function clearGraph() {
+  if (!confirm('Delete ALL entities, relationships, and documents from the knowledge graph?\n\nAll PDFs will be queued for re-indexing on the next run.\n\nThis cannot be undone.')) return;
+  try {
+    const r = await fetch('/zep/clear', {method: 'POST'});
+    const d = await r.json();
+    if (d.ok) {
+      alert('Graph cleared. Re-index with "Index New PDFs" or run graphiti_ingest.py.');
+      loadStats();
+      // reset graph view so it rebuilds next time
+      window._graphBuilt = false;
+      document.getElementById('graphPanel').style.display = 'none';
+      document.getElementById('graphToggleBtn').classList.remove('active');
+    } else {
+      alert('Error: ' + (d.errors || []).join('\n'));
+    }
+  } catch (e) {
+    alert('Request failed: ' + e.message);
+  }
+}
 
 // ── Ingest / upload helpers ────────────────────────────────────────────────
 function _openIngestCard(title) {
