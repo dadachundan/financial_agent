@@ -276,7 +276,7 @@ function clickEntity(uuid, name) {
 async function loadStats() {
   try {
     const r = await fetch('/stats');
-    const d = await res.json();
+    const d = await r.json();
     document.getElementById('statNodes').textContent    = d.node_count    ?? '–';
     document.getElementById('statEdges').textContent    = d.edge_count    ?? '–';
     document.getElementById('statEpisodes').textContent = d.episode_count ?? '–';
