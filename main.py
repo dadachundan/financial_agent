@@ -4,8 +4,8 @@ main.py — Unified FinAgent web app (all 4 tools on one port).
 
 Routes
 ------
-  /      -> redirect to /kg
-  /kg/*  -> Knowledge Graph
+  /      -> redirect to /zep
+  /zep/* -> Zep Knowledge Graph (replaces /kg)
   /zsxq/* -> ZSXQ Viewer
   /sec/* -> US SEC Reports (10-K / 10-Q / 8-K)
   /cn/*  -> A-share / HK CNINFO Reports
@@ -25,23 +25,14 @@ from flask import Flask, redirect, jsonify, request as freq
 import md_comment_widget as mcw
 
 # -- Import sub-app blueprints -------------------------------------------------
-# knowledge_graph imports minimax which inserts the parent project dir at
-# sys.path[0]; re-insert this worktree dir afterwards so that local copies
-# of zsxq_viewer, fetch_financial_report, etc. take priority.
-_WORKTREE_DIR = str(Path(__file__).parent)
-from knowledge_graph        import kg_bp, UPLOAD_DIR as _KG_UPLOAD
-from knowledge_graph        import kg_db as _kg_db, kg_services as _kg_svc
-from knowledge_graph        import DEFAULT_ZSXQ_DB as _ZSXQ_DB_DEFAULT
-if _WORKTREE_DIR in sys.path:
-    sys.path.remove(_WORKTREE_DIR)
-sys.path.insert(0, _WORKTREE_DIR)
+SCRIPT_DIR  = Path(__file__).parent
+UPLOADS_DIR = SCRIPT_DIR / "uploads"
+
+from zep_app import zep_bp
 import zsxq_viewer as _zsxq_viewer_mod
 zsxq_bp = _zsxq_viewer_mod.zsxq_bp
 from fetch_financial_report import sec_bp, init_db as _sec_init
 from fetch_cninfo_report    import cn_bp,  init_db as _cn_init
-
-SCRIPT_DIR  = Path(__file__).parent
-UPLOADS_DIR = SCRIPT_DIR / "uploads"
 
 # -- Build unified app ---------------------------------------------------------
 app = Flask(__name__,
@@ -53,7 +44,7 @@ app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024
 app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
 
 # Sub-app blueprints
-app.register_blueprint(kg_bp,   url_prefix="/kg")
+app.register_blueprint(zep_bp,  url_prefix="/zep")
 app.register_blueprint(zsxq_bp, url_prefix="/zsxq")
 app.register_blueprint(sec_bp,  url_prefix="/sec")
 app.register_blueprint(cn_bp,   url_prefix="/cn")
@@ -61,7 +52,7 @@ app.register_blueprint(cn_bp,   url_prefix="/cn")
 
 @app.route("/")
 def index():
-    return redirect("/kg")
+    return redirect("/zep")
 
 
 @app.errorhandler(413)
@@ -71,7 +62,7 @@ def too_large(_e):
 
 # Map blueprint name -> URL prefix for context injection
 _BP_PREFIXES = {
-    "kg":   "/kg",
+    "zep":  "/zep",
     "zsxq": "/zsxq",
     "sec":  "/sec",
     "cn":   "/cn",
@@ -80,7 +71,7 @@ _BP_PREFIXES = {
 
 @app.context_processor
 def _inject_base():
-    """Inject _base (e.g. '/kg') into every Jinja2 template context."""
+    """Inject _base (e.g. '/zep') into every Jinja2 template context."""
     bps = list(freq.blueprints)
     prefix = _BP_PREFIXES.get(bps[0], "") if bps else ""
     return dict(_base=prefix)
@@ -120,9 +111,9 @@ if __name__ == "__main__":
                 return parent_copy
         return local
 
-    _ZSXQ_DB    = _resolve_db("zsxq.db",              "pdf_files")
-    _SEC_DB     = _resolve_db("financial_reports.db",  "reports")
-    _CN_DB      = _resolve_db("cninfo_reports.db",     "cninfo_reports")
+    _ZSXQ_DB = _resolve_db("zsxq.db",              "pdf_files")
+    _SEC_DB  = _resolve_db("financial_reports.db",  "reports")
+    _CN_DB   = _resolve_db("cninfo_reports.db",     "cninfo_reports")
 
     _zsxq_viewer_mod.DB_PATH = _ZSXQ_DB
 
@@ -131,10 +122,6 @@ if __name__ == "__main__":
     _sec_mod._DB_PATH = _SEC_DB
     _cn_mod._DB_PATH  = _CN_DB
 
-    _kg_db.set_db_path(SCRIPT_DIR / "knowledge_graph.db")
-    _kg_svc.set_zsxq_db_path(_ZSXQ_DB)
-    _kg_db.init_db(_KG_UPLOAD)
-    _kg_db.seed_db()
     _sec_init()
     _cn_init()
 
@@ -143,7 +130,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     print(f"FinAgent unified app ->  http://localhost:{args.port}")
-    print(f"  /kg    -> Knowledge Graph")
+    print(f"  /zep   -> Zep Knowledge Graph")
     print(f"  /zsxq  -> ZSXQ Viewer")
     print(f"  /sec   -> US Reports (SEC EDGAR)")
     print(f"  /cn    -> CN Reports (CNINFO)")
