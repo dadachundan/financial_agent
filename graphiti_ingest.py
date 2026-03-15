@@ -179,7 +179,20 @@ async def _build_graphiti():
     embedder._get_model()
     print("Embedder ready.\n")
 
-    driver = KuzuDriver(str(GRAPH_DIR))
+    # Guard against a stub DB left by a previous interrupted init.
+    # A valid KuzuDB file is always larger than 4 KB; a 4096-byte file
+    # is an uninitialised placeholder that cannot be opened.
+    if GRAPH_DIR.exists() and GRAPH_DIR.stat().st_size <= 4096:
+        print(f"⚠  Detected incomplete/corrupt graphiti_db ({GRAPH_DIR.stat().st_size} bytes). "
+              "Deleting and recreating …")
+        GRAPH_DIR.unlink()
+
+    try:
+        driver = KuzuDriver(str(GRAPH_DIR))
+    except Exception as e:
+        print(f"⚠  Could not open graphiti_db ({e}). Deleting and retrying …")
+        GRAPH_DIR.unlink(missing_ok=True)
+        driver = KuzuDriver(str(GRAPH_DIR))
     driver._database = GROUP_ID
 
     import kuzu as _kuzu
@@ -211,36 +224,40 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
     graphiti = await _build_graphiti()
     ok = skipped = 0
 
-    for i, item in enumerate(items, 1):
-        print(f"[{i}/{len(items)}] {item['label'][:70]}")
-        text = item["episode_body"]
-        if not text:
-            print("  ⚠  No text extracted.")
-            skipped += 1
-            continue
+    try:
+        for i, item in enumerate(items, 1):
+            print(f"[{i}/{len(items)}] {item['label'][:70]}")
+            text = item["episode_body"]
+            if not text:
+                print("  ⚠  No text extracted.")
+                skipped += 1
+                continue
 
-        print(f"  {len(text):,} chars extracted. Sending to LLM pipeline…", flush=True)
-        t0 = asyncio.get_event_loop().time()
-        try:
-            result = await graphiti.add_episode(
-                name=item["name"],
-                episode_body=text,
-                source_description=item["source_description"],
-                reference_time=item["reference_time"],
-                group_id=GROUP_ID,
-            )
-            elapsed = asyncio.get_event_loop().time() - t0
-            n_nodes = len(result.nodes)
-            n_edges = len(result.edges)
-            item["mark_fn"](item["db_conn"], item["row_id"])
-            print(f"  ✓ {n_nodes} entities, {n_edges} relationships extracted. ({elapsed:.0f}s)")
-            ok += 1
-        except Exception as e:
-            elapsed = asyncio.get_event_loop().time() - t0
-            print(f"  ✗ Graphiti error ({elapsed:.0f}s): {e}")
-            skipped += 1
+            print(f"  {len(text):,} chars extracted. Sending to LLM pipeline…", flush=True)
+            t0 = asyncio.get_event_loop().time()
+            try:
+                result = await graphiti.add_episode(
+                    name=item["name"],
+                    episode_body=text,
+                    source_description=item["source_description"],
+                    reference_time=item["reference_time"],
+                    group_id=GROUP_ID,
+                )
+                elapsed = asyncio.get_event_loop().time() - t0
+                n_nodes = len(result.nodes)
+                n_edges = len(result.edges)
+                item["mark_fn"](item["db_conn"], item["row_id"])
+                print(f"  ✓ {n_nodes} entities, {n_edges} relationships extracted. ({elapsed:.0f}s)")
+                ok += 1
+            except Exception as e:
+                elapsed = asyncio.get_event_loop().time() - t0
+                print(f"  ✗ Graphiti error ({elapsed:.0f}s): {e}")
+                skipped += 1
+    except KeyboardInterrupt:
+        print(f"\n⚠  Interrupted. Closing database … ({ok} indexed so far)")
+    finally:
+        await graphiti.close()
 
-    await graphiti.close()
     return ok, skipped
 
 
