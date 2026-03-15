@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLM Call Log</title>
+  <link href="/static/bootstrap.min.css" rel="stylesheet">
+  {{ url_patch_js | safe }}
+  <style>
+    body { background:#f0f2f5; padding:0 0 40px; }
+    #toolbar { background:#fff; border-bottom:1px solid #dee2e6; padding:10px 20px;
+               display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    #toolbar h5 { margin:0; font-size:1rem; flex:1; }
+    .log-card { background:#fff; border:1px solid #dee2e6; border-radius:6px;
+                margin:10px 20px; overflow:hidden; }
+    .log-header { padding:8px 14px; background:#f8f9fa; border-bottom:1px solid #dee2e6;
+                  display:flex; gap:12px; align-items:center; cursor:pointer;
+                  user-select:none; }
+    .log-header:hover { background:#e9ecef; }
+    .model-badge { font-size:.72rem; font-weight:600; padding:2px 8px; border-radius:10px;
+                   background:#6610f2; color:#fff; }
+    .ts-badge  { font-size:.75rem; color:#888; }
+    .elapsed   { font-size:.75rem; color:#198754; font-weight:600; }
+    .log-body  { display:none; }
+    .log-body.open { display:block; }
+    .msg-block { padding:10px 14px; border-bottom:1px solid #f0f0f0; }
+    .msg-role  { font-size:.7rem; font-weight:700; text-transform:uppercase;
+                 color:#6c757d; margin-bottom:4px; }
+    .msg-text  { font-family:monospace; font-size:.78rem; white-space:pre-wrap;
+                 word-break:break-word; color:#212529; max-height:400px; overflow-y:auto; }
+    .msg-text.response { background:#f0fff4; border-left:3px solid #198754; padding:6px 8px; }
+    .msg-text.system   { background:#fff8e1; border-left:3px solid #f0ad4e; padding:6px 8px; }
+    .msg-text.user     { background:#f0f4ff; border-left:3px solid #6610f2; padding:6px 8px; }
+    #status { font-size:.82rem; color:#888; }
+    .filter-btn { font-size:.78rem; }
+    .filter-btn.active { font-weight:700; }
+  </style>
+</head>
+<body>
+{{ nav_html | safe }}
+
+<div id="toolbar">
+  <h5>🔬 LLM Call Log</h5>
+  <span id="status">Loading…</span>
+  <div class="btn-group btn-group-sm" role="group">
+    <button class="btn btn-outline-secondary filter-btn active" data-model="all" onclick="setFilter('all',this)">All</button>
+    <button class="btn btn-outline-secondary filter-btn" data-model="ExtractedEntities" onclick="setFilter('ExtractedEntities',this)">Entities</button>
+    <button class="btn btn-outline-secondary filter-btn" data-model="ExtractedEdges" onclick="setFilter('ExtractedEdges',this)">Edges</button>
+    <button class="btn btn-outline-secondary filter-btn" data-model="NodeResolutions" onclick="setFilter('NodeResolutions',this)">Dedup</button>
+  </div>
+  <button class="btn btn-sm btn-outline-danger" onclick="clearLog()">🗑 Clear Log</button>
+  <button class="btn btn-sm btn-outline-primary" onclick="loadLog()">↻ Refresh</button>
+  <label class="form-label mb-0" style="font-size:.8rem">Show last</label>
+  <select id="limitSel" class="form-select form-select-sm" style="width:80px" onchange="loadLog()">
+    <option value="20">20</option>
+    <option value="50" selected>50</option>
+    <option value="200">200</option>
+    <option value="500">500</option>
+  </select>
+</div>
+
+<div id="logList"></div>
+
+<script>
+let _allRecords = [];
+let _filter = 'all';
+
+function setFilter(model, btn) {
+  _filter = model;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  render(_allRecords);
+}
+
+async function loadLog() {
+  const limit = document.getElementById('limitSel').value;
+  document.getElementById('status').textContent = 'Loading…';
+  const r = await fetch(`/llm-log?limit=${limit}`);
+  const d = await r.json();
+  _allRecords = (d.records || []).reverse();   // newest first
+  document.getElementById('status').textContent =
+    `${d.total} total calls · showing last ${limit}`;
+  render(_allRecords);
+}
+
+function render(records) {
+  const list = document.getElementById('logList');
+  const shown = _filter === 'all' ? records : records.filter(r => r.model === _filter);
+  if (!shown.length) {
+    list.innerHTML = '<p class="text-muted" style="padding:20px">No records.</p>';
+    return;
+  }
+  list.innerHTML = shown.map((r, idx) => {
+    const msgs = (r.messages || []).map(m => `
+      <div class="msg-block">
+        <div class="msg-role">${esc(m.role)}</div>
+        <div class="msg-text ${m.role === 'system' ? 'system' : 'user'}">${esc(m.content)}</div>
+      </div>`).join('');
+    const resp = `
+      <div class="msg-block">
+        <div class="msg-role">response</div>
+        <div class="msg-text response">${esc(r.response || '')}</div>
+      </div>`;
+    return `
+    <div class="log-card">
+      <div class="log-header" onclick="toggle('body-${idx}')">
+        <span class="model-badge">${esc(r.model)}</span>
+        <span class="ts-badge">${esc(r.ts)}</span>
+        <span class="elapsed">${r.elapsed}s</span>
+        <span style="font-size:.78rem;color:#555;flex:1">${previewText(r)}</span>
+        <span style="font-size:.8rem;color:#aaa">▼</span>
+      </div>
+      <div class="log-body" id="body-${idx}">
+        ${msgs}${resp}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggle(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+}
+
+function previewText(r) {
+  // Show a brief summary of what the user message contained
+  const userMsg = (r.messages || []).find(m => m.role === 'user');
+  const text = (userMsg?.content || r.response || '').slice(0, 120);
+  return esc(text).replace(/\n/g, ' ');
+}
+
+function esc(s) {
+  return String(s ?? '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+async function clearLog() {
+  if (!confirm('Clear all LLM call logs?')) return;
+  await fetch('/llm-log/clear', {method:'POST'});
+  _allRecords = [];
+  document.getElementById('status').textContent = 'Cleared.';
+  render([]);
+}
+
+loadLog();
+</script>
+</body>
+</html>
