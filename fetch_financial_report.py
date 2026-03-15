@@ -28,8 +28,9 @@ from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
-from flask import Flask, Response, abort, jsonify, render_template_string, request, send_file
+from flask import Flask, Blueprint, Response, abort, jsonify, render_template_string, request, send_file
 import md_comment_widget as mcw
+import nav_widget2 as nw2
 
 # ── Paths & config ────────────────────────────────────────────────────────────
 
@@ -46,6 +47,8 @@ _SEC_HEADERS = {
     "User-Agent": "FinancialReportDownloader contact@localhost.local",
     "Accept-Encoding": "gzip, deflate",
 }
+
+sec_bp = Blueprint("sec", __name__)
 
 app      = Flask(__name__)
 app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
@@ -679,6 +682,8 @@ TEMPLATE = """\
   </style>
 </head>
 <body>
+__NAV__
+__URLPATCH__
 <div class="container-fluid py-3 px-4">
   <h1 class="mb-0">📊 US Financial Reports</h1>
   <p class="text-muted mb-3" style="font-size:.8rem">
@@ -979,7 +984,7 @@ function renderRows(rows, startIndex, totalFiltered) {
           title="${(r.company_name||'').replace(/"/g,'&quot;')}">${r.company_name||'—'}</td>
       <td>
         ${r.local_path
-          ? `<a href="/file/${r.id}" target="_blank" class="badge bp bg-secondary bp-link"
+          ? `<a href="${window._BASE||''}/file/${r.id}" target="_blank" class="badge bp bg-secondary bp-link"
                title="Click to open">${r.period}</a>`
           : `<span class="badge bp bg-secondary">${r.period}</span>`}
       </td>
@@ -1075,16 +1080,18 @@ __MCW_JS__
 # Apply shared markdown comment widget substitutions
 for _k, _v in mcw.TEMPLATE_PARTS.items():
     TEMPLATE = TEMPLATE.replace(_k, _v)
+TEMPLATE = TEMPLATE.replace("__NAV__",      nw2.NAV_HTML)
+TEMPLATE = TEMPLATE.replace("__URLPATCH__", nw2.URL_PATCH_JS)
 
 
 # ── Flask routes ──────────────────────────────────────────────────────────────
 
-@app.route("/")
+@sec_bp.route("/")
 def index():
     return render_template_string(TEMPLATE)
 
 
-@app.route("/reports")
+@sec_bp.route("/reports")
 def list_reports():
     ticker = request.args.get("ticker", "").upper().strip()
     conn   = get_conn()
@@ -1101,7 +1108,7 @@ def list_reports():
     return jsonify([dict(r) for r in rows])
 
 
-@app.route("/stream-download")
+@sec_bp.route("/stream-download")
 def stream_download_route():
     ticker = request.args.get("ticker", "").strip()
     forms  = [
@@ -1118,7 +1125,7 @@ def stream_download_route():
     )
 
 
-@app.route("/file/<int:report_id>")
+@sec_bp.route("/file/<int:report_id>")
 def serve_file(report_id: int):
     conn = get_conn()
     row  = conn.execute(
@@ -1170,7 +1177,7 @@ def serve_file(report_id: int):
     return send_file(path)
 
 
-@app.route("/comment/<int:report_id>", methods=["POST"])
+@sec_bp.route("/comment/<int:report_id>", methods=["POST"])
 def set_comment(report_id: int):
     comment = request.form.get("comment", "").strip()
     conn = get_conn()
@@ -1183,7 +1190,7 @@ def set_comment(report_id: int):
     return "", 204
 
 
-@app.route("/report/<int:report_id>", methods=["DELETE"])
+@sec_bp.route("/report/<int:report_id>", methods=["DELETE"])
 def delete_report(report_id: int):
     conn = get_conn()
     row  = conn.execute(
@@ -1197,6 +1204,10 @@ def delete_report(report_id: int):
     conn.commit()
     conn.close()
     return "", 204
+
+
+# Register blueprint on the standalone app (after all routes are defined)
+app.register_blueprint(sec_bp)
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────
