@@ -41,6 +41,7 @@ def _find_project_root() -> Path:
 
 
 GRAPH_DIR = _find_project_root() / "graphiti_db"
+ZSXQ_DB   = _find_project_root() / "zsxq.db"
 GROUP_ID   = "financial-pdfs"
 
 zep_bp = Blueprint(
@@ -391,6 +392,38 @@ def upload_pdf():
         yield "data: done: true\n\n"
 
     return Response(_gen(), mimetype="text/event-stream")
+
+
+@zep_bp.route("/clear", methods=["POST"])
+def clear_graph():
+    """Delete graphiti_db and reset graphiti_indexed_at in zsxq.db."""
+    import sqlite3
+
+    global _graphiti
+    _graphiti = None  # drop the in-process singleton
+
+    errors = []
+
+    # 1. Delete the graph DB file
+    try:
+        if GRAPH_DIR.exists():
+            GRAPH_DIR.unlink()
+    except Exception as e:
+        errors.append(f"Could not delete graph DB: {e}")
+
+    # 2. Reset indexed timestamps so all PDFs queue for re-indexing
+    try:
+        if ZSXQ_DB.exists():
+            conn = sqlite3.connect(ZSXQ_DB)
+            conn.execute("UPDATE pdf_files SET graphiti_indexed_at = NULL")
+            conn.commit()
+            conn.close()
+    except Exception as e:
+        errors.append(f"Could not reset zsxq.db: {e}")
+
+    if errors:
+        return jsonify({"ok": False, "errors": errors}), 500
+    return jsonify({"ok": True})
 
 
 # ── Standalone entry point ─────────────────────────────────────────────────────
