@@ -29,6 +29,9 @@ GRAPH_DIR       = SCRIPT_DIR / "graphiti_db"
 GROUP_ID        = "financial-pdfs"
 _LOCAL_MODEL_DIR = SCRIPT_DIR / "models" / "bge-m3"
 
+# Set to True to print every LLM request and response to stdout (debug aid).
+PRINT_ALL_LLM_CALLS: bool = False
+
 
 # ── Config helpers ─────────────────────────────────────────────────────────────
 
@@ -219,6 +222,16 @@ class MiniMaxLLMClient(LLMClient):
                     "role": "user", "name": "User", "content": content
                 })
 
+        if PRINT_ALL_LLM_CALLS:
+            model_name = response_model.__name__ if response_model else "plain-text"
+            print(f"\n{'='*70}")
+            print(f"[LLM CALL] model={model_name}")
+            for i, msg in enumerate(mm_messages):
+                role = msg.get("role", "?")
+                body = msg.get("content", "")
+                print(f"  [{i}] {role.upper()}: {body[:600]}{'…' if len(body) > 600 else ''}")
+            print(f"{'─'*70}")
+
         # Run the synchronous call_minimax in a thread so the event loop stays alive
         loop = asyncio.get_event_loop()
         text, _elapsed, _raw = await loop.run_in_executor(
@@ -230,6 +243,10 @@ class MiniMaxLLMClient(LLMClient):
                 api_key=self._api_key,
             ),
         )
+
+        if PRINT_ALL_LLM_CALLS:
+            print(f"  [RESPONSE] {text[:800]}{'…' if len(text) > 800 else ''}")
+            print(f"{'='*70}\n")
 
         # Structured output path
         if response_model is not None:
