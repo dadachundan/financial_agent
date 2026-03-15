@@ -262,8 +262,8 @@ class MiniMaxLLMClient(LLMClient):
                     "role": "user", "name": "User", "content": content
                 })
 
+        model_name = response_model.__name__ if response_model else "plain-text"
         if PRINT_ALL_LLM_CALLS:
-            model_name = response_model.__name__ if response_model else "plain-text"
             print(f"\n{'='*70}")
             print(f"[LLM CALL] model={model_name}")
             for i, msg in enumerate(mm_messages):
@@ -271,6 +271,8 @@ class MiniMaxLLMClient(LLMClient):
                 body = msg.get("content", "")
                 print(f"  [{i}] {role.upper()}: {body[:600]}{'…' if len(body) > 600 else ''}")
             print(f"{'─'*70}")
+        else:
+            print(f"    · LLM → {model_name} …", flush=True)
 
         # Run the synchronous call_minimax in a thread so the event loop stays alive
         loop = asyncio.get_event_loop()
