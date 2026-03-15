@@ -219,7 +219,8 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
             skipped += 1
             continue
 
-        print(f"  {len(text):,} chars extracted.")
+        print(f"  {len(text):,} chars extracted. Sending to LLM pipeline…", flush=True)
+        t0 = asyncio.get_event_loop().time()
         try:
             result = await graphiti.add_episode(
                 name=item["name"],
@@ -228,13 +229,15 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
                 reference_time=item["reference_time"],
                 group_id=GROUP_ID,
             )
+            elapsed = asyncio.get_event_loop().time() - t0
             n_nodes = len(result.nodes)
             n_edges = len(result.edges)
             item["mark_fn"](item["db_conn"], item["row_id"])
-            print(f"  ✓ {n_nodes} entities, {n_edges} relationships extracted.")
+            print(f"  ✓ {n_nodes} entities, {n_edges} relationships extracted. ({elapsed:.0f}s)")
             ok += 1
         except Exception as e:
-            print(f"  ✗ Graphiti error: {e}")
+            elapsed = asyncio.get_event_loop().time() - t0
+            print(f"  ✗ Graphiti error ({elapsed:.0f}s): {e}")
             skipped += 1
 
     await graphiti.close()
