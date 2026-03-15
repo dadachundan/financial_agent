@@ -1,28 +1,31 @@
 #!/usr/bin/env python3
 """
-zep_app.py — Flask blueprint for the Zep-powered knowledge graph UI.
+zep_app.py — Flask blueprint for the graphiti-core knowledge graph UI.
 
-Replaces knowledge_graph.py (SQLite KG) and rag_query.py (ChromaDB RAG).
-All entity extraction and relationship discovery is handled by Zep Cloud.
+Backend: local graphiti-core (KuzuDB + bge-m3 + MiniMax).
+No cloud dependencies — the full graph lives in ./graphiti_db/.
 
 Routes (all under /zep prefix when registered in main.py):
     GET  /          — Search + entity browser
-    GET  /search    — JSON: {query, scope} → GraphSearchResults
-    GET  /entities  — JSON: list all entity nodes (paginated)
-    GET  /edges     — JSON: list all relationship edges (paginated)
+    GET  /search    — JSON: {query} → {nodes, edges, episodes}
+    GET  /entities  — JSON: list all entity nodes (paginated via KuzuDB)
+    GET  /edges     — JSON: list all relationship edges (paginated via KuzuDB)
     GET  /stats     — JSON: {node_count, edge_count, episode_count}
-    GET  /ingest    — SSE stream: run zep_ingest for newly-added PDFs
+    GET  /ingest    — SSE stream: run graphiti_ingest.py for newly-added PDFs
 """
 
+import asyncio
 import os
 import subprocess
 import sys
 from pathlib import Path
 
-from flask import Blueprint, render_template, jsonify, request, Response, redirect, url_for
+from flask import Blueprint, render_template, jsonify, request, Response
 import nav_widget2 as _nw2
 
 SCRIPT_DIR = Path(__file__).parent
+GRAPH_DIR  = SCRIPT_DIR / "graphiti_db"
+GROUP_ID   = "financial-pdfs"
 
 zep_bp = Blueprint(
     "zep",
@@ -31,72 +34,88 @@ zep_bp = Blueprint(
     static_folder=str(SCRIPT_DIR / "static"),
 )
 
-GRAPH_ID = "financial-pdfs"
 
-# ── Lazy Zep client ────────────────────────────────────────────────────────────
+# ── Async ↔ sync bridge ────────────────────────────────────────────────────────
 
-_zep_client = None
-
-
-def _get_zep():
-    global _zep_client
-    if _zep_client is not None:
-        return _zep_client
-
-    # Load API key from config.py
-    api_key = ""
-    for parent in [SCRIPT_DIR] + list(SCRIPT_DIR.parents):
-        cfg = parent / "config.py"
-        if cfg.exists():
-            ns: dict = {}
-            exec(cfg.read_text(), ns)
-            api_key = ns.get("ZEP_API_KEY", "")
-            if api_key:
-                break
-
-    if not api_key:
-        return None
-
-    from zep_cloud.client import Zep
-    _zep_client = Zep(api_key=api_key)
-    return _zep_client
+def _run(coro):
+    """Run an async coroutine from a synchronous Flask route."""
+    return asyncio.run(coro)
 
 
-def _zep_ok() -> bool:
-    return _get_zep() is not None
+# ── Lazy graphiti singleton ────────────────────────────────────────────────────
+
+_graphiti = None
 
 
-# ── Helpers ────────────────────────────────────────────────────────────────────
+def _get_graphiti():
+    global _graphiti
+    if _graphiti is None:
+        if not GRAPH_DIR.exists():
+            return None   # not yet indexed
+        try:
+            from minimax_llm_client import get_graphiti
+            _graphiti = get_graphiti()
+        except Exception:
+            return None
+    return _graphiti
+
+
+def _graph_ready() -> bool:
+    return GRAPH_DIR.exists()
+
+
+# ── KuzuDB direct query helpers ────────────────────────────────────────────────
+# Used for /entities, /edges, /stats (browsing, not semantic search).
+
+def _kuzu_conn():
+    """Open a fresh read-only KuzuDB connection."""
+    import kuzu
+    kdb = kuzu.Database(str(GRAPH_DIR), read_only=True)
+    return kuzu.Connection(kdb)
+
+
+def _kuzu_rows(result) -> list[dict]:
+    """Convert a kuzu QueryResult into a list of plain dicts."""
+    rows = []
+    col_names = result.get_column_names()
+    while result.has_next():
+        row = result.get_next()
+        rows.append(dict(zip(col_names, row)))
+    return rows
+
+
+# ── Serialisers ────────────────────────────────────────────────────────────────
 
 def _node_to_dict(node) -> dict:
+    """Serialise a graphiti EntityNode."""
     return {
-        "uuid": node.uuid_,
-        "name": node.name,
-        "labels": node.labels or [],
+        "uuid":    node.uuid,
+        "name":    node.name or "",
+        "labels":  node.labels or [],
         "summary": node.summary or "",
-        "score": node.score,
+        "score":   getattr(node, "score", None),
     }
 
 
 def _edge_to_dict(edge) -> dict:
+    """Serialise a graphiti EntityEdge."""
     return {
-        "uuid": edge.uuid_,
-        "name": edge.name or "",
-        "fact": edge.fact or "",
-        "source_node_uuid": edge.source_node_uuid,
-        "target_node_uuid": edge.target_node_uuid,
-        "episodes": edge.episodes or [],
-        "valid_at": str(edge.valid_at) if edge.valid_at else None,
-        "score": edge.score,
+        "uuid":             edge.uuid,
+        "name":             edge.name or "",
+        "fact":             edge.fact or "",
+        "source_node_uuid": edge.source_node_uuid or "",
+        "target_node_uuid": edge.target_node_uuid or "",
+        "valid_at":         str(edge.valid_at) if getattr(edge, "valid_at", None) else None,
+        "score":            getattr(edge, "score", None),
     }
 
 
-def _episode_to_dict(ep) -> dict:
+def _ep_to_dict(ep) -> dict:
+    """Serialise a graphiti EpisodicNode."""
     return {
-        "uuid": ep.uuid_,
-        "source_description": ep.source_description or "",
-        "processed": ep.processed,
-        "created_at": str(ep.created_at) if ep.created_at else None,
+        "uuid":               ep.uuid,
+        "source_description": getattr(ep, "source_description", "") or "",
+        "created_at":         str(ep.created_at) if getattr(ep, "created_at", None) else None,
     }
 
 
@@ -104,10 +123,9 @@ def _episode_to_dict(ep) -> dict:
 
 @zep_bp.route("/")
 def index():
-    has_key = _zep_ok()
     return render_template(
         "zep.html",
-        has_key=has_key,
+        has_key=_graph_ready(),
         nav_html=_nw2.NAV_HTML,
         url_patch_js=_nw2.URL_PATCH_JS,
     )
@@ -115,125 +133,138 @@ def index():
 
 @zep_bp.route("/search")
 def search():
-    zep = _get_zep()
-    if not zep:
-        return jsonify({"error": "ZEP_API_KEY not configured"}), 503
+    if not _graph_ready():
+        return jsonify({"error": "Graph not yet indexed. Run graphiti_ingest.py first."}), 503
 
     query = request.args.get("q", "").strip()
-    scope = request.args.get("scope", "edges")   # "nodes" | "edges" | "episodes"
     limit = min(int(request.args.get("limit", 30)), 100)
 
     if not query:
         return jsonify({"nodes": [], "edges": [], "episodes": []}), 200
 
+    g = _get_graphiti()
+    if g is None:
+        return jsonify({"error": "Could not initialise graphiti. Check logs."}), 500
+
     try:
-        results = zep.graph.search(
+        results = _run(g.search_(
             query=query,
-            graph_id=GRAPH_ID,
-            scope=scope,
-            limit=limit,
-        )
+            group_ids=[GROUP_ID],
+        ))
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-    nodes    = [_node_to_dict(n) for n in (results.nodes    or [])]
-    edges    = [_edge_to_dict(e) for e in (results.edges    or [])]
-    episodes = [_episode_to_dict(ep) for ep in (results.episodes or [])]
+    # Limit results
+    nodes    = [_node_to_dict(n)  for n in (results.nodes    or [])[:limit]]
+    edges    = [_edge_to_dict(e)  for e in (results.edges    or [])[:limit]]
+    episodes = [_ep_to_dict(ep)   for ep in (results.episodes or [])[:limit]]
 
     return jsonify({"nodes": nodes, "edges": edges, "episodes": episodes})
 
 
 @zep_bp.route("/entities")
 def entities():
-    zep = _get_zep()
-    if not zep:
-        return jsonify({"error": "ZEP_API_KEY not configured"}), 503
+    if not _graph_ready():
+        return jsonify({"nodes": [], "next_cursor": None})
 
     limit  = min(int(request.args.get("limit", 200)), 500)
-    cursor = request.args.get("cursor", None)
+    cursor = request.args.get("cursor") or None
 
     try:
-        nodes = zep.graph.node.get_by_graph_id(
-            GRAPH_ID,
-            limit=limit,
-            uuid_cursor=cursor or None,
-        )
+        conn   = _kuzu_conn()
+        params = {"gid": GROUP_ID, "lim": limit}
+        if cursor:
+            params["cursor"] = cursor
+            q = ("MATCH (n:Entity) WHERE n.group_id = $gid AND n.uuid > $cursor "
+                 "RETURN n.uuid, n.name, n.summary ORDER BY n.uuid LIMIT $lim")
+        else:
+            q = ("MATCH (n:Entity) WHERE n.group_id = $gid "
+                 "RETURN n.uuid, n.name, n.summary ORDER BY n.uuid LIMIT $lim")
+        rows = _kuzu_rows(conn.execute(q, params))
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-    return jsonify({
-        "nodes":       [_node_to_dict(n) for n in nodes],
-        "next_cursor": nodes[-1].uuid_ if len(nodes) == limit else None,
-    })
+    nodes = [
+        {"uuid": r["n.uuid"], "name": r["n.name"] or "", "summary": r["n.summary"] or ""}
+        for r in rows
+    ]
+    next_cursor = nodes[-1]["uuid"] if len(nodes) == limit else None
+    return jsonify({"nodes": nodes, "next_cursor": next_cursor})
 
 
 @zep_bp.route("/edges")
 def edges():
-    zep = _get_zep()
-    if not zep:
-        return jsonify({"error": "ZEP_API_KEY not configured"}), 503
+    if not _graph_ready():
+        return jsonify({"edges": [], "next_cursor": None})
 
     limit  = min(int(request.args.get("limit", 200)), 500)
-    cursor = request.args.get("cursor", None)
+    cursor = request.args.get("cursor") or None
 
     try:
-        edge_list = zep.graph.edge.get_by_graph_id(
-            GRAPH_ID,
-            limit=limit,
-            uuid_cursor=cursor or None,
-        )
+        conn   = _kuzu_conn()
+        params = {"gid": GROUP_ID, "lim": limit}
+        if cursor:
+            params["cursor"] = cursor
+            q = ("MATCH (s:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(t:Entity) "
+                 "WHERE e.group_id = $gid AND e.uuid > $cursor "
+                 "RETURN e.uuid, e.name, e.fact, s.uuid AS src, t.uuid AS tgt "
+                 "ORDER BY e.uuid LIMIT $lim")
+        else:
+            q = ("MATCH (s:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(t:Entity) "
+                 "WHERE e.group_id = $gid "
+                 "RETURN e.uuid, e.name, e.fact, s.uuid AS src, t.uuid AS tgt "
+                 "ORDER BY e.uuid LIMIT $lim")
+        rows = _kuzu_rows(conn.execute(q, params))
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-    return jsonify({
-        "edges":       [_edge_to_dict(e) for e in edge_list],
-        "next_cursor": edge_list[-1].uuid_ if len(edge_list) == limit else None,
-    })
+    edge_list = [
+        {
+            "uuid":             r["e.uuid"],
+            "name":             r["e.name"] or "",
+            "fact":             r["e.fact"] or "",
+            "source_node_uuid": r["src"],
+            "target_node_uuid": r["tgt"],
+        }
+        for r in rows
+    ]
+    next_cursor = edge_list[-1]["uuid"] if len(edge_list) == limit else None
+    return jsonify({"edges": edge_list, "next_cursor": next_cursor})
 
 
 @zep_bp.route("/stats")
 def stats():
-    zep = _get_zep()
-    if not zep:
-        return jsonify({"has_key": False})
-
-    try:
-        graph_info = zep.graph.get(graph_id=GRAPH_ID)
-    except Exception:
+    if not _graph_ready():
         return jsonify({
-            "has_key": True, "graph_exists": False,
+            "graph_exists": False,
             "node_count": 0, "edge_count": 0, "episode_count": 0,
         })
 
     try:
-        nodes = zep.graph.node.get_by_graph_id(GRAPH_ID, limit=1)
-        edges = zep.graph.edge.get_by_graph_id(GRAPH_ID, limit=1)
-        episodes = zep.graph.episode.get_by_graph_id(GRAPH_ID)
-        ep_count = len(episodes.episodes) if episodes and episodes.episodes else 0
-    except Exception:
-        nodes, edges, ep_count = [], [], 0
-
-    # Get real counts by paging with large limit
-    def _count_all(getter):
-        total, cursor = 0, None
-        while True:
-            try:
-                page = getter(GRAPH_ID, limit=500, uuid_cursor=cursor)
-            except Exception:
-                break
-            if not page:
-                break
-            total += len(page)
-            if len(page) < 500:
-                break
-            cursor = page[-1].uuid_
-        return total
-
-    node_count = _count_all(zep.graph.node.get_by_graph_id)
-    edge_count = _count_all(zep.graph.edge.get_by_graph_id)
+        conn = _kuzu_conn()
+        node_count = _kuzu_rows(
+            conn.execute("MATCH (n:Entity) WHERE n.group_id = $gid RETURN count(*)",
+                         {"gid": GROUP_ID})
+        )[0]["count(*)"]
+        edge_count = _kuzu_rows(
+            conn.execute(
+                "MATCH (:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(:Entity) "
+                "WHERE e.group_id = $gid RETURN count(*)",
+                {"gid": GROUP_ID},
+            )
+        )[0]["count(*)"]
+        ep_count = _kuzu_rows(
+            conn.execute("MATCH (e:Episodic) WHERE e.group_id = $gid RETURN count(*)",
+                         {"gid": GROUP_ID})
+        )[0]["count(*)"]
+    except Exception as ex:
+        return jsonify({
+            "graph_exists": True,
+            "node_count": 0, "edge_count": 0, "episode_count": 0,
+            "error": str(ex),
+        })
 
     return jsonify({
-        "has_key":       True,
         "graph_exists":  True,
         "node_count":    node_count,
         "edge_count":    edge_count,
@@ -243,17 +274,10 @@ def stats():
 
 @zep_bp.route("/ingest")
 def ingest_stream():
-    """SSE stream: run zep_ingest.py for any un-indexed PDFs."""
-    zep = _get_zep()
-    if not zep:
-        def _no_key():
-            yield "data: ERROR: ZEP_API_KEY not configured in config.py\n\n"
-            yield "data: done: true\n\n"
-        return Response(_no_key(), mimetype="text/event-stream")
-
+    """SSE stream: run graphiti_ingest.py for any un-indexed PDFs."""
     def _gen():
-        yield f"data: Starting zep_ingest.py ...\n\n"
-        ingestor = SCRIPT_DIR / "zep_ingest.py"
+        yield "data: Starting graphiti_ingest.py ...\n\n"
+        ingestor = SCRIPT_DIR / "graphiti_ingest.py"
         proc = subprocess.Popen(
             [sys.executable, "-u", str(ingestor)],
             stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
@@ -263,7 +287,10 @@ def ingest_stream():
         for line in proc.stdout:
             yield f"data: {line.rstrip()}\n\n"
         proc.wait()
-        yield f"data: done: true\n\n"
+        # Reset the singleton so it reloads the updated graph
+        global _graphiti
+        _graphiti = None
+        yield "data: done: true\n\n"
 
     return Response(_gen(), mimetype="text/event-stream")
 
@@ -271,8 +298,8 @@ def ingest_stream():
 # ── Standalone entry point ─────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    from flask import Flask
     import argparse
+    from flask import Flask
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--port", type=int, default=5001)
@@ -281,12 +308,9 @@ if __name__ == "__main__":
     app = Flask(__name__, template_folder=str(SCRIPT_DIR / "templates"))
     app.register_blueprint(zep_bp)
 
-    from nav_widget2 import nav_bp
-    app.register_blueprint(nav_bp)
-
     @app.context_processor
     def _inject_base():
         return dict(_base="")
 
-    print(f"Zep Knowledge Graph  →  http://localhost:{args.port}/")
+    print(f"Graphiti Knowledge Graph  →  http://localhost:{args.port}/")
     app.run(host="0.0.0.0", port=args.port, debug=False, threaded=True)

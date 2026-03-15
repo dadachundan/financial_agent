@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zep Knowledge Graph</title>
+  <title>Knowledge Graph</title>
   <link href="/static/bootstrap.min.css" rel="stylesheet">
   <style>
     body { background:#f0f2f5; padding:0 0 40px; }
@@ -73,12 +73,13 @@
 {{ url_patch_js | safe }}
 
 {% if not has_key %}
-<div id="noKeyAlert" class="alert alert-warning">
-  <strong>ZEP_API_KEY not configured.</strong>
-  Add your Zep Cloud API key to <code>config.py</code>:
-  <pre class="mt-2 mb-0">ZEP_API_KEY = "ze-..."</pre>
-  <small>Get a free key at <a href="https://app.getzep.com" target="_blank">app.getzep.com</a>
-  then run <code>python zep_ingest.py</code> to index your PDFs.</small>
+<div id="noKeyAlert" class="alert alert-warning m-3">
+  <strong>Graph not yet indexed.</strong>
+  Run the ingestor to build the local knowledge graph:
+  <pre class="mt-2 mb-0">python graphiti_ingest.py</pre>
+  <small>Uses <strong>KuzuDB</strong> (local graph DB) + <strong>bge-m3</strong> (local embeddings) +
+  <strong>MiniMax</strong> (entity extraction). No cloud graph service needed.<br>
+  Or click <strong>"⬆ Index New PDFs"</strong> in the stats bar once the graph directory exists.</small>
 </div>
 {% else %}
 
