@@ -243,19 +243,29 @@ class MiniMaxLLMClient(LLMClient):
                         "Do NOT rephrase, abbreviate, expand, or change capitalisation. "
                         "If you cannot find a matching entity name in the list, skip the edge entirely."
                     )
-                # For entity extraction: strictly exclude all personal names
+                # For entity extraction: only meaningful business/market entities
                 if response_model.__name__ == "ExtractedEntities":
                     extra += (
-                        "\n\nSTRICT RULE — PERSONAL NAMES ARE FORBIDDEN: "
-                        "You MUST NOT extract any human personal name as an entity. "
-                        "This includes: analyst names, author names, CEO/executive names, "
-                        "researcher names, investor names, or any other individual person. "
-                        "Examples of FORBIDDEN entities: 'Ryan Huang', 'Jensen Huang', "
-                        "'Tim Cook', 'Warren Buffett', 'John Smith'. "
-                        "ONLY extract: companies, organisations, stock tickers, financial products, "
-                        "technologies, products, markets, indices, economic indicators, countries, "
-                        "regions, and industry/sector names. "
-                        "If an entity is a human person's name, SKIP IT entirely."
+                        "\n\nSTRICT ENTITY EXTRACTION RULES — read every rule carefully:"
+                        "\n\nALLOWED entities (extract ONLY these):"
+                        "\n- Companies and organisations (e.g. NVIDIA, TSMC, Microsoft, SoftBank)"
+                        "\n- Stock tickers (e.g. NVDA, TSM, AAPL)"
+                        "\n- Specific products, chips, or technologies (e.g. H100, Blackwell, CUDA, CoWoS)"
+                        "\n- Markets, industries, or sectors (e.g. data center, AI accelerator, semiconductor)"
+                        "\n- Countries or economic regions (e.g. China, United States, European Union)"
+                        "\n- Financial indices or benchmarks (e.g. S&P 500, NASDAQ)"
+                        "\n- Specific financial products or instruments (e.g. convertible notes)"
+                        "\n\nFORBIDDEN entities (NEVER extract these — skip them entirely):"
+                        "\n- Human personal names of any kind (analysts, CEOs, authors, investors)"
+                        "\n  Examples: Jensen Huang, Tim Cook, Warren Buffett, Ryan Huang"
+                        "\n- SEC filing form types: Form 10-K, Form 10-Q, Form 8-K, Annual Report,"
+                        "  Quarterly Report, Proxy Statement, any document name"
+                        "\n- Generic regulatory/accounting bodies mentioned in boilerplate:"
+                        "  IRS, FASB, GAAP, IFRS, SEC (unless SEC is taking a specific named action)"
+                        "\n- Generic legal or accounting concepts: fiscal year, quarter, audit,"
+                        "  depreciation, amortisation, revenue recognition"
+                        "\n- Generic time periods: Q1, Q2, fiscal 2024, the period, the quarter"
+                        "\n\nIf in doubt, skip the entity. Quality over quantity."
                     )
                 content = content + extra
                 mm_messages.append({
