@@ -133,17 +133,25 @@ def _edge_to_dict(edge) -> dict:
 def _ep_to_dict(ep) -> dict:
     """Serialise a graphiti EpisodicNode."""
     name = getattr(ep, "name", "") or ""
-    # Episode names are "pdf_{file_id}" for ZSXQ PDFs; extract for direct PDF link
-    file_id = None
+    # "pdf_{file_id}"  → ZSXQ PDF  (/zsxq/pdf/<file_id>)
+    # "report_{id}"    → SEC filing (/sec/file/<id>)
+    file_id   = None
+    report_id = None
     if name.startswith("pdf_"):
         try:
             file_id = int(name[4:])
+        except ValueError:
+            pass
+    elif name.startswith("report_"):
+        try:
+            report_id = int(name[7:])
         except ValueError:
             pass
     return {
         "uuid":               ep.uuid,
         "name":               name,
         "file_id":            file_id,
+        "report_id":          report_id,
         "source_description": getattr(ep, "source_description", "") or "",
         "created_at":         str(ep.created_at) if getattr(ep, "created_at", None) else None,
     }
@@ -302,12 +310,13 @@ def stats():
 
 @zep_bp.route("/ingest")
 def ingest_stream():
-    """SSE stream: run graphiti_ingest.py for any un-indexed PDFs."""
+    """SSE stream: run graphiti_ingest.py for any un-indexed PDFs and SEC filings."""
     def _gen():
         yield "data: Starting graphiti_ingest.py ...\n\n"
         ingestor = SCRIPT_DIR / "graphiti_ingest.py"
         proc = subprocess.Popen(
-            [sys.executable, "-u", str(ingestor)],
+            [sys.executable, "-u", str(ingestor),
+             "--source", "all", "--form-type", "10-K", "10-Q"],
             stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
             text=True, bufsize=1,
             env={**os.environ, "PYTHONUNBUFFERED": "1"},
