@@ -20,6 +20,7 @@ from typing import Any
 from graphiti_core.llm_client import LLMClient
 from graphiti_core.llm_client.config import LLMConfig
 from graphiti_core.embedder.client import EmbedderClient
+from graphiti_core.cross_encoder.client import CrossEncoderClient
 
 logger = logging.getLogger(__name__)
 
@@ -209,26 +210,41 @@ class BGEEmbedder(EmbedderClient):
         return vectors
 
 
+# ── Passthrough cross-encoder (no OpenAI required) ─────────────────────────────
+
+class PassthroughReranker(CrossEncoderClient):
+    """
+    No-op reranker: preserves the original passage order produced by the
+    embedding-based retrieval step.  Avoids requiring an OpenAI API key.
+    """
+
+    async def rank(self, query: str, passages: list[str]) -> list[tuple[str, float]]:
+        # Return passages with descending dummy scores so graphiti's sort is stable
+        return [(p, float(len(passages) - i)) for i, p in enumerate(passages)]
+
+
 # ── Singleton factory ──────────────────────────────────────────────────────────
 
 _graphiti_instance = None
 
 
 async def _build_graphiti():
-    import kuzu
     from graphiti_core import Graphiti
     from graphiti_core.driver.kuzu_driver import KuzuDriver
 
-    GRAPH_DIR.mkdir(exist_ok=True)
-    kdb    = kuzu.Database(str(GRAPH_DIR))
-    driver = KuzuDriver(kdb)
+    # Pass the path string — KuzuDriver creates its own kuzu.Database internally
+    driver = KuzuDriver(str(GRAPH_DIR))
+    driver._database = GROUP_ID  # required by graphiti_core 0.28.2 (not set by KuzuDriver)
+
+    # KuzuDriver.build_indices_and_constraints() is a no-op; create FTS indices manually
+    await driver._graph_ops.build_indices_and_constraints(driver)
 
     g = Graphiti(
         llm_client=MiniMaxLLMClient(),
         embedder=BGEEmbedder(),
+        cross_encoder=PassthroughReranker(),
         graph_driver=driver,
     )
-    await g.build_indices_and_constraints()
     return g
 
 

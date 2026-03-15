@@ -79,10 +79,9 @@ def mark_indexed(conn: sqlite3.Connection, file_id: int) -> None:
 # ── Core async ingestion ───────────────────────────────────────────────────────
 
 async def _ingest_all(rows: list, db_path: Path) -> tuple[int, int]:
-    import kuzu
     from graphiti_core import Graphiti
     from graphiti_core.driver.kuzu_driver import KuzuDriver
-    from minimax_llm_client import MiniMaxLLMClient, BGEEmbedder, GRAPH_DIR
+    from minimax_llm_client import MiniMaxLLMClient, BGEEmbedder, PassthroughReranker, GRAPH_DIR
 
     # Warm up embedder once up front
     print("Loading bge-m3 embedder …")
@@ -90,16 +89,19 @@ async def _ingest_all(rows: list, db_path: Path) -> tuple[int, int]:
     embedder._get_model()
     print("Embedder ready.\n")
 
-    GRAPH_DIR.mkdir(exist_ok=True)
-    kdb    = kuzu.Database(str(GRAPH_DIR))
-    driver = KuzuDriver(kdb)
+    # Pass the path string — KuzuDriver creates its own kuzu.Database internally
+    driver = KuzuDriver(str(GRAPH_DIR))
+    driver._database = GROUP_ID  # required by graphiti_core 0.28.2 (not set by KuzuDriver)
+
+    # KuzuDriver.build_indices_and_constraints() is a no-op; create FTS indices manually
+    await driver._graph_ops.build_indices_and_constraints(driver)
 
     graphiti = Graphiti(
         llm_client=MiniMaxLLMClient(),
         embedder=embedder,
+        cross_encoder=PassthroughReranker(),
         graph_driver=driver,
     )
-    await graphiti.build_indices_and_constraints()
 
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
