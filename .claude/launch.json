@@ -4,8 +4,8 @@
     {
       "name": "finagent",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["/Users/x/projects/financial_agent/main.py", "--port", "5001"],
-      "port": 5001
+      "runtimeArgs": ["/Users/x/projects/financial_agent/.claude/worktrees/nifty-bohr/main.py", "--port", "8002"],
+      "port": 8002
     }
   ,
     {

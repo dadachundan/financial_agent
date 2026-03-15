@@ -235,13 +235,19 @@ class MiniMaxLLMClient(LLMClient):
                         "or invent any name. If no entity in EXISTING ENTITIES is a true duplicate, "
                         "use an empty string \"\"."
                     )
-                # For entity extraction: skip analyst/author names, focus on companies/products/concepts
+                # For entity extraction: strictly exclude all personal names
                 if response_model.__name__ == "ExtractedEntities":
                     extra += (
-                        "\n\nIMPORTANT: Do NOT extract individual people's names (analysts, authors, "
-                        "executives, researchers). Focus only on: companies, organisations, financial "
-                        "instruments, technologies, products, markets, economic concepts, and geopolitical "
-                        "entities. Skip any entity that is primarily a personal name."
+                        "\n\nSTRICT RULE — PERSONAL NAMES ARE FORBIDDEN: "
+                        "You MUST NOT extract any human personal name as an entity. "
+                        "This includes: analyst names, author names, CEO/executive names, "
+                        "researcher names, investor names, or any other individual person. "
+                        "Examples of FORBIDDEN entities: 'Ryan Huang', 'Jensen Huang', "
+                        "'Tim Cook', 'Warren Buffett', 'John Smith'. "
+                        "ONLY extract: companies, organisations, stock tickers, financial products, "
+                        "technologies, products, markets, indices, economic indicators, countries, "
+                        "regions, and industry/sector names. "
+                        "If an entity is a human person's name, SKIP IT entirely."
                     )
                 content = content + extra
                 mm_messages.append({
