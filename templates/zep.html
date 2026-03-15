@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zep Knowledge Graph</title>
+  <link href="/static/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background:#f0f2f5; padding:0 0 40px; }
+
+    /* ── search bar ── */
+    #searchWrap { background:#fff; border-bottom:1px solid #dee2e6; padding:12px 20px; }
+    #searchInput { font-size:1rem; }
+    #searchBtn { min-width:90px; }
+    .scope-btn { font-size:.8rem; }
+
+    /* ── stats bar ── */
+    #statsBar { font-size:.82rem; padding:6px 20px; background:#e9f0fb;
+                border-bottom:1px solid #cce0ff; display:flex; gap:24px; align-items:center; }
+    .stat-pill { background:#fff; border:1px solid #b3cfff; border-radius:20px;
+                 padding:2px 10px; font-weight:600; color:#0d6efd; }
+
+    /* ── main columns ── */
+    #mainWrap { padding:20px; }
+    #resultsCol { flex:1 1 auto; }
+    #sideCol  { width:320px; flex:0 0 320px; }
+
+    /* ── result cards ── */
+    .result-card { background:#fff; border:1px solid #dee2e6; border-radius:8px;
+                   margin-bottom:10px; padding:12px 16px; }
+    .result-card .fact { font-size:.95rem; font-weight:500; color:#212529; }
+    .result-card .meta { font-size:.78rem; color:#6c757d; margin-top:4px; }
+    .entity-badge { display:inline-block; background:#e8f0fe; color:#1a73e8;
+                    border-radius:4px; padding:1px 7px; font-size:.8rem;
+                    font-weight:600; margin-right:4px; }
+    .label-badge  { display:inline-block; background:#f3e8fd; color:#7c3aed;
+                    border-radius:4px; padding:1px 7px; font-size:.75rem;
+                    margin-right:3px; }
+    .score-badge  { float:right; font-size:.75rem; background:#f8f9fa;
+                    border:1px solid #dee2e6; border-radius:10px; padding:1px 8px; }
+
+    /* ── spinner ── */
+    #spinner { display:none; }
+
+    /* ── empty/error ── */
+    #resultMsg { font-size:.9rem; color:#6c757d; padding:20px 0; }
+
+    /* ── entity browser ── */
+    #entityList { max-height:400px; overflow-y:auto; }
+    .entity-row { padding:6px 10px; border-bottom:1px solid #f0f0f0; font-size:.82rem; cursor:pointer; }
+    .entity-row:hover { background:#f8f9fa; }
+    .entity-row .ename { font-weight:600; color:#1a73e8; }
+    .entity-row .esumm { color:#6c757d; font-size:.75rem;
+                         white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:240px; }
+
+    /* ── ingest log ── */
+    #ingestLog { font-size:.78rem; max-height:260px; overflow-y:auto;
+                 background:#1e1e2e; color:#c9d1d9; padding:10px;
+                 border-radius:6px; font-family:monospace; display:none; }
+    #ingestLog .ok   { color:#56d364; }
+    #ingestLog .warn { color:#e3b341; }
+    #ingestLog .err  { color:#f85149; }
+
+    /* ── tabs ── */
+    .nav-tabs .nav-link { font-size:.85rem; padding:6px 12px; }
+
+    /* no-key warning */
+    #noKeyAlert { margin:20px; }
+  </style>
+</head>
+<body>
+{{ nav_html | safe }}
+{{ url_patch_js | safe }}
+
+{% if not has_key %}
+<div id="noKeyAlert" class="alert alert-warning">
+  <strong>ZEP_API_KEY not configured.</strong>
+  Add your Zep Cloud API key to <code>config.py</code>:
+  <pre class="mt-2 mb-0">ZEP_API_KEY = "ze-..."</pre>
+  <small>Get a free key at <a href="https://app.getzep.com" target="_blank">app.getzep.com</a>
+  then run <code>python zep_ingest.py</code> to index your PDFs.</small>
+</div>
+{% else %}
+
+<!-- ── Search bar ── -->
+<div id="searchWrap">
+  <div class="d-flex gap-2 align-items-center">
+    <input id="searchInput" type="text" class="form-control"
+           placeholder='Try: "TSMC customers"  or  "semiconductor supply chain"  or  "AI chip companies"'
+           autofocus>
+    <button id="searchBtn" class="btn btn-primary" onclick="doSearch()">Search</button>
+  </div>
+  <div class="mt-2 d-flex gap-2 align-items-center">
+    <span class="text-muted" style="font-size:.8rem">Scope:</span>
+    <div class="btn-group btn-group-sm" id="scopeGroup">
+      <button class="btn btn-outline-secondary scope-btn active" data-scope="edges">Relationships</button>
+      <button class="btn btn-outline-secondary scope-btn" data-scope="nodes">Entities</button>
+      <button class="btn btn-outline-secondary scope-btn" data-scope="episodes">Documents</button>
+    </div>
+    <div id="spinner" class="spinner-border spinner-border-sm text-primary ms-2" role="status"></div>
+  </div>
+</div>
+
+<!-- ── Stats bar ── -->
+<div id="statsBar">
+  <span>📊 Graph stats:</span>
+  <span><span class="stat-pill" id="statNodes">–</span> entities</span>
+  <span><span class="stat-pill" id="statEdges">–</span> relationships</span>
+  <span><span class="stat-pill" id="statEpisodes">–</span> documents indexed</span>
+  <span class="ms-auto">
+    <button class="btn btn-sm btn-outline-primary" onclick="loadEntities()">Browse All Entities</button>
+    <button class="btn btn-sm btn-outline-success ms-1" onclick="fetchNewPdfs()">⬆ Index New PDFs</button>
+  </span>
+</div>
+
+<!-- ── Main layout ── -->
+<div id="mainWrap" class="d-flex gap-3">
+
+  <!-- Results column -->
+  <div id="resultsCol">
+    <div id="resultMsg" class="text-center text-muted py-5">
+      Search for any company, technology, or relationship across all your research PDFs.
+    </div>
+    <div id="resultsList"></div>
+  </div>
+
+  <!-- Side column -->
+  <div id="sideCol">
+
+    <!-- Entity browser card -->
+    <div class="card mb-3" id="entityCard" style="display:none!important">
+      <div class="card-header d-flex justify-content-between align-items-center py-2">
+        <span style="font-size:.88rem;font-weight:600">All Entities</span>
+        <button class="btn-close btn-sm" onclick="document.getElementById('entityCard').style.display='none'"></button>
+      </div>
+      <div id="entityList" class="card-body p-0"></div>
+      <div class="card-footer py-1">
+        <button class="btn btn-sm btn-link" id="loadMoreEntities" onclick="loadMoreEntities()" style="display:none">
+          Load more…
+        </button>
+      </div>
+    </div>
+
+    <!-- Ingest card -->
+    <div class="card" id="ingestCard" style="display:none">
+      <div class="card-header d-flex justify-content-between align-items-center py-2">
+        <span style="font-size:.88rem;font-weight:600">Index New PDFs</span>
+        <button class="btn-close btn-sm" onclick="document.getElementById('ingestCard').style.display='none'"></button>
+      </div>
+      <div class="card-body p-2">
+        <div id="ingestLog"></div>
+        <button id="ingestBtn" class="btn btn-sm btn-success mt-2" onclick="startIngest()">
+          Start Indexing
+        </button>
+      </div>
+    </div>
+
+  </div><!-- /sideCol -->
+</div><!-- /mainWrap -->
+
+{% endif %}
+
+<script>
+// ── Scope selector ─────────────────────────────────────────────────────────
+let currentScope = 'edges';
+document.querySelectorAll('.scope-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.scope-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentScope = btn.dataset.scope;
+    const q = document.getElementById('searchInput').value.trim();
+    if (q) doSearch();
+  });
+});
+
+document.getElementById('searchInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') doSearch();
+});
+
+// ── Search ─────────────────────────────────────────────────────────────────
+async function doSearch() {
+  const q = document.getElementById('searchInput').value.trim();
+  if (!q) return;
+
+  const spinner = document.getElementById('spinner');
+  const btn     = document.getElementById('searchBtn');
+  spinner.style.display = '';
+  btn.disabled = true;
+
+  try {
+    const res  = await fetch(`/search?q=${encodeURIComponent(q)}&scope=${currentScope}&limit=40`);
+    const data = await res.json();
+    renderResults(data, q);
+  } catch(e) {
+    showMsg(`Error: ${e.message}`);
+  } finally {
+    spinner.style.display = 'none';
+    btn.disabled = false;
+  }
+}
+
+function renderResults(data, query) {
+  const list = document.getElementById('resultsList');
+  list.innerHTML = '';
+  document.getElementById('resultMsg').style.display = 'none';
+
+  const edges    = data.edges    || [];
+  const nodes    = data.nodes    || [];
+  const episodes = data.episodes || [];
+  const total = edges.length + nodes.length + episodes.length;
+
+  if (total === 0) {
+    list.innerHTML = `<div class="text-muted py-4 text-center">
+      No results for <strong>${escHtml(query)}</strong>.<br>
+      <small>If you just indexed new PDFs, wait a minute for Zep to process them.</small>
+    </div>`;
+    return;
+  }
+
+  // Header
+  list.innerHTML = `<p class="text-muted" style="font-size:.82rem;margin-bottom:8px">
+    ${total} result(s) for <strong>${escHtml(query)}</strong>
+  </p>`;
+
+  // Render edges (relationships / facts)
+  edges.forEach(e => {
+    list.innerHTML += `
+    <div class="result-card">
+      <span class="score-badge">${e.score != null ? e.score.toFixed(2) : ''}</span>
+      <div class="fact">${escHtml(e.fact || e.name || '')}</div>
+      <div class="meta">
+        ${e.source_node_uuid ? `<span class="entity-badge" onclick="searchEntity('${escHtml(e.source_node_uuid)}')">→ source</span>` : ''}
+        ${e.target_node_uuid ? `<span class="entity-badge" onclick="searchEntity('${escHtml(e.target_node_uuid)}')">→ target</span>` : ''}
+        ${(e.episodes||[]).slice(0,3).map(ep => `<span class="label-badge">📄 ${escHtml(ep.slice(0,8))}…</span>`).join('')}
+      </div>
+    </div>`;
+  });
+
+  // Render nodes (entities)
+  nodes.forEach(n => {
+    const labels = (n.labels||[]).map(l => `<span class="label-badge">${escHtml(l)}</span>`).join('');
+    list.innerHTML += `
+    <div class="result-card" style="cursor:pointer" onclick="clickEntity('${escHtml(n.uuid)}','${escHtml(n.name)}')">
+      <span class="score-badge">${n.score != null ? n.score.toFixed(2) : ''}</span>
+      <div class="fact">🏢 ${escHtml(n.name)}</div>
+      <div class="meta">${labels} ${escHtml(n.summary || '').slice(0,120)}</div>
+    </div>`;
+  });
+
+  // Render episodes (source documents)
+  episodes.forEach(ep => {
+    list.innerHTML += `
+    <div class="result-card">
+      <span class="score-badge">${ep.score != null ? ep.score.toFixed(2) : ''}</span>
+      <div class="fact">📄 ${escHtml(ep.source_description || ep.uuid)}</div>
+      <div class="meta">${ep.processed ? '✅ Processed' : '⏳ Processing…'} · ${escHtml(ep.created_at||'')}</div>
+    </div>`;
+  });
+}
+
+function showMsg(msg) {
+  const el = document.getElementById('resultMsg');
+  el.style.display = '';
+  el.textContent = msg;
+  document.getElementById('resultsList').innerHTML = '';
+}
+
+// ── Entity click → search its relationships ────────────────────────────────
+function clickEntity(uuid, name) {
+  document.getElementById('searchInput').value = name;
+  doSearch();
+}
+
+// ── Stats ──────────────────────────────────────────────────────────────────
+async function loadStats() {
+  try {
+    const r = await fetch('/stats');
+    const d = await res.json();
+    document.getElementById('statNodes').textContent    = d.node_count    ?? '–';
+    document.getElementById('statEdges').textContent    = d.edge_count    ?? '–';
+    document.getElementById('statEpisodes').textContent = d.episode_count ?? '–';
+  } catch(_) {}
+}
+
+// ── Entity browser ─────────────────────────────────────────────────────────
+let _entityCursor = null;
+let _entityLoaded = false;
+
+async function loadEntities(reset) {
+  if (reset) { _entityCursor = null; _entityLoaded = false; document.getElementById('entityList').innerHTML = ''; }
+  const card = document.getElementById('entityCard');
+  card.style.display = '';
+
+  const url = `/entities?limit=100` + (_entityCursor ? `&cursor=${_entityCursor}` : '');
+  try {
+    const r = await fetch(url);
+    const d = await r.json();
+    const list = document.getElementById('entityList');
+    (d.nodes||[]).forEach(n => {
+      const row = document.createElement('div');
+      row.className = 'entity-row';
+      row.innerHTML = `<div class="ename">${escHtml(n.name)}</div><div class="esumm">${escHtml((n.summary||'').slice(0,80))}</div>`;
+      row.onclick = () => { document.getElementById('searchInput').value = n.name; doSearch(); };
+      list.appendChild(row);
+    });
+    _entityCursor = d.next_cursor;
+    document.getElementById('loadMoreEntities').style.display = d.next_cursor ? '' : 'none';
+  } catch(e) {
+    document.getElementById('entityList').innerHTML = `<p class="text-danger p-2">${escHtml(e.message)}</p>`;
+  }
+}
+
+function loadMoreEntities() { loadEntities(false); }
+
+// ── Ingest new PDFs ────────────────────────────────────────────────────────
+function fetchNewPdfs() {
+  document.getElementById('ingestCard').style.display = '';
+  document.getElementById('ingestLog').style.display  = 'none';
+  document.getElementById('ingestLog').innerHTML      = '';
+  document.getElementById('ingestBtn').style.display  = '';
+}
+
+function startIngest() {
+  const log = document.getElementById('ingestLog');
+  const btn = document.getElementById('ingestBtn');
+  log.style.display = '';
+  btn.style.display = 'none';
+  log.innerHTML     = '';
+
+  const src = new EventSource('/ingest');
+  src.onmessage = ev => {
+    const line = ev.data;
+    if (!line) return;
+    const div = document.createElement('div');
+    if (line.includes('✓') || line.includes('Done')) div.className = 'ok';
+    else if (line.includes('⚠') || line.includes('Warning')) div.className = 'warn';
+    else if (line.includes('ERROR') || line.includes('✗')) div.className = 'err';
+    div.textContent = line;
+    log.appendChild(div);
+    log.scrollTop = log.scrollHeight;
+
+    if (line.includes('done: true')) {
+      src.close();
+      btn.textContent = 'Done ✓';
+      btn.style.display = '';
+      btn.disabled = true;
+      // refresh stats
+      setTimeout(loadStats, 3000);
+    }
+  };
+  src.onerror = () => {
+    src.close();
+    const div = document.createElement('div');
+    div.className = 'err';
+    div.textContent = 'Connection lost.';
+    log.appendChild(div);
+    btn.style.display = '';
+    btn.disabled = false;
+  };
+}
+
+// ── Utilities ──────────────────────────────────────────────────────────────
+function escHtml(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────
+(async () => {
+  try {
+    const r   = await fetch('/stats');
+    const d   = await r.json();
+    document.getElementById('statNodes').textContent    = d.node_count    ?? '–';
+    document.getElementById('statEdges').textContent    = d.edge_count    ?? '–';
+    document.getElementById('statEpisodes').textContent = d.episode_count ?? '–';
+  } catch(_) {}
+})();
+</script>
+</body>
+</html>
