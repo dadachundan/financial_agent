@@ -16,6 +16,7 @@ Routes (all under /zep prefix when registered in main.py):
 """
 
 import asyncio
+import json
 import os
 import subprocess
 import sys
@@ -40,9 +41,17 @@ def _find_project_root() -> Path:
     return SCRIPT_DIR
 
 
-GRAPH_DIR = _find_project_root() / "graphiti_db"
-ZSXQ_DB   = _find_project_root() / "zsxq.db"
-GROUP_ID   = "financial-pdfs"
+GRAPH_DIR    = _find_project_root() / "graphiti_db"
+ZSXQ_DB      = _find_project_root() / "zsxq.db"
+GROUP_ID     = "financial-pdfs"
+LLM_LOG_FILE = _find_project_root() / "llm_calls.jsonl"
+
+# Enable LLM call logging via the shared minimax_llm_client module
+try:
+    import minimax_llm_client as _mmc
+    _mmc.LLM_LOG_FILE = LLM_LOG_FILE
+except Exception:
+    pass
 
 zep_bp = Blueprint(
     "zep",
@@ -467,6 +476,44 @@ def clear_graph():
     if errors:
         return jsonify({"ok": False, "errors": errors}), 500
     return jsonify({"ok": True})
+
+
+@zep_bp.route("/llm-log/view")
+def llm_log_view():
+    return render_template(
+        "llm_log.html",
+        nav_html=_nw2.NAV_HTML,
+        url_patch_js=render_template_string(_nw2.URL_PATCH_JS),
+    )
+
+
+@zep_bp.route("/llm-log")
+def llm_log():
+    """Return the last N LLM call records from llm_calls.jsonl as JSON."""
+    limit = min(int(request.args.get("limit", 50)), 500)
+    if not LLM_LOG_FILE.exists():
+        return jsonify({"records": [], "total": 0})
+    lines = LLM_LOG_FILE.read_text(encoding="utf-8").splitlines()
+    records = []
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            records.append(json.loads(line))
+        except Exception:
+            pass
+    total = len(records)
+    return jsonify({"records": records[-limit:], "total": total})
+
+
+@zep_bp.route("/llm-log/clear", methods=["POST"])
+def llm_log_clear():
+    try:
+        LLM_LOG_FILE.unlink(missing_ok=True)
+        return jsonify({"ok": True})
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)}), 500
 
 
 # ── Standalone entry point ─────────────────────────────────────────────────────
