@@ -25,8 +25,9 @@ from datetime import datetime
 from pathlib import Path
 
 import requests
-from flask import Flask, Response, abort, jsonify, render_template_string, request, send_file
+from flask import Flask, Blueprint, Response, abort, jsonify, render_template_string, request, send_file
 import md_comment_widget as mcw
+import nav_widget2 as nw2
 
 # ── Paths & config ─────────────────────────────────────────────────────────────
 
@@ -102,6 +103,8 @@ def _is_report(title: str, cat_label: str) -> bool:
     if not keywords:
         return True  # no whitelist for unknown categories — allow through
     return any(kw in title for kw in keywords)
+
+cn_bp = Blueprint("cn", __name__)
 
 app      = Flask(__name__)
 app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
@@ -473,6 +476,8 @@ TEMPLATE = """\
   </style>
 </head>
 <body>
+__NAV__
+__URLPATCH__
 <div class="container-fluid py-3 px-4">
   <h1 class="mb-0">📊 A股 / 港股 财报下载</h1>
   <p class="text-muted mb-3" style="font-size:.8rem">
@@ -642,7 +647,7 @@ function _renderPage() {
       <td class="text-muted">${sz}</td>
       ${commentHtml}
       <td>
-        <a href="/open/${r.id}" target="_blank"
+        <a href="${window._BASE||''}/open/${r.id}" target="_blank"
            class="btn btn-outline-secondary btn-sm del-btn" title="Open PDF">📄</a>
         <button onclick="deleteRow(${r.id},this)"
                 class="btn btn-outline-danger btn-sm del-btn ms-1" title="Delete">🗑</button>
@@ -746,17 +751,19 @@ loadReports();
 # Apply MCW placeholder substitutions
 for _k, _v in mcw.TEMPLATE_PARTS.items():
     TEMPLATE = TEMPLATE.replace(_k, _v)
+TEMPLATE = TEMPLATE.replace("__NAV__",      nw2.NAV_HTML)
+TEMPLATE = TEMPLATE.replace("__URLPATCH__", nw2.URL_PATCH_JS)
 
 
 # ── Flask routes ───────────────────────────────────────────────────────────────
 
-@app.route("/")
+@cn_bp.route("/")
 def index():
     init_db()
     return render_template_string(TEMPLATE)
 
 
-@app.route("/download")
+@cn_bp.route("/download")
 def download():
     ticker     = request.args.get("ticker", "").strip()
     cats_param = request.args.get("categories", "年报,半年报").strip()
@@ -784,7 +791,7 @@ def download():
     )
 
 
-@app.route("/reports")
+@cn_bp.route("/reports")
 def list_reports():
     with get_conn() as conn:
         rows = conn.execute(
@@ -793,7 +800,7 @@ def list_reports():
     return jsonify([dict(r) for r in rows])
 
 
-@app.route("/open/<int:rid>")
+@cn_bp.route("/open/<int:rid>")
 def open_report(rid: int):
     with get_conn() as conn:
         row = conn.execute(
@@ -807,7 +814,7 @@ def open_report(rid: int):
     return send_file(path, as_attachment=False)
 
 
-@app.route("/delete/<int:rid>", methods=["DELETE"])
+@cn_bp.route("/delete/<int:rid>", methods=["DELETE"])
 def delete_report(rid: int):
     with get_conn() as conn:
         row = conn.execute(
@@ -823,7 +830,7 @@ def delete_report(rid: int):
     return jsonify({"ok": True})
 
 
-@app.route("/comment/<int:rid>", methods=["POST"])
+@cn_bp.route("/comment/<int:rid>", methods=["POST"])
 def save_comment(rid: int):
     comment = request.form.get("comment", "")
     with get_conn() as conn:
@@ -831,6 +838,10 @@ def save_comment(rid: int):
             "UPDATE cninfo_reports SET comment=? WHERE id=?", (comment, rid)
         )
     return jsonify({"ok": True})
+
+
+# Register blueprint on the standalone app (after all routes are defined)
+app.register_blueprint(cn_bp)
 
 
 # ── Entry point ────────────────────────────────────────────────────────────────

@@ -2,6 +2,13 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "finagent",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["/Users/x/projects/financial_agent/main.py", "--port", "5001"],
+      "port": 5001
+    }
+  ,
+    {
       "name": "zsxq-viewer",
       "runtimeExecutable": "python",
       "runtimeArgs": ["/Users/x/projects/financial_agent/zsxq_viewer.py", "--db", "/Users/x/projects/financial_agent/zsxq.db", "--port", "8080"],

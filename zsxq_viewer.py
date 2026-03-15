@@ -14,14 +14,17 @@ import argparse
 import datetime
 import sqlite3
 import md_comment_widget as mcw
+import nav_widget2 as nw2
 from pathlib import Path
 
-from flask import Flask, abort, jsonify, render_template_string, request, send_file
+from flask import Flask, Blueprint, abort, jsonify, render_template_string, request, send_file
 import ticker_names as _tn
 
 SCRIPT_DIR  = Path(__file__).parent
 DEFAULT_DB  = SCRIPT_DIR / "zsxq.db"
 UPLOADS_DIR = SCRIPT_DIR / "uploads"
+
+zsxq_bp = Blueprint("zsxq", __name__)
 
 app = Flask(__name__)
 app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
@@ -90,6 +93,8 @@ __MCW_HEAD__
   </style>
 </head>
 <body>
+__NAV__
+__URLPATCH__
 <div class="container-fluid">
 
   <h2 class="mb-1">📄 zsxq PDF Index</h2>
@@ -108,7 +113,7 @@ __MCW_HEAD__
     <button class="btn btn-sm btn-outline-danger ms-2"
             onclick="deleteNoPdf({{ stats.no_pdf }})">🗑 Delete {{ stats.no_pdf }} rows without PDF</button>
     {% endif %}
-    <a href="/print-view?{{ query_string }}" target="_blank"
+    <a href="{{ _base | default('') }}/print-view?{{ query_string }}" target="_blank"
        class="btn btn-sm btn-outline-secondary ms-2">📄 Export PDF</a>
     <button class="btn btn-sm btn-outline-info ms-2"
             onclick="enrichTickers(this)"
@@ -312,7 +317,7 @@ __MCW_HEAD__
 
           <td class="text-center">
             {% if row.local_path %}
-              <a href="/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank"
+              <a href="{{ _base | default('') }}/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank"
                  class="btn btn-outline-danger open-btn">📄 Open</a>
             {% else %}
               <button class="btn btn-outline-secondary open-btn"
@@ -577,6 +582,8 @@ __MCW_FOOTER__
 # Apply shared markdown comment widget substitutions
 for _k, _v in mcw.TEMPLATE_PARTS.items():
     TEMPLATE = TEMPLATE.replace(_k, _v)
+TEMPLATE = TEMPLATE.replace("__NAV__",      nw2.NAV_HTML)
+TEMPLATE = TEMPLATE.replace("__URLPATCH__", nw2.URL_PATCH_JS)
 
 
 # ── Routes ────────────────────────────────────────────────────────────────────
@@ -692,6 +699,8 @@ PRINT_TEMPLATE = """<!DOCTYPE html>
   </style>
 </head>
 <body>
+__NAV__
+__URLPATCH__
   <div class="toolbar">
     <button class="primary" onclick="window.print()">🖨️ Print / Save as PDF</button>
     <button onclick="window.close()">✕ Close</button>
@@ -731,8 +740,12 @@ PRINT_TEMPLATE = """<!DOCTYPE html>
 </html>
 """
 
+# Apply nav/urlpatch to PRINT_TEMPLATE (defined above)
+PRINT_TEMPLATE = PRINT_TEMPLATE.replace("__NAV__",      nw2.NAV_HTML)
+PRINT_TEMPLATE = PRINT_TEMPLATE.replace("__URLPATCH__", nw2.URL_PATCH_JS)
 
-@app.route("/print-view")
+
+@zsxq_bp.route("/print-view")
 def print_view():
     import datetime as dt
     f         = request.args.get("filter", "all")
@@ -775,7 +788,7 @@ def print_view():
     )
 
 
-@app.route("/")
+@zsxq_bp.route("/")
 def index():
     f         = request.args.get("filter", "all")
     ticker    = request.args.get("ticker", "").strip().upper()
@@ -835,7 +848,7 @@ def index():
     )
 
 
-@app.route("/delete-no-pdf", methods=["POST"])
+@zsxq_bp.route("/delete-no-pdf", methods=["POST"])
 def delete_no_pdf():
     conn = get_conn()
     cur = conn.execute("DELETE FROM pdf_files WHERE local_path IS NULL")
@@ -845,7 +858,7 @@ def delete_no_pdf():
     return jsonify(deleted=deleted)
 
 
-@app.route("/delete/<int:file_id>", methods=["POST"])
+@zsxq_bp.route("/delete/<int:file_id>", methods=["POST"])
 def delete_entry(file_id: int):
     conn = get_conn()
     row = conn.execute(
@@ -863,7 +876,7 @@ def delete_entry(file_id: int):
     return "", 204
 
 
-@app.route("/rate/<int:file_id>", methods=["POST"])
+@zsxq_bp.route("/rate/<int:file_id>", methods=["POST"])
 def rate_pdf(file_id: int):
     try:
         rating = int(request.form.get("rating", 0))
@@ -881,7 +894,7 @@ def rate_pdf(file_id: int):
     return "", 204
 
 
-@app.route("/tags/<int:file_id>", methods=["POST"])
+@zsxq_bp.route("/tags/<int:file_id>", methods=["POST"])
 def set_tags(file_id: int):
     raw = request.form.get("tags", "").strip()
     normalized = ",".join(t.strip() for t in raw.split(",") if t.strip())
@@ -893,7 +906,7 @@ def set_tags(file_id: int):
     return jsonify(tags=normalized)
 
 
-@app.route("/tickers/<int:file_id>", methods=["POST"])
+@zsxq_bp.route("/tickers/<int:file_id>", methods=["POST"])
 def set_tickers(file_id: int):
     raw = request.form.get("tickers", "").strip()
     normalized = ",".join(t.strip() for t in raw.split(",") if t.strip())
@@ -905,7 +918,7 @@ def set_tickers(file_id: int):
     return jsonify(tickers=normalized)
 
 
-@app.route("/enrich-tickers", methods=["POST"])
+@zsxq_bp.route("/enrich-tickers", methods=["POST"])
 def enrich_tickers_route():
     """Bulk-enrich bare ticker codes with Chinese company names via AKShare cache."""
     if _tn.is_building():
@@ -936,7 +949,7 @@ def enrich_tickers_route():
     return jsonify(status="ok", updated=updated, total=len(rows))
 
 
-@app.route("/comment/<int:file_id>", methods=["POST"])
+@zsxq_bp.route("/comment/<int:file_id>", methods=["POST"])
 def set_comment(file_id: int):
     comment = request.form.get("comment", "").strip()
     conn = get_conn()
@@ -948,8 +961,8 @@ def set_comment(file_id: int):
 
 
 
-@app.route("/pdf/<int:file_id>")
-@app.route("/pdf/<int:file_id>/<filename>")
+@zsxq_bp.route("/pdf/<int:file_id>")
+@zsxq_bp.route("/pdf/<int:file_id>/<filename>")
 def serve_pdf(file_id: int, filename: str = ""):
     conn = get_conn()
     row = conn.execute(
@@ -966,6 +979,10 @@ def serve_pdf(file_id: int, filename: str = ""):
 
     return send_file(path, mimetype="application/pdf",
                      download_name=path.name, as_attachment=False)
+
+
+# Register blueprint on the standalone app (after all routes are defined)
+app.register_blueprint(zsxq_bp)
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────
