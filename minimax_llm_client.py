@@ -71,23 +71,85 @@ def _normalize_llm_json(parsed: Any, response_model: type) -> Any:
 
     Known issues:
     1. ExtractedEntity items use ``entity_id`` instead of ``entity_type_id``.
-    2. The model sometimes echoes the JSON schema back (``$defs`` key) instead
-       of generating data — return an empty valid envelope in that case.
+    2. The model sometimes echoes the JSON schema back (``$defs`` or top-level
+       ``properties`` key) instead of generating data — return an empty valid
+       envelope in that case.
+    3. NodeResolutions items sometimes omit ``duplicate_name`` (required field).
+    4. ExtractedEdges items use alternate field names
+       (source/target, description/fact, relation/relation_type).
     """
-    # If the model returned its own schema, return an empty valid structure.
-    if isinstance(parsed, dict) and "$defs" in parsed:
-        name = response_model.__name__
+    name = response_model.__name__
+
+    # ── Schema echo: model returned its own JSON schema instead of data ──────
+    _schema_echo = isinstance(parsed, dict) and (
+        "$defs" in parsed
+        or (
+            "properties" in parsed
+            and "entity_resolutions" not in parsed
+            and "extracted_entities" not in parsed
+            and "edges" not in parsed
+        )
+    )
+    if _schema_echo:
         if name == "ExtractedEntities":
             return {"extracted_entities": []}
         if name == "ExtractedEdges":
             return {"edges": []}
+        if name == "NodeResolutions":
+            return {"entity_resolutions": []}
         return parsed  # unknown model — let Pydantic report the error
 
-    # Fix entity_id → entity_type_id in ExtractedEntities
+    # ── ExtractedEntities: entity_id → entity_type_id ────────────────────────
     if isinstance(parsed, dict) and "extracted_entities" in parsed:
         for item in parsed.get("extracted_entities") or []:
             if isinstance(item, dict) and "entity_id" in item and "entity_type_id" not in item:
                 item["entity_type_id"] = item.pop("entity_id")
+
+    # ── NodeResolutions: default missing duplicate_name to "" ────────────────
+    if isinstance(parsed, dict) and "entity_resolutions" in parsed:
+        clean = []
+        for item in parsed.get("entity_resolutions") or []:
+            if not isinstance(item, dict):
+                continue
+            # Skip schema-echo objects that slipped into the list
+            if "properties" in item and "id" not in item:
+                continue
+            item.setdefault("duplicate_name", "")
+            clean.append(item)
+        parsed["entity_resolutions"] = clean
+
+    # ── ExtractedEdges: normalise alternate field names ───────────────────────
+    if isinstance(parsed, dict) and name == "ExtractedEdges":
+        if parsed.get("edges") is None:
+            parsed["edges"] = []
+        for edge in parsed.get("edges") or []:
+            if not isinstance(edge, dict):
+                continue
+            if "source_entity_name" not in edge:
+                edge["source_entity_name"] = (
+                    edge.pop("source", None)
+                    or edge.pop("source_entity", None)
+                    or ""
+                )
+            if "target_entity_name" not in edge:
+                edge["target_entity_name"] = (
+                    edge.pop("target", None)
+                    or edge.pop("target_entity", None)
+                    or ""
+                )
+            if "relation_type" not in edge:
+                edge["relation_type"] = (
+                    edge.pop("type", None)
+                    or edge.pop("relation", None)
+                    or edge.pop("relationship", None)
+                    or ""
+                )
+            if "fact" not in edge:
+                edge["fact"] = (
+                    edge.pop("description", None)
+                    or edge.pop("content", None)
+                    or ""
+                )
 
     return parsed
 
