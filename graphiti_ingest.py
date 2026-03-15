@@ -93,8 +93,19 @@ async def _ingest_all(rows: list, db_path: Path) -> tuple[int, int]:
     driver = KuzuDriver(str(GRAPH_DIR))
     driver._database = GROUP_ID  # required by graphiti_core 0.28.2 (not set by KuzuDriver)
 
-    # KuzuDriver.build_indices_and_constraints() is a no-op; create FTS indices manually
-    await driver._graph_ops.build_indices_and_constraints(driver)
+    # KuzuDriver.build_indices_and_constraints() is a no-op; create FTS indices manually.
+    # Use a raw kuzu.Connection (same as setup_schema) to avoid graphiti's error logging.
+    import kuzu as _kuzu
+    from graphiti_core.graph_queries import get_fulltext_indices
+    from graphiti_core.driver.driver import GraphProvider
+    _conn = _kuzu.Connection(driver.db)
+    for q in get_fulltext_indices(GraphProvider.KUZU):
+        try:
+            _conn.execute(q)
+        except Exception as e:
+            if 'already exists' not in str(e):
+                raise
+    _conn.close()
 
     graphiti = Graphiti(
         llm_client=MiniMaxLLMClient(),
