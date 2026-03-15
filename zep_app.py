@@ -131,8 +131,18 @@ def _edge_to_dict(edge) -> dict:
 
 def _ep_to_dict(ep) -> dict:
     """Serialise a graphiti EpisodicNode."""
+    name = getattr(ep, "name", "") or ""
+    # Episode names are "pdf_{file_id}" for ZSXQ PDFs; extract for direct PDF link
+    file_id = None
+    if name.startswith("pdf_"):
+        try:
+            file_id = int(name[4:])
+        except ValueError:
+            pass
     return {
         "uuid":               ep.uuid,
+        "name":               name,
+        "file_id":            file_id,
         "source_description": getattr(ep, "source_description", "") or "",
         "created_at":         str(ep.created_at) if getattr(ep, "created_at", None) else None,
     }
