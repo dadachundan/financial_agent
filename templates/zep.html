@@ -122,6 +122,8 @@
     <button class="btn btn-sm btn-outline-primary" onclick="loadEntities()">Browse All Entities</button>
     <button class="btn btn-sm btn-outline-secondary ms-1" id="graphToggleBtn" onclick="toggleGraph()">🕸 Graph View</button>
     <button class="btn btn-sm btn-outline-success ms-1" onclick="fetchNewPdfs()">⬆ Index New PDFs</button>
+    <button class="btn btn-sm btn-outline-primary ms-1" onclick="document.getElementById('pdfFileInput').click()">📄 Upload PDF</button>
+    <input type="file" id="pdfFileInput" accept=".pdf" style="display:none" onchange="uploadPdf(this)">
   </span>
 </div>
 
@@ -153,10 +155,10 @@
       </div>
     </div>
 
-    <!-- Ingest card -->
+    <!-- Ingest / upload card -->
     <div class="card" id="ingestCard" style="display:none">
       <div class="card-header d-flex justify-content-between align-items-center py-2">
-        <span style="font-size:.88rem;font-weight:600">Index New PDFs</span>
+        <span id="ingestCardTitle" style="font-size:.88rem;font-weight:600">Index New PDFs</span>
         <button class="btn-close btn-sm" onclick="document.getElementById('ingestCard').style.display='none'"></button>
       </div>
       <div class="card-body p-2">
@@ -332,51 +334,109 @@ async function loadEntities(reset) {
 
 function loadMoreEntities() { loadEntities(false); }
 
-// ── Ingest new PDFs ────────────────────────────────────────────────────────
-function fetchNewPdfs() {
-  document.getElementById('ingestCard').style.display = '';
+// ── Ingest / upload helpers ────────────────────────────────────────────────
+function _openIngestCard(title) {
+  document.getElementById('ingestCardTitle').textContent = title;
+  document.getElementById('ingestCard').style.display = 'block';
   document.getElementById('ingestLog').style.display  = 'none';
   document.getElementById('ingestLog').innerHTML      = '';
-  document.getElementById('ingestBtn').style.display  = '';
+  const btn = document.getElementById('ingestBtn');
+  btn.textContent = 'Start Indexing';
+  btn.style.display = 'block';
+  btn.disabled = false;
+  btn.onclick = startIngest;
+}
+
+function _appendLog(line) {
+  const log = document.getElementById('ingestLog');
+  log.style.display = 'block';
+  const div = document.createElement('div');
+  if      (line.includes('✓') || line.includes('Done')) div.className = 'ok';
+  else if (line.includes('⚠') || line.includes('Warning'))  div.className = 'warn';
+  else if (line.includes('ERROR') || line.includes('✗'))     div.className = 'err';
+  div.textContent = line;
+  log.appendChild(div);
+  log.scrollTop = log.scrollHeight;
+}
+
+function fetchNewPdfs() {
+  _openIngestCard('Index New PDFs');
 }
 
 function startIngest() {
-  const log = document.getElementById('ingestLog');
   const btn = document.getElementById('ingestBtn');
-  log.style.display = '';
   btn.style.display = 'none';
-  log.innerHTML     = '';
+  document.getElementById('ingestLog').innerHTML = '';
 
-  const src = new EventSource('/ingest');
+  const src = new EventSource('/zep/ingest');
   src.onmessage = ev => {
     const line = ev.data;
     if (!line) return;
-    const div = document.createElement('div');
-    if (line.includes('✓') || line.includes('Done')) div.className = 'ok';
-    else if (line.includes('⚠') || line.includes('Warning')) div.className = 'warn';
-    else if (line.includes('ERROR') || line.includes('✗')) div.className = 'err';
-    div.textContent = line;
-    log.appendChild(div);
-    log.scrollTop = log.scrollHeight;
-
+    _appendLog(line);
     if (line.includes('done: true')) {
       src.close();
-      btn.textContent = 'Done ✓';
-      btn.style.display = '';
+      btn.textContent  = 'Done ✓';
+      btn.style.display = 'block';
       btn.disabled = true;
-      // refresh stats
       setTimeout(loadStats, 3000);
     }
   };
   src.onerror = () => {
     src.close();
-    const div = document.createElement('div');
-    div.className = 'err';
-    div.textContent = 'Connection lost.';
-    log.appendChild(div);
-    btn.style.display = '';
+    _appendLog('✗ Connection lost.');
+    btn.style.display = 'block';
     btn.disabled = false;
   };
+}
+
+async function uploadPdf(input) {
+  const file = input.files[0];
+  if (!file) return;
+  input.value = '';  // reset so same file can be re-uploaded
+
+  _openIngestCard(`Upload: ${file.name}`);
+  document.getElementById('ingestBtn').style.display = 'none';
+  document.getElementById('ingestLog').style.display = 'block';
+  _appendLog(`Uploading ${file.name}…`);
+
+  const form = new FormData();
+  form.append('pdf', file);
+
+  let resp;
+  try {
+    resp = await fetch('/zep/upload-pdf', {method: 'POST', body: form});
+  } catch (e) {
+    _appendLog(`✗ Upload failed: ${e.message}`);
+    return;
+  }
+
+  const reader  = resp.body.getReader();
+  const decoder = new TextDecoder();
+  let buf = '';
+
+  while (true) {
+    const {done, value} = await reader.read();
+    if (done) break;
+    buf += decoder.decode(value, {stream: true});
+    const parts = buf.split('\n\n');
+    buf = parts.pop();  // keep incomplete last chunk
+    for (const part of parts) {
+      for (const raw of part.split('\n')) {
+        if (!raw.startsWith('data: ')) continue;
+        const line = raw.slice(6);
+        if (!line) continue;
+        if (line === 'done: true') {
+          const btn = document.getElementById('ingestBtn');
+          btn.textContent  = 'Done ✓';
+          btn.style.display = 'block';
+          btn.disabled = true;
+          setTimeout(loadStats, 3000);
+        } else {
+          _appendLog(line);
+        }
+      }
+    }
+  }
 }
 
 // ── Graph visualisation ────────────────────────────────────────────────────
