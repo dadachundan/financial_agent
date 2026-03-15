@@ -17,6 +17,7 @@ import md_comment_widget as mcw
 import nav_widget2 as nw2
 from pathlib import Path
 
+import os
 import subprocess
 import sys
 import json as _json
@@ -435,7 +436,7 @@ __MCW_FOOTER__
     panel.style.display = '';
     log.innerHTML = '';
 
-    const src = new EventSource('/download-new?count=' + count);
+    const src = new EventSource('{{ _base | default("") }}/download-new?count=' + count);
     src.onmessage = e => {
       const d = JSON.parse(e.data);
       const line = document.createElement('div');
@@ -989,10 +990,11 @@ def download_new():
         yield _sse(f"🚀  Starting zsxq_downloader --count {count} …")
         try:
             proc = subprocess.Popen(
-                [sys.executable, str(downloader), "--count", str(count),
+                [sys.executable, "-u", str(downloader), "--count", str(count),
                  "--db", str(DB_PATH)],
                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                 text=True, bufsize=1,
+                env={**os.environ, "PYTHONUNBUFFERED": "1"},
             )
             for line in proc.stdout:
                 line = line.rstrip()
