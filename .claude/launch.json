@@ -23,9 +23,9 @@
     }
   ,
     {
-      "name": "knowledge-graph",
+      "name": "zep-graph",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["/Users/x/projects/financial_agent/knowledge_graph.py"],
+      "runtimeArgs": ["/Users/x/projects/financial_agent/zep_app.py"],
       "port": 5001
     }
   ,
