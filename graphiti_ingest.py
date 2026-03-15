@@ -197,7 +197,13 @@ def main() -> None:
                         help="Reset graphiti_indexed_at for all PDFs and re-ingest.")
     parser.add_argument("--limit",   type=int, default=0,
                         help="Process at most N PDFs (0 = all).")
+    parser.add_argument("--debug-llm", action="store_true",
+                        help="Print every LLM request and response to stdout.")
     args = parser.parse_args()
+
+    if args.debug_llm:
+        import minimax_llm_client
+        minimax_llm_client.PRINT_ALL_LLM_CALLS = True
 
     db_path = Path(args.db).expanduser()
     if not db_path.exists():
