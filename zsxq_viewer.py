@@ -436,7 +436,7 @@ __MCW_FOOTER__
     panel.style.display = '';
     log.innerHTML = '';
 
-    const src = new EventSource('{{ _base | default("") }}/download-new?count=' + count);
+    const src = new EventSource('/download-new?count=' + count);
     src.onmessage = e => {
       const d = JSON.parse(e.data);
       const line = document.createElement('div');
