@@ -20,11 +20,18 @@ import subprocess
 import sys
 from pathlib import Path
 
-from flask import Blueprint, render_template, jsonify, request, Response
+from flask import Blueprint, render_template, render_template_string, jsonify, request, Response
 import nav_widget2 as _nw2
 
 SCRIPT_DIR = Path(__file__).parent
-GRAPH_DIR  = SCRIPT_DIR / "graphiti_db"
+_local_graph = SCRIPT_DIR / "graphiti_db"
+# If the local graphiti_db doesn't exist, fall back to the parent project's copy
+# (relevant when running from a git worktree).
+if not _local_graph.exists():
+    _parent_graph = SCRIPT_DIR.parent.parent.parent / "graphiti_db"
+    GRAPH_DIR = _parent_graph if _parent_graph.exists() else _local_graph
+else:
+    GRAPH_DIR = _local_graph
 GROUP_ID   = "financial-pdfs"
 
 zep_bp = Blueprint(
@@ -130,7 +137,7 @@ def index():
         "zep.html",
         has_key=_graph_ready(),
         nav_html=_nw2.NAV_HTML,
-        url_patch_js=_nw2.URL_PATCH_JS,
+        url_patch_js=render_template_string(_nw2.URL_PATCH_JS),
     )
 
 
