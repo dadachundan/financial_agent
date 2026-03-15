@@ -78,7 +78,7 @@ def _get_graphiti():
 
 
 def _graph_ready() -> bool:
-    return GRAPH_DIR.exists()
+    return GRAPH_DIR.exists() and GRAPH_DIR.stat().st_size > 4096
 
 
 # ── KuzuDB direct query helpers ────────────────────────────────────────────────
@@ -413,10 +413,10 @@ def clear_graph():
 
     errors = []
 
-    # 1. Delete the graph DB file
+    # 1. Delete the graph DB files (main + WAL)
     try:
-        if GRAPH_DIR.exists():
-            GRAPH_DIR.unlink()
+        GRAPH_DIR.unlink(missing_ok=True)
+        Path(str(GRAPH_DIR) + ".wal").unlink(missing_ok=True)
     except Exception as e:
         errors.append(f"Could not delete graph DB: {e}")
 
