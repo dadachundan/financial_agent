@@ -24,9 +24,10 @@ from graphiti_core.cross_encoder.client import CrossEncoderClient
 
 logger = logging.getLogger(__name__)
 
-SCRIPT_DIR = Path(__file__).parent
-GRAPH_DIR  = SCRIPT_DIR / "graphiti_db"
-GROUP_ID   = "financial-pdfs"
+SCRIPT_DIR      = Path(__file__).parent
+GRAPH_DIR       = SCRIPT_DIR / "graphiti_db"
+GROUP_ID        = "financial-pdfs"
+_LOCAL_MODEL_DIR = SCRIPT_DIR / "models" / "bge-m3"
 
 
 # ── Config helpers ─────────────────────────────────────────────────────────────
@@ -267,8 +268,15 @@ class BGEEmbedder(EmbedderClient):
     def _get_model(cls):
         if cls._model is None:
             from sentence_transformers import SentenceTransformer
-            logger.info("Loading bge-m3 embedding model …")
-            cls._model = SentenceTransformer("BAAI/bge-m3")
+            if _LOCAL_MODEL_DIR.exists():
+                logger.info("Loading bge-m3 from local cache: %s", _LOCAL_MODEL_DIR)
+                cls._model = SentenceTransformer(str(_LOCAL_MODEL_DIR))
+            else:
+                logger.info("Downloading bge-m3 (one-time) …")
+                cls._model = SentenceTransformer("BAAI/bge-m3")
+                logger.info("Saving bge-m3 to %s …", _LOCAL_MODEL_DIR)
+                _LOCAL_MODEL_DIR.mkdir(parents=True, exist_ok=True)
+                cls._model.save(str(_LOCAL_MODEL_DIR))
             logger.info("bge-m3 ready.")
         return cls._model
 
