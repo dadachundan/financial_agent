@@ -309,6 +309,74 @@ def cc_explanation(rid):
     return "", 204
 
 
+# ── Inline business/company cell updates ─────────────────────────────────────
+
+@kg_bp.route("/bc/update-biz/<int:rid>", methods=["POST"])
+def bc_update_biz(rid):
+    biz_id = int(request.form.get("biz_id", 0))
+    with kg_db.get_db() as conn:
+        conn.execute("UPDATE business_company SET business_id=? WHERE id=?", (biz_id, rid))
+        row = conn.execute(
+            "SELECT b.name FROM business_company bc JOIN businesses b ON b.id=bc.business_id WHERE bc.id=?", (rid,)
+        ).fetchone()
+    return jsonify(name=row["name"] if row else "")
+
+
+@kg_bp.route("/bc/update-co/<int:rid>", methods=["POST"])
+def bc_update_co(rid):
+    co_id = int(request.form.get("co_id", 0))
+    with kg_db.get_db() as conn:
+        conn.execute("UPDATE business_company SET company_id=? WHERE id=?", (co_id, rid))
+        row = conn.execute(
+            "SELECT c.name FROM business_company bc JOIN companies c ON c.id=bc.company_id WHERE bc.id=?", (rid,)
+        ).fetchone()
+    return jsonify(name=row["name"] if row else "")
+
+
+@kg_bp.route("/bb/update-from/<int:rid>", methods=["POST"])
+def bb_update_from(rid):
+    biz_id = int(request.form.get("biz_id", 0))
+    with kg_db.get_db() as conn:
+        conn.execute("UPDATE business_business SET from_business_id=? WHERE id=?", (biz_id, rid))
+        row = conn.execute(
+            "SELECT b.name FROM business_business bb JOIN businesses b ON b.id=bb.from_business_id WHERE bb.id=?", (rid,)
+        ).fetchone()
+    return jsonify(name=row["name"] if row else "")
+
+
+@kg_bp.route("/bb/update-to/<int:rid>", methods=["POST"])
+def bb_update_to(rid):
+    biz_id = int(request.form.get("biz_id", 0))
+    with kg_db.get_db() as conn:
+        conn.execute("UPDATE business_business SET to_business_id=? WHERE id=?", (biz_id, rid))
+        row = conn.execute(
+            "SELECT b.name FROM business_business bb JOIN businesses b ON b.id=bb.to_business_id WHERE bb.id=?", (rid,)
+        ).fetchone()
+    return jsonify(name=row["name"] if row else "")
+
+
+@kg_bp.route("/cc/update-from/<int:rid>", methods=["POST"])
+def cc_update_from(rid):
+    co_id = int(request.form.get("co_id", 0))
+    with kg_db.get_db() as conn:
+        conn.execute("UPDATE company_company SET from_company_id=? WHERE id=?", (co_id, rid))
+        row = conn.execute(
+            "SELECT c.name FROM company_company cc JOIN companies c ON c.id=cc.from_company_id WHERE cc.id=?", (rid,)
+        ).fetchone()
+    return jsonify(name=row["name"] if row else "")
+
+
+@kg_bp.route("/cc/update-to/<int:rid>", methods=["POST"])
+def cc_update_to(rid):
+    co_id = int(request.form.get("co_id", 0))
+    with kg_db.get_db() as conn:
+        conn.execute("UPDATE company_company SET to_company_id=? WHERE id=?", (co_id, rid))
+        row = conn.execute(
+            "SELECT c.name FROM company_company cc JOIN companies c ON c.id=cc.to_company_id WHERE cc.id=?", (rid,)
+        ).fetchone()
+    return jsonify(name=row["name"] if row else "")
+
+
 # ── API: LLM summarisation ─────────────────────────────────────────────────────
 
 @kg_bp.route("/api/summarize", methods=["POST"])
