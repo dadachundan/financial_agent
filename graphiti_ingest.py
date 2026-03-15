@@ -241,6 +241,7 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
     try:
         for i, item in enumerate(items, 1):
             print(f"[{i}/{len(items)}] {item['label'][:70]}")
+            print(f"  file: {item.get('file_path', '(unknown)')}")
             text = item["episode_body"]
             if not text:
                 print("  ⚠  No text extracted.")
@@ -304,6 +305,7 @@ def _build_pdf_items(rows, db_path: Path) -> tuple[list[dict], sqlite3.Connectio
 
         items.append({
             "label":              name,
+            "file_path":          str(local_path),
             "name":               f"pdf_{file_id}",
             "episode_body":       text,
             "source_description": f"PDF: {name}",
@@ -348,6 +350,7 @@ def _build_report_items(rows, reports_db_path: Path) -> tuple[list[dict], sqlite
         label = f"{ticker} {form_type} {period}"
         items.append({
             "label":              label,
+            "file_path":          str(local_path),
             "name":               f"report_{report_id}",
             "episode_body":       text,
             "source_description": f"{form_type}: {company} {period}",
