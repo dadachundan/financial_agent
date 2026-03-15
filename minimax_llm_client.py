@@ -300,7 +300,7 @@ class MiniMaxLLMClient(LLMClient):
             for i, msg in enumerate(mm_messages):
                 role = msg.get("role", "?")
                 body = msg.get("content", "")
-                print(f"  [{i}] {role.upper()}: {body[:600]}{'…' if len(body) > 600 else ''}")
+                print(f"  [{i}] {role.upper()}: {body[:2500]}{'…' if len(body) > 2500 else ''}")
             print(f"{'─'*70}")
         else:
             import time as _time
