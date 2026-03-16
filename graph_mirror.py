@@ -16,7 +16,9 @@ episode.  That is perfectly acceptable for a browsing/search UI.
 """
 
 import json
+import random
 import sqlite3
+from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Optional
 
@@ -100,6 +102,42 @@ CREATE TRIGGER IF NOT EXISTS edges_au
         VALUES ('delete', old.rowid, old.name, old.fact, old.src_name, old.tgt_name);
         INSERT INTO edges_fts(rowid, name, fact, src_name, tgt_name)
         VALUES (new.rowid, new.name, new.fact, new.src_name, new.tgt_name);
+    END;
+
+-- ── Community subgraph (Zep paper §3) ────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS communities (
+    id           INTEGER PRIMARY KEY AUTOINCREMENT,
+    name         TEXT    NOT NULL DEFAULT '',
+    summary      TEXT    NOT NULL DEFAULT '',
+    member_count INTEGER NOT NULL DEFAULT 0,
+    updated_at   TEXT    NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TABLE IF NOT EXISTS community_members (
+    entity_uuid  TEXT    NOT NULL,
+    community_id INTEGER NOT NULL,
+    PRIMARY KEY (entity_uuid),
+    FOREIGN KEY (entity_uuid)  REFERENCES entities(uuid)  ON DELETE CASCADE,
+    FOREIGN KEY (community_id) REFERENCES communities(id) ON DELETE CASCADE
+);
+
+CREATE INDEX IF NOT EXISTS idx_cm_cid ON community_members(community_id);
+
+CREATE VIRTUAL TABLE IF NOT EXISTS communities_fts
+    USING fts5(name, summary, content='communities', content_rowid='rowid');
+
+CREATE TRIGGER IF NOT EXISTS communities_ai
+    AFTER INSERT ON communities BEGIN
+        INSERT INTO communities_fts(rowid, name, summary)
+        VALUES (new.rowid, new.name, new.summary);
+    END;
+
+CREATE TRIGGER IF NOT EXISTS communities_au
+    AFTER UPDATE ON communities BEGIN
+        INSERT INTO communities_fts(communities_fts, rowid, name, summary)
+        VALUES ('delete', old.rowid, old.name, old.summary);
+        INSERT INTO communities_fts(rowid, name, summary)
+        VALUES (new.rowid, new.name, new.summary);
     END;
 """
 
@@ -207,7 +245,8 @@ def get_stats(conn: sqlite3.Connection) -> dict:
     n  = conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
     e  = conn.execute("SELECT COUNT(*) FROM edges").fetchone()[0]
     ep = conn.execute("SELECT COUNT(*) FROM episodes").fetchone()[0]
-    return {"node_count": n, "edge_count": e, "episode_count": ep}
+    c  = conn.execute("SELECT COUNT(*) FROM communities").fetchone()[0]
+    return {"node_count": n, "edge_count": e, "episode_count": ep, "community_count": c}
 
 
 def get_entities(conn: sqlite3.Connection, limit: int = 200,
@@ -342,6 +381,300 @@ def search(conn: sqlite3.Connection, query: str,
     ]
 
     return {"nodes": nodes, "edges": edges, "episodes": []}
+
+
+# ── Community subgraph — label propagation + LLM summaries ───────────────────
+
+def _parse_name_summary(text: str, fallback_rows: list) -> tuple[str, str]:
+    """Parse 'NAME: ...\nSUMMARY: ...' from LLM output with graceful fallback."""
+    name = ""
+    summary = ""
+    for line in text.splitlines():
+        if line.startswith("NAME:") and not name:
+            name = line[5:].strip()
+        elif line.startswith("SUMMARY:") and not summary:
+            summary = line[8:].strip()
+    if not name:
+        name = fallback_rows[0][0][:60] if fallback_rows else "Community"
+    if not summary:
+        summary = text.strip()[:500]
+    return name, summary
+
+
+def _summarize_community(member_rows: list) -> tuple[str, str]:
+    """Generate (name, summary) for a community via MiniMax map-reduce.
+
+    member_rows: list of (entity_name, entity_summary) tuples.
+    """
+    from minimax import call_minimax
+
+    CHUNK = 5
+    with_content = [(n, s) for n, s in member_rows if s.strip()]
+    if not with_content:
+        name = " / ".join(r[0] for r in member_rows[:4])
+        return name, ""
+
+    def _fmt(rows):
+        return "\n\n".join(f"Entity: {n}\nSummary: {s}" for n, s in rows)
+
+    sys_msg  = {"role": "system", "name": "MiniMax AI",
+                "content": "You summarise knowledge graph communities concisely."}
+    reduce_prompt = (
+        "Based on these entity summaries, write:\n"
+        "1. A 3-5 word topic name for this community.\n"
+        "2. A 2-3 sentence community summary.\n\n"
+        "Format exactly as:\nNAME: <name>\nSUMMARY: <summary>\n\n"
+    )
+
+    if len(with_content) <= CHUNK:
+        text, _, _ = call_minimax(
+            messages=[sys_msg, {"role": "user", "name": "User",
+                                "content": reduce_prompt + _fmt(with_content)}],
+            temperature=0.2, max_completion_tokens=256,
+        )
+    else:
+        # Map: summarise each chunk
+        partials = []
+        for i in range(0, len(with_content), CHUNK):
+            chunk = with_content[i:i + CHUNK]
+            t, _, _ = call_minimax(
+                messages=[
+                    sys_msg,
+                    {"role": "user", "name": "User",
+                     "content": "Summarise these related entities in 1-2 sentences:\n\n" + _fmt(chunk)},
+                ],
+                temperature=0.2, max_completion_tokens=150,
+            )
+            if t.strip():
+                partials.append(t.strip())
+        # Reduce
+        reduce_input = "\n\n".join(partials)
+        text, _, _ = call_minimax(
+            messages=[sys_msg, {"role": "user", "name": "User",
+                                "content": reduce_prompt + reduce_input}],
+            temperature=0.2, max_completion_tokens=256,
+        )
+
+    return _parse_name_summary(text, member_rows)
+
+
+def build_communities(conn: sqlite3.Connection):
+    """Full label propagation + LLM summarisation.
+
+    Generator — yields progress strings so callers can stream them.
+    Implements the algorithm from the Zep paper (arxiv 2501.13956):
+      Phase 1: load graph
+      Phase 2: label propagation until convergence (shuffle each pass)
+      Phase 3: group entities by final label
+      Phase 4: LLM summaries + write to DB
+    """
+    # Phase 1 — load graph
+    all_uuids = [r[0] for r in conn.execute("SELECT uuid FROM entities").fetchall()]
+    if not all_uuids:
+        yield "No entities found — nothing to cluster."
+        return
+
+    adj: dict[str, list[str]] = defaultdict(list)
+    for row in conn.execute(
+        "SELECT src_uuid, tgt_uuid FROM edges "
+        "WHERE src_uuid != '' AND tgt_uuid != ''"
+    ).fetchall():
+        adj[row[0]].append(row[1])
+        adj[row[1]].append(row[0])
+
+    yield f"Phase 1: loaded {len(all_uuids)} entities, {len(adj)} with edges"
+
+    # Phase 2 — label propagation
+    labels: dict[str, str] = {u: u for u in all_uuids}
+    MAX_ITER = 50
+    for iteration in range(MAX_ITER):
+        changed = 0
+        order = all_uuids[:]
+        random.shuffle(order)
+        for uuid in order:
+            neighbours = adj.get(uuid, [])
+            if not neighbours:
+                continue
+            counts = Counter(labels[n] for n in neighbours if n in labels)
+            if not counts:
+                continue
+            best = counts.most_common(1)[0][0]
+            if labels[uuid] != best:
+                labels[uuid] = best
+                changed += 1
+        if changed == 0:
+            yield f"Phase 2: converged after {iteration + 1} iterations"
+            break
+    else:
+        yield f"Phase 2: reached max {MAX_ITER} iterations"
+
+    # Phase 3 — group by final label
+    buckets: dict[str, list[str]] = defaultdict(list)
+    for uuid, label in labels.items():
+        buckets[label].append(uuid)
+
+    yield f"Phase 3: {len(buckets)} communities identified"
+
+    # Phase 4 — write to DB + LLM summaries
+    conn.execute("DELETE FROM community_members")
+    conn.execute("DELETE FROM communities")
+    conn.commit()
+
+    total = len(buckets)
+    all_member_rows: list[tuple[str, int]] = []  # (entity_uuid, community_id)
+
+    for i, (label, member_uuids) in enumerate(
+        sorted(buckets.items(), key=lambda kv: -len(kv[1]))
+    ):
+        yield f"Summarising community {i + 1}/{total} ({len(member_uuids)} members)…"
+
+        # Fetch entity names + summaries for this community
+        ph = ",".join("?" * len(member_uuids))
+        rows = conn.execute(
+            f"SELECT name, summary FROM entities WHERE uuid IN ({ph})",
+            member_uuids,
+        ).fetchall()
+        member_rows = [(r[0], r[1] or "") for r in rows]
+
+        if len(member_uuids) < 3:
+            # Skip LLM for tiny communities
+            name    = " / ".join(r[0] for r in member_rows[:4])
+            summary = ""
+        else:
+            try:
+                name, summary = _summarize_community(member_rows)
+            except Exception as exc:
+                name    = member_rows[0][0] if member_rows else "Community"
+                summary = ""
+                yield f"  ⚠ LLM error: {exc}"
+
+        cur = conn.execute(
+            "INSERT INTO communities(name, summary, member_count) VALUES (?,?,?)",
+            (name, summary, len(member_uuids)),
+        )
+        cid = cur.lastrowid
+        all_member_rows.extend((uuid, cid) for uuid in member_uuids)
+        conn.commit()
+
+    conn.executemany(
+        "INSERT OR REPLACE INTO community_members(entity_uuid, community_id) VALUES (?,?)",
+        all_member_rows,
+    )
+    conn.commit()
+    yield f"Done — {total} communities built"
+
+
+def assign_entity_community(conn: sqlite3.Connection, entity_uuid: str) -> None:
+    """Incremental label propagation for a single new/updated entity (no LLM).
+
+    Assigns the entity to the plurality community of its neighbours.
+    Safe to call after every upsert_entities() when communities already exist.
+    """
+    # Get neighbours
+    rows = conn.execute(
+        "SELECT tgt_uuid FROM edges WHERE src_uuid=? AND tgt_uuid!='' "
+        "UNION "
+        "SELECT src_uuid FROM edges WHERE tgt_uuid=? AND src_uuid!=''",
+        (entity_uuid, entity_uuid),
+    ).fetchall()
+    neighbour_uuids = [r[0] for r in rows]
+
+    if not neighbour_uuids:
+        # Isolated entity — create a stub community only if not already assigned
+        existing = conn.execute(
+            "SELECT community_id FROM community_members WHERE entity_uuid=?",
+            (entity_uuid,),
+        ).fetchone()
+        if existing:
+            return
+        name_row = conn.execute(
+            "SELECT name FROM entities WHERE uuid=?", (entity_uuid,)
+        ).fetchone()
+        name = name_row[0] if name_row else entity_uuid[:8]
+        cur = conn.execute(
+            "INSERT INTO communities(name, summary, member_count) VALUES (?,?,1)",
+            (name, ""),
+        )
+        conn.execute(
+            "INSERT OR REPLACE INTO community_members(entity_uuid, community_id) VALUES (?,?)",
+            (entity_uuid, cur.lastrowid),
+        )
+        conn.commit()
+        return
+
+    # Find plurality community among neighbours
+    ph = ",".join("?" * len(neighbour_uuids))
+    cm_rows = conn.execute(
+        f"SELECT community_id FROM community_members WHERE entity_uuid IN ({ph})",
+        neighbour_uuids,
+    ).fetchall()
+    if not cm_rows:
+        return  # neighbours not yet assigned — skip
+
+    best_cid = Counter(r[0] for r in cm_rows).most_common(1)[0][0]
+
+    old = conn.execute(
+        "SELECT community_id FROM community_members WHERE entity_uuid=?",
+        (entity_uuid,),
+    ).fetchone()
+    if old:
+        if old[0] == best_cid:
+            return  # no change
+        conn.execute(
+            "UPDATE communities SET member_count = member_count - 1 WHERE id=?",
+            (old[0],),
+        )
+
+    conn.execute(
+        "INSERT OR REPLACE INTO community_members(entity_uuid, community_id) VALUES (?,?)",
+        (entity_uuid, best_cid),
+    )
+    conn.execute(
+        "UPDATE communities SET member_count = member_count + 1 WHERE id=?",
+        (best_cid,),
+    )
+    conn.commit()
+
+
+def get_communities(conn: sqlite3.Connection, limit: int = 100,
+                    cursor: Optional[int] = None) -> tuple[list[dict], Optional[int]]:
+    """Paginated community list. First page sorted by member_count DESC."""
+    if cursor is not None:
+        rows = conn.execute(
+            "SELECT id, name, summary, member_count FROM communities "
+            "WHERE id > ? ORDER BY id LIMIT ?", (cursor, limit)
+        ).fetchall()
+    else:
+        rows = conn.execute(
+            "SELECT id, name, summary, member_count FROM communities "
+            "ORDER BY member_count DESC LIMIT ?", (limit,)
+        ).fetchall()
+    items = [
+        {"id": r["id"], "name": r["name"],
+         "summary": r["summary"] or "", "member_count": r["member_count"]}
+        for r in rows
+    ]
+    next_cursor = items[-1]["id"] if len(items) == limit else None
+    return items, next_cursor
+
+
+def get_community_members(conn: sqlite3.Connection,
+                          community_id: int) -> list[dict]:
+    """Return all entities belonging to a community, ordered by name."""
+    rows = conn.execute(
+        """SELECT e.uuid, e.name, e.labels_json, e.summary
+           FROM community_members cm
+           JOIN entities e ON e.uuid = cm.entity_uuid
+           WHERE cm.community_id = ?
+           ORDER BY e.name""",
+        (community_id,),
+    ).fetchall()
+    return [
+        {"uuid": r["uuid"], "name": r["name"],
+         "labels": json.loads(r["labels_json"] or "[]"),
+         "summary": r["summary"] or ""}
+        for r in rows
+    ]
 
 
 # ── One-time backfill from KuzuDB ─────────────────────────────────────────────
