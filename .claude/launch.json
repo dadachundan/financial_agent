@@ -11,7 +11,7 @@
     {
       "name": "zsxq-viewer",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["/Users/x/projects/financial_agent/zsxq_viewer.py", "--db", "/Users/x/projects/financial_agent/zsxq.db", "--port", "8080"],
+      "runtimeArgs": ["/Users/x/projects/financial_agent/zsxq_viewer.py", "--db", "/Users/x/projects/financial_agent/db/zsxq.db", "--port", "8080"],
       "port": 8080
     }
   ,

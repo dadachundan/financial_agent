@@ -21,13 +21,14 @@ from pathlib import Path
 from typing import Optional
 
 # Mirror lives next to knowledge_graph/ directory
-_DEFAULT_MIRROR = Path(__file__).parent / "graph_mirror.db"
+_DEFAULT_MIRROR = Path(__file__).parent / "db" / "graph_mirror.db"
 
 
 # ── Connection ────────────────────────────────────────────────────────────────
 
 def get_conn(mirror_path: Path = _DEFAULT_MIRROR) -> sqlite3.Connection:
     """Return a WAL-mode SQLite connection to the mirror DB."""
+    mirror_path.parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(str(mirror_path), timeout=5)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA journal_mode=WAL")
