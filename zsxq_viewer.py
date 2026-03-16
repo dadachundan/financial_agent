@@ -26,7 +26,7 @@ from flask import Flask, Blueprint, Response, abort, jsonify, render_template_st
 import ticker_names as _tn
 
 SCRIPT_DIR  = Path(__file__).parent
-DEFAULT_DB  = SCRIPT_DIR / "zsxq.db"
+DEFAULT_DB  = SCRIPT_DIR / "db" / "zsxq.db"
 UPLOADS_DIR = SCRIPT_DIR / "uploads"
 
 zsxq_bp = Blueprint("zsxq", __name__)

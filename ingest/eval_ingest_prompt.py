@@ -46,7 +46,7 @@ def _find_project_root() -> Path:
     return SCRIPT_DIR
 
 PROJECT_ROOT    = _find_project_root()
-REPORTS_DB_PATH = PROJECT_ROOT / "financial_reports.db"
+REPORTS_DB_PATH = PROJECT_ROOT / "db" / "financial_reports.db"
 
 
 # ── Improved HTML → text extraction ───────────────────────────────────────────

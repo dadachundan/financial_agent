@@ -53,7 +53,7 @@ logging.getLogger("graphiti_core.utils.maintenance.node_operations").setLevel(lo
 logging.getLogger("graphiti_core.utils.maintenance.edge_operations").setLevel(logging.ERROR)
 
 SCRIPT_DIR = Path(__file__).parent
-DEFAULT_DB  = SCRIPT_DIR / "zsxq.db"
+DEFAULT_DB  = SCRIPT_DIR.parent / "db" / "zsxq.db"
 MAX_CHARS   = 80_000   # ~20 k tokens — full document, no page limit
 
 GROUP_ID    = "financial-pdfs"
@@ -790,8 +790,8 @@ def main() -> None:
     import minimax_llm_client
     if args.debug_llm:
         minimax_llm_client.PRINT_ALL_LLM_CALLS = True
-    # Always write LLM calls to a log file for the web viewer
-    minimax_llm_client.LLM_LOG_FILE = _get_project_root() / "llm_calls.jsonl"
+    # Write LLM call log to log/ directory (debug only; monitoring via Langfuse)
+    minimax_llm_client.LLM_LOG_FILE = _get_project_root() / "log" / "llm_calls.jsonl"
 
     # Langfuse monitoring (no-op if keys not configured in config.py)
     import langfuse_monitor
@@ -801,7 +801,7 @@ def main() -> None:
 
     root = _get_project_root()
     zsxq_db_path    = Path(args.db).expanduser()
-    reports_db_path = root / "financial_reports.db"
+    reports_db_path = root / "db" / "financial_reports.db"
 
     all_items: list[dict] = []
     open_conns: list[sqlite3.Connection] = []

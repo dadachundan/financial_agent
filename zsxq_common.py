@@ -28,7 +28,7 @@ API_BASE = "https://api.zsxq.com/v2"
 
 SCRIPT_DIR              = Path(__file__).parent
 DEFAULT_CHROME_PROFILE  = SCRIPT_DIR / "chrome_profile"
-DEFAULT_DB              = SCRIPT_DIR / "zsxq.db"
+DEFAULT_DB              = SCRIPT_DIR / "db" / "zsxq.db"
 DEFAULT_DOWNLOADS       = Path("~/Downloads/zsxq_reports").expanduser()
 
 HEADERS = {

@@ -42,7 +42,7 @@ def _find_project_root() -> Path:
 
 
 GRAPH_DIR    = _find_project_root() / "graphiti_db"
-ZSXQ_DB      = _find_project_root() / "zsxq.db"
+ZSXQ_DB      = _find_project_root() / "db" / "zsxq.db"
 GROUP_ID     = "financial-pdfs"
 # SQLite mirror — always readable, even while ingest holds the KuzuDB write lock
 import threading

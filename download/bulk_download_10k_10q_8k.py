@@ -68,7 +68,7 @@ SKIPPED = [
 def main() -> None:
     fr.init_db()
 
-    log_path = Path(__file__).parent / "bulk_download_10k_10q_8k.log"
+    log_path = Path(__file__).parent.parent / "log" / "bulk_download_10k_10q_8k.log"
     total    = len(TICKERS)
     failed   = []
     skipped  = 0
