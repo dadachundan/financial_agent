@@ -44,8 +44,6 @@ def _find_project_root() -> Path:
 GRAPH_DIR    = _find_project_root() / "graphiti_db"
 ZSXQ_DB      = _find_project_root() / "zsxq.db"
 GROUP_ID     = "financial-pdfs"
-LLM_LOG_FILE = _find_project_root() / "llm_calls.jsonl"
-
 # SQLite mirror — always readable, even while ingest holds the KuzuDB write lock
 import graph_mirror as _mirror
 _mirror_conn: "sqlite3.Connection | None" = None
@@ -64,12 +62,6 @@ def _get_mirror():
             print(f"[mirror] backfill done: {ne} entities, {ned} edges", flush=True)
     return _mirror_conn
 
-# Enable LLM call logging via the shared minimax_llm_client module
-try:
-    import minimax_llm_client as _mmc
-    _mmc.LLM_LOG_FILE = LLM_LOG_FILE
-except Exception:
-    pass
 
 zep_bp = Blueprint(
     "zep",
@@ -202,7 +194,7 @@ def index():
         "zep.html",
         has_key=_graph_ready(),
         nav_html=_nw2.NAV_HTML,
-        url_patch_js=render_template_string(_nw2.URL_PATCH_JS),
+        url_patch_js=render_template_string(_nw2.URL_PATCH_JS, _base="/zep"),
     )
 
 
@@ -403,42 +395,7 @@ def clear_graph():
     return jsonify({"ok": True})
 
 
-@zep_bp.route("/llm-log/view")
-def llm_log_view():
-    return render_template(
-        "llm_log.html",
-        nav_html=_nw2.NAV_HTML,
-        url_patch_js=render_template_string(_nw2.URL_PATCH_JS),
-    )
-
-
-@zep_bp.route("/llm-log")
-def llm_log():
-    """Return the last N LLM call records from llm_calls.jsonl as JSON."""
-    limit = min(int(request.args.get("limit", 50)), 500)
-    if not LLM_LOG_FILE.exists():
-        return jsonify({"records": [], "total": 0})
-    lines = LLM_LOG_FILE.read_text(encoding="utf-8").splitlines()
-    records = []
-    for line in lines:
-        line = line.strip()
-        if not line:
-            continue
-        try:
-            records.append(json.loads(line))
-        except Exception:
-            pass
-    total = len(records)
-    return jsonify({"records": records[-limit:], "total": total})
-
-
-@zep_bp.route("/llm-log/clear", methods=["POST"])
-def llm_log_clear():
-    try:
-        LLM_LOG_FILE.unlink(missing_ok=True)
-        return jsonify({"ok": True})
-    except Exception as e:
-        return jsonify({"ok": False, "error": str(e)}), 500
+# LLM log routes removed — monitoring moved to Langfuse cloud.
 
 
 # ── Standalone entry point ─────────────────────────────────────────────────────
