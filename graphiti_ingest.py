@@ -185,7 +185,8 @@ def extract_text(pdf_path: Path, max_chars: int = MAX_CHARS) -> str:
     return full[:max_chars]
 
 
-_SEC_SECTION_PATTERNS = {
+# 10-K: annual report section patterns
+_10K_PATTERNS = {
     "item1":  r"(?i)item\s+1[\s\.\n\u2014\-]+\s*business\b",
     "item1a": r"(?i)item\s+1a[\s\.\n\u2014\-]+\s*risk factors\b",
     "item2":  r"(?i)item\s+2[\s\.\n\u2014\-]+\s*properties\b",
@@ -194,11 +195,33 @@ _SEC_SECTION_PATTERNS = {
     "item7a": r"(?i)item\s+7a[\s\.\n\u2014\-]+\s*quantitative",
     "item8":  r"(?i)item\s+8[\s\.\n\u2014\-]+\s*financial statements",
 }
+
+# 10-Q: quarterly report — Part I has Financial Statements + MD&A
+_10Q_PATTERNS = {
+    "item1_fs":  r"(?i)item\s+1[\s\.\n\u2014\-]+\s*financial statements\b",
+    "item2_mda": r"(?i)item\s+2[\s\.\n\u2014\-]+\s*management.{0,30}discussion\b",
+    "item3_mkt": r"(?i)item\s+3[\s\.\n\u2014\-]+\s*quantitative",
+    "item4":     r"(?i)item\s+4[\s\.\n\u2014\-]+\s*controls",
+    "item1a":    r"(?i)item\s+1a[\s\.\n\u2014\-]+\s*risk factors\b",
+}
+
+# 8-K: current report — items use decimal notation e.g. 1.01, 2.02, 5.02
+_8K_PATTERNS = {
+    "item1_01": r"(?i)item\s+1\.01\b",
+    "item2_01": r"(?i)item\s+2\.01\b",
+    "item2_02": r"(?i)item\s+2\.02\b",   # Results of Operations
+    "item5_02": r"(?i)item\s+5\.02\b",   # Director / officer changes
+    "item7_01": r"(?i)item\s+7\.01\b",   # Regulation FD disclosure
+    "item8_01": r"(?i)item\s+8\.01\b",   # Other Events
+    "item9_01": r"(?i)item\s+9\.01\b",   # Financial statements (end boundary)
+}
+
 _MAX_SECTION = 12_000  # chars per extracted section
 
-def _sec_offsets(text: str) -> dict[str, list[int]]:
+
+def _sec_offsets(text: str, patterns: dict) -> dict[str, list[int]]:
     return {k: [m.start() for m in re.finditer(p, text)]
-            for k, p in _SEC_SECTION_PATTERNS.items()}
+            for k, p in patterns.items()}
 
 def _last_offset(offsets: dict, key: str, full_text: str = "") -> int | None:
     lst = offsets.get(key, [])
@@ -224,12 +247,8 @@ def _first_after_offset(offsets: dict, key: str, min_pos: int,
     return None
 
 
-def extract_html_text(html_path: Path, max_chars: int = MAX_CHARS) -> str:
-    """Extract Item 1 (Business) + Item 1A (Risk Factors) from an SEC HTML filing.
-
-    Falls back to a raw text dump for non-standard filings (10-Q parts, older formats).
-    Targets the actual body sections, not the Table of Contents references.
-    """
+def _clean_html_to_text(html_path: Path) -> str:
+    """Parse HTML, strip boilerplate tags, flatten tables, return clean plain text."""
     from bs4 import BeautifulSoup
     html = html_path.read_text(errors="replace")
     soup = BeautifulSoup(html, "html.parser")
@@ -253,13 +272,14 @@ def extract_html_text(html_path: Path, max_chars: int = MAX_CHARS) -> str:
     full = soup.get_text(separator="\n")
     full = re.sub(r"[ \t]{2,}", " ", full)
     full = re.sub(r"\n{3,}", "\n\n", full).strip()
-    if len(full) < 200:
-        return ""
+    return full
 
-    offs = _sec_offsets(full)
+
+def _extract_10k_sections(full: str) -> list[str]:
+    """Extract Item 1 (Business) + Item 1A (Risk Factors) from a 10-K."""
+    offs = _sec_offsets(full, _10K_PATTERNS)
     sections: list[str] = []
 
-    # Item 1: Business (last LINE-START occurrence — filters out cross-references)
     s1 = _last_offset(offs, "item1", full)
     if s1 is not None:
         e1 = (_first_after_offset(offs, "item1a", s1, full)
@@ -269,7 +289,6 @@ def extract_html_text(html_path: Path, max_chars: int = MAX_CHARS) -> str:
         if len(chunk) > 300:
             sections.append(f"=== ITEM 1: BUSINESS ===\n{chunk[:_MAX_SECTION]}")
 
-    # Item 1A: Risk Factors — use start-of-line check to skip in-text cross-refs
     s1a = _first_after_offset(offs, "item1a", s1 or 0, full)
     if s1a is not None:
         e1a = (_first_after_offset(offs, "item2", s1a, full)
@@ -279,10 +298,108 @@ def extract_html_text(html_path: Path, max_chars: int = MAX_CHARS) -> str:
         if len(chunk) > 300:
             sections.append(f"=== ITEM 1A: RISK FACTORS ===\n{chunk[:_MAX_SECTION]}")
 
+    return sections
+
+
+def _extract_10q_sections(full: str) -> list[str]:
+    """Extract MD&A (Item 2) + Risk Factors (Item 1A Part II) from a 10-Q.
+
+    10-Q structure:
+      Part I  Item 1  Financial Statements  (tables, skip as primary)
+      Part I  Item 2  MD&A                  ← most useful narrative
+      Part I  Item 3  Market Risk
+      Part I  Item 4  Controls
+      Part II Item 1A Risk Factors (updates)
+    """
+    offs = _sec_offsets(full, _10Q_PATTERNS)
+    sections: list[str] = []
+
+    # MD&A — most information-dense section for 10-Q
+    s_mda = _last_offset(offs, "item2_mda", full)
+    if s_mda is not None:
+        e_mda = (_first_after_offset(offs, "item3_mkt", s_mda, full)
+                 or _first_after_offset(offs, "item4", s_mda, full)
+                 or s_mda + _MAX_SECTION * 2)
+        chunk = full[s_mda:e_mda].strip()
+        if len(chunk) > 300:
+            sections.append(f"=== ITEM 2: MD&A ===\n{chunk[:_MAX_SECTION]}")
+
+    # Risk Factors update (Part II) — optional, often short
+    s_rf = _first_after_offset(offs, "item1a", s_mda or 0, full)
+    if s_rf is not None:
+        chunk = full[s_rf:s_rf + _MAX_SECTION].strip()
+        if len(chunk) > 300:
+            sections.append(f"=== ITEM 1A: RISK FACTORS (UPDATE) ===\n{chunk[:_MAX_SECTION]}")
+
+    return sections
+
+
+def _extract_8k_sections(full: str) -> list[str]:
+    """Extract substantive items from an 8-K current report.
+
+    8-K items use decimal notation: 1.01, 2.01, 2.02, 5.02, 7.01, 8.01.
+    We grab all found items except 9.01 (Exhibits) as separate sections.
+    """
+    offs = _sec_offsets(full, _8K_PATTERNS)
+
+    # Collect all found item start positions with labels
+    item_labels = {
+        "item1_01": "ITEM 1.01: MATERIAL AGREEMENT",
+        "item2_01": "ITEM 2.01: COMPLETION OF ACQUISITION",
+        "item2_02": "ITEM 2.02: RESULTS OF OPERATIONS",
+        "item5_02": "ITEM 5.02: DIRECTOR/OFFICER CHANGES",
+        "item7_01": "ITEM 7.01: REGULATION FD DISCLOSURE",
+        "item8_01": "ITEM 8.01: OTHER EVENTS",
+    }
+
+    found: list[tuple[int, str, str]] = []  # (offset, key, label)
+    for key, label in item_labels.items():
+        pos = _last_offset(offs, key, full)
+        if pos is not None:
+            found.append((pos, key, label))
+    found.sort(key=lambda x: x[0])
+
+    # End boundary: Exhibits section
+    exhibits_end = _last_offset(offs, "item9_01", full) or len(full)
+
+    sections: list[str] = []
+    for i, (start, key, label) in enumerate(found):
+        end = found[i + 1][0] if i + 1 < len(found) else exhibits_end
+        chunk = full[start:end].strip()
+        if len(chunk) > 100:
+            sections.append(f"=== {label} ===\n{chunk[:_MAX_SECTION]}")
+
+    return sections
+
+
+def extract_html_text(html_path: Path, form_type: str = "10-K",
+                      max_chars: int = MAX_CHARS) -> str:
+    """Extract the most informative narrative sections from an SEC HTML filing.
+
+    Dispatches to form-type-specific extractors:
+      10-K  → Item 1 (Business) + Item 1A (Risk Factors)
+      10-Q  → Item 2 (MD&A) + Item 1A Part II (Risk Factors update)
+      8-K   → all substantive items (1.01, 2.02, 5.02, etc.)
+    Falls back to a raw text dump if no sections are detected.
+    """
+    full = _clean_html_to_text(html_path)
+    if len(full) < 200:
+        return ""
+
+    ft = (form_type or "").upper()
+    if ft in ("10-K", "10-K/A"):
+        sections = _extract_10k_sections(full)
+    elif ft in ("10-Q", "10-Q/A"):
+        sections = _extract_10q_sections(full)
+    elif ft in ("8-K", "8-K/A"):
+        sections = _extract_8k_sections(full)
+    else:
+        sections = _extract_10k_sections(full) or _extract_10q_sections(full)
+
     if sections:
         return "\n\n".join(sections)
 
-    # Fallback for non-standard filings
+    # Fallback for unrecognised/non-standard filings
     return full[:max_chars]
 
 
@@ -587,7 +704,7 @@ def _build_report_items(rows, reports_db_path: Path) -> tuple[list[dict], sqlite
 
         t0 = time.time()
         try:
-            text = extract_html_text(local_path)
+            text = extract_html_text(local_path, form_type=form_type)
         except Exception as e:
             print(f"  [{idx}] ⚠  Extract failed for {ticker} {period}: {e}", flush=True)
             continue
