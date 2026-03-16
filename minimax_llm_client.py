@@ -365,7 +365,28 @@ class MiniMaxLLMClient(LLMClient):
         else:
             _elapsed_s = 0.0  # already printed in debug mode
 
+        # Extract token usage from raw API response
+        _usage: dict | None = None
+        try:
+            _usage = json.loads(_raw).get("usage")
+        except Exception:
+            pass
+
         _log_llm_call(model_name, mm_messages, text, _elapsed_s)
+
+        # Langfuse tracing (no-op if not configured)
+        try:
+            import langfuse_monitor
+            langfuse_monitor.log_generation(
+                call_type=model_name,
+                model=self.config.model or "MiniMax-Text-01",
+                messages=mm_messages,
+                response_text=text,
+                elapsed_s=_elapsed_s,
+                usage=_usage,
+            )
+        except Exception:
+            pass
 
         if PRINT_ALL_LLM_CALLS:
             print(f"  [RESPONSE] {text[:800]}{'…' if len(text) > 800 else ''}")
