@@ -7,6 +7,7 @@ logging all output to bulk_download_10k_10q_8k.log in addition to stdout.
 
 Non-US tickers (TSX:GMIN, ASX:RMS) are skipped — not on SEC EDGAR.
 """
+import sys, pathlib as _pl; sys.path.insert(0, str(_pl.Path(__file__).parent.parent))
 
 import json
 import sys

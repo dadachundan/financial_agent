@@ -18,6 +18,7 @@ Excluded from this script (use bulk_download_10k_10q_8k.py instead)
   OTC:BYDDF   — OTC in US, not on CNINFO
   NASDAQ:HSAI — US NASDAQ listing → SEC EDGAR
 """
+import sys, pathlib as _pl; sys.path.insert(0, str(_pl.Path(__file__).parent.parent))
 
 import json
 import sys
