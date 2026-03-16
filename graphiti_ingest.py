@@ -624,6 +624,8 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
                     name_map = {str(n.uuid): n.name for n in result.nodes}
                     graph_mirror.upsert_edges(mirror_conn, result.edges, name_map)
                     graph_mirror.backfill_edge_names(mirror_conn)
+                    if getattr(result, "episode", None):
+                        graph_mirror.upsert_episode(mirror_conn, result.episode)
                 except Exception as _me:
                     print(f"  ⚠  mirror write failed: {_me}", flush=True)
             except Exception as e:
