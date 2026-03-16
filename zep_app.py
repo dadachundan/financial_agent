@@ -56,6 +56,12 @@ def _get_mirror():
         import sqlite3
         _mirror_conn = _mirror.get_conn()
         _mirror.ensure_schema(_mirror_conn)
+        # Auto-backfill from KuzuDB if mirror is empty (e.g. first run after upgrade)
+        n = _mirror_conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
+        if n == 0 and GRAPH_DIR.exists():
+            print("[mirror] empty — backfilling from KuzuDB …", flush=True)
+            ne, ned = _mirror.backfill_from_kuzu(_mirror_conn, GRAPH_DIR, GROUP_ID)
+            print(f"[mirror] backfill done: {ne} entities, {ned} edges", flush=True)
     return _mirror_conn
 
 # Enable LLM call logging via the shared minimax_llm_client module
