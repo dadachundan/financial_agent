@@ -268,12 +268,28 @@ def search(conn: sqlite3.Connection, query: str,
     Returns {"nodes": [...], "edges": [...]} in the same shape as
     zep_app's graphiti search response.
     """
-    # Build a safe FTS5 query — wrap each word with * prefix wildcard
+    # Build FTS5 query:
+    #   1. Exact phrase first (highest relevance)  e.g. "Synodex platform"
+    #   2. All-words AND fallback                  e.g. Synodex* AND platform*
+    #   3. Any-word OR fallback                    e.g. Synodex* OR platform*
+    # Use phrase match when query has multiple words so "Synodex® platform"
+    # doesn't match random docs that merely contain "platform".
     words = [w.strip() for w in query.split() if w.strip()]
     if not words:
         return {"nodes": [], "edges": []}
 
-    fts_query = " OR ".join(f'"{w}"*' for w in words)
+    # Escape special FTS5 chars in individual words
+    def _esc(w: str) -> str:
+        return w.replace('"', '""')
+
+    if len(words) == 1:
+        fts_query = f'"{_esc(words[0])}"*'
+    else:
+        phrase   = '"' + " ".join(_esc(w) for w in words) + '"'
+        and_part = " AND ".join(f'"{_esc(w)}"*' for w in words)
+        or_part  = " OR ".join(f'"{_esc(w)}"*' for w in words)
+        # Try phrase first; if no results the caller will widen to AND/OR
+        fts_query = f"{phrase} OR ({and_part}) OR ({or_part})"
 
     # Entity search
     try:
@@ -331,25 +347,31 @@ def search(conn: sqlite3.Connection, query: str,
 
 def backfill_from_kuzu(mirror_conn: sqlite3.Connection,
                        graph_dir: Path,
-                       group_id: str = "financial-pdfs") -> tuple[int, int]:
-    """Populate the mirror from KuzuDB using a read-only connection.
+                       group_id: str = "financial-pdfs",
+                       kuzu_conn=None) -> tuple[int, int]:
+    """Populate the mirror from KuzuDB.
 
-    Safe to call while graphiti_ingest.py is running — read-only mode does
-    not compete with the writer lock.
+    If kuzu_conn is provided (an existing kuzu.Connection), it is reused — this
+    avoids the exclusive-lock conflict when the web server already holds a write
+    connection.  Otherwise a read-only Database is opened (safe when no writer
+    is active, e.g. from a standalone backfill script).
 
     Returns (n_entities, n_edges) written.
     """
-    import kuzu, json as _json
+    import json as _json
 
     if not graph_dir.exists():
         return 0, 0
 
-    try:
-        kdb  = kuzu.Database(str(graph_dir), read_only=True)
-        conn = kuzu.Connection(kdb)
-    except Exception as e:
-        print(f"[mirror] backfill: could not open KuzuDB read-only: {e}")
-        return 0, 0
+    conn = kuzu_conn
+    if conn is None:
+        try:
+            import kuzu
+            kdb  = kuzu.Database(str(graph_dir), read_only=True)
+            conn = kuzu.Connection(kdb)
+        except Exception as e:
+            print(f"[mirror] backfill: could not open KuzuDB: {e}")
+            return 0, 0
 
     def _rows(result):
         cols = result.get_column_names()
