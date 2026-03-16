@@ -228,12 +228,14 @@ def search():
             conn, _kdb = _kuzu_conn()
             cond = " OR ".join(f"n.uuid = '{u}'" for u in missing_uuids)
             r = conn.execute(
-                f"MATCH (n:Entity) WHERE {cond} RETURN n.uuid, n.name"
+                f"MATCH (n:Entity) WHERE n.group_id = $gid AND ({cond}) RETURN n.uuid, n.name",
+                {"gid": GROUP_ID},
             )
             for row in _kuzu_rows(r):
                 uuid_to_name[row["n.uuid"]] = row["n.name"] or ""
-        except Exception:
-            pass
+        except Exception as _e:
+            import sys
+            print(f"[search] KuzuDB name lookup failed: {_e}", file=sys.stderr)
     for e in edges:
         e["source_node_name"] = uuid_to_name.get(e["source_node_uuid"], "")
         e["target_node_name"] = uuid_to_name.get(e["target_node_uuid"], "")

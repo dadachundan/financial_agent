@@ -299,6 +299,16 @@ function showMsg(msg) {
 function clickEntity(uuid, name) {
   document.getElementById('searchInput').value = name;
   doSearch();
+  // If graph is open, focus + highlight the matching node
+  if (_network && _graphBuilt) {
+    try {
+      const n = _visNodes && _visNodes.get(uuid);
+      if (n) {
+        _network.selectNodes([uuid]);
+        _network.focus(uuid, { scale: 1.4, animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
+      }
+    } catch (_) {}
+  }
 }
 
 // ── Stats ──────────────────────────────────────────────────────────────────
@@ -499,6 +509,7 @@ async function uploadPdf(input) {
 
 // ── Graph visualisation ────────────────────────────────────────────────────
 let _network = null;
+let _visNodes = null;
 let _graphBuilt = false;
 
 async function toggleGraph() {
@@ -553,7 +564,7 @@ async function toggleGraph() {
     }
     graphInfo.style.display = 'none';
 
-    const nodes = new vis.DataSet(nodeList.map(n => {
+    _visNodes = new vis.DataSet(nodeList.map(n => {
       let tip;
       if (n.summary) {
         tip = document.createElement('div');
@@ -597,12 +608,18 @@ async function toggleGraph() {
       interaction: { hover: true, tooltipDelay: 150, navigationButtons: true },
     };
 
-    _network = new vis.Network(document.getElementById('graphNet'), { nodes, edges }, options);
+    _network = new vis.Network(document.getElementById('graphNet'), { nodes: _visNodes, edges }, options);
 
     _network.on('click', params => {
       if (params.nodes.length > 0) {
-        const n = nodes.get(params.nodes[0]);
-        if (n) { document.getElementById('searchInput').value = n.label; doSearch(); }
+        const nodeId = params.nodes[0];
+        const n = _visNodes.get(nodeId);
+        if (n) {
+          document.getElementById('searchInput').value = n.label;
+          doSearch();
+          // Keep graph focused on the clicked node
+          _network.focus(nodeId, { scale: 1.4, animation: { duration: 400, easingFunction: 'easeInOutQuad' } });
+        }
       }
     });
 
