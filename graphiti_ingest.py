@@ -443,6 +443,7 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
       db_conn, mark_fn, row_id
     """
     import traceback
+    import langfuse_monitor
 
     graphiti = await _build_graphiti()
     ok = skipped = 0
@@ -464,6 +465,9 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
                 continue
 
             print(f"  {len(text):,} chars → LLM pipeline …", flush=True)
+
+            # Set document label for Langfuse trace grouping
+            lf_token = langfuse_monitor.set_document(item["label"])
 
             heartbeat = asyncio.ensure_future(
                 _heartbeat(item["name"], interval=30)
@@ -497,6 +501,8 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
             finally:
                 heartbeat.cancel()
                 await asyncio.sleep(0)  # let cancel propagate
+                langfuse_monitor.clear_document(lf_token)
+                langfuse_monitor.flush()  # push completed doc traces immediately
 
     except KeyboardInterrupt:
         print(f"\n⚠  Interrupted. Closing database … (ok={ok} skip={skipped})", flush=True)
@@ -640,6 +646,12 @@ def main() -> None:
         minimax_llm_client.PRINT_ALL_LLM_CALLS = True
     # Always write LLM calls to a log file for the web viewer
     minimax_llm_client.LLM_LOG_FILE = _get_project_root() / "llm_calls.jsonl"
+
+    # Langfuse monitoring (no-op if keys not configured in config.py)
+    import langfuse_monitor
+    from datetime import datetime as _dt
+    _session = _dt.now().strftime("%Y-%m-%d %H:%M")
+    langfuse_monitor.init(session_label=f"ingest {_session}")
 
     root = _get_project_root()
     zsxq_db_path    = Path(args.db).expanduser()
