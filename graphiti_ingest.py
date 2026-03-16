@@ -89,18 +89,105 @@ def extract_text(pdf_path: Path, max_chars: int = MAX_CHARS) -> str:
     return full[:max_chars]
 
 
+_SEC_SECTION_PATTERNS = {
+    "item1":  r"(?i)item\s+1[\s\.\n\u2014\-]+\s*business\b",
+    "item1a": r"(?i)item\s+1a[\s\.\n\u2014\-]+\s*risk factors\b",
+    "item2":  r"(?i)item\s+2[\s\.\n\u2014\-]+\s*properties\b",
+    "item3":  r"(?i)item\s+3[\s\.\n\u2014\-]+\s*legal proceedings\b",
+    "item7":  r"(?i)item\s+7[\s\.\n\u2014\-]+\s*management",
+    "item7a": r"(?i)item\s+7a[\s\.\n\u2014\-]+\s*quantitative",
+    "item8":  r"(?i)item\s+8[\s\.\n\u2014\-]+\s*financial statements",
+}
+_MAX_SECTION = 12_000  # chars per extracted section
+
+def _sec_offsets(text: str) -> dict[str, list[int]]:
+    return {k: [m.start() for m in re.finditer(p, text)]
+            for k, p in _SEC_SECTION_PATTERNS.items()}
+
+def _last_offset(offsets: dict, key: str, full_text: str = "") -> int | None:
+    lst = offsets.get(key, [])
+    if not lst:
+        return None
+    if full_text:
+        line_starts = [o for o in lst
+                       if re.search(r"\n\s*$", full_text[max(0, o - 60):o])]
+        if line_starts:
+            return line_starts[-1]
+    return lst[-1]
+
+def _first_after_offset(offsets: dict, key: str, min_pos: int,
+                        full_text: str = "") -> int | None:
+    for o in sorted(offsets.get(key, [])):
+        if o <= min_pos + 500:
+            continue
+        if full_text:
+            preceding = full_text[max(0, o - 60):o]
+            if not re.search(r"\n\s*$", preceding):
+                continue
+        return o
+    return None
+
+
 def extract_html_text(html_path: Path, max_chars: int = MAX_CHARS) -> str:
-    """Extract readable text from an SEC HTML filing using BeautifulSoup."""
+    """Extract Item 1 (Business) + Item 1A (Risk Factors) from an SEC HTML filing.
+
+    Falls back to a raw text dump for non-standard filings (10-Q parts, older formats).
+    Targets the actual body sections, not the Table of Contents references.
+    """
     from bs4 import BeautifulSoup
     html = html_path.read_text(errors="replace")
     soup = BeautifulSoup(html, "html.parser")
-    for tag in soup(["script", "style", "head"]):
+
+    for tag in soup(["script", "style", "head", "footer", "nav",
+                     "ix:header", "ix:hidden", "ix:references", "ix:resources"]):
         tag.decompose()
-    text = soup.get_text(separator="\n")
-    text = re.sub(r"\n{3,}", "\n\n", text).strip()
-    if len(text) < 200:
+    for tag in soup.find_all(["ix:nonfraction", "ix:nonnumeric"]):
+        tag.unwrap()
+
+    for table in soup.find_all("table"):
+        rows_text = []
+        for tr in table.find_all("tr"):
+            cells = [td.get_text(" ", strip=True) for td in tr.find_all(["td", "th"])]
+            cells = [c for c in cells if c]
+            if cells:
+                rows_text.append(" | ".join(cells))
+        if rows_text:
+            table.replace_with("\n" + "\n".join(rows_text) + "\n")
+
+    full = soup.get_text(separator="\n")
+    full = re.sub(r"[ \t]{2,}", " ", full)
+    full = re.sub(r"\n{3,}", "\n\n", full).strip()
+    if len(full) < 200:
         return ""
-    return text[:max_chars]
+
+    offs = _sec_offsets(full)
+    sections: list[str] = []
+
+    # Item 1: Business (last LINE-START occurrence — filters out cross-references)
+    s1 = _last_offset(offs, "item1", full)
+    if s1 is not None:
+        e1 = (_first_after_offset(offs, "item1a", s1, full)
+              or _first_after_offset(offs, "item2", s1, full)
+              or s1 + _MAX_SECTION * 2)
+        chunk = full[s1:e1].strip()
+        if len(chunk) > 300:
+            sections.append(f"=== ITEM 1: BUSINESS ===\n{chunk[:_MAX_SECTION]}")
+
+    # Item 1A: Risk Factors — use start-of-line check to skip in-text cross-refs
+    s1a = _first_after_offset(offs, "item1a", s1 or 0, full)
+    if s1a is not None:
+        e1a = (_first_after_offset(offs, "item2", s1a, full)
+               or _first_after_offset(offs, "item3", s1a, full)
+               or s1a + _MAX_SECTION * 2)
+        chunk = full[s1a:e1a].strip()
+        if len(chunk) > 300:
+            sections.append(f"=== ITEM 1A: RISK FACTORS ===\n{chunk[:_MAX_SECTION]}")
+
+    if sections:
+        return "\n\n".join(sections)
+
+    # Fallback for non-standard filings
+    return full[:max_chars]
 
 
 # ── DB helpers — zsxq.db ───────────────────────────────────────────────────────
