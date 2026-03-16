@@ -306,3 +306,107 @@ def search(conn: sqlite3.Connection, query: str,
     ]
 
     return {"nodes": nodes, "edges": edges, "episodes": []}
+
+
+# ── One-time backfill from KuzuDB ─────────────────────────────────────────────
+
+def backfill_from_kuzu(mirror_conn: sqlite3.Connection,
+                       graph_dir: Path,
+                       group_id: str = "financial-pdfs") -> tuple[int, int]:
+    """Populate the mirror from KuzuDB using a read-only connection.
+
+    Safe to call while graphiti_ingest.py is running — read-only mode does
+    not compete with the writer lock.
+
+    Returns (n_entities, n_edges) written.
+    """
+    import kuzu, json as _json
+
+    if not graph_dir.exists():
+        return 0, 0
+
+    try:
+        kdb  = kuzu.Database(str(graph_dir), read_only=True)
+        conn = kuzu.Connection(kdb)
+    except Exception as e:
+        print(f"[mirror] backfill: could not open KuzuDB read-only: {e}")
+        return 0, 0
+
+    def _rows(result):
+        cols = result.get_column_names()
+        out  = []
+        while result.has_next():
+            out.append(dict(zip(cols, result.get_next())))
+        return out
+
+    # ── entities ──────────────────────────────────────────────────────────────
+    n_ent = 0
+    try:
+        batch = []
+        rows = _rows(conn.execute(
+            "MATCH (n:Entity) WHERE n.group_id = $gid "
+            "RETURN n.uuid, n.name, n.labels, n.summary",
+            {"gid": group_id},
+        ))
+        for r in rows:
+            labels = r.get("n.labels") or []
+            if isinstance(labels, str):
+                try: labels = _json.loads(labels)
+                except Exception: labels = []
+            batch.append((
+                r["n.uuid"] or "",
+                r["n.name"] or "",
+                _json.dumps(list(labels)),
+                (r.get("n.summary") or "")[:2000],
+            ))
+        if batch:
+            mirror_conn.executemany(
+                """INSERT INTO entities(uuid, name, labels_json, summary)
+                   VALUES (?,?,?,?)
+                   ON CONFLICT(uuid) DO UPDATE SET
+                     name=excluded.name, labels_json=excluded.labels_json,
+                     summary=excluded.summary""",
+                batch,
+            )
+            mirror_conn.commit()
+            n_ent = len(batch)
+    except Exception as e:
+        print(f"[mirror] backfill entities error: {e}")
+
+    # ── edges ──────────────────────────────────────────────────────────────────
+    n_edg = 0
+    try:
+        batch = []
+        rows = _rows(conn.execute(
+            "MATCH (s:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(t:Entity) "
+            "WHERE e.group_id = $gid "
+            "RETURN e.uuid, e.name, e.fact, s.uuid AS src, s.name AS src_name, "
+            "       t.uuid AS tgt, t.name AS tgt_name",
+            {"gid": group_id},
+        ))
+        for r in rows:
+            batch.append((
+                r["e.uuid"] or "",
+                r["e.name"] or "",
+                (r.get("e.fact") or "")[:4000],
+                r.get("src") or "",
+                r.get("src_name") or "",
+                r.get("tgt") or "",
+                r.get("tgt_name") or "",
+            ))
+        if batch:
+            mirror_conn.executemany(
+                """INSERT INTO edges(uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name)
+                   VALUES (?,?,?,?,?,?,?)
+                   ON CONFLICT(uuid) DO UPDATE SET
+                     name=excluded.name, fact=excluded.fact,
+                     src_uuid=excluded.src_uuid, src_name=excluded.src_name,
+                     tgt_uuid=excluded.tgt_uuid, tgt_name=excluded.tgt_name""",
+                batch,
+            )
+            mirror_conn.commit()
+            n_edg = len(batch)
+    except Exception as e:
+        print(f"[mirror] backfill edges error: {e}")
+
+    return n_ent, n_edg
