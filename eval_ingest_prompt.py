@@ -148,8 +148,21 @@ def extract_10k_core(html_path: Path) -> tuple[str, str]:
 # ── Heuristic quality checker (pure Python, no LLM) ───────────────────────────
 
 # Patterns for obviously forbidden entities
-_RE_PERSON   = re.compile(
-    r"^(Mr\.|Ms\.|Dr\.|Prof\.)?\s*[A-Z][a-z]+(\s+[A-Z]\.?)?\s+[A-Z][a-z]+"
+
+# Person names: only 2-word patterns where BOTH words are short (≤12 chars),
+# not ending in corporate suffixes, and not prefixed by a known title.
+# This avoids false positives on company names like "Hamilton Sundstrand".
+_COMPANY_SUFFIX = re.compile(
+    r"\b(Inc\.|Corp\.|Co\.|Ltd\.|LLC|LLP|GmbH|S\.A\.|N\.V\.|PLC|AG|AB|AS|SA|"
+    r"Corporation|Company|Group|Holdings|Enterprises|Industries|International|"
+    r"Technologies|Systems|Solutions|Services|Limited|Partners)\b",
+    re.IGNORECASE,
+)
+_RE_PERSON = re.compile(
+    r"^(Mr\.|Ms\.|Mrs\.|Dr\.|Prof\.)?\s*"
+    r"[A-Z][a-z]{1,11}"           # first name: 2–12 chars
+    r"(\s+[A-Z]\.)?"              # optional middle initial
+    r"\s+[A-Z][a-z]{1,11}"       # last name: 2–12 chars
     r"(\s+(Jr\.|Sr\.|II|III|IV))?$"
 )
 _RE_LEGAL    = re.compile(r"\bv\.\s+\w|\bIn re\b|\bLitigation\b|\bClass Action\b",
@@ -158,12 +171,20 @@ _RE_SEC_RULE = re.compile(r"\bRule\s+\d|\bRegulation\s+[A-Z]-?\d*\b|\bSection\s+
                            re.IGNORECASE)
 _RE_FORM     = re.compile(r"\bForm\s+\d|\bAnnual Report\b|\bQuarterly Report\b|\b10-[KQ]\b",
                            re.IGNORECASE)
+_RE_MONEY    = re.compile(
+    r"^\$[\d,.]+|^\d[\d,.]*\s*(million|billion|thousand|%|percent)\b"
+    r"|\d+\s+(thousand|million|billion)\s+(active|common|outstanding)",
+    re.IGNORECASE,
+)
+_RE_GENERIC_ACRONYM = re.compile(r"^(AI|VR|AR|XR|ML|IoT|HPC|API|SDK|GPU|CPU|SoC|ASIC|FPGA|ERP|CRM)$")
 _BOILERPLATE = frozenset(["IRS", "FASB", "GAAP", "IFRS", "PCAOB", "AICPA",
-                           "SEC", "EDGAR", "NYSE", "Nasdaq"])  # generic refs
+                           "SEC", "EDGAR"])
 _GENERIC_CONCEPTS = re.compile(
     r"\b(fiscal year|depreciation|amortization|amortisation|revenue recognition|"
     r"audit committee|proxy statement|annual meeting|common stock|preferred stock|"
-    r"earnings per share|net income|gross margin)\b",
+    r"earnings per share|net income|gross margin|"
+    r"digital signal processors?|analog integrated circuits?|"
+    r"supply chain|semiconductor market|capital market)\b",
     re.IGNORECASE
 )
 
@@ -171,12 +192,36 @@ GOOD_TYPES = frozenset(["company", "organisation", "organization", "ticker",
                          "product", "technology", "market", "sector",
                          "industry", "country", "region", "index", "instrument"])
 
+# Entity-type keywords that indicate a non-person (product, company, platform, etc.)
+_GOOD_TYPE_KEYWORDS = frozenset([
+    "company", "organisation", "organization", "corp", "corporation",
+    "product", "technology", "platform", "chip", "device", "hardware",
+    "software", "service", "system", "tool", "application", "app",
+    "robot", "instrument", "machine", "engine",
+    "market", "segment", "sector", "industry", "division",
+    "ticker", "index", "fund", "brand", "initiative",
+])
+
 
 def _classify_entity(e: dict) -> str:
-    """Return 'good', 'person', 'legal', 'rule', 'form', 'boilerplate', or 'concept'."""
+    """Return 'good', 'person', 'legal', 'rule', 'form', 'money', 'acronym',
+    'boilerplate', or 'concept'."""
     name = e.get("name", "")
     etype = (e.get("entity_type") or "").lower()
 
+    # Monetary values / financial figures (check first — highest confidence)
+    if _RE_MONEY.search(name):
+        return "money"
+    # Generic one-word acronyms (AI, VR, GPU …)
+    if _RE_GENERIC_ACRONYM.match(name.strip()):
+        return "acronym"
+    # Company suffix → definitely good
+    if _COMPANY_SUFFIX.search(name):
+        return "good"
+    # If LLM tagged it as a non-person type → trust it before checking person regex.
+    # This avoids false positives on product names like "Apple Watch", "Da Vinci".
+    if any(kw in etype for kw in _GOOD_TYPE_KEYWORDS):
+        return "good"
     if _RE_PERSON.match(name):
         return "person"
     if _RE_LEGAL.search(name):
@@ -189,7 +234,7 @@ def _classify_entity(e: dict) -> str:
         return "boilerplate"
     if _GENERIC_CONCEPTS.search(name):
         return "concept"
-    # Entity type hints
+    # Entity type hints for person (low-priority fallback)
     if any(t in etype for t in ("person", "human", "individual", "executive")):
         return "person"
     return "good"
@@ -199,7 +244,7 @@ def heuristic_check(entities: list[dict]) -> dict:
     """Classify each entity and return a quality summary dict."""
     classified: dict[str, list[str]] = {
         "good": [], "person": [], "legal": [], "rule": [],
-        "form": [], "boilerplate": [], "concept": [],
+        "form": [], "money": [], "acronym": [], "boilerplate": [], "concept": [],
     }
     for e in entities:
         cat = _classify_entity(e)
@@ -207,7 +252,8 @@ def heuristic_check(entities: list[dict]) -> dict:
 
     n_total    = len(entities)
     n_bad      = sum(len(classified[k]) for k in ("person", "legal", "rule",
-                                                    "form", "boilerplate", "concept"))
+                                                    "form", "money", "acronym",
+                                                    "boilerplate", "concept"))
     bad_ratio  = n_bad / n_total if n_total > 0 else 0.0
     too_few    = len(classified["good"]) < 3
 
@@ -220,6 +266,10 @@ def heuristic_check(entities: list[dict]) -> dict:
         issues.append(f"SEC rules extracted: {', '.join(classified['rule'][:5])}")
     if classified["form"]:
         issues.append(f"form types extracted: {', '.join(classified['form'][:5])}")
+    if classified["money"]:
+        issues.append(f"monetary values as entities: {', '.join(classified['money'][:5])}")
+    if classified["acronym"]:
+        issues.append(f"generic acronyms as entities: {', '.join(classified['acronym'][:5])}")
     if classified["boilerplate"]:
         issues.append(f"boilerplate entities: {', '.join(classified['boilerplate'][:5])}")
     if classified["concept"]:
@@ -228,6 +278,7 @@ def heuristic_check(entities: list[dict]) -> dict:
         issues.append(f"too few meaningful entities ({len(classified['good'])} good)")
 
     quality_ok = bad_ratio < 0.20 and not too_few
+    # Note: edge count is checked separately in the main loop
 
     return {
         "quality_ok":   quality_ok,
@@ -300,42 +351,53 @@ ALLOWED (extract ONLY these):
 - Companies and organisations (e.g. NVIDIA, TSMC, AMD, Microsoft, SoftBank, Arm)
 - Stock tickers (e.g. NVDA, TSM, AAPL, AMD)
 - Named products, chips, platforms, or proprietary technologies
-  (e.g. H100, Blackwell, Hopper, CUDA, NVLink, CoWoS, Grace CPU)
-  Must be a specific branded/model name — NOT a generic technology category.
-- Named business segments or specific markets the company operates in
+  (e.g. H100, Blackwell, Hopper, CUDA, NVLink, CoWoS, Grace CPU, GeForce, Quadro)
+  Must be a specific BRANDED or MODEL name — NOT a generic technology category.
+  BAD examples (too generic): "Digital Signal Processors", "Analog ICs", "GPU", "AI", "VR", "HPC"
+- Named business segments the company itself uses to describe its divisions
   (e.g. Data Center, Gaming, Automotive, Professional Visualization, Networking)
 
 FORBIDDEN (NEVER extract — skip entirely):
+- ANY monetary value or financial figure: $79 million, $5.2 billion, $1.0 billion, 13 thousand,
+  any string that starts with "$", any string that contains a number + million/billion/trillion.
+  If the entity name contains a dollar sign OR a numeric amount, DO NOT extract it.
+- Generic technology acronyms not tied to a specific product: AI, VR, AR, GPU, HPC, IoT, ML
+- Generic technology categories: "Digital Signal Processors", "Analog Integrated Circuits",
+  "Semiconductor Market", "Cloud Computing" — too broad, not a company or product
 - Countries, regions, or geographies (China, United States, Europe, Taiwan)
 - Financial indices, benchmarks, or ratings (S&P 500, NASDAQ, Moody's)
-- Generic financial instruments (convertible notes, bonds, equity)
-- Human personal names of any kind (executives, analysts, lawyers, investors)
+- Generic financial instruments (convertible notes, bonds, equity, common stock)
+- Human personal names (executives, analysts, lawyers, investors)
 - Legal cases: anything with "v.", "In re", "Derivative Litigation", "Class Action"
 - SEC rules and rule numbers (Rule 10b-5, Regulation S-K, etc.)
 - SEC filing form types (Form 10-K, Form 10-Q, Annual Report, etc.)
-- Generic regulatory/accounting bodies (IRS, FASB, GAAP, IFRS, SEC as boilerplate)
-- Laws and acts (Securities Exchange Act, Sarbanes-Oxley, Dodd-Frank, etc.)
-- Generic legal/accounting concepts (fiscal year, audit, depreciation)
+- Regulatory/accounting boilerplate: IRS, FASB, GAAP, IFRS, PCAOB, SEC as generic ref
+- Laws and acts (Securities Exchange Act, Sarbanes-Oxley, Dodd-Frank)
+- Generic legal/accounting concepts (fiscal year, audit, depreciation, amortization)
 - Generic time periods (Q1, Q2, fiscal 2024)
-- Vague concepts (supply chain, demand, growth, risk, strategy)
+- Vague concepts (supply chain, demand, growth, risk, strategy, innovation)
 
 If in doubt, skip the entity. Quality over quantity."""
 
 _EDGE_RULES = """\
 RELATIONSHIP EXTRACTION RULES:
 1. CRITICAL — use entity names EXACTLY as they appear in the entity list.
-2. EXTRACT AGGRESSIVELY — extract as many meaningful relationships as possible.
-3. PRIORITISED types:
-   - Product/chip MADE_BY or DEVELOPED_BY company   (e.g. H100 → NVIDIA)
-   - Technology USED_BY or ENABLES company/market
-   - Company COMPETES_WITH company                   (e.g. NVIDIA → AMD)
-   - Company SUPPLIES or MANUFACTURES_FOR company    (e.g. TSMC → NVIDIA)
-   - Company OPERATES_IN market/sector/country
-   - Company HAS_REVENUE_FROM or SELLS_INTO market
-   - Ticker REPRESENTS company                       (e.g. NVDA → NVIDIA)
+2. EXTRACT AGGRESSIVELY — you MUST extract AT LEAST 2 relationships. Never return empty.
+3. Start with the most obvious relationships first:
+   - What does the company MAKE or SELL? (product/segment → company)
+   - Who are the company's competitors? (company COMPETES_WITH company)
+   - Who supplies or partners with the company?
+4. PRIORITISED types:
+   - Product/chip/platform MADE_BY or SOLD_BY company  (e.g. H100 → NVIDIA)
+   - Business segment OPERATED_BY company               (e.g. Data Center → NVIDIA)
+   - Company COMPETES_WITH company                      (e.g. NVIDIA → AMD)
+   - Company SUPPLIES or MANUFACTURES_FOR company       (e.g. TSMC → NVIDIA)
+   - Company HAS_REVENUE_FROM segment/market
+   - Ticker REPRESENTS company                          (e.g. NVDA → NVIDIA)
    - Company ACQUIRED or INVESTED_IN company
-   - Company PARTNERS_WITH company
-4. relation_type: short ALL_CAPS verb phrase (MADE_BY, COMPETES_WITH, etc.)."""
+   - Company PARTNERS_WITH or JOINT_VENTURE_WITH company
+   - Company IS_SUBSIDIARY_OF or SPUN_OFF_FROM company
+5. relation_type: short ALL_CAPS verb phrase (MADE_BY, COMPETES_WITH, IS_SUBSIDIARY_OF …)."""
 
 _ENTITY_SCHEMA = json.dumps({
     "extracted_entities": [
@@ -356,6 +418,8 @@ def _entity_system(ticker: str, company: str, extra_rules: str = "") -> str:
         rules += f"\n\nADDITIONAL RULES (added after reviewing previous extraction):\n{extra_rules}"
     return (
         f"You extract named entities from a {company} ({ticker}) 10-K SEC filing.\n\n"
+        f"IMPORTANT: Always include '{company}' and the ticker '{ticker}' as entities — "
+        f"they are the primary subjects of this filing.\n\n"
         f"{rules}\n\n"
         f"Reply with ONLY valid JSON matching this schema:\n{_ENTITY_SCHEMA}"
     )
@@ -446,12 +510,24 @@ def extract_edges(text: str, entities: list[dict], show_prompts: bool) -> list[d
         edges = []
 
     valid_names = {e["name"] for e in entities}
+    # Case-insensitive fallback: maps lower(name) → canonical name
+    _lower_map = {n.lower(): n for n in valid_names}
+
+    def _resolve(raw: str) -> str | None:
+        """Return canonical entity name or None if not found."""
+        if raw in valid_names:
+            return raw
+        return _lower_map.get(raw.lower())
+
     good, bad = [], []
     for ed in (edges if isinstance(edges, list) else []):
         if not isinstance(ed, dict):
             continue
-        if ed.get("source_entity_name") in valid_names \
-                and ed.get("target_entity_name") in valid_names:
+        src = _resolve(ed.get("source_entity_name", ""))
+        tgt = _resolve(ed.get("target_entity_name", ""))
+        if src and tgt:
+            ed["source_entity_name"] = src
+            ed["target_entity_name"] = tgt
             good.append(ed)
         else:
             bad.append(ed)
