@@ -32,6 +32,7 @@ Requirements
     not yet on disk.  If you pass --no-autodownload the Chrome profile is
     never touched.
 """
+import sys, pathlib as _pl; sys.path.insert(0, str(_pl.Path(__file__).parent.parent))
 
 import argparse
 import sys

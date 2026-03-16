@@ -18,6 +18,7 @@ Usage:
     python eval_ingest_prompt.py --show-prompts           # print full LLM I/O
     python eval_ingest_prompt.py --out /tmp/my.json       # custom output path
 """
+import sys, pathlib as _pl; sys.path.insert(0, str(_pl.Path(__file__).parent.parent))
 
 import argparse
 import json
