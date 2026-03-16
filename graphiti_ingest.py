@@ -296,17 +296,18 @@ def ensure_zsxq_column(conn: sqlite3.Connection) -> None:
         pass
 
 
-def get_pending_pdfs(conn: sqlite3.Connection, reindex: bool) -> list:
+def get_pending_pdfs(conn: sqlite3.Connection, reindex: bool, limit: int = 0) -> list:
+    limit_sql = f" LIMIT {limit}" if limit > 0 else ""
     if reindex:
         return conn.execute(
             "SELECT file_id, name, local_path, create_time "
-            "FROM pdf_files WHERE local_path IS NOT NULL "
-            "ORDER BY create_time DESC"
+            f"FROM pdf_files WHERE local_path IS NOT NULL "
+            f"ORDER BY create_time DESC{limit_sql}"
         ).fetchall()
     return conn.execute(
         "SELECT file_id, name, local_path, create_time "
-        "FROM pdf_files WHERE local_path IS NOT NULL AND graphiti_indexed_at IS NULL "
-        "ORDER BY create_time DESC"
+        f"FROM pdf_files WHERE local_path IS NOT NULL AND graphiti_indexed_at IS NULL "
+        f"ORDER BY create_time DESC{limit_sql}"
     ).fetchall()
 
 
@@ -333,6 +334,7 @@ def get_pending_reports(
     reindex: bool,
     tickers: list[str],
     form_types: list[str],
+    limit: int = 0,
 ) -> list:
     placeholders_ft = ",".join("?" * len(form_types))
     params: list = list(form_types)
@@ -347,9 +349,10 @@ def get_pending_reports(
         where += f" AND ticker IN ({placeholders_t})"
         params.extend(tickers)
 
+    limit_sql = f" LIMIT {limit}" if limit > 0 else ""
     return conn.execute(
         f"SELECT id, ticker, company_name, period, form_type, local_path, filed_date "
-        f"FROM reports WHERE {where} ORDER BY filed_date DESC",
+        f"FROM reports WHERE {where} ORDER BY filed_date DESC{limit_sql}",
         params,
     ).fetchall()
 
@@ -668,7 +671,7 @@ def main() -> None:
         conn = sqlite3.connect(zsxq_db_path)
         conn.row_factory = sqlite3.Row
         ensure_zsxq_column(conn)
-        rows = get_pending_pdfs(conn, args.reindex)
+        rows = get_pending_pdfs(conn, args.reindex, args.limit)
         conn.close()
         if rows:
             print(f"Found {len(rows)} pending PDFs in zsxq.db …")
@@ -686,7 +689,7 @@ def main() -> None:
         conn = sqlite3.connect(reports_db_path)
         conn.row_factory = sqlite3.Row
         ensure_reports_column(conn)
-        rows = get_pending_reports(conn, args.reindex, args.ticker, args.form_type)
+        rows = get_pending_reports(conn, args.reindex, args.ticker, args.form_type, args.limit)
         conn.close()
         ticker_note = f" for {', '.join(args.ticker)}" if args.ticker else ""
         ft_note = "/".join(args.form_type)
