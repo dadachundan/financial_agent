@@ -52,6 +52,12 @@
     .entity-row .ename { font-weight:600; color:#1a73e8; }
     .entity-row .esumm { color:#6c757d; font-size:.75rem;
                          white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:240px; }
+    .community-row { padding:6px 10px; border-bottom:1px solid #f0f0f0; font-size:.82rem; cursor:pointer; }
+    .community-row:hover { background:#f8f9fa; }
+    .community-row .cname { font-weight:600; color:#0f5132; }
+    .community-row .ccount { font-size:.75rem; color:#0d6efd; font-weight:600; }
+    .community-row .csumm { color:#6c757d; font-size:.75rem;
+                            white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:240px; }
 
     /* ── graph panel ── */
     #graphPanel { margin:0 20px 20px; display:none; }
@@ -118,10 +124,13 @@
   <span><span class="stat-pill" id="statNodes">–</span> entities</span>
   <span><span class="stat-pill" id="statEdges">–</span> relationships</span>
   <span><span class="stat-pill" id="statEpisodes">–</span> documents indexed</span>
+  <span><span class="stat-pill" id="statCommunities">–</span> communities</span>
   <span class="ms-auto">
     <button class="btn btn-sm btn-outline-primary" onclick="loadEntities()">Browse All Entities</button>
+    <button class="btn btn-sm btn-outline-info ms-1" onclick="loadCommunities(true)">Browse Communities</button>
     <button class="btn btn-sm btn-outline-secondary ms-1" id="graphToggleBtn" onclick="toggleGraph()">🕸 Graph View</button>
     <button class="btn btn-sm btn-outline-success ms-1" onclick="fetchNewPdfs()">⬆ Index New Documents</button>
+    <button class="btn btn-sm btn-outline-warning ms-1" onclick="buildCommunities()">🔗 Build Communities</button>
     <button class="btn btn-sm btn-outline-primary ms-1" onclick="document.getElementById('pdfFileInput').click()">📄 Upload PDF</button>
     <input type="file" id="pdfFileInput" accept=".pdf" style="display:none" onchange="uploadPdf(this)">
     <button class="btn btn-sm btn-outline-danger ms-1" onclick="clearGraph()">🗑 Clear All Data</button>
@@ -153,6 +162,33 @@
         <button class="btn btn-sm btn-link" id="loadMoreEntities" onclick="loadMoreEntities()" style="display:none">
           Load more…
         </button>
+      </div>
+    </div>
+
+    <!-- Community browser card -->
+    <div class="card mb-3" id="communityCard" style="display:none!important">
+      <div class="card-header d-flex justify-content-between align-items-center py-2">
+        <span style="font-size:.88rem;font-weight:600">Communities</span>
+        <button class="btn-close btn-sm" onclick="document.getElementById('communityCard').style.display='none'"></button>
+      </div>
+      <div id="communityList" class="card-body p-0" style="max-height:380px;overflow-y:auto"></div>
+      <div class="card-footer py-1">
+        <button class="btn btn-sm btn-link" id="loadMoreComBtn" onclick="loadMoreCommunities()" style="display:none">
+          Load more…
+        </button>
+      </div>
+    </div>
+
+    <!-- Community detail card -->
+    <div class="card mb-3" id="communityDetailCard" style="display:none!important">
+      <div class="card-header d-flex justify-content-between align-items-center py-2">
+        <span id="communityDetailTitle" style="font-size:.88rem;font-weight:600">Community</span>
+        <button class="btn btn-sm btn-link py-0" onclick="showCommunityBrowser()"
+                style="font-size:.8rem;text-decoration:none">← Back</button>
+      </div>
+      <div class="card-body p-2">
+        <p id="communityDetailSummary" class="text-muted mb-2" style="font-size:.8rem"></p>
+        <div id="communityDetailMembers" style="max-height:320px;overflow-y:auto"></div>
       </div>
     </div>
 
@@ -332,9 +368,10 @@ async function loadStats() {
             if (!d2.error || !d2.error.includes('lock')) {
               clearInterval(_statsRetryTimer); _statsRetryTimer = null;
               document.getElementById('statsBar').title = '';
-              document.getElementById('statNodes').textContent    = d2.node_count    ?? '–';
-              document.getElementById('statEdges').textContent    = d2.edge_count    ?? '–';
-              document.getElementById('statEpisodes').textContent = d2.episode_count ?? '–';
+              document.getElementById('statNodes').textContent       = d2.node_count       ?? '–';
+              document.getElementById('statEdges').textContent       = d2.edge_count       ?? '–';
+              document.getElementById('statEpisodes').textContent    = d2.episode_count    ?? '–';
+              document.getElementById('statCommunities').textContent = d2.community_count  ?? '–';
             }
           } catch(_) {}
         }, 5000);
@@ -344,9 +381,10 @@ async function loadStats() {
 
     if (_statsRetryTimer) { clearInterval(_statsRetryTimer); _statsRetryTimer = null; }
     document.getElementById('statsBar').title = '';
-    document.getElementById('statNodes').textContent    = d.node_count    ?? '–';
-    document.getElementById('statEdges').textContent    = d.edge_count    ?? '–';
-    document.getElementById('statEpisodes').textContent = d.episode_count ?? '–';
+    document.getElementById('statNodes').textContent       = d.node_count       ?? '–';
+    document.getElementById('statEdges').textContent       = d.edge_count       ?? '–';
+    document.getElementById('statEpisodes').textContent    = d.episode_count    ?? '–';
+    document.getElementById('statCommunities').textContent = d.community_count  ?? '–';
   } catch(_) {}
 }
 
@@ -379,6 +417,112 @@ async function loadEntities(reset) {
 }
 
 function loadMoreEntities() { loadEntities(false); }
+
+// ── Community browser ───────────────────────────────────────────────────────
+let _commCursor = null;
+
+async function loadCommunities(reset) {
+  if (reset) {
+    _commCursor = null;
+    document.getElementById('communityList').innerHTML = '';
+  }
+  document.getElementById('communityCard').style.display = '';
+  document.getElementById('communityDetailCard').style.display = 'none';
+
+  const url = '/communities?limit=50' + (_commCursor ? '&cursor=' + _commCursor : '');
+  try {
+    const r = await fetch(url);
+    const d = await r.json();
+    const list = document.getElementById('communityList');
+    (d.communities || []).forEach(c => {
+      const row = document.createElement('div');
+      row.className = 'community-row';
+      row.innerHTML =
+        '<div class="d-flex justify-content-between align-items-center">' +
+          '<span class="cname">' + escHtml(c.name) + '</span>' +
+          '<span class="ccount">' + c.member_count + ' members</span>' +
+        '</div>' +
+        '<div class="csumm">' + escHtml((c.summary || '').slice(0, 90)) + '</div>';
+      row.onclick = () => showCommunity(c.id, c.name);
+      list.appendChild(row);
+    });
+    _commCursor = d.next_cursor || null;
+    document.getElementById('loadMoreComBtn').style.display = d.next_cursor ? '' : 'none';
+  } catch(e) {
+    document.getElementById('communityList').innerHTML =
+      '<p class="text-danger p-2 mb-0">' + escHtml(e.message) + '</p>';
+  }
+}
+
+function loadMoreCommunities() { loadCommunities(false); }
+
+async function showCommunity(id, name) {
+  document.getElementById('communityCard').style.display = 'none';
+  const det = document.getElementById('communityDetailCard');
+  det.style.display = '';
+  document.getElementById('communityDetailTitle').textContent = name;
+  document.getElementById('communityDetailSummary').textContent = 'Loading…';
+  document.getElementById('communityDetailMembers').innerHTML = '';
+  try {
+    const r = await fetch('/communities/' + id);
+    const d = await r.json();
+    document.getElementById('communityDetailSummary').textContent = d.summary || '(no summary)';
+    const membersEl = document.getElementById('communityDetailMembers');
+    (d.members || []).forEach(m => {
+      const row = document.createElement('div');
+      row.className = 'entity-row';
+      row.innerHTML =
+        '<div class="ename">' + escHtml(m.name) + '</div>' +
+        '<div class="esumm">' + escHtml((m.summary || '').slice(0, 80)) + '</div>';
+      row.onclick = () => {
+        det.style.display = 'none';
+        document.querySelector('input[placeholder]').value = m.name;
+        doSearch();
+      };
+      membersEl.appendChild(row);
+    });
+  } catch(e) {
+    document.getElementById('communityDetailSummary').textContent = 'Error: ' + e.message;
+  }
+}
+
+function showCommunityBrowser() {
+  document.getElementById('communityDetailCard').style.display = 'none';
+  document.getElementById('communityCard').style.display = '';
+}
+
+function buildCommunities() {
+  _openIngestCard('🔗 Build Communities');
+  const btn = document.getElementById('ingestBtn');
+  btn.style.display = 'none';
+  document.getElementById('ingestLog').innerHTML = '';
+  document.getElementById('ingestLog').style.display = 'block';
+
+  fetch('/build-communities', {method: 'POST'}).then(resp => {
+    const reader = resp.body.getReader();
+    const dec    = new TextDecoder();
+    function pump() {
+      reader.read().then(({done, value}) => {
+        if (done) return;
+        dec.decode(value).split('\n').forEach(line => {
+          if (line.startsWith('data: ')) {
+            const msg = line.slice(6).trim();
+            if (!msg) return;
+            _appendLog(msg);
+            if (msg.includes('done: true')) {
+              loadStats();
+              if (document.getElementById('communityCard').style.display !== 'none') {
+                loadCommunities(true);
+              }
+            }
+          }
+        });
+        pump();
+      });
+    }
+    pump();
+  }).catch(e => _appendLog('Error: ' + e.message));
+}
 
 // ── Clear all graph data ───────────────────────────────────────────────────
 async function clearGraph() {

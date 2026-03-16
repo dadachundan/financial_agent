@@ -10,9 +10,12 @@ Routes (all under /zep prefix when registered in main.py):
     GET  /search    — JSON: {query} → {nodes, edges, episodes}
     GET  /entities  — JSON: list all entity nodes (paginated via KuzuDB)
     GET  /edges     — JSON: list all relationship edges (paginated via KuzuDB)
-    GET  /stats     — JSON: {node_count, edge_count, episode_count}
+    GET  /stats     — JSON: {node_count, edge_count, episode_count, community_count}
     GET  /ingest        — SSE stream: run graphiti_ingest.py for newly-added PDFs
     POST /upload-pdf    — SSE stream: accept PDF upload and index it directly
+    GET  /communities         — JSON: paginated community list
+    GET  /communities/<id>    — JSON: community detail + members
+    POST /build-communities   — SSE stream: run full label-propagation + LLM summaries
 """
 
 import asyncio
@@ -420,6 +423,52 @@ def clear_graph():
 
 
 # LLM log routes removed — monitoring moved to Langfuse cloud.
+
+
+# ── Community subgraph routes ──────────────────────────────────────────────────
+
+@zep_bp.route("/communities")
+def communities():
+    """Paginated community list, sorted by member_count DESC on first page."""
+    limit  = min(int(request.args.get("limit", 100)), 500)
+    cursor = request.args.get("cursor")
+    cursor = int(cursor) if cursor else None
+    items, next_cursor = _mirror.get_communities(_get_mirror(), limit, cursor)
+    return jsonify({"communities": items, "next_cursor": next_cursor})
+
+
+@zep_bp.route("/communities/<int:cid>")
+def community_detail(cid: int):
+    """Single community with its member entities."""
+    conn = _get_mirror()
+    row  = conn.execute(
+        "SELECT id, name, summary, member_count FROM communities WHERE id=?", (cid,)
+    ).fetchone()
+    if row is None:
+        return jsonify({"error": "not found"}), 404
+    result            = dict(row)
+    result["members"] = _mirror.get_community_members(conn, cid)
+    return jsonify(result)
+
+
+@zep_bp.route("/build-communities", methods=["POST"])
+def build_communities_stream():
+    """SSE stream: run full label propagation + LLM community summaries."""
+    def _gen():
+        # Use a dedicated connection (not the thread-local one) so the large
+        # DELETE + INSERT batch doesn't interfere with concurrent reads.
+        conn = _mirror.get_conn()
+        _mirror.ensure_schema(conn)
+        try:
+            for msg in _mirror.build_communities(conn):
+                yield f"data: {msg}\n\n"
+        except Exception as exc:
+            yield f"data: ERROR: {exc}\n\n"
+        finally:
+            conn.close()
+        yield "data: done: true\n\n"
+
+    return Response(_gen(), mimetype="text/event-stream")
 
 
 # ── Standalone entry point ─────────────────────────────────────────────────────
