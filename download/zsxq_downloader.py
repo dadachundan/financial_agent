@@ -24,6 +24,7 @@ Usage
     python zsxq_downloader.py --from-date 2025-06-01              # since a date, default --count 10
     python zsxq_downloader.py --from-date 2025-06-01 --count 0   # since a date, no limit
 """
+import sys, pathlib as _pl; sys.path.insert(0, str(_pl.Path(__file__).parent.parent))
 
 import argparse
 import sys
