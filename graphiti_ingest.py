@@ -563,8 +563,13 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
     """
     import traceback
     import langfuse_monitor
+    import graph_mirror
 
     graphiti = await _build_graphiti()
+
+    # Open SQLite mirror — non-blocking for web server reads
+    mirror_conn = graph_mirror.get_conn()
+    graph_mirror.ensure_schema(mirror_conn)
     ok = skipped = 0
     elapsed_times: list[float] = []
     session_start = asyncio.get_event_loop().time()
@@ -612,6 +617,15 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
                     flush=True,
                 )
                 ok += 1
+
+                # Mirror to SQLite so web server stays live during ingest
+                try:
+                    graph_mirror.upsert_entities(mirror_conn, result.nodes)
+                    name_map = {str(n.uuid): n.name for n in result.nodes}
+                    graph_mirror.upsert_edges(mirror_conn, result.edges, name_map)
+                    graph_mirror.backfill_edge_names(mirror_conn)
+                except Exception as _me:
+                    print(f"  ⚠  mirror write failed: {_me}", flush=True)
             except Exception as e:
                 elapsed = asyncio.get_event_loop().time() - t0
                 print(f"  ✗  Error after {elapsed:.0f}s: {e}", flush=True)

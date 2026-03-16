@@ -46,6 +46,18 @@ ZSXQ_DB      = _find_project_root() / "zsxq.db"
 GROUP_ID     = "financial-pdfs"
 LLM_LOG_FILE = _find_project_root() / "llm_calls.jsonl"
 
+# SQLite mirror — always readable, even while ingest holds the KuzuDB write lock
+import graph_mirror as _mirror
+_mirror_conn: "sqlite3.Connection | None" = None
+
+def _get_mirror():
+    global _mirror_conn
+    if _mirror_conn is None:
+        import sqlite3
+        _mirror_conn = _mirror.get_conn()
+        _mirror.ensure_schema(_mirror_conn)
+    return _mirror_conn
+
 # Enable LLM call logging via the shared minimax_llm_client module
 try:
     import minimax_llm_client as _mmc
@@ -190,167 +202,72 @@ def index():
 
 @zep_bp.route("/search")
 def search():
-    if not _graph_ready():
-        return jsonify({"error": "Graph not yet indexed. Run graphiti_ingest.py first."}), 503
-
     query = request.args.get("q", "").strip()
     limit = min(int(request.args.get("limit", 30)), 100)
 
     if not query:
         return jsonify({"nodes": [], "edges": [], "episodes": []}), 200
 
+    # Try graphiti semantic search first (vector-ranked); fall back to SQLite FTS
+    # if KuzuDB is locked by the ingestor (non-blocking for the web server).
     g = _get_graphiti()
-    if g is None:
-        return jsonify({"error": "Could not initialise graphiti. Check logs."}), 500
-
-    try:
-        results = _run(g.search_(
-            query=query,
-            group_ids=[GROUP_ID],
-        ))
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
-    # Limit results
-    nodes    = [_node_to_dict(n)  for n in (results.nodes    or [])[:limit]]
-    edges    = [_edge_to_dict(e)  for e in (results.edges    or [])[:limit]]
-    episodes = [_ep_to_dict(ep)   for ep in (results.episodes or [])[:limit]]
-
-    # Attach source/target entity names to edges via KuzuDB lookup
-    missing_uuids = set()
-    for e in edges:
-        if e["source_node_uuid"]: missing_uuids.add(e["source_node_uuid"])
-        if e["target_node_uuid"]: missing_uuids.add(e["target_node_uuid"])
-    uuid_to_name = {n["uuid"]: n["name"] for n in nodes}
-    missing_uuids -= set(uuid_to_name)
-    if missing_uuids:
+    if g is not None:
         try:
-            conn, _kdb = _kuzu_conn()
-            cond = " OR ".join(f"n.uuid = '{u}'" for u in missing_uuids)
-            r = conn.execute(
-                f"MATCH (n:Entity) WHERE n.group_id = $gid AND ({cond}) RETURN n.uuid, n.name",
-                {"gid": GROUP_ID},
-            )
-            for row in _kuzu_rows(r):
-                uuid_to_name[row["n.uuid"]] = row["n.name"] or ""
-        except Exception as _e:
-            import sys
-            print(f"[search] KuzuDB name lookup failed: {_e}", file=sys.stderr)
-    for e in edges:
-        e["source_node_name"] = uuid_to_name.get(e["source_node_uuid"], "")
-        e["target_node_name"] = uuid_to_name.get(e["target_node_uuid"], "")
+            results = _run(g.search_(query=query, group_ids=[GROUP_ID]))
+            nodes    = [_node_to_dict(n)  for n in (results.nodes    or [])[:limit]]
+            edges    = [_edge_to_dict(e)  for e in (results.edges    or [])[:limit]]
+            episodes = [_ep_to_dict(ep)   for ep in (results.episodes or [])[:limit]]
+            # Resolve missing edge endpoint names via mirror (never blocks)
+            missing_uuids = set()
+            for e in edges:
+                if e["source_node_uuid"]: missing_uuids.add(e["source_node_uuid"])
+                if e["target_node_uuid"]: missing_uuids.add(e["target_node_uuid"])
+            uuid_to_name = {n["uuid"]: n["name"] for n in nodes}
+            missing_uuids -= set(uuid_to_name)
+            if missing_uuids:
+                uuid_to_name.update(_mirror.resolve_names(_get_mirror(), missing_uuids))
+            for e in edges:
+                e["source_node_name"] = uuid_to_name.get(e["source_node_uuid"], "")
+                e["target_node_name"] = uuid_to_name.get(e["target_node_uuid"], "")
+            return jsonify({"nodes": nodes, "edges": edges, "episodes": episodes,
+                            "_source": "graphiti"})
+        except Exception as _ge:
+            print(f"[search] graphiti unavailable ({_ge}); falling back to mirror FTS",
+                  file=sys.stderr)
 
-    return jsonify({"nodes": nodes, "edges": edges, "episodes": episodes})
+    # Mirror FTS fallback — always available, even during ingestion
+    result = _mirror.search(_get_mirror(), query, limit)
+    result["_source"] = "mirror-fts"
+    return jsonify(result)
 
 
 @zep_bp.route("/entities")
 def entities():
-    if not _graph_ready():
-        return jsonify({"nodes": [], "next_cursor": None})
-
     limit  = min(int(request.args.get("limit", 200)), 500)
     cursor = request.args.get("cursor") or None
-
-    try:
-        conn, _kdb = _kuzu_conn()  # hold _kdb to prevent GC
-        if cursor:
-            q = (f"MATCH (n:Entity) WHERE n.group_id = $gid AND n.uuid > $cursor "
-                 f"RETURN n.uuid, n.name, n.summary ORDER BY n.uuid LIMIT {limit}")
-            rows = _kuzu_rows(conn.execute(q, {"gid": GROUP_ID, "cursor": cursor}))
-        else:
-            q = (f"MATCH (n:Entity) WHERE n.group_id = $gid "
-                 f"RETURN n.uuid, n.name, n.summary ORDER BY n.uuid LIMIT {limit}")
-            rows = _kuzu_rows(conn.execute(q, {"gid": GROUP_ID}))
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
-    nodes = [
-        {"uuid": r["n.uuid"], "name": r["n.name"] or "", "summary": r["n.summary"] or ""}
-        for r in rows
-    ]
-    next_cursor = nodes[-1]["uuid"] if len(nodes) == limit else None
+    nodes, next_cursor = _mirror.get_entities(_get_mirror(), limit, cursor)
     return jsonify({"nodes": nodes, "next_cursor": next_cursor})
 
 
 @zep_bp.route("/edges")
 def edges():
-    if not _graph_ready():
-        return jsonify({"edges": [], "next_cursor": None})
-
     limit  = min(int(request.args.get("limit", 200)), 500)
     cursor = request.args.get("cursor") or None
-
-    try:
-        conn, _kdb = _kuzu_conn()  # hold _kdb to prevent GC
-        if cursor:
-            q = (f"MATCH (s:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(t:Entity) "
-                 f"WHERE e.group_id = $gid AND e.uuid > $cursor "
-                 f"RETURN e.uuid, e.name, e.fact, s.uuid AS src, s.name AS src_name, t.uuid AS tgt, t.name AS tgt_name "
-                 f"ORDER BY e.uuid LIMIT {limit}")
-            rows = _kuzu_rows(conn.execute(q, {"gid": GROUP_ID, "cursor": cursor}))
-        else:
-            q = (f"MATCH (s:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(t:Entity) "
-                 f"WHERE e.group_id = $gid "
-                 f"RETURN e.uuid, e.name, e.fact, s.uuid AS src, s.name AS src_name, t.uuid AS tgt, t.name AS tgt_name "
-                 f"ORDER BY e.uuid LIMIT {limit}")
-            rows = _kuzu_rows(conn.execute(q, {"gid": GROUP_ID}))
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
-    edge_list = [
-        {
-            "uuid":             r["e.uuid"],
-            "name":             r["e.name"] or "",
-            "fact":             r["e.fact"] or "",
-            "source_node_uuid": r["src"],
-            "source_node_name": r["src_name"] or "",
-            "target_node_uuid": r["tgt"],
-            "target_node_name": r["tgt_name"] or "",
-        }
-        for r in rows
-    ]
-    next_cursor = edge_list[-1]["uuid"] if len(edge_list) == limit else None
+    edge_list, next_cursor = _mirror.get_edges(_get_mirror(), limit, cursor)
+    # Rename mirror fields to match the API shape the frontend expects
+    for e in edge_list:
+        e["source_node_uuid"] = e.pop("src_uuid", "")
+        e["source_node_name"] = e.pop("src_name", "")
+        e["target_node_uuid"] = e.pop("tgt_uuid", "")
+        e["target_node_name"] = e.pop("tgt_name", "")
     return jsonify({"edges": edge_list, "next_cursor": next_cursor})
 
 
 @zep_bp.route("/stats")
 def stats():
-    if not _graph_ready():
-        return jsonify({
-            "graph_exists": False,
-            "node_count": 0, "edge_count": 0, "episode_count": 0,
-        })
-
-    try:
-        conn, _kdb = _kuzu_conn()  # hold _kdb to prevent GC
-        node_count = _kuzu_rows(
-            conn.execute("MATCH (n:Entity) WHERE n.group_id = $gid RETURN count(*)",
-                         {"gid": GROUP_ID})
-        )[0]["COUNT_STAR()"]
-        edge_count = _kuzu_rows(
-            conn.execute(
-                "MATCH (:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(:Entity) "
-                "WHERE e.group_id = $gid RETURN count(*)",
-                {"gid": GROUP_ID},
-            )
-        )[0]["COUNT_STAR()"]
-        ep_count = _kuzu_rows(
-            conn.execute("MATCH (e:Episodic) WHERE e.group_id = $gid RETURN count(*)",
-                         {"gid": GROUP_ID})
-        )[0]["COUNT_STAR()"]
-    except Exception as ex:
-        return jsonify({
-            "graph_exists": True,
-            "node_count": 0, "edge_count": 0, "episode_count": 0,
-            "error": str(ex),
-        })
-
-    return jsonify({
-        "graph_exists":  True,
-        "node_count":    node_count,
-        "edge_count":    edge_count,
-        "episode_count": ep_count,
-    })
+    s = _mirror.get_stats(_get_mirror())
+    s["graph_exists"] = True
+    return jsonify(s)
 
 
 @zep_bp.route("/ingest")
