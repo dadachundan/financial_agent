@@ -25,6 +25,7 @@ Usage:
     python graphiti_ingest.py --limit 2 --debug-llm                   # print all LLM calls
     python graphiti_ingest.py --db zsxq.db
 """
+import sys, pathlib as _pl; sys.path.insert(0, str(_pl.Path(__file__).parent.parent))
 
 import argparse
 import asyncio
@@ -212,6 +213,8 @@ _8K_PATTERNS = {
     "item1_01": r"(?i)item\s+1\.01\b",   # Entry into material agreement
     "item2_01": r"(?i)item\s+2\.01\b",   # Completion of acquisition
     "item2_02": r"(?i)item\s+2\.02\b",   # Results of operations (earnings)
+    "item5_02": r"(?i)item\s+5\.02\b",   # Officer/director changes — boundary only, not extracted
+    "item7_01": r"(?i)item\s+7\.01\b",   # Reg FD — boundary only, not extracted
     "item8_01": r"(?i)item\s+8\.01\b",   # Other material events
     "item9_01": r"(?i)item\s+9\.01\b",   # Financial statements / exhibits (end boundary)
 }
@@ -291,8 +294,11 @@ def _extract_10k_sections(full: str) -> list[str]:
 
     s1a = _first_after_offset(offs, "item1a", s1 or 0, full)
     if s1a is not None:
-        e1a = (_first_after_offset(offs, "item2", s1a, full)
-               or _first_after_offset(offs, "item3", s1a, full)
+        e1a = (_first_after_offset(offs, "item2",  s1a, full)
+               or _first_after_offset(offs, "item3",  s1a, full)
+               or _first_after_offset(offs, "item7",  s1a, full)
+               or _first_after_offset(offs, "item7a", s1a, full)
+               or _first_after_offset(offs, "item8",  s1a, full)
                or s1a + _MAX_SECTION * 2)
         chunk = full[s1a:e1a].strip()
         if len(chunk) > 300:
@@ -343,15 +349,18 @@ def _extract_8k_sections(full: str) -> list[str]:
     """
     offs = _sec_offsets(full, _8K_PATTERNS)
 
-    # Collect all found item start positions with labels
+    # Items to extract (label = None means boundary-only, never extracted)
     item_labels = {
         "item1_01": "ITEM 1.01: MATERIAL AGREEMENT",
         "item2_01": "ITEM 2.01: COMPLETION OF ACQUISITION",
         "item2_02": "ITEM 2.02: RESULTS OF OPERATIONS",
+        "item5_02": None,  # officer changes — boundary only
+        "item7_01": None,  # Reg FD — boundary only
         "item8_01": "ITEM 8.01: OTHER EVENTS",
     }
 
-    found: list[tuple[int, str, str]] = []  # (offset, key, label)
+    # Collect ALL item positions (extracted + boundary-only) for accurate end boundaries
+    found: list[tuple[int, str, str | None]] = []  # (offset, key, label_or_None)
     for key, label in item_labels.items():
         pos = _last_offset(offs, key, full)
         if pos is not None:
@@ -363,6 +372,8 @@ def _extract_8k_sections(full: str) -> list[str]:
 
     sections: list[str] = []
     for i, (start, key, label) in enumerate(found):
+        if label is None:          # boundary-only item — skip extraction
+            continue
         end = found[i + 1][0] if i + 1 < len(found) else exhibits_end
         chunk = full[start:end].strip()
         if len(chunk) > 100:

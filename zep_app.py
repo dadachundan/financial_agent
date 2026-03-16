@@ -45,18 +45,29 @@ GRAPH_DIR    = _find_project_root() / "graphiti_db"
 ZSXQ_DB      = _find_project_root() / "zsxq.db"
 GROUP_ID     = "financial-pdfs"
 # SQLite mirror — always readable, even while ingest holds the KuzuDB write lock
+import threading
 import graph_mirror as _mirror
-_mirror_conn: "sqlite3.Connection | None" = None
+
+# Thread-local storage — each Flask worker thread gets its own SQLite connection.
+# SQLite connections cannot be shared across threads (check_same_thread=True default).
+_mirror_local    = threading.local()
+_mirror_backfill_done = False          # run backfill at most once per process
+
 
 def _get_mirror():
-    global _mirror_conn
-    if _mirror_conn is None:
-        import sqlite3
-        _mirror_conn = _mirror.get_conn()
-        _mirror.ensure_schema(_mirror_conn)
-        # Auto-backfill from KuzuDB if mirror is incomplete (e.g. first run after upgrade)
-        n_ent = _mirror_conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
-        n_ep  = _mirror_conn.execute("SELECT COUNT(*) FROM episodes").fetchone()[0]
+    """Return a per-thread SQLite mirror connection, backfilling once on first use."""
+    global _mirror_backfill_done
+    conn = getattr(_mirror_local, "conn", None)
+    if conn is None:
+        conn = _mirror.get_conn()
+        _mirror.ensure_schema(conn)
+        _mirror_local.conn = conn
+
+    # One-time backfill from KuzuDB if mirror looks empty (first run / upgrade)
+    if not _mirror_backfill_done:
+        _mirror_backfill_done = True   # set early to prevent re-entry on concurrent req
+        n_ent = conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
+        n_ep  = conn.execute("SELECT COUNT(*) FROM episodes").fetchone()[0]
         if (n_ent == 0 or n_ep == 0) and GRAPH_DIR.exists():
             print("[mirror] incomplete — backfilling from KuzuDB …", flush=True)
             # Reuse graphiti's existing kuzu.Database object to avoid exclusive-lock conflict
@@ -70,10 +81,10 @@ def _get_mirror():
             except Exception:
                 pass
             ne, ned = _mirror.backfill_from_kuzu(
-                _mirror_conn, GRAPH_DIR, GROUP_ID, kuzu_conn=existing_kuzu_conn
+                conn, GRAPH_DIR, GROUP_ID, kuzu_conn=existing_kuzu_conn
             )
             print(f"[mirror] backfill done: {ne} entities, {ned} edges", flush=True)
-    return _mirror_conn
+    return conn
 
 
 zep_bp = Blueprint(
