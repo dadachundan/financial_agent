@@ -38,6 +38,13 @@ def get_conn(mirror_path: Path = _DEFAULT_MIRROR) -> sqlite3.Connection:
 # ── Schema ────────────────────────────────────────────────────────────────────
 
 _DDL = """
+CREATE TABLE IF NOT EXISTS episodes (
+    uuid        TEXT PRIMARY KEY,
+    name        TEXT DEFAULT '',
+    source_desc TEXT DEFAULT '',
+    created_at  TEXT DEFAULT (datetime('now'))
+);
+
 CREATE TABLE IF NOT EXISTS entities (
     uuid        TEXT PRIMARY KEY,
     name        TEXT NOT NULL,
@@ -184,10 +191,22 @@ def backfill_edge_names(conn: sqlite3.Connection) -> None:
 
 # ── Read helpers (called from zep_app.py) ────────────────────────────────────
 
+def upsert_episode(conn: sqlite3.Connection, episode) -> None:
+    conn.execute(
+        """INSERT INTO episodes(uuid, name, source_desc)
+           VALUES (?,?,?)
+           ON CONFLICT(uuid) DO NOTHING""",
+        (str(episode.uuid), getattr(episode, "name", "") or "",
+         getattr(episode, "source_description", "") or ""),
+    )
+    conn.commit()
+
+
 def get_stats(conn: sqlite3.Connection) -> dict:
-    n = conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
-    e = conn.execute("SELECT COUNT(*) FROM edges").fetchone()[0]
-    return {"node_count": n, "edge_count": e, "episode_count": 0}
+    n  = conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
+    e  = conn.execute("SELECT COUNT(*) FROM edges").fetchone()[0]
+    ep = conn.execute("SELECT COUNT(*) FROM episodes").fetchone()[0]
+    return {"node_count": n, "edge_count": e, "episode_count": ep}
 
 
 def get_entities(conn: sqlite3.Connection, limit: int = 200,
@@ -408,5 +427,27 @@ def backfill_from_kuzu(mirror_conn: sqlite3.Connection,
             n_edg = len(batch)
     except Exception as e:
         print(f"[mirror] backfill edges error: {e}")
+
+    # ── episodes ──────────────────────────────────────────────────────────────
+    try:
+        ep_rows = _rows(conn.execute(
+            "MATCH (e:Episodic) WHERE e.group_id = $gid "
+            "RETURN e.uuid, e.name, e.source_description",
+            {"gid": group_id},
+        ))
+        ep_batch = [
+            (r["e.uuid"] or "", r.get("e.name") or "",
+             r.get("e.source_description") or "")
+            for r in ep_rows
+        ]
+        if ep_batch:
+            mirror_conn.executemany(
+                "INSERT INTO episodes(uuid, name, source_desc) VALUES (?,?,?) "
+                "ON CONFLICT(uuid) DO NOTHING",
+                ep_batch,
+            )
+            mirror_conn.commit()
+    except Exception as e:
+        print(f"[mirror] backfill episodes error: {e}")
 
     return n_ent, n_edg
