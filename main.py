@@ -103,6 +103,7 @@ if __name__ == "__main__":
     _PARENT = SCRIPT_DIR.parent.parent.parent  # financial_agent/
 
     def _resolve_db(filename: str, table: str) -> Path:
+        # DBs now live in db/ subdirectory; fall back to parent project's db/
         local = SCRIPT_DIR / "db" / filename
         if not _db_has_rows(local, table):
             parent_copy = _PARENT / "db" / filename
