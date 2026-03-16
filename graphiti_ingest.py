@@ -205,15 +205,15 @@ _10Q_PATTERNS = {
     "item1a":    r"(?i)item\s+1a[\s\.\n\u2014\-]+\s*risk factors\b",
 }
 
-# 8-K: current report — items use decimal notation e.g. 1.01, 2.02, 5.02
+# 8-K: current report — items use decimal notation e.g. 1.01, 2.02
+# Excluded: 5.02 (officer/director changes — HR noise),
+#           7.01 (Reg FD — thin text, actual content is in the attached exhibit)
 _8K_PATTERNS = {
-    "item1_01": r"(?i)item\s+1\.01\b",
-    "item2_01": r"(?i)item\s+2\.01\b",
-    "item2_02": r"(?i)item\s+2\.02\b",   # Results of Operations
-    "item5_02": r"(?i)item\s+5\.02\b",   # Director / officer changes
-    "item7_01": r"(?i)item\s+7\.01\b",   # Regulation FD disclosure
-    "item8_01": r"(?i)item\s+8\.01\b",   # Other Events
-    "item9_01": r"(?i)item\s+9\.01\b",   # Financial statements (end boundary)
+    "item1_01": r"(?i)item\s+1\.01\b",   # Entry into material agreement
+    "item2_01": r"(?i)item\s+2\.01\b",   # Completion of acquisition
+    "item2_02": r"(?i)item\s+2\.02\b",   # Results of operations (earnings)
+    "item8_01": r"(?i)item\s+8\.01\b",   # Other material events
+    "item9_01": r"(?i)item\s+9\.01\b",   # Financial statements / exhibits (end boundary)
 }
 
 _MAX_SECTION = 12_000  # chars per extracted section
@@ -337,8 +337,9 @@ def _extract_10q_sections(full: str) -> list[str]:
 def _extract_8k_sections(full: str) -> list[str]:
     """Extract substantive items from an 8-K current report.
 
-    8-K items use decimal notation: 1.01, 2.01, 2.02, 5.02, 7.01, 8.01.
+    8-K items use decimal notation: 1.01, 2.01, 2.02, 8.01.
     We grab all found items except 9.01 (Exhibits) as separate sections.
+    Excluded: 5.02 (officer changes), 7.01 (Reg FD — content is in exhibit, not item text).
     """
     offs = _sec_offsets(full, _8K_PATTERNS)
 
@@ -347,8 +348,6 @@ def _extract_8k_sections(full: str) -> list[str]:
         "item1_01": "ITEM 1.01: MATERIAL AGREEMENT",
         "item2_01": "ITEM 2.01: COMPLETION OF ACQUISITION",
         "item2_02": "ITEM 2.02: RESULTS OF OPERATIONS",
-        "item5_02": "ITEM 5.02: DIRECTOR/OFFICER CHANGES",
-        "item7_01": "ITEM 7.01: REGULATION FD DISCLOSURE",
         "item8_01": "ITEM 8.01: OTHER EVENTS",
     }
 
