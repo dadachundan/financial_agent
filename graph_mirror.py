@@ -515,17 +515,23 @@ def build_communities(conn: sqlite3.Connection):
 
     yield f"Phase 3: {len(buckets)} communities identified"
 
-    # Phase 4 — write to DB + LLM summaries
+    # Phase 4 — write to DB + LLM summaries (skip singletons)
+    MIN_MEMBERS = 2  # isolated entities with no edges are excluded entirely
+    real_buckets = sorted(
+        [(label, uuids) for label, uuids in buckets.items() if len(uuids) >= MIN_MEMBERS],
+        key=lambda kv: -len(kv[1]),
+    )
+    skipped = len(buckets) - len(real_buckets)
+    yield f"Phase 4: {len(real_buckets)} multi-member communities ({skipped} singletons skipped)"
+
     conn.execute("DELETE FROM community_members")
     conn.execute("DELETE FROM communities")
     conn.commit()
 
-    total = len(buckets)
+    total = len(real_buckets)
     all_member_rows: list[tuple[str, int]] = []  # (entity_uuid, community_id)
 
-    for i, (label, member_uuids) in enumerate(
-        sorted(buckets.items(), key=lambda kv: -len(kv[1]))
-    ):
+    for i, (label, member_uuids) in enumerate(real_buckets):
         yield f"Summarising community {i + 1}/{total} ({len(member_uuids)} members)…"
 
         # Fetch entity names + summaries for this community
@@ -537,8 +543,8 @@ def build_communities(conn: sqlite3.Connection):
         member_rows = [(r[0], r[1] or "") for r in rows]
 
         if len(member_uuids) < 3:
-            # Skip LLM for tiny communities
-            name    = " / ".join(r[0] for r in member_rows[:4])
+            # 2-member community — skip LLM, just name A / B
+            name    = " / ".join(r[0] for r in member_rows[:2])
             summary = ""
         else:
             try:
@@ -561,7 +567,7 @@ def build_communities(conn: sqlite3.Connection):
         all_member_rows,
     )
     conn.commit()
-    yield f"Done — {total} communities built"
+    yield f"Done — {total} communities built ({skipped} singletons excluded)"
 
 
 def assign_entity_community(conn: sqlite3.Connection, entity_uuid: str) -> None:
