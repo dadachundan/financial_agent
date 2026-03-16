@@ -54,11 +54,24 @@ def _get_mirror():
         import sqlite3
         _mirror_conn = _mirror.get_conn()
         _mirror.ensure_schema(_mirror_conn)
-        # Auto-backfill from KuzuDB if mirror is empty (e.g. first run after upgrade)
-        n = _mirror_conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
-        if n == 0 and GRAPH_DIR.exists():
-            print("[mirror] empty — backfilling from KuzuDB …", flush=True)
-            ne, ned = _mirror.backfill_from_kuzu(_mirror_conn, GRAPH_DIR, GROUP_ID)
+        # Auto-backfill from KuzuDB if mirror is incomplete (e.g. first run after upgrade)
+        n_ent = _mirror_conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
+        n_ep  = _mirror_conn.execute("SELECT COUNT(*) FROM episodes").fetchone()[0]
+        if (n_ent == 0 or n_ep == 0) and GRAPH_DIR.exists():
+            print("[mirror] incomplete — backfilling from KuzuDB …", flush=True)
+            # Reuse graphiti's existing kuzu.Database object to avoid exclusive-lock conflict
+            existing_kuzu_conn = None
+            try:
+                import kuzu as _kuzu
+                g = _get_graphiti()
+                if g is not None and hasattr(g, "graph_driver") and \
+                        hasattr(g.graph_driver, "db"):
+                    existing_kuzu_conn = _kuzu.Connection(g.graph_driver.db)
+            except Exception:
+                pass
+            ne, ned = _mirror.backfill_from_kuzu(
+                _mirror_conn, GRAPH_DIR, GROUP_ID, kuzu_conn=existing_kuzu_conn
+            )
             print(f"[mirror] backfill done: {ne} entities, {ned} edges", flush=True)
     return _mirror_conn
 
@@ -273,7 +286,7 @@ def ingest_stream():
     """SSE stream: run graphiti_ingest.py for any un-indexed PDFs and SEC filings."""
     def _gen():
         yield "data: Starting graphiti_ingest.py ...\n\n"
-        ingestor = SCRIPT_DIR / "graphiti_ingest.py"
+        ingestor = SCRIPT_DIR / "ingest" / "graphiti_ingest.py"
         proc = subprocess.Popen(
             [sys.executable, "-u", str(ingestor),
              "--source", "all", "--form-type", "10-K", "10-Q"],
