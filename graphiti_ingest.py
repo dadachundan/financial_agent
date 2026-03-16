@@ -37,6 +37,11 @@ from pathlib import Path
 
 import pdfplumber
 
+try:
+    import fitz as _fitz_available  # pymupdf — optional but preferred
+except ImportError:
+    _fitz_available = None  # type: ignore[assignment]
+
 # Suppress noisy but harmless graphiti-core warnings:
 #   "LLM did not return resolutions for IDs: [0, 1, ...]"
 #     → MiniMax returned empty NodeResolutions; all entities treated as new. Fine.
@@ -71,21 +76,112 @@ def _get_project_root() -> Path:
 
 # ── Text extraction ────────────────────────────────────────────────────────────
 
-def extract_text(pdf_path: Path, max_chars: int = MAX_CHARS) -> str:
-    """Extract all text from a PDF with pdfplumber.
-
-    Returns empty string for image-only or DRM-obfuscated PDFs so the caller
-    can skip them gracefully.
-    """
-    pages = []
-    with pdfplumber.open(pdf_path) as pdf:
-        for page in pdf.pages:
-            text = page.extract_text()
-            if text:
-                pages.append(text.strip())
-    full = "\n\n".join(pages)
-    if len(full) < 200:
+def _extract_text_pdfplumber(pdf_path: Path, max_chars: int) -> str:
+    """Fallback PDF extraction using pdfplumber (no heading detection)."""
+    try:
+        pages = []
+        with pdfplumber.open(pdf_path) as pdf:
+            for page in pdf.pages:
+                text = page.extract_text()
+                if text:
+                    pages.append(text.strip())
+        full = "\n\n".join(pages)
+        return full[:max_chars] if len(full) >= 200 else ""
+    except Exception:
         return ""
+
+
+def extract_text(pdf_path: Path, max_chars: int = MAX_CHARS) -> str:
+    """Extract text from a PDF with heading detection via pymupdf (fitz).
+
+    Inspired by DeepRead's structured extraction approach:
+    - Detects headings from font size relative to body text
+    - Marks headings with # / ## markers for LLM context
+    - Skips table-of-contents pages (many lines ending with ". . . N")
+    - Falls back to pdfplumber when fitz is unavailable or extracts too little.
+    """
+    if _fitz_available is None:
+        return _extract_text_pdfplumber(pdf_path, max_chars)
+
+    import fitz
+    from collections import Counter
+
+    try:
+        doc = fitz.open(str(pdf_path))
+    except Exception:
+        return _extract_text_pdfplumber(pdf_path, max_chars)
+
+    if not doc.page_count:
+        doc.close()
+        return _extract_text_pdfplumber(pdf_path, max_chars)
+
+    BOLD_FLAG = 1 << 4  # pymupdf bold flag bit
+
+    # Pass 1: find body font size — mode of sizes for text spans longer than 10 chars
+    all_sizes: list[float] = []
+    for page in doc:
+        for b in page.get_text("dict")["blocks"]:
+            if b["type"] != 0:
+                continue
+            for line in b["lines"]:
+                for span in line["spans"]:
+                    if len(span["text"].strip()) > 10:
+                        all_sizes.append(round(span["size"], 1))
+
+    if not all_sizes:
+        doc.close()
+        return _extract_text_pdfplumber(pdf_path, max_chars)
+
+    body_size: float = Counter(all_sizes).most_common(1)[0][0]
+    h1_min = body_size * 1.4   # e.g. 12.6 when body=9.0
+    h2_min = body_size * 1.15  # e.g. 10.35 when body=9.0
+
+    # ToC line: "Section title . . . 42" or "Title       42"
+    toc_line_re = re.compile(r"[.\u2026]{2,}\s*\d+\s*$|\s{4,}\d{1,3}\s*$")
+
+    lines_out: list[str] = []
+    for page in doc:
+        page_lines: list[tuple[str, float, bool]] = []
+        for b in page.get_text("dict")["blocks"]:
+            if b["type"] != 0:
+                continue
+            for line in b["lines"]:
+                if not line["spans"]:
+                    continue
+                text = "".join(s["text"] for s in line["spans"]).strip()
+                if not text:
+                    continue
+                max_size = max(s["size"] for s in line["spans"])
+                is_bold = any(s["flags"] & BOLD_FLAG for s in line["spans"])
+                page_lines.append((text, max_size, is_bold))
+
+        if not page_lines:
+            continue
+
+        # Skip ToC pages: >35 % of lines look like "entry . . . N"
+        toc_count = sum(1 for t, _, _ in page_lines if toc_line_re.search(t))
+        if len(page_lines) > 5 and toc_count / len(page_lines) > 0.35:
+            continue
+
+        for text, size, bold in page_lines:
+            # Skip standalone page numbers
+            if len(text) <= 4 and text.strip().isdigit():
+                continue
+            if size >= h1_min:
+                lines_out.append(f"\n# {text}")
+            elif size >= h2_min or (bold and size >= body_size and len(text) < 150):
+                lines_out.append(f"\n## {text}")
+            else:
+                lines_out.append(text)
+
+    doc.close()
+
+    full = "\n".join(lines_out)
+    full = re.sub(r"\n{3,}", "\n\n", full).strip()
+
+    if len(full) < 200:
+        return _extract_text_pdfplumber(pdf_path, max_chars)
+
     return full[:max_chars]
 
 
@@ -204,11 +300,13 @@ def get_pending_pdfs(conn: sqlite3.Connection, reindex: bool) -> list:
     if reindex:
         return conn.execute(
             "SELECT file_id, name, local_path, create_time "
-            "FROM pdf_files WHERE local_path IS NOT NULL"
+            "FROM pdf_files WHERE local_path IS NOT NULL "
+            "ORDER BY create_time DESC"
         ).fetchall()
     return conn.execute(
         "SELECT file_id, name, local_path, create_time "
-        "FROM pdf_files WHERE local_path IS NOT NULL AND graphiti_indexed_at IS NULL"
+        "FROM pdf_files WHERE local_path IS NOT NULL AND graphiti_indexed_at IS NULL "
+        "ORDER BY create_time DESC"
     ).fetchall()
 
 
