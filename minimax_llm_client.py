@@ -69,7 +69,7 @@ def _find_project_root() -> Path:
 
 
 _PROJECT_ROOT    = _find_project_root()
-GRAPH_DIR        = _PROJECT_ROOT / "graphiti_db"
+GRAPH_DIR        = _PROJECT_ROOT / "db" / "graphiti_db"
 _LOCAL_MODEL_DIR = _PROJECT_ROOT / "models" / "bge-m3"
 
 # Set to True to print every LLM request and response to stdout (debug aid).
