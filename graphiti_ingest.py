@@ -414,26 +414,60 @@ async def _build_graphiti():
     )
 
 
+async def _heartbeat(label: str, interval: int = 30) -> None:
+    """Print a 'still running' dot every `interval` seconds until cancelled."""
+    try:
+        elapsed = 0
+        while True:
+            await asyncio.sleep(interval)
+            elapsed += interval
+            print(f"  … still running ({elapsed}s) [{label}]", flush=True)
+    except asyncio.CancelledError:
+        pass
+
+
+def _fmt_eta(seconds: float) -> str:
+    m, s = divmod(int(seconds), 60)
+    h, m = divmod(m, 60)
+    if h:
+        return f"{h}h{m:02d}m"
+    if m:
+        return f"{m}m{s:02d}s"
+    return f"{s}s"
+
+
 async def _ingest_items(items: list[dict]) -> tuple[int, int]:
     """
     Each item dict has:
       name, episode_body, source_description, reference_time,
       db_conn, mark_fn, row_id
     """
+    import traceback
+
     graphiti = await _build_graphiti()
     ok = skipped = 0
+    elapsed_times: list[float] = []
+    session_start = asyncio.get_event_loop().time()
 
     try:
         for i, item in enumerate(items, 1):
-            print(f"[{i}/{len(items)}] {item['label'][:70]}")
-            print(f"  file: {item.get('file_path', '(unknown)')}")
+            # ── ETA line ─────────────────────────────────────────────────────
+            avg = sum(elapsed_times) / len(elapsed_times) if elapsed_times else None
+            eta_str = (f"  ETA ~{_fmt_eta(avg * (len(items) - i + 1))}" if avg else "")
+            print(f"\n[{i}/{len(items)}]{eta_str}  {item['label'][:65]}", flush=True)
+            print(f"  file: {item.get('file_path', '(unknown)')}", flush=True)
+
             text = item["episode_body"]
             if not text:
-                print("  ⚠  No text extracted.")
+                print("  ⚠  No text extracted — skipping.", flush=True)
                 skipped += 1
                 continue
 
-            print(f"  {len(text):,} chars extracted. Sending to LLM pipeline…", flush=True)
+            print(f"  {len(text):,} chars → LLM pipeline …", flush=True)
+
+            heartbeat = asyncio.ensure_future(
+                _heartbeat(item["name"], interval=30)
+            )
             t0 = asyncio.get_event_loop().time()
             try:
                 result = await graphiti.add_episode(
@@ -444,17 +478,28 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
                     group_id=GROUP_ID,
                 )
                 elapsed = asyncio.get_event_loop().time() - t0
+                elapsed_times.append(elapsed)
                 n_nodes = len(result.nodes)
                 n_edges = len(result.edges)
                 item["mark_fn"](item["db_conn"], item["row_id"])
-                print(f"  ✓ {n_nodes} entities, {n_edges} relationships extracted. ({elapsed:.0f}s)")
+                total_elapsed = asyncio.get_event_loop().time() - session_start
+                print(
+                    f"  ✓  {n_nodes} entities, {n_edges} edges  ({elapsed:.0f}s this doc | "
+                    f"session {_fmt_eta(total_elapsed)} | ok={ok+1} skip={skipped})",
+                    flush=True,
+                )
                 ok += 1
             except Exception as e:
                 elapsed = asyncio.get_event_loop().time() - t0
-                print(f"  ✗ Graphiti error ({elapsed:.0f}s): {e}")
+                print(f"  ✗  Error after {elapsed:.0f}s: {e}", flush=True)
+                print(traceback.format_exc(), flush=True)
                 skipped += 1
+            finally:
+                heartbeat.cancel()
+                await asyncio.sleep(0)  # let cancel propagate
+
     except KeyboardInterrupt:
-        print(f"\n⚠  Interrupted. Closing database … ({ok} indexed so far)")
+        print(f"\n⚠  Interrupted. Closing database … (ok={ok} skip={skipped})", flush=True)
     finally:
         await graphiti.close()
 
@@ -462,26 +507,35 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
 
 
 def _build_pdf_items(rows, db_path: Path) -> tuple[list[dict], sqlite3.Connection]:
+    import time
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     ensure_zsxq_column(conn)
 
     items = []
-    for row in rows:
+    for idx, row in enumerate(rows, 1):
         file_id    = row["file_id"]
         name       = row["name"]
         local_path = Path(row["local_path"])
         create_time = row["create_time"] or ""
 
         if not local_path.exists():
-            print(f"  ⚠  File not found: {local_path}")
+            print(f"  [{idx}] ⚠  File not found: {local_path}", flush=True)
             continue
 
+        t0 = time.time()
         try:
             text = extract_text(local_path)
         except Exception as e:
-            print(f"  ⚠  Could not extract text from {name}: {e}")
+            print(f"  [{idx}] ⚠  Extract failed for {name}: {e}", flush=True)
             continue
+        extract_ms = int((time.time() - t0) * 1000)
+
+        if not text:
+            print(f"  [{idx}] ⚠  No text (image-only PDF?): {name}", flush=True)
+            continue
+
+        print(f"  [{idx}] {len(text):>7,}c  {extract_ms}ms  {name[:55]}", flush=True)
 
         try:
             ref_time = datetime.fromisoformat(create_time.replace("Z", "+00:00"))
@@ -503,12 +557,13 @@ def _build_pdf_items(rows, db_path: Path) -> tuple[list[dict], sqlite3.Connectio
 
 
 def _build_report_items(rows, reports_db_path: Path) -> tuple[list[dict], sqlite3.Connection]:
+    import time
     conn = sqlite3.connect(reports_db_path)
     conn.row_factory = sqlite3.Row
     ensure_reports_column(conn)
 
     items = []
-    for row in rows:
+    for idx, row in enumerate(rows, 1):
         report_id   = row["id"]
         ticker      = row["ticker"]
         company     = row["company_name"] or ticker
@@ -518,14 +573,22 @@ def _build_report_items(rows, reports_db_path: Path) -> tuple[list[dict], sqlite
         filed_date  = row["filed_date"] or ""
 
         if not local_path.exists():
-            print(f"  ⚠  File not found: {local_path}")
+            print(f"  [{idx}] ⚠  File not found: {local_path}", flush=True)
             continue
 
+        t0 = time.time()
         try:
             text = extract_html_text(local_path)
         except Exception as e:
-            print(f"  ⚠  Could not extract text from {ticker} {period}: {e}")
+            print(f"  [{idx}] ⚠  Extract failed for {ticker} {period}: {e}", flush=True)
             continue
+        extract_ms = int((time.time() - t0) * 1000)
+
+        if not text:
+            print(f"  [{idx}] ⚠  No text extracted: {ticker} {form_type} {period}", flush=True)
+            continue
+
+        print(f"  [{idx}] {len(text):>7,}c  {extract_ms}ms  {ticker} {form_type} {period}", flush=True)
 
         try:
             ref_time = datetime.fromisoformat(filed_date.replace("Z", "+00:00"))
