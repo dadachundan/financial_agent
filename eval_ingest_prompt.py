@@ -30,7 +30,7 @@ from datetime import datetime
 from pathlib import Path
 
 SCRIPT_DIR      = Path(__file__).parent
-MAX_SECTION     = 18_000   # chars per section (~4-5k tokens each)
+MAX_SECTION     = 12_000   # chars per section (Item 1 / Item 7)
 MAX_RETRIES     = 2        # max prompt-refinement retries per filing
 
 
@@ -61,6 +61,7 @@ def _all_section_offsets(text: str) -> dict[str, list[int]]:
         "item1":  r"(?i)item\s+1[\s\.\n\u2014\-]+\s*business\b",
         "item1a": r"(?i)item\s+1a[\s\.\n\u2014\-]+\s*risk factors\b",
         "item2":  r"(?i)item\s+2[\s\.\n\u2014\-]+\s*properties\b",
+        "item3":  r"(?i)item\s+3[\s\.\n\u2014\-]+\s*legal proceedings\b",
         "item7":  r"(?i)item\s+7[\s\.\n\u2014\-]+\s*management",
         "item7a": r"(?i)item\s+7a[\s\.\n\u2014\-]+\s*quantitative",
         "item8":  r"(?i)item\s+8[\s\.\n\u2014\-]+\s*financial statements",
@@ -71,20 +72,54 @@ def _all_section_offsets(text: str) -> dict[str, list[int]]:
     return result
 
 
-def _last(offsets: dict[str, list[int]], key: str) -> int | None:
+def _last(offsets: dict[str, list[int]], key: str,
+          full_text: str = "") -> int | None:
+    """Return the last offset, optionally filtered to line-start occurrences only.
+
+    Cross-references embedded in sentences (e.g. '"Part I, Item 1. Business" of
+    this Annual Report') are NOT at line start, so this filter excludes them.
+    """
     lst = offsets.get(key, [])
-    return lst[-1] if lst else None
+    if not lst:
+        return None
+    if full_text:
+        line_starts = [o for o in lst
+                       if re.search(r"\n\s*$", full_text[max(0, o - 60):o])]
+        if line_starts:
+            return line_starts[-1]
+    return lst[-1]
 
 
-def _first_after(offsets: dict[str, list[int]], key: str, min_offset: int) -> int | None:
+def _first_after(offsets: dict[str, list[int]], key: str, min_offset: int,
+                 full_text: str = "") -> int | None:
+    """Return the first offset > min_offset + 500.
+
+    If full_text is supplied, also require that the match is at the start of a
+    paragraph (preceded only by whitespace/newlines), so we don't pick up
+    in-sentence cross-references like "See Item 1A for details."
+    """
     for o in sorted(offsets.get(key, [])):
-        if o > min_offset + 500:
-            return o
+        if o <= min_offset + 500:
+            continue
+        if full_text:
+            # Check that the character before is a newline / start-of-line
+            preceding = full_text[max(0, o - 60):o]
+            # Accept only if preceded by a newline (section header on own line)
+            if not re.search(r"\n\s*$", preceding):
+                continue
+        return o
     return None
 
 
 def extract_10k_core(html_path: Path) -> tuple[str, str]:
-    """Extract Item 1 (Business) + Item 7 (MD&A) from a 10-K HTML filing.
+    """Extract Item 1 (Business) + Item 1A (Risk Factors) from a 10-K/10-Q HTML filing.
+
+    Sections extracted in priority order:
+      1. Item 1 – Business         (primary, most entity-rich)
+      2. Item 1A – Risk Factors    (competitors, dependencies, regulatory bodies)
+
+    For Item 1A we use _first_after(item1) rather than _last() to avoid
+    picking up back-references to Item 1A that appear inside Item 7 text.
 
     Returns (text, method) where method is 'sections' or 'full_fallback'.
     """
@@ -98,16 +133,22 @@ def extract_10k_core(html_path: Path) -> tuple[str, str]:
                      "ix:header", "ix:hidden", "ix:references", "ix:resources"]):
         tag.decompose()
 
-    # Flatten tables → pipe-delimited rows (preserves financial figures)
+    # Skip large inline-XBRL data tables (ix:nonfraction / ix:nonnumeric wrap
+    # thousands of tagged financial numbers that turn into pure numeric noise).
+    for tag in soup.find_all(["ix:nonfraction", "ix:nonnumeric"]):
+        tag.unwrap()   # keep the text content, just remove the XBRL wrapper
+
+    # Collapse layout tables (single-cell rows) but drop header/footer tables
+    # that are essentially page-number blocks.
     for table in soup.find_all("table"):
-        rows = []
+        rows_text = []
         for tr in table.find_all("tr"):
             cells = [td.get_text(" ", strip=True) for td in tr.find_all(["td", "th"])]
             cells = [c for c in cells if c]
             if cells:
-                rows.append(" | ".join(cells))
-        if rows:
-            table.replace_with("\n" + "\n".join(rows) + "\n")
+                rows_text.append(" | ".join(cells))
+        if rows_text:
+            table.replace_with("\n" + "\n".join(rows_text) + "\n")
 
     full = soup.get_text(separator="\n")
     full = re.sub(r"[ \t]{2,}", " ", full)
@@ -119,29 +160,34 @@ def extract_10k_core(html_path: Path) -> tuple[str, str]:
     offs     = _all_section_offsets(full)
     sections: list[str] = []
 
-    # Item 1: Business
-    s1 = _last(offs, "item1")
+    # ── Item 1: Business ──────────────────────────────────────────────────────
+    # Use the last LINE-START occurrence — filters out in-text cross-references.
+    s1 = _last(offs, "item1", full)
     if s1 is not None:
-        e1 = (_first_after(offs, "item1a", s1)
-              or _first_after(offs, "item2", s1)
+        e1 = (_first_after(offs, "item1a", s1, full)
+              or _first_after(offs, "item2", s1, full)
               or s1 + MAX_SECTION * 2)
         chunk = full[s1:e1].strip()
         if len(chunk) > 300:
             sections.append(f"=== ITEM 1: BUSINESS ===\n{chunk[:MAX_SECTION]}")
 
-    # Item 7: MD&A
-    s7 = _last(offs, "item7")
-    if s7 is not None:
-        e7 = (_first_after(offs, "item7a", s7)
-              or _first_after(offs, "item8", s7)
-              or s7 + MAX_SECTION * 2)
-        chunk = full[s7:e7].strip()
+    # ── Item 1A: Risk Factors ─────────────────────────────────────────────────
+    # Use FIRST occurrence AFTER Item 1 body (at start-of-line only) to avoid
+    # in-text cross-references like "See Item 1A. Risk Factors for details."
+    s1a = _first_after(offs, "item1a", s1 or 0, full)
+    if s1a is not None:
+        e1a = (_first_after(offs, "item2", s1a, full)
+               or _first_after(offs, "item3", s1a, full)
+               or s1a + MAX_SECTION * 2)
+        chunk = full[s1a:e1a].strip()
+        # Risk factors sections can be very long — truncate to same limit
         if len(chunk) > 300:
-            sections.append(f"=== ITEM 7: MD&A ===\n{chunk[:MAX_SECTION]}")
+            sections.append(f"=== ITEM 1A: RISK FACTORS ===\n{chunk[:MAX_SECTION]}")
 
     if sections:
         return "\n\n".join(sections), "sections"
 
+    # Fallback: take the first chunk of stripped text (better than full dump)
     return full[:MAX_SECTION * 2], "full_fallback"
 
 
