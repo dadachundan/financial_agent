@@ -132,7 +132,7 @@ def _download_batch(
 def main() -> None:
     cr.init_db()
 
-    log_path = Path(__file__).parent / "bulk_download_ashare.log"
+    log_path = Path(__file__).parent.parent / "log" / "bulk_download_ashare.log"
     start_ts = time.strftime("%Y-%m-%d %H:%M:%S")
 
     header = (
