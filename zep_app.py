@@ -316,6 +316,15 @@ def deprecate_edge(uuid):
     return jsonify({"ok": False, "error": "edge not found"}), 404
 
 
+@zep_bp.route("/entities/<uuid>/isolate", methods=["POST"])
+def isolate_entity(uuid):
+    """Mark an entity as isolated (hidden from UI) and deprecate all its edges."""
+    found = _mirror.isolate_entity(_get_mirror(), uuid)
+    if found:
+        return jsonify({"ok": True, "uuid": uuid})
+    return jsonify({"ok": False, "error": "entity not found"}), 404
+
+
 @zep_bp.route("/stats")
 def stats():
     s = _mirror.get_stats(_get_mirror())
@@ -416,23 +425,6 @@ def upload_pdf():
         yield "data: done: true\n\n"
 
     return Response(_gen(), mimetype="text/event-stream")
-
-
-@zep_bp.route("/episodes")
-def episodes():
-    limit       = min(int(request.args.get("limit", 100)), 500)
-    cursor      = request.args.get("cursor") or None
-    type_filter = request.args.get("type") or None   # 'pdf' | 'sec' | None
-    items, next_cursor = _mirror.get_episodes(_get_mirror(), limit, cursor, type_filter)
-    return jsonify({"episodes": items, "next_cursor": next_cursor})
-
-
-@zep_bp.route("/episodes/<ep_uuid>")
-def episode_detail(ep_uuid: str):
-    detail = _mirror.get_episode_detail(_get_mirror(), ep_uuid)
-    if detail is None:
-        return jsonify({"error": "not found"}), 404
-    return jsonify(detail)
 
 
 @zep_bp.route("/refresh-mirror", methods=["POST"])
