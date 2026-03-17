@@ -406,6 +406,28 @@ async function deprecateEdge(uuid, btn) {
 }
 
 // ── Entity click → UUID-based edge lookup + name search ─────────────────────
+// ── Edge click from graph ────────────────────────────────────────────────────
+function clickGraphEdge(edgeUuid) {
+  const edge = _edgeDataMap[edgeUuid];
+  if (!edge) return;
+
+  // Show the edge fact in the search box (truncated for readability)
+  const label = edge.fact || edge.name || edgeUuid;
+  document.getElementById('searchInput').value = label.slice(0, 80);
+
+  // Switch scope button to Relationships
+  currentScope = 'edges';
+  document.querySelectorAll('.scope-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.scope === 'edges')
+  );
+
+  // Render just this one edge in the results panel
+  const result = { edges: [edge], nodes: [], episodes: [] };
+  _cachedResults = result;
+  _cachedQuery   = label;
+  renderResults(result, label, false);
+}
+
 // Fetches direct edges by UUID (exact match with graph) then merges with
 // FTS name search for entities/docs — panel always matches the graph.
 async function clickEntity(uuid, name) {
@@ -818,6 +840,7 @@ async function uploadPdf(input) {
 let _network = null;
 let _visNodes = null;
 let _visEdges = null;
+let _edgeDataMap = {};   // uuid → full edge object, for instant edge-click lookup
 let _graphBuilt = false;
 
 async function initGraph() {
@@ -870,6 +893,10 @@ async function initGraph() {
       return { id: n.uuid, label: n.name, title: tip };
     }));
 
+    // Build DataSet + lookup map at the same time
+    _edgeDataMap = {};
+    allEdges.forEach(e => { _edgeDataMap[e.uuid] = e; });
+
     _visEdges = new vis.DataSet(allEdges.map(e => ({
         id:    e.uuid,
         from:  e.source_node_uuid,
@@ -908,9 +935,9 @@ async function initGraph() {
       if (params.nodes.length > 0) {
         const nodeId = params.nodes[0];
         const n = _visNodes.get(nodeId);
-        if (n) {
-          clickEntity(nodeId, n.label);  // UUID-based edge lookup + FTS for nodes/docs
-        }
+        if (n) clickEntity(nodeId, n.label);  // UUID-based edge lookup + FTS
+      } else if (params.edges.length > 0) {
+        clickGraphEdge(params.edges[0]);
       }
     });
 
