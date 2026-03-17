@@ -27,7 +27,7 @@ import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
-from flask import Blueprint, render_template, render_template_string, jsonify, request, Response
+from flask import Blueprint, current_app, render_template, render_template_string, jsonify, request, Response
 import nav_widget2 as _nw2
 
 SCRIPT_DIR = Path(__file__).parent
@@ -228,7 +228,10 @@ def index():
         "zep.html",
         has_key=_graph_ready(),
         nav_html=_nw2.NAV_HTML,
-        url_patch_js=render_template_string(_nw2.URL_PATCH_JS, _base="/zep"),
+        url_patch_js=render_template_string(
+            _nw2.URL_PATCH_JS,
+            _base=current_app.config.get("ZEP_BASE", "/zep"),
+        ),
     )
 
 
@@ -300,6 +303,17 @@ def edges():
         e["target_node_uuid"] = e.pop("tgt_uuid", "")
         e["target_node_name"] = e.pop("tgt_name", "")
     return jsonify({"edges": edge_list, "next_cursor": next_cursor})
+
+
+@zep_bp.route("/edges/<uuid>/deprecate", methods=["POST"])
+def deprecate_edge(uuid):
+    """Mark a relationship as deprecated/nonsense (soft-delete)."""
+    body   = request.get_json(silent=True) or {}
+    reason = (body.get("reason") or "RELATION_NONSENSE").strip()[:200]
+    found  = _mirror.deprecate_edge(_get_mirror(), uuid, reason)
+    if found:
+        return jsonify({"ok": True, "uuid": uuid, "reason": reason})
+    return jsonify({"ok": False, "error": "edge not found"}), 404
 
 
 @zep_bp.route("/stats")
@@ -526,6 +540,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     app = Flask(__name__, template_folder=str(SCRIPT_DIR / "templates"))
+    app.config["ZEP_BASE"] = ""   # standalone: no URL prefix
     app.register_blueprint(zep_bp)
 
     @app.context_processor

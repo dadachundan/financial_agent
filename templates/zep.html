@@ -6,101 +6,95 @@
   <title>Knowledge Graph</title>
   <link href="/static/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { background:#f0f2f5; padding:0 0 40px; }
+    body { background:#f0f2f5; padding:0; margin:0; height:100vh; display:flex; flex-direction:column; overflow:hidden; }
 
     /* ── search bar ── */
-    #searchWrap { background:#fff; border-bottom:1px solid #dee2e6; padding:12px 20px; }
+    #searchWrap { background:#fff; border-bottom:1px solid #dee2e6; padding:10px 20px; flex-shrink:0; }
     #searchInput { font-size:1rem; }
     #searchBtn { min-width:90px; }
     .scope-btn { font-size:.8rem; }
 
     /* ── stats bar ── */
-    #statsBar { font-size:.82rem; padding:6px 20px; background:#e9f0fb;
-                border-bottom:1px solid #cce0ff; display:flex; gap:24px; align-items:center; }
+    #statsBar { font-size:.82rem; padding:5px 20px; background:#e9f0fb;
+                border-bottom:1px solid #cce0ff; display:flex; gap:16px; align-items:center; flex-shrink:0;
+                flex-wrap:wrap; }
     .stat-pill { background:#fff; border:1px solid #b3cfff; border-radius:20px;
                  padding:2px 10px; font-weight:600; color:#0d6efd; }
 
-    /* ── main columns ── */
-    #mainWrap { padding:20px; }
-    #resultsCol { flex:1 1 auto; }
-    #sideCol  { width:320px; flex:0 0 320px; }
+    /* ── two-column layout ── */
+    #outerWrap { display:flex; flex:1 1 0; overflow:hidden; min-height:0; }
+
+    /* Left — graph (75%) */
+    #graphCol { flex:0 0 75%; max-width:75%; display:flex; flex-direction:column;
+                border-right:1px solid #dee2e6; background:#fafbff; min-height:0; }
+    #graphPanel { flex:1 1 0; display:flex; flex-direction:column; min-height:0; }
+    #graphNet   { flex:1 1 0; position:relative; min-height:0; }
+    #graphInfo  { font-size:.85rem; color:#6c757d; padding:4px 8px;
+                  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+                  background:#fff; border:1px solid #dee2e6; border-radius:6px;
+                  white-space:nowrap; display:none; z-index:1; }
+    #graphFooter { font-size:.78rem; color:#6c757d; padding:4px 12px; flex-shrink:0;
+                   background:#f8f9fa; border-top:1px solid #eee; }
+
+    /* Right — results + panels (25%) */
+    #rightPanel { flex:1 1 0; overflow-y:auto; padding:12px; min-width:0; }
 
     /* ── result cards ── */
     .result-card { background:#fff; border:1px solid #dee2e6; border-radius:8px;
-                   margin-bottom:10px; padding:12px 16px; }
-    .result-card .fact { font-size:.95rem; font-weight:500; color:#212529; }
-    .result-card .meta { font-size:.78rem; color:#6c757d; margin-top:4px; }
+                   margin-bottom:8px; padding:10px 12px; position:relative; }
+    .result-card .fact { font-size:.88rem; font-weight:500; color:#212529; padding-right:20px; }
+    .result-card .meta { font-size:.75rem; color:#6c757d; margin-top:3px; }
     .entity-badge { display:inline-block; background:#e8f0fe; color:#1a73e8;
-                    border-radius:4px; padding:1px 7px; font-size:.8rem;
-                    font-weight:600; margin-right:4px; }
+                    border-radius:4px; padding:1px 6px; font-size:.75rem;
+                    font-weight:600; margin-right:3px; cursor:pointer; }
+    .entity-badge:hover { background:#c5d9f9; }
     .label-badge  { display:inline-block; background:#f3e8fd; color:#7c3aed;
-                    border-radius:4px; padding:1px 7px; font-size:.75rem;
+                    border-radius:4px; padding:1px 6px; font-size:.72rem;
                     margin-right:3px; }
-    .score-badge  { float:right; font-size:.75rem; background:#f8f9fa;
-                    border:1px solid #dee2e6; border-radius:10px; padding:1px 8px; }
-    .edge-sources { margin-top:4px; }
+    .score-badge  { float:right; font-size:.72rem; background:#f8f9fa;
+                    border:1px solid #dee2e6; border-radius:10px; padding:1px 6px; }
+    .edge-sources { margin-top:3px; }
     .source-badge { display:inline-block; background:#fff3cd; color:#664d03;
-                    border-radius:4px; padding:1px 7px; font-size:.75rem;
+                    border-radius:4px; padding:1px 6px; font-size:.72rem;
                     margin-right:3px; margin-top:2px; text-decoration:none; }
     a.source-badge:hover { background:#ffe69c; text-decoration:none; }
+
+    /* ── deprecate button ── */
+    .deprecate-btn { position:absolute; top:6px; right:6px; background:none; border:none;
+                     padding:2px 5px; font-size:.8rem; color:#adb5bd; cursor:pointer;
+                     border-radius:4px; line-height:1; }
+    .deprecate-btn:hover { background:#fee2e2; color:#dc3545; }
+    .result-card.deprecated { opacity:.45; border-color:#f0c0c0; background:#fff8f8; }
+    .deprecated-badge { display:inline-block; background:#f8d7da; color:#842029;
+                        border-radius:4px; padding:1px 6px; font-size:.72rem; margin-right:4px; }
 
     /* ── spinner ── */
     #spinner { display:none; }
 
     /* ── empty/error ── */
-    #resultMsg { font-size:.9rem; color:#6c757d; padding:20px 0; }
+    #resultMsg { font-size:.88rem; color:#6c757d; padding:20px 0; text-align:center; }
 
     /* ── entity browser ── */
-    #entityList { max-height:400px; overflow-y:auto; }
-    .entity-row { padding:6px 10px; border-bottom:1px solid #f0f0f0; font-size:.82rem; cursor:pointer; }
+    #entityList { max-height:320px; overflow-y:auto; }
+    .entity-row { padding:5px 10px; border-bottom:1px solid #f0f0f0; font-size:.8rem; cursor:pointer; }
     .entity-row:hover { background:#f8f9fa; }
     .entity-row .ename { font-weight:600; color:#1a73e8; }
-    .entity-row .esumm { color:#6c757d; font-size:.75rem;
-                         white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:240px; }
-    .community-row { padding:6px 10px; border-bottom:1px solid #f0f0f0; font-size:.82rem; cursor:pointer; }
+    .entity-row .esumm { color:#6c757d; font-size:.73rem;
+                         white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .community-row { padding:5px 10px; border-bottom:1px solid #f0f0f0; font-size:.8rem; cursor:pointer; }
     .community-row:hover { background:#f8f9fa; }
     .community-row .cname { font-weight:600; color:#0f5132; }
-    .community-row .ccount { font-size:.75rem; color:#0d6efd; font-weight:600; }
-    .community-row .csumm { color:#6c757d; font-size:.75rem;
-                            white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:240px; }
-
-    /* ── graph panel ── */
-    #graphPanel { display:none; position:fixed; inset:0; z-index:1040;
-                  background:#fff; flex-direction:column; }
-    #graphPanel.active { display:flex; }
-    #graphToolbar { display:flex; align-items:center; gap:8px; padding:6px 14px;
-                    background:#f8f9fa; border-bottom:1px solid #dee2e6; flex-shrink:0; }
-    #graphNet   { flex:1 1 0; min-height:0; background:#fafbff; position:relative; }
-    #graphInfo  { font-size:.85rem; color:#6c757d; padding:4px 8px;
-                  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-                  background:#fff; border:1px solid #dee2e6; border-radius:6px;
-                  white-space:nowrap; display:none; }
-    #graphFooter { font-size:.75rem; color:#6c757d; padding:3px 14px;
-                   background:#f8f9fa; border-top:1px solid #dee2e6; flex-shrink:0; }
+    .community-row .ccount { font-size:.73rem; color:#0d6efd; font-weight:600; }
+    .community-row .csumm { color:#6c757d; font-size:.73rem;
+                            white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 
     /* ── ingest log ── */
-    #ingestLog { font-size:.78rem; max-height:260px; overflow-y:auto;
+    #ingestLog { font-size:.75rem; max-height:220px; overflow-y:auto;
                  background:#1e1e2e; color:#c9d1d9; padding:10px;
                  border-radius:6px; font-family:monospace; display:none; }
     #ingestLog .ok   { color:#56d364; }
     #ingestLog .warn { color:#e3b341; }
     #ingestLog .err  { color:#f85149; }
-
-    /* ── document browser ── */
-    .doc-row { padding:7px 10px; border-bottom:1px solid #f0f0f0; font-size:.82rem; cursor:pointer; }
-    .doc-row:hover { background:#f8f9fa; }
-    .doc-row .dtitle { font-weight:600; color:#0d6efd;
-                       white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:260px; }
-    .doc-row .dmeta  { color:#6c757d; font-size:.73rem; }
-    .doc-type-pdf  { background:#d1ecf1; color:#0c5460; border-radius:3px;
-                     padding:1px 5px; font-size:.7rem; font-weight:600; margin-right:4px; }
-    .doc-type-sec  { background:#d4edda; color:#155724; border-radius:3px;
-                     padding:1px 5px; font-size:.7rem; font-weight:600; margin-right:4px; }
-    .doc-edge-cnt  { background:#e9ecef; color:#495057; border-radius:3px;
-                     padding:1px 5px; font-size:.7rem; margin-right:4px; }
-
-    /* ── tabs ── */
-    .nav-tabs .nav-link { font-size:.85rem; padding:6px 12px; }
 
     /* no-key warning */
     #noKeyAlert { margin:20px; }
@@ -129,7 +123,7 @@
            autofocus>
     <button id="searchBtn" class="btn btn-primary" onclick="doSearch()">Search</button>
   </div>
-  <div class="mt-2 d-flex gap-2 align-items-center">
+  <div class="mt-2 d-flex gap-2 align-items-center flex-wrap">
     <span class="text-muted" style="font-size:.8rem">Scope:</span>
     <div class="btn-group btn-group-sm" id="scopeGroup">
       <button class="btn btn-outline-secondary scope-btn active" data-scope="edges">Relationships</button>
@@ -142,42 +136,47 @@
 
 <!-- ── Stats bar ── -->
 <div id="statsBar">
-  <span>📊 Graph stats:</span>
+  <span>📊</span>
   <span><span class="stat-pill" id="statNodes">–</span> entities</span>
-  <span><span class="stat-pill" id="statEdges">–</span> relationships</span>
-  <span><span class="stat-pill" id="statEpisodes">–</span> documents indexed</span>
+  <span><span class="stat-pill" id="statEdges">–</span> relations</span>
+  <span><span class="stat-pill" id="statEpisodes">–</span> docs</span>
   <span><span class="stat-pill" id="statCommunities">–</span> communities</span>
-  <span class="ms-auto">
-    <button class="btn btn-sm btn-outline-primary" onclick="loadEntities()">Browse All Entities</button>
-    <button class="btn btn-sm btn-outline-info ms-1" onclick="loadCommunities(true)">Browse Communities</button>
-    <button class="btn btn-sm btn-outline-secondary ms-1" onclick="loadDocuments(true, null)">📄 Browse Documents</button>
-    <button class="btn btn-sm btn-outline-secondary ms-1" id="graphToggleBtn" onclick="toggleGraph()">🕸 Graph View</button>
-    <button class="btn btn-sm btn-outline-success ms-1" onclick="fetchNewPdfs()">⬆ Index New Documents</button>
-    <button class="btn btn-sm btn-outline-warning ms-1" onclick="buildCommunities()">🔗 Build Communities</button>
-    <button class="btn btn-sm btn-outline-primary ms-1" onclick="document.getElementById('pdfFileInput').click()">📄 Upload PDF</button>
+  <span class="ms-auto d-flex gap-1 flex-wrap">
+    <button class="btn btn-sm btn-outline-primary" onclick="loadEntities()">Browse Entities</button>
+    <button class="btn btn-sm btn-outline-info" onclick="loadCommunities(true)">Browse Communities</button>
+    <button class="btn btn-sm btn-outline-success" onclick="fetchNewPdfs()">⬆ Index</button>
+    <button class="btn btn-sm btn-outline-warning" onclick="buildCommunities()">🔗 Communities</button>
+    <button class="btn btn-sm btn-outline-primary" onclick="document.getElementById('pdfFileInput').click()">📄 Upload</button>
     <input type="file" id="pdfFileInput" accept=".pdf" style="display:none" onchange="uploadPdf(this)">
-    <button class="btn btn-sm btn-outline-danger ms-1" onclick="clearGraph()">🗑 Clear All Data</button>
+    <button class="btn btn-sm btn-outline-danger" onclick="clearGraph()">🗑 Clear</button>
   </span>
 </div>
 
-<!-- ── Main layout ── -->
-<div id="mainWrap" class="d-flex gap-3">
+<!-- ── Two-column layout ── -->
+<div id="outerWrap">
 
-  <!-- Results column -->
-  <div id="resultsCol">
-    <div id="resultMsg" class="text-center text-muted py-5">
+  <!-- LEFT: Graph (75%) -->
+  <div id="graphCol">
+    <div id="graphPanel">
+      <div id="graphNet">
+        <div id="graphInfo"></div>
+      </div>
+      <div id="graphFooter">Loading graph…</div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Results + side panels (25%) -->
+  <div id="rightPanel">
+
+    <div id="resultMsg" class="text-center text-muted py-4">
       Search for any company, technology, or relationship across all your research PDFs.
     </div>
     <div id="resultsList"></div>
-  </div>
-
-  <!-- Side column -->
-  <div id="sideCol">
 
     <!-- Entity browser card -->
-    <div class="card mb-3" id="entityCard" style="display:none!important">
+    <div class="card mb-2" id="entityCard" style="display:none">
       <div class="card-header d-flex justify-content-between align-items-center py-2">
-        <span style="font-size:.88rem;font-weight:600">All Entities</span>
+        <span style="font-size:.85rem;font-weight:600">All Entities</span>
         <button class="btn-close btn-sm" onclick="document.getElementById('entityCard').style.display='none'"></button>
       </div>
       <div id="entityList" class="card-body p-0"></div>
@@ -189,12 +188,12 @@
     </div>
 
     <!-- Community browser card -->
-    <div class="card mb-3" id="communityCard" style="display:none!important">
+    <div class="card mb-2" id="communityCard" style="display:none">
       <div class="card-header d-flex justify-content-between align-items-center py-2">
-        <span style="font-size:.88rem;font-weight:600">Communities</span>
+        <span style="font-size:.85rem;font-weight:600">Communities</span>
         <button class="btn-close btn-sm" onclick="document.getElementById('communityCard').style.display='none'"></button>
       </div>
-      <div id="communityList" class="card-body p-0" style="max-height:380px;overflow-y:auto"></div>
+      <div id="communityList" class="card-body p-0" style="max-height:300px;overflow-y:auto"></div>
       <div class="card-footer py-1">
         <button class="btn btn-sm btn-link" id="loadMoreComBtn" onclick="loadMoreCommunities()" style="display:none">
           Load more…
@@ -203,62 +202,22 @@
     </div>
 
     <!-- Community detail card -->
-    <div class="card mb-3" id="communityDetailCard" style="display:none!important">
+    <div class="card mb-2" id="communityDetailCard" style="display:none">
       <div class="card-header d-flex justify-content-between align-items-center py-2">
-        <span id="communityDetailTitle" style="font-size:.88rem;font-weight:600">Community</span>
+        <span id="communityDetailTitle" style="font-size:.85rem;font-weight:600">Community</span>
         <button class="btn btn-sm btn-link py-0" onclick="showCommunityBrowser()"
-                style="font-size:.8rem;text-decoration:none">← Back</button>
+                style="font-size:.78rem;text-decoration:none">← Back</button>
       </div>
       <div class="card-body p-2">
-        <p id="communityDetailSummary" class="text-muted mb-2" style="font-size:.8rem"></p>
-        <div id="communityDetailMembers" style="max-height:320px;overflow-y:auto"></div>
-      </div>
-    </div>
-
-    <!-- Document browser card -->
-    <div class="card mb-3" id="docCard" style="display:none!important">
-      <div class="card-header d-flex justify-content-between align-items-center py-2">
-        <span style="font-size:.88rem;font-weight:600">Documents</span>
-        <span class="d-flex gap-1 align-items-center">
-          <button class="btn btn-xs btn-outline-secondary py-0 px-1 doc-filter-btn active"
-                  style="font-size:.72rem" data-type="" onclick="setDocFilter(this,'')">All</button>
-          <button class="btn btn-xs btn-outline-info py-0 px-1 doc-filter-btn"
-                  style="font-size:.72rem" data-type="pdf" onclick="setDocFilter(this,'pdf')">PDF</button>
-          <button class="btn btn-xs btn-outline-success py-0 px-1 doc-filter-btn"
-                  style="font-size:.72rem" data-type="sec" onclick="setDocFilter(this,'sec')">SEC</button>
-          <button class="btn-close btn-sm ms-1" onclick="document.getElementById('docCard').style.display='none'"></button>
-        </span>
-      </div>
-      <div id="docList" class="card-body p-0" style="max-height:400px;overflow-y:auto"></div>
-      <div class="card-footer py-1">
-        <button class="btn btn-sm btn-link" id="loadMoreDocsBtn" onclick="loadMoreDocuments()" style="display:none">
-          Load more…
-        </button>
-      </div>
-    </div>
-
-    <!-- Document detail card -->
-    <div class="card mb-3" id="docDetailCard" style="display:none!important">
-      <div class="card-header d-flex justify-content-between align-items-center py-2">
-        <span id="docDetailTitle" style="font-size:.85rem;font-weight:600;max-width:220px;
-              white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Document</span>
-        <div class="d-flex gap-1 align-items-center">
-          <a id="docDetailLink" href="#" target="_blank" class="btn btn-xs btn-outline-primary py-0 px-1"
-             style="font-size:.72rem;display:none">Open PDF</a>
-          <button class="btn btn-sm btn-link py-0" onclick="showDocumentBrowser()"
-                  style="font-size:.8rem;text-decoration:none">← Back</button>
-        </div>
-      </div>
-      <div class="card-body p-2" style="max-height:480px;overflow-y:auto">
-        <div id="docDetailEntities" class="mb-3"></div>
-        <div id="docDetailEdges"></div>
+        <p id="communityDetailSummary" class="text-muted mb-2" style="font-size:.78rem"></p>
+        <div id="communityDetailMembers" style="max-height:260px;overflow-y:auto"></div>
       </div>
     </div>
 
     <!-- Ingest / upload card -->
-    <div class="card" id="ingestCard" style="display:none">
+    <div class="card mb-2" id="ingestCard" style="display:none">
       <div class="card-header d-flex justify-content-between align-items-center py-2">
-        <span id="ingestCardTitle" style="font-size:.88rem;font-weight:600">Index New Documents</span>
+        <span id="ingestCardTitle" style="font-size:.85rem;font-weight:600">Index New Documents</span>
         <button class="btn-close btn-sm" onclick="document.getElementById('ingestCard').style.display='none'"></button>
       </div>
       <div class="card-body p-2">
@@ -269,23 +228,8 @@
       </div>
     </div>
 
-  </div><!-- /sideCol -->
-</div><!-- /mainWrap -->
-
-<!-- ── Graph visualisation panel (full-screen overlay) ── -->
-<div id="graphPanel">
-  <div id="graphToolbar">
-    <strong style="font-size:.9rem">🕸 Knowledge Graph</strong>
-    <span id="graphNodeCount" class="text-muted" style="font-size:.8rem"></span>
-    <span class="ms-auto d-flex gap-2 align-items-center">
-      <span id="graphFooter">Click a node to search its relationships.</span>
-      <button class="btn btn-sm btn-outline-secondary" onclick="toggleGraph()" title="Close graph view">✕ Close</button>
-    </span>
-  </div>
-  <div id="graphNet">
-    <div id="graphInfo"></div>
-  </div>
-</div>
+  </div><!-- /rightPanel -->
+</div><!-- /outerWrap -->
 
 {% endif %}
 
@@ -333,37 +277,40 @@ function renderResults(data, query) {
   list.innerHTML = '';
   document.getElementById('resultMsg').style.display = 'none';
 
-  // Only show the result type matching the active scope button
   const edges    = currentScope === 'edges'    ? (data.edges    || []) : [];
   const nodes    = currentScope === 'nodes'    ? (data.nodes    || []) : [];
   const episodes = currentScope === 'episodes' ? (data.episodes || []) : [];
   const total = edges.length + nodes.length + episodes.length;
 
   if (total === 0) {
-    list.innerHTML = `<div class="text-muted py-4 text-center">
-      No results for <strong>${escHtml(query)}</strong>.<br>
-      <small>If you just indexed new PDFs, wait a minute for Zep to process them.</small>
+    list.innerHTML = `<div class="text-muted py-3 text-center">
+      No results for <strong>${escHtml(query)}</strong>.
     </div>`;
     return;
   }
 
-  // Header
-  list.innerHTML = `<p class="text-muted" style="font-size:.82rem;margin-bottom:8px">
+  list.innerHTML = `<p class="text-muted mb-2" style="font-size:.78rem">
     ${total} result(s) for <strong>${escHtml(query)}</strong>
   </p>`;
 
   // Render edges (relationships / facts)
   edges.forEach(e => {
-    list.innerHTML += `
-    <div class="result-card">
+    const depBadge = e.deprecated ? `<span class="deprecated-badge">⊘ ${escHtml(e.deprecated_reason||'NONSENSE')}</span>` : '';
+    const cardCls  = e.deprecated ? 'result-card deprecated' : 'result-card';
+    const div = document.createElement('div');
+    div.className = cardCls;
+    div.dataset.edgeUuid = e.uuid;
+    div.innerHTML = `
+      <button class="deprecate-btn" title="Flag as nonsense/deprecate" onclick="deprecateEdge('${escHtml(e.uuid)}',this)">⊘</button>
       <span class="score-badge">${e.score != null ? e.score.toFixed(2) : ''}</span>
-      <div class="fact">${escHtml(e.fact || e.name || '')}</div>
+      <div class="fact">${depBadge}${escHtml(e.fact || e.name || '')}</div>
       <div class="meta">
         ${e.source_node_uuid ? `<span class="entity-badge" onclick="clickEntity('${escHtml(e.source_node_uuid)}','${escHtml(e.source_node_name||'')}')">↗ ${escHtml(e.source_node_name || e.source_node_uuid.slice(0,8))}</span>` : ''}
         ${e.target_node_uuid ? `<span class="entity-badge" onclick="clickEntity('${escHtml(e.target_node_uuid)}','${escHtml(e.target_node_name||'')}')">↗ ${escHtml(e.target_node_name || e.target_node_uuid.slice(0,8))}</span>` : ''}
       </div>
       ${(e.sources||[]).length ? `<div class="edge-sources">${(e.sources||[]).map(s=>s.url ? `<a href="${escHtml(s.url)}" target="_blank" class="source-badge">📄 ${escHtml(s.label)}</a>` : `<span class="source-badge">📄 ${escHtml(s.label)}</span>`).join('')}</div>` : ''}
-    </div>`;
+    `;
+    list.appendChild(div);
   });
 
   // Render nodes (entities)
@@ -383,7 +330,7 @@ function renderResults(data, query) {
                  : ep.report_id ? `/sec/file/${ep.report_id}`
                  : null;
     const clickAttr = docUrl ? `style="cursor:pointer" onclick="window.open('${docUrl}','_blank')"` : '';
-    const linkHint  = docUrl ? ' <span style="font-size:.75rem;color:#0d6efd">↗ open</span>' : '';
+    const linkHint  = docUrl ? ' <span style="font-size:.72rem;color:#0d6efd">↗ open</span>' : '';
     list.innerHTML += `
     <div class="result-card" ${clickAttr}>
       <span class="score-badge">${ep.score != null ? ep.score.toFixed(2) : ''}</span>
@@ -400,11 +347,42 @@ function showMsg(msg) {
   document.getElementById('resultsList').innerHTML = '';
 }
 
+// ── Deprecate edge ──────────────────────────────────────────────────────────
+async function deprecateEdge(uuid, btn) {
+  const reason = prompt('Flag reason (leave blank for "RELATION_NONSENSE"):', 'RELATION_NONSENSE');
+  if (reason === null) return;  // cancelled
+  try {
+    const r = await fetch(`/edges/${encodeURIComponent(uuid)}/deprecate`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({reason: reason || 'RELATION_NONSENSE'}),
+    });
+    const d = await r.json();
+    if (d.ok) {
+      const card = btn.closest('.result-card');
+      card.classList.add('deprecated');
+      // Add deprecated badge next to fact
+      const factEl = card.querySelector('.fact');
+      if (factEl && !factEl.querySelector('.deprecated-badge')) {
+        const badge = document.createElement('span');
+        badge.className = 'deprecated-badge';
+        badge.textContent = `⊘ ${d.reason}`;
+        factEl.prepend(badge);
+      }
+      btn.title = 'Already deprecated';
+      btn.disabled = true;
+    } else {
+      alert('Error: ' + (d.error || 'unknown'));
+    }
+  } catch(e) {
+    alert('Request failed: ' + e.message);
+  }
+}
+
 // ── Entity click → search its relationships ────────────────────────────────
 function clickEntity(uuid, name) {
   document.getElementById('searchInput').value = name;
   doSearch();
-  // If graph is open, focus + highlight the matching node
   if (_network && _graphBuilt) {
     try {
       const n = _visNodes && _visNodes.get(uuid);
@@ -425,11 +403,9 @@ async function loadStats() {
     const d = await r.json();
 
     if (d.error && d.error.includes('lock')) {
-      // DB locked — ingest running in another process
       document.getElementById('statNodes').textContent    = '⏳';
       document.getElementById('statEdges').textContent    = '⏳';
       document.getElementById('statEpisodes').textContent = '⏳';
-      document.getElementById('statsBar').title = 'Indexing in progress — stats will refresh automatically';
       if (!_statsRetryTimer) {
         _statsRetryTimer = setInterval(async () => {
           try {
@@ -437,7 +413,6 @@ async function loadStats() {
             const d2 = await r2.json();
             if (!d2.error || !d2.error.includes('lock')) {
               clearInterval(_statsRetryTimer); _statsRetryTimer = null;
-              document.getElementById('statsBar').title = '';
               document.getElementById('statNodes').textContent       = d2.node_count       ?? '–';
               document.getElementById('statEdges').textContent       = d2.edge_count       ?? '–';
               document.getElementById('statEpisodes').textContent    = d2.episode_count    ?? '–';
@@ -450,7 +425,6 @@ async function loadStats() {
     }
 
     if (_statsRetryTimer) { clearInterval(_statsRetryTimer); _statsRetryTimer = null; }
-    document.getElementById('statsBar').title = '';
     document.getElementById('statNodes').textContent       = d.node_count       ?? '–';
     document.getElementById('statEdges').textContent       = d.edge_count       ?? '–';
     document.getElementById('statEpisodes').textContent    = d.episode_count    ?? '–';
@@ -460,10 +434,9 @@ async function loadStats() {
 
 // ── Entity browser ─────────────────────────────────────────────────────────
 let _entityCursor = null;
-let _entityLoaded = false;
 
 async function loadEntities(reset) {
-  if (reset) { _entityCursor = null; _entityLoaded = false; document.getElementById('entityList').innerHTML = ''; }
+  if (reset) { _entityCursor = null; document.getElementById('entityList').innerHTML = ''; }
   const card = document.getElementById('entityCard');
   card.style.display = '';
 
@@ -596,17 +569,16 @@ function buildCommunities() {
 
 // ── Clear all graph data ───────────────────────────────────────────────────
 async function clearGraph() {
-  if (!confirm('Delete ALL entities, relationships, and documents from the knowledge graph?\n\nAll PDFs will be queued for re-indexing on the next run.\n\nThis cannot be undone.')) return;
+  if (!confirm('Delete ALL entities, relationships, and documents from the knowledge graph?\n\nThis cannot be undone.')) return;
   try {
     const r = await fetch('/clear', {method: 'POST'});
     const d = await r.json();
     if (d.ok) {
-      alert('Graph cleared. Re-index with "Index New Documents" or run graphiti_ingest.py.');
+      alert('Graph cleared. Re-index with "Index New Documents".');
       loadStats();
-      // reset graph view so it rebuilds next time
       window._graphBuilt = false;
-      document.getElementById('graphPanel').classList.remove('active');
-      document.getElementById('graphToggleBtn').classList.remove('active');
+      document.getElementById('graphFooter').textContent = 'Graph cleared.';
+      if (_network) { _network.destroy(); _network = null; }
     } else {
       alert('Error: ' + (d.errors || []).join('\n'));
     }
@@ -673,7 +645,7 @@ function startIngest() {
 async function uploadPdf(input) {
   const file = input.files[0];
   if (!file) return;
-  input.value = '';  // reset so same file can be re-uploaded
+  input.value = '';
 
   _openIngestCard(`Upload: ${file.name}`);
   document.getElementById('ingestBtn').style.display = 'none';
@@ -700,7 +672,7 @@ async function uploadPdf(input) {
     if (done) break;
     buf += decoder.decode(value, {stream: true});
     const parts = buf.split('\n\n');
-    buf = parts.pop();  // keep incomplete last chunk
+    buf = parts.pop();
     for (const part of parts) {
       for (const raw of part.split('\n')) {
         if (!raw.startsWith('data: ')) continue;
@@ -725,18 +697,7 @@ let _network = null;
 let _visNodes = null;
 let _graphBuilt = false;
 
-async function toggleGraph() {
-  const panel = document.getElementById('graphPanel');
-  const btn   = document.getElementById('graphToggleBtn');
-  if (panel.classList.contains('active')) {
-    panel.classList.remove('active');
-    btn.classList.remove('active');
-    return;
-  }
-  panel.classList.add('active');
-  btn.classList.add('active');
-  if (_graphBuilt) return;
-
+async function initGraph() {
   const graphInfo = document.getElementById('graphInfo');
   graphInfo.textContent = 'Loading graph data…';
   graphInfo.style.display = 'block';
@@ -765,11 +726,8 @@ async function toggleGraph() {
     const ed = await er.json();
 
     const allEdges = (ed.edges || []).filter(e => e.source_node_uuid && e.target_node_uuid);
-
-    // Only show nodes that appear in at least one edge
     const connectedIds = new Set(allEdges.flatMap(e => [e.source_node_uuid, e.target_node_uuid]));
     const nodeList = (nd.nodes || []).filter(n => connectedIds.has(n.uuid));
-    const edgeList = allEdges;
 
     if (nodeList.length === 0) {
       graphInfo.textContent = 'No relationships yet — run the ingestor first.';
@@ -789,7 +747,7 @@ async function toggleGraph() {
       return { id: n.uuid, label: n.name, title: tip };
     }));
 
-    const edges = new vis.DataSet(edgeList.map(e => ({
+    const edges = new vis.DataSet(allEdges.map(e => ({
         id:    e.uuid,
         from:  e.source_node_uuid,
         to:    e.target_node_uuid,
@@ -830,16 +788,14 @@ async function toggleGraph() {
         if (n) {
           document.getElementById('searchInput').value = n.label;
           doSearch();
-          // Keep graph focused on the clicked node
           _network.focus(nodeId, { scale: 1.4, animation: { duration: 400, easingFunction: 'easeInOutQuad' } });
         }
       }
     });
 
     _graphBuilt = true;
-    document.getElementById('graphNodeCount').textContent =
-      `${nodeList.length} entities · ${edgeList.length} relationships`;
-    document.getElementById('graphFooter').textContent = 'Click a node to search its relationships.';
+    document.getElementById('graphFooter').textContent =
+      `${nodeList.length} entities · ${allEdges.length} relationships  —  click a node to search`;
   } catch (e) {
     graphInfo.textContent = 'Error: ' + e.message;
     graphInfo.style.display = 'block';
@@ -852,117 +808,10 @@ function escHtml(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-// ── Document browser ───────────────────────────────────────────────────────
-let _docCursor   = null;
-let _docFilter   = '';   // '' | 'pdf' | 'sec'
-
-function setDocFilter(btn, type) {
-  _docFilter = type;
-  document.querySelectorAll('.doc-filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  loadDocuments(true, type);
-}
-
-async function loadDocuments(reset, type) {
-  if (type !== undefined) _docFilter = type || '';
-  if (reset) _docCursor = null;
-
-  const card = document.getElementById('docCard');
-  const list = document.getElementById('docList');
-  document.getElementById('docDetailCard').style.display = 'none';
-  card.style.display = '';
-
-  const url = `/episodes?limit=50${_docFilter ? '&type='+_docFilter : ''}${_docCursor ? '&cursor='+_docCursor : ''}`;
-  const r = await fetch(url);
-  const d = await r.json();
-
-  if (reset) list.innerHTML = '';
-  (d.episodes || []).forEach(ep => {
-    const isP = ep.source_desc && ep.source_desc.startsWith('PDF:');
-    const badge = isP
-      ? `<span class="doc-type-pdf">PDF</span>`
-      : `<span class="doc-type-sec">SEC</span>`;
-    const edges = ep.edge_count > 0
-      ? `<span class="doc-edge-cnt">${ep.edge_count} relations</span>` : '';
-    const label = ep.source_desc || ep.name;
-    list.innerHTML += `
-    <div class="doc-row" onclick="showDocument('${escHtml(ep.uuid)}','${escHtml(label)}')">
-      <div class="dtitle">${badge}${escHtml(label.replace(/^(PDF|SEC):\s*/,''))}</div>
-      <div class="dmeta">${edges}${escHtml(ep.created_at || '')}</div>
-    </div>`;
-  });
-
-  _docCursor = d.next_cursor || null;
-  document.getElementById('loadMoreDocsBtn').style.display = _docCursor ? '' : 'none';
-}
-
-function loadMoreDocuments() { loadDocuments(false, undefined); }
-
-function showDocumentBrowser() {
-  document.getElementById('docDetailCard').style.display = 'none';
-  document.getElementById('docCard').style.display = '';
-}
-
-async function showDocument(uuid, label) {
-  document.getElementById('docCard').style.display = 'none';
-  const det = document.getElementById('docDetailCard');
-  document.getElementById('docDetailTitle').textContent = label.replace(/^(PDF|SEC):\s*/,'');
-  document.getElementById('docDetailEntities').innerHTML = '<em class="text-muted" style="font-size:.8rem">Loading…</em>';
-  document.getElementById('docDetailEdges').innerHTML    = '';
-  det.style.display = '';
-
-  const r = await fetch('/episodes/' + uuid);
-  const d = await r.json();
-
-  // PDF open link
-  const link = document.getElementById('docDetailLink');
-  if (d.url) {
-    link.href = d.url; link.style.display = '';
-  } else {
-    link.style.display = 'none';
-  }
-
-  // Entities section
-  const ents = d.entities || [];
-  const entDiv = document.getElementById('docDetailEntities');
-  if (ents.length === 0) {
-    entDiv.innerHTML = '<p class="text-muted mb-2" style="font-size:.8rem">No entities extracted.</p>';
-  } else {
-    entDiv.innerHTML = `<div style="font-size:.8rem;font-weight:600;margin-bottom:4px">
-      🏢 Entities (${ents.length})</div>` +
-      ents.map(e => `<span class="entity-badge" style="cursor:pointer;margin-bottom:3px"
-        onclick="clickEntity('${escHtml(e.uuid)}','${escHtml(e.name)}')">${escHtml(e.name)}</span>`).join(' ');
-  }
-
-  // Edges section
-  const edges = d.edges || [];
-  const edgDiv = document.getElementById('docDetailEdges');
-  if (edges.length === 0) {
-    edgDiv.innerHTML = '<p class="text-muted" style="font-size:.8rem">No relationships extracted.</p>';
-  } else {
-    edgDiv.innerHTML = `<div style="font-size:.8rem;font-weight:600;margin-bottom:6px">
-      🔗 Relationships (${edges.length})</div>`;
-    edges.forEach(e => {
-      edgDiv.innerHTML += `
-      <div class="result-card" style="padding:8px 12px;margin-bottom:6px">
-        <div class="fact" style="font-size:.85rem">${escHtml(e.fact||e.name||'')}</div>
-        <div class="meta" style="margin-top:3px">
-          ${e.source_node_uuid||e.src_uuid ? `<span class="entity-badge"
-            onclick="clickEntity('${escHtml(e.src_uuid||'')}','${escHtml(e.src_name||'')}')">
-            ↗ ${escHtml(e.src_name||'')}</span>` : ''}
-          ${e.tgt_uuid ? `<span class="entity-badge"
-            onclick="clickEntity('${escHtml(e.tgt_uuid||'')}','${escHtml(e.tgt_name||'')}')">
-            ↗ ${escHtml(e.tgt_name||'')}</span>` : ''}
-        </div>
-      </div>`;
-    });
-  }
-}
-
 // ── Init ───────────────────────────────────────────────────────────────────
 (async () => {
   loadStats();
-  await toggleGraph();   // show graph view on page load
+  initGraph();
 })();
 </script>
 </body>
