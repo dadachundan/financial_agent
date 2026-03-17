@@ -1,7 +1,7 @@
 """
-langfuse_monitor.py — Langfuse LLM call monitoring integration.
+langfuse_monitor.py — Langfuse LLM call monitoring integration (v4 / OTel-native).
 
-Provides a lightweight wrapper around the Langfuse Python SDK so that every
+Provides a lightweight wrapper around the Langfuse Python SDK (v4+) so that every
 MiniMax LLM call is traced and visible in the Langfuse UI.
 
 Setup (one-time):
@@ -22,33 +22,30 @@ Setup (one-time):
 After setup, run graphiti_ingest.py normally; traces appear in the UI automatically.
 
 Trace hierarchy produced per ingest run:
-  Session: "ingest-<label>-<timestamp>"  (groups all document traces)
-    └── Trace: "<document-label>"  (one per document; root span)
-          ├── Generation: "ExtractedEntities"  (entity extraction LLM call)
-          ├── Generation: "ExtractedEdges"     (edge extraction LLM call)
-          └── Generation: "NodeResolutions"    (dedup LLM call)
+  Session: "ingest YYYY-MM-DD HH:MM <doc label>"  (one session per document)
+    └── Trace: "<document-label>"  (root span for the document)
+          ├── Generation: "ExtractedEntities"   (entity extraction LLM call)
+          ├── Generation: "ExtractedEdges"      (edge extraction LLM call)
+          ├── Generation: "NodeResolutions"     (dedup LLM call, if needed)
+          ├── Generation: "EdgeDuplicate"       (per-edge dedup, N calls)
+          └── Generation: "SummarizedEntities"  (node summary, batched)
+
+How context propagation works (Langfuse v4 / OTel):
+  set_document() creates a root span and calls opentelemetry.context.attach() to
+  make it the *current* OTel span.  All subsequent start_observation() calls
+  (including those from parallel asyncio.gather tasks or run_in_executor threads)
+  automatically inherit this parent span because OTel propagates via Python
+  contextvars, which asyncio copies to every new task.
 """
 
 from __future__ import annotations
 
-import contextvars
 import logging
 import time
 from pathlib import Path
 from typing import Any
 
 logger = logging.getLogger(__name__)
-
-# ── Context vars (survive async/thread hops within a single ingest run) ────────
-_current_trace_id: contextvars.ContextVar[str | None] = contextvars.ContextVar(
-    "langfuse_trace_id", default=None
-)
-_current_span_id: contextvars.ContextVar[str | None] = contextvars.ContextVar(
-    "langfuse_span_id", default=None
-)
-_current_span: contextvars.ContextVar[Any | None] = contextvars.ContextVar(
-    "langfuse_span", default=None
-)
 
 # ── Module-level state ─────────────────────────────────────────────────────────
 _lf: "Langfuse | None" = None  # singleton Langfuse client
@@ -116,10 +113,13 @@ def is_enabled() -> bool:
 # ── Document context ───────────────────────────────────────────────────────────
 
 def set_document(label: str):
-    """Create a Langfuse trace+root-span for one document.
+    """Create a Langfuse root span for one document and attach it to the OTel context.
 
     Call before add_episode(); pass the returned token to clear_document() afterwards.
-    When Langfuse is disabled, returns None (clear_document handles None gracefully).
+    Returns None when Langfuse is disabled (clear_document handles None gracefully).
+
+    In Langfuse v4 (OTel-native), child generations are linked to this span
+    automatically via opentelemetry.context.attach() — no manual TraceContext needed.
     Each document gets its own Langfuse session named:
         "ingest YYYY-MM-DD HH:MM <document label>"
     """
@@ -129,41 +129,54 @@ def set_document(label: str):
         return None
 
     try:
-        # Build a per-document session id so Langfuse shows a readable session name.
         _session_id = f"{_base_label} {label}"
 
-        # start_observation without trace_context creates a new root span → new Langfuse trace
+        # Create root span for this document (no trace_context → new root trace)
         span = _lf.start_observation(name=label, as_type="span")
 
-        # Tag the span with our session_id so it appears under the named session.
-        # "session.id" is the OTel attribute Langfuse uses to attach spans to sessions.
+        # ── Langfuse v4: attach span into the OTel current context ──────────
+        # This is the critical step.  Without it, child observations created
+        # in coroutines / thread-pool tasks have no parent and appear as
+        # orphaned top-level traces in the UI.
+        try:
+            from opentelemetry import context as _otel_ctx, trace as _otel_trace
+            from opentelemetry.context import attach as _otel_attach
+            _otel_token = _otel_attach(
+                _otel_trace.set_span_in_context(span._otel_span)
+            )
+        except Exception as e:
+            logger.debug("OTel attach failed (non-fatal): %s", e)
+            _otel_token = None
+
+        # Tag with session id so Langfuse groups this trace under the named session
         try:
             span._otel_span.set_attribute("session.id", _session_id)
         except Exception:
-            pass  # defensive: don't fail if internal API changes
+            pass
 
-        t1 = _current_trace_id.set(span.trace_id)
-        t2 = _current_span_id.set(span.id)
-        t3 = _current_span.set(span)
-        return (t1, t2, t3)
+        print(f"  📊 Langfuse trace started → session: {_session_id!r}", flush=True)
+        return (span, _otel_token)
+
     except Exception as e:
-        logger.debug("Langfuse set_document failed: %s", e)
+        logger.warning("Langfuse set_document failed: %s", e)
         return None
 
 
 def clear_document(token) -> None:
-    """End the document span and reset context vars.  Safe to call with token=None."""
+    """End the document span and detach OTel context.  Safe to call with token=None."""
     if not _enabled or _lf is None or token is None:
         return
 
     try:
-        t1, t2, t3 = token
-        span = _current_span.get()
+        span, otel_token = token
         if span is not None:
             span.end()
-        _current_trace_id.reset(t1)
-        _current_span_id.reset(t2)
-        _current_span.reset(t3)
+        if otel_token is not None:
+            try:
+                from opentelemetry.context import detach as _otel_detach
+                _otel_detach(otel_token)
+            except Exception as e:
+                logger.debug("OTel detach failed (non-fatal): %s", e)
     except Exception as e:
         logger.debug("Langfuse clear_document failed: %s", e)
 
@@ -181,22 +194,13 @@ def log_generation(
     """Log a single LLM generation to Langfuse as a child of the current document span.
 
     Called from minimax_llm_client._generate_response() after each LLM call.
-    Automatically nests under the active document trace set by set_document().
+    In Langfuse v4, OTel context propagation automatically nests this generation
+    under whichever span was attach()ed by set_document() — no TraceContext needed.
     """
     if not _enabled or _lf is None:
         return
 
     try:
-        trace_id = _current_trace_id.get()
-        span_id = _current_span_id.get()
-
-        # Build TraceContext to nest generation under the document span
-        trace_ctx = None
-        if trace_id:
-            from langfuse.types import TraceContext
-            trace_ctx = TraceContext(trace_id=trace_id, parent_span_id=span_id)
-
-        # Build input list in Langfuse's chat format
         lf_input = [
             {"role": m.get("role", "user"), "content": str(m.get("content", ""))[:8000]}
             for m in messages
@@ -210,8 +214,9 @@ def log_generation(
                 "total": usage.get("total_tokens", 0),
             }
 
+        # No trace_context argument — OTel context propagation links this generation
+        # to the parent span set by set_document() → attach() automatically.
         gen = _lf.start_observation(
-            trace_context=trace_ctx,
             name=call_type,
             as_type="generation",
             input=lf_input,
@@ -224,7 +229,7 @@ def log_generation(
         gen.end()
 
     except Exception as e:
-        logger.debug("Langfuse log_generation failed: %s", e)
+        logger.warning("Langfuse log_generation failed: %s", e)
 
 
 def flush() -> None:
