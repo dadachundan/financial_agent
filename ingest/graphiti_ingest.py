@@ -227,6 +227,27 @@ def _clean_pdf_text(text: str) -> str:
     # 4. Collapse 3+ consecutive blank lines → one blank line
     text = _re.sub(r"\n{3,}", "\n\n", text)
 
+    # 5. Strip disclaimer / boilerplate section at end of research PDFs.
+    #    Every sell-side report ends with a section listing all the broker's
+    #    legal subsidiaries and analyst certification text.  We cut from the
+    #    first disclaimer heading that appears after the first 30% of the doc,
+    #    so the LLM never sees those entity names.
+    _disclaimer = _re.compile(
+        r"(?:^|\n)#{0,3}\s*(?:"
+        r"Analyst Certif"
+        r"|Important Disclos"
+        r"|Required Disclos"
+        r"|Legal (?:and |& )?Regulatory"
+        r"|IMPORTANT REGULATORY"
+        r"|Global Disclaimer"
+        r"|(?:Disclosures|Disclaimer)\s*(?:\n|$)"
+        r")",
+        _re.IGNORECASE,
+    )
+    m = _disclaimer.search(text)
+    if m and m.start() > len(text) * 0.25:
+        text = text[: m.start()].rstrip()
+
     return text.strip()
 
 
@@ -905,6 +926,9 @@ def main() -> None:
         c.close()
 
     print(f"\nDone.  Indexed: {ok}  Skipped: {skipped}")
+
+    # Flush and shut down Langfuse exporter threads so no spans are lost on exit
+    langfuse_monitor.shutdown()
 
 
 async def _ingest_all_items(items: list[dict]) -> tuple[int, int]:
