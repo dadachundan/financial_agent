@@ -284,6 +284,22 @@ class MiniMaxLLMClient(LLMClient):
                     )
                 # For entity extraction: companies, products, and named markets only
                 if response_model.__name__ == "ExtractedEntities":
+                    # Inject user-isolated entities so LLM skips re-discovering them
+                    try:
+                        import graph_mirror as _gm
+                        _iso_conn = _gm.get_conn()
+                        _isolated = _gm.get_isolated_entity_names(_iso_conn)
+                        _iso_conn.close()
+                        if _isolated:
+                            _iso_list = ", ".join(f'"{n}"' for n in _isolated[:60])
+                            extra += (
+                                "\n\nUSER-ISOLATED ENTITIES — DO NOT EXTRACT (ever):"
+                                f"\n{_iso_list}"
+                                "\nThese entities have been flagged by the user as unwanted."
+                                " Never extract them, even if they appear prominently in the text."
+                            )
+                    except Exception:
+                        pass
                     extra += (
                         "\n\nSTRICT ENTITY EXTRACTION RULES:"
                         "\n\nEntities must be a real company, a specific BRANDED product/technology,"
