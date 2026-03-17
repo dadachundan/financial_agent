@@ -315,6 +315,98 @@ def resolve_edge_sources(conn: sqlite3.Connection,
     ]
 
 
+def get_episodes(conn: sqlite3.Connection, limit: int = 100,
+                 cursor: Optional[str] = None,
+                 type_filter: Optional[str] = None
+                 ) -> tuple[list[dict], Optional[str]]:
+    """Paginated list of episodes, optionally filtered by type.
+
+    type_filter: 'pdf'  → source_desc LIKE 'PDF:%'
+                 'sec'  → source_desc NOT LIKE 'PDF:%'
+                 None   → all
+    """
+    conditions = []
+    params: list = []
+    if type_filter == "pdf":
+        conditions.append("source_desc LIKE 'PDF:%'")
+    elif type_filter == "sec":
+        conditions.append("source_desc NOT LIKE 'PDF:%'")
+    if cursor:
+        conditions.append("uuid > ?")
+        params.append(cursor)
+
+    where = ("WHERE " + " AND ".join(conditions)) if conditions else ""
+    params.append(limit)
+
+    rows = conn.execute(
+        f"SELECT uuid, name, source_desc, created_at "
+        f"FROM episodes {where} ORDER BY created_at DESC, uuid LIMIT ?",
+        params,
+    ).fetchall()
+
+    items = [dict(r) for r in rows]
+    # Attach edge count per episode
+    for ep in items:
+        n = conn.execute(
+            "SELECT COUNT(*) FROM edges WHERE episodes_json LIKE ?",
+            (f'%"{ep["uuid"]}"%',),
+        ).fetchone()[0]
+        ep["edge_count"] = n
+
+    next_cursor = items[-1]["uuid"] if len(items) == limit else None
+    return items, next_cursor
+
+
+def get_episode_detail(conn: sqlite3.Connection,
+                       uuid: str) -> Optional[dict]:
+    """Return one episode with its extracted entities and edges."""
+    row = conn.execute(
+        "SELECT uuid, name, source_desc, created_at FROM episodes WHERE uuid=?",
+        (uuid,),
+    ).fetchone()
+    if row is None:
+        return None
+    ep = dict(row)
+
+    # Edges that mention this episode
+    edge_rows = conn.execute(
+        "SELECT uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name, episodes_json "
+        "FROM edges WHERE episodes_json LIKE ?",
+        (f'%"{uuid}"%',),
+    ).fetchall()
+    edges = []
+    for r in edge_rows:
+        d = dict(r)
+        d["sources"] = resolve_edge_sources(conn, d.pop("episodes_json", "[]"))
+        edges.append(d)
+
+    # Unique entities appearing in those edges
+    entity_uuids: set[str] = set()
+    for e in edges:
+        if e.get("src_uuid"): entity_uuids.add(e["src_uuid"])
+        if e.get("tgt_uuid"): entity_uuids.add(e["tgt_uuid"])
+
+    entities: list[dict] = []
+    if entity_uuids:
+        ph = ",".join("?" * len(entity_uuids))
+        ent_rows = conn.execute(
+            f"SELECT uuid, name, labels_json, summary FROM entities WHERE uuid IN ({ph})",
+            list(entity_uuids),
+        ).fetchall()
+        entities = [
+            {"uuid": r["uuid"], "name": r["name"],
+             "labels": json.loads(r["labels_json"] or "[]"),
+             "summary": r["summary"] or ""}
+            for r in ent_rows
+        ]
+        entities.sort(key=lambda x: x["name"])
+
+    ep["edges"]    = edges
+    ep["entities"] = entities
+    ep["url"]      = _episode_url(ep["name"])
+    return ep
+
+
 def get_edges(conn: sqlite3.Connection, limit: int = 300,
               cursor: Optional[str] = None) -> tuple[list[dict], Optional[str]]:
     if cursor:
