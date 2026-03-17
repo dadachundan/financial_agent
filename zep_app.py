@@ -319,6 +319,15 @@ def deprecate_edge(uuid):
     return jsonify({"ok": False, "error": "edge not found"}), 404
 
 
+@zep_bp.route("/entities/<uuid>/edges")
+def entity_edges(uuid):
+    """All non-deprecated edges directly connected to this entity (by UUID).
+    Used when clicking a graph node — exact match, no FTS ambiguity.
+    """
+    edges = _mirror.get_entity_edges(_get_mirror(), uuid)
+    return jsonify({"edges": edges, "uuid": uuid})
+
+
 @zep_bp.route("/entities/<uuid>/isolate", methods=["POST"])
 def isolate_entity(uuid):
     """Mark an entity as isolated (hidden from UI) and deprecate all its edges."""

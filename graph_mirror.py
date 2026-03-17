@@ -361,6 +361,33 @@ def isolate_entity(conn: sqlite3.Connection, uuid: str) -> bool:
     return True
 
 
+def get_entity_edges(conn: sqlite3.Connection, entity_uuid: str) -> list:
+    """Return all non-deprecated edges directly connected to an entity (by UUID).
+
+    Used when clicking a graph node — guarantees results match exactly what
+    the graph visualisation shows, regardless of entity name or FTS index state.
+    """
+    rows = conn.execute(
+        """SELECT uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name,
+                  episodes_json, deprecated, deprecated_reason
+             FROM edges
+            WHERE (src_uuid=? OR tgt_uuid=?)
+              AND (deprecated=0 OR deprecated IS NULL)
+            ORDER BY uuid""",
+        (entity_uuid, entity_uuid),
+    ).fetchall()
+    items = []
+    for r in rows:
+        d = dict(r)
+        d["sources"] = resolve_edge_sources(conn, d.pop("episodes_json", "[]"))
+        d["source_node_uuid"] = d.pop("src_uuid", "")
+        d["source_node_name"] = d.pop("src_name", "")
+        d["target_node_uuid"] = d.pop("tgt_uuid", "")
+        d["target_node_name"] = d.pop("tgt_name", "")
+        items.append(d)
+    return items
+
+
 def get_isolated_entity_names(conn: sqlite3.Connection) -> list:
     """Return names of all isolated entities (used to inject into LLM prompts)."""
     rows = conn.execute(
