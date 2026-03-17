@@ -135,7 +135,7 @@ def extract_text(pdf_path: Path, max_chars: int = MAX_CHARS) -> str:
 
     body_size: float = Counter(all_sizes).most_common(1)[0][0]
     h1_min = body_size * 1.4   # e.g. 12.6 when body=9.0
-    h2_min = body_size * 1.15  # e.g. 10.35 when body=9.0
+    h2_min = body_size * 1.2   # e.g. 10.8 when body=9.0 (tightened from 1.15)
 
     # ToC line: "Section title . . . 42" or "Title       42"
     toc_line_re = re.compile(r"[.\u2026]{2,}\s*\d+\s*$|\s{4,}\d{1,3}\s*$")
@@ -170,7 +170,7 @@ def extract_text(pdf_path: Path, max_chars: int = MAX_CHARS) -> str:
                 continue
             if size >= h1_min:
                 lines_out.append(f"\n# {text}")
-            elif size >= h2_min or (bold and size >= body_size and len(text) < 150):
+            elif size >= h2_min:
                 lines_out.append(f"\n## {text}")
             else:
                 lines_out.append(text)
