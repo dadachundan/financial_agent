@@ -882,34 +882,34 @@ async function initGraph() {
   }
 
   try {
-    const [nr, er] = await Promise.all([
-      fetch('/entities?limit=300'),
-      fetch('/edges?limit=300'),
-    ]);
-    const nd = await nr.json();
+    // Fetch all edges (edge rows carry src_uuid/src_name/tgt_uuid/tgt_name so we
+    // can build the full node set without a separate entity fetch — that was the
+    // bug: /entities?limit=300 returned alphabetically-first 300 UUIDs, most of
+    // which had no edges, leaving the graph nearly empty).
+    const EDGE_LIMIT = 3000;
+    const er = await fetch(`/edges?limit=${EDGE_LIMIT}`);
     const ed = await er.json();
 
     const allEdges = (ed.edges || []).filter(e => e.source_node_uuid && e.target_node_uuid);
-    const connectedIds = new Set(allEdges.flatMap(e => [e.source_node_uuid, e.target_node_uuid]));
-    const nodeList = (nd.nodes || []).filter(n => connectedIds.has(n.uuid));
 
-    if (nodeList.length === 0) {
+    if (allEdges.length === 0) {
       graphInfo.textContent = 'No relationships yet — run the ingestor first.';
       return;
     }
     graphInfo.style.display = 'none';
 
-    _visNodes = new vis.DataSet(nodeList.map(n => {
-      let tip;
-      if (n.summary) {
-        tip = document.createElement('div');
-        tip.style.cssText = 'max-width:260px;font-size:.8rem';
-        tip.innerHTML = `<b>${escHtml(n.name)}</b><br>${escHtml(n.summary.slice(0,120))}`;
-      } else {
-        tip = n.name;
-      }
-      return { id: n.uuid, label: n.name, title: tip };
-    }));
+    // Build deduplicated node map from edge endpoints
+    const nodeMap = new Map(); // uuid → {uuid, name}
+    allEdges.forEach(e => {
+      if (!nodeMap.has(e.source_node_uuid))
+        nodeMap.set(e.source_node_uuid, { uuid: e.source_node_uuid, name: e.source_node_name || e.source_node_uuid });
+      if (!nodeMap.has(e.target_node_uuid))
+        nodeMap.set(e.target_node_uuid, { uuid: e.target_node_uuid, name: e.target_node_name || e.target_node_uuid });
+    });
+
+    _visNodes = new vis.DataSet([...nodeMap.values()].map(n => ({
+      id: n.uuid, label: n.name, title: n.name,
+    })));
 
     // Build DataSet + lookup map at the same time
     _edgeDataMap = {};

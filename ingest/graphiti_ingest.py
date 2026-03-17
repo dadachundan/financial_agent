@@ -969,6 +969,13 @@ def main() -> None:
     # Flush and shut down Langfuse exporter threads so no spans are lost on exit
     langfuse_monitor.shutdown()
 
+    # KuzuDB and the embedding model leave leaked semaphores / shared-memory
+    # objects that cause a segfault when Python's GC runs C extension finalizers
+    # at process exit.  All data is committed to disk at this point, so it is
+    # safe to bypass the finalizers with os._exit().
+    import os as _os
+    _os._exit(0)
+
 
 async def _ingest_all_items(items: list[dict]) -> tuple[int, int]:
     return await _ingest_items(items)
