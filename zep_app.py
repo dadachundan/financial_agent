@@ -370,17 +370,20 @@ def ingest_stream():
 
 @zep_bp.route("/upload-pdf", methods=["POST"])
 def upload_pdf():
-    """Accept a PDF upload and index it into graphiti (SSE stream response)."""
-    import pdfplumber
-
+    """Accept a PDF or HTML upload and index it into graphiti (SSE stream response)."""
     f = request.files.get("pdf")
     if f is None or not f.filename:
-        return jsonify({"error": "No PDF file provided"}), 400
+        return jsonify({"error": "No file provided"}), 400
 
     orig_name = f.filename
+    ext = Path(orig_name).suffix.lower()
+    is_html = ext in (".html", ".htm")
+    is_pdf  = ext == ".pdf"
+    if not is_html and not is_pdf:
+        return jsonify({"error": "Only PDF and HTML files are supported"}), 400
 
     # Save to temp file before entering the generator (request data is consumed here)
-    tmp = tempfile.NamedTemporaryFile(suffix=".pdf", delete=False)
+    tmp = tempfile.NamedTemporaryFile(suffix=ext, delete=False)
     f.save(tmp.name)
     tmp.close()
     tmp_path = Path(tmp.name)
@@ -389,13 +392,18 @@ def upload_pdf():
         yield f"data: Received: {orig_name}\n\n"
         yield "data: Extracting text…\n\n"
         try:
-            pages = []
-            with pdfplumber.open(tmp_path) as pdf:
-                for page in pdf.pages:
-                    t = page.extract_text()
-                    if t:
-                        pages.append(t.strip())
-            text = "\n\n".join(pages)[:80_000]
+            if is_html:
+                from ingest.graphiti_ingest import _clean_html_to_text
+                text = _clean_html_to_text(tmp_path)[:80_000]
+            else:
+                import pdfplumber
+                pages = []
+                with pdfplumber.open(tmp_path) as pdf:
+                    for page in pdf.pages:
+                        t = page.extract_text()
+                        if t:
+                            pages.append(t.strip())
+                text = "\n\n".join(pages)[:80_000]
         except Exception as e:
             yield f"data: ✗ Text extraction failed: {e}\n\n"
             yield "data: done: true\n\n"
@@ -403,11 +411,13 @@ def upload_pdf():
             return
 
         if len(text) < 200:
-            yield "data: ⚠  No extractable text (image-only or DRM PDF)\n\n"
+            kind = "HTML" if is_html else "PDF"
+            yield f"data: ⚠  No extractable text from {kind}\n\n"
             yield "data: done: true\n\n"
             tmp_path.unlink(missing_ok=True)
             return
 
+        kind_label = "HTML" if is_html else "PDF"
         yield f"data: {len(text):,} chars extracted. Indexing…\n\n"
 
         try:
@@ -418,12 +428,14 @@ def upload_pdf():
                 _graphiti = _gg()
                 g = _graphiti
 
+            from graphiti_core.nodes import EpisodeType
             result = asyncio.run(g.add_episode(
                 name=f"upload_{Path(orig_name).stem}",
                 episode_body=text,
-                source_description=f"PDF: {orig_name}",
+                source_description=f"{kind_label}: {orig_name}",
                 reference_time=datetime.now(timezone.utc),
                 group_id=GROUP_ID,
+                source=EpisodeType.text,
             ))
             n_nodes = len(result.nodes)
             n_edges = len(result.edges)
