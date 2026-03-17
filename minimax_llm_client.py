@@ -282,8 +282,18 @@ class MiniMaxLLMClient(LLMClient):
                         "\n   - Company IS_SUBSIDIARY_OF or SPUN_OFF_FROM company"
                         "\n\n4. relation_type should be a short ALL_CAPS verb phrase (e.g. MADE_BY, COMPETES_WITH)."
                     )
-                # For entity extraction: companies, products, and named markets only
+                # For entity extraction: replace the generic graphiti system prompt with
+                # a financial-research-specific one, then append schema + rules.
                 if response_model.__name__ == "ExtractedEntities":
+                    content = (
+                        "You are a financial research analyst AI that extracts named entities "
+                        "from sell-side research reports, SEC filings, earnings releases, and "
+                        "financial news documents. "
+                        "The text comes from PDFs or HTML pages — NOT from a conversation. "
+                        "There is no 'speaker', no 'current message', and no dialogue. "
+                        "Your only task is to identify companies, branded products, technologies, "
+                        "and named business segments that are subjects of financial analysis."
+                    )
                     # Inject user-isolated entities so LLM skips re-discovering them
                     try:
                         import graph_mirror as _gm
@@ -323,8 +333,14 @@ class MiniMaxLLMClient(LLMClient):
                         "\n- Countries, regions, or geographies (China, United States, Europe, Taiwan)"
                         "\n- Financial indices, benchmarks, or ratings (S&P 500, NASDAQ, Moody's)"
                         "\n- Generic financial instruments (convertible notes, bonds, equity)"
-                        "\n- Human personal names (executives, analysts, lawyers, investors)"
-                        "\n  Examples: Jensen Huang, Tim Cook, Timothy S. Teter"
+                        "\n- Human personal names: executives, analysts, authors, lawyers, investors"
+                        "\n  Examples: Jensen Huang, Tim Cook, Lachlan Shaw, Fintan Collins"
+                        "\n  Even if a person is important — extract the COMPANY they lead, not their name."
+                        "\n- Broker or bank subsidiary entities from disclaimer sections:"
+                        "\n  e.g. 'UBS Securities Australia Ltd', 'J.P. Morgan Securities Asia Limited',"
+                        "\n  'Macquarie Capital (USA) Inc.', 'Goldman Sachs India Securities Private Ltd'."
+                        "\n  Pattern: '[Bank] [Country/City] [Securities/Brokerage/Capital/Banking]'."
+                        "\n  These appear in the legal disclosure pages — NEVER extract them."
                         "\n- Legal cases: 'v.', 'In re', 'Derivative Litigation', 'Class Action'"
                         "\n- SEC rules and rule numbers (Rule 10b-5, Regulation S-K, etc.)"
                         "\n- SEC filing form types (Form 10-K, Form 10-Q, Annual Report, etc.)"
