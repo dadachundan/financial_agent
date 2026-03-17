@@ -244,13 +244,21 @@
 <script>
 // ── Scope selector ─────────────────────────────────────────────────────────
 let currentScope = 'edges';
+let _cachedResults = null;   // last fetch result — re-used when only scope changes
+let _cachedQuery   = '';
+
 document.querySelectorAll('.scope-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.scope-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     currentScope = btn.dataset.scope;
+    // Re-render from cache; only re-fetch if no cached data for current query
     const q = document.getElementById('searchInput').value.trim();
-    if (q) doSearch();
+    if (_cachedResults && _cachedQuery === q) {
+      renderResults(_cachedResults, q);   // instant, same data
+    } else if (q) {
+      doSearch();
+    }
   });
 });
 
@@ -269,8 +277,10 @@ async function doSearch() {
   btn.disabled = true;
 
   try {
-    const res  = await fetch(`/search?q=${encodeURIComponent(q)}&scope=${currentScope}&limit=40`);
+    const res  = await fetch(`/search?q=${encodeURIComponent(q)}&limit=40`);
     const data = await res.json();
+    _cachedResults = data;
+    _cachedQuery   = q;
     renderResults(data, q);
   } catch(e) {
     showMsg(`Error: ${e.message}`);
@@ -421,6 +431,8 @@ async function doSearchAll() {
   try {
     const res  = await fetch(`/search?q=${encodeURIComponent(q)}&limit=40`);
     const data = await res.json();
+    _cachedResults = data;
+    _cachedQuery   = q;
     renderResults(data, q, true);  // forceAll = true → show all sections
   } catch(e) {
     showMsg(`Error: ${e.message}`);
