@@ -175,6 +175,7 @@ def _node_to_dict(node) -> dict:
 
 def _edge_to_dict(edge) -> dict:
     """Serialise a graphiti EntityEdge."""
+    ep_list = getattr(edge, "episodes", None) or []
     return {
         "uuid":             edge.uuid,
         "name":             edge.name or "",
@@ -183,6 +184,7 @@ def _edge_to_dict(edge) -> dict:
         "target_node_uuid": edge.target_node_uuid or "",
         "valid_at":         str(edge.valid_at) if getattr(edge, "valid_at", None) else None,
         "score":            getattr(edge, "score", None),
+        "_episode_uuids":   [str(u) for u in ep_list],  # resolved to sources below
     }
 
 
@@ -254,6 +256,13 @@ def search():
             for e in edges:
                 e["source_node_name"] = uuid_to_name.get(e["source_node_uuid"], "")
                 e["target_node_name"] = uuid_to_name.get(e["target_node_uuid"], "")
+            # Resolve episode UUIDs → source_desc strings via mirror
+            mirror = _get_mirror()
+            for e in edges:
+                ep_uuids = e.pop("_episode_uuids", [])
+                e["sources"] = _mirror.resolve_edge_sources(
+                    mirror, json.dumps(ep_uuids)
+                ) if ep_uuids else []
             return jsonify({"nodes": nodes, "edges": edges, "episodes": episodes,
                             "_source": "graphiti"})
         except Exception as _ge:
@@ -388,6 +397,23 @@ def upload_pdf():
         yield "data: done: true\n\n"
 
     return Response(_gen(), mimetype="text/event-stream")
+
+
+@zep_bp.route("/refresh-mirror", methods=["POST"])
+def refresh_mirror():
+    """Force a full re-backfill from KuzuDB into the mirror (updates episodes_json etc.)."""
+    try:
+        import kuzu as _kuzu
+        existing_kuzu_conn = None
+        g = _get_graphiti()
+        if g is not None and hasattr(g, "graph_driver") and hasattr(g.graph_driver, "db"):
+            existing_kuzu_conn = _kuzu.Connection(g.graph_driver.db)
+        conn = _get_mirror()
+        ne, ned = _mirror.backfill_from_kuzu(conn, GRAPH_DIR, GROUP_ID,
+                                              kuzu_conn=existing_kuzu_conn)
+        return jsonify({"ok": True, "entities": ne, "edges": ned})
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)}), 500
 
 
 @zep_bp.route("/clear", methods=["POST"])

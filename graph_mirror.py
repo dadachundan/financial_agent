@@ -57,14 +57,15 @@ CREATE TABLE IF NOT EXISTS entities (
 );
 
 CREATE TABLE IF NOT EXISTS edges (
-    uuid        TEXT PRIMARY KEY,
-    name        TEXT DEFAULT '',
-    fact        TEXT DEFAULT '',
-    src_uuid    TEXT DEFAULT '',
-    src_name    TEXT DEFAULT '',
-    tgt_uuid    TEXT DEFAULT '',
-    tgt_name    TEXT DEFAULT '',
-    updated_at  TEXT DEFAULT (datetime('now'))
+    uuid          TEXT PRIMARY KEY,
+    name          TEXT DEFAULT '',
+    fact          TEXT DEFAULT '',
+    src_uuid      TEXT DEFAULT '',
+    src_name      TEXT DEFAULT '',
+    tgt_uuid      TEXT DEFAULT '',
+    tgt_name      TEXT DEFAULT '',
+    episodes_json TEXT DEFAULT '[]',
+    updated_at    TEXT DEFAULT (datetime('now'))
 );
 
 -- FTS5 for entity name / summary search
@@ -144,6 +145,10 @@ CREATE TRIGGER IF NOT EXISTS communities_au
 
 def ensure_schema(conn: sqlite3.Connection) -> None:
     conn.executescript(_DDL)
+    # Migrate existing DBs: add episodes_json column if absent
+    existing = {r[1] for r in conn.execute("PRAGMA table_info(edges)").fetchall()}
+    if "episodes_json" not in existing:
+        conn.execute("ALTER TABLE edges ADD COLUMN episodes_json TEXT DEFAULT '[]'")
     conn.commit()
 
 
@@ -187,6 +192,8 @@ def upsert_edges(conn: sqlite3.Connection, edges: list,
     for e in edges:
         src_uuid = str(e.source_node_uuid or "")
         tgt_uuid = str(e.target_node_uuid or "")
+        ep_list  = getattr(e, "episodes", None) or []
+        ep_json  = json.dumps([str(u) for u in ep_list])
         rows.append((
             str(e.uuid),
             e.name or "",
@@ -195,19 +202,21 @@ def upsert_edges(conn: sqlite3.Connection, edges: list,
             name_map.get(src_uuid, ""),
             tgt_uuid,
             name_map.get(tgt_uuid, ""),
+            ep_json,
         ))
     if rows:
         conn.executemany(
-            """INSERT INTO edges(uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name)
-               VALUES (?,?,?,?,?,?,?)
+            """INSERT INTO edges(uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name, episodes_json)
+               VALUES (?,?,?,?,?,?,?,?)
                ON CONFLICT(uuid) DO UPDATE SET
-                 name      = excluded.name,
-                 fact      = excluded.fact,
-                 src_uuid  = excluded.src_uuid,
-                 src_name  = CASE WHEN excluded.src_name != '' THEN excluded.src_name ELSE src_name END,
-                 tgt_uuid  = excluded.tgt_uuid,
-                 tgt_name  = CASE WHEN excluded.tgt_name != '' THEN excluded.tgt_name ELSE tgt_name END,
-                 updated_at = datetime('now')""",
+                 name          = excluded.name,
+                 fact          = excluded.fact,
+                 src_uuid      = excluded.src_uuid,
+                 src_name      = CASE WHEN excluded.src_name != '' THEN excluded.src_name ELSE src_name END,
+                 tgt_uuid      = excluded.tgt_uuid,
+                 tgt_name      = CASE WHEN excluded.tgt_name != '' THEN excluded.tgt_name ELSE tgt_name END,
+                 episodes_json = CASE WHEN excluded.episodes_json != '[]' THEN excluded.episodes_json ELSE episodes_json END,
+                 updated_at    = datetime('now')""",
             rows,
         )
         conn.commit()
@@ -271,19 +280,38 @@ def get_entities(conn: sqlite3.Connection, limit: int = 200,
     return items, next_cursor
 
 
+def resolve_edge_sources(conn: sqlite3.Connection, episodes_json: str) -> list[str]:
+    """Return list of source_desc strings for a JSON array of episode UUIDs."""
+    try:
+        uuids = json.loads(episodes_json or "[]")
+    except Exception:
+        return []
+    if not uuids:
+        return []
+    ph = ",".join("?" * len(uuids))
+    rows = conn.execute(
+        f"SELECT source_desc FROM episodes WHERE uuid IN ({ph})", uuids
+    ).fetchall()
+    return [r[0] for r in rows if r[0]]
+
+
 def get_edges(conn: sqlite3.Connection, limit: int = 300,
               cursor: Optional[str] = None) -> tuple[list[dict], Optional[str]]:
     if cursor:
         rows = conn.execute(
-            "SELECT uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name "
+            "SELECT uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name, episodes_json "
             "FROM edges WHERE uuid > ? ORDER BY uuid LIMIT ?", (cursor, limit)
         ).fetchall()
     else:
         rows = conn.execute(
-            "SELECT uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name "
+            "SELECT uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name, episodes_json "
             "FROM edges ORDER BY uuid LIMIT ?", (limit,)
         ).fetchall()
-    items = [dict(r) for r in rows]
+    items = []
+    for r in rows:
+        d = dict(r)
+        d["sources"] = resolve_edge_sources(conn, d.pop("episodes_json", "[]"))
+        items.append(d)
     next_cursor = items[-1]["uuid"] if len(items) == limit else None
     return items, next_cursor
 
@@ -358,6 +386,7 @@ def search(conn: sqlite3.Connection, query: str,
         edge_rows = conn.execute(
             """SELECT ed.uuid, ed.name, ed.fact,
                       ed.src_uuid, ed.src_name, ed.tgt_uuid, ed.tgt_name,
+                      ed.episodes_json,
                       bm25(edges_fts) AS score
                FROM edges_fts
                JOIN edges ed ON edges_fts.rowid = ed.rowid
@@ -376,6 +405,7 @@ def search(conn: sqlite3.Connection, query: str,
          "source_node_name": r["src_name"] or "",
          "target_node_uuid": r["tgt_uuid"],
          "target_node_name": r["tgt_name"] or "",
+         "sources":          resolve_edge_sources(conn, r["episodes_json"] or "[]"),
          "score":            r["score"]}
         for r in edge_rows
     ]
@@ -761,11 +791,13 @@ def backfill_from_kuzu(mirror_conn: sqlite3.Connection,
         rows = _rows(conn.execute(
             "MATCH (s:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(t:Entity) "
             "WHERE e.group_id = $gid "
-            "RETURN e.uuid, e.name, e.fact, s.uuid AS src, s.name AS src_name, "
+            "RETURN e.uuid, e.name, e.fact, e.episodes, s.uuid AS src, s.name AS src_name, "
             "       t.uuid AS tgt, t.name AS tgt_name",
             {"gid": group_id},
         ))
         for r in rows:
+            ep_raw  = r.get("e.episodes") or []
+            ep_json = json.dumps([str(u) for u in ep_raw]) if ep_raw else "[]"
             batch.append((
                 r["e.uuid"] or "",
                 r["e.name"] or "",
@@ -774,15 +806,17 @@ def backfill_from_kuzu(mirror_conn: sqlite3.Connection,
                 r.get("src_name") or "",
                 r.get("tgt") or "",
                 r.get("tgt_name") or "",
+                ep_json,
             ))
         if batch:
             mirror_conn.executemany(
-                """INSERT INTO edges(uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name)
-                   VALUES (?,?,?,?,?,?,?)
+                """INSERT INTO edges(uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name, episodes_json)
+                   VALUES (?,?,?,?,?,?,?,?)
                    ON CONFLICT(uuid) DO UPDATE SET
                      name=excluded.name, fact=excluded.fact,
                      src_uuid=excluded.src_uuid, src_name=excluded.src_name,
-                     tgt_uuid=excluded.tgt_uuid, tgt_name=excluded.tgt_name""",
+                     tgt_uuid=excluded.tgt_uuid, tgt_name=excluded.tgt_name,
+                     episodes_json=CASE WHEN excluded.episodes_json != '[]' THEN excluded.episodes_json ELSE episodes_json END""",
                 batch,
             )
             mirror_conn.commit()
