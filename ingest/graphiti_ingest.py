@@ -737,9 +737,13 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
                 langfuse_monitor.flush()  # push completed doc traces immediately
 
     except KeyboardInterrupt:
-        print(f"\n⚠  Interrupted. Closing database … (ok={ok} skip={skipped})", flush=True)
+        print(f"\n⚠  Interrupted. (ok={ok} skip={skipped})", flush=True)
     finally:
-        await graphiti.close()
+        # graphiti.close() calls KuzuDB shutdown which segfaults on exit due to
+        # leaked semaphores in the C extension.  Skip it — KuzuDB flushes WAL
+        # to disk after each transaction, so all committed data is safe.
+        # We call os._exit() immediately after asyncio.run() returns instead.
+        pass
 
     return ok, skipped
 
