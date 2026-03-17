@@ -52,7 +52,8 @@ _current_span: contextvars.ContextVar[Any | None] = contextvars.ContextVar(
 
 # ── Module-level state ─────────────────────────────────────────────────────────
 _lf: "Langfuse | None" = None  # singleton Langfuse client
-_session_id: str = ""          # groups all traces for one ingest run
+_session_id: str = ""          # current document's session id
+_base_label: str = ""          # "ingest YYYY-MM-DD HH:MM" set at init
 _enabled: bool = False
 
 
@@ -77,7 +78,7 @@ def _load_config() -> dict:
 
 def init(session_label: str = "") -> bool:
     """Initialise Langfuse from config.py.  Returns True if enabled."""
-    global _lf, _session_id, _enabled
+    global _lf, _session_id, _base_label, _enabled
 
     cfg = _load_config()
     if not cfg.get("public_key") or not cfg.get("secret_key"):
@@ -91,15 +92,15 @@ def init(session_label: str = "") -> bool:
             secret_key=cfg["secret_key"],
             host=cfg["host"],
         )
-        # session_id groups all document traces from this ingest run
-        ts = int(time.time())
-        _session_id = f"{session_label or 'ingest'}-{ts}"
+        # base label is reused as the prefix for every per-document session id
+        _base_label = session_label or "ingest"
+        _session_id = _base_label  # overwritten per document in set_document()
         _enabled = True
         logger.info(
-            "Langfuse monitoring enabled → %s  session=%s", cfg["host"], _session_id
+            "Langfuse monitoring enabled → %s  base=%s", cfg["host"], _base_label
         )
         print(
-            f"  📊 Langfuse monitoring enabled → {cfg['host']}  session={_session_id}",
+            f"  📊 Langfuse monitoring enabled → {cfg['host']}  base={_base_label}",
             flush=True,
         )
         return True
@@ -119,15 +120,22 @@ def set_document(label: str):
 
     Call before add_episode(); pass the returned token to clear_document() afterwards.
     When Langfuse is disabled, returns None (clear_document handles None gracefully).
+    Each document gets its own Langfuse session named:
+        "ingest YYYY-MM-DD HH:MM <document label>"
     """
+    global _session_id
+
     if not _enabled or _lf is None:
         return None
 
     try:
+        # Build a per-document session id so Langfuse shows a readable session name.
+        _session_id = f"{_base_label} {label}"
+
         # start_observation without trace_context creates a new root span → new Langfuse trace
         span = _lf.start_observation(name=label, as_type="span")
 
-        # Tag the span with our session_id so all documents in this ingest run are grouped.
+        # Tag the span with our session_id so it appears under the named session.
         # "session.id" is the OTel attribute Langfuse uses to attach spans to sessions.
         try:
             span._otel_span.set_attribute("session.id", _session_id)
