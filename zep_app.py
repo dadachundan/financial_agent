@@ -316,6 +316,15 @@ def deprecate_edge(uuid):
     return jsonify({"ok": False, "error": "edge not found"}), 404
 
 
+@zep_bp.route("/entities/<uuid>/isolate", methods=["POST"])
+def isolate_entity(uuid):
+    """Mark an entity as isolated (hidden from UI) and deprecate all its edges."""
+    found = _mirror.isolate_entity(_get_mirror(), uuid)
+    if found:
+        return jsonify({"ok": True, "uuid": uuid})
+    return jsonify({"ok": False, "error": "entity not found"}), 404
+
+
 @zep_bp.route("/stats")
 def stats():
     s = _mirror.get_stats(_get_mirror())

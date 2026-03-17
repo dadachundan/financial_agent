@@ -53,6 +53,7 @@ CREATE TABLE IF NOT EXISTS entities (
     name        TEXT NOT NULL,
     labels_json TEXT DEFAULT '[]',
     summary     TEXT DEFAULT '',
+    isolated    INTEGER DEFAULT 0,
     updated_at  TEXT DEFAULT (datetime('now'))
 );
 
@@ -148,13 +149,16 @@ CREATE TRIGGER IF NOT EXISTS communities_au
 def ensure_schema(conn: sqlite3.Connection) -> None:
     conn.executescript(_DDL)
     # Migrate existing DBs: add columns if absent
-    existing = {r[1] for r in conn.execute("PRAGMA table_info(edges)").fetchall()}
-    if "episodes_json" not in existing:
+    existing_edges = {r[1] for r in conn.execute("PRAGMA table_info(edges)").fetchall()}
+    if "episodes_json" not in existing_edges:
         conn.execute("ALTER TABLE edges ADD COLUMN episodes_json TEXT DEFAULT '[]'")
-    if "deprecated" not in existing:
+    if "deprecated" not in existing_edges:
         conn.execute("ALTER TABLE edges ADD COLUMN deprecated INTEGER DEFAULT 0")
-    if "deprecated_reason" not in existing:
+    if "deprecated_reason" not in existing_edges:
         conn.execute("ALTER TABLE edges ADD COLUMN deprecated_reason TEXT DEFAULT ''")
+    existing_ent = {r[1] for r in conn.execute("PRAGMA table_info(entities)").fetchall()}
+    if "isolated" not in existing_ent:
+        conn.execute("ALTER TABLE entities ADD COLUMN isolated INTEGER DEFAULT 0")
     conn.commit()
 
 
@@ -257,8 +261,8 @@ def upsert_episode(conn: sqlite3.Connection, episode) -> None:
 
 
 def get_stats(conn: sqlite3.Connection) -> dict:
-    n  = conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
-    e  = conn.execute("SELECT COUNT(*) FROM edges").fetchone()[0]
+    n  = conn.execute("SELECT COUNT(*) FROM entities WHERE (isolated=0 OR isolated IS NULL)").fetchone()[0]
+    e  = conn.execute("SELECT COUNT(*) FROM edges WHERE (deprecated=0 OR deprecated IS NULL)").fetchone()[0]
     ep = conn.execute("SELECT COUNT(*) FROM episodes").fetchone()[0]
     c  = conn.execute("SELECT COUNT(*) FROM communities").fetchone()[0]
     return {"node_count": n, "edge_count": e, "episode_count": ep, "community_count": c}
@@ -269,12 +273,13 @@ def get_entities(conn: sqlite3.Connection, limit: int = 200,
     if cursor:
         rows = conn.execute(
             "SELECT uuid, name, labels_json, summary FROM entities "
-            "WHERE uuid > ? ORDER BY uuid LIMIT ?", (cursor, limit)
+            "WHERE uuid > ? AND (isolated=0 OR isolated IS NULL) ORDER BY uuid LIMIT ?",
+            (cursor, limit)
         ).fetchall()
     else:
         rows = conn.execute(
             "SELECT uuid, name, labels_json, summary FROM entities "
-            "ORDER BY uuid LIMIT ?", (limit,)
+            "WHERE (isolated=0 OR isolated IS NULL) ORDER BY uuid LIMIT ?", (limit,)
         ).fetchall()
     items = [
         {"uuid": r["uuid"], "name": r["name"],
@@ -329,6 +334,39 @@ def deprecate_edge(conn: sqlite3.Connection, uuid: str, reason: str = "RELATION_
     )
     conn.commit()
     return cur.rowcount > 0
+
+
+def isolate_entity(conn: sqlite3.Connection, uuid: str) -> bool:
+    """Mark an entity as isolated (hidden from UI) and deprecate all its edges.
+
+    Returns True if the entity was found and updated.
+    Isolated entities are excluded from all search results, entity browsers,
+    stats counts, and LLM entity extraction prompts.
+    """
+    cur = conn.execute(
+        "UPDATE entities SET isolated=1, updated_at=datetime('now') WHERE uuid=?",
+        (uuid,),
+    )
+    if cur.rowcount == 0:
+        conn.commit()
+        return False
+    # Deprecate every edge that involves this entity
+    conn.execute(
+        """UPDATE edges
+              SET deprecated=1, deprecated_reason='ENTITY_ISOLATED', updated_at=datetime('now')
+            WHERE src_uuid=? OR tgt_uuid=?""",
+        (uuid, uuid),
+    )
+    conn.commit()
+    return True
+
+
+def get_isolated_entity_names(conn: sqlite3.Connection) -> list:
+    """Return names of all isolated entities (used to inject into LLM prompts)."""
+    rows = conn.execute(
+        "SELECT name FROM entities WHERE isolated=1 ORDER BY name"
+    ).fetchall()
+    return [r[0] for r in rows]
 
 
 def get_edges(conn: sqlite3.Connection, limit: int = 300,
@@ -399,7 +437,7 @@ def search(conn: sqlite3.Connection, query: str,
         # Try phrase first; if no results the caller will widen to AND/OR
         fts_query = f"{phrase} OR ({and_part}) OR ({or_part})"
 
-    # Entity search
+    # Entity search (exclude isolated)
     try:
         entity_rows = conn.execute(
             """SELECT e.uuid, e.name, e.labels_json, e.summary,
@@ -407,6 +445,7 @@ def search(conn: sqlite3.Connection, query: str,
                FROM entities_fts
                JOIN entities e ON entities_fts.rowid = e.rowid
                WHERE entities_fts MATCH ?
+                 AND (e.isolated = 0 OR e.isolated IS NULL)
                ORDER BY score LIMIT ?""",
             (fts_query, limit),
         ).fetchall()
@@ -421,7 +460,7 @@ def search(conn: sqlite3.Connection, query: str,
         for r in entity_rows
     ]
 
-    # Edge search (exclude deprecated edges)
+    # Edge search (exclude deprecated + edges involving isolated entities)
     try:
         edge_rows = conn.execute(
             """SELECT ed.uuid, ed.name, ed.fact,
@@ -432,6 +471,8 @@ def search(conn: sqlite3.Connection, query: str,
                JOIN edges ed ON edges_fts.rowid = ed.rowid
                WHERE edges_fts MATCH ?
                  AND (ed.deprecated = 0 OR ed.deprecated IS NULL)
+                 AND NOT EXISTS (SELECT 1 FROM entities WHERE uuid=ed.src_uuid AND isolated=1)
+                 AND NOT EXISTS (SELECT 1 FROM entities WHERE uuid=ed.tgt_uuid AND isolated=1)
                ORDER BY score LIMIT ?""",
             (fts_query, limit),
         ).fetchall()
