@@ -361,6 +361,33 @@ def isolate_entity(conn: sqlite3.Connection, uuid: str) -> bool:
     return True
 
 
+def get_entity_edges(conn: sqlite3.Connection, entity_uuid: str) -> list:
+    """Return all non-deprecated edges directly connected to an entity (by UUID).
+
+    Used when clicking a graph node — guarantees results match exactly what
+    the graph visualisation shows, regardless of entity name or FTS index state.
+    """
+    rows = conn.execute(
+        """SELECT uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name,
+                  episodes_json, deprecated, deprecated_reason
+             FROM edges
+            WHERE (src_uuid=? OR tgt_uuid=?)
+              AND (deprecated=0 OR deprecated IS NULL)
+            ORDER BY uuid""",
+        (entity_uuid, entity_uuid),
+    ).fetchall()
+    items = []
+    for r in rows:
+        d = dict(r)
+        d["sources"] = resolve_edge_sources(conn, d.pop("episodes_json", "[]"))
+        d["source_node_uuid"] = d.pop("src_uuid", "")
+        d["source_node_name"] = d.pop("src_name", "")
+        d["target_node_uuid"] = d.pop("tgt_uuid", "")
+        d["target_node_name"] = d.pop("tgt_name", "")
+        items.append(d)
+    return items
+
+
 def get_isolated_entity_names(conn: sqlite3.Connection) -> list:
     """Return names of all isolated entities (used to inject into LLM prompts)."""
     rows = conn.execute(
@@ -492,7 +519,47 @@ def search(conn: sqlite3.Connection, query: str,
         for r in edge_rows
     ]
 
-    return {"nodes": nodes, "edges": edges, "episodes": []}
+    # ── Episodes: collect from matched edges + direct source_desc search ──────
+    # 1. Gather all episode UUIDs referenced by the matched edges
+    ep_uuids: set[str] = set()
+    for r in edge_rows:
+        try:
+            ep_uuids.update(str(u) for u in json.loads(r["episodes_json"] or "[]"))
+        except Exception:
+            pass
+
+    # 2. Also search source_desc directly (handles queries in any language
+    #    that match the document name/description even without FTS)
+    ep_by_desc: list = []
+    try:
+        like_q = f"%{query}%"
+        ep_by_desc = conn.execute(
+            "SELECT uuid, name, source_desc FROM episodes "
+            "WHERE source_desc LIKE ? OR name LIKE ? LIMIT ?",
+            (like_q, like_q, limit),
+        ).fetchall()
+    except Exception:
+        pass
+
+    for r in ep_by_desc:
+        ep_uuids.add(r[0])
+
+    # 3. Fetch full episode rows for all collected UUIDs
+    episodes: list[dict] = []
+    if ep_uuids:
+        ph = ",".join("?" * len(ep_uuids))
+        ep_rows = conn.execute(
+            f"SELECT uuid, name, source_desc FROM episodes WHERE uuid IN ({ph})",
+            list(ep_uuids),
+        ).fetchall()
+        episodes = [
+            {"uuid": r[0], "name": r[1] or "",
+             "source_desc": r[2] or "",
+             "url": _episode_url(r[1] or "")}
+            for r in ep_rows
+        ]
+
+    return {"nodes": nodes, "edges": edges, "episodes": episodes}
 
 
 # ── Community subgraph — label propagation + LLM summaries ───────────────────
