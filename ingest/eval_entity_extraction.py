@@ -77,33 +77,82 @@ _PERSON_FAMILY_NAMES = {
 }
 
 
+# Known brand / company first-words that rule out person names
+_KNOWN_BRANDS = {
+    "apple","google","microsoft","amazon","meta","intel","nvidia","amd","tsmc","arm",
+    "qualcomm","broadcom","samsung","sony","dell","hp","ibm","oracle","salesforce",
+    "adobe","netflix","spotify","uber","lyft","airbnb","twitter","linkedin","zoom",
+    "slack","palantir","snowflake","databricks","mongodb","redis","elastic","hashicorp",
+    "softbank","alibaba","baidu","tencent","xiaomi","huawei","lenovo","foxconn",
+    "caterpillar","boeing","lockheed","raytheon","northrop","eaton","emerson","honeywell",
+    "fluid","grace","neural","data","professional","cloud","artificial","enterprise",
+    "advanced","digital","general","national","american","global","international","first",
+    "new","united","federal","standard","western","eastern","northern","southern","central",
+    "microsoft","dell","sony","fluid","angular","vivid",
+}
+
+# Corporate / product suffix words — if present, it's not a person
+_CORP_SUFFIXES = {
+    "inc","corp","ltd","co","group","capital","holdings","technology","technologies",
+    "systems","solutions","services","global","international","financial","resources",
+    "energy","medical","sciences","platform","markets","analytics","ventures","partners",
+    "industries","enterprises","associates","investments","management","consulting",
+    "semiconductor","instruments","electronics","networks","communications","software",
+    "hardware","cloud","computing","intelligence","labs","laboratory","research","studio",
+    "studios","games","media","entertainment","press","publishing","books","films",
+    "motors","automotive","aerospace","defense","pharma","bio","biotech","healthcare",
+    "bank","insurance","securities","fund","trust","wealth","asset","investment",
+    "superchips","frames","hopper","visualization","center","store","pay","music","watch",
+    "ignite","vision","pro","max","ultra","plus","air","mini","se",
+}
+
+
 def _is_person_name(name: str) -> bool:
-    """Multi-signal person name classifier."""
+    """
+    Classify a string as a human person name.
+    Uses dictionary matching only — no broad regex — to avoid false positives
+    on product names like 'Apple Watch' or 'Grace Hopper Superchips'.
+    """
     name = name.strip()
-    # 1. Regex: title + two proper-noun words (Western style)
-    if PERSON_PATTERN.match(name):
+
+    # Honorific prefix is a strong signal
+    if re.match(r"^(Mr\.|Ms\.|Dr\.|Mrs\.|Prof\.|Sir\s)", name):
         return True
-    # 2. Honorific prefix
-    if re.match(r"^(Mr\.|Ms\.|Dr\.|Mrs\.|Prof\.)\s", name):
-        return True
-    # 3. Two-word name where one word is a known person first/family name
+
     words = name.split()
-    if 2 <= len(words) <= 3:
-        lower_words = [w.lower().rstrip(".,") for w in words]
-        if any(w in _PERSON_FIRST_NAMES or w in _PERSON_FAMILY_NAMES for w in lower_words):
-            # Check all words are proper-noun capitalised (not an org)
-            if all(re.match(r"^[A-Z]", w) for w in words):
-                # Exclude obvious company patterns
-                if not re.search(r"\b(Inc|Corp|Ltd|Co|Group|Capital|Holdings|Technology|Technologies|Systems|Solutions|Services|Global|International|Financial|Resources|Energy|Medical|Sciences|Platform|Markets|Analytics|Ventures|Partners)\b", name):
-                    return True
+    if not (2 <= len(words) <= 3):
+        return False
+
+    # All words must start with uppercase
+    if not all(re.match(r"^[A-Z]", w) for w in words):
+        return False
+
+    lower_words = [re.sub(r"[.,;]$", "", w.lower()) for w in words]
+
+    # Rule out if any word is a known brand or corporate suffix
+    if any(w in _KNOWN_BRANDS for w in lower_words):
+        return False
+    if any(w in _CORP_SUFFIXES for w in lower_words):
+        return False
+    # Rule out if any word has digits (product model numbers)
+    if any(re.search(r"\d", w) for w in words):
+        return False
+    # Rule out ALL-CAPS words (ticker symbols / acronyms)
+    if any(w.isupper() and len(w) > 1 for w in words):
+        return False
+
+    # Require at least one word to be a known personal first or last name
+    if any(w in _PERSON_FIRST_NAMES or w in _PERSON_FAMILY_NAMES for w in lower_words):
+        return True
+
     return False
 
 NOISE_PATTERNS: list[tuple[str, re.Pattern]] = [
-    ("person_name",   PERSON_PATTERN),
-    ("dollar_amount", re.compile(r"^\$[\d,.]+")),
-    ("generic_acronym", re.compile(r"^(AI|GPU|VR|AR|HPC|IoT|ML|API|SDK|CFO|CEO|COO|CTO|CRO|EVP|SVP|VP|EPS|R&D|CapEx|OpEx)$")),
-    ("geography",     re.compile(r"^(China|United States|USA|US|Europe|Asia|Taiwan|Japan|Korea|India|Global|International|North America|South America|Middle East|Africa|Pacific|APAC|EMEA)$", re.I)),
-    ("sec_boilerplate", re.compile(r"^(Form 10-K|Form 10-Q|Annual Report|Quarterly Report|Exhibit|SEC Filing|8-K|GAAP|Non-GAAP|IFRS|FASB|PCAOB|Q[1-4] 20\d\d|FY\d\d|fiscal 20\d\d)$", re.I)),
+    # person_name is checked separately by _is_person_name() — not here
+    ("dollar_amount",    re.compile(r"^\$[\d,.]+")),
+    ("generic_acronym",  re.compile(r"^(AI|GPU|VR|AR|HPC|IoT|ML|API|SDK|CFO|CEO|COO|CTO|EPS|R&D|CapEx|OpEx)$")),
+    ("geography",        re.compile(r"^(China|United States|USA|US|Europe|Asia|Taiwan|Japan|Korea|India|Global|North America|South America|Middle East|Africa|Pacific|APAC|EMEA)$", re.I)),
+    ("sec_boilerplate",  re.compile(r"^(Form 10-K|Form 10-Q|Annual Report|Quarterly Report|Exhibit|8-K|GAAP|Non-GAAP|IFRS|FASB|PCAOB|Q[1-4] 20\d\d|FY\d\d|fiscal 20\d\d)$", re.I)),
     ("financial_figure", re.compile(r".*\b(million|billion|trillion)\b", re.I)),
 ]
 
@@ -122,7 +171,7 @@ def _html_to_text(path: Path, max_chars: int = 12_000) -> str:
 
 def _classify_is_person(name: str) -> bool:
     """True if entity name matches person-name heuristic."""
-    return bool(PERSON_PATTERN.match(name.strip()))
+    return _is_person_name(name)
 
 
 def _classify_noise_type(name: str) -> str | None:
