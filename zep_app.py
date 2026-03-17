@@ -464,6 +464,75 @@ def refresh_mirror():
         return jsonify({"ok": False, "error": str(e)}), 500
 
 
+@zep_bp.route("/entities/isolate-persons", methods=["POST"])
+def isolate_persons():
+    """SSE stream: use MiniMax to classify all entities and isolate person names."""
+    from minimax import call_minimax
+
+    BATCH = 80  # entity names per LLM call
+
+    def _gen():
+        conn = _get_mirror()
+        rows = conn.execute(
+            "SELECT uuid, name FROM entities WHERE (isolated=0 OR isolated IS NULL) ORDER BY name"
+        ).fetchall()
+
+        total = len(rows)
+        yield f"data: Found {total} entities to classify…\n\n"
+
+        isolated_count = 0
+        for i in range(0, total, BATCH):
+            batch = rows[i:i + BATCH]
+            names = [r[1] for r in batch]
+            name_list = "\n".join(f"- {n}" for n in names)
+
+            prompt = (
+                "From the following list of entity names extracted from financial research documents, "
+                "identify which ones are HUMAN PERSON NAMES (real individual people: executives, "
+                "analysts, authors, investors, politicians, etc.).\n\n"
+                "Do NOT flag: company names, brand names, product names, place names, "
+                "concepts, indices, acronyms, or generic terms — even if they sound like names.\n\n"
+                "Return ONLY the person names that should be removed, one per line, exactly as written. "
+                "If none are persons, return the single word NONE.\n\n"
+                f"Entity list:\n{name_list}"
+            )
+            try:
+                text, _, _ = call_minimax(
+                    messages=[
+                        {"role": "system", "name": "MiniMax AI",
+                         "content": "You are a precise entity classifier for financial data."},
+                        {"role": "user", "name": "User", "content": prompt},
+                    ],
+                    temperature=0.1,
+                    max_completion_tokens=512,
+                )
+                person_names = set()
+                for line in text.splitlines():
+                    line = line.strip().lstrip("- ").strip()
+                    if line and line.upper() != "NONE":
+                        person_names.add(line)
+
+                # Isolate matching entities
+                name_to_uuid = {r[1]: r[0] for r in batch}
+                for pname in person_names:
+                    uuid = name_to_uuid.get(pname)
+                    if uuid:
+                        _mirror.isolate_entity(conn, uuid)
+                        isolated_count += 1
+                        yield f"data: 🗑 Isolated: {pname}\n\n"
+
+            except Exception as e:
+                yield f"data: ⚠ Batch {i//BATCH + 1} error: {e}\n\n"
+
+            done = min(i + BATCH, total)
+            yield f"data: Progress: {done}/{total} classified, {isolated_count} persons removed…\n\n"
+
+        yield f"data: ✓ Done — {isolated_count} person names isolated out of {total} entities\n\n"
+        yield "data: done: true\n\n"
+
+    return Response(_gen(), mimetype="text/event-stream")
+
+
 @zep_bp.route("/clear", methods=["POST"])
 def clear_graph():
     """Delete graphiti_db and reset graphiti_indexed_at in zsxq.db."""
