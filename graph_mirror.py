@@ -57,15 +57,17 @@ CREATE TABLE IF NOT EXISTS entities (
 );
 
 CREATE TABLE IF NOT EXISTS edges (
-    uuid          TEXT PRIMARY KEY,
-    name          TEXT DEFAULT '',
-    fact          TEXT DEFAULT '',
-    src_uuid      TEXT DEFAULT '',
-    src_name      TEXT DEFAULT '',
-    tgt_uuid      TEXT DEFAULT '',
-    tgt_name      TEXT DEFAULT '',
-    episodes_json TEXT DEFAULT '[]',
-    updated_at    TEXT DEFAULT (datetime('now'))
+    uuid            TEXT PRIMARY KEY,
+    name            TEXT DEFAULT '',
+    fact            TEXT DEFAULT '',
+    src_uuid        TEXT DEFAULT '',
+    src_name        TEXT DEFAULT '',
+    tgt_uuid        TEXT DEFAULT '',
+    tgt_name        TEXT DEFAULT '',
+    episodes_json   TEXT DEFAULT '[]',
+    deprecated      INTEGER DEFAULT 0,
+    deprecated_reason TEXT DEFAULT '',
+    updated_at      TEXT DEFAULT (datetime('now'))
 );
 
 -- FTS5 for entity name / summary search
@@ -145,10 +147,14 @@ CREATE TRIGGER IF NOT EXISTS communities_au
 
 def ensure_schema(conn: sqlite3.Connection) -> None:
     conn.executescript(_DDL)
-    # Migrate existing DBs: add episodes_json column if absent
+    # Migrate existing DBs: add columns if absent
     existing = {r[1] for r in conn.execute("PRAGMA table_info(edges)").fetchall()}
     if "episodes_json" not in existing:
         conn.execute("ALTER TABLE edges ADD COLUMN episodes_json TEXT DEFAULT '[]'")
+    if "deprecated" not in existing:
+        conn.execute("ALTER TABLE edges ADD COLUMN deprecated INTEGER DEFAULT 0")
+    if "deprecated_reason" not in existing:
+        conn.execute("ALTER TABLE edges ADD COLUMN deprecated_reason TEXT DEFAULT ''")
     conn.commit()
 
 
@@ -315,17 +321,31 @@ def resolve_edge_sources(conn: sqlite3.Connection,
     ]
 
 
+def deprecate_edge(conn: sqlite3.Connection, uuid: str, reason: str = "RELATION_NONSENSE") -> bool:
+    """Mark an edge as deprecated with a reason.  Returns True if edge found."""
+    cur = conn.execute(
+        "UPDATE edges SET deprecated=1, deprecated_reason=?, updated_at=datetime('now') WHERE uuid=?",
+        (reason, uuid),
+    )
+    conn.commit()
+    return cur.rowcount > 0
+
+
 def get_edges(conn: sqlite3.Connection, limit: int = 300,
-              cursor: Optional[str] = None) -> tuple[list[dict], Optional[str]]:
+              cursor: Optional[str] = None,
+              include_deprecated: bool = False) -> tuple[list[dict], Optional[str]]:
+    dep_filter = "" if include_deprecated else " AND (deprecated = 0 OR deprecated IS NULL)"
     if cursor:
         rows = conn.execute(
-            "SELECT uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name, episodes_json "
-            "FROM edges WHERE uuid > ? ORDER BY uuid LIMIT ?", (cursor, limit)
+            f"SELECT uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name, "
+            f"episodes_json, deprecated, deprecated_reason "
+            f"FROM edges WHERE uuid > ?{dep_filter} ORDER BY uuid LIMIT ?", (cursor, limit)
         ).fetchall()
     else:
         rows = conn.execute(
-            "SELECT uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name, episodes_json "
-            "FROM edges ORDER BY uuid LIMIT ?", (limit,)
+            f"SELECT uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name, "
+            f"episodes_json, deprecated, deprecated_reason "
+            f"FROM edges WHERE 1=1{dep_filter} ORDER BY uuid LIMIT ?", (limit,)
         ).fetchall()
     items = []
     for r in rows:
@@ -401,7 +421,7 @@ def search(conn: sqlite3.Connection, query: str,
         for r in entity_rows
     ]
 
-    # Edge search
+    # Edge search (exclude deprecated edges)
     try:
         edge_rows = conn.execute(
             """SELECT ed.uuid, ed.name, ed.fact,
@@ -411,6 +431,7 @@ def search(conn: sqlite3.Connection, query: str,
                FROM edges_fts
                JOIN edges ed ON edges_fts.rowid = ed.rowid
                WHERE edges_fts MATCH ?
+                 AND (ed.deprecated = 0 OR ed.deprecated IS NULL)
                ORDER BY score LIMIT ?""",
             (fts_query, limit),
         ).fetchall()
