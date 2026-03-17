@@ -504,17 +504,20 @@ def ensure_zsxq_column(conn: sqlite3.Connection) -> None:
         pass
 
 
-def get_pending_pdfs(conn: sqlite3.Connection, reindex: bool, limit: int = 0) -> list:
+def get_pending_pdfs(conn: sqlite3.Connection, reindex: bool, limit: int = 0,
+                     use_summary: bool = False) -> list:
     limit_sql = f" LIMIT {limit}" if limit > 0 else ""
+    # When using summary mode, also include rows without a local_path (no PDF needed)
+    path_cond = "" if use_summary else "local_path IS NOT NULL AND "
     if reindex:
         return conn.execute(
-            "SELECT file_id, name, local_path, create_time "
-            f"FROM pdf_files WHERE local_path IS NOT NULL "
+            f"SELECT file_id, name, local_path, create_time, summary "
+            f"FROM pdf_files WHERE {path_cond}1=1 "
             f"ORDER BY create_time DESC{limit_sql}"
         ).fetchall()
     return conn.execute(
-        "SELECT file_id, name, local_path, create_time "
-        f"FROM pdf_files WHERE local_path IS NOT NULL AND graphiti_indexed_at IS NULL "
+        f"SELECT file_id, name, local_path, create_time, summary "
+        f"FROM pdf_files WHERE {path_cond}graphiti_indexed_at IS NULL "
         f"ORDER BY create_time DESC{limit_sql}"
     ).fetchall()
 
@@ -739,7 +742,8 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
     return ok, skipped
 
 
-def _build_pdf_items(rows, db_path: Path) -> tuple[list[dict], sqlite3.Connection]:
+def _build_pdf_items(rows, db_path: Path,
+                     use_summary: bool = False) -> tuple[list[dict], sqlite3.Connection]:
     import time
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
@@ -747,40 +751,52 @@ def _build_pdf_items(rows, db_path: Path) -> tuple[list[dict], sqlite3.Connectio
 
     items = []
     for idx, row in enumerate(rows, 1):
-        file_id    = row["file_id"]
-        name       = row["name"]
-        local_path = Path(row["local_path"])
+        file_id     = row["file_id"]
+        name        = row["name"]
         create_time = row["create_time"] or ""
+        summary     = (row["summary"] or "").strip()
 
-        if not local_path.exists():
-            print(f"  [{idx}] ⚠  File not found: {local_path}", flush=True)
-            continue
+        # ── Try summary column first when --use-summary is set ─────────────
+        if use_summary and summary:
+            text = summary
+            print(f"  [{idx}] {len(text):>7,}c  (summary)  {name[:55]}", flush=True)
+        else:
+            # Fall back to full PDF extraction
+            raw_path = row["local_path"]
+            if not raw_path:
+                print(f"  [{idx}] ⚠  No local_path and no summary: {name}", flush=True)
+                continue
+            local_path = Path(raw_path)
+            if not local_path.exists():
+                print(f"  [{idx}] ⚠  File not found: {local_path}", flush=True)
+                continue
 
-        t0 = time.time()
-        try:
-            text = extract_text(local_path)
-        except Exception as e:
-            print(f"  [{idx}] ⚠  Extract failed for {name}: {e}", flush=True)
-            continue
-        extract_ms = int((time.time() - t0) * 1000)
+            t0 = time.time()
+            try:
+                text = extract_text(local_path)
+            except Exception as e:
+                print(f"  [{idx}] ⚠  Extract failed for {name}: {e}", flush=True)
+                continue
+            extract_ms = int((time.time() - t0) * 1000)
 
-        if not text:
-            print(f"  [{idx}] ⚠  No text (image-only PDF?): {name}", flush=True)
-            continue
+            if not text:
+                print(f"  [{idx}] ⚠  No text (image-only PDF?): {name}", flush=True)
+                continue
 
-        print(f"  [{idx}] {len(text):>7,}c  {extract_ms}ms  {name[:55]}", flush=True)
+            print(f"  [{idx}] {len(text):>7,}c  {extract_ms}ms  {name[:55]}", flush=True)
 
         try:
             ref_time = datetime.fromisoformat(create_time.replace("Z", "+00:00"))
         except Exception:
             ref_time = datetime.now(timezone.utc)
 
+        source_desc = f"Summary: {name}" if (use_summary and summary) else f"PDF: {name}"
         items.append({
             "label":              name,
-            "file_path":          str(local_path),
+            "file_path":          row["local_path"] or "",
             "name":               f"pdf_{file_id}",
             "episode_body":       text,
-            "source_description": f"PDF: {name}",
+            "source_description": source_desc,
             "reference_time":     ref_time,
             "db_conn":            conn,
             "mark_fn":            mark_pdf_indexed,
@@ -862,8 +878,12 @@ def main() -> None:
                         help="Form types to index from financial_reports (default: 10-K 10-Q)")
     parser.add_argument("--reindex", action="store_true",
                         help="Reset graphiti_indexed_at for all docs and re-ingest.")
-    parser.add_argument("--limit",   type=int, default=0,
+    parser.add_argument("--limit",       type=int, default=0,
                         help="Process at most N documents (0 = all).")
+    parser.add_argument("--use-summary", action="store_true",
+                        help="Use the pre-computed summary column from zsxq.db instead of "
+                             "extracting the full PDF.  Faster and cleaner; falls back to "
+                             "PDF extraction if a row has no summary.")
     parser.add_argument("--debug-llm", action="store_true",
                         help="Print every LLM request and response to stdout.")
     args = parser.parse_args()
@@ -895,11 +915,12 @@ def main() -> None:
         conn = sqlite3.connect(zsxq_db_path)
         conn.row_factory = sqlite3.Row
         ensure_zsxq_column(conn)
-        rows = get_pending_pdfs(conn, args.reindex, args.limit)
+        rows = get_pending_pdfs(conn, args.reindex, args.limit, args.use_summary)
         conn.close()
         if rows:
-            print(f"Found {len(rows)} pending PDFs in zsxq.db …")
-            items, conn2 = _build_pdf_items(rows, zsxq_db_path)
+            mode = "summary" if args.use_summary else "full PDF"
+            print(f"Found {len(rows)} pending PDFs in zsxq.db ({mode} mode) …")
+            items, conn2 = _build_pdf_items(rows, zsxq_db_path, args.use_summary)
             all_items.extend(items)
             open_conns.append(conn2)
         else:
