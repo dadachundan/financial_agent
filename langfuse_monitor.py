@@ -22,8 +22,8 @@ Setup (one-time):
 After setup, run graphiti_ingest.py normally; traces appear in the UI automatically.
 
 Trace hierarchy produced per ingest run:
-  Trace: "<session-label>"  (one per ingest run)
-    └── Span: "<document-label>"  (one per document)
+  Session: "ingest-<label>-<timestamp>"  (groups all document traces)
+    └── Trace: "<document-label>"  (one per document; root span)
           ├── Generation: "ExtractedEntities"  (entity extraction LLM call)
           ├── Generation: "ExtractedEdges"     (edge extraction LLM call)
           └── Generation: "NodeResolutions"    (dedup LLM call)
@@ -32,22 +32,27 @@ Trace hierarchy produced per ingest run:
 from __future__ import annotations
 
 import contextvars
-import json
 import logging
+import time
 from pathlib import Path
 from typing import Any
 
 logger = logging.getLogger(__name__)
 
 # ── Context vars (survive async/thread hops within a single ingest run) ────────
-# Set by graphiti_ingest.py before each add_episode() call.
-_current_doc_ctx: contextvars.ContextVar[str | None] = contextvars.ContextVar(
-    "langfuse_current_doc", default=None
+_current_trace_id: contextvars.ContextVar[str | None] = contextvars.ContextVar(
+    "langfuse_trace_id", default=None
+)
+_current_span_id: contextvars.ContextVar[str | None] = contextvars.ContextVar(
+    "langfuse_span_id", default=None
+)
+_current_span: contextvars.ContextVar[Any | None] = contextvars.ContextVar(
+    "langfuse_span", default=None
 )
 
 # ── Module-level state ─────────────────────────────────────────────────────────
 _lf: "Langfuse | None" = None  # singleton Langfuse client
-_session_label: str = ""
+_session_id: str = ""          # groups all traces for one ingest run
 _enabled: bool = False
 
 
@@ -72,7 +77,7 @@ def _load_config() -> dict:
 
 def init(session_label: str = "") -> bool:
     """Initialise Langfuse from config.py.  Returns True if enabled."""
-    global _lf, _session_label, _enabled
+    global _lf, _session_id, _enabled
 
     cfg = _load_config()
     if not cfg.get("public_key") or not cfg.get("secret_key"):
@@ -86,10 +91,17 @@ def init(session_label: str = "") -> bool:
             secret_key=cfg["secret_key"],
             host=cfg["host"],
         )
-        _session_label = session_label or "ingest"
+        # session_id groups all document traces from this ingest run
+        ts = int(time.time())
+        _session_id = f"{session_label or 'ingest'}-{ts}"
         _enabled = True
-        logger.info("Langfuse monitoring enabled → %s", cfg["host"])
-        print(f"  📊 Langfuse monitoring enabled → {cfg['host']}", flush=True)
+        logger.info(
+            "Langfuse monitoring enabled → %s  session=%s", cfg["host"], _session_id
+        )
+        print(
+            f"  📊 Langfuse monitoring enabled → {cfg['host']}  session={_session_id}",
+            flush=True,
+        )
         return True
     except Exception as e:
         logger.warning("Langfuse init failed: %s", e)
@@ -100,15 +112,52 @@ def is_enabled() -> bool:
     return _enabled
 
 
-# ── Context helpers ────────────────────────────────────────────────────────────
+# ── Document context ───────────────────────────────────────────────────────────
 
-def set_document(label: str) -> contextvars.Token:
-    """Call before add_episode(); returns a token to reset with clear_document()."""
-    return _current_doc_ctx.set(label)
+def set_document(label: str):
+    """Create a Langfuse trace+root-span for one document.
+
+    Call before add_episode(); pass the returned token to clear_document() afterwards.
+    When Langfuse is disabled, returns None (clear_document handles None gracefully).
+    """
+    if not _enabled or _lf is None:
+        return None
+
+    try:
+        # start_observation without trace_context creates a new root span → new Langfuse trace
+        span = _lf.start_observation(name=label, as_type="span")
+
+        # Tag the span with our session_id so all documents in this ingest run are grouped.
+        # "session.id" is the OTel attribute Langfuse uses to attach spans to sessions.
+        try:
+            span._otel_span.set_attribute("session.id", _session_id)
+        except Exception:
+            pass  # defensive: don't fail if internal API changes
+
+        t1 = _current_trace_id.set(span.trace_id)
+        t2 = _current_span_id.set(span.id)
+        t3 = _current_span.set(span)
+        return (t1, t2, t3)
+    except Exception as e:
+        logger.debug("Langfuse set_document failed: %s", e)
+        return None
 
 
-def clear_document(token: contextvars.Token) -> None:
-    _current_doc_ctx.reset(token)
+def clear_document(token) -> None:
+    """End the document span and reset context vars.  Safe to call with token=None."""
+    if not _enabled or _lf is None or token is None:
+        return
+
+    try:
+        t1, t2, t3 = token
+        span = _current_span.get()
+        if span is not None:
+            span.end()
+        _current_trace_id.reset(t1)
+        _current_span_id.reset(t2)
+        _current_span.reset(t3)
+    except Exception as e:
+        logger.debug("Langfuse clear_document failed: %s", e)
 
 
 # ── Generation logging ─────────────────────────────────────────────────────────
@@ -121,16 +170,23 @@ def log_generation(
     elapsed_s: float,
     usage: dict | None = None,
 ) -> None:
-    """Log a single LLM generation to Langfuse.
+    """Log a single LLM generation to Langfuse as a child of the current document span.
 
     Called from minimax_llm_client._generate_response() after each LLM call.
-    Groups calls under the current document span automatically.
+    Automatically nests under the active document trace set by set_document().
     """
     if not _enabled or _lf is None:
         return
 
     try:
-        doc_label = _current_doc_ctx.get()
+        trace_id = _current_trace_id.get()
+        span_id = _current_span_id.get()
+
+        # Build TraceContext to nest generation under the document span
+        trace_ctx = None
+        if trace_id:
+            from langfuse.types import TraceContext
+            trace_ctx = TraceContext(trace_id=trace_id, parent_span_id=span_id)
 
         # Build input list in Langfuse's chat format
         lf_input = [
@@ -146,7 +202,8 @@ def log_generation(
                 "total": usage.get("total_tokens", 0),
             }
 
-        observation = _lf.start_observation(
+        gen = _lf.start_observation(
+            trace_context=trace_ctx,
             name=call_type,
             as_type="generation",
             input=lf_input,
@@ -154,9 +211,9 @@ def log_generation(
             model=model,
             model_parameters={"elapsed_s": round(elapsed_s, 2)},
             usage_details=usage_details or None,
-            metadata={"document": doc_label, "session": _session_label},
+            metadata={"session": _session_id},
         )
-        observation.end()
+        gen.end()
 
     except Exception as e:
         logger.debug("Langfuse log_generation failed: %s", e)
