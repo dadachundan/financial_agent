@@ -211,17 +211,33 @@ def _clean_pdf_text(text: str) -> str:
     #    like "was\ntrending" (where "trending" is a full word > 4 chars start).
     text = _re.sub(r"([a-z]{1,4})\n([a-z]{1,4}(?=\s|$))", r"\1\2", text)
 
-    # 3. Strip noise-only lines
-    _noise = _re.compile(
-        r"^\s*("
-        r"\(?\d[\d\s\-\+\(\)]{6,}\d"          # phone number
-        r"|[\w.\-]+@[\w.\-]+\.[a-z]{2,}"       # email
-        r"|[\d\s\.\,\|\-\+\=\*\/\\]{4,}"       # digits / punctuation only
-        r"|J\.P\.\s*Morgan\s+\w.*"             # broker firm line
-        r")\s*$",
-        _re.IGNORECASE,
+    # 3. Strip noise-only lines (line-level filter)
+    # Build date-axis pattern separately to avoid raw-string concatenation issues
+    _month = r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-\d{2}"
+    _noise_pat = (
+        r"^\s*(?:"
+        r"\(?\d[\d\s\-\+\(\)]{6,}\d"                              # phone numbers
+        r"|[\w.\-]+@[\w.\-]+\.[a-z]{2,}"                          # emails
+        r"|[\d\s\.\,\|\-\+\=\*\/\\]{4,}"                          # digits/punct only
+        r"|J\.P\.\s*Morgan\s+\w.*"                                 # broker firm line
+        r"|(?:-?\d{1,3}%\s+){3,}.*"                               # pct scale ticks
+        r"|Source\s*:.{0,120}"                                     # Source: attribution
+        r"|Rebased\s+to\s+\d+.*"                                    # chart note (+ legend)
+        r"|See\s+page\s+\d+\s+for\s+analyst.*"                    # disclaimer cross-ref
+        r"|factor\s+in\s+making\s+their\s+investment\s+decision.*" # boilerplate frag
+        r")\s*$"
     )
-    lines = [ln for ln in text.splitlines() if not _noise.match(ln)]
+    _noise = _re.compile(_noise_pat, _re.IGNORECASE)
+    # Separate pattern for chart date-axis lines (3+ month tokens on same line)
+    _date_axis = _re.compile(
+        r"^\s*(?:" + _month + r"\s+){3,}", _re.IGNORECASE
+    )
+    lines = [
+        ln for ln in text.splitlines()
+        # Strip leading markdown heading markers (## / #) before noise-matching
+        # so "## See page 10 for analyst…" is caught by the See-page pattern
+        if not _noise.match(ln.lstrip("#").lstrip()) and not _date_axis.match(ln)
+    ]
     text = "\n".join(lines)
 
     # 4. Collapse 3+ consecutive blank lines → one blank line
