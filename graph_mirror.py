@@ -519,7 +519,47 @@ def search(conn: sqlite3.Connection, query: str,
         for r in edge_rows
     ]
 
-    return {"nodes": nodes, "edges": edges, "episodes": []}
+    # ── Episodes: collect from matched edges + direct source_desc search ──────
+    # 1. Gather all episode UUIDs referenced by the matched edges
+    ep_uuids: set[str] = set()
+    for r in edge_rows:
+        try:
+            ep_uuids.update(str(u) for u in json.loads(r["episodes_json"] or "[]"))
+        except Exception:
+            pass
+
+    # 2. Also search source_desc directly (handles queries in any language
+    #    that match the document name/description even without FTS)
+    ep_by_desc: list = []
+    try:
+        like_q = f"%{query}%"
+        ep_by_desc = conn.execute(
+            "SELECT uuid, name, source_desc FROM episodes "
+            "WHERE source_desc LIKE ? OR name LIKE ? LIMIT ?",
+            (like_q, like_q, limit),
+        ).fetchall()
+    except Exception:
+        pass
+
+    for r in ep_by_desc:
+        ep_uuids.add(r[0])
+
+    # 3. Fetch full episode rows for all collected UUIDs
+    episodes: list[dict] = []
+    if ep_uuids:
+        ph = ",".join("?" * len(ep_uuids))
+        ep_rows = conn.execute(
+            f"SELECT uuid, name, source_desc FROM episodes WHERE uuid IN ({ph})",
+            list(ep_uuids),
+        ).fetchall()
+        episodes = [
+            {"uuid": r[0], "name": r[1] or "",
+             "source_desc": r[2] or "",
+             "url": _episode_url(r[1] or "")}
+            for r in ep_rows
+        ]
+
+    return {"nodes": nodes, "edges": edges, "episodes": episodes}
 
 
 # ── Community subgraph — label propagation + LLM summaries ───────────────────

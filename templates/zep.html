@@ -349,19 +349,17 @@ function renderResults(data, query, forceAll) {
   });
 
   // Render episodes (source documents)
-  if (forceAll && episodes.length)
+  if (episodes.length)
     list.innerHTML += `<div class="section-header">📄 Documents (${episodes.length})</div>`;
   episodes.forEach(ep => {
-    const docUrl = ep.file_id   ? `/zsxq/pdf/${ep.file_id}`
-                 : ep.report_id ? `/sec/file/${ep.report_id}`
-                 : null;
+    const docUrl = ep.url || null;
     const clickAttr = docUrl ? `style="cursor:pointer" onclick="window.open('${docUrl}','_blank')"` : '';
     const linkHint  = docUrl ? ' <span style="font-size:.72rem;color:#0d6efd">↗ open</span>' : '';
+    const label = ep.source_desc || ep.name || ep.uuid;
     list.innerHTML += `
     <div class="result-card" ${clickAttr}>
-      <span class="score-badge">${ep.score != null ? ep.score.toFixed(2) : ''}</span>
-      <div class="fact">📄 ${escHtml(ep.source_description || ep.uuid)}${linkHint}</div>
-      <div class="meta">✅ Indexed · ${escHtml(ep.created_at||'')}</div>
+      <div class="fact">📄 ${escHtml(label)}${linkHint}</div>
+      <div class="meta">✅ Indexed</div>
     </div>`;
   });
 }
