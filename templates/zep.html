@@ -41,7 +41,8 @@
     .edge-sources { margin-top:4px; }
     .source-badge { display:inline-block; background:#fff3cd; color:#664d03;
                     border-radius:4px; padding:1px 7px; font-size:.75rem;
-                    margin-right:3px; margin-top:2px; }
+                    margin-right:3px; margin-top:2px; text-decoration:none; }
+    a.source-badge:hover { background:#ffe69c; text-decoration:none; }
 
     /* ── spinner ── */
     #spinner { display:none; }
@@ -296,7 +297,7 @@ function renderResults(data, query) {
         ${e.source_node_uuid ? `<span class="entity-badge" onclick="clickEntity('${escHtml(e.source_node_uuid)}','${escHtml(e.source_node_name||'')}')">↗ ${escHtml(e.source_node_name || e.source_node_uuid.slice(0,8))}</span>` : ''}
         ${e.target_node_uuid ? `<span class="entity-badge" onclick="clickEntity('${escHtml(e.target_node_uuid)}','${escHtml(e.target_node_name||'')}')">↗ ${escHtml(e.target_node_name || e.target_node_uuid.slice(0,8))}</span>` : ''}
       </div>
-      ${(e.sources||[]).length ? `<div class="edge-sources">${(e.sources||[]).map(s=>`<span class="source-badge">📄 ${escHtml(s)}</span>`).join('')}</div>` : ''}
+      ${(e.sources||[]).length ? `<div class="edge-sources">${(e.sources||[]).map(s=>s.url ? `<a href="${escHtml(s.url)}" target="_blank" class="source-badge">📄 ${escHtml(s.label)}</a>` : `<span class="source-badge">📄 ${escHtml(s.label)}</span>`).join('')}</div>` : ''}
     </div>`;
   });
 

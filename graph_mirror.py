@@ -280,8 +280,25 @@ def get_entities(conn: sqlite3.Connection, limit: int = 200,
     return items, next_cursor
 
 
-def resolve_edge_sources(conn: sqlite3.Connection, episodes_json: str) -> list[str]:
-    """Return list of source_desc strings for a JSON array of episode UUIDs."""
+def _episode_url(name: str) -> Optional[str]:
+    """Convert episode name → viewer URL, or None if unknown format."""
+    if name.startswith("pdf_"):
+        return f"/zsxq/pdf/{name[4:]}"
+    if name.startswith("report_"):
+        try:
+            int(name[7:])
+            return f"/sec/file/{name[7:]}"
+        except ValueError:
+            pass
+    return None
+
+
+def resolve_edge_sources(conn: sqlite3.Connection,
+                         episodes_json: str) -> list[dict]:
+    """Return [{label, url}] for a JSON array of episode UUIDs.
+
+    url is None when no viewer route is known for the episode type.
+    """
     try:
         uuids = json.loads(episodes_json or "[]")
     except Exception:
@@ -290,9 +307,12 @@ def resolve_edge_sources(conn: sqlite3.Connection, episodes_json: str) -> list[s
         return []
     ph = ",".join("?" * len(uuids))
     rows = conn.execute(
-        f"SELECT source_desc FROM episodes WHERE uuid IN ({ph})", uuids
+        f"SELECT name, source_desc FROM episodes WHERE uuid IN ({ph})", uuids
     ).fetchall()
-    return [r[0] for r in rows if r[0]]
+    return [
+        {"label": r[1] or r[0], "url": _episode_url(r[0])}
+        for r in rows if (r[0] or r[1])
+    ]
 
 
 def get_edges(conn: sqlite3.Connection, limit: int = 300,
