@@ -243,16 +243,23 @@ def search():
     if not query:
         return jsonify({"nodes": [], "edges": [], "episodes": []}), 200
 
-    # Try graphiti semantic search first (vector-ranked); fall back to SQLite FTS
-    # if KuzuDB is locked by the ingestor (non-blocking for the web server).
+    # Mirror FTS is the primary search — exact and prefix matching is reliable for
+    # entity names, ticker symbols, hyphenated terms (COVID-19), and fact text.
+    # Graphiti vector search is only tried as a fallback when FTS finds nothing
+    # (handles purely semantic / concept queries that have no literal text match).
+    result = _mirror.search(_get_mirror(), query, limit)
+    if result["nodes"] or result["edges"] or result["episodes"]:
+        result["_source"] = "mirror-fts"
+        return jsonify(result)
+
+    # FTS found nothing — try graphiti semantic search as fallback
     g = _get_graphiti()
     if g is not None:
         try:
-            results = _run(g.search_(query=query, group_ids=[GROUP_ID]))
+            results  = _run(g.search_(query=query, group_ids=[GROUP_ID]))
             nodes    = [_node_to_dict(n)  for n in (results.nodes    or [])[:limit]]
             edges    = [_edge_to_dict(e)  for e in (results.edges    or [])[:limit]]
             episodes = [_ep_to_dict(ep)   for ep in (results.episodes or [])[:limit]]
-            # Resolve missing edge endpoint names via mirror (never blocks)
             missing_uuids = set()
             for e in edges:
                 if e["source_node_uuid"]: missing_uuids.add(e["source_node_uuid"])
@@ -264,7 +271,6 @@ def search():
             for e in edges:
                 e["source_node_name"] = uuid_to_name.get(e["source_node_uuid"], "")
                 e["target_node_name"] = uuid_to_name.get(e["target_node_uuid"], "")
-            # Resolve episode UUIDs → source_desc strings via mirror
             mirror = _get_mirror()
             for e in edges:
                 ep_uuids = e.pop("_episode_uuids", [])
@@ -274,11 +280,8 @@ def search():
             return jsonify({"nodes": nodes, "edges": edges, "episodes": episodes,
                             "_source": "graphiti"})
         except Exception as _ge:
-            print(f"[search] graphiti unavailable ({_ge}); falling back to mirror FTS",
-                  file=sys.stderr)
+            print(f"[search] graphiti fallback failed ({_ge})", file=sys.stderr)
 
-    # Mirror FTS fallback — always available, even during ingestion
-    result = _mirror.search(_get_mirror(), query, limit)
     result["_source"] = "mirror-fts"
     return jsonify(result)
 
