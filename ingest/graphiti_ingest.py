@@ -659,6 +659,7 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
     import traceback
     import langfuse_monitor
     import graph_mirror
+    from graphiti_core.nodes import EpisodeType
 
     graphiti = await _build_graphiti()
 
@@ -699,6 +700,7 @@ async def _ingest_items(items: list[dict]) -> tuple[int, int]:
                     source_description=item["source_description"],
                     reference_time=item["reference_time"],
                     group_id=GROUP_ID,
+                    source=EpisodeType.text,   # use extract_text prompt, not extract_message
                 )
                 elapsed = asyncio.get_event_loop().time() - t0
                 elapsed_times.append(elapsed)
