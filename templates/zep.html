@@ -349,19 +349,17 @@ function renderResults(data, query, forceAll) {
   });
 
   // Render episodes (source documents)
-  if (forceAll && episodes.length)
+  if (episodes.length)
     list.innerHTML += `<div class="section-header">📄 Documents (${episodes.length})</div>`;
   episodes.forEach(ep => {
-    const docUrl = ep.file_id   ? `/zsxq/pdf/${ep.file_id}`
-                 : ep.report_id ? `/sec/file/${ep.report_id}`
-                 : null;
+    const docUrl = ep.url || null;
     const clickAttr = docUrl ? `style="cursor:pointer" onclick="window.open('${docUrl}','_blank')"` : '';
     const linkHint  = docUrl ? ' <span style="font-size:.72rem;color:#0d6efd">↗ open</span>' : '';
+    const label = ep.source_desc || ep.name || ep.uuid;
     list.innerHTML += `
     <div class="result-card" ${clickAttr}>
-      <span class="score-badge">${ep.score != null ? ep.score.toFixed(2) : ''}</span>
-      <div class="fact">📄 ${escHtml(ep.source_description || ep.uuid)}${linkHint}</div>
-      <div class="meta">✅ Indexed · ${escHtml(ep.created_at||'')}</div>
+      <div class="fact">📄 ${escHtml(label)}${linkHint}</div>
+      <div class="meta">✅ Indexed</div>
     </div>`;
   });
 }
@@ -405,10 +403,13 @@ async function deprecateEdge(uuid, btn) {
   }
 }
 
-// ── Entity click → search ALL scopes ────────────────────────────────────────
-function clickEntity(uuid, name) {
+// ── Entity click → UUID-based edge lookup + name search ─────────────────────
+// Fetches direct edges by UUID (exact match with graph) then merges with
+// FTS name search for entities/docs — panel always matches the graph.
+async function clickEntity(uuid, name) {
   document.getElementById('searchInput').value = name;
-  doSearchAll();
+
+  // Highlight the node in the graph
   if (_network && _graphBuilt) {
     try {
       const n = _visNodes && _visNodes.get(uuid);
@@ -417,6 +418,35 @@ function clickEntity(uuid, name) {
         _network.focus(uuid, { scale: 1.4, animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
       }
     } catch (_) {}
+  }
+
+  const spinner = document.getElementById('spinner');
+  const btn     = document.getElementById('searchBtn');
+  spinner.style.display = '';
+  btn.disabled = true;
+
+  try {
+    // Fetch direct edges by UUID (guaranteed to match graph) + FTS for nodes/docs
+    const [edgeResp, ftsResp] = await Promise.all([
+      fetch(`/entities/${encodeURIComponent(uuid)}/edges`).then(r => r.json()),
+      fetch(`/search?q=${encodeURIComponent(name)}&limit=40`).then(r => r.json()),
+    ]);
+
+    // Use UUID-fetched edges (exact); nodes + episodes from FTS
+    const merged = {
+      edges:    edgeResp.edges    || [],
+      nodes:    ftsResp.nodes     || [],
+      episodes: ftsResp.episodes  || [],
+      _source:  'uuid+fts',
+    };
+    _cachedResults = merged;
+    _cachedQuery   = name;
+    renderResults(merged, name, true);
+  } catch(e) {
+    showMsg(`Error: ${e.message}`);
+  } finally {
+    spinner.style.display = 'none';
+    btn.disabled = false;
   }
 }
 
@@ -866,9 +896,7 @@ async function initGraph() {
         const nodeId = params.nodes[0];
         const n = _visNodes.get(nodeId);
         if (n) {
-          document.getElementById('searchInput').value = n.label;
-          doSearchAll();  // show all types (relations, entities, docs)
-          _network.focus(nodeId, { scale: 1.4, animation: { duration: 400, easingFunction: 'easeInOutQuad' } });
+          clickEntity(nodeId, n.label);  // UUID-based edge lookup + FTS for nodes/docs
         }
       }
     });
