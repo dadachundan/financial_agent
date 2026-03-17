@@ -481,13 +481,23 @@ async function isolateEntity(uuid, name, btn) {
     const res  = await fetch(`/entities/${encodeURIComponent(uuid)}/isolate`, {method:'POST'});
     const data = await res.json();
     if (!data.ok) { alert('Error: ' + (data.error || 'unknown')); return; }
-    // Fade out and remove the card/row
+
+    // Fade out and remove the result card / entity-browser row
     const card = btn.closest('.result-card, .entity-row');
     if (card) {
       card.style.transition = 'opacity .4s';
       card.style.opacity = '0.2';
       card.style.pointerEvents = 'none';
       setTimeout(() => card.remove(), 450);
+    }
+
+    // Remove the node and all its connected edges from the graph
+    if (_visNodes && _visEdges && _graphBuilt) {
+      const edgeIds = _visEdges.get({
+        filter: e => e.from === uuid || e.to === uuid,
+      }).map(e => e.id);
+      _visEdges.remove(edgeIds);
+      _visNodes.remove(uuid);
     }
   } catch(e) {
     alert('Error: ' + e.message);
@@ -807,6 +817,7 @@ async function uploadPdf(input) {
 // ── Graph visualisation ────────────────────────────────────────────────────
 let _network = null;
 let _visNodes = null;
+let _visEdges = null;
 let _graphBuilt = false;
 
 async function initGraph() {
@@ -859,7 +870,7 @@ async function initGraph() {
       return { id: n.uuid, label: n.name, title: tip };
     }));
 
-    const edges = new vis.DataSet(allEdges.map(e => ({
+    _visEdges = new vis.DataSet(allEdges.map(e => ({
         id:    e.uuid,
         from:  e.source_node_uuid,
         to:    e.target_node_uuid,
@@ -891,7 +902,7 @@ async function initGraph() {
       interaction: { hover: true, tooltipDelay: 150, navigationButtons: true },
     };
 
-    _network = new vis.Network(document.getElementById('graphNet'), { nodes: _visNodes, edges }, options);
+    _network = new vis.Network(document.getElementById('graphNet'), { nodes: _visNodes, edges: _visEdges }, options);
 
     _network.on('click', params => {
       if (params.nodes.length > 0) {
