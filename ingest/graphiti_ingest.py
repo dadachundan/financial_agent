@@ -178,12 +178,56 @@ def extract_text(pdf_path: Path, max_chars: int = MAX_CHARS) -> str:
     doc.close()
 
     full = "\n".join(lines_out)
-    full = re.sub(r"\n{3,}", "\n\n", full).strip()
+    full = _clean_pdf_text(full)
 
     if len(full) < 200:
         return _extract_text_pdfplumber(pdf_path, max_chars)
 
     return full[:max_chars]
+
+
+def _clean_pdf_text(text: str) -> str:
+    """Post-process raw PDF-extracted text before sending to the LLM.
+
+    Fixes common research-PDF artefacts that waste LLM tokens:
+      1. Hyphen line-breaks   "secon-\ndary" → "secondary"
+      2. Soft mid-word breaks — a word fragment split across lines inside a
+         heading, e.g. "hom\ne price" → "home price" (conservative: only when
+         the fragment is very short ≤4 chars and looks like a word stub)
+      3. Noise-only lines: phone numbers, emails, standalone digits,
+         broker boilerplate — removed entirely
+      4. Excessive blank lines → max one blank line between paragraphs
+    """
+    import re as _re
+
+    # 1. Rejoin hyphenated line-breaks  e.g. "secon-\ndary" → "secondary"
+    text = _re.sub(r"(\w)-\n(\w)", r"\1\2", text)
+
+    # 2. Rejoin short dangling word-fragments across lines.
+    #    Condition: previous line ends with 1-4 lowercase letters (stub), next
+    #    line starts with 1-4 lowercase letters then a space or end-of-content
+    #    (the rest of the word).  This catches OCR column-wrap artefacts like
+    #    "hom\ne price" → "home price" without touching normal sentence breaks
+    #    like "was\ntrending" (where "trending" is a full word > 4 chars start).
+    text = _re.sub(r"([a-z]{1,4})\n([a-z]{1,4}(?=\s|$))", r"\1\2", text)
+
+    # 3. Strip noise-only lines
+    _noise = _re.compile(
+        r"^\s*("
+        r"\(?\d[\d\s\-\+\(\)]{6,}\d"          # phone number
+        r"|[\w.\-]+@[\w.\-]+\.[a-z]{2,}"       # email
+        r"|[\d\s\.\,\|\-\+\=\*\/\\]{4,}"       # digits / punctuation only
+        r"|J\.P\.\s*Morgan\s+\w.*"             # broker firm line
+        r")\s*$",
+        _re.IGNORECASE,
+    )
+    lines = [ln for ln in text.splitlines() if not _noise.match(ln)]
+    text = "\n".join(lines)
+
+    # 4. Collapse 3+ consecutive blank lines → one blank line
+    text = _re.sub(r"\n{3,}", "\n\n", text)
+
+    return text.strip()
 
 
 # 10-K: annual report section patterns
