@@ -66,21 +66,26 @@ def _get_mirror():
         _mirror.ensure_schema(conn)
         _mirror_local.conn = conn
 
-    # One-time backfill from KuzuDB if mirror looks empty (first run / upgrade)
+    # One-time backfill from KuzuDB if mirror looks empty OR episodes_json missing
     if not _mirror_backfill_done:
         _mirror_backfill_done = True   # set early to prevent re-entry on concurrent req
         n_ent = conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
         n_ep  = conn.execute("SELECT COUNT(*) FROM episodes").fetchone()[0]
-        if (n_ent == 0 or n_ep == 0) and GRAPH_DIR.exists():
+        n_edges_with_ep = conn.execute(
+            "SELECT COUNT(*) FROM edges WHERE episodes_json != '[]'"
+        ).fetchone()[0]
+        need_backfill = (n_ent == 0 or n_ep == 0 or
+                         (n_edges_with_ep == 0 and n_ent > 0))
+        if need_backfill and GRAPH_DIR.exists():
             print("[mirror] incomplete — backfilling from KuzuDB …", flush=True)
             # Reuse graphiti's existing kuzu.Database object to avoid exclusive-lock conflict
             existing_kuzu_conn = None
             try:
                 import kuzu as _kuzu
                 g = _get_graphiti()
-                if g is not None and hasattr(g, "graph_driver") and \
-                        hasattr(g.graph_driver, "db"):
-                    existing_kuzu_conn = _kuzu.Connection(g.graph_driver.db)
+                if g is not None and hasattr(g, "driver") and \
+                        hasattr(g.driver, "db"):
+                    existing_kuzu_conn = _kuzu.Connection(g.driver.db)
             except Exception:
                 pass
             ne, ned = _mirror.backfill_from_kuzu(
@@ -140,8 +145,8 @@ def _kuzu_conn():
     """
     import kuzu
     g = _get_graphiti()
-    if g is not None and hasattr(g, "graph_driver") and hasattr(g.graph_driver, "db"):
-        kdb  = g.graph_driver.db
+    if g is not None and hasattr(g, "driver") and hasattr(g.driver, "db"):
+        kdb  = g.driver.db
         conn = kuzu.Connection(kdb)
         return conn, kdb
     # Fallback: graphiti not yet initialised — open our own read-write connection.
@@ -403,14 +408,10 @@ def upload_pdf():
 def refresh_mirror():
     """Force a full re-backfill from KuzuDB into the mirror (updates episodes_json etc.)."""
     try:
-        import kuzu as _kuzu
-        existing_kuzu_conn = None
-        g = _get_graphiti()
-        if g is not None and hasattr(g, "graph_driver") and hasattr(g.graph_driver, "db"):
-            existing_kuzu_conn = _kuzu.Connection(g.graph_driver.db)
-        conn = _get_mirror()
-        ne, ned = _mirror.backfill_from_kuzu(conn, GRAPH_DIR, GROUP_ID,
-                                              kuzu_conn=existing_kuzu_conn)
+        kuzu_conn, _kdb = _kuzu_conn()
+        mirror_conn = _get_mirror()
+        ne, ned = _mirror.backfill_from_kuzu(mirror_conn, GRAPH_DIR, GROUP_ID,
+                                              kuzu_conn=kuzu_conn)
         return jsonify({"ok": True, "entities": ne, "edges": ned})
     except Exception as e:
         return jsonify({"ok": False, "error": str(e)}), 500
