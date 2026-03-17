@@ -233,9 +233,26 @@ def log_generation(
 
 
 def flush() -> None:
-    """Flush buffered traces — call after each document or at end of session."""
+    """Flush buffered traces — call after each document."""
     if _enabled and _lf is not None:
         try:
             _lf.flush()
         except Exception as e:
             logger.debug("Langfuse flush failed: %s", e)
+
+
+def shutdown() -> None:
+    """Flush all pending spans and shut down background exporter threads.
+
+    Call this once at the very end of the ingest run (after asyncio.run()).
+    flush() alone is not enough — the OTel exporter runs in background threads
+    that Python may kill on process exit before they finish sending data.
+    shutdown() blocks until all queued spans are delivered.
+    """
+    if _enabled and _lf is not None:
+        try:
+            print("  📊 Langfuse flushing traces …", flush=True)
+            _lf.shutdown()
+            print("  📊 Langfuse shutdown complete.", flush=True)
+        except Exception as e:
+            logger.debug("Langfuse shutdown failed: %s", e)
