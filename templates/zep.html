@@ -65,14 +65,18 @@
                             white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:240px; }
 
     /* ── graph panel ── */
-    #graphPanel { margin:0 20px 20px; display:none; }
-    #graphNet   { height:580px; background:#fafbff; border:1px solid #dee2e6;
-                  border-radius:8px; position:relative; }
+    #graphPanel { display:none; position:fixed; inset:0; z-index:1040;
+                  background:#fff; flex-direction:column; }
+    #graphPanel.active { display:flex; }
+    #graphToolbar { display:flex; align-items:center; gap:8px; padding:6px 14px;
+                    background:#f8f9fa; border-bottom:1px solid #dee2e6; flex-shrink:0; }
+    #graphNet   { flex:1 1 0; min-height:0; background:#fafbff; position:relative; }
     #graphInfo  { font-size:.85rem; color:#6c757d; padding:4px 8px;
                   position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
                   background:#fff; border:1px solid #dee2e6; border-radius:6px;
                   white-space:nowrap; display:none; }
-    #graphFooter { font-size:.78rem; color:#6c757d; padding:4px 0; }
+    #graphFooter { font-size:.75rem; color:#6c757d; padding:3px 14px;
+                   background:#f8f9fa; border-top:1px solid #dee2e6; flex-shrink:0; }
 
     /* ── ingest log ── */
     #ingestLog { font-size:.78rem; max-height:260px; overflow-y:auto;
@@ -81,6 +85,19 @@
     #ingestLog .ok   { color:#56d364; }
     #ingestLog .warn { color:#e3b341; }
     #ingestLog .err  { color:#f85149; }
+
+    /* ── document browser ── */
+    .doc-row { padding:7px 10px; border-bottom:1px solid #f0f0f0; font-size:.82rem; cursor:pointer; }
+    .doc-row:hover { background:#f8f9fa; }
+    .doc-row .dtitle { font-weight:600; color:#0d6efd;
+                       white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:260px; }
+    .doc-row .dmeta  { color:#6c757d; font-size:.73rem; }
+    .doc-type-pdf  { background:#d1ecf1; color:#0c5460; border-radius:3px;
+                     padding:1px 5px; font-size:.7rem; font-weight:600; margin-right:4px; }
+    .doc-type-sec  { background:#d4edda; color:#155724; border-radius:3px;
+                     padding:1px 5px; font-size:.7rem; font-weight:600; margin-right:4px; }
+    .doc-edge-cnt  { background:#e9ecef; color:#495057; border-radius:3px;
+                     padding:1px 5px; font-size:.7rem; margin-right:4px; }
 
     /* ── tabs ── */
     .nav-tabs .nav-link { font-size:.85rem; padding:6px 12px; }
@@ -133,6 +150,7 @@
   <span class="ms-auto">
     <button class="btn btn-sm btn-outline-primary" onclick="loadEntities()">Browse All Entities</button>
     <button class="btn btn-sm btn-outline-info ms-1" onclick="loadCommunities(true)">Browse Communities</button>
+    <button class="btn btn-sm btn-outline-secondary ms-1" onclick="loadDocuments(true, null)">📄 Browse Documents</button>
     <button class="btn btn-sm btn-outline-secondary ms-1" id="graphToggleBtn" onclick="toggleGraph()">🕸 Graph View</button>
     <button class="btn btn-sm btn-outline-success ms-1" onclick="fetchNewPdfs()">⬆ Index New Documents</button>
     <button class="btn btn-sm btn-outline-warning ms-1" onclick="buildCommunities()">🔗 Build Communities</button>
@@ -197,6 +215,46 @@
       </div>
     </div>
 
+    <!-- Document browser card -->
+    <div class="card mb-3" id="docCard" style="display:none!important">
+      <div class="card-header d-flex justify-content-between align-items-center py-2">
+        <span style="font-size:.88rem;font-weight:600">Documents</span>
+        <span class="d-flex gap-1 align-items-center">
+          <button class="btn btn-xs btn-outline-secondary py-0 px-1 doc-filter-btn active"
+                  style="font-size:.72rem" data-type="" onclick="setDocFilter(this,'')">All</button>
+          <button class="btn btn-xs btn-outline-info py-0 px-1 doc-filter-btn"
+                  style="font-size:.72rem" data-type="pdf" onclick="setDocFilter(this,'pdf')">PDF</button>
+          <button class="btn btn-xs btn-outline-success py-0 px-1 doc-filter-btn"
+                  style="font-size:.72rem" data-type="sec" onclick="setDocFilter(this,'sec')">SEC</button>
+          <button class="btn-close btn-sm ms-1" onclick="document.getElementById('docCard').style.display='none'"></button>
+        </span>
+      </div>
+      <div id="docList" class="card-body p-0" style="max-height:400px;overflow-y:auto"></div>
+      <div class="card-footer py-1">
+        <button class="btn btn-sm btn-link" id="loadMoreDocsBtn" onclick="loadMoreDocuments()" style="display:none">
+          Load more…
+        </button>
+      </div>
+    </div>
+
+    <!-- Document detail card -->
+    <div class="card mb-3" id="docDetailCard" style="display:none!important">
+      <div class="card-header d-flex justify-content-between align-items-center py-2">
+        <span id="docDetailTitle" style="font-size:.85rem;font-weight:600;max-width:220px;
+              white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Document</span>
+        <div class="d-flex gap-1 align-items-center">
+          <a id="docDetailLink" href="#" target="_blank" class="btn btn-xs btn-outline-primary py-0 px-1"
+             style="font-size:.72rem;display:none">Open PDF</a>
+          <button class="btn btn-sm btn-link py-0" onclick="showDocumentBrowser()"
+                  style="font-size:.8rem;text-decoration:none">← Back</button>
+        </div>
+      </div>
+      <div class="card-body p-2" style="max-height:480px;overflow-y:auto">
+        <div id="docDetailEntities" class="mb-3"></div>
+        <div id="docDetailEdges"></div>
+      </div>
+    </div>
+
     <!-- Ingest / upload card -->
     <div class="card" id="ingestCard" style="display:none">
       <div class="card-header d-flex justify-content-between align-items-center py-2">
@@ -214,12 +272,19 @@
   </div><!-- /sideCol -->
 </div><!-- /mainWrap -->
 
-<!-- ── Graph visualisation panel ── -->
+<!-- ── Graph visualisation panel (full-screen overlay) ── -->
 <div id="graphPanel">
+  <div id="graphToolbar">
+    <strong style="font-size:.9rem">🕸 Knowledge Graph</strong>
+    <span id="graphNodeCount" class="text-muted" style="font-size:.8rem"></span>
+    <span class="ms-auto d-flex gap-2 align-items-center">
+      <span id="graphFooter">Click a node to search its relationships.</span>
+      <button class="btn btn-sm btn-outline-secondary" onclick="toggleGraph()" title="Close graph view">✕ Close</button>
+    </span>
+  </div>
   <div id="graphNet">
     <div id="graphInfo"></div>
   </div>
-  <div id="graphFooter">Click a node to search its relationships.</div>
 </div>
 
 {% endif %}
@@ -540,7 +605,7 @@ async function clearGraph() {
       loadStats();
       // reset graph view so it rebuilds next time
       window._graphBuilt = false;
-      document.getElementById('graphPanel').style.display = 'none';
+      document.getElementById('graphPanel').classList.remove('active');
       document.getElementById('graphToggleBtn').classList.remove('active');
     } else {
       alert('Error: ' + (d.errors || []).join('\n'));
@@ -663,12 +728,12 @@ let _graphBuilt = false;
 async function toggleGraph() {
   const panel = document.getElementById('graphPanel');
   const btn   = document.getElementById('graphToggleBtn');
-  if (getComputedStyle(panel).display !== 'none') {
-    panel.style.display = 'none';
+  if (panel.classList.contains('active')) {
+    panel.classList.remove('active');
     btn.classList.remove('active');
     return;
   }
-  panel.style.display = 'block';
+  panel.classList.add('active');
   btn.classList.add('active');
   if (_graphBuilt) return;
 
@@ -772,8 +837,9 @@ async function toggleGraph() {
     });
 
     _graphBuilt = true;
-    document.getElementById('graphFooter').textContent =
-      `${nodeList.length} entities · ${edgeList.length} relationships  —  click a node to search`;
+    document.getElementById('graphNodeCount').textContent =
+      `${nodeList.length} entities · ${edgeList.length} relationships`;
+    document.getElementById('graphFooter').textContent = 'Click a node to search its relationships.';
   } catch (e) {
     graphInfo.textContent = 'Error: ' + e.message;
     graphInfo.style.display = 'block';
@@ -784,6 +850,113 @@ async function toggleGraph() {
 function escHtml(s) {
   if (!s) return '';
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Document browser ───────────────────────────────────────────────────────
+let _docCursor   = null;
+let _docFilter   = '';   // '' | 'pdf' | 'sec'
+
+function setDocFilter(btn, type) {
+  _docFilter = type;
+  document.querySelectorAll('.doc-filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  loadDocuments(true, type);
+}
+
+async function loadDocuments(reset, type) {
+  if (type !== undefined) _docFilter = type || '';
+  if (reset) _docCursor = null;
+
+  const card = document.getElementById('docCard');
+  const list = document.getElementById('docList');
+  document.getElementById('docDetailCard').style.display = 'none';
+  card.style.display = '';
+
+  const url = `/episodes?limit=50${_docFilter ? '&type='+_docFilter : ''}${_docCursor ? '&cursor='+_docCursor : ''}`;
+  const r = await fetch(url);
+  const d = await r.json();
+
+  if (reset) list.innerHTML = '';
+  (d.episodes || []).forEach(ep => {
+    const isP = ep.source_desc && ep.source_desc.startsWith('PDF:');
+    const badge = isP
+      ? `<span class="doc-type-pdf">PDF</span>`
+      : `<span class="doc-type-sec">SEC</span>`;
+    const edges = ep.edge_count > 0
+      ? `<span class="doc-edge-cnt">${ep.edge_count} relations</span>` : '';
+    const label = ep.source_desc || ep.name;
+    list.innerHTML += `
+    <div class="doc-row" onclick="showDocument('${escHtml(ep.uuid)}','${escHtml(label)}')">
+      <div class="dtitle">${badge}${escHtml(label.replace(/^(PDF|SEC):\s*/,''))}</div>
+      <div class="dmeta">${edges}${escHtml(ep.created_at || '')}</div>
+    </div>`;
+  });
+
+  _docCursor = d.next_cursor || null;
+  document.getElementById('loadMoreDocsBtn').style.display = _docCursor ? '' : 'none';
+}
+
+function loadMoreDocuments() { loadDocuments(false, undefined); }
+
+function showDocumentBrowser() {
+  document.getElementById('docDetailCard').style.display = 'none';
+  document.getElementById('docCard').style.display = '';
+}
+
+async function showDocument(uuid, label) {
+  document.getElementById('docCard').style.display = 'none';
+  const det = document.getElementById('docDetailCard');
+  document.getElementById('docDetailTitle').textContent = label.replace(/^(PDF|SEC):\s*/,'');
+  document.getElementById('docDetailEntities').innerHTML = '<em class="text-muted" style="font-size:.8rem">Loading…</em>';
+  document.getElementById('docDetailEdges').innerHTML    = '';
+  det.style.display = '';
+
+  const r = await fetch('/episodes/' + uuid);
+  const d = await r.json();
+
+  // PDF open link
+  const link = document.getElementById('docDetailLink');
+  if (d.url) {
+    link.href = d.url; link.style.display = '';
+  } else {
+    link.style.display = 'none';
+  }
+
+  // Entities section
+  const ents = d.entities || [];
+  const entDiv = document.getElementById('docDetailEntities');
+  if (ents.length === 0) {
+    entDiv.innerHTML = '<p class="text-muted mb-2" style="font-size:.8rem">No entities extracted.</p>';
+  } else {
+    entDiv.innerHTML = `<div style="font-size:.8rem;font-weight:600;margin-bottom:4px">
+      🏢 Entities (${ents.length})</div>` +
+      ents.map(e => `<span class="entity-badge" style="cursor:pointer;margin-bottom:3px"
+        onclick="clickEntity('${escHtml(e.uuid)}','${escHtml(e.name)}')">${escHtml(e.name)}</span>`).join(' ');
+  }
+
+  // Edges section
+  const edges = d.edges || [];
+  const edgDiv = document.getElementById('docDetailEdges');
+  if (edges.length === 0) {
+    edgDiv.innerHTML = '<p class="text-muted" style="font-size:.8rem">No relationships extracted.</p>';
+  } else {
+    edgDiv.innerHTML = `<div style="font-size:.8rem;font-weight:600;margin-bottom:6px">
+      🔗 Relationships (${edges.length})</div>`;
+    edges.forEach(e => {
+      edgDiv.innerHTML += `
+      <div class="result-card" style="padding:8px 12px;margin-bottom:6px">
+        <div class="fact" style="font-size:.85rem">${escHtml(e.fact||e.name||'')}</div>
+        <div class="meta" style="margin-top:3px">
+          ${e.source_node_uuid||e.src_uuid ? `<span class="entity-badge"
+            onclick="clickEntity('${escHtml(e.src_uuid||'')}','${escHtml(e.src_name||'')}')">
+            ↗ ${escHtml(e.src_name||'')}</span>` : ''}
+          ${e.tgt_uuid ? `<span class="entity-badge"
+            onclick="clickEntity('${escHtml(e.tgt_uuid||'')}','${escHtml(e.tgt_name||'')}')">
+            ↗ ${escHtml(e.tgt_name||'')}</span>` : ''}
+        </div>
+      </div>`;
+    });
+  }
 }
 
 // ── Init ───────────────────────────────────────────────────────────────────

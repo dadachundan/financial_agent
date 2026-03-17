@@ -404,6 +404,23 @@ def upload_pdf():
     return Response(_gen(), mimetype="text/event-stream")
 
 
+@zep_bp.route("/episodes")
+def episodes():
+    limit       = min(int(request.args.get("limit", 100)), 500)
+    cursor      = request.args.get("cursor") or None
+    type_filter = request.args.get("type") or None   # 'pdf' | 'sec' | None
+    items, next_cursor = _mirror.get_episodes(_get_mirror(), limit, cursor, type_filter)
+    return jsonify({"episodes": items, "next_cursor": next_cursor})
+
+
+@zep_bp.route("/episodes/<ep_uuid>")
+def episode_detail(ep_uuid: str):
+    detail = _mirror.get_episode_detail(_get_mirror(), ep_uuid)
+    if detail is None:
+        return jsonify({"error": "not found"}), 404
+    return jsonify(detail)
+
+
 @zep_bp.route("/refresh-mirror", methods=["POST"])
 def refresh_mirror():
     """Force a full re-backfill from KuzuDB into the mirror (updates episodes_json etc.)."""
