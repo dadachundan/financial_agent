@@ -16,6 +16,16 @@ After completing a task and verifying that it works (by running tests or the app
 4. Do not include the "Co-authored-by: Claude" footer in commits.
 5. After testing a function or debugging is complete, stop any demo/preview servers to free the port (`preview_stop()`).
 
+# UI Verification (MANDATORY)
+
+After adding or modifying any UI feature — especially new buttons, modals, or navigation flows:
+
+1. **Always start the real web server** (`preview_start`) and load the page.
+2. **Click every new button** and verify it performs the correct action (use `preview_eval` to simulate clicks if needed).
+3. **Trace JS errors**: use `preview_console_logs` and `preview_eval` to check for `undefined`, `null`, or scoping issues (e.g. variables declared inside an IIFE are not accessible outside it).
+4. **Verify navigation flows end-to-end**: if a button should navigate to another view, confirm the target view actually appears.
+5. Do not consider UI work done until you have a screenshot or eval result proving each new interaction works.
+
 # Editable Table Columns
 
 When the user asks to make a field in a table editable, always use the `md_comment_widget.py` pattern:
