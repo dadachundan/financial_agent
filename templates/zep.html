@@ -924,6 +924,7 @@ async function initGraph() {
 
     if (allEdges.length === 0) {
       graphInfo.textContent = 'No relationships yet — run the ingestor first.';
+      document.getElementById('graphFooter').textContent = 'No data';
       return;
     }
     graphInfo.style.display = 'none';
@@ -995,6 +996,7 @@ async function initGraph() {
   } catch (e) {
     graphInfo.textContent = 'Error: ' + e.message;
     graphInfo.style.display = 'block';
+    document.getElementById('graphFooter').textContent = 'Failed to load graph';
   }
 }
 
