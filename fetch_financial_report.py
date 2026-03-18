@@ -996,6 +996,12 @@ function renderRows(rows, startIndex, totalFiltered) {
               title="Click to preview / edit"></span>
       </td>
       <td class="text-end pe-2 text-nowrap">
+        ${r.local_path
+          ? (r.graphiti_indexed_at
+              ? `<span class="badge bg-success me-1" title="Indexed ${r.graphiti_indexed_at.slice(0,10)}">✓ KG</span>`
+              : `<button class="btn btn-outline-primary btn-sm me-1 idx-btn" title="Index into knowledge graph"
+                         onclick="indexReport(${r.id},this)">⬆ KG</button>`)
+          : ''}
         <button class="btn btn-outline-danger del-btn"
                 onclick="deleteReport(${r.id},this)">🗑</button>
       </td>
@@ -1068,6 +1074,65 @@ function deleteReport(id) {
   });
 }
 
+function indexReport(id, btn) {
+  btn.disabled = true;
+  btn.textContent = '⏳';
+
+  // Small log modal
+  const modal = document.createElement('div');
+  modal.style.cssText = 'position:fixed;bottom:1rem;right:1rem;width:420px;max-height:260px;overflow-y:auto;' +
+    'background:#1e1e1e;color:#d4d4d4;font:12px/1.5 monospace;padding:.75rem 1rem;border-radius:8px;' +
+    'box-shadow:0 4px 20px rgba(0,0,0,.5);z-index:9999';
+  document.body.appendChild(modal);
+
+  const es = new EventSource('/index-report/' + id, {method: 'POST'});
+  // EventSource is GET-only; use fetch SSE pattern instead
+  es.close();
+  modal.textContent = 'Starting…\n';
+
+  fetch('/index-report/' + id, {method: 'POST'})
+    .then(async res => {
+      const reader = res.body.getReader();
+      const dec    = new TextDecoder();
+      let buf = '';
+      while (true) {
+        const {value, done} = await reader.read();
+        if (done) break;
+        buf += dec.decode(value, {stream: true});
+        const lines = buf.split('\n');
+        buf = lines.pop();
+        for (const line of lines) {
+          if (!line.startsWith('data: ')) continue;
+          const msg = line.slice(6);
+          if (msg.startsWith('__done__:')) {
+            const code = parseInt(msg.split(':')[1]);
+            if (code === 0) {
+              btn.textContent = '✓ KG';
+              btn.className = 'badge bg-success me-1';
+              btn.onclick = null;
+              // Update in-memory row so the badge sticks on re-render
+              const row = _rows.find(r => r.id === id);
+              if (row) row.graphiti_indexed_at = new Date().toISOString();
+            } else {
+              btn.disabled = false;
+              btn.textContent = '⬆ KG';
+            }
+            setTimeout(() => modal.remove(), 4000);
+          } else {
+            modal.textContent += msg + '\n';
+            modal.scrollTop = modal.scrollHeight;
+          }
+        }
+      }
+    })
+    .catch(e => {
+      modal.textContent += 'Error: ' + e.message;
+      btn.disabled = false;
+      btn.textContent = '⬆ KG';
+      setTimeout(() => modal.remove(), 5000);
+    });
+}
+
 // init
 loadReports();
 
@@ -1123,6 +1188,30 @@ def stream_download_route():
         content_type="text/event-stream",
         headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
     )
+
+
+@sec_bp.route("/index-report/<int:report_id>", methods=["POST"])
+def index_report(report_id: int):
+    """SSE stream: index a single report into graphiti."""
+    import subprocess, sys as _sys, os as _os
+    from pathlib import Path as _Path
+    ingestor = _Path(__file__).parent / "ingest" / "graphiti_ingest.py"
+
+    def _gen():
+        proc = subprocess.Popen(
+            [_sys.executable, "-u", str(ingestor),
+             "--source", "financial_reports", "--report-id", str(report_id)],
+            stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+            text=True, bufsize=1,
+            env={**_os.environ, "PYTHONUNBUFFERED": "1"},
+        )
+        for line in proc.stdout:
+            yield f"data: {line.rstrip()}\n\n"
+        proc.wait()
+        yield f"data: __done__:{proc.returncode}\n\n"
+
+    return Response(_gen(), mimetype="text/event-stream",
+                    headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
 
 
 @sec_bp.route("/file/<int:report_id>")

@@ -890,6 +890,9 @@ def main() -> None:
                         help="Use the pre-computed summary column from zsxq.db instead of "
                              "extracting the full PDF.  Faster and cleaner; falls back to "
                              "PDF extraction if a row has no summary.")
+    parser.add_argument("--report-id", type=int, default=0,
+                        metavar="ID",
+                        help="Index a single financial_reports row by its DB id.")
     parser.add_argument("--debug-llm", action="store_true",
                         help="Print every LLM request and response to stdout.")
     args = parser.parse_args()
@@ -932,8 +935,30 @@ def main() -> None:
         else:
             print("No new PDFs in zsxq.db.")
 
+    # ── single report by ID ────────────────────────────────────────────────────
+    if args.report_id:
+        if not reports_db_path.exists():
+            print(f"ERROR: financial_reports database not found: {reports_db_path}")
+            sys.exit(1)
+        conn = sqlite3.connect(reports_db_path)
+        conn.row_factory = sqlite3.Row
+        ensure_reports_column(conn)
+        row = conn.execute(
+            "SELECT id, ticker, company_name, period, form_type, local_path, filed_date "
+            "FROM reports WHERE id = ?",
+            (args.report_id,),
+        ).fetchone()
+        conn.close()
+        if row is None:
+            print(f"ERROR: report id {args.report_id} not found.")
+            sys.exit(1)
+        print(f"Indexing single report id={args.report_id}: {row['ticker']} {row['form_type']} {row['period']} …")
+        items, conn2 = _build_report_items([row], reports_db_path)
+        all_items.extend(items)
+        open_conns.append(conn2)
+
     # ── financial_reports HTML ─────────────────────────────────────────────────
-    if args.source in ("financial_reports", "all"):
+    if not args.report_id and args.source in ("financial_reports", "all"):
         if not reports_db_path.exists():
             print(f"ERROR: financial_reports database not found: {reports_db_path}")
             sys.exit(1)
