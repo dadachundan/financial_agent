@@ -893,6 +893,7 @@ function showCommunityBrowser() {
   document.getElementById('communityDetailCard').style.display = 'none';
   document.getElementById('unassignedCard').style.display = 'none';
   document.getElementById('communityCard').style.display = '';
+  clearGraphFilter();
 }
 
 async function deleteCommunity() {
@@ -926,8 +927,12 @@ async function showUnassignedEntities() {
     listEl.innerHTML = '';
     if (!d.entities || d.entities.length === 0) {
       listEl.innerHTML = '<div class="p-2 text-muted" style="font-size:.78rem">All entities are assigned to a community.</div>';
+      clearGraphFilter();
       return;
     }
+    // Filter graph to show only unassigned entities
+    _communityFilterUuids = new Set(d.entities.map(e => e.uuid));
+    filterGraphToCommunity();
     d.entities.forEach(e => {
       const row = document.createElement('div');
       row.className = 'entity-row';
