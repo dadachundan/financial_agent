@@ -667,6 +667,31 @@ def community_detail(cid: int):
     return jsonify(result)
 
 
+@zep_bp.route("/entities/unassigned")
+def unassigned_entities():
+    """Entities that don't belong to any community."""
+    conn = _get_mirror()
+    rows = conn.execute(
+        "SELECT e.uuid, e.name, e.summary FROM entities e "
+        "WHERE NOT EXISTS (SELECT 1 FROM community_members cm WHERE cm.entity_uuid = e.uuid) "
+        "AND e.deprecated = 0 "
+        "ORDER BY e.name LIMIT 500"
+    ).fetchall()
+    return jsonify({"entities": [dict(r) for r in rows]})
+
+
+@zep_bp.route("/communities/<int:cid>/members/<uuid>", methods=["DELETE"])
+def remove_community_member(cid: int, uuid: str):
+    """BFS flood-fill removal: remove entity and all connected entities from community cid."""
+    conn = _get_mirror()
+    # Verify community exists
+    row = conn.execute("SELECT id FROM communities WHERE id=?", (cid,)).fetchone()
+    if row is None:
+        return jsonify({"ok": False, "error": "community not found"}), 404
+    removed = _mirror.remove_community_bfs(conn, cid, uuid)
+    return jsonify({"ok": True, "removed": removed})
+
+
 @zep_bp.route("/communities", methods=["POST"])
 def create_community():
     """Create a community seeded by one entity; BFS assigns all connected entities."""
