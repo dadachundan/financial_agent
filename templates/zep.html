@@ -1345,9 +1345,17 @@ async function submitAssignCommunity() {
     });
     const data = await res.json();
     if (!data.ok) throw new Error(data.error || 'unknown error');
+    document.getElementById('assignCommResult').textContent =
+      `✓ Created "${name}" with ${data.member_count} member(s).`;
+    btn.textContent = 'Done';
+    _assignSuccess = true;
+    loadStats();
+    // Wait briefly so user sees success, then close and navigate
+    await new Promise(r => setTimeout(r, 800));
     const modalEl = document.getElementById('assignCommunityModal');
     (bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl)).hide();
-    loadStats();
+    btn.disabled = false;
+    btn.textContent = 'Create';
     await showUnassignedEntities();
   } catch(e) {
     document.getElementById('assignCommResult').textContent = '✗ ' + e.message;
@@ -1360,9 +1368,12 @@ async function submitAssignCommunity() {
 (async () => {
   loadStats();
   initGraph();
-  // After assign-community modal closes (any way), go to unassigned entities
+  // If user manually closes modal (X or Close button), go to unassigned view
+  let _assignSuccess = false;
+  document.getElementById('assignCommSubmitBtn').addEventListener('click', () => { _assignSuccess = false; });
+  document.getElementById('assignCommunityModal').addEventListener('show.bs.modal', () => { _assignSuccess = false; });
   document.getElementById('assignCommunityModal').addEventListener('hidden.bs.modal', () => {
-    showUnassignedEntities();
+    if (!_assignSuccess) showUnassignedEntities();
   });
 })();
 </script>
