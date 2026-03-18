@@ -54,6 +54,7 @@ import graph_mirror as _mirror
 # Thread-local storage — each Flask worker thread gets its own SQLite connection.
 # SQLite connections cannot be shared across threads (check_same_thread=True default).
 _mirror_local    = threading.local()
+_ingest_running  = False   # True while graphiti_ingest subprocess holds the Kuzu lock
 _mirror_backfill_done = False          # run backfill at most once per process
 
 
@@ -311,13 +312,20 @@ def edges():
 @zep_bp.route("/edges/<uuid>/deprecate", methods=["POST"])
 def deprecate_edge(uuid):
     """Mark a relationship as deprecated in mirror + KuzuDB (set expired_at)."""
+    global _ingest_running
     body   = request.get_json(silent=True) or {}
     reason = (body.get("reason") or "RELATION_NONSENSE").strip()[:200]
     found  = _mirror.deprecate_edge(_get_mirror(), uuid, reason)
     if not found:
         return jsonify({"ok": False, "error": "edge not found"}), 404
 
-    # Also write expired_at into KuzuDB so the graph DB stays in sync.
+    # Mirror updated — UI reflects the change immediately.
+    # If ingest holds the Kuzu lock, queue the Kuzu write for later.
+    if _ingest_running:
+        _mirror.queue_deletion(_get_mirror(), uuid, "edge", reason)
+        print(f"[deprecate_edge] ingest running — queued Kuzu write for {uuid}", file=sys.stderr)
+        return jsonify({"ok": True, "uuid": uuid, "reason": reason, "kuzu": "queued"})
+
     try:
         kuzu_conn, _kdb = _kuzu_conn()
         kuzu_conn.execute(
@@ -343,9 +351,17 @@ def entity_edges(uuid):
 @zep_bp.route("/entities/<uuid>/isolate", methods=["POST"])
 def isolate_entity(uuid):
     """Mark an entity as isolated in mirror + delete it from KuzuDB."""
+    global _ingest_running
     found = _mirror.isolate_entity(_get_mirror(), uuid)
     if not found:
         return jsonify({"ok": False, "error": "entity not found"}), 404
+
+    # Mirror updated — UI reflects the change immediately.
+    # If ingest holds the Kuzu lock, queue the Kuzu write for later.
+    if _ingest_running:
+        _mirror.queue_deletion(_get_mirror(), uuid, "entity")
+        print(f"[isolate_entity] ingest running — queued Kuzu delete for {uuid}", file=sys.stderr)
+        return jsonify({"ok": True, "uuid": uuid, "kuzu": "queued"})
 
     # Also hard-delete from KuzuDB (DETACH DELETE removes the node and all its edges).
     try:
@@ -374,21 +390,52 @@ def stats():
 def ingest_stream():
     """SSE stream: run graphiti_ingest.py for any un-indexed PDFs and SEC filings."""
     def _gen():
-        yield "data: Starting graphiti_ingest.py ...\n\n"
-        ingestor = SCRIPT_DIR / "ingest" / "graphiti_ingest.py"
-        proc = subprocess.Popen(
-            [sys.executable, "-u", str(ingestor),
-             "--source", "all", "--form-type", "10-K", "10-Q"],
-            stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-            text=True, bufsize=1,
-            env={**os.environ, "PYTHONUNBUFFERED": "1"},
-        )
-        for line in proc.stdout:
-            yield f"data: {line.rstrip()}\n\n"
-        proc.wait()
-        # Reset the singleton so it reloads the updated graph
-        global _graphiti
-        _graphiti = None
+        global _ingest_running, _graphiti
+        _ingest_running = True
+        try:
+            yield "data: Starting graphiti_ingest.py ...\n\n"
+            ingestor = SCRIPT_DIR / "ingest" / "graphiti_ingest.py"
+            proc = subprocess.Popen(
+                [sys.executable, "-u", str(ingestor),
+                 "--source", "all", "--form-type", "10-K", "10-Q"],
+                stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                text=True, bufsize=1,
+                env={**os.environ, "PYTHONUNBUFFERED": "1"},
+            )
+            for line in proc.stdout:
+                yield f"data: {line.rstrip()}\n\n"
+            proc.wait()
+            # Reset the singleton so it reloads the updated graph
+            _graphiti = None
+        finally:
+            _ingest_running = False
+
+        # Drain any deletions that were queued while ingest held the Kuzu lock
+        pending = _mirror.drain_pending_deletions(_get_mirror())
+        if pending:
+            yield f"data: Applying {len(pending)} queued deletion(s)…\n\n"
+            kuzu_conn, _kdb = _kuzu_conn()
+            for row in pending:
+                p_uuid, p_type, p_reason = row["uuid"], row["type"], row["reason"]
+                try:
+                    if p_type == "edge":
+                        kuzu_conn.execute(
+                            "MATCH (:Entity)-[:RELATES_TO]->(e:RelatesToNode_ {uuid: $uuid})-[:RELATES_TO]->(:Entity) "
+                            "SET e.expired_at = $ts",
+                            {"uuid": p_uuid, "ts": datetime.now(timezone.utc)},
+                        )
+                    else:
+                        kuzu_conn.execute(
+                            "MATCH (n:Entity {uuid: $uuid}) "
+                            "OPTIONAL MATCH (:Entity)-[:RELATES_TO]->(r:RelatesToNode_)-[:RELATES_TO]->(n) "
+                            "OPTIONAL MATCH (n)-[:RELATES_TO]->(r2:RelatesToNode_)-[:RELATES_TO]->(:Entity) "
+                            "DETACH DELETE r, r2, n",
+                            {"uuid": p_uuid},
+                        )
+                    yield f"data: ✓ {p_type} {p_uuid[:8]}… applied\n\n"
+                except Exception as e:
+                    yield f"data: ✗ {p_type} {p_uuid[:8]}… failed: {e}\n\n"
+
         yield "data: done: true\n\n"
 
     return Response(_gen(), mimetype="text/event-stream")
