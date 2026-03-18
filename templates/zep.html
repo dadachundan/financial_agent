@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Knowledge Graph</title>
   <link href="/static/bootstrap.min.css" rel="stylesheet">
+  <script src="/static/bootstrap.bundle.min.js"></script>
   <style>
     body { background:#f0f2f5; padding:0; margin:0; height:100vh; display:flex; flex-direction:column; overflow:hidden; }
 
@@ -183,9 +184,8 @@
   <!-- LEFT: Graph (75%) -->
   <div id="graphCol">
     <div id="graphPanel">
-      <div id="graphNet">
-        <div id="graphInfo"></div>
-      </div>
+      <div id="graphNet"></div>
+      <div id="graphInfo" style="display:none;position:absolute;top:8px;left:8px;z-index:10"></div>
       <div id="graphFooter">Loading graph…</div>
     </div>
   </div>
@@ -230,8 +230,14 @@
     <div class="card mb-2" id="communityDetailCard" style="display:none">
       <div class="card-header d-flex justify-content-between align-items-center py-2">
         <span id="communityDetailTitle" style="font-size:.85rem;font-weight:600">Community</span>
-        <button class="btn btn-sm btn-link py-0" onclick="showCommunityBrowser()"
-                style="font-size:.78rem;text-decoration:none">← Back</button>
+        <div class="d-flex gap-1">
+          <button class="btn btn-sm btn-outline-primary py-0 px-1" id="filterGraphBtn"
+                  onclick="filterGraphToCommunity()" style="font-size:.75rem" title="Show only this community in the graph">⬡ Filter graph</button>
+          <button class="btn btn-sm btn-outline-secondary py-0 px-1" id="clearFilterBtn"
+                  onclick="clearGraphFilter()" style="font-size:.75rem;display:none" title="Show full graph again">✕ Clear filter</button>
+          <button class="btn btn-sm btn-link py-0" onclick="showCommunityBrowser()"
+                  style="font-size:.78rem;text-decoration:none">← Back</button>
+        </div>
       </div>
       <div class="card-body p-2">
         <p id="communityDetailSummary" class="text-muted mb-2" style="font-size:.78rem"></p>
@@ -810,9 +816,13 @@ async function showCommunity(id, name) {
   document.getElementById('communityDetailTitle').textContent = name;
   document.getElementById('communityDetailSummary').textContent = 'Loading…';
   document.getElementById('communityDetailMembers').innerHTML = '';
+  document.getElementById('filterGraphBtn').style.display = '';
+  document.getElementById('clearFilterBtn').style.display = 'none';
+  _communityFilterUuids = null;
   try {
     const r = await fetch('/communities/' + id);
     const d = await r.json();
+    _communityFilterUuids = new Set((d.members || []).map(m => m.uuid));
     document.getElementById('communityDetailSummary').textContent = d.summary || '(no summary)';
     const membersEl = document.getElementById('communityDetailMembers');
     (d.members || []).forEach(m => {
@@ -842,6 +852,38 @@ async function showCommunity(id, name) {
 function showCommunityBrowser() {
   document.getElementById('communityDetailCard').style.display = 'none';
   document.getElementById('communityCard').style.display = '';
+}
+
+// ── Community graph filter ────────────────────────────────────────────────────
+let _communityFilterUuids = null;  // Set of UUIDs for the currently viewed community
+
+function filterGraphToCommunity() {
+  if (!_communityFilterUuids || !_visNodes || !_visEdges) return;
+  const uuids = _communityFilterUuids;
+
+  // Hide nodes not in the community
+  _visNodes.forEach(n => {
+    _visNodes.update({ id: n.id, hidden: !uuids.has(n.id) });
+  });
+  // Hide edges where either endpoint is not in the community
+  _visEdges.forEach(e => {
+    _visEdges.update({ id: e.id, hidden: !(uuids.has(e.from) && uuids.has(e.to)) });
+  });
+
+  document.getElementById('filterGraphBtn').style.display = 'none';
+  document.getElementById('clearFilterBtn').style.display = '';
+  document.getElementById('graphFooter').textContent =
+    `Showing ${uuids.size} entities in this community — click "✕ Clear filter" to restore`;
+}
+
+function clearGraphFilter() {
+  if (!_visNodes || !_visEdges) return;
+  _visNodes.forEach(n => _visNodes.update({ id: n.id, hidden: false }));
+  _visEdges.forEach(e => _visEdges.update({ id: e.id, hidden: false }));
+  document.getElementById('filterGraphBtn').style.display = '';
+  document.getElementById('clearFilterBtn').style.display = 'none';
+  document.getElementById('graphFooter').textContent =
+    `${_visNodes.length} entities · ${_visEdges.length} relationships  —  click a node to search`;
 }
 
 function buildCommunities() {
@@ -1152,7 +1194,7 @@ async function initGraph() {
 
     _graphBuilt = true;
     document.getElementById('graphFooter').textContent =
-      `${nodeList.length} entities · ${allEdges.length} relationships  —  click a node to search`;
+      `${nodeMap.size} entities · ${allEdges.length} relationships  —  click a node to search`;
   } catch (e) {
     graphInfo.textContent = 'Error: ' + e.message;
     graphInfo.style.display = 'block';
