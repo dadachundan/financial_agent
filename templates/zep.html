@@ -828,8 +828,8 @@ async function showCommunity(id, name) {
   document.getElementById('communityDetailTitle').textContent = name;
   document.getElementById('communityDetailSummary').textContent = 'Loading…';
   document.getElementById('communityDetailMembers').innerHTML = '';
-  document.getElementById('filterGraphBtn').style.display = '';
-  document.getElementById('clearFilterBtn').style.display = 'none';
+  document.getElementById('communityFilterBtn').style.display = '';
+  document.getElementById('communityFilterClearBtn').style.display = 'none';
   _communityFilterUuids = null;
   try {
     const r = await fetch('/communities/' + id);
