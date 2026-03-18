@@ -408,6 +408,16 @@ def _extract_10q_sections(full: str) -> list[str]:
                  or _first_after_offset(offs, "item4", s_mda, full)
                  or s_mda + _MAX_SECTION * 2)
         chunk = full[s_mda:e_mda].strip()
+        # Strip CAUTIONARY STATEMENT / forward-looking boilerplate block.
+        # It starts at "CAUTIONARY STATEMENT" and ends just before the next
+        # all-caps section heading (OVERVIEW, RESULTS OF OPERATIONS, etc.).
+        chunk = re.sub(
+            r"CAUTIONARY STATEMENT[^\n]*\n[\s\S]*?"
+            r"(?=\n[A-Z][A-Z][A-Z\s\-]+(?:\n|$))",
+            "",
+            chunk,
+            flags=re.IGNORECASE,
+        ).strip()
         if len(chunk) > 300:
             sections.append(f"=== ITEM 2: MD&A ===\n{chunk[:_MAX_SECTION]}")
 
