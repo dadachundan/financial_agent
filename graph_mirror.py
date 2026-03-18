@@ -946,11 +946,21 @@ def backfill_from_kuzu(mirror_conn: sqlite3.Connection,
     n_ent = 0
     try:
         batch = []
-        rows = _rows(conn.execute(
-            "MATCH (n:Entity) WHERE n.group_id = $gid "
-            "RETURN n.uuid, n.name, n.labels, n.summary",
-            {"gid": group_id},
-        ))
+        # Try to fetch rating from KuzuDB; if the column doesn't exist yet, fall back.
+        try:
+            rows = _rows(conn.execute(
+                "MATCH (n:Entity) WHERE n.group_id = $gid "
+                "RETURN n.uuid, n.name, n.labels, n.summary, n.rating",
+                {"gid": group_id},
+            ))
+            has_rating = True
+        except Exception:
+            rows = _rows(conn.execute(
+                "MATCH (n:Entity) WHERE n.group_id = $gid "
+                "RETURN n.uuid, n.name, n.labels, n.summary",
+                {"gid": group_id},
+            ))
+            has_rating = False
         for r in rows:
             labels = r.get("n.labels") or []
             if isinstance(labels, str):
@@ -961,14 +971,16 @@ def backfill_from_kuzu(mirror_conn: sqlite3.Connection,
                 r["n.name"] or "",
                 _json.dumps(list(labels)),
                 (r.get("n.summary") or "")[:2000],
+                int(r.get("n.rating") or 0) if has_rating else 0,
             ))
         if batch:
             mirror_conn.executemany(
-                """INSERT INTO entities(uuid, name, labels_json, summary)
-                   VALUES (?,?,?,?)
+                """INSERT INTO entities(uuid, name, labels_json, summary, rating)
+                   VALUES (?,?,?,?,?)
                    ON CONFLICT(uuid) DO UPDATE SET
                      name=excluded.name, labels_json=excluded.labels_json,
-                     summary=excluded.summary""",
+                     summary=excluded.summary,
+                     rating=CASE WHEN excluded.rating > 0 THEN excluded.rating ELSE rating END""",
                 batch,
             )
             mirror_conn.commit()
