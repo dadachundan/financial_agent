@@ -829,6 +829,7 @@ async function loadCommunities(reset) {
     });
     _commCursor = d.next_cursor || null;
     document.getElementById('loadMoreComBtn').style.display = d.next_cursor ? '' : 'none';
+    if (!reset) list.scrollTop = list.scrollHeight; // scroll to show newly loaded items
   } catch(e) {
     document.getElementById('communityList').innerHTML =
       '<p class="text-danger p-2 mb-0">' + escHtml(e.message) + '</p>';
@@ -1322,6 +1323,7 @@ function escHtml(s) {
 
 // ── Assign entity to community (BFS flood-fill) ──────────────────────────────
 let _assignSeedUuid = null;
+let _assignSuccess = false;
 
 function openAssignCommunity(uuid, name) {
   _assignSeedUuid = uuid;
@@ -1369,7 +1371,6 @@ async function submitAssignCommunity() {
   loadStats();
   initGraph();
   // If user manually closes modal (X or Close button), go to unassigned view
-  let _assignSuccess = false;
   document.getElementById('assignCommSubmitBtn').addEventListener('click', () => { _assignSuccess = false; });
   document.getElementById('assignCommunityModal').addEventListener('show.bs.modal', () => { _assignSuccess = false; });
   document.getElementById('assignCommunityModal').addEventListener('hidden.bs.modal', () => {
