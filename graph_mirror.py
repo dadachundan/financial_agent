@@ -159,6 +159,8 @@ def ensure_schema(conn: sqlite3.Connection) -> None:
     existing_ent = {r[1] for r in conn.execute("PRAGMA table_info(entities)").fetchall()}
     if "isolated" not in existing_ent:
         conn.execute("ALTER TABLE entities ADD COLUMN isolated INTEGER DEFAULT 0")
+    if "rating" not in existing_ent:
+        conn.execute("ALTER TABLE entities ADD COLUMN rating INTEGER DEFAULT 0")
     # Pending-deletions queue (for ops attempted while ingest holds the Kuzu lock)
     conn.execute("""
         CREATE TABLE IF NOT EXISTS pending_deletions (
@@ -300,23 +302,35 @@ def get_entities(conn: sqlite3.Connection, limit: int = 200,
                  cursor: Optional[str] = None) -> tuple[list[dict], Optional[str]]:
     if cursor:
         rows = conn.execute(
-            "SELECT uuid, name, labels_json, summary FROM entities "
+            "SELECT uuid, name, labels_json, summary, rating FROM entities "
             "WHERE uuid > ? AND (isolated=0 OR isolated IS NULL) ORDER BY uuid LIMIT ?",
             (cursor, limit)
         ).fetchall()
     else:
         rows = conn.execute(
-            "SELECT uuid, name, labels_json, summary FROM entities "
+            "SELECT uuid, name, labels_json, summary, rating FROM entities "
             "WHERE (isolated=0 OR isolated IS NULL) ORDER BY uuid LIMIT ?", (limit,)
         ).fetchall()
     items = [
         {"uuid": r["uuid"], "name": r["name"],
          "labels": json.loads(r["labels_json"] or "[]"),
-         "summary": r["summary"] or ""}
+         "summary": r["summary"] or "",
+         "rating": r["rating"] or 0}
         for r in rows
     ]
     next_cursor = items[-1]["uuid"] if len(items) == limit else None
     return items, next_cursor
+
+
+def rate_entity(conn: sqlite3.Connection, uuid: str, rating: int) -> bool:
+    """Set a 1-5 star rating on an entity (0 = unrated). Returns True if found."""
+    rating = max(0, min(5, rating))
+    cur = conn.execute(
+        "UPDATE entities SET rating=?, updated_at=datetime('now') WHERE uuid=?",
+        (rating, uuid),
+    )
+    conn.commit()
+    return cur.rowcount > 0
 
 
 def _episode_url(name: str) -> Optional[str]:
@@ -875,7 +889,7 @@ def get_community_members(conn: sqlite3.Connection,
                           community_id: int) -> list[dict]:
     """Return all entities belonging to a community, ordered by name."""
     rows = conn.execute(
-        """SELECT e.uuid, e.name, e.labels_json, e.summary
+        """SELECT e.uuid, e.name, e.labels_json, e.summary, e.rating
            FROM community_members cm
            JOIN entities e ON e.uuid = cm.entity_uuid
            WHERE cm.community_id = ?
@@ -885,7 +899,8 @@ def get_community_members(conn: sqlite3.Connection,
     return [
         {"uuid": r["uuid"], "name": r["name"],
          "labels": json.loads(r["labels_json"] or "[]"),
-         "summary": r["summary"] or ""}
+         "summary": r["summary"] or "",
+         "rating": r["rating"] or 0}
         for r in rows
     ]
 
