@@ -1,10 +1,12 @@
 # Workflow Instructions
 
-Before writing any code, always ensure the current branch is synced to `main` HEAD:
+Before writing any code:
+1. Ensure the current branch is synced to `main` HEAD:
 ```
 git fetch origin && git merge --ff-only origin/main
 ```
-If the fast-forward fails (diverged branch), discard stale local changes and rebase.
+   If the fast-forward fails (diverged branch), discard stale local changes and rebase.
+2. Search existing code before writing anything new. Check if a helper, route, or utility already exists that can serve the purpose (grep for keywords, read related files). Do not duplicate functionality that already exists.
 
 After completing a task and verifying that it works (by running tests or the app):
 
@@ -12,7 +14,7 @@ After completing a task and verifying that it works (by running tests or the app
 2. If working on a worktree branch, immediately merge it into `main` (`git checkout main && git merge <branch> --no-ff && git push origin main`).
 3. Ensure the local `main` is synced with the remote `HEAD`.
 4. Do not include the "Co-authored-by: Claude" footer in commits.
-5. After debugging is complete, stop any demo/preview servers to free the port (`preview_stop()`).
+5. After testing a function or debugging is complete, stop any demo/preview servers to free the port (`preview_stop()`).
 
 # Editable Table Columns
 
