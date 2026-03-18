@@ -159,7 +159,35 @@ def ensure_schema(conn: sqlite3.Connection) -> None:
     existing_ent = {r[1] for r in conn.execute("PRAGMA table_info(entities)").fetchall()}
     if "isolated" not in existing_ent:
         conn.execute("ALTER TABLE entities ADD COLUMN isolated INTEGER DEFAULT 0")
+    # Pending-deletions queue (for ops attempted while ingest holds the Kuzu lock)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS pending_deletions (
+            uuid       TEXT NOT NULL,
+            type       TEXT NOT NULL CHECK(type IN ('edge', 'entity')),
+            reason     TEXT NOT NULL DEFAULT '',
+            queued_at  TEXT NOT NULL DEFAULT (datetime('now'))
+        )
+    """)
     conn.commit()
+
+
+def queue_deletion(conn: sqlite3.Connection, uuid: str, type_: str, reason: str = "") -> None:
+    """Queue a Kuzu deletion to be applied once ingest releases the write lock."""
+    conn.execute(
+        "INSERT INTO pending_deletions (uuid, type, reason) VALUES (?, ?, ?)",
+        (uuid, type_, reason),
+    )
+    conn.commit()
+
+
+def drain_pending_deletions(conn: sqlite3.Connection) -> list:
+    """Return all queued deletions and clear the table."""
+    rows = conn.execute(
+        "SELECT uuid, type, reason FROM pending_deletions ORDER BY rowid"
+    ).fetchall()
+    conn.execute("DELETE FROM pending_deletions")
+    conn.commit()
+    return rows
 
 
 # ── Write helpers (called from graphiti_ingest.py) ────────────────────────────
