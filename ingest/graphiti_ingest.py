@@ -267,24 +267,30 @@ def _clean_pdf_text(text: str) -> str:
     return text.strip()
 
 
+# Separator between "Item N" and the section title.
+# Covers: plain whitespace, dots, dashes, em-dashes, newlines, and the
+# " | " that _clean_html_to_text injects when the heading lives inside
+# an HTML <table> cell (e.g. "ITEM 2. | MANAGEMENT'S DISCUSSION…").
+_SEP = r"[\s\.\|\n\u2014\-]+"
+
 # 10-K: annual report section patterns
 _10K_PATTERNS = {
-    "item1":  r"(?i)item\s+1[\s\.\n\u2014\-]+\s*business\b",
-    "item1a": r"(?i)item\s+1a[\s\.\n\u2014\-]+\s*risk factors\b",
-    "item2":  r"(?i)item\s+2[\s\.\n\u2014\-]+\s*properties\b",
-    "item3":  r"(?i)item\s+3[\s\.\n\u2014\-]+\s*legal proceedings\b",
-    "item7":  r"(?i)item\s+7[\s\.\n\u2014\-]+\s*management",
-    "item7a": r"(?i)item\s+7a[\s\.\n\u2014\-]+\s*quantitative",
-    "item8":  r"(?i)item\s+8[\s\.\n\u2014\-]+\s*financial statements",
+    "item1":  rf"(?i)item\s+1{_SEP}\s*business\b",
+    "item1a": rf"(?i)item\s+1a{_SEP}\s*risk factors\b",
+    "item2":  rf"(?i)item\s+2{_SEP}\s*properties\b",
+    "item3":  rf"(?i)item\s+3{_SEP}\s*legal proceedings\b",
+    "item7":  rf"(?i)item\s+7{_SEP}\s*management",
+    "item7a": rf"(?i)item\s+7a{_SEP}\s*quantitative",
+    "item8":  rf"(?i)item\s+8{_SEP}\s*financial statements",
 }
 
 # 10-Q: quarterly report — Part I has Financial Statements + MD&A
 _10Q_PATTERNS = {
-    "item1_fs":  r"(?i)item\s+1[\s\.\n\u2014\-]+\s*financial statements\b",
-    "item2_mda": r"(?i)item\s+2[\s\.\n\u2014\-]+\s*management.{0,30}discussion\b",
-    "item3_mkt": r"(?i)item\s+3[\s\.\n\u2014\-]+\s*quantitative",
-    "item4":     r"(?i)item\s+4[\s\.\n\u2014\-]+\s*controls",
-    "item1a":    r"(?i)item\s+1a[\s\.\n\u2014\-]+\s*risk factors\b",
+    "item1_fs":  rf"(?i)item\s+1{_SEP}\s*financial statements\b",
+    "item2_mda": rf"(?i)item\s+2{_SEP}\s*management.{{0,30}}discussion\b",
+    "item3_mkt": rf"(?i)item\s+3{_SEP}\s*quantitative",
+    "item4":     rf"(?i)item\s+4{_SEP}\s*controls",
+    "item1a":    rf"(?i)item\s+1a{_SEP}\s*risk factors\b",
 }
 
 # 8-K: current report — items use decimal notation e.g. 1.01, 2.02
