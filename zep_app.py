@@ -744,6 +744,20 @@ def community_detail(cid: int):
     return jsonify(result)
 
 
+@zep_bp.route("/communities", methods=["POST"])
+def create_community():
+    """Create a community seeded by one entity; BFS assigns all connected entities."""
+    body = request.get_json(silent=True) or {}
+    name = (body.get("name") or "").strip()[:200]
+    seed = (body.get("seed_uuid") or "").strip()
+    if not name:
+        return jsonify({"ok": False, "error": "name required"}), 400
+    if not seed:
+        return jsonify({"ok": False, "error": "seed_uuid required"}), 400
+    result = _mirror.create_community_from_seed(_get_mirror(), name, seed)
+    return jsonify({"ok": True, **result})
+
+
 @zep_bp.route("/build-communities", methods=["POST"])
 def build_communities_stream():
     """SSE stream: run full label propagation + LLM community summaries."""
