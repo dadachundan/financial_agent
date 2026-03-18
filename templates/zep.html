@@ -397,6 +397,8 @@ async function deprecateEdge(uuid, btn) {
       }
       btn.title = 'Already deprecated';
       btn.disabled = true;
+      // Remove from graph view immediately
+      if (_visEdges) _visEdges.remove(uuid);
     } else {
       alert('Error: ' + (d.error || 'unknown'));
     }
