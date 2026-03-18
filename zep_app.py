@@ -751,7 +751,7 @@ def unassigned_entities():
     rows = conn.execute(
         "SELECT e.uuid, e.name, e.summary FROM entities e "
         "WHERE NOT EXISTS (SELECT 1 FROM community_members cm WHERE cm.entity_uuid = e.uuid) "
-        "AND e.deprecated = 0 "
+        "AND (e.isolated = 0 OR e.isolated IS NULL) "
         "ORDER BY e.name LIMIT 500"
     ).fetchall()
     return jsonify({"entities": [dict(r) for r in rows]})
