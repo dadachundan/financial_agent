@@ -520,9 +520,18 @@ async function clickEntity(uuid, name) {
     ]);
 
     // Use UUID-fetched edges (exact); nodes + episodes from FTS
+    // Ensure the clicked entity is always first in the nodes list
+    let nodes = ftsResp.nodes || [];
+    const idx = nodes.findIndex(n => n.uuid === uuid);
+    if (idx > 0) {
+      nodes = [nodes[idx], ...nodes.slice(0, idx), ...nodes.slice(idx + 1)];
+    } else if (idx === -1) {
+      // Not in FTS results — synthesise a minimal node entry and prepend
+      nodes = [{ uuid, name, labels: [], summary: '', score: null }, ...nodes];
+    }
     const merged = {
       edges:    edgeResp.edges    || [],
-      nodes:    ftsResp.nodes     || [],
+      nodes,
       episodes: ftsResp.episodes  || [],
       _source:  'uuid+fts',
     };
