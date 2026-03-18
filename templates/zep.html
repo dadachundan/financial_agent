@@ -1307,10 +1307,9 @@ async function submitAssignCommunity() {
     });
     const data = await res.json();
     if (!data.ok) throw new Error(data.error || 'unknown error');
-    document.getElementById('assignCommResult').textContent =
-      `✓ Community "${name}" created with ${data.member_count} member(s).`;
-    btn.textContent = 'Done';
+    bootstrap.Modal.getInstance(document.getElementById('assignCommunityModal')).hide();
     loadStats();
+    showUnassignedEntities();
   } catch(e) {
     document.getElementById('assignCommResult').textContent = '✗ ' + e.message;
     btn.disabled = false;
