@@ -237,6 +237,8 @@
                   id="communityFilterBtn" onclick="filterGraphToCommunity()" title="Show only this community in the graph">⬡ Filter</button>
           <button class="btn btn-sm btn-outline-secondary py-0 px-1" style="font-size:.72rem;display:none"
                   id="communityFilterClearBtn" onclick="clearGraphFilter()" title="Show full graph again">✕ Clear</button>
+          <button class="btn btn-sm btn-outline-danger py-0 px-1" style="font-size:.72rem"
+                  id="communityDeleteBtn" onclick="deleteCommunity()">🗑</button>
           <button class="btn btn-sm btn-link py-0" onclick="showCommunityBrowser()"
                   style="font-size:.78rem;text-decoration:none">← Back</button>
         </div>
@@ -835,7 +837,10 @@ async function loadCommunities(reset) {
 
 function loadMoreCommunities() { loadCommunities(false); }
 
+let _currentCommunityId = null;
+
 async function showCommunity(id, name) {
+  _currentCommunityId = id;
   document.getElementById('communityCard').style.display = 'none';
   const det = document.getElementById('communityDetailCard');
   det.style.display = '';
@@ -887,6 +892,25 @@ function showCommunityBrowser() {
   document.getElementById('communityDetailCard').style.display = 'none';
   document.getElementById('unassignedCard').style.display = 'none';
   document.getElementById('communityCard').style.display = '';
+}
+
+async function deleteCommunity() {
+  if (!_currentCommunityId) return;
+  const title = document.getElementById('communityDetailTitle').textContent;
+  if (!confirm(`Delete community "${title}"? Members will be unassigned.`)) return;
+  const btn = document.getElementById('communityDeleteBtn');
+  btn.disabled = true;
+  try {
+    const r = await fetch(`/communities/${_currentCommunityId}`, { method: 'DELETE' });
+    const d = await r.json();
+    if (!d.ok) { alert('Error: ' + (d.error || 'unknown')); btn.disabled = false; return; }
+    clearGraphFilter();
+    loadStats();
+    loadCommunities(true);
+  } catch(e) {
+    alert('Error: ' + e.message);
+    btn.disabled = false;
+  }
 }
 
 async function showUnassignedEntities() {
@@ -1321,9 +1345,10 @@ async function submitAssignCommunity() {
     });
     const data = await res.json();
     if (!data.ok) throw new Error(data.error || 'unknown error');
-    bootstrap.Modal.getInstance(document.getElementById('assignCommunityModal')).hide();
+    const modalEl = document.getElementById('assignCommunityModal');
+    (bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl)).hide();
     loadStats();
-    showUnassignedEntities();
+    await showUnassignedEntities();
   } catch(e) {
     document.getElementById('assignCommResult').textContent = '✗ ' + e.message;
     btn.disabled = false;
@@ -1335,13 +1360,9 @@ async function submitAssignCommunity() {
 (async () => {
   loadStats();
   initGraph();
-  // After assign-community modal closes, return to unassigned entities view
+  // After assign-community modal closes (any way), go to unassigned entities
   document.getElementById('assignCommunityModal').addEventListener('hidden.bs.modal', () => {
-    if (document.getElementById('unassignedCard').style.display !== 'none') return;
-    if (document.getElementById('communityCard').style.display !== 'none' ||
-        document.getElementById('communityDetailCard').style.display !== 'none') {
-      showUnassignedEntities();
-    }
+    showUnassignedEntities();
   });
 })();
 </script>

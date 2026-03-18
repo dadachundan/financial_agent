@@ -769,6 +769,18 @@ def remove_community_member(cid: int, uuid: str):
     return jsonify({"ok": True, "removed": removed})
 
 
+@zep_bp.route("/communities/<int:cid>", methods=["DELETE"])
+def delete_community(cid: int):
+    """Delete a community and unassign all its members."""
+    conn = _get_mirror()
+    row = conn.execute("SELECT id FROM communities WHERE id=?", (cid,)).fetchone()
+    if row is None:
+        return jsonify({"ok": False, "error": "not found"}), 404
+    conn.execute("DELETE FROM communities WHERE id=?", (cid,))
+    conn.commit()
+    return jsonify({"ok": True})
+
+
 @zep_bp.route("/communities", methods=["POST"])
 def create_community():
     """Create a community seeded by one entity; BFS assigns all connected entities."""
