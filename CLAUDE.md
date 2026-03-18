@@ -1,5 +1,11 @@
 # Workflow Instructions
 
+Before writing any code, always ensure the current branch is synced to `main` HEAD:
+```
+git fetch origin && git merge --ff-only origin/main
+```
+If the fast-forward fails (diverged branch), discard stale local changes and rebase.
+
 After completing a task and verifying that it works (by running tests or the app):
 
 1. Create a concise Git commit using Conventional Commits (e.g., `fix:`, `feat:`).
