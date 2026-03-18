@@ -333,6 +333,28 @@ def rate_entity(conn: sqlite3.Connection, uuid: str, rating: int) -> bool:
     return cur.rowcount > 0
 
 
+def update_entity(conn: sqlite3.Connection, uuid: str,
+                  name: str, summary: str) -> bool:
+    """Update entity name and summary. Returns True if found."""
+    cur = conn.execute(
+        "UPDATE entities SET name=?, summary=?, updated_at=datetime('now') WHERE uuid=?",
+        (name.strip(), summary.strip(), uuid),
+    )
+    conn.commit()
+    return cur.rowcount > 0
+
+
+def update_edge(conn: sqlite3.Connection, uuid: str,
+                name: str, fact: str) -> bool:
+    """Update edge relation name and fact. Returns True if found."""
+    cur = conn.execute(
+        "UPDATE edges SET name=?, fact=?, updated_at=datetime('now') WHERE uuid=?",
+        (name.strip(), fact.strip(), uuid),
+    )
+    conn.commit()
+    return cur.rowcount > 0
+
+
 def _episode_url(name: str) -> Optional[str]:
     """Convert episode name → viewer URL, or None if unknown format."""
     if name.startswith("pdf_"):

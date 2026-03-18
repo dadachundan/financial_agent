@@ -59,6 +59,10 @@
                     margin-right:3px; margin-top:2px; text-decoration:none; }
     a.source-badge:hover { background:#ffe69c; text-decoration:none; }
 
+    /* ── edit button ── */
+    .edit-btn { background:none; border:none; padding:2px 5px; font-size:.8rem; color:#adb5bd;
+                cursor:pointer; border-radius:4px; line-height:1; }
+    .edit-btn:hover { background:#e8f4fd; color:#0d6efd; }
     /* ── deprecate / isolate buttons ── */
     .deprecate-btn { position:absolute; top:6px; right:6px; background:none; border:none;
                      padding:2px 5px; font-size:.8rem; color:#adb5bd; cursor:pointer;
@@ -248,6 +252,23 @@
   </div><!-- /rightPanel -->
 </div><!-- /outerWrap -->
 
+<!-- ── Edit modal ───────────────────────────────────────────────────────── -->
+<div class="modal fade" id="editModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header py-2">
+        <h6 class="modal-title mb-0" id="editModalTitle">Edit</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body pb-2" id="editModalBody"></div>
+      <div class="modal-footer py-2">
+        <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button class="btn btn-sm btn-primary" id="editSaveBtn">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endif %}
 
 <script>
@@ -331,7 +352,9 @@ function renderResults(data, query, forceAll) {
     div.dataset.edgeUuid = e.uuid;
     div.innerHTML = `
       <button class="deprecate-btn" title="Flag as nonsense/deprecate" onclick="deprecateEdge('${escHtml(e.uuid)}',this)">⊘</button>
-      <span class="score-badge">${e.score != null ? e.score.toFixed(2) : ''}</span>
+      <button class="edit-btn" style="position:absolute;top:6px;right:32px" title="Edit relation"
+              onclick="event.stopPropagation(); editEdge('${escHtml(e.uuid)}','${escHtml(e.name||'')}','${escHtml(e.fact||'')}',this.closest('.result-card'))">✏</button>
+      <span class="score-badge" style="right:60px">${e.score != null ? e.score.toFixed(2) : ''}</span>
       <div class="fact">${depBadge}${escHtml(e.fact || e.name || '')}</div>
       <div class="meta">
         ${e.source_node_uuid ? `<span class="entity-badge" onclick="clickEntity('${escHtml(e.source_node_uuid)}','${escHtml(e.source_node_name||'')}')">↗ ${escHtml(e.source_node_name || e.source_node_uuid.slice(0,8))}</span>` : ''}
@@ -354,7 +377,9 @@ function renderResults(data, query, forceAll) {
     card.innerHTML = `
       <button class="deprecate-btn" title="Isolate entity (hide permanently)"
               onclick="event.stopPropagation(); isolateEntity('${escHtml(n.uuid)}','${escHtml(n.name)}',this)">⊘</button>
-      <span class="score-badge">${n.score != null ? n.score.toFixed(2) : ''}</span>
+      <button class="edit-btn" style="position:absolute;top:6px;right:32px" title="Edit entity"
+              onclick="event.stopPropagation(); editEntity('${escHtml(n.uuid)}','${escHtml(n.name)}','${escHtml(n.summary||'')}',this.closest('.result-card'))">✏</button>
+      <span class="score-badge" style="right:60px">${n.score != null ? n.score.toFixed(2) : ''}</span>
       <div class="fact">🏢 ${escHtml(n.name)}</div>
       <div class="meta">${labels} ${escHtml(n.summary || '').slice(0,120)}</div>`;
     card.appendChild(starWidget(n.uuid, n.rating || 0));
@@ -537,6 +562,93 @@ async function isolateEntity(uuid, name, btn) {
   } catch(e) {
     alert('Error: ' + e.message);
   }
+}
+
+// ── Edit entity / edge ───────────────────────────────────────────────────────
+let _editModal = null;
+function _getEditModal() {
+  if (!_editModal) _editModal = new bootstrap.Modal(document.getElementById('editModal'));
+  return _editModal;
+}
+
+function editEntity(uuid, currentName, currentSummary, card) {
+  document.getElementById('editModalTitle').textContent = 'Edit Entity';
+  document.getElementById('editModalBody').innerHTML = `
+    <div class="mb-2">
+      <label class="form-label small mb-1">Name</label>
+      <input id="editName" class="form-control form-control-sm" value="${escHtml(currentName)}">
+    </div>
+    <div>
+      <label class="form-label small mb-1">Summary</label>
+      <textarea id="editSummary" class="form-control form-control-sm" rows="4">${escHtml(currentSummary)}</textarea>
+    </div>`;
+  const saveBtn = document.getElementById('editSaveBtn');
+  saveBtn.onclick = async () => {
+    const name    = document.getElementById('editName').value.trim();
+    const summary = document.getElementById('editSummary').value.trim();
+    if (!name) { alert('Name is required.'); return; }
+    saveBtn.disabled = true;
+    try {
+      const r = await fetch(`/entities/${encodeURIComponent(uuid)}`, {
+        method: 'PATCH',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({name, summary}),
+      });
+      const d = await r.json();
+      if (!d.ok) { alert('Error: ' + (d.error || 'unknown')); return; }
+      // Update card in-place
+      const factEl = card && card.querySelector('.fact');
+      if (factEl) factEl.textContent = '🏢 ' + name;
+      const metaEl = card && card.querySelector('.meta');
+      if (metaEl) { const labels = metaEl.querySelectorAll('.label-badge'); metaEl.textContent = summary.slice(0,120); labels.forEach(l => metaEl.prepend(l)); }
+      // Update entity browser row if visible
+      document.querySelectorAll('.entity-row .ename').forEach(el => {
+        if (el.textContent === currentName) { el.textContent = name; el.closest('.entity-row').querySelector('.esumm').textContent = summary.slice(0,80); }
+      });
+      _getEditModal().hide();
+    } finally { saveBtn.disabled = false; }
+  };
+  _getEditModal().show();
+  setTimeout(() => document.getElementById('editName').focus(), 300);
+}
+
+function editEdge(uuid, currentName, currentFact, card) {
+  document.getElementById('editModalTitle').textContent = 'Edit Relation';
+  document.getElementById('editModalBody').innerHTML = `
+    <div class="mb-2">
+      <label class="form-label small mb-1">Relation type</label>
+      <input id="editRelName" class="form-control form-control-sm" value="${escHtml(currentName)}">
+    </div>
+    <div>
+      <label class="form-label small mb-1">Fact</label>
+      <textarea id="editFact" class="form-control form-control-sm" rows="4">${escHtml(currentFact)}</textarea>
+    </div>`;
+  const saveBtn = document.getElementById('editSaveBtn');
+  saveBtn.onclick = async () => {
+    const name = document.getElementById('editRelName').value.trim();
+    const fact = document.getElementById('editFact').value.trim();
+    if (!fact) { alert('Fact is required.'); return; }
+    saveBtn.disabled = true;
+    try {
+      const r = await fetch(`/edges/${encodeURIComponent(uuid)}`, {
+        method: 'PATCH',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({name, fact}),
+      });
+      const d = await r.json();
+      if (!d.ok) { alert('Error: ' + (d.error || 'unknown')); return; }
+      // Update card in-place
+      const factEl = card && card.querySelector('.fact');
+      if (factEl) {
+        const badge = factEl.querySelector('.deprecated-badge');
+        factEl.textContent = fact;
+        if (badge) factEl.prepend(badge);
+      }
+      _getEditModal().hide();
+    } finally { saveBtn.disabled = false; }
+  };
+  _getEditModal().show();
+  setTimeout(() => document.getElementById('editFact').focus(), 300);
 }
 
 // ── Star rating ─────────────────────────────────────────────────────────────
