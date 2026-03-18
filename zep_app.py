@@ -341,13 +341,28 @@ def deprecate_edge(uuid):
 
 @zep_bp.route("/entities/<uuid>/rate", methods=["POST"])
 def rate_entity(uuid):
-    """Set a star rating (0–5) on an entity."""
+    """Set a star rating (0–5) on an entity in mirror + KuzuDB."""
     body   = request.get_json(silent=True) or {}
-    rating = int(body.get("rating", 0))
+    rating = max(0, min(5, int(body.get("rating", 0))))
     found  = _mirror.rate_entity(_get_mirror(), uuid, rating)
-    if found:
-        return jsonify({"ok": True, "uuid": uuid, "rating": max(0, min(5, rating))})
-    return jsonify({"ok": False, "error": "entity not found"}), 404
+    if not found:
+        return jsonify({"ok": False, "error": "entity not found"}), 404
+
+    # Write through to KuzuDB (add rating column if it doesn't exist yet).
+    try:
+        kuzu_conn, _kdb = _kuzu_conn()
+        try:
+            kuzu_conn.execute("ALTER TABLE Entity ADD rating INT64 DEFAULT 0")
+        except Exception:
+            pass  # column already exists
+        kuzu_conn.execute(
+            "MATCH (n:Entity {uuid: $uuid}) SET n.rating = $rating",
+            {"uuid": uuid, "rating": rating},
+        )
+    except Exception as e:
+        print(f"[rate_entity] KuzuDB update failed: {e}", file=sys.stderr)
+
+    return jsonify({"ok": True, "uuid": uuid, "rating": rating})
 
 
 @zep_bp.route("/entities/<uuid>/edges")
