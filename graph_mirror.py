@@ -890,6 +890,65 @@ def get_community_members(conn: sqlite3.Connection,
     ]
 
 
+# ── Manual community creation ────────────────────────────────────────────────
+
+def create_community_from_seed(conn: sqlite3.Connection,
+                                name: str,
+                                seed_uuid: str) -> dict:
+    """Create a community seeded by one entity; BFS assigns all connected entities.
+
+    Traverses non-deprecated edges in both directions recursively.
+    Returns {"id": community_id, "member_count": N}.
+    """
+    # BFS over the edge graph (bidirectional, skip deprecated)
+    visited: set[str] = set()
+    queue = [seed_uuid]
+    while queue:
+        current = queue.pop()
+        if current in visited:
+            continue
+        visited.add(current)
+        rows = conn.execute(
+            """SELECT src_uuid, tgt_uuid FROM edges
+               WHERE deprecated = 0
+                 AND (src_uuid = ? OR tgt_uuid = ?)""",
+            (current, current),
+        ).fetchall()
+        for r in rows:
+            for neighbour in (r["src_uuid"], r["tgt_uuid"]):
+                if neighbour and neighbour not in visited:
+                    queue.append(neighbour)
+
+    # Remove entities that don't exist or are isolated
+    existing = {
+        r["uuid"] for r in conn.execute(
+            "SELECT uuid FROM entities WHERE isolated = 0 AND uuid IN ({})".format(
+                ",".join("?" * len(visited))
+            ),
+            list(visited),
+        ).fetchall()
+    } if visited else set()
+
+    member_count = len(existing)
+
+    # Upsert community
+    cur = conn.execute(
+        "INSERT INTO communities (name, summary, member_count) VALUES (?, '', ?)",
+        (name, member_count),
+    )
+    cid = cur.lastrowid
+
+    # Assign members — remove prior membership for each entity (one community at a time)
+    for uuid in existing:
+        conn.execute(
+            "INSERT OR REPLACE INTO community_members (entity_uuid, community_id) VALUES (?, ?)",
+            (uuid, cid),
+        )
+
+    conn.commit()
+    return {"id": cid, "member_count": member_count}
+
+
 # ── One-time backfill from KuzuDB ─────────────────────────────────────────────
 
 def backfill_from_kuzu(mirror_conn: sqlite3.Connection,
