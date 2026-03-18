@@ -157,7 +157,6 @@
     <button class="btn btn-sm btn-outline-primary" onclick="loadEntities()">Browse Entities</button>
     <button class="btn btn-sm btn-outline-info" onclick="loadCommunities(true)">Browse Communities</button>
     <button class="btn btn-sm btn-outline-success" onclick="fetchNewPdfs()">⬆ Index</button>
-    <button class="btn btn-sm btn-outline-warning" onclick="buildCommunities()">🔗 Communities</button>
     <button class="btn btn-sm btn-outline-primary" onclick="document.getElementById('pdfFileInput').click()">📄 Upload</button>
     <input type="file" id="pdfFileInput" accept=".pdf,.html,.htm" style="display:none" onchange="uploadPdf(this)">
     <button class="btn btn-sm btn-outline-secondary" onclick="syncMirror()" title="Re-sync UI from graph DB (use after interrupted ingest)">🔄 Sync</button>
@@ -219,8 +218,14 @@
     <div class="card mb-2" id="communityDetailCard" style="display:none">
       <div class="card-header d-flex justify-content-between align-items-center py-2">
         <span id="communityDetailTitle" style="font-size:.85rem;font-weight:600">Community</span>
-        <button class="btn btn-sm btn-link py-0" onclick="showCommunityBrowser()"
-                style="font-size:.78rem;text-decoration:none">← Back</button>
+        <div class="d-flex gap-1 align-items-center">
+          <button class="btn btn-sm btn-outline-primary py-0 px-1" style="font-size:.72rem"
+                  id="communityFilterBtn" onclick="filterGraphToCommunity()">⬡ Filter</button>
+          <button class="btn btn-sm btn-outline-secondary py-0 px-1" style="font-size:.72rem;display:none"
+                  id="communityFilterClearBtn" onclick="clearGraphFilter()">✕ Clear</button>
+          <button class="btn btn-sm btn-link py-0" onclick="showCommunityBrowser()"
+                  style="font-size:.78rem;text-decoration:none">← Back</button>
+        </div>
       </div>
       <div class="card-body p-2">
         <p id="communityDetailSummary" class="text-muted mb-2" style="font-size:.78rem"></p>
@@ -659,7 +664,15 @@ async function showCommunity(id, name) {
   try {
     const r = await fetch('/communities/' + id);
     const d = await r.json();
-    document.getElementById('communityDetailSummary').textContent = d.summary || '(no summary)';
+    const cleanSummary = (d.summary || '')
+      .replace(/^###\s*NAME:.*$/mi, '')
+      .replace(/^###\s*SUMMARY:\s*/mi, '')
+      .replace(/^#+\s*/gm, '')
+      .trim();
+    document.getElementById('communityDetailSummary').textContent = cleanSummary || '(no summary)';
+    // Populate filter UUIDs and auto-filter graph
+    _communityFilterUuids = new Set((d.members || []).map(m => m.uuid));
+    filterGraphToCommunity();
     const membersEl = document.getElementById('communityDetailMembers');
     (d.members || []).forEach(m => {
       const row = document.createElement('div');
@@ -687,6 +700,29 @@ async function showCommunity(id, name) {
 function showCommunityBrowser() {
   document.getElementById('communityDetailCard').style.display = 'none';
   document.getElementById('communityCard').style.display = '';
+}
+
+let _communityFilterUuids = null;
+
+function filterGraphToCommunity() {
+  if (!_visNodes || !_communityFilterUuids) return;
+  _visNodes.get().forEach(n => {
+    _visNodes.update({ id: n.id, hidden: !_communityFilterUuids.has(n.id) });
+  });
+  _visEdges.get().forEach(e => {
+    _visEdges.update({ id: e.id, hidden: !(_communityFilterUuids.has(e.from) && _communityFilterUuids.has(e.to)) });
+  });
+  document.getElementById('communityFilterBtn').style.display = 'none';
+  document.getElementById('communityFilterClearBtn').style.display = '';
+}
+
+function clearGraphFilter() {
+  if (!_visNodes) return;
+  _communityFilterUuids = null;
+  _visNodes.get().forEach(n => _visNodes.update({ id: n.id, hidden: false }));
+  _visEdges.get().forEach(e => _visEdges.update({ id: e.id, hidden: false }));
+  document.getElementById('communityFilterBtn').style.display = '';
+  document.getElementById('communityFilterClearBtn').style.display = 'none';
 }
 
 function buildCommunities() {
