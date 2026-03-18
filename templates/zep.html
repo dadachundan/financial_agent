@@ -71,6 +71,10 @@
                           cursor:pointer; border-radius:4px; font-size:.8rem; flex-shrink:0;
                           line-height:1; }
     .isolate-entity-btn:hover { background:#fee2e2; color:#dc3545; }
+    .assign-community-btn { background:none; border:none; padding:2px 5px; color:#adb5bd;
+                            cursor:pointer; border-radius:4px; font-size:.8rem; flex-shrink:0;
+                            line-height:1; }
+    .assign-community-btn:hover { background:#d1ecf1; color:#0c5460; }
     /* ── result section headers ── */
     .section-header { font-size:.72rem; font-weight:700; color:#6c757d; text-transform:uppercase;
                       letter-spacing:.06em; padding:6px 0 2px; margin-top:4px;
@@ -344,6 +348,9 @@ function renderResults(data, query, forceAll) {
     <div class="result-card" style="cursor:pointer" onclick="clickEntity('${escHtml(n.uuid)}','${escHtml(n.name)}')">
       <button class="deprecate-btn" title="Isolate entity (hide permanently)"
               onclick="event.stopPropagation(); isolateEntity('${escHtml(n.uuid)}','${escHtml(n.name)}',this)">⊘</button>
+      <button class="assign-community-btn" title="Assign to community (BFS flood-fill)"
+              style="position:absolute;top:6px;right:30px"
+              onclick="event.stopPropagation(); openAssignCommunity('${escHtml(n.uuid)}','${escHtml(n.name)}')">⬡</button>
       <span class="score-badge">${n.score != null ? n.score.toFixed(2) : ''}</span>
       <div class="fact">🏢 ${escHtml(n.name)}</div>
       <div class="meta">${labels} ${escHtml(n.summary || '').slice(0,120)}</div>
@@ -588,6 +595,8 @@ async function loadEntities(reset) {
           <div class="ename">${escHtml(n.name)}</div>
           <div class="esumm">${escHtml((n.summary||'').slice(0,80))}</div>
         </div>
+        <button class="assign-community-btn" title="Assign to community (BFS flood-fill)"
+                onclick="event.stopPropagation(); openAssignCommunity('${escHtml(n.uuid)}','${escHtml(n.name)}')">⬡</button>
         <button class="isolate-entity-btn" title="Isolate entity (hide permanently)"
                 onclick="event.stopPropagation(); isolateEntity('${escHtml(n.uuid)}','${escHtml(n.name)}',this)">⊘</button>`;
       row.onclick = () => { document.getElementById('searchInput').value = n.name; doSearchAll(); };
@@ -1002,11 +1011,73 @@ function escHtml(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
+// ── Assign entity to community (BFS flood-fill) ──────────────────────────────
+let _assignSeedUuid = null;
+
+function openAssignCommunity(uuid, name) {
+  _assignSeedUuid = uuid;
+  document.getElementById('assignCommEntityName').textContent = name;
+  document.getElementById('assignCommName').value = '';
+  document.getElementById('assignCommResult').textContent = '';
+  new bootstrap.Modal(document.getElementById('assignCommunityModal')).show();
+}
+
+async function submitAssignCommunity() {
+  const name = document.getElementById('assignCommName').value.trim();
+  if (!name) { document.getElementById('assignCommResult').textContent = 'Enter a community name.'; return; }
+  const btn = document.getElementById('assignCommSubmitBtn');
+  btn.disabled = true;
+  btn.textContent = 'Creating…';
+  try {
+    const res  = await fetch('/communities', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({name, seed_uuid: _assignSeedUuid}),
+    });
+    const data = await res.json();
+    if (!data.ok) throw new Error(data.error || 'unknown error');
+    document.getElementById('assignCommResult').textContent =
+      `✓ Community "${name}" created with ${data.member_count} member(s).`;
+    btn.textContent = 'Done';
+    loadStats();
+  } catch(e) {
+    document.getElementById('assignCommResult').textContent = '✗ ' + e.message;
+    btn.disabled = false;
+    btn.textContent = 'Create';
+  }
+}
+
 // ── Init ───────────────────────────────────────────────────────────────────
 (async () => {
   loadStats();
   initGraph();
 })();
 </script>
+
+<!-- Assign to community modal -->
+<div class="modal fade" id="assignCommunityModal" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header py-2">
+        <h6 class="modal-title mb-0">Assign to community</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted mb-2" style="font-size:.8rem">
+          Seed entity: <strong id="assignCommEntityName"></strong><br>
+          All connected entities will be assigned recursively.
+        </p>
+        <input id="assignCommName" type="text" class="form-control form-control-sm"
+               placeholder="Community name" onkeydown="if(event.key==='Enter') submitAssignCommunity()">
+        <div id="assignCommResult" class="mt-2 text-success" style="font-size:.78rem"></div>
+      </div>
+      <div class="modal-footer py-2">
+        <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button id="assignCommSubmitBtn" class="btn btn-sm btn-primary" onclick="submitAssignCommunity()">Create</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
