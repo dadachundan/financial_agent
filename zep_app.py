@@ -781,6 +781,33 @@ def delete_community(cid: int):
     return jsonify({"ok": True})
 
 
+@zep_bp.route("/communities/bulk-delete-singletons", methods=["DELETE"])
+def delete_singleton_communities():
+    """Delete all communities with member_count <= 1."""
+    conn = _get_mirror()
+    count = conn.execute(
+        "SELECT COUNT(*) FROM communities WHERE member_count <= 1"
+    ).fetchone()[0]
+    conn.execute("DELETE FROM communities WHERE member_count <= 1")
+    conn.commit()
+    return jsonify({"ok": True, "deleted": count})
+
+
+@zep_bp.route("/entities/community-map")
+def entity_community_map():
+    """Return {uuid: community_id} for all assigned entities, plus community id→name map."""
+    conn = _get_mirror()
+    rows = conn.execute(
+        "SELECT cm.entity_uuid, cm.community_id, c.name "
+        "FROM community_members cm JOIN communities c ON c.id = cm.community_id"
+    ).fetchall()
+    entity_map = {r["entity_uuid"]: r["community_id"] for r in rows}
+    comm_names = {}
+    for r in rows:
+        comm_names[str(r["community_id"])] = r["name"]
+    return jsonify({"entity_map": entity_map, "community_names": comm_names})
+
+
 @zep_bp.route("/communities", methods=["POST"])
 def create_community():
     """Create a community seeded by one entity; BFS assigns all connected entities."""
