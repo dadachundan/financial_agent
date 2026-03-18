@@ -799,9 +799,14 @@ async function loadCommunities(reset) {
   if (reset) {
     _commCursor = null;
     document.getElementById('communityList').innerHTML = '';
+    // Clear results so the community card is visible at the top
+    document.getElementById('resultsList').innerHTML = '';
+    document.getElementById('resultMsg').style.display = 'none';
   }
   document.getElementById('communityCard').style.display = '';
   document.getElementById('communityDetailCard').style.display = 'none';
+  document.getElementById('unassignedCard').style.display = 'none';
+  document.getElementById('rightPanel').scrollTop = 0;
 
   const url = '/communities?limit=50' + (_commCursor ? '&cursor=' + _commCursor : '');
   try {
@@ -1330,6 +1335,14 @@ async function submitAssignCommunity() {
 (async () => {
   loadStats();
   initGraph();
+  // After assign-community modal closes, return to unassigned entities view
+  document.getElementById('assignCommunityModal').addEventListener('hidden.bs.modal', () => {
+    if (document.getElementById('unassignedCard').style.display !== 'none') return;
+    if (document.getElementById('communityCard').style.display !== 'none' ||
+        document.getElementById('communityDetailCard').style.display !== 'none') {
+      showUnassignedEntities();
+    }
+  });
 })();
 </script>
 
