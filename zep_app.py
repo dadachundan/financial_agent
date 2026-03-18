@@ -310,13 +310,25 @@ def edges():
 
 @zep_bp.route("/edges/<uuid>/deprecate", methods=["POST"])
 def deprecate_edge(uuid):
-    """Mark a relationship as deprecated/nonsense (soft-delete)."""
+    """Mark a relationship as deprecated in mirror + KuzuDB (set expired_at)."""
     body   = request.get_json(silent=True) or {}
     reason = (body.get("reason") or "RELATION_NONSENSE").strip()[:200]
     found  = _mirror.deprecate_edge(_get_mirror(), uuid, reason)
-    if found:
-        return jsonify({"ok": True, "uuid": uuid, "reason": reason})
-    return jsonify({"ok": False, "error": "edge not found"}), 404
+    if not found:
+        return jsonify({"ok": False, "error": "edge not found"}), 404
+
+    # Also write expired_at into KuzuDB so the graph DB stays in sync.
+    try:
+        kuzu_conn, _kdb = _kuzu_conn()
+        kuzu_conn.execute(
+            "MATCH (:Entity)-[:RELATES_TO]->(e:RelatesToNode_ {uuid: $uuid})-[:RELATES_TO]->(:Entity) "
+            "SET e.expired_at = $ts",
+            {"uuid": uuid, "ts": datetime.now(timezone.utc)},
+        )
+    except Exception as e:
+        print(f"[deprecate_edge] KuzuDB update failed: {e}", file=sys.stderr)
+
+    return jsonify({"ok": True, "uuid": uuid, "reason": reason})
 
 
 @zep_bp.route("/entities/<uuid>/edges")
@@ -330,11 +342,25 @@ def entity_edges(uuid):
 
 @zep_bp.route("/entities/<uuid>/isolate", methods=["POST"])
 def isolate_entity(uuid):
-    """Mark an entity as isolated (hidden from UI) and deprecate all its edges."""
+    """Mark an entity as isolated in mirror + delete it from KuzuDB."""
     found = _mirror.isolate_entity(_get_mirror(), uuid)
-    if found:
-        return jsonify({"ok": True, "uuid": uuid})
-    return jsonify({"ok": False, "error": "entity not found"}), 404
+    if not found:
+        return jsonify({"ok": False, "error": "entity not found"}), 404
+
+    # Also hard-delete from KuzuDB (DETACH DELETE removes the node and all its edges).
+    try:
+        kuzu_conn, _kdb = _kuzu_conn()
+        kuzu_conn.execute(
+            "MATCH (n:Entity {uuid: $uuid}) "
+            "OPTIONAL MATCH (:Entity)-[:RELATES_TO]->(r:RelatesToNode_)-[:RELATES_TO]->(n) "
+            "OPTIONAL MATCH (n)-[:RELATES_TO]->(r2:RelatesToNode_)-[:RELATES_TO]->(:Entity) "
+            "DETACH DELETE r, r2, n",
+            {"uuid": uuid},
+        )
+    except Exception as e:
+        print(f"[isolate_entity] KuzuDB delete failed: {e}", file=sys.stderr)
+
+    return jsonify({"ok": True, "uuid": uuid})
 
 
 @zep_bp.route("/stats")
