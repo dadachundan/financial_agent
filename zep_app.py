@@ -365,6 +365,57 @@ def rate_entity(uuid):
     return jsonify({"ok": True, "uuid": uuid, "rating": rating})
 
 
+@zep_bp.route("/entities/<uuid>", methods=["PATCH"])
+def edit_entity(uuid):
+    """Update entity name and summary in mirror + KuzuDB."""
+    body    = request.get_json(silent=True) or {}
+    name    = body.get("name", "").strip()
+    summary = body.get("summary", "").strip()
+    if not name:
+        return jsonify({"ok": False, "error": "name is required"}), 400
+
+    found = _mirror.update_entity(_get_mirror(), uuid, name, summary)
+    if not found:
+        return jsonify({"ok": False, "error": "entity not found"}), 404
+
+    try:
+        kuzu_conn, _kdb = _kuzu_conn()
+        kuzu_conn.execute(
+            "MATCH (n:Entity {uuid: $uuid}) SET n.name = $name, n.summary = $summary",
+            {"uuid": uuid, "name": name, "summary": summary},
+        )
+    except Exception as e:
+        print(f"[edit_entity] KuzuDB update failed: {e}", file=sys.stderr)
+
+    return jsonify({"ok": True, "uuid": uuid, "name": name, "summary": summary})
+
+
+@zep_bp.route("/edges/<uuid>", methods=["PATCH"])
+def edit_edge(uuid):
+    """Update edge relation name and fact in mirror + KuzuDB."""
+    body = request.get_json(silent=True) or {}
+    name = body.get("name", "").strip()
+    fact = body.get("fact", "").strip()
+    if not fact:
+        return jsonify({"ok": False, "error": "fact is required"}), 400
+
+    found = _mirror.update_edge(_get_mirror(), uuid, name, fact)
+    if not found:
+        return jsonify({"ok": False, "error": "edge not found"}), 404
+
+    try:
+        kuzu_conn, _kdb = _kuzu_conn()
+        kuzu_conn.execute(
+            "MATCH (:Entity)-[:RELATES_TO]->(e:RelatesToNode_ {uuid: $uuid})-[:RELATES_TO]->(:Entity) "
+            "SET e.name = $name, e.fact = $fact",
+            {"uuid": uuid, "name": name, "fact": fact},
+        )
+    except Exception as e:
+        print(f"[edit_edge] KuzuDB update failed: {e}", file=sys.stderr)
+
+    return jsonify({"ok": True, "uuid": uuid, "name": name, "fact": fact})
+
+
 @zep_bp.route("/entities/<uuid>/edges")
 def entity_edges(uuid):
     """All non-deprecated edges directly connected to this entity (by UUID).
