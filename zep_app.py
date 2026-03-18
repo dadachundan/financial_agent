@@ -339,6 +339,17 @@ def deprecate_edge(uuid):
     return jsonify({"ok": True, "uuid": uuid, "reason": reason})
 
 
+@zep_bp.route("/entities/<uuid>/rate", methods=["POST"])
+def rate_entity(uuid):
+    """Set a star rating (0–5) on an entity."""
+    body   = request.get_json(silent=True) or {}
+    rating = int(body.get("rating", 0))
+    found  = _mirror.rate_entity(_get_mirror(), uuid, rating)
+    if found:
+        return jsonify({"ok": True, "uuid": uuid, "rating": max(0, min(5, rating))})
+    return jsonify({"ok": False, "error": "entity not found"}), 404
+
+
 @zep_bp.route("/entities/<uuid>/edges")
 def entity_edges(uuid):
     """All non-deprecated edges directly connected to this entity (by UUID).

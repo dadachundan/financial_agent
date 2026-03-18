@@ -71,6 +71,13 @@
                           cursor:pointer; border-radius:4px; font-size:.8rem; flex-shrink:0;
                           line-height:1; }
     .isolate-entity-btn:hover { background:#fee2e2; color:#dc3545; }
+    /* ── star rating ── */
+    .star-rating { display:inline-flex; gap:1px; flex-shrink:0; }
+    .star-rating span { cursor:pointer; font-size:.85rem; line-height:1; color:#dee2e6;
+                        transition:color .1s; user-select:none; }
+    .star-rating span.on { color:#f5a623; }
+    .star-rating:hover span { color:#f5a623; }
+    .star-rating span:hover ~ span { color:#dee2e6; }
     /* ── result section headers ── */
     .section-header { font-size:.72rem; font-weight:700; color:#6c757d; text-transform:uppercase;
                       letter-spacing:.06em; padding:6px 0 2px; margin-top:4px;
@@ -340,14 +347,18 @@ function renderResults(data, query, forceAll) {
     list.innerHTML += `<div class="section-header">🏢 Entities (${nodes.length})</div>`;
   nodes.forEach(n => {
     const labels = (n.labels||[]).map(l => `<span class="label-badge">${escHtml(l)}</span>`).join('');
-    list.innerHTML += `
-    <div class="result-card" style="cursor:pointer" onclick="clickEntity('${escHtml(n.uuid)}','${escHtml(n.name)}')">
+    const card = document.createElement('div');
+    card.className = 'result-card';
+    card.style.cursor = 'pointer';
+    card.onclick = () => clickEntity(n.uuid, n.name);
+    card.innerHTML = `
       <button class="deprecate-btn" title="Isolate entity (hide permanently)"
               onclick="event.stopPropagation(); isolateEntity('${escHtml(n.uuid)}','${escHtml(n.name)}',this)">⊘</button>
       <span class="score-badge">${n.score != null ? n.score.toFixed(2) : ''}</span>
       <div class="fact">🏢 ${escHtml(n.name)}</div>
-      <div class="meta">${labels} ${escHtml(n.summary || '').slice(0,120)}</div>
-    </div>`;
+      <div class="meta">${labels} ${escHtml(n.summary || '').slice(0,120)}</div>`;
+    card.appendChild(starWidget(n.uuid, n.rating || 0));
+    list.appendChild(card);
   });
 
   // Render episodes (source documents)
@@ -528,6 +539,36 @@ async function isolateEntity(uuid, name, btn) {
   }
 }
 
+// ── Star rating ─────────────────────────────────────────────────────────────
+function starWidget(uuid, currentRating) {
+  const wrap = document.createElement('div');
+  wrap.className = 'star-rating';
+  wrap.title = 'Rate this entity';
+  for (let i = 1; i <= 5; i++) {
+    const s = document.createElement('span');
+    s.textContent = '★';
+    s.dataset.v = i;
+    if (i <= (currentRating || 0)) s.classList.add('on');
+    s.onclick = e => {
+      e.stopPropagation();
+      const newRating = parseInt(s.dataset.v);
+      fetch(`/entities/${encodeURIComponent(uuid)}/rate`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({rating: newRating}),
+      }).then(r => r.json()).then(d => {
+        if (d.ok) {
+          wrap.querySelectorAll('span').forEach((st, idx) => {
+            st.classList.toggle('on', idx < d.rating);
+          });
+        }
+      });
+    };
+    wrap.appendChild(s);
+  }
+  return wrap;
+}
+
 // ── Stats ──────────────────────────────────────────────────────────────────
 let _statsRetryTimer = null;
 
@@ -590,6 +631,7 @@ async function loadEntities(reset) {
         </div>
         <button class="isolate-entity-btn" title="Isolate entity (hide permanently)"
                 onclick="event.stopPropagation(); isolateEntity('${escHtml(n.uuid)}','${escHtml(n.name)}',this)">⊘</button>`;
+      row.appendChild(starWidget(n.uuid, n.rating || 0));
       row.onclick = () => { document.getElementById('searchInput').value = n.name; doSearchAll(); };
       list.appendChild(row);
     });
@@ -663,6 +705,7 @@ async function showCommunity(id, name) {
         '</div>' +
         `<button class="isolate-entity-btn" title="Isolate entity"
                 onclick="event.stopPropagation(); isolateEntity('${escHtml(m.uuid)}','${escHtml(m.name)}',this)">⊘</button>`;
+      row.appendChild(starWidget(m.uuid, m.rating || 0));
       row.onclick = () => {
         det.style.display = 'none';
         document.querySelector('input[placeholder]').value = m.name;
