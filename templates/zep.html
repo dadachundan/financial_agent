@@ -218,9 +218,12 @@
         <button class="btn-close btn-sm" onclick="document.getElementById('communityCard').style.display='none'"></button>
       </div>
       <div id="communityList" class="card-body p-0" style="max-height:300px;overflow-y:auto"></div>
-      <div class="card-footer py-1">
+      <div class="card-footer py-1 d-flex gap-2">
         <button class="btn btn-sm btn-link" id="loadMoreComBtn" onclick="loadMoreCommunities()" style="display:none">
           Load more…
+        </button>
+        <button class="btn btn-sm btn-link text-warning" onclick="showUnassignedEntities()">
+          ⚠ Unassigned
         </button>
       </div>
     </div>
@@ -242,6 +245,16 @@
         <p id="communityDetailSummary" class="text-muted mb-2" style="font-size:.78rem"></p>
         <div id="communityDetailMembers" style="max-height:260px;overflow-y:auto"></div>
       </div>
+    </div>
+
+    <!-- Unassigned entities card -->
+    <div class="card mb-2" id="unassignedCard" style="display:none">
+      <div class="card-header d-flex justify-content-between align-items-center py-2">
+        <span style="font-size:.85rem;font-weight:600">⚠ Unassigned Entities</span>
+        <button class="btn btn-sm btn-link py-0" onclick="showCommunityBrowser()"
+                style="font-size:.78rem;text-decoration:none">← Back</button>
+      </div>
+      <div id="unassignedList" class="card-body p-0" style="max-height:320px;overflow-y:auto"></div>
     </div>
 
     <!-- Ingest / upload card -->
@@ -839,6 +852,8 @@ async function showCommunity(id, name) {
         '<div class="ename">' + escHtml(m.name) + '</div>' +
         '<div class="esumm">' + escHtml((m.summary || '').slice(0, 80)) + '</div>' +
         '</div>' +
+        `<button class="isolate-entity-btn" title="Remove from community (BFS)"
+                onclick="event.stopPropagation(); removeCommunityMember(${id},'${escHtml(m.uuid)}','${escHtml(m.name)}',this)">✕</button>` +
         `<button class="isolate-entity-btn" title="Isolate entity"
                 onclick="event.stopPropagation(); isolateEntity('${escHtml(m.uuid)}','${escHtml(m.name)}',this)">⊘</button>`;
       row.appendChild(starWidget(m.uuid, m.rating || 0));
@@ -856,7 +871,65 @@ async function showCommunity(id, name) {
 
 function showCommunityBrowser() {
   document.getElementById('communityDetailCard').style.display = 'none';
+  document.getElementById('unassignedCard').style.display = 'none';
   document.getElementById('communityCard').style.display = '';
+}
+
+async function showUnassignedEntities() {
+  document.getElementById('communityCard').style.display = 'none';
+  const card = document.getElementById('unassignedCard');
+  card.style.display = '';
+  const listEl = document.getElementById('unassignedList');
+  listEl.innerHTML = '<div class="p-2 text-muted" style="font-size:.78rem">Loading…</div>';
+  try {
+    const r = await fetch('/entities/unassigned');
+    const d = await r.json();
+    listEl.innerHTML = '';
+    if (!d.entities || d.entities.length === 0) {
+      listEl.innerHTML = '<div class="p-2 text-muted" style="font-size:.78rem">All entities are assigned to a community.</div>';
+      return;
+    }
+    d.entities.forEach(e => {
+      const row = document.createElement('div');
+      row.className = 'entity-row';
+      row.style.cssText = 'display:flex;align-items:center;gap:4px;cursor:pointer';
+      row.innerHTML =
+        '<div style="flex:1;min-width:0">' +
+        '<div class="ename">' + escHtml(e.name) + '</div>' +
+        '<div class="esumm">' + escHtml((e.summary || '').slice(0, 80)) + '</div>' +
+        '</div>' +
+        `<button class="assign-community-btn" title="Assign to community"
+                onclick="event.stopPropagation(); openAssignCommunity('${escHtml(e.uuid)}','${escHtml(e.name)}')">⬡</button>`;
+      row.onclick = () => {
+        card.style.display = 'none';
+        document.querySelector('input[placeholder]').value = e.name;
+        doSearchAll();
+      };
+      listEl.appendChild(row);
+    });
+  } catch(err) {
+    listEl.innerHTML = '<div class="p-2 text-danger" style="font-size:.78rem">Error: ' + escHtml(err.message) + '</div>';
+  }
+}
+
+async function removeCommunityMember(communityId, uuid, name, btn) {
+  if (!confirm(`Remove "${name}" and all connected members from this community?`)) return;
+  btn.disabled = true;
+  try {
+    const r = await fetch(`/communities/${communityId}/members/${uuid}`, { method: 'DELETE' });
+    const d = await r.json();
+    if (d.ok) {
+      // Reload community detail
+      const title = document.getElementById('communityDetailTitle').textContent;
+      showCommunity(communityId, title);
+    } else {
+      alert('Error: ' + (d.error || 'unknown'));
+      btn.disabled = false;
+    }
+  } catch(err) {
+    alert('Error: ' + err.message);
+    btn.disabled = false;
+  }
 }
 
 let _communityFilterUuids = null;

@@ -986,6 +986,58 @@ def create_community_from_seed(conn: sqlite3.Connection,
     return {"id": cid, "member_count": member_count}
 
 
+def remove_community_bfs(conn: sqlite3.Connection,
+                          community_id: int,
+                          seed_uuid: str) -> int:
+    """BFS from seed_uuid, removing all reachable community members from community_id.
+
+    Only traverses edges between entities that are currently in the same community.
+    Returns count of removed memberships.
+    """
+    # Collect all members of the community for BFS scoping
+    member_set = {
+        r["entity_uuid"] for r in conn.execute(
+            "SELECT entity_uuid FROM community_members WHERE community_id = ?",
+            (community_id,),
+        ).fetchall()
+    }
+    if seed_uuid not in member_set:
+        return 0
+
+    # BFS restricted to current community members
+    visited: set[str] = set()
+    queue = [seed_uuid]
+    while queue:
+        current = queue.pop()
+        if current in visited:
+            continue
+        visited.add(current)
+        rows = conn.execute(
+            """SELECT src_uuid, tgt_uuid FROM edges
+               WHERE deprecated = 0
+                 AND (src_uuid = ? OR tgt_uuid = ?)""",
+            (current, current),
+        ).fetchall()
+        for r in rows:
+            for neighbour in (r["src_uuid"], r["tgt_uuid"]):
+                if neighbour and neighbour not in visited and neighbour in member_set:
+                    queue.append(neighbour)
+
+    # Remove visited entities from the community
+    placeholders = ",".join("?" * len(visited))
+    conn.execute(
+        f"DELETE FROM community_members WHERE community_id = ? AND entity_uuid IN ({placeholders})",
+        [community_id, *visited],
+    )
+    # Update member_count
+    conn.execute(
+        "UPDATE communities SET member_count = (SELECT COUNT(*) FROM community_members WHERE community_id = ?) WHERE id = ?",
+        (community_id, community_id),
+    )
+    conn.commit()
+    return len(visited)
+
+
 # ── One-time backfill from KuzuDB ─────────────────────────────────────────────
 
 def backfill_from_kuzu(mirror_conn: sqlite3.Connection,
