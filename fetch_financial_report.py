@@ -1113,11 +1113,19 @@ function indexReport(id, btn) {
               // Update in-memory row so the badge sticks on re-render
               const row = _rows.find(r => r.id === id);
               if (row) row.graphiti_indexed_at = new Date().toISOString();
+              // Sync mirror so new entities/edges appear in the graph UI immediately
+              modal.textContent += 'Syncing graph mirror…\n';
+              modal.scrollTop = modal.scrollHeight;
+              fetch((window._BASE||'') + '/zep/refresh-mirror', {method:'POST'})
+                .then(r => r.json())
+                .then(d => { modal.textContent += d.ok ? `✓ Mirror synced (${d.entities} entities, ${d.edges} edges)\n` : `⚠ Mirror sync: ${d.error}\n`; })
+                .catch(e => { modal.textContent += `⚠ Mirror sync failed: ${e.message}\n`; })
+                .finally(() => { modal.scrollTop = modal.scrollHeight; setTimeout(() => modal.remove(), 3000); });
             } else {
               btn.disabled = false;
               btn.textContent = '⬆ KG';
+              setTimeout(() => modal.remove(), 4000);
             }
-            setTimeout(() => modal.remove(), 4000);
           } else {
             modal.textContent += msg + '\n';
             modal.scrollTop = modal.scrollHeight;
