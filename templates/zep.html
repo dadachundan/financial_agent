@@ -85,6 +85,15 @@
     .assign-community-btn:hover { background:#d1ecf1; color:#0c5460; }
     .assign-comm-row { padding:4px 2px; cursor:pointer; border-radius:4px; }
     .assign-comm-row:hover { background:#f0f4ff; }
+    .merge-btn { background:none; border:none; padding:2px 5px; color:#adb5bd;
+                 cursor:pointer; border-radius:4px; font-size:.8rem; flex-shrink:0; line-height:1; }
+    .merge-btn:hover { background:#fff3cd; color:#856404; }
+    /* Entity picker used in merge + add-edge modals */
+    .entity-pick-results { max-height:160px; overflow-y:auto; border:1px solid #dee2e6;
+                           border-radius:6px; margin-top:4px; }
+    .entity-pick-row { padding:5px 8px; cursor:pointer; font-size:.82rem; }
+    .entity-pick-row:hover { background:#f0f4ff; }
+    .entity-pick-row.selected { background:#dbeafe; font-weight:600; }
     /* ── star rating ── */
     .star-rating { display:inline-flex; gap:1px; flex-shrink:0; }
     .star-rating span { cursor:pointer; font-size:.85rem; line-height:1; color:#dee2e6;
@@ -176,6 +185,7 @@
     <button class="btn btn-sm btn-outline-success" onclick="fetchNewPdfs()">⬆ Index</button>
     <button class="btn btn-sm btn-outline-primary" onclick="document.getElementById('pdfFileInput').click()">📄 Upload</button>
     <input type="file" id="pdfFileInput" accept=".pdf,.html,.htm" style="display:none" onchange="uploadPdf(this)">
+    <button class="btn btn-sm btn-outline-secondary" onclick="openAddEdge()" title="Manually add a relationship between two entities">＋ Edge</button>
     <button class="btn btn-sm btn-outline-secondary" onclick="syncMirror()" title="Re-sync UI from graph DB (use after interrupted ingest)">🔄 Sync</button>
     <button class="btn btn-sm btn-outline-secondary" onclick="cleanPersons()" title="Use AI to find and remove person names from entities">🧹 Clean</button>
     <button class="btn btn-sm btn-outline-danger" onclick="clearGraph()">🗑 Clear</button>
@@ -416,8 +426,11 @@ function renderResults(data, query, forceAll) {
     card.innerHTML = `
       <button class="deprecate-btn" title="Isolate entity (hide permanently)"
               onclick="event.stopPropagation(); isolateEntity('${escHtml(n.uuid)}','${escHtml(n.name)}',this)">⊘</button>
-      <button class="edit-btn" style="position:absolute;top:6px;right:56px" title="Edit entity"
+      <button class="edit-btn" style="position:absolute;top:6px;right:80px" title="Edit entity"
               onclick="event.stopPropagation(); editEntity('${escHtml(n.uuid)}','${escHtml(n.name)}','${escHtml(n.summary||'')}',this.closest('.result-card'))">✏</button>
+      <button class="merge-btn" title="Merge into another entity"
+              style="position:absolute;top:6px;right:56px"
+              onclick="event.stopPropagation(); openMerge('${escHtml(n.uuid)}','${escHtml(n.name)}')">⇄</button>
       <button class="assign-community-btn" title="Assign to community (BFS flood-fill)"
               style="position:absolute;top:6px;right:32px"
               onclick="event.stopPropagation(); openAssignCommunity('${escHtml(n.uuid)}','${escHtml(n.name)}')">⬡</button>
@@ -1598,6 +1611,173 @@ async function submitAssignCommunity() {
   }
 }
 
+// ── Merge entities ───────────────────────────────────────────────────────────
+let _mergeSourceUuid = '', _mergeSourceName = '';
+let _mergeTargetUuid = '', _mergeTargetName = '';
+
+function openMerge(uuid, name) {
+  _mergeSourceUuid = uuid; _mergeSourceName = name;
+  _mergeTargetUuid = ''; _mergeTargetName = '';
+  document.getElementById('mergeSourceName').textContent = name;
+  document.getElementById('mergeTargetPick').innerHTML = '';
+  document.getElementById('mergeTargetSearch').value = '';
+  document.getElementById('mergeResult').textContent = '';
+  document.getElementById('mergeSubmitBtn').disabled = true;
+  new bootstrap.Modal(document.getElementById('mergeModal')).show();
+}
+
+let _mergeSearchTimer = null;
+function onMergeSearch(q) {
+  clearTimeout(_mergeSearchTimer);
+  if (!q.trim()) { document.getElementById('mergeTargetPick').innerHTML = ''; return; }
+  _mergeSearchTimer = setTimeout(async () => {
+    const r = await fetch(`/search?q=${encodeURIComponent(q)}&limit=10`);
+    const d = await r.json();
+    const el = document.getElementById('mergeTargetPick');
+    el.innerHTML = '';
+    (d.nodes || []).filter(n => n.uuid !== _mergeSourceUuid).forEach(n => {
+      const row = document.createElement('div');
+      row.className = 'entity-pick-row';
+      row.textContent = n.name;
+      row.onclick = () => {
+        _mergeTargetUuid = n.uuid; _mergeTargetName = n.name;
+        el.querySelectorAll('.entity-pick-row').forEach(r => r.classList.remove('selected'));
+        row.classList.add('selected');
+        document.getElementById('mergeSubmitBtn').disabled = false;
+      };
+      el.appendChild(row);
+    });
+  }, 250);
+}
+
+async function submitMerge() {
+  if (!_mergeTargetUuid) return;
+  const keepSource = document.querySelector('input[name="mergeKeep"]:checked')?.value === 'source';
+  const src = keepSource ? _mergeTargetUuid : _mergeSourceUuid;  // src gets deleted
+  const tgt = keepSource ? _mergeSourceUuid : _mergeTargetUuid;  // tgt survives
+  const btn = document.getElementById('mergeSubmitBtn');
+  btn.disabled = true; btn.textContent = 'Merging…';
+  try {
+    const r = await fetch('/entities/merge', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({source_uuid: src, target_uuid: tgt}),
+    });
+    const d = await r.json();
+    if (!d.ok) throw new Error(d.error || 'unknown');
+    document.getElementById('mergeResult').textContent =
+      `✓ Merged — ${d.edges_updated} edge(s) re-pointed.`;
+    btn.textContent = 'Done';
+    refreshNodeColors();
+    // Remove source node from graph
+    if (_visNodes) _visNodes.remove(src);
+    await new Promise(r => setTimeout(r, 900));
+    const m = document.getElementById('mergeModal');
+    (bootstrap.Modal.getInstance(m) || new bootstrap.Modal(m)).hide();
+    btn.textContent = 'Merge'; btn.disabled = false;
+  } catch(e) {
+    document.getElementById('mergeResult').textContent = '✗ ' + e.message;
+    btn.textContent = 'Merge'; btn.disabled = false;
+  }
+}
+
+// ── Add edge ─────────────────────────────────────────────────────────────────
+let _edgeSrcUuid = '', _edgeSrcName = '', _edgeTgtUuid = '', _edgeTgtName = '';
+
+function openAddEdge(preUuid, preName) {
+  _edgeSrcUuid = preUuid || ''; _edgeSrcName = preName || '';
+  _edgeTgtUuid = ''; _edgeTgtName = '';
+  document.getElementById('edgeSrcLabel').textContent = preName || '(pick via search below)';
+  document.getElementById('edgeSrcSearch').value = preName || '';
+  document.getElementById('edgeSrcPick').innerHTML = '';
+  document.getElementById('edgeTgtSearch').value = '';
+  document.getElementById('edgeTgtPick').innerHTML = '';
+  document.getElementById('edgeRelName').value = '';
+  document.getElementById('edgeFact').value = '';
+  document.getElementById('edgeResult').textContent = '';
+  document.getElementById('edgeSubmitBtn').disabled = false;
+  new bootstrap.Modal(document.getElementById('addEdgeModal')).show();
+}
+
+function _makeEntityPicker(inputId, pickId, onSelect) {
+  let t = null;
+  document.getElementById(inputId).oninput = function() {
+    clearTimeout(t);
+    const q = this.value.trim();
+    if (!q) { document.getElementById(pickId).innerHTML = ''; return; }
+    t = setTimeout(async () => {
+      const r = await fetch(`/search?q=${encodeURIComponent(q)}&limit=8`);
+      const d = await r.json();
+      const el = document.getElementById(pickId);
+      el.innerHTML = '';
+      (d.nodes || []).forEach(n => {
+        const row = document.createElement('div');
+        row.className = 'entity-pick-row';
+        row.textContent = n.name;
+        row.onclick = () => {
+          el.querySelectorAll('.entity-pick-row').forEach(r => r.classList.remove('selected'));
+          row.classList.add('selected');
+          onSelect(n.uuid, n.name);
+        };
+        el.appendChild(row);
+      });
+    }, 250);
+  };
+}
+
+// Wire up pickers once DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  _makeEntityPicker('mergeTargetSearch', 'mergeTargetPick', (uuid, name) => {
+    _mergeTargetUuid = uuid; _mergeTargetName = name;
+    document.getElementById('mergeSubmitBtn').disabled = false;
+  });
+  _makeEntityPicker('edgeSrcSearch', 'edgeSrcPick', (uuid, name) => {
+    _edgeSrcUuid = uuid; _edgeSrcName = name;
+    document.getElementById('edgeSrcLabel').textContent = name;
+  });
+  _makeEntityPicker('edgeTgtSearch', 'edgeTgtPick', (uuid, name) => {
+    _edgeTgtUuid = uuid; _edgeTgtName = name;
+  });
+});
+
+async function submitAddEdge() {
+  if (!_edgeSrcUuid || !_edgeTgtUuid) {
+    document.getElementById('edgeResult').textContent = 'Select both entities first.'; return;
+  }
+  const name = document.getElementById('edgeRelName').value.trim() || 'RELATES_TO';
+  const fact = document.getElementById('edgeFact').value.trim();
+  const btn  = document.getElementById('edgeSubmitBtn');
+  btn.disabled = true; btn.textContent = 'Saving…';
+  try {
+    const r = await fetch('/edges', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        source_uuid: _edgeSrcUuid, source_name: _edgeSrcName,
+        target_uuid: _edgeTgtUuid, target_name: _edgeTgtName,
+        name, fact,
+      }),
+    });
+    const d = await r.json();
+    if (!d.ok) throw new Error(d.error || 'unknown');
+    document.getElementById('edgeResult').textContent = '✓ Edge created.';
+    btn.textContent = 'Done';
+    // Add edge to live graph
+    if (_visNodes && _visEdges) {
+      if (!_visNodes.get(_edgeSrcUuid)) _visNodes.add({id:_edgeSrcUuid, label:_edgeSrcName, title:_edgeSrcName});
+      if (!_visNodes.get(_edgeTgtUuid)) _visNodes.add({id:_edgeTgtUuid, label:_edgeTgtName, title:_edgeTgtName});
+      _visEdges.add({id: d.uuid, from: _edgeSrcUuid, to: _edgeTgtUuid, label: name, title: escHtml(fact.slice(0,120))});
+    }
+    await new Promise(r => setTimeout(r, 900));
+    const m = document.getElementById('addEdgeModal');
+    (bootstrap.Modal.getInstance(m) || new bootstrap.Modal(m)).hide();
+    btn.textContent = 'Save'; btn.disabled = false;
+  } catch(e) {
+    document.getElementById('edgeResult').textContent = '✗ ' + e.message;
+    btn.textContent = 'Save'; btn.disabled = false;
+  }
+}
+
 // ── Init ───────────────────────────────────────────────────────────────────
 (async () => {
   loadStats();
@@ -1646,6 +1826,85 @@ async function submitAssignCommunity() {
       <div class="modal-footer py-2">
         <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancel</button>
         <button id="assignCommSubmitBtn" class="btn btn-sm btn-primary" onclick="submitAssignCommunity()">Assign</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Merge entities modal -->
+<div class="modal fade" id="mergeModal" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header py-2">
+        <h6 class="modal-title mb-0">⇄ Merge entities</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-2">
+        <p class="text-muted mb-2" style="font-size:.78rem">
+          Entity A: <strong id="mergeSourceName"></strong>
+        </p>
+        <!-- Which to keep -->
+        <div class="mb-2" style="font-size:.8rem">
+          <strong>Keep:</strong>&nbsp;
+          <label class="me-3"><input type="radio" name="mergeKeep" value="source" checked> A</label>
+          <label><input type="radio" name="mergeKeep" value="target"> B (the one you pick)</label>
+        </div>
+        <!-- Entity B picker -->
+        <div class="mb-1" style="font-size:.78rem;color:#6c757d">Entity B — search &amp; select:</div>
+        <input id="mergeTargetSearch" type="text" class="form-control form-control-sm"
+               placeholder="Search for entity B…">
+        <div id="mergeTargetPick" class="entity-pick-results"></div>
+        <div id="mergeResult" class="mt-2" style="font-size:.78rem"></div>
+      </div>
+      <div class="modal-footer py-2">
+        <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button id="mergeSubmitBtn" class="btn btn-sm btn-warning" onclick="submitMerge()" disabled>Merge</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add edge modal -->
+<div class="modal fade" id="addEdgeModal" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header py-2">
+        <h6 class="modal-title mb-0">＋ Add relationship</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-2">
+        <!-- Source entity -->
+        <div class="mb-2">
+          <div style="font-size:.78rem;color:#6c757d">Source entity</div>
+          <div id="edgeSrcLabel" class="fw-semibold" style="font-size:.82rem;min-height:1.2em"></div>
+          <input id="edgeSrcSearch" type="text" class="form-control form-control-sm mt-1"
+                 placeholder="Search source entity…">
+          <div id="edgeSrcPick" class="entity-pick-results"></div>
+        </div>
+        <!-- Relation name -->
+        <div class="mb-2">
+          <div style="font-size:.78rem;color:#6c757d">Relationship type</div>
+          <input id="edgeRelName" type="text" class="form-control form-control-sm"
+                 placeholder="e.g. PARTNERS_WITH, DEVELOPS, OWNS…">
+        </div>
+        <!-- Fact -->
+        <div class="mb-2">
+          <div style="font-size:.78rem;color:#6c757d">Fact / description</div>
+          <textarea id="edgeFact" class="form-control form-control-sm" rows="2"
+                    placeholder="One-sentence fact describing the relationship"></textarea>
+        </div>
+        <!-- Target entity -->
+        <div class="mb-1">
+          <div style="font-size:.78rem;color:#6c757d">Target entity</div>
+          <input id="edgeTgtSearch" type="text" class="form-control form-control-sm"
+                 placeholder="Search target entity…">
+          <div id="edgeTgtPick" class="entity-pick-results"></div>
+        </div>
+        <div id="edgeResult" class="mt-2" style="font-size:.78rem"></div>
+      </div>
+      <div class="modal-footer py-2">
+        <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button id="edgeSubmitBtn" class="btn btn-sm btn-primary" onclick="submitAddEdge()">Save</button>
       </div>
     </div>
   </div>

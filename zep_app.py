@@ -432,6 +432,54 @@ def entity_community(uuid):
     return jsonify(result or {})
 
 
+@zep_bp.route("/entities/merge", methods=["POST"])
+def merge_entities_ep():
+    """Merge source entity into target: re-point all edges, delete source."""
+    body = request.get_json(silent=True) or {}
+    src  = (body.get("source_uuid") or "").strip()
+    tgt  = (body.get("target_uuid") or "").strip()
+    if not src or not tgt:
+        return jsonify({"ok": False, "error": "source_uuid and target_uuid required"}), 400
+    if src == tgt:
+        return jsonify({"ok": False, "error": "source and target must be different"}), 400
+    try:
+        result = _mirror.merge_entities(_get_mirror(), src, tgt)
+        # Best-effort: remove source node from KuzuDB too
+        try:
+            kuzu_conn, _kdb = _kuzu_conn()
+            kuzu_conn.execute(
+                "MATCH (n:Entity {uuid: $uuid}) "
+                "OPTIONAL MATCH (:Entity)-[:RELATES_TO]->(r:RelatesToNode_)-[:RELATES_TO]->(n) "
+                "OPTIONAL MATCH (n)-[:RELATES_TO]->(r2:RelatesToNode_)-[:RELATES_TO]->(:Entity) "
+                "DETACH DELETE r, r2, n",
+                {"uuid": src},
+            )
+        except Exception as e:
+            print(f"[merge] KuzuDB cleanup failed: {e}", file=sys.stderr)
+        return jsonify({"ok": True, **result})
+    except ValueError as e:
+        return jsonify({"ok": False, "error": str(e)}), 404
+
+
+@zep_bp.route("/edges", methods=["POST"])
+def create_edge_ep():
+    """Create a manual edge between two entities."""
+    import uuid as _uuid_mod
+    body     = request.get_json(silent=True) or {}
+    src_uuid = (body.get("source_uuid") or "").strip()
+    tgt_uuid = (body.get("target_uuid") or "").strip()
+    name     = (body.get("name") or "RELATES_TO").strip()
+    fact     = (body.get("fact") or "").strip()
+    src_name = (body.get("source_name") or "").strip()
+    tgt_name = (body.get("target_name") or "").strip()
+    if not src_uuid or not tgt_uuid:
+        return jsonify({"ok": False, "error": "source_uuid and target_uuid required"}), 400
+    edge_uuid = str(_uuid_mod.uuid4())
+    result = _mirror.add_edge(_get_mirror(), edge_uuid,
+                              src_uuid, src_name, tgt_uuid, tgt_name, name, fact)
+    return jsonify({"ok": True, **result})
+
+
 @zep_bp.route("/entities/<uuid>/isolate", methods=["POST"])
 def isolate_entity(uuid):
     """Mark an entity as isolated in mirror + delete it from KuzuDB."""
