@@ -399,8 +399,12 @@ def _sse(msg: str, *, done: bool = False, error: bool = False,
     return f"data: {payload}\n\n"
 
 
-def _run_download(ticker: str, forms: list[str]):
-    """Generator: stream SSE events while downloading filings."""
+def _run_download(ticker: str, forms: list[str], last: int = 0, _suppress_done: bool = False):
+    """Generator: stream SSE events while downloading filings.
+
+    last: if > 0, only download the most-recent *last* filings per form type.
+    _suppress_done: if True, skip the final done=True SSE (used by batch mode).
+    """
     conn = get_conn()
     try:
         tic = ticker.strip().upper()
@@ -472,6 +476,11 @@ def _run_download(ticker: str, forms: list[str]):
                 f"(filed_date ≤ latest date in DB)"
             )
         # ─────────────────────────────────────────────────────────────────────
+
+        # ── Limit to last N filings ───────────────────────────────────────────
+        if last > 0:
+            target    = target[:last]
+            target_8k = target_8k[:last]
 
         total_regular = len(target)
         total_8k      = len(target_8k)
@@ -643,15 +652,47 @@ def _run_download(ticker: str, forms: list[str]):
             yield _sse(f"📰  Fetching Globe Newswire releases for {tic}…")
             yield from _run_gnw_download(tic, company_name, ticker_dir, conn)
 
-        yield _sse(
-            f"🎉  Done!  {new_dl} new file(s) downloaded for {tic}.",
-            done=True, count=grand_total, total=max(grand_total, 1),
-        )
+        if not _suppress_done:
+            yield _sse(
+                f"🎉  Done!  {new_dl} new file(s) downloaded for {tic}.",
+                done=True, count=grand_total, total=max(grand_total, 1),
+            )
+        else:
+            yield _sse(f"✅  {tic}: {new_dl} new file(s) downloaded.")
 
     except Exception as exc:
-        yield _sse(f"❌  {exc}", done=True, error=True)
+        if not _suppress_done:
+            yield _sse(f"❌  {exc}", done=True, error=True)
+        else:
+            yield _sse(f"❌  {tic}: {exc}")
     finally:
         conn.close()
+
+
+def _run_batch_download(forms: list[str], last: int):
+    """Generator: download last N filings for every ticker already in the library."""
+    conn = get_conn()
+    tickers = [r[0] for r in conn.execute(
+        "SELECT DISTINCT ticker FROM reports ORDER BY ticker"
+    ).fetchall()]
+    conn.close()
+
+    if not tickers:
+        yield _sse("⚠  No tickers in library yet. Download at least one ticker first.",
+                   done=True, error=True)
+        return
+
+    n_label = f"last {last}" if last > 0 else "all"
+    yield _sse(f"🔄  Batch refresh — {len(tickers)} ticker(s), {n_label} filing(s) each…",
+               total=len(tickers))
+
+    for i, tic in enumerate(tickers):
+        yield _sse(f"\n━━━  {tic}  ({i + 1}/{len(tickers)})  ━━━",
+                   count=i, total=len(tickers))
+        yield from _run_download(tic, forms, last=last, _suppress_done=True)
+
+    yield _sse(f"🎉  Batch refresh complete — {len(tickers)} ticker(s) processed.",
+               done=True, count=len(tickers), total=len(tickers))
 
 
 # ── HTML template ─────────────────────────────────────────────────────────────
@@ -744,6 +785,16 @@ __URLPATCH__
         </div>
         <button class="btn btn-primary btn-sm ms-1" id="dlBtn"
                 onclick="startDownload()">⬇ Download All</button>
+      </div>
+
+      <!-- ── Batch refresh row ── -->
+      <div class="d-flex align-items-center gap-2 mt-1 mb-1">
+        <span class="text-muted" style="font-size:.8rem;white-space:nowrap">Refresh all tickers — last</span>
+        <input id="batchLastN" type="number" min="1" max="99" value="4"
+               class="form-control form-control-sm" style="width:64px">
+        <span class="text-muted" style="font-size:.8rem">filing(s)</span>
+        <button class="btn btn-outline-secondary btn-sm" id="batchBtn"
+                onclick="startBatchDownload()">🔄 Refresh All Tickers</button>
       </div>
 
       <div id="progressSection" style="display:none">
@@ -1051,6 +1102,65 @@ function startDownload() {
   };
 }
 
+function startBatchDownload() {
+  const last = parseInt(document.getElementById('batchLastN').value) || 4;
+  const forms = [];
+  if (document.getElementById('chk10K').checked)  forms.push('10-K');
+  if (document.getElementById('chk10Q').checked)  forms.push('10-Q');
+  if (document.getElementById('chk8K').checked)   forms.push('8-K');
+  if (document.getElementById('chk20F').checked)  forms.push('20-F');
+  if (document.getElementById('chk6K').checked)   forms.push('6-K');
+  if (document.getElementById('chkGNW').checked)  forms.push('GNW');
+  if (!forms.length) { alert('Select at least one form type.'); return; }
+
+  document.getElementById('progressSection').style.display = '';
+  document.getElementById('dlBtn').disabled = true;
+  document.getElementById('batchBtn').disabled = true;
+  const bar = document.getElementById('progressBar');
+  bar.style.width = '0%';
+  bar.className = 'progress-bar progress-bar-striped progress-bar-animated bg-primary';
+  const log = document.getElementById('logBox');
+  log.innerHTML = '';
+
+  const params = new URLSearchParams({ forms: forms.join(','), last });
+  const base = window._BASE || '';
+  const es = new EventSource(base + '/stream-batch-download?' + params);
+
+  es.onmessage = e => {
+    const d = JSON.parse(e.data);
+    const line = document.createElement('div');
+    line.textContent = d.msg;
+    if (d.error) line.style.color = '#f48771';
+    log.appendChild(line);
+    log.scrollTop = log.scrollHeight;
+
+    if (d.total > 0)
+      bar.style.width = Math.round(d.count / d.total * 100) + '%';
+
+    if (d.done) {
+      es.close();
+      document.getElementById('dlBtn').disabled = false;
+      document.getElementById('batchBtn').disabled = false;
+      bar.style.width = '100%';
+      bar.classList.remove('progress-bar-animated');
+      if (!d.error) {
+        bar.classList.remove('bg-primary');
+        bar.classList.add('bg-success');
+      }
+      loadStats(); fetchReports(1);
+    }
+  };
+  es.onerror = () => {
+    const line = document.createElement('div');
+    line.textContent = '⚠ Connection lost';
+    line.style.color = '#f48771';
+    log.appendChild(line);
+    es.close();
+    document.getElementById('dlBtn').disabled = false;
+    document.getElementById('batchBtn').disabled = false;
+  };
+}
+
 // ── delete ────────────────────────────────────────────────────────────────────
 function deleteReport(id) {
   if (!confirm('Remove this report from the library? (The local file will also be deleted.)')) return;
@@ -1234,6 +1344,21 @@ def stream_download_route():
         return "ticker required", 400
     return Response(
         _run_download(ticker, forms),
+        content_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
+
+
+@sec_bp.route("/stream-batch-download")
+def stream_batch_download_route():
+    forms = [
+        f.strip()
+        for f in request.args.get("forms", "10-K,10-Q").split(",")
+        if f.strip()
+    ]
+    last = max(0, int(request.args.get("last", 4)))
+    return Response(
+        _run_batch_download(forms, last),
         content_type="text/event-stream",
         headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
     )
