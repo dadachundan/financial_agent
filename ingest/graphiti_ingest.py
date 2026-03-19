@@ -25,7 +25,12 @@ Usage:
     python graphiti_ingest.py --limit 2 --debug-llm                   # print all LLM calls
     python graphiti_ingest.py --db zsxq.db
 """
-import sys, pathlib as _pl; sys.path.insert(0, str(_pl.Path(__file__).parent.parent))
+import os, sys, pathlib as _pl; sys.path.insert(0, str(_pl.Path(__file__).parent.parent))
+
+# Increase graphiti's chunk size so each LLM extraction call sees more context.
+# Default is 3000 tokens; 6000 halves the number of LLM calls per document.
+os.environ.setdefault("CHUNK_TOKEN_SIZE", "6000")
+os.environ.setdefault("CHUNK_MIN_TOKENS", "2000")
 
 import argparse
 import asyncio
