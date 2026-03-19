@@ -188,7 +188,14 @@
     <div id="graphPanel">
       <div id="graphNet"></div>
       <div id="graphInfo" style="display:none;position:absolute;top:8px;left:8px;z-index:10"></div>
-      <div id="graphFooter">Loading graph…</div>
+      <div id="graphFooter" style="display:flex;align-items:center;justify-content:space-between">
+        <span id="graphFooterText">Loading graph…</span>
+        <button onclick="if(_network)_network.fit({animation:{duration:400,easingFunction:'easeInOutQuad'}})"
+                title="Recenter / fit all visible nodes"
+                style="background:none;border:1px solid #ced4da;border-radius:4px;padding:1px 8px;font-size:.75rem;cursor:pointer;color:#495057;flex-shrink:0">
+          ⊡ Fit
+        </button>
+      </div>
     </div>
   </div>
 
@@ -573,63 +580,25 @@ async function clickEntity(uuid, name) {
   }
 }
 
-// ── Community graph filter ────────────────────────────────────────────────────
-let _communityFilterActive = false;
-
+// ── Community graph filter (node-click badge path) ───────────────────────────
+// Delegates to the same filterGraphToCommunity / clearGraphFilter infrastructure.
 async function filterByCommunity(communityId, communityName) {
   if (!_visNodes || !_network) return;
 
-  // If same community already active → clear filter
-  if (_communityFilterActive === communityId) {
-    clearCommunityFilter();
+  // Toggle off if same community already active
+  if (_communityFilterUuids !== null) {
+    clearGraphFilter();
     return;
   }
 
   try {
     const r = await fetch('/communities/' + communityId);
     const d = await r.json();
-    const memberUuids = new Set((d.members || []).map(m => m.uuid));
-
-    // Grey out non-member nodes; highlight member nodes
-    const updates = [];
-    _visNodes.forEach(n => {
-      if (memberUuids.has(n.id)) {
-        updates.push({ id: n.id, color: undefined, opacity: 1.0, font: { color: '#212529' } });
-      } else {
-        updates.push({ id: n.id, color: { background: '#e9ecef', border: '#ced4da' }, opacity: 0.25, font: { color: '#adb5bd' } });
-      }
-    });
-    _visNodes.update(updates);
-    _communityFilterActive = communityId;
-
-    // Show clear-filter bar at top of right panel
-    let bar = document.getElementById('communityFilterBar');
-    if (!bar) {
-      bar = document.createElement('div');
-      bar.id = 'communityFilterBar';
-      bar.style.cssText = 'background:#fff3cd;border-bottom:1px solid #ffc107;padding:6px 10px;font-size:.8rem;display:flex;align-items:center;gap:8px;';
-      document.getElementById('rightPanel').prepend(bar);
-    }
-    bar.innerHTML =
-      `<span>🔍 Filtered to <strong>${escHtml(communityName)}</strong></span>` +
-      `<button class="btn btn-xs btn-outline-secondary" style="padding:1px 7px;font-size:.75rem" onclick="clearCommunityFilter()">✕ Clear</button>`;
-    bar.style.display = 'flex';
+    _communityFilterUuids = new Set((d.members || []).map(m => m.uuid));
+    filterGraphToCommunity();
   } catch(e) {
     alert('Filter failed: ' + e.message);
   }
-}
-
-function clearCommunityFilter() {
-  if (!_visNodes) return;
-  // Restore all nodes to default appearance
-  const updates = [];
-  _visNodes.forEach(n => {
-    updates.push({ id: n.id, color: undefined, opacity: 1.0, font: { color: '#212529' } });
-  });
-  _visNodes.update(updates);
-  _communityFilterActive = false;
-  const bar = document.getElementById('communityFilterBar');
-  if (bar) bar.style.display = 'none';
 }
 
 // ── Search across all scopes (used on node click) ────────────────────────────
@@ -1109,9 +1078,14 @@ function filterGraphToCommunity() {
   _visEdges.forEach(e => {
     _visEdges.update({ id: e.id, hidden: !(uuids.has(e.from) && uuids.has(e.to)) });
   });
+  // Fit view to the community nodes so they're never off-screen
+  if (_network) _network.fit({
+    nodes: [...uuids],
+    animation: { duration: 500, easingFunction: 'easeInOutQuad' }
+  });
   document.getElementById('communityFilterBtn').style.display = 'none';
   document.getElementById('communityFilterClearBtn').style.display = '';
-  document.getElementById('graphFooter').textContent =
+  document.getElementById('graphFooterText').textContent =
     `Showing ${uuids.size} entities in this community — click "✕ Clear filter" to restore`;
 }
 
@@ -1120,9 +1094,11 @@ function clearGraphFilter() {
   _communityFilterUuids = null;
   _visNodes.forEach(n => _visNodes.update({ id: n.id, hidden: false }));
   _visEdges.forEach(e => _visEdges.update({ id: e.id, hidden: false }));
+  // Fit back to full graph
+  if (_network) _network.fit({ animation: { duration: 400, easingFunction: 'easeInOutQuad' } });
   document.getElementById('communityFilterBtn').style.display = '';
   document.getElementById('communityFilterClearBtn').style.display = 'none';
-  document.getElementById('graphFooter').textContent =
+  document.getElementById('graphFooterText').textContent =
     `${_visNodes.length} entities · ${_visEdges.length} relationships  —  click a node to search`;
 }
 
@@ -1215,7 +1191,7 @@ async function clearGraph() {
       alert('Graph cleared. Re-index with "Index New Documents".');
       loadStats();
       window._graphBuilt = false;
-      document.getElementById('graphFooter').textContent = 'Graph cleared.';
+      document.getElementById('graphFooterText').textContent = 'Graph cleared.';
       if (_network) { _network.destroy(); _network = null; }
     } else {
       alert('Error: ' + (d.errors || []).join('\n'));
@@ -1366,7 +1342,7 @@ async function initGraph() {
 
     if (allEdges.length === 0) {
       graphInfo.textContent = 'No relationships yet — run the ingestor first.';
-      document.getElementById('graphFooter').textContent = 'No data';
+      document.getElementById('graphFooterText').textContent = 'No data';
       return;
     }
     graphInfo.style.display = 'none';
@@ -1460,12 +1436,12 @@ async function initGraph() {
     });
 
     _graphBuilt = true;
-    document.getElementById('graphFooter').textContent =
+    document.getElementById('graphFooterText').textContent =
       `${nodeMap.size} entities · ${allEdges.length} relationships  —  click a node to search`;
   } catch (e) {
     graphInfo.textContent = 'Error: ' + e.message;
     graphInfo.style.display = 'block';
-    document.getElementById('graphFooter').textContent = 'Failed to load graph';
+    document.getElementById('graphFooterText').textContent = 'Failed to load graph';
   }
 }
 
