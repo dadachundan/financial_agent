@@ -1002,6 +1002,67 @@ def create_community_from_seed(conn: sqlite3.Connection,
     return {"id": cid, "member_count": member_count}
 
 
+def add_to_community_from_seed(conn: sqlite3.Connection,
+                               community_id: int,
+                               seed_uuid: str) -> dict:
+    """BFS-flood from seed_uuid and add all reachable entities to an existing community.
+
+    Entities already in a different community are moved to this one.
+    Returns {"id": community_id, "added": N, "member_count": total}.
+    """
+    # Verify community exists
+    row = conn.execute("SELECT id, member_count FROM communities WHERE id=?",
+                       (community_id,)).fetchone()
+    if row is None:
+        raise ValueError(f"Community {community_id} not found")
+
+    # BFS over non-deprecated edges (bidirectional)
+    visited: set[str] = set()
+    queue = [seed_uuid]
+    while queue:
+        current = queue.pop()
+        if current in visited:
+            continue
+        visited.add(current)
+        rows = conn.execute(
+            """SELECT src_uuid, tgt_uuid FROM edges
+               WHERE deprecated = 0
+                 AND (src_uuid = ? OR tgt_uuid = ?)""",
+            (current, current),
+        ).fetchall()
+        for r in rows:
+            for neighbour in (r["src_uuid"], r["tgt_uuid"]):
+                if neighbour and neighbour not in visited:
+                    queue.append(neighbour)
+
+    # Filter to real, non-isolated entities
+    existing = {
+        r["uuid"] for r in conn.execute(
+            "SELECT uuid FROM entities WHERE isolated = 0 AND uuid IN ({})".format(
+                ",".join("?" * len(visited))
+            ),
+            list(visited),
+        ).fetchall()
+    } if visited else set()
+
+    # Assign to this community (override any prior membership)
+    for uuid in existing:
+        conn.execute(
+            "INSERT OR REPLACE INTO community_members (entity_uuid, community_id) VALUES (?, ?)",
+            (uuid, community_id),
+        )
+
+    # Update member_count
+    new_count = conn.execute(
+        "SELECT COUNT(*) FROM community_members WHERE community_id=?",
+        (community_id,),
+    ).fetchone()[0]
+    conn.execute("UPDATE communities SET member_count=? WHERE id=?",
+                 (new_count, community_id))
+    conn.commit()
+    return {"id": community_id, "added": len(existing), "member_count": new_count}
+
+
 def remove_community_bfs(conn: sqlite3.Connection,
                           community_id: int,
                           seed_uuid: str) -> int:

@@ -764,6 +764,20 @@ def unassigned_entities():
     return jsonify({"entities": [dict(r) for r in rows]})
 
 
+@zep_bp.route("/communities/<int:cid>/members", methods=["POST"])
+def add_community_member(cid: int):
+    """BFS-flood from seed_uuid into an existing community."""
+    body = request.get_json(silent=True) or {}
+    seed = (body.get("seed_uuid") or "").strip()
+    if not seed:
+        return jsonify({"ok": False, "error": "seed_uuid required"}), 400
+    try:
+        result = _mirror.add_to_community_from_seed(_get_mirror(), cid, seed)
+        return jsonify({"ok": True, **result})
+    except ValueError as e:
+        return jsonify({"ok": False, "error": str(e)}), 404
+
+
 @zep_bp.route("/communities/<int:cid>/members/<uuid>", methods=["DELETE"])
 def remove_community_member(cid: int, uuid: str):
     """BFS flood-fill removal: remove entity and all connected entities from community cid."""
