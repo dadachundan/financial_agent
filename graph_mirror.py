@@ -1261,3 +1261,54 @@ def backfill_from_kuzu(mirror_conn: sqlite3.Connection,
         print(f"[mirror] backfill episodes error: {e}")
 
     return n_ent, n_edg
+
+
+def merge_entities(conn: sqlite3.Connection,
+                   source_uuid: str,
+                   target_uuid: str) -> dict:
+    """Merge source entity into target: re-point all edges, delete source.
+
+    All edges that referenced source_uuid are updated to reference target_uuid.
+    Self-loops created by the merge are removed.
+    Returns {"edges_updated": N}.
+    """
+    tgt_row = conn.execute(
+        "SELECT name FROM entities WHERE uuid=?", (target_uuid,)
+    ).fetchone()
+    if tgt_row is None:
+        raise ValueError(f"Target entity {target_uuid} not found")
+    tgt_name = tgt_row["name"]
+
+    # Re-point edges
+    c1 = conn.execute("UPDATE edges SET src_uuid=?, src_name=? WHERE src_uuid=?",
+                      (target_uuid, tgt_name, source_uuid)).rowcount
+    c2 = conn.execute("UPDATE edges SET tgt_uuid=?, tgt_name=? WHERE tgt_uuid=?",
+                      (target_uuid, tgt_name, source_uuid)).rowcount
+
+    # Remove self-loops
+    conn.execute("DELETE FROM edges WHERE src_uuid = tgt_uuid AND src_uuid = ?",
+                 (target_uuid,))
+
+    # Remove source entity and its community membership
+    conn.execute("DELETE FROM community_members WHERE entity_uuid=?", (source_uuid,))
+    conn.execute("DELETE FROM entities WHERE uuid=?", (source_uuid,))
+
+    conn.commit()
+    return {"edges_updated": c1 + c2}
+
+
+def add_edge(conn: sqlite3.Connection,
+             uuid: str,
+             src_uuid: str, src_name: str,
+             tgt_uuid: str, tgt_name: str,
+             name: str, fact: str) -> dict:
+    """Insert a manually-created edge into the mirror."""
+    conn.execute(
+        """INSERT OR REPLACE INTO edges
+           (uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name,
+            updated_at, deprecated, episodes_json)
+           VALUES (?, ?, ?, ?, ?, ?, ?, datetime('now'), 0, '[]')""",
+        (uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name),
+    )
+    conn.commit()
+    return {"uuid": uuid}
