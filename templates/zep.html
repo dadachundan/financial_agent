@@ -200,6 +200,20 @@
     <div id="graphPanel">
       <div id="graphNet"></div>
       <div id="graphInfo" style="display:none;position:absolute;top:8px;left:8px;z-index:10"></div>
+      <!-- Floating action bar when 2 nodes are selected -->
+      <div id="nodePairBar" style="display:none;position:absolute;bottom:44px;left:50%;
+           transform:translateX(-50%);z-index:20;background:#fff;border:1px solid #dee2e6;
+           border-radius:10px;padding:8px 14px;box-shadow:0 4px 16px rgba(0,0,0,.15);
+           align-items:center;gap:10px;white-space:nowrap">
+        <span id="nodePairLabel" style="font-size:.8rem;color:#495057;max-width:280px;
+              overflow:hidden;text-overflow:ellipsis"></span>
+        <button class="btn btn-sm btn-warning py-0 px-2" style="font-size:.8rem"
+                onclick="openMergeFromBar()">⇄ Merge</button>
+        <button class="btn btn-sm btn-primary py-0 px-2" style="font-size:.8rem"
+                onclick="openEdgeFromBar()">＋ Edge</button>
+        <button style="background:none;border:none;color:#adb5bd;font-size:1rem;cursor:pointer;padding:0 2px"
+                onclick="hideNodePairBar(); _network && _network.unselectAll()">×</button>
+      </div>
       <div id="graphFooter" style="display:flex;align-items:center;justify-content:space-between">
         <span id="graphFooterText">Loading graph…</span>
         <button onclick="if(_network)_network.fit({animation:{duration:400,easingFunction:'easeInOutQuad'}})"
@@ -1435,18 +1449,25 @@ async function initGraph() {
         stabilization: { iterations: 250, fit: true },
         barnesHut: { gravitationalConstant: -8000, springLength: 130, damping: 0.2 },
       },
-      interaction: { hover: true, tooltipDelay: 150, navigationButtons: true },
+      interaction: { hover: true, tooltipDelay: 150, navigationButtons: true, multiselect: true },
     };
 
     _network = new vis.Network(document.getElementById('graphNet'), { nodes: _visNodes, edges: _visEdges }, options);
 
     _network.on('click', params => {
-      if (params.nodes.length > 0) {
-        const nodeId = params.nodes[0];
-        const n = _visNodes.get(nodeId);
-        if (n) clickEntity(nodeId, n.label);  // UUID-based edge lookup + FTS
-      } else if (params.edges.length > 0) {
-        clickGraphEdge(params.edges[0]);
+      const sel = _network.getSelectedNodes();
+      if (sel.length === 2) {
+        // Two nodes selected — show the pair action bar
+        const nA = _visNodes.get(sel[0]), nB = _visNodes.get(sel[1]);
+        if (nA && nB) showNodePairBar(sel[0], nA.label, sel[1], nB.label);
+      } else {
+        hideNodePairBar();
+        if (params.nodes.length > 0) {
+          const n = _visNodes.get(params.nodes[0]);
+          if (n) clickEntity(params.nodes[0], n.label);
+        } else if (params.edges.length > 0) {
+          clickGraphEdge(params.edges[0]);
+        }
       }
     });
 
@@ -1611,18 +1632,55 @@ async function submitAssignCommunity() {
   }
 }
 
+// ── Node pair bar (2-node graph selection) ────────────────────────────────────
+let _pairA = {uuid:'', name:''}, _pairB = {uuid:'', name:''};
+
+function showNodePairBar(uuidA, nameA, uuidB, nameB) {
+  _pairA = {uuid: uuidA, name: nameA};
+  _pairB = {uuid: uuidB, name: nameB};
+  const bar = document.getElementById('nodePairBar');
+  document.getElementById('nodePairLabel').textContent = `${nameA}  ↔  ${nameB}`;
+  bar.style.display = 'flex';
+}
+
+function hideNodePairBar() {
+  document.getElementById('nodePairBar').style.display = 'none';
+  _pairA = {uuid:'', name:''}; _pairB = {uuid:'', name:''};
+}
+
+function openMergeFromBar() {
+  const a = {..._pairA}, b = {..._pairB};
+  hideNodePairBar();
+  if (_network) _network.unselectAll();
+  openMerge(a.uuid, a.name, b.uuid, b.name);
+}
+
+function openEdgeFromBar() {
+  const a = {..._pairA}, b = {..._pairB};
+  hideNodePairBar();
+  if (_network) _network.unselectAll();
+  openAddEdge(a.uuid, a.name, b.uuid, b.name);
+}
+
 // ── Merge entities ───────────────────────────────────────────────────────────
 let _mergeSourceUuid = '', _mergeSourceName = '';
 let _mergeTargetUuid = '', _mergeTargetName = '';
 
-function openMerge(uuid, name) {
+function openMerge(uuid, name, preTargetUuid, preTargetName) {
   _mergeSourceUuid = uuid; _mergeSourceName = name;
-  _mergeTargetUuid = ''; _mergeTargetName = '';
+  _mergeTargetUuid = preTargetUuid || ''; _mergeTargetName = preTargetName || '';
   document.getElementById('mergeSourceName').textContent = name;
-  document.getElementById('mergeTargetPick').innerHTML = '';
-  document.getElementById('mergeTargetSearch').value = '';
   document.getElementById('mergeResult').textContent = '';
-  document.getElementById('mergeSubmitBtn').disabled = true;
+  const hasPreTarget = !!preTargetUuid;
+  document.getElementById('mergeSearchRow').style.display = hasPreTarget ? 'none' : '';
+  document.getElementById('mergePreTarget').style.display  = hasPreTarget ? '' : 'none';
+  if (hasPreTarget) {
+    document.getElementById('mergePreTargetName').textContent = preTargetName;
+  } else {
+    document.getElementById('mergeTargetPick').innerHTML = '';
+    document.getElementById('mergeTargetSearch').value = '';
+  }
+  document.getElementById('mergeSubmitBtn').disabled = !hasPreTarget;
   new bootstrap.Modal(document.getElementById('mergeModal')).show();
 }
 
@@ -1684,14 +1742,28 @@ async function submitMerge() {
 // ── Add edge ─────────────────────────────────────────────────────────────────
 let _edgeSrcUuid = '', _edgeSrcName = '', _edgeTgtUuid = '', _edgeTgtName = '';
 
-function openAddEdge(preUuid, preName) {
-  _edgeSrcUuid = preUuid || ''; _edgeSrcName = preName || '';
-  _edgeTgtUuid = ''; _edgeTgtName = '';
-  document.getElementById('edgeSrcLabel').textContent = preName || '(pick via search below)';
-  document.getElementById('edgeSrcSearch').value = preName || '';
-  document.getElementById('edgeSrcPick').innerHTML = '';
-  document.getElementById('edgeTgtSearch').value = '';
-  document.getElementById('edgeTgtPick').innerHTML = '';
+function openAddEdge(srcUuid, srcName, tgtUuid, tgtName) {
+  _edgeSrcUuid = srcUuid || ''; _edgeSrcName = srcName || '';
+  _edgeTgtUuid = tgtUuid || ''; _edgeTgtName = tgtName || '';
+  const hasSrc = !!srcUuid, hasTgt = !!tgtUuid;
+
+  // Source
+  document.getElementById('edgeSrcLabel').textContent = srcName || '(pick via search below)';
+  document.getElementById('edgeSrcSearchRow').style.display = hasSrc ? 'none' : '';
+  if (!hasSrc) {
+    document.getElementById('edgeSrcSearch').value = '';
+    document.getElementById('edgeSrcPick').innerHTML = '';
+  }
+
+  // Target
+  document.getElementById('edgeTgtLabel').style.display = hasTgt ? '' : 'none';
+  document.getElementById('edgeTgtLabel').textContent = tgtName || '';
+  document.getElementById('edgeTgtSearchRow').style.display = hasTgt ? 'none' : '';
+  if (!hasTgt) {
+    document.getElementById('edgeTgtSearch').value = '';
+    document.getElementById('edgeTgtPick').innerHTML = '';
+  }
+
   document.getElementById('edgeRelName').value = '';
   document.getElementById('edgeFact').value = '';
   document.getElementById('edgeResult').textContent = '';
@@ -1849,11 +1921,18 @@ async function submitAddEdge() {
           <label class="me-3"><input type="radio" name="mergeKeep" value="source" checked> A</label>
           <label><input type="radio" name="mergeKeep" value="target"> B (the one you pick)</label>
         </div>
-        <!-- Entity B picker -->
-        <div class="mb-1" style="font-size:.78rem;color:#6c757d">Entity B — search &amp; select:</div>
-        <input id="mergeTargetSearch" type="text" class="form-control form-control-sm"
-               placeholder="Search for entity B…">
-        <div id="mergeTargetPick" class="entity-pick-results"></div>
+        <!-- Entity B picker (hidden when pre-filled from graph selection) -->
+        <div id="mergeSearchRow">
+          <div class="mb-1" style="font-size:.78rem;color:#6c757d">Entity B — search &amp; select:</div>
+          <input id="mergeTargetSearch" type="text" class="form-control form-control-sm"
+                 placeholder="Search for entity B…">
+          <div id="mergeTargetPick" class="entity-pick-results"></div>
+        </div>
+        <!-- Pre-filled target (shown when both nodes selected in graph) -->
+        <div id="mergePreTarget" style="display:none" class="mb-2">
+          <span style="font-size:.78rem;color:#6c757d">Entity B: </span>
+          <strong id="mergePreTargetName" style="font-size:.82rem"></strong>
+        </div>
         <div id="mergeResult" class="mt-2" style="font-size:.78rem"></div>
       </div>
       <div class="modal-footer py-2">
@@ -1877,9 +1956,11 @@ async function submitAddEdge() {
         <div class="mb-2">
           <div style="font-size:.78rem;color:#6c757d">Source entity</div>
           <div id="edgeSrcLabel" class="fw-semibold" style="font-size:.82rem;min-height:1.2em"></div>
-          <input id="edgeSrcSearch" type="text" class="form-control form-control-sm mt-1"
-                 placeholder="Search source entity…">
-          <div id="edgeSrcPick" class="entity-pick-results"></div>
+          <div id="edgeSrcSearchRow">
+            <input id="edgeSrcSearch" type="text" class="form-control form-control-sm mt-1"
+                   placeholder="Search source entity…">
+            <div id="edgeSrcPick" class="entity-pick-results"></div>
+          </div>
         </div>
         <!-- Relation name -->
         <div class="mb-2">
@@ -1896,9 +1977,12 @@ async function submitAddEdge() {
         <!-- Target entity -->
         <div class="mb-1">
           <div style="font-size:.78rem;color:#6c757d">Target entity</div>
-          <input id="edgeTgtSearch" type="text" class="form-control form-control-sm"
-                 placeholder="Search target entity…">
-          <div id="edgeTgtPick" class="entity-pick-results"></div>
+          <div id="edgeTgtLabel" class="fw-semibold" style="font-size:.82rem;display:none"></div>
+          <div id="edgeTgtSearchRow">
+            <input id="edgeTgtSearch" type="text" class="form-control form-control-sm"
+                   placeholder="Search target entity…">
+            <div id="edgeTgtPick" class="entity-pick-results"></div>
+          </div>
         </div>
         <div id="edgeResult" class="mt-2" style="font-size:.78rem"></div>
       </div>
