@@ -425,6 +425,13 @@ def entity_edges(uuid):
     return jsonify({"edges": edges, "uuid": uuid})
 
 
+@zep_bp.route("/entities/<uuid>/community")
+def entity_community(uuid):
+    """Return the community this entity belongs to (or empty object if none)."""
+    result = _mirror.get_entity_community(_get_mirror(), uuid)
+    return jsonify(result or {})
+
+
 @zep_bp.route("/entities/<uuid>/isolate", methods=["POST"])
 def isolate_entity(uuid):
     """Mark an entity as isolated in mirror + delete it from KuzuDB."""
