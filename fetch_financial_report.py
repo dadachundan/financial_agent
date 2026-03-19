@@ -806,7 +806,7 @@ __MCW_MODALS__
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 __MCW_FOOTER__
 <script>
-window._commentSavePrefix = '';
+window._commentSavePrefix = window._BASE||'';
 let _page     = 1;
 let _total    = 0;
 let _pages    = 1;
@@ -1073,9 +1073,9 @@ function indexReport(id, btn) {
   const es = new EventSource('/index-report/' + id, {method: 'POST'});
   // EventSource is GET-only; use fetch SSE pattern instead
   es.close();
-  modal.textContent = 'Starting…\n';
+  modal.textContent = 'Starting…\\n';
 
-  fetch('/sec/index-report/' + id, {method: 'POST'})
+  fetch('/index-report/' + id, {method: 'POST'})
     .then(async res => {
       const reader = res.body.getReader();
       const dec    = new TextDecoder();
@@ -1084,7 +1084,7 @@ function indexReport(id, btn) {
         const {value, done} = await reader.read();
         if (done) break;
         buf += dec.decode(value, {stream: true});
-        const lines = buf.split('\n');
+        const lines = buf.split('\\n');
         buf = lines.pop();
         for (const line of lines) {
           if (!line.startsWith('data: ')) continue;
@@ -1099,12 +1099,12 @@ function indexReport(id, btn) {
               const row = _rows.find(r => r.id === id);
               if (row) row.graphiti_indexed_at = new Date().toISOString();
               // Sync mirror so new entities/edges appear in the graph UI immediately
-              modal.textContent += 'Syncing graph mirror…\n';
+              modal.textContent += 'Syncing graph mirror…\\n';
               modal.scrollTop = modal.scrollHeight;
               fetch((window._BASE||'') + '/zep/refresh-mirror', {method:'POST'})
                 .then(r => r.json())
-                .then(d => { modal.textContent += d.ok ? `✓ Mirror synced (${d.entities} entities, ${d.edges} edges)\n` : `⚠ Mirror sync: ${d.error}\n`; })
-                .catch(e => { modal.textContent += `⚠ Mirror sync failed: ${e.message}\n`; })
+                .then(d => { modal.textContent += d.ok ? `✓ Mirror synced (${d.entities} entities, ${d.edges} edges)\\n` : `⚠ Mirror sync: ${d.error}\\n`; })
+                .catch(e => { modal.textContent += `⚠ Mirror sync failed: ${e.message}\\n`; })
                 .finally(() => { modal.scrollTop = modal.scrollHeight; setTimeout(() => modal.remove(), 3000); });
             } else {
               btn.disabled = false;
@@ -1112,7 +1112,7 @@ function indexReport(id, btn) {
               setTimeout(() => modal.remove(), 4000);
             }
           } else {
-            modal.textContent += msg + '\n';
+            modal.textContent += msg + '\\n';
             modal.scrollTop = modal.scrollHeight;
           }
         }
@@ -1146,7 +1146,10 @@ TEMPLATE = TEMPLATE.replace("__URLPATCH__", nw2.URL_PATCH_JS)
 
 @sec_bp.route("/")
 def index():
-    return render_template_string(TEMPLATE)
+    from flask import url_for
+    # url_for('.index') = '/sec/' when mounted, '/' standalone → strip trailing /
+    base = url_for('.index').rstrip('/')
+    return render_template_string(TEMPLATE, _base=base)
 
 
 @sec_bp.route("/stats")
