@@ -107,7 +107,10 @@ Browser for the 知识星球 research group PDF library.
 
 | File | Purpose |
 |------|---------|
-| `graph_mirror.py` | SQLite shadow copy of KuzuDB; WAL mode for concurrent reads; owns all community logic (`build_communities`, `create_community_from_seed`, `remove_community_bfs`) |
+| `graph_mirror.py` | SQLite shadow copy of KuzuDB; WAL mode for concurrent reads; owns all community logic (`build_communities`, `create_community_from_seed`, `remove_community_bfs`); entity lifecycle: `isolate_entity`, `merge_entities` |
+| `isolate_nonsense_entities.py` | One-off script: batches all visible entities, sends to MiniMax, isolates ones that don't make sense for financial analysis (dollar amounts, dates, generic labels, etc.) |
+| `restore_valid_entities.py` | One-off correction pass: reviews isolated entities and restores legitimate ones (companies, regulators, named products) wrongly isolated in first pass |
+| `merge_duplicate_entities.py` | Dedup script: Pass 1 exact-name merges (no LLM); Pass 2 candidate-pair LLM confirmation (SequenceMatcher + first-word heuristics, hallucination guard validates UUIDs against input pairs). Edges re-pointed to canonical entity before source is deleted. Run with `DRY_RUN=1` to preview. |
 | `md_comment_widget.py` | Reusable EasyMDE markdown editor modal + image-paste-to-upload blueprint |
 | `nav_widget2.py` | Shared navbar HTML injected into every sub-app template |
 | `ticker_names.py` | Background-thread loader of A-share/HK `{code: company_name}` map (AKShare); weekly cache |
@@ -213,6 +216,8 @@ let _assignSuccess        = false;     // prevents hidden.bs.modal from re-navig
 ## Key Patterns
 
 1. **SQLite Mirror**: KuzuDB holds the write lock during ingest; SQLite mirror (WAL mode) serves all web reads concurrently.
+2. **Entity Isolation**: `graph_mirror.isolate_entity(conn, uuid)` sets `isolated=1` on the entity and auto-deprecates all its edges (`deprecated_reason='ENTITY_ISOLATED'`). Isolated entities are excluded from graph view, search, stats, and LLM extraction prompts (injected as "do not extract" list in `minimax_llm_client.py`). Reversed by setting `isolated=0` and un-deprecating edges.
+3. **Entity Merge**: `graph_mirror.merge_entities(conn, source_uuid, target_uuid)` re-points all edges from source to target, removes resulting self-loops, then deletes the source entity. Kuzu stale nodes cleaned up best-effort. Edges are preserved — no relationship information is lost.
 2. **SSE Streaming**: Long-running operations (download, ingest, community build) stream progress via Server-Sent Events.
 3. **EasyMDE Widget**: Editable table cells follow `md_comment_widget.py` pattern — click → preview modal → edit modal → POST → re-render in place.
 4. **Graph Filter via `hidden`**: Community and unassigned views reuse the same `_communityFilterUuids` + `filterGraphToCommunity()` pattern; no data reload needed.
