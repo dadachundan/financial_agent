@@ -14,7 +14,8 @@ After completing a task and verifying that it works (by running tests or the app
 2. If working on a worktree branch, immediately merge it into `main` (`git checkout main && git merge <branch> --no-ff && git push origin main`).
 3. Ensure the local `main` is synced with the remote `HEAD`.
 4. Do not include the "Co-authored-by: Claude" footer in commits.
-5. After testing a function or debugging is complete, stop any demo/preview servers to free the port (`preview_stop()`).
+5. Keep the dev server running after completing tasks (do **not** call `preview_stop()`).
+6. If the architecture changes, update `architecture.md`.
 
 # UI Verification (MANDATORY)
 
