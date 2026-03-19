@@ -797,6 +797,7 @@ __MCW_MODALS__
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 __MCW_FOOTER__
 <script>
+window._commentSavePrefix = '/sec';
 let _rows         = [];
 let _filteredRows = [];
 let _page         = 1;
@@ -827,7 +828,7 @@ function badgeCls(f) {
 
 // ── load & render ─────────────────────────────────────────────────────────────
 function loadReports() {
-  fetch('/reports').then(r=>r.json()).then(data => {
+  fetch('/sec/reports').then(r=>r.json()).then(data => {
     _rows = data;
     rebuildFormBtns();
     rebuildChips();
@@ -1025,7 +1026,7 @@ function startDownload() {
   log.innerHTML = '';
 
   const params = new URLSearchParams({ ticker, forms: forms.join(',') });
-  const es = new EventSource('/stream-download?' + params);
+  const es = new EventSource('/sec/stream-download?' + params);
 
   es.onmessage = e => {
     const d = JSON.parse(e.data);
@@ -1063,7 +1064,7 @@ function startDownload() {
 // ── delete ────────────────────────────────────────────────────────────────────
 function deleteReport(id) {
   if (!confirm('Remove this report from the library? (The local file will also be deleted.)')) return;
-  fetch('/report/' + id, { method: 'DELETE' }).then(r => {
+  fetch('/sec/report/' + id, { method: 'DELETE' }).then(r => {
     if (r.ok) { _rows = _rows.filter(r => r.id !== id); rebuildChips(); applyFilters(); }
   });
 }
