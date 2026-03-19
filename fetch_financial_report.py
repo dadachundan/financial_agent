@@ -43,6 +43,7 @@ REPORTS_DIR.mkdir(exist_ok=True)
 
 # SEC EDGAR rate-limit: ≤ 10 req/sec; be polite
 _SEC_DELAY   = 0.12
+MIN_FILED_YEAR = 2020  # skip filings filed before this year
 _SEC_HEADERS = {
     "User-Agent": "FinancialReportDownloader contact@localhost.local",
     "Accept-Encoding": "gzip, deflate",
@@ -452,6 +453,14 @@ def _run_download(ticker: str, forms: list[str]):
             """Return the latest filed_date we already have for this form type."""
             return _max_by_form.get(form_type) or _max_by_form.get(form_type.replace("/A", ""))
 
+        # ── Year floor filter ─────────────────────────────────────────────
+        before_year = len(target) + len(target_8k)
+        target    = [f for f in target    if f["filingDate"] >= f"{MIN_FILED_YEAR}-01-01"]
+        target_8k = [f for f in target_8k if f["filingDate"] >= f"{MIN_FILED_YEAR}-01-01"]
+        skipped_by_year = before_year - len(target) - len(target_8k)
+        if skipped_by_year:
+            yield _sse(f"📅  Skipping {skipped_by_year} filing(s) filed before {MIN_FILED_YEAR}")
+
         before_reg = len(target)
         before_8k  = len(target_8k)
         target    = [f for f in target    if not _date_cutoff(f["form"]) or f["filingDate"] > _date_cutoff(f["form"])]
@@ -797,6 +806,7 @@ __MCW_MODALS__
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 __MCW_FOOTER__
 <script>
+window._commentSavePrefix = '/sec';
 let _rows         = [];
 let _filteredRows = [];
 let _page         = 1;
@@ -827,7 +837,7 @@ function badgeCls(f) {
 
 // ── load & render ─────────────────────────────────────────────────────────────
 function loadReports() {
-  fetch('/reports').then(r=>r.json()).then(data => {
+  fetch('/sec/reports').then(r=>r.json()).then(data => {
     _rows = data;
     rebuildFormBtns();
     rebuildChips();
@@ -1031,7 +1041,7 @@ function startDownload() {
   log.innerHTML = '';
 
   const params = new URLSearchParams({ ticker, forms: forms.join(',') });
-  const es = new EventSource('/stream-download?' + params);
+  const es = new EventSource('/sec/stream-download?' + params);
 
   es.onmessage = e => {
     const d = JSON.parse(e.data);
@@ -1069,7 +1079,7 @@ function startDownload() {
 // ── delete ────────────────────────────────────────────────────────────────────
 function deleteReport(id) {
   if (!confirm('Remove this report from the library? (The local file will also be deleted.)')) return;
-  fetch('/report/' + id, { method: 'DELETE' }).then(r => {
+  fetch('/sec/report/' + id, { method: 'DELETE' }).then(r => {
     if (r.ok) { _rows = _rows.filter(r => r.id !== id); rebuildChips(); applyFilters(); }
   });
 }
@@ -1090,7 +1100,7 @@ function indexReport(id, btn) {
   es.close();
   modal.textContent = 'Starting…\n';
 
-  fetch('/index-report/' + id, {method: 'POST'})
+  fetch('/sec/index-report/' + id, {method: 'POST'})
     .then(async res => {
       const reader = res.body.getReader();
       const dec    = new TextDecoder();
