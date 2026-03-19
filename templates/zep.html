@@ -1504,7 +1504,7 @@ async function openAssignCommunity(uuid, name) {
     // Fetch multi-member communities only (skip singletons)
     const r = await fetch('/communities?limit=200');
     const d = await r.json();
-    const items = (d.items || []).filter(c => c.member_count > 1);
+    const items = (d.communities || d.items || []).filter(c => c.member_count > 1);
 
     listEl.innerHTML = '';
     items.forEach(c => {
