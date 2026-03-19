@@ -1727,8 +1727,23 @@ async function submitMerge() {
       `✓ Merged — ${d.edges_updated} edge(s) re-pointed.`;
     btn.textContent = 'Done';
     refreshNodeColors();
-    // Remove source node from graph
-    if (_visNodes) _visNodes.remove(src);
+    // Re-point source's edges to target before removing the source node.
+    // vis.js auto-removes edges connected to a deleted node, so we must
+    // update them first — otherwise those relationships vanish from the graph.
+    if (_visNodes && _visEdges) {
+      const edgesToUpdate = [], edgesToRemove = [];
+      _visEdges.forEach(e => {
+        if (e.from === src || e.to === src) {
+          const newFrom = e.from === src ? tgt : e.from;
+          const newTo   = e.to   === src ? tgt : e.to;
+          if (newFrom === newTo) edgesToRemove.push(e.id);  // became self-loop
+          else edgesToUpdate.push({ id: e.id, from: newFrom, to: newTo });
+        }
+      });
+      if (edgesToUpdate.length) _visEdges.update(edgesToUpdate);
+      if (edgesToRemove.length) _visEdges.remove(edgesToRemove);
+      _visNodes.remove(src);
+    }
     await new Promise(r => setTimeout(r, 900));
     const m = document.getElementById('mergeModal');
     (bootstrap.Modal.getInstance(m) || new bootstrap.Modal(m)).hide();
