@@ -798,6 +798,14 @@ async function loadEntities(reset) {
 function loadMoreEntities() { loadEntities(false); }
 
 // ── Community browser ───────────────────────────────────────────────────────
+function stripMdHeaders(text) {
+  return (text || '')
+    .replace(/^###\s*NAME:.*$/mi, '')
+    .replace(/^###\s*SUMMARY:\s*/mi, '')
+    .replace(/^#+\s*/gm, '')
+    .trim();
+}
+
 let _commCursor = null;
 
 async function loadCommunities(reset) {
@@ -830,7 +838,7 @@ async function loadCommunities(reset) {
                 onclick="event.stopPropagation(); deleteCommunityById(${c.id}, ${JSON.stringify(c.name)}, this.closest('.community-row'))">🗑</button>` +
           '</div>' +
         '</div>' +
-        '<div class="csumm">' + escHtml((c.summary || '').slice(0, 90)) + '</div>';
+        '<div class="csumm">' + escHtml(stripMdHeaders(c.summary).slice(0, 90)) + '</div>';
       row.onclick = () => showCommunity(c.id, c.name);
       list.appendChild(row);
     });
@@ -890,11 +898,7 @@ async function showCommunity(id, name) {
   try {
     const r = await fetch('/communities/' + id);
     const d = await r.json();
-    const cleanSummary = (d.summary || '')
-      .replace(/^###\s*NAME:.*$/mi, '')
-      .replace(/^###\s*SUMMARY:\s*/mi, '')
-      .replace(/^#+\s*/gm, '')
-      .trim();
+    const cleanSummary = stripMdHeaders(d.summary);
     document.getElementById('communityDetailSummary').textContent = cleanSummary || '(no summary)';
     _communityFilterUuids = new Set((d.members || []).map(m => m.uuid));
     filterGraphToCommunity();
