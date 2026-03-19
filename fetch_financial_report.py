@@ -806,14 +806,15 @@ __MCW_MODALS__
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 __MCW_FOOTER__
 <script>
-window._commentSavePrefix = '/sec';
-let _rows         = [];
-let _filteredRows = [];
-let _page         = 1;
-const _pageSize   = 50;
+window._commentSavePrefix = '';
+let _page     = 1;
+let _total    = 0;
+let _pages    = 1;
+const _pageSize = 50;
 let _actTick  = null;
 let _actForm  = null;
-let _sortMode = 'filed';   // 'filed' | 'ticker'
+let _sortMode = 'filed';
+let _searchTimer = null;
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 function htmlEsc(s) {
@@ -835,17 +836,15 @@ function badgeCls(f) {
   return 'bg-secondary';
 }
 
-// ── load & render ─────────────────────────────────────────────────────────────
-function loadReports() {
-  fetch('/sec/reports').then(r=>r.json()).then(data => {
-    _rows = data;
-    rebuildFormBtns();
-    rebuildChips();
-    applyFilters();
+// ── stats (chips + form buttons) ─────────────────────────────────────────────
+function loadStats() {
+  fetch('/stats').then(r=>r.json()).then(stats => {
+    rebuildFormBtns(stats.forms || {});
+    rebuildChips(stats.tickers || {});
   });
 }
 
-function rebuildFormBtns() {
+function rebuildFormBtns(formCounts) {
   const specs = [
     { key:'10-K', label:'10-K', cls:'b10k', outline:'outline-primary'   },
     { key:'10-Q', label:'10-Q', cls:'b10q', outline:'outline-success'   },
@@ -857,30 +856,49 @@ function rebuildFormBtns() {
   const div = document.getElementById('formBtns');
   div.innerHTML = '';
   specs.forEach(({key, label, cls, outline}) => {
-    const count = _rows.filter(r => r.form_type && r.form_type.includes(key)).length;
+    const count = Object.entries(formCounts)
+      .filter(([ft]) => ft && ft.includes(key))
+      .reduce((s, [,c]) => s+c, 0);
     const active = _actForm === key;
     const btn = document.createElement('button');
     btn.className = 'btn btn-sm ' + (active ? `badge bp ${cls}` : `btn-${outline}`);
     btn.style.cssText = 'font-size:.72rem;padding:.15rem .55rem;font-weight:600';
     btn.innerHTML = `${label} <span class="badge bg-light text-dark">${count}</span>`;
-    btn.onclick = () => { _actForm = _actForm===key ? null : key; rebuildFormBtns(); applyFilters(); };
+    btn.onclick = () => { _actForm = _actForm===key ? null : key; loadStats(); fetchReports(1); };
     div.appendChild(btn);
   });
 }
 
-function rebuildChips() {
-  const counts = {};
-  _rows.forEach(r => { counts[r.ticker] = (counts[r.ticker]||0)+1; });
-  const tickers = Object.keys(counts).sort();
+function rebuildChips(tickerCounts) {
+  const tickers = Object.keys(tickerCounts).sort();
   const div = document.getElementById('tickerChips');
   div.innerHTML = '';
   tickers.forEach(t => {
     const btn = document.createElement('button');
     btn.className = 'btn btn-sm ' + (t===_actTick ? 'btn-dark' : 'btn-outline-secondary');
     btn.style.cssText = 'font-size:.72rem;padding:.1rem .5rem';
-    btn.innerHTML = `${t} <span class="badge bg-light text-dark">${counts[t]}</span>`;
-    btn.onclick = () => { _actTick = _actTick===t ? null : t; rebuildChips(); applyFilters(); };
+    btn.innerHTML = `${t} <span class="badge bg-light text-dark">${tickerCounts[t]}</span>`;
+    btn.onclick = () => { _actTick = _actTick===t ? null : t; loadStats(); fetchReports(1); };
     div.appendChild(btn);
+  });
+}
+
+// ── server-side fetch ─────────────────────────────────────────────────────────
+function fetchReports(page) {
+  _page = page || 1;
+  const q = document.getElementById('search').value.trim();
+  const params = new URLSearchParams({
+    page: _page, per_page: _pageSize, sort: _sortMode,
+  });
+  if (q)       params.set('q',      q);
+  if (_actTick) params.set('ticker', _actTick);
+  if (_actForm) params.set('form',   _actForm);
+
+  fetch('/reports?' + params).then(r=>r.json()).then(data => {
+    _total = data.total;
+    _pages = data.pages;
+    renderRows(data.rows);
+    _renderPager();
   });
 }
 
@@ -890,101 +908,58 @@ function setSort(mode) {
     'btn btn-sm ' + (mode === 'filed'  ? 'btn-dark' : 'btn-outline-secondary');
   document.getElementById('sortTickerBtn').className =
     'btn btn-sm ' + (mode === 'ticker' ? 'btn-dark' : 'btn-outline-secondary');
-  applyFilters();
+  fetchReports(1);
 }
 
 function applyFilters() {
-  const q = document.getElementById('search').value.trim().toLowerCase();
-  _filteredRows = _rows.filter(r => {
-    const txt = [r.ticker, r.company_name, r.period, r.form_type, r.filed_date]
-                  .join(' ').toLowerCase();
-    const matchTxt  = !q       || txt.includes(q);
-    const matchTick = !_actTick || r.ticker === _actTick;
-    const matchForm = !_actForm || (r.form_type && r.form_type.includes(_actForm));
-    return matchTxt && matchTick && matchForm;
-  });
-
-  // Sort
-  if (_sortMode === 'filed') {
-    _filteredRows.sort((a, b) =>
-      (b.filed_date || '').localeCompare(a.filed_date || '') || b.id - a.id
-    );
-  } else {
-    _filteredRows.sort((a, b) =>
-      (a.ticker || '').localeCompare(b.ticker || '') ||
-      (b.period_of_report || '').localeCompare(a.period_of_report || '') ||
-      b.id - a.id
-    );
-  }
-
-  _page = 1;
-  _renderPage();
-}
-
-function _renderPage() {
-  const total    = _filteredRows.length;
-  const start    = (_page - 1) * _pageSize;
-  const end      = Math.min(start + _pageSize, total);
-  renderRows(_filteredRows.slice(start, end), start, total);
-  _renderPager();
+  clearTimeout(_searchTimer);
+  _searchTimer = setTimeout(() => fetchReports(1), 250);
 }
 
 function _renderPager() {
   const pager = document.getElementById('reports-pager');
   if (!pager) return;
-  const total      = _filteredRows.length;
-  const totalPages = Math.max(1, Math.ceil(total / _pageSize));
-  pager.classList.toggle('d-none', total <= _pageSize);
-  if (total === 0) { pager.innerHTML = ''; return; }
+  pager.classList.toggle('d-none', _total <= _pageSize);
+  if (_total === 0) { pager.innerHTML = ''; return; }
   const start = (_page - 1) * _pageSize + 1;
-  const end   = Math.min(_page * _pageSize, total);
-  let html = `<small class="text-muted me-2">${start}\u2013${end} of ${total}</small>`;
+  const end   = Math.min(_page * _pageSize, _total);
+  let html = `<small class="text-muted me-2">${start}\u2013${end} of ${_total}</small>`;
   html += `<ul class="pagination pagination-sm mb-0">`;
   html += `<li class="page-item${_page === 1 ? ' disabled' : ''}">`;
-  html += `<a class="page-link" href="#" onclick="_goPage(${_page - 1});return false">\u2039</a></li>`;
-  for (const p of _pageRange(_page, totalPages)) {
+  html += `<a class="page-link" href="#" onclick="fetchReports(${_page-1});return false">\u2039</a></li>`;
+  for (const p of _pageRange(_page, _pages)) {
     if (p === '\u2026') {
       html += `<li class="page-item disabled"><span class="page-link">\u2026</span></li>`;
     } else {
       html += `<li class="page-item${p === _page ? ' active' : ''}">`;
-      html += `<a class="page-link" href="#" onclick="_goPage(${p});return false">${p}</a></li>`;
+      html += `<a class="page-link" href="#" onclick="fetchReports(${p});return false">${p}</a></li>`;
     }
   }
-  html += `<li class="page-item${_page === totalPages ? ' disabled' : ''}">`;
-  html += `<a class="page-link" href="#" onclick="_goPage(${_page + 1});return false">\u203a</a></li>`;
+  html += `<li class="page-item${_page === _pages ? ' disabled' : ''}">`;
+  html += `<a class="page-link" href="#" onclick="fetchReports(${_page+1});return false">\u203a</a></li>`;
   html += `</ul>`;
   pager.innerHTML = html;
 }
 
 function _pageRange(current, total) {
   if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
-  const set    = new Set([1, Math.max(1, current - 1), current,
-                          Math.min(total, current + 1), total]);
-  const sorted = [...set].sort((a, b) => a - b);
-  const result = [];
-  let prev = 0;
+  const set    = new Set([1, Math.max(1, current-1), current, Math.min(total, current+1), total]);
+  const sorted = [...set].sort((a,b) => a-b);
+  const result = []; let prev = 0;
   for (const p of sorted) {
     if (p - prev > 1) result.push('\u2026');
-    result.push(p);
-    prev = p;
+    result.push(p); prev = p;
   }
   return result;
 }
 
-function _goPage(page) {
-  const totalPages = Math.max(1, Math.ceil(_filteredRows.length / _pageSize));
-  _page = Math.max(1, Math.min(page, totalPages));
-  _renderPage();
-}
-
-function renderRows(rows, startIndex, totalFiltered) {
-  if (startIndex   === undefined) startIndex    = 0;
-  if (totalFiltered === undefined) totalFiltered = rows.length;
+function renderRows(rows) {
+  const startIndex = (_page - 1) * _pageSize;
   const tbody = document.getElementById('tbody');
   const empty = document.getElementById('emptyMsg');
   document.getElementById('rowCount').textContent =
-    totalFiltered + ' report' + (totalFiltered!==1?'s':'');
-  if (!totalFiltered) { tbody.innerHTML=''; empty.style.display=''; return; }
+    _total + ' report' + (_total!==1?'s':'');
+  if (!_total) { tbody.innerHTML=''; empty.style.display=''; return; }
   empty.style.display = 'none';
   tbody.innerHTML = rows.map((r,i) => `
     <tr>
@@ -1041,7 +1016,7 @@ function startDownload() {
   log.innerHTML = '';
 
   const params = new URLSearchParams({ ticker, forms: forms.join(',') });
-  const es = new EventSource('/sec/stream-download?' + params);
+  const es = new EventSource('/stream-download?' + params);
 
   es.onmessage = e => {
     const d = JSON.parse(e.data);
@@ -1063,7 +1038,7 @@ function startDownload() {
         bar.classList.remove('bg-primary');
         bar.classList.add('bg-success');
       }
-      loadReports();
+      loadStats(); fetchReports(1);
     }
   };
   es.onerror = () => {
@@ -1079,8 +1054,8 @@ function startDownload() {
 // ── delete ────────────────────────────────────────────────────────────────────
 function deleteReport(id) {
   if (!confirm('Remove this report from the library? (The local file will also be deleted.)')) return;
-  fetch('/sec/report/' + id, { method: 'DELETE' }).then(r => {
-    if (r.ok) { _rows = _rows.filter(r => r.id !== id); rebuildChips(); applyFilters(); }
+  fetch('/report/' + id, { method: 'DELETE' }).then(r => {
+    if (r.ok) { loadStats(); fetchReports(_page); }
   });
 }
 
@@ -1152,7 +1127,7 @@ function indexReport(id, btn) {
 }
 
 // init
-loadReports();
+loadStats(); fetchReports(1);
 
 __MCW_JS__
 </script>
@@ -1174,21 +1149,74 @@ def index():
     return render_template_string(TEMPLATE)
 
 
+@sec_bp.route("/stats")
+def report_stats():
+    """Lightweight endpoint: counts by ticker and form_type for chips/buttons."""
+    conn = get_conn()
+    by_ticker = conn.execute(
+        "SELECT ticker, COUNT(*) as cnt FROM reports GROUP BY ticker ORDER BY ticker"
+    ).fetchall()
+    by_form = conn.execute(
+        "SELECT form_type, COUNT(*) as cnt FROM reports GROUP BY form_type"
+    ).fetchall()
+    conn.close()
+    return jsonify({
+        "tickers": {r["ticker"]: r["cnt"] for r in by_ticker},
+        "forms":   {r["form_type"]: r["cnt"] for r in by_form},
+    })
+
+
 @sec_bp.route("/reports")
 def list_reports():
-    ticker = request.args.get("ticker", "").upper().strip()
-    conn   = get_conn()
+    """Server-side search + pagination. Returns {rows, total, page, pages}."""
+    q        = request.args.get("q", "").strip().lower()
+    ticker   = request.args.get("ticker", "").upper().strip()
+    form     = request.args.get("form", "").strip()
+    sort     = request.args.get("sort", "filed")   # 'filed' | 'ticker'
+    page     = max(1, int(request.args.get("page", 1)))
+    per_page = min(200, max(1, int(request.args.get("per_page", 50))))
+
+    where_clauses, params = [], []
+
     if ticker:
-        rows = conn.execute(
-            "SELECT * FROM reports WHERE ticker=? ORDER BY period_of_report DESC, id DESC",
-            (ticker,),
-        ).fetchall()
-    else:
-        rows = conn.execute(
-            "SELECT * FROM reports ORDER BY ticker, period_of_report DESC, id DESC"
-        ).fetchall()
+        where_clauses.append("ticker = ?")
+        params.append(ticker)
+    if form:
+        where_clauses.append("form_type LIKE ?")
+        params.append(f"%{form}%")
+    if q:
+        where_clauses.append(
+            "(LOWER(ticker) LIKE ? OR LOWER(company_name) LIKE ? "
+            "OR LOWER(period) LIKE ? OR LOWER(form_type) LIKE ? OR filed_date LIKE ?)"
+        )
+        like = f"%{q}%"
+        params.extend([like, like, like, like, like])
+
+    where_sql = ("WHERE " + " AND ".join(where_clauses)) if where_clauses else ""
+    order_sql = (
+        "ORDER BY filed_date DESC, id DESC"
+        if sort == "filed"
+        else "ORDER BY ticker ASC, period_of_report DESC, id DESC"
+    )
+
+    conn  = get_conn()
+    total = conn.execute(
+        f"SELECT COUNT(*) FROM reports {where_sql}", params
+    ).fetchone()[0]
+
+    offset = (page - 1) * per_page
+    rows   = conn.execute(
+        f"SELECT * FROM reports {where_sql} {order_sql} LIMIT {per_page} OFFSET {offset}",
+        params,
+    ).fetchall()
     conn.close()
-    return jsonify([dict(r) for r in rows])
+
+    return jsonify({
+        "rows":  [dict(r) for r in rows],
+        "total": total,
+        "page":  page,
+        "pages": max(1, (total + per_page - 1) // per_page),
+    })
 
 
 @sec_bp.route("/stream-download")
