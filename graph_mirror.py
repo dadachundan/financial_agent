@@ -907,6 +907,22 @@ def get_communities(conn: sqlite3.Connection, limit: int = 100,
     return items, next_cursor
 
 
+def get_entity_community(conn: sqlite3.Connection,
+                         entity_uuid: str) -> Optional[dict]:
+    """Return the community an entity belongs to, or None if unassigned."""
+    row = conn.execute(
+        """SELECT c.id, c.name, c.summary, c.member_count
+           FROM community_members cm
+           JOIN communities c ON c.id = cm.community_id
+           WHERE cm.entity_uuid = ?""",
+        (entity_uuid,),
+    ).fetchone()
+    if not row:
+        return None
+    return {"id": row["id"], "name": row["name"],
+            "summary": row["summary"] or "", "member_count": row["member_count"]}
+
+
 def get_community_members(conn: sqlite3.Connection,
                           community_id: int) -> list[dict]:
     """Return all entities belonging to a community, ordered by name."""

@@ -72,6 +72,9 @@
     .result-card.deprecated { opacity:.45; border-color:#f0c0c0; background:#fff8f8; }
     .deprecated-badge { display:inline-block; background:#f8d7da; color:#842029;
                         border-radius:4px; padding:1px 6px; font-size:.72rem; margin-right:4px; }
+    .community-badge-bar { display:flex; align-items:center; gap:6px; margin-bottom:6px; font-size:.8rem; color:#495057; }
+    .community-badge-label { white-space:nowrap; }
+    .community-filter-btn { font-size:.78rem !important; padding:2px 8px !important; border-radius:12px !important; }
     .isolate-entity-btn { background:none; border:none; padding:2px 5px; color:#adb5bd;
                           cursor:pointer; border-radius:4px; font-size:.8rem; flex-shrink:0;
                           line-height:1; }
@@ -518,10 +521,11 @@ async function clickEntity(uuid, name) {
   btn.disabled = true;
 
   try {
-    // Fetch direct edges by UUID (guaranteed to match graph) + FTS for nodes/docs
-    const [edgeResp, ftsResp] = await Promise.all([
+    // Fetch direct edges by UUID (guaranteed to match graph) + FTS for nodes/docs + community
+    const [edgeResp, ftsResp, commResp] = await Promise.all([
       fetch(`/entities/${encodeURIComponent(uuid)}/edges`).then(r => r.json()),
       fetch(`/search?q=${encodeURIComponent(name)}&limit=40`).then(r => r.json()),
+      fetch(`/entities/${encodeURIComponent(uuid)}/community`).then(r => r.json()),
     ]);
 
     // Use UUID-fetched edges (exact); nodes + episodes from FTS
@@ -543,12 +547,89 @@ async function clickEntity(uuid, name) {
     _cachedResults = merged;
     _cachedQuery   = name;
     renderResults(merged, name, true);
+
+    // Inject community badge below the result count line
+    if (commResp && commResp.id) {
+      const list = document.getElementById('resultsList');
+      const badge = document.createElement('div');
+      badge.className = 'community-badge-bar';
+      badge.innerHTML =
+        `<span class="community-badge-label">📍 Community:</span> ` +
+        `<button class="btn btn-sm btn-outline-secondary community-filter-btn"
+                 onclick="filterByCommunity(${commResp.id}, ${JSON.stringify(commResp.name)})"
+                 title="Show only this community's nodes in the graph">` +
+        `${escHtml(commResp.name)} <span class="text-muted">(${commResp.member_count} members)</span>` +
+        `</button>`;
+      // Insert after the first <p> (the "N result(s) for…" line)
+      const firstP = list.querySelector('p');
+      if (firstP) firstP.after(badge);
+      else list.prepend(badge);
+    }
   } catch(e) {
     showMsg(`Error: ${e.message}`);
   } finally {
     spinner.style.display = 'none';
     btn.disabled = false;
   }
+}
+
+// ── Community graph filter ────────────────────────────────────────────────────
+let _communityFilterActive = false;
+
+async function filterByCommunity(communityId, communityName) {
+  if (!_visNodes || !_network) return;
+
+  // If same community already active → clear filter
+  if (_communityFilterActive === communityId) {
+    clearCommunityFilter();
+    return;
+  }
+
+  try {
+    const r = await fetch('/communities/' + communityId);
+    const d = await r.json();
+    const memberUuids = new Set((d.members || []).map(m => m.uuid));
+
+    // Grey out non-member nodes; highlight member nodes
+    const updates = [];
+    _visNodes.forEach(n => {
+      if (memberUuids.has(n.id)) {
+        updates.push({ id: n.id, color: undefined, opacity: 1.0, font: { color: '#212529' } });
+      } else {
+        updates.push({ id: n.id, color: { background: '#e9ecef', border: '#ced4da' }, opacity: 0.25, font: { color: '#adb5bd' } });
+      }
+    });
+    _visNodes.update(updates);
+    _communityFilterActive = communityId;
+
+    // Show clear-filter bar at top of right panel
+    let bar = document.getElementById('communityFilterBar');
+    if (!bar) {
+      bar = document.createElement('div');
+      bar.id = 'communityFilterBar';
+      bar.style.cssText = 'background:#fff3cd;border-bottom:1px solid #ffc107;padding:6px 10px;font-size:.8rem;display:flex;align-items:center;gap:8px;';
+      document.getElementById('rightPanel').prepend(bar);
+    }
+    bar.innerHTML =
+      `<span>🔍 Filtered to <strong>${escHtml(communityName)}</strong></span>` +
+      `<button class="btn btn-xs btn-outline-secondary" style="padding:1px 7px;font-size:.75rem" onclick="clearCommunityFilter()">✕ Clear</button>`;
+    bar.style.display = 'flex';
+  } catch(e) {
+    alert('Filter failed: ' + e.message);
+  }
+}
+
+function clearCommunityFilter() {
+  if (!_visNodes) return;
+  // Restore all nodes to default appearance
+  const updates = [];
+  _visNodes.forEach(n => {
+    updates.push({ id: n.id, color: undefined, opacity: 1.0, font: { color: '#212529' } });
+  });
+  _visNodes.update(updates);
+  _communityFilterActive = false;
+  const bar = document.getElementById('communityFilterBar');
+  if (bar) bar.style.display = 'none';
 }
 
 // ── Search across all scopes (used on node click) ────────────────────────────
