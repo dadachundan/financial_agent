@@ -75,6 +75,9 @@
     .community-badge-bar { display:flex; align-items:center; gap:6px; margin-bottom:6px; font-size:.8rem; color:#495057; }
     .community-badge-label { white-space:nowrap; }
     .community-filter-btn { font-size:.78rem !important; padding:2px 8px !important; border-radius:12px !important; }
+    .edit-entity-btn { background:none; border:none; padding:2px 5px; color:#adb5bd;
+                       cursor:pointer; border-radius:4px; font-size:.8rem; flex-shrink:0; line-height:1; }
+    .edit-entity-btn:hover { background:#e8f0fe; color:#1a73e8; }
     .isolate-entity-btn { background:none; border:none; padding:2px 5px; color:#adb5bd;
                           cursor:pointer; border-radius:4px; font-size:.8rem; flex-shrink:0;
                           line-height:1; }
@@ -697,7 +700,7 @@ function editEntity(uuid, currentName, currentSummary, card) {
       <input id="editName" class="form-control form-control-sm" value="${escHtml(currentName)}">
     </div>
     <div>
-      <label class="form-label small mb-1">Summary</label>
+      <label class="form-label small mb-1">Description</label>
       <textarea id="editSummary" class="form-control form-control-sm" rows="4">${escHtml(currentSummary)}</textarea>
     </div>`;
   const saveBtn = document.getElementById('editSaveBtn');
@@ -859,6 +862,8 @@ async function loadEntities(reset) {
           <div class="ename">${escHtml(n.name)}</div>
           <div class="esumm">${escHtml((n.summary||'').slice(0,80))}</div>
         </div>
+        <button class="edit-entity-btn" title="Edit name / description"
+                onclick="event.stopPropagation(); editEntity('${escHtml(n.uuid)}','${escHtml(n.name)}','${escHtml(n.summary||'')}',null)">✏</button>
         <button class="assign-community-btn" title="Assign to community (BFS flood-fill)"
                 onclick="event.stopPropagation(); openAssignCommunity('${escHtml(n.uuid)}','${escHtml(n.name)}')">⬡</button>
         <button class="isolate-entity-btn" title="Isolate entity (hide permanently)"
