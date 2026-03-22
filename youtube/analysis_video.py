@@ -1,12 +1,14 @@
 """
 YouTube Video Analysis - Transcript Chunker + MiniMax Summarizer
 Fetches transcript, splits into 3-minute chunks, summarizes each chunk via MiniMax,
-and stores results in a local SQLite database.
+then runs a second synthesis pass over all chunk summaries to produce a structured
+key_points_<video_id>.md document (overview, themes, insights, quotes, takeaways).
 
 Usage:
     python analysis_video.py                        # analyze default video
     python analysis_video.py <video_id>             # analyze specific video
     python analysis_video.py <video_id> --no-api    # fetch transcript only, skip MiniMax
+    python analysis_video.py <video_id> --synthesize-only  # re-run synthesis on existing chunks
 """
 
 import sys
@@ -35,6 +37,31 @@ CHUNK_SUMMARY_SYSTEM = (
     "Be specific about the topics, ideas, and key points covered.\n"
     "Keep your summary to 3-5 sentences."
 )
+
+SYNTHESIS_SYSTEM = """\
+You are an expert content analyst. You will receive a series of time-stamped chunk \
+summaries from a YouTube video. Your job is to synthesise them into a single, \
+well-structured Markdown document with these exact sections:
+
+## Summary
+One concise paragraph (4-6 sentences) covering the whole video.
+
+## Key Themes
+Bullet list of 3-6 high-level themes that run through the video.
+
+## Key Insights
+Numbered list of the 6-10 most important specific insights, ideas, or facts.
+Each item should be self-contained and actionable/memorable.
+
+## Notable Quotes
+2-5 direct quotes (verbatim or near-verbatim from the transcript chunks).
+Format: > "quote text" — [MM:SS]
+
+## Takeaways
+Bullet list of 3-5 practical takeaways for the viewer.
+
+Be concise and specific. Do not pad or repeat yourself.\
+"""
 
 
 # ── Database ──────────────────────────────────────────────────────────────────
@@ -179,6 +206,59 @@ def summarize_chunk(chunk: dict, video_url: str) -> str:
     return text
 
 
+# ── Synthesis ─────────────────────────────────────────────────────────────────
+
+def load_chunk_summaries(conn: sqlite3.Connection, video_id: str) -> list[dict]:
+    """Return chunks that have a summary, ordered by chunk_index."""
+    rows = conn.execute("""
+        SELECT chunk_index, start_label, end_label, summary
+        FROM video_chunks
+        WHERE video_id = ? AND summary IS NOT NULL AND summary != ''
+        ORDER BY chunk_index ASC
+    """, (video_id,)).fetchall()
+    return [dict(r) for r in rows]
+
+
+def synthesize_video(video_id: str, conn: sqlite3.Connection) -> Path | None:
+    """
+    Run a second MiniMax pass over all chunk summaries to produce a structured
+    key_points_<video_id>.md file. Returns the output path, or None if skipped.
+    """
+    chunks = load_chunk_summaries(conn, video_id)
+    if not chunks:
+        print("\nSynthesis skipped: no chunk summaries available.")
+        return None
+
+    print(f"\nSynthesis pass — combining {len(chunks)} chunk summaries via MiniMax...")
+
+    # Build a compact digest of all chunk summaries
+    digest_lines = []
+    for c in chunks:
+        digest_lines.append(f"[{c['start_label']} – {c['end_label']}]\n{c['summary']}")
+    digest = "\n\n".join(digest_lines)
+
+    video_url = f"https://www.youtube.com/watch?v={video_id}"
+    user_msg = f"Video: {video_url}\n\nChunk summaries:\n\n{digest}"
+
+    text, elapsed, _ = call_minimax(
+        messages=[
+            {"role": "system", "name": "MiniMax AI", "content": SYNTHESIS_SYSTEM},
+            {"role": "user",   "name": "User",       "content": user_msg},
+        ],
+        temperature=0.3,
+        max_completion_tokens=1500,
+    )
+    print(f"  responded in {elapsed:.1f}s")
+
+    out_path = SCRIPT_DIR / f"key_points_{video_id}.md"
+    out_path.write_text(
+        f"# YouTube Video Analysis\n\nVideo: {video_url}\n\n{text}\n",
+        encoding="utf-8",
+    )
+    print(f"  Saved → {out_path}")
+    return out_path
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def analyze_video(video_id: str, use_api: bool = True) -> None:
@@ -231,7 +311,11 @@ def analyze_video(video_id: str, use_api: bool = True) -> None:
             summary      = summary,
         )
 
+    # 5. Synthesis pass — roll up all chunk summaries into a key_points doc
+    if use_api and MINIMAX_API_KEY:
+        synthesize_video(video_id, conn)
     conn.close()
+
     total = len(chunks)
     print(f"\nDone. {total} chunk(s) stored in {DB_PATH}")
     print(f"Run the viewer:  python {SCRIPT_DIR}/viewer.py")
@@ -243,6 +327,13 @@ if __name__ == "__main__":
                         help=f"YouTube video ID (default: {DEFAULT_VIDEO_ID})")
     parser.add_argument("--no-api", action="store_true",
                         help="Fetch transcript only, skip MiniMax summarization")
+    parser.add_argument("--synthesize-only", action="store_true",
+                        help="Skip transcript fetch; re-run synthesis on existing chunk summaries")
     args = parser.parse_args()
 
-    analyze_video(args.video_id, use_api=not args.no_api)
+    if args.synthesize_only:
+        conn = init_db()
+        synthesize_video(args.video_id, conn)
+        conn.close()
+    else:
+        analyze_video(args.video_id, use_api=not args.no_api)
