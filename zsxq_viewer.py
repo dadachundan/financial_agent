@@ -991,7 +991,7 @@ def download_new():
         try:
             proc = subprocess.Popen(
                 [sys.executable, "-u", str(downloader), "--count", str(count),
-                 "--db", str(DB_PATH)],
+                 "--db", str(DB_PATH), "--no-classify"],
                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                 text=True, bufsize=1,
                 env={**os.environ, "PYTHONUNBUFFERED": "1"},
