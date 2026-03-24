@@ -147,6 +147,7 @@ __URLPATCH__
       {%- set tp   = ('&ticker=' ~ current_ticker) if current_ticker else '' %}
       {%- set tagp = ('&tag='    ~ current_tag)    if current_tag    else '' %}
       {%- set dp   = ('&date_from=' ~ current_date_from if current_date_from else '') ~ ('&date_to=' ~ current_date_to if current_date_to else '') %}
+      {%- set rp   = ('&min_rating=' ~ current_min_rating) if current_min_rating else '' %}
     <a href="?filter=all{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-dark' if current_filter=='all' else 'btn-outline-dark' }}">All ({{ stats.total }})</a>
       <a href="?filter=downloaded{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
@@ -217,6 +218,18 @@ __URLPATCH__
       <a href="#" onclick="clearDateFilter();return false"
          class="btn btn-sm btn-link text-muted p-0">✕ clear</a>
       {% endif %}
+    </div>
+
+    <!-- Rating filter row -->
+    <div class="d-flex filter-row">
+      <span class="filter-label">Rating:</span>
+      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
+         class="btn btn-sm {{ 'btn-dark' if not current_min_rating else 'btn-outline-dark' }}">Any</a>
+      {% for stars in [1,2,3,4,5] %}
+      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}&min_rating={{ stars }}"
+         class="btn btn-sm {{ 'btn-warning text-dark' if current_min_rating == stars|string else 'btn-outline-warning' }}">
+        {{ '★' * stars }}+</a>
+      {% endfor %}
     </div>
   </div>
 
@@ -702,7 +715,8 @@ def _get_all_tickers(conn: sqlite3.Connection) -> list[str]:
 
 
 def _build_where(f: str, ticker: str, tag: str,
-                 date_from: str, date_to: str) -> tuple[str, list]:
+                 date_from: str, date_to: str,
+                 min_rating: int = 0) -> tuple[str, list]:
     """Build WHERE clause + params from filter args (shared by index and print-view)."""
     conditions: list[str] = []
     params: list = []
@@ -730,6 +744,9 @@ def _build_where(f: str, ticker: str, tag: str,
     if date_to:
         conditions.append("substr(create_time, 1, 10) <= ?")
         params.append(date_to)
+    if min_rating:
+        conditions.append("user_rating >= ?")
+        params.append(min_rating)
     where = ("WHERE " + " AND ".join(conditions)) if conditions else ""
     return where, params
 
@@ -834,10 +851,14 @@ def print_view():
     sort      = request.args.get("sort", "desc").lower()
     date_from = request.args.get("date_from", "").strip()
     date_to   = request.args.get("date_to",   "").strip()
+    try:
+        min_rating = max(0, min(5, int(request.args.get("min_rating", 0))))
+    except ValueError:
+        min_rating = 0
     if sort not in ("asc", "desc"):
         sort = "desc"
 
-    where, params = _build_where(f, ticker, tag, date_from, date_to)
+    where, params = _build_where(f, ticker, tag, date_from, date_to, min_rating)
     # Only rows that have a comment
     comment_cond = "comment IS NOT NULL AND comment != ''"
     if where:
@@ -888,12 +909,16 @@ def _page_range(cur: int, tot: int) -> list:
 
 @zsxq_bp.route("/")
 def index():
-    f         = request.args.get("filter", "all")
-    ticker    = request.args.get("ticker", "").strip().upper()
-    tag       = request.args.get("tag",    "").strip()
-    sort      = request.args.get("sort", "desc").lower()
-    date_from = request.args.get("date_from", "").strip()
-    date_to   = request.args.get("date_to",   "").strip()
+    f          = request.args.get("filter", "all")
+    ticker     = request.args.get("ticker", "").strip().upper()
+    tag        = request.args.get("tag",    "").strip()
+    sort       = request.args.get("sort", "desc").lower()
+    date_from  = request.args.get("date_from", "").strip()
+    date_to    = request.args.get("date_to",   "").strip()
+    try:
+        min_rating = max(0, min(5, int(request.args.get("min_rating", 0))))
+    except ValueError:
+        min_rating = 0
     try:
         page = max(1, int(request.args.get("page", 1)))
     except ValueError:
@@ -922,7 +947,7 @@ def index():
         "FROM pdf_files"
     ).fetchone()
 
-    where_clause, params = _build_where(f, ticker, tag, date_from, date_to)
+    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating)
     order = "ASC" if sort == "asc" else "DESC"
 
     total_rows  = conn.execute(
@@ -959,6 +984,7 @@ def index():
         current_sort=sort,
         current_date_from=date_from,
         current_date_to=date_to,
+        current_min_rating=str(min_rating) if min_rating else "",
         all_tickers=all_tickers,
         all_tags=all_tags,
         db_path=DB_PATH,
