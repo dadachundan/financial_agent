@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-zsxq_downloader.py — Download PDFs from a 知识星球 group and classify them.
+zsxq_downloader.py — Download PDFs from a 知识星球 group (classify with --classify).
 
 Responsibilities
 ----------------
@@ -10,7 +10,7 @@ Responsibilities
      SQLite database — local_path IS NOT NULL means already downloaded).
   4. Write download metadata into zsxq.db.
   5. Classify each PDF via MiniMax immediately after download (unless
-     --no-classify is passed).  Already-classified rows are skipped.
+     --classify is passed).  Already-classified rows are skipped.
 
 Run zsxq_index.py for bulk re-classification with a different prompt.
 
@@ -19,7 +19,8 @@ Usage
     python zsxq_downloader.py --count 10
     python zsxq_downloader.py --count 50 --out ~/Downloads/zsxq_reports
     python zsxq_downloader.py --group-id 51111812185184 --delay 1.5
-    python zsxq_downloader.py --no-classify          # download only, skip LLM step
+    python zsxq_downloader.py                        # download only (default)
+    python zsxq_downloader.py --classify             # download + MiniMax classification
     python zsxq_downloader.py --from-date 2025-01-01 --to-date 2025-03-31
     python zsxq_downloader.py --from-date 2025-06-01              # since a date, default --count 10
     python zsxq_downloader.py --from-date 2025-06-01 --count 0   # since a date, no limit
@@ -44,8 +45,8 @@ DEFAULT_GROUP_ID = "51111812185184"
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Download PDFs from a zsxq group, record them in zsxq.db, "
-                    "and classify each one via MiniMax."
+        description="Download PDFs from a zsxq group and record them in zsxq.db. "
+                    "Pass --classify to also run MiniMax classification."
     )
     parser.add_argument("--group-id",       default=DEFAULT_GROUP_ID)
     parser.add_argument("--count",          type=int,   default=10,
@@ -63,13 +64,14 @@ def main() -> None:
                         help="Seconds between downloads")
     parser.add_argument("--classify-delay", type=float, default=1.0,
                         help="Seconds between MiniMax API calls (default: 1.0)")
-    parser.add_argument("--no-classify",    action="store_true",
-                        help="Skip MiniMax classification after download")
+    parser.add_argument("--classify",       action="store_true",
+                        help="Run MiniMax classification after download (off by default)")
     args = parser.parse_args()
+    args.no_classify = not args.classify
 
     # ── Check API key early if we'll need it ──────────────────────────────
     api_key = None
-    if not args.no_classify:
+    if args.classify:
         try:
             from minimax import MINIMAX_API_KEY  # type: ignore
             api_key = MINIMAX_API_KEY
@@ -77,7 +79,7 @@ def main() -> None:
             pass
         if not api_key:
             print("WARNING: MINIMAX_API_KEY not found in config.py — "
-                  "classification will be skipped (pass --no-classify to suppress this warning).")
+                  "classification will be skipped.")
             args.no_classify = True
 
     chrome_profile = Path(args.chrome_profile).expanduser()
