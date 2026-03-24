@@ -491,6 +491,18 @@ def _run_download(ticker: str, forms: list[str], last: int = 0, _suppress_done: 
             summary_parts.append(f"{total_regular} {', '.join(base_forms)} filing(s)")
         if include_8k:
             summary_parts.append(f"{total_8k} 8-K filing(s) to scan for EX-99 exhibits")
+
+        # FPI hint: if nothing matched but EDGAR has 20-F/6-K, suggest those checkboxes
+        if not summary_parts:
+            fpi_forms_present = {f["form"] for f in all_filings if f["form"] in ("20-F", "20-F/A", "6-K", "6-K/A")}
+            if fpi_forms_present and not ({"20-F", "6-K"} & set(forms)):
+                yield _sse(
+                    f"ℹ️  {company_name} is a Foreign Private Issuer — "
+                    f"it files {', '.join(sorted(fpi_forms_present))} instead of 10-K/10-Q. "
+                    f"Check the 20-F / 6-K boxes and try again.",
+                    error=True,
+                )
+
         yield _sse(
             "📂  " + ("  •  ".join(summary_parts) if summary_parts else "No filings found"),
             total=grand_total,
