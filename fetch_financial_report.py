@@ -558,6 +558,32 @@ def _run_download(ticker: str, forms: list[str], last: int = 0, _suppress_done: 
                     f"       ✅  {filename}  ({size // 1024:,} KB)",
                     count=counter, total=grand_total,
                 )
+
+                # For 6-K: also download exhibit files so relative links in the HTM work
+                if form.startswith("6-K"):
+                    clean_acc = acc.replace("-", "")
+                    exhibits = _get_8k_exhibits(cik, acc)
+                    for ex in exhibits:
+                        ex_fname = ex["filename"]
+                        ex_dest  = ticker_dir / ex_fname
+                        if ex_dest.exists():
+                            continue
+                        ex_url = (
+                            f"https://www.sec.gov/Archives/edgar/data"
+                            f"/{int(cik)}/{clean_acc}/{ex_fname}"
+                        )
+                        try:
+                            r2 = _sec_get(ex_url, stream=True)
+                            with open(ex_dest, "wb") as fh:
+                                for chunk in r2.iter_content(65536):
+                                    fh.write(chunk)
+                            yield _sse(
+                                f"       📎  {ex_fname}  ({ex['type']})",
+                                count=counter, total=grand_total,
+                            )
+                        except Exception:
+                            pass  # best-effort; don't fail the parent filing
+
             except Exception as exc:
                 yield _sse(
                     f"       ❌  {period} — {exc}",
