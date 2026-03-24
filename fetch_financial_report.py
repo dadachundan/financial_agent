@@ -775,22 +775,22 @@ __URLPATCH__
                    style="color:#155724">10-Q (quarterly)</label>
           </div>
           <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="chk8K">
+            <input class="form-check-input" type="checkbox" id="chk8K" checked>
             <label class="form-check-label fw-bold" for="chk8K"
                    style="color:#6610f2">8-K (EX-99 exhibits)</label>
           </div>
           <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="chk20F">
+            <input class="form-check-input" type="checkbox" id="chk20F" checked>
             <label class="form-check-label fw-bold" for="chk20F"
                    style="color:#0c5460">20-F (FPI annual)</label>
           </div>
           <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="chk6K">
+            <input class="form-check-input" type="checkbox" id="chk6K" checked>
             <label class="form-check-label fw-bold" for="chk6K"
                    style="color:#8a3a00">6-K (FPI reports)</label>
           </div>
           <div class="form-check mb-0">
-            <input class="form-check-input" type="checkbox" id="chkGNW">
+            <input class="form-check-input" type="checkbox" id="chkGNW" checked>
             <label class="form-check-label fw-bold" for="chkGNW"
                    style="color:#856404">GNW (Globe Newswire)</label>
           </div>
