@@ -148,6 +148,7 @@ __URLPATCH__
       {%- set tagp = ('&tag='    ~ current_tag)    if current_tag    else '' %}
       {%- set dp   = ('&date_from=' ~ current_date_from if current_date_from else '') ~ ('&date_to=' ~ current_date_to if current_date_to else '') %}
       {%- set rp   = ('&min_rating=' ~ current_min_rating) if current_min_rating else '' %}
+      {%- set qp   = ('&q=' ~ current_q) if current_q else '' %}
     <a href="?filter=all{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-dark' if current_filter=='all' else 'btn-outline-dark' }}">All ({{ stats.total }})</a>
       <a href="?filter=downloaded{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
@@ -184,8 +185,13 @@ __URLPATCH__
         {% endfor %}
       </select>
       <input id="searchBox" type="text" class="form-control form-control-sm ms-2"
-             placeholder="Search name / title / ticker / tag…"
-             style="max-width:240px" oninput="liveSearch(this.value)">
+             placeholder="Search name / title / ticker / tag… (Enter)"
+             style="max-width:280px" value="{{ current_q }}"
+             oninput="liveSearch(this.value)"
+             onkeydown="if(event.key==='Enter'){applySearch(this.value)}">
+      {% if current_q %}
+      <a href="#" onclick="applySearch('');return false" class="btn btn-sm btn-link text-muted p-0 ms-1">✕</a>
+      {% endif %}
       <span id="matchCount" class="text-muted small align-self-center ms-1"></span>
     </div>
 
@@ -551,6 +557,13 @@ __MCW_FOOTER__
     window.location.href = '?' + params.toString();
   }
 
+  function applySearch(q) {
+    const params = new URLSearchParams(window.location.search);
+    params.delete('page');
+    if (q.trim()) { params.set('q', q.trim()); } else { params.delete('q'); }
+    window.location.href = '?' + params.toString();
+  }
+
   function liveSearch(q) {
     q = q.toLowerCase().trim();
     let visible = 0;
@@ -716,7 +729,7 @@ def _get_all_tickers(conn: sqlite3.Connection) -> list[str]:
 
 def _build_where(f: str, ticker: str, tag: str,
                  date_from: str, date_to: str,
-                 min_rating: int = 0) -> tuple[str, list]:
+                 min_rating: int = 0, q: str = "") -> tuple[str, list]:
     """Build WHERE clause + params from filter args (shared by index and print-view)."""
     conditions: list[str] = []
     params: list = []
@@ -747,6 +760,12 @@ def _build_where(f: str, ticker: str, tag: str,
     if min_rating:
         conditions.append("user_rating >= ?")
         params.append(min_rating)
+    if q:
+        like = f"%{q}%"
+        conditions.append(
+            "(name LIKE ? OR topic_title LIKE ? OR tickers LIKE ? OR tags LIKE ? OR comment LIKE ?)"
+        )
+        params.extend([like, like, like, like, like])
     where = ("WHERE " + " AND ".join(conditions)) if conditions else ""
     return where, params
 
@@ -855,10 +874,11 @@ def print_view():
         min_rating = max(0, min(5, int(request.args.get("min_rating", 0))))
     except ValueError:
         min_rating = 0
+    q = request.args.get("q", "").strip()
     if sort not in ("asc", "desc"):
         sort = "desc"
 
-    where, params = _build_where(f, ticker, tag, date_from, date_to, min_rating)
+    where, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q)
     # Only rows that have a comment
     comment_cond = "comment IS NOT NULL AND comment != ''"
     if where:
@@ -919,6 +939,7 @@ def index():
         min_rating = max(0, min(5, int(request.args.get("min_rating", 0))))
     except ValueError:
         min_rating = 0
+    q = request.args.get("q", "").strip()
     try:
         page = max(1, int(request.args.get("page", 1)))
     except ValueError:
@@ -947,7 +968,7 @@ def index():
         "FROM pdf_files"
     ).fetchone()
 
-    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating)
+    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q)
     order = "ASC" if sort == "asc" else "DESC"
 
     total_rows  = conn.execute(
@@ -985,6 +1006,7 @@ def index():
         current_date_from=date_from,
         current_date_to=date_to,
         current_min_rating=str(min_rating) if min_rating else "",
+        current_q=q,
         all_tickers=all_tickers,
         all_tags=all_tags,
         db_path=DB_PATH,
