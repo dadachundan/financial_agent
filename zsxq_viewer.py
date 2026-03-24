@@ -981,7 +981,7 @@ def download_new():
     except ValueError:
         count = 20
 
-    downloader = SCRIPT_DIR / "zsxq_downloader.py"
+    downloader = SCRIPT_DIR / "download" / "zsxq_downloader.py"
 
     def generate():
         def _sse(msg: str, *, done: bool = False, error: bool = False) -> str:
