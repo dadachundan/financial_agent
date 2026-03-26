@@ -43,6 +43,7 @@ See `md_comment_widget.py` for the shared blueprint (`/upload-image`, `/uploads/
 
 - **Chinese A-share / HK reports** → use `fetch_cninfo_report.py`
   - Ticker format: `SZSE:002050`, `SSE:688802`, `HKEX:2513`
+  - **Always run from the main project dir** (`cd /Users/x/projects/financial_agent`), otherwise files land in the worktree
   - Call directly: `python3 -c "import fetch_cninfo_report as cr; cr.init_db(); [print(m) for m in cr._run_download('SZSE:002050', cr.ALL_CATEGORIES)]"`
   - Files saved to `cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/`
   - DB: `db/cninfo_reports.db`
