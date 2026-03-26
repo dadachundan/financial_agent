@@ -39,6 +39,19 @@ When the user asks to make a field in a table editable, always use the `md_comme
 
 See `md_comment_widget.py` for the shared blueprint (`/upload-image`, `/uploads/<path>`) and reference the entity-description implementation in `templates/index.html` (search `viewEntityDesc`) as a concrete example.
 
+# Fetching Financial Reports
+
+- **Chinese A-share / HK reports** → use `fetch_cninfo_report.py`
+  - Ticker format: `SZSE:002050`, `SSE:688802`, `HKEX:2513`
+  - Call directly: `python3 -c "import fetch_cninfo_report as cr; cr.init_db(); [print(m) for m in cr._run_download('SZSE:002050', cr.ALL_CATEGORIES)]"`
+  - Files saved to `cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/`
+  - DB: `db/cninfo_reports.db`
+
+- **US stock reports (10-K / 10-Q / 8-K)** → use `fetch_financial_report.py`
+  - Ticker format: `AAPL`, `NVDA`, etc. (no exchange prefix)
+  - Files saved to `financial_reports/<TICKER>/`
+  - DB: `db/financial_reports.db`
+
 # LLM API Usage
 
 - Use **MiniMax** for simple summarisation tasks and other straightforward LLM calls.
