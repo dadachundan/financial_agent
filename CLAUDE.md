@@ -39,6 +39,14 @@ When the user asks to make a field in a table editable, always use the `md_comme
 
 See `md_comment_widget.py` for the shared blueprint (`/upload-image`, `/uploads/<path>`) and reference the entity-description implementation in `templates/index.html` (search `viewEntityDesc`) as a concrete example.
 
+# Downloading Files
+
+When running any download script (reports, PDFs, data files), always `cd` to the main project directory first:
+```
+cd /Users/x/projects/financial_agent
+```
+This ensures all downloaded files land in the main project's directories (e.g. `cninfo_reports/`, `financial_reports/`) and not in the worktree.
+
 # Fetching Financial Reports
 
 - **Chinese A-share / HK reports** → use `fetch_cninfo_report.py`
