@@ -3,37 +3,44 @@
   "configurations": [
     {
       "name": "finagent",
-      "runtimeExecutable": "python",
+      "runtimeExecutable": "/opt/anaconda3/bin/python3",
       "runtimeArgs": ["/Users/x/projects/financial_agent/.claude/worktrees/nifty-bohr/main.py", "--port", "8002"],
       "port": 8002
     }
   ,
     {
       "name": "zsxq-viewer",
-      "runtimeExecutable": "python",
+      "runtimeExecutable": "/opt/anaconda3/bin/python3",
       "runtimeArgs": ["/Users/x/projects/financial_agent/zsxq_viewer.py", "--db", "/Users/x/projects/financial_agent/db/zsxq.db", "--port", "8080"],
       "port": 8080
     }
   ,
     {
       "name": "financial-reports",
-      "runtimeExecutable": "python",
+      "runtimeExecutable": "/opt/anaconda3/bin/python3",
       "runtimeArgs": ["/Users/x/projects/financial_agent/fetch_financial_report.py", "--port", "8081"],
       "port": 8081
     }
   ,
     {
       "name": "zep-graph",
-      "runtimeExecutable": "python",
+      "runtimeExecutable": "/opt/anaconda3/bin/python3",
       "runtimeArgs": ["/Users/x/projects/financial_agent/zep_app.py"],
       "port": 5001
     }
   ,
     {
       "name": "cninfo-reports",
-      "runtimeExecutable": "python",
+      "runtimeExecutable": "/opt/anaconda3/bin/python3",
       "runtimeArgs": ["/Users/x/projects/financial_agent/fetch_cninfo_report.py", "--port", "8082"],
       "port": 8082
+    }
+  ,
+    {
+      "name": "indicators",
+      "runtimeExecutable": "/opt/anaconda3/bin/python3",
+      "runtimeArgs": ["/Users/x/projects/financial_agent/.claude/worktrees/jolly-mccarthy/indicators/app.py", "--port", "8003"],
+      "port": 8003
     }
   ]
 }
