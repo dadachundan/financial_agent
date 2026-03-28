@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Market Indicators — FinAgent</title>
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    body { background: #f8f9fa; font-size: .875rem; }
+
+    /* ── Section headers ───────────────────────────── */
+    .section-header {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: .25rem .6rem;
+      border-radius: .25rem;
+      margin-bottom: .75rem;
+    }
+    .cat-Liquidity   { background: #dbeafe; color: #1d4ed8; }
+    .cat-Credit      { background: #fef3c7; color: #92400e; }
+    .cat-Volatility  { background: #fce7f3; color: #9d174d; }
+    .cat-Cross-Asset { background: #d1fae5; color: #065f46; }
+
+    /* ── Cards ─────────────────────────────────────── */
+    .indicator-card {
+      cursor: pointer;
+      transition: box-shadow .15s, transform .1s;
+      border: 1px solid rgba(0,0,0,.08);
+      border-left-width: 4px;
+    }
+    .indicator-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.12); transform: translateY(-1px); }
+
+    .border-signal-green  { border-left-color: #22c55e !important; }
+    .border-signal-yellow { border-left-color: #f59e0b !important; }
+    .border-signal-red    { border-left-color: #ef4444 !important; }
+    .border-signal-neutral{ border-left-color: #9ca3af !important; }
+
+    /* ── Signal dot ────────────────────────────────── */
+    .signal-dot {
+      width: 9px; height: 9px; border-radius: 50%;
+      display: inline-block; flex-shrink: 0;
+    }
+    .dot-green  { background: #22c55e; }
+    .dot-yellow { background: #f59e0b; }
+    .dot-red    { background: #ef4444; box-shadow: 0 0 6px #ef4444aa; }
+    .dot-neutral{ background: #9ca3af; }
+
+    /* ── Value display ─────────────────────────────── */
+    .ind-value { font-size: 1.5rem; font-weight: 700; line-height: 1.1; }
+    .ind-value.val-green  { color: #15803d; }
+    .ind-value.val-yellow { color: #b45309; }
+    .ind-value.val-red    { color: #dc2626; }
+    .ind-value.val-neutral{ color: #1f2937; }
+
+    /* ── Change badges ─────────────────────────────── */
+    .chg-up   { color: #16a34a; }
+    .chg-down { color: #dc2626; }
+    .chg-flat { color: #6b7280; }
+
+    /* ── Sparkline ─────────────────────────────────── */
+    .sparkline-wrap { position: relative; height: 56px; }
+
+    /* ── Loading overlay ───────────────────────────── */
+    #loadingOverlay {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(255,255,255,.75);
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ── Refresh indicator ─────────────────────────── */
+    .refreshing-badge {
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+    /* ── Modal chart ───────────────────────────────── */
+    #detailChartWrap { height: 300px; }
+
+    /* ── N/A cards ─────────────────────────────────── */
+    .ind-na { color: #9ca3af; font-style: italic; }
+
+    /* ── Timestamp ─────────────────────────────────── */
+    #lastUpdated { font-size: .78rem; color: #6b7280; }
+  </style>
+</head>
+<body>
+{{ nav | safe }}
+<script id="_urlPatch">
+(function(){
+  var b='{{ _base | default("") }}';
+  if(!b) return;
+  window._BASE=b;
+  var _f=window.fetch;
+  window.fetch=function(u,o){
+    if(typeof u==='string'&&u.charAt(0)==='/') u=b+u;
+    return _f.call(this,u,o);
+  };
+  var _E=window.EventSource;
+  window.EventSource=function(u,c){
+    if(u.charAt(0)==='/') u=b+u;
+    return new _E(u,c);
+  };
+})();
+</script>
+
+<div id="loadingOverlay">
+  <div class="text-center">
+    <div class="spinner-border text-primary mb-2" role="status"></div>
+    <div class="text-muted small">Loading market data…</div>
+  </div>
+</div>
+
+<!-- ── Header ────────────────────────────────────────────────────────────── -->
+<div class="container-fluid px-3 py-2">
+  <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+    <div>
+      <h5 class="mb-0 fw-bold">&#128200; Market Indicators</h5>
+      <div id="lastUpdated" class="mt-1">—</div>
+    </div>
+    <div class="d-flex gap-2 align-items-center">
+      <span id="refreshBadge" class="badge bg-warning text-dark refreshing-badge d-none">
+        Refreshing…
+      </span>
+      <button id="btnRefresh" class="btn btn-sm btn-outline-secondary" onclick="doRefresh()">
+        &#8635; Refresh
+      </button>
+    </div>
+  </div>
+
+  <!-- ── Indicator grid (populated by JS) ────────────────────────────────── -->
+  <div id="indicatorGrid"></div>
+</div>
+
+<!-- ── Detail modal ──────────────────────────────────────────────────────── -->
+<div class="modal fade" id="detailModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header py-2">
+        <h6 class="modal-title mb-0" id="detailTitle">—</h6>
+        <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body pb-2">
+        <p id="detailDesc" class="text-muted small mb-2"></p>
+        <div class="d-flex gap-3 mb-3 flex-wrap" id="detailStats"></div>
+        <div id="detailChartWrap"><canvas id="detailChart"></canvas></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/static/bootstrap.bundle.min.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  // ── State ──────────────────────────────────────────────────────────────────
+  let _catalogue = [];   // [{id, name, category, unit, description, thresholds}]
+  let _snapshot  = {};   // {id: {value, change_1d, change_1w, change_type, signal, history}}
+  let _detailChart = null;
+
+  // ── Boot ───────────────────────────────────────────────────────────────────
+  async function boot() {
+    try {
+      const [cfgRes, snapRes] = await Promise.all([
+        fetch('/api/config'),
+        fetch('/api/snapshot'),
+      ]);
+      const cfg  = await cfgRes.json();
+      const snap = await snapRes.json();
+
+      _catalogue = cfg.indicators;
+
+      if (snap.ok) {
+        _snapshot = snap.data;
+        updateLastUpdated(snap.fetched_at, snap.refreshing);
+      }
+
+      renderGrid();
+    } catch (e) {
+      console.error('Boot error', e);
+    } finally {
+      document.getElementById('loadingOverlay').style.display = 'none';
+    }
+  }
+
+  // ── Refresh ────────────────────────────────────────────────────────────────
+  async function doRefresh() {
+    document.getElementById('refreshBadge').classList.remove('d-none');
+    document.getElementById('btnRefresh').disabled = true;
+    try {
+      const res  = await fetch('/api/refresh', { method: 'POST' });
+      const body = await res.json();
+      if (body.ok) {
+        _snapshot = body.data;
+        updateLastUpdated(body.fetched_at, false);
+        renderGrid();
+      }
+    } catch (e) {
+      console.error('Refresh error', e);
+    } finally {
+      document.getElementById('refreshBadge').classList.add('d-none');
+      document.getElementById('btnRefresh').disabled = false;
+    }
+  }
+  window.doRefresh = doRefresh;
+
+  // ── Helpers ────────────────────────────────────────────────────────────────
+  function fmtVal(value, unit) {
+    if (value == null) return '—';
+    const n = Math.abs(value) >= 100 ? value.toFixed(1)
+            : Math.abs(value) >= 10  ? value.toFixed(2)
+            : value.toFixed(3);
+    if (unit === '$')   return '$' + n;
+    if (unit === '%')   return n + '%';
+    if (unit === 'pp')  return n + ' pp';
+    if (unit === '×')   return n + '×';
+    return n + (unit ? ' ' + unit : '');
+  }
+
+  function fmtChg(chg, changeType) {
+    if (chg == null) return '<span class="chg-flat">—</span>';
+    const sign = chg > 0 ? '+' : '';
+    const cls  = chg > 0.005 ? 'chg-up' : chg < -0.005 ? 'chg-down' : 'chg-flat';
+    const arrow = chg > 0.005 ? '▲' : chg < -0.005 ? '▼' : '●';
+    const num = changeType === 'abs'
+      ? (Math.abs(chg) < 0.01 ? chg.toFixed(4) : chg.toFixed(3))
+      : chg.toFixed(2) + '%';
+    return `<span class="${cls}">${arrow} ${sign}${num}</span>`;
+  }
+
+  function signalColour(sig) {
+    return { green: '#22c55e', yellow: '#f59e0b', red: '#ef4444', neutral: '#9ca3af' }[sig] || '#9ca3af';
+  }
+
+  function updateLastUpdated(ts, refreshing) {
+    const el = document.getElementById('lastUpdated');
+    if (!ts) { el.textContent = '—'; return; }
+    const d = new Date(ts * 1000);
+    el.textContent = 'Last updated: ' + d.toLocaleTimeString();
+    if (refreshing) {
+      document.getElementById('refreshBadge').classList.remove('d-none');
+    } else {
+      document.getElementById('refreshBadge').classList.add('d-none');
+    }
+  }
+
+  // ── Grid rendering ─────────────────────────────────────────────────────────
+  function renderGrid() {
+    const categories = [...new Set(_catalogue.map(i => i.category))];
+    const grid = document.getElementById('indicatorGrid');
+    grid.innerHTML = '';
+
+    categories.forEach(cat => {
+      const inds = _catalogue.filter(i => i.category === cat);
+
+      const section = document.createElement('div');
+      section.className = 'mb-4';
+      section.innerHTML = `<div class="section-header cat-${CSS.escape(cat)}">${cat}</div>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-xl-5 g-2" id="row-${CSS.escape(cat)}"></div>`;
+      grid.appendChild(section);
+
+      const row = section.querySelector(`#row-${CSS.escape(cat)}`);
+      inds.forEach(ind => row.appendChild(buildCard(ind)));
+    });
+
+    // Draw sparklines after DOM is ready
+    requestAnimationFrame(() => {
+      _catalogue.forEach(ind => drawSparkline(ind));
+    });
+  }
+
+  function buildCard(ind) {
+    const rec  = _snapshot[ind.id];
+    const sig  = rec ? rec.signal : 'neutral';
+    const val  = rec ? rec.value  : null;
+    const c1d  = rec ? rec.change_1d : null;
+    const c1w  = rec ? rec.change_1w : null;
+    const ct   = rec ? rec.change_type : 'pct';
+
+    const col = document.createElement('div');
+    col.className = 'col';
+    col.innerHTML = `
+      <div class="card indicator-card h-100 border-signal-${sig}"
+           id="card-${ind.id}" data-id="${ind.id}">
+        <div class="card-body p-2 pb-1">
+          <div class="d-flex justify-content-between align-items-start mb-1">
+            <span class="text-muted fw-semibold" style="font-size:.72rem;line-height:1.2">${ind.name}</span>
+            <span class="signal-dot dot-${sig} mt-1 ms-1"></span>
+          </div>
+          <div class="ind-value val-${sig}" id="val-${ind.id}">
+            ${val != null ? fmtVal(val, ind.unit) : '<span class="ind-na small">N/A</span>'}
+          </div>
+          <div class="d-flex gap-2 mt-1 flex-wrap" style="font-size:.7rem">
+            <span title="1-day change">${fmtChg(c1d, ct)} <span class="text-muted">1D</span></span>
+            <span title="1-week change">${fmtChg(c1w, ct)} <span class="text-muted">1W</span></span>
+          </div>
+          <div class="sparkline-wrap mt-1">
+            <canvas id="spark-${ind.id}" height="56"></canvas>
+          </div>
+        </div>
+      </div>`;
+    col.querySelector('.indicator-card').addEventListener('click', () => openDetail(ind));
+    return col;
+  }
+
+  // ── Sparklines ─────────────────────────────────────────────────────────────
+  const _sparkCharts = {};
+
+  function drawSparkline(ind) {
+    const rec = _snapshot[ind.id];
+    const canvas = document.getElementById('spark-' + ind.id);
+    if (!canvas) return;
+
+    if (_sparkCharts[ind.id]) {
+      _sparkCharts[ind.id].destroy();
+      delete _sparkCharts[ind.id];
+    }
+
+    if (!rec || !rec.history || rec.history.length < 2) return;
+
+    const hist  = rec.history.slice(-30);
+    const vals  = hist.map(h => h.value);
+    const dates = hist.map(h => h.date);
+    const colour = signalColour(rec.signal);
+
+    _sparkCharts[ind.id] = new Chart(canvas.getContext('2d'), {
+      type: 'line',
+      data: {
+        labels: dates,
+        datasets: [{
+          data: vals,
+          borderColor: colour,
+          borderWidth: 1.5,
+          pointRadius: 0,
+          fill: true,
+          backgroundColor: colour + '18',
+          tension: 0.3,
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: false,
+        plugins: { legend: { display: false }, tooltip: { enabled: false } },
+        scales: {
+          x: { display: false },
+          y: { display: false },
+        },
+      },
+    });
+  }
+
+  // ── Detail modal ────────────────────────────────────────────────────────────
+  function openDetail(ind) {
+    const rec = _snapshot[ind.id];
+
+    document.getElementById('detailTitle').textContent = ind.name;
+    document.getElementById('detailDesc').textContent  = ind.description;
+
+    const statsEl = document.getElementById('detailStats');
+    if (rec) {
+      const ct = rec.change_type;
+      statsEl.innerHTML = `
+        <div class="text-center"><div class="fw-bold fs-4 ind-value val-${rec.signal}">${fmtVal(rec.value, ind.unit)}</div><div class="text-muted" style="font-size:.7rem">Current</div></div>
+        <div class="text-center"><div class="fw-semibold">${fmtChg(rec.change_1d, ct)}</div><div class="text-muted" style="font-size:.7rem">1 Day</div></div>
+        <div class="text-center"><div class="fw-semibold">${fmtChg(rec.change_1w, ct)}</div><div class="text-muted" style="font-size:.7rem">1 Week</div></div>
+        ${ind.thresholds ? `<div class="text-center"><div class="fw-semibold"><span class="signal-dot dot-${rec.signal}"></span> ${rec.signal.charAt(0).toUpperCase()+rec.signal.slice(1)}</div><div class="text-muted" style="font-size:.7rem">Signal</div></div>` : ''}`;
+    } else {
+      statsEl.innerHTML = '<span class="text-muted small">No data available</span>';
+    }
+
+    // Full history from DB
+    fetch('/api/history/' + ind.id)
+      .then(r => r.json())
+      .then(hist => {
+        if (_detailChart) { _detailChart.destroy(); _detailChart = null; }
+        const canvas = document.getElementById('detailChart');
+        if (!hist.length) return;
+
+        const colour = rec ? signalColour(rec.signal) : '#6b7280';
+        _detailChart = new Chart(canvas.getContext('2d'), {
+          type: 'line',
+          data: {
+            labels: hist.map(h => h.date),
+            datasets: [{
+              label: ind.name,
+              data: hist.map(h => h.value),
+              borderColor: colour,
+              borderWidth: 2,
+              pointRadius: 0,
+              pointHoverRadius: 4,
+              fill: true,
+              backgroundColor: colour + '18',
+              tension: 0.3,
+            }],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                mode: 'index',
+                intersect: false,
+                callbacks: {
+                  label: ctx => fmtVal(ctx.raw, ind.unit),
+                },
+              },
+            },
+            scales: {
+              x: {
+                ticks: { maxTicksLimit: 8, font: { size: 10 } },
+                grid: { display: false },
+              },
+              y: {
+                ticks: {
+                  font: { size: 10 },
+                  callback: v => fmtVal(v, ind.unit),
+                },
+              },
+            },
+          },
+        });
+      });
+
+    const modal = new bootstrap.Modal(document.getElementById('detailModal'));
+    modal.show();
+  }
+
+  // ── Poll for refreshing state ───────────────────────────────────────────────
+  function pollIfRefreshing() {
+    setInterval(async () => {
+      const badge = document.getElementById('refreshBadge');
+      if (badge.classList.contains('d-none')) return;
+      try {
+        const res  = await fetch('/api/snapshot');
+        const body = await res.json();
+        if (body.ok && !body.refreshing) {
+          _snapshot = body.data;
+          updateLastUpdated(body.fetched_at, false);
+          renderGrid();
+        }
+      } catch (_) {}
+    }, 5000);
+  }
+
+  // ── Init ───────────────────────────────────────────────────────────────────
+  boot().then(pollIfRefreshing);
+})();
+</script>
+</body>
+</html>
