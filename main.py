@@ -33,6 +33,7 @@ import zsxq_viewer as _zsxq_viewer_mod
 zsxq_bp = _zsxq_viewer_mod.zsxq_bp
 from fetch_financial_report import sec_bp, init_db as _sec_init
 from fetch_cninfo_report    import cn_bp,  init_db as _cn_init
+from indicators.app         import indicators_bp, init_db as _ind_init
 
 # -- Build unified app ---------------------------------------------------------
 app = Flask(__name__,
@@ -44,10 +45,11 @@ app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024
 app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
 
 # Sub-app blueprints
-app.register_blueprint(zep_bp,  url_prefix="/zep")
-app.register_blueprint(zsxq_bp, url_prefix="/zsxq")
-app.register_blueprint(sec_bp,  url_prefix="/sec")
-app.register_blueprint(cn_bp,   url_prefix="/cn")
+app.register_blueprint(zep_bp,        url_prefix="/zep")
+app.register_blueprint(zsxq_bp,       url_prefix="/zsxq")
+app.register_blueprint(sec_bp,        url_prefix="/sec")
+app.register_blueprint(cn_bp,         url_prefix="/cn")
+app.register_blueprint(indicators_bp, url_prefix="/indicators")
 
 
 @app.route("/")
@@ -62,10 +64,11 @@ def too_large(_e):
 
 # Map blueprint name -> URL prefix for context injection
 _BP_PREFIXES = {
-    "zep":  "/zep",
-    "zsxq": "/zsxq",
-    "sec":  "/sec",
-    "cn":   "/cn",
+    "zep":        "/zep",
+    "zsxq":       "/zsxq",
+    "sec":        "/sec",
+    "cn":         "/cn",
+    "indicators": "/indicators",
 }
 
 
@@ -125,6 +128,7 @@ if __name__ == "__main__":
 
     _sec_init()
     _cn_init()
+    _ind_init()
 
     parser = argparse.ArgumentParser(description="Unified FinAgent web app")
     parser.add_argument("--port", type=int, default=5001)
