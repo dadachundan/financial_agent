@@ -2,11 +2,12 @@
 
 ## Entry Point
 
-**`main.py`** — Unified Flask app on port 5001 (default). Registers 4 blueprints:
+**`main.py`** — Unified Flask app on port 5001 (default). Registers 5 blueprints:
 - `/zep/*` — Knowledge graph UI
 - `/zsxq/*` — ZSXQ PDF viewer
 - `/sec/*` — US SEC filings
 - `/cn/*` — A-share & HK reports
+- `/indicators/*` — Market indicators dashboard
 
 ---
 
@@ -66,6 +67,24 @@ Download A-share (SSE/SZSE) and HK (HKEX) reports via CNINFO.
 - Key routes: `GET /cn/` (UI), `POST /cn/download` (SSE), `GET /cn/reports` (JSON), `GET /cn/file/<id>`
 - **DB**: `db/cninfo_reports.db`
 - **Storage**: `cninfo_reports/<EXCHANGE>/<CODE>/`
+
+### `indicators/` — Market Indicators Dashboard
+Real-time cross-asset market indicators: liquidity, credit, volatility, and cross-asset signals.
+- **Entry**: `indicators/app.py` exports `indicators_bp` (Blueprint) + `init_db()`
+- **Data**: `indicators/data_fetcher.py` — yfinance (all direct tickers + computed spreads/ratios); optional FRED API for HY/IG OAS (requires `FRED_API_KEY` in `config.py`)
+- **DB**: `indicators/db.py` → `db/indicators.db` (snapshots + history tables)
+- **Cache**: 15-minute TTL; refresh triggered in background on stale load, or on-demand via `POST /indicators/api/refresh`
+- **Indicators**: 3M T-bill, 10Y–3M spread, HY/IG OAS, HYG/LQD ETF, VIX, VVIX, VIX term slope (VIX9D/VIX3M), SPY, 10Y yield, DXY, Gold, WTI Crude
+
+| Method | Path | Description |
+|--------|------|-------------|
+| GET | `/indicators/` | Dashboard SPA |
+| GET | `/indicators/api/config` | Indicator catalogue (metadata) |
+| GET | `/indicators/api/snapshot` | Latest cached snapshot; triggers background refresh if stale |
+| POST | `/indicators/api/refresh` | Synchronous refresh, returns new data |
+| GET | `/indicators/api/history/<id>` | Full DB history for one indicator |
+
+---
 
 ### `zsxq_viewer.py` — ZSXQ PDF Viewer
 Browser for the 知识星球 research group PDF library.
@@ -127,6 +146,7 @@ Browser for the 知识星球 research group PDF library.
 |------|---------|
 | `db/graphiti_db` | KuzuDB graph: Entity, Edge, Episode, Community nodes |
 | `db/graph_mirror.db` | SQLite mirror: entities, edges, episodes, communities, community_members, zsxq_imported, entities_fts, edges_fts, pending_deletions |
+| `db/indicators.db` | Indicator snapshots (last 20) + daily history per indicator |
 | `db/financial_reports.db` | SEC report metadata: ticker, form_type, period, filed_date, local_path, accession_no, comment, graphiti_indexed_at |
 | `db/cninfo_reports.db` | A-share/HK report metadata: ticker, market, stock_code, period, form_type, local_path, comment |
 | `db/zsxq.db` | ZSXQ PDFs: file_id, name, topic, local_path, classification tags, tickers, rating, comment, graphiti_indexed_at |

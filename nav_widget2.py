@@ -8,6 +8,7 @@ NAV_HTML = """\
     <li class="nav-item"><a class="nav-link py-1" href="/zsxq">&#128218; ZSXQ</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/sec">&#128196; US Reports</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/cn">&#127464;&#127475; CN Reports</a></li>
+    <li class="nav-item"><a class="nav-link py-1" href="/indicators">&#128200; Indicators</a></li>
   </ul>
 </nav>
 <script>
