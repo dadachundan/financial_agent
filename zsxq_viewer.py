@@ -185,10 +185,10 @@ __URLPATCH__
         {% endfor %}
       </select>
       <input id="searchBox" type="text" class="form-control form-control-sm ms-2"
-             placeholder="Search name / title / ticker / tag… (Enter)"
+             placeholder="Search name / title / ticker / tag…"
              style="max-width:280px" value="{{ current_q }}"
-             oninput="liveSearch(this.value)"
-             onkeydown="if(event.key==='Enter'){applySearch(this.value)}">
+             oninput="debouncedSearch(this.value)"
+             onkeydown="if(event.key==='Enter'){clearTimeout(window._searchTimer);applySearch(this.value)}">
       {% if current_q %}
       <a href="#" onclick="applySearch('');return false" class="btn btn-sm btn-link text-muted p-0 ms-1">✕</a>
       {% endif %}
@@ -562,6 +562,12 @@ __MCW_FOOTER__
     params.delete('page');
     if (q.trim()) { params.set('q', q.trim()); } else { params.delete('q'); }
     window.location.href = '?' + params.toString();
+  }
+
+  function debouncedSearch(q) {
+    liveSearch(q);
+    clearTimeout(window._searchTimer);
+    window._searchTimer = setTimeout(() => applySearch(q), 400);
   }
 
   function liveSearch(q) {
