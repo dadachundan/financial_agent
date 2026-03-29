@@ -91,6 +91,7 @@ def _download_batch(
     categories: dict[str, str],
     logf,
     batch_label: str,
+    searchkeys: dict[str, str] | None = None,
 ) -> list[str]:
     """Download all tickers in a batch. Returns list of failed tickers."""
     failed  = []
@@ -104,7 +105,7 @@ def _download_batch(
 
         ticker_error = False
         try:
-            for event in cr._run_download(ticker, categories):
+            for event in cr._run_download(ticker, categories, searchkeys=searchkeys):
                 if not event.startswith("data: "):
                     continue
                 d    = json.loads(event[6:])
@@ -156,12 +157,14 @@ def main() -> None:
 
         # ── A-share batch ──────────────────────────────────────────────────
         a_failed = _download_batch(
-            A_SHARE_TICKERS, cr.ALL_CATEGORIES, logf, "A"
+            A_SHARE_TICKERS, cr.ALL_CATEGORIES, logf, "A",
+            searchkeys=cr.ALL_SEARCHKEYS,
         )
 
         # ── HK batch ──────────────────────────────────────────────────────
         hk_failed = _download_batch(
-            HK_TICKERS, cr.HK_CATEGORIES, logf, "HK"
+            HK_TICKERS, cr.HK_CATEGORIES, logf, "HK",
+            searchkeys=cr.HK_SEARCHKEYS,
         )
 
         # ── Summary ────────────────────────────────────────────────────────

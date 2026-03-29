@@ -69,20 +69,31 @@ EXCHANGE_MAP: dict[str, tuple[str, str, str]] = {
     "HKEX": ("hke",  "hke",  "hke"),
 }
 
-# Category codes for A-share (sse/szse) — same codes work for HK column too
+# Category codes for A-share (sse/szse)
 ALL_CATEGORIES: dict[str, str] = {
     "年报":  "category_ndbg_szsh",
     "半年报": "category_bndbg_szsh",
     "季报":  "category_jdbg_szsh",
 }
-
-# HK listed companies don't file quarterly reports
-HK_CATEGORIES: dict[str, str] = {
-    "年报":  "category_ndbg_szsh",
-    "半年报": "category_bndbg_szsh",
+# Server-side keyword filter for A-share — cuts pagination from 1000s → ~20 results
+ALL_SEARCHKEYS: dict[str, str] = {
+    "年报":  "年度报告",
+    "半年报": "半年度报告",
+    "季报":  "季度报告",
 }
 
-_DELAY = 0.6  # polite delay between CNINFO requests (seconds)
+# HK listed companies: use searchkey to filter instead of category codes (more accurate)
+HK_CATEGORIES: dict[str, str] = {
+    "年报":  "category_ndbg_hke",
+    "半年报": "category_bndbg_hke",
+}
+# Server-side keyword filter — dramatically reduces results for HK stocks
+HK_SEARCHKEYS: dict[str, str] = {
+    "年报":  "年度报告",
+    "半年报": "中期报告",
+}
+
+_DELAY = 0.2  # polite delay between CNINFO requests (seconds)
 
 MIN_FILED_YEAR = 2020  # skip filings filed before this year
 
@@ -116,6 +127,30 @@ _DB_PATH = DB_FILE
 _stock_cache: dict[str, dict] = {}  # market → {code: {"orgId": ..., "name": ...}}
 
 
+CNINFO_SEARCH_URL = "http://www.cninfo.com.cn/new/information/topSearch/query"
+
+
+def _lookup_sse_stock(code: str) -> dict | None:
+    """Look up a single SSE stock via CNINFO search API (fallback when bulk list is unavailable)."""
+    try:
+        r = requests.post(
+            CNINFO_SEARCH_URL,
+            data={"keyWord": code, "maxNum": 5},
+            headers=CNINFO_HEADERS,
+            timeout=15,
+        )
+        r.raise_for_status()
+        for item in r.json():
+            if str(item.get("code", "")).strip() == code:
+                return {
+                    "orgId": str(item.get("orgId", "")).strip(),
+                    "name":  str(item.get("zwjc") or item.get("fullname") or "").strip(),
+                }
+    except Exception:
+        pass
+    return None
+
+
 def _load_stock_list(market: str) -> dict[str, dict]:
     """Fetch and cache the stock list for a given market.
 
@@ -131,6 +166,10 @@ def _load_stock_list(market: str) -> dict[str, dict]:
                  "Referer":    CNINFO_HEADERS["Referer"]},
         timeout=30,
     )
+    if r.status_code == 404 and market == "sse":
+        # SSE bulk list URL removed — return empty dict; _resolve_stock will fall back to search API
+        _stock_cache[market] = {}
+        return _stock_cache[market]
     r.raise_for_status()
     data = r.json()
 
@@ -169,6 +208,11 @@ def _resolve_stock(code: str, market: str) -> tuple[str, str, str]:
     code_padded = code.zfill(5) if market == "hke" else code
     stocks      = _load_stock_list(market)
     info        = stocks.get(code_padded) or stocks.get(code)
+    if not info and market == "sse":
+        # SSE bulk list unavailable — fall back to per-stock search API
+        info = _lookup_sse_stock(code)
+        if info:
+            _stock_cache.setdefault(market, {})[code] = info
     if not info:
         raise ValueError(
             f"Stock '{code}' not found in CNINFO {market.upper()} list "
@@ -230,7 +274,8 @@ def _sse(msg: str, *, done: bool = False, error: bool = False,
 # ── CNINFO query helpers ───────────────────────────────────────────────────────
 
 def _query_page(column: str, plate: str, stock_param: str,
-                category: str, page: int, page_size: int = 30) -> dict:
+                category: str, page: int, page_size: int = 30,
+                searchkey: str = "") -> dict:
     """POST one page of announcements to CNINFO hisAnnouncement API."""
     time.sleep(_DELAY)
     payload = {
@@ -241,7 +286,7 @@ def _query_page(column: str, plate: str, stock_param: str,
         "stock":     stock_param,   # e.g. "300308,9900003850"
         "category":  category,
         "seDate":    "",
-        "searchkey": "",
+        "searchkey": searchkey,
         "secid":     "",
         "plate":     plate,
         "isHLtitle": "true",
@@ -255,11 +300,13 @@ def _query_page(column: str, plate: str, stock_param: str,
 
 
 def _fetch_all_announcements(column: str, plate: str,
-                              stock_param: str, category: str) -> list[dict]:
+                              stock_param: str, category: str,
+                              searchkey: str = "") -> list[dict]:
     """Paginate through all announcement results for a given stock/category."""
     items, page = [], 1
     while True:
-        data  = _query_page(column, plate, stock_param, category, page)
+        data  = _query_page(column, plate, stock_param, category, page,
+                            searchkey=searchkey)
         batch = data.get("announcements") or []
         items.extend(batch)
         if not data.get("hasMore") or not batch:
@@ -270,11 +317,13 @@ def _fetch_all_announcements(column: str, plate: str,
 
 # ── Download stream ────────────────────────────────────────────────────────────
 
-def _run_download(ticker: str, categories: dict[str, str]):
+def _run_download(ticker: str, categories: dict[str, str],
+                  searchkeys: dict[str, str] | None = None):
     """Generator: yield SSE strings while downloading filings.
 
     ticker format: "SZSE:300308", "SSE:688802", "HKEX:2513"
     categories: dict {label: category_code}, e.g. {"年报": "category_ndbg_szsh"}
+    searchkeys: optional {label: searchkey} for server-side keyword filtering (used for HK)
     """
     conn = get_conn()
     try:
@@ -317,7 +366,9 @@ def _run_download(ticker: str, categories: dict[str, str]):
         all_anns: list[dict] = []
         for cat_label, cat_code in categories.items():
             yield _sse(f"📋  Fetching {cat_label} list from CNINFO…")
-            items = _fetch_all_announcements(column, plate, stock_param, cat_code)
+            sk = (searchkeys or {}).get(cat_label, "")
+            items = _fetch_all_announcements(column, plate, stock_param, cat_code,
+                                             searchkey=sk)
             for item in items:
                 item["_cat"] = cat_label
             all_anns.extend(items)
