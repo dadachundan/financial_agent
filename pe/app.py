@@ -74,18 +74,27 @@ def _fetch_one(ticker: str) -> dict:
     try:
         info = yf.Ticker(ticker).info
         return {
-            "ticker":      ticker,
-            "name":        info.get("shortName") or info.get("longName") or ticker,
-            "sector":      SECTOR_MAP.get(ticker, ""),
-            "price":       info.get("currentPrice") or info.get("regularMarketPrice"),
-            "trailing_pe": info.get("trailingPE"),
-            "forward_pe":  info.get("forwardPE"),
-            "mkt_cap":     info.get("marketCap"),
+            "ticker":           ticker,
+            "name":             info.get("shortName") or info.get("longName") or ticker,
+            "sector":           SECTOR_MAP.get(ticker, ""),
+            "price":            info.get("currentPrice") or info.get("regularMarketPrice"),
+            "trailing_pe":      info.get("trailingPE"),
+            "forward_pe":       info.get("forwardPE"),
+            "mkt_cap":          info.get("marketCap"),
+            # Growth (TTM YoY)
+            "rev_growth":       info.get("revenueGrowth"),
+            "earn_growth":      info.get("earningsGrowth"),
+            # Margins
+            "gross_margin":     info.get("grossMargins"),
+            "op_margin":        info.get("operatingMargins"),
+            "net_margin":       info.get("profitMargins"),
         }
     except Exception as e:
         log.warning("Failed %s: %s", ticker, e)
         return {"ticker": ticker, "name": ticker, "sector": SECTOR_MAP.get(ticker, ""),
-                "price": None, "trailing_pe": None, "forward_pe": None, "mkt_cap": None}
+                "price": None, "trailing_pe": None, "forward_pe": None, "mkt_cap": None,
+                "rev_growth": None, "earn_growth": None,
+                "gross_margin": None, "op_margin": None, "net_margin": None}
 
 
 def _fetch_all() -> list[dict]:
@@ -136,16 +145,35 @@ TEMPLATE = """<!doctype html>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 <style>
 body { font-size: 13px; }
+.table-wrap { overflow-x: auto; }
 #peTable th { cursor: pointer; user-select: none; white-space: nowrap; }
 #peTable th.asc::after  { content: " ▲"; font-size: 10px; opacity:.7; }
 #peTable th.desc::after { content: " ▼"; font-size: 10px; opacity:.7; }
+/* P/E colours */
 .pe-low  { color: #198754; font-weight: 600; }
 .pe-mid  { color: #fd7e14; }
 .pe-high { color: #dc3545; }
 .pe-na   { color: #aaa; font-style: italic; }
-.mkt-cap { font-size: 11px; color: #888; }
-#status  { font-size: 11px; color: #888; }
+/* Growth colours */
+.g-pos   { color: #198754; font-weight: 600; }
+.g-neg   { color: #dc3545; }
+.g-na    { color: #aaa; font-style: italic; }
+/* Margin colours */
+.m-high  { color: #198754; font-weight: 600; }
+.m-mid   { color: #fd7e14; }
+.m-low   { color: #dc3545; }
+.m-na    { color: #aaa; font-style: italic; }
+/* Column group dividers */
+#peTable th.grp-start, #peTable td.grp-start { border-left: 2px solid #555 !important; }
+.small-col { font-size: 11px; color: #888; }
+#status { font-size: 11px; color: #888; }
 .spinner-border { width: 1rem; height: 1rem; border-width: 2px; }
+/* Sticky column headers */
+thead.table-dark th { position: sticky; top: 0; z-index: 2; }
+/* Sub-header row */
+thead tr.subhdr th { background: #2c2c3e; font-size: 10px; font-weight: 400;
+                     text-transform: uppercase; letter-spacing: .05em;
+                     color: #aaa; padding: 2px 4px; position: sticky; top: 24px; z-index: 2; }
 </style>
 </head>
 <body>
@@ -167,20 +195,32 @@ body { font-size: 13px; }
     <span id="spinner" class="spinner-border text-secondary" role="status" style="display:none"></span>
   </div>
 
+  <div class="table-wrap">
   <table class="table table-sm table-hover table-bordered" id="peTable">
-    <thead class="table-dark sticky-top">
+    <thead class="table-dark">
       <tr>
-        <th data-col="sector">Sector</th>
-        <th data-col="ticker">Ticker</th>
-        <th data-col="name">Name</th>
-        <th data-col="price" class="text-end">Price</th>
-        <th data-col="trailing_pe" class="text-end">Trailing P/E</th>
-        <th data-col="forward_pe" class="text-end">Forward P/E</th>
-        <th data-col="mkt_cap" class="text-end">Mkt Cap</th>
+        <th rowspan="2" data-col="sector">Sector</th>
+        <th rowspan="2" data-col="ticker">Ticker</th>
+        <th rowspan="2" data-col="name">Name</th>
+        <th rowspan="2" data-col="price" class="text-end">Price</th>
+        <th rowspan="2" data-col="mkt_cap" class="text-end">Mkt Cap</th>
+        <th colspan="2" class="text-center grp-start">Valuation</th>
+        <th colspan="2" class="text-center grp-start">Growth (TTM YoY)</th>
+        <th colspan="3" class="text-center grp-start">Margins (TTM)</th>
+      </tr>
+      <tr class="subhdr">
+        <th data-col="trailing_pe" class="text-end grp-start">Trailing P/E</th>
+        <th data-col="forward_pe"  class="text-end">Forward P/E</th>
+        <th data-col="rev_growth"   class="text-end grp-start">Revenue</th>
+        <th data-col="earn_growth"  class="text-end">Earnings</th>
+        <th data-col="gross_margin" class="text-end grp-start">Gross</th>
+        <th data-col="op_margin"    class="text-end">Operating</th>
+        <th data-col="net_margin"   class="text-end">Net</th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
   </table>
+  </div>
 </div>
 
 <script>
@@ -189,6 +229,7 @@ let _sortCol = 'trailing_pe';
 let _sortDir = 1;
 let _pollTimer = null;
 
+/* ── formatters ── */
 function fmtPE(v) {
   if (v == null || isNaN(v)) return '<span class="pe-na">N/A</span>';
   if (v <= 0) return '<span class="pe-na">' + v.toFixed(1) + '</span>';
@@ -206,7 +247,20 @@ function fmtCap(v) {
   if (v >= 1e6)  return (v/1e6).toFixed(0)  + 'M';
   return v;
 }
+function fmtGrowth(v) {
+  if (v == null || isNaN(v)) return '<span class="g-na">N/A</span>';
+  const pct = (v * 100).toFixed(1);
+  const cls = v >= 0 ? 'g-pos' : 'g-neg';
+  return '<span class="' + cls + '">' + (v >= 0 ? '+' : '') + pct + '%</span>';
+}
+function fmtMargin(v) {
+  if (v == null || isNaN(v)) return '<span class="m-na">N/A</span>';
+  const pct = (v * 100).toFixed(1);
+  const cls = v >= 0.3 ? 'm-high' : v >= 0.1 ? 'm-mid' : 'm-low';
+  return '<span class="' + cls + '">' + pct + '%</span>';
+}
 
+/* ── sort ── */
 function sortKey(r) {
   const v = r[_sortCol];
   if (v == null) return _sortDir === 1 ? Infinity : -Infinity;
@@ -218,28 +272,36 @@ function cmp(a, b) {
   return (av - bv) * _sortDir;
 }
 
+/* ── row ── */
 function rowHtml(r, showSector) {
   return `<tr>
     <td>${showSector ? r.sector : ''}</td>
     <td><strong>${r.ticker}</strong></td>
     <td>${r.name}</td>
     <td class="text-end">${fmtPrice(r.price)}</td>
-    <td class="text-end">${fmtPE(r.trailing_pe)}</td>
+    <td class="text-end small-col">${fmtCap(r.mkt_cap)}</td>
+    <td class="text-end grp-start">${fmtPE(r.trailing_pe)}</td>
     <td class="text-end">${fmtPE(r.forward_pe)}</td>
-    <td class="text-end mkt-cap">${fmtCap(r.mkt_cap)}</td>
+    <td class="text-end grp-start">${fmtGrowth(r.rev_growth)}</td>
+    <td class="text-end">${fmtGrowth(r.earn_growth)}</td>
+    <td class="text-end grp-start">${fmtMargin(r.gross_margin)}</td>
+    <td class="text-end">${fmtMargin(r.op_margin)}</td>
+    <td class="text-end">${fmtMargin(r.net_margin)}</td>
   </tr>`;
 }
 
+/* ── render ── */
 function render() {
   const grouped = document.getElementById('groupChk').checked;
   const hideNa  = document.getElementById('hideNaChk').checked;
   let rows = hideNa ? _rows.filter(r => r.trailing_pe > 0) : [..._rows];
 
-  document.querySelectorAll('#peTable thead th').forEach(th => {
+  document.querySelectorAll('#peTable th[data-col]').forEach(th => {
     th.classList.remove('asc', 'desc');
     if (th.dataset.col === _sortCol) th.classList.add(_sortDir === 1 ? 'asc' : 'desc');
   });
 
+  const NCOLS = 12;
   let html = '';
   if (grouped) {
     const seen = new Set(), sectorOrder = [];
@@ -247,7 +309,7 @@ function render() {
     for (const sec of sectorOrder) {
       const grp = rows.filter(r => r.sector === sec).sort(cmp);
       if (!grp.length) continue;
-      html += `<tr class="table-secondary"><td colspan="7"><strong>${sec}</strong></td></tr>`;
+      html += `<tr class="table-secondary"><td colspan="${NCOLS}"><strong>${sec}</strong></td></tr>`;
       html += grp.map(r => rowHtml(r, false)).join('');
     }
   } else {
@@ -256,7 +318,8 @@ function render() {
   document.getElementById('tbody').innerHTML = html;
 }
 
-document.querySelectorAll('#peTable thead th').forEach(th => {
+/* ── header click ── */
+document.querySelectorAll('#peTable th[data-col]').forEach(th => {
   th.addEventListener('click', () => {
     const col = th.dataset.col;
     if (_sortCol === col) _sortDir *= -1;
@@ -265,29 +328,24 @@ document.querySelectorAll('#peTable thead th').forEach(th => {
   });
 });
 
+/* ── data loading ── */
 function setStatus(json) {
   const age = json.age_minutes != null ? json.age_minutes.toFixed(0) + ' min ago' : 'just now';
-  document.getElementById('status').textContent =
-    json.data.length + ' stocks · updated ' + age;
+  document.getElementById('status').textContent = json.data.length + ' stocks · updated ' + age;
   document.getElementById('spinner').style.display = json.refreshing ? '' : 'none';
   document.getElementById('refreshBtn').disabled = false;
 }
 
 async function loadData(force) {
-  const url    = force ? '/pe/api/refresh' : '/pe/api/data';
-  const method = force ? 'POST' : 'GET';
+  const url = force ? '/pe/api/refresh' : '/pe/api/data';
   try {
-    const res  = await fetch(url, {method});
+    const res  = await fetch(url, {method: force ? 'POST' : 'GET'});
     const json = await res.json();
     _rows = json.data || [];
     setStatus(json);
     if (_rows.length > 0) render();
-
-    // Poll every 4s while a background refresh is running
     clearTimeout(_pollTimer);
-    if (json.refreshing) {
-      _pollTimer = setTimeout(() => loadData(false), 4000);
-    }
+    if (json.refreshing) _pollTimer = setTimeout(() => loadData(false), 4000);
   } catch(e) {
     document.getElementById('status').textContent = 'Error: ' + e;
   }
@@ -300,7 +358,6 @@ function doRefresh() {
   loadData(true);
 }
 
-// Kick off initial load; if refreshing, polling will continue automatically
 loadData(false);
 </script>
 </body>
