@@ -65,7 +65,7 @@ HTML_BASE = """
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ title }}</title>
 <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+      href="/static/vendor/bootstrap.min.css">
 <style>
   body        { background: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; }
   .navbar     { background: #161b22 !important; border-bottom: 1px solid #30363d; }
@@ -108,7 +108,7 @@ HTML_BASE = """
 <div class="container-fluid px-4 py-4">
   {% block content %}{% endblock %}
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/static/vendor/bootstrap.bundle.min.js"></script>
 {% block scripts %}{% endblock %}
 </body>
 </html>
