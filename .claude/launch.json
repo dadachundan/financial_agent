@@ -4,7 +4,7 @@
     {
       "name": "finagent",
       "runtimeExecutable": "/opt/anaconda3/bin/python3",
-      "runtimeArgs": ["/Users/x/projects/financial_agent/.claude/worktrees/nifty-bohr/main.py", "--port", "8002"],
+      "runtimeArgs": ["/Users/x/projects/financial_agent/main.py", "--port", "8002"],
       "port": 8002
     }
   ,

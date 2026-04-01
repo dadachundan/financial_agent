@@ -34,6 +34,7 @@ zsxq_bp = _zsxq_viewer_mod.zsxq_bp
 from fetch_financial_report import sec_bp, init_db as _sec_init
 from fetch_cninfo_report    import cn_bp,  init_db as _cn_init
 from indicators.app         import indicators_bp, init_db as _ind_init
+from pe.app                 import pe_bp
 
 # -- Build unified app ---------------------------------------------------------
 app = Flask(__name__,
@@ -50,6 +51,7 @@ app.register_blueprint(zsxq_bp,       url_prefix="/zsxq")
 app.register_blueprint(sec_bp,        url_prefix="/sec")
 app.register_blueprint(cn_bp,         url_prefix="/cn")
 app.register_blueprint(indicators_bp, url_prefix="/indicators")
+app.register_blueprint(pe_bp,         url_prefix="/pe")
 
 
 @app.route("/")
