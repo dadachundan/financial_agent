@@ -42,5 +42,12 @@
       "runtimeArgs": ["/Users/x/projects/financial_agent/.claude/worktrees/jolly-mccarthy/indicators/app.py", "--port", "8003"],
       "port": 8003
     }
+  ,
+    {
+      "name": "pe-viewer",
+      "runtimeExecutable": "/opt/anaconda3/bin/python3",
+      "runtimeArgs": ["/Users/x/projects/financial_agent/pe/app.py", "--port", "8004"],
+      "port": 8004
+    }
   ]
 }
