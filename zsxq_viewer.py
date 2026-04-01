@@ -47,7 +47,7 @@ TEMPLATE = """
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>zsxq PDF Index</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/vendor/bootstrap.min.css" rel="stylesheet">
 __MCW_HEAD__
   <style>
     body            { background:#f4f6f8; padding:24px 16px; }
@@ -428,7 +428,7 @@ __URLPATCH__
 __MCW_MODALS__
 
 __MCW_FOOTER__
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/static/vendor/bootstrap.bundle.min.js"></script>
 <script>
   const _summaryModal = new bootstrap.Modal(document.getElementById('summaryModal'));
   function showSummary(fileId, el) {
@@ -782,7 +782,7 @@ PRINT_TEMPLATE = """<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Comment Export</title>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="/static/vendor/marked.min.js"></script>
   <style>
     * { box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

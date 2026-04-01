@@ -46,12 +46,12 @@ from flask import Blueprint, abort, jsonify, request, send_file
 # ── CDN links ─────────────────────────────────────────────────────────────────
 
 HEAD_LINKS = (
-    '  <link href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css" rel="stylesheet">\n'
-    '  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>'
+    '  <link href="/static/vendor/easymde.min.css" rel="stylesheet">\n'
+    '  <script src="/static/vendor/marked.min.js"></script>'
 )
 
 FOOTER_SCRIPTS = (
-    '<script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>'
+    '<script src="/static/vendor/easymde.min.js"></script>'
 )
 
 

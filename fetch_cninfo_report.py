@@ -506,7 +506,7 @@ TEMPLATE = """\
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A股 / 港股 财报下载</title>
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        href="/static/vendor/bootstrap.min.css">
   __MCW_HEAD__
   <style>
     body          { background:#f8f9fa; font-size:.9rem; }
@@ -625,7 +625,7 @@ __URLPATCH__
 </div>
 
 __MCW_MODALS__
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/static/vendor/bootstrap.bundle.min.js"></script>
 __MCW_FOOTER__
 <script>
 // ── State ─────────────────────────────────────────────────────────────────────
