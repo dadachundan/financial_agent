@@ -1,7 +1,7 @@
 """Shared navigation bar HTML inserted into every sub-app template."""
 
 NAV_HTML = """\
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark px-3 py-1 mb-2" id="_mainNav" style="font-size:.875rem">
+<nav class="navbar navbar-expand navbar-dark bg-dark px-3 py-1 mb-2" id="_mainNav" style="font-size:.875rem">
   <a class="navbar-brand fw-bold py-0" href="/">&#128202; FinAgent</a>
   <ul class="navbar-nav ms-3">
     <li class="nav-item"><a class="nav-link py-1" href="/zep">&#128376; Knowledge Graph</a></li>
