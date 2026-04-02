@@ -195,10 +195,26 @@ thead tr.subhdr th { background: #2c2c3e; font-size: 10px; font-weight: 400;
     <span id="spinner" class="spinner-border text-secondary" role="status" style="display:none"></span>
   </div>
 
+  <!-- filters -->
+  <div class="mb-2 d-flex flex-wrap align-items-center gap-3" id="filterBar">
+    <span class="text-muted small fw-bold">SECTOR:</span>
+    <div id="sectorBadges" class="d-flex flex-wrap gap-1"></div>
+    <span class="text-muted small fw-bold ms-2">MKT CAP:</span>
+    <div class="d-flex align-items-center gap-1">
+      <span class="text-muted small">Min</span>
+      <input type="number" id="capMin" class="form-control form-control-sm" style="width:80px" placeholder="0" min="0" oninput="applyFilters()">
+      <span class="text-muted small">B</span>
+      <span class="text-muted small ms-1">Max</span>
+      <input type="number" id="capMax" class="form-control form-control-sm" style="width:80px" placeholder="∞" min="0" oninput="applyFilters()">
+      <span class="text-muted small">B</span>
+    </div>
+  </div>
+
   <!-- bubble chart -->
   <div id="chartWrap">
     <canvas id="peChart"></canvas>
   </div>
+  <div id="chartExcluded" class="text-muted small mb-2" style="display:none"></div>
 
   <!-- table -->
   <div class="table-wrap">
@@ -235,6 +251,50 @@ let _sortCol = 'trailing_pe';
 let _sortDir = 1;
 let _pollTimer = null;
 let _chart = null;
+let _hiddenSectors = new Set();
+
+/* ── filtering ── */
+function filteredRows() {
+  const capMin = parseFloat(document.getElementById('capMin').value) || 0;
+  const capMax = parseFloat(document.getElementById('capMax').value) || Infinity;
+  return _rows.filter(r => {
+    if (_hiddenSectors.has(r.sector)) return false;
+    const cap = r.mkt_cap ? r.mkt_cap / 1e9 : 0;
+    if (cap < capMin || cap > capMax) return false;
+    return true;
+  });
+}
+
+function applyFilters() {
+  renderChart();
+  renderTable();
+}
+
+function buildSectorBadges() {
+  const sectors = [...new Set(_rows.map(r => r.sector))].sort();
+  const wrap = document.getElementById('sectorBadges');
+  wrap.innerHTML = '';
+  sectors.forEach(sec => {
+    const color = sectorColor(sec);
+    const btn = document.createElement('span');
+    btn.textContent = sec;
+    btn.style.cssText = `cursor:pointer;padding:2px 7px;border-radius:12px;font-size:11px;border:1.5px solid ${color};background:${color}22;color:#333;white-space:nowrap`;
+    btn.dataset.sector = sec;
+    btn.addEventListener('click', () => {
+      if (_hiddenSectors.has(sec)) {
+        _hiddenSectors.delete(sec);
+        btn.style.opacity = '1';
+        btn.style.textDecoration = 'none';
+      } else {
+        _hiddenSectors.add(sec);
+        btn.style.opacity = '0.35';
+        btn.style.textDecoration = 'line-through';
+      }
+      applyFilters();
+    });
+    wrap.appendChild(btn);
+  });
+}
 
 /* ── sector colours ── */
 const SECTOR_COLORS = [
@@ -287,12 +347,24 @@ function fmtMargin(v) {
 /* ── bubble chart ── */
 function bubbleRadius(mkt_cap) {
   if (!mkt_cap) return 4;
-  // sqrt scaling: NVDA (~3T) → ~30px, 10B → ~7px
-  return Math.max(4, Math.min(40, Math.sqrt(mkt_cap / 1e9) * 1.8));
+  // sqrt scaling capped at 20px to reduce overlap
+  return Math.max(4, Math.min(20, Math.sqrt(mkt_cap / 1e9) * 0.9));
 }
 
 function renderChart() {
-  const pts = _rows.filter(r => r.trailing_pe > 0 && r.forward_pe > 0 && r.trailing_pe < 500);
+  const all = filteredRows().filter(r => r.trailing_pe > 0 && r.forward_pe > 0);
+  // Compute IQR-based cap: exclude trailing_pe > Q3 + 3*IQR to reduce outlier stretching
+  const sorted = all.map(r => r.trailing_pe).sort((a,b) => a-b);
+  const q1 = sorted[Math.floor(sorted.length * 0.25)];
+  const q3 = sorted[Math.floor(sorted.length * 0.75)];
+  const cap = q3 + 3 * (q3 - q1);
+  const pts = all.filter(r => r.trailing_pe <= cap);
+  const excluded = all.filter(r => r.trailing_pe > cap).map(r => r.ticker);
+  const excNote = document.getElementById('chartExcluded');
+  if (excluded.length) {
+    excNote.textContent = 'Outliers excluded from chart (trailing P/E > ' + cap.toFixed(0) + '): ' + excluded.join(', ');
+    excNote.style.display = '';
+  } else { excNote.style.display = 'none'; }
 
   // Group by sector for separate datasets (enables legend by sector)
   const sectors = [...new Set(pts.map(r => r.sector))].sort();
@@ -351,34 +423,25 @@ function renderChart() {
         },
         datalabels: {
           formatter: (val) => val._row.ticker,
-          font: (ctx) => {
-            const r = ctx.dataset.data[ctx.dataIndex].r;
-            return { size: Math.max(8, Math.min(11, r * 0.6)), weight: 'bold' };
-          },
-          color: '#222',
-          anchor: 'center',
-          align: 'center',
+          font: { size: 9, weight: 'bold' },
+          color: (ctx) => ctx.dataset.data[ctx.dataIndex].r >= 12 ? '#222' : ctx.dataset.borderColor,
+          anchor: (ctx) => ctx.dataset.data[ctx.dataIndex].r >= 12 ? 'center' : 'end',
+          align:  (ctx) => ctx.dataset.data[ctx.dataIndex].r >= 12 ? 'center' : 'end',
+          offset: (ctx) => ctx.dataset.data[ctx.dataIndex].r >= 12 ? 0 : 4,
           clip: false,
-          // Hide label if bubble is too small to fit
-          display: (ctx) => ctx.dataset.data[ctx.dataIndex].r >= 8,
+          display: (ctx) => ctx.dataset.data[ctx.dataIndex].r >= 7,
         },
       },
       scales: {
         x: {
-          type: 'logarithmic',
-          title: { display: true, text: 'Trailing P/E (log scale)', font: { size: 12, weight: 'bold' } },
+          title: { display: true, text: 'Trailing P/E', font: { size: 12, weight: 'bold' } },
           grid: { color: '#e5e5e5' },
-          ticks: {
-            callback: (v) => Number.isInteger(Math.log10(v)) || [5,10,15,20,30,50,100,200,500].includes(v) ? v : '',
-          },
+          ticks: { maxTicksLimit: 12 },
         },
         y: {
-          type: 'logarithmic',
-          title: { display: true, text: 'Forward P/E (log scale)', font: { size: 12, weight: 'bold' } },
+          title: { display: true, text: 'Forward P/E', font: { size: 12, weight: 'bold' } },
           grid: { color: '#e5e5e5' },
-          ticks: {
-            callback: (v) => Number.isInteger(Math.log10(v)) || [5,10,15,20,30,50,100,200].includes(v) ? v : '',
-          },
+          ticks: { maxTicksLimit: 10 },
         },
       },
     },
@@ -420,7 +483,8 @@ function rowHtml(r, showSector) {
 function renderTable() {
   const grouped = document.getElementById('groupChk').checked;
   const hideNa  = document.getElementById('hideNaChk').checked;
-  let rows = hideNa ? _rows.filter(r => r.trailing_pe > 0) : [..._rows];
+  let rows = filteredRows();
+  if (hideNa) rows = rows.filter(r => r.trailing_pe > 0);
 
   document.querySelectorAll('#peTable th[data-col]').forEach(th => {
     th.classList.remove('asc', 'desc');
@@ -467,7 +531,7 @@ async function loadData(force) {
     const json = await res.json();
     _rows = json.data || [];
     setStatus(json);
-    if (_rows.length > 0) { renderTable(); renderChart(); }
+    if (_rows.length > 0) { buildSectorBadges(); renderTable(); renderChart(); }
     clearTimeout(_pollTimer);
     if (json.refreshing) _pollTimer = setTimeout(() => loadData(false), 4000);
   } catch(e) {
