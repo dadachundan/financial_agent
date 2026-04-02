@@ -142,7 +142,8 @@ TEMPLATE = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>P/E Viewer — FinAgent</title>
-<link rel="stylesheet" href="/static/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 <style>
@@ -198,7 +199,18 @@ thead tr.subhdr th { background: #2c2c3e; font-size: 10px; font-weight: 400;
   <!-- filters -->
   <div class="mb-2 d-flex flex-wrap align-items-center gap-3" id="filterBar">
     <span class="text-muted small fw-bold">SECTOR:</span>
-    <div id="sectorBadges" class="d-flex flex-wrap gap-1"></div>
+    <div class="dropdown" id="sectorDropdownWrap">
+      <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button"
+              id="sectorDropBtn" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+              aria-expanded="false">All sectors</button>
+      <div class="dropdown-menu p-2" style="min-width:200px;max-height:320px;overflow-y:auto" id="sectorMenu">
+        <div class="d-flex gap-2 mb-2">
+          <button class="btn btn-xs btn-link p-0 text-decoration-none small" onclick="selectAllSectors()">All</button>
+          <button class="btn btn-xs btn-link p-0 text-decoration-none small" onclick="clearAllSectors()">None</button>
+        </div>
+        <div id="sectorCheckboxes"></div>
+      </div>
+    </div>
     <span class="text-muted small fw-bold ms-2">MKT CAP:</span>
     <div class="d-flex align-items-center gap-1">
       <span class="text-muted small">Min</span>
@@ -270,30 +282,56 @@ function applyFilters() {
   renderTable();
 }
 
-function buildSectorBadges() {
+function updateDropdownLabel() {
+  const total   = [...new Set(_rows.map(r => r.sector))].length;
+  const hidden  = _hiddenSectors.size;
+  const shown   = total - hidden;
+  const btn = document.getElementById('sectorDropBtn');
+  btn.textContent = hidden === 0 ? 'All sectors'
+    : shown === 0 ? 'No sectors'
+    : shown + ' / ' + total + ' sectors';
+}
+
+function buildSectorDropdown() {
   const sectors = [...new Set(_rows.map(r => r.sector))].sort();
-  const wrap = document.getElementById('sectorBadges');
+  const wrap = document.getElementById('sectorCheckboxes');
   wrap.innerHTML = '';
   sectors.forEach(sec => {
     const color = sectorColor(sec);
-    const btn = document.createElement('span');
-    btn.textContent = sec;
-    btn.style.cssText = `cursor:pointer;padding:2px 7px;border-radius:12px;font-size:11px;border:1.5px solid ${color};background:${color}22;color:#333;white-space:nowrap`;
-    btn.dataset.sector = sec;
-    btn.addEventListener('click', () => {
-      if (_hiddenSectors.has(sec)) {
-        _hiddenSectors.delete(sec);
-        btn.style.opacity = '1';
-        btn.style.textDecoration = 'none';
-      } else {
-        _hiddenSectors.add(sec);
-        btn.style.opacity = '0.35';
-        btn.style.textDecoration = 'line-through';
-      }
-      applyFilters();
-    });
-    wrap.appendChild(btn);
+    const id = 'sec_' + sec.replace(/[^a-z0-9]/gi, '_');
+    const div = document.createElement('div');
+    div.className = 'form-check';
+    div.innerHTML = `
+      <input class="form-check-input" type="checkbox" id="${id}" checked
+             onchange="toggleSector('${sec.replace(/'/g,"\\'")}', this.checked)">
+      <label class="form-check-label d-flex align-items-center gap-1" for="${id}" style="font-size:12px">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${color};flex-shrink:0"></span>
+        ${sec}
+      </label>`;
+    wrap.appendChild(div);
   });
+  updateDropdownLabel();
+}
+
+function toggleSector(sec, checked) {
+  if (checked) _hiddenSectors.delete(sec);
+  else         _hiddenSectors.add(sec);
+  updateDropdownLabel();
+  applyFilters();
+}
+
+function selectAllSectors() {
+  _hiddenSectors.clear();
+  document.querySelectorAll('#sectorCheckboxes .form-check-input').forEach(cb => cb.checked = true);
+  updateDropdownLabel();
+  applyFilters();
+}
+
+function clearAllSectors() {
+  [...new Set(_rows.map(r => r.sector))].forEach(s => _hiddenSectors.add(s));
+  document.querySelectorAll('#sectorCheckboxes .form-check-input').forEach(cb => cb.checked = false);
+  updateDropdownLabel();
+  applyFilters();
 }
 
 /* ── sector colours ── */
@@ -531,7 +569,7 @@ async function loadData(force) {
     const json = await res.json();
     _rows = json.data || [];
     setStatus(json);
-    if (_rows.length > 0) { buildSectorBadges(); renderTable(); renderChart(); }
+    if (_rows.length > 0) { buildSectorDropdown(); renderTable(); renderChart(); }
     clearTimeout(_pollTimer);
     if (json.refreshing) _pollTimer = setTimeout(() => loadData(false), 4000);
   } catch(e) {
@@ -576,7 +614,7 @@ def api_refresh():
 # ── Standalone ────────────────────────────────────────────────────────────────
 
 def create_app() -> Flask:
-    app = Flask(__name__, static_folder=None)
+    app = Flask(__name__)
     app.register_blueprint(pe_bp)
 
     @app.route("/")
