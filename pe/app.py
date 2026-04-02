@@ -144,6 +144,9 @@ def get_cached_data(force: bool = False) -> list[dict] | None:
 
 pe_bp = Blueprint("pe", __name__, url_prefix="/pe")
 
+# Pre-warm cache on import so data is ready before first page visit
+threading.Thread(target=lambda: get_cached_data(), daemon=True).start()
+
 TEMPLATE = """<!doctype html>
 <html lang="en">
 <head>
@@ -151,9 +154,9 @@ TEMPLATE = """<!doctype html>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>P/E Viewer — FinAgent</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<script src="/static/vendor/bootstrap.bundle.min.js"></script>
+<script src="/static/vendor/chart.umd.min.js"></script>
+<script src="/static/vendor/chartjs-plugin-datalabels.min.js"></script>
 <style>
 body { font-size: 13px; }
 .table-wrap { overflow-x: auto; }
