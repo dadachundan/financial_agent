@@ -55,24 +55,14 @@ WATCHLIST: list[tuple[str, list[str]]] = [
     ("AEROSPACE/SATELLITE", ["AMPX", "HEI", "ACHR", "RTX", "VSAT", "ASTS", "HWM",
                              "ATRO", "RDW", "PL",   "BKSY"]),
     ("OTHER",            ["WYFI", "RDDT", "VST", "RMBS", "RMS.AX"]),
-    # Chinese companies (HK / A-share / US-listed)
-    ("CHINESE", [
-        # HK Exchange
-        "2533.HK", "6600.HK", "9880.HK", "2590.HK", "9660.HK",
-        "981.HK", "100.HK", "6082.HK", "2513.HK",
-        # GPU / Semiconductor (A-share)
-        "002837.SZ", "688256.SS", "688802.SS", "688041.SS", "688795.SS", "300308.SZ",
-        # AI Related (A-share)
-        "002472.SZ", "688169.SS", "301018.SZ", "603486.SS", "603019.SS", "300383.SZ",
-        # Robotics (A-share)
-        "688017.SS", "601689.SS", "601100.SS", "300124.SZ", "002050.SZ",
-        # Traditional (A-share + OTC)
-        "600519.SS", "ZIJMF",
-        # US-listed Chinese
-        "HSAI", "BYDDF", "PONY", "WRD", "BIDU", "BABA",
-        # Others (A-share)
-        "000338.SZ", "300751.SZ", "688008.SS", "688347.SS",
-    ]),
+    ("HK EXCHANGE",  ["2533.HK", "6600.HK", "9880.HK", "2590.HK", "9660.HK",
+                      "981.HK", "100.HK", "6082.HK", "2513.HK"]),
+    ("CN-GPU",       ["002837.SZ", "688256.SS", "688802.SS", "688041.SS", "688795.SS", "300308.SZ"]),
+    ("CN-AI",        ["002472.SZ", "688169.SS", "301018.SZ", "603486.SS", "603019.SS", "300383.SZ"]),
+    ("机器人相关",    ["688017.SS", "601689.SS", "601100.SS", "300124.SZ", "002050.SZ"]),
+    ("TRADITIONAL",  ["600519.SS", "ZIJMF"]),
+    ("美股上市",      ["HSAI", "BYDDF", "PONY", "WRD", "BIDU", "BABA"]),
+    ("CN-OTHERS",    ["000338.SZ", "300751.SZ", "688008.SS", "688347.SS"]),
 ]
 
 ALL_TICKERS: list[str] = [t for _, tickers in WATCHLIST for t in tickers]
