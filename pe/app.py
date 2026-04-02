@@ -55,6 +55,24 @@ WATCHLIST: list[tuple[str, list[str]]] = [
     ("AEROSPACE/SATELLITE", ["AMPX", "HEI", "ACHR", "RTX", "VSAT", "ASTS", "HWM",
                              "ATRO", "RDW", "PL",   "BKSY"]),
     ("OTHER",            ["WYFI", "RDDT", "VST", "RMBS", "RMS.AX"]),
+    # Chinese companies (HK / A-share / US-listed)
+    ("CHINESE", [
+        # HK Exchange
+        "2533.HK", "6600.HK", "9880.HK", "2590.HK", "9660.HK",
+        "981.HK", "100.HK", "6082.HK", "2513.HK",
+        # GPU / Semiconductor (A-share)
+        "002837.SZ", "688256.SS", "688802.SS", "688041.SS", "688795.SS", "300308.SZ",
+        # AI Related (A-share)
+        "002472.SZ", "688169.SS", "301018.SZ", "603486.SS", "603019.SS", "300383.SZ",
+        # Robotics (A-share)
+        "688017.SS", "601689.SS", "601100.SS", "300124.SZ", "002050.SZ",
+        # Traditional (A-share + OTC)
+        "600519.SS", "ZIJMF",
+        # US-listed Chinese
+        "HSAI", "BYDDF", "PONY", "WRD", "BIDU", "BABA",
+        # Others (A-share)
+        "000338.SZ", "300751.SZ", "688008.SS", "688347.SS",
+    ]),
 ]
 
 ALL_TICKERS: list[str] = [t for _, tickers in WATCHLIST for t in tickers]
@@ -391,16 +409,20 @@ function bubbleRadius(mkt_cap) {
 
 function renderChart() {
   const all = filteredRows().filter(r => r.trailing_pe > 0 && r.forward_pe > 0);
-  // Compute IQR-based cap: exclude trailing_pe > Q3 + 3*IQR to reduce outlier stretching
-  const sorted = all.map(r => r.trailing_pe).sort((a,b) => a-b);
-  const q1 = sorted[Math.floor(sorted.length * 0.25)];
-  const q3 = sorted[Math.floor(sorted.length * 0.75)];
-  const cap = q3 + 3 * (q3 - q1);
-  const pts = all.filter(r => r.trailing_pe <= cap);
-  const excluded = all.filter(r => r.trailing_pe > cap).map(r => r.ticker);
+  // Compute IQR-based cap for both axes: exclude points > Q3 + 3*IQR
+  function iqrCap(vals) {
+    const s = [...vals].sort((a,b) => a-b);
+    const q1 = s[Math.floor(s.length * 0.25)];
+    const q3 = s[Math.floor(s.length * 0.75)];
+    return q3 + 3 * (q3 - q1);
+  }
+  const capX = iqrCap(all.map(r => r.trailing_pe));
+  const capY = iqrCap(all.map(r => r.forward_pe));
+  const pts = all.filter(r => r.trailing_pe <= capX && r.forward_pe <= capY);
+  const excluded = all.filter(r => r.trailing_pe > capX || r.forward_pe > capY).map(r => r.ticker);
   const excNote = document.getElementById('chartExcluded');
   if (excluded.length) {
-    excNote.textContent = 'Outliers excluded from chart (trailing P/E > ' + cap.toFixed(0) + '): ' + excluded.join(', ');
+    excNote.textContent = 'Outliers excluded from chart: ' + excluded.join(', ');
     excNote.style.display = '';
   } else { excNote.style.display = 'none'; }
 
