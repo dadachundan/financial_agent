@@ -143,58 +143,64 @@ TEMPLATE = """<!doctype html>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>P/E Viewer — FinAgent</title>
 <link rel="stylesheet" href="/static/vendor/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 <style>
 body { font-size: 13px; }
 .table-wrap { overflow-x: auto; }
 #peTable th { cursor: pointer; user-select: none; white-space: nowrap; }
 #peTable th.asc::after  { content: " ▲"; font-size: 10px; opacity:.7; }
 #peTable th.desc::after { content: " ▼"; font-size: 10px; opacity:.7; }
-/* P/E colours */
 .pe-low  { color: #198754; font-weight: 600; }
 .pe-mid  { color: #fd7e14; }
 .pe-high { color: #dc3545; }
 .pe-na   { color: #aaa; font-style: italic; }
-/* Growth colours */
 .g-pos   { color: #198754; font-weight: 600; }
 .g-neg   { color: #dc3545; }
 .g-na    { color: #aaa; font-style: italic; }
-/* Margin colours */
 .m-high  { color: #198754; font-weight: 600; }
 .m-mid   { color: #fd7e14; }
 .m-low   { color: #dc3545; }
 .m-na    { color: #aaa; font-style: italic; }
-/* Column group dividers */
 #peTable th.grp-start, #peTable td.grp-start { border-left: 2px solid #555 !important; }
 .small-col { font-size: 11px; color: #888; }
 #status { font-size: 11px; color: #888; }
 .spinner-border { width: 1rem; height: 1rem; border-width: 2px; }
-/* Sticky column headers */
 thead.table-dark th { position: sticky; top: 0; z-index: 2; }
-/* Sub-header row */
 thead tr.subhdr th { background: #2c2c3e; font-size: 10px; font-weight: 400;
                      text-transform: uppercase; letter-spacing: .05em;
                      color: #aaa; padding: 2px 4px; position: sticky; top: 24px; z-index: 2; }
+/* Chart */
+#chartWrap { background: #fff; border-radius: 6px; padding: 12px; margin-bottom: 20px; }
+#chartWrap canvas { display: block; }
 </style>
 </head>
 <body>
 {{ NAV_HTML }}
 
 <div class="container-fluid py-3">
+  <!-- toolbar -->
   <div class="d-flex align-items-center gap-3 mb-3 flex-wrap">
     <h5 class="mb-0">📊 P/E Viewer</h5>
     <button class="btn btn-sm btn-outline-secondary" id="refreshBtn" onclick="doRefresh()">⟳ Refresh</button>
     <div class="form-check form-switch mb-0 ms-1">
-      <input class="form-check-input" type="checkbox" id="groupChk" onchange="render()">
+      <input class="form-check-input" type="checkbox" id="groupChk" onchange="renderTable()">
       <label class="form-check-label" for="groupChk">Group by sector</label>
     </div>
     <div class="form-check form-switch mb-0">
-      <input class="form-check-input" type="checkbox" id="hideNaChk" onchange="render()">
+      <input class="form-check-input" type="checkbox" id="hideNaChk" onchange="renderTable()">
       <label class="form-check-label" for="hideNaChk">Hide N/A P/E</label>
     </div>
     <span id="status"></span>
     <span id="spinner" class="spinner-border text-secondary" role="status" style="display:none"></span>
   </div>
 
+  <!-- bubble chart -->
+  <div id="chartWrap">
+    <canvas id="peChart"></canvas>
+  </div>
+
+  <!-- table -->
   <div class="table-wrap">
   <table class="table table-sm table-hover table-bordered" id="peTable">
     <thead class="table-dark">
@@ -228,6 +234,22 @@ let _rows = [];
 let _sortCol = 'trailing_pe';
 let _sortDir = 1;
 let _pollTimer = null;
+let _chart = null;
+
+/* ── sector colours ── */
+const SECTOR_COLORS = [
+  '#4e79a7','#f28e2b','#e15759','#76b7b2','#59a14f',
+  '#edc948','#b07aa1','#ff9da7','#9c755f','#bab0ac',
+  '#00b7c3','#ff6e54','#ffa600','#665191','#a05195',
+];
+const _sectorColorMap = {};
+function sectorColor(s) {
+  if (!_sectorColorMap[s]) {
+    const idx = Object.keys(_sectorColorMap).length % SECTOR_COLORS.length;
+    _sectorColorMap[s] = SECTOR_COLORS[idx];
+  }
+  return _sectorColorMap[s];
+}
 
 /* ── formatters ── */
 function fmtPE(v) {
@@ -247,20 +269,128 @@ function fmtCap(v) {
   if (v >= 1e6)  return (v/1e6).toFixed(0)  + 'M';
   return v;
 }
+function fmtPct(v) {
+  if (v == null || isNaN(v)) return 'N/A';
+  return (v >= 0 ? '+' : '') + (v * 100).toFixed(1) + '%';
+}
 function fmtGrowth(v) {
   if (v == null || isNaN(v)) return '<span class="g-na">N/A</span>';
-  const pct = (v * 100).toFixed(1);
   const cls = v >= 0 ? 'g-pos' : 'g-neg';
-  return '<span class="' + cls + '">' + (v >= 0 ? '+' : '') + pct + '%</span>';
+  return '<span class="' + cls + '">' + fmtPct(v) + '</span>';
 }
 function fmtMargin(v) {
   if (v == null || isNaN(v)) return '<span class="m-na">N/A</span>';
-  const pct = (v * 100).toFixed(1);
   const cls = v >= 0.3 ? 'm-high' : v >= 0.1 ? 'm-mid' : 'm-low';
-  return '<span class="' + cls + '">' + pct + '%</span>';
+  return '<span class="' + cls + '">' + (v*100).toFixed(1) + '%</span>';
 }
 
-/* ── sort ── */
+/* ── bubble chart ── */
+function bubbleRadius(mkt_cap) {
+  if (!mkt_cap) return 4;
+  // sqrt scaling: NVDA (~3T) → ~30px, 10B → ~7px
+  return Math.max(4, Math.min(40, Math.sqrt(mkt_cap / 1e9) * 1.8));
+}
+
+function renderChart() {
+  const pts = _rows.filter(r => r.trailing_pe > 0 && r.forward_pe > 0 && r.trailing_pe < 500);
+
+  // Group by sector for separate datasets (enables legend by sector)
+  const sectors = [...new Set(pts.map(r => r.sector))].sort();
+  const datasets = sectors.map(sec => {
+    const color = sectorColor(sec);
+    return {
+      label: sec,
+      data: pts.filter(r => r.sector === sec).map(r => ({
+        x: r.trailing_pe,
+        y: r.forward_pe,
+        r: bubbleRadius(r.mkt_cap),
+        _row: r,
+      })),
+      backgroundColor: color + 'aa',
+      borderColor:     color,
+      borderWidth: 1,
+    };
+  });
+
+  const cfg = {
+    type: 'bubble',
+    data: { datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      aspectRatio: 2.2,
+      plugins: {
+        legend: {
+          position: 'right',
+          labels: { boxWidth: 12, font: { size: 11 } },
+        },
+        tooltip: {
+          callbacks: {
+            title: (items) => {
+              const r = items[0].raw._row;
+              return r.ticker + ' — ' + r.name;
+            },
+            label: (item) => {
+              const r = item.raw._row;
+              return [
+                'Sector: ' + r.sector,
+                'Price: ' + fmtPrice(r.price) + '   Mkt Cap: ' + fmtCap(r.mkt_cap),
+                'Trailing P/E: ' + (r.trailing_pe ? r.trailing_pe.toFixed(1) : 'N/A') +
+                  '   Forward P/E: ' + (r.forward_pe ? r.forward_pe.toFixed(1) : 'N/A'),
+                'Rev Growth: ' + fmtPct(r.rev_growth) + '   Earn Growth: ' + fmtPct(r.earn_growth),
+                'Gross: ' + (r.gross_margin != null ? (r.gross_margin*100).toFixed(1)+'%' : 'N/A') +
+                  '   Op: ' + (r.op_margin != null ? (r.op_margin*100).toFixed(1)+'%' : 'N/A') +
+                  '   Net: ' + (r.net_margin != null ? (r.net_margin*100).toFixed(1)+'%' : 'N/A'),
+              ];
+            },
+          },
+          backgroundColor: 'rgba(0,0,0,0.85)',
+          padding: 10,
+          titleFont: { size: 13, weight: 'bold' },
+          bodyFont: { size: 11 },
+        },
+        datalabels: {
+          formatter: (val) => val._row.ticker,
+          font: (ctx) => {
+            const r = ctx.dataset.data[ctx.dataIndex].r;
+            return { size: Math.max(8, Math.min(11, r * 0.6)), weight: 'bold' };
+          },
+          color: '#222',
+          anchor: 'center',
+          align: 'center',
+          clip: false,
+          // Hide label if bubble is too small to fit
+          display: (ctx) => ctx.dataset.data[ctx.dataIndex].r >= 8,
+        },
+      },
+      scales: {
+        x: {
+          type: 'logarithmic',
+          title: { display: true, text: 'Trailing P/E (log scale)', font: { size: 12, weight: 'bold' } },
+          grid: { color: '#e5e5e5' },
+          ticks: {
+            callback: (v) => Number.isInteger(Math.log10(v)) || [5,10,15,20,30,50,100,200,500].includes(v) ? v : '',
+          },
+        },
+        y: {
+          type: 'logarithmic',
+          title: { display: true, text: 'Forward P/E (log scale)', font: { size: 12, weight: 'bold' } },
+          grid: { color: '#e5e5e5' },
+          ticks: {
+            callback: (v) => Number.isInteger(Math.log10(v)) || [5,10,15,20,30,50,100,200].includes(v) ? v : '',
+          },
+        },
+      },
+    },
+    plugins: [ChartDataLabels],
+  };
+
+  if (_chart) { _chart.destroy(); }
+  const canvas = document.getElementById('peChart');
+  _chart = new Chart(canvas, cfg);
+}
+
+/* ── table sort ── */
 function sortKey(r) {
   const v = r[_sortCol];
   if (v == null) return _sortDir === 1 ? Infinity : -Infinity;
@@ -271,8 +401,6 @@ function cmp(a, b) {
   if (typeof av === 'string') return av.localeCompare(bv) * _sortDir;
   return (av - bv) * _sortDir;
 }
-
-/* ── row ── */
 function rowHtml(r, showSector) {
   return `<tr>
     <td>${showSector ? r.sector : ''}</td>
@@ -289,9 +417,7 @@ function rowHtml(r, showSector) {
     <td class="text-end">${fmtMargin(r.net_margin)}</td>
   </tr>`;
 }
-
-/* ── render ── */
-function render() {
+function renderTable() {
   const grouped = document.getElementById('groupChk').checked;
   const hideNa  = document.getElementById('hideNaChk').checked;
   let rows = hideNa ? _rows.filter(r => r.trailing_pe > 0) : [..._rows];
@@ -301,7 +427,6 @@ function render() {
     if (th.dataset.col === _sortCol) th.classList.add(_sortDir === 1 ? 'asc' : 'desc');
   });
 
-  const NCOLS = 12;
   let html = '';
   if (grouped) {
     const seen = new Set(), sectorOrder = [];
@@ -309,7 +434,7 @@ function render() {
     for (const sec of sectorOrder) {
       const grp = rows.filter(r => r.sector === sec).sort(cmp);
       if (!grp.length) continue;
-      html += `<tr class="table-secondary"><td colspan="${NCOLS}"><strong>${sec}</strong></td></tr>`;
+      html += `<tr class="table-secondary"><td colspan="12"><strong>${sec}</strong></td></tr>`;
       html += grp.map(r => rowHtml(r, false)).join('');
     }
   } else {
@@ -318,13 +443,12 @@ function render() {
   document.getElementById('tbody').innerHTML = html;
 }
 
-/* ── header click ── */
 document.querySelectorAll('#peTable th[data-col]').forEach(th => {
   th.addEventListener('click', () => {
     const col = th.dataset.col;
     if (_sortCol === col) _sortDir *= -1;
     else { _sortCol = col; _sortDir = 1; }
-    render();
+    renderTable();
   });
 });
 
@@ -343,7 +467,7 @@ async function loadData(force) {
     const json = await res.json();
     _rows = json.data || [];
     setStatus(json);
-    if (_rows.length > 0) render();
+    if (_rows.length > 0) { renderTable(); renderChart(); }
     clearTimeout(_pollTimer);
     if (json.refreshing) _pollTimer = setTimeout(() => loadData(false), 4000);
   } catch(e) {
