@@ -21,6 +21,7 @@ import sys
 from pathlib import Path
 
 from flask import Flask, redirect, jsonify, request as freq
+from flask_compress import Compress
 
 import md_comment_widget as mcw
 
@@ -41,6 +42,7 @@ app = Flask(__name__,
             template_folder=str(SCRIPT_DIR / "templates"),
             static_folder=str(SCRIPT_DIR / "static"))
 app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024
+Compress(app)
 
 # One shared MCW blueprint for all image-upload routes (/upload-image, /uploads/...)
 app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
