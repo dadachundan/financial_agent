@@ -460,14 +460,19 @@ function renderChart() {
           bodyFont: { size: 11 },
         },
         datalabels: {
-          formatter: (val) => val._row.ticker,
-          font: { size: 9, weight: 'bold' },
+          formatter: (val) => {
+            const r = val._row;
+            return pts.length <= 15
+              ? r.ticker + '\\n' + (r.name.length > 20 ? r.name.slice(0, 18) + '\u2026' : r.name)
+              : r.ticker;
+          },
+          font: (ctx) => ({ size: pts.length <= 15 ? 10 : 9, weight: 'bold' }),
           color: (ctx) => ctx.dataset.data[ctx.dataIndex].r >= 12 ? '#222' : ctx.dataset.borderColor,
           anchor: (ctx) => ctx.dataset.data[ctx.dataIndex].r >= 12 ? 'center' : 'end',
           align:  (ctx) => ctx.dataset.data[ctx.dataIndex].r >= 12 ? 'center' : 'end',
           offset: (ctx) => ctx.dataset.data[ctx.dataIndex].r >= 12 ? 0 : 4,
           clip: false,
-          display: (ctx) => ctx.dataset.data[ctx.dataIndex].r >= 7,
+          display: (ctx) => pts.length <= 15 || ctx.dataset.data[ctx.dataIndex].r >= 7,
         },
       },
       scales: {
