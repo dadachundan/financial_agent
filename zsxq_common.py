@@ -16,11 +16,8 @@ import time
 from datetime import datetime
 from pathlib import Path
 
+import browser_cookie3
 import requests
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager  # type: ignore
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 
@@ -42,39 +39,25 @@ HEADERS = {
 }
 
 
-# ── Selenium / session ────────────────────────────────────────────────────────
+# ── Cookie / session ──────────────────────────────────────────────────────────
 
 def get_session_via_selenium(chrome_profile: Path) -> requests.Session:
-    """Launch Chrome with an existing profile, visit zsxq, extract cookies."""
-    chrome_options = Options()
-    chrome_options.add_argument(f"user-data-dir={chrome_profile}")
-    chrome_options.add_argument("--headless=new")
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--disable-dev-shm-usage")
+    """Build a requests.Session with zsxq cookies read from a Chrome profile."""
+    cookie_file = chrome_profile / "Default" / "Cookies"
+    if not cookie_file.exists():
+        raise FileNotFoundError(f"Cookie file not found: {cookie_file}")
 
-    print("Starting Chrome to load session cookies...")
-    driver = webdriver.Chrome(
-        service=Service(ChromeDriverManager().install()),
-        options=chrome_options,
-    )
-    try:
-        driver.get("https://wx.zsxq.com")
-        time.sleep(2)  # let cookies settle
-        driver.get("https://api.zsxq.com")
-        time.sleep(1)
+    print("Loading session cookies from Chrome profile...")
+    cookies = list(browser_cookie3.chrome(
+        cookie_file=str(cookie_file),
+        domain_name=".zsxq.com",
+    ))
+    session = requests.Session()
+    for c in cookies:
+        session.cookies.set(c.name, c.value)
+        session.cookies.set(c.name, c.value, domain="api.zsxq.com")
 
-        session = requests.Session()
-        for cookie in driver.get_cookies():
-            domain = cookie.get("domain", "")
-            session.cookies.set(cookie["name"], cookie["value"], domain=domain)
-            # Also set for api.zsxq.com so API calls are authenticated
-            if "zsxq.com" in domain:
-                session.cookies.set(cookie["name"], cookie["value"],
-                                    domain="api.zsxq.com")
-    finally:
-        driver.quit()
-
-    print(f"Loaded {len(session.cookies)} cookies from Chrome profile.\n")
+    print(f"Loaded {len(cookies)} cookies from Chrome profile.\n")
     return session
 
 
