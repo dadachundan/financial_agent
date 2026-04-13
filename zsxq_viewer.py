@@ -95,6 +95,9 @@ __MCW_HEAD__
     .tag-edit-input, .comment-edit-input { font-size:.78rem; padding:1px 4px;
                       border:1px solid #999; border-radius:3px; width:100%; }
     __MCW_CSS__
+    /* Column toggle */
+    .col-extra { display: none; }
+    body.show-extra-cols .col-extra { display: table-cell; }
   </style>
 </head>
 <body>
@@ -237,6 +240,15 @@ __URLPATCH__
         {{ '★' * stars }}+</a>
       {% endfor %}
     </div>
+
+    <!-- Column toggle -->
+    <div class="d-flex filter-row align-items-center">
+      <span class="filter-label">Columns:</span>
+      <div class="form-check form-switch mb-0">
+        <input class="form-check-input" type="checkbox" id="showMoreCols" role="switch">
+        <label class="form-check-label small text-muted" for="showMoreCols">Show more columns</label>
+      </div>
+    </div>
   </div>
 
   <!-- Table -->
@@ -253,15 +265,15 @@ __URLPATCH__
           </th>
           <th>File name</th>
           <th>Title</th>
-          <th>Categories</th>
-          <th>Tickers</th>
-          <th>Tags</th>
-          <th>Size</th>
-          <th>Rating</th>
+          <th class="col-extra">Categories</th>
+          <th class="col-extra">Tickers</th>
+          <th class="col-extra">Tags</th>
+          <th class="col-extra">Size</th>
+          <th class="col-extra">Rating</th>
           <th>Summary</th>
           <th>PDF</th>
-          <th>Comment</th>
-          <th>Analysis</th>
+          <th class="col-extra">Comment</th>
+          <th class="col-extra">Analysis</th>
         </tr>
       </thead>
       <tbody>
@@ -277,7 +289,7 @@ __URLPATCH__
           <td class="title-col">{{ row.topic_title or '—' }}</td>
 
           <!-- 4-category badges -->
-          <td class="cat-col">
+          <td class="cat-col col-extra">
             {%- macro cat_badge(val, label) %}
               {%- if val == 1 %}
                 <span class="cat-badge cat-yes">{{ label }}</span>
@@ -294,7 +306,7 @@ __URLPATCH__
           </td>
 
           <!-- Tickers cell -->
-          <td style="max-width:110px" id="tickers-cell-{{ row.file_id }}">
+          <td class="col-extra" style="max-width:110px" id="tickers-cell-{{ row.file_id }}">
             <span data-tickers="{{ (row.tickers or '')|e }}">
               {%- if row.tickers %}
                 {%- set ticker_list = row.tickers.split(',') %}
@@ -313,7 +325,7 @@ __URLPATCH__
           </td>
 
           <!-- Tags cell -->
-          <td style="max-width:110px" id="tags-cell-{{ row.file_id }}">
+          <td class="col-extra" style="max-width:110px" id="tags-cell-{{ row.file_id }}">
             <span data-tags="{{ (row.tags or '')|e }}">
               {%- if row.tags %}
                 {%- for t in row.tags.split(',') %}
@@ -326,11 +338,11 @@ __URLPATCH__
             </span>
           </td>
 
-          <td class="text-end text-nowrap">
+          <td class="col-extra text-end text-nowrap">
             {{ '%.1f MB' % (row.file_size / 1048576) if row.file_size else '—' }}
           </td>
 
-          <td class="text-nowrap" style="min-width:90px">
+          <td class="col-extra text-nowrap" style="min-width:90px">
             <span class="star-rating" data-id="{{ row.file_id }}" data-rating="{{ row.user_rating or 0 }}">
               {% for s in range(1, 6) %}
               <span class="star" data-val="{{ s }}"
@@ -364,13 +376,13 @@ __URLPATCH__
           </td>
 
           <!-- Comment cell -->
-          <td style="max-width:160px" id="comment-cell-{{ row.file_id }}">
+          <td class="col-extra" style="max-width:160px" id="comment-cell-{{ row.file_id }}">
             <span class="comment-preview" data-comment="{{ (row.comment or '')|e }}"
                   onclick="viewComment({{ row.file_id }}, this)"
                   title="Click to preview / edit"></span>
           </td>
 
-          <td class="analysis-col text-muted">
+          <td class="col-extra analysis-col text-muted">
             {{ (row.categories_analysis or row.ai_robotics_analysis or '')[:180] or '—' }}
           </td>
         </tr>
@@ -686,6 +698,22 @@ __MCW_FOOTER__
   }
 
   __MCW_JS__
+
+  // ── Column toggle ────────────────────────────────────────────────────────
+  (function() {
+    const KEY = 'zsxq_show_extra_cols';
+    const cb  = document.getElementById('showMoreCols');
+    function apply(show) {
+      document.body.classList.toggle('show-extra-cols', show);
+      cb.checked = show;
+    }
+    // Restore from localStorage
+    apply(localStorage.getItem(KEY) === '1');
+    cb.addEventListener('change', function() {
+      localStorage.setItem(KEY, this.checked ? '1' : '0');
+      apply(this.checked);
+    });
+  })();
 </script>
 </body>
 </html>
