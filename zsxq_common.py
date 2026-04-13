@@ -10,6 +10,7 @@ Covers:
   - SQLite database init and upsert (zsxq.db)
 """
 
+import json
 import re
 import sqlite3
 import time
@@ -27,6 +28,9 @@ SCRIPT_DIR              = Path(__file__).parent
 DEFAULT_CHROME_PROFILE  = SCRIPT_DIR / "chrome_profile"
 DEFAULT_DB              = SCRIPT_DIR / "db" / "zsxq.db"
 DEFAULT_DOWNLOADS       = Path("~/Downloads/zsxq_reports").expanduser()
+# Pre-saved cookies file — avoids macOS Keychain prompt in headless/scheduled runs.
+# Generate with: python3 download/zsxq_downloader.py --save-cookies
+COOKIES_FILE            = SCRIPT_DIR.parent / "zsxq_cookies.json"
 
 HEADERS = {
     "User-Agent": (
@@ -41,8 +45,34 @@ HEADERS = {
 
 # ── Cookie / session ──────────────────────────────────────────────────────────
 
-def get_session_via_selenium(chrome_profile: Path) -> requests.Session:
-    """Build a requests.Session with zsxq cookies read from a Chrome profile."""
+def get_session_from_file(cookies_file: Path) -> requests.Session:
+    """Build a requests.Session from a pre-saved JSON cookies file.
+
+    The file is a list of {"name": ..., "value": ...} objects.
+    Generate it once interactively with:
+        python3 download/zsxq_downloader.py --save-cookies
+    """
+    data = json.loads(cookies_file.read_text())
+    session = requests.Session()
+    for c in data:
+        session.cookies.set(c["name"], c["value"])
+        session.cookies.set(c["name"], c["value"], domain="api.zsxq.com")
+    print(f"Loaded {len(data)} cookies from {cookies_file}.\n")
+    return session
+
+
+def get_session_via_selenium(chrome_profile: Path,
+                             save_to: Path | None = None) -> requests.Session:
+    """Build a requests.Session with zsxq cookies read from a Chrome profile.
+
+    If save_to is given, also writes the cookies to that JSON file so future
+    headless runs can use get_session_from_file() instead (no Keychain prompt).
+    """
+    # Fast path: use pre-saved cookies file to avoid macOS Keychain prompt.
+    if save_to is None and COOKIES_FILE.exists():
+        print(f"Using saved cookies from {COOKIES_FILE} (run --save-cookies to refresh).")
+        return get_session_from_file(COOKIES_FILE)
+
     cookie_file = chrome_profile / "Default" / "Cookies"
     if not cookie_file.exists():
         raise FileNotFoundError(f"Cookie file not found: {cookie_file}")
@@ -58,6 +88,16 @@ def get_session_via_selenium(chrome_profile: Path) -> requests.Session:
         session.cookies.set(c.name, c.value, domain="api.zsxq.com")
 
     print(f"Loaded {len(cookies)} cookies from Chrome profile.\n")
+
+    dest = save_to or COOKIES_FILE
+    if save_to or not dest.exists():
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(json.dumps(
+            [{"name": c.name, "value": c.value} for c in cookies],
+            ensure_ascii=False, indent=2,
+        ))
+        print(f"Saved {len(cookies)} cookies → {dest}\n")
+
     return session
 
 

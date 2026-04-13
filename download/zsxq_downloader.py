@@ -35,6 +35,7 @@ from pathlib import Path
 
 from zsxq_classify import classify_one
 from zsxq_common import (
+    COOKIES_FILE,
     DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
     do_download, fetch_all_files, get_session_via_selenium,
     init_db, upsert_entry,
@@ -66,6 +67,9 @@ def main() -> None:
                         help="Seconds between MiniMax API calls (default: 1.0)")
     parser.add_argument("--classify",       action="store_true",
                         help="Run MiniMax classification after download (off by default)")
+    parser.add_argument("--save-cookies",   action="store_true",
+                        help=f"Extract cookies from Chrome profile, save to {COOKIES_FILE}, "
+                             "then exit. Run this once interactively to enable headless operation.")
     args = parser.parse_args()
     args.no_classify = not args.classify
 
@@ -87,6 +91,11 @@ def main() -> None:
         print(f"ERROR: Chrome profile not found at {chrome_profile}")
         print("Make sure chrome_profile/ exists and you've logged into wx.zsxq.com.")
         sys.exit(1)
+
+    if args.save_cookies:
+        get_session_via_selenium(chrome_profile, save_to=COOKIES_FILE)
+        print("Done. Scheduled tasks will now load cookies from this file.")
+        return
 
     out_dir = Path(args.out).expanduser()
     out_dir.mkdir(parents=True, exist_ok=True)
