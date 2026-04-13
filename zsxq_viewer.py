@@ -701,13 +701,13 @@ __MCW_FOOTER__
 
   // ── Column toggle ────────────────────────────────────────────────────────
   (function() {
-    const KEY = 'zsxq_show_extra_cols';
+    const KEY = 'zsxq_show_extra_cols_v2';  // v2: default OFF
     const cb  = document.getElementById('showMoreCols');
     function apply(show) {
       document.body.classList.toggle('show-extra-cols', show);
       cb.checked = show;
     }
-    // Restore from localStorage
+    // Default OFF unless user explicitly saved ON
     apply(localStorage.getItem(KEY) === '1');
     cb.addEventListener('change', function() {
       localStorage.setItem(KEY, this.checked ? '1' : '0');
@@ -943,7 +943,7 @@ def print_view():
     )
 
 
-_PAGE_SIZE = 50
+_PAGE_SIZE = 30
 
 
 def _page_range(cur: int, tot: int) -> list:
