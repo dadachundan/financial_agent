@@ -28,6 +28,11 @@
   }
   #load-btn:hover { background: #2ea043; }
   #load-btn:disabled { background: #21262d; color: #8b949e; cursor: default; }
+  #reset-btn {
+    background: #21262d; border: 1px solid #30363d; color: #8b949e;
+    padding: 6px 12px; border-radius: 6px; font-size: 13px; cursor: pointer;
+  }
+  #reset-btn:hover { border-color: #58a6ff; color: #58a6ff; }
 
   #status { font-size: 13px; color: #8b949e; }
   #shape-badge {
@@ -83,6 +88,7 @@
     </div>
 
     <button id="load-btn" onclick="loadChart()">Load</button>
+    <button id="reset-btn" onclick="resetZoom()" title="Reset zoom (or double-click chart)">⊙ Reset</button>
     <span id="status"></span>
   </div>
   <span id="shape-badge"></span>
@@ -278,6 +284,11 @@ function renderVshapes(d) {
         <div class="vs-meta">pivot @ ${midPx}</div>
       </div>`;
   }).join('');
+}
+
+function resetZoom() {
+  Plotly.relayout('main-chart', { 'xaxis.autorange': true, 'yaxis.autorange': true });
+  Plotly.relayout('vol-chart',  { 'xaxis.autorange': true, 'yaxis.autorange': true });
 }
 
 function zoomTo(idxL, idxR) {
