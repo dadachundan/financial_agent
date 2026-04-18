@@ -52,9 +52,7 @@
     background: #161b22; border-left: 1px solid #21262d;
     overflow-y: auto; max-height: calc(100vh - 60px);
     padding: 12px; font-size: 13px; display: none;
-    transition: transform .2s ease;
   }
-  #vshape-panel.collapsed { transform: translateX(248px); overflow-y: hidden; }
   #vshape-panel h3 {
     color: #58a6ff; font-size: 13px; margin: 0;
     display: flex; justify-content: space-between; align-items: center;
@@ -64,7 +62,7 @@
     font-size: 15px; padding: 0 2px; line-height: 1;
   }
   #vshape-toggle:hover { color: #e6edf3; }
-  #vshape-list { margin-top: 10px; }
+  #vshape-list { margin-top: 10px; transition: none; }
   .vs-card {
     background: #0d1117; border: 1px solid #21262d; border-radius: 6px;
     padding: 8px 10px; margin-bottom: 8px; cursor: pointer;
@@ -382,12 +380,13 @@ function buildVshapeShapes(d) {
 
 // ── V-shape side panel ───────────────────────────────────────────────────────
 function toggleVshapePanel() {
-  const panel  = document.getElementById('vshape-panel');
-  const btn    = document.getElementById('vshape-toggle');
-  const collapsed = panel.classList.toggle('collapsed');
-  btn.textContent = collapsed ? '›' : '‹';
-  btn.title       = collapsed ? 'Expand' : 'Collapse';
-  document.getElementById('chart-wrap').style.marginRight = collapsed ? '14px' : '268px';
+  const list = document.getElementById('vshape-list');
+  const btn  = document.getElementById('vshape-toggle');
+  const collapsed = list.style.display === 'none';
+  list.style.display = collapsed ? 'block' : 'none';
+  btn.textContent = collapsed ? '‹' : '›';
+  btn.title       = collapsed ? 'Collapse' : 'Expand';
+  document.getElementById('chart-wrap').style.marginRight = collapsed ? '268px' : '14px';
 }
 
 function renderVshapes(d) {
