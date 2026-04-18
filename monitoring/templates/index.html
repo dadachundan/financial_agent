@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Price Shape Monitor</title>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         background: #0d1117; color: #e6edf3; min-height: 100vh; }
+
+  header { padding: 16px 24px; border-bottom: 1px solid #21262d;
+           display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  header h1 { font-size: 16px; font-weight: 600; color: #58a6ff; white-space: nowrap; }
+
+  .controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; flex: 1; }
+  .controls input, .controls select {
+    background: #161b22; border: 1px solid #30363d; color: #e6edf3;
+    padding: 6px 12px; border-radius: 6px; font-size: 14px; outline: none;
+  }
+  .controls input:focus, .controls select:focus { border-color: #58a6ff; }
+  #ticker-input { width: 160px; text-transform: uppercase; }
+  .controls label { font-size: 13px; color: #8b949e; white-space: nowrap; }
+
+  #load-btn {
+    background: #238636; border: none; color: #fff; padding: 6px 18px;
+    border-radius: 6px; font-size: 14px; cursor: pointer; font-weight: 500;
+  }
+  #load-btn:hover { background: #2ea043; }
+  #load-btn:disabled { background: #21262d; color: #8b949e; cursor: default; }
+
+  #status { font-size: 13px; color: #8b949e; }
+  #shape-badge {
+    font-size: 13px; padding: 3px 10px; border-radius: 12px;
+    background: #1f2937; border: 1px solid #374151; display: none;
+  }
+
+  #chart-wrap { height: calc(100vh - 130px); padding: 0 8px; }
+  #main-chart  { width: 100%; height: 75%; }
+  #vol-chart   { width: 100%; height: 25%; }
+
+  #vshape-panel {
+    position: fixed; right: 0; top: 60px; width: 260px;
+    background: #161b22; border-left: 1px solid #21262d;
+    overflow-y: auto; max-height: calc(100vh - 60px);
+    padding: 12px; font-size: 13px; display: none;
+  }
+  #vshape-panel h3 { color: #58a6ff; margin-bottom: 10px; font-size: 13px; }
+  .vs-card {
+    background: #0d1117; border: 1px solid #21262d; border-radius: 6px;
+    padding: 8px 10px; margin-bottom: 8px; cursor: pointer;
+  }
+  .vs-card:hover { border-color: #58a6ff; }
+  .vs-card .vs-type { font-weight: 600; }
+  .vs-card.vbottom .vs-type { color: #3fb950; }
+  .vs-card.invv    .vs-type { color: #f85149; }
+  .vs-card .vs-meta { color: #8b949e; margin-top: 3px; font-size: 12px; }
+
+  .threshold-wrap { display: flex; align-items: center; gap: 8px; }
+  #threshold-val { width: 32px; text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Price Shape Monitor</h1>
+  <div class="controls">
+    <input id="ticker-input" placeholder="e.g. SZSE:002371" value="SZSE:002371" />
+
+    <select id="days-select">
+      <option value="90">3M</option>
+      <option value="180">6M</option>
+      <option value="365" selected>1Y</option>
+      <option value="730">2Y</option>
+    </select>
+
+    <div class="threshold-wrap">
+      <label>ZigZag&nbsp;%</label>
+      <input type="range" id="threshold-range" min="2" max="20" step="0.5" value="5"
+             style="width:90px;" oninput="document.getElementById('threshold-val').value=this.value">
+      <input type="number" id="threshold-val" value="5" min="2" max="20" step="0.5"
+             oninput="document.getElementById('threshold-range').value=this.value">
+    </div>
+
+    <button id="load-btn" onclick="loadChart()">Load</button>
+    <span id="status"></span>
+  </div>
+  <span id="shape-badge"></span>
+</header>
+
+<div id="chart-wrap">
+  <div id="main-chart"></div>
+  <div id="vol-chart"></div>
+</div>
+
+<div id="vshape-panel">
+  <h3>V-shapes detected</h3>
+  <div id="vshape-list"></div>
+</div>
+
+<script>
+let _data = null;   // last API response
+
+// ── keyboard shortcut: Enter ───────────────────────────────────────────────
+document.getElementById('ticker-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') loadChart();
+});
+
+// ── auto-load on page open ─────────────────────────────────────────────────
+window.addEventListener('load', () => loadChart());
+
+// ── main loader ─────────────────────────────────────────────────────────────
+async function loadChart() {
+  const ticker    = document.getElementById('ticker-input').value.trim().toUpperCase();
+  const days      = document.getElementById('days-select').value;
+  const threshold = document.getElementById('threshold-val').value;
+  if (!ticker) return;
+
+  const btn = document.getElementById('load-btn');
+  btn.disabled = true;
+  setStatus('Loading…');
+
+  try {
+    const res  = await fetch(`/api/chart?ticker=${encodeURIComponent(ticker)}&days=${days}&threshold=${threshold}`);
+    const data = await res.json();
+    if (data.error) { setStatus('Error: ' + data.error, true); btn.disabled = false; return; }
+    _data = data;
+    renderChart(data);
+    renderVshapes(data);
+    setStatus('');
+  } catch(e) {
+    setStatus('Network error', true);
+  }
+  btn.disabled = false;
+}
+
+function setStatus(msg, err=false) {
+  const el = document.getElementById('status');
+  el.textContent = msg;
+  el.style.color = err ? '#f85149' : '#8b949e';
+}
+
+// ── chart rendering ──────────────────────────────────────────────────────────
+function renderChart(d) {
+  const badge = document.getElementById('shape-badge');
+  badge.textContent = d.shape_label;
+  badge.style.display = 'inline';
+
+  // Candlestick
+  const candles = {
+    type: 'candlestick',
+    x: d.dates, open: d.open, high: d.high, low: d.low, close: d.close,
+    name: d.ticker,
+    increasing: { line: { color: '#ef5350' }, fillcolor: '#ef5350' },  // Chinese convention: red=up
+    decreasing: { line: { color: '#26a69a' }, fillcolor: '#26a69a' },
+    xaxis: 'x', yaxis: 'y',
+  };
+
+  // ZigZag line
+  const zzX = d.pivots.map(p => p.date);
+  const zzY = d.pivots.map(p => p.price);
+  const zigzag = {
+    type: 'scatter', mode: 'lines',
+    x: zzX, y: zzY,
+    line: { color: '#f0a500', width: 2 },
+    name: 'ZigZag',
+    xaxis: 'x', yaxis: 'y',
+  };
+
+  // Peaks + troughs
+  const peaks   = d.pivots.filter(p => p.direction === +1);
+  const troughs = d.pivots.filter(p => p.direction === -1);
+
+  const peakMarkers = {
+    type: 'scatter', mode: 'markers',
+    x: peaks.map(p => p.date), y: peaks.map(p => p.price),
+    marker: { color: '#f85149', size: 8, symbol: 'triangle-down' },
+    name: 'Peak', xaxis: 'x', yaxis: 'y',
+  };
+  const troughMarkers = {
+    type: 'scatter', mode: 'markers',
+    x: troughs.map(p => p.date), y: troughs.map(p => p.price),
+    marker: { color: '#3fb950', size: 8, symbol: 'triangle-up' },
+    name: 'Trough', xaxis: 'x', yaxis: 'y',
+  };
+
+  // V-shape shaded regions
+  const vShapes = buildVshapeShapes(d);
+
+  const layout = {
+    paper_bgcolor: '#0d1117', plot_bgcolor: '#0d1117',
+    font: { color: '#8b949e', size: 12 },
+    margin: { t: 10, b: 0, l: 60, r: 10 },
+    xaxis: {
+      type: 'category',
+      rangeslider: { visible: false },
+      showgrid: true, gridcolor: '#21262d',
+      tickfont: { size: 11 },
+    },
+    yaxis: {
+      showgrid: true, gridcolor: '#21262d',
+      tickfont: { size: 11 }, side: 'right',
+    },
+    legend: {
+      orientation: 'h', x: 0, y: 1.02, bgcolor: 'rgba(0,0,0,0)',
+      font: { size: 11 },
+    },
+    shapes: vShapes,
+    hovermode: 'x unified',
+  };
+
+  Plotly.react('main-chart', [candles, zigzag, peakMarkers, troughMarkers], layout,
+    { displayModeBar: false, responsive: true });
+
+  // Volume chart
+  const colors = d.close.map((c, i) => c >= d.open[i] ? '#ef535099' : '#26a69a99');
+  const volTrace = {
+    type: 'bar', x: d.dates, y: d.volume, marker: { color: colors },
+    name: 'Volume', xaxis: 'x', yaxis: 'y',
+  };
+  const volLayout = {
+    paper_bgcolor: '#0d1117', plot_bgcolor: '#0d1117',
+    font: { color: '#8b949e', size: 11 },
+    margin: { t: 4, b: 40, l: 60, r: 10 },
+    xaxis: { type: 'category', showgrid: false, tickangle: -30, tickfont: { size: 10 } },
+    yaxis: { showgrid: true, gridcolor: '#21262d', side: 'right', tickfont: { size: 10 } },
+    showlegend: false,
+  };
+  Plotly.react('vol-chart', [volTrace], volLayout,
+    { displayModeBar: false, responsive: true });
+
+  // sync x-axis zoom between both charts
+  document.getElementById('main-chart').on('plotly_relayout', ev => {
+    if (ev['xaxis.range[0]'] !== undefined) {
+      Plotly.relayout('vol-chart', {
+        'xaxis.range[0]': ev['xaxis.range[0]'],
+        'xaxis.range[1]': ev['xaxis.range[1]'],
+      });
+    }
+  });
+}
+
+// Build semi-transparent rect shapes for each V-bottom / inv-V
+function buildVshapeShapes(d) {
+  return d.vshapes.map(vs => ({
+    type: 'rect',
+    xref: 'x', yref: 'paper',
+    x0: d.dates[vs.idx_left],
+    x1: d.dates[vs.idx_right],
+    y0: 0, y1: 1,
+    fillcolor: vs.type === 'V-bottom' ? 'rgba(63,185,80,0.07)' : 'rgba(248,81,73,0.07)',
+    line: { width: 0 },
+    layer: 'below',
+  }));
+}
+
+// ── V-shape side panel ───────────────────────────────────────────────────────
+function renderVshapes(d) {
+  const panel = document.getElementById('vshape-panel');
+  const list  = document.getElementById('vshape-list');
+
+  if (!d.vshapes.length) { panel.style.display = 'none'; return; }
+
+  panel.style.display = 'block';
+  // shift chart area to avoid overlap
+  document.getElementById('chart-wrap').style.marginRight = '268px';
+
+  list.innerHTML = d.vshapes.map((vs, i) => {
+    const cls   = vs.type === 'V-bottom' ? 'vbottom' : 'invv';
+    const emoji = vs.type === 'V-bottom' ? '▼→▲' : '▲→▼';
+    const dateL = d.dates[vs.idx_left];
+    const dateR = d.dates[vs.idx_right];
+    const midPx = d.close[vs.idx_mid].toFixed(2);
+    return `
+      <div class="vs-card ${cls}" onclick="zoomTo(${vs.idx_left}, ${vs.idx_right})">
+        <div class="vs-type">${emoji} ${vs.type}  −${vs.depth_pct}%</div>
+        <div class="vs-meta">${dateL} → ${dateR}</div>
+        <div class="vs-meta">pivot @ ${midPx}</div>
+      </div>`;
+  }).join('');
+}
+
+function zoomTo(idxL, idxR) {
+  if (!_data) return;
+  // add a small buffer
+  const buf = Math.max(3, Math.round((idxR - idxL) * 0.15));
+  const x0  = _data.dates[Math.max(0, idxL - buf)];
+  const x1  = _data.dates[Math.min(_data.dates.length - 1, idxR + buf)];
+  Plotly.relayout('main-chart', { 'xaxis.range': [x0, x1] });
+  Plotly.relayout('vol-chart',  { 'xaxis.range': [x0, x1] });
+}
+</script>
+</body>
+</html>

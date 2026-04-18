@@ -49,5 +49,12 @@
       "runtimeArgs": ["/Users/x/projects/financial_agent/pe/app.py", "--port", "8004"],
       "port": 8004
     }
+  ,
+    {
+      "name": "price-shape",
+      "runtimeExecutable": "/opt/anaconda3/bin/python3",
+      "runtimeArgs": ["/Users/x/projects/financial_agent/monitoring/app.py", "--port", "8005"],
+      "port": 8005
+    }
   ]
 }
