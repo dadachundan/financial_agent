@@ -215,7 +215,7 @@ __URLPATCH__
     </div>
 
     <!-- Group filter row -->
-    {% if all_group_ids|length > 1 %}
+    {% if all_group_ids|length >= 1 %}
     <div class="d-flex filter-row">
       <span class="filter-label">Group:</span>
       <select id="groupSelect" class="form-select form-select-sm" style="max-width:220px"
