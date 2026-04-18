@@ -15,6 +15,7 @@ import sqlite3
 import time
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import unquote
 
 import browser_cookie3
 import requests
@@ -65,6 +66,28 @@ def get_session_via_selenium(chrome_profile: Path) -> requests.Session:
 
 def sanitize_filename(name: str) -> str:
     return re.sub(r'[\\/:*?"<>|]', '_', name)
+
+
+def clean_zsxq_text(text: str) -> str:
+    """Strip zsxq custom markup (e.g. <e type="hashtag" .../>) from text.
+
+    Hashtag/mention tags are replaced with their decoded title so
+    '#农产品#' becomes '#农产品' in the output.
+    """
+    if not text:
+        return text
+
+    def _replace(m: re.Match) -> str:
+        title_m = re.search(r'title="([^"]*)"', m.group(0))
+        if title_m:
+            decoded = unquote(title_m.group(1)).strip('#').strip()
+            return f'#{decoded}' if decoded else ''
+        return ''
+
+    text = re.sub(r'<e\b[^>]*/>', _replace, text)
+    # Collapse runs of whitespace left by removed tags
+    text = re.sub(r'[ \t]{2,}', ' ', text).strip()
+    return text
 
 
 # ── API: paginated file listing ────────────────────────────────────────────────
@@ -301,6 +324,9 @@ MIGRATIONS: list[tuple[str, str]] = [
     # v3 user annotations
     ("ALTER TABLE pdf_files ADD COLUMN tags    TEXT", "duplicate column"),
     ("ALTER TABLE pdf_files ADD COLUMN comment TEXT", "duplicate column"),
+    # v4 group tracking
+    ("ALTER TABLE pdf_files ADD COLUMN group_id TEXT", "duplicate column"),
+    ("CREATE INDEX IF NOT EXISTS idx_group_id ON pdf_files(group_id)", "already exists"),
 ]
 
 
@@ -326,10 +352,10 @@ def upsert_entry(conn: sqlite3.Connection, row: dict) -> None:
         """
         INSERT INTO pdf_files
             (file_id, name, topic_id, topic_title, summary, topic_json,
-             local_path, file_size, create_time, downloaded_at, indexed_at)
+             local_path, file_size, create_time, downloaded_at, indexed_at, group_id)
         VALUES
             (:file_id, :name, :topic_id, :topic_title, :summary, :topic_json,
-             :local_path, :file_size, :create_time, :downloaded_at, :indexed_at)
+             :local_path, :file_size, :create_time, :downloaded_at, :indexed_at, :group_id)
         ON CONFLICT(file_id) DO UPDATE SET
             name          = excluded.name,
             topic_id      = excluded.topic_id,
@@ -340,7 +366,8 @@ def upsert_entry(conn: sqlite3.Connection, row: dict) -> None:
             file_size     = excluded.file_size,
             create_time   = excluded.create_time,
             downloaded_at = COALESCE(excluded.downloaded_at, pdf_files.downloaded_at),
-            indexed_at    = excluded.indexed_at
+            indexed_at    = excluded.indexed_at,
+            group_id      = COALESCE(excluded.group_id, pdf_files.group_id)
         """,
         row,
     )

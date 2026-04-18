@@ -36,7 +36,7 @@ from pathlib import Path
 from zsxq_classify import classify_one
 from zsxq_common import (
     DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
-    do_download, fetch_all_files, get_session_via_selenium,
+    clean_zsxq_text, do_download, fetch_all_files, get_session_via_selenium,
     init_db, upsert_entry,
 )
 
@@ -148,7 +148,7 @@ def main() -> None:
         file_id = f["file_id"]
         name    = f["name"]
         size_mb = (f.get("size") or 0) / 1024 / 1024
-        summary = talk.get("text") or ""
+        summary = clean_zsxq_text(talk.get("text") or "")
 
         date_str = (f.get("create_time") or "")[:10]
         print(f"[{i}/{len(pdf_entries)}] {name[:70]}")
@@ -167,7 +167,7 @@ def main() -> None:
             "file_id":      file_id,
             "name":         name,
             "topic_id":     topic.get("topic_id"),
-            "topic_title":  (summary).split("\n")[0].strip() or topic.get("title"),
+            "topic_title":  summary.split("\n")[0].strip() or clean_zsxq_text(topic.get("title") or ""),
             "summary":      summary,
             "topic_json":   None,
             "local_path":   local_path,
@@ -175,6 +175,7 @@ def main() -> None:
             "create_time":  f.get("create_time"),
             "downloaded_at": downloaded_at,
             "indexed_at":   now,
+            "group_id":     args.group_id,
         }
         upsert_entry(conn, db_row)
         conn.commit()
