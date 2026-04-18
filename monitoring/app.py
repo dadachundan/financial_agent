@@ -11,6 +11,8 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
+import time
+import traceback
 from pathlib import Path
 from flask import Blueprint, Flask, redirect, render_template, request, jsonify
 import numpy as np
@@ -24,14 +26,24 @@ price_shape_bp = Blueprint(
     template_folder="templates",
 )
 
+# ── In-memory OHLCV cache (keyed by (ticker, days), TTL 30 min) ───────────────
+_CACHE: dict = {}          # key → {"df": df, "label": str, "ts": float}
+_CACHE_TTL = 30 * 60       # seconds
+
+
+def _cached_ohlcv(ticker: str, days: int):
+    key = (ticker.upper(), days)
+    entry = _CACHE.get(key)
+    if entry and (time.time() - entry["ts"]) < _CACHE_TTL:
+        return entry["df"], entry["label"], True   # (df, label, from_cache)
+    df, label = fetch_ohlcv(ticker, days=days)
+    _CACHE[key] = {"df": df, "label": label, "ts": time.time()}
+    return df, label, False
+
+
+# ── V-shape detection ─────────────────────────────────────────────────────────
 
 def detect_vshapes(pivot_idx, directions, prices, min_depth_pct=5.0):
-    """
-    Find V-bottoms and inverted-V tops in the pivot sequence.
-
-    A V-bottom  : peak → trough → peak   (trough drops ≥ min_depth_pct from both neighbours)
-    Inverted-V  : trough → peak → trough (peak rises ≥ min_depth_pct from both neighbours)
-    """
     shapes = []
     n = len(pivot_idx)
     for i in range(1, n - 1):
@@ -71,30 +83,55 @@ def detect_vshapes(pivot_idx, directions, prices, min_depth_pct=5.0):
     return shapes
 
 
+# ── Routes ────────────────────────────────────────────────────────────────────
+
 @price_shape_bp.route("/")
 def index():
     import nav_widget2 as nw2
     return render_template("price_shape.html", nav=nw2.NAV_HTML, _base="/price-shape")
 
 
-@price_shape_bp.route("/api/chart")
-def chart():
-    ticker    = request.args.get("ticker", "").strip()
-    days      = int(request.args.get("days", 365))
-    threshold = float(request.args.get("threshold", 5.0))
+@price_shape_bp.route("/api/ohlcv")
+def api_ohlcv():
+    """Fetch + cache raw OHLCV. Called once per ticker/period change."""
+    ticker = request.args.get("ticker", "").strip()
+    days   = int(request.args.get("days", 365))
 
     if not ticker:
         return jsonify({"error": "ticker required"}), 400
 
+    t0 = time.time()
     try:
-        df, label = fetch_ohlcv(ticker, days=days)
+        df, label, from_cache = _cached_ohlcv(ticker, days)
     except Exception as e:
-        import traceback
         return jsonify({"error": f"{type(e).__name__}: {e}",
                         "traceback": traceback.format_exc()}), 500
 
     closes = df["close"].values.astype(float)
     dates  = df["date"].values.astype("datetime64[D]").astype(str).tolist()
+
+    return jsonify({
+        "ticker":     label,
+        "dates":      dates,
+        "open":       df["open"].values.astype(float).round(2).tolist(),
+        "high":       df["high"].values.astype(float).round(2).tolist(),
+        "low":        df["low"].values.astype(float).round(2).tolist(),
+        "close":      closes.round(2).tolist(),
+        "volume":     df["volume"].values.astype(float).tolist(),
+        "from_cache": from_cache,
+        "elapsed_ms": round((time.time() - t0) * 1000),
+    })
+
+
+@price_shape_bp.route("/api/zigzag")
+def api_zigzag():
+    """Apply ZigZag + V-shape detection to already-supplied price data. Pure CPU, no network."""
+    try:
+        closes    = np.array(request.json["close"], dtype=float)
+        dates     = request.json["dates"]
+        threshold = float(request.json.get("threshold", 5.0))
+    except Exception as e:
+        return jsonify({"error": f"bad payload: {e}"}), 400
 
     pivot_idx, directions = zigzag(closes, threshold=threshold)
     vshapes = detect_vshapes(pivot_idx, directions, closes, min_depth_pct=threshold)
@@ -105,13 +142,6 @@ def chart():
     ]
 
     return jsonify({
-        "ticker":      label,
-        "dates":       dates,
-        "open":        df["open"].values.astype(float).round(2).tolist(),
-        "high":        df["high"].values.astype(float).round(2).tolist(),
-        "low":         df["low"].values.astype(float).round(2).tolist(),
-        "close":       closes.round(2).tolist(),
-        "volume":      df["volume"].values.astype(float).tolist(),
         "pivots":      pivots,
         "vshapes":     vshapes,
         "shape_label": classify_shape(pivot_idx, directions, closes),

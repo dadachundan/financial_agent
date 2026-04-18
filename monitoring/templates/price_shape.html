@@ -99,9 +99,9 @@
     <div class="threshold-wrap">
       <label>ZigZag&nbsp;%</label>
       <input type="range" id="threshold-range" min="2" max="20" step="0.5" value="5"
-             style="width:90px;" oninput="document.getElementById('threshold-val').value=this.value">
+             style="width:90px;" oninput="document.getElementById('threshold-val').value=this.value; recomputeZigzag()">
       <input type="number" id="threshold-val" value="5" min="2" max="20" step="0.5"
-             oninput="document.getElementById('threshold-range').value=this.value">
+             oninput="document.getElementById('threshold-range').value=this.value; recomputeZigzag()">
     </div>
 
     <button id="load-btn" onclick="loadChart()">Load</button>
@@ -122,7 +122,8 @@
 </div>
 
 <script>
-let _data = null;   // last API response
+let _ohlcv = null;   // raw price data (cached between threshold changes)
+let _data  = null;   // full chart data (ohlcv + zigzag)
 
 // ── keyboard shortcut: Enter ───────────────────────────────────────────────
 document.getElementById('ticker-input').addEventListener('keydown', e => {
@@ -132,33 +133,76 @@ document.getElementById('ticker-input').addEventListener('keydown', e => {
 // ── auto-load on page open ─────────────────────────────────────────────────
 window.addEventListener('load', () => loadChart());
 
-// ── main loader ─────────────────────────────────────────────────────────────
+// ── main loader — fetches OHLCV then computes ZigZag ──────────────────────
 async function loadChart() {
   const ticker    = document.getElementById('ticker-input').value.trim().toUpperCase();
-  const days      = document.getElementById('days-select').value;
-  const threshold = document.getElementById('threshold-val').value;
+  const days      = parseInt(document.getElementById('days-select').value);
+  const threshold = parseFloat(document.getElementById('threshold-val').value);
   if (!ticker) return;
 
   const btn = document.getElementById('load-btn');
   btn.disabled = true;
-  setStatus('Loading…');
 
-  try {
-    const res  = await fetch(`/api/chart?ticker=${encodeURIComponent(ticker)}&days=${days}&threshold=${threshold}`);
-    const data = await res.json();
-    if (data.error) {
-      const tb = data.traceback ? '\n\n' + data.traceback : '';
-      setStatus('Error: ' + data.error + tb, true);
+  // Step 1: fetch OHLCV (network, possibly cached on server)
+  const needsFetch = !_ohlcv
+    || _ohlcv.ticker !== ticker
+    || _ohlcv.days   !== days;
+
+  if (needsFetch) {
+    setStatus('Fetching price data…');
+    try {
+      const res = await fetch(`/api/ohlcv?ticker=${encodeURIComponent(ticker)}&days=${days}`);
+      const json = await res.json();
+      if (json.error) {
+        const tb = json.traceback ? '\n\n' + json.traceback : '';
+        setStatus('Error: ' + json.error + tb, true);
+        btn.disabled = false; return;
+      }
+      _ohlcv = { ...json, ticker, days };
+    } catch(e) {
+      setStatus('Network error: ' + e.message, true);
       btn.disabled = false; return;
     }
-    _data = data;
-    renderChart(data);
-    renderVshapes(data);
-    setStatus('');
+  }
+
+  // Step 2: compute ZigZag (CPU only, no network)
+  setStatus('Computing…');
+  try {
+    const res = await fetch('/api/zigzag', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ close: _ohlcv.close, dates: _ohlcv.dates, threshold }),
+    });
+    const zz = await res.json();
+    if (zz.error) { setStatus('Error: ' + zz.error, true); btn.disabled = false; return; }
+
+    _data = { ..._ohlcv, ...zz };
+    renderChart(_data);
+    renderVshapes(_data);
+    const src = _ohlcv.from_cache ? ' (cached)' : ` (${_ohlcv.elapsed_ms}ms)`;
+    setStatus(`${_ohlcv.ticker} · ${_ohlcv.dates.length} days${src}`);
   } catch(e) {
-    setStatus('Network error: ' + e.message, true);
+    setStatus('ZigZag error: ' + e.message, true);
   }
   btn.disabled = false;
+}
+
+// ── recompute ZigZag only when threshold changes (no refetch) ─────────────
+async function recomputeZigzag() {
+  if (!_ohlcv) return;
+  const threshold = parseFloat(document.getElementById('threshold-val').value);
+  try {
+    const res = await fetch('/api/zigzag', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ close: _ohlcv.close, dates: _ohlcv.dates, threshold }),
+    });
+    const zz = await res.json();
+    if (zz.error) return;
+    _data = { ..._ohlcv, ...zz };
+    renderChart(_data);
+    renderVshapes(_data);
+  } catch(_) {}
 }
 
 function setStatus(msg, err=false) {
