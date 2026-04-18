@@ -132,7 +132,7 @@ def api_ohlcv():
     })
 
 
-@price_shape_bp.route("/api/zigzag")
+@price_shape_bp.route("/api/zigzag", methods=["POST"])
 def api_zigzag():
     """Apply ZigZag + V-shape detection to already-supplied price data. Pure CPU, no network."""
     try:
