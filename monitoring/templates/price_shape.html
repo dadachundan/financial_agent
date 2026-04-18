@@ -35,7 +35,9 @@
   }
   #reset-btn:hover { border-color: #58a6ff; color: #58a6ff; }
 
-  #status { font-size: 13px; color: #8b949e; }
+  #status { font-size: 12px; color: #8b949e; white-space: pre-wrap; font-family: monospace;
+            max-height: 40vh; overflow-y: auto; background: #161b22; border-radius: 6px;
+            padding: 0; line-height: 1.4; }
   #shape-badge {
     font-size: 13px; padding: 3px 10px; border-radius: 12px;
     background: #1f2937; border: 1px solid #374151; display: none;
@@ -92,7 +94,7 @@
 
     <button id="load-btn" onclick="loadChart()">Load</button>
     <button id="reset-btn" onclick="resetZoom()" title="Reset zoom (or double-click chart)">⊙ Reset</button>
-    <span id="status"></span>
+    <pre id="status"></pre>
   </div>
   <span id="shape-badge"></span>
 </header>
@@ -132,13 +134,17 @@ async function loadChart() {
   try {
     const res  = await fetch(`/api/chart?ticker=${encodeURIComponent(ticker)}&days=${days}&threshold=${threshold}`);
     const data = await res.json();
-    if (data.error) { setStatus('Error: ' + data.error, true); btn.disabled = false; return; }
+    if (data.error) {
+      const tb = data.traceback ? '\n\n' + data.traceback : '';
+      setStatus('Error: ' + data.error + tb, true);
+      btn.disabled = false; return;
+    }
     _data = data;
     renderChart(data);
     renderVshapes(data);
     setStatus('');
   } catch(e) {
-    setStatus('Network error', true);
+    setStatus('Network error: ' + e.message, true);
   }
   btn.disabled = false;
 }

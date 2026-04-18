@@ -89,7 +89,9 @@ def chart():
     try:
         df, label = fetch_ohlcv(ticker, days=days)
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        import traceback
+        return jsonify({"error": f"{type(e).__name__}: {e}",
+                        "traceback": traceback.format_exc()}), 500
 
     closes = df["close"].values.astype(float)
     dates  = df["date"].values.astype("datetime64[D]").astype(str).tolist()
