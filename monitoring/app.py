@@ -89,7 +89,16 @@ def detect_vshapes(pivot_idx, directions, prices, min_depth_pct=5.0):
                     "depth_pct": round(depth, 1),
                 })
 
-    return shapes
+    # Greedy non-overlapping filter: keep a shape only when it starts
+    # strictly after the previous kept shape ends (no shared pivots).
+    non_overlapping = []
+    last_right = -1
+    for s in shapes:
+        if s["idx_left"] > last_right:
+            non_overlapping.append(s)
+            last_right = s["idx_right"]
+
+    return non_overlapping
 
 
 # ── Routes ────────────────────────────────────────────────────────────────────
