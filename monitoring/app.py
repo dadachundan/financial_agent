@@ -98,7 +98,7 @@ def detect_vshapes(pivot_idx, directions, prices, min_depth_pct=5.0):
             non_overlapping.append(s)
             last_right = s["idx_right"]
 
-    return non_overlapping
+    return list(reversed(non_overlapping))
 
 
 # ── Routes ────────────────────────────────────────────────────────────────────
