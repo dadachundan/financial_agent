@@ -129,6 +129,13 @@ def main() -> None:
 
     pdf_entries = [e for e in entries if e["file"]["name"].lower().endswith(".pdf")]
 
+    # Skip Chinese-translation copies (filenames starting with 中文版)
+    before_cn = len(pdf_entries)
+    pdf_entries = [e for e in pdf_entries if not e["file"]["name"].startswith("中文版")]
+    skipped_cn = before_cn - len(pdf_entries)
+    if skipped_cn:
+        print(f"Skipped {skipped_cn} 中文版 file(s).")
+
     # Apply to_date upper bound (fetch_all_files doesn't filter this end)
     if to_date:
         pdf_entries = [
