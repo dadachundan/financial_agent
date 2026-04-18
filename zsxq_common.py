@@ -327,6 +327,9 @@ MIGRATIONS: list[tuple[str, str]] = [
     # v4 group tracking
     ("ALTER TABLE pdf_files ADD COLUMN group_id TEXT", "duplicate column"),
     ("CREATE INDEX IF NOT EXISTS idx_group_id ON pdf_files(group_id)", "already exists"),
+    # v5 claude recommendation rating
+    ("ALTER TABLE pdf_files ADD COLUMN claude_rating INTEGER", "duplicate column"),
+    ("CREATE INDEX IF NOT EXISTS idx_claude_rating ON pdf_files(claude_rating)", "already exists"),
 ]
 
 
