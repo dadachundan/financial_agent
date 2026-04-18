@@ -70,12 +70,38 @@ def fetch_us(ticker: str, days: int):
     return df[["date", "open", "high", "low", "close", "volume"]].reset_index(drop=True)
 
 
+def resolve_ticker(ticker: str) -> str:
+    """
+    Normalise a bare ticker to exchange:code form.
+
+    Rules
+    -----
+    Already has ':'          → pass through unchanged
+    Pure digits, 6 chars
+      starts 0/1/2/3         → SZSE (Shenzhen main board + ChiNext)
+      starts 4/5/6/7/8/9     → SSE  (Shanghai main board + STAR)
+    Pure digits, 1–5 chars   → HKEX (zero-pad to 5 digits)
+    Letters (A-Z, dots, -)   → US   (yfinance, returned as-is)
+    """
+    t = ticker.strip().upper()
+    if ":" in t:
+        return t
+    if t.isdigit():
+        if len(t) == 6:
+            return ("SZSE:" if t[0] in "0123" else "SSE:") + t
+        # HK codes: 1–5 digits, zero-pad to 5
+        return "HKEX:" + t.zfill(5)
+    # letters → US stock
+    return t
+
+
 def fetch_ohlcv(ticker: str, days: int = 365):
-    if ":" in ticker:
-        exchange, code = ticker.split(":", 1)
-        return fetch_ashare(code, exchange, days), ticker
+    resolved = resolve_ticker(ticker)
+    if ":" in resolved:
+        exchange, code = resolved.split(":", 1)
+        return fetch_ashare(code, exchange, days), resolved
     else:
-        return fetch_us(ticker, days), ticker
+        return fetch_us(resolved, days), resolved
 
 
 # ──────────────────────────────────────────────
