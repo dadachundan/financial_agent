@@ -71,6 +71,18 @@
 <body>
 
 {{ nav | safe }}
+<script id="_urlPatch">
+(function(){
+  var b='{{ _base | default("") }}';
+  if(!b) return;
+  window._BASE=b;
+  var _f=window.fetch;
+  window.fetch=function(u,o){
+    if(typeof u==='string'&&u.charAt(0)==='/') u=b+u;
+    return _f.call(this,u,o);
+  };
+})();
+</script>
 
 <header>
   <h1>Price Shape Monitor</h1>
