@@ -214,6 +214,24 @@ __URLPATCH__
       {% endif %}
     </div>
 
+    <!-- Group filter row -->
+    {% if all_group_ids|length > 1 %}
+    <div class="d-flex filter-row">
+      <span class="filter-label">Group:</span>
+      <select id="groupSelect" class="form-select form-select-sm" style="max-width:220px"
+              onchange="applyGroupId(this.value)">
+        <option value="">All groups</option>
+        {% for g in all_group_ids %}
+        <option value="{{ g }}" {{ 'selected' if g == current_group_id else '' }}>{{ g }}</option>
+        {% endfor %}
+      </select>
+      {% if current_group_id %}
+      <a href="#" onclick="applyGroupId('');return false"
+         class="btn btn-sm btn-link text-muted p-0">✕ clear</a>
+      {% endif %}
+    </div>
+    {% endif %}
+
     <!-- Date filter row -->
     <div class="d-flex filter-row">
       <span class="filter-label">Date:</span>
@@ -601,6 +619,13 @@ __MCW_FOOTER__
     window.location.href = '?' + params.toString();
   }
 
+  function applyGroupId(gid) {
+    const params = new URLSearchParams(window.location.search);
+    params.delete('page');
+    if (gid) { params.set('group_id', gid); } else { params.delete('group_id'); }
+    window.location.href = '?' + params.toString();
+  }
+
   function editTags(fileId, btn) {
     const wrapper = btn.closest('[data-tags]');
     const cell    = btn.closest('td');
@@ -761,9 +786,17 @@ def _get_all_tickers(conn: sqlite3.Connection) -> list[str]:
     return sorted(seen)
 
 
+def _get_all_group_ids(conn: sqlite3.Connection) -> list[str]:
+    rows = conn.execute(
+        "SELECT DISTINCT group_id FROM pdf_files WHERE group_id IS NOT NULL AND group_id != '' ORDER BY group_id"
+    ).fetchall()
+    return [r["group_id"] for r in rows]
+
+
 def _build_where(f: str, ticker: str, tag: str,
                  date_from: str, date_to: str,
-                 min_rating: int = 0, q: str = "") -> tuple[str, list]:
+                 min_rating: int = 0, q: str = "",
+                 group_id: str = "") -> tuple[str, list]:
     """Build WHERE clause + params from filter args (shared by index and print-view)."""
     conditions: list[str] = []
     params: list = []
@@ -800,6 +833,9 @@ def _build_where(f: str, ticker: str, tag: str,
             "(name LIKE ? OR topic_title LIKE ? OR tickers LIKE ? OR tags LIKE ? OR comment LIKE ?)"
         )
         params.extend([like, like, like, like, like])
+    if group_id:
+        conditions.append("group_id = ?")
+        params.append(group_id)
     where = ("WHERE " + " AND ".join(conditions)) if conditions else ""
     return where, params
 
@@ -904,6 +940,7 @@ def print_view():
     sort      = request.args.get("sort", "desc").lower()
     date_from = request.args.get("date_from", "").strip()
     date_to   = request.args.get("date_to",   "").strip()
+    group_id  = request.args.get("group_id", "").strip()
     try:
         min_rating = max(0, min(5, int(request.args.get("min_rating", 0))))
     except ValueError:
@@ -912,7 +949,7 @@ def print_view():
     if sort not in ("asc", "desc"):
         sort = "desc"
 
-    where, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q)
+    where, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id)
     # Only rows that have a comment
     comment_cond = "comment IS NOT NULL AND comment != ''"
     if where:
@@ -969,6 +1006,7 @@ def index():
     sort       = request.args.get("sort", "desc").lower()
     date_from  = request.args.get("date_from", "").strip()
     date_to    = request.args.get("date_to",   "").strip()
+    group_id   = request.args.get("group_id", "").strip()
     try:
         min_rating = max(0, min(5, int(request.args.get("min_rating", 0))))
     except ValueError:
@@ -1002,7 +1040,7 @@ def index():
         "FROM pdf_files"
     ).fetchone()
 
-    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q)
+    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id)
     order = "ASC" if sort == "asc" else "DESC"
 
     total_rows  = conn.execute(
@@ -1018,8 +1056,9 @@ def index():
         params + [_PAGE_SIZE, offset],
     ).fetchall()
 
-    all_tickers = _get_all_tickers(conn)
-    all_tags    = _get_all_tags(conn)
+    all_tickers  = _get_all_tickers(conn)
+    all_tags     = _get_all_tags(conn)
+    all_group_ids = _get_all_group_ids(conn)
     conn.close()
 
     # Build base query string without "page" for pagination links
@@ -1041,8 +1080,10 @@ def index():
         current_date_to=date_to,
         current_min_rating=str(min_rating) if min_rating else "",
         current_q=q,
+        current_group_id=group_id,
         all_tickers=all_tickers,
         all_tags=all_tags,
+        all_group_ids=all_group_ids,
         db_path=DB_PATH,
         query_string=request.query_string.decode(),
         # pagination
