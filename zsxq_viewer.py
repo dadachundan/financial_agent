@@ -151,6 +151,7 @@ __URLPATCH__
       {%- set tagp = ('&tag='    ~ current_tag)    if current_tag    else '' %}
       {%- set dp   = ('&date_from=' ~ current_date_from if current_date_from else '') ~ ('&date_to=' ~ current_date_to if current_date_to else '') %}
       {%- set rp   = ('&min_rating=' ~ current_min_rating) if current_min_rating else '' %}
+      {%- set crp  = ('&min_claude_rating=' ~ current_min_claude_rating) if current_min_claude_rating else '' %}
       {%- set qp   = ('&q=' ~ current_q) if current_q else '' %}
     <a href="?filter=all{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-dark' if current_filter=='all' else 'btn-outline-dark' }}">All ({{ stats.total }})</a>
@@ -259,6 +260,20 @@ __URLPATCH__
       {% endfor %}
     </div>
 
+    <!-- Claude rating filter row -->
+    <div class="d-flex filter-row">
+      <span class="filter-label">🤖 Claude:</span>
+      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}{{ rp }}{{ qp }}"
+         class="btn btn-sm {{ 'btn-dark' if not current_min_claude_rating else 'btn-outline-dark' }}">Any</a>
+      {% for stars in [3,4,5] %}
+      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}{{ rp }}{{ qp }}&min_claude_rating={{ stars }}"
+         class="btn btn-sm {{ 'btn-info' if current_min_claude_rating == stars|string else 'btn-outline-info' }}">
+        {{ '★' * stars }}+</a>
+      {% endfor %}
+      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}{{ rp }}{{ qp }}&min_claude_rating=1"
+         class="btn btn-sm {{ 'btn-info' if current_min_claude_rating == '1' else 'btn-outline-info' }}">Any rated</a>
+    </div>
+
     <!-- Column toggle -->
     <div class="d-flex filter-row align-items-center">
       <span class="filter-label">Columns:</span>
@@ -282,6 +297,7 @@ __URLPATCH__
             </a>
           </th>
           <th>File name</th>
+          <th>🤖</th>
           <th>Title</th>
           <th class="col-extra">Categories</th>
           <th class="col-extra">Tickers</th>
@@ -304,6 +320,14 @@ __URLPATCH__
           <td class="text-muted">{{ idx }}</td>
           <td class="text-nowrap">{{ (row.create_time or '')[:16].replace('T', ' ') }}</td>
           <td class="name-col">{{ row.name }}</td>
+          <td class="text-nowrap" style="font-size:.8rem;color:#0dcaf0;white-space:nowrap">
+            {%- if row.claude_rating == 5 %}★★★★★
+            {%- elif row.claude_rating == 4 %}★★★★
+            {%- elif row.claude_rating == 3 %}★★★
+            {%- elif row.claude_rating == 2 %}★★
+            {%- elif row.claude_rating == 1 %}★
+            {%- else %}{%- endif %}
+          </td>
           <td class="title-col">{{ row.topic_title or '—' }}</td>
 
           <!-- 4-category badges -->
@@ -796,7 +820,8 @@ def _get_all_group_ids(conn: sqlite3.Connection) -> list[str]:
 def _build_where(f: str, ticker: str, tag: str,
                  date_from: str, date_to: str,
                  min_rating: int = 0, q: str = "",
-                 group_id: str = "") -> tuple[str, list]:
+                 group_id: str = "",
+                 min_claude_rating: int = 0) -> tuple[str, list]:
     """Build WHERE clause + params from filter args (shared by index and print-view)."""
     conditions: list[str] = []
     params: list = []
@@ -836,6 +861,9 @@ def _build_where(f: str, ticker: str, tag: str,
     if group_id:
         conditions.append("group_id = ?")
         params.append(group_id)
+    if min_claude_rating:
+        conditions.append("claude_rating >= ?")
+        params.append(min_claude_rating)
     where = ("WHERE " + " AND ".join(conditions)) if conditions else ""
     return where, params
 
@@ -1011,6 +1039,10 @@ def index():
         min_rating = max(0, min(5, int(request.args.get("min_rating", 0))))
     except ValueError:
         min_rating = 0
+    try:
+        min_claude_rating = max(0, min(5, int(request.args.get("min_claude_rating", 0))))
+    except ValueError:
+        min_claude_rating = 0
     q = request.args.get("q", "").strip()
     try:
         page = max(1, int(request.args.get("page", 1)))
@@ -1040,7 +1072,7 @@ def index():
         "FROM pdf_files"
     ).fetchone()
 
-    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id)
+    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id, min_claude_rating)
     order = "ASC" if sort == "asc" else "DESC"
 
     total_rows  = conn.execute(
@@ -1081,6 +1113,7 @@ def index():
         current_min_rating=str(min_rating) if min_rating else "",
         current_q=q,
         current_group_id=group_id,
+        current_min_claude_rating=str(min_claude_rating) if min_claude_rating else "",
         all_tickers=all_tickers,
         all_tags=all_tags,
         all_group_ids=all_group_ids,
