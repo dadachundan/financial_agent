@@ -1,7 +1,9 @@
 """
 monitoring/app.py — Stock price shape viewer.
 
-Run:
+Exposes `price_shape_bp` for registration in main.py under /price-shape.
+
+Standalone usage:
     python3 monitoring/app.py --port 8005
 """
 import argparse
@@ -9,12 +11,18 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from flask import Flask, render_template, request, jsonify
+from pathlib import Path
+from flask import Blueprint, Flask, redirect, render_template, request, jsonify
 import numpy as np
 
-from monitoring.price_shape_monitor import fetch_ohlcv, zigzag
+from monitoring.price_shape_monitor import fetch_ohlcv, zigzag, classify_shape
 
-app = Flask(__name__, template_folder="templates")
+SCRIPT_DIR = Path(__file__).parent
+
+price_shape_bp = Blueprint(
+    "price_shape", __name__,
+    template_folder="templates",
+)
 
 
 def detect_vshapes(pivot_idx, directions, prices, min_depth_pct=5.0):
@@ -23,21 +31,20 @@ def detect_vshapes(pivot_idx, directions, prices, min_depth_pct=5.0):
 
     A V-bottom  : peak → trough → peak   (trough drops ≥ min_depth_pct from both neighbours)
     Inverted-V  : trough → peak → trough (peak rises ≥ min_depth_pct from both neighbours)
-
-    Returns list of dicts: {type, idx_left, idx_mid, idx_right, depth_pct}
     """
     shapes = []
     n = len(pivot_idx)
     for i in range(1, n - 1):
         d_left, d_mid, d_right = directions[i-1], directions[i], directions[i+1]
-        p_left = prices[pivot_idx[i-1]]
-        p_mid  = prices[pivot_idx[i]]
-        p_right= prices[pivot_idx[i+1]]
+        p_left  = prices[pivot_idx[i-1]]
+        p_mid   = prices[pivot_idx[i]]
+        p_right = prices[pivot_idx[i+1]]
 
         if d_mid == -1 and d_left == +1 and d_right == +1:   # V-bottom
-            drop_left  = (p_left  - p_mid) / p_left  * 100
-            drop_right = (p_right - p_mid) / p_right * 100
-            depth = min(drop_left, drop_right)
+            depth = min(
+                (p_left  - p_mid) / p_left  * 100,
+                (p_right - p_mid) / p_right * 100,
+            )
             if depth >= min_depth_pct:
                 shapes.append({
                     "type": "V-bottom",
@@ -48,9 +55,10 @@ def detect_vshapes(pivot_idx, directions, prices, min_depth_pct=5.0):
                 })
 
         elif d_mid == +1 and d_left == -1 and d_right == -1:  # Inverted-V
-            rise_left  = (p_mid - p_left)  / p_left  * 100
-            rise_right = (p_mid - p_right) / p_right * 100
-            depth = min(rise_left, rise_right)
+            depth = min(
+                (p_mid - p_left)  / p_left  * 100,
+                (p_mid - p_right) / p_right * 100,
+            )
             if depth >= min_depth_pct:
                 shapes.append({
                     "type": "inv-V",
@@ -63,12 +71,13 @@ def detect_vshapes(pivot_idx, directions, prices, min_depth_pct=5.0):
     return shapes
 
 
-@app.route("/")
+@price_shape_bp.route("/")
 def index():
-    return render_template("index.html")
+    import nav_widget2 as nw2
+    return render_template("price_shape.html", nav=nw2.NAV_HTML, _base="/price-shape")
 
 
-@app.route("/api/chart")
+@price_shape_bp.route("/api/chart")
 def chart():
     ticker    = request.args.get("ticker", "").strip()
     days      = int(request.args.get("days", 365))
@@ -88,37 +97,41 @@ def chart():
     pivot_idx, directions = zigzag(closes, threshold=threshold)
     vshapes = detect_vshapes(pivot_idx, directions, closes, min_depth_pct=threshold)
 
-    # Build pivot list for frontend
     pivots = [
-        {
-            "date":      dates[i],
-            "price":     round(float(closes[i]), 2),
-            "direction": int(d),      # +1 peak, -1 trough
-        }
+        {"date": dates[i], "price": round(float(closes[i]), 2), "direction": int(d)}
         for i, d in zip(pivot_idx, directions)
     ]
 
     return jsonify({
-        "ticker":    label,
-        "dates":     dates,
-        "open":      df["open"].values.astype(float).round(2).tolist(),
-        "high":      df["high"].values.astype(float).round(2).tolist(),
-        "low":       df["low"].values.astype(float).round(2).tolist(),
-        "close":     closes.round(2).tolist(),
-        "volume":    df["volume"].values.astype(float).tolist(),
-        "pivots":    pivots,
-        "vshapes":   vshapes,
-        "shape_label": _shape_label(pivot_idx, directions, closes),
+        "ticker":      label,
+        "dates":       dates,
+        "open":        df["open"].values.astype(float).round(2).tolist(),
+        "high":        df["high"].values.astype(float).round(2).tolist(),
+        "low":         df["low"].values.astype(float).round(2).tolist(),
+        "close":       closes.round(2).tolist(),
+        "volume":      df["volume"].values.astype(float).tolist(),
+        "pivots":      pivots,
+        "vshapes":     vshapes,
+        "shape_label": classify_shape(pivot_idx, directions, closes),
     })
 
 
-def _shape_label(pivot_idx, directions, prices):
-    from monitoring.price_shape_monitor import classify_shape
-    return classify_shape(pivot_idx, directions, prices)
-
+# ── Standalone entry point ────────────────────────────────────────────────────
 
 if __name__ == "__main__":
+    import logging
+    logging.basicConfig(level=logging.INFO)
+
+    app = Flask(__name__, template_folder=str(SCRIPT_DIR / "templates"))
+    app.register_blueprint(price_shape_bp, url_prefix="/price-shape")
+
+    @app.route("/")
+    def _root():
+        return redirect("/price-shape/")
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--port", type=int, default=8005)
     args = parser.parse_args()
-    app.run(debug=True, port=args.port)
+
+    print(f"Price Shape Monitor → http://localhost:{args.port}/price-shape/")
+    app.run(host="0.0.0.0", port=args.port, debug=True)
