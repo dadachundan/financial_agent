@@ -103,8 +103,7 @@
   .scan-card:hover { border-color: #58a6ff; }
   .scan-card .sc-ticker { font-weight: 600; color: #e6edf3; }
   .scan-card .sc-type   { font-size: 11px; }
-  .scan-card.vbottom .sc-type { color: #3fb950; }
-  .scan-card.invv    .sc-type { color: #f85149; }
+  .scan-card .sc-type { color: #8b949e; }
   .scan-card .sc-pct  { font-size: 12px; margin-left: 8px; }
   .sc-pct.pos { color: #3fb950; }
   .sc-pct.neg { color: #f85149; }
@@ -453,7 +452,7 @@ async function runScan(nDays) {
       <div class="sector-group">
         <h3>${sector}</h3>
         ${items.map(r => {
-          const cls    = r.direction === -1 ? 'vbottom' : 'invv';
+          const cls    = '';
           const pctCls = r.pct_since >= 0 ? 'pos' : 'neg';
           const pctStr = r.pct_since !== 0 ? `${r.pct_since > 0 ? '+' : ''}${r.pct_since}%` : '';
           return `<div class="scan-card ${cls}" onclick="loadTicker('${r.ticker}')">

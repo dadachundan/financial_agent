@@ -226,9 +226,9 @@ def api_watchlist_scan():
             if last_pi < len(closes) - n_days:
                 continue
 
-            # Determine pivot type
+            # Determine pivot type (no directional arrow — today's direction is unknown)
             last_dir = directions[-1]
-            ptype = "V-bottom ▲" if last_dir == -1 else "inv-V ▼"
+            ptype = "trough" if last_dir == -1 else "peak"
             pct_move = round((closes[-1] - closes[last_pi]) / closes[last_pi] * 100, 1) \
                        if last_pi < len(closes) - 1 else 0.0
 
