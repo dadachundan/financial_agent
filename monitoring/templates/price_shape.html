@@ -488,10 +488,10 @@ function resetZoom() {
 
 function zoomTo(idxL, idxR) {
   if (!_data) return;
-  // add a small buffer
+  // Category axis uses numeric indices, not date strings
   const buf = Math.max(3, Math.round((idxR - idxL) * 0.15));
-  const x0  = _data.dates[Math.max(0, idxL - buf)];
-  const x1  = _data.dates[Math.min(_data.dates.length - 1, idxR + buf)];
+  const x0  = Math.max(0, idxL - buf);
+  const x1  = Math.min(_data.dates.length - 1, idxR + buf);
   Plotly.relayout('main-chart', { 'xaxis.range': [x0, x1] });
   Plotly.relayout('vol-chart',  { 'xaxis.range': [x0, x1] });
 }
