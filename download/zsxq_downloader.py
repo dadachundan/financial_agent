@@ -86,10 +86,11 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
         if not e["file"]["name"].startswith("中文版")
         and not e["file"]["name"].startswith("CHS_")
         and "三个皮匠报告" not in e["file"]["name"]
+        and "景略咨询" not in e["file"]["name"]
     ]
     skipped_cn = before_cn - len(pdf_entries)
     if skipped_cn:
-        print(f"Skipped {skipped_cn} 中文版/CHS_/三个皮匠报告 file(s).")
+        print(f"Skipped {skipped_cn} 中文版/CHS_/三个皮匠报告/景略咨询 file(s).")
 
     # Skip topics with more than 3 files (one-for-one / paid packs)
     topic_file_counts = Counter(
