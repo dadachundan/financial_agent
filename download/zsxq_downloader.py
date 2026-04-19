@@ -40,91 +40,19 @@ from zsxq_common import (
     get_session_via_selenium, init_db, upsert_entry,
 )
 
-DEFAULT_GROUP_ID = "51111812185184"
-
 GROUP_ALIASES = {
     "1": "51111812185184",
     "2": "28888824254221",
 }
+ALL_GROUP_IDS = list(GROUP_ALIASES.values())
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Download PDFs from a zsxq group and record them in zsxq.db. "
-                    "Pass --classify to also run MiniMax classification."
-    )
-    parser.add_argument("--group-id",       default=DEFAULT_GROUP_ID,
-                        help="Full group ID (or use --group for shorthand)")
-    parser.add_argument("--group",          default=None, metavar="N",
-                        help="Group shorthand: 1=51111812185184, 2=28888824254221")
-    parser.add_argument("--count",          type=int,   default=10,
-                        help="Max files to fetch (0 = unlimited); also applies with --from-date / --to-date")
-    parser.add_argument("--from-date",      default=None, metavar="YYYY-MM-DD",
-                        help="Only process files published on or after this date")
-    parser.add_argument("--to-date",        default=None, metavar="YYYY-MM-DD",
-                        help="Only process files published on or before this date")
-    parser.add_argument("--out",            default=str(DEFAULT_DOWNLOADS),
-                        help="Download directory")
-    parser.add_argument("--db",             default=str(DEFAULT_DB),
-                        help="SQLite database path")
-    parser.add_argument("--chrome-profile", default=str(DEFAULT_CHROME_PROFILE))
-    parser.add_argument("--delay",          type=float, default=1.0,
-                        help="Seconds between downloads")
-    parser.add_argument("--classify-delay", type=float, default=1.0,
-                        help="Seconds between MiniMax API calls (default: 1.0)")
-    parser.add_argument("--classify",       action="store_true",
-                        help="Run MiniMax classification after download (off by default)")
-    args = parser.parse_args()
-    args.no_classify = not args.classify
+def _run_group(group_id: str, args, session, conn, out_dir: Path,
+               api_key, from_date, to_date) -> list[dict]:
+    """Fetch and download PDFs for a single group. Returns results list."""
+    from collections import Counter
 
-    # Resolve --group shorthand → full group_id
-    if args.group is not None:
-        if args.group not in GROUP_ALIASES:
-            print(f"ERROR: --group must be one of: {', '.join(GROUP_ALIASES)} "
-                  f"(got {args.group!r})")
-            sys.exit(1)
-        args.group_id = GROUP_ALIASES[args.group]
-
-    # ── Check API key early if we'll need it ──────────────────────────────
-    api_key = None
-    if args.classify:
-        try:
-            from minimax import MINIMAX_API_KEY  # type: ignore
-            api_key = MINIMAX_API_KEY
-        except ImportError:
-            pass
-        if not api_key:
-            print("WARNING: MINIMAX_API_KEY not found in config.py — "
-                  "classification will be skipped.")
-            args.no_classify = True
-
-    chrome_profile = Path(args.chrome_profile).expanduser()
-    if not chrome_profile.exists():
-        print(f"ERROR: Chrome profile not found at {chrome_profile}")
-        print("Make sure chrome_profile/ exists and you've logged into wx.zsxq.com.")
-        sys.exit(1)
-
-    out_dir = Path(args.out).expanduser()
-    out_dir.mkdir(parents=True, exist_ok=True)
-    db_path = Path(args.db).expanduser()
-
-    session = get_session_via_selenium(chrome_profile)
-    conn    = init_db(db_path)
-
-    from_date = args.from_date
-    to_date   = args.to_date
-
-    # Validate date formats early
-    for label, val in [("--from-date", from_date), ("--to-date", to_date)]:
-        if val:
-            try:
-                datetime.strptime(val, "%Y-%m-%d")
-            except ValueError:
-                print(f"ERROR: {label} must be in YYYY-MM-DD format, got: {val!r}")
-                sys.exit(1)
-
-    fetch_max = args.count  # 0 = unlimited; respected even with date filters
-
+    fetch_max = args.count
     if from_date or to_date:
         date_desc = (
             f"between {from_date} and {to_date}" if (from_date and to_date)
@@ -136,9 +64,10 @@ def main() -> None:
     else:
         limit_desc = f"last {fetch_max}" if fetch_max else "all"
 
-    print(f"Fetching {limit_desc} from group {args.group_id}…")
+    print(f"\n{'='*60}")
+    print(f"Fetching {limit_desc} from group {group_id}…")
     entries = fetch_all_files(
-        session, args.group_id,
+        session, group_id,
         max_files=fetch_max,
         from_date=from_date,
     )
@@ -146,7 +75,6 @@ def main() -> None:
     pdf_entries = [e for e in entries if e["file"]["name"].lower().endswith(".pdf")]
 
     # Skip PPTX files
-    before_pptx = len(entries)
     skipped_pptx = sum(1 for e in entries if e["file"]["name"].lower().endswith(".pptx"))
     if skipped_pptx:
         print(f"Skipped {skipped_pptx} PPTX file(s).")
@@ -163,7 +91,6 @@ def main() -> None:
         print(f"Skipped {skipped_cn} 中文版/CHS_ file(s).")
 
     # Skip topics with more than 3 files (one-for-one / paid packs)
-    from collections import Counter
     topic_file_counts = Counter(
         (e.get("topic") or {}).get("topic_id") for e in entries
     )
@@ -177,7 +104,7 @@ def main() -> None:
     if skipped_bulk:
         print(f"Skipped {skipped_bulk} file(s) from topics with >3 attachments.")
 
-    # Apply to_date upper bound (fetch_all_files doesn't filter this end)
+    # Apply to_date upper bound
     if to_date:
         pdf_entries = [
             e for e in pdf_entries
@@ -202,7 +129,6 @@ def main() -> None:
         print(f"[{i}/{len(pdf_entries)}] {name[:70]}")
         print(f"         date={date_str}  size={size_mb:.1f}MB  id={file_id}")
 
-        # ── Look up existing DB record for this file ──────────────────────
         existing = conn.execute(
             "SELECT local_path, downloaded_at FROM pdf_files WHERE file_id = ?",
             (file_id,),
@@ -210,7 +136,6 @@ def main() -> None:
         local_path    = existing["local_path"]    if existing else None
         downloaded_at = existing["downloaded_at"] if existing else None
 
-        # ── Upsert metadata (always, even if we skip the actual download) ──
         db_row = {
             "file_id":      file_id,
             "name":         name,
@@ -223,22 +148,19 @@ def main() -> None:
             "create_time":  f.get("create_time"),
             "downloaded_at": downloaded_at,
             "indexed_at":   now,
-            "group_id":     args.group_id,
+            "group_id":     group_id,
         }
         upsert_entry(conn, db_row)
 
-        # ── Save bank and skipped=0 (file passed all skip filters) ──────
         bank = extract_bank(name)
         conn.execute("UPDATE pdf_files SET bank=?, skipped=0 WHERE file_id=?", (bank, file_id))
         conn.commit()
 
-        # ── Skip download if already done (local_path exists in DB) ──────
         already_downloaded = local_path is not None
         if already_downloaded:
             print("         → already downloaded, skipping download.")
             results.append({"file_id": file_id, "name": name, "status": "skipped"})
         else:
-            # ── Download ──
             dl_ts = datetime.now().isoformat()
             local_path, ok, pages = do_download(
                 session, file_id, name, out_dir,
@@ -258,7 +180,6 @@ def main() -> None:
                     time.sleep(args.delay)
                 continue
 
-        # ── Classify (unless disabled or already classified) ──────────────
         if not args.no_classify:
             row = conn.execute(
                 "SELECT ai_related FROM pdf_files WHERE file_id = ?", (file_id,)
@@ -290,12 +211,99 @@ def main() -> None:
         if i < len(pdf_entries) and not already_downloaded:
             time.sleep(args.delay)
 
+    return results
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Download PDFs from a zsxq group and record them in zsxq.db. "
+                    "Pass --classify to also run MiniMax classification."
+    )
+    parser.add_argument("--group-id",       default=None,
+                        help="Full group ID. If omitted, both groups are downloaded.")
+    parser.add_argument("--group",          default=None, metavar="N",
+                        help="Group shorthand: 1=51111812185184, 2=28888824254221")
+    parser.add_argument("--count",          type=int,   default=10,
+                        help="Max files to fetch per group (0 = unlimited)")
+    parser.add_argument("--from-date",      default=None, metavar="YYYY-MM-DD",
+                        help="Only process files published on or after this date")
+    parser.add_argument("--to-date",        default=None, metavar="YYYY-MM-DD",
+                        help="Only process files published on or before this date")
+    parser.add_argument("--out",            default=str(DEFAULT_DOWNLOADS),
+                        help="Download directory")
+    parser.add_argument("--db",             default=str(DEFAULT_DB),
+                        help="SQLite database path")
+    parser.add_argument("--chrome-profile", default=str(DEFAULT_CHROME_PROFILE))
+    parser.add_argument("--delay",          type=float, default=1.0,
+                        help="Seconds between downloads")
+    parser.add_argument("--classify-delay", type=float, default=1.0,
+                        help="Seconds between MiniMax API calls (default: 1.0)")
+    parser.add_argument("--classify",       action="store_true",
+                        help="Run MiniMax classification after download (off by default)")
+    args = parser.parse_args()
+    args.no_classify = not args.classify
+
+    # Resolve which group(s) to run
+    if args.group is not None:
+        if args.group not in GROUP_ALIASES:
+            print(f"ERROR: --group must be one of: {', '.join(GROUP_ALIASES)} "
+                  f"(got {args.group!r})")
+            sys.exit(1)
+        group_ids = [GROUP_ALIASES[args.group]]
+    elif args.group_id is not None:
+        group_ids = [args.group_id]
+    else:
+        group_ids = ALL_GROUP_IDS  # default: both groups
+
+    # ── Check API key early if we'll need it ──────────────────────────────
+    api_key = None
+    if args.classify:
+        try:
+            from minimax import MINIMAX_API_KEY  # type: ignore
+            api_key = MINIMAX_API_KEY
+        except ImportError:
+            pass
+        if not api_key:
+            print("WARNING: MINIMAX_API_KEY not found in config.py — "
+                  "classification will be skipped.")
+            args.no_classify = True
+
+    chrome_profile = Path(args.chrome_profile).expanduser()
+    if not chrome_profile.exists():
+        print(f"ERROR: Chrome profile not found at {chrome_profile}")
+        print("Make sure chrome_profile/ exists and you've logged into wx.zsxq.com.")
+        sys.exit(1)
+
+    out_dir = Path(args.out).expanduser()
+    out_dir.mkdir(parents=True, exist_ok=True)
+    db_path = Path(args.db).expanduser()
+
+    # Validate date formats early
+    from_date = args.from_date
+    to_date   = args.to_date
+    for label, val in [("--from-date", from_date), ("--to-date", to_date)]:
+        if val:
+            try:
+                datetime.strptime(val, "%Y-%m-%d")
+            except ValueError:
+                print(f"ERROR: {label} must be in YYYY-MM-DD format, got: {val!r}")
+                sys.exit(1)
+
+    session = get_session_via_selenium(chrome_profile)
+    conn    = init_db(db_path)
+
+    all_results: list[dict] = []
+    for group_id in group_ids:
+        results = _run_group(group_id, args, session, conn, out_dir,
+                             api_key, from_date, to_date)
+        all_results.extend(results)
+
     conn.close()
 
-    ok_count      = sum(1 for r in results if r["status"] == "ok")
-    skipped_count = sum(1 for r in results if r["status"] == "skipped")
-    failed_count  = sum(1 for r in results if r["status"] not in ("ok", "skipped"))
-    print(f"Done: {ok_count} downloaded, {skipped_count} skipped, {failed_count} failed.")
+    ok_count      = sum(1 for r in all_results if r["status"] == "ok")
+    skipped_count = sum(1 for r in all_results if r["status"] == "skipped")
+    failed_count  = sum(1 for r in all_results if r["status"] not in ("ok", "skipped"))
+    print(f"\nTotal: {ok_count} downloaded, {skipped_count} skipped, {failed_count} failed.")
     print(f"Output : {out_dir}")
     print(f"DB     : {db_path}")
     if args.no_classify:
