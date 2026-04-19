@@ -146,7 +146,7 @@ __URLPATCH__
   <div class="filter-section">
     <div class="d-flex filter-row">
       <span class="filter-label">Status:</span>
-      {%- set sp   = '&sort=' ~ current_sort if current_sort != 'desc' else '' %}
+      {%- set sp   = ('&sort=' ~ current_sort if current_sort != 'desc' else '') ~ ('&sort_by=' ~ current_sort_by if current_sort_by != 'date' else '') %}
       {%- set tp   = ('&ticker=' ~ current_ticker) if current_ticker else '' %}
       {%- set tagp = ('&tag='    ~ current_tag)    if current_tag    else '' %}
       {%- set dp   = ('&date_from=' ~ current_date_from if current_date_from else '') ~ ('&date_to=' ~ current_date_to if current_date_to else '') %}
@@ -311,9 +311,9 @@ __URLPATCH__
         <tr>
           <th>#</th>
           <th>
-            <a href="?filter={{ current_filter }}{% if current_ticker %}&ticker={{ current_ticker }}{% endif %}&sort={{ 'asc' if current_sort == 'desc' else 'desc' }}{{ dp }}"
+            <a href="?{{ base_qs }}&sort={{ 'asc' if (current_sort_by == 'date' and current_sort == 'desc') else 'desc' }}&sort_by=date"
                style="color:inherit;text-decoration:none;white-space:nowrap">
-              Date {{ '↑' if current_sort == 'asc' else '↓' }}
+              Date {{ '↑' if (current_sort_by == 'date' and current_sort == 'asc') else '↓' if current_sort_by == 'date' else '' }}
             </a>
           </th>
           <th>File name</th>
@@ -323,7 +323,12 @@ __URLPATCH__
           <th class="col-extra">Tickers</th>
           <th class="col-extra">Tags</th>
           <th class="col-extra">Size</th>
-          <th class="col-extra">Pages</th>
+          <th class="col-extra">
+            <a href="?{{ base_qs }}&sort={{ 'asc' if (current_sort_by == 'pages' and current_sort == 'desc') else 'desc' }}&sort_by=pages"
+               style="color:inherit;text-decoration:none;white-space:nowrap">
+              Pages {{ '↑' if (current_sort_by == 'pages' and current_sort == 'asc') else '↓' if current_sort_by == 'pages' else '' }}
+            </a>
+          </th>
           <th class="col-extra">Rating</th>
           <th>Summary</th>
           <th>PDF</th>
@@ -1080,6 +1085,7 @@ def index():
     ticker     = request.args.get("ticker", "").strip().upper()
     tag        = request.args.get("tag",    "").strip()
     sort       = request.args.get("sort", "desc").lower()
+    sort_by    = request.args.get("sort_by", "date").lower()
     date_from  = request.args.get("date_from", "").strip()
     date_to    = request.args.get("date_to",   "").strip()
     group_id   = request.args.get("group_id", "").strip()
@@ -1102,6 +1108,8 @@ def index():
         page = 1
     if sort not in ("asc", "desc"):
         sort = "desc"
+    if sort_by not in ("date", "pages"):
+        sort_by = "date"
 
     conn = get_conn()
 
@@ -1125,7 +1133,10 @@ def index():
     ).fetchone()
 
     where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id, min_claude_rating, unrated, bank)
-    order = "ASC" if sort == "asc" else "DESC"
+    order      = "ASC" if sort == "asc" else "DESC"
+    order_col  = "page_count" if sort_by == "pages" else "create_time"
+    # NULLs last for page_count sort
+    null_last  = " NULLS LAST" if sort_by == "pages" else ""
 
     total_rows  = conn.execute(
         f"SELECT COUNT(*) FROM pdf_files {where_clause}", params
@@ -1135,7 +1146,7 @@ def index():
     offset      = (page - 1) * _PAGE_SIZE
 
     rows = conn.execute(
-        f"SELECT * FROM pdf_files {where_clause} ORDER BY create_time {order}"
+        f"SELECT * FROM pdf_files {where_clause} ORDER BY {order_col} {order}{null_last}"
         f" LIMIT ? OFFSET ?",
         params + [_PAGE_SIZE, offset],
     ).fetchall()
@@ -1161,6 +1172,7 @@ def index():
         current_ticker=ticker,
         current_tag=tag,
         current_sort=sort,
+        current_sort_by=sort_by,
         current_date_from=date_from,
         current_date_to=date_to,
         current_min_rating=str(min_rating) if min_rating else "",
