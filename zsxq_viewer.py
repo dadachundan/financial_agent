@@ -269,6 +269,7 @@ __URLPATCH__
       <select id="bankSelect" class="form-select form-select-sm" style="max-width:200px"
               onchange="applyBank(this.value)">
         <option value="">All banks</option>
+        <option value="__none__" {{ 'selected' if current_bank == '__none__' else '' }}>No bank</option>
         {% for b in all_banks %}
         <option value="{{ b }}" {{ 'selected' if b == current_bank else '' }}>{{ b }}</option>
         {% endfor %}
@@ -906,7 +907,9 @@ def _build_where(f: str, ticker: str, tag: str,
     if min_claude_rating:
         conditions.append("claude_rating >= ?")
         params.append(min_claude_rating)
-    if bank:
+    if bank == "__none__":
+        conditions.append("(bank IS NULL OR bank = '')")
+    elif bank:
         conditions.append("bank = ?")
         params.append(bank)
     where = ("WHERE " + " AND ".join(conditions)) if conditions else ""
