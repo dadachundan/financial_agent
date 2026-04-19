@@ -151,12 +151,12 @@ def main() -> None:
     if skipped_pptx:
         print(f"Skipped {skipped_pptx} PPTX file(s).")
 
-    # Skip files that don't start with a recognized bank prefix
-    before_no_bank = len(pdf_entries)
-    pdf_entries = [e for e in pdf_entries if extract_bank(e["file"]["name"]) is not None]
-    skipped_no_bank = before_no_bank - len(pdf_entries)
-    if skipped_no_bank:
-        print(f"Skipped {skipped_no_bank} file(s) with no recognized bank prefix.")
+    # Skip Chinese-translation copies (filenames starting with 中文版)
+    before_cn = len(pdf_entries)
+    pdf_entries = [e for e in pdf_entries if not e["file"]["name"].startswith("中文版")]
+    skipped_cn = before_cn - len(pdf_entries)
+    if skipped_cn:
+        print(f"Skipped {skipped_cn} 中文版 file(s).")
 
     # Skip topics with more than 3 files (one-for-one / paid packs)
     from collections import Counter
