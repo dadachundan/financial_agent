@@ -151,12 +151,16 @@ def main() -> None:
     if skipped_pptx:
         print(f"Skipped {skipped_pptx} PPTX file(s).")
 
-    # Skip Chinese-translation copies (filenames starting with 中文版)
+    # Skip Chinese-translation copies (中文版) and CHS_ prefixed files
     before_cn = len(pdf_entries)
-    pdf_entries = [e for e in pdf_entries if not e["file"]["name"].startswith("中文版")]
+    pdf_entries = [
+        e for e in pdf_entries
+        if not e["file"]["name"].startswith("中文版")
+        and not e["file"]["name"].startswith("CHS_")
+    ]
     skipped_cn = before_cn - len(pdf_entries)
     if skipped_cn:
-        print(f"Skipped {skipped_cn} 中文版 file(s).")
+        print(f"Skipped {skipped_cn} 中文版/CHS_ file(s).")
 
     # Skip topics with more than 3 files (one-for-one / paid packs)
     from collections import Counter
