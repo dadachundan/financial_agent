@@ -153,6 +153,7 @@ __URLPATCH__
       {%- set rp   = ('&min_rating=' ~ current_min_rating) if current_min_rating else '' %}
       {%- set crp  = ('&min_claude_rating=' ~ current_min_claude_rating) if current_min_claude_rating else '' %}
       {%- set qp   = ('&q=' ~ current_q) if current_q else '' %}
+      {%- set bp   = ('&bank=' ~ current_bank) if current_bank else '' %}
     <a href="?filter=all{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-dark' if current_filter=='all' else 'btn-outline-dark' }}">All ({{ stats.total }})</a>
       <a href="?filter=downloaded{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
@@ -252,12 +253,30 @@ __URLPATCH__
     <div class="d-flex filter-row">
       <span class="filter-label">Rating:</span>
       <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
-         class="btn btn-sm {{ 'btn-dark' if not current_min_rating else 'btn-outline-dark' }}">Any</a>
+         class="btn btn-sm {{ 'btn-dark' if not current_min_rating and not unrated_only else 'btn-outline-dark' }}">Any</a>
       {% for stars in [1,2,3,4,5] %}
       <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}&min_rating={{ stars }}"
          class="btn btn-sm {{ 'btn-warning text-dark' if current_min_rating == stars|string else 'btn-outline-warning' }}">
         {{ '★' * stars }}+</a>
       {% endfor %}
+      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}&unrated=1"
+         class="btn btn-sm {{ 'btn-secondary' if unrated_only else 'btn-outline-secondary' }}">Unrated</a>
+    </div>
+
+    <!-- Bank filter row -->
+    <div class="d-flex filter-row">
+      <span class="filter-label">Bank:</span>
+      <select id="bankSelect" class="form-select form-select-sm" style="max-width:200px"
+              onchange="applyBank(this.value)">
+        <option value="">All banks</option>
+        {% for b in all_banks %}
+        <option value="{{ b }}" {{ 'selected' if b == current_bank else '' }}>{{ b }}</option>
+        {% endfor %}
+      </select>
+      {% if current_bank %}
+      <a href="#" onclick="applyBank('');return false"
+         class="btn btn-sm btn-outline-secondary">✕ Clear</a>
+      {% endif %}
     </div>
 
     <!-- Claude rating filter row -->
@@ -297,12 +316,13 @@ __URLPATCH__
             </a>
           </th>
           <th>File name</th>
-          <th>🤖</th>
+          <th class="col-extra">🤖</th>
           <th>Title</th>
           <th class="col-extra">Categories</th>
           <th class="col-extra">Tickers</th>
           <th class="col-extra">Tags</th>
           <th class="col-extra">Size</th>
+          <th class="col-extra">Pages</th>
           <th class="col-extra">Rating</th>
           <th>Summary</th>
           <th>PDF</th>
@@ -320,7 +340,7 @@ __URLPATCH__
           <td class="text-muted">{{ idx }}</td>
           <td class="text-nowrap">{{ (row.create_time or '')[:16].replace('T', ' ') }}</td>
           <td class="name-col">{{ row.name }}</td>
-          <td class="text-nowrap" style="font-size:.8rem;color:#0dcaf0;white-space:nowrap">
+          <td class="col-extra text-nowrap" style="font-size:.8rem;color:#0dcaf0;white-space:nowrap">
             {%- if row.claude_rating == 5 %}★★★★★
             {%- elif row.claude_rating == 4 %}★★★★
             {%- elif row.claude_rating == 3 %}★★★
@@ -382,6 +402,10 @@ __URLPATCH__
 
           <td class="col-extra text-end text-nowrap">
             {{ '%.1f MB' % (row.file_size / 1048576) if row.file_size else '—' }}
+          </td>
+
+          <td class="col-extra text-end text-nowrap text-muted">
+            {{ row.page_count ~ 'pp' if row.page_count else '—' }}
           </td>
 
           <td class="col-extra text-nowrap" style="min-width:90px">
@@ -621,7 +645,7 @@ __MCW_FOOTER__
   function debouncedSearch(q) {
     liveSearch(q);
     clearTimeout(window._searchTimer);
-    window._searchTimer = setTimeout(() => applySearch(q), 400);
+    window._searchTimer = setTimeout(() => applySearch(q), 1000);
   }
 
   function liveSearch(q) {
@@ -647,6 +671,13 @@ __MCW_FOOTER__
     const params = new URLSearchParams(window.location.search);
     params.delete('page');
     if (gid) { params.set('group_id', gid); } else { params.delete('group_id'); }
+    window.location.href = '?' + params.toString();
+  }
+
+  function applyBank(bank) {
+    const params = new URLSearchParams(window.location.search);
+    params.delete('page');
+    if (bank) { params.set('bank', bank); } else { params.delete('bank'); }
     window.location.href = '?' + params.toString();
   }
 
@@ -817,11 +848,20 @@ def _get_all_group_ids(conn: sqlite3.Connection) -> list[str]:
     return [r["group_id"] for r in rows]
 
 
+def _get_all_banks(conn: sqlite3.Connection) -> list[str]:
+    rows = conn.execute(
+        "SELECT DISTINCT bank FROM pdf_files WHERE bank IS NOT NULL AND bank != '' ORDER BY bank"
+    ).fetchall()
+    return [r["bank"] for r in rows]
+
+
 def _build_where(f: str, ticker: str, tag: str,
                  date_from: str, date_to: str,
                  min_rating: int = 0, q: str = "",
                  group_id: str = "",
-                 min_claude_rating: int = 0) -> tuple[str, list]:
+                 min_claude_rating: int = 0,
+                 unrated: bool = False,
+                 bank: str = "") -> tuple[str, list]:
     """Build WHERE clause + params from filter args (shared by index and print-view)."""
     conditions: list[str] = []
     params: list = []
@@ -849,7 +889,9 @@ def _build_where(f: str, ticker: str, tag: str,
     if date_to:
         conditions.append("substr(create_time, 1, 10) <= ?")
         params.append(date_to)
-    if min_rating:
+    if unrated:
+        conditions.append("(user_rating IS NULL OR user_rating = 0)")
+    elif min_rating:
         conditions.append("user_rating >= ?")
         params.append(min_rating)
     if q:
@@ -864,6 +906,9 @@ def _build_where(f: str, ticker: str, tag: str,
     if min_claude_rating:
         conditions.append("claude_rating >= ?")
         params.append(min_claude_rating)
+    if bank:
+        conditions.append("bank = ?")
+        params.append(bank)
     where = ("WHERE " + " AND ".join(conditions)) if conditions else ""
     return where, params
 
@@ -1043,6 +1088,10 @@ def index():
         min_claude_rating = max(0, min(5, int(request.args.get("min_claude_rating", 0))))
     except ValueError:
         min_claude_rating = 0
+    unrated = request.args.get("unrated") == "1"
+    if unrated:
+        min_rating = 0
+    bank = request.args.get("bank", "").strip()
     q = request.args.get("q", "").strip()
     try:
         page = max(1, int(request.args.get("page", 1)))
@@ -1072,7 +1121,7 @@ def index():
         "FROM pdf_files"
     ).fetchone()
 
-    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id, min_claude_rating)
+    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id, min_claude_rating, unrated, bank)
     order = "ASC" if sort == "asc" else "DESC"
 
     total_rows  = conn.execute(
@@ -1091,6 +1140,7 @@ def index():
     all_tickers  = _get_all_tickers(conn)
     all_tags     = _get_all_tags(conn)
     all_group_ids = _get_all_group_ids(conn)
+    all_banks    = _get_all_banks(conn)
     conn.close()
 
     # Build base query string without "page" for pagination links
@@ -1111,12 +1161,15 @@ def index():
         current_date_from=date_from,
         current_date_to=date_to,
         current_min_rating=str(min_rating) if min_rating else "",
+        unrated_only=unrated,
         current_q=q,
         current_group_id=group_id,
         current_min_claude_rating=str(min_claude_rating) if min_claude_rating else "",
         all_tickers=all_tickers,
         all_tags=all_tags,
         all_group_ids=all_group_ids,
+        all_banks=all_banks,
+        current_bank=bank,
         db_path=DB_PATH,
         query_string=request.query_string.decode(),
         # pagination
