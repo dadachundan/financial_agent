@@ -79,16 +79,17 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
     if skipped_pptx:
         print(f"Skipped {skipped_pptx} PPTX file(s).")
 
-    # Skip Chinese-translation copies (中文版) and CHS_ prefixed files
+    # Skip Chinese-translation copies (中文版), CHS_ prefixed, and 三个皮匠报告 files
     before_cn = len(pdf_entries)
     pdf_entries = [
         e for e in pdf_entries
         if not e["file"]["name"].startswith("中文版")
         and not e["file"]["name"].startswith("CHS_")
+        and "三个皮匠报告" not in e["file"]["name"]
     ]
     skipped_cn = before_cn - len(pdf_entries)
     if skipped_cn:
-        print(f"Skipped {skipped_cn} 中文版/CHS_ file(s).")
+        print(f"Skipped {skipped_cn} 中文版/CHS_/三个皮匠报告 file(s).")
 
     # Skip topics with more than 3 files (one-for-one / paid packs)
     topic_file_counts = Counter(
