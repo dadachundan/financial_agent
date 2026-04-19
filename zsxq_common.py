@@ -231,6 +231,55 @@ def download_file(
     return written
 
 
+def get_pdf_page_count(path: str | Path) -> int | None:
+    """Return the number of pages in a PDF file, or None on failure."""
+    try:
+        from PyPDF2 import PdfReader
+        reader = PdfReader(str(path), strict=False)
+        return len(reader.pages)
+    except Exception:
+        return None
+
+
+# Ordered list of (canonical_name, [patterns_to_match_in_filename])
+# Patterns are matched case-insensitively against the start of the filename.
+_BANK_PATTERNS: list[tuple[str, list[str]]] = [
+    ("Goldman Sachs",  ["Goldman Sachs", "GS-", "GS_", "高盛"]),
+    ("Morgan Stanley", ["Morgan Stanley", "MS-", "MS_", "摩根士丹利"]),
+    ("J.P. Morgan",    ["J.P. Morgan", "J.P.Morgan", "JPM-", "JPM_", "摩根大通"]),
+    ("Deutsche Bank",  ["Deutsche Bank", "DB-", "DB_", "德意志银行", "德银"]),
+    ("UBS",            ["UBS-", "UBS_", "瑞银"]),
+    ("Bernstein",      ["Bernstein", "伯恩斯坦"]),
+    ("Nomura",         ["Nomura", "野村"]),
+    ("HSBC",           ["HSBC", "汇丰"]),
+    ("BofA",           ["BofA Securities", "BofA-", "BofA_", "Bofa", "美银"]),
+    ("Citi",           ["CITI", "Citi-", "Citi_", "花旗"]),
+    ("Barclays",       ["Barclays"]),
+    ("Jefferies",      ["Jefferies"]),
+    ("Macquarie",      ["Macquarie"]),
+    ("Credit Suisse",  ["Credit Suisse"]),
+    ("Mizuho",         ["Mizuho"]),
+    ("CLSA",           ["CLSA"]),
+    ("Daiwa",          ["Daiwa"]),
+    ("Haitong",        ["Haitong", "海通"]),
+    ("CICC",           ["CICC", "中金"]),
+]
+
+
+def extract_bank(name: str) -> str | None:
+    """Return the canonical investment bank name from a PDF filename, or None."""
+    n = name.strip()
+    # Strip CHS_ prefix used for Chinese translations
+    if n.startswith("CHS_"):
+        n = n[4:]
+    n_lower = n.lower()
+    for canonical, patterns in _BANK_PATTERNS:
+        for pat in patterns:
+            if n_lower.startswith(pat.lower()):
+                return canonical
+    return None
+
+
 def date_subfolder(create_time: str | None) -> str:
     """Return a YYYY_MM_DD folder name from an ISO create_time string."""
     if create_time and len(create_time) >= 10:
@@ -244,29 +293,31 @@ def do_download(
     name: str,
     downloads_dir: Path,
     create_time: str | None = None,
-) -> tuple[str | None, bool]:
+) -> tuple[str | None, bool, int | None]:
     """Fetch download URL and save the file.
 
     Files are saved into a date-named subfolder (YYYY_MM_DD) derived from
     create_time so downloads are grouped by publication date.
 
-    Returns (local_path, success). local_path is None on failure.
+    Returns (local_path, success, page_count). local_path is None on failure.
     """
     dl_url = get_download_url(session, file_id)
     if not dl_url:
         print("           → could not get download URL")
-        return None, False
+        return None, False, None
     try:
         safe_name = sanitize_filename(name)
         sub = date_subfolder(create_time)
         dest = downloads_dir / sub / safe_name
         written = download_file(session, dl_url, dest)
         local_path = str(dest)
-        print(f"           → saved {written/1024/1024:.1f}MB → {sub}/{dest.name}")
-        return local_path, True
+        pages = get_pdf_page_count(dest)
+        pages_str = f"  {pages}pp" if pages else ""
+        print(f"           → saved {written/1024/1024:.1f}MB{pages_str} → {sub}/{dest.name}")
+        return local_path, True, pages
     except Exception as exc:
         print(f"           → download failed: {exc}")
-        return None, False
+        return None, False, None
 
 
 # ── SQLite database ────────────────────────────────────────────────────────────
@@ -330,6 +381,11 @@ MIGRATIONS: list[tuple[str, str]] = [
     # v5 claude recommendation rating
     ("ALTER TABLE pdf_files ADD COLUMN claude_rating INTEGER", "duplicate column"),
     ("CREATE INDEX IF NOT EXISTS idx_claude_rating ON pdf_files(claude_rating)", "already exists"),
+    # v6 pdf page count
+    ("ALTER TABLE pdf_files ADD COLUMN page_count INTEGER", "duplicate column"),
+    # v7 investment bank
+    ("ALTER TABLE pdf_files ADD COLUMN bank TEXT", "duplicate column"),
+    ("CREATE INDEX IF NOT EXISTS idx_bank ON pdf_files(bank)", "already exists"),
 ]
 
 

@@ -36,11 +36,16 @@ from pathlib import Path
 from zsxq_classify import classify_one
 from zsxq_common import (
     DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
-    clean_zsxq_text, do_download, fetch_all_files, get_session_via_selenium,
-    init_db, upsert_entry,
+    clean_zsxq_text, do_download, extract_bank, fetch_all_files,
+    get_session_via_selenium, init_db, upsert_entry,
 )
 
 DEFAULT_GROUP_ID = "51111812185184"
+
+GROUP_ALIASES = {
+    "1": "51111812185184",
+    "2": "28888824254221",
+}
 
 
 def main() -> None:
@@ -48,7 +53,10 @@ def main() -> None:
         description="Download PDFs from a zsxq group and record them in zsxq.db. "
                     "Pass --classify to also run MiniMax classification."
     )
-    parser.add_argument("--group-id",       default=DEFAULT_GROUP_ID)
+    parser.add_argument("--group-id",       default=DEFAULT_GROUP_ID,
+                        help="Full group ID (or use --group for shorthand)")
+    parser.add_argument("--group",          default=None, metavar="N",
+                        help="Group shorthand: 1=51111812185184, 2=28888824254221")
     parser.add_argument("--count",          type=int,   default=10,
                         help="Max files to fetch (0 = unlimited); also applies with --from-date / --to-date")
     parser.add_argument("--from-date",      default=None, metavar="YYYY-MM-DD",
@@ -68,6 +76,14 @@ def main() -> None:
                         help="Run MiniMax classification after download (off by default)")
     args = parser.parse_args()
     args.no_classify = not args.classify
+
+    # Resolve --group shorthand → full group_id
+    if args.group is not None:
+        if args.group not in GROUP_ALIASES:
+            print(f"ERROR: --group must be one of: {', '.join(GROUP_ALIASES)} "
+                  f"(got {args.group!r})")
+            sys.exit(1)
+        args.group_id = GROUP_ALIASES[args.group]
 
     # ── Check API key early if we'll need it ──────────────────────────────
     api_key = None
@@ -129,12 +145,33 @@ def main() -> None:
 
     pdf_entries = [e for e in entries if e["file"]["name"].lower().endswith(".pdf")]
 
+    # Skip PPTX files
+    before_pptx = len(entries)
+    skipped_pptx = sum(1 for e in entries if e["file"]["name"].lower().endswith(".pptx"))
+    if skipped_pptx:
+        print(f"Skipped {skipped_pptx} PPTX file(s).")
+
     # Skip Chinese-translation copies (filenames starting with 中文版)
     before_cn = len(pdf_entries)
     pdf_entries = [e for e in pdf_entries if not e["file"]["name"].startswith("中文版")]
     skipped_cn = before_cn - len(pdf_entries)
     if skipped_cn:
         print(f"Skipped {skipped_cn} 中文版 file(s).")
+
+    # Skip topics with more than 3 files (one-for-one / paid packs)
+    from collections import Counter
+    topic_file_counts = Counter(
+        (e.get("topic") or {}).get("topic_id") for e in entries
+    )
+    before_bulk = len(pdf_entries)
+    pdf_entries = [
+        e for e in pdf_entries
+        if (tid := (e.get("topic") or {}).get("topic_id")) is None
+        or topic_file_counts[tid] <= 3
+    ]
+    skipped_bulk = before_bulk - len(pdf_entries)
+    if skipped_bulk:
+        print(f"Skipped {skipped_bulk} file(s) from topics with >3 attachments.")
 
     # Apply to_date upper bound (fetch_all_files doesn't filter this end)
     if to_date:
@@ -185,6 +222,10 @@ def main() -> None:
             "group_id":     args.group_id,
         }
         upsert_entry(conn, db_row)
+
+        # ── Save bank (from filename prefix) ──────────────────────────────
+        bank = extract_bank(name)
+        conn.execute("UPDATE pdf_files SET bank=? WHERE file_id=?", (bank, file_id))
         conn.commit()
 
         # ── Skip download if already done (local_path exists in DB) ──────
@@ -195,14 +236,14 @@ def main() -> None:
         else:
             # ── Download ──
             dl_ts = datetime.now().isoformat()
-            local_path, ok = do_download(
+            local_path, ok, pages = do_download(
                 session, file_id, name, out_dir,
                 create_time=f.get("create_time"),
             )
             if ok:
                 conn.execute(
-                    "UPDATE pdf_files SET local_path=?, downloaded_at=? WHERE file_id=?",
-                    (local_path, dl_ts, file_id),
+                    "UPDATE pdf_files SET local_path=?, downloaded_at=?, page_count=? WHERE file_id=?",
+                    (local_path, dl_ts, pages, file_id),
                 )
                 conn.commit()
                 results.append({"file_id": file_id, "name": name, "status": "ok"})
