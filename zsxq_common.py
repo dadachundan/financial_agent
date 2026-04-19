@@ -386,6 +386,8 @@ MIGRATIONS: list[tuple[str, str]] = [
     # v7 investment bank
     ("ALTER TABLE pdf_files ADD COLUMN bank TEXT", "duplicate column"),
     ("CREATE INDEX IF NOT EXISTS idx_bank ON pdf_files(bank)", "already exists"),
+    # v8 skipped flag
+    ("ALTER TABLE pdf_files ADD COLUMN skipped INTEGER DEFAULT 0", "duplicate column"),
 ]
 
 

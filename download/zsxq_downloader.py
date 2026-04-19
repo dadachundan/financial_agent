@@ -223,9 +223,9 @@ def main() -> None:
         }
         upsert_entry(conn, db_row)
 
-        # ── Save bank (from filename prefix) ──────────────────────────────
+        # ── Save bank and skipped=0 (file passed all skip filters) ──────
         bank = extract_bank(name)
-        conn.execute("UPDATE pdf_files SET bank=? WHERE file_id=?", (bank, file_id))
+        conn.execute("UPDATE pdf_files SET bank=?, skipped=0 WHERE file_id=?", (bank, file_id))
         conn.commit()
 
         # ── Skip download if already done (local_path exists in DB) ──────
