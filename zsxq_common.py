@@ -269,11 +269,9 @@ _BANK_PATTERNS: list[tuple[str, list[str]]] = [
 def extract_bank(name: str) -> str | None:
     """Return the canonical investment bank name from a PDF filename, or None."""
     n = name.strip()
-    # Strip known prefixes used for Chinese translations
-    for _pfx in ("CHS_", "中文版-", "中文版—", "中文版_"):
-        if n.startswith(_pfx):
-            n = n[len(_pfx):]
-            break
+    # Strip CHS_ prefix used for some translations
+    if n.startswith("CHS_"):
+        n = n[4:]
     n_lower = n.lower()
     for canonical, patterns in _BANK_PATTERNS:
         for pat in patterns:
