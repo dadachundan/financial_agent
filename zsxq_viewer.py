@@ -311,7 +311,7 @@ __URLPATCH__
         <tr>
           <th>#</th>
           <th>
-            <a href="?{{ base_qs }}&sort={{ 'asc' if (current_sort_by == 'date' and current_sort == 'desc') else 'desc' }}&sort_by=date"
+            <a href="#" onclick="applySort('date');return false"
                style="color:inherit;text-decoration:none;white-space:nowrap">
               Date {{ '↑' if (current_sort_by == 'date' and current_sort == 'asc') else '↓' if current_sort_by == 'date' else '' }}
             </a>
@@ -324,7 +324,7 @@ __URLPATCH__
           <th class="col-extra">Tags</th>
           <th class="col-extra">Size</th>
           <th class="col-extra">
-            <a href="?{{ base_qs }}&sort={{ 'asc' if (current_sort_by == 'pages' and current_sort == 'desc') else 'desc' }}&sort_by=pages"
+            <a href="#" onclick="applySort('pages');return false"
                style="color:inherit;text-decoration:none;white-space:nowrap">
               Pages {{ '↑' if (current_sort_by == 'pages' and current_sort == 'asc') else '↓' if current_sort_by == 'pages' else '' }}
             </a>
@@ -672,6 +672,18 @@ __MCW_FOOTER__
     const params = new URLSearchParams(window.location.search);
     params.delete('page');
     if (gid) { params.set('group_id', gid); } else { params.delete('group_id'); }
+    window.location.href = '?' + params.toString();
+  }
+
+  function applySort(sortBy) {
+    const params = new URLSearchParams(window.location.search);
+    params.delete('page');
+    const currentSortBy = params.get('sort_by') || 'date';
+    const currentSort   = params.get('sort')    || 'desc';
+    // Toggle direction if same column, else default to desc
+    const newSort = (currentSortBy === sortBy && currentSort === 'desc') ? 'asc' : 'desc';
+    params.set('sort_by', sortBy);
+    params.set('sort', newSort);
     window.location.href = '?' + params.toString();
   }
 
