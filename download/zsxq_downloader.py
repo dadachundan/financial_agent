@@ -131,6 +131,16 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
         print(f"[{i}/{len(pdf_entries)}] {name[:70]}")
         print(f"         date={date_str}  size={size_mb:.1f}MB  id={file_id}")
 
+        # ── Skip if same filename already exists in DB (any group) ──────
+        name_existing = conn.execute(
+            "SELECT file_id FROM pdf_files WHERE name = ? AND file_id != ?",
+            (name, file_id),
+        ).fetchone()
+        if name_existing:
+            print(f"         → duplicate filename (id={name_existing['file_id']}), skipping.")
+            results.append({"file_id": file_id, "name": name, "status": "skipped"})
+            continue
+
         existing = conn.execute(
             "SELECT local_path, downloaded_at FROM pdf_files WHERE file_id = ?",
             (file_id,),
