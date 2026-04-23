@@ -11,6 +11,7 @@ Covers:
 """
 
 import re
+import socket
 import sqlite3
 import time
 from datetime import datetime
@@ -216,10 +217,13 @@ def download_file(
 
     Cleans up the partial file on any error (including KeyboardInterrupt).
     """
-    resp = session.get(download_url, stream=True, headers=HEADERS)
+    resp = session.get(download_url, stream=True, headers=HEADERS, timeout=(15, 120))
     resp.raise_for_status()
     dest_path.parent.mkdir(parents=True, exist_ok=True)
     written = 0
+    # socket timeout covers stalled chunk reads that requests timeout= misses
+    old_timeout = socket.getdefaulttimeout()
+    socket.setdefaulttimeout(120)
     try:
         with open(dest_path, "wb") as fh:
             for chunk in resp.iter_content(chunk_size=65536):
@@ -228,6 +232,8 @@ def download_file(
     except BaseException:
         dest_path.unlink(missing_ok=True)
         raise
+    finally:
+        socket.setdefaulttimeout(old_timeout)
     return written
 
 
