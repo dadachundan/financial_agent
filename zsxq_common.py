@@ -108,7 +108,15 @@ def fetch_files_page(
     url = f"{API_BASE}/groups/{group_id}/files"
 
     for attempt in range(retries):
-        resp = session.get(url, params=params, headers=HEADERS, timeout=30)
+        try:
+            resp = session.get(url, params=params, headers=HEADERS, timeout=30)
+        except requests.exceptions.Timeout as exc:
+            wait = 3 * (attempt + 1)
+            print(f"    API timeout (attempt {attempt+1}/{retries}), retrying in {wait}s…")
+            if attempt + 1 >= retries:
+                raise RuntimeError(f"API timed out after {retries} retries") from exc
+            time.sleep(wait)
+            continue
         resp.raise_for_status()
         data = resp.json()
         if data.get("succeeded"):
