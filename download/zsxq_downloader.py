@@ -295,7 +295,7 @@ def _run_query(query: str, args, session, conn, out_dir: Path,
         name    = f["name"]
         size_mb = (f.get("size") or 0) / 1024 / 1024
         summary = clean_zsxq_text(talk.get("text") or "")
-        group_id = str(entry.get("group_id") or topic.get("group_id") or "")
+        group_id = str((entry.get("group") or {}).get("group_id") or "")
 
         date_str = (f.get("create_time") or "")[:10]
         print(f"[{i}/{len(pdf_entries)}] {name[:70]}")

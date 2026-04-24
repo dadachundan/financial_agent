@@ -202,7 +202,7 @@ def fetch_search_files_page(
     Returns (entries, next_index). The search API paginates via an integer
     index offset, not end_time like the group file listing.
     """
-    params: dict = {"keyword": query, "count": count, "type": "file"}
+    params: dict = {"keyword": query, "count": count}
     if index:
         params["index"] = index
 
