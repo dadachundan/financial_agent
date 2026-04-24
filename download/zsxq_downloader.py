@@ -40,7 +40,7 @@ from zsxq_classify import classify_one
 from zsxq_common import (
     DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
     clean_zsxq_text, do_download, extract_bank, fetch_all_files,
-    fetch_all_search_results,
+    fetch_all_search_results, sanitize_filename,
     get_session_via_selenium, init_db, upsert_entry,
 )
 
@@ -232,11 +232,18 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
 
 def _run_query(query: str, args, session, conn, out_dir: Path,
                api_key) -> list[dict]:
-    """Search all groups for *query* and download matching PDFs."""
+    """Search all groups for *query* and download matching PDFs.
+
+    Files are saved into out_dir/<query>/ (flat, no date subfolder).
+    """
     from collections import Counter
+
+    query_dir = out_dir / sanitize_filename(query)
+    query_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"\n{'='*60}")
     print(f"Searching all groups for: {query!r}  (全部星球)…")
+    print(f"Output folder: {query_dir}")
     entries = fetch_all_search_results(
         session, query,
         max_files=args.count,
@@ -337,8 +344,8 @@ def _run_query(query: str, args, session, conn, out_dir: Path,
         else:
             dl_ts = datetime.now().isoformat()
             local_path, ok, pages = do_download(
-                session, file_id, name, out_dir,
-                create_time=f.get("create_time"),
+                session, file_id, name, query_dir,
+                use_date_subfolder=False,
             )
             if ok:
                 conn.execute(

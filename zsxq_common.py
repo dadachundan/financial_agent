@@ -387,11 +387,12 @@ def do_download(
     name: str,
     downloads_dir: Path,
     create_time: str | None = None,
+    use_date_subfolder: bool = True,
 ) -> tuple[str | None, bool, int | None]:
     """Fetch download URL and save the file.
 
-    Files are saved into a date-named subfolder (YYYY_MM_DD) derived from
-    create_time so downloads are grouped by publication date.
+    When use_date_subfolder=True (default) files are saved into a YYYY_MM_DD
+    subfolder; set False to save directly into downloads_dir.
 
     Returns (local_path, success, page_count). local_path is None on failure.
     """
@@ -401,8 +402,11 @@ def do_download(
         return None, False, None
     try:
         safe_name = sanitize_filename(name)
-        sub = date_subfolder(create_time)
-        dest = downloads_dir / sub / safe_name
+        if use_date_subfolder:
+            sub = date_subfolder(create_time)
+            dest = downloads_dir / sub / safe_name
+        else:
+            dest = downloads_dir / safe_name
         written = download_file(session, dl_url, dest)
         local_path = str(dest)
         pages = get_pdf_page_count(dest)
