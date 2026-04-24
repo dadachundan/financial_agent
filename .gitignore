@@ -13,3 +13,11 @@ uploads/
 financial_reports/
 *.log
 models/
+cninfo_reports/
+.claude/worktrees/
+.claude/settings.local.json
+log/
+eval_results.json
+eval_results.md
+claude_rate_reports.py
+pdf_eval.py
