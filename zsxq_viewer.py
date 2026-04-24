@@ -334,6 +334,7 @@ __URLPATCH__
           <th>PDF</th>
           <th class="col-extra">Comment</th>
           <th class="col-extra">Analysis</th>
+          <th class="col-extra">Query</th>
         </tr>
       </thead>
       <tbody>
@@ -456,6 +457,9 @@ __URLPATCH__
 
           <td class="col-extra analysis-col text-muted">
             {{ (row.categories_analysis or row.ai_robotics_analysis or '')[:180] or '—' }}
+          </td>
+          <td class="col-extra text-nowrap text-muted" style="font-size:.8rem">
+            {{ row.query_term or '—' }}
           </td>
         </tr>
         {% endfor %}
