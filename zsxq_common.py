@@ -188,6 +188,86 @@ def fetch_all_files(
     return all_entries
 
 
+# ── API: search files across all groups ───────────────────────────────────────
+
+def fetch_search_files_page(
+    session: requests.Session,
+    query: str,
+    count: int = 20,
+    end_time: str | None = None,
+    retries: int = 4,
+) -> list[dict]:
+    """Search for files matching *query* across all joined groups (全部星球).
+
+    Returns a list of raw file entries in the same shape as fetch_files_page.
+    """
+    params: dict = {"keyword": query, "count": count, "type": "file"}
+    if end_time:
+        params["end_time"] = end_time
+
+    url = f"{API_BASE}/search/files"
+
+    for attempt in range(retries):
+        try:
+            resp = session.get(url, params=params, headers=HEADERS, timeout=30)
+        except requests.exceptions.Timeout as exc:
+            wait = 3 * (attempt + 1)
+            print(f"    Search API timeout (attempt {attempt+1}/{retries}), retrying in {wait}s…")
+            if attempt + 1 >= retries:
+                raise RuntimeError(f"Search API timed out after {retries} retries") from exc
+            time.sleep(wait)
+            continue
+        resp.raise_for_status()
+        data = resp.json()
+        if data.get("succeeded"):
+            return data["resp_data"].get("files", [])
+        err = data.get("info") or data.get("error") or ""
+        if data.get("code") in (1059,) or "内部" in err:
+            wait = 3 * (attempt + 1)
+            print(f"    Transient search error (attempt {attempt+1}/{retries}), "
+                  f"retrying in {wait}s…")
+            time.sleep(wait)
+            continue
+        raise RuntimeError(f"Search API error: {err}")
+
+    raise RuntimeError(f"Search API error after {retries} retries")
+
+
+def fetch_all_search_results(
+    session: requests.Session,
+    query: str,
+    max_files: int = 0,
+    delay: float = 0.5,
+) -> list[dict]:
+    """Paginate through all search results for *query*; return flat list of entries."""
+    all_entries: list[dict] = []
+    end_time: str | None = None
+    page = 0
+
+    while True:
+        page += 1
+        entries = fetch_search_files_page(session, query, count=20, end_time=end_time)
+        if not entries:
+            break
+
+        all_entries.extend(entries)
+        print(f"  Search page {page}: fetched {len(entries)} files "
+              f"(total so far: {len(all_entries)})")
+
+        if max_files and len(all_entries) >= max_files:
+            all_entries = all_entries[:max_files]
+            break
+
+        if len(entries) < 20:
+            break  # last page
+
+        oldest = min(entries, key=lambda e: e["file"]["create_time"])
+        end_time = oldest["file"]["create_time"]
+        time.sleep(delay)
+
+    return all_entries
+
+
 # ── API: download URL + file download ─────────────────────────────────────────
 
 def get_download_url(session: requests.Session, file_id: int,
@@ -402,6 +482,9 @@ MIGRATIONS: list[tuple[str, str]] = [
     ("CREATE INDEX IF NOT EXISTS idx_bank ON pdf_files(bank)", "already exists"),
     # v8 skipped flag
     ("ALTER TABLE pdf_files ADD COLUMN skipped INTEGER DEFAULT 0", "duplicate column"),
+    # v9 search query term
+    ("ALTER TABLE pdf_files ADD COLUMN query_term TEXT", "duplicate column"),
+    ("CREATE INDEX IF NOT EXISTS idx_query_term ON pdf_files(query_term)", "already exists"),
 ]
 
 
@@ -427,10 +510,12 @@ def upsert_entry(conn: sqlite3.Connection, row: dict) -> None:
         """
         INSERT INTO pdf_files
             (file_id, name, topic_id, topic_title, summary, topic_json,
-             local_path, file_size, create_time, downloaded_at, indexed_at, group_id)
+             local_path, file_size, create_time, downloaded_at, indexed_at, group_id,
+             query_term)
         VALUES
             (:file_id, :name, :topic_id, :topic_title, :summary, :topic_json,
-             :local_path, :file_size, :create_time, :downloaded_at, :indexed_at, :group_id)
+             :local_path, :file_size, :create_time, :downloaded_at, :indexed_at, :group_id,
+             :query_term)
         ON CONFLICT(file_id) DO UPDATE SET
             name          = excluded.name,
             topic_id      = excluded.topic_id,
@@ -442,7 +527,8 @@ def upsert_entry(conn: sqlite3.Connection, row: dict) -> None:
             create_time   = excluded.create_time,
             downloaded_at = COALESCE(excluded.downloaded_at, pdf_files.downloaded_at),
             indexed_at    = excluded.indexed_at,
-            group_id      = COALESCE(excluded.group_id, pdf_files.group_id)
+            group_id      = COALESCE(excluded.group_id, pdf_files.group_id),
+            query_term    = COALESCE(pdf_files.query_term,   excluded.query_term)
         """,
-        row,
+        {**row, "query_term": row.get("query_term")},
     )

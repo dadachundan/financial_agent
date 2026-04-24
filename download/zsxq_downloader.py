@@ -24,6 +24,9 @@ Usage
     python zsxq_downloader.py --from-date 2025-01-01 --to-date 2025-03-31
     python zsxq_downloader.py --from-date 2025-06-01              # since a date, default --count 10
     python zsxq_downloader.py --from-date 2025-06-01 --count 0   # since a date, no limit
+    python zsxq_downloader.py --query qcom                        # search all groups for "qcom"
+    python zsxq_downloader.py --query qcom --count 50            # search, up to 50 results
+    python zsxq_downloader.py --query qcom --classify            # search + classify
 """
 import sys, pathlib as _pl; sys.path.insert(0, str(_pl.Path(__file__).parent.parent))
 
@@ -37,6 +40,7 @@ from zsxq_classify import classify_one
 from zsxq_common import (
     DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
     clean_zsxq_text, do_download, extract_bank, fetch_all_files,
+    fetch_all_search_results,
     get_session_via_selenium, init_db, upsert_entry,
 )
 
@@ -226,17 +230,178 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
     return results
 
 
+def _run_query(query: str, args, session, conn, out_dir: Path,
+               api_key) -> list[dict]:
+    """Search all groups for *query* and download matching PDFs."""
+    from collections import Counter
+
+    print(f"\n{'='*60}")
+    print(f"Searching all groups for: {query!r}  (全部星球)…")
+    entries = fetch_all_search_results(
+        session, query,
+        max_files=args.count,
+    )
+
+    pdf_entries = [e for e in entries if e["file"]["name"].lower().endswith(".pdf")]
+
+    skipped_pptx = sum(1 for e in entries if e["file"]["name"].lower().endswith(".pptx"))
+    if skipped_pptx:
+        print(f"Skipped {skipped_pptx} PPTX file(s).")
+
+    before_cn = len(pdf_entries)
+    pdf_entries = [
+        e for e in pdf_entries
+        if not e["file"]["name"].startswith("中文版")
+        and not e["file"]["name"].startswith("CHS_")
+        and "三个皮匠报告" not in e["file"]["name"]
+        and "景略咨询" not in e["file"]["name"]
+    ]
+    skipped_cn = before_cn - len(pdf_entries)
+    if skipped_cn:
+        print(f"Skipped {skipped_cn} 中文版/CHS_/三个皮匠报告/景略咨询 file(s).")
+
+    topic_file_counts = Counter(
+        (e.get("topic") or {}).get("topic_id") for e in entries
+    )
+    before_bulk = len(pdf_entries)
+    pdf_entries = [
+        e for e in pdf_entries
+        if (tid := (e.get("topic") or {}).get("topic_id")) is None
+        or topic_file_counts[tid] <= 3
+    ]
+    skipped_bulk = before_bulk - len(pdf_entries)
+    if skipped_bulk:
+        print(f"Skipped {skipped_bulk} file(s) from topics with >3 attachments.")
+
+    print(f"Found {len(pdf_entries)} PDF(s) matching {query!r}.\n")
+
+    results: list[dict] = []
+    now = datetime.now().isoformat()
+
+    for i, entry in enumerate(pdf_entries, 1):
+        f       = entry["file"]
+        topic   = entry.get("topic") or {}
+        talk    = (topic.get("talk") or {})
+        file_id = f["file_id"]
+        name    = f["name"]
+        size_mb = (f.get("size") or 0) / 1024 / 1024
+        summary = clean_zsxq_text(talk.get("text") or "")
+        group_id = str(entry.get("group_id") or topic.get("group_id") or "")
+
+        date_str = (f.get("create_time") or "")[:10]
+        print(f"[{i}/{len(pdf_entries)}] {name[:70]}")
+        print(f"         date={date_str}  size={size_mb:.1f}MB  id={file_id}")
+
+        # Skip if same filename already exists (different file_id)
+        name_existing = conn.execute(
+            "SELECT file_id FROM pdf_files WHERE name = ? AND file_id != ?",
+            (name, file_id),
+        ).fetchone()
+        if name_existing:
+            print(f"         → duplicate filename (id={name_existing['file_id']}), skipping.")
+            results.append({"file_id": file_id, "name": name, "status": "skipped"})
+            continue
+
+        existing = conn.execute(
+            "SELECT local_path, downloaded_at FROM pdf_files WHERE file_id = ?",
+            (file_id,),
+        ).fetchone()
+        local_path    = existing["local_path"]    if existing else None
+        downloaded_at = existing["downloaded_at"] if existing else None
+
+        db_row = {
+            "file_id":      file_id,
+            "name":         name,
+            "topic_id":     topic.get("topic_id"),
+            "topic_title":  summary.split("\n")[0].strip() or clean_zsxq_text(topic.get("title") or ""),
+            "summary":      summary,
+            "topic_json":   None,
+            "local_path":   local_path,
+            "file_size":    f.get("size"),
+            "create_time":  f.get("create_time"),
+            "downloaded_at": downloaded_at,
+            "indexed_at":   now,
+            "group_id":     group_id,
+            "query_term":   query,
+        }
+        upsert_entry(conn, db_row)
+
+        bank = extract_bank(name)
+        conn.execute("UPDATE pdf_files SET bank=?, skipped=0 WHERE file_id=?", (bank, file_id))
+        conn.commit()
+
+        already_downloaded = local_path is not None
+        if already_downloaded:
+            print("         → already downloaded, skipping download.")
+            results.append({"file_id": file_id, "name": name, "status": "skipped"})
+        else:
+            dl_ts = datetime.now().isoformat()
+            local_path, ok, pages = do_download(
+                session, file_id, name, out_dir,
+                create_time=f.get("create_time"),
+            )
+            if ok:
+                conn.execute(
+                    "UPDATE pdf_files SET local_path=?, downloaded_at=?, page_count=? WHERE file_id=?",
+                    (local_path, dl_ts, pages, file_id),
+                )
+                conn.commit()
+                results.append({"file_id": file_id, "name": name, "status": "ok"})
+            else:
+                results.append({"file_id": file_id, "name": name, "status": "error"})
+                print()
+                if i < len(pdf_entries):
+                    time.sleep(args.delay)
+                continue
+
+        if not args.no_classify:
+            row = conn.execute(
+                "SELECT ai_related FROM pdf_files WHERE file_id = ?", (file_id,)
+            ).fetchone()
+            already_classified = row and row["ai_related"] is not None
+            if already_classified:
+                print("         → already classified, skipping LLM.")
+            else:
+                print("         → classifying via MiniMax…")
+                try:
+                    result = classify_one(
+                        conn, file_id, name, summary, api_key,
+                        local_path=local_path,
+                    )
+                    flags = [label for label, hit in [
+                        ("AI", result["ai"]), ("Robotics", result["robotics"]),
+                        ("Semi", result["semiconductor"]), ("Energy", result["energy"]),
+                    ] if hit]
+                    cat_str = ("✓ " + ", ".join(flags)) if flags else "✗ None"
+                    print(f"         → {cat_str}  [{result['elapsed']:.1f}s]")
+                    if result["tickers"]:
+                        print(f"         → Tickers: {result['tickers']}")
+                    if i < len(pdf_entries):
+                        time.sleep(args.classify_delay)
+                except Exception as exc:
+                    print(f"         ⚠ Classification failed: {exc}")
+
+        print()
+        if i < len(pdf_entries) and not already_downloaded:
+            time.sleep(args.delay)
+
+    return results
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Download PDFs from a zsxq group and record them in zsxq.db. "
                     "Pass --classify to also run MiniMax classification."
     )
+    parser.add_argument("--query",          default=None, metavar="KEYWORD",
+                        help="Search all groups (全部星球) for files matching this term "
+                             "and download them. Records query_term in the DB.")
     parser.add_argument("--group-id",       default=None,
                         help="Full group ID. If omitted, both groups are downloaded.")
     parser.add_argument("--group",          default=None, metavar="N",
                         help="Group shorthand: 1=51111812185184, 2=28888824254221")
     parser.add_argument("--count",          type=int,   default=10,
-                        help="Max files to fetch per group (0 = unlimited)")
+                        help="Max files to fetch per group / search (0 = unlimited)")
     parser.add_argument("--from-date",      default=None, metavar="YYYY-MM-DD",
                         help="Only process files published on or after this date")
     parser.add_argument("--to-date",        default=None, metavar="YYYY-MM-DD",
@@ -305,10 +470,15 @@ def main() -> None:
     conn    = init_db(db_path)
 
     all_results: list[dict] = []
-    for group_id in group_ids:
-        results = _run_group(group_id, args, session, conn, out_dir,
-                             api_key, from_date, to_date)
+
+    if args.query:
+        results = _run_query(args.query, args, session, conn, out_dir, api_key)
         all_results.extend(results)
+    else:
+        for group_id in group_ids:
+            results = _run_group(group_id, args, session, conn, out_dir,
+                                 api_key, from_date, to_date)
+            all_results.extend(results)
 
     conn.close()
 
