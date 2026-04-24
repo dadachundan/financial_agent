@@ -194,16 +194,17 @@ def fetch_search_files_page(
     session: requests.Session,
     query: str,
     count: int = 20,
-    end_time: str | None = None,
+    index: int = 0,
     retries: int = 4,
-) -> list[dict]:
+) -> tuple[list[dict], int]:
     """Search for files matching *query* across all joined groups (全部星球).
 
-    Returns a list of raw file entries in the same shape as fetch_files_page.
+    Returns (entries, next_index). The search API paginates via an integer
+    index offset, not end_time like the group file listing.
     """
     params: dict = {"keyword": query, "count": count, "type": "file"}
-    if end_time:
-        params["end_time"] = end_time
+    if index:
+        params["index"] = index
 
     url = f"{API_BASE}/search/files"
 
@@ -220,7 +221,8 @@ def fetch_search_files_page(
         resp.raise_for_status()
         data = resp.json()
         if data.get("succeeded"):
-            return data["resp_data"].get("files", [])
+            rd = data["resp_data"]
+            return rd.get("files", []), rd.get("index", index + count)
         err = data.get("info") or data.get("error") or ""
         if data.get("code") in (1059,) or "内部" in err:
             wait = 3 * (attempt + 1)
@@ -241,12 +243,12 @@ def fetch_all_search_results(
 ) -> list[dict]:
     """Paginate through all search results for *query*; return flat list of entries."""
     all_entries: list[dict] = []
-    end_time: str | None = None
+    index = 0
     page = 0
 
     while True:
         page += 1
-        entries = fetch_search_files_page(session, query, count=20, end_time=end_time)
+        entries, next_index = fetch_search_files_page(session, query, count=20, index=index)
         if not entries:
             break
 
@@ -261,8 +263,7 @@ def fetch_all_search_results(
         if len(entries) < 20:
             break  # last page
 
-        oldest = min(entries, key=lambda e: e["file"]["create_time"])
-        end_time = oldest["file"]["create_time"]
+        index = next_index
         time.sleep(delay)
 
     return all_entries
