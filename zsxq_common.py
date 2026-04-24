@@ -411,7 +411,8 @@ def do_download(
         local_path = str(dest)
         pages = get_pdf_page_count(dest)
         pages_str = f"  {pages}pp" if pages else ""
-        print(f"           → saved {written/1024/1024:.1f}MB{pages_str} → {sub}/{dest.name}")
+        rel = f"{sub}/{dest.name}" if use_date_subfolder else dest.name
+        print(f"           → saved {written/1024/1024:.1f}MB{pages_str} → {rel}")
         return local_path, True, pages
     except Exception as exc:
         print(f"           → download failed: {exc}")
