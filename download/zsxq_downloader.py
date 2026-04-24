@@ -78,10 +78,11 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
 
     pdf_entries = [e for e in entries if e["file"]["name"].lower().endswith(".pdf")]
 
-    # Skip PPTX files
-    skipped_pptx = sum(1 for e in entries if e["file"]["name"].lower().endswith(".pptx"))
-    if skipped_pptx:
-        print(f"Skipped {skipped_pptx} PPTX file(s).")
+    # Skip PPTX / XLSX files
+    skipped_non_pdf = sum(1 for e in entries
+                          if e["file"]["name"].lower().endswith((".pptx", ".xlsx")))
+    if skipped_non_pdf:
+        print(f"Skipped {skipped_non_pdf} PPTX/XLSX file(s).")
 
     # Skip Chinese-translation copies (中文版), CHS_ prefixed, and 三个皮匠报告 files
     before_cn = len(pdf_entries)
@@ -251,9 +252,10 @@ def _run_query(query: str, args, session, conn, out_dir: Path,
 
     pdf_entries = [e for e in entries if e["file"]["name"].lower().endswith(".pdf")]
 
-    skipped_pptx = sum(1 for e in entries if e["file"]["name"].lower().endswith(".pptx"))
-    if skipped_pptx:
-        print(f"Skipped {skipped_pptx} PPTX file(s).")
+    skipped_non_pdf = sum(1 for e in entries
+                          if e["file"]["name"].lower().endswith((".pptx", ".xlsx")))
+    if skipped_non_pdf:
+        print(f"Skipped {skipped_non_pdf} PPTX/XLSX file(s).")
 
     before_cn = len(pdf_entries)
     pdf_entries = [
