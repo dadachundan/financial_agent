@@ -1418,10 +1418,54 @@ def set_comment(file_id: int):
 
 
 
+def _ocr_region(page, rect, scale: float = 2.0) -> str:
+    """Render a page region and run macOS Vision OCR on it. Returns '' on failure."""
+    try:
+        import fitz
+        from PIL import Image
+        import io
+        import AppKit
+
+        # Render the full page at given scale
+        mat = fitz.Matrix(scale, scale)
+        pix = page.get_pixmap(matrix=mat)
+        img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+
+        # Map PDF rect → pixel crop (fitz uses top-left origin, y down)
+        pad = 4  # extra pixels to avoid edge clipping
+        x0 = max(0, int(rect.x0 * scale) - pad)
+        y0 = max(0, int(rect.y0 * scale) - pad)
+        x1 = min(pix.width,  int(rect.x1 * scale) + pad)
+        y1 = min(pix.height, int(rect.y1 * scale) + pad)
+        crop = img.crop((x0, y0, x1, y1))
+
+        buf = io.BytesIO()
+        crop.save(buf, format="PNG")
+        png_bytes = buf.getvalue()
+
+        import Vision
+        ns_data = AppKit.NSData.dataWithBytes_length_(png_bytes, len(png_bytes))
+        import Quartz
+        ci_image = Quartz.CIImage.imageWithData_(ns_data)
+        handler = Vision.VNImageRequestHandler.alloc().initWithCIImage_options_(ci_image, {})
+        request = Vision.VNRecognizeTextRequest.alloc().init()
+        request.setRecognitionLevel_(Vision.VNRequestTextRecognitionLevelAccurate)
+        request.setUsesLanguageCorrection_(True)
+        handler.performRequests_error_([request], None)
+        results = request.results() or []
+        texts = [r.topCandidates_(1)[0].string() for r in results if r.topCandidates_(1)]
+        return " ".join(texts).strip()
+    except Exception as e:
+        print(f"                   OCR region failed: {e}")
+        return ""
+
+
 def _extract_annotations_from_pdf(path: Path) -> list[dict]:
     """Extract highlight, sticky-note, and free-text annotations from a PDF.
 
     Uses PyMuPDF (fitz) for speed — falls back to PyPDF2 if not available.
+    For highlights with no /Contents (raster PDFs like UBS/GS), runs macOS
+    Vision OCR on the highlighted region to recover the text.
     Returns list of {page, type, text, note} dicts sorted by page.
     """
     import time as _t
@@ -1448,8 +1492,12 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                 content = (annot.info.get("content") or "").strip().lstrip("﻿\x00")
                 if ann_type in _HIGHLIGHT_TYPES:
                     text = content
-                    # Skip highlights with no /Contents — the get_textbox fallback
-                    # produces garbled text on PDFs with custom font encoding.
+                    if not text:
+                        # /Contents empty — raster PDF (UBS/GS style).
+                        # Use Vision OCR on the highlight region.
+                        _t1 = _t.time()
+                        text = _ocr_region(page, annot.rect)
+                        print(f"                   OCR p{page_num+1} in {_t.time()-_t1:.1f}s: {text[:60]!r}")
                     if not text:
                         continue
                     results.append({"page": page_num + 1, "type": "Highlight",
