@@ -1412,8 +1412,12 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
 
     results = []
     try:
+        import time as _t
+        _t0 = _t.time()
         reader = PdfReader(str(path), strict=False)
-    except Exception:
+        print(f"                   PdfReader loaded in {_t.time()-_t0:.1f}s  ({len(reader.pages)} pages)")
+    except Exception as e:
+        print(f"                   PdfReader failed: {e}")
         return []
 
     for page_num, page in enumerate(reader.pages, 1):
@@ -1500,22 +1504,37 @@ def _format_annotations(anns: list[dict]) -> str:
 @zsxq_bp.route("/sync-annotations/<int:file_id>", methods=["POST"])
 def sync_annotations(file_id: int):
     """Read PDF annotations from disk and save them to the comment field."""
+    import time as _time
     conn = get_conn()
     row = conn.execute(
-        "SELECT local_path FROM pdf_files WHERE file_id = ?", (file_id,)
+        "SELECT local_path, name FROM pdf_files WHERE file_id = ?", (file_id,)
     ).fetchone()
     conn.close()
 
     if not row or not row["local_path"]:
+        print(f"[sync-annotations] ❌ file_id={file_id} — no local file in DB")
         return jsonify(ok=False, error="No local file"), 404
 
     path = Path(row["local_path"])
     if not path.exists():
+        print(f"[sync-annotations] ❌ file not on disk: {path}")
         return jsonify(ok=False, error="File not found on disk"), 404
 
+    print(f"[sync-annotations] 📌 {row['name']}")
+    print(f"                   path: {path}")
+    t0 = _time.time()
+
     anns = _extract_annotations_from_pdf(path)
+
+    elapsed = _time.time() - t0
     if not anns:
+        print(f"                   ⚠ no annotations found  ({elapsed:.1f}s)")
         return jsonify(ok=False, error="No annotations found in PDF"), 200
+
+    print(f"                   ✓ {len(anns)} annotation(s) found  ({elapsed:.1f}s)")
+    for a in anns:
+        preview = (a['text'] or '')[:60].replace('\n', ' ')
+        print(f"                   p.{a['page']} [{a['type']}] {preview!r}")
 
     comment = _format_annotations(anns)
     conn = get_conn()
