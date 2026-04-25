@@ -1665,10 +1665,12 @@ def ask_pdf(file_id: int):
     path = Path(row["local_path"])
     if not path.exists():
         return jsonify(ok=False, error="File not found on disk"), 404
-    result = subprocess.run(["open", "-a", "Claude", str(path)], capture_output=True, text=True)
-    print(f"[ask-pdf] open -a Claude rc={result.returncode} path={path.name}")
-    if result.returncode != 0:
-        return jsonify(ok=False, error=result.stderr or "Failed to open Claude"), 500
+    # Open Claude app and reveal the file in Finder so it can be dragged in
+    r1 = subprocess.run(["open", "-a", "Claude"], capture_output=True, text=True)
+    r2 = subprocess.run(["open", "-R", str(path)], capture_output=True, text=True)
+    print(f"[ask-pdf] Claude rc={r1.returncode}  Finder reveal rc={r2.returncode}  {path.name}")
+    if r1.returncode != 0:
+        return jsonify(ok=False, error=r1.stderr or "Failed to open Claude"), 500
     return jsonify(ok=True)
 
 
