@@ -1500,20 +1500,36 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
 def _format_annotations(anns: list[dict]) -> str:
     """Format annotations as markdown.
 
-    Each annotation is preceded by a heading  # P{N}
-    Highlights  → blockquote:  > text
-    Notes/text  → plain paragraph
+    # P4, P21          ← top-level summary of all cited pages
+    ## P4              ← one subheading per unique page
+    > highlighted text
+    plain note text
+    ## P21
+    > ...
     """
-    lines = []
+    # Collect unique pages in order
+    seen_pages: list[int] = []
+    for a in anns:
+        if a["page"] not in seen_pages:
+            seen_pages.append(a["page"])
+
+    page_summary = ", ".join(f"P{p}" for p in seen_pages)
+    lines = [f"# {page_summary}", ""]
+
+    last_page = None
     for a in anns:
         text = (a["text"] or "").replace("\n", " ").strip()
-        lines.append(f"# P{a['page']}")
+        if a["page"] != last_page:
+            if last_page is not None:
+                lines.append("")
+            lines.append(f"## P{a['page']}")
+            last_page = a["page"]
         if a["type"] == "Highlight":
             lines.append(f"> {text}")
         else:
             lines.append(text)
-        lines.append("")   # blank line between entries
-    # remove trailing blank line
+        lines.append("")
+
     while lines and lines[-1] == "":
         lines.pop()
     return "\n".join(lines)
