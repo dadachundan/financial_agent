@@ -73,7 +73,7 @@ def _build_cache() -> None:
         print(f"[ticker_names] cache ready: {len(result)} total entries")
 
     except Exception as exc:
-        print(f"[ticker_names] cache build FAILED: {exc}")
+        print(f"[ticker_names] cache build failed (network issue, will retry next start): {exc}")
     finally:
         _cache_building = False
 
