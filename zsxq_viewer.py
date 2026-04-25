@@ -521,6 +521,7 @@ __MCW_MODALS__
 __MCW_FOOTER__
 <script src="/static/vendor/bootstrap.bundle.min.js"></script>
 <script>
+  const _base = "{{ _base | default('') }}";
   const _summaryModal = new bootstrap.Modal(document.getElementById('summaryModal'));
   function showSummary(fileId, el) {
     document.getElementById('summaryModalTitle').textContent = el.dataset.title || '';
@@ -603,13 +604,9 @@ __MCW_FOOTER__
         btn.disabled = false;
         btn.textContent = orig;
         if (data.ok) {
-          // Update the comment cell in-place
-          const commentSpan = document.querySelector('#comment-cell-' + fileId + ' .comment-preview');
-          if (commentSpan) {
-            commentSpan.dataset.comment = data.comment;
-            // trigger re-render if the widget uses it
-            if (typeof renderCommentPreview === 'function') renderCommentPreview(commentSpan);
-          }
+          // Update the comment cell in-place using the widget's own function
+          const cell = document.getElementById('comment-cell-' + fileId);
+          if (cell) renderCommentCell(cell, fileId, data.comment);
           btn.title = data.count + ' annotation(s) saved to comment';
           btn.textContent = '✅';
           setTimeout(() => { btn.textContent = orig; btn.title = 'Read annotations from local PDF and save to comment'; }, 2500);
@@ -1503,19 +1500,19 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
 def _format_annotations(anns: list[dict]) -> str:
     """Format annotations as markdown.
 
-    Highlights  → blockquote:  > text  *(p.N)*
-    Notes/text  → plain line:  text  *(p.N)*
+    Each annotation is preceded by a heading  # P{N}
+    Highlights  → blockquote:  > text
+    Notes/text  → plain paragraph
     """
     lines = []
     for a in anns:
         text = (a["text"] or "").replace("\n", " ").strip()
-        page_tag = f" *(p.{a['page']})*"
+        lines.append(f"# P{a['page']}")
         if a["type"] == "Highlight":
-            lines.append(f"> {text}{page_tag}")
+            lines.append(f"> {text}")
         else:
-            # Text (sticky note) or FreeText — plain paragraph
-            lines.append(f"{text}{page_tag}")
-        lines.append("")   # blank line between entries for proper markdown rendering
+            lines.append(text)
+        lines.append("")   # blank line between entries
     # remove trailing blank line
     while lines and lines[-1] == "":
         lines.pop()

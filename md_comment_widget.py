@@ -68,6 +68,7 @@ CSS = """\
     .comment-preview ul,.comment-preview ol { padding-left:1.2em; margin:0 0 .2em; }
     .comment-preview img { max-height:3em; border-radius:3px; }
     .comment-preview code { font-size:.8em; background:#f0f0f0; padding:1px 3px; border-radius:2px; }
+    .comment-preview blockquote { border-left:3px solid #d0d7de; margin:.1em 0; padding:.1em .5em; color:#555; }
     /* Comment preview modal body */
     #commentPreviewBody img  { max-width:100%; border-radius:6px; margin:.4em 0; display:block; }
     #commentPreviewBody p    { margin-bottom:.6em; }
@@ -75,6 +76,10 @@ CSS = """\
     #commentPreviewBody ol   { padding-left:1.4em; margin-bottom:.6em; }
     #commentPreviewBody code { background:#f0f0f0; padding:1px 4px; border-radius:3px; font-size:.88em; }
     #commentPreviewBody pre  { background:#f6f8fa; padding:.75em; border-radius:6px; overflow:auto; }
+    #commentPreviewBody blockquote { border-left:4px solid #d0d7de; margin:.5em 0; padding:.4em .8em;
+                                     color:#555; background:#f6f8fa; border-radius:0 4px 4px 0; }
+    #commentPreviewBody h1  { font-size:1rem; font-weight:700; margin:.8em 0 .3em; color:#888;
+                               text-transform:uppercase; letter-spacing:.05em; }
     /* EasyMDE inside modal */
     #commentModal .EasyMDEContainer { height:100%; }
     #commentModal .CodeMirror       { min-height:220px; font-size:.9rem; }\
