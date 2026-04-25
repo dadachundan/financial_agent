@@ -78,7 +78,9 @@ CSS = """\
     #commentPreviewBody pre  { background:#f6f8fa; padding:.75em; border-radius:6px; overflow:auto; }
     #commentPreviewBody blockquote { border-left:4px solid #d0d7de; margin:.5em 0; padding:.4em .8em;
                                      color:#555; background:#f6f8fa; border-radius:0 4px 4px 0; }
-    #commentPreviewBody h1  { font-size:1rem; font-weight:700; margin:.8em 0 .3em; color:#888;
+    #commentPreviewBody h1  { font-size:.8rem; font-weight:600; color:#888; margin:0 0 1em;
+                               letter-spacing:.04em; border-bottom:1px solid #eee; padding-bottom:.4em; }
+    #commentPreviewBody h2  { font-size:1rem; font-weight:700; color:#1a56db; margin:1.2em 0 .4em;
                                text-transform:uppercase; letter-spacing:.05em; }
     /* EasyMDE inside modal */
     #commentModal .EasyMDEContainer { height:100%; }
