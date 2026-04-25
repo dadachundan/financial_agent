@@ -598,12 +598,20 @@ __MCW_FOOTER__
   }
 
   function openLocal(fileId, btn) {
+    const orig = btn.textContent;
     fetch(_base + '/open-local/' + fileId)
       .then(r => r.json())
       .then(data => {
-        if (!data.ok) alert(data.error || 'Could not open file');
+        if (!data.ok) {
+          btn.textContent = '❌';
+          btn.title = data.error || 'Could not open file';
+          setTimeout(() => { btn.textContent = orig; btn.title = btn.dataset.path || ''; }, 2500);
+        }
       })
-      .catch(() => alert('Request failed'));
+      .catch(() => {
+        btn.textContent = '❌';
+        setTimeout(() => { btn.textContent = orig; }, 2500);
+      });
   }
 
   function syncAnnotations(fileId, btn) {
