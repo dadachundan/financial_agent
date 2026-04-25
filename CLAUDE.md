@@ -14,7 +14,10 @@ After completing a task and verifying that it works (by running tests or the app
 2. If working on a worktree branch, immediately merge it into `main` (`git checkout main && git merge <branch> --no-ff && git push origin main`).
 3. Ensure the local `main` is synced with the remote `HEAD`.
 4. Do not include the "Co-authored-by: Claude" footer in commits.
-5. Keep the dev server running after completing tasks (do **not** call `preview_stop()`).
+5. **Always stop all servers after verifying a task works.** Kill both ports:
+   ```
+   lsof -ti :5001 | xargs kill -9 2>/dev/null; lsof -ti :8080 | xargs kill -9 2>/dev/null
+   ```
 6. If the architecture changes, update `architecture.md`.
 
 # UI Verification (MANDATORY)
