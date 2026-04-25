@@ -438,23 +438,18 @@ __URLPATCH__
             {% else %}—{% endif %}
           </td>
 
-          <td class="text-center">
+          <td class="text-center" style="white-space:nowrap">
             {% if row.local_path %}
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;width:fit-content;margin:auto">
-                <a href="{{ _base | default('') }}/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank"
-                   class="btn btn-outline-danger btn-sm open-btn">📄 Open</a>
-                <button class="btn btn-outline-secondary btn-sm open-btn"
-                        onclick="openLocal({{ row.file_id }}, this)"
-                        title="{{ row.local_path }}">🗂 Local</button>
-                <button class="btn btn-outline-secondary btn-sm"
-                        onclick="syncAnnotations({{ row.file_id }}, this)"
-                        title="Read annotations from local PDF and save to comment">📌</button>
-                <button class="btn btn-outline-primary btn-sm"
-                        onclick="openAskModal({{ row.file_id }}, {{ row.name | tojson }})"
-                        title="Open in Claude">💬</button>
-              </div>
+              <a href="{{ _base | default('') }}/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank"
+                 class="btn btn-outline-danger open-btn">📄 Open</a>
+              <button class="btn btn-outline-secondary btn-sm ms-1 open-btn"
+                      onclick="openLocal({{ row.file_id }}, this)"
+                      title="{{ row.local_path }}">🗂 Local</button>
+              <button class="btn btn-outline-secondary btn-sm ms-1"
+                      onclick="syncAnnotations({{ row.file_id }}, this)"
+                      title="Read annotations from local PDF and save to comment">📌</button>
             {% else %}
-              <button class="btn btn-outline-secondary btn-sm"
+              <button class="btn btn-outline-secondary open-btn"
                       onclick="deleteRow({{ row.file_id }}, this)">🗑</button>
             {% endif %}
           </td>
@@ -853,19 +848,6 @@ __MCW_FOOTER__
     if (tr) tr.dataset.search = (tr.dataset.search || '').replace(/\bticker:[^\s]*/g, '') + ' ' + tickers.join(' ');
   }
 
-  // ── Ask Claude ───────────────────────────────────────────────────────────────
-  function openAskModal(fileId, name) {
-    const btn = event.currentTarget;
-    const orig = btn.textContent;
-    btn.disabled = true; btn.textContent = '⏳';
-    fetch('/ask/' + fileId, { method: 'POST', headers: {'Content-Type':'application/json'}, body: '{}' })
-      .then(r => r.json())
-      .then(data => {
-        btn.disabled = false; btn.textContent = orig;
-        if (!data.ok) { btn.textContent = '❌'; setTimeout(() => btn.textContent = orig, 2500); }
-      })
-      .catch(() => { btn.disabled = false; btn.textContent = '❌'; setTimeout(() => btn.textContent = orig, 2500); });
-  }
 
   __MCW_JS__
 
@@ -1650,28 +1632,6 @@ def open_local(file_id: int):
         return jsonify(ok=False, error=result.stderr or "open command failed"), 200
     return jsonify(ok=True)
 
-
-@zsxq_bp.route("/ask/<int:file_id>", methods=["POST"])
-def ask_pdf(file_id: int):
-    """Open the PDF in the Claude desktop app."""
-    import subprocess
-    conn = get_conn()
-    row  = conn.execute(
-        "SELECT local_path, name FROM pdf_files WHERE file_id = ?", (file_id,)
-    ).fetchone()
-    conn.close()
-    if not row or not row["local_path"]:
-        return jsonify(ok=False, error="No local file"), 404
-    path = Path(row["local_path"])
-    if not path.exists():
-        return jsonify(ok=False, error="File not found on disk"), 404
-    # Open Claude app and reveal the file in Finder so it can be dragged in
-    r1 = subprocess.run(["open", "-a", "Claude"], capture_output=True, text=True)
-    r2 = subprocess.run(["open", "-R", str(path)], capture_output=True, text=True)
-    print(f"[ask-pdf] Claude rc={r1.returncode}  Finder reveal rc={r2.returncode}  {path.name}")
-    if r1.returncode != 0:
-        return jsonify(ok=False, error=r1.stderr or "Failed to open Claude"), 500
-    return jsonify(ok=True)
 
 
 @zsxq_bp.route("/pdf/<int:file_id>")
