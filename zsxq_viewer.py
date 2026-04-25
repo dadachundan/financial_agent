@@ -438,21 +438,23 @@ __URLPATCH__
             {% else %}—{% endif %}
           </td>
 
-          <td class="text-center" style="white-space:nowrap">
+          <td class="text-center">
             {% if row.local_path %}
-              <a href="{{ _base | default('') }}/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank"
-                 class="btn btn-outline-danger open-btn">📄 Open</a>
-              <button class="btn btn-outline-secondary btn-sm ms-1 open-btn"
-                      onclick="openLocal({{ row.file_id }}, this)"
-                      title="{{ row.local_path }}">🗂 Local</button>
-              <button class="btn btn-outline-secondary btn-sm ms-1"
-                      onclick="syncAnnotations({{ row.file_id }}, this)"
-                      title="Read annotations from local PDF and save to comment">📌</button>
-              <button class="btn btn-outline-primary btn-sm ms-1"
-                      onclick="openAskModal({{ row.file_id }}, {{ row.name | tojson }})"
-                      title="Ask AI about this PDF">💬</button>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;width:fit-content;margin:auto">
+                <a href="{{ _base | default('') }}/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank"
+                   class="btn btn-outline-danger btn-sm open-btn">📄 Open</a>
+                <button class="btn btn-outline-secondary btn-sm open-btn"
+                        onclick="openLocal({{ row.file_id }}, this)"
+                        title="{{ row.local_path }}">🗂 Local</button>
+                <button class="btn btn-outline-secondary btn-sm"
+                        onclick="syncAnnotations({{ row.file_id }}, this)"
+                        title="Read annotations from local PDF and save to comment">📌</button>
+                <button class="btn btn-outline-primary btn-sm"
+                        onclick="openAskModal({{ row.file_id }}, {{ row.name | tojson }})"
+                        title="Open in Claude">💬</button>
+              </div>
             {% else %}
-              <button class="btn btn-outline-secondary open-btn"
+              <button class="btn btn-outline-secondary btn-sm"
                       onclick="deleteRow({{ row.file_id }}, this)">🗑</button>
             {% endif %}
           </td>
