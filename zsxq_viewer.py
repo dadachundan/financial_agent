@@ -1624,7 +1624,10 @@ def open_local(file_id: int):
     if not path.exists():
         return jsonify(ok=False, error="File not found on disk"), 404
     import subprocess
-    subprocess.Popen(["open", str(path)])
+    result = subprocess.run(["open", str(path)], capture_output=True, text=True)
+    print(f"[open-local] open rc={result.returncode} stderr={result.stderr!r} path={path}")
+    if result.returncode != 0:
+        return jsonify(ok=False, error=result.stderr or "open command failed"), 200
     return jsonify(ok=True)
 
 
