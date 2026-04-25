@@ -440,7 +440,7 @@ __URLPATCH__
 
           <td class="text-center">
             {% if row.local_path %}
-              <a href="{{ _base | default('') }}/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank"
+              <a href="{{ _base | default('') }}/viewer/{{ row.file_id }}/{{ row.name }}" target="_blank"
                  class="btn btn-outline-danger open-btn">📄 Open</a>
             {% else %}
               <button class="btn btn-outline-secondary open-btn"
@@ -1381,6 +1381,608 @@ def serve_pdf(file_id: int, filename: str = ""):
 
     return send_file(path, mimetype="application/pdf",
                      download_name=path.name, as_attachment=False)
+
+
+# ── PDF.js viewer with annotations ───────────────────────────────────────────
+
+VIEWER_TEMPLATE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ name }}</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { display: flex; flex-direction: column; height: 100vh;
+           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+           background: #1a1a1a; color: #e0e0e0; }
+
+    /* ── toolbar ── */
+    #toolbar {
+      display: flex; align-items: center; gap: 8px; padding: 6px 12px;
+      background: #2d2d2d; border-bottom: 1px solid #444; flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+    #toolbar button {
+      background: #3a3a3a; border: 1px solid #555; color: #ddd;
+      padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 13px;
+    }
+    #toolbar button:hover { background: #4a4a4a; }
+    #toolbar input[type=number] {
+      width: 52px; background: #3a3a3a; border: 1px solid #555; color: #ddd;
+      padding: 4px 6px; border-radius: 4px; font-size: 13px; text-align: center;
+    }
+    #toolbar select {
+      background: #3a3a3a; border: 1px solid #555; color: #ddd;
+      padding: 4px 6px; border-radius: 4px; font-size: 13px;
+    }
+    #page-info { font-size: 13px; color: #aaa; white-space: nowrap; }
+    #toolbar-title { font-size: 12px; color: #888; flex: 1; overflow: hidden;
+                     text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+    #search-box {
+      background: #3a3a3a; border: 1px solid #555; color: #ddd;
+      padding: 4px 8px; border-radius: 4px; font-size: 13px; width: 180px;
+    }
+
+    /* ── main area ── */
+    #main { display: flex; flex: 1; overflow: hidden; }
+
+    /* ── pdf pane ── */
+    #pdf-container {
+      flex: 1; overflow-y: auto; overflow-x: auto; background: #525659;
+      display: flex; flex-direction: column; align-items: center; padding: 20px 0;
+      gap: 12px;
+    }
+
+    .page-wrapper {
+      position: relative; background: white; box-shadow: 0 2px 8px rgba(0,0,0,.5);
+    }
+    .page-wrapper canvas { display: block; }
+
+    /* text layer sits over canvas for selection */
+    .textLayer {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      overflow: hidden; line-height: 1;
+      pointer-events: auto;
+    }
+    .textLayer span {
+      color: transparent; position: absolute; white-space: pre;
+      cursor: text; transform-origin: 0% 0%;
+    }
+    .textLayer ::selection { background: rgba(0, 120, 255, 0.3); }
+
+    /* highlight overlays */
+    .highlight-layer {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none; overflow: hidden;
+    }
+    .highlight-mark {
+      position: absolute; background: rgba(255, 220, 0, 0.38);
+      border-radius: 2px; pointer-events: none;
+    }
+
+    /* ── annotation sidebar ── */
+    #ann-panel {
+      width: 300px; min-width: 260px; background: #252525;
+      border-left: 1px solid #444; display: flex; flex-direction: column;
+      overflow: hidden;
+    }
+    #ann-header {
+      padding: 10px 14px; font-size: 13px; font-weight: 600; color: #ccc;
+      border-bottom: 1px solid #444; background: #2d2d2d; flex-shrink: 0;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    #ann-list { flex: 1; overflow-y: auto; padding: 8px; }
+    .ann-item {
+      background: #2d2d2d; border: 1px solid #444; border-radius: 6px;
+      padding: 8px 10px; margin-bottom: 8px; cursor: pointer;
+      transition: border-color .15s;
+    }
+    .ann-item:hover { border-color: #888; }
+    .ann-item-text {
+      font-size: 12px; color: #e0d080; font-style: italic; line-height: 1.4;
+      margin-bottom: 4px; word-break: break-word;
+    }
+    .ann-item-meta {
+      font-size: 11px; color: #777; display: flex;
+      justify-content: space-between; align-items: center;
+    }
+    .ann-item-note { font-size: 12px; color: #aaa; margin-top: 4px; word-break: break-word; }
+    .ann-delete {
+      background: none; border: none; color: #666; cursor: pointer;
+      font-size: 13px; padding: 0 2px; line-height: 1;
+    }
+    .ann-delete:hover { color: #f66; }
+    #ann-empty { font-size: 12px; color: #666; text-align: center; padding: 20px 12px; }
+    #ann-count { font-size: 12px; color: #888; }
+
+    /* ── floating save tooltip ── */
+    #save-tooltip {
+      position: fixed; display: none; z-index: 9999;
+      background: #1e2a3a; border: 1px solid #4a7aaa; border-radius: 6px;
+      padding: 8px 10px; box-shadow: 0 4px 16px rgba(0,0,0,.6); min-width: 220px;
+    }
+    #save-tooltip textarea {
+      width: 100%; background: #2a3a4a; border: 1px solid #4a7aaa; color: #ddd;
+      border-radius: 4px; padding: 4px 6px; font-size: 12px; resize: vertical;
+      min-height: 48px; margin-bottom: 6px;
+    }
+    #save-tooltip textarea::placeholder { color: #668; }
+    #tooltip-btns { display: flex; gap: 6px; justify-content: flex-end; }
+    #tooltip-btns button {
+      font-size: 12px; padding: 3px 10px; border-radius: 4px; cursor: pointer; border: none;
+    }
+    #btn-save-ann { background: #2e6da4; color: white; }
+    #btn-save-ann:hover { background: #3a85c5; }
+    #btn-cancel-ann { background: #3a3a3a; color: #aaa; border: 1px solid #555 !important; }
+  </style>
+</head>
+<body>
+
+<div id="toolbar">
+  <button onclick="prevPage()">&#8592;</button>
+  <input type="number" id="page-input" min="1" value="1" onchange="goToPage(+this.value)">
+  <span id="page-info">/ —</span>
+  <button onclick="nextPage()">&#8594;</button>
+  <select id="zoom-select" onchange="setZoom(+this.value)">
+    <option value="0.5">50%</option>
+    <option value="0.75">75%</option>
+    <option value="1" selected>100%</option>
+    <option value="1.25">125%</option>
+    <option value="1.5">150%</option>
+    <option value="2">200%</option>
+  </select>
+  <input id="search-box" type="text" placeholder="Search text… (Enter)" onkeydown="if(event.key==='Enter')findText(this.value)">
+  <span class="toolbar-sep" style="flex:1"></span>
+  <span id="toolbar-title">{{ name }}</span>
+</div>
+
+<div id="main">
+  <div id="pdf-container"></div>
+
+  <div id="ann-panel">
+    <div id="ann-header">
+      <span>Annotations</span>
+      <span id="ann-count"></span>
+    </div>
+    <div id="ann-list"><div id="ann-empty">Select text in the PDF to save an annotation.</div></div>
+  </div>
+</div>
+
+<!-- floating save tooltip -->
+<div id="save-tooltip">
+  <div id="tooltip-selected" style="font-size:11px;color:#e0d080;font-style:italic;
+       margin-bottom:6px;max-height:60px;overflow:hidden;word-break:break-word"></div>
+  <textarea id="tooltip-note" placeholder="Optional note…"></textarea>
+  <div id="tooltip-btns">
+    <button id="btn-cancel-ann" onclick="hideTooltip()">Cancel</button>
+    <button id="btn-save-ann"   onclick="saveAnnotation()">💾 Save</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs" type="module"></script>
+<script type="module">
+import * as pdfjsLib from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs';
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+  'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs';
+
+const FILE_ID   = {{ file_id }};
+const PDF_URL   = '{{ pdf_url }}';
+const BASE      = '{{ base }}';
+
+let pdfDoc   = null;
+let scale    = 1.0;
+let curPage  = 1;
+let numPages = 0;
+const pageCanvases = {};  // page -> { canvas, textLayer div }
+
+// ── load PDF ──────────────────────────────────────────────────────────────────
+const loadingTask = pdfjsLib.getDocument(PDF_URL);
+loadingTask.promise.then(doc => {
+  pdfDoc   = doc;
+  numPages = doc.numPages;
+  document.getElementById('page-info').textContent = '/ ' + numPages;
+
+  // render all pages sequentially
+  const container = document.getElementById('pdf-container');
+  const renderNext = (n) => {
+    if (n > numPages) { loadAnnotations(); return; }
+    renderPage(n, container).then(() => renderNext(n + 1));
+  };
+  renderNext(1);
+
+  // deep-link: ?page=N
+  const params = new URLSearchParams(location.search);
+  const startPage = parseInt(params.get('page') || '1');
+  if (startPage > 1) setTimeout(() => scrollToPage(startPage), 800);
+});
+
+// ── render one page ───────────────────────────────────────────────────────────
+async function renderPage(pageNum, container) {
+  const page     = await pdfDoc.getPage(pageNum);
+  const viewport = page.getViewport({ scale });
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'page-wrapper';
+  wrapper.dataset.page = pageNum;
+  wrapper.style.width  = viewport.width  + 'px';
+  wrapper.style.height = viewport.height + 'px';
+
+  const canvas  = document.createElement('canvas');
+  canvas.width  = viewport.width;
+  canvas.height = viewport.height;
+  wrapper.appendChild(canvas);
+
+  // text layer div
+  const textDiv = document.createElement('div');
+  textDiv.className = 'textLayer';
+  wrapper.appendChild(textDiv);
+
+  // highlight layer (below text layer, above canvas)
+  const hlDiv = document.createElement('div');
+  hlDiv.className = 'highlight-layer';
+  wrapper.insertBefore(hlDiv, textDiv);
+
+  container.appendChild(wrapper);
+  pageCanvases[pageNum] = { canvas, textDiv, hlDiv, wrapper };
+
+  // render canvas
+  await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
+
+  // build text layer
+  const tc = await page.getTextContent();
+  const frag = document.createDocumentFragment();
+  tc.items.forEach(item => {
+    if (!item.str) return;
+    const span = document.createElement('span');
+    span.textContent = item.str;
+    const tx = pdfjsLib.Util.transform(viewport.transform, item.transform);
+    const angle = Math.atan2(tx[1], tx[0]);
+    const fontSize = Math.sqrt(tx[2]*tx[2] + tx[3]*tx[3]);
+    span.style.fontSize    = fontSize + 'px';
+    span.style.left        = tx[4] + 'px';
+    span.style.top         = (tx[5] - fontSize) + 'px';
+    if (angle !== 0) span.style.transform = `rotate(${-angle}rad)`;
+    frag.appendChild(span);
+  });
+  textDiv.appendChild(frag);
+}
+
+// ── page navigation ───────────────────────────────────────────────────────────
+window.prevPage = () => scrollToPage(Math.max(1, visiblePage() - 1));
+window.nextPage = () => scrollToPage(Math.min(numPages, visiblePage() + 1));
+window.goToPage = (n) => scrollToPage(Math.max(1, Math.min(numPages, n)));
+window.setZoom  = (z) => { scale = z; rebuildAllPages(); };
+
+function scrollToPage(n) {
+  const w = pageCanvases[n]?.wrapper;
+  if (w) { w.scrollIntoView({ behavior: 'smooth', block: 'start' }); curPage = n; }
+  document.getElementById('page-input').value = n;
+}
+
+function visiblePage() {
+  const c = document.getElementById('pdf-container');
+  const mid = c.getBoundingClientRect().top + c.clientHeight / 2;
+  let best = curPage;
+  for (const [n, { wrapper }] of Object.entries(pageCanvases)) {
+    const r = wrapper.getBoundingClientRect();
+    if (r.top <= mid && r.bottom >= mid) { best = +n; break; }
+  }
+  return best;
+}
+
+document.getElementById('pdf-container').addEventListener('scroll', () => {
+  const p = visiblePage();
+  document.getElementById('page-input').value = p;
+  curPage = p;
+});
+
+async function rebuildAllPages() {
+  const container = document.getElementById('pdf-container');
+  container.innerHTML = '';
+  Object.keys(pageCanvases).forEach(k => delete pageCanvases[k]);
+  const renderNext = (n) => {
+    if (n > numPages) { setTimeout(applyHighlights, 200); return; }
+    renderPage(n, container).then(() => renderNext(n + 1));
+  };
+  renderNext(1);
+}
+
+// ── text search ───────────────────────────────────────────────────────────────
+window.findText = (q) => {
+  if (!q) return;
+  const spans = document.querySelectorAll('.textLayer span');
+  for (const s of spans) {
+    if (s.textContent.toLowerCase().includes(q.toLowerCase())) {
+      s.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      break;
+    }
+  }
+};
+
+// ── selection → save tooltip ──────────────────────────────────────────────────
+let pendingSelection = null;
+
+document.addEventListener('mouseup', (e) => {
+  // ignore clicks on the tooltip itself
+  if (e.target.closest('#save-tooltip')) return;
+  const sel = window.getSelection();
+  const text = sel?.toString().trim();
+  if (!text || text.length < 3) { hideTooltip(); return; }
+
+  // find which page the selection is in
+  let node = sel.anchorNode;
+  let wrapper = null;
+  while (node) {
+    if (node.classList?.contains('page-wrapper')) { wrapper = node; break; }
+    node = node.parentElement;
+  }
+  const page = wrapper ? +wrapper.dataset.page : visiblePage();
+  pendingSelection = { text, page };
+
+  document.getElementById('tooltip-selected').textContent = '"' + text.slice(0, 200) + (text.length > 200 ? '…' : '') + '"';
+  document.getElementById('tooltip-note').value = '';
+
+  const tooltip = document.getElementById('save-tooltip');
+  tooltip.style.display = 'block';
+  // position near mouse but keep on screen
+  let x = e.clientX + 12, y = e.clientY + 12;
+  if (x + 240 > window.innerWidth)  x = e.clientX - 250;
+  if (y + 140 > window.innerHeight) y = e.clientY - 150;
+  tooltip.style.left = x + 'px';
+  tooltip.style.top  = y + 'px';
+  document.getElementById('tooltip-note').focus();
+});
+
+window.hideTooltip = () => {
+  document.getElementById('save-tooltip').style.display = 'none';
+  pendingSelection = null;
+};
+
+// ── save annotation ───────────────────────────────────────────────────────────
+window.saveAnnotation = async () => {
+  if (!pendingSelection) return;
+  const note = document.getElementById('tooltip-note').value.trim();
+  const payload = {
+    file_id: FILE_ID,
+    page:    pendingSelection.page,
+    selected_text: pendingSelection.text,
+    note:    note || null,
+  };
+  const r = await fetch(BASE + '/api/annotations', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  const data = await r.json();
+  if (data.ok) {
+    hideTooltip();
+    window.getSelection()?.removeAllRanges();
+    const ann = data.annotation;
+    if (!annotationsByPage[ann.page]) annotationsByPage[ann.page] = [];
+    annotationsByPage[ann.page].push(ann);
+    appendAnnotation(ann);
+    setTimeout(() => highlightPage(ann.page), 50);
+  }
+};
+
+// ── highlight rendering ───────────────────────────────────────────────────────
+// Store annotations keyed by page for re-highlighting after zoom rebuilds
+const annotationsByPage = {};
+
+function highlightPage(pageNum) {
+  const pg = pageCanvases[pageNum];
+  if (!pg) return;
+  const anns = annotationsByPage[pageNum] || [];
+  pg.hlDiv.innerHTML = '';
+  anns.forEach(ann => {
+    const needle = ann.selected_text.trim().toLowerCase();
+    if (!needle) return;
+    const spans = pg.textDiv.querySelectorAll('span');
+    // Walk spans and collect those matching needle
+    let buf = '', collected = [], found = false;
+    for (const span of spans) {
+      buf += span.textContent;
+      collected.push(span);
+      if (buf.toLowerCase().includes(needle)) {
+        // draw a rect over each collected span
+        const wrapRect = pg.wrapper.getBoundingClientRect();
+        collected.forEach(s => {
+          const r = s.getBoundingClientRect();
+          if (r.width < 1) return;
+          const mark = document.createElement('div');
+          mark.className = 'highlight-mark';
+          mark.style.left   = (r.left - wrapRect.left) + 'px';
+          mark.style.top    = (r.top  - wrapRect.top)  + 'px';
+          mark.style.width  = r.width  + 'px';
+          mark.style.height = r.height + 'px';
+          pg.hlDiv.appendChild(mark);
+        });
+        found = true;
+        break;
+      }
+      // keep sliding window to avoid unbounded growth
+      if (buf.length > needle.length * 3) {
+        buf = buf.slice(-needle.length * 2);
+        collected = collected.slice(-needle.length);
+      }
+    }
+  });
+}
+
+function applyHighlights() {
+  Object.keys(pageCanvases).forEach(n => highlightPage(+n));
+}
+
+// ── load & render annotation list ─────────────────────────────────────────────
+async function loadAnnotations() {
+  const r    = await fetch(BASE + '/api/annotations/' + FILE_ID);
+  const data = await r.json();
+  data.annotations.forEach(ann => {
+    if (!annotationsByPage[ann.page]) annotationsByPage[ann.page] = [];
+    annotationsByPage[ann.page].push(ann);
+    appendAnnotation(ann);
+  });
+  // small delay to ensure text layers are painted before measuring rects
+  setTimeout(applyHighlights, 200);
+}
+
+function appendAnnotation(ann) {
+  const list = document.getElementById('ann-list');
+  const empty = document.getElementById('ann-empty');
+  if (empty) empty.remove();
+
+  const item = document.createElement('div');
+  item.className = 'ann-item';
+  item.dataset.annId = ann.id;
+  item.onclick = (e) => {
+    if (e.target.classList.contains('ann-delete')) return;
+    scrollToPage(ann.page);
+  };
+
+  const text = document.createElement('div');
+  text.className = 'ann-item-text';
+  text.textContent = '"' + ann.selected_text.slice(0, 200) + (ann.selected_text.length > 200 ? '…' : '') + '"';
+
+  const meta = document.createElement('div');
+  meta.className = 'ann-item-meta';
+  const pageSpan = document.createElement('span');
+  pageSpan.textContent = 'Page ' + ann.page + '  ·  ' + ann.created_at.slice(0, 10);
+  const del = document.createElement('button');
+  del.className = 'ann-delete';
+  del.textContent = '✕';
+  del.title = 'Delete';
+  del.onclick = () => deleteAnnotation(ann.id, item);
+  meta.appendChild(pageSpan);
+  meta.appendChild(del);
+
+  item.appendChild(text);
+  if (ann.note) {
+    const note = document.createElement('div');
+    note.className = 'ann-item-note';
+    note.textContent = ann.note;
+    item.appendChild(note);
+  }
+  item.appendChild(meta);
+  list.appendChild(item);
+
+  // update count
+  const count = list.querySelectorAll('.ann-item').length;
+  document.getElementById('ann-count').textContent = count || '';
+}
+
+async function deleteAnnotation(annId, el) {
+  const r = await fetch(BASE + '/api/annotations/' + annId, { method: 'DELETE' });
+  const data = await r.json();
+  if (data.ok) {
+    const page = +el.closest('.ann-item').querySelector('.ann-item-meta span')
+                    .textContent.match(/Page (\d+)/)?.[1];
+    el.closest('.ann-item').remove();
+    // remove from cache and re-highlight that page
+    if (page && annotationsByPage[page]) {
+      annotationsByPage[page] = annotationsByPage[page].filter(a => a.id !== annId);
+      highlightPage(page);
+    }
+    const list = document.getElementById('ann-list');
+    const count = list.querySelectorAll('.ann-item').length;
+    document.getElementById('ann-count').textContent = count || '';
+    if (!count) list.innerHTML = '<div id="ann-empty">Select text in the PDF to save an annotation.</div>';
+  }
+}
+</script>
+</body>
+</html>"""
+
+
+def _ensure_annotations_table(conn):
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS pdf_annotations (
+            id            INTEGER PRIMARY KEY AUTOINCREMENT,
+            file_id       INTEGER NOT NULL,
+            page          INTEGER NOT NULL,
+            selected_text TEXT    NOT NULL,
+            note          TEXT,
+            created_at    TEXT    NOT NULL
+        )
+    """)
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_ann_file ON pdf_annotations(file_id)")
+    conn.commit()
+
+
+@zsxq_bp.route("/viewer/<int:file_id>")
+@zsxq_bp.route("/viewer/<int:file_id>/<path:filename>")
+def pdf_viewer(file_id: int, filename: str = ""):
+    conn = get_conn()
+    _ensure_annotations_table(conn)
+    row = conn.execute(
+        "SELECT local_path, name FROM pdf_files WHERE file_id = ?", (file_id,)
+    ).fetchone()
+    conn.close()
+
+    if not row or not row["local_path"]:
+        abort(404, "No local file recorded for this PDF.")
+
+    path = Path(row["local_path"])
+    if not path.exists():
+        abort(404, f"File not found on disk: {path}")
+
+    base = request.headers.get("X-Script-Name", "").rstrip("/")
+    pdf_url = f"{base}/pdf/{file_id}/{path.name}"
+    return render_template_string(
+        VIEWER_TEMPLATE,
+        file_id=file_id,
+        name=row["name"],
+        pdf_url=pdf_url,
+        base=base,
+    )
+
+
+@zsxq_bp.route("/api/annotations/<int:file_id>")
+def get_annotations(file_id: int):
+    conn = get_conn()
+    _ensure_annotations_table(conn)
+    rows = conn.execute(
+        "SELECT id, file_id, page, selected_text, note, created_at "
+        "FROM pdf_annotations WHERE file_id = ? ORDER BY page, id",
+        (file_id,),
+    ).fetchall()
+    conn.close()
+    return jsonify(annotations=[dict(r) for r in rows])
+
+
+@zsxq_bp.route("/api/annotations", methods=["POST"])
+def save_annotation():
+    data = request.get_json(force=True)
+    file_id = data.get("file_id")
+    page    = data.get("page", 1)
+    text    = (data.get("selected_text") or "").strip()
+    note    = (data.get("note") or "").strip() or None
+    if not file_id or not text:
+        return jsonify(ok=False, error="missing fields"), 400
+    now = datetime.datetime.now().isoformat(timespec="seconds")
+    conn = get_conn()
+    _ensure_annotations_table(conn)
+    cur = conn.execute(
+        "INSERT INTO pdf_annotations (file_id, page, selected_text, note, created_at) "
+        "VALUES (?, ?, ?, ?, ?)",
+        (file_id, page, text, note, now),
+    )
+    conn.commit()
+    ann_id = cur.lastrowid
+    conn.close()
+    return jsonify(ok=True, annotation={
+        "id": ann_id, "file_id": file_id, "page": page,
+        "selected_text": text, "note": note, "created_at": now,
+    })
+
+
+@zsxq_bp.route("/api/annotations/<int:ann_id>", methods=["DELETE"])
+def delete_annotation(ann_id: int):
+    conn = get_conn()
+    _ensure_annotations_table(conn)
+    conn.execute("DELETE FROM pdf_annotations WHERE id = ?", (ann_id,))
+    conn.commit()
+    conn.close()
+    return jsonify(ok=True)
 
 
 # Register blueprint on the standalone app (after all routes are defined)
