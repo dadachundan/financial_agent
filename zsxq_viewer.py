@@ -438,10 +438,13 @@ __URLPATCH__
             {% else %}—{% endif %}
           </td>
 
-          <td class="text-center">
+          <td class="text-center" style="white-space:nowrap">
             {% if row.local_path %}
               <a href="{{ _base | default('') }}/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank"
                  class="btn btn-outline-danger open-btn">📄 Open</a>
+              <button class="btn btn-outline-secondary btn-sm ms-1"
+                      onclick="syncAnnotations({{ row.file_id }}, this)"
+                      title="Read annotations from local PDF and save to comment">📌</button>
             {% else %}
               <button class="btn btn-outline-secondary open-btn"
                       onclick="deleteRow({{ row.file_id }}, this)">🗑</button>
@@ -588,6 +591,39 @@ __MCW_FOOTER__
         }
       })
       .catch(() => { btn.disabled = false; btn.textContent = orig; alert('Request failed'); });
+  }
+
+  function syncAnnotations(fileId, btn) {
+    const orig = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = '⏳';
+    fetch(_base + '/sync-annotations/' + fileId, { method: 'POST' })
+      .then(r => r.json())
+      .then(data => {
+        btn.disabled = false;
+        btn.textContent = orig;
+        if (data.ok) {
+          // Update the comment cell in-place
+          const commentSpan = document.querySelector('#comment-cell-' + fileId + ' .comment-preview');
+          if (commentSpan) {
+            commentSpan.dataset.comment = data.comment;
+            // trigger re-render if the widget uses it
+            if (typeof renderCommentPreview === 'function') renderCommentPreview(commentSpan);
+          }
+          btn.title = data.count + ' annotation(s) saved to comment';
+          btn.textContent = '✅';
+          setTimeout(() => { btn.textContent = orig; btn.title = 'Read annotations from local PDF and save to comment'; }, 2500);
+        } else {
+          btn.textContent = '❌';
+          btn.title = data.error || 'No annotations found';
+          setTimeout(() => { btn.textContent = orig; btn.title = 'Read annotations from local PDF and save to comment'; }, 2500);
+        }
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.textContent = '❌';
+        setTimeout(() => { btn.textContent = orig; }, 2000);
+      });
   }
 
   function deleteRow(fileId, btn) {
@@ -1361,6 +1397,133 @@ def set_comment(file_id: int):
     conn.close()
     return "", 204
 
+
+
+def _extract_annotations_from_pdf(path: Path) -> list[dict]:
+    """Extract highlight, sticky-note, and free-text annotations from a PDF.
+
+    Returns list of {page, type, text, note} dicts sorted by page.
+    """
+    import re as _re
+    try:
+        from PyPDF2 import PdfReader
+    except ImportError:
+        return []
+
+    results = []
+    try:
+        reader = PdfReader(str(path), strict=False)
+    except Exception:
+        return []
+
+    for page_num, page in enumerate(reader.pages, 1):
+        if "/Annots" not in page:
+            continue
+        try:
+            annots = page["/Annots"]
+        except Exception:
+            continue
+        if not annots:
+            continue
+
+        for ref in annots:
+            try:
+                a = ref.get_object()
+                subtype = str(a.get("/Subtype", "")).strip("/")
+                if subtype not in ("Highlight", "Text", "FreeText",
+                                   "Underline", "StrikeOut", "Squiggly"):
+                    continue
+
+                raw_contents = a.get("/Contents") or ""
+                contents = str(raw_contents).strip()
+                # strip BOM / null bytes that some viewers insert
+                contents = contents.lstrip("﻿\x00").strip()
+
+                # For highlights: contents IS the highlighted text in Preview/Acrobat
+                # For Text (sticky note): contents is the note body
+                if subtype == "Highlight":
+                    highlighted = contents
+                    note = None
+                    # some viewers store highlighted text in /RC (rich content)
+                    if not highlighted:
+                        rc = str(a.get("/RC", "") or "")
+                        highlighted = _re.sub(r"<[^>]+>", "", rc).strip()
+                    # fallback: try visitor-based extraction with QuadPoints
+                    if not highlighted:
+                        try:
+                            qp = a.get("/QuadPoints")
+                            if qp:
+                                coords = [float(c) for c in qp]
+                                xs = coords[0::2]; ys = coords[1::2]
+                                x0, x1 = min(xs) - 2, max(xs) + 2
+                                y0, y1 = min(ys) - 2, max(ys) + 2
+                                parts: list[str] = []
+                                def _vis(text, cm, tm, fd, fs,
+                                         _x0=x0, _x1=x1, _y0=y0, _y1=y1,
+                                         _p=parts):
+                                    tx, ty = tm[4], tm[5]
+                                    if _x0 <= tx <= _x1 and _y0 <= ty <= _y1:
+                                        _p.append(text)
+                                page.extract_text(visitor_text=_vis)
+                                highlighted = "".join(parts).strip()
+                        except Exception:
+                            pass
+                    if not highlighted:
+                        continue
+                    results.append({"page": page_num, "type": subtype,
+                                    "text": highlighted, "note": note})
+
+                elif subtype in ("Text", "FreeText"):
+                    if not contents:
+                        continue
+                    results.append({"page": page_num, "type": subtype,
+                                    "text": contents, "note": None})
+
+            except Exception:
+                continue
+
+    results.sort(key=lambda r: r["page"])
+    return results
+
+
+def _format_annotations(anns: list[dict]) -> str:
+    """Format extracted annotations as bullet list: '* page: text / note'."""
+    lines = []
+    for a in anns:
+        text = (a["text"] or "").replace("\n", " ").strip()
+        note = (a["note"] or "").replace("\n", " ").strip()
+        suffix = f" / {note}" if note else ""
+        lines.append(f"* {a['page']}: {text}{suffix}")
+    return "\n".join(lines)
+
+
+@zsxq_bp.route("/sync-annotations/<int:file_id>", methods=["POST"])
+def sync_annotations(file_id: int):
+    """Read PDF annotations from disk and save them to the comment field."""
+    conn = get_conn()
+    row = conn.execute(
+        "SELECT local_path FROM pdf_files WHERE file_id = ?", (file_id,)
+    ).fetchone()
+    conn.close()
+
+    if not row or not row["local_path"]:
+        return jsonify(ok=False, error="No local file"), 404
+
+    path = Path(row["local_path"])
+    if not path.exists():
+        return jsonify(ok=False, error="File not found on disk"), 404
+
+    anns = _extract_annotations_from_pdf(path)
+    if not anns:
+        return jsonify(ok=False, error="No annotations found in PDF"), 200
+
+    comment = _format_annotations(anns)
+    conn = get_conn()
+    conn.execute("UPDATE pdf_files SET comment = ? WHERE file_id = ?",
+                 (comment, file_id))
+    conn.commit()
+    conn.close()
+    return jsonify(ok=True, count=len(anns), comment=comment)
 
 
 @zsxq_bp.route("/pdf/<int:file_id>")
