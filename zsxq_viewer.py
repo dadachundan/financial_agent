@@ -1402,17 +1402,65 @@ def set_comment(file_id: int):
 def _extract_annotations_from_pdf(path: Path) -> list[dict]:
     """Extract highlight, sticky-note, and free-text annotations from a PDF.
 
+    Uses PyMuPDF (fitz) for speed — falls back to PyPDF2 if not available.
     Returns list of {page, type, text, note} dicts sorted by page.
     """
+    import time as _t
+    _HIGHLIGHT_TYPES = {"Highlight", "Underline", "StrikeOut", "Squiggly"}
+    _NOTE_TYPES      = {"Text", "FreeText"}
+
+    try:
+        import fitz  # PyMuPDF — much faster than PyPDF2
+        _t0 = _t.time()
+        try:
+            doc = fitz.open(str(path))
+        except Exception as e:
+            print(f"                   fitz open failed: {e}")
+            return []
+        print(f"                   fitz opened in {_t.time()-_t0:.2f}s  ({doc.page_count} pages)")
+
+        results = []
+        for page_num in range(doc.page_count):
+            page = doc[page_num]
+            for annot in page.annots():
+                ann_type = annot.type[1]  # e.g. "Highlight", "Text"
+                if ann_type not in _HIGHLIGHT_TYPES and ann_type not in _NOTE_TYPES:
+                    continue
+                content = (annot.info.get("content") or "").strip().lstrip("﻿\x00")
+                if ann_type in _HIGHLIGHT_TYPES:
+                    text = content
+                    if not text:
+                        # fallback: extract text under the annotation rect
+                        try:
+                            text = page.get_textbox(annot.rect).strip()
+                        except Exception:
+                            pass
+                    if not text:
+                        continue
+                    results.append({"page": page_num + 1, "type": "Highlight",
+                                    "text": text, "note": None})
+                else:  # Text / FreeText (sticky note)
+                    if not content:
+                        continue
+                    results.append({"page": page_num + 1, "type": ann_type,
+                                    "text": content, "note": None})
+        doc.close()
+        results.sort(key=lambda r: r["page"])
+        return results
+
+    except ImportError:
+        pass  # fall through to PyPDF2
+
+    # ── PyPDF2 fallback ───────────────────────────────────────────────────────
     import re as _re
     try:
         from PyPDF2 import PdfReader
     except ImportError:
+        print("                   no PDF library available (install pymupdf)")
         return []
 
     results = []
     try:
-        import time as _t
         _t0 = _t.time()
         reader = PdfReader(str(path), strict=False)
         print(f"                   PdfReader loaded in {_t.time()-_t0:.1f}s  ({len(reader.pages)} pages)")
@@ -1427,62 +1475,24 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
             annots = page["/Annots"]
         except Exception:
             continue
-        if not annots:
-            continue
-
-        for ref in annots:
+        for ref in annots or []:
             try:
                 a = ref.get_object()
                 subtype = str(a.get("/Subtype", "")).strip("/")
-                if subtype not in ("Highlight", "Text", "FreeText",
-                                   "Underline", "StrikeOut", "Squiggly"):
+                if subtype not in _HIGHLIGHT_TYPES and subtype not in _NOTE_TYPES:
                     continue
-
-                raw_contents = a.get("/Contents") or ""
-                contents = str(raw_contents).strip()
-                # strip BOM / null bytes that some viewers insert
-                contents = contents.lstrip("﻿\x00").strip()
-
-                # For highlights: contents IS the highlighted text in Preview/Acrobat
-                # For Text (sticky note): contents is the note body
-                if subtype == "Highlight":
-                    highlighted = contents
-                    note = None
-                    # some viewers store highlighted text in /RC (rich content)
-                    if not highlighted:
-                        rc = str(a.get("/RC", "") or "")
-                        highlighted = _re.sub(r"<[^>]+>", "", rc).strip()
-                    # fallback: try visitor-based extraction with QuadPoints
-                    if not highlighted:
-                        try:
-                            qp = a.get("/QuadPoints")
-                            if qp:
-                                coords = [float(c) for c in qp]
-                                xs = coords[0::2]; ys = coords[1::2]
-                                x0, x1 = min(xs) - 2, max(xs) + 2
-                                y0, y1 = min(ys) - 2, max(ys) + 2
-                                parts: list[str] = []
-                                def _vis(text, cm, tm, fd, fs,
-                                         _x0=x0, _x1=x1, _y0=y0, _y1=y1,
-                                         _p=parts):
-                                    tx, ty = tm[4], tm[5]
-                                    if _x0 <= tx <= _x1 and _y0 <= ty <= _y1:
-                                        _p.append(text)
-                                page.extract_text(visitor_text=_vis)
-                                highlighted = "".join(parts).strip()
-                        except Exception:
-                            pass
-                    if not highlighted:
+                contents = str(a.get("/Contents") or "").strip().lstrip("﻿\x00")
+                if subtype in _HIGHLIGHT_TYPES:
+                    text = contents or _re.sub(r"<[^>]+>", "", str(a.get("/RC") or "")).strip()
+                    if not text:
                         continue
-                    results.append({"page": page_num, "type": subtype,
-                                    "text": highlighted, "note": note})
-
-                elif subtype in ("Text", "FreeText"):
+                    results.append({"page": page_num, "type": "Highlight",
+                                    "text": text, "note": None})
+                else:
                     if not contents:
                         continue
                     results.append({"page": page_num, "type": subtype,
                                     "text": contents, "note": None})
-
             except Exception:
                 continue
 
@@ -1491,13 +1501,24 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
 
 
 def _format_annotations(anns: list[dict]) -> str:
-    """Format extracted annotations as bullet list: '* page: text / note'."""
+    """Format annotations as markdown.
+
+    Highlights  → blockquote:  > text  *(p.N)*
+    Notes/text  → plain line:  text  *(p.N)*
+    """
     lines = []
     for a in anns:
         text = (a["text"] or "").replace("\n", " ").strip()
-        note = (a["note"] or "").replace("\n", " ").strip()
-        suffix = f" / {note}" if note else ""
-        lines.append(f"* {a['page']}: {text}{suffix}")
+        page_tag = f" *(p.{a['page']})*"
+        if a["type"] == "Highlight":
+            lines.append(f"> {text}{page_tag}")
+        else:
+            # Text (sticky note) or FreeText — plain paragraph
+            lines.append(f"{text}{page_tag}")
+        lines.append("")   # blank line between entries for proper markdown rendering
+    # remove trailing blank line
+    while lines and lines[-1] == "":
+        lines.pop()
     return "\n".join(lines)
 
 
@@ -1505,6 +1526,7 @@ def _format_annotations(anns: list[dict]) -> str:
 def sync_annotations(file_id: int):
     """Read PDF annotations from disk and save them to the comment field."""
     import time as _time
+    import concurrent.futures as _cf
     conn = get_conn()
     row = conn.execute(
         "SELECT local_path, name FROM pdf_files WHERE file_id = ?", (file_id,)
@@ -1524,7 +1546,17 @@ def sync_annotations(file_id: int):
     print(f"                   path: {path}")
     t0 = _time.time()
 
-    anns = _extract_annotations_from_pdf(path)
+    # Run extraction in a thread with a hard timeout so a malformed PDF
+    # can't hang the server indefinitely.
+    _TIMEOUT = 15.0
+    with _cf.ThreadPoolExecutor(max_workers=1) as _pool:
+        _fut = _pool.submit(_extract_annotations_from_pdf, path)
+        try:
+            anns = _fut.result(timeout=_TIMEOUT)
+        except _cf.TimeoutError:
+            elapsed = _time.time() - t0
+            print(f"                   ⏱ timed out after {elapsed:.1f}s")
+            return jsonify(ok=False, error="Timed out reading PDF — file may be malformed"), 200
 
     elapsed = _time.time() - t0
     if not anns:
