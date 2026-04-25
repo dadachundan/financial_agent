@@ -1448,12 +1448,8 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                 content = (annot.info.get("content") or "").strip().lstrip("﻿\x00")
                 if ann_type in _HIGHLIGHT_TYPES:
                     text = content
-                    if not text:
-                        # fallback: extract text under the annotation rect
-                        try:
-                            text = page.get_textbox(annot.rect).strip()
-                        except Exception:
-                            pass
+                    # Skip highlights with no /Contents — the get_textbox fallback
+                    # produces garbled text on PDFs with custom font encoding.
                     if not text:
                         continue
                     results.append({"page": page_num + 1, "type": "Highlight",
