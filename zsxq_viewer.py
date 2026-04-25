@@ -442,6 +442,9 @@ __URLPATCH__
             {% if row.local_path %}
               <a href="{{ _base | default('') }}/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank"
                  class="btn btn-outline-danger open-btn">📄 Open</a>
+              <a href="file://{{ row.local_path }}" target="_blank"
+                 class="btn btn-outline-secondary btn-sm ms-1 open-btn"
+                 title="{{ row.local_path }}">🗂 Local</a>
               <button class="btn btn-outline-secondary btn-sm ms-1"
                       onclick="syncAnnotations({{ row.file_id }}, this)"
                       title="Read annotations from local PDF and save to comment">📌</button>
