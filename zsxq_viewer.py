@@ -599,7 +599,7 @@ __MCW_FOOTER__
 
   function openLocal(fileId, btn) {
     const orig = btn.textContent;
-    fetch(_base + '/open-local/' + fileId)
+    fetch('/open-local/' + fileId)
       .then(r => r.json())
       .then(data => {
         if (!data.ok) {
@@ -618,7 +618,7 @@ __MCW_FOOTER__
     const orig = btn.textContent;
     btn.disabled = true;
     btn.textContent = '⏳';
-    fetch(_base + '/sync-annotations/' + fileId, { method: 'POST' })
+    fetch('/sync-annotations/' + fileId, { method: 'POST' })
       .then(r => r.json())
       .then(data => {
         btn.disabled = false;
