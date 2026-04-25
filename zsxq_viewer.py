@@ -442,9 +442,9 @@ __URLPATCH__
             {% if row.local_path %}
               <a href="{{ _base | default('') }}/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank"
                  class="btn btn-outline-danger open-btn">📄 Open</a>
-              <a href="file://{{ row.local_path }}" target="_blank"
-                 class="btn btn-outline-secondary btn-sm ms-1 open-btn"
-                 title="{{ row.local_path }}">🗂 Local</a>
+              <button class="btn btn-outline-secondary btn-sm ms-1 open-btn"
+                      onclick="openLocal({{ row.file_id }}, this)"
+                      title="{{ row.local_path }}">🗂 Local</button>
               <button class="btn btn-outline-secondary btn-sm ms-1"
                       onclick="syncAnnotations({{ row.file_id }}, this)"
                       title="Read annotations from local PDF and save to comment">📌</button>
@@ -595,6 +595,15 @@ __MCW_FOOTER__
         }
       })
       .catch(() => { btn.disabled = false; btn.textContent = orig; alert('Request failed'); });
+  }
+
+  function openLocal(fileId, btn) {
+    fetch(_base + '/open-local/' + fileId)
+      .then(r => r.json())
+      .then(data => {
+        if (!data.ok) alert(data.error || 'Could not open file');
+      })
+      .catch(() => alert('Request failed'));
   }
 
   function syncAnnotations(fileId, btn) {
@@ -1591,6 +1600,24 @@ def sync_annotations(file_id: int):
     conn.commit()
     conn.close()
     return jsonify(ok=True, count=len(anns), comment=comment)
+
+
+@zsxq_bp.route("/open-local/<int:file_id>")
+def open_local(file_id: int):
+    """Open the PDF in the system default viewer (macOS: Preview) via 'open'."""
+    conn = get_conn()
+    row = conn.execute(
+        "SELECT local_path, name FROM pdf_files WHERE file_id = ?", (file_id,)
+    ).fetchone()
+    conn.close()
+    if not row or not row["local_path"]:
+        return jsonify(ok=False, error="No local file"), 404
+    path = Path(row["local_path"])
+    if not path.exists():
+        return jsonify(ok=False, error="File not found on disk"), 404
+    import subprocess
+    subprocess.Popen(["open", str(path)])
+    return jsonify(ok=True)
 
 
 @zsxq_bp.route("/pdf/<int:file_id>")
