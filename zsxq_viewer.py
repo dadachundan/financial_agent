@@ -1477,7 +1477,8 @@ def set_comment(file_id: int):
 
 @zsxq_bp.route("/feed")
 def feed():
-    from flask import render_template
+    from flask import render_template_string
+    from pathlib import Path as _Path
     conn = get_conn()
     rows = conn.execute("""
         SELECT file_id, name, comment, bank, create_time, comment_updated_at
@@ -1486,7 +1487,10 @@ def feed():
         ORDER  BY COALESCE(comment_updated_at, create_time) DESC
     """).fetchall()
     conn.close()
-    return render_template("zsxq_feed.html", rows=rows, total=len(rows))
+    tmpl = (_Path(__file__).parent / "templates" / "zsxq_feed.html").read_text(encoding="utf-8")
+    tmpl = tmpl.replace("__NAV__",      nw2.NAV_HTML)
+    tmpl = tmpl.replace("__URLPATCH__", nw2.URL_PATCH_JS)
+    return render_template_string(tmpl, rows=rows, total=len(rows))
 
 
 
