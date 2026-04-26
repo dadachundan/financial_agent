@@ -1761,10 +1761,7 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                         else:
                             slug      = uuid.uuid4().hex
                         img_name = f"p{page_num+1}_{slug}.png"
-                        # Avoid overwriting if same name already exists
-                        if (subdir / img_name).exists():
-                            img_name = f"p{page_num+1}_{slug}_{uuid.uuid4().hex[:6]}.png"
-                        (subdir / img_name).write_bytes(pix.tobytes("png"))
+                        (subdir / img_name).write_bytes(pix.tobytes("png"))  # overwrite if same name
                         rel = f"{today.year}/{today.month:02d}/{today.day:02d}/{img_name}"
                         print(f"                   box→image p{page_num+1} in {_t.time()-_t1:.1f}s → {img_name}")
                         results.append({"page": page_num + 1, "type": "Image",
