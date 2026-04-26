@@ -1616,7 +1616,19 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                         today  = _dt.date.today()
                         subdir = UPLOADS_DIR / str(today.year) / f"{today.month:02d}" / f"{today.day:02d}"
                         subdir.mkdir(parents=True, exist_ok=True)
-                        img_name = uuid.uuid4().hex + ".png"
+                        # OCR the image to derive a meaningful filename (first ~6 words)
+                        import re as _re
+                        ocr_title = _ocr_region(page, annot.rect, full_width=False)
+                        if ocr_title:
+                            words     = _re.sub(r"[^\w\s]", "", ocr_title).split()
+                            slug      = "_".join(w for w in words[:6] if w)
+                            slug      = _re.sub(r"_+", "_", slug).strip("_")[:60]
+                        else:
+                            slug      = uuid.uuid4().hex
+                        img_name = f"p{page_num+1}_{slug}.png"
+                        # Avoid overwriting if same name already exists
+                        if (subdir / img_name).exists():
+                            img_name = f"p{page_num+1}_{slug}_{uuid.uuid4().hex[:6]}.png"
                         (subdir / img_name).write_bytes(pix.tobytes("png"))
                         rel = f"{today.year}/{today.month:02d}/{today.day:02d}/{img_name}"
                         print(f"                   box→image p{page_num+1} in {_t.time()-_t1:.1f}s → {img_name}")
