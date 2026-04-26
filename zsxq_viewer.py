@@ -1577,9 +1577,17 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
             all_annots = list(page.annots())
 
             # ── Pass 0: Square/Circle — blue=image, red=text (OCR) ──────────
+            _seen_box_rects: set[tuple] = set()
             for annot in all_annots:
                 if annot.type[1] not in _BOX_TYPES:
                     continue
+                # Deduplicate: skip if an identical (or near-identical) rect was already processed
+                r = annot.rect
+                rect_key = (round(r.x0), round(r.y0), round(r.x1), round(r.y1))
+                if rect_key in _seen_box_rects:
+                    print(f"                   box p{page_num+1} duplicate rect {rect_key}, skipping")
+                    continue
+                _seen_box_rects.add(rect_key)
                 _t1 = _t.time()
                 try:
                     import uuid, datetime as _dt
@@ -1650,8 +1658,11 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                 if ann_type in _HIGHLIGHT_TYPES:
                     text = content
                     if not text:
-                        # /Contents empty — raster PDF (UBS/GS style).
-                        # Use Vision OCR on the highlight region.
+                        # Try PDF text layer first (fast, works for text-based PDFs)
+                        words = page.get_text("words", clip=annot.rect)
+                        text  = " ".join(w[4] for w in words).strip()
+                    if not text:
+                        # Text layer empty — raster PDF (UBS/GS style). Fall back to OCR.
                         _t1 = _t.time()
                         text = _ocr_region(page, annot.rect, full_width=True)
                         print(f"                   OCR p{page_num+1} in {_t.time()-_t1:.1f}s: {text[:60]!r}")
