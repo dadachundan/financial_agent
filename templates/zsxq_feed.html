@@ -60,8 +60,13 @@
 </div>
 
 <script>
+const _base = "{{ _base | default('') }}";
 document.querySelectorAll('.feed-body').forEach(el => {
   el.innerHTML = marked.parse(el.dataset.md || '');
+  // Fix /note-img/ URLs to work under the /zsxq blueprint prefix
+  el.querySelectorAll('img[src^="/note-img/"]').forEach(img => {
+    img.src = _base + img.getAttribute('src');
+  });
 });
 
 const input = document.getElementById('searchInput');
