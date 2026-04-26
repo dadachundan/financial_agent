@@ -1878,11 +1878,20 @@ def export_obsidian(file_id: int):
         return jsonify(ok=False, error="No comment to export"), 200
 
     filename_stem = (row["name"] or f"file_{file_id}").removesuffix(".pdf")
+    today = datetime.date.today().strftime("%Y-%m-%d")
 
-    # Flat layout: notes at OBSIDIAN_NOTES_DIR/<stem>.md, images at OBSIDIAN_NOTES_DIR/imgs/
-    # This means re-exporting always overwrites the same file, regardless of date.
-    OBSIDIAN_NOTES_DIR.mkdir(parents=True, exist_ok=True)
-    imgs_dir = OBSIDIAN_NOTES_DIR / "imgs"
+    # If the file was previously exported to any dated subfolder, reuse that location.
+    # Otherwise create in today's dated folder.
+    existing = next(OBSIDIAN_NOTES_DIR.rglob(f"{filename_stem}.md"), None)
+    if existing:
+        note_path = existing
+        note_dir  = existing.parent
+    else:
+        note_dir  = OBSIDIAN_NOTES_DIR / today
+        note_dir.mkdir(parents=True, exist_ok=True)
+        note_path = note_dir / f"{filename_stem}.md"
+
+    imgs_dir = note_dir / "imgs"
 
     # Process content: copy images to imgs/, rewrite as ![[imgs/filename]]
     def _rewrite_image(m: re.Match) -> str:
@@ -1898,7 +1907,6 @@ def export_obsidian(file_id: int):
     md_content = re.sub(r'!\[([^\]]*)\]\((/uploads/[^)]+)\)', _rewrite_image, comment)
 
     # Write (overwrite) markdown file
-    note_path = OBSIDIAN_NOTES_DIR / f"{filename_stem}.md"
     note_path.write_text(md_content, encoding="utf-8")
     print(f"[export-obsidian] wrote {note_path}")
 
