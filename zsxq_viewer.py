@@ -29,6 +29,11 @@ SCRIPT_DIR  = Path(__file__).parent
 DEFAULT_DB  = SCRIPT_DIR / "db" / "zsxq.db"
 UPLOADS_DIR = SCRIPT_DIR / "uploads"
 
+try:
+    from config import FLOMO_WEBHOOK_URL as _FLOMO_WEBHOOK_URL
+except (ImportError, AttributeError):
+    _FLOMO_WEBHOOK_URL = ""
+
 zsxq_bp = Blueprint("zsxq", __name__)
 
 app = Flask(__name__)
@@ -458,6 +463,11 @@ __URLPATCH__
               <button class="btn btn-outline-secondary btn-sm ms-1"
                       onclick="syncAnnotations({{ row.file_id }}, this)"
                       title="Read annotations from local PDF and save to comment">📌</button>
+              {% if row.comment and flomo_enabled %}
+              <button class="btn btn-outline-info btn-sm ms-1"
+                      onclick="sendFlomo({{ row.file_id }}, this)"
+                      title="Send comment to flomo">🌊</button>
+              {% endif %}
             {% else %}
               <button class="btn btn-outline-secondary open-btn"
                       onclick="deleteRow({{ row.file_id }}, this)">🗑</button>
@@ -651,6 +661,31 @@ __MCW_FOOTER__
         btn.disabled = false;
         btn.textContent = '❌';
         setTimeout(() => { btn.textContent = orig; }, 2000);
+      });
+  }
+
+  function sendFlomo(fileId, btn) {
+    const orig = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = '⏳';
+    fetch('/send-flomo/' + fileId, { method: 'POST' })
+      .then(r => r.json())
+      .then(data => {
+        btn.disabled = false;
+        if (data.ok) {
+          btn.textContent = '✅';
+          btn.title = 'Sent to flomo!';
+          setTimeout(() => { btn.textContent = orig; btn.title = 'Send comment to flomo'; }, 3000);
+        } else {
+          btn.textContent = '❌';
+          btn.title = data.error || 'Failed';
+          setTimeout(() => { btn.textContent = orig; btn.title = 'Send comment to flomo'; }, 3000);
+        }
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.textContent = '❌';
+        setTimeout(() => { btn.textContent = orig; }, 2500);
       });
   }
 
@@ -1267,6 +1302,7 @@ def index():
         all_banks=all_banks,
         current_bank=bank,
         with_comment=with_comment,
+        flomo_enabled=bool(_FLOMO_WEBHOOK_URL),
         db_path=DB_PATH,
         query_string=request.query_string.decode(),
         # pagination
@@ -1752,6 +1788,56 @@ def serve_pdf(file_id: int, filename: str = ""):
 
     return send_file(path, mimetype="application/pdf",
                      download_name=path.name, as_attachment=False)
+
+
+@zsxq_bp.route("/send-flomo/<int:file_id>", methods=["POST"])
+def send_flomo(file_id: int):
+    """POST the PDF comment to flomo via webhook API."""
+    import re, urllib.request, json as _json
+
+    FLOMO_WEBHOOK_URL = _FLOMO_WEBHOOK_URL
+    if not FLOMO_WEBHOOK_URL:
+        return jsonify(ok=False, error="FLOMO_WEBHOOK_URL not set in config.py"), 200
+
+    conn = get_conn()
+    row = conn.execute(
+        "SELECT comment, name, topic_title FROM pdf_files WHERE file_id = ?", (file_id,)
+    ).fetchone()
+    conn.close()
+
+    if not row:
+        return jsonify(ok=False, error="File not found"), 404
+    comment = (row["comment"] or "").strip()
+    if not comment:
+        return jsonify(ok=False, error="No comment to send"), 200
+
+    title = (row["topic_title"] or row["name"] or "").strip()
+
+    # Strip local image references (not publicly accessible), replace with placeholder
+    def _strip_local_images(md: str) -> str:
+        return re.sub(r'!\[([^\]]*)\]\(/uploads/[^)]+\)', r'[📎 \1image]', md)
+
+    content = _strip_local_images(comment)
+
+    # Prepend title as context
+    if title:
+        content = f"**{title}**\n\n{content}"
+
+    payload = _json.dumps({"content": content}).encode("utf-8")
+    req = urllib.request.Request(
+        FLOMO_WEBHOOK_URL,
+        data=payload,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            body = _json.loads(resp.read().decode("utf-8"))
+            if body.get("code") == 0:
+                return jsonify(ok=True, memo_id=body.get("data", {}).get("slug", ""))
+            return jsonify(ok=False, error=body.get("message", "Unknown error")), 200
+    except Exception as e:
+        return jsonify(ok=False, error=str(e)), 200
 
 
 # Register blueprint on the standalone app (after all routes are defined)
