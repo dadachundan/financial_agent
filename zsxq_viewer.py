@@ -1867,7 +1867,7 @@ def export_obsidian(file_id: int):
 
     conn = get_conn()
     row = conn.execute(
-        "SELECT comment, name FROM pdf_files WHERE file_id = ?", (file_id,)
+        "SELECT comment, name, obsidian_path FROM pdf_files WHERE file_id = ?", (file_id,)
     ).fetchone()
     conn.close()
 
@@ -1880,12 +1880,11 @@ def export_obsidian(file_id: int):
     filename_stem = (row["name"] or f"file_{file_id}").removesuffix(".pdf")
     today = datetime.date.today().strftime("%Y-%m-%d")
 
-    # If the file was previously exported to any dated subfolder, reuse that location.
-    # Otherwise create in today's dated folder.
-    existing = next(OBSIDIAN_NOTES_DIR.rglob(f"{filename_stem}.md"), None)
-    if existing:
-        note_path = existing
-        note_dir  = existing.parent
+    # Use previously saved export path if it exists on disk; otherwise create in today's folder.
+    saved_path = (row["obsidian_path"] or "").strip()
+    if saved_path and Path(saved_path).exists():
+        note_path = Path(saved_path)
+        note_dir  = note_path.parent
     else:
         note_dir  = OBSIDIAN_NOTES_DIR / today
         note_dir.mkdir(parents=True, exist_ok=True)
@@ -1909,6 +1908,13 @@ def export_obsidian(file_id: int):
     # Write (overwrite) markdown file
     note_path.write_text(md_content, encoding="utf-8")
     print(f"[export-obsidian] wrote {note_path}")
+
+    # Persist the export path so future exports overwrite the same file
+    conn = get_conn()
+    conn.execute("UPDATE pdf_files SET obsidian_path = ? WHERE file_id = ?",
+                 (str(note_path), file_id))
+    conn.commit()
+    conn.close()
 
     return jsonify(ok=True, path=str(note_path))
 
