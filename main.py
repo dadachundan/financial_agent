@@ -60,7 +60,7 @@ app.register_blueprint(price_shape_bp,  url_prefix="/price-shape")
 
 @app.route("/")
 def index():
-    return redirect("/zep")
+    return redirect("/zsxq")
 
 
 @app.errorhandler(413)
