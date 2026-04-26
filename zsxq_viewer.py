@@ -1586,7 +1586,7 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
     _NOTE_TYPES      = {"Text", "FreeText"}
 
     try:
-        import fitz  # PyMuPDF — much faster than PyPDF2
+        import fitz, re as _re  # PyMuPDF — much faster than PyPDF2
         _t0 = _t.time()
         try:
             doc = fitz.open(str(path))
@@ -1594,6 +1594,8 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
             print(f"                   fitz open failed: {e}")
             return []
         print(f"                   fitz opened in {_t.time()-_t0:.2f}s  ({doc.page_count} pages)")
+        # Short safe prefix derived from the PDF filename (first 40 chars, no special chars)
+        _fname_prefix = _re.sub(r"[^\w]", "_", path.stem)[:40].strip("_")
 
         results = []
         for page_num in range(doc.page_count):
@@ -1638,7 +1640,6 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                         mat = fitz.Matrix(2, 2)
                         pix = page.get_pixmap(matrix=mat, clip=annot.rect)
                         # OCR to derive a meaningful filename (first ~6 words)
-                        import re as _re
                         ocr_title = _ocr_region(page, annot.rect, full_width=False)
                         if ocr_title:
                             words = _re.sub(r"[^\w\s]", "", ocr_title).split()
@@ -1646,7 +1647,7 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                             slug  = _re.sub(r"_+", "_", slug).strip("_")[:60]
                         else:
                             slug  = uuid.uuid4().hex
-                        img_name = f"p{page_num+1}_{slug}.png"
+                        img_name = f"{_fname_prefix}_p{page_num+1}_{slug}.png"
                         import datetime as _dt
                         today    = _dt.date.today()
                         save_dir = UPLOADS_DIR / str(today.year) / f"{today.month:02d}" / f"{today.day:02d}"
