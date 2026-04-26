@@ -1581,12 +1581,22 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                     if len(native_text) > 30:
                         # Vector PDF with selectable text — OCR for accuracy
                         ocr_text = _ocr_region(page, rect)
+                    else:
+                        # Raster page — OCR and decide
+                        ocr_text = _ocr_region(page, rect)
+
+                    # Figure/Table label anywhere in OCR text → always an image
+                    import re as _re2
+                    has_fig_table = bool(_re2.search(
+                        r'\b(figure|fig\.?|table|chart|exhibit|exhibit)\s*\d+',
+                        ocr_text, _re2.IGNORECASE))
+
+                    if has_fig_table:
+                        is_text = False
+                    elif len(native_text) > 30:
                         is_text = True
                     else:
-                        # Raster page — run OCR and decide by word count
-                        ocr_text = _ocr_region(page, rect)
                         words = ocr_text.split()
-                        # ≥30 words with avg length ≥4 → likely a text block
                         avg_len = sum(len(w) for w in words) / len(words) if words else 0
                         is_text = len(words) >= 30 and avg_len >= 4
 
