@@ -1502,23 +1502,39 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
         results = []
         for page_num in range(doc.page_count):
             page = doc[page_num]
-            for annot in page.annots():
+            all_annots = list(page.annots())
+
+            # ── Pass 1: merge nearby Line annotations and OCR each group ─────
+            line_annots = [a for a in all_annots if a.type[1] in _LINE_TYPES]
+            if line_annots:
+                line_annots.sort(key=lambda a: a.rect.y0)
+                # Group lines whose vertical gap is ≤ 25 pt (same text block)
+                groups: list[list] = []
+                for la in line_annots:
+                    if groups and la.rect.y0 - groups[-1][-1].rect.y1 <= 25:
+                        groups[-1].append(la)
+                    else:
+                        groups.append([la])
+                for group in groups:
+                    gx0 = min(a.rect.x0 for a in group)
+                    gy0 = min(a.rect.y0 for a in group)
+                    gx1 = max(a.rect.x1 for a in group)
+                    gy1 = max(a.rect.y1 for a in group)
+                    merged = fitz.Rect(gx0 - 5, gy0 - 30, gx1 + 5, gy1 + 5)
+                    _t1 = _t.time()
+                    text = _ocr_region(page, merged)
+                    print(f"                   OCR {len(group)}-line group p{page_num+1} in {_t.time()-_t1:.1f}s: {text[:60]!r}")
+                    if text:
+                        results.append({"page": page_num + 1, "type": "Highlight",
+                                        "text": text, "note": None})
+
+            # ── Pass 2: Highlight and Note annotations ────────────────────────
+            for annot in all_annots:
                 ann_type = annot.type[1]  # e.g. "Highlight", "Text"
-                if ann_type not in _HIGHLIGHT_TYPES and ann_type not in _NOTE_TYPES and ann_type not in _LINE_TYPES:
+                if ann_type not in _HIGHLIGHT_TYPES and ann_type not in _NOTE_TYPES:
                     continue
                 content = (annot.info.get("content") or "").strip().lstrip("﻿\x00")
-                if ann_type in _LINE_TYPES:
-                    # Drawn line — expand rect upward to capture text above the line
-                    r = annot.rect
-                    expanded = fitz.Rect(r.x0 - 5, r.y0 - 30, r.x1 + 5, r.y1 + 5)
-                    _t1 = _t.time()
-                    text = _ocr_region(page, expanded)
-                    print(f"                   OCR line p{page_num+1} in {_t.time()-_t1:.1f}s: {text[:60]!r}")
-                    if not text:
-                        continue
-                    results.append({"page": page_num + 1, "type": "Highlight",
-                                    "text": text, "note": None})
-                elif ann_type in _HIGHLIGHT_TYPES:
+                if ann_type in _HIGHLIGHT_TYPES:
                     text = content
                     if not text:
                         # /Contents empty — raster PDF (UBS/GS style).
