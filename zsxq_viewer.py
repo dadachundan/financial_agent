@@ -1831,37 +1831,46 @@ def sync_annotations(file_id: int):
         return jsonify(ok=False, error="File not found on disk"), 404
 
     print(f"[sync-annotations] 📌 {row['name']}")
-    print(f"                   path: {path}")
+    print(f"                   path: {path}  ({path.stat().st_size/1024:.0f} KB)")
     t0 = _time.time()
 
     # Run extraction in a thread with a hard timeout so a malformed PDF
     # can't hang the server indefinitely.
-    _TIMEOUT = 15.0
+    _TIMEOUT = 120.0   # OCR can be slow on long PDFs
     with _cf.ThreadPoolExecutor(max_workers=1) as _pool:
         _fut = _pool.submit(_extract_annotations_from_pdf, path)
         try:
             anns = _fut.result(timeout=_TIMEOUT)
         except _cf.TimeoutError:
             elapsed = _time.time() - t0
-            print(f"                   ⏱ timed out after {elapsed:.1f}s")
-            return jsonify(ok=False, error="Timed out reading PDF — file may be malformed"), 200
+            print(f"                   ⏱ TIMEOUT after {elapsed:.1f}s — PDF may be malformed or too large")
+            return jsonify(ok=False, error=f"Timed out after {elapsed:.0f}s — file may be malformed"), 200
+        except Exception as exc:
+            elapsed = _time.time() - t0
+            import traceback
+            print(f"                   ❌ EXCEPTION after {elapsed:.1f}s: {exc}")
+            traceback.print_exc()
+            return jsonify(ok=False, error=str(exc)), 200
 
     elapsed = _time.time() - t0
     if not anns:
         print(f"                   ⚠ no annotations found  ({elapsed:.1f}s)")
         return jsonify(ok=False, error="No annotations found in PDF"), 200
 
-    print(f"                   ✓ {len(anns)} annotation(s) found  ({elapsed:.1f}s)")
+    print(f"                   ✓ {len(anns)} annotation(s) in {elapsed:.1f}s")
     for a in anns:
-        preview = (a['text'] or '')[:60].replace('\n', ' ')
+        preview = (a['text'] or '')[:80].replace('\n', ' ')
         print(f"                   p.{a['page']} [{a['type']}] {preview!r}")
 
     comment = _format_annotations(anns)
+    import datetime as _dt
+    now = _dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     conn = get_conn()
-    conn.execute("UPDATE pdf_files SET comment = ? WHERE file_id = ?",
-                 (comment, file_id))
+    conn.execute("UPDATE pdf_files SET comment = ?, comment_updated_at = ? WHERE file_id = ?",
+                 (comment, now, file_id))
     conn.commit()
     conn.close()
+    print(f"                   💾 saved to DB")
     return jsonify(ok=True, count=len(anns), comment=comment)
 
 
