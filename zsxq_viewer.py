@@ -1870,20 +1870,40 @@ OBSIDIAN_NOTES_DIR = Path("/Users/x/Downloads/Thoughts/report_notes")
 
 @zsxq_bp.route("/export-obsidian/<int:file_id>", methods=["POST"])
 def export_obsidian(file_id: int):
-    """Export PDF comment to an Obsidian-compatible markdown file."""
+    """Re-extract annotations from the local PDF and export to Obsidian markdown."""
     import re, shutil, datetime
 
     conn = get_conn()
     row = conn.execute(
-        "SELECT comment, name, obsidian_path FROM pdf_files WHERE file_id = ?", (file_id,)
+        "SELECT local_path, name, obsidian_path FROM pdf_files WHERE file_id = ?", (file_id,)
     ).fetchone()
     conn.close()
 
     if not row:
         return jsonify(ok=False, error="File not found"), 404
-    comment = (row["comment"] or "").strip()
+
+    # Always re-extract from the PDF for fresh, accurate annotations
+    local_path = row["local_path"] or ""
+    if local_path and Path(local_path).exists():
+        print(f"[export-obsidian] re-extracting annotations from {Path(local_path).name}")
+        anns    = _extract_annotations_from_pdf(Path(local_path))
+        comment = _format_annotations(anns).strip() if anns else ""
+        if comment:
+            # Persist the refreshed comment back to DB
+            conn = get_conn()
+            conn.execute("UPDATE pdf_files SET comment = ? WHERE file_id = ?", (comment, file_id))
+            conn.commit()
+            conn.close()
+    else:
+        # No local PDF — fall back to stored comment
+        conn = get_conn()
+        row2 = conn.execute("SELECT comment FROM pdf_files WHERE file_id = ?", (file_id,)).fetchone()
+        conn.close()
+        comment = (row2["comment"] if row2 else "") or ""
+        comment = comment.strip()
+
     if not comment:
-        return jsonify(ok=False, error="No comment to export"), 200
+        return jsonify(ok=False, error="No annotations found"), 200
 
     filename_stem = (row["name"] or f"file_{file_id}").removesuffix(".pdf")
     today = datetime.date.today().strftime("%Y-%m-%d")
