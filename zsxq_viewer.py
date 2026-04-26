@@ -1486,7 +1486,8 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
     """
     import time as _t
     _HIGHLIGHT_TYPES = {"Highlight", "Underline", "StrikeOut", "Squiggly"}
-    _LINE_TYPES      = {"Line"}   # drawn underlines — no /Contents, needs OCR with upward expansion
+    _LINE_TYPES      = {"Line"}            # drawn underlines — OCR with upward expansion
+    _BOX_TYPES       = {"Square", "Circle"}  # drawn rectangles/circles — OCR interior directly
     _NOTE_TYPES      = {"Text", "FreeText"}
 
     try:
@@ -1503,6 +1504,17 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
         for page_num in range(doc.page_count):
             page = doc[page_num]
             all_annots = list(page.annots())
+
+            # ── Pass 0: Square/Circle box annotations — OCR the interior ─────
+            for annot in all_annots:
+                if annot.type[1] not in _BOX_TYPES:
+                    continue
+                _t1 = _t.time()
+                text = _ocr_region(page, annot.rect)
+                print(f"                   OCR box p{page_num+1} in {_t.time()-_t1:.1f}s: {text[:60]!r}")
+                if text:
+                    results.append({"page": page_num + 1, "type": "Highlight",
+                                    "text": text, "note": None})
 
             # ── Pass 1: merge nearby Line annotations and OCR each group ─────
             line_annots = [a for a in all_annots if a.type[1] in _LINE_TYPES]
