@@ -137,7 +137,7 @@ cards.forEach(c => observer.observe(c));
 
 function openLocal(fileId, el) {
   el.style.opacity = '0.5';
-  fetch(_base + '/open-local/' + fileId)
+  fetch('/open-local/' + fileId)
     .then(r => r.json())
     .then(data => {
       el.style.opacity = '1';
