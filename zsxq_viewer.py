@@ -1566,73 +1566,24 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
             page = doc[page_num]
             all_annots = list(page.annots())
 
-            # ── Pass 0: Square/Circle — text → blockquote, image/table → PNG ──
+            # ── Pass 0: Square/Circle — always capture region as PNG image ────
             for annot in all_annots:
                 if annot.type[1] not in _BOX_TYPES:
                     continue
                 _t1 = _t.time()
                 try:
-                    rect = annot.rect
-                    # Step 1: check if page has a real text layer in this region
-                    native_text = page.get_text("text", clip=rect).strip()
-                    is_text = False
-                    ocr_text = ""
-
-                    if len(native_text) > 30:
-                        # Vector PDF with selectable text — OCR for accuracy
-                        ocr_text = _ocr_region(page, rect)
-                    else:
-                        # Raster page — OCR and decide
-                        ocr_text = _ocr_region(page, rect)
-
-                    # Figure/Table label anywhere in OCR text → always an image
-                    import re as _re2
-                    has_fig_table = bool(_re2.search(
-                        r'\b(figure|fig\.?|table|chart|exhibit|exhibit)\s*\d+',
-                        ocr_text, _re2.IGNORECASE))
-
-                    if has_fig_table:
-                        is_text = False
-                    elif len(native_text) > 30:
-                        is_text = True
-                    else:
-                        words = ocr_text.split()
-                        avg_len = sum(len(w) for w in words) / len(words) if words else 0
-                        is_text = len(words) >= 30 and avg_len >= 4
-
-                    if is_text and ocr_text:
-                        print(f"                   box→text p{page_num+1} in {_t.time()-_t1:.1f}s: {ocr_text[:60]!r}")
-                        results.append({"page": page_num + 1, "type": "Highlight",
-                                        "text": ocr_text, "note": None})
-                    else:
-                        # Capture region as PNG image
-                        mat  = fitz.Matrix(2, 2)
-                        pix  = page.get_pixmap(matrix=mat, clip=rect)
-                        import uuid, re as _re, datetime as _dt
-                        today  = _dt.date.today()
-                        subdir = UPLOADS_DIR / str(today.year) / f"{today.month:02d}" / f"{today.day:02d}"
-                        subdir.mkdir(parents=True, exist_ok=True)
-                        # Use OCR text (already fetched) or first line of image as filename
-                        def _slugify(s: str) -> str:
-                            # Take first non-empty line
-                            line = next((l.strip() for l in s.splitlines() if l.strip()), "")
-                            # Truncate before standalone numbers (axis labels like 5,000 etc.)
-                            line = _re.split(r'\s+\d[\d,]{2,}', line)[0]
-                            line = line[:60]
-                            line = _re.sub(r'[^\w\s\-\(\)一-鿿]', '', line)
-                            line = _re.sub(r'\s+', '_', line.strip())
-                            return line or uuid.uuid4().hex[:8]
-                        slug = _slugify(ocr_text) if ocr_text else uuid.uuid4().hex[:8]
-                        img_name = f"{slug}.png"
-                        # Avoid collision
-                        candidate = subdir / img_name
-                        if candidate.exists():
-                            img_name = f"{slug}_{uuid.uuid4().hex[:6]}.png"
-                        (subdir / img_name).write_bytes(pix.tobytes("png"))
-                        rel = f"{today.year}/{today.month:02d}/{today.day:02d}/{img_name}"
-                        print(f"                   box→image p{page_num+1} in {_t.time()-_t1:.1f}s → {img_name}")
-                        results.append({"page": page_num + 1, "type": "Image",
-                                        "text": f"![](/uploads/{rel})", "note": None})
+                    import uuid, datetime as _dt
+                    mat    = fitz.Matrix(2, 2)
+                    pix    = page.get_pixmap(matrix=mat, clip=annot.rect)
+                    today  = _dt.date.today()
+                    subdir = UPLOADS_DIR / str(today.year) / f"{today.month:02d}" / f"{today.day:02d}"
+                    subdir.mkdir(parents=True, exist_ok=True)
+                    img_name = uuid.uuid4().hex + ".png"
+                    (subdir / img_name).write_bytes(pix.tobytes("png"))
+                    rel = f"{today.year}/{today.month:02d}/{today.day:02d}/{img_name}"
+                    print(f"                   box→image p{page_num+1} in {_t.time()-_t1:.1f}s → {img_name}")
+                    results.append({"page": page_num + 1, "type": "Image",
+                                    "text": f"![](/uploads/{rel})", "note": None})
                 except Exception as e:
                     print(f"                   box failed p{page_num+1}: {e}")
 
