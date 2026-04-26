@@ -29,10 +29,6 @@ SCRIPT_DIR       = Path(__file__).parent
 DEFAULT_DB       = SCRIPT_DIR / "db" / "zsxq.db"
 UPLOADS_DIR      = SCRIPT_DIR / "uploads"
 OBSIDIAN_NOTES_DIR = Path("/Users/x/Downloads/Thoughts/report_notes")
-# Annotation images (box captures) are saved here so Flask and Obsidian share the same file.
-# Flask serves them at  /notes-imgs/<filename>
-# Obsidian wiki-link:   ![[imgs/<filename>]]
-ANNOT_IMGS_DIR   = OBSIDIAN_NOTES_DIR / "imgs"
 
 try:
     from config import FLOMO_WEBHOOK_URL as _FLOMO_WEBHOOK_URL
@@ -45,13 +41,6 @@ app = Flask(__name__)
 app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
 
 
-@zsxq_bp.route("/notes-imgs/<path:filename>")
-def serve_notes_img(filename: str):
-    """Serve annotation images stored in the shared Obsidian imgs folder."""
-    path = ANNOT_IMGS_DIR / filename
-    if not path.exists():
-        abort(404)
-    return send_file(path)
 DB_PATH: Path = DEFAULT_DB
 
 # Kick off AKShare ticker-name cache load (instant if cache exists; bg thread if not)
@@ -1516,88 +1505,9 @@ def set_comment(file_id: int):
 
 # ── Feed (blog/timeline view of all notes) ────────────────────────────────────
 
-FEED_TEMPLATE = """<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Research Notes</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="/static/vendor/marked.min.js"></script>
-<style>
-  body { background:#f8f9fa; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-  .feed-card { background:#fff; border-radius:12px; box-shadow:0 1px 4px rgba(0,0,0,.08);
-               margin-bottom:1.5rem; padding:1.5rem 1.75rem; }
-  .feed-meta  { font-size:.8rem; color:#888; margin-bottom:.75rem; }
-  .feed-title { font-size:1rem; font-weight:600; color:#1a1a2e; margin-bottom:.9rem;
-                text-decoration:none; }
-  .feed-title:hover { color:#1a56db; }
-  .feed-body blockquote { border-left:3px solid #f0b429; background:#fffbf0;
-                          margin:.6em 0; padding:.4em .9em; border-radius:0 6px 6px 0; }
-  .feed-body blockquote p { margin:0; color:#444; }
-  .feed-body img  { max-width:100%; border-radius:8px; margin:.6em 0; display:block; }
-  .feed-body h1   { font-size:.75rem; font-weight:600; color:#aaa; letter-spacing:.05em;
-                    text-transform:uppercase; border-bottom:1px solid #eee;
-                    padding-bottom:.35em; margin:0 0 1em; }
-  .feed-body h2   { font-size:.95rem; font-weight:700; color:#1a56db; margin:1.2em 0 .4em;
-                    text-transform:uppercase; letter-spacing:.04em; }
-  .feed-body p    { margin-bottom:.6em; line-height:1.75; }
-  .feed-body code { background:#f0f0f0; padding:1px 4px; border-radius:3px; font-size:.88em; }
-  .feed-body pre  { background:#f6f8fa; padding:.75em; border-radius:6px; overflow:auto; }
-  .search-bar     { position:sticky; top:0; z-index:10; background:#f8f9fa;
-                    padding:.75rem 0; margin-bottom:1rem; }
-</style>
-</head>
-<body>
-<div class="container" style="max-width:760px;padding-top:2rem">
-  <div class="d-flex align-items-center mb-3 gap-3">
-    <h4 class="mb-0 fw-bold">📓 Research Notes</h4>
-    <span class="text-muted small">{{ total }} notes</span>
-    <a href="{{ _base | default('') }}/" class="btn btn-sm btn-outline-secondary ms-auto">← Back</a>
-  </div>
-
-  <div class="search-bar">
-    <input id="searchInput" type="search" class="form-control" placeholder="Search notes…">
-  </div>
-
-  <div id="feedContainer">
-  {% for row in rows %}
-  <div class="feed-card" data-text="{{ row.comment | e }}">
-    <div class="feed-meta">
-      {{ row.comment_updated_at or row.create_time or '' | truncate(10, True, '') }}
-      {% if row.bank %} · <span class="badge bg-light text-secondary border">{{ row.bank }}</span>{% endif %}
-    </div>
-    <a class="feed-title d-block"
-       href="{{ _base | default('') }}/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank">
-      {{ row.name | replace('.pdf','') }}
-    </a>
-    <div class="feed-body" data-md="{{ row.comment | e }}"></div>
-  </div>
-  {% endfor %}
-  </div>
-</div>
-
-<script>
-document.querySelectorAll('.feed-body').forEach(el => {
-  el.innerHTML = marked.parse(el.dataset.md || '');
-});
-
-const input = document.getElementById('searchInput');
-input.addEventListener('input', () => {
-  const q = input.value.toLowerCase();
-  document.querySelectorAll('.feed-card').forEach(card => {
-    const text = (card.dataset.text || '').toLowerCase();
-    const title = card.querySelector('.feed-title').textContent.toLowerCase();
-    card.style.display = (!q || text.includes(q) || title.includes(q)) ? '' : 'none';
-  });
-});
-</script>
-</body>
-</html>"""
-
-
 @zsxq_bp.route("/feed")
 def feed():
+    from flask import render_template
     conn = get_conn()
     rows = conn.execute("""
         SELECT file_id, name, comment, bank, create_time, comment_updated_at
@@ -1606,14 +1516,7 @@ def feed():
         ORDER  BY COALESCE(comment_updated_at, create_time) DESC
     """).fetchall()
     conn.close()
-    _base = getattr(zsxq_bp, "_base", "")
-    from flask import render_template_string
-    return render_template_string(
-        FEED_TEMPLATE,
-        rows=rows,
-        total=len(rows),
-        _base=_base,
-    )
+    return render_template("zsxq_feed.html", rows=rows, total=len(rows))
 
 
 
@@ -1772,12 +1675,16 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                         else:
                             slug  = uuid.uuid4().hex
                         img_name = f"p{page_num+1}_{slug}.png"
-                        # Save to shared Obsidian imgs dir — Flask serves at /notes-imgs/
-                        ANNOT_IMGS_DIR.mkdir(parents=True, exist_ok=True)
-                        (ANNOT_IMGS_DIR / img_name).write_bytes(pix.tobytes("png"))
+                        # Save to uploads/ — Flask serves at /uploads/YYYY/MM/DD/
+                        import datetime as _dt
+                        today  = _dt.date.today()
+                        subdir = UPLOADS_DIR / str(today.year) / f"{today.month:02d}" / f"{today.day:02d}"
+                        subdir.mkdir(parents=True, exist_ok=True)
+                        (subdir / img_name).write_bytes(pix.tobytes("png"))
+                        rel = f"{today.year}/{today.month:02d}/{today.day:02d}/{img_name}"
                         print(f"                   box→image p{page_num+1} in {_t.time()-_t1:.1f}s → {img_name}")
                         results.append({"page": page_num + 1, "type": "Image",
-                                        "text": f"![](/notes-imgs/{img_name})", "note": None})
+                                        "text": f"![](/uploads/{rel})", "note": None})
                 except Exception as e:
                     print(f"                   box failed p{page_num+1}: {e}")
 
@@ -2028,12 +1935,10 @@ def serve_pdf(file_id: int, filename: str = ""):
 def export_obsidian(file_id: int):
     """Re-extract annotations from the local PDF and export to Obsidian markdown.
 
-    Annotation images are already stored in ANNOT_IMGS_DIR (= OBSIDIAN_NOTES_DIR/imgs/).
-    The DB comment references them as  ![](/notes-imgs/<name>.png).
-    The markdown file uses Obsidian wiki-links: ![[imgs/<name>.png]].
-    No image copying is needed — both point to the same file.
+    Images from /uploads/ are copied to imgs/ next to the .md file and
+    rewritten as Obsidian wiki-links: ![[imgs/<name>.png]].
     """
-    import re, datetime
+    import re, shutil, datetime
 
     conn = get_conn()
     row = conn.execute(
@@ -2077,26 +1982,19 @@ def export_obsidian(file_id: int):
         note_dir.mkdir(parents=True, exist_ok=True)
         note_path = note_dir / f"{filename_stem}.md"
 
-    # Rewrite image refs: ![](/notes-imgs/<name>.png) → ![[imgs/<name>.png]]
-    # Images already live in ANNOT_IMGS_DIR (OBSIDIAN_NOTES_DIR/imgs/) — no copy needed.
-    def _rewrite_notes_img(m: re.Match) -> str:
-        filename = Path(m.group(1)).name   # e.g. p2_Exhibit_3_....png
-        return f"![[imgs/{filename}]]"
+    imgs_dir = note_path.parent / "imgs"
 
-    # Also handle legacy /uploads/ refs (old comments) by copying if needed
-    def _rewrite_uploads_img(m: re.Match) -> str:
-        import shutil
-        url_path = m.group(2)
+    # Copy image from uploads/ to imgs/ next to the .md file, rewrite as ![[imgs/name.png]]
+    def _rewrite_img(m: re.Match) -> str:
+        url_path = m.group(2)                        # /uploads/YYYY/MM/DD/name.png
         src = SCRIPT_DIR / url_path.lstrip("/")
         if src.exists():
-            ANNOT_IMGS_DIR.mkdir(parents=True, exist_ok=True)
-            dest = ANNOT_IMGS_DIR / src.name
-            shutil.copy2(src, dest)
+            imgs_dir.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, imgs_dir / src.name)
             return f"![[imgs/{src.name}]]"
         return m.group(0)
 
-    md_content = re.sub(r'!\[([^\]]*)\]\(/notes-imgs/([^)]+)\)', _rewrite_notes_img, comment)
-    md_content = re.sub(r'!\[([^\]]*)\]\((/uploads/[^)]+)\)', _rewrite_uploads_img, md_content)
+    md_content = re.sub(r'!\[([^\]]*)\]\((/uploads/[^)]+)\)', _rewrite_img, comment)
 
     # Write (overwrite) markdown file
     note_path.write_text(md_content, encoding="utf-8")
