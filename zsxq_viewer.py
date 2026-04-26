@@ -1813,17 +1813,10 @@ def send_flomo(file_id: int):
 
     title = (row["topic_title"] or row["name"] or "").strip()
 
-    # Strip local image references (not publicly accessible), replace with placeholder
-    def _strip_local_images(md: str) -> str:
-        return re.sub(r'!\[([^\]]*)\]\(/uploads/[^)]+\)', r'[📎 \1image]', md)
+    # Build content: # Title\n\n<comment body>
+    content = f"# {title}\n\n{comment}" if title else comment
 
-    content = _strip_local_images(comment)
-
-    # Prepend title as context
-    if title:
-        content = f"**{title}**\n\n{content}"
-
-    payload = _json.dumps({"content": content}).encode("utf-8")
+    payload = _json.dumps({"content": content, "content_type": "markdown"}).encode("utf-8")
     req = urllib.request.Request(
         FLOMO_WEBHOOK_URL,
         data=payload,
@@ -1834,7 +1827,8 @@ def send_flomo(file_id: int):
         with urllib.request.urlopen(req, timeout=10) as resp:
             body = _json.loads(resp.read().decode("utf-8"))
             if body.get("code") == 0:
-                return jsonify(ok=True, memo_id=body.get("data", {}).get("slug", ""))
+                slug = (body.get("memo") or {}).get("slug", "")
+                return jsonify(ok=True, slug=slug)
             return jsonify(ok=False, error=body.get("message", "Unknown error")), 200
     except Exception as e:
         return jsonify(ok=False, error=str(e)), 200
