@@ -1658,11 +1658,8 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                 if ann_type in _HIGHLIGHT_TYPES:
                     text = content
                     if not text:
-                        # Try PDF text layer first (fast, works for text-based PDFs)
-                        words = page.get_text("words", clip=annot.rect)
-                        text  = " ".join(w[4] for w in words).strip()
-                    if not text:
-                        # Text layer empty — raster PDF (UBS/GS style). Fall back to OCR.
+                        # Use Vision OCR for highest accuracy (avoids garbled text from
+                        # PDF text layer encoding issues).
                         _t1 = _t.time()
                         text = _ocr_region(page, annot.rect, full_width=True)
                         print(f"                   OCR p{page_num+1} in {_t.time()-_t1:.1f}s: {text[:60]!r}")
