@@ -1566,16 +1566,29 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
             page = doc[page_num]
             all_annots = list(page.annots())
 
-            # ── Pass 0: Square/Circle box annotations — OCR the interior ─────
+            # ── Pass 0: Square/Circle — render region as PNG image ───────────
             for annot in all_annots:
                 if annot.type[1] not in _BOX_TYPES:
                     continue
                 _t1 = _t.time()
-                text = _ocr_region(page, annot.rect)
-                print(f"                   OCR box p{page_num+1} in {_t.time()-_t1:.1f}s: {text[:60]!r}")
-                if text:
-                    results.append({"page": page_num + 1, "type": "Highlight",
-                                    "text": text, "note": None})
+                try:
+                    # Render at 2x for sharpness
+                    mat   = fitz.Matrix(2, 2)
+                    clip  = fitz.Rect(annot.rect)
+                    pix   = page.get_pixmap(matrix=mat, clip=clip)
+                    import uuid, datetime as _dt
+                    today   = _dt.date.today()
+                    subdir  = UPLOADS_DIR / str(today.year) / f"{today.month:02d}" / f"{today.day:02d}"
+                    subdir.mkdir(parents=True, exist_ok=True)
+                    img_name = uuid.uuid4().hex + ".png"
+                    img_path = subdir / img_name
+                    pix.save(str(img_path))
+                    rel = f"{today.year}/{today.month:02d}/{today.day:02d}/{img_name}"
+                    print(f"                   saved box image p{page_num+1} in {_t.time()-_t1:.1f}s → {img_name}")
+                    results.append({"page": page_num + 1, "type": "Image",
+                                    "text": f"![](/uploads/{rel})", "note": None})
+                except Exception as e:
+                    print(f"                   box image failed p{page_num+1}: {e}")
 
             # ── Pass 1: merge nearby Line annotations and OCR each group ─────
             line_annots = [a for a in all_annots if a.type[1] in _LINE_TYPES]
@@ -1707,7 +1720,9 @@ def _format_annotations(anns: list[dict]) -> str:
                 lines.append("")
             lines.append(f"## P{a['page']}")
             last_page = a["page"]
-        if a["type"] == "Highlight":
+        if a["type"] == "Image":
+            lines.append(a["text"])   # raw markdown image reference, no blockquote
+        elif a["type"] == "Highlight":
             lines.append(f"> {text}")
         else:
             lines.append(text)
