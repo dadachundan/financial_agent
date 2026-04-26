@@ -28,7 +28,6 @@ import ticker_names as _tn
 SCRIPT_DIR       = Path(__file__).parent
 DEFAULT_DB       = SCRIPT_DIR / "db" / "zsxq.db"
 UPLOADS_DIR      = SCRIPT_DIR / "uploads"
-OBSIDIAN_NOTES_DIR = Path("/Users/x/Downloads/Thoughts/report_notes")
 
 try:
     from config import FLOMO_WEBHOOK_URL as _FLOMO_WEBHOOK_URL
@@ -43,14 +42,6 @@ app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
 
 DB_PATH: Path = DEFAULT_DB
 
-
-@zsxq_bp.route("/note-img/<path:filepath>")
-def serve_note_img(filepath: str):
-    """Serve annotation images stored inside the Obsidian notes folder."""
-    path = OBSIDIAN_NOTES_DIR / filepath
-    if not path.exists():
-        abort(404)
-    return send_file(path)
 
 # Kick off AKShare ticker-name cache load (instant if cache exists; bg thread if not)
 _tn.init()
@@ -475,8 +466,8 @@ __URLPATCH__
                       onclick="openLocal({{ row.file_id }}, this)"
                       title="{{ row.local_path }}">🗂 Local</button>
               <button class="btn btn-outline-success btn-sm ms-1"
-                      onclick="exportObsidian({{ row.file_id }}, this)"
-                      title="Extract annotations → save to DB + export Obsidian MD">🗒</button>
+                      onclick="syncAnnotations({{ row.file_id }}, this)"
+                      title="Read annotations from local PDF and save to comment">📌</button>
             {% else %}
               <button class="btn btn-outline-secondary open-btn"
                       onclick="deleteRow({{ row.file_id }}, this)">🗑</button>
@@ -556,12 +547,6 @@ __MCW_FOOTER__
 <script>
   const _base = "{{ _base | default('') }}";
   window._commentSavePrefix = _base;
-  // After comment markdown is rendered, fix /note-img/ src URLs to include the blueprint prefix
-  window._onCommentRendered = el => {
-    el.querySelectorAll('img[src^="/note-img/"]').forEach(img => {
-      img.src = _base + img.getAttribute('src');
-    });
-  };
   const _summaryModal = new bootstrap.Modal(document.getElementById('summaryModal'));
   function showSummary(fileId, el) {
     document.getElementById('summaryModalTitle').textContent = el.dataset.title || '';
@@ -676,38 +661,31 @@ __MCW_FOOTER__
       });
   }
 
-  // Fix /note-img/ src URLs so they work under the /zsxq blueprint prefix
-  function fixImgSrc(el) {
-    el.querySelectorAll('img[src^="/note-img/"]').forEach(img => {
-      img.src = _base + img.getAttribute('src');
-    });
-  }
-
-  function exportObsidian(fileId, btn) {
+  function syncAnnotations(fileId, btn) {
     const orig = btn.textContent;
     btn.disabled = true;
     btn.textContent = '⏳';
-    fetch(_base + '/export-obsidian/' + fileId, { method: 'POST' })
+    fetch(_base + '/sync-annotations/' + fileId, { method: 'POST' })
       .then(r => r.json())
       .then(data => {
         btn.disabled = false;
+        btn.textContent = orig;
         if (data.ok) {
-          // Update the comment cell in-place with the freshly extracted comment
           const cell = document.getElementById('comment-cell-' + fileId);
-          if (cell) renderCommentCell(cell, fileId, data.comment || '');
+          if (cell) renderCommentCell(cell, fileId, data.comment);
+          btn.title = data.count + ' annotation(s) saved to comment';
           btn.textContent = '✅';
-          btn.title = data.path || 'Exported';
-          setTimeout(() => { btn.textContent = orig; btn.title = 'Extract annotations → save to DB + export Obsidian MD'; }, 3000);
+          setTimeout(() => { btn.textContent = orig; btn.title = 'Read annotations from local PDF and save to comment'; }, 2500);
         } else {
           btn.textContent = '❌';
-          btn.title = data.error || 'Failed';
-          setTimeout(() => { btn.textContent = orig; btn.title = 'Extract annotations → save to DB + export Obsidian MD'; }, 3000);
+          btn.title = data.error || 'No annotations found';
+          setTimeout(() => { btn.textContent = orig; btn.title = 'Read annotations from local PDF and save to comment'; }, 2500);
         }
       })
       .catch(() => {
         btn.disabled = false;
         btn.textContent = '❌';
-        setTimeout(() => { btn.textContent = orig; }, 2500);
+        setTimeout(() => { btn.textContent = orig; }, 2000);
       });
   }
 
@@ -1591,19 +1569,13 @@ def _ocr_region(page, rect, scale: float = 2.0, full_width: bool = False) -> str
         return ""
 
 
-def _extract_annotations_from_pdf(path: Path,
-                                   imgs_dir: Path | None = None,
-                                   img_url_prefix: str = "") -> list[dict]:
+def _extract_annotations_from_pdf(path: Path) -> list[dict]:
     """Extract highlight, sticky-note, and free-text annotations from a PDF.
 
     Uses PyMuPDF (fitz) for speed — falls back to PyPDF2 if not available.
     For highlights with no /Contents (raster PDFs like UBS/GS), runs macOS
     Vision OCR on the highlighted region to recover the text.
-
-    imgs_dir:       where to save box-capture PNGs (default: UPLOADS_DIR/<date>)
-    img_url_prefix: URL prefix for the saved images in the returned text
-                    e.g. "/note-img/2026-04-26/imgs"
-                    default: "/uploads/YYYY/MM/DD"
+    Box captures (blue rectangles) are saved to UPLOADS_DIR/YYYY/MM/DD/.
 
     Returns list of {page, type, text, note} dicts sorted by page.
     """
@@ -1676,15 +1648,9 @@ def _extract_annotations_from_pdf(path: Path,
                             slug  = uuid.uuid4().hex
                         img_name = f"p{page_num+1}_{slug}.png"
                         import datetime as _dt
-                        if imgs_dir is not None:
-                            # Caller-specified directory (e.g. Obsidian date/imgs/)
-                            save_dir = imgs_dir
-                            url      = f"{img_url_prefix}/{img_name}"
-                        else:
-                            # Default: UPLOADS_DIR/YYYY/MM/DD/
-                            today    = _dt.date.today()
-                            save_dir = UPLOADS_DIR / str(today.year) / f"{today.month:02d}" / f"{today.day:02d}"
-                            url      = f"/uploads/{today.year}/{today.month:02d}/{today.day:02d}/{img_name}"
+                        today    = _dt.date.today()
+                        save_dir = UPLOADS_DIR / str(today.year) / f"{today.month:02d}" / f"{today.day:02d}"
+                        url      = f"/uploads/{today.year}/{today.month:02d}/{today.day:02d}/{img_name}"
                         save_dir.mkdir(parents=True, exist_ok=True)
                         (save_dir / img_name).write_bytes(pix.tobytes("png"))
                         print(f"                   box→image p{page_num+1} in {_t.time()-_t1:.1f}s → {img_name}")
@@ -1934,78 +1900,6 @@ def serve_pdf(file_id: int, filename: str = ""):
 
     return send_file(path, mimetype="application/pdf",
                      download_name=path.name, as_attachment=False)
-
-
-@zsxq_bp.route("/export-obsidian/<int:file_id>", methods=["POST"])
-def export_obsidian(file_id: int):
-    """Extract annotations from local PDF, save to DB, and write Obsidian markdown.
-
-    Images are saved directly to <date>/imgs/ beside the .md file.
-    DB comment uses /note-img/<date>/imgs/<name>.png (Flask-served).
-    Obsidian MD uses ![[imgs/<name>.png]] (relative wiki-link).
-    """
-    import re, datetime
-
-    conn = get_conn()
-    row = conn.execute(
-        "SELECT local_path, name, obsidian_path FROM pdf_files WHERE file_id = ?", (file_id,)
-    ).fetchone()
-    conn.close()
-
-    if not row or not row["local_path"]:
-        return jsonify(ok=False, error="No local PDF file"), 404
-    local_path = Path(row["local_path"])
-    if not local_path.exists():
-        return jsonify(ok=False, error="Local PDF not found on disk"), 404
-
-    filename_stem = (row["name"] or f"file_{file_id}").removesuffix(".pdf")
-    today_str = datetime.date.today().strftime("%Y-%m-%d")
-
-    # Determine note path (reuse existing location or create in today's folder)
-    saved_path = (row["obsidian_path"] or "").strip()
-    if saved_path and Path(saved_path).exists():
-        note_path = Path(saved_path)
-    else:
-        note_dir = OBSIDIAN_NOTES_DIR / today_str
-        note_dir.mkdir(parents=True, exist_ok=True)
-        note_path = note_dir / f"{filename_stem}.md"
-
-    note_dir = note_path.parent
-    imgs_dir = note_dir / "imgs"
-    # URL prefix for DB comment: /note-img/<date>/imgs
-    date_folder = note_dir.name          # e.g. "2026-04-26"
-    img_url_prefix = f"/note-img/{date_folder}/imgs"
-
-    print(f"[export-obsidian] extracting {local_path.name} → {note_path.name}")
-    anns = _extract_annotations_from_pdf(local_path,
-                                         imgs_dir=imgs_dir,
-                                         img_url_prefix=img_url_prefix)
-    if not anns:
-        return jsonify(ok=False, error="No annotations found in PDF"), 200
-
-    # DB comment: uses /note-img/... URLs (Flask-served, renders in browser preview)
-    comment = _format_annotations(anns).strip()
-
-    # Obsidian MD: rewrite /note-img/<date>/imgs/<name>.png → ![[imgs/<name>.png]]
-    def _to_obsidian(m: re.Match) -> str:
-        name = Path(m.group(1)).name
-        return f"![[imgs/{name}]]"
-    md_content = re.sub(r'!\[\]\(/note-img/[^/]+/imgs/([^)]+)\)', _to_obsidian, comment)
-
-    # Write markdown file
-    note_path.write_text(md_content, encoding="utf-8")
-    print(f"[export-obsidian] wrote {note_path}")
-
-    # Persist to DB
-    conn = get_conn()
-    conn.execute(
-        "UPDATE pdf_files SET comment = ?, obsidian_path = ? WHERE file_id = ?",
-        (comment, str(note_path), file_id),
-    )
-    conn.commit()
-    conn.close()
-
-    return jsonify(ok=True, path=str(note_path), count=len(anns), comment=comment)
 
 
 @zsxq_bp.route("/send-flomo/<int:file_id>", methods=["POST"])

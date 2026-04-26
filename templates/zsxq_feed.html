@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Research Notes</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/vendor/bootstrap.min.css" rel="stylesheet">
 <script src="/static/vendor/marked.min.js"></script>
 <style>
   body { background:#f8f9fa; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
   .feed-card { background:#fff; border-radius:12px; box-shadow:0 1px 4px rgba(0,0,0,.08);
                margin-bottom:1.5rem; padding:1.5rem 1.75rem; }
   .feed-meta  { font-size:.8rem; color:#888; margin-bottom:.75rem; }
-  .feed-title { font-size:1rem; font-weight:600; color:#1a1a2e; margin-bottom:.9rem;
-                text-decoration:none; }
-  .feed-title:hover { color:#1a56db; }
+  .feed-title { font-size:1rem; font-weight:600; color:#1a56db; margin-bottom:.9rem;
+                text-decoration:none; cursor:pointer; }
+  .feed-title:hover { text-decoration:underline; }
   .feed-body blockquote { border-left:3px solid #f0b429; background:#fffbf0;
                           margin:.6em 0; padding:.4em .9em; border-radius:0 6px 6px 0; }
   .feed-body blockquote p { margin:0; color:#444; }
@@ -26,16 +26,28 @@
   .feed-body p    { margin-bottom:.6em; line-height:1.75; }
   .feed-body code { background:#f0f0f0; padding:1px 4px; border-radius:3px; font-size:.88em; }
   .feed-body pre  { background:#f6f8fa; padding:.75em; border-radius:6px; overflow:auto; }
-  .search-bar     { position:sticky; top:0; z-index:10; background:#f8f9fa;
+  .search-bar     { position:sticky; top:56px; z-index:9; background:#f8f9fa;
                     padding:.75rem 0; margin-bottom:1rem; }
 </style>
 </head>
 <body>
-<div class="container" style="max-width:760px;padding-top:2rem">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark px-3 py-1" style="font-size:.875rem">
+  <a class="navbar-brand fw-bold py-0" href="/">&#128202; FinAgent</a>
+  <ul class="navbar-nav ms-3">
+    <li class="nav-item"><a class="nav-link py-1" href="/kg">&#128376; Knowledge Graph</a></li>
+    <li class="nav-item"><a class="nav-link py-1 active" href="{{ _base | default('') }}/">&#128218; ZSXQ</a></li>
+    <li class="nav-item"><a class="nav-link py-1" href="/sec">&#128196; US Reports</a></li>
+    <li class="nav-item"><a class="nav-link py-1" href="/cn">&#127464;&#127475; CN Reports</a></li>
+  </ul>
+</nav>
+
+<div class="container" style="max-width:760px;padding-top:1.5rem">
   <div class="d-flex align-items-center mb-3 gap-3">
     <h4 class="mb-0 fw-bold">📓 Research Notes</h4>
     <span class="text-muted small">{{ total }} notes</span>
-    <a href="{{ _base | default('') }}/" class="btn btn-sm btn-outline-secondary ms-auto">← Back</a>
+    <a href="{{ _base | default('') }}/" class="btn btn-sm btn-outline-secondary ms-auto">← Back to Index</a>
   </div>
 
   <div class="search-bar">
@@ -49,25 +61,36 @@
       {{ (row.comment_updated_at or row.create_time or '')[:10] }}
       {% if row.bank %} · <span class="badge bg-light text-secondary border">{{ row.bank }}</span>{% endif %}
     </div>
-    <a class="feed-title d-block"
-       href="{{ _base | default('') }}/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank">
+    <span class="feed-title d-block"
+          onclick="openLocal({{ row.file_id }}, this)"
+          data-file-id="{{ row.file_id }}">
       {{ row.name | replace('.pdf','') }}
-    </a>
+    </span>
     <div class="feed-body" data-md="{{ row.comment | e }}"></div>
   </div>
   {% endfor %}
   </div>
 </div>
 
+<script src="/static/vendor/bootstrap.bundle.min.js"></script>
 <script>
 const _base = "{{ _base | default('') }}";
+
 document.querySelectorAll('.feed-body').forEach(el => {
   el.innerHTML = marked.parse(el.dataset.md || '');
-  // Fix /note-img/ URLs to work under the /zsxq blueprint prefix
-  el.querySelectorAll('img[src^="/note-img/"]').forEach(img => {
-    img.src = _base + img.getAttribute('src');
-  });
 });
+
+function openLocal(fileId, el) {
+  const orig = el.style.opacity;
+  el.style.opacity = '0.5';
+  fetch(_base + '/open-local/' + fileId)
+    .then(r => r.json())
+    .then(data => {
+      el.style.opacity = '1';
+      if (!data.ok) alert(data.error || 'Could not open file');
+    })
+    .catch(() => { el.style.opacity = '1'; });
+}
 
 const input = document.getElementById('searchInput');
 input.addEventListener('input', () => {
