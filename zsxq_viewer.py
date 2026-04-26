@@ -1878,31 +1878,27 @@ def export_obsidian(file_id: int):
         return jsonify(ok=False, error="No comment to export"), 200
 
     filename_stem = (row["name"] or f"file_{file_id}").removesuffix(".pdf")
-    today = datetime.date.today().strftime("%Y-%m-%d")
 
-    # Directories
-    note_dir = OBSIDIAN_NOTES_DIR / today
-    imgs_dir = note_dir / "imgs"
-    note_dir.mkdir(parents=True, exist_ok=True)
+    # Flat layout: notes at OBSIDIAN_NOTES_DIR/<stem>.md, images at OBSIDIAN_NOTES_DIR/imgs/
+    # This means re-exporting always overwrites the same file, regardless of date.
+    OBSIDIAN_NOTES_DIR.mkdir(parents=True, exist_ok=True)
+    imgs_dir = OBSIDIAN_NOTES_DIR / "imgs"
 
-    # Process content: copy images to imgs/, rewrite as ![[filename]]
+    # Process content: copy images to imgs/, rewrite as ![[imgs/filename]]
     def _rewrite_image(m: re.Match) -> str:
         url_path = m.group(2)           # e.g. /uploads/2026/03/13/abc.png
         src = SCRIPT_DIR / url_path.lstrip("/")
         if src.exists():
             imgs_dir.mkdir(parents=True, exist_ok=True)
             dest = imgs_dir / src.name
-            # Avoid name collision
-            if dest.exists() and dest.read_bytes() != src.read_bytes():
-                dest = imgs_dir / f"{file_id}_{src.name}"
-            shutil.copy2(src, dest)
+            shutil.copy2(src, dest)   # always overwrite image too
             return f"![[imgs/{dest.name}]]"
         return m.group(0)  # leave unchanged if file missing
 
     md_content = re.sub(r'!\[([^\]]*)\]\((/uploads/[^)]+)\)', _rewrite_image, comment)
 
-    # Write markdown file
-    note_path = note_dir / f"{filename_stem}.md"
+    # Write (overwrite) markdown file
+    note_path = OBSIDIAN_NOTES_DIR / f"{filename_stem}.md"
     note_path.write_text(md_content, encoding="utf-8")
     print(f"[export-obsidian] wrote {note_path}")
 
