@@ -1495,8 +1495,12 @@ def set_comment(file_id: int):
 
 
 
-def _ocr_region(page, rect, scale: float = 2.0) -> str:
-    """Render a page region and run macOS Vision OCR on it. Returns '' on failure."""
+def _ocr_region(page, rect, scale: float = 2.0, full_width: bool = False) -> str:
+    """Render a page region and run macOS Vision OCR on it. Returns '' on failure.
+
+    full_width=True: expand the crop to the full page width so multi-line
+    highlights don't get cut off at the annotation's x1 boundary.
+    """
     try:
         import fitz
         from PIL import Image
@@ -1512,8 +1516,14 @@ def _ocr_region(page, rect, scale: float = 2.0) -> str:
         pad = 4  # extra pixels to avoid edge clipping
         x0 = max(0, int(rect.x0 * scale) - pad)
         y0 = max(0, int(rect.y0 * scale) - pad)
-        x1 = min(pix.width,  int(rect.x1 * scale) + pad)
-        y1 = min(pix.height, int(rect.y1 * scale) + pad)
+        if full_width:
+            # Extend to the page's right edge so partial last-rows aren't cut off,
+            # but add vertical padding so Vision has enough context for thin strips.
+            x1 = pix.width
+            y1 = min(pix.height, int(rect.y1 * scale) + max(pad, 20))
+        else:
+            x1 = min(pix.width, int(rect.x1 * scale) + pad)
+            y1 = min(pix.height, int(rect.y1 * scale) + pad)
         crop = img.crop((x0, y0, x1, y1))
 
         buf = io.BytesIO()
@@ -1566,24 +1576,44 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
             page = doc[page_num]
             all_annots = list(page.annots())
 
-            # ── Pass 0: Square/Circle — always capture region as PNG image ────
+            # ── Pass 0: Square/Circle — blue=image, red=text (OCR) ──────────
             for annot in all_annots:
                 if annot.type[1] not in _BOX_TYPES:
                     continue
                 _t1 = _t.time()
                 try:
                     import uuid, datetime as _dt
-                    mat    = fitz.Matrix(2, 2)
-                    pix    = page.get_pixmap(matrix=mat, clip=annot.rect)
-                    today  = _dt.date.today()
-                    subdir = UPLOADS_DIR / str(today.year) / f"{today.month:02d}" / f"{today.day:02d}"
-                    subdir.mkdir(parents=True, exist_ok=True)
-                    img_name = uuid.uuid4().hex + ".png"
-                    (subdir / img_name).write_bytes(pix.tobytes("png"))
-                    rel = f"{today.year}/{today.month:02d}/{today.day:02d}/{img_name}"
-                    print(f"                   box→image p{page_num+1} in {_t.time()-_t1:.1f}s → {img_name}")
-                    results.append({"page": page_num + 1, "type": "Image",
-                                    "text": f"![](/uploads/{rel})", "note": None})
+                    # Determine colour: stroke takes priority, fall back to fill
+                    colors  = annot.colors or {}
+                    stroke  = colors.get("stroke") or colors.get("fill") or []
+                    # stroke = [r, g, b] floats 0-1; default to blue if no colour info
+                    r_val = stroke[0] if len(stroke) > 0 else 0.0
+                    g_val = stroke[1] if len(stroke) > 1 else 0.0
+                    b_val = stroke[2] if len(stroke) > 2 else 1.0
+                    # Red: r is dominant and notably higher than b
+                    is_red = r_val > 0.5 and r_val > b_val + 0.3 and r_val > g_val
+                    print(f"                   box p{page_num+1} stroke=({r_val:.2f},{g_val:.2f},{b_val:.2f}) is_red={is_red}")
+
+                    if is_red:
+                        # Red rectangle → OCR interior and emit as Highlight (quotation)
+                        text = _ocr_region(page, annot.rect, full_width=False)
+                        if text:
+                            print(f"                   box→text p{page_num+1} in {_t.time()-_t1:.1f}s")
+                            results.append({"page": page_num + 1, "type": "Highlight",
+                                            "text": text, "note": None})
+                    else:
+                        # Blue (or any other colour) → capture as PNG image
+                        mat    = fitz.Matrix(2, 2)
+                        pix    = page.get_pixmap(matrix=mat, clip=annot.rect)
+                        today  = _dt.date.today()
+                        subdir = UPLOADS_DIR / str(today.year) / f"{today.month:02d}" / f"{today.day:02d}"
+                        subdir.mkdir(parents=True, exist_ok=True)
+                        img_name = uuid.uuid4().hex + ".png"
+                        (subdir / img_name).write_bytes(pix.tobytes("png"))
+                        rel = f"{today.year}/{today.month:02d}/{today.day:02d}/{img_name}"
+                        print(f"                   box→image p{page_num+1} in {_t.time()-_t1:.1f}s → {img_name}")
+                        results.append({"page": page_num + 1, "type": "Image",
+                                        "text": f"![](/uploads/{rel})", "note": None})
                 except Exception as e:
                     print(f"                   box failed p{page_num+1}: {e}")
 
@@ -1605,7 +1635,7 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                     gy1 = max(a.rect.y1 for a in group)
                     merged = fitz.Rect(gx0 - 5, gy0 - 30, gx1 + 5, gy1 + 5)
                     _t1 = _t.time()
-                    text = _ocr_region(page, merged)
+                    text = _ocr_region(page, merged, full_width=True)
                     print(f"                   OCR {len(group)}-line group p{page_num+1} in {_t.time()-_t1:.1f}s: {text[:60]!r}")
                     if text:
                         results.append({"page": page_num + 1, "type": "Highlight",
@@ -1623,7 +1653,7 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                         # /Contents empty — raster PDF (UBS/GS style).
                         # Use Vision OCR on the highlight region.
                         _t1 = _t.time()
-                        text = _ocr_region(page, annot.rect)
+                        text = _ocr_region(page, annot.rect, full_width=True)
                         print(f"                   OCR p{page_num+1} in {_t.time()-_t1:.1f}s: {text[:60]!r}")
                     if not text:
                         continue
