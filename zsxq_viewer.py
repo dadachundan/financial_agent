@@ -154,6 +154,7 @@ __URLPATCH__
       {%- set crp  = ('&min_claude_rating=' ~ current_min_claude_rating) if current_min_claude_rating else '' %}
       {%- set qp   = ('&q=' ~ current_q) if current_q else '' %}
       {%- set bp   = ('&bank=' ~ current_bank) if current_bank else '' %}
+      {%- set cwp  = '&with_comment=1' if with_comment else '' %}
     <a href="?filter=all{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
          class="btn btn-sm {{ 'btn-dark' if current_filter=='all' else 'btn-outline-dark' }}">All ({{ stats.total }})</a>
       <a href="?filter=downloaded{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
@@ -292,6 +293,15 @@ __URLPATCH__
       {% endfor %}
       <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}{{ rp }}{{ qp }}&min_claude_rating=1"
          class="btn btn-sm {{ 'btn-info' if current_min_claude_rating == '1' else 'btn-outline-info' }}">Any rated</a>
+    </div>
+
+    <!-- Comment filter row -->
+    <div class="d-flex filter-row">
+      <span class="filter-label">Comment:</span>
+      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}{{ rp }}{{ qp }}{{ crp }}{{ bp }}"
+         class="btn btn-sm {{ 'btn-dark' if not with_comment else 'btn-outline-dark' }}">Any</a>
+      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}{{ rp }}{{ qp }}{{ crp }}{{ bp }}&with_comment=1"
+         class="btn btn-sm {{ 'btn-success' if with_comment else 'btn-outline-success' }}">💬 With comment ({{ stats.with_comment }})</a>
     </div>
 
     <!-- Column toggle -->
@@ -933,7 +943,8 @@ def _build_where(f: str, ticker: str, tag: str,
                  group_id: str = "",
                  min_claude_rating: int = 0,
                  unrated: bool = False,
-                 bank: str = "") -> tuple[str, list]:
+                 bank: str = "",
+                 with_comment: bool = False) -> tuple[str, list]:
     """Build WHERE clause + params from filter args (shared by index and print-view)."""
     conditions: list[str] = []
     params: list = []
@@ -983,6 +994,8 @@ def _build_where(f: str, ticker: str, tag: str,
     elif bank:
         conditions.append("bank = ?")
         params.append(bank)
+    if with_comment:
+        conditions.append("comment IS NOT NULL AND comment != ''")
     where = ("WHERE " + " AND ".join(conditions)) if conditions else ""
     return where, params
 
@@ -1168,6 +1181,7 @@ def index():
         min_rating = 0
     bank = request.args.get("bank", "").strip()
     q = request.args.get("q", "").strip()
+    with_comment = request.args.get("with_comment") == "1"
     try:
         page = max(1, int(request.args.get("page", 1)))
     except ValueError:
@@ -1194,11 +1208,12 @@ def index():
         "  SUM(CASE WHEN (ai_related=0 AND robotics_related=0 "
         "               AND semiconductor_related=0 AND energy_related=0) "
         "               THEN 1 ELSE 0 END)                                  AS cat_none, "
-        "  SUM(CASE WHEN local_path IS NULL              THEN 1 ELSE 0 END) AS no_pdf "
+        "  SUM(CASE WHEN local_path IS NULL              THEN 1 ELSE 0 END) AS no_pdf, "
+        "  SUM(CASE WHEN comment IS NOT NULL AND comment != '' THEN 1 ELSE 0 END) AS with_comment "
         "FROM pdf_files"
     ).fetchone()
 
-    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id, min_claude_rating, unrated, bank)
+    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id, min_claude_rating, unrated, bank, with_comment)
     order      = "ASC" if sort == "asc" else "DESC"
     order_col  = "page_count" if sort_by == "pages" else "create_time"
     # NULLs last for page_count sort
@@ -1251,6 +1266,7 @@ def index():
         all_group_ids=all_group_ids,
         all_banks=all_banks,
         current_bank=bank,
+        with_comment=with_comment,
         db_path=DB_PATH,
         query_string=request.query_string.decode(),
         # pagination
