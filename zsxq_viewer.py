@@ -1486,6 +1486,7 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
     """
     import time as _t
     _HIGHLIGHT_TYPES = {"Highlight", "Underline", "StrikeOut", "Squiggly"}
+    _LINE_TYPES      = {"Line"}   # drawn underlines — no /Contents, needs OCR with upward expansion
     _NOTE_TYPES      = {"Text", "FreeText"}
 
     try:
@@ -1503,10 +1504,21 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
             page = doc[page_num]
             for annot in page.annots():
                 ann_type = annot.type[1]  # e.g. "Highlight", "Text"
-                if ann_type not in _HIGHLIGHT_TYPES and ann_type not in _NOTE_TYPES:
+                if ann_type not in _HIGHLIGHT_TYPES and ann_type not in _NOTE_TYPES and ann_type not in _LINE_TYPES:
                     continue
                 content = (annot.info.get("content") or "").strip().lstrip("﻿\x00")
-                if ann_type in _HIGHLIGHT_TYPES:
+                if ann_type in _LINE_TYPES:
+                    # Drawn line — expand rect upward to capture text above the line
+                    r = annot.rect
+                    expanded = fitz.Rect(r.x0 - 5, r.y0 - 30, r.x1 + 5, r.y1 + 5)
+                    _t1 = _t.time()
+                    text = _ocr_region(page, expanded)
+                    print(f"                   OCR line p{page_num+1} in {_t.time()-_t1:.1f}s: {text[:60]!r}")
+                    if not text:
+                        continue
+                    results.append({"page": page_num + 1, "type": "Highlight",
+                                    "text": text, "note": None})
+                elif ann_type in _HIGHLIGHT_TYPES:
                     text = content
                     if not text:
                         # /Contents empty — raster PDF (UBS/GS style).
