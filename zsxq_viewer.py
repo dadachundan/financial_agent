@@ -25,9 +25,14 @@ import json as _json
 from flask import Flask, Blueprint, Response, abort, jsonify, render_template_string, request, send_file
 import ticker_names as _tn
 
-SCRIPT_DIR  = Path(__file__).parent
-DEFAULT_DB  = SCRIPT_DIR / "db" / "zsxq.db"
-UPLOADS_DIR = SCRIPT_DIR / "uploads"
+SCRIPT_DIR       = Path(__file__).parent
+DEFAULT_DB       = SCRIPT_DIR / "db" / "zsxq.db"
+UPLOADS_DIR      = SCRIPT_DIR / "uploads"
+OBSIDIAN_NOTES_DIR = Path("/Users/x/Downloads/Thoughts/report_notes")
+# Annotation images (box captures) are saved here so Flask and Obsidian share the same file.
+# Flask serves them at  /notes-imgs/<filename>
+# Obsidian wiki-link:   ![[imgs/<filename>]]
+ANNOT_IMGS_DIR   = OBSIDIAN_NOTES_DIR / "imgs"
 
 try:
     from config import FLOMO_WEBHOOK_URL as _FLOMO_WEBHOOK_URL
@@ -38,6 +43,15 @@ zsxq_bp = Blueprint("zsxq", __name__)
 
 app = Flask(__name__)
 app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
+
+
+@zsxq_bp.route("/notes-imgs/<path:filename>")
+def serve_notes_img(filename: str):
+    """Serve annotation images stored in the shared Obsidian imgs folder."""
+    path = ANNOT_IMGS_DIR / filename
+    if not path.exists():
+        abort(404)
+    return send_file(path)
 DB_PATH: Path = DEFAULT_DB
 
 # Kick off AKShare ticker-name cache load (instant if cache exists; bg thread if not)
@@ -1746,26 +1760,24 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                                             "text": text, "note": None})
                     else:
                         # Blue (or any other colour) → capture as PNG image
-                        mat    = fitz.Matrix(2, 2)
-                        pix    = page.get_pixmap(matrix=mat, clip=annot.rect)
-                        today  = _dt.date.today()
-                        subdir = UPLOADS_DIR / str(today.year) / f"{today.month:02d}" / f"{today.day:02d}"
-                        subdir.mkdir(parents=True, exist_ok=True)
-                        # OCR the image to derive a meaningful filename (first ~6 words)
+                        mat = fitz.Matrix(2, 2)
+                        pix = page.get_pixmap(matrix=mat, clip=annot.rect)
+                        # OCR to derive a meaningful filename (first ~6 words)
                         import re as _re
                         ocr_title = _ocr_region(page, annot.rect, full_width=False)
                         if ocr_title:
-                            words     = _re.sub(r"[^\w\s]", "", ocr_title).split()
-                            slug      = "_".join(w for w in words[:6] if w)
-                            slug      = _re.sub(r"_+", "_", slug).strip("_")[:60]
+                            words = _re.sub(r"[^\w\s]", "", ocr_title).split()
+                            slug  = "_".join(w for w in words[:6] if w)
+                            slug  = _re.sub(r"_+", "_", slug).strip("_")[:60]
                         else:
-                            slug      = uuid.uuid4().hex
+                            slug  = uuid.uuid4().hex
                         img_name = f"p{page_num+1}_{slug}.png"
-                        (subdir / img_name).write_bytes(pix.tobytes("png"))  # overwrite if same name
-                        rel = f"{today.year}/{today.month:02d}/{today.day:02d}/{img_name}"
+                        # Save to shared Obsidian imgs dir — Flask serves at /notes-imgs/
+                        ANNOT_IMGS_DIR.mkdir(parents=True, exist_ok=True)
+                        (ANNOT_IMGS_DIR / img_name).write_bytes(pix.tobytes("png"))
                         print(f"                   box→image p{page_num+1} in {_t.time()-_t1:.1f}s → {img_name}")
                         results.append({"page": page_num + 1, "type": "Image",
-                                        "text": f"![](/uploads/{rel})", "note": None})
+                                        "text": f"![](/notes-imgs/{img_name})", "note": None})
                 except Exception as e:
                     print(f"                   box failed p{page_num+1}: {e}")
 
@@ -2012,13 +2024,16 @@ def serve_pdf(file_id: int, filename: str = ""):
                      download_name=path.name, as_attachment=False)
 
 
-OBSIDIAN_NOTES_DIR = Path("/Users/x/Downloads/Thoughts/report_notes")
-
-
 @zsxq_bp.route("/export-obsidian/<int:file_id>", methods=["POST"])
 def export_obsidian(file_id: int):
-    """Re-extract annotations from the local PDF and export to Obsidian markdown."""
-    import re, shutil, datetime
+    """Re-extract annotations from the local PDF and export to Obsidian markdown.
+
+    Annotation images are already stored in ANNOT_IMGS_DIR (= OBSIDIAN_NOTES_DIR/imgs/).
+    The DB comment references them as  ![](/notes-imgs/<name>.png).
+    The markdown file uses Obsidian wiki-links: ![[imgs/<name>.png]].
+    No image copying is needed — both point to the same file.
+    """
+    import re, datetime
 
     conn = get_conn()
     row = conn.execute(
@@ -2036,13 +2051,11 @@ def export_obsidian(file_id: int):
         anns    = _extract_annotations_from_pdf(Path(local_path))
         comment = _format_annotations(anns).strip() if anns else ""
         if comment:
-            # Persist the refreshed comment back to DB
             conn = get_conn()
             conn.execute("UPDATE pdf_files SET comment = ? WHERE file_id = ?", (comment, file_id))
             conn.commit()
             conn.close()
     else:
-        # No local PDF — fall back to stored comment
         conn = get_conn()
         row2 = conn.execute("SELECT comment FROM pdf_files WHERE file_id = ?", (file_id,)).fetchone()
         conn.close()
@@ -2055,30 +2068,35 @@ def export_obsidian(file_id: int):
     filename_stem = (row["name"] or f"file_{file_id}").removesuffix(".pdf")
     today = datetime.date.today().strftime("%Y-%m-%d")
 
-    # Use previously saved export path if it exists on disk; otherwise create in today's folder.
+    # Use previously saved export path if it exists; otherwise create in today's folder.
     saved_path = (row["obsidian_path"] or "").strip()
     if saved_path and Path(saved_path).exists():
         note_path = Path(saved_path)
-        note_dir  = note_path.parent
     else:
-        note_dir  = OBSIDIAN_NOTES_DIR / today
+        note_dir = OBSIDIAN_NOTES_DIR / today
         note_dir.mkdir(parents=True, exist_ok=True)
         note_path = note_dir / f"{filename_stem}.md"
 
-    imgs_dir = note_dir / "imgs"
+    # Rewrite image refs: ![](/notes-imgs/<name>.png) → ![[imgs/<name>.png]]
+    # Images already live in ANNOT_IMGS_DIR (OBSIDIAN_NOTES_DIR/imgs/) — no copy needed.
+    def _rewrite_notes_img(m: re.Match) -> str:
+        filename = Path(m.group(1)).name   # e.g. p2_Exhibit_3_....png
+        return f"![[imgs/{filename}]]"
 
-    # Process content: copy images to imgs/, rewrite as ![[imgs/filename]]
-    def _rewrite_image(m: re.Match) -> str:
-        url_path = m.group(2)           # e.g. /uploads/2026/03/13/abc.png
+    # Also handle legacy /uploads/ refs (old comments) by copying if needed
+    def _rewrite_uploads_img(m: re.Match) -> str:
+        import shutil
+        url_path = m.group(2)
         src = SCRIPT_DIR / url_path.lstrip("/")
         if src.exists():
-            imgs_dir.mkdir(parents=True, exist_ok=True)
-            dest = imgs_dir / src.name
-            shutil.copy2(src, dest)   # always overwrite image too
-            return f"![[imgs/{dest.name}]]"
-        return m.group(0)  # leave unchanged if file missing
+            ANNOT_IMGS_DIR.mkdir(parents=True, exist_ok=True)
+            dest = ANNOT_IMGS_DIR / src.name
+            shutil.copy2(src, dest)
+            return f"![[imgs/{src.name}]]"
+        return m.group(0)
 
-    md_content = re.sub(r'!\[([^\]]*)\]\((/uploads/[^)]+)\)', _rewrite_image, comment)
+    md_content = re.sub(r'!\[([^\]]*)\]\(/notes-imgs/([^)]+)\)', _rewrite_notes_img, comment)
+    md_content = re.sub(r'!\[([^\]]*)\]\((/uploads/[^)]+)\)', _rewrite_uploads_img, md_content)
 
     # Write (overwrite) markdown file
     note_path.write_text(md_content, encoding="utf-8")
