@@ -463,10 +463,10 @@ __URLPATCH__
               <button class="btn btn-outline-secondary btn-sm ms-1"
                       onclick="syncAnnotations({{ row.file_id }}, this)"
                       title="Read annotations from local PDF and save to comment">📌</button>
-              {% if row.comment and flomo_enabled %}
-              <button class="btn btn-outline-info btn-sm ms-1"
-                      onclick="sendFlomo({{ row.file_id }}, this)"
-                      title="Send comment to flomo">🌊</button>
+              {% if row.comment %}
+              <button class="btn btn-outline-success btn-sm ms-1"
+                      onclick="exportObsidian({{ row.file_id }}, this)"
+                      title="Export to Obsidian">🗒</button>
               {% endif %}
             {% else %}
               <button class="btn btn-outline-secondary open-btn"
@@ -680,6 +680,31 @@ __MCW_FOOTER__
           btn.textContent = '❌';
           btn.title = data.error || 'Failed';
           setTimeout(() => { btn.textContent = orig; btn.title = 'Send comment to flomo'; }, 3000);
+        }
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.textContent = '❌';
+        setTimeout(() => { btn.textContent = orig; }, 2500);
+      });
+  }
+
+  function exportObsidian(fileId, btn) {
+    const orig = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = '⏳';
+    fetch('/export-obsidian/' + fileId, { method: 'POST' })
+      .then(r => r.json())
+      .then(data => {
+        btn.disabled = false;
+        if (data.ok) {
+          btn.textContent = '✅';
+          btn.title = data.path || 'Exported';
+          setTimeout(() => { btn.textContent = orig; btn.title = 'Export to Obsidian'; }, 3000);
+        } else {
+          btn.textContent = '❌';
+          btn.title = data.error || 'Failed';
+          setTimeout(() => { btn.textContent = orig; btn.title = 'Export to Obsidian'; }, 3000);
         }
       })
       .catch(() => {
@@ -1788,6 +1813,58 @@ def serve_pdf(file_id: int, filename: str = ""):
 
     return send_file(path, mimetype="application/pdf",
                      download_name=path.name, as_attachment=False)
+
+
+OBSIDIAN_NOTES_DIR = Path("/Users/x/Downloads/Thoughts/report_notes")
+
+
+@zsxq_bp.route("/export-obsidian/<int:file_id>", methods=["POST"])
+def export_obsidian(file_id: int):
+    """Export PDF comment to an Obsidian-compatible markdown file."""
+    import re, shutil, datetime
+
+    conn = get_conn()
+    row = conn.execute(
+        "SELECT comment, name FROM pdf_files WHERE file_id = ?", (file_id,)
+    ).fetchone()
+    conn.close()
+
+    if not row:
+        return jsonify(ok=False, error="File not found"), 404
+    comment = (row["comment"] or "").strip()
+    if not comment:
+        return jsonify(ok=False, error="No comment to export"), 200
+
+    filename_stem = (row["name"] or f"file_{file_id}").removesuffix(".pdf")
+    today = datetime.date.today().strftime("%Y-%m-%d")
+
+    # Directories
+    note_dir = OBSIDIAN_NOTES_DIR / today
+    imgs_dir = note_dir / "imgs"
+    note_dir.mkdir(parents=True, exist_ok=True)
+
+    # Process content: copy images to imgs/, rewrite as ![[filename]]
+    def _rewrite_image(m: re.Match) -> str:
+        url_path = m.group(2)           # e.g. /uploads/2026/03/13/abc.png
+        src = SCRIPT_DIR / url_path.lstrip("/")
+        if src.exists():
+            imgs_dir.mkdir(parents=True, exist_ok=True)
+            dest = imgs_dir / src.name
+            # Avoid name collision
+            if dest.exists() and dest.read_bytes() != src.read_bytes():
+                dest = imgs_dir / f"{file_id}_{src.name}"
+            shutil.copy2(src, dest)
+            return f"![[imgs/{dest.name}]]"
+        return m.group(0)  # leave unchanged if file missing
+
+    md_content = re.sub(r'!\[([^\]]*)\]\((/uploads/[^)]+)\)', _rewrite_image, comment)
+
+    # Write markdown file
+    note_path = note_dir / f"{filename_stem}.md"
+    note_path.write_text(md_content, encoding="utf-8")
+    print(f"[export-obsidian] wrote {note_path}")
+
+    return jsonify(ok=True, path=str(note_path))
 
 
 @zsxq_bp.route("/send-flomo/<int:file_id>", methods=["POST"])
