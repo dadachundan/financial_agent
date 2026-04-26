@@ -1495,12 +1495,41 @@ def set_comment(file_id: int):
 
 
 
-def _ocr_region(page, rect, scale: float = 2.0, full_width: bool = False) -> str:
-    """Render a page region and run macOS Vision OCR on it. Returns '' on failure.
+def _highlight_crop_rect(page, ann_rect):
+    """Return a column-aware crop rect for a highlight annotation.
 
-    full_width=True: expand the crop to the full page width so multi-line
-    highlights don't get cut off at the annotation's x1 boundary.
+    For narrow annotations (single word / short phrase), returns the
+    annotation rect unchanged — no expansion needed.
+
+    For wider multi-line highlights, expands x1 to the rightmost word
+    that starts within the annotation's column, preventing bleed into
+    adjacent columns on two-column layouts.
     """
+    import fitz
+    ann_w = ann_rect.x1 - ann_rect.x0
+    ann_h = ann_rect.y1 - ann_rect.y0
+
+    # Narrow annotation → single word or short phrase; use rect as-is
+    if ann_w < 80 or ann_h < 16:
+        return ann_rect
+
+    words = page.get_text("words")   # [(x0,y0,x1,y1,word,...), ...]
+    # Keep words that overlap the annotation vertically AND start inside its x range
+    col_words = [
+        w for w in words
+        if w[3] > ann_rect.y0 - 5 and w[1] < ann_rect.y1 + 5   # vertical overlap
+        and w[0] >= ann_rect.x0 - 10 and w[0] <= ann_rect.x1 + 5  # start in same column
+    ]
+    if col_words:
+        proper_x1 = max(w[2] for w in col_words) + 5
+    else:
+        proper_x1 = ann_rect.x1 + 10   # minimal fallback pad
+    return fitz.Rect(ann_rect.x0, ann_rect.y0,
+                     min(proper_x1, page.rect.width), ann_rect.y1)
+
+
+def _ocr_region(page, rect, scale: float = 2.0, full_width: bool = False) -> str:
+    """Render a page region and run macOS Vision OCR on it. Returns '' on failure."""
     try:
         import fitz
         from PIL import Image
@@ -1513,17 +1542,15 @@ def _ocr_region(page, rect, scale: float = 2.0, full_width: bool = False) -> str
         img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
 
         # Map PDF rect → pixel crop (fitz uses top-left origin, y down)
-        pad = 4  # extra pixels to avoid edge clipping
+        pad = 4  # base padding (pixels) to avoid edge clipping
+        rect_h_px = (rect.y1 - rect.y0) * scale
+        # Only add extra vertical padding for very thin rects (drawn underlines etc.)
+        # Normal text highlights already span a full line height — no extra padding needed.
+        v_pad = max(pad, 20) if rect_h_px < 10 else pad
         x0 = max(0, int(rect.x0 * scale) - pad)
-        y0 = max(0, int(rect.y0 * scale) - pad)
-        if full_width:
-            # Extend to the page's right edge so partial last-rows aren't cut off,
-            # but add vertical padding so Vision has enough context for thin strips.
-            x1 = pix.width
-            y1 = min(pix.height, int(rect.y1 * scale) + max(pad, 20))
-        else:
-            x1 = min(pix.width, int(rect.x1 * scale) + pad)
-            y1 = min(pix.height, int(rect.y1 * scale) + pad)
+        y0 = max(0, int(rect.y0 * scale) - v_pad)
+        x1 = min(pix.width,  int(rect.x1 * scale) + pad)
+        y1 = min(pix.height, int(rect.y1 * scale) + v_pad)
         crop = img.crop((x0, y0, x1, y1))
 
         buf = io.BytesIO()
@@ -1654,8 +1681,9 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                     gx1 = max(a.rect.x1 for a in group)
                     gy1 = max(a.rect.y1 for a in group)
                     merged = fitz.Rect(gx0 - 5, gy0 - 30, gx1 + 5, gy1 + 5)
+                    merged = _highlight_crop_rect(page, merged)
                     _t1 = _t.time()
-                    text = _ocr_region(page, merged, full_width=True)
+                    text = _ocr_region(page, merged)
                     print(f"                   OCR {len(group)}-line group p{page_num+1} in {_t.time()-_t1:.1f}s: {text[:60]!r}")
                     if text:
                         results.append({"page": page_num + 1, "type": "Highlight",
@@ -1671,9 +1699,11 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                     text = content
                     if not text:
                         # Use Vision OCR for highest accuracy (avoids garbled text from
-                        # PDF text layer encoding issues).
+                        # PDF text layer encoding issues). Use column-aware crop rect
+                        # to avoid capturing adjacent columns.
                         _t1 = _t.time()
-                        text = _ocr_region(page, annot.rect, full_width=True)
+                        crop_rect = _highlight_crop_rect(page, annot.rect)
+                        text = _ocr_region(page, crop_rect)
                         print(f"                   OCR p{page_num+1} in {_t.time()-_t1:.1f}s: {text[:60]!r}")
                     if not text:
                         continue
