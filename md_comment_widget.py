@@ -241,6 +241,7 @@ JS = """\
     }
     span.onclick = () => viewComment(itemId, span);
     cell.innerHTML = ''; cell.appendChild(span);
+    if (typeof window._onCommentRendered === 'function') window._onCommentRendered(cell);
   }
 
   // Render all .comment-preview spans — call on page load and after AJAX DOM updates
@@ -251,6 +252,7 @@ JS = """\
       if (comment) { span.innerHTML = marked.parse(comment); }
       else         { span.textContent = '—'; }
       span.onclick = () => viewComment(itemId, span);
+      if (typeof window._onCommentRendered === 'function') window._onCommentRendered(span.parentElement);
     });
   }
 
