@@ -1801,7 +1801,7 @@ def send_flomo(file_id: int):
 
     conn = get_conn()
     row = conn.execute(
-        "SELECT comment, name, topic_title FROM pdf_files WHERE file_id = ?", (file_id,)
+        "SELECT comment, name FROM pdf_files WHERE file_id = ?", (file_id,)
     ).fetchone()
     conn.close()
 
@@ -1811,10 +1811,17 @@ def send_flomo(file_id: int):
     if not comment:
         return jsonify(ok=False, error="No comment to send"), 200
 
-    title = (row["topic_title"] or row["name"] or "").strip()
+    # Use filename (without .pdf extension) as the heading
+    filename = (row["name"] or "").strip()
+    if filename.lower().endswith(".pdf"):
+        filename = filename[:-4]
 
-    # Build content: # Title\n\n<comment body>
-    content = f"# {title}\n\n{comment}" if title else comment
+    # Strip image markdown (flomo API silently drops all images anyway)
+    import re
+    comment_text = re.sub(r'!\[[^\]]*\]\([^)]+\)', '', comment).strip()
+
+    # Build content: # Filename\n\n<comment>
+    content = f"# {filename}\n\n{comment_text}" if filename else comment_text
 
     payload = _json.dumps({"content": content, "content_type": "markdown"}).encode("utf-8")
     req = urllib.request.Request(
