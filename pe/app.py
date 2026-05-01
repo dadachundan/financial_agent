@@ -563,7 +563,8 @@ function renderChart() {
           callbacks: {
             title: (items) => {
               const r = items[0].raw._row;
-              return r.ticker + ' — ' + r.name;
+              const isCN = (r.exchange === 'HK' || r.exchange === 'CN') && r.name_cn;
+              return r.ticker + ' — ' + (isCN ? r.name_cn + ' (' + r.name + ')' : r.name);
             },
             label: (item) => {
               const r = item.raw._row;
@@ -591,9 +592,13 @@ function renderChart() {
         datalabels: {
           formatter: (val) => {
             const r = val._row;
-            return pts.length <= 15
-              ? r.ticker + '\\n' + (r.name.length > 20 ? r.name.slice(0, 18) + '\u2026' : r.name)
-              : r.ticker;
+            const isCN = (r.exchange === 'HK' || r.exchange === 'CN') && r.name_cn;
+            if (pts.length <= 15) {
+              const sub = isCN ? r.name_cn
+                : (r.name.length > 20 ? r.name.slice(0, 18) + '\u2026' : r.name);
+              return r.ticker + '\\n' + sub;
+            }
+            return isCN ? r.name_cn : r.ticker;
           },
           font: (ctx) => ({ size: pts.length <= 15 ? 10 : 9, weight: 'bold' }),
           color: (ctx) => ctx.dataset.data[ctx.dataIndex].r >= 12 ? '#222' : ctx.dataset.borderColor,
