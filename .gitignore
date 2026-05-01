@@ -7,6 +7,8 @@ node_modules/
 package.json
 package-lock.json
 *.db
+!db/zsxq.db
+!db/notes.db
 kg_uploads/
 ticker_name_cache.json
 uploads/
