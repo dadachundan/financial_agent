@@ -4,14 +4,15 @@ notes_app.py — Personal PDF notes: upload PDFs, write markdown comments.
 
 Routes
 ------
-  GET  /notes/               — Index table (PDF | Comment two-column view)
-  GET  /notes/feed           — Blog/timeline feed of notes with comments
-  POST /notes/upload         — Upload a PDF file
-  GET  /notes/pdf/<id>       — Serve PDF inline
-  POST /notes/comment/<id>   — Save markdown comment
-  GET  /notes/open-local/<id>— Open PDF in local OS viewer
-  POST /notes/pin/<id>       — Toggle pinned flag
-  POST /notes/delete/<id>    — Delete note
+  GET  /notes/                      — Index table (PDF | Comment two-column view)
+  GET  /notes/feed                  — Blog/timeline feed of notes with comments
+  POST /notes/upload                — Upload a PDF file
+  GET  /notes/pdf/<id>              — Serve PDF inline
+  POST /notes/comment/<id>          — Save markdown comment
+  GET  /notes/open-local/<id>       — Open PDF in local OS viewer
+  POST /notes/sync-annotations/<id> — Extract PDF annotations → save to comment
+  POST /notes/pin/<id>              — Toggle pinned flag
+  POST /notes/delete/<id>           — Delete note
 """
 
 import datetime
@@ -27,6 +28,10 @@ from flask import (
 )
 import md_comment_widget as mcw
 import nav_widget2 as nw2
+from zsxq_viewer import (
+    _extract_annotations_from_pdf,
+    _format_annotations,
+)
 
 SCRIPT_DIR   = Path(__file__).parent
 DB_PATH      = SCRIPT_DIR / "db" / "notes.db"
@@ -204,10 +209,15 @@ __URLPATCH__
                       onclick="openLocal({{ row.id }}, this)">
                 📁 Local
               </button>
+              <button class="btn btn-sm btn-outline-secondary"
+                      onclick="syncAnnotations({{ row.id }}, this)"
+                      title="Extract PDF annotations and save to comment">
+                📌
+              </button>
               <button class="btn btn-sm btn-outline-success btn-pin {% if row.pinned %}pinned{% endif %}"
                       onclick="togglePin({{ row.id }}, this)"
                       title="{{ 'Unpin' if row.pinned else 'Pin' }}">
-                📌
+                📍
               </button>
               <button class="btn btn-sm btn-outline-secondary btn-delete"
                       onclick="deleteNote({{ row.id }}, this)"
@@ -329,6 +339,34 @@ function deleteNote(id, btn) {
     });
 }
 
+function syncAnnotations(id, btn) {
+  const orig = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = '⏳';
+  fetch(_base + '/sync-annotations/' + id, { method: 'POST' })
+    .then(r => r.json())
+    .then(data => {
+      btn.disabled = false;
+      btn.textContent = orig;
+      if (data.ok) {
+        const cell = document.getElementById('comment-cell-' + id);
+        if (cell) renderCommentCell(cell, id, data.comment);
+        btn.textContent = '✅';
+        btn.title = data.count + ' annotation(s) saved';
+        setTimeout(() => { btn.textContent = orig; btn.title = 'Extract PDF annotations and save to comment'; }, 2500);
+      } else {
+        btn.textContent = '❌';
+        btn.title = data.error || 'No annotations found';
+        setTimeout(() => { btn.textContent = orig; btn.title = 'Extract PDF annotations and save to comment'; }, 2500);
+      }
+    })
+    .catch(() => {
+      btn.disabled = false;
+      btn.textContent = '❌';
+      setTimeout(() => { btn.textContent = orig; }, 2000);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', renderAllCommentCells);
 </script>
 </body>
@@ -445,6 +483,46 @@ def open_local(note_id: int):
         return jsonify(ok=True)
     except Exception as exc:
         return jsonify(ok=False, error=str(exc))
+
+
+@notes_bp.route("/sync-annotations/<int:note_id>", methods=["POST"])
+def sync_annotations(note_id: int):
+    import time as _time
+    import concurrent.futures as _cf
+    conn = get_conn()
+    row = conn.execute("SELECT local_path, name FROM notes WHERE id=?", (note_id,)).fetchone()
+    conn.close()
+    if not row or not row["local_path"]:
+        return jsonify(ok=False, error="No local file"), 404
+    path = Path(row["local_path"])
+    if not path.exists():
+        return jsonify(ok=False, error="File not found on disk"), 404
+
+    print(f"[notes/sync-annotations] 📌 {row['name']}")
+    t0 = _time.time()
+    with _cf.ThreadPoolExecutor(max_workers=1) as pool:
+        fut = pool.submit(_extract_annotations_from_pdf, path)
+        try:
+            anns = fut.result(timeout=120.0)
+        except _cf.TimeoutError:
+            return jsonify(ok=False, error=f"Timed out after 120s"), 200
+        except Exception as exc:
+            return jsonify(ok=False, error=str(exc)), 200
+
+    elapsed = _time.time() - t0
+    if not anns:
+        print(f"                   ⚠ no annotations ({elapsed:.1f}s)")
+        return jsonify(ok=False, error="No annotations found in PDF"), 200
+
+    print(f"                   ✓ {len(anns)} annotation(s) in {elapsed:.1f}s")
+    comment = _format_annotations(anns)
+    now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    conn = get_conn()
+    conn.execute("UPDATE notes SET comment=?, comment_updated_at=? WHERE id=?",
+                 (comment, now, note_id))
+    conn.commit()
+    conn.close()
+    return jsonify(ok=True, count=len(anns), comment=comment)
 
 
 @notes_bp.route("/pin/<int:note_id>", methods=["POST"])
