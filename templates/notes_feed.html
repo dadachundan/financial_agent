@@ -94,10 +94,9 @@ __URLPATCH__
         {{ (row.comment_updated_at or row.created_at or '')[:10] }}
         {% if row.pinned %} · <span class="badge bg-success">📌 pinned</span>{% endif %}
       </div>
-      <a class="feed-title"
-         href="{{ _base | default('') }}/pdf/{{ row.id }}" target="_blank">
+      <span class="feed-title" onclick="openLocal({{ row.id }}, this)">
         {{ row.name | replace('.pdf','') }}
-      </a>
+      </span>
       <div class="feed-body" data-md="{{ row.comment | e }}"></div>
     </div>
     {% endfor %}
@@ -131,6 +130,14 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.15 });
 cards.forEach(c => observer.observe(c));
+
+function openLocal(id, el) {
+  el.style.opacity = '0.5';
+  fetch('/open-local/' + id)
+    .then(r => r.json())
+    .then(d => { el.style.opacity = '1'; if (!d.ok) alert(d.error || 'Cannot open file'); })
+    .catch(() => { el.style.opacity = '1'; });
+}
 
 const input = document.getElementById('searchInput');
 input.addEventListener('input', () => {
