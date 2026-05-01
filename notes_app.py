@@ -255,7 +255,7 @@ __MCW_MODALS__
 __MCW_FOOTER__
 <script>
 const _base = "{{ _base | default('') }}";
-window._commentSavePrefix = _base;
+window._commentSavePrefix = '';
 
 __MCW_JS__
 
@@ -281,7 +281,7 @@ function uploadFile(file) {
   document.getElementById('uploadMsg').textContent = 'Uploading ' + file.name + '…';
   const fd = new FormData();
   fd.append('pdf', file);
-  fetch(_base + '/upload', { method: 'POST', body: fd })
+  fetch('/upload', { method: 'POST', body: fd })
     .then(r => r.json())
     .then(data => {
       document.getElementById('uploadProgress').style.display = 'none';
@@ -301,14 +301,14 @@ function uploadFile(file) {
 // ── Row actions ───────────────────────────────────────────────────────────────
 function openLocal(id, btn) {
   btn.disabled = true;
-  fetch(_base + '/open-local/' + id)
+  fetch('/open-local/' + id)
     .then(r => r.json())
     .then(d => { btn.disabled = false; if (!d.ok) alert(d.error || 'Cannot open file'); })
     .catch(() => { btn.disabled = false; });
 }
 
 function togglePin(id, btn) {
-  fetch(_base + '/pin/' + id, { method: 'POST' })
+  fetch('/pin/' + id, { method: 'POST' })
     .then(r => r.json())
     .then(d => {
       if (d.ok) {
@@ -327,7 +327,7 @@ function togglePin(id, btn) {
 
 function deleteNote(id, btn) {
   if (!confirm('Delete this PDF and its notes? This cannot be undone.')) return;
-  fetch(_base + '/delete/' + id, { method: 'POST' })
+  fetch('/delete/' + id, { method: 'POST' })
     .then(r => r.json())
     .then(d => {
       if (d.ok) {
@@ -343,7 +343,7 @@ function syncAnnotations(id, btn) {
   const orig = btn.textContent;
   btn.disabled = true;
   btn.textContent = '⏳';
-  fetch(_base + '/sync-annotations/' + id, { method: 'POST' })
+  fetch('/sync-annotations/' + id, { method: 'POST' })
     .then(r => r.json())
     .then(data => {
       btn.disabled = false;
