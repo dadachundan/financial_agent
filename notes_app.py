@@ -551,10 +551,19 @@ def delete_note(note_id: int):
     conn.commit()
     conn.close()
     if local_path:
+        p = Path(local_path)
         try:
-            Path(local_path).unlink(missing_ok=True)
+            p.unlink(missing_ok=True)
         except Exception as exc:
-            print(f"[notes/delete] could not remove file {local_path}: {exc}")
+            print(f"[notes/delete] could not remove {p}: {exc}")
+        # Also remove the dated mirror copy under ~/Downloads/zsxq_report/manual_report/
+        for dated_dir in MANUAL_REPORT_DIR.glob("*/"):
+            mirror = dated_dir / p.name
+            if mirror.exists():
+                try:
+                    mirror.unlink()
+                except Exception as exc:
+                    print(f"[notes/delete] could not remove mirror {mirror}: {exc}")
     return jsonify(ok=True)
 
 
