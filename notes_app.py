@@ -421,7 +421,7 @@ def upload():
     )
     conn.commit()
     conn.close()
-    return jsonify(ok=True, mirror=str(mirror_dest))
+    return jsonify(ok=True)
 
 
 @notes_bp.route("/pdf/<int:note_id>")
