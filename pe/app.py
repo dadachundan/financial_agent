@@ -620,9 +620,14 @@ function renderChart() {
     plugins: [ChartDataLabels, ChartZoom],
   };
 
-  if (_chart) { _chart.destroy(); }
-  const canvas = document.getElementById('peChart');
-  _chart = new Chart(canvas, cfg);
+  if (_chart) {
+    // Update data in-place so zoom/pan state is preserved
+    _chart.data.datasets = datasets;
+    _chart.update('none');
+  } else {
+    const canvas = document.getElementById('peChart');
+    _chart = new Chart(canvas, cfg);
+  }
 }
 
 function resetZoom() { if (_chart) _chart.resetZoom(); }
