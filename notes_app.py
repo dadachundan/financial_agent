@@ -415,7 +415,7 @@ def upload():
 
     f.save(dest)
 
-    # Mirror copy to ~/Downloads/zsxq_report/manual_report/YYYY-MM-DD/
+    # Move to ~/Downloads/zsxq_report/manual_report/YYYY-MM-DD/ (primary location)
     today = datetime.date.today().isoformat()
     mirror_dir = MANUAL_REPORT_DIR / today
     mirror_dir.mkdir(parents=True, exist_ok=True)
@@ -423,7 +423,8 @@ def upload():
     _i = 1
     while mirror_dest.exists():
         mirror_dest = mirror_dir / f"{dest.stem}_{_i}.pdf"; _i += 1
-    shutil.copy2(dest, mirror_dest)
+    shutil.move(str(dest), mirror_dest)
+    dest = mirror_dest
 
     now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     conn = get_conn()
@@ -551,19 +552,10 @@ def delete_note(note_id: int):
     conn.commit()
     conn.close()
     if local_path:
-        p = Path(local_path)
         try:
-            p.unlink(missing_ok=True)
+            Path(local_path).unlink(missing_ok=True)
         except Exception as exc:
-            print(f"[notes/delete] could not remove {p}: {exc}")
-        # Also remove the dated mirror copy under ~/Downloads/zsxq_report/manual_report/
-        for dated_dir in MANUAL_REPORT_DIR.glob("*/"):
-            mirror = dated_dir / p.name
-            if mirror.exists():
-                try:
-                    mirror.unlink()
-                except Exception as exc:
-                    print(f"[notes/delete] could not remove mirror {mirror}: {exc}")
+            print(f"[notes/delete] could not remove {local_path}: {exc}")
     return jsonify(ok=True)
 
 
