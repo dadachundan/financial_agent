@@ -15,6 +15,7 @@ Routes
 """
 
 import datetime
+import shutil
 import sqlite3
 import subprocess
 import sys
@@ -27,9 +28,10 @@ from flask import (
 import md_comment_widget as mcw
 import nav_widget2 as nw2
 
-SCRIPT_DIR = Path(__file__).parent
-DB_PATH    = SCRIPT_DIR / "db" / "notes.db"
-PDFS_DIR   = SCRIPT_DIR / "notes_pdfs"
+SCRIPT_DIR   = Path(__file__).parent
+DB_PATH      = SCRIPT_DIR / "db" / "notes.db"
+PDFS_DIR     = SCRIPT_DIR / "notes_pdfs"
+MANUAL_REPORT_DIR = Path.home() / "Downloads" / "zsxq_report" / "manual_report"
 
 notes_bp = Blueprint("notes", __name__)
 
@@ -375,6 +377,16 @@ def upload():
 
     f.save(dest)
 
+    # Mirror copy to ~/Downloads/zsxq_report/manual_report/YYYY-MM-DD/
+    today = datetime.date.today().isoformat()
+    mirror_dir = MANUAL_REPORT_DIR / today
+    mirror_dir.mkdir(parents=True, exist_ok=True)
+    mirror_dest = mirror_dir / dest.name
+    _i = 1
+    while mirror_dest.exists():
+        mirror_dest = mirror_dir / f"{dest.stem}_{_i}.pdf"; _i += 1
+    shutil.copy2(dest, mirror_dest)
+
     now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     conn = get_conn()
     conn.execute(
@@ -383,7 +395,7 @@ def upload():
     )
     conn.commit()
     conn.close()
-    return jsonify(ok=True)
+    return jsonify(ok=True, mirror=str(mirror_dest))
 
 
 @notes_bp.route("/pdf/<int:note_id>")
