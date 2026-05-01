@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Notes Feed</title>
+<link href="/static/vendor/bootstrap.min.css" rel="stylesheet">
+<script src="/static/vendor/marked.min.js"></script>
+<style>
+  body { background:#f8f9fa; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+
+  /* ── Two-column layout ── */
+  .page-layout { display:flex; gap:1.5rem; align-items:flex-start;
+                 width:100%; padding:1.5rem 2rem 3rem; box-sizing:border-box; }
+
+  /* ── TOC sidebar ── */
+  .toc-sidebar { width:240px; flex-shrink:0; position:sticky; top:46px;
+                 max-height:calc(100vh - 56px); display:flex; flex-direction:column; }
+  .toc-header  { font-size:.7rem; font-weight:700; color:#aaa; letter-spacing:.06em;
+                 text-transform:uppercase; margin:0 0 .5rem; padding-bottom:.35rem;
+                 border-bottom:1px solid #e0e0e0; }
+  .toc-search  { margin-bottom:.6rem; }
+  .toc-search input { font-size:.8rem; padding:.3rem .55rem; }
+  .toc-list    { overflow-y:auto; flex:1; }
+  .toc-item    { display:block; font-size:.78rem; color:#555; padding:.25rem .4rem;
+                 border-radius:4px; line-height:1.35; white-space:nowrap; overflow:hidden;
+                 text-overflow:ellipsis; cursor:pointer; }
+  .toc-item:hover  { background:#e8edf5; color:#1a56db; }
+  .toc-item.active { background:#e8edf5; color:#1a56db; font-weight:600; }
+  .toc-date    { font-size:.68rem; color:#bbb; display:block; margin-bottom:.1rem; }
+
+  /* ── Feed ── */
+  .feed-col  { flex:1; min-width:0; }
+  .feed-card { background:#fff; border-radius:12px; box-shadow:0 1px 4px rgba(0,0,0,.08);
+               margin-bottom:1.5rem; padding:1.5rem 1.75rem; scroll-margin-top:64px; }
+  .feed-card.pinned { border-left:3px solid #198754; }
+  .feed-meta  { font-size:.8rem; color:#888; margin-bottom:.75rem; }
+  .feed-title { font-size:1rem; font-weight:600; color:#1a56db; margin-bottom:.9rem;
+                text-decoration:none; cursor:pointer; display:block; }
+  .feed-title:hover { text-decoration:underline; }
+  .feed-body blockquote { border-left:3px solid #f0b429; background:#fffbf0;
+                          margin:.6em 0; padding:.4em .9em; border-radius:0 6px 6px 0; }
+  .feed-body blockquote p { margin:0; color:#444; }
+  .feed-body img  { max-width:100%; border-radius:8px; margin:.6em 0; display:block; }
+  .feed-body h1   { font-size:.75rem; font-weight:600; color:#aaa; letter-spacing:.05em;
+                    text-transform:uppercase; border-bottom:1px solid #eee;
+                    padding-bottom:.35em; margin:0 0 1em; }
+  .feed-body h2   { font-size:.95rem; font-weight:700; color:#1a56db; margin:1.2em 0 .4em;
+                    text-transform:uppercase; letter-spacing:.04em; }
+  .feed-body p    { margin-bottom:.6em; line-height:1.75; }
+  .feed-body code { background:#f0f0f0; padding:1px 4px; border-radius:3px; font-size:.88em; }
+  .feed-body pre  { background:#f6f8fa; padding:.75em; border-radius:6px; overflow:auto; }
+
+  @media (max-width: 480px) { .toc-sidebar { display:none; } }
+</style>
+</head>
+<body>
+
+__NAV__
+__URLPATCH__
+
+<div class="page-layout">
+
+  <!-- TOC sidebar with search -->
+  <nav class="toc-sidebar" id="tocSidebar">
+    <div class="toc-header">📎 Notes · {{ total }}</div>
+    <div class="toc-search">
+      <input id="searchInput" type="search" class="form-control" placeholder="Search…">
+    </div>
+    <div class="toc-list">
+      {% for row in rows %}
+      <a class="toc-item" data-idx="{{ loop.index0 }}"
+         onclick="scrollToCard({{ loop.index0 }})">
+        <span class="toc-date">{{ (row.comment_updated_at or row.created_at or '')[:10] }}{% if row.pinned %} · 📌{% endif %}</span>
+        {{ row.name | replace('.pdf','') }}
+      </a>
+      {% endfor %}
+    </div>
+  </nav>
+
+  <!-- Feed column -->
+  <div class="feed-col">
+    <div class="d-flex align-items-center mb-3 gap-3">
+      <h4 class="mb-0 fw-bold">📎 Notes Feed</h4>
+      <span class="text-muted small">{{ total }} notes</span>
+      <a href="{{ _base | default('') }}/" class="btn btn-sm btn-outline-secondary ms-auto">← Back to Index</a>
+    </div>
+
+    <div id="feedContainer">
+    {% for row in rows %}
+    <div class="feed-card {% if row.pinned %}pinned{% endif %}"
+         id="card-{{ loop.index0 }}" data-text="{{ row.comment | e }}">
+      <div class="feed-meta">
+        {{ (row.comment_updated_at or row.created_at or '')[:10] }}
+        {% if row.pinned %} · <span class="badge bg-success">📌 pinned</span>{% endif %}
+      </div>
+      <a class="feed-title"
+         href="{{ _base | default('') }}/pdf/{{ row.id }}" target="_blank">
+        {{ row.name | replace('.pdf','') }}
+      </a>
+      <div class="feed-body" data-md="{{ row.comment | e }}"></div>
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+<script src="/static/vendor/bootstrap.bundle.min.js"></script>
+<script>
+const _base = "{{ _base | default('') }}";
+
+document.querySelectorAll('.feed-body').forEach(el => {
+  el.innerHTML = marked.parse(el.dataset.md || '');
+});
+
+function scrollToCard(idx) {
+  const card = document.getElementById('card-' + idx);
+  if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+const cards    = Array.from(document.querySelectorAll('.feed-card'));
+const tocItems = Array.from(document.querySelectorAll('.toc-item'));
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const idx = cards.indexOf(e.target);
+      tocItems.forEach((t, i) => t.classList.toggle('active', i === idx));
+      if (tocItems[idx]) tocItems[idx].scrollIntoView({ block: 'nearest' });
+    }
+  });
+}, { threshold: 0.15 });
+cards.forEach(c => observer.observe(c));
+
+const input = document.getElementById('searchInput');
+input.addEventListener('input', () => {
+  const q = input.value.toLowerCase();
+  cards.forEach((card, i) => {
+    const text  = (card.dataset.text || '').toLowerCase();
+    const title = card.querySelector('.feed-title').textContent.toLowerCase();
+    const vis   = !q || text.includes(q) || title.includes(q);
+    card.style.display = vis ? '' : 'none';
+    if (tocItems[i]) tocItems[i].style.display = vis ? '' : 'none';
+  });
+});
+</script>
+</body>
+</html>

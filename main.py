@@ -37,6 +37,7 @@ from fetch_cninfo_report    import cn_bp,  init_db as _cn_init
 from indicators.app         import indicators_bp, init_db as _ind_init
 from pe.app                 import pe_bp
 from monitoring.app         import price_shape_bp
+from notes_app              import notes_bp, init_db as _notes_init
 
 # -- Build unified app ---------------------------------------------------------
 app = Flask(__name__,
@@ -56,6 +57,7 @@ app.register_blueprint(cn_bp,         url_prefix="/cn")
 app.register_blueprint(indicators_bp,   url_prefix="/indicators")
 app.register_blueprint(pe_bp,           url_prefix="/pe")
 app.register_blueprint(price_shape_bp,  url_prefix="/price-shape")
+app.register_blueprint(notes_bp,        url_prefix="/notes")
 
 
 @app.route("/")
@@ -76,6 +78,7 @@ _BP_PREFIXES = {
     "cn":         "/cn",
     "indicators":   "/indicators",
     "price_shape":  "/price-shape",
+    "notes":        "/notes",
 }
 
 
@@ -136,6 +139,7 @@ if __name__ == "__main__":
     _sec_init()
     _cn_init()
     _ind_init()
+    _notes_init()
 
     parser = argparse.ArgumentParser(description="Unified FinAgent web app")
     parser.add_argument("--port", type=int, default=5001)
