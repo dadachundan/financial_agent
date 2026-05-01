@@ -78,6 +78,17 @@ _refresh_in_progress = False
 
 # ── Data fetching ─────────────────────────────────────────────────────────────
 
+def _exchange_of(ticker: str) -> str:
+    t = ticker.upper()
+    if t.endswith(".HK"):
+        return "HK"
+    if t.endswith(".SZ") or t.endswith(".SS"):
+        return "CN"
+    if t.endswith(".TO") or t.endswith(".AX"):
+        return "Other"
+    return "US"
+
+
 def _fetch_one(ticker: str) -> dict:
     try:
         info = yf.Ticker(ticker).info
@@ -85,6 +96,7 @@ def _fetch_one(ticker: str) -> dict:
             "ticker":           ticker,
             "name":             info.get("shortName") or info.get("longName") or ticker,
             "sector":           SECTOR_MAP.get(ticker, ""),
+            "exchange":         _exchange_of(ticker),
             "price":            info.get("currentPrice") or info.get("regularMarketPrice"),
             "trailing_pe":      info.get("trailingPE"),
             "forward_pe":       info.get("forwardPE"),
@@ -100,6 +112,7 @@ def _fetch_one(ticker: str) -> dict:
     except Exception as e:
         log.warning("Failed %s: %s", ticker, e)
         return {"ticker": ticker, "name": ticker, "sector": SECTOR_MAP.get(ticker, ""),
+                "exchange": _exchange_of(ticker),
                 "price": None, "trailing_pe": None, "forward_pe": None, "mkt_cap": None,
                 "rev_growth": None, "earn_growth": None,
                 "gross_margin": None, "op_margin": None, "net_margin": None}
@@ -209,7 +222,20 @@ thead tr.subhdr th { background: #2c2c3e; font-size: 10px; font-weight: 400;
 
   <!-- filters -->
   <div class="mb-2 d-flex flex-wrap align-items-center gap-3" id="filterBar">
-    <span class="text-muted small fw-bold">SECTOR:</span>
+    <span class="text-muted small fw-bold">EXCHANGE:</span>
+    <div class="dropdown" id="exchangeDropdownWrap">
+      <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button"
+              id="exchangeDropBtn" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+              aria-expanded="false">All exchanges</button>
+      <div class="dropdown-menu p-2" style="min-width:180px" id="exchangeMenu">
+        <div class="d-flex gap-2 mb-2">
+          <button class="btn btn-xs btn-link p-0 text-decoration-none small" onclick="selectAllExchanges()">All</button>
+          <button class="btn btn-xs btn-link p-0 text-decoration-none small" onclick="clearAllExchanges()">None</button>
+        </div>
+        <div id="exchangeCheckboxes"></div>
+      </div>
+    </div>
+    <span class="text-muted small fw-bold ms-2">SECTOR:</span>
     <div class="dropdown" id="sectorDropdownWrap">
       <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button"
               id="sectorDropBtn" data-bs-toggle="dropdown" data-bs-auto-close="outside"
@@ -275,6 +301,10 @@ let _sortDir = 1;
 let _pollTimer = null;
 let _chart = null;
 let _hiddenSectors = new Set();
+let _hiddenExchanges = new Set();
+
+const EXCHANGE_LABELS = { US: '🇺🇸 U.S.', HK: '🇭🇰 Hong Kong', CN: '🇨🇳 Mainland China', Other: '🌐 Other' };
+const EXCHANGE_ORDER  = ['US', 'HK', 'CN', 'Other'];
 
 /* ── filtering ── */
 function filteredRows() {
@@ -282,10 +312,62 @@ function filteredRows() {
   const capMax = parseFloat(document.getElementById('capMax').value) || Infinity;
   return _rows.filter(r => {
     if (_hiddenSectors.has(r.sector)) return false;
+    if (_hiddenExchanges.has(r.exchange || 'US')) return false;
     const cap = r.mkt_cap ? r.mkt_cap / 1e9 : 0;
     if (cap < capMin || cap > capMax) return false;
     return true;
   });
+}
+
+/* ── exchange dropdown ── */
+function buildExchangeDropdown() {
+  const presentExchanges = [...new Set(_rows.map(r => r.exchange || 'US'))];
+  const ordered = EXCHANGE_ORDER.filter(e => presentExchanges.includes(e));
+  const wrap = document.getElementById('exchangeCheckboxes');
+  wrap.innerHTML = '';
+  ordered.forEach(ex => {
+    const id = 'ex_' + ex;
+    const div = document.createElement('div');
+    div.className = 'form-check';
+    div.innerHTML = `
+      <input class="form-check-input" type="checkbox" id="${id}" checked
+             onchange="toggleExchange('${ex}', this.checked)">
+      <label class="form-check-label" for="${id}" style="font-size:12px">${EXCHANGE_LABELS[ex] || ex}</label>`;
+    wrap.appendChild(div);
+  });
+  updateExchangeDropdownLabel();
+}
+
+function toggleExchange(ex, checked) {
+  if (checked) _hiddenExchanges.delete(ex);
+  else         _hiddenExchanges.add(ex);
+  updateExchangeDropdownLabel();
+  applyFilters();
+}
+
+function updateExchangeDropdownLabel() {
+  const presentExchanges = [...new Set(_rows.map(r => r.exchange || 'US'))];
+  const total  = presentExchanges.length;
+  const hidden = presentExchanges.filter(e => _hiddenExchanges.has(e)).length;
+  const shown  = total - hidden;
+  const btn = document.getElementById('exchangeDropBtn');
+  btn.textContent = hidden === 0 ? 'All exchanges'
+    : shown === 0 ? 'No exchanges'
+    : shown + ' / ' + total + ' exchanges';
+}
+
+function selectAllExchanges() {
+  _hiddenExchanges.clear();
+  document.querySelectorAll('#exchangeCheckboxes .form-check-input').forEach(cb => cb.checked = true);
+  updateExchangeDropdownLabel();
+  applyFilters();
+}
+
+function clearAllExchanges() {
+  [...new Set(_rows.map(r => r.exchange || 'US'))].forEach(e => _hiddenExchanges.add(e));
+  document.querySelectorAll('#exchangeCheckboxes .form-check-input').forEach(cb => cb.checked = false);
+  updateExchangeDropdownLabel();
+  applyFilters();
 }
 
 function applyFilters() {
@@ -589,7 +671,7 @@ async function loadData(force) {
     const json = await res.json();
     _rows = json.data || [];
     setStatus(json);
-    if (_rows.length > 0) { buildSectorDropdown(); renderTable(); renderChart(); }
+    if (_rows.length > 0) { buildExchangeDropdown(); buildSectorDropdown(); renderTable(); renderChart(); }
     clearTimeout(_pollTimer);
     if (json.refreshing) _pollTimer = setTimeout(() => loadData(false), 4000);
   } catch(e) {
