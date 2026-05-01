@@ -16,7 +16,6 @@ Routes
 """
 
 import datetime
-import shutil
 import sqlite3
 import subprocess
 import sys
@@ -33,9 +32,8 @@ from zsxq_viewer import (
     _format_annotations,
 )
 
-SCRIPT_DIR   = Path(__file__).parent
-DB_PATH      = SCRIPT_DIR / "db" / "notes.db"
-PDFS_DIR     = SCRIPT_DIR / "notes_pdfs"
+SCRIPT_DIR        = Path(__file__).parent
+DB_PATH           = SCRIPT_DIR / "db" / "notes.db"
 MANUAL_REPORT_DIR = Path.home() / "Downloads" / "zsxq_report" / "manual_report"
 
 notes_bp = Blueprint("notes", __name__)
@@ -51,7 +49,7 @@ def get_conn():
 
 
 def init_db():
-    PDFS_DIR.mkdir(parents=True, exist_ok=True)
+    MANUAL_REPORT_DIR.mkdir(parents=True, exist_ok=True)
     conn = get_conn()
     conn.execute("""
         CREATE TABLE IF NOT EXISTS notes (
@@ -405,26 +403,16 @@ def upload():
     if not f.filename.lower().endswith(".pdf"):
         return jsonify(ok=False, error="Only PDF files are supported"), 400
 
-    PDFS_DIR.mkdir(parents=True, exist_ok=True)
+    today = datetime.date.today().isoformat()
+    dest_dir = MANUAL_REPORT_DIR / today
+    dest_dir.mkdir(parents=True, exist_ok=True)
     safe_name = Path(f.filename).name
-    dest = PDFS_DIR / safe_name
-    # Avoid collisions
-    stem = dest.stem; i = 1
+    dest = dest_dir / safe_name
+    i = 1
     while dest.exists():
-        dest = PDFS_DIR / f"{stem}_{i}.pdf"; i += 1
+        dest = dest_dir / f"{Path(safe_name).stem}_{i}.pdf"; i += 1
 
     f.save(dest)
-
-    # Move to ~/Downloads/zsxq_report/manual_report/YYYY-MM-DD/ (primary location)
-    today = datetime.date.today().isoformat()
-    mirror_dir = MANUAL_REPORT_DIR / today
-    mirror_dir.mkdir(parents=True, exist_ok=True)
-    mirror_dest = mirror_dir / dest.name
-    _i = 1
-    while mirror_dest.exists():
-        mirror_dest = mirror_dir / f"{dest.stem}_{_i}.pdf"; _i += 1
-    shutil.move(str(dest), mirror_dest)
-    dest = mirror_dest
 
     now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     conn = get_conn()
