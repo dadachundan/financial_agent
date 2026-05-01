@@ -1480,17 +1480,24 @@ def feed():
     from flask import render_template_string
     from pathlib import Path as _Path
     conn = get_conn()
-    rows = conn.execute("""
-        SELECT file_id, name, comment, bank, create_time, comment_updated_at
+    raw = conn.execute("""
+        SELECT file_id AS id, name, comment, bank,
+               COALESCE(comment_updated_at, create_time, '') AS date,
+               0 AS pinned
         FROM   pdf_files
         WHERE  comment IS NOT NULL AND comment != ''
-        ORDER  BY COALESCE(comment_updated_at, create_time) DESC
+        ORDER  BY date DESC
     """).fetchall()
     conn.close()
-    tmpl = (_Path(__file__).parent / "templates" / "zsxq_feed.html").read_text(encoding="utf-8")
+    # Expose bank as badge
+    rows = [dict(r) | {"badge": r["bank"] or ""} for r in raw]
+    tmpl = (_Path(__file__).parent / "templates" / "shared_feed.html").read_text(encoding="utf-8")
     tmpl = tmpl.replace("__NAV__",      nw2.NAV_HTML)
     tmpl = tmpl.replace("__URLPATCH__", nw2.URL_PATCH_JS)
-    return render_template_string(tmpl, rows=rows, total=len(rows))
+    return render_template_string(tmpl, rows=rows, total=len(rows),
+                                  feed_title="Research Notes",
+                                  feed_heading="📓 Research Notes",
+                                  toc_icon="📓")
 
 
 
