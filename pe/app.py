@@ -29,9 +29,29 @@ import yfinance as yf
 from flask import Blueprint, Flask, jsonify, redirect, render_template_string
 from markupsafe import Markup
 
+import json
+import re as _re
+
 import nav_widget2 as nw2  # noqa: F401
 
 log = logging.getLogger(__name__)
+
+# Load Chinese name cache directly (ignore freshness — names don't change often)
+_CN_NAME_MAP: dict = {}
+_CACHE_FILE = _PROJECT_ROOT / "ticker_name_cache.json"
+if _CACHE_FILE.exists():
+    try:
+        _CN_NAME_MAP = json.loads(_CACHE_FILE.read_text(encoding="utf-8"))
+        log.info("Loaded %d Chinese ticker names from cache", len(_CN_NAME_MAP))
+    except Exception as _e:
+        log.warning("Could not load ticker name cache: %s", _e)
+
+_SUFFIX_RE = _re.compile(r"\.(SZ|SS|SH|HK|KS|KP|TW|US)$", _re.IGNORECASE)
+
+
+def _cn_name(ticker: str) -> str | None:
+    code = _SUFFIX_RE.sub("", ticker.strip())
+    return _CN_NAME_MAP.get(code) or _CN_NAME_MAP.get(code.lstrip("0") or code) or None
 
 # ── Watchlist (from 🤪PER SECTOR.txt) ────────────────────────────────────────
 # Each entry is (sector_name, [yfinance_ticker, ...])
@@ -92,9 +112,11 @@ def _exchange_of(ticker: str) -> str:
 def _fetch_one(ticker: str) -> dict:
     try:
         info = yf.Ticker(ticker).info
+        en_name = info.get("shortName") or info.get("longName") or ticker
         return {
             "ticker":           ticker,
-            "name":             info.get("shortName") or info.get("longName") or ticker,
+            "name":             en_name,
+            "name_cn":          _cn_name(ticker),
             "sector":           SECTOR_MAP.get(ticker, ""),
             "exchange":         _exchange_of(ticker),
             "price":            info.get("currentPrice") or info.get("regularMarketPrice"),
@@ -111,8 +133,8 @@ def _fetch_one(ticker: str) -> dict:
         }
     except Exception as e:
         log.warning("Failed %s: %s", ticker, e)
-        return {"ticker": ticker, "name": ticker, "sector": SECTOR_MAP.get(ticker, ""),
-                "exchange": _exchange_of(ticker),
+        return {"ticker": ticker, "name": ticker, "name_cn": _cn_name(ticker),
+                "sector": SECTOR_MAP.get(ticker, ""), "exchange": _exchange_of(ticker),
                 "price": None, "trailing_pe": None, "forward_pe": None, "mkt_cap": None,
                 "rev_growth": None, "earn_growth": None,
                 "gross_margin": None, "op_margin": None, "net_margin": None}
@@ -170,6 +192,8 @@ TEMPLATE = """<!doctype html>
 <script src="/static/vendor/bootstrap.bundle.min.js"></script>
 <script src="/static/vendor/chart.umd.min.js"></script>
 <script src="/static/vendor/chartjs-plugin-datalabels.min.js"></script>
+<script src="/static/vendor/hammerjs.min.js"></script>
+<script src="/static/vendor/chartjs-plugin-zoom.min.js"></script>
 <style>
 body { font-size: 13px; }
 .table-wrap { overflow-x: auto; }
@@ -261,6 +285,10 @@ thead tr.subhdr th { background: #2c2c3e; font-size: 10px; font-weight: 400;
 
   <!-- bubble chart -->
   <div id="chartWrap">
+    <div class="d-flex justify-content-end mb-1 gap-2">
+      <span class="text-muted small align-self-center">Scroll to zoom · Drag to pan</span>
+      <button class="btn btn-xs btn-outline-secondary btn-sm" onclick="resetZoom()" style="font-size:11px;padding:2px 8px">Reset zoom</button>
+    </div>
     <canvas id="peChart"></canvas>
   </div>
   <div id="chartExcluded" class="text-muted small mb-2" style="display:none"></div>
@@ -556,6 +584,10 @@ function renderChart() {
           titleFont: { size: 13, weight: 'bold' },
           bodyFont: { size: 11 },
         },
+        zoom: {
+          zoom: { wheel: { enabled: true }, pinch: { enabled: true }, mode: 'xy' },
+          pan:  { enabled: true, mode: 'xy' },
+        },
         datalabels: {
           formatter: (val) => {
             const r = val._row;
@@ -585,13 +617,15 @@ function renderChart() {
         },
       },
     },
-    plugins: [ChartDataLabels],
+    plugins: [ChartDataLabels, ChartZoom],
   };
 
   if (_chart) { _chart.destroy(); }
   const canvas = document.getElementById('peChart');
   _chart = new Chart(canvas, cfg);
 }
+
+function resetZoom() { if (_chart) _chart.resetZoom(); }
 
 /* ── table sort ── */
 function sortKey(r) {
@@ -604,11 +638,18 @@ function cmp(a, b) {
   if (typeof av === 'string') return av.localeCompare(bv) * _sortDir;
   return (av - bv) * _sortDir;
 }
+function nameHtml(r) {
+  const isBilingual = (r.exchange === 'HK' || r.exchange === 'CN') && r.name_cn;
+  if (isBilingual) {
+    return `<span style="font-weight:500">${r.name_cn}</span><br><span style="font-size:11px;color:#888">${r.name}</span>`;
+  }
+  return r.name;
+}
 function rowHtml(r, showSector) {
   return `<tr>
     <td>${showSector ? r.sector : ''}</td>
     <td><strong>${r.ticker}</strong></td>
-    <td>${r.name}</td>
+    <td>${nameHtml(r)}</td>
     <td class="text-end">${fmtPrice(r.price)}</td>
     <td class="text-end small-col">${fmtCap(r.mkt_cap)}</td>
     <td class="text-end grp-start">${fmtPE(r.trailing_pe)}</td>
