@@ -550,14 +550,19 @@ def delete_note(note_id: int):
 def feed():
     from pathlib import Path as _Path
     conn = get_conn()
-    rows = conn.execute("""
-        SELECT id, name, comment, created_at, comment_updated_at, pinned
+    raw = conn.execute("""
+        SELECT id, name, comment, pinned,
+               COALESCE(comment_updated_at, created_at, '') AS date
         FROM   notes
         WHERE  comment IS NOT NULL AND comment != ''
-        ORDER  BY pinned DESC, COALESCE(comment_updated_at, created_at) DESC
+        ORDER  BY pinned DESC, date DESC
     """).fetchall()
     conn.close()
-    tmpl = (_Path(__file__).parent / "templates" / "notes_feed.html").read_text(encoding="utf-8")
+    rows = [dict(r) | {"badge": "📌 pinned" if r["pinned"] else ""} for r in raw]
+    tmpl = (_Path(__file__).parent / "templates" / "shared_feed.html").read_text(encoding="utf-8")
     tmpl = tmpl.replace("__NAV__",      nw2.NAV_HTML)
     tmpl = tmpl.replace("__URLPATCH__", nw2.URL_PATCH_JS)
-    return render_template_string(tmpl, rows=rows, total=len(rows))
+    return render_template_string(tmpl, rows=rows, total=len(rows),
+                                  feed_title="Notes Feed",
+                                  feed_heading="📎 Notes Feed",
+                                  toc_icon="📎")
