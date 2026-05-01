@@ -49,7 +49,6 @@ def get_conn():
 
 
 def init_db():
-    MANUAL_REPORT_DIR.mkdir(parents=True, exist_ok=True)
     conn = get_conn()
     conn.execute("""
         CREATE TABLE IF NOT EXISTS notes (
@@ -540,19 +539,10 @@ def delete_note(note_id: int):
     conn.commit()
     conn.close()
     if local_path:
-        p = Path(local_path)
         try:
-            p.unlink(missing_ok=True)
+            Path(local_path).unlink(missing_ok=True)
         except Exception as exc:
-            print(f"[notes/delete] could not remove {p}: {exc}")
-        # Also sweep dated folders in case local_path pointed elsewhere (old uploads)
-        for dated_dir in MANUAL_REPORT_DIR.glob("*/"):
-            mirror = dated_dir / p.name
-            if mirror.exists():
-                try:
-                    mirror.unlink()
-                except Exception as exc:
-                    print(f"[notes/delete] could not remove mirror {mirror}: {exc}")
+            print(f"[notes/delete] could not remove {local_path}: {exc}")
     return jsonify(ok=True)
 
 
