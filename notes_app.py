@@ -546,10 +546,15 @@ def delete_note(note_id: int):
     if not row:
         conn.close()
         return jsonify(ok=False, error="Not found"), 404
+    local_path = row["local_path"]
     conn.execute("DELETE FROM notes WHERE id=?", (note_id,))
     conn.commit()
     conn.close()
-    # Optionally remove the file — keep it for safety (user can clean up manually)
+    if local_path:
+        try:
+            Path(local_path).unlink(missing_ok=True)
+        except Exception as exc:
+            print(f"[notes/delete] could not remove file {local_path}: {exc}")
     return jsonify(ok=True)
 
 
