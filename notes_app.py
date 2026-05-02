@@ -202,6 +202,9 @@ __URLPATCH__
   <div class="d-flex align-items-center mb-3 gap-3 flex-wrap">
     <h4 class="mb-0">📎 Notes</h4>
     <span class="text-muted small">{{ rows|length }} PDFs</span>
+    <button id="openSelectedBtn" class="btn btn-sm btn-danger" onclick="openSelected()" disabled>
+      📄 Open (<span id="selCount">0</span>)
+    </button>
     <a href="{{ _base | default('') }}/feed" class="btn btn-sm btn-outline-secondary ms-auto">📓 Feed View</a>
   </div>
 
@@ -251,6 +254,10 @@ __URLPATCH__
   <table class="notes-table">
     <thead>
       <tr>
+        <th style="width:36px">
+          <input type="checkbox" id="chkAll" title="Select all"
+                 onchange="toggleAllChecks(this.checked)">
+        </th>
         <th>PDF</th>
         <th>Ticker</th>
         <th>Type</th>
@@ -264,6 +271,10 @@ __URLPATCH__
     <tbody id="notesBody">
       {% for row in rows %}
       <tr id="row-{{ row.id }}" class="{% if row.pinned %}pinned-row{% endif %}">
+        <td style="text-align:center;vertical-align:middle;padding:0 8px">
+          <input type="checkbox" class="row-chk" data-id="{{ row.id }}"
+                 onchange="updateSelCount()">
+        </td>
         <td class="pdf-cell">
           <div class="pdf-cell-inner">
             <div class="pdf-name">
@@ -658,6 +669,28 @@ function _saveMeta(id, field, val, span, cur) {
   });
 }
 
+// ── Multi-select open ─────────────────────────────────────────────────────────
+function updateSelCount() {
+  const checked = document.querySelectorAll('.row-chk:checked').length;
+  document.getElementById('selCount').textContent = checked;
+  document.getElementById('openSelectedBtn').disabled = checked === 0;
+  const all = Array.from(document.querySelectorAll('.row-chk'))
+                   .filter(c => c.closest('tr').style.display !== 'none');
+  document.getElementById('chkAll').checked = all.length > 0 && all.every(c => c.checked);
+}
+
+function toggleAllChecks(checked) {
+  document.querySelectorAll('.row-chk').forEach(c => {
+    if (c.closest('tr').style.display !== 'none') c.checked = checked;
+  });
+  updateSelCount();
+}
+
+function openSelected() {
+  const ids = Array.from(document.querySelectorAll('.row-chk:checked')).map(c => c.dataset.id);
+  ids.forEach(id => fetch('/open-local/' + id));
+}
+
 // ── Notes filter ──────────────────────────────────────────────────────────────
 function applyNotesFilter() {
   const ticker = document.getElementById('fTicker').value.toLowerCase();
@@ -805,7 +838,15 @@ def open_local(note_id: int):
         return jsonify(ok=False, error=f"File missing: {path}")
     try:
         if sys.platform == "darwin":
-            subprocess.Popen(["open", str(path)])
+            script = (
+                f'tell application "Preview"\n'
+                f'  open POSIX file "{path}"\n'
+                f'  activate\n'
+                f'  delay 0.6\n'
+                f'  set zoomed of front window to true\n'
+                f'end tell'
+            )
+            subprocess.Popen(["osascript", "-e", script])
         elif sys.platform.startswith("linux"):
             subprocess.Popen(["xdg-open", str(path)])
         else:
