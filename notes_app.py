@@ -90,25 +90,30 @@ __MCW_HEAD__
     .page-wrap { padding:20px 24px 40px; }
     h4 { font-weight:700; }
 
-    /* Two-column notes table */
+    /* Notes table */
     .notes-table { width:100%; border-collapse:separate; border-spacing:0; }
     .notes-table thead th {
-      background:#212529; color:#fff; font-size:.78rem; font-weight:600;
-      letter-spacing:.06em; text-transform:uppercase; padding:10px 14px;
-      position:sticky; top:0; z-index:2;
+      background:#212529; color:#fff; font-size:.75rem; font-weight:600;
+      letter-spacing:.06em; text-transform:uppercase; padding:9px 12px;
+      position:sticky; top:0; z-index:2; white-space:nowrap;
     }
     .notes-table thead th:first-child { border-radius:8px 0 0 0; }
     .notes-table thead th:last-child  { border-radius:0 8px 0 0; }
     .notes-table tbody tr { vertical-align:top; }
     .notes-table tbody tr:hover > td { background:#f0f4fb; }
+    .notes-table td {
+      border:none; border-bottom:1px solid #e8eaed; border-right:1px solid #e8eaed;
+      background:#fff;
+    }
+    .notes-table td:last-child { border-right:none; }
 
-    .pdf-cell {
-      width:55%; border:none; border-bottom:1px solid #e8eaed;
-      border-right:1px solid #e8eaed; background:#fff; padding:0;
+    .pdf-cell { width:32%; padding:0; }
+    .meta-cell {
+      width:9%; padding:10px 10px; vertical-align:middle;
+      font-size:.82rem; color:#1f2937;
     }
     .comment-cell {
-      width:45%; border:none; border-bottom:1px solid #e8eaed;
-      background:#fff; padding:12px 14px; vertical-align:top;
+      width:32%; padding:12px 14px; vertical-align:top;
     }
 
     /* PDF cell inner layout */
@@ -139,28 +144,18 @@ __MCW_HEAD__
     .comment-placeholder { font-size:.82rem; color:#ccc; font-style:italic; cursor:pointer; }
     .comment-placeholder:hover { color:#999; }
 
-    /* Metadata fields */
-    .meta-fields {
-      padding:6px 14px 8px;
-      display:grid; grid-template-columns:1fr 1fr; gap:5px 12px;
-    }
-    .meta-field { display:flex; flex-direction:column; gap:1px; }
-    .meta-label { font-size:.62rem; font-weight:700; color:#9ca3af; letter-spacing:.06em;
-                  text-transform:uppercase; }
+    /* Inline meta cell editing */
     .meta-val {
-      font-size:.82rem; color:#1f2937; background:#f9fafb; border:1px solid #e5e7eb;
-      border-radius:5px; padding:3px 8px; cursor:pointer;
-      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-      transition:border-color .15s, background .15s;
+      display:block; cursor:pointer; border-radius:4px; padding:2px 4px;
+      border:1px solid transparent; transition:border-color .15s, background .15s;
+      white-space:pre-wrap; word-break:break-word;
     }
-    .meta-val:hover { border-color:#93c5fd; background:#fff; }
-    .meta-val.empty { color:#d1d5db; font-style:italic; }
+    .meta-val:hover { border-color:#93c5fd; background:#f0f7ff; }
+    .meta-val.empty { color:#d1d5db; font-style:italic; font-size:.78rem; }
     .meta-input {
-      font-size:.82rem; border:1.5px solid #3b82f6; border-radius:5px;
-      padding:3px 8px; outline:none; width:100%; box-sizing:border-box;
+      font-size:.82rem; border:1.5px solid #3b82f6; border-radius:4px;
+      padding:2px 6px; outline:none; width:100%; box-sizing:border-box;
     }
-    .meta-field.meta-competitors { grid-column:1 / -1; }
-    .meta-field.meta-competitors .meta-val { white-space:normal; line-height:1.4; }
 
     /* Upload area */
     .upload-zone {
@@ -210,6 +205,10 @@ __URLPATCH__
     <thead>
       <tr>
         <th>PDF</th>
+        <th>Quarter</th>
+        <th>Report Date</th>
+        <th>Sector</th>
+        <th>Competitors</th>
         <th>Comment</th>
       </tr>
     </thead>
@@ -227,32 +226,6 @@ __URLPATCH__
             <div class="pdf-meta">
               {{ (row.created_at or '')[:10] }}
               {% if row.pinned %} · 📌 pinned{% endif %}
-            </div>
-            <div class="meta-fields">
-              <div class="meta-field">
-                <span class="meta-label">Quarter</span>
-                <span class="meta-val {% if not row.quarter %}empty{% endif %}"
-                      data-field="quarter" data-id="{{ row.id }}"
-                      onclick="editMeta(this)">{{ row.quarter or 'e.g. 2026Q3' }}</span>
-              </div>
-              <div class="meta-field">
-                <span class="meta-label">Report Date</span>
-                <span class="meta-val {% if not row.report_date %}empty{% endif %}"
-                      data-field="report_date" data-id="{{ row.id }}"
-                      onclick="editMeta(this)">{{ row.report_date or 'e.g. 2026-04-30' }}</span>
-              </div>
-              <div class="meta-field">
-                <span class="meta-label">Sector</span>
-                <span class="meta-val {% if not row.sector %}empty{% endif %}"
-                      data-field="sector" data-id="{{ row.id }}"
-                      onclick="editMeta(this)">{{ row.sector or 'e.g. Technology' }}</span>
-              </div>
-              <div class="meta-field meta-competitors">
-                <span class="meta-label">Competitors</span>
-                <span class="meta-val {% if not row.competitors %}empty{% endif %}"
-                      data-field="competitors" data-id="{{ row.id }}"
-                      onclick="editMeta(this)">{{ row.competitors or 'e.g. WDC, MU, Kioxia' }}</span>
-              </div>
             </div>
             <div class="pdf-spacer"></div>
             <div class="pdf-actions">
@@ -281,6 +254,26 @@ __URLPATCH__
               </button>
             </div>
           </div>
+        </td>
+        <td class="meta-cell">
+          <span class="meta-val {% if not row.quarter %}empty{% endif %}"
+                data-field="quarter" data-id="{{ row.id }}"
+                onclick="editMeta(this)">{{ row.quarter or '—' }}</span>
+        </td>
+        <td class="meta-cell">
+          <span class="meta-val {% if not row.report_date %}empty{% endif %}"
+                data-field="report_date" data-id="{{ row.id }}"
+                onclick="editMeta(this)">{{ row.report_date or '—' }}</span>
+        </td>
+        <td class="meta-cell">
+          <span class="meta-val {% if not row.sector %}empty{% endif %}"
+                data-field="sector" data-id="{{ row.id }}"
+                onclick="editMeta(this)">{{ row.sector or '—' }}</span>
+        </td>
+        <td class="meta-cell" style="min-width:120px">
+          <span class="meta-val {% if not row.competitors %}empty{% endif %}"
+                data-field="competitors" data-id="{{ row.id }}"
+                onclick="editMeta(this)">{{ row.competitors or '—' }}</span>
         </td>
         <td class="comment-cell" id="comment-cell-{{ row.id }}"
             onclick="viewComment({{ row.id }}, this.querySelector('.comment-preview'))">
