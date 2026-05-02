@@ -838,15 +838,7 @@ def open_local(note_id: int):
         return jsonify(ok=False, error=f"File missing: {path}")
     try:
         if sys.platform == "darwin":
-            script = (
-                f'tell application "Preview"\n'
-                f'  open POSIX file "{path}"\n'
-                f'  activate\n'
-                f'  delay 0.6\n'
-                f'  set zoomed of front window to true\n'
-                f'end tell'
-            )
-            subprocess.Popen(["osascript", "-e", script])
+            subprocess.Popen(["open", str(path)])
         elif sys.platform.startswith("linux"):
             subprocess.Popen(["xdg-open", str(path)])
         else:
