@@ -451,28 +451,35 @@ function editMeta(span) {
   const id    = span.dataset.id;
   const cur   = span.classList.contains('empty') ? '' : span.textContent.trim();
 
-  if (field === 'report_date') {
-    _editDate(span, id, cur);
-    return;
-  }
+  if (field === 'report_date') { _editDate(span, id, cur); return; }
 
   const input = document.createElement('input');
   input.type  = 'text';
   input.value = cur;
   input.className = 'meta-input';
+  if (field === 'quarter') input.placeholder = '2026Q2';
   span.textContent = '';
   span.appendChild(input);
   input.focus();
   input.select();
 
+  function restore() { span.textContent = cur || '—'; span.classList.toggle('empty', !cur); }
+
   function save() {
     const val = input.value.trim();
-    _saveMeta(id, field, val, span, cur);
+    if (field === 'quarter' && val && !/^\d{4}Q[1-4]$/i.test(val)) {
+      input.style.borderColor = '#ef4444'; return;
+    }
+    const norm = (field === 'quarter' && val) ? val.toUpperCase() : val;
+    restore();
+    if (norm) span.textContent = norm;
+    _saveMeta(id, field, norm, span, cur);
   }
-  input.addEventListener('blur',    save);
+  input.addEventListener('blur', save);
+  input.addEventListener('input', () => { input.style.borderColor = ''; });
   input.addEventListener('keydown', e => {
     if (e.key === 'Enter')  { input.blur(); }
-    if (e.key === 'Escape') { span.textContent = cur || '—'; span.classList.toggle('empty', !cur); }
+    if (e.key === 'Escape') { input.removeEventListener('blur', save); restore(); }
   });
 }
 
