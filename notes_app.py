@@ -65,7 +65,7 @@ def init_db():
             competitors        TEXT
         )
     """)
-    for col in ("quarter", "report_date", "sector", "competitors", "ticker"):
+    for col in ("quarter", "report_date", "sector", "competitors", "ticker", "type"):
         try:
             conn.execute(f"ALTER TABLE notes ADD COLUMN {col} TEXT")
         except Exception:
@@ -221,6 +221,7 @@ __URLPATCH__
       <tr>
         <th>PDF</th>
         <th>Ticker</th>
+        <th>Type</th>
         <th>Quarter</th>
         <th>Report Date</th>
         <th>Sector</th>
@@ -278,6 +279,11 @@ __URLPATCH__
             {%- endfor %}
             <span class="chip-edit" onclick="editChips({{ row.id }}, 'ticker', this)" title="Edit">✏</span>
           </span>
+        </td>
+        <td class="meta-cell">
+          <span class="meta-val type-val {% if not row.type %}empty{% endif %}"
+                data-field="type" data-id="{{ row.id }}"
+                onclick="editType(this)">{{ row.type or '—' }}</span>
         </td>
         <td class="meta-cell">
           <span class="meta-val {% if not row.quarter %}empty{% endif %}"
@@ -444,6 +450,43 @@ function syncAnnotations(id, btn) {
 
 document.addEventListener('DOMContentLoaded', renderAllCommentCells);
 
+// ── Type dropdown ─────────────────────────────────────────────────────────────
+const TYPE_OPTIONS = ['10Q_slide', '10K', '10Q', '8K', 'investor'];
+
+function editType(span) {
+  if (span.querySelector('select')) return;
+  const id  = span.dataset.id;
+  const cur = span.classList.contains('empty') ? '' : span.textContent.trim();
+
+  const sel = document.createElement('select');
+  sel.style.cssText = 'font-size:.82rem;border:1.5px solid #3b82f6;border-radius:4px;padding:2px 4px;outline:none';
+  const blank = document.createElement('option');
+  blank.value = ''; blank.textContent = '—';
+  sel.appendChild(blank);
+  TYPE_OPTIONS.forEach(opt => {
+    const o = document.createElement('option');
+    o.value = opt; o.textContent = opt;
+    if (opt === cur) o.selected = true;
+    sel.appendChild(o);
+  });
+
+  span.textContent = '';
+  span.appendChild(sel);
+  sel.focus();
+
+  function commit() {
+    const val = sel.value;
+    span.textContent = val || '—';
+    span.classList.toggle('empty', !val);
+    _saveMeta(id, 'type', val, span, cur);
+  }
+  sel.addEventListener('change', () => { sel.blur(); });
+  sel.addEventListener('blur', commit);
+  sel.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { sel.removeEventListener('blur', commit); span.textContent = cur || '—'; span.classList.toggle('empty', !cur); }
+  });
+}
+
 // ── Inline meta field editing ─────────────────────────────────────────────────
 function editMeta(span) {
   if (span.querySelector('input')) return;
@@ -604,7 +647,7 @@ def index():
     conn = get_conn()
     rows = conn.execute("""
         SELECT id, name, comment, created_at, comment_updated_at, pinned,
-               quarter, report_date, sector, competitors, ticker
+               quarter, report_date, sector, competitors, ticker, type
         FROM   notes
         ORDER  BY pinned DESC, COALESCE(comment_updated_at, created_at) DESC
     """).fetchall()
@@ -672,7 +715,7 @@ def set_comment(note_id: int):
 @notes_bp.route("/meta/<int:note_id>", methods=["POST"])
 def set_meta(note_id: int):
     data = request.get_json(silent=True) or {}
-    allowed = {"quarter", "report_date", "sector", "competitors", "ticker"}
+    allowed = {"quarter", "report_date", "sector", "competitors", "ticker", "type"}
     updates = {k: (v.strip() or None) for k, v in data.items() if k in allowed}
     if not updates:
         return jsonify(ok=False, error="No valid fields"), 400
