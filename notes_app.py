@@ -58,9 +58,18 @@ def init_db():
             comment            TEXT,
             comment_updated_at TEXT,
             created_at         TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now')),
-            pinned             INTEGER DEFAULT 0
+            pinned             INTEGER DEFAULT 0,
+            quarter            TEXT,
+            report_date        TEXT,
+            sector             TEXT,
+            competitors        TEXT
         )
     """)
+    for col in ("quarter", "report_date", "sector", "competitors"):
+        try:
+            conn.execute(f"ALTER TABLE notes ADD COLUMN {col} TEXT")
+        except Exception:
+            pass
     conn.commit()
     conn.close()
 
@@ -130,6 +139,25 @@ __MCW_HEAD__
     .comment-placeholder { font-size:.82rem; color:#ccc; font-style:italic; cursor:pointer; }
     .comment-placeholder:hover { color:#999; }
 
+    /* Metadata fields */
+    .meta-fields { padding:4px 14px 6px; display:flex; flex-wrap:wrap; gap:6px; }
+    .meta-field { display:inline-flex; align-items:center; gap:4px; }
+    .meta-label { font-size:.65rem; font-weight:700; color:#aaa; letter-spacing:.05em;
+                  text-transform:uppercase; white-space:nowrap; }
+    .meta-val {
+      font-size:.75rem; color:#374151; background:#f3f4f6; border:1px solid transparent;
+      border-radius:4px; padding:2px 7px; cursor:pointer; min-width:40px;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:140px;
+    }
+    .meta-val:hover { border-color:#d1d5db; background:#fff; }
+    .meta-val.empty { color:#bbb; font-style:italic; }
+    .meta-input {
+      font-size:.75rem; border:1.5px solid #3b82f6; border-radius:4px;
+      padding:2px 7px; outline:none; min-width:80px; max-width:160px;
+    }
+    .meta-competitors .meta-val { max-width:200px; white-space:normal; line-height:1.3; }
+    .meta-competitors .meta-input { min-width:160px; max-width:220px; }
+
     /* Upload area */
     .upload-zone {
       border:2px dashed #c8d0da; border-radius:10px; padding:28px 20px;
@@ -195,6 +223,32 @@ __URLPATCH__
             <div class="pdf-meta">
               {{ (row.created_at or '')[:10] }}
               {% if row.pinned %} · 📌 pinned{% endif %}
+            </div>
+            <div class="meta-fields">
+              <span class="meta-field">
+                <span class="meta-label">Q</span>
+                <span class="meta-val {% if not row.quarter %}empty{% endif %}"
+                      data-field="quarter" data-id="{{ row.id }}"
+                      onclick="editMeta(this)">{{ row.quarter or 'quarter' }}</span>
+              </span>
+              <span class="meta-field">
+                <span class="meta-label">Date</span>
+                <span class="meta-val {% if not row.report_date %}empty{% endif %}"
+                      data-field="report_date" data-id="{{ row.id }}"
+                      onclick="editMeta(this)">{{ row.report_date or 'report date' }}</span>
+              </span>
+              <span class="meta-field">
+                <span class="meta-label">Sector</span>
+                <span class="meta-val {% if not row.sector %}empty{% endif %}"
+                      data-field="sector" data-id="{{ row.id }}"
+                      onclick="editMeta(this)">{{ row.sector or 'sector' }}</span>
+              </span>
+              <span class="meta-field meta-competitors">
+                <span class="meta-label">Competitors</span>
+                <span class="meta-val {% if not row.competitors %}empty{% endif %}"
+                      data-field="competitors" data-id="{{ row.id }}"
+                      onclick="editMeta(this)">{{ row.competitors or 'competitors' }}</span>
+              </span>
             </div>
             <div class="pdf-spacer"></div>
             <div class="pdf-actions">
@@ -365,6 +419,46 @@ function syncAnnotations(id, btn) {
 }
 
 document.addEventListener('DOMContentLoaded', renderAllCommentCells);
+
+// ── Inline meta field editing ─────────────────────────────────────────────────
+function editMeta(span) {
+  if (span.querySelector('input')) return;
+  const field = span.dataset.field;
+  const id    = span.dataset.id;
+  const cur   = span.classList.contains('empty') ? '' : span.textContent.trim();
+  const input = document.createElement('input');
+  input.type  = 'text';
+  input.value = cur;
+  input.className = 'meta-input';
+  input.placeholder = span.textContent.trim();
+  span.textContent = '';
+  span.appendChild(input);
+  input.focus();
+  input.select();
+
+  function save() {
+    const val = input.value.trim();
+    fetch('/meta/' + id, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({[field]: val}),
+    }).then(r => r.json()).then(d => {
+      if (d.ok) {
+        span.textContent = val || span.dataset.placeholder || field;
+        span.classList.toggle('empty', !val);
+      }
+    }).catch(() => {
+      span.textContent = cur || span.dataset.placeholder || field;
+      span.classList.toggle('empty', !cur);
+    });
+  }
+
+  input.addEventListener('blur',    save);
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter')  { input.blur(); }
+    if (e.key === 'Escape') { span.textContent = cur || field; span.classList.toggle('empty', !cur); }
+  });
+}
 </script>
 </body>
 </html>
@@ -386,7 +480,8 @@ _INDEX_TEMPLATE = (
 def index():
     conn = get_conn()
     rows = conn.execute("""
-        SELECT id, name, comment, created_at, comment_updated_at, pinned
+        SELECT id, name, comment, created_at, comment_updated_at, pinned,
+               quarter, report_date, sector, competitors
         FROM   notes
         ORDER  BY pinned DESC, COALESCE(comment_updated_at, created_at) DESC
     """).fetchall()
@@ -449,6 +544,21 @@ def set_comment(note_id: int):
     conn.commit()
     conn.close()
     return "", 204
+
+
+@notes_bp.route("/meta/<int:note_id>", methods=["POST"])
+def set_meta(note_id: int):
+    data = request.get_json(silent=True) or {}
+    allowed = {"quarter", "report_date", "sector", "competitors"}
+    updates = {k: (v.strip() or None) for k, v in data.items() if k in allowed}
+    if not updates:
+        return jsonify(ok=False, error="No valid fields"), 400
+    cols = ", ".join(f"{k}=?" for k in updates)
+    conn = get_conn()
+    conn.execute(f"UPDATE notes SET {cols} WHERE id=?", (*updates.values(), note_id))
+    conn.commit()
+    conn.close()
+    return jsonify(ok=True)
 
 
 @notes_bp.route("/open-local/<int:note_id>")
