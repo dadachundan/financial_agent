@@ -423,11 +423,16 @@ function editMeta(span) {
   const field = span.dataset.field;
   const id    = span.dataset.id;
   const cur   = span.classList.contains('empty') ? '' : span.textContent.trim();
+
+  if (field === 'report_date') {
+    _editDate(span, id, cur);
+    return;
+  }
+
   const input = document.createElement('input');
   input.type  = 'text';
   input.value = cur;
   input.className = 'meta-input';
-  input.placeholder = span.textContent.trim();
   span.textContent = '';
   span.appendChild(input);
   input.focus();
@@ -435,25 +440,90 @@ function editMeta(span) {
 
   function save() {
     const val = input.value.trim();
-    fetch('/meta/' + id, {
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({[field]: val}),
-    }).then(r => r.json()).then(d => {
-      if (d.ok) {
-        span.textContent = val || span.dataset.placeholder || field;
-        span.classList.toggle('empty', !val);
-      }
-    }).catch(() => {
-      span.textContent = cur || span.dataset.placeholder || field;
-      span.classList.toggle('empty', !cur);
-    });
+    _saveMeta(id, field, val, span, cur);
   }
-
   input.addEventListener('blur',    save);
   input.addEventListener('keydown', e => {
     if (e.key === 'Enter')  { input.blur(); }
-    if (e.key === 'Escape') { span.textContent = cur || field; span.classList.toggle('empty', !cur); }
+    if (e.key === 'Escape') { span.textContent = cur || '—'; span.classList.toggle('empty', !cur); }
+  });
+}
+
+function _editDate(span, id, cur) {
+  // Parse existing value (YYYY-MM-DD or empty)
+  const parts = (cur && cur !== '—') ? cur.split('-') : ['', '', ''];
+  const [iy, im, id_] = parts;
+
+  const wrap = document.createElement('span');
+  wrap.style.cssText = 'display:inline-flex;align-items:center;gap:3px';
+
+  function mkInput(val, maxlen, w, placeholder) {
+    const inp = document.createElement('input');
+    inp.type = 'text'; inp.inputMode = 'numeric';
+    inp.value = val; inp.maxLength = maxlen; inp.placeholder = placeholder;
+    inp.style.cssText = `width:${w}px;font-size:.82rem;border:1.5px solid #3b82f6;` +
+      `border-radius:4px;padding:2px 4px;outline:none;text-align:center`;
+    return inp;
+  }
+
+  const yInp = mkInput(iy,  4, 46, 'YYYY');
+  const mInp = mkInput(im,  2, 28, 'MM');
+  const dInp = mkInput(id_, 2, 28, 'DD');
+
+  wrap.appendChild(yInp);
+  wrap.appendChild(document.createTextNode('-'));
+  wrap.appendChild(mInp);
+  wrap.appendChild(document.createTextNode('-'));
+  wrap.appendChild(dInp);
+
+  span.textContent = '';
+  span.appendChild(wrap);
+  yInp.focus();
+  yInp.select();
+
+  // Auto-advance
+  yInp.addEventListener('input', () => { if (yInp.value.length === 4) mInp.focus(); });
+  mInp.addEventListener('input', () => { if (mInp.value.length === 2) dInp.focus(); });
+
+  function restore() { span.textContent = cur || '—'; span.classList.toggle('empty', !cur); }
+
+  function trySave() {
+    const y = yInp.value.trim(), m = mInp.value.trim(), d = dInp.value.trim();
+    if (!y && !m && !d) { _saveMeta(id, 'report_date', '', span, cur); return; }
+    // Validate
+    const yi = parseInt(y), mi = parseInt(m), di = parseInt(d);
+    if (!/^\d{4}$/.test(y) || mi < 1 || mi > 12 || di < 1 || di > 31) {
+      yInp.style.borderColor = '#dc3545';
+      mInp.style.borderColor = '#dc3545';
+      dInp.style.borderColor = '#dc3545';
+      return;
+    }
+    const val = `${y}-${m.padStart(2,'0')}-${d.padStart(2,'0')}`;
+    _saveMeta(id, 'report_date', val, span, cur);
+  }
+
+  dInp.addEventListener('blur', () => setTimeout(trySave, 80));
+  [yInp, mInp, dInp].forEach(inp => {
+    inp.addEventListener('keydown', e => {
+      if (e.key === 'Enter')  { dInp.blur(); }
+      if (e.key === 'Escape') { restore(); }
+    });
+  });
+}
+
+function _saveMeta(id, field, val, span, cur) {
+  fetch('/meta/' + id, {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({[field]: val}),
+  }).then(r => r.json()).then(d => {
+    if (d.ok) {
+      span.textContent = val || '—';
+      span.classList.toggle('empty', !val);
+    }
+  }).catch(() => {
+    span.textContent = cur || '—';
+    span.classList.toggle('empty', !cur);
   });
 }
 </script>
@@ -550,6 +620,11 @@ def set_meta(note_id: int):
     updates = {k: (v.strip() or None) for k, v in data.items() if k in allowed}
     if not updates:
         return jsonify(ok=False, error="No valid fields"), 400
+    if "report_date" in updates and updates["report_date"]:
+        try:
+            updates["report_date"] = datetime.date.fromisoformat(updates["report_date"]).isoformat()
+        except ValueError:
+            return jsonify(ok=False, error="Invalid date format, expected YYYY-MM-DD"), 400
     cols = ", ".join(f"{k}=?" for k in updates)
     conn = get_conn()
     conn.execute(f"UPDATE notes SET {cols} WHERE id=?", (*updates.values(), note_id))
