@@ -173,6 +173,11 @@ __MCW_HEAD__
     }
 
     /* Upload area */
+    .filter-bar { display:flex; align-items:center; flex-wrap:wrap; gap:6px;
+                  background:#fff; border:1px solid #e0e0e0; border-radius:8px;
+                  padding:8px 14px; margin-bottom:14px; }
+    .filter-label { font-size:.72rem; color:#888; font-weight:700;
+                    text-transform:uppercase; letter-spacing:.05em; white-space:nowrap; margin-right:2px; }
     .upload-zone {
       border:2px dashed #c8d0da; border-radius:10px; padding:28px 20px;
       text-align:center; background:#fff; cursor:pointer; transition:border-color .2s;
@@ -212,6 +217,32 @@ __URLPATCH__
       </div>
       <p class="text-muted mt-1" style="font-size:.78rem" id="uploadMsg">Uploading…</p>
     </div>
+  </div>
+
+  <!-- Filter bar -->
+  <div class="filter-bar" id="filterBar">
+    <span class="filter-label">TICKER:</span>
+    <select id="fTicker" class="form-select form-select-sm" style="max-width:180px">
+      <option value="">All tickers</option>
+      {% for t in rows | map(attribute='ticker') | select | unique | sort %}
+        {% for chip in t.split(',') if chip.strip() %}
+      <option value="{{ chip.strip()|lower }}">{{ chip.strip() }}</option>
+        {% endfor %}
+      {% endfor %}
+    </select>
+    <span class="filter-label ms-2">TYPE:</span>
+    <select id="fType" class="form-select form-select-sm" style="max-width:150px">
+      <option value="">All types</option>
+      <option>10Q_slide</option><option>10K</option><option>10Q</option>
+      <option>8K</option><option>investor</option>
+    </select>
+    <input id="fSearch" type="text" class="form-control form-control-sm ms-2"
+           style="max-width:280px" placeholder="Search name / ticker / sector…"
+           onkeydown="if(event.key==='Enter') applyNotesFilter()">
+    <button class="btn btn-sm btn-outline-secondary" onclick="applyNotesFilter()">Apply</button>
+    <a href="#" onclick="clearNotesFilter();return false"
+       class="btn btn-sm btn-link text-muted p-0 ms-1">✕ Clear</a>
+    <span id="filterCount" class="text-muted small ms-2"></span>
   </div>
 
   <!-- Notes table -->
@@ -624,6 +655,35 @@ function _saveMeta(id, field, val, span, cur) {
     span.textContent = cur || '—';
     span.classList.toggle('empty', !cur);
   });
+}
+
+// ── Notes filter ──────────────────────────────────────────────────────────────
+function applyNotesFilter() {
+  const ticker = document.getElementById('fTicker').value.toLowerCase();
+  const type   = document.getElementById('fType').value.toLowerCase();
+  const search = document.getElementById('fSearch').value.toLowerCase().trim();
+  const rows   = document.querySelectorAll('#notesBody tr');
+  let vis = 0;
+  rows.forEach(tr => {
+    const tickerCell = tr.querySelector('[data-chips]') ? tr.querySelector('[data-chips]').dataset.chips.toLowerCase() : '';
+    const typeCell   = (tr.querySelector('.meta-val[data-field="type"]') || {}).textContent || '';
+    const text       = tr.textContent.toLowerCase();
+    const ok = (!ticker || tickerCell.includes(ticker))
+            && (!type   || typeCell.toLowerCase() === type)
+            && (!search || text.includes(search));
+    tr.style.display = ok ? '' : 'none';
+    if (ok) vis++;
+  });
+  const total = rows.length;
+  document.getElementById('filterCount').textContent =
+    (vis < total) ? `${vis} / ${total}` : '';
+}
+
+function clearNotesFilter() {
+  document.getElementById('fTicker').value = '';
+  document.getElementById('fType').value   = '';
+  document.getElementById('fSearch').value = '';
+  applyNotesFilter();
 }
 </script>
 </body>
