@@ -956,7 +956,10 @@ def move_by_sector():
         if not src_path.exists():
             skipped.append({"id": row["id"], "name": row["name"], "reason": "file missing"})
             continue
-        sector = (row["sector"] or "").strip() or "unsorted"
+        sector = (row["sector"] or "").strip()
+        if not sector:
+            skipped.append({"id": row["id"], "name": row["name"], "reason": "no sector"})
+            continue
         safe_sector = re.sub(r'[^\w\s\-]', '_', sector).strip()
         dest_dir = src_path.parent.parent / safe_sector
         dest_dir.mkdir(parents=True, exist_ok=True)
