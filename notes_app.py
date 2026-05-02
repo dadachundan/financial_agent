@@ -140,23 +140,27 @@ __MCW_HEAD__
     .comment-placeholder:hover { color:#999; }
 
     /* Metadata fields */
-    .meta-fields { padding:4px 14px 6px; display:flex; flex-wrap:wrap; gap:6px; }
-    .meta-field { display:inline-flex; align-items:center; gap:4px; }
-    .meta-label { font-size:.65rem; font-weight:700; color:#aaa; letter-spacing:.05em;
-                  text-transform:uppercase; white-space:nowrap; }
+    .meta-fields {
+      padding:6px 14px 8px;
+      display:grid; grid-template-columns:1fr 1fr; gap:5px 12px;
+    }
+    .meta-field { display:flex; flex-direction:column; gap:1px; }
+    .meta-label { font-size:.62rem; font-weight:700; color:#9ca3af; letter-spacing:.06em;
+                  text-transform:uppercase; }
     .meta-val {
-      font-size:.75rem; color:#374151; background:#f3f4f6; border:1px solid transparent;
-      border-radius:4px; padding:2px 7px; cursor:pointer; min-width:40px;
-      white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:140px;
+      font-size:.82rem; color:#1f2937; background:#f9fafb; border:1px solid #e5e7eb;
+      border-radius:5px; padding:3px 8px; cursor:pointer;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+      transition:border-color .15s, background .15s;
     }
-    .meta-val:hover { border-color:#d1d5db; background:#fff; }
-    .meta-val.empty { color:#bbb; font-style:italic; }
+    .meta-val:hover { border-color:#93c5fd; background:#fff; }
+    .meta-val.empty { color:#d1d5db; font-style:italic; }
     .meta-input {
-      font-size:.75rem; border:1.5px solid #3b82f6; border-radius:4px;
-      padding:2px 7px; outline:none; min-width:80px; max-width:160px;
+      font-size:.82rem; border:1.5px solid #3b82f6; border-radius:5px;
+      padding:3px 8px; outline:none; width:100%; box-sizing:border-box;
     }
-    .meta-competitors .meta-val { max-width:200px; white-space:normal; line-height:1.3; }
-    .meta-competitors .meta-input { min-width:160px; max-width:220px; }
+    .meta-field.meta-competitors { grid-column:1 / -1; }
+    .meta-field.meta-competitors .meta-val { white-space:normal; line-height:1.4; }
 
     /* Upload area */
     .upload-zone {
@@ -225,30 +229,30 @@ __URLPATCH__
               {% if row.pinned %} · 📌 pinned{% endif %}
             </div>
             <div class="meta-fields">
-              <span class="meta-field">
-                <span class="meta-label">Q</span>
+              <div class="meta-field">
+                <span class="meta-label">Quarter</span>
                 <span class="meta-val {% if not row.quarter %}empty{% endif %}"
                       data-field="quarter" data-id="{{ row.id }}"
-                      onclick="editMeta(this)">{{ row.quarter or 'quarter' }}</span>
-              </span>
-              <span class="meta-field">
-                <span class="meta-label">Date</span>
+                      onclick="editMeta(this)">{{ row.quarter or 'e.g. 2026Q3' }}</span>
+              </div>
+              <div class="meta-field">
+                <span class="meta-label">Report Date</span>
                 <span class="meta-val {% if not row.report_date %}empty{% endif %}"
                       data-field="report_date" data-id="{{ row.id }}"
-                      onclick="editMeta(this)">{{ row.report_date or 'report date' }}</span>
-              </span>
-              <span class="meta-field">
+                      onclick="editMeta(this)">{{ row.report_date or 'e.g. 2026-04-30' }}</span>
+              </div>
+              <div class="meta-field">
                 <span class="meta-label">Sector</span>
                 <span class="meta-val {% if not row.sector %}empty{% endif %}"
                       data-field="sector" data-id="{{ row.id }}"
-                      onclick="editMeta(this)">{{ row.sector or 'sector' }}</span>
-              </span>
-              <span class="meta-field meta-competitors">
+                      onclick="editMeta(this)">{{ row.sector or 'e.g. Technology' }}</span>
+              </div>
+              <div class="meta-field meta-competitors">
                 <span class="meta-label">Competitors</span>
                 <span class="meta-val {% if not row.competitors %}empty{% endif %}"
                       data-field="competitors" data-id="{{ row.id }}"
-                      onclick="editMeta(this)">{{ row.competitors or 'competitors' }}</span>
-              </span>
+                      onclick="editMeta(this)">{{ row.competitors or 'e.g. WDC, MU, Kioxia' }}</span>
+              </div>
             </div>
             <div class="pdf-spacer"></div>
             <div class="pdf-actions">
