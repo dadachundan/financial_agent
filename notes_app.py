@@ -65,7 +65,7 @@ def init_db():
             competitors        TEXT
         )
     """)
-    for col in ("quarter", "report_date", "sector", "competitors"):
+    for col in ("quarter", "report_date", "sector", "competitors", "ticker"):
         try:
             conn.execute(f"ALTER TABLE notes ADD COLUMN {col} TEXT")
         except Exception:
@@ -157,6 +157,21 @@ __MCW_HEAD__
       padding:2px 6px; outline:none; width:100%; box-sizing:border-box;
     }
 
+    /* Tag chips (competitors / ticker) */
+    .tag-chip {
+      display:inline-block; font-size:.7rem; font-weight:600;
+      padding:1px 6px; border-radius:4px; margin:1px 2px;
+      white-space:nowrap; text-decoration:none;
+    }
+    .tag-chip.comp { background:#fce8d4; color:#8a3d00; border:1px solid #f0c090; }
+    .tag-chip.tick { background:#dbeafe; color:#1e40af; border:1px solid #93c5fd; }
+    .chip-edit { cursor:pointer; color:#bbb; font-size:.72rem; margin-left:2px; }
+    .chip-edit:hover { color:#555; }
+    .chip-input {
+      font-size:.78rem; border:1.5px solid #3b82f6; border-radius:4px;
+      padding:2px 6px; outline:none; width:100%; box-sizing:border-box;
+    }
+
     /* Upload area */
     .upload-zone {
       border:2px dashed #c8d0da; border-radius:10px; padding:28px 20px;
@@ -205,6 +220,7 @@ __URLPATCH__
     <thead>
       <tr>
         <th>PDF</th>
+        <th>Ticker</th>
         <th>Quarter</th>
         <th>Report Date</th>
         <th>Sector</th>
@@ -255,6 +271,14 @@ __URLPATCH__
             </div>
           </div>
         </td>
+        <td class="meta-cell" id="ticker-cell-{{ row.id }}" style="min-width:80px">
+          <span data-chips="{{ (row.ticker or '')|e }}">
+            {%- for t in (row.ticker or '').split(',') if t.strip() %}
+            <span class="tag-chip tick">{{ t.strip() }}</span>
+            {%- endfor %}
+            <span class="chip-edit" onclick="editChips({{ row.id }}, 'ticker', this)" title="Edit">✏</span>
+          </span>
+        </td>
         <td class="meta-cell">
           <span class="meta-val {% if not row.quarter %}empty{% endif %}"
                 data-field="quarter" data-id="{{ row.id }}"
@@ -270,10 +294,13 @@ __URLPATCH__
                 data-field="sector" data-id="{{ row.id }}"
                 onclick="editMeta(this)">{{ row.sector or '—' }}</span>
         </td>
-        <td class="meta-cell" style="min-width:120px">
-          <span class="meta-val {% if not row.competitors %}empty{% endif %}"
-                data-field="competitors" data-id="{{ row.id }}"
-                onclick="editMeta(this)">{{ row.competitors or '—' }}</span>
+        <td class="meta-cell" id="competitors-cell-{{ row.id }}" style="min-width:120px">
+          <span data-chips="{{ (row.competitors or '')|e }}">
+            {%- for t in (row.competitors or '').split(',') if t.strip() %}
+            <span class="tag-chip comp">{{ t.strip() }}</span>
+            {%- endfor %}
+            <span class="chip-edit" onclick="editChips({{ row.id }}, 'competitors', this)" title="Edit">✏</span>
+          </span>
         </td>
         <td class="comment-cell" id="comment-cell-{{ row.id }}"
             onclick="viewComment({{ row.id }}, this.querySelector('.comment-preview'))">
@@ -450,7 +477,6 @@ function editMeta(span) {
 }
 
 function _editDate(span, id, cur) {
-  // Parse existing value (YYYY-MM-DD or empty)
   const parts = (cur && cur !== '—') ? cur.split('-') : ['', '', ''];
   const [iy, im, id_] = parts;
 
@@ -478,37 +504,93 @@ function _editDate(span, id, cur) {
 
   span.textContent = '';
   span.appendChild(wrap);
-  yInp.focus();
-  yInp.select();
+  yInp.focus(); yInp.select();
 
-  // Auto-advance
+  // Auto-advance year→month→day
   yInp.addEventListener('input', () => { if (yInp.value.length === 4) mInp.focus(); });
   mInp.addEventListener('input', () => { if (mInp.value.length === 2) dInp.focus(); });
 
-  function restore() { span.textContent = cur || '—'; span.classList.toggle('empty', !cur); }
+  function restore() {
+    span.textContent = cur || '—';
+    span.classList.toggle('empty', !cur || cur === '—');
+  }
 
-  function trySave() {
+  function commit() {
     const y = yInp.value.trim(), m = mInp.value.trim(), d = dInp.value.trim();
-    if (!y && !m && !d) { _saveMeta(id, 'report_date', '', span, cur); return; }
-    // Validate
-    const yi = parseInt(y), mi = parseInt(m), di = parseInt(d);
+    if (!y && !m && !d) { restore(); _saveMeta(id, 'report_date', '', span, cur); return; }
+    const mi = parseInt(m), di = parseInt(d);
     if (!/^\d{4}$/.test(y) || mi < 1 || mi > 12 || di < 1 || di > 31) {
-      yInp.style.borderColor = '#dc3545';
-      mInp.style.borderColor = '#dc3545';
-      dInp.style.borderColor = '#dc3545';
-      return;
+      restore(); return;
     }
     const val = `${y}-${m.padStart(2,'0')}-${d.padStart(2,'0')}`;
+    restore();
+    span.textContent = val;
     _saveMeta(id, 'report_date', val, span, cur);
   }
 
-  dInp.addEventListener('blur', () => setTimeout(trySave, 80));
-  [yInp, mInp, dInp].forEach(inp => {
+  // On each blur, wait one tick; if focus didn't move to another input in this group, commit/restore
+  let _blurTimer = null;
+  const inputs = [yInp, mInp, dInp];
+  inputs.forEach(inp => {
+    inp.addEventListener('blur', () => {
+      clearTimeout(_blurTimer);
+      _blurTimer = setTimeout(() => {
+        if (!inputs.includes(document.activeElement)) commit();
+      }, 100);
+    });
     inp.addEventListener('keydown', e => {
-      if (e.key === 'Enter')  { dInp.blur(); }
-      if (e.key === 'Escape') { restore(); }
+      if (e.key === 'Enter')  { clearTimeout(_blurTimer); commit(); }
+      if (e.key === 'Escape') { clearTimeout(_blurTimer); restore(); }
     });
   });
+}
+
+// ── Chip (tag) cells: competitors & ticker ────────────────────────────────────
+function editChips(id, field, btn) {
+  const wrapper = btn.closest('[data-chips]');
+  const cell    = btn.closest('td');
+  const cur     = wrapper ? wrapper.dataset.chips : '';
+  const cls     = field === 'ticker' ? 'tick' : 'comp';
+  const input   = document.createElement('input');
+  input.className   = 'chip-input';
+  input.value       = cur;
+  input.placeholder = 'tag1, tag2, …';
+  cell.innerHTML = '';
+  cell.appendChild(input);
+  input.focus();
+  const save = () => {
+    const val = input.value.trim();
+    fetch('/meta/' + id, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({[field]: val}),
+    }).then(r => r.json()).then(d => {
+      if (d.ok) renderChips(cell, id, field, val, cls);
+      else renderChips(cell, id, field, cur, cls);
+    }).catch(() => renderChips(cell, id, field, cur, cls));
+  };
+  input.addEventListener('blur', save);
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter')  { e.preventDefault(); input.blur(); }
+    if (e.key === 'Escape') { renderChips(cell, id, field, cur, cls); }
+  });
+}
+
+function renderChips(cell, id, field, val, cls) {
+  const tags = val ? val.split(',').map(t => t.trim()).filter(Boolean) : [];
+  const span = document.createElement('span');
+  span.dataset.chips = val || '';
+  tags.forEach(t => {
+    const chip = document.createElement('span');
+    chip.className = 'tag-chip ' + cls;
+    chip.textContent = t;
+    span.appendChild(chip);
+  });
+  const ei = document.createElement('span');
+  ei.className = 'chip-edit'; ei.textContent = ' ✏'; ei.title = 'Edit';
+  ei.onclick = () => editChips(id, field, ei);
+  span.appendChild(ei);
+  cell.innerHTML = ''; cell.appendChild(span);
 }
 
 function _saveMeta(id, field, val, span, cur) {
@@ -548,7 +630,7 @@ def index():
     conn = get_conn()
     rows = conn.execute("""
         SELECT id, name, comment, created_at, comment_updated_at, pinned,
-               quarter, report_date, sector, competitors
+               quarter, report_date, sector, competitors, ticker
         FROM   notes
         ORDER  BY pinned DESC, COALESCE(comment_updated_at, created_at) DESC
     """).fetchall()
@@ -616,7 +698,7 @@ def set_comment(note_id: int):
 @notes_bp.route("/meta/<int:note_id>", methods=["POST"])
 def set_meta(note_id: int):
     data = request.get_json(silent=True) or {}
-    allowed = {"quarter", "report_date", "sector", "competitors"}
+    allowed = {"quarter", "report_date", "sector", "competitors", "ticker"}
     updates = {k: (v.strip() or None) for k, v in data.items() if k in allowed}
     if not updates:
         return jsonify(ok=False, error="No valid fields"), 400
