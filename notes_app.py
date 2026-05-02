@@ -222,7 +222,8 @@ __URLPATCH__
   <!-- Filter bar -->
   <div class="filter-bar" id="filterBar">
     <span class="filter-label">TICKER:</span>
-    <select id="fTicker" class="form-select form-select-sm" style="max-width:180px">
+    <select id="fTicker" class="form-select form-select-sm" style="max-width:180px"
+            onchange="applyNotesFilter()">
       <option value="">All tickers</option>
       {% for t in rows | map(attribute='ticker') | select | unique | sort %}
         {% for chip in t.split(',') if chip.strip() %}
@@ -231,15 +232,15 @@ __URLPATCH__
       {% endfor %}
     </select>
     <span class="filter-label ms-2">TYPE:</span>
-    <select id="fType" class="form-select form-select-sm" style="max-width:150px">
+    <select id="fType" class="form-select form-select-sm" style="max-width:150px"
+            onchange="applyNotesFilter()">
       <option value="">All types</option>
       <option>10Q_slide</option><option>10K</option><option>10Q</option>
       <option>8K</option><option>investor</option>
     </select>
     <input id="fSearch" type="text" class="form-control form-control-sm ms-2"
            style="max-width:280px" placeholder="Search name / ticker / sector…"
-           onkeydown="if(event.key==='Enter') applyNotesFilter()">
-    <button class="btn btn-sm btn-outline-secondary" onclick="applyNotesFilter()">Apply</button>
+           oninput="applyNotesFilter()">
     <a href="#" onclick="clearNotesFilter();return false"
        class="btn btn-sm btn-link text-muted p-0 ms-1">✕ Clear</a>
     <span id="filterCount" class="text-muted small ms-2"></span>
