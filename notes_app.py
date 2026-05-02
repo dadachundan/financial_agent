@@ -205,6 +205,9 @@ __URLPATCH__
     <button id="openSelectedBtn" class="btn btn-sm btn-danger" onclick="openSelected()" disabled>
       📄 Open (<span id="selCount">0</span>)
     </button>
+    <button class="btn btn-sm btn-outline-warning" onclick="moveBySector(this)">
+      📁 Move PDFs per sector
+    </button>
     <a href="{{ _base | default('') }}/feed" class="btn btn-sm btn-outline-secondary ms-auto">📓 Feed View</a>
   </div>
 
@@ -669,6 +672,23 @@ function _saveMeta(id, field, val, span, cur) {
   });
 }
 
+// ── Move PDFs by sector ───────────────────────────────────────────────────────
+function moveBySector(btn) {
+  if (!confirm('Move all PDFs into per-sector folders under manual_report/<sector>/?\n\nDatabase paths will be updated.')) return;
+  btn.disabled = true;
+  btn.textContent = '⏳ Moving…';
+  fetch('/move-by-sector', {method: 'POST'})
+    .then(r => r.json())
+    .then(d => {
+      btn.disabled = false;
+      btn.textContent = '📁 Move PDFs per sector';
+      const errs = d.errors && d.errors.length ? `\n⚠️ ${d.errors.length} error(s)` : '';
+      alert(`✅ Moved: ${d.moved}   Skipped: ${d.skipped}${errs}`);
+      if (d.moved > 0) location.reload();
+    })
+    .catch(() => { btn.disabled = false; btn.textContent = '📁 Move PDFs per sector'; alert('Request failed'); });
+}
+
 // ── Multi-select open ─────────────────────────────────────────────────────────
 function updateSelCount() {
   const checked = document.querySelectorAll('.row-chk:checked').length;
@@ -919,6 +939,45 @@ def delete_note(note_id: int):
         except Exception as exc:
             print(f"[notes/delete] could not remove {local_path}: {exc}")
     return jsonify(ok=True)
+
+
+@notes_bp.route("/move-by-sector", methods=["POST"])
+def move_by_sector():
+    import re, shutil
+    conn = get_conn()
+    rows = conn.execute("SELECT id, name, local_path, sector FROM notes").fetchall()
+    moved, skipped, errors = [], [], []
+    for row in rows:
+        src = row["local_path"]
+        if not src:
+            skipped.append({"id": row["id"], "name": row["name"], "reason": "no path"})
+            continue
+        src_path = Path(src)
+        if not src_path.exists():
+            skipped.append({"id": row["id"], "name": row["name"], "reason": "file missing"})
+            continue
+        sector = (row["sector"] or "").strip() or "unsorted"
+        safe_sector = re.sub(r'[^\w\s\-]', '_', sector).strip()
+        dest_dir = src_path.parent.parent / safe_sector
+        dest_dir.mkdir(parents=True, exist_ok=True)
+        dest_path = dest_dir / src_path.name
+        # avoid overwriting
+        if dest_path.exists() and dest_path != src_path:
+            stem, suffix = src_path.stem, src_path.suffix
+            for i in range(1, 100):
+                candidate = dest_dir / f"{stem}_{i}{suffix}"
+                if not candidate.exists():
+                    dest_path = candidate
+                    break
+        try:
+            shutil.move(str(src_path), str(dest_path))
+            conn.execute("UPDATE notes SET local_path=? WHERE id=?", (str(dest_path), row["id"]))
+            moved.append({"id": row["id"], "name": row["name"], "dest": str(dest_path)})
+        except Exception as exc:
+            errors.append({"id": row["id"], "name": row["name"], "error": str(exc)})
+    conn.commit()
+    conn.close()
+    return jsonify(ok=True, moved=len(moved), skipped=len(skipped), errors=errors)
 
 
 @notes_bp.route("/feed")
