@@ -477,38 +477,16 @@ function editMeta(span) {
 }
 
 function _editDate(span, id, cur) {
-  const parts = (cur && cur !== '—') ? cur.split('-') : ['', '', ''];
-  const [iy, im, id_] = parts;
-
-  const wrap = document.createElement('span');
-  wrap.style.cssText = 'display:inline-flex;align-items:center;gap:3px';
-
-  function mkInput(val, maxlen, w, placeholder) {
-    const inp = document.createElement('input');
-    inp.type = 'text'; inp.inputMode = 'numeric';
-    inp.value = val; inp.maxLength = maxlen; inp.placeholder = placeholder;
-    inp.style.cssText = `width:${w}px;font-size:.82rem;border:1.5px solid #3b82f6;` +
-      `border-radius:4px;padding:2px 4px;outline:none;text-align:center`;
-    return inp;
-  }
-
-  const yInp = mkInput(iy,  4, 46, 'YYYY');
-  const mInp = mkInput(im,  2, 28, 'MM');
-  const dInp = mkInput(id_, 2, 28, 'DD');
-
-  wrap.appendChild(yInp);
-  wrap.appendChild(document.createTextNode('-'));
-  wrap.appendChild(mInp);
-  wrap.appendChild(document.createTextNode('-'));
-  wrap.appendChild(dInp);
+  const inp = document.createElement('input');
+  inp.type = 'text';
+  inp.value = (cur && cur !== '—') ? cur : '';
+  inp.placeholder = 'YYYY-MM-DD';
+  inp.style.cssText = 'width:108px;font-size:.82rem;border:1.5px solid #3b82f6;' +
+    'border-radius:4px;padding:2px 6px;outline:none';
 
   span.textContent = '';
-  span.appendChild(wrap);
-  yInp.focus(); yInp.select();
-
-  // Auto-advance year→month→day
-  yInp.addEventListener('input', () => { if (yInp.value.length === 4) mInp.focus(); });
-  mInp.addEventListener('input', () => { if (mInp.value.length === 2) dInp.focus(); });
+  span.appendChild(inp);
+  inp.focus(); inp.select();
 
   function restore() {
     span.textContent = cur || '—';
@@ -516,33 +494,22 @@ function _editDate(span, id, cur) {
   }
 
   function commit() {
-    const y = yInp.value.trim(), m = mInp.value.trim(), d = dInp.value.trim();
-    if (!y && !m && !d) { restore(); _saveMeta(id, 'report_date', '', span, cur); return; }
-    const mi = parseInt(m), di = parseInt(d);
-    if (!/^\d{4}$/.test(y) || mi < 1 || mi > 12 || di < 1 || di > 31) {
-      restore(); return;
-    }
-    const val = `${y}-${m.padStart(2,'0')}-${d.padStart(2,'0')}`;
+    const v = inp.value.trim();
+    if (!v) { restore(); _saveMeta(id, 'report_date', '', span, cur); return; }
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(v)) { inp.style.borderColor = '#ef4444'; return; }
+    const [y, m, d] = v.split('-').map(Number);
+    if (m < 1 || m > 12 || d < 1 || d > 31) { inp.style.borderColor = '#ef4444'; return; }
     restore();
-    span.textContent = val;
-    _saveMeta(id, 'report_date', val, span, cur);
+    span.textContent = v;
+    _saveMeta(id, 'report_date', v, span, cur);
   }
 
-  // On each blur, wait one tick; if focus didn't move to another input in this group, commit/restore
-  let _blurTimer = null;
-  const inputs = [yInp, mInp, dInp];
-  inputs.forEach(inp => {
-    inp.addEventListener('blur', () => {
-      clearTimeout(_blurTimer);
-      _blurTimer = setTimeout(() => {
-        if (!inputs.includes(document.activeElement)) commit();
-      }, 100);
+  inp.addEventListener('blur', commit);
+  inp.addEventListener('input', () => { inp.style.borderColor = '#3b82f6'; });
+  inp.addEventListener('keydown', e => {
+      if (e.key === 'Enter')  { inp.blur(); }
+      if (e.key === 'Escape') { inp.removeEventListener('blur', commit); restore(); }
     });
-    inp.addEventListener('keydown', e => {
-      if (e.key === 'Enter')  { clearTimeout(_blurTimer); commit(); }
-      if (e.key === 'Escape') { clearTimeout(_blurTimer); restore(); }
-    });
-  });
 }
 
 // ── Chip (tag) cells: competitors & ticker ────────────────────────────────────
