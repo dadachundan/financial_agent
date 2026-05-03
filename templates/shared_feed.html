@@ -15,10 +15,19 @@
                  height:calc(100vh - 46px); overflow:hidden; }
 
   .toc-sidebar { width:240px; flex-shrink:0;
-                 height:100%; display:flex; flex-direction:column; }
+                 height:100%; display:flex; flex-direction:column;
+                 transition:width .2s; overflow:hidden; }
+  .toc-sidebar.collapsed { width:32px; }
+  .toc-sidebar.collapsed .toc-search,
+  .toc-sidebar.collapsed .toc-list { display:none; }
+  .toc-sidebar.collapsed .toc-header span.toc-label { display:none; }
   .toc-header  { font-size:.7rem; font-weight:700; color:#aaa; letter-spacing:.06em;
                  text-transform:uppercase; margin:0 0 .5rem; padding-bottom:.35rem;
-                 border-bottom:1px solid #e0e0e0; }
+                 border-bottom:1px solid #e0e0e0;
+                 display:flex; align-items:center; justify-content:space-between; }
+  .toc-toggle  { background:none; border:none; cursor:pointer; color:#aaa; font-size:.9rem;
+                 padding:0; line-height:1; flex-shrink:0; }
+  .toc-toggle:hover { color:#555; }
   .toc-search  { margin-bottom:.6rem; }
   .toc-search input { font-size:.8rem; padding:.3rem .55rem; }
   .toc-list    { overflow-y:auto; flex:1; }
@@ -71,7 +80,10 @@ __URLPATCH__
 <div class="page-layout">
 
   <nav class="toc-sidebar" id="tocSidebar">
-    <div class="toc-header">{{ toc_icon }} Notes · {{ total }}</div>
+    <div class="toc-header">
+      <span class="toc-label">{{ toc_icon }} Notes · {{ total }}</span>
+      <button class="toc-toggle" id="tocToggle" title="Collapse sidebar">‹</button>
+    </div>
     <div class="toc-search">
       <input id="searchInput" type="search" class="form-control" placeholder="Search…">
     </div>
@@ -115,6 +127,19 @@ __URLPATCH__
 <script src="/static/vendor/bootstrap.bundle.min.js"></script>
 <script>
 const _base = "{{ _base | default('') }}";
+
+// Sidebar collapse
+const tocSidebar = document.getElementById('tocSidebar');
+const tocToggle  = document.getElementById('tocToggle');
+if (localStorage.getItem('feedTocCollapsed') === '1') {
+  tocSidebar.classList.add('collapsed');
+  tocToggle.textContent = '›';
+}
+tocToggle.addEventListener('click', () => {
+  const collapsed = tocSidebar.classList.toggle('collapsed');
+  tocToggle.textContent = collapsed ? '›' : '‹';
+  localStorage.setItem('feedTocCollapsed', collapsed ? '1' : '0');
+});
 
 document.querySelectorAll('.feed-body').forEach(el => {
   el.innerHTML = marked.parse(el.dataset.md || '');
