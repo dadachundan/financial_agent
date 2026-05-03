@@ -271,8 +271,16 @@ __URLPATCH__
     <button class="btn btn-sm btn-outline-warning" onclick="moveBySector(this)">
       Move PDFs per sector
     </button>
+    <button id="scanBtn" class="btn btn-sm btn-outline-primary" onclick="scanManualReport(this)">
+      🔍 Scan manual_report
+    </button>
     <a href="{{ _base | default('') }}/feed" class="btn btn-sm btn-outline-secondary ms-auto">📓 Feed View</a>
   </div>
+
+  <!-- Scan log -->
+  <div id="scanLog" style="display:none;background:#1e1e2e;color:#cdd6f4;border-radius:8px;
+       padding:12px 16px;margin-bottom:14px;font-size:.78rem;font-family:monospace;
+       max-height:220px;overflow-y:auto;white-space:pre-wrap"></div>
 
   <!-- Upload zone -->
   <div class="upload-zone" id="uploadZone">
@@ -792,6 +800,37 @@ function moveBySector(btn) {
 }
 
 // ----------------------------------------
+function scanManualReport(btn) {
+  const log  = document.getElementById('scanLog');
+  log.style.display = 'block';
+  log.textContent = '';
+  btn.disabled = true;
+  btn.textContent = '⏳ Scanning…';
+
+  const es = new EventSource('/scan-manual-report');
+  es.onmessage = e => {
+    const msg = e.data;
+    if (msg === '__done__') {
+      es.close();
+      btn.disabled = false;
+      btn.textContent = '🔍 Scan manual_report';
+      log.textContent += '\n✅ Done.';
+      log.scrollTop = log.scrollHeight;
+      window.location.reload();
+      return;
+    }
+    log.textContent += msg + '\n';
+    log.scrollTop = log.scrollHeight;
+  };
+  es.onerror = () => {
+    es.close();
+    btn.disabled = false;
+    btn.textContent = '🔍 Scan manual_report';
+    log.textContent += '\n❌ Connection error.';
+  };
+}
+
+// ----------------------------------------
 function updateSelCount() {
   const checked = document.querySelectorAll('.row-chk:checked').length;
   document.getElementById('selCount').textContent = checked;
@@ -1169,6 +1208,69 @@ def move_by_sector():
     conn.commit()
     conn.close()
     return jsonify(ok=True, moved=len(moved), skipped=len(skipped), errors=errors)
+
+
+@notes_bp.route("/scan-manual-report")
+def scan_manual_report():
+    import json as _json
+
+    def _gen():
+        conn = get_conn()
+        existing = {r[0] for r in conn.execute("SELECT name FROM notes").fetchall()}
+        conn.close()
+
+        pdfs = sorted(MANUAL_REPORT_DIR.rglob("*.pdf"))
+        yield f"data: Found {len(pdfs)} PDFs in manual_report\n\n"
+
+        added = skipped = 0
+        for path in pdfs:
+            name = path.name
+            if name in existing:
+                skipped += 1
+                yield f"data: [skip] {name}\n\n"
+                continue
+
+            # Insert into DB
+            meta = _parse_filename_meta(path.stem)
+            now  = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+            conn = get_conn()
+            cur  = conn.execute(
+                """INSERT INTO notes (name, local_path, created_at, type, quarter, report_date, ticker)
+                   VALUES (?,?,?,?,?,?,?)""",
+                (name, str(path), now,
+                 meta.get('type'), meta.get('quarter'), meta.get('report_date'), meta.get('ticker')),
+            )
+            note_id = cur.lastrowid
+            conn.commit()
+            conn.close()
+
+            yield f"data: [add] {name} (id={note_id})\n\n"
+            added += 1
+
+            # Extract annotations
+            try:
+                anns = _extract_annotations_from_pdf(path)
+                if anns:
+                    comment = _format_annotations(anns)
+                    conn = get_conn()
+                    conn.execute(
+                        "UPDATE notes SET comment=?, comment_updated_at=? WHERE id=?",
+                        (comment, now, note_id),
+                    )
+                    conn.commit()
+                    conn.close()
+                    yield f"data:   → {len(anns)} annotation(s) extracted\n\n"
+                else:
+                    yield f"data:   → no annotations\n\n"
+            except Exception as exc:
+                yield f"data:   → annotation error: {exc}\n\n"
+
+        yield f"data: Added {added}, skipped {skipped}\n\n"
+        yield "data: __done__\n\n"
+
+    from flask import Response as _Response
+    return _Response(_gen(), mimetype="text/event-stream",
+                     headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
 
 
 @notes_bp.route("/feed")
