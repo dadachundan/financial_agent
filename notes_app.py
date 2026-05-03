@@ -16,6 +16,7 @@ Routes
 """
 
 import datetime
+import re
 import sqlite3
 import subprocess
 import sys
@@ -72,6 +73,58 @@ def init_db():
             pass
     conn.commit()
     conn.close()
+
+
+# ── Filename metadata extraction ─────────────────────────────────────────────
+
+_MONTH_MAP = {
+    'jan': '01', 'feb': '02', 'mar': '03', 'apr': '04',
+    'may': '05', 'jun': '06', 'jul': '07', 'aug': '08',
+    'sep': '09', 'oct': '10', 'nov': '11', 'dec': '12',
+}
+
+_TYPE_PATTERNS = [
+    (r'\b10[- ]?q[_ ]?slide',  '10Q_slide'),
+    (r'\bslides?\b',            '10Q_slide'),
+    (r'\b10[- ]?k\b',           '10K'),
+    (r'\b10[- ]?q\b',           '10Q'),
+    (r'\b8[- ]?k\b',            '8K'),
+    (r'\binvestor\b',           'investor'),
+]
+
+
+def _parse_filename_meta(stem: str) -> dict:
+    """Extract type, quarter, report_date, ticker from a PDF filename stem.
+
+    Example: "Micron Technology, Inc., Earnings, Q2 FY2026 Mar 18 2026 8k"
+      → type="8K", quarter="2026Q2", report_date="2026-03-18", ticker="Micron"
+    """
+    meta = {}
+
+    # Type — check in priority order (10Q_slide before 10Q)
+    for pattern, label in _TYPE_PATTERNS:
+        if re.search(pattern, stem, re.IGNORECASE):
+            meta['type'] = label
+            break
+
+    # Quarter: "Q2 FY2026" or "Q2 2026"
+    m = re.search(r'\bQ([1-4])\s+(?:FY)?(\d{4})\b', stem, re.IGNORECASE)
+    if m:
+        meta['quarter'] = f"{m.group(2)}Q{m.group(1)}"
+
+    # Report date: "Mar 18 2026"
+    m = re.search(r'\b([A-Za-z]{3})\s+(\d{1,2})\s+(\d{4})\b', stem)
+    if m:
+        month = _MONTH_MAP.get(m.group(1).lower())
+        if month:
+            meta['report_date'] = f"{m.group(3)}-{month}-{int(m.group(2)):02d}"
+
+    # Ticker: first word of the filename (company name prefix)
+    m = re.match(r'([A-Za-z][A-Za-z0-9]*)', stem)
+    if m:
+        meta['ticker'] = m.group(1)
+
+    return meta
 
 
 # ── Main index template ───────────────────────────────────────────────────────
@@ -808,11 +861,14 @@ def upload():
 
     f.save(dest)
 
+    meta = _parse_filename_meta(Path(safe_name).stem)
     now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     conn = get_conn()
     conn.execute(
-        "INSERT INTO notes (name, local_path, created_at) VALUES (?,?,?)",
-        (dest.name, str(dest), now),
+        """INSERT INTO notes (name, local_path, created_at, type, quarter, report_date, ticker)
+           VALUES (?,?,?,?,?,?,?)""",
+        (dest.name, str(dest), now,
+         meta.get('type'), meta.get('quarter'), meta.get('report_date'), meta.get('ticker')),
     )
     conn.commit()
     conn.close()
