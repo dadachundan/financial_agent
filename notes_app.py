@@ -87,6 +87,7 @@ _TYPE_PATTERNS = [
     (r'\b10[- ]?q[_ ]?slide',  '10Q_slide'),
     (r'\bslides?\b',            '10Q_slide'),
     (r'\b10[- ]?k\b',           'annual'),
+    (r'\bannual\b',             'annual'),
     (r'\b10[- ]?q\b',           '10Q'),
     (r'\b8[- ]?k\b',            '8K'),
     (r'\binvestor\b',           'investor'),
