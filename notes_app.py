@@ -86,7 +86,7 @@ _MONTH_MAP = {
 _TYPE_PATTERNS = [
     (r'\b10[- ]?q[_ ]?slide',  '10Q_slide'),
     (r'\bslides?\b',            '10Q_slide'),
-    (r'\b10[- ]?k\b',           '10K'),
+    (r'\b10[- ]?k\b',           'annual'),
     (r'\b10[- ]?q\b',           '10Q'),
     (r'\b8[- ]?k\b',            '8K'),
     (r'\binvestor\b',           'investor'),
@@ -303,7 +303,7 @@ __URLPATCH__
     <select id="fType" class="form-select form-select-sm" style="max-width:150px"
             onchange="applyNotesFilter()">
       <option value="">All types</option>
-      <option>10Q_slide</option><option>10K</option><option>10Q</option>
+      <option>10Q_slide</option><option>annual</option><option>10Q</option>
       <option>8K</option><option>investor</option>
     </select>
     <input id="fSearch" type="text" class="form-control form-control-sm ms-2"
@@ -584,7 +584,7 @@ function syncAnnotations(id, btn) {
 document.addEventListener('DOMContentLoaded', renderAllCommentCells);
 
 // ----------------------------------------
-const TYPE_OPTIONS = ['10Q_slide', '10K', '10Q', '8K', 'investor'];
+const TYPE_OPTIONS = ['10Q_slide', 'annual', '10Q', '8K', 'investor'];
 
 function editType(span) {
   if (span.querySelector('select')) return;
