@@ -925,7 +925,7 @@ def index():
         SELECT id, name, comment, created_at, comment_updated_at, pinned,
                quarter, report_date, sector, competitors, ticker, type
         FROM   notes
-        ORDER  BY pinned DESC, COALESCE(comment_updated_at, created_at) DESC
+        ORDER  BY pinned DESC, id DESC
     """).fetchall()
     conn.close()
     return render_template_string(_INDEX_TEMPLATE, rows=rows)
