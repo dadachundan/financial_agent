@@ -633,7 +633,7 @@ function editMeta(span) {
   input.type  = 'text';
   input.value = cur;
   input.className = 'meta-input';
-  if (field === 'quarter') input.placeholder = '2026Q2';
+  if (field === 'quarter') input.placeholder = '2026Q2 or 2026';
   span.textContent = '';
   span.appendChild(input);
   input.focus();
@@ -643,7 +643,7 @@ function editMeta(span) {
 
   function save() {
     const val = input.value.trim();
-    if (field === 'quarter' && val && !/^\d{4}Q[1-4]$/i.test(val)) {
+    if (field === 'quarter' && val && !/^\d{4}Q[1-4]$/i.test(val) && !/^\d{4}$/.test(val)) {
       input.style.borderColor = '#ef4444'; return;
     }
     const norm = (field === 'quarter' && val) ? val.toUpperCase() : val;
