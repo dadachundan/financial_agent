@@ -13,6 +13,7 @@ NAV_HTML = """\
     <li class="nav-item"><a class="nav-link py-1" href="/pe">&#128181; P/E</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/price-shape">&#128200; Price Shape</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/notes">&#128206; Notes</a></li>
+    <li class="nav-item"><a class="nav-link py-1" href="/obsidian">&#128204; Obsidian</a></li>
   </ul>
 </nav>
 <script>
