@@ -113,8 +113,8 @@ def _parse_filename_meta(stem: str) -> dict:
     if m:
         meta['quarter'] = f"{m.group(2)}Q{m.group(1)}"
 
-    # Report date: "Mar 18 2026"
-    m = re.search(r'\b([A-Za-z]{3})\s+(\d{1,2})\s+(\d{4})\b', stem)
+    # Report date: "Mar 18 2026" or "Apr 17, 2026"
+    m = re.search(r'\b([A-Za-z]{3})\s+(\d{1,2}),?\s+(\d{4})\b', stem)
     if m:
         month = _MONTH_MAP.get(m.group(1).lower())
         if month:
