@@ -218,6 +218,7 @@ _TEMPLATE = """\
   #note-body th { background:#1a1a3a; }
   #note-body img { max-width:100%; border-radius:4px; margin:8px 0; }
   #note-body hr { border-color:#2a2a4a; }
+  #note-body mark { background:#b8860b; color:#fff; padding:0 3px; border-radius:3px; }
   #placeholder {
     color:#444; font-size:1.1rem; margin-top:80px; text-align:center;
   }
@@ -227,6 +228,31 @@ _TEMPLATE = """\
   .folder-notes.collapsed { display:none; }
   .folder-arrow { display:inline-block; transition:transform .15s; margin-right:4px; }
   .folder-arrow.open { transform:rotate(90deg); }
+  /* outline panel */
+  #outline {
+    width:200px; min-width:160px;
+    background:#0f0f1a; border-left:1px solid #2a2a4a;
+    overflow-y:auto; padding:10px 0;
+    height:calc(100vh - 44px);
+    flex-shrink:0;
+  }
+  #outline-title {
+    font-size:.68rem; font-weight:700; color:#666;
+    letter-spacing:.08em; text-transform:uppercase;
+    padding:0 12px 6px;
+  }
+  .outline-item {
+    display:block; font-size:.75rem; color:#888;
+    padding:3px 12px; cursor:pointer; line-height:1.35;
+    text-decoration:none; white-space:nowrap;
+    overflow:hidden; text-overflow:ellipsis;
+    border-left:2px solid transparent;
+  }
+  .outline-item:hover { color:#c0c0ff; background:#1a1a3a; }
+  .outline-item.h1 { color:#a0a0cc; font-weight:600; padding-left:12px; }
+  .outline-item.h2 { padding-left:20px; }
+  .outline-item.h3 { padding-left:28px; font-size:.72rem; }
+  .outline-item.active { border-color:#6060c0; color:#c0c0ff; }
 </style>
 </head>
 <body>
@@ -272,6 +298,12 @@ _TEMPLATE = """\
     </div>
   </div>
 
+  <!-- Outline -->
+  <div id="outline">
+    <div id="outline-title">Outline</div>
+    <div id="outline-list"></div>
+  </div>
+
 </div>
 
 <script src="/static/vendor/marked.min.js"></script>
@@ -284,12 +316,50 @@ marked.setOptions({
   mangle: false,
 });
 
-// Custom renderer to keep pre-rendered <img> tags from server untouched
-const renderer = new marked.Renderer();
-const origText = renderer.text.bind(renderer);
+// Pre-process Obsidian-specific syntax before passing to marked
+function obsidianPreprocess(text) {
+  // ==highlight== → <mark>highlight</mark>  (skip inside backtick code spans)
+  return text.replace(/`[^`\\n]*`|==([^=\\n]+)==/g, (m, inner) => {
+    if (m.startsWith('`')) return m;          // leave code spans untouched
+    return '<mark>' + inner + '</mark>';
+  });
+}
+
+function buildOutline() {
+  const headings = document.querySelectorAll('#note-body h1, #note-body h2, #note-body h3');
+  const list = document.getElementById('outline-list');
+  list.innerHTML = '';
+  if (!headings.length) return;
+
+  let idx = 0;
+  headings.forEach(h => {
+    h.dataset.outlineIdx = idx;
+    const a = document.createElement('a');
+    a.className = 'outline-item ' + h.tagName.toLowerCase();
+    a.textContent = h.textContent;
+    a.href = '#';
+    a.dataset.idx = idx;
+    a.onclick = e => {
+      e.preventDefault();
+      h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    list.appendChild(a);
+    idx++;
+  });
+
+  // Highlight active heading on scroll
+  const viewer = document.getElementById('viewer');
+  viewer.onscroll = () => {
+    const scrollTop = viewer.scrollTop + 60;
+    let active = 0;
+    headings.forEach((h, i) => { if (h.offsetTop <= scrollTop) active = i; });
+    document.querySelectorAll('.outline-item').forEach((a, i) => {
+      a.classList.toggle('active', i === active);
+    });
+  };
+}
 
 function openNote(path, el) {
-  // Highlight active
   document.querySelectorAll('.note-item').forEach(x => x.classList.remove('active'));
   if (el) el.classList.add('active');
 
@@ -300,6 +370,7 @@ function openNote(path, el) {
   document.getElementById('note-title').textContent = name;
   document.getElementById('note-meta').textContent = 'Loading…';
   document.getElementById('note-body').innerHTML = '<div class="d-flex justify-content-center mt-4"><div class="spinner-border text-secondary"></div></div>';
+  document.getElementById('outline-list').innerHTML = '';
 
   fetch('/obsidian/note?path=' + encodeURIComponent(path))
     .then(r => r.json())
@@ -308,20 +379,20 @@ function openNote(path, el) {
         document.getElementById('note-body').innerHTML = '<p class="text-danger">' + data.error + '</p>';
         return;
       }
-      // Split on <img ...> tags so we don't run them through marked
+      // Split on server-rendered <img> / <span> tags so they bypass marked
       const parts = data.markdown.split(/(<img [^>]+>|<span class="text-muted">[^<]*<\/span>)/);
       let html = '';
       for (let i = 0; i < parts.length; i++) {
         if (parts[i].startsWith('<img ') || parts[i].startsWith('<span class="text-muted">')) {
           html += parts[i];
         } else {
-          html += marked.parse(parts[i]);
+          html += marked.parse(obsidianPreprocess(parts[i]));
         }
       }
       document.getElementById('note-body').innerHTML = html;
-      // Show path and folder as meta
       const folder = path.includes('/') ? path.split('/').slice(0, -1).join(' / ') : '';
       document.getElementById('note-meta').textContent = folder || 'Root';
+      buildOutline();
     })
     .catch(err => {
       document.getElementById('note-body').innerHTML = '<p class="text-danger">Failed to load: ' + err + '</p>';
