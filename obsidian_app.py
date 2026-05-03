@@ -154,7 +154,21 @@ _TEMPLATE = """\
     width:280px; min-width:220px; max-width:340px;
     background:#0f0f1a; border-right:1px solid #2a2a4a;
     display:flex; flex-direction:column; height:calc(100vh - 44px);
-    overflow:hidden;
+    overflow:hidden; transition:width .2s; flex-shrink:0;
+  }
+  #sidebar.collapsed { width:32px; min-width:32px; }
+  #sidebar.collapsed #sidebar-search,
+  #sidebar.collapsed #folder-list { display:none; }
+  #sidebar-toggle {
+    position:absolute; top:50%; transform:translateY(-50%);
+    right:6px; background:none; border:none; color:#666;
+    cursor:pointer; font-size:1rem; line-height:1; padding:0;
+  }
+  #sidebar-toggle:hover { color:#aaa; }
+  #sidebar-top {
+    position:relative; padding:6px 8px 4px;
+    border-bottom:1px solid #2a2a4a; flex-shrink:0;
+    min-height:30px;
   }
   #sidebar-search {
     padding:8px; border-bottom:1px solid #2a2a4a;
@@ -262,6 +276,9 @@ _TEMPLATE = """\
 
   <!-- Sidebar -->
   <div id="sidebar">
+    <div id="sidebar-top">
+      <button id="sidebar-toggle" title="Collapse sidebar">‹</button>
+    </div>
     <div id="sidebar-search">
       <input id="searchInput" placeholder="Search notes…" oninput="filterNotes(this.value)">
     </div>
@@ -308,6 +325,19 @@ _TEMPLATE = """\
 
 <script src="/static/vendor/marked.min.js"></script>
 <script>
+// Sidebar collapse
+const _sidebar = document.getElementById('sidebar');
+const _sidebarToggle = document.getElementById('sidebar-toggle');
+if (localStorage.getItem('obsidianSidebarCollapsed') === '1') {
+  _sidebar.classList.add('collapsed');
+  _sidebarToggle.textContent = '›';
+}
+_sidebarToggle.addEventListener('click', () => {
+  const collapsed = _sidebar.classList.toggle('collapsed');
+  _sidebarToggle.textContent = collapsed ? '›' : '‹';
+  localStorage.setItem('obsidianSidebarCollapsed', collapsed ? '1' : '0');
+});
+
 // Configure marked
 marked.setOptions({
   breaks: true,
