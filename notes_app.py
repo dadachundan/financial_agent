@@ -814,19 +814,19 @@ function scanManualReport(btn) {
       es.close();
       btn.disabled = false;
       btn.textContent = '🔍 Scan manual_report';
-      log.textContent += '\n✅ Done.';
+      log.textContent += '\\n✅ Done.';
       log.scrollTop = log.scrollHeight;
       window.location.reload();
       return;
     }
-    log.textContent += msg + '\n';
+    log.textContent += msg + '\\n';
     log.scrollTop = log.scrollHeight;
   };
   es.onerror = () => {
     es.close();
     btn.disabled = false;
     btn.textContent = '🔍 Scan manual_report';
-    log.textContent += '\n❌ Connection error.';
+    log.textContent += '\\n❌ Connection error.';
   };
 }
 
