@@ -205,8 +205,11 @@ __URLPATCH__
     <button id="openSelectedBtn" class="btn btn-sm btn-danger" onclick="openSelected()" disabled>
       📄 Open (<span id="selCount">0</span>)
     </button>
+    <button id="revealBtn" class="btn btn-sm btn-outline-secondary" onclick="revealInFinder(this)" disabled>
+      🔍 Show in Finder
+    </button>
     <button class="btn btn-sm btn-outline-warning" onclick="moveBySector(this)">
-      📁 Move PDFs per sector
+      Move PDFs per sector
     </button>
     <a href="{{ _base | default('') }}/feed" class="btn btn-sm btn-outline-secondary ms-auto">📓 Feed View</a>
   </div>
@@ -288,7 +291,7 @@ __URLPATCH__
             </div>
             <div class="pdf-meta">
               {{ (row.created_at or '')[:10] }}
-              {% if row.pinned %} · 📌 pinned{% endif %}
+              {% if row.pinned %} [pinned]{% endif %}
             </div>
             <div class="pdf-spacer"></div>
             <div class="pdf-actions">
@@ -386,7 +389,7 @@ window._commentSavePrefix = '';
 
 __MCW_JS__
 
-// ── Upload ────────────────────────────────────────────────────────────────────
+// ----------------------------------------
 const uploadZone = document.getElementById('uploadZone');
 const fileInput  = document.getElementById('fileInput');
 
@@ -425,7 +428,7 @@ function uploadFile(file) {
     });
 }
 
-// ── Row actions ───────────────────────────────────────────────────────────────
+// ----------------------------------------
 function openLocal(id, btn) {
   btn.disabled = true;
   fetch('/open-local/' + id)
@@ -445,8 +448,8 @@ function togglePin(id, btn) {
         if (row) row.classList.toggle('pinned-row', d.pinned);
         const meta = row && row.querySelector('.pdf-meta');
         if (meta) {
-          const base = meta.textContent.replace(/·\s*📌\s*pinned/g, '').trim();
-          meta.textContent = d.pinned ? base + ' · 📌 pinned' : base;
+          const base = meta.textContent.replace(/\s*\[pinned\]/g, '').trim();
+          meta.textContent = d.pinned ? base + ' [pinned]' : base;
         }
       }
     });
@@ -496,7 +499,7 @@ function syncAnnotations(id, btn) {
 
 document.addEventListener('DOMContentLoaded', renderAllCommentCells);
 
-// ── Type dropdown ─────────────────────────────────────────────────────────────
+// ----------------------------------------
 const TYPE_OPTIONS = ['10Q_slide', '10K', '10Q', '8K', 'investor'];
 
 function editType(span) {
@@ -533,7 +536,7 @@ function editType(span) {
   });
 }
 
-// ── Inline meta field editing ─────────────────────────────────────────────────
+// ----------------------------------------
 function editMeta(span) {
   if (span.querySelector('input')) return;
   const field = span.dataset.field;
@@ -608,7 +611,7 @@ function _editDate(span, id, cur) {
     });
 }
 
-// ── Chip (tag) cells: competitors & ticker ────────────────────────────────────
+// ----------------------------------------
 function editChips(id, field, btn) {
   const wrapper = btn.closest('[data-chips]');
   const cell    = btn.closest('td');
@@ -672,31 +675,44 @@ function _saveMeta(id, field, val, span, cur) {
   });
 }
 
-// ── Move PDFs by sector ───────────────────────────────────────────────────────
+// ----------------------------------------
 function moveBySector(btn) {
-  if (!confirm('Move all PDFs into per-sector folders under manual_report/<sector>/?\n\nDatabase paths will be updated.')) return;
+  if (!confirm('Move all PDFs into per-sector folders under manual_report/<sector>/?\\n\\nDatabase paths will be updated.')) return;
   btn.disabled = true;
-  btn.textContent = '⏳ Moving…';
+  btn.textContent = 'Moving...';
   fetch('/move-by-sector', {method: 'POST'})
     .then(r => r.json())
     .then(d => {
       btn.disabled = false;
-      btn.textContent = '📁 Move PDFs per sector';
-      const errs = d.errors && d.errors.length ? `\n⚠️ ${d.errors.length} error(s)` : '';
-      alert(`✅ Moved: ${d.moved}   Skipped: ${d.skipped}${errs}`);
+      btn.textContent = 'Move PDFs per sector';
+      const errs = d.errors && d.errors.length ? '\\nErrors: ' + d.errors.length : '';
+      alert('Moved: ' + d.moved + '  Skipped: ' + d.skipped + errs);
       if (d.moved > 0) location.reload();
     })
-    .catch(() => { btn.disabled = false; btn.textContent = '📁 Move PDFs per sector'; alert('Request failed'); });
+    .catch(() => { btn.disabled = false; btn.textContent = 'Move PDFs per sector'; alert('Request failed'); });
 }
 
-// ── Multi-select open ─────────────────────────────────────────────────────────
+// ----------------------------------------
 function updateSelCount() {
   const checked = document.querySelectorAll('.row-chk:checked').length;
   document.getElementById('selCount').textContent = checked;
   document.getElementById('openSelectedBtn').disabled = checked === 0;
+  document.getElementById('revealBtn').disabled = checked === 0;
   const all = Array.from(document.querySelectorAll('.row-chk'))
                    .filter(c => c.closest('tr').style.display !== 'none');
   document.getElementById('chkAll').checked = all.length > 0 && all.every(c => c.checked);
+}
+
+function revealInFinder(btn) {
+  const ids = Array.from(document.querySelectorAll('.row-chk:checked')).map(c => parseInt(c.dataset.id));
+  btn.disabled = true;
+  fetch('/reveal-in-finder', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({ids}),
+  }).then(r => r.json())
+    .then(d => { btn.disabled = false; if (!d.ok) alert(d.error || 'Failed'); })
+    .catch(() => { btn.disabled = false; });
 }
 
 function toggleAllChecks(checked) {
@@ -711,7 +727,7 @@ function openSelected() {
   ids.forEach(id => fetch('/open-local/' + id));
 }
 
-// ── Notes filter ──────────────────────────────────────────────────────────────
+// ----------------------------------------
 function applyNotesFilter() {
   const ticker = document.getElementById('fTicker').value.toLowerCase();
   const type   = document.getElementById('fType').value.toLowerCase();
@@ -939,6 +955,29 @@ def delete_note(note_id: int):
         except Exception as exc:
             print(f"[notes/delete] could not remove {local_path}: {exc}")
     return jsonify(ok=True)
+
+
+@notes_bp.route("/reveal-in-finder", methods=["POST"])
+def reveal_in_finder():
+    ids = (request.get_json(silent=True) or {}).get("ids", [])
+    if not ids:
+        return jsonify(ok=False, error="No IDs provided"), 400
+    conn = get_conn()
+    rows = conn.execute(
+        f"SELECT local_path FROM notes WHERE id IN ({','.join('?'*len(ids))})", ids
+    ).fetchall()
+    conn.close()
+    paths = [r["local_path"] for r in rows if r["local_path"] and Path(r["local_path"]).exists()]
+    if not paths:
+        return jsonify(ok=False, error="No valid files found")
+    if sys.platform == "darwin":
+        posix_list = ", ".join(f'POSIX file "{p}"' for p in paths)
+        script = f'tell application "Finder"\n  reveal {{{posix_list}}}\n  activate\nend tell'
+        subprocess.Popen(["osascript", "-e", script])
+    else:
+        for p in paths:
+            subprocess.Popen(["xdg-open", str(Path(p).parent)])
+    return jsonify(ok=True, count=len(paths))
 
 
 @notes_bp.route("/move-by-sector", methods=["POST"])

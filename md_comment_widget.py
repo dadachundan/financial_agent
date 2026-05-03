@@ -138,7 +138,7 @@ MODALS_HTML = """\
 # For AJAX-rendered rows, call  renderAllCommentCells()  after DOM update.
 
 JS = """\
-  // ── Comment widget (EasyMDE + marked.js) ─────────────────────────────────
+  // ----------------------------------------
   const _commentModal        = new bootstrap.Modal(document.getElementById('commentModal'));
   const _commentPreviewModal = new bootstrap.Modal(document.getElementById('commentPreviewModal'));
   let _easyMDE       = null;
