@@ -307,6 +307,13 @@ __URLPATCH__
       <option>10Q_slide</option><option>annual</option><option>10Q</option>
       <option>8K</option><option>investor</option>
     </select>
+    <span class="filter-label ms-2">COMMENT:</span>
+    <select id="fComment" class="form-select form-select-sm" style="max-width:140px"
+            onchange="applyNotesFilter()">
+      <option value="">All</option>
+      <option value="1">Has comment</option>
+      <option value="0">No comment</option>
+    </select>
     <input id="fSearch" type="text" class="form-control form-control-sm ms-2"
            style="max-width:280px" placeholder="Search name / ticker / sector…"
            oninput="applyNotesFilter()">
@@ -336,7 +343,7 @@ __URLPATCH__
     </thead>
     <tbody id="notesBody">
       {% for row in rows %}
-      <tr id="row-{{ row.id }}" class="{% if row.pinned %}pinned-row{% endif %}">
+      <tr id="row-{{ row.id }}" class="{% if row.pinned %}pinned-row{% endif %}" data-has-comment="{{ '1' if row.comment else '0' }}">
         <td style="text-align:center;vertical-align:middle;padding:0 8px">
           <input type="checkbox" class="row-chk" data-id="{{ row.id }}"
                  onchange="updateSelCount()">
@@ -467,6 +474,13 @@ __MCW_FOOTER__
 <script>
 const _base = "{{ _base | default('') }}";
 window._commentSavePrefix = '';
+window._onCommentRendered = function(cell) {
+  const tr = cell.closest('tr');
+  if (tr) {
+    const span = cell.querySelector('.comment-preview');
+    tr.dataset.hasComment = (span && span.dataset.comment) ? '1' : '0';
+  }
+};
 
 __MCW_JS__
 
@@ -858,18 +872,20 @@ function openSelected() {
 
 // ----------------------------------------
 function applyNotesFilter() {
-  const ticker = document.getElementById('fTicker').value.toLowerCase();
-  const type   = document.getElementById('fType').value.toLowerCase();
-  const search = document.getElementById('fSearch').value.toLowerCase().trim();
-  const rows   = document.querySelectorAll('#notesBody tr');
+  const ticker  = document.getElementById('fTicker').value.toLowerCase();
+  const type    = document.getElementById('fType').value.toLowerCase();
+  const comment = document.getElementById('fComment').value;
+  const search  = document.getElementById('fSearch').value.toLowerCase().trim();
+  const rows    = document.querySelectorAll('#notesBody tr');
   let vis = 0;
   rows.forEach(tr => {
     const tickerCell = tr.querySelector('[data-chips]') ? tr.querySelector('[data-chips]').dataset.chips.toLowerCase() : '';
     const typeCell   = (tr.querySelector('.meta-val[data-field="type"]') || {}).textContent || '';
     const text       = tr.textContent.toLowerCase();
-    const ok = (!ticker || tickerCell.includes(ticker))
-            && (!type   || typeCell.toLowerCase() === type)
-            && (!search || text.includes(search));
+    const ok = (!ticker  || tickerCell.includes(ticker))
+            && (!type    || typeCell.toLowerCase() === type)
+            && (!comment || tr.dataset.hasComment === comment)
+            && (!search  || text.includes(search));
     tr.style.display = ok ? '' : 'none';
     if (ok) vis++;
   });
@@ -879,9 +895,10 @@ function applyNotesFilter() {
 }
 
 function clearNotesFilter() {
-  document.getElementById('fTicker').value = '';
-  document.getElementById('fType').value   = '';
-  document.getElementById('fSearch').value = '';
+  document.getElementById('fTicker').value  = '';
+  document.getElementById('fType').value    = '';
+  document.getElementById('fComment').value = '';
+  document.getElementById('fSearch').value  = '';
   applyNotesFilter();
 }
 </script>
