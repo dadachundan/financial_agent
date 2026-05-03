@@ -78,9 +78,18 @@ def init_db():
 # ── Filename metadata extraction ─────────────────────────────────────────────
 
 _MONTH_MAP = {
-    'jan': '01', 'feb': '02', 'mar': '03', 'apr': '04',
-    'may': '05', 'jun': '06', 'jul': '07', 'aug': '08',
-    'sep': '09', 'oct': '10', 'nov': '11', 'dec': '12',
+    'jan': '01', 'january': '01',
+    'feb': '02', 'february': '02',
+    'mar': '03', 'march': '03',
+    'apr': '04', 'april': '04',
+    'may': '05',
+    'jun': '06', 'june': '06',
+    'jul': '07', 'july': '07',
+    'aug': '08', 'august': '08',
+    'sep': '09', 'september': '09',
+    'oct': '10', 'october': '10',
+    'nov': '11', 'november': '11',
+    'dec': '12', 'december': '12',
 }
 
 _TYPE_PATTERNS = [
@@ -113,8 +122,8 @@ def _parse_filename_meta(stem: str) -> dict:
     if m:
         meta['quarter'] = f"{m.group(2)}Q{m.group(1)}"
 
-    # Report date: "Mar 18 2026" or "Apr 17, 2026"
-    m = re.search(r'\b([A-Za-z]{3})\s+(\d{1,2}),?\s+(\d{4})\b', stem)
+    # Report date: "Mar 18 2026", "Apr 17, 2026", "March 17, 2026"
+    m = re.search(r'\b([A-Za-z]{3,9})\s+(\d{1,2}),?\s+(\d{4})\b', stem)
     if m:
         month = _MONTH_MAP.get(m.group(1).lower())
         if month:
