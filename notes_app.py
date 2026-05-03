@@ -216,9 +216,9 @@ __URLPATCH__
 
   <!-- Upload zone -->
   <div class="upload-zone" id="uploadZone">
-    <p>📄 <b>Click or drag &amp; drop</b> a PDF to upload</p>
-    <p class="mt-1" style="font-size:.78rem">Accepts .pdf files up to 50 MB</p>
-    <input type="file" id="fileInput" accept=".pdf" style="display:none">
+    <p>📄 <b>Click or drag &amp; drop</b> PDFs to upload</p>
+    <p class="mt-1" style="font-size:.78rem">Accepts multiple .pdf files up to 50 MB each</p>
+    <input type="file" id="fileInput" accept=".pdf" multiple style="display:none">
     <div id="uploadProgress" class="mt-2">
       <div class="progress" style="height:6px;max-width:300px;margin:0 auto">
         <div class="progress-bar progress-bar-striped progress-bar-animated"
@@ -398,34 +398,38 @@ uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.cl
 uploadZone.addEventListener('dragleave', ()  => uploadZone.classList.remove('dragover'));
 uploadZone.addEventListener('drop', e => {
   e.preventDefault(); uploadZone.classList.remove('dragover');
-  const f = e.dataTransfer.files[0];
-  if (f) uploadFile(f);
+  const files = Array.from(e.dataTransfer.files).filter(f => f.name.toLowerCase().endsWith('.pdf'));
+  if (files.length) uploadFiles(files);
+  else alert('Only PDF files are supported.');
 });
-fileInput.addEventListener('change', () => { if (fileInput.files[0]) uploadFile(fileInput.files[0]); });
+fileInput.addEventListener('change', () => {
+  const files = Array.from(fileInput.files).filter(f => f.name.toLowerCase().endsWith('.pdf'));
+  if (files.length) uploadFiles(files);
+  fileInput.value = '';
+});
 
-function uploadFile(file) {
-  if (!file.name.toLowerCase().endsWith('.pdf')) {
-    alert('Only PDF files are supported.'); return;
+async function uploadFiles(files) {
+  const progressEl = document.getElementById('uploadProgress');
+  const msgEl      = document.getElementById('uploadMsg');
+  progressEl.style.display = 'block';
+  let failed = 0;
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    msgEl.textContent = `Uploading ${i + 1} / ${files.length}: ${file.name}…`;
+    const fd = new FormData();
+    fd.append('pdf', file);
+    try {
+      const r    = await fetch('/upload', { method: 'POST', body: fd });
+      const data = await r.json();
+      if (!data.ok) { failed++; console.error('Upload failed:', file.name, data.error); }
+    } catch (e) {
+      failed++;
+      console.error('Upload error:', file.name, e);
+    }
   }
-  document.getElementById('uploadProgress').style.display = 'block';
-  document.getElementById('uploadMsg').textContent = 'Uploading ' + file.name + '…';
-  const fd = new FormData();
-  fd.append('pdf', file);
-  fetch('/upload', { method: 'POST', body: fd })
-    .then(r => r.json())
-    .then(data => {
-      document.getElementById('uploadProgress').style.display = 'none';
-      fileInput.value = '';
-      if (data.ok) {
-        window.location.reload();
-      } else {
-        alert(data.error || 'Upload failed');
-      }
-    })
-    .catch(() => {
-      document.getElementById('uploadProgress').style.display = 'none';
-      alert('Upload failed');
-    });
+  progressEl.style.display = 'none';
+  if (failed > 0) alert(`${failed} file(s) failed to upload.`);
+  window.location.reload();
 }
 
 // ----------------------------------------
