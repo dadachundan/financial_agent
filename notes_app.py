@@ -516,6 +516,7 @@ async function uploadFiles(files) {
   const msgEl      = document.getElementById('uploadMsg');
   progressEl.style.display = 'block';
   let failed = 0;
+  const skipped = [];
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
     msgEl.textContent = `Uploading ${i + 1} / ${files.length}: ${file.name}…`;
@@ -524,13 +525,17 @@ async function uploadFiles(files) {
     try {
       const r    = await fetch('/upload', { method: 'POST', body: fd });
       const data = await r.json();
-      if (!data.ok) { failed++; console.error('Upload failed:', file.name, data.error); }
+      if (!data.ok) {
+        if (r.status === 409) { skipped.push(file.name); }
+        else { failed++; console.error('Upload failed:', file.name, data.error); }
+      }
     } catch (e) {
       failed++;
       console.error('Upload error:', file.name, e);
     }
   }
   progressEl.style.display = 'none';
+  if (skipped.length > 0) alert(`${skipped.length} file(s) already in database, skipped:\\n${skipped.join('\\n')}`);
   if (failed > 0) alert(`${failed} file(s) failed to upload.`);
   window.location.reload();
 }
@@ -978,10 +983,16 @@ def upload():
     if not f.filename.lower().endswith(".pdf"):
         return jsonify(ok=False, error="Only PDF files are supported"), 400
 
+    safe_name = Path(f.filename).name
+    conn = get_conn()
+    existing = conn.execute("SELECT id FROM notes WHERE name=?", (safe_name,)).fetchone()
+    conn.close()
+    if existing:
+        return jsonify(ok=False, error=f"Already in database: {safe_name}"), 409
+
     today = datetime.date.today().isoformat()
     dest_dir = MANUAL_REPORT_DIR / today
     dest_dir.mkdir(parents=True, exist_ok=True)
-    safe_name = Path(f.filename).name
     dest = dest_dir / safe_name
     i = 1
     while dest.exists():
