@@ -261,6 +261,12 @@ __URLPATCH__
     <button id="revealBtn" class="btn btn-sm btn-outline-secondary" onclick="revealInFinder(this)" disabled>
       🔍 Show in Finder
     </button>
+    <button id="batchSectorBtn" class="btn btn-sm btn-outline-info" onclick="batchSet('sector')" disabled>
+      Set Sector
+    </button>
+    <button id="batchTickerBtn" class="btn btn-sm btn-outline-info" onclick="batchSet('ticker')" disabled>
+      Set Ticker
+    </button>
     <button class="btn btn-sm btn-outline-warning" onclick="moveBySector(this)">
       Move PDFs per sector
     </button>
@@ -430,6 +436,27 @@ __URLPATCH__
     <p>No PDFs yet — upload one above.</p>
   </div>
   {% endif %}
+</div>
+
+<!-- Batch set modal -->
+<div class="modal fade" id="batchSetModal" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header py-2">
+        <h6 class="modal-title mb-0" id="batchSetTitle"></h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body py-2">
+        <input type="text" id="batchSetInput" class="form-control form-control-sm"
+               placeholder="Enter value (blank to clear)…"
+               onkeydown="if(event.key==='Enter') batchSetConfirm()">
+      </div>
+      <div class="modal-footer py-2">
+        <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button class="btn btn-sm btn-primary" onclick="batchSetConfirm()">Apply</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 __MCW_MODALS__
@@ -753,11 +780,55 @@ function moveBySector(btn) {
 function updateSelCount() {
   const checked = document.querySelectorAll('.row-chk:checked').length;
   document.getElementById('selCount').textContent = checked;
-  document.getElementById('openSelectedBtn').disabled = checked === 0;
-  document.getElementById('revealBtn').disabled = checked === 0;
+  const none = checked === 0;
+  document.getElementById('openSelectedBtn').disabled = none;
+  document.getElementById('revealBtn').disabled = none;
+  document.getElementById('batchSectorBtn').disabled = none;
+  document.getElementById('batchTickerBtn').disabled = none;
   const all = Array.from(document.querySelectorAll('.row-chk'))
                    .filter(c => c.closest('tr').style.display !== 'none');
   document.getElementById('chkAll').checked = all.length > 0 && all.every(c => c.checked);
+}
+
+// ----------------------------------------
+let _batchField = '';
+let _batchModal = null;
+
+function batchSet(field) {
+  _batchField = field;
+  const count = document.querySelectorAll('.row-chk:checked').length;
+  const label = field === 'sector' ? 'Sector' : 'Ticker';
+  document.getElementById('batchSetTitle').textContent = `Set ${label} for ${count} row${count > 1 ? 's' : ''}`;
+  document.getElementById('batchSetInput').value = '';
+  if (!_batchModal) _batchModal = new bootstrap.Modal(document.getElementById('batchSetModal'));
+  _batchModal.show();
+  setTimeout(() => document.getElementById('batchSetInput').focus(), 250);
+}
+
+async function batchSetConfirm() {
+  const val = document.getElementById('batchSetInput').value.trim();
+  _batchModal.hide();
+  const ids = Array.from(document.querySelectorAll('.row-chk:checked')).map(c => parseInt(c.dataset.id));
+  await Promise.all(ids.map(id =>
+    fetch('/meta/' + id, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({[_batchField]: val}),
+    })
+  ));
+  // Update cells in place
+  ids.forEach(id => {
+    if (_batchField === 'ticker') {
+      const cell = document.getElementById('ticker-cell-' + id);
+      if (cell) renderChips(cell, id, 'ticker', val, 'tick');
+    } else {
+      const span = document.querySelector(`#row-${id} .meta-val[data-field="${_batchField}"]`);
+      if (span) {
+        span.textContent = val || '—';
+        span.classList.toggle('empty', !val);
+      }
+    }
+  });
 }
 
 function revealInFinder(btn) {
