@@ -302,6 +302,7 @@ thead tr.subhdr th { background: #2c2c3e; font-size: 10px; font-weight: 400;
       <button class="btn btn-outline-secondary earnings-btn active" data-filter="all"       onclick="setEarningsFilter('all')">All</button>
       <button class="btn btn-outline-secondary earnings-btn"        data-filter="today"     onclick="setEarningsFilter('today')">Today</button>
       <button class="btn btn-outline-secondary earnings-btn"        data-filter="tomorrow"  onclick="setEarningsFilter('tomorrow')">Tomorrow</button>
+      <button class="btn btn-outline-secondary earnings-btn"        data-filter="yesterday" onclick="setEarningsFilter('yesterday')">Yesterday</button>
       <button class="btn btn-outline-secondary earnings-btn"        data-filter="last_week" onclick="setEarningsFilter('last_week')">Last Week</button>
       <button class="btn btn-outline-secondary earnings-btn"        data-filter="last_month" onclick="setEarningsFilter('last_month')">Last Month</button>
     </div>
@@ -370,6 +371,7 @@ thead tr.subhdr th { background: #2c2c3e; font-size: 10px; font-weight: 400;
         <th colspan="2" class="text-center grp-start">Growth (TTM YoY)</th>
         <th colspan="3" class="text-center grp-start">Margins (TTM)</th>
         <th colspan="4" class="text-center grp-start">Price Change</th>
+        <th rowspan="2" data-col="earnings_ts" class="text-center grp-start">Earnings Date</th>
       </tr>
       <tr class="subhdr">
         <th data-col="trailing_pe" class="text-end grp-start">Trailing P/E</th>
@@ -418,6 +420,7 @@ function filteredRows() {
   const capMax = parseFloat(document.getElementById('capMax').value) || Infinity;
   const now = Math.floor(Date.now() / 1000);
   const todayStart = Math.floor(new Date().setHours(0,0,0,0) / 1000);
+  const yesterdayStart = todayStart - 86400;
   const tomorrowStart = todayStart + 86400;
   const dayAfterTomorrow = todayStart + 86400 * 2;
   const weekAgoStart = todayStart - 86400 * 7;
@@ -433,6 +436,7 @@ function filteredRows() {
       if (ets == null) return false;
       if (_earningsFilter === 'today'      && !(ets >= todayStart     && ets < tomorrowStart))    return false;
       if (_earningsFilter === 'tomorrow'   && !(ets >= tomorrowStart  && ets < dayAfterTomorrow)) return false;
+      if (_earningsFilter === 'yesterday'  && !(ets >= yesterdayStart && ets < todayStart))       return false;
       if (_earningsFilter === 'last_week'  && !(ets >= weekAgoStart   && ets < todayStart))       return false;
       if (_earningsFilter === 'last_month' && !(ets >= monthAgoStart  && ets < weekAgoStart))     return false;
     }
@@ -599,6 +603,19 @@ function fmtChg(v) {
   if (v == null || isNaN(v)) return '<span class="g-na">—</span>';
   const cls = v >= 0 ? 'g-pos' : 'g-neg';
   return '<span class="' + cls + '">' + (v >= 0 ? '+' : '') + (v * 100).toFixed(1) + '%</span>';
+}
+function fmtEarningsDate(ts) {
+  if (ts == null) return '<span class="g-na">—</span>';
+  const d = new Date(ts * 1000);
+  const today = new Date(); today.setHours(0,0,0,0);
+  const diff = Math.round((d - today) / 86400000);
+  const label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+  let badge = '';
+  if (diff === 0)  badge = ' <span class="badge bg-warning text-dark" style="font-size:10px">Today</span>';
+  else if (diff === 1)  badge = ' <span class="badge bg-info text-dark" style="font-size:10px">Tomorrow</span>';
+  else if (diff === -1) badge = ' <span class="badge bg-secondary" style="font-size:10px">Yesterday</span>';
+  else if (diff > 0 && diff <= 7)  badge = ' <span class="badge bg-light text-dark border" style="font-size:10px">In ' + diff + 'd</span>';
+  return '<span style="white-space:nowrap;font-size:11px">' + label + badge + '</span>';
 }
 
 /* ── bubble chart ── */
@@ -771,6 +788,7 @@ function rowHtml(r, showSector) {
     <td class="text-end">${fmtChg(r.week_change)}</td>
     <td class="text-end">${fmtChg(r.month_change)}</td>
     <td class="text-end">${fmtChg(r.year_change)}</td>
+    <td class="text-center grp-start">${fmtEarningsDate(r.earnings_ts)}</td>
   </tr>`;
 }
 function renderTable() {
@@ -791,7 +809,7 @@ function renderTable() {
     for (const sec of sectorOrder) {
       const grp = rows.filter(r => r.sector === sec).sort(cmp);
       if (!grp.length) continue;
-      html += `<tr class="table-secondary"><td colspan="16"><strong>${sec}</strong></td></tr>`;
+      html += `<tr class="table-secondary"><td colspan="17"><strong>${sec}</strong></td></tr>`;
       html += grp.map(r => rowHtml(r, false)).join('');
     }
   } else {
