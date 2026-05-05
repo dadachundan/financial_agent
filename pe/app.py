@@ -90,11 +90,41 @@ ALL_TICKERS: list[str] = [t for _, tickers in WATCHLIST for t in tickers]
 SECTOR_MAP:  dict[str, str] = {t: s for s, tickers in WATCHLIST for t in tickers}
 
 CACHE_TTL = 30 * 60  # 30 minutes
+_DISK_CACHE = _PROJECT_ROOT / "db" / "pe_cache.json"
 
 _cache_lock = threading.Lock()
 _cache_data: list[dict] | None = None
 _cache_ts:   float = 0.0
 _refresh_in_progress = False
+
+
+def _load_disk_cache() -> tuple[list[dict] | None, float]:
+    """Return (data, timestamp) from disk if it was saved today, else (None, 0)."""
+    try:
+        if not _DISK_CACHE.exists():
+            return None, 0.0
+        saved = json.loads(_DISK_CACHE.read_text(encoding="utf-8"))
+        ts = float(saved.get("ts", 0))
+        saved_date = time.strftime("%Y-%m-%d", time.localtime(ts))
+        today = time.strftime("%Y-%m-%d")
+        if saved_date == today:
+            log.info("Loaded PE cache from disk (%s, %d tickers).", saved_date, len(saved.get("data", [])))
+            return saved["data"], ts
+    except Exception as e:
+        log.warning("Could not load PE disk cache: %s", e)
+    return None, 0.0
+
+
+def _save_disk_cache(data: list[dict], ts: float) -> None:
+    try:
+        _DISK_CACHE.parent.mkdir(parents=True, exist_ok=True)
+        _DISK_CACHE.write_text(
+            json.dumps({"ts": ts, "data": data}, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        log.info("PE cache saved to disk.")
+    except Exception as e:
+        log.warning("Could not save PE disk cache: %s", e)
 
 
 # ── Data fetching ─────────────────────────────────────────────────────────────
@@ -213,10 +243,12 @@ def get_cached_data(force: bool = False) -> list[dict] | None:
     def _do():
         global _cache_data, _cache_ts, _refresh_in_progress
         data = _fetch_all()
+        ts = time.time()
         with _cache_lock:
             _cache_data = data
-            _cache_ts = time.time()
+            _cache_ts = ts
             _refresh_in_progress = False
+        _save_disk_cache(data, ts)
         log.info("Cache updated.")
 
     threading.Thread(target=_do, daemon=True).start()
@@ -224,12 +256,23 @@ def get_cached_data(force: bool = False) -> list[dict] | None:
     return _cache_data
 
 
+def _prewarm():
+    global _cache_data, _cache_ts
+    disk_data, disk_ts = _load_disk_cache()
+    if disk_data is not None:
+        with _cache_lock:
+            _cache_data = disk_data
+            _cache_ts = disk_ts
+    else:
+        get_cached_data()
+
+
 # ── Blueprint ─────────────────────────────────────────────────────────────────
 
 pe_bp = Blueprint("pe", __name__, url_prefix="/pe")
 
-# Pre-warm cache on import so data is ready before first page visit
-threading.Thread(target=lambda: get_cached_data(), daemon=True).start()
+# Pre-warm: use today's disk cache if available, else fetch from yfinance
+threading.Thread(target=_prewarm, daemon=True).start()
 
 TEMPLATE = """<!doctype html>
 <html lang="en">
