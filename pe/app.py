@@ -19,6 +19,7 @@ import sys
 import threading
 import time
 from pathlib import Path
+import pandas as pd
 
 SCRIPT_DIR = Path(__file__).parent
 _PROJECT_ROOT = SCRIPT_DIR.parent
@@ -109,10 +110,50 @@ def _exchange_of(ticker: str) -> str:
     return "US"
 
 
-def _fetch_one(ticker: str) -> dict:
+def _batch_history(tickers: list[str]) -> dict:
+    """Batch-download 1-year daily close prices. Returns {ticker: pd.Series | None}."""
+    result: dict = {}
+    BATCH = 50
+    for i in range(0, len(tickers), BATCH):
+        batch = tickers[i : i + BATCH]
+        try:
+            raw = yf.download(
+                batch, period="1y", interval="1d",
+                auto_adjust=True, threads=True, progress=False,
+            )
+            if raw.empty:
+                continue
+            close = raw["Close"]  # always a DataFrame in yfinance 0.2+
+            for ticker in batch:
+                try:
+                    s = close[ticker].dropna()
+                    result[ticker] = s if len(s) > 0 else None
+                except (KeyError, TypeError):
+                    result[ticker] = None
+        except Exception as e:
+            log.warning("History batch failed (i=%d): %s", i, e)
+    return result
+
+
+def _fetch_one(ticker: str, hist=None) -> dict:
     try:
         info = yf.Ticker(ticker).info
         en_name = info.get("shortName") or info.get("longName") or ticker
+
+        day_change = week_change = month_change = year_change = None
+        if hist is not None and len(hist) >= 2:
+            cur = float(hist.iloc[-1])
+            prev = float(hist.iloc[-2])
+            if prev:
+                day_change = cur / prev - 1
+            if len(hist) >= 6:
+                week_change = cur / float(hist.iloc[-6]) - 1
+            if len(hist) >= 22:
+                month_change = cur / float(hist.iloc[-22]) - 1
+            year_change = cur / float(hist.iloc[0]) - 1
+
+        earnings_ts = info.get("earningsTimestamp") or info.get("earningsTimestampStart")
+
         return {
             "ticker":           ticker,
             "name":             en_name,
@@ -123,13 +164,16 @@ def _fetch_one(ticker: str) -> dict:
             "trailing_pe":      info.get("trailingPE"),
             "forward_pe":       info.get("forwardPE"),
             "mkt_cap":          info.get("marketCap"),
-            # Growth (TTM YoY)
             "rev_growth":       info.get("revenueGrowth"),
             "earn_growth":      info.get("earningsGrowth"),
-            # Margins
             "gross_margin":     info.get("grossMargins"),
             "op_margin":        info.get("operatingMargins"),
             "net_margin":       info.get("profitMargins"),
+            "day_change":       day_change,
+            "week_change":      week_change,
+            "month_change":     month_change,
+            "year_change":      year_change,
+            "earnings_ts":      earnings_ts,
         }
     except Exception as e:
         log.warning("Failed %s: %s", ticker, e)
@@ -137,14 +181,19 @@ def _fetch_one(ticker: str) -> dict:
                 "sector": SECTOR_MAP.get(ticker, ""), "exchange": _exchange_of(ticker),
                 "price": None, "trailing_pe": None, "forward_pe": None, "mkt_cap": None,
                 "rev_growth": None, "earn_growth": None,
-                "gross_margin": None, "op_margin": None, "net_margin": None}
+                "gross_margin": None, "op_margin": None, "net_margin": None,
+                "day_change": None, "week_change": None, "month_change": None,
+                "year_change": None, "earnings_ts": None}
 
 
 def _fetch_all() -> list[dict]:
     log.info("Fetching PE data for %d tickers…", len(ALL_TICKERS))
+    log.info("Downloading 1-year price history…")
+    hist_map = _batch_history(ALL_TICKERS)
+    log.info("History downloaded for %d/%d tickers.", len(hist_map), len(ALL_TICKERS))
     results = []
     for i, t in enumerate(ALL_TICKERS):
-        results.append(_fetch_one(t))
+        results.append(_fetch_one(t, hist_map.get(t)))
         if i % 10 == 9:
             time.sleep(0.3)
     log.info("Done fetching PE data (%d tickers).", len(results))
@@ -222,6 +271,8 @@ thead tr.subhdr th { background: #2c2c3e; font-size: 10px; font-weight: 400;
 /* Chart */
 #chartWrap { background: #fff; border-radius: 6px; padding: 12px; margin-bottom: 20px; }
 #chartWrap canvas { display: block; }
+/* Earnings filter */
+.earnings-btn.active { background-color: #0d6efd; color: #fff; border-color: #0d6efd; }
 </style>
 </head>
 <body>
@@ -242,6 +293,18 @@ thead tr.subhdr th { background: #2c2c3e; font-size: 10px; font-weight: 400;
     </div>
     <span id="status"></span>
     <span id="spinner" class="spinner-border text-secondary" role="status" style="display:none"></span>
+  </div>
+
+  <!-- earnings filter -->
+  <div class="mb-2 d-flex flex-wrap align-items-center gap-2">
+    <span class="text-muted small fw-bold">EARNINGS:</span>
+    <div class="btn-group btn-group-sm">
+      <button class="btn btn-outline-secondary earnings-btn active" data-filter="all"       onclick="setEarningsFilter('all')">All</button>
+      <button class="btn btn-outline-secondary earnings-btn"        data-filter="today"     onclick="setEarningsFilter('today')">Today</button>
+      <button class="btn btn-outline-secondary earnings-btn"        data-filter="tomorrow"  onclick="setEarningsFilter('tomorrow')">Tomorrow</button>
+      <button class="btn btn-outline-secondary earnings-btn"        data-filter="last_week" onclick="setEarningsFilter('last_week')">Last Week</button>
+      <button class="btn btn-outline-secondary earnings-btn"        data-filter="last_month" onclick="setEarningsFilter('last_month')">Last Month</button>
+    </div>
   </div>
 
   <!-- filters -->
@@ -306,6 +369,7 @@ thead tr.subhdr th { background: #2c2c3e; font-size: 10px; font-weight: 400;
         <th colspan="2" class="text-center grp-start">Valuation</th>
         <th colspan="2" class="text-center grp-start">Growth (TTM YoY)</th>
         <th colspan="3" class="text-center grp-start">Margins (TTM)</th>
+        <th colspan="4" class="text-center grp-start">Price Change</th>
       </tr>
       <tr class="subhdr">
         <th data-col="trailing_pe" class="text-end grp-start">Trailing P/E</th>
@@ -315,6 +379,10 @@ thead tr.subhdr th { background: #2c2c3e; font-size: 10px; font-weight: 400;
         <th data-col="gross_margin" class="text-end grp-start">Gross</th>
         <th data-col="op_margin"    class="text-end">Operating</th>
         <th data-col="net_margin"   class="text-end">Net</th>
+        <th data-col="day_change"   class="text-end grp-start">Day</th>
+        <th data-col="week_change"  class="text-end">Week</th>
+        <th data-col="month_change" class="text-end">Month</th>
+        <th data-col="year_change"  class="text-end">Year</th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -330,19 +398,44 @@ let _pollTimer = null;
 let _chart = null;
 let _hiddenSectors = new Set();
 let _hiddenExchanges = new Set();
+let _earningsFilter = 'all';
 
 const EXCHANGE_LABELS = { US: '🇺🇸 U.S.', HK: '🇭🇰 Hong Kong', CN: '🇨🇳 Mainland China', Other: '🌐 Other' };
 const EXCHANGE_ORDER  = ['US', 'HK', 'CN', 'Other'];
+
+/* ── earnings filter ── */
+function setEarningsFilter(f) {
+  _earningsFilter = f;
+  document.querySelectorAll('.earnings-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.filter === f);
+  });
+  renderTable();
+}
 
 /* ── filtering ── */
 function filteredRows() {
   const capMin = parseFloat(document.getElementById('capMin').value) || 0;
   const capMax = parseFloat(document.getElementById('capMax').value) || Infinity;
+  const now = Math.floor(Date.now() / 1000);
+  const todayStart = Math.floor(new Date().setHours(0,0,0,0) / 1000);
+  const tomorrowStart = todayStart + 86400;
+  const dayAfterTomorrow = todayStart + 86400 * 2;
+  const weekAgoStart = todayStart - 86400 * 7;
+  const monthAgoStart = todayStart - 86400 * 30;
+
   return _rows.filter(r => {
     if (_hiddenSectors.has(r.sector)) return false;
     if (_hiddenExchanges.has(r.exchange || 'US')) return false;
     const cap = r.mkt_cap ? r.mkt_cap / 1e9 : 0;
     if (cap < capMin || cap > capMax) return false;
+    if (_earningsFilter !== 'all') {
+      const ets = r.earnings_ts;
+      if (ets == null) return false;
+      if (_earningsFilter === 'today'      && !(ets >= todayStart     && ets < tomorrowStart))    return false;
+      if (_earningsFilter === 'tomorrow'   && !(ets >= tomorrowStart  && ets < dayAfterTomorrow)) return false;
+      if (_earningsFilter === 'last_week'  && !(ets >= weekAgoStart   && ets < todayStart))       return false;
+      if (_earningsFilter === 'last_month' && !(ets >= monthAgoStart  && ets < weekAgoStart))     return false;
+    }
     return true;
   });
 }
@@ -501,6 +594,11 @@ function fmtMargin(v) {
   if (v == null || isNaN(v)) return '<span class="m-na">N/A</span>';
   const cls = v >= 0.3 ? 'm-high' : v >= 0.1 ? 'm-mid' : 'm-low';
   return '<span class="' + cls + '">' + (v*100).toFixed(1) + '%</span>';
+}
+function fmtChg(v) {
+  if (v == null || isNaN(v)) return '<span class="g-na">—</span>';
+  const cls = v >= 0 ? 'g-pos' : 'g-neg';
+  return '<span class="' + cls + '">' + (v >= 0 ? '+' : '') + (v * 100).toFixed(1) + '%</span>';
 }
 
 /* ── bubble chart ── */
@@ -669,6 +767,10 @@ function rowHtml(r, showSector) {
     <td class="text-end grp-start">${fmtMargin(r.gross_margin)}</td>
     <td class="text-end">${fmtMargin(r.op_margin)}</td>
     <td class="text-end">${fmtMargin(r.net_margin)}</td>
+    <td class="text-end grp-start">${fmtChg(r.day_change)}</td>
+    <td class="text-end">${fmtChg(r.week_change)}</td>
+    <td class="text-end">${fmtChg(r.month_change)}</td>
+    <td class="text-end">${fmtChg(r.year_change)}</td>
   </tr>`;
 }
 function renderTable() {
@@ -689,7 +791,7 @@ function renderTable() {
     for (const sec of sectorOrder) {
       const grp = rows.filter(r => r.sector === sec).sort(cmp);
       if (!grp.length) continue;
-      html += `<tr class="table-secondary"><td colspan="12"><strong>${sec}</strong></td></tr>`;
+      html += `<tr class="table-secondary"><td colspan="16"><strong>${sec}</strong></td></tr>`;
       html += grp.map(r => rowHtml(r, false)).join('');
     }
   } else {
