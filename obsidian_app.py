@@ -148,11 +148,11 @@ _TEMPLATE = """\
 <link rel="stylesheet" href="/static/bootstrap.min.css">
 <link rel="stylesheet" href="/static/vendor/easymde.min.css">
 <style>
-  body { background:#1a1a2e; color:#e0e0e0; font-family:'Segoe UI',sans-serif; }
+  body { background:#fff; color:#222; font-family:'Segoe UI',sans-serif; }
   /* sidebar */
   #sidebar {
     width:280px; min-width:220px; max-width:340px;
-    background:#0f0f1a; border-right:1px solid #2a2a4a;
+    background:#f5f5f5; border-right:1px solid #ddd;
     display:flex; flex-direction:column; height:calc(100vh - 44px);
     overflow:hidden; transition:width .2s; flex-shrink:0;
   }
@@ -161,21 +161,21 @@ _TEMPLATE = """\
   #sidebar.collapsed #folder-list { display:none; }
   #sidebar-toggle {
     position:absolute; top:50%; transform:translateY(-50%);
-    right:6px; background:none; border:none; color:#666;
+    right:6px; background:none; border:none; color:#999;
     cursor:pointer; font-size:1rem; line-height:1; padding:0;
   }
-  #sidebar-toggle:hover { color:#aaa; }
+  #sidebar-toggle:hover { color:#444; }
   #sidebar-top {
     position:relative; padding:6px 8px 4px;
-    border-bottom:1px solid #2a2a4a; flex-shrink:0;
+    border-bottom:1px solid #ddd; flex-shrink:0;
     min-height:30px;
   }
   #sidebar-search {
-    padding:8px; border-bottom:1px solid #2a2a4a;
+    padding:8px; border-bottom:1px solid #ddd;
   }
   #sidebar-search input {
-    width:100%; background:#1a1a2e; border:1px solid #3a3a5a;
-    color:#e0e0e0; border-radius:4px; padding:4px 8px; font-size:.8rem;
+    width:100%; background:#fff; border:1px solid #ccc;
+    color:#222; border-radius:4px; padding:4px 8px; font-size:.8rem;
   }
   #folder-list { overflow-y:auto; flex:1; }
   .folder-header {
@@ -183,58 +183,58 @@ _TEMPLATE = """\
     color:#888; letter-spacing:.08em; text-transform:uppercase;
     cursor:pointer; user-select:none;
   }
-  .folder-header:hover { color:#aaa; }
+  .folder-header:hover { color:#444; }
   .note-item {
     padding:5px 14px; font-size:.8rem; cursor:pointer;
     border-left:3px solid transparent; line-height:1.3;
     white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
   }
-  .note-item:hover { background:#1e1e38; border-color:#6060c0; }
-  .note-item.active { background:#1e1e38; border-color:#9090ff; color:#c0c0ff; }
-  .note-mtime { font-size:.67rem; color:#666; }
+  .note-item:hover { background:#e8eaf6; border-color:#7986cb; }
+  .note-item.active { background:#e8eaf6; border-color:#3f51b5; color:#3f51b5; }
+  .note-mtime { font-size:.67rem; color:#999; }
   /* viewer */
   #viewer {
     flex:1; overflow-y:auto; padding:20px 30px;
-    background:#12121e;
+    background:#fff;
   }
   #note-title {
-    font-size:1.4rem; font-weight:700; color:#c0c0ff;
+    font-size:1.4rem; font-weight:700; color:#1a237e;
     margin-bottom:4px;
   }
-  #note-meta { font-size:.75rem; color:#666; margin-bottom:16px; }
+  #note-meta { font-size:.75rem; color:#999; margin-bottom:16px; }
   #note-body {
-    max-width:860px; line-height:1.8; font-size:.92rem; color:#d0d0e8;
+    max-width:860px; line-height:1.8; font-size:.92rem; color:#333;
   }
-  #note-body h1,#note-body h2,#note-body h3 { color:#a0a0ff; margin-top:1.4em; }
+  #note-body h1,#note-body h2,#note-body h3 { color:#1a237e; margin-top:1.4em; }
   #note-body h1 { font-size:1.5rem; }
   #note-body h2 { font-size:1.25rem; }
   #note-body h3 { font-size:1.05rem; }
-  #note-body a { color:#7090ff; }
+  #note-body a { color:#3f51b5; }
   #note-body blockquote {
-    border-left:3px solid #4040a0; padding-left:12px;
-    color:#aaa; margin:8px 0;
+    border-left:3px solid #9fa8da; padding-left:12px;
+    color:#666; margin:8px 0;
   }
   #note-body pre {
-    background:#0a0a18; border:1px solid #2a2a4a;
+    background:#f5f5f5; border:1px solid #ddd;
     border-radius:4px; padding:12px; overflow-x:auto;
     font-size:.82rem;
   }
   #note-body code {
-    background:#0a0a18; border-radius:3px; padding:1px 5px; font-size:.85em;
+    background:#f5f5f5; border-radius:3px; padding:1px 5px; font-size:.85em;
   }
   #note-body pre code { background:none; padding:0; }
   #note-body table {
     border-collapse:collapse; width:100%; margin:12px 0;
   }
   #note-body th,#note-body td {
-    border:1px solid #2a2a4a; padding:6px 10px; font-size:.83rem;
+    border:1px solid #ddd; padding:6px 10px; font-size:.83rem;
   }
-  #note-body th { background:#1a1a3a; }
+  #note-body th { background:#e8eaf6; }
   #note-body img { max-width:100%; border-radius:4px; margin:8px 0; }
-  #note-body hr { border-color:#2a2a4a; }
-  #note-body mark { background:#b8860b; color:#fff; padding:0 3px; border-radius:3px; }
+  #note-body hr { border-color:#ddd; }
+  #note-body mark { background:#fff9c4; color:#555; padding:0 3px; border-radius:3px; }
   #placeholder {
-    color:#444; font-size:1.1rem; margin-top:80px; text-align:center;
+    color:#aaa; font-size:1.1rem; margin-top:80px; text-align:center;
   }
   .spinner-border { width:1.5rem;height:1.5rem; }
   /* folder toggle */
@@ -245,28 +245,28 @@ _TEMPLATE = """\
   /* outline panel */
   #outline {
     width:200px; min-width:160px;
-    background:#0f0f1a; border-left:1px solid #2a2a4a;
+    background:#f5f5f5; border-left:1px solid #ddd;
     overflow-y:auto; padding:10px 0;
     height:calc(100vh - 44px);
     flex-shrink:0;
   }
   #outline-title {
-    font-size:.68rem; font-weight:700; color:#666;
+    font-size:.68rem; font-weight:700; color:#999;
     letter-spacing:.08em; text-transform:uppercase;
     padding:0 12px 6px;
   }
   .outline-item {
-    display:block; font-size:.75rem; color:#888;
+    display:block; font-size:.75rem; color:#666;
     padding:3px 12px; cursor:pointer; line-height:1.35;
     text-decoration:none; white-space:nowrap;
     overflow:hidden; text-overflow:ellipsis;
     border-left:2px solid transparent;
   }
-  .outline-item:hover { color:#c0c0ff; background:#1a1a3a; }
-  .outline-item.h1 { color:#a0a0cc; font-weight:600; padding-left:12px; }
+  .outline-item:hover { color:#3f51b5; background:#e8eaf6; }
+  .outline-item.h1 { color:#3949ab; font-weight:600; padding-left:12px; }
   .outline-item.h2 { padding-left:20px; }
   .outline-item.h3 { padding-left:28px; font-size:.72rem; }
-  .outline-item.active { border-color:#6060c0; color:#c0c0ff; }
+  .outline-item.active { border-color:#7986cb; color:#3f51b5; }
 </style>
 </head>
 <body>
