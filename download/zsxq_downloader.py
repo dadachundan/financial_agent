@@ -40,7 +40,7 @@ from zsxq_classify import classify_one
 from zsxq_common import (
     DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
     clean_zsxq_text, do_download, extract_bank, fetch_all_files,
-    fetch_all_search_results, sanitize_filename,
+    fetch_all_search_results, fetch_all_search_topic_files, sanitize_filename,
     get_session_via_selenium, init_db, upsert_entry,
 )
 
@@ -245,10 +245,32 @@ def _run_query(query: str, args, session, conn, out_dir: Path,
     print(f"\n{'='*60}")
     print(f"Searching all groups for: {query!r}  (全部星球)…")
     print(f"Output folder: {query_dir}")
-    entries = fetch_all_search_results(
+
+    # 1) Files search
+    print(f"\n[1/2] Files search…")
+    file_entries = fetch_all_search_results(session, query, max_files=args.count)
+
+    # 2) Topics search — pulls all attachments from matching posts
+    print(f"\n[2/2] Topics search…")
+    topic_entries = fetch_all_search_topic_files(
         session, query,
-        max_files=args.count,
+        max_topics=args.count or 0,
     )
+
+    # Merge: files-search results take priority (more metadata); add topic-only extras
+    seen: dict[int, dict] = {e["file"]["file_id"]: e for e in file_entries}
+    added_from_topics = 0
+    for e in topic_entries:
+        fid = e["file"]["file_id"]
+        if fid not in seen:
+            seen[fid] = e
+            added_from_topics += 1
+    entries = list(seen.values())
+    print(f"\nCombined: {len(file_entries)} (files) + {added_from_topics} new from topics "
+          f"= {len(entries)} unique files.")
+    if args.count and len(entries) > args.count:
+        entries = entries[:args.count]
+        print(f"Capped at {args.count} (--count limit).")
 
     pdf_entries = [e for e in entries if e["file"]["name"].lower().endswith(".pdf")]
 
