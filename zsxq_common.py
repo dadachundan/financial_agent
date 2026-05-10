@@ -341,10 +341,12 @@ def fetch_all_search_topic_files(
 
         topics_seen += len(topics)
         page_entries: list[dict] = []
-        for topic in topics:
+        for item in topics:
+            # /search/topics wraps each result as {"topic": {...}, "group": {...}}
+            topic = item.get("topic") or item  # handle both wrapped and bare
             talk = topic.get("talk") or {}
             files = talk.get("files") or []
-            group = topic.get("group") or {}
+            group = item.get("group") or {}
             for f in files:
                 page_entries.append({"file": f, "topic": topic, "group": group})
 
