@@ -269,6 +269,101 @@ def fetch_all_search_results(
     return all_entries
 
 
+# ── API: search topics across all groups ──────────────────────────────────────
+
+def fetch_search_topics_page(
+    session: requests.Session,
+    query: str,
+    count: int = 20,
+    index: int = 0,
+    retries: int = 4,
+) -> tuple[list[dict], int]:
+    """Search for topics matching *query* across all joined groups.
+
+    Returns (topics, next_index).
+    """
+    params: dict = {"keyword": query, "count": count}
+    if index:
+        params["index"] = index
+
+    url = f"{API_BASE}/search/topics"
+
+    for attempt in range(retries):
+        try:
+            resp = session.get(url, params=params, headers=HEADERS, timeout=30)
+        except requests.exceptions.Timeout as exc:
+            wait = 3 * (attempt + 1)
+            print(f"    Topics search timeout (attempt {attempt+1}/{retries}), retrying in {wait}s…")
+            if attempt + 1 >= retries:
+                raise RuntimeError(f"Topics search timed out after {retries} retries") from exc
+            time.sleep(wait)
+            continue
+        resp.raise_for_status()
+        data = resp.json()
+        if data.get("succeeded"):
+            rd = data["resp_data"]
+            return rd.get("topics", []), rd.get("index", index + count)
+        err = data.get("info") or data.get("error") or ""
+        if data.get("code") in (1059,) or "内部" in err:
+            wait = 3 * (attempt + 1)
+            print(f"    Transient topics search error (attempt {attempt+1}/{retries}), "
+                  f"retrying in {wait}s…")
+            time.sleep(wait)
+            continue
+        raise RuntimeError(f"Topics search API error: {err}")
+
+    raise RuntimeError(f"Topics search API error after {retries} retries")
+
+
+def fetch_all_search_topic_files(
+    session: requests.Session,
+    query: str,
+    max_topics: int = 0,
+    delay: float = 0.5,
+) -> list[dict]:
+    """Search topics for *query* and expand each topic's attachments to file entries.
+
+    Returns a flat list in the same format as fetch_all_search_results so the
+    two sources can be merged and deduplicated by file_id.
+
+    max_topics: stop after this many topic pages-worth of topics (0 = all).
+    """
+    all_entries: list[dict] = []
+    index = 0
+    page = 0
+    topics_seen = 0
+
+    while True:
+        page += 1
+        topics, next_index = fetch_search_topics_page(session, query, count=20, index=index)
+        if not topics:
+            break
+
+        topics_seen += len(topics)
+        page_entries: list[dict] = []
+        for topic in topics:
+            talk = topic.get("talk") or {}
+            files = talk.get("files") or []
+            group = topic.get("group") or {}
+            for f in files:
+                page_entries.append({"file": f, "topic": topic, "group": group})
+
+        all_entries.extend(page_entries)
+        print(f"  Topics page {page}: {len(topics)} topics → {len(page_entries)} file(s) "
+              f"(total so far: {len(all_entries)})")
+
+        if max_topics and topics_seen >= max_topics:
+            break
+
+        if len(topics) < 20:
+            break
+
+        index = next_index
+        time.sleep(delay)
+
+    return all_entries
+
+
 # ── API: download URL + file download ─────────────────────────────────────────
 
 def get_download_url(session: requests.Session, file_id: int,
