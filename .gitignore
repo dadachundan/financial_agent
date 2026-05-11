@@ -16,6 +16,7 @@ financial_reports/
 *.log
 models/
 cninfo_reports/
+reports/
 .claude/worktrees/
 .claude/settings.local.json
 log/
