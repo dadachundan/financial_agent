@@ -22,6 +22,8 @@ import email.utils
 import json
 import re
 import sqlite3
+import subprocess
+import sys
 import time
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -1139,6 +1141,9 @@ function renderCards(rows) {
           ? `<span class="badge bg-success act-btn" title="Indexed ${r.graphiti_indexed_at.slice(0,10)}">✓ KG</span>`
           : `<button class="btn btn-outline-primary act-btn idx-btn" title="Index into knowledge graph" onclick="indexReport(${r.id},this)">⬆ KG</button>`)
       : '';
+    const revealBtn = r.local_path
+      ? `<button class="btn btn-outline-secondary act-btn" title="Reveal local file in Finder" onclick="revealReport(${r.id},this)">📂</button>`
+      : '';
     return `
     <div class="report-card ${cardClass(r.form_type)}" data-id="${r.id}">
       <div class="card-top">
@@ -1155,6 +1160,7 @@ function renderCards(rows) {
           </div>
         </div>
         <div class="card-actions">
+          ${revealBtn}
           ${kgBadge}
           <button class="btn btn-outline-danger act-btn" onclick="deleteReport(${r.id},this)">🗑</button>
         </div>
@@ -1230,6 +1236,19 @@ function _startStream(path, params) {
     document.getElementById('dlBtn').disabled    = false;
     document.getElementById('batchBtn').disabled = false;
   };
+}
+
+// ── reveal in Finder ──────────────────────────────────────────────────────────
+function revealReport(id, btn) {
+  const orig = btn.textContent;
+  btn.disabled = true; btn.textContent = '⏳';
+  fetch('/reveal/'+id, {method:'POST'})
+    .then(r => r.json().then(d => ({ok:r.ok, d})))
+    .then(({ok, d}) => {
+      btn.disabled = false; btn.textContent = orig;
+      if (!ok || !d.ok) alert('Could not open: ' + (d && d.error ? d.error : 'unknown error'));
+    })
+    .catch(e => { btn.disabled = false; btn.textContent = orig; alert('Error: '+e.message); });
 }
 
 // ── delete ────────────────────────────────────────────────────────────────────
@@ -1480,6 +1499,31 @@ def serve_file(report_id: int):
             pass  # fall through to plain send_file
 
     return send_file(path)
+
+
+@sec_bp.route("/reveal/<int:report_id>", methods=["POST"])
+def reveal_file(report_id: int):
+    """Reveal the report's local file in Finder (macOS) / file manager (Linux/Windows)."""
+    conn = get_conn()
+    row  = conn.execute(
+        "SELECT local_path FROM reports WHERE id=?", (report_id,)
+    ).fetchone()
+    conn.close()
+    if not row or not row["local_path"]:
+        return jsonify(ok=False, error="No local file recorded"), 404
+    path = Path(row["local_path"])
+    if not path.exists():
+        return jsonify(ok=False, error=f"File not found: {path}"), 404
+    try:
+        if sys.platform == "darwin":
+            subprocess.Popen(["open", "-R", str(path)])
+        elif sys.platform.startswith("win"):
+            subprocess.Popen(["explorer", "/select,", str(path)])
+        else:
+            subprocess.Popen(["xdg-open", str(path.parent)])
+    except Exception as exc:
+        return jsonify(ok=False, error=str(exc)), 500
+    return jsonify(ok=True, path=str(path))
 
 
 @sec_bp.route("/comment/<int:report_id>", methods=["POST"])
