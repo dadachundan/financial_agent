@@ -9,6 +9,7 @@ NAV_HTML = """\
     <li class="nav-item"><a class="nav-link py-1" href="/zsxq/feed">&#128211; Notes Feed</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/sec">&#128196; US Reports</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/cn">&#127464;&#127475; CN Reports</a></li>
+    <li class="nav-item"><a class="nav-link py-1" href="/reports">&#128209; Reports</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/indicators">&#128200; Indicators</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/pe">&#128181; P/E</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/price-shape">&#128200; Price Shape</a></li>
