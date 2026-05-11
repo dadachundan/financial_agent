@@ -79,20 +79,42 @@ def main() -> None:
                     help="ignore --form and return all filings")
     ap.add_argument("--last", type=int, default=0,
                     help="keep only the most recent N filings (0 = all)")
+    ap.add_argument("--quarters", type=int, default=0,
+                    help="return the N most recent QUARTERLY filings (10-K "
+                         "and 10-Q mixed, sorted by period_of_report DESC). "
+                         "Overrides --form / --all when set.")
     ap.add_argument("--asc", action="store_true",
                     help="sort oldest → newest in output")
     args = ap.parse_args()
 
-    form = None if args.all else args.form
+    if args.quarters and args.quarters > 0:
+        # Pull 10-K + 10-Q (and their /A amendments), merge, sort by period
+        rows_k = _from_api(args.ticker, "10-K")
+        rows_q = _from_api(args.ticker, "10-Q")
+        source = "api"
+        if rows_k is None or rows_q is None:
+            rows_k = _from_db(args.ticker, "10-K")
+            rows_q = _from_db(args.ticker, "10-Q")
+            source = "db"
+        rows = (rows_k or []) + (rows_q or [])
+        # Sort by period_of_report DESC (the actual quarter end) — fall back
+        # to filed_date for safety
+        rows.sort(
+            key=lambda r: (r.get("period_of_report") or r.get("filed_date") or "",
+                           r.get("filed_date") or ""),
+            reverse=True,
+        )
+        rows = rows[: args.quarters]
+    else:
+        form = None if args.all else args.form
+        rows = _from_api(args.ticker, form)
+        source = "api"
+        if rows is None:
+            rows = _from_db(args.ticker, form)
+            source = "db"
+        if args.last and args.last > 0:
+            rows = rows[: args.last]
 
-    rows = _from_api(args.ticker, form)
-    source = "api"
-    if rows is None:
-        rows = _from_db(args.ticker, form)
-        source = "db"
-
-    if args.last and args.last > 0:
-        rows = rows[: args.last]
     if args.asc:
         rows = list(reversed(rows))
 
