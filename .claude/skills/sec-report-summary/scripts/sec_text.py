@@ -41,6 +41,8 @@ if str(PROJECT_ROOT) not in sys.path:
 from ingest.graphiti_ingest import (  # type: ignore  # noqa: E402
     _clean_html_to_text,
     _sec_offsets,
+    _last_offset,
+    _first_after_offset,
     _10K_PATTERNS,
     _10Q_PATTERNS,
     _8K_PATTERNS,
@@ -57,20 +59,16 @@ def _slice(full: str, start: int, end: int | None, cap: int) -> str:
     return chunk
 
 
-def _first_after(offs: dict, name: str, after: int) -> int | None:
-    """Return the first offset for ``name`` strictly after ``after``."""
-    locs = offs.get(name) or []
-    for off in locs:
-        if off > after:
-            return off
-    return None
+# Use graphiti's offset helpers — both accept ``full_text`` and filter out
+# matches that aren't at the start of a line, so cross-references like
+# "see Part I, Item 2, MD&A" buried inside paragraphs don't get picked up
+# as section anchors.
+def _last(offs: dict, name: str, full: str) -> int | None:
+    return _last_offset(offs, name, full_text=full)
 
 
-def _last(offs: dict, name: str) -> int | None:
-    """Return the last offset for ``name`` (table-of-contents entries appear
-    before the body; the body is always the last occurrence)."""
-    locs = offs.get(name) or []
-    return locs[-1] if locs else None
+def _first_after(offs: dict, name: str, after: int, full: str) -> int | None:
+    return _first_after_offset(offs, name, after, full_text=full)
 
 
 def _extract_10k(full: str, cap: int) -> list[str]:
@@ -82,26 +80,27 @@ def _extract_10k(full: str, cap: int) -> list[str]:
     offs = _sec_offsets(full, _10K_PATTERNS)
     out: list[str] = []
 
-    s1 = _last(offs, "item1")
+    s1 = _last(offs, "item1", full)
     if s1 is not None:
-        e1 = _first_after(offs, "item1a", s1) or _first_after(offs, "item2", s1)
+        e1 = (_first_after(offs, "item1a", s1, full)
+              or _first_after(offs, "item2", s1, full))
         chunk = _slice(full, s1, e1, cap)
         if len(chunk) > 300:
             out.append(f"=== ITEM 1: BUSINESS ===\n{chunk}")
 
-    s1a = _first_after(offs, "item1a", s1 or 0)
+    s1a = _first_after(offs, "item1a", s1 or 0, full)
     if s1a is not None:
-        e1a = (_first_after(offs, "item2",  s1a)
-               or _first_after(offs, "item3",  s1a)
-               or _first_after(offs, "item7",  s1a))
+        e1a = (_first_after(offs, "item2",  s1a, full)
+               or _first_after(offs, "item3",  s1a, full)
+               or _first_after(offs, "item7",  s1a, full))
         chunk = _slice(full, s1a, e1a, cap)
         if len(chunk) > 300:
             out.append(f"=== ITEM 1A: RISK FACTORS ===\n{chunk}")
 
-    s7 = _last(offs, "item7")
+    s7 = _last(offs, "item7", full)
     if s7 is not None:
-        e7 = (_first_after(offs, "item7a", s7)
-              or _first_after(offs, "item8", s7))
+        e7 = (_first_after(offs, "item7a", s7, full)
+              or _first_after(offs, "item8", s7, full))
         chunk = _slice(full, s7, e7, cap)
         if len(chunk) > 300:
             out.append(f"=== ITEM 7: MD&A ===\n{chunk}")
@@ -114,10 +113,10 @@ def _extract_10q(full: str, cap: int) -> list[str]:
     offs = _sec_offsets(full, _10Q_PATTERNS)
     out: list[str] = []
 
-    s_mda = _last(offs, "item2_mda")
+    s_mda = _last(offs, "item2_mda", full)
     if s_mda is not None:
-        e_mda = (_first_after(offs, "item3_mkt", s_mda)
-                 or _first_after(offs, "item4", s_mda))
+        e_mda = (_first_after(offs, "item3_mkt", s_mda, full)
+                 or _first_after(offs, "item4", s_mda, full))
         chunk = _slice(full, s_mda, e_mda, cap)
         # Strip forward-looking "CAUTIONARY STATEMENT" boilerplate
         chunk = re.sub(
@@ -130,7 +129,7 @@ def _extract_10q(full: str, cap: int) -> list[str]:
         if len(chunk) > 300:
             out.append(f"=== ITEM 2: MD&A ===\n{chunk}")
 
-    s_rf = _first_after(offs, "item1a", s_mda or 0)
+    s_rf = _first_after(offs, "item1a", s_mda or 0, full)
     if s_rf is not None:
         chunk = _slice(full, s_rf, None, cap)
         if len(chunk) > 300:
