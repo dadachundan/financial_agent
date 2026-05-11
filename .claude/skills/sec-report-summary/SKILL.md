@@ -97,9 +97,11 @@ A single Markdown document. Put the per-report blocks newest → oldest,
 then the "Changes over the years" section at the end. Title it
 `# <Company Name> (<TICKER>) — SEC filings summary, <oldest year>–<newest year>`.
 
-If the user asks you to save it, write to
-`/Users/x/projects/financial_agent/sec_summaries/<TICKER>_<YYYYMMDD>.md`
-(create the directory if needed). Otherwise just print it in the chat.
+**Always write the summary to** `reports/<TICKER>_<YYYYMMDD>.md` (relative
+to the project root — `/Users/x/projects/financial_agent/reports/`).
+Create the `reports/` directory if it doesn't exist. This directory is
+gitignored, so the files won't pollute the repo. After writing the file,
+print its path in chat and inline the report content for the user to read.
 
 ## Defaults & guardrails
 
