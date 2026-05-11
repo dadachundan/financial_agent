@@ -103,6 +103,38 @@ Create the `reports/` directory if it doesn't exist. This directory is
 gitignored, so the files won't pollute the repo. After writing the file,
 print its path in chat and inline the report content for the user to read.
 
+To view rendered (with charts): start `main.py` and open
+`http://localhost:5001/reports/`. The viewer renders Markdown with
+Mermaid + GitHub styling.
+
+### Always include Mermaid diagrams
+
+Plain prose summaries are hard to skim. Each report must include 2-4
+Mermaid diagrams that make the numbers visual. Pick the ones that fit
+the data you actually have:
+
+- **Quarterly revenue / net income trend** — single bar series for
+  revenue + line series for net income on one `xychart-beta`. (Mermaid
+  *does* support one bar + one line in the same xychart, but does
+  **NOT** support multiple bar series — the last `bar` line wins.)
+- **Segment mix pie** — `pie showData title <Title>` (no quotes around
+  the title; pie syntax treats quotes as literal text).
+- **YoY growth bar chart** — single bar series of YoY % per segment.
+  Better than a side-by-side comparison because xychart-beta only
+  renders one series.
+- **Strategic/tax event timeline** — Mermaid `timeline` with one entry
+  per quarter (or year), `:` separators between events within a quarter.
+
+Mermaid syntax cheats that bite:
+- `pie title …` — bare title, no quotes (else they show literally).
+- `xychart-beta` — only one data series renders; collapse multi-period
+  comparisons into a single derived series (e.g. YoY %).
+- `timeline` — colons inside event text need escaping or rephrasing.
+
+Aim for charts that *summarize* a section, not duplicate the table just
+above. The QCOM report at `reports/QCOM_<date>.md` is a working
+reference if you need an example.
+
 ## Defaults & guardrails
 
 - Default form: `10-K` (annual; best for YoY comparison).

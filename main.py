@@ -39,6 +39,7 @@ from pe.app                 import pe_bp
 from monitoring.app         import price_shape_bp
 from notes_app              import notes_bp, init_db as _notes_init
 from obsidian_app           import obsidian_bp, register_filters as _obsidian_filters
+from reports_viewer         import reports_bp
 
 # -- Build unified app ---------------------------------------------------------
 app = Flask(__name__,
@@ -60,6 +61,7 @@ app.register_blueprint(pe_bp,           url_prefix="/pe")
 app.register_blueprint(price_shape_bp,  url_prefix="/price-shape")
 app.register_blueprint(notes_bp,        url_prefix="/notes")
 app.register_blueprint(obsidian_bp,     url_prefix="/obsidian")
+app.register_blueprint(reports_bp,      url_prefix="/reports")
 _obsidian_filters(app)
 
 
@@ -83,6 +85,7 @@ _BP_PREFIXES = {
     "price_shape":  "/price-shape",
     "notes":        "/notes",
     "obsidian":     "/obsidian",
+    "reports":      "/reports",
 }
 
 
