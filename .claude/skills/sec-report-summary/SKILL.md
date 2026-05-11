@@ -49,22 +49,38 @@ For each report `id` you want to summarize:
 
 ```bash
 python3 .claude/skills/sec-report-summary/scripts/extract_report.py \
-    --id <REPORT_ID> --max-chars 60000 --header
+    --id <REPORT_ID> --header
 ```
 
 Flags:
 - `--id <int>` (looks up `local_path` + `form_type` from the DB)
 - `--path <file>` `--form 10-K` (alternative: extract a specific file)
-- `--max-chars 60000` (truncate; default 60k)
-- `--header` (prepend a one-line metadata header — recommended)
+- `--max-section <N>` per-section cap (default 30,000 chars). Each
+  Item 1 / 1A / 7 / MD&A is independently truncated at this size.
+- `--deep` disable the per-section cap entirely. Use this when you
+  need the full Item 1A for cross-year risk-factor evolution analysis,
+  or the full MD&A for revenue/segment trend work. **Default
+  recommendation: use `--deep` for multi-year analyses, default cap
+  for single-quarter / last-4-quarter summaries.**
+- `--header` prepend a one-line metadata header (recommended).
 
-The extractor returns just the substantive sections — Item 1/1A for
-10-K, Item 2/1A Part II for 10-Q, all material items for 8-K — so you
-won't be wading through XBRL tables and boilerplate.
+What gets extracted:
 
-**Performance:** read filings sequentially, not all at once. For a 10×10-K
-run, that's ~10 separate `extract_report.py` calls. You may run them in
-parallel from a single tool-use block to save wall time.
+| Form | Sections returned |
+|---|---|
+| 10-K | Item 1 (Business) + Item 1A (Risk Factors) + **Item 7 (MD&A)** |
+| 10-Q | Item 2 (MD&A) + Item 1A Part II (Risk Factors update) |
+| 8-K  | Items 1.01, 2.01, 2.02, 8.01 (skips 5.02 / 7.01 noise) |
+
+The extractor lives in `scripts/sec_text.py` (skill-local) and imports
+only the HTML-cleaning + section-regex primitives from
+`ingest.graphiti_ingest`. The assembly (which items, how much) is owned
+by the skill — that's why this skill returns Item 7 even though
+graphiti's pipeline skips it.
+
+**Performance:** read filings sequentially, not all at once. For a
+10×10-K run, that's ~10 separate `extract_report.py` calls. You may
+run them in parallel from a single tool-use block to save wall time.
 
 ### 3. Summarize, in this order
 
