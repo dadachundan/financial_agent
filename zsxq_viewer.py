@@ -955,6 +955,25 @@ def get_conn() -> sqlite3.Connection:
     return conn
 
 
+# Columns to skip when listing rows for the UI (heavy text the viewer
+# doesn't display). Computed lazily from the live schema so newly added
+# columns show up automatically — only the explicit blocklist is hidden.
+_HEAVY_COLS = {"ocr_text"}
+_LIST_COLS_CACHE: str | None = None
+
+def _list_cols() -> str:
+    global _LIST_COLS_CACHE
+    if _LIST_COLS_CACHE is None:
+        conn = sqlite3.connect(DB_PATH, timeout=30)
+        try:
+            cols = [r[1] for r in conn.execute("PRAGMA table_info(pdf_files)").fetchall()]
+        finally:
+            conn.close()
+        kept = [c for c in cols if c not in _HEAVY_COLS]
+        _LIST_COLS_CACHE = ", ".join(kept)
+    return _LIST_COLS_CACHE
+
+
 def _get_all_tags(conn: sqlite3.Connection) -> list[str]:
     rows = conn.execute(
         "SELECT tags FROM pdf_files WHERE tags IS NOT NULL AND tags != ''"
@@ -1187,7 +1206,7 @@ def print_view():
     order = "ASC" if sort == "asc" else "DESC"
     conn = get_conn()
     rows = conn.execute(
-        f"SELECT * FROM pdf_files {where} ORDER BY create_time {order}", params
+        f"SELECT {_list_cols()} FROM pdf_files {where} ORDER BY create_time {order}", params
     ).fetchall()
     conn.close()
 
@@ -1295,7 +1314,7 @@ def index():
     offset      = (page - 1) * _PAGE_SIZE
 
     rows = conn.execute(
-        f"SELECT * FROM pdf_files {where_clause} ORDER BY {order_col} {order}{null_last}"
+        f"SELECT {_list_cols()} FROM pdf_files {where_clause} ORDER BY {order_col} {order}{null_last}"
         f" LIMIT ? OFFSET ?",
         params + [_PAGE_SIZE, offset],
     ).fetchall()
