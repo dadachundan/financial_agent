@@ -227,6 +227,21 @@ __URLPATCH__
       {% endif %}
     </div>
 
+    <!-- File ID filter row -->
+    <div class="d-flex filter-row">
+      <span class="filter-label">File ID:</span>
+      <input id="fileIdBox" type="text" class="form-control form-control-sm"
+             placeholder="e.g. 184124452551222"
+             style="max-width:260px" value="{{ current_file_id }}"
+             onkeydown="if(event.key==='Enter'){applyFileId(this.value)}">
+      <button class="btn btn-sm btn-outline-secondary"
+              onclick="applyFileId(document.getElementById('fileIdBox').value)">Apply</button>
+      {% if current_file_id %}
+      <a href="#" onclick="applyFileId('');return false"
+         class="btn btn-sm btn-link text-muted p-0 ms-1">✕ clear</a>
+      {% endif %}
+    </div>
+
     <!-- Group filter row -->
     {% if all_group_ids|length >= 1 %}
     <div class="d-flex filter-row">
@@ -797,6 +812,14 @@ __MCW_FOOTER__
     window.location.href = '?' + params.toString();
   }
 
+  function applyFileId(fid) {
+    const params = new URLSearchParams(window.location.search);
+    params.delete('page');
+    const v = (fid || '').trim();
+    if (v) { params.set('file_id', v); } else { params.delete('file_id'); }
+    window.location.href = '?' + params.toString();
+  }
+
   function editTags(fileId, btn) {
     const wrapper = btn.closest('[data-tags]');
     const cell    = btn.closest('td');
@@ -979,7 +1002,8 @@ def _build_where(f: str, ticker: str, tag: str,
                  min_claude_rating: int = 0,
                  unrated: bool = False,
                  bank: str = "",
-                 with_comment: bool = False) -> tuple[str, list]:
+                 with_comment: bool = False,
+                 file_id: str = "") -> tuple[str, list]:
     """Build WHERE clause + params from filter args (shared by index and print-view)."""
     conditions: list[str] = []
     params: list = []
@@ -1031,6 +1055,14 @@ def _build_where(f: str, ticker: str, tag: str,
         params.append(bank)
     if with_comment:
         conditions.append("comment IS NOT NULL AND comment != ''")
+    if file_id:
+        fid = file_id.strip()
+        if fid.isdigit():
+            conditions.append("file_id = ?")
+            params.append(int(fid))
+        else:
+            conditions.append("CAST(file_id AS TEXT) LIKE ?")
+            params.append(f"%{fid}%")
     where = ("WHERE " + " AND ".join(conditions)) if conditions else ""
     return where, params
 
@@ -1216,6 +1248,7 @@ def index():
         min_rating = 0
     bank = request.args.get("bank", "").strip()
     q = request.args.get("q", "").strip()
+    file_id = request.args.get("file_id", "").strip()
     with_comment = request.args.get("with_comment") == "1"
     try:
         page = max(1, int(request.args.get("page", 1)))
@@ -1248,7 +1281,7 @@ def index():
         "FROM pdf_files"
     ).fetchone()
 
-    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id, min_claude_rating, unrated, bank, with_comment)
+    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id, min_claude_rating, unrated, bank, with_comment, file_id)
     order      = "ASC" if sort == "asc" else "DESC"
     order_col  = "page_count" if sort_by == "pages" else "create_time"
     # NULLs last for page_count sort
@@ -1301,6 +1334,7 @@ def index():
         all_group_ids=all_group_ids,
         all_banks=all_banks,
         current_bank=bank,
+        current_file_id=file_id,
         with_comment=with_comment,
         flomo_enabled=bool(_FLOMO_WEBHOOK_URL),
         db_path=DB_PATH,
