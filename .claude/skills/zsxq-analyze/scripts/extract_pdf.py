@@ -175,6 +175,22 @@ def main() -> None:
             )
         else:
             parts.append(f"# path={path}  pages_extracted={len(pages)}")
+        def _looks_empty(t: str) -> bool:
+            s = t.strip()
+            if len(s) < 20:
+                return True
+            # No whitespace + no CJK + short = watermark / id blob, not real prose.
+            has_ws = any(c.isspace() for c in s)
+            has_cjk = any("一" <= c <= "鿿" for c in s)
+            if not has_ws and not has_cjk and len(s) < 200:
+                return True
+            return False
+        empty_pages = [p for p, t in pages if _looks_empty(t)]
+        if empty_pages:
+            parts.append(
+                "# empty-text pages (likely scanned/image-only — render with "
+                f"render_pdf_pages.py): {','.join(map(str, empty_pages))}"
+            )
         parts.append("")
 
     for p, text in pages:
