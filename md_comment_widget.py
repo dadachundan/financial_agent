@@ -216,7 +216,10 @@ JS = """\
 
   document.getElementById('commentSaveBtn').addEventListener('click', () => {
     const val = _easyMDE ? _easyMDE.value().trim() : '';
-    fetch((window._commentSavePrefix||'') + '/comment/' + _editingItemId, {
+    // URL_PATCH_JS in nav_widget2 already prepends the blueprint prefix
+    // to any '/'-rooted fetch URL — do NOT prepend _commentSavePrefix here
+    // or it doubles up (e.g. /zsxq/zsxq/comment/<id>).
+    fetch('/comment/' + _editingItemId, {
       method: 'POST',
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       body: 'comment=' + encodeURIComponent(val),
