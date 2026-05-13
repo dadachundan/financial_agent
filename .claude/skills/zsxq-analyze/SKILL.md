@@ -76,30 +76,70 @@ Useful flags:
   topic, page count). Recommended whenever you'll quote the text back.
 
 Extractor preference order: PyMuPDF (`fitz`) → `pdfplumber` → `PyPDF2`.
-Page boundaries appear as `===== Page N =====`. With `--header`, an
-additional line is emitted listing pages whose text extraction came
-back empty:
+Page boundaries appear as `===== Page N =====`. If a per-page OCR
+cache exists on the row (`pdf_files.ocr_text`, populated by
+`ocr_pdf.py`), it is **silently merged in** for any page where
+fitz/pdfplumber/PyPDF2 returned nothing — so once a PDF has been
+OCR'd, every subsequent `extract_pdf.py` is free and instant.
+
+With `--header`, an additional line is emitted listing pages whose
+text extraction came back empty *and* are not in the OCR cache:
 
 ```
-# empty-text pages (likely scanned/image-only — render with render_pdf_pages.py): 1,2,3,...
+# empty-text pages (image-only — run ocr_pdf.py --file-id <id> to cache OCR, then re-extract; or render_pdf_pages.py for visual reading): 1,2,3,...
 ```
 
-Use this hint to drive step 3b.
+Use this hint to drive step 3b (OCR) and 3c (visual reading).
 
-### 3b. Fall back to visual reading for image-only pages or charts
+### 3b. OCR image-only pages (default for English/Chinese bank PDFs)
 
-Bank PDFs in zsxq are often a **mix**: some pages have selectable
-text, others are flattened images (cover, charts, exhibits, occasional
-scanned editions). **The first page is the highest-value one** —
-banks pack the thesis, target prices, and ratings into page 1, and
-it's the page most likely to be rasterized. Always make sure you have
-real content for page 1; if its text is empty/garbled, render it.
+`ocr_pdf.py` uses Apple's Vision framework (`ocrmac`) on the M-series
+Neural Engine — ~1 s/page, ~98%+ accuracy on clean prints, free, no
+external API. **Run this whenever step 3 reports empty pages**:
 
-For each page that came back empty (or any page you suspect is a chart
-holding key numbers), render it to a PNG and **read the PNG directly
-with the Read tool — you are multimodal**. Do not try OCR locally
-unless `tesseract` / `paddleocr` / `easyocr` is actually installed
-(usually it isn't).
+```bash
+# OCR the whole PDF and cache to db/zsxq.db.pdf_files.ocr_text
+python3 .claude/skills/zsxq-analyze/scripts/ocr_pdf.py \
+    --file-id 184124515551842
+
+# Limit to specific pages (won't update the cache)
+python3 .claude/skills/zsxq-analyze/scripts/ocr_pdf.py \
+    --file-id 184124515551842 --pages 1-3,7
+
+# Re-OCR even if cached
+python3 .claude/skills/zsxq-analyze/scripts/ocr_pdf.py \
+    --file-id 184124515551842 --force
+```
+
+After this runs once, `extract_pdf.py` will automatically pick up the
+cached text — no need to read OCR output directly. Just re-run
+`extract_pdf.py --file-id … --header`.
+
+OCR limitations to keep in mind:
+
+- **Reading order on multi-column pages may scramble** — ocrmac sorts
+  lines top-to-bottom by visual position, which is fine for
+  single-column slides (most bank reports) but garbles 2-column
+  research notes. For those, use step 3c.
+- **Tables come out as flat lines of text**, not structured cells. If
+  you specifically need a table's values cell-by-cell, fall back to
+  step 3c on that page.
+- **Charts are not readable by OCR at all** — only the title, axis
+  labels, and any printed annotations come through. Trends, bar
+  heights, and visual takeaways need step 3c.
+
+### 3c. Fall back to visual reading for charts (and OCR-hostile pages)
+
+Use this for pages where OCR is structurally insufficient: charts,
+complex tables, multi-column research notes, exhibit-heavy slides.
+**The first page is also the highest-value one** — banks pack the
+thesis, target prices, and ratings into p. 1, so even with the OCR
+cache present, glancing at the rendered p. 1 is worth ~50 ms of your
+attention because the visual layout (call-out boxes, badges) carries
+extra signal that flat text loses.
+
+Render the page(s) to PNG and **read each PNG with the Read tool —
+you are multimodal**.
 
 ```bash
 # Render only the pages where text extraction was empty
@@ -119,18 +159,14 @@ data points). Quote what you actually see; don't invent precise
 numbers off a chart, but ranges and qualitative shape are fair.
 
 **When the PDF is entirely image-only and rendering every page would
-blow context:** prioritize p1 (always), the final 1-2 pages
-(disclosure summary / target-price box), and any page whose
-neighbours' text mentions a table/exhibit you need. If even that
-isn't enough, fall back to the `summary` column on the row — banks
-or zsxq curators often paste the full 翻译精华 there, and it's a
-legitimate substitute when the PDF itself is unreadable. Be explicit
-about that switch in your answer.
+blow context:** OCR'ing (step 3b) gives you cheap full-text access
+for free, so reach for visual reading only on the specific pages
+that have charts or complex layout. If even that isn't enough, fall
+back to the `summary` column on the row — banks or zsxq curators
+often paste the full 翻译精华 there. Be explicit about the switch in
+your answer.
 
-### 3c. Charts
-
-Charts live inside the page images, so the same render → Read flow
-covers them. When reading a chart:
+When reading a chart visually:
 
 - Capture the chart title, axis labels and units, the legend, and the
   shape of the series ("X rises from ~5% to ~30% between 2020 and
@@ -161,8 +197,13 @@ When the user asked for stocks / tickers specifically:
 - For Chinese PDFs, `fitz` usually returns clean UTF-8; if you see
   garbled output, the extractor probably fell through to `PyPDF2` —
   add `pdfplumber` or `pymupdf` to the env and re-run.
-- If `extract_pdf.py --header` reports "empty-text pages: …", that
-  page is rasterized — go to step 3b and render it.
+- If `extract_pdf.py --header` reports "empty-text pages: …" and no
+  OCR cache exists, the standard play is **3b first** (OCR with
+  `ocr_pdf.py`, then re-run `extract_pdf.py`). Go to 3c (render to
+  PNG, Read visually) only when OCR is insufficient — charts, dense
+  tables, multi-column layouts.
+- `ocrmac` requires macOS (Apple Vision framework) — `pip install
+  ocrmac` already done locally. On a non-Mac box, fall through to 3c.
 - This skill answers questions about **one** PDF per invocation. For
   multi-file synthesis, run the skill per file and stitch the answers
   yourself.
