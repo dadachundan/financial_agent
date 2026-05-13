@@ -1,6 +1,6 @@
 ---
-name: analyze-zsxq
-description: Analyze a PDF stored in db/zsxq.db (the zsxq report library) and answer the user's question about it. Use whenever the user references a zsxq PDF by file_id, filename, or topic keyword — e.g. "what stocks does file_id 184124282514242 recommend?", "summarize the Deloitte report from zsxq", "/analyze-zsxq what does <name> say about robotics".
+name: zsxq-analyze
+description: Analyze a PDF stored in db/zsxq.db (the zsxq report library) and answer the user's question about it. Use whenever the user references a zsxq PDF by file_id, filename, or topic keyword — e.g. "what stocks does file_id 184124282514242 recommend?", "summarize the Deloitte report from zsxq", "/zsxq-analyze what does <name> say about robotics". Pair: `/zsxq-recommend` finds candidate file_ids to feed into this skill.
 ---
 
 # Analyze zsxq PDF
@@ -28,11 +28,11 @@ Pull two things out of the user's prompt:
 
 ```bash
 # Exact file_id
-python3 .claude/skills/analyze-zsxq/scripts/find_pdf.py \
+python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py \
     --file-id 184124282514242
 
 # Substring query against name / topic_title / summary / tags / comment
-python3 .claude/skills/analyze-zsxq/scripts/find_pdf.py \
+python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py \
     --query "Deloitte 2026" --limit 5
 ```
 
@@ -54,7 +54,7 @@ Decision rules:
 ### 3. Extract the PDF text
 
 ```bash
-python3 .claude/skills/analyze-zsxq/scripts/extract_pdf.py \
+python3 .claude/skills/zsxq-analyze/scripts/extract_pdf.py \
     --file-id 184124282514242 --header
 ```
 

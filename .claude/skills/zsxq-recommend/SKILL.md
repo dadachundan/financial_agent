@@ -1,6 +1,6 @@
 ---
-name: recommend-zsxq-pdf
-description: Recommend zsxq reports to read by scanning the most-recent rows of db/zsxq.db (titles + summaries — no PDF parsing). Default: latest 50 reports, focus on AI / robotics. User may override with a count ("latest 100") and/or a subject ("focus on semiconductors", "anything on EVs"). When the user has no clue, group the recent feed into themes and surface a handful of standout reads.
+name: zsxq-recommend
+description: Recommend zsxq reports to read by scanning the most-recent rows of db/zsxq.db (titles + summaries — no PDF parsing). Default: latest 50 reports, focus on AI / robotics. User may override with a count ("latest 100") and/or a subject ("focus on semiconductors", "anything on EVs"). When the user has no clue, group the recent feed into themes and surface a handful of standout reads. Pair: hand a returned `file_id` to `/zsxq-analyze` for a deep read.
 ---
 
 # Recommend zsxq PDF
@@ -9,7 +9,7 @@ The user wants a curated pointer into the recent zsxq report feed —
 **not** a deep read of any single PDF. Work only from
 `db/zsxq.db.pdf_files`'s metadata columns (title, summary, tags, etc.).
 Do not extract or open PDFs. (If they want a deep dive on a specific
-report, the `analyze-zsxq` skill handles that.)
+report, the `zsxq-analyze` skill handles that.)
 
 ## Workflow
 
@@ -29,17 +29,17 @@ Pull out three optional knobs from the user's prompt:
 
 ```bash
 # Latest 50 (default)
-python3 .claude/skills/recommend-zsxq-pdf/scripts/list_recent.py
+python3 .claude/skills/zsxq-recommend/scripts/list_recent.py
 
 # Latest 100
-python3 .claude/skills/recommend-zsxq-pdf/scripts/list_recent.py --limit 100
+python3 .claude/skills/zsxq-recommend/scripts/list_recent.py --limit 100
 
 # Coarse subject filter before Claude ranks (only when the user named one)
-python3 .claude/skills/recommend-zsxq-pdf/scripts/list_recent.py \
+python3 .claude/skills/zsxq-recommend/scripts/list_recent.py \
     --limit 100 --subject "semiconductor"
 
 # Recency window
-python3 .claude/skills/recommend-zsxq-pdf/scripts/list_recent.py \
+python3 .claude/skills/zsxq-recommend/scripts/list_recent.py \
     --since 2026-05-01
 ```
 
@@ -84,7 +84,7 @@ each. Then pick 2-3 standout reads under each theme.
 
 For each recommendation give:
 
-- `file_id` (so the user can hand it to `/analyze-zsxq`)
+- `file_id` (so the user can hand it to `/zsxq-analyze`)
 - Bank / publisher if known (`bank` column, or extract from name)
 - A ≤2-sentence "why read this" — anchored in the actual summary, not
   generic.
@@ -102,6 +102,6 @@ user is choosing what to read next, not consuming the reports here.
 - The `tickers` / `claude_rating` / `user_rating` columns are sparse
   but valuable when present — mention them in the "why" line if a
   recommended row has them populated.
-- This skill pairs with `analyze-zsxq`: recommend here → user picks a
-  `file_id` → `/analyze-zsxq <question> file_id <N>` for the deep
+- This skill pairs with `zsxq-analyze`: recommend here → user picks a
+  `file_id` → `/zsxq-analyze <question> file_id <N>` for the deep
   read.
