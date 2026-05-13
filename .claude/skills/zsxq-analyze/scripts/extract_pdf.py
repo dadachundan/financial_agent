@@ -39,14 +39,45 @@ def _lookup_meta(file_id: int) -> dict | None:
         return None
     conn = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True)
     conn.row_factory = sqlite3.Row
+    cols = {row[1] for row in conn.execute("PRAGMA table_info(pdf_files)").fetchall()}
+    extra = ", ocr_text" if "ocr_text" in cols else ""
     cur = conn.execute(
-        "SELECT file_id, name, topic_title, local_path, page_count, "
-        "file_size, create_time FROM pdf_files WHERE file_id = ?",
+        f"SELECT file_id, name, topic_title, local_path, page_count, "
+        f"file_size, create_time{extra} FROM pdf_files WHERE file_id = ?",
         (file_id,),
     )
     row = cur.fetchone()
     conn.close()
     return dict(row) if row else None
+
+
+def _looks_empty(t: str) -> bool:
+    s = t.strip()
+    if len(s) < 20:
+        return True
+    has_ws = any(c.isspace() for c in s)
+    has_cjk = any("一" <= c <= "鿿" for c in s)
+    if not has_ws and not has_cjk and len(s) < 200:
+        return True
+    return False
+
+
+def _parse_cached_ocr(ocr_text: str) -> dict[int, str]:
+    """Parse '===== Page N =====' blocks back into a {page_num: text} dict."""
+    import re
+    out: dict[int, str] = {}
+    if not ocr_text:
+        return out
+    parts = re.split(r"^===== Page (\d+) =====\s*$", ocr_text, flags=re.MULTILINE)
+    # split yields [prefix, '1', body, '2', body, ...]
+    for i in range(1, len(parts), 2):
+        try:
+            page_num = int(parts[i])
+            body = parts[i + 1].rstrip()
+            out[page_num] = body
+        except (ValueError, IndexError):
+            continue
+    return out
 
 
 def _parse_pages(spec: str, total: int) -> list[int]:
@@ -164,6 +195,18 @@ def main() -> None:
 
     pages = extract(path, page_filter)
 
+    # Swap in cached OCR text for any page where fitz/pdfplumber/PyPDF2
+    # came back empty. The cache is populated by scripts/ocr_pdf.py.
+    cached_ocr = _parse_cached_ocr((meta or {}).get("ocr_text") or "")
+    if cached_ocr:
+        swapped = []
+        for p, t in pages:
+            if _looks_empty(t) and p in cached_ocr:
+                swapped.append((p, cached_ocr[p]))
+            else:
+                swapped.append((p, t))
+        pages = swapped
+
     parts: list[str] = []
     if args.header:
         if meta:
@@ -175,21 +218,13 @@ def main() -> None:
             )
         else:
             parts.append(f"# path={path}  pages_extracted={len(pages)}")
-        def _looks_empty(t: str) -> bool:
-            s = t.strip()
-            if len(s) < 20:
-                return True
-            # No whitespace + no CJK + short = watermark / id blob, not real prose.
-            has_ws = any(c.isspace() for c in s)
-            has_cjk = any("一" <= c <= "鿿" for c in s)
-            if not has_ws and not has_cjk and len(s) < 200:
-                return True
-            return False
         empty_pages = [p for p, t in pages if _looks_empty(t)]
         if empty_pages:
             parts.append(
-                "# empty-text pages (likely scanned/image-only — render with "
-                f"render_pdf_pages.py): {','.join(map(str, empty_pages))}"
+                "# empty-text pages (image-only — run "
+                f"ocr_pdf.py --file-id <id> to cache OCR, then re-extract; "
+                f"or render_pdf_pages.py for visual reading): "
+                f"{','.join(map(str, empty_pages))}"
             )
         parts.append("")
 
