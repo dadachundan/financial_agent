@@ -4,7 +4,6 @@
 Usage:
     python3 upload_pdfs.py                          # all .pdf in ~/Downloads (top-level)
     python3 upload_pdfs.py --source ~/some/dir
-    python3 upload_pdfs.py --recursive              # walk subdirectories too
     python3 upload_pdfs.py --copy                   # copy instead of move
     python3 upload_pdfs.py --dry-run                # report what would happen, no writes
     python3 upload_pdfs.py file1.pdf file2.pdf      # specific files only
@@ -41,13 +40,12 @@ from notes_app import (  # noqa: E402  (sys.path tweak above)
 )
 
 
-def _collect_pdfs(source: Path, recursive: bool, explicit: list[Path]) -> list[Path]:
+def _collect_pdfs(source: Path, explicit: list[Path]) -> list[Path]:
     if explicit:
         return [p.resolve() for p in explicit if p.suffix.lower() == ".pdf" and p.is_file()]
     if not source.is_dir():
         raise SystemExit(f"Source is not a directory: {source}")
-    iterator = source.rglob("*.pdf") if recursive else source.glob("*.pdf")
-    return sorted(p.resolve() for p in iterator if p.is_file())
+    return sorted(p.resolve() for p in source.glob("*.pdf") if p.is_file())
 
 
 def _already_managed(path: Path) -> bool:
@@ -67,9 +65,9 @@ def _unique_dest(dest_dir: Path, filename: str) -> Path:
     return dest
 
 
-def upload(source: Path, recursive: bool, copy: bool, dry_run: bool, explicit: list[Path]) -> dict:
+def upload(source: Path, copy: bool, dry_run: bool, explicit: list[Path]) -> dict:
     init_db()
-    pdfs = _collect_pdfs(source, recursive, explicit)
+    pdfs = _collect_pdfs(source, explicit)
 
     conn = get_conn()
     existing = {r[0] for r in conn.execute("SELECT name FROM notes").fetchall()}
@@ -157,8 +155,6 @@ def main() -> None:
                         help="Specific PDF paths (if omitted, scans --source)")
     parser.add_argument("--source", type=Path, default=Path.home() / "Downloads",
                         help="Directory to scan (default ~/Downloads)")
-    parser.add_argument("--recursive", action="store_true",
-                        help="Walk subdirectories of --source")
     parser.add_argument("--copy", action="store_true",
                         help="Copy instead of move (default: move)")
     parser.add_argument("--dry-run", action="store_true",
@@ -167,7 +163,6 @@ def main() -> None:
 
     result = upload(
         source=args.source.expanduser(),
-        recursive=args.recursive,
         copy=args.copy,
         dry_run=args.dry_run,
         explicit=[p.expanduser() for p in args.files],

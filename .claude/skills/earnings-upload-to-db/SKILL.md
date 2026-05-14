@@ -15,8 +15,6 @@ the `/notes/` upload zone in the web UI.
 
 - **Source** — default `~/Downloads` (top-level scan, not recursive).
   Override only if user names a different directory.
-- **Recursive?** — only when user says "everything under" or names a
-  parent folder explicitly.
 - **Move vs copy** — default **move** (matches drag-drop semantics —
   the file leaves `~/Downloads`). Use `--copy` if the user wants the
   source files untouched.
@@ -32,9 +30,6 @@ python3 .claude/skills/earnings-upload-to-db/scripts/upload_pdfs.py
 # Different source
 python3 .claude/skills/earnings-upload-to-db/scripts/upload_pdfs.py \
     --source ~/Desktop/earnings
-
-# Walk subdirs
-python3 .claude/skills/earnings-upload-to-db/scripts/upload_pdfs.py --recursive
 
 # Don't delete originals
 python3 .claude/skills/earnings-upload-to-db/scripts/upload_pdfs.py --copy
