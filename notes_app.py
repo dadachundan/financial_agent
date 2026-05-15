@@ -34,10 +34,15 @@ from zsxq_viewer import (
     _format_annotations,
 )
 
-SCRIPT_DIR        = Path(__file__).parent
-DB_PATH           = SCRIPT_DIR / "db" / "notes.db"
-MANUAL_REPORT_DIR = Path.home() / "Downloads" / "zsxq_report" / "manual_report"
-TICKER_MAP_PATH   = SCRIPT_DIR / "db" / "name_to_ticker.json"
+SCRIPT_DIR             = Path(__file__).parent
+DB_PATH                = SCRIPT_DIR / "db" / "notes.db"
+MANUAL_REPORT_DIR      = Path.home() / "Downloads" / "zsxq_report" / "manual_report"
+TICKER_MAP_PATH        = SCRIPT_DIR / "db" / "name_to_ticker.json"
+TICKER_NAME_CACHE_PATH = SCRIPT_DIR / "ticker_name_cache.json"
+
+# Suffixes whose buckets get enriched with the Chinese company name.
+# Korean (.KS / .KP) and Taiwan (.TW) tickers stay as plain symbols.
+_CN_TICKER_SUFFIX_RE = re.compile(r"\.(HK|SZ|SS|SH)$", re.IGNORECASE)
 
 notes_bp = Blueprint("notes", __name__)
 
@@ -127,6 +132,38 @@ def _resolve_ticker(name_prefix: str) -> str:
     if not name_prefix:
         return name_prefix
     return _load_ticker_map().get(name_prefix.casefold(), name_prefix)
+
+
+_CN_NAME_CACHE: dict | None = None
+
+
+def _load_cn_name_map() -> dict:
+    """Load ticker_name_cache.json (code → Chinese name) directly, bypassing
+    the background-refresh dance in ticker_names.py. Cached in-process."""
+    global _CN_NAME_CACHE
+    if _CN_NAME_CACHE is not None:
+        return _CN_NAME_CACHE
+    if not TICKER_NAME_CACHE_PATH.exists():
+        _CN_NAME_CACHE = {}
+        return _CN_NAME_CACHE
+    try:
+        _CN_NAME_CACHE = json.loads(TICKER_NAME_CACHE_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        _CN_NAME_CACHE = {}
+    return _CN_NAME_CACHE
+
+
+def ticker_to_bucket(ticker: str) -> str:
+    """Disk-folder name for a ticker. HK/A-share symbols get the Chinese
+    company name appended ('0981.HK 中芯国际'); everything else returns as-is."""
+    if not ticker:
+        return "unknown"
+    if not _CN_TICKER_SUFFIX_RE.search(ticker):
+        return ticker
+    code = _CN_TICKER_SUFFIX_RE.sub("", ticker)
+    cn_map = _load_cn_name_map()
+    name = cn_map.get(code) or cn_map.get(code.lstrip("0") or code)
+    return f"{ticker} {name}" if name else ticker
 
 
 def _parse_filename_meta(stem: str) -> dict:
@@ -1027,7 +1064,7 @@ def upload():
         return jsonify(ok=False, error=f"Already in database: {safe_name}"), 409
 
     meta = _parse_filename_meta(Path(safe_name).stem)
-    bucket = (meta.get('ticker') or 'unknown').strip() or 'unknown'
+    bucket = ticker_to_bucket((meta.get('ticker') or '').strip() or 'unknown')
     dest_dir = MANUAL_REPORT_DIR / bucket
     dest_dir.mkdir(parents=True, exist_ok=True)
     dest = dest_dir / safe_name
