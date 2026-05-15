@@ -34,11 +34,12 @@ from zsxq_viewer import (
     _format_annotations,
 )
 
-SCRIPT_DIR             = Path(__file__).parent
-DB_PATH                = SCRIPT_DIR / "db" / "notes.db"
-MANUAL_REPORT_DIR      = Path.home() / "Downloads" / "zsxq_report" / "manual_report"
-TICKER_MAP_PATH        = SCRIPT_DIR / "db" / "name_to_ticker.json"
-TICKER_NAME_CACHE_PATH = SCRIPT_DIR / "ticker_name_cache.json"
+SCRIPT_DIR              = Path(__file__).parent
+DB_PATH                 = SCRIPT_DIR / "db" / "notes.db"
+MANUAL_REPORT_DIR       = Path.home() / "Downloads" / "zsxq_report" / "manual_report"
+TICKER_MAP_PATH         = SCRIPT_DIR / "db" / "name_to_ticker.json"
+TICKER_NAME_CACHE_PATH  = SCRIPT_DIR / "ticker_name_cache.json"
+TICKER_DISPLAY_PATH     = SCRIPT_DIR / "db" / "ticker_display.json"
 
 # Suffixes whose buckets get enriched with the Chinese company name.
 # Korean (.KS / .KP) and Taiwan (.TW) tickers stay as plain symbols.
@@ -153,16 +154,45 @@ def _load_cn_name_map() -> dict:
     return _CN_NAME_CACHE
 
 
+_DISPLAY_NAME_CACHE: dict | None = None
+
+
+def _load_display_name_map() -> dict:
+    """Load db/ticker_display.json (ticker → human-readable name) for
+    non-Chinese foreign tickers. Cached in-process."""
+    global _DISPLAY_NAME_CACHE
+    if _DISPLAY_NAME_CACHE is not None:
+        return _DISPLAY_NAME_CACHE
+    if not TICKER_DISPLAY_PATH.exists():
+        _DISPLAY_NAME_CACHE = {}
+        return _DISPLAY_NAME_CACHE
+    try:
+        raw = json.loads(TICKER_DISPLAY_PATH.read_text(encoding="utf-8"))
+        _DISPLAY_NAME_CACHE = {k: v for k, v in raw.items() if not k.startswith("_")}
+    except Exception:
+        _DISPLAY_NAME_CACHE = {}
+    return _DISPLAY_NAME_CACHE
+
+
 def ticker_to_bucket(ticker: str) -> str:
-    """Disk-folder name for a ticker. HK/A-share symbols get the Chinese
-    company name appended ('0981.HK 中芯国际'); everything else returns as-is."""
+    """Disk-folder name for a ticker.
+
+    - US tickers (no exchange suffix) → plain symbol ('BABA').
+    - HK / A-share (.HK/.SZ/.SS/.SH) → '<ticker> <chinese-name>',
+      looked up from ticker_name_cache.json (AKShare).
+    - Other foreign (.KS/.KP/.TW/.T/…) → '<ticker> <display-name>',
+      looked up from db/ticker_display.json.
+    """
     if not ticker:
         return "unknown"
-    if not _CN_TICKER_SUFFIX_RE.search(ticker):
+    if "." not in ticker:
         return ticker
-    code = _CN_TICKER_SUFFIX_RE.sub("", ticker)
-    cn_map = _load_cn_name_map()
-    name = cn_map.get(code) or cn_map.get(code.lstrip("0") or code)
+    if _CN_TICKER_SUFFIX_RE.search(ticker):
+        code = _CN_TICKER_SUFFIX_RE.sub("", ticker)
+        cn_map = _load_cn_name_map()
+        name = cn_map.get(code) or cn_map.get(code.lstrip("0") or code)
+        return f"{ticker} {name}" if name else ticker
+    name = _load_display_name_map().get(ticker)
     return f"{ticker} {name}" if name else ticker
 
 
