@@ -1,0 +1,14 @@
+{
+  "_comment": "Display name to append to bucket folder for non-Chinese, non-US tickers. HK/A-shares (.HK/.SZ/.SS/.SH) use ticker_name_cache.json instead; US tickers (no suffix) stay as plain symbols.",
+  "000660.KS": "SK hynix",
+  "005930.KS": "Samsung Electronics",
+  "066570.KS": "LG Electronics",
+  "035420.KS": "Naver",
+  "035720.KS": "Kakao",
+  "2330.TW": "TSMC",
+  "2317.TW": "Hon Hai (Foxconn)",
+  "2454.TW": "MediaTek",
+  "6758.T": "Sony",
+  "7203.T": "Toyota",
+  "9984.T": "SoftBank Group"
+}
