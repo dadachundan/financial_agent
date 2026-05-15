@@ -1,13 +1,15 @@
 ---
 name: earnings-upload-to-db
-description: Batch-ingest earnings PDFs into db/notes.db, mirroring the Notes drag-and-drop UI. Default source = ~/Downloads. Each PDF is deduped by filename, moved into MANUAL_REPORT_DIR/<today>/, filename parsed for ticker / type (10K/10Q/8K/slide/investor) / quarter / report_date, and inserted into the notes table. Use when the user asks to upload, ingest, or import earnings PDFs into the Notes DB, or anything like "add the PDFs in my Downloads to the notes app".
+description: Batch-ingest earnings PDFs into db/notes.db, mirroring the Notes drag-and-drop UI. Default source = ~/Downloads. Each PDF is deduped by filename, moved into MANUAL_REPORT_DIR/<ticker>/ (fallback "unknown"), filename parsed for ticker / type (10K/10Q/8K/slide/investor) / quarter / report_date, and inserted into the notes table. Use when the user asks to upload, ingest, or import earnings PDFs into the Notes DB, or anything like "add the PDFs in my Downloads to the notes app".
 ---
 
 # Upload earnings PDFs into db/notes.db
 
 The user wants to bulk-ingest PDFs from a folder (default `~/Downloads`)
 into the Notes app's database — same end-state as dragging them onto
-the `/notes/` upload zone in the web UI.
+the `/notes/` upload zone in the web UI. Files land in
+`MANUAL_REPORT_DIR/<ticker>/` (e.g. `Alibaba/`, `Tencent/`); files
+without a parseable ticker go to `unknown/`.
 
 ## Workflow
 
