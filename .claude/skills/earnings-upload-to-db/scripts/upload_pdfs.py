@@ -40,6 +40,7 @@ from notes_app import (  # noqa: E402  (sys.path tweak above)
     _parse_filename_meta,
     get_conn,
     init_db,
+    ticker_to_bucket,
 )
 
 
@@ -89,7 +90,7 @@ def upload(source: Path, copy: bool, dry_run: bool, explicit: list[Path]) -> dic
             continue
 
         meta = _parse_filename_meta(src.stem)
-        bucket = (meta.get("ticker") or _UNKNOWN_BUCKET).strip() or _UNKNOWN_BUCKET
+        bucket = ticker_to_bucket((meta.get("ticker") or "").strip() or _UNKNOWN_BUCKET)
         dest_dir = MANUAL_REPORT_DIR / bucket
 
         if dry_run:

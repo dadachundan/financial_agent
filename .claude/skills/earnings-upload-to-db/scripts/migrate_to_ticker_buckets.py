@@ -31,6 +31,7 @@ from notes_app import (  # noqa: E402
     MANUAL_REPORT_DIR,
     _parse_filename_meta,
     get_conn,
+    ticker_to_bucket,
 )
 
 
@@ -63,7 +64,7 @@ def migrate(dry_run: bool) -> dict:
 
         meta = _parse_filename_meta(Path(name).stem)
         new_ticker = (meta.get("ticker") or "unknown").strip() or "unknown"
-        new_dir = MANUAL_REPORT_DIR / new_ticker
+        new_dir = MANUAL_REPORT_DIR / ticker_to_bucket(new_ticker)
 
         # Decide target path
         if old_path and old_path.exists():
