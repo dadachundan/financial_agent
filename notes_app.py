@@ -999,8 +999,9 @@ def upload():
     if existing:
         return jsonify(ok=False, error=f"Already in database: {safe_name}"), 409
 
-    today = datetime.date.today().isoformat()
-    dest_dir = MANUAL_REPORT_DIR / today
+    meta = _parse_filename_meta(Path(safe_name).stem)
+    bucket = (meta.get('ticker') or 'unknown').strip() or 'unknown'
+    dest_dir = MANUAL_REPORT_DIR / bucket
     dest_dir.mkdir(parents=True, exist_ok=True)
     dest = dest_dir / safe_name
     i = 1
@@ -1008,8 +1009,6 @@ def upload():
         dest = dest_dir / f"{Path(safe_name).stem}_{i}.pdf"; i += 1
 
     f.save(dest)
-
-    meta = _parse_filename_meta(Path(safe_name).stem)
     now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     conn = get_conn()
     conn.execute(

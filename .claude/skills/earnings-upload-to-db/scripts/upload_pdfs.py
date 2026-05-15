@@ -11,8 +11,9 @@ Usage:
 Per file we:
   1. Skip non-PDFs and anything already living under MANUAL_REPORT_DIR.
   2. Dedupe against notes.name (same filename → skip).
-  3. Move (or copy) to MANUAL_REPORT_DIR/<today>/, auto-renaming on collision.
-  4. Parse filename → type / quarter / report_date / ticker.
+  3. Parse filename → type / quarter / report_date / ticker.
+  4. Move (or copy) to MANUAL_REPORT_DIR/<ticker>/ (fallback "unknown"),
+     auto-renaming on collision.
   5. INSERT into notes table.
 
 Output is JSON-friendly per-file lines plus a final summary, so Claude
@@ -27,6 +28,8 @@ import json
 import shutil
 import sys
 from pathlib import Path
+
+_UNKNOWN_BUCKET = "unknown"
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3].parent  # .claude/skills/earnings-upload-to-db/scripts → financial_agent/
 sys.path.insert(0, str(PROJECT_ROOT))
@@ -73,9 +76,6 @@ def upload(source: Path, copy: bool, dry_run: bool, explicit: list[Path]) -> dic
     existing = {r[0] for r in conn.execute("SELECT name FROM notes").fetchall()}
     conn.close()
 
-    today = datetime.date.today().isoformat()
-    dest_dir = MANUAL_REPORT_DIR / today
-
     added: list[dict] = []
     skipped: list[dict] = []
     errors: list[dict] = []
@@ -89,6 +89,8 @@ def upload(source: Path, copy: bool, dry_run: bool, explicit: list[Path]) -> dic
             continue
 
         meta = _parse_filename_meta(src.stem)
+        bucket = (meta.get("ticker") or _UNKNOWN_BUCKET).strip() or _UNKNOWN_BUCKET
+        dest_dir = MANUAL_REPORT_DIR / bucket
 
         if dry_run:
             added.append({
@@ -136,7 +138,7 @@ def upload(source: Path, copy: bool, dry_run: bool, explicit: list[Path]) -> dic
 
     return {
         "db": str(DB_PATH),
-        "dest_dir": str(dest_dir),
+        "dest_root": str(MANUAL_REPORT_DIR),
         "dry_run": dry_run,
         "mode": "copy" if copy else "move",
         "scanned": len(pdfs),
