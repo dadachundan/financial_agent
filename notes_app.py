@@ -231,6 +231,60 @@ def _parse_filename_meta(stem: str) -> dict:
     return meta
 
 
+# ── Shared ingestion pipeline ────────────────────────────────────────────────
+
+def ingest_pdf(filename: str, save_to_dest) -> dict:
+    """Run dedup → parse → bucket → save → insert for one PDF.
+
+    `filename`       — basename used for dedup, parsing, and final on-disk name.
+    `save_to_dest(dest_path)` — callable that writes the PDF bytes to dest_path.
+                       Used by the Flask route (f.save) and the CLI (shutil.move).
+
+    Returns one of:
+      {"status": "added",   "note_id": int, "dest": Path, "meta": dict}
+      {"status": "skipped", "reason": str}
+      {"status": "error",   "error": str}
+    """
+    if not filename or not filename.lower().endswith(".pdf"):
+        return {"status": "error", "error": "Only PDF files are supported"}
+
+    safe_name = Path(filename).name
+
+    conn = get_conn()
+    existing = conn.execute("SELECT id FROM notes WHERE name=?", (safe_name,)).fetchone()
+    conn.close()
+    if existing:
+        return {"status": "skipped", "reason": f"already in database: {safe_name}"}
+
+    meta   = _parse_filename_meta(Path(safe_name).stem)
+    bucket = ticker_to_bucket((meta.get('ticker') or '').strip() or 'unknown')
+    dest_dir = MANUAL_REPORT_DIR / bucket
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    dest = dest_dir / safe_name
+    i = 1
+    while dest.exists():
+        dest = dest_dir / f"{Path(safe_name).stem}_{i}.pdf"; i += 1
+
+    try:
+        save_to_dest(dest)
+    except Exception as exc:
+        return {"status": "error", "error": f"save failed: {exc}"}
+
+    now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    conn = get_conn()
+    cur  = conn.execute(
+        """INSERT INTO notes (name, local_path, created_at, type, quarter, report_date, ticker)
+           VALUES (?,?,?,?,?,?,?)""",
+        (dest.name, str(dest), now,
+         meta.get('type'), meta.get('quarter'), meta.get('report_date'), meta.get('ticker')),
+    )
+    note_id = cur.lastrowid
+    conn.commit()
+    conn.close()
+
+    return {"status": "added", "note_id": note_id, "dest": dest, "meta": meta}
+
+
 # ── Main index template ───────────────────────────────────────────────────────
 
 _INDEX_TEMPLATE = """
@@ -1083,37 +1137,13 @@ def upload():
     f = request.files.get("pdf")
     if not f:
         return jsonify(ok=False, error="No file provided"), 400
-    if not f.filename.lower().endswith(".pdf"):
-        return jsonify(ok=False, error="Only PDF files are supported"), 400
 
-    safe_name = Path(f.filename).name
-    conn = get_conn()
-    existing = conn.execute("SELECT id FROM notes WHERE name=?", (safe_name,)).fetchone()
-    conn.close()
-    if existing:
-        return jsonify(ok=False, error=f"Already in database: {safe_name}"), 409
-
-    meta = _parse_filename_meta(Path(safe_name).stem)
-    bucket = ticker_to_bucket((meta.get('ticker') or '').strip() or 'unknown')
-    dest_dir = MANUAL_REPORT_DIR / bucket
-    dest_dir.mkdir(parents=True, exist_ok=True)
-    dest = dest_dir / safe_name
-    i = 1
-    while dest.exists():
-        dest = dest_dir / f"{Path(safe_name).stem}_{i}.pdf"; i += 1
-
-    f.save(dest)
-    now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
-    conn = get_conn()
-    conn.execute(
-        """INSERT INTO notes (name, local_path, created_at, type, quarter, report_date, ticker)
-           VALUES (?,?,?,?,?,?,?)""",
-        (dest.name, str(dest), now,
-         meta.get('type'), meta.get('quarter'), meta.get('report_date'), meta.get('ticker')),
-    )
-    conn.commit()
-    conn.close()
-    return jsonify(ok=True)
+    result = ingest_pdf(f.filename, lambda dest: f.save(dest))
+    if result["status"] == "added":
+        return jsonify(ok=True)
+    if result["status"] == "skipped":
+        return jsonify(ok=False, error=result["reason"]), 409
+    return jsonify(ok=False, error=result["error"]), 400
 
 
 @notes_bp.route("/pdf/<int:note_id>")

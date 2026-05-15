@@ -8,28 +8,19 @@ Usage:
     python3 upload_pdfs.py --dry-run                # report what would happen, no writes
     python3 upload_pdfs.py file1.pdf file2.pdf      # specific files only
 
-Per file we:
-  1. Skip non-PDFs and anything already living under MANUAL_REPORT_DIR.
-  2. Dedupe against notes.name (same filename → skip).
-  3. Parse filename → type / quarter / report_date / ticker.
-  4. Move (or copy) to MANUAL_REPORT_DIR/<ticker>/ (fallback "unknown"),
-     auto-renaming on collision.
-  5. INSERT into notes table.
-
-Output is JSON-friendly per-file lines plus a final summary, so Claude
-can pick up counts and any errors at a glance.
+The dedup/parse/bucket/insert pipeline lives in notes_app.ingest_pdf,
+shared with the Flask /notes/upload route. This script just walks a
+source dir, filters obvious skips, and hands each file to that helper
+with a `shutil.move` (or `shutil.copy2`) saver.
 """
 
 from __future__ import annotations
 
 import argparse
-import datetime
 import json
 import shutil
 import sys
 from pathlib import Path
-
-_UNKNOWN_BUCKET = "unknown"
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3].parent  # .claude/skills/earnings-upload-to-db/scripts → financial_agent/
 sys.path.insert(0, str(PROJECT_ROOT))
@@ -39,6 +30,7 @@ from notes_app import (  # noqa: E402  (sys.path tweak above)
     MANUAL_REPORT_DIR,
     _parse_filename_meta,
     get_conn,
+    ingest_pdf,
     init_db,
     ticker_to_bucket,
 )
@@ -60,22 +52,25 @@ def _already_managed(path: Path) -> bool:
         return False
 
 
-def _unique_dest(dest_dir: Path, filename: str) -> Path:
-    dest = dest_dir / filename
-    i = 1
-    while dest.exists():
-        dest = dest_dir / f"{Path(filename).stem}_{i}.pdf"
-        i += 1
-    return dest
+def _dry_run_preview(src: Path) -> dict:
+    """Same dedup + bucket logic ingest_pdf would apply, but read-only."""
+    conn = get_conn()
+    dup = conn.execute("SELECT id FROM notes WHERE name=?", (src.name,)).fetchone()
+    conn.close()
+    if dup:
+        return {"status": "skipped", "reason": f"already in database: {src.name}"}
+    meta = _parse_filename_meta(src.stem)
+    bucket = ticker_to_bucket((meta.get("ticker") or "").strip() or "unknown")
+    return {
+        "status": "would_add",
+        "would_move_to": str(MANUAL_REPORT_DIR / bucket / src.name),
+        "meta": meta,
+    }
 
 
 def upload(source: Path, copy: bool, dry_run: bool, explicit: list[Path]) -> dict:
     init_db()
     pdfs = _collect_pdfs(source, explicit)
-
-    conn = get_conn()
-    existing = {r[0] for r in conn.execute("SELECT name FROM notes").fetchall()}
-    conn.close()
 
     added: list[dict] = []
     skipped: list[dict] = []
@@ -85,57 +80,37 @@ def upload(source: Path, copy: bool, dry_run: bool, explicit: list[Path]) -> dic
         if _already_managed(src):
             skipped.append({"file": str(src), "reason": "already in MANUAL_REPORT_DIR"})
             continue
-        if src.name in existing:
-            skipped.append({"file": str(src), "reason": "filename already in DB"})
-            continue
-
-        meta = _parse_filename_meta(src.stem)
-        bucket = ticker_to_bucket((meta.get("ticker") or "").strip() or _UNKNOWN_BUCKET)
-        dest_dir = MANUAL_REPORT_DIR / bucket
 
         if dry_run:
+            preview = _dry_run_preview(src)
+            if preview["status"] == "skipped":
+                skipped.append({"file": str(src), "reason": preview["reason"]})
+            else:
+                added.append({
+                    "file": str(src),
+                    "would_move_to": preview["would_move_to"],
+                    "meta": preview["meta"],
+                })
+            continue
+
+        def saver(dest: Path, _src: Path = src) -> None:
+            if copy:
+                shutil.copy2(_src, dest)
+            else:
+                shutil.move(str(_src), dest)
+
+        result = ingest_pdf(src.name, saver)
+        if result["status"] == "added":
             added.append({
                 "file": str(src),
-                "would_move_to": str(dest_dir / src.name),
-                "meta": meta,
+                "saved_as": str(result["dest"]),
+                "note_id": result["note_id"],
+                "meta": result["meta"],
             })
-            continue
-
-        try:
-            dest_dir.mkdir(parents=True, exist_ok=True)
-            dest = _unique_dest(dest_dir, src.name)
-            if copy:
-                shutil.copy2(src, dest)
-            else:
-                shutil.move(str(src), dest)
-        except Exception as exc:
-            errors.append({"file": str(src), "error": f"file op failed: {exc}"})
-            continue
-
-        try:
-            now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
-            conn = get_conn()
-            cur = conn.execute(
-                """INSERT INTO notes (name, local_path, created_at, type, quarter, report_date, ticker)
-                   VALUES (?,?,?,?,?,?,?)""",
-                (dest.name, str(dest), now,
-                 meta.get("type"), meta.get("quarter"),
-                 meta.get("report_date"), meta.get("ticker")),
-            )
-            note_id = cur.lastrowid
-            conn.commit()
-            conn.close()
-        except Exception as exc:
-            errors.append({"file": str(src), "error": f"db insert failed: {exc}"})
-            continue
-
-        existing.add(dest.name)
-        added.append({
-            "file": str(src),
-            "saved_as": str(dest),
-            "note_id": note_id,
-            "meta": meta,
-        })
+        elif result["status"] == "skipped":
+            skipped.append({"file": str(src), "reason": result["reason"]})
+        else:
+            errors.append({"file": str(src), "error": result["error"]})
 
     return {
         "db": str(DB_PATH),
