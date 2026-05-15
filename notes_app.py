@@ -16,6 +16,7 @@ Routes
 """
 
 import datetime
+import json
 import re
 import sqlite3
 import subprocess
@@ -36,6 +37,7 @@ from zsxq_viewer import (
 SCRIPT_DIR        = Path(__file__).parent
 DB_PATH           = SCRIPT_DIR / "db" / "notes.db"
 MANUAL_REPORT_DIR = Path.home() / "Downloads" / "zsxq_report" / "manual_report"
+TICKER_MAP_PATH   = SCRIPT_DIR / "db" / "name_to_ticker.json"
 
 notes_bp = Blueprint("notes", __name__)
 
@@ -103,11 +105,35 @@ _TYPE_PATTERNS = [
 ]
 
 
+_TICKER_MAP_CACHE: dict | None = None
+
+
+def _load_ticker_map() -> dict:
+    """Load db/name_to_ticker.json (case-folded keys). Cached, reloads on mtime change."""
+    global _TICKER_MAP_CACHE
+    if not TICKER_MAP_PATH.exists():
+        return {}
+    try:
+        raw = json.loads(TICKER_MAP_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return _TICKER_MAP_CACHE or {}
+    folded = {k.casefold(): v for k, v in raw.items() if not k.startswith("_")}
+    _TICKER_MAP_CACHE = folded
+    return folded
+
+
+def _resolve_ticker(name_prefix: str) -> str:
+    """Map a filename prefix to a real symbol; falls back to the input."""
+    if not name_prefix:
+        return name_prefix
+    return _load_ticker_map().get(name_prefix.casefold(), name_prefix)
+
+
 def _parse_filename_meta(stem: str) -> dict:
     """Extract type, quarter, report_date, ticker from a PDF filename stem.
 
     Example: "Micron Technology, Inc., Earnings, Q2 FY2026 Mar 18 2026 8k"
-      → type="8K", quarter="2026Q2", report_date="2026-03-18", ticker="Micron"
+      → type="8K", quarter="2026Q2", report_date="2026-03-18", ticker="MU"
     """
     meta = {}
 
@@ -129,10 +155,11 @@ def _parse_filename_meta(stem: str) -> dict:
         if month:
             meta['report_date'] = f"{m.group(3)}-{month}-{int(m.group(2)):02d}"
 
-    # Ticker: first word of the filename (company name prefix)
-    m = re.match(r'([A-Za-z][A-Za-z0-9]*)', stem)
+    # Ticker: first word of the filename, resolved through name→symbol map.
+    # Accepts ASCII (Alibaba) and CJK prefixes (黑芝麻智能) so Chinese filenames work too.
+    m = re.match(r'([A-Za-z][A-Za-z0-9]*|[一-鿿]+)', stem)
     if m:
-        meta['ticker'] = m.group(1)
+        meta['ticker'] = _resolve_ticker(m.group(1))
 
     return meta
 
