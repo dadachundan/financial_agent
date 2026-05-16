@@ -7,6 +7,13 @@ description: Produce a deep 6,000–8,000 word company research report (business
 
 Deep research deliverable: a 6,000–8,000 word markdown report covering business, management, products, customers, industry, competitive landscape, TAM, and risks. Input is just a company name or ticker.
 
+## Report language
+
+- Default: **English**.
+- **Chinese companies (A-share `SZSE:` / `SSE:`, HK `HKEX:`, or any PRC-domiciled issuer)**: it's OK — and often preferable — to write the report in **Simplified Chinese (zh-CN)**, since the authoritative source documents (年度报告, 季度报告, 重大事项公告) are Chinese. Mirror the user's language: if they asked in Chinese, write in Chinese; if they asked in English about a Chinese company, ask once whether they prefer English or Chinese, then proceed.
+- When writing in Chinese, keep section headers in Chinese (公司概览, 公司历史, 管理团队, 产品与服务, 客户与上市策略, 行业概览, 竞争格局, 市场机会, 风险评估, 参考资料) and keep the 6,000–8,000 word target (字数按中文字符计，目标约 6,000–8,000 字).
+- Filenames stay ASCII: `reports/[Company-Pinyin-or-Ticker]_Research_Document_[YYYY-MM-DD].md` (e.g. `reports/Anpeilong_SZSE002050_Research_Document_2026-05-16.md`). Do not put Chinese characters in the filename.
+
 ## Reference docs (read on demand)
 
 - `references/report_structure.md` — section-by-section word counts, per-section content spec, and the full output template. **Read before writing.**
