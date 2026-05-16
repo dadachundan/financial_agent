@@ -9,16 +9,31 @@ Deep research deliverable: a 6,000–10,000 word markdown report covering busine
 
 ## Report language
 
-**Always write the report's prose in English**, regardless of the company's domicile, listing, or the language of its primary filings. The user's prompt language does not change this — a request in Chinese about `SZSE:002050` still gets an English report.
+Two options only: **Simplified Chinese (zh-CN)** or **English**. Never Traditional Chinese, Japanese, or Korean for the prose.
 
-**Chinese names and bilingual technical terms are allowed inline:**
-- **Chinese company names** (the subject company or a Chinese competitor / customer / partner) may appear in their original Chinese form alongside an English / pinyin gloss on first mention, e.g. `安培龙 (Anpeilong, SZSE:002050)`, `比亚迪 (BYD)`, `宁德时代 (CATL)`. After the first mention, either form is fine.
-- **Technical terms** with no clean English equivalent (industry jargon, regulatory categories, product certifications, government program names) may be written bilingually, e.g. `"专精特新" (specialized, refined, distinctive, novel — MIIT designation for niche SMEs)`, `国六排放标准 (China VI emission standard)`. Prefer English when an established English term exists.
-- Direct quotations from Chinese filings stay in Chinese (per the citation rule); add a parenthetical English translation if the quote is load-bearing.
+**Decision rule:**
 
-Source citations preserve the **original** language of the document (see "Citations preserve the original source language" below) — e.g. `(Source: 2024 年度报告, p. 28)` inside English-language prose. Do not translate source titles.
+- **Listed in China / HK / Taiwan AND primary financial reports are in Chinese → write the report in Simplified Chinese.**
+  - China A-share (`SSE:` / `SZSE:`) → always Chinese (filings: 年度报告, 季度报告 — all in Chinese).
+  - HK (`HKEX:`) → Chinese when the issuer files in Chinese as primary (most mainland-domiciled HK names: 比亚迪, 安踏, 美团, etc.). For HK issuers whose primary filings are English (HSBC, Prudential, AIA, Standard Chartered, etc.) → English.
+  - Taiwan (`TWSE:` / `TPEx:`) → Simplified Chinese for the prose (translate Traditional Chinese filings into Simplified; source titles stay in their original Traditional form per the citation rule).
+- **Everything else → English.** US listings (including Chinese ADRs like BABA, PDD, JD, NIO whose 10-K / 20-F are in English), Japan, Korea, Europe, ASEAN, India, etc.
+- Domicile alone does not decide it — the **listing + filing language** does. A user's prompt language never overrides: a request in English about `SZSE:002050` still gets a Chinese report; a request in Chinese about Tesla still gets an English report.
 
-Filenames may include Chinese characters when the subject company is Chinese: `reports/安培龙_SZSE002050_Research_Document_2026-05-16.md` is fine; `reports/Tesla_Research_Document_2024-10-27.md` is fine. No Japanese kana / kanji or Korean hangul in filenames.
+**Bilingual technical terms (Chinese reports):** since most sources you cite will be Chinese, but many technical / industry / regulatory terms originate in English (or have established English equivalents), **use both** on first mention and either thereafter. Examples:
+- `EV / 电动车`, `半导体 (semiconductor)`, `先进封装 (advanced packaging)`, `数据中心 GPU (data-center GPU)`, `OEM / ODM`, `Tier-1 供应商`, `毛利率 (gross margin)`, `自由现金流 (free cash flow)`, `专精特新 ("specialized, refined, distinctive, novel" — MIIT designation)`.
+- Keep ticker codes and acronyms in their original form: `SZSE:002050`, `H200`, `RMB`, `USD`, `bp`, `YoY`, `QoQ`.
+
+**Chinese names in English reports:** Chinese companies (subject, competitor, customer, partner) may appear in their original Chinese form alongside an English / pinyin gloss on first mention, e.g. `安培龙 (Anpeilong, SZSE:002050)`, `比亚迪 (BYD)`, `宁德时代 (CATL)`. After first mention, either form is fine.
+
+**Direct quotations** stay in their original language regardless of the report's main language — add a short translation in parentheses only if the quote is load-bearing.
+
+**Filenames:**
+- Chinese reports: Simplified Chinese characters allowed in `[Company]` — `reports/安培龙_SZSE002050_公司研究_2026-05-16.md`.
+- English reports: ASCII — `reports/Tesla_Research_Document_2024-10-27.md`, `reports/Alibaba_BABA_Research_Document_2026-05-16.md`.
+- Never Japanese kana / kanji or Korean hangul in filenames.
+
+**Section headers (Chinese reports):** 公司概览, 公司历史, 管理团队, 产品与服务, 客户与上市策略, 行业概览, 竞争格局, 市场机会, 风险评估, 参考资料.
 
 ## Citations
 
@@ -200,11 +215,16 @@ Read `references/report_structure.md` for the 9-section spec and full output tem
 
 Save to the **project-level `reports/` folder**: `/Users/x/projects/financial_agent/reports/`. Create it if missing.
 
-File name: `reports/[Company]_Research_Document_[YYYY-MM-DD].md` — `[Company]` may use Chinese characters for Chinese companies; otherwise ASCII. No Japanese kana / kanji or Korean hangul.
+File name follows the report language:
+- **Chinese reports**: `reports/[Company-中文名]_公司研究_[YYYY-MM-DD].md` — Simplified Chinese characters allowed.
+- **English reports**: `reports/[Company]_Research_Document_[YYYY-MM-DD].md` — ASCII only.
+- Never Japanese kana / kanji or Korean hangul in filenames.
+
 Examples:
-- `reports/Tesla_Research_Document_2024-10-27.md`
-- `reports/安培龙_SZSE002050_Research_Document_2026-05-16.md`
-- `reports/Anpeilong_SZSE002050_Research_Document_2026-05-16.md`
-- `reports/Toyota_TSE7203_Research_Document_2026-05-16.md`
+- `reports/安培龙_SZSE002050_公司研究_2026-05-16.md` (A-share company, Chinese report)
+- `reports/比亚迪_HKEX1211_公司研究_2026-05-16.md` (HK company filing in Chinese, Chinese report)
+- `reports/Tesla_Research_Document_2024-10-27.md` (US company, English report)
+- `reports/Alibaba_BABA_Research_Document_2026-05-16.md` (US-listed Chinese ADR, English report)
+- `reports/Toyota_TSE7203_Research_Document_2026-05-16.md` (Japanese company, English report)
 
 Always write to the main project's `reports/` directory — never to a worktree, `~/Downloads`, or any other location.
