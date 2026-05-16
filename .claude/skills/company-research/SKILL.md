@@ -9,9 +9,15 @@ Deep research deliverable: a 6,000–8,000 word markdown report covering busines
 
 ## Report language
 
-- Default: **English**.
-- **Chinese companies (A-share `SZSE:` / `SSE:`, HK `HKEX:`, or any PRC-domiciled issuer)**: it's OK — and often preferable — to write the report in **Simplified Chinese (zh-CN)**, since the authoritative source documents (年度报告, 季度报告, 重大事项公告) are Chinese. Mirror the user's language: if they asked in Chinese, write in Chinese; if they asked in English about a Chinese company, ask once whether they prefer English or Chinese, then proceed.
-- When writing in Chinese, keep section headers in Chinese (公司概览, 公司历史, 管理团队, 产品与服务, 客户与上市策略, 行业概览, 竞争格局, 市场机会, 风险评估, 参考资料) and keep the 6,000–8,000 word target (字数按中文字符计，目标约 6,000–8,000 字).
+- **Match the language of the authoritative source documents (filings / financial reports), not the user's prompt language.** If the primary filings are in Chinese (年度报告, 季度报告, 重大事项公告 from cninfo), write the report in Simplified Chinese. If the primary filings are 10-Ks / 10-Qs on SEC EDGAR, write in English. Japanese issuers (有価証券報告書) → Japanese. Korean issuers (사업보고서) → Korean. This keeps the report aligned with the wording of the underlying disclosures and avoids translation drift.
+- **Quick rule by domicile:**
+  - US issuer → English
+  - China A-share (`SZSE:` / `SSE:`) / HK (`HKEX:`) / any PRC-domiciled issuer → Simplified Chinese
+  - Taiwan (TWSE / TPEx) → Traditional Chinese
+  - Japan → Japanese
+  - Korea → Korean
+  - Other → language of the primary disclosure portal
+- When writing in Chinese, keep section headers in Chinese (公司概览, 公司历史, 管理团队, 产品与服务, 客户与上市策略, 行业概览, 竞争格局, 市场机会, 风险评估, 参考资料) and keep the 6,000–8,000 word target (字数按中文字符计，目标约 6,000–8,000 字). Apply the analogous header convention for Japanese / Korean reports.
 - Filenames stay ASCII: `reports/[Company-Pinyin-or-Ticker]_Research_Document_[YYYY-MM-DD].md` (e.g. `reports/Anpeilong_SZSE002050_Research_Document_2026-05-16.md`). Do not put Chinese characters in the filename.
 
 ## Citations preserve the original source language
