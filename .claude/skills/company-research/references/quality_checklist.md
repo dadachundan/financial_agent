@@ -26,11 +26,18 @@
 - Flagship 1–3 products clearly distinguished from long-tail.
 - Last-12-month launches / sunsets noted.
 
+## Customers & Go-to-Market
+- Top-1 and top-5 customer share of revenue quantified from the latest annual filing (or explicitly noted as undisclosed).
+- 3-year concentration trend captured when the disclosure history allows.
+- Top customers named when disclosed; contract structure (multi-year vs. PO-by-PO) noted.
+- If top-1 > 20% or top-5 > 50%, the report flags it in Section 5 **and** carries it into Section 9 as a material risk.
+
 ## Risk Assessment
 - 8–12 distinct risks across all four categories (see `risk_taxonomy.md`).
 - 50–100 word description per risk.
 - Impact quantified where possible.
 - Mitigating factors noted.
+- Customer-concentration risk is evaluated in every report (not optional) — included with quantified top-1 / top-5 % whenever top-1 > 10% or top-5 > 30%.
 
 ## Writing Quality
 - Professional, analytical tone.
