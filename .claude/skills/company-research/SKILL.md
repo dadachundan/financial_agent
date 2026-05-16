@@ -18,7 +18,7 @@ Deep research deliverable: a 6,000–8,000 word markdown report covering busines
   - Korea → Korean
   - Other → language of the primary disclosure portal
 - When writing in Chinese, keep section headers in Chinese (公司概览, 公司历史, 管理团队, 产品与服务, 客户与上市策略, 行业概览, 竞争格局, 市场机会, 风险评估, 参考资料) and keep the 6,000–8,000 word target (字数按中文字符计，目标约 6,000–8,000 字). Apply the analogous header convention for Japanese / Korean reports.
-- Filenames stay ASCII: `reports/[Company-Pinyin-or-Ticker]_Research_Document_[YYYY-MM-DD].md` (e.g. `reports/Anpeilong_SZSE002050_Research_Document_2026-05-16.md`). Do not put Chinese characters in the filename.
+- Filenames may use the company's native-language name (Chinese / Japanese / Korean characters are fine): e.g. `reports/安培龙_SZSE002050_公司研究_2026-05-16.md`, `reports/Tesla_Research_Document_2026-05-16.md`. Pinyin or ticker-only filenames are also acceptable.
 
 ## Citations preserve the original source language
 
@@ -108,7 +108,10 @@ Read `references/report_structure.md` for the 9-section spec and full output tem
 
 Save to the **project-level `reports/` folder**: `/Users/x/projects/financial_agent/reports/`. Create it if missing.
 
-File name: `reports/[Company]_Research_Document_[YYYY-MM-DD].md`
-Example: `reports/Tesla_Research_Document_2024-10-27.md`
+File name: `reports/[Company]_Research_Document_[YYYY-MM-DD].md` — `[Company]` may be in the company's native script (Chinese / Japanese / Korean characters allowed).
+Examples:
+- `reports/Tesla_Research_Document_2024-10-27.md`
+- `reports/安培龙_SZSE002050_公司研究_2026-05-16.md`
+- `reports/トヨタ_7203_企業調査_2026-05-16.md`
 
 Always write to the main project's `reports/` directory — never to a worktree, `~/Downloads`, or any other location.
