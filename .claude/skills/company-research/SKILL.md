@@ -95,7 +95,7 @@ Read PDFs with `fitz` / Read tool. For image-only / scanned pages, follow the OC
    - Read blog / newsroom for the **last 12 months** to detect launches, sunsets, repositioning.
    - For non-English companies, read the **native-language site** (e.g. `company.com.cn`) — English IR pages are often a stripped subset and miss SKUs.
 2. **Regulatory filings** — start from the local cache pulled in Step 0; only fetch fresh if the cache is stale (see freshness rules above). Route by domicile per the data-sources table. Note filing dates and the portal used.
-3. **Earnings materials** — latest transcript, latest investor presentation, last 12 months of press releases.
+3. **Earnings materials** — latest transcript, latest investor presentation, last 12 months of press releases. **Specifically look for any change to full-year guidance** (raised / cut / reaffirmed-with-color / initiated) — capture the old range, new range, disclosure date, and stated driver. If a change exists, it goes in the top-of-report banner described in `references/report_structure.md` (before the TOC), not buried in Section 1. For Chinese issuers, also check 业绩预告 / 业绩快报 — these often pre-announce a guidance change before the formal 半年度 / 年度报告.
 4. **Document basic facts** — founding date, HQ, employees, products/services, key customers.
 
 ### Step 2 — Valuation snapshot (always pull P/E and P/S)

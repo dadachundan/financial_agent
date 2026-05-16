@@ -58,6 +58,7 @@
 
 1. Total word count is 6,000–10,000 (verify with `wc -w`). Don't pad to hit a number — if the content runs lean, ship it; if it runs long with real substance, that's fine.
 2. **4–8 charts/diagrams embedded** — mix of matplotlib PNGs (`reports/charts/<company>_<name>.png`, referenced via `![alt](charts/...)`) and Mermaid blocks (` ```mermaid ` fences). Each chart has a markdown-link citation directly beneath it.
+3. **Guidance-change banner present at the top of the report when applicable.** If the latest earnings release / 业绩预告 / 8-K shows a raise, cut, color-bearing reaffirmation, or initiation of full-year guidance, the report opens with a `> **Update:**` blockquote (old vs. new range, disclosure date as a markdown-link citation, one-sentence driver). Omit entirely if no change.
 2. All 9 sections present with their target word counts.
 3. Substantive analysis, not just description.
 4. Specific examples and quantitative data throughout.

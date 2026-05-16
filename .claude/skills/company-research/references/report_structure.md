@@ -15,6 +15,45 @@ Embed **4–8 charts** across the report (mix of matplotlib PNGs and Mermaid blo
 
 Every chart needs a citation directly underneath in the same markdown-link format used in prose. PNGs go in `reports/charts/<company>_<name>.png`.
 
+## Top-of-report banner — guidance changes (REQUIRED when present)
+
+**Before the Table of Contents**, scan the latest earnings release / 业绩预告 / 业绩快报 / 季度报告 / 半年度报告 / 年度报告 / 8-K guidance update for any change to **full-year guidance** versus the prior outlook. If the company has:
+
+- **Raised** full-year guidance (revenue, EPS, GM, or any disclosed full-year KPI), or
+- **Cut** full-year guidance, or
+- **Reaffirmed** guidance after a meaningful operating change, or
+- **Initiated** guidance for the first time
+
+→ open the report with a one-paragraph callout block highlighting the change. Use a `> **Update:**` blockquote so it visually separates from Section 1.
+
+**Required content of the callout:**
+- Direction (raised / cut / reaffirmed / initiated) + the specific metric and the old vs. new range
+- The filing or call where it was disclosed (markdown link to the real URL)
+- One sentence on the implied YoY change vs. the prior guide
+- One sentence on the stated driver (management's words, briefly)
+
+**Example (English-language report):**
+
+```
+> **Update — FY2025 guidance raised (2025-08-12):** Management raised full-year
+> revenue guidance to USD 6.2–6.4B (from USD 5.9–6.1B) and raised non-GAAP
+> EPS to USD 4.10–4.25 (from USD 3.85–4.00) on the back of stronger
+> data-center demand and a faster H200 ramp.
+> Source: [Q2-FY2025 earnings press release, 2025-08-12](https://...).
+```
+
+**Example (Chinese company, English report):**
+
+```
+> **Update — 上调 FY2025 全年业绩指引 (2025-08-15):** 公司将 2025 年营收
+> 指引上调至 RMB 12.5–13.0 bn (原 RMB 11.5–12.0 bn)，归母净利润指引上调
+> 至 RMB 2.1–2.3 bn (原 RMB 1.85–2.0 bn)，主因机器人业务订单加速及
+> Tier-1 客户放量。
+> Source: [2025 年半年度业绩预告, 2025-08-15](https://static.cninfo.com.cn/...).
+```
+
+If there is **no recent guidance change** to highlight, omit the banner entirely — do not add a placeholder. Guidance that's purely a re-affirmation with no new color isn't worth the banner.
+
 ## Section word counts and content
 
 ### 1. Company Overview (800–1,200 words)
