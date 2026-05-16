@@ -137,10 +137,13 @@ Capture: top-1 customer % of revenue, top-5 %, multi-year trend (3 years if avai
 
 ### Step 4 — Management research
 
-For each of 3–4 key executives (CEO + CFO required; pick 1–2 more from C-suite):
-1. Find LinkedIn, DEF 14A / proxy bio, press interviews. Note tenure.
-2. Write a 300–400 word bio: current role, prior 2–3 roles, accomplishments, education, years in industry, time at company.
-3. Assess governance: board composition/independence, key board members, insider ownership, comp structure.
+**The CEO / founder is the most important bio — spend the most depth there.** A strong founder-CEO is often the single biggest long-run driver; the rest of the team is supporting cast.
+
+1. **CEO / founder (250–350 word bio, deeper if founder-led / supervoting / unusually consequential).** Pull from LinkedIn, DEF 14A / proxy, press interviews, podcasts, shareholder letters. Capture prior 2–3 roles with *what they specifically accomplished* (numbers not titles), education, tenure at this company, ownership stake, comp structure, public profile. If founder, also the founding thesis and whether they still own materially.
+2. **CFO (150–200 words).** Prior roles, IPO / M&A / capital-markets track record, prior public-company CFO experience.
+3. **1–2 other execs (80–120 words each).** Pick by thesis relevance — CTO at a chip co, CRO at sales-led SaaS, head of largest segment at a conglomerate.
+4. **Governance (80–150 words).** Board composition / independence, insider ownership %, comp structure (cash vs. equity, perf-linked %), related-party transactions, governance flags.
+5. **Track record synthesis (50–100 words).** Has this team delivered before? Where are the gaps?
 
 ### Step 5 — Competitive intelligence
 

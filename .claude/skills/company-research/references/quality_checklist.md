@@ -8,9 +8,11 @@
 - Objectivity and balance.
 
 ## Management Bios
-- 300–400 words per executive for 3–4 key executives.
-- Each bio includes current role, prior experience, key accomplishments, education.
-- Enough detail to assess track record and capabilities.
+- **CEO / founder gets the deepest bio (250–350 words)** — they're the single biggest determinant of long-run outcome. Go deeper for founder-led, supervoting-control, or unusually consequential CEOs.
+- CFO bio: 150–200 words.
+- 1–2 other executives chosen for thesis relevance: 80–120 words each.
+- Each bio includes current role, prior 2–3 roles with *what specifically they accomplished* (numbers, not titles), education, tenure, ownership stake.
+- Plus a governance footer (board, insider %, comp structure) and a one-paragraph track-record synthesis.
 
 ## Competitive Analysis
 - 5–10 specific competitors analyzed.
