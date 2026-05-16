@@ -9,16 +9,13 @@ Deep research deliverable: a 6,000–8,000 word markdown report covering busines
 
 ## Report language
 
-- **Match the language of the authoritative source documents (filings / financial reports), not the user's prompt language.** If the primary filings are in Chinese (年度报告, 季度报告, 重大事项公告 from cninfo), write the report in Simplified Chinese. If the primary filings are 10-Ks / 10-Qs on SEC EDGAR, write in English. Japanese issuers (有価証券報告書) → Japanese. Korean issuers (사업보고서) → Korean. This keeps the report aligned with the wording of the underlying disclosures and avoids translation drift.
-- **Quick rule by domicile:**
-  - US issuer → English
-  - China A-share (`SZSE:` / `SSE:`) / HK (`HKEX:`) / any PRC-domiciled issuer → Simplified Chinese
-  - Taiwan (TWSE / TPEx) → Traditional Chinese
-  - Japan → Japanese
-  - Korea → Korean
-  - Other → language of the primary disclosure portal
-- When writing in Chinese, keep section headers in Chinese (公司概览, 公司历史, 管理团队, 产品与服务, 客户与上市策略, 行业概览, 竞争格局, 市场机会, 风险评估, 参考资料) and keep the 6,000–8,000 word target (字数按中文字符计，目标约 6,000–8,000 字). Apply the analogous header convention for Japanese / Korean reports.
-- Filenames may use the company's native-language name (Chinese / Japanese / Korean characters are fine): e.g. `reports/安培龙_SZSE002050_公司研究_2026-05-16.md`, `reports/Tesla_Research_Document_2026-05-16.md`. Pinyin or ticker-only filenames are also acceptable.
+The report is written in **exactly one of two languages**: Simplified Chinese or English. Never Traditional Chinese, never Japanese, never Korean — even when filings are in those scripts (translate the analysis into English; keep source titles in their original language per the citation rule below).
+
+- **Chinese / HK / Taiwan companies → Simplified Chinese (zh-CN).** This includes A-share (`SZSE:` / `SSE:`), HK (`HKEX:`), and Taiwan (TWSE / TPEx) issuers. For Taiwan filings written in Traditional Chinese, translate the analysis into Simplified Chinese; quote source titles in their original form per the citation rule.
+- **Everything else → English.** US, Japan, Korea, Europe, ASEAN, India, etc.
+- Domicile is what matters, not the user's prompt language. A user asking in English about `SZSE:002050` still gets a Chinese report; a user asking in Chinese about Tesla still gets an English report.
+- When writing in Chinese, use Chinese section headers (公司概览, 公司历史, 管理团队, 产品与服务, 客户与上市策略, 行业概览, 竞争格局, 市场机会, 风险评估, 参考资料) and target 6,000–8,000 字 (counting Chinese characters).
+- Filenames: Chinese reports may use Chinese characters in `[Company]`; English reports use ASCII. Examples: `reports/安培龙_SZSE002050_公司研究_2026-05-16.md`, `reports/Tesla_Research_Document_2026-05-16.md`.
 
 ## Citations preserve the original source language
 
@@ -108,10 +105,10 @@ Read `references/report_structure.md` for the 9-section spec and full output tem
 
 Save to the **project-level `reports/` folder**: `/Users/x/projects/financial_agent/reports/`. Create it if missing.
 
-File name: `reports/[Company]_Research_Document_[YYYY-MM-DD].md` — `[Company]` may be in the company's native script (Chinese / Japanese / Korean characters allowed).
+File name: `reports/[Company]_Research_Document_[YYYY-MM-DD].md` — Simplified Chinese characters allowed in `[Company]` for CN/HK/TW reports; ASCII only for English reports. No Japanese kana / kanji or Korean hangul in filenames.
 Examples:
 - `reports/Tesla_Research_Document_2024-10-27.md`
 - `reports/安培龙_SZSE002050_公司研究_2026-05-16.md`
-- `reports/トヨタ_7203_企業調査_2026-05-16.md`
+- `reports/Toyota_TSE7203_Research_Document_2026-05-16.md` (Japanese issuer → English report)
 
 Always write to the main project's `reports/` directory — never to a worktree, `~/Downloads`, or any other location.
