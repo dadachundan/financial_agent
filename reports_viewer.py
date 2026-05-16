@@ -7,6 +7,7 @@ each file is local-only.
 """
 from __future__ import annotations
 
+from datetime import datetime
 from pathlib import Path
 
 from flask import Blueprint, abort, render_template_string
@@ -35,6 +36,10 @@ _INDEX_TMPL = r"""<!doctype html>
     .page a{color:#0366d6;text-decoration:none}
     .page a:hover{text-decoration:underline}
     .empty{color:#888;font-style:italic}
+    .page table{width:100%;border-collapse:collapse;margin-top:.5rem}
+    .page th,.page td{text-align:left;padding:.4rem .6rem;border-bottom:1px solid #eee}
+    .page th{font-size:.85rem;color:#666;font-weight:600}
+    .page td.created{color:#666;white-space:nowrap;font-variant-numeric:tabular-nums}
   </style>
 </head>
 <body>
@@ -42,11 +47,19 @@ _INDEX_TMPL = r"""<!doctype html>
   <div class="page">
   <h1>Reports</h1>
   {% if files %}
-    <ul>
-      {% for f in files %}
-        <li><a href="{{ _base }}/view/{{ f }}">{{ f }}</a></li>
-      {% endfor %}
-    </ul>
+    <table>
+      <thead>
+        <tr><th>Report</th><th>Created</th></tr>
+      </thead>
+      <tbody>
+        {% for f in files %}
+          <tr>
+            <td><a href="{{ _base }}/view/{{ f.name }}">{{ f.name }}</a></td>
+            <td class="created">{{ f.created }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   {% else %}
     <p class="empty">No reports yet — run the sec-report-summary skill.</p>
   {% endif %}
@@ -113,8 +126,18 @@ _VIEW_TMPL = r"""<!doctype html>
 @reports_bp.route("/")
 def index():
     REPORTS_DIR.mkdir(exist_ok=True)
-    files = sorted((p.name for p in REPORTS_DIR.glob("*.md")), reverse=True)
-    return render_template_string(_INDEX_TMPL, files=files, _nav=_nw.NAV_HTML)
+    entries = []
+    for p in REPORTS_DIR.glob("*.md"):
+        st = p.stat()
+        # st_birthtime is creation time on macOS; fall back to mtime elsewhere.
+        ts = getattr(st, "st_birthtime", st.st_mtime)
+        entries.append({
+            "name": p.name,
+            "ts": ts,
+            "created": datetime.fromtimestamp(ts).strftime("%Y-%m-%d %H:%M"),
+        })
+    entries.sort(key=lambda e: e["ts"], reverse=True)
+    return render_template_string(_INDEX_TMPL, files=entries, _nav=_nw.NAV_HTML)
 
 
 @reports_bp.route("/view/<path:name>")
