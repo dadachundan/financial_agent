@@ -9,22 +9,11 @@ Deep research deliverable: a 6,000–8,000 word markdown report covering busines
 
 ## Report language
 
-The report is written in **exactly one of two languages**: Simplified Chinese or English. Never Traditional Chinese, never Japanese, never Korean.
+**Always write the report in English**, regardless of the company's domicile, listing, or the language of its primary filings. The user's prompt language does not change this — a request in Chinese about `SZSE:002050` still gets an English report.
 
-**The rule follows the company's primary listing / filings, not its country of origin:**
+Source citations preserve the **original** language of the document (see "Citations preserve the original source language" below) — e.g. `(Source: 2024 年度报告, p. 28)` inside English-language prose. Do not translate source titles.
 
-- **Simplified Chinese (zh-CN)** — when the primary filings are in Chinese:
-  - A-share: `SSE:` / `SZSE:` issuers (filings: 年度报告, 季度报告 on cninfo)
-  - HK main board / GEM: `HKEX:` issuers (filings: 年報, mostly bilingual but Chinese is authoritative)
-  - Taiwan: `TWSE:` / `TPEx:` issuers (filings: 年報 on MOPS, in Traditional Chinese — translate analysis to Simplified Chinese; keep source titles original per citation rule)
-- **English** — for everything else, including:
-  - US-listed companies (NYSE / NASDAQ), regardless of country of origin. This includes **Chinese ADRs and US-listed Chinese companies** (e.g. BABA, PDD, BIDU, JD, NIO) whose primary filings are 10-K / 20-F / 6-K in English on SEC EDGAR. Even if the company also has an A-share or HK listing, if the user gives a US ticker, the report is in English.
-  - Japan, Korea, Europe, ASEAN, India, Australia, Canada, etc.
-- **Dual-listed companies**: language follows the listing the user named. `BABA` → English (US ADR); `9988.HK` / `HKEX:9988` → Simplified Chinese (HK listing). When ambiguous, default to English.
-- Domicile alone is not the deciding factor; the **filing language** is. Country of origin matters only when the company is unlisted in the US and primarily files in Chinese.
-- Prompt language never overrides this rule: a user asking in English about `SZSE:002050` still gets a Chinese report; a user asking in Chinese about Tesla or BABA still gets an English report.
-- When writing in Chinese, use Chinese section headers (公司概览, 公司历史, 管理团队, 产品与服务, 客户与上市策略, 行业概览, 竞争格局, 市场机会, 风险评估, 参考资料) and target 6,000–8,000 字 (counting Chinese characters).
-- Filenames: Chinese reports may use Simplified Chinese characters in `[Company]`; English reports use ASCII. Examples: `reports/安培龙_SZSE002050_公司研究_2026-05-16.md`, `reports/Tesla_Research_Document_2026-05-16.md`, `reports/Alibaba_BABA_Research_Document_2026-05-16.md`.
+Filenames are ASCII only: `reports/[Company]_Research_Document_[YYYY-MM-DD].md`.
 
 ## Citations preserve the original source language
 
@@ -114,10 +103,10 @@ Read `references/report_structure.md` for the 9-section spec and full output tem
 
 Save to the **project-level `reports/` folder**: `/Users/x/projects/financial_agent/reports/`. Create it if missing.
 
-File name: `reports/[Company]_Research_Document_[YYYY-MM-DD].md` — Simplified Chinese characters allowed in `[Company]` for CN/HK/TW reports; ASCII only for English reports. No Japanese kana / kanji or Korean hangul in filenames.
+File name: `reports/[Company]_Research_Document_[YYYY-MM-DD].md` — ASCII only.
 Examples:
 - `reports/Tesla_Research_Document_2024-10-27.md`
-- `reports/安培龙_SZSE002050_公司研究_2026-05-16.md`
-- `reports/Toyota_TSE7203_Research_Document_2026-05-16.md` (Japanese issuer → English report)
+- `reports/Anpeilong_SZSE002050_Research_Document_2026-05-16.md`
+- `reports/Toyota_TSE7203_Research_Document_2026-05-16.md`
 
 Always write to the main project's `reports/` directory — never to a worktree, `~/Downloads`, or any other location.
