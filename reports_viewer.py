@@ -87,6 +87,7 @@ _VIEW_TMPL = r"""<!doctype html>
     .markdown-body table{display:block;overflow-x:auto}
     .mermaid{background:#fff;border:1px solid #eee;border-radius:6px;
              padding:12px;margin:16px 0}
+    .markdown-body mark{background:#fff3a3;color:inherit;padding:.05em .15em;border-radius:2px}
     .backlink{margin:8px 0 14px;font-family:-apple-system,sans-serif;font-size:.9rem}
     .backlink a{color:#0366d6;text-decoration:none}
   </style>
@@ -102,6 +103,20 @@ _VIEW_TMPL = r"""<!doctype html>
   <script type="module">
     import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
     mermaid.initialize({ startOnLoad:false, theme:"default" });
+
+    // Obsidian-style ==highlight== → <mark>highlight</mark>
+    marked.use({
+      extensions: [{
+        name: "obsidianHighlight",
+        level: "inline",
+        start(src) { const i = src.indexOf("=="); return i < 0 ? undefined : i; },
+        tokenizer(src) {
+          const m = /^==(?=\S)([\s\S]*?\S)==/.exec(src);
+          if (m) return { type: "obsidianHighlight", raw: m[0], tokens: this.lexer.inlineTokens(m[1]) };
+        },
+        renderer(token) { return `<mark>${this.parser.parseInline(token.tokens)}</mark>`; },
+      }],
+    });
 
     const raw = {{ md | tojson }};
     document.getElementById("content").innerHTML = marked.parse(raw);
