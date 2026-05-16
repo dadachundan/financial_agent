@@ -14,6 +14,18 @@ Deep research deliverable: a 6,000–8,000 word markdown report covering busines
 - When writing in Chinese, keep section headers in Chinese (公司概览, 公司历史, 管理团队, 产品与服务, 客户与上市策略, 行业概览, 竞争格局, 市场机会, 风险评估, 参考资料) and keep the 6,000–8,000 word target (字数按中文字符计，目标约 6,000–8,000 字).
 - Filenames stay ASCII: `reports/[Company-Pinyin-or-Ticker]_Research_Document_[YYYY-MM-DD].md` (e.g. `reports/Anpeilong_SZSE002050_Research_Document_2026-05-16.md`). Do not put Chinese characters in the filename.
 
+## Citations preserve the original source language
+
+Regardless of the report's main language, **cite each source in the language it was published in.** Do not translate source titles, document names, exchange portals, or direct quotations — translating drifts away from the authoritative wording and makes the citation un-verifiable.
+
+- Chinese filings stay Chinese in citations: `(来源: 2024 年度报告, 第 28 页, cninfo SZSE:002050)`, `(Source: 2024 年度报告, p. 28, cninfo SZSE:002050)` — both are fine; the **document title** must remain `年度报告`, not "Annual Report".
+- Japanese filings: keep `有価証券報告書`, `四半期報告書`, `決算短信` as-is.
+- Korean filings: keep `사업보고서`, `반기보고서`, `분기보고서`.
+- US filings: `10-K`, `10-Q`, `DEF 14A`, `8-K` stay in English even in a Chinese-language report.
+- Direct quotations are quoted in the original language. Add a short translation in parentheses only if the quote is load-bearing for a non-speaker reader.
+- News articles / industry reports: keep the original title; add an English/Chinese gloss in brackets only if helpful.
+- URLs are never translated.
+
 ## Reference docs (read on demand)
 
 - `references/report_structure.md` — section-by-section word counts, per-section content spec, and the full output template. **Read before writing.**
