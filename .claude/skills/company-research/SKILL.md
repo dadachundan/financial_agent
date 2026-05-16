@@ -39,7 +39,9 @@ Two options only: **Simplified Chinese (zh-CN)** or **English**. Never Tradition
 
 Every inline citation is a **clickable markdown link to the real source URL** — `[Title in original language](https://real-url)` — never a bare `(Source: ...)` parenthetical. Link titles preserve the original language (`年度报告`, `10-K`, `決算短信`, `사업보고서`); URLs are canonical permalinks (the actual SEC EDGAR document URL, the specific cninfo PDF, the article permalink — not homepages). No fabricated URLs — if you cannot find the real link, say so inline.
 
-See [`references/citations.md`](references/citations.md) for the full rules, per-source examples, and the final References-block format. **Read it before drafting.**
+**Prefer recent web sources.** For non-filing web citations (news, industry reports, third-party rankings, analyst notes), default to sources from the **last 12 months**. Discard older web sources unless they're founding/historical facts or still-authoritative landmark research. Always include the publication date in the link title so vintage is visible: `[Reuters, 2025-08-12](https://...)`.
+
+See [`references/citations.md`](references/citations.md) for the full rules, per-source examples, freshness exceptions, and the final References-block format. **Read it before drafting.**
 
 ## Reference docs (read on demand)
 

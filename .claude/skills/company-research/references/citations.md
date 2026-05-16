@@ -30,6 +30,20 @@ Every inline citation is a clickable markdown link: `[Title in original language
 - Distinguish primary sources (company filings, transcripts) from secondary (news, third-party research). Prefer primary.
 - If a fact has no verifiable URL (e.g. private interview, ephemeral snapshot), state that inline rather than inventing a link.
 
+## Freshness rule for web sources
+
+When citing **web sources other than filings** (news articles, industry reports, blog posts, analyst notes, third-party rankings, government press releases, sell-side research summaries):
+
+- **Prefer the most recent available source.** If a 2025 source covers the same fact as a 2022 source, cite the 2025 one. Re-search rather than reuse an old link.
+- **Sources older than ~12 months are stale by default — discard them unless one of the exceptions below applies.** Industries move, market shares re-shuffle, regulations change, and a 2022 number quoted today reads as careless.
+- **Exceptions where older is fine:**
+  - Founding / historical facts (when the company was founded, the year of an IPO, year of an acquisition) — these don't get newer.
+  - Landmark research that's still the authoritative reference and hasn't been superseded (cite once, note vintage explicitly).
+  - Long-cycle industry structural data where annual fluctuation is small (sub-industry definitions, regulatory framework histories).
+- **For TAM / market-size citations**, use the most recent forecast you can find. Gartner/IDC/Forrester refresh quarterly to annually; a 2020 forecast cited in 2026 is not credible.
+- Filings themselves are exempt from the 12-month rule — the most recent annual is the most recent annual, even if filed 11 months ago. Apply the freshness rule to *web sources around* filings: news, commentary, analyst takes, etc.
+- Always include the **publication date** in the link title so a reader can immediately see vintage: `[Reuters, 2025-08-12](https://...)`, not `[Reuters article](https://...)`.
+
 ## Final References Section
 
 At the end of the document, include a consolidated, deduplicated list of all sources used, organized by source type. Each entry is also a markdown link to the real URL, with publication date. This is **in addition to**, not a replacement for, the inline links.
