@@ -3,527 +3,87 @@ name: company-research
 description: Produce a deep 6,000–8,000 word company research report (business, management, products, customers, industry, competitive landscape, TAM, risks) for a public or private company. Output is saved as markdown to the project-level `reports/` folder. Use when the user asks to "research", "deep-dive", "profile", or "initiate coverage on" a specific company or ticker — e.g. "research Tesla", "deep dive on PLTR", "company research for SZSE:002050".
 ---
 
-# Company Research - Detailed Workflow
+# Company Research
 
-This document provides step-by-step instructions for executing (Company Research) of the initiating-coverage skill.
+Deep research deliverable: a 6,000–8,000 word markdown report covering business, management, products, customers, industry, competitive landscape, TAM, and risks. Input is just a company name or ticker.
 
-## Task Overview
+## Reference docs (read on demand)
 
-**Purpose**: Research company's business, management, competitive position, industry, and risks.
-
-**Prerequisites**: ✅ None (fully independent)
-- Company name or ticker symbol only
-
-**Output**: Company Research Document (6,000-8,000 words)
+- `references/report_structure.md` — section-by-section word counts, per-section content spec, and the full output template. **Read before writing.**
+- `references/citations.md` — inline-citation rules and example.
+- `references/risk_taxonomy.md` — the 8–12 risks across 4 buckets used in Section 9.
+- `references/quality_checklist.md` — quality standards and the pre-submit success checklist.
 
 ---
 
-## Data Sources to Gather
+## Data sources — route filings by domicile
 
-### Primary Sources (Company)
+**SEC EDGAR only covers US issuers. Do not look for non-US filings there.**
 
-**Pick the filing source by company domicile — SEC EDGAR only covers US issuers.**
+- **US** → SEC EDGAR: latest 10-K, recent 10-Qs, DEF 14A, recent 8-Ks. Helper: `fetch_financial_report.py` (DB: `db/financial_reports.db`).
+- **China A-share / HK** → cninfo (巨潮资讯, https://www.cninfo.com.cn/): 年度报告, 季度报告 / 半年度报告, 重大事项公告. Ticker format `SZSE:002050`, `SSE:688802`, `HKEX:2513`. Helper: `fetch_cninfo_report.py` — run from `/Users/x/projects/financial_agent` so files land in `cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/`. Chinese-language disclosures are authoritative; English IR pages are secondary.
+- **Taiwan (TWSE / TPEx)** → MOPS (公開資訊觀測站, https://mops.twse.com.tw/): 年報, Q1–Q3 reports, 重大訊息.
+- **Japan** → EDINET (https://disclosure2.edinet-fsa.go.jp/) for Yuho (有価証券報告書) + Shihanki (四半期報告書); TDnet (https://www.release.tdnet.info/) for 決算短信. English IR PDFs ("Integrated Report") on the company site for narrative.
+- **Korea** → DART (https://dart.fss.or.kr/, English: https://englishdart.fss.or.kr/): 사업보고서, 반기보고서, 분기보고서, 주요사항보고서.
+- **Other** → country's official portal (SEDAR+ Canada, ASX Australia, LSE RNS UK, BSE/NSE India). Do NOT fall back to SEC EDGAR unless the issuer is a 20-F / 6-K filer.
+- **Private companies** → company website + blog, press coverage, LinkedIn for bios, Crunchbase/PitchBook for funding history.
 
-- **US public companies → SEC EDGAR:**
-  - Latest 10-K: Business description, risk factors, MD&A, financials
-  - Recent 10-Qs: Quarterly updates
-  - DEF 14A (Proxy): Executive compensation, board composition
-  - 8-Ks: Material events, acquisitions, management changes
-  - Local helper: `fetch_financial_report.py` (DB: `db/financial_reports.db`)
-
-- **Chinese A-share / HK companies → cninfo (巨潮资讯) — NOT SEC EDGAR:**
-  - Annual report (年度报告), Q1/Q3 quarterly reports (季度报告), semi-annual report (半年度报告)
-  - Prospectus / listing docs, board announcements, material event disclosures
-  - Ticker format: `SZSE:002050`, `SSE:688802`, `HKEX:2513`
-  - Local helper: `fetch_cninfo_report.py` (DB: `db/cninfo_reports.db`). Run from `/Users/x/projects/financial_agent` so files land in `cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/`.
-  - Direct portal: https://www.cninfo.com.cn/ (Chinese-language disclosures are authoritative; English IR summaries on the company site are secondary).
-
-- **Taiwanese companies (TWSE / TPEx) → MOPS (公開資訊觀測站):**
-  - Portal: https://mops.twse.com.tw/ (English: https://mops.twse.com.tw/mops/web/index)
-  - Annual report (年報), Q1–Q3 financial reports, material information announcements (重大訊息)
-  - Also check the company's IR site for English investor decks and the TWSE/TPEx market filings page.
-
-- **Japanese companies → EDINET + TDnet:**
-  - EDINET (金融庁): https://disclosure2.edinet-fsa.go.jp/ — Yuho (有価証券報告書, annual), Shihanki (四半期報告書, quarterly), Rinji (臨時報告書, material events). English UI available.
-  - TDnet (TSE timely disclosure): https://www.release.tdnet.info/ — earnings short reports (決算短信), press releases.
-  - Many large issuers publish English IR PDFs ("Integrated Report", "Financial Results") directly on their IR site — use those for narrative; keep EDINET filings as the primary financial source.
-
-- **Korean companies → DART (전자공시시스템):**
-  - Portal: https://dart.fss.or.kr/ (English: https://englishdart.fss.or.kr/)
-  - Business Report (사업보고서, annual), Half-year Report (반기보고서), Quarterly Report (분기보고서), Material Fact Reports (주요사항보고서)
-  - Cross-check the company's global IR site for English earnings releases and presentations.
-
-- **Other non-US jurisdictions:** default to the country's official regulator/exchange disclosure portal (e.g. SEDAR+ for Canada, ASX announcements for Australia, LSE RNS for UK, BSE/NSE for India). Do NOT fall back to SEC EDGAR unless the company is a 20-F / 6-K filer there.
-
-- **Company Website & IR:**
-  - Investor presentations
-  - Earnings transcripts (last 2-3 quarters)
-  - Press releases
-  - Product documentation
-
-- **For Private Companies:**
-  - Company website and blog
-  - Press releases and media coverage
-  - LinkedIn for management bios
-  - Crunchbase or PitchBook for funding history
-
-### Secondary Sources (Industry/Competitive)
-- Competitor websites and SEC filings
-- Industry research reports (Gartner, Forrester, IDC, etc.)
-- News articles and trade publications
-- Market research reports
-- LinkedIn profiles for key executives
-
-### Key Information to Extract
-
-**Key Information:**
-- Company founding date, headquarters, employee count
-- Revenue size and growth trajectory (if available)
-- Product portfolio and pricing
-- Customer segments and case studies
-- Management backgrounds and track records
-- Competitive landscape and market share
-- Industry trends and growth drivers
-- Regulatory considerations
-- High-level financial metrics (from 10-K prose, not detailed extraction)
+Secondary sources (any domicile): competitor websites and filings, Gartner/Forrester/IDC industry reports, trade press, LinkedIn for executive bios.
 
 ---
 
-## Step-by-Step Research Workflow
+## Workflow
 
-### Step 1: Initial Data Collection
+### Step 1 — Initial data collection
 
-1. **Thoroughly analyze the company website** (do not skim — this is the primary source of ground truth on what the company actually sells)
-   - Read every About / Company / Mission page; note founders' framing of the business
-   - **Walk the entire product / solutions navigation tree.** Enumerate every distinct product, SKU family, or service line the company publishes. Do not collapse them — list each one by name, even when there are 10–30+ products.
-   - For each product, capture from the product page itself:
-     - Official product name and any sub-variants/tiers
-     - One-sentence description of what it does
-     - Target customer / use case as stated by the company
-     - Pricing model if disclosed (subscription, license, per-unit, custom quote)
-     - Key technical specs, capabilities, or differentiators the company chooses to highlight
-     - Launch / "new" / "flagship" badges, and any explicit hero-product positioning
-   - Identify customer case studies, named customers, logos on the homepage, and partner / integration lists
-   - Note key metrics mentioned (employees, customers, ARR, units shipped, geographic reach, certifications)
-   - Capture leadership / "Team" page details (names, titles, prior employers) — feed these into Step 3
-   - Read the blog / newsroom / press release index for the **last 12 months** to detect new product launches, sunsets, repositioning, and strategic pivots that may not yet appear in filings
-   - For non-English companies, read the native-language site (e.g. company.com.cn) — English IR pages are often a stripped-down subset and miss product SKUs
+1. **Thoroughly analyze the company website** (do not skim — this is the primary source of ground truth on what the company actually sells).
+   - Read every About / Company / Mission page; note founders' framing.
+   - **Walk the entire product / solutions navigation tree.** Enumerate every distinct product, SKU family, or service line — even 10–30+ items. Do not collapse them.
+   - For each product page, capture: official name + variants/tiers, one-sentence description, target customer, pricing model if disclosed, key specs/differentiators the company highlights, any "new"/"flagship" badges.
+   - Identify named customers, homepage logos, partner/integration lists, customer case studies.
+   - Capture leadership / Team page (names, titles, prior employers) — feed into Step 3.
+   - Read blog / newsroom for the **last 12 months** to detect launches, sunsets, repositioning.
+   - For non-English companies, read the **native-language site** (e.g. `company.com.cn`) — English IR pages are often a stripped subset and miss SKUs.
+2. **Regulatory filings** — route by domicile per the table above. Note filing dates and the portal used.
+3. **Earnings materials** — latest transcript, latest investor presentation, last 12 months of press releases.
+4. **Document basic facts** — founding date, HQ, employees, products/services, key customers.
 
-2. **Gather regulatory filings (if public) — route by domicile:**
-   - **US issuer:** SEC EDGAR — latest 10-K, most recent 10-Q, latest DEF 14A, recent 8-Ks. Use `fetch_financial_report.py`.
-   - **Chinese A-share / HK issuer:** cninfo (巨潮资讯) — latest 年度报告, most recent 季度报告 / 半年度报告, recent 重大事项公告. Use `fetch_cninfo_report.py` from the main project dir. Do **not** look for these on SEC EDGAR.
-   - **Taiwanese issuer:** MOPS (公開資訊觀測站) — latest annual report, latest quarterly report, material information announcements.
-   - **Japanese issuer:** EDINET for Yuho (annual) and Shihanki (quarterly); TDnet for 決算短信 and timely disclosures; company IR site for English integrated report.
-   - **Korean issuer:** DART — latest Business Report (사업보고서), Half-year / Quarterly Report, recent Material Fact Reports.
-   - **Other jurisdictions:** use the country's official disclosure portal (SEDAR+, ASX, LSE RNS, BSE/NSE, etc.).
-   - Note filing dates and the source portal used for each document.
+### Step 2 — Business model analysis
 
-3. **Read earnings materials**
-   - Latest earnings transcript
-   - Most recent investor presentation
-   - Press releases from last 12 months
+Map revenue streams (what's sold, pricing, who pays, deal size), customer segments (enterprise/SMB/consumer, industries, geography, concentration), go-to-market (direct vs. channel, sales cycle, acquisition strategy), and unit economics (LTV/CAC, gross margins, NRR, payback) where available.
 
-4. **Document basic facts**
-   - Founding date and story
-   - Headquarters location
-   - Employee count
-   - Products/services
-   - Key customers
+### Step 3 — Management research
 
-### Step 2: Business Model Analysis
+For each of 3–4 key executives (CEO + CFO required; pick 1–2 more from C-suite):
+1. Find LinkedIn, DEF 14A / proxy bio, press interviews. Note tenure.
+2. Write a 300–400 word bio: current role, prior 2–3 roles, accomplishments, education, years in industry, time at company.
+3. Assess governance: board composition/independence, key board members, insider ownership, comp structure.
 
-1. **Map revenue streams**
-   - What does the company sell?
-   - How is it priced? (subscription, transaction, license, etc.)
-   - Who pays?
-   - What are typical deal sizes?
+### Step 4 — Competitive intelligence
 
-2. **Understand customer segments**
-   - Enterprise vs. SMB vs. consumer
-   - Industries served
-   - Geographic distribution
-   - Customer concentration (top 10 customers)
+1. Identify 5–10 competitors — direct, indirect, emerging. Cross-check the company's 10-K / 年度报告 for its own competitor list.
+2. For each: visit website, review filings if public, note products, differentiators, market-share estimates.
+3. Build a positioning framework (price / features / scale). Identify advantages, vulnerabilities, switching costs, network effects.
 
-3. **Document go-to-market**
-   - Direct sales vs. channel partners
-   - Sales cycle length
-   - Customer acquisition strategy
-   - Distribution model
+### Step 5 — Industry analysis
 
-4. **Identify unit economics**
-   - LTV/CAC if available
-   - Gross margins
-   - Net revenue retention
-   - Payback periods
+Define the industry (NAICS/SIC, scope, adjacent industries). Size the market (TAM/SAM/SOM, penetration). Research growth drivers (historical and projected rates, key trends, tech changes). Understand structure (fragmented vs. consolidated, barriers, supplier/buyer power, substitutes, regulation).
 
-### Step 3: Management Research
+### Step 6 — Risk assessment
 
-**For each of 3-4 key executives:**
+Identify 8–12 risks across 4 buckets (company-specific, industry/market, financial, macro). See `references/risk_taxonomy.md` for the full taxonomy. 50–100 words per risk: describe, quantify, note mitigants.
 
-1. **Identify key leaders**
-   - CEO (always required)
-   - CFO (always required)
-   - COO, CTO, or other C-suite (2 additional)
+### Step 7 — Synthesis and writing
 
-2. **Research each executive**
-   - Find LinkedIn profile
-   - Review DEF 14A for background
-   - Search for press interviews
-   - Note tenure at company
-
-3. **Write 300-400 word bio including:**
-   - Current role and responsibilities
-   - Prior roles and companies (last 2-3 positions)
-   - Key accomplishments and track record
-   - Education and credentials
-   - Years of experience in industry
-   - Time at current company
-
-4. **Assess governance**
-   - Board composition and independence
-   - Key board members and their backgrounds
-   - Insider ownership percentage
-   - Executive compensation structure
-
-### Step 4: Competitive Intelligence
-
-1. **Identify 5-10 competitors**
-   - Direct competitors (same products/markets)
-   - Indirect competitors (substitute solutions)
-   - Emerging competitors (disruptors)
-   - Check 10-K for company's own list of competitors
-
-2. **Research each competitor**
-   - Visit competitor website
-   - Review their SEC filings (if public)
-   - Note key products and positioning
-   - Identify differentiators
-   - Estimate market share (if data available)
-
-3. **Create competitive framework**
-   - Map on key dimensions (price, features, scale, etc.)
-   - Identify company's competitive advantages
-   - Note competitive vulnerabilities
-   - Assess switching costs and network effects
-
-4. **Document competitive insights**
-   - Who are the market leaders?
-   - Where does this company rank?
-   - What are unique differentiators?
-   - What are competitive threats?
-
-### Step 5: Industry Analysis
-
-1. **Define the industry**
-   - Industry classification (NAICS/SIC)
-   - Scope and boundaries
-   - Related/adjacent industries
-
-2. **Size the market**
-   - Total addressable market (TAM)
-   - Serviceable addressable market (SAM)
-   - Serviceable obtainable market (SOM)
-   - Current penetration rate
-
-3. **Research growth drivers**
-   - Historical market growth rate
-   - Projected growth rate (next 3-5 years)
-   - Key trends accelerating/decelerating growth
-   - Technology changes impacting industry
-
-4. **Understand industry structure**
-   - Fragmented vs. consolidated
-   - Barriers to entry
-   - Supplier/buyer power
-   - Threat of substitutes
-   - Regulatory environment
-
-### Step 6: Risk Assessment
-
-Identify 8-12 risks across four categories. For each risk, write 50-100 words.
-
-**Company-Specific Risks (4-6 risks):**
-- Execution risk (can management deliver?)
-- Customer concentration (top customers)
-- Key person dependency
-- Product/technology obsolescence
-- Geographic concentration
-- Integration risk (if recent M&A)
-
-**Industry/Market Risks (3-4 risks):**
-- Competitive intensity
-- Regulatory changes
-- Technology disruption
-- Market saturation
-
-**Financial Risks (2-3 risks):**
-- Profitability timeline
-- Funding requirements
-- Debt levels and covenants
-- Cash burn rate (if unprofitable)
-
-**Macroeconomic Risks (2-3 risks):**
-- Economic sensitivity (cyclical vs. defensive)
-- Interest rate sensitivity
-- Foreign exchange exposure
-- Geopolitical factors
-
-**For each risk:**
-- Describe the risk clearly
-- Quantify impact if possible
-- Note likelihood/severity
-- Identify mitigating factors
-
-### Step 7: Synthesis and Writing
-
-**Write document following this structure:**
-
-1. **Company Overview** (800-1,200 words)
-   - What does the company do? (plain English)
-   - How do they make money? (business model)
-   - Where do they operate? (geographic presence)
-   - How large are they? (revenue, employees, customers)
-   - Key metrics and scale indicators
-
-2. **Company History** (800-1,200 words)
-   - Founding story (who, when, why, where)
-   - Timeline of major milestones
-   - Strategic pivots or transformations
-   - Key acquisitions
-   - Recent developments (last 1-2 years)
-
-3. **Management Team** (1,000-1,400 words)
-   - 300-400 word bio for each of 3-4 executives
-   - Board composition and governance
-   - Insider ownership
-   - Management track record assessment
-
-4. **Products & Services** (700-1,000 words) — **must be grounded in a thorough walk of the company website, not a generic summary**
-   - **Full product portfolio enumeration.** List every distinct product / service line found on the website. Group by segment if the company organizes them that way, but do not omit minor SKUs — call them out even briefly.
-   - For each major product: what it does, target customer, key features, pricing model (if disclosed), and typical deal size
-   - **Per-product competitive-advantage assessment (REQUIRED).** For each material product, explicitly answer:
-     - Does this product have a competitive advantage? (yes / partial / no)
-     - If yes, what *kind* of moat: technology / IP / patents, cost leadership, scale, network effects, switching costs, brand, regulatory / certification, distribution, data, ecosystem lock-in
-     - Evidence for the moat (market-share data, named wins, benchmark results, gross-margin profile, customer testimonials, third-party reviews) — cite inline
-     - The closest competing product from a named competitor, and a one-line comparison (where the company's product is ahead / behind / at parity)
-   - **Flagship vs. long-tail.** Clearly identify which 1–3 products drive the business (revenue, growth, strategic priority) versus which are legacy, experimental, or filler. State revenue or unit-mix share if disclosed.
-   - **Roadmap & recent launches.** Note products launched, repositioned, or sunset in the last 12 months (from the newsroom / press releases).
-   - Cite the company website (with the specific product URL) and any third-party benchmark or competitor source inline for each claim.
-
-5. **Customers & Go-to-Market** (500-700 words)
-   - Customer segments and profiles
-   - Distribution channels
-   - Sales strategy and cycle
-   - Key partnerships
-   - Customer case studies
-
-6. **Industry Overview** (800-1,200 words)
-   - Industry definition and scope
-   - Market size and structure
-   - Growth rates (historical and projected)
-   - Key trends and drivers
-   - Regulatory environment
-   - Industry dynamics
-
-7. **Competitive Landscape** (700-1,000 words)
-   - Analysis of 5-10 key competitors
-   - Market positioning framework
-   - Company's competitive advantages
-   - Competitive vulnerabilities
-   - Market share analysis
-
-8. **Market Opportunity** (500-700 words)
-   - TAM sizing and methodology
-   - Market growth projections
-   - Company's serviceable market
-   - Market share opportunity
-   - Penetration strategy
-
-9. **Risk Assessment** (600-900 words)
-   - Company-specific risks (4-6)
-   - Industry/market risks (3-4)
-   - Financial risks (2-3)
-   - Macroeconomic risks (2-3)
-   - Each risk: 50-100 word description
-
-**Inline Citations (required throughout the report)**
-
-Do **not** save citations for the end. Every non-trivial factual claim — revenue figures, market share, management background, customer names, growth rates, quoted strategy language, risk drivers — must be attributed inline at the point it appears.
-
-- Use numbered footnote-style references in the text: `... revenue grew 34% YoY [^1] ...`, with the footnote definition placed at the end of the same section (or in a consolidated "References" section at the end of the document for repeated sources).
-- Alternative inline form for short docs: parenthetical attribution, e.g. `(Source: 2024 10-K, p. 42)` or `(Source: Q3-2025 earnings call transcript)`.
-- For each citation include: source type (10-K, 年度报告, earnings call, IR deck, news article, competitor 10-K, industry report, LinkedIn, company website), filing/publication date, and a URL or local path where applicable.
-- Every section (Company Overview through Risk Assessment) must contain inline citations — not just the final References block.
-- Management bios cite the DEF 14A / proxy, LinkedIn, or interview source per claim. Competitor analysis cites each competitor's own filing or website. TAM/industry numbers cite the specific research firm and report year.
-- Distinguish primary sources (company filings, transcripts) from secondary (news, third-party research). Prefer primary; when only secondary is available, say so.
-
-**Final References Section**
-- At the end of the document, include a consolidated, deduplicated list of all sources used, organized by source type, with dates and URLs.
-- This is in addition to, not a replacement for, the inline citations.
+Read `references/report_structure.md` for the 9-section spec and full output template. Read `references/citations.md` before drafting — inline citations are required in every section, not just at the end. Before declaring done, run through `references/quality_checklist.md` and verify total word count with `wc -w`.
 
 ---
 
-## Quality Standards
+## Output location
 
-### Content Depth
-- Each section must meet minimum word count targets
-- Analysis should be substantive, not just descriptive
-- Use specific examples and quantitative data
-- Cite sources **inline** throughout the body, not only in a sources section at the end. Each section must contain attributions at the point each fact is asserted.
-- Maintain objectivity and balance
+Save to the **project-level `reports/` folder**: `/Users/x/projects/financial_agent/reports/`. Create it if missing.
 
-### Management Bios
-- 300-400 words per executive for 3-4 key executives
-- Must include: current role, prior experience, key accomplishments, education
-- Provide enough detail to assess track record and capabilities
-
-### Competitive Analysis
-- Must analyze 5-10 specific competitors
-- Include both direct and indirect competitors
-- Assess relative positioning on key dimensions
-- Identify company's competitive advantages and vulnerabilities
-- Use specific data and examples
-
-### Risk Assessment
-- Must identify 8-12 distinct risks across all four categories
-- Each risk needs 50-100 word description
-- Quantify impact where possible
-- Note mitigating factors
-- Cover all four risk categories
-
-### Writing Quality
-- Professional, analytical tone
-- Lead with key insights
-- Use concrete examples and data
-- Avoid generic statements
-- Proper citations throughout
-
----
-
-## Output Format
-
-```
-COMPANY RESEARCH REPORT: [Company Name]
-Date: [Date]
-Analyst: [Your name if applicable]
-
-TABLE OF CONTENTS
-1. Company Overview
-2. Company History
-3. Management Team
-4. Products & Services
-5. Customers & Go-to-Market
-6. Industry Overview
-7. Competitive Landscape
-8. Market Opportunity (TAM)
-9. Risk Assessment
-
-======================================
-
-1. COMPANY OVERVIEW (800-1,200 words)
-
-[Content]
-
-2. COMPANY HISTORY (800-1,200 words)
-
-[Content]
-
-3. MANAGEMENT TEAM (1,000-1,400 words)
-
-[Name], [Title]
-[300-400 word bio]
-
-[Repeat for 3-4 key executives]
-
-[Governance section]
-
-4. PRODUCTS & SERVICES (700-1,000 words)
-
-[Full enumeration of every product from the company website,
- grouped by segment. For each material product:
-   - What it does, target customer, pricing
-   - Competitive-advantage verdict (yes / partial / no) + moat type
-   - Evidence + closest named competitor product (one-line compare)
- Then call out the 1–3 flagship products driving the business,
- and note product launches / sunsets in the last 12 months.]
-
-5. CUSTOMERS & GO-TO-MARKET (500-700 words)
-
-[Content]
-
-6. INDUSTRY OVERVIEW (800-1,200 words)
-
-[Content]
-
-7. COMPETITIVE LANDSCAPE (700-1,000 words)
-
-[Content]
-
-8. MARKET OPPORTUNITY (500-700 words)
-
-[Content]
-
-9. RISK ASSESSMENT (600-900 words)
-
-Company-Specific Risks:
-[4-6 risks with descriptions]
-
-Industry/Market Risks:
-[3-4 risks with descriptions]
-
-Financial Risks:
-[2-3 risks with descriptions]
-
-Macroeconomic Risks:
-[2-3 risks with descriptions]
-
-======================================
-
-REFERENCES
-[Consolidated, deduplicated list of every source cited inline above,
- organized by source type, each entry with date and URL/local path.]
-```
-
-**Inline citation example (within a section):**
-
-```
-Anpeilong's robotics segment revenue rose 41% YoY in FY2024 to RMB 2.83 bn,
-driven primarily by industrial cobot shipments to automotive OEMs
-(Source: 2024 年度报告, p. 28, cninfo SZSE:002050). Management attributed
-roughly half of the growth to a single Tier-1 supplier ramp [^auto-tier1].
-
-[^auto-tier1]: Q4-2024 earnings call transcript, 2025-03-12, company IR site.
-```
-
----
-
-## Success Criteria
-
-A successful Task 1 completion should deliver:
-
-1. Meet 6,000-8,000 word target (verify word count)
-2. Include all 9 required sections with target word counts
-3. Provide substantive analysis, not just description
-4. Use specific examples and quantitative data
-5. Cite all sources **inline** at the point each fact appears, with a consolidated References list at the end as a secondary aid (not the primary citation mechanism)
-6. Enable reader to understand:
-   - What the company does and how it makes money
-   - **Every product the company sells (from a thorough company-website walk) and which specific products have a competitive advantage — including the type of moat and the closest named competitor product**
-   - Quality and track record of management team
-   - Company's competitive position
-   - Market opportunity size
-   - Key risks to consider
-
----
-
-## File Naming Convention
-
-Save the output to the **project-level `reports/` folder** at `/Users/x/projects/financial_agent/reports/`. Create the folder if it does not yet exist.
-
-File name:
-
-`reports/[Company]_Research_Document_[Date].md`
-
+File name: `reports/[Company]_Research_Document_[YYYY-MM-DD].md`
 Example: `reports/Tesla_Research_Document_2024-10-27.md`
 
 Always write to the main project's `reports/` directory — never to a worktree, `~/Downloads`, or any other location.
