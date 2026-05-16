@@ -53,6 +53,37 @@ Secondary sources (any domicile): competitor websites and filings, Gartner/Forre
 
 ## Workflow
 
+### Step 0 — Check the local report cache first (do this before going to the web)
+
+Before downloading anything, check whether recent filings are already on disk. Re-downloading wastes time and bandwidth, and the local copy is what `db/financial_reports.db` / `db/cninfo_reports.db` already indexes.
+
+- **US issuers** → `ls /Users/x/projects/financial_agent/financial_reports/<TICKER>/` (e.g. `financial_reports/NVDA/`). Look for the most recent 10-K, 10-Q, DEF 14A, 8-K.
+- **Chinese A-share / HK issuers** → `ls /Users/x/projects/financial_agent/cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/` (e.g. `cninfo_reports/SZSE/002050_安培龙/`). Look for the most recent 年度报告, 季度报告, 半年度报告, 重大事项公告.
+- The DBs hold the same listing: `sqlite3 db/financial_reports.db "SELECT ticker, report_type, report_date, filename FROM reports WHERE ticker='NVDA' ORDER BY report_date DESC LIMIT 10;"` and equivalently for cninfo.
+
+**Freshness rule — fetch only if the cache is stale:**
+
+- Annual report (10-K / 年度报告) older than **~13 months** → fetch the latest.
+- Quarterly report (10-Q / 季度报告 / 半年度报告) older than **~4 months** → fetch the latest.
+- Material events (8-K / 重大事项公告) — always check whether anything has been filed in the last 6 months; fetch if missing.
+- If the cache covers the period you need, **use the local PDF** — do not re-download.
+
+**To fetch (only when needed):**
+
+- **US:**
+  ```bash
+  cd /Users/x/projects/financial_agent
+  python3 fetch_financial_report.py <TICKER>
+  ```
+- **China A-share / HK:**
+  ```bash
+  cd /Users/x/projects/financial_agent
+  python3 -c "import fetch_cninfo_report as cr; cr.init_db(); [print(m) for m in cr._run_download('SZSE:002050', cr.ALL_CATEGORIES)]"
+  ```
+  Always run from the main project dir so files land in `cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/` and not in a worktree.
+
+Read PDFs with `fitz` / Read tool. For image-only / scanned pages, follow the OCR flow in the project CLAUDE.md (ocrmac → Marker → vision-LM, never Tesseract).
+
 ### Step 1 — Initial data collection
 
 1. **Thoroughly analyze the company website** (do not skim — this is the primary source of ground truth on what the company actually sells).
@@ -63,7 +94,7 @@ Secondary sources (any domicile): competitor websites and filings, Gartner/Forre
    - Capture leadership / Team page (names, titles, prior employers) — feed into Step 3.
    - Read blog / newsroom for the **last 12 months** to detect launches, sunsets, repositioning.
    - For non-English companies, read the **native-language site** (e.g. `company.com.cn`) — English IR pages are often a stripped subset and miss SKUs.
-2. **Regulatory filings** — route by domicile per the table above. Note filing dates and the portal used.
+2. **Regulatory filings** — start from the local cache pulled in Step 0; only fetch fresh if the cache is stale (see freshness rules above). Route by domicile per the data-sources table. Note filing dates and the portal used.
 3. **Earnings materials** — latest transcript, latest investor presentation, last 12 months of press releases.
 4. **Document basic facts** — founding date, HQ, employees, products/services, key customers.
 
