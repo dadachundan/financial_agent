@@ -1,3 +1,8 @@
+---
+name: company-research
+description: Produce a deep 6,000–8,000 word company research report (business, management, products, customers, industry, competitive landscape, TAM, risks) for a public or private company. Output is saved as markdown to the project-level `reports/` folder. Use when the user asks to "research", "deep-dive", "profile", or "initiate coverage on" a specific company or ticker — e.g. "research Tesla", "deep dive on PLTR", "company research for SZSE:002050".
+---
+
 # Company Research - Detailed Workflow
 
 This document provides step-by-step instructions for executing (Company Research) of the initiating-coverage skill.
