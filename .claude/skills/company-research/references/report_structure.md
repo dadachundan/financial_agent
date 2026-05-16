@@ -2,6 +2,19 @@
 
 The final report has 9 sections plus a References block. Word counts are loose targets — verify with `wc -w` before declaring done. Total target: **6,000–10,000 words** (sections may run longer than the per-section ranges below if there's genuine substance; do not pad to hit a number).
 
+Embed **4–8 charts** across the report (mix of matplotlib PNGs and Mermaid blocks). Suggested placement:
+
+| Section | Chart |
+|---|---|
+| 1 Overview | Revenue + gross margin trend (PNG, 3–5 yr, dual-axis) |
+| 2 History | Mermaid `timeline` block |
+| 4 Products | Mermaid `graph TD` product tree |
+| 5 Customers | Mermaid `pie` — top 3–5 customer concentration |
+| 7 Competitive | Mermaid `quadrantChart` **or** peer-comparison bars (PNG) |
+| 8 TAM | Market-size growth chart (PNG) |
+
+Every chart needs a citation directly underneath in the same markdown-link format used in prose. PNGs go in `reports/charts/<company>_<name>.png`.
+
 ## Section word counts and content
 
 ### 1. Company Overview (800–1,200 words)

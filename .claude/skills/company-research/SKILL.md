@@ -156,7 +156,35 @@ Define the industry (NAICS/SIC, scope, adjacent industries). Size the market (TA
 
 Identify 8–12 risks across 4 buckets (company-specific, industry/market, financial, macro). See `references/risk_taxonomy.md` for the full taxonomy. 50–100 words per risk: describe, quantify, note mitigants.
 
-### Step 8 — Synthesis and writing
+### Step 8 — Charts and diagrams (add 4–8 visuals)
+
+A report this length needs visual anchors. **Add 4–8 charts/diagrams** across the document. Two flavors — use both:
+
+**A. PNG charts via matplotlib (quantitative trends).** Generate with a Python script, save into `reports/charts/<company>_<chart>.png`, embed via `![alt](charts/<company>_<chart>.png)`. Pattern-match from existing scripts in `oneoff/` (`anpeilong_3yr_chart.py`, `cdns_5yr_chart.py`). End the script with `plt.savefig(path, dpi=150, bbox_inches="tight")`.
+
+Suggested: 3–5 yr revenue + gross margin trend (dual-axis); segment revenue mix (stacked bar); TTM P/E vs. 3-yr range vs. sector median; peer comparison bars; latest 8–12 quarter trend if seasonality matters.
+
+**B. Mermaid diagrams (structural / qualitative).** Markdown-native; the web viewer and GitHub render them inline. Wrap in a ` ```mermaid ` fence. Use for:
+
+- **Timeline** (Section 2 History): `timeline` block — founding → IPO → segment launches → recent milestones
+- **Product portfolio tree** (Section 4 Products): `graph TD` mapping company → segments → product families → SKUs
+- **Customer concentration** (Section 5): `pie title FY2024 revenue by top customers` with the top 3–5 customers + "All other"
+- **Competitive positioning** (Section 7): `quadrantChart` (2×2) on price vs. feature-breadth, or `graph LR` for value-chain position
+- **Org / governance** (Section 3): optional `graph TD` for board / management reporting lines
+
+**Placement summary** (also in `references/report_structure.md`):
+| Section | Chart |
+|---|---|
+| 1 Overview | Revenue + margin trend (PNG) |
+| 2 History | Mermaid timeline |
+| 4 Products | Mermaid product tree |
+| 5 Customers | Mermaid customer-concentration pie |
+| 7 Competitive | Mermaid quadrant **or** peer-comparison bars (PNG) |
+| 8 TAM | Market-size growth chart (PNG) |
+
+**Every chart gets a citation right below it** — same markdown-link format as prose, e.g. `Source: [安培龙 2024 年度报告, 第 32 页](https://static.cninfo.com.cn/...)`. No chart without a source.
+
+### Step 9 — Synthesis and writing
 
 Read `references/report_structure.md` for the 9-section spec and full output template. Read `references/citations.md` before drafting — inline citations are required in every section, not just at the end. Before declaring done, run through `references/quality_checklist.md` and verify total word count with `wc -w`.
 
