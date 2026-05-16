@@ -26,6 +26,13 @@
 - Flagship 1–3 products clearly distinguished from long-tail.
 - Last-12-month launches / sunsets noted.
 
+## Company Overview — Valuation Snapshot
+- Current price, market cap, TTM P/E, and TTM P/S reported (plus P/B for capital-heavy businesses, EV/EBITDA for leveraged / cyclical names).
+- 3-year multiple range and sector / peer median (3–5 named comps) provided for context.
+- Negative P/E is decomposed: cash-burning growth vs. one-off charge vs. cyclical trough vs. structural decline — with the specific filing line item cited.
+- Stretched multiples (P/E > 50× or > 2× sector median, P/S > 15× or > 3× sector median) are explained with a named cause (sector premium, depressed earnings, narrative, M&A, small float) and a citation — not left dangling.
+- If the multiple is extreme enough to be a risk (P/E > 50× without clear earnings path, P/S > 20× outside top-quartile growth), Section 9 includes a valuation / multiple-compression risk.
+
 ## Customers & Go-to-Market
 - Top-1 and top-5 customer share of revenue quantified from the latest annual filing (or explicitly noted as undisclosed).
 - 3-year concentration trend captured when the disclosure history allows.

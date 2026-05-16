@@ -67,7 +67,29 @@ Secondary sources (any domicile): competitor websites and filings, Gartner/Forre
 3. **Earnings materials** — latest transcript, latest investor presentation, last 12 months of press releases.
 4. **Document basic facts** — founding date, HQ, employees, products/services, key customers.
 
-### Step 2 — Business model analysis
+### Step 2 — Valuation snapshot (always pull P/E and P/S)
+
+Before business-model analysis, capture where the market is pricing the stock today. **Required for every public company; for private companies, substitute the latest funding-round post-money valuation and revenue multiple if disclosed.**
+
+Pull from a market-data source:
+- **US** → Yahoo Finance (`finance.yahoo.com/quote/<TICKER>/key-statistics`), Stockanalysis.com, or `yfinance` Python lib.
+- **China A-share / HK** → Eastmoney 东方财富 (`quote.eastmoney.com/<code>.html`), Sina Finance (`finance.sina.com.cn`), or Tonghuashun (`10jqka.com.cn`). Use TTM (滚动) figures, not 静态 (static last-FY) — the static number is a year stale by the time you read it.
+- **Taiwan** → Goodinfo (`goodinfo.tw`) or TWSE.
+- **Japan** → Kabutan (`kabutan.jp`), Nikkei (`nikkei.com`).
+- **Korea** → Naver Finance (`finance.naver.com`).
+
+Capture: current price, market cap, **TTM P/E**, **TTM P/S**, plus P/B for capital-heavy businesses (banks, insurers, REITs, heavy industrials) and EV/EBITDA for leveraged or cyclical names. Note the 3-year (or since-IPO if shorter) range of each multiple so today's number has context.
+
+**Then compare to peers and sector median.** Pull 3–5 closest comps' P/E and P/S; cite the source. The sector median anchors whether today's multiple is normal, stretched, or compressed.
+
+**Interpret negative or extreme multiples — do not just report the number.** If you see:
+- **Negative P/E** → the company is unprofitable on a TTM basis. Decompose: is it cash-burning growth (high-S&M, pre-scale SaaS, biotech R&D, pre-revenue hardware), a one-off (impairment, goodwill write-down, litigation charge), cyclical trough (semis, commodities, autos in a down year), or structural decline? Quote the line item from the latest 10-K / 年报 / Yuho that drives the loss.
+- **Very high P/E (rule of thumb: > 50× TTM, or > 2× sector median)** or **very high P/S (> 15×, or > 3× sector median)** → name the cause. Common drivers: (a) genuine high-growth sector the market is pricing for years of compounding (AI infra, GLP-1, EV battery, advanced packaging), (b) earnings temporarily depressed (cyclical trough, heavy reinvestment, recent dilution), (c) thematic / narrative premium (the stock is a sector proxy even if fundamentals lag), (d) M&A or take-private speculation, (e) small float / illiquidity inflating the multiple. **Say which one — and back it with a citation** (sell-side note, earnings call language, sector ETF flows, a comparable that re-rated similarly).
+- **Very low P/E (< 8×) or low P/S** → also worth a sentence: value trap (declining business, dividend at risk), cyclical peak (earnings unsustainable), governance / accounting concern, or genuine mispricing.
+
+Feed the verdict into Section 1 (Company Overview → Valuation snapshot) and, if the multiple is stretched enough to be a risk (P/E > 50× with no clear earnings path, P/S > 20× outside top-quartile growth), into Section 9 as a valuation / multiple-compression risk.
+
+### Step 3 — Business model analysis
 
 Map revenue streams (what's sold, pricing, who pays, deal size), customer segments (enterprise/SMB/consumer, industries, geography, concentration), go-to-market (direct vs. channel, sales cycle, acquisition strategy), and unit economics (LTV/CAC, gross margins, NRR, payback) where available.
 
@@ -82,28 +104,28 @@ Map revenue streams (what's sold, pricing, who pays, deal size), customer segmen
 
 Capture: top-1 customer % of revenue, top-5 %, multi-year trend (3 years if available), whether top customers are named, contract structure (master agreement vs. PO-by-PO, multi-year vs. annual), and whether any top customer is also a competitor / vertically integrating / building in-house. **If top-1 > 20% or top-5 > 50%, treat as a material risk and call it out in both Section 5 and Section 9.** If disclosure is missing or vague, say so — do not paper over it.
 
-### Step 3 — Management research
+### Step 4 — Management research
 
 For each of 3–4 key executives (CEO + CFO required; pick 1–2 more from C-suite):
 1. Find LinkedIn, DEF 14A / proxy bio, press interviews. Note tenure.
 2. Write a 300–400 word bio: current role, prior 2–3 roles, accomplishments, education, years in industry, time at company.
 3. Assess governance: board composition/independence, key board members, insider ownership, comp structure.
 
-### Step 4 — Competitive intelligence
+### Step 5 — Competitive intelligence
 
 1. Identify 5–10 competitors — direct, indirect, emerging. Cross-check the company's 10-K / 年度报告 for its own competitor list.
 2. For each: visit website, review filings if public, note products, differentiators, market-share estimates.
 3. Build a positioning framework (price / features / scale). Identify advantages, vulnerabilities, switching costs, network effects.
 
-### Step 5 — Industry analysis
+### Step 6 — Industry analysis
 
 Define the industry (NAICS/SIC, scope, adjacent industries). Size the market (TAM/SAM/SOM, penetration). Research growth drivers (historical and projected rates, key trends, tech changes). Understand structure (fragmented vs. consolidated, barriers, supplier/buyer power, substitutes, regulation).
 
-### Step 6 — Risk assessment
+### Step 7 — Risk assessment
 
 Identify 8–12 risks across 4 buckets (company-specific, industry/market, financial, macro). See `references/risk_taxonomy.md` for the full taxonomy. 50–100 words per risk: describe, quantify, note mitigants.
 
-### Step 7 — Synthesis and writing
+### Step 8 — Synthesis and writing
 
 Read `references/report_structure.md` for the 9-section spec and full output template. Read `references/citations.md` before drafting — inline citations are required in every section, not just at the end. Before declaring done, run through `references/quality_checklist.md` and verify total word count with `wc -w`.
 
