@@ -9,11 +9,16 @@ Deep research deliverable: a 6,000–8,000 word markdown report covering busines
 
 ## Report language
 
-**Always write the report in English**, regardless of the company's domicile, listing, or the language of its primary filings. The user's prompt language does not change this — a request in Chinese about `SZSE:002050` still gets an English report.
+**Always write the report's prose in English**, regardless of the company's domicile, listing, or the language of its primary filings. The user's prompt language does not change this — a request in Chinese about `SZSE:002050` still gets an English report.
+
+**Chinese names and bilingual technical terms are allowed inline:**
+- **Chinese company names** (the subject company or a Chinese competitor / customer / partner) may appear in their original Chinese form alongside an English / pinyin gloss on first mention, e.g. `安培龙 (Anpeilong, SZSE:002050)`, `比亚迪 (BYD)`, `宁德时代 (CATL)`. After the first mention, either form is fine.
+- **Technical terms** with no clean English equivalent (industry jargon, regulatory categories, product certifications, government program names) may be written bilingually, e.g. `"专精特新" (specialized, refined, distinctive, novel — MIIT designation for niche SMEs)`, `国六排放标准 (China VI emission standard)`. Prefer English when an established English term exists.
+- Direct quotations from Chinese filings stay in Chinese (per the citation rule); add a parenthetical English translation if the quote is load-bearing.
 
 Source citations preserve the **original** language of the document (see "Citations preserve the original source language" below) — e.g. `(Source: 2024 年度报告, p. 28)` inside English-language prose. Do not translate source titles.
 
-Filenames are ASCII only: `reports/[Company]_Research_Document_[YYYY-MM-DD].md`.
+Filenames may include Chinese characters when the subject company is Chinese: `reports/安培龙_SZSE002050_Research_Document_2026-05-16.md` is fine; `reports/Tesla_Research_Document_2024-10-27.md` is fine. No Japanese kana / kanji or Korean hangul in filenames.
 
 ## Citations preserve the original source language
 
@@ -103,9 +108,10 @@ Read `references/report_structure.md` for the 9-section spec and full output tem
 
 Save to the **project-level `reports/` folder**: `/Users/x/projects/financial_agent/reports/`. Create it if missing.
 
-File name: `reports/[Company]_Research_Document_[YYYY-MM-DD].md` — ASCII only.
+File name: `reports/[Company]_Research_Document_[YYYY-MM-DD].md` — `[Company]` may use Chinese characters for Chinese companies; otherwise ASCII. No Japanese kana / kanji or Korean hangul.
 Examples:
 - `reports/Tesla_Research_Document_2024-10-27.md`
+- `reports/安培龙_SZSE002050_Research_Document_2026-05-16.md`
 - `reports/Anpeilong_SZSE002050_Research_Document_2026-05-16.md`
 - `reports/Toyota_TSE7203_Research_Document_2026-05-16.md`
 
