@@ -1,6 +1,6 @@
 # Report Structure — Section-by-Section Spec
 
-The final report has 9 sections plus a References block. Word counts are firm targets — verify with `wc -w` before declaring done. Total target: **6,000–8,000 words**.
+The final report has 9 sections plus a References block. Word counts are loose targets — verify with `wc -w` before declaring done. Total target: **6,000–10,000 words** (sections may run longer than the per-section ranges below if there's genuine substance; do not pad to hit a number).
 
 ## Section word counts and content
 
