@@ -9,13 +9,22 @@ Deep research deliverable: a 6,000–8,000 word markdown report covering busines
 
 ## Report language
 
-The report is written in **exactly one of two languages**: Simplified Chinese or English. Never Traditional Chinese, never Japanese, never Korean — even when filings are in those scripts (translate the analysis into English; keep source titles in their original language per the citation rule below).
+The report is written in **exactly one of two languages**: Simplified Chinese or English. Never Traditional Chinese, never Japanese, never Korean.
 
-- **Chinese / HK / Taiwan companies → Simplified Chinese (zh-CN).** This includes A-share (`SZSE:` / `SSE:`), HK (`HKEX:`), and Taiwan (TWSE / TPEx) issuers. For Taiwan filings written in Traditional Chinese, translate the analysis into Simplified Chinese; quote source titles in their original form per the citation rule.
-- **Everything else → English.** US, Japan, Korea, Europe, ASEAN, India, etc.
-- Domicile is what matters, not the user's prompt language. A user asking in English about `SZSE:002050` still gets a Chinese report; a user asking in Chinese about Tesla still gets an English report.
+**The rule follows the company's primary listing / filings, not its country of origin:**
+
+- **Simplified Chinese (zh-CN)** — when the primary filings are in Chinese:
+  - A-share: `SSE:` / `SZSE:` issuers (filings: 年度报告, 季度报告 on cninfo)
+  - HK main board / GEM: `HKEX:` issuers (filings: 年報, mostly bilingual but Chinese is authoritative)
+  - Taiwan: `TWSE:` / `TPEx:` issuers (filings: 年報 on MOPS, in Traditional Chinese — translate analysis to Simplified Chinese; keep source titles original per citation rule)
+- **English** — for everything else, including:
+  - US-listed companies (NYSE / NASDAQ), regardless of country of origin. This includes **Chinese ADRs and US-listed Chinese companies** (e.g. BABA, PDD, BIDU, JD, NIO) whose primary filings are 10-K / 20-F / 6-K in English on SEC EDGAR. Even if the company also has an A-share or HK listing, if the user gives a US ticker, the report is in English.
+  - Japan, Korea, Europe, ASEAN, India, Australia, Canada, etc.
+- **Dual-listed companies**: language follows the listing the user named. `BABA` → English (US ADR); `9988.HK` / `HKEX:9988` → Simplified Chinese (HK listing). When ambiguous, default to English.
+- Domicile alone is not the deciding factor; the **filing language** is. Country of origin matters only when the company is unlisted in the US and primarily files in Chinese.
+- Prompt language never overrides this rule: a user asking in English about `SZSE:002050` still gets a Chinese report; a user asking in Chinese about Tesla or BABA still gets an English report.
 - When writing in Chinese, use Chinese section headers (公司概览, 公司历史, 管理团队, 产品与服务, 客户与上市策略, 行业概览, 竞争格局, 市场机会, 风险评估, 参考资料) and target 6,000–8,000 字 (counting Chinese characters).
-- Filenames: Chinese reports may use Chinese characters in `[Company]`; English reports use ASCII. Examples: `reports/安培龙_SZSE002050_公司研究_2026-05-16.md`, `reports/Tesla_Research_Document_2026-05-16.md`.
+- Filenames: Chinese reports may use Simplified Chinese characters in `[Company]`; English reports use ASCII. Examples: `reports/安培龙_SZSE002050_公司研究_2026-05-16.md`, `reports/Tesla_Research_Document_2026-05-16.md`, `reports/Alibaba_BABA_Research_Document_2026-05-16.md`.
 
 ## Citations preserve the original source language
 
