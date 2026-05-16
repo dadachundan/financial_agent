@@ -37,8 +37,9 @@ The final report has 9 sections plus a References block. Word counts are loose t
 - **Roadmap & recent launches.** Note products launched, repositioned, or sunset in the last 12 months.
 - Cite the company website (specific product URL) and any third-party benchmark inline for each claim.
 
-### 5. Customers & Go-to-Market (500–700 words)
+### 5. Customers & Go-to-Market (500–800 words)
 - Customer segments and profiles
+- **Customer concentration (REQUIRED).** Quantify top-1 and top-5 customer share of revenue from the latest annual filing, plus the 3-year trend if available. Name the top customers when disclosed. Cite the specific filing section (e.g. `年度报告` § 前五名客户, 10-K segment note, Yuho `主要な販売先`). State the contract structure (master agreement vs. PO-by-PO, multi-year vs. annual) and whether any top customer is also a competitor / vertically integrating. **If top-1 > 20% or top-5 > 50%, flag it explicitly here and carry it into Section 9 as a material risk.** If the company does not disclose, say so — do not skip.
 - Distribution channels
 - Sales strategy and cycle
 - Key partnerships
