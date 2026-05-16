@@ -53,34 +53,37 @@ Secondary sources (any domicile): competitor websites and filings, Gartner/Forre
 
 ## Workflow
 
-### Step 0 — Check the local report cache first (do this before going to the web)
+### Step 0 — Sync filings (always run the fetch script first)
 
-Before downloading anything, check whether recent filings are already on disk. Re-downloading wastes time and bandwidth, and the local copy is what `db/financial_reports.db` / `db/cninfo_reports.db` already indexes.
+**Default behavior: run the fetch script before reading anything.** The scripts are idempotent — they check the source portal (SEC EDGAR / cninfo) for new filings and download only what's missing locally. Existing files are skipped. Mtime-based freshness checks can miss a filing that just dropped, so don't rely on them as a "skip the fetch" shortcut.
 
-- **US issuers** → `ls /Users/x/projects/financial_agent/financial_reports/<TICKER>/` (e.g. `financial_reports/NVDA/`). Look for the most recent 10-K, 10-Q, DEF 14A, 8-K.
-- **Chinese A-share / HK issuers** → `ls /Users/x/projects/financial_agent/cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/` (e.g. `cninfo_reports/SZSE/002050_安培龙/`). Look for the most recent 年度报告, 季度报告, 半年度报告, 重大事项公告.
-- The DBs hold the same listing: `sqlite3 db/financial_reports.db "SELECT ticker, report_type, report_date, filename FROM reports WHERE ticker='NVDA' ORDER BY report_date DESC LIMIT 10;"` and equivalently for cninfo.
+**Always run first:**
 
-**Freshness rule — fetch only if the cache is stale:**
-
-- Annual report (10-K / 年度报告) older than **~13 months** → fetch the latest.
-- Quarterly report (10-Q / 季度报告 / 半年度报告) older than **~4 months** → fetch the latest.
-- Material events (8-K / 重大事项公告) — always check whether anything has been filed in the last 6 months; fetch if missing.
-- If the cache covers the period you need, **use the local PDF** — do not re-download.
-
-**To fetch (only when needed):**
-
-- **US:**
+- **US issuers:**
   ```bash
   cd /Users/x/projects/financial_agent
   python3 fetch_financial_report.py <TICKER>
   ```
-- **China A-share / HK:**
+- **China A-share / HK issuers:**
   ```bash
   cd /Users/x/projects/financial_agent
   python3 -c "import fetch_cninfo_report as cr; cr.init_db(); [print(m) for m in cr._run_download('SZSE:002050', cr.ALL_CATEGORIES)]"
   ```
-  Always run from the main project dir so files land in `cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/` and not in a worktree.
+  Run from the main project dir so files land in `cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/` and not in a worktree.
+
+**Then list what's on disk** (the fetch will have refreshed it):
+
+- **US:** `ls /Users/x/projects/financial_agent/financial_reports/<TICKER>/` — confirm latest 10-K, 10-Q, DEF 14A, recent 8-Ks.
+- **China A-share / HK:** `ls /Users/x/projects/financial_agent/cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/` — confirm 年度报告, 季度报告, 半年度报告, 重大事项公告.
+- Or query the DB: `sqlite3 db/financial_reports.db "SELECT ticker, report_type, report_date, filename FROM reports WHERE ticker='NVDA' ORDER BY report_date DESC LIMIT 10;"` (and equivalently for cninfo).
+
+**Sanity check what the fetch returned:**
+
+- Annual report (10-K / 年度报告) should be ≤ 13 months old. If the newest on disk is older, the company may be delinquent or the script may have missed a filing — investigate before proceeding.
+- Quarterly (10-Q / 季度报告 / 半年度报告) should be ≤ 4 months old. Same rule.
+- For Chinese issuers, also confirm whether a 业绩预告 / 业绩快报 has been filed since the last full report — these often pre-announce a guidance change relevant to Step 1's banner check.
+
+**Skip the re-fetch only if:** you already ran the script earlier in this same session for this ticker. Otherwise always run it — it's idempotent and cheap.
 
 Read PDFs with `fitz` / Read tool. For image-only / scanned pages, follow the OCR flow in the project CLAUDE.md (ocrmac → Marker → vision-LM, never Tesseract).
 
