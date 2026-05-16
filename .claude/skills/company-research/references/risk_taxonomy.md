@@ -22,6 +22,7 @@ Each risk: 50–100 word description. For each, describe the risk clearly, quant
 - Funding requirements
 - Debt levels and covenants
 - Cash burn rate (if unprofitable)
+- **Valuation / multiple-compression risk** — include whenever the Section 1 valuation snapshot shows P/E > 50× TTM with no clear earnings path, P/S > 20× outside top-quartile growth, or any multiple > 2× its 3-year median. Describe the gap between today's multiple and a defensible "fair" multiple given the growth and margin profile; identify what would trigger a de-rate (growth deceleration, sector rotation, rate move, miss vs. guidance, narrative break). Quote the current multiple and the sector median for comparison.
 
 ## Macroeconomic Risks (2–3 risks)
 - Economic sensitivity (cyclical vs. defensive)
