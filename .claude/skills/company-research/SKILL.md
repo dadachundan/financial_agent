@@ -93,11 +93,21 @@ This document provides step-by-step instructions for executing (Company Research
 
 ### Step 1: Initial Data Collection
 
-1. **Start with company website**
-   - Read About/Company pages
-   - Review product pages
-   - Identify customer case studies
-   - Note key metrics mentioned (employees, customers, etc.)
+1. **Thoroughly analyze the company website** (do not skim — this is the primary source of ground truth on what the company actually sells)
+   - Read every About / Company / Mission page; note founders' framing of the business
+   - **Walk the entire product / solutions navigation tree.** Enumerate every distinct product, SKU family, or service line the company publishes. Do not collapse them — list each one by name, even when there are 10–30+ products.
+   - For each product, capture from the product page itself:
+     - Official product name and any sub-variants/tiers
+     - One-sentence description of what it does
+     - Target customer / use case as stated by the company
+     - Pricing model if disclosed (subscription, license, per-unit, custom quote)
+     - Key technical specs, capabilities, or differentiators the company chooses to highlight
+     - Launch / "new" / "flagship" badges, and any explicit hero-product positioning
+   - Identify customer case studies, named customers, logos on the homepage, and partner / integration lists
+   - Note key metrics mentioned (employees, customers, ARR, units shipped, geographic reach, certifications)
+   - Capture leadership / "Team" page details (names, titles, prior employers) — feed these into Step 3
+   - Read the blog / newsroom / press release index for the **last 12 months** to detect new product launches, sunsets, repositioning, and strategic pivots that may not yet appear in filings
+   - For non-English companies, read the native-language site (e.g. company.com.cn) — English IR pages are often a stripped-down subset and miss product SKUs
 
 2. **Gather regulatory filings (if public) — route by domicile:**
    - **US issuer:** SEC EDGAR — latest 10-K, most recent 10-Q, latest DEF 14A, recent 8-Ks. Use `fetch_financial_report.py`.
@@ -288,12 +298,17 @@ Identify 8-12 risks across four categories. For each risk, write 50-100 words.
    - Insider ownership
    - Management track record assessment
 
-4. **Products & Services** (700-1,000 words)
-   - Detailed product portfolio
-   - Key features and capabilities
-   - Product differentiation
-   - Target customers and use cases
-   - Pricing models and typical deal sizes
+4. **Products & Services** (700-1,000 words) — **must be grounded in a thorough walk of the company website, not a generic summary**
+   - **Full product portfolio enumeration.** List every distinct product / service line found on the website. Group by segment if the company organizes them that way, but do not omit minor SKUs — call them out even briefly.
+   - For each major product: what it does, target customer, key features, pricing model (if disclosed), and typical deal size
+   - **Per-product competitive-advantage assessment (REQUIRED).** For each material product, explicitly answer:
+     - Does this product have a competitive advantage? (yes / partial / no)
+     - If yes, what *kind* of moat: technology / IP / patents, cost leadership, scale, network effects, switching costs, brand, regulatory / certification, distribution, data, ecosystem lock-in
+     - Evidence for the moat (market-share data, named wins, benchmark results, gross-margin profile, customer testimonials, third-party reviews) — cite inline
+     - The closest competing product from a named competitor, and a one-line comparison (where the company's product is ahead / behind / at parity)
+   - **Flagship vs. long-tail.** Clearly identify which 1–3 products drive the business (revenue, growth, strategic priority) versus which are legacy, experimental, or filler. State revenue or unit-mix share if disclosed.
+   - **Roadmap & recent launches.** Note products launched, repositioned, or sunset in the last 12 months (from the newsroom / press releases).
+   - Cite the company website (with the specific product URL) and any third-party benchmark or competitor source inline for each claim.
 
 5. **Customers & Go-to-Market** (500-700 words)
    - Customer segments and profiles
@@ -424,7 +439,13 @@ TABLE OF CONTENTS
 
 4. PRODUCTS & SERVICES (700-1,000 words)
 
-[Content]
+[Full enumeration of every product from the company website,
+ grouped by segment. For each material product:
+   - What it does, target customer, pricing
+   - Competitive-advantage verdict (yes / partial / no) + moat type
+   - Evidence + closest named competitor product (one-line compare)
+ Then call out the 1–3 flagship products driving the business,
+ and note product launches / sunsets in the last 12 months.]
 
 5. CUSTOMERS & GO-TO-MARKET (500-700 words)
 
@@ -487,6 +508,7 @@ A successful Task 1 completion should deliver:
 5. Cite all sources **inline** at the point each fact appears, with a consolidated References list at the end as a secondary aid (not the primary citation mechanism)
 6. Enable reader to understand:
    - What the company does and how it makes money
+   - **Every product the company sells (from a thorough company-website walk) and which specific products have a competitive advantage — including the type of moat and the closest named competitor product**
    - Quality and track record of management team
    - Company's competitive position
    - Market opportunity size
