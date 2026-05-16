@@ -331,10 +331,20 @@ Identify 8-12 risks across four categories. For each risk, write 50-100 words.
    - Macroeconomic risks (2-3)
    - Each risk: 50-100 word description
 
-**Data Sources Section**
-- List all sources used
-- Include dates and URLs
-- Organize by source type
+**Inline Citations (required throughout the report)**
+
+Do **not** save citations for the end. Every non-trivial factual claim — revenue figures, market share, management background, customer names, growth rates, quoted strategy language, risk drivers — must be attributed inline at the point it appears.
+
+- Use numbered footnote-style references in the text: `... revenue grew 34% YoY [^1] ...`, with the footnote definition placed at the end of the same section (or in a consolidated "References" section at the end of the document for repeated sources).
+- Alternative inline form for short docs: parenthetical attribution, e.g. `(Source: 2024 10-K, p. 42)` or `(Source: Q3-2025 earnings call transcript)`.
+- For each citation include: source type (10-K, 年度报告, earnings call, IR deck, news article, competitor 10-K, industry report, LinkedIn, company website), filing/publication date, and a URL or local path where applicable.
+- Every section (Company Overview through Risk Assessment) must contain inline citations — not just the final References block.
+- Management bios cite the DEF 14A / proxy, LinkedIn, or interview source per claim. Competitor analysis cites each competitor's own filing or website. TAM/industry numbers cite the specific research firm and report year.
+- Distinguish primary sources (company filings, transcripts) from secondary (news, third-party research). Prefer primary; when only secondary is available, say so.
+
+**Final References Section**
+- At the end of the document, include a consolidated, deduplicated list of all sources used, organized by source type, with dates and URLs.
+- This is in addition to, not a replacement for, the inline citations.
 
 ---
 
@@ -344,7 +354,7 @@ Identify 8-12 risks across four categories. For each risk, write 50-100 words.
 - Each section must meet minimum word count targets
 - Analysis should be substantive, not just descriptive
 - Use specific examples and quantitative data
-- Cite sources throughout
+- Cite sources **inline** throughout the body, not only in a sources section at the end. Each section must contain attributions at the point each fact is asserted.
 - Maintain objectivity and balance
 
 ### Management Bios
@@ -448,8 +458,20 @@ Macroeconomic Risks:
 
 ======================================
 
-DATA SOURCES
-[List all sources with dates and URLs]
+REFERENCES
+[Consolidated, deduplicated list of every source cited inline above,
+ organized by source type, each entry with date and URL/local path.]
+```
+
+**Inline citation example (within a section):**
+
+```
+Anpeilong's robotics segment revenue rose 41% YoY in FY2024 to RMB 2.83 bn,
+driven primarily by industrial cobot shipments to automotive OEMs
+(Source: 2024 年度报告, p. 28, cninfo SZSE:002050). Management attributed
+roughly half of the growth to a single Tier-1 supplier ramp [^auto-tier1].
+
+[^auto-tier1]: Q4-2024 earnings call transcript, 2025-03-12, company IR site.
 ```
 
 ---
@@ -462,7 +484,7 @@ A successful Task 1 completion should deliver:
 2. Include all 9 required sections with target word counts
 3. Provide substantive analysis, not just description
 4. Use specific examples and quantitative data
-5. Cite all sources properly
+5. Cite all sources **inline** at the point each fact appears, with a consolidated References list at the end as a secondary aid (not the primary citation mechanism)
 6. Enable reader to understand:
    - What the company does and how it makes money
    - Quality and track record of management team
