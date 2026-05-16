@@ -29,19 +29,21 @@ Every chart needs a citation directly underneath in the same markdown-link forma
   - **If P/E < 8× or P/S is unusually low** → say whether it's a value trap, cyclical peak, governance concern, or genuine mispricing.
   - For private companies, substitute the latest funding-round post-money valuation and implied revenue multiple if disclosed; if not, state "private; no disclosed valuation."
 
-### 2. Company History (800–1,200 words)
-- Founding story (who, when, why, where)
-- Timeline of major milestones
-- Strategic pivots or transformations
-- Key acquisitions
-- Recent developments (last 1–2 years)
+### 2. Company History (400–700 words)
+- Founding story (who, when, why, where) — 1 short paragraph
+- Mermaid `timeline` block covering 5–10 major milestones (replaces a prose recap of every dated event)
+- 2–3 strategic pivots or transformations, each in 1–2 sentences explaining the *why*, not just the *what*
+- Key acquisitions (bullet list with year + rationale)
+- Recent developments (last 1–2 years) — keep tight; details that affect the current thesis can move to Section 4 / 5 / 7 / 8 instead of bloating history.
 
-### 3. Management Team (1,000–1,400 words)
-- 300–400 word bio for each of 3–4 executives (CEO + CFO required; pick 1–2 more from COO/CTO/CPO/etc.)
-- Each bio: current role, prior 2–3 roles, key accomplishments, education, years in industry, tenure at company
-- Board composition and independence
-- Insider ownership percentage
-- Management track record assessment
+### 3. Management Team (600–900 words)
+**CEO / founder is the most important bio — spend the most depth there.** A strong founder-CEO can be the single biggest determinant of long-run outcome; everyone else is supporting cast.
+
+- **CEO or founder bio: 250–350 words** (deeper if the company is founder-led or the CEO is unusually consequential — Musk-tier, founder-with-supervoting, recent-arrival-with-mandate). Cover: prior 2–3 roles, *what specifically they accomplished* (numbers, not titles), education, years in industry, tenure at this company, ownership stake, comp structure, public profile / interviews / writing. If founder, also: founding thesis and whether they still own materially.
+- **CFO bio: 150–200 words.** Prior roles, IPO / M&A / capital-markets track record, tenure, any prior public-company CFO experience.
+- **1–2 other executives (COO / CTO / CPO / heads of key segments): 80–120 words each.** Pick whoever is most material to the thesis — e.g. the CTO at a chip company, the chief revenue officer at a sales-led SaaS, the head of the largest segment at a conglomerate.
+- **Governance footer (80–150 words):** board composition and independence, insider ownership %, comp structure (cash vs. equity, performance-linked %), any related-party transactions or governance flags. Bullet form is fine.
+- **Management track record assessment (50–100 words):** one-paragraph synthesis — has this team delivered before? Where are the gaps?
 
 ### 4. Products & Services (700–1,000 words) — **grounded in a thorough company-website walk, not a generic summary**
 - **Full product portfolio enumeration.** List every distinct product / service line found on the website. Group by segment if the company organizes them that way, but do not omit minor SKUs.
