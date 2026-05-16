@@ -21,11 +21,39 @@ This document provides step-by-step instructions for executing (Company Research
 ## Data Sources to Gather
 
 ### Primary Sources (Company)
-- **SEC Filings (for public companies):**
+
+**Pick the filing source by company domicile — SEC EDGAR only covers US issuers.**
+
+- **US public companies → SEC EDGAR:**
   - Latest 10-K: Business description, risk factors, MD&A, financials
   - Recent 10-Qs: Quarterly updates
   - DEF 14A (Proxy): Executive compensation, board composition
   - 8-Ks: Material events, acquisitions, management changes
+  - Local helper: `fetch_financial_report.py` (DB: `db/financial_reports.db`)
+
+- **Chinese A-share / HK companies → cninfo (巨潮资讯) — NOT SEC EDGAR:**
+  - Annual report (年度报告), Q1/Q3 quarterly reports (季度报告), semi-annual report (半年度报告)
+  - Prospectus / listing docs, board announcements, material event disclosures
+  - Ticker format: `SZSE:002050`, `SSE:688802`, `HKEX:2513`
+  - Local helper: `fetch_cninfo_report.py` (DB: `db/cninfo_reports.db`). Run from `/Users/x/projects/financial_agent` so files land in `cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/`.
+  - Direct portal: https://www.cninfo.com.cn/ (Chinese-language disclosures are authoritative; English IR summaries on the company site are secondary).
+
+- **Taiwanese companies (TWSE / TPEx) → MOPS (公開資訊觀測站):**
+  - Portal: https://mops.twse.com.tw/ (English: https://mops.twse.com.tw/mops/web/index)
+  - Annual report (年報), Q1–Q3 financial reports, material information announcements (重大訊息)
+  - Also check the company's IR site for English investor decks and the TWSE/TPEx market filings page.
+
+- **Japanese companies → EDINET + TDnet:**
+  - EDINET (金融庁): https://disclosure2.edinet-fsa.go.jp/ — Yuho (有価証券報告書, annual), Shihanki (四半期報告書, quarterly), Rinji (臨時報告書, material events). English UI available.
+  - TDnet (TSE timely disclosure): https://www.release.tdnet.info/ — earnings short reports (決算短信), press releases.
+  - Many large issuers publish English IR PDFs ("Integrated Report", "Financial Results") directly on their IR site — use those for narrative; keep EDINET filings as the primary financial source.
+
+- **Korean companies → DART (전자공시시스템):**
+  - Portal: https://dart.fss.or.kr/ (English: https://englishdart.fss.or.kr/)
+  - Business Report (사업보고서, annual), Half-year Report (반기보고서), Quarterly Report (분기보고서), Material Fact Reports (주요사항보고서)
+  - Cross-check the company's global IR site for English earnings releases and presentations.
+
+- **Other non-US jurisdictions:** default to the country's official regulator/exchange disclosure portal (e.g. SEDAR+ for Canada, ASX announcements for Australia, LSE RNS for UK, BSE/NSE for India). Do NOT fall back to SEC EDGAR unless the company is a 20-F / 6-K filer there.
 
 - **Company Website & IR:**
   - Investor presentations
@@ -71,11 +99,14 @@ This document provides step-by-step instructions for executing (Company Research
    - Identify customer case studies
    - Note key metrics mentioned (employees, customers, etc.)
 
-2. **Gather SEC filings (if public)**
-   - Download latest 10-K from SEC EDGAR
-   - Download most recent 10-Q
-   - Download latest DEF 14A (proxy statement)
-   - Note filing dates
+2. **Gather regulatory filings (if public) — route by domicile:**
+   - **US issuer:** SEC EDGAR — latest 10-K, most recent 10-Q, latest DEF 14A, recent 8-Ks. Use `fetch_financial_report.py`.
+   - **Chinese A-share / HK issuer:** cninfo (巨潮资讯) — latest 年度报告, most recent 季度报告 / 半年度报告, recent 重大事项公告. Use `fetch_cninfo_report.py` from the main project dir. Do **not** look for these on SEC EDGAR.
+   - **Taiwanese issuer:** MOPS (公開資訊觀測站) — latest annual report, latest quarterly report, material information announcements.
+   - **Japanese issuer:** EDINET for Yuho (annual) and Shihanki (quarterly); TDnet for 決算短信 and timely disclosures; company IR site for English integrated report.
+   - **Korean issuer:** DART — latest Business Report (사업보고서), Half-year / Quarterly Report, recent Material Fact Reports.
+   - **Other jurisdictions:** use the country's official disclosure portal (SEDAR+, ASX, LSE RNS, BSE/NSE, etc.).
+   - Note filing dates and the source portal used for each document.
 
 3. **Read earnings materials**
    - Latest earnings transcript
