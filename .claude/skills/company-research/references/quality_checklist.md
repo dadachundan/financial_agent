@@ -40,7 +40,7 @@
 
 ## Success Criteria — checklist before declaring done
 
-1. Total word count is 6,000–8,000 (verify with `wc -w`).
+1. Total word count is 6,000–10,000 (verify with `wc -w`). Don't pad to hit a number — if the content runs lean, ship it; if it runs long with real substance, that's fine.
 2. All 9 sections present with their target word counts.
 3. Substantive analysis, not just description.
 4. Specific examples and quantitative data throughout.
