@@ -20,29 +20,11 @@ Source citations preserve the **original** language of the document (see "Citati
 
 Filenames may include Chinese characters when the subject company is Chinese: `reports/安培龙_SZSE002050_Research_Document_2026-05-16.md` is fine; `reports/Tesla_Research_Document_2024-10-27.md` is fine. No Japanese kana / kanji or Korean hangul in filenames.
 
-## Citations: use markdown links to the actual source URL
+## Citations
 
-**Every inline citation must be a clickable markdown link** of the form `[Title](real-website-url)`, not a bare `(Source: ...)` parenthetical. Each link must point to the actual document / article on the actual web (SEC EDGAR filing page, cninfo PDF URL, company IR page, news article permalink, industry-report landing page). Do not fabricate URLs — if you cannot locate the real link, surface that explicitly rather than guessing.
+Every inline citation is a **clickable markdown link to the real source URL** — `[Title in original language](https://real-url)` — never a bare `(Source: ...)` parenthetical. Link titles preserve the original language (`年度报告`, `10-K`, `決算短信`, `사업보고서`); URLs are canonical permalinks (the actual SEC EDGAR document URL, the specific cninfo PDF, the article permalink — not homepages). No fabricated URLs — if you cannot find the real link, say so inline.
 
-**Format examples (inline, in flowing English prose):**
-
-- US filing: `revenue grew 34% YoY ([Tesla 10-K FY2024, p. 42](https://www.sec.gov/Archives/edgar/data/1318605/000162828025003063/tsla-20241231.htm))`
-- China A-share filing: `industrial cobot shipments rose 41% ([安培龙 2024 年度报告, 第 28 页](https://static.cninfo.com.cn/finalpage/2025-04-20/1222612345.PDF))`
-- HK filing: `gross margin expanded 220bps ([比亚迪 2024 年报, p. 87](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0327/2025032700234.pdf))`
-- Earnings call: `CEO flagged a Tier-1 supplier ramp ([Q4-2024 earnings call transcript, 2025-03-12](https://ir.example.com/events/2025-03-12-q4-call))`
-- Company website / IR page: `the flagship product is the X1 module ([Anpeilong product page](https://www.anpeilong.com/products/x1))`
-- News article: `Reuters reported a 2025 capacity expansion ([Reuters, 2025-02-14](https://www.reuters.com/...))`
-- Industry report: `the global market reached $42B in 2024 ([Gartner, "Industrial Robotics Market Forecast, 2025–2030", 2025-01](https://www.gartner.com/...))`
-- LinkedIn (management bio): `previously SVP of Engineering at Foxconn ([LinkedIn](https://www.linkedin.com/in/...))`
-
-**Rules:**
-
-- **Preserve the original language of the title.** Chinese filing titles stay `年度报告` / `年报` / `季度报告`; Japanese stay `有価証券報告書` / `決算短信`; Korean stay `사업보고서`. US filings stay `10-K` / `10-Q` / `DEF 14A` / `8-K`. Do not translate the link text.
-- **Real URLs only.** Use the canonical permalink: SEC EDGAR document URL (not the search page), the specific cninfo PDF URL (not the cninfo homepage), the specific article URL (not the publisher homepage). For locally-cached PDFs, use the live web URL of the same document, not the local path.
-- Include enough specificity in the link title to identify the document (filing year, page number when relevant, publication date).
-- Every section (Company Overview through Risk Assessment) must contain inline markdown-link citations — not just the final References block.
-- Direct quotations are quoted in the original language; add a short translation in parentheses only if load-bearing for the reader.
-- If a fact has no verifiable URL (e.g. a private interview, a stale snapshot), state that inline rather than inventing a link.
+See [`references/citations.md`](references/citations.md) for the full rules, per-source examples, and the final References-block format. **Read it before drafting.**
 
 ## Reference docs (read on demand)
 
