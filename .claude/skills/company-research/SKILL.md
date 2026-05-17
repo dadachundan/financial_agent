@@ -7,6 +7,23 @@ description: Produce a deep 6,000–10,000 word company research report (busines
 
 Deep research deliverable: a 6,000–10,000 word markdown report covering business, management, products, customers, industry, competitive landscape, TAM, and risks. Input is just a company name or ticker.
 
+## Core principle: accuracy over completeness — never hallucinate
+
+This is the **single most important rule** and overrides every other instruction in this skill. The report is read by investors making real decisions; a single fabricated number, executive name, customer name, page reference, market-share figure, or URL destroys the credibility of the entire document.
+
+**Hard rules:**
+
+- **Never invent specific facts.** Revenue figures, growth rates, customer names, competitor market shares, executive backgrounds, board members, founding dates, product launch dates, TAM numbers, page numbers in filings, URLs — every one of these must come from a source you actually verified. If you didn't read it, don't write it.
+- **If the data is not available, say so.** Write `disclosure not found` / `not disclosed in 10-K` / `cninfo filing does not break this out` / `private — not disclosed`. Omitting a section or stating an absence is **always preferable to inventing a plausible-looking number**.
+- **No "this is probably around X."** No back-of-envelope estimates dressed as facts. If you need to estimate, mark it explicitly (`est., based on [reasoning]`) and show the math.
+- **Cross-check every quantitative claim against its citation.** Before pasting "revenue grew 34% YoY" with a 10-K link, confirm the 10-K actually shows 34%. The citation must support the claim — not vaguely cover the topic.
+- **Page numbers and dates must be exact.** If you cite `2024 年度报告, 第 28 页`, page 28 must be where the figure actually lives. If unsure, drop the page reference and cite the document only.
+- **No fabricated URLs** (this echoes the citation rule). If you cannot locate the real link, state that inline rather than guess a plausible URL.
+- **Direct quotations must be verbatim.** If you can't quote exactly, paraphrase and drop the quote marks.
+- **Distinguish primary (filings, transcripts) from secondary (news, third-party) sources.** When two sources disagree, prefer the primary and note the discrepancy briefly.
+
+**When in doubt, omit.** A shorter, fully-sourced report is far more valuable than a padded one with invented detail. Length targets in `references/report_structure.md` are guides, not licenses to fabricate.
+
 ## Report language
 
 Two options only: **Simplified Chinese (zh-CN)** or **English**. Never Traditional Chinese, Japanese, or Korean for the prose.
