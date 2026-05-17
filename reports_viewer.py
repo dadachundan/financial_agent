@@ -10,7 +10,7 @@ from __future__ import annotations
 from datetime import datetime
 from pathlib import Path
 
-from flask import Blueprint, abort, render_template_string
+from flask import Blueprint, abort, render_template_string, send_from_directory
 
 import nav_widget2 as _nw
 
@@ -165,3 +165,11 @@ def view(name: str):
         abort(404)
     md = target.read_text(encoding="utf-8")
     return render_template_string(_VIEW_TMPL, name=name, md=md, _nav=_nw.NAV_HTML)
+
+
+@reports_bp.route("/view/charts/<path:filename>")
+def view_chart_asset(filename: str):
+    # Relative image links in /reports/view/<name>.md resolve against the
+    # page directory, so charts/foo.png arrives here. Serve from reports/charts/.
+    charts_dir = REPORTS_DIR / "charts"
+    return send_from_directory(charts_dir, filename)
