@@ -2,11 +2,12 @@
 
 ## Entry Point
 
-**`main.py`** — Unified Flask app on port 5001 (default). Registers 5 blueprints:
+**`main.py`** — Unified Flask app on port 5001 (default). Registers these blueprints:
 - `/zep/*` — Knowledge graph UI
 - `/zsxq/*` — ZSXQ PDF viewer
 - `/sec/*` — US SEC filings
 - `/cn/*` — A-share & HK reports
+- `/reports/*` — Research-report markdown viewer
 - `/indicators/*` — Market indicators dashboard
 
 ---
@@ -67,6 +68,16 @@ Download A-share (SSE/SZSE) and HK (HKEX) reports via CNINFO.
 - Key routes: `GET /cn/` (UI), `POST /cn/download` (SSE), `GET /cn/reports` (JSON), `GET /cn/file/<id>`
 - **DB**: `db/cninfo_reports.db`
 - **Storage**: `cninfo_reports/<EXCHANGE>/<CODE>/`
+
+### `reports_viewer.py` — Research Reports Index
+Markdown viewer for research reports written by the `company-research`, `sec-report-summary`, and `equity-research:*` skills.
+- Key routes: `GET /reports/` (index, recursive scan + filter + EN/ZH collapse), `GET /reports/view/<rel>` (render with marked.js + mermaid + Obsidian-highlight extension), `GET /reports/view/charts/<name>` (PNG assets)
+- **Storage**: `reports/` (tracked in git)
+  - `reports/company/<Slug>/<file>.md` — company research (EN + ZH coexist; ZH suffix `_zh` or `_CN`)
+  - `reports/sector/<file>.md` — sector / thematic overviews
+  - `reports/compare/<file>.md` — head-to-head comparisons
+  - `reports/earnings/<TICKER>_<YYYYMMDD>.md` — quarterly earnings notes
+  - `reports/charts/<file>.png` — shared chart PNGs; relative `charts/foo.png` refs in any nested doc are rewritten client-side to `/reports/view/charts/foo.png`
 
 ### `indicators/` — Market Indicators Dashboard
 Real-time cross-asset market indicators: liquidity, credit, volatility, and cross-asset signals.

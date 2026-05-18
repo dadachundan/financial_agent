@@ -113,10 +113,9 @@ A single Markdown document. Put the per-report blocks newest → oldest,
 then the "Changes over the years" section at the end. Title it
 `# <Company Name> (<TICKER>) — SEC filings summary, <oldest year>–<newest year>`.
 
-**Always write the summary to** `reports/<TICKER>_<YYYYMMDD>.md` (relative
-to the project root — `/Users/x/projects/financial_agent/reports/`).
-Create the `reports/` directory if it doesn't exist. This directory is
-gitignored, so the files won't pollute the repo. After writing the file,
+**Always write the summary to** `reports/earnings/<TICKER>_<YYYYMMDD>.md`
+(relative to the project root — `/Users/x/projects/financial_agent/reports/earnings/`).
+Create the `reports/earnings/` directory if it doesn't exist. After writing the file,
 print its path in chat and inline the report content for the user to read.
 
 To view rendered (with charts): start `main.py` and open
@@ -148,7 +147,7 @@ Mermaid syntax cheats that bite:
 - `timeline` — colons inside event text need escaping or rephrasing.
 
 Aim for charts that *summarize* a section, not duplicate the table just
-above. The QCOM report at `reports/QCOM_<date>.md` is a working
+above. The QCOM report at `reports/earnings/QCOM_<date>.md` is a working
 reference if you need an example.
 
 ## Defaults & guardrails

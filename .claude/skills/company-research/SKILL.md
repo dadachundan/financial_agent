@@ -1,6 +1,6 @@
 ---
 name: company-research
-description: Produce a deep 6,000–10,000 word company research report (business, management, products, customers, industry, competitive landscape, TAM, risks) for a public or private company. Output is saved as markdown to the project-level `reports/` folder. Use when the user asks to "research", "deep-dive", "profile", or "initiate coverage on" a specific company or ticker — e.g. "research Tesla", "deep dive on PLTR", "company research for SZSE:002050".
+description: Produce a deep 6,000–10,000 word company research report (business, management, products, customers, industry, competitive landscape, TAM, risks) for a public or private company. Output is saved as markdown to `reports/company/<Company_Ticker>/` under the project root. Use when the user asks to "research", "deep-dive", "profile", or "initiate coverage on" a specific company or ticker — e.g. "research Tesla", "deep dive on PLTR", "company research for SZSE:002050".
 ---
 
 # Company Research
@@ -232,18 +232,28 @@ Read `references/report_structure.md` for the 9-section spec and full output tem
 
 ## Output location
 
-Save to the **project-level `reports/` folder**: `/Users/x/projects/financial_agent/reports/`. Create it if missing.
+Save to **`reports/company/<Slug>/`** under the project root: `/Users/x/projects/financial_agent/reports/company/<Slug>/<filename>.md`. The viewer (http://localhost:5001/reports) groups by this folder structure. Create the folder if missing.
+
+**`<Slug>`** is everything that comes before `_Research_Document_` / `_公司研究_` / `_研究报告_` in the filename — i.e. the company name plus primary ticker, joined with `_`. The filename itself is repeated inside the slug folder (one folder per company can hold EN, ZH, dated re-issues).
 
 File name follows the report language:
-- **Chinese reports**: `reports/[Company-中文名]_公司研究_[YYYY-MM-DD].md` — Simplified Chinese characters allowed.
-- **English reports**: `reports/[Company]_Research_Document_[YYYY-MM-DD].md` — ASCII only.
+- **Chinese reports**: `[Company-中文名]_[EXCHANGE][CODE]_公司研究_[YYYY-MM-DD].md` — Simplified Chinese characters allowed.
+- **English reports**: `[Company]_[EXCHANGE][CODE]_Research_Document_[YYYY-MM-DD].md` — ASCII only.
 - Never Japanese kana / kanji or Korean hangul in filenames.
 
 Examples:
-- `reports/安培龙_SZSE002050_公司研究_2026-05-16.md` (A-share company, Chinese report)
-- `reports/比亚迪_HKEX1211_公司研究_2026-05-16.md` (HK company filing in Chinese, Chinese report)
-- `reports/Tesla_Research_Document_2024-10-27.md` (US company, English report)
-- `reports/Alibaba_BABA_Research_Document_2026-05-16.md` (US-listed Chinese ADR, English report)
-- `reports/Toyota_TSE7203_Research_Document_2026-05-16.md` (Japanese company, English report)
+- `reports/company/安培龙_SZSE002050/安培龙_SZSE002050_公司研究_2026-05-16.md` (A-share, Chinese report)
+- `reports/company/比亚迪_HKEX1211/比亚迪_HKEX1211_公司研究_2026-05-16.md` (HK filing in Chinese)
+- `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Research_Document_2024-10-27.md` (US, English)
+- `reports/company/Alibaba_HKEX9988/Alibaba_HKEX9988_Research_Document_2026-05-16.md` (HK, English)
+- `reports/company/Toyota_TSE7203/Toyota_TSE7203_Research_Document_2026-05-16.md` (Japan, English)
+- Tickerless private companies: use just the company name as slug, e.g. `reports/company/Unitree/Unitree_Research_Document_2026-05-16.md`.
 
-Always write to the main project's `reports/` directory — never to a worktree, `~/Downloads`, or any other location.
+EN and ZH versions of the same report share one slug folder — ZH adds the suffix `_zh` (preferred) or `_CN` before `.md`.
+
+Other report types live in sibling folders the viewer also surfaces:
+- `reports/sector/<topic>_<YYYY-MM-DD>.md` for thematic / industry overviews
+- `reports/compare/<A>_vs_<B>_<YYYYMMDD>.md` for head-to-head comparisons
+- `reports/earnings/<TICKER>_<YYYYMMDD>.md` for quarterly earnings notes
+
+Always write under the main project's `reports/` directory — never to a worktree, `~/Downloads`, or any other location.

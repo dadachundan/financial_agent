@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "b189c9bbf41d6ec9",
+    "type": "split",
+    "children": [
+      {
+        "id": "fa4d055c2c8c9b09",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "47a59e1bf7e2c716",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "51e6a3c1699c772b",
+    "type": "split",
+    "children": [
+      {
+        "id": "94b4917237ef2548",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0eff65570217c332",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byModifiedTime",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "15463aef00f02152",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "fb9c89eb8956ca3d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "right": {
+    "id": "36ed278131105645",
+    "type": "split",
+    "children": [
+      {
+        "id": "f1f63aac95a6511b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "497175871717825c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "c4c414e271ee74a3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "823cf8be77571192",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "13503450ca7716e4",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "3f5ef9c9eede6a1f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "47a59e1bf7e2c716",
+  "lastOpenFiles": [
+    "双林股份_SZSE300100_公司研究_2026-05-17.md",
+    "sector/人形机器人传感器板块综述_2026-05-16.md",
+    "sector",
+    "compare/SNPS_vs_CDNS_20260516.md",
+    "compare",
+    "earnings/QCOM_20260511.md",
+    "earnings",
+    "company/福莱新材_SSE605488/福莱新材_SSE605488_Research_Document_2026-05-16.md",
+    "company/汉威科技_SZSE300007/汉威科技_SZSE300007_研究报告_2026-05-16.md",
+    "company/汉威科技_SZSE300007/汉威科技_SZSE300007_Research_Document_2026-05-16.md",
+    "company/广汽集团_SSE601238_HKEX2238/广汽集团_SSE601238_HKEX2238_公司研究_2026-05-17.md",
+    "company/双林股份_SZSE300100/双林股份_SZSE300100_公司研究_2026-05-17.md",
+    "company/凌云光_SSE688400/凌云光_SSE688400_Research_Document_2026-05-16_CN.md",
+    "company/凌云光_SSE688400/凌云光_SSE688400_Research_Document_2026-05-16.md",
+    "company/iFlytek_SZSE002230/iFlytek_SZSE002230_Research_Document_2026-05-16_zh.md",
+    "company/iFlytek_SZSE002230/iFlytek_SZSE002230_Research_Document_2026-05-16.md",
+    "company/Zhaowei_SZSE003021/Zhaowei_SZSE003021_Research_Document_2026-05-16_zh.md",
+    "company/Zhaowei_SZSE003021/Zhaowei_SZSE003021_Research_Document_2026-05-16.md",
+    "company/Xpeng_NYSE_XPEV/Xpeng_NYSE_XPEV_Research_Document_2026-05-16_zh.md",
+    "company/Xpeng_NYSE_XPEV/Xpeng_NYSE_XPEV_Research_Document_2026-05-16.md",
+    "company/Xiaomi_HKEX1810/Xiaomi_HKEX1810_Research_Document_2026-05-16_zh.md",
+    "company/Xiaomi_HKEX1810/Xiaomi_HKEX1810_Research_Document_2026-05-16.md",
+    "company/Wolong_SSE600580/Wolong_SSE600580_Research_Document_2026-05-16_zh.md",
+    "company/Wolong_SSE600580/Wolong_SSE600580_Research_Document_2026-05-16.md",
+    "company/Unitree/Unitree_Research_Document_2026-05-16_zh.md",
+    "company/Unitree/Unitree_Research_Document_2026-05-16.md",
+    "company/UBTECH_HKEX9880/UBTECH_HKEX9880_Research_Document_2026-05-16_zh.md",
+    "company/UBTECH_HKEX9880/UBTECH_HKEX9880_Research_Document_2026-05-16.md",
+    "company/Tuopu_SSE601689/Tuopu_SSE601689_Research_Document_2026-05-16_zh.md",
+    "company/福莱新材_SSE605488",
+    "company/汉威科技_SZSE300007",
+    "company/广汽集团_SSE601238_HKEX2238",
+    "company/双林股份_SZSE300100",
+    "company/凌云光_SSE688400",
+    "company/iFlytek_SZSE002230",
+    "company/Zhaowei_SZSE003021",
+    "charts/gac_overseas.png",
+    "charts/gac_nev_gap.png",
+    "charts/gac_peer_comparison.png",
+    "charts/gac_sales_by_brand.png",
+    "charts/gac_5yr_financials.png",
+    "charts/shuanglin_tam.png",
+    "charts/shuanglin_peer_pe.png",
+    "charts/shuanglin_segment_mix.png",
+    "charts/shuanglin_revenue_margin.png",
+    "charts/midea_tam.png"
+  ]
+}
