@@ -645,60 +645,35 @@ def _parse_name_summary(text: str, fallback_rows: list) -> tuple[str, str]:
 
 
 def _summarize_community(member_rows: list) -> tuple[str, str]:
-    """Generate (name, summary) for a community via MiniMax map-reduce.
+    """Generate (name, summary) for a community without any LLM call.
 
     member_rows: list of (entity_name, entity_summary) tuples.
+
+    Strategy:
+      - Name = first 3 member names joined with " / " (capped to 60 chars).
+      - Summary = up to 5 names, each followed by a one-line snippet of its
+        own entity summary (first 80 chars), separated by " · ".
     """
-    from minimax import call_minimax
+    if not member_rows:
+        return "Community", ""
 
-    CHUNK = 5
-    with_content = [(n, s) for n, s in member_rows if s.strip()]
-    if not with_content:
-        name = " / ".join(r[0] for r in member_rows[:4])
-        return name, ""
-
-    def _fmt(rows):
-        return "\n\n".join(f"Entity: {n}\nSummary: {s}" for n, s in rows)
-
-    sys_msg  = {"role": "system", "name": "MiniMax AI",
-                "content": "You summarise knowledge graph communities concisely."}
-    reduce_prompt = (
-        "Based on these entity summaries, write:\n"
-        "1. A 3-5 word topic name for this community.\n"
-        "2. A 2-3 sentence community summary.\n\n"
-        "Format exactly as:\nNAME: <name>\nSUMMARY: <summary>\n\n"
+    # Sort by presence of summary first, then by name length descending so
+    # well-documented hubs lead the label.
+    ordered = sorted(
+        member_rows,
+        key=lambda r: (0 if (r[1] or "").strip() else 1, -len(r[0] or "")),
     )
 
-    if len(with_content) <= CHUNK:
-        text, _, _ = call_minimax(
-            messages=[sys_msg, {"role": "user", "name": "User",
-                                "content": reduce_prompt + _fmt(with_content)}],
-            temperature=0.2, max_completion_tokens=256,
-        )
-    else:
-        # Map: summarise each chunk
-        partials = []
-        for i in range(0, len(with_content), CHUNK):
-            chunk = with_content[i:i + CHUNK]
-            t, _, _ = call_minimax(
-                messages=[
-                    sys_msg,
-                    {"role": "user", "name": "User",
-                     "content": "Summarise these related entities in 1-2 sentences:\n\n" + _fmt(chunk)},
-                ],
-                temperature=0.2, max_completion_tokens=150,
-            )
-            if t.strip():
-                partials.append(t.strip())
-        # Reduce
-        reduce_input = "\n\n".join(partials)
-        text, _, _ = call_minimax(
-            messages=[sys_msg, {"role": "user", "name": "User",
-                                "content": reduce_prompt + reduce_input}],
-            temperature=0.2, max_completion_tokens=256,
-        )
+    name_parts = [r[0] for r in ordered[:3] if r[0]]
+    name = " / ".join(name_parts)[:60] or "Community"
 
-    return _parse_name_summary(text, member_rows)
+    snippets = []
+    for n, s in ordered[:5]:
+        s = (s or "").strip().split(". ")[0][:80]
+        snippets.append(f"{n}: {s}" if s else n)
+    summary = " · ".join(snippets)[:500]
+
+    return name, summary
 
 
 def build_communities(conn: sqlite3.Connection):

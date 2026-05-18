@@ -597,6 +597,137 @@ def mark_report_indexed(conn: sqlite3.Connection, report_id: int) -> None:
     conn.commit()
 
 
+# ── DB helpers — markdown research reports (reports/**.md) ────────────────────
+
+def ensure_markdown_db(db_path: Path) -> sqlite3.Connection:
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    conn = sqlite3.connect(db_path)
+    conn.row_factory = sqlite3.Row
+    conn.execute(
+        "CREATE TABLE IF NOT EXISTS markdown_reports ("
+        "  path TEXT PRIMARY KEY,"
+        "  indexed_at TEXT"
+        ")"
+    )
+    conn.commit()
+    return conn
+
+
+def mark_markdown_indexed(conn: sqlite3.Connection, path: str) -> None:
+    conn.execute(
+        "INSERT INTO markdown_reports(path, indexed_at) VALUES (?, ?) "
+        "ON CONFLICT(path) DO UPDATE SET indexed_at=excluded.indexed_at",
+        (path, datetime.now(timezone.utc).isoformat()),
+    )
+    conn.commit()
+
+
+def _select_markdown_files(reports_root: Path) -> list[Path]:
+    """Pick one canonical markdown per company (Chinese preferred), and include
+    every file under reports/{sector,compare,earnings}/.
+
+    Priority inside a company folder:
+      1. *_zh.md or *_CN.md  (Chinese translation)
+      2. file whose stem has no English-translation sibling
+         (e.g. 广汽集团_..._公司研究_2026-05-17.md — already Chinese)
+      3. any remaining *.md (English-only company report)
+    """
+    selected: list[Path] = []
+
+    company_dir = reports_root / "company"
+    if company_dir.exists():
+        for sub in sorted(company_dir.iterdir()):
+            if not sub.is_dir():
+                continue
+            mds = sorted(sub.glob("*.md"))
+            if not mds:
+                continue
+            zh = [p for p in mds if p.stem.endswith(("_zh", "_CN"))]
+            if zh:
+                selected.append(zh[0])
+                continue
+            def _cjk_score(p: Path) -> int:
+                return len(re.findall(r"[一-鿿]", p.stem))
+            chinese_named = [p for p in mds if _cjk_score(p) > 0]
+            if chinese_named:
+                # Prefer the file whose stem has the MOST CJK chars
+                # (e.g. "..._研究报告_..." beats "..._Research_Document_...").
+                chinese_named.sort(key=lambda p: (-_cjk_score(p), p.name))
+                selected.append(chinese_named[0])
+                continue
+            selected.append(mds[0])
+
+    for subdir in ("sector", "compare", "earnings"):
+        d = reports_root / subdir
+        if d.exists():
+            selected.extend(sorted(d.glob("*.md")))
+
+    return selected
+
+
+def _build_markdown_items(paths: list[Path],
+                          md_conn: sqlite3.Connection,
+                          reindex: bool,
+                          reports_root: Path) -> list[dict]:
+    already = {r["path"] for r in md_conn.execute(
+        "SELECT path FROM markdown_reports WHERE indexed_at IS NOT NULL"
+    ).fetchall()}
+
+    items: list[dict] = []
+    for idx, p in enumerate(paths, 1):
+        spath = str(p.resolve())
+        if not reindex and spath in already:
+            continue
+        try:
+            text = p.read_text(encoding="utf-8", errors="replace")
+        except Exception as e:
+            print(f"  [{idx}] ⚠  Read failed: {p} ({e})", flush=True)
+            continue
+        text = text.strip()
+        if len(text) < 500:
+            print(f"  [{idx}] ⚠  Too short, skipped: {p}", flush=True)
+            continue
+        text = text[:MAX_CHARS]
+
+        m = re.search(r"(\d{4})[-_]?(\d{2})[-_]?(\d{2})", p.stem)
+        try:
+            if m:
+                ref_time = datetime(int(m.group(1)), int(m.group(2)),
+                                    int(m.group(3)), tzinfo=timezone.utc)
+            else:
+                ref_time = datetime.fromtimestamp(p.stat().st_mtime,
+                                                  tz=timezone.utc)
+        except Exception:
+            ref_time = datetime.now(timezone.utc)
+
+        try:
+            rel = p.relative_to(reports_root)
+        except ValueError:
+            rel = p
+        category = rel.parts[0] if len(rel.parts) > 1 else "misc"
+        if category == "company":
+            label = f"{rel.parts[1]} — {p.stem}"
+        else:
+            label = f"{category}/{p.stem}"
+
+        slug = re.sub(r"[^A-Za-z0-9一-鿿]+", "_", p.stem).strip("_")[:80]
+        ep_name = f"md_{category}_{slug}"
+
+        print(f"  [{idx}] {len(text):>7,}c  {label[:65]}", flush=True)
+        items.append({
+            "label":              label,
+            "file_path":          str(p),
+            "name":               ep_name,
+            "episode_body":       text,
+            "source_description": f"Research Report ({category}): {p.name}",
+            "reference_time":     ref_time,
+            "db_conn":            md_conn,
+            "mark_fn":            mark_markdown_indexed,
+            "row_id":             spath,
+        })
+    return items
+
+
 # ── Core async ingestion ───────────────────────────────────────────────────────
 
 async def _build_graphiti():
@@ -895,8 +1026,11 @@ def main() -> None:
     parser.add_argument("--db",      default=str(DEFAULT_DB),
                         help="Path to zsxq.db")
     parser.add_argument("--source",  default="zsxq",
-                        choices=["zsxq", "financial_reports", "all"],
-                        help="Document source to index (default: zsxq)")
+                        choices=["zsxq", "financial_reports", "markdown", "all"],
+                        help="Document source to index (default: zsxq). "
+                             "'markdown' = curated research markdown under reports/.")
+    parser.add_argument("--reports-dir", default=None,
+                        help="Override the reports/ root for --source markdown.")
     parser.add_argument("--ticker",  nargs="+", default=[],
                         metavar="TICKER",
                         help="Filter financial_reports to these ticker(s) e.g. --ticker NVDA TSMC")
@@ -977,6 +1111,27 @@ def main() -> None:
         items, conn2 = _build_report_items([row], reports_db_path)
         all_items.extend(items)
         open_conns.append(conn2)
+
+    # ── markdown research reports (reports/**.md) ──────────────────────────────
+    if args.source in ("markdown", "all"):
+        reports_root = Path(args.reports_dir).expanduser() if args.reports_dir \
+                        else root / "reports"
+        if reports_root.exists():
+            md_db_path = root / "db" / "markdown_reports.db"
+            md_conn    = ensure_markdown_db(md_db_path)
+            md_paths   = _select_markdown_files(reports_root)
+            print(f"Found {len(md_paths)} markdown report file(s) under {reports_root} …")
+            md_items   = _build_markdown_items(md_paths, md_conn,
+                                               args.reindex, reports_root)
+            if args.limit and md_items:
+                md_items = md_items[: args.limit]
+            if md_items:
+                print(f"  → {len(md_items)} markdown items queued for ingest.")
+            all_items.extend(md_items)
+            open_conns.append(md_conn)
+        else:
+            print(f"⚠  reports/ directory not found at {reports_root}; "
+                  "skipping markdown source.")
 
     # ── financial_reports HTML ─────────────────────────────────────────────────
     if not args.report_id and args.source in ("financial_reports", "all"):

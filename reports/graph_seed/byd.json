@@ -1,0 +1,51 @@
+{
+  "episode": {
+    "name": "md_company_BYD_Research_Document_2026-05-16_zh",
+    "source_desc": "Research Report (company): BYD_SZSE002594_Research_Document_2026-05-16_zh.md"
+  },
+  "entities": [
+    { "name": "BYD", "labels": ["Company"],
+      "summary": "比亚迪 (SZSE:002594 / HKEX:1211). World's largest NEV maker by volume; world #2 EV-battery supplier behind CATL; deepest-integrated EV company globally — internally builds cells, packs, motors, controllers, IGBT/SiC modules, drivetrains, BMS, MCUs, sensors, plus glass/lights/seats/displays. Sold 4.6 m vehicles in 2025 (2.25 m BEV, 2.29 m PHEV, 1.05 m exports). FY2025 revenue ¥804 bn; net profit ¥27.6 bn TTM (post a sharp 55% Q1-2026 yoy drop). A-share market cap ~USD 137 bn at ¥97.15. TTM P/E ~29×." },
+    { "name": "BYD Electronic", "labels": ["Company"],
+      "summary": "比亚迪电子 (HKEX:0285). 65.76%-owned BYD subsidiary; tier-1 electronics ODM for Apple (iPad/HomePod/iPhone assembly), Honor, Xiaomi, Samsung, plus emerging AI-server/liquid-cooling/high-speed-interconnect lines. FY2025 segment revenue ¥155.2 bn (19.31% of group), 6.29% gross margin." },
+    { "name": "BYD Cloud Rail", "labels": ["Product"],
+      "summary": "云轨 / 云巴. BYD's straddle-monorail and rubber-tyred automated people-mover transit systems — financially immaterial but strategic segment." },
+    { "name": "Apple", "labels": ["Company"],
+      "summary": "Apple — outsources iPad / HomePod / iPhone assembly to BYD Electronic among other ODMs (also Foxconn)." },
+    { "name": "Samsung", "labels": ["Company"],
+      "summary": "Samsung — BYD Electronic structural-parts customer." },
+    { "name": "Honor", "labels": ["Company"],
+      "summary": "荣耀. BYD Electronic structural-parts customer; also launched first humanoid at MWC 2026 using Orbbec 3D vision." },
+    { "name": "Toyota", "labels": ["Company"],
+      "summary": "Toyota — BYD battery customer." },
+    { "name": "Hyundai-Kia", "labels": ["Company"],
+      "summary": "Hyundai-Kia — BYD battery customer." },
+    { "name": "Ford", "labels": ["Company"],
+      "summary": "Ford — BYD battery licensee via BorgWarner-licensed program." },
+    { "name": "BorgWarner", "labels": ["Company"],
+      "summary": "BorgWarner — licensing intermediary for BYD batteries into Ford." },
+    { "name": "Great Wall Motor", "labels": ["Company"],
+      "summary": "长城汽车. Chinese NEV peer of BYD; cited as relative-valuation comp (~17× P/E)." }
+  ],
+  "edges": [
+    { "src": "BYD",         "tgt": "BYD Electronic",   "name": "OWNS",     "fact": "BYD owns 65.76% of HKEX-listed subsidiary BYD Electronic." },
+    { "src": "BYD",         "tgt": "BYD Cloud Rail",   "name": "MAKES",    "fact": "BYD makes the 云轨/云巴 monorail and people-mover transit systems." },
+    { "src": "BYD",         "tgt": "Tesla",            "name": "SUPPLIES", "fact": "BYD supplies LFP cells to Tesla (cell-level not pack-level)." },
+    { "src": "BYD",         "tgt": "Toyota",           "name": "SUPPLIES", "fact": "BYD supplies batteries to Toyota." },
+    { "src": "BYD",         "tgt": "Hyundai-Kia",      "name": "SUPPLIES", "fact": "BYD supplies batteries to Hyundai-Kia." },
+    { "src": "BYD",         "tgt": "Ford",             "name": "SUPPLIES", "fact": "BYD licenses LFP technology to Ford via BorgWarner program." },
+    { "src": "BorgWarner",  "tgt": "BYD",              "name": "PARTNERS_WITH", "fact": "BorgWarner is BYD's licensing intermediary for Ford battery licensing." },
+    { "src": "BYD Electronic","tgt": "Apple",          "name": "SUPPLIES", "fact": "BYD Electronic assembles iPad / HomePod / iPhone units for Apple." },
+    { "src": "BYD Electronic","tgt": "Samsung",        "name": "SUPPLIES", "fact": "BYD Electronic supplies smartphone structural parts to Samsung." },
+    { "src": "BYD Electronic","tgt": "Honor",          "name": "SUPPLIES", "fact": "BYD Electronic supplies smartphone structural parts to Honor." },
+    { "src": "BYD Electronic","tgt": "Xiaomi",         "name": "SUPPLIES", "fact": "BYD Electronic supplies smartphone structural parts to Xiaomi." },
+    { "src": "BYD",         "tgt": "CATL",             "name": "COMPETES_WITH", "fact": "BYD is the world's #2 EV battery supplier behind CATL — main strategic battery rivalry." },
+    { "src": "BYD",         "tgt": "Tesla",            "name": "COMPETES_WITH", "fact": "Both global NEV leaders; Tesla trades at 90% P/E premium driven by Robotaxi/Optimus AI optionality." },
+    { "src": "BYD",         "tgt": "NIO",              "name": "COMPETES_WITH", "fact": "Chinese NEV peer; NIO loss-making vs BYD profitable." },
+    { "src": "BYD",         "tgt": "Li Auto",          "name": "COMPETES_WITH", "fact": "Chinese NEV peer; Li Auto on lower P/E (~13.5×)." },
+    { "src": "BYD",         "tgt": "Xpeng",            "name": "COMPETES_WITH", "fact": "Chinese NEV peer; Xpeng loss-making, valued on forward multiples only." },
+    { "src": "BYD",         "tgt": "Geely",            "name": "COMPETES_WITH", "fact": "Chinese NEV peer; Geely at ~15.5× P/E." },
+    { "src": "BYD",         "tgt": "Great Wall Motor", "name": "COMPETES_WITH", "fact": "Chinese NEV peer (~17× P/E)." },
+    { "src": "BYD",         "tgt": "SAIC Motor",       "name": "COMPETES_WITH", "fact": "Chinese auto peer (~28× P/E on low-base earnings)." }
+  ]
+}

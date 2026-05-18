@@ -1,0 +1,34 @@
+{
+  "episode": {
+    "name": "md_company_CATL_Research_Document_2026-05-16_zh",
+    "source_desc": "Research Report (company): CATL_SZSE300750_Research_Document_2026-05-16_zh.md"
+  },
+  "entities": [
+    { "name": "CATL", "labels": ["Company"],
+      "summary": "宁德时代 (SZSE:300750 / HKEX:03750). World's largest EV + grid-scale lithium-ion battery maker. FY2025: 661 GWh shipped (+39%), revenue ¥423.7 bn (+17%), net profit ¥72.2 bn (+42%, record). 37-38% global EV-battery share, 38-43% global ESS share (SNE Research). Plants in Germany, Hungary, Spain (50:50 JV with Stellantis), US (licensing with Ford / Tesla due to IRA), Indonesia (PT Antam JV). TTM P/E 24.2× — discount to peer median ~35× despite highest margins and share. 1 trillion HK + RMB float; dual-listed Shenzhen ChiNext (2018) and HKEX (May-2025)." },
+    { "name": "Brunp", "labels": ["Company"],
+      "summary": "邦普循环. CATL subsidiary covering cobalt / nickel / lithium recycling — closes the loop on battery materials." },
+    { "name": "PT Antam", "labels": ["Company"],
+      "summary": "Indonesian state miner; JV partner with CATL on the Indonesia battery-materials industrial park (nickel mining → refining → precursor → cathode → cell)." },
+    { "name": "LG Energy Solution", "labels": ["Company"],
+      "summary": "LG Energy Solution (KRX:373220). World #2 EV battery maker; TTM loss; 4.1× P/S." },
+    { "name": "Samsung SDI", "labels": ["Company"],
+      "summary": "Samsung SDI (KRX:006400). Korean EV battery maker; TTM loss; 3.6× P/S." },
+    { "name": "Panasonic Holdings", "labels": ["Company"],
+      "summary": "Panasonic Holdings (TYO:6752). Diversified Japanese maker, EV-battery presence (Tesla legacy supplier); 40.6× P/E, 1.0× P/S." },
+    { "name": "Gotion High-Tech", "labels": ["Company"],
+      "summary": "国轩高科 (SZSE:002074). Chinese EV-battery peer; 28.4× P/E, 1.4× P/S; 10-15% gross margin band (vs CATL's ~25%)." }
+  ],
+  "edges": [
+    { "src": "CATL",       "tgt": "Brunp",                  "name": "OWNS",      "fact": "Brunp 邦普循环 is CATL's recycling subsidiary closing cobalt/nickel/lithium loop." },
+    { "src": "CATL",       "tgt": "PT Antam",               "name": "PARTNERS_WITH", "fact": "Indonesian battery-materials JV — nickel mining to cell manufacturing." },
+    { "src": "CATL",       "tgt": "Stellantis",             "name": "PARTNERS_WITH", "fact": "Spain 50:50 JV announced 2024; localised European cell production." },
+    { "src": "CATL",       "tgt": "Ford",                   "name": "PARTNERS_WITH", "fact": "US technology-licensing arrangement (vs wholly-owned plant) given Inflation Reduction Act constraints." },
+    { "src": "CATL",       "tgt": "Tesla",                  "name": "SUPPLIES",  "fact": "CATL is a multi-year cell supplier to Tesla; US licensing rather than full plant due to IRA." },
+    { "src": "CATL",       "tgt": "BYD",                    "name": "COMPETES_WITH", "fact": "BYD is the world's #2 EV battery supplier behind CATL." },
+    { "src": "CATL",       "tgt": "LG Energy Solution",     "name": "COMPETES_WITH", "fact": "Loss-making Korean #2 peer that distorts the peer-median P/E." },
+    { "src": "CATL",       "tgt": "Samsung SDI",            "name": "COMPETES_WITH", "fact": "Loss-making Korean peer." },
+    { "src": "CATL",       "tgt": "Panasonic Holdings",     "name": "COMPETES_WITH", "fact": "Diversified-earnings Japanese peer (Tesla legacy supplier)." },
+    { "src": "CATL",       "tgt": "Gotion High-Tech",       "name": "COMPETES_WITH", "fact": "China-listed peer at 10-15% gross margin band (vs CATL ~25%)." }
+  ]
+}

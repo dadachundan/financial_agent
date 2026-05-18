@@ -1,0 +1,35 @@
+{
+  "episode": {
+    "name": "md_compare_SNPS_vs_CDNS_QCOM_2026-05",
+    "source_desc": "Compare: SNPS_vs_CDNS_20260516.md + Earnings: QCOM_20260511.md"
+  },
+  "entities": [
+    { "name": "Synopsys", "labels": ["Company"],
+      "summary": "Synopsys (NASDAQ:SNPS). EDA + design-IP leader pivoting to 'Silicon to Systems' via Ansys acquisition — integrated silicon + multi-physics platform. FY2025 fiscal year ended 2025-10-31; 10-K filed 2025-12-22. AI portfolio: Synopsys.ai suite (DSO.ai, VSO.ai, TSO.ai, ASO.ai), Synopsys.ai Copilot, Design.da / Silicon.da analytics." },
+    { "name": "Cadence Design Systems", "labels": ["Company"],
+      "summary": "Cadence (NASDAQ:CDNS). EDA + system-design + IP leader pivoting to 'Intelligent System Design (ISD)' via SD&A + bolt-on M&A. FY2025 fiscal year ended 2025-12-31; 10-K filed 2026-02-19. AI portfolio: Cerebrus agentic AI, JedAI platform, Verisium (AI verification), Allegro X AI for PCB. Three explicit AI horizons: Infrastructure AI, Physical AI, Life Sciences AI." },
+    { "name": "Ansys", "labels": ["Company"],
+      "summary": "Multi-physics simulation leader; acquired by Synopsys (the core pivot move from EDA to broader silicon + multi-physics)." },
+    { "name": "DSO.ai", "labels": ["Product"],
+      "summary": "Synopsys' AI-driven place-and-route optimisation tool — most-cited AI-EDA name in industry." },
+    { "name": "Cerebrus", "labels": ["Product"],
+      "summary": "Cadence's agentic AI design tool." },
+    { "name": "JedAI", "labels": ["Product"],
+      "summary": "Cadence's AI platform powering Cerebrus and Verisium." },
+    { "name": "Qualcomm", "labels": ["Company"],
+      "summary": "Qualcomm (NASDAQ:QCOM). Smartphone-SoC leader pivoting toward Data Center via Alphawave acquisition (closed 2025-12-18). FY25 Q3 revenue USD 10.4 bn → FY26 Q2 USD 10.6 bn (Q3 FY26 guidance midpoint USD 9.6 bn). Q2 FY26 events: USD 5.7 bn DTA release, USD 20 bn buyback authorisation. FY25 10-K (filed 2025-11-05) named Data Center as a new reportable segment after OBBB enactment." },
+    { "name": "Alphawave", "labels": ["Company"],
+      "summary": "Alphawave Semi — SerDes / high-speed-interconnect IP company; acquired by Qualcomm (closed 2025-12-18). Core asset for Qualcomm's Data Center segment build-out." }
+  ],
+  "edges": [
+    { "src": "Synopsys",  "tgt": "Cadence Design Systems", "name": "COMPETES_WITH", "fact": "Two-firm EDA duopoly diverging on strategy: SNPS = Silicon-to-Systems via Ansys; CDNS = Intelligent System Design via SD&A + M&A." },
+    { "src": "Synopsys",  "tgt": "Ansys",                  "name": "ACQUIRED",      "fact": "Synopsys acquired Ansys to pivot from EDA point-vendor to integrated silicon + multi-physics platform." },
+    { "src": "Synopsys",  "tgt": "DSO.ai",                 "name": "MAKES",          "fact": "Synopsys' AI place-and-route optimiser — most-cited AI-EDA tool." },
+    { "src": "Cadence Design Systems", "tgt": "Cerebrus",  "name": "MAKES",          "fact": "Cadence's agentic AI design tool." },
+    { "src": "Cadence Design Systems", "tgt": "JedAI",     "name": "MAKES",          "fact": "Cadence's AI platform powering Cerebrus and Verisium." },
+    { "src": "Qualcomm",  "tgt": "Alphawave",              "name": "ACQUIRED",       "fact": "Qualcomm closed Alphawave acquisition 2025-12-18 — anchor of Data Center segment." },
+    { "src": "Qualcomm",  "tgt": "Xiaomi",                 "name": "SUPPLIES",       "fact": "Qualcomm SoC supplier to Xiaomi (now partly being displaced by Xiaomi's in-house Xring O1)." },
+    { "src": "Qualcomm",  "tgt": "Apple",                  "name": "SUPPLIES",       "fact": "Qualcomm modem supplier to Apple iPhones (legacy)." },
+    { "src": "Qualcomm",  "tgt": "NVIDIA",                 "name": "COMPETES_WITH",  "fact": "Data-center pivot puts Qualcomm into nascent competition with NVIDIA in AI accelerators." }
+  ]
+}
