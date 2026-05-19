@@ -35,7 +35,22 @@ Two options only: **Simplified Chinese (zh-CN)** or **English**. Never Tradition
   - HK (`HKEX:`) → Chinese when the issuer files in Chinese as primary (most mainland-domiciled HK names: 比亚迪, 安踏, 美团, etc.). For HK issuers whose primary filings are English (HSBC, Prudential, AIA, Standard Chartered, etc.) → English.
   - Taiwan (`TWSE:` / `TPEx:`) → Simplified Chinese for the prose (translate Traditional Chinese filings into Simplified; source titles stay in their original Traditional form per the citation rule).
 - **Everything else → English.** US listings (including Chinese ADRs like BABA, PDD, JD, NIO whose 10-K / 20-F are in English), Japan, Korea, Europe, ASEAN, India, etc.
-- Domicile alone does not decide it — the **listing + filing language** does. A user's prompt language never overrides: a request in English about `SZSE:002050` still gets a Chinese report; a request in Chinese about Tesla still gets an English report.
+- Domicile alone does not decide it — the **listing + filing language** does. A user's prompt language alone does not override (a request phrased in Chinese about Tesla still defaults to English; a request phrased in English about `SZSE:002050` still defaults to Chinese).
+
+**Explicit user override (highest priority).** The user can pin the language with any of these phrasings; honor it without asking:
+
+| User says | Force language |
+|---|---|
+| `"... in English"`, `"write in English"`, `"English report"`, `"--lang en"`, `"--en"` | English |
+| `"... in Chinese"`, `"用中文"`, `"中文报告"`, `"写成中文"`, `"--lang zh"`, `"--zh"` | Simplified Chinese |
+
+Examples:
+- `research SZSE:002050 in English` → English report (override beats auto-rule)
+- `research Tesla 用中文` → Chinese report (override beats auto-rule)
+- `research 比亚迪` (no override) → Chinese (auto-rule: HK + Chinese filings)
+- `research NVDA` (no override) → English (auto-rule: US listing)
+
+If the user gives no explicit instruction, fall back to the auto-rule above. If the override is ambiguous (e.g. user mixes "English summary, Chinese body"), ask one quick clarifying question rather than guessing.
 
 **Bilingual technical terms (Chinese reports):** since most sources you cite will be Chinese, but many technical / industry / regulatory terms originate in English (or have established English equivalents), **use both** on first mention and either thereafter. Examples:
 - `EV / 电动车`, `半导体 (semiconductor)`, `先进封装 (advanced packaging)`, `数据中心 GPU (data-center GPU)`, `OEM / ODM`, `Tier-1 供应商`, `毛利率 (gross margin)`, `自由现金流 (free cash flow)`, `专精特新 ("specialized, refined, distinctive, novel" — MIIT designation)`.
