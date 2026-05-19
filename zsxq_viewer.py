@@ -1533,17 +1533,53 @@ def feed():
     from flask import render_template_string
     from pathlib import Path as _Path
     conn = get_conn()
-    raw = conn.execute("""
+    zraw = conn.execute("""
         SELECT file_id AS id, name, comment, bank,
-               COALESCE(comment_updated_at, create_time, '') AS date,
-               0 AS pinned
+               COALESCE(comment_updated_at, create_time, '') AS date
         FROM   pdf_files
         WHERE  comment IS NOT NULL AND comment != ''
-        ORDER  BY date DESC
     """).fetchall()
     conn.close()
-    # Expose bank as badge
-    rows = [dict(r) | {"badge": r["bank"] or ""} for r in raw]
+
+    rows = [
+        dict(r) | {
+            "badge":    r["bank"] or "ZSXQ",
+            "pinned":   0,
+            "open_url": "/zsxq/open-local/" + str(r["id"]),
+        }
+        for r in zraw
+    ]
+
+    # Also pull SEC reports with comments — same DB schema lives in
+    # db/financial_reports.db. Merge into the same feed.
+    try:
+        import fetch_financial_report as _sec
+        sconn = _sec.get_conn()
+        sraw = sconn.execute("""
+            SELECT id, ticker, company_name, period, form_type, comment,
+                   COALESCE(comment_updated_at, filed_date, '') AS date
+            FROM   reports
+            WHERE  comment IS NOT NULL AND comment != ''
+        """).fetchall()
+        sconn.close()
+        for r in sraw:
+            name = f"{r['ticker']} {r['period']}"
+            if r["form_type"]:
+                name += f" ({r['form_type']})"
+            rows.append({
+                "id":       r["id"],
+                "name":     name,
+                "comment":  r["comment"],
+                "date":     r["date"] or "",
+                "badge":    r["ticker"] or "SEC",
+                "pinned":   0,
+                "open_url": "/sec/open-local/" + str(r["id"]),
+            })
+    except Exception as exc:
+        print(f"[zsxq feed] SEC merge skipped: {exc}")
+
+    rows.sort(key=lambda r: r["date"] or "", reverse=True)
+
     tmpl = (_Path(__file__).parent / "templates" / "shared_feed.html").read_text(encoding="utf-8")
     tmpl = tmpl.replace("__NAV__",      nw2.NAV_HTML)
     tmpl = tmpl.replace("__URLPATCH__", nw2.URL_PATCH_JS)

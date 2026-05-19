@@ -92,6 +92,10 @@ def init_db() -> None:
             conn.execute("ALTER TABLE reports ADD COLUMN comment TEXT")
         except Exception:
             pass  # column already exists
+        try:
+            conn.execute("ALTER TABLE reports ADD COLUMN comment_updated_at TEXT")
+        except Exception:
+            pass  # column already exists
 
 
 # ── SEC EDGAR helpers ─────────────────────────────────────────────────────────
@@ -743,523 +747,368 @@ TEMPLATE = """\
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>US Financial Reports</title>
+  <title>US SEC Reports</title>
   <link rel="stylesheet" href="/static/vendor/bootstrap.min.css">
   __MCW_HEAD__
   <style>
-    body { background:#f4f6f9; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size:.9rem; }
-
-    /* ── layout ── */
-    .page-layout { display:flex; align-items:flex-start; width:100%; min-height:calc(100vh - 56px); }
-
-    /* ── sidebar ── */
-    .sec-sidebar {
-      width:248px; flex-shrink:0; position:sticky; top:56px;
-      height:calc(100vh - 56px); display:flex; flex-direction:column;
-      background:#fff; border-right:1px solid #e8ecf0; overflow:hidden;
-    }
-    .sidebar-top { padding:.9rem 1rem .7rem; border-bottom:1px solid #eef0f3; }
-    .sidebar-label { font-size:.65rem; font-weight:700; color:#aaa; letter-spacing:.07em;
-                     text-transform:uppercase; margin-bottom:.45rem; }
-    .sidebar-search input { font-size:.8rem; padding:.28rem .55rem; border-radius:6px; }
-
-    /* form-type filter pills in sidebar */
-    .form-pills { display:flex; flex-wrap:wrap; gap:.3rem; margin-bottom:.5rem; }
-    .form-pill {
-      font-size:.67rem; font-weight:700; padding:.18rem .55rem; border-radius:20px;
-      cursor:pointer; border:1.5px solid transparent; transition:all .15s; line-height:1.4;
-    }
-    .form-pill.fp10k  { background:#dbeafe; color:#1e40af; border-color:#93c5fd; }
-    .form-pill.fp10k.active  { background:#1e40af; color:#fff; border-color:#1e40af; }
-    .form-pill.fp10q  { background:#dcfce7; color:#166534; border-color:#86efac; }
-    .form-pill.fp10q.active  { background:#166534; color:#fff; border-color:#166534; }
-    .form-pill.fp8k   { background:#ede9fe; color:#5b21b6; border-color:#c4b5fd; }
-    .form-pill.fp8k.active   { background:#5b21b6; color:#fff; border-color:#5b21b6; }
-    .form-pill.fp20f  { background:#cffafe; color:#155e75; border-color:#67e8f9; }
-    .form-pill.fp20f.active  { background:#155e75; color:#fff; border-color:#155e75; }
-    .form-pill.fp6k   { background:#ffedd5; color:#9a3412; border-color:#fdba74; }
-    .form-pill.fp6k.active   { background:#9a3412; color:#fff; border-color:#9a3412; }
-    .form-pill.fpgnw  { background:#fef9c3; color:#854d0e; border-color:#fde047; }
-    .form-pill.fpgnw.active  { background:#854d0e; color:#fff; border-color:#854d0e; }
-
-    /* sort bar */
-    .sort-bar { padding:.45rem 1rem; border-bottom:1px solid #eef0f3; display:flex; gap:.35rem; }
-    .sort-btn { font-size:.67rem; padding:.2rem .55rem; border-radius:20px;
-                border:1.5px solid #d1d5db; background:#fff; color:#6b7280; cursor:pointer; line-height:1.4; }
-    .sort-btn.active { background:#1e40af; color:#fff; border-color:#1e40af; }
-
-    /* ticker list */
-    .ticker-list { overflow-y:auto; flex:1; padding:.3rem 0; }
-    .ticker-item {
-      display:flex; align-items:center; justify-content:space-between;
-      padding:.28rem 1rem; cursor:pointer; font-size:.8rem; color:#444;
-      border-left:3px solid transparent; transition:background .12s;
-    }
-    .ticker-item:hover { background:#f0f4ff; color:#1e40af; }
-    .ticker-item.active { background:#eff6ff; color:#1e40af; font-weight:700;
-                          border-left-color:#3b82f6; }
-    .ticker-count { font-size:.67rem; background:#e5e7eb; color:#6b7280;
-                    padding:.05rem .38rem; border-radius:10px; }
-    .ticker-item.active .ticker-count { background:#bfdbfe; color:#1e40af; }
-
-    /* ── main feed ── */
-    .feed-col { flex:1; min-width:0; padding:1.1rem 1.4rem 3rem; }
-
-    .feed-header { display:flex; align-items:center; gap:.75rem; margin-bottom:1rem; flex-wrap:wrap; }
-    .feed-header h1 { font-size:1.15rem; font-weight:700; margin:0; }
-    #rowCount { font-size:.75rem; color:#9ca3af; }
-    #search { font-size:.82rem; border-radius:20px; padding:.28rem .9rem;
-              border:1.5px solid #d1d5db; outline:none; }
-    #search:focus { border-color:#3b82f6; }
-    .dl-toggle-btn { font-size:.75rem; padding:.25rem .7rem; border-radius:20px;
-                     border:1.5px solid #d1d5db; background:#fff; color:#374151;
-                     cursor:pointer; margin-left:auto; white-space:nowrap; }
-    .dl-toggle-btn:hover { background:#f9fafb; }
-
-    /* report card */
-    .report-card {
-      background:#fff; border-radius:10px; box-shadow:0 1px 3px rgba(0,0,0,.07);
-      margin-bottom:.65rem; padding:.9rem 1.1rem;
-      border-left:4px solid #e5e7eb; transition:box-shadow .15s;
-    }
-    .report-card:hover { box-shadow:0 3px 10px rgba(0,0,0,.1); }
-    .report-card.c10k  { border-left-color:#3b82f6; }
-    .report-card.c10q  { border-left-color:#22c55e; }
-    .report-card.c8k   { border-left-color:#8b5cf6; }
-    .report-card.c20f  { border-left-color:#06b6d4; }
-    .report-card.c6k   { border-left-color:#f97316; }
-    .report-card.cgnw  { border-left-color:#eab308; }
-    .report-card.camend{ border-left-color:#f59e0b; }
-
-    .card-top { display:flex; align-items:flex-start; gap:.7rem; }
-    .card-badge-col { display:flex; flex-direction:column; gap:.3rem; align-items:center; min-width:50px; }
-    .ticker-badge { font-size:.7rem; font-weight:800; color:#1e40af; background:#dbeafe;
-                    padding:.18rem .45rem; border-radius:5px; text-align:center; }
-    .form-badge { font-size:.6rem; font-weight:700; padding:.13rem .38rem; border-radius:4px; }
-    .fb10k  { background:#dbeafe; color:#1e40af; }
-    .fb10q  { background:#dcfce7; color:#166534; }
-    .fb8k   { background:#ede9fe; color:#5b21b6; }
-    .fb20f  { background:#cffafe; color:#155e75; }
-    .fb6k   { background:#ffedd5; color:#9a3412; }
-    .fbgnw  { background:#fef9c3; color:#854d0e; }
-    .fbamend{ background:#fef3c7; color:#92400e; }
-
-    .card-body-col { flex:1; min-width:0; }
-    .card-company { font-size:.88rem; font-weight:600; color:#1f2937; margin-bottom:.15rem;
-                    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .card-period { font-size:.83rem; font-weight:600; color:#374151; cursor:pointer; text-decoration:none; }
-    .card-period:hover { color:#1e40af; text-decoration:underline; }
-    .card-meta { font-size:.72rem; color:#9ca3af; margin-top:.2rem; display:flex; flex-wrap:wrap; gap:.45rem; }
-
-    .card-actions { display:flex; align-items:center; gap:.35rem; flex-shrink:0; }
-    .act-btn { font-size:.68rem; padding:.18rem .45rem; border-radius:5px; }
-
-    .card-comment { margin-top:.55rem; padding-top:.55rem; border-top:1px solid #f3f4f6; }
-
-    #emptyMsg { text-align:center; color:#9ca3af; padding:3rem 0; }
-
-    /* download drawer */
-    .dl-drawer { background:#fff; border-bottom:1px solid #e5e7eb; padding:.7rem 1.4rem; display:none; }
-    .dl-drawer.open { display:block; }
-    #logBox { font-family:monospace; font-size:.73rem; height:150px; overflow-y:auto;
-              background:#1e1e1e; color:#d4d4d4; border-radius:6px; padding:7px 11px; }
-    .progress { height:4px; border-radius:2px; }
-
-    #reports-pager { display:flex; align-items:center; gap:.5rem; margin-top:.75rem; }
-
+    body          { background:#f8f9fa; font-size:.9rem; }
+    h1            { font-size:1.5rem; }
+    #logBox       { font-family:monospace; font-size:.78rem; height:180px;
+                    overflow-y:auto; background:#1e1e1e; color:#d4d4d4;
+                    border-radius:6px; padding:8px 12px; }
+    .progress     { height:6px; }
+    .bp           { font-size:.72rem; font-weight:600; }
+    .b-10k        { background:#dbeafe !important; color:#1e40af !important; }
+    .b-10q        { background:#dcfce7 !important; color:#166534 !important; }
+    .b-8k         { background:#ede9fe !important; color:#5b21b6 !important; }
+    .b-20f        { background:#cffafe !important; color:#155e75 !important; }
+    .b-6k         { background:#ffedd5 !important; color:#9a3412 !important; }
+    .b-gnw        { background:#fef9c3 !important; color:#854d0e !important; }
+    .b-amend      { background:#fef3c7 !important; color:#92400e !important; }
+    .table th     { font-size:.78rem; color:#555; white-space:nowrap; }
+    .del-btn      { font-size:.72rem; padding:.15rem .45rem; }
+    #search       { max-width:280px; }
+    code          { font-size:.78rem; }
+    .ticker-chip-bar { max-height:80px; overflow-y:auto; }
     __MCW_CSS__
   </style>
 </head>
 <body>
 __NAV__
 __URLPATCH__
+<div class="container-fluid py-3 px-4">
+  <h1 class="mb-0">📊 US SEC Reports</h1>
+  <p class="text-muted mb-3" style="font-size:.8rem">
+    SEC EDGAR &mdash; 10-K / 10-Q / 8-K / 20-F / 6-K / GNW &mdash;
+    files saved in <code>financial_reports/&lt;TICKER&gt;/</code>
+  </p>
 
-<!-- download drawer -->
-<div id="dlDrawer" class="dl-drawer">
-  <div class="d-flex flex-wrap gap-3 align-items-start">
-    <div>
-      <div class="d-flex gap-2 align-items-center mb-2">
+  <!-- ── Download card ── -->
+  <div class="card mb-4" style="max-width:780px">
+    <div class="card-body pb-2">
+      <div class="d-flex flex-wrap gap-2 align-items-center mb-2">
         <input id="tickerInput" class="form-control form-control-sm"
-               style="max-width:86px;font-size:.88rem;font-weight:700;text-transform:uppercase"
+               style="max-width:120px;font-size:1rem;font-weight:700;text-transform:uppercase"
                placeholder="AAPL" maxlength="12"
                onkeydown="if(event.key==='Enter') startDownload()"
                oninput="this.value=this.value.toUpperCase()">
-        <button class="btn btn-primary btn-sm" id="dlBtn" onclick="startDownload()" style="font-size:.78rem">
-          ⬇ Download
-        </button>
-      </div>
-      <div class="d-flex flex-wrap gap-2">
-        <div class="form-check form-check-inline mb-0">
-          <input class="form-check-input" type="checkbox" id="chk10K" checked>
-          <label class="form-check-label" for="chk10K" style="color:#1e40af;font-weight:600;font-size:.76rem">10-K</label>
+        <div class="d-flex gap-2 ms-1 flex-wrap">
+          <div class="form-check mb-0"><input class="form-check-input" type="checkbox" id="chk10K" checked>
+            <label class="form-check-label fw-bold" for="chk10K" style="color:#1e40af">10-K</label></div>
+          <div class="form-check mb-0"><input class="form-check-input" type="checkbox" id="chk10Q" checked>
+            <label class="form-check-label fw-bold" for="chk10Q" style="color:#166534">10-Q</label></div>
+          <div class="form-check mb-0"><input class="form-check-input" type="checkbox" id="chk8K" checked>
+            <label class="form-check-label fw-bold" for="chk8K" style="color:#5b21b6">8-K</label></div>
+          <div class="form-check mb-0"><input class="form-check-input" type="checkbox" id="chk20F" checked>
+            <label class="form-check-label fw-bold" for="chk20F" style="color:#155e75">20-F</label></div>
+          <div class="form-check mb-0"><input class="form-check-input" type="checkbox" id="chk6K" checked>
+            <label class="form-check-label fw-bold" for="chk6K" style="color:#9a3412">6-K</label></div>
+          <div class="form-check mb-0"><input class="form-check-input" type="checkbox" id="chkGNW" checked>
+            <label class="form-check-label fw-bold" for="chkGNW" style="color:#854d0e">GNW</label></div>
         </div>
-        <div class="form-check form-check-inline mb-0">
-          <input class="form-check-input" type="checkbox" id="chk10Q" checked>
-          <label class="form-check-label" for="chk10Q" style="color:#166534;font-weight:600;font-size:.76rem">10-Q</label>
-        </div>
-        <div class="form-check form-check-inline mb-0">
-          <input class="form-check-input" type="checkbox" id="chk8K" checked>
-          <label class="form-check-label" for="chk8K" style="color:#5b21b6;font-weight:600;font-size:.76rem">8-K</label>
-        </div>
-        <div class="form-check form-check-inline mb-0">
-          <input class="form-check-input" type="checkbox" id="chk20F" checked>
-          <label class="form-check-label" for="chk20F" style="color:#155e75;font-weight:600;font-size:.76rem">20-F</label>
-        </div>
-        <div class="form-check form-check-inline mb-0">
-          <input class="form-check-input" type="checkbox" id="chk6K" checked>
-          <label class="form-check-label" for="chk6K" style="color:#9a3412;font-weight:600;font-size:.76rem">6-K</label>
-        </div>
-        <div class="form-check form-check-inline mb-0">
-          <input class="form-check-input" type="checkbox" id="chkGNW" checked>
-          <label class="form-check-label" for="chkGNW" style="color:#854d0e;font-weight:600;font-size:.76rem">GNW</label>
-        </div>
-      </div>
-    </div>
-    <div class="vr" style="opacity:.2"></div>
-    <div>
-      <div class="d-flex align-items-center gap-2">
-        <span class="text-muted" style="font-size:.76rem;white-space:nowrap">Refresh all — last</span>
+        <button class="btn btn-primary btn-sm ms-1" id="dlBtn"
+                onclick="startDownload()">⬇ Download</button>
+        <span class="vr ms-1" style="opacity:.25"></span>
+        <span class="text-muted ms-1" style="font-size:.76rem;white-space:nowrap">Refresh — last</span>
         <input id="batchLastN" type="number" min="1" max="99" value="4"
                class="form-control form-control-sm" style="width:54px;font-size:.78rem">
-        <span class="text-muted" style="font-size:.76rem">filings</span>
         <button class="btn btn-outline-secondary btn-sm" id="batchBtn"
                 onclick="startBatchDownload()" style="font-size:.76rem">🔄 Refresh All</button>
       </div>
-    </div>
-  </div>
-  <div id="progressSection" style="display:none;margin-top:.65rem">
-    <div class="progress mb-2">
-      <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-           id="progressBar" style="width:0%"></div>
-    </div>
-    <div id="logBox"></div>
-  </div>
-</div>
-
-<div class="page-layout">
-
-  <!-- sidebar -->
-  <aside class="sec-sidebar">
-    <div class="sidebar-top">
-      <div class="sidebar-label">Form Type</div>
-      <div id="formPills" class="form-pills"></div>
-      <div class="sidebar-label">Tickers</div>
-      <div class="sidebar-search">
-        <input id="tickerSearch" type="search" class="form-control form-control-sm"
-               placeholder="Filter tickers…" oninput="filterTickers(this.value)">
+      <p class="text-muted mb-2" style="font-size:.75rem">
+        Examples:&nbsp;<code>AAPL</code>, <code>NVDA</code>, <code>TSLA</code>
+      </p>
+      <div id="progressSection" style="display:none">
+        <div class="progress mb-2">
+          <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+               id="progressBar" style="width:0%"></div>
+        </div>
+        <div id="logBox"></div>
       </div>
     </div>
-    <div class="sort-bar">
-      <button id="sortFiledBtn" class="sort-btn active" onclick="setSort('filed')">📅 Recent</button>
-      <button id="sortTickerBtn" class="sort-btn" onclick="setSort('ticker')">🔤 Ticker</button>
-    </div>
-    <div class="ticker-list" id="tickerList"></div>
-  </aside>
+  </div>
 
-  <!-- main feed -->
-  <main class="feed-col">
-    <div class="feed-header">
-      <h1>📊 US Reports</h1>
-      <input id="search" type="search" placeholder="Search company / period…" oninput="applyFilters()">
-      <span id="rowCount"></span>
-      <button class="dl-toggle-btn" onclick="toggleDrawer()">⬇ Download</button>
-    </div>
+  <!-- ── Filter row ── -->
+  <div class="d-flex gap-2 mb-2 align-items-center flex-wrap">
+    <input type="search" id="search" class="form-control form-control-sm"
+           placeholder="🔍  Filter by ticker / company / period…"
+           oninput="applyFilters()">
+    <div id="formBtns" class="d-flex gap-1 flex-wrap"></div>
+    <span id="rowCount" class="text-muted ms-auto" style="font-size:.78rem"></span>
+  </div>
+  <!-- ── Company chips ── -->
+  <div id="companyChips" class="d-flex gap-1 flex-wrap mb-2 ticker-chip-bar"></div>
 
-    <div id="feedContainer"></div>
-    <p id="emptyMsg" style="display:none">No reports yet — enter a ticker and click Download.</p>
-    <div id="reports-pager" class="d-none"></div>
-  </main>
-
+  <!-- ── Reports table ── -->
+  <div class="table-responsive">
+    <table class="table table-sm table-hover table-bordered align-middle" id="repTable">
+      <thead class="table-light">
+        <tr>
+          <th>#</th>
+          <th>Ticker</th>
+          <th>Company</th>
+          <th>Period / Title</th>
+          <th>Type</th>
+          <th>Date</th>
+          <th>Size</th>
+          <th>Comment</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="repBody"></tbody>
+    </table>
+  </div>
+  <div id="rep-pager" class="d-none d-flex align-items-center gap-2 mt-2"></div>
 </div>
 
 __MCW_MODALS__
-
 <script src="/static/vendor/bootstrap.bundle.min.js"></script>
 __MCW_FOOTER__
 <script>
-window._commentSavePrefix = window._BASE||'';
-let _page     = 1;
-let _total    = 0;
-let _pages    = 1;
-const _pageSize = 50;
-let _actTick  = null;
-let _actForm  = null;
-let _sortMode = 'filed';
-let _searchTimer = null;
-let _allTickers = {};
+window._commentSavePrefix = window._BASE || '';
+
+let _rows = [];
+let _filteredRows = [];
+let _page = 1;
+const PAGE_SIZE = 50;
+let _actForm = null;
+let _actTicker = null;
 
 function htmlEsc(s) {
-  return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 function fmtSize(b) {
-  if (!b) return '';
-  return b < 1048576 ? Math.round(b/1024)+' KB' : (b/1048576).toFixed(1)+' MB';
+  if (!b) return '—';
+  return b < 1048576 ? Math.round(b/1024) + ' KB' : (b/1048576).toFixed(1) + ' MB';
 }
-function cardClass(f) {
-  if (!f) return '';
-  if (f.endsWith('/A')) return 'camend';
-  if (f.includes('10-K')) return 'c10k';
-  if (f.includes('10-Q')) return 'c10q';
-  if (f.includes('8-K'))  return 'c8k';
-  if (f.includes('20-F')) return 'c20f';
-  if (f.includes('6-K'))  return 'c6k';
-  if (f === 'GNW')        return 'cgnw';
-  return '';
-}
-function formBadgeCls(f) {
-  if (!f) return '';
-  if (f.endsWith('/A')) return 'fbamend';
-  if (f.includes('10-K')) return 'fb10k';
-  if (f.includes('10-Q')) return 'fb10q';
-  if (f.includes('8-K'))  return 'fb8k';
-  if (f.includes('20-F')) return 'fb20f';
-  if (f.includes('6-K'))  return 'fb6k';
-  if (f === 'GNW')        return 'fbgnw';
-  return '';
+function badgeClass(ft) {
+  if (!ft) return 'badge bp bg-secondary';
+  if (ft.endsWith('/A')) return 'badge bp b-amend';
+  if (ft.includes('10-K')) return 'badge bp b-10k';
+  if (ft.includes('10-Q')) return 'badge bp b-10q';
+  if (ft.includes('8-K'))  return 'badge bp b-8k';
+  if (ft.includes('20-F')) return 'badge bp b-20f';
+  if (ft.includes('6-K'))  return 'badge bp b-6k';
+  if (ft === 'GNW')        return 'badge bp b-gnw';
+  return 'badge bp bg-secondary';
 }
 
-function toggleDrawer() {
-  document.getElementById('dlDrawer').classList.toggle('open');
-}
-
-function loadStats() {
-  const base = window._BASE||'';
-  fetch('/stats').then(r=>r.json()).then(stats => {
-    _allTickers = stats.tickers || {};
-    rebuildFormPills(stats.forms || {});
-    rebuildTickerList('');
+// ── Load reports ──────────────────────────────────────────────────────────────
+function loadReports() {
+  // fetch() is auto-prefixed with the blueprint base by URL_PATCH_JS.
+  fetch('/reports?per_page=50000&page=1').then(r => r.json()).then(data => {
+    _rows = data.rows || [];
+    rebuildFormBtns();
+    rebuildCompanyChips();
+    applyFilters();
   });
 }
 
-function rebuildFormPills(formCounts) {
+function rebuildFormBtns() {
   const specs = [
-    { key:'10-K', label:'10-K', cls:'fp10k' },
-    { key:'10-Q', label:'10-Q', cls:'fp10q' },
-    { key:'8-K',  label:'8-K',  cls:'fp8k'  },
-    { key:'20-F', label:'20-F', cls:'fp20f' },
-    { key:'6-K',  label:'6-K',  cls:'fp6k'  },
-    { key:'GNW',  label:'GNW',  cls:'fpgnw' },
+    { key:'10-K', cls:'b-10k',  outline:'outline-primary'   },
+    { key:'10-Q', cls:'b-10q',  outline:'outline-success'   },
+    { key:'8-K',  cls:'b-8k',   outline:'outline-secondary' },
+    { key:'20-F', cls:'b-20f',  outline:'outline-info'      },
+    { key:'6-K',  cls:'b-6k',   outline:'outline-warning'   },
+    { key:'GNW',  cls:'b-gnw',  outline:'outline-warning'   },
   ];
-  const div = document.getElementById('formPills');
+  const div = document.getElementById('formBtns');
   div.innerHTML = '';
-  specs.forEach(({key, label, cls}) => {
-    const count = Object.entries(formCounts)
-      .filter(([ft]) => ft && ft.includes(key))
-      .reduce((s,[,c])=>s+c, 0);
+  specs.forEach(({key, cls, outline}) => {
+    const count = _rows.filter(r => (r.form_type || '').includes(key)).length;
     if (!count) return;
-    const pill = document.createElement('button');
-    pill.className = 'form-pill ' + cls + (_actForm===key?' active':'');
-    pill.innerHTML = label + ' <span style="opacity:.7;font-weight:400">'+count+'</span>';
-    pill.onclick = () => { _actForm = _actForm===key?null:key; loadStats(); fetchReports(1); };
-    div.appendChild(pill);
+    const active = _actForm === key;
+    const btn = document.createElement('button');
+    btn.className = 'btn btn-sm ' + (active ? `badge bp ${cls}` : `btn-${outline}`);
+    btn.style.cssText = 'font-size:.72rem;padding:.15rem .55rem;font-weight:600';
+    btn.innerHTML = `${key} <span class="badge bg-light text-dark">${count}</span>`;
+    btn.onclick = () => { _actForm = _actForm === key ? null : key; rebuildFormBtns(); applyFilters(); };
+    div.appendChild(btn);
   });
 }
 
-function rebuildTickerList(filter) {
-  const tickers = Object.keys(_allTickers).sort();
-  const f = filter.toUpperCase();
-  const div = document.getElementById('tickerList');
+function rebuildCompanyChips() {
+  const counts = {};
+  const names  = {};
+  _rows.forEach(r => {
+    counts[r.ticker] = (counts[r.ticker] || 0) + 1;
+    if (r.company_name) names[r.ticker] = r.company_name;
+  });
+  const tickers = Object.keys(counts).sort();
+  const div = document.getElementById('companyChips');
   div.innerHTML = '';
-  tickers.filter(t => !f || t.includes(f)).forEach(t => {
-    const item = document.createElement('div');
-    item.className = 'ticker-item' + (t===_actTick?' active':'');
-    item.innerHTML = `<span>${t}</span><span class="ticker-count">${_allTickers[t]}</span>`;
-    item.onclick = () => { _actTick = _actTick===t?null:t; loadStats(); fetchReports(1); };
-    div.appendChild(item);
+  tickers.forEach(t => {
+    const btn = document.createElement('button');
+    const active = t === _actTicker;
+    btn.className = 'btn btn-sm ' + (active ? 'btn-dark' : 'btn-outline-secondary');
+    btn.style.cssText = 'font-size:.72rem;padding:.1rem .5rem';
+    const label = names[t] ? `${htmlEsc(names[t])} <span style="opacity:.6;font-size:.68rem">${t}</span>` : t;
+    btn.innerHTML = `${label} <span class="badge bg-light text-dark">${counts[t]}</span>`;
+    btn.onclick = () => { _actTicker = _actTicker === t ? null : t; rebuildCompanyChips(); applyFilters(); };
+    div.appendChild(btn);
   });
-}
-
-function filterTickers(val) { rebuildTickerList(val); }
-
-function fetchReports(page) {
-  _page = page || 1;
-  const q    = document.getElementById('search').value.trim();
-  const base = window._BASE||'';
-  const params = new URLSearchParams({ page:_page, per_page:_pageSize, sort:_sortMode });
-  if (q)        params.set('q',      q);
-  if (_actTick) params.set('ticker', _actTick);
-  if (_actForm) params.set('form',   _actForm);
-  fetch('/reports?'+params).then(r=>r.json()).then(data => {
-    _total = data.total; _pages = data.pages;
-    renderCards(data.rows); _renderPager();
-  });
-}
-
-function setSort(mode) {
-  _sortMode = mode;
-  document.getElementById('sortFiledBtn').className  = 'sort-btn'+(mode==='filed' ?' active':'');
-  document.getElementById('sortTickerBtn').className = 'sort-btn'+(mode==='ticker'?' active':'');
-  fetchReports(1);
 }
 
 function applyFilters() {
-  clearTimeout(_searchTimer);
-  _searchTimer = setTimeout(()=>fetchReports(1), 250);
+  const q = document.getElementById('search').value.toLowerCase();
+  _filteredRows = _rows.filter(r => {
+    if (_actForm && !(r.form_type || '').includes(_actForm)) return false;
+    if (_actTicker && r.ticker !== _actTicker) return false;
+    if (q) {
+      const hay = [r.ticker, r.company_name, r.period, r.form_type, r.filed_date]
+                   .join(' ').toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  _page = 1;
+  _renderPage();
+  _renderPager();
+  document.getElementById('rowCount').textContent =
+    `${_filteredRows.length} / ${_rows.length} records`;
 }
 
-function _renderPager() {
-  const pager = document.getElementById('reports-pager');
-  if (!pager) return;
-  pager.classList.toggle('d-none', _total <= _pageSize);
-  if (_total === 0) { pager.innerHTML = ''; return; }
-  const start = (_page-1)*_pageSize+1;
-  const end   = Math.min(_page*_pageSize, _total);
-  let html = `<small class="text-muted me-2">${start}–${end} of ${_total}</small>`;
-  html += `<ul class="pagination pagination-sm mb-0">`;
-  html += `<li class="page-item${_page===1?' disabled':''}"><a class="page-link" href="#" onclick="fetchReports(${_page-1});return false">‹</a></li>`;
-  for (const p of _pageRange(_page, _pages)) {
-    if (p==='…') { html += `<li class="page-item disabled"><span class="page-link">…</span></li>`; }
-    else { html += `<li class="page-item${p===_page?' active':''}"><a class="page-link" href="#" onclick="fetchReports(${p});return false">${p}</a></li>`; }
-  }
-  html += `<li class="page-item${_page===_pages?' disabled':''}"><a class="page-link" href="#" onclick="fetchReports(${_page+1});return false">›</a></li>`;
-  html += `</ul>`;
-  pager.innerHTML = html;
-}
-
-function _pageRange(current, total) {
-  if (total<=7) return Array.from({length:total},(_,i)=>i+1);
-  const set    = new Set([1,Math.max(1,current-1),current,Math.min(total,current+1),total]);
-  const sorted = [...set].sort((a,b)=>a-b);
-  const result = []; let prev=0;
-  for (const p of sorted) { if(p-prev>1) result.push('…'); result.push(p); prev=p; }
-  return result;
-}
-
-function renderCards(rows) {
-  const feed  = document.getElementById('feedContainer');
-  const empty = document.getElementById('emptyMsg');
-  document.getElementById('rowCount').textContent = _total+' report'+(_total!==1?'s':'');
-  if (!_total) { feed.innerHTML=''; empty.style.display=''; return; }
-  empty.style.display = 'none';
-  const base = window._BASE||'';
-  feed.innerHTML = rows.map(r => {
+function _renderPage() {
+  const start = (_page - 1) * PAGE_SIZE;
+  const slice = _filteredRows.slice(start, start + PAGE_SIZE);
+  const base = window._BASE || '';
+  const tbody = document.getElementById('repBody');
+  tbody.innerHTML = slice.map((r, i) => {
+    const num = start + i + 1;
+    const sz  = fmtSize(r.file_size);
     const periodHtml = r.local_path
-      ? `<a class="card-period" href="${base}/file/${r.id}" target="_blank">${htmlEsc(r.period)}</a>`
-      : `<span class="card-period" style="cursor:default">${htmlEsc(r.period)}</span>`;
-    const kgBadge = r.local_path
+      ? `<a href="${base}/file/${r.id}" target="_blank">${htmlEsc(r.period)}</a>`
+      : htmlEsc(r.period);
+    const commentHtml = `<td id="comment-cell-${r.id}"><span class="comment-preview"
+        data-comment="${htmlEsc(r.comment || '')}" title="Click to preview / edit"></span></td>`;
+    const openBtn  = r.local_path
+      ? `<a href="${base}/file/${r.id}" target="_blank"
+           class="btn btn-outline-secondary btn-sm del-btn" title="Open in browser">📄</a>`
+      : '';
+    const localBtn = r.local_path
+      ? `<button onclick="openLocal(${r.id},this)"
+           class="btn btn-outline-secondary btn-sm del-btn ms-1" title="Open in local app">🗂</button>`
+      : '';
+    const pinBtn   = r.local_path
+      ? `<button onclick="syncAnnotations(${r.id},this)"
+           class="btn btn-outline-success btn-sm del-btn ms-1"
+           title="Extract annotations from PDF → save to comment">📌</button>`
+      : '';
+    const kgBtn = r.local_path
       ? (r.graphiti_indexed_at
-          ? `<span class="badge bg-success act-btn" title="Indexed ${r.graphiti_indexed_at.slice(0,10)}">✓ KG</span>`
-          : `<button class="btn btn-outline-primary act-btn idx-btn" title="Index into knowledge graph" onclick="indexReport(${r.id},this)">⬆ KG</button>`)
+          ? `<span class="badge bg-success del-btn ms-1" title="Indexed ${(r.graphiti_indexed_at||'').slice(0,10)}">✓ KG</span>`
+          : `<button onclick="indexReport(${r.id},this)"
+               class="btn btn-outline-primary btn-sm del-btn ms-1" title="Index into knowledge graph">⬆ KG</button>`)
       : '';
-    const revealBtn = r.local_path
-      ? `<button class="btn btn-outline-secondary act-btn" title="Reveal local file in Finder" onclick="revealReport(${r.id},this)">📂</button>`
-      : '';
-    return `
-    <div class="report-card ${cardClass(r.form_type)}" data-id="${r.id}">
-      <div class="card-top">
-        <div class="card-badge-col">
-          <span class="ticker-badge">${htmlEsc(r.ticker)}</span>
-          <span class="form-badge ${formBadgeCls(r.form_type)}">${htmlEsc(r.form_type||'—')}</span>
-        </div>
-        <div class="card-body-col">
-          <div class="card-company" title="${htmlEsc(r.company_name||'')}">${htmlEsc(r.company_name||'—')}</div>
-          ${periodHtml}
-          <div class="card-meta">
-            ${r.filed_date?`<span>📅 ${r.filed_date}</span>`:''}
-            ${r.file_size?`<span>📄 ${fmtSize(r.file_size)}</span>`:''}
-          </div>
-        </div>
-        <div class="card-actions">
-          ${revealBtn}
-          ${kgBadge}
-          <button class="btn btn-outline-danger act-btn" onclick="deleteReport(${r.id},this)">🗑</button>
-        </div>
-      </div>
-      <div id="comment-cell-${r.id}" class="card-comment" style="${r.comment?'':'display:none'}">
-        <span class="comment-preview" data-comment="${htmlEsc(r.comment)}" title="Click to preview / edit"></span>
-      </div>
-    </div>`;
+    return `<tr>
+      <td class="text-muted">${num}</td>
+      <td><code style="font-size:.78rem">${htmlEsc(r.ticker)}</code></td>
+      <td style="max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"
+          title="${htmlEsc(r.company_name||'')}">${htmlEsc(r.company_name||'')}</td>
+      <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"
+          title="${htmlEsc(r.period||'')}">${periodHtml}</td>
+      <td><span class="${badgeClass(r.form_type)}">${htmlEsc(r.form_type||'—')}</span></td>
+      <td>${r.filed_date || ''}</td>
+      <td class="text-muted">${sz}</td>
+      ${commentHtml}
+      <td style="white-space:nowrap">
+        ${openBtn}
+        ${localBtn}
+        ${pinBtn}
+        ${kgBtn}
+        <button onclick="deleteRow(${r.id},this)"
+                class="btn btn-outline-danger btn-sm del-btn ms-1" title="Delete">🗑</button>
+      </td>
+    </tr>`;
   }).join('');
   if (typeof renderAllCommentCells === 'function') renderAllCommentCells();
 }
 
-// ── download ──────────────────────────────────────────────────────────────────
-function startDownload() {
-  const ticker = document.getElementById('tickerInput').value.trim().toUpperCase();
-  if (!ticker) { alert('Enter a ticker symbol (e.g. AAPL, NVDA, TSLA)'); return; }
-  const forms = [];
-  if (document.getElementById('chk10K').checked) forms.push('10-K');
-  if (document.getElementById('chk10Q').checked) forms.push('10-Q');
-  if (document.getElementById('chk8K').checked)  forms.push('8-K');
-  if (document.getElementById('chk20F').checked) forms.push('20-F');
-  if (document.getElementById('chk6K').checked)  forms.push('6-K');
-  if (document.getElementById('chkGNW').checked) forms.push('GNW');
-  if (!forms.length) { alert('Select at least one form type.'); return; }
-  _startStream('/stream-download', new URLSearchParams({ticker, forms:forms.join(',')}));
+function _pageRange(cur, tot) {
+  if (tot <= 7) return Array.from({length: tot}, (_, i) => i + 1);
+  const pages = [1];
+  if (cur > 3) pages.push('…');
+  for (let p = Math.max(2, cur - 1); p <= Math.min(tot - 1, cur + 1); p++) pages.push(p);
+  if (cur < tot - 2) pages.push('…');
+  pages.push(tot);
+  return pages;
 }
 
-function startBatchDownload() {
-  const last = parseInt(document.getElementById('batchLastN').value)||4;
-  const forms = [];
-  if (document.getElementById('chk10K').checked) forms.push('10-K');
-  if (document.getElementById('chk10Q').checked) forms.push('10-Q');
-  if (document.getElementById('chk8K').checked)  forms.push('8-K');
-  if (document.getElementById('chk20F').checked) forms.push('20-F');
-  if (document.getElementById('chk6K').checked)  forms.push('6-K');
-  if (document.getElementById('chkGNW').checked) forms.push('GNW');
-  if (!forms.length) { alert('Select at least one form type.'); return; }
-  _startStream('/stream-batch-download', new URLSearchParams({forms:forms.join(','), last}));
+function _renderPager() {
+  const tot   = Math.ceil(_filteredRows.length / PAGE_SIZE);
+  const pager = document.getElementById('rep-pager');
+  if (tot <= 1) { pager.classList.add('d-none'); return; }
+  pager.classList.remove('d-none');
+  const from  = (_page - 1) * PAGE_SIZE + 1;
+  const to    = Math.min(_page * PAGE_SIZE, _filteredRows.length);
+  pager.innerHTML = `
+    <small class="text-muted me-1">${from}–${to} of ${_filteredRows.length}</small>
+    <nav><ul class="pagination pagination-sm mb-0">
+      ${_pageRange(_page, tot).map(p =>
+        p === '…'
+          ? `<li class="page-item disabled"><span class="page-link">…</span></li>`
+          : `<li class="page-item ${p === _page ? 'active' : ''}">
+               <button class="page-link" onclick="_goPage(${p})">${p}</button>
+             </li>`
+      ).join('')}
+    </ul></nav>`;
 }
 
-function _startStream(path, params) {
-  document.getElementById('progressSection').style.display = '';
-  document.getElementById('dlBtn').disabled    = true;
-  document.getElementById('batchBtn').disabled = true;
-  const bar = document.getElementById('progressBar');
-  bar.style.width = '0%';
-  bar.className = 'progress-bar progress-bar-striped progress-bar-animated bg-primary';
-  const log = document.getElementById('logBox');
-  log.innerHTML = '';
-  const base = window._BASE||'';
-  const es = new EventSource(path+'?'+params);
-  es.onmessage = e => {
-    const d = JSON.parse(e.data);
-    const line = document.createElement('div');
-    line.textContent = d.msg;
-    if (d.error) line.style.color='#f48771';
-    log.appendChild(line); log.scrollTop=log.scrollHeight;
-    if (d.total>0) bar.style.width=Math.round(d.count/d.total*100)+'%';
-    if (d.done) {
-      es.close();
-      document.getElementById('dlBtn').disabled    = false;
-      document.getElementById('batchBtn').disabled = false;
-      bar.style.width = '100%';
-      bar.classList.remove('progress-bar-animated');
-      if (!d.error) { bar.classList.remove('bg-primary'); bar.classList.add('bg-success'); }
-      loadStats(); fetchReports(1);
-    }
-  };
-  es.onerror = () => {
-    const line = document.createElement('div');
-    line.textContent = '⚠ Connection lost'; line.style.color='#f48771';
-    log.appendChild(line); es.close();
-    document.getElementById('dlBtn').disabled    = false;
-    document.getElementById('batchBtn').disabled = false;
-  };
-}
+function _goPage(p) { _page = p; _renderPage(); _renderPager(); }
 
-// ── reveal in Finder ──────────────────────────────────────────────────────────
-function revealReport(id, btn) {
+// ── Open local file ─────────────────────────────────────────────────────────
+function openLocal(id, btn) {
   const orig = btn.textContent;
   btn.disabled = true; btn.textContent = '⏳';
-  fetch('/reveal/'+id, {method:'POST'})
-    .then(r => r.json().then(d => ({ok:r.ok, d})))
-    .then(({ok, d}) => {
+  fetch('/open-local/' + id)
+    .then(r => r.json())
+    .then(d => {
       btn.disabled = false; btn.textContent = orig;
-      if (!ok || !d.ok) alert('Could not open: ' + (d && d.error ? d.error : 'unknown error'));
+      if (!d.ok) alert(d.error || 'Cannot open file');
     })
-    .catch(e => { btn.disabled = false; btn.textContent = orig; alert('Error: '+e.message); });
+    .catch(e => { btn.disabled = false; btn.textContent = orig; alert('Error: ' + e.message); });
 }
 
-// ── delete ────────────────────────────────────────────────────────────────────
-function deleteReport(id) {
+// ── Extract annotations ─────────────────────────────────────────────────────
+function syncAnnotations(id, btn) {
+  const orig = btn.textContent;
+  btn.disabled = true; btn.textContent = '⏳';
+  fetch('/sync-annotations/' + id, {method: 'POST'})
+    .then(r => r.json())
+    .then(data => {
+      btn.disabled = false;
+      if (data.ok) {
+        const cell = document.getElementById('comment-cell-' + id);
+        if (cell && typeof renderCommentCell === 'function') {
+          renderCommentCell(cell, id, data.comment);
+        }
+        // Also update local cached row so future re-renders keep it
+        const r = _rows.find(x => x.id === id); if (r) r.comment = data.comment;
+        btn.textContent = '✅';
+        btn.title = data.count + ' annotation(s) saved';
+        setTimeout(() => { btn.textContent = orig; btn.title = 'Extract annotations from PDF → save to comment'; }, 2500);
+      } else {
+        btn.textContent = '❌';
+        btn.title = data.error || 'No annotations found';
+        setTimeout(() => { btn.textContent = orig; btn.title = 'Extract annotations from PDF → save to comment'; }, 2500);
+      }
+    })
+    .catch(() => {
+      btn.disabled = false; btn.textContent = '❌';
+      setTimeout(() => { btn.textContent = orig; }, 2000);
+    });
+}
+
+// ── Delete ──────────────────────────────────────────────────────────────────
+function deleteRow(id) {
   if (!confirm('Remove this report from the library? (The local file will also be deleted.)')) return;
-  const base = window._BASE||'';
-  fetch('/report/'+id, {method:'DELETE'}).then(r=>{
-    if (r.ok) { loadStats(); fetchReports(_page); }
+  fetch('/report/' + id, {method: 'DELETE'}).then(r => {
+    if (r.ok) { _rows = _rows.filter(x => x.id !== id); rebuildFormBtns(); rebuildCompanyChips(); applyFilters(); }
   });
 }
 
+// ── KG index ────────────────────────────────────────────────────────────────
 function indexReport(id, btn) {
   btn.disabled = true; btn.textContent = '⏳';
   const modal = document.createElement('div');
@@ -1267,40 +1116,90 @@ function indexReport(id, btn) {
     'background:#1e1e1e;color:#d4d4d4;font:12px/1.5 monospace;padding:.75rem 1rem;border-radius:8px;' +
     'box-shadow:0 4px 20px rgba(0,0,0,.5);z-index:9999';
   document.body.appendChild(modal);
-  const base = window._BASE||'';
   modal.textContent = 'Starting…\\n';
-  fetch('/index-report/'+id, {method:'POST'})
+  fetch('/index-report/' + id, {method: 'POST'})
     .then(async res => {
-      const reader = res.body.getReader(); const dec = new TextDecoder(); let buf='';
+      const reader = res.body.getReader(); const dec = new TextDecoder(); let buf = '';
       while (true) {
-        const {value,done} = await reader.read(); if (done) break;
-        buf += dec.decode(value, {stream:true});
+        const {value, done} = await reader.read(); if (done) break;
+        buf += dec.decode(value, {stream: true});
         const lines = buf.split('\\n'); buf = lines.pop();
         for (const line of lines) {
           if (!line.startsWith('data: ')) continue;
           const msg = line.slice(6);
           if (msg.startsWith('__done__:')) {
             const code = parseInt(msg.split(':')[1]);
-            if (code===0) {
-              btn.textContent='✓ KG'; btn.className='badge bg-success me-1'; btn.onclick=null;
-              modal.textContent += 'Syncing graph mirror…\\n'; modal.scrollTop=modal.scrollHeight;
-              fetch((window._BASE||'')+'/zep/refresh-mirror',{method:'POST'})
-                .then(r=>r.json()).then(d=>{
-                  modal.textContent += d.ok?`✓ Mirror synced (${d.entities} entities, ${d.edges} edges)\\n`:`⚠ Mirror sync: ${d.error}\\n`;
-                }).catch(e=>{ modal.textContent+=`⚠ Mirror sync failed: ${e.message}\\n`; })
-                .finally(()=>{ modal.scrollTop=modal.scrollHeight; setTimeout(()=>modal.remove(),3000); });
-            } else { btn.disabled=false; btn.textContent='⬆ KG'; setTimeout(()=>modal.remove(),4000); }
-          } else { modal.textContent+=msg+'\\n'; modal.scrollTop=modal.scrollHeight; }
+            if (code === 0) {
+              btn.outerHTML = '<span class="badge bg-success del-btn ms-1">✓ KG</span>';
+              setTimeout(() => modal.remove(), 3000);
+            } else { btn.disabled = false; btn.textContent = '⬆ KG'; setTimeout(() => modal.remove(), 4000); }
+          } else { modal.textContent += msg + '\\n'; modal.scrollTop = modal.scrollHeight; }
         }
       }
     })
-    .catch(e=>{ modal.textContent+='Error: '+e.message; btn.disabled=false; btn.textContent='⬆ KG'; setTimeout(()=>modal.remove(),5000); });
+    .catch(e => { modal.textContent += 'Error: ' + e.message; btn.disabled = false; btn.textContent = '⬆ KG'; setTimeout(() => modal.remove(), 5000); });
 }
 
-// init
-loadStats(); fetchReports(1);
+// ── Download ────────────────────────────────────────────────────────────────
+function _selectedForms() {
+  const forms = [];
+  if (document.getElementById('chk10K').checked) forms.push('10-K');
+  if (document.getElementById('chk10Q').checked) forms.push('10-Q');
+  if (document.getElementById('chk8K').checked)  forms.push('8-K');
+  if (document.getElementById('chk20F').checked) forms.push('20-F');
+  if (document.getElementById('chk6K').checked)  forms.push('6-K');
+  if (document.getElementById('chkGNW').checked) forms.push('GNW');
+  return forms;
+}
+
+function startDownload() {
+  const ticker = document.getElementById('tickerInput').value.trim().toUpperCase();
+  if (!ticker) { alert('Enter a ticker (e.g. AAPL)'); return; }
+  const forms = _selectedForms();
+  if (!forms.length) { alert('Select at least one form type.'); return; }
+  _startStream('/stream-download', new URLSearchParams({ticker, forms: forms.join(',')}));
+}
+
+function startBatchDownload() {
+  const last  = parseInt(document.getElementById('batchLastN').value) || 4;
+  const forms = _selectedForms();
+  if (!forms.length) { alert('Select at least one form type.'); return; }
+  _startStream('/stream-batch-download', new URLSearchParams({forms: forms.join(','), last}));
+}
+
+function _startStream(path, params) {
+  document.getElementById('progressSection').style.display = '';
+  document.getElementById('dlBtn').disabled    = true;
+  document.getElementById('batchBtn').disabled = true;
+  const bar = document.getElementById('progressBar');
+  bar.style.width = '0%'; bar.className = 'progress-bar progress-bar-striped progress-bar-animated bg-primary';
+  const log = document.getElementById('logBox'); log.innerHTML = '';
+  const es  = new EventSource(path + '?' + params);
+  es.onmessage = e => {
+    const d = JSON.parse(e.data);
+    const line = document.createElement('div'); line.textContent = d.msg;
+    if (d.error) line.style.color = '#f48771';
+    log.appendChild(line); log.scrollTop = log.scrollHeight;
+    if (d.total > 0) bar.style.width = Math.round(d.count/d.total*100) + '%';
+    if (d.done) {
+      es.close();
+      document.getElementById('dlBtn').disabled    = false;
+      document.getElementById('batchBtn').disabled = false;
+      bar.style.width = '100%'; bar.classList.remove('progress-bar-animated');
+      if (!d.error) { bar.classList.remove('bg-primary'); bar.classList.add('bg-success'); }
+      loadReports();
+    }
+  };
+  es.onerror = () => {
+    const line = document.createElement('div'); line.textContent = '⚠ Connection lost'; line.style.color = '#f48771';
+    log.appendChild(line); es.close();
+    document.getElementById('dlBtn').disabled    = false;
+    document.getElementById('batchBtn').disabled = false;
+  };
+}
 
 __MCW_JS__
+loadReports();
 </script>
 </body>
 </html>
@@ -1348,7 +1247,7 @@ def list_reports():
     form     = request.args.get("form", "").strip()
     sort     = request.args.get("sort", "filed")   # 'filed' | 'ticker'
     page     = max(1, int(request.args.get("page", 1)))
-    per_page = min(200, max(1, int(request.args.get("per_page", 50))))
+    per_page = min(50000, max(1, int(request.args.get("per_page", 50))))
 
     where_clauses, params = [], []
 
@@ -1499,6 +1398,92 @@ def serve_file(report_id: int):
             pass  # fall through to plain send_file
 
     return send_file(path)
+
+
+@sec_bp.route("/open-local/<int:report_id>")
+def open_local(report_id: int):
+    """Open the report's local file in the system default viewer."""
+    conn = get_conn()
+    row  = conn.execute(
+        "SELECT local_path FROM reports WHERE id=?", (report_id,)
+    ).fetchone()
+    conn.close()
+    if not row or not row["local_path"]:
+        return jsonify(ok=False, error="No local file recorded"), 404
+    path = Path(row["local_path"])
+    if not path.exists():
+        return jsonify(ok=False, error=f"File not found: {path}"), 404
+    try:
+        if sys.platform == "darwin":
+            subprocess.Popen(["open", str(path)])
+        elif sys.platform.startswith("win"):
+            subprocess.Popen(["start", "", str(path)], shell=True)
+        else:
+            subprocess.Popen(["xdg-open", str(path)])
+    except Exception as exc:
+        return jsonify(ok=False, error=str(exc)), 500
+    return jsonify(ok=True)
+
+
+@sec_bp.route("/sync-annotations/<int:report_id>", methods=["POST"])
+def sync_annotations(report_id: int):
+    """Read PDF annotations from disk and save them to the comment field.
+
+    Reuses the extraction & formatting helpers from zsxq_viewer so the
+    output format matches the ZSXQ feed exactly.
+    """
+    import time as _time
+    import concurrent.futures as _cf
+    import datetime as _dt
+    from zsxq_viewer import _extract_annotations_from_pdf, _format_annotations
+
+    conn = get_conn()
+    row = conn.execute(
+        "SELECT local_path, ticker, period FROM reports WHERE id = ?", (report_id,)
+    ).fetchone()
+    conn.close()
+
+    if not row or not row["local_path"]:
+        return jsonify(ok=False, error="No local file"), 404
+
+    path = Path(row["local_path"])
+    if not path.exists():
+        return jsonify(ok=False, error="File not found on disk"), 404
+
+    if path.suffix.lower() != ".pdf":
+        return jsonify(ok=False, error="Not a PDF (only PDFs have annotations)"), 200
+
+    print(f"[sec sync-annotations] 📌 {row['ticker']} {row['period']}")
+    print(f"                       path: {path}  ({path.stat().st_size/1024:.0f} KB)")
+    t0 = _time.time()
+
+    _TIMEOUT = 120.0
+    with _cf.ThreadPoolExecutor(max_workers=1) as _pool:
+        _fut = _pool.submit(_extract_annotations_from_pdf, path)
+        try:
+            anns = _fut.result(timeout=_TIMEOUT)
+        except _cf.TimeoutError:
+            return jsonify(ok=False, error=f"Timed out after {_TIMEOUT:.0f}s"), 200
+        except Exception as exc:
+            import traceback; traceback.print_exc()
+            return jsonify(ok=False, error=str(exc)), 200
+
+    elapsed = _time.time() - t0
+    if not anns:
+        print(f"                       ⚠ no annotations found  ({elapsed:.1f}s)")
+        return jsonify(ok=False, error="No annotations found in PDF"), 200
+
+    print(f"                       ✓ {len(anns)} annotation(s) in {elapsed:.1f}s")
+    comment = _format_annotations(anns)
+    now = _dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    conn = get_conn()
+    conn.execute(
+        "UPDATE reports SET comment = ?, comment_updated_at = ? WHERE id = ?",
+        (comment, now, report_id),
+    )
+    conn.commit()
+    conn.close()
+    return jsonify(ok=True, count=len(anns), comment=comment)
 
 
 @sec_bp.route("/reveal/<int:report_id>", methods=["POST"])

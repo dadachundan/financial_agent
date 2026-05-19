@@ -113,7 +113,9 @@ __URLPATCH__
         {{ row.date[:10] }}
         {% if row.badge %} · <span class="badge bg-light text-secondary border">{{ row.badge }}</span>{% endif %}
       </div>
-      <span class="feed-title" onclick="openLocal({{ row.id }}, this)">
+      <span class="feed-title"
+            data-open="{{ row.open_url | default((_base | default('')) ~ '/open-local/' ~ row.id) }}"
+            onclick="openLocal(this)">
         {{ row.name | replace('.pdf','') }}
       </span>
       <div class="feed-body" data-md="{{ row.comment | e }}"></div>
@@ -166,9 +168,11 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.15 });
 cards.forEach(c => observer.observe(c));
 
-function openLocal(id, el) {
+function openLocal(el) {
+  const url = el.dataset.open;
+  if (!url) return;
   el.style.opacity = '0.5';
-  fetch('/open-local/' + id)
+  fetch(url)
     .then(r => r.json())
     .then(d => { el.style.opacity = '1'; if (!d.ok) alert(d.error || 'Cannot open file'); })
     .catch(() => { el.style.opacity = '1'; });
