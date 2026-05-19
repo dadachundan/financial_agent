@@ -328,3 +328,62 @@ Not applicable — initiating coverage. Sell-side consensus 12-month PT range as
 - Yahoo Finance — Robosense (2498.HK), Ouster (OUST), Innoviz (INVZ), Aeva (AEVA), Luminar (LAZR), Mobileye (MBLY), Aptiv (APTV), indie Semiconductor (INDI), ON Semiconductor (ON) Key Statistics.
 - Hesai_NASDAQ_HSAI_Research_Document_2026-05-16.md — company research (Task 1).
 - Hesai_NASDAQ_HSAI_Financial_Model_2026-05-19.xlsx — supporting model (Tasks 2 + 3).
+
+---
+
+## ADDENDUM — Q1 2026 RESULTS UPDATE (added May 19, 2026 after market)
+
+**Source:** Hesai Q1 2026 press release, released May 19, 2026 (board meeting & earnings call same day).
+
+### Q1 2026 actuals vs. our model
+
+| Metric | Q1 2026 Actual | Q1'26 mgmt guide | Our FY26E base | Read |
+|---|---:|---:|---:|:---|
+| Net revenue (RMB M) | **680.6** (+29.6% YoY) | 650–700 | n/a quarterly | Mid-range of guide |
+| Gross margin | **39.1%** | n/a | 41.8% | 270bps **below** our FY26 |
+| GAAP net income (RMB M) | **18.3** | n/a | 433 (full year) | 4th consecutive profitable Q |
+| Non-GAAP net income (RMB M) | **47.7** (+452.9%) | n/a | n/a | Strong; SBC adj. |
+| Total units shipped | **471,723** (+140.9%) | n/a | 3,300K (full year) | Q1 = 14% of our FY26 |
+| ADAS units | 353,441 (+141.9%) | n/a | 2,700K | On pace |
+| Robotics units | 118,282 (+137.8%) | n/a | 600K | Ahead — implies humanoid/lawnmower ramping faster |
+| Robotics % of units | 25% | n/a | 18% (full year) | Higher mix = potential GM tailwind in 2H |
+
+### New disclosures (catalysts triggered)
+
+1. **Mercedes L3 design-in CONFIRMED** — Hesai officially announced as strategic LiDAR supplier for Mercedes L3 autonomous models in both Europe AND China. This was speculation in our initiation (Section 2.5) and is now hard news — supports our base-case European revenue trajectory (RMB 1,050M FY30E).
+2. **Galileo manufacturing facility in Thailand** — Hesai's first major offshore production capacity. This **materially de-risks risk #2** (1260H/Section 1260H national-security risk) from our Section 1.2 risk matrix, because it provides a non-China-origin lidar supply path for US OEMs.
+3. **New "Strategic Growth Initiatives" (SGI) segment** — Hesai introduced a new financial reporting segment covering the Picasso 6D full-color chip and Kosmo spatial intelligence device (launched April 2026). FY26 SGI contribution guided at ~RMB 100M, beginning Q2. Not currently in our model — represents incremental upside.
+4. **ETX LiDAR mass production expected H2 2026** — additional new SKU not in our model.
+5. **Strategic pivot from "spatial perception" to "spatial intelligence"** — language pivot suggests Hesai is positioning as a higher-margin systems play rather than commodity sensor vendor.
+
+### Q2 2026 guidance: RMB 850–900M (+20–27% YoY)
+
+- Q1'26 actual RMB 681M + Q2'26 guide midpoint RMB 875M = **1H 2026 ~RMB 1,556M (~33% of our FY26E 4,737M)**.
+- Implies 2H 2026 must ramp to ~RMB 3,180M (~2× 1H) — heavily H2-loaded. This is plausible given Li Auto / Xiaomi / Mercedes multi-lidar L3+ SOPs all scheduled for H2 2026, but creates execution risk for the full-year number.
+
+### Implications for price target
+
+- **PT REAFFIRMED at US$28 / ADS · BUY.** The Q1 print is broadly in line with our base-case trajectory; Q1 revenue at the guide midpoint and units +141% YoY validate the operating leverage thesis.
+- **Mercedes L3 + Thailand facility = positive** (catalysts triggered; risk #2 partially de-risked).
+- **Q1 GM at 39.1% = small negative.** We revise our FY26E gross margin assumption from 41.8% to ~40.5% (-130bps). Pass-through impact: ~-RMB 60M to FY26E EBIT, ~-2 cents to FY26E EPS, ~-$1 to per-ADS DCF value. Net: PT stays at US$28 (within model precision).
+- **Robotics units +137.8% with 25% share of units** is ahead of our model (we had 18% for full year FY26). If sustained, this is a tailwind to blended GM in 2H.
+
+### Updated catalyst monitoring (revised since initiation)
+
+| # | Original Catalyst | Status May 19, 2026 |
+|---|---|---|
+| 1 | Q1 FY26 earnings — guided RMB 650-700M | ✅ **TRIGGERED** — RMB 680.6M (mid-guide), units +141% |
+| 2 | Stock Connect inclusion of 2525.HK | Pending Q4 2026 |
+| 3 | Li Auto / Xiaomi multi-lidar SOP confirmation | Pending H2 2026 |
+| 4 | JT128 humanoid design-wins | Ongoing |
+| 5 | GM Super Cruise volume resumption | Pending |
+| 6 | NEW: Mercedes L3 design-in | ✅ **TRIGGERED** — official Q1'26 disclosure |
+| 7 | NEW: Thailand manufacturing capacity | ✅ **TRIGGERED** — Galileo facility online |
+| 8 | NEW: SGI / Picasso / Kosmo segment | Materialising Q2 2026 onwards |
+
+### New risks to monitor (added)
+
+- **Gross margin trajectory.** Q1 GM at 39.1% is meaningfully below our model. If 2H 2026 GM stays sub-40%, our FY28E EPS could be 5-10% below model — material risk to upside case.
+- **Heavily H2-loaded 2H ramp.** Roughly half the year's revenue must come from H2 to meet our FY26E number. Execution risk on simultaneous Li Auto / Xiaomi / Mercedes SOPs.
+- **SGI segment dilution.** New Strategic Growth Initiatives segment may run at lower margins during incubation phase — watch FY26 SGI contribution vs the RMB 100M guide.
+

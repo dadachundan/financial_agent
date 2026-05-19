@@ -1,0 +1,45 @@
+Q1 2026 ADDENDUM — Key Facts (source: Hesai Q1 2026 press release, May 19, 2026)
+
+REVENUE & PROFITABILITY
+- Net revenue: RMB 680.6M (US$98.7M), +29.6% YoY — landed between mgmt's RMB 650-700M guide
+- Gross margin: 39.1% (vs Q1 2025 41.7%, FY25 41.8%) — meaningful 260bps compression
+- GAAP net income: RMB 18.3M (US$2.7M) vs Q1 2025 loss of RMB 17.5M — 4th consecutive profitable quarter
+
+UNIT SHIPMENTS
+- Total: 471,723 units (+140.9% YoY) — extremely strong
+- ADAS: 353,441 (+141.9%) — implied Q1'25 ADAS ~146K
+- Robotics: 118,282 (+137.8%) — implied Q1'25 Robotics ~50K
+- Robotics share of units rose to 25% (vs 15% in FY25 full year)
+
+NEW DISCLOSURES / CATALYSTS
+1. Mercedes L3 design-in CONFIRMED — strategic LiDAR supplier for Mercedes L3 autonomous models
+   across Europe AND China. Previously speculation; now official.
+2. Galileo manufacturing facility in Thailand — first major offshore production capacity
+   (mitigates US-China geopolitical risk in #1 risk factor)
+3. Strategic Growth Initiatives (SGI) segment introduced — new financial segment reporting
+   covering Picasso 6D full-color chip and Kosmo spatial intelligence device (launched April 2026).
+   FY26 SGI contribution ~RMB 100M from Q2 onward.
+4. ETX LiDAR mass production expected H2 2026
+5. Strategic pivot from "spatial perception" to "spatial intelligence"
+
+Q2 2026 GUIDANCE
+- Net revenue: RMB 850-900M (+20-27% YoY) — implies 1H'26 = ~RMB 1,530-1,580M
+
+VS MY MODEL
+- My FY26E full-year revenue: RMB 4,737M
+- Q1 actual 681 + Q2 guide midpoint 875 = 1H'26 ~1,556M (~33% of my FY26 estimate)
+- Implies 2H'26 ramp to ~3,180M (~2× 1H) — plausible but heavily H2-loaded; consistent with
+  Mercedes/Li Auto/Xiaomi multi-lidar L3+ SOPs starting in H2 2026
+- My FY26E GM assumption (41.8%) likely too high given Q1 39.1%; revise to ~40.5% (~130bps lower)
+- Impact on FY26E EBIT: -RMB 60-80M (-2-3 cents EPS); largely absorbed within my model precision
+
+PRICE TARGET IMPLICATIONS
+- US$28 PT REAFFIRMED — Q1 print broadly in line with our base case trajectory
+- Mercedes L3 confirmation = small positive (was already in our base case as expected catalyst)
+- Galileo Thailand facility = positive de-risking (was a risk in our framework)
+- Q1 GM compression to 39.1% = small negative; offset by Robotics share rising (higher GM mix)
+- Net: thesis intact; numbers tracking ~midpoint of base case
+
+NEW RISKS TO MONITOR
+- Q1 GM 39.1% — if 2H GM stays sub-40%, FY28E EPS could be 5-10% below current model
+- 2H heavy revenue ramp — execution risk on Li Auto/Xiaomi/Mercedes simultaneous SOPs
