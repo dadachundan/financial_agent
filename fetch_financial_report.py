@@ -995,12 +995,6 @@ function _renderPage() {
            class="btn btn-outline-success btn-sm del-btn ms-1"
            title="Extract annotations from PDF → save to comment">📌</button>`
       : '';
-    const kgBtn = r.local_path
-      ? (r.graphiti_indexed_at
-          ? `<span class="badge bg-success del-btn ms-1" title="Indexed ${(r.graphiti_indexed_at||'').slice(0,10)}">✓ KG</span>`
-          : `<button onclick="indexReport(${r.id},this)"
-               class="btn btn-outline-primary btn-sm del-btn ms-1" title="Index into knowledge graph">⬆ KG</button>`)
-      : '';
     return `<tr>
       <td class="text-muted">${num}</td>
       <td><code style="font-size:.78rem">${htmlEsc(r.ticker)}</code></td>
@@ -1016,9 +1010,6 @@ function _renderPage() {
         ${openBtn}
         ${localBtn}
         ${pinBtn}
-        ${kgBtn}
-        <button onclick="deleteRow(${r.id},this)"
-                class="btn btn-outline-danger btn-sm del-btn ms-1" title="Delete">🗑</button>
       </td>
     </tr>`;
   }).join('');
@@ -1101,45 +1092,6 @@ function syncAnnotations(id, btn) {
 }
 
 // ── Delete ──────────────────────────────────────────────────────────────────
-function deleteRow(id) {
-  if (!confirm('Remove this report from the library? (The local file will also be deleted.)')) return;
-  fetch('/report/' + id, {method: 'DELETE'}).then(r => {
-    if (r.ok) { _rows = _rows.filter(x => x.id !== id); rebuildFormBtns(); rebuildCompanyChips(); applyFilters(); }
-  });
-}
-
-// ── KG index ────────────────────────────────────────────────────────────────
-function indexReport(id, btn) {
-  btn.disabled = true; btn.textContent = '⏳';
-  const modal = document.createElement('div');
-  modal.style.cssText = 'position:fixed;bottom:1rem;right:1rem;width:420px;max-height:260px;overflow-y:auto;' +
-    'background:#1e1e1e;color:#d4d4d4;font:12px/1.5 monospace;padding:.75rem 1rem;border-radius:8px;' +
-    'box-shadow:0 4px 20px rgba(0,0,0,.5);z-index:9999';
-  document.body.appendChild(modal);
-  modal.textContent = 'Starting…\\n';
-  fetch('/index-report/' + id, {method: 'POST'})
-    .then(async res => {
-      const reader = res.body.getReader(); const dec = new TextDecoder(); let buf = '';
-      while (true) {
-        const {value, done} = await reader.read(); if (done) break;
-        buf += dec.decode(value, {stream: true});
-        const lines = buf.split('\\n'); buf = lines.pop();
-        for (const line of lines) {
-          if (!line.startsWith('data: ')) continue;
-          const msg = line.slice(6);
-          if (msg.startsWith('__done__:')) {
-            const code = parseInt(msg.split(':')[1]);
-            if (code === 0) {
-              btn.outerHTML = '<span class="badge bg-success del-btn ms-1">✓ KG</span>';
-              setTimeout(() => modal.remove(), 3000);
-            } else { btn.disabled = false; btn.textContent = '⬆ KG'; setTimeout(() => modal.remove(), 4000); }
-          } else { modal.textContent += msg + '\\n'; modal.scrollTop = modal.scrollHeight; }
-        }
-      }
-    })
-    .catch(e => { modal.textContent += 'Error: ' + e.message; btn.disabled = false; btn.textContent = '⬆ KG'; setTimeout(() => modal.remove(), 5000); });
-}
-
 // ── Download ────────────────────────────────────────────────────────────────
 function _selectedForms() {
   const forms = [];
