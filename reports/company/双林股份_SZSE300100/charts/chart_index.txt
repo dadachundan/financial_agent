@@ -1,0 +1,40 @@
+Shuanglin Co. (SZSE:300100) — Initiation Coverage Chart Index
+Generated: 2026-05-18
+========================================================================
+
+[Investment Summary]
+  chart_01_share_price_target.png    52-wk price vs ¥24 12-mo target
+
+[Financial Performance]
+  chart_02_revenue_gm_ni.png         Revenue + GM + NI trends
+  chart_03_revenue_by_product.png    ⭐ Stacked area: segment mix
+  chart_04_revenue_by_geography.png  ⭐ Stacked bar: domestic vs overseas
+  chart_10_ebitda_margin.png         EBITDA + margin
+  chart_11_ebit_margin.png           Operating profit + margin
+  chart_12_cashflow.png              CFO / CapEx / FCF
+  chart_14_scenarios.png             Bull/Base/Bear 2030E
+
+[Company 101]
+  chart_05_milestones_timeline.png   1989–2026 corporate timeline
+  chart_06_strategic_pivots.png      3 strategic pivots in 22 yrs
+  chart_07_management_org.png        Management + subsidiary structure
+  chart_08_product_portfolio_matrix.png  Maturity × growth bubble
+  chart_09_customer_concentration.png    FY2025 top-5 = 51.6%
+  chart_15_tam_growth.png            Humanoid + EHB + Corner TAM
+  chart_16_peer_positioning.png      Revenue × EBITDA mgn bubble
+
+[Competitive / Market]
+  chart_17_hdm_market_share.png      HDM share — Shuanglin #1
+  chart_18_bearing_market_share.png  Wheel bearings — Shuanglin #3
+
+[Scenarios]
+  chart_13_revenue_scenarios.png     Bull/Base/Bear revenue paths
+
+[Valuation]
+  chart_28_dcf_sensitivity.png       ⭐ WACC × g heatmap
+  chart_29_dcf_waterfall.png         EV → Equity → Price/share
+  chart_30_pe_ntm.png                Peer P/E NTM comparison
+  chart_31_ev_ebitda_ntm.png         Peer EV/EBITDA NTM
+  chart_32_football_field.png        ⭐ Valuation football field
+  chart_33_eps_trajectory.png        Diluted EPS by scenario
+  chart_34_pe_band.png               Historical PE band
