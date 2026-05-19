@@ -39,18 +39,28 @@ Two options only: **Simplified Chinese (zh-CN)** or **English**. Never Tradition
 
 **Explicit user override (highest priority).** The user can pin the language with any of these phrasings; honor it without asking:
 
-| User says | Force language |
+| User says | Force output |
 |---|---|
-| `"... in English"`, `"write in English"`, `"English report"`, `"--lang en"`, `"--en"` | English |
-| `"... in Chinese"`, `"用中文"`, `"中文报告"`, `"写成中文"`, `"--lang zh"`, `"--zh"` | Simplified Chinese |
+| `"... in English"`, `"write in English"`, `"English report"`, `"--lang en"`, `"--en"` | English only |
+| `"... in Chinese"`, `"用中文"`, `"中文报告"`, `"写成中文"`, `"--lang zh"`, `"--zh"` | Simplified Chinese only |
+| `"in both English and Chinese"`, `"bilingual"`, `"中英双语"`, `"both languages"`, `"Chinese and English"`, `"--lang en+zh"`, `"--bilingual"` | **Both** — produce two separate report files |
 
 Examples:
 - `research SZSE:002050 in English` → English report (override beats auto-rule)
 - `research Tesla 用中文` → Chinese report (override beats auto-rule)
+- `research NVDA in both English and Chinese` → two files: English + Chinese
+- `research 比亚迪 bilingual` → two files: Chinese + English
 - `research 比亚迪` (no override) → Chinese (auto-rule: HK + Chinese filings)
 - `research NVDA` (no override) → English (auto-rule: US listing)
 
-If the user gives no explicit instruction, fall back to the auto-rule above. If the override is ambiguous (e.g. user mixes "English summary, Chinese body"), ask one quick clarifying question rather than guessing.
+**Bilingual mode produces two complete, separate files in the same output folder**, not one interleaved document. Each file independently meets the 6,000–10,000 word target (Chinese counted in characters). Filenames follow the per-language convention:
+
+- `reports/company/<Company_Ticker>/Tesla_Research_Document_2026-05-19.md` (English)
+- `reports/company/<Company_Ticker>/Tesla_公司研究_2026-05-19.md` (Chinese)
+
+Both files share the same underlying research — citations, charts, data — but write the prose natively in each language; do not literal-translate one from the other.
+
+If the user gives no explicit instruction, fall back to the auto-rule above. If the override is ambiguous (e.g. "English summary, Chinese body"), ask one quick clarifying question rather than guessing.
 
 **Bilingual technical terms (Chinese reports):** since most sources you cite will be Chinese, but many technical / industry / regulatory terms originate in English (or have established English equivalents), **use both** on first mention and either thereafter. Examples:
 - `EV / 电动车`, `半导体 (semiconductor)`, `先进封装 (advanced packaging)`, `数据中心 GPU (data-center GPU)`, `OEM / ODM`, `Tier-1 供应商`, `毛利率 (gross margin)`, `自由现金流 (free cash flow)`, `专精特新 ("specialized, refined, distinctive, novel" — MIIT designation)`.
