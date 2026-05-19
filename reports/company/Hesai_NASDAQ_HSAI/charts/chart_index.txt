@@ -1,0 +1,54 @@
+HESAI GROUP — CHART INDEX (Task 4 deliverable)
+Generated: 2026-05-19
+Total: 35 charts at 300 DPI, PNG format
+
+INVESTMENT SUMMARY
+chart_01_hsai_price_3yr.png ............. HSAI share price since Feb 2023 IPO
+
+FINANCIAL PERFORMANCE (8)
+chart_02_revenue_gross_margin.png ....... Revenue trend & gross margin trajectory
+chart_03_revenue_by_product.png ⭐ ....... Revenue by product (stacked area)
+chart_04_revenue_by_geography.png ⭐ ..... Revenue by geography (stacked bar)
+chart_10_opex_leverage.png .............. OpEx breakdown — R&D/S&M/G&A as % of revenue
+chart_11_ebitda_margin.png .............. EBITDA & operating margin trend
+chart_12_cash_flow_fcf.png .............. Cash flow bridge (CFO / Capex / FCF)
+chart_14_scenario_revenue_paths.png ..... Revenue path by scenario
+chart_27_net_income.png ................. Net income trajectory
+
+COMPANY 101 (8)
+chart_05_company_timeline.png ........... Company history milestones
+chart_06_unit_shipments.png ............. Unit shipment trajectory
+chart_07_shareholder_structure.png ...... Shareholder structure (dual donut)
+chart_08_product_portfolio.png .......... Product portfolio matrix
+chart_09_customer_concentration.png ..... Customer concentration trend
+chart_15_lidar_tam_by_segment.png ....... Lidar TAM by segment 2025→2030
+chart_19_quarterly_revenue.png .......... Quarterly revenue and YoY growth
+chart_22_design_wins.png ................ ADAS design-win cumulative footprint
+
+COMPETITIVE / MARKET (3)
+chart_16_competitive_positioning.png .... Growth × margin scatter (full)
+chart_17_market_share_volume.png ........ Global lidar unit share donut
+chart_18_peer_revenue_comparison.png .... Peer LTM revenue (horizontal bars)
+
+SCENARIO / SECTOR (3)
+chart_13_scenario_comparison.png ........ Bull/Base/Bear at FY29E
+chart_21_rd_vs_robosense.png ............ R&D vs Robosense
+chart_23_humanoid_ramp.png .............. JT128 humanoid unit ramp
+chart_24_adas_attach_rate.png ........... China ADAS attach rate
+chart_25_cash_position.png .............. Balance sheet cash + investments
+
+UNIT ECONOMICS (2)
+chart_20_unit_economics.png ............. Blended ASP and GP/unit
+chart_26_capex_intensity.png ............ Capex/revenue ratio
+
+VALUATION (7)
+chart_28_dcf_sensitivity.png ⭐ .......... DCF sensitivity heatmap (WACC × g)
+chart_29_dcf_components.png ............. DCF EV bridge (waterfall)
+chart_30_peer_ev_revenue.png ............ Peer EV/Revenue NTM bars
+chart_31_peer_growth_margin.png ......... Growth × margin scatter
+chart_32_valuation_football_field.png ⭐  Valuation football field (PT US$28)
+chart_33_forward_pe_profile.png ......... Forward P/E by year
+chart_34_historical_ev_sales.png ........ Historical EV/Sales since IPO
+chart_35_ttm_ps_comparison.png .......... TTM P/S peer comparison
+
+⭐ = MANDATORY charts per task spec
