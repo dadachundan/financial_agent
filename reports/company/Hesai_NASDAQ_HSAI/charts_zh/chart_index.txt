@@ -1,0 +1,54 @@
+禾赛 — 图表索引(Task 4 中文版交付物)
+生成时间:2026-05-19
+合计:35 张图表,300 DPI,PNG 格式
+
+投资摘要
+chart_01_hsai_price_3yr.png ............. 自 2023 年 2 月 IPO 以来 HSAI 股价走势
+
+财务表现(8 张)
+chart_02_revenue_gross_margin.png ....... 收入趋势与毛利率轨迹
+chart_03_revenue_by_product.png ⭐ ....... 按产品收入(堆叠面积)
+chart_04_revenue_by_geography.png ⭐ ..... 按地区收入(堆叠柱)
+chart_10_opex_leverage.png .............. 经营费用占收入比例
+chart_11_ebitda_margin.png .............. EBITDA 与经营利润率
+chart_12_cash_flow_fcf.png .............. 现金流桥(CFO/资本开支/FCF)
+chart_14_scenario_revenue_paths.png ..... 情景收入路径
+chart_27_net_income.png ................. 净利润轨迹
+
+公司 101(8 张)
+chart_05_company_timeline.png ........... 公司历史里程碑
+chart_06_unit_shipments.png ............. 出货量轨迹
+chart_07_shareholder_structure.png ...... 股东结构(双甜甜圈)
+chart_08_product_portfolio.png .......... 产品组合矩阵
+chart_09_customer_concentration.png ..... 客户集中度趋势
+chart_15_lidar_tam_by_segment.png ....... 按细分领域的激光雷达 TAM 2025→2030
+chart_19_quarterly_revenue.png .......... 季度收入与同比增长
+chart_22_design_wins.png ................ ADAS 设计中标累积覆盖
+
+竞争/市场(3 张)
+chart_16_competitive_positioning.png .... 增长 × 利润率散点图
+chart_17_market_share_volume.png ........ 全球激光雷达出货量份额
+chart_18_peer_revenue_comparison.png .... 同业 LTM 收入
+
+情景/行业(5 张)
+chart_13_scenario_comparison.png ........ FY29E 牛市/基础/熊市
+chart_21_rd_vs_robosense.png ............ 研发投入 vs 速腾聚创
+chart_23_humanoid_ramp.png .............. JT128 人形机器人放量
+chart_24_adas_attach_rate.png ........... 中国 ADAS 装载率
+chart_25_cash_position.png .............. 资产负债表现金 + 投资
+
+单位经济(2 张)
+chart_20_unit_economics.png ............. 混合 ASP 与单位毛利
+chart_26_capex_intensity.png ............ 资本开支/收入比
+
+估值(8 张)
+chart_28_dcf_sensitivity.png ⭐ .......... DCF 敏感性热力图
+chart_29_dcf_components.png ............. DCF 企业价值桥(瀑布图)
+chart_30_peer_ev_revenue.png ............ 同业 EV/Revenue NTM
+chart_31_peer_growth_margin.png ......... 增长 × 利润率
+chart_32_valuation_football_field.png ⭐  估值橄榄球场图(目标价 US$28)
+chart_33_forward_pe_profile.png ......... 远期 P/E 走势
+chart_34_historical_ev_sales.png ........ 自 IPO 以来历史 EV/Sales
+chart_35_ttm_ps_comparison.png .......... TTM P/S 同业对比
+
+⭐ = 任务规范要求的必备图表
