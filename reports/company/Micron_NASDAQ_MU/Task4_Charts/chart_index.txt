@@ -1,0 +1,58 @@
+# MU EQUITY RESEARCH CHARTS — INDEX
+**Date:** 2026-05-20
+**Total charts:** 28 (25 required + 3 optional)
+
+## Mandatory Charts (4 of 4 present)
+- chart_03_revenue_by_product.png — Revenue by Product (stacked area) [MANDATORY]
+- chart_04_revenue_by_geography.png — Revenue by Geography (stacked bar) [MANDATORY]
+- chart_28_dcf_sensitivity.png — DCF Sensitivity Heatmap (WACC × g) [MANDATORY]
+- chart_32_football_field.png — Valuation Football Field [MANDATORY]
+
+## Investment Summary
+- chart_01_stock_price.png — 1Y Stock Price with 50/200 MAs
+
+## Financial Performance
+- chart_02_revenue_gm_trend.png — Revenue & Gross Margin Trend
+- chart_10_operating_margin.png — Operating Margin Cycle
+- chart_11_eps_trajectory.png — Diluted EPS Trajectory
+- chart_12_cash_flow.png — OCF / Capex / FCF Summary
+- chart_14_capex.png — Capex Investment with Capex/Revenue ratio
+- chart_19_returns.png — ROE / ROIC
+
+## Company 101
+- chart_05_company_timeline.png — Corporate History Milestones
+- chart_06_hbm_trajectory.png — HBM Revenue Trajectory
+- chart_07_org_chart.png — Senior Leadership Organization
+- chart_08_product_portfolio.png — Product & Segment Mix Pie Charts
+- chart_09_customer_concentration.png — Customer Concentration
+- chart_15_tam_forecast.png — Memory TAM Forecast
+- chart_23_manufacturing.png — Manufacturing Footprint Geography
+- chart_24_bu_mix.png — Business Unit Mix Evolution
+- chart_27_hbm_roadmap.png — HBM Product Roadmap
+
+## Competitive / Market
+- chart_16_market_share.png — DRAM & NAND Market Share
+- chart_17_hbm_share.png — HBM Market Share Evolution
+- chart_18_peer_valuation.png — Peer Valuation Snapshot
+
+## Scenario Analysis
+- chart_13_scenarios.png — Bull/Base/Bear Revenue Scenarios
+
+## Valuation
+- chart_29_dcf_waterfall.png — DCF Components Waterfall
+- chart_30_peer_bubble.png — Peer Valuation Bubble Chart
+- chart_31_comps_boxplot.png — Multiples Boxplot vs MU
+- chart_33_eps_scenarios.png — EPS Scenarios Through FY30
+- chart_34_historical_multiples.png — Historical P/E and P/S
+- chart_35_risk_reward.png — Risk/Reward Matrix
+
+## Working Capital / Capital Allocation
+- chart_20_balance_sheet.png — Cash, Debt, Net Debt
+- chart_21_da_ppe.png — D&A and PP&E Roll Forward
+- chart_22_memory_cycle.png — Memory Cycle Visualization
+- chart_25_working_capital.png — Inventory Days / DSO
+- chart_26_capital_allocation.png — Capital Allocation (FY26-30E)
+
+---
+
+Total: **28 charts** (4 mandatory + 24 additional). All at 300 DPI, PNG format, Times New Roman serif font.

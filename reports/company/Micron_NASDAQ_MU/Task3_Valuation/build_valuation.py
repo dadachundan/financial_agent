@@ -574,15 +574,14 @@ for i, h in enumerate(ff_headers, start=1):
 # Methodologies
 ff_data = [
     # (method, low, mid, high, weight, notes)
-    ("DCF (Gordon + Exit Mult)", 740, 900, 1100, 0.40, "WACC 10.6%, g 3.0%, FY30E EBITDA 46.4B × 8x"),
-    ("Comps — P/E NTM @ 8x", 160, 180, 200, 0.10, "Memory peer median P/E NTM on FY26E EPS $22.50"),
-    ("Comps — P/E NTM @ 12x (AI premium)", 230, 270, 320, 0.10, "Premium multiple on FY26E EPS $22.50"),
-    ("Comps — EV/Sales 5.0x (median)", 240, 270, 300, 0.05, "Memory peer median EV/Sales on FY26E rev $54.7B"),
-    ("Comps — EV/EBITDA 8x (median)", 240, 285, 330, 0.10, "Memory peer median on FY26E EBITDA $36.3B"),
+    ("DCF (Gordon + Exit Mult, AI-era)", 600, 800, 1050, 0.30, "WACC 9.8%, g 3.5%, FY30E EBITDA 46.4B × 9.5x exit"),
+    ("Comps — P/E NTM @ 12x (memory peer mean)", 230, 270, 320, 0.075, "Memory peer mean P/E NTM on FY26E EPS $22.50"),
+    ("Comps — P/E NTM @ 18x (AI-DRAM premium)", 340, 405, 470, 0.125, "Premium multiple on FY26E EPS $22.50 (vs. Sandisk 8x, NVDA 32x)"),
+    ("Comps — EV/Sales 5.0x (peer median)", 240, 270, 300, 0.05, "Memory peer median EV/Sales on FY26E rev $54.7B"),
+    ("Comps — EV/EBITDA 10x (peer mean)", 290, 320, 360, 0.05, "Memory peer mean on FY26E EBITDA $36.3B"),
     ("52-week range", 91, 455, 819, 0.00, "MU 52-week range; reference only, not weighted"),
-    ("Bull case scenario", 800, 950, 1100, 0.15, "HBM4 share gain, AI capex extends to 2028"),
-    ("Base case scenario", 800, 900, 1000, 0.00, "Same as DCF base, not double-weighted"),
-    ("Bear case scenario", 250, 420, 550, 0.10, "AI capex decel 2H26, CXMT commodity ramp"),
+    ("Bull case scenario", 850, 1050, 1250, 0.30, "AI super-cycle persists; HBM4 share gains; FY27E EPS $27.50 × 38x"),
+    ("Bear case scenario", 250, 420, 550, 0.10, "AI capex decel 2H26, CXMT commodity ramp, peer P/E compresses"),
 ]
 
 r += 1
@@ -626,8 +625,8 @@ write_cell(ws_ff, r, 2, (weighted_target / PX_NOW) - 1, font=BOLD_FONT, alignmen
 
 r += 1
 write_cell(ws_ff, r, 1, "Recommendation:", font=BOLD_FONT, alignment=LEFT, border=border_all, fill=GREEN_FILL)
-write_cell(ws_ff, r, 2, "OVERWEIGHT (BUY)", font=Font(bold=True, size=12, color="FFFFFF", name="Calibri"),
-           fill=PatternFill(start_color="00B050", end_color="00B050", fill_type="solid"), alignment=CENTER, border=border_all)
+write_cell(ws_ff, r, 2, "HOLD (positive bias)", font=Font(bold=True, size=12, color="FFFFFF", name="Calibri"),
+           fill=PatternFill(start_color="0070C0", end_color="0070C0", fill_type="solid"), alignment=CENTER, border=border_all)
 
 ws_ff.column_dimensions['A'].width = 38
 for i in range(2, 9):
@@ -657,9 +656,9 @@ labels = [
     ("Current Price", f"${PX_NOW:,.2f}", "(2026-05-20, Yahoo Finance)"),
     ("12M Price Target", f"${weighted_target:,.0f}", "Weighted avg. of DCF + comps + scenarios"),
     ("Implied Upside", f"{(weighted_target/PX_NOW - 1):.1%}", "Single-stock IRR before dividend"),
-    ("Rating", "OVERWEIGHT (BUY)", "5-tier: Buy / Overweight / Hold / Underweight / Sell"),
+    ("Rating", "HOLD (positive bias)", "5-tier: Buy / Overweight / Hold / Underweight / Sell"),
     ("Time Horizon", "12 months", "Aligned with FY27E full-year"),
-    ("Position Sizing", "2.5–3.5% of portfolio", "Standard semi-large-cap, AI-cycle exposure"),
+    ("Position Sizing", "2.0–3.0% of portfolio", "Standard semi-large-cap, AI-cycle exposure"),
 ]
 for lab, val, note in labels:
     write_cell(ws_vs, r, 1, lab, font=BOLD_FONT, alignment=LEFT, border=border_all)
