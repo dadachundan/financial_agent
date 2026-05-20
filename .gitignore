@@ -9,6 +9,10 @@ package-lock.json
 *.db
 !db/zsxq.db
 !db/notes.db
+# SQLite transient transaction logs — regenerated automatically, never commit
+*.db-wal
+*.db-shm
+*.wal
 kg_uploads/
 ticker_name_cache.json
 uploads/
