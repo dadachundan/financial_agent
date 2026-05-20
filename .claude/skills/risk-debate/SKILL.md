@@ -14,7 +14,7 @@ Stage a three-way debate among an **Aggressive**, **Conservative**, and **Neutra
 This skill needs the trader's proposal plus the four analyst reports:
 
 - `trader_investment_plan` — from [[trader-plan]]
-- `market_report` / `sentiment_report` / `news_report` / `fundamentals_report` — from the four analyst skills
+- `market_report` / `sentiment_report` / `news_report` / `company_research_report` — from the four analyst skills
 
 **If `trader_investment_plan` is missing**, invoke [[trader-plan]] first; that will cascade up through [[research-manager]] and [[bull-bear-debate]] as needed (and the analyst reports along the way).
 
@@ -25,7 +25,7 @@ For a clean full-pipeline run from scratch, prefer [[trading-analysis]] over inv
 ## Inputs
 
 - `trader_investment_plan` — the [[trader-plan]] proposal.
-- Four analyst reports: `market_report`, `sentiment_report`, `news_report`, `fundamentals_report`.
+- Four analyst reports: `market_report`, `sentiment_report`, `news_report`, `company_research_report`.
 - `risk_debate_history` — running transcript, empty on round 1.
 - `--rounds N` — debate length (default 1).
 
