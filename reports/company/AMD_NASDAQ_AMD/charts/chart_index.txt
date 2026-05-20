@@ -1,0 +1,61 @@
+
+AMD INITIATION REPORT — CHART INDEX
+====================================
+Date: 2026-05-20
+Total charts: 35 (25 required + 10 optional)
+All charts at 300 DPI, Times New Roman font.
+
+INVESTMENT SUMMARY
+chart_01_stock_price.png                  Stock price 2-year trailing with annotated events
+
+FINANCIAL PERFORMANCE
+chart_02_revenue_gm.png                   Revenue and gross margin combo
+chart_03_revenue_by_product.png           Revenue by product (stacked area) [MANDATORY]
+chart_04_revenue_by_geography.png         Revenue by geography (stacked bar) [MANDATORY]
+chart_10_operating_margin.png             GAAP vs non-GAAP operating margin trend
+chart_11_eps_trend.png                    EPS trend (GAAP and non-GAAP)
+chart_12_free_cash_flow.png               OCF, CapEx, FCF
+chart_14_scenario_outcomes.png            Bull/Base/Bear FY30 outcomes
+
+COMPANY 101
+chart_05_milestones.png                   AMD history timeline
+chart_06_acquisitions.png                 Major acquisitions
+chart_07_management_org.png               Senior management org chart
+chart_08_product_portfolio.png            Product portfolio by segment
+chart_09_customer_mix.png                 Customer mix pie
+chart_15_tam_sizing.png                   TAM by segment
+chart_16_server_cpu_share.png             AMD vs Intel server CPU share
+
+COMPETITIVE / MARKET
+chart_17_amd_vs_nvda_dc.png               AMD vs NVIDIA Data Center revenue
+chart_18_peer_scatter.png                 Peer growth vs op margin bubble
+
+SCENARIO ANALYSIS
+chart_13_scenario_pathways.png            Revenue pathways under three scenarios
+
+VALUATION
+chart_28_dcf_sensitivity.png              DCF sensitivity heatmap [MANDATORY]
+chart_29_dcf_waterfall.png                DCF components waterfall
+chart_30_peer_forward_pe.png              Peer forward P/E
+chart_31_peer_ev_revenue.png              Peer EV/Revenue
+chart_32_football_field.png               Valuation football field [MANDATORY]
+chart_33_multiples_vs_growth.png          PEG map
+chart_34_historical_pe.png                Historical P/E trend
+
+OPTIONAL (additional visual density)
+chart_19_rnd_trend.png                    R&D and R&D % of revenue
+chart_20_cash_position.png                Cash, investments, debt
+chart_21_capex.png                        CapEx trend
+chart_22_segment_op_income.png            Segment operating income (3-year)
+chart_23_working_capital.png              Inventory and AR days
+chart_24_headcount.png                    Headcount and revenue/employee
+chart_25_instinct_ramp.png                Instinct quarterly revenue
+chart_26_revenue_decomposition.png        Organic / acquired / new
+chart_27_openai_deployment.png            OpenAI 6 GW schedule
+chart_35_quarterly_revenue.png            Quarterly revenue + guide
+
+MANDATORY CHARTS CHECKLIST
+[X] chart_03 — Revenue by product (stacked area)
+[X] chart_04 — Revenue by geography (stacked bar)
+[X] chart_28 — DCF sensitivity heatmap
+[X] chart_32 — Valuation football field
