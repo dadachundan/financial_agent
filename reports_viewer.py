@@ -15,6 +15,7 @@ marked.js + mermaid.js. Filesystem layout:
 """
 from __future__ import annotations
 
+import base64
 import re
 from datetime import datetime
 from pathlib import Path
@@ -22,6 +23,11 @@ from pathlib import Path
 from flask import Blueprint, abort, render_template_string, send_from_directory
 
 import nav_widget2 as _nw
+
+try:
+    import mammoth
+except ImportError:
+    mammoth = None
 
 REPORTS_DIR = Path(__file__).parent / "reports"
 
@@ -113,13 +119,13 @@ def _parse(rel_path: Path) -> dict:
 
 
 def _scan() -> list[dict]:
-    """Walk reports/, group EN/ZH pairs, return rows newest-first."""
+    """Walk reports/, group EN/ZH/DOCX siblings, return rows newest-first."""
     REPORTS_DIR.mkdir(exist_ok=True)
 
     rows: dict[str, dict] = {}
+    # Markdown files first
     for p in REPORTS_DIR.rglob("*.md"):
         rel = p.relative_to(REPORTS_DIR)
-        # Skip the shared charts dir; .md files in there would be docs about charts, unlikely.
         if rel.parts and rel.parts[0] == "charts":
             continue
         meta = _parse(rel)
@@ -138,12 +144,78 @@ def _scan() -> list[dict]:
             }
         else:
             existing["langs"][meta["lang"]] = meta["rel"]
-            # Use newest ctime as the row's sort timestamp.
+            if ts > existing["ts"]:
+                existing["ts"] = ts
+                existing["created"] = meta["created"]
+
+    # DOCX files — attach to matching slug if present, else create own row
+    for p in REPORTS_DIR.rglob("*.docx"):
+        rel = p.relative_to(REPORTS_DIR)
+        if rel.parts and rel.parts[0] == "charts":
+            continue
+        meta = _parse_docx(rel)
+        st = p.stat()
+        ts = getattr(st, "st_birthtime", st.st_mtime)
+        meta["ts"] = ts
+        meta["created"] = datetime.fromtimestamp(ts).strftime("%Y-%m-%d %H:%M")
+        key = meta["pair_key"]
+        existing = rows.get(key)
+        if existing is None:
+            rows[key] = {
+                **meta,
+                "langs": {"docx": meta["rel"]},
+                "ts": ts,
+            }
+        else:
+            existing["langs"]["docx"] = meta["rel"]
             if ts > existing["ts"]:
                 existing["ts"] = ts
                 existing["created"] = meta["created"]
 
     return sorted(rows.values(), key=lambda r: r["ts"], reverse=True)
+
+
+def _parse_docx(rel_path: Path) -> dict:
+    """Parse a .docx filename like Cadence_NASDAQ_CDNS_Initiation_Report_2026-05-20.docx."""
+    name = rel_path.name
+    stem = name[:-5] if name.endswith(".docx") else name
+
+    parts = rel_path.parts
+    bucket = parts[0] if len(parts) > 1 else "other"
+
+    # Reuse the same pair_key normalization so DOCX collapses next to its sibling MD.
+    norm = stem
+    for m in ("_Initiation_Report_", "_Research_Document_", "_Valuation_Analysis_",
+              "_研究报告_", "_公司研究_"):
+        if m in norm:
+            norm = norm.replace(m, "_RESEARCH_")
+            break
+    pair_key = f"{bucket}/{norm}"
+
+    display = stem
+    for m in ("_Initiation_Report_", "_Research_Document_", "_Valuation_Analysis_"):
+        if m in stem:
+            display = stem.split(m)[0]
+            break
+
+    tickers = _all_tickers(name)
+    ticker = tickers[0] if tickers else ""
+
+    date = ""
+    m = re.search(r"(\d{4}-\d{2}-\d{2})", stem)
+    if m:
+        date = m.group(1)
+
+    return {
+        "rel": str(rel_path).replace("\\", "/"),
+        "bucket": bucket,
+        "display": display,
+        "ticker": ticker,
+        "all_tickers": tickers,
+        "date": date,
+        "lang": "docx",
+        "pair_key": pair_key,
+    }
 
 
 # --- templates ---------------------------------------------------------------
@@ -215,7 +287,7 @@ _INDEX_TMPL = r"""<!doctype html>
               data-filename="{{ r.rel|lower }}"
               data-date="{{ r.date }}"
               data-ts="{{ r.ts }}">
-            <td><a class="title" href="{{ _base }}/view/{{ r.langs.get('en') or r.langs.get('zh') }}">{{ r.display }}</a></td>
+            <td><a class="title" href="{{ _base }}/view/{{ r.langs.get('en') or r.langs.get('zh') or '#' }}">{{ r.display }}</a></td>
             <td class="ticker">{{ r.ticker }}</td>
             <td><span class="bucket-tag {{ r.bucket }}">{{ r.bucket }}</span></td>
             <td class="date">{{ r.date }}</td>
@@ -227,6 +299,9 @@ _INDEX_TMPL = r"""<!doctype html>
               {% if r.langs.get('zh') %}
                 <a class="lang-link" href="{{ _base }}/view/{{ r.langs['zh'] }}">ZH</a>
               {% else %}<span class="lang-link missing">ZH</span>{% endif %}
+              {% if r.langs.get('docx') %}
+                <a class="lang-link" style="background:#fff0d8;border-color:#e0b170;color:#8a5400" href="{{ _base }}/view-docx/{{ r.langs['docx'] }}">DOCX</a>
+              {% endif %}
             </td>
           </tr>
         {% endfor %}
@@ -417,3 +492,124 @@ def view_chart_asset(filename: str):
     """
     charts_dir = REPORTS_DIR / "charts"
     return send_from_directory(charts_dir, filename)
+
+
+_DOCX_TMPL = r"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ name }}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body{background:#f4f4f6;margin:0;font-family:"Times New Roman",Georgia,serif;color:#222}
+    .toolbar{position:sticky;top:0;background:#fff;border-bottom:1px solid #e3e3e3;
+             padding:10px 24px;display:flex;gap:14px;align-items:center;z-index:10;
+             font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:.9rem}
+    .toolbar a{color:#0366d6;text-decoration:none}
+    .toolbar a.btn{padding:.35rem .7rem;border-radius:4px;border:1px solid #cfd8e3;background:#f8fafd}
+    .toolbar a.btn:hover{background:#eef4fb}
+    .toolbar .filename{color:#666;margin-left:auto;font-family:ui-monospace,Menlo,monospace;font-size:.8rem}
+    .doc{max-width:920px;margin:24px auto;background:#fff;padding:48px 64px;
+         box-shadow:0 1px 3px rgba(0,0,0,.08);border:1px solid #e3e3e3}
+    .doc h1{font-size:1.9rem;color:#1F4E78;border-bottom:2px solid #1F4E78;
+            padding-bottom:.3rem;margin-top:1.5rem}
+    .doc h2{font-size:1.4rem;color:#1F4E78;margin-top:1.4rem}
+    .doc h3{font-size:1.1rem;color:#C00000;margin-top:1.1rem}
+    .doc h4{font-size:1.0rem;color:#1F4E78}
+    .doc p{line-height:1.55;margin:.6rem 0;font-size:11pt}
+    .doc table{border-collapse:collapse;margin:.8rem 0;width:100%;font-size:10pt;
+               font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+    .doc table th,.doc table td{border:1px solid #bbb;padding:.4rem .55rem;vertical-align:top}
+    .doc table th{background:#1F4E78;color:#fff;font-weight:600}
+    .doc table tr:nth-child(even) td{background:#f6f6f9}
+    .doc img{max-width:100%;height:auto;display:block;margin:1rem auto;
+             box-shadow:0 1px 4px rgba(0,0,0,.1)}
+    .doc ul,.doc ol{padding-left:1.6rem}
+    .doc li{margin:.3rem 0;line-height:1.5}
+    .doc blockquote{border-left:3px solid #999;margin:.8rem 0;padding:.2rem 0 .2rem 1rem;color:#555}
+    .doc-warning{background:#fff3cd;border:1px solid #ffeaa7;padding:.6rem 1rem;border-radius:4px;color:#7a5b00;margin:.8rem 0}
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <a href="{{ _base }}/">&larr; back to reports</a>
+    <a class="btn" href="{{ _base }}/download-docx/{{ rel }}">⬇ Download .docx</a>
+    {% if md_companion %}
+      <a class="btn" href="{{ _base }}/view/{{ md_companion }}">📄 View markdown research</a>
+    {% endif %}
+    <span class="filename">{{ name }}</span>
+  </div>
+  <div class="doc">
+    {% if messages %}
+      <div class="doc-warning">
+        <strong>Conversion notes:</strong>
+        <ul>{% for m in messages %}<li>{{ m }}</li>{% endfor %}</ul>
+      </div>
+    {% endif %}
+    {{ html | safe }}
+  </div>
+</body>
+</html>
+"""
+
+
+def _find_companion_md(rel: str) -> str | None:
+    """Given a docx rel path, find a sibling .md research doc in the same folder."""
+    p = (REPORTS_DIR / rel).parent
+    for cand in p.glob("*_Research_Document_*.md"):
+        return str(cand.relative_to(REPORTS_DIR)).replace("\\", "/")
+    return None
+
+
+@reports_bp.route("/view-docx/<path:rel>")
+def view_docx(rel: str):
+    """Render a .docx file as inline HTML using mammoth (images as data URIs)."""
+    if mammoth is None:
+        abort(500, "mammoth is not installed. Run: pip install mammoth")
+    if ".." in rel.split("/") or not rel.endswith(".docx"):
+        abort(404)
+    target = (REPORTS_DIR / rel).resolve()
+    try:
+        target.relative_to(REPORTS_DIR.resolve())
+    except ValueError:
+        abort(404)
+    if not target.is_file():
+        abort(404)
+
+    def _image_handler(image):
+        with image.open() as src:
+            data = src.read()
+        b64 = base64.b64encode(data).decode("ascii")
+        return {"src": f"data:{image.content_type};base64,{b64}"}
+
+    with open(target, "rb") as f:
+        result = mammoth.convert_to_html(
+            f, convert_image=mammoth.images.img_element(_image_handler)
+        )
+    html = result.value
+    messages = [str(m) for m in result.messages if str(m).strip()][:5]
+
+    return render_template_string(
+        _DOCX_TMPL,
+        name=target.name,
+        rel=rel,
+        html=html,
+        messages=messages,
+        md_companion=_find_companion_md(rel),
+        _nav=_nw.NAV_HTML,
+    )
+
+
+@reports_bp.route("/download-docx/<path:rel>")
+def download_docx(rel: str):
+    """Serve a .docx file as a download."""
+    if ".." in rel.split("/") or not rel.endswith(".docx"):
+        abort(404)
+    target = (REPORTS_DIR / rel).resolve()
+    try:
+        target.relative_to(REPORTS_DIR.resolve())
+    except ValueError:
+        abort(404)
+    if not target.is_file():
+        abort(404)
+    return send_from_directory(target.parent, target.name, as_attachment=True)
