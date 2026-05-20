@@ -11,10 +11,14 @@
             "id": "47a59e1bf7e2c716",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "company/Cadence_NASDAQ_CDNS/Cadence_NASDAQ_CDNS_Research_Document_2026-05-20.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Cadence_NASDAQ_CDNS_Research_Document_2026-05-20"
             }
           }
         ]
@@ -74,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 540.5004348754883
   },
   "right": {
     "id": "36ed278131105645",
@@ -91,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "company/Cadence_NASDAQ_CDNS/Cadence_NASDAQ_CDNS_Research_Document_2026-05-20.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Cadence_NASDAQ_CDNS_Research_Document_2026-05-20"
             }
           },
           {
@@ -109,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "company/Cadence_NASDAQ_CDNS/Cadence_NASDAQ_CDNS_Research_Document_2026-05-20.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Cadence_NASDAQ_CDNS_Research_Document_2026-05-20"
             }
           },
           {
@@ -151,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "company/Cadence_NASDAQ_CDNS/Cadence_NASDAQ_CDNS_Research_Document_2026-05-20.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Cadence_NASDAQ_CDNS_Research_Document_2026-05-20"
             }
           }
         ],
@@ -180,51 +186,51 @@
   },
   "active": "47a59e1bf7e2c716",
   "lastOpenFiles": [
-    "双林股份_SZSE300100_公司研究_2026-05-17.md",
+    "company/AMD_NASDAQ_AMD/charts",
+    "company/AMD_NASDAQ_AMD/valuation",
+    "company/AMD_NASDAQ_AMD/model",
+    "company/Micron_NASDAQ_MU/Task5_Report",
+    "company/Micron_NASDAQ_MU/Task4_Charts",
+    "company/Micron_NASDAQ_MU/Task3_Valuation",
+    "company/Micron_NASDAQ_MU/Task2_Model",
+    "company/Cadence_NASDAQ_CDNS/Cadence_NASDAQ_CDNS_Valuation_Analysis_2026-05-20.md",
     "sector/人形机器人传感器板块综述_2026-05-16.md",
-    "sector",
-    "compare/SNPS_vs_CDNS_20260516.md",
-    "compare",
-    "earnings/QCOM_20260511.md",
-    "earnings",
-    "company/福莱新材_SSE605488/福莱新材_SSE605488_Research_Document_2026-05-16.md",
-    "company/汉威科技_SZSE300007/汉威科技_SZSE300007_研究报告_2026-05-16.md",
-    "company/汉威科技_SZSE300007/汉威科技_SZSE300007_Research_Document_2026-05-16.md",
-    "company/广汽集团_SSE601238_HKEX2238/广汽集团_SSE601238_HKEX2238_公司研究_2026-05-17.md",
-    "company/双林股份_SZSE300100/双林股份_SZSE300100_公司研究_2026-05-17.md",
-    "company/凌云光_SSE688400/凌云光_SSE688400_Research_Document_2026-05-16_CN.md",
-    "company/凌云光_SSE688400/凌云光_SSE688400_Research_Document_2026-05-16.md",
-    "company/iFlytek_SZSE002230/iFlytek_SZSE002230_Research_Document_2026-05-16_zh.md",
-    "company/iFlytek_SZSE002230/iFlytek_SZSE002230_Research_Document_2026-05-16.md",
-    "company/Zhaowei_SZSE003021/Zhaowei_SZSE003021_Research_Document_2026-05-16_zh.md",
-    "company/Zhaowei_SZSE003021/Zhaowei_SZSE003021_Research_Document_2026-05-16.md",
-    "company/Xpeng_NYSE_XPEV/Xpeng_NYSE_XPEV_Research_Document_2026-05-16_zh.md",
-    "company/Xpeng_NYSE_XPEV/Xpeng_NYSE_XPEV_Research_Document_2026-05-16.md",
-    "company/Xiaomi_HKEX1810/Xiaomi_HKEX1810_Research_Document_2026-05-16_zh.md",
-    "company/Xiaomi_HKEX1810/Xiaomi_HKEX1810_Research_Document_2026-05-16.md",
-    "company/Wolong_SSE600580/Wolong_SSE600580_Research_Document_2026-05-16_zh.md",
-    "company/Wolong_SSE600580/Wolong_SSE600580_Research_Document_2026-05-16.md",
-    "company/Unitree/Unitree_Research_Document_2026-05-16_zh.md",
-    "company/Unitree/Unitree_Research_Document_2026-05-16.md",
-    "company/UBTECH_HKEX9880/UBTECH_HKEX9880_Research_Document_2026-05-16_zh.md",
-    "company/UBTECH_HKEX9880/UBTECH_HKEX9880_Research_Document_2026-05-16.md",
-    "company/Tuopu_SSE601689/Tuopu_SSE601689_Research_Document_2026-05-16_zh.md",
-    "company/福莱新材_SSE605488",
-    "company/汉威科技_SZSE300007",
-    "company/广汽集团_SSE601238_HKEX2238",
-    "company/双林股份_SZSE300100",
-    "company/凌云光_SSE688400",
-    "company/iFlytek_SZSE002230",
-    "company/Zhaowei_SZSE003021",
-    "charts/gac_overseas.png",
-    "charts/gac_nev_gap.png",
-    "charts/gac_peer_comparison.png",
-    "charts/gac_sales_by_brand.png",
-    "charts/gac_5yr_financials.png",
-    "charts/shuanglin_tam.png",
-    "charts/shuanglin_peer_pe.png",
-    "charts/shuanglin_segment_mix.png",
-    "charts/shuanglin_revenue_margin.png",
-    "charts/midea_tam.png"
+    "company/Synopsys_NASDAQ_SNPS/Synopsys_NASDAQ_SNPS_Initiation_Report_2026-05-20.docx",
+    "company/Cadence_NASDAQ_CDNS/Cadence_NASDAQ_CDNS_Initiation_Report_2026-05-20.docx",
+    "company/Synopsys_NASDAQ_SNPS/charts_initiation/chart_18_peer_growth.png",
+    "company/Synopsys_NASDAQ_SNPS/charts_initiation/chart_03_revenue_by_product.png",
+    "company/Synopsys_NASDAQ_SNPS/charts_initiation/chart_22_capital_allocation.png",
+    "company/Synopsys_NASDAQ_SNPS/charts_initiation/chart_34_multiples_vs_market.png",
+    "company/Synopsys_NASDAQ_SNPS/charts_initiation/chart_10_margin_trends.png",
+    "company/Synopsys_NASDAQ_SNPS/charts_initiation/chart_08_product_portfolio.png",
+    "company/Synopsys_NASDAQ_SNPS/charts_initiation/chart_24_working_capital.png",
+    "company/Synopsys_NASDAQ_SNPS/charts_initiation/chart_35_risk_return.png",
+    "company/Synopsys_NASDAQ_SNPS/charts_initiation/chart_19_rd_intensity.png",
+    "company/Synopsys_NASDAQ_SNPS/charts_initiation/chart_06_revenue_history.png",
+    "company/Synopsys_NASDAQ_SNPS/charts_initiation/chart_index.txt",
+    "company/Synopsys_NASDAQ_SNPS/charts_initiation",
+    "company/Synopsys_NASDAQ_SNPS/Synopsys_NASDAQ_SNPS_Valuation_Analysis_2026-05-20.md",
+    "company/STMicroelectronics_NYSE_STM/STMicroelectronics_NYSE_STM_Research_Document_2026-05-20.md",
+    "company/Infineon_XETR_IFX/Infineon_XETR_IFX_Research_Document_2026-05-20.md",
+    "company/Oklo_NYSE_OKLO/Oklo_NYSE_OKLO_Research_Document_2026-05-20.md",
+    "company/ARM_NASDAQ_ARM/ARM_NASDAQ_ARM_Research_Document_2026-05-20.md",
+    "company/Navitas_NASDAQ_NVTS/Navitas_NASDAQ_NVTS_Research_Document_2026-05-20.md",
+    "company/GSITechnology_NASDAQ_GSIT/GSITechnology_NASDAQ_GSIT_Research_Document_2026-05-20.md",
+    "company/Marvell_NASDAQ_MRVL/Marvell_NASDAQ_MRVL_Research_Document_2026-05-20.md",
+    "company/AppliedDigital_NASDAQ_APLD/AppliedDigital_NASDAQ_APLD_Research_Document_2026-05-20.md",
+    "company/Credo_NASDAQ_CRDO/Credo_NASDAQ_CRDO_Research_Document_2026-05-20.md",
+    "company/AsteraLabs_NASDAQ_ALAB/AsteraLabs_NASDAQ_ALAB_Research_Document_2026-05-20.md",
+    "company/Dell_NYSE_DELL/Dell_NYSE_DELL_Research_Document_2026-05-20.md",
+    "company/SanDisk_NASDAQ_SNDK/SanDisk_NASDAQ_SNDK_Research_Document_2026-05-20.md",
+    "company/AnalogDevices_NASDAQ_ADI/AnalogDevices_NASDAQ_ADI_Research_Document_2026-05-20.md",
+    "company/TexasInstruments_NASDAQ_TXN/TexasInstruments_NASDAQ_TXN_Research_Document_2026-05-20.md",
+    "company/Caterpillar_NYSE_CAT/Caterpillar_NYSE_CAT_Research_Document_2026-05-20.md",
+    "company/Planet_NYSE_PL/Planet_NYSE_PL_Research_Document_2026-05-20.md",
+    "company/BlackSky_NYSE_BKSY/BlackSky_NYSE_BKSY_Research_Document_2026-05-20.md",
+    "company/Howmet_NYSE_HWM/Howmet_NYSE_HWM_Research_Document_2026-05-20.md",
+    "company/DigitalOcean_NYSE_DOCN/DigitalOcean_NYSE_DOCN_Research_Document_2026-05-20.md",
+    "company/Synopsys_NASDAQ_SNPS/Synopsys_NASDAQ_SNPS_Research_Document_2026-05-20.md",
+    "company/WesternDigital_NASDAQ_WDC/WesternDigital_NASDAQ_WDC_Research_Document_2026-05-20.md",
+    "company/SamsungElectronics_KRX005930/SamsungElectronics_KRX005930_Research_Document_2026-05-20.md"
   ]
 }
