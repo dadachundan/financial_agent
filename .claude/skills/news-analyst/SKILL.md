@@ -41,7 +41,20 @@ A markdown report providing **specific, actionable insights with supporting evid
 - How these interact: e.g., bullish macro + insider buying reinforces; bearish macro + insider selling compounds risk
 - Catalysts on the calendar (earnings, FOMC, product launches mentioned in news)
 
-End the report with a markdown table organizing key points: Theme | Direction | Source | Supporting Evidence.
+## Citations (required)
+
+Every claim grounded in a fetched headline or filing **must carry a clickable markdown-link citation** of the form `[Publisher · YYYY-MM-DD](url)` (or `[SEC Form 4](url)` for insider txns). Pull the URLs from the `Link:` lines in the fetcher output — never invent one, never just write `(source: Yahoo Finance)` without a URL.
+
+- For ticker / macro news: each headline block in the fetcher output has a `Link:` line; use that URL.
+- For insider transactions: the `URL` column in the CSV often holds a SEC Form 4 link. If it's blank, cite the SEC EDGAR Form 4 listing for the ticker: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=<TICKER>&type=4`.
+- If the prose references a specific article, the link goes inline at the claim, not in a footnote.
+
+End the report with two things, in this order:
+
+1. **Summary table** — `Theme | Direction | Source (link) | Supporting Evidence`. The `Source (link)` column must be a markdown link, not a bare publisher name.
+2. **References** — a bulleted list of every URL cited above, grouped into `### Ticker news`, `### Macro news`, `### Insider transactions`. Each bullet: `- [Publisher · YYYY-MM-DD — headline](url)`.
+
+If a claim has no underlying URL (e.g., the fetcher returned an unavailable placeholder), say so explicitly — do not pretend a source exists.
 
 ## Persist output
 

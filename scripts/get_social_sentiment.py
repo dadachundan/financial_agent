@@ -40,6 +40,7 @@ def fetch_stocktwits(ticker: str, limit: int = 30, timeout: float = 10.0) -> str
     for m in messages[:limit]:
         created = m.get("created_at", "")
         user = (m.get("user") or {}).get("username", "?")
+        msg_id = m.get("id")
         sentiment_obj = (m.get("entities") or {}).get("sentiment") or {}
         sentiment = sentiment_obj.get("basic") if isinstance(sentiment_obj, dict) else None
         body = (m.get("body") or "").replace("\n", " ").strip()
@@ -51,7 +52,8 @@ def fetch_stocktwits(ticker: str, limit: int = 30, timeout: float = 10.0) -> str
             bearish += 1; tag = "Bearish"
         else:
             unlabeled += 1; tag = "no-label"
-        lines.append(f"[{created} · @{user} · {tag}] {body}")
+        link = f"https://stocktwits.com/{user}/message/{msg_id}" if msg_id and user != "?" else ""
+        lines.append(f"[{created} · @{user} · {tag}] {body}" + (f"\n  Link: {link}" if link else ""))
 
     total = bullish + bearish + unlabeled
     bp = round(100 * bullish / total) if total else 0
@@ -101,9 +103,12 @@ def fetch_reddit(ticker: str, subreddits: Iterable[str] = DEFAULT_SUBREDDITS,
             selftext = (p.get("selftext") or "").replace("\n", " ").strip()
             if len(selftext) > 240:
                 selftext = selftext[:240] + "…"
+            permalink = p.get("permalink") or ""
+            link = f"https://www.reddit.com{permalink}" if permalink else ""
             lines.append(
                 f"  [{created_str} · {score:>4}↑ · {comments:>3}c] {title}"
                 + (f"\n    body excerpt: {selftext}" if selftext else "")
+                + (f"\n    Link: {link}" if link else "")
             )
         blocks.append("\n".join(lines))
     if total == 0:

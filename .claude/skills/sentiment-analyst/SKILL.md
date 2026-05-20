@@ -59,7 +59,20 @@ A markdown report covering, in order:
 2. **Source-by-source breakdown** — what each of news / StockTwits / Reddit is telling you, with specific evidence (cite message counts, ratios, notable posts).
 3. **Divergences, alignments, and key narratives** across sources.
 4. **Catalysts and risks** surfaced by the data.
-5. **Markdown table** summarizing the key sentiment signals: Signal | Direction | Source | Supporting Evidence.
+5. **Summary table** — `Signal | Direction | Source (link) | Supporting Evidence`. The `Source (link)` column must be a clickable markdown link, not a bare platform name.
+6. **References** — a bulleted list of every URL cited above, grouped into `### News`, `### StockTwits`, `### Reddit`. Each bullet: `- [@user / publisher · YYYY-MM-DD — short label](url)`.
+
+## Citations (required)
+
+Every quoted excerpt, named post, or specific message count tied to a single source **must carry a clickable markdown-link citation** of the form `[@user · platform · YYYY-MM-DD](url)` (or `[Publisher · YYYY-MM-DD](url)` for news). Pull the URLs from the `Link:` lines in the fetcher output — never invent one, never write `(source: StockTwits)` without a URL.
+
+- News headlines → `Link:` line from `get_news.py`.
+- StockTwits messages → each `[date · @user · tag]` line is followed by an indented `Link:` line in the fetcher output.
+- Reddit posts → each post block has an indented `Link:` line.
+
+Aggregate stats (e.g. "Bullish 70 / Bearish 30 / Unlabeled 5 across 105 StockTwits messages") don't need a per-message URL — citing the summary line is enough, and the References section captures the underlying posts. Quoted post bodies always need the post's URL.
+
+If a source returned `<unavailable>` or no posts, say so explicitly — never fabricate a citation.
 
 ## Persist output
 
