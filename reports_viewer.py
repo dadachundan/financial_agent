@@ -276,8 +276,6 @@ _INDEX_TMPL = r"""<!doctype html>
         <tr>
           <th data-sort="display">Report</th>
           <th data-sort="ticker">Ticker</th>
-          <th data-sort="bucket">Type</th>
-          <th data-sort="date">Date</th>
           <th data-sort="ts" class="active">Created <span class="sort-ind">▼</span></th>
           <th>Lang</th>
         </tr>
@@ -293,16 +291,14 @@ _INDEX_TMPL = r"""<!doctype html>
               data-has-docx="{{ '1' if r.langs.get('docx') else '0' }}">
             <td><a class="title" href="{{ _base }}/view/{{ r.langs.get('en') or r.langs.get('zh') or '#' }}">{{ r.display }}</a></td>
             <td class="ticker">{{ r.ticker }}</td>
-            <td><span class="bucket-tag {{ r.bucket }}">{{ r.bucket }}</span></td>
-            <td class="date">{{ r.date }}</td>
             <td class="created">{{ r.created }}</td>
             <td>
               {% if r.langs.get('en') %}
                 <a class="lang-link" href="{{ _base }}/view/{{ r.langs['en'] }}">EN</a>
-              {% else %}<span class="lang-link missing">EN</span>{% endif %}
+              {% endif %}
               {% if r.langs.get('zh') %}
                 <a class="lang-link" href="{{ _base }}/view/{{ r.langs['zh'] }}">ZH</a>
-              {% else %}<span class="lang-link missing">ZH</span>{% endif %}
+              {% endif %}
               {% if r.langs.get('docx') %}
                 <a class="lang-link" style="background:#fff0d8;border-color:#e0b170;color:#8a5400" href="{{ _base }}/view-docx/{{ r.langs['docx'] }}">DOCX</a>
               {% endif %}
