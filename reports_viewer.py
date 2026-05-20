@@ -267,6 +267,9 @@ _INDEX_TMPL = r"""<!doctype html>
       <label style="font-size:.85rem;color:#555">
         <input type="checkbox" id="onlyCompany"> Company research only
       </label>
+      <label style="font-size:.85rem;color:#555">
+        <input type="checkbox" id="onlyDocx"> DOCX only
+      </label>
     </div>
     <table id="grid">
       <thead>
@@ -286,7 +289,8 @@ _INDEX_TMPL = r"""<!doctype html>
               data-ticker="{{ r.ticker|lower }}"
               data-filename="{{ r.rel|lower }}"
               data-date="{{ r.date }}"
-              data-ts="{{ r.ts }}">
+              data-ts="{{ r.ts }}"
+              data-has-docx="{{ '1' if r.langs.get('docx') else '0' }}">
             <td><a class="title" href="{{ _base }}/view/{{ r.langs.get('en') or r.langs.get('zh') or '#' }}">{{ r.display }}</a></td>
             <td class="ticker">{{ r.ticker }}</td>
             <td><span class="bucket-tag {{ r.bucket }}">{{ r.bucket }}</span></td>
@@ -320,17 +324,20 @@ _INDEX_TMPL = r"""<!doctype html>
       const rows  = Array.from(tbody.querySelectorAll("tr"));
       const filter = document.getElementById("filter");
       const onlyCompany = document.getElementById("onlyCompany");
+      const onlyDocx = document.getElementById("onlyDocx");
       const count = document.getElementById("count");
 
       function applyFilter() {
         const q = (filter.value || "").trim().toLowerCase();
         const co = onlyCompany.checked;
+        const dx = onlyDocx.checked;
         let visible = 0;
         for (const r of rows) {
           const hay = r.dataset.display + " " + r.dataset.ticker + " " + r.dataset.filename;
           const matchQ  = !q || hay.includes(q);
           const matchCo = !co || r.dataset.bucket === "company";
-          const show = matchQ && matchCo;
+          const matchDx = !dx || r.dataset.hasDocx === "1";
+          const show = matchQ && matchCo && matchDx;
           r.style.display = show ? "" : "none";
           if (show) visible++;
         }
@@ -338,6 +345,7 @@ _INDEX_TMPL = r"""<!doctype html>
       }
       filter.addEventListener("input", applyFilter);
       onlyCompany.addEventListener("change", applyFilter);
+      onlyDocx.addEventListener("change", applyFilter);
 
       // Click-to-sort on headers (toggle asc/desc).
       let sortKey = "ts", sortDir = -1;  // newest first by default
