@@ -1,0 +1,47 @@
+恒立液压 (SSE:601100) — 图表索引
+============================================================
+图表总数: 35
+格式: 300 DPI PNG
+
+★ 必备图表:
+  chart_03: 分产品营收(堆积面积)
+  chart_04: 分地区营收(堆积柱)
+  chart_28: DCF敏感性热力图
+  chart_32: 估值足球场
+
+全部图表:
+  chart_01_股价3年走势.png
+  chart_02_收入与毛利率.png
+  chart_03_分产品营业收入_堆积.png
+  chart_04_分地区营业收入_堆积.png
+  chart_05_公司里程碑.png
+  chart_06_三次战略转型.png
+  chart_07_管理团队.png
+  chart_08_产品组合分部.png
+  chart_09_客户集中度.png
+  chart_10_EBITDA利润率.png
+  chart_11_利润率走势.png
+  chart_12_现金流与资本支出.png
+  chart_13_情境对比.png
+  chart_14_收入增速.png
+  chart_15_市场规模TAM.png
+  chart_16_竞争定位矩阵.png
+  chart_17_市场份额.png
+  chart_18_可比公司PE_ROE.png
+  chart_19_研发投入.png
+  chart_20_营运资金天数.png
+  chart_21_ROE_ROIC.png
+  chart_22_线性驱动放量.png
+  chart_23_净现金.png
+  chart_24_分红.png
+  chart_25_产能建设.png
+  chart_26_全球布局.png
+  chart_27_专利.png
+  chart_28_DCF敏感性热力图.png
+  chart_29_DCF分解.png
+  chart_30_同行倍数.png
+  chart_31_同行ROE_增长.png
+  chart_32_估值足球场.png
+  chart_33_PE历史3年.png
+  chart_34_EV_EBITDA历史.png
+  chart_35_催化剂地图.png

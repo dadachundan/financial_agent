@@ -1,0 +1,47 @@
+HENGLI HYDRAULICS (SSE:601100) — CHART INDEX
+============================================================
+Total charts: 35
+Format: 300 DPI PNG
+
+★ MANDATORY CHARTS:
+  chart_03: Revenue by product (stacked area)
+  chart_04: Revenue by geography (stacked bar)
+  chart_28: DCF sensitivity heatmap
+  chart_32: Valuation football field
+
+ALL CHARTS:
+  chart_01_stock_price_3y.png
+  chart_02_revenue_margin_dual_axis.png
+  chart_03_revenue_by_product_stacked_area.png
+  chart_04_revenue_by_geography_stacked_bar.png
+  chart_05_company_milestones_timeline.png
+  chart_06_strategic_pivots.png
+  chart_07_org_chart.png
+  chart_08_product_portfolio_segment_revenue_margin.png
+  chart_09_customer_concentration_pie.png
+  chart_10_ebitda_margin_trend.png
+  chart_11_margin_progression.png
+  chart_12_cfo_capex_fcf.png
+  chart_13_scenario_comparison_fy30e.png
+  chart_14_revenue_growth_yoy.png
+  chart_15_tam_market_sizing.png
+  chart_16_competitive_positioning_matrix.png
+  chart_17_market_share_china_hydraulics.png
+  chart_18_peer_pe_vs_roe.png
+  chart_19_rd_spend_and_intensity.png
+  chart_20_working_capital_days.png
+  chart_21_roe_roic_trajectory.png
+  chart_22_linear_drive_revenue_ramp.png
+  chart_23_net_debt_ebitda.png
+  chart_24_dividend_history.png
+  chart_25_production_capacity_buildout.png
+  chart_26_global_footprint_timeline.png
+  chart_27_patent_portfolio.png
+  chart_28_dcf_sensitivity_heatmap.png
+  chart_29_dcf_components_bridge.png
+  chart_30_peer_multiples_comparison.png
+  chart_31_peer_roe_vs_growth.png
+  chart_32_football_field.png
+  chart_33_pe_history_3y.png
+  chart_34_ev_ebitda_history.png
+  chart_35_catalyst_probability_map.png
