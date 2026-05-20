@@ -1,6 +1,6 @@
 ---
 name: bull-bear-debate
-description: Run a multi-round bull-vs-bear debate over a ticker using the four analyst reports (market, sentiment, news, company-research) as evidence. Use when the user wants "the bull case vs bear case", "debate this trade", or as part of a full trading workflow after analyst reports are ready.
+description: Run a multi-round bull-vs-bear debate over a ticker using the three analyst reports (sentiment, news, company-research) as evidence. Use when the user wants "the bull case vs bear case", "debate this trade", or as part of a full trading workflow after analyst reports are ready.
 argument-hint: <ticker> [--rounds N] [--asset-type stock|crypto]
 allowed-tools: [Read, Write]
 ---
@@ -13,12 +13,11 @@ For `--asset-type stock` use "stock" as the target label; for `--asset-type cryp
 
 ## Prerequisites
 
-This skill needs four analyst reports in the conversation context as markdown blobs:
+This skill needs three analyst reports in the conversation context as markdown blobs:
 
-- `market_report` — from [[market-analyst]]
 - `sentiment_report` — from [[sentiment-analyst]]
 - `news_report` — from [[news-analyst]]
-- `company_research_report` — from [[company-research]] (deep institutional-grade coverage of business, management, products, customers, competition, TAM, risks — replaces the older lightweight fundamentals report)
+- `company_research_report` — from [[company-research]] (deep institutional-grade coverage of business, management, products, customers, competition, TAM, risks)
 
 **If any report is missing**, run the corresponding analyst skill(s) first — invoke the missing ones in parallel (one Agent subagent per skill, single message with multiple tool calls) before starting the debate. The analyst skills have no further prerequisites.
 
@@ -26,7 +25,7 @@ For a clean full-pipeline run from scratch, prefer [[trading-analysis]] over inv
 
 ## Inputs
 
-- The four analyst reports listed above.
+- The three analyst reports listed above.
 - `debate_history` — running transcript, empty on round 1.
 - `--rounds N` — debate length (default 2).
 - `--asset-type` — `stock` or `crypto`.
@@ -44,7 +43,7 @@ Focus on:
 - **Bear counterpoints** — critically analyze the most recent bear argument with specific data and sound reasoning; address concerns thoroughly and show why the bull perspective holds stronger merit.
 - **Engagement** — conversational style. Engage directly with the bear's points; debate rather than just list data.
 
-Resources to leverage explicitly: market report, sentiment report, news report, company-research report, the prior debate history, and the most recent bear argument.
+Resources to leverage explicitly: sentiment report, news report, company-research report, the prior debate history, and the most recent bear argument.
 
 Prefix the turn with `Bull Analyst:` and append it to `debate_history`.
 
