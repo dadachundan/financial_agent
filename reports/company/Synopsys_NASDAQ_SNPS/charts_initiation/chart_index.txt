@@ -1,0 +1,38 @@
+SNPS (Synopsys) — Chart Index
+Generated 2026-05-20 | 300 DPI
+
+chart_01: chart_01_stock_price
+chart_02: chart_02_rev_margin
+chart_03: chart_03_rev_by_product
+chart_04: chart_04_rev_by_geo
+chart_05: chart_05_timeline
+chart_06: chart_06_revenue_history
+chart_07: chart_07_org_structure
+chart_08: chart_08_product_portfolio
+chart_09: chart_09_customer_segments
+chart_10: chart_10_margin_trends
+chart_11: chart_11_profitability_drivers
+chart_12: chart_12_cash_flow
+chart_13: chart_13_scenario_fan
+chart_14: chart_14_scenario_bar
+chart_15: chart_15_tam
+chart_16: chart_16_competitive_landscape
+chart_17: chart_17_market_share
+chart_18: chart_18_peer_growth
+chart_19: chart_19_rd_intensity
+chart_20: chart_20_eps
+chart_21: chart_21_backlog
+chart_22: chart_22_capital_allocation
+chart_23: chart_23_operating_leverage
+chart_24: chart_24_working_capital
+chart_25: chart_25_debt_trajectory
+chart_26: chart_26_revenue_mix
+chart_27: chart_27_roic
+chart_28: chart_28_dcf_sensitivity
+chart_29: chart_29_dcf_components
+chart_30: chart_30_comps_pe
+chart_31: chart_31_pe_growth_scatter
+chart_32: chart_32_football_field
+chart_33: chart_33_historical_pe
+chart_34: chart_34_multiples_market
+chart_35: chart_35_risk_return
