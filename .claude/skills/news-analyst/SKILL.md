@@ -15,31 +15,35 @@ For `--asset-type stock` use the term "company" throughout; for `--asset-type cr
 
 Inputs: `<ticker>` and `<trade_date>` in YYYY-MM-DD form.
 
-1. **Ticker-specific news (past 7 days)**:
+1. **Ticker-specific news (past 30 days, split into two horizons in the report)**:
    ```bash
-   python scripts/get_news.py <ticker> <start_date> <trade_date>
+   python scripts/get_news.py <ticker> <start_date> <trade_date> --limit 50
    ```
-   where `<start_date>` = `<trade_date>` minus 7 days.
+   where `<start_date>` = `<trade_date>` minus 30 days. Each article block includes the publish date in its header — use that to bucket articles into the two horizons described in the Output section.
 
-2. **Global / macroeconomic news** (look back 7 days, configurable):
+2. **Global / macroeconomic news** (past 7 days):
    ```bash
    python scripts/get_global_news.py <trade_date> --look-back-days 7 --limit 30
    ```
+   Yahoo Finance Search is recency-biased and rarely surfaces articles older than ~10 days, so widening this window mostly adds noise. Keep at 7d unless the user explicitly asks for a longer macro view.
 
-3. **Insider transactions** (form-4 filings):
+3. **Insider transactions** (form-4 filings — yfinance returns the last ~6 months of Form-4 activity by default):
    ```bash
    python scripts/get_insider_transactions.py <ticker>
    ```
 
 ## Output
 
-A markdown report providing **specific, actionable insights with supporting evidence** to help traders make informed decisions. Cover:
+A markdown report providing **specific, actionable insights with supporting evidence** to help traders make informed decisions. Cover the sections below, **in order**, splitting ticker news into two time horizons so the orchestrator sees both the immediate catalysts and the broader narrative arc:
 
-- Ticker-specific news themes and notable headlines
-- Macro context (rates, regulation, sector moves, geopolitics)
-- Insider activity (buys vs sells, scale, repeat insiders, cluster patterns)
-- How these interact: e.g., bullish macro + insider buying reinforces; bearish macro + insider selling compounds risk
-- Catalysts on the calendar (earnings, FOMC, product launches mentioned in news)
+- **Ticker news — near-term catalysts (≤7 days before `<trade_date>`)**: discrete events that just happened or are imminent — earnings, deals, downgrades, product launches, regulatory rulings. Bias toward actionable specifics.
+- **Ticker news — medium-term themes (8–30 days before `<trade_date>`)**: pattern shifts, narrative arcs, or strategic moves visible across the month. Group related headlines into themes rather than listing one by one; call out anything that recurs or escalates.
+- **Macro context (past 7 days)**: rates, regulation, sector moves, geopolitics — only items materially relevant to the ticker.
+- **Insider activity (past ~6 months from yfinance)**: buys vs sells, scale, repeat insiders, cluster patterns. Separately call out anything in the last 30 days as fresher signal.
+- **Cross-cutting interactions**: e.g. bullish macro + insider buying reinforces; bearish near-term news + bullish medium-term themes is mixed signal.
+- **Catalysts on the calendar**: upcoming earnings, FOMC, product launches mentioned in any of the above.
+
+Bucket each ticker-news headline by inspecting its date in the fetcher output header (`### Title (source: Publisher, YYYY-MM-DD)`). If 30 days returned <5 articles total, say so and consolidate the two ticker subsections into one — don't pad either with overlap.
 
 ## Citations (required)
 

@@ -68,7 +68,8 @@ def main() -> int:
     for d in all_news[:a.limit]:
         if d["pub_date"] and d["pub_date"].replace(tzinfo=None) > cutoff:
             continue
-        block = f"### {d['title']} (source: {d['publisher']})\n"
+        date_str = d["pub_date"].strftime("%Y-%m-%d") if d["pub_date"] else "date unknown"
+        block = f"### {d['title']} (source: {d['publisher']}, {date_str})\n"
         if d["summary"]:
             block += f"{d['summary']}\n"
         if d["link"]:

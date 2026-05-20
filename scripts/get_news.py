@@ -10,7 +10,7 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 import yfinance as yf
 
-DEFAULT_LIMIT = 20
+DEFAULT_LIMIT = 50
 
 
 def _extract(article: dict) -> dict:
@@ -53,7 +53,8 @@ def main() -> int:
             naive = d["pub_date"].replace(tzinfo=None)
             if not (start <= naive <= end):
                 continue
-        block = f"### {d['title']} (source: {d['publisher']})\n"
+        date_str = d["pub_date"].strftime("%Y-%m-%d") if d["pub_date"] else "date unknown"
+        block = f"### {d['title']} (source: {d['publisher']}, {date_str})\n"
         if d["summary"]:
             block += f"{d['summary']}\n"
         if d["link"]:
