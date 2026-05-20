@@ -39,7 +39,7 @@ The Research Manager's plan provides the directional view (using a 5-tier scale)
 ```markdown
 **Action**: <Buy | Hold | Sell>
 
-**Reasoning**: <The case for this action, anchored in the analysts' reports and the research plan. Two to four sentences.>
+**Reasoning**: <The case for this action, anchored in the analysts' reports and the research plan. Two to four sentences. When citing a specific fact or quote, include the URL as an inline markdown link reused from the upstream analyst or research-manager report — never invent one.>
 
 **Entry Price**: <optional — number in the instrument's quote currency, or omit the line>
 

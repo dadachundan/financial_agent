@@ -84,10 +84,10 @@ run them in parallel from a single tool-use block to save wall time.
 
 ### 3. Summarize, in this order
 
-For each filing (newest first), write a short block:
+For each filing (newest first), write a short block. The header **must** include a clickable SEC EDGAR link so the reader can verify against the canonical filing:
 
 ```markdown
-### FY2025 10-K (filed 2025-10-31, period 2025-09-27)
+### FY2025 10-K — [SEC EDGAR](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=<TICKER>&type=10-K&dateb=&owner=include&count=40) (filed 2025-10-31, period 2025-09-27, [local file](file:///<local_path>))
 - **Business**: <2–3 sentence what-they-do snapshot, calling out new segments,
   product lines, or geographic shifts introduced this year.>
 - **Key risks**: <3–5 of the most consequential / distinctive risk factors —
@@ -96,6 +96,8 @@ For each filing (newest first), write a short block:
   filing — new disclosures, restructurings, segment renames, new litigation,
   AI/regulatory language, etc.>
 ```
+
+URL construction: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=<TICKER>&type=<FORM>` returns the EDGAR listing of that form for that ticker (the user can sort by date to find the specific filing). The `local_path` and `accession_no` come from `list_reports.py`'s JSON output. If you cite a specific passage in prose (e.g. "the Item 1A risk factor on AI regulation"), repeat the SEC EDGAR link inline so the user can pivot to the source.
 
 Then a final **Changes over the years** section: 5–10 bullets identifying
 the *trajectory* across filings. Examples of what to look for:

@@ -45,6 +45,8 @@ Focus on:
 
 Resources to leverage explicitly: sentiment report, news report, company-research report, the prior debate history, and the most recent bear argument.
 
+**Citations:** when you cite a specific data point, headline, post, or filing passage, reproduce the underlying URL from the analyst report's References section as a clickable markdown link inline — e.g. "the [Q1 results press release](https://...) confirms 85% YoY revenue growth" or "as one user put it on [StockTwits](https://stocktwits.com/...) — 'easy $260 from here'". Never invent URLs; if the underlying analyst report has no link for a claim, paraphrase generally instead of citing a specific source.
+
 Prefix the turn with `Bull Analyst:` and append it to `debate_history`.
 
 ### Bear turn
@@ -57,6 +59,8 @@ Focus on:
 - **Negative indicators** — adverse financial data, market trends, recent negative news.
 - **Bull counterpoints** — critically analyze the most recent bull argument; expose weaknesses or over-optimistic assumptions.
 - **Engagement** — conversational style. Engage with the bull's points directly.
+
+**Citations:** same rule as the Bull turn — reproduce URLs from the analyst reports as inline markdown links whenever you cite specific evidence; never invent URLs.
 
 Prefix the turn with `Bear Analyst:` and append it to `debate_history`.
 

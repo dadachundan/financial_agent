@@ -53,7 +53,7 @@ If `past_context` is non-empty, incorporate its lessons; otherwise rely solely o
 
 **Executive Summary**: <Concise action plan covering entry strategy, position sizing, key risk levels, and time horizon. Two to four sentences.>
 
-**Investment Thesis**: <Detailed reasoning anchored in specific evidence from the analysts' debate. Incorporate prior lessons from past_context if any; otherwise rely solely on the current analysis.>
+**Investment Thesis**: <Detailed reasoning anchored in specific evidence from the analysts' debate. Every specific data point, quote, or filing reference carries an inline markdown-link citation — `[Publisher · date](url)`, `[@user · StockTwits · date](url)`, `[10-K Item 7](url)`, etc. — reused from the upstream analyst reports' References sections. Never invent URLs. Incorporate prior lessons from past_context if any; otherwise rely solely on the current analysis.>
 
 **Price Target**: <optional — number in the instrument's quote currency, or omit the line>
 

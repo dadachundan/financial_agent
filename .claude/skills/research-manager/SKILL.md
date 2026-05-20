@@ -42,12 +42,14 @@ Commit to a clear stance whenever the debate's strongest arguments warrant one; 
 ```markdown
 **Recommendation**: <Buy | Overweight | Hold | Underweight | Sell>
 
-**Rationale**: <Conversational summary of the key points from both sides of the debate, ending with which arguments led to the recommendation. Speak naturally, as if to a teammate.>
+**Rationale**: <Conversational summary of the key points from both sides of the debate, ending with which arguments led to the recommendation. Speak naturally, as if to a teammate. Every specific data point or quoted post must carry an inline markdown-link citation reused from the underlying analyst report — `[Publisher · date](url)`, `[@user · StockTwits · date](url)`, `[10-K Item 1A](url)`, etc. Never invent URLs.>
 
 **Strategic Actions**: <Concrete steps for the trader to implement the recommendation, including position-sizing guidance consistent with the rating.>
 ```
 
 This block becomes `investment_plan` for the downstream [[trader-plan]] and [[portfolio-decision]] skills.
+
+**Citations:** carry over the citations from the upstream analyst reports (news-analyst, sentiment-analyst, company-research) verbatim — each report ends with a References section listing the URLs the debate quoted. Reuse those URLs inline as clickable markdown links whenever you reference a specific fact. Never fabricate a URL; if the supporting analyst report has no link for a claim, drop the specificity rather than guessing.
 
 ## Persist output
 
