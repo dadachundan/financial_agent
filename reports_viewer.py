@@ -265,9 +265,6 @@ _INDEX_TMPL = r"""<!doctype html>
     <div class="toolbar">
       <input id="filter" type="search" placeholder="Filter by company, ticker, or filename…" autofocus>
       <label style="font-size:.85rem;color:#555">
-        <input type="checkbox" id="onlyCompany"> Company research only
-      </label>
-      <label style="font-size:.85rem;color:#555">
         <input type="checkbox" id="onlyDocx"> DOCX only
       </label>
     </div>
@@ -319,28 +316,24 @@ _INDEX_TMPL = r"""<!doctype html>
       const tbody = grid.querySelector("tbody");
       const rows  = Array.from(tbody.querySelectorAll("tr"));
       const filter = document.getElementById("filter");
-      const onlyCompany = document.getElementById("onlyCompany");
       const onlyDocx = document.getElementById("onlyDocx");
       const count = document.getElementById("count");
 
       function applyFilter() {
         const q = (filter.value || "").trim().toLowerCase();
-        const co = onlyCompany.checked;
         const dx = onlyDocx.checked;
         let visible = 0;
         for (const r of rows) {
           const hay = r.dataset.display + " " + r.dataset.ticker + " " + r.dataset.filename;
           const matchQ  = !q || hay.includes(q);
-          const matchCo = !co || r.dataset.bucket === "company";
           const matchDx = !dx || r.dataset.hasDocx === "1";
-          const show = matchQ && matchCo && matchDx;
+          const show = matchQ && matchDx;
           r.style.display = show ? "" : "none";
           if (show) visible++;
         }
         count.textContent = visible + " entries";
       }
       filter.addEventListener("input", applyFilter);
-      onlyCompany.addEventListener("change", applyFilter);
       onlyDocx.addEventListener("change", applyFilter);
 
       // Click-to-sort on headers (toggle asc/desc).
