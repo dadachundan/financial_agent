@@ -1,6 +1,10 @@
 # Inline Citations — Required Throughout the Report
 
-Do **not** save citations for the end. Every non-trivial factual claim — revenue figures, market share, management background, customer names, growth rates, quoted strategy language, risk drivers, moat evidence — must be attributed inline at the point it appears.
+**Paragraph-level coverage is the standard, not section-level.** Every substantive paragraph — any paragraph making a factual, quantitative, or external-source claim — must contain at least one inline markdown-link citation. The user's stated trust standard: "for each paragraph, I hope there is citation, otherwise I don't trust the paragraph." A paragraph with zero inline citations is read as unsourced opinion.
+
+Do **not** save citations for the end. Every non-trivial factual claim — revenue figures, market share, management background, customer names, growth rates, quoted strategy language, risk drivers, moat evidence, industry framing, valuation context, qualitative analysis — must be attributed inline at the point it appears.
+
+**Density target: ≥1 citation per paragraph across all 9 sections, plus the References block at the end.** A 6,000–10,000 word report at ~150 words per paragraph yields ~40–70 paragraphs; expect ~50–100 inline citations across the body. Reports landing under 40 inline citations have insufficient sourcing — go back and cite uncited paragraphs before submitting.
 
 ## Format: markdown links to real URLs
 
@@ -24,7 +28,8 @@ Every inline citation is a clickable markdown link: `[Title in original language
 - **Preserve the original language of the title.** Chinese filing titles stay `年度报告` / `年报` / `季度报告`; Japanese stay `有価証券報告書` / `決算短信`; Korean stay `사업보고서`. US filings stay `10-K` / `10-Q` / `DEF 14A` / `8-K`. Do not translate link text.
 - **Use canonical permalinks**: the SEC EDGAR document URL (not the company search page), the specific cninfo PDF URL (not the cninfo homepage), the specific article URL (not the publisher homepage). For locally-cached PDFs, use the live web URL of the same document, not the local path.
 - Include enough specificity in the link title to identify the document (filing year, page number when relevant, publication date).
-- **Every section** (Company Overview through Risk Assessment) must contain inline markdown-link citations — not just the final References block.
+- **Every paragraph in every section** (Company Overview through Risk Assessment) must contain at least one inline markdown-link citation. Section-level "I cited it once in this section" is not enough — the user reads paragraph by paragraph and judges trust at the paragraph level.
+- **Forward-looking analyst inference** (e.g., "we estimate the SAM at $4bn") can use the inline label `(estimate, based on [source 1] + [source 2])` rather than a single hyperlink — be transparent that it's a derived estimate.
 - Management bios cite the DEF 14A / proxy, LinkedIn, or interview source per claim. Competitor analysis cites each competitor's own filing or website. TAM/industry numbers cite the specific research firm and report year with a real URL.
 - Direct quotations are quoted in the original language; add a short translation in parentheses only if load-bearing for the reader.
 - Distinguish primary sources (company filings, transcripts) from secondary (news, third-party research). Prefer primary.

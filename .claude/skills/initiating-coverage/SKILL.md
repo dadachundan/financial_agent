@@ -631,25 +631,36 @@ IF ANY VERIFICATION FAILS: Stop and complete missing task first.
 **⚠️ DELIVER ONLY THIS 1 DOCX FILE. NO executive summaries, no "highlights" documents, no extra files.**
 
 **⚠️ SOURCE CITATIONS ARE MANDATORY** (see Citation Standards below):
-- ✅ Every figure has a source line directly under it (clickable hyperlink, not plain text)
-- ✅ Every table has a source line as the final row (clickable hyperlink)
-- ✅ **Every substantive prose paragraph that makes a quantitative or external-fact claim ends with an inline parenthetical hyperlink citation.** Example: `…管理层指引 FY2026 出货量 300-350 万台,我们模型测算收入达到 47.37 亿元人民币 (来源: [FY2025 6-K](rId45))`. The page-1 investment bullets, every thesis-pillar paragraph, every financial-metric statement, every risk paragraph, and every peer-comparison paragraph all need one. Render as small italic gray text so the citation sits unobtrusively at the end of the paragraph.
-- ✅ The report includes a dedicated **Sources & References** appendix listing every source, organized by category, every entry a clickable hyperlink with a date — minimum 20 entries
-- ❌ **FAIL CONDITION 1**: If the final DOCX has no Sources & References appendix, or has fewer than 20 entries in it, DO NOT DELIVER. Add sources and re-export.
-- ❌ **FAIL CONDITION 2**: If the body of the DOCX contains fewer than 30 distinct inline hyperlink citations (appendix entries don't count), DO NOT DELIVER. A report with sources only in the appendix is a report without sources — readers don't flip to the back. Walk the body and add inline citations to every substantive claim before re-exporting.
+- ✅ Every figure caption AND every table has clickable hyperlink source labels — not plain-text "Source: …" lines. Plain-text source lines fail the click-to-verify test that readers expect. Chart source lines baked into PNG images don't count: append a clickable `(外部源: [Link 1] / [Link 2])` to the caption paragraph in DOCX.
+- ✅ **EVERY substantive prose paragraph (≥ ~40 characters, not a heading / list-marker / source footer) ends with a clickable inline citation.** No exceptions. Page-1 investment bullets, thesis pillars, financial metrics, risk paragraphs, peer comparisons, qualitative analysis, forward-looking projections — every one. The user's stated trust standard: "for each paragraph, I hope there is citation, otherwise I don't trust the paragraph."
+  - Example (factual claim): `FY2025 在 4.33 亿美元收入基础上实现 GAAP 净利润 6,200 万美元 (来源: [FY2025 6-K](rId45))`
+  - Example (forward-looking projection): `…我们模型测算 FY26E 收入达到 47.37 亿元人民币 (来源: 本报告模型估算)`  — non-hyperlinked label acceptable for internal estimates; do not pretend an external source backs an analyst projection.
+  - Example (figure caption): `图 15: 按细分领域的激光雷达 TAM — 2030 年扩张至 100-250 亿美元。 (外部源: [Yole Group](rId54) / [Frost & Sullivan](rId55))`
+  - Render in 8pt italic, framing text gray (#666666), hyperlink blue (#0563C1, underlined).
+- ✅ The report includes a dedicated **Sources & References** appendix listing every source, organized by category, every entry a clickable hyperlink with a date — minimum 20 entries.
+
+**FAIL CONDITIONS — DO NOT DELIVER if any of these hit:**
+- ❌ **FAIL 1**: No Sources & References appendix, or fewer than 20 entries in it. Add sources and re-export.
+- ❌ **FAIL 2**: Fewer than 150 inline `<w:hyperlink>` elements in the body (appendix entries don't count). A 30-50 page report has roughly 100-150 substantive paragraphs plus 25-35 figure captions plus 12-20 tables; landing under 150 hyperlinks in the body means many paragraphs are uncited. Walk the body and add citations until the threshold is met.
+- ❌ **FAIL 3**: Any page-1 investment-summary bullet without an inline citation, or any figure/table caption that is plain text (no hyperlink), or any peer-comparison paragraph without a peer-specific Yahoo Finance citation. These are spot-check fails — fix all instances before re-delivering.
 
 **Final Verification** (every item must pass — any unchecked item blocks delivery):
 - [ ] Report is 30-50 pages
 - [ ] Word count is 10,000-15,000
 - [ ] 25-35 charts embedded
 - [ ] 12-20 tables included
-- [ ] Every figure has a source line below it (clickable hyperlink)
-- [ ] Every table has a source line as its final row (clickable hyperlink)
+- [ ] Every figure caption has clickable hyperlink source labels (NOT plain text; chart-baked PNG source lines don't satisfy this — append `(外部源: [Link])` to the caption text)
+- [ ] Every table has a source line as its final row with at least one clickable hyperlink
 - [ ] **Sources & References appendix exists with ≥20 entries, every entry a clickable hyperlink with a date**
-- [ ] **Body of report has ≥30 distinct inline hyperlink citations** (count `<w:hyperlink>` tags in `word/document.xml` outside the appendix — if it's under 30, the report has not actually been cited)
+- [ ] **Body has ≥150 distinct inline `<w:hyperlink>` elements outside the appendix.** Verify programmatically:
+  ```bash
+  awk '/附录|Sources \& References/{exit} {print}' unpacked/word/document.xml | grep -c '<w:hyperlink'
+  ```
+  If under 150, walk the body and add citations to uncited paragraphs.
+- [ ] **Every substantive prose paragraph (≥40 chars, not a heading or list marker) has an inline citation.** Spot check by extracting paragraphs from the DOCX and confirming each has either a `<w:hyperlink>` or a `(来源:本报告模型估算)` label. Zero unsourced substantive paragraphs.
 - [ ] Every page-1 investment-summary bullet has at least one inline citation
-- [ ] Every paragraph stating a quantitative claim (revenue, margin, multiple, market share, growth rate, customer-concentration %) has an inline citation
-- [ ] All inline citations in prose are clickable hyperlinks (NOT plain text URLs, NOT "Company data")
+- [ ] Every figure caption (`图 N:` / `Figure N:`) has hyperlinked source labels
+- [ ] All inline citations are clickable hyperlinks (NOT plain text URLs, NOT "Company data")
 - [ ] Numbers match financial model exactly
 
 ---

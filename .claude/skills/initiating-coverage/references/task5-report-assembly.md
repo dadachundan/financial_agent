@@ -1174,13 +1174,16 @@ CITATIONS & HYPERLINKS ⭐⭐⭐ HARD FAIL IF MISSING:
 - [ ] Every figure has a source line directly under it (e.g. "Source: 10-K FY2024", "Source: FactSet, 2026-05-19")
 - [ ] Every table has a source line as its final row spanning all columns
 - [ ] Every substantive prose paragraph has an inline citation `(Source: <hyperlinked label>)` / `(来源: …)` at the end
-- [ ] **Body has ≥30 distinct inline `<w:hyperlink>` elements outside the appendix** (FAIL → STOP DELIVERY). To verify, unpack the DOCX (`python scripts/office/unpack.py …`) and run:
+- [ ] **Body has ≥150 distinct inline `<w:hyperlink>` elements outside the appendix** (FAIL → STOP DELIVERY). To verify, unpack the DOCX (`python scripts/office/unpack.py …`) and run:
   ```bash
   awk '/附录|Sources \& References/{exit} {print}' unpacked/word/document.xml | grep -c '<w:hyperlink'
   ```
-  If the count is under 30, the report has been assembled but not cited — walk the body and add citations.
+  If the count is under 150, the report has been assembled but not adequately cited — walk the body and add citations to every uncited substantive paragraph.
+- [ ] **Every substantive paragraph (≥40 chars, not heading/list marker) carries a citation** — spot check by extracting paragraphs and checking each ends with `(来源: …)` or `(外部源: …)`. Zero unsourced substantive paragraphs allowed.
 - [ ] Every page-1 investment-summary bullet has an inline citation
 - [ ] Every thesis-pillar paragraph has an inline citation
+- [ ] Every figure caption (`图 N:` / `Figure N:`) has appended hyperlinked source labels — chart-baked PNG source lines don't count
+- [ ] Every peer comparison (Robosense / Ouster / Innoviz / Aeva / Luminar / Mobileye) cites that peer's specific Yahoo Finance rId, not a generic source
 - [ ] All URLs are clickable hyperlinks — open the DOCX, Ctrl+Click 5-10 random links, confirm they work
 - [ ] **Sources & References appendix exists with level-1 heading** (FAIL → STOP DELIVERY)
 - [ ] **Sources & References appendix has ≥20 distinct entries** (FAIL → STOP DELIVERY)
@@ -1292,19 +1295,30 @@ Many reports fail because Phase E ("Add Appendices & Finalize") gets rushed when
 
 **⚠️ THIRD-MOST COMMON MISTAKE: SOURCES ONLY IN THE APPENDIX, NOT INLINE**
 
-Readers of an institutional research report do not flip to a back-matter Sources page to verify each claim — they expect a clickable citation right next to the claim. A DOCX that has a 20-entry Sources & References appendix but zero hyperlinks in the body fails the "where's the source for *this* number" test for every reader on every paragraph. **The skill counts inline hyperlinks in the body separately from appendix hyperlinks and fails delivery if the body has fewer than 30 distinct inline citations.**
+Readers of an institutional research report do not flip to a back-matter Sources page to verify each claim — they expect a clickable citation right next to the claim. The user's explicit trust standard: **"for each paragraph, I hope there is citation, otherwise I don't trust the paragraph."** A DOCX that has a 20-entry Sources & References appendix but zero hyperlinks in the body fails the "where's the source for *this* number" test on every paragraph.
 
-**Embed citations while writing each phase, not as a retrofit.** As you add a paragraph in Phase B/C/D below, end every substantive sentence-ending claim with `(来源: [hyperlinked label](rId))` — or `(Source: [label](rId))` for English reports — re-using the rIds defined in the Phase E appendix. The label is the same short name used in the appendix (e.g. "FY2025 6-K", "20-F", "Yole Group", "Yahoo HSAI"). Render in 8pt italic gray so the citation doesn't visually disrupt the paragraph but the hyperlink remains clickable.
+**The skill enforces paragraph-level citation coverage.** Body inline hyperlinks are counted separately from appendix hyperlinks. Delivery fails if the body has fewer than **150 distinct inline `<w:hyperlink>` elements** OR if any substantive paragraph (≥40 chars, not a heading/list marker) lacks a citation.
 
-**Where citations are NOT optional:**
-- Every page-1 investment-summary bullet (4 bullets × ≥1 citation each = 4 minimum)
-- Every opening sentence of an investment-thesis pillar (4-5 pillars × ≥1 citation each)
+**Embed citations while writing each phase, not as a retrofit.** As you add a paragraph in Phase B/C/D below, end every substantive sentence-ending claim with a clickable citation, re-using the rIds defined in the Phase E appendix:
+
+- **Factual claim:** `(来源: [短标签](rId))` — e.g. `(来源: [FY2025 6-K](rId45))`
+- **Forward-looking model projection:** `(来源:本报告模型估算)` — non-hyperlinked label, honest about internal estimates. Do not pretend an external source backs an analyst projection.
+- **Figure caption:** append `(外部源: [Link 1] / [Link 2])` with 1-2 most relevant external sources. Chart source lines baked into PNG images don't satisfy the click-to-verify test — the caption paragraph must carry the clickable links.
+
+Render in 8pt italic so citations don't visually disrupt the paragraph: framing text gray (`#666666`), hyperlinks blue (`#0563C1`, underlined).
+
+**Where citations are NOT optional (zero tolerance):**
+- Every page-1 investment-summary bullet (4 bullets × ≥1 citation each)
+- Every paragraph in the investment thesis pillars
 - Every financial-metric statement in Historical Performance and Projection Assumptions (revenue, margin, FCF, EPS, growth rate, etc.)
-- Every peer comparison (Robosense / Ouster / Innoviz / etc.) — uses peer's Yahoo Finance rId
+- Every peer comparison (Robosense / Ouster / Innoviz / Aeva / Luminar / Mobileye / etc.) — uses peer's Yahoo Finance rId
 - Every risk paragraph in the Risk Assessment section
 - Every market-data point in Valuation Methodology (TTM multiple, peer median, terminal growth justification)
+- Every qualitative analysis paragraph (industry trend, competitive positioning, management assessment) — cite the 20-F, IR materials, or industry research that supports the framing
+- **Every figure caption** (`图 N:` / `Figure N:`) — append `(外部源: …)` with hyperlinks
+- **Every table** — final row has clickable source hyperlink, not plain text
 
-Going through that list yields 30+ paragraphs in a 30-50 page report — enough to clear the threshold without inventing citations for non-claim filler.
+A 30-50 page report has roughly 100-150 substantive paragraphs plus 25-35 figure captions plus 12-20 tables. Cite all of them and you land at 150-200 inline hyperlinks — above the threshold.
 
 1. **Rewriting Task 1 content**: DO NOT rewrite the 6-8K words from Task 1. Use almost verbatim - just reformat and add charts. Focus writing effort on quantitative sections (projections, scenarios, valuation).
 2. **Sparse pages**: Every page must have BOTH text AND visuals. Target 60-80% page density. Insert charts every 200-300 words.

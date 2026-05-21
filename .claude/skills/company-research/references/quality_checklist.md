@@ -4,7 +4,8 @@
 - Each section meets its minimum word-count target (see `report_structure.md`).
 - Analysis is substantive, not just descriptive.
 - Specific examples and quantitative data, not generic statements.
-- Sources cited **inline** throughout the body, not only at the end (see `citations.md`).
+- Sources cited **inline at the paragraph level** — every substantive paragraph carries at least one inline markdown-link citation, not just one per section (see `citations.md`).
+- **Pre-submit citation count check:** `grep -oE '\[[^]]+\]\(http[^)]+\)' <report>.md | wc -l` should yield ≥40 for a 6,000–10,000 word report. Reports below the threshold have unsourced paragraphs — find and cite them before submitting.
 - Objectivity and balance.
 
 ## Management Bios

@@ -79,7 +79,11 @@ If the user gives no explicit instruction, fall back to the auto-rule above. If 
 
 ## Citations
 
+**Paragraph-level citation coverage is the standard.** Every substantive paragraph — any paragraph making a factual, quantitative, or external-source claim — must contain at least one inline markdown-link citation. The user's stated trust standard: *"for each paragraph, I hope there is citation, otherwise I don't trust the paragraph."* This includes qualitative analysis paragraphs (industry framing, competitive positioning, management assessment) — cite the 10-K / 年度报告 / Yuho section, the earnings transcript, or the industry research that supports the framing.
+
 Every inline citation is a **clickable markdown link to the real source URL** — `[Title in original language](https://real-url)` — never a bare `(Source: ...)` parenthetical. Link titles preserve the original language (`年度报告`, `10-K`, `決算短信`, `사업보고서`); URLs are canonical permalinks (the actual SEC EDGAR document URL, the specific cninfo PDF, the article permalink — not homepages). No fabricated URLs — if you cannot find the real link, say so inline.
+
+**Density target: ≥40 inline citations across the body of a 6,000–10,000 word report.** Reports landing under 40 have insufficient sourcing — go back and cite uncited paragraphs before submitting.
 
 **Prefer recent web sources.** For non-filing web citations (news, industry reports, third-party rankings, analyst notes), default to sources from the **last 12 months**. Discard older web sources unless they're founding/historical facts or still-authoritative landmark research. Always include the publication date in the link title so vintage is visible: `[Reuters, 2025-08-12](https://...)`.
 
