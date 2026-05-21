@@ -1,5 +1,7 @@
 # Financial Agent — Architecture Overview
 
+> **Looking for database schemas?** See [DATABASE.md](DATABASE.md) — single source of truth for every SQLite file under `db/`, its owner module, tables, and key columns.
+
 ## Entry Point
 
 **`main.py`** — Unified Flask app on port 5001 (default). Registers these blueprints:
