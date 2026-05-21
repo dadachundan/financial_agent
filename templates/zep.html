@@ -178,21 +178,8 @@
 <!-- ── Stats bar ── -->
 <div id="statsBar">
   <span>📊</span>
-  <span><span class="stat-pill" id="statNodes">–</span> entities</span>
+  <span><span class="stat-pill" id="statNodes">–</span> companies</span>
   <span><span class="stat-pill" id="statEdges">–</span> relations</span>
-  <span><span class="stat-pill" id="statEpisodes">–</span> docs</span>
-  <span><span class="stat-pill" id="statCommunities">–</span> communities</span>
-  <span class="ms-auto d-flex gap-1 flex-wrap">
-    <button class="btn btn-sm btn-outline-primary" onclick="loadEntities()">Browse Entities</button>
-    <button class="btn btn-sm btn-outline-info" onclick="loadCommunities(true)">Browse Communities</button>
-    <button class="btn btn-sm btn-outline-success" onclick="fetchNewPdfs()">⬆ Index</button>
-    <button class="btn btn-sm btn-outline-primary" onclick="document.getElementById('pdfFileInput').click()">📄 Upload</button>
-    <input type="file" id="pdfFileInput" accept=".pdf,.html,.htm" style="display:none" onchange="uploadPdf(this)">
-    <button class="btn btn-sm btn-outline-secondary" onclick="openAddEdge()" title="Manually add a relationship between two entities">＋ Edge</button>
-    <button class="btn btn-sm btn-outline-secondary" onclick="syncMirror()" title="Re-sync UI from graph DB (use after interrupted ingest)">🔄 Sync</button>
-    <button class="btn btn-sm btn-outline-secondary" onclick="cleanPersons()" title="Use AI to find and remove person names from entities">🧹 Clean</button>
-    <button class="btn btn-sm btn-outline-danger" onclick="clearGraph()">🗑 Clear</button>
-  </span>
 </div>
 
 <!-- ── Market-cap range slider ── -->
@@ -250,20 +237,6 @@
     <div id="graphPanel">
       <div id="graphNet"></div>
       <div id="graphInfo" style="display:none;position:absolute;top:8px;left:8px;z-index:10"></div>
-      <!-- Floating action bar when 2 nodes are selected -->
-      <div id="nodePairBar" style="display:none;position:absolute;bottom:44px;left:50%;
-           transform:translateX(-50%);z-index:20;background:#fff;border:1px solid #dee2e6;
-           border-radius:10px;padding:8px 14px;box-shadow:0 4px 16px rgba(0,0,0,.15);
-           align-items:center;gap:10px;white-space:nowrap">
-        <span id="nodePairLabel" style="font-size:.8rem;color:#495057;max-width:280px;
-              overflow:hidden;text-overflow:ellipsis"></span>
-        <button class="btn btn-sm btn-warning py-0 px-2" style="font-size:.8rem"
-                onclick="openMergeFromBar()">⇄ Merge</button>
-        <button class="btn btn-sm btn-primary py-0 px-2" style="font-size:.8rem"
-                onclick="openEdgeFromBar()">＋ Edge</button>
-        <button style="background:none;border:none;color:#adb5bd;font-size:1rem;cursor:pointer;padding:0 2px"
-                onclick="hideNodePairBar(); _network && _network.unselectAll()">×</button>
-      </div>
       <div id="graphFooter" style="display:flex;align-items:center;justify-content:space-between">
         <span id="graphFooterText">Loading graph…</span>
         <button onclick="if(_network)_network.fit({animation:{duration:400,easingFunction:'easeInOutQuad'}})"
@@ -282,85 +255,6 @@
       Search for any company, technology, or relationship across all your research PDFs.
     </div>
     <div id="resultsList"></div>
-
-    <!-- Entity browser card -->
-    <div class="card mb-2" id="entityCard" style="display:none">
-      <div class="card-header d-flex justify-content-between align-items-center py-2">
-        <span style="font-size:.85rem;font-weight:600">All Entities</span>
-        <button class="btn-close btn-sm" onclick="document.getElementById('entityCard').style.display='none'"></button>
-      </div>
-      <div id="entityList" class="card-body p-0"></div>
-      <div class="card-footer py-1">
-        <button class="btn btn-sm btn-link" id="loadMoreEntities" onclick="loadMoreEntities()" style="display:none">
-          Load more…
-        </button>
-      </div>
-    </div>
-
-    <!-- Community browser card -->
-    <div class="card mb-2" id="communityCard" style="display:none">
-      <div class="card-header d-flex justify-content-between align-items-center py-2">
-        <span style="font-size:.85rem;font-weight:600">Communities</span>
-        <button class="btn-close btn-sm" onclick="document.getElementById('communityCard').style.display='none'"></button>
-      </div>
-      <div id="communityList" class="card-body p-0" style="max-height:300px;overflow-y:auto"></div>
-      <div class="card-footer py-1 d-flex gap-2 flex-wrap">
-        <button class="btn btn-sm btn-link" id="loadMoreComBtn" onclick="loadMoreCommunities()" style="display:none">
-          Load more…
-        </button>
-        <button class="btn btn-sm btn-link text-warning" onclick="showUnassignedEntities()">
-          ⚠ Unassigned
-        </button>
-        <button class="btn btn-sm btn-link text-danger" onclick="deleteSingletonCommunities()" title="Delete all communities with only 1 member">
-          🗑 Delete singles
-        </button>
-      </div>
-    </div>
-
-    <!-- Community detail card -->
-    <div class="card mb-2" id="communityDetailCard" style="display:none">
-      <div class="card-header d-flex justify-content-between align-items-center py-2">
-        <span id="communityDetailTitle" style="font-size:.85rem;font-weight:600">Community</span>
-        <div class="d-flex gap-1 align-items-center">
-          <button class="btn btn-sm btn-outline-primary py-0 px-1" style="font-size:.72rem"
-                  id="communityFilterBtn" onclick="filterGraphToCommunity()" title="Show only this community in the graph">⬡ Filter</button>
-          <button class="btn btn-sm btn-outline-secondary py-0 px-1" style="font-size:.72rem;display:none"
-                  id="communityFilterClearBtn" onclick="clearGraphFilter()" title="Show full graph again">✕ Clear</button>
-          <button class="btn btn-sm btn-outline-danger py-0 px-1" style="font-size:.72rem"
-                  id="communityDeleteBtn" onclick="deleteCommunity()">🗑</button>
-          <button class="btn btn-sm btn-link py-0" onclick="showCommunityBrowser()"
-                  style="font-size:.78rem;text-decoration:none">← Back</button>
-        </div>
-      </div>
-      <div class="card-body p-2">
-        <p id="communityDetailSummary" class="text-muted mb-2" style="font-size:.78rem"></p>
-        <div id="communityDetailMembers" style="max-height:260px;overflow-y:auto"></div>
-      </div>
-    </div>
-
-    <!-- Unassigned entities card -->
-    <div class="card mb-2" id="unassignedCard" style="display:none">
-      <div class="card-header d-flex justify-content-between align-items-center py-2">
-        <span style="font-size:.85rem;font-weight:600">⚠ Unassigned Entities</span>
-        <button class="btn btn-sm btn-link py-0" onclick="showCommunityBrowser()"
-                style="font-size:.78rem;text-decoration:none">← Back</button>
-      </div>
-      <div id="unassignedList" class="card-body p-0" style="max-height:320px;overflow-y:auto"></div>
-    </div>
-
-    <!-- Ingest / upload card -->
-    <div class="card mb-2" id="ingestCard" style="display:none">
-      <div class="card-header d-flex justify-content-between align-items-center py-2">
-        <span id="ingestCardTitle" style="font-size:.85rem;font-weight:600">Index New Documents</span>
-        <button class="btn-close btn-sm" onclick="document.getElementById('ingestCard').style.display='none'"></button>
-      </div>
-      <div class="card-body p-2">
-        <div id="ingestLog"></div>
-        <button id="ingestBtn" class="btn btn-sm btn-success mt-2" onclick="startIngest()">
-          Start Indexing
-        </button>
-      </div>
-    </div>
 
   </div><!-- /rightPanel -->
 </div><!-- /outerWrap -->
@@ -850,40 +744,12 @@ function starWidget(uuid, currentRating) {
 }
 
 // ── Stats ──────────────────────────────────────────────────────────────────
-let _statsRetryTimer = null;
-
 async function loadStats() {
   try {
     const r = await fetch('/stats');
     const d = await r.json();
-
-    if (d.error && d.error.includes('lock')) {
-      document.getElementById('statNodes').textContent    = '⏳';
-      document.getElementById('statEdges').textContent    = '⏳';
-      document.getElementById('statEpisodes').textContent = '⏳';
-      if (!_statsRetryTimer) {
-        _statsRetryTimer = setInterval(async () => {
-          try {
-            const r2 = await fetch('/stats');
-            const d2 = await r2.json();
-            if (!d2.error || !d2.error.includes('lock')) {
-              clearInterval(_statsRetryTimer); _statsRetryTimer = null;
-              document.getElementById('statNodes').textContent       = d2.node_count       ?? '–';
-              document.getElementById('statEdges').textContent       = d2.edge_count       ?? '–';
-              document.getElementById('statEpisodes').textContent    = d2.episode_count    ?? '–';
-              document.getElementById('statCommunities').textContent = d2.community_count  ?? '–';
-            }
-          } catch(_) {}
-        }, 5000);
-      }
-      return;
-    }
-
-    if (_statsRetryTimer) { clearInterval(_statsRetryTimer); _statsRetryTimer = null; }
-    document.getElementById('statNodes').textContent       = d.node_count       ?? '–';
-    document.getElementById('statEdges').textContent       = d.edge_count       ?? '–';
-    document.getElementById('statEpisodes').textContent    = d.episode_count    ?? '–';
-    document.getElementById('statCommunities').textContent = d.community_count  ?? '–';
+    document.getElementById('statNodes').textContent = d.node_count ?? '–';
+    document.getElementById('statEdges').textContent = d.edge_count ?? '–';
   } catch(_) {}
 }
 
@@ -1543,16 +1409,17 @@ async function initGraph() {
         nodeMap.set(e.target_node_uuid, { uuid: e.target_node_uuid, name: e.target_node_name || e.target_node_uuid });
     });
 
-    // Log-scaled node sizes: each 10x of market cap adds ~12 to the radius, so
-    // mega-caps stand out without dwarfing the small-caps entirely. Companies
-    // without a market cap (private / failed lookup) get the minimum size.
-    const MIN_SIZE = 10, MAX_SIZE = 60;
+    // Power-curve node sizes: r = MIN + (mc / $6T)^0.35 × (MAX - MIN). Pulls
+    // mega-caps apart visually (NVIDIA→~67, Apple→~64, MSFT→~57, TSMC→~52,
+    // Tesla→~48, Meta→~47) while keeping mid- and small-caps visible.
+    // Companies without a market cap fall back to MIN_SIZE.
+    const MIN_SIZE = 10, MAX_SIZE = 70, SIZE_TOP = 6e12;
     function sizeFor(uuid) {
       const ent = _entityByUuid[uuid];
       const mc = ent && ent.market_cap_usd;
       if (!mc || mc <= 0) return MIN_SIZE;
-      const s = (Math.log10(mc) - 8) * 12;
-      return Math.max(MIN_SIZE, Math.min(MAX_SIZE, s));
+      const t = Math.pow(Math.min(mc / SIZE_TOP, 1), 0.35);
+      return MIN_SIZE + t * (MAX_SIZE - MIN_SIZE);
     }
 
     // Fetch community assignments to color nodes
@@ -1600,13 +1467,20 @@ async function initGraph() {
     _edgeDataMap = {};
     allEdges.forEach(e => { _edgeDataMap[e.uuid] = e; });
 
-    _visEdges = new vis.DataSet(allEdges.map(e => ({
+    // COMPETES_WITH is symmetric — render it as a plain line (no arrow heads).
+    // SUPPLIES is directional and keeps its arrowhead from the global options.
+    _visEdges = new vis.DataSet(allEdges.map(e => {
+      const competes = e.name === 'COMPETES_WITH';
+      return {
         id:    e.uuid,
         from:  e.source_node_uuid,
         to:    e.target_node_uuid,
         label: e.name || '',
         title: e.fact ? escHtml(e.fact.slice(0, 120)) : '',
-      })));
+        arrows: competes ? { to: { enabled: false } } : undefined,
+        dashes: competes,
+      };
+    }));
 
     const options = {
       nodes: {
@@ -1628,28 +1502,37 @@ async function initGraph() {
         smooth: { type: 'continuous' },
       },
       physics: {
-        stabilization: { iterations: 250, fit: true },
-        barnesHut: { gravitationalConstant: -8000, springLength: 130, damping: 0.2 },
+        // Looser layout — wider repulsion + longer springs reduce crowding so
+        // mega-cap clusters don't pile on top of each other.
+        stabilization: { iterations: 300, fit: true, updateInterval: 25 },
+        barnesHut: {
+          gravitationalConstant: -18000,
+          centralGravity: 0.15,
+          springLength: 200,
+          springConstant: 0.04,
+          damping: 0.35,
+          avoidOverlap: 0.4,
+        },
       },
-      interaction: { hover: true, tooltipDelay: 150, navigationButtons: true, multiselect: true },
+      interaction: { hover: true, tooltipDelay: 150, navigationButtons: true,
+                     multiselect: true, dragNodes: true },
     };
 
     _network = new vis.Network(document.getElementById('graphNet'), { nodes: _visNodes, edges: _visEdges }, options);
 
+    // Once the initial layout has settled, freeze physics so a user drag
+    // places the node exactly where they dropped it (instead of springing
+    // back into the cluster).
+    _network.once('stabilizationIterationsDone', () => {
+      _network.setOptions({ physics: { enabled: false } });
+    });
+
     _network.on('click', params => {
-      const sel = _network.getSelectedNodes();
-      if (sel.length === 2) {
-        // Two nodes selected — show the pair action bar
-        const nA = _visNodes.get(sel[0]), nB = _visNodes.get(sel[1]);
-        if (nA && nB) showNodePairBar(sel[0], nA.label, sel[1], nB.label);
-      } else {
-        hideNodePairBar();
-        if (params.nodes.length > 0) {
-          const n = _visNodes.get(params.nodes[0]);
-          if (n) clickEntity(params.nodes[0], n.label);
-        } else if (params.edges.length > 0) {
-          clickGraphEdge(params.edges[0]);
-        }
+      if (params.nodes.length > 0) {
+        const n = _visNodes.get(params.nodes[0]);
+        if (n) clickEntity(params.nodes[0], n.label);
+      } else if (params.edges.length > 0) {
+        clickGraphEdge(params.edges[0]);
       }
     });
 
@@ -2061,137 +1944,6 @@ async function submitAddEdge() {
   });
 })();
 </script>
-
-<!-- Assign to community modal -->
-<div class="modal fade" id="assignCommunityModal" tabindex="-1">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header py-2">
-        <h6 class="modal-title mb-0">Assign to community</h6>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body p-2">
-        <p class="text-muted mb-2" style="font-size:.78rem">
-          Seed: <strong id="assignCommEntityName"></strong> — all connected entities will be assigned.
-        </p>
-        <!-- Community search filter -->
-        <input id="assignCommSearch" type="text" class="form-control form-control-sm mb-1"
-               placeholder="Search communities…"
-               oninput="(() => {
-                 const q = this.value.toLowerCase();
-                 document.querySelectorAll('#assignCommList .assign-comm-row').forEach(r => {
-                   r.style.display = r.textContent.toLowerCase().includes(q) ? '' : 'none';
-                 });
-               })()">
-        <!-- Community picker list -->
-        <div id="assignCommList"
-             style="max-height:200px;overflow-y:auto;border:1px solid #dee2e6;border-radius:6px;padding:4px 6px"></div>
-        <!-- New community name row (shown when "Create new" is selected) -->
-        <div id="assignCommNewRow" style="display:none;margin-top:8px">
-          <input id="assignCommNewName" type="text" class="form-control form-control-sm"
-                 placeholder="New community name"
-                 onkeydown="if(event.key==='Enter') submitAssignCommunity()">
-        </div>
-        <div id="assignCommResult" class="mt-2" style="font-size:.78rem"></div>
-      </div>
-      <div class="modal-footer py-2">
-        <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <button id="assignCommSubmitBtn" class="btn btn-sm btn-primary" onclick="submitAssignCommunity()">Assign</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Merge entities modal -->
-<div class="modal fade" id="mergeModal" tabindex="-1">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header py-2">
-        <h6 class="modal-title mb-0">⇄ Merge entities</h6>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body p-2">
-        <p class="text-muted mb-2" style="font-size:.78rem">
-          Entity A: <strong id="mergeSourceName"></strong>
-        </p>
-        <!-- Which to keep -->
-        <div class="mb-2" style="font-size:.8rem">
-          <strong>Keep:</strong>&nbsp;
-          <label class="me-3"><input type="radio" name="mergeKeep" value="source" checked> A</label>
-          <label><input type="radio" name="mergeKeep" value="target"> B (the one you pick)</label>
-        </div>
-        <!-- Entity B picker (hidden when pre-filled from graph selection) -->
-        <div id="mergeSearchRow">
-          <div class="mb-1" style="font-size:.78rem;color:#6c757d">Entity B — search &amp; select:</div>
-          <input id="mergeTargetSearch" type="text" class="form-control form-control-sm"
-                 placeholder="Search for entity B…">
-          <div id="mergeTargetPick" class="entity-pick-results"></div>
-        </div>
-        <!-- Pre-filled target (shown when both nodes selected in graph) -->
-        <div id="mergePreTarget" style="display:none" class="mb-2">
-          <span style="font-size:.78rem;color:#6c757d">Entity B: </span>
-          <strong id="mergePreTargetName" style="font-size:.82rem"></strong>
-        </div>
-        <div id="mergeResult" class="mt-2" style="font-size:.78rem"></div>
-      </div>
-      <div class="modal-footer py-2">
-        <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <button id="mergeSubmitBtn" class="btn btn-sm btn-warning" onclick="submitMerge()" disabled>Merge</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Add edge modal -->
-<div class="modal fade" id="addEdgeModal" tabindex="-1">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header py-2">
-        <h6 class="modal-title mb-0">＋ Add relationship</h6>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body p-2">
-        <!-- Source entity -->
-        <div class="mb-2">
-          <div style="font-size:.78rem;color:#6c757d">Source entity</div>
-          <div id="edgeSrcLabel" class="fw-semibold" style="font-size:.82rem;min-height:1.2em"></div>
-          <div id="edgeSrcSearchRow">
-            <input id="edgeSrcSearch" type="text" class="form-control form-control-sm mt-1"
-                   placeholder="Search source entity…">
-            <div id="edgeSrcPick" class="entity-pick-results"></div>
-          </div>
-        </div>
-        <!-- Relation name -->
-        <div class="mb-2">
-          <div style="font-size:.78rem;color:#6c757d">Relationship type</div>
-          <input id="edgeRelName" type="text" class="form-control form-control-sm"
-                 placeholder="e.g. PARTNERS_WITH, DEVELOPS, OWNS…">
-        </div>
-        <!-- Fact -->
-        <div class="mb-2">
-          <div style="font-size:.78rem;color:#6c757d">Fact / description</div>
-          <textarea id="edgeFact" class="form-control form-control-sm" rows="2"
-                    placeholder="One-sentence fact describing the relationship"></textarea>
-        </div>
-        <!-- Target entity -->
-        <div class="mb-1">
-          <div style="font-size:.78rem;color:#6c757d">Target entity</div>
-          <div id="edgeTgtLabel" class="fw-semibold" style="font-size:.82rem;display:none"></div>
-          <div id="edgeTgtSearchRow">
-            <input id="edgeTgtSearch" type="text" class="form-control form-control-sm"
-                   placeholder="Search target entity…">
-            <div id="edgeTgtPick" class="entity-pick-results"></div>
-          </div>
-        </div>
-        <div id="edgeResult" class="mt-2" style="font-size:.78rem"></div>
-      </div>
-      <div class="modal-footer py-2">
-        <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <button id="edgeSubmitBtn" class="btn btn-sm btn-primary" onclick="submitAddEdge()">Save</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 </body>
 </html>

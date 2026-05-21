@@ -123,6 +123,25 @@ DIR_TICKER_OVERRIDES = {
 PRIVATE_DIRS = {"Agibot", "Anpeilong", "Fourier", "Unitree"}
 
 
+def _find_research_doc(company_dir: Path) -> Path | None:
+    """Return the most recent *Research_Document_*.md inside a company directory,
+    or None if none exists. Preference order:
+        1. English `*_Research_Document_<date>.md`
+        2. Chinese `*_Research_Document_<date>_zh.md`
+        3. Any other `.md` file
+    """
+    if not company_dir.is_dir():
+        return None
+    en = sorted(company_dir.glob("*_Research_Document_*[!_zh].md"))
+    if en:
+        return en[-1]
+    zh = sorted(company_dir.glob("*_Research_Document_*_zh.md"))
+    if zh:
+        return zh[-1]
+    other = sorted(company_dir.glob("*.md"))
+    return other[-1] if other else None
+
+
 def parse_dir(name: str) -> tuple[str, list[str]]:
     """Return (display_name, [tickers]) from a company directory name."""
     tickers: list[str] = []
@@ -144,9 +163,17 @@ def collect_companies() -> list[dict]:
     private: list[dict] = []
 
     for dir_name in sorted(p.name for p in REPORTS_DIR.iterdir() if p.is_dir()):
+        # Find the primary research markdown for this directory (used as the
+        # default source URL for every edge originating from this company).
+        report_md = _find_research_doc(REPORTS_DIR / dir_name)
+        report_rel = (
+            f"company/{dir_name}/{report_md.name}" if report_md else None
+        )
+
         # Hard-coded private dirs (no ticker at all)
         if dir_name in PRIVATE_DIRS:
-            private.append({"display": dir_name, "cn": "", "tickers": []})
+            private.append({"display": dir_name, "cn": "", "tickers": [],
+                            "report_rel": report_rel})
             continue
 
         # Hard-coded override → drop or relocate ticker
@@ -159,7 +186,8 @@ def collect_companies() -> list[dict]:
         else:
             display, tickers = parse_dir(dir_name)
             if not tickers:
-                private.append({"display": display, "cn": "", "tickers": []})
+                private.append({"display": display, "cn": "", "tickers": [],
+                                "report_rel": report_rel})
                 continue
 
         primary = tickers[0]
@@ -171,6 +199,8 @@ def collect_companies() -> list[dict]:
                 existing["display"] = display
             elif is_chinese(display) and not is_chinese(existing["display"]):
                 existing["cn"] = display
+            if report_rel and not existing.get("report_rel"):
+                existing["report_rel"] = report_rel
             # Union of tickers
             for t in tickers:
                 if t not in existing["tickers"]:
@@ -178,7 +208,8 @@ def collect_companies() -> list[dict]:
         else:
             cn = display if is_chinese(display) else ""
             en = display if not is_chinese(display) else EN_BY_CN.get(display, display)
-            by_ticker[primary] = {"display": en, "cn": cn, "tickers": list(tickers)}
+            by_ticker[primary] = {"display": en, "cn": cn, "tickers": list(tickers),
+                                   "report_rel": report_rel}
 
     listed = list(by_ticker.values())
     all_companies = listed + private
@@ -697,19 +728,63 @@ def insert_nodes(conn: sqlite3.Connection, companies: list[dict]) -> dict[str, s
     return name_to_uuid
 
 
+def insert_episodes(conn: sqlite3.Connection,
+                    companies: list[dict]) -> dict[str, str]:
+    """Create one episode per company that has a research markdown.
+
+    Returns {display_name → episode_uuid}. The mirror's `_episode_url` helper
+    turns names that start with `mdreport_` into `/reports/view/<rel-path>`,
+    which is the route exposed by reports_viewer.py.
+    """
+    by_display: dict[str, str] = {}
+    rows = []
+    for c in companies:
+        rel = c.get("report_rel")
+        if not rel:
+            continue
+        ep_uuid = str(uuid.uuid4())
+        ep_name = f"mdreport_{rel}"
+        desc    = f"Research doc — {c['display']}"
+        rows.append((ep_uuid, ep_name, desc))
+        by_display[c["display"]] = ep_uuid
+    if rows:
+        conn.executemany(
+            "INSERT INTO episodes (uuid, name, source_desc) VALUES (?,?,?)",
+            rows,
+        )
+        conn.commit()
+    return by_display
+
+
 def insert_edges(conn: sqlite3.Connection,
                  edges: list[tuple[str, str, str]],
                  name_to_uuid: dict[str, str],
-                 company_name_by_display: dict[str, str]) -> int:
-    """Insert dedup'd edges into the mirror. Returns count written."""
-    seen: set[tuple[str, str, str]] = set()
+                 company_name_by_display: dict[str, str],
+                 ep_by_display: dict[str, str]) -> int:
+    """Insert dedup'd edges into the mirror. Returns count written.
+
+    COMPETES_WITH is symmetric — dedup it as an unordered pair so that
+    `(A, COMPETES_WITH, B)` and `(B, COMPETES_WITH, A)` collapse to a single
+    row. SUPPLIES is directional and stays as-is.
+
+    Each edge stores `episodes_json = [src_episode_uuid, tgt_episode_uuid]`
+    (omitting either if the company has no research doc) so the UI can render
+    clickable source badges that open the research markdown.
+    """
+    seen: set[tuple] = set()
     rows = []
     for src, kind, tgt in edges:
         if src == tgt:
             continue
         if src not in name_to_uuid or tgt not in name_to_uuid:
             continue
-        key = (src, kind, tgt)
+        if kind == "COMPETES_WITH":
+            key = (kind, *sorted([src, tgt]))
+            # Canonicalise the row direction so the stored src/tgt are
+            # deterministic (lexicographic) — keeps the data tidy.
+            src, tgt = sorted([src, tgt])
+        else:
+            key = (src, kind, tgt)
         if key in seen:
             continue
         seen.add(key)
@@ -717,13 +792,15 @@ def insert_edges(conn: sqlite3.Connection,
         sn = company_name_by_display[src]
         tn = company_name_by_display[tgt]
         fact = f"{sn} {'competes with' if kind == 'COMPETES_WITH' else 'supplies'} {tn}"
+        ep_list = [ep for ep in (ep_by_display.get(src), ep_by_display.get(tgt)) if ep]
         rows.append((eu, kind, fact,
                      name_to_uuid[src], sn,
-                     name_to_uuid[tgt], tn))
+                     name_to_uuid[tgt], tn,
+                     json.dumps(ep_list)))
     if rows:
         conn.executemany(
             "INSERT INTO edges (uuid, name, fact, src_uuid, src_name, "
-            "tgt_uuid, tgt_name) VALUES (?,?,?,?,?,?,?)",
+            "tgt_uuid, tgt_name, episodes_json) VALUES (?,?,?,?,?,?,?,?)",
             rows,
         )
         conn.commit()
@@ -772,25 +849,20 @@ def main() -> int:
             missing = "src" if s not in canonical_names else "tgt"
             print(f"  - skip {s} -{k}-> {t}   (missing {missing})")
 
-    n = insert_edges(conn, all_edges, name_to_uuid, full_label_by_display)
+    # Register one episode per company that has a research markdown — these
+    # become the source badges shown on every edge.
+    ep_by_display = insert_episodes(conn, companies)
+    print(f"[insert] {len(ep_by_display)} research-doc episodes "
+          f"(out of {len(companies)} companies)")
+
+    n = insert_edges(conn, all_edges, name_to_uuid, full_label_by_display,
+                     ep_by_display)
     print(f"[insert] {n} edges (after dedup)")
 
-    # Sentinel episode — the mirror's first-request backfill check treats an
-    # empty episodes table (or edges with no episodes attached) as
-    # "uninitialised" and tries to re-pull from KuzuDB. An explicit row, plus
-    # tagging every edge with that episode, keeps the check happy across
-    # server restarts even when KuzuDB is empty.
-    sentinel_uuid = str(uuid.uuid4())
-    conn.execute(
-        "INSERT INTO episodes (uuid, name, source_desc) VALUES (?,?,?)",
-        (sentinel_uuid, "company_seed",
-         "Synthetic episode from oneoff/seed_company_graph.py"),
-    )
-    conn.execute(
-        "UPDATE edges SET episodes_json = ?",
-        (json.dumps([sentinel_uuid]),),
-    )
-    conn.commit()
+    n_with_src = conn.execute(
+        "SELECT COUNT(*) FROM edges WHERE episodes_json != '[]'"
+    ).fetchone()[0]
+    print(f"[insert] {n_with_src}/{n} edges have at least one source URL")
 
     # Final stats
     e_count = conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]

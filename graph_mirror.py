@@ -364,7 +364,13 @@ def update_edge(conn: sqlite3.Connection, uuid: str,
 
 
 def _episode_url(name: str) -> Optional[str]:
-    """Convert episode name → viewer URL, or None if unknown format."""
+    """Convert episode name → viewer URL, or None if unknown format.
+
+    Supported name prefixes:
+      pdf_<file_id>        → ZSXQ PDF viewer
+      report_<int>         → SEC filing viewer
+      mdreport_<rel-path>  → markdown research doc viewer (reports_viewer.py)
+    """
     if name.startswith("pdf_"):
         return f"/zsxq/pdf/{name[4:]}"
     if name.startswith("report_"):
@@ -373,6 +379,8 @@ def _episode_url(name: str) -> Optional[str]:
             return f"/sec/file/{name[7:]}"
         except ValueError:
             pass
+    if name.startswith("mdreport_"):
+        return f"/reports/view/{name[len('mdreport_'):]}"
     return None
 
 
