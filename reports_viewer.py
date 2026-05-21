@@ -286,13 +286,25 @@ __MCW_CSS__
          border:1px solid #cfd6df;color:#0366d6;text-decoration:none;margin-right:.25rem}
     .lang-link:hover{background:#eef4fb;text-decoration:none}
     .lang-link.docx{background:#fff0d8;border-color:#e0b170;color:#8a5400}
-    .grid-wrap{background:#fff;border:1px solid #e3e6eb;border-radius:8px;overflow:hidden;
+    /* Horizontal scroll on narrow viewports (tablet) — the table has 9
+       columns and won't fit under ~1100 px. overflow-x:auto lets users
+       drag the table right; the first column is sticky so they always
+       see which row they're on. */
+    .grid-wrap{background:#fff;border:1px solid #e3e6eb;border-radius:8px;
+         overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;
          box-shadow:0 1px 2px rgba(0,0,0,.03)}
-    .page table{width:100%;border-collapse:collapse;margin:0}
+    .page table{width:100%;border-collapse:collapse;margin:0;min-width:1100px}
     .page th,.page td{text-align:left;padding:.5rem .7rem;border-bottom:1px solid #eef0f3;
          vertical-align:middle}
     .page tbody tr:hover{background:#fafbfc}
     .page tbody tr:last-child td{border-bottom:none}
+    /* Sticky first column ("Report" title) so it stays in view while you
+       scroll horizontally. Opaque background is required for sticky to
+       hide the cells underneath it during scroll. */
+    .page th:first-child,.page td:first-child{position:sticky;left:0;z-index:1;
+         background:#fff;box-shadow:1px 0 0 #eef0f3}
+    .page thead th:first-child{background:#fafbfc;z-index:2}
+    .page tbody tr:hover td:first-child{background:#fafbfc}
     .page th{font-size:.74rem;color:#5a5f66;font-weight:600;cursor:pointer;user-select:none;
          background:#fafbfc;border-bottom:1px solid #e3e6eb;text-transform:uppercase;letter-spacing:.04em}
     .page th .sort-ind{color:#bbb;font-size:.7rem;margin-left:.2rem}
