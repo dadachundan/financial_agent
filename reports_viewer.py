@@ -286,7 +286,17 @@ _INDEX_TMPL = r"""<!doctype html>
               data-date="{{ r.date }}"
               data-ts="{{ r.ts }}"
               data-has-docx="{{ '1' if r.langs.get('docx') else '0' }}">
-            <td><a class="title" href="{{ _base }}/view/{{ r.langs.get('en') or r.langs.get('zh') or '#' }}">{{ r.display }}</a></td>
+            <td>
+              {% if r.langs.get('docx') %}
+                <a class="title" href="{{ _base }}/view-docx/{{ r.langs['docx'] }}">{{ r.display }}</a>
+              {% elif r.langs.get('zh') %}
+                <a class="title" href="{{ _base }}/view/{{ r.langs['zh'] }}">{{ r.display }}</a>
+              {% elif r.langs.get('en') %}
+                <a class="title" href="{{ _base }}/view/{{ r.langs['en'] }}">{{ r.display }}</a>
+              {% else %}
+                <span class="title">{{ r.display }}</span>
+              {% endif %}
+            </td>
             <td class="ticker">{{ r.ticker }}</td>
             <td class="created">{{ r.created }}</td>
             <td>
