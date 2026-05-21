@@ -347,6 +347,7 @@ __URLPATCH__
           <option value="{{ b }}">{{ b }}</option>
         {% endfor %}
       </select>
+      <label><input type="checkbox" id="latestOnly" checked> Latest only</label>
       <label><input type="checkbox" id="onlyDocx"> DOCX only</label>
       <div class="spacer"></div>
       <button id="resetBtn" class="reset">Reset</button>
@@ -379,7 +380,8 @@ __URLPATCH__
               data-date="{{ r.date }}"
               data-ts="{{ r.ts }}"
               data-rating="{{ r.rating or 0 }}"
-              data-has-docx="{{ '1' if r.langs.get('docx') or r.langs.get('docx_zh') else '0' }}">
+              data-has-docx="{{ '1' if r.langs.get('docx') or r.langs.get('docx_zh') else '0' }}"
+              data-company-key="{{ r.company_key }}">
             <td>
               {% if r.langs.get('docx') %}
                 <a class="title" href="{{ _base }}/view-docx/{{ r.langs['docx'] }}">{{ r.display }}</a>
@@ -448,6 +450,7 @@ __URLPATCH__
       const sectorFilter = document.getElementById("sectorFilter");
       const bucketFilter = document.getElementById("bucketFilter");
       const onlyDocx = document.getElementById("onlyDocx");
+      const latestOnly = document.getElementById("latestOnly");
       const resetBtn = document.getElementById("resetBtn");
       const count = document.getElementById("count");
 
@@ -456,6 +459,21 @@ __URLPATCH__
         const s  = sectorFilter.value || "";
         const bk = bucketFilter.value || "";
         const dx = onlyDocx.checked;
+        const lo = latestOnly.checked;
+
+        // For each company_key, find the newest ts so we can suppress
+        // older siblings. Rows without a company_key (loose files in
+        // sector/, compare/, etc.) have no group and are never hidden.
+        const bestTs = new Map();
+        if (lo) {
+          for (const r of rows) {
+            const k = r.dataset.companyKey;
+            if (!k) continue;
+            const ts = Number(r.dataset.ts) || 0;
+            if (!bestTs.has(k) || ts > bestTs.get(k)) bestTs.set(k, ts);
+          }
+        }
+
         let visible = 0;
         for (const r of rows) {
           const hay = r.dataset.display + " " + r.dataset.ticker + " " + r.dataset.filename;
@@ -464,7 +482,12 @@ __URLPATCH__
           const matchS  = !s || (s === "__none__" ? rowSector === "" : rowSector === s);
           const matchBk = !bk || r.dataset.bucket === bk;
           const matchDx = !dx || r.dataset.hasDocx === "1";
-          const show = matchQ && matchS && matchBk && matchDx;
+          let matchLo = true;
+          if (lo) {
+            const k = r.dataset.companyKey;
+            if (k && Number(r.dataset.ts) < bestTs.get(k)) matchLo = false;
+          }
+          const show = matchQ && matchS && matchBk && matchDx && matchLo;
           r.style.display = show ? "" : "none";
           if (show) visible++;
         }
@@ -474,13 +497,17 @@ __URLPATCH__
       sectorFilter.addEventListener("change", applyFilter);
       bucketFilter.addEventListener("change", applyFilter);
       onlyDocx.addEventListener("change", applyFilter);
+      latestOnly.addEventListener("change", applyFilter);
       resetBtn.addEventListener("click", () => {
         filter.value = "";
         sectorFilter.value = "";
         bucketFilter.value = "";
         onlyDocx.checked = false;
+        latestOnly.checked = true;
         applyFilter();
       });
+      // "Latest only" defaults to checked — apply once on page load.
+      applyFilter();
 
       // Click-to-sort on headers (toggle asc/desc).
       let sortKey = "ts", sortDir = -1;  // newest first by default
@@ -667,6 +694,12 @@ def index():
         r["rating"] = ann.get("rating") or 0
         r["comment"] = ann.get("comment") or ""
         r["pk_enc"] = urllib.parse.quote(r["pair_key"], safe="")
+        # Group key for the "Latest only" toggle: rows under a per-entity
+        # subfolder (company/<Slug>/, unlisted/<Slug>/) collapse to the
+        # newest. Loose files (sector/foo.md, compare/foo.md) have no key
+        # and are always shown.
+        _parts = r["rel"].split("/")
+        r["company_key"] = f"{_parts[0]}/{_parts[1]}" if len(_parts) >= 3 else ""
 
     # Dropdown options — present every known sector and bucket plus any
     # extras we actually see in the data.
