@@ -171,11 +171,11 @@ def _scan() -> list[dict]:
         if existing is None:
             rows[key] = {
                 **meta,
-                "langs": {"docx": meta["rel"]},
+                "langs": {meta["lang"]: meta["rel"]},
                 "ts": ts,
             }
         else:
-            existing["langs"]["docx"] = meta["rel"]
+            existing["langs"][meta["lang"]] = meta["rel"]
             if ts > existing["ts"]:
                 existing["ts"] = ts
                 existing["created"] = meta["created"]
@@ -190,6 +190,15 @@ def _parse_docx(rel_path: Path) -> dict:
 
     parts = rel_path.parts
     bucket = parts[0] if len(parts) > 1 else "other"
+
+    # Strip ZH suffix first so the EN/ZH DOCX siblings collapse into one row
+    # (mirrors what _parse() does for .md files).
+    lang = "docx"
+    for suf in LANG_SUFFIXES:
+        if stem.endswith(suf):
+            lang = "docx_zh"
+            stem = stem[: -len(suf)]
+            break
 
     # Reuse the same pair_key normalization so DOCX collapses next to its sibling MD.
     norm = stem
@@ -221,7 +230,7 @@ def _parse_docx(rel_path: Path) -> dict:
         "ticker": ticker,
         "all_tickers": tickers,
         "date": date,
-        "lang": "docx",
+        "lang": lang,
         "pair_key": pair_key,
     }
 
@@ -358,10 +367,12 @@ __URLPATCH__
               data-date="{{ r.date }}"
               data-ts="{{ r.ts }}"
               data-rating="{{ r.rating or 0 }}"
-              data-has-docx="{{ '1' if r.langs.get('docx') else '0' }}">
+              data-has-docx="{{ '1' if r.langs.get('docx') or r.langs.get('docx_zh') else '0' }}">
             <td>
               {% if r.langs.get('docx') %}
                 <a class="title" href="{{ _base }}/view-docx/{{ r.langs['docx'] }}">{{ r.display }}</a>
+              {% elif r.langs.get('docx_zh') %}
+                <a class="title" href="{{ _base }}/view-docx/{{ r.langs['docx_zh'] }}">{{ r.display }}</a>
               {% elif r.langs.get('zh') %}
                 <a class="title" href="{{ _base }}/view/{{ r.langs['zh'] }}">{{ r.display }}</a>
               {% elif r.langs.get('en') %}
@@ -400,6 +411,9 @@ __URLPATCH__
               {% endif %}
               {% if r.langs.get('docx') %}
                 <a class="lang-link docx" href="{{ _base }}/view-docx/{{ r.langs['docx'] }}">DOCX</a>
+              {% endif %}
+              {% if r.langs.get('docx_zh') %}
+                <a class="lang-link docx" href="{{ _base }}/view-docx/{{ r.langs['docx_zh'] }}">DOCX ZH</a>
               {% endif %}
             </td>
           </tr>
