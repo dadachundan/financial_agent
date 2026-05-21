@@ -42,6 +42,15 @@ def _conn() -> sqlite3.Connection:
               PRIMARY KEY (ticker, fetch_date)
            )"""
     )
+    c.execute(
+        """CREATE TABLE IF NOT EXISTS fx_rates (
+              currency      TEXT NOT NULL,   -- ISO code (e.g. 'KRW')
+              fetch_date    TEXT NOT NULL,
+              units_per_usd REAL,            -- 1 USD = N units of `currency`
+              fetched_at    REAL NOT NULL,
+              PRIMARY KEY (currency, fetch_date)
+           )"""
+    )
     return c
 
 
@@ -185,6 +194,104 @@ def pending_count() -> int:
     """Number of tickers currently being fetched in the background."""
     with _BG_LOCK:
         return len(_BG_INFLIGHT)
+
+
+# ── FX rates ─────────────────────────────────────────────────────────────────
+
+# yfinance forex pairs return `1 USD = N <ccy>`, except for a handful of
+# inverted majors (EUR, GBP, AUD, NZD) where `<CCY>=X` is actually
+# `<ccy> per USD` too in yfinance's parlance. yfinance accepts both
+# `<CCY>=X` (e.g. KRW=X) and the explicit `USD<CCY>=X` (e.g. USDKRW=X);
+# we use the explicit form to avoid ambiguity on the majors.
+_USD = "USD"
+
+
+def _read_cached_fx(currencies: list[str], today: str) -> dict[str, float | None]:
+    if not currencies:
+        return {}
+    placeholders = ",".join("?" for _ in currencies)
+    with _DB_LOCK, _conn() as c:
+        cur = c.execute(
+            f"SELECT currency, units_per_usd FROM fx_rates "
+            f"WHERE fetch_date = ? AND currency IN ({placeholders})",
+            (today, *currencies),
+        )
+        return {row[0]: row[1] for row in cur.fetchall()}
+
+
+def _write_cached_fx(rows: list[tuple[str, str, float | None, float]]) -> None:
+    if not rows:
+        return
+    with _DB_LOCK, _conn() as c:
+        c.executemany(
+            "INSERT OR REPLACE INTO fx_rates "
+            "(currency, fetch_date, units_per_usd, fetched_at) "
+            "VALUES (?, ?, ?, ?)",
+            rows,
+        )
+        c.commit()
+
+
+def _fetch_fx(currency: str) -> float | None:
+    """Return units of `currency` per 1 USD (e.g. KRW → ~1380), or None."""
+    if not currency or currency.upper() == _USD:
+        return 1.0
+    try:
+        import yfinance as yf
+        pair = f"USD{currency.upper()}=X"
+        hist = yf.Ticker(pair).history(period="5d", interval="1d")
+        if hist is None or hist.empty:
+            return None
+        return float(hist["Close"].dropna().iloc[-1])
+    except Exception as e:
+        log.warning("FX fetch failed for %s: %s", currency, e)
+        return None
+
+
+def get_fx_rates(currencies: list[str]) -> dict[str, float | None]:
+    """Return {currency: units_per_usd} for each ISO code, with per-day cache.
+
+    USD maps to 1.0. Unknown / failed currencies map to None.
+    """
+    today = date.today().isoformat()
+    wanted = sorted({c.upper() for c in currencies if c})
+    if not wanted:
+        return {}
+    cached = _read_cached_fx(wanted, today)
+    out: dict[str, float | None] = {}
+    new_rows: list[tuple[str, str, float | None, float]] = []
+    now = time.time()
+    for ccy in wanted:
+        if ccy == _USD:
+            out[ccy] = 1.0
+            continue
+        if ccy in cached:
+            out[ccy] = cached[ccy]
+            continue
+        rate = _fetch_fx(ccy)
+        out[ccy] = rate
+        new_rows.append((ccy, today, rate, now))
+    _write_cached_fx(new_rows)
+    return out
+
+
+def to_usd(value: int | None, currency: str | None,
+           rates: dict[str, float | None] | None = None) -> float | None:
+    """Convert a native-currency market cap to USD using cached FX rates.
+
+    Returns None if the value or rate is unknown / unusable.
+    """
+    if value is None or value <= 0:
+        return None
+    ccy = (currency or _USD).upper()
+    if ccy == _USD:
+        return float(value)
+    rate = (rates or {}).get(ccy)
+    if rate is None:
+        rate = get_fx_rates([ccy]).get(ccy)
+    if not rate or rate <= 0:
+        return None
+    return float(value) / rate
 
 
 def format_market_cap(value: int | None, currency: str | None = None) -> str:

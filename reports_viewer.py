@@ -24,7 +24,9 @@ from flask import Blueprint, abort, render_template_string, send_from_directory
 
 import nav_widget2 as _nw
 from sector_map import ALL_SECTORS, sector_for
-from market_cap_cache import format_market_cap, get_market_caps, pending_count
+from market_cap_cache import (
+    format_market_cap, get_fx_rates, get_market_caps, pending_count, to_usd,
+)
 
 try:
     import mammoth
@@ -333,7 +335,9 @@ _INDEX_TMPL = r"""<!doctype html>
               data-display="{{ r.display|lower }}"
               data-ticker="{{ r.ticker|lower }}"
               data-sector="{{ r.sector }}"
-              data-mktcap="{{ r.mktcap_raw if r.mktcap_raw is not none else -1 }}"
+              data-mktcap="{{ r.mktcap_usd if r.mktcap_usd is not none else -1 }}"
+              data-mktcap-native="{{ r.mktcap_raw if r.mktcap_raw is not none else '' }}"
+              data-mktcap-currency="{{ r.mktcap_currency or '' }}"
               data-filename="{{ r.rel|lower }}"
               data-date="{{ r.date }}"
               data-ts="{{ r.ts }}"
@@ -351,7 +355,10 @@ _INDEX_TMPL = r"""<!doctype html>
             </td>
             <td class="ticker">{{ r.ticker }}</td>
             <td>{% if r.sector %}<span class="sector-pill">{{ r.sector }}</span>{% endif %}</td>
-            <td class="mkt-cap {% if r.mktcap_raw is none %}dim{% endif %}">{{ r.mktcap_fmt }}</td>
+            <td class="mkt-cap {% if r.mktcap_raw is none %}dim{% endif %}"
+                {% if r.mktcap_usd is not none and r.mktcap_currency and r.mktcap_currency != 'USD' %}
+                title="≈ ${{ '{:,.0f}'.format(r.mktcap_usd) }} USD (sort key)"
+                {% endif %}>{{ r.mktcap_fmt }}</td>
             <td><span class="bucket-tag {{ r.bucket }}">{{ r.bucket }}</span></td>
             <td class="created">{{ r.created }}</td>
             <td>
@@ -548,11 +555,20 @@ def index():
     # uncached tickers so the page renders fast and fills in on reload.
     unique_tickers = sorted({r["ticker"] for r in rows if r.get("ticker")})
     mcap = get_market_caps(unique_tickers, block=False) if unique_tickers else {}
+
+    # Daily-cached USD FX rates so sort-by-market-cap normalises across
+    # currencies (KRW/JPY/HKD/etc. → USD) while the display still shows
+    # the native-currency value.
+    needed_ccys = sorted({c for _v, c in mcap.values() if c})
+    fx = get_fx_rates(needed_ccys) if needed_ccys else {}
+
     for r in rows:
         t = r.get("ticker") or ""
         r["sector"] = sector_for(t)
         raw, cur = mcap.get(t, (None, None))
-        r["mktcap_raw"] = raw
+        r["mktcap_raw"] = raw            # native-currency value
+        r["mktcap_currency"] = cur
+        r["mktcap_usd"] = to_usd(raw, cur, fx)  # used as sort key
         r["mktcap_fmt"] = format_market_cap(raw, cur)
 
     # Dropdown options — present every known sector and bucket plus any
