@@ -28,6 +28,20 @@ This task requires the financial model from Task 2. Starting without it will res
 
 ---
 
+## ⚠️ MANDATORY: Source Citations
+
+The valuation feeds Task 5's report. Every external data point (peer multiples, risk-free rate, ERP, beta, terminal growth, precedent transaction multiples) must carry a source through to the final DOCX. If sources are missing here, Task 5's Sources & References appendix cannot be built.
+
+**Required:**
+- Inline citation after every macro/market assumption — risk-free rate, ERP, beta, terminal growth rate, WACC components — naming the data provider and date: e.g. `Risk-free rate of 4.3% ([US 10Y Treasury, FRED, 2026-05-19](https://fred.stlouisfed.org/series/DGS10))`.
+- The Excel `Comparable Companies` tab must include a `Source` column per row (e.g. "FactSet 2026-05-19", "10-K FY2024", "Yahoo Finance 2026-05-19").
+- The Excel `DCF` assumption table must include a `Source` column per row.
+- The markdown ends with a `## Sources` section listing every distinct source with date + URL, organized into Task 5's six categories (SEC Filings / Earnings Materials / Company Materials / Industry & Market Research / News & Trade Publications / Data Providers).
+
+**Unacceptable:** "Source: Company data", "Industry estimates" without naming the firm, untraceable peer multiples with no provider or date.
+
+---
+
 ## Input Verification
 
 **BEFORE STARTING - CHECK:**
@@ -329,17 +343,17 @@ P/E (NTM) = Market Cap / NTM Net Income (est.)
 ```
 COMPARABLE COMPANIES ANALYSIS
 
-Company      Ticker  Mkt Cap  EV/Rev  EV/Rev  EV/EBITDA  EV/EBITDA  P/E   Rev     EBITDA
+Company      Ticker  Mkt Cap  EV/Rev  EV/Rev  EV/EBITDA  EV/EBITDA  P/E   Rev     EBITDA  Source
                      ($B)     LTM     NTM     LTM        NTM        NTM   Growth  Margin
-Peer A       PRA     45.2     3.5x    3.2x    15.2x      13.8x      25x   18%     23%
-Peer B       PRB     32.8     3.2x    2.9x    14.1x      12.5x      22x   15%     23%
-Peer C       PRC     28.5     2.8x    2.6x    12.8x      11.2x      20x   12%     22%
-Peer D       PRD     52.1     4.1x    3.7x    17.5x      15.2x      29x   22%     23%
-Peer E       PRE     38.9     3.6x    3.3x    15.8x      14.1x      25x   17%     23%
-Peer F       PRF     41.2     3.7x    3.4x    16.1x      13.9x      26x   19%     23%
-Peer G       PRG     35.5     3.3x    3.0x    14.5x      12.8x      23x   16%     22%
+Peer A       PRA     45.2     3.5x    3.2x    15.2x      13.8x      25x   18%     23%     FactSet 2026-05-19
+Peer B       PRB     32.8     3.2x    2.9x    14.1x      12.5x      22x   15%     23%     FactSet 2026-05-19
+Peer C       PRC     28.5     2.8x    2.6x    12.8x      11.2x      20x   12%     22%     FactSet 2026-05-19
+Peer D       PRD     52.1     4.1x    3.7x    17.5x      15.2x      29x   22%     23%     FactSet 2026-05-19
+Peer E       PRE     38.9     3.6x    3.3x    15.8x      14.1x      25x   17%     23%     FactSet 2026-05-19
+Peer F       PRF     41.2     3.7x    3.4x    16.1x      13.9x      26x   19%     23%     FactSet 2026-05-19
+Peer G       PRG     35.5     3.3x    3.0x    14.5x      12.8x      23x   16%     22%     FactSet 2026-05-19
 
-[Target]     TRGT    38.0     3.4x    3.1x    14.8x      13.0x      24x   17%     23%
+[Target]     TRGT    38.0     3.4x    3.1x    14.8x      13.0x      24x   17%     23%     Model + FactSet
 
 STATISTICAL SUMMARY
 Maximum              52.1     4.1x    3.7x    17.5x      15.2x      29x   22%     23%
@@ -349,8 +363,10 @@ Median               38.9     3.5x    3.2x    15.2x      13.8x      25x   17%   
 Minimum              28.5     2.8x    2.6x    12.8x      11.2x      20x   12%     22%
 
 Note: Market data as of [Date]. LTM = Last Twelve Months. NTM = Next Twelve Months.
-Source: FactSet, company filings, [Analyst] estimates.
+Source: [FactSet — peer trading multiples, 2026-05-19](https://...) (subscription required); peer 10-K filings for fiscal-year figures.
 ```
+
+**Source column is MANDATORY.** Carry it through to the DOCX table in Task 5. Replace the placeholder dates above with the actual access date when running the task.
 
 **CRITICAL**: The statistical summary (max/75th/median/25th/min) is MANDATORY.
 

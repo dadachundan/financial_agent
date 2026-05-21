@@ -983,17 +983,64 @@ Use Claude's DOCX skill to:
 
 **SECTION 5: Appendices (Pages 41-50)**
 
-1. **Data Sources & References**
-   - Add heading: 'Data Sources & References' (level 1)
-   - List all sources used throughout the report
-   - Organize by category:
-     - SEC Filings (10-K, 10-Q, DEF 14A, 8-K with EDGAR links)
-     - Earnings Calls (with transcript links)
-     - Company Materials (investor presentations, press releases)
-     - Industry Reports (Gartner, Forrester, etc.)
-     - News Articles
-   - **CRITICAL**: All URLs must be clickable hyperlinks (not plain text)
-   - Include dates for all sources
+1. **Sources & References ⭐⭐⭐ MANDATORY — DO NOT SKIP**
+
+   This is the single section that, when missing, most commonly degrades a report from "institutional-quality" to "opinion piece". The skill is configured to fail final delivery if this appendix is missing or has fewer than 20 entries.
+
+   **How to build it:**
+
+   a. **Pull sources from upstream:**
+      - Open `[Company]_Research_Document_[Date].md` (Task 1) — copy its `## Bibliography` section.
+      - Open `[Company]_Valuation_Analysis_[Date].md` (Task 3) — copy its `## Sources` section.
+      - Open `[Company]_Financial_Model_[Date].xlsx` — scan the `Source` column in the DCF tab and Comparable Companies tab for any sources not already captured.
+      - De-duplicate.
+
+   b. **Write the appendix using the DOCX skill:**
+
+   ```
+   Add heading: 'Sources & References' (level 1)
+
+   Add heading: 'SEC Filings' (level 2)
+     - Insert hyperlinked entry: "[10-K FY2024](https://www.sec.gov/...) — 2025-02-20 — primary source for FY2024 financials, segment breakdown, risk factors"
+     - Insert hyperlinked entry: "[DEF 14A 2024](https://www.sec.gov/...) — 2024-04-15 — exec compensation, board composition"
+     - [more entries]
+
+   Add heading: 'Earnings Materials' (level 2)
+     - Insert hyperlinked entry: "[Q4 2024 Earnings Call transcript](https://seekingalpha.com/...) — 2025-02-15 — guidance, EU expansion plan"
+     - Insert hyperlinked entry: "[Q4 2024 Earnings Presentation](https://ir.company.com/...) — 2025-02-15 — segment results, KPIs"
+     - [more entries]
+
+   Add heading: 'Company Materials' (level 2)
+     - Insert hyperlinked entry: "[Investor Day 2024 deck](https://ir.company.com/...) — 2024-09-10 — 5-year strategy, TAM framing"
+     - [more entries]
+
+   Add heading: 'Industry & Market Research' (level 2)
+     - Insert hyperlinked entry: "[Gartner Magic Quadrant for X](https://...) — 2024-08-22 — competitive positioning (subscription required)"
+     - Insert hyperlinked entry: "[McKinsey Global LiDAR Market Report](https://...) — 2024-Q3 — TAM sizing, ASP trends"
+     - [more entries]
+
+   Add heading: 'News & Trade Publications' (level 2)
+     - Insert hyperlinked entry: "[WSJ — '[Headline]'](https://www.wsj.com/...) — 2025-01-12 — context for product launch"
+     - [more entries]
+
+   Add heading: 'Data Providers' (level 2)
+     - Insert hyperlinked entry: "[Yahoo Finance — historical price data](https://finance.yahoo.com/quote/TICKER/history) — accessed 2025-XX-XX"
+     - Entry: "FactSet — peer trading multiples as of [date] (subscription required)"
+     - [more entries]
+   ```
+
+   **Hard requirements:**
+   - **Minimum 20 distinct entries** across all six categories combined.
+   - **Every entry that has a public URL must be inserted as a clickable hyperlink**, not plain text. Use the DOCX skill's hyperlink API.
+   - **Every entry has a date** in YYYY-MM-DD format (or YYYY-Qx for quarterly reports).
+   - **Every entry has a 1-line description** of what it sourced in the report body.
+   - Subscription-only sources are acceptable but must be labelled "(subscription required)".
+
+   **Verify before moving on:**
+   - [ ] Sources & References appendix exists with level-1 heading
+   - [ ] ≥20 entries total
+   - [ ] All six category headings present (even if some have only 1-2 entries)
+   - [ ] Test 3-5 random hyperlinks by Ctrl+Click — they open the correct page
 
 2. **Additional Tables**
    - Add heading: 'Additional Tables' (level 1)
@@ -1123,13 +1170,16 @@ MANDATORY TABLES:
 - [ ] Scenario comparison table
 - [ ] Additional 5-13 tables
 
-CITATIONS & HYPERLINKS:
-- [ ] All figures have source lines
-- [ ] All tables have source lines
-- [ ] All URLs are clickable hyperlinks (NOT plain text)
-- [ ] Test 5-10 random hyperlinks to verify they work
-- [ ] Data Sources & References page included
-- [ ] All sources have dates
+CITATIONS & HYPERLINKS ⭐⭐⭐ HARD FAIL IF MISSING:
+- [ ] Every figure has a source line directly under it (e.g. "Source: 10-K FY2024", "Source: FactSet, 2026-05-19")
+- [ ] Every table has a source line as its final row spanning all columns
+- [ ] Every quantitative claim in body prose has an inline citation (parenthetical hyperlink or footnote)
+- [ ] All URLs are clickable hyperlinks — open the DOCX, Ctrl+Click 5-10 random links, confirm they work
+- [ ] **Sources & References appendix exists with level-1 heading** (FAIL → STOP DELIVERY)
+- [ ] **Sources & References appendix has ≥20 distinct entries** (FAIL → STOP DELIVERY)
+- [ ] Sources & References has all six category sub-headings (SEC Filings / Earnings Materials / Company Materials / Industry & Market Research / News & Trade Publications / Data Providers)
+- [ ] Every entry in appendix has a date and a 1-line description
+- [ ] No source is labelled vaguely as "Company data" or "Industry sources" — every source names a specific document
 
 DATA ACCURACY:
 - [ ] All numbers match financial model exactly
@@ -1228,6 +1278,10 @@ IF ANY ITEMS UNCHECKED: ✗ FIX BEFORE DELIVERY
 **⚠️ MOST COMMON MISTAKE: TAKING SHORTCUTS DUE TO LENGTH**
 
 Many reports fail because they use placeholders like "details would be included here" or "see model for data" instead of actually writing/extracting the content. **DO NOT DO THIS.** Write every section in full. Extract every table. Embed every chart. Use whatever tokens are needed.
+
+**⚠️ SECOND-MOST COMMON MISTAKE: MISSING SOURCES**
+
+Many reports fail because Phase E ("Add Appendices & Finalize") gets rushed when the context window is full, and the Sources & References appendix is skipped or built with 3-5 token placeholders. **The skill is configured to fail delivery if this happens.** A report without a Sources & References appendix is not institutional-quality research — it is an opinion piece. If the upstream Task 1 and Task 3 outputs have no sources, **stop and rerun those tasks with sources** before assembling Task 5. Do not invent sources, do not skip the appendix, do not use vague labels like "Company data".
 
 1. **Rewriting Task 1 content**: DO NOT rewrite the 6-8K words from Task 1. Use almost verbatim - just reformat and add charts. Focus writing effort on quantitative sections (projections, scenarios, valuation).
 2. **Sparse pages**: Every page must have BOTH text AND visuals. Target 60-80% page density. Insert charts every 200-300 words.

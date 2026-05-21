@@ -13,6 +13,62 @@ This document provides step-by-step instructions for executing Task 1 (Company R
 
 ---
 
+## ⚠️ MANDATORY: Source Citations
+
+This document feeds directly into Task 5 (Report Assembly). If sources are missing here, the final DOCX will fail its delivery check. **Do not write a sentence with an unsupported quantitative or external claim.**
+
+### Inline citation rule
+
+Every quantitative claim and every claim sourced from outside the analyst's own reasoning must end with an inline citation in this format:
+
+```
+Revenue grew 35% YoY to $234M in FY2024 ([10-K FY2024, p. 47](https://www.sec.gov/Archives/edgar/data/.../filing.htm)).
+```
+
+```
+Management plans to enter the European market by 2026 ([Q4 2024 Earnings Call transcript, 2025-02-15](https://seekingalpha.com/...)).
+```
+
+**Source preference order** (use the highest-tier source available):
+1. SEC filings — 10-K, 10-Q, 8-K, DEF 14A (cite page number)
+2. Earnings transcripts (cite date)
+3. Company press releases / IR site (cite URL + date)
+4. Investor presentations (cite slide number)
+5. Reputable industry research — Gartner, IDC, McKinsey, BCG (cite report title + date)
+6. Reputable news — WSJ, FT, Bloomberg, Reuters (cite headline + date)
+7. Company website (cite URL + access date)
+
+**Unacceptable:**
+- ❌ "Source: Company data" — name the specific filing
+- ❌ "Industry sources estimate..." — name the firm and report
+- ❌ Untraceable claims with no link
+- ❌ Plain text URLs — always use markdown link format
+
+### Per-section Sources subsection
+
+At the end of every one of the 9 sections, add a `### Sources` subsection listing every source cited in that section. Example:
+
+```markdown
+### Sources
+- [10-K FY2024](https://www.sec.gov/...) — revenue, segment breakdown, employee count
+- [Q4 2024 Earnings Call](https://...) — 2026 EU expansion plan, AI roadmap
+- [Gartner LiDAR Market Forecast 2024-2030](https://...) — TAM sizing
+```
+
+### Bibliography at end of document
+
+The document ends with a top-level `## Bibliography` section listing every distinct source with date + URL, organized into the same six categories used by Task 5's Sources & References appendix:
+1. SEC Filings
+2. Earnings Materials
+3. Company Materials
+4. Industry & Market Research
+5. News & Trade Publications
+6. Data Providers
+
+**Target: 20+ distinct sources.** A research document with fewer than 20 sources has insufficient depth.
+
+---
+
 ## Data Sources to Gather
 
 ### Primary Sources (Company)
@@ -295,10 +351,14 @@ Identify 8-12 risks across four categories. For each risk, write 50-100 words.
    - Macroeconomic risks (2-3)
    - Each risk: 50-100 word description
 
-**Data Sources Section**
-- List all sources used
-- Include dates and URLs
-- Organize by source type
+**After every one of the 9 sections above, add a `### Sources` subsection listing the specific sources cited within that section.**
+
+**Bibliography (at end of document)**
+- Top-level `## Bibliography` section
+- List every distinct source used in the document
+- Organize into the six Task-5 categories (SEC Filings / Earnings Materials / Company Materials / Industry & Market Research / News & Trade Publications / Data Providers)
+- Every entry: markdown link + date + 1-line description of what it sourced
+- Target ≥20 entries
 
 ---
 
@@ -410,10 +470,37 @@ Financial Risks:
 Macroeconomic Risks:
 [2-3 risks with descriptions]
 
+### Sources
+[Specific sources cited in this section]
+
 ======================================
 
-DATA SOURCES
-[List all sources with dates and URLs]
+## Bibliography
+
+### SEC Filings
+- [10-K FY2024](https://www.sec.gov/...) — YYYY-MM-DD — what this sourced
+- [DEF 14A 2024](https://www.sec.gov/...) — YYYY-MM-DD — exec comp, board composition
+- ...
+
+### Earnings Materials
+- [Q4 2024 Earnings Call transcript](https://...) — YYYY-MM-DD — what this sourced
+- ...
+
+### Company Materials
+- [Investor Day 2024 presentation](https://...) — YYYY-MM-DD — what this sourced
+- ...
+
+### Industry & Market Research
+- [Gartner Magic Quadrant for X](https://...) — YYYY-MM-DD — what this sourced
+- ...
+
+### News & Trade Publications
+- ...
+
+### Data Providers
+- ...
+
+(Target ≥20 distinct entries across all categories.)
 ```
 
 ---

@@ -206,6 +206,13 @@ Request 5: Task 5 - Report Assembly (requires ALL previous task outputs)
 - ❌ Do not abbreviate sections to save time
 - ❌ Do not skip any required sections
 
+**⚠️ SOURCE CITATIONS ARE MANDATORY** (see Citation Standards below):
+- ✅ Every quantitative claim has an inline citation: `[Source: <doc>, <date>](<url>)`
+- ✅ Each of the 9 sections ends with a **Sources** subsection listing every source used
+- ✅ The document ends with a **Bibliography** listing every source with date + URL
+- ❌ Do not write "Source: Company data" — name the specific filing, transcript, or report
+- ❌ Do not deliver without sources — Task 5 cannot build a Sources appendix without them
+
 **Verification before proceeding**: None required for this task.
 
 ---
@@ -344,6 +351,13 @@ Required from model:
 - ✅ Research and justify price target with specific methodology
 - ❌ Do not skip comparable company analysis
 - ❌ Do not create simplified DCF without sensitivity
+
+**⚠️ SOURCE CITATIONS ARE MANDATORY** (see Citation Standards below):
+- ✅ Every peer multiple in the comps table has a source column (e.g. "FactSet, 2026-05-19" or "10-K FY2024")
+- ✅ Every macro/market assumption (risk-free rate, ERP, beta, terminal growth) is cited inline
+- ✅ The Excel `Comparable Companies` tab includes a `Source` column per row
+- ✅ The Excel `DCF` tab's assumptions table includes a `Source` column per row (already required by Task 2 template)
+- ✅ The markdown ends with a **Sources** subsection listing every source used
 
 **Verification before proceeding to Task 4**:
 - [ ] Price target determined
@@ -616,12 +630,22 @@ IF ANY VERIFICATION FAILS: Stop and complete missing task first.
 
 **⚠️ DELIVER ONLY THIS 1 DOCX FILE. NO executive summaries, no "highlights" documents, no extra files.**
 
-**Final Verification**:
+**⚠️ SOURCE CITATIONS ARE MANDATORY** (see Citation Standards below):
+- ✅ Every figure has a source line directly under it (clickable hyperlink, not plain text)
+- ✅ Every table has a source line as the final row (clickable hyperlink)
+- ✅ Every quantitative claim in prose has an inline citation (footnote or parenthetical hyperlink)
+- ✅ The report includes a dedicated **Sources & References** appendix listing every source, organized by category, every entry a clickable hyperlink with a date — minimum 20 entries
+- ❌ **FAIL CONDITION**: If the final DOCX has no Sources & References appendix, or has fewer than 20 entries in it, DO NOT DELIVER. Add sources and re-export.
+
+**Final Verification** (every item must pass — any unchecked item blocks delivery):
 - [ ] Report is 30-50 pages
 - [ ] Word count is 10,000-15,000
 - [ ] 25-35 charts embedded
 - [ ] 12-20 tables included
-- [ ] All citations are clickable hyperlinks
+- [ ] Every figure has a source line below it (clickable hyperlink)
+- [ ] Every table has a source line as its final row (clickable hyperlink)
+- [ ] **Sources & References appendix exists with ≥20 entries, every entry a clickable hyperlink with a date**
+- [ ] All inline citations in prose are clickable hyperlinks (NOT plain text URLs, NOT "Company data")
 - [ ] Numbers match financial model exactly
 
 ---
@@ -715,6 +739,39 @@ All outputs meet institutional standards from leading investment banks (JPMorgan
 - **Cited**: Proper sources with clickable hyperlinks
 - **Professional**: Institutional-quality formatting
 - **Accurate**: All numbers verified and cross-checked
+
+### Citation Standards (applies to every task)
+
+A report without sources is not institutional-quality research — it is an opinion piece. The skill is configured to fail delivery if sources are missing. Follow these rules at every step:
+
+**Inline citation format (markdown — Tasks 1 and 3):**
+- After every quantitative claim: `Revenue grew 35% YoY to $234M in FY2024 ([10-K FY2024, p. 47](https://www.sec.gov/...))`.
+- After every qualitative claim from an external source: `Management plans to expand into Europe by 2026 ([Q4 2024 Earnings Call, 2025-02-15](https://...))`.
+- Acceptable source types (in order of preference): SEC filings (10-K, 10-Q, 8-K, DEF 14A) → earnings transcripts → company press releases → investor presentations → reputable industry reports (Gartner, IDC, McKinsey) → reputable news (WSJ, FT, Bloomberg, Reuters) → company website.
+- Unacceptable: "Company data", "Industry sources", "Our estimates" without an underlying source, untraceable claims.
+
+**Inline citation format (DOCX — Task 5):**
+- Every figure: caption above ("Figure X — [Title]"), source line below in 9pt italic ("Source: [hyperlinked source], [date]").
+- Every table: final row spans all columns, "Source: [hyperlinked source], [date]".
+- Every quantitative claim in prose: parenthetical hyperlink or footnote — never a plain text URL, never "Company data" alone.
+
+**Mandatory Sources & References appendix (Task 5):**
+- Title: "Sources & References"
+- Organized by category in this order:
+  1. SEC Filings (10-K, 10-Q, 8-K, DEF 14A — link to EDGAR viewer)
+  2. Earnings Materials (transcripts, presentations, press releases — link to company IR)
+  3. Company Materials (investor day decks, product pages, blog posts)
+  4. Industry & Market Research (Gartner, IDC, McKinsey, BCG, market research firms — note "(subscription required)" where applicable)
+  5. News & Trade Publications (WSJ, FT, Bloomberg, Reuters, trade press)
+  6. Data Providers (Yahoo Finance, FactSet, Bloomberg, Capital IQ — note source for prices/multiples)
+- Every entry: clickable hyperlink + date (YYYY-MM-DD) + 1-line description of what it sourced.
+- Minimum 20 entries. A report with fewer than 20 distinct sources cited has insufficient research depth.
+
+**How to carry sources through the pipeline:**
+- Task 1 produces inline `[Source: ...](...)` citations and a Bibliography section → Task 5 reads them and copies them into prose and the appendix.
+- Task 3 produces a `Source` column in the comps and DCF assumption tables → Task 5 carries the column through into the DOCX tables.
+- Task 2's DCF Inputs tab already has a `Source` column → Task 3 fills it in, Task 5 reads from it.
+- **If Task 1 or Task 3 outputs have no sources, Task 5 will fail the final verification.** Go back and add sources to the upstream tasks before re-running Task 5.
 
 ---
 
