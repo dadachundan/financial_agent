@@ -1315,10 +1315,23 @@ Render in 8pt italic so citations don't visually disrupt the paragraph: framing 
 - Every risk paragraph in the Risk Assessment section
 - Every market-data point in Valuation Methodology (TTM multiple, peer median, terminal growth justification)
 - Every qualitative analysis paragraph (industry trend, competitive positioning, management assessment) — cite the 20-F, IR materials, or industry research that supports the framing
-- **Every figure caption** (`图 N:` / `Figure N:`) — append `(外部源: …)` with hyperlinks
+- **Every figure caption** (`图 N:` / `Figure N:`) — append `(来源: …)` with hyperlinks **using the chart-specific source mapping** (see below)
 - **Every table** — final row has clickable source hyperlink, not plain text
 
-A 30-50 page report has roughly 100-150 substantive paragraphs plus 25-35 figure captions plus 12-20 tables. Cite all of them and you land at 150-200 inline hyperlinks — above the threshold.
+**Chart caption citations require a per-chart source mapping — do NOT use a generic citation on every chart.**
+
+Walk the chart-generation script (`build_charts_zh.py` for Chinese, `build_charts.py` for English) and read its `source_line()` calls. Each call states what data the chart actually used. Build a `CHART_SOURCES = {chart_number: [(rId, label), …]}` dict from those calls, then in Phase D apply the chart-specific citation. Concrete patterns from the Hesai precedent:
+
+- Stock-price chart → `[("rId65", "Yahoo HSAI 历史")]`
+- Company-disclosure chart (history, products, ownership, customer concentration) → `[("rId44", "FY2024 20-F")]` with section/item label (e.g. `FY2024 20-F 第 7 项` for stockholders, `FY2024 20-F 客户集中度` for top-customer table)
+- Operating-metric chart (revenue, margin, opex, FCF) → `[("rId44", "FY2024 20-F"), ("rId45", "FY2025 6-K")]` for historicals
+- Third-party-cited chart (TAM, attach rate, market share — Yole/Frost/IDC/Gartner) → `[("rId45 or current FY 6-K", "<filing> 引用 Yole"), ("rId-yole-specific-press-release", "Yole 新闻稿")]` — link to the primary filing where the third-party number is quoted, plus a deeper third-party URL (not the homepage)
+- Financial-model-only chart (DCF, scenarios, sensitivity, football field) → `[(None, "本报告财务模型 / DCF 标签页")]` — non-hyperlinked label, honest about internal sourcing
+- Peer-comparison chart → list every peer's Yahoo Finance rId individually
+
+**Never link a homepage and call it a citation.** `yolegroup.com`, `frost.com`, `gartner.com` are marketing pages — clicking gets the reader nothing verifiable. Use deeper URLs: the specific report's product page (subscription-only is OK if labelled as such), the press release that announces the report, or the primary filing that quotes the number.
+
+A 30-50 page report has roughly 100-150 substantive paragraphs plus 25-35 figure captions plus 12-20 tables. Cite all of them with the right per-chart sources and you land at 150-200 inline hyperlinks — above the threshold and verifiable on click.
 
 1. **Rewriting Task 1 content**: DO NOT rewrite the 6-8K words from Task 1. Use almost verbatim - just reformat and add charts. Focus writing effort on quantitative sections (projections, scenarios, valuation).
 2. **Sparse pages**: Every page must have BOTH text AND visuals. Target 60-80% page density. Insert charts every 200-300 words.

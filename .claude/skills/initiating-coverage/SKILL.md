@@ -759,6 +759,12 @@ All outputs meet institutional standards from leading investment banks (JPMorgan
 
 A report without sources is not institutional-quality research — it is an opinion piece. The skill is configured to fail delivery if sources are missing. Follow these rules at every step:
 
+**URL must be the most-direct verifiable source — not a homepage.** A citation that links to `yolegroup.com` or `frost.com` (marketing homepage) is functionally a non-citation: the reader can't verify the specific number. Always link to either (a) the specific report / press release URL, or (b) the primary filing that quotes the third-party number. For Hesai's TAM chart that cites Yole, the right link is the Hesai FY25 6-K (where Yole's number actually appears) — labeled as `Hesai FY25 6-K 引用 Yole` so the source chain is transparent — plus a deeper Yole press-release URL if one exists. Never link a homepage and call it a citation.
+
+**Source-chain labeling for third-party data.** When the analyst draws a number from a primary filing that itself cites a third party (e.g., Hesai's 6-K says "Yole estimates TAM at $X"), the inline label must make the chain explicit: `[FY2025 6-K 引用 Yole](rId45)` — not `[Yole](yolegroup.com)`. The click leads to the verifiable primary, not a marketing homepage.
+
+**Per-chart source mapping (Task 5 Phase D).** Do NOT use a generic "Yole + Frost" citation on every TAM chart. Walk the chart-generation script (e.g., `build_charts_zh.py` for Task 4 in this repo's reports) and read its `source_line()` calls — they list exactly which sources each chart actually used. Build a `chart_number → [(rId, label), …]` dictionary and cite each caption with the chart-specific list. Financial-model-only charts (DCF sensitivity, scenarios, valuation football field) get `(来源: 本报告财务模型)` without a hyperlink — honest about internal sourcing.
+
 **Inline citation format (markdown — Tasks 1 and 3):**
 - After every quantitative claim: `Revenue grew 35% YoY to $234M in FY2024 ([10-K FY2024, p. 47](https://www.sec.gov/...))`.
 - After every qualitative claim from an external source: `Management plans to expand into Europe by 2026 ([Q4 2024 Earnings Call, 2025-02-15](https://...))`.
