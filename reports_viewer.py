@@ -23,6 +23,8 @@ from pathlib import Path
 from flask import Blueprint, abort, render_template_string, send_from_directory
 
 import nav_widget2 as _nw
+from sector_map import ALL_SECTORS, sector_for
+from market_cap_cache import format_market_cap, get_market_caps, pending_count
 
 try:
     import mammoth
@@ -229,50 +231,98 @@ _INDEX_TMPL = r"""<!doctype html>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <style>
-    .page{max-width:1100px;margin:1rem auto;padding:0 1rem;color:#222;
+    body{background:#f6f7fa}
+    .page{max-width:1280px;margin:1rem auto;padding:0 1.2rem 2rem;color:#222;
          font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    .page h1{font-size:1.4rem;margin-bottom:.5rem}
-    .toolbar{display:flex;gap:.6rem;align-items:center;margin:.6rem 0 .8rem;flex-wrap:wrap}
-    .toolbar input[type=search]{flex:1;min-width:220px;max-width:420px;
-         padding:.35rem .6rem;border:1px solid #ccc;border-radius:6px;font-size:.95rem}
-    .bucket-tag{font-size:.8rem;padding:.1rem .45rem;border-radius:10px;
-         background:#eef2f7;color:#3a4a5e;border:1px solid #d6dde6}
+    .page h1{font-size:1.45rem;margin:.4rem 0 .15rem;font-weight:600}
+    .subtitle{color:#777;font-size:.85rem;margin-bottom:.7rem}
+    .toolbar{display:flex;gap:.55rem;align-items:center;margin:.6rem 0 .9rem;flex-wrap:wrap;
+         background:#fff;border:1px solid #e3e6eb;border-radius:8px;padding:.55rem .7rem;
+         box-shadow:0 1px 2px rgba(0,0,0,.03)}
+    .toolbar input[type=search],.toolbar select{
+         padding:.4rem .6rem;border:1px solid #d0d4da;border-radius:6px;font-size:.92rem;background:#fff}
+    .toolbar input[type=search]{flex:1;min-width:240px;max-width:420px}
+    .toolbar select{min-width:170px;cursor:pointer}
+    .toolbar label{font-size:.85rem;color:#555;display:inline-flex;align-items:center;gap:.3rem}
+    .toolbar .spacer{flex:1}
+    .toolbar button.reset{font-size:.8rem;padding:.3rem .65rem;border:1px solid #d0d4da;
+         border-radius:6px;background:#fff;color:#555;cursor:pointer}
+    .toolbar button.reset:hover{background:#f1f3f7}
+    .bucket-tag{display:inline-block;font-size:.72rem;padding:.06rem .45rem;border-radius:10px;
+         background:#eef2f7;color:#3a4a5e;border:1px solid #d6dde6;white-space:nowrap}
     .bucket-tag.company{background:#eef7ee;border-color:#cfe5cf;color:#2a5d2f}
     .bucket-tag.sector{background:#fef5e6;border-color:#f0d8a6;color:#7a5118}
     .bucket-tag.compare{background:#f3eaf7;border-color:#dac3ea;color:#5a2a85}
     .bucket-tag.earnings{background:#eaf2fb;border-color:#c4d8ef;color:#1d4a85}
-    .ticker{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.85rem;color:#444}
-    .lang-link{display:inline-block;font-size:.78rem;padding:.05rem .4rem;border-radius:4px;
-         border:1px solid #cfd6df;color:#0366d6;text-decoration:none;margin-right:.3rem}
+    .sector-pill{display:inline-block;font-size:.74rem;padding:.08rem .5rem;border-radius:10px;
+         background:#f1f3f7;color:#3a4a5e;border:1px solid #dadfe6;white-space:nowrap}
+    .ticker{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.83rem;color:#444;
+         white-space:nowrap}
+    .lang-link{display:inline-block;font-size:.74rem;padding:.06rem .42rem;border-radius:4px;
+         border:1px solid #cfd6df;color:#0366d6;text-decoration:none;margin-right:.25rem}
     .lang-link:hover{background:#eef4fb;text-decoration:none}
-    .lang-link.missing{color:#aaa;border-color:#e0e0e0;cursor:default}
-    .page table{width:100%;border-collapse:collapse;margin-top:.5rem}
-    .page th,.page td{text-align:left;padding:.4rem .6rem;border-bottom:1px solid #eee;vertical-align:middle}
-    .page th{font-size:.85rem;color:#666;font-weight:600;cursor:pointer;user-select:none}
-    .page th .sort-ind{color:#aaa;font-size:.7rem;margin-left:.2rem}
-    .page td.created,.page td.date{color:#666;white-space:nowrap;font-variant-numeric:tabular-nums;font-size:.9rem}
+    .lang-link.docx{background:#fff0d8;border-color:#e0b170;color:#8a5400}
+    .grid-wrap{background:#fff;border:1px solid #e3e6eb;border-radius:8px;overflow:hidden;
+         box-shadow:0 1px 2px rgba(0,0,0,.03)}
+    .page table{width:100%;border-collapse:collapse;margin:0}
+    .page th,.page td{text-align:left;padding:.5rem .7rem;border-bottom:1px solid #eef0f3;
+         vertical-align:middle}
+    .page tbody tr:hover{background:#fafbfc}
+    .page tbody tr:last-child td{border-bottom:none}
+    .page th{font-size:.74rem;color:#5a5f66;font-weight:600;cursor:pointer;user-select:none;
+         background:#fafbfc;border-bottom:1px solid #e3e6eb;text-transform:uppercase;letter-spacing:.04em}
+    .page th .sort-ind{color:#bbb;font-size:.7rem;margin-left:.2rem}
+    .page th.active{color:#1f4e78}
+    .page td.created,.page td.date{color:#666;white-space:nowrap;font-variant-numeric:tabular-nums;font-size:.86rem}
+    .page td.mkt-cap{text-align:right;font-variant-numeric:tabular-nums;font-size:.88rem;color:#222;
+         white-space:nowrap}
+    .page td.mkt-cap.dim{color:#bbb}
     .page td a.title{color:#0366d6;text-decoration:none;font-weight:500}
     .page td a.title:hover{text-decoration:underline}
     .empty{color:#888;font-style:italic}
     .count{color:#666;font-size:.85rem;margin-left:.4rem}
+    .pending-note{color:#7a5118;font-size:.78rem;margin-left:.5rem}
   </style>
 </head>
 <body>
   {{ _nav | safe }}
   <div class="page">
-    <h1>Reports <span class="count" id="count">{{ rows|length }} entries</span></h1>
+    <h1>Reports
+      <span class="count" id="count">{{ rows|length }} entries</span>
+      {% if pending %}
+        <span class="pending-note">· market cap loading {{ pending }} ticker(s) — refresh in ~1 min</span>
+      {% endif %}
+    </h1>
+    <div class="subtitle">Filter by sector, search by company/ticker, or click any column to sort.</div>
     {% if rows %}
     <div class="toolbar">
       <input id="filter" type="search" placeholder="Filter by company, ticker, or filename…" autofocus>
-      <label style="font-size:.85rem;color:#555">
-        <input type="checkbox" id="onlyDocx"> DOCX only
-      </label>
+      <select id="sectorFilter" title="Filter by sector">
+        <option value="">All sectors</option>
+        {% for s in sectors %}
+          <option value="{{ s }}">{{ s }}</option>
+        {% endfor %}
+        <option value="__none__">— No sector —</option>
+      </select>
+      <select id="bucketFilter" title="Filter by report type">
+        <option value="">All report types</option>
+        {% for b in buckets %}
+          <option value="{{ b }}">{{ b }}</option>
+        {% endfor %}
+      </select>
+      <label><input type="checkbox" id="onlyDocx"> DOCX only</label>
+      <div class="spacer"></div>
+      <button id="resetBtn" class="reset">Reset</button>
     </div>
+    <div class="grid-wrap">
     <table id="grid">
       <thead>
         <tr>
           <th data-sort="display">Report</th>
           <th data-sort="ticker">Ticker</th>
+          <th data-sort="sector">Sector</th>
+          <th data-sort="mktcap" style="text-align:right">Market Cap</th>
+          <th data-sort="bucket">Type</th>
           <th data-sort="ts" class="active">Created <span class="sort-ind">▼</span></th>
           <th>Lang</th>
         </tr>
@@ -282,6 +332,8 @@ _INDEX_TMPL = r"""<!doctype html>
           <tr data-bucket="{{ r.bucket }}"
               data-display="{{ r.display|lower }}"
               data-ticker="{{ r.ticker|lower }}"
+              data-sector="{{ r.sector }}"
+              data-mktcap="{{ r.mktcap_raw if r.mktcap_raw is not none else -1 }}"
               data-filename="{{ r.rel|lower }}"
               data-date="{{ r.date }}"
               data-ts="{{ r.ts }}"
@@ -298,6 +350,9 @@ _INDEX_TMPL = r"""<!doctype html>
               {% endif %}
             </td>
             <td class="ticker">{{ r.ticker }}</td>
+            <td>{% if r.sector %}<span class="sector-pill">{{ r.sector }}</span>{% endif %}</td>
+            <td class="mkt-cap {% if r.mktcap_raw is none %}dim{% endif %}">{{ r.mktcap_fmt }}</td>
+            <td><span class="bucket-tag {{ r.bucket }}">{{ r.bucket }}</span></td>
             <td class="created">{{ r.created }}</td>
             <td>
               {% if r.langs.get('en') %}
@@ -307,13 +362,14 @@ _INDEX_TMPL = r"""<!doctype html>
                 <a class="lang-link" href="{{ _base }}/view/{{ r.langs['zh'] }}">ZH</a>
               {% endif %}
               {% if r.langs.get('docx') %}
-                <a class="lang-link" style="background:#fff0d8;border-color:#e0b170;color:#8a5400" href="{{ _base }}/view-docx/{{ r.langs['docx'] }}">DOCX</a>
+                <a class="lang-link docx" href="{{ _base }}/view-docx/{{ r.langs['docx'] }}">DOCX</a>
               {% endif %}
             </td>
           </tr>
         {% endfor %}
       </tbody>
     </table>
+    </div>
     {% else %}
       <p class="empty">No reports yet — run the company-research or sec-report-summary skill.</p>
     {% endif %}
@@ -326,42 +382,58 @@ _INDEX_TMPL = r"""<!doctype html>
       const tbody = grid.querySelector("tbody");
       const rows  = Array.from(tbody.querySelectorAll("tr"));
       const filter = document.getElementById("filter");
+      const sectorFilter = document.getElementById("sectorFilter");
+      const bucketFilter = document.getElementById("bucketFilter");
       const onlyDocx = document.getElementById("onlyDocx");
+      const resetBtn = document.getElementById("resetBtn");
       const count = document.getElementById("count");
 
       function applyFilter() {
-        const q = (filter.value || "").trim().toLowerCase();
+        const q  = (filter.value || "").trim().toLowerCase();
+        const s  = sectorFilter.value || "";
+        const bk = bucketFilter.value || "";
         const dx = onlyDocx.checked;
         let visible = 0;
         for (const r of rows) {
           const hay = r.dataset.display + " " + r.dataset.ticker + " " + r.dataset.filename;
+          const rowSector = r.dataset.sector || "";
           const matchQ  = !q || hay.includes(q);
+          const matchS  = !s || (s === "__none__" ? rowSector === "" : rowSector === s);
+          const matchBk = !bk || r.dataset.bucket === bk;
           const matchDx = !dx || r.dataset.hasDocx === "1";
-          const show = matchQ && matchDx;
+          const show = matchQ && matchS && matchBk && matchDx;
           r.style.display = show ? "" : "none";
           if (show) visible++;
         }
         count.textContent = visible + " entries";
       }
       filter.addEventListener("input", applyFilter);
+      sectorFilter.addEventListener("change", applyFilter);
+      bucketFilter.addEventListener("change", applyFilter);
       onlyDocx.addEventListener("change", applyFilter);
+      resetBtn.addEventListener("click", () => {
+        filter.value = "";
+        sectorFilter.value = "";
+        bucketFilter.value = "";
+        onlyDocx.checked = false;
+        applyFilter();
+      });
 
       // Click-to-sort on headers (toggle asc/desc).
       let sortKey = "ts", sortDir = -1;  // newest first by default
+      const numericKeys = new Set(["ts", "mktcap"]);
       grid.querySelectorAll("th[data-sort]").forEach(th => {
         th.addEventListener("click", () => {
           const k = th.dataset.sort;
           if (k === sortKey) sortDir = -sortDir;
-          else { sortKey = k; sortDir = (k === "ts" || k === "date") ? -1 : 1; }
+          else { sortKey = k; sortDir = (numericKeys.has(k) || k === "date") ? -1 : 1; }
           rows.sort((a, b) => {
             const av = a.dataset[sortKey] || "";
             const bv = b.dataset[sortKey] || "";
-            // Numeric sort for ts.
-            if (sortKey === "ts") return (Number(av) - Number(bv)) * sortDir;
+            if (numericKeys.has(sortKey)) return (Number(av) - Number(bv)) * sortDir;
             return av.localeCompare(bv) * sortDir;
           });
           for (const r of rows) tbody.appendChild(r);
-          // Update indicator.
           grid.querySelectorAll("th[data-sort]").forEach(h => {
             h.classList.remove("active");
             const ind = h.querySelector(".sort-ind");
@@ -470,7 +542,33 @@ _VIEW_TMPL = r"""<!doctype html>
 @reports_bp.route("/")
 def index():
     rows = _scan()
-    return render_template_string(_INDEX_TMPL, rows=rows, _nav=_nw.NAV_HTML)
+
+    # Attach sector + market cap. Market caps come from a per-day sqlite
+    # cache; the first call of the day kicks off a background fetch for
+    # uncached tickers so the page renders fast and fills in on reload.
+    unique_tickers = sorted({r["ticker"] for r in rows if r.get("ticker")})
+    mcap = get_market_caps(unique_tickers, block=False) if unique_tickers else {}
+    for r in rows:
+        t = r.get("ticker") or ""
+        r["sector"] = sector_for(t)
+        raw, cur = mcap.get(t, (None, None))
+        r["mktcap_raw"] = raw
+        r["mktcap_fmt"] = format_market_cap(raw, cur)
+
+    # Dropdown options — present every known sector and bucket plus any
+    # extras we actually see in the data.
+    seen_sectors = {r["sector"] for r in rows if r["sector"]}
+    sectors = list(ALL_SECTORS) + sorted(s for s in seen_sectors if s not in ALL_SECTORS)
+    buckets = sorted({r.get("bucket", "") for r in rows if r.get("bucket")})
+
+    return render_template_string(
+        _INDEX_TMPL,
+        rows=rows,
+        sectors=sectors,
+        buckets=buckets,
+        pending=pending_count(),
+        _nav=_nw.NAV_HTML,
+    )
 
 
 @reports_bp.route("/view/<path:rel>")
