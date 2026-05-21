@@ -318,6 +318,12 @@ __MCW_CSS__
     .empty{color:#888;font-style:italic}
     .count{color:#666;font-size:.85rem;margin-left:.4rem}
     .pending-note{color:#7a5118;font-size:.78rem;margin-left:.5rem}
+    /* Column toggle — default OFF; only essential columns
+       (Report / Market Cap / Created / Lang) stay visible. */
+    .col-extra{display:none}
+    body.show-extra-cols .col-extra{display:table-cell}
+    /* With extras hidden, the table no longer needs the 1100px floor. */
+    body:not(.show-extra-cols) .page table{min-width:auto}
   </style>
 </head>
 <body>
@@ -349,6 +355,7 @@ __URLPATCH__
       </select>
       <label><input type="checkbox" id="latestOnly" checked> Latest only</label>
       <label><input type="checkbox" id="onlyDocx"> DOCX only</label>
+      <label><input type="checkbox" id="showMoreCols"> Show more columns</label>
       <div class="spacer"></div>
       <button id="resetBtn" class="reset">Reset</button>
     </div>
@@ -357,12 +364,12 @@ __URLPATCH__
       <thead>
         <tr>
           <th data-sort="display">Report</th>
-          <th data-sort="ticker">Ticker</th>
-          <th data-sort="sector">Sector</th>
+          <th data-sort="ticker" class="col-extra">Ticker</th>
+          <th data-sort="sector" class="col-extra">Sector</th>
           <th data-sort="mktcap" style="text-align:right">Market Cap</th>
-          <th data-sort="bucket">Type</th>
-          <th data-sort="rating">Rating</th>
-          <th>Comment</th>
+          <th data-sort="bucket" class="col-extra">Type</th>
+          <th data-sort="rating" class="col-extra">Rating</th>
+          <th class="col-extra">Comment</th>
           <th data-sort="ts" class="active">Created <span class="sort-ind">▼</span></th>
           <th>Lang</th>
         </tr>
@@ -395,14 +402,14 @@ __URLPATCH__
                 <span class="title">{{ r.display }}</span>
               {% endif %}
             </td>
-            <td class="ticker">{{ r.ticker }}</td>
-            <td>{% if r.sector %}<span class="sector-pill">{{ r.sector }}</span>{% endif %}</td>
+            <td class="ticker col-extra">{{ r.ticker }}</td>
+            <td class="col-extra">{% if r.sector %}<span class="sector-pill">{{ r.sector }}</span>{% endif %}</td>
             <td class="mkt-cap {% if r.mktcap_raw is none %}dim{% endif %}"
                 {% if r.mktcap_usd is not none and r.mktcap_currency and r.mktcap_currency != 'USD' %}
                 title="≈ ${{ '{:,.0f}'.format(r.mktcap_usd) }} USD (sort key)"
                 {% endif %}>{{ r.mktcap_fmt }}</td>
-            <td><span class="bucket-tag {{ r.bucket }}">{{ r.bucket }}</span></td>
-            <td class="rating-cell">
+            <td class="col-extra"><span class="bucket-tag {{ r.bucket }}">{{ r.bucket }}</span></td>
+            <td class="rating-cell col-extra">
               <span class="star-rating" data-pk="{{ r.pk_enc }}" data-rating="{{ r.rating or 0 }}">
                 {% for s in range(1, 6) %}
                 <span class="star" data-val="{{ s }}"
@@ -411,7 +418,7 @@ __URLPATCH__
                 {% endfor %}
               </span>
             </td>
-            <td class="comment-cell" id="comment-cell-{{ r.pk_enc }}">
+            <td class="comment-cell col-extra" id="comment-cell-{{ r.pk_enc }}">
               <span class="comment-preview" data-comment="{{ (r.comment or '')|e }}"
                     title="Click to preview / edit">{{ r.comment or '—' }}</span>
             </td>
@@ -535,6 +542,19 @@ __URLPATCH__
           ind.textContent = sortDir > 0 ? "▲" : "▼";
           th.appendChild(ind);
         });
+      });
+
+      // ── "Show more columns" toggle — default OFF, persisted ─────────────
+      const COLS_KEY = "reports_show_extra_cols_v1";
+      const showMoreCols = document.getElementById("showMoreCols");
+      function applyCols(show) {
+        document.body.classList.toggle("show-extra-cols", show);
+        showMoreCols.checked = show;
+      }
+      applyCols(localStorage.getItem(COLS_KEY) === "1");
+      showMoreCols.addEventListener("change", function() {
+        localStorage.setItem(COLS_KEY, this.checked ? "1" : "0");
+        applyCols(this.checked);
       });
     })();
   </script>

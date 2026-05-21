@@ -9,6 +9,13 @@
     }
   ,
     {
+      "name": "finagent-test",
+      "runtimeExecutable": "/opt/anaconda3/bin/python3",
+      "runtimeArgs": ["/Users/x/projects/financial_agent/main.py", "--port", "5002"],
+      "port": 5002
+    }
+  ,
+    {
       "name": "zsxq-viewer",
       "runtimeExecutable": "/opt/anaconda3/bin/python3",
       "runtimeArgs": ["/Users/x/projects/financial_agent/zsxq_viewer.py", "--db", "/Users/x/projects/financial_agent/db/zsxq.db", "--port", "8080"],
