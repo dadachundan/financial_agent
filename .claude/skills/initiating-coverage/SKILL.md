@@ -179,41 +179,41 @@ Request 5: Task 5 - Report Assembly (requires ALL previous task outputs)
 **Prerequisites**: ✅ None (fully independent)
 - Company name or ticker symbol
 
-**Process**:
-1. Verify company name/ticker provided
-2. Load detailed instructions from references/task1-company-research.md
-3. Execute qualitative research workflow
-4. Deliver research document
+**This task is delegated to the top-level `company-research` skill.** It already produces a 6,000–10,000 word document with mandatory inline citations, a References block, and per-section sourcing — exactly what Tasks 4 and 5 need. Do not duplicate that workflow here.
 
-**Output**: Company Research Document (6,000-8,000 words)
-- Company overview & history
-- Management bios (300-400 words × 3-4 execs)
-- Products & services analysis
-- Industry overview
-- Competitive analysis (5-10 competitors)
-- TAM sizing
-- Risk assessment (8-12 risks)
+### Step 1 — Prerequisite check: does a research doc already exist?
 
-**File name**: `[Company]_Research_Document_[Date].md`
+Before running `/company-research`, look in `reports/company/` for an existing document for this ticker. The folder slug is `<Company>_<EXCHANGE><CODE>` (e.g. `Hesai_NASDAQ_HSAI`, `BYD_SZSE002594`, `Anpeilong`).
+
+```bash
+ls reports/company/ | grep -i "<ticker-or-name>"
+# If a folder matches:
+ls "reports/company/<Slug>/" | grep -E "_Research_Document_|_公司研究_"
+```
+
+**Decision tree:**
+
+- **A matching `*_Research_Document_*.md` or `*_公司研究_*.md` exists and is recent (≤ 6 months old):** ✅ Use it as Task 1's output. Note the path. Skip to user confirmation, then proceed (or wait for the user to request Task 2).
+- **A file exists but is > 6 months old, or the user explicitly asks for a refresh:** Ask the user whether to reuse the existing doc or re-run research. Do not silently overwrite.
+- **No file exists:** Run the `company-research` skill first. Tell the user:
+  > "No company research found at `reports/company/<Slug>/`. Running `/company-research <Company>` first — that skill produces the 6,000–10,000 word document Task 1 expects. After it finishes, come back to `/initiating-coverage Task 1` and I'll register the output."
+
+  Then invoke the skill (e.g. via the Skill tool with `skill: "company-research"`, `args: "<Company or ticker>"`).
+
+### Step 2 — Register the output
+
+Once a research document exists at `reports/company/<Slug>/<Slug>_Research_Document_<Date>.md` (or `_公司研究_` for Chinese), Task 1 is complete. Record the file path so Tasks 4 and 5 can read it.
+
+**Output**: Company Research Document (6,000–10,000 words, produced by `/company-research`)
+- Company overview & history, management bios, products & services, customers & GTM, industry overview, competitive landscape, TAM, risks, References block — see the company-research skill's `references/report_structure.md` for the full spec.
+
+**File path**: `reports/company/<Slug>/<Slug>_Research_Document_<Date>.md` (English) or `reports/company/<Slug>/<Slug>_公司研究_<Date>.md` (Chinese).
 
 **⚠️ DELIVER ONLY THIS 1 FILE. NO completion summaries, no extra documents.**
 
-**⚠️ DO NOT TAKE SHORTCUTS:**
-- ✅ Write full 6,000-8,000 words (not summaries)
-- ✅ Complete 300-400 word bios for ALL 3-4 executives
-- ✅ Analyze ALL 5-10 competitors thoroughly
-- ✅ Cover all 8-12 risks across 4 categories
-- ❌ Do not abbreviate sections to save time
-- ❌ Do not skip any required sections
+**⚠️ DO NOT TAKE SHORTCUTS:** the company-research skill enforces full word count, full bios, full competitor list, full risk taxonomy, and mandatory inline citations + References. Do not bypass that skill by writing a shorter research doc inline.
 
-**⚠️ SOURCE CITATIONS ARE MANDATORY** (see Citation Standards below):
-- ✅ Every quantitative claim has an inline citation: `[Source: <doc>, <date>](<url>)`
-- ✅ Each of the 9 sections ends with a **Sources** subsection listing every source used
-- ✅ The document ends with a **Bibliography** listing every source with date + URL
-- ❌ Do not write "Source: Company data" — name the specific filing, transcript, or report
-- ❌ Do not deliver without sources — Task 5 cannot build a Sources appendix without them
-
-**Verification before proceeding**: None required for this task.
+**Verification before proceeding to Task 4 or 5**: the registered research document file actually exists on disk at the path above and contains a References block.
 
 ---
 
@@ -716,7 +716,7 @@ Would you like to start with Task 1 first?"
 
 Detailed instructions for each task are in separate reference files to keep this skill lean:
 
-- **references/task1-company-research.md** - Company research workflow
+- **Task 1** is delegated to the top-level `/company-research` skill — see that skill's `SKILL.md` and `references/` for the research workflow. No reference file lives in this skill for Task 1.
 - **references/task2-financial-modeling.md** - Financial modeling workflow
 - **references/task3-valuation.md** - Valuation methodology
   - Also see: references/valuation-methodologies.md for DCF/comps deep dive

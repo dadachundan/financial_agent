@@ -477,7 +477,7 @@ Valuation Implications:
   - Read Task 3 valuation tabs
   - Pull historical financials from Task 1
 - **Direct file operations** - Work with actual files
-  - Read: `[Company]_Research_Document_[Date].md`
+  - Read: `reports/company/<Slug>/<Slug>_Research_Document_[Date].md` (English) or `reports/company/<Slug>/<Slug>_公司研究_[Date].md` (Chinese — produced by the `/company-research` skill)
   - Read: `[Company]_Financial_Model_[Date].xlsx`
   - Read: `chart_01.png`, `chart_02.png`, etc.
   - Write: `[Company]_Initiation_Report_[Date].docx`
@@ -505,7 +505,7 @@ Valuation Implications:
 **Verify all input files exist:**
 
 Use Claude's file operations to check:
-- `[Company]_Research_Document_[Date].md` (Task 1)
+- `reports/company/<Slug>/<Slug>_Research_Document_[Date].md` (English) or `reports/company/<Slug>/<Slug>_公司研究_[Date].md` (Chinese — produced by the `/company-research` skill) (Task 1)
 - `[Company]_Historical_Financials_[Date].xlsx` (Task 1)
 - `[Company]_Financial_Model_[Date].xlsx` (Task 2 with Task 3 tabs)
 - `[Company]_Valuation_Analysis_[Date].md` (Task 3)
@@ -522,7 +522,7 @@ Before proceeding, extract all chart files from the Task 4 zip:
 **Expected folder structure after extraction:**
 ```
 [Company]_Report_Working/
-├── [Company]_Research_Document_[Date].md
+├── reports/company/<Slug>/<Slug>_Research_Document_[Date].md  (from /company-research)
 ├── [Company]_Historical_Financials_[Date].xlsx
 ├── [Company]_Financial_Model_[Date].xlsx (includes Task 3 valuation tabs)
 │   ├── [Task 2 tabs: Revenue Model, Income Statement, Scenarios, etc.]
@@ -763,7 +763,7 @@ Use Claude's DOCX skill to:
    - Set professional styling (fonts, margins)
 
 2. **Read Task 1 markdown file**
-   - Use Read tool: `[Company]_Research_Document_[Date].md`
+   - Use Read tool: `reports/company/<Slug>/<Slug>_Research_Document_[Date].md` (English) or `reports/company/<Slug>/<Slug>_公司研究_[Date].md` (Chinese — produced by the `/company-research` skill)
    - Identify sections by markdown headers (## Section Title)
 
 3. **Extract and convert each section from Task 1 to Word format:**
@@ -990,7 +990,7 @@ Use Claude's DOCX skill to:
    **How to build it:**
 
    a. **Pull sources from upstream:**
-      - Open `[Company]_Research_Document_[Date].md` (Task 1) — copy its `## Bibliography` section.
+      - Open the Task 1 research document (`reports/company/<Slug>/<Slug>_Research_Document_[Date].md` or `<Slug>_公司研究_[Date].md`) — copy its `## References` block (the company-research skill produces a References section at the end of every report).
       - Open `[Company]_Valuation_Analysis_[Date].md` (Task 3) — copy its `## Sources` section.
       - Open `[Company]_Financial_Model_[Date].xlsx` — scan the `Source` column in the DCF tab and Comparable Companies tab for any sources not already captured.
       - De-duplicate.
@@ -1097,7 +1097,7 @@ BAD - Avoid:
 **Throughout the entire assembly process, use Claude's DOCX and XLSX skills with actual file operations:**
 
 **Reading Input Files:**
-- ✓ Use Read tool: `[Company]_Research_Document_[Date].md` - Read Task 1 research
+- ✓ Use Read tool: `reports/company/<Slug>/<Slug>_Research_Document_[Date].md` (English) or `reports/company/<Slug>/<Slug>_公司研究_[Date].md` (Chinese — produced by the `/company-research` skill) - Read Task 1 research
 - ✓ Use XLSX skill: Open `[Company]_Financial_Model_[Date].xlsx` and read tabs - Extract tables from Task 2/3
 - ✓ Use Read tool: `[Company]_Valuation_Analysis_[Date].md` - Read Task 3 analysis
 - ✓ Use DOCX skill: Insert images from `task4_charts/chart_XX.png` files
