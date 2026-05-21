@@ -1302,8 +1302,10 @@ Readers of an institutional research report do not flip to a back-matter Sources
 **Embed citations while writing each phase, not as a retrofit.** As you add a paragraph in Phase B/C/D below, end every substantive sentence-ending claim with a clickable citation, re-using the rIds defined in the Phase E appendix:
 
 - **Factual claim:** `(来源: [短标签](rId))` — e.g. `(来源: [FY2025 6-K](rId45))`
-- **Forward-looking model projection:** `(来源:本报告模型估算)` — non-hyperlinked label, honest about internal estimates. Do not pretend an external source backs an analyst projection.
-- **Figure caption:** append `(外部源: [Link 1] / [Link 2])` with 1-2 most relevant external sources. Chart source lines baked into PNG images don't satisfy the click-to-verify test — the caption paragraph must carry the clickable links.
+- **Hybrid factual + model projection** (a paragraph that mentions both a historical fact AND a forward-looking projection — most thesis-pillar and growth-driver paragraphs are this): `(来源: [external source](rId) | [optional second source](rId) | 本报告模型估算)`. External hyperlinks lead, model label trails. **No solo model label** when an external source is referenced in the same paragraph.
+- **Pure forward-looking projection** (paragraph contains only FY26E/FY27E/forward years, no external fact reference): `(来源: [FY2024 20-F 为基线](rId44) | 本报告模型估算)` — link to the 20-F since the model is built on its baseline, always include at least one clickable URL.
+- **Financial-model-tab reference only** (DCF, scenarios, sensitivity, valuation football field): `(来源: 财务模型 DCF 标签页)` non-hyperlinked is acceptable here because the source genuinely IS the analyst's internal workbook.
+- **Figure caption:** append `(来源: [Link 1] | [Link 2])` with 1-3 most relevant external sources from the per-chart mapping. Chart source lines baked into PNG images don't satisfy the click-to-verify test — the caption paragraph must carry the clickable links.
 
 Render in 8pt italic so citations don't visually disrupt the paragraph: framing text gray (`#666666`), hyperlinks blue (`#0563C1`, underlined).
 
