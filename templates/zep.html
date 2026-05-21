@@ -195,15 +195,47 @@
   </span>
 </div>
 
-<!-- ── Market-cap filter slider ── -->
+<!-- ── Market-cap range slider ── -->
+<style>
+  /* Two overlaid range inputs forming one range slider. The shared track sits
+     behind them; each input contributes its own thumb but no visible track. */
+  .capRange { position:relative; flex:1; min-width:240px; max-width:520px;
+              height:24px; display:flex; align-items:center; }
+  .capRange .track { position:absolute; left:0; right:0; height:4px;
+                     background:#cdd5e1; border-radius:2px; pointer-events:none; }
+  .capRange .fill  { position:absolute; height:4px; background:#0d6efd;
+                     border-radius:2px; pointer-events:none; }
+  .capRange input[type=range] {
+    position:absolute; width:100%; appearance:none; background:transparent;
+    pointer-events:none; margin:0; outline:none; height:24px;
+  }
+  .capRange input[type=range]::-webkit-slider-thumb {
+    appearance:none; pointer-events:auto;
+    width:16px; height:16px; border-radius:50%;
+    background:#fff; border:2px solid #0d6efd; cursor:pointer;
+    box-shadow:0 1px 3px rgba(0,0,0,.2);
+  }
+  .capRange input[type=range]::-moz-range-thumb {
+    pointer-events:auto;
+    width:16px; height:16px; border-radius:50%;
+    background:#fff; border:2px solid #0d6efd; cursor:pointer;
+    box-shadow:0 1px 3px rgba(0,0,0,.2);
+  }
+  .capRange input[type=range]::-webkit-slider-runnable-track,
+  .capRange input[type=range]::-moz-range-track { background:transparent; height:0; border:0; }
+</style>
 <div id="capFilterBar" style="padding:6px 20px;background:#f1f5fb;border-bottom:1px solid #dee2e6;
      display:flex;align-items:center;gap:10px;font-size:.83rem;flex-wrap:wrap">
-  <label for="capSlider" style="font-weight:600;color:#495057;white-space:nowrap">
-    Min market cap:
-  </label>
-  <input type="range" id="capSlider" min="0" max="100" value="0" step="1"
-         style="flex:1;min-width:220px;max-width:480px">
-  <span id="capSliderLabel" style="font-weight:700;color:#0d6efd;min-width:70px">all</span>
+  <label style="font-weight:600;color:#495057;white-space:nowrap">Market cap:</label>
+  <div class="capRange">
+    <div class="track"></div>
+    <div class="fill" id="capSliderFill"></div>
+    <input type="range" id="capSliderMin" min="0" max="100" value="0"  step="1">
+    <input type="range" id="capSliderMax" min="0" max="100" value="100" step="1">
+  </div>
+  <span id="capSliderLabel" style="font-weight:700;color:#0d6efd;min-width:130px;white-space:nowrap">
+    $0 – all
+  </span>
   <span style="color:#6c757d">·</span>
   <span id="capSliderCount" style="color:#6c757d">– visible</span>
   <button id="capSliderReset" class="btn btn-sm btn-outline-secondary py-0 px-2"
@@ -1363,42 +1395,63 @@ let _edgeDataMap = {};   // uuid → full edge object, for instant edge-click lo
 let _entityByUuid = {};  // uuid → full entity object (incl. market_cap_usd, ticker)
 let _graphBuilt = false;
 
-// ── Market-cap filter ──────────────────────────────────────────────────────
-function _capThresholdFromSlider(v) {
-  // v ∈ [0, 100]. v=0 means "show all". v∈[1,100] maps log-linearly
-  // onto [$100M, $5T] so each notch is a roughly equal visual step.
-  if (v <= 0) return 0;
-  const LO = 8;            // log10($100M)
-  const HI = 12.7;         // log10($5T)
+// ── Market-cap range filter ────────────────────────────────────────────────
+// Slider value v∈[0,100] maps log-linearly onto a dollar threshold so each
+// notch is a roughly equal visual step. v=0 means "no lower bound" and v=100
+// means "no upper bound" — sentinel values that the filter applies as
+// (-∞, +∞) so private companies (no market cap) survive when neither thumb
+// has been moved.
+function _capFromSlider(v) {
+  const LO = 8;     // log10($100M)
+  const HI = 12.7;  // log10($5T)
   return Math.pow(10, LO + (v / 100) * (HI - LO));
 }
 
 function _fmtCapShort(mc) {
-  if (!mc || mc <= 0) return 'all';
-  if (mc >= 1e12) return '$' + (mc / 1e12).toFixed(2) + 'T';
-  if (mc >= 1e9)  return '$' + (mc / 1e9).toFixed(1)  + 'B';
+  if (!isFinite(mc)) return '∞';
+  if (mc <= 0)       return '$0';
+  if (mc >= 1e12)    return '$' + (mc / 1e12).toFixed(2) + 'T';
+  if (mc >= 1e9)     return '$' + (mc / 1e9).toFixed(1)  + 'B';
   return '$' + (mc / 1e6).toFixed(0) + 'M';
 }
 
 function applyCapFilter() {
-  const slider = document.getElementById('capSlider');
-  const label  = document.getElementById('capSliderLabel');
-  const count  = document.getElementById('capSliderCount');
-  if (!slider || !_visNodes || !_visEdges) return;
+  const lo    = document.getElementById('capSliderMin');
+  const hi    = document.getElementById('capSliderMax');
+  const label = document.getElementById('capSliderLabel');
+  const count = document.getElementById('capSliderCount');
+  const fill  = document.getElementById('capSliderFill');
+  if (!lo || !hi || !_visNodes || !_visEdges) return;
 
-  const threshold = _capThresholdFromSlider(+slider.value);
-  label.textContent = _fmtCapShort(threshold);
+  // Keep the two thumbs from crossing — min must always be ≤ max.
+  let vLo = +lo.value, vHi = +hi.value;
+  if (vLo > vHi) {
+    if (document.activeElement === lo) hi.value = vLo;
+    else                                lo.value = vHi;
+    vLo = +lo.value; vHi = +hi.value;
+  }
 
-  // Hide nodes below threshold. Companies with no market cap (private /
-  // failed lookup) are kept visible whenever threshold = 0, and hidden as
-  // soon as the user filters above $0.
+  const loCap = vLo === 0   ? -Infinity : _capFromSlider(vLo);
+  const hiCap = vHi === 100 ? +Infinity : _capFromSlider(vHi);
+  const loStr = vLo === 0   ? '$0'  : _fmtCapShort(loCap);
+  const hiStr = vHi === 100 ? 'all' : _fmtCapShort(hiCap);
+  label.textContent = `${loStr} – ${hiStr}`;
+  if (fill) {
+    fill.style.left  = vLo + '%';
+    fill.style.width = (vHi - vLo) + '%';
+  }
+
+  // Hide nodes outside the range. Companies with no market cap (private /
+  // failed lookup) survive only when neither bound is active.
+  const noFilter = (vLo === 0 && vHi === 100);
   const hiddenIds = new Set();
   const nodeUpdates = [];
   let visibleCount = 0;
   _visNodes.forEach(n => {
     const ent = _entityByUuid[n.id];
     const cap = (ent && ent.market_cap_usd) || 0;
-    const hidden = threshold > 0 && cap < threshold;
+    const inRange = noFilter ? true : (cap >= loCap && cap <= hiCap);
+    const hidden = !inRange;
     nodeUpdates.push({ id: n.id, hidden });
     if (hidden) hiddenIds.add(n.id); else visibleCount++;
   });
@@ -1414,16 +1467,18 @@ function applyCapFilter() {
   });
   _visEdges.update(edgeUpdates);
 
-  count.textContent = `${visibleCount} / ${_visNodes.length} nodes, ${visibleEdges} / ${_visEdges.length} edges visible`;
+  count.textContent =
+    `${visibleCount} / ${_visNodes.length} nodes, ${visibleEdges} / ${_visEdges.length} edges visible`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const slider = document.getElementById('capSlider');
-  const reset  = document.getElementById('capSliderReset');
-  if (slider) slider.addEventListener('input', applyCapFilter);
-  if (reset)  reset.addEventListener('click', () => {
-    slider.value = 0;
-    applyCapFilter();
+  const lo    = document.getElementById('capSliderMin');
+  const hi    = document.getElementById('capSliderMax');
+  const reset = document.getElementById('capSliderReset');
+  if (lo)    lo.addEventListener('input',  applyCapFilter);
+  if (hi)    hi.addEventListener('input',  applyCapFilter);
+  if (reset) reset.addEventListener('click', () => {
+    lo.value = 0; hi.value = 100; applyCapFilter();
   });
 });
 
