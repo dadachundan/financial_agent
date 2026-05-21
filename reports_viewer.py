@@ -18,12 +18,15 @@ from __future__ import annotations
 
 import base64
 import re
+import urllib.parse
 from datetime import datetime
 from pathlib import Path
 
-from flask import Blueprint, abort, render_template_string, send_from_directory
+from flask import Blueprint, abort, jsonify, render_template_string, request, send_from_directory
 
+import md_comment_widget as _mcw
 import nav_widget2 as _nw
+import report_annotations as _ra
 from sector_map import ALL_SECTORS, sector_for
 from market_cap_cache import (
     format_market_cap, get_fx_rates, get_market_caps, pending_count, to_usd,
@@ -233,7 +236,15 @@ _INDEX_TMPL = r"""<!doctype html>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+__MCW_HEAD__
   <style>
+__MCW_CSS__
+    .star-rating .star{cursor:pointer;font-size:1.05rem;line-height:1;user-select:none}
+    .star-rating .star:hover{filter:brightness(.9)}
+    .page td.rating-cell{white-space:nowrap;min-width:84px}
+    .page td.comment-cell{max-width:220px;font-size:.86rem;color:#444}
+    .page td.comment-cell .comment-preview{color:#444}
+    .page td.comment-cell .comment-preview p{margin:0}
     body{background:#f6f7fa}
     .page{max-width:1280px;margin:1rem auto;padding:0 1.2rem 2rem;color:#222;
          font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
@@ -289,6 +300,7 @@ _INDEX_TMPL = r"""<!doctype html>
   </style>
 </head>
 <body>
+__URLPATCH__
   {{ _nav | safe }}
   <div class="page">
     <h1>Reports
@@ -327,6 +339,8 @@ _INDEX_TMPL = r"""<!doctype html>
           <th data-sort="sector">Sector</th>
           <th data-sort="mktcap" style="text-align:right">Market Cap</th>
           <th data-sort="bucket">Type</th>
+          <th data-sort="rating">Rating</th>
+          <th>Comment</th>
           <th data-sort="ts" class="active">Created <span class="sort-ind">▼</span></th>
           <th>Lang</th>
         </tr>
@@ -343,6 +357,7 @@ _INDEX_TMPL = r"""<!doctype html>
               data-filename="{{ r.rel|lower }}"
               data-date="{{ r.date }}"
               data-ts="{{ r.ts }}"
+              data-rating="{{ r.rating or 0 }}"
               data-has-docx="{{ '1' if r.langs.get('docx') else '0' }}">
             <td>
               {% if r.langs.get('docx') %}
@@ -362,6 +377,19 @@ _INDEX_TMPL = r"""<!doctype html>
                 title="≈ ${{ '{:,.0f}'.format(r.mktcap_usd) }} USD (sort key)"
                 {% endif %}>{{ r.mktcap_fmt }}</td>
             <td><span class="bucket-tag {{ r.bucket }}">{{ r.bucket }}</span></td>
+            <td class="rating-cell">
+              <span class="star-rating" data-pk="{{ r.pk_enc }}" data-rating="{{ r.rating or 0 }}">
+                {% for s in range(1, 6) %}
+                <span class="star" data-val="{{ s }}"
+                      style="color:{{ '#f5a623' if (r.rating or 0) >= s else '#ccc' }}"
+                      onclick="setReportRating('{{ r.pk_enc }}', {{ s }}, this.closest('.star-rating'))">★</span>
+                {% endfor %}
+              </span>
+            </td>
+            <td class="comment-cell" id="comment-cell-{{ r.pk_enc }}">
+              <span class="comment-preview" data-comment="{{ (r.comment or '')|e }}"
+                    title="Click to preview / edit">{{ r.comment or '—' }}</span>
+            </td>
             <td class="created">{{ r.created }}</td>
             <td>
               {% if r.langs.get('en') %}
@@ -430,7 +458,7 @@ _INDEX_TMPL = r"""<!doctype html>
 
       // Click-to-sort on headers (toggle asc/desc).
       let sortKey = "ts", sortDir = -1;  // newest first by default
-      const numericKeys = new Set(["ts", "mktcap"]);
+      const numericKeys = new Set(["ts", "mktcap", "rating"]);
       grid.querySelectorAll("th[data-sort]").forEach(th => {
         th.addEventListener("click", () => {
           const k = th.dataset.sort;
@@ -457,9 +485,41 @@ _INDEX_TMPL = r"""<!doctype html>
       });
     })();
   </script>
+
+__MCW_MODALS__
+__MCW_FOOTER__
+  <script src="/static/vendor/bootstrap.bundle.min.js"></script>
+  <script>
+    function setReportRating(pkEnc, rating, container) {
+      const current = parseInt(container.dataset.rating) || 0;
+      const newRating = (current === rating) ? 0 : rating;
+      fetch('/rate/' + pkEnc, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: 'rating=' + newRating,
+      }).then(r => {
+        if (r.ok) {
+          container.dataset.rating = newRating;
+          container.querySelectorAll('.star').forEach(s => {
+            s.style.color = (newRating >= parseInt(s.dataset.val)) ? '#f5a623' : '#ccc';
+          });
+          const tr = container.closest('tr');
+          if (tr) tr.dataset.rating = newRating;
+        }
+      });
+    }
+
+__MCW_JS__
+  </script>
 </body>
 </html>
 """
+
+# Apply shared markdown comment widget substitutions + URL_PATCH for the
+# blueprint-prefix-aware fetch() shim used by MCW.
+for _k, _v in _mcw.TEMPLATE_PARTS.items():
+    _INDEX_TMPL = _INDEX_TMPL.replace(_k, _v)
+_INDEX_TMPL = _INDEX_TMPL.replace("__URLPATCH__", _nw.URL_PATCH_JS)
 
 
 _VIEW_TMPL = r"""<!doctype html>
@@ -564,6 +624,11 @@ def index():
     needed_ccys = sorted({c for _v, c in mcap.values() if c})
     fx = get_fx_rates(needed_ccys) if needed_ccys else {}
 
+    # User annotations (rating + comment) — one row per pair_key, stored in a
+    # separate sqlite at db/report_annotations.db so the markdown source stays
+    # untouched. EN/ZH/DOCX siblings share a single annotation via pair_key.
+    annotations = _ra.get_all()
+
     for r in rows:
         t = r.get("ticker") or ""
         r["sector"] = sector_for(t)
@@ -572,6 +637,10 @@ def index():
         r["mktcap_currency"] = cur
         r["mktcap_usd"] = to_usd(raw, cur, fx)  # used as sort key
         r["mktcap_fmt"] = format_market_cap(raw, cur)
+        ann = annotations.get(r["pair_key"], {})
+        r["rating"] = ann.get("rating") or 0
+        r["comment"] = ann.get("comment") or ""
+        r["pk_enc"] = urllib.parse.quote(r["pair_key"], safe="")
 
     # Dropdown options — present every known sector and bucket plus any
     # extras we actually see in the data.
@@ -603,6 +672,22 @@ def view(rel: str):
         abort(404)
     md = target.read_text(encoding="utf-8")
     return render_template_string(_VIEW_TMPL, name=target.name, md=md, _nav=_nw.NAV_HTML)
+
+
+@reports_bp.route("/rate/<path:pair_key>", methods=["POST"])
+def rate(pair_key: str):
+    try:
+        rating = int(request.form.get("rating", 0))
+    except (TypeError, ValueError):
+        return jsonify(error="invalid rating"), 400
+    _ra.set_rating(pair_key, rating)
+    return "", 204
+
+
+@reports_bp.route("/comment/<path:pair_key>", methods=["POST"])
+def comment(pair_key: str):
+    _ra.set_comment(pair_key, request.form.get("comment", ""))
+    return "", 204
 
 
 @reports_bp.route("/view/charts/<path:filename>", endpoint="view_chart_asset")
