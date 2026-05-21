@@ -71,7 +71,9 @@ Download A-share (SSE/SZSE) and HK (HKEX) reports via CNINFO.
 
 ### `reports_viewer.py` — Research Reports Index
 Markdown viewer for research reports written by the `company-research`, `sec-report-summary`, and `equity-research:*` skills.
-- Key routes: `GET /reports/` (index, recursive scan + filter + EN/ZH collapse), `GET /reports/view/<rel>` (render with marked.js + mermaid + Obsidian-highlight extension), `GET /reports/view/charts/<name>` (PNG assets)
+- Key routes: `GET /reports/` (index, recursive scan + EN/ZH collapse + sector / report-type / DOCX filters + market-cap column), `GET /reports/view/<rel>` (render with marked.js + mermaid + Obsidian-highlight extension), `GET /reports/view/charts/<name>` (PNG assets)
+- **Sector mapping**: `sector_map.py` — hardcoded `EXCHANGE:CODE → sector` table sourced from the two watchlist text files (`🇨🇳chinese.txt`, `🤪PER SECTOR.txt`); also exports `to_yfinance()` for converting EXCHANGE:CODE → yfinance ticker suffix
+- **Market cap**: `market_cap_cache.py` — per-day sqlite cache at `db/market_cap_cache.db`. First call of the day fetches missing tickers in a parallel background thread (8 workers); the page renders immediately with `—` placeholders and reload picks up the populated cache. Stores `(market_cap, currency)`; display tags non-USD values.
 - **Storage**: `reports/` (tracked in git)
   - `reports/company/<Slug>/<file>.md` — company research (EN + ZH coexist; ZH suffix `_zh` or `_CN`)
   - `reports/sector/<file>.md` — sector / thematic overviews
