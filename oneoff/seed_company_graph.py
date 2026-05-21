@@ -11,11 +11,10 @@ Steps
 3. Wipe entities / edges / communities / episodes in graph_mirror.db
 4. Add market_cap_usd column to entities if missing
 5. Insert one Entity node per company (labels=["Company"], market_cap_usd=…)
-6. Load reports/graph_seed/*.json — keep only COMPETES_WITH / SUPPLIES /
-   CUSTOMER edges whose both endpoints map onto a company in our list.
-   CUSTOMER edges are reversed into SUPPLIES (A--CUSTOMER-->B  ≡  B--SUPPLIES-->A).
-7. Add a hand-curated set of additional well-known competitor / supplier edges
-   so each sector has at least a few links.
+6. Add a hand-curated set of well-known competitor / supplier edges so each
+   sector has at least a few links. (Earlier versions also pulled from
+   reports/graph_seed/*.json, but that source mixes products, sub-suppliers,
+   and name aliases that don't match the canonical node set — net noise.)
 
 Run:
     cd /Users/x/projects/financial_agent
@@ -39,7 +38,6 @@ from market_cap_cache import get_market_caps, get_fx_rates, to_usd  # noqa: E402
 
 MIRROR_DB    = PROJECT_ROOT / "db" / "graph_mirror.db"
 REPORTS_DIR  = PROJECT_ROOT / "reports" / "company"
-SEED_DIR     = PROJECT_ROOT / "reports" / "graph_seed"
 GROUP_ID     = "financial-pdfs"
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -49,11 +47,10 @@ GROUP_ID     = "financial-pdfs"
 _EXCH = "(NASDAQ|NYSE|AMEX|OTC|SZSE|SSE|HKEX|KRX|TSE|TWSE|TSX|ASX|XETR)"
 TICKER_RE = re.compile(_EXCH + r"_?([0-9]+|[A-Z][A-Z0-9.\-]*)")
 
-# Chinese-name → English alias (for cross-language directory dedup AND for
-# matching companies referenced in reports/graph_seed/*.json by either name).
+# Chinese-name → English alias (for cross-language directory dedup).
 EN_BY_CN = {
     "三花智控": "Sanhua",
-    "恒立液压": "Hengli Hydraulic",
+    "恒立液压": "Hengli",
     "拓普集团": "Tuopu",
     "汇川技术": "Inovance",
     "绿的谐波": "Leaderdrive",
@@ -62,7 +59,7 @@ EN_BY_CN = {
     "广汽集团": "GAC",
     "比亚迪": "BYD",
     "智谱": "Zhipu",
-    "地平线机器人": "Horizon Robotics",
+    "地平线机器人": "HorizonRobotics",
     "优必选": "UBTECH",
     "极智嘉": "Geek+",
     "中际旭创": "InnoLight",
@@ -234,193 +231,8 @@ def attach_market_caps(companies: list[dict]) -> None:
 # Edge construction
 # ──────────────────────────────────────────────────────────────────────────────
 
-# When seed JSONs reference a company by a slightly different name than the one
-# we'll use as our canonical node, map them here.
-SEED_NAME_ALIASES = {
-    # JSON name              → canonical company display name
-    "Hengli Hydraulic":      "Hengli Hydraulic",
-    "Joyson Electronics":    "Joyson",
-    "Moons' Industries":     "Moons",
-    "Keli Sensing":          "Keli",
-    "Keli Sensing (corp)":   "Keli",
-    "RoboSense":             "Robosense",
-    "Robosense":             "Robosense",
-    "Omnivision":            "Omnivision",
-    "Fortior Technology":    "FortiorTech",
-    "BYD Electronic":        None,                # subsidiary — drop
-    "BYD Cloud Rail":        None,
-    "GAC Group":             "GAC",
-    "BYD":                   "BYD",
-    "Tesla":                 "Tesla",
-    "Apple":                 "Apple",
-    "NVIDIA":                "NVIDIA",
-    "AMD":                   "AMD",
-    "Intel":                 "Intel",
-    "Qualcomm":              "Qualcomm",
-    "Samsung":               "SamsungElectronics",
-    "Samsung (image sensors)": "SamsungElectronics",
-    "Samsung Electronics":   "SamsungElectronics",
-    "SK Hynix":              "SKHynix",
-    "Sony":                  None,                # not in our list
-    "TSMC":                  "TSMC",
-    "ARM":                   "ARM",
-    "Microsoft":             "Microsoft",
-    "Amazon":                "Amazon",
-    "AWS":                   "Amazon",
-    "Google":                "Alphabet",
-    "Alphabet":              "Alphabet",
-    "GOOG":                  "Alphabet",
-    "Meta":                  "Meta",
-    "Cadence":               "Cadence",
-    "Synopsys":              "Synopsys",
-    "Synopsys (SNPS)":       "Synopsys",
-    "Hesai":                 "Hesai",
-    "Hesai Group":           "Hesai",
-    "Xpeng":                 "Xpeng",
-    "Baidu":                 "Baidu",
-    "WeRide":                "WeRide",
-    "Pony.ai":               "PonyAI",
-    "PonyAI":                "PonyAI",
-    "Xiaomi":                "Xiaomi",
-    "Tencent":               "Tencent",
-    "Alibaba":               "Alibaba",
-    "Alibaba (BABA)":        "Alibaba",
-    "CATL":                  "CATL",
-    "Estun":                 "Estun",
-    "Inovance":              "Inovance",
-    "Leadshine":             "Leadshine",
-    "Leaderdrive":           "Leaderdrive",
-    "Shuanghuan Drive":      "Shuanghuan",
-    "Shuanghuan":            "Shuanghuan",
-    "Sanhua":                "Sanhua",
-    "Tuopu":                 "Tuopu",
-    "Joyson":                "Joyson",
-    "Wolong Electric":       "Wolong",
-    "Wolong":                "Wolong",
-    "Dobot":                 "Dobot",
-    "Fanuc":                 None,
-    "Yaskawa":               None,
-    "ABB Robotics":          None,
-    "Nabtesco":              None,
-    "Harmonic Drive Systems": None,
-    "Volkswagen":            None,
-    "Foxconn":               "Foxconn",
-    "Hon Hai":               "Foxconn",
-    "Glorymica":             "Glorymica",
-    "Luster LightTech":      None,                # not in dir list as company entry
-    "Shuanglin Co":          None,
-    "Hanwei Technology":     "Hanwei",
-    "Hanwei Technology (corp)": "Hanwei",
-    "Zhaowei":               "Zhaowei",
-    "UBTECH":                "UBTECH",
-    "UBTECH (corp)":         "UBTECH",
-    "Unitree":               "Unitree",
-    "Agibot":                "Agibot",
-    "Fourier Intelligence":  "Fourier",
-    "Fourier Intelligence (corp)": "Fourier",
-    "Anpeilong":             "Anpeilong",
-    "Cipher Mining":         "Cipher",
-    "Cipher":                "Cipher",
-    "Vistra":                "Vistra",
-    "Talen Energy":          "Talen",
-    "Talen":                 "Talen",
-    "Oklo":                  "Oklo",
-    "NuScale":               "NuScale",
-    "GE Vernova":            "GEVernova",
-    "Vertiv":                "Vertiv",
-    "Lumentum":              "Lumentum",
-    "Coherent":              "Coherent",
-    "Marvell":               "Marvell",
-    "Credo":                 "Credo",
-    "Astera Labs":           "AsteraLabs",
-    "Broadcom":              "Broadcom",
-    "Texas Instruments":     "TexasInstruments",
-    "Analog Devices":        "AnalogDevices",
-    "Microchip":             "Microchip",
-    "NXP":                   "NXP",
-    "STMicroelectronics":    "STMicroelectronics",
-    "Infineon":              "Infineon",
-    "Ambarella":             "Ambarella",
-    "Rambus":                "Rambus",
-    "GSI Technology":        "GSITechnology",
-    "Applied Materials":     "AppliedMaterials",
-    "Lam Research":          "LamResearch",
-    "KLA":                   "KLA",
-    "ASML":                  "ASML",
-    "Teradyne":              "Teradyne",
-    "Advantest":             "Advantest",
-    "Navitas":               "Navitas",
-    "Cadence Design":        "Cadence",
-    "AppliedDigital":        "AppliedDigital",
-    "Western Digital":       "WesternDigital",
-    "SanDisk":               "SanDisk",
-    "Seagate":               "Seagate",
-    "Micron":                "Micron",
-    "Cambricon":             "Cambricon",
-    "Hygon":                 "Hygon",
-    "Moore Threads":         "Moore Threads",
-    "Biren":                 "Biren",
-    "Muxi":                  "Muxi",
-    "Horizon Robotics":      "Horizon Robotics",
-    "Black Sesame":          "Black Sesame",
-    "SMIC":                  "SMIC",
-    "Hua Hong":              "Hua Hong",
-    "Sugon":                 "Sugon",
-    "InnoLight":             "InnoLight",
-    "iFlytek":               "iFlytek",
-    "Roborock":              "Roborock",
-    "Ecovacs":               "Ecovacs",
-    "Geek+":                 "Geek+",
-    "Bruco":                 "Bruco",
-    "Tianhong":              "Tianhong",
-    "Hikvision":             None,
-    "Dahua":                 None,
-    "Huawei":                None,
-    "DJI":                   None,
-    "Boston Dynamics":       None,
-    "Figure AI":              None,
-    "Agility Robotics":      None,
-    "Universal Robots":      None,
-    "KUKA":                  None,
-    "X-Humanoid":            None,
-    "Pollen Robotics":       None,
-    "Robbyant":              None,
-    "Bota Systems":          None,
-    "Schunk":                None,
-    "GeekTouch (Yuancheng)": None,
-    "LingXin Dexterous Hand": None,
-    "Suzhou Fulaiying":      None,
-    "Suzhou NSDA":           None,
-    "Bluepoint Touch":       None,
-    "ATI Industrial Automation": None,
-    "XinJingCheng":          None,
-    "HONOR":                 None,
-    "Honor":                 None,
-    "Mercedes-Benz":         None,
-    "BMW":                   None,
-    "Ford":                  None,
-    "BorgWarner":            None,
-    "Toyota":                None,
-    "Hyundai-Kia":           None,
-    "NIO":                   None,
-    "Li Auto":               None,
-    "Great Wall Motor":      None,
-    "SAIC Motor":            None,
-    "Geely":                 None,
-    "FAW Group":             None,
-    "Stellantis":            None,
-    "ATL":                   None,
-    "TDK":                   None,
-    "Keurig Dr Pepper":      None,
-    "Midea":                 "Midea",
-    "BSC":                   None,
-    "Mining":                None,
-}
-
-
-# Hand-curated edges to fill in well-known relationships not covered by the
-# graph_seed JSONs (or to override their direction).
-# Each tuple: (src, kind, tgt) — names must match canonical company `display`.
+# Hand-curated edges. Each tuple: (src, kind, tgt) — names must match the
+# canonical company `display` produced by collect_companies().
 MANUAL_EDGES: list[tuple[str, str, str]] = [
     # ── Semiconductors / compute ─────────────────────────────────────────────
     ("NVIDIA",  "COMPETES_WITH", "AMD"),
@@ -634,13 +446,13 @@ MANUAL_EDGES: list[tuple[str, str, str]] = [
     ("Robosense","SUPPLIES","BYD"),
     ("Robosense","SUPPLIES","GAC"),
     ("Robosense","SUPPLIES","Xpeng"),
-    ("Horizon Robotics","SUPPLIES","BYD"),
-    ("Horizon Robotics","SUPPLIES","Xpeng"),
-    ("Horizon Robotics","SUPPLIES","GAC"),
+    ("HorizonRobotics","SUPPLIES","BYD"),
+    ("HorizonRobotics","SUPPLIES","Xpeng"),
+    ("HorizonRobotics","SUPPLIES","GAC"),
     ("Black Sesame","SUPPLIES","Xpeng"),
-    ("Black Sesame","COMPETES_WITH","Horizon Robotics"),
+    ("Black Sesame","COMPETES_WITH","HorizonRobotics"),
     ("Black Sesame","COMPETES_WITH","Ambarella"),
-    ("Horizon Robotics","COMPETES_WITH","Ambarella"),
+    ("HorizonRobotics","COMPETES_WITH","Ambarella"),
     ("Omnivision","COMPETES_WITH","Ambarella"),
 
     # Humanoid robotics
@@ -663,6 +475,8 @@ MANUAL_EDGES: list[tuple[str, str, str]] = [
     ("Shuanghuan","SUPPLIES","Tesla"),
     ("Moons",   "SUPPLIES","Unitree"),
     ("Moons",   "SUPPLIES","UBTECH"),
+    ("Moons",   "COMPETES_WITH","Leadshine"),
+    ("Leadshine","COMPETES_WITH","Inovance"),
     ("FortiorTech","SUPPLIES","Moons"),
     ("FortiorTech","SUPPLIES","Inovance"),
     ("FortiorTech","SUPPLIES","Unitree"),
@@ -734,42 +548,86 @@ MANUAL_EDGES: list[tuple[str, str, str]] = [
     # Logistics / industrial robot
     ("Geek+","COMPETES_WITH","Dobot"),
 
+    # ── Filling in disconnected companies ────────────────────────────────────
+    # Dell — buys from NVIDIA / AMD / Intel / Foxconn assembly
+    ("NVIDIA",  "SUPPLIES", "Dell"),
+    ("AMD",     "SUPPLIES", "Dell"),
+    ("Intel",   "SUPPLIES", "Dell"),
+    ("Foxconn", "SUPPLIES", "Dell"),
+    ("SamsungElectronics","SUPPLIES","Dell"),
+    ("SKHynix", "SUPPLIES", "Dell"),
+    ("Micron",  "SUPPLIES", "Dell"),
+    ("Dell",    "COMPETES_WITH", "Sugon"),
+
+    # Sugon (中科曙光) — Chinese server maker, uses Hygon/Cambricon chips
+    ("Hygon",     "SUPPLIES",      "Sugon"),
+    ("Cambricon", "SUPPLIES",      "Sugon"),
+    ("Sugon",     "COMPETES_WITH", "Foxconn"),
+
+    # HorizonRobotics — already covered above, but ensure connectivity
+    ("HorizonRobotics","COMPETES_WITH","NVIDIA"),
+    ("HorizonRobotics","COMPETES_WITH","Qualcomm"),
+
+    # Surgical robotics duopoly inside our list
+    ("MicroPort Medbot", "COMPETES_WITH", "Edge Medical"),
+
+    # Bearings — Changsheng plays in the same space as Shuanghuan / NSK / SKF
+    ("Changsheng", "COMPETES_WITH", "Shuanghuan"),
+    ("Changsheng", "SUPPLIES",      "Tesla"),
+    ("Changsheng", "SUPPLIES",      "BYD"),
+
+    # Gearboxes / harmonic drives — Guomao plays alongside Leaderdrive
+    ("Guomao",    "COMPETES_WITH", "Leaderdrive"),
+    ("Guomao",    "SUPPLIES",      "Inovance"),
+
+    # Hengli Hydraulic — supplies excavator / industrial OEMs
+    ("Hengli", "SUPPLIES",      "Caterpillar"),
+    ("Hengli", "COMPETES_WITH", "Tuopu"),
+
+    # Power equipment — Sieyuan vs TBEA, both supply grid / data-center
+    ("Sieyuan", "COMPETES_WITH", "TBEA"),
+    ("Sieyuan", "SUPPLIES",      "GEVernova"),
+    ("TBEA",    "SUPPLIES",      "GEVernova"),
+
+    # Solar / display equipment
+    ("Maxwell (CN)", "COMPETES_WITH", "AppliedMaterials"),
+
+    # Wo'an Robot — competes with Roborock / Ecovacs in consumer cleaning robots
+    ("Wo'an Robot", "COMPETES_WITH", "Roborock"),
+    ("Wo'an Robot", "COMPETES_WITH", "Ecovacs"),
+
+    # Bruco — IP-licensed building blocks; closest peer in the list is Bandai/Lego
+    # (neither listed). Connect to Tencent (IP-licensing partner) as a supply link.
+    ("Bruco", "SUPPLIES", "Tencent"),
+
+    # Memory / SRAM — GSITechnology lives in the same space as Rambus / Micron
+    ("GSITechnology", "COMPETES_WITH", "Rambus"),
+    ("GSITechnology", "COMPETES_WITH", "Micron"),
+
+    # Luster LightTech — machine vision; supplies Foxconn / Apple AVI lines
+    ("Luster LightTech", "SUPPLIES", "Foxconn"),
+    ("Luster LightTech", "SUPPLIES", "Apple"),
+
+    # Cybersecurity — PaloAlto has no in-list peer; tie via supply to hyperscalers
+    ("PaloAltoNetworks", "SUPPLIES", "Microsoft"),
+    ("PaloAltoNetworks", "SUPPLIES", "Amazon"),
+
+    # Functional films — Foly supplies consumer electronics OEMs
+    ("Foly", "SUPPLIES", "Apple"),
+    ("Foly", "SUPPLIES", "Xiaomi"),
+
+    # Zeta — marketing AI; competes with Datadog / Palantir on AI-platform mind-share
+    ("Zeta", "COMPETES_WITH", "Palantir"),
+
+    # Berkshire — connect via its public Apple stake (only "supply" tie that makes sense
+    # is none; treat Berkshire as a peer of Alphabet/Microsoft from a mega-cap stand-
+    # point — skip rather than force a noisy edge).
+
     # Bottle / drink — none in our set
 
     # Brk.B / Caterpillar — generic conglom + heavy machinery
     # (skip — too vague)
 ]
-
-
-def load_seed_edges(canonical_names: set[str]) -> list[tuple[str, str, str]]:
-    """Pull COMPETES_WITH / SUPPLIES / CUSTOMER edges from every seed JSON
-    where both endpoints map to a node in `canonical_names`.
-
-    CUSTOMER A → B is rewritten as SUPPLIES B → A (A buys from B).
-    """
-    out: list[tuple[str, str, str]] = []
-    for js in sorted(SEED_DIR.glob("*.json")):
-        try:
-            payload = json.loads(js.read_text())
-        except Exception as e:
-            print(f"[seed] {js.name}: parse error {e}", file=sys.stderr)
-            continue
-        for e in payload.get("edges", []):
-            kind = e.get("name", "")
-            src  = SEED_NAME_ALIASES.get(e["src"], e["src"])
-            tgt  = SEED_NAME_ALIASES.get(e["tgt"], e["tgt"])
-            if not src or not tgt:
-                continue
-            if src not in canonical_names or tgt not in canonical_names:
-                continue
-            if src == tgt:
-                continue
-            if kind in ("COMPETES_WITH", "SUPPLIES"):
-                out.append((src, kind, tgt))
-            elif kind == "CUSTOMER":
-                # A--CUSTOMER-->B  ≡  B--SUPPLIES-->A
-                out.append((tgt, "SUPPLIES", src))
-    return out
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -899,12 +757,20 @@ def main() -> int:
         for c in companies
     }
 
-    seed_edges   = load_seed_edges(canonical_names)
+    # reports/graph_seed/*.json mixes products, suppliers-of-suppliers, and
+    # name aliases that don't match our canonical company set — disabled
+    # because the noise outweighs the few clean edges it contributes.
     manual_edges = [(s, k, t) for s, k, t in MANUAL_EDGES
                      if s in canonical_names and t in canonical_names]
-    all_edges    = seed_edges + manual_edges
-    print(f"[edges] seed={len(seed_edges)} manual={len(manual_edges)} "
-          f"total before dedup={len(all_edges)}")
+    skipped_manual = [(s, k, t) for s, k, t in MANUAL_EDGES
+                       if s not in canonical_names or t not in canonical_names]
+    all_edges = manual_edges
+    print(f"[edges] manual={len(manual_edges)} skipped={len(skipped_manual)} "
+          f"(name doesn't match a node)")
+    if skipped_manual:
+        for s, k, t in skipped_manual[:20]:
+            missing = "src" if s not in canonical_names else "tgt"
+            print(f"  - skip {s} -{k}-> {t}   (missing {missing})")
 
     n = insert_edges(conn, all_edges, name_to_uuid, full_label_by_display)
     print(f"[insert] {n} edges (after dedup)")
