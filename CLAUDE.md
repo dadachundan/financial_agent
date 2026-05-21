@@ -14,21 +14,23 @@ After completing a task and verifying that it works (by running tests or the app
 2. If working on a worktree branch, immediately merge it into `main` (`git checkout main && git merge <branch> --no-ff && git push origin main`).
 3. Ensure the local `main` is synced with the remote `HEAD`.
 4. Do not include the "Co-authored-by: Claude" footer in commits.
-5. **Always stop all servers after verifying a task works.** Kill both ports:
+5. **Always stop all test servers after verifying a task works — no exceptions.** Kill the test ports:
    ```
-   lsof -ti :5001 | xargs kill -9 2>/dev/null; lsof -ti :8080 | xargs kill -9 2>/dev/null
+   lsof -ti :5002 | xargs kill -9 2>/dev/null; lsof -ti :8080 | xargs kill -9 2>/dev/null
    ```
+   Port 5001 is reserved for the user's own running server — never start a test server on 5001 and never kill 5001.
 6. If the architecture changes, update `architecture.md`.
 
 # UI Verification (MANDATORY)
 
 After adding or modifying any UI feature — especially new buttons, modals, or navigation flows:
 
-1. **Always start the real web server** (`preview_start`) and load the page.
+1. **Always start the real web server on port 5002** (`preview_start` with port 5002 — do NOT use 5001, that port belongs to the user's running instance).
 2. **Click every new button** and verify it performs the correct action (use `preview_eval` to simulate clicks if needed).
 3. **Trace JS errors**: use `preview_console_logs` and `preview_eval` to check for `undefined`, `null`, or scoping issues (e.g. variables declared inside an IIFE are not accessible outside it).
 4. **Verify navigation flows end-to-end**: if a button should navigate to another view, confirm the target view actually appears.
 5. Do not consider UI work done until you have a screenshot or eval result proving each new interaction works.
+6. **Always stop the server (`preview_stop` + `lsof -ti :5002 | xargs kill -9`) the moment testing is finished.** Never leave a test server running.
 
 # Editable Table Columns
 
