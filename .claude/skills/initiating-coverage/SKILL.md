@@ -633,9 +633,10 @@ IF ANY VERIFICATION FAILS: Stop and complete missing task first.
 **⚠️ SOURCE CITATIONS ARE MANDATORY** (see Citation Standards below):
 - ✅ Every figure has a source line directly under it (clickable hyperlink, not plain text)
 - ✅ Every table has a source line as the final row (clickable hyperlink)
-- ✅ Every quantitative claim in prose has an inline citation (footnote or parenthetical hyperlink)
+- ✅ **Every substantive prose paragraph that makes a quantitative or external-fact claim ends with an inline parenthetical hyperlink citation.** Example: `…管理层指引 FY2026 出货量 300-350 万台,我们模型测算收入达到 47.37 亿元人民币 (来源: [FY2025 6-K](rId45))`. The page-1 investment bullets, every thesis-pillar paragraph, every financial-metric statement, every risk paragraph, and every peer-comparison paragraph all need one. Render as small italic gray text so the citation sits unobtrusively at the end of the paragraph.
 - ✅ The report includes a dedicated **Sources & References** appendix listing every source, organized by category, every entry a clickable hyperlink with a date — minimum 20 entries
-- ❌ **FAIL CONDITION**: If the final DOCX has no Sources & References appendix, or has fewer than 20 entries in it, DO NOT DELIVER. Add sources and re-export.
+- ❌ **FAIL CONDITION 1**: If the final DOCX has no Sources & References appendix, or has fewer than 20 entries in it, DO NOT DELIVER. Add sources and re-export.
+- ❌ **FAIL CONDITION 2**: If the body of the DOCX contains fewer than 30 distinct inline hyperlink citations (appendix entries don't count), DO NOT DELIVER. A report with sources only in the appendix is a report without sources — readers don't flip to the back. Walk the body and add inline citations to every substantive claim before re-exporting.
 
 **Final Verification** (every item must pass — any unchecked item blocks delivery):
 - [ ] Report is 30-50 pages
@@ -645,6 +646,9 @@ IF ANY VERIFICATION FAILS: Stop and complete missing task first.
 - [ ] Every figure has a source line below it (clickable hyperlink)
 - [ ] Every table has a source line as its final row (clickable hyperlink)
 - [ ] **Sources & References appendix exists with ≥20 entries, every entry a clickable hyperlink with a date**
+- [ ] **Body of report has ≥30 distinct inline hyperlink citations** (count `<w:hyperlink>` tags in `word/document.xml` outside the appendix — if it's under 30, the report has not actually been cited)
+- [ ] Every page-1 investment-summary bullet has at least one inline citation
+- [ ] Every paragraph stating a quantitative claim (revenue, margin, multiple, market share, growth rate, customer-concentration %) has an inline citation
 - [ ] All inline citations in prose are clickable hyperlinks (NOT plain text URLs, NOT "Company data")
 - [ ] Numbers match financial model exactly
 
@@ -753,7 +757,20 @@ A report without sources is not institutional-quality research — it is an opin
 **Inline citation format (DOCX — Task 5):**
 - Every figure: caption above ("Figure X — [Title]"), source line below in 9pt italic ("Source: [hyperlinked source], [date]").
 - Every table: final row spans all columns, "Source: [hyperlinked source], [date]".
-- Every quantitative claim in prose: parenthetical hyperlink or footnote — never a plain text URL, never "Company data" alone.
+- **Every substantive prose paragraph gets an inline parenthetical hyperlink at the end of its last sentence.** The citation should be small (8pt) italic gray (`#666666`) for the framing text and the standard hyperlink blue (`#0563C1`, underlined) for the linked label. Concrete pattern:
+  ```
+  …<paragraph text ending with a claim> (来源: <hyperlinked label>)
+  ```
+  Example (English report):
+  ```
+  Revenue grew 35% YoY to $234M in FY2024, driven by AT128 ramp at the top US OEM customer. (Source: 20-F FY2024)
+  ```
+  Example (Chinese report):
+  ```
+  FY2025 在 4.33 亿美元收入基础上实现 GAAP 净利润 6,200 万美元 (来源: FY2025 6-K)
+  ```
+  Both `Source:` / `来源:` and the label render as a single hyperlink that points to the same rId used in the Sources & References appendix — citations are not "named twice" in different forms, the appendix entry IS the canonical name. Never plain text URLs in prose. Never bare "Company data" or "Industry sources" without a specific document.
+- **Density target: ≥1 inline citation per substantive body paragraph, and ≥30 inline citations in the report body overall.** A 30-50 page report at 200-300 words per paragraph cleared 100+ candidate paragraphs; landing under 30 inline citations means the report was assembled but not cited. Walk the body before delivery and add citations until the threshold is met.
 
 **Mandatory Sources & References appendix (Task 5):**
 - Title: "Sources & References"

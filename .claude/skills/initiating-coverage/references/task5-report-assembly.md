@@ -1173,7 +1173,14 @@ MANDATORY TABLES:
 CITATIONS & HYPERLINKS ⭐⭐⭐ HARD FAIL IF MISSING:
 - [ ] Every figure has a source line directly under it (e.g. "Source: 10-K FY2024", "Source: FactSet, 2026-05-19")
 - [ ] Every table has a source line as its final row spanning all columns
-- [ ] Every quantitative claim in body prose has an inline citation (parenthetical hyperlink or footnote)
+- [ ] Every substantive prose paragraph has an inline citation `(Source: <hyperlinked label>)` / `(来源: …)` at the end
+- [ ] **Body has ≥30 distinct inline `<w:hyperlink>` elements outside the appendix** (FAIL → STOP DELIVERY). To verify, unpack the DOCX (`python scripts/office/unpack.py …`) and run:
+  ```bash
+  awk '/附录|Sources \& References/{exit} {print}' unpacked/word/document.xml | grep -c '<w:hyperlink'
+  ```
+  If the count is under 30, the report has been assembled but not cited — walk the body and add citations.
+- [ ] Every page-1 investment-summary bullet has an inline citation
+- [ ] Every thesis-pillar paragraph has an inline citation
 - [ ] All URLs are clickable hyperlinks — open the DOCX, Ctrl+Click 5-10 random links, confirm they work
 - [ ] **Sources & References appendix exists with level-1 heading** (FAIL → STOP DELIVERY)
 - [ ] **Sources & References appendix has ≥20 distinct entries** (FAIL → STOP DELIVERY)
@@ -1282,6 +1289,22 @@ Many reports fail because they use placeholders like "details would be included 
 **⚠️ SECOND-MOST COMMON MISTAKE: MISSING SOURCES**
 
 Many reports fail because Phase E ("Add Appendices & Finalize") gets rushed when the context window is full, and the Sources & References appendix is skipped or built with 3-5 token placeholders. **The skill is configured to fail delivery if this happens.** A report without a Sources & References appendix is not institutional-quality research — it is an opinion piece. If the upstream Task 1 and Task 3 outputs have no sources, **stop and rerun those tasks with sources** before assembling Task 5. Do not invent sources, do not skip the appendix, do not use vague labels like "Company data".
+
+**⚠️ THIRD-MOST COMMON MISTAKE: SOURCES ONLY IN THE APPENDIX, NOT INLINE**
+
+Readers of an institutional research report do not flip to a back-matter Sources page to verify each claim — they expect a clickable citation right next to the claim. A DOCX that has a 20-entry Sources & References appendix but zero hyperlinks in the body fails the "where's the source for *this* number" test for every reader on every paragraph. **The skill counts inline hyperlinks in the body separately from appendix hyperlinks and fails delivery if the body has fewer than 30 distinct inline citations.**
+
+**Embed citations while writing each phase, not as a retrofit.** As you add a paragraph in Phase B/C/D below, end every substantive sentence-ending claim with `(来源: [hyperlinked label](rId))` — or `(Source: [label](rId))` for English reports — re-using the rIds defined in the Phase E appendix. The label is the same short name used in the appendix (e.g. "FY2025 6-K", "20-F", "Yole Group", "Yahoo HSAI"). Render in 8pt italic gray so the citation doesn't visually disrupt the paragraph but the hyperlink remains clickable.
+
+**Where citations are NOT optional:**
+- Every page-1 investment-summary bullet (4 bullets × ≥1 citation each = 4 minimum)
+- Every opening sentence of an investment-thesis pillar (4-5 pillars × ≥1 citation each)
+- Every financial-metric statement in Historical Performance and Projection Assumptions (revenue, margin, FCF, EPS, growth rate, etc.)
+- Every peer comparison (Robosense / Ouster / Innoviz / etc.) — uses peer's Yahoo Finance rId
+- Every risk paragraph in the Risk Assessment section
+- Every market-data point in Valuation Methodology (TTM multiple, peer median, terminal growth justification)
+
+Going through that list yields 30+ paragraphs in a 30-50 page report — enough to clear the threshold without inventing citations for non-claim filler.
 
 1. **Rewriting Task 1 content**: DO NOT rewrite the 6-8K words from Task 1. Use almost verbatim - just reformat and add charts. Focus writing effort on quantitative sections (projections, scenarios, valuation).
 2. **Sparse pages**: Every page must have BOTH text AND visuals. Target 60-80% page density. Insert charts every 200-300 words.
