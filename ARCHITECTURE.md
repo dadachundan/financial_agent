@@ -75,7 +75,8 @@ Markdown viewer for research reports written by the `company-research`, `sec-rep
 - **Sector mapping**: `sector_map.py` — hardcoded `EXCHANGE:CODE → sector` table sourced from the two watchlist text files (`🇨🇳chinese.txt`, `🤪PER SECTOR.txt`); also exports `to_yfinance()` for converting EXCHANGE:CODE → yfinance ticker suffix
 - **Market cap**: `market_cap_cache.py` — per-day sqlite cache at `db/market_cap_cache.db`. First call of the day fetches missing tickers in a parallel background thread (8 workers); the page renders immediately with `—` placeholders and reload picks up the populated cache. Stores `(market_cap, currency)`; display tags non-USD values.
 - **Storage**: `reports/` (tracked in git)
-  - `reports/company/<Slug>/<file>.md` — company research (EN + ZH coexist; ZH suffix `_zh` or `_CN`)
+  - `reports/company/<Slug>/<file>.md` — listed (public) company research (EN + ZH coexist; ZH suffix `_zh` or `_CN`). `Slug` is `<ChineseName>_<EXCHANGE><CODE>`, e.g. `双林股份_SZSE300100`.
+  - `reports/unlisted/<ChineseName>/<file>.md` — private / unlisted-company research (e.g. `unlisted/智平方科技/`). Shown as Type **unlisted** with its own pill colour.
   - `reports/sector/<file>.md` — sector / thematic overviews
   - `reports/compare/<file>.md` — head-to-head comparisons
   - `reports/earnings/<TICKER>_<YYYYMMDD>.md` — quarterly earnings notes

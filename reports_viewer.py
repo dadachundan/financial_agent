@@ -6,7 +6,8 @@ EN/ZH pairs into a single row, and renders the selected file as HTML with
 marked.js + mermaid.js. Filesystem layout:
 
     reports/
-      company/<Slug>/<file>.md      — company research
+      company/<Slug>/<file>.md      — listed (public) company research
+      unlisted/<Slug>/<file>.md     — private / unlisted company research
       sector/<file>.md              — sector / thematic
       compare/<file>.md             — head-to-head
       earnings/<file>.md            — earnings notes
@@ -253,6 +254,7 @@ _INDEX_TMPL = r"""<!doctype html>
     .bucket-tag{display:inline-block;font-size:.72rem;padding:.06rem .45rem;border-radius:10px;
          background:#eef2f7;color:#3a4a5e;border:1px solid #d6dde6;white-space:nowrap}
     .bucket-tag.company{background:#eef7ee;border-color:#cfe5cf;color:#2a5d2f}
+    .bucket-tag.unlisted{background:#fbeef3;border-color:#e6c3d4;color:#8a2f5f}
     .bucket-tag.sector{background:#fef5e6;border-color:#f0d8a6;color:#7a5118}
     .bucket-tag.compare{background:#f3eaf7;border-color:#dac3ea;color:#5a2a85}
     .bucket-tag.earnings{background:#eaf2fb;border-color:#c4d8ef;color:#1d4a85}
