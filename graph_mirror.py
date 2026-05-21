@@ -380,7 +380,7 @@ def _episode_url(name: str) -> Optional[str]:
         except ValueError:
             pass
     if name.startswith("mdreport_"):
-        return f"/reports/view/{name[len('mdreport_'):]}"
+        return f"/claude-reports/view/{name[len('mdreport_'):]}"
     return None
 
 

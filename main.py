@@ -61,7 +61,7 @@ app.register_blueprint(pe_bp,           url_prefix="/pe")
 app.register_blueprint(price_shape_bp,  url_prefix="/price-shape")
 app.register_blueprint(notes_bp,        url_prefix="/manual-report")
 app.register_blueprint(obsidian_bp,     url_prefix="/obsidian")
-app.register_blueprint(reports_bp,      url_prefix="/reports")
+app.register_blueprint(reports_bp,      url_prefix="/claude-reports")
 _obsidian_filters(app)
 
 
@@ -76,6 +76,18 @@ def index():
 @app.route("/notes/<path:subpath>")
 def _notes_legacy_redirect(subpath: str):
     target = "/manual-report" + (f"/{subpath}" if subpath else "/")
+    qs = freq.query_string.decode("utf-8")
+    if qs:
+        target = f"{target}?{qs}"
+    return redirect(target, code=301)
+
+
+# Legacy redirect: /reports/* → /claude-reports/* (renamed 2026-05-21)
+@app.route("/reports", defaults={"subpath": ""})
+@app.route("/reports/", defaults={"subpath": ""})
+@app.route("/reports/<path:subpath>")
+def _reports_legacy_redirect(subpath: str):
+    target = "/claude-reports" + (f"/{subpath}" if subpath else "/")
     qs = freq.query_string.decode("utf-8")
     if qs:
         target = f"{target}?{qs}"
@@ -97,7 +109,7 @@ _BP_PREFIXES = {
     "price_shape":  "/price-shape",
     "notes":        "/manual-report",
     "obsidian":     "/obsidian",
-    "reports":      "/reports",
+    "reports":      "/claude-reports",
 }
 
 

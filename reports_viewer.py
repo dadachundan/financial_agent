@@ -241,7 +241,7 @@ _INDEX_TMPL = r"""<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Reports</title>
+  <title>Claude Reports</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -330,7 +330,7 @@ __MCW_CSS__
 __URLPATCH__
   {{ _nav | safe }}
   <div class="page">
-    <h1>Reports
+    <h1>Claude Reports
       <span class="count" id="count">{{ rows|length }} entries</span>
       {% if pending %}
         <span class="pending-note">· market cap loading {{ pending }} ticker(s) — refresh in ~1 min</span>
