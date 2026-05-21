@@ -300,24 +300,32 @@ def get_stats(conn: sqlite3.Connection) -> dict:
 
 def get_entities(conn: sqlite3.Connection, limit: int = 200,
                  cursor: Optional[str] = None) -> tuple[list[dict], Optional[str]]:
+    cols = "uuid, name, labels_json, summary, rating"
+    extra_cols = {r[1] for r in conn.execute("PRAGMA table_info(entities)").fetchall()}
+    has_mc = "market_cap_usd" in extra_cols
+    has_tk = "ticker" in extra_cols
+    if has_mc: cols += ", market_cap_usd"
+    if has_tk: cols += ", ticker"
     if cursor:
         rows = conn.execute(
-            "SELECT uuid, name, labels_json, summary, rating FROM entities "
+            f"SELECT {cols} FROM entities "
             "WHERE uuid > ? AND (isolated=0 OR isolated IS NULL) ORDER BY uuid LIMIT ?",
             (cursor, limit)
         ).fetchall()
     else:
         rows = conn.execute(
-            "SELECT uuid, name, labels_json, summary, rating FROM entities "
+            f"SELECT {cols} FROM entities "
             "WHERE (isolated=0 OR isolated IS NULL) ORDER BY uuid LIMIT ?", (limit,)
         ).fetchall()
-    items = [
-        {"uuid": r["uuid"], "name": r["name"],
-         "labels": json.loads(r["labels_json"] or "[]"),
-         "summary": r["summary"] or "",
-         "rating": r["rating"] or 0}
-        for r in rows
-    ]
+    items = []
+    for r in rows:
+        d = {"uuid": r["uuid"], "name": r["name"],
+             "labels": json.loads(r["labels_json"] or "[]"),
+             "summary": r["summary"] or "",
+             "rating": r["rating"] or 0}
+        if has_mc: d["market_cap_usd"] = r["market_cap_usd"]
+        if has_tk: d["ticker"] = r["ticker"] or ""
+        items.append(d)
     next_cursor = items[-1]["uuid"] if len(items) == limit else None
     return items, next_cursor
 

@@ -1381,14 +1381,43 @@ async function initGraph() {
     }
     graphInfo.style.display = 'none';
 
-    // Build deduplicated node map from edge endpoints
+    // Pull entity rows so we have market_cap_usd / ticker / summary for sizing
+    // and tooltips. Page through /entities until exhausted.
+    const entityByUuid = {};
+    let cursor = null;
+    for (let i = 0; i < 50; i++) {
+      const url = '/entities?limit=500' + (cursor ? `&cursor=${encodeURIComponent(cursor)}` : '');
+      const r = await fetch(url);
+      const d = await r.json();
+      (d.nodes || []).forEach(n => { entityByUuid[n.uuid] = n; });
+      if (!d.next_cursor) break;
+      cursor = d.next_cursor;
+    }
+
+    // Build node map: start with every entity (so isolated companies still show
+    // up), then fill in any leftover endpoints referenced only by edges.
     const nodeMap = new Map(); // uuid → {uuid, name}
+    Object.values(entityByUuid).forEach(n => {
+      nodeMap.set(n.uuid, { uuid: n.uuid, name: n.name });
+    });
     allEdges.forEach(e => {
       if (!nodeMap.has(e.source_node_uuid))
         nodeMap.set(e.source_node_uuid, { uuid: e.source_node_uuid, name: e.source_node_name || e.source_node_uuid });
       if (!nodeMap.has(e.target_node_uuid))
         nodeMap.set(e.target_node_uuid, { uuid: e.target_node_uuid, name: e.target_node_name || e.target_node_uuid });
     });
+
+    // Log-scaled node sizes: each 10x of market cap adds ~12 to the radius, so
+    // mega-caps stand out without dwarfing the small-caps entirely. Companies
+    // without a market cap (private / failed lookup) get the minimum size.
+    const MIN_SIZE = 10, MAX_SIZE = 60;
+    function sizeFor(uuid) {
+      const ent = entityByUuid[uuid];
+      const mc = ent && ent.market_cap_usd;
+      if (!mc || mc <= 0) return MIN_SIZE;
+      const s = (Math.log10(mc) - 8) * 12;
+      return Math.max(MIN_SIZE, Math.min(MAX_SIZE, s));
+    }
 
     // Fetch community assignments to color nodes
     const COMMUNITY_PALETTE = [
@@ -1409,12 +1438,22 @@ async function initGraph() {
       });
     } catch(_) {}
 
+    function fmtCap(mc) {
+      if (!mc || mc <= 0) return '—';
+      if (mc >= 1e12) return '$' + (mc / 1e12).toFixed(2) + 'T';
+      if (mc >= 1e9)  return '$' + (mc / 1e9).toFixed(1)  + 'B';
+      return '$' + (mc / 1e6).toFixed(0) + 'M';
+    }
+
     _visNodes = new vis.DataSet([...nodeMap.values()].map(n => {
       const cid = _entityCommunityMap[n.uuid];
       const bg = cid ? _communityColorMap[String(cid)] : '#e8f0fe';
       const border = cid ? bg : '#1a73e8';
+      const ent = entityByUuid[n.uuid] || {};
+      const tip = (ent.ticker ? ent.ticker + ' · ' : '') + 'mkt cap ' + fmtCap(ent.market_cap_usd);
       return {
-        id: n.uuid, label: n.name, title: n.name,
+        id: n.uuid, label: n.name, title: `${n.name}\n${tip}`,
+        size: sizeFor(n.uuid),
         color: { background: bg, border: border,
                  highlight: { background: bg, border: '#000' },
                  hover: { background: bg, border: '#000' } },
@@ -1435,7 +1474,9 @@ async function initGraph() {
 
     const options = {
       nodes: {
-        shape: 'dot', size: 14,
+        shape: 'dot',
+        scaling: { min: MIN_SIZE, max: MAX_SIZE,
+                   label: { enabled: true, min: 10, max: 22, drawThreshold: 5 } },
         font: { size: 13, face: 'Arial' },
         borderWidth: 2,
         color: {

@@ -130,7 +130,17 @@ def _get_graphiti():
 
 
 def _graph_ready() -> bool:
-    return GRAPH_DIR.exists() and GRAPH_DIR.stat().st_size > 4096
+    # Either a populated KuzuDB on disk, or a populated SQLite mirror, is enough
+    # to render the UI. The mirror alone is sufficient for browsing / search.
+    if GRAPH_DIR.exists() and GRAPH_DIR.stat().st_size > 4096:
+        return True
+    try:
+        n = _get_mirror().execute(
+            "SELECT 1 FROM entities WHERE (isolated=0 OR isolated IS NULL) LIMIT 1"
+        ).fetchone()
+        return n is not None
+    except Exception:
+        return False
 
 
 # ── KuzuDB direct query helpers ────────────────────────────────────────────────
