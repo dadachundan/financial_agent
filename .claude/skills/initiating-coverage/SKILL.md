@@ -193,10 +193,10 @@ ls "reports/company/<Slug>/" | grep -E "_Research_Document_|_公司研究_"
 
 **Decision tree:**
 
-- **A matching `*_Research_Document_*.md` or `*_公司研究_*.md` exists and is recent (≤ 6 months old):** ✅ Use it as Task 1's output. Note the path. Skip to user confirmation, then proceed (or wait for the user to request Task 2).
-- **A file exists but is > 6 months old, or the user explicitly asks for a refresh:** Ask the user whether to reuse the existing doc or re-run research. Do not silently overwrite.
-- **No file exists:** Run the `company-research` skill first. Tell the user:
-  > "No company research found at `reports/company/<Slug>/`. Running `/company-research <Company>` first — that skill produces the 6,000–10,000 word document Task 1 expects. After it finishes, come back to `/initiating-coverage Task 1` and I'll register the output."
+- **User explicitly asked to re-generate Task 1** (e.g. "re-run Task 1", "regenerate the research", "fresh research doc"): always re-run `/company-research`, regardless of what exists on disk. This override beats every rule below.
+- **A matching `*_Research_Document_*.md` or `*_公司研究_*.md` exists and is ≤ 1 month old** (compare report date in filename, or file mtime if the filename date is ambiguous): ✅ Reuse it as Task 1's output. Note the path. Confirm with the user, then proceed (or wait for the user to request Task 2).
+- **A file exists but is > 1 month old, OR no file exists:** Run `/company-research` to produce a fresh document. Tell the user:
+  > "Existing research at `reports/company/<Slug>/` is > 1 month old (or missing). Running `/company-research <Company>` to refresh — that skill produces the 6,000–10,000 word document Task 1 expects. After it finishes, I'll register the output."
 
   Then invoke the skill (e.g. via the Skill tool with `skill: "company-research"`, `args: "<Company or ticker>"`).
 
