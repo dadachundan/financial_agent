@@ -293,7 +293,7 @@ _INDEX_TEMPLATE = """
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Notes</title>
+  <title>Manual Report</title>
   <link href="/static/vendor/bootstrap.min.css" rel="stylesheet">
 __MCW_HEAD__
   <style>
@@ -411,7 +411,7 @@ __URLPATCH__
 
 <div class="page-wrap">
   <div class="d-flex align-items-center mb-3 gap-3 flex-wrap">
-    <h4 class="mb-0">📎 Notes</h4>
+    <h4 class="mb-0">📎 Manual Report</h4>
     <span class="text-muted small">{{ rows|length }} PDFs</span>
     <button id="openSelectedBtn" class="btn btn-sm btn-danger" onclick="openSelected()" disabled>
       📄 Open (<span id="selCount">0</span>)
@@ -1433,6 +1433,6 @@ def feed():
     tmpl = tmpl.replace("__NAV__",      nw2.NAV_HTML)
     tmpl = tmpl.replace("__URLPATCH__", nw2.URL_PATCH_JS)
     return render_template_string(tmpl, rows=rows, total=len(rows),
-                                  feed_title="Notes Feed",
-                                  feed_heading="📎 Notes Feed",
+                                  feed_title="Manual Report Feed",
+                                  feed_heading="📎 Manual Report Feed",
                                   toc_icon="📎")

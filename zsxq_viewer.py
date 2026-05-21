@@ -132,7 +132,7 @@ __URLPATCH__
     <a href="{{ _base | default('') }}/print-view?{{ query_string }}" target="_blank"
        class="btn btn-sm btn-outline-secondary ms-2">📄 Export PDF</a>
     <a href="{{ _base | default('') }}/feed" target="_blank"
-       class="btn btn-sm btn-outline-primary ms-2">📓 Notes Feed</a>
+       class="btn btn-sm btn-outline-primary ms-2">📓 ZSXQ Notes</a>
     <button class="btn btn-sm btn-outline-info ms-2"
             onclick="enrichTickers(this)"
             title="Look up Chinese company names for bare ticker codes (e.g. 688981 → 中芯国际 688981)">🏷 Enrich Tickers</button>
