@@ -68,13 +68,31 @@ For each company, brief profile:
 
 ### Step 6: Output
 
-- Word document or PowerPoint with:
+**Save to** `reports/sector/<topic-slug>_<YYYY-MM-DD>.md` (relative to the project root — `/Users/x/projects/financial_agent/reports/sector/`). `<topic-slug>` is a short, descriptive slug for the sector or thematic angle (Chinese characters are allowed: e.g. `人形机器人传感器板块综述`, `ai-infrastructure-buildout`). Supplementary deliverables (Word, PowerPoint, Excel appendix) can sit next to the markdown using the same `<topic-slug>` prefix.
+
+Deliverables:
+- Markdown sector overview (primary, always)
+- Optional: Word document or PowerPoint with:
   - Market overview and sizing
   - Competitive landscape map
   - Company comparison table
   - Valuation summary
   - Key charts: market growth, share trends, valuation history
-- Excel appendix with detailed company data
+- Optional: Excel appendix with detailed company data
+
+### Update-in-place rule — at most one report per topic
+
+Reports under `reports/sector/` are tracked in git and meant to be living documents. **Before writing, check whether a report for this topic already exists** and update it in place rather than creating a parallel dated copy.
+
+```bash
+ls reports/sector/ 2>/dev/null | grep -i "<topic-slug-or-keyword>"
+```
+
+- **Exactly one match for this topic** → overwrite it at the same path. Keep the existing filename even if its embedded date is stale — git history records the actual revision date. Update the document's "as of" header to today.
+- **Multiple matches for the same topic** (legacy state) → update the most recent by mtime, tell the user the older duplicates exist, do not auto-delete.
+- **Zero matches** → create a new file using today's date in the filename.
+
+If the user asks for a clearly different angle on the same sector (e.g. "China robotics — *export* angle" vs. an existing "China robotics — *domestic adoption* angle"), use a distinct `<topic-slug>` so the reports stay separate. The "one per topic" rule applies per topic-slug, not per sector.
 
 ## Important Notes
 

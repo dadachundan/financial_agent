@@ -286,3 +286,17 @@ Other report types live in sibling folders the viewer also surfaces:
 - `reports/earnings/<TICKER>_<YYYYMMDD>.md` for quarterly earnings notes
 
 Always write under the main project's `reports/` directory — never to a worktree, `~/Downloads`, or any other location.
+
+### Update-in-place rule — at most one research doc per company per language
+
+Reports under `reports/` are checked into git and are meant to be living documents. **Before writing, check whether a research doc for this company already exists** in `reports/company/<Slug>/`, and update it in place rather than creating a parallel dated copy.
+
+```bash
+ls "reports/company/<Slug>/" 2>/dev/null | grep -E "_Research_Document_.*\.md|_公司研究_.*\.md|_研究报告_.*\.md"
+```
+
+- **Exactly one match for this language** (`_Research_Document_` = EN, `_公司研究_` / `_研究报告_` = ZH) → overwrite it at the same path. Keep the existing filename; the embedded date may be stale, but git history records the actual revision date — that is the source of truth. Update the document's internal date / "as of" header to today.
+- **Multiple matches for the same language** (legacy state from before this rule) → update the most recent by mtime, then tell the user which older duplicates exist so they can decide what to delete. Do not auto-delete.
+- **Zero matches** → create a new file using today's date in the filename, following the naming conventions above.
+
+EN and ZH editions are separate categories — one of each per company is fine, sharing the same slug folder. After writing, print the final path so the user can confirm whether it was an update or a fresh create.

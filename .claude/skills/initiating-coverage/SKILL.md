@@ -260,7 +260,21 @@ Optional:
   5. **Scenarios** - Bull/Base/Bear comparison table
   6. **DCF Inputs** - Prepared for Task 3 valuation
 
-**File name**: `[Company]_Financial_Model_[Date].xlsx`
+**File name**: `[Company]_Financial_Model_[Date].xlsx` — written to `reports/company/<Slug>/model/`.
+
+### Update-in-place rule — at most one financial model per company
+
+Before writing, check `reports/company/<Slug>/model/` for an existing model and update it in place rather than creating a parallel dated copy.
+
+```bash
+ls "reports/company/<Slug>/model/" 2>/dev/null | grep -E "_Financial_Model_.*\.xlsx$"
+```
+
+- **Exactly one match** → open that workbook (XLSX skill) and edit its tabs in place. Keep the filename even if its embedded date is stale — git history records the actual revision date. Update the cover/header cell that displays "As of <date>" to today.
+- **Multiple matches** (legacy state) → update the most recent by mtime, tell the user the older duplicates exist, do not auto-delete.
+- **Zero matches** → create a new workbook with today's date in the filename.
+
+Task 3 adds tabs to this same workbook, so updating in place keeps Task 2 and Task 3 outputs co-located.
 
 **⚠️ DELIVER ONLY THIS 1 FILE. NO completion summaries, no extra documents.**
 
@@ -333,12 +347,26 @@ Required from model:
 - Key catalysts (3-5)
 
 **Files**:
-- `[Company]_Valuation_Analysis_[Date].md` (written analysis document)
+- `[Company]_Valuation_Analysis_[Date].md` (written analysis document) — saved under `reports/company/<Slug>/valuation/`
 - Excel tabs added to `[Company]_Financial_Model_[Date].xlsx` (from Task 2)
   - DCF tab with calculations
   - Sensitivity analysis tab
   - Comparable companies tab
   - Valuation summary tab
+
+### Update-in-place rule — at most one valuation analysis per company
+
+Before writing, check `reports/company/<Slug>/valuation/` for an existing analysis and update it in place rather than creating a parallel dated copy.
+
+```bash
+ls "reports/company/<Slug>/valuation/" 2>/dev/null | grep -E "_Valuation_Analysis_.*\.md$"
+```
+
+- **Exactly one match** → overwrite it at the same path. Keep the filename even if its embedded date is stale — git history records the actual revision date. Update the document's internal date / "as of" header to today.
+- **Multiple matches** (legacy state) → update the most recent by mtime, tell the user the older duplicates exist, do not auto-delete.
+- **Zero matches** → create a new file using today's date.
+
+The Excel tabs (DCF, Sensitivity, Comps, Valuation Summary) are added to the **existing** workbook from Task 2 — not a new file — so the update-in-place rule for the model (Task 2) automatically covers them too.
 
 **⚠️ DELIVER ONLY: 1 markdown file + 4 tabs added to existing Excel. NO completion summaries, no extra documents.**
 
@@ -626,7 +654,19 @@ IF ANY VERIFICATION FAILS: Stop and complete missing task first.
 - Pages 31-40: Valuation analysis
 - Pages 41-50: Appendices
 
-**File name**: `[Company]_Initiation_Report_[Date].docx`
+**File name**: `[Company]_Initiation_Report_[Date].docx` — saved at the root of `reports/company/<Slug>/`.
+
+### Update-in-place rule — at most one initiation report per company
+
+Before writing, check `reports/company/<Slug>/` for an existing initiation report and update it in place rather than creating a parallel dated copy.
+
+```bash
+ls "reports/company/<Slug>/" 2>/dev/null | grep -E "_Initiation_Report_.*\.docx$"
+```
+
+- **Exactly one match** → overwrite it at the same path (DOCX skill: open, edit, save to the same filename). Keep the existing filename even if its embedded date is stale — git history records the actual revision date. Update the cover-page date and any "as of" / "report date" fields in the body to today.
+- **Multiple matches** (legacy state) → update the most recent by mtime, tell the user the older duplicates exist, do not auto-delete.
+- **Zero matches** → create a new file using today's date in the filename.
 
 **⚠️ DELIVER ONLY THIS 1 DOCX FILE. NO executive summaries, no "highlights" documents, no extra files.**
 

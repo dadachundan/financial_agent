@@ -120,6 +120,18 @@ then the "Changes over the years" section at the end. Title it
 Create the `reports/earnings/` directory if it doesn't exist. After writing the file,
 print its path in chat and inline the report content for the user to read.
 
+### Update-in-place rule — at most one SEC summary per ticker
+
+Reports under `reports/earnings/` are tracked in git and meant to be living documents. **Before writing, check whether a summary for this ticker already exists** and update it in place rather than creating a parallel dated copy.
+
+```bash
+ls reports/earnings/ 2>/dev/null | grep -E "^<TICKER>_[0-9]+\.md$"
+```
+
+- **Exactly one match** → overwrite it at the same path. Keep the existing filename even if its embedded date is stale — git history records the actual revision date. Update the document's title-line date range and any "as of" header to today.
+- **Multiple matches** (legacy state) → update the most recent by filename date, tell the user the older duplicates exist, do not auto-delete.
+- **Zero matches** → create a new file using today's `YYYYMMDD`.
+
 To view rendered (with charts): start `main.py` and open
 `http://localhost:5001/reports/`. The viewer renders Markdown with
 Mermaid + GitHub styling.
