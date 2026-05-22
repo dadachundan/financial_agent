@@ -1301,11 +1301,11 @@ Readers of an institutional research report do not flip to a back-matter Sources
 
 **Embed citations while writing each phase, not as a retrofit.** As you add a paragraph in Phase B/C/D below, end every substantive sentence-ending claim with a clickable citation, re-using the rIds defined in the Phase E appendix:
 
-- **Factual claim:** `(来源: [短标签](rId))` — e.g. `(来源: [FY2025 6-K](rId45))`
-- **Hybrid factual + model projection** (a paragraph that mentions both a historical fact AND a forward-looking projection — most thesis-pillar and growth-driver paragraphs are this): `(来源: [external source](rId) | [optional second source](rId) | 本报告模型估算)`. External hyperlinks lead, model label trails. **No solo model label** when an external source is referenced in the same paragraph.
-- **Pure forward-looking projection** (paragraph contains only FY26E/FY27E/forward years, no external fact reference): `(来源: [FY2024 20-F 为基线](rId44) | 本报告模型估算)` — link to the 20-F since the model is built on its baseline, always include at least one clickable URL.
-- **Financial-model-tab reference only** (DCF, scenarios, sensitivity, valuation football field): `(来源: 财务模型 DCF 标签页)` non-hyperlinked is acceptable here because the source genuinely IS the analyst's internal workbook.
-- **Figure caption:** append `(来源: [Link 1] | [Link 2])` with 1-3 most relevant external sources from the per-chart mapping. Chart source lines baked into PNG images don't satisfy the click-to-verify test — the caption paragraph must carry the clickable links.
+- **Factual claim:** `(来源: [短标签](rId))` — e.g. `(来源: [FY2025 6-K](rId45))`.
+- **Paragraph mixing historical fact + forward-looking projection** (most thesis-pillar and growth-driver paragraphs): cite ONLY the external factual source(s). `(来源: [FY2025 6-K](rId45) | [Yole 新闻稿](rId70))`. **Do NOT add a "model estimate" trailer.** The analyst's own model is not a citable source — labeling it as one is functionally lying about provenance. The reader already understands forward years are analyst projections.
+- **Pure forward-looking paragraph with no external anchor:** leave uncited rather than fabricate a source. If the claim is meaningful, find the baseline document the projection is built on (10-K segment data, latest earnings guidance, an industry forecast) and cite that. Standalone `(来源: 本报告模型估算)` / `(Source: our model)` is BANNED — the user's explicit rule is *"if model source, just remove it"*.
+- **Figure caption — external-data chart:** append `(来源: [Link 1] | [Link 2])` with 1-3 most relevant external sources from the per-chart mapping. Chart source lines baked into PNG images don't satisfy the click-to-verify test — the caption paragraph must carry the clickable links.
+- **Figure caption — financial-model-only chart** (DCF sensitivity heatmap, scenario comparison, valuation football field, etc.): **no citation suffix on the caption.** The chart title and the prose around it already make clear it's an analyst projection; appending `(来源: 财务模型)` would be the same lie. Leave the caption clean.
 
 Render in 8pt italic so citations don't visually disrupt the paragraph: framing text gray (`#666666`), hyperlinks blue (`#0563C1`, underlined).
 
