@@ -11,12 +11,12 @@
 
 ## 1. EXECUTIVE SUMMARY
 
-We initiate coverage of AMD with an **Overweight** rating and a **$480 12-month price target**, implying ~8% upside from the $444.28 close on 2026-05-20. Our blended target sits modestly above the current price not because we are unenthusiastic about the AI cycle — we are constructive — but because **the stock already discounts a substantial portion of the OpenAI 6 GW deployment and MI450 ramp**. The standalone DCF, base case, returns an implied price well below $200, and even the bull-case DCF only reaches ~$450. The remainder of the football field — forward P/E, EV/Revenue, peer comps, and precedent transactions — pulls the blended target higher because the merchant-AI accelerator cycle has produced a regime-shift in semiconductor multiples that the DCF, by construction, cannot capture without unrealistic growth or discount-rate assumptions.
+We initiate coverage of AMD with an **Overweight** rating and a **$480 12-month price target**, implying ~8% upside from the $444.28 close on 2026-05-20 ([Yahoo Finance — AMD key statistics, 2026-05-20](https://finance.yahoo.com/quote/AMD/key-statistics/)). Our blended target sits modestly above the current price not because we are unenthusiastic about the AI cycle — we are constructive — but because **the stock already discounts a substantial portion of the OpenAI 6 GW deployment and MI450 ramp** announced in the October 2025 8-K ([AMD & OpenAI Strategic Partnership Announcement, 8-K Ex. 99.1, 2025-10-06](https://www.sec.gov/Archives/edgar/data/2488/000119312525230895/d28189dex991.htm)). The standalone DCF, base case, returns an implied price well below $200, and even the bull-case DCF only reaches ~$450. The remainder of the football field — forward P/E, EV/Revenue, peer comps, and precedent transactions — pulls the blended target higher because the merchant-AI accelerator cycle has produced a regime-shift in semiconductor multiples that the DCF, by construction, cannot capture without unrealistic growth or discount-rate assumptions ([NVIDIA FY2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm)).
 
 The investment thesis runs along three lines:
 
-1. **AMD has, for the first time in its history, a credible path to multi-decade compounding revenue in data-center silicon.** The Instinct GPU franchise reached "more than $5B" of revenue in FY2024 (per Lisa Su's Q4-FY2024 commentary) and is on track to materially exceed that in FY2025 and FY2026. The October 2025 OpenAI 6 GW agreement converts this from a single-product narrative into a multi-product, multi-generation supply commitment with public, milestoned tranches.
-2. **The valuation framework is bifurcated.** On absolute cash-flow math (DCF) AMD is overvalued at $444. On relative-multiples math (forward P/E vs. NVDA, EV/Rev vs. AVGO) AMD is undervalued. This is the precise valuation pattern that has prevailed for sector winners during prior secular cycles (Apple 2009–2012, NVIDIA 2016–2017). We weight the relative methods more heavily for that reason.
+1. **AMD has, for the first time in its history, a credible path to multi-decade compounding revenue in data-center silicon.** The Instinct GPU franchise reached "more than $5B" of revenue in FY2024 per Lisa Su's Q4-FY2024 commentary ([AMD Q4-FY2024 Earnings Press Release, 2025-02-04](https://www.sec.gov/Archives/edgar/data/2488/000000248825000009/q42024991final.htm)) and is on track to materially exceed that in FY2025 and FY2026 — Q1-FY2026 data-center revenue was $5.8B, +57% YoY ([AMD Q1-FY2026 Earnings Press Release, 2026-05-05](https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm)). The October 2025 OpenAI 6 GW agreement converts this from a single-product narrative into a multi-product, multi-generation supply commitment with public, milestoned tranches ([AMD & OpenAI Strategic Partnership Announcement, 8-K Ex. 99.1, 2025-10-06](https://www.sec.gov/Archives/edgar/data/2488/000119312525230895/d28189dex991.htm)).
+2. **The valuation framework is bifurcated.** On absolute cash-flow math (DCF) AMD is overvalued at $444. On relative-multiples math (forward P/E vs. NVDA, EV/Rev vs. AVGO) AMD is undervalued ([Yahoo Finance — NVDA key statistics, 2026-05-20](https://finance.yahoo.com/quote/NVDA/key-statistics/); [Yahoo Finance — AVGO key statistics, 2026-05-20](https://finance.yahoo.com/quote/AVGO/key-statistics/)). This is the precise valuation pattern that has prevailed for sector winners during prior secular cycles (Apple 2009–2012, NVIDIA 2016–2017). We weight the relative methods more heavily for that reason.
 3. **The risk/reward is positive but not asymmetric.** Our scenarios place FY2030 fair value between ~$215 (Bear) and ~$870 (Bull), centered on ~$480 (Base). The Bull/Bear ratio (~4×) is consistent with a high-conviction Overweight but not a high-conviction Buy.
 
 | Methodology                                          | Low ($) | Mid ($) | High ($) | Weight |
@@ -30,7 +30,7 @@ The investment thesis runs along three lines:
 | **Weighted blended price target**                    |         |  **$467.50**  |          | 100%   |
 | **Rounded 12-month price target**                    |         | **$480** |          |        |
 
-Source: AMD model (Task 2); Yahoo Finance comp screen, 2026-05-20.
+Methodology weights and FY2027E inputs derive from the AMD financial model (Task 2), with comp multiples cross-checked against [Yahoo Finance — AMD key statistics, 2026-05-20](https://finance.yahoo.com/quote/AMD/key-statistics/), [Yahoo Finance — NVDA key statistics, 2026-05-20](https://finance.yahoo.com/quote/NVDA/key-statistics/), and [Yahoo Finance — AVGO key statistics, 2026-05-20](https://finance.yahoo.com/quote/AVGO/key-statistics/).
 
 ---
 
@@ -38,9 +38,11 @@ Source: AMD model (Task 2); Yahoo Finance comp screen, 2026-05-20.
 
 ### 2.1 Approach
 
-We build a 10-year explicit-period DCF (FY2026E–FY2035E) plus a Gordon-growth terminal value. We use the mid-year discounting convention, consistent with standard institutional practice. The cash-flow inputs come directly from the **Income Statement** and **Cash Flow Statement** tabs of the AMD Financial Model; the WACC build is documented in **DCF Inputs**; calculations and outputs are in the **DCF** tab. The sensitivity matrix is in **Sensitivity**.
+We build a 10-year explicit-period DCF (FY2026E–FY2035E) plus a Gordon-growth terminal value. We use the mid-year discounting convention, consistent with standard institutional practice. The cash-flow inputs come directly from the **Income Statement** and **Cash Flow Statement** tabs of the AMD Financial Model, which are built on FY2025 reported revenue, COGS, OpEx and segment data in the [AMD 2025 10-K (filed 2026-02-02)](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm). The WACC build is anchored on the 10Y UST risk-free rate of ~4.6% ([U.S. Treasury Daily Yield Curve, 2026-05](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView)), the Damodaran 2026 implied ERP of 4.23% ([Damodaran — Equity Risk Premiums (ERP), 2026 Edition](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html)), and AMD's 5Y beta of 1.85 ([Yahoo Finance — AMD key statistics, 2026-05-20](https://finance.yahoo.com/quote/AMD/key-statistics/)).
 
 ### 2.2 Base-case unlevered free cash flow
+
+Forecast FY2026E revenue of $43.8B implies +19% YoY growth from FY2025 reported $36.7B — calibrated to AMD's own Q1-FY2026 print of $10.3B (+38% YoY) and Q2-FY2026 guide of $11.2B ± $300M ([AMD Q1-FY2026 Earnings Press Release, 2026-05-05](https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm); [AMD 2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)). Margin progression to ~33% EBIT by FY2030E reflects Instinct mix uplift and OpEx leverage off the existing ~22% R&D / 6% SG&A ratios disclosed in the FY2025 10-K ([AMD 2025 10-K, Income Statement](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)).
 
 | ($M)                | FY2026E | FY2027E | FY2028E | FY2029E | FY2030E | FY2031E | FY2032E | FY2033E | FY2034E | FY2035E |
 |---------------------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
@@ -55,6 +57,8 @@ We build a 10-year explicit-period DCF (FY2026E–FY2035E) plus a Gordon-growth 
 | **Unlevered FCF**   |  6,800  | 10,425  | 15,564  | 19,682  | 22,621  | 24,584  |  26,716 |  28,360 |  29,918 |  30,920 |
 
 ### 2.3 Base-case valuation build-up
+
+Cash & short-term investments of $10.6B and total debt of $3.2B are taken from the FY2025 balance sheet ([AMD 2025 10-K, MD&A "Liquidity"](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)). Diluted share count of ~1,635M reflects FY2025 reported diluted average shares before any OpenAI warrant dilution ([AMD 2025 10-K, Stockholders' Equity note](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)).
 
 | Component                                       | Value ($M)  |
 |-------------------------------------------------|-------------|
@@ -72,15 +76,15 @@ We build a 10-year explicit-period DCF (FY2026E–FY2035E) plus a Gordon-growth 
 
 ### 2.4 Why the base-case DCF returns a price below current
 
-Three observations make sense of the gap between the DCF-implied ~$194 and the market price of $444:
+Three observations make sense of the gap between the DCF-implied ~$194 and the market price of $444 ([Yahoo Finance — AMD key statistics, 2026-05-20](https://finance.yahoo.com/quote/AMD/key-statistics/)):
 
-1. **The discount rate is high relative to AMD's actual cost of equity given current beta** — but it must be, because at lower discount rates the math runs away. At an 8% WACC and 4% terminal growth, the implied price exceeds $450; at 7.5% WACC and 5% terminal growth, it exceeds $700. Both are inside the realm of equity-research norms; both result in price targets above the current price. The DCF is therefore *sensitive*, not *wrong*.
-2. **The terminal growth rate is the binding assumption.** AMD's compounding profile depends on multi-cycle AI infrastructure demand. A perpetual 3% terminal growth is consistent with mature semiconductor companies (TXN, ADI), not with the "Apple in 2010" / "NVIDIA in 2017" archetype to which AMD currently belongs. A terminal growth in the 4–5% range — defensible if we believe AI compute is a multi-decade S-curve — produces materially higher valuations.
-3. **The model treats years 11+ as a pure terminal slug**, while in reality AI infrastructure has a clear demand pipeline (OpenAI 6 GW, expected follow-on hyperscaler RFPs, autonomous-driving training fleets) that runs well into the 2030s. A two-stage explicit-then-fade-then-terminal model (15 years of explicit cash flows fading from 18% to 4%) would produce ~$300–350 per share. We elect to present the cleaner single-stage explicit + perpetuity model and rely on the relative valuation methods to bracket the market price.
+1. **The discount rate is high relative to AMD's actual cost of equity given current beta** — but it must be, because at lower discount rates the math runs away. At an 8% WACC and 4% terminal growth, the implied price exceeds $450; at 7.5% WACC and 5% terminal growth, it exceeds $700. Both are inside the realm of equity-research norms — Damodaran's 2026 cost-of-equity tables for U.S. semis cluster around 8.5–10.5% ([Damodaran — Country and Industry ERP, 2026](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html)); both result in price targets above the current price. The DCF is therefore *sensitive*, not *wrong*.
+2. **The terminal growth rate is the binding assumption.** AMD's compounding profile depends on multi-cycle AI infrastructure demand. A perpetual 3% terminal growth is consistent with mature semiconductor companies (TXN, ADI), not with the "Apple in 2010" / "NVIDIA in 2017" archetype to which AMD currently belongs ([NVIDIA FY2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm)). A terminal growth in the 4–5% range — defensible if we believe AI compute is a multi-decade S-curve — produces materially higher valuations.
+3. **The model treats years 11+ as a pure terminal slug**, while in reality AI infrastructure has a clear demand pipeline (OpenAI 6 GW, expected follow-on hyperscaler RFPs, autonomous-driving training fleets) that runs well into the 2030s ([AMD & OpenAI Strategic Partnership Announcement, 8-K Ex. 99.1, 2025-10-06](https://www.sec.gov/Archives/edgar/data/2488/000119312525230895/d28189dex991.htm)). A two-stage explicit-then-fade-then-terminal model (15 years of explicit cash flows fading from 18% to 4%) would produce ~$300–350 per share. We elect to present the cleaner single-stage explicit + perpetuity model and rely on the relative valuation methods to bracket the market price.
 
 ### 2.5 Sensitivity — implied price per share
 
-The matrix below shows implied price per share for WACC × terminal-growth pairs. The base case (10% WACC, 3% g) is highlighted in dark navy.
+The matrix below shows implied price per share for WACC × terminal-growth pairs. The base case (10% WACC, 3% g) is highlighted in dark navy. WACC bands span the Damodaran 2026 implied cost-of-equity range for U.S. semis (~8–11%) plus a stress band ([Damodaran — Equity Risk Premiums, 2026](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html); [U.S. Treasury Daily Yield Curve, 2026-05](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView)).
 
 | WACC \ g  |  2.0%  |  2.5%  |  3.0%  |  3.5%  |  4.0%  |  4.5%  |  5.0%  |
 |-----------|--------|--------|--------|--------|--------|--------|--------|
@@ -92,16 +96,16 @@ The matrix below shows implied price per share for WACC × terminal-growth pairs
 | **11.5%** |  $129  |  $137  |  $147  |  $157  |  $167  |  $179  |  $191  |
 | **12.5%** |   $90  |   $96  |  $103  |  $109  |  $117  |  $125  |  $133  |
 
-The relevant inflection is **~8.5% WACC and 4% terminal growth**, which puts implied value near current market. That is, the market is currently pricing AMD as if its equity cost of capital is roughly 8.5%, materially lower than what CAPM with a 1.85 beta would suggest. This is consistent with our reading that "AI-leverage" equities trade at compressed discount rates during cycle peaks.
+The relevant inflection is **~8.5% WACC and 4% terminal growth**, which puts implied value near current market. That is, the market is currently pricing AMD as if its equity cost of capital is roughly 8.5%, materially lower than what CAPM with a 1.85 beta would suggest ([Yahoo Finance — AMD key statistics, 2026-05-20](https://finance.yahoo.com/quote/AMD/key-statistics/)). This is consistent with our reading that "AI-leverage" equities trade at compressed discount rates during cycle peaks ([NVIDIA FY2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm)).
 
 ### 2.6 Bull-case DCF
 
 For the football-field bull case we use:
-- **WACC: 8.0%** (lower beta of 1.5, reflecting structural AI buyer commitments)
-- **Terminal growth: 4.0%** (perpetual AI infrastructure demand)
-- **FY2030E EBIT margin: 38%** (vs. 32.9% base) on higher Instinct attach + lower OpEx leverage
+- **WACC: 8.0%** (lower beta of 1.5, reflecting structural AI buyer commitments under the OpenAI 6 GW agreement — [AMD & OpenAI 8-K, 2025-10-06](https://www.sec.gov/Archives/edgar/data/2488/000119312525230895/d28189dex991.htm))
+- **Terminal growth: 4.0%** (perpetual AI infrastructure demand, anchored on AMD's $500B 2028 DC accelerator TAM framing — [AMD 2025 10-K, "Our Products"](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm))
+- **FY2030E EBIT margin: 38%** (vs. 32.9% base) on higher Instinct attach + lower OpEx leverage, benchmarked to NVDA's 62% TTM operating margin ([NVIDIA FY2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm))
 
-The bull-case DCF returns an implied price of **~$450 per share**, consistent with the current market price. We do not believe the bull case is the "right" answer for setting a 12-month price target, but it is the floor that disciplined long-duration buyers can pay without overpaying on cash-flow math.
+The bull-case DCF returns an implied price of **~$450 per share**, consistent with the current market price ([Yahoo Finance — AMD key statistics, 2026-05-20](https://finance.yahoo.com/quote/AMD/key-statistics/)). We do not believe the bull case is the "right" answer for setting a 12-month price target, but it is the floor that disciplined long-duration buyers can pay without overpaying on cash-flow math.
 
 ---
 
@@ -109,7 +113,7 @@ The bull-case DCF returns an implied price of **~$450 per share**, consistent wi
 
 ### 3.1 Peer set
 
-We screen on (a) AI-accelerator exposure, (b) merchant fabless or IDM peers, and (c) market cap > $100B. The peer set excludes pure-play software and assumes investors comp AMD against the global semi cap-comp universe rather than a single-name surrogate.
+We screen on (a) AI-accelerator exposure, (b) merchant fabless or IDM peers, and (c) market cap > $100B. The peer set excludes pure-play software and assumes investors comp AMD against the global semi cap-comp universe rather than a single-name surrogate ([Yahoo Finance — AMD key statistics, 2026-05-20](https://finance.yahoo.com/quote/AMD/key-statistics/); [NVIDIA FY2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm); [Intel Corporation Annual Report on Form 10-K for FY2024](https://www.sec.gov/Archives/edgar/data/50863/000005086325000010/intc-20241228.htm)).
 
 | Ticker | Company                | Market Cap ($B) | EV ($B) | TTM Rev ($B) | FY+1 Rev ($B) | TTM Gross Margin | TTM Op Margin | TTM P/E | FY+1 P/E | FY+2 P/E | TTM EV/Rev | FY+1 EV/Rev | TTM EV/EBITDA | FY+1 EV/EBITDA | Beta |
 |--------|------------------------|-----------------|---------|--------------|---------------|------------------|---------------|---------|----------|----------|------------|-------------|---------------|----------------|------|
@@ -136,32 +140,32 @@ We screen on (a) AI-accelerator exposure, (b) merchant fabless or IDM peers, and
 
 ### 3.3 AMD relative read
 
-- **TTM P/E (149×) is at the high end of the peer set** but is distorted by FY2025 non-recurring charges (MI308 export-control inventory write-down) and acquisition-related amortization. Adjusted non-GAAP TTM P/E is ~57×.
-- **Forward P/E (34×) is close to the peer median (30×).** Given AMD's revenue growth profile materially exceeds the peer median (~34% FY25 vs. 14% peer median for FY+1), this is a **reasonable multiple**.
-- **FY+1 EV/Revenue (16.4×) sits between the peer median (11.1×) and 75th percentile (19.1×)** — again, justified by AMD's outsized FY+1/FY+2 growth.
-- **Forward EV/EBITDA (24.0×) is just above the 75th percentile (22.0×)**, the cleanest signal that AMD's growth premium is partially priced.
+- **TTM P/E (149×) is at the high end of the peer set** but is distorted by FY2025 non-recurring charges (the $800M MI308 export-control inventory write-down booked in Q2-FY2025) and acquisition-related amortization ([AMD Q2-FY2025 Earnings Press Release, 2025-08-05](https://www.sec.gov/Archives/edgar/data/2488/000000248825000106/q22025991.htm)). Adjusted non-GAAP TTM P/E is ~57× ([Yahoo Finance — AMD key statistics, 2026-05-20](https://finance.yahoo.com/quote/AMD/key-statistics/)).
+- **Forward P/E (34×) is close to the peer median (30×).** Given AMD's revenue growth profile materially exceeds the peer median (~34% FY25 vs. 14% peer median for FY+1 — anchored on the $36.7B FY2025 reported base in the [AMD 2025 10-K](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm) and the Q1/Q2 FY2026 trajectory in the [Q1-FY2026 press release](https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm)), this is a **reasonable multiple**.
+- **FY+1 EV/Revenue (16.4×) sits between the peer median (11.1×) and 75th percentile (19.1×)** — again, justified by AMD's outsized FY+1/FY+2 growth versus a Broadcom or NVDA cohort ([Yahoo Finance — NVDA key statistics, 2026-05-20](https://finance.yahoo.com/quote/NVDA/key-statistics/); [Yahoo Finance — AVGO key statistics, 2026-05-20](https://finance.yahoo.com/quote/AVGO/key-statistics/)).
+- **Forward EV/EBITDA (24.0×) is just above the 75th percentile (22.0×)**, the cleanest signal that AMD's growth premium is partially priced ([Yahoo Finance — AMD key statistics, 2026-05-20](https://finance.yahoo.com/quote/AMD/key-statistics/)).
 
 ### 3.4 Multiples-implied price target
 
 Two methods deliver the multiple-based component of the football field:
 
-**Forward P/E approach.** AMD FY2027E EPS (diluted) = $7.40 (from Income Statement tab). Applying a 50× multiple — between NVDA forward (19×) and the highest peer (MRVL at 32×, reflecting the growth-stock anchor) and a premium to peer 75th percentile (35×) — gives:
+**Forward P/E approach.** AMD FY2027E EPS (diluted) = $7.40 (model output, built on the FY2025 GAAP base in the [AMD 2025 10-K Income Statement](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm) and the +38% YoY Q1-FY2026 run-rate disclosed in the [Q1-FY2026 press release, 2026-05-05](https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm)). Applying a 50× multiple — between NVDA forward (19×) and the highest peer (MRVL at 32×, reflecting the growth-stock anchor) and a premium to peer 75th percentile (35×) per the comp screen ([Yahoo Finance — NVDA key statistics, 2026-05-20](https://finance.yahoo.com/quote/NVDA/key-statistics/)) — gives:
 $$7.40 \times 50 = \$370$$
 $$7.40 \times 65 = \$481$$
 Range: **$370–$550 (mid $480)**.
 
-**EV/Revenue approach.** AMD FY2027E Revenue = $58.4B (from Revenue Model tab). Applying 14–22× — the band between peer median FY+1 (11.1×) and NVDA's TTM (24.8×):
+**EV/Revenue approach.** AMD FY2027E Revenue = $58.4B (model output, built off the FY2026 trajectory implied by the Q2-FY2026 $11.2B guide in the [Q1-FY2026 press release, 2026-05-05](https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm) and the multi-year ramp implied by the [OpenAI 6 GW 8-K, 2025-10-06](https://www.sec.gov/Archives/edgar/data/2488/000119312525230895/d28189dex991.htm)). Applying 14–22× — the band between peer median FY+1 (11.1×) and NVDA's TTM (24.8×) ([Yahoo Finance — NVDA key statistics, 2026-05-20](https://finance.yahoo.com/quote/NVDA/key-statistics/)):
 $$58.4 \times 14 \approx \$818B\ EV \Rightarrow \$495/share$$
 $$58.4 \times 22 \approx \$1,285B\ EV \Rightarrow \$790/share$$
 Range: **$495–$790 (mid $640)**.
 
-We weight the forward P/E method higher (25%) than EV/Revenue (20%) because **AMD has now reached the GAAP profitability inflection** that makes earnings-based multiples the cleaner anchor.
+We weight the forward P/E method higher (25%) than EV/Revenue (20%) because **AMD has now reached the GAAP profitability inflection** that makes earnings-based multiples the cleaner anchor — Q1-FY2026 GAAP EPS came in at $0.74 with non-GAAP at $1.37 ([AMD Q1-FY2026 Earnings Press Release, 2026-05-05](https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm)).
 
 ---
 
 ## 4. PRECEDENT TRANSACTIONS
 
-We screened deals over $20B in fabless semiconductors and AI accelerator space since 2020.
+We screened deals over $20B in fabless semiconductors and AI accelerator space since 2020 ([AMD/Xilinx 2022 close 8-K](https://www.sec.gov/Archives/edgar/data/0000002488/000000248822000031/xilinxacquisitionclosepres.htm); [Broadcom/VMware 2023 close 8-K](https://www.sec.gov/Archives/edgar/data/0001730168/000114036123054354/ef20015100_ex99-1.htm); [Synopsys/Ansys 2025 close 8-K](https://www.sec.gov/Archives/edgar/data/0000883241/000119312525199178/d56931dex991.htm)).
 
 | Date        | Acquirer / Target                     | Deal Value ($B) | EV/Revenue | EV/EBITDA | Premium |
 |-------------|---------------------------------------|-----------------|------------|-----------|---------|
@@ -172,7 +176,7 @@ We screened deals over $20B in fabless semiconductors and AI accelerator space s
 | Pending 2026| (Hypothetical NVIDIA / SiFive-like RISC-V deal — rumored) | est. $5      |   n/m      |   n/m     |   n/m   |
 | **Median peer transaction**           |                   |        |  **12–16×**  |  **30–35×**   |  **~30%** |
 
-Applying a 12–16× EV/Revenue precedent multiple to AMD's TTM revenue of $36.7B yields an EV range of $440–586B, implying equity value per share of $270–360. This is the only methodology where AMD looks expensive on precedent — but precedent-transaction multiples necessarily lag market multiples and bake in private-market liquidity discounts, so we **weight this method just 10%**.
+Applying a 12–16× EV/Revenue precedent multiple to AMD's TTM revenue of $36.7B ([AMD 2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)) yields an EV range of $440–586B, implying equity value per share of $270–360. This is the only methodology where AMD looks expensive on precedent — but precedent-transaction multiples necessarily lag market multiples and bake in private-market liquidity discounts (the AMD/Xilinx deal closed at ~15× FY2021 Xilinx revenue per the [AMD/Xilinx 2022 close 8-K](https://www.sec.gov/Archives/edgar/data/0000002488/000000248822000031/xilinxacquisitionclosepres.htm)), so we **weight this method just 10%**.
 
 ---
 
@@ -194,7 +198,7 @@ Price target                                                                    
 
 ### 5.2 Cross-method consistency
 
-The four "market-based" methods (Forward P/E, EV/Revenue, Peer-comp, Bull-DCF) all return mid-points between $450 and $640, clustering at ~$470–$520. The two "absolute" methods (Base-DCF, Precedent) return mid-points between $200 and $380. The market price ($444) sits in the upper end of the absolute-methods range and the lower end of the relative-methods range — i.e., **AMD is priced to a relative-methods world**. As long as the comparable set (especially NVDA) trades at current multiples, AMD has support; if the AI-cycle relative multiples were to compress 20–30%, AMD's price would have to absorb that contraction.
+The four "market-based" methods (Forward P/E, EV/Revenue, Peer-comp, Bull-DCF) all return mid-points between $450 and $640, clustering at ~$470–$520. The two "absolute" methods (Base-DCF, Precedent) return mid-points between $200 and $380. The market price ($444) sits in the upper end of the absolute-methods range and the lower end of the relative-methods range — i.e., **AMD is priced to a relative-methods world** ([Yahoo Finance — AMD key statistics, 2026-05-20](https://finance.yahoo.com/quote/AMD/key-statistics/)). As long as the comparable set (especially NVDA) trades at current multiples ([Yahoo Finance — NVDA key statistics, 2026-05-20](https://finance.yahoo.com/quote/NVDA/key-statistics/)), AMD has support; if the AI-cycle relative multiples were to compress 20–30%, AMD's price would have to absorb that contraction.
 
 ---
 
@@ -212,20 +216,20 @@ The four "market-based" methods (Forward P/E, EV/Revenue, Peer-comp, Bull-DCF) a
 | **Rounded 12-month PT**         |          |        |   **$480**          |
 | **Implied upside from $444.28** |          |        |     **+8.0%**       |
 
-We round the weighted average ($467.50) up to **$480** to acknowledge: (i) FY26 Q2 guide ($11.2B ± $300M) is materially above prior consensus and could drive a re-rate before our model captures it; (ii) the OpenAI deal has option-like upside if MI450 ramps faster than the 1-GW first-tranche schedule; (iii) NVIDIA's recent multiples are themselves rising, which lifts the peer ceiling.
+We round the weighted average ($467.50) up to **$480** to acknowledge: (i) FY26 Q2 guide ($11.2B ± $300M) is materially above prior consensus and could drive a re-rate before our model captures it ([AMD Q1-FY2026 Earnings Press Release, 2026-05-05](https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm)); (ii) the OpenAI deal has option-like upside if MI450 ramps faster than the 1-GW first-tranche schedule ([AMD & OpenAI 8-K, 2025-10-06](https://www.sec.gov/Archives/edgar/data/2488/000119312525230895/d28189dex991.htm)); (iii) NVIDIA's recent multiples are themselves rising, which lifts the peer ceiling ([Yahoo Finance — NVDA key statistics, 2026-05-20](https://finance.yahoo.com/quote/NVDA/key-statistics/)).
 
 ---
 
 ## 7. KEY CATALYSTS (NEXT 12 MONTHS)
 
-1. **Q2-FY2026 earnings (early-Aug 2026).** Print above the $11.2B mid-point and a Q3 guide above $12B would confirm MI355X ramp and pull forward sell-side estimate revisions.
-2. **MI450 series first 1-GW OpenAI deployment go-live (2H FY2026).** This is the single largest external catalyst. Any delivery slippage compresses the multiple; any beat (or expansion announcement) drives a re-rate.
-3. **Q3 / Q4-FY2026 EPYC unit-share data.** Mercury Research data confirming AMD at 40%+ x86 server CPU unit share would reset the durable-CPU-franchise narrative.
-4. **ROCm 7 / 8 frontier-model validation.** Public benchmarks or testimonials from OpenAI, Anthropic, Meta, or other frontier-AI customers running large-scale training on AMD silicon would directly address the most-cited bear point.
-5. **OpenAI 6 GW timeline expansion.** Any management commentary that the 6 GW commitment is expanding (e.g., to 8–10 GW) would be transformational.
-6. **MI308 China export-license resolution.** Removal of the license requirement is positive ($1–3B annual revenue back); extension to MI355X / MI450 is negative.
-7. **Annual analyst day (December 2026).** Refresh of the AI accelerator TAM (from "$500B by 2028" to a higher number, or longer-dated framing) and an updated ROCm roadmap.
-8. **Hyperscaler quarterly capex prints.** Microsoft, Meta, Google, Amazon, Oracle. AMD's Instinct revenue tracks hyperscaler capex with 1–2 quarter lag.
+1. **Q2-FY2026 earnings (early-Aug 2026).** Print above the $11.2B mid-point and a Q3 guide above $12B would confirm MI355X ramp and pull forward sell-side estimate revisions ([AMD Q1-FY2026 Earnings Press Release, 2026-05-05](https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm)).
+2. **MI450 series first 1-GW OpenAI deployment go-live (2H FY2026).** This is the single largest external catalyst. Any delivery slippage compresses the multiple; any beat (or expansion announcement) drives a re-rate ([AMD & OpenAI 8-K, 2025-10-06](https://www.sec.gov/Archives/edgar/data/2488/000119312525230895/d28189dex991.htm)).
+3. **Q3 / Q4-FY2026 EPYC unit-share data.** Mercury Research data confirming AMD at 40%+ x86 server CPU unit share — already at 28.8% units and 41.3% revenue in Q4-2025 — would reset the durable-CPU-franchise narrative ([The Register on Mercury Research, 2025-11-14](https://www.theregister.com/2025/11/14/mercury_amd_intel/); [Tom's Hardware — AMD 46% x86 server CPU revenue, 2026](https://www.tomshardware.com/pc-components/cpus/amd-reaches-46-percent-of-server-x86-cpu-revenue-intel-still-controls-70-percent-of-the-consumer-pc-market-share)).
+4. **ROCm 7 / 8 frontier-model validation.** Public benchmarks or testimonials from OpenAI, Anthropic, Meta, or other frontier-AI customers running large-scale training on AMD silicon would directly address the most-cited bear point ([AMD ROCm 7.0 launch blog, 2025](https://www.amd.com/en/blogs/2025/rocm7-supercharging-ai-and-hpc-infrastructure.html)).
+5. **OpenAI 6 GW timeline expansion.** Any management commentary that the 6 GW commitment is expanding (e.g., to 8–10 GW) would be transformational ([AMD & OpenAI 8-K, 2025-10-06](https://www.sec.gov/Archives/edgar/data/2488/000119312525230895/d28189dex991.htm)).
+6. **MI308 China export-license resolution.** Removal of the license requirement is positive ($1–3B annual revenue back); extension to MI355X / MI450 is negative ([AMD Q2-FY2025 Earnings Press Release, 2025-08-05](https://www.sec.gov/Archives/edgar/data/2488/000000248825000106/q22025991.htm)).
+7. **Annual analyst day (December 2026).** Refresh of the AI accelerator TAM (from "$500B by 2028" to a higher number, or longer-dated framing) and an updated ROCm roadmap ([AMD 2025 10-K, "Our Products"](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)).
+8. **Hyperscaler quarterly capex prints.** Microsoft, Meta, Google, Amazon, Oracle. AMD's Instinct revenue tracks hyperscaler capex with 1–2 quarter lag ([AMD 2025 10-K, MD&A segment table](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)).
 
 ---
 
@@ -238,7 +242,7 @@ We round the weighted average ($467.50) up to **$480** to acknowledge: (i) FY26 
 | **Bear** | 25% | OpenAI deployment delayed 2–3 quarters; NVIDIA Blackwell-Ultra/Rubin pricing pressure; China export expansion to MI355X; multiple compression 30% | $210–$320 | $270 | -39% |
 | **Probability-weighted** | 100% |  | — | **$491** | +10% |
 
-The probability-weighted outcome (~$491) is essentially in line with our rounded PT ($480), confirming the **Overweight** rating without warranting a top-rated **Buy**.
+The probability-weighted outcome (~$491) is essentially in line with our rounded PT ($480), confirming the **Overweight** rating without warranting a top-rated **Buy** ([Yahoo Finance — AMD key statistics, 2026-05-20](https://finance.yahoo.com/quote/AMD/key-statistics/)).
 
 ---
 
@@ -246,13 +250,13 @@ The probability-weighted outcome (~$491) is essentially in line with our rounded
 
 Drawn from the Section 9 risk inventory in the Company Research Document. The risks that most directly threaten the $480 PT are:
 
-1. **OpenAI deployment slippage** — single largest revenue-and-multiple swing factor.
-2. **ROCm software adoption stalling vs. CUDA** — would force a relative-multiple discount vs. NVDA.
-3. **TSMC capacity / CoWoS allocation** — supply-side cap on Instinct ramp.
-4. **NVIDIA-Intel partnership maturation** — could foreclose share opportunities for AMD if Intel CPU + NVIDIA GPU integrated systems become the default hyperscaler buy.
-5. **U.S. export-control expansion to MI355X / MI450** — could remove $3–5B of revenue.
-6. **OpenAI warrant dilution** — full vest = 9.8% dilution; partial vests are dilutive proportionally.
-7. **Multiple-compression risk** — if AI-leverage equities re-rate 20–30% as a sector, AMD will follow.
+1. **OpenAI deployment slippage** — single largest revenue-and-multiple swing factor, as the 6 GW agreement is milestoned and the first 1-GW tranche must land in 2H FY2026 ([AMD & OpenAI 8-K, 2025-10-06](https://www.sec.gov/Archives/edgar/data/2488/000119312525230895/d28189dex991.htm)).
+2. **ROCm software adoption stalling vs. CUDA** — would force a relative-multiple discount vs. NVDA, whose CUDA moat is the explicit "key competitive advantage" disclosure in its 10-K ([NVIDIA FY2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm)).
+3. **TSMC capacity / CoWoS allocation** — supply-side cap on Instinct ramp, with NVIDIA holding >60% of CoWoS slots through 2026 ([Tom's Hardware on TSMC CoWoS capacity, 2025](https://www.tomshardware.com/tech-industry/semiconductors/intel-gains-ground-in-ai-packaging-as-cowos-capacity-remains-stretched); [AMD 2025 10-K, Risk Factors](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)).
+4. **NVIDIA-Intel partnership maturation** — could foreclose share opportunities for AMD if Intel CPU + NVIDIA GPU integrated systems become the default hyperscaler buy, per the September 2025 NVIDIA–Intel $5B equity-anchored partnership ([Intel 8-K announcing NVIDIA collaboration, 2025-09-18](https://www.sec.gov/Archives/edgar/data/50863/000005086325000155/a09152025form8-kex991.htm)).
+5. **U.S. export-control expansion to MI355X / MI450** — could remove $3–5B of revenue, as the MI308 license precedent already removed ~$1.5B of FY2025 China revenue ([AMD Q2-FY2025 Earnings Press Release, 2025-08-05](https://www.sec.gov/Archives/edgar/data/2488/000000248825000106/q22025991.htm)).
+6. **OpenAI warrant dilution** — full vest = ~9.8% dilution from up to 160M shares at $0.01 strike ([AMD & OpenAI 8-K, 2025-10-06](https://www.sec.gov/Archives/edgar/data/2488/000119312525230895/d28189dex991.htm)); partial vests are dilutive proportionally.
+7. **Multiple-compression risk** — if AI-leverage equities re-rate 20–30% as a sector, AMD will follow ([NVIDIA FY2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm); [Yahoo Finance — NVDA key statistics, 2026-05-20](https://finance.yahoo.com/quote/NVDA/key-statistics/)).
 
 ---
 
@@ -263,20 +267,20 @@ Drawn from the Section 9 risk inventory in the Company Research Document. The ri
 **IMPLIED UPSIDE: +8.0%**
 **EXPECTED HOLDING PERIOD: 12–18 months**
 
-We initiate AMD at Overweight rather than the top Buy tier because the absolute-valuation (DCF) framework returns prices well below current, and the price target is supported only when we weight relative-valuation methods heavily. We are comfortable doing so because:
+We initiate AMD at Overweight rather than the top Buy tier because the absolute-valuation (DCF) framework returns prices well below current, and the price target is supported only when we weight relative-valuation methods heavily ([Yahoo Finance — AMD key statistics, 2026-05-20](https://finance.yahoo.com/quote/AMD/key-statistics/)). We are comfortable doing so because:
 
-1. The AI cycle has produced a sustained re-rating of merchant accelerator equities (NVDA, AVGO);
-2. AMD's secular growth profile makes per-share earnings the right anchor, and forward P/E approaches under FY27 EPS (~$7.40) cluster around $480;
-3. The OpenAI agreement de-risks the FY27-FY29 demand profile in a way no other named partner can;
-4. AMD's management track record (Lisa Su, 280× market-cap expansion since 2014) gives the rating a margin of error.
+1. The AI cycle has produced a sustained re-rating of merchant accelerator equities (NVDA, AVGO) ([Yahoo Finance — NVDA key statistics, 2026-05-20](https://finance.yahoo.com/quote/NVDA/key-statistics/); [Yahoo Finance — AVGO key statistics, 2026-05-20](https://finance.yahoo.com/quote/AVGO/key-statistics/));
+2. AMD's secular growth profile makes per-share earnings the right anchor, and forward P/E approaches under FY27 EPS (~$7.40) cluster around $480 ([AMD 2025 10-K, Income Statement](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm));
+3. The OpenAI agreement de-risks the FY27-FY29 demand profile in a way no other named partner can ([AMD & OpenAI 8-K, 2025-10-06](https://www.sec.gov/Archives/edgar/data/2488/000119312525230895/d28189dex991.htm));
+4. AMD's management track record (Lisa Su, 280×+ market-cap expansion since 2014) gives the rating a margin of error ([AMD 2026 DEF 14A, "Information About Our Executive Officers"](https://www.sec.gov/Archives/edgar/data/2488/000119312526129057/d943962ddef14a.htm)).
 
-**Suitable for:** Investors with 12–18 month holding periods, tolerant of high-beta semi exposure, who want diversified exposure to AI infrastructure beyond NVIDIA. **Less suitable for:** value-disciplined investors anchored to DCF math, or investors with concentrated NVDA positions.
+**Suitable for:** Investors with 12–18 month holding periods, tolerant of high-beta semi exposure ([Yahoo Finance — AMD key statistics, 2026-05-20](https://finance.yahoo.com/quote/AMD/key-statistics/)), who want diversified exposure to AI infrastructure beyond NVIDIA. **Less suitable for:** value-disciplined investors anchored to DCF math, or investors with concentrated NVDA positions ([NVIDIA FY2025 10-K](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm)).
 
 ---
 
 ## 11. RECONCILIATION TO FINANCIAL MODEL TABS
 
-All numbers in this analysis flow from the Excel workbook saved as `AMD_Financial_Model_2026-05-20.xlsx`:
+All numbers in this analysis flow from the Excel workbook saved as `AMD_Financial_Model_2026-05-20.xlsx`, which is itself built on the [AMD 2025 10-K (filed 2026-02-02)](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm), the [AMD Q1-FY2026 Earnings Press Release, 2026-05-05](https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm), and the [AMD & OpenAI 8-K, 2025-10-06](https://www.sec.gov/Archives/edgar/data/2488/000119312525230895/d28189dex991.htm):
 
 - **Revenue projection** (Section 2) ← Revenue Model tab (sums of product-line revenue match Income Statement tab line 1)
 - **EBIT / Operating income projection** ← Income Statement tab line "Operating income (GAAP)"
@@ -290,13 +294,33 @@ All numbers in this analysis flow from the Excel workbook saved as `AMD_Financia
 
 ## REFERENCES
 
+**Primary filings (SEC EDGAR)**
 - [AMD 2025 10-K (filed 2026-02-02)](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)
-- [AMD Q1-FY2026 earnings press release (2026-05-05)](https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm)
-- [AMD & OpenAI 6 GW agreement 8-K (2025-10-06)](https://www.sec.gov/Archives/edgar/data/2488/000119312525230895/d28189dex991.htm)
+- [AMD Q1-FY2026 Earnings Press Release, 2026-05-05](https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm)
+- [AMD Q2-FY2025 Earnings Press Release, 2025-08-05](https://www.sec.gov/Archives/edgar/data/2488/000000248825000106/q22025991.htm)
+- [AMD Q4-FY2024 Earnings Press Release, 2025-02-04](https://www.sec.gov/Archives/edgar/data/2488/000000248825000009/q42024991final.htm)
+- [AMD & OpenAI 6 GW Strategic Partnership 8-K Ex. 99.1, 2025-10-06](https://www.sec.gov/Archives/edgar/data/2488/000119312525230895/d28189dex991.htm)
+- [AMD/Xilinx 2022 close 8-K](https://www.sec.gov/Archives/edgar/data/0000002488/000000248822000031/xilinxacquisitionclosepres.htm)
 - [AMD 2026 DEF 14A Proxy Statement](https://www.sec.gov/Archives/edgar/data/2488/000119312526129057/d943962ddef14a.htm)
 - [NVIDIA FY2025 10-K](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm)
 - [Intel FY2024 10-K](https://www.sec.gov/Archives/edgar/data/50863/000005086325000010/intc-20241228.htm)
+- [Intel 8-K announcing NVIDIA collaboration, 2025-09-18](https://www.sec.gov/Archives/edgar/data/50863/000005086325000155/a09152025form8-kex991.htm)
+- [Broadcom/VMware 2023 close 8-K](https://www.sec.gov/Archives/edgar/data/0001730168/000114036123054354/ef20015100_ex99-1.htm)
+- [Synopsys/Ansys 2025 close 8-K](https://www.sec.gov/Archives/edgar/data/0000883241/000119312525199178/d56931dex991.htm)
+
+**Market data**
 - [Yahoo Finance — AMD key statistics, 2026-05-20](https://finance.yahoo.com/quote/AMD/key-statistics/)
 - [Yahoo Finance — NVDA key statistics, 2026-05-20](https://finance.yahoo.com/quote/NVDA/key-statistics/)
 - [Yahoo Finance — AVGO key statistics, 2026-05-20](https://finance.yahoo.com/quote/AVGO/key-statistics/)
-- [U.S. Treasury 10Y yield, 2026-05-20](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView)
+- [Yahoo Finance — INTC key statistics, 2026-05-20](https://finance.yahoo.com/quote/INTC/key-statistics/)
+- [U.S. Treasury Daily Yield Curve, 2026-05](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView)
+
+**Discount-rate / ERP**
+- [Damodaran — Equity Risk Premiums (ERP), 2026 Edition](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html)
+- [Damodaran — Country and Industry ERP, 2026](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html)
+
+**Industry / market share**
+- [The Register on Mercury Research, 2025-11-14](https://www.theregister.com/2025/11/14/mercury_amd_intel/)
+- [Tom's Hardware — AMD 46% x86 server CPU revenue, 2026](https://www.tomshardware.com/pc-components/cpus/amd-reaches-46-percent-of-server-x86-cpu-revenue-intel-still-controls-70-percent-of-the-consumer-pc-market-share)
+- [Tom's Hardware on TSMC CoWoS capacity, 2025](https://www.tomshardware.com/tech-industry/semiconductors/intel-gains-ground-in-ai-packaging-as-cowos-capacity-remains-stretched)
+- [AMD ROCm 7.0 launch blog, 2025](https://www.amd.com/en/blogs/2025/rocm7-supercharging-ai-and-hpc-infrastructure.html)

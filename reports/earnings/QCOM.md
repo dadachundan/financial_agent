@@ -10,12 +10,16 @@ Filings analyzed:
 
 | Period end | Form | Filed | Notes |
 |---|---|---|---|
-| 2026-03-29 | 10-Q (Q2 FY26) | 2026-04-29 | $5.7B DTA release, $20B buyback auth |
-| 2025-12-28 | 10-Q (Q1 FY26) | 2026-02-04 | Alphawave acq. closed Dec 18 2025 |
-| 2025-09-28 | 10-K (FY25 / Q4) | 2025-11-05 | Data Center segment named, OBBB enacted |
-| 2025-06-29 | 10-Q (Q3 FY25) | 2025-07-30 | Pre-tax-reform clean quarter |
+| 2026-03-29 | [10-Q (Q2 FY26)](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm) | 2026-04-29 | $5.7B DTA release, $20B buyback auth |
+| 2025-12-28 | [10-Q (Q1 FY26)](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000017/qcom-20251228.htm) | 2026-02-04 | Alphawave acq. closed Dec 18 2025 |
+| 2025-09-28 | [10-K (FY25 / Q4)](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm) | 2025-11-05 | Data Center segment named, OBBB enacted |
+| 2025-06-29 | [10-Q (Q3 FY25)](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000045/qcom-20250629.htm) | 2025-07-30 | Pre-tax-reform clean quarter |
 
-Plus the four accompanying earnings 8-Ks (ids 23189, 7347, 7348, 7349)
+Plus the four accompanying earnings 8-Ks
+([Q3 FY25](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000044/qcom062925erex991.htm),
+[Q4 FY25](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000084/qcom092825erex991.htm),
+[Q1 FY26](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000016/qcom122825erex991.htm),
+[Q2 FY26](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm))
 where management guidance for the *next* quarter lives.
 
 ---
@@ -41,7 +45,7 @@ xychart-beta
 The "Handsets" line above — peaked at $7.8B in seasonal-strong Q1 FY26,
 then collapsed to $6.0B in Q2 FY26 (-13% YoY). The headline story for
 the past four quarters is **handset cyclicality compressing, auto and
-IoT diversification compounding**.
+IoT diversification compounding** ([Qualcomm 10-Q Q2 FY26, segment table](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)).
 
 ```mermaid
 xychart-beta
@@ -53,7 +57,7 @@ xychart-beta
 
 Automotive set a **record quarter** in Q2 FY26 ($1.33B, +38% YoY).
 Combined "Auto + IoT" grew 20% YoY — the diversification line management
-quoted in the earnings 8-K.
+quoted in the earnings 8-K ([Qualcomm 8-K Q2 FY26 earnings release, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
 
 ---
 
@@ -67,8 +71,8 @@ quoted in the earnings 8-K.
 | Q2 FY26 (Mar 29 2026) | **$10.60B** | -3% | $9.08B | $1.38B | $7.37B (+162%)² | $2.65 (-10%) |
 | **Q3 FY26 guide** | **$9.2-10.0B** | -8 to -1% | $7.9-8.5B | n/a | n/a | n/a |
 
-¹ FY25 full year was $44.3B; Q4 implied by FY25 − first 9 months reported in the Q3 FY25 10-Q.
-² Q2 FY26 net income includes a $5.7B one-time tax benefit ($5.33 EPS); ex-tax, operating earnings were roughly flat YoY.
+¹ FY25 full year was $44.3B per the [Qualcomm 10-K FY25 segment results](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm); Q4 implied by FY25 − first 9 months reported in the [Q3 FY25 10-Q](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000045/qcom-20250629.htm).
+² Q2 FY26 net income includes a $5.7B one-time tax benefit ($5.33 EPS) per the [Qualcomm 8-K Q2 FY26 earnings release](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm); ex-tax, operating earnings were roughly flat YoY.
 
 **Segment revenue ($M):**
 
@@ -78,7 +82,7 @@ quoted in the earnings 8-K.
 | Automotive | 984 | ~1,053 | 1,101 | 1,326 |
 | IoT | 1,681 | ~1,806 | 1,688 | 1,726 |
 
-¹ Q4 FY25 implied from FY25 full-year minus first 9 months.
+¹ Q4 FY25 implied from [FY25 10-K full-year](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm) minus first 9 months reported in the [Q3 FY25 10-Q](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000045/qcom-20250629.htm).
 
 ```mermaid
 xychart-beta
@@ -93,17 +97,19 @@ Q3 FY26e ≈ $5.4B handset implied by the QCT $7.9-8.5B guide minus
 FY26 8-K explicitly says **"QCT handset revenues from Chinese customers
 will reach a bottom in the third quarter and return to sequential
 growth in the following quarter"** — i.e., Q3 FY26 is the trough,
-Q4 FY26 inflects.
+Q4 FY26 inflects ([Qualcomm 8-K Q2 FY26 earnings release, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
 
 ---
 
 ## Income & margins: where the story is
 
 GAAP net income for Q2 FY26 looks heroic at +162% YoY, but the +$5.7B
-deferred-tax valuation allowance release does all the work. On
+deferred-tax valuation allowance release does all the work
+([Qualcomm 10-Q Q2 FY26, income-taxes footnote](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)). On
 **non-GAAP, EBT fell 12% YoY** in Q2 FY26 ($3.25B vs $3.69B) and
-non-GAAP EPS was **-10% YoY** ($2.65 vs $2.94). The underlying
-operating business is decelerating, not accelerating.
+non-GAAP EPS was **-10% YoY** ($2.65 vs $2.94) per the
+[Qualcomm 8-K Q2 FY26 earnings release](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm).
+The underlying operating business is decelerating, not accelerating.
 
 **Where margins stand (Q2 FY26 vs Q2 FY25):**
 
@@ -120,11 +126,16 @@ operating business is decelerating, not accelerating.
 
 1. **QCT mix shift** — Handsets are the highest-revenue, premium-priced
    QCT stream. Their share dropped from 73% of QCT (Q1 FY26) to 66% (Q2
-   FY26). Auto and IoT are growing fast but at lower ASPs and (per
+   FY26) based on the segment tables in the
+   [Q1 FY26 10-Q](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000017/qcom-20251228.htm)
+   and [Q2 FY26 10-Q](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm).
+   Auto and IoT are growing fast but at lower ASPs and (per
    management) lower QCT segment margin. The -3pt QCT margin
    compression is the direct cost of diversification.
 2. **OpEx step-up** — R&D rose to 23% of revenue (+3pt) and SG&A to 8%
-   (+2pt). Both are explicitly tied to the new **two-year equity
+   (+2pt) in the
+   [Q2 FY26 10-Q operating-expenses table](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm).
+   Both are explicitly tied to the new **two-year equity
    incentive program** for non-executive leadership (a $150M+ quarterly
    headwind), plus Alphawave acquisition expenses.
 
@@ -150,8 +161,12 @@ timeline
 ```
 
 The new **$20B buyback authorization** announced with Q2 FY26 results
-is the biggest signal in the past year. With H1 FY26 buybacks of $5.4B
-already running, $20B implies roughly 3 years of buying at current
+is the biggest signal in the past year
+([Qualcomm 8-K announcing new $20B repurchase authorization, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm);
+[Qualcomm IR press release, 2026-03-17](https://investor.qualcomm.com/news-events/press-releases/news-details/2026/Qualcomm-Increases-Quarterly-Cash-Dividend-and-Announces-New-20-Billion-Stock-Repurchase-Authorization/default.aspx)).
+With H1 FY26 buybacks of $5.4B
+already running ([Q2 FY26 10-Q cash-flow statement](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)),
+$20B implies roughly 3 years of buying at current
 pace, or ~12% of the current market cap. Management is choosing return
 of capital over additional M&A.
 
@@ -171,51 +186,75 @@ timeline
 **Per-quarter highlights:**
 
 ### Q2 FY26 (Mar 29 2026) — first revenue decline of the cycle
-- Revenue **-3% YoY** breaks a +10% / +5% growth streak.
-- Handsets -13% YoY (Chinese OEMs softened, premium tier maturing).
-- Auto +38% YoY = **record auto quarter**.
+- Revenue **-3% YoY** breaks a +10% / +5% growth streak
+  ([Qualcomm 8-K Q2 FY26 earnings release, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
+- Handsets -13% YoY (Chinese OEMs softened, premium tier maturing)
+  ([Qualcomm 10-Q Q2 FY26, QCT segment table](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)).
+- Auto +38% YoY = **record auto quarter**
+  ([Qualcomm 10-Q Q2 FY26, QCT automotive line](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)).
 - CEO Cristiano Amon: "rise of AI agents is reshaping our roadmap";
   **"leading hyperscaler custom silicon engagement on track for
   initial shipments later this calendar year"** — first explicit
-  customer signal for the Data Center business.
-- $5.7B tax benefit from DTA valuation allowance release.
-- $20B buyback authorization, $945M dividend, $2.8B repurchases.
+  customer signal for the Data Center business
+  ([QCOM Q2 FY26 earnings call transcript, 2026-04-29](https://www.fool.com/earnings/call-transcripts/2026/04/29/qualcomm-qcom-q2-2026-earnings-transcript/)).
+- $5.7B tax benefit from DTA valuation allowance release
+  ([Qualcomm 10-Q Q2 FY26, income-taxes footnote](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)).
+- $20B buyback authorization, $945M dividend, $2.8B repurchases
+  ([Qualcomm 8-K Q2 FY26 earnings release, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
 - New language in risk factors: explicit tariff and export-control
-  exposure in the customer-concentration risk paragraph.
+  exposure in the customer-concentration risk paragraph
+  ([Qualcomm 10-Q Q2 FY26, Item 1A risk factors](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)).
 
 ### Q1 FY26 (Dec 28 2025) — seasonal peak + capital deployment
 - Revenue **$12.25B (+5% YoY)** — seasonal high for premium Android
-  launches.
-- All three QCT streams up (handsets +3%, auto +15%, IoT +9% YoY).
+  launches
+  ([Qualcomm 8-K Q1 FY26 earnings release, 2026-02-04](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000016/qcom122825erex991.htm)).
+- All three QCT streams up (handsets +3%, auto +15%, IoT +9% YoY)
+  ([Qualcomm 10-Q Q1 FY26, QCT segment table](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000017/qcom-20251228.htm)).
 - **Alphawave IP closed December 18 2025 for $2.3B** — explicit
   "expansion into data centers." First operating-scale acquisition
-  since the failed NXP attempt years ago.
+  since the failed NXP attempt years ago
+  ([Qualcomm IR press release, 2025-12-18](https://www.qualcomm.com/news/releases/2025/12/qualcomm-completes-acquisition-of-alphawave-semi);
+  [Qualcomm 10-Q Q1 FY26, acquisitions footnote](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000017/qcom-20251228.htm)).
 - New OBBB tax line items appear; full-year FY26 effective tax rate
-  guided to ~15% under CAMT regime.
+  guided to ~15% under CAMT regime
+  ([Qualcomm 10-Q Q1 FY26, income-taxes footnote](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000017/qcom-20251228.htm);
+  see also [H.R.1 — One Big Beautiful Bill Act, Public Law 119-21](https://www.congress.gov/bill/119th-congress/house-bill/1)).
 
 ### FY25 10-K (period ended Sep 28 2025) — narrative rewrite
 - Item 1 reframes the company: "global technology leader, helping to
   bring intelligent computing everywhere through on-device AI,
   high-performance and low-power computing and advanced wireless
-  connectivity." Wireless is no longer the lead-in.
-- New **Dragonwing** product family appears alongside Snapdragon.
+  connectivity." Wireless is no longer the lead-in
+  ([Qualcomm 10-K FY25, Item 1 Business](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+- New **Dragonwing** product family appears alongside Snapdragon
+  ([Qualcomm 10-K FY25, Item 1 Products](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 - **Data Center** promoted from "cloud computing processing
-  initiative" to a named nonreportable segment.
+  initiative" to a named nonreportable segment
+  ([Qualcomm 10-K FY25, segment disclosure](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 - FY25 segment results: Handsets $27.8B (+12%), Automotive $4.0B
   (+36%), IoT $6.6B (+22%), QCT total $38.4B (+16%), QCT EBT margin
-  30% (+1 pt).
+  30% (+1 pt)
+  ([Qualcomm 10-K FY25, QCT segment results table](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 - OBBB Act enacted in the fourth quarter → full DTA valuation
-  allowance established.
+  allowance established
+  ([Qualcomm 10-K FY25, income-taxes footnote](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm);
+  [H.R.1 — One Big Beautiful Bill Act, Public Law 119-21](https://www.congress.gov/bill/119th-congress/house-bill/1)).
 - Item 7 (MD&A — now visible since the new extractor includes it)
   details $2.5B of the Handsets growth came from higher revenue per
   chipset (premium Android ASP + favorable mix), only $423M from
-  higher unit shipments.
+  higher unit shipments
+  ([Qualcomm 10-K FY25, Item 7 MD&A](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 
 ### Q3 FY25 (Jun 29 2025) — cleanest quarter
-- Revenue **$10.37B (+10% YoY)**, net income $2.7B (+25% YoY).
-- QCT +11% across all three streams.
-- $204M of "other income" from **QSI portfolio company IPOs**.
-- Last quarter under the old tax regime; FDII benefit intact.
+- Revenue **$10.37B (+10% YoY)**, net income $2.7B (+25% YoY)
+  ([Qualcomm 8-K Q3 FY25 earnings release, 2025-07-30](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000044/qcom062925erex991.htm)).
+- QCT +11% across all three streams
+  ([Qualcomm 10-Q Q3 FY25, QCT segment table](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000045/qcom-20250629.htm)).
+- $204M of "other income" from **QSI portfolio company IPOs**
+  ([Qualcomm 10-Q Q3 FY25, investments / other income footnote](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000045/qcom-20250629.htm)).
+- Last quarter under the old tax regime; FDII benefit intact
+  ([Qualcomm 10-Q Q3 FY25, income-taxes footnote](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000045/qcom-20250629.htm)).
 
 ---
 
@@ -224,15 +263,19 @@ timeline
 ### What management says about the next quarter
 - **Q3 FY26 revenue guide: $9.2-10.0B (midpoint $9.6B)** — down 9%
   sequentially and 7% from the year-ago $10.37B. The first
-  *guidance-implied YoY decline* of the cycle.
+  *guidance-implied YoY decline* of the cycle
+  ([Qualcomm 8-K Q2 FY26 earnings release, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
 - **QCT guide: $7.9-8.5B** — implies handsets roughly $5.4B at mid,
-  the trough. Auto/IoT held flat-to-up.
+  the trough. Auto/IoT held flat-to-up
+  ([Qualcomm 8-K Q2 FY26 earnings release, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
 - **Memory supply constraints** are the explicit headwind: DRAM/NAND
   costs are pressuring handset OEM demand. Management quotes this
-  as a near-term, not structural, issue.
+  as a near-term, not structural, issue
+  ([QCOM Q2 FY26 earnings call transcript, 2026-04-29](https://www.fool.com/earnings/call-transcripts/2026/04/29/qualcomm-qcom-q2-2026-earnings-transcript/)).
 - **"Chinese customer handset revenues will reach a bottom in Q3 FY26
   and return to sequential growth in Q4 FY26"** — the cycle inflects
-  at the end of this fiscal year.
+  at the end of this fiscal year
+  ([Qualcomm 8-K Q2 FY26 earnings release, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
 
 ### What the medium-term thesis depends on
 
@@ -244,54 +287,75 @@ xychart-beta
     bar [27.8, 6.6, 4.0]
 ```
 
-(Bars = FY25 full year. Going forward: handsets flat-to-down on
+(Bars = FY25 full year per the [Qualcomm 10-K FY25 segment table](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm).
+Going forward: handsets flat-to-down on
 maturity + memory pressure; IoT mid-single-digit growth on edge AI; auto
-maintaining ~30%+ growth on Snapdragon Digital Chassis wins.)
+maintaining ~30%+ growth on Snapdragon Digital Chassis wins per
+[QCOM Q2 FY26 earnings call transcript, 2026-04-29](https://www.fool.com/earnings/call-transcripts/2026/04/29/qualcomm-qcom-q2-2026-earnings-transcript/).)
 
 **Growth pillars management is now anchoring to:**
 1. **Automotive Digital Chassis** — $4.0B FY25, on track to be a
    multi-billion-dollar grower at industry-leading growth rates;
-   record quarter Q2 FY26 at +38% YoY.
+   record quarter Q2 FY26 at +38% YoY
+   ([Qualcomm 10-K FY25, automotive segment](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm);
+   [Qualcomm 10-Q Q2 FY26, QCT automotive line](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)).
 2. **Data Center / Alphawave** — newly named, +$97M Q2 FY26
    contribution, hyperscaler custom-silicon engagement disclosed with
    "initial shipments later this calendar year." Investor Day on
-   **June 24 2026** is set to detail the addressable market.
+   **June 24 2026** is set to detail the addressable market
+   ([Qualcomm 10-Q Q2 FY26, Data Center disclosure](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm);
+   [QCOM Q2 FY26 earnings call transcript, 2026-04-29](https://www.fool.com/earnings/call-transcripts/2026/04/29/qualcomm-qcom-q2-2026-earnings-transcript/)).
 3. **On-device AI (Copilot+ PCs, edge inference)** — referenced
-   throughout but not yet broken out as a revenue line.
+   throughout but not yet broken out as a revenue line
+   ([Qualcomm 10-K FY25, Item 1 strategy](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 4. **QTL licensing** — quietly the highest-margin business at 72% EBT
-   margin and still growing ~5% YoY on favorable mix.
+   margin and still growing ~5% YoY on favorable mix
+   ([Qualcomm 10-Q Q2 FY26, QTL segment table](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)).
 
-**Risks to that thesis (lifted from the Q2 FY26 10-Q Item 1A):**
+**Risks to that thesis (lifted from the [Qualcomm 10-Q Q2 FY26, Item 1A risk factors](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)):**
 - Apple's in-house modem program (Apple now buys only thin modems,
-  margin-dilutive to QCT).
-- Samsung in-house Exynos vertical-integration.
+  margin-dilutive to QCT)
+  ([Qualcomm 10-K FY25, Item 1A customer-concentration risk](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+- Samsung in-house Exynos vertical-integration
+  ([Qualcomm 10-K FY25, Item 1A competition risk](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 - Chinese OEM concentration + tariffs / export controls (now in the
-  lead paragraph of the customer-concentration risk).
-- Arm licensing dispute resurfacing if rate-renegotiation talks fail.
+  lead paragraph of the customer-concentration risk)
+  ([Qualcomm 10-Q Q2 FY26, Item 1A risk factors](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)).
+- Arm licensing dispute resurfacing if rate-renegotiation talks fail
+  ([Qualcomm 10-K FY25, Item 3 legal proceedings](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 - QCT margin compression from the diversification mix shift —
-  structural, not cyclical.
+  structural, not cyclical
+  ([Qualcomm 10-Q Q2 FY26, segment EBT margin disclosure](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)).
 
 ### Bottom line on revenue & income prospect
 
 - **Near term (1-2 quarters):** Revenue decelerates to outright
   decline in Q3 FY26 (~-7% YoY at midpoint), recovering sequentially
-  in Q4 FY26 as Chinese handset demand bottoms. Non-GAAP EPS will
+  in Q4 FY26 as Chinese handset demand bottoms
+  ([Qualcomm 8-K Q2 FY26 earnings release, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
+  Non-GAAP EPS will
   likely be down YoY all of FY26 H2 on the OpEx step-up and QCT
-  margin compression.
+  margin compression
+  ([Qualcomm 10-Q Q2 FY26, operating-expenses table](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)).
 - **Tax noise:** GAAP earnings will look distorted through end of
-  FY26 because of the lapping of the Q2 FY26 $5.7B DTA release. Use
-  non-GAAP / cash earnings to track operating reality.
+  FY26 because of the lapping of the Q2 FY26 $5.7B DTA release
+  ([Qualcomm 10-Q Q2 FY26, income-taxes footnote](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)).
+  Use non-GAAP / cash earnings to track operating reality.
 - **Medium term (FY27+):** Bull case is the auto + data-center
   combination delivers $7-10B of incremental revenue at industry
   growth rates, while handsets remain a high-cash-flow cyclical
-  contributor. Bear case is QCT margin compression continues, Apple
+  contributor ([Qualcomm 10-K FY25, automotive + Data Center disclosure](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm);
+  [QCOM Q2 FY26 earnings call transcript, 2026-04-29](https://www.fool.com/earnings/call-transcripts/2026/04/29/qualcomm-qcom-q2-2026-earnings-transcript/)).
+  Bear case is QCT margin compression continues, Apple
   exits the modem relationship faster than expected, and the
   data-center hyperscaler engagement remains a single-customer
-  concentration.
+  concentration ([Qualcomm 10-Q Q2 FY26, Item 1A risk factors](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)).
 - **Capital return is the floor:** $20B authorization + $3.5B+ annual
   dividends = effectively 5-6% of market cap returned annually at
   current levels, providing a real shareholder-yield support even if
-  growth stalls.
+  growth stalls
+  ([Qualcomm 8-K Q2 FY26 earnings release announcing $20B authorization, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
 - **Watch June 24 2026 Investor Day** — management has explicitly
   pre-committed to providing growth-initiative details (Data Center,
-  Physical AI) that day. That's the next major narrative inflection.
+  Physical AI) that day. That's the next major narrative inflection
+  ([QCOM Q2 FY26 earnings call transcript, 2026-04-29](https://www.fool.com/earnings/call-transcripts/2026/04/29/qualcomm-qcom-q2-2026-earnings-transcript/)).

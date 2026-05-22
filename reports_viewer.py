@@ -352,9 +352,16 @@ __URLPATCH__
       </select>
       <select id="bucketFilter" title="Filter by report type">
         <option value="">All report types</option>
-        {% for b in buckets %}
-          <option value="{{ b }}">{{ b }}</option>
-        {% endfor %}
+        <optgroup label="By location">
+          {% for b in buckets %}
+            <option value="bucket:{{ b }}">{{ b }}</option>
+          {% endfor %}
+        </optgroup>
+        <optgroup label="By kind">
+          <option value="kind:research">research</option>
+          <option value="kind:valuation">valuation</option>
+          <option value="kind:initiation">initiation</option>
+        </optgroup>
       </select>
       <label><input type="checkbox" id="showMoreCols"> Show more columns</label>
       <div class="spacer"></div>
@@ -378,6 +385,7 @@ __URLPATCH__
       <tbody>
         {% for r in rows %}
           <tr data-bucket="{{ r.bucket }}"
+              data-kind="{{ r.kind }}"
               data-display="{{ r.display|lower }}"
               data-ticker="{{ r.ticker|lower }}"
               data-sector="{{ r.sector }}"
@@ -461,7 +469,11 @@ __URLPATCH__
       function applyFilter() {
         const q  = (filter.value || "").trim().toLowerCase();
         const s  = sectorFilter.value || "";
-        const bk = bucketFilter.value || "";
+        const tk = bucketFilter.value || "";
+
+        // Type filter encodes the axis in the value: "bucket:<name>" or "kind:<name>".
+        const tkAxis = tk.startsWith("kind:") ? "kind" : tk.startsWith("bucket:") ? "bucket" : "";
+        const tkVal  = tk.split(":", 2)[1] || "";
 
         let visible = 0;
         for (const r of rows) {
@@ -469,8 +481,10 @@ __URLPATCH__
           const rowSector = r.dataset.sector || "";
           const matchQ  = !q || hay.includes(q);
           const matchS  = !s || (s === "__none__" ? rowSector === "" : rowSector === s);
-          const matchBk = !bk || r.dataset.bucket === bk;
-          const show = matchQ && matchS && matchBk;
+          const matchT  = !tkAxis
+            || (tkAxis === "bucket" && r.dataset.bucket === tkVal)
+            || (tkAxis === "kind"   && r.dataset.kind   === tkVal);
+          const show = matchQ && matchS && matchT;
           r.style.display = show ? "" : "none";
           if (show) visible++;
         }
@@ -677,6 +691,22 @@ def index():
         r["rating"] = ann.get("rating") or 0
         r["comment"] = ann.get("comment") or ""
         r["pk_enc"] = urllib.parse.quote(r["pair_key"], safe="")
+        # Kind = the report-type token in the filename, used as a second
+        # axis in the Type filter so users can narrow to research vs
+        # valuation vs initiation across all folder buckets.
+        stem = r["rel"].rsplit("/", 1)[-1].rsplit(".", 1)[0]
+        kind = "other"
+        for tok, label in (
+            ("_Research_Document", "research"),
+            ("_公司研究", "research"),
+            ("_研究报告", "research"),
+            ("_Valuation_Analysis", "valuation"),
+            ("_Initiation_Report", "initiation"),
+        ):
+            if tok in stem:
+                kind = label
+                break
+        r["kind"] = kind
 
     # Dropdown options — present every known sector and bucket plus any
     # extras we actually see in the data.

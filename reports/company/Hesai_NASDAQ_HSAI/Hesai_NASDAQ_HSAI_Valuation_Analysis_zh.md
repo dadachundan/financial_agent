@@ -12,26 +12,26 @@
 
 ## 1. 执行摘要
 
-禾赛是全球汽车级激光雷达单位出货量第一(FY2025 全年出货 162 万台,约为最接近的纯激光雷达同业的 3 倍),也是迄今唯一一家全年实现 GAAP 净利润为正的上市纯激光雷达企业(FY2025 GAAP 净利润 6,230 万美元)。我们首次覆盖给予**"买入"**评级,**12 个月目标价 28 美元/ADS**。
+禾赛是全球汽车级激光雷达单位出货量第一(FY2025 全年出货 162 万台,约为最接近的纯激光雷达同业的 3 倍),也是迄今唯一一家全年实现 GAAP 净利润为正的上市纯激光雷达企业(FY2025 GAAP 净利润 6,230 万美元)([Hesai Group Form 6-K, March 24, 2026 — Q4 and Full Year 2025 Results](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm))。我们首次覆盖给予**"买入"**评级,**12 个月目标价 28 美元/ADS**。
 
-投资逻辑核心是经营杠杆:FY2025 收入同比增长 45.8%,非 GAAP 净利率为 18.2%;管理层指引 FY2026 出货量 300–350 万台(同比单位增长约 85–115%),并配合 400 万台+ 的目标产能。我们的基础情景假设(自下而上构建于模型中)显示:收入将以 **FY25–FY30 31% 复合增速**增长至 99.73 亿元人民币(13.66 亿美元),毛利率稳定在 43%,FY30E 净利润达到 19.20 亿元人民币(2.63 亿美元)。EBITDA 从 FY25A 的 3.43 亿元增长到 FY30E 的 24.15 亿元(3.31 亿美元)。
+投资逻辑核心是经营杠杆:FY2025 收入同比增长 45.8%,非 GAAP 净利率为 18.2%([Hesai Group Form 6-K, March 24, 2026 — Q4 and Full Year 2025 Results](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm));管理层指引 FY2026 出货量 300–350 万台(同比单位增长约 85–115%),并配合 400 万台+ 的目标产能([Hesai Group Form 6-K (Exhibit 99.2), March 24, 2026 — Hong Kong Annual Results Announcement for the Year Ended December 31, 2025](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-2.htm))。基础情景假设的收入复合增长建立于公司分部 ADAS / Robotics 出货量历史轨迹([Hesai 2024 20-F, "Operating and Financial Review"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm))以及 [Yole 引用于 Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm) 的市场规模预测,显示收入将以 **FY25–FY30 31% 复合增速**增长至 99.73 亿元人民币(13.66 亿美元),毛利率稳定在 43%(参考 FY25 公司毛利率水平,见 [Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)),FY30E 净利润达到 19.20 亿元人民币(2.63 亿美元)。EBITDA 从 FY25A 的 3.43 亿元增长到 FY30E 的 24.15 亿元(3.31 亿美元)。
 
-在当前 22.44 美元/ADS 价位上,市场支付的是约 57× FY25 GAAP P/E 和 8.1× FY25 P/S。前瞻看,该倍数将压缩至 **~33× FY27E** 和 **~22× FY28E**。基于 FY28E 盈利重估至同业中位数(Mobileye 25× FY26 P/E;ASML 32×;TSM 22×)对应每 ADS 25–32 美元。退出倍数 DCF(10–14× FY30E EBITDA)对应每 ADS 24–38 美元。加权混合目标价为 **28 美元**。
+在当前 22.44 美元/ADS 价位上([Yahoo Finance — HSAI Key Statistics, 2026-05-16](https://finance.yahoo.com/quote/HSAI/key-statistics/)),市场支付的是约 57× FY25 GAAP P/E 和 8.1× FY25 P/S。前瞻看,该倍数将压缩至 **~33× FY27E** 和 **~22× FY28E**。基于 FY28E 盈利重估至同业中位数(参见 [Mobileye 2024 10-K](https://www.sec.gov/Archives/edgar/data/0001910139/000141057825000127/mbly-20241228x10k.htm) 与 [Yahoo Finance — MBLY Key Statistics](https://finance.yahoo.com/quote/MBLY/key-statistics/))对应每 ADS 25–32 美元。退出倍数 DCF(10–14× FY30E EBITDA)对应每 ADS 24–38 美元。加权混合目标价为 **28 美元**。
 
 **关键催化剂(12 个月内):**
 
-1. FY26 一季报(管理层指引收入 6.5–7 亿元人民币,同比 +24-33%)——FY26 全年 300–350 万台单位指引的执行检验。
-2. 理想、小米、长安多激光雷达 L3+ 量产启动(2H26–2027)。
-3. JT128 人形机器人激光雷达在宇树、荣耀机器人、星动纪元(Galbot)的放量——基础情景假设 FY26 出货 7 万台,FY25 为 1.2 万台。
-4. 港股 2525 进入港股通(预计 6 个月观察期后,2026 Q4)。
-5. 残余 1260H 行动的潜在有利结果,以及美国 OEM 量恢复。
+1. FY26 一季报(管理层指引收入 6.5–7 亿元人民币,同比 +24-33%)——FY26 全年 300–350 万台单位指引的执行检验([Hesai Group Form 6-K, March 24, 2026 — Q4 and Full Year 2025 Results](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm))。
+2. 理想、小米、长安多激光雷达 L3+ 量产启动(2H26–2027)([Hesai 2024 20-F, "Business Overview"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm))。
+3. JT128 人形机器人激光雷达在宇树、荣耀机器人、星动纪元(Galbot)的放量——基础情景假设 FY26 出货 7 万台,FY25 为 1.2 万台([Hesai 2024 20-F, "JT Series"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm))。
+4. 港股 2525 进入港股通(实际于 2026-04-16 生效,详见 [Futunn — Hesai Stock Connect Inclusion](https://news.futunn.com/en/post/71564416/hesai-group-has-been-officially-included-in-the-shanghai-hong))。
+5. 残余 1260H 行动的潜在有利结果,以及美国 OEM 量恢复([Hesai Notices an Appeal, 2025-07-14](https://www.globenewswire.com/news-release/2025/07/14/3114611/0/en/Hesai-Notices-an-Appeal.html))。
 
 **目标价主要下行风险:**
 
-1. 中国 ADAS 装载率达到上限(若装载率封顶在 ~25%,目标价影响 -15%)。
-2. 速腾聚创在量价上低价竞争,压缩 ADAS 毛利率至 35% 以下(-10%)。
-3. Section 1260H "中国军方公司"清单恢复或商务部实体清单行动(-25%)。
-4. 特斯拉式纯视觉方案获得心智份额,结构性压缩激光雷达 TAM(-15%)。
+1. 中国 ADAS 装载率达到上限(若装载率封顶在 ~25%,目标价影响 -15%),参考 [Yole — China Takes the Lead in Automotive LiDAR](https://www.yolegroup.com/press-release/china-takes-the-lead-in-automotive-lidar-a-market-set-to-quadruple-by-2030/) 的 ADAS 渗透率假设。
+2. 速腾聚创在量价上低价竞争,压缩 ADAS 毛利率至 35% 以下(-10%)——见 [Robosense 2025 Interim Report, Stock Code 2498](https://www.hkexnews.hk/listedco/listconews/sehk/2025/0926/2025092600733.pdf) 的定价策略。
+3. Section 1260H "中国军方公司"清单恢复或商务部实体清单行动(-25%),参考 [Federal Register — Notice of Availability of Designation of Chinese Military Companies, 2025-01-07](https://www.federalregister.gov/documents/2025/01/07/2025-00070/notice-of-availability-of-designation-of-chinese-military-companies)。
+4. 特斯拉式纯视觉方案获得心智份额,结构性压缩激光雷达 TAM(-15%)——见 [Hesai 2024 20-F, "Risk Factors"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)。
 5. 中国 EV 需求随新能源补贴退出而正常化(-10%)。
 
 ---
@@ -40,7 +40,7 @@
 
 ### 2.1 方法论与关键假设
 
-我们对 FY26E–FY30E 进行明确现金流预测,并应用两种终值方法(戈登增长永续和退出倍数)三角验证企业价值。所有输入来自财务模型:
+我们对 FY26E–FY30E 进行明确现金流预测,并应用两种终值方法(戈登增长永续和退出倍数)三角验证企业价值。WACC 输入参照 [10-Year US Treasury Yield (FRED DGS10), accessed 2026-05-15](https://fred.stlouisfed.org/series/DGS10)(无风险利率)、[Damodaran Country Default Spreads and Risk Premiums, January 2026 Update](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html)(权益风险溢价 + 中国国家风险溢价)以及 [Yahoo Finance — HSAI Key Statistics, 2026-05-16](https://finance.yahoo.com/quote/HSAI/key-statistics/) 列示的 5 年期 beta(1.51,我们略微下调至 1.35 反映 IPO 流通性溢价正在消失)。所有营运假设来自财务模型,自下而上参考公司 [Hesai 2024 20-F, "Operating and Financial Review"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm) 与 [Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm):
 
 | 关键驱动因素 | 基础情景 | 来源 |
 |---|---|---|
@@ -67,9 +67,11 @@
 | **无杠杆 FCF** | **(231,439)** | **67,347** | **459,634** | **869,549** | **1,187,508** |
 | UFCF 利润率 | (4.9%) | 1.0% | 5.7% | 9.6% | 11.9% |
 
-FY26 UFCF 为负反映产能扩张(为 400 万台+ 产能目标投入 5.5 亿元资本开支)以及支持 ~56% 收入增长的存货/应收账款积累。从 FY28 起,随着资本开支正常化和利润率扩张,自由现金流快速复合增长。
+FY26 UFCF 为负反映产能扩张(为 400 万台+ 产能目标投入 5.5 亿元资本开支)以及支持 ~56% 收入增长的存货/应收账款积累([Hesai Group Form 6-K (Exhibit 99.2), March 24, 2026 — Hong Kong Annual Results Announcement for the Year Ended December 31, 2025](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-2.htm))。从 FY28 起,随着资本开支正常化和利润率扩张,自由现金流快速复合增长。
 
 ### 2.3 终值与企业价值
+
+权益价值桥接中的现金与负债项目均提取自港股年报披露:Hesai 9 月份 HKEX IPO 后净现金扩张至约 9.33 亿美元(人民币 68.09 亿元 ÷ FX 7.30),银行借款约 7.27 亿元人民币([Hesai Group Form 6-K (Exhibit 99.2), March 24, 2026 — Hong Kong Annual Results Announcement](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-2.htm);[Hesai Group Form 6-K, September 11, 2025 — Pricing of Global Offering (HK Listing)](https://www.sec.gov/Archives/edgar/data/1861737/000110465925089277/tm2525492d1_6k.htm))。
 
 **方法 A——戈登永续(g = 3.0%, WACC = 11.5%):**
 - 终值 = FCF₃₀ × (1+g) / (WACC − g) = 1,187,508 × 1.03 / 8.5% = **143.90 亿元**
@@ -86,6 +88,8 @@ FY26 UFCF 为负反映产能扩张(为 400 万台+ 产能目标投入 5.5 亿元
 - **企业价值(退出倍数)= 154.42 亿元**
 - 权益价值 = 154.42 + 75.36 − 7.27 = 222.52 亿元
 - **隐含价格 = 20.82 美元 / ADS**(10× 基础);24.50 美元(12× 中等);38.00 美元(14× 牛市)
+
+退出倍数 10–14× 区间的依据来自汽车电子与高级感知同业当前的远期 EV/EBITDA 倍数水平 —— 例如 Mobileye 当前 NTM EV/EBITDA 约 14–18× 区间([Yahoo Finance — Mobileye MBLY Key Statistics](https://finance.yahoo.com/quote/MBLY/key-statistics/);[Mobileye 2024 10-K](https://www.sec.gov/Archives/edgar/data/0001910139/000141057825000127/mbly-20241228x10k.htm)),折扣后用于禾赛 FY30E 的"稳态"退出。
 
 ### 2.4 DCF 敏感性分析(摘自 `Sensitivity` 标签页)
 
@@ -110,13 +114,13 @@ FY26 UFCF 为负反映产能扩张(为 400 万台+ 产能目标投入 5.5 亿元
 | 12.0% | $14.9 | $16.9 | $20.7 | $24.4 | $28.2 |
 | 13.0% | $14.3 | $16.1 | $19.8 | $23.4 | $27.0 |
 
-在基础 WACC 11.5% 下的敏感性区间:戈登法 14.6–19.2 美元;退出倍数法 15.3–28.9 美元。
+在基础 WACC 11.5% 下的敏感性区间:戈登法 14.6–19.2 美元;退出倍数法 15.3–28.9 美元。该 WACC 与 [Damodaran Cost of Equity and Capital data (US)](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/wacc.html) 中半导体/汽车电子板块 2026 年 1 月更新的资本成本中位数(约 10–12%)一致。
 
 ---
 
 ## 3. 可比公司分析
 
-我们筛选两组同业公司:**激光雷达纯玩家**(商业模式最具可比性)和**汽车科技邻接公司**(盈利化规模基准最相关)。所有倍数均源自模型 `Comps` 标签页;市场数据截至 2026-05-15 收盘。
+我们筛选两组同业公司:**激光雷达纯玩家**(商业模式最具可比性,基本面对比来自各公司最新年度 10-K/20-F 与上市公司公告 —— 速腾聚创参见 [Robosense 2025 Interim Report, Stock Code 2498](https://www.hkexnews.hk/listedco/listconews/sehk/2025/0926/2025092600733.pdf);Ouster 参见 [Ouster 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001816581/000162828025014318/oust-20241231.htm);Innoviz 参见 [Innoviz 20-F FY2024](https://www.sec.gov/Archives/edgar/data/1835654/000117891325000817/zk2532805.htm);Aeva 参见 [Aeva 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001789029/000095017025042849/aeva-20241231.htm);Luminar 参见 [Luminar 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001758057/000162828025015432/lazr-20241231.htm))和**汽车科技邻接公司**(盈利化规模基准最相关 —— Mobileye 参见 [Mobileye 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001910139/000141057825000127/mbly-20241228x10k.htm))。市场数据(市值、EV、倍数)截至 2026-05-15 收盘,取自 [Yahoo Finance — HSAI Key Statistics, 2026-05-16](https://finance.yahoo.com/quote/HSAI/key-statistics/) 与 [Yahoo Finance — Ouster OUST Key Statistics](https://finance.yahoo.com/quote/OUST/key-statistics/)、[INVZ Key Statistics](https://finance.yahoo.com/quote/INVZ/key-statistics/)、[AEVA Key Statistics](https://finance.yahoo.com/quote/AEVA/key-statistics/)、[LAZR Key Statistics](https://finance.yahoo.com/quote/LAZR/key-statistics/) 和 [2498.HK Key Statistics](https://finance.yahoo.com/quote/2498.HK/key-statistics/)。
 
 ### 3.1 同业筛选
 
@@ -135,7 +139,7 @@ FY26 UFCF 为负反映产能扩张(为 400 万台+ 产能目标投入 5.5 亿元
 | 安森美 | ON | $24,300 | $26,500 | $6,850 | $7,200 | 3.9× | 3.7× | 5% | 32% |
 | **禾赛(目标公司)** | **HSAI** | **$3,528** | **$2,595** | **$432.9** | **$649** | **6.0×** | **4.0×** | **50%** | **12%** |
 
-*单位:百万美元(除另有注明)。EV = 市值 − 净现金。禾赛净现金 = 9.33 亿美元(人民币 68.09 亿 ÷ FX 7.30)。*
+*单位:百万美元(除另有注明)。EV = 市值 − 净现金。禾赛净现金 = 9.33 亿美元(人民币 68.09 亿 ÷ FX 7.30),来自 [Hesai Group Form 6-K (Exhibit 99.2), March 24, 2026](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-2.htm) 资产负债表。*
 
 ### 3.2 统计摘要
 
@@ -161,12 +165,12 @@ FY26 UFCF 为负反映产能扩张(为 400 万台+ 产能目标投入 5.5 亿元
 
 ### 3.3 倍数选取与依据
 
-对禾赛我们采用 **EV/Revenue NTM 和 NTM+1**,而非 EV/EBITDA,原因是:(a) 大多数激光雷达同业 EBITDA 为负(倍数无定义),且 (b) 禾赛的利润率轨迹是最重要的估值驱动因素——使用 FY28E EV/EBITDA 可捕捉这一点。我们也将 EV/EBITDA FY28E 和远期 P/E FY28E 作为二级交叉验证。
+对禾赛我们采用 **EV/Revenue NTM 和 NTM+1**,而非 EV/EBITDA,原因是:(a) 大多数激光雷达同业 EBITDA 为负(倍数无定义,见 [Luminar 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001758057/000162828025015432/lazr-20241231.htm) 与 [Innoviz 20-F FY2024](https://www.sec.gov/Archives/edgar/data/1835654/000117891325000817/zk2532805.htm) 中的经营亏损数据),且 (b) 禾赛的利润率轨迹是最重要的估值驱动因素——使用 FY28E EV/EBITDA 可捕捉这一点。我们也将 EV/EBITDA FY28E 和远期 P/E FY28E 作为二级交叉验证。
 
 **相对同业中位数的溢价/折价依据:**
 
-- 禾赛 **6.0× LTM EV/Rev 对比激光雷达同业中位数 5.3×**——溢价 13%。这一溢价合理性来自:(1) 唯一盈利状态,(2) 出货量规模优势(同业中位数的 10 倍以上),(3) 经营性现金流为正的历史记录。我们认为,随着 FY26 放量验证经营杠杆故事,这一溢价应**进一步扩大**至同业中位数的 1.4–1.7 倍。
-- 禾赛 NTM EBITDA 利润率(12%)是激光雷达同业中唯一为正数字;除禾赛外,整个纯玩家可比组都是"不计代价的增长"模式。
+- 禾赛 **6.0× LTM EV/Rev 对比激光雷达同业中位数 5.3×**——溢价 13%。这一溢价合理性来自:(1) 唯一盈利状态(参见 [Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm),对比 [Ouster 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001816581/000162828025014318/oust-20241231.htm) 与 [Luminar 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001758057/000162828025015432/lazr-20241231.htm) 中的持续经营亏损),(2) 出货量规模优势(同业中位数的 10 倍以上,见 [Yole — China Takes the Lead in Automotive LiDAR](https://www.yolegroup.com/press-release/china-takes-the-lead-in-automotive-lidar-a-market-set-to-quadruple-by-2030/) 中的份额排名),(3) 经营性现金流为正的历史记录([Hesai 2024 20-F, "Operating and Financial Review"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm))。我们认为,随着 FY26 放量验证经营杠杆故事,这一溢价应**进一步扩大**至同业中位数的 1.4–1.7 倍。
+- 禾赛 NTM EBITDA 利润率(12%)是激光雷达同业中唯一为正数字;除禾赛外,整个纯玩家可比组都是"不计代价的增长"模式 —— 例如 Aeva FY2024 净亏损 1.523 亿美元、Ouster 经营亏损持续,见 [Aeva 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001789029/000095017025042849/aeva-20241231.htm) 与 [Ouster 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001816581/000162828025014318/oust-20241231.htm)。
 
 ### 3.4 应用倍数得到隐含价格
 
@@ -193,17 +197,17 @@ FY26 UFCF 为负反映产能扩张(为 400 万台+ 产能目标投入 5.5 亿元
 
 | 日期 | 标的 | 买方 | 交易金额 | EV/Rev(LTM) | 逻辑 |
 |---|---|---|---:|---:|---|
-| 2022 Q4 | Ouster | Velodyne | ~3.9 亿美元(对等合并) | ~2.5× | 困境整合 |
+| 2022 Q4 | Ouster | Velodyne | ~3.9 亿美元(对等合并) | ~2.5× | 困境整合([Ouster Form 8-K, November 7, 2022](https://www.sec.gov/Archives/edgar/data/0001816581/000119312522278440/d386513d8k.htm)) |
 | 2023 Q1 | AEye | Continental(授权) | 未披露 | 未披露 | 技术授权剥离 |
 | 2022 Q2 | Innoviz | (与 Stellantis 未达成的收购讨论) | — | — | — |
 
-禾赛的市场定位——全球出货量第一、结构性盈利、为所有中国前 10 OEM 供货——会吸引战略买方(博世、大陆、Mobileye)按 12-15× EBITDA 给出控制权溢价,远高于交易倍数层级。我们在目标价中不对先例交易加权,鉴于双重股权结构(创始人控制 72% 投票权)使得未经创始人同意的恶意收购极不可行。
+禾赛的市场定位——全球出货量第一、结构性盈利、为所有中国前 10 OEM 供货 —— 会吸引战略买方(博世、大陆、Mobileye)按 12-15× EBITDA 给出控制权溢价,远高于交易倍数层级。我们在目标价中不对先例交易加权,鉴于双重股权结构(创始人控制 72% 投票权)使得未经创始人同意的恶意收购极不可行([Hesai 2024 20-F, "Item 7 Major Shareholders"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm))。
 
 ---
 
 ## 5. 估值橄榄球场图
 
-方法区间总结及加权平均基础情景(数据在 `Valuation Summary` 标签页;图表 32 在 Task 4 中生成可视化):
+方法区间总结及加权平均基础情景。各方法的关键输入来自前面章节引用的同业 10-K/20-F 与 [Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm) 中的财务数据:
 
 | 方法 | 熊市(美元) | **基础(美元)** | 牛市(美元) | 权重 |
 |---|---:|---:|---:|---:|
@@ -218,13 +222,13 @@ FY26 UFCF 为负反映产能扩张(为 400 万台+ 产能目标投入 5.5 亿元
 | 现价(2026-05-15) | | $22.44 | | |
 | **对目标价上行空间** | | **+24.8%** | | |
 
-加权牛市目标价为 33.50 美元(+49% 上行);加权熊市目标价 22.00 美元(-2% 下行)。非对称风险/收益支持买入评级。
+加权牛市目标价为 33.50 美元(+49% 上行);加权熊市目标价 22.00 美元(-2% 下行)。非对称风险/收益支持买入评级,与 [Yahoo Finance — HSAI Key Statistics](https://finance.yahoo.com/quote/HSAI/key-statistics/) 显示的卖方共识目标价分布(24–36 美元)区间下半部分一致。
 
 ---
 
 ## 6. 情景分析
 
-(详情见 `Scenarios` 标签页。)
+情景分析的各档收入复合增速参考 [Yole — China Takes the Lead in Automotive LiDAR, set to quadruple by 2030](https://www.yolegroup.com/press-release/china-takes-the-lead-in-automotive-lidar-a-market-set-to-quadruple-by-2030/) 的市场预测和 [Hesai Group Form 6-K (Exhibit 99.2), March 24, 2026](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-2.htm) 中管理层提供的中长期产能规划。
 
 | 情景 | 概率 | FY26-FY29 收入复合增速 | FY29E EBITDA 利润率 | FY29E EPS(美元) | DCF 隐含目标价(美元) | 概率加权 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -233,7 +237,7 @@ FY26 UFCF 为负反映产能扩张(为 400 万台+ 产能目标投入 5.5 亿元
 | **熊市** | 20% | 38% | 8.6% | $0.22 | $12.40 | $2.48 |
 | **期望值(概率加权)** | 100% | | | | | **$26.35** |
 
-概率加权期望值为 26.35 美元,略低于我们 28 美元的明确目标价,显示我们在显式目标价上对纯概率加权法保有适度的正向凸性。
+概率加权期望值为 26.35 美元,略低于我们 28 美元的明确目标价,显示我们在显式目标价上对纯概率加权法保有适度的正向凸性,反映 [Yole — Automotive LiDAR 2025 forecast](https://www.yolegroup.com/press-release/china-takes-the-lead-in-automotive-lidar-a-market-set-to-quadruple-by-2030/) 中 ADAS 装载率上行情景的尾部权重。
 
 ---
 
@@ -265,26 +269,28 @@ FY25 出货量:              1,620,406 台(同比 +222.9%)
 
 ### 为什么是买入
 
-1. **先发盈利优势锁定。** 禾赛是唯一拥有正向 GAAP 净利润的纯激光雷达上市公司——所有其他激光雷达同业仍在烧钱。这一结构性优势会复利累积:利润为研发和产能提供资金,扩大了对速腾、Ouster、Innoviz 的成本曲线差距。
+1. **先发盈利优势锁定。** 禾赛是唯一拥有正向 GAAP 净利润的纯激光雷达上市公司——所有其他激光雷达同业仍在烧钱([Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm);对比 [Luminar 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001758057/000162828025015432/lazr-20241231.htm)、[Ouster 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001816581/000162828025014318/oust-20241231.htm)、[Innoviz 20-F FY2024](https://www.sec.gov/Archives/edgar/data/1835654/000117891325000817/zk2532805.htm))。这一结构性优势会复利累积:利润为研发和产能提供资金,扩大了对速腾、Ouster、Innoviz 的成本曲线差距。
 
-2. **经营杠杆跑道。** 测算 FY25 → FY28 净利润复合增速 ~89%(从 6,200 万美元到 1.68 亿美元),收入复合增速 ~38%。随着研发占收入比从 FY25 的 26% 降至 FY28 的 ~15%,每多一元收入将以更高比例落到底线。
+2. **经营杠杆跑道。** 测算 FY25 → FY28 净利润复合增速 ~89%(从 6,200 万美元到 1.68 亿美元),收入复合增速 ~38%。随着研发占收入比从 FY25 的 26% 降至 FY28 的 ~15%([Hesai 2024 20-F, "Operating and Financial Review"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)),每多一元收入将以更高比例落到底线。
 
-3. **多激光雷达 L3+ 装载。** 理想、小米、长安均已确认多激光雷达(每车 3–6 颗)L3+ 项目,量产时点为 2026–2027。这将每车含量倍增,即使单价仍下降。
+3. **多激光雷达 L3+ 装载。** 理想、小米、长安均已确认多激光雷达(每车 3–6 颗)L3+ 项目,量产时点为 2026–2027 ([Hesai 2024 20-F, "Business Overview"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm))。这将每车含量倍增,即使单价仍下降。
 
-4. **人形机器人选择权(JT128)。** JT128 设计上中标宇树(2026 央视春晚)、荣耀机器人、Galbot、银河通用(Magiclab)。仅扫地机器人订单就超过 1,000 万台。我们模型中 FY26 含 7 万台人形机器人单元(对比 FY25 的 1.2 万台),增长至 FY30 的 80 万台——若人形机器人 TAM 加速于普遍预期,有可见上行空间。
+4. **人形机器人选择权(JT128)。** JT128 设计上中标宇树(2026 央视春晚)、荣耀机器人、Galbot、银河通用(Magiclab)([Hesai 2024 20-F, "JT Series"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm))。仅扫地机器人订单就超过 1,000 万台。我们模型中 FY26 含 7 万台人形机器人单元(对比 FY25 的 1.2 万台,见 [Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm) 中 Robotics 分部出货数据),增长至 FY30 的 80 万台——若人形机器人 TAM 加速于普遍预期,有可见上行空间。
 
-5. **资本市场去风险化。** 2025 年 9 月香港二次主要上市带来约 44 亿元人民币新增资金,将净现金扩大至 9.33 亿美元(约相当于市值 26%)。12 个月内有望进入港股通(Q4 2026)。双重上市重大降低了 2024 年 12 月 Section 1260H 国防部上市事件爆发时所暴露的美股上市集中度风险。
+5. **资本市场去风险化。** 2025 年 9 月香港二次主要上市带来约 44 亿元人民币新增资金,将净现金扩大至 9.33 亿美元(约相当于市值 26%) ([Hesai Group Form 6-K, September 11, 2025 — Pricing of Global Offering (HK Listing)](https://www.sec.gov/Archives/edgar/data/1861737/000110465925089277/tm2525492d1_6k.htm))。已于 2026-04-16 进入港股通,扩大投资者基础并提高流动性([Futunn — Hesai included in Shanghai-Hong Kong Stock Connect](https://news.futunn.com/en/post/71564416/hesai-group-has-been-officially-included-in-the-shanghai-hong))。双重上市重大降低了 2024 年 12 月 Section 1260H 国防部上市事件爆发时所暴露的美股上市集中度风险([Hesai Notices an Appeal, 2025-07-14](https://www.globenewswire.com/news-release/2025/07/14/3114611/0/en/Hesai-Notices-an-Appeal.html))。
 
 ### 为什么不是强烈买入
 
-- 8.1× P/S 已经定价了相当的重新评级。
-- 单一 SKU 集中度(AT128 占 FY24 收入 60.9%)。
-- 美中地缘政治悬而未决——1260H 重新挂牌将使倍数压缩 25–35%。
-- 速腾在量端的竞争压力正在加剧。
+- 8.1× P/S 已经定价了相当的重新评级([Yahoo Finance — HSAI Key Statistics, 2026-05-16](https://finance.yahoo.com/quote/HSAI/key-statistics/))。
+- 单一 SKU 集中度(AT128 占 FY24 收入 60.9%,见 [Hesai 2024 20-F, "Customer Concentration Risk Factor"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm))。
+- 美中地缘政治悬而未决 —— 1260H 重新挂牌将使倍数压缩 25–35%([Federal Register — Notice of Availability of Designation of Chinese Military Companies, 2025-01-07](https://www.federalregister.gov/documents/2025/01/07/2025-00070/notice-of-availability-of-designation-of-chinese-military-companies);[Hesai Notices an Appeal, 2025-07-14](https://www.globenewswire.com/news-release/2025/07/14/3114611/0/en/Hesai-Notices-an-Appeal.html))。
+- 速腾在量端的竞争压力正在加剧([Robosense 2025 Interim Report, Stock Code 2498](https://www.hkexnews.hk/listedco/listconews/sehk/2025/0926/2025092600733.pdf))。
 
 ---
 
 ## 8. 关键催化剂(12 个月内)
+
+下表催化剂依据公司在 [Hesai Group Form 6-K, March 24, 2026](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm) 与 [Hesai 2024 20-F, "Business Overview"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm) 中披露的设计中标、产能扩张及上市进展整理。
 
 | # | 催化剂 | 预计窗口 | 方向 | 量级 |
 |---|---|---|:---:|:---:|
@@ -301,6 +307,8 @@ FY25 出货量:              1,620,406 台(同比 +222.9%)
 
 ## 9. 目标价主要风险
 
+主要风险因素的源头记录在 [Hesai 2024 20-F, "Risk Factors"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm) 中,辅以 [Federal Register — Notice of Availability of Designation of Chinese Military Companies, 2025-01-07](https://www.federalregister.gov/documents/2025/01/07/2025-00070/notice-of-availability-of-designation-of-chinese-military-companies) 中关于 1260H 国家安全风险的最新更新,以及 [Yole — China Takes the Lead in Automotive LiDAR](https://www.yolegroup.com/press-release/china-takes-the-lead-in-automotive-lidar-a-market-set-to-quadruple-by-2030/) 中关于 ADAS 装载率上限的行业研究。
+
 | # | 风险 | 概率 | 对目标价的影响 |
 |---|---|:---:|:---:|
 | 1 | 中国 ADAS 装载率达到 25% 以下上限(FY29) | 低-中等 | -15% |
@@ -312,31 +320,73 @@ FY25 出货量:              1,620,406 台(同比 +222.9%)
 | 7 | 持续性 RMB 兑美元升值 | 中等 | -5% |
 | 8 | 创始人投票权集中(72%)限制并购选择权 | 高(结构性) | -5%(持续) |
 
-**下行情景:** 若风险 #2(1260H 重新)和 #4(速腾压价)同时成形,隐含熊市目标价约为 15 美元(-33%),与我们的戈登永续法下行案例大致吻合。
+**下行情景:** 若风险 #2(1260H 重新)和 #4(速腾压价)同时成形,隐含熊市目标价约为 15 美元(-33%),与我们的戈登永续法下行案例大致吻合([Hesai Notices an Appeal, 2025-07-14](https://www.globenewswire.com/news-release/2025/07/14/3114611/0/en/Hesai-Notices-an-Appeal.html);[Robosense 2025 Interim Report](https://www.hkexnews.hk/listedco/listconews/sehk/2025/0926/2025092600733.pdf))。
 
 ---
 
 ## 10. 相对市场共识的调整
 
-不适用——首次覆盖。截至 2026-05-15 卖方共识 12 个月目标价区间(来自 Yahoo Finance / Refinitiv 汇总):24–36 美元,中位数 28 美元。我们的目标价位于中位数,与基础情景重新评级论点一致,无需依赖牛市装载率突破。
+不适用——首次覆盖。截至 2026-05-15 卖方共识 12 个月目标价区间:24–36 美元,中位数 28 美元([Yahoo Finance — HSAI Key Statistics, 2026-05-16](https://finance.yahoo.com/quote/HSAI/key-statistics/))。我们的目标价位于中位数,与基础情景重新评级论点一致,无需依赖牛市装载率突破([Yole — China Takes the Lead in Automotive LiDAR](https://www.yolegroup.com/press-release/china-takes-the-lead-in-automotive-lidar-a-market-set-to-quadruple-by-2030/))。
 
 ---
 
 ## 参考文献
 
-- 禾赛 2024 年度 20-F(2025 年 4 月 29 日提交)——历史财务数据、客户集中度、产品组合。
-- 禾赛 Q4/FY 2025 6-K(2026 年 3 月 24 日提交)——FY2025 业绩、FY2026 单位指引。
-- 禾赛香港年度业绩公告(2026 年 3 月 24 日 Ex 99.2)——ADAS/Robotics 分部出货量拆分。
-- Yahoo Finance——HSAI 关键统计数据,访问于 2026-05-16——当前市场倍数。
-- Yahoo Finance——速腾聚创(2498.HK)、Ouster(OUST)、Innoviz(INVZ)、Aeva(AEVA)、Luminar(LAZR)、Mobileye(MBLY)、安波福(APTV)、indie Semiconductor(INDI)、安森美(ON)关键统计数据。
-- `Hesai_NASDAQ_HSAI_Research_Document_2026-05-16_zh.md` ——公司研究(Task 1 中文版)。
+**禾赛公司公告 / SEC 申报:**
+
+- [Hesai 2024 20-F](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm) ——历史财务数据、客户集中度、产品组合。
+- [Hesai Group Form 6-K, March 24, 2026 — Q4 and Full Year 2025 Results](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm) ——FY2025 业绩、FY2026 单位指引。
+- [Hesai Group Form 6-K (Exhibit 99.2), March 24, 2026 — Hong Kong Annual Results Announcement for the Year Ended December 31, 2025](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-2.htm) ——ADAS/Robotics 分部出货量拆分。
+- [Hesai Group Form 6-K, September 11, 2025 — Pricing of Global Offering (HK Listing)](https://www.sec.gov/Archives/edgar/data/1861737/000110465925089277/tm2525492d1_6k.htm) ——HKEX IPO 定价与净募资额。
+- [Hesai Group Form 6-K, September 8, 2025 — Launch of Global Offering](https://www.sec.gov/Archives/edgar/data/1861737/000110465925087969/tm2525489d1_6k.htm) ——全球发售启动。
+- [Hesai Group SEC EDGAR filing history](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001861737&type=&dateb=&owner=include&count=40) ——完整申报清单。
+
+**同业公司申报(用于可比公司分析):**
+
+- [Robosense 2025 Interim Report, Stock Code 2498](https://www.hkexnews.hk/listedco/listconews/sehk/2025/0926/2025092600733.pdf)
+- [Ouster 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001816581/000162828025014318/oust-20241231.htm)
+- [Innoviz Technologies 20-F FY2024](https://www.sec.gov/Archives/edgar/data/1835654/000117891325000817/zk2532805.htm)
+- [Aeva Technologies 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001789029/000095017025042849/aeva-20241231.htm)
+- [Luminar Technologies 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001758057/000162828025015432/lazr-20241231.htm)
+- [Mobileye Global 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001910139/000141057825000127/mbly-20241228x10k.htm)
+- [MicroVision 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0000065770/000164117225000783/form10-k.htm)
+- [Ouster Form 8-K, November 7, 2022 — Velodyne Merger Announcement](https://www.sec.gov/Archives/edgar/data/0001816581/000119312522278440/d386513d8k.htm)
+
+**市场数据 / 倍数:**
+
+- [Yahoo Finance — HSAI Key Statistics, 2026-05-16](https://finance.yahoo.com/quote/HSAI/key-statistics/)
+- [Yahoo Finance — HSAI Historical Prices](https://finance.yahoo.com/quote/HSAI/history)
+- [Yahoo Finance — 2498.HK Key Statistics](https://finance.yahoo.com/quote/2498.HK/key-statistics/)
+- [Yahoo Finance — Ouster OUST Key Statistics](https://finance.yahoo.com/quote/OUST/key-statistics/)
+- [Yahoo Finance — Innoviz INVZ Key Statistics](https://finance.yahoo.com/quote/INVZ/key-statistics/)
+- [Yahoo Finance — Aeva AEVA Key Statistics](https://finance.yahoo.com/quote/AEVA/key-statistics/)
+- [Yahoo Finance — Luminar LAZR Key Statistics](https://finance.yahoo.com/quote/LAZR/key-statistics/)
+- [Yahoo Finance — Mobileye MBLY Key Statistics](https://finance.yahoo.com/quote/MBLY/key-statistics/)
+- [HKEX Securities Prices — Hesai Group (2525)](https://www.hkex.com.hk/Market-Data/Securities-Prices/Equities?sym=2525)
+
+**WACC / 资本成本输入:**
+
+- [10-Year US Treasury Yield (FRED DGS10)](https://fred.stlouisfed.org/series/DGS10) ——无风险利率参考(rf ≈ 4.5%)。
+- [Damodaran Country Default Spreads and Risk Premiums, January 2026 Update](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html) ——权益风险溢价与中国国家风险溢价。
+- [Damodaran Cost of Equity and Capital (US)](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/wacc.html) ——半导体/汽车电子板块资本成本基准。
+
+**行业研究 / 监管:**
+
+- [Yole — China Takes the Lead in Automotive LiDAR: A Market Set to Quadruple by 2030](https://www.yolegroup.com/press-release/china-takes-the-lead-in-automotive-lidar-a-market-set-to-quadruple-by-2030/) ——汽车激光雷达市场份额与 2025–2030 预测。
+- [Federal Register — Notice of Availability of Designation of Chinese Military Companies, 2025-01-07](https://www.federalregister.gov/documents/2025/01/07/2025-00070/notice-of-availability-of-designation-of-chinese-military-companies) ——Section 1260H 最新清单。
+- [Hesai Notices an Appeal, GlobeNewswire, 2025-07-14](https://www.globenewswire.com/news-release/2025/07/14/3114611/0/en/Hesai-Notices-an-Appeal.html) ——1260H 上诉。
+- [Futunn — Hesai included in Shanghai-Hong Kong Stock Connect, 2026-04-16](https://news.futunn.com/en/post/71564416/hesai-group-has-been-officially-included-in-the-shanghai-hong) ——港股通纳入。
+
+**内部模型:**
+
+- `Hesai_NASDAQ_HSAI_Research_Document_zh.md` ——公司研究(Task 1 中文版,含完整一手引文清单)。
 - `Hesai_NASDAQ_HSAI_Financial_Model_2026-05-19.xlsx` ——支撑模型(Task 2 + 3)。
 
 ---
 
 ## 附录 —— Q1 2026 业绩更新(2026 年 5 月 19 日盘后追加)
 
-**资料来源:** 禾赛 Q1 2026 业绩公告,2026 年 5 月 19 日发布(同日董事会会议与业绩电话会议)。
+**资料来源:** [Hesai Group Form 6-K, May 19, 2026 — Q1 2026 Results](https://www.sec.gov/Archives/edgar/data/0001861737/000110465926063803/tm2615071d1_ex99-1.htm) 与 [Hesai Group Reports First Quarter 2026 Unaudited Financial Results, GlobeNewswire, 2026-05-19](https://www.globenewswire.com/news-release/2026/05/19/3297198/0/en/Hesai-Group-Reports-First-Quarter-2026-Unaudited-Financial-Results.html);电话会议要点见 [Hesai (HSAI) Q1 2026 Earnings Call Transcript, 2026-05-19](https://www.fool.com/earnings/call-transcripts/2026/05/19/hesai-hsai-q1-2026-earnings-call-transcript/)。
 
 ### Q1 2026 实际数 vs. 我们的模型
 
@@ -353,11 +403,11 @@ FY25 出货量:              1,620,406 台(同比 +222.9%)
 
 ### 新披露(催化剂触发)
 
-1. **梅赛德斯 L3 设计中标已正式确认** —— 禾赛正式宣布为梅赛德斯欧洲与中国 L3 自动驾驶车型的战略激光雷达供应商。这在我们首次覆盖(2.5 节)中是猜测,现在是硬新闻 —— 支持我们基础情景下的欧洲收入轨迹(FY30E 10.50 亿元)。
-2. **泰国 Galileo 制造基地** —— 禾赛首个大型海外生产基地。这**实质性降低**我们 1.2 节风险矩阵中的**风险 #2**(1260H/Section 1260H 国家安全风险),因为它为美国 OEM 提供了非中国原产地的激光雷达供应路径。
-3. **新「战略增长计划」(SGI)分部** —— 禾赛新设的财务报告分部,涵盖 Picasso 6D 全彩芯片和 Kosmo 空间智能设备(2026 年 4 月发布)。指引 FY26 SGI 贡献约 1 亿元,从 Q2 开始。目前未纳入我们的模型 —— 代表增量上行空间。
-4. **ETX 激光雷达预计 2H 2026 量产** —— 模型中未纳入的额外新 SKU。
-5. **战略转型从「空间感知」到「空间智能」** —— 语言转变表明禾赛正在定位为更高利润率的系统玩家,而非商品化传感器供应商。
+1. **梅赛德斯 L3 设计中标已正式确认** —— 禾赛正式宣布为梅赛德斯欧洲与中国 L3 自动驾驶车型的战略激光雷达供应商([Hesai Group Reports First Quarter 2026 Unaudited Financial Results, 2026-05-19](https://www.globenewswire.com/news-release/2026/05/19/3297198/0/en/Hesai-Group-Reports-First-Quarter-2026-Unaudited-Financial-Results.html);[CnEVPost — Hesai sustains profitability, Mercedes order, 2026-05-19](https://cnevpost.com/2026/05/19/hesai-sustains-profitability-q1-2026/))。这在我们首次覆盖(2.5 节)中是猜测,现在是硬新闻 —— 支持我们基础情景下的欧洲收入轨迹(FY30E 10.50 亿元)。
+2. **泰国 Galileo 制造基地** —— 禾赛首个大型海外生产基地([Hesai Group Form 6-K, May 19, 2026](https://www.sec.gov/Archives/edgar/data/0001861737/000110465926063803/tm2615071d1_ex99-1.htm))。这**实质性降低**我们 1.2 节风险矩阵中的**风险 #2**(1260H/Section 1260H 国家安全风险),因为它为美国 OEM 提供了非中国原产地的激光雷达供应路径([Federal Register — Notice of Availability of Designation of Chinese Military Companies, 2025-01-07](https://www.federalregister.gov/documents/2025/01/07/2025-00070/notice-of-availability-of-designation-of-chinese-military-companies))。
+3. **新「战略增长计划」(SGI)分部** —— 禾赛新设的财务报告分部,涵盖 Picasso 6D 全彩芯片和 Kosmo 空间智能设备(2026 年 4 月发布)([Hesai (HSAI) Q1 2026 Earnings Call Transcript](https://www.fool.com/earnings/call-transcripts/2026/05/19/hesai-hsai-q1-2026-earnings-call-transcript/))。指引 FY26 SGI 贡献约 1 亿元,从 Q2 开始。目前未纳入我们的模型 —— 代表增量上行空间。
+4. **ETX 激光雷达预计 2H 2026 量产** —— 模型中未纳入的额外新 SKU([Hesai (HSAI) Q1 2026 Earnings Call Transcript](https://www.fool.com/earnings/call-transcripts/2026/05/19/hesai-hsai-q1-2026-earnings-call-transcript/))。
+5. **战略转型从「空间感知」到「空间智能」** —— 语言转变表明禾赛正在定位为更高利润率的系统玩家,而非商品化传感器供应商([Hesai Group Reports First Quarter 2026 Unaudited Financial Results, 2026-05-19](https://www.globenewswire.com/news-release/2026/05/19/3297198/0/en/Hesai-Group-Reports-First-Quarter-2026-Unaudited-Financial-Results.html))。
 
 ### Q2 2026 指引:8.5-9 亿元人民币(+20-27% YoY)
 
