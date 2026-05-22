@@ -26,6 +26,7 @@ from flask import Blueprint, abort, jsonify, render_template_string, request, se
 import md_comment_widget as _mcw
 import nav_widget2 as _nw
 import report_annotations as _ra
+import report_inline_comments as _ric
 from sector_map import ALL_SECTORS, sector_for
 from market_cap_cache import (
     format_market_cap, get_fx_rates, get_market_caps, pending_count, to_usd,
@@ -600,6 +601,51 @@ _VIEW_TMPL = r"""<!doctype html>
     .markdown-body mark{background:#fff3a3;color:inherit;padding:.05em .15em;border-radius:2px}
     .backlink{margin:8px 0 14px;font-family:-apple-system,sans-serif;font-size:.9rem}
     .backlink a{color:#0366d6;text-decoration:none}
+
+    /* ── Inline comments ─────────────────────────────────────────────── */
+    mark.ric-hl{background:#ffe9a3;cursor:pointer;border-bottom:2px solid #f0c14b;
+                padding:.02em .1em;border-radius:2px}
+    mark.ric-hl:hover{background:#ffd966}
+    mark.ric-hl.active{background:#ffbe33}
+    .ric-fab{position:absolute;z-index:1500;background:#1F4E78;color:#fff;
+             border:none;border-radius:16px;padding:5px 12px;font-size:.85rem;
+             cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.25);display:none;
+             font-family:-apple-system,sans-serif}
+    .ric-fab:hover{background:#16395a}
+    .ric-toggle{position:fixed;top:64px;right:0;z-index:99;background:#1F4E78;
+                color:#fff;border:none;border-top-left-radius:6px;border-bottom-left-radius:6px;
+                padding:7px 11px;font-size:.85rem;cursor:pointer;
+                box-shadow:-2px 2px 6px rgba(0,0,0,.12);font-family:-apple-system,sans-serif}
+    .ric-toggle:hover{background:#16395a}
+    .ric-sidebar{position:fixed;top:60px;right:0;width:340px;max-height:85vh;
+                 overflow-y:auto;background:#fafbfd;border-left:1px solid #d8dde6;
+                 padding:12px 16px;font-family:-apple-system,sans-serif;font-size:.9rem;
+                 z-index:100;box-shadow:-2px 0 8px rgba(0,0,0,.06);display:none}
+    .ric-sidebar.open{display:block}
+    .ric-sidebar h3{font-size:.95rem;color:#333;margin:0 0 10px;display:flex;
+                    align-items:center;justify-content:space-between}
+    .ric-sidebar h3 .close{background:none;border:none;font-size:1.2rem;cursor:pointer;color:#888}
+    .ric-item{padding:9px 10px;margin-bottom:9px;background:#fff;
+              border:1px solid #e0e4ea;border-radius:6px;cursor:pointer}
+    .ric-item:hover{border-color:#1F4E78}
+    .ric-item.orphan{background:#fff8e7;border-color:#f0d8a6}
+    .ric-quote{font-size:.78rem;color:#555;font-style:italic;
+               border-left:3px solid #ffd966;padding:2px 0 2px 8px;
+               margin-bottom:6px;max-height:3.6em;overflow:hidden;line-height:1.4}
+    .ric-body{font-size:.88rem;color:#222;line-height:1.45}
+    .ric-body p{margin:0 0 .3em}
+    .ric-body ul,.ric-body ol{padding-left:1.2em;margin:.2em 0}
+    .ric-meta{font-size:.7rem;color:#888;margin-top:5px;font-family:ui-monospace,Menlo,monospace}
+    .ric-actions{font-size:.78rem;margin-top:5px;display:flex;gap:10px}
+    .ric-actions button{background:none;border:none;color:#0366d6;cursor:pointer;
+                        padding:0;font-size:.78rem}
+    .ric-actions button.danger{color:#c00}
+    .ric-actions button:hover{text-decoration:underline}
+    .ric-modal-quote{font-size:.85rem;color:#555;font-style:italic;
+                     border-left:3px solid #ffd966;padding:8px 12px;
+                     margin-bottom:14px;background:#fffce6;border-radius:0 4px 4px 0;
+                     max-height:8em;overflow:auto}
+    #ricEmpty{color:#888;font-style:italic;font-size:.85rem;margin:8px 4px}
   </style>
 </head>
 <body>
@@ -609,7 +655,36 @@ _VIEW_TMPL = r"""<!doctype html>
     <div id="content"></div>
   </div>
 
+  <button class="ric-fab" id="ricFab" type="button">💬 Comment</button>
+  <button class="ric-toggle" id="ricToggle" type="button">💬 <span id="ricCount">0</span></button>
+  <aside class="ric-sidebar" id="ricSidebar">
+    <h3>Comments <button type="button" class="close" id="ricClose" aria-label="Close">×</button></h3>
+    <div id="ricList"></div>
+    <p id="ricEmpty">No comments yet. Select text in the document and click "💬 Comment".</p>
+  </aside>
+
+  <div class="modal fade" id="ricModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ricModalTitle">Add comment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ric-modal-quote" id="ricModalQuote"></div>
+          <textarea id="ricModalBody" class="form-control" rows="6"
+                    placeholder="Write a comment… markdown supported"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" id="ricModalSave">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="/static/vendor/bootstrap.bundle.min.js"></script>
   <script type="module">
     import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
     mermaid.initialize({ startOnLoad:false, theme:"default" });
@@ -632,8 +707,6 @@ _VIEW_TMPL = r"""<!doctype html>
     const root = document.getElementById("content");
     root.innerHTML = marked.parse(raw);
 
-    // marked emits ```mermaid``` as <pre><code class="language-mermaid">.
-    // Convert each into <pre class="mermaid">code</pre> so mermaid.run picks it up.
     root.querySelectorAll("pre code.language-mermaid").forEach(code => {
       const text = code.textContent;
       const wrap = document.createElement("pre");
@@ -642,12 +715,320 @@ _VIEW_TMPL = r"""<!doctype html>
       code.parentElement.replaceWith(wrap);
     });
 
-    // Relative image refs (charts/foo.png, charts_zh/bar.png, etc.) are
-    // resolved by the browser against the current page URL, which is
-    // /<base>/view/<rel>. The /view route serves both .md files and image
-    // assets — every doc keeps its charts in a sibling charts/ subdir.
-
     await mermaid.run({ querySelector: ".mermaid" });
+    // Signal the inline-comments loader that the DOM is ready.
+    window._ricDocReady = true;
+    document.dispatchEvent(new Event("ric:doc-ready"));
+  </script>
+
+  <script>
+  (function(){
+    const REPORT_PATH = {{ rel | tojson }};
+    const API_BASE = {{ _base | tojson }};
+    const docRoot = document.getElementById('content');
+    const fab = document.getElementById('ricFab');
+    const sidebar = document.getElementById('ricSidebar');
+    const sidebarList = document.getElementById('ricList');
+    const sidebarEmpty = document.getElementById('ricEmpty');
+    const toggleBtn = document.getElementById('ricToggle');
+    const countEl = document.getElementById('ricCount');
+    const closeBtn = document.getElementById('ricClose');
+    const modalEl = document.getElementById('ricModal');
+    const modalTitleEl = document.getElementById('ricModalTitle');
+    const modalQuoteEl = document.getElementById('ricModalQuote');
+    const modalBodyEl = document.getElementById('ricModalBody');
+    const modalSaveBtn = document.getElementById('ricModalSave');
+    const bsModal = new bootstrap.Modal(modalEl);
+
+    let pendingSelection = null;
+    let editingId = null;
+
+    function api(path, opts) {
+      return fetch(API_BASE + path, opts || {}).then(r => {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        if (r.status === 204) return null;
+        return r.json();
+      });
+    }
+
+    // Build a flat text index of all text nodes under docRoot so we can map
+    // string offsets back to (node, offset) for Range construction.
+    function buildIndex() {
+      const nodes = [];
+      let full = '';
+      const walker = document.createTreeWalker(docRoot, NodeFilter.SHOW_TEXT, {
+        acceptNode(n) {
+          const p = n.parentNode && n.parentNode.tagName;
+          if (p === 'SCRIPT' || p === 'STYLE') return NodeFilter.FILTER_REJECT;
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      });
+      let n;
+      while ((n = walker.nextNode())) {
+        if (!n.nodeValue) continue;
+        const start = full.length;
+        full += n.nodeValue;
+        nodes.push({ node: n, start, end: full.length });
+      }
+      return { full, nodes };
+    }
+
+    function nearestHeading(node) {
+      let el = node.nodeType === 1 ? node : node.parentNode;
+      while (el && el !== docRoot && el !== document.body) {
+        let sib = el;
+        while ((sib = sib.previousElementSibling)) {
+          if (/^H[1-6]$/.test(sib.tagName)) return sib.textContent.trim();
+        }
+        el = el.parentNode;
+      }
+      return null;
+    }
+
+    function getSelectionInfo() {
+      const sel = window.getSelection();
+      if (!sel || sel.rangeCount === 0 || sel.isCollapsed) return null;
+      const range = sel.getRangeAt(0);
+      if (!docRoot.contains(range.commonAncestorContainer)) return null;
+      const quote = sel.toString();
+      if (!quote || !quote.trim()) return null;
+      const index = buildIndex();
+      let startOff = -1, endOff = -1;
+      for (const e of index.nodes) {
+        if (e.node === range.startContainer) startOff = e.start + range.startOffset;
+        if (e.node === range.endContainer)   endOff   = e.start + range.endOffset;
+      }
+      if (startOff < 0 || endOff < 0 || endOff <= startOff) return null;
+      const prefix = index.full.slice(Math.max(0, startOff - 32), startOff);
+      const suffix = index.full.slice(endOff, endOff + 32);
+      const heading = nearestHeading(range.startContainer);
+      return { quote, prefix, suffix, heading_anchor: heading, rect: range.getBoundingClientRect() };
+    }
+
+    function showFab(rect) {
+      fab.style.display = 'block';
+      fab.style.top  = (window.scrollY + rect.bottom + 6) + 'px';
+      fab.style.left = (window.scrollX + rect.left) + 'px';
+    }
+    function hideFab() { fab.style.display = 'none'; }
+
+    document.addEventListener('mouseup', function(e) {
+      if (e.target === fab) return;
+      setTimeout(() => {
+        const info = getSelectionInfo();
+        if (!info) { hideFab(); return; }
+        pendingSelection = info;
+        showFab(info.rect);
+      }, 0);
+    });
+    document.addEventListener('mousedown', function(e) {
+      if (e.target !== fab) hideFab();
+    });
+
+    fab.addEventListener('click', function() {
+      if (!pendingSelection) return;
+      hideFab();
+      editingId = null;
+      modalTitleEl.textContent = 'Add comment';
+      modalQuoteEl.textContent = pendingSelection.quote;
+      modalBodyEl.value = '';
+      bsModal.show();
+      setTimeout(() => modalBodyEl.focus(), 250);
+    });
+
+    modalSaveBtn.addEventListener('click', async function() {
+      const body = (modalBodyEl.value || '').trim();
+      if (!body) { modalBodyEl.focus(); return; }
+      try {
+        if (editingId) {
+          await api('/inline-comments/' + editingId, {
+            method: 'PATCH',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ body })
+          });
+        } else if (pendingSelection) {
+          await api('/inline-comments', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              report_path:    REPORT_PATH,
+              quote:          pendingSelection.quote,
+              prefix:         pendingSelection.prefix,
+              suffix:         pendingSelection.suffix,
+              heading_anchor: pendingSelection.heading_anchor,
+              body,
+            })
+          });
+        }
+        bsModal.hide();
+        window.getSelection().removeAllRanges();
+        await loadAndRender();
+        sidebar.classList.add('open');
+      } catch (e) {
+        alert('Save failed: ' + e.message);
+      }
+    });
+
+    toggleBtn.addEventListener('click', () => sidebar.classList.toggle('open'));
+    closeBtn.addEventListener('click',  () => sidebar.classList.remove('open'));
+
+    function findInIndex(idx, c) {
+      const targets = [];
+      if (c.prefix || c.suffix) targets.push({ needle: c.prefix + c.quote + c.suffix, off: (c.prefix || '').length });
+      targets.push({ needle: c.quote, off: 0 });
+      for (const t of targets) {
+        if (!t.needle) continue;
+        const i = idx.full.indexOf(t.needle);
+        if (i >= 0) return { start: i + t.off, end: i + t.off + c.quote.length };
+      }
+      return null;
+    }
+
+    // Wrap [oStart, oEnd) in the document text with <mark.ric-hl>. Splits
+    // across multiple text nodes when the range crosses element boundaries.
+    function wrapRange(idx, oStart, oEnd, cid) {
+      const segs = [];
+      for (const e of idx.nodes) {
+        if (e.end <= oStart) continue;
+        if (e.start >= oEnd) break;
+        const ls = Math.max(0, oStart - e.start);
+        const le = Math.min(e.node.nodeValue.length, oEnd - e.start);
+        if (ls >= le) continue;
+        segs.push({ node: e.node, start: ls, end: le });
+      }
+      const marks = [];
+      for (const seg of segs) {
+        const n = seg.node;
+        if (!n.parentNode) continue;
+        const before = n.nodeValue.slice(0, seg.start);
+        const middle = n.nodeValue.slice(seg.start, seg.end);
+        const after  = n.nodeValue.slice(seg.end);
+        const mk = document.createElement('mark');
+        mk.className = 'ric-hl';
+        mk.dataset.cid = String(cid);
+        mk.textContent = middle;
+        const frag = document.createDocumentFragment();
+        if (before) frag.appendChild(document.createTextNode(before));
+        frag.appendChild(mk);
+        if (after)  frag.appendChild(document.createTextNode(after));
+        n.parentNode.replaceChild(frag, n);
+        marks.push(mk);
+      }
+      return marks;
+    }
+
+    function clearHighlights() {
+      docRoot.querySelectorAll('mark.ric-hl').forEach(m => {
+        const t = document.createTextNode(m.textContent);
+        m.parentNode.replaceChild(t, m);
+      });
+      docRoot.normalize();
+    }
+
+    function fmtTime(s) {
+      if (!s) return '';
+      return s.replace('T', ' ').replace('Z', '');
+    }
+
+    function renderSidebar(items) {
+      sidebarList.innerHTML = '';
+      countEl.textContent = items.length;
+      sidebarEmpty.style.display = items.length ? 'none' : 'block';
+      for (const it of items) {
+        const div = document.createElement('div');
+        div.className = 'ric-item' + (it.orphan ? ' orphan' : '');
+        div.dataset.id = it.id;
+
+        const q = document.createElement('div');
+        q.className = 'ric-quote';
+        q.textContent = it.quote.length > 120 ? it.quote.slice(0, 120) + '…' : it.quote;
+
+        const b = document.createElement('div');
+        b.className = 'ric-body';
+        b.innerHTML = window.marked ? marked.parse(it.body || '') : (it.body || '');
+
+        const meta = document.createElement('div');
+        meta.className = 'ric-meta';
+        meta.textContent = (it.orphan ? '⚠ orphan · ' : '') +
+                           (it.heading_anchor ? '§ ' + it.heading_anchor + ' · ' : '') +
+                           fmtTime(it.updated_at || it.created_at);
+
+        const actions = document.createElement('div');
+        actions.className = 'ric-actions';
+        const eBtn = document.createElement('button');
+        eBtn.type = 'button'; eBtn.textContent = '✏️ Edit';
+        eBtn.addEventListener('click', (e) => { e.stopPropagation(); openEdit(it); });
+        const dBtn = document.createElement('button');
+        dBtn.type = 'button'; dBtn.textContent = '🗑 Delete'; dBtn.className = 'danger';
+        dBtn.addEventListener('click', (e) => { e.stopPropagation(); deleteOne(it.id); });
+        actions.append(eBtn, dBtn);
+
+        div.append(q, b, meta, actions);
+        div.addEventListener('click', () => {
+          const mk = docRoot.querySelector('mark.ric-hl[data-cid="' + it.id + '"]');
+          if (mk) {
+            mk.scrollIntoView({ block: 'center', behavior: 'smooth' });
+            mk.classList.add('active');
+            setTimeout(() => mk.classList.remove('active'), 1500);
+          }
+        });
+        sidebarList.appendChild(div);
+      }
+    }
+
+    function openEdit(item) {
+      editingId = item.id;
+      pendingSelection = null;
+      modalTitleEl.textContent = 'Edit comment';
+      modalQuoteEl.textContent = item.quote;
+      modalBodyEl.value = item.body || '';
+      bsModal.show();
+      setTimeout(() => modalBodyEl.focus(), 250);
+    }
+
+    async function deleteOne(id) {
+      if (!confirm('Delete this comment?')) return;
+      try {
+        await api('/inline-comments/' + id, { method: 'DELETE' });
+        await loadAndRender();
+      } catch (e) { alert('Delete failed: ' + e.message); }
+    }
+
+    async function loadAndRender() {
+      clearHighlights();
+      let resp;
+      try {
+        resp = await api('/inline-comments?report=' + encodeURIComponent(REPORT_PATH));
+      } catch (e) {
+        console.error('Failed to load inline comments', e);
+        return;
+      }
+      const items = resp.comments || [];
+      // Re-anchor each comment. Rebuild the index after every successful
+      // wrap so subsequent searches see the still-unwrapped text.
+      for (const c of items) {
+        const idx = buildIndex();
+        const found = findInIndex(idx, c);
+        if (found) {
+          const marks = wrapRange(idx, found.start, found.end, c.id);
+          marks.forEach(m => m.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openEdit(c);
+          }));
+          c.orphan = false;
+        } else {
+          c.orphan = true;
+        }
+      }
+      renderSidebar(items);
+    }
+
+    function whenDocReady(cb) {
+      if (window._ricDocReady) return cb();
+      document.addEventListener('ric:doc-ready', cb, { once: true });
+    }
+    whenDocReady(loadAndRender);
+  })();
   </script>
 </body>
 </html>
@@ -740,7 +1121,9 @@ def view(rel: str):
         if not target.is_file():
             abort(404)
         md = target.read_text(encoding="utf-8")
-        return render_template_string(_VIEW_TMPL, name=target.name, md=md, _nav=_nw.NAV_HTML)
+        return render_template_string(
+            _VIEW_TMPL, name=target.name, md=md, rel=rel, _nav=_nw.NAV_HTML
+        )
 
     if target.suffix.lower() not in _IMAGE_EXTS or not target.is_file():
         abort(404)
@@ -760,6 +1143,57 @@ def rate(pair_key: str):
 @reports_bp.route("/comment/<path:pair_key>", methods=["POST"])
 def comment(pair_key: str):
     _ra.set_comment(pair_key, request.form.get("comment", ""))
+    return "", 204
+
+
+# --- inline (selection-anchored) comments -----------------------------------
+# Distinct from the per-report comment above: these anchor to a slice of text
+# inside the rendered MD via a Hypothes.is-style TextQuoteSelector.
+
+@reports_bp.route("/inline-comments", methods=["GET"])
+def inline_comments_list():
+    rel = request.args.get("report", "").strip()
+    if not rel:
+        return jsonify(error="missing report"), 400
+    return jsonify(comments=_ric.list_for_report(rel))
+
+
+@reports_bp.route("/inline-comments", methods=["POST"])
+def inline_comments_create():
+    data = request.get_json(silent=True) or {}
+    rel = (data.get("report_path") or "").strip()
+    quote = (data.get("quote") or "").strip()
+    body = (data.get("body") or "").strip()
+    if not rel or not quote or not body:
+        return jsonify(error="report_path, quote, body required"), 400
+    row = _ric.create(
+        report_path=rel,
+        quote=quote,
+        prefix=data.get("prefix") or "",
+        suffix=data.get("suffix") or "",
+        heading_anchor=data.get("heading_anchor") or None,
+        body=body,
+    )
+    return jsonify(comment=row), 201
+
+
+@reports_bp.route("/inline-comments/<int:cid>", methods=["PATCH"])
+def inline_comments_update(cid: int):
+    data = request.get_json(silent=True) or {}
+    body = (data.get("body") or "").strip()
+    if not body:
+        return jsonify(error="body required"), 400
+    row = _ric.update(cid, body)
+    if not row:
+        return jsonify(error="not found"), 404
+    return jsonify(comment=row)
+
+
+@reports_bp.route("/inline-comments/<int:cid>", methods=["DELETE"])
+def inline_comments_delete(cid: int):
+    ok = _ric.delete(cid)
+    if not ok:
+        return jsonify(error="not found"), 404
     return "", 204
 
 
