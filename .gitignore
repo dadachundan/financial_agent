@@ -15,6 +15,8 @@ package-lock.json
 *.wal
 kg_uploads/
 ticker_name_cache.json
+db/pe_cache.json
+reports/.obsidian/workspace.json
 uploads/
 financial_reports/
 *.log
