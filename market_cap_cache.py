@@ -134,6 +134,33 @@ def _read_cached_full(yf_tickers: list[str], today: str) -> dict[str, tuple[int 
         return {row[0]: (row[1], row[2]) for row in cur.fetchall()}
 
 
+def _read_prior_day_fallback(
+    yf_tickers: list[str], today: str,
+) -> dict[str, tuple[int | None, str | None]]:
+    """For each ticker missing today, return the most-recent prior-day row.
+
+    Lets the UI keep showing yesterday's number while today's background
+    refresh is still in flight, instead of rendering a blank cell.
+    """
+    if not yf_tickers:
+        return {}
+    placeholders = ",".join("?" for _ in yf_tickers)
+    with _DB_LOCK, _conn() as c:
+        cur = c.execute(
+            f"""
+            SELECT ticker, market_cap, currency
+            FROM market_cap_cache
+            WHERE fetch_date < ? AND ticker IN ({placeholders})
+              AND fetch_date = (
+                SELECT MAX(fetch_date) FROM market_cap_cache c2
+                WHERE c2.ticker = market_cap_cache.ticker AND c2.fetch_date < ?
+              )
+            """,
+            (today, *yf_tickers, today),
+        )
+        return {row[0]: (row[1], row[2]) for row in cur.fetchall()}
+
+
 def get_market_caps(
     tickers: list[str], *, block: bool = True,
 ) -> dict[str, tuple[int | None, str | None]]:
@@ -177,12 +204,23 @@ def get_market_caps(
                 )
                 t.start()
 
+    # For tickers still missing today's number after the dispatch above
+    # (block=False path while background fetch is in flight), fall back to
+    # the most recent prior-day cached value so the UI shows yesterday's
+    # data instead of a blank cell.
+    still_missing = [
+        yt for yt in yf_tickers if yt not in cached and yt not in fetched
+    ]
+    prior = _read_prior_day_fallback(still_missing, today) if still_missing else {}
+
     out: dict[str, tuple[int | None, str | None]] = {}
     for orig, yt in yf_by_orig.items():
         if yt in cached:
             out[orig] = cached[yt]
         elif yt in fetched:
             out[orig] = fetched[yt]
+        elif yt in prior:
+            out[orig] = prior[yt]
         else:
             out[orig] = (None, None)
     for t in tickers:

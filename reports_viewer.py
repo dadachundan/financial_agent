@@ -46,7 +46,9 @@ reports_bp = Blueprint("reports", __name__)
 
 ASIA_TICKER_RE = re.compile(r"(?<![A-Z0-9])(SSE|SZSE|HKEX|TWSE|BSE|TSE|HOSE|KRX)(\d+)")
 US_TICKER_RE   = re.compile(r"(?<![A-Z0-9])(NYSE|NASDAQ|AMEX)_([A-Z]+)(?![A-Z])")
-RESEARCH_MARKERS = ("_Research_Document_", "_研究报告_", "_公司研究_")
+RESEARCH_MARKERS = ("_Research_Document", "_研究报告", "_公司研究")
+VALUATION_MARKERS = ("_Valuation_Analysis", "_Initiation_Report")
+ALL_KIND_MARKERS = RESEARCH_MARKERS + VALUATION_MARKERS
 LANG_SUFFIXES = ("_zh", "_CN")  # before .md
 
 
@@ -84,19 +86,20 @@ def _parse(rel_path: Path) -> dict:
         if "_研究报告_" in stem or "_公司研究_" in stem:
             lang = "zh"
 
-    # Pair key: same bucket + same slug + same date, regardless of marker/lang.
-    # Normalize the research marker so EN ("_Research_Document_") and ZH
-    # ("_公司研究_" / "_研究报告_") variants of the same report collapse together.
+    # Pair key: same bucket + same slug + same kind, regardless of marker/lang.
+    # Normalize the research marker so EN ("_Research_Document") and ZH
+    # ("_公司研究" / "_研究报告") variants of the same report collapse together.
     norm = stem
-    for m in ("_Research_Document_", "_研究报告_", "_公司研究_"):
+    for m in RESEARCH_MARKERS:
         if m in norm:
-            norm = norm.replace(m, "_RESEARCH_")
+            norm = norm.replace(m, "_RESEARCH")
             break
     pair_key = f"{bucket}/{norm}"
 
-    # Company display: slug (everything before _Research_Document_ etc.) or stem.
+    # Company display: strip the kind suffix (Research_Document /
+    # Valuation_Analysis / etc.) so the UI shows just the company slug.
     display = stem
-    for m in RESEARCH_MARKERS:
+    for m in ALL_KIND_MARKERS:
         if m in stem:
             display = stem.split(m)[0]
             break
@@ -353,7 +356,6 @@ __URLPATCH__
           <option value="{{ b }}">{{ b }}</option>
         {% endfor %}
       </select>
-      <label><input type="checkbox" id="onlyDocx"> DOCX only</label>
       <label><input type="checkbox" id="showMoreCols"> Show more columns</label>
       <div class="spacer"></div>
       <button id="resetBtn" class="reset">Reset</button>
@@ -385,8 +387,7 @@ __URLPATCH__
               data-filename="{{ r.rel|lower }}"
               data-date="{{ r.date }}"
               data-ts="{{ r.ts }}"
-              data-rating="{{ r.rating or 0 }}"
-              data-has-docx="{{ '1' if r.langs.get('docx') or r.langs.get('docx_zh') else '0' }}">
+              data-rating="{{ r.rating or 0 }}">
             <td>
               {% if r.langs.get('docx') %}
                 <a class="title" href="{{ _base }}/view-docx/{{ r.langs['docx'] }}">{{ r.display }}</a>
@@ -454,7 +455,6 @@ __URLPATCH__
       const filter = document.getElementById("filter");
       const sectorFilter = document.getElementById("sectorFilter");
       const bucketFilter = document.getElementById("bucketFilter");
-      const onlyDocx = document.getElementById("onlyDocx");
       const resetBtn = document.getElementById("resetBtn");
       const count = document.getElementById("count");
 
@@ -462,7 +462,6 @@ __URLPATCH__
         const q  = (filter.value || "").trim().toLowerCase();
         const s  = sectorFilter.value || "";
         const bk = bucketFilter.value || "";
-        const dx = onlyDocx.checked;
 
         let visible = 0;
         for (const r of rows) {
@@ -471,8 +470,7 @@ __URLPATCH__
           const matchQ  = !q || hay.includes(q);
           const matchS  = !s || (s === "__none__" ? rowSector === "" : rowSector === s);
           const matchBk = !bk || r.dataset.bucket === bk;
-          const matchDx = !dx || r.dataset.hasDocx === "1";
-          const show = matchQ && matchS && matchBk && matchDx;
+          const show = matchQ && matchS && matchBk;
           r.style.display = show ? "" : "none";
           if (show) visible++;
         }
@@ -481,12 +479,10 @@ __URLPATCH__
       filter.addEventListener("input", applyFilter);
       sectorFilter.addEventListener("change", applyFilter);
       bucketFilter.addEventListener("change", applyFilter);
-      onlyDocx.addEventListener("change", applyFilter);
       resetBtn.addEventListener("click", () => {
         filter.value = "";
         sectorFilter.value = "";
         bucketFilter.value = "";
-        onlyDocx.checked = false;
         applyFilter();
       });
       applyFilter();
@@ -633,19 +629,11 @@ _VIEW_TMPL = r"""<!doctype html>
       code.parentElement.replaceWith(wrap);
     });
 
-    // Rewrite relative chart image refs so docs in any subdir resolve correctly.
-    // <img src="charts/foo.png"> → <img src="/reports/view/charts/foo.png">.
-    const baseChart = "{{ _base }}/view/charts/";
-    root.querySelectorAll("img").forEach(img => {
-      const src = img.getAttribute("src") || "";
-      // Match anything that contains "charts/" but isn't already absolute.
-      if (!src.startsWith("/") && !src.startsWith("http")) {
-        const idx = src.indexOf("charts/");
-        if (idx >= 0) {
-          img.setAttribute("src", baseChart + src.slice(idx + "charts/".length));
-        }
-      }
-    });
+    // Relative image refs (charts/foo.png, charts_zh/bar.png, etc.) are
+    // resolved by the browser against the current page URL, which is
+    // /<base>/view/<rel>. The /view route serves both .md files and image
+    // assets, with a fallback to the shared reports/charts/ folder for
+    // older docs whose charts live there.
 
     await mermaid.run({ querySelector: ".mermaid" });
   </script>
@@ -706,20 +694,41 @@ def index():
     )
 
 
+_IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"}
+
+
 @reports_bp.route("/view/<path:rel>")
 def view(rel: str):
-    # Resolve safely under REPORTS_DIR.
-    if ".." in rel.split("/") or not rel.endswith(".md"):
+    """Serve .md as rendered HTML; serve images directly. Path-traversal-safe.
+
+    Image lookup falls back to the shared `reports/charts/` folder if the
+    file isn't at the resolved per-doc location — some older reports use
+    `charts/foo.png` to mean the shared folder rather than a sibling
+    `charts/` subdir.
+    """
+    if ".." in rel.split("/"):
         abort(404)
     target = (REPORTS_DIR / rel).resolve()
     try:
         target.relative_to(REPORTS_DIR.resolve())
     except ValueError:
         abort(404)
-    if not target.is_file():
+
+    if rel.endswith(".md"):
+        if not target.is_file():
+            abort(404)
+        md = target.read_text(encoding="utf-8")
+        return render_template_string(_VIEW_TMPL, name=target.name, md=md, _nav=_nw.NAV_HTML)
+
+    if target.suffix.lower() not in _IMAGE_EXTS:
         abort(404)
-    md = target.read_text(encoding="utf-8")
-    return render_template_string(_VIEW_TMPL, name=target.name, md=md, _nav=_nw.NAV_HTML)
+    if target.is_file():
+        return send_from_directory(target.parent, target.name)
+    # Fallback: shared reports/charts/<basename>
+    fallback = REPORTS_DIR / "charts" / Path(rel).name
+    if fallback.is_file():
+        return send_from_directory(fallback.parent, fallback.name)
+    abort(404)
 
 
 @reports_bp.route("/rate/<path:pair_key>", methods=["POST"])
@@ -736,18 +745,6 @@ def rate(pair_key: str):
 def comment(pair_key: str):
     _ra.set_comment(pair_key, request.form.get("comment", ""))
     return "", 204
-
-
-@reports_bp.route("/view/charts/<path:filename>", endpoint="view_chart_asset")
-def view_chart_asset(filename: str):
-    """Serve chart PNGs from reports/charts/, regardless of doc depth.
-
-    Existing reports reference charts as relative `charts/foo.png`; the
-    template rewrites those to `/reports/view/charts/foo.png` before
-    handing them to the browser, so this single route catches them all.
-    """
-    charts_dir = REPORTS_DIR / "charts"
-    return send_from_directory(charts_dir, filename)
 
 
 _DOCX_TMPL = r"""<!doctype html>
