@@ -4,7 +4,7 @@ This document provides step-by-step instructions for executing Task 5 (Report As
 
 ## Task Overview
 
-**Purpose**: Write and assemble the comprehensive final DOCX report.
+**Purpose**: Write and assemble the comprehensive final markdown report.
 
 **Prerequisites**: ⚠️ Verify before starting - ALL PREVIOUS TASKS REQUIRED
 - **Required**: Company research from Task 1
@@ -24,11 +24,11 @@ This is the final assembly task. It cannot be completed without all previous wor
 
 Do not attempt to create placeholder content, substitute missing sections, or assemble an incomplete report. The report requires ALL inputs to be publication-ready.
 
-**Output**: Comprehensive Equity Research Report (.docx)
-- Length: 30-50 pages (MINIMUM 30)
-- Word count: 10,000-15,000 words (MINIMUM 10,000)
-- Charts: 25-35 embedded images
-- Tables: 12-20 comprehensive tables
+**Output**: Comprehensive Equity Research Report (`.md`)
+- Word count: 10,000-15,000 words (MINIMUM 10,000 — equivalent to 30-50 paginated pages)
+- Charts: 25-35 image references via `![caption](path/to/chart.png)`
+- Tables: 12-20 comprehensive markdown tables
+- Saved at `reports/company/<Slug>/<Slug>_Initiation_Report_<Date>.md` so it renders in the Claude Reports viewer alongside `company-research`, `earnings-analysis`, and `sec-report-summary` outputs.
 
 ---
 
@@ -463,38 +463,33 @@ Valuation Implications:
 - Average 1 chart per page minimum (30-50 pages = 25-35+ charts)
 - Tables should break up large text blocks
 
-**CRITICAL PRINCIPLE 2**: Use Claude's DOCX and XLSX skills to programmatically create the report.
+**CRITICAL PRINCIPLE 2**: Write the report directly as markdown with the Write/Edit tools.
 
-**REQUIRED TOOLS** (Claude has built-in skills for these):
-- **DOCX skill** - To create and manipulate Word documents
-  - Read Task 1 .md file → Convert to Word formatting
-  - Insert images from Task 4 chart files
-  - Create tables
-  - Format text, headers, footers, page numbers
-  - Add hyperlinks
-- **XLSX skill** - To read data from Excel files
+**REQUIRED TOOLS**:
+- **Write / Edit tools** — Author the final `.md` directly. No DOCX skill, no python-docx, no intermediate Word document.
+- **XLSX skill** — Read data from Excel files
   - Extract tables from Task 2 financial model
   - Read Task 3 valuation tabs
   - Pull historical financials from Task 1
-- **Direct file operations** - Work with actual files
+- **Read tool** — Open .md and .png inputs
   - Read: `reports/company/<Slug>/<Slug>_Research_Document_[Date].md` (English) or `reports/company/<Slug>/<Slug>_公司研究_[Date].md` (Chinese — produced by the `/company-research` skill)
-  - Read: `[Company]_Financial_Model_[Date].xlsx`
-  - Read: `chart_01.png`, `chart_02.png`, etc.
-  - Write: `[Company]_Initiation_Report_[Date].docx`
+  - Read: `[Company]_Financial_Model_[Date].xlsx` (via XLSX skill)
+  - Reference (don't read): `charts/chart_01.png`, `charts/chart_02.png`, etc. — these are linked from the .md, not embedded.
+- **Write tool** — Output: `reports/company/<Slug>/<Slug>_Initiation_Report_<Date>.md`
 
-**DO NOT**: Manually copy/paste or describe what should be done
-**DO**: Use Claude's DOCX and XLSX skills to open files, extract data, and create the DOCX report
+**DO NOT**: Manually copy/paste or describe what should be done. Do NOT use the DOCX skill — the output is a single markdown file.
+**DO**: Use Read/XLSX to ingest data, then Write/Edit to author the `.md` report.
 
 **Content Reuse Strategy**:
-- **Task 1 content (40-50% of report)**: Read .md file → Convert to Word format → Add charts
-- **Task 2/3 data (30-40% of report)**: Read .xlsx file → Extract tables → Write interpretation
+- **Task 1 content (40-50% of report)**: Read .md file → Copy sections into the report → Insert chart references
+- **Task 2/3 data (30-40% of report)**: Read .xlsx file → Extract tables as markdown pipe tables → Write interpretation
 - **Original writing (10-20% of report)**: Investment thesis, projection assumptions, scenario analysis
 
 **This approach**:
 - Maximizes efficiency (no rewriting 6-8K words that are already good)
 - Maintains quality (Task 1 content is substantive, professional analysis)
 - Focuses effort on value-add (quantitative interpretation and investment thesis)
-- Uses actual files programmatically (not manual work)
+- Produces a file that renders in the Claude Reports viewer and version-controls cleanly in git (line-level diffs, no binary churn)
 
 ---
 
@@ -515,21 +510,21 @@ Use Claude's file operations to check:
 
 Before proceeding, extract all chart files from the Task 4 zip:
 - Locate `[Company]_Charts_[Date].zip`
-- Extract all contents to a working directory (e.g., `task4_charts/`)
+- Extract all contents into `reports/company/<Slug>/charts/` so the .md's relative `![](charts/chart_XX.png)` references resolve
 - Verify 25-35 PNG files were extracted
 - Verify chart_index.txt is present
 
 **Expected folder structure after extraction:**
 ```
-[Company]_Report_Working/
-├── reports/company/<Slug>/<Slug>_Research_Document_[Date].md  (from /company-research)
+reports/company/<Slug>/
+├── <Slug>_Research_Document_[Date].md  (from /company-research — Task 1)
 ├── [Company]_Historical_Financials_[Date].xlsx
-├── [Company]_Financial_Model_[Date].xlsx (includes Task 3 valuation tabs)
+├── [Company]_Financial_Model_[Date].xlsx (Task 2 + Task 3 tabs)
 │   ├── [Task 2 tabs: Revenue Model, Income Statement, Scenarios, etc.]
 │   └── [Task 3 tabs: DCF, Sensitivity, Comps, Valuation Summary]
-├── [Company]_Valuation_Analysis_[Date].md
-├── [Company]_Charts_[Date].zip
-├── task4_charts/ (extracted from zip)
+├── [Company]_Valuation_Analysis_[Date].md  (Task 3)
+├── [Company]_Charts_[Date].zip               (Task 4 deliverable, kept for archival)
+├── charts/                                   (extracted from zip — referenced from the .md)
 │   ├── chart_01_stock_price.png
 │   ├── chart_02_revenue_growth.png
 │   ├── chart_03_revenue_by_product.png ⭐
@@ -538,8 +533,11 @@ Before proceeding, extract all chart files from the Task 4 zip:
 │   ├── chart_28_dcf_sensitivity.png ⭐
 │   ├── chart_32_valuation_football_field.png ⭐
 │   └── chart_index.txt
-└── sources_and_urls.txt
+├── sources_and_urls.txt
+└── <Slug>_Initiation_Report_<Date>.md       ← Task 5 output (this file)
 ```
+
+**Note**: Chart references in the .md use the relative path `charts/chart_XX.png`. Keep the `charts/` folder co-located with the .md so the links resolve when viewing in Claude Reports or any markdown renderer.
 
 **Open and inspect files using Claude skills:**
 
@@ -720,9 +718,9 @@ These sections interpret the financial model.
 **CRITICAL INSTRUCTION**: Use Task 1 research document almost verbatim. DO NOT rewrite.
 
 **The company research from Task 1 (6-8K words) is already professional, substantive analysis. Objective:**
-1. **Reformat for Word** - Convert markdown to DOCX formatting
-2. **Insert charts inline** - Add relevant charts from Task 4 throughout the text
-3. **Minor style adjustments** - Ensure consistent formatting with rest of report
+1. **Copy markdown verbatim** — Task 1 is already in markdown; no format conversion needed
+2. **Insert chart references inline** — Add `![caption](charts/chart_XX.png)` references from Task 4 throughout the text
+3. **Minor style adjustments** — Ensure consistent heading levels with rest of report
 
 **Extract these sections from Task 1 research document:**
 - Company description (800-1,200 words) → **Use verbatim, insert company overview charts**
@@ -741,247 +739,233 @@ These sections interpret the financial model.
 - Place charts immediately after the paragraph that discusses the topic
 - **Result**: Dense, visually rich pages (60-80% coverage)
 
-### Step 6: Assemble DOCX Report
+### Step 6: Assemble Markdown Report
 
-**CRITICAL**: Create actual DOCX file, NOT markdown.
+**CRITICAL**: Output is a single `.md` file. Use Write/Edit tools — NOT the DOCX skill.
 
 **Assembly Order (Most Efficient):**
 
-#### Phase A: Create Structure & Add Page 1
-1. Create DOCX document
-2. Set up professional styling (fonts, headers, footers)
-3. Create Page 1 - Investment Summary (write this LAST after all analysis complete)
-4. Add Table of Contents placeholder
+#### Phase A: Create Skeleton & Reserve Page 1 Section
+1. Create the .md file at `reports/company/<Slug>/<Slug>_Initiation_Report_<Date>.md`
+2. Write the top-of-document header block (title, date, analyst, ticker)
+3. Reserve a placeholder for the Investment Summary section — fill in last after all analysis is complete
+4. Add a top-level Table of Contents (markdown anchors auto-generate in renderers)
 
-#### Phase B: Copy Task 1 Content + Insert Charts
+#### Phase B: Copy Task 1 Content + Insert Chart References
 **This is 40-50% of the report - mostly copy/paste + chart insertion**
 
-Use Claude's DOCX skill to:
-
-1. **Initialize new DOCX document**
-   - Create new Word document
-   - Set professional styling (fonts, margins)
+1. **Open the working .md file with Edit/Write**
 
 2. **Read Task 1 markdown file**
    - Use Read tool: `reports/company/<Slug>/<Slug>_Research_Document_[Date].md` (English) or `reports/company/<Slug>/<Slug>_公司研究_[Date].md` (Chinese — produced by the `/company-research` skill)
-   - Identify sections by markdown headers (## Section Title)
+   - Identify sections by markdown headers (`## Section Title`)
 
-3. **Extract and convert each section from Task 1 to Word format:**
+3. **Copy each section verbatim into the report, inserting chart references:**
+
+Task 1 is already markdown — no format conversion needed. Just copy section bodies and add `![caption](charts/chart_XX.png)` lines at the documented spots. All Task 1 inline citations (`[label](url)`) carry through unchanged.
 
 **SECTION 1: Investment Thesis & Risks**
-- Add heading: 'Investment Thesis & Risks' (level 1)
-- Extract 'Risk Assessment' section from Task 1 markdown
-- Convert markdown formatting to Word formatting (remove ##, **, etc.)
-- Add paragraphs to Word document (split by blank lines)
-- Add new 'Investment Thesis' heading (level 2)
+- Add `## Investment Thesis & Risks` heading
+- Copy 'Risk Assessment' section body from Task 1 verbatim (already markdown — no conversion)
+- Add `### Investment Thesis` subheading
 - Write new investment thesis content (800-1,200 words based on all analysis)
 
-**SECTION 2: Company 101 (Pages 6-17)**
-Copy each section from Task 1 verbatim with formatting conversion:
+**SECTION 2: Company 101**
+Copy each section from Task 1 verbatim — Task 1 already uses the same markdown syntax (headings, bullets, bold, inline links) the final report uses.
 
 - **Company Overview**
-  - Add heading: 'Company Overview' (level 1)
-  - Extract 'Company Overview' section from Task 1
-  - Convert to Word paragraphs
-  - Insert chart: `task4_charts/chart_05_company_overview.png` (6 inches wide)
+  - Add `## Company Overview` heading
+  - Copy 'Company Overview' section body from Task 1
+  - Insert chart reference: `![图 5: 公司业务概览](charts/chart_05_company_overview.png)`
 
 - **Company History**
-  - Add heading: 'Company History' (level 1)
-  - Extract 'Company History' section from Task 1
-  - Convert to Word paragraphs
-  - Insert chart: `task4_charts/chart_06_company_timeline.png` (6 inches wide)
+  - Add `## Company History` heading
+  - Copy 'Company History' section body from Task 1
+  - Insert: `![图 6: 公司发展历程](charts/chart_06_company_timeline.png)`
 
 - **Management Team**
-  - Add heading: 'Management Team' (level 1)
-  - Extract 'Management Team' section from Task 1
-  - Convert to Word paragraphs
-  - Insert chart: `task4_charts/chart_07_org_structure.png` (5 inches wide)
+  - Add `## Management Team` heading
+  - Copy 'Management Team' section body from Task 1
+  - Insert: `![图 7: 管理团队组织结构](charts/chart_07_org_structure.png)`
 
 - **Products & Services**
-  - Add heading: 'Products & Services' (level 1)
-  - Extract 'Products & Services' section from Task 1
-  - Add first paragraph
-  - Insert chart: `task4_charts/chart_08_product_portfolio.png` (6 inches wide)
-  - Add remaining paragraphs
+  - Add `## Products & Services` heading
+  - Copy first paragraph from Task 1
+  - Insert: `![图 8: 产品组合](charts/chart_08_product_portfolio.png)`
+  - Copy remaining paragraphs
 
 - **Customers & Go-to-Market**
-  - Add heading: 'Customers & Go-to-Market' (level 1)
-  - Extract section from Task 1
-  - Convert to Word paragraphs
-  - Insert chart: `task4_charts/chart_09_customer_segments.png` (6 inches wide)
+  - Add `## Customers & Go-to-Market` heading
+  - Copy section from Task 1
+  - Insert: `![图 9: 客户细分](charts/chart_09_customer_segments.png)`
 
 - **Industry Overview**
-  - Add heading: 'Industry Overview' (level 1)
-  - Extract section from Task 1
-  - Add first paragraph
-  - Insert chart: `task4_charts/chart_10_market_size_evolution.png` (6 inches wide)
-  - Add remaining paragraphs
-  - Insert chart: `task4_charts/chart_11_industry_trends.png` (6 inches wide)
+  - Add `## Industry Overview` heading
+  - Copy first paragraph from Task 1
+  - Insert: `![图 10: 市场规模演变](charts/chart_10_market_size_evolution.png)`
+  - Copy remaining paragraphs
+  - Insert: `![图 11: 行业趋势](charts/chart_11_industry_trends.png)`
 
 - **Competitive Landscape**
-  - Add heading: 'Competitive Landscape' (level 1)
-  - Extract section from Task 1
-  - Add first paragraph
-  - Insert chart: `task4_charts/chart_16_competitive_positioning.png` (6 inches wide)
-  - Add remaining paragraphs
-  - Insert chart: `task4_charts/chart_17_market_share.png` (5 inches wide)
+  - Add `## Competitive Landscape` heading
+  - Copy first paragraph from Task 1
+  - Insert: `![图 16: 竞争格局定位](charts/chart_16_competitive_positioning.png)`
+  - Copy remaining paragraphs
+  - Insert: `![图 17: 市场份额](charts/chart_17_market_share.png)`
 
 - **Market Opportunity**
-  - Add heading: 'Market Opportunity' (level 1)
-  - Extract 'Market Opportunity' section from Task 1
-  - Convert to Word paragraphs
-  - Insert chart: `task4_charts/chart_15_TAM_sizing.png` (6 inches wide)
+  - Add `## Market Opportunity` heading
+  - Copy 'Market Opportunity' section body from Task 1
+  - Insert: `![图 15: TAM 规模](charts/chart_15_TAM_sizing.png)`
 
-**Result after Phase B**: Pages 6-17 complete (~12 pages, 6-8K words, 8-12 charts embedded)
+**Result after Phase B**: Company 101 sections complete (~6-8K words, 8-12 chart references inserted)
 
-**Key Point**: Use DOCX skill to READ from Task 1's .md file and INSERT actual image files. No manual copy/paste required.
+**Key Point**: Task 1 already uses the target markdown format. Phase B is mostly file concatenation plus inserting one-line image references. No DOCX skill, no formatting conversion.
 
 #### Phase C: Add Financial Analysis with Data from Task 2
 **This requires NEW WRITING interpreting quantitative data**
 
-Use Claude's DOCX and XLSX skills to:
+Use the XLSX skill to read data, then Write/Edit to author the markdown:
 
-**SECTION 3: Financial Analysis (Pages 18-30)**
+**SECTION 3: Financial Analysis**
 
-1. **Add section heading: 'Financial Analysis' (level 1)**
+1. **Add `## Financial Analysis` heading**
 
 2. **Historical Financial Analysis (1,200-1,800 words) - NEW WRITING**
-   - Add heading: 'Historical Performance' (level 2)
+   - Add `### Historical Performance` subheading
    - Use XLSX skill to open `[Company]_Financial_Model_[Date].xlsx`
    - Read `Income Statement` tab to extract historical data
    - Read `Revenue Model` tab to extract revenue trends
    - Calculate key metrics (e.g., Revenue CAGR from 2020-2024)
    - Write analytical paragraphs interpreting the trends (1,200-1,800 words)
    - Lead with specific numbers: "Revenue grew from $XXM in 2020 to $XXM in 2024, representing a XX% CAGR. This growth was driven by..."
-   - Insert chart: `task4_charts/chart_02_revenue_growth_trajectory.png` (6 inches wide)
+   - Insert: `![图 2: 收入增长轨迹](charts/chart_02_revenue_growth_trajectory.png)`
 
-3. **Create Table: Full Income Statement**
-   - Add heading: 'Historical Income Statement' (level 3)
-   - Use XLSX skill to extract entire Income Statement tab (40-50 rows)
-   - Create Word table with all columns (historical years 2020A-2024A + projected 2025E-2029E)
+3. **Create markdown table: Full Income Statement**
+   - Add `#### Historical Income Statement` subheading
+   - Use XLSX skill to extract the entire Income Statement tab (40-50 rows)
+   - Render as a markdown pipe table with columns: line item + historical years (2020A-2024A) + projected (2025E-2029E)
    - Include all line items: Revenue, COGS, Gross Profit, Operating Expenses, EBITDA, Net Income, etc.
+   - Add source line directly below the table: `*Source: [Company Financial Model](path-or-url), <date>*`
 
 4. **Add mandatory charts and tables for Revenue breakdown:**
-   - Insert chart: `task4_charts/chart_03_revenue_by_product.png` (6.5 inches wide) ⭐ MANDATORY
-   - **Create Table: Revenue by Product (20-30 rows)**
+   - Insert: `![图 3: 按产品收入(堆叠面积)](charts/chart_03_revenue_by_product.png)` ⭐ MANDATORY
+   - **Markdown table: Revenue by Product (20-30 rows)**
      - Use XLSX skill to extract from Revenue Model tab (product section, typically rows 5-35)
-     - Create Word table showing each product category with historical and projected years
-     - Include columns: Product name, historical years, projected years, % of Total, YoY Growth
+     - Pipe table with: Product name | historical years | projected years | % of Total | YoY Growth
 
-   - Insert chart: `task4_charts/chart_04_revenue_by_geography.png` (6.5 inches wide) ⭐ MANDATORY
-   - **Create Table: Revenue by Geography (15-20 rows)**
+   - Insert: `![图 4: 按地区收入(堆叠柱状)](charts/chart_04_revenue_by_geography.png)` ⭐ MANDATORY
+   - **Markdown table: Revenue by Geography (15-20 rows)**
      - Use XLSX skill to extract from Revenue Model tab (geography section, typically rows 40-60)
-     - Create Word table showing each geographic region with historical and projected years
+     - Pipe table with: Region | historical years | projected years | % of Total
 
 5. **Add additional financial charts:**
-   - Insert chart: `task4_charts/chart_10_gross_margin_evolution.png` (6 inches wide)
-   - Insert chart: `task4_charts/chart_11_ebitda_margin_progression.png` (6 inches wide)
-   - Insert chart: `task4_charts/chart_12_free_cash_flow_trend.png` (6 inches wide)
+   - `![图 10: 毛利率演变](charts/chart_10_gross_margin_evolution.png)`
+   - `![图 11: EBITDA 利润率进展](charts/chart_11_ebitda_margin_progression.png)`
+   - `![图 12: 自由现金流趋势](charts/chart_12_free_cash_flow_trend.png)`
 
 6. **Projection Assumptions (2,000-3,000 words) ⭐ CRITICAL - NEW WRITING**
-   - Add heading: 'Projection Assumptions' (level 2)
+   - Add `### Projection Assumptions` subheading
    - Use XLSX skill to read Scenarios tab to inform assumptions
    - Use XLSX skill to read Revenue Model tab for specific product/geography projections
-   - Add heading: 'Revenue Assumptions by Product' (level 3)
+   - Add `#### Revenue Assumptions by Product` subheading
    - Write detailed product-by-product assumptions (8-12 points per major product)
    - Write detailed region-by-region assumptions (6-8 points per major region)
    - Include margin, opex, capex, working capital assumptions
    - **Total: 2,000-3,000 words of specific, quantified assumptions**
 
 7. **Scenario Analysis (1,500-2,000 words) ⭐ CRITICAL - NEW WRITING**
-   - Add heading: 'Scenario Analysis' (level 2)
+   - Add `### Scenario Analysis` subheading
    - Use XLSX skill to extract scenario data from Scenarios tab
    - Extract Bull/Base/Bear parameters for key metrics (2029E Revenue, EBITDA Margin, etc.)
    - Write Bull Case (500-700 words): specific parameters, catalysts, probability, valuation
    - Write Base Case (300-500 words): most likely scenario with rationale
    - Write Bear Case (500-700 words): downside triggers, parameters, probability, valuation
    - Write Scenario Comparison (200-300 words)
-   - Insert chart: `task4_charts/chart_14_scenario_comparison.png` (6 inches wide)
-   - **Create Table: Scenario Comparison**
+   - Insert: `![图 14: 情景对比](charts/chart_14_scenario_comparison.png)`
+   - **Markdown table: Scenario Comparison**
      - Use XLSX skill to extract from Scenarios tab
-     - Create Word table with Bull/Base/Bear columns and key metrics as rows
+     - Pipe table with Bull/Base/Bear columns and key metrics as rows
 
 8. **Growth Drivers (800-1,200 words) - NEW WRITING**
-   - Add heading: 'Key Growth Drivers' (level 2)
+   - Add `### Key Growth Drivers` subheading
    - Write 3-5 key drivers with specific quantified opportunities
    - Include timelines and milestones
    - Reference specific data from financial model
 
-**Result after Phase C**: Pages 18-30 complete (~13 pages, 5-7K words, 7-8 charts, 6-8 tables)
+**Result after Phase C**: Financial Analysis section complete (~5-7K words, 7-8 chart references, 6-8 markdown tables)
 
-**Key Point**: Use XLSX skill to READ data from Task 2's Excel file, use the data to inform NEW analytical writing, and use DOCX skill to create Word tables from Excel data.
+**Key Point**: Use XLSX skill to READ data from Task 2's Excel file, use the data to inform NEW analytical writing, and render extracted tables as markdown pipe tables in the `.md` file.
 
 #### Phase D: Add Valuation Analysis from Task 3
 **Mix of copying Task 3 analysis + inserting data from Excel**
 
-Use Claude's DOCX and XLSX skills to:
+Use Read for Task 3 markdown, XLSX skill for Excel tabs, Write/Edit to author the report .md:
 
-**SECTION 4: Valuation Analysis (Pages 31-40)**
+**SECTION 4: Valuation Analysis**
 
-1. **Add section heading: 'Valuation Analysis' (level 1)**
+1. **Add `## Valuation Analysis` heading**
 
 2. **Read Task 3 markdown file**
    - Use Read tool: `[Company]_Valuation_Analysis_[Date].md`
    - Identify sections by markdown headers: DCF Analysis, Comparable Companies, Price Target
 
 3. **DCF Analysis section**
-   - Add heading: 'DCF Analysis' (level 2)
-   - Extract 'DCF Analysis' section from Task 3 markdown
-   - Convert markdown to Word paragraphs
-   - Insert chart: `task4_charts/chart_28_dcf_sensitivity_heatmap.png` (6 inches wide) ⭐ MANDATORY
+   - Add `### DCF Analysis` subheading
+   - Copy 'DCF Analysis' section body from Task 3 verbatim (already markdown)
+   - Insert: `![图 28: DCF 敏感性热图](charts/chart_28_dcf_sensitivity_heatmap.png)` ⭐ MANDATORY
 
-   - **Create Table: DCF Key Assumptions**
-     - Add heading: 'DCF Key Assumptions' (level 3)
+   - **Markdown table: DCF Key Assumptions**
+     - Add `#### DCF Key Assumptions` subheading
      - Use XLSX skill to open `[Company]_Financial_Model_[Date].xlsx`
      - Read DCF tab (columns A-C, first 20 rows: Assumption, Value, Source)
-     - Create Word table from extracted data
+     - Render as a markdown pipe table — keep the `Source` column
 
-   - **Create Table: DCF Sensitivity Matrix**
+   - **Markdown table: DCF Sensitivity Matrix**
      - Use XLSX skill to read Sensitivity Analysis tab
-     - Extract full sensitivity matrix (WACC values as rows, terminal growth as columns)
-     - Create Word table showing valuation at different parameter combinations
+     - Extract full sensitivity matrix (WACC values as row labels, terminal growth as column labels)
+     - Render as a markdown pipe table showing valuation at different parameter combinations
 
-   - Insert chart: `task4_charts/chart_29_dcf_waterfall.png` (6 inches wide)
+   - Insert: `![图 29: DCF 瀑布图](charts/chart_29_dcf_waterfall.png)`
 
 4. **Comparable Companies section**
-   - Add heading: 'Comparable Companies Analysis' (level 2)
-   - Extract 'Comparable Companies' section from Task 3 markdown
-   - Convert markdown to Word paragraphs
+   - Add `### Comparable Companies Analysis` subheading
+   - Copy 'Comparable Companies' section body from Task 3 verbatim (already markdown)
 
-   - **Create Table: Comparable Companies ⭐ CRITICAL**
-     - Add heading: 'Comparable Companies' (level 3)
+   - **Markdown table: Comparable Companies ⭐ CRITICAL**
+     - Add `#### Comparable Companies` subheading
      - Use XLSX skill to read Comparable Companies tab
      - Extract full table including:
        - 5-10 peer companies plus target company
        - Statistical summary rows (Maximum, 75th Percentile, Median, 25th Percentile, Minimum)
-     - Create Word table with all columns: Ticker, Market Cap, EV/Revenue (LTM & NTM), EV/EBITDA (LTM & NTM), P/E (NTM), Revenue Growth, EBITDA Margin
-     - **Verify statistical summary is included in table**
+     - Render as a markdown pipe table with all columns: Ticker, Market Cap, EV/Revenue (LTM & NTM), EV/EBITDA (LTM & NTM), P/E (NTM), Revenue Growth, EBITDA Margin
+     - **Verify statistical summary rows are present**
+     - Use bold (`**Median**`) on summary-row labels — markdown doesn't support row shading, so bold is the visual hierarchy you have
 
-   - Insert chart: `task4_charts/chart_31_peer_multiples_comparison.png` (6 inches wide)
+   - Insert: `![图 31: 同业估值倍数对比](charts/chart_31_peer_multiples_comparison.png)`
 
 5. **Valuation Summary**
-   - Insert chart: `task4_charts/chart_32_valuation_football_field.png` (6.5 inches wide) ⭐ MANDATORY
+   - Insert: `![图 32: 估值橄榄球场图](charts/chart_32_valuation_football_field.png)` ⭐ MANDATORY
 
-   - **Create Table: Valuation Summary**
+   - **Markdown table: Valuation Summary**
      - Use XLSX skill to read Valuation Summary tab
      - Extract valuation methods (DCF, Comps, Precedent Transactions if applicable)
-     - Create Word table showing: Method, Low Case, Base Case, High Case, Weight, Weighted Value
+     - Render as a markdown pipe table: Method | Low Case | Base Case | High Case | Weight | Weighted Value
 
 6. **Price Target & Recommendation**
-   - Add heading: 'Price Target and Recommendation' (level 2)
-   - Extract 'Price Target' section from Task 3 markdown
-   - Convert markdown to Word paragraphs
+   - Add `### Price Target and Recommendation` subheading
+   - Copy 'Price Target' section body from Task 3 verbatim
    - Should include: Final recommendation (BUY/HOLD/SELL), price target with % upside, key catalysts, key risks
 
-**Result after Phase D**: Pages 31-40 complete (~10 pages, 3-4K words, 5-6 charts, 4-5 tables)
+**Result after Phase D**: Valuation section complete (~3-4K words, 5-6 chart references, 4-5 markdown tables)
 
-**Key Point**: Use Read tool for Task 3's .md file to get written analysis, and use XLSX skill to READ from Task 3's Excel tabs (which were added to Task 2's model file) to create quantitative tables.
+**Key Point**: Use Read tool for Task 3's .md file to get written analysis (copy verbatim — it's already markdown), and use XLSX skill to READ from Task 3's Excel tabs (which were added to Task 2's model file) to create markdown pipe tables.
 
 #### Phase E: Add Appendices & Finalize
 
-Use Claude's DOCX skill to:
+Use Write/Edit to append the appendix sections to the .md file:
 
-**SECTION 5: Appendices (Pages 41-50)**
+**SECTION 5: Appendices**
 
 1. **Sources & References ⭐⭐⭐ MANDATORY — DO NOT SKIP**
 
@@ -995,127 +979,128 @@ Use Claude's DOCX skill to:
       - Open `[Company]_Financial_Model_[Date].xlsx` — scan the `Source` column in the DCF tab and Comparable Companies tab for any sources not already captured.
       - De-duplicate.
 
-   b. **Write the appendix using the DOCX skill:**
+   b. **Write the appendix in the .md file:**
 
-   ```
-   Add heading: 'Sources & References' (level 1)
+   ```markdown
+   ## Sources & References
 
-   Add heading: 'SEC Filings' (level 2)
-     - Insert hyperlinked entry: "[10-K FY2024](https://www.sec.gov/...) — 2025-02-20 — primary source for FY2024 financials, segment breakdown, risk factors"
-     - Insert hyperlinked entry: "[DEF 14A 2024](https://www.sec.gov/...) — 2024-04-15 — exec compensation, board composition"
-     - [more entries]
+   ### SEC Filings
+   - [10-K FY2024](https://www.sec.gov/...) — 2025-02-20 — primary source for FY2024 financials, segment breakdown, risk factors
+   - [DEF 14A 2024](https://www.sec.gov/...) — 2024-04-15 — exec compensation, board composition
+   - …more entries
 
-   Add heading: 'Earnings Materials' (level 2)
-     - Insert hyperlinked entry: "[Q4 2024 Earnings Call transcript](https://seekingalpha.com/...) — 2025-02-15 — guidance, EU expansion plan"
-     - Insert hyperlinked entry: "[Q4 2024 Earnings Presentation](https://ir.company.com/...) — 2025-02-15 — segment results, KPIs"
-     - [more entries]
+   ### Earnings Materials
+   - [Q4 2024 Earnings Call transcript](https://seekingalpha.com/...) — 2025-02-15 — guidance, EU expansion plan
+   - [Q4 2024 Earnings Presentation](https://ir.company.com/...) — 2025-02-15 — segment results, KPIs
+   - …more entries
 
-   Add heading: 'Company Materials' (level 2)
-     - Insert hyperlinked entry: "[Investor Day 2024 deck](https://ir.company.com/...) — 2024-09-10 — 5-year strategy, TAM framing"
-     - [more entries]
+   ### Company Materials
+   - [Investor Day 2024 deck](https://ir.company.com/...) — 2024-09-10 — 5-year strategy, TAM framing
+   - …more entries
 
-   Add heading: 'Industry & Market Research' (level 2)
-     - Insert hyperlinked entry: "[Gartner Magic Quadrant for X](https://...) — 2024-08-22 — competitive positioning (subscription required)"
-     - Insert hyperlinked entry: "[McKinsey Global LiDAR Market Report](https://...) — 2024-Q3 — TAM sizing, ASP trends"
-     - [more entries]
+   ### Industry & Market Research
+   - [Gartner Magic Quadrant for X](https://...) — 2024-08-22 — competitive positioning (subscription required)
+   - [McKinsey Global LiDAR Market Report](https://...) — 2024-Q3 — TAM sizing, ASP trends
+   - …more entries
 
-   Add heading: 'News & Trade Publications' (level 2)
-     - Insert hyperlinked entry: "[WSJ — '[Headline]'](https://www.wsj.com/...) — 2025-01-12 — context for product launch"
-     - [more entries]
+   ### News & Trade Publications
+   - [WSJ — "[Headline]"](https://www.wsj.com/...) — 2025-01-12 — context for product launch
+   - …more entries
 
-   Add heading: 'Data Providers' (level 2)
-     - Insert hyperlinked entry: "[Yahoo Finance — historical price data](https://finance.yahoo.com/quote/TICKER/history) — accessed 2025-XX-XX"
-     - Entry: "FactSet — peer trading multiples as of [date] (subscription required)"
-     - [more entries]
+   ### Data Providers
+   - [Yahoo Finance — historical price data](https://finance.yahoo.com/quote/TICKER/history) — accessed 2025-XX-XX
+   - FactSet — peer trading multiples as of [date] (subscription required)
+   - …more entries
    ```
 
    **Hard requirements:**
    - **Minimum 20 distinct entries** across all six categories combined.
-   - **Every entry that has a public URL must be inserted as a clickable hyperlink**, not plain text. Use the DOCX skill's hyperlink API.
+   - **Every entry that has a public URL must be a markdown link** `[label](url)`, not a bare URL or plain text.
    - **Every entry has a date** in YYYY-MM-DD format (or YYYY-Qx for quarterly reports).
    - **Every entry has a 1-line description** of what it sourced in the report body.
    - Subscription-only sources are acceptable but must be labelled "(subscription required)".
 
    **Verify before moving on:**
-   - [ ] Sources & References appendix exists with level-1 heading
+   - [ ] Sources & References appendix exists as a `## Sources & References` heading
    - [ ] ≥20 entries total
-   - [ ] All six category headings present (even if some have only 1-2 entries)
-   - [ ] Test 3-5 random hyperlinks by Ctrl+Click — they open the correct page
+   - [ ] All six category subheadings present (even if some have only 1-2 entries)
+   - [ ] Test 3-5 random links by clicking them in the Claude Reports viewer — they open the correct page
 
 2. **Additional Tables**
-   - Add heading: 'Additional Tables' (level 1)
-   - Add extended financial projections
+   - Add `## Additional Tables` heading
+   - Add extended financial projections (markdown pipe tables)
    - Add detailed assumptions tables
    - Add any supporting tables that didn't fit in main sections
 
-#### Phase F: Write Page 1 Investment Summary
-**NOW write Page 1 - after all analysis complete**
-- INITIATING COVERAGE header
-- Rating box
-- 3-4 detailed bullets synthesizing entire report
-- Financial summary table
-- Stock price chart
+#### Phase F: Write the Investment Summary Section
+**NOW fill in the Investment Summary placeholder reserved in Phase A — after all analysis complete**
+- INITIATING COVERAGE label (e.g. `**INITIATING COVERAGE — BUY**` at the top)
+- Rating block (rating, price target, current price, upside %, market cap)
+- 3-4 detailed bullets synthesizing entire report (use `- ` bullets, each with a bolded header line and 3-5 sentences)
+- Financial summary markdown table
+- Insert: `![图 1: 股价走势](charts/chart_01_stock_price.png)`
 
-#### Phase G: Add Table of Contents & Page Numbers
-- Auto-generate TOC
-- Add page numbers to all pages
+#### Phase G: Verify Anchors & TOC
+- Markdown renderers (including Claude Reports) auto-generate the TOC from `##`/`###` headings — no manual page numbers needed
+- If you wrote a manual TOC at the top, verify the anchor slugs match each heading
+- Confirm chart paths resolve relative to the .md file location
 
 **Key formatting requirements:**
-- Professional fonts (Calibri, Arial, or similar)
-- Proper headers and footers with page numbers
-- Section breaks between major sections
-- Embed all 25-35 charts inline throughout text
-- Insert all 12-20 tables inline with text
-- **All URLs as clickable hyperlinks** (NOT plain text)
-- **60-80% page density** - Every page has text AND visuals
+- Use `#`, `##`, `###` headings consistently — the renderer handles font/sizing
+- Section dividers via `---` between major sections (optional, for readability)
+- All 25-35 charts referenced via `![caption](charts/chart_XX.png)` throughout the text
+- All 12-20 tables as markdown pipe tables inline with text
+- **All URLs as markdown links** `[label](url)` (NOT bare URLs)
+- **Visual density** - Every "page-worth" of text (~250 words) followed by a chart, table, or list
 
 **Visual Density Strategy:**
 ```
-Good page layout example:
-┌─────────────────────────────┐
-│ Section Header              │
-│ Text paragraph (200 words)  │
-│ [Chart embedded]            │
-│ Text paragraph (200 words)  │
-│ [Table embedded]            │
-│ Text paragraph (200 words)  │
-│ [Chart embedded]            │
-└─────────────────────────────┘
+Good section layout example:
+## Section Header
+Text paragraph (200 words) … ([source](url))
+![图 N: …](charts/chart_NN.png)
+Text paragraph (200 words) … ([source](url))
+| col | col | col |   ← markdown table
+| ... | ... | ... |
+*Source: [label](url), date*
+Text paragraph (200 words) … ([source](url))
+![图 N+1: …](charts/chart_NN+1.png)
 
 BAD - Avoid:
-- Full page with only one chart
-- Multiple pages of pure text
-- Charts grouped at end of sections
+- Long stretches of pure text with no visuals
+- Charts grouped at end of sections instead of inline
+- Markdown tables wider than ~10 columns (renderers wrap awkwardly — split into two tables)
 ```
 
-**Result**: 30-50 page report that is text-dense with illustrating images throughout
+**Result**: 30-50 page worth of content (10,000-15,000 words) that is text-dense with illustrating chart references throughout
 
 ---
 
 ## File Operations Summary
 
-**Throughout the entire assembly process, use Claude's DOCX and XLSX skills with actual file operations:**
+**Throughout the entire assembly process, use the Read tool, XLSX skill, and Write/Edit tools:**
 
 **Reading Input Files:**
 - ✓ Use Read tool: `reports/company/<Slug>/<Slug>_Research_Document_[Date].md` (English) or `reports/company/<Slug>/<Slug>_公司研究_[Date].md` (Chinese — produced by the `/company-research` skill) - Read Task 1 research
 - ✓ Use XLSX skill: Open `[Company]_Financial_Model_[Date].xlsx` and read tabs - Extract tables from Task 2/3
 - ✓ Use Read tool: `[Company]_Valuation_Analysis_[Date].md` - Read Task 3 analysis
-- ✓ Use DOCX skill: Insert images from `task4_charts/chart_XX.png` files
+- ✓ Reference (don't read): `charts/chart_XX.png` files — embedded in the .md via `![caption](charts/chart_XX.png)` relative paths
 
 **Writing Output File:**
-- ✓ Use DOCX skill: Create new Word document
-- ✓ Use DOCX skill: Add paragraphs (text from input .md files)
-- ✓ Use DOCX skill: Create tables (data from Excel files read via XLSX skill)
-- ✓ Use DOCX skill: Insert images (chart .png files)
-- ✓ Use DOCX skill: Save final file as `[Company]_Initiation_Report_[Date].docx`
+- ✓ Use Write tool to create the final `.md` file
+- ✓ Use Edit tool for subsequent edits to specific sections
+- ✓ Markdown paragraphs come straight from input .md files (Task 1, Task 3) — copy verbatim
+- ✓ Markdown pipe tables — rendered from data extracted via the XLSX skill
+- ✓ Chart image references via `![caption](charts/chart_XX.png)` syntax
+- ✓ Save final file as `reports/company/<Slug>/<Slug>_Initiation_Report_<Date>.md`
 
-**Do NOT manually copy/paste. Use Claude's built-in skills to:**
-1. Read from .md files (Task 1, Task 3) using Read tool
-2. Read from .xlsx files (Task 2 with Task 3 tabs) using XLSX skill
-3. Read from .png files (Task 4) as image files
-4. Write to .docx file (Task 5 output) using DOCX skill
+**Do NOT manually copy/paste between formats. Use:**
+1. Read tool to ingest .md files (Task 1, Task 3)
+2. XLSX skill to ingest .xlsx files (Task 2 with Task 3 tabs)
+3. Relative-path image references for .png files (Task 4) — no need to read them
+4. Write/Edit to author the final `.md` file (Task 5 output)
 
-This approach is efficient, reproducible, and ensures all data flows correctly from source files to final report.
+This approach is efficient, reproducible, version-controllable (git diffs work line-by-line), and produces a single file viewable in the Claude Reports viewer.
 
 ### Step 7: Quality Check
 
@@ -1174,17 +1159,20 @@ CITATIONS & HYPERLINKS ⭐⭐⭐ HARD FAIL IF MISSING:
 - [ ] Every figure has a source line directly under it (e.g. "Source: 10-K FY2024", "Source: FactSet, 2026-05-19")
 - [ ] Every table has a source line as its final row spanning all columns
 - [ ] Every substantive prose paragraph has an inline citation `(Source: <hyperlinked label>)` / `(来源: …)` at the end
-- [ ] **Body has ≥150 distinct inline `<w:hyperlink>` elements outside the appendix** (FAIL → STOP DELIVERY). To verify, unpack the DOCX (`python scripts/office/unpack.py …`) and run:
+- [ ] **Body has ≥150 distinct inline markdown links outside the appendix** (FAIL → STOP DELIVERY). To verify:
   ```bash
-  awk '/附录|Sources \& References/{exit} {print}' unpacked/word/document.xml | grep -c '<w:hyperlink'
+  # Count [label](url) occurrences in the body (everything before the appendix heading)
+  awk '/^##? (附录|Sources & References|Appendix)/{exit} {print}' \
+    "reports/company/<Slug>/<Slug>_Initiation_Report_<Date>.md" \
+    | grep -oE '\[[^]]+\]\([^)]+\)' | wc -l
   ```
   If the count is under 150, the report has been assembled but not adequately cited — walk the body and add citations to every uncited substantive paragraph.
 - [ ] **Every substantive paragraph (≥40 chars, not heading/list marker) carries a citation** — spot check by extracting paragraphs and checking each ends with `(来源: …)` or `(外部源: …)`. Zero unsourced substantive paragraphs allowed.
 - [ ] Every page-1 investment-summary bullet has an inline citation
 - [ ] Every thesis-pillar paragraph has an inline citation
 - [ ] Every figure caption (`图 N:` / `Figure N:`) has appended hyperlinked source labels — chart-baked PNG source lines don't count
-- [ ] Every peer comparison (Robosense / Ouster / Innoviz / Aeva / Luminar / Mobileye) cites that peer's specific Yahoo Finance rId, not a generic source
-- [ ] All URLs are clickable hyperlinks — open the DOCX, Ctrl+Click 5-10 random links, confirm they work
+- [ ] Every peer comparison (Robosense / Ouster / Innoviz / Aeva / Luminar / Mobileye) links to that peer's specific Yahoo Finance ticker URL, not a generic source
+- [ ] All URLs are markdown links (`[label](url)`, not bare URLs) — open the .md in the Claude Reports viewer, click 5-10 random links, confirm they work
 - [ ] **Sources & References appendix exists with level-1 heading** (FAIL → STOP DELIVERY)
 - [ ] **Sources & References appendix has ≥20 distinct entries** (FAIL → STOP DELIVERY)
 - [ ] Sources & References has all six category sub-headings (SEC Filings / Earnings Materials / Company Materials / Industry & Market Research / News & Trade Publications / Data Providers)
@@ -1211,13 +1199,11 @@ VISUAL DENSITY (CRITICAL):
 - [ ] 60-80% page density achieved across entire report
 
 FORMATTING:
-- [ ] No markdown syntax visible (no #, ##, **, etc.)
-- [ ] Professional fonts throughout
-- [ ] Headers and footers present
-- [ ] Page numbers present
-- [ ] Section breaks appropriate
-- [ ] Charts embedded (not just file paths)
-- [ ] Tables formatted professionally
+- [ ] Heading hierarchy uses `#`/`##`/`###` consistently (renderer handles font/size)
+- [ ] Section dividers via `---` between major sections where helpful
+- [ ] Chart references use `![caption](charts/chart_XX.png)` — the `charts/` folder is co-located with the .md
+- [ ] Markdown pipe tables render correctly (test in Claude Reports viewer — no broken pipes, no overly wide tables)
+- [ ] No raw HTML mixed in (stick to pure markdown so it renders cleanly everywhere)
 
 WRITING QUALITY:
 - [ ] Lead with numbers (not generic statements)
@@ -1295,50 +1281,50 @@ Many reports fail because Phase E ("Add Appendices & Finalize") gets rushed when
 
 **⚠️ THIRD-MOST COMMON MISTAKE: SOURCES ONLY IN THE APPENDIX, NOT INLINE**
 
-Readers of an institutional research report do not flip to a back-matter Sources page to verify each claim — they expect a clickable citation right next to the claim. The user's explicit trust standard: **"for each paragraph, I hope there is citation, otherwise I don't trust the paragraph."** A DOCX that has a 20-entry Sources & References appendix but zero hyperlinks in the body fails the "where's the source for *this* number" test on every paragraph.
+Readers of an institutional research report do not flip to a back-matter Sources page to verify each claim — they expect a clickable citation right next to the claim. The user's explicit trust standard: **"for each paragraph, I hope there is citation, otherwise I don't trust the paragraph."** A report that has a 20-entry Sources & References appendix but zero links in the body fails the "where's the source for *this* number" test on every paragraph.
 
-**The skill enforces paragraph-level citation coverage.** Body inline hyperlinks are counted separately from appendix hyperlinks. Delivery fails if the body has fewer than **150 distinct inline `<w:hyperlink>` elements** OR if any substantive paragraph (≥40 chars, not a heading/list marker) lacks a citation.
+**The skill enforces paragraph-level citation coverage.** Body inline links are counted separately from appendix links. Delivery fails if the body has fewer than **150 distinct inline markdown links** OR if any substantive paragraph (≥40 chars, not a heading/list marker) lacks a citation.
 
-**Embed citations while writing each phase, not as a retrofit.** As you add a paragraph in Phase B/C/D below, end every substantive sentence-ending claim with a clickable citation, re-using the rIds defined in the Phase E appendix:
+**Embed citations while writing each phase, not as a retrofit.** As you add a paragraph in Phase B/C/D below, end every substantive sentence-ending claim with an inline markdown link to the source URL listed in the Phase E appendix:
 
-- **Factual claim:** `(来源: [短标签](rId))` — e.g. `(来源: [FY2025 6-K](rId45))`.
-- **Paragraph mixing historical fact + forward-looking projection** (most thesis-pillar and growth-driver paragraphs): cite ONLY the external factual source(s). `(来源: [FY2025 6-K](rId45) | [Yole 新闻稿](rId70))`. **Do NOT add a "model estimate" trailer.** The analyst's own model is not a citable source — labeling it as one is functionally lying about provenance. The reader already understands forward years are analyst projections.
+- **Factual claim:** `([短标签](url))` — e.g. `([FY2025 6-K](https://www.sec.gov/Archives/edgar/data/1869058/...))`.
+- **Paragraph mixing historical fact + forward-looking projection** (most thesis-pillar and growth-driver paragraphs): cite ONLY the external factual source(s). `([FY2025 6-K](https://...) | [Yole 新闻稿](https://...))`. **Do NOT add a "model estimate" trailer.** The analyst's own model is not a citable source — labeling it as one is functionally lying about provenance. The reader already understands forward years are analyst projections.
 - **Pure forward-looking paragraph with no external anchor:** leave uncited rather than fabricate a source. If the claim is meaningful, find the baseline document the projection is built on (10-K segment data, latest earnings guidance, an industry forecast) and cite that. Standalone `(来源: 本报告模型估算)` / `(Source: our model)` is BANNED — the user's explicit rule is *"if model source, just remove it"*.
-- **Figure caption — external-data chart:** append `(来源: [Link 1] | [Link 2])` with 1-3 most relevant external sources from the per-chart mapping. Chart source lines baked into PNG images don't satisfy the click-to-verify test — the caption paragraph must carry the clickable links.
+- **Figure caption — external-data chart:** append `(外部源: [Link 1](url) | [Link 2](url))` with 1-3 most relevant external sources from the per-chart mapping. Chart source lines baked into PNG images don't satisfy the click-to-verify test — the caption line must carry the clickable links.
 - **Figure caption — financial-model-only chart** (DCF sensitivity heatmap, scenario comparison, valuation football field, etc.): **no citation suffix on the caption.** The chart title and the prose around it already make clear it's an analyst projection; appending `(来源: 财务模型)` would be the same lie. Leave the caption clean.
 
-Render in 8pt italic so citations don't visually disrupt the paragraph: framing text gray (`#666666`), hyperlinks blue (`#0563C1`, underlined).
+Use markdown italic for source-line de-emphasis: `*Source: [label](url), date*`. The renderer's default link color provides the visual hierarchy — no inline CSS needed.
 
 **Where citations are NOT optional (zero tolerance):**
-- Every page-1 investment-summary bullet (4 bullets × ≥1 citation each)
+- Every Investment Summary bullet at the top of the report (4 bullets × ≥1 citation each)
 - Every paragraph in the investment thesis pillars
 - Every financial-metric statement in Historical Performance and Projection Assumptions (revenue, margin, FCF, EPS, growth rate, etc.)
-- Every peer comparison (Robosense / Ouster / Innoviz / Aeva / Luminar / Mobileye / etc.) — uses peer's Yahoo Finance rId
+- Every peer comparison (Robosense / Ouster / Innoviz / Aeva / Luminar / Mobileye / etc.) — link to that peer's Yahoo Finance ticker page
 - Every risk paragraph in the Risk Assessment section
 - Every market-data point in Valuation Methodology (TTM multiple, peer median, terminal growth justification)
 - Every qualitative analysis paragraph (industry trend, competitive positioning, management assessment) — cite the 20-F, IR materials, or industry research that supports the framing
-- **Every figure caption** (`图 N:` / `Figure N:`) — append `(来源: …)` with hyperlinks **using the chart-specific source mapping** (see below)
-- **Every table** — final row has clickable source hyperlink, not plain text
+- **Every figure caption** (`图 N:` / `Figure N:`) — append `(外部源: …)` with markdown links **using the chart-specific source mapping** (see below)
+- **Every table** — source line directly under the table as `*Source: [label](url), date*`, not plain text
 
 **Chart caption citations require a per-chart source mapping — do NOT use a generic citation on every chart.**
 
-Walk the chart-generation script (`build_charts_zh.py` for Chinese, `build_charts.py` for English) and read its `source_line()` calls. Each call states what data the chart actually used. Build a `CHART_SOURCES = {chart_number: [(rId, label), …]}` dict from those calls, then in Phase D apply the chart-specific citation. Concrete patterns from the Hesai precedent:
+Walk the chart-generation script (`build_charts_zh.py` for Chinese, `build_charts.py` for English) and read its `source_line()` calls. Each call states what data the chart actually used. Build a `CHART_SOURCES = {chart_number: [(url, label), …]}` dict from those calls, then in Phase D apply the chart-specific citation. Concrete patterns from the Hesai precedent:
 
-- Stock-price chart → `[("rId65", "Yahoo HSAI 历史")]`
-- Company-disclosure chart (history, products, ownership, customer concentration) → `[("rId44", "FY2024 20-F")]` with section/item label (e.g. `FY2024 20-F 第 7 项` for stockholders, `FY2024 20-F 客户集中度` for top-customer table)
-- Operating-metric chart (revenue, margin, opex, FCF) → `[("rId44", "FY2024 20-F"), ("rId45", "FY2025 6-K")]` for historicals
-- Third-party-cited chart (TAM, attach rate, market share — Yole/Frost/IDC/Gartner) → `[("rId45 or current FY 6-K", "<filing> 引用 Yole"), ("rId-yole-specific-press-release", "Yole 新闻稿")]` — link to the primary filing where the third-party number is quoted, plus a deeper third-party URL (not the homepage)
-- Financial-model-only chart (DCF, scenarios, sensitivity, football field) → `[(None, "本报告财务模型 / DCF 标签页")]` — non-hyperlinked label, honest about internal sourcing
-- Peer-comparison chart → list every peer's Yahoo Finance rId individually
+- Stock-price chart → `[("https://finance.yahoo.com/quote/HSAI/history", "Yahoo HSAI 历史")]`
+- Company-disclosure chart (history, products, ownership, customer concentration) → `[("https://www.sec.gov/.../20-F.htm", "FY2024 20-F")]` with section/item label (e.g. `FY2024 20-F 第 7 项` for stockholders, `FY2024 20-F 客户集中度` for top-customer table)
+- Operating-metric chart (revenue, margin, opex, FCF) → `[("...20-F URL...", "FY2024 20-F"), ("...6-K URL...", "FY2025 6-K")]` for historicals
+- Third-party-cited chart (TAM, attach rate, market share — Yole/Frost/IDC/Gartner) → `[("...filing URL...", "<filing> 引用 Yole"), ("...yole-press-release URL...", "Yole 新闻稿")]` — link to the primary filing where the third-party number is quoted, plus a deeper third-party URL (not the homepage)
+- Financial-model-only chart (DCF, scenarios, sensitivity, football field) → `[(None, "本报告财务模型 / DCF 标签页")]` — plain-text label (no link), honest about internal sourcing
+- Peer-comparison chart → list every peer's Yahoo Finance ticker URL individually
 
 **Never link a homepage and call it a citation.** `yolegroup.com`, `frost.com`, `gartner.com` are marketing pages — clicking gets the reader nothing verifiable. Use deeper URLs: the specific report's product page (subscription-only is OK if labelled as such), the press release that announces the report, or the primary filing that quotes the number.
 
-A 30-50 page report has roughly 100-150 substantive paragraphs plus 25-35 figure captions plus 12-20 tables. Cite all of them with the right per-chart sources and you land at 150-200 inline hyperlinks — above the threshold and verifiable on click.
+A 30-50 page worth of content has roughly 100-150 substantive paragraphs plus 25-35 figure captions plus 12-20 tables. Cite all of them with the right per-chart sources and you land at 150-200 inline markdown links — above the threshold and verifiable on click.
 
 1. **Rewriting Task 1 content**: DO NOT rewrite the 6-8K words from Task 1. Use almost verbatim - just reformat and add charts. Focus writing effort on quantitative sections (projections, scenarios, valuation).
 2. **Sparse pages**: Every page must have BOTH text AND visuals. Target 60-80% page density. Insert charts every 200-300 words.
 3. **Grouping charts at end**: Charts must be interspersed throughout text, not grouped. Place chart immediately after paragraph discussing that topic.
-4. **Writing in markdown**: Use DOCX format, NOT markdown
+4. **Writing in DOCX/Word format**: This skill outputs markdown (`.md`) — do not use the DOCX skill or generate Word documents
 5. **Skipping Page 1 format**: Must follow exact institutional format
 6. **Generic bullets**: Page 1 bullets need bold headers + specific data
 7. **Short sections**: Must meet minimum word counts
@@ -1402,9 +1388,9 @@ A successful equity research report should:
 ## Output Files
 
 **Primary Deliverable:**
-`[Company]_Initiation_Report_[Date].docx`
+`reports/company/<Slug>/<Slug>_Initiation_Report_<Date>.md`
 
-**Example**: `Tesla_Initiation_Report_2024-10-27.docx`
+**Example**: `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Initiation_Report_2024-10-27.md`
 
 **Supporting Deliverable:**
 `[Company]_Financial_Model_[Date].xlsx` (from Task 2)

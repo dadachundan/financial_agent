@@ -1,6 +1,6 @@
 ---
 name: initiating-coverage
-description: Create institutional-quality equity research initiation reports through a 5-task workflow. Tasks must be executed individually with verified prerequisites - (1) company research, (2) financial modeling, (3) valuation analysis, (4) chart generation, (5) final report assembly. Each task produces specific deliverables (markdown docs, Excel models, charts, or DOCX reports). Tasks 3-5 have dependencies on earlier tasks.
+description: Create institutional-quality equity research initiation reports through a 5-task workflow. Tasks must be executed individually with verified prerequisites - (1) company research, (2) financial modeling, (3) valuation analysis, (4) chart generation, (5) final report assembly. Each task produces specific deliverables (markdown docs, Excel models, charts, or a final markdown report). Tasks 3-5 have dependencies on earlier tasks.
 ---
 
 # Initiating Coverage
@@ -89,7 +89,7 @@ Each task specifies exact deliverables. Do NOT create:
 - ✅ Task 2: Financial model (.xlsx) — **NOTHING ELSE**
 - ✅ Task 3: Valuation analysis (.md) + Excel tabs added to Task 2 file — **NOTHING ELSE**
 - ✅ Task 4: Charts zip file (.zip) — **NOTHING ELSE**
-- ✅ Task 5: Final report (.docx) — **NOTHING ELSE**
+- ✅ Task 5: Final report (.md) — **NOTHING ELSE**
 
 **If a deliverable is not listed above, DO NOT CREATE IT.**
 
@@ -105,7 +105,7 @@ Select which task to execute:
 | **2** | Financial Modeling | 10-K or financials access | Excel model (6 tabs) |
 | **3** | Valuation Analysis | Financial model (Task 2) | Valuation + price target |
 | **4** | Chart Generation | Tasks 1, 2, 3 + external data | 25-35 PNG/JPG charts |
-| **5** | Report Assembly | ALL previous tasks (1-4) | 30-50 page DOCX report |
+| **5** | Report Assembly | ALL previous tasks (1-4) | 30-50 page markdown report |
 
 ---
 
@@ -530,7 +530,7 @@ Required from External Sources:
 
 ## Task 5: Report Assembly
 
-**Purpose**: Write and assemble the comprehensive final DOCX report.
+**Purpose**: Write and assemble the comprehensive final markdown report.
 
 **Prerequisites**: ⚠️ Verify before starting
 - **Required**: Company research from Task 1
@@ -598,21 +598,22 @@ IF ANY VERIFICATION FAILS: Stop and complete missing task first.
 **Process**:
 1. **CRITICAL**: Verify ALL prerequisites before starting
 2. Load detailed instructions from references/task5-report-assembly.md
-3. Execute report assembly workflow using Claude's built-in skills:
-   - **Use DOCX skill** to create and manipulate the Word document
+3. Execute report assembly workflow:
+   - **Use Write/Edit tools** to author the final `.md` file directly
    - **Use XLSX skill** to read Excel data from Task 2/3
    - **Use Read tool** to read Task 1 and Task 3 markdown files
-   - Read Task 1 .md file → Convert to Word formatting → Insert charts inline
-   - Read Task 2 .xlsx file → Extract tables → Write quantitative analysis
+   - Read Task 1 .md file → Copy sections into the report → Insert chart references inline
+   - Read Task 2 .xlsx file → Extract tables → Write quantitative analysis as markdown tables
    - Read Task 3 .md file + Excel tabs → Copy/adapt valuation analysis
-   - Insert Task 4 .png chart files throughout using DOCX skill
+   - Reference Task 4 .png chart files throughout using `![caption](path/to/chart.png)` markdown image syntax
    - Create text-dense report with charts interspersed every 200-300 words
-4. Save and deliver final DOCX report
+4. Save and deliver final `.md` report (single file — viewable in Claude Reports, like every other skill's output)
 
 **Key Principles**:
-- Use Claude's DOCX and XLSX skills (NOT Python libraries)
-- Use actual file operations (read .md/.xlsx/.png files, write .docx file)
-- Good equity research reports are text-dense with lots of illustrating images (60-80% page coverage, 1+ chart per page)
+- Write the report directly as markdown via Write/Edit tools (no DOCX skill, no python-docx)
+- Use actual file operations (read .md/.xlsx/.png files, write .md file)
+- Good equity research reports are text-dense with lots of illustrating images (60-80% visual coverage, 1+ chart per ~page-worth of text)
+- Reference charts by relative path (`reports/company/<Slug>/charts/chart_XX.png`) so the rendered viewer can resolve them — keep the `charts/` folder alongside the .md so the link stays valid
 
 **🔥 CRITICAL: GO ALL OUT ON THIS TASK**
 
@@ -637,70 +638,71 @@ IF ANY VERIFICATION FAILS: Stop and complete missing task first.
 
 **This is publication-ready institutional research. Spare no effort, tokens, or detail.**
 
-**Output**: Comprehensive Equity Research Report (.docx)
+**Output**: Comprehensive Equity Research Report (`.md`)
 
 **Specifications**:
-- **Length**: 30-50 pages (MINIMUM 30)
+- **Length**: 30-50 pages worth of content (MINIMUM 30 — measured by word count, not paginated since this is markdown)
 - **Word count**: 10,000-15,000 words (MINIMUM 10,000)
-- **Charts**: 25-35 embedded images
-- **Tables**: 12-20 comprehensive tables
-- **Format**: Professional DOCX with clickable hyperlinks
+- **Charts**: 25-35 image references via `![caption](path)`
+- **Tables**: 12-20 comprehensive markdown tables
+- **Format**: Markdown with inline links as `[label](url)` — viewable in Claude Reports like every other skill's output
 
-**Structure**:
-- Page 1: Investment Summary (INITIATING COVERAGE format)
-- Pages 2-5: Investment thesis & risks
-- Pages 6-17: Company 101
-- Pages 18-30: Financial analysis & projections
-- Pages 31-40: Valuation analysis
-- Pages 41-50: Appendices
+**Structure** (markdown sections, not paginated):
+- Top: Investment Summary (INITIATING COVERAGE format)
+- Investment thesis & risks
+- Company 101
+- Financial analysis & projections
+- Valuation analysis
+- Appendices (Sources & References)
 
-**File name**: `[Company]_Initiation_Report_[Date].docx` — saved at the root of `reports/company/<Slug>/`.
+**File name**: `[Company]_Initiation_Report_[Date].md` — saved at the root of `reports/company/<Slug>/`. Chart PNGs from Task 4 live in `reports/company/<Slug>/charts/` so the relative `![](charts/chart_XX.png)` references resolve.
 
 ### Update-in-place rule — at most one initiation report per company
 
 Before writing, check `reports/company/<Slug>/` for an existing initiation report and update it in place rather than creating a parallel dated copy.
 
 ```bash
-ls "reports/company/<Slug>/" 2>/dev/null | grep -E "_Initiation_Report_.*\.docx$"
+ls "reports/company/<Slug>/" 2>/dev/null | grep -E "_Initiation_Report_.*\.md$"
 ```
 
-- **Exactly one match** → overwrite it at the same path (DOCX skill: open, edit, save to the same filename). Keep the existing filename even if its embedded date is stale — git history records the actual revision date. Update the cover-page date and any "as of" / "report date" fields in the body to today.
-- **Multiple matches** (legacy state) → update the most recent by mtime, tell the user the older duplicates exist, do not auto-delete.
+- **Exactly one match** → overwrite it at the same path (Read then Write/Edit). Keep the existing filename even if its embedded date is stale — git history records the actual revision date. Update the date at the top of the document and any "as of" / "report date" fields in the body to today.
+- **Multiple matches** (legacy state, including stale `.docx` from the previous DOCX-output era) → update the most recent `.md` by mtime, tell the user the older duplicates exist, do not auto-delete.
 - **Zero matches** → create a new file using today's date in the filename.
 
-**⚠️ DELIVER ONLY THIS 1 DOCX FILE. NO executive summaries, no "highlights" documents, no extra files.**
+**⚠️ DELIVER ONLY THIS 1 .md FILE. NO executive summaries, no "highlights" documents, no extra files.**
 
 **⚠️ SOURCE CITATIONS ARE MANDATORY** (see Citation Standards below):
-- ✅ Every figure caption AND every table has clickable hyperlink source labels — not plain-text "Source: …" lines. Plain-text source lines fail the click-to-verify test that readers expect. Chart source lines baked into PNG images don't count: append a clickable `(外部源: [Link 1] / [Link 2])` to the caption paragraph in DOCX.
-- ✅ **EVERY substantive prose paragraph (≥ ~40 characters, not a heading / list-marker / source footer) ends with a clickable inline citation.** No exceptions. Page-1 investment bullets, thesis pillars, financial metrics, risk paragraphs, peer comparisons, qualitative analysis, forward-looking projections — every one. The user's stated trust standard: "for each paragraph, I hope there is citation, otherwise I don't trust the paragraph."
-  - Example (factual claim): `FY2025 在 4.33 亿美元收入基础上实现 GAAP 净利润 6,200 万美元 (来源: [FY2025 6-K](rId45))`
-  - Example (forward-looking projection): `…我们模型测算 FY26E 收入达到 47.37 亿元人民币 (来源: 本报告模型估算)`  — non-hyperlinked label acceptable for internal estimates; do not pretend an external source backs an analyst projection.
-  - Example (figure caption): `图 15: 按细分领域的激光雷达 TAM — 2030 年扩张至 100-250 亿美元。 (外部源: [Yole Group](rId54) / [Frost & Sullivan](rId55))`
-  - Render in 8pt italic, framing text gray (#666666), hyperlink blue (#0563C1, underlined).
-- ✅ The report includes a dedicated **Sources & References** appendix listing every source, organized by category, every entry a clickable hyperlink with a date — minimum 20 entries.
+- ✅ Every figure caption AND every table has hyperlink source labels — not plain-text "Source: …" lines. Plain-text source lines fail the click-to-verify test that readers expect. Chart source lines baked into PNG images don't count: append `(外部源: [Link 1] / [Link 2])` to the caption line as markdown links.
+- ✅ **EVERY substantive prose paragraph (≥ ~40 characters, not a heading / list-marker / source footer) ends with an inline markdown-link citation.** No exceptions. Page-1 investment bullets, thesis pillars, financial metrics, risk paragraphs, peer comparisons, qualitative analysis, forward-looking projections — every one. The user's stated trust standard: "for each paragraph, I hope there is citation, otherwise I don't trust the paragraph."
+  - Example (factual claim): `FY2025 在 4.33 亿美元收入基础上实现 GAAP 净利润 6,200 万美元 ([FY2025 6-K](https://www.sec.gov/...))`
+  - Example (figure caption): `图 15: 按细分领域的激光雷达 TAM — 2030 年扩张至 100-250 亿美元。 (外部源: [Yole Group](https://yolegroup.com/...) / [Frost & Sullivan](https://www.frost.com/...))`
+  - Use the markdown italic-source convention if you want visual de-emphasis: `*Source: [label](url)*`.
+- ✅ The report includes a dedicated **Sources & References** appendix listing every source, organized by category, every entry a markdown link with a date — minimum 20 entries.
 
 **FAIL CONDITIONS — DO NOT DELIVER if any of these hit:**
-- ❌ **FAIL 1**: No Sources & References appendix, or fewer than 20 entries in it. Add sources and re-export.
-- ❌ **FAIL 2**: Fewer than 150 inline `<w:hyperlink>` elements in the body (appendix entries don't count). A 30-50 page report has roughly 100-150 substantive paragraphs plus 25-35 figure captions plus 12-20 tables; landing under 150 hyperlinks in the body means many paragraphs are uncited. Walk the body and add citations until the threshold is met.
+- ❌ **FAIL 1**: No Sources & References appendix, or fewer than 20 entries in it. Add sources and re-save.
+- ❌ **FAIL 2**: Fewer than 150 inline markdown links in the body (appendix entries don't count). A 30-50 page report has roughly 100-150 substantive paragraphs plus 25-35 figure captions plus 12-20 tables; landing under 150 links in the body means many paragraphs are uncited. Walk the body and add citations until the threshold is met.
 - ❌ **FAIL 3**: Any page-1 investment-summary bullet without an inline citation, or any figure/table caption that is plain text (no hyperlink), or any peer-comparison paragraph without a peer-specific Yahoo Finance citation. These are spot-check fails — fix all instances before re-delivering.
 
 **Final Verification** (every item must pass — any unchecked item blocks delivery):
-- [ ] Report is 30-50 pages
-- [ ] Word count is 10,000-15,000
-- [ ] 25-35 charts embedded
+- [ ] Word count is 10,000-15,000 (`wc -w reports/company/<Slug>/<Slug>_Initiation_Report_<Date>.md`)
+- [ ] 25-35 chart references embedded via `![…](…)`
 - [ ] 12-20 tables included
-- [ ] Every figure caption has clickable hyperlink source labels (NOT plain text; chart-baked PNG source lines don't satisfy this — append `(外部源: [Link])` to the caption text)
-- [ ] Every table has a source line as its final row with at least one clickable hyperlink
-- [ ] **Sources & References appendix exists with ≥20 entries, every entry a clickable hyperlink with a date**
-- [ ] **Body has ≥150 distinct inline `<w:hyperlink>` elements outside the appendix.** Verify programmatically:
+- [ ] Every figure caption has hyperlinked source labels (NOT plain text; chart-baked PNG source lines don't satisfy this — append `(外部源: [Link](url))` to the caption text)
+- [ ] Every table has a source line directly under it with at least one hyperlink
+- [ ] **Sources & References appendix exists with ≥20 entries, every entry a markdown link with a date**
+- [ ] **Body has ≥150 distinct inline markdown links outside the appendix.** Verify programmatically:
   ```bash
-  awk '/附录|Sources \& References/{exit} {print}' unpacked/word/document.xml | grep -c '<w:hyperlink'
+  # Count links in the body (everything before the appendix heading)
+  awk '/^##? (附录|Sources & References|Appendix)/{exit} {print}' \
+    "reports/company/<Slug>/<Slug>_Initiation_Report_<Date>.md" \
+    | grep -oE '\[[^]]+\]\([^)]+\)' | wc -l
   ```
   If under 150, walk the body and add citations to uncited paragraphs.
-- [ ] **Every substantive prose paragraph (≥40 chars, not a heading or list marker) has an inline citation.** Spot check by extracting paragraphs from the DOCX and confirming each has either a `<w:hyperlink>` or a `(来源:本报告模型估算)` label. Zero unsourced substantive paragraphs.
+- [ ] **Every substantive prose paragraph (≥40 chars, not a heading or list marker) has an inline citation.** Spot check by reading paragraphs and confirming each ends with an `([label](url))` citation. Zero unsourced substantive paragraphs.
 - [ ] Every page-1 investment-summary bullet has at least one inline citation
 - [ ] Every figure caption (`图 N:` / `Figure N:`) has hyperlinked source labels
-- [ ] All inline citations are clickable hyperlinks (NOT plain text URLs, NOT "Company data")
+- [ ] All inline citations are markdown links (NOT bare URLs, NOT "Company data")
 - [ ] Numbers match financial model exactly
 
 ---
@@ -818,23 +820,23 @@ Decision tree for forward-looking / projection paragraphs:
 - Acceptable source types (in order of preference): SEC filings (10-K, 10-Q, 8-K, DEF 14A) → earnings transcripts → company press releases → investor presentations → reputable industry reports (Gartner, IDC, McKinsey) → reputable news (WSJ, FT, Bloomberg, Reuters) → company website.
 - Unacceptable: "Company data", "Industry sources", "Our estimates" without an underlying source, untraceable claims.
 
-**Inline citation format (DOCX — Task 5):**
-- Every figure: caption above ("Figure X — [Title]"), source line below in 9pt italic ("Source: [hyperlinked source], [date]").
-- Every table: final row spans all columns, "Source: [hyperlinked source], [date]".
-- **Every substantive prose paragraph gets an inline parenthetical hyperlink at the end of its last sentence.** The citation should be small (8pt) italic gray (`#666666`) for the framing text and the standard hyperlink blue (`#0563C1`, underlined) for the linked label. Concrete pattern:
+**Inline citation format (markdown — Task 5):**
+- Every figure: caption line `*图 N: [title].*` (italic), then a source line immediately below as `*Source: [hyperlinked label](url), [date]*` (italic).
+- Every table: `*Source: [hyperlinked label](url), [date]*` line directly under the table.
+- **Every substantive prose paragraph gets an inline parenthetical markdown link at the end of its last sentence.** Concrete pattern:
   ```
-  …<paragraph text ending with a claim> (来源: <hyperlinked label>)
+  …<paragraph text ending with a claim> ([hyperlinked label](url))
   ```
   Example (English report):
   ```
-  Revenue grew 35% YoY to $234M in FY2024, driven by AT128 ramp at the top US OEM customer. (Source: 20-F FY2024)
+  Revenue grew 35% YoY to $234M in FY2024, driven by AT128 ramp at the top US OEM customer. ([20-F FY2024](https://www.sec.gov/...))
   ```
   Example (Chinese report):
   ```
-  FY2025 在 4.33 亿美元收入基础上实现 GAAP 净利润 6,200 万美元 (来源: FY2025 6-K)
+  FY2025 在 4.33 亿美元收入基础上实现 GAAP 净利润 6,200 万美元 ([FY2025 6-K](https://www.sec.gov/...))
   ```
-  Both `Source:` / `来源:` and the label render as a single hyperlink that points to the same rId used in the Sources & References appendix — citations are not "named twice" in different forms, the appendix entry IS the canonical name. Never plain text URLs in prose. Never bare "Company data" or "Industry sources" without a specific document.
-- **Density target: ≥1 inline citation per substantive body paragraph, and ≥30 inline citations in the report body overall.** A 30-50 page report at 200-300 words per paragraph cleared 100+ candidate paragraphs; landing under 30 inline citations means the report was assembled but not cited. Walk the body before delivery and add citations until the threshold is met.
+  The label inside `[…]` must match the canonical name used in the Sources & References appendix — citations are not "named twice" in different forms, the appendix entry IS the canonical name. Never bare URLs in prose. Never plain "Company data" or "Industry sources" without a specific document.
+- **Density target: ≥1 inline citation per substantive body paragraph, and ≥150 inline citations in the report body overall.** A 30-50 page report at 200-300 words per paragraph clears 100+ candidate paragraphs plus 25-35 figure captions plus 12-20 tables; landing under 150 inline citations means the report was assembled but not cited. Walk the body before delivery and add citations until the threshold is met.
 
 **Mandatory Sources & References appendix (Task 5):**
 - Title: "Sources & References"
@@ -850,7 +852,7 @@ Decision tree for forward-looking / projection paragraphs:
 
 **How to carry sources through the pipeline:**
 - Task 1 produces inline `[Source: ...](...)` citations and a Bibliography section → Task 5 reads them and copies them into prose and the appendix.
-- Task 3 produces a `Source` column in the comps and DCF assumption tables → Task 5 carries the column through into the DOCX tables.
+- Task 3 produces a `Source` column in the comps and DCF assumption tables → Task 5 carries the column through into the markdown tables.
 - Task 2's DCF Inputs tab already has a `Source` column → Task 3 fills it in, Task 5 reads from it.
 - **If Task 1 or Task 3 outputs have no sources, Task 5 will fail the final verification.** Go back and add sources to the upstream tasks before re-running Task 5.
 
@@ -892,7 +894,7 @@ ProjectFolder/
 │   ├── chart_01.png
 │   └── ... (25-35 files)
 └── Task5_Report/
-    └── [Company]_Initiation_Report.docx
+    └── [Company]_Initiation_Report.md
 ```
 
 ### No End-to-End Execution
