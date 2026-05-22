@@ -12,7 +12,6 @@ marked.js + mermaid.js. Filesystem layout:
       compare/<file>.md             — head-to-head
       earnings/<file>.md            — earnings notes
       other/<file>.md               — anything that didn't classify
-      charts/<file>.png             — shared chart assets
 """
 from __future__ import annotations
 
@@ -646,8 +645,7 @@ _VIEW_TMPL = r"""<!doctype html>
     // Relative image refs (charts/foo.png, charts_zh/bar.png, etc.) are
     // resolved by the browser against the current page URL, which is
     // /<base>/view/<rel>. The /view route serves both .md files and image
-    // assets, with a fallback to the shared reports/charts/ folder for
-    // older docs whose charts live there.
+    // assets — every doc keeps its charts in a sibling charts/ subdir.
 
     await mermaid.run({ querySelector: ".mermaid" });
   </script>
