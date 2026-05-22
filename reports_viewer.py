@@ -699,13 +699,7 @@ _IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"}
 
 @reports_bp.route("/view/<path:rel>")
 def view(rel: str):
-    """Serve .md as rendered HTML; serve images directly. Path-traversal-safe.
-
-    Image lookup falls back to the shared `reports/charts/` folder if the
-    file isn't at the resolved per-doc location — some older reports use
-    `charts/foo.png` to mean the shared folder rather than a sibling
-    `charts/` subdir.
-    """
+    """Serve .md as rendered HTML; serve images directly. Path-traversal-safe."""
     if ".." in rel.split("/"):
         abort(404)
     target = (REPORTS_DIR / rel).resolve()
@@ -720,15 +714,9 @@ def view(rel: str):
         md = target.read_text(encoding="utf-8")
         return render_template_string(_VIEW_TMPL, name=target.name, md=md, _nav=_nw.NAV_HTML)
 
-    if target.suffix.lower() not in _IMAGE_EXTS:
+    if target.suffix.lower() not in _IMAGE_EXTS or not target.is_file():
         abort(404)
-    if target.is_file():
-        return send_from_directory(target.parent, target.name)
-    # Fallback: shared reports/charts/<basename>
-    fallback = REPORTS_DIR / "charts" / Path(rel).name
-    if fallback.is_file():
-        return send_from_directory(fallback.parent, fallback.name)
-    abort(404)
+    return send_from_directory(target.parent, target.name)
 
 
 @reports_bp.route("/rate/<path:pair_key>", methods=["POST"])

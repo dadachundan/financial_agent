@@ -10,11 +10,11 @@
 
 ## Executive Summary
 
-We initiate coverage of **Synopsys (SNPS)** with a **BUY** recommendation and a **12-month price target of $580**, implying **15.4% upside** from the current price of $502.42. Our price target is anchored to:
+We initiate coverage of **Synopsys (SNPS)** with a **BUY** recommendation and a **12-month price target of $580**, implying **15.4% upside** from the current price of $502.42. Our price target sits above the Wall Street consensus 12-month target of ~$540 ([Yahoo Finance — SNPS analyst estimates, 2026-05](https://finance.yahoo.com/quote/SNPS/analysis/)) and is anchored to:
 
-- A discounted cash flow (DCF) valuation that incorporates a WACC of **8.5%** and a terminal growth rate of **3.0%**, yielding a DCF value per share of **$425.58**.
-- A peer-comp framework using mission-critical software and design-IP comparables that yields an implied per-share value of **$646.00** on a forward P/E basis.
-- A blended methodology weighting DCF (30%), forward P/E comps (30%), EV/Revenue and EV/EBITDA comps (15% each), and analyst consensus (10%).
+- A discounted cash flow (DCF) valuation that incorporates a WACC of **8.5%** and a terminal growth rate of **3.0%**, yielding a DCF value per share of **$425.58**. Inputs come from the [SNPS FY2025 10-K](https://www.sec.gov/Archives/edgar/data/883241/000088324125000028/snps-20251031.htm) and FY26 guidance in the [Q4 FY25 earnings 8-K, 2025-12-10](https://www.sec.gov/Archives/edgar/data/0000883241/000119312525314200/d29055dex991.htm).
+- A peer-comp framework using mission-critical software and design-IP comparables that yields an implied per-share value of **$646.00** on a forward P/E basis (multiples sourced from [Yahoo Finance — SNPS key statistics](https://finance.yahoo.com/quote/SNPS/key-statistics/)).
+- A blended methodology weighting DCF (30%), forward P/E comps (30%), EV/Revenue and EV/EBITDA comps (15% each), and analyst consensus (10%) ([Yahoo Finance — SNPS analyst estimates](https://finance.yahoo.com/quote/SNPS/analysis/)).
 
 ---
 

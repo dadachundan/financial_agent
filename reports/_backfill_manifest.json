@@ -1,0 +1,2361 @@
+{
+  "generated_at_mtime": 1779477563.258295,
+  "total_reports": 261,
+  "by_tier": {
+    "T1_floor": 16,
+    "T2_worst": 19,
+    "T3_mid": 211,
+    "T4_high": 15
+  },
+  "reports": [
+    {
+      "path": "company/Cadence_NASDAQ_CDNS/Cadence_NASDAQ_CDNS_Valuation_Analysis.md",
+      "urls": 0,
+      "paragraphs": 14,
+      "cited_paragraphs": 0,
+      "coverage": 0.0,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "company/Hengli_SSE601100/Hengli_SSE601100_Valuation_Analysis.md",
+      "urls": 0,
+      "paragraphs": 19,
+      "cited_paragraphs": 0,
+      "coverage": 0.0,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "company/Hengli_SSE601100/Hengli_SSE601100_Valuation_Analysis_zh.md",
+      "urls": 0,
+      "paragraphs": 14,
+      "cited_paragraphs": 0,
+      "coverage": 0.0,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "company/Hesai_NASDAQ_HSAI/Hesai_NASDAQ_HSAI_Valuation_Analysis.md",
+      "urls": 0,
+      "paragraphs": 35,
+      "cited_paragraphs": 0,
+      "coverage": 0.0,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "company/Hesai_NASDAQ_HSAI/Hesai_NASDAQ_HSAI_Valuation_Analysis_zh.md",
+      "urls": 0,
+      "paragraphs": 31,
+      "cited_paragraphs": 0,
+      "coverage": 0.0,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "company/Micron_NASDAQ_MU/Task3_Valuation/Micron_Valuation_Analysis.md",
+      "urls": 0,
+      "paragraphs": 51,
+      "cited_paragraphs": 0,
+      "coverage": 0.0,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "company/Synopsys_NASDAQ_SNPS/Synopsys_NASDAQ_SNPS_Valuation_Analysis.md",
+      "urls": 0,
+      "paragraphs": 14,
+      "cited_paragraphs": 0,
+      "coverage": 0.0,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "compare/SNPS_vs_CDNS.md",
+      "urls": 0,
+      "paragraphs": 17,
+      "cited_paragraphs": 0,
+      "coverage": 0.0,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "earnings/QCOM.md",
+      "urls": 0,
+      "paragraphs": 21,
+      "cited_paragraphs": 0,
+      "coverage": 0.0,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "company/双林股份_SZSE300100/双林股份_SZSE300100_Valuation_Analysis.md",
+      "urls": 5,
+      "paragraphs": 19,
+      "cited_paragraphs": 3,
+      "coverage": 0.158,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "company/Anpeilong/Anpeilong_Research_Document.md",
+      "urls": 8,
+      "paragraphs": 76,
+      "cited_paragraphs": 3,
+      "coverage": 0.039,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "company/AMD_NASDAQ_AMD/valuation/AMD_Valuation_Analysis.md",
+      "urls": 10,
+      "paragraphs": 31,
+      "cited_paragraphs": 1,
+      "coverage": 0.032,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "company/Infineon/Infineon_Research_Document.md",
+      "urls": 15,
+      "paragraphs": 88,
+      "cited_paragraphs": 5,
+      "coverage": 0.057,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "company/ASML_NASDAQ_ASML/ASML_NASDAQ_ASML_Research_Document.md",
+      "urls": 24,
+      "paragraphs": 94,
+      "cited_paragraphs": 10,
+      "coverage": 0.106,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "company/易方达云计算ETF_SSE516510/易方达云计算ETF_SSE516510_ETF简报.md",
+      "urls": 25,
+      "paragraphs": 16,
+      "cited_paragraphs": 1,
+      "coverage": 0.062,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "sector/人形机器人传感器板块综述.md",
+      "urls": 28,
+      "paragraphs": 60,
+      "cited_paragraphs": 10,
+      "coverage": 0.167,
+      "tier": "T1_floor",
+      "status": "pending"
+    },
+    {
+      "path": "company/澜起科技_SSE688008/澜起科技_SSE688008_Research_Document_zh.md",
+      "urls": 34,
+      "paragraphs": 89,
+      "cited_paragraphs": 22,
+      "coverage": 0.247,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "company/SanDisk_NASDAQ_SNDK/SanDisk_NASDAQ_SNDK_Research_Document.md",
+      "urls": 34,
+      "paragraphs": 99,
+      "cited_paragraphs": 25,
+      "coverage": 0.253,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "company/凌云光_SSE688400/凌云光_SSE688400_Research_Document.md",
+      "urls": 43,
+      "paragraphs": 66,
+      "cited_paragraphs": 23,
+      "coverage": 0.348,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "company/沪电股份_SZSE002463/沪电股份_SZSE002463_Research_Document_zh.md",
+      "urls": 44,
+      "paragraphs": 83,
+      "cited_paragraphs": 15,
+      "coverage": 0.181,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "company/特变电工_SSE600089/特变电工_SSE600089_Research_Document_zh.md",
+      "urls": 49,
+      "paragraphs": 83,
+      "cited_paragraphs": 32,
+      "coverage": 0.386,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "company/华虹公司_SSE688347/华虹公司_SSE688347_Research_Document_zh.md",
+      "urls": 58,
+      "paragraphs": 89,
+      "cited_paragraphs": 33,
+      "coverage": 0.371,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "company/WeRide_NASDAQ_WRD/WeRide_NASDAQ_WRD_Research_Document.md",
+      "urls": 63,
+      "paragraphs": 69,
+      "cited_paragraphs": 25,
+      "coverage": 0.362,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "company/iFlytek_SZSE002230/iFlytek_SZSE002230_Research_Document.md",
+      "urls": 71,
+      "paragraphs": 88,
+      "cited_paragraphs": 30,
+      "coverage": 0.341,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "company/iFlytek_SZSE002230/iFlytek_SZSE002230_Research_Document_zh.md",
+      "urls": 71,
+      "paragraphs": 84,
+      "cited_paragraphs": 30,
+      "coverage": 0.357,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "company/Berkshire_NYSE_BRK.B/Berkshire_NYSE_BRK.B_Research_Document.md",
+      "urls": 74,
+      "paragraphs": 120,
+      "cited_paragraphs": 46,
+      "coverage": 0.383,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Research_Document.md",
+      "urls": 83,
+      "paragraphs": 89,
+      "cited_paragraphs": 26,
+      "coverage": 0.292,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "company/RTX_NYSE_RTX/RTX_NYSE_RTX_Research_Document.md",
+      "urls": 97,
+      "paragraphs": 129,
+      "cited_paragraphs": 47,
+      "coverage": 0.364,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "company/GMining_TSX_GMIN/GMining_TSX_GMIN_Research_Document.md",
+      "urls": 99,
+      "paragraphs": 90,
+      "cited_paragraphs": 31,
+      "coverage": 0.344,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/灵初智能/灵初智能_Research_Document.md",
+      "urls": 138,
+      "paragraphs": 110,
+      "cited_paragraphs": 37,
+      "coverage": 0.336,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/灵初智能/灵初智能_Research_Document_zh.md",
+      "urls": 138,
+      "paragraphs": 96,
+      "cited_paragraphs": 37,
+      "coverage": 0.385,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/千寻智能/千寻智能_Research_Document.md",
+      "urls": 151,
+      "paragraphs": 83,
+      "cited_paragraphs": 30,
+      "coverage": 0.361,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/千寻智能/千寻智能_Research_Document_zh.md",
+      "urls": 151,
+      "paragraphs": 77,
+      "cited_paragraphs": 30,
+      "coverage": 0.39,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/自变量机器人/自变量机器人_Research_Document.md",
+      "urls": 173,
+      "paragraphs": 102,
+      "cited_paragraphs": 39,
+      "coverage": 0.382,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/魔法原子/魔法原子_Research_Document.md",
+      "urls": 224,
+      "paragraphs": 87,
+      "cited_paragraphs": 34,
+      "coverage": 0.391,
+      "tier": "T2_worst",
+      "status": "pending"
+    },
+    {
+      "path": "company/生益科技_SSE600183/生益科技_SSE600183_Research_Document_zh.md",
+      "urls": 47,
+      "paragraphs": 79,
+      "cited_paragraphs": 32,
+      "coverage": 0.405,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/贵州茅台_SSE600519/贵州茅台_SSE600519_Research_Document_zh.md",
+      "urls": 50,
+      "paragraphs": 93,
+      "cited_paragraphs": 39,
+      "coverage": 0.419,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/机器人ETF_SSE562500/机器人ETF_SSE562500_ETF简报.md",
+      "urls": 51,
+      "paragraphs": 25,
+      "cited_paragraphs": 13,
+      "coverage": 0.52,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/汉威科技_SZSE300007/汉威科技_SZSE300007_Research_Document.md",
+      "urls": 53,
+      "paragraphs": 73,
+      "cited_paragraphs": 30,
+      "coverage": 0.411,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/汉威科技_SZSE300007/汉威科技_SZSE300007_Research_Document_zh.md",
+      "urls": 53,
+      "paragraphs": 65,
+      "cited_paragraphs": 30,
+      "coverage": 0.462,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/华富中证人工智能产业ETF_SSE515980/华富中证人工智能产业ETF_SSE515980_ETF简报.md",
+      "urls": 57,
+      "paragraphs": 23,
+      "cited_paragraphs": 12,
+      "coverage": 0.522,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/光环新网_SZSE300383/光环新网_SZSE300383_Research_Document_zh.md",
+      "urls": 61,
+      "paragraphs": 87,
+      "cited_paragraphs": 48,
+      "coverage": 0.552,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/LamResearch_NASDAQ_LRCX/LamResearch_NASDAQ_LRCX_Research_Document.md",
+      "urls": 63,
+      "paragraphs": 100,
+      "cited_paragraphs": 40,
+      "coverage": 0.4,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/精锋医疗_HKEX2675/精锋医疗_HKEX2675_Research_Document_zh.md",
+      "urls": 63,
+      "paragraphs": 87,
+      "cited_paragraphs": 43,
+      "coverage": 0.494,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/安培龙_SZSE301413/安培龙_SZSE301413_Research_Document_zh.md",
+      "urls": 63,
+      "paragraphs": 87,
+      "cited_paragraphs": 44,
+      "coverage": 0.506,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/思源电气_SZSE002028/思源电气_SZSE002028_Research_Document_zh.md",
+      "urls": 64,
+      "paragraphs": 83,
+      "cited_paragraphs": 49,
+      "coverage": 0.59,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/卧安机器人_HKEX6600/卧安机器人_HKEX6600_Research_Document_zh.md",
+      "urls": 65,
+      "paragraphs": 75,
+      "cited_paragraphs": 40,
+      "coverage": 0.533,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/绿的谐波_SSE688017/绿的谐波_SSE688017_Research_Document_zh.md",
+      "urls": 65,
+      "paragraphs": 74,
+      "cited_paragraphs": 46,
+      "coverage": 0.622,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/PonyAI_NASDAQ_PONY/PonyAI_NASDAQ_PONY_Research_Document.md",
+      "urls": 71,
+      "paragraphs": 88,
+      "cited_paragraphs": 43,
+      "coverage": 0.489,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Micron_NASDAQ_MU/Micron_NASDAQ_MU_Research_Document.md",
+      "urls": 72,
+      "paragraphs": 90,
+      "cited_paragraphs": 40,
+      "coverage": 0.444,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/PaloAltoNetworks_NASDAQ_PANW/PaloAltoNetworks_NASDAQ_PANW_Research_Document.md",
+      "urls": 73,
+      "paragraphs": 78,
+      "cited_paragraphs": 40,
+      "coverage": 0.513,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Hesai_NASDAQ_HSAI/Hesai_NASDAQ_HSAI_Research_Document_zh.md",
+      "urls": 75,
+      "paragraphs": 82,
+      "cited_paragraphs": 36,
+      "coverage": 0.439,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/广合科技_SZSE001389/广合科技_SZSE001389_Research_Document_zh.md",
+      "urls": 76,
+      "paragraphs": 83,
+      "cited_paragraphs": 39,
+      "coverage": 0.47,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/寒武纪_SSE688256/寒武纪_SSE688256_Research_Document_zh.md",
+      "urls": 76,
+      "paragraphs": 93,
+      "cited_paragraphs": 44,
+      "coverage": 0.473,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/ARM_NASDAQ_ARM/ARM_NASDAQ_ARM_Research_Document.md",
+      "urls": 77,
+      "paragraphs": 116,
+      "cited_paragraphs": 47,
+      "coverage": 0.405,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/科沃斯_SSE603486/科沃斯_SSE603486_Research_Document_zh.md",
+      "urls": 79,
+      "paragraphs": 90,
+      "cited_paragraphs": 50,
+      "coverage": 0.556,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/AppliedMaterials_NASDAQ_AMAT/AppliedMaterials_NASDAQ_AMAT_Research_Document.md",
+      "urls": 81,
+      "paragraphs": 122,
+      "cited_paragraphs": 58,
+      "coverage": 0.475,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/中坚科技_SZSE002779/中坚科技_SZSE002779_Research_Document.md",
+      "urls": 81,
+      "paragraphs": 108,
+      "cited_paragraphs": 54,
+      "coverage": 0.5,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/摩尔线程_SSE688795/摩尔线程_SSE688795_Research_Document_zh.md",
+      "urls": 81,
+      "paragraphs": 90,
+      "cited_paragraphs": 46,
+      "coverage": 0.511,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/中坚科技_SZSE002779/中坚科技_SZSE002779_Research_Document_zh.md",
+      "urls": 81,
+      "paragraphs": 102,
+      "cited_paragraphs": 54,
+      "coverage": 0.529,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Amazon_NASDAQ_AMZN/Amazon_NASDAQ_AMZN_Research_Document.md",
+      "urls": 81,
+      "paragraphs": 82,
+      "cited_paragraphs": 46,
+      "coverage": 0.561,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Broadcom_NASDAQ_AVGO/Broadcom_NASDAQ_AVGO_Research_Document.md",
+      "urls": 81,
+      "paragraphs": 73,
+      "cited_paragraphs": 47,
+      "coverage": 0.644,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Hesai_NASDAQ_HSAI/Hesai_NASDAQ_HSAI_Research_Document.md",
+      "urls": 82,
+      "paragraphs": 102,
+      "cited_paragraphs": 43,
+      "coverage": 0.422,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/NXP_NASDAQ_NXPI/NXP_NASDAQ_NXPI_Research_Document.md",
+      "urls": 83,
+      "paragraphs": 121,
+      "cited_paragraphs": 53,
+      "coverage": 0.438,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Tuopu_SSE601689/Tuopu_SSE601689_Research_Document.md",
+      "urls": 83,
+      "paragraphs": 89,
+      "cited_paragraphs": 50,
+      "coverage": 0.562,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Tuopu_SSE601689/Tuopu_SSE601689_Research_Document_zh.md",
+      "urls": 83,
+      "paragraphs": 84,
+      "cited_paragraphs": 50,
+      "coverage": 0.595,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/石头科技_SSE688169/石头科技_SSE688169_Research_Document_zh.md",
+      "urls": 84,
+      "paragraphs": 100,
+      "cited_paragraphs": 44,
+      "coverage": 0.44,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Vistra_NYSE_VST/Vistra_NYSE_VST_Research_Document.md",
+      "urls": 84,
+      "paragraphs": 118,
+      "cited_paragraphs": 53,
+      "coverage": 0.449,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/凌云光_SSE688400/凌云光_SSE688400_Research_Document_zh.md",
+      "urls": 85,
+      "paragraphs": 87,
+      "cited_paragraphs": 44,
+      "coverage": 0.506,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Glorymica_SSE603119/Glorymica_SSE603119_Research_Document.md",
+      "urls": 85,
+      "paragraphs": 77,
+      "cited_paragraphs": 43,
+      "coverage": 0.558,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Glorymica_SSE603119/Glorymica_SSE603119_Research_Document_zh.md",
+      "urls": 85,
+      "paragraphs": 76,
+      "cited_paragraphs": 43,
+      "coverage": 0.566,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Leaderdrive_SSE688017/Leaderdrive_SSE688017_Research_Document.md",
+      "urls": 85,
+      "paragraphs": 79,
+      "cited_paragraphs": 48,
+      "coverage": 0.608,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Leaderdrive_SSE688017/Leaderdrive_SSE688017_Research_Document_zh.md",
+      "urls": 85,
+      "paragraphs": 76,
+      "cited_paragraphs": 48,
+      "coverage": 0.632,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Marvell_NASDAQ_MRVL/Marvell_NASDAQ_MRVL_Research_Document.md",
+      "urls": 86,
+      "paragraphs": 111,
+      "cited_paragraphs": 53,
+      "coverage": 0.477,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/STMicroelectronics_NYSE_STM/STMicroelectronics_NYSE_STM_Research_Document.md",
+      "urls": 87,
+      "paragraphs": 104,
+      "cited_paragraphs": 48,
+      "coverage": 0.462,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/AppliedDigital_NASDAQ_APLD/AppliedDigital_NASDAQ_APLD_Research_Document.md",
+      "urls": 89,
+      "paragraphs": 83,
+      "cited_paragraphs": 38,
+      "coverage": 0.458,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Rambus_NASDAQ_RMBS/Rambus_NASDAQ_RMBS_Research_Document.md",
+      "urls": 90,
+      "paragraphs": 103,
+      "cited_paragraphs": 44,
+      "coverage": 0.427,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/拓普集团_SSE601689/拓普集团_SSE601689_Research_Document_zh.md",
+      "urls": 90,
+      "paragraphs": 97,
+      "cited_paragraphs": 57,
+      "coverage": 0.588,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Vertiv_NYSE_VRT/Vertiv_NYSE_VRT_Research_Document.md",
+      "urls": 92,
+      "paragraphs": 115,
+      "cited_paragraphs": 48,
+      "coverage": 0.417,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/CATL_SZSE300750/CATL_SZSE300750_Research_Document.md",
+      "urls": 92,
+      "paragraphs": 79,
+      "cited_paragraphs": 43,
+      "coverage": 0.544,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/CATL_SZSE300750/CATL_SZSE300750_Research_Document_zh.md",
+      "urls": 92,
+      "paragraphs": 76,
+      "cited_paragraphs": 42,
+      "coverage": 0.553,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/商汤_HKEX20/商汤_HKEX20_Research_Document_zh.md",
+      "urls": 92,
+      "paragraphs": 78,
+      "cited_paragraphs": 44,
+      "coverage": 0.564,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/英维克_SZSE002837/英维克_SZSE002837_Research_Document_zh.md",
+      "urls": 92,
+      "paragraphs": 67,
+      "cited_paragraphs": 44,
+      "coverage": 0.657,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/地平线机器人_HKEX9660/地平线机器人_HKEX9660_Research_Document_zh.md",
+      "urls": 93,
+      "paragraphs": 101,
+      "cited_paragraphs": 50,
+      "coverage": 0.495,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/海光信息_SSE688041/海光信息_SSE688041_Research_Document_zh.md",
+      "urls": 93,
+      "paragraphs": 101,
+      "cited_paragraphs": 68,
+      "coverage": 0.673,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/汇川技术_SZSE300124/汇川技术_SZSE300124_Research_Document_zh.md",
+      "urls": 94,
+      "paragraphs": 87,
+      "cited_paragraphs": 50,
+      "coverage": 0.575,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Ambarella_NASDAQ_AMBA/Ambarella_NASDAQ_AMBA_Research_Document.md",
+      "urls": 94,
+      "paragraphs": 88,
+      "cited_paragraphs": 52,
+      "coverage": 0.591,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Caterpillar_NYSE_CAT/Caterpillar_NYSE_CAT_Research_Document.md",
+      "urls": 95,
+      "paragraphs": 100,
+      "cited_paragraphs": 51,
+      "coverage": 0.51,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/中芯国际_HKEX981/中芯国际_HKEX981_Research_Document_zh.md",
+      "urls": 95,
+      "paragraphs": 96,
+      "cited_paragraphs": 56,
+      "coverage": 0.583,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/AsteraLabs_NASDAQ_ALAB/AsteraLabs_NASDAQ_ALAB_Research_Document.md",
+      "urls": 97,
+      "paragraphs": 103,
+      "cited_paragraphs": 49,
+      "coverage": 0.476,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Occidental_NYSE_OXY/Occidental_NYSE_OXY_Research_Document.md",
+      "urls": 98,
+      "paragraphs": 102,
+      "cited_paragraphs": 46,
+      "coverage": 0.451,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Zhaowei_SZSE003021/Zhaowei_SZSE003021_Research_Document.md",
+      "urls": 99,
+      "paragraphs": 75,
+      "cited_paragraphs": 36,
+      "coverage": 0.48,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Zhaowei_SZSE003021/Zhaowei_SZSE003021_Research_Document_zh.md",
+      "urls": 99,
+      "paragraphs": 68,
+      "cited_paragraphs": 36,
+      "coverage": 0.529,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/EnergyFuels_AMEX_UUUU/EnergyFuels_AMEX_UUUU_Research_Document.md",
+      "urls": 99,
+      "paragraphs": 90,
+      "cited_paragraphs": 49,
+      "coverage": 0.544,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Credo_NASDAQ_CRDO/Credo_NASDAQ_CRDO_Research_Document.md",
+      "urls": 99,
+      "paragraphs": 87,
+      "cited_paragraphs": 58,
+      "coverage": 0.667,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/GSITechnology_NASDAQ_GSIT/GSITechnology_NASDAQ_GSIT_Research_Document.md",
+      "urls": 101,
+      "paragraphs": 101,
+      "cited_paragraphs": 54,
+      "coverage": 0.535,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Palantir_NASDAQ_PLTR/Palantir_NASDAQ_PLTR_Research_Document.md",
+      "urls": 101,
+      "paragraphs": 88,
+      "cited_paragraphs": 53,
+      "coverage": 0.602,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Stride_NYSE_LRN/Stride_NYSE_LRN_Research_Document.md",
+      "urls": 102,
+      "paragraphs": 114,
+      "cited_paragraphs": 54,
+      "coverage": 0.474,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Navitas_NASDAQ_NVTS/Navitas_NASDAQ_NVTS_Research_Document.md",
+      "urls": 102,
+      "paragraphs": 91,
+      "cited_paragraphs": 44,
+      "coverage": 0.484,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/AnalogDevices_NASDAQ_ADI/AnalogDevices_NASDAQ_ADI_Research_Document.md",
+      "urls": 102,
+      "paragraphs": 93,
+      "cited_paragraphs": 51,
+      "coverage": 0.548,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/黑芝麻智能_HKEX2533/黑芝麻智能_HKEX2533_Research_Document_zh.md",
+      "urls": 102,
+      "paragraphs": 81,
+      "cited_paragraphs": 49,
+      "coverage": 0.605,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/紫金矿业_SSE601899/紫金矿业_SSE601899_Research_Document_zh.md",
+      "urls": 103,
+      "paragraphs": 103,
+      "cited_paragraphs": 50,
+      "coverage": 0.485,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Dell_NYSE_DELL/Dell_NYSE_DELL_Research_Document.md",
+      "urls": 103,
+      "paragraphs": 85,
+      "cited_paragraphs": 50,
+      "coverage": 0.588,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Microsoft_NASDAQ_MSFT/Microsoft_NASDAQ_MSFT_Research_Document.md",
+      "urls": 104,
+      "paragraphs": 104,
+      "cited_paragraphs": 45,
+      "coverage": 0.433,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/裕元集团_HKEX100/裕元集团_HKEX100_Research_Document_zh.md",
+      "urls": 104,
+      "paragraphs": 90,
+      "cited_paragraphs": 49,
+      "coverage": 0.544,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Synopsys_NASDAQ_SNPS/Synopsys_NASDAQ_SNPS_Research_Document.md",
+      "urls": 104,
+      "paragraphs": 86,
+      "cited_paragraphs": 50,
+      "coverage": 0.581,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Microchip_NASDAQ_MCHP/Microchip_NASDAQ_MCHP_Research_Document.md",
+      "urls": 105,
+      "paragraphs": 102,
+      "cited_paragraphs": 46,
+      "coverage": 0.451,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Teradyne_NASDAQ_TER/Teradyne_NASDAQ_TER_Research_Document.md",
+      "urls": 105,
+      "paragraphs": 96,
+      "cited_paragraphs": 46,
+      "coverage": 0.479,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/ExxonMobil_NYSE_XOM/ExxonMobil_NYSE_XOM_Research_Document.md",
+      "urls": 105,
+      "paragraphs": 109,
+      "cited_paragraphs": 57,
+      "coverage": 0.523,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Cipher_NASDAQ_CIFR/Cipher_NASDAQ_CIFR_Research_Document.md",
+      "urls": 106,
+      "paragraphs": 102,
+      "cited_paragraphs": 57,
+      "coverage": 0.559,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Estun_SZSE002747/Estun_SZSE002747_Research_Document.md",
+      "urls": 107,
+      "paragraphs": 103,
+      "cited_paragraphs": 54,
+      "coverage": 0.524,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Estun_SZSE002747/Estun_SZSE002747_Research_Document_zh.md",
+      "urls": 107,
+      "paragraphs": 100,
+      "cited_paragraphs": 54,
+      "coverage": 0.54,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Intel_NASDAQ_INTC/Intel_NASDAQ_INTC_Research_Document.md",
+      "urls": 108,
+      "paragraphs": 114,
+      "cited_paragraphs": 59,
+      "coverage": 0.518,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/MongoDB_NASDAQ_MDB/MongoDB_NASDAQ_MDB_Research_Document.md",
+      "urls": 109,
+      "paragraphs": 84,
+      "cited_paragraphs": 39,
+      "coverage": 0.464,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Datadog_NASDAQ_DDOG/Datadog_NASDAQ_DDOG_Research_Document.md",
+      "urls": 109,
+      "paragraphs": 100,
+      "cited_paragraphs": 55,
+      "coverage": 0.55,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/智谱_HKEX2513/智谱_HKEX2513_Research_Document_zh.md",
+      "urls": 109,
+      "paragraphs": 80,
+      "cited_paragraphs": 55,
+      "coverage": 0.688,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Qualcomm_NASDAQ_QCOM/Qualcomm_NASDAQ_QCOM_Research_Document.md",
+      "urls": 110,
+      "paragraphs": 110,
+      "cited_paragraphs": 49,
+      "coverage": 0.445,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/天虹科技_TWSE6937/天虹科技_TWSE6937_Research_Document_zh.md",
+      "urls": 110,
+      "paragraphs": 88,
+      "cited_paragraphs": 49,
+      "coverage": 0.557,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Coherent_NYSE_COHR/Coherent_NYSE_COHR_Research_Document.md",
+      "urls": 111,
+      "paragraphs": 98,
+      "cited_paragraphs": 56,
+      "coverage": 0.571,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/微创医疗机器人_HKEX2252/微创医疗机器人_HKEX2252_Research_Document_zh.md",
+      "urls": 111,
+      "paragraphs": 79,
+      "cited_paragraphs": 48,
+      "coverage": 0.608,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Oklo_NYSE_OKLO/Oklo_NYSE_OKLO_Research_Document.md",
+      "urls": 112,
+      "paragraphs": 90,
+      "cited_paragraphs": 50,
+      "coverage": 0.556,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Planet_NYSE_PL/Planet_NYSE_PL_Research_Document.md",
+      "urls": 112,
+      "paragraphs": 109,
+      "cited_paragraphs": 62,
+      "coverage": 0.569,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Howmet_NYSE_HWM/Howmet_NYSE_HWM_Research_Document.md",
+      "urls": 112,
+      "paragraphs": 104,
+      "cited_paragraphs": 64,
+      "coverage": 0.615,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Joyson_SSE600699/Joyson_SSE600699_Research_Document.md",
+      "urls": 114,
+      "paragraphs": 90,
+      "cited_paragraphs": 39,
+      "coverage": 0.433,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Seagate_NASDAQ_STX/Seagate_NASDAQ_STX_Research_Document.md",
+      "urls": 114,
+      "paragraphs": 116,
+      "cited_paragraphs": 51,
+      "coverage": 0.44,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Joyson_SSE600699/Joyson_SSE600699_Research_Document_zh.md",
+      "urls": 114,
+      "paragraphs": 86,
+      "cited_paragraphs": 39,
+      "coverage": 0.453,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Astronics_NASDAQ_ATRO/Astronics_NASDAQ_ATRO_Research_Document.md",
+      "urls": 114,
+      "paragraphs": 98,
+      "cited_paragraphs": 45,
+      "coverage": 0.459,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Zeta_NYSE_ZETA/Zeta_NYSE_ZETA_Research_Document.md",
+      "urls": 114,
+      "paragraphs": 96,
+      "cited_paragraphs": 47,
+      "coverage": 0.49,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Robosense_HKEX2498/Robosense_HKEX2498_Research_Document.md",
+      "urls": 115,
+      "paragraphs": 86,
+      "cited_paragraphs": 43,
+      "coverage": 0.5,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Robosense_HKEX2498/Robosense_HKEX2498_Research_Document_zh.md",
+      "urls": 115,
+      "paragraphs": 83,
+      "cited_paragraphs": 43,
+      "coverage": 0.518,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Inovance_SZSE300124/Inovance_SZSE300124_Research_Document.md",
+      "urls": 116,
+      "paragraphs": 87,
+      "cited_paragraphs": 49,
+      "coverage": 0.563,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Inovance_SZSE300124/Inovance_SZSE300124_Research_Document_zh.md",
+      "urls": 116,
+      "paragraphs": 80,
+      "cited_paragraphs": 49,
+      "coverage": 0.613,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/壁仞科技_HKEX6082/壁仞科技_HKEX6082_Research_Document_zh.md",
+      "urls": 116,
+      "paragraphs": 77,
+      "cited_paragraphs": 48,
+      "coverage": 0.623,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Keli_SSE603662/Keli_SSE603662_Research_Document.md",
+      "urls": 116,
+      "paragraphs": 97,
+      "cited_paragraphs": 61,
+      "coverage": 0.629,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Keli_SSE603662/Keli_SSE603662_Research_Document_zh.md",
+      "urls": 116,
+      "paragraphs": 92,
+      "cited_paragraphs": 61,
+      "coverage": 0.663,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Agibot/Agibot_Research_Document_zh.md",
+      "urls": 117,
+      "paragraphs": 106,
+      "cited_paragraphs": 54,
+      "coverage": 0.509,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Agibot/Agibot_Research_Document.md",
+      "urls": 117,
+      "paragraphs": 110,
+      "cited_paragraphs": 57,
+      "coverage": 0.518,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/优必选_HKEX9880/优必选_HKEX9880_Research_Document_zh.md",
+      "urls": 117,
+      "paragraphs": 101,
+      "cited_paragraphs": 58,
+      "coverage": 0.574,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Apple_NASDAQ_AAPL/Apple_NASDAQ_AAPL_Research_Document.md",
+      "urls": 117,
+      "paragraphs": 89,
+      "cited_paragraphs": 52,
+      "coverage": 0.584,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/AMD_NASDAQ_AMD/AMD_NASDAQ_AMD_Research_Document.md",
+      "urls": 117,
+      "paragraphs": 105,
+      "cited_paragraphs": 66,
+      "coverage": 0.629,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/双林股份_SZSE300100/双林股份_SZSE300100_Research_Document.md",
+      "urls": 118,
+      "paragraphs": 93,
+      "cited_paragraphs": 55,
+      "coverage": 0.591,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/UBTECH_HKEX9880/UBTECH_HKEX9880_Research_Document.md",
+      "urls": 118,
+      "paragraphs": 68,
+      "cited_paragraphs": 42,
+      "coverage": 0.618,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/UBTECH_HKEX9880/UBTECH_HKEX9880_Research_Document_zh.md",
+      "urls": 118,
+      "paragraphs": 68,
+      "cited_paragraphs": 42,
+      "coverage": 0.618,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/广汽集团_SSE601238_HKEX2238/广汽集团_SSE601238_HKEX2238_Research_Document.md",
+      "urls": 118,
+      "paragraphs": 98,
+      "cited_paragraphs": 61,
+      "coverage": 0.622,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/双林股份_SZSE300100/双林股份_SZSE300100_Research_Document_zh.md",
+      "urls": 118,
+      "paragraphs": 87,
+      "cited_paragraphs": 55,
+      "coverage": 0.632,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/申菱环境_SZSE301018/申菱环境_SZSE301018_Research_Document_zh.md",
+      "urls": 118,
+      "paragraphs": 108,
+      "cited_paragraphs": 71,
+      "coverage": 0.657,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/广汽集团_SSE601238_HKEX2238/广汽集团_SSE601238_HKEX2238_Research_Document_zh.md",
+      "urls": 118,
+      "paragraphs": 90,
+      "cited_paragraphs": 61,
+      "coverage": 0.678,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Midea_SZSE000333/Midea_SZSE000333_Research_Document_zh.md",
+      "urls": 119,
+      "paragraphs": 86,
+      "cited_paragraphs": 54,
+      "coverage": 0.628,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Oracle_NYSE_ORCL/Oracle_NYSE_ORCL_Research_Document.md",
+      "urls": 120,
+      "paragraphs": 100,
+      "cited_paragraphs": 48,
+      "coverage": 0.48,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/NVIDIA_NASDAQ_NVDA/NVIDIA_NASDAQ_NVDA_Research_Document.md",
+      "urls": 120,
+      "paragraphs": 116,
+      "cited_paragraphs": 68,
+      "coverage": 0.586,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Shuanghuan_SZSE002472/Shuanghuan_SZSE002472_Research_Document.md",
+      "urls": 120,
+      "paragraphs": 93,
+      "cited_paragraphs": 56,
+      "coverage": 0.602,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Midea_SZSE000333/Midea_SZSE000333_Research_Document.md",
+      "urls": 120,
+      "paragraphs": 89,
+      "cited_paragraphs": 54,
+      "coverage": 0.607,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/中科曙光_SSE603019/中科曙光_SSE603019_Research_Document_zh.md",
+      "urls": 120,
+      "paragraphs": 94,
+      "cited_paragraphs": 59,
+      "coverage": 0.628,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Shuanghuan_SZSE002472/Shuanghuan_SZSE002472_Research_Document_zh.md",
+      "urls": 120,
+      "paragraphs": 86,
+      "cited_paragraphs": 55,
+      "coverage": 0.64,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/BYD_SZSE002594/BYD_SZSE002594_Research_Document.md",
+      "urls": 122,
+      "paragraphs": 113,
+      "cited_paragraphs": 51,
+      "coverage": 0.451,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/BYD_SZSE002594/BYD_SZSE002594_Research_Document_zh.md",
+      "urls": 122,
+      "paragraphs": 109,
+      "cited_paragraphs": 51,
+      "coverage": 0.468,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Snowflake_NYSE_SNOW/Snowflake_NYSE_SNOW_Research_Document.md",
+      "urls": 122,
+      "paragraphs": 110,
+      "cited_paragraphs": 52,
+      "coverage": 0.473,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/FortiorTech_SSE688279/FortiorTech_SSE688279_Research_Document_zh.md",
+      "urls": 122,
+      "paragraphs": 78,
+      "cited_paragraphs": 41,
+      "coverage": 0.526,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/FortiorTech_SSE688279/FortiorTech_SSE688279_Research_Document.md",
+      "urls": 123,
+      "paragraphs": 79,
+      "cited_paragraphs": 41,
+      "coverage": 0.519,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/国茂股份_SSE603915/国茂股份_SSE603915_Research_Document.md",
+      "urls": 123,
+      "paragraphs": 95,
+      "cited_paragraphs": 53,
+      "coverage": 0.558,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/国茂股份_SSE603915/国茂股份_SSE603915_Research_Document_zh.md",
+      "urls": 123,
+      "paragraphs": 90,
+      "cited_paragraphs": 53,
+      "coverage": 0.589,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/双环传动_SZSE002472/双环传动_SZSE002472_Research_Document_zh.md",
+      "urls": 124,
+      "paragraphs": 106,
+      "cited_paragraphs": 71,
+      "coverage": 0.67,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Orbbec_SSE688322/Orbbec_SSE688322_Research_Document_zh.md",
+      "urls": 125,
+      "paragraphs": 102,
+      "cited_paragraphs": 52,
+      "coverage": 0.51,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/DigitalOcean_NYSE_DOCN/DigitalOcean_NYSE_DOCN_Research_Document.md",
+      "urls": 126,
+      "paragraphs": 96,
+      "cited_paragraphs": 51,
+      "coverage": 0.531,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/TexasInstruments_NASDAQ_TXN/TexasInstruments_NASDAQ_TXN_Research_Document.md",
+      "urls": 126,
+      "paragraphs": 61,
+      "cited_paragraphs": 40,
+      "coverage": 0.656,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Orbbec_SSE688322/Orbbec_SSE688322_Research_Document.md",
+      "urls": 127,
+      "paragraphs": 106,
+      "cited_paragraphs": 52,
+      "coverage": 0.491,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Talen_NASDAQ_TLN/Talen_NASDAQ_TLN_Research_Document.md",
+      "urls": 127,
+      "paragraphs": 91,
+      "cited_paragraphs": 53,
+      "coverage": 0.582,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Duolingo_NASDAQ_DUOL/Duolingo_NASDAQ_DUOL_Research_Document.md",
+      "urls": 127,
+      "paragraphs": 108,
+      "cited_paragraphs": 72,
+      "coverage": 0.667,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Netflix_NASDAQ_NFLX/Netflix_NASDAQ_NFLX_Research_Document.md",
+      "urls": 128,
+      "paragraphs": 109,
+      "cited_paragraphs": 57,
+      "coverage": 0.523,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Leadshine_SZSE002979/Leadshine_SZSE002979_Research_Document.md",
+      "urls": 129,
+      "paragraphs": 91,
+      "cited_paragraphs": 53,
+      "coverage": 0.582,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Leadshine_SZSE002979/Leadshine_SZSE002979_Research_Document_zh.md",
+      "urls": 129,
+      "paragraphs": 88,
+      "cited_paragraphs": 53,
+      "coverage": 0.602,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/长盛轴承_SZSE300718/长盛轴承_SZSE300718_Research_Document.md",
+      "urls": 130,
+      "paragraphs": 96,
+      "cited_paragraphs": 56,
+      "coverage": 0.583,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Meta_NASDAQ_META/Meta_NASDAQ_META_Research_Document.md",
+      "urls": 130,
+      "paragraphs": 97,
+      "cited_paragraphs": 59,
+      "coverage": 0.608,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/长盛轴承_SZSE300718/长盛轴承_SZSE300718_Research_Document_zh.md",
+      "urls": 130,
+      "paragraphs": 88,
+      "cited_paragraphs": 56,
+      "coverage": 0.636,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/TSMC_NYSE_TSM/TSMC_NYSE_TSM_Research_Document.md",
+      "urls": 131,
+      "paragraphs": 95,
+      "cited_paragraphs": 45,
+      "coverage": 0.474,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/智平方科技/智平方科技_Research_Document.md",
+      "urls": 132,
+      "paragraphs": 104,
+      "cited_paragraphs": 42,
+      "coverage": 0.404,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/智平方科技/智平方科技_Research_Document_zh.md",
+      "urls": 132,
+      "paragraphs": 96,
+      "cited_paragraphs": 42,
+      "coverage": 0.438,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/SKHynix_KRX000660/SKHynix_KRX000660_Research_Document.md",
+      "urls": 132,
+      "paragraphs": 86,
+      "cited_paragraphs": 42,
+      "coverage": 0.488,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/SKHynix_KRX_000660/SKHynix_KRX_000660_Research_Document.md",
+      "urls": 132,
+      "paragraphs": 86,
+      "cited_paragraphs": 42,
+      "coverage": 0.488,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/BlackSky_NYSE_BKSY/BlackSky_NYSE_BKSY_Research_Document.md",
+      "urls": 133,
+      "paragraphs": 93,
+      "cited_paragraphs": 52,
+      "coverage": 0.559,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/GEVernova_NYSE_GEV/GEVernova_NYSE_GEV_Research_Document.md",
+      "urls": 136,
+      "paragraphs": 101,
+      "cited_paragraphs": 62,
+      "coverage": 0.614,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Advantest_TSE6857/Advantest_TSE6857_Research_Document.md",
+      "urls": 137,
+      "paragraphs": 98,
+      "cited_paragraphs": 55,
+      "coverage": 0.561,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Xpeng_NYSE_XPEV/Xpeng_NYSE_XPEV_Research_Document_zh.md",
+      "urls": 138,
+      "paragraphs": 83,
+      "cited_paragraphs": 50,
+      "coverage": 0.602,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Alibaba_NYSE_BABA/Alibaba_NYSE_BABA_Research_Document.md",
+      "urls": 138,
+      "paragraphs": 85,
+      "cited_paragraphs": 55,
+      "coverage": 0.647,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/WesternDigital_NASDAQ_WDC/WesternDigital_NASDAQ_WDC_Research_Document.md",
+      "urls": 138,
+      "paragraphs": 100,
+      "cited_paragraphs": 68,
+      "coverage": 0.68,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Xpeng_NYSE_XPEV/Xpeng_NYSE_XPEV_Research_Document.md",
+      "urls": 139,
+      "paragraphs": 83,
+      "cited_paragraphs": 50,
+      "coverage": 0.602,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Infineon_XETR_IFX/Infineon_XETR_IFX_Research_Document.md",
+      "urls": 140,
+      "paragraphs": 112,
+      "cited_paragraphs": 53,
+      "coverage": 0.473,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Omnivision_SSE603501/Omnivision_SSE603501_Research_Document.md",
+      "urls": 140,
+      "paragraphs": 114,
+      "cited_paragraphs": 62,
+      "coverage": 0.544,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Omnivision_SSE603501/Omnivision_SSE603501_Research_Document_zh.md",
+      "urls": 140,
+      "paragraphs": 105,
+      "cited_paragraphs": 62,
+      "coverage": 0.59,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Tencent_HKEX0700/Tencent_HKEX0700_Research_Document.md",
+      "urls": 141,
+      "paragraphs": 78,
+      "cited_paragraphs": 50,
+      "coverage": 0.641,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Tencent_HKEX0700/Tencent_HKEX0700_Research_Document_zh.md",
+      "urls": 141,
+      "paragraphs": 73,
+      "cited_paragraphs": 50,
+      "coverage": 0.685,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/HorizonRobotics_HKEX9660/HorizonRobotics_HKEX9660_Research_Document.md",
+      "urls": 142,
+      "paragraphs": 72,
+      "cited_paragraphs": 39,
+      "coverage": 0.542,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/HorizonRobotics_HKEX9660/HorizonRobotics_HKEX9660_Research_Document_zh.md",
+      "urls": 142,
+      "paragraphs": 67,
+      "cited_paragraphs": 39,
+      "coverage": 0.582,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Lumentum_NASDAQ_LITE/Lumentum_NASDAQ_LITE_Research_Document.md",
+      "urls": 144,
+      "paragraphs": 91,
+      "cited_paragraphs": 59,
+      "coverage": 0.648,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/ASTSpaceMobile_NASDAQ_ASTS/ASTSpaceMobile_NASDAQ_ASTS_Research_Document.md",
+      "urls": 146,
+      "paragraphs": 92,
+      "cited_paragraphs": 57,
+      "coverage": 0.62,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Xiaomi_HKEX1810/Xiaomi_HKEX1810_Research_Document.md",
+      "urls": 147,
+      "paragraphs": 93,
+      "cited_paragraphs": 46,
+      "coverage": 0.495,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Foxconn_TWSE2317/Foxconn_TWSE2317_Research_Document.md",
+      "urls": 147,
+      "paragraphs": 76,
+      "cited_paragraphs": 38,
+      "coverage": 0.5,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Dobot_HKEX2432/Dobot_HKEX2432_Research_Document.md",
+      "urls": 147,
+      "paragraphs": 100,
+      "cited_paragraphs": 52,
+      "coverage": 0.52,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Foxconn_TWSE2317/Foxconn_TWSE2317_Research_Document_zh.md",
+      "urls": 147,
+      "paragraphs": 73,
+      "cited_paragraphs": 38,
+      "coverage": 0.521,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Xiaomi_HKEX1810/Xiaomi_HKEX1810_Research_Document_zh.md",
+      "urls": 147,
+      "paragraphs": 87,
+      "cited_paragraphs": 46,
+      "coverage": 0.529,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Dobot_HKEX2432/Dobot_HKEX2432_Research_Document_zh.md",
+      "urls": 147,
+      "paragraphs": 94,
+      "cited_paragraphs": 52,
+      "coverage": 0.553,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/银河通用/银河通用_Research_Document.md",
+      "urls": 148,
+      "paragraphs": 109,
+      "cited_paragraphs": 55,
+      "coverage": 0.505,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/银河通用/银河通用_Research_Document_zh.md",
+      "urls": 148,
+      "paragraphs": 106,
+      "cited_paragraphs": 55,
+      "coverage": 0.519,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/华为/华为_Research_Document.md",
+      "urls": 149,
+      "paragraphs": 92,
+      "cited_paragraphs": 45,
+      "coverage": 0.489,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/华为/华为_Research_Document_zh.md",
+      "urls": 149,
+      "paragraphs": 88,
+      "cited_paragraphs": 45,
+      "coverage": 0.511,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/MiniMax_HKEX100/MiniMax_HKEX100_Research_Document_zh.md",
+      "urls": 149,
+      "paragraphs": 75,
+      "cited_paragraphs": 42,
+      "coverage": 0.56,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/福莱新材_SSE605488/福莱新材_SSE605488_Research_Document.md",
+      "urls": 149,
+      "paragraphs": 91,
+      "cited_paragraphs": 60,
+      "coverage": 0.659,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Moons_SSE603728/Moons_SSE603728_Research_Document.md",
+      "urls": 153,
+      "paragraphs": 107,
+      "cited_paragraphs": 55,
+      "coverage": 0.514,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Moons_SSE603728/Moons_SSE603728_Research_Document_zh.md",
+      "urls": 153,
+      "paragraphs": 96,
+      "cited_paragraphs": 55,
+      "coverage": 0.573,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Unitree/Unitree_Research_Document.md",
+      "urls": 153,
+      "paragraphs": 85,
+      "cited_paragraphs": 50,
+      "coverage": 0.588,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Unitree/Unitree_Research_Document_zh.md",
+      "urls": 153,
+      "paragraphs": 81,
+      "cited_paragraphs": 50,
+      "coverage": 0.617,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Sanhua_SZSE002050/Sanhua_SZSE002050_Research_Document.md",
+      "urls": 154,
+      "paragraphs": 97,
+      "cited_paragraphs": 56,
+      "coverage": 0.577,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Sanhua_SZSE002050/Sanhua_SZSE002050_Research_Document_zh.md",
+      "urls": 154,
+      "paragraphs": 90,
+      "cited_paragraphs": 56,
+      "coverage": 0.622,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/开普勒探索机器人/开普勒探索机器人_Research_Document.md",
+      "urls": 155,
+      "paragraphs": 95,
+      "cited_paragraphs": 42,
+      "coverage": 0.442,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/开普勒探索机器人/开普勒探索机器人_Research_Document_zh.md",
+      "urls": 155,
+      "paragraphs": 83,
+      "cited_paragraphs": 42,
+      "coverage": 0.506,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/星动纪元/星动纪元_Research_Document_zh.md",
+      "urls": 159,
+      "paragraphs": 86,
+      "cited_paragraphs": 42,
+      "coverage": 0.488,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Hengli_SSE601100/Hengli_SSE601100_Research_Document.md",
+      "urls": 159,
+      "paragraphs": 87,
+      "cited_paragraphs": 46,
+      "coverage": 0.529,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Hengli_SSE601100/Hengli_SSE601100_Research_Document_zh.md",
+      "urls": 159,
+      "paragraphs": 85,
+      "cited_paragraphs": 46,
+      "coverage": 0.541,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Wolong_SSE600580/Wolong_SSE600580_Research_Document.md",
+      "urls": 159,
+      "paragraphs": 82,
+      "cited_paragraphs": 47,
+      "coverage": 0.573,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Wolong_SSE600580/Wolong_SSE600580_Research_Document_zh.md",
+      "urls": 159,
+      "paragraphs": 85,
+      "cited_paragraphs": 53,
+      "coverage": 0.624,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/星动纪元/星动纪元_Research_Document.md",
+      "urls": 160,
+      "paragraphs": 92,
+      "cited_paragraphs": 42,
+      "coverage": 0.457,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/诺亦腾/诺亦腾_Research_Document.md",
+      "urls": 162,
+      "paragraphs": 119,
+      "cited_paragraphs": 54,
+      "coverage": 0.454,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/诺亦腾/诺亦腾_Research_Document_zh.md",
+      "urls": 162,
+      "paragraphs": 110,
+      "cited_paragraphs": 54,
+      "coverage": 0.491,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/比亚迪_HKEX1211/比亚迪_HKEX1211_Research_Document_zh.md",
+      "urls": 167,
+      "paragraphs": 115,
+      "cited_paragraphs": 69,
+      "coverage": 0.6,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/云深处科技/云深处科技_Research_Document.md",
+      "urls": 172,
+      "paragraphs": 120,
+      "cited_paragraphs": 63,
+      "coverage": 0.525,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/云深处科技/云深处科技_Research_Document_zh.md",
+      "urls": 172,
+      "paragraphs": 116,
+      "cited_paragraphs": 63,
+      "coverage": 0.543,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/自变量机器人/自变量机器人_Research_Document_zh.md",
+      "urls": 173,
+      "paragraphs": 89,
+      "cited_paragraphs": 39,
+      "coverage": 0.438,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Samsung_KRX_005930/Samsung_KRX_005930_Research_Document.md",
+      "urls": 173,
+      "paragraphs": 101,
+      "cited_paragraphs": 54,
+      "coverage": 0.535,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/众擎机器人/众擎机器人_Research_Document.md",
+      "urls": 182,
+      "paragraphs": 114,
+      "cited_paragraphs": 60,
+      "coverage": 0.526,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/众擎机器人/众擎机器人_Research_Document_zh.md",
+      "urls": 182,
+      "paragraphs": 101,
+      "cited_paragraphs": 60,
+      "coverage": 0.594,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/SamsungElectronics_KRX005930/SamsungElectronics_KRX005930_Research_Document.md",
+      "urls": 187,
+      "paragraphs": 92,
+      "cited_paragraphs": 48,
+      "coverage": 0.522,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Cadence_NASDAQ_CDNS/Cadence_NASDAQ_CDNS_Research_Document.md",
+      "urls": 189,
+      "paragraphs": 115,
+      "cited_paragraphs": 72,
+      "coverage": 0.626,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/乐聚机器人/乐聚机器人_Research_Document.md",
+      "urls": 192,
+      "paragraphs": 76,
+      "cited_paragraphs": 35,
+      "coverage": 0.461,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/乐聚机器人/乐聚机器人_Research_Document_zh.md",
+      "urls": 192,
+      "paragraphs": 68,
+      "cited_paragraphs": 35,
+      "coverage": 0.515,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/星海图/星海图_Research_Document.md",
+      "urls": 192,
+      "paragraphs": 97,
+      "cited_paragraphs": 51,
+      "coverage": 0.526,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/星海图/星海图_Research_Document_zh.md",
+      "urls": 192,
+      "paragraphs": 93,
+      "cited_paragraphs": 51,
+      "coverage": 0.548,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Fourier/Fourier_Research_Document.md",
+      "urls": 192,
+      "paragraphs": 127,
+      "cited_paragraphs": 71,
+      "coverage": 0.559,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Fourier/Fourier_Research_Document_zh.md",
+      "urls": 192,
+      "paragraphs": 120,
+      "cited_paragraphs": 71,
+      "coverage": 0.592,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/地瓜机器人/地瓜机器人_Research_Document.md",
+      "urls": 196,
+      "paragraphs": 108,
+      "cited_paragraphs": 55,
+      "coverage": 0.509,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/地瓜机器人/地瓜机器人_Research_Document_zh.md",
+      "urls": 196,
+      "paragraphs": 103,
+      "cited_paragraphs": 55,
+      "coverage": 0.534,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/逐际动力/逐际动力_Research_Document.md",
+      "urls": 209,
+      "paragraphs": 114,
+      "cited_paragraphs": 49,
+      "coverage": 0.43,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/逐际动力/逐际动力_Research_Document_zh.md",
+      "urls": 209,
+      "paragraphs": 103,
+      "cited_paragraphs": 49,
+      "coverage": 0.476,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/加速进化/加速进化_Research_Document.md",
+      "urls": 218,
+      "paragraphs": 90,
+      "cited_paragraphs": 43,
+      "coverage": 0.478,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/加速进化/加速进化_Research_Document_zh.md",
+      "urls": 218,
+      "paragraphs": 81,
+      "cited_paragraphs": 43,
+      "coverage": 0.531,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/Alibaba_HKEX9988/Alibaba_HKEX9988_Research_Document.md",
+      "urls": 218,
+      "paragraphs": 89,
+      "cited_paragraphs": 62,
+      "coverage": 0.697,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "unlisted/魔法原子/魔法原子_Research_Document_zh.md",
+      "urls": 224,
+      "paragraphs": 81,
+      "cited_paragraphs": 34,
+      "coverage": 0.42,
+      "tier": "T3_mid",
+      "status": "pending"
+    },
+    {
+      "path": "company/沐曦股份_SSE688802/沐曦股份_SSE688802_Research_Document_zh.md",
+      "urls": 87,
+      "paragraphs": 88,
+      "cited_paragraphs": 64,
+      "coverage": 0.727,
+      "tier": "T4_high",
+      "status": "pending"
+    },
+    {
+      "path": "company/潍柴动力_SZSE000338/潍柴动力_SZSE000338_Research_Document_zh.md",
+      "urls": 96,
+      "paragraphs": 81,
+      "cited_paragraphs": 57,
+      "coverage": 0.704,
+      "tier": "T4_high",
+      "status": "pending"
+    },
+    {
+      "path": "company/中际旭创_SZSE300308/中际旭创_SZSE300308_Research_Document_zh.md",
+      "urls": 97,
+      "paragraphs": 84,
+      "cited_paragraphs": 59,
+      "coverage": 0.702,
+      "tier": "T4_high",
+      "status": "pending"
+    },
+    {
+      "path": "company/恒立液压_SSE601100/恒立液压_SSE601100_Research_Document_zh.md",
+      "urls": 101,
+      "paragraphs": 75,
+      "cited_paragraphs": 62,
+      "coverage": 0.827,
+      "tier": "T4_high",
+      "status": "pending"
+    },
+    {
+      "path": "company/奥比中光_SSE688322/奥比中光_SSE688322_Research_Document_zh.md",
+      "urls": 107,
+      "paragraphs": 83,
+      "cited_paragraphs": 64,
+      "coverage": 0.771,
+      "tier": "T4_high",
+      "status": "pending"
+    },
+    {
+      "path": "company/Baidu_NASDAQ_BIDU/Baidu_NASDAQ_BIDU_Research_Document.md",
+      "urls": 111,
+      "paragraphs": 69,
+      "cited_paragraphs": 50,
+      "coverage": 0.725,
+      "tier": "T4_high",
+      "status": "pending"
+    },
+    {
+      "path": "company/迈为股份_SZSE300751/迈为股份_SZSE300751_Research_Document_zh.md",
+      "urls": 119,
+      "paragraphs": 115,
+      "cited_paragraphs": 81,
+      "coverage": 0.704,
+      "tier": "T4_high",
+      "status": "pending"
+    },
+    {
+      "path": "company/Baidu_NASDAQ_BIDU/Baidu_NASDAQ_BIDU_Research_Document_zh.md",
+      "urls": 123,
+      "paragraphs": 72,
+      "cited_paragraphs": 55,
+      "coverage": 0.764,
+      "tier": "T4_high",
+      "status": "pending"
+    },
+    {
+      "path": "company/三花智控_SZSE002050/三花智控_SZSE002050_Research_Document_zh.md",
+      "urls": 123,
+      "paragraphs": 77,
+      "cited_paragraphs": 59,
+      "coverage": 0.766,
+      "tier": "T4_high",
+      "status": "pending"
+    },
+    {
+      "path": "company/极智嘉_HKEX2590/极智嘉_HKEX2590_Research_Document_zh.md",
+      "urls": 126,
+      "paragraphs": 82,
+      "cited_paragraphs": 59,
+      "coverage": 0.72,
+      "tier": "T4_high",
+      "status": "pending"
+    },
+    {
+      "path": "company/三花智控_HKEX2050/三花智控_HKEX2050_Research_Document_zh.md",
+      "urls": 131,
+      "paragraphs": 83,
+      "cited_paragraphs": 64,
+      "coverage": 0.771,
+      "tier": "T4_high",
+      "status": "pending"
+    },
+    {
+      "path": "company/布鲁可_HKEX0325/布鲁可_HKEX0325_Research_Document_zh.md",
+      "urls": 144,
+      "paragraphs": 78,
+      "cited_paragraphs": 55,
+      "coverage": 0.705,
+      "tier": "T4_high",
+      "status": "pending"
+    },
+    {
+      "path": "company/布鲁可_HKEX2590/布鲁可_HKEX2590_Research_Document_zh.md",
+      "urls": 144,
+      "paragraphs": 78,
+      "cited_paragraphs": 55,
+      "coverage": 0.705,
+      "tier": "T4_high",
+      "status": "pending"
+    },
+    {
+      "path": "company/Alphabet_NASDAQ_GOOG/Alphabet_NASDAQ_GOOG_Research_Document.md",
+      "urls": 177,
+      "paragraphs": 94,
+      "cited_paragraphs": 69,
+      "coverage": 0.734,
+      "tier": "T4_high",
+      "status": "pending"
+    },
+    {
+      "path": "company/Alibaba_HKEX9988/Alibaba_HKEX9988_Research_Document_zh.md",
+      "urls": 217,
+      "paragraphs": 86,
+      "cited_paragraphs": 62,
+      "coverage": 0.721,
+      "tier": "T4_high",
+      "status": "pending"
+    }
+  ]
+}

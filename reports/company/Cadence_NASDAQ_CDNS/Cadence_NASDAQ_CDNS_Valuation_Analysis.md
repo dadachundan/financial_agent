@@ -1,20 +1,20 @@
 # Cadence (CDNS) — Valuation Analysis
 
 **Valuation date:** 2026-05-20
-**Current price:** $338.19
-**Market cap:** $93.3B
-**Enterprise value:** $92.7B
-**Diluted shares:** 273.3M
+**Current price:** $338.19 ([Yahoo Finance — CDNS quote](https://finance.yahoo.com/quote/CDNS/))
+**Market cap:** $93.3B ([Yahoo Finance — CDNS quote](https://finance.yahoo.com/quote/CDNS/))
+**Enterprise value:** $92.7B (derived from market cap + total debt – cash per [CDNS 10-K FY2025](https://www.sec.gov/Archives/edgar/data/0000813672/000081367226000016/cdns-20251231.htm))
+**Diluted shares:** 273.3M ([CDNS 10-K FY2025, cover page & shares outstanding](https://www.sec.gov/Archives/edgar/data/0000813672/000081367226000016/cdns-20251231.htm))
 
 ---
 
 ## Executive Summary
 
-We initiate coverage of **Cadence (CDNS)** with a **BUY** recommendation and a **12-month price target of $400**, implying **18.3% upside** from the current price of $338.19. Our price target is anchored to:
+We initiate coverage of **Cadence (CDNS)** with a **BUY** recommendation and a **12-month price target of $400**, implying **18.3% upside** from the current price of $338.19 ([Yahoo Finance — CDNS quote, 2026-05-20](https://finance.yahoo.com/quote/CDNS/)). Our price target is anchored to:
 
-- A discounted cash flow (DCF) valuation that incorporates a WACC of **9.4%** and a terminal growth rate of **3.0%**, yielding a DCF value per share of **$193.99**.
-- A peer-comp framework using mission-critical software and design-IP comparables that yields an implied per-share value of **$300.20** on a forward P/E basis.
-- A blended methodology weighting DCF (30%), forward P/E comps (30%), EV/Revenue and EV/EBITDA comps (15% each), and analyst consensus (10%).
+- A discounted cash flow (DCF) valuation that incorporates a WACC of **9.4%** (built on the [10-yr UST yield curve](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026) and [Damodaran's January 2026 implied ERP of 4.23%](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histimpl.html)) and a terminal growth rate of **3.0%**, yielding a DCF value per share of **$193.99**.
+- A peer-comp framework using mission-critical software and design-IP comparables that yields an implied per-share value of **$300.20** on a forward P/E basis ([Synopsys FY2025 10-K](https://www.sec.gov/Archives/edgar/data/0000883241/000088324125000028/snps-20251031.htm); [Ansys FY2024 10-K](https://www.sec.gov/Archives/edgar/data/0001013462/000101346225000009/anss-20241231.htm); peer multiples from [Yahoo Finance — CDNS](https://finance.yahoo.com/quote/CDNS/)).
+- A blended methodology weighting DCF (30%), forward P/E comps (30%), EV/Revenue and EV/EBITDA comps (15% each), and analyst consensus (10%) — sell-side consensus median target ~$380 ([MarketScreener — CDNS consensus](https://www.marketscreener.com/quote/stock/CADENCE-DESIGN-SYSTEMS-IN-8724/consensus/)).
 
 ---
 

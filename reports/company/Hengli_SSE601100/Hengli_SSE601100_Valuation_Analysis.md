@@ -2,18 +2,18 @@
 
 **Date:** 19 May 2026
 **Coverage:** Initiating
-**Current price:** RMB 119.60 (close 16-May-2026)
+**Current price:** RMB 119.60 (close 16-May-2026, [东方财富 行情, 601100](https://quote.eastmoney.com/sh601100.html))
 **12-month price target:** **RMB 106**
 **Recommendation:** **HOLD**
-**Implied return:** **–11%** (price-only); **–9%** (incl. ~2% dividend yield)
+**Implied return:** **–11%** (price-only); **–9%** (incl. ~2% dividend yield, per [江苏恒立液压股份有限公司2025年年度报告, p. 11](http://static.cninfo.com.cn/finalpage/2026-04-21/1225127026.PDF))
 
 ---
 
 ## 1. Summary verdict
 
-We initiate coverage of **Jiangsu Hengli Hydraulic Co., Ltd. (SSE:601100)** with a **HOLD** rating and a 12-month price target of **RMB 106 per share**, implying ~11% downside. Hengli is, on a fundamental basis, **the highest-quality industrial-hydraulics franchise in China** — and arguably one of the best globally on a margin- and ROIC-adjusted basis (FY25 ROE 16.6%, EBITDA margin 33%, ROIC ~22%). However, the share price already reflects (i) full credit for the cyclical excavator recovery currently underway, (ii) a substantial premium for the linear-drive / humanoid-roller-screw narrative, and (iii) top-decile valuation multiples in the 3-year band. Our base-case DCF generates only **RMB 67/share** (–44% to spot), and even after assigning weight to a peer-multiple framework and an explicit "humanoid optionality" overlay, the blended fair value sits below the current price.
+We initiate coverage of **Jiangsu Hengli Hydraulic Co., Ltd. (SSE:601100)** with a **HOLD** rating and a 12-month price target of **RMB 106 per share**, implying ~11% downside. Hengli is, on a fundamental basis, **the highest-quality industrial-hydraulics franchise in China** — and arguably one of the best globally on a margin- and ROIC-adjusted basis (FY25 ROE 16.6%, EBITDA margin 33%, ROIC ~22%) ([江苏恒立液压股份有限公司2025年年度报告, p. 6–11](http://static.cninfo.com.cn/finalpage/2026-04-21/1225127026.PDF); [恒立液压的前世今生：2025年营收109.41亿元居行业首位, 新浪财经 2026-04-28](https://finance.sina.com.cn/stock/aiassist/agqsjs/2026-04-28/doc-inhwaicx1561961.shtml)). However, the share price already reflects (i) full credit for the cyclical excavator recovery currently underway ([CCMA: China's excavator sales leap 17% YoY in 2025, Mysteel](https://www.mysteel.net/news/5109649-ccma-chinas-excavator-sales-leap-17-yoy-in-2025)), (ii) a substantial premium for the linear-drive / humanoid-roller-screw narrative ([恒立液压：勇立潮头，线性驱动再造新恒立, 慧聪 2025-03-28](https://cm.hczyw.com/2025/0328/357974.html)), and (iii) top-decile valuation multiples in the 3-year band ([恒立液压 PE 历史分位数, 知了财报](https://www.zhiliaocaibao.com/gz_pe/601100_%E6%81%92%E7%AB%8B%E6%B6%B2%E5%8E%8B_9/)). Our base-case DCF generates only **RMB 67/share** (–44% to spot), and even after assigning weight to a peer-multiple framework and an explicit "humanoid optionality" overlay, the blended fair value sits below the current price.
 
-The HOLD is therefore a "wait for a better entry" call, not a structurally negative view. We would turn **BUY at RMB 95 or below** (where the embedded humanoid premium becomes asymmetric again) and **SELL above RMB 145** (where the implied probability of humanoid-supply-chain certification exceeds what we view as reasonable).
+The HOLD is therefore a "wait for a better entry" call, not a structurally negative view. We would turn **BUY at RMB 95 or below** (where the embedded humanoid premium becomes asymmetric again) and **SELL above RMB 145** (where the implied probability of humanoid-supply-chain certification exceeds what we view as reasonable for the 12-month horizon given the precedent re-rating in Tuopu and Shuanglin, [Tuopu Group's 2025 Revenue Hits RMB 29.58B, Gasgoo 2026](https://autonews.gasgoo.com/articles/news/tuopu-groups-2025-revenue-hits-rmb-2958b-with-new-growth-engines-taking-shape-2036461499797635072); [Shuanglin Corp 2025 Revenue 5.484 Billion Yuan, Gasgoo 2026](https://autonews.gasgoo.com/articles/news/shuanglin-corp-2025-revenue-5484-billion-yuan-robotics-business-poised-for-takeoff-2036804563502268416)).
 
 | Methodology weight in blended PT | Weight | Mid-point (RMB) | Comment |
 |---|---:|---:|---|
@@ -31,7 +31,7 @@ The HOLD is therefore a "wait for a better entry" call, not a structurally negat
 
 ### 2.1 Methodology
 
-We construct a standard 5-year explicit forecast (FY2026E–FY2030E) plus a Gordon-growth terminal value, discounted using the company's WACC under the mid-year convention. All cash flows are unlevered FCF (NOPAT + D&A − CapEx − ∆NWC). The financial model is in the companion Excel file (`Hengli_SSE601100_Financial_Model_2026-05-19.xlsx`), tabs **DCF**, **DCF Inputs**, **Sensitivity**.
+We construct a standard 5-year explicit forecast (FY2026E–FY2030E) plus a Gordon-growth terminal value, discounted using the company's WACC under the mid-year convention. Inputs anchor to FY25 financials and segment disclosures in [江苏恒立液压股份有限公司2025年年度报告, p. 6–11, 53–57](http://static.cninfo.com.cn/finalpage/2026-04-21/1225127026.PDF). All cash flows are unlevered FCF (NOPAT + D&A − CapEx − ∆NWC). The financial model is in the companion Excel file (`Hengli_SSE601100_Financial_Model_2026-05-19.xlsx`), tabs **DCF**, **DCF Inputs**, **Sensitivity**.
 
 ### 2.2 Key inputs
 

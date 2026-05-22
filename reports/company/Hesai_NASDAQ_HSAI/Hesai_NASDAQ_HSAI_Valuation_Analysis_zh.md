@@ -1,12 +1,12 @@
 # 禾赛科技(NASDAQ:HSAI / HKEX:2525)——估值分析报告
 
 **日期:** 2026年5月19日
-**现价:** 22.44 美元 / ADS(2026-05-15 收盘价)
+**现价:** 22.44 美元 / ADS(2026-05-15 收盘价,见 [Yahoo Finance — HSAI Historical Prices](https://finance.yahoo.com/quote/HSAI/history))
 **12个月目标价:** **28 美元 / ADS**
 **投资评级:** **买入 / 增持(BUY / OVERWEIGHT)**
 **隐含上行空间:** **+24.8%**
 
-估值方法:加权平均法,包含 DCF(35%——戈登增长永续 + 退出倍数)、远期 EV/Revenue(40%——NTM + NTM+1)、EV/EBITDA FY28E(15%)和远期 P/E(10%)。所有量化输出均来自财务模型 `Hesai_NASDAQ_HSAI_Financial_Model_2026-05-19.xlsx`(标签页 **DCF**、**Sensitivity**、**Comps**、**Valuation Summary**)。禾赛以人民币为报告货币;股权价值按 USD/RMB 7.30 换算为美元。
+估值方法:加权平均法,包含 DCF(35%——戈登增长永续 + 退出倍数)、远期 EV/Revenue(40%——NTM + NTM+1)、EV/EBITDA FY28E(15%)和远期 P/E(10%)。所有量化输出基于公司最新披露的 FY2025 财务数据([Hesai Group Form 6-K, March 24, 2026 — Q4 and Full Year 2025 Results](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm))与 [Hesai 2024 20-F](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm) 中的历史分部数据,沿用财务模型 `Hesai_NASDAQ_HSAI_Financial_Model_2026-05-19.xlsx` 中的标签页 **DCF**、**Sensitivity**、**Comps**、**Valuation Summary**。禾赛以人民币为报告货币([Hesai 2024 20-F, "Operating and Financial Review"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm));股权价值按 USD/RMB 7.30 换算为美元。
 
 ---
 

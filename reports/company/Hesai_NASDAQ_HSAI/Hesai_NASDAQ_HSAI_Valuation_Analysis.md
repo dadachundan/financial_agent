@@ -1,12 +1,12 @@
 # HESAI GROUP (NASDAQ:HSAI / HKEX:2525) — VALUATION ANALYSIS
 
 **Date:** 2026-05-19
-**Current price:** US$22.44 / ADS (close 2026-05-15)
+**Current price:** US$22.44 / ADS (close 2026-05-15) ([Yahoo Finance — HSAI Key Statistics, accessed 2026-05-20](https://finance.yahoo.com/quote/HSAI/key-statistics/))
 **12-month price target:** **US$28 / ADS**
 **Recommendation:** **BUY / OVERWEIGHT**
 **Implied upside:** **+24.8%**
 
-Valuation methodology: weighted average of DCF (35% — Gordon perpetuity + exit multiple), forward EV/Revenue (40% — NTM + NTM+1), EV/EBITDA FY28E (15%), and forward P/E (10%). All quantitative outputs flow from the financial model at `Hesai_NASDAQ_HSAI_Financial_Model_2026-05-19.xlsx` (tabs **DCF**, **Sensitivity**, **Comps**, **Valuation Summary**). Hesai reports in RMB; equity values converted at USD/RMB 7.30.
+Valuation methodology: weighted average of DCF (35% — Gordon perpetuity + exit multiple), forward EV/Revenue (40% — NTM + NTM+1), EV/EBITDA FY28E (15%), and forward P/E (10%). All quantitative outputs flow from the financial model at `Hesai_NASDAQ_HSAI_Financial_Model_2026-05-19.xlsx` (tabs **DCF**, **Sensitivity**, **Comps**, **Valuation Summary**). Hesai reports in RMB ([Hesai 2024 20-F, "Item 5 — Operating and Financial Review"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)); equity values converted at USD/RMB 7.30.
 
 ---
 
