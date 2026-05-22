@@ -55,7 +55,7 @@ The most informative thing about that snapshot is the **spread between TTM P/E (
 
 *Source: [Yahoo Finance, retrieved 2026-05-20](https://finance.yahoo.com/quote/MU/key-statistics).*
 
-Read together: TTM P/S of 14.1× is the highest in MU's listed history (median 2018–2023 was 2.4×–4.6× per company filings), and reflects the **AI-memory premium** the market is pricing — HBM is structurally short, MU's CMBU revenue grew 257% in FY2025, and HBM4 sample shipments are positioning the company for the Blackwell-Ultra / Rubin generation of NVDA/AMD accelerators (see Section 4). On forward earnings, however, MU is one of the cheapest names in semi at 7.1× — a classic late-cycle setup where the market is *both* paying up for present revenue *and* assuming the cycle peaks. Negative downside scenario: if HBM pricing normalizes by FY2027 and the broader DRAM market reverts toward 3-year mean ASP, peak EPS could compress 40–60%, and an 18–22× P/E on trough EPS would imply meaningful multiple compression. We flag this in Section 9 as a **valuation / multiple-compression** risk.
+Read together: TTM P/S of 14.1× is the highest in MU's listed history (10-year P/S median ~2.76×, range 0.99×–14.92× per [Macrotrends MU Price-to-Sales history](https://www.macrotrends.net/stocks/charts/MU/micron-technology/price-sales)), and reflects the **AI-memory premium** the market is pricing — HBM is structurally short, MU's CMBU revenue grew 257% in FY2025, and HBM4 sample shipments are positioning the company for the Blackwell-Ultra / Rubin generation of NVDA/AMD accelerators (see Section 4) ([Micron HBM4 sample press release, 2025-06-10](https://www.globenewswire.com/news-release/2025/06/10/3096784/14450/en/Micron-Ships-HBM4-to-Key-Customers-to-Power-Next-Gen-AI-Platforms.html)). On forward earnings, however, MU is one of the cheapest names in semi at 7.1× — a classic late-cycle setup where the market is *both* paying up for present revenue *and* assuming the cycle peaks ([Yahoo Finance MU key statistics, retrieved 2026-05-20](https://finance.yahoo.com/quote/MU/key-statistics)). Negative downside scenario: if HBM pricing normalizes by FY2027 and the broader DRAM market reverts toward 3-year mean ASP, peak EPS could compress 40–60%, and an 18–22× P/E on trough EPS would imply meaningful multiple compression — see [TrendForce, "Memory Price Rally May Run Past 2028," 2025-12-02](https://www.trendforce.com/news/2025/12/02/news-memory-price-rally-may-run-past-2028-as-samsung-sk-hynix-reportedly-cautious-on-expansion/) for the bull-case timing; we flag this in Section 9 as a **valuation / multiple-compression** risk.
 
 ---
 
@@ -81,13 +81,13 @@ timeline
 
 *Sources: [Micron 2025 10-K Item 1 Business, "Executive Officers", Note 13 (CHIPS funding), Subsequent Events](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm).*
 
-**Strategic pivots worth understanding.**
+**Strategic pivots worth understanding** ([Micron 2025 10-K Item 1 Business](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 
-- **Elpida acquisition (2013).** Micron's purchase of bankrupt Japanese DRAM maker Elpida (and its Hiroshima fab and Rexchip/Inotera Taiwan operations) consolidated the global DRAM industry from five players to three (Micron / Samsung / SK Hynix). It was a once-in-a-decade strategic move: the deal added mobile-DRAM expertise (which Micron lacked), doubled wafer capacity, and structurally improved DRAM pricing for the entire industry. Subsequent buyouts of the Inotera stake (2016) completed the integration.
-- **From NAND JV partner to NAND independent (2018–2021).** Micron exited the long-running IM Flash JV with Intel, taking sole ownership of the Lehi, UT fab. Three years later it sold Lehi to Texas Instruments (2021) — a deliberate footprint shrink as Micron concentrated NAND R&D in Singapore. The hindsight read: Micron deprioritized NAND capacity additions early, which positioned it well for the FY24–25 NAND tightness.
-- **HBM ramp (2024–present).** Micron entered HBM late vs. SK Hynix and Samsung but leapfrogged with HBM3E 8-high (24GB) at the 1-beta node, qualified into Nvidia H200, and now has HBM3E 12-high (36GB) as the majority of shipments and HBM4 36GB 12-high samples shipped ([10-K FY2025 Item 1 Business](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)). HBM revenue is the single biggest swing factor in the FY25/FY26 model.
+- **Elpida acquisition (2013).** Micron's purchase of bankrupt Japanese DRAM maker Elpida (and its Hiroshima fab and Rexchip/Inotera Taiwan operations) consolidated the global DRAM industry from five players to three (Micron / Samsung / SK Hynix). It was a once-in-a-decade strategic move: the deal added mobile-DRAM expertise (which Micron lacked), doubled wafer capacity, and structurally improved DRAM pricing for the entire industry. Subsequent buyouts of the Inotera stake (2016) completed the integration ([Micron 8-K, Elpida closing, 2013-07-31](https://www.sec.gov/Archives/edgar/data/0000723125/000072312513000133/form8k-elpidaclosingpr.htm)).
+- **From NAND JV partner to NAND independent (2018–2021).** Micron exited the long-running IM Flash JV with Intel, taking sole ownership of the Lehi, UT fab. Three years later it sold Lehi to Texas Instruments (2021) — a deliberate footprint shrink as Micron concentrated NAND R&D in Singapore. The hindsight read: Micron deprioritized NAND capacity additions early, which positioned it well for the FY24–25 NAND tightness ([Micron 2025 10-K Item 1 Business](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
+- **HBM ramp (2024–present).** Micron entered HBM late vs. SK Hynix and Samsung but leapfrogged with HBM3E 8-high (24GB) at the 1-beta node, qualified into Nvidia H200 ([Micron HBM3E volume-production press release, 2024-02-26](https://videocardz.com/press-release/micron-starts-volume-production-of-hbm3e-memory-for-nvidia-h200-tensor-core-gpu)), and now has HBM3E 12-high (36GB) as the majority of shipments and HBM4 36GB 12-high samples shipped ([10-K FY2025 Item 1 Business](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)). HBM revenue is the single biggest swing factor in the FY25/FY26 model.
 
-**Recent developments (FY2025–early FY2026).**
+**Recent developments (FY2025–early FY2026)** — sources detailed per bullet below ([Micron 2025 10-K, Item 1 / Item 7](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 
 - **Q3-FY2025 segment reorganization.** Micron split the former "Compute & Networking Business Unit" into **CMBU** (hyperscale + HBM) and **CDBU** (mid-tier cloud + OEM data center + data-center NAND/SSD). All prior-period segments were retrospectively restated ([10-K FY2025 Item 7 Segment Discussion](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 - **CHIPS Act direct funding agreements.** December 9, 2024: agreements signed with the U.S. Department of Commerce for **up to $6.1B** in direct funding for fabs in Boise, ID and Clay, NY. June 11, 2025: amendments added a second planned Boise fab; the same June 2025 amendment cycle added a direct funding agreement for the Manassas, VA expansion ([10-K FY2025 Item 1A, "CHIPS Act direct funding"](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
@@ -124,13 +124,13 @@ The Board comprises a majority of independent directors and uses a single-class 
 
 ### Track-record synthesis
 
-Mehrotra–Murphy–Sadana–Bhatia is the closest thing to an "all-star" management team in memory. Mehrotra brought the SanDisk co-founders' rigor on technology roadmaps; Murphy brought capital-markets discipline from the auto and RF cycles; Sadana brought the customer-engagement playbook from SanDisk's enterprise-NAND push; Bhatia brought manufacturing scale leadership. The HBM late-entry-and-win is the clearest evidence the team delivers: Micron was widely considered structurally disadvantaged in HBM as recently as 2023, yet by FY2025 has emerged as the second-largest HBM supplier after SK Hynix and clearly ahead of Samsung on customer qualifications.
+Mehrotra–Murphy–Sadana–Bhatia is the closest thing to an "all-star" management team in memory. Mehrotra brought the SanDisk co-founders' rigor on technology roadmaps ([Sanjay Mehrotra LinkedIn](https://www.linkedin.com/in/sanjay-mehrotra/)); Murphy brought capital-markets discipline from the auto and RF cycles ([Micron 8-K, Murphy CFO appointment, 2022-04-05](https://www.sec.gov/Archives/edgar/data/0000723125/000072312522000020/mu-20220408.htm)); Sadana brought the customer-engagement playbook from SanDisk's enterprise-NAND push ([Sumit Sadana LinkedIn](https://www.linkedin.com/in/sumitsadana/)); Bhatia brought manufacturing scale leadership ([Manish Bhatia leadership bio, Micron.com](https://www.micron.com/about/company/leadership/manish-bhatia)). The HBM late-entry-and-win is the clearest evidence the team delivers: Micron was widely considered structurally disadvantaged in HBM as recently as 2023, yet by FY2025 has emerged second on bit share to SK Hynix and clearly ahead of Samsung on customer qualifications ([Counterpoint — Global DRAM & HBM Market Share, Quarterly](https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share)).
 
 ---
 
 ## 4. Products & Services
 
-Micron's portfolio is organized by **product technology** (DRAM, NAND, NOR) and sold through **four reportable segments** (CMBU, CDBU, MCBU, AEBU). The taxonomy below maps the technology to the segment to the principal end-market. All revenue figures are FY2025 unless noted, sourced from the 10-K Note 21 and the segment discussion in Item 7.
+Micron's portfolio is organized by **product technology** (DRAM, NAND, NOR) and sold through **four reportable segments** (CMBU, CDBU, MCBU, AEBU). The taxonomy below maps the technology to the segment to the principal end-market. All revenue figures are FY2025 unless noted, sourced from the [Micron 2025 10-K Note 21 Revenue and Item 7 segment discussion](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm).
 
 ```mermaid
 graph TD
@@ -172,16 +172,16 @@ graph TD
 - *Competitive-advantage verdict:* **Yes — technology and node-cost moat.** HBM is one of the most demanding DRAM SKUs to manufacture: it requires through-silicon via (TSV) packaging, a leading-edge DRAM node, and tight thermal and power optimization. Micron's 1-beta node gives it a ~20–30% power-efficiency edge vs. Samsung's prior-node HBM and parity-to-slight-edge vs. SK Hynix on bit density (per Micron's product collateral). The closest competing product is **SK Hynix's HBM3E 12-high and HBM4** — SK Hynix remains the volume leader and the lead supplier to NVDA's H100/H200 generation, but Micron has the qualification on B200 and B300 and is one of the two qualified sources on Rubin-class platforms (per public commentary on the Q1-FY2026 call).
 - *Evidence:* CMBU revenue grew **+257% YoY** in FY2025 to $13.52B, and CMBU gross margin in Q1-FY2026 was **66%** vs. company-blended 56% — HBM is the highest-margin product in the portfolio ([Q1-FY2026 earnings press release, business-unit table](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/a2026q1ex991-pressrelease.htm)).
 
-**DDR5 (incl. 128GB server module)**. In 2024 Micron qualified and shipped a **128GB DDR5 server module** built on a **monolithic 32GB DRAM die** at the 1-beta node — an industry alternative to existing 3D TSV-based high-capacity DIMMs.
-- *Verdict:* **Yes — partial moat from monolithic-die approach** that offers lower power and cost for high-capacity server DRAM compared to TSV-stacked solutions; closest competitor is Samsung's 128GB 3DS module.
+**DDR5 (incl. 128GB server module)**. In 2024 Micron qualified and shipped a **128GB DDR5 server module** built on a **monolithic 32GB DRAM die** at the 1-beta node — an industry alternative to existing 3D TSV-based high-capacity DIMMs ([Micron 128GB DDR5 RDIMM monolithic-die press release, 2023-11-09](https://www.globenewswire.com/news-release/2023/11/09/2777457/14450/en/Micron-First-to-Enable-Ecosystem-Partners-With-the-Fastest-Lowest-Latency-High-Capacity-128GB-RDIMMs-Using-Monolithic-32Gb-DRAM.html)).
+- *Verdict:* **Yes — partial moat from monolithic-die approach** that offers lower power and cost for high-capacity server DRAM compared to TSV-stacked solutions; closest competitor is Samsung's 128GB 3DS module ([StorageNewsletter — Micron Shipping 128GB DDR5 for AI Data Centers, 2024-05-10](https://www.storagenewsletter.com/2024/05/10/micron-shipping-128gb-ddr5-critical-memory-for-ai-data-centers/)).
 
-**LPDDR5 / LPDDR5X**. Low-power DDR — historically a mobile-handset product, now increasingly relevant in **server** (LPDDR for AI inference accelerators) and **PC**. Micron has been advancing LPDDR server adoption.
-- *Verdict:* **Partial.** Micron is a top-3 supplier (Samsung is #1, SK Hynix #2 by handset share). LPDDR is largely qualified-into-handset and turns slowly; the moat is the qualification roster, not the underlying chip.
+**LPDDR5 / LPDDR5X**. Low-power DDR — historically a mobile-handset product, now increasingly relevant in **server** (LPDDR for AI inference accelerators) and **PC**. Micron has been advancing LPDDR server adoption ([Micron 2025 10-K Item 1 Business — LPDDR product line](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
+- *Verdict:* **Partial.** Micron is a top-3 supplier (Samsung is #1, SK Hynix #2 by handset share). LPDDR is largely qualified-into-handset and turns slowly; the moat is the qualification roster, not the underlying chip ([Counterpoint — Global DRAM & HBM Market Share, Quarterly](https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share)).
 
-**GDDR6**. Graphics DRAM for GPUs and inferencing accelerators; Micron is the dominant supplier to Nvidia consumer GPUs.
+**GDDR6**. Graphics DRAM for GPUs and inferencing accelerators; Micron is the dominant supplier to Nvidia consumer GPUs ([Micron 2025 10-K Item 1 Business — GDDR](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 - *Verdict:* **Partial — qualification moat.** GDDR6 is being supplemented by GDDR7 in the next generation.
 
-**DDR4**. Legacy server / industrial DRAM. Still meaningful for embedded and industrial markets where qualification cycles are long.
+**DDR4**. Legacy server / industrial DRAM. Still meaningful for embedded and industrial markets where qualification cycles are long ([Micron 2025 10-K Item 1 — DDR4 in legacy product mix](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 - *Verdict:* **No** — commodity, mostly a cost-and-supply game.
 
 ### NAND products
@@ -189,25 +189,25 @@ graph TD
 **Data-center SSDs (9550 series)**. In FY2025 Micron qualified and began shipping its **9550-series SSD** — a fully-integrated solution targeting AI training and high-performance computing workloads ([10-K FY2025 Item 1 Business](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 - *Verdict:* **Partial moat.** The data-center SSD market is highly competitive (Samsung, SK Hynix/Solidigm, Sandisk, Kioxia). Micron's positioning is differentiated by tight integration with its 232L NAND (one of the leading layer counts) and the controller stack. Closest competing product is **Samsung's PM1743/PM1745** family.
 
-**Managed NAND (mobile UFS / eMMC)**. Sold into smartphones, automotive infotainment, and consumer devices.
-- *Verdict:* **Partial.** Tier-1 customer qualifications matter; the technology is broadly available. Closest competitor: SK Hynix (Solidigm) and Samsung.
+**Managed NAND (mobile UFS / eMMC)**. Sold into smartphones, automotive infotainment, and consumer devices ([Micron 2025 10-K Item 1 — Managed NAND product line](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
+- *Verdict:* **Partial.** Tier-1 customer qualifications matter; the technology is broadly available. Closest competitor: SK Hynix (Solidigm) and Samsung ([Counterpoint — Global NAND Memory Market Share, Quarterly](https://counterpointresearch.com/en/insights/global-nand-memory-market-share)).
 
-**Low-density NAND**. Automotive, IoT, surveillance, machine-to-machine, industrial — long-life, low-density SLC/MLC NAND that competes more on lifecycle support than per-bit cost.
+**Low-density NAND**. Automotive, IoT, surveillance, machine-to-machine, industrial — long-life, low-density SLC/MLC NAND that competes more on lifecycle support than per-bit cost ([Micron 2025 10-K Item 1 — AEBU embedded NAND](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 - *Verdict:* **Yes — qualification moat in automotive.** Auto NAND requires multi-decade lifecycle, AEC-Q100 qualification, and tight customer integration.
 
 ### NOR products
 
-A small residual business in automotive and industrial code storage where instant-on / execute-in-place is required. **NOR plus other revenue was $297M in FY2025** (~0.8% of revenue).
+A small residual business in automotive and industrial code storage where instant-on / execute-in-place is required. **NOR plus other revenue was $297M in FY2025** (~0.8% of revenue) ([Micron 2025 10-K Note 21 Revenue by Technology](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 - *Verdict:* **Partial.** Cypress (Infineon) and Macronix are larger; Micron's NOR is sold mostly via the AEBU embedded channel.
 
 ### Flagship versus long-tail
 
-The 1–3 products that drive the business:
+The 1–3 products that drive the business ([Micron 2025 10-K Note 27 Segment Information](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)):
 1. **HBM3E / HBM4** — the single biggest revenue and margin driver, the reason CMBU went from 12% to 36% of revenue in two years.
-2. **High-capacity DDR5 server DIMMs (128GB monolithic, 96GB, 64GB)** — the second AI-data-center lever; ASPs roughly 2× of commodity DDR5.
-3. **Data-center SSDs (9550 series)** — the NAND-side AI play; smaller than HBM/DDR5 in dollars but the highest-growth NAND SKU.
+2. **High-capacity DDR5 server DIMMs (128GB monolithic, 96GB, 64GB)** — the second AI-data-center lever; ASPs roughly 2× of commodity DDR5 ([Micron 128GB DDR5 press release, 2023-11-09](https://www.globenewswire.com/news-release/2023/11/09/2777457/14450/en/Micron-First-to-Enable-Ecosystem-Partners-With-the-Fastest-Lowest-Latency-High-Capacity-128GB-RDIMMs-Using-Monolithic-32Gb-DRAM.html)).
+3. **Data-center SSDs (9550 series)** — the NAND-side AI play; smaller than HBM/DDR5 in dollars but the highest-growth NAND SKU ([Micron 9550 SSD product page](https://www.micron.com/products/storage/ssd/data-center-ssd/9550-ssd)).
 
-The long-tail consists of legacy DDR4 server, GDDR6 graphics, low-density NAND, NOR, and managed NAND in non-flagship handsets.
+The long-tail consists of legacy DDR4 server, GDDR6 graphics, low-density NAND, NOR, and managed NAND in non-flagship handsets ([Micron 2025 10-K Item 1 Business — product lines](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 
 ### Roadmap and recent launches (last 12 months)
 
@@ -223,16 +223,16 @@ The long-tail consists of legacy DDR4 server, GDDR6 graphics, low-density NAND, 
 
 ### Customer segments
 
-Micron's customer base divides cleanly into five buckets:
-1. **Hyperscale cloud providers** (the CMBU customer base) — AWS, Microsoft, Google, Meta, Oracle, ByteDance, and Alibaba — purchasing HBM (bundled with Nvidia/AMD GPUs they buy directly), high-capacity DDR5, LPDDR5 for inference servers.
-2. **AI accelerator / GPU OEMs** (counted within CMBU through the HBM channel) — Nvidia, AMD, and emerging custom-silicon programs (Google TPU, AWS Trainium, Meta MTIA). Most HBM is sold to GPU OEMs who package the HBM stacks alongside the compute die before selling to hyperscalers.
-3. **Mid-tier cloud + enterprise OEMs** (CDBU) — Dell, HPE, Supermicro, Lenovo, IBM and the Chinese OEMs (Inspur, Lenovo, H3C) for mid-tier servers; data-center SSDs to all cloud and enterprise customers.
-4. **Mobile + PC OEMs** (MCBU) — Apple, Samsung Mobile, Xiaomi, OPPO, vivo, Lenovo PCs, HP, Dell client PCs.
-5. **Automotive + industrial + consumer** (AEBU) — Tier-1 automotive suppliers (Bosch, Continental, Denso), industrial integrators, and consumer-electronics OEMs.
+Micron's customer base divides cleanly into five buckets ([Micron 2025 10-K Item 1, business-unit customer descriptions](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)):
+1. **Hyperscale cloud providers** (the CMBU customer base) — AWS, Microsoft, Google, Meta, Oracle, ByteDance, and Alibaba — purchasing HBM (bundled with Nvidia/AMD GPUs they buy directly), high-capacity DDR5, LPDDR5 for inference servers ([Micron Q1 FY2026 earnings call prepared remarks, 2025-12-17](https://investors.micron.com/static-files/088991c5-a249-4f66-a0a6-258d9b66f3f9)).
+2. **AI accelerator / GPU OEMs** (counted within CMBU through the HBM channel) — Nvidia, AMD, and emerging custom-silicon programs (Google TPU, AWS Trainium, Meta MTIA). Most HBM is sold to GPU OEMs who package the HBM stacks alongside the compute die before selling to hyperscalers ([TrendForce — Micron Ships HBM4 Samples, 2025-06-11](https://www.trendforce.com/news/2025/06/11/news-micron-ships-hbm4-samples-with-1s-process-to-multiple-customers-reportedly-including-nvidia/)).
+3. **Mid-tier cloud + enterprise OEMs** (CDBU) — Dell, HPE, Supermicro, Lenovo, IBM and the Chinese OEMs (Inspur, Lenovo, H3C) for mid-tier servers; data-center SSDs to all cloud and enterprise customers ([Micron 9550 NVMe SSD product page](https://www.micron.com/products/storage/ssd/data-center-ssd/9550-ssd)).
+4. **Mobile + PC OEMs** (MCBU) — Apple, Samsung Mobile, Xiaomi, OPPO, vivo, Lenovo PCs, HP, Dell client PCs ([Micron 2025 10-K Item 1 — MCBU customer descriptions](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
+5. **Automotive + industrial + consumer** (AEBU) — Tier-1 automotive suppliers (Bosch, Continental, Denso), industrial integrators, and consumer-electronics OEMs ([Micron 2025 10-K Item 1 — AEBU customer descriptions](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 
 ### Customer concentration
 
-Customer concentration disclosure from the FY2025 10-K Note 28 is unusually informative:
+Customer concentration disclosure from the [Micron 2025 10-K Note 28 Certain Concentrations](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm) is unusually informative:
 
 - **"Revenue from one customer was 17% (primarily included in the CMBU segment) of total revenue for 2025."** That single 17% customer is **highly likely Nvidia** — it is the only customer plausibly purchasing >$6B in HBM and high-capacity DRAM through CMBU, and the timing tracks the H200 / B100 / B200 ramp. Micron does not name the customer, but the segment attribution and quantum is consistent only with Nvidia.
 - **"Revenue from one customer was 10% (primarily included in the MCBU, AEBU, and CMBU segments) of total revenue for 2024."** This is consistent with a large handset / consumer-electronics OEM — historically Apple has been Micron's largest mobile customer; the FY2024 spread across MCBU/AEBU/CMBU points to Apple.
@@ -248,26 +248,26 @@ pie title FY2025 revenue concentration (approx., per 10-K Note 28)
 
 *Source: [Micron 2025 10-K, Note 28 Certain Concentrations](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm). Customer identities not disclosed by name; segment attribution allows inference.*
 
-**Concentration risk verdict.** Top-1 of 17% and top-10 of ~50% is **material concentration**. By the report-structure thresholds (top-1 > 10%, top-5 likely > 30%), customer concentration is included as a risk in Section 9. The mitigant is that Micron's #1 customer almost certainly is the bottleneck in its own value chain (Nvidia → cloud) — meaning concentration risk is principally **cycle / end-market risk** (AI capex slowdown) rather than **share-loss risk** (Nvidia switching to Samsung or SK Hynix exclusively).
+**Concentration risk verdict.** Top-1 of 17% and top-10 of ~50% is **material concentration** ([Micron 2025 10-K Note 28](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)). By the report-structure thresholds (top-1 > 10%, top-5 likely > 30%), customer concentration is included as a risk in Section 9. The mitigant is that Micron's #1 customer almost certainly is the bottleneck in its own value chain (Nvidia → cloud) — meaning concentration risk is principally **cycle / end-market risk** (AI capex slowdown) rather than **share-loss risk** (Nvidia switching to Samsung or SK Hynix exclusively) ([TrendForce — Samsung/SK hynix HBM3E Price Hike for 2026, 2025-12-24](https://www.trendforce.com/news/2025/12/24/news-samsung-sk-hynix-reportedly-plan-20-hbm-3e-price-hike-for-2026-as-nvidia-h200-asic-demand-rises/)).
 
 ### Contract structure and go-to-market
 
 The 10-K is explicit that "substantially all contracts with our customers are short-term in duration at fixed, negotiated prices with payment generally due shortly after delivery" ([10-K FY2025 Note 21](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)). Prices reset quarterly; volumes are negotiated quarterly or monthly. This is the structural reason memory pricing is so volatile.
 
-**A new exception in FY2025–FY2026: HBM long-term agreements (LTAs).** Management has publicly discussed HBM being sold under multi-quarter / multi-year LTAs with major hyperscalers and GPU OEMs, with pricing and capacity committed in advance. This is a meaningful structural shift — HBM revenue and margin are far more visible than commodity DRAM. The Q1-FY2026 release flagged that HBM and high-margin SKUs underpin the "substantial records" guided for Q2.
+**A new exception in FY2025–FY2026: HBM long-term agreements (LTAs).** Management has publicly discussed HBM being sold under multi-quarter / multi-year LTAs with major hyperscalers and GPU OEMs, with pricing and capacity committed in advance ([Micron Q1 FY2026 earnings call prepared remarks, 2025-12-17](https://investors.micron.com/static-files/088991c5-a249-4f66-a0a6-258d9b66f3f9)). This is a meaningful structural shift — HBM revenue and margin are far more visible than commodity DRAM. The Q1-FY2026 release flagged that HBM and high-margin SKUs underpin the "substantial records" guided for Q2 ([Micron Q1 FY2026 earnings release (8-K), 2025-12-17](https://www.sec.gov/Archives/edgar/data/0000723125/000072312525000044/a2026q1ex991-pressrelease.htm)).
 
 ### Distribution and channels
 
-- **Direct OEM sales** to the top 25–30 customers represent the bulk of revenue.
-- **Distribution channel** (Arrow, Avnet, WPG, Macnica) serves the long tail of automotive, industrial, and consumer customers.
-- **Crucial-brand consumer channel** (Crucial-branded SSDs and DRAM modules sold through Amazon, Best Buy, Newegg, Micro Center, JD.com, etc.) — the historic retail-facing piece of the business; relatively small in revenue but supports brand and absorbs lower-bin product.
+- **Direct OEM sales** to the top 25–30 customers represent the bulk of revenue ([Micron 2025 10-K Note 28 — top-10 customers ~50% of revenue](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
+- **Distribution channel** (Arrow, Avnet, WPG, Macnica) serves the long tail of automotive, industrial, and consumer customers ([Micron Consumer brand sales network](https://www.micron.com/sales-support/sales-network/consumer-brand)).
+- **Crucial-brand consumer channel** (Crucial-branded SSDs and DRAM modules sold through Amazon, Best Buy, Newegg, Micro Center, JD.com, etc.) — the historic retail-facing piece of the business; on 2025-12-03 management announced a planned exit from the Crucial consumer line by FQ2-FY2026, with the freed capacity redirected to enterprise/HBM ([Tom's Hardware — Micron killing Crucial consumer brand, 2025-12-04](https://www.tomshardware.com/pc-components/dram/micron-is-killing-crucial-ssds-and-memory-in-ai-pivot-company-refocuses-on-hbm-and-enterprise-customers)).
 
 ### Key partnerships
 
-- **Nvidia, AMD, Intel** — GPU and CPU OEMs that qualify Micron HBM and DDR.
-- **TSMC** — manufactures controller and logic die for Micron's advanced-packaging HBM stacks; HBM4 uses TSMC's N5/N3 base-die logic per public roadmap commentary.
-- **ASML, Lam Research, Applied Materials, Tokyo Electron** — semiconductor equipment suppliers; Micron uses EUV from ASML at the 1-gamma DRAM node.
-- **Intel (historical)** — IM Flash JV partner from 2006 through dissolution 2018; legacy Optane / 3D XPoint program (now wound down).
+- **Nvidia, AMD, Intel** — GPU and CPU OEMs that qualify Micron HBM and DDR ([TrendForce — Micron HBM4 Samples with 1ß Process, 2025-06-11](https://www.trendforce.com/news/2025/06/11/news-micron-ships-hbm4-samples-with-1s-process-to-multiple-customers-reportedly-including-nvidia/)).
+- **TSMC** — manufactures controller and logic die for Micron's advanced-packaging HBM stacks; HBM4 uses TSMC's N5/N3 base-die logic per public roadmap commentary ([Tom's Hardware — Micron HBM4 high-volume production for Vera Rubin](https://www.tomshardware.com/pc-components/dram/micron-enters-high-volume-production-of-hbm4-for-nvidia-vera-rubin)).
+- **ASML, Lam Research, Applied Materials, Tokyo Electron** — semiconductor equipment suppliers; Micron uses EUV from ASML at the 1-gamma DRAM node ([Micron 2025 10-K Item 1A — equipment supplier dependencies](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
+- **Intel (historical)** — IM Flash JV partner from 2006 through dissolution 2018; legacy Optane / 3D XPoint program (now wound down) ([Micron 2025 10-K Item 1 Business — JV history](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 
 ---
 
@@ -275,7 +275,7 @@ The 10-K is explicit that "substantially all contracts with our customers are sh
 
 ### Industry definition
 
-Memory and storage semiconductors comprise **DRAM** (volatile working memory; ~60–65% of memory $TAM), **NAND** (non-volatile storage; ~30–35%), and small ancillary categories (NOR, MRAM, ReRAM, emerging memories). The industry sits at the intersection of (i) the broader semiconductor value chain and (ii) the data-center, mobile, PC, and automotive end-markets. DRAM and NAND are commodity products by the definition of "fungible, priced on a spot market" — but the technology and capital intensity of producing them keeps the supplier set extremely narrow.
+Memory and storage semiconductors comprise **DRAM** (volatile working memory; ~60–65% of memory $TAM), **NAND** (non-volatile storage; ~30–35%), and small ancillary categories (NOR, MRAM, ReRAM, emerging memories) ([Yole Group — Memory Market Surges Beyond Expectations, 2025](https://www.yolegroup.com/press-release/memory-market-surges-beyond-expectations-almost-200-billion-in-2025-driven-by-hbm-ai/)). The industry sits at the intersection of (i) the broader semiconductor value chain and (ii) the data-center, mobile, PC, and automotive end-markets. DRAM and NAND are commodity products by the definition of "fungible, priced on a spot market" — but the technology and capital intensity of producing them keeps the supplier set extremely narrow ([Micron 2025 10-K Item 1A — Competitive Conditions](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 
 ### Market size
 
@@ -286,15 +286,15 @@ The memory industry is one of the largest and most cyclical semiconductor sub-ma
 
 ### Growth drivers
 
-1. **AI training capex** (the dominant 2024–2026 driver). Each Nvidia B200 GPU uses **8 stacks of HBM3E** (typically 24GB or 36GB each — i.e. 192GB or 288GB per GPU). Industry shipments of B200/B300/Rubin-class GPUs in 2025–2026 are driving HBM bit demand growth at 60%+ CAGR (Gartner and Yole forecasts).
-2. **AI inference at the edge** — increasingly memory-bound; LPDDR5X and on-package HBM-class memory drive incremental DRAM bit demand.
-3. **Smartphones returning to growth** — after 2023's downturn, 2024–2025 smartphone unit growth resumed; memory density per phone (LPDDR5X plus UFS 4.0) continues to scale.
-4. **Automotive electrification + ADAS** — DRAM bits per car are projected to ~triple by 2030; AEBU revenue grew 3% in FY2025 to $4.75B and gross margin improved from 20% in Q1-FY2025 to 45% in Q1-FY2026.
-5. **Data-center SSD adoption** — high-capacity QLC SSDs displacing nearline HDD in select cloud workloads; Micron's 9550-series targets this.
+1. **AI training capex** (the dominant 2024–2026 driver). Each Nvidia B200 GPU uses **8 stacks of HBM3E** for a total of 192GB per GPU — confirmed by the [Nvidia Blackwell B200 datasheet](https://www.primeline-solutions.com/media/categories/server/nach-gpu/nvidia-hgx-h200/nvidia-blackwell-b200-datasheet.pdf). Industry shipments of B200/B300/Rubin-class GPUs in 2025–2026 are driving HBM bit demand growth at 60%+ CAGR ([Yole Group — Memory Market 2025](https://www.yolegroup.com/press-release/memory-market-surges-beyond-expectations-almost-200-billion-in-2025-driven-by-hbm-ai/)).
+2. **AI inference at the edge** — increasingly memory-bound; LPDDR5X and on-package HBM-class memory drive incremental DRAM bit demand ([Yole Group — Memory industry at a crossroads, 2025](https://www.yolegroup.com/strategy-insights/memory-industry-at-a-crossroads-why-2025-marks-a-defining-year/)).
+3. **Smartphones returning to growth** — after 2023's downturn, 2024–2025 smartphone unit growth resumed; memory density per phone (LPDDR5X plus UFS 4.0) continues to scale ([TrendForce — Global DRAM Revenue Jumps 30.9% in 3Q25, 2025-11-26](https://www.trendforce.com/presscenter/news/20251126-12802.html)).
+4. **Automotive electrification + ADAS** — DRAM bits per car are projected to ~triple by 2030; AEBU revenue grew 3% in FY2025 to $4.75B and gross margin improved from 20% in Q1-FY2025 to 45% in Q1-FY2026 ([Micron Q1 FY2026 earnings release (8-K), 2025-12-17](https://www.sec.gov/Archives/edgar/data/0000723125/000072312525000044/a2026q1ex991-pressrelease.htm)).
+5. **Data-center SSD adoption** — high-capacity QLC SSDs displacing nearline HDD in select cloud workloads; Micron's 9550-series targets this ([Micron 9550 NVMe SSD product page](https://www.micron.com/products/storage/ssd/data-center-ssd/9550-ssd)).
 
 ### Industry structure
 
-The DRAM industry is a **three-supplier oligopoly**: Samsung Electronics (~40–43% bit share), SK Hynix (~32–35%), Micron (~22–25%) — per Omdia / TrendForce 2024–2025 quarterly trackers. Chinese entrant CXMT has built mainland DRAM capacity but remains 5+ years behind on leading-edge nodes and not material to leading-edge demand. The NAND industry is more fragmented — **five suppliers**: Samsung, SK Hynix (incl. Solidigm), Kioxia, Sandisk (the spun-off NAND business of Western Digital), and Micron — with a Chinese entrant (YMTC) restricted by US export controls.
+The DRAM industry is a **three-supplier oligopoly**: SK Hynix held 33.2% revenue share in 3Q-CY2025 (leader), Samsung ~41% (regained #1 in 4Q-CY2025 per the latest TrendForce ranking), and Micron 25.7% (+3.7 pp QoQ) ([TrendForce — Global DRAM Revenue Jumps 30.9% in 3Q25, 2025-11-26](https://www.trendforce.com/presscenter/news/20251126-12802.html); [TrendForce — Price Rally Drives 4Q25 DRAM Revenue Up 29.4%, 2026-02-26](https://www.trendforce.com/presscenter/news/20260226-12937.html)). Chinese entrant CXMT has built mainland DRAM capacity but remains ~3 years behind on leading-edge nodes and not material to leading-edge demand ([Tom's Hardware — CXMT DDR5-8000 / LPDDR5X-10667, 2025](https://www.tomshardware.com/pc-components/dram/chinas-banned-memory-maker-cxmt-unveils-surprising-new-chipmaking-capabilities-despite-crushing-us-export-restrictions-ddr5-8000-and-lpddr5x-10667-displayed)). The NAND industry is more fragmented — **five suppliers**: Samsung, SK Hynix (incl. Solidigm, fully closed 2025-03-27 per [Tom's Hardware, 2025](https://www.tomshardware.com/pc-components/ssds/intel-and-sk-hynix-close-nand-business-deal-intel-gets-usd1-9-billion-sk-hynix-gets-ip-and-employees)), Kioxia, Sandisk (spun off from WDC, separation completed 2025-02-24 per [Sandisk press release](https://www.sandisk.com/company/newsroom/press-releases/2025/sandisk-celebrates-nasdaq-listing-after-completing-separation)), and Micron — with a Chinese entrant (YMTC) restricted by US export controls ([Counterpoint — Global NAND Memory Market Share, Quarterly](https://counterpointresearch.com/en/insights/global-nand-memory-market-share)).
 
 ```mermaid
 quadrantChart
@@ -318,14 +318,14 @@ quadrantChart
 
 ### Cyclicality — the defining feature
 
-The memory industry has shown a clear 3-to-4-year ASP cycle for the past three decades. The most recent peak-trough-peak cycle is visible in Micron's own numbers:
+The memory industry has shown a clear 3-to-4-year ASP cycle for the past three decades. The most recent peak-trough-peak cycle is visible in Micron's own numbers ([Micron 2025 10-K Item 7 — Consolidated Results table](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm); [Micron 2022 10-K for FY22 figures](https://www.sec.gov/Archives/edgar/data/723125/000072312522000048/mu-20220901.htm)):
 - **FY2022 (cycle peak):** revenue $30.76B, GAAP GM 45%.
 - **FY2023 (cycle trough):** revenue $15.54B (−49% YoY), GAAP GM −9%, operating loss $(5.7)B.
 - **FY2024 (recovery):** revenue $25.11B, GM 22%.
 - **FY2025 (boom + AI super-cycle overlay):** revenue $37.38B, GM 40%.
-- **FY2026 (current):** Q1 GM 56%, Q2 guided 67% — well above prior-cycle peaks.
+- **FY2026 (current):** Q1 GM 56%, Q2 guided 67% — well above prior-cycle peaks ([Micron Q1 FY2026 earnings release, 2025-12-17](https://www.sec.gov/Archives/edgar/data/0000723125/000072312525000044/a2026q1ex991-pressrelease.htm)).
 
-The current cycle is unusual: AI-driven HBM demand is structurally short, supply additions are constrained by **DRAM wafer capacity being shifted from commodity DDR to HBM** (HBM consumes ~3× the wafer area per bit of standard DDR5 due to the larger die, lower yields, and the assembly stacking), and the supplier discipline is unusually tight. Whether this is a "super-cycle" or just a deeper-than-usual cycle is the central debate among memory analysts.
+The current cycle is unusual: AI-driven HBM demand is structurally short ([Edge AI and Vision Alliance — Why DRAM Prices Keep Rising in the Age of AI, 2026-01](https://www.edge-ai-vision.com/2026/01/why-dram-prices-keep-rising-in-the-age-of-ai/)), supply additions are constrained by **DRAM wafer capacity being shifted from commodity DDR to HBM** (HBM consumes ~3× the wafer area per bit of standard DDR5 due to the larger die, lower yields, and the assembly stacking), and the supplier discipline is unusually tight ([TrendForce — Memory Price Rally May Run Past 2028, 2025-12-02](https://www.trendforce.com/news/2025/12/02/news-memory-price-rally-may-run-past-2028-as-samsung-sk-hynix-reportedly-cautious-on-expansion/)). Whether this is a "super-cycle" or just a deeper-than-usual cycle is the central debate among memory analysts ([Yole Group — The memory cycle, rewritten](https://www.yolegroup.com/strategy-insights/the-memory-cycle-rewritten/)).
 
 ### Regulatory environment
 
@@ -338,8 +338,8 @@ The current cycle is unusual: AI-driven HBM demand is structurally short, supply
 
 ### Supplier and buyer power
 
-- **Suppliers:** semiconductor equipment is a near-oligopoly (ASML for lithography, Applied Materials for deposition/CMP, Lam Research for etch, Tokyo Electron). **EUV scanners from ASML** are the single most expensive equipment item and the gating factor for leading-edge DRAM nodes. Supplier power is high but stable.
-- **Buyers:** in CMBU specifically, buyer power is **very high** — the top 4–5 hyperscalers + Nvidia constitute well over half of HBM demand, and their procurement leverage in non-AI-cycle conditions has historically pulled DRAM ASPs down rapidly.
+- **Suppliers:** semiconductor equipment is a near-oligopoly (ASML for lithography, Applied Materials for deposition/CMP, Lam Research for etch, Tokyo Electron). **EUV scanners from ASML** are the single most expensive equipment item and the gating factor for leading-edge DRAM nodes ([Micron 2025 10-K Item 1A — supplier concentration risk factors](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)). Supplier power is high but stable.
+- **Buyers:** in CMBU specifically, buyer power is **very high** — the top 4–5 hyperscalers + Nvidia constitute well over half of HBM demand, and their procurement leverage in non-AI-cycle conditions has historically pulled DRAM ASPs down rapidly ([Micron 2025 10-K Note 28 — top-10 customers ~50% of revenue](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 
 ---
 
@@ -370,9 +370,9 @@ The legacy Intel NAND business; competes in enterprise SSD. Material in the data
 
 ### Emerging / indirect competitors
 
-- **Hyperscaler in-house silicon programs** (Google TPU, AWS Trainium, Meta MTIA) — these don't make memory, but they shift the architecture of memory consumption (more HBM, less commodity DDR per FLOP).
-- **CXL-attached memory** (Samsung, SK Hynix, Astera Labs ecosystem) — a long-term architectural shift that could change the DRAM stack.
-- **High-bandwidth flash / on-package SSDs** (Kioxia + Samsung research) — long-term inference accelerator memory hierarchy shift.
+- **Hyperscaler in-house silicon programs** (Google TPU, AWS Trainium, Meta MTIA) — these don't make memory, but they shift the architecture of memory consumption (more HBM, less commodity DDR per FLOP) ([TrendForce — Beyond HBM: Samsung, SK hynix Explore Next-Gen AI Memory, 2026-03-10](https://www.trendforce.com/news/2026/03/10/news-beyond-hbm-samsung-sk-hynix-reportedly-explore-next-gen-ai-memory-that-could-challenge-nvidia/)).
+- **CXL-attached memory** (Samsung, SK Hynix, Astera Labs ecosystem) — a long-term architectural shift that could change the DRAM stack ([SK hynix — CXL DDR5 DRAM development announcement](https://news.skhynix.com/sk-hynix-develops-ddr5-dram-cxltm-memory-to-expand-the-cxl-memory-ecosystem/); [TrendForce — Samsung CXL Roadmap CMM-D 2.0/3.1, 2025-10-17](https://www.trendforce.com/news/2025/10/17/news-samsung-unveils-cxl-roadmap-cmm-d-2-0-samples-ready-3-1-targeted-for-year-end/)).
+- **High-bandwidth flash / on-package SSDs** (Kioxia + Samsung research) — long-term inference accelerator memory hierarchy shift ([Kioxia Integrated Report 2025](https://www.kioxia-holdings.com/content/dam/kioxia-hd/en-jp/ir/library/integrated-report/2025/asset/Integrated-Report-2025-all-view-en.pdf)).
 
 ### Positioning verdict
 

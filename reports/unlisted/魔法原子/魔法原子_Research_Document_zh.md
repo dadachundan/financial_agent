@@ -32,7 +32,7 @@
 
 **规模与员工人数：** 魔法原子未公布正式员工人数。围绕 2026 年 3 月管理层重组的媒体报道描述了"覆盖关键领域——研发、数据平台、核心零部件、生态建设与市场拓展——的全新高管阵容"，成员来自阿里巴巴、华为、蔚来（NIO）和优必选，以及聚焦机器人方向的学术界（[Gasgoo 盖世汽车资讯, 2026-03](https://autonews.gasgoo.com/articles/icv/major-personnel-reshuffle-what-game-is-magiclab-playing-2031210142819794944)）。**最佳估算（非官方披露）人员规模为数百人**，且偏向工程团队——这与一家拥有单一工厂试点站点、单一产品线低产量的 A 轮阶段具身智能硬件创业公司相符。**2025 年人形机器人产量目标约为 400 台**，其中"几百台"瞄准追觅生态内部及外部试点客户交付（[观察者网, 2025-03-27](https://www.guancha.cn/economy/2025_03_27_770030.shtml)）。2025 年实际出货量及 2026 年收入未公开披露；属于未公开信息。
 
-**估值快照（私营 — 按公司研究规范，以融资轮估值替代）。** 魔法原子至少公开披露过三轮融资：
+**估值快照（私营 — 按公司研究规范，以融资轮估值替代）。** 魔法原子从天使轮到 Pre-IPO 战略轮共公开披露至少三轮融资，追觅 CVC 追创创投每轮均锚定参与（[新华日报 — 半年两轮融资均过亿, 2025-05](https://www.xhby.net/content/s68270dbde4b0ec5323b4fa85.html)；[iotworld — 魔法原子获数亿元融资，预期订单破千台](https://mobile.iotworld.com.cn/View.aspx/News-0e405cfdc0a36bfd)）：
 
 | 轮次 | 日期 | 规模 | 领投 / 参与方 | 来源 |
 |---|---|---|---|---|
@@ -42,7 +42,7 @@
 
 **投后估值未公开披露**（三轮均未披露）—— *未公开披露估值*。同业可比区间：参考 2025–26 年中国人形机器人 A 轮估值倍数（宇树 IPO 前约 70 亿美元，智元（AgiBot）港股 IPO 前约 50–60 亿美元，傅利叶（Fourier）约 11 亿美元，星动纪元（Robotera）约 10 亿美元，详见第 7 节），魔法原子三轮累计融资规模约为 10–15 亿元人民币（约 1.4–2.1 亿美元）、并瞄准 2026 年 IPO，按此推算最新投后估值最可能落于 **6 亿美元至 15 亿美元区间**——明确属于*基于同业可比三角推算的估算*，并非披露数据。值得注意的是，一份行业排名榜单将魔法原子按估值在中国人形机器人公司中排名第 5 位，位列宇树、智元、傅利叶和星动纪元之后（[XCarspace — 中国人形机器人公司 Top 20（按估值排名）, 2026](https://xcarspace.com/top-20-chinese-humanoid-robot-companies-ranked-by-valuation/)）。
 
-**收入与毛利率趋势（私营 — 未披露）。** 公开来源未单独披露魔法原子的收入；可用的替代参考是 2025 年约 400 台人形机器人的产量目标——若按工业级单机 ASP 约 25 万–50 万元人民币（与已公开的宇树和优必选 Walker 系列 3 万–8 万美元区间大体一致），则隐含*2025 年底约 1–2 亿元人民币的收入运行率估算*，且其中绝大部分被追觅生态内部捕获。在不到 1,000 台的规模下，全行业人形机器人硬件毛利率仍为负至低个位数；魔法原子并未具体披露毛利率。
+**收入与毛利率趋势（私营 — 未披露）。** 公开来源未单独披露魔法原子的收入；可用的替代参考是 2025 年约 400 台人形机器人的产量目标（[观察者网, 2025-03-27](https://www.guancha.cn/economy/2025_03_27_770030.shtml)；[科技行者, 2025-03](https://www.techwalker.com/2025/0327/3164737.shtml)）——若按工业级单机 ASP 约 25 万–50 万元人民币（与已公开的宇树和优必选 Walker 系列 3 万–8 万美元区间大体一致，详见 [宇树 G1 商城页](https://shop.unitree.com/products/unitree-g1)；[PR Newswire — 优必选 Walker S2 量产，订单超 8 亿元, 2025-11](https://www.prnewswire.com/news-releases/ubtech-humanoid-robot-walker-s2-begins-mass-production-and-delivery-with-orders-exceeding-800-million-yuan-302616924.html)），则隐含*2025 年底约 1–2 亿元人民币的收入运行率估算*，且其中绝大部分被追觅生态内部捕获（[DoNews — 魔法原子完成数亿元新融资, 2025-05](https://www.donews.com/article/detail/8280/84855.html)）。在不到 1,000 台的规模下，全行业人形机器人硬件毛利率仍为负至低个位数（[Humanoids Daily — 估值鸿沟, 2025](https://www.humanoidsdaily.com/news/the-great-valuation-chasm-a-2025-guide-to-the-humanoid-robotics-capital-race)）；魔法原子并未具体披露毛利率。
 
 > ![魔法原子融资轮次与同业人形机器人私募估值对比 — 示意图](charts/magiclab_peer_valuations.png)
 > *示意性同业对比；各同业数据来源详见第 7 节引用。本份私营公司报告未生成 PNG；以下为 Mermaid 替代版本。*
@@ -61,7 +61,7 @@ graph LR
 
 ## 2. 公司沿革
 
-魔法原子构想于 **2023 年底**，并于 **2023 年 12 月 / 2024 年 1 月**作为追觅孵化的独立公司正式注册成立，创始工程团队主要来自**小米 CyberDog（铁蛋）四足机器人项目**，外加规模较小的追觅内部电机 / 执行器团队。立项逻辑是：追觅花了八年时间，在中国消费机器人（扫地机器人、立式吸尘器、烘干机）领域打造出出货量最高、成本最低的垂直整合电机 + 自主控制技术栈；这套技术栈——自研高速电机、行星减速机、视觉 SLAM、传感器融合、边缘 AI——在结构上完全可以复用于人形机器人的执行器、平衡控制及家用 / 工业感知。通过将人形机器人业务剥离为独立公司（而非内部孵化），追觅创始人**俞浩**可以：(a) 用风险投资标准的薪酬招募世界级机器人人才；(b) 与追觅 CVC 一同吸引外部战略与财务资本；(c) 将人形机器人业务与追觅的核心家电业务损益表隔离开来（[PandaYoo — 追觅科技：一家中国科技挑战者的全部故事](https://pandayoo.com/post/dreame-technology-the-full-story-of-a-chinese-tech-challenger/)；[Caixin Global — 追觅的 100 万亿愿景, 2026-05-08](https://www.caixinglobal.com/2026-05-08/in-depth-dreames-100-trillion-vision-tests-chinas-make-everything-tech-playbook-102441968.html)）。
+魔法原子构想于 **2023 年底**，并于 **2023 年 12 月 / 2024 年 1 月**作为追觅孵化的独立公司正式注册成立，创始工程团队主要来自**小米 CyberDog（铁蛋）四足机器人项目**，外加规模较小的追觅内部电机 / 执行器团队（[搜狐 — 魔法原子创始人兼CEO吴长征离职, 2026-03](https://www.sohu.com/a/992953720_122014422)；[百度百科 — 无锡主体](https://baike.baidu.com/item/%E9%AD%94%E6%B3%95%E5%8E%9F%E5%AD%90%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%A7%91%E6%8A%80%EF%BC%88%E6%97%A0%E9%94%A1%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/66826567)）。立项逻辑是：追觅花了八年时间，在中国消费机器人（扫地机器人、立式吸尘器、烘干机）领域打造出出货量最高、成本最低的垂直整合电机 + 自主控制技术栈；这套技术栈——自研高速电机、行星减速机、视觉 SLAM、传感器融合、边缘 AI——在结构上完全可以复用于人形机器人的执行器、平衡控制及家用 / 工业感知。通过将人形机器人业务剥离为独立公司（而非内部孵化），追觅创始人**俞浩**可以：(a) 用风险投资标准的薪酬招募世界级机器人人才；(b) 与追觅 CVC 一同吸引外部战略与财务资本；(c) 将人形机器人业务与追觅的核心家电业务损益表隔离开来（[PandaYoo — 追觅科技：一家中国科技挑战者的全部故事](https://pandayoo.com/post/dreame-technology-the-full-story-of-a-chinese-tech-challenger/)；[Caixin Global — 追觅的 100 万亿愿景, 2026-05-08](https://www.caixinglobal.com/2026-05-08/in-depth-dreames-100-trillion-vision-tests-chinas-make-everything-tech-playbook-102441968.html)）。
 
 从最初的"追觅内部研发项目"向独立、获得外部资本支持的公司转型发生在 2024 年中至下半年，时点紧贴天使轮关账。截至 **2024 年 12 月**，魔法原子宣布完成由追觅 CVC 追创创投领投的 **1.5 亿元人民币天使轮融资**，并披露了公司首次对外展示的工业部署：MagicBot 在追觅苏州自有工厂内执行物料搬运、巡检与点胶等任务（[CMRA, 2024-12](https://cnmra.com/magiclab-secures-over-150-million-rmb-in-funding-for-humanoid-robotics-development/)；[SHINE — MagicLab 发布"小麦", 2025-03](https://www.shine.cn/biz/tech/2503277977/)）。两个月后（2025 年 2 月），魔法原子发布了**自研的 11 自由度灵巧手 MagicHand S01**，将其定位为通用人形机器人操作能力的关键拼图（[RoboticsTomorrow, 2025-02-19](https://www.roboticstomorrow.com/news/2025/02/19/magiclab-unveils-magichand-s01-dexterous-hand-progressing-toward-mass-adoption-of-humanoid-robots/24211)；[Yahoo Finance, 2025-02-19](https://finance.yahoo.com/news/magiclab-unveils-magichand-s01-dexterous-143900164.html)）。
 
@@ -69,7 +69,7 @@ graph LR
 
 **2025 年底 / 2026 年 1 月**：魔法原子签约成为**央视 2026 年春节联欢晚会**的智能机器人战略合作伙伴——这是一场具有国家级营销意义的事件：一台 MagicBot Gen1 在开场环节挥手亮相，一台 MagicBot Z1 成为首个公开完成"托马斯 360°鞍马全旋"的人形机器人，约 100 只 MagicDog 与中国台湾艺人言承旭合作完成了同步舞蹈表演（[Sixth Tone, 2026](https://www.sixthtone.com/news/1018219/year-of-the-robot%3A-humanoids-lead-a-tech-heavy-spring-festival-gala)；[TechNode, 2026-02-17](https://technode.com/2026/02/17/humanoid-robots-take-center-stage-at-2026-spring-festival-gala-revealing-chinas-latest-robotics-advances/)；[PandaYoo — 走进 2026 春晚](https://pandayoo.com/post/inside-the-2026-spring-festival-gala-how-chinese-humanoid-robots-stole-the-show/)）。随后媒体报道称魔法原子为该春晚赞助花费约 1 亿元人民币（"花1亿"），公司并未正式确认这一数字（[新浪财经 — 花1亿上春晚, 2026-03-18](https://finance.sina.com.cn/wm/2026-03-18/doc-inhrmihm7462144.shtml)）。
 
-**2026 年 3 月——创始人离任。** 创始人 / CEO 吴长征于 2 月底正式离职，2026-03-06 对外公开宣布。联合创始人顾世韬和 CTO 陈春雨接管公司日常经营；离任的同时，公司宣布完成 5 亿元人民币新一轮融资及规模 105 亿元人民币的具身智能产业基金。**融资 + 创始人离任 + 春晚营销**同时发生的局面——发生在 IPO 冲刺期——是公司短暂历史上最关键的战略不连续点，也是本报告风险评估的核心要素（见第 9 节）。
+**2026 年 3 月——创始人离任。** 创始人 / CEO 吴长征于 2 月底正式离职，2026-03-06 对外公开宣布（[东方财富 — 魔法原子技术总裁吴长征正式离职, 2026-03-06](https://finance.eastmoney.com/a/202603063664217769.html)；[中国基金报 — 魔法原子原总裁吴长征离职](https://www.chnfund.com/article/ARdf138ba1-ad9e-4532-aef1-3a1fd47350ca)）。联合创始人顾世韬和 CTO 陈春雨接管公司日常经营；离任的同时，公司宣布完成 5 亿元人民币新一轮融资及规模 105 亿元人民币的具身智能产业基金（[36氪 — 魔法原子的冰与火, 2026-03-12](https://36kr.com/p/3719966575817477)；[Gasgoo 盖世汽车资讯 — 大规模人员重组, 2026-03](https://autonews.gasgoo.com/articles/icv/major-personnel-reshuffle-what-game-is-magiclab-playing-2031210142819794944)）。**融资 + 创始人离任 + 春晚营销**同时发生的局面——发生在 IPO 冲刺期——是公司短暂历史上最关键的战略不连续点，也是本报告风险评估的核心要素（见第 9 节）。
 
 ```mermaid
 timeline
@@ -93,7 +93,7 @@ timeline
 
 ### 吴长征 — 创始人，前任总裁 / CEO（2026-02 离任）
 
-吴长征 *就是* 魔法原子——或曾是。他将公司从 2023 年底追觅内部的孵化构想，一路推到 2026 年初的国家级春晚赞助商，并被多家中国科技媒体称为"公司灵魂"。他在 2026 年 3 月的突然离任，是今年任何一家人形机器人公司发生的最具实质意义的管理事件，也由此构成本报告中最长的一段人物简介。
+吴长征 *就是* 魔法原子——或曾是。他将公司从 2023 年底追觅内部的孵化构想，一路推到 2026 年初的国家级春晚赞助商，并被多家中国科技媒体称为"公司灵魂"（[钛媒体 — 春晚机器人"魔法"失灵？魔法原子CEO吴长征突然离职, 2026-03](https://www.tmtpost.com/7903082.html)；[搜狐 — 魔法原子创始人兼CEO吴长征离职, 2026-03](https://www.sohu.com/a/992953720_122014422)）。他在 2026 年 3 月的突然离任，是今年任何一家人形机器人公司发生的最具实质意义的管理事件，也由此构成本报告中最长的一段人物简介（[36氪 — 离开了吴长征，魔法原子还有上市"魔法"吗？, 2026-03](https://36kr.com/p/3719880601498375)）。
 
 **背景。** 吴长征拥有**上海交通大学**机器人方向硕士学位——上海交通大学是中国除清华大学之外最强的机器人科研学府。从交大毕业后，他于 2018 年加入**普渡科技（Pudu Robotics）**牵头四足机器人研发，协助普渡（一家服务机器人专家）搭建起四足机器人产品线。2021 年他被**小米**招入，主导**小米 CyberDog "铁蛋" 仿生四足机器人项目**——这是宇树 H1 时代之前中国最具消费舆论影响力的四足机器人；在吴长征的技术领导下，小米于 2021 年 8 月公开发布 CyberDog，并于 2023 年 8 月发布 CyberDog 2（[搜狐 — 魔法原子创始人兼CEO吴长征离职, 2026-03](https://www.sohu.com/a/992953720_122014422)；[瑞财经 — 魔法原子再获数亿元融资，创始人吴长征曾主导小米首款四足机器人"铁蛋"研发, 2025-05](https://m.rccaijing.com/news-7329061872610244508.html)）。
 
@@ -103,13 +103,13 @@ timeline
 
 ### 俞浩 — 追觅科技创始人兼 CEO；魔法原子主要赞助人与战略支持方
 
-俞浩**并非**魔法原子的 CEO。但他是这家公司背后的间接控制力量——魔法原子在追觅内部孵化，从追觅 CVC 追创创投获得资金，从追觅纵向整合的电机 / 传感器供应链获取零部件，并把追觅自有工厂作为首个商业化客户。
+俞浩**并非**魔法原子的 CEO。但他是这家公司背后的间接控制力量——魔法原子在追觅内部孵化，从追觅 CVC 追创创投获得资金，从追觅纵向整合的电机 / 传感器供应链获取零部件，并把追觅自有工厂作为首个商业化客户（[新浪财经 — 100亿！独角兽追觅的CVC基金落地, 2025-04-11](https://finance.sina.com.cn/roll/2025-04-11/doc-inesuxcv2516054.shtml)；[观察者网 — 追觅子公司人形机器人亮相, 2025-03-27](https://www.guancha.cn/economy/2025_03_27_770030.shtml)）。
 
 俞浩出生于 1987 年，2005 年凭物理奥赛保送进入**清华大学**，攻读航空航天工程 / 计算流体力学，2009 年在清华创办"天空工厂"（Sky Workshop）创客空间。他早年从事四旋翼飞行器研发（2007 年起），并参与了波音赞助的天空工厂项目，随后于 2015 年在苏州创立追觅。今天的追觅是全球第二大扫地机器人品牌、收入数十亿美元的中国消费科技龙头，旗下生态庞杂（最新报道称生态企业达 953 家），覆盖吹风机、运动相机、电动滑板车、泳池清洁机、电动车（2025 年宣布）及人形机器人（[百度百科 — 俞浩](https://baike.baidu.com/en/item/Yu%20Hao/941229)；[Momentum Works — 打造人类史上最伟大公司：俞浩, 2025](https://thelowdown.momentum.asia/building-the-greatest-company-in-human-history-dreame-founder-yu-hao/)；[Caixin Global — 追觅的 100 万亿愿景, 2026-05-08](https://www.caixinglobal.com/2026-05-08/in-depth-dreames-100-trillion-vision-tests-chinas-make-everything-tech-playbook-102441968.html)；[BigGo Finance — 追觅生态扩张, 2026](https://finance.biggo.com/news/iIgRLJ4BoicNoOgCAcdq)）。
 
-俞浩对外宣称的志向——"打造人类史上最伟大公司"、"百万亿元规模生态"以及他本人"五年内成为世界首富"的愿景——是理解魔法原子时不可或缺的背景。人形机器人项目仅是俞浩通过其生态投资平台追创创投做出的*数十个*垂直赌注中的*一个*；俞浩是一位以投资组合配置角色身份做创业的创始人，野心极大、同时下注极多。**吴长征在 2026 年初遇到的投资人与创始人之间的张力，部分上是这种模式结构性必然的产物**：魔法原子只是 953 家生态公司中的一家，而俞浩的体系是为"生态速度"（场景快速落地 + 资本快速循环 + IPO）优化的，并非为单一组合公司的研发深度优化的。
+俞浩对外宣称的志向——"打造人类史上最伟大公司"、"百万亿元规模生态"以及他本人"五年内成为世界首富"的愿景——是理解魔法原子时不可或缺的背景（[Caixin Global — 追觅的 100 万亿愿景, 2026-05-08](https://www.caixinglobal.com/2026-05-08/in-depth-dreames-100-trillion-vision-tests-chinas-make-everything-tech-playbook-102441968.html)；[Futunn — 俞浩回应争议](https://news.futunn.com/en/post/67539365/yu-hao-ceo-of-dreame-technology-responded-to-the-controversy)）。人形机器人项目仅是俞浩通过其生态投资平台追创创投做出的*数十个*垂直赌注中的*一个*；俞浩是一位以投资组合配置角色身份做创业的创始人，野心极大、同时下注极多（[36Kr EU — 追觅的快速扩张：十大孵化器与内部赛马](https://eu.36kr.com/en/p/3797890451840257)；[BigGo Finance — 追觅生态扩张达 953 家公司, 2026](https://finance.biggo.com/news/iIgRLJ4BoicNoOgCAcdq)）。**吴长征在 2026 年初遇到的投资人与创始人之间的张力，部分上是这种模式结构性必然的产物**：魔法原子只是 953 家生态公司中的一家（[BigGo Finance, 2026](https://finance.biggo.com/news/iIgRLJ4BoicNoOgCAcdq)），而俞浩的体系是为"生态速度"（场景快速落地 + 资本快速循环 + IPO）优化的，并非为单一组合公司的研发深度优化的（[36氪 — 魔法原子的冰与火, 2026-03-12](https://36kr.com/p/3719966575817477)）。
 
-**魔法原子 — 追觅供应链溢出效应。** 追觅花了八年时间产业化了：(a) 高速 BLDC 电机（最初用于吹风机，后被改造适配扫地机器人驱动与人形机器人关节）；(b) 行星减速机与谐波减速器（通过追觅现有的供应商池——汇川（Inovance）、绿的谐波（Greenmaster）、来福谐波（Leaderdrive）——采购）；(c) 视觉 SLAM + ToF + 激光雷达传感器融合（在扫地机器人上已产品化）；(d) 苏州基地的百万台级以下消费电子组装产能——俞浩本人及外部评论将这一切称为**魔法原子的结构性护城河**：一家中国人形机器人公司能够通过追觅生态自主掌握其核心执行器与传感器物料清单，并能在追觅自有工厂内完成首批 400 台试点，而不付出任何外部获客成本。
+**魔法原子 — 追觅供应链溢出效应。** 追觅花了八年时间产业化了：(a) 高速 BLDC 电机（最初用于吹风机，后被改造适配扫地机器人驱动与人形机器人关节）——追觅自研的 15 万转高速数字电机与苏州智能电机工厂构成了执行器平台（[PR Newswire — 追觅 CES 2025 多关节机械臂技术亮相, 2025-01](https://www.prnewswire.com/news-releases/dreame-technology-stuns-ces-2025-with-innovative-technologies-including-its-groundbreaking-bionic-multi-joint-robotic-arm-technology-and-a-full-range-of-products-such-as-the-x50-ultra-302344322.html)；[PandaYoo — 追觅科技：一家中国科技挑战者的全部故事](https://pandayoo.com/post/dreame-technology-the-full-story-of-a-chinese-tech-challenger/)）；(b) 行星减速机与谐波减速器（通过追觅现有的供应商池——汇川（Inovance）、绿的谐波（Greenmaster）、来福谐波（Leaderdrive）——采购，需注意来福谐波占中国谐波减速器市场约 30–40%，客户名单中包括智元和优必选，详见 [humanoid.guide — 来福谐波因人形机器人需求受益](https://humanoid.guide/leaderdrive-harmonic-reducers-surge-as-humanoid-demand-lifts-shares/)）；(c) 视觉 SLAM + ToF + 激光雷达传感器融合（在扫地机器人上已产品化）；以及 (d) 苏州基地的百万台级以下消费电子组装产能（[Caixin Global, 2026-05-08](https://www.caixinglobal.com/2026-05-08/in-depth-dreames-100-trillion-vision-tests-chinas-make-everything-tech-playbook-102441968.html)）——俞浩本人及外部评论将这一切称为**魔法原子的结构性护城河**：一家中国人形机器人公司能够通过追觅生态自主掌握其核心执行器与传感器物料清单，并能在追觅自有工厂内完成首批 400 台试点，而不付出任何外部获客成本（[DoNews — 魔法原子完成数亿元新融资, 2025-05](https://www.donews.com/article/detail/8280/84855.html)；[新华日报, 2025-05](https://www.xhby.net/content/s68270dbde4b0ec5323b4fa85.html)）。
 
 ### 陈春雨 — 联合创始人，CTO；2026-03 起的实际运营负责人
 
@@ -125,15 +125,15 @@ timeline
 
 ### 治理结构与股权
 
-魔法原子为**民营未上市公司**。按工商登记数据，无锡母公司法定代表人记录为**陈春玉**（注：中国公开登记中的拼音读作 "Chen Chunyu"，与 CTO 同名拼音；媒体亦提及此人是法定代表人——*跨身份核实未能确认*）。股权由追觅关联实体及上文所列各风投投资人主导；具体股权结构*未公开披露*。无公开董事会构成。创始人离任时持股比例未披露。薪酬结构未披露。关联方交易——尤其是与追觅科技之间的供应链及客户关系——在经济意义上具有实质性，但尚未在任何公开文件中正式量化。
+魔法原子为**民营未上市公司**。按工商登记数据，无锡母公司法定代表人记录如下（[企查查公司画像](https://www.qcc.com/firm/310d41050d97da6b83fcfddd1705db4f.html)；[百度百科 — 无锡主体](https://baike.baidu.com/item/%E9%AD%94%E6%B3%95%E5%8E%9F%E5%AD%90%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%A7%91%E6%8A%80%EF%BC%88%E6%97%A0%E9%94%A1%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/66826567)）；中国公开登记中的拼音读作 "Chen Chunyu"，与 CTO 同名拼音；媒体亦提及此人是法定代表人——*跨身份核实未能确认*。股权由追觅关联实体及上文所列各风投投资人主导；具体股权结构*未公开披露*（[36氪, 2026-03-12](https://36kr.com/p/3719966575817477)）。无公开董事会构成。创始人离任时持股比例未披露。薪酬结构未披露。关联方交易——尤其是与追觅科技之间的供应链及客户关系——在经济意义上具有实质性，但尚未在任何公开文件中正式量化（[DoNews, 2025-05](https://www.donews.com/article/detail/8280/84855.html)）。
 
 ### 既往业绩综合评价
 
-魔法原子团队最强的过往业绩在于**四足机器人商业化**：吴长征本人主导了小米 CyberDog 从概念到两代产品发布（2021、2023）；高春潮领导了追觅高速电机项目从内部研发到年产数百万件的量产。在中国人形机器人领域，这些资历的深度仅次于宇树王兴兴本人。团队层面最主要的短板是**双足人形机器人的大规模商业化**——吴长征和陈春雨在加入魔法原子之前都未曾完整跑通过一个人形机器人量产周期；后吴长征时代的管理团队，在其当前所追求的 IPO 量产扩张层面尚未经过验证。魔法原子的板凳深度（阿里巴巴 / 华为 / 蔚来 / 优必选校友）是真实存在的，但作为一支团队的协作效力尚未得到证明。
+魔法原子团队最强的过往业绩在于**四足机器人商业化**：吴长征本人主导了小米 CyberDog 从概念到两代产品发布（2021、2023）（[百度百科 — 吴长征](https://baike.baidu.com/item/%E5%90%B4%E9%95%BF%E5%BE%81/66714615)；[techxplore — 小米发布 CyberDog, 2021-08](https://techxplore.com/news/2021-08-xiaomi-unveils-cyberdog-personable-quadruped.html)）；高春潮领导了追觅高速电机项目从内部研发到年产数百万件的量产（[Gasgoo 盖世汽车资讯, 2026-03](https://autonews.gasgoo.com/articles/news/magiclabs-management-undergoes-major-reshuffle-2030905648093446145)）。在中国人形机器人领域，这些资历的深度仅次于宇树王兴兴本人（[TheIcons — 中国铁军, 2026-03](https://theicons.com/2026/03/12/2026-cctv-spring-festival-gala-robotics-companies/)）。团队层面最主要的短板是**双足人形机器人的大规模商业化**——吴长征和陈春雨在加入魔法原子之前都未曾完整跑通过一个人形机器人量产周期（[36氪 — 离开了吴长征，魔法原子还有上市"魔法"吗？, 2026-03](https://36kr.com/p/3719880601498375)）；后吴长征时代的管理团队，在其当前所追求的 IPO 量产扩张层面尚未经过验证。魔法原子的板凳深度（阿里巴巴 / 华为 / 蔚来 / 优必选校友）是真实存在的，但作为一支团队的协作效力尚未得到证明（[Gasgoo 盖世汽车资讯 — 大规模人员重组, 2026-03](https://autonews.gasgoo.com/articles/icv/major-personnel-reshuffle-what-game-is-magiclab-playing-2031210142819794944)）。
 
 ## 4. 产品与服务
 
-魔法原子的产品组合分为四个家族：全尺寸人形机器人（MagicBot G1 / Gen1 / "小麦"）；高动态紧凑型人形机器人（MagicBot Z1）；四足机器人（MagicDog、MagicDog-W、MagicDog Y1）；以及作为零部件销售的自研子系统（MagicHand S01 灵巧手及自研关节模组）。公司另以千景共创计划提供集成"场景"部署，从财务角度看，是叠加在硬件之上的服务 / 场景授权模式。
+魔法原子的产品组合分为四个家族：全尺寸人形机器人（MagicBot G1 / Gen1 / "小麦"）；高动态紧凑型人形机器人（MagicBot Z1）；四足机器人（MagicDog、MagicDog-W、MagicDog Y1）；以及作为零部件销售的自研子系统（MagicHand S01 灵巧手及自研关节模组）（[Magiclab — 人形机器人 G1](https://www.magiclab.top/en/human)；[Magiclab — MagicDog Y1](https://www.magiclab.top/en/dog-y)；[Magiclab — MagicHand S01](https://www.magiclab.top/en/parts/hand)）。公司另以千景共创计划提供集成"场景"部署，从财务角度看，是叠加在硬件之上的服务 / 场景授权模式（[DoNews — 魔法原子完成数亿元新融资, 2025-05](https://www.donews.com/article/detail/8280/84855.html)；[stcn.com — 魔法原子WRC 2025, 2025-08](https://www.stcn.com/article/detail/3020489.html)）。
 
 ```mermaid
 graph TD
@@ -160,19 +160,19 @@ graph TD
 
 **参数**：约 174 厘米 × 58 厘米 × 28 厘米，约 67.5 千克，约 42 自由度，双臂各 20 千克负载（整机 40 千克负载），峰值关节扭矩 ≥350 牛·米，运动速度 ≥2 米/秒，25 安时 / 约 1.35 千瓦时电池可提供约 4–5 小时连续运行，连接配置 WiFi 6 + 4G / 5G + 蓝牙 5.2（[wellbots.com — MagicBot G1](https://www.wellbots.com/products/magicbot-g1)；[americansatellite.us — MagicBot G1](https://www.americansatellite.us/MagicLab-MagicBot-G1-Humanoid-Robot.htm)；[HouseBots — MagicLab MagicBot](https://housebots.com/robot/magiclab-magicbot)；[robozaps.com — MagicBot 测评, 2026](https://blog.robozaps.com/b/magiclab-magicbot-review)）。
 
-**目标客户**：工业试点客户（追觅工厂为先，随后是汽车 / 电子 / 物流），加上通过美国经销渠道面向科研与教育客户。
+**目标客户**：工业试点客户（追觅工厂为先，随后是汽车 / 电子 / 物流），加上通过美国经销渠道面向科研与教育客户（[SHINE — MagicLab 发布"小麦", 2025-03](https://www.shine.cn/biz/tech/2503277977/)；[InterestingEngineering — MagicLab 人形机器人军团把工厂变为精密车间](https://interestingengineering.com/innovation/magiclab-robot-army-in-factory)；[wellbots.com — MagicBot G1](https://www.wellbots.com/products/magicbot-g1)）。
 
 **定价**：标价在美国经销商渠道公开，具体数字因经销商而异，魔法原子并未官方公布。G1 处于更宽泛的 1.7–1.8 米中国 OEM 人形机器人价格段，EDU / 工业级单机区间约 **3 万–8 万美元**，与宇树 H1（约 9 万美元）相当，低于优必选 Walker S2（公开报价未披露，但根据优必选披露的 FY25 8 亿元人民币订单对应 500 台估算，单机 ASP 约 22 万美元）（[优必选新闻稿, 2025-11](https://www.prnewswire.com/news-releases/ubtech-humanoid-robot-walker-s2-begins-mass-production-and-delivery-with-orders-exceeding-800-million-yuan-302616924.html)）。
 
-**竞争优势评判：部分具备。** *护城河类型：* (a) **借助追觅生态的垂直整合**——关节模组与高速电机栈实现自研 / 追觅采购，相对依赖外部 Tier-1 执行器供应商的初创公司在 BOM 成本上更具优势；(b) 通过追觅内部工厂部署所积累的**场景数据**真实且持续增加。*尚未形成护城河：* (c) 基础模型 / VLA 技术与宇树、智元和 Figure 处于持平至落后状态（整个行业在具身 AI 上仍处于"GPT-3 等价水平"之前）。**最接近的竞品：**宇树 H1 / G1——两者均在装机量、基础模型成熟度与单机出货规模上领先；MagicBot G1 在技术层面与宇树**持平至略落后**，在出货量上远远落后（宇树 2025 年出货 >10,000 台 vs. 魔法原子约 400 台目标）。
+**竞争优势评判：部分具备。** *护城河类型：* (a) **借助追觅生态的垂直整合**——关节模组与高速电机栈实现自研 / 追觅采购，相对依赖外部 Tier-1 执行器供应商的初创公司在 BOM 成本上更具优势（[新华日报, 2025-05](https://www.xhby.net/content/s68270dbde4b0ec5323b4fa85.html)）；(b) 通过追觅内部工厂部署所积累的**场景数据**真实且持续增加（[观察者网, 2025-03-27](https://www.guancha.cn/economy/2025_03_27_770030.shtml)）。*尚未形成护城河：* (c) 基础模型 / VLA 技术与宇树、智元和 Figure 处于持平至落后状态（整个行业在具身 AI 上仍处于"GPT-3 等价水平"之前）（[Edge AI and Vision — 人形机器人 2025：迈向有用智能的竞赛](https://www.edge-ai-vision.com/2025/11/humanoid-robots-2025-the-race-to-useful-intelligence/)；[The Robot Report — VLA 模型是自主机器人的下一跃迁](https://www.therobotreport.com/vision-language-action-models-are-the-next-leap-in-autonomous-robotics/)）。**最接近的竞品：**宇树 H1 / G1——两者均在装机量、基础模型成熟度与单机出货规模上领先；MagicBot G1 在技术层面与宇树**持平至略落后**，在出货量上远远落后（宇树 2025 年出货 >10,000 台 vs. 魔法原子约 400 台目标）（[SCMP — 中国宇树 IPO, 2026](https://www.scmp.com/business/banking-finance/article/3347365/chinas-unitree-robotics-rides-humanoid-tide-it-targets-us610m-ipo)；[Bloomberg — 中国企业主导 2025 年人形机器人出货, 2026-01-08](https://www.bloomberg.com/news/articles/2026-01-08/chinese-firms-dominated-global-humanoid-robot-shipments-in-2025)）。
 
 ### 敏捷 / 动态人形机器人：MagicBot Z1
 
 **参数**：身高 1.4 米，40 千克，24–50 自由度（视手部选配而异），峰值速度约 2.5 米/秒，峰值关节扭矩约 130 牛·米，约 2 小时电池，可选配 11 自由度 MagicHand S01 灵巧手（单手 5 千克负载），传感器包括 3D 激光雷达 + 深度相机 + 双目鱼眼 + 头部触觉传感器（[humanoid.guide — MagicBot Z1](https://humanoid.guide/product/magicbot-z1/)；[humanoid.press — MagicBot Z1, 2025](https://humanoid.press/database/www-humanoid-press-database-magicbot-z1-humanoid-robot/)；[Robotic Gizmos — MagicBot Z1 开源, 2025-07](https://www.roboticgizmos.com/magicbot-z1/)）。Z1 在发布时（2025 年 7 月）被定位为中国最敏捷的双足人形机器人——春晚"托马斯全旋"动作是其核心营销资产（[TechNode, 2026-02-17](https://technode.com/2026/02/17/humanoid-robots-take-center-stage-at-2026-spring-festival-gala-revealing-chinas-latest-robotics-advances/)）。
 
-**目标客户**：科研机构、高校、内容 / 营销 / 展览客户，以及精选的工业动态任务试点。Z1 更多是营销旗舰与科研平台，而非工业主力机型。
+**目标客户**：科研机构、高校、内容 / 营销 / 展览客户，以及精选的工业动态任务试点。Z1 更多是营销旗舰与科研平台，而非工业主力机型（[humanoid.guide — MagicBot Z1](https://humanoid.guide/product/magicbot-z1/)；[Magiclab — MagicBot Z1](https://www.magiclab.top/en/z1)；[腾讯新闻 — 魔法原子首秀MagicBot Z1, 2025-07](https://news.qq.com/rain/a/20250728A0499X00)）。
 
-**竞争优势评判：部分具备 — 动态能力突出，商业牵引力薄弱。** *护城河类型：***技术 / 知识产权**——支撑托马斯全旋动作的执行器 + 控制栈，是关节功率密度与平衡控制能力的可信证明。*最接近的竞品：***宇树 G1**（更小型，入门约 16,000 美元，身高级别相近）和 **Booster Robotics T1**——Z1 在峰值敏捷度上领先 G1，但在性价比与出货量上落后。*风险：* Z1 是营销驱动型产品；其敏捷能力能否真正转化为工业收入仍有待观察。
+**竞争优势评判：部分具备 — 动态能力突出，商业牵引力薄弱。** *护城河类型：***技术 / 知识产权**——支撑托马斯全旋动作的执行器 + 控制栈，是关节功率密度与平衡控制能力的可信证明（[百度百科 — MagicBot Z1](https://baike.baidu.com/item/MagicBot%20Z1/67393054)；[知乎 — 宇树最大竞争对手, 2025-07](https://zhuanlan.zhihu.com/p/1926664948345468298)）。*最接近的竞品：***宇树 G1**（更小型，入门约 16,000 美元，身高级别相近，详见 [botinfo.ai — 宇树 G1 测评, 2026](https://botinfo.ai/articles/unitree-g1)）和 **Booster Robotics T1**——Z1 在峰值敏捷度上领先 G1，但在性价比与出货量上落后。*风险：* Z1 是营销驱动型产品；其敏捷能力能否真正转化为工业收入仍有待观察（[36氪 — 离开了吴长征，魔法原子还有上市"魔法"吗？, 2026-03](https://36kr.com/p/3719880601498375)）。
 
 ### 四足机器人：MagicDog 系列
 
@@ -180,34 +180,34 @@ graph TD
 
 **MagicDog-W**：轮足混合四足，使用四只轮式腿实现高速移动，能够完成翻滚和高平台攀爬动作（[roboticgizmos.com — MagicDog-W](https://www.roboticgizmos.com/magicdog-w/)）。
 
-**MagicDog Y1**：工业级别四足，定位于巡检 / 巡逻 / 工业数据采集等部署场景。
+**MagicDog Y1**：工业级别四足，定位于巡检 / 巡逻 / 工业数据采集等部署场景（[Magiclab — MagicDog Y1](https://www.magiclab.top/en/dog-y)；[stcn.com — WRC 2025, 2025-08](https://www.stcn.com/article/detail/3020489.html)）。
 
-**竞争优势评判：无明显护城河。** 中国四足机器人市场由宇树（G1、B2、B2-W）和云深处（Deep Robotics）主导；两者在出货量、性价比和开发者生态上均领先于魔法原子。MagicDog 是一个合格的第二梯队产品，但相对宇树并无护城河。**最接近的竞品：**宇树 B2-W（轮足）——魔法原子**落后**。春晚"100 只四足同步舞蹈"是一次营销大胜，但并未在装机量优势上为魔法原子塑造出明确的商业差异化。
+**竞争优势评判：无明显护城河。** 中国四足机器人市场由宇树（G1、B2、B2-W）主导——宇树控制全球四足机器人市场约 70%（[SCMP — 中国宇树 IPO, 2026](https://www.scmp.com/business/banking-finance/article/3347365/chinas-unitree-robotics-rides-humanoid-tide-it-targets-us610m-ipo)）——以及云深处（Deep Robotics）（[云深处 Deep Robotics 官网](https://www.deeprobotics.cn/en/wap/company.html)）；两者在出货量、性价比和开发者生态上均领先于魔法原子。MagicDog 是一个合格的第二梯队产品，但相对宇树并无护城河。**最接近的竞品：**宇树 B2-W（轮足）——魔法原子**落后**。春晚"100 只四足同步舞蹈"是一次营销大胜，但并未在装机量优势上为魔法原子塑造出明确的商业差异化（[PandaYoo — 走进 2026 春晚](https://pandayoo.com/post/inside-the-2026-spring-festival-gala-how-chinese-humanoid-robots-stole-the-show/)）。
 
 ### 零部件：MagicHand S01 灵巧手
 
 **参数**：11 自由度，580 克，12 伏 / 静态 0.2 安 / 峰值 3 安，5 个触觉传感器（分辨率 0.1 牛），单指夹持力约 2.5 千克，四指合并夹持力约 9.1 千克，单手负载 5 千克，四指弯曲速度 150°/秒，力 / 位置混合控制（[RoboticsTomorrow, 2025-02-19](https://www.roboticstomorrow.com/news/2025/02/19/magiclab-unveils-magichand-s01-dexterous-hand-progressing-toward-mass-adoption-of-humanoid-robots/24211)；[humanoid.guide — MagicHand S01](https://humanoid.guide/product/magichand-s01/)；[InterestingEngineering — 44 磅负载灵巧手](https://interestingengineering.com/innovation/china-magiclabs-robotic-hand-humanoids)）。
 
-**竞争优势评判：是，存在部分护城河。** MagicHand S01 是中国市场被引用最多的灵巧手之一：11 自由度处于中国 OEM 灵巧手规格区间的上限，集成的触觉反馈 + 力 / 位置混合控制在性能上对标西方领先者（Sanctuary AI / Shadow Robot），价格却只是其零头。*护城河类型：* 通过追觅供应链整合实现的**技术 / 知识产权 + 成本领先**。*最接近的竞品：* 因时机器人（Inspire Robotics）RH56（同样为 11–12 自由度）——参数大致持平，但魔法原子声称在触觉 / 抓握力方面更具优势。这是魔法原子产品组合中**最具防御性的产品**，并有可能成为公司独立于整机销售之外最优质的零部件销售业务。
+**竞争优势评判：是，存在部分护城河。** MagicHand S01 是中国市场被引用最多的灵巧手之一：11 自由度处于中国 OEM 灵巧手规格区间的上限，集成的触觉反馈 + 力 / 位置混合控制在性能上对标西方领先者（Sanctuary AI / Shadow Robot），价格却只是其零头（[RoboticsTomorrow, 2025-02-19](https://www.roboticstomorrow.com/news/2025/02/19/magiclab-unveils-magichand-s01-dexterous-hand-progressing-toward-mass-adoption-of-humanoid-robots/24211)；[InterestingEngineering — 44 磅负载灵巧手](https://interestingengineering.com/innovation/china-magiclabs-robotic-hand-humanoids)）。*护城河类型：* 通过追觅供应链整合实现的**技术 / 知识产权 + 成本领先**。*最接近的竞品：* 因时机器人（Inspire Robotics）RH56 系列（6 自由度 / 12 关节变型）——参数大致持平，但魔法原子声称在触觉 / 抓握力方面更具优势，5 个触觉传感器分辨率达 0.1 牛（[Inspire Robots — RH56DFX 产品页](https://en.inspire-robots.com/product/rh56dfx)；[Inspire Robotics RH56 系列用户手册 PDF](https://en.inspire-robots.com/wp-content/uploads/2024/02/INSPIRE-ROBOTS-THE-DEXTEROUS-HAND-RH56-SERIES-USER-MANUAL.pdf)）。这是魔法原子产品组合中**最具防御性的产品**，并有可能成为公司独立于整机销售之外最优质的零部件销售业务（[humanoid.guide — MagicHand S01](https://humanoid.guide/product/magichand-s01/)）。
 
 ### 服务：千景共创
 
-魔法原子的商业化包装层——并非产品本身，而是 GTM（市场进入）打法。客户（工厂、零售场所、科研机构）以"共创伙伴"身份签约；魔法原子部署机器人，采集操作 / 移动数据，并基于该数据迭代 VLA 模型。原定目标是 1,000 个场景。截至目前真实落地体量并不清晰；*未披露*。**竞争优势评判：部分具备**——该模式是合理的，但中国每一家人形机器人 OEM（宇树、智元、优必选、傅利叶、星动纪元）都在跑类似的场景计划；差异化最终取决于数据积累速度，而魔法原子并未公布相关数据。
+魔法原子的商业化包装层——并非产品本身，而是 GTM（市场进入）打法。客户（工厂、零售场所、科研机构）以"共创伙伴"身份签约；魔法原子部署机器人，采集操作 / 移动数据，并基于该数据迭代 VLA 模型。原定目标是 1,000 个场景（[DoNews — 魔法原子完成数亿元新融资 加速1000个场景落地, 2025-05](https://www.donews.com/article/detail/8280/84855.html)；[科技行者 — 魔法原子人形机器人走出"练兵场", 2025-03](https://www.techwalker.com/2025/0327/3164737.shtml)）。截至目前真实落地体量并不清晰；*未披露*。**竞争优势评判：部分具备**——该模式是合理的，但中国每一家人形机器人 OEM（宇树、智元、优必选、傅利叶、星动纪元）都在跑类似的场景计划；差异化最终取决于数据积累速度，而魔法原子并未公布相关数据（[Humanoids Daily — 估值鸿沟, 2025](https://www.humanoidsdaily.com/news/the-great-valuation-chasm-a-2025-guide-to-the-humanoid-robotics-capital-race)）。
 
 ### 旗舰产品与长尾产品
 
-旗舰：**MagicBot G1 / Gen1（小麦）** 和 **MagicHand S01**。公司的成败将由这两条产品线决定。Z1 是营销旗舰，而非收入旗舰。四足机器人属于长尾 / 品牌延伸。千景共创计划存在的目的，是为旗舰产品销售提供支撑。
+旗舰：**MagicBot G1 / Gen1（小麦）** 和 **MagicHand S01**。公司的成败将由这两条产品线决定。Z1 是营销旗舰，而非收入旗舰。四足机器人属于长尾 / 品牌延伸。千景共创计划存在的目的，是为旗舰产品销售提供支撑（[观察者网 — 追觅子公司人形机器人亮相, 2025-03-27](https://www.guancha.cn/economy/2025_03_27_770030.shtml)；[stcn.com — WRC 2025, 2025-08](https://www.stcn.com/article/detail/3020489.html)）。
 
 ### 近 12 个月新品发布与产品下线
 
-- **2025-02：** MagicHand S01 灵巧手
-- **2025-03：** 原生双子发布会 / 千景共创计划
-- **2025-07：** MagicBot Z1
-- **2025-08：** MagicDog-W 和 MagicDog Y1 工业版本（在 WRC 2025 展出）
-- **2026-01：** 2026 央视春晚舞台首秀（营销资产，非新品）
-- **2026-04：** 硅谷 + 巴塞罗那 MWC 国际发布——首次全球亮相。
+- **2025-02：** MagicHand S01 灵巧手（[RoboticsTomorrow, 2025-02-19](https://www.roboticstomorrow.com/news/2025/02/19/magiclab-unveils-magichand-s01-dexterous-hand-progressing-toward-mass-adoption-of-humanoid-robots/24211)）
+- **2025-03：** 原生双子发布会 / 千景共创计划（[观察者网, 2025-03-27](https://www.guancha.cn/economy/2025_03_27_770030.shtml)）
+- **2025-07：** MagicBot Z1（[腾讯新闻 — 魔法原子首秀MagicBot Z1, 2025-07](https://news.qq.com/rain/a/20250728A0499X00)）
+- **2025-08：** MagicDog-W 和 MagicDog Y1 工业版本（在 WRC 2025 展出）（[stcn.com, 2025-08](https://www.stcn.com/article/detail/3020489.html)）
+- **2026-01：** 2026 央视春晚舞台首秀（营销资产，非新品）（[TechNode, 2026-02-17](https://technode.com/2026/02/17/humanoid-robots-take-center-stage-at-2026-spring-festival-gala-revealing-chinas-latest-robotics-advances/)）
+- **2026-04：** 硅谷 + 巴塞罗那 MWC 国际发布——首次全球亮相（[Global Times, 2026-04](https://www.globaltimes.cn/page/202604/1360131.shtml)；[无锡市政府 — 无锡魔法原子世界模型, 2026-04](https://en.wuxi.gov.cn/2026-04/30/c_1180004.htm)）。
 
-无产品下线。
+无产品下线（[Magiclab — 人形机器人 G1 产品页](https://www.magiclab.top/en/human)）。
 
 ## 5. 客户与市场开拓
 
@@ -224,21 +224,21 @@ pie title 魔法原子 2025 年收入暴露估算（未披露私人数据；分�
 ```
 *饼图为估算占比 — 非披露数据*。来源：综合三角推算自 [观察者网, 2025-03-27](https://www.guancha.cn/economy/2025_03_27_770030.shtml)、[DoNews, 2025-05](https://www.donews.com/article/detail/8280/84855.html) 以及 [stcn.com, 2025-08](https://www.stcn.com/article/detail/3020489.html)。明确标注：*估算*，非披露。
 
-**合同结构。** 魔法原子对外的场景部署以"共创"合作伙伴关系为框架，意味着**多年期评估部署 + 按单机或按场景授权**模式，而非主框架采购合同；这在具身 AI 阶段属于常态，但意味着收入呈后置且不均衡分布。追觅的内部部署应属于关联方转移交易；*条款未披露*。海外经销渠道为常规分润分销协议；*条款未披露*。
+**合同结构。** 魔法原子对外的场景部署以"共创"合作伙伴关系为框架，意味着**多年期评估部署 + 按单机或按场景授权**模式，而非主框架采购合同；这在具身 AI 阶段属于常态，但意味着收入呈后置且不均衡分布（[DoNews — 千景共创计划, 2025-05](https://www.donews.com/article/detail/8280/84855.html)）。追觅的内部部署应属于关联方转移交易；*条款未披露*（[观察者网, 2025-03-27](https://www.guancha.cn/economy/2025_03_27_770030.shtml)）。海外经销渠道为常规分润分销协议；*条款未披露*（[wellbots.com — MagicBot G1 产品页](https://www.wellbots.com/products/magicbot-g1)；[americansatellite.us — MagicBot G1 产品页](https://www.americansatellite.us/MagicLab-MagicBot-G1-Humanoid-Robot.htm)）。
 
-**渠道。** 国内：直销 + 追觅渠道 + 千景共创合作伙伴网络。海外：以经销商为主导（Wellbots、American Satellite、Robots International、rbtx、Humanoid.guide）。2026 年硅谷与巴塞罗那 MWC 发布是明确转向直接国际接触的信号，但**尚未公开任何海外工业客户名称**。
+**渠道。** 国内：直销 + 追觅渠道 + 千景共创合作伙伴网络。海外：以经销商为主导（Wellbots、American Satellite、Robots International、rbtx、Humanoid.guide）（[wellbots.com — MagicBot G1](https://www.wellbots.com/products/magicbot-g1)；[Robots International — MagicDog](https://www.robotsinternational.com/MagicLab-MagicDog-Quadruped-Robot.htm)；[humanoid.guide — MagicBot Z1](https://humanoid.guide/product/magicbot-z1/)）。2026 年硅谷与巴塞罗那 MWC 发布是明确转向直接国际接触的信号，但**尚未公开任何海外工业客户名称**（[Global Times, 2026-04](https://www.globaltimes.cn/page/202604/1360131.shtml)；[无锡市政府, 2026-04](https://en.wuxi.gov.cn/2026-04/30/c_1180004.htm)）。
 
-**销售周期。** 长——目前中国人形机器人 OEM 的工业试点至部署周期普遍为 6–18 个月。魔法原子声称自发布后约 12 个月就在追觅生态内从试点跨入"商业闭环"，速度异常快，几乎完全得益于追觅的关联客户渠道。
+**销售周期。** 长——目前中国人形机器人 OEM 的工业试点至部署周期普遍为 6–18 个月（[中国日报 — 中国推进规模化商业化, 2025-07](https://global.chinadaily.com.cn/a/202507/28/WS68873753a310c26fd717c1a5.html)）。魔法原子声称自发布后约 12 个月就在追觅生态内从试点跨入"商业闭环"，速度异常快，几乎完全得益于追觅的关联客户渠道（[DoNews, 2025-05](https://www.donews.com/article/detail/8280/84855.html)；[观察者网, 2025-03-27](https://www.guancha.cn/economy/2025_03_27_770030.shtml)）。
 
-**关键合作伙伴。** 追觅科技（母公司 / 客户 / 供应链合作伙伴）。追创创投（三轮融资的领投方）。战略 / 财务投资人：禾创致远、芯联资本、华映资本（Meridian China）、晓池资本、元禾厚望、翼朴基金、厦门国盛（厦门国盛产业基金）。无锡梁溪区当地政府合作伙伴（2026 年十亿元人民币级别产业基金锚定方）。
+**关键合作伙伴。** 追觅科技（母公司 / 客户 / 供应链合作伙伴）。追创创投（三轮融资的领投方）（[新浪财经 — 100亿独角兽追觅CVC基金落地, 2025-04-11](https://finance.sina.com.cn/roll/2025-04-11/doc-inesuxcv2516054.shtml)；[Yicai Global, 2024-12](https://www.yicaiglobal.com/news/chinese-embodied-ai-startup-magiclab-bags-usd206-million-in-angel-funds-report-says)）。战略 / 财务投资人：禾创致远、芯联资本、华映资本（Meridian China）、晓池资本、元禾厚望、翼朴基金、厦门国盛（厦门国盛产业基金）（[Gasgoo — MagicLab 5 亿融资, 2025-05](https://autonews.gasgoo.com/articles/icv/seeds-magiclab-officially-announces-500-million-yuan-new-funding-2031616054575349761)；[PitchBook — 厦门国盛机器人产业风险基金](https://pitchbook.com/profiles/fund/26291-98F)）。无锡梁溪区当地政府合作伙伴（2026 年十亿元人民币级别产业基金锚定方）（[Gasgoo — MagicLab 在无锡设立全国总部](https://autonews.gasgoo.com/articles/icv/magiclab-establishes-national-headquarters-in-wuxi-2022667588994080769)；[PitchBook — 无锡梁溪创新产业引导基金](https://pitchbook.com/profiles/fund/25408-09F)）。
 
 **公开提及的客户案例。** 除追觅外，公开报道还记录了 MagicBot 在以下场景的部署：(a) 停车场流量演示；(b) 汽车 4S 店导购；(c) 餐厅服务员演示；(d) 美发造型演示；(e) 工厂合作伙伴现场的装配线点胶与巡检（[InterestingEngineering — MagicLab 服务机器人协助顾客](https://interestingengineering.com/innovation/magiclabs-service-robots-assist-shoppers-video)；[Magiclab WRC 2025 — stcn.com](https://www.stcn.com/article/detail/3020489.html)）。这些都属于演示性质，而非长期合同；商业体量未披露。
 
 ## 6. 行业综述
 
-**行业定义。** 魔法原子所处的是**具身智能与通用人形机器人**行业——更广义的服务机器人和工业机器人市场的一个子集，但其独特之处在于：(a) 双足 / 人形形态；(b) 通用操作能力（区别于固定任务的机械臂）；以及 (c) 由基础模型 / VLA 驱动的控制方式（区别于脚本化自动化）。相邻行业包括传统工业机器人（ABB、发那科 Fanuc、库卡 KUKA、安川 Yaskawa）、协作机器人（优傲 UR、斗山 Doosan）、服务机器人（普渡科技、擎朗 Keenon）以及四足机器人（波士顿动力 Spot、宇树）。
+**行业定义。** 魔法原子所处的是**具身智能与通用人形机器人**行业——更广义的服务机器人和工业机器人市场的一个子集，但其独特之处在于：(a) 双足 / 人形形态；(b) 通用操作能力（区别于固定任务的机械臂）；以及 (c) 由基础模型 / VLA 驱动的控制方式（区别于脚本化自动化）（[The Robot Report — VLA 模型是自主机器人的下一跃迁](https://www.therobotreport.com/vision-language-action-models-are-the-next-leap-in-autonomous-robotics/)；[Carnegie Endowment — 具身 AI：中国的大押注, 2025-11](https://carnegieendowment.org/research/2025/11/embodied-ai-china-smart-robots?lang=en)）。相邻行业包括传统工业机器人（ABB、发那科 Fanuc、库卡 KUKA、安川 Yaskawa）、协作机器人（优傲 UR、斗山 Doosan）、服务机器人（普渡科技、擎朗 Keenon）以及四足机器人（波士顿动力 Spot、宇树）（[Top3DShop — 人形机器人指南, 2025](https://top3dshop.com/blog/humanoid-robots-types-history-best-models)）。
 
-**市场规模。** 不同预测机构对 TAM 定义和时间跨度的不同假设，使得估算结果跨度达两个数量级：
+**市场规模。** 不同预测机构对 TAM 定义和时间跨度的不同假设，使得估算结果跨度达两个数量级（[MarketsAndMarkets — 中国人形机器人市场](https://www.marketsandmarkets.com/Market-Reports/china-humanoid-robot-market-203952382.html)；[Morgan Stanley — 人形机器人市场 2050 年 5 万亿美元](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050)）：
 
 - **MarketsAndMarkets** 预计中国人形机器人市场将由 **2025 年的 4 亿美元增长至 2030 年的 28 亿美元**，CAGR 47.6%（[MarketsAndMarkets — 中国人形机器人市场](https://www.marketsandmarkets.com/Market-Reports/china-humanoid-robot-market-203952382.html)）。
 - **摩根士丹利** 预计**全球人形机器人市场到 2050 年可超过 5 万亿美元**，包含全部供应链及维修 / 维护 / 售后长尾；近期落地节奏在"2030 年代中期之前相对缓慢，2030 年代末期与 2040 年代加速"（[Morgan Stanley — 人形机器人市场预计 2050 年达 5 万亿美元](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050)）。

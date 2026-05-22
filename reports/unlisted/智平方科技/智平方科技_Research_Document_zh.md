@@ -173,17 +173,17 @@ graph TD
 
 **功能定位。** Alpha Brain是公司自研的多模态基础模型，输入视觉、语言、本体感觉与力觉传感数据，输出AlphaBot平台所需的连续电机控制指令序列。该模型旗舰架构GOVLA（Global & Omni-body Vision-Language-Action，全域全身视觉-语言-动作）被定位为单一技术栈模型，而非由独立训练模块组成的感知→规划→控制流水线。公布的能力包括：360°空间理解、全身协调、多步任务分解、自然语言交互界面。系统采用**"快+慢"双系统**架构，快速实时回路负责即时运动控制，较慢的推理回路负责多步规划生成（[RoboticsTomorrow, 2025](https://www.roboticstomorrow.com/content.php?post=25899)；[Alabia Insights, 2025](https://alabia.com.br/insights/trabalho/empregos/ai2-robotics-govla-embodied-ai-productivity/)）。
 
-**竞争优势判定：部分构成——技术 / IP护城河，取决于数据飞轮。** 该优势存在前提条件。截至本报告日期，**没有任何**领先的中国具身智能初创公司在同行评审或独立基准评测环境中公开展示出明显占优的VLA模型；行业整体处于基准前阶段。Alpha Brain的优势（若存在）建立在：（a）在中国同行中较早采用统一VLA架构的先发位置；（b）部署中的AlphaBot单位持续累积的闭环数据集；（c）郭彦东本人的感知研究背景。**最直接的竞品模型：Google的RT-2 / RT-X系列（英语学术基线）以及X方机器人（X Square Robot）的WALL-A模型（最接近的中国同行）**（[X Square Robot, Robotics 24/7 coverage](https://www.therobotreport.com/x-square-robot-secures-140m-in-funding-for-ai-foundation-models/)）——已公开展示能力相当，学术论文足迹方面落后。
+**竞争优势判定：部分构成——技术 / IP护城河，取决于数据飞轮。** 该优势存在前提条件。截至本报告日期，**没有任何**领先的中国具身智能初创公司在同行评审或独立基准评测环境中公开展示出明显占优的VLA模型；行业整体处于基准前阶段（[量子位, 2024 — 具身智能GPT-2时刻](https://blog.csdn.net/QbitAI/article/details/144755756)）。Alpha Brain的优势（若存在）建立在：（a）在中国同行中较早采用统一VLA架构的先发位置；（b）部署中的AlphaBot单位持续累积的闭环数据集；（c）郭彦东本人的感知研究背景（[AI² Robotics 创始人访谈](https://ai2robotics.com/en/%E4%B8%93%E8%AE%BF%E6%99%BA%E5%B9%B3%E6%96%B9%E5%88%9B%E5%A7%8B%E4%BA%BA%E9%83%AD%E5%BD%A6%E4%B8%9C%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%A1%AC%E4%BB%B6%E6%AD%A3/)）。**最直接的竞品模型：Google的RT-2 / RT-X系列（英语学术基线）以及X方机器人（X Square Robot）的WALL-A模型（最接近的中国同行）**（[X Square Robot, Robotics 24/7 coverage](https://www.therobotreport.com/x-square-robot-secures-140m-in-funding-for-ai-foundation-models/)）——已公开展示能力相当，学术论文足迹方面落后。
 
 ### 4.2 AlphaBot 1 —— 单臂轮式移动操作机器人
 
 **功能定位。** AlphaBot 1是公司首款投入商业部署的平台：带单臂的轮式移动底盘，针对工业取放、机器单元间物料搬运及巡检任务设计。在已公开的奔驰与晶能微电子部署影像中，绝大多数为这一平台。*相比AlphaBot 2，AlphaBot 1的详细公开技术规格资料较为稀少——已标注。*
 
-**目标客户。** 制造业（汽车OEM、半导体 / 显示面板厂、电子组装），即单臂、固定基座或移动取放臂在运营层面足以满足需求、且较低单台成本相较于AlphaBot 2具有实质意义的场景。
+**目标客户。** 制造业（汽车OEM、半导体 / 显示面板厂、电子组装），即单臂、固定基座或移动取放臂在运营层面足以满足需求、且较低单台成本相较于AlphaBot 2具有实质意义的场景（[新浪财经, 2025-04-17](https://finance.sina.com.cn/jjxw/2025-04-17/doc-inetnwin2047310.shtml)）。
 
-**定价。** 在单机层面尚未公开披露。从惠科合同（约人民币5亿元 / 约1,000台 / 3年）反推，含集成的综合单台均价约为人民币50万元（约合7万美元）；纯硬件ASP大概率更低。
+**定价。** 在单机层面尚未公开披露。从惠科合同（约人民币5亿元 / 约1,000台 / 3年）反推，含集成的综合单台均价约为人民币50万元（约合7万美元）；纯硬件ASP大概率更低（[机器人大讲堂, 2025-09 — 惠科订单价值或达5亿元](https://www.leaderobot.com/news/6326)）。
 
-**竞争优势判定：部分构成——应用+品牌护城河，硬件趋于商品化。** 单臂移动操作机器人形态本身并非架构上的新发明——Galbot的轮式平台、波士顿动力的Stretch、极智嘉Geek+ / 海柔创新Hai Robotics的商业仓储机器人都占据相邻领域。AlphaBot 1的差异化在于：（a）其上层的Alpha Brain技术栈——使同一台机器人在无需重新编程的前提下执行性质上不同的任务；（b）小但真实的客户参考案例（奔驰、晶能、惠科），这是竞争对手目前还无法在相同规模上拿出的。**最直接的竞品：Galbot的轮式单臂机器人**——硬件能力相当，部署足迹更小，但消费叙事面更受关注。
+**竞争优势判定：部分构成——应用+品牌护城河，硬件趋于商品化。** 单臂移动操作机器人形态本身并非架构上的新发明——Galbot的轮式平台、波士顿动力的Stretch、极智嘉Geek+ / 海柔创新Hai Robotics的商业仓储机器人都占据相邻领域（[Robotics & Automation News, 2025-12-20](https://roboticsandautomationnews.com/2025/12/20/humanoid-robot-maker-galbot-raises-300-million-and-reaches-3-billion-valuation/97783/)）。AlphaBot 1的差异化在于：（a）其上层的Alpha Brain技术栈——使同一台机器人在无需重新编程的前提下执行性质上不同的任务；（b）小但真实的客户参考案例（奔驰、晶能、惠科），这是竞争对手目前还无法在相同规模上拿出的（[NE时代, 2025-09](https://ne-time.cn/web/article/36685)；[21经济网, 2025-04-18](https://www.21jingji.com/article/20250418/herald/375a27631a594da3b2c3d8d804ade0e7.html)）。**最直接的竞品：Galbot的轮式单臂机器人**——硬件能力相当，部署足迹更小，但消费叙事面更受关注。
 
 ### 4.3 AlphaBot 2 —— 34自由度双臂人形平台
 
@@ -200,9 +200,9 @@ graph TD
 
 资料来源：[Aparobot, AlphaBot 2 spec](https://www.aparobot.com/robots/alphabot-2)；[Interesting Engineering, 2025](https://interestingengineering.com/innovation/alphabot-2-future-humanoid-robots)；[新浪财经, 2025-04-17 launch coverage](https://finance.sina.com.cn/jjxw/2025-04-17/doc-inetnwin2047310.shtml)；[CNN Business — AlphaBot 2 video feature](https://edition.cnn.com/business/alpha-bot-humanoid-robots-china-embodied-ai-hnk-spc)。
 
-**目标客户。** 与AlphaBot 1相同的垂直行业组合，再加上需要双手操作的任务：生物科技无菌灌装、食品服务备餐、零售货架补货以及面向消费者的演示场景。
+**目标客户。** 与AlphaBot 1相同的垂直行业组合，再加上需要双手操作的任务：生物科技无菌灌装、食品服务备餐、零售货架补货以及面向消费者的演示场景（[Interesting Engineering, 2025 — AlphaBot 2 dice-rolling humanoid](https://interestingengineering.com/innovation/alphabot-2-future-humanoid-robots)；[Aparobot, AlphaBot 2 spec page](https://www.aparobot.com/robots/alphabot-2)）。
 
-**竞争优势判定：部分构成——护城河来自集成的大脑+躯体技术栈，但硬件规格可被追赶。** 在公开追踪到的约20款中国人形平台中，AlphaBot 2的"34自由度双臂+升降腰腿+轮式底盘"是独特的组合——大多数同行选择了双足行走（宇树科技Unitree、星动纪元Robotera），或完全静态的双臂（Galaxea G1）。智平方的"轮式+升降"选择在2026年的工业部署场景中比双足行走更具操作可行性。但**硬件**层面，意志坚定的竞争对手在18–24个月内可追平差距；可持续的护城河（若存在）落在Alpha Brain训练数据与客户部署参考集合的交叉处。**最直接的竞品：X方机器人（X Square Robot）的Quanta X2半人形平台（轮式、双臂、VLA驱动）**——所述能力相当，融资规模领先，已披露工业参考客户落后（[X Square Robot, The Robot Report, 2026-01](https://www.therobotreport.com/x-square-robot-secures-140m-in-funding-for-ai-foundation-models/)）。
+**竞争优势判定：部分构成——护城河来自集成的大脑+躯体技术栈，但硬件规格可被追赶。** 在公开追踪到的约20款中国人形平台中（[XCarspace, Top 20 Chinese Humanoid Robot Companies](https://xcarspace.com/top-20-chinese-humanoid-robot-companies-ranked-by-valuation/)），AlphaBot 2的"34自由度双臂+升降腰腿+轮式底盘"是独特的组合——大多数同行选择了双足行走（宇树科技Unitree、星动纪元Robotera），或完全静态的双臂（Galaxea G1）（[新浪财经, 2025-04-17](https://finance.sina.com.cn/jjxw/2025-04-17/doc-inetnwin2047310.shtml)）。智平方的"轮式+升降"选择在2026年的工业部署场景中比双足行走更具操作可行性（[OFweek, 2025-04 — 对标特斯拉Optimus](https://m.ofweek.com/ai/2025-04/ART-201700-8110-30662149.html)）。但**硬件**层面，意志坚定的竞争对手在18–24个月内可追平差距；可持续的护城河（若存在）落在Alpha Brain训练数据与客户部署参考集合的交叉处。**最直接的竞品：X方机器人（X Square Robot）的Quanta X2半人形平台（轮式、双臂、VLA驱动）**——所述能力相当，融资规模领先，已披露工业参考客户落后（[X Square Robot, The Robot Report, 2026-01](https://www.therobotreport.com/x-square-robot-secures-140m-in-funding-for-ai-foundation-models/)）。
 
 ### 4.4 智魔方（Smart Cube）—— 模块化服务空间演示
 
@@ -210,14 +210,14 @@ graph TD
 
 ### 旗舰产品与长尾产品
 
-在三款平台中，**AlphaBot 2按公司宣传定位是旗舰产品，AlphaBot 1按当前收入贡献是走量主力**。2025年惠科合同主要由AlphaBot 1机型完成交付（应用——面板厂物料搬运——并不需要双臂双手协调）。AlphaBot 2则被定位为承接2026–2028年生物科技、食品服务及复杂装配场景下下一波部署需求的平台。
+在三款平台中，**AlphaBot 2按公司宣传定位是旗舰产品，AlphaBot 1按当前收入贡献是走量主力**。2025年惠科合同主要由AlphaBot 1机型完成交付（应用——面板厂物料搬运——并不需要双臂双手协调）（[NE时代, 2025-09](https://ne-time.cn/web/article/36685)）。AlphaBot 2则被定位为承接2026–2028年生物科技、食品服务及复杂装配场景下下一波部署需求的平台（[21经济网, 2025-04-18](https://www.21jingji.com/article/20250418/herald/375a27631a594da3b2c3d8d804ade0e7.html)）。
 
 ### 近期发布与产品路线图（过去12个月）
 
-- **2025年4月** AlphaBot 2发布，搭载GOVLA驱动的Alpha Brain。
-- **2025年中** 智魔方模块化服务空间公开演示。
-- **2025年Q4 / 2026年Q1** Alpha Brain持续迭代，细化双系统架构与改进力反馈控制（公司公开沟通中未明确版本号）。
-- **2026年规划** 产能扩张至10,000台/年；随着生物科技与食品服务场景部署放量，AlphaBot 2预计在出货结构中占比上升。
+- **2025年4月** AlphaBot 2发布，搭载GOVLA驱动的Alpha Brain（[新浪财经, 2025-04-17](https://finance.sina.com.cn/jjxw/2025-04-17/doc-inetnwin2047310.shtml)）。
+- **2025年中** 智魔方模块化服务空间公开演示（[Interesting Engineering, "World's first modular AI service space"](https://interestingengineering.com/ai-robotics/china-modular-embodied-ai-service-space)）。
+- **2025年Q4 / 2026年Q1** Alpha Brain持续迭代，细化双系统架构与改进力反馈控制（公司公开沟通中未明确版本号）（[Alabia Insights, 2025 — GOVLA model](https://alabia.com.br/insights/trabalho/empregos/ai2-robotics-govla-embodied-ai-productivity/)）。
+- **2026年规划** 产能扩张至10,000台/年；随着生物科技与食品服务场景部署放量，AlphaBot 2预计在出货结构中占比上升（[The Robot Report, 2026-02](https://www.therobotreport.com/ai2-robotics-raises-series-b-funding-advance-alphabot-embodied-ai/)）。
 
 ---
 
@@ -248,28 +248,28 @@ pie title 智平方科技 — 已披露客户收入集中度（定性，2025）
 
 ### 客户集中度 — 量化分析
 
-**公司未公开披露前一大或前五大客户的收入集中度**，因智平方科技为非上市公司，不受A股"前五名客户"披露规则约束。基于已公开披露的惠科合同（三年约人民币5亿元，按线性确认估算每年约人民币1.5–1.7亿元）以及目前没有任何其他可与之比拟规模的合同存在，合理的分析师估算是：**惠科单一客户即占智平方科技已签约前瞻性收入的40–60%以上**。若属实，这是一项实质性的客户集中度风险，已纳入第9节。
+**公司未公开披露前一大或前五大客户的收入集中度**，因智平方科技为非上市公司，不受A股"前五名客户"披露规则约束。基于已公开披露的惠科合同（三年约人民币5亿元，按线性确认估算每年约人民币1.5–1.7亿元）以及目前没有任何其他可与之比拟规模的合同存在，合理的分析师估算是：**惠科单一客户即占智平方科技已签约前瞻性收入的40–60%以上**（[NE时代, 2025-09 — 智平方斩获人形机器人大单](https://ne-time.cn/web/article/36685)）。若属实，这是一项实质性的客户集中度风险，已纳入第9节。
 
-**合同结构。** 惠科为多年框架协议形式，部署计划跨越三年、覆盖多个生产基地。奔驰似乎是按订单逐次推进的试点关系，而非主框架协议。*详细条款未公开披露——已标注。*
+**合同结构。** 惠科为多年框架协议形式，部署计划跨越三年、覆盖多个生产基地（[网易, 2025-09 — 智平方获面板企业千台订单](https://c.m.163.com/news/a/K96LE8N300098IEO.html)）。奔驰似乎是按订单逐次推进的试点关系，而非主框架协议（[21经济网, 2025-04-18](https://www.21jingji.com/article/20250418/herald/375a27631a594da3b2c3d8d804ade0e7.html)）。*详细条款未公开披露——已标注。*
 
 ### 渠道分销
 
-直销面向企业客户——智平方科技的市场策略采用直接现场工程结合现场集成的模式。目前没有公开披露与系统集成商或VAR生态的渠道合作伙伴计划。鉴于平均单笔合同规模（多年期、人民币数千万至数亿元）以及应用场景化微调的需要，在当前成熟度阶段直销是正确的选择。
+直销面向企业客户——智平方科技的市场策略采用直接现场工程结合现场集成的模式。目前没有公开披露与系统集成商或VAR生态的渠道合作伙伴计划。鉴于平均单笔合同规模（多年期、人民币数千万至数亿元）以及应用场景化微调的需要，在当前成熟度阶段直销是正确的选择（[新浪财经, 2025-04-18](https://finance.sina.com.cn/roll/2025-04-18/doc-inetqkks4824724.shtml)）。
 
 ### 销售策略与销售周期
 
-已披露的赢单遵循一种可识别的模式：先与客户的高管（通常是制造运营负责人或首席数字官）直接对接，开展数月的窄任务试点，若试点成功，再就多年期框架协议进行谈判。从首次试点到签订首份多机采购订单的销售周期合理估计为6–12个月。
+已披露的赢单遵循一种可识别的模式：先与客户的高管（通常是制造运营负责人或首席数字官）直接对接，开展数月的窄任务试点，若试点成功，再就多年期框架协议进行谈判（[量子位, 2025-03 — 晶能微合作](https://www.qbitai.com/2025/03/265579.html)；[NE时代, 2025-09](https://ne-time.cn/web/article/36685)）。从首次试点到签订首份多机采购订单的销售周期合理估计为6–12个月（[新浪财经, 2025-03-06 — 创始人访谈](https://finance.sina.com.cn/jjxw/2025-03-06/doc-inensrzt1048673.shtml)）。
 
 ### 关键合作伙伴
 
-- **百度** —— B轮战略投资方，预计提供云计算与基础模型合作；运营合作的具体形式尚未正式披露。
-- **中车（CRRC）** —— B轮战略投资方；铁路制造应用领域的潜在客户。
-- **宇信科技、森麒麟、国泰海通证券** —— 在垂直客户或资本市场层面具备相关性的战略投资方。
-- **吉利科技集团** —— 晶能微电子属于吉利科技体系；持续运营合作。
+- **百度** —— B轮战略投资方，预计提供云计算与基础模型合作；运营合作的具体形式尚未正式披露（[Caixin Global, 2026-02-23](https://www.caixinglobal.com/2026-02-23/chinas-ai-robotics-raises-fresh-funds-at-over-10-billion-yuan-valuation-102416310.html)）。
+- **中车（CRRC）** —— B轮战略投资方；铁路制造应用领域的潜在客户（[The Robot Report, 2026-02](https://www.therobotreport.com/ai2-robotics-raises-series-b-funding-advance-alphabot-embodied-ai/)）。
+- **宇信科技、森麒麟、国泰海通证券** —— 在垂直客户或资本市场层面具备相关性的战略投资方（[Gasgoo, 2026](https://autonews.gasgoo.com/articles/news/seeds-ai-robotics-officially-announces-completion-of-series-b-round-exceeding-1-billion-yuan-2026536571551883265)）。
+- **吉利科技集团** —— 晶能微电子属于吉利科技体系；持续运营合作（[搜狐, 2025-03 — 吉利科技与智平方战略合作](https://www.sohu.com/a/872946965_121956424)）。
 
 ### 客户案例（具名赢单）
 
-惠科合同是迄今中国工业人形机器人商业化中战略意义最为重要的公开具名合同之一。"1,000台 / 3年 / 人民币5亿元"的合同结构提供了少有竞争对手能够匹敌的在手订单锚点。奔驰这一参考客户即使金额相对较小，但对国际扩张所带来的信誉加持效应却远超合同本身的财务体量。
+惠科合同是迄今中国工业人形机器人商业化中战略意义最为重要的公开具名合同之一。"1,000台 / 3年 / 人民币5亿元"的合同结构提供了少有竞争对手能够匹敌的在手订单锚点（[机器人大讲堂, 2025-09 — 半导体显示首次迎来具身智能机器人](https://www.leaderobot.com/news/6326)；[NE时代, 2025-09](https://ne-time.cn/web/article/36685)）。奔驰这一参考客户即使金额相对较小，但对国际扩张所带来的信誉加持效应却远超合同本身的财务体量（[21经济网, 2025-04-18](https://www.21jingji.com/article/20250418/herald/375a27631a594da3b2c3d8d804ade0e7.html)）。
 
 ---
 
@@ -299,31 +299,31 @@ pie title 智平方科技 — 已披露客户收入集中度（定性，2025）
 
 ### 增长速度
 
-历史回顾：全球人形机器人出货量从2023年的数百台跃升至2025年的数千台（仅宇树科技单家2025年即报告售出5,500台；[TechCrunch, 2026-02-28](https://techcrunch.com/2026/02/28/why-chinas-humanoid-robot-industry-is-winning-the-early-market/)）。
+历史回顾：全球人形机器人出货量从2023年的数百台跃升至2025年的数千台（仅宇树科技单家2025年即报告售出5,500台；[TechCrunch, 2026-02-28](https://techcrunch.com/2026/02/28/why-chinas-humanoid-robot-industry-is-winning-the-early-market/)）。GGII《2025中国人形机器人产业发展蓝皮书》进一步预测2025年全球出货量达1.24万台，其中中国出货量约7,300台；2026年中国出货量将快速跃升至约6.25万台（[新浪财经, 2026-01-10 — 引用GGII数据](https://finance.sina.com.cn/jjxw/2026-01-10/doc-inhftucf5584819.shtml)）。
 
-未来预测：根据上述Premia数据，2024 → 2029年中国人形机器人CAGR约为95%，五年内规模扩张五倍以上。
+未来预测：根据上述Premia数据，2024 → 2029年中国人形机器人CAGR约为95%，五年内规模扩张五倍以上；GGII预测到2030年全球出货量近34万台、市场规模超640亿元，至2035年出货量突破500万台、市场规模超4,000亿元（[新浪财经, 2026-01-10 — 引用GGII数据](https://finance.sina.com.cn/jjxw/2026-01-10/doc-inhftucf5584819.shtml)）。
 
 ### 关键趋势与驱动因素
 
-1. **VLA基础模型压缩了将机器人编程到新任务所需的成本。** 在VLA出现之前，将机器人部署到新工厂单元需要手工设计感知+规划+控制逻辑——每个单元通常需要数月人力。借助VLA模型，同一台机器人通过少量示范即可在新任务上重新训练。
-2. **中国制造业劳动力成本上升足以使人形机器人经济性变得可被论证。** 中国制造业工资中位数已多年接近甚至超过东欧欧盟成员国的水平；针对每年单价5万至10万美元、按两班制运行的机器人，其在多种工厂场景下的人工替代回本期约为18–30个月。
-3. **国家级产业政策。** 北京及地方政府已明确将具身智能 / 人形机器人列为战略前沿产业。摩根士丹利指出，"对'具身AI'的国家支持力度在中国可能远高于任何其他国家"（[Morgan Stanley insights, 2025](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050)）。
-4. **地缘政治 — 半导体与零部件可获得性。** 大多数中国人形平台（含AlphaBot）依赖国内可获取的算力、电机与传感器。在受出口管制的美国芯片被逐步排除于中国AI训练基础设施之外的地缘政治环境下，"中国技术栈"闭环开发模式更具优势。
-5. **资本饱和。** 2025年全球人形机器人出货量中有81%来自中国公司，且VC资本集中度前所未有——智平方本身在一年内即完成12轮融资。资本密集度的副作用是赛道拥挤，2027–2028年很可能进入整合期。
+1. **VLA基础模型压缩了将机器人编程到新任务所需的成本。** 在VLA出现之前，将机器人部署到新工厂单元需要手工设计感知+规划+控制逻辑——每个单元通常需要数月人力。借助VLA模型，同一台机器人通过少量示范即可在新任务上重新训练（[RoboticsTomorrow, 2025 — GOVLA-Powered AlphaBot 2](https://www.roboticstomorrow.com/content.php?post=25899)；[量子位, 2024 — 具身智能GPT-2时刻](https://blog.csdn.net/QbitAI/article/details/144755756)）。
+2. **中国制造业劳动力成本上升足以使人形机器人经济性变得可被论证。** 中国制造业工资中位数已多年接近甚至超过东欧欧盟成员国的水平——2024年规模以上企业生产制造及有关人员年平均工资为人民币78,561元，自2013年以来私营 / 非私营部门制造业薪资年均增长率分别为9.1% / 9.5%（[国家统计局, 2025-05-16 — 2024年城镇单位就业人员年平均工资情况](https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959826.html)）。针对每年单价5万至10万美元、按两班制运行的机器人，其在多种工厂场景下的人工替代回本期约为18–30个月。
+3. **国家级产业政策。** 北京及地方政府已明确将具身智能 / 人形机器人列为战略前沿产业。工业和信息化部2023年10月印发的《人形机器人创新发展指导意见》（工信部科〔2023〕193号）明确提出2025年人形机器人创新体系初步建立、2027年形成安全可靠的产业链供应链体系（[工信部, 2023-10-20 — 人形机器人创新发展指导意见](https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2023/art_48fe01d562644aedb7ea3f4256df8190.html)）。摩根士丹利指出，"对'具身AI'的国家支持力度在中国可能远高于任何其他国家"（[Morgan Stanley insights, 2025](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050)）。
+4. **地缘政治 — 半导体与零部件可获得性。** 大多数中国人形平台（含AlphaBot）依赖国内可获取的算力、电机与传感器。在受出口管制的美国芯片被逐步排除于中国AI训练基础设施之外的地缘政治环境下，"中国技术栈"闭环开发模式更具优势（[Premia Partners, "Embodied AI – China as the global powerhouse"](https://www.premia-partners.com/insight/embodied-ai-china-as-the-global-powerhouse-for-industrial-and-humanoid-robotics)）。
+5. **资本饱和。** 2025年全球人形机器人出货量中有81%来自中国公司，且VC资本集中度前所未有——智平方本身在一年内即完成12轮融资（[TechCrunch, 2026-02-28](https://techcrunch.com/2026/02/28/why-chinas-humanoid-robot-industry-is-winning-the-early-market/)；[Robotics 24/7, 2026](https://www.robotics247.com/article/ai-robotics-raises-over-140m-in-series-b-round)）。资本密集度的副作用是赛道拥挤，2027–2028年很可能进入整合期（[TheAIInsider, 2025-12-31](https://theaiinsider.tech/2025/12/31/ai-insiders-robotics-funding-year-in-review/)）。
 
 ### 监管环境
 
-中国的机器人专属监管目前仍较为宽松，但新兴的考量点包括：
+中国的机器人专属监管目前仍较为宽松，但新兴的考量点包括（[工信部, 2023 — 指导意见解读](https://www.miit.gov.cn/zwgk/zcjd/art/2023/art_e3f5686c2f0d49f9968b7ae011d558e1.html)）：
 - 在共享工作空间中人-机交互的**工业安全标准**。
 - **数据安全** —— 具身机器人会从客户场地采集大量传感器数据；客户侧IT合规与新兴的中国数据保护规则将共同塑造合同结构。
-- **出口管制** —— 出口到某些市场的中国人形机器人会受到美方审查。
+- **出口管制** —— 出口到某些市场的中国人形机器人会受到美方审查（[Premia Partners — Embodied AI China](https://www.premia-partners.com/insight/embodied-ai-china-as-the-global-powerhouse-for-industrial-and-humanoid-robotics)）。
 
 ### 行业动态
 
-- **分散度：** 高度分散。约20余家中国人形机器人初创公司，加上美国（Figure、特斯拉Tesla、Apptronik、Sanctuary、1X），再加上尚未投入人形形态的传统工业机器人头部企业（ABB、发那科Fanuc、安川Yaskawa）。
-- **供应商议价能力：** 中等。关键零部件——执行器（行星滚柱丝杠驱动器、谐波减速器）、电池、GPU——越来越多由中国供应商提供（如双林为行星丝杠供应商），降低了供应商集中度风险。
-- **客户议价能力：** 在早期工业部署阶段为中等偏高。由于装机基数有限，客户在价格与SLA方面争取让步。
-- **替代品：** 传统工业机器人、专用AMR（自主移动机器人），以及——最关键的——*人类劳动力*。人形机器人的经济性需要中国工资水平持续上升来支撑。
+- **分散度：** 高度分散。约20余家中国人形机器人初创公司（[XCarspace — Top 20 Chinese Humanoid Robot Companies](https://xcarspace.com/top-20-chinese-humanoid-robot-companies-ranked-by-valuation/)），加上美国（Figure、特斯拉Tesla、Apptronik、Sanctuary、1X），再加上尚未投入人形形态的传统工业机器人头部企业（ABB、发那科Fanuc、安川Yaskawa）。
+- **供应商议价能力：** 中等。关键零部件——执行器（行星滚柱丝杠驱动器、谐波减速器）、电池、GPU——越来越多由中国供应商提供（如双林为行星丝杠供应商），降低了供应商集中度风险（[新浪财经, 2024 — 双林股份行星滚柱丝杠项目](https://cj.sina.com.cn/articles/view/1704103183/65928d0f020087if8)；[艾邦机器人 — 23家国内人形机器人谐波减速器供应商盘点](https://www.aibangbots.com/a/2094)）。
+- **客户议价能力：** 在早期工业部署阶段为中等偏高。由于装机基数有限，客户在价格与SLA方面争取让步（[机器人大讲堂, 2025-09 — 惠科订单](https://www.leaderobot.com/news/6326)）。
+- **替代品：** 传统工业机器人、专用AMR（自主移动机器人），以及——最关键的——*人类劳动力*。人形机器人的经济性需要中国工资水平持续上升来支撑（[国家统计局, 2025-05-16](https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959826.html)）。
 
 ---
 
@@ -362,11 +362,11 @@ quadrantChart
 
 **4. Galaxea AI（星海图智能）。** 轮式 / 机械臂平台；据报道2025年下半年完成约人民币10亿元融资后估值超过人民币100亿元——投后估值与智平方持平。工业锚定客户可见度较低（[globalneighbours.org coverage, 2026](https://www.globalneighbours.org/en/articles/china-s-ai-robotics-raises-fresh-funds-at-over-10-billion-yuan-valuation)）。
 
-**5. 星动纪元（Robotera）。** 聚焦双足人形机器人。2026年3月由吉利资本领投，阿里巴巴、海尔资本跟投，完成约人民币10亿元（约1.4亿美元）A+轮融资。双足行走传承自清华 / Cybathlon级团队；硬件驱动属性强于VLA驱动属性。
+**5. 星动纪元（Robotera）。** 聚焦双足人形机器人。2025年11月由吉利资本领投，阿里巴巴、海尔资本、北汽产投、联想创投跟投，完成约人民币10亿元（约1.4亿美元）A+轮融资——总订单额突破5亿元，海外业务占比达50%（[新浪科技, 2025-11-20](https://finance.sina.com.cn/tech/discovery/2025-11-20/doc-infxzepk1118574.shtml)；[量子位, 2025-11 — 星动纪元A+轮](https://www.qbitai.com/2025/11/354404.html)）。双足行走传承自清华 / Cybathlon级团队；硬件驱动属性强于VLA驱动属性（[Robotera 官网](https://www.robotera.com/)）。
 
-**6. 灵宝CASBOT（PsiBot）。** 2026年3月融资约2.8亿美元。聚焦工业移动操作机器人，与中国科学院学术联系紧密。一线客户参考名单仍在搭建中。
+**6. 灵宝CASBOT（PsiBot）。** 2025年下半年完成超亿元天使+轮融资，蓝思科技领投，老股东联想创投、国投创合等持续加注（[36氪, 2025 — 灵宝CASBOT近亿元融资](https://36kr.com/p/3348658418310020)；[量子位, 2025-06 — 灵宝CASBOT天使+轮](https://www.qbitai.com/2025/06/302036.html)）。聚焦工业移动操作机器人，技术上与中国科学院自动化研究所合作研发ConRFT强化微调方法（[搜狐, 2025 — 灵宝CASBOT技术与融资](https://www.sohu.com/a/867720501_121924584)）。一线客户参考名单仍在搭建中。
 
-**7. 灵动机器人 / 灵动科技（Spirit AI）。** 已有AMR（自主移动机器人）业务基础，新开拓人形机器人项目。曝光度与估值低于上述公司。据报道2025年某轮融资后接近人民币100亿元估值梯队。
+**7. 灵动机器人 / 灵动科技（Spirit AI）。** 已有AMR（自主移动机器人）业务基础，新开拓人形机器人项目。累计融资超10亿元，依靠"视觉+激光雷达"多传感器融合导航在AMR赛道领先，并引领了"订单到人"行业事实标准（[新浪财经 — 灵动科技AMR](https://t.cj.sina.com.cn/articles/view/2780826007/a5c00997001012m5n)；[知乎, 2026 — 国内人形机器人公司盘点](https://zhuanlan.zhihu.com/p/1997605413038866853)）。曝光度与估值低于上述公司。
 
 **8. 宇树科技（Unitree Robotics）。** 行业出货量领军企业。2025年售出5,500台人形机器人，收入人民币17.1亿元（约2.5亿美元），调整后净利润人民币6亿元（约0.9亿美元）。计划于2026年在上海科创板IPO，估值约70亿美元，募资约6.1亿美元。**关键之处在于：宇树是唯一已披露规模化收入的中国具身智能同行，也是唯一已实现盈利的同行。**硬件驱动属性更强，VLA软件体量小于智平方科技（[KraneShares Unitree IPO guide, 2026](https://kraneshares.com/a-complete-guide-to-unitree-robotics-2026-ipo-why-it-matters-for-star-market-etf-kstr-humanoid-robotics-etf-koid/)；[Rest of World, 2026](https://restofworld.org/2026/unitree-china-humanoid-robot-shanghai-ipo/)；[Next Web, 2026](https://thenextweb.com/news/unitree-gd01-mecha-humanoid-robot-ipo)）。
 
@@ -376,11 +376,11 @@ quadrantChart
 
 ### 定位综述
 
-智平方科技在影响其竞争位势的四个维度中，在**两个**维度上处于异乎寻常的可防御位置：（a）以基础模型驱动而非硬件驱动；（b）在其估值梯队中，已披露的工业客户参考案例异常清晰。它在另外两个维度上**处于劣势**：（c）累计融资规模——X方机器人与Galbot累计融资均高于智平方；（d）队伍深度——尚无公开任命的CFO / CTO。最大的单一竞争脆弱点在于硬件本身并非架构上的新发明，意味着拥有更多资本与类似零部件供应链的竞争对手有可能在18个月内追平形态差距。可防御的护城河（若存在）落在**Alpha Brain / GOVLA + 已部署机队数据**的交叉处。
+智平方科技在影响其竞争位势的四个维度中，在**两个**维度上处于异乎寻常的可防御位置：（a）以基础模型驱动而非硬件驱动；（b）在其估值梯队中，已披露的工业客户参考案例异常清晰（[NE时代, 2025-09](https://ne-time.cn/web/article/36685)；[Alabia Insights, 2025 — GOVLA](https://alabia.com.br/insights/trabalho/empregos/ai2-robotics-govla-embodied-ai-productivity/)）。它在另外两个维度上**处于劣势**：（c）累计融资规模——X方机器人与Galbot累计融资均高于智平方（[Inforcapital, 2026-04 — X Square Robot B轮](https://inforcapital.com/news/embodied-ai-startup-x-square-robot-raises-nearly-276m-in-series-b-led-by-xiaomi-and-sequoia-china/)；[Robotics & Automation News, 2025-12-20 — Galbot 30亿美元估值](https://roboticsandautomationnews.com/2025/12/20/humanoid-robot-maker-galbot-raises-300-million-and-reaches-3-billion-valuation/97783/)）；（d）队伍深度——尚无公开任命的CFO / CTO。最大的单一竞争脆弱点在于硬件本身并非架构上的新发明，意味着拥有更多资本与类似零部件供应链的竞争对手有可能在18个月内追平形态差距。可防御的护城河（若存在）落在**Alpha Brain / GOVLA + 已部署机队数据**的交叉处。
 
 ### 市场份额估算
 
-在分散且尚未规模化收入的市场中，市场份额难以精准估算。按**工业 / 客户环境中已披露部署台数**衡量，智平方科技合理估计位居中国具身智能初创公司前5名，落后于宇树（出货量）与智元（出货量），与X方机器人 / Galbot / 星海图智能处于不相伯仲的水平。按**估值**衡量，智平方约14亿美元，落后于Galbot（30亿美元），与Galaxea持平。
+在分散且尚未规模化收入的市场中，市场份额难以精准估算。按**工业 / 客户环境中已披露部署台数**衡量，智平方科技合理估计位居中国具身智能初创公司前5名，落后于宇树（出货量）与智元（出货量），与X方机器人 / Galbot / 星海图智能处于不相伯仲的水平（[TechCrunch, 2026-02-28](https://techcrunch.com/2026/02/28/why-chinas-humanoid-robot-industry-is-winning-the-early-market/)；[新浪财经, 2026-01-10 — GGII出货量数据](https://finance.sina.com.cn/jjxw/2026-01-10/doc-inhftucf5584819.shtml)）。按**估值**衡量，智平方约14亿美元，落后于Galbot（30亿美元），与Galaxea持平（[Caproasia, 2026-02-24](https://www.caproasia.com/2026/02/24/china-robot-company-ai%C2%B2-robotics-yandong-eric-guo-raised-144-million-funding-at-1-4-billion-valuation-founded-in-2023-by-yandong-eric-guo/)；[Global Neighbours, 2026 — Galaxea对比](https://www.globalneighbours.org/en/articles/china-s-ai-robotics-raises-fresh-funds-at-over-10-billion-yuan-valuation)）。
 
 ---
 
@@ -404,18 +404,18 @@ quadrantChart
 - 2030年：贡献南山区GDP 1%的远期目标
 - 2033年：累计部署约100万台
 
-按综合ASP在5万至7万美元（参考惠科合同隐含的约人民币50万元/台的含集成全价）测算，2028年10,000台对应**年化收入约5亿至7亿美元区间**，纯硬件SKU定价较低，含集成打包定价较高。
+按综合ASP在5万至7万美元（参考惠科合同隐含的约人民币50万元/台的含集成全价）测算，2028年10,000台对应**年化收入约5亿至7亿美元区间**，纯硬件SKU定价较低，含集成打包定价较高（[机器人大讲堂, 2025-09 — 惠科订单价值或达5亿元](https://www.leaderobot.com/news/6326)；[新浪财经, 2025-04-18 — 2028年万台产能计划](https://finance.sina.com.cn/roll/2025-04-18/doc-inetqkks4824724.shtml)）。
 
 ### SAM / SOM策略
 
-智平方科技在2028–2030年的现实SAM，是中国工业自动化投入中（a）单工位价值较高（即每个工位有理由承担5万美元以上的机器人成本）、（b）多品种小批量（传统固定式自动化回报不足）、（c）与轮式双臂形态在物理上兼容的子集。同时满足这三个条件的垂直行业包括：半导体 / 显示面板厂（惠科、晶能画像）、生物科技无菌灌装、复杂汽车装配（奔驰画像）、高端餐饮服务、实验室自动化。符合上述标准的中国工业部署SAM合理估算为**2028–2030年年化50亿至100亿美元**，智平方科技需占据其中5–10%才能实现公开的商业里程碑。
+智平方科技在2028–2030年的现实SAM，是中国工业自动化投入中（a）单工位价值较高（即每个工位有理由承担5万美元以上的机器人成本）、（b）多品种小批量（传统固定式自动化回报不足）、（c）与轮式双臂形态在物理上兼容的子集（[NE时代, 2025-09](https://ne-time.cn/web/article/36685)）。同时满足这三个条件的垂直行业包括：半导体 / 显示面板厂（惠科、晶能画像）、生物科技无菌灌装、复杂汽车装配（奔驰画像）、高端餐饮服务、实验室自动化（[搜狐, 2025-03 — 吉利与智平方战略合作](https://www.sohu.com/a/872946965_121956424)；[21经济网, 2025-04-18](https://www.21jingji.com/article/20250418/herald/375a27631a594da3b2c3d8d804ade0e7.html)）。符合上述标准的中国工业部署SAM合理估算为**2028–2030年年化50亿至100亿美元**，智平方科技需占据其中5–10%才能实现公开的商业里程碑（建立在[Premia Partners](https://www.premia-partners.com/insight/embodied-ai-china-as-the-global-powerhouse-for-industrial-and-humanoid-robotics)中国人形机器人2029年人民币750亿元预测、与[China Briefing](https://www.china-briefing.com/news/chinese-humanoid-robot-market-opportunities/)的工业子集划分之上）。
 
 ### 渗透策略
 
 三大支柱：
-1. **在产能受限、人工成本敏感的垂直行业锚定客户**（惠科、晶能、奔驰），通过3年期框架协议提供可预测的在手订单。
-2. **自有制造规模化** —— 确保单位经济效益随出货量提升而改善：2025年9月的1,000台/年产线在2026年10倍扩产是这一策略的运营实现。
-3. **基础模型杠杆** —— 战略押注是：随着机队规模增长，Alpha Brain基于部署数据飞轮的提升速度将快于机队较小的竞争对手，从而形成复利护城河。
+1. **在产能受限、人工成本敏感的垂直行业锚定客户**（惠科、晶能、奔驰），通过3年期框架协议提供可预测的在手订单（[NE时代, 2025-09](https://ne-time.cn/web/article/36685)；[量子位, 2025-03 — 晶能微合作](https://www.qbitai.com/2025/03/265579.html)）。
+2. **自有制造规模化** —— 确保单位经济效益随出货量提升而改善：2025年9月的1,000台/年产线在2026年10倍扩产是这一策略的运营实现（[新浪财经, 2025-04-18](https://finance.sina.com.cn/roll/2025-04-18/doc-inetqkks4824724.shtml)）。
+3. **基础模型杠杆** —— 战略押注是：随着机队规模增长，Alpha Brain基于部署数据飞轮的提升速度将快于机队较小的竞争对手，从而形成复利护城河（[RoboticsTomorrow, 2025 — GOVLA-Powered AlphaBot 2](https://www.roboticstomorrow.com/content.php?post=25899)；[Alabia Insights, 2025](https://alabia.com.br/insights/trabalho/empregos/ai2-robotics-govla-embodied-ai-productivity/)）。
 
 ---
 

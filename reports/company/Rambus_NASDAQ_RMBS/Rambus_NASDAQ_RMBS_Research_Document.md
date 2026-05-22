@@ -40,7 +40,7 @@ For FY2025, consolidated revenue was **USD 707.6 m**, up 27.1% year-over-year fr
 | Contract & Other (Silicon IP) | 86.4 | 83.6 | 80.5 | (3.8)% | 11.4% |
 | **Total revenue** | **461.1** | **556.6** | **707.6** | **+27.1%** | 100.0% |
 
-**The dominant 2025 narrative is the +40.9% surge in Memory Interface Chips,** driven by DDR5 RDIMM penetration in server platforms and rising attach of Gen-2 / Gen-3 RCDs onto each DDR5 module. Royalties are also growing as Rambus signs and extends multi-year licenses covering DDR5 architecture and security patents.
+**The dominant 2025 narrative is the +40.9% surge in Memory Interface Chips,** driven by DDR5 RDIMM penetration in server platforms and rising attach of Gen-2 / Gen-3 RCDs onto each DDR5 module. Royalties are also growing as Rambus signs and extends multi-year licenses covering DDR5 architecture and security patents ([Rambus Q4-2025 earnings call transcript, Motley Fool, 2026-02-02](https://www.fool.com/earnings/call-transcripts/2026/02/02/rambus-rmbs-q4-2025-earnings-call-transcript/)).
 
 ![Revenue mix FY2021–FY2025](charts/rmbs_revenue_mix.png)
 *Source: [Rambus FY2022 10-K, p. 33–34](https://www.sec.gov/Archives/edgar/data/917273/000091727323000008/0000917273-23-000008-index.htm) (2021/2022 figures) and [Rambus FY2025 10-K, p. 42–43](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm) (2023–2025). Note: 2022 Product revenue includes the SerDes/PHY IP business that was divested in September 2023.*
@@ -93,7 +93,7 @@ Peer comparison:
 
 **Interpretation of the stretched multiple.** Rambus's 67× TTM P/E and 21× TTM P/S sit above the IP-licensor peer set on revenue but actually look reasonable against the pure EDA/IP peers (CDNS, SNPS) and look cheap against Montage (the closest functional comparable in memory-interface chips). The drivers of the elevated multiple are (a) **DDR5 ramp**: product revenue is in the middle of a multi-year acceleration as DDR5 RDIMM share crosses 50% of server shipments; (b) **AI memory-bandwidth proxy status**: the September 2025 launch of HBM4 / HBM4E Controller IP and PCIe 7.0 IP positioned RMBS as a derivative way to play HBM and accelerator buildouts ([Rambus Q3-2025 earnings call, Motley Fool transcript](https://www.fool.com/earnings/call-transcripts/2025/10/27/rambus-rmbs-q3-2025-earnings-call-transcript/)); (c) **MRDIMM optionality**: Multiplexed RDIMM ramp into 2027–2028 carries materially higher silicon content per module than standard RCD chipsets, plausibly doubling product ASP per server slot. The stock more than doubled from ~USD 60 in July 2025 to USD 141 in May 2026.
 
-The risk: at 21× P/S the market is pricing several years of compounding into FY27–FY29. Section 9 carries the multiple-compression risk explicitly.
+The risk: at 21× P/S the market is pricing several years of compounding into FY27–FY29. Section 9 carries the multiple-compression risk explicitly ([Yahoo Finance, RMBS Key Statistics](https://finance.yahoo.com/quote/RMBS/key-statistics), accessed 2026-05-20).
 
 ![RMBS share price, 3-year](charts/rmbs_price_3y.png)
 *Source: [Yahoo Finance historical prices, RMBS](https://finance.yahoo.com/quote/RMBS/history), accessed May 20, 2026.*
@@ -135,18 +135,18 @@ timeline
 
 ### Two pivotal transitions
 
-**Pivot 1 — from RDRAM monoculture to broad patent licensing (mid-2000s):** RDRAM's adoption with Pentium 4 systems peaked and then declined sharply as the rest of the industry standardized on DDR/DDR2. Rambus was forced to monetize its patent portfolio through litigation and licensing, which generated a decade of legal-driven revenues but also of unpredictable earnings. The Hynix / Samsung / Micron disputes — running through US Federal Court, the ITC, Korea Fair Trade Commission, and EU Competition cases — were finally resolved by ~2013–2014, after which licensing revenue stabilized.
+**Pivot 1 — from RDRAM monoculture to broad patent licensing (mid-2000s):** RDRAM's adoption with Pentium 4 systems peaked and then declined sharply as the rest of the industry standardized on DDR/DDR2. Rambus was forced to monetize its patent portfolio through litigation and licensing, which generated a decade of legal-driven revenues but also of unpredictable earnings. The Hynix / Samsung / Micron disputes — running through US Federal Court, the ITC, Korea Fair Trade Commission, and EU Competition cases — were finally resolved by ~2013–2014, after which licensing revenue stabilized ([Rambus and SK hynix Sign Patent License Agreement, 2013](https://www.rambus.com/rambus-and-sk-hynix-sign-patent-license-agreement/); [Rambus – Wikipedia, company history](https://en.wikipedia.org/wiki/Rambus)).
 
-**Pivot 2 — from "license-and-litigate" to "products + IP" (2015–2023):** Beginning in 2015 under CEO Ron Black and accelerated by Luc Seraphin, Rambus reframed itself as a designer of actual silicon products (memory buffer / register clock driver chips) and a supplier of integrated IP cores (PCIe, CXL, security). The PHY divestiture in September 2023 (a USD ~90 m gain) was the capstone — a strategic exit of a sub-scale IP line so the company could double down on memory interface chips for the data center.
+**Pivot 2 — from "license-and-litigate" to "products + IP" (2015–2023):** Beginning in 2015 under CEO Ron Black and accelerated by Luc Seraphin, Rambus reframed itself as a designer of actual silicon products (memory buffer / register clock driver chips) and a supplier of integrated IP cores (PCIe, CXL, security). The PHY divestiture in September 2023 (a USD ~90 m gain) was the capstone — a strategic exit of a sub-scale IP line so the company could double down on memory interface chips for the data center ([Rambus Completes Sale of PHY IP Assets to Cadence, 2023-09-07](https://www.rambus.com/rambus-completes-sale-of-phy-ip-assets-to-cadence/)).
 
 ### Key acquisitions
 
 - **2016** — Smart Card Software / Bell ID / CryptoResearch — security / payment IP foundation
 - **2018** — Hardent — security IP
-- **2021** — **PLDA Group** — PCIe/CXL controller IP (earn-out partly settled 2022/2023)
-- **2021** — **AnalogX** — high-speed link IP
-- **2022** — Hardent additional — strengthens security IP
-- *Divestiture, Sept 2023* — SerDes & Memory Interface PHY IP business (~USD 90.8 m gain)
+- **2021** — **PLDA Group** — PCIe/CXL controller IP (earn-out partly settled 2022/2023) ([Rambus Completes Acquisition of PLDA, 2021-08-18](https://www.rambus.com/rambus-completes-acquisition-of-plda/))
+- **2021** — **AnalogX** — high-speed link IP ([Rambus Completes Acquisition of AnalogX, 2021-07-06](https://www.prnewswire.com/news-releases/rambus-completes-acquisition-of-analogx-301325695.html))
+- **2022** — Hardent additional — strengthens security IP ([Rambus Completes Acquisition of Hardent, 2022-05-24](https://www.rambus.com/rambus-completes-acquisition-of-hardent/))
+- *Divestiture, Sept 2023* — SerDes & Memory Interface PHY IP business (~USD 90.8 m gain) ([Rambus Completes Sale of PHY IP Assets to Cadence, 2023-09-07](https://www.rambus.com/rambus-completes-sale-of-phy-ip-assets-to-cadence/))
 
 ### Recent (last 12 months)
 
@@ -166,7 +166,7 @@ Luc Seraphin has spent his entire career in semiconductors and reaches his eight
 
 His earlier career spans 18 years at **AT&T Bell Labs / Lucent / Agere Systems** (later acquired by LSI and ultimately Broadcom), where he held senior positions in sales, marketing, and general management, culminating in the role of Executive Vice President and General Manager of the **Wireless Business Unit at Agere**. He then served as General Manager of a GPS startup in Switzerland and Vice President of Worldwide Sales and Support at **Sequans Communications** (NYSE: SQNS) before joining Rambus. He holds a bachelor's degree in Mathematics and Physics and a master's degree in Electrical Engineering from Ecole Superieure de Chimie, Physique, Electronique in Lyon (where he majored in Computer Architecture), and an MBA from the University of Hartford. He has completed the Columbia Senior Executive Program and the Stanford Directors' Consortium ([Rambus 2026 DEF 14A, Seraphin biography](https://www.sec.gov/Archives/edgar/data/917273/000119312526096458/0001193125-26-096458-index.htm)).
 
-Under Seraphin's tenure: (a) the company executed the strategic pivot from license-and-litigate to products + IP + licensing; (b) product revenue grew from <USD 25 m in 2018 to USD 347.8 m in 2025 — roughly a 14× expansion in seven years; (c) gross margins improved from the high-60s percent range to ~80%; (d) the long-running PHY IP business was divested at the right time to focus on memory interface chips; (e) the patent licensing portfolio was renewed and extended with the major DRAM makers and a broad set of system / GPU customers (including AMD, Broadcom, NVIDIA, MediaTek, Qualcomm). Per the 2026 DEF 14A, approximately 92% of Seraphin's total target compensation in 2025 was performance-linked (PSUs based on relative TSR over a three-year window), and he held 370,984 shares as of February 25, 2026 — material but not founder-level ownership.
+Under Seraphin's tenure: (a) the company executed the strategic pivot from license-and-litigate to products + IP + licensing; (b) product revenue grew from <USD 25 m in 2018 to USD 347.8 m in 2025 — roughly a 14× expansion in seven years; (c) gross margins improved from the high-60s percent range to ~80%; (d) the long-running PHY IP business was divested at the right time to focus on memory interface chips; (e) the patent licensing portfolio was renewed and extended with the major DRAM makers and a broad set of system / GPU customers (including AMD, Broadcom, NVIDIA, MediaTek, Qualcomm). Per the 2026 DEF 14A, approximately 92% of Seraphin's total target compensation in 2025 was performance-linked (PSUs based on relative TSR over a three-year window), and he held 370,984 shares as of February 25, 2026 — material but not founder-level ownership ([Rambus 2026 DEF 14A, Compensation Discussion & Security Ownership](https://www.sec.gov/Archives/edgar/data/917273/000119312526096458/0001193125-26-096458-index.htm)).
 
 ### Sumeet Gagneja — Senior Vice President & Chief Financial Officer (effective April 29, 2026)
 
@@ -178,7 +178,7 @@ Sean Fan oversees Rambus's product organization including memory interface chips
 
 ### John Shinn — Senior Vice President, General Counsel, Secretary & Chief Compliance Officer
 
-John Shinn leads legal and IP licensing strategy — a critical role for Rambus given that ~40% of revenue is patent royalties and the historical importance of patent enforcement. He held 27,580 shares as of February 25, 2026.
+John Shinn leads legal and IP licensing strategy — a critical role for Rambus given that ~40% of revenue is patent royalties and the historical importance of patent enforcement. He held 27,580 shares as of February 25, 2026 ([Rambus 2026 DEF 14A, Security Ownership table](https://www.sec.gov/Archives/edgar/data/917273/000119312526096458/0001193125-26-096458-index.htm)).
 
 ### Governance footer
 
@@ -195,7 +195,7 @@ Per the proxy, approximately **86%** of NEO target compensation (and ~92% for th
 
 ### Management track record synthesis
 
-This is a credible, semi-veteran management team that has executed the operating thesis — pivoting from a litigation-driven IP business to a real product/silicon supplier — convincingly over seven years, with revenue per share roughly tripling and operating margins quadrupling. The principal gap is finance leadership continuity: Lynch departed mid-cycle, Gagneja brings strong credentials but has not yet reported a quarter. The addition of Victor Peng (AMD / Xilinx) to the board is a substantive upgrade in semiconductor C-suite optics and likely useful for customer / partner relations with both AMD and the broader hyperscale buyer base.
+This is a credible, semi-veteran management team that has executed the operating thesis — pivoting from a litigation-driven IP business to a real product/silicon supplier — convincingly over seven years, with revenue per share roughly tripling and operating margins quadrupling ([Rambus 2025 10-K, Item 7 MD&A](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)). The principal gap is finance leadership continuity: Lynch departed mid-cycle, Gagneja brings strong credentials but has not yet reported a quarter. The addition of Victor Peng (AMD / Xilinx) to the board is a substantive upgrade in semiconductor C-suite optics and likely useful for customer / partner relations with both AMD and the broader hyperscale buyer base ([Victor Peng Joins Rambus Board of Directors, 8-K, 2026-02-12](https://www.sec.gov/Archives/edgar/data/917273/000119312526048728/d83049dex991.htm)).
 
 ---
 
@@ -249,9 +249,9 @@ Rambus sells **complete chipset solutions for industry-standard DDR5 and LPDDR5 
 
 **Competitive advantage verdict — YES (strong).** The DDR5 RCD / MRCD / MDB market is a JEDEC-standardized, qualification-gated **three-way oligopoly** (Rambus, Montage Technology, Renesas/IDT) with the three suppliers accounting for ~97% of the market ([SCMP, 2025](https://www.scmp.com/tech/tech-trends/article/3307646/tech-war-shanghai-chip-firm-doubles-quarterly-profit-china-expands-supply-chain-role)). Rambus held roughly **25% DDR4 RCD share** but exited DDR5 with **mid-40% share** — i.e. it gained the most share in the transition ([TheValueist on X, citing Q4-2025 earnings, 2025-09](https://x.com/TheValueist/status/1970139561939669463); cross-validated by [Q4-2025 earnings call transcript, Motley Fool, 2026-02-02](https://www.fool.com/earnings/call-transcripts/2026/02/02/rambus-rmbs-q4-2025-earnings-call-transcript/)).
 
-Moat type: **technology + IP (deep patent portfolio in memory architecture) + qualification / certification (years-long DRAM-maker and OEM design-in cycle) + scale (mature silicon at multiple foundries) + switching costs (hyperscalers re-qualifying RCDs requires extensive system validation)**. Per-module ASP is rising over time as Gen 1→Gen 5 RCDs incorporate more silicon and as MRDIMM adds the MRCD+MDB companion chipset (estimated 3–5× the content/module of an RDIMM).
+Moat type: **technology + IP (deep patent portfolio in memory architecture) + qualification / certification (years-long DRAM-maker and OEM design-in cycle) + scale (mature silicon at multiple foundries) + switching costs (hyperscalers re-qualifying RCDs requires extensive system validation)**. Per-module ASP is rising over time as Gen 1→Gen 5 RCDs incorporate more silicon and as MRDIMM adds the MRCD+MDB companion chipset (estimated 3–5× the content/module of an RDIMM) ([Lenovo Press, Introduction to MRDIMM Memory Technology, 2025](https://lenovopress.lenovo.com/lp2028-introduction-to-mrdimm-memory-technology); [JEDEC press release on DDR5 MRDIMM Gen2 12,800 MT/s standard, 2025](https://www.jedec.org/news/pressreleases/jedec%C2%AE-advances-ddr5-mrdimm-ecosystem-new-memory-interface-logic-and-expanded)).
 
-Closest competing product: **Montage Technology DDR5 RCD04** (up to 7200 MT/s); Renesas DDR5 RCD (acquired ex-IDT). Rambus's Gen-5 RCD at 8000 MT/s and full MRDIMM 12800 chipset is **ahead of Montage** on the speed-bin curve as of mid-2026.
+Closest competing product: **Montage Technology DDR5 RCD04** (up to 7200 MT/s) ([Montage Technology DDR5 Products page](https://www.montage-tech.com/Memory_Interface/DDR5)); Renesas DDR5 RCD (acquired ex-IDT) ([Renesas DDR5 Solutions product page](https://www.renesas.com/en/products/memory-logic/memory-interface-products/ddr5-solutions)). Rambus's Gen-5 RCD at 8000 MT/s and full MRDIMM 12800 chipset is **ahead of Montage** on the speed-bin curve as of mid-2026 ([Rambus Q4-2025 earnings call transcript, Motley Fool, 2026-02-02](https://www.fool.com/earnings/call-transcripts/2026/02/02/rambus-rmbs-q4-2025-earnings-call-transcript/)).
 
 ### 4.2 Silicon IP (~11% of FY25 revenue; (3.8)% YoY)
 
@@ -269,11 +269,11 @@ Rambus licenses both **interface IP** and **security IP** for chipmakers buildin
 - **Crypto Cores**
 - **Chip Provisioning Technologies**
 
-**Competitive advantage verdict — PARTIAL.** Rambus competes here with **Cadence**, **Synopsys** (the two EDA giants who package IP with their tool flows), as well as customer in-house design teams. Rambus does have a strong technology lead on HBM controller IP (genuinely "industry-first" on HBM4 and HBM4E) and a defensible niche in security IP. But on PCIe / CXL controller IP, Cadence and Synopsys have much broader catalogs and deeper customer relationships through their EDA bundling — Rambus's position is competitive but not dominant.
+**Competitive advantage verdict — PARTIAL.** Rambus competes here with **Cadence**, **Synopsys** (the two EDA giants who package IP with their tool flows), as well as customer in-house design teams ([Synopsys HBM4 Controller IP product page](https://www.synopsys.com/designware-ip/interface-ip/hbm/hbm4-controller.html); [Cadence HBM4E Memory IP product page](https://www.cadence.com/en_US/home/tools/silicon-solutions/protocol-ip/memory-interface-and-storage-ip/hbm-phy/hbm4e.html)). Rambus does have a strong technology lead on HBM controller IP (genuinely "industry-first" on HBM4 and HBM4E) and a defensible niche in security IP. But on PCIe / CXL controller IP, Cadence and Synopsys have much broader catalogs and deeper customer relationships through their EDA bundling — Rambus's position is competitive but not dominant.
 
-Moat type: **technology / IP (genuine timing lead on HBM4 / HBM4E)** + **distribution (direct semiconductor sales force)**. Anti-moats: subscale relative to CDNS/SNPS, no EDA bundling leverage.
+Moat type: **technology / IP (genuine timing lead on HBM4 / HBM4E)** + **distribution (direct semiconductor sales force)** ([EE Times, Rambus Unveils HBM4E Controller, 2026-03](https://www.eetimes.com/rambus-unveils-hbm4e-controller-16-gt-s-2048-bit-interface-enabling-c-hbm4e/)). Anti-moats: subscale relative to CDNS/SNPS, no EDA bundling leverage.
 
-Closest competing product: **Cadence Denali HBM4 Controller** and **Synopsys DesignWare HBM4 Controller** — Rambus is **at parity to ahead** on raw HBM4E throughput per published specs (16 Gbps/pin) as of May 2026.
+Closest competing product: **Cadence Denali HBM4 Controller** ([Cadence HBM4 12.8Gbps IP press release, 2025](https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2025/cadence-enables-next-gen-ai-and-hpc-systems-with-industrys.html)) and **Synopsys DesignWare HBM4 Controller** ([Synopsys HBM4 Controller IP](https://www.synopsys.com/designware-ip/interface-ip/hbm/hbm4-controller.html)) — Rambus is **at parity to ahead** on raw HBM4E throughput per published specs (16 Gbps/pin) as of May 2026 ([Rambus HBM4E announcement, 2026-03-04](https://www.rambus.com/rambus-sets-new-benchmark-for-ai-memory-performance-with-industry-leading-hbm4e-controller-ip/)).
 
 ### 4.3 Patent Licensing (39.5% of FY25 revenue; +23.5% YoY)
 
@@ -281,22 +281,22 @@ Patented inventions covering memory architecture, high-speed serial links, and s
 
 > "AMD, Amlogic, Broadcom, CXMT, IBM, Infineon, Kioxia, Marvell, MediaTek, Micron, Nanya, Nuvoton, NVIDIA, Phison, Qualcomm, Samsung, Silicon Motion, SK hynix, Socionext, STMicroelectronics, Toshiba, Western Digital and Winbond have licensed our patents."
 
-Notable: **CXMT** (Changxin Memory Technologies) — China's leading domestic DRAM maker — is now an explicit licensee, replacing what would have been a structural revenue gap if Chinese DRAM scaled without paying license fees.
+Notable: **CXMT** (Changxin Memory Technologies) — China's leading domestic DRAM maker — is now an explicit licensee, replacing what would have been a structural revenue gap if Chinese DRAM scaled without paying license fees ([Tom's Hardware, Chinese DRAM Maker CXMT Signs Patent Deal With Rambus](https://www.tomshardware.com/news/cxmt-patent-agreement-rambus-china-dram-memory)).
 
-**Competitive advantage verdict — YES (very strong).** This is a >2,000-patent portfolio covering foundational memory architecture, accumulated over 35 years; barriers to replicating it are essentially insurmountable for new entrants. The licensee list is comprehensive across the global DRAM and processor industries. The lumpy royalty pattern (renewals every 3–10 years) creates earnings volatility, but the underlying cash generation is exceptionally durable.
+**Competitive advantage verdict — YES (very strong).** This is a >2,000-patent portfolio covering foundational memory architecture, accumulated over 35 years; barriers to replicating it are essentially insurmountable for new entrants. The licensee list is comprehensive across the global DRAM and processor industries. The lumpy royalty pattern (renewals every 3–10 years) creates earnings volatility, but the underlying cash generation is exceptionally durable ([Rambus 2025 10-K, Item 1 Business — Patent Licensing](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
 
 Moat type: **IP / patents** — pure-play.
 
 ### 4.4 Flagship products
 
-The **DDR5 RCD chipset business** is the unambiguous flagship — it drove +41% product revenue growth in FY2025, is the single biggest swing factor in the FY26–FY28 outlook, and is the basis of the AI memory-infrastructure narrative the stock now trades on. The **MRDIMM chipset** (MRCD + MDB) is the explicit forward driver; first MRDIMM volume ramps are expected late 2026 into 2027, with material content uplift per module. The HBM4 / HBM4E Controller IP is the secondary forward narrative.
+The **DDR5 RCD chipset business** is the unambiguous flagship — it drove +41% product revenue growth in FY2025, is the single biggest swing factor in the FY26–FY28 outlook, and is the basis of the AI memory-infrastructure narrative the stock now trades on. The **MRDIMM chipset** (MRCD + MDB) is the explicit forward driver; first MRDIMM volume ramps are expected late 2026 into 2027, with material content uplift per module. The HBM4 / HBM4E Controller IP is the secondary forward narrative ([Rambus Q4-2025 earnings call transcript, Motley Fool, 2026-02-02](https://www.fool.com/earnings/call-transcripts/2026/02/02/rambus-rmbs-q4-2025-earnings-call-transcript/); [Rambus 2025 10-K, Item 1 Business](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
 
 ### 4.5 Recent launches (last 12 months)
 
-- **March 2026** — HBM4E Memory Controller IP (industry-leading 16 Gbps/pin)
-- **April 2026** — LPDDR5X SOCAMM2 server-module chipset
-- **Sept 2025** — DDR5 RDIMM Gen 5 RCD (8000 MT/s)
-- **Mid-2025** — PCIe 7.0 controller IP
+- **March 2026** — HBM4E Memory Controller IP (industry-leading 16 Gbps/pin) ([Rambus HBM4E announcement, 2026-03-04](https://www.rambus.com/rambus-sets-new-benchmark-for-ai-memory-performance-with-industry-leading-hbm4e-controller-ip/))
+- **April 2026** — LPDDR5X SOCAMM2 server-module chipset ([Q1-FY2026 earnings release, 2026-04-27](https://www.sec.gov/Archives/edgar/data/917273/000119312526182076/rmbs-ex99_1.htm))
+- **Sept 2025** — DDR5 RDIMM Gen 5 RCD (8000 MT/s) ([Rambus Q3-2025 earnings release, 2025-10-27](https://www.sec.gov/Archives/edgar/data/917273/000119312525251595/rmbs-ex99_1.htm))
+- **Mid-2025** — PCIe 7.0 controller IP ([Rambus Q3-2025 earnings call transcript, Motley Fool, 2025-10-27](https://www.fool.com/earnings/call-transcripts/2025/10/27/rambus-rmbs-q3-2025-earnings-call-transcript/))
 
 ---
 
@@ -369,27 +369,27 @@ Rambus competes in three adjacent but technically distinct semiconductor sub-ind
 
 **Key drivers:**
 
-1. **DDR5 penetration in servers.** DDR5 server module shipment share crossed 50% in late 2024 and is expected to exceed 80% by 2026, fully displacing DDR4.
-2. **AI workload memory intensity.** AI training and inference platforms require materially more DRAM channels per CPU socket and per accelerator, driving up RCD attach.
-3. **MRDIMM ramp (2026–2028).** MRDIMM doubles per-module bandwidth (12.8 Gbps vs 6.4 Gbps DDR5 base) by introducing a multiplexed two-rank architecture, with both an MRCD and 9 MDB chips per module — roughly **3–5× the silicon content per module** versus a vanilla DDR5 RDIMM.
-4. **AI PC and LPDDR5/X expansion into client form factors.** Server-class memory technology is migrating into AI PCs (CKD, LPDDR5X SOCAMM2).
-5. **HBM bandwidth wars.** Each generation of HBM (3, 3E, 4, 4E) drives 2× per-stack bandwidth, requiring matching controller IP in AI accelerators.
+1. **DDR5 penetration in servers.** DDR5 server module shipment share crossed 50% in late 2024 and is expected to exceed 80% by 2026, fully displacing DDR4 ([TrendForce, Tight DRAM Supply to Boost DDR5 Contract Prices, 2025-10-29](https://www.trendforce.com/presscenter/news/20251029-12758.html)).
+2. **AI workload memory intensity.** AI training and inference platforms require materially more DRAM channels per CPU socket and per accelerator, driving up RCD attach ([TrendForce, AI Server Demand Memory Contract Prices, 2026-03-31](https://www.trendforce.com/presscenter/news/20260331-12995.html)).
+3. **MRDIMM ramp (2026–2028).** MRDIMM doubles per-module bandwidth (12.8 Gbps vs 6.4 Gbps DDR5 base) by introducing a multiplexed two-rank architecture, with both an MRCD and 9 MDB chips per module — roughly **3–5× the silicon content per module** versus a vanilla DDR5 RDIMM ([JEDEC press release on DDR5 MRDIMM Gen2 12,800 MT/s standard](https://www.jedec.org/news/pressreleases/jedec%C2%AE-advances-ddr5-mrdimm-ecosystem-new-memory-interface-logic-and-expanded); [Lenovo Press, Introduction to MRDIMM Memory Technology](https://lenovopress.lenovo.com/lp2028-introduction-to-mrdimm-memory-technology)).
+4. **AI PC and LPDDR5/X expansion into client form factors.** Server-class memory technology is migrating into AI PCs (CKD, LPDDR5X SOCAMM2) ([Q1-FY2026 earnings release, 2026-04-27](https://www.sec.gov/Archives/edgar/data/917273/000119312526182076/rmbs-ex99_1.htm)).
+5. **HBM bandwidth wars.** Each generation of HBM (3, 3E, 4, 4E) drives 2× per-stack bandwidth, requiring matching controller IP in AI accelerators ([JEDEC HBM4 Standard press release, JESD270-4, 2025-04](https://www.jedec.org/news/pressreleases/jedec%C2%AE-and-industry-leaders-collaborate-release-jesd270-4-hbm4-standard-advancing)).
 
 ### 6.3 Semiconductor IP licensing market
 
-Estimated at **USD 7–8 bn in 2025**, growing 12–15% CAGR ([Industry consensus from multiple research sources](https://www.gartner.com)). The market is dominated by **Cadence Design Systems** (CDNS) and **Synopsys** (SNPS), with **Arm Holdings** as the third giant and a tail of specialized players (Rambus, CEVA, Imagination, Silvaco, eMemory). Memory controller IP is a high-value niche driven by HBM and DDR5/CXL transitions.
+Estimated at **USD 7–8 bn in 2025**, growing 12–15% CAGR ([Sanie Institute, Overview of the EDA Industry, 2025](https://sanieinstitute.substack.com/p/overview-of-the-electronic-design)). The market is dominated by **Cadence Design Systems** (CDNS) and **Synopsys** (SNPS), with **Arm Holdings** as the third giant and a tail of specialized players (Rambus, CEVA, Imagination, Silvaco, eMemory). Memory controller IP is a high-value niche driven by HBM and DDR5/CXL transitions ([Synopsys 2024 8-K earnings release, FY24 results](https://www.sec.gov/Archives/edgar/data/0000883241/000119312524008120/d720113dex991.htm)).
 
 ### 6.4 Patent licensing / memory IP enforcement
 
-A unique structural market. The big patent portfolios are held by a small number of operating companies (Rambus, Qualcomm, IBM, ARM), pure NPEs (declining post-Alice / post-Oil States), and standards-essential pools (LTE, 5G, Wi-Fi). Rambus's portfolio is the dominant memory-architecture-and-serial-link IP, and licensing into it is effectively a structural prerequisite for DRAM and high-speed-link participants. Royalty rates and structures vary widely but the implied DRAM-revenue rate is in single-digit percent of underlying DRAM sales.
+A unique structural market. The big patent portfolios are held by a small number of operating companies (Rambus, Qualcomm, IBM, ARM), pure NPEs (declining post-Alice / post-Oil States), and standards-essential pools (LTE, 5G, Wi-Fi). Rambus's portfolio is the dominant memory-architecture-and-serial-link IP, and licensing into it is effectively a structural prerequisite for DRAM and high-speed-link participants. Royalty rates and structures vary widely but the implied DRAM-revenue rate is in single-digit percent of underlying DRAM sales ([Rambus 2025 10-K, Item 1 Business — Patent Licensing](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
 
 ### 6.5 Industry structure and dynamics
 
-- **Customer side (DRAM):** Highly concentrated — Samsung, SK hynix, Micron = ~95% of global DRAM ([TrendForce, DRAM Q4-2025 market report](https://www.trendforce.com/)). All three are Rambus customers AND licensees.
-- **Supplier side (foundries):** Memory interface chips run on mature nodes (12nm / 16nm / 22nm) — abundant foundry capacity, low concentration risk.
-- **Substitutes:** Negligible in the short term — JEDEC standardization makes any non-RCD alternative non-viable for RDIMM / MRDIMM modules.
-- **Regulatory:** US export controls and the BIS Entity List affect what can be shipped to certain Chinese customers; CXMT's recent inclusion as a licensee shows the licensing channel survives even where chip shipments would be restricted. Geopolitical risk is real but managed.
-- **Barriers to entry:** **Extremely high**. JEDEC compliance + DRAM-maker qualification + Intel/AMD platform qualification + decades of patent IP. Recent entrant from Asia has been Montage (Chinese, founded 2004, growing aggressively); no other credible new entrants.
+- **Customer side (DRAM):** Highly concentrated — Samsung (~36%), SK hynix (~32%), Micron (~22%) = ~90% of global DRAM revenue in Q4-2025 ([TrendForce, Global DRAM Revenue Jumps 30.9% in 3Q25, 2025-11-26](https://www.trendforce.com/presscenter/news/20251126-12802.html)). All three are Rambus customers AND licensees ([Rambus 2025 10-K, Item 1 Business](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
+- **Supplier side (foundries):** Memory interface chips run on mature nodes (12nm / 16nm / 22nm) — abundant foundry capacity, low concentration risk ([Rambus 2025 10-K, Manufacturing disclosure](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
+- **Substitutes:** Negligible in the short term — JEDEC standardization makes any non-RCD alternative non-viable for RDIMM / MRDIMM modules ([JEDEC MRDIMM standard press release](https://www.jedec.org/news/pressreleases/jedec%C2%AE-advances-ddr5-mrdimm-ecosystem-new-memory-interface-logic-and-expanded)).
+- **Regulatory:** US export controls and the BIS Entity List affect what can be shipped to certain Chinese customers; CXMT's recent inclusion as a licensee shows the licensing channel survives even where chip shipments would be restricted. Geopolitical risk is real but managed ([Tom's Hardware, Chinese DRAM Maker CXMT Signs Patent Deal With Rambus](https://www.tomshardware.com/news/cxmt-patent-agreement-rambus-china-dram-memory)).
+- **Barriers to entry:** **Extremely high**. JEDEC compliance + DRAM-maker qualification + Intel/AMD platform qualification + decades of patent IP. Recent entrant from Asia has been Montage (Chinese, founded 2004, growing aggressively); no other credible new entrants ([SCMP, 2025](https://www.scmp.com/tech/tech-trends/article/3307646/tech-war-shanghai-chip-firm-doubles-quarterly-profit-china-expands-supply-chain-role)).
 
 ---
 
@@ -407,7 +407,7 @@ The DDR5 / MRDIMM memory interface chip market is structurally a **three-supplie
 | **Texas Instruments** | Dallas, TX | Marginal participant in PMICs | <5% | Mostly PMIC content, not RCD |
 | **Monolithic Power Systems** | Kirkland, WA | PMIC supplier | <5% | PMIC for DIMM modules |
 
-**Rambus's competitive position:** Strong and improving. The mid-40s share in DDR5 RCD versus ~25% in DDR4 represents the single biggest share gain in the segment's history. Drivers: (a) execution on Gen-5 RCD (8000 MT/s) ahead of Renesas; (b) full chipset positioning for MRDIMM (MRCD + MDB) with first-mover product (12800 MT/s); (c) close partnership with US OEMs and hyperscalers; (d) Renesas's distraction following multiple acquisitions and a goodwill impairment cycle.
+**Rambus's competitive position:** Strong and improving. The mid-40s share in DDR5 RCD versus ~25% in DDR4 represents the single biggest share gain in the segment's history. Drivers: (a) execution on Gen-5 RCD (8000 MT/s) ahead of Renesas; (b) full chipset positioning for MRDIMM (MRCD + MDB) with first-mover product (12800 MT/s); (c) close partnership with US OEMs and hyperscalers; (d) Renesas's distraction following multiple acquisitions and a goodwill impairment cycle ([Rambus Q4-2025 earnings call transcript, Motley Fool, 2026-02-02](https://www.fool.com/earnings/call-transcripts/2026/02/02/rambus-rmbs-q4-2025-earnings-call-transcript/); [Renesas DDR5 MRDIMM Gen-2 chipset press release, 2025](https://www.renesas.com/en/about/newsroom/renesas-introduces-industry-s-first-complete-memory-interface-chipset-solutions-second-generation)).
 
 **Risks:**
 - **Montage Technology — geopolitically protected.** Montage is Shanghai-listed (SSE: 688008), domiciled in China, and has been **explicitly designated** by the Chinese state apparatus as a national-champion memory IF supplier. Its DDR5 RCD04 reached 7200 MT/s and ships into the same global DRAM makers (Samsung, SK hynix, Micron) as Rambus. Notably, Montage was once Intel-backed (early-stage) and remains the only credible Asian alternative to Rambus / Renesas. **Critically, China is the fastest-growing DRAM region (CXMT ramp), and Montage will likely capture the majority of China-domiciled DRAM module share.** This caps Rambus's TAM upside in China specifically and creates a structural risk if Montage's technology continues to close the gap. Per its FY2024 results, Montage's revenue more than doubled and operating profit quadrupled — a credible challenger ([SCMP, 2025](https://www.scmp.com/tech/tech-trends/article/3307646/tech-war-shanghai-chip-firm-doubles-quarterly-profit-china-expands-supply-chain-role)). Mitigant: Rambus still leads on Gen-5 RCD speed and MRDIMM chipset readiness, AND the DRAM makers prefer multi-supplier qualification, so this is share competition rather than displacement.
@@ -423,7 +423,7 @@ The DDR5 / MRDIMM memory interface chip market is structurally a **three-supplie
 | **Imagination Technologies** | UK | GPU IP | Adjacent, not direct competitor on memory IP |
 | **Customer in-house teams** | Various | Build-vs-buy | NVIDIA, AMD, Broadcom often roll their own memory controllers for flagship parts |
 
-**Rambus's position:** Subscale on overall IP revenue (~USD 80 m vs CDNS ~USD 5 bn) but punches above its weight on **HBM controller IP** specifically, where the technical lead (industry-first HBM4 in Sept 2024, industry-leading HBM4E in March 2026) translates to design-win premium pricing.
+**Rambus's position:** Subscale on overall IP revenue (~USD 80 m vs CDNS ~USD 5 bn) but punches above its weight on **HBM controller IP** specifically, where the technical lead (industry-first HBM4 in Sept 2024, industry-leading HBM4E in March 2026) translates to design-win premium pricing ([Rambus 2025 10-K, Item 7 — Silicon IP segment](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm); [EE Times, Rambus Unveils HBM4E Controller, 2026-03](https://www.eetimes.com/rambus-unveils-hbm4e-controller-16-gt-s-2048-bit-interface-enabling-c-hbm4e/)).
 
 ### 7.3 Competitive positioning quadrant
 
@@ -448,9 +448,9 @@ quadrantChart
 
 ### 7.4 Switching costs and moats
 
-- **Memory IF chips:** Switching costs are **extremely high** — once an RCD generation is qualified into a DRAM maker's RDIMM SKU, switching to another supplier mid-lifecycle requires re-qualification at the DRAM maker AND re-validation at every OEM / hyperscaler customer.
-- **Silicon IP:** Switching costs are **moderate** — once an HBM controller is licensed and integrated into an AI accelerator SoC tape-out, the customer is committed for that product family (often 3–5 years), but the next generation can be re-tendered.
-- **Patent licensing:** Effectively **structural** — there is no "switching" out of a patent license; renewal terms are negotiated.
+- **Memory IF chips:** Switching costs are **extremely high** — once an RCD generation is qualified into a DRAM maker's RDIMM SKU, switching to another supplier mid-lifecycle requires re-qualification at the DRAM maker AND re-validation at every OEM / hyperscaler customer ([Rambus 2025 10-K, Item 1 Business — Memory Interface Chips](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
+- **Silicon IP:** Switching costs are **moderate** — once an HBM controller is licensed and integrated into an AI accelerator SoC tape-out, the customer is committed for that product family (often 3–5 years), but the next generation can be re-tendered ([Rambus 2025 10-K, Item 1 Business — Silicon IP](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
+- **Patent licensing:** Effectively **structural** — there is no "switching" out of a patent license; renewal terms are negotiated ([Rambus 2025 10-K, Item 1 Business — Patent Licensing](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
 
 ---
 
@@ -468,7 +468,7 @@ quadrantChart
 | Security IP | ~USD 0.5 bn | ~USD 1.2 bn | ~20% | Niche participant |
 | Patent licensing | USD 0.3 bn (Rambus-specific) | USD 0.4–0.5 bn | ~5–8% | Captive; tracks DRAM and processor industry growth |
 
-**Implied addressable revenue runway:** Adding the segment opportunities Rambus participates in gives a credible **USD 4.0–5.5 bn revenue scenario by 2030** for a fully-realized DDR5 + MRDIMM + HBM4E + LPDDR5X SOCAMM2 cycle, against FY2025 revenue of USD 708 m. The market is implicitly pricing roughly that runway today.
+**Implied addressable revenue runway:** Adding the segment opportunities Rambus participates in gives a credible **USD 4.0–5.5 bn revenue scenario by 2030** for a fully-realized DDR5 + MRDIMM + HBM4E + LPDDR5X SOCAMM2 cycle, against FY2025 revenue of USD 708 m ([Rambus 2025 10-K, Results of Operations](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)). The market is implicitly pricing roughly that runway today ([Yahoo Finance, RMBS Key Statistics](https://finance.yahoo.com/quote/RMBS/key-statistics)).
 
 *Sources: [Market Research Intellect, DDR5 RCD market 2025-2033](https://www.marketresearchintellect.com/product/ddr5-registering-clock-driver-rcd-market/); [Yole Group, DIMM chipset keeps expanding](https://www.yolegroup.com/yole-group-actuality/dimm-chipset-keeps-expanding/); [Valuates Reports, DDR5 RDIMM Memory Module Market](https://www.openpr.com/news/4424760/ddr5-rdimm-memory-module-market-share-driven-by-data-center); author segment-by-segment build.*
 
@@ -476,15 +476,15 @@ quadrantChart
 
 Rambus's two-pronged strategy through 2027:
 
-1. **Increase silicon content per module** — drive MRDIMM adoption (3–5× silicon content per module vs RDIMM) and expand companion chip attach (PMIC, SPD Hub, TS) where Rambus historically had lower share than RCD.
-2. **Extend into client and HBM** — the LPDDR5X SOCAMM2 chipset opens AI PCs and a new class of NVIDIA-led server-module form factors; HBM4 / HBM4E controller IP positions Rambus as an enabler of every non-in-house AI accelerator.
+1. **Increase silicon content per module** — drive MRDIMM adoption (3–5× silicon content per module vs RDIMM) and expand companion chip attach (PMIC, SPD Hub, TS) where Rambus historically had lower share than RCD ([Rambus Q4-2025 earnings call transcript, Motley Fool, 2026-02-02](https://www.fool.com/earnings/call-transcripts/2026/02/02/rambus-rmbs-q4-2025-earnings-call-transcript/)).
+2. **Extend into client and HBM** — the LPDDR5X SOCAMM2 chipset opens AI PCs and a new class of NVIDIA-led server-module form factors; HBM4 / HBM4E controller IP positions Rambus as an enabler of every non-in-house AI accelerator ([Rambus HBM4E announcement, 2026-03-04](https://www.rambus.com/rambus-sets-new-benchmark-for-ai-memory-performance-with-industry-leading-hbm4e-controller-ip/); [Q1-FY2026 earnings release, 2026-04-27](https://www.sec.gov/Archives/edgar/data/917273/000119312526182076/rmbs-ex99_1.htm)).
 
 ### 8.3 What could break the TAM thesis
 
-- A slowdown in hyperscale AI capex (the dominant demand driver)
-- DRAM cyclical downturn (memory pricing cycle, oversupply)
-- MRDIMM standardization slippage (depends on Intel / AMD platform timing — Granite Rapids, Turin, Diamond Rapids, Venice)
-- Montage capturing the China DRAM tail more aggressively than expected
+- A slowdown in hyperscale AI capex (the dominant demand driver) ([TrendForce, AI Server Demand Drives DRAM and NAND, 2026-03-31](https://www.trendforce.com/presscenter/news/20260331-12995.html))
+- DRAM cyclical downturn (memory pricing cycle, oversupply) ([TrendForce, Tight DRAM supply and pricing, 2025-10-29](https://www.trendforce.com/presscenter/news/20251029-12758.html))
+- MRDIMM standardization slippage (depends on Intel / AMD platform timing — Granite Rapids, Turin, Diamond Rapids, Venice) ([Intel Newsroom, MRDIMM for Xeon Granite Rapids](https://newsroom.intel.com/data-center/new-ultrafast-memory-boosts-intel-data-center-chips))
+- Montage capturing the China DRAM tail more aggressively than expected ([SCMP, Shanghai chip firm doubles profit (Montage), 2025](https://www.scmp.com/tech/tech-trends/article/3307646/tech-war-shanghai-chip-firm-doubles-quarterly-profit-china-expands-supply-chain-role))
 
 ---
 
@@ -492,41 +492,41 @@ Rambus's two-pronged strategy through 2027:
 
 ### Company-Specific Risks
 
-**R1 — Customer concentration (top-2 ~41%, top-1 ~23%).** Per FY2025 10-K, Customer A (likely Samsung) represented 23% of total revenue, Customer B (likely SK hynix) 18%, and Customer C (likely Micron at 12% in FY2024) is intermittently above 10%. The top-3 collectively can swing 50%+ of revenue. Mitigant: the customers are the global DRAM oligopoly itself (not displaceable end-buyers), and Rambus is gaining share at competitors' expense rather than losing share at the top customers. Severity: **material**, carried into Section 5 explicitly.
+**R1 — Customer concentration (top-2 ~41%, top-1 ~23%).** Per FY2025 10-K, Customer A (likely Samsung) represented 23% of total revenue, Customer B (likely SK hynix) 18%, and Customer C (likely Micron at 12% in FY2024) is intermittently above 10%. The top-3 collectively can swing 50%+ of revenue. Mitigant: the customers are the global DRAM oligopoly itself (not displaceable end-buyers), and Rambus is gaining share at competitors' expense rather than losing share at the top customers. Severity: **material**, carried into Section 5 explicitly ([Rambus 2025 10-K, Concentrations of Risk note](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
 
-**R2 — Renewal / lumpiness in patent licensing.** Royalties are ~40% of revenue and depend on multi-year (3–10 year) renewal cycles with major semiconductor and system companies. A bad renewal — especially Samsung or SK hynix — could create a multi-quarter revenue air pocket. Mitigant: portfolio of 20+ named licensees; the CXMT recent addition reduces a key "what about Chinese DRAM?" concern.
+**R2 — Renewal / lumpiness in patent licensing.** Royalties are ~40% of revenue and depend on multi-year (3–10 year) renewal cycles with major semiconductor and system companies. A bad renewal — especially Samsung or SK hynix — could create a multi-quarter revenue air pocket. Mitigant: portfolio of 20+ named licensees; the CXMT recent addition reduces a key "what about Chinese DRAM?" concern ([Rambus 2025 10-K, Item 1A Risk Factors and Patent Licensing](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm); [Tom's Hardware, CXMT Patent Deal With Rambus](https://www.tomshardware.com/news/cxmt-patent-agreement-rambus-china-dram-memory)).
 
-**R3 — DDR5 → DDR6 transition risk.** DDR5 is mid-cycle; DDR6 standardization is underway (JEDEC roadmap suggests 2027–2028 finalization). Rambus must execute the Gen-6 generation transition; mis-stepping (as Renesas/IDT arguably did in DDR4→DDR5) could cost share. Mitigant: Rambus has set the pace in DDR5 generations and is launching HBM4E ahead of standards finalization.
+**R3 — DDR5 → DDR6 transition risk.** DDR5 is mid-cycle; DDR6 standardization is underway (JEDEC roadmap suggests 2027–2028 finalization). Rambus must execute the Gen-6 generation transition; mis-stepping (as Renesas/IDT arguably did in DDR4→DDR5) could cost share. Mitigant: Rambus has set the pace in DDR5 generations and is launching HBM4E ahead of standards finalization ([TrendForce, DDR6 Set for 2027 Mass Adoption, 2025-07](https://www.trendforce.com/news/2025/07/23/news-ddr6-set-for-2027-mass-adoption-as-memory-giants-reportedly-finalize-prototype-designs/); [Rambus HBM4E announcement, 2026-03-04](https://www.rambus.com/rambus-sets-new-benchmark-for-ai-memory-performance-with-industry-leading-hbm4e-controller-ip/)).
 
-**R4 — Key-person risk on CFO transition.** Desmond Lynch resigned Feb 2026 to pursue another opportunity. Sumeet Gagneja (ex-AMD Data Center CFO) starts April 29, 2026 — strong on paper but unproven in the Rambus context. A first-quarter mis-step on guidance or capital allocation messaging would be punished hard given the multiple. Mitigant: well-credentialed hire with directly-relevant customer-side semiconductor experience.
+**R4 — Key-person risk on CFO transition.** Desmond Lynch resigned Feb 2026 to pursue another opportunity. Sumeet Gagneja (ex-AMD Data Center CFO) starts April 29, 2026 — strong on paper but unproven in the Rambus context. A first-quarter mis-step on guidance or capital allocation messaging would be punished hard given the multiple. Mitigant: well-credentialed hire with directly-relevant customer-side semiconductor experience ([Rambus announces departure of CFO Desmond Lynch, 8-K, 2026-02-10](https://www.sec.gov/Archives/edgar/data/917273/000119312526044677/d761424dex991.htm); [Rambus appoints Sumeet Gagneja as CFO, 8-K, 2026-04-29](https://www.sec.gov/Archives/edgar/data/917273/000119312526192210/d20390dex991.htm)).
 
-**R5 — Geographic concentration (~70% in S. Korea + Singapore).** Geographic concentration mirrors customer concentration and is structural rather than additive — both reflect the location of DRAM-maker contracting entities. Adjacent risk: US export-control changes that affect semiconductor shipments through these geographies.
+**R5 — Geographic concentration (~70% in S. Korea + Singapore).** Geographic concentration mirrors customer concentration and is structural rather than additive — both reflect the location of DRAM-maker contracting entities. Adjacent risk: US export-control changes that affect semiconductor shipments through these geographies ([Rambus 2025 10-K, Note on Geographic Revenue](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
 
-**R6 — Foundry / supplier concentration.** Rambus is fabless and depends on third-party foundries for chip fabrication. Mature nodes (12/16/22nm) are well-supplied, so supplier concentration is low; nonetheless, any disruption at a key foundry (TSMC, GlobalFoundries, etc.) could meaningfully impact production.
+**R6 — Foundry / supplier concentration.** Rambus is fabless and depends on third-party foundries for chip fabrication. Mature nodes (12/16/22nm) are well-supplied, so supplier concentration is low; nonetheless, any disruption at a key foundry (TSMC, GlobalFoundries, etc.) could meaningfully impact production ([Rambus 2025 10-K, Item 1A Risk Factors — Manufacturing](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
 
 ### Industry / Market Risks
 
 **R7 — Competitive intensity from Montage (Chinese SoE-linked).** Montage Technology (SSE: 688008) is a Chinese-domiciled, Shanghai-listed memory interface chip supplier that has been growing aggressively (2024 revenue more than doubled) and is the natural beneficiary of China DRAM expansion (CXMT). Montage has explicit Chinese state policy support as the domestic alternative to US / Japanese suppliers. The competitive pressure is bidirectional: Montage limits Rambus's TAM upside in China; Montage's broader-market push (Samsung, SK hynix, Micron qualifications) puts incremental pressure on RCD pricing and share globally. **As of mid-2026, Rambus still leads on Gen-5 RCD speed-bins and MRDIMM chipset readiness; the share-loss risk is more 2027–2028 than near-term.** Mitigant: 3-supplier structural preference at DRAM-maker level.
 
-**R8 — Cyclical DRAM downturn.** Memory pricing is famously cyclical; a DRAM oversupply / pricing collapse cycle would compress DDR5 module shipments and Rambus's RCD volume. The 2022 DRAM downturn cut module shipments materially; a repeat in 2026–2027 would be a meaningful overhang on the product revenue line. Mitigant: cycle-resistant patent royalty layer (40% of revenue).
+**R8 — Cyclical DRAM downturn.** Memory pricing is famously cyclical; a DRAM oversupply / pricing collapse cycle would compress DDR5 module shipments and Rambus's RCD volume. The 2022 DRAM downturn cut module shipments materially; a repeat in 2026–2027 would be a meaningful overhang on the product revenue line. Mitigant: cycle-resistant patent royalty layer (40% of revenue) ([TrendForce, Memory Makers Prioritize Server Applications, 2026-01-05](https://www.trendforce.com/presscenter/news/20260105-12860.html)).
 
-**R9 — AI capex slowdown / hyperscaler digestion.** Rambus's current multiple prices in continued hyperscale AI capex growth; a 2026–2027 digestion phase (the AI capex pause narrative) would compress not just shipment growth but the AI-memory-bandwidth narrative premium attached to the stock.
+**R9 — AI capex slowdown / hyperscaler digestion.** Rambus's current multiple prices in continued hyperscale AI capex growth; a 2026–2027 digestion phase (the AI capex pause narrative) would compress not just shipment growth but the AI-memory-bandwidth narrative premium attached to the stock ([TrendForce, AI Server Demand Memory Contract Prices, 2026-03-31](https://www.trendforce.com/presscenter/news/20260331-12995.html)).
 
-**R10 — Standards / interoperability transition risks.** DDR6, HBM5, CXL evolution, MRDIMM finalization all hinge on JEDEC / industry consortia timing. Schedule slips compress Rambus's revenue ramp without changing the long-run opportunity.
+**R10 — Standards / interoperability transition risks.** DDR6, HBM5, CXL evolution, MRDIMM finalization all hinge on JEDEC / industry consortia timing. Schedule slips compress Rambus's revenue ramp without changing the long-run opportunity ([JEDEC HBM4 Standard press release, 2025-04](https://www.jedec.org/news/pressreleases/jedec%C2%AE-and-industry-leaders-collaborate-release-jesd270-4-hbm4-standard-advancing); [JEDEC MRDIMM Gen2 12,800 MT/s standard](https://www.jedec.org/news/pressreleases/jedec%C2%AE-advances-ddr5-mrdimm-ecosystem-new-memory-interface-logic-and-expanded)).
 
 ### Financial Risks
 
 **R11 — Valuation / multiple-compression risk.** RMBS trades at **67× TTM P/E, 21× TTM P/S, 45× EV/EBITDA** ([Yahoo Finance Key Statistics, May 20, 2026](https://finance.yahoo.com/quote/RMBS/key-statistics)). On TTM P/S the multiple is roughly **2× its 3-year median (~10–12×)**. The semiconductor IP peer median (CDNS + SNPS) on P/S is ~15× — RMBS sits noticeably above. **A 50% multiple compression with revenue/earnings unchanged would drive the stock from USD 141 back to ~USD 70**, roughly the level of June 2025. Triggers for a de-rate: (a) any quarter where product revenue grows <20% YoY (currently ~40%); (b) MRDIMM ramp slippage; (c) Montage taking share in DDR5 RCD; (d) a sector AI-narrative break.
 
-**R12 — Royalty revenue volatility.** Per the 10-K, royalty revenue "will continue to vary from period to period based on our success in adding new customers, renewing or extending existing agreements, as well as the level of variation in our customers' sales." Lumpy renewals can create 10–20% quarterly P&L noise on the royalty line.
+**R12 — Royalty revenue volatility.** Per the 10-K, royalty revenue "will continue to vary from period to period based on our success in adding new customers, renewing or extending existing agreements, as well as the level of variation in our customers' sales." Lumpy renewals can create 10–20% quarterly P&L noise on the royalty line ([Rambus 2025 10-K, Item 7 — Royalty Revenue](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
 
 ### Macroeconomic Risks
 
-**R13 — Geopolitics / US-China tech decoupling.** US export controls on advanced semiconductor technology to China are a structural overhang. Rambus has so far successfully navigated the regime (CXMT is a disclosed licensee), but escalation could affect both Silicon IP licensing to Chinese chip designers and patent enforcement leverage in China. Mitigant: Rambus's product set (memory interface chips on mature nodes) is generally not subject to advanced-node export controls.
+**R13 — Geopolitics / US-China tech decoupling.** US export controls on advanced semiconductor technology to China are a structural overhang. Rambus has so far successfully navigated the regime (CXMT is a disclosed licensee), but escalation could affect both Silicon IP licensing to Chinese chip designers and patent enforcement leverage in China. Mitigant: Rambus's product set (memory interface chips on mature nodes) is generally not subject to advanced-node export controls ([Rambus 2025 10-K, Item 1A Risk Factors — Geopolitics](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
 
-**R14 — FX exposure.** Material South Korea / Singapore / Japan revenue creates non-trivial USD / KRW / SGD / JPY exposure, though contracting is largely USD-denominated and Rambus does some hedging.
+**R14 — FX exposure.** Material South Korea / Singapore / Japan revenue creates non-trivial USD / KRW / SGD / JPY exposure, though contracting is largely USD-denominated and Rambus does some hedging ([Rambus 2025 10-K, Item 7A Quantitative and Qualitative Disclosures About Market Risk](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
 
-**R15 — Interest rate sensitivity.** USD 786 m in cash and marketable securities (March 31, 2026) generates meaningful interest income (~3% of revenue currently). A Fed rate cut cycle reduces that contribution. Mitigant: small relative to operating income.
+**R15 — Interest rate sensitivity.** USD 786 m in cash and marketable securities (March 31, 2026) generates meaningful interest income (~3% of revenue currently). A Fed rate cut cycle reduces that contribution. Mitigant: small relative to operating income ([Q1-FY2026 earnings release, 2026-04-27](https://www.sec.gov/Archives/edgar/data/917273/000119312526182076/rmbs-ex99_1.htm)).
 
 ---
 

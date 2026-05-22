@@ -27,10 +27,10 @@ References
 
 The company's framing is unusually explicit about the analogy it wants investors and partners to draw: AlphaBot is to physical AI what the iPhone was to mobile, and Alpha Brain is the operating system that decouples generality from task-specific programming. That framing has translated into a concrete go-to-market: rather than first selling to consumers (the "humanoid-companion" lane occupied by Unitree or, eventually, Tesla Optimus), AI² Robotics has targeted *industrial* and *semi-industrial* deployments — semiconductor and display fabs, automotive manufacturing, biotech sterile filling, and inspection — where the robot's value is measured against the labor cost it displaces and where end-customers are willing to sign large multi-year purchase commitments before consumer-grade reliability is proven ([NE时代, 2025-09](https://ne-time.cn/web/article/36685); [新浪财经, 2025-04-17](https://finance.sina.com.cn/jjxw/2025-04-17/doc-inetnwin2047310.shtml)).
 
-**Business model.** Three revenue streams in early development:
-1. **Robot unit sales** — direct hardware sales to enterprise customers. AlphaBot 2's published unit pricing has been reported at roughly USD 15,000 in entry configurations (industry-press estimate; the company has not formally published a global price list) ([Interesting Engineering, 2025](https://interestingengineering.com/innovation/alphabot-2-future-humanoid-robots)). The largest signed contract — Hui-Ke (惠科, HKC) — is reportedly worth close to RMB 500 million for ~1,000 units over three years, implying an average unit price near RMB 500,000 (~USD 70,000) once integration, service, and on-site engineering are included ([NE时代, 2025-09](https://ne-time.cn/web/article/36685)).
-2. **Foundation-model licensing / "Alpha Brain inside"** — the company has indicated intent to license its VLA stack to third-party robot OEMs, though no large licensing deal has been publicly disclosed as of this writing (*unverified at the deal level — flagged*).
-3. **Recurring services** — deployment engineering, fine-tuning data services, and SLA-backed uptime contracts on deployed fleets.
+**Business model.** Three revenue streams in early development ([AI² Robotics, About page](https://ai2robotics.com/en/about/)):
+1. **Robot unit sales** — direct hardware sales to enterprise customers. AlphaBot 2's published unit pricing has been reported at roughly USD 15,000 in entry configurations (industry-press estimate; the company has not formally published a global price list) ([Interesting Engineering, 2025](https://interestingengineering.com/innovation/alphabot-2-future-humanoid-robots)). The largest signed contract — Hui-Ke (惠科, HKC) — is reportedly worth close to RMB 500 million for ~1,000 units over three years, implying an average unit price near RMB 500,000 (~USD 70,000) once integration, service, and on-site engineering are included ([NE时代, 2025-09](https://ne-time.cn/web/article/36685); [CMRA, 2025-09](https://cnmra.com/rmb-500-million-ai2-robotics-secured-massive-order-for-1000-humanoid-robots/)).
+2. **Foundation-model licensing / "Alpha Brain inside"** — the company has indicated intent to license its VLA stack to third-party robot OEMs, though no large licensing deal has been publicly disclosed as of this writing (*unverified at the deal level — flagged*) ([AI² Robotics, About page](https://ai2robotics.com/en/about/)).
+3. **Recurring services** — deployment engineering, fine-tuning data services, and SLA-backed uptime contracts on deployed fleets, with the HKC frame agreement explicitly including a joint VLA-fine-tuning track on customer production data ([CMRA, 2025-09](https://cnmra.com/rmb-500-million-ai2-robotics-secured-massive-order-for-1000-humanoid-robots/)).
 
 **Geographic presence.** Headquartered in Shenzhen (Nanshan district), with a primary R&D footprint also in Shenzhen and a recently-opened proprietary manufacturing line. Public statements from founder Guo Yandong have committed to contributing 1% of Nanshan district GDP by 2030 — a target that, taken literally against Nanshan's ~RMB 950 bn 2024 GDP, would imply roughly RMB 9.5 bn of company-level economic contribution, presumably revenue-equivalent (*management aspirational target — flagged as a stated goal, not a contractually-bound commitment*) ([新浪财经, 2025-04-18](https://finance.sina.com.cn/roll/2025-04-18/doc-inetqkks4824724.shtml)).
 
@@ -38,7 +38,7 @@ The company's framing is unusually explicit about the analogy it wants investors
 
 ### Valuation snapshot
 
-AI² Robotics is privately held, so traditional public-market multiples (P/E, P/S) are not observable. The relevant equivalents are the **latest funding-round post-money valuation** and **implied revenue multiple**, both of which require caveats because Series B revenue was not disclosed.
+AI² Robotics is privately held, so traditional public-market multiples (P/E, P/S) are not observable. The relevant equivalents are the **latest funding-round post-money valuation** and **implied revenue multiple**, both of which require caveats because Series B revenue was not disclosed ([Caixin Global, 2026-02-23](https://www.caixinglobal.com/2026-02-23/chinas-ai-robotics-raises-fresh-funds-at-over-10-billion-yuan-valuation-102416310.html)).
 
 | Metric | Value | Source |
 |---|---|---|
@@ -50,12 +50,12 @@ AI² Robotics is privately held, so traditional public-market multiples (P/E, P/
 
 **Implied revenue multiple — unverified.** The company has not publicly disclosed 2024 or 2025 revenue. If we use the HKC contract value of "close to RMB 500 M over three years" as a rough proxy for a single anchor customer's run-rate contribution, and assume aggregate 2025 recognized revenue of RMB 100–300 M (an analyst estimate, *not management-disclosed*), the implied price-to-revenue multiple at the RMB 10 bn post-money mark would sit in the 30–100× range — extremely high but **not out of line with peer embodied-AI rounds**: Galbot at USD 3 bn post-money, X Square Robot's Series B at over USD 1 bn post-money, Robotera's RMB ~1 bn Series A+ all imply double- to triple-digit revenue multiples on whatever modest commercialization revenue these companies have. The market is pricing **option value on the foundation model and capacity**, not run-rate cash flow ([Robotics & Automation News, 2025-12](https://roboticsandautomationnews.com/2025/12/20/humanoid-robot-maker-galbot-raises-300-million-and-reaches-3-billion-valuation/97783/); [Inforcapital, 2026-04](https://inforcapital.com/news/embodied-ai-startup-x-square-robot-raises-nearly-276m-in-series-b-led-by-xiaomi-and-sequoia-china/)).
 
-**Why the multiple is what it is.** Three drivers:
+**Why the multiple is what it is.** Three drivers ([Caixin Global, 2026-02-23](https://www.caixinglobal.com/2026-02-23/chinas-ai-robotics-raises-fresh-funds-at-over-10-billion-yuan-valuation-102416310.html)):
 1. **Sector premium on Chinese embodied AI.** Morgan Stanley and Goldman Sachs both raised humanoid-robot TAM forecasts materially through 2025 — Morgan Stanley sized the 2050 humanoid market at USD 5 tn ([Morgan Stanley, "Humanoid Robot Market Expected to Reach $5 Trillion by 2050"](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050)) and Goldman revised its 2035 forecast 6× higher to USD 38 bn ([blog.robozaps.com, market-size summary, 2025](https://blog.robozaps.com/b/market-size-for-humanoid-robots)).
-2. **Foundation-model option value.** The bull case treats AlphaBot units as a data-generating fleet that compounds the value of Alpha Brain (GOVLA), in the same way Tesla's bull case has treated FSD-equipped vehicles for years.
+2. **Foundation-model option value.** The bull case treats AlphaBot units as a data-generating fleet that compounds the value of Alpha Brain (GOVLA), in the same way Tesla's bull case has treated FSD-equipped vehicles for years ([CSDN / 量子位, 2024](https://blog.csdn.net/QbitAI/article/details/144755756)).
 3. **Founder track record.** Guo Yandong's prior tenure as chief scientist at OPPO and XPeng — both companies that have shipped hundreds of millions of intelligent terminals — gives Tier-1 strategic investors (Baidu, CRRC) a credibility anchor that smaller-name founders lack ([腾讯新闻, 2025-03-07](https://news.qq.com/rain/a/20250307A034DJ00); [IDEA Research Institute, Guo Yandong profile](https://www.idea.edu.cn/team/5829.html)).
 
-Counterpoint: at a USD 1.4 bn post-money with sub-RMB 500 M annualized revenue (analyst estimate, *flagged unverified*), this is a textbook venture-priced asset where multiple compression risk is real. If 2027 capacity does not translate into 2027 *signed-backlog revenue*, a down-round becomes plausible — particularly given the saturation of capital in the segment (see Section 9, Financial Risks).
+Counterpoint: at a USD 1.4 bn post-money with sub-RMB 500 M annualized revenue (analyst estimate, *flagged unverified*), this is a textbook venture-priced asset where multiple compression risk is real. If 2027 capacity does not translate into 2027 *signed-backlog revenue*, a down-round becomes plausible — particularly given the saturation of capital in the segment (see Section 9, Financial Risks), where industry observers have already warned that "for Pre-IPO rounds, investors should require enterprises to provide audited proof of industrial customer revenue ... otherwise valuations should be discounted by 70%" ([凤凰网财经, 2026](https://finance.ifeng.com/c/8slk4dbwJi1)).
 
 ---
 
@@ -88,7 +88,7 @@ Source: [Caixin Global, 2026-02-23](https://www.caixinglobal.com/2026-02-23/chin
 **Pivot 3 — From "research-first" to "anchor-customer-first GTM" (2025).** Securing the HKC 1,000-unit contract in semiconductor-display manufacturing in 2025 reframed the company narrative from "VLA research startup" to "industrial customer-validated commercial robot company" — and this directly enabled the Series B to close at a 10-bn-yuan valuation just months later ([NE时代, 2025-09](https://ne-time.cn/web/article/36685)).
 
 ### Acquisitions
-No publicly-disclosed M&A activity to date. The company has been a net hirer of talent, not an acquirer of businesses.
+No publicly-disclosed M&A activity to date. The company has been a net hirer of talent, not an acquirer of businesses ([Crunchbase, AI² Robotics profile](https://www.crunchbase.com/organization/ai%C2%B2-robotics)).
 
 ### Recent developments (last 12 months)
 - **2025-04** AlphaBot 2 launched with GOVLA-powered Alpha Brain.
@@ -114,17 +114,17 @@ Guo Yandong is the central figure of AI² Robotics and — at a reported 69% own
 
 **Founding thesis (April 2023).** Guo describes his founding moment as recognizing that the same kind of foundation-model scaling that had driven LLMs from useless to useful between 2018 and 2022 could be applied to robot action policies — and that, structurally, only Google, Tesla, and (he believed) AI² were betting on a single unified VLA model. The company name itself, "AI squared," is meant to invoke the multiplicative product of *digital* AI (the brain) and *physical* AI (the body) ([新浪财经, 2025-09-28](https://finance.sina.com.cn/stock/t/2025-09-28/doc-infsamfc8725940.shtml)).
 
-**Ownership and control.** Reported 69% ownership post Pre-A+ in March 2025 — a stake that almost certainly dilutes meaningfully after the Series B round but likely keeps founder control intact above 50%. *Exact post-Series-B stake not disclosed; flagged as unverified.*
+**Ownership and control.** Reported 69% ownership post Pre-A+ in March 2025 — a stake that almost certainly dilutes meaningfully after the Series B round but likely keeps founder control intact above 50%. *Exact post-Series-B stake not disclosed; flagged as unverified* ([腾讯新闻, 2025-03-07](https://news.qq.com/rain/a/20250307A034DJ00)).
 
 **Public profile.** Guo is unusually media-active for a Chinese deep-tech founder, with extended interviews in 新浪财经, 36氪, CSDN, and Bianews. He gives a recurring talk titled "没有技术自信，中国机器人就没有创新突破" ("Without technical confidence, Chinese robotics will have no breakthrough innovation"), framed as a rebuke to the imitation-of-Western-design tendency in some Chinese hardware startups ([新浪财经, 2025-09-28](https://finance.sina.com.cn/stock/t/2025-09-28/doc-infsamfc8725940.shtml)).
 
 ### CFO
 
-**Not publicly disclosed.** As of this writing AI² Robotics has not publicly named a Chief Financial Officer. The Series B round closing without a named CFO is mildly unusual for a USD 1.4 bn-valuation company; it suggests either that the role is filled by a head-of-finance who has not been publicly profiled, or that capital-markets responsibility still sits with Guo personally with external advisors (likely Guotai Haitong, given its participation in the Series B). *Flagged as a disclosure gap.*
+**Not publicly disclosed.** As of this writing AI² Robotics has not publicly named a Chief Financial Officer. The Series B round closing without a named CFO is mildly unusual for a USD 1.4 bn-valuation company; it suggests either that the role is filled by a head-of-finance who has not been publicly profiled, or that capital-markets responsibility still sits with Guo personally with external advisors (likely Guotai Haitong, given its participation in the Series B). *Flagged as a disclosure gap* ([Caixin Global, 2026-02-23](https://www.caixinglobal.com/2026-02-23/chinas-ai-robotics-raises-fresh-funds-at-over-10-billion-yuan-valuation-102416310.html)).
 
 ### Other executives and core team
 
-The company has not published an official leadership-team page in English with named CXOs beyond the founder. Public statements describe the core team as drawn from:
+The company has not published an official leadership-team page in English with named CXOs beyond the founder. Public statements describe the core team as drawn from ([ai2robotics.com, About](https://ai2robotics.com/en/about/); [知乎, "千万收入已确认", 2025](https://zhuanlan.zhihu.com/p/20149988051)):
 
 - **Microsoft (Redmond)** — AI/CV research alumni
 - **Google** — AI research and robotics alumni
@@ -144,13 +144,13 @@ The company has publicly claimed "5 of Stanford's global top-2% scientists" on t
 
 ### Track-record synthesis
 
-The single-bio summary is favorable for the most important seat (CEO). Guo Yandong has a credible Tier-1 research pedigree (Microsoft, Purdue Ph.D.), and — critically for an industrial-robotics commercialization thesis — two prior tours of shipping intelligent terminals at consumer scale (XPeng's vehicles, OPPO's phones). The gap is the bench: with no publicly-named CFO, COO, or CTO, AI² is effectively betting that Guo himself can compress the four senior-leadership roles into one — workable in a sub-200-person startup, but a stress point as headcount scales toward the staffing needed for a 10,000-unit/year manufacturing line.
+The single-bio summary is favorable for the most important seat (CEO). Guo Yandong has a credible Tier-1 research pedigree (Microsoft, Purdue Ph.D.), and — critically for an industrial-robotics commercialization thesis — two prior tours of shipping intelligent terminals at consumer scale (XPeng's vehicles, OPPO's phones) ([IDEA Research Institute, Guo Yandong profile](https://www.idea.edu.cn/team/5829.html)). The gap is the bench: with no publicly-named CFO, COO, or CTO, AI² is effectively betting that Guo himself can compress the four senior-leadership roles into one — workable in a sub-200-person startup, but a stress point as headcount scales toward the staffing needed for a 10,000-unit/year manufacturing line ([新浪财经, 2025-04-18](https://finance.sina.com.cn/roll/2025-04-18/doc-inetqkks4824724.shtml)).
 
 ---
 
 ## 4. Products & Services
 
-AI² Robotics' product portfolio as of mid-2026 sits on a single foundation-model "brain" (Alpha Brain / GOVLA) and two robot "body" SKUs (AlphaBot 1, AlphaBot 2), with a third — the small-form-factor "智魔方" (Zhi-Mo-Fang, sometimes rendered "Smart Cube") modular service kiosk — used as a demonstration vehicle rather than a high-volume product.
+AI² Robotics' product portfolio as of mid-2026 sits on a single foundation-model "brain" (Alpha Brain / GOVLA) and two robot "body" SKUs (AlphaBot 1, AlphaBot 2), with a third — the small-form-factor "智魔方" (Zhi-Mo-Fang, sometimes rendered "Smart Cube") modular service kiosk — used as a demonstration vehicle rather than a high-volume product ([中国财经网, "智平方'智魔方'双城落地", 2026-01](https://www.fecn.net/mobile/1/2026/0113/0113267031267031.html); [ai2robotics.com, About](https://ai2robotics.com/en/about/)).
 
 ```mermaid
 graph TD
@@ -177,17 +177,17 @@ Source: [ai2robotics.com, About](https://ai2robotics.com/en/about/); [Aparobot, 
 
 ### 4.2 AlphaBot 1 — single-arm wheeled mobile manipulator
 
-**What it does.** AlphaBot 1 is the company's first commercially-deployed platform: a wheeled mobile base with a single robotic arm, designed for industrial pick-and-place, material handling between machine cells, and inspection routines. It is the platform behind much of the published Mercedes-Benz and JINENG Microelectronics deployment imagery. *Detailed published spec sheet for AlphaBot 1 is sparse compared with AlphaBot 2 — flagged.*
+**What it does.** AlphaBot 1 (later upgraded to AlphaBot 1S at the 2024 World Robot Conference) is the company's first commercially-deployed platform: a wheeled mobile base with a single robotic arm, designed for industrial pick-and-place, material handling between machine cells, and inspection routines. It is the platform behind much of the published Mercedes-Benz and JINENG Microelectronics deployment imagery. *Detailed published spec sheet for AlphaBot 1 is sparse compared with AlphaBot 2 — flagged* ([中国日报网, "Alpha Bot 1S 亮相2024世界机器人大会", 2024-08-29](https://cn.chinadaily.com.cn/a/202408/29/WS66d002eda310b35299d39150.html); [36氪, "Alpha Bot 1S 惊艳亮相2024世界机器人大会", 2024-08](https://36kr.com/p/2924232146885505)).
 
-**Target customer.** Manufacturing operations (auto OEMs, semiconductor/display fabs, electronics assembly) where a single-arm, fixed-base or mobile pick-and-place arm is operationally sufficient and the lower unit cost vs. AlphaBot 2 matters.
+**Target customer.** Manufacturing operations (auto OEMs, semiconductor/display fabs, electronics assembly) where a single-arm, fixed-base or mobile pick-and-place arm is operationally sufficient and the lower unit cost vs. AlphaBot 2 matters ([新浪科技, "Alpha Bot 1S 惊艳亮相2024世界机器人大会", 2024-08-28](https://finance.sina.com.cn/tech/roll/2024-08-28/doc-incmenps0445154.shtml)).
 
-**Pricing.** Not publicly disclosed at the unit level. Reverse-engineered from the HKC contract (RMB ~500 M / ~1,000 units / 3 years), the blended unit price including integration is in the ~RMB 500,000 range (~USD 70,000); pure hardware ASP likely lower.
+**Pricing.** Not publicly disclosed at the unit level. Reverse-engineered from the HKC contract (RMB ~500 M / ~1,000 units / 3 years), the blended unit price including integration is in the ~RMB 500,000 range (~USD 70,000); pure hardware ASP likely lower ([NE时代, 2025-09](https://ne-time.cn/web/article/36685)).
 
-**Competitive-advantage verdict: partial — application + brand moat, hardware commoditizing.** The single-arm mobile manipulator form factor is not architecturally novel — Galbot's wheeled platforms, Boston Dynamics' Stretch, and Geek+ / Hai Robotics' commercial-warehouse robots occupy adjacent territory. AlphaBot 1's differentiation is (a) the Alpha Brain stack on top — allowing the same arm to do qualitatively different tasks without re-programming — and (b) a small but real reference list (Mercedes, JINENG, HKC) that competitors can't yet point to at the same scale. **Closest competing product: Galbot's wheeled single-arm robot** — at-parity hardware, smaller deployment footprint, larger consumer-narrative attention.
+**Competitive-advantage verdict: partial — application + brand moat, hardware commoditizing.** The single-arm mobile manipulator form factor is not architecturally novel — Galbot's wheeled platforms ([Galbot G1 product page](https://www.galbot.com/)), Boston Dynamics' Stretch ([Boston Dynamics, Stretch product page](https://bostondynamics.com/products/stretch/)), and Geek+ / Hai Robotics' commercial-warehouse robots ([Geek+ corporate site](https://www.geekplus.com/en); [Hai Robotics products page](https://www.hairobotics.com/products)) occupy adjacent territory. AlphaBot 1's differentiation is (a) the Alpha Brain stack on top — allowing the same arm to do qualitatively different tasks without re-programming — and (b) a small but real reference list (Mercedes, JINENG, HKC) that competitors can't yet point to at the same scale ([21经济网, 2025-04-18](https://www.21jingji.com/article/20250418/herald/375a27631a594da3b2c3d8d804ade0e7.html)). **Closest competing product: Galbot's wheeled single-arm robot** — at-parity hardware, smaller deployment footprint, larger consumer-narrative attention ([The Robot Report, "Galbot brings in $300M to scale mobile manipulator deployments"](https://www.therobotreport.com/galbot-brings-in-300m-to-scale-mobile-manipulator-deployments/)).
 
 ### 4.3 AlphaBot 2 — 34-DOF dual-arm humanoid-format platform
 
-**What it does.** AlphaBot 2 is the flagship next-generation platform, unveiled in April 2025. Specifications drawn from the company's own launch materials and third-party spec aggregators:
+**What it does.** AlphaBot 2 is the flagship next-generation platform, unveiled in April 2025. Specifications drawn from the company's own launch materials and third-party spec aggregators ([AI² Robotics, AlphaBot 2 launch page](https://ai2robotics.com/en/%E6%99%BA%E5%B9%B3%E6%96%B9%E5%8F%91%E5%B8%83%E5%85%A8%E6%96%B0%E4%B8%80%E4%BB%A3%E6%99%BA%E8%83%BD%E6%9C%BA%E5%99%A8%E4%BA%BAalphabot-2%E5%BC%80%E5%90%AFagi%E7%BB%88%E7%AB%AF%E6%96%B0/); [Aparobot, AlphaBot 2 spec](https://www.aparobot.com/robots/alphabot-2)):
 - **Degrees of freedom:** 34
 - **Arm span:** 700 mm per arm, with **maximum reach 2.40 m** when extended via the lifting waist-leg
 - **Operating height range:** 0 to 2.4 m (covers floor-pick to overhead tasks)
@@ -200,7 +200,7 @@ Source: [ai2robotics.com, About](https://ai2robotics.com/en/about/); [Aparobot, 
 
 Sources: [Aparobot, AlphaBot 2 spec](https://www.aparobot.com/robots/alphabot-2); [Interesting Engineering, 2025](https://interestingengineering.com/innovation/alphabot-2-future-humanoid-robots); [新浪财经, 2025-04-17 launch coverage](https://finance.sina.com.cn/jjxw/2025-04-17/doc-inetnwin2047310.shtml); [CNN Business — AlphaBot 2 video feature](https://edition.cnn.com/business/alpha-bot-humanoid-robots-china-embodied-ai-hnk-spc).
 
-**Target customer.** Same vertical mix as AlphaBot 1 plus tasks requiring bimanual manipulation: biotech sterile filling, food-service prep, retail-shelf restocking, and consumer-facing demonstrations.
+**Target customer.** Same vertical mix as AlphaBot 1 plus tasks requiring bimanual manipulation: biotech sterile filling, food-service prep, retail-shelf restocking, and consumer-facing demonstrations ([新浪财经, 2025-04-17 launch coverage](https://finance.sina.com.cn/jjxw/2025-04-17/doc-inetnwin2047310.shtml)).
 
 **Competitive-advantage verdict: partial — moat is the integrated brain + body stack, but hardware specs are catchable.** Among the ~20 Chinese humanoid platforms tracked publicly, AlphaBot 2's 34-DOF dual-arm + lifting waist-leg + wheeled base is a distinctive combination — most peers chose either bipedal walking (Unitree, Robotera) or a fully-stationary dual-arm (Galaxea G1). AI²'s wheeled+lifting choice is more practical for industrial deployment in 2026 than bipedal walking. But the **hardware** is catchable in 18–24 months by a determined competitor; the durable moat, if there is one, lives in the Alpha Brain training data and the customer-deployment reference set. **Closest competing product: X Square Robot's Quanta X2 semi-humanoid (wheeled, dual-arm, VLA-driven)** — at parity on stated capability, ahead on raised capital, behind on disclosed industrial reference customers ([X Square Robot, The Robot Report, 2026-01](https://www.therobotreport.com/x-square-robot-secures-140m-in-funding-for-ai-foundation-models/)).
 
@@ -210,7 +210,7 @@ A self-contained modular kiosk/booth that houses an AlphaBot to demonstrate cook
 
 ### Flagship vs. long-tail
 
-Among the three platforms, **AlphaBot 2 is the flagship by company messaging and AlphaBot 1 is the volume workhorse by current revenue contribution**. The 2025 HKC contract is reportedly served primarily by AlphaBot 1 units (the application — fab material handling — does not require dual-arm bimanual coordination). AlphaBot 2 is positioned as the platform that will absorb the next wave of deployments in biotech, food, and complex-assembly settings in 2026–2028.
+Among the three platforms, **AlphaBot 2 is the flagship by company messaging and AlphaBot 1 is the volume workhorse by current revenue contribution**. The 2025 HKC contract is reportedly served primarily by AlphaBot 1 units (the application — fab material handling — does not require dual-arm bimanual coordination) ([NE时代, 2025-09](https://ne-time.cn/web/article/36685)). AlphaBot 2 is positioned as the platform that will absorb the next wave of deployments in biotech, food, and complex-assembly settings in 2026–2028 ([21经济网, 2025-04-18](https://www.21jingji.com/article/20250418/herald/375a27631a594da3b2c3d8d804ade0e7.html)).
 
 ### Recent launches and roadmap (last 12 months)
 
@@ -225,7 +225,7 @@ Among the three platforms, **AlphaBot 2 is the flagship by company messaging and
 
 ### Customer segments
 
-AI² Robotics' deployed customer base — verified through company press releases and trade-press coverage — sits in five identifiable industry clusters:
+AI² Robotics' deployed customer base — verified through company press releases and trade-press coverage — sits in five identifiable industry clusters ([21经济网, 2025-04-18](https://www.21jingji.com/article/20250418/herald/375a27631a594da3b2c3d8d804ade0e7.html); [NE时代, 2025-09](https://ne-time.cn/web/article/36685)):
 
 1. **Automotive manufacturing** — Mercedes-Benz (奔驰) is the headline reference. AlphaBot units have been deployed in automotive manufacturing settings as part of broader factory-automation pilots. The Mercedes engagement is publicly named but the unit count and contract value have not been disclosed ([21经济网, 2025-04-18](https://www.21jingji.com/article/20250418/herald/375a27631a594da3b2c3d8d804ade0e7.html)).
 2. **Semiconductor and display manufacturing** — Two named customers:
@@ -248,17 +248,17 @@ Source: qualitative analyst estimate based on [NE时代, 2025-09 — HKC contrac
 
 ### Customer concentration — quantification
 
-**The company has not published top-1 or top-5 customer revenue concentration**, since AI² Robotics is private and not subject to A-share `前五名客户` (top-5 customer) disclosure rules. Based on the publicly-disclosed HKC contract (~RMB 500 M over three years, implying RMB ~150–170 M/year if linearly recognized) and the absence of any other contract of remotely comparable scale, a reasonable analyst estimate is that **HKC alone represents >40–60% of AI² Robotics' contracted forward revenue**. If accurate, this is a material customer-concentration risk and is carried into Section 9.
+**The company has not published top-1 or top-5 customer revenue concentration**, since AI² Robotics is private and not subject to A-share `前五名客户` (top-5 customer) disclosure rules. Based on the publicly-disclosed HKC contract (~RMB 500 M over three years, implying RMB ~150–170 M/year if linearly recognized) and the absence of any other contract of remotely comparable scale, a reasonable analyst estimate is that **HKC alone represents >40–60% of AI² Robotics' contracted forward revenue** ([CMRA, 2025-09](https://cnmra.com/rmb-500-million-ai2-robotics-secured-massive-order-for-1000-humanoid-robots/)). If accurate, this is a material customer-concentration risk and is carried into Section 9.
 
-**Contract structure.** The HKC arrangement is multi-year and frame-agreement-style, with deployment scheduled across three years and multiple production bases. Mercedes-Benz appears to be a pilot/PO-by-PO relationship rather than a master frame agreement. *Detailed terms not publicly disclosed — flagged.*
+**Contract structure.** The HKC arrangement is multi-year and frame-agreement-style, with deployment scheduled across three years and multiple production bases, and explicitly bundles a joint VLA-fine-tuning workstream on customer process data. Mercedes-Benz appears to be a pilot/PO-by-PO relationship rather than a master frame agreement. *Detailed terms not publicly disclosed — flagged* ([CMRA, 2025-09](https://cnmra.com/rmb-500-million-ai2-robotics-secured-massive-order-for-1000-humanoid-robots/); [NE时代, 2025-09](https://ne-time.cn/web/article/36685)).
 
 ### Distribution channels
 
-Direct enterprise sales — AI² Robotics' GTM model is direct field-engineering with on-site integration. There is no disclosed channel-partner program with a systems integrator or VAR ecosystem. Given the size of the average contract (RMB tens to hundreds of millions over multi-year) and the need for application-specific fine-tuning, direct sales is the correct choice at this stage of maturity.
+Direct enterprise sales — AI² Robotics' GTM model is direct field-engineering with on-site integration. There is no disclosed channel-partner program with a systems integrator or VAR ecosystem. Given the size of the average contract (RMB tens to hundreds of millions over multi-year) and the need for application-specific fine-tuning, direct sales is the correct choice at this stage of maturity ([新浪财经, 2026-01-09](https://finance.sina.com.cn/jjxw/2026-01-09/doc-inhfsfzz0685399.shtml); [AI² Robotics, Introduce](https://ai2robotics.com/en/introduce/)).
 
 ### Sales strategy and cycle
 
-The disclosed customer wins fit a recognizable pattern: a senior executive at the customer (typically the head of manufacturing operations or the chief digital officer) is contacted directly, a multi-month pilot is run on a narrow task, and — if the pilot succeeds — a multi-year frame agreement is negotiated. The sales cycle from first pilot to first signed multi-unit purchase order is plausibly 6–12 months.
+The disclosed customer wins fit a recognizable pattern: a senior executive at the customer (typically the head of manufacturing operations or the chief digital officer) is contacted directly, a multi-month pilot is run on a narrow task, and — if the pilot succeeds — a multi-year frame agreement is negotiated. The sales cycle from first pilot to first signed multi-unit purchase order is plausibly 6–12 months ([CMRA, 2025-09](https://cnmra.com/rmb-500-million-ai2-robotics-secured-massive-order-for-1000-humanoid-robots/); [新浪财经, 2026-01-09](https://finance.sina.com.cn/jjxw/2026-01-09/doc-inhfsfzz0685399.shtml)).
 
 ### Key partnerships
 
@@ -269,7 +269,7 @@ The disclosed customer wins fit a recognizable pattern: a senior executive at th
 
 ### Customer case studies (named wins)
 
-The HKC win is the most strategically important publicly-named contract in Chinese industrial-humanoid commercialization to date. The 1,000-unit / 3-year / RMB 500 M structure provides a backlog anchor that few peers can match. The Mercedes-Benz reference, even if smaller in dollar terms, contributes outsized credibility for international expansion.
+The HKC win is the most strategically important publicly-named contract in Chinese industrial-humanoid commercialization to date. The 1,000-unit / 3-year / RMB 500 M structure provides a backlog anchor that few peers can match. The Mercedes-Benz reference, even if smaller in dollar terms, contributes outsized credibility for international expansion ([CMRA, 2025-09](https://cnmra.com/rmb-500-million-ai2-robotics-secured-massive-order-for-1000-humanoid-robots/); [21经济网, 2025-04-18](https://www.21jingji.com/article/20250418/herald/375a27631a594da3b2c3d8d804ade0e7.html)).
 
 ---
 
@@ -277,59 +277,59 @@ The HKC win is the most strategically important publicly-named contract in Chine
 
 ### Industry definition and scope
 
-The industry in which AI² Robotics operates is best described as **embodied AI / general-purpose intelligent robotics**, with the company specifically targeting two sub-segments:
+The industry in which AI² Robotics operates is best described as **embodied AI / general-purpose intelligent robotics**, with the company specifically targeting two sub-segments ([Vision-language-action model — Wikipedia](https://en.wikipedia.org/wiki/Vision-language-action_model); [MIIT, "人形机器人创新发展指导意见" policy interpretation, 2023](https://www.miit.gov.cn/zwgk/zcjd/art/2023/art_e3f5686c2f0d49f9968b7ae011d558e1.html)):
 
 1. **Industrial mobile manipulators and humanoid-format robots** — robots that operate alongside or in place of human workers in factories, fabs, and laboratories.
 2. **Service / commercial humanoid robots** — robots deployed in retail, food service, public-information environments. (AI² Robotics' Smart Cube vehicle is positioned here but not the company's revenue center as of 2026.)
 
-Adjacent industries include traditional industrial robotics (Fanuc, ABB, Yaskawa — articulated arms with low intelligence), collaborative robots (Universal Robots, Doosan — limited intelligence), autonomous mobile robots (Geek+, Hai Robotics — mobility without dexterity), and commercial service robots (Pudu, KEENON — narrow autonomy).
+Adjacent industries include traditional industrial robotics (Fanuc, ABB, Yaskawa — articulated arms with low intelligence), collaborative robots (Universal Robots, Doosan — limited intelligence) ([Wikipedia — Cobot](https://en.wikipedia.org/wiki/Cobot)), autonomous mobile robots (Geek+, Hai Robotics — mobility without dexterity) ([Geek+ corporate site](https://www.geekplus.com/en); [Hai Robotics products page](https://www.hairobotics.com/products)), and commercial service robots (Pudu, KEENON — narrow autonomy) ([The Robot Report, "Pudu Robotics raises nearly $150M", 2026](https://www.therobotreport.com/pudu-robotics-raises-nearly-150m-targets-industrial-applications/); [Robotics & Automation News, "Keenon Robotics declared leader", 2025-07-21](https://roboticsandautomationnews.com/2025/07/21/keenon-robotics-declared-leader-in-commercial-service-robot-market-by-idc/93232/)).
 
 ### Market size and structure
 
 **Global humanoid market.** Morgan Stanley's headline 2050 number — USD 5 trillion total addressable market, growing at ~88% CAGR from a near-zero base — is the most-cited long-dated forecast ([Morgan Stanley, "Humanoid Robot Market Expected to Reach $5 Trillion by 2050"](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050)). Goldman Sachs in 2025 revised its 2035 humanoid forecast upward sixfold from ~USD 6 bn to ~USD 38 bn — a smaller absolute number but a much steeper acceleration through 2035 ([blog.robozaps.com market-size summary, 2025](https://blog.robozaps.com/b/market-size-for-humanoid-robots)).
 
-**Chinese humanoid market.** Specific projections:
+**Chinese humanoid market.** Specific projections ([Premia Partners](https://www.premia-partners.com/insight/embodied-ai-china-as-the-global-powerhouse-for-industrial-and-humanoid-robotics); [China Briefing](https://www.china-briefing.com/news/chinese-humanoid-robot-market-opportunities/)):
 - 2024: ~RMB 2.76 bn (~USD 380 M)
 - 2026: ~RMB 10.47 bn (~USD 1.4 bn)
 - 2029: ~RMB 75 bn (~USD 10.3 bn), accounting for ~32.7% of the global market
 
 Source: [Premia Partners, "Embodied AI – China as the global powerhouse for industrial and humanoid robotics"](https://www.premia-partners.com/insight/embodied-ai-china-as-the-global-powerhouse-for-industrial-and-humanoid-robotics); [China Briefing, "The Chinese Humanoid Robot AI Market"](https://www.china-briefing.com/news/chinese-humanoid-robot-market-opportunities/).
 
-**Broader Chinese embodied-AI market** (a superset of humanoids — includes industrial mobile manipulators, drones, etc.): projected to grow from RMB 863.4 bn in 2024 to RMB 973.1 bn in 2025 (Premia Partners citation above). The 2025 number is functionally enormous because it counts a wide range of automation; the **humanoid-specific** sub-segment is much smaller (the RMB 2.76 bn / RMB 10.47 bn / RMB 75 bn series above).
+**Broader Chinese embodied-AI market** (a superset of humanoids — includes industrial mobile manipulators, drones, etc.): projected to grow from RMB 863.4 bn in 2024 to RMB 973.1 bn in 2025 ([Premia Partners](https://www.premia-partners.com/insight/embodied-ai-china-as-the-global-powerhouse-for-industrial-and-humanoid-robotics)). The 2025 number is functionally enormous because it counts a wide range of automation; the **humanoid-specific** sub-segment is much smaller (the RMB 2.76 bn / RMB 10.47 bn / RMB 75 bn series above).
 
 ### Growth rates
 
 Historical: humanoid shipments globally went from ~hundreds of units in 2023 to several thousand in 2025 (Unitree alone reported 5,500 units sold in 2025; [TechCrunch, 2026-02-28](https://techcrunch.com/2026/02/28/why-chinas-humanoid-robot-industry-is-winning-the-early-market/)).
 
-Projected: 2024 → 2029 Chinese humanoid CAGR implied by the Premia numbers above is ~95%, a fivefold-plus expansion over five years.
+Projected: 2024 → 2029 Chinese humanoid CAGR implied by the Premia numbers above is ~95%, a fivefold-plus expansion over five years ([Premia Partners](https://www.premia-partners.com/insight/embodied-ai-china-as-the-global-powerhouse-for-industrial-and-humanoid-robotics)).
 
 ### Key trends and drivers
 
-1. **VLA foundation models compress the cost of programming a robot to a new task.** Pre-VLA, deploying a robot to a new factory cell required hand-engineered perception + planning + control — typically person-months of effort per cell. With VLA models, the same robot can be retrained on a new task from a small number of demonstrations.
-2. **Chinese manufacturing labor costs are rising fast enough that humanoid economics are becoming defensible.** Chinese median manufacturing wages have approached or exceeded those in Eastern European EU member states for several years; the labor-displacement payback for a USD 50,000–100,000 robot working a 2-shift day in a fab approaches 18–30 months in many configurations.
-3. **National-level industrial policy.** Both Beijing and provincial governments have explicitly designated embodied AI / humanoid robotics as a strategic-frontier industry. Morgan Stanley has noted that "national support for 'embodied AI' may be far greater in China than in any other nation" ([Morgan Stanley insights, 2025](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050)).
-4. **Geopolitics — semiconductor and component access.** Most Chinese humanoid platforms (AlphaBot included) rely on domestically-available compute, motors, and sensors. The geopolitical environment in which export-controlled US chips are progressively restricted from Chinese AI training infrastructure favors a "China-stack" closed-loop development model.
-5. **Capital saturation.** 2025 saw 81% of global humanoid shipments come from Chinese companies and an unprecedented concentration of venture capital — including AI²'s own 12 funding rounds in a single year. The downside of this capital intensity is segment overcrowding and likely consolidation in 2027–2028.
+1. **VLA foundation models compress the cost of programming a robot to a new task.** Pre-VLA, deploying a robot to a new factory cell required hand-engineered perception + planning + control — typically person-months of effort per cell. With VLA models, the same robot can be retrained on a new task from a small number of demonstrations ([Google DeepMind, "RT-2: New model translates vision and language into action"](https://deepmind.google/blog/rt-2-new-model-translates-vision-and-language-into-action/); [Wikipedia, Vision-language-action model](https://en.wikipedia.org/wiki/Vision-language-action_model)).
+2. **Chinese manufacturing labor costs are rising fast enough that humanoid economics are becoming defensible.** Chinese median manufacturing wages have approached or exceeded those in Eastern European EU member states for several years; the labor-displacement payback for a USD 50,000–100,000 robot working a 2-shift day in a fab approaches 18–30 months in many configurations ([China Briefing, "Minimum Wages in China"](https://www.china-briefing.com/news/minimum-wages-china/); [Logistics Management, "Global Labor Rates: China is no longer a low-cost country"](https://www.logisticsmgmt.com/article/global_labor_rates_china_is_no_longer_a_low_cost_country)).
+3. **National-level industrial policy.** Both Beijing and provincial governments have explicitly designated embodied AI / humanoid robotics as a strategic-frontier industry. Morgan Stanley has noted that "national support for 'embodied AI' may be far greater in China than in any other nation" ([Morgan Stanley insights, 2025](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050); [工信部, "人形机器人创新发展指导意见", 2023-11-03](https://www.miit.gov.cn/zwgk/zcjd/art/2023/art_e3f5686c2f0d49f9968b7ae011d558e1.html)).
+4. **Geopolitics — semiconductor and component access.** Most Chinese humanoid platforms (AlphaBot included) rely on domestically-available compute, motors, and sensors. The geopolitical environment in which export-controlled US chips are progressively restricted from Chinese AI training infrastructure favors a "China-stack" closed-loop development model ([Merics, "Embodied AI: China's ambitious path to transform its robotics industry"](https://merics.org/en/report/embodied-ai-chinas-ambitious-path-transform-its-robotics-industry)).
+5. **Capital saturation.** 2025 saw 81% of global humanoid shipments come from Chinese companies and an unprecedented concentration of venture capital — including AI²'s own 12 funding rounds in a single year. The downside of this capital intensity is segment overcrowding and likely consolidation in 2027–2028 ([TechCrunch, 2026-02-28](https://techcrunch.com/2026/02/28/why-chinas-humanoid-robot-industry-is-winning-the-early-market/); [Crunchbase News, "Embodied AI Fuels Record Robotics Funding In China"](https://news.crunchbase.com/robotics/embodied-ai-fuels-record-funding-china-ipo-momentum-builds/)).
 
 ### Regulatory environment
 
-Robotics-specific regulation in China is still light, but emerging considerations include:
+Robotics-specific regulation in China is still light, but emerging considerations include ([Xinhua, "China's first national standard system for humanoid robotics", 2026-03-03](https://english.news.cn/20260303/0e51ac8f66c542c5bacf2af3f80b3a40/c.html); [The AI Insider, "China Releases National Standards for Humanoid Robotics and Embodied AI", 2026-03-01](https://theaiinsider.tech/2026/03/01/china-releases-national-standards-for-humanoid-robotics-and-embodied-ai/)):
 - **Industrial safety standards** for human-robot interaction in shared workspaces.
 - **Data security** — embodied robots collect substantial sensor data from customer facilities; both customer-side IT compliance and emerging Chinese data-protection rules will shape contract structures.
 - **Export controls** — Chinese humanoids exported to certain markets face US-side scrutiny.
 
 ### Industry dynamics
 
-- **Fragmentation:** highly fragmented. ~20+ Chinese humanoid startups, plus the US (Figure, Tesla, Apptronik, Sanctuary, 1X), plus traditional industrial robotics incumbents (ABB, Fanuc, Yaskawa) that have not yet committed to humanoid form factor.
-- **Supplier power:** moderate. Key inputs — actuators (planetary roller-screw drives, harmonic gears), batteries, GPUs — are increasingly available from Chinese suppliers (e.g., 双林 Shuanglin for planetary screws), reducing supplier concentration risk.
-- **Buyer power:** moderate to high in the early industrial-deployment phase. With limited installed base, customers are negotiating concessions on price and SLA.
-- **Substitutes:** traditional industrial robots, dedicated AMRs (autonomous mobile robots), and — most importantly — *human labor*. Humanoid economics require Chinese wages to keep rising.
+- **Fragmentation:** highly fragmented. 140+ domestic Chinese humanoid manufacturers and 330+ models per MIIT-cited data, plus the US (Figure, Tesla, Apptronik, Sanctuary, 1X), plus traditional industrial robotics incumbents (ABB, Fanuc, Yaskawa) that have not yet committed to humanoid form factor ([Xinhua, 2026-03-03](https://english.news.cn/20260303/0e51ac8f66c542c5bacf2af3f80b3a40/c.html); [TechCrunch, 2026-02-28](https://techcrunch.com/2026/02/28/why-chinas-humanoid-robot-industry-is-winning-the-early-market/)).
+- **Supplier power:** moderate. Key inputs — actuators (planetary roller-screw drives, harmonic gears), batteries, GPUs — are increasingly available from Chinese suppliers (e.g., 双林 Shuanglin for planetary screws), reducing supplier concentration risk ([艾邦机器人, "23家国内人形机器人谐波减速器供应商介绍"](https://www.aibangbots.com/a/2094)).
+- **Buyer power:** moderate to high in the early industrial-deployment phase. With limited installed base, customers are negotiating concessions on price and SLA ([凤凰网财经, "人形机器人融资井喷"](https://finance.ifeng.com/c/8slk4dbwJi1)).
+- **Substitutes:** traditional industrial robots, dedicated AMRs (autonomous mobile robots), and — most importantly — *human labor*. Humanoid economics require Chinese wages to keep rising ([China Briefing, Minimum Wages in China](https://www.china-briefing.com/news/minimum-wages-china/)).
 
 ---
 
 ## 7. Competitive Landscape
 
-The Chinese embodied-AI segment is unusually crowded. Below is the most-public-information analysis of the eight to ten companies that, as of mid-2026, are AI² Robotics' most direct peers.
+The Chinese embodied-AI segment is unusually crowded. Below is the most-public-information analysis of the eight to ten companies that, as of mid-2026, are AI² Robotics' most direct peers ([XCarspace, "Top 20 Chinese Humanoid Robot Companies (Ranked by Valuation)"](https://xcarspace.com/top-20-chinese-humanoid-robot-companies-ranked-by-valuation/); [TechCrunch, 2026-02-28](https://techcrunch.com/2026/02/28/why-chinas-humanoid-robot-industry-is-winning-the-early-market/)).
 
 ```mermaid
 quadrantChart
@@ -362,11 +362,11 @@ quadrantChart
 
 **4. Galaxea AI (星海图智能).** Wheeled / arm-based platform; reportedly valued at over RMB 10 bn after a ~RMB 1 bn 2H-2025 round — at parity with AI² Robotics on post-money valuation. Less industrial-anchor visibility ([globalneighbours.org coverage, 2026](https://www.globalneighbours.org/en/articles/china-s-ai-robotics-raises-fresh-funds-at-over-10-billion-yuan-valuation)).
 
-**5. Robotera (星动纪元).** Bipedal humanoid focus. Closed Series A+ of ~RMB 1 bn (~USD 140 M) in March 2026, led by Geely Capital with Alibaba and Haier Capital alongside. Bipedal-walking pedigree from Tsinghua / Cybathlon-class teams; more hardware-led than VLA-led.
+**5. Robotera (星动纪元).** Bipedal humanoid focus. Closed Series A+ of ~RMB 1 bn (~USD 140 M) in March 2026, led by Geely Capital with Alibaba and Haier Capital alongside. Bipedal-walking pedigree from Tsinghua / Cybathlon-class teams; more hardware-led than VLA-led ([Yicai Global, "Chinese Robot Startup Robotera Bags USD140.5 Million"](https://www.yicaiglobal.com/news/chinese-robot-startup-robotera-bags-usd1405-million-in-latest-fundraiser-led-by-geely); [Caproasia, 2026-04-29](https://www.caproasia.com/2026/04/29/china-robotics-startup-robotera-raised-200-million-new-funding-raised-145-million-cny-1-billion-at-1-45-billion-cny-10-billion-valuation-in-2026-march-founded-in-2023-by-chen-jianyu-with-shar/)).
 
-**6. PsiBot (灵宝CASBOT).** Raised ~USD 280 M in March 2026. Industrial mobile-manipulator focus with strong academic ties to the Chinese Academy of Sciences. Tier-1 customer reference list still building.
+**6. PsiBot (灵初智能).** Raised ~USD 280 M across angel and pre-A rounds in March 2026. Industrial mobile-manipulator focus with strong academic ties to Peking University; investor base skews state-backed (CDB Capital, CCTV Media Convergence Fund, Shanghai Xuhui Capital). Tier-1 customer reference list still building ([Benzinga, "PsiBot's $280M Fundraising", 2026-03](https://www.benzinga.com/Opinion/26/03/51292693/psibots-280m-fundraising-signals-china-bet-on-embodied-ai); [Gasgoo, "PsiBot Announces Completion of 2 Billion Yuan Financing"](https://autonews.gasgoo.com/articles/icv/seeds-psibot-announces-completion-of-2-billion-yuan-financing-2031589417448222721)).
 
-**7. Spirit AI (灵动机器人 / 灵动科技).** Existing AMR (autonomous mobile robot) business with newer humanoid program. Lower-profile / lower-valuation than the names above. Reportedly approaching the RMB 10 bn valuation tier after a 2025 round.
+**7. Qianxun Intelligence (千寻智能) — formerly profiled as Spirit AI.** Founded January 2024; first product Moz0 released July 2024, with commercial-grade Moz1 humanoid released in 2025. Raised RMB 528 M Pre-A and a subsequent ~RMB 600 M round in 2025; reached RMB 10 bn valuation in 26 months and has deployed Moz robots on CATL's Zhongzhou battery production line ([36氪, "Qianxun Intelligence's Valuation Exceeds 10 Billion Yuan in Just Two Years"](https://eu.36kr.com/en/p/3701216103281408); [36氪, "Qianxun Intelligence Completes 528 Million Yuan in Pre-A Round Financing"](https://eu.36kr.com/en/p/3224908715539591)).
 
 **8. Unitree Robotics (宇树科技).** The volume leader. 5,500 humanoid units sold in 2025; revenue RMB 1.71 bn (~USD 250 M) in 2025 with adjusted net profit RMB 600 M (~USD 90 M). Targeting a Shanghai STAR-market IPO in 2026 at USD ~7 bn valuation, raising USD ~610 M. **Crucially: Unitree is the only Chinese embodied-AI peer with disclosed revenue at scale and the only one already profitable.** Hardware-led with a smaller VLA software footprint than AI² Robotics ([KraneShares Unitree IPO guide, 2026](https://kraneshares.com/a-complete-guide-to-unitree-robotics-2026-ipo-why-it-matters-for-star-market-etf-kstr-humanoid-robotics-etf-koid/); [Rest of World, 2026](https://restofworld.org/2026/unitree-china-humanoid-robot-shanghai-ipo/); [Next Web, 2026](https://thenextweb.com/news/unitree-gd01-mecha-humanoid-robot-ipo)).
 
@@ -376,7 +376,7 @@ quadrantChart
 
 ### Positioning summary
 
-AI² Robotics sits in an unusually defensible position on **two** of the four dimensions that matter: (a) it is foundation-model-led rather than hardware-led, and (b) it has unusually clear disclosed industrial-customer references for its valuation tier. It is **disadvantaged** vs. peers on (c) capital raised — X Square and Galbot both have higher cumulative funding — and on (d) bench depth, with no publicly-named CFO/CTO. The single largest competitive vulnerability is that the hardware itself is not architecturally novel, meaning that competitors with more capital and access to similar component supply chains can plausibly close the form-factor gap within 18 months. The defensible moat, if there is one, sits at the **Alpha Brain / GOVLA + deployed-fleet-data** intersection.
+AI² Robotics sits in an unusually defensible position on **two** of the four dimensions that matter: (a) it is foundation-model-led rather than hardware-led, and (b) it has unusually clear disclosed industrial-customer references for its valuation tier ([新浪财经, 2026-01-09](https://finance.sina.com.cn/jjxw/2026-01-09/doc-inhfsfzz0685399.shtml); [CMRA, 2025-09](https://cnmra.com/rmb-500-million-ai2-robotics-secured-massive-order-for-1000-humanoid-robots/)). It is **disadvantaged** vs. peers on (c) capital raised — X Square and Galbot both have higher cumulative funding — and on (d) bench depth, with no publicly-named CFO/CTO. The single largest competitive vulnerability is that the hardware itself is not architecturally novel, meaning that competitors with more capital and access to similar component supply chains can plausibly close the form-factor gap within 18 months. The defensible moat, if there is one, sits at the **Alpha Brain / GOVLA + deployed-fleet-data** intersection ([Inforcapital, 2026-04](https://inforcapital.com/news/embodied-ai-startup-x-square-robot-raises-nearly-276m-in-series-b-led-by-xiaomi-and-sequoia-china/); [Robotics & Automation News, 2025-12-20](https://roboticsandautomationnews.com/2025/12/20/humanoid-robot-maker-galbot-raises-300-million-and-reaches-3-billion-valuation/97783/)).
 
 ### Market-share estimate
 

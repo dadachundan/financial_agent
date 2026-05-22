@@ -42,7 +42,7 @@
 
 ### 估值快照（非上市——作为"TTM 估值倍数"的代理）
 
-由于自变量机器人为非上市公司，按公司研究框架的规则，应以 **最近一轮融资的投后估值及隐含的营收倍数** 替代公开市场的 P/E 与 P/S。相关数据点如下：
+由于自变量机器人为非上市公司，按公司研究框架的规则，应以 **最近一轮融资的投后估值及隐含的营收倍数** 替代公开市场的 P/E 与 P/S。九轮融资的相关数据点综合自一手新闻稿与中国投资人报道（[财新国际，2026-04-21](https://www.caixinglobal.com/2026-04-21/x-square-robot-raises-new-funds-targets-home-trials-by-may-102436558.html)；[36Kr，2024-11-04](https://www.36kr.com/p/3020497031226626)；[CNBC，2025-09-08](https://www.cnbc.com/2025/09/08/alibaba-leads-100-million-investment-in-chinese-humanoid-robot-startup.html)；[TechNode，2026-01-12](https://technode.com/2026/01/12/x-square-robot-secures-140-million-in-funding-from-bytedance-sequoia-and-others/)）：
 
 | 轮次 | 时间 | 规模 | 投后估值 | 领投方 | 来源 |
 |---|---|---|---|---|---|
@@ -54,7 +54,7 @@
 
 中文报道（如[知乎专栏 / 凤凰网](https://zhuanlan.zhihu.com/p/1948454241204142646)）援引数据称，公司在大约两年内累计完成九轮融资，**累计金额超过 30 亿元人民币（约 4.2 亿美元）**，**估值从天使轮约 2 亿元人民币一路跃升至 A++ 轮后约 100 亿元人民币**——即 24 个月内估值上调约 50 倍。据报道，B 轮在该约 100 亿元人民币的投后估值基础上维持或小幅上调；精确的投后估值并未公开披露，"14 亿美元"这一数字应被视为媒体报道值，而非经审计的数据。
 
-**隐含倍数意味着什么？** 同一批次的具身智能同行主要依据 **研究能力 / 产品能力 / 数据飞轮** 的叙事进行估值，而非按营收。最为可比的对标公司包括：
+**隐含倍数意味着什么？** 同一批次的具身智能同行主要依据 **研究能力 / 产品能力 / 数据飞轮** 的叙事进行估值，而非按营收（[Crunchbase News，"Embodied AI Fuels Record Robotics Funding In China"](https://news.crunchbase.com/robotics/embodied-ai-fuels-record-funding-china-ipo-momentum-builds/)）。最为可比的对标公司包括：
 
 - **Physical Intelligence（美国）**——最近一轮估值为 2025 年 11 月的 **56 亿美元**（彭博社），截至 2026 年第一季度末，正洽谈以约 **110 亿美元** 估值募资 10 亿美元（[TechCrunch，2026-03-27](https://techcrunch.com/2026/03/27/physical-intelligence-is-reportedly-in-talks-to-raise-1-billion-again/)）。
 - **Skild AI（美国）**——据报道正与软银 / 英伟达洽谈以 140 亿美元估值融资，对应约 3,000 万美元的营收基础（[TechCrunch，2025-12-08](https://techcrunch.com/2025/12/08/softbank-and-nvidia-reportedly-in-talks-to-fund-skildai-at-14b-nearly-tripling-its-value/)）。
@@ -64,7 +64,7 @@
 - **AgiBot（智元，中国）**——截至 2025 年 3 月，估值超 100 亿元人民币（约 14 亿美元），来源详见 [Global Neighbours 行业综述](https://www.globalneighbours.org/en/articles/china-s-ai-robotics-raises-fresh-funds-at-over-10-billion-yuan-valuation)。
 - **Spirit AI（千寻智能，中国）**——截至 2026 年 2 月估值约 15 亿美元（[Caproasia，2026-02-26](https://www.caproasia.com/2026/02/26/china-robotics-startup-spirit-ai-raised-280-million-at-1-5-billion-valuation-founded-in-2024-by-han-fengtao-members-from-university-of-california-berkeley-tsinghua-university-peking-university/)）。
 
-以约 14 亿美元估值衡量，自变量机器人 **大致与中国国内同行的中位水平相符**（Galbot 30 亿美元属高端异常值；AgiBot 与 Spirit AI 集中在 14–15 亿美元区间），同时 **相对 Physical Intelligence（56–110 亿美元）、Skild（140 亿美元）和 Figure（390 亿美元）等欧美龙头存在显著折让**。这一隐含的"中国折扣"与投资者在中国 AI 资产相对西方同业普遍施加的折让（相同叙事下约 3–5 倍折让）保持一致。对于一家 **既无经审计财务披露、亦无明确 IPO 时间表** 的前营收期基础模型公司而言，更恰当的定位描述应当是"基于叙事定价，与中国具身智能同行队列相符，相对欧美龙头存在折让"。如果未来 12–18 个月内 58 同城试点及计划中的家庭部署未能转化出有意义的营收，估值倍数向中国同行下限收敛（约 5–10 亿美元）是一种可信的下行情形；反之，若公司在 2026/2027 年提交可信的 IPO 申请，则估值有望向 Galbot 的 30 亿美元水平再评级。
+以约 14 亿美元估值衡量，自变量机器人 **大致与中国国内同行的中位水平相符**（Galbot 30 亿美元属高端异常值；AgiBot 与 Spirit AI 集中在 14–15 亿美元区间），同时 **相对 Physical Intelligence（56–110 亿美元）、Skild（140 亿美元）和 Figure（390 亿美元）等欧美龙头存在显著折让**（[PR Newswire，Galbot 30 亿美元，2025-12-20](https://www.prnewswire.com/news-releases/galbot-secures-over-300-million-in-new-funding-breaking-records-with-3-billion-valuation-in-chinas-humanoid-robot-sector-302647204.html)；[财新国际，AgiBot 估值超 100 亿元人民币，2026-02-23](https://www.caixinglobal.com/2026-02-23/chinas-ai-robotics-raises-fresh-funds-at-over-10-billion-yuan-valuation-102416310.html)；[Bloomberg，Physical Intelligence 56 亿美元，2025-11-20](https://www.bloomberg.com/news/articles/2025-11-20/robotics-startup-physical-intelligence-valued-at-5-6-billion-in-new-funding)；[Figure C 轮，2025-09](https://www.figure.ai/news/series-c)）。这一隐含的"中国折扣"与投资者在中国 AI 资产相对西方同业普遍施加的折让（相同叙事下约 3–5 倍折让）保持一致；更宏观的行业框架可参考[TechCrunch 关于中国人形机器人"赢得早期市场"的分析，2026-02-28](https://techcrunch.com/2026/02/28/why-chinas-humanoid-robot-industry-is-winning-the-early-market/)。对于一家 **既无经审计财务披露、亦无明确 IPO 时间表** 的前营收期基础模型公司而言，更恰当的定位描述应当是"基于叙事定价，与中国具身智能同行队列相符，相对欧美龙头存在折让"。如果未来 12–18 个月内 58 同城试点及计划中的家庭部署未能转化出有意义的营收，估值倍数向中国同行下限收敛（约 5–10 亿美元）是一种可信的下行情形；反之，若公司在 2026/2027 年提交可信的 IPO 申请，则估值有望向 Galbot 的 30 亿美元水平再评级（[财新国际，2026-04-21](https://www.caixinglobal.com/2026-04-21/x-square-robot-raises-new-funds-targets-home-trials-by-may-102436558.html)）。
 
 ---
 
@@ -95,7 +95,7 @@ timeline
 
 **值得关注的三次战略转向。** 第一，**从"仅做机械臂"到"人形 + 双臂移动平台"的形态转变**：截至 2024 年第三季度的早期演示主要是双臂桌面式操作机器人；到 2025 年中，公司开始展示 Quanta X2 移动双臂平台（身高 172 cm，单臂触及范围约 756 mm，参见 [robotsinternational.com](https://www.robotsinternational.com/X-Square.htm)）；到 2026 年 4 月，公司将面向家庭部署的机器人定位为人形形态（[Pandaily / 王潜 Robots-to-Mars 访谈](https://pro.pandaily.com/p/x-square-robots-wang-qian-robots)）。第二，**2025 年 9 月开源 WALL-OSS 的决定**——这是与 Figure、1X 等美国竞品坚持自有专有体系的明确分野。公司给出的理由是：如果没有一个开放的基础模型供高校与中小实验室进行微调，中国的机器人数据生态难以形成关键质量（[Hugging Face 上的 WALL-OSS 仓库](https://huggingface.co/x-square-robot/wall-oss-flow)；[Open Source For You，2025-09](https://www.opensourceforu.com/2025/09/x-square-robot-launches-open-source-wall-oss-after-usd140-3-million-boost/)）。第三，**2026 年 4 月转向"机器人进家"而非进工厂的路线**——王潜公开将竞品的工厂部署演示形容为"噱头"，并主张唯有真实而杂乱的家庭环境才能真实检验泛化能力（[KrAsia，"PR stunt"](https://kr-asia.com/a-pr-stunt-x-square-robot-ceo-says-humanoid-robots-dont-belong-in-factories-calls-for-focus-on-generalization)）。
 
-**截至目前并无公开记录的并购** 行为；公司增长完全来自内生发展叠加融资。
+**截至目前并无公开记录的并购** 行为；公司增长完全来自内生发展叠加融资（[PitchBook，自变量机器人公司档案](https://pitchbook.com/profiles/company/592534-54)；[Crunchbase，X Square](https://www.crunchbase.com/organization/x-square)）。
 
 **近期进展。** 对当前投资逻辑最具影响的两件事分别是：2026 年 4 月完成的 B 轮融资，以及同时披露的 WALL-B / WUM。B 轮规模约 2.76–2.93 亿美元（20 亿元人民币），使公司报告的累计融资在 28 个月内达到约 **6 亿美元以上，分九轮完成**，即便以中国 AI 创业公司的标准来看也属于极快的节奏（[Caproasia，2026-04-27](https://www.caproasia.com/2026/04/27/china-intelligent-robot-startup-x-square-robot-technology-raised-293-million-cny-2-billion-in-series-b-funding-round-founded-in-2023-by-wang-qian-investors-include-alibaba-meituan-bytedance-ho/)）。在小米加入后，自变量据报道是中国唯一一家同时获得阿里巴巴、字节跳动、美团与小米四家战略投资人背书的具身智能创业公司（[财新](https://www.caixinglobal.com/2026-04-21/x-square-robot-raises-new-funds-targets-home-trials-by-may-102436558.html)）。
 
@@ -109,15 +109,15 @@ timeline
 
 **教育与研究履历。** 王潜在 **清华大学（Tsinghua University）** 取得本科和硕士学位，随后赴 **南加州大学（University of Southern California，USC）** 攻读博士学位（[Pandaily，"Robots will eventually reach Mars"](https://pro.pandaily.com/p/x-square-robots-wang-qian-robots)；[百度百科英文版王潜词条](https://baike.baidu.com/en/item/Wang%20Qian/943787)）。中文媒体反复强调他"是全球最早将注意力机制引入神经网络的研究者之一"，并且与谷歌 2014 年的注意力机制论文在同一会议发表过工作，比 Transformer 早三年（[36Kr 专题，2024-11](https://www.36kr.com/p/3020497031226626)；[量子位 qbitai](https://www.qbitai.com/2025/12/363184.html)）。这一说法已被几乎所有主流中文科技媒体复述；然而，无论是 WebSearch 还是 Google Scholar，都没有检索到 2014 年作者署名为"Wang Qian"且引用链清晰的某一篇特定注意力机制论文，因此这一历史性说法应当被视为 **创始人公开叙事的一部分，而非可独立证实的事实**。其在南加州大学的博士工作据称涉及机器人学习与人-机交互，并据传与"美国顶尖机器人实验室"有合作——中文媒体并未指明具体实验室，因此用户提供的"斯坦福背景"框架在没有更多信源披露之前应被视为【未经证实】。
 
-**创立自变量之前的职业经历。** 公开中文报道仅笼统地提及他在"美国顶尖机器人实验室"和回国后中国的产品工作；具体的雇主或职位（包括用户提供的"前字节跳动"说法）**未能从一手信源获得证实**——在我查到的所有访谈中，字节跳动均以 **公司成立后的投资方** 而非以前的雇主身份出现。如果"前字节跳动"对读者具有实质意义，应通过直接查看其 LinkedIn 或同等的披露文件确认（由于公司未上市，并无此类公开披露）。
+**创立自变量之前的职业经历。** 公开中文报道仅笼统地提及他在"美国顶尖机器人实验室"和回国后中国的产品工作（[Pandaily 创始人专访](https://pro.pandaily.com/p/x-square-robots-wang-qian-robots)；[百度百科"王潜"](https://baike.baidu.com/en/item/Wang%20Qian/943787)）；具体的雇主或职位（包括用户提供的"前字节跳动"说法）**未能从一手信源获得证实**——在我查到的所有访谈中，字节跳动均以 **公司成立后的投资方**（A++ 轮，2026 年 1 月，[TechNode，2026-01-12](https://technode.com/2026/01/12/x-square-robot-secures-140-million-in-funding-from-bytedance-sequoia-and-others/)）而非以前的雇主身份出现。如果"前字节跳动"对读者具有实质意义，应通过直接查看其 LinkedIn 或同等的披露文件确认（由于公司未上市，并无此类公开披露）。
 
-**创业立论与思想立场。** 王潜的公开表达贯穿三条一致的主线：
+**创业立论与思想立场。** 王潜的公开表达贯穿三条一致的主线（[Pandaily 创始人专访](https://pro.pandaily.com/p/x-square-robots-wang-qian-robots)；[量子位 MEET2026，2025-12](https://www.qbitai.com/2025/12/363184.html)；[36Kr，"具身智能大模型没法抄国外作业"](https://36kr.com/p/3312504088306690)）：
 
 1. **"具身智能是物理世界的独立基础模型"**——仅靠互联网文本训练出来的大语言模型，本身无法成为合格的物理智能体。数据形态、损失函数与动作空间都属于完全不同的范畴（[量子位 MEET2026](https://www.qbitai.com/2025/12/363184.html)）。
 2. **"具身智能大模型没法抄国外作业"**——王潜颇为坚定地认为，欧美龙头实验室（Physical Intelligence、Skild）做出了某些他认为错误的架构与数据选择，而中国生态本能性地复制欧美赢家的做法在具身智能领域将会失灵（[36Kr，"具身智能大模型没法抄国外作业"](https://36kr.com/p/3312504088306690)）。
 3. **"家庭，而非工厂，才是唯一诚实的泛化基准"**——工厂试点把系统训练在一小组工况稳定的任务上，会掩盖真正泛化能力的不足；只有家庭环境的长尾杂乱程度才能将其暴露出来（[KrAsia"PR stunt"访谈](https://kr-asia.com/a-pr-stunt-x-square-robot-ceo-says-humanoid-robots-dont-belong-in-factories-calls-for-focus-on-generalization)）。
 
-**股权与控制权。** 公司股权结构未公开披露。作为已经历九轮融资的创始人 CEO，王潜在 B 轮后的剩余股权份额很可能已被显著稀释但仍具有控制权——同等稀释阶段的中国 AI 创业公司创始人持股通常在 15–25% 区间，但自变量未公布具体比例。【未经证实】。薪酬结构（现金 vs. 股权）同样未予披露。
+**股权与控制权。** 公司股权结构未公开披露（[企查查主体信息](https://m.qcc.com/firm/3d7fcecce3b3192c565a31412e6ac0cf.html)；[百度爱企查主体信息](https://aiqicha.baidu.com/company_detail_47587830653719)）。作为已经历九轮融资的创始人 CEO（[Caproasia，2026-04-27](https://www.caproasia.com/2026/04/27/china-intelligent-robot-startup-x-square-robot-technology-raised-293-million-cny-2-billion-in-series-b-funding-round-founded-in-2023-by-wang-qian-investors-include-alibaba-meituan-bytedance-ho/)），王潜在 B 轮后的剩余股权份额很可能已被显著稀释但仍具有控制权——同等稀释阶段的中国 AI 创业公司创始人持股通常在 15–25% 区间，但自变量未公布具体比例。【未经证实】。薪酬结构（现金 vs. 股权）同样未予披露。
 
 **公众曝光。** 王潜的长篇访谈频率不高但内容扎实——大致每两到三个月接受一次重要的中文媒体访谈。截至撰稿时，他尚未接受过英文媒体的访谈。他在公开场合的姿态是"线下温和、文字犀利"（[Pandaily 人物访谈](https://pro.pandaily.com/p/x-square-robots-wang-qian-robots)——"具有学者特有的沉稳，谈吐温和而克制；但当话题转向具身智能时，他会展现出另一面：锐利、坚定、毫不退让"）。
 
@@ -137,23 +137,23 @@ timeline
 
 ### 治理小结
 
-作为一家注册于中国大陆、未公开股权结构的 VC 阶段非上市公司：
+作为一家注册于中国大陆、未公开股权结构的 VC 阶段非上市公司（[企查查主体信息](https://m.qcc.com/firm/3d7fcecce3b3192c565a31412e6ac0cf.html)；[百度爱企查主体信息](https://aiqicha.baidu.com/company_detail_47587830653719)）：
 
-- **董事会构成**——未公开披露。从 B 轮的常规结构推断，红杉 HongShan、小米战略、阿里云、字节跳动每家保留观察员或董事席位是行业常见做法，但 **目前没有公开证实**。
-- **内部人持股**——未披露。基于典型的中国 A 系列稀释规律，B 轮后创始人合计持股很可能在 25–40% 区间，但 **这是估计值，并非已披露数据**。
+- **董事会构成**——未公开披露（[企查查主体信息](https://m.qcc.com/firm/3d7fcecce3b3192c565a31412e6ac0cf.html)）。从 B 轮的常规结构推断，红杉 HongShan、小米战略、阿里云、字节跳动每家保留观察员或董事席位是行业常见做法，但 **目前没有公开证实**。
+- **内部人持股**——未披露（[百度爱企查主体信息](https://aiqicha.baidu.com/company_detail_47587830653719)）。基于典型的中国 A 系列稀释规律，B 轮后创始人合计持股很可能在 25–40% 区间，但 **这是估计值，并非已披露数据**。
 - **薪酬结构**——未披露。
 - **关联方交易**——目前未见公开记载。
-- **治理风险信号**——未发现。投资人结构属于"中国头部战略 + 一线 VC"，按以往经验通常对应较干净的治理，但由于缺乏经审计文件，这一点目前无法被确证。
+- **治理风险信号**——未发现。投资人结构属于"中国头部战略 + 一线 VC"，按以往经验通常对应较干净的治理，但由于缺乏经审计文件，这一点目前无法被确证（[财新国际，2026-04-21](https://www.caixinglobal.com/2026-04-21/x-square-robot-raises-new-funds-targets-home-trials-by-may-102436558.html)）。
 
 ### 履历综述
 
-按照具身智能赛道同期创业者的水准衡量，这两位创始人的简历都属偏强：一位是清华本科 + 南加大博士、专攻机器人学习的研究者，另一位是北大博士、且已经在开源 LLM 领域实际交付过 100 亿与 1,000 亿参数模型。这一组合在画像上更接近 Physical Intelligence 的创始团队（Sergey Levine，前伯克利 / DeepMind），而非中国典型人形机器人创业公司的创始团队。仍未得到验证的是 **大规模量产与运营层面的执行力**——两位创始人此前均未交付过面向消费者的物理产品，即将展开的家庭试点将是其立论的首次真正应力测试。因此，公司近期最大的风险并非技术信念（已经很高），而是 **运营与可靠性层面的执行**。
+按照具身智能赛道同期创业者的水准衡量，这两位创始人的简历都属偏强：一位是清华本科 + 南加大博士、专攻机器人学习的研究者（[Pandaily，"Robots will eventually reach Mars"](https://pro.pandaily.com/p/x-square-robots-wang-qian-robots)），另一位是北大博士、且已经在开源 LLM 领域实际交付过 100 亿与 1,000 亿参数模型（[网易科技 CTO 访谈](https://www.163.com/dy/article/KPHBBHMO05568W0A.html)；[北大 EECS 活动，2025](https://eecs.pku.edu.cn/info/1040/6984.htm)）。这一组合在画像上更接近 Physical Intelligence 的创始团队（Sergey Levine，前伯克利 / DeepMind，[pi.website](https://www.pi.website/)），而非中国典型人形机器人创业公司的创始团队。仍未得到验证的是 **大规模量产与运营层面的执行力**——两位创始人此前均未交付过面向消费者的物理产品，即将展开的家庭试点将是其立论的首次真正应力测试（[财新国际，2026-04-21](https://www.caixinglobal.com/2026-04-21/x-square-robot-raises-new-funds-targets-home-trials-by-may-102436558.html)；[PR Newswire，2026-04-22](https://www.prnewswire.com/news-releases/x-square-robot-unveils-new-embodied-ai-model-says-robots-will-arrive-in-homes-in-35-days-302751047.html)）。因此，公司近期最大的风险并非技术信念（已经很高），而是 **运营与可靠性层面的执行**。
 
 ---
 
 ## 4. 产品与服务
 
-自变量机器人的产品矩阵分为 **两层**：(a) **WALL / 长城具身基础模型家族**（软件），与 (b) 驱动这些模型的 **Quanta X2 / Quanta 人形硬件平台**。下文按时间顺序与层次梳理公司实际已发布的产品。
+自变量机器人的产品矩阵分为 **两层**：(a) **WALL / 长城具身基础模型家族**（软件），与 (b) 驱动这些模型的 **Quanta X2 / Quanta 人形硬件平台**（[X Square Robot 官网"关于我们"](https://x2robot.com/en)；[Hugging Face 上的 x-square-robot](https://huggingface.co/x-square-robot)；[GitHub 上的 X-Square-Robot/wall-x](https://github.com/X-Square-Robot/wall-x)）。下文按时间顺序与层次梳理公司实际已发布的产品。
 
 ```mermaid
 graph TD
@@ -180,23 +180,23 @@ graph TD
 
 **WALL-A（2024 年 10 月发布）。** WALL-A 是公司首款重要模型，也是其架构基准。它是一个端到端的 **视觉-语言-动作（VLA）模型**，能够将原始 RGB 输入和语言指令通过一次可微的前向传递映射到底层电机动作。中文媒体与自变量的官方表述均称 WALL-A 在发布时是 **全球参数规模最大的通用具身操作基础模型**（[36Kr，2024-11-04](https://news.qq.com/rain/a/20241104A0573C00)）。其具体参数数量与架构细节并未通过同行评审论文公开，目前最接近的替代材料是 Hugging Face 上 WALL-OSS 的技术 README。公开演示中，同一套 WALL-A 权重无需任何按任务微调，便可驱动质量差异较大的多种任务——插花、晾晒衣物、刨冰制作、缠线、包裹分拣等（[Pandaily 创始人专访](https://pro.pandaily.com/p/x-square-robots-wang-qian-robots)）。
 
-**竞争优势判断：** 部分领先。WALL-A 的护城河主要落在 **数据与训练基础设施**，而非独特的架构——VLA 范式到 2026 年已被 Physical Intelligence（π0、π0.5）与 Google DeepMind（RT-2 系列）等同行普遍采用。最接近的美国竞品：**Physical Intelligence 的 π0 / π0.5**——从公开论文看大致处于同级架构水平；自变量声称的优势体现在更原生的中文数据与更快的迭代节奏，整体属于"持平"而非领先。
+**竞争优势判断：** 部分领先。WALL-A 的护城河主要落在 **数据与训练基础设施**，而非独特的架构——VLA 范式到 2026 年已被 Physical Intelligence（π0、π0.5）与 Google DeepMind（RT-2 系列）等同行普遍采用（[Physical Intelligence π0 博客](https://www.pi.website/blog/pi0)；[Physical Intelligence π0.5 博客](https://www.pi.website/blog/pi05)；[Google DeepMind RT-2](https://deepmind.google/blog/rt-2-new-model-translates-vision-and-language-into-action/)）。最接近的美国竞品：**Physical Intelligence 的 π0 / π0.5**——从公开论文看大致处于同级架构水平；自变量声称的优势体现在更原生的中文数据与更快的迭代节奏，整体属于"持平"而非领先。
 
 **WALL-OSS（2025 年 9 月发布，开源）。** WALL-OSS 是 WALL 技术栈的 **开源版本**，在 Hugging Face 上以两种形态发布——**wall-oss-flow**（采用 flow-matching 动作头）与 **wall-oss-fast**（更轻量、速度更快的变体）——同时在 **github.com/X-Square-Robot/wall-x** 上提供训练与推理代码库（[Hugging Face 上的 WALL-OSS](https://huggingface.co/x-square-robot)；[GitHub 上的 wall-x](https://github.com/X-Square-Robot/wall-x)；[HF 博客部署指南](https://huggingface.co/blog/Geoffrey19/wall-oss-full-deployment-guide)；[LeRobot WALL-OSS 文档](https://huggingface.co/docs/lerobot/walloss)）。README 描述了一种 **紧耦合的多模态 MoE 架构，包含共享注意力机制与按任务路由的前馈网络**，将离散语言 token 与连续动作统一到同一模型中，并采用团队自创的两阶段"Inspiration → Integration"训练课程，称之为 Unified Cross-Level Chain-of-Thought（[LeRobot WALL-OSS 文档](https://huggingface.co/docs/lerobot/walloss)）。其训练语料混合了真实世界机器人动作数据与增强的生成式视频数据。
 
-**竞争优势判断：** 是——分发与生态护城河。开源模型是自变量相对美国同行最具差异化的产品决策（Physical Intelligence 提供 API 而不公开权重；Figure 与 1X 完全闭源）。最接近的开源竞争者：**NVIDIA GR00T**（Isaac Lab / GR00T 人形基础模型）。自变量的开源程度可与之比肩，并且与 LeRobot 社区的整合更紧密（参见 LeRobot 官方文档的交叉引用）。在 **开源具身基础模型** 这一细分品类中，**处于温和领先**。
+**竞争优势判断：** 是——分发与生态护城河。开源模型是自变量相对美国同行最具差异化的产品决策（Physical Intelligence 提供 API 而不公开权重，参见[pi.website](https://www.pi.website/)；Figure 与 1X 完全闭源——[TechCrunch，Figure 放弃 OpenAI 转向自研模型，2025-02-04](https://techcrunch.com/2025/02/04/figure-drops-openai-in-favor-of-in-house-models/)）。最接近的开源竞争者：**NVIDIA GR00T**（Isaac Lab / GR00T 人形基础模型，[NVIDIA Isaac GR00T N1 发布，2025-03](https://nvidianews.nvidia.com/news/nvidia-isaac-gr00t-n1-open-humanoid-robot-foundation-model-simulation-frameworks)；[nvidia/GR00T-N1-2B on Hugging Face](https://huggingface.co/nvidia/GR00T-N1-2B)）。自变量的开源程度可与之比肩，并且与 LeRobot 社区的整合更紧密（参见 LeRobot 官方文档的交叉引用，[LeRobot WALL-OSS 文档](https://huggingface.co/docs/lerobot/walloss)）。在 **开源具身基础模型** 这一细分品类中，**处于温和领先**。
 
 **WALL-B / 世界统一模型（WUM）——2026 年 4 月发布。** WALL-B 被定位为下一代模型，在原有基础上加入了 **显式的世界模型 / 物理预测头**：感知、语言理解、动作预测与物理预测不再作为分别训练、仅在微调阶段联合的模块，而是 **从预训练阶段就完全融合在一个架构中**，物理规律（力、摩擦、碰撞动力学）作为模型内部学到的特征自然涌现，而非依赖外部仿真器（[PR Newswire，2026-04-22](https://www.prnewswire.com/news-releases/x-square-robot-unveils-new-embodied-ai-model-says-robots-will-arrive-in-homes-in-35-days-302751047.html)；[Gasgoo 报道](https://autonews.gasgoo.com/articles/news/x-square-robot-launches-first-world-unified-model-2046956450868359169)）。训练数据策略中明确强调使用 **非摆拍的真实家庭环境数据**——即拥挤、有人 / 宠物活动、物品随机摆放、视觉部分遮挡的真实居家影像——作为主要输入。
 
 发布会现场演示中，机器人 **在花茎随观察视角变化而发生位置漂移的情况下，仍能实时调整握持与运动，完成插花任务**，整个过程并不依赖预设轨迹（[PR Newswire，2026-04-22](https://www.prnewswire.com/news-releases/x-square-robot-unveils-new-embodied-ai-model-says-robots-will-arrive-in-homes-in-35-days-302751047.html)）。
 
-**竞争优势判断：** 暂时无法定论。"将世界模型整合进 VLA"的定位与 Physical Intelligence 的 π0.5 以及 Google DeepMind 描述的方向类似，差异化最终将取决于家庭场景下的真实数据飞轮是否具备独特的生产力。最接近的竞品：**PI π0.5**——自变量宣称持平或略微领先，但缺乏第三方基准。**待验证。**
+**竞争优势判断：** 暂时无法定论。"将世界模型整合进 VLA"的定位与 Physical Intelligence 的 π0.5（[π_0.5 论文，arXiv 2504.16054，2025-04-22](https://arxiv.org/abs/2504.16054)）以及 Google DeepMind 描述的方向类似，差异化最终将取决于家庭场景下的真实数据飞轮是否具备独特的生产力。最接近的竞品：**PI π0.5**——自变量宣称持平或略微领先，但缺乏第三方基准。**待验证。**
 
 ### 4.2 硬件——Quanta X2 与家庭试点人形
 
 按照王潜的定位，自变量机器人本质上是 **一家以 AI 模型为核心、同时打造参考硬件的公司**，而非宇树或 Figure 那类硬件先行的整合商。Quanta X2 是其旗舰参考机器人——第三方目录站 [robotsinternational.com](https://www.robotsinternational.com/X-Square.htm) 描述其为 **双臂移动平台，身高 172 cm，单臂可及约 756 mm，搭载力控双臂**，专为双臂协同操作设计。2026 年 4 月预告的家庭部署机器人则呈现出针对住宅内部环境优化的人形形态。**整机定价尚未公开**（[robotsinternational.com](https://www.robotsinternational.com/X-Square.htm) 上"8 万美元"的提法属于第三方估计，未获自变量官方确认）。
 
-**竞争优势判断：** 硬件本身无明显护城河。中国人形硬件成本正在快速下降——宇树科技在 2025 年 7 月以 5,900 美元交付一款人形机器人（[Tech Buzz China](https://techbuzzchina.substack.com/p/unitree-humanoid-hype-vs-robotic)）——而自变量约 8 万美元的 BoM 等价水平在纯硬件层面缺乏竞争力。公司押注的是 **模型 + 数据 + 部署服务** 这一整套堆栈才是可防御的资产，而非底盘本身。最直接的竞品：底盘端为 **宇树 H1 / G1**，整合型人形端为 **Figure 02**——两者在硬件成本上领先；自变量在模型成熟度上更强，但硬件单位经济性偏弱。
+**竞争优势判断：** 硬件本身无明显护城河。中国人形硬件成本正在快速下降——宇树科技在 2025 年 7 月以 5,900 美元交付一款人形机器人（[Tech Buzz China](https://techbuzzchina.substack.com/p/unitree-humanoid-hype-vs-robotic)；[SCMP，2025-07-30](https://www.scmp.com/tech/tech-trends/article/3319637/chinas-unitree-debuts-us5900-humanoid-robot-race-make-cheaper-products)）——而自变量约 8 万美元的 BoM 等价水平在纯硬件层面缺乏竞争力。公司押注的是 **模型 + 数据 + 部署服务** 这一整套堆栈才是可防御的资产，而非底盘本身。最直接的竞品：底盘端为 **宇树 H1 / G1**，整合型人形端为 **Figure 02**——两者在硬件成本上领先；自变量在模型成熟度上更强，但硬件单位经济性偏弱。
 
 ### 4.3 服务 / 试点——58 同城与家庭部署
 
@@ -206,19 +206,19 @@ graph TD
 
 ### 4.4 旗舰产品 vs. 长尾
 
-公司的 **旗舰产品是 WALL-OSS / WALL-B 模型栈**，Quanta X2 硬件与 58 同城试点作为参考部署。目前几乎不存在产品长尾——公司本身还非常年轻。过去 12 个月的主要发布：WALL-OSS（2025 年 9 月）、WALL-B（2026 年 4 月）。期间未披露产品下架信息。
+公司的 **旗舰产品是 WALL-OSS / WALL-B 模型栈**，Quanta X2 硬件与 58 同城试点作为参考部署（[Hugging Face 上的 x-square-robot](https://huggingface.co/x-square-robot)；[PR Newswire 58 同城合作公告，2026-03-18](https://www.prnewswire.com/news-releases/x-square-robot-and-58com-launch-chinas-first-home-cleaning-robot-service-in-shenzhen-302717188.html)）。目前几乎不存在产品长尾——公司本身还非常年轻。过去 12 个月的主要发布：WALL-OSS（2025 年 9 月）、WALL-B（2026 年 4 月）（[Open Source For You，2025-09](https://www.opensourceforu.com/2025/09/x-square-robot-launches-open-source-wall-oss-after-usd140-3-million-boost/)；[PR Newswire，2026-04-22](https://www.prnewswire.com/news-releases/x-square-robot-unveils-new-embodied-ai-model-says-robots-will-arrive-in-homes-in-35-days-302751047.html)）。期间未披露产品下架信息。
 
 ---
 
 ## 5. 客户与市场拓展
 
-**客户分层。** 从公开报道看，目前可识别出三个客户群：
+**客户分层。** 从公开报道看，目前可识别出三个客户群（[Hugging Face 上的 x-square-robot](https://huggingface.co/x-square-robot)；[PR Newswire 58 同城合作公告，2026-03-18](https://www.prnewswire.com/news-releases/x-square-robot-and-58com-launch-chinas-first-home-cleaning-robot-service-in-shenzhen-302717188.html)；[财新国际，2026-04-21](https://www.caixinglobal.com/2026-04-21/x-square-robot-raises-new-funds-targets-home-trials-by-may-102436558.html)）：
 
-1. **开源开发者与学术实验室**——WALL-OSS 的下载用户群体规模最大。这并非直接的收入来源，但作为人才与生态层面的战略漏斗顶端意义重大。
+1. **开源开发者与学术实验室**——WALL-OSS 的下载用户群体规模最大。这并非直接的收入来源，但作为人才与生态层面的战略漏斗顶端意义重大（[Hugging Face——wall-oss-flow](https://huggingface.co/x-square-robot/wall-oss-flow)；[LeRobot WALL-OSS 文档](https://huggingface.co/docs/lerobot/walloss)）。
 2. **服务平台合作方**——58 同城是已签约、可点名的合作方。媒体也提及了与学校、酒店、养老机构等未具名机构的合作（[Caproasia，2026-04-27](https://www.caproasia.com/2026/04/27/china-intelligent-robot-startup-x-square-robot-technology-raised-293-million-cny-2-billion-in-series-b-funding-round-founded-in-2023-by-wang-qian-investors-include-alibaba-meituan-bytedance-ho/)）——这些描述较为笼统，应被 **视为未经证实**。
-3. **试点家庭**——2026 年 5 月启动的家庭试点将带来首批"真实客户"数据点，规模较小。
+3. **试点家庭**——2026 年 5 月启动的家庭试点将带来首批"真实客户"数据点，规模较小（[PR Newswire，2026-04-22](https://www.prnewswire.com/news-releases/x-square-robot-unveils-new-embodied-ai-model-says-robots-will-arrive-in-homes-in-35-days-302751047.html)）。
 
-**客户集中度。** 作为非上市公司，自变量并未披露客户集中度。基于目前可观察到的商业版图，**58 同城试点几乎可以肯定是最大的单笔创收关系**——可能占任何"商业试点营收"项目的 50–100%，尽管其绝对金额相对融资烧钱仍属微不足道。也就是说，**在家庭试点放量之前，客户集中度实质上为 100% 单一合作渠道**。按照公司研究框架，这在任何上市公司的报告中都属于 **实质性** 风险。可缓释因素包括：(a) 该合作并非双向独占；(b) 股东中四家战略投资人（阿里巴巴、字节跳动、美团、小米）拥有合计触达海量消费者的渠道，未来可激活为第二、第三渠道——美团在外卖与到家、小米在智能家居硬件、阿里巴巴在零售与天猫、字节跳动在抖音与短视频电商。
+**客户集中度。** 作为非上市公司，自变量并未披露客户集中度。基于目前可观察到的商业版图，**58 同城试点几乎可以肯定是最大的单笔创收关系**——可能占任何"商业试点营收"项目的 50–100%，尽管其绝对金额相对融资烧钱仍属微不足道（[PR Newswire 58 同城合作公告，2026-03-18](https://www.prnewswire.com/news-releases/x-square-robot-and-58com-launch-chinas-first-home-cleaning-robot-service-in-shenzhen-302717188.html)）。也就是说，**在家庭试点放量之前，客户集中度实质上为 100% 单一合作渠道**。按照公司研究框架，这在任何上市公司的报告中都属于 **实质性** 风险。可缓释因素包括：(a) 该合作并非双向独占；(b) 股东中四家战略投资人（阿里巴巴、字节跳动、美团、小米）拥有合计触达海量消费者的渠道，未来可激活为第二、第三渠道——美团在外卖与到家、小米在智能家居硬件、阿里巴巴在零售与天猫、字节跳动在抖音与短视频电商（[财新国际，2026-04-21](https://www.caixinglobal.com/2026-04-21/x-square-robot-raises-new-funds-targets-home-trials-by-may-102436558.html)；[36Kr Europe，"大厂对机器人投资的执念"](https://eu.36kr.com/en/p/3382911421413382)）。
 
 ```mermaid
 pie title 按渠道估计的收入敞口（示意性——未经披露）
@@ -230,61 +230,61 @@ pie title 按渠道估计的收入敞口（示意性——未经披露）
 
 来源：**作者估算——自变量机器人未公开披露客户结构。** 此图旨在直观呈现 **集中度风险**，读者应对其中具体数字有所保留，仅将其理解为"单一渠道占绝对主导地位"。
 
-**分销渠道。** 自变量机器人的市场策略主要是 **通过服务平台合作方采取 B2B2C 路径**（以 58 同城为模板），并以 **开源漏斗** 配套吸纳开发者。目前没有面向消费者的直销业务（DTC）。
+**分销渠道。** 自变量机器人的市场策略主要是 **通过服务平台合作方采取 B2B2C 路径**（以 58 同城为模板），并以 **开源漏斗** 配套吸纳开发者（[PR Newswire 58 同城合作公告，2026-03-18](https://www.prnewswire.com/news-releases/x-square-robot-and-58com-launch-chinas-first-home-cleaning-robot-service-in-shenzhen-302717188.html)；[Hugging Face 上的 x-square-robot](https://huggingface.co/x-square-robot)）。目前没有面向消费者的直销业务（DTC）。
 
-**销售策略与周期。** 58 同城合作从首次接触到正式公开，历经数个季度（双方据报道在 2025 年下半年起持续谈判，至 2026 年 3 月才宣布合作）。对于 58 同城这种体量的 B2B2C 合作伙伴而言，这已经算快节奏——但也意味着若与美团、阿里巴巴或小米搭建类似规模的合作，预计每一家都需 3–6 个月的周期。**当前可并行推进合作伙伴的内部产能，是市场拓展层面的关键约束**，而非技术成熟度。
+**销售策略与周期。** 58 同城合作从首次接触到正式公开，历经数个季度（双方据报道在 2025 年下半年起持续谈判，至 2026 年 3 月才宣布合作，参见[PR Newswire APAC 版，2026-03-18](https://en.prnasia.com/releases/global/x-square-robot-and-58-com-launch-china-s-first-home-cleaning-robot-service-in-shenzhen-525752.shtml)）。对于 58 同城这种体量的 B2B2C 合作伙伴而言，这已经算快节奏——但也意味着若与美团、阿里巴巴或小米搭建类似规模的合作，预计每一家都需 3–6 个月的周期。**当前可并行推进合作伙伴的内部产能，是市场拓展层面的关键约束**，而非技术成熟度。
 
-**已披露的关键合作伙伴：**
+**已披露的关键合作伙伴**（[财新国际投资人结构综述，2026-04-21](https://www.caixinglobal.com/2026-04-21/x-square-robot-raises-new-funds-targets-home-trials-by-may-102436558.html)）：
 
-- **58 同城（曾在 NYSE 上市，目前为非上市公司）**——独家家庭保洁试点，自 2026 年 3 月起于深圳推进。
-- **阿里云**——战略投资方（A+ 轮，2025 年 9 月）；尚未公开宣布商业客户合作或云基础设施独家协议。
-- **字节跳动 ByteDance**——战略投资方（A++ 轮，2026 年 1 月）；尚未披露商业合作。
-- **小米**——战略投资方（B 轮，2026 年 4 月）；尚未披露商业合作，但鉴于小米拥有 CyberOne 与 CyberDog 等自有人形 / 仿生机器人项目，未来商业协作具备合理基础。
-- **美团**——战略投资方（A 轮，2025 年中）。
-- **Hugging Face / LeRobot 生态**——WALL-OSS 已整合进 LeRobot 框架，权重与文档均托管在 Hugging Face。
+- **58 同城（曾在 NYSE 上市，目前为非上市公司）**——独家家庭保洁试点，自 2026 年 3 月起于深圳推进（[PR Newswire 58 同城合作公告，2026-03-18](https://www.prnewswire.com/news-releases/x-square-robot-and-58com-launch-chinas-first-home-cleaning-robot-service-in-shenzhen-302717188.html)）。
+- **阿里云**——战略投资方（A+ 轮，2025 年 9 月）；尚未公开宣布商业客户合作或云基础设施独家协议（[CNBC，2025-09-08](https://www.cnbc.com/2025/09/08/alibaba-leads-100-million-investment-in-chinese-humanoid-robot-startup.html)）。
+- **字节跳动 ByteDance**——战略投资方（A++ 轮，2026 年 1 月）；尚未披露商业合作（[TechNode，2026-01-12](https://technode.com/2026/01/12/x-square-robot-secures-140-million-in-funding-from-bytedance-sequoia-and-others/)）。
+- **小米**——战略投资方（B 轮，2026 年 4 月）；尚未披露商业合作，但鉴于小米拥有 CyberOne 与 CyberDog 等自有人形 / 仿生机器人项目，未来商业协作具备合理基础（[KrAsia，"小米、红杉领投自变量 B 轮"](https://kr-asia.com/xiaomi-hongshan-back-x-square-robot-in-series-b-round)）。
+- **美团**——战略投资方（A 轮，2025 年中）（[21经济网，2025-05-26](https://www.21jingji.com/article/20250526/herald/2a8f331f42f50236683d64424c55d0fd.html)）。
+- **Hugging Face / LeRobot 生态**——WALL-OSS 已整合进 LeRobot 框架，权重与文档均托管在 Hugging Face（[LeRobot WALL-OSS 文档](https://huggingface.co/docs/lerobot/walloss)）。
 
-**客户案例（已具名的成功部署）。** 仅有一例——**58 同城深圳家庭保洁，自 2026 年 3 月起。** 此外尚无任何具名客户、附带量化结果的公开案例。
+**客户案例（已具名的成功部署）。** 仅有一例——**58 同城深圳家庭保洁，自 2026 年 3 月起**（[PR Newswire 58 同城合作公告，2026-03-18](https://www.prnewswire.com/news-releases/x-square-robot-and-58com-launch-chinas-first-home-cleaning-robot-service-in-shenzhen-302717188.html)）。此外尚无任何具名客户、附带量化结果的公开案例。
 
 ---
 
 ## 6. 行业概览
 
-**行业定义。** 自变量机器人所处的赛道是 **具身智能基础模型与通用机器人产业**，本质上是过去三个独立赛道的交集：
+**行业定义。** 自变量机器人所处的赛道是 **具身智能基础模型与通用机器人产业**（[Morgan Stanley，"Mapping the Humanoid Robot Value Chain"](https://advisor.morganstanley.com/john.howard/documents/field/j/jo/john-howard/The_Humanoid_100_-_Mapping_the_Humanoid_Robot_Value_Chain.pdf)），本质上是过去三个独立赛道的交集：
 
-1. **基础模型 AI**——大规模、预训练、多任务的神经网络，技术血统沿袭自大语言模型。
-2. **工业与服务机器人**——历史上由日本（FANUC、安川）和欧洲（库卡 KUKA、ABB）的工业机械臂厂商主导，并伴有大量中国协作机器人（cobot）厂商。
-3. **人形机器人**——此前属于学术界小众领域，2023–2026 年期间围绕少数几家获得充沛资金的初创公司迅速整合成型。
+1. **基础模型 AI**——大规模、预训练、多任务的神经网络，技术血统沿袭自大语言模型（[维基百科，"视觉-语言-动作模型"](https://en.wikipedia.org/wiki/Vision-language-action_model)）。
+2. **工业与服务机器人**——历史上由日本（FANUC、安川）和欧洲（库卡 KUKA、ABB）的工业机械臂厂商主导，并伴有大量中国协作机器人（cobot）厂商（[Morgan Stanley Humanoid 100 价值链](https://advisor.morganstanley.com/john.howard/documents/field/j/jo/john-howard/The_Humanoid_100_-_Mapping_the_Humanoid_Robot_Value_Chain.pdf)）。
+3. **人形机器人**——此前属于学术界小众领域，2023–2026 年期间围绕少数几家获得充沛资金的初创公司迅速整合成型（[Verdict，"中国人形机器人市场遥遥领先"](https://www.verdict.co.uk/china-humanoid-market/)）。
 
-这三者的融合催生了投资界目前广泛称之为 "**物理 AI**"（英伟达偏好的提法）或 "**具身智能**"（中国主流提法）的赛道。该赛道的核心问题是：一个经过预训练的统一 AI 模型——只要硬件与数据到位——能否在不断变化的环境中胜任范围广泛的物理任务？截至 2026 年中的答案是"方向上是可以，但仍存在实质性的可靠性差距"——还没有任何已交付的产品能够在陌生家庭环境中实现无人监督运行，但每家头部实验室都能在精选任务上展示多任务泛化。
+这三者的融合催生了投资界目前广泛称之为 "**物理 AI**"（英伟达偏好的提法，[NVIDIA Isaac GR00T N1 发布](https://nvidianews.nvidia.com/news/nvidia-isaac-gr00t-n1-open-humanoid-robot-foundation-model-simulation-frameworks)）或 "**具身智能**"（中国主流提法，[量子位 MEET2026，2025-12](https://www.qbitai.com/2025/12/363184.html)）的赛道。该赛道的核心问题是：一个经过预训练的统一 AI 模型——只要硬件与数据到位——能否在不断变化的环境中胜任范围广泛的物理任务？截至 2026 年中的答案是"方向上是可以，但仍存在实质性的可靠性差距"——还没有任何已交付的产品能够在陌生家庭环境中实现无人监督运行，但每家头部实验室都能在精选任务上展示多任务泛化（[π_0.5 论文，"具备开放世界泛化的 VLA"，2025-04-22](https://arxiv.org/abs/2504.16054)；[Physical Intelligence π0.5 博客](https://www.pi.website/blog/pi05)）。
 
-**全球市场规模与结构。** 投资人最常引用的预测来自高盛和摩根士丹利：
+**全球市场规模与结构。** 投资人最常引用的预测来自高盛和摩根士丹利（[Goldman Sachs 2035 人形机器人展望](https://www.goldmansachs.com/insights/articles/the-global-market-for-robots-could-reach-38-billion-by-2035)；[Morgan Stanley 2050 人形机器人框架](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050)）：
 
 - **高盛** 预测 **2035 年全球人形机器人市场规模将达到约 380 亿美元**，相比早先约 60 亿美元的预测，上调约 6 倍，主要驱动力为 AI 带来的能力跃升与硬件成本下降（[高盛，"The global market for robots could reach $38 billion by 2035"](https://www.goldmansachs.com/insights/articles/the-global-market-for-robots-could-reach-38-billion-by-2035)）。
 - **摩根士丹利** 对长期 TAM 更为乐观，预测 **到 2050 年市场规模超过 5 万亿美元，运行中的人形机器人超过 10 亿台**，其中约 90% 用于工业 / 商业场景（[摩根士丹利，"Humanoid Robot Market Expected to Reach $5 Trillion by 2050"](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050)）。
 - **高盛的短期出货量观点** 更为保守：**到 2030 年全球人形机器人累计出货量超过 25 万台，且几乎全部用于工业领域**（[高盛人形机器人分析，2024–2025](https://www.goldmansachs.com/insights/goldman-sachs-research/global-automation-humanoid-robot-the-ai-accelerant)）。
 - **摩根士丹利半导体视角：** 与人形机器人相关的半导体 TAM **到 2045 年约为 3,050 亿美元**（[摩根士丹利人形机器人芯片 TAM，雅虎财经 / 摩根士丹利研究](https://finance.yahoo.com/news/morgan-stanley-projects-humanoids-chip-152056208.html)）。
 
-预测区间之宽——2030–2035 年中性情形下为 60–380 亿美元，2050 年乐观情形下达到 5 万亿美元——本身就反映了行业内对 (a) 具备泛化能力的软件何时可用、以及 (b) 在何种 BoM 水平下硬件能够维持消费需求这两个问题的真实不确定性。
+预测区间之宽——2030–2035 年中性情形下为 60–380 亿美元，2050 年乐观情形下达到 5 万亿美元——本身就反映了行业内对 (a) 具备泛化能力的软件何时可用、以及 (b) 在何种 BoM 水平下硬件能够维持消费需求这两个问题的真实不确定性（[高盛人形机器人分析](https://www.goldmansachs.com/insights/goldman-sachs-research/global-automation-humanoid-robot-the-ai-accelerant)；[Morgan Stanley Humanoid 100 价值链地图](https://advisor.morganstanley.com/john.howard/documents/field/j/jo/john-howard/The_Humanoid_100_-_Mapping_the_Humanoid_Robot_Value_Chain.pdf)）。
 
-**中国市场结构。** 中国是具身智能活动最密集的地区。2026 年中国政府工作报告明确将"具身智能"列为重点培育的未来产业，工业和信息化部（工信部）也已发布 2026 版人形机器人标准（[PR Newswire 2026-03-18](https://www.prnewswire.com/news-releases/x-square-robot-and-58com-launch-chinas-first-home-cleaning-robot-service-in-shenzhen-302717188.html)）。中国具身智能初创公司集群——银河通用 Galbot、智元 AgiBot、宇树 Unitree、优必选 UBTech、自变量机器人、千寻 Spirit AI、逐际动力 LimX Dynamics、Robotera、Kepler——2024–2026 年累计融资规模已达 **40–60 亿美元以上**，比国内此前任何一轮机器人浪潮高出一个数量级。
+**中国市场结构。** 中国是具身智能活动最密集的地区。2026 年中国政府工作报告明确将"具身智能"列为重点培育的未来产业，与量子科技、脑机接口、6G 并列（[卫星通讯社 / 政府工作报告，2026-03-05](https://sputniknews.cn/20260305/1070068845.html)；[中国工业新闻网，"具身智能进入实战应用期"，2026-03-10](https://www.cinn.cn/yc/2026/03-10/vrbqLMN1.html)）；工业和信息化部（工信部）也已发布 2026 版人形机器人与具身智能标准体系（[China Daily，"中国发布人形机器人与具身智能国家标准框架"，2026-03-01](https://www.chinadaily.com.cn/a/202603/01/WS69a3f8d6a310d6866eb3aeba.html)；[人民日报海外版，2026-03-02](https://en.people.cn/n3/2026/0302/c90000-20430143.html)）。中国具身智能初创公司集群——银河通用 Galbot、智元 AgiBot、宇树 Unitree、优必选 UBTech、自变量机器人、千寻 Spirit AI、逐际动力 LimX Dynamics、Robotera、Kepler——2024–2026 年累计融资规模已达 **40–60 亿美元以上**，比国内此前任何一轮机器人浪潮高出一个数量级（[Crunchbase News，"具身智能助力中国机器人创下融资纪录"，2026](https://news.crunchbase.com/robotics/embodied-ai-fuels-record-funding-china-ipo-momentum-builds/)；[TechCrunch，2026-02-28](https://techcrunch.com/2026/02/28/why-chinas-humanoid-robot-industry-is-winning-the-early-market/)）。
 
-**增长驱动力。** 行业增长曲线由五条结构性驱动力支撑：
+**增长驱动力。** 行业增长曲线由五条结构性驱动力支撑（[Crunchbase News，"具身智能助力中国机器人创下融资纪录"](https://news.crunchbase.com/robotics/embodied-ai-fuels-record-funding-china-ipo-momentum-builds/)；[Merics，"具身 AI：中国转型机器人产业的雄心之路"](https://merics.org/en/report/embodied-ai-chinas-ambitious-path-transform-its-robotics-industry)）：
 
-1. **AI 模型能力跃迁。** 2022 年还不存在的 VLA 模型，如今已在多任务泛化上实现以前所有方法都无法企及的成绩。
-2. **硬件成本下行。** 2025 年 7 月宇树以 5,900 美元交付的人形机器人代表了底盘成本的台阶式下降；高性能执行器、传感器，以及轻量化铝 / 碳结构均受益于电动车 / 消费电子的规模化效应。
-3. **中国政策推动。** 地方补贴、政府采购试点，以及"十四五"乃至"十五五"规划中的纳入，将人形机器人提升至国家战略高度。
-4. **服务行业的人口结构压力。** 中国劳动年龄人口正在收缩，城市服务业的人力成本持续上行——这是家庭服务与养老自动化的结构性拉动力。
-5. **资本充沛。** PI、Skild、Figure 以及中国创业公司集群的巨额融资表明，资本并非主要瓶颈；瓶颈在于软件、数据与可靠性。
+1. **AI 模型能力跃迁。** 2022 年还不存在的 VLA 模型，如今已在多任务泛化上实现以前所有方法都无法企及的成绩（[Google DeepMind RT-2 博客，2023](https://deepmind.google/blog/rt-2-new-model-translates-vision-and-language-into-action/)；[π_0.5 论文，2025-04-22](https://arxiv.org/abs/2504.16054)）。
+2. **硬件成本下行。** 2025 年 7 月宇树以 5,900 美元交付的人形机器人代表了底盘成本的台阶式下降；高性能执行器、传感器，以及轻量化铝 / 碳结构均受益于电动车 / 消费电子的规模化效应（[SCMP，"中国宇树推出 5,900 美元人形机器人"，2025-07-30](https://www.scmp.com/tech/tech-trends/article/3319637/chinas-unitree-debuts-us5900-humanoid-robot-race-make-cheaper-products)；[Robotics & Automation News，2025-07-29](https://roboticsandautomationnews.com/2025/07/29/shock-price-unitree-launches-5900-humanoid-robot/93357/)）。
+3. **中国政策推动。** 地方补贴、政府采购试点，以及"十四五"乃至"十五五"规划中的纳入，将人形机器人提升至国家战略高度（[China Briefing，"中国人形机器人 AI 市场"](https://www.china-briefing.com/news/chinese-humanoid-robot-market-opportunities/)；[Jamestown Foundation，"具身智能：中国举国体制下的机器人战略"](https://jamestown.org/program/embodied-intelligence-the-prcs-whole-of-nation-push-into-robotics/)）。
+4. **服务行业的人口结构压力。** 中国劳动年龄人口正在收缩，城市服务业的人力成本持续上行——这是家庭服务与养老自动化的结构性拉动力（[China Briefing，"2025 年中国劳动力市场"](https://www.china-briefing.com/news/chinas-evolving-labor-market-2025/)；[华盛顿邮报，"中国人口下降可能制约其全球抱负"，2025](https://www.washingtonpost.com/world/interactive/2025/china-population-decline-worker-crisis/)）。
+5. **资本充沛。** PI、Skild、Figure 以及中国创业公司集群的巨额融资表明，资本并非主要瓶颈；瓶颈在于软件、数据与可靠性（[Bloomberg，2025-11-20](https://www.bloomberg.com/news/articles/2025-11-20/robotics-startup-physical-intelligence-valued-at-5-6-billion-in-new-funding)；[TechCrunch，Skild 估值 140 亿美元谈判，2025-12-08](https://techcrunch.com/2025/12/08/softbank-and-nvidia-reportedly-in-talks-to-fund-skildai-at-14b-nearly-tripling-its-value/)；[Figure C 轮，2025-09](https://www.figure.ai/news/series-c)）。
 
-**监管环境。** 中国对具身智能的监管尚处萌芽阶段。2026 年工信部人形机器人标准是迈向国家级规范的首次尝试，整体框架以产品安全为先，而非以数据 / AI 治理为先——更接近工业机器人安全标准（ISO 10218 体系），而非欧盟的 AI 法案。在中国以外，与人形机器人跨境销售最直接相关的框架包括 ISO/TS 15066（协作机器人安全）、CE 认证以及欧盟机械法规。目前主要司法辖区均尚未出台针对消费级人形机器人的"FDA 式"准入路径；预计未来将逐步成形。
+**监管环境。** 中国对具身智能的监管尚处萌芽阶段。2026 年工信部人形机器人标准是迈向国家级规范的首次尝试，整体框架以产品安全为先，而非以数据 / AI 治理为先——更接近工业机器人安全标准（ISO 10218 体系），而非欧盟的 AI 法案（[China Daily，2026-03-01](https://www.chinadaily.com.cn/a/202603/01/WS69a3f8d6a310d6866eb3aeba.html)；[SESEC，"中国首套人形机器人与具身智能标准体系"，2026-04-01](https://sesec.eu/2026/04/01/chinas-first-standards-system-for-humanoid-robots-and-embodied-intelligence/)）。在中国以外，与人形机器人跨境销售最直接相关的框架包括 ISO/TS 15066（协作机器人安全）、CE 认证以及欧盟机械法规（[The AI Insider，2026-03-01](https://theaiinsider.tech/2026/03/01/china-releases-national-standards-for-humanoid-robotics-and-embodied-ai/)）。目前主要司法辖区均尚未出台针对消费级人形机器人的"FDA 式"准入路径；预计未来将逐步成形。
 
-**行业竞争动态。** 该行业呈现典型的基础模型动态——**模型层** 因数据飞轮的复利效应呈现"赢者通吃"特征，**硬件层** 则因平台可标准化、可规模化生产而更为分散。买方话语权较弱（尚无成熟的终端客户基础），供方话语权中等（执行器和高自由度灵巧手是瓶颈，主要供应商包括 Harmonic Drive、Nidec、RobStride、傅利叶智能）。对整体投资逻辑而言，替代方案包括：(a) 传统自动化（工业机械臂用于工厂场景）、(b) 远程操控（人类远程操作员），以及 (c) 维持现状不做改变。
+**行业竞争动态。** 该行业呈现典型的基础模型动态——**模型层** 因数据飞轮的复利效应呈现"赢者通吃"特征，**硬件层** 则因平台可标准化、可规模化生产而更为分散（[Morgan Stanley Humanoid 100 价值链](https://advisor.morganstanley.com/john.howard/documents/field/j/jo/john-howard/The_Humanoid_100_-_Mapping_the_Humanoid_Robot_Value_Chain.pdf)）。买方话语权较弱（尚无成熟的终端客户基础），供方话语权中等（执行器和高自由度灵巧手是瓶颈，主要供应商包括 Harmonic Drive、Nidec、RobStride、傅利叶智能以及 Inspire Robotics）（[Inspire Robots](https://en.inspire-robots.com/)；[Gasgoo，"灵巧手量产竞赛拉开帷幕"](https://autonews.gasgoo.com/articles/news/from-prototypes-to-production-dexterous-hands-kick-off-a-mass-production-race-2016425582734970881)）。对整体投资逻辑而言，替代方案包括：(a) 传统自动化（工业机械臂用于工厂场景）、(b) 远程操控（人类远程操作员），以及 (c) 维持现状不做改变。
 
 ---
 
 ## 7. 竞争格局
 
-自变量机器人所处的竞争格局必须沿 **两条主线** 进行剖析——**基础模型层**（最直接的竞争对手为美国的 Physical Intelligence 与 Skild AI，以及中国的 Galbot、AgiBot、Spirit AI 等数家公司）以及 **整合型人形机器人层**（Figure、1X、宇树、优必选与特斯拉 Optimus 在硬件 × 部署维度上竞争）。
+自变量机器人所处的竞争格局必须沿 **两条主线** 进行剖析——**基础模型层**（最直接的竞争对手为美国的 Physical Intelligence 与 Skild AI，以及中国的 Galbot、AgiBot、Spirit AI 等数家公司）以及 **整合型人形机器人层**（Figure、1X、宇树、优必选与特斯拉 Optimus 在硬件 × 部署维度上竞争）（[Bloomberg，Physical Intelligence 估值，2025-11-20](https://www.bloomberg.com/news/articles/2025-11-20/robotics-startup-physical-intelligence-valued-at-5-6-billion-in-new-funding)；[Figure C 轮，2025-09](https://www.figure.ai/news/series-c)；[PR Newswire UBTECH Walker S2 量产，2025-11](https://www.prnewswire.com/news-releases/ubtech-humanoid-robot-walker-s2-begins-mass-production-and-delivery-with-orders-exceeding-800-million-yuan-302616924.html)）。
 
 ### 基础模型层竞争对手
 

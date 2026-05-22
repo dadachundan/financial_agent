@@ -32,7 +32,7 @@
 
 同业估值倍数与 HSAI 不可比，因为整个同业群体仍深度亏损：**Robosense（速腾聚创，HKEX:2498）** 按滚动收入人民币 19.4 亿元、市值 157 亿港元，市销率约 8.1 倍，滚动期净亏损为人民币几亿元高位（[Yahoo Finance — 2498.HK, accessed 2026-05-16](https://finance.yahoo.com/quote/2498.HK/key-statistics/)）。**Ouster（NASDAQ:OUST）** 按 1.85 亿美元收入交易于约 12.0 倍滚动市销率，净利率为 -30%（滚动市盈率不适用）；**Innoviz（NASDAQ:INVZ）** 仅 5,500 万美元收入，2.9 倍市销率，净利率为 -123%；**Aeva（NASDAQ:AEVA）** 2,100 万美元收入下市销率超过 60 倍，商用阶段出货量极少；**Luminar（NASDAQ:LAZR）** 估值倍数同样极端，2024–2025 年处于重组状态（[Yahoo Finance — OUST, INVZ, AEVA Key Statistics, accessed 2026-05-16](https://finance.yahoo.com/quote/OUST/key-statistics/)）。在激光雷达同业群体中，禾赛 8.1 倍的市销率因此处于 **区间下沿**，且是该群体中 **唯一同时具有有限、正值市盈率的倍数**。
 
-解读：禾赛 TTM 市盈率约 57 倍绝对值偏高，但这是一家刚跨入盈利、收入仍同比增长 46% 的拐点之年公司的估值。2025 财年非 GAAP 净利率为 18.2%，管理层指引 2026 财年出货量为 300 万至 350 万台（销量增长约 85%–115%），意味着随着 ADAS BOM 成本沿成本曲线下行，公司将持续获得经营杠杆。更合理的框架是 8.1 倍市销率，与 Robosense 相当、远低于 Ouster，反映市场将禾赛视为结构性增长市场中的整合者，而非普通硬件供应商。该估值倍数的风险在于执行力——若 ADAS 装配率见顶，或主要美国整车厂客户收缩订单，鉴于 2024–2025 财年业绩对 AT128 产品线的高度依赖，估值倍数可能迅速压缩。我们将此列为第 9 节中的财务 / 估值倍数压缩风险。
+解读：禾赛 TTM 市盈率约 57 倍绝对值偏高，但这是一家刚跨入盈利、收入仍同比增长 46% 的拐点之年公司的估值（[Hesai Q4 2025 Press Release, 2026-03-24](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。2025 财年非 GAAP 净利率为 18.2%，管理层指引 2026 财年出货量为 300 万至 350 万台（销量增长约 85%–115%），意味着随着 ADAS BOM 成本沿成本曲线下行，公司将持续获得经营杠杆（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。更合理的框架是 8.1 倍市销率，与 Robosense 相当、远低于 Ouster，反映市场将禾赛视为结构性增长市场中的整合者，而非普通硬件供应商（[Yahoo Finance — HSAI Key Statistics, accessed 2026-05-16](https://finance.yahoo.com/quote/HSAI/key-statistics/)；[Yahoo Finance — OUST Key Statistics](https://finance.yahoo.com/quote/OUST/key-statistics/)）。该估值倍数的风险在于执行力——若 ADAS 装配率见顶，或主要美国整车厂客户收缩订单，鉴于 2024–2025 财年业绩对 AT128 产品线的高度依赖，估值倍数可能迅速压缩（[Hesai 2024 20-F, "Risk Factors"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。我们将此列为第 9 节中的财务 / 估值倍数压缩风险。
 
 ## 2. 公司发展史
 
@@ -76,23 +76,23 @@
 
 **AT 系列（ADAS，长距离）** —— AT 家族是禾赛的旗舰产品。**AT128** 是主力产品：128 通道混合固态长距激光雷达，飞行时间（ToF）原理，探测距离达 200 米，基于 ASIC 架构，2021 年 7 月发布，2022 年 7 月开始量产爬坡。AT128 贡献了 **2023 年 37.8%、2024 年 60.9% 的收入**——即单一 SKU 占据了公司大部分业务（[Hesai 2024 20-F, "Risk Factors"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。竞争优势判定：**有——在技术（定制 ASIC）、规模（截至 2024 年底累计出货超 71 万台）和 BOM 成本领先方面均有强护城河**。最接近的竞品：Robosense（速腾聚创）**M 系列**（M1、M2、M3），从其披露的毛利率和出货经济学看，其成本略落后于禾赛——**禾赛领先**。**ATX**（2024 年 4 月发布）是 AT128 的升级超紧凑型继任者，体积缩小 60%、重量减轻约 50%，截至 2025 年 2 月已获 11 家整车厂设计中标，2026 年量产将由禾赛新款 FMC500 SoC 驱动（[Hesai 2024 20-F, "ATX"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。**AT512**（2024 年 1 月）是旗舰超长距产品，10% 反射率下探测距离 300 米以上，每秒 1,230 万点——禾赛声称为行业纪录。**AT1440**（2025 年 1 月）是市场上通道数最多的激光雷达（家族共 1,440 通道），角分辨率 0.02°，瞄准 L3+ 高端平台。ATX / AT512 / AT1440 的竞争判定：**有——技术 + 知识产权护城河**，最接近的竞品为 Robosense MX / E-Platform 和 Innoviz One——**禾赛在出货节奏和设计中标数量上领先**。
 
-**ET 系列（ADAS，超薄）** —— **ET25** 是全固态 250 米长距激光雷达，可安装在挡风玻璃后舱内，仅 25 毫米高，功耗低于 12 瓦。目标客户：希望搭载激光雷达但不能接受车顶凸起的高端整车厂。竞争判定：**部分护城河——技术领先**，但 Innoviz、Aeva 和 Valeo（法雷奥）均有 "挡风玻璃后" 竞品；**禾赛在外形上大致与同业持平**，但在量产层面领先。
+**ET 系列（ADAS，超薄）** —— **ET25** 是全固态 250 米长距激光雷达，可安装在挡风玻璃后舱内，仅 25 毫米高，功耗低于 12 瓦（[Hesai 2024 20-F, "Selected Key Products"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。目标客户：希望搭载激光雷达但不能接受车顶凸起的高端整车厂。竞争判定：**部分护城河——技术领先**，但 Innoviz、Aeva 和 Valeo（法雷奥）均有 "挡风玻璃后" 竞品（[Innoviz 20-F FY2024](https://www.sec.gov/Archives/edgar/data/1835654/000117891325000817/zk2532805.htm)；[Aeva 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001789029/000095017025042849/aeva-20241231.htm)）；**禾赛在外形上大致与同业持平**，但在量产层面领先（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。
 
-**FT 系列（ADAS，盲区）** —— **FT120** 是全固态 25 米盲区激光雷达，尺寸 75 × 68 × 90 毫米。在 CES 2025 上，禾赛发布了 **FTX**，一款下一代固态激光雷达，FoV 达 180° × 140°——禾赛声称这是全球最宽视场角。竞争判定：**部分——产品强但护城河弱于 AT 系列**，因为短距固态领域有多家有竞争力的厂商，包括 Valeo、Innoviz 和 Continental（大陆集团）。
+**FT 系列（ADAS，盲区）** —— **FT120** 是全固态 25 米盲区激光雷达，尺寸 75 × 68 × 90 毫米（[Hesai 2024 20-F, "Selected Key Products"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。在 CES 2025 上，禾赛发布了 **FTX**，一款下一代固态激光雷达，FoV 达 180° × 140°——禾赛声称这是全球最宽视场角（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。竞争判定：**部分——产品强但护城河弱于 AT 系列**，因为短距固态领域有多家有竞争力的厂商，包括 Valeo、Innoviz 和 Continental（大陆集团）（[Innoviz 20-F FY2024](https://www.sec.gov/Archives/edgar/data/1835654/000117891325000817/zk2532805.htm)）。
 
-**Pandar 系列（Robotics，长距）** —— **Pandar128** 是 128 通道 360° 机械式激光雷达，多年来主导 Robotaxi 开发；在 2023 年贡献了 22.5% 的收入，目前因 Robotaxi 客户向混合固态过渡，其占比逐步下降。**OT128**（2024 年 9 月发布）是新一代机器人长距产品。竞争判定：**有——在小马智行、文远知行、百度 Apollo Go、滴滴等客户中具有装机基础护城河**；最接近的竞品是 Robosense 的 R-Platform——**禾赛在 Robotaxi 市占率上领先**。
+**Pandar 系列（Robotics，长距）** —— **Pandar128** 是 128 通道 360° 机械式激光雷达，多年来主导 Robotaxi 开发；在 2023 年贡献了 22.5% 的收入，目前因 Robotaxi 客户向混合固态过渡，其占比逐步下降（[Hesai 2024 20-F, "Pandar128"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。**OT128**（2024 年 9 月发布）是新一代机器人长距产品（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。竞争判定：**有——在小马智行、文远知行、百度 Apollo Go、滴滴等客户中具有装机基础护城河**；最接近的竞品是 Robosense 的 R-Platform——**禾赛在 Robotaxi 市占率上领先**（[Yole — 禾赛 Robotaxi 市占率 61%, 2025-04](https://www.yolegroup.com/industry-news/hesai-tops-the-global-automotive-lidar-ranking-for-the-third-consecutive-year/)；[Robosense corporate site](https://www.robosense.ai/en)）。
 
-**QT 系列（Robotics，盲区）** —— **QT128** 是短距机器人激光雷达（探测距离达 20 米），作为 Pandar/OT 的补充传感器，安装于 Robotaxi 车身两侧。**XT32** 是 32 通道机械式机器人激光雷达（80 米）。竞争判定：**部分**——属于功能性产品，不具备 AT 系列同等的架构领先优势。
+**QT 系列（Robotics，盲区）** —— **QT128** 是短距机器人激光雷达（探测距离达 20 米），作为 Pandar/OT 的补充传感器，安装于 Robotaxi 车身两侧（[Hesai 2024 20-F, "Selected Key Products"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。**XT32** 是 32 通道机械式机器人激光雷达（80 米）（[Hesai 2024 20-F, "XT32"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。竞争判定：**部分**——属于功能性产品，不具备 AT 系列同等的架构领先优势。
 
 **JT 系列（Robotics —— 人形 / 工业）** —— **JT128** 是禾赛的迷你型三维激光雷达，专为人形机器人、四足机器人和工业机器人应用而设计。其特点是 **全球最宽超半球 FoV 360° × 187°**，使单一传感器即可实现人形机器人胸部或头部的空间感知（[Hesai 2024 20-F, "JT Series"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。该 SKU 是禾赛人形机器人故事的核心。2025 年底 / 2026 年初，中国领先的人形 / 四足机器人厂商宇树科技（Unitree）选用 JT128 为其所有出现在 2026 年央视春晚的人形机器人提供配套（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。其他使用禾赛的具名人形机器人集成商包括 **荣耀机器人（HONOR Robot）、银河通用（Galbot）、魔法原子（Magiclab）和 Vita Dynamics**。竞争判定：**有——形态因素（人形机器人尺寸封装中没有竞品提供 360° × 187° FoV）、早期集成商设计中标，以及自研 VCSEL/SPAD 技术栈构筑了强护城河**。最接近的竞品：Robosense E1 / EM4 人形激光雷达——**禾赛在 FoV 和设计中标方面领先**；Ouster OS0——成本相当但 FoV 处于劣势。
 
 **FMC500 SoC 及下一代固态激光雷达 FTX** —— 2025 年 11 月 / 2026 年第一季度发布。FMC500 是禾赛自研主控片上系统，集成 MCU + FPGA + ADC，并内置功能安全与网络安全功能（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。这是迈向完全垂直整合的实质性一步。竞争判定：**有——独特的垂直整合**（业内尚无其他激光雷达厂商以这种规模量产自研的激光雷达专用主控 SoC）。
 
-**气体传感器** —— 禾赛传统的激光甲烷遥测传感器产品线（"HS-LM" 系列）仍在销售，但收入占比已不重要。竞争判定：**部分**——细分产品，盈利但规模小。
+**气体传感器** —— 禾赛传统的激光甲烷遥测传感器产品线（"HS-LM" 系列）仍在销售，但收入占比已不重要（[Hesai 2024 20-F, "Item 4 — History and Development"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。竞争判定：**部分**——细分产品，盈利但规模小。
 
 ### 旗舰产品与长尾产品
 
-驱动业务的 1–3 款旗舰产品明确无疑：**AT128 / ATX**（贡献 2024–2025 财年大部分收入），加上 **JT128** 作为新兴的机器人旗舰产品，以及 **AT512 / AT1440** 作为下一代 ADAS 光环 SKU。Pandar128 仍属重要产品，但随着 Robotaxi 客户过渡，处于有序衰退中。过去 12 个月内的产品发布 / 退市记录中，发布多而退市少：过去 12 个月内禾赛发布了 **AT1440**（2025 年 1 月）、**OT128**（2024 年 9 月）、**FMC500 SoC**（2025 年 11 月），并预告了 **FTX**（CES 2025 年 1 月）；没有任何主要 SKU 退市。
+驱动业务的 1–3 款旗舰产品明确无疑：**AT128 / ATX**（贡献 2024–2025 财年大部分收入），加上 **JT128** 作为新兴的机器人旗舰产品，以及 **AT512 / AT1440** 作为下一代 ADAS 光环 SKU（[Hesai 2024 20-F, "Risk Factors"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。Pandar128 仍属重要产品，但随着 Robotaxi 客户过渡，处于有序衰退中。过去 12 个月内的产品发布 / 退市记录中，发布多而退市少：过去 12 个月内禾赛发布了 **AT1440**（2025 年 1 月）、**OT128**（2024 年 9 月）、**FMC500 SoC**（2025 年 11 月），并预告了 **FTX**（CES 2025 年 1 月）；没有任何主要 SKU 退市（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。
 
 ## 5. 客户与市场拓展
 
@@ -102,41 +102,41 @@
 
 客户集中度是业务的最大单一风险，禾赛在 20-F 中透明披露了相关数据。**前 5 大客户收入占比：2022 年 53.1%，2023 年 67.5%，2024 年 60.0%**。因此该比例处于高位但略有回落。更值得关注的是头部客户披露："2022 年和 2023 年，来自一家总部位于美国的全球领先整车厂客户的收入分别占我们收入的 13.7% 和 28.4%"（[Hesai 2024 20-F, "Customer Concentration Risk Factor"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。禾赛并未具名披露该客户，但业内普遍认为是 **通用汽车（General Motors）**，其 Super Cruise / Ultra Cruise 项目搭载禾赛激光雷达，并于 2024 年向禾赛支付了人民币 2.033 亿元的一次性设计导入款。禾赛未明确披露 2024 年头部客户占比，但 GM 量产节奏暂停（触发人民币 2.03 亿元补偿款）叠加中国 ADAS 销量激增，意味着 2024 年头部客户占比已明显下降。
 
-**客户集中度判定：** 2023 年头部客户占比 28.4%，显著高于 20% 的 "重大风险" 阈值；2023 年前 5 大客户占比 67.5%，高于 50% 的 "重大风险" 阈值。即便在 2024 年回落至 60%，这仍 **被列为重大客户集中度风险**，并在下文第 9 节中作为风险点保留。
+**客户集中度判定：** 2023 年头部客户占比 28.4%，显著高于 20% 的 "重大风险" 阈值；2023 年前 5 大客户占比 67.5%，高于 50% 的 "重大风险" 阈值（[Hesai 2024 20-F, "Customer Concentration Risk Factor"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。即便在 2024 年回落至 60%，这仍 **被列为重大客户集中度风险**，并在下文第 9 节中作为风险点保留。
 
 ### 客户细分及具名中标项目
 
 **ADAS——中国整车厂。** 截至 2025 年第四季度，禾赛在全球已获得 **40 家车企品牌、超过 160 款车型** 的 ADAS 设计中标，**涵盖中国所有前 10 大整车厂**。新增客户包括 **北汽（BAIC）** 和 **一汽奔腾（FAW Bestune）**；与 **理想、小米、长安** 已签订单车多激光雷达（L3+ 平台单车 3–6 颗）设计中标，2026–2027 年投产（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。其他公开披露的 ADAS 客户包括 **路特斯（Lotus）、集度（现集越，JiYue）、零跑（Leapmotor）、蔚来（NIO，部分车型）、吉利银河（Geely Galaxy）**。博世既是 5.8% 股东，又是禾赛在中国以外市场的 Tier-1 分销合作伙伴。
 
-**ADAS——全球。** 禾赛已披露的最大西方客户是上文提到的未具名美国整车厂（被普遍认为是 GM）。禾赛还表示与 **Stellantis** 和 **Mercedes-Benz（梅赛德斯-奔驰）** 有合作关系，但披露信息有限。1260H 事件冻结了部分西方整车厂在 2024 年的大部分评估工作。
+**ADAS——全球。** 禾赛已披露的最大西方客户是上文提到的未具名美国整车厂（被普遍认为是 GM）（[Hesai 2024 20-F, "Customer Concentration Risk Factor"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。禾赛于 2026 年 5 月 19 日宣布成为 **Mercedes-Benz（梅赛德斯-奔驰）** L3 自动驾驶车型的战略激光雷达合作伙伴和确认供应商，覆盖欧洲和中国市场（[Hesai Announced as Strategic Lidar Partner and Confirmed Supplier for Mercedes-Benz L3-Enabled Models, 2026-05-19](https://www.prnewswire.com/news-releases/hesai-announced-as-strategic-lidar-partner-and-confirmed-supplier-for-mercedes-benz-l3-enabled-models-302775765.html)；[Hesai Group Form 6-K, 2026-05-19 — Q1 2026 Press Release](https://www.sec.gov/Archives/edgar/data/0001861737/000110465926063803/tm2615071d1_ex99-1.htm)）。1260H 事件冻结了部分西方整车厂在 2024 年的大部分评估工作（[Hesai 6-K, 2024-08-20 — 1260H developments](https://www.sec.gov/Archives/edgar/data/1861737/000110465924091092/0001104659-24-091092-index.htm)）。
 
 **Robotics——Robotaxi。** 禾赛多年来一直是中国 Robotaxi 市场的事实领导者。最近获得新订单的具名客户包括 **小马智行（Pony.ai）、文远知行（WeRide）、百度 Apollo Go 和滴滴**，另在北美、亚洲和欧洲也有具名全球客户（未披露）（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。
 
-**Robotics——人形 / 四足。** 使用禾赛 JT128 的具名人形机器人集成商包括 **宇树科技（Unitree）**（2026 年央视春晚的高调中标，为转播中宇树所有人形机器人提供配套）、**荣耀机器人（HONOR Robot）、银河通用（Galbot）、魔法原子（Magiclab）** 和 **Vita Dynamics**。这是增长最为迅猛的客户细分。
+**Robotics——人形 / 四足。** 使用禾赛 JT128 的具名人形机器人集成商包括 **宇树科技（Unitree）**（2026 年央视春晚的高调中标，为转播中宇树所有人形机器人提供配套）、**荣耀机器人（HONOR Robot）、银河通用（Galbot）、魔法原子（Magiclab）** 和 **Vita Dynamics**（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。这是增长最为迅猛的客户细分。
 
 **Robotics——配送机器人 / Robovan / 割草机。** 具名客户包括 **白犀牛（Zelos）、新石器（Neolix）和美团（Meituan）**（Robovan）；以及 **追觅（Dreame）、MOVA 和 Nexlawn**（割草机器人）——按管理层披露，仅割草机订单的在手积压量就超过 1,000 万台激光雷达（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。
 
-**两轮车。** 新客户为 **小牛电动（NIU Technologies）**，禾赛 FTX 激光雷达将搭载于小牛下一代电动两轮车——这是禾赛首个实质性的两轮车设计中标。
+**两轮车。** 新客户为 **小牛电动（NIU Technologies）**，禾赛 FTX 激光雷达将搭载于小牛下一代电动两轮车——这是禾赛首个实质性的两轮车设计中标（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。
 
 ### 市场拓展与销售周期
 
-ADAS 销售周期较长（从 RFI 到量产通常为 18–30 个月），资本密集（禾赛承担 NRE 和工装费用，以换取贯穿车型生命周期的单一供应商设计中标），并要求功能安全（ISO 26262）和网络安全（ISO/SAE 21434）认证。禾赛垂直整合的 ASIC 和 SoC 路径是该周期内的关键差异化优势，因为整车厂对芯片级功能安全的要求日益提高。Robotics 销售周期较短（3–9 个月），但单客户出货量较低，除了割草机 / 机器人吸尘器领域适用消费量产经济学。
+ADAS 销售周期较长（从 RFI 到量产通常为 18–30 个月），资本密集（禾赛承担 NRE 和工装费用，以换取贯穿车型生命周期的单一供应商设计中标），并要求功能安全（ISO 26262）和网络安全（ISO/SAE 21434）认证（[Hesai 2024 20-F, "Item 4 — Business Overview"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。禾赛垂直整合的 ASIC 和 SoC 路径是该周期内的关键差异化优势，因为整车厂对芯片级功能安全的要求日益提高（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。Robotics 销售周期较短（3–9 个月），但单客户出货量较低，除了割草机 / 机器人吸尘器领域适用消费量产经济学（[Hesai 2024 20-F, "Business Overview"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。
 
 ## 6. 行业概览
 
-激光雷达（lidar）是一种三维感知传感器技术，使用脉冲激光测量距离，生成传感器周围环境的实时点云。它与摄像头（纹理丰富但深度信息差）和雷达（深度好但分辨率差）互补，是 Robotaxi 技术栈中最主要的感知模态。在乘用车 ADAS 中，激光雷达处于 L2+ / L3 / L4 的分界线——低于该阈值时，大多数整车厂（特别是特斯拉（Tesla））仅依靠摄像头；高于该阈值时，大多数可信项目都会至少包含一颗激光雷达。当前关于特斯拉纯视觉路线与 Waymo / 梅赛德斯 / 中国整车厂含激光雷达路线之争，是行业 TAM 走势的核心不确定性。
+激光雷达（lidar）是一种三维感知传感器技术，使用脉冲激光测量距离，生成传感器周围环境的实时点云（[Hesai 2024 20-F, "Business Overview"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。它与摄像头（纹理丰富但深度信息差）和雷达（深度好但分辨率差）互补，是 Robotaxi 技术栈中最主要的感知模态。在乘用车 ADAS 中，激光雷达处于 L2+ / L3 / L4 的分界线——低于该阈值时，大多数整车厂（特别是特斯拉（Tesla））仅依靠摄像头；高于该阈值时，大多数可信项目都会至少包含一颗激光雷达（[Yole — China takes the lead in automotive LiDAR, 2025-06](https://www.yolegroup.com/press-release/china-takes-the-lead-in-automotive-lidar-a-market-set-to-quadruple-by-2030/)）。当前关于特斯拉纯视觉路线与 Waymo / 梅赛德斯 / 中国整车厂含激光雷达路线之争，是行业 TAM 走势的核心不确定性。
 
 行业地域集中、商业上正在分化。三家中国厂商——**禾赛、Robosense（速腾聚创）、Seyond（前 Innovusion 图达通）**——按出货量主导全球激光雷达市场；Yole Group 数据持续将禾赛和 Robosense 列为全球出货量第一和第二，禾赛声称在汽车长距激光雷达领域全球第一，Robosense 在盲区短距固态领域领先或并列领先（[Hesai Q4 2025 Press Release citing Yole Group, GGII, Frost & Sullivan, and Gasgoo](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。美国上市的激光雷达同业（Ouster、Innoviz、Aeva、Luminar）仍然规模偏小、亏损严重。Tier-1 供应商（Valeo（法雷奥）、Continental（大陆集团））和芯片厂商（Mobileye 通过 EyeQ7 + 激光雷达 SoC 与 Innoviz 合作）尚未在量产中替代纯激光雷达厂商。
 
-行业的主导趋势是 **中国装配率快速增长**。受中国电动车整车厂价格战推动，高级 ADAS 不断下沉至更低价位段，根据 Yole 汽车激光雷达跟踪数据，搭载激光雷达的车辆从 2024 年的约 59 万台增长至 2025 年的超过 150 万台（同比约 +150%）——这一曲线令大多数西方预测者措手不及。第二大趋势是 **多激光雷达搭载**：理想、小米、长安等正在为 L3+ 项目设计单车 3–6 颗激光雷达，使单车激光雷达内容数量倍增。
+行业的主导趋势是 **中国装配率快速增长**。受中国电动车整车厂价格战推动，高级 ADAS 不断下沉至更低价位段，根据 Yole 汽车激光雷达跟踪数据，搭载激光雷达的车辆从 2024 年的约 59 万台增长至 2025 年的超过 150 万台（同比约 +150%）——这一曲线令大多数西方预测者措手不及（[Yole — China takes the lead in automotive LiDAR, 2025-06](https://www.yolegroup.com/press-release/china-takes-the-lead-in-automotive-lidar-a-market-set-to-quadruple-by-2030/)）。第二大趋势是 **多激光雷达搭载**：理想、小米、长安等正在为 L3+ 项目设计单车 3–6 颗激光雷达，使单车激光雷达内容数量倍增（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。
 
-第三大趋势是 **激光雷达走出汽车**。根据 Yole 预测，仅机器人割草机市场未来 5 年累计部署的三维激光雷达将超过 1,000 万颗；人形机器人市场虽今日规模微小，但被广泛预测到 2030 年达到每年 100 万台以上，大多数可信设计至少搭载一颗激光雷达（特斯拉 Optimus 是著名的例外）。Robotaxi 车队扩张（Waymo、小马智行、文远知行、Apollo Go）和 Robovan / 配送机器人部署（美团、Nuro、白犀牛、新石器）提供了额外的稳态出货量。
+第三大趋势是 **激光雷达走出汽车**。根据 Yole 预测，仅机器人割草机市场未来 5 年累计部署的三维激光雷达将超过 1,000 万颗；人形机器人市场虽今日规模微小，但被广泛预测到 2030 年达到每年 100 万台以上，大多数可信设计至少搭载一颗激光雷达（特斯拉 Optimus 是著名的例外）（[Hesai Q4 2025 Press Release 引用 Yole, GGII, Frost & Sullivan, Gasgoo](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。Robotaxi 车队扩张（Waymo、小马智行、文远知行、Apollo Go）和 Robovan / 配送机器人部署（美团、Nuro、白犀牛、新石器）提供了额外的稳态出货量（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)）。
 
-第四大趋势是 **成本压缩**。AT128 的 ASP（平均售价）从 2022 年发布时的每台 1,000 美元以上，下降到 2025 年 ADAS 混合 ASP 估算的每台 200–300 美元（按禾赛披露：2025 财年净收入 4.329 亿美元 / 162 万台 = 平均 267 美元，按 ADAS 与 Robotics 组合加权）。持续降本是扩大可寻址车辆 SAM 的核心抓手。
+第四大趋势是 **成本压缩**。AT128 的 ASP（平均售价）从 2022 年发布时的每台 1,000 美元以上，下降到 2025 年 ADAS 混合 ASP 估算的每台 200–300 美元（按禾赛披露：2025 财年净收入 4.329 亿美元 / 162 万台 = 平均 267 美元，按 ADAS 与 Robotics 组合加权）（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)；[Hesai HK Annual Results Announcement, FY2025](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-2.htm)）。持续降本是扩大可寻址车辆 SAM 的核心抓手。
 
-**监管环境。** 任何量产激光雷达都需要车规级认证（ISO 26262 ASIL-B/D、ISO/SAE 21434、组件 AEC-Q100）。眼睛安全分类（IEC 60825-1 Class 1）在全球范围内强制要求。在中国，工信部（MIIT）的智能网联汽车 "L3 试点" 框架是顺风因素，鼓励通过激光雷达实现冗余。在美国，监管环境更宽松（无联邦激光雷达使用强制要求），但 **出口管制 / 国家安全风险主导监管议题**——2024 年 12 月将中国激光雷达公司列入 1260H 名单、其后禾赛诉讼，以及商务部 / 国防部持续审查，构成禾赛在美国增长的约束性条件。欧盟规则主要遵循 UNECE，传感器中立。
+**监管环境。** 任何量产激光雷达都需要车规级认证（ISO 26262 ASIL-B/D、ISO/SAE 21434、组件 AEC-Q100）（[Hesai 2024 20-F, "Item 4 — Business Overview"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。眼睛安全分类（IEC 60825-1 Class 1）在全球范围内强制要求。在中国，工信部（MIIT）的智能网联汽车 "L3 试点" 框架是顺风因素，鼓励通过激光雷达实现冗余。在美国，监管环境更宽松（无联邦激光雷达使用强制要求），但 **出口管制 / 国家安全风险主导监管议题**——2024 年 12 月将中国激光雷达公司列入 1260H 名单、其后禾赛诉讼，以及商务部 / 国防部持续审查，构成禾赛在美国增长的约束性条件（[Federal Register — Notice of Availability of Designation of Chinese Military Companies, 2025-01-07](https://www.federalregister.gov/documents/2025/01/07/2025-00070/notice-of-availability-of-designation-of-chinese-military-companies)；[Hesai Notices an Appeal, 2025-07-14](https://www.globenewswire.com/news-release/2025/07/14/3114611/0/en/Hesai-Notices-an-Appeal.html)）。欧盟规则主要遵循 UNECE，传感器中立。
 
-**行业结构。** 供应商层面分散但正快速整合：前 3 大中国厂商目前占全球出货量 70% 以上。一旦获得设计中标，切换成本极高（在车型项目后期重新验证另一传感器极为少见）。供应商议价能力中等——VCSEL / EEL 发射器和 SPAD 探测器拥有多个供应来源（Lumentum（朗美通）、II-VI/Coherent（高意）、Sony（索尼）、Onsemi（安森美），且禾赛 / Robosense 正逐步自研内化）。买方议价能力强——大型电动车整车厂积极压价。替代品：4D 成像雷达（Arbe、Uhnder、Mobileye）、摄像头 + 计算机视觉（特斯拉、Mobileye SuperVision）和高精地图——在边际上构成替代，但根据共识，在 L3+ 自动驾驶领域没有完全替代激光雷达。
+**行业结构。** 供应商层面分散但正快速整合：前 3 大中国厂商目前占全球出货量 70% 以上（[Yole — China takes the lead in automotive LiDAR, 2025-06](https://www.yolegroup.com/press-release/china-takes-the-lead-in-automotive-lidar-a-market-set-to-quadruple-by-2030/)）。一旦获得设计中标，切换成本极高（在车型项目后期重新验证另一传感器极为少见）。供应商议价能力中等——VCSEL / EEL 发射器和 SPAD 探测器拥有多个供应来源（Lumentum（朗美通）、II-VI/Coherent（高意）、Sony（索尼）、Onsemi（安森美），且禾赛 / Robosense 正逐步自研内化）（[Hesai 2024 20-F, "Suppliers"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。买方议价能力强——大型电动车整车厂积极压价。替代品：4D 成像雷达（Arbe、Uhnder、Mobileye）、摄像头 + 计算机视觉（特斯拉、Mobileye SuperVision）和高精地图——在边际上构成替代，但根据共识，在 L3+ 自动驾驶领域没有完全替代激光雷达（[Mobileye 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001910139/000141057825000127/mbly-20241228x10k.htm)）。
 
 ## 7. 竞争格局
 
@@ -144,28 +144,28 @@ ADAS 销售周期较长（从 RFI 到量产通常为 18–30 个月），资本�
 
 1. **Robosense（速腾聚创，HKEX:2498）** —— 禾赛的头号直接竞争对手。总部深圳，香港双重上市。2024 财年收入约人民币 16.5 亿元，2025 财年滚动收入约人民币 19.4 亿元；尚未盈利。产品涵盖 M 平台（长距机械 / MEMS）、E 平台 / EM4（短距与人形）、MX（中距 ADAS）（[Robosense corporate site](https://www.robosense.ai/en)）。Robosense 在中国整车厂客户列表广度上历史上更宽，但单位利润率较低；禾赛的优势在于定制 ASIC 和更低 BOM。定位：产品线相似，客户群相似，**Robosense 略宽但禾赛是成本领先者并已实现盈利**。
 
-2. **Seyond Holdings（前身 Innovusion，图达通）** —— 私营公司，美国总部，主要运营在苏州。蔚来（NIO）的主要激光雷达供应商（ET7 / ET5 / ES7 上的猎鹰（Falcon）激光雷达）并与法拉第未来（Faraday Future）合作。2024 财年营收规模低于禾赛，但 Seyond 在蔚来设计导入上根基深厚。禾赛 CFO 范俊曾于 2024 年 9 月前担任 Seyond CFO，使禾赛对一家关键竞争对手具有非同寻常的洞察。定位：**Seyond 更窄（高度依赖蔚来），禾赛更广且成本更低**。
+2. **Seyond Holdings（前身 Innovusion，图达通）** —— 私营公司，美国总部，主要运营在苏州。蔚来（NIO）的主要激光雷达供应商（ET7 / ET5 / ES7 上的猎鹰（Falcon）激光雷达）并与法拉第未来（Faraday Future）合作。2024 财年营收规模低于禾赛，但 Seyond 在蔚来设计导入上根基深厚。禾赛 CFO 范俊曾于 2024 年 9 月前担任 Seyond CFO，使禾赛对一家关键竞争对手具有非同寻常的洞察（[Hesai 2024 20-F, "Mr. Andrew Fan"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。定位：**Seyond 更窄（高度依赖蔚来），禾赛更广且成本更低**。
 
-3. **Ouster（NASDAQ:OUST）** —— 美国上市，Velodyne / Ouster 合并后的实体。在工业与机器人领域较强（数字激光雷达，自研多束 VCSEL+SPAD 阵列）。2024 财年收入 1.85 亿美元，深度亏损。汽车量产业务存在感有限。定位：**Ouster 在北美工业机器人领先，禾赛在汽车出货量与性价比领先**。
+3. **Ouster（NASDAQ:OUST）** —— 美国上市，Velodyne / Ouster 合并后的实体（[Ouster Form 8-K, November 7, 2022 — Velodyne Merger Announcement](https://www.sec.gov/Archives/edgar/data/0001816581/000119312522278440/d386513d8k.htm)）。在工业与机器人领域较强（数字激光雷达，自研多束 VCSEL+SPAD 阵列）。2024 财年收入 1.85 亿美元，深度亏损（[Ouster 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001816581/000162828025014318/oust-20241231.htm)）。汽车量产业务存在感有限。定位：**Ouster 在北美工业机器人领先，禾赛在汽车出货量与性价比领先**。
 
-4. **Innoviz（NASDAQ:INVZ）** —— 以色列公司，基于 MEMS 的长距激光雷达。最初的标志性中标客户是 BMW（宝马），但出货量低于预期。2024 财年收入约 5,500 万美元。定位：**Innoviz 技术上可信但商业规模不足；禾赛在出货量上显著领先**。
+4. **Innoviz（NASDAQ:INVZ）** —— 以色列公司，基于 MEMS 的长距激光雷达。最初的标志性中标客户是 BMW（宝马），但出货量低于预期。2024 财年收入约 5,500 万美元（[Innoviz 20-F FY2024](https://www.sec.gov/Archives/edgar/data/1835654/000117891325000817/zk2532805.htm)）。定位：**Innoviz 技术上可信但商业规模不足；禾赛在出货量上显著领先**。
 
-5. **Aeva（NASDAQ:AEVA）** —— 美国公司，FMCW（调频连续波）激光雷达——与禾赛的飞行时间法采用不同物理原理。FMCW 承诺更好的速度测量和更远的探测距离；Aeva 拥有戴姆勒卡车（Daimler Truck）的标志性中标。2024 财年收入约 2,100 万美元。定位：**Aeva 在 FMCW 物理原理上有差异化，但商业化处于起步阶段；禾赛在 ToF 量产上占据主导**。
+5. **Aeva（NASDAQ:AEVA）** —— 美国公司，FMCW（调频连续波）激光雷达——与禾赛的飞行时间法采用不同物理原理。FMCW 承诺更好的速度测量和更远的探测距离；Aeva 拥有戴姆勒卡车（Daimler Truck）的标志性中标。2024 财年收入约 2,100 万美元（[Aeva 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001789029/000095017025042849/aeva-20241231.htm)）。定位：**Aeva 在 FMCW 物理原理上有差异化，但商业化处于起步阶段；禾赛在 ToF 量产上占据主导**。
 
-6. **Luminar（NASDAQ:LAZR）** —— 美国公司，长距 ADAS 激光雷达，标志性客户为沃尔沃（Volvo）和梅赛德斯。在成本和执行方面长期挣扎，2024–2025 年处于重组状态。定位：**Luminar 在部分西方标志性设计中标上领先，禾赛在出货量、成本和盈利能力上领先**。
+6. **Luminar（NASDAQ:LAZR）** —— 美国公司，长距 ADAS 激光雷达，标志性客户为沃尔沃（Volvo）和梅赛德斯。在成本和执行方面长期挣扎，2024–2025 年处于重组状态（[Luminar 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001758057/000162828025015432/lazr-20241231.htm)）。定位：**Luminar 在部分西方标志性设计中标上领先，禾赛在出货量、成本和盈利能力上领先**。
 
-7. **Valeo（法雷奥）** —— 法国 Tier-1；原始的量产激光雷达玩家（SCALA 1/2/3）。在 Stellantis 和梅赛德斯领域有较强存在感。BOM 成本高于中国对手。定位：**Valeo 深耕西方 Tier-1 供应链，禾赛在新平台的性价比上领先**。
+7. **Valeo（法雷奥）** —— 法国 Tier-1；原始的量产激光雷达玩家（SCALA 1/2/3）。在 Stellantis 和梅赛德斯领域有较强存在感。BOM 成本高于中国对手（[Yole — China takes the lead in automotive LiDAR, 2025-06](https://www.yolegroup.com/press-release/china-takes-the-lead-in-automotive-lidar-a-market-set-to-quadruple-by-2030/)）。定位：**Valeo 深耕西方 Tier-1 供应链，禾赛在新平台的性价比上领先**。
 
-8. **Continental（大陆集团）、ZF（采埃孚）、Bosch（博世）** —— 传统 Tier-1 玩家，大多代工中国或自研激光雷达。博世是禾赛的股东兼合作伙伴。
+8. **Continental（大陆集团）、ZF（采埃孚）、Bosch（博世）** —— 传统 Tier-1 玩家，大多代工中国或自研激光雷达。博世是禾赛的股东兼合作伙伴（[Hesai 2024 20-F, "Item 7 Major Shareholders"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。
 
 **间接 / 替代竞争对手：**
 
-9. **Mobileye（NASDAQ:MBLY）** —— 基于 EyeQ 的视觉优先方案，及芯片组 + 激光雷达 SoC 合作（Innoviz）。对部分 L2++ 项目构成实质替代。
-10. **Tesla（特斯拉）/ 纯摄像头计算机视觉** —— 特斯拉纯视觉策略是激光雷达 TAM 扩张的结构性反命题。若特斯拉 FSD 可信地扩展至 L3+，将压缩激光雷达 TAM。
+9. **Mobileye（NASDAQ:MBLY）** —— 基于 EyeQ 的视觉优先方案，及芯片组 + 激光雷达 SoC 合作（Innoviz）。对部分 L2++ 项目构成实质替代（[Mobileye 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001910139/000141057825000127/mbly-20241228x10k.htm)）。
+10. **Tesla（特斯拉）/ 纯摄像头计算机视觉** —— 特斯拉纯视觉策略是激光雷达 TAM 扩张的结构性反命题。若特斯拉 FSD 可信地扩展至 L3+，将压缩激光雷达 TAM（[Hesai 2024 20-F, "Risk Factors"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。
 
-**竞争定位框架。** 在 "价格 / 功能 / 规模" 三维坐标上：禾赛是 **成本领先者**（通过 ASIC、垂直整合和中国供应链获得 BOM 优势），在 **功能维度处于头部 1–2 位**（AT1440 的最高通道数、JT128 超半球与 FTX 的最宽 FoV），并且是 **明确的规模领导者**（2025 年出货 162 万台，对比同业最多在十万级别）。Robosense 是各维度上最接近的同业，也是主要竞争风险；其他厂商要么缺乏中国供应链入口（Valeo、Innoviz、Ouster、Aeva、Luminar），要么没有专门的汽车 ASIC 计划（大多数西方对手）。
+**竞争定位框架。** 在 "价格 / 功能 / 规模" 三维坐标上：禾赛是 **成本领先者**（通过 ASIC、垂直整合和中国供应链获得 BOM 优势），在 **功能维度处于头部 1–2 位**（AT1440 的最高通道数、JT128 超半球与 FTX 的最宽 FoV），并且是 **明确的规模领导者**（2025 年出货 162 万台，对比同业最多在十万级别）（[Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm)；[Yole — Hesai 全球汽车激光雷达三连冠, 2025-04](https://www.yolegroup.com/industry-news/hesai-tops-the-global-automotive-lidar-ranking-for-the-third-consecutive-year/)）。Robosense 是各维度上最接近的同业，也是主要竞争风险；其他厂商要么缺乏中国供应链入口（Valeo、Innoviz、Ouster、Aeva、Luminar），要么没有专门的汽车 ASIC 计划（大多数西方对手）（[Robosense 2025 中期业绩公告, 股票代码 2498](https://www.hkexnews.hk/listedco/listconews/sehk/2025/0926/2025092600733.pdf)）。
 
-**脆弱性。**（1）AT128 单一产品集中——2024 年 60.9% 的收入来自单一 SKU。（2）美国出口管制 / 政治风险——1260H 列名先例。（3）中国价格战压力可能压缩 ASP 的速度快于 BOM 下降速度。（4）Robosense 在港股上市后资本充足，增速相当。（5）若 FMCW（Aeva）规模化跑通，将构成长尾架构性威胁。
+**脆弱性。**（1）AT128 单一产品集中——2024 年 60.9% 的收入来自单一 SKU（[Hesai 2024 20-F, "Risk Factors"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)）。（2）美国出口管制 / 政治风险——1260H 列名先例（[Federal Register — Designation of Chinese Military Companies, 2025-01-07](https://www.federalregister.gov/documents/2025/01/07/2025-00070/notice-of-availability-of-designation-of-chinese-military-companies)）。（3）中国价格战压力可能压缩 ASP 的速度快于 BOM 下降速度。（4）Robosense 在港股上市后资本充足，增速相当（[Robosense 2025 中期业绩公告](https://www.hkexnews.hk/listedco/listconews/sehk/2025/0926/2025092600733.pdf)）。（5）若 FMCW（Aeva）规模化跑通，将构成长尾架构性威胁（[Aeva 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0001789029/000095017025042849/aeva-20241231.htm)）。
 
 ## 8. 市场机会（TAM）
 
