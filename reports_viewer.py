@@ -592,8 +592,10 @@ _VIEW_TMPL = r"""<!doctype html>
         href="https://cdn.jsdelivr.net/npm/github-markdown-css@5/github-markdown-light.min.css">
   <style>
     body{background:#fff}
-    .doc{box-sizing:border-box;min-width:200px;max-width:980px;
-         margin:0 auto;padding:24px 32px}
+    .layout{max-width:1320px;margin:0 auto;display:flex;
+            justify-content:center;align-items:flex-start;gap:0;position:relative}
+    .doc{flex:1 1 920px;max-width:920px;min-width:0;box-sizing:border-box;
+         padding:24px 32px}
     .markdown-body pre{background:#f6f8fa}
     .markdown-body table{display:block;overflow-x:auto}
     .mermaid{background:#fff;border:1px solid #eee;border-radius:6px;
@@ -602,89 +604,108 @@ _VIEW_TMPL = r"""<!doctype html>
     .backlink{margin:8px 0 14px;font-family:-apple-system,sans-serif;font-size:.9rem}
     .backlink a{color:#0366d6;text-decoration:none}
 
-    /* ── Inline comments ─────────────────────────────────────────────── */
-    mark.ric-hl{background:#ffe9a3;cursor:pointer;border-bottom:2px solid #f0c14b;
-                padding:.02em .1em;border-radius:2px}
+    /* ── Inline comments (Google-Docs-style margin rail) ───────────── */
+    mark.ric-hl{background:#ffe9a3;cursor:pointer;
+                padding:.02em .1em;border-radius:2px;
+                transition:background .15s}
     mark.ric-hl:hover{background:#ffd966}
-    mark.ric-hl.active{background:#ffbe33}
-    .ric-fab{position:absolute;z-index:1500;background:#1F4E78;color:#fff;
-             border:none;border-radius:16px;padding:5px 12px;font-size:.85rem;
-             cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.25);display:none;
-             font-family:-apple-system,sans-serif}
-    .ric-fab:hover{background:#16395a}
-    .ric-toggle{position:fixed;top:64px;right:0;z-index:99;background:#1F4E78;
-                color:#fff;border:none;border-top-left-radius:6px;border-bottom-left-radius:6px;
-                padding:7px 11px;font-size:.85rem;cursor:pointer;
-                box-shadow:-2px 2px 6px rgba(0,0,0,.12);font-family:-apple-system,sans-serif}
-    .ric-toggle:hover{background:#16395a}
-    .ric-sidebar{position:fixed;top:60px;right:0;width:340px;max-height:85vh;
-                 overflow-y:auto;background:#fafbfd;border-left:1px solid #d8dde6;
-                 padding:12px 16px;font-family:-apple-system,sans-serif;font-size:.9rem;
-                 z-index:100;box-shadow:-2px 0 8px rgba(0,0,0,.06);display:none}
-    .ric-sidebar.open{display:block}
-    .ric-sidebar h3{font-size:.95rem;color:#333;margin:0 0 10px;display:flex;
-                    align-items:center;justify-content:space-between}
-    .ric-sidebar h3 .close{background:none;border:none;font-size:1.2rem;cursor:pointer;color:#888}
-    .ric-item{padding:9px 10px;margin-bottom:9px;background:#fff;
-              border:1px solid #e0e4ea;border-radius:6px;cursor:pointer}
-    .ric-item:hover{border-color:#1F4E78}
-    .ric-item.orphan{background:#fff8e7;border-color:#f0d8a6}
-    .ric-quote{font-size:.78rem;color:#555;font-style:italic;
+    mark.ric-hl.active{background:#ffbe33;box-shadow:0 0 0 2px #f0c14b}
+
+    /* Floating icon pill at the selection's right edge (Google Docs style) */
+    .ric-fab{position:absolute;z-index:1500;background:#fff;
+             border:1px solid #cfd6df;border-radius:50%;
+             width:34px;height:34px;padding:0;cursor:pointer;
+             box-shadow:0 2px 6px rgba(0,0,0,.12);display:none;
+             align-items:center;justify-content:center;color:#1F4E78;
+             transition:background .15s,border-color .15s,box-shadow .15s}
+    .ric-fab:hover{background:#eef4fb;border-color:#1F4E78;
+                   box-shadow:0 3px 10px rgba(0,0,0,.18)}
+    .ric-fab svg{width:18px;height:18px;display:block}
+
+    /* Right margin rail; absolutely-positioned cards inside */
+    .comments-rail{flex:0 0 320px;position:relative;min-height:200px;
+                   padding-left:14px;padding-right:8px;box-sizing:border-box}
+    .comments-rail.hidden{display:none}
+    .ric-card{position:absolute;top:0;left:14px;right:8px;
+              background:#fff;border:1px solid #e0e4ea;border-radius:8px;
+              padding:10px 12px;box-shadow:0 1px 3px rgba(0,0,0,.04);
+              font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+              font-size:.88rem;cursor:pointer;
+              transition:top .2s ease, box-shadow .15s, border-color .15s, transform .15s}
+    .ric-card:hover{box-shadow:0 2px 8px rgba(0,0,0,.1);border-color:#a9bdd1}
+    .ric-card.active{box-shadow:0 2px 12px rgba(31,78,120,.22);
+                     border-color:#1F4E78;transform:translateX(-4px)}
+    .ric-card.orphan{background:#fffaee;border-color:#f0d8a6}
+    .ric-card.pending{border-color:#1F4E78;box-shadow:0 3px 14px rgba(31,78,120,.2);
+                      cursor:default}
+    .ric-quote{font-size:.74rem;color:#555;font-style:italic;
                border-left:3px solid #ffd966;padding:2px 0 2px 8px;
                margin-bottom:6px;max-height:3.6em;overflow:hidden;line-height:1.4}
-    .ric-body{font-size:.88rem;color:#222;line-height:1.45}
+    .ric-body{font-size:.88rem;color:#222;line-height:1.45;word-wrap:break-word}
     .ric-body p{margin:0 0 .3em}
+    .ric-body p:last-child{margin-bottom:0}
     .ric-body ul,.ric-body ol{padding-left:1.2em;margin:.2em 0}
-    .ric-meta{font-size:.7rem;color:#888;margin-top:5px;font-family:ui-monospace,Menlo,monospace}
-    .ric-actions{font-size:.78rem;margin-top:5px;display:flex;gap:10px}
-    .ric-actions button{background:none;border:none;color:#0366d6;cursor:pointer;
-                        padding:0;font-size:.78rem}
-    .ric-actions button.danger{color:#c00}
+    .ric-body code{background:#f0f0f0;padding:1px 4px;border-radius:2px;font-size:.85em}
+    .ric-body strong{font-weight:600}
+    .ric-meta{font-size:.7rem;color:#888;margin-top:6px;
+              font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+    .ric-actions{font-size:.78rem;margin-top:6px;display:flex;gap:12px}
+    .ric-actions button{background:none;border:none;color:#0366d6;
+                        cursor:pointer;padding:0;font-size:.78rem;
+                        font-family:inherit}
     .ric-actions button:hover{text-decoration:underline}
-    .ric-modal-quote{font-size:.85rem;color:#555;font-style:italic;
-                     border-left:3px solid #ffd966;padding:8px 12px;
-                     margin-bottom:14px;background:#fffce6;border-radius:0 4px 4px 0;
-                     max-height:8em;overflow:auto}
-    #ricEmpty{color:#888;font-style:italic;font-size:.85rem;margin:8px 4px}
+    .ric-actions button.danger{color:#c00}
+
+    /* Inline editor (replaces center modal) */
+    .ric-editor textarea{width:100%;min-height:64px;max-height:240px;
+                         border:1px solid #cfd6df;border-radius:6px;
+                         padding:7px 9px;font-family:inherit;font-size:.9rem;
+                         resize:vertical;outline:none;box-sizing:border-box;
+                         transition:border-color .15s;line-height:1.4}
+    .ric-editor textarea:focus{border-color:#1F4E78;
+                               box-shadow:0 0 0 2px rgba(31,78,120,.12)}
+    .ric-editor-actions{display:flex;gap:6px;justify-content:flex-end;
+                        margin-top:8px;align-items:center}
+    .ric-editor-actions .cancel{background:none;border:none;color:#555;
+                                cursor:pointer;padding:6px 10px;font-size:.85rem;
+                                font-family:inherit;border-radius:14px}
+    .ric-editor-actions .cancel:hover{background:#f1f3f7;color:#222}
+    .ric-editor-actions .save{background:#1F4E78;color:#fff;border:none;
+                              border-radius:14px;padding:6px 14px;font-size:.85rem;
+                              cursor:pointer;font-family:inherit;font-weight:500}
+    .ric-editor-actions .save:disabled{background:#cfd6df;cursor:not-allowed}
+    .ric-editor-actions .save:not(:disabled):hover{background:#16395a}
+
+    /* Narrow viewports: collapse rail; fab still works as before */
+    @media (max-width: 1080px) {
+      .comments-rail{display:none}
+      .layout{max-width:980px}
+    }
   </style>
 </head>
 <body>
   {{ _nav | safe }}
-  <div class="doc markdown-body">
-    <div class="backlink"><a href="{{ _base }}/">&larr; back to reports</a></div>
-    <div id="content"></div>
-  </div>
-
-  <button class="ric-fab" id="ricFab" type="button">💬 Comment</button>
-  <button class="ric-toggle" id="ricToggle" type="button">💬 <span id="ricCount">0</span></button>
-  <aside class="ric-sidebar" id="ricSidebar">
-    <h3>Comments <button type="button" class="close" id="ricClose" aria-label="Close">×</button></h3>
-    <div id="ricList"></div>
-    <p id="ricEmpty">No comments yet. Select text in the document and click "💬 Comment".</p>
-  </aside>
-
-  <div class="modal fade" id="ricModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="ricModalTitle">Add comment</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="ric-modal-quote" id="ricModalQuote"></div>
-          <textarea id="ricModalBody" class="form-control" rows="6"
-                    placeholder="Write a comment… markdown supported"></textarea>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary" id="ricModalSave">Save</button>
-        </div>
-      </div>
+  <div class="layout">
+    <div class="doc markdown-body">
+      <div class="backlink"><a href="{{ _base }}/">&larr; back to reports</a></div>
+      <div id="content"></div>
     </div>
+    <div class="comments-rail hidden" id="ricRail"></div>
   </div>
+
+  <button class="ric-fab" id="ricFab" type="button" title="Add comment">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7
+               8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8
+               8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0
+               0 1 8 8v.5z"/>
+      <line x1="9" y1="11.5" x2="15" y2="11.5"/>
+      <line x1="12" y1="8.5" x2="12" y2="14.5"/>
+    </svg>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="/static/vendor/bootstrap.bundle.min.js"></script>
   <script type="module">
     import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
     mermaid.initialize({ startOnLoad:false, theme:"default" });
@@ -724,24 +745,16 @@ _VIEW_TMPL = r"""<!doctype html>
   <script>
   (function(){
     const REPORT_PATH = {{ rel | tojson }};
-    const API_BASE = {{ _base | tojson }};
+    const API_BASE   = {{ _base | tojson }};
     const docRoot = document.getElementById('content');
-    const fab = document.getElementById('ricFab');
-    const sidebar = document.getElementById('ricSidebar');
-    const sidebarList = document.getElementById('ricList');
-    const sidebarEmpty = document.getElementById('ricEmpty');
-    const toggleBtn = document.getElementById('ricToggle');
-    const countEl = document.getElementById('ricCount');
-    const closeBtn = document.getElementById('ricClose');
-    const modalEl = document.getElementById('ricModal');
-    const modalTitleEl = document.getElementById('ricModalTitle');
-    const modalQuoteEl = document.getElementById('ricModalQuote');
-    const modalBodyEl = document.getElementById('ricModalBody');
-    const modalSaveBtn = document.getElementById('ricModalSave');
-    const bsModal = new bootstrap.Modal(modalEl);
+    const docEl   = document.querySelector('.doc');
+    const fab     = document.getElementById('ricFab');
+    const rail    = document.getElementById('ricRail');
 
-    let pendingSelection = null;
-    let editingId = null;
+    let pendingSelection = null;  // {quote, prefix, suffix, heading_anchor, rect}
+    let comments        = [];     // current loaded comments (with .orphan flag)
+    let editingId       = null;   // id of comment currently being edited inline
+    let activeCardId    = null;
 
     function api(path, opts) {
       return fetch(API_BASE + path, opts || {}).then(r => {
@@ -805,15 +818,20 @@ _VIEW_TMPL = r"""<!doctype html>
       return { quote, prefix, suffix, heading_anchor: heading, rect: range.getBoundingClientRect() };
     }
 
+    // Place the floating "+" pill at the doc's right margin, aligned with
+    // the top of the selection. Same convention Google Docs uses — the icon
+    // sits on the edge between the doc and the comments rail.
     function showFab(rect) {
-      fab.style.display = 'block';
-      fab.style.top  = (window.scrollY + rect.bottom + 6) + 'px';
-      fab.style.left = (window.scrollX + rect.left) + 'px';
+      const docRect = docEl.getBoundingClientRect();
+      fab.style.display = 'flex';
+      fab.style.top  = (window.scrollY + rect.top - 6) + 'px';
+      fab.style.left = (window.scrollX + docRect.right - 12) + 'px';
     }
     function hideFab() { fab.style.display = 'none'; }
 
     document.addEventListener('mouseup', function(e) {
-      if (e.target === fab) return;
+      if (fab.contains(e.target)) return;
+      if (rail.contains(e.target)) return;
       setTimeout(() => {
         const info = getSelectionInfo();
         if (!info) { hideFab(); return; }
@@ -822,55 +840,17 @@ _VIEW_TMPL = r"""<!doctype html>
       }, 0);
     });
     document.addEventListener('mousedown', function(e) {
-      if (e.target !== fab) hideFab();
+      if (fab.contains(e.target)) return;
+      if (rail.contains(e.target)) return;
+      hideFab();
     });
 
     fab.addEventListener('click', function() {
       if (!pendingSelection) return;
       hideFab();
       editingId = null;
-      modalTitleEl.textContent = 'Add comment';
-      modalQuoteEl.textContent = pendingSelection.quote;
-      modalBodyEl.value = '';
-      bsModal.show();
-      setTimeout(() => modalBodyEl.focus(), 250);
+      openNewCommentCard(pendingSelection);
     });
-
-    modalSaveBtn.addEventListener('click', async function() {
-      const body = (modalBodyEl.value || '').trim();
-      if (!body) { modalBodyEl.focus(); return; }
-      try {
-        if (editingId) {
-          await api('/inline-comments/' + editingId, {
-            method: 'PATCH',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({ body })
-          });
-        } else if (pendingSelection) {
-          await api('/inline-comments', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-              report_path:    REPORT_PATH,
-              quote:          pendingSelection.quote,
-              prefix:         pendingSelection.prefix,
-              suffix:         pendingSelection.suffix,
-              heading_anchor: pendingSelection.heading_anchor,
-              body,
-            })
-          });
-        }
-        bsModal.hide();
-        window.getSelection().removeAllRanges();
-        await loadAndRender();
-        sidebar.classList.add('open');
-      } catch (e) {
-        alert('Save failed: ' + e.message);
-      }
-    });
-
-    toggleBtn.addEventListener('click', () => sidebar.classList.toggle('open'));
-    closeBtn.addEventListener('click',  () => sidebar.classList.remove('open'));
 
     function findInIndex(idx, c) {
       const targets = [];
@@ -884,8 +864,8 @@ _VIEW_TMPL = r"""<!doctype html>
       return null;
     }
 
-    // Wrap [oStart, oEnd) in the document text with <mark.ric-hl>. Splits
-    // across multiple text nodes when the range crosses element boundaries.
+    // Wrap [oStart, oEnd) with <mark.ric-hl>. Splits across multiple text
+    // nodes when the range crosses element boundaries.
     function wrapRange(idx, oStart, oEnd, cid) {
       const segs = [];
       for (const e of idx.nodes) {
@@ -925,65 +905,167 @@ _VIEW_TMPL = r"""<!doctype html>
       docRoot.normalize();
     }
 
-    function fmtTime(s) {
-      if (!s) return '';
-      return s.replace('T', ' ').replace('Z', '');
+    function fmtTime(s) { return (s || '').replace('T', ' ').replace('Z', ''); }
+
+    // -- Card builders --------------------------------------------------
+
+    function buildCardEl(c) {
+      const div = document.createElement('div');
+      div.className = 'ric-card' + (c.orphan ? ' orphan' : '');
+      div.dataset.id = c.id;
+      div.dataset.anchored = c.orphan ? '0' : '1';
+
+      const q = document.createElement('div');
+      q.className = 'ric-quote';
+      q.textContent = c.quote.length > 120 ? c.quote.slice(0, 120) + '…' : c.quote;
+
+      const b = document.createElement('div');
+      b.className = 'ric-body';
+      b.innerHTML = window.marked ? marked.parse(c.body || '') : (c.body || '');
+
+      const meta = document.createElement('div');
+      meta.className = 'ric-meta';
+      meta.textContent = (c.orphan ? '⚠ orphan · ' : '') +
+                         (c.heading_anchor ? '§ ' + c.heading_anchor + ' · ' : '') +
+                         fmtTime(c.updated_at || c.created_at);
+
+      const actions = document.createElement('div');
+      actions.className = 'ric-actions';
+      const eBtn = document.createElement('button');
+      eBtn.type = 'button'; eBtn.textContent = 'Edit';
+      eBtn.addEventListener('click', (ev) => { ev.stopPropagation(); openEditCard(c); });
+      const dBtn = document.createElement('button');
+      dBtn.type = 'button'; dBtn.textContent = 'Delete'; dBtn.className = 'danger';
+      dBtn.addEventListener('click', (ev) => { ev.stopPropagation(); deleteOne(c.id); });
+      actions.append(eBtn, dBtn);
+
+      div.append(q, b, meta, actions);
+      div.addEventListener('click', () => setActive(c.id, true));
+      return div;
     }
 
-    function renderSidebar(items) {
-      sidebarList.innerHTML = '';
-      countEl.textContent = items.length;
-      sidebarEmpty.style.display = items.length ? 'none' : 'block';
-      for (const it of items) {
-        const div = document.createElement('div');
-        div.className = 'ric-item' + (it.orphan ? ' orphan' : '');
-        div.dataset.id = it.id;
+    function buildEditorEl({ id, quote, body, onSave, onCancel }) {
+      const div = document.createElement('div');
+      div.className = 'ric-card pending';
+      if (id) div.dataset.id = id;
+      else    div.dataset.pending = '1';
 
-        const q = document.createElement('div');
-        q.className = 'ric-quote';
-        q.textContent = it.quote.length > 120 ? it.quote.slice(0, 120) + '…' : it.quote;
+      const q = document.createElement('div');
+      q.className = 'ric-quote';
+      q.textContent = quote.length > 120 ? quote.slice(0, 120) + '…' : quote;
 
-        const b = document.createElement('div');
-        b.className = 'ric-body';
-        b.innerHTML = window.marked ? marked.parse(it.body || '') : (it.body || '');
+      const ed = document.createElement('div');
+      ed.className = 'ric-editor';
+      const ta = document.createElement('textarea');
+      ta.placeholder = 'Add a comment… markdown supported';
+      ta.value = body || '';
+      const row = document.createElement('div');
+      row.className = 'ric-editor-actions';
+      const cancel = document.createElement('button');
+      cancel.type = 'button'; cancel.className = 'cancel'; cancel.textContent = 'Cancel';
+      const save = document.createElement('button');
+      save.type = 'button'; save.className = 'save';
+      save.textContent = id ? 'Save' : 'Comment';
+      save.disabled = !ta.value.trim();
 
-        const meta = document.createElement('div');
-        meta.className = 'ric-meta';
-        meta.textContent = (it.orphan ? '⚠ orphan · ' : '') +
-                           (it.heading_anchor ? '§ ' + it.heading_anchor + ' · ' : '') +
-                           fmtTime(it.updated_at || it.created_at);
+      ta.addEventListener('input', () => { save.disabled = !ta.value.trim(); });
+      ta.addEventListener('keydown', (ev) => {
+        if ((ev.metaKey || ev.ctrlKey) && ev.key === 'Enter' && !save.disabled) {
+          ev.preventDefault();
+          onSave(ta.value.trim());
+        } else if (ev.key === 'Escape') {
+          ev.preventDefault();
+          onCancel();
+        }
+      });
+      cancel.addEventListener('click', (ev) => { ev.stopPropagation(); onCancel(); });
+      save.addEventListener('click',   (ev) => { ev.stopPropagation();
+                                                 if (!save.disabled) onSave(ta.value.trim()); });
+      row.append(cancel, save);
+      ed.append(ta, row);
+      div.append(q, ed);
+      div._textarea = ta;
+      return div;
+    }
 
-        const actions = document.createElement('div');
-        actions.className = 'ric-actions';
-        const eBtn = document.createElement('button');
-        eBtn.type = 'button'; eBtn.textContent = '✏️ Edit';
-        eBtn.addEventListener('click', (e) => { e.stopPropagation(); openEdit(it); });
-        const dBtn = document.createElement('button');
-        dBtn.type = 'button'; dBtn.textContent = '🗑 Delete'; dBtn.className = 'danger';
-        dBtn.addEventListener('click', (e) => { e.stopPropagation(); deleteOne(it.id); });
-        actions.append(eBtn, dBtn);
+    function openNewCommentCard(info) {
+      closeAnyEditor();
+      rail.classList.remove('hidden');
+      const card = buildEditorEl({
+        quote: info.quote,
+        body: '',
+        onSave: async (body) => {
+          try {
+            await api('/inline-comments', {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify({
+                report_path:    REPORT_PATH,
+                quote:          info.quote,
+                prefix:         info.prefix,
+                suffix:         info.suffix,
+                heading_anchor: info.heading_anchor,
+                body,
+              })
+            });
+            card.remove();   // drop the new-comment editor; loadAndRender
+                             // will paint the saved card in its place
+            window.getSelection().removeAllRanges();
+            pendingSelection = null;
+            await loadAndRender();
+          } catch (e) { alert('Save failed: ' + e.message); }
+        },
+        onCancel: () => {
+          card.remove();
+          pendingSelection = null;
+          updateRailVisibility();
+          layoutCards();
+        },
+      });
+      rail.appendChild(card);
+      layoutCards();
+      setTimeout(() => { card._textarea.focus(); }, 50);
+    }
 
-        div.append(q, b, meta, actions);
-        div.addEventListener('click', () => {
-          const mk = docRoot.querySelector('mark.ric-hl[data-cid="' + it.id + '"]');
-          if (mk) {
-            mk.scrollIntoView({ block: 'center', behavior: 'smooth' });
-            mk.classList.add('active');
-            setTimeout(() => mk.classList.remove('active'), 1500);
-          }
-        });
-        sidebarList.appendChild(div);
+    function openEditCard(c) {
+      closeAnyEditor();
+      editingId = c.id;
+      const existing = rail.querySelector('.ric-card[data-id="' + c.id + '"]');
+      if (!existing) return;
+      const card = buildEditorEl({
+        id: c.id,
+        quote: c.quote,
+        body: c.body || '',
+        onSave: async (body) => {
+          try {
+            await api('/inline-comments/' + c.id, {
+              method: 'PATCH',
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify({ body })
+            });
+            editingId = null;
+            await loadAndRender();
+          } catch (e) { alert('Save failed: ' + e.message); }
+        },
+        onCancel: () => {
+          editingId = null;
+          renderCards(comments);
+          layoutCards();
+        },
+      });
+      card.style.top = existing.style.top;
+      existing.replaceWith(card);
+      layoutCards();
+      setTimeout(() => { card._textarea.focus(); }, 50);
+    }
+
+    function closeAnyEditor() {
+      const p = rail.querySelector('.ric-card.pending[data-pending="1"]');
+      if (p) p.remove();
+      if (editingId) {
+        editingId = null;
+        renderCards(comments);
       }
-    }
-
-    function openEdit(item) {
-      editingId = item.id;
-      pendingSelection = null;
-      modalTitleEl.textContent = 'Edit comment';
-      modalQuoteEl.textContent = item.quote;
-      modalBodyEl.value = item.body || '';
-      bsModal.show();
-      setTimeout(() => modalBodyEl.focus(), 250);
     }
 
     async function deleteOne(id) {
@@ -992,6 +1074,94 @@ _VIEW_TMPL = r"""<!doctype html>
         await api('/inline-comments/' + id, { method: 'DELETE' });
         await loadAndRender();
       } catch (e) { alert('Delete failed: ' + e.message); }
+    }
+
+    function setActive(cid, scrollDoc) {
+      activeCardId = cid;
+      rail.querySelectorAll('.ric-card').forEach(c => {
+        c.classList.toggle('active', c.dataset.id === String(cid));
+      });
+      docRoot.querySelectorAll('mark.ric-hl').forEach(m => {
+        m.classList.toggle('active', m.dataset.cid === String(cid));
+      });
+      if (scrollDoc) {
+        const mk = docRoot.querySelector('mark.ric-hl[data-cid="' + cid + '"]');
+        if (mk) {
+          const r = mk.getBoundingClientRect();
+          if (r.top < 80 || r.bottom > window.innerHeight - 40) {
+            mk.scrollIntoView({ block: 'center', behavior: 'smooth' });
+          }
+        }
+      }
+    }
+
+    function renderCards(items) {
+      // Keep any pending editor card; clear the rest.
+      rail.querySelectorAll('.ric-card').forEach(el => {
+        if (el.classList.contains('pending') && !el.dataset.id) return;
+        el.remove();
+      });
+      for (const c of items) {
+        if (c.id === editingId) continue;
+        rail.appendChild(buildCardEl(c));
+      }
+      updateRailVisibility();
+    }
+
+    function updateRailVisibility() {
+      const hasCards = rail.querySelectorAll('.ric-card').length > 0;
+      rail.classList.toggle('hidden', !hasCards);
+    }
+
+    // Position cards next to their highlights; stack downward to avoid
+    // overlap. Cards live in normal document flow, so they scroll with the
+    // page — no fixed positioning.
+    function layoutCards() {
+      const cards = Array.from(rail.querySelectorAll('.ric-card'));
+      if (!cards.length) return;
+      const railRect = rail.getBoundingClientRect();
+
+      const slots = cards.map(card => {
+        let desiredTop;
+        let isOrphan = false;
+        if (card.classList.contains('pending') && card.dataset.pending === '1') {
+          // New-comment editor (no id yet) — anchor to current selection rect
+          if (pendingSelection) {
+            desiredTop = pendingSelection.rect.top - railRect.top;
+          } else {
+            desiredTop = 0;
+          }
+        } else if (card.dataset.anchored === '0') {
+          // Orphan — stack at the bottom
+          desiredTop = Number.MAX_SAFE_INTEGER;
+          isOrphan = true;
+        } else {
+          const cid = card.dataset.id;
+          const mk = docRoot.querySelector('mark.ric-hl[data-cid="' + cid + '"]');
+          if (!mk) { desiredTop = Number.MAX_SAFE_INTEGER; isOrphan = true; }
+          else {
+            const r = mk.getBoundingClientRect();
+            desiredTop = r.top - railRect.top;
+          }
+        }
+        return { card, desiredTop, isOrphan };
+      });
+
+      slots.sort((a, b) => a.desiredTop - b.desiredTop);
+
+      let cursor = 0;
+      for (const s of slots) {
+        const top = Math.max(s.desiredTop, cursor);
+        if (s.isOrphan) {
+          s.card.style.top = cursor + 'px';
+          cursor += s.card.offsetHeight + 10;
+        } else {
+          s.card.style.top = top + 'px';
+          cursor = top + s.card.offsetHeight + 10;
+        }
+      }
+      // Ensure rail is tall enough to contain all cards.
+      rail.style.minHeight = (cursor + 40) + 'px';
     }
 
     async function loadAndRender() {
@@ -1004,24 +1174,28 @@ _VIEW_TMPL = r"""<!doctype html>
         return;
       }
       const items = resp.comments || [];
-      // Re-anchor each comment. Rebuild the index after every successful
-      // wrap so subsequent searches see the still-unwrapped text.
       for (const c of items) {
         const idx = buildIndex();
         const found = findInIndex(idx, c);
         if (found) {
           const marks = wrapRange(idx, found.start, found.end, c.id);
-          marks.forEach(m => m.addEventListener('click', (e) => {
-            e.stopPropagation();
-            openEdit(c);
+          marks.forEach(m => m.addEventListener('click', (ev) => {
+            ev.stopPropagation();
+            setActive(c.id, false);
           }));
           c.orphan = false;
         } else {
           c.orphan = true;
         }
       }
-      renderSidebar(items);
+      comments = items;
+      renderCards(items);
+      layoutCards();
     }
+
+    // Re-layout on resize and on window load (images may have shifted heights)
+    window.addEventListener('resize', layoutCards);
+    window.addEventListener('load',   layoutCards);
 
     function whenDocReady(cb) {
       if (window._ricDocReady) return cb();
