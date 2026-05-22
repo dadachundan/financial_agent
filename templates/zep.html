@@ -1337,14 +1337,38 @@ function applyCapFilter() {
     `${visibleCount} / ${_visNodes.length} nodes, ${visibleEdges} / ${_visEdges.length} edges visible`;
 }
 
+// Physics is frozen after the initial stabilization so user drags stick.
+// When the filter changes, the survivors stay glued in their original
+// crowded positions — re-enable physics briefly so the visible subgraph
+// can redistribute, then re-freeze and fit the camera to what's left.
+let _rebalanceTimer = null;
+function rebalanceVisibleSubgraph() {
+  if (!_network || !_visNodes) return;
+  const visibleIds = _visNodes.get({ filter: n => !n.hidden }).map(n => n.id);
+  if (visibleIds.length === 0) return;
+  _network.setOptions({ physics: { enabled: true } });
+  _network.once('stabilizationIterationsDone', () => {
+    _network.setOptions({ physics: { enabled: false } });
+    _network.fit({ nodes: visibleIds,
+                   animation: { duration: 400, easingFunction: 'easeInOutQuad' } });
+  });
+  _network.stabilize(150);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const lo    = document.getElementById('capSliderMin');
   const hi    = document.getElementById('capSliderMax');
   const reset = document.getElementById('capSliderReset');
-  if (lo)    lo.addEventListener('input',  applyCapFilter);
-  if (hi)    hi.addEventListener('input',  applyCapFilter);
+  // Debounce rebalance so dragging the slider doesn't kick physics on every tick.
+  const scheduleRebalance = () => {
+    clearTimeout(_rebalanceTimer);
+    _rebalanceTimer = setTimeout(rebalanceVisibleSubgraph, 250);
+  };
+  const onSlide = () => { applyCapFilter(); scheduleRebalance(); };
+  if (lo)    lo.addEventListener('input',  onSlide);
+  if (hi)    hi.addEventListener('input',  onSlide);
   if (reset) reset.addEventListener('click', () => {
-    lo.value = 0; hi.value = 100; applyCapFilter();
+    lo.value = 0; hi.value = 100; onSlide();
   });
 });
 
