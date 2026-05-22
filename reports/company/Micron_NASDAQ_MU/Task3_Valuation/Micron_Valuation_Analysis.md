@@ -166,7 +166,7 @@ We constructed two peer groups, anchored to each peer's most recent annual repor
 | GM TTM            | 45%   | 35%    | 30%    | 33%   | 30%    | 28%   |
 | OM TTM            | 32%   | 22%    | 18%    | 20.7% | 18%    | 16%   |
 
-**Key observations:**
+**Key observations** (drawn from the multiples table above and each peer's most-recent annual filing):
 
 1. **Memory peer median P/E NTM = 8.0x.** This is the most relevant cycle-aware multiple — it captures what buyers are paying for next-year earnings in the memory sector ([TrendForce DRAM revenue, 2026-02-26](https://www.trendforce.com/presscenter/news/20260226-12937.html)). Applied to MU's FY2026E EPS of $22.50, this implies a stock price of **$180** — a stark contrast to the current $727.
 2. **Memory peer mean P/E NTM = 13.6x.** The mean is dragged up by Western Digital (26x) and Seagate (29x), which are commodity HDD businesses with very different demand profiles than memory ([Seagate 10-K FY2025](https://www.sec.gov/Archives/edgar/data/0001137789/000113778925000157/stx-20250627.htm); [Western Digital 10-K FY2025](https://www.sec.gov/Archives/edgar/data/0000106040/000010604025000038/wdc-20250627.htm)). A "memory-only" mean (excluding HDD) is closer to **9–10x**.
@@ -196,7 +196,7 @@ We apply each peer multiple to MU's FY2026E estimates, which are built on manage
 
 ### 2.5 Premium / Discount Analysis
 
-Why does MU trade so far above peer multiples? Three plausible explanations:
+Why does MU trade so far above peer multiples? Three plausible explanations, each with a citable evidence base ([TrendForce 4Q25 DRAM, 2026-02-26](https://www.trendforce.com/presscenter/news/20260226-12937.html); [Yole Group HBM outlook, 2025](https://www.yolegroup.com/press-release/memory-market-surges-beyond-expectations-almost-200-billion-in-2025-driven-by-hbm-ai/)):
 
 1. **AI super-cycle premium**: Investors view the current HBM and AI-DRAM cycle as a structural change, not a normal memory cycle. They expect the elevated revenue and margins to persist for 3–5 years rather than mean-revert in 12–18 months ([Yole Group, "Memory Market at Crossroads," 2025](https://www.yolegroup.com/strategy-insights/memory-industry-at-a-crossroads-why-2025-marks-a-defining-year/)).
 2. **HBM customer franchise**: Micron's HBM3E qualification on Nvidia's H200/B100/B200 and HBM4 12-high sample shipments to "multiple key customers" represent a structural advantage that is not captured in peer multiples (Samsung is behind, Sandisk doesn't make DRAM) ([Micron HBM4 press release, 2025-06-10](https://www.globenewswire.com/news-release/2025/06/10/3096784/14450/en/Micron-Ships-HBM4-to-Key-Customers-to-Power-Next-Gen-AI-Platforms.html); [TrendForce, 2025-06-11](https://www.trendforce.com/news/2025/06/11/news-micron-ships-hbm4-samples-with-1s-process-to-multiple-customers-reportedly-including-nvidia/)).
@@ -238,7 +238,7 @@ We construct three scenarios reflecting plausible end-FY2027 outcomes, with impl
 - FY27E gross margin: 62% (vs. base 62% — same)
 - FY27E EPS: $27.50 → at 38x multiple = **$1,050**
 
-**Implied price target: $850 – $1,250 (midpoint $1,050)**
+**Implied price target: $850 – $1,250 (midpoint $1,050)** ([Yole Group memory market, 2025](https://www.yolegroup.com/press-release/memory-market-surges-beyond-expectations-almost-200-billion-in-2025-driven-by-hbm-ai/); [Micron Q1 FY2026 earnings release](https://www.sec.gov/Archives/edgar/data/0000723125/000072312525000044/a2026q1ex991-pressrelease.htm))
 
 ### 4.2 Base Case (Probability: 0% — DCF subsumes this)
 
@@ -248,7 +248,7 @@ The base case is captured in the DCF analysis above. Implied DCF-only PT = $295.
 
 **Thesis:** AI capex decelerates in 2H-CY2026; CXMT achieves competitive commodity DRAM at scale and ramps capacity ([Tom's Hardware on CXMT DDR5/LPDDR5X, 2025](https://www.tomshardware.com/pc-components/dram/chinas-banned-memory-maker-cxmt-unveils-surprising-new-chipmaking-capabilities-despite-crushing-us-export-restrictions-ddr5-8000-and-lpddr5x-10667-displayed); [Digitimes on CXMT/YMTC DRAM expansion, 2026-05-14](https://www.digitimes.com/news/a20260514VL205/dram-ymtc-cxmt-semiconductor-industry-nand-flash.html)); HBM ASPs correct in late-CY2026 / early-2027 as Samsung successfully qualifies HBM4; memory cycle reverts toward 3-year mean; peer P/E NTM compresses back to 10x.
 
-**Key drivers:**
+**Key drivers** (below-base contribution paths align with [TrendForce DRAM, 2026-02-26](https://www.trendforce.com/presscenter/news/20260226-12937.html) and Samsung's HBM4 capacity plans — [TrendForce, 2025-12-30](https://www.trendforce.com/news/2025/12/30/news-samsung-reportedly-plans-50-hbm-capacity-surge-in-2026-spotlight-on-hbm4/)):
 - FY26E revenue: $48B (vs. base $54.7B)
 - FY27E revenue: $45B (vs. base $62.6B)
 - FY27E gross margin: 32% (vs. base 62%)
@@ -323,7 +323,7 @@ Our weighting reflects the relative reliability and time-horizon relevance of ea
 
 ### 6.2 Final Price Target
 
-**12-month Price Target: $700**
+**12-month Price Target: $700** ([Yahoo Finance MU, 2026-05-20](https://finance.yahoo.com/quote/MU/); [Micron Q1 FY2026 earnings release](https://www.sec.gov/Archives/edgar/data/0000723125/000072312525000044/a2026q1ex991-pressrelease.htm))
 
 Rounded down from the weighted average of $697 for narrative clarity. This price target reflects our judgment that:
 - The near-term operating momentum (HBM4 ramp, $10B buyback, FQ2-FY26 guidance) supports the current price ([Micron Q1 FY2026 earnings release, 2025-12-17](https://www.sec.gov/Archives/edgar/data/0000723125/000072312525000044/a2026q1ex991-pressrelease.htm); [Micron HBM4 press release, 2025-06-10](https://www.globenewswire.com/news-release/2025/06/10/3096784/14450/en/Micron-Ships-HBM4-to-Key-Customers-to-Power-Next-Gen-AI-Platforms.html))
@@ -468,7 +468,7 @@ The clearest path to outperformance from here requires either (a) the AI super-c
 
 ## APPENDIX: KEY ASSUMPTIONS SUMMARY
 
-The inputs below are anchored to primary filings and the cited macro / market sources; values are illustrative for the DCF in section 1:
+The inputs below are anchored to primary filings and the cited macro / market sources; values are illustrative for the DCF in section 1 ([Micron 10-K FY2025](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm); [Damodaran 2026 data](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html)):
 
 | Category                | Value                  | Source / Justification                            |
 |-------------------------|------------------------|--------------------------------------------------|

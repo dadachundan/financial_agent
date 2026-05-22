@@ -161,7 +161,7 @@ The football field below weights five methodologies according to the relative re
 | **Weighted Average** | **19.38** | **24.02** | **37.94** | **100%** | **24.02** |
 
 **12-month price target: ¥24** (rounded from ¥24.02).
-**Implied upside vs. ¥30: -20.0%** → **Rating: SELL**.
+**Implied upside vs. ¥30: -20.0%** → **Rating: SELL** ([Financial Model — Football Field tab](双林股份_SZSE300100_Financial_Model_2026-05-18.xlsx); current price from [东方财富 双林股份](https://data.eastmoney.com/stockdata/300100.html)).
 
 ### Probability-weighted overlay (sanity)
 
@@ -174,7 +174,7 @@ Scenario probabilities reflect a 55% Base / 25% Bull / 20% Bear distribution, wh
 | Bear | 20% | 4.34 | 20x | 9.59 | 1.39 |
 | **Probability-weighted target** | | | | | **¥23.82** |
 
-The probability-weighted target (¥23.82) converges with the methodology-weighted target (¥24.02) within 1%, supporting the **¥24** target with directional confidence.
+The probability-weighted target (¥23.82) converges with the methodology-weighted target (¥24.02) within 1%, supporting the **¥24** target with directional confidence — Bull-case probability is bounded by the realistic Optimus production trajectory of 50k–150k units in 2026 ramping toward Gen-3 1m/yr by end-2026 ([36Kr — Musk's Plan to Build One Million Robots](https://eu.36kr.com/en/p/3780414717129481)) and the contingent nature of an OEM定点 yet to be awarded to 双林 ([澎湃新闻 — 双林 暂无客户、无收入](https://m.thepaper.cn/newsDetail_forward_30271692)).
 
 ---
 

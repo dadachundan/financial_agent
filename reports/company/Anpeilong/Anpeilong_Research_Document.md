@@ -152,73 +152,77 @@ Anpeilong's served addressable market is the sum of four overlapping wedges, siz
 
 ### Company-Specific Risks (6)
 
-**1. Customer concentration with a single very large customer (Customer 1, 15.95% of FY2025 revenue, ¥188.8M).** The single largest revenue source is described as a major North American new-energy-vehicle customer, widely speculated to be Tesla. Loss of this customer — through price renegotiation, sourcing diversification, or production-volume cuts — would damage revenue and operating leverage. Mitigants: the company is supplying multiple sensor types and has won similar programmes at Stellantis, NIO, Li Auto and BYD; the Thailand plant reduces tariff vulnerability for this customer.
+**1. Customer concentration with a single very large customer (Customer 1, 15.95% of FY2025 revenue, ¥188.8M).** The single largest revenue source is described as a major North American new-energy-vehicle customer, widely speculated to be Tesla. Loss of this customer — through price renegotiation, sourcing diversification, or production-volume cuts — would damage revenue and operating leverage. Mitigants: the company is supplying multiple sensor types and has won similar programmes at Stellantis, NIO, Li Auto and BYD; the Thailand plant reduces tariff vulnerability for this customer ([安培龙 2025 年年度报告, 第 37、43 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF)).
 
-**2. Operating margin compression risk.** Operating margin has compressed from 12.2% in FY2023 to 9.9% in FY2024 to 7.7% in FY2025, driven by R&D and SG&A growth outpacing revenue, plus a ~3 percentage point decline in gross margin (32% to 29%). FY2026 is expected to remain pressured as the company continues to invest in MEMS chips, the Thailand plant, the Germany subsidiary, and force-sensor industrialisation. A failure to convert these investments into revenue within 2–3 years would prolong margin compression and pressure EPS growth despite revenue growth.
+**2. Operating margin compression risk.** Operating margin has compressed from 12.2% in FY2023 to 9.9% in FY2024 to 7.7% in FY2025, driven by R&D and SG&A growth outpacing revenue, plus a ~3 percentage point decline in gross margin (32% to 29%). FY2026 is expected to remain pressured as the company continues to invest in MEMS chips, the Thailand plant, the Germany subsidiary, and force-sensor industrialisation. A failure to convert these investments into revenue within 2–3 years would prolong margin compression and pressure EPS growth despite revenue growth ([安培龙 2025 年年度报告, 第 41、55 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF)).
 
-**3. Force-sensor commercialisation risk.** Force sensors are the highest-conviction strategic bet but are currently revenue-immaterial. Both technology paths (metal-strain and MEMS-glass-microfusion) are at sample or small-batch stages. Customer adoption — particularly the ramp of humanoid robotics — is uncertain and depends on factors outside Anpeilong's control. The ¥60.4M force-sensor capacity investment could yield low utilisation if humanoid mass production is delayed.
+**3. Force-sensor commercialisation risk.** Force sensors are the highest-conviction strategic bet but are currently revenue-immaterial. Both technology paths (metal-strain and MEMS-glass-microfusion) are at sample or small-batch stages. Customer adoption — particularly the ramp of humanoid robotics — is uncertain and depends on factors outside Anpeilong's control. The ¥60.4M force-sensor capacity investment could yield low utilisation if humanoid mass production is delayed ([安培龙 2025 年年度报告, 第 35-36、55 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF); [关于使用部分超募资金投资建设新项目的公告 (2025-034)](https://static.cninfo.com.cn/finalpage/2025-04-15/1223437847.PDF)).
 
-**4. Founder/CEO concentration of authority and key-person risk.** Wu Ruojun simultaneously serves as chairman, GM, and (since February 2025) GM of the force-sensor business unit. He holds 31.67% directly plus 5.64% through Ruihang Investment Partnership; he is also building a related-party sensor business empire (Wuxi Hairong, Jingrong Tech) outside the listed entity. Any health or governance event affecting Wu would materially affect strategic continuity. The board has three independent directors but governance is unusually founder-centric.
+**4. Founder/CEO concentration of authority and key-person risk.** Wu Ruojun simultaneously serves as chairman, GM, and (since February 2025) GM of the force-sensor business unit. He holds 31.67% directly plus 5.64% through Ruihang Investment Partnership; he is also building a related-party sensor business empire (Wuxi Hairong, Jingrong Tech) outside the listed entity. Any health or governance event affecting Wu would materially affect strategic continuity. The board has three independent directors but governance is unusually founder-centric ([安培龙 2025 年年度报告, 第 65-67、70 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF)).
 
-**5. MEMS-chip vertical-integration execution risk.** The 2026 private placement allocates substantial capital to MEMS pressure-chip R&D and industrialisation, with the Belgian and Wuhan subsidiaries as execution vehicles. Designing automotive-grade pressure dies and conditioning ICs at the quality bar of Bosch, Infineon and ST is a multi-year, multi-tape-out R&D effort with no guarantee of success. Failure to deliver in-house chips by 2027–2028 would maintain current external-IC sourcing dependency and the associated cost and supply-chain risks.
+**5. MEMS-chip vertical-integration execution risk.** The 2026 private placement allocates substantial capital to MEMS pressure-chip R&D and industrialisation, with the Belgian and Wuhan subsidiaries as execution vehicles. Designing automotive-grade pressure dies and conditioning ICs at the quality bar of Bosch, Infineon and ST is a multi-year, multi-tape-out R&D effort with no guarantee of success. Failure to deliver in-house chips by 2027–2028 would maintain current external-IC sourcing dependency and the associated cost and supply-chain risks ([安培龙 2025 年年度报告, 第 36-37 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF); [安培龙 2026 年度向特定对象发行股票预案](http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-1/2026-01-08/11904776.PDF)).
 
-**6. Pre-IPO restricted-share unlock overhang in December 2026.** Founder shares (31.16M, 31.67% of capital) and Ruihang Investment Partnership shares (5.55M, 5.64%) come off lock-up on 19 December 2026. While intent to sell is unconfirmed, the supply overhang is meaningful for a relatively thinly-traded ChiNext stock.
+**6. Pre-IPO restricted-share unlock overhang in December 2026.** Founder shares (31.16M, 31.67% of capital) and Ruihang Investment Partnership shares (5.55M, 5.64%) come off lock-up on 19 December 2026. While intent to sell is unconfirmed, the supply overhang is meaningful for a relatively thinly-traded ChiNext stock ([安培龙 2025 年年度报告, 第 70、113-115 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF); [关于首次公开发行战略配售股份上市流通的提示性公告 (2025-092)](https://www.cninfo.com.cn/new/disclosure/stock?stockCode=301413)).
 
 ### Industry / Market Risks (4)
 
-**7. Automotive cycle and NEV policy risk.** The Chinese auto and NEV markets are heavily policy-dependent (trade-in subsidies, purchase-tax exemptions, dual-credit rules). A roll-back of subsidies, slowdown in NEV unit growth, or a step-down in NEV penetration would dampen the principal demand vector for Anpeilong's pressure-sensor business. CAAM's own 2026 forecast for total auto sales is only +1% growth, vs +9.4% in 2025.
+**7. Automotive cycle and NEV policy risk.** The Chinese auto and NEV markets are heavily policy-dependent (trade-in subsidies, purchase-tax exemptions, dual-credit rules). A roll-back of subsidies, slowdown in NEV unit growth, or a step-down in NEV penetration would dampen the principal demand vector for Anpeilong's pressure-sensor business. CAAM's own 2026 forecast for total auto sales is only +1% growth, vs +9.4% in 2025 ([安培龙 2025 年年度报告, 第 15-16 页 (引用中汽协)](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF)).
 
-**8. International trade and tariff escalation.** US-China trade tensions, EU CBAM, and EU/US tariff changes could affect both Anpeilong's direct exports (14.3% of revenue) and the cost competitiveness of its Chinese customers selling into those markets. The Thailand plant partially mitigates US tariff exposure for the North American NEV customer, but does not address EU tariff or sanction risk.
+**8. International trade and tariff escalation.** US-China trade tensions, EU CBAM, and EU/US tariff changes could affect both Anpeilong's direct exports (14.3% of revenue) and the cost competitiveness of its Chinese customers selling into those markets. The Thailand plant partially mitigates US tariff exposure for the North American NEV customer, but does not address EU tariff or sanction risk ([安培龙 2025 年年度报告, 第 38、55 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF)).
 
-**9. Intensifying domestic and international competition.** The Chinese sensor industry is well-funded and increasingly crowded. Domestic competitors (Wonder, Huagong, Donghua Testing, Hanwei) are all expanding capacity; international leaders (Sensata, Bosch) are localising production in China; and some emerging force-sensor specialists (Kunwei, Donghua) have head-starts. Price erosion in core ceramic-capacitive pressure is a realistic 2027–2028 scenario.
+**9. Intensifying domestic and international competition.** The Chinese sensor industry is well-funded and increasingly crowded. Domestic competitors (Wonder, Huagong, Donghua Testing, Hanwei) are all expanding capacity; international leaders (Sensata, Bosch) are localising production in China; and some emerging force-sensor specialists (Kunwei, Donghua) have head-starts. Price erosion in core ceramic-capacitive pressure is a realistic 2027–2028 scenario ([安培龙 2025 年年度报告, 第 36-37、55 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF)).
 
-**10. Technology disruption risk.** A shift in dominant pressure-sensor technology from ceramic capacitive to all-silicon MEMS, or alternative sensing modalities (optical, magnetic), could erode Anpeilong's ceramic-process moat. The MEMS pressure business is partially defensive against this shift but is itself dependent on external chip supply.
+**10. Technology disruption risk.** A shift in dominant pressure-sensor technology from ceramic capacitive to all-silicon MEMS, or alternative sensing modalities (optical, magnetic), could erode Anpeilong's ceramic-process moat. The MEMS pressure business is partially defensive against this shift but is itself dependent on external chip supply ([安培龙 2025 年年度报告, 第 36 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF)).
 
 ### Financial Risks (2)
 
-**11. Cash flow weakening and capex intensity.** Operating cash flow declined from ¥95.7M (FY2023) to ¥90.2M (FY2024) to ¥70.3M (FY2025) — a deterioration despite revenue growth, reflecting working-capital tied up in inventory and receivables. Capex was ¥225M, ¥92M and ¥113M in FY2023–FY2025; free cash flow is now negative at –¥43M in FY2025. Combined with the ¥544M private placement, the balance sheet is being levered for growth, and net debt has risen from –¥359M (net cash) in FY2023 to –¥3M (essentially zero) in FY2024 to +¥276M in FY2025. The placement, if completed, will replenish equity, but execution depends on regulatory approval and market conditions.
+**11. Cash flow weakening and capex intensity.** Operating cash flow declined from ¥95.7M (FY2023) to ¥90.2M (FY2024) to ¥70.3M (FY2025) — a deterioration despite revenue growth, reflecting working-capital tied up in inventory and receivables. Capex was ¥225M, ¥92M and ¥113M in FY2023–FY2025; free cash flow is now negative at –¥43M in FY2025. Combined with the ¥544M private placement, the balance sheet is being levered for growth, and net debt has risen from –¥359M (net cash) in FY2023 to –¥3M (essentially zero) in FY2024 to +¥276M in FY2025. The placement, if completed, will replenish equity, but execution depends on regulatory approval and market conditions ([安培龙 2025 年年度报告, 第 9 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF); [安培龙 2024 年年度报告](https://static.cninfo.com.cn/finalpage/2025-04-24/1223477567.PDF); [安培龙 2026 年度向特定对象发行股票预案](http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-1/2026-01-08/11904776.PDF)).
 
-**12. Inventory and receivables build risk.** Inventory of pressure sensors grew 81% YoY in FY2025 — much faster than revenue. While management attributes the build to ceramic-capacitive ramp, an extended customer destock cycle would force inventory write-downs and gross-margin pressure.
+**12. Inventory and receivables build risk.** Inventory of pressure sensors grew 81% YoY in FY2025 — much faster than revenue. While management attributes the build to ceramic-capacitive ramp, an extended customer destock cycle would force inventory write-downs and gross-margin pressure ([安培龙 2025 年年度报告, 第 41-42 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF)).
 
 ### Macroeconomic Risks (3)
 
-**13. FX risk.** Export revenue is denominated mostly in USD. A weaker USD or sharp RMB appreciation would compress reported revenue and gross margin from the export channel (which has structurally higher margin than domestic). Two-way RMB volatility under continued US-China tension introduces P&L volatility.
+**13. FX risk.** Export revenue is denominated mostly in USD. A weaker USD or sharp RMB appreciation would compress reported revenue and gross margin from the export channel (which has structurally higher margin than domestic). Two-way RMB volatility under continued US-China tension introduces P&L volatility ([安培龙 2025 年年度报告, 第 41、55 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF)).
 
-**14. Chinese capital-market sentiment and ChiNext liquidity.** Anpeilong is a ChiNext small-cap (¥10–15B market cap) reliant on retail and institutional flows; a broader Chinese equity de-rating, particularly of high-multiple AI/robotics-narrative names, would compress the equity-raise valuation and the cost of strategic capital.
+**14. Chinese capital-market sentiment and ChiNext liquidity.** Anpeilong is a ChiNext small-cap (¥10–15B market cap) reliant on retail and institutional flows; a broader Chinese equity de-rating, particularly of high-multiple AI/robotics-narrative names, would compress the equity-raise valuation and the cost of strategic capital ([Yahoo Finance — 301413.SZ](https://finance.yahoo.com/quote/301413.SZ/); [Eastmoney — 安培龙 301413](https://quote.eastmoney.com/sz301413.html)).
 
-**15. Interest-rate and credit conditions.** Total debt has risen from ¥359M (FY2024) to ¥445M (FY2025). PBOC rate moves and Chinese banking-sector credit conditions affect financing costs. Most debt is short-term working capital and not large in absolute terms, but rising rates would marginally pressure net interest expense.
+**15. Interest-rate and credit conditions.** Total debt has risen from ¥359M (FY2024) to ¥445M (FY2025). PBOC rate moves and Chinese banking-sector credit conditions affect financing costs. Most debt is short-term working capital and not large in absolute terms, but rising rates would marginally pressure net interest expense ([安培龙 2025 年年度报告, 第 9 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF)).
 
 ---
 
 ## DATA SOURCES
 
-**Primary Company Sources**
-- Shenzhen Ampron Technology Co., Ltd. 2025 Annual Report (filed 23 April 2026 via cninfo.com.cn; local copy: `cninfo_reports/SZSE/301413_安培龙/2026-04-23_年报_2025年年度报告.pdf`)
-- 2025 Annual Report Summary (`2026-04-23_年报_2025年年度报告摘要.pdf`)
-- 2024 Annual Report (`2025-04-24_年报_2024年年度报告.pdf`)
-- 2023 Annual Report (`2024-04-21_年报_2023年年度报告.pdf`)
-- 2026 Q1 Quarterly Report (`2026-04-23_季报_2026年一季度报告.pdf`)
-- 2025 Q3, Q1 Quarterly Reports and 2025 Half-Year Report (local cache)
-- Company website: https://www.ampron.com/ (IR contact: ir@ampron.com)
+**Primary Company Sources (cninfo / 巨潮资讯网)**
+- [安培龙 2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF) — filed 2026-04-23
+- [安培龙 2024 年年度报告](https://static.cninfo.com.cn/finalpage/2025-04-24/1223477567.PDF) — filed 2025-04-24
+- [安培龙 2023 年年度报告](https://static.cninfo.com.cn/finalpage/2024-04-21/1219860232.PDF) — filed 2024-04-21
+- [安培龙 2025 年半年度报告](https://static.cninfo.com.cn/finalpage/2025-08-25/1223801014.PDF) — filed 2025-08-25
+- [关于使用部分超募资金投资建设新项目的公告 (2025-034)](https://static.cninfo.com.cn/finalpage/2025-04-15/1223437847.PDF) — filed 2025-04-15
+- [关于首次公开发行战略配售股份上市流通的提示性公告 (2025-092)](https://www.cninfo.com.cn/new/disclosure/stock?stockCode=301413) — filed 2025-12-16
+- [安培龙 2026 年度向特定对象发行股票预案 (募集说明书)](http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-1/2026-01-08/11904776.PDF)
+- [Company website (Ampron)](https://www.ampron.com/) — IR contact ir@ampron.com
 
 **Stock and market reference**
-- Stock Analysis profile: https://stockanalysis.com/quote/she/301413/company/
-- Yahoo Finance profile: https://finance.yahoo.com/quote/301413.SZ/
+- [Yahoo Finance — 301413.SZ](https://finance.yahoo.com/quote/301413.SZ/)
+- [Eastmoney — 安培龙 301413](https://quote.eastmoney.com/sz301413.html)
+- [Stock Analysis — Shenzhen Ampron 301413](https://stockanalysis.com/quote/she/301413/company/)
 
 **Industry and sector**
-- CCID Consulting (赛迪顾问) 2024 China sensor market data (cited in Anpeilong FY2025 annual report)
-- China Association of Automobile Manufacturers (CAAM) 2025 production and sales data; 2026 forecast
-- AVC (奥维云网) 2025 home-appliance retail data; National Bureau of Statistics 2025 home-appliance retail
-- Regulation (EU) 2024/1257 (Euro 7) text — relevant for NOx-sensor mandate timing
+- CCID Consulting (赛迪顾问) 2024 China sensor market data, cited in [安培龙 2025 年年度报告, 第 13-14 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF)
+- China Association of Automobile Manufacturers (CAAM) 2025 production/sales data and 2026 forecast, cited in [安培龙 2025 年年度报告, 第 15-16 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF)
+- GGII (高工机器人) 2025 humanoid-robot blue paper; QY Research six-axis F/T sensor forecast, both cited in [安培龙 2025 年年度报告, 第 18-19 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF)
+- [Regulation (EU) 2024/1257 (Euro 7)](https://eur-lex.europa.eu/eli/reg/2024/1257/oj)
+- [国务院《关于 2025 年加力扩围实施大规模设备更新和消费品以旧换新政策的通知》](https://www.gov.cn/zhengce/content/202501/content_6996953.htm)
+- [工信部《电子信息制造业 2025-2026 年稳增长行动方案》](https://www.miit.gov.cn/zwgk/zcwj/wjfb/tg/art/2025/art_8de2169f6f694a1995e07e8f3c5a8b4e.html)
 
-**Competitive landscape**
-- Anpeilong 2026 private-placement feasibility report: http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-1/2026-01-08/11904776.PDF
-- OFweek sensor industry coverage: https://sensor.ofweek.com/2026-01/ART-81013-8120-30678660.html
-- Caiwen News / Sohu coverage on humanoid robotics sensor development at Anpeilong: https://www.caiwennews.com/article/1399653.shtml, https://www.sohu.com/a/846714420_122014422
-- VanCera "Top 10 Temperature Sensor Manufacturers in China": https://www.van-cera.com/top-temperatures-sensor-manufacturers-and-suppliers-in-china/
+**Third-party media / industry coverage**
+- [OFweek 传感器 — 安培龙行业报道, 2026-01](https://sensor.ofweek.com/2026-01/ART-81013-8120-30678660.html)
+- [Caiwen News — 安培龙人形机器人 / 力传感器进展](https://www.caiwennews.com/article/1399653.shtml)
+- [Sohu — 安培龙人形机器人传感器布局, 2024-12](https://www.sohu.com/a/846714420_122014422)
+- [VanCera — Top Temperature Sensor Manufacturers in China](https://www.van-cera.com/top-temperatures-sensor-manufacturers-and-suppliers-in-china/)
 
 **Financial trend chart**
-- Anpeilong 3-year financial trend chart (FY2023–FY2025): `anpeilong_3yr_chart.png` (built from PRC-GAAP consolidated statements in annual reports)
+- Anpeilong 3-year financial trend chart (FY2023–FY2025): `anpeilong_3yr_chart.png` (built from PRC-GAAP consolidated statements in [FY2025](https://static.cninfo.com.cn/finalpage/2026-04-23/1224155244.PDF), [FY2024](https://static.cninfo.com.cn/finalpage/2025-04-24/1223477567.PDF), and [FY2023](https://static.cninfo.com.cn/finalpage/2024-04-21/1219860232.PDF) annual reports)
 
 ---
 
