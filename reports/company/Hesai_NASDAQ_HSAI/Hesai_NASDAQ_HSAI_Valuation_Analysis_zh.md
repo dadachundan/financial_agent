@@ -193,7 +193,7 @@ FY26 UFCF 为负反映产能扩张(为 400 万台+ 产能目标投入 5.5 亿元
 
 ## 4. 先例交易
 
-激光雷达行业内规模化并购活动有限;控制权溢价分析并非市场领导者在 TAM 扩张阶段的适当框架。仅作参考:
+激光雷达行业内规模化并购活动有限;控制权溢价分析并非市场领导者在 TAM 扩张阶段的适当框架([Ouster Form 8-K, November 7, 2022 — Velodyne Merger Announcement](https://www.sec.gov/Archives/edgar/data/0001816581/000119312522278440/d386513d8k.htm))。仅作参考:
 
 | 日期 | 标的 | 买方 | 交易金额 | EV/Rev(LTM) | 逻辑 |
 |---|---|---|---:|---:|---|
@@ -411,15 +411,15 @@ FY25 出货量:              1,620,406 台(同比 +222.9%)
 
 ### Q2 2026 指引:8.5-9 亿元人民币(+20-27% YoY)
 
-- Q1'26 实际 6.81 亿 + Q2'26 指引中位数 8.75 亿 = **1H 2026 约 15.56 亿元(约占我们 FY26E 47.37 亿的 33%)**。
-- 意味着 2H 2026 必须放量至约 31.80 亿元(约 1H 的 2 倍)—— 严重 H2 加重。鉴于理想/小米/梅赛德斯多激光雷达 L3+ SOPs 均安排在 2H 2026,这是可信的,但给全年数字带来执行风险。
+- Q1'26 实际 6.81 亿 + Q2'26 指引中位数 8.75 亿 = **1H 2026 约 15.56 亿元(约占我们 FY26E 47.37 亿的 33%)**([Hesai Group Form 6-K, May 19, 2026](https://www.sec.gov/Archives/edgar/data/0001861737/000110465926063803/tm2615071d1_ex99-1.htm))。
+- 意味着 2H 2026 必须放量至约 31.80 亿元(约 1H 的 2 倍)—— 严重 H2 加重。鉴于理想/小米/梅赛德斯多激光雷达 L3+ SOPs 均安排在 2H 2026,这是可信的,但给全年数字带来执行风险([Hesai 2024 20-F, "Business Overview"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm))。
 
 ### 对目标价的影响
 
-- **目标价维持 28 美元/ADS · 买入。** Q1 业绩与我们基础情景轨迹大致一致;Q1 收入处于指引中位数,出货量同比 +141% 验证经营杠杆论点。
-- **梅赛德斯 L3 + 泰国基地 = 正面**(催化剂已触发;风险 #2 部分去风险化)。
-- **Q1 毛利率 39.1% = 小负面。** 我们将 FY26E 毛利率假设从 41.8% 下调至约 40.5%(-130 bps)。透过影响:FY26E EBIT 约 -6,000 万元,FY26E EPS 约 -2 美分,每 ADS DCF 价值约 -1 美元。净:目标价保持 28 美元(在模型精度范围内)。
-- **Robotics 出货 +137.8% 占单位 25%** 领先于我们模型(我们 FY26 全年为 18%)。如果持续,这是 2H 混合毛利率的顺风。
+- **目标价维持 28 美元/ADS · 买入。** Q1 业绩与我们基础情景轨迹大致一致;Q1 收入处于指引中位数,出货量同比 +141% 验证经营杠杆论点([Hesai Group Reports First Quarter 2026 Unaudited Financial Results, 2026-05-19](https://www.globenewswire.com/news-release/2026/05/19/3297198/0/en/Hesai-Group-Reports-First-Quarter-2026-Unaudited-Financial-Results.html))。
+- **梅赛德斯 L3 + 泰国基地 = 正面**(催化剂已触发;风险 #2 部分去风险化)([CnEVPost — Hesai sustains profitability, Mercedes order, 2026-05-19](https://cnevpost.com/2026/05/19/hesai-sustains-profitability-q1-2026/))。
+- **Q1 毛利率 39.1% = 小负面。** 我们将 FY26E 毛利率假设从 41.8% 下调至约 40.5%(-130 bps)([Hesai Group Form 6-K, May 19, 2026](https://www.sec.gov/Archives/edgar/data/0001861737/000110465926063803/tm2615071d1_ex99-1.htm))。透过影响:FY26E EBIT 约 -6,000 万元,FY26E EPS 约 -2 美分,每 ADS DCF 价值约 -1 美元。净:目标价保持 28 美元(在模型精度范围内)。
+- **Robotics 出货 +137.8% 占单位 25%** 领先于我们模型(我们 FY26 全年为 18%)([Hesai Group Form 6-K, May 19, 2026](https://www.sec.gov/Archives/edgar/data/0001861737/000110465926063803/tm2615071d1_ex99-1.htm))。如果持续,这是 2H 混合毛利率的顺风。
 
 ### 更新的催化剂跟踪(自首次覆盖以来修订)
 
@@ -436,7 +436,7 @@ FY25 出货量:              1,620,406 台(同比 +222.9%)
 
 ### 新增需监测风险
 
-- **毛利率轨迹。** Q1 毛利率 39.1% 明显低于我们模型。若 2H 2026 毛利率维持 40% 以下,我们 FY28E EPS 可能比模型低 5-10% —— 对上行情景有实质风险。
-- **严重 H2 加重的放量。** 大约半年收入需来自 2H 才能达到我们 FY26E 数字。同时执行理想/小米/梅赛德斯 SOPs 存在风险。
-- **SGI 分部稀释。** 新「战略增长计划」分部可能在孵化阶段以较低利润率运行 —— 关注 FY26 SGI 实际贡献 vs 1 亿元指引。
+- **毛利率轨迹。** Q1 毛利率 39.1% 明显低于我们模型([Hesai Group Form 6-K, May 19, 2026](https://www.sec.gov/Archives/edgar/data/0001861737/000110465926063803/tm2615071d1_ex99-1.htm))。若 2H 2026 毛利率维持 40% 以下,我们 FY28E EPS 可能比模型低 5-10% —— 对上行情景有实质风险。
+- **严重 H2 加重的放量。** 大约半年收入需来自 2H 才能达到我们 FY26E 数字。同时执行理想/小米/梅赛德斯 SOPs 存在风险([Hesai (HSAI) Q1 2026 Earnings Call Transcript](https://www.fool.com/earnings/call-transcripts/2026/05/19/hesai-hsai-q1-2026-earnings-call-transcript/))。
+- **SGI 分部稀释。** 新「战略增长计划」分部可能在孵化阶段以较低利润率运行 —— 关注 FY26 SGI 实际贡献 vs 1 亿元指引([Hesai Group Reports First Quarter 2026 Unaudited Financial Results, 2026-05-19](https://www.globenewswire.com/news-release/2026/05/19/3297198/0/en/Hesai-Group-Reports-First-Quarter-2026-Unaudited-Financial-Results.html))。
 

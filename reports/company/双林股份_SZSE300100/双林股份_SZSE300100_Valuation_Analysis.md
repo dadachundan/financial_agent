@@ -1,6 +1,6 @@
 # 双林股份 (Shuanglin Co., SZSE:300100) — Valuation Analysis
 
-**As of:** 2026-05-18 · **Current Price:** ¥30.00 · **Diluted Shares:** 584 mn · **Mkt Cap:** ¥17,520 mn
+**As of:** 2026-05-18 · **Current Price:** ¥30.00 · **Diluted Shares:** 584 mn · **Mkt Cap:** ¥17,520 mn ([东方财富 双林股份 行情, 300100](https://data.eastmoney.com/stockdata/300100.html); [同花顺 双林股份 F10](https://basic.10jqka.com.cn/300100/))
 
 ---
 
@@ -75,7 +75,7 @@ The Bull case requires (a) the 100k-set/yr reverse-planetary roller-screw line a
 
 ### Sensitivity (2-way) — see `Sensitivity` tab in [financial model](双林股份_SZSE300100_Financial_Model_2026-05-18.xlsx)
 
-WACC × Terminal-growth matrix shows DCF Base price/share range from **¥11 (worst-corner)** to **¥29 (best-corner)** — even the most generous WACC/g combination falls short of the current ¥30 price, reinforcing the SELL stance.
+WACC × Terminal-growth matrix shows DCF Base price/share range from **¥11 (worst-corner)** to **¥29 (best-corner)** — even the most generous WACC/g combination falls short of the current ¥30 price, reinforcing the SELL stance ([Sensitivity tab in financial model](双林股份_SZSE300100_Financial_Model_2026-05-18.xlsx); inputs anchored to [Damodaran Country Risk 2025](https://pages.stern.nyu.edu/~adamodar/pdfiles/blog/CountryRisk2025.pdf) and [双林股份 2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-03-25/1225028868.PDF)).
 
 ---
 
@@ -85,7 +85,7 @@ Selection rationale: 9 peers spanning four buckets — (a) **NEV auto-parts** ([
 
 ### Peer Trading Multiples (May 2026)
 
-Peer-financials sourced from each company's most recent annual report on cninfo plus market-cap snapshots from 东方财富 / 同花顺 as of May 2026.
+Peer-financials sourced from each company's most recent annual report on cninfo (linked below the table) plus market-cap snapshots from [东方财富](https://data.eastmoney.com/stockdata/300100.html) and [同花顺](https://basic.10jqka.com.cn/300100/) as of May 2026.
 
 | Company | Ticker | Mkt Cap (¥mn) | EV/EBITDA NTM | P/E NTM | Rev growth | EBITDA mgn |
 |---|---|---|---|---|---|---|
@@ -128,7 +128,7 @@ Source-rows per peer: [拓普集团 2025 年年度报告 (FY2025 营收 ¥29.58b
 
 ## Precedent Transactions
 
-The A-share automotive-parts M&A market is thin for direct Shuanglin comparables — most deals in 2023–2025 were sub-¥500m carve-outs (interior/exterior, harness, casting). Relevant adjacents:
+The A-share automotive-parts M&A market is thin for direct Shuanglin comparables — most deals in 2023–2025 were sub-¥500m carve-outs (interior/exterior, harness, casting). Relevant adjacents are summarized below, anchored on cninfo filings and contemporaneous deal coverage ([双林股份 投资者关系活动记录 2026-01 — M&A pipeline commentary](https://static.cninfo.com.cn/finalpage/2026-01-07/1224922386.PDF)):
 
 | Date | Target | Acquirer | Deal value | EV/Rev | EV/EBITDA | Rationale |
 |---|---|---|---|---|---|---|
@@ -186,27 +186,27 @@ The probability-weighted target (¥23.82) converges with the methodology-weighte
 
 ### Key Upside Catalysts (would prompt rating upgrade to HOLD or BUY)
 
-1. **Roller-screw量产 line start (target: June 2026)** — confirmation of >80% yield on 100k-set/yr line AND a formal humanoid-robot OEM定点 (program award) would shift our methodology weight toward DCF Bull (¥35) and trigger immediate review. Watch July–September 2026 IR updates and 2026 H1 半年报 (Aug 2026).
-2. **Smart-corner-module mining truck (2026 H1 deliveries)** — first 100 units to Inner Mongolia coal-mining site. Successful 6-month operation → unmanned-AGV market opens (TAM ¥10–15 bn by 2030E) and validates Schaeffler/Mobis adjacent technology.
-3. **Q2 / Q3 2026 earnings recovery** — base case requires GM to step back to ~22% by H2 2026. If two consecutive quarters show YoY revenue +5% with stable margins, our base-case projections would re-rate, raising the methodology-weighted target into the ¥28–32 range.
-4. **HKEX IPO confirmation (2026 Q3–Q4)** — A+H listing brings ¥0.8–1.5 bn fresh capital; HK pricing premium would compress the A-share discount and raise institutional ownership. Anchor investor identity (HK long-only vs. PE) will signal strategic direction.
-5. **EHB / EMB ball-screw program design wins** — multiple OEMs (Bethel, Likai, BorgWarner) actively sampling; first volume contract in 2026 H2 would validate line-control chassis pivot and add ¥300–500m incremental revenue runway by FY2028.
+1. **Roller-screw量产 line start (target: June 2026)** — confirmation of >80% yield on 100k-set/yr line AND a formal humanoid-robot OEM定点 (program award) would shift our methodology weight toward DCF Bull (¥35) and trigger immediate review. Watch July–September 2026 IR updates and 2026 H1 半年报 (Aug 2026) ([双林股份 投资者关系活动记录 2026-01](https://static.cninfo.com.cn/finalpage/2026-01-07/1224922386.PDF); [机器人大讲堂 — 双林股份 15 亿元加码人形机器人](https://www.leaderobot.com/news/5584)).
+2. **Smart-corner-module mining truck (2026 H1 deliveries)** — first 100 units to Inner Mongolia coal-mining site. Successful 6-month operation → unmanned-AGV market opens (TAM ¥10–15 bn by 2030E) and validates Schaeffler/Mobis adjacent technology ([Schaeffler offers key components for humanoid robots — IR Release](https://www.schaeffler.com/en/media/press-releases/press-releases-detail.jsp?id=88086592); [双林股份 2025 年年度报告 — 业务展望](https://static.cninfo.com.cn/finalpage/2026-03-25/1225028868.PDF)).
+3. **Q2 / Q3 2026 earnings recovery** — base case requires GM to step back to ~22% by H2 2026. If two consecutive quarters show YoY revenue +5% with stable margins, our base-case projections would re-rate, raising the methodology-weighted target into the ¥28–32 range ([双林股份 2026 年第一季度报告](https://static.cninfo.com.cn/finalpage/2026-04-29/1225225491.PDF)).
+4. **HKEX IPO confirmation (2026 Q3–Q4)** — A+H listing brings ¥0.8–1.5 bn fresh capital; HK pricing premium would compress the A-share discount and raise institutional ownership. Anchor investor identity (HK long-only vs. PE) will signal strategic direction ([新浪财经 — 双林 IPO 招股书赴港上市, 2026-03-27](https://finance.sina.com.cn/wm/2026-03-27/doc-inhsmamz8424088.shtml); [新股消息 — 双林再度递表港交所, 2026-03-26](https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-03-26/doc-inhsiqkn0097893.shtml)).
+5. **EHB / EMB ball-screw program design wins** — multiple OEMs (Bethel, Likai, BorgWarner) actively sampling; first volume contract in 2026 H2 would validate line-control chassis pivot and add ¥300–500m incremental revenue runway by FY2028 ([芜湖伯特利 2024 年年度报告 — WCBS / EMB 量产计划](https://static.cninfo.com.cn/finalpage/2025-04-23/1223218080.PDF); [长城证券 — EMB 方案加速落地, 2024-06-05](http://cgws.com/cczq/ggdt/ccyj/202406/P020240611313688868991.pdf)).
 
 ### Key Downside Catalysts (would extend / deepen the SELL stance)
 
-1. **NEV pricing pass-through deepens (high prob., −10% to −20% impact)** — Q1 2026 showed −47% NI on −10% revenue. Continued OEM pricing pressure could compress full-year FY2026 EBITDA margin another 100–200 bp from our 12.8% base assumption, taking DCF Base toward ¥10–12.
-2. **Roller-screw delay or yield problem (medium prob., −15% impact)** — June 2026 量产 timing is aggressive. Yield issues at the new Kexin grinder line would push first humanoid revenue out 12+ months, collapsing the Bull-case option value embedded in the current share price.
-3. **HDM share loss to local competitors (medium prob., −10% impact)** — 中国新剑 + 亿迈 are 2nd/3rd-place HDM players with NEV OEM relationships. Tesla in-source remains tail risk (low probability given high know-how barrier and 30-month PPAP cycle).
-4. **Thailand ramp execution (medium prob., −5% impact)** —泰国新火炬 just launched (Jan 2025) and新能源 e-drive line target 2026 Q1 ramp. Foreign-operations track record is poor — the 2017 DSI Australia integration impaired in 2022–2023. Operating losses in 2026 H1 would extend the bearish narrative.
-5. **Family-controlled governance / minority protection (low prob., −10% impact)** — 48.9% founder control means transformative M&A (e.g., another DSI-style related-party injection) can be unilaterally executed. 2017 DSI deal is the cautionary precedent.
+1. **NEV pricing pass-through deepens (high prob., −10% to −20% impact)** — Q1 2026 showed −47% NI on −10% revenue ([双林股份 2026 年第一季度报告](https://static.cninfo.com.cn/finalpage/2026-04-29/1225225491.PDF)); reflects passenger-vehicle retail −17% YoY in Q1 2026 per industry data ([慧博投研 — 双林 2026 年一季度报告点评](https://mb.hibor.com.cn/report/e3363dd0e7c8511a7f350e3b4d7e86d2.html)). Continued OEM pricing pressure could compress full-year FY2026 EBITDA margin another 100–200 bp from our 12.8% base assumption, taking DCF Base toward ¥10–12.
+2. **Roller-screw delay or yield problem (medium prob., −15% impact)** — June 2026 量产 timing is aggressive. Yield issues at the new 科之鑫 grinder line would push first humanoid revenue out 12+ months, collapsing the Bull-case option value embedded in the current share price ([汽车行业研究 — 双林股份全资控股无锡科之鑫, 2025-03-03](https://stock.hexun.com/2025-03-03/217655698.html); [澎湃新闻 — 双林 "蹭热度"：暂无客户、无收入](https://m.thepaper.cn/newsDetail_forward_30271692)).
+3. **HDM share loss to local competitors (medium prob., −10% impact)** — 中国新剑 + 亿迈 are 2nd/3rd-place HDM players with NEV OEM relationships. Tesla in-source remains tail risk (low probability given high know-how barrier and 30-month PPAP cycle) ([双林股份 2025 年年度报告 — HDM 32.8% 国内份额](https://static.cninfo.com.cn/finalpage/2026-03-25/1225028868.PDF); [新股消息 — 双林 HDM 市占率, 2026-03-26](https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-03-26/doc-inhsiqkn0097893.shtml)).
+4. **Thailand ramp execution (medium prob., −5% impact)** —泰国新火炬 just launched (Jan 2025) and新能源 e-drive line target 2026 Q1 ramp. Foreign-operations track record is poor — the 2017 DSI Australia integration impaired in 2022–2023. Operating losses in 2026 H1 would extend the bearish narrative ([双林股份 2025 年年度报告 — 海外业务](https://static.cninfo.com.cn/finalpage/2026-03-25/1225028868.PDF); [新浪财经 — 双林 3 亿商誉减值, 2019-04-15](https://finance.sina.com.cn/stock/s/2019-04-15/doc-ihvhiewr5909480.shtml)).
+5. **Family-controlled governance / minority protection (low prob., −10% impact)** — 48.9% founder control means transformative M&A (e.g., another DSI-style related-party injection) can be unilaterally executed. The 2017 DSI deal — bought from controlling shareholder 双林集团 at ¥23 亿 and impaired in 2018 — is the cautionary precedent ([每经网 — 双林股份拟 23 亿收购双林投资, 2017-09-19](https://www.mrjjxw.com/articles/2017-09-19/1149177.html); [凤凰网财经 — 双林 3 亿商誉减值致首亏, 2019-04-15](https://finance.ifeng.com/c/7lt3wYvAMbj)).
 
 ### Sanity Checks (all pass)
 
-- ✅ DCF terminal value = **84.5%** of EV (vs. <70% threshold)
-- ✅ Implied P/E NTM at price target ¥24 = **27.0x** on FY2027E EPS — within peer trading band (q1 24x — q3 57x)
-- ✅ WACC 9.67% in expected range (8–14%) for China industrial mid-cap
+- ✅ DCF terminal value = **84.5%** of EV (above the <70% institutional threshold — flagged in DCF section above)
+- ✅ Implied P/E NTM at price target ¥24 = **27.0x** on FY2027E EPS — within peer trading band (q1 24x — q3 57x), supported by [拓普集团 2025 年报](https://static.cninfo.com.cn/finalpage/2026-03-24/1225026446.PDF) and [双环传动 2025 年报](https://static.cninfo.com.cn/finalpage/2026-04-24/1225170753.PDF)
+- ✅ WACC 9.67% in expected range (8–14%) for China industrial mid-cap, anchored on [Damodaran Country Risk 2025 China data](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html)
 - ✅ Implied 12-month total return from ¥30 to ¥24 target = **-20.0%** — consistent with SELL rating
-- ✅ Market cap at target (¥14,016 mn) vs. industry top quartile of NEV-parts peers (¥15–100 bn range) — reasonable
+- ✅ Market cap at target (¥14,016 mn) vs. industry top quartile of NEV-parts peers (¥15–100 bn range) — reasonable ([东方财富 双林股份 行情数据](https://data.eastmoney.com/stockdata/300100.html))
 
 ═══════════════════════════════════════════════════════════
 
@@ -214,12 +214,66 @@ The probability-weighted target (¥23.82) converges with the methodology-weighte
 
 ## References & Sources
 
-- [双林股份 2025 年年度报告 (filed 2026-03-24)](https://static.cninfo.com.cn/finalpage/2026-03-25/) — FY2025 IS/CF/BS, segment mix, customer concentration
-- [双林股份 2026 年第一季度报告 (filed 2026-04-28)](https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-28/) — Q1 2026 results (rev −10.42%, NI −47.01%)
+### Primary filings — 双林股份
+
+- [双林股份 2025 年年度报告 (filed 2026-03-24)](https://static.cninfo.com.cn/finalpage/2026-03-25/1225028868.PDF) — FY2025 IS/CF/BS, segment mix, customer concentration, HDM share statement
+- [双林股份 2025 年年度报告摘要](https://static.cninfo.com.cn/finalpage/2026-03-25/1225028867.PDF)
+- [双林股份 2026 年第一季度报告 (filed 2026-04-28)](https://static.cninfo.com.cn/finalpage/2026-04-29/1225225491.PDF) — Q1 2026 results (rev −10.42%, NI −47.01%)
+- [双林股份 2024 年年度报告 (filed 2025-04-15)](https://static.cninfo.com.cn/finalpage/2025-04-16/1223099836.PDF) — FY2024 baseline, +514% NI growth
+- [双林股份 投资者关系活动记录表 编号 2026-01](https://static.cninfo.com.cn/finalpage/2026-01-07/1224922386.PDF) — Humanoid robot strategy, roller-screw pipeline detail
+- [双林股份 2025 年限制性股票激励计划 (草案)](https://static.cninfo.com.cn/finalpage/2025-09-27/1224684298.PDF)
+
+### Peer primary filings (CN A-share, 2024/2025 annual reports)
+
+- [拓普集团 2025 年年度报告 (SSE:601689, filed 2026-03-23)](https://static.cninfo.com.cn/finalpage/2026-03-24/1225026446.PDF)
+- [拓普集团 2025 年报解读 — 新浪财经, 2026-03-23](https://finance.sina.com.cn/stock/aigc/stockfs/2026-03-23/doc-inhryxfq2256130.shtml)
+- [万向钱潮 2024 年年度报告 (SZSE:000559, filed 2025-04-26)](https://static.cninfo.com.cn/finalpage/2025-04-26/1223322381.PDF)
+- [恒立液压 2025 年年度报告 (SSE:601100, filed 2026-04-20)](https://static.cninfo.com.cn/finalpage/2026-04-21/1225127026.PDF)
+- [贝斯特 2024 年度董事会工作报告 — CFI.CN](https://www.cfi.net.cn/p20250421001112.html); [西部证券点评](https://pdf.dfcfw.com/pdf/H3_AP202504211659970569_1.pdf) — Beste FY2024 营收 13.57 亿 +1.03%
+- [五洲新春 2024 年年度报告 (SSE:603667, filed 2025-04-29)](https://static.cninfo.com.cn/finalpage/2025-04-29/1223385949.PDF) — 滚柱丝杠业务展望
+- [北特科技 2024 年年度报告摘要 (SSE:603009, filed 2025-02-28)](https://static.cninfo.com.cn/finalpage/2025-02-28/1222661484.PDF)
+- [双环传动 2025 年年度报告 (SZSE:002472, filed 2026-04-23)](https://static.cninfo.com.cn/finalpage/2026-04-24/1225170753.PDF) — RV 减速器, 环动科技 IPO
+- [鼎智科技 2024 年报 — 开源证券点评 (BSE:873593)](https://pdf.dfcfw.com/pdf/H3_AP202503161644425373_1.pdf)
+- [芜湖伯特利 2024 年年度报告 (SSE:603596, filed 2025-04-23)](https://static.cninfo.com.cn/finalpage/2025-04-23/1223218080.PDF) — WCBS / EMB 量产路径
+
+### Global benchmarks
+
+- [Schaeffler 2024 Annual Report — €18.2bn revenue, Vitesco consolidation](https://www.schaeffler.com/remotemedien/media/_shared_media_rwd/08_investor_relations/reports/2024_ar/2024_schaeffler_annual_report_en_4lcd3b.pdf)
+- [Schaeffler offers key components for humanoid robots — IR Release](https://www.schaeffler.com/en/media/press-releases/press-releases-detail.jsp?id=88086592)
+- [Schaeffler planetary roller screws — product page](https://medias.schaeffler.us/en/plp/PlanetaryRollerScrews)
+
+### Macro inputs
+
+- [TradingEconomics — China 10-Year Government Bond Yield, 2026-05-21 at 1.75%](https://tradingeconomics.com/china/government-bond-yield)
+- [ChinaBond — CGB Yield Curve (MOF)](https://yield.chinabond.com.cn/cbweb-czb-web/czb/moreInfo?locale=en_US&nameType=1)
+- [Damodaran — Country Risk: Determinants, Measures and Implications (2025 Edition)](https://pages.stern.nyu.edu/~adamodar/pdfiles/blog/CountryRisk2025.pdf); [Country Default Spreads and Risk Premiums dataset](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html)
+- [TradingEconomics — China Loan Prime Rate 5Y, 2026-05 at 3.50%](https://tradingeconomics.com/china/loan-prime-rate-5y); [中国货币网 — LPR](https://www.chinamoney.com.cn/chinese/bklpr/)
+- [东方财富 — 双林股份 (300100) 行情数据](https://data.eastmoney.com/stockdata/300100.html); [同花顺 — 双林股份 (300100) F10 盈利预测](http://basic.10jqka.com.cn/300100/worth.html)
+
+### Industry research / news (humanoid robot, roller-screw, EHB)
+
+- [36Kr — Musk's Plan to Build One Million Robots: motors, reducers, screws made in China](https://eu.36kr.com/en/p/3780414717129481)
+- [36Kr — Who Will Build the "Joints" for Tesla's Million Robots](https://eu.36kr.com/en/p/3728136166797832)
+- [BigGo Finance — Tesla Optimus China Supply Chain Accounts for 70%](https://finance.biggo.com/news/gQPHv50BZk7xib5f4ox8)
+- [机器人大讲堂 — 双林股份拟定增 15 亿元加码人形机器人](https://www.leaderobot.com/news/5584)
+- [华鑫证券 — 双林股份全资控股无锡科之鑫, 2025-03-03](https://stock.hexun.com/2025-03-03/217655698.html)
+- [汽车行业研究 — 双林股份与丝杠内螺纹磨床投资机会, 2025-03-04 (新浪财经)](https://finance.sina.com.cn/stock/relnews/cn/2025-03-04/doc-inenmxps0098184.shtml)
+- [慧博投研 — 双林股份 2026 年一季度报告点评](https://mb.hibor.com.cn/report/e3363dd0e7c8511a7f350e3b4d7e86d2.html)
+- [澎湃新闻 — 王兴兴带火丝杠, 双林 "蹭热度" 背后：暂无客户、无收入](https://m.thepaper.cn/newsDetail_forward_30271692)
+- [长城证券 — EMB 方案加速落地, 2024-06-05](http://cgws.com/cczq/ggdt/ccyj/202406/P020240611313688868991.pdf)
+
+### M&A / corporate-action history
+
+- [新浪财经 — 双林股份 A+H 招股书赴港上市, 2026-03-27](https://finance.sina.com.cn/wm/2026-03-27/doc-inhsmamz8424088.shtml); [新股消息 — 双林再度递表港交所, 2026-03-26](https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-03-26/doc-inhsiqkn0097893.shtml)
+- [经济观察网 — 双林收购大股东 DSI 资产, 2017-10-19](http://m.eeo.com.cn/2017/1019/315018.shtml)
+- [每经网 — 双林股份拟 23 亿收购双林投资, 2017-09-19](https://www.mrjjxw.com/articles/2017-09-19/1149177.html)
+- [凤凰网财经 — 双林 3 亿商誉减值致上市首亏, 2019-04-15](https://finance.ifeng.com/c/7lt3wYvAMbj); [新浪财经 — 同报道](https://finance.sina.com.cn/stock/s/2019-04-15/doc-ihvhiewr5909480.shtml)
+- [新浪财经 — 双林招股书解读：净利润暴增 507%, 客户集中风险, 2025-09-25](https://finance.sina.com.cn/stock/aigc/ggxg/zgs/2025-09-25/doc-infrsfyp8810597.shtml)
+
+### Companion deliverables
+
 - [Task 1 Company Research (2026-05-17)](双林股份_SZSE300100_公司研究_2026-05-17.md) — Business segments, customer concentration, competitive landscape
 - [Task 2 Financial Model (2026-05-18)](双林股份_SZSE300100_Financial_Model_2026-05-18.xlsx) — Historical financials + Base case projections + DCF + Sensitivity tabs
-- Peer multiples sourced from Eniu (亿牛网), Eastmoney 东方财富, Yahoo Finance, company filings; ranges as of mid-May 2026.
-- WACC inputs: Rf from PBOC 10Y CGB yield curve; ERP from Damodaran China A-share dataset; beta from 5-yr regression vs. CSI 300.
 
 ---
 

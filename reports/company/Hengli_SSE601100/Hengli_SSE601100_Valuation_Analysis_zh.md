@@ -249,6 +249,66 @@
 
 ---
 
+## 参考文献
+
+### 一手资料 (公司公告/年报)
+- [江苏恒立液压股份有限公司2025年年度报告, 2026-04-20](http://static.cninfo.com.cn/finalpage/2026-04-21/1225127026.PDF)
+- [江苏恒立液压股份有限公司2025年年度报告摘要, 2026-04-20](http://static.cninfo.com.cn/finalpage/2026-04-21/1225126995.PDF)
+- [江苏恒立液压股份有限公司2026年第一季度报告, 2026-04-27](http://static.cninfo.com.cn/finalpage/2026-04-28/1225204109.PDF)
+- [江苏恒立液压股份有限公司2025年第三季度报告, 2025-10-27](http://static.cninfo.com.cn/finalpage/2025-10-28/1224741339.PDF)
+- [江苏恒立液压股份有限公司2025年半年度报告, 2025-08-25](http://static.cninfo.com.cn/finalpage/2025-08-26/1224567720.PDF)
+- [江苏恒立液压股份有限公司2024年年度报告, 2025-04-28](http://static.cninfo.com.cn/finalpage/2025-04-29/1223384610.PDF)
+- [江苏恒立液压股份有限公司2023年年度报告, 2024-04-22](http://static.cninfo.com.cn/finalpage/2024-04-23/1219748041.PDF)
+- [烟台艾迪精密机械股份有限公司2024年年度报告](http://static.cninfo.com.cn/finalpage/2025-04-30/1223416394.PDF)
+- [烟台艾迪精密 2025年半年度报告](https://stockmc.xueqiu.com/202508/603638_20250830_6QFW.pdf)
+- [Parker-Hannifin Annual Report 2025](https://investors.parker.com/sec-filings/annual-reports/content/0000076334-25-000042/0000076334-25-000042.pdf)
+
+### 估值锚点 (宏观/同行倍数)
+- [财政部-中国国债收益率曲线, ChinaBond](https://yield.chinabond.com.cn/cbweb-czb-web/czb/moreInfo?locale=cn_ZH&nameType=1)
+- [Damodaran Country Default Spreads and Risk Premiums, 2026-01](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html)
+- [Damodaran Data for current year, 2026](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html)
+- [基本面 F10, 同花顺 601100](https://basic.10jqka.com.cn/601100/)
+- [恒立液压(601100) 盈利预测_F10_同花顺金融服务网](https://basic.10jqka.com.cn/601100/worth.html)
+- [恒立液压 PE/PB/股息率历史分位, legulegu.com](https://legulegu.com/s/601100)
+- [恒立液压历史市盈率分位数, 知了财报](https://www.zhiliaocaibao.com/gz_pe/601100_%E6%81%92%E7%AB%8B%E6%B6%B2%E5%8E%8B_9/)
+- [Parker Hannifin PE Ratio, Gurufocus 2026](https://www.gurufocus.com/term/pe-ratio/PH)
+- [Eaton ETN PE TTM, Gurufocus 2026](https://www.gurufocus.com/term/pettm/ETN)
+- [Schaeffler valuation, MarketScreener 2026](https://www.marketscreener.com/quote/stock/SCHAEFFLER-AG-120796717/valuation/)
+- [Schaeffler PitchBook profile 2026](https://pitchbook.com/profiles/company/510603-67)
+- [拓普集团 morningstar quote](https://www.morningstar.com/stocks/xshg/601689/quote)
+
+### 行业数据/研报
+- [2026年3月挖掘机销售同比增长26.4%, 中国液压气动密封件工业协会](https://00867g.npoall.com/news/itemid-251150.html)
+- [2026年1月中国挖掘机销量18708台,同比增长49.5%, 我的钢铁网 2026-02](https://m.mysteel.com/a/26020720/F0578BABE0D6E1EB_abc.html)
+- [挖掘机量价齐涨 工程机械行业景气度攀升, 新浪财经 2026-05-12](https://finance.sina.com.cn/roll/2026-05-12/doc-inhxqknz0182627.shtml)
+- [恒立液压三季报点评:Q3归母净利润同比+31%, 东海证券 2025-10-28](https://pdf.dfcfw.com/pdf/H3_AP202510281770845046_1.pdf)
+- [恒立液压: 人形机器人产业化提速,线性驱动有望构建新成长极, 小牛行研 2025](https://www.hangyan.co/reports/3575833783452042682)
+- [恒立液压: 公司信息更新报告:线性驱动项目投产顺利, 小牛行研 2025](https://www.hangyan.co/reports/3571243485287679827)
+- [恒立液压: 公司首次覆盖报告:深度复盘十倍之路, 小牛行研](https://www.hangyan.co/reports/3483460038423480050)
+- [恒立液压: 线性驱动器项目批量生产, 小牛行研 2025](https://www.hangyan.co/reports/3624816430140097895)
+- [国投证券: 业绩稳健增长, 稀缺性和成长性, 发现报告](https://www.fxbaogao.com/detail/4570643)
+- [Mapping the Humanoid Robot Value Chain — The Humanoid 100, Morgan Stanley 2025](https://advisor.morganstanley.com/john.howard/documents/field/j/jo/john-howard/The_Humanoid_100_-_Mapping_the_Humanoid_Robot_Value_Chain.pdf)
+- [Miniature Planetary Roller Screws Focus on Humanoid Robot Actuators, KGG news 2025](https://www.kggfa.com/news/miniature-planetary-roller-screw-focus-on-humanoid-robot-actuators/)
+
+### 新闻与产业评论
+- [恒立液压:勇立潮头,线性驱动再造新恒立, 慧聪 2025-03-28](https://cm.hczyw.com/2025/0328/357974.html)
+- [恒立液压:工程机械"养家",机器人丝杠"冒险", 新浪财经 2025-10-13](https://finance.sina.com.cn/roll/2025-10-13/doc-infttsyh8313235.shtml)
+- [恒立液压:成为线性运动核心部件领先供应商, 新浪 2025-01-17](https://finance.sina.com.cn/stock/relnews/cn/2025-01-17/doc-inefhmfa3267798.shtml)
+- [液压件复苏叠加机器人丝杠推进,控股股东为何高位减持, 新浪财经 2025-11-04](https://finance.sina.com.cn/stock/relnews/cn/2025-11-04/doc-infwftut5229540.shtml)
+- [卡特彼勒和供应商恒立的"油缸情缘", 第一工程机械网 2020-12-25](https://news.d1cm.com/20201225122650.shtml)
+- [液压件龙头恒立液压定增结果出炉, 华西证券 2022](https://m.hx168.com.cn/article/40e52f51a1e82d2d952ae0affcf8d8a1.html)
+- [22家机构抢筹! 800亿龙头股定增揭晓, 证券时报 2022](http://www.stcn.com/article/detail/764284.html)
+- [双林股份披露人形机器人业务新进展, 21经济网 2025-04-21](http://www.21jingji.com/article/20250421/herald/283412127c64a5c76bac90347b8b9df8.html)
+- [人形机器人量产和商业化元年,谁能成赢家?, 21经济网 2025-09-03](https://www.21jingji.com/article/20250903/herald/e9db7a5cda822587ec094dd18e0e26ca.html)
+- [2025年人形机器人本体厂商营收狂奔, 搜狐 2025](https://www.sohu.com/a/1019040350_115362)
+- [国产液压系统龙头恒立液压, 知乎 2023](https://zhuanlan.zhihu.com/p/620217075)
+- [拓普集团 26Q1 收入保持增长, Futubull 2026](https://news.futunn.com/en/post/72749346/tuopu-group-601689-revenue-growth-maintained-in-q1-2026-with)
+- [艾迪精密 2025年年报, 新浪财经 2026-04-22](https://finance.sina.com.cn/jjxw/2026-04-22/doc-inhvitah5647045.shtml)
+- [CAMAL Group: Chinese construction equipment manufacturers: Hengli 2025](https://camaltd.com/hengli/)
+- [Bosch Rexroth Drive & Control](https://www.boschrexroth.com/en/dc/our-company/about-us)
+
+---
+
 **配套文件:**
 - `Hengli_SSE601100_Financial_Model_2026-05-19.xlsx` (任务2 + 任务3估值标签页)
   - 标签页 **DCF**:完整贴现现金流构建

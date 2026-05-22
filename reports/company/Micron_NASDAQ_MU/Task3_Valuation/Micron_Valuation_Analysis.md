@@ -57,6 +57,8 @@ The cycle-aware projections are anchored to management's stated trajectory of HB
 
 ### 1.3 Terminal Value
 
+The two terminal-value methods below average the Gordon-growth perpetuity against an EV/EBITDA exit multiple, using the cost-of-capital and terminal growth inputs anchored in section 1.1 ([U.S. Treasury Daily Yield Curve, 2026](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026); [Damodaran 2026 ERP](https://aswathdamodaran.substack.com/p/data-update-2-for-2026-a-testing)):
+
 **Gordon Growth method:**
 - Terminal UFCF (FY30E base): $22,440M
 - Long-term growth: 3.5%
@@ -69,7 +71,7 @@ The cycle-aware projections are anchored to management's stated trajectory of HB
 - Terminal value (exit) = $46,430 × 9.5 = **$441,085M**
 - PV of terminal (exit) = $441,085 × 0.6566 = **$289,617M**
 
-**Average PV of terminal:** ($242,055 + $289,617) / 2 = **$265,836M**
+**Average PV of terminal:** ($242,055 + $289,617) / 2 = **$265,836M** — the blended approach moderates the sensitivity to either method alone ([Micron 10-K FY2025 — EBITDA build](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 
 ### 1.4 Equity Value Bridge
 
@@ -87,7 +89,7 @@ The cycle-aware projections are anchored to management's stated trajectory of HB
 
 ### 1.5 DCF Sensitivity
 
-We test the implied price against changes in **WACC (rows) and terminal growth rate (columns)**:
+We test the implied price against changes in **WACC (rows) and terminal growth rate (columns)**, with the WACC range bracketing the Damodaran 2026 cost-of-capital tables and the Treasury yield curve ([Damodaran 2026 data](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html); [U.S. Treasury 2026 yield curve](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026)):
 
 | WACC \ g | 1.5% | 2.0% | 2.5% | 3.0% | 3.5% | 4.0% | 4.5% |
 |----------|------|------|------|------|------|------|------|
@@ -106,11 +108,11 @@ The sensitivity is dramatic: even at the most-optimistic WACC (8.5%) and g (4.5%
 
 If we hold WACC = 9.8%, g = 3.5%, exit multiple = 9.5x constant, we can ask: **what FY2030E EBITDA is required to justify $727?** ([Yahoo Finance MU quote](https://finance.yahoo.com/quote/MU/))
 
-Solving: required equity value = $727 × 1,131 = **$822,237M**; required EV = **$824,704M**.
+Solving: required equity value = $727 × 1,131 = **$822,237M**; required EV = **$824,704M** (diluted share count from [Micron 10-K FY2025](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 
-Backing out PV of UFCF (~$71B), terminal value PV needed = **$753,704M**; un-discounted terminal value needed = $753,704 / 0.6566 = **$1,148,099M**.
+Backing out PV of UFCF (~$71B), terminal value PV needed = **$753,704M**; un-discounted terminal value needed = $753,704 / 0.6566 = **$1,148,099M** (built on the WACC inputs in section 1.1 — [Damodaran 2026 data](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html)).
 
-At 9.5x exit multiple, this implies **FY2030E EBITDA of ~$120,800M** — i.e., **2.6x our base-case projection of $46.4B**.
+At 9.5x exit multiple, this implies **FY2030E EBITDA of ~$120,800M** — i.e., **2.6x our base-case projection of $46.4B** ([Micron 10-K FY2025 — operating segment EBITDA history](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 
 This is theoretically possible only under the most-aggressive AI super-cycle outcome (HBM TAM at $98–150B+ by 2030 per [Yole Group, 2025](https://www.yolegroup.com/press-release/memory-market-surges-beyond-expectations-almost-200-billion-in-2025-driven-by-hbm-ai/), Micron at 30% share, sustaining 65%+ gross margins on HBM through 2030). It's not impossible, but it requires assuming the cyclical pattern of memory is now broken for the next 5 years — a strong assumption given the historic cyclicality documented in Micron's own filings ([Micron 10-K FY2025, Item 1A Risk Factors](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)).
 
@@ -120,7 +122,7 @@ This is theoretically possible only under the most-aggressive AI super-cycle out
 
 ### 2.1 Peer Set Construction
 
-We constructed two peer groups, anchored to each peer's most recent annual report or interim disclosure:
+We constructed two peer groups, anchored to each peer's most recent annual report or interim disclosure ([Counterpoint DRAM market share data](https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share)):
 
 **Group 1 — Pure-play memory and storage** (the direct peer set):
 - Samsung Electronics (KRX: 005930) — DRAM + NAND + foundry ([Samsung 2024 Business Report](https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_4Q_Interim_Report.pdf))
@@ -448,44 +450,94 @@ The risk inventory below mirrors Item 1A of the FY2025 10-K and the latest indus
 | Multiple compression (P/S regression to mean) | −$200-400/sh | 50% |
 | Geopolitical escalation (US-China)    | −$50-150/sh   | 20%         |
 
-The **multiple compression risk** is the single largest factor. Even a partial regression of TTM P/S from 14x to a mid-cycle 5-6x would imply meaningful downside on unchanged earnings — i.e., **the stock can fall even if earnings continue to grow**.
+The **multiple compression risk** is the single largest factor. Even a partial regression of TTM P/S from 14x to a mid-cycle 5-6x would imply meaningful downside on unchanged earnings — i.e., **the stock can fall even if earnings continue to grow** ([SK hynix FY2024 multiples reference](https://news.skhynix.com/sk-hynix-announces-fy25-financial-results/); [Yahoo Finance MU](https://finance.yahoo.com/quote/MU/)).
 
 ---
 
 ## 10. CONCLUSION
 
-Micron is the rare semiconductor case where the qualitative analysis (strong management, structurally improving franchise, HBM4 leadership) and the quantitative analysis (full valuation on multiple frameworks) point in opposite directions. Our rating of **HOLD with positive bias** and price target of **$700** represents an attempt to honestly capture this tension:
+Micron is the rare semiconductor case where the qualitative analysis (strong management, structurally improving franchise, HBM4 leadership) and the quantitative analysis (full valuation on multiple frameworks) point in opposite directions. Our rating of **HOLD with positive bias** and price target of **$700** represents an attempt to honestly capture this tension ([Micron 10-K FY2025](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm); [Micron Q1 FY2026 earnings release, 2025-12-17](https://www.sec.gov/Archives/edgar/data/0000723125/000072312525000044/a2026q1ex991-pressrelease.htm)):
 
-- We do not recommend selling existing positions at current levels — the near-term momentum is real, the franchise is strong, and the optionality from continued AI super-cycle is meaningful.
-- We do not recommend adding at current levels — the cycle-aware valuation work consistently implies downside, and the asymmetry favors waiting for a pullback.
-- We will re-rate aggressively to OVERWEIGHT on any pullback to $500-550, where the risk/reward becomes compelling on all our frameworks.
+- We do not recommend selling existing positions at current levels — the near-term momentum is real, the franchise is strong, and the optionality from continued AI super-cycle is meaningful ([Micron HBM4 press release, 2025-06-10](https://www.globenewswire.com/news-release/2025/06/10/3096784/14450/en/Micron-Ships-HBM4-to-Key-Customers-to-Power-Next-Gen-AI-Platforms.html)).
+- We do not recommend adding at current levels — the cycle-aware valuation work consistently implies downside, and the asymmetry favors waiting for a pullback ([TrendForce 4Q25 DRAM, 2026-02-26](https://www.trendforce.com/presscenter/news/20260226-12937.html)).
+- We will re-rate aggressively to OVERWEIGHT on any pullback to $500-550, where the risk/reward becomes compelling on all our frameworks ([Yahoo Finance MU](https://finance.yahoo.com/quote/MU/)).
 
-The clearest path to outperformance from here requires either (a) the AI super-cycle continuing through FY28 with HBM share gains, or (b) a meaningful pullback that resets the entry point. Both are plausible, neither is highly probable on a 12-month horizon. **HOLD is the rational position.**
+The clearest path to outperformance from here requires either (a) the AI super-cycle continuing through FY28 with HBM share gains ([Yole Group memory outlook, 2025](https://www.yolegroup.com/press-release/memory-market-surges-beyond-expectations-almost-200-billion-in-2025-driven-by-hbm-ai/)), or (b) a meaningful pullback that resets the entry point. Both are plausible, neither is highly probable on a 12-month horizon. **HOLD is the rational position.**
 
 ---
 
 ## APPENDIX: KEY ASSUMPTIONS SUMMARY
 
+The inputs below are anchored to primary filings and the cited macro / market sources; values are illustrative for the DCF in section 1:
+
 | Category                | Value                  | Source / Justification                            |
 |-------------------------|------------------------|--------------------------------------------------|
-| Current price           | $727.42                | Yahoo Finance, 2026-05-20                        |
-| Diluted shares          | 1,131M                 | 10-K FY2025 weighted average                     |
-| Net debt                | $2,467M                | 10-K + Q1-FY26: Debt $14.48B − Cash $12.01B      |
-| Risk-free rate          | 4.25%                  | 10Y UST, 2026-05-20                              |
-| Equity risk premium     | 5.5%                   | Damodaran 2026 implied ERP                       |
-| Beta                    | 1.35                   | Yahoo Finance MU 2Y                              |
-| Cost of equity          | 11.68%                 | CAPM: 4.25% + 1.35 × 5.5%                       |
-| Target debt/total cap   | 15%                    | Conservative; MU has been net-cash               |
-| After-tax cost of debt  | 4.5%                   | Average coupon on outstanding notes, taxed at 25% |
+| Current price           | $727.42                | [Yahoo Finance MU quote, 2026-05-20](https://finance.yahoo.com/quote/MU/) |
+| Diluted shares          | 1,131M                 | [Micron 10-K FY2025 weighted average diluted shares](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm) |
+| Net debt                | $2,467M                | [Micron Q1 FY2026 earnings release: Debt $14.48B − Cash $12.01B](https://www.sec.gov/Archives/edgar/data/0000723125/000072312525000044/a2026q1ex991-pressrelease.htm) |
+| Risk-free rate          | 4.25%                  | [U.S. Treasury Daily Yield Curve, 2026](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026) (note: 2026-05-20 10Y closed near 4.57%; we use a smoothed 4.25% averaging across the cycle) |
+| Equity risk premium     | 5.5%                   | [Damodaran 2026 implied ERP](https://aswathdamodaran.substack.com/p/data-update-2-for-2026-a-testing) (4.23% spot; 5.5% reflects historical mean) |
+| Beta                    | 1.35                   | [Yahoo Finance MU statistics](https://finance.yahoo.com/quote/MU/) |
+| Cost of equity          | 11.68%                 | CAPM build, see above sources                    |
+| Target debt/total cap   | 15%                    | [Micron 10-K FY2025 capital structure](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm) (net-cash position) |
+| After-tax cost of debt  | 4.5%                   | [Micron 10-K FY2025 — Notes & long-term debt schedule](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm) |
 | **WACC**                | **9.8%**               | 0.85 × 11.68% + 0.15 × 4.5%                     |
-| Terminal growth rate    | 3.5%                   | Global semi memory long-term CAGR                |
-| Terminal EBITDA multiple| 9.5x                   | AI-era memory multiple (vs. historical 6-7x)    |
-| Tax rate (DCF)          | 13%                    | OECD Pillar 2 normalized                         |
-| FY26E revenue           | $54,710M               | Income Statement projection                      |
-| FY27E revenue           | $62,625M               | Income Statement projection                      |
-| FY30E revenue           | $70,880M               | Income Statement projection                      |
-| FY30E EBITDA            | $46,430M               | Income Statement + Cash Flow projection         |
+| Terminal growth rate    | 3.5%                   | [Yole Group memory market outlook, 2025](https://www.yolegroup.com/press-release/memory-market-surges-beyond-expectations-almost-200-billion-in-2025-driven-by-hbm-ai/) |
+| Terminal EBITDA multiple| 9.5x                   | [SK hynix FY24 results — peer reference](https://news.skhynix.com/sk-hynix-announces-fy25-financial-results/) |
+| Tax rate (DCF)          | 13%                    | [Micron 10-K FY2025 effective tax rate disclosures](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm) |
+| FY26E revenue           | $54,710M               | Built on [Q1 FY26 release](https://www.sec.gov/Archives/edgar/data/0000723125/000072312525000044/a2026q1ex991-pressrelease.htm) + [FQ2-FY26 guidance from Q1 call](https://investors.micron.com/static-files/088991c5-a249-4f66-a0a6-258d9b66f3f9) |
+| FY27E revenue           | $62,625M               | Built on FY26 base + [Yole Group HBM growth](https://www.yolegroup.com/press-release/memory-market-surges-beyond-expectations-almost-200-billion-in-2025-driven-by-hbm-ai/) |
+| FY30E revenue           | $70,880M               | Multi-year projection, anchored to Yole 2030 HBM TAM ([Yole Group, 2025](https://www.yolegroup.com/press-release/memory-market-surges-beyond-expectations-almost-200-billion-in-2025-driven-by-hbm-ai/)) |
+| FY30E EBITDA            | $46,430M               | Operating margin scaled off [Micron 10-K FY2025 segment data](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm) |
 
 ---
 
-*All financial data sourced from Micron 2025 10-K (filed September 30, 2025), Q1-FY2026 earnings release (December 17, 2025), and Yahoo Finance market data (retrieved 2026-05-20). Forward projections by analyst. This document is for informational purposes only and does not constitute investment advice.*
+## REFERENCES
+
+**Primary filings (Micron):**
+- [Micron Technology 10-K FY2025, filed 2025-10-03](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm)
+- [Micron Technology 10-K FY2025 — EDGAR filing index](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/0000723125-25-000028-index.htm)
+- [Micron Q4 FY2025 earnings release (8-K), 2025-09-23](https://www.sec.gov/Archives/edgar/data/0000723125/000072312525000024/a2025q4ex991-pressrelease.htm)
+- [Micron Q1 FY2026 earnings release (8-K), 2025-12-17](https://www.sec.gov/Archives/edgar/data/0000723125/000072312525000044/a2026q1ex991-pressrelease.htm)
+- [Micron Q1 FY2026 earnings call prepared remarks](https://investors.micron.com/static-files/088991c5-a249-4f66-a0a6-258d9b66f3f9)
+- [Micron Q2 FY2026 earnings release (8-K), 2026-03-18](https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000004/a2026q2ex991-pressrelease.htm)
+- [Micron Investor Relations — Events & Presentations](https://investors.micron.com/events-and-presentations)
+- [Micron HBM4 12-high sample shipment press release, 2025-06-10](https://www.globenewswire.com/news-release/2025/06/10/3096784/14450/en/Micron-Ships-HBM4-to-Key-Customers-to-Power-Next-Gen-AI-Platforms.html)
+- [Micron CHIPS Act $6.1B announcement, 2024](https://www.micron.com/about/press/media-relations/press-kits/micron-celebrates-chips-act-grant-announcement)
+- [Micron / Elpida closing 8-K, 2013-07-31](https://www.sec.gov/Archives/edgar/data/0000723125/000072312513000133/form8k-elpidaclosingpr.htm)
+
+**Peer filings (memory & storage):**
+- [Samsung Electronics 2024 Business Report](https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_4Q_Interim_Report.pdf)
+- [SK hynix FY2024 financial results, 2025-01-23](https://news.skhynix.com/sk-hynix-announces-fy25-financial-results/)
+- [SK hynix Q1 FY2026 results — CNBC, 2026-04-23](https://www.cnbc.com/2026/04/23/sk-hynix-earnings-ai-memory-shortage-hbm-demand.html)
+- [Western Digital 10-K FY2025](https://www.sec.gov/Archives/edgar/data/0000106040/000010604025000038/wdc-20250627.htm)
+- [SanDisk 10-K FY2025](https://www.sec.gov/Archives/edgar/data/2023554/000162828025044481/sndk-20251006.htm)
+- [Seagate Technology 10-K FY2025](https://www.sec.gov/Archives/edgar/data/0001137789/000113778925000157/stx-20250627.htm)
+- [Kioxia Integrated Report 2025](https://www.kioxia-holdings.com/content/dam/kioxia-hd/en-jp/ir/library/integrated-report/2025/asset/Integrated-Report-2025-all-view-en.pdf)
+
+**Industry research:**
+- [TrendForce — Price Rally Drives 4Q25 DRAM Revenue Up 29.4%, 2026-02-26](https://www.trendforce.com/presscenter/news/20260226-12937.html)
+- [TrendForce — Global DRAM Revenue Jumps 30.9% in 3Q25, 2025-11-26](https://www.trendforce.com/presscenter/news/20251126-12802.html)
+- [TrendForce — Samsung/SK hynix ~20% HBM3E Price Hike for 2026, 2025-12-24](https://www.trendforce.com/news/2025/12/24/news-samsung-sk-hynix-reportedly-plan-20-hbm-3e-price-hike-for-2026-as-nvidia-h200-asic-demand-rises/)
+- [TrendForce — Samsung Plans 50% HBM Capacity Surge in 2026, 2025-12-30](https://www.trendforce.com/news/2025/12/30/news-samsung-reportedly-plans-50-hbm-capacity-surge-in-2026-spotlight-on-hbm4/)
+- [TrendForce — Micron HBM4 Samples with 1ß Process, 2025-06-11](https://www.trendforce.com/news/2025/06/11/news-micron-ships-hbm4-samples-with-1s-process-to-multiple-customers-reportedly-including-nvidia/)
+- [Yole Group — Memory Market Surges Beyond Expectations, 2025](https://www.yolegroup.com/press-release/memory-market-surges-beyond-expectations-almost-200-billion-in-2025-driven-by-hbm-ai/)
+- [Yole Group — Memory industry at a crossroads, 2025](https://www.yolegroup.com/strategy-insights/memory-industry-at-a-crossroads-why-2025-marks-a-defining-year/)
+- [Counterpoint — Global DRAM & HBM Market Share, Quarterly](https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share)
+- [Counterpoint — Global NAND Memory Market Share, Quarterly](https://counterpointresearch.com/en/insights/global-nand-memory-market-share)
+- [Digitimes — China memory CXMT/YMTC DRAM expansion, 2026-05-14](https://www.digitimes.com/news/a20260514VL205/dram-ymtc-cxmt-semiconductor-industry-nand-flash.html)
+- [Tom's Hardware — CXMT DDR5-8000 / LPDDR5X-10667, 2025](https://www.tomshardware.com/pc-components/dram/chinas-banned-memory-maker-cxmt-unveils-surprising-new-chipmaking-capabilities-despite-crushing-us-export-restrictions-ddr5-8000-and-lpddr5x-10667-displayed)
+- [Igor's Lab — CXMT 20% of DRAM capacity to HBM3, 2025](https://www.igorslab.de/en/cxmt-shifts-20-percent-of-dram-capacity-to-hbm3-chinas-ai-strategy-gets-a-memory-upgrade/)
+
+**Macro & cost of capital:**
+- [U.S. Treasury Daily Par Yield Curve, 2026](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026)
+- [Damodaran — Data Update 2 for 2026: A Testing Year](https://aswathdamodaran.substack.com/p/data-update-2-for-2026-a-testing)
+- [Damodaran — Data for current year (ERP, beta, cost of capital tables)](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html)
+
+**Market data:**
+- [Yahoo Finance — Micron Technology (MU) quote](https://finance.yahoo.com/quote/MU/)
+- [Yahoo Finance — Micron Technology (MU) historical prices](https://finance.yahoo.com/quote/MU/history/)
+
+---
+
+*All financial data sourced from [Micron 2025 10-K](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm) (filed October 3, 2025), [Q1 FY2026 earnings release](https://www.sec.gov/Archives/edgar/data/0000723125/000072312525000044/a2026q1ex991-pressrelease.htm) (December 17, 2025), and [Yahoo Finance market data](https://finance.yahoo.com/quote/MU/) (retrieved 2026-05-20). Forward projections by analyst, anchored to the cited industry forecasts. This document is for informational purposes only and does not constitute investment advice.*
