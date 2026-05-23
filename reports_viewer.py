@@ -73,6 +73,7 @@ _MARKER_TO_LABEL = {
     "Research_Document":  "Research_Document",
     "Valuation_Analysis": "Valuation_Analysis",
     "Initiation_Report":  "Initiation_Report",
+    "ETF简报":             "ETF_Brief",
     "公司研究":            "Research_Document",
     "研究报告":            "Research_Document",
 }
@@ -227,6 +228,10 @@ def _scan() -> list[dict]:
         rel = p.relative_to(REPORTS_DIR)
         if rel.parts and rel.parts[0] == "charts":
             continue
+        # Skip meta/template files at the reports/ root (e.g.
+        # _backfill_agent_template.md) — they're not actual reports.
+        if len(rel.parts) == 1 and rel.parts[0].startswith("_"):
+            continue
         meta = _parse(rel)
         st = p.stat()
         ts = getattr(st, "st_birthtime", st.st_mtime)
@@ -251,6 +256,10 @@ def _scan() -> list[dict]:
     for p in REPORTS_DIR.rglob("*.docx"):
         rel = p.relative_to(REPORTS_DIR)
         if rel.parts and rel.parts[0] == "charts":
+            continue
+        # Skip meta/template files at the reports/ root (e.g.
+        # _backfill_agent_template.md) — they're not actual reports.
+        if len(rel.parts) == 1 and rel.parts[0].startswith("_"):
             continue
         meta = _parse_docx(rel)
         st = p.stat()
