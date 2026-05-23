@@ -80,6 +80,4 @@ See [debate methodology](../../../references/debate_methodology.md) for addition
 
 ## Persist output
 
-After producing the transcript, write it to `<company-folder>/trading/<TRADE-DATE>/bull-bear-debate.md` using the Write tool. `<TICKER>` is uppercased; `<TRADE-DATE>` is `YYYY-MM-DD`. Parent directories are created automatically. Consumed by [[trading-analysis]] when assembling `full_report.md`.
-
-Resolve `<company-folder>` per [`output_path.md`](../../../references/output_path.md): glob `reports/company/*_<TICKER>/` and pick the most-recently-modified match; fall back to `reports/company/<TICKER>/` if none exists.
+Write the transcript to `<company-folder>/trading/<TRADE-DATE>/bull-bear-debate.md` — resolve `<company-folder>` per [`output_path.md`](../../../references/output_path.md). Consumed by [[trading-analysis]] when assembling `full_report.md`.
