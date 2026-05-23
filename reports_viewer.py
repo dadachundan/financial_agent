@@ -126,6 +126,20 @@ def _parse(rel_path: Path) -> dict:
     }
 
 
+def _is_top_level(rel: Path) -> bool:
+    """True if a report sits directly in its bucket (or bucket/slug for
+    company / unlisted). Filters out sub-fold artifacts like
+    company/<slug>/trading/<date>/news-analyst.md or
+    company/<slug>/valuation/<file>.md, keeping only the canonical
+    research / sector / earnings / compare documents on the index."""
+    parts = rel.parts
+    if not parts:
+        return False
+    if parts[0] in ("company", "unlisted"):
+        return len(parts) == 3  # bucket / slug / file.md
+    return len(parts) == 2      # bucket / file.md
+
+
 def _scan() -> list[dict]:
     """Walk reports/, group EN/ZH/DOCX siblings, return rows newest-first."""
     REPORTS_DIR.mkdir(exist_ok=True)
@@ -135,6 +149,8 @@ def _scan() -> list[dict]:
     for p in REPORTS_DIR.rglob("*.md"):
         rel = p.relative_to(REPORTS_DIR)
         if rel.parts and rel.parts[0] == "charts":
+            continue
+        if not _is_top_level(rel):
             continue
         meta = _parse(rel)
         st = p.stat()
@@ -160,6 +176,8 @@ def _scan() -> list[dict]:
     for p in REPORTS_DIR.rglob("*.docx"):
         rel = p.relative_to(REPORTS_DIR)
         if rel.parts and rel.parts[0] == "charts":
+            continue
+        if not _is_top_level(rel):
             continue
         meta = _parse_docx(rel)
         st = p.stat()
