@@ -96,13 +96,10 @@ def _parse(rel_path: Path) -> dict:
             break
     pair_key = f"{bucket}/{norm}"
 
-    # Company display: strip the kind suffix (Research_Document /
-    # Valuation_Analysis / etc.) so the UI shows just the company slug.
+    # Company display: keep the full filename stem (kind suffix included)
+    # so the UI distinguishes e.g. AMD_NASDAQ_AMD_Research_Document from
+    # AMD_Valuation_Analysis at a glance.
     display = stem
-    for m in ALL_KIND_MARKERS:
-        if m in stem:
-            display = stem.split(m)[0]
-            break
 
     tickers = _all_tickers(name)
     ticker = tickers[0] if tickers else ""
@@ -212,11 +209,10 @@ def _parse_docx(rel_path: Path) -> dict:
             break
     pair_key = f"{bucket}/{norm}"
 
+    # Display: keep the full filename stem (kind suffix included) so
+    # AMD_NASDAQ_AMD_Initiation_Report and AMD_Valuation_Analysis don't
+    # collapse to the same "AMD" label in the table.
     display = stem
-    for m in ("_Initiation_Report_", "_Research_Document_", "_Valuation_Analysis_"):
-        if m in stem:
-            display = stem.split(m)[0]
-            break
 
     tickers = _all_tickers(name)
     ticker = tickers[0] if tickers else ""
