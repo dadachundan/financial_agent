@@ -631,7 +631,7 @@ _VIEW_TMPL = r"""<!doctype html>
               padding:10px 12px;box-shadow:0 1px 3px rgba(0,0,0,.04);
               font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
               font-size:.88rem;cursor:pointer;
-              transition:top .2s ease, box-shadow .15s, border-color .15s, transform .15s}
+              transition:box-shadow .15s, border-color .15s, transform .15s}
     .ric-card:hover{box-shadow:0 2px 8px rgba(0,0,0,.1);border-color:#a9bdd1}
     .ric-card.active{box-shadow:0 2px 12px rgba(31,78,120,.22);
                      border-color:#1F4E78;transform:translateX(-4px)}
