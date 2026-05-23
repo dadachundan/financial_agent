@@ -82,17 +82,39 @@ If there is **no recent guidance change** to highlight, omit the banner entirely
 - **Current CEO bio: 200–300 words.** Same depth: prior 2–3 roles with concrete accomplishments, education, tenure at this company, ownership stake, comp structure.
 - **If founder is still CEO, write one combined bio (300–450 words)** — don't split into two.
 
-### 4. Products & Services (700–1,000 words) — **grounded in a thorough company-website walk, not a generic summary**
-- **Full product portfolio enumeration.** List every distinct product / service line found on the website. Group by segment if the company organizes them that way, but do not omit minor SKUs.
-- For each major product: what it does, target customer, key features, pricing model (if disclosed), typical deal size
-- **Per-product competitive-advantage assessment (REQUIRED).** For each material product, explicitly answer:
-  - Does this product have a competitive advantage? (yes / partial / no)
-  - If yes, what *kind* of moat: technology / IP / patents, cost leadership, scale, network effects, switching costs, brand, regulatory / certification, distribution, data, ecosystem lock-in
-  - Evidence (market share, named wins, benchmarks, gross-margin profile, third-party reviews) — cite inline
-  - Closest competing product from a named competitor, plus a one-line compare (ahead / behind / at parity)
-- **Flagship vs. long-tail.** Identify the 1–3 products driving the business vs. legacy/experimental. State revenue or unit-mix share if disclosed.
-- **Roadmap & recent launches.** Note products launched, repositioned, or sunset in the last 12 months.
-- Cite the company website (specific product URL) and any third-party benchmark inline for each claim.
+### 4. Products & Services (700–1,200 words) — **anchored to the issuer's own product table, written pedagogically, ending with a synthesis paragraph**
+
+This is the section where reports most often degrade into either a flat product catalog or sell-side commentary dressed up as fact. Use the following structure to avoid both failure modes.
+
+**(a) Anchor to the issuer's own product matrix.** Most semiconductor / industrial / hardware / pharma issuers publish a product matrix in the 10-K / 年度报告 / Yuho Item 1 Business section — typically organized as Market → Process/Application → Technology → Products (or an equivalent for the industry: Therapeutic Area → Indication → Modality → Product, etc.). **Reproduce that table verbatim as the spine of Section 4** with a 10-K citation. This grounds the section in primary disclosure and prevents the model from inventing categories or revenue percentages. If the issuer does not publish such a table, build one from the website's product navigation (citing the website) and label it explicitly as analyst-constructed.
+
+**(b) Walk each row with pedagogical color — three brief beats per product family.** For each row in the matrix, write a paragraph that covers:
+  1. **What it does** in the manufacturing / value-chain flow (concrete physical role — "lays down copper interconnect", "drills channel holes in 3D NAND", "punches TSVs through silicon for HBM stacks"). Use analogies where they help a non-specialist reader.
+  2. **How it differentiates from sibling products in the same matrix** (different application, different process step, different node). The reader should leave able to explain why a fab needs SABRE *and* ALTUS *and* VECTOR, not just "Lam sells deposition tools."
+  3. **Strategic significance** — what technology inflection, customer, or end-market is currently driving demand (HBM ramp, GAA logic transition, advanced-packaging build-out, etc.). Cite the press release / 10-K Products text / earnings-call language for the inflection.
+
+**(c) Keep competitive commentary in a separate sentence labeled `*Analyst view:*`** and cite to a third-party source or the competitor's own filing — never the subject's 10-K — per the citation discipline in Step 5 of SKILL.md. Specific competitor product names (e.g. AMAT's NOKOTA, Producer, Endura) belong here, not in the product-row description.
+
+**(d) End the section with a synthesis paragraph that shows how the product categories interact.** This is what makes a research report *pedagogical* rather than a catalog. For semicap, it's the Deposition → Etch → Clean → Deposition manufacturing cycle. For other industries, the equivalent: how the products compose a single customer workflow / use case / treatment regimen / installation. One paragraph; 3–5 sentences; explicit about which products sit at each step.
+
+**(e) Required elements regardless of structure:**
+  - **Per-product competitive-advantage assessment.** For each material product, a one-clause verdict (yes / partial / no) plus the moat type (technology / IP / patents, scale, switching costs, network effects, regulatory, distribution, ecosystem lock-in) — under the `*Analyst view:*` label.
+  - **Flagship vs. long-tail.** Identify the 1–3 products driving the current business (state revenue / unit-mix share if disclosed; otherwise flag as analyst estimate).
+  - **Roadmap & recent launches.** Products launched, repositioned, or sunset in the last 12 months — with the company press release as the citation.
+  - **Recurring / aftermarket / services business.** Many issuers have a separate business group outside the product matrix (CSBG for Lam, Services for AMAT, etc.). Treat that as its own subsection — describe what it consists of, how it's reported in the financials, why it dampens cyclicality, and the recurring-revenue economics.
+
+**Example structure (semiconductor capital equipment):**
+```
+4.1 The 10-K product matrix [verbatim table from 10-K Item 1, cited]
+4.2 Synthesis — how the categories interact [3–5 sentence narrative of the chip-build cycle]
+4.3 Deposition [walk each product row with pedagogical color]
+4.4 Etch [same]
+4.5 Clean [same]
+4.6 [Recurring service business — CSBG / Services / aftermarket]
+4.7 Flagship franchises and recent launches
+```
+
+Adapt the equivalent structure for non-semicap industries: e.g. for pharma, group by Therapeutic Area; for industrial automation, by Cell / Line / Plant level.
 
 ### 5. Customers & Go-to-Market (500–800 words)
 - Customer segments and profiles
@@ -160,14 +182,19 @@ TABLE OF CONTENTS
 [Current CEO name] — skip if same person as founder
 [200–300 word bio — prior roles, tenure, ownership, comp]
 
-4. PRODUCTS & SERVICES (700–1,000 words)
-[Full enumeration of every product from the company website,
- grouped by segment. For each material product:
-   - What it does, target customer, pricing
-   - Competitive-advantage verdict (yes / partial / no) + moat type
-   - Evidence + closest named competitor product (one-line compare)
- Then call out the 1–3 flagship products driving the business,
- and note product launches / sunsets in the last 12 months.]
+4. PRODUCTS & SERVICES (700–1,200 words)
+[4.1 Verbatim product matrix from the issuer's 10-K / 年报 / Yuho
+     (Market / Process-Application / Technology / Products), cited.
+ 4.2 Synthesis paragraph: how the categories interact in a customer workflow.
+ 4.3-4.5 (per major market in the matrix): walk each product row with
+   - what it physically does in the manufacturing / value-chain flow
+   - how it differentiates from sibling products in the same matrix
+   - strategic significance: technology inflection or customer wave driving demand
+   - *Analyst view:* — competitive-advantage verdict + moat type +
+     closest named competitor product (cited to competitor's filing or website,
+     NOT the subject's 10-K).
+ 4.X Recurring / aftermarket / services group (CSBG-equivalent), if applicable.
+ 4.Y Flagship 1-3 franchises + last-12-months launches.]
 
 5. CUSTOMERS & GO-TO-MARKET (500–700 words)
 [Content]
