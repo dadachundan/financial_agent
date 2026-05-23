@@ -53,7 +53,7 @@ LANG_SUFFIXES = ("_zh", "_CN")  # before .md
 
 # Sub-fold files (e.g. company/<slug>/trading/<date>/news-analyst.md) carry
 # the analyst/stage name as the filename stem. Map those stems to display
-# labels for the TYPE column. Any unmapped stem falls back to stem.upper().
+# labels for the TYPE column.
 ANALYST_TYPE_LABELS = {
     "news-analyst":       "NEWS_ANALYST",
     "sentiment-analyst":  "SENTIMENT_ANALYST",
@@ -64,6 +64,46 @@ ANALYST_TYPE_LABELS = {
     "portfolio-decision": "PORTFOLIO_DECISION",
     "full_report":        "FULL_REPORT",
 }
+
+# Report-kind marker → canonical TYPE label. The marker is the
+# `_<Marker>` token at the end of the filename stem (e.g. AMD_Valuation_Analysis
+# → "Valuation_Analysis"). ZH variants are normalised to the EN label so
+# EN/ZH siblings show a single TYPE in the collapsed row.
+_MARKER_TO_LABEL = {
+    "Research_Document":  "Research_Document",
+    "Valuation_Analysis": "Valuation_Analysis",
+    "Initiation_Report":  "Initiation_Report",
+    "公司研究":            "Research_Document",
+    "研究报告":            "Research_Document",
+}
+_MARKER_RE = re.compile(r"_(" + "|".join(re.escape(k) for k in _MARKER_TO_LABEL) + r")")
+
+
+def _derive_type_label(stem: str, bucket: str) -> str:
+    """Label shown in the TYPE column. Priority:
+
+    1. Analyst sub-fold stem (news-analyst → NEWS_ANALYST).
+    2. Report-kind marker in filename (_Valuation_Analysis → Valuation_Analysis).
+       Strips the company / ticker prefix so e.g. Hesai_NASDAQ_HSAI_Valuation_Analysis
+       and AMD_Valuation_Analysis both show as just "Valuation_Analysis".
+    3. Bucket name (company / sector / compare / earnings / other / unlisted).
+    """
+    if stem in ANALYST_TYPE_LABELS:
+        return ANALYST_TYPE_LABELS[stem]
+    m = _MARKER_RE.search(stem)
+    if m:
+        return _MARKER_TO_LABEL[m.group(1)]
+    return bucket
+
+
+def _derive_kind(stem: str) -> str:
+    """Kind axis used by the dropdown filter — same markers as
+    _derive_type_label but returns 'other' instead of the bucket fallback,
+    so the kind filter only matches research / valuation / initiation files."""
+    m = _MARKER_RE.search(stem)
+    if m:
+        return _MARKER_TO_LABEL[m.group(1)]
+    return "other"
 
 
 def _all_tickers(name: str) -> list[str]:
@@ -114,7 +154,8 @@ def _parse(rel_path: Path) -> dict:
     # so the UI distinguishes e.g. AMD_NASDAQ_AMD_Research_Document from
     # AMD_Valuation_Analysis at a glance.
     display = stem
-    type_label = bucket
+    type_label = _derive_type_label(stem, bucket)
+    kind = _derive_kind(stem)
 
     # Sub-fold files (e.g. company/<slug>/trading/<date>/news-analyst.md)
     # need extra context in display because the filename alone ("news-analyst")
@@ -125,7 +166,6 @@ def _parse(rel_path: Path) -> dict:
         sub_parts = list(rel_path.parts[1:-1]) + [stem]
         display = "/".join(sub_parts)
         pair_key = f"{bucket}/{display}"
-        type_label = ANALYST_TYPE_LABELS.get(stem, stem.upper())
 
     # Ticker: first try the filename, then fall back to the slug folder
     # (sub-fold files like "news-analyst.md" have no ticker in the name itself,
@@ -157,6 +197,7 @@ def _parse(rel_path: Path) -> dict:
         "bucket": bucket,
         "display": display,
         "type_label": type_label,
+        "kind": kind,
         "ticker": ticker,
         "all_tickers": tickers,
         "date": date,
@@ -266,7 +307,8 @@ def _parse_docx(rel_path: Path) -> dict:
     # AMD_NASDAQ_AMD_Initiation_Report and AMD_Valuation_Analysis don't
     # collapse to the same "AMD" label in the table.
     display = stem
-    type_label = bucket
+    type_label = _derive_type_label(stem, bucket)
+    kind = _derive_kind(stem)
 
     # Same sub-fold treatment as _parse() so a deep .docx surfaces with
     # parent context (and a per-path pair_key).
@@ -274,7 +316,6 @@ def _parse_docx(rel_path: Path) -> dict:
         sub_parts = list(rel_path.parts[1:-1]) + [stem]
         display = "/".join(sub_parts)
         pair_key = f"{bucket}/{display}"
-        type_label = ANALYST_TYPE_LABELS.get(stem, stem.upper())
 
     tickers = _all_tickers(name)
     if not tickers and len(rel_path.parts) > 1:
@@ -296,6 +337,7 @@ def _parse_docx(rel_path: Path) -> dict:
         "bucket": bucket,
         "display": display,
         "type_label": type_label,
+        "kind": kind,
         "ticker": ticker,
         "all_tickers": tickers,
         "date": date,
@@ -424,9 +466,9 @@ __URLPATCH__
           {% endfor %}
         </optgroup>
         <optgroup label="By kind">
-          <option value="kind:research">research</option>
-          <option value="kind:valuation">valuation</option>
-          <option value="kind:initiation">initiation</option>
+          <option value="kind:Research_Document">Research_Document</option>
+          <option value="kind:Valuation_Analysis">Valuation_Analysis</option>
+          <option value="kind:Initiation_Report">Initiation_Report</option>
         </optgroup>
       </select>
       <label><input type="checkbox" id="showMoreCols"> Show more columns</label>
@@ -1789,22 +1831,8 @@ def index():
         r["rating"] = ann.get("rating") or 0
         r["comment"] = ann.get("comment") or ""
         r["pk_enc"] = urllib.parse.quote(r["pair_key"], safe="")
-        # Kind = the report-type token in the filename, used as a second
-        # axis in the Type filter so users can narrow to research vs
-        # valuation vs initiation across all folder buckets.
-        stem = r["rel"].rsplit("/", 1)[-1].rsplit(".", 1)[0]
-        kind = "other"
-        for tok, label in (
-            ("_Research_Document", "research"),
-            ("_公司研究", "research"),
-            ("_研究报告", "research"),
-            ("_Valuation_Analysis", "valuation"),
-            ("_Initiation_Report", "initiation"),
-        ):
-            if tok in stem:
-                kind = label
-                break
-        r["kind"] = kind
+        # Kind is computed in _parse() / _parse_docx() via _derive_kind()
+        # so it stays in sync with the TYPE column label.
 
     # Dropdown options — present every known sector and bucket plus any
     # extras we actually see in the data.
