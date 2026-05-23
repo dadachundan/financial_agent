@@ -1444,9 +1444,23 @@ _VIEW_TMPL = r"""<!doctype html>
 
     function setActive(cid, scrollDoc) {
       activeCardId = cid;
+      let activeCard = null;
       rail.querySelectorAll('.ric-card').forEach(c => {
-        c.classList.toggle('active', c.dataset.id === String(cid));
+        const isActive = c.dataset.id === String(cid);
+        c.classList.toggle('active', isActive);
+        if (isActive) activeCard = c;
       });
+      // Auto-expand the active card's body (Google-Docs style: clicking
+      // a comment opens it). Other cards keep whatever state they're in.
+      if (activeCard) {
+        const body = activeCard.querySelector('.ric-body');
+        if (body && body.classList.contains('collapsed')) {
+          body.classList.remove('collapsed');
+          const btn = activeCard.querySelector('.ric-expand');
+          if (btn) btn.textContent = 'Show less';
+          if (typeof layoutCards === 'function') layoutCards();
+        }
+      }
       docRoot.querySelectorAll('mark.ric-hl').forEach(m => {
         m.classList.toggle('active', m.dataset.cid === String(cid));
       });
