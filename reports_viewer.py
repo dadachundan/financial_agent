@@ -51,6 +51,20 @@ VALUATION_MARKERS = ("_Valuation_Analysis", "_Initiation_Report")
 ALL_KIND_MARKERS = RESEARCH_MARKERS + VALUATION_MARKERS
 LANG_SUFFIXES = ("_zh", "_CN")  # before .md
 
+# Sub-fold files (e.g. company/<slug>/trading/<date>/news-analyst.md) carry
+# the analyst/stage name as the filename stem. Map those stems to display
+# labels for the TYPE column. Any unmapped stem falls back to stem.upper().
+ANALYST_TYPE_LABELS = {
+    "news-analyst":       "NEWS_ANALYST",
+    "sentiment-analyst":  "SENTIMENT_ANALYST",
+    "research-manager":   "RESEARCH_MANAGER",
+    "bull-bear-debate":   "BULL_BEAR_DEBATE",
+    "risk-debate":        "RISK_DEBATE",
+    "trader-plan":        "TRADER_PLAN",
+    "portfolio-decision": "PORTFOLIO_DECISION",
+    "full_report":        "FULL_REPORT",
+}
+
 
 def _all_tickers(name: str) -> list[str]:
     """Return all tickers in 'EXCHANGE:CODE' form, in order of appearance."""
@@ -100,11 +114,30 @@ def _parse(rel_path: Path) -> dict:
     # so the UI distinguishes e.g. AMD_NASDAQ_AMD_Research_Document from
     # AMD_Valuation_Analysis at a glance.
     display = stem
+    type_label = bucket
 
+    # Sub-fold files (e.g. company/<slug>/trading/<date>/news-analyst.md)
+    # need extra context in display because the filename alone ("news-analyst")
+    # doesn't say which company or date. Surface the parent path under the
+    # bucket and make the pair_key path-unique so EN/ZH collapsing doesn't
+    # merge unrelated tickers.
+    if not _is_top_level(rel_path):
+        sub_parts = list(rel_path.parts[1:-1]) + [stem]
+        display = "/".join(sub_parts)
+        pair_key = f"{bucket}/{display}"
+        type_label = ANALYST_TYPE_LABELS.get(stem, stem.upper())
+
+    # Ticker: first try the filename, then fall back to the slug folder
+    # (sub-fold files like "news-analyst.md" have no ticker in the name itself,
+    # but their parent slug folder usually does: "AMD_NASDAQ_AMD").
     tickers = _all_tickers(name)
+    if not tickers and len(rel_path.parts) > 1:
+        tickers = _all_tickers(rel_path.parts[1])
     ticker = tickers[0] if tickers else ""
 
-    # Date from filename: prefer YYYY-MM-DD, fall back to YYYYMMDD.
+    # Date from filename: prefer YYYY-MM-DD, fall back to YYYYMMDD. If the
+    # filename has no date, look for a YYYY-MM-DD path segment (used by the
+    # trading/<date>/ sub-folder layout).
     date = ""
     m = re.search(r"(\d{4}-\d{2}-\d{2})", stem)
     if m:
@@ -113,11 +146,17 @@ def _parse(rel_path: Path) -> dict:
         m = re.search(r"(\d{4})(\d{2})(\d{2})", stem)
         if m:
             date = f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+    if not date:
+        for part in rel_path.parts:
+            if re.fullmatch(r"\d{4}-\d{2}-\d{2}", part):
+                date = part
+                break
 
     return {
         "rel": str(rel_path).replace("\\", "/"),
         "bucket": bucket,
         "display": display,
+        "type_label": type_label,
         "ticker": ticker,
         "all_tickers": tickers,
         "date": date,
@@ -150,8 +189,6 @@ def _scan() -> list[dict]:
         rel = p.relative_to(REPORTS_DIR)
         if rel.parts and rel.parts[0] == "charts":
             continue
-        if not _is_top_level(rel):
-            continue
         meta = _parse(rel)
         st = p.stat()
         ts = getattr(st, "st_birthtime", st.st_mtime)
@@ -176,8 +213,6 @@ def _scan() -> list[dict]:
     for p in REPORTS_DIR.rglob("*.docx"):
         rel = p.relative_to(REPORTS_DIR)
         if rel.parts and rel.parts[0] == "charts":
-            continue
-        if not _is_top_level(rel):
             continue
         meta = _parse_docx(rel)
         st = p.stat()
@@ -231,19 +266,36 @@ def _parse_docx(rel_path: Path) -> dict:
     # AMD_NASDAQ_AMD_Initiation_Report and AMD_Valuation_Analysis don't
     # collapse to the same "AMD" label in the table.
     display = stem
+    type_label = bucket
+
+    # Same sub-fold treatment as _parse() so a deep .docx surfaces with
+    # parent context (and a per-path pair_key).
+    if not _is_top_level(rel_path):
+        sub_parts = list(rel_path.parts[1:-1]) + [stem]
+        display = "/".join(sub_parts)
+        pair_key = f"{bucket}/{display}"
+        type_label = ANALYST_TYPE_LABELS.get(stem, stem.upper())
 
     tickers = _all_tickers(name)
+    if not tickers and len(rel_path.parts) > 1:
+        tickers = _all_tickers(rel_path.parts[1])
     ticker = tickers[0] if tickers else ""
 
     date = ""
     m = re.search(r"(\d{4}-\d{2}-\d{2})", stem)
     if m:
         date = m.group(1)
+    if not date:
+        for part in rel_path.parts:
+            if re.fullmatch(r"\d{4}-\d{2}-\d{2}", part):
+                date = part
+                break
 
     return {
         "rel": str(rel_path).replace("\\", "/"),
         "bucket": bucket,
         "display": display,
+        "type_label": type_label,
         "ticker": ticker,
         "all_tickers": tickers,
         "date": date,
@@ -429,7 +481,7 @@ __URLPATCH__
                 {% if r.mktcap_usd is not none and r.mktcap_currency and r.mktcap_currency != 'USD' %}
                 title="≈ ${{ '{:,.0f}'.format(r.mktcap_usd) }} USD (sort key)"
                 {% endif %}>{{ r.mktcap_fmt }}</td>
-            <td class="col-extra"><span class="bucket-tag {{ r.bucket }}">{{ r.bucket }}</span></td>
+            <td class="col-extra"><span class="bucket-tag {{ r.bucket }}">{{ r.type_label or r.bucket }}</span></td>
             <td class="rating-cell col-extra">
               <span class="star-rating" data-pk="{{ r.pk_enc }}" data-rating="{{ r.rating or 0 }}">
                 {% for s in range(1, 6) %}
