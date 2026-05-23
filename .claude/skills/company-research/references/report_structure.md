@@ -82,39 +82,77 @@ If there is **no recent guidance change** to highlight, omit the banner entirely
 - **Current CEO bio: 200–300 words.** Same depth: prior 2–3 roles with concrete accomplishments, education, tenure at this company, ownership stake, comp structure.
 - **If founder is still CEO, write one combined bio (300–450 words)** — don't split into two.
 
-### 4. Products & Services (700–1,200 words) — **anchored to the issuer's own product table, written pedagogically, ending with a synthesis paragraph**
+### 4. Products & Services (700–1,500 words) — **anchored to the issuer's own product table, quoted verbatim, written pedagogically (mixed language OK), ending with a synthesis paragraph**
 
 This is the section where reports most often degrade into either a flat product catalog or sell-side commentary dressed up as fact. Use the following structure to avoid both failure modes.
 
-**(a) Anchor to the issuer's own product matrix.** Most semiconductor / industrial / hardware / pharma issuers publish a product matrix in the 10-K / 年度报告 / Yuho Item 1 Business section — typically organized as Market → Process/Application → Technology → Products (or an equivalent for the industry: Therapeutic Area → Indication → Modality → Product, etc.). **Reproduce that table verbatim as the spine of Section 4** with a 10-K citation. This grounds the section in primary disclosure and prevents the model from inventing categories or revenue percentages. If the issuer does not publish such a table, build one from the website's product navigation (citing the website) and label it explicitly as analyst-constructed.
+**(a) Anchor to the issuer's own product matrix — and embed the original page image, not just a reproduction.**
 
-**(b) Walk each row with pedagogical color — three brief beats per product family.** For each row in the matrix, write a paragraph that covers:
-  1. **What it does** in the manufacturing / value-chain flow (concrete physical role — "lays down copper interconnect", "drills channel holes in 3D NAND", "punches TSVs through silicon for HBM stacks"). Use analogies where they help a non-specialist reader.
-  2. **How it differentiates from sibling products in the same matrix** (different application, different process step, different node). The reader should leave able to explain why a fab needs SABRE *and* ALTUS *and* VECTOR, not just "Lam sells deposition tools."
-  3. **Strategic significance** — what technology inflection, customer, or end-market is currently driving demand (HBM ramp, GAA logic transition, advanced-packaging build-out, etc.). Cite the press release / 10-K Products text / earnings-call language for the inflection.
+Most semiconductor / industrial / hardware / pharma issuers publish a product matrix in the 10-K / 年度报告 / Yuho Item 1 Business section — typically organized as Market → Process/Application → Technology → Products (or an equivalent for the industry: Therapeutic Area → Indication → Modality → Product, etc.).
 
-**(c) Keep competitive commentary in a separate sentence labeled `*Analyst view:*`** and cite to a third-party source or the competitor's own filing — never the subject's 10-K — per the citation discipline in Step 5 of SKILL.md. Specific competitor product names (e.g. AMAT's NOKOTA, Producer, Endura) belong here, not in the product-row description.
+**Two things must appear in 4.1:**
+  1. **The 10-K's actual rendered table as a PNG image**, embedded via markdown (`![…](charts/<ticker>_10k_products_table.png)`), with a caption citing the 10-K. Render it with the helper script below (`render_10k_section.py`). The image is what makes Section 4 look authoritative — the reader can see the original filing source.
+  2. **A markdown reproduction of the same table** below the image, so the content is searchable / accessible to screen-readers and so quoted product names can be linked.
 
-**(d) End the section with a synthesis paragraph that shows how the product categories interact.** This is what makes a research report *pedagogical* rather than a catalog. For semicap, it's the Deposition → Etch → Clean → Deposition manufacturing cycle. For other industries, the equivalent: how the products compose a single customer workflow / use case / treatment regimen / installation. One paragraph; 3–5 sentences; explicit about which products sit at each step.
+If the issuer does not publish such a table, build one from the website's product navigation (citing the website) and label it explicitly as analyst-constructed.
 
-**(e) Required elements regardless of structure:**
+**(b) Walk each row with verbatim 10-K quotes + native-language pedagogy.**
+
+For each product family in the matrix, follow this exact three-part pattern:
+
+  1. **10-K verbatim (block quote).** Quote the 10-K's Product Family description directly — use `> "…"` markdown block-quote syntax with the inline 10-K citation right above the quote. Verbatim text from the issuer is by definition non-fabricated and gives the reader Lam's own explanation of what the product does.
+  2. **Native-language pedagogical explanation** (introduced with a heading like `**中文释义：**` for Chinese audience, or no special heading for English-language reports — but in either case clearly labeled as the analyst's plain-language gloss, *not* attributed to the 10-K). This is where the analyst earns their pay: explain in 3–6 sentences (a) the underlying physics / process / mechanism using analogies where helpful, (b) how this product differs from its sibling products in the same matrix, and (c) the strategic inflection currently driving demand. **Mixing Chinese into a primarily English report is encouraged when the topic is deeply technical** — Chinese has dense, idiomatic vocabulary for semiconductor process steps (薄膜、刻蚀、互连、字线、栅极, etc.) that compresses what English needs several sentences to explain. Don't be shy about it.
+  3. ***Analyst view:* sentence** — competitive context only, cited to the competitor's filing or website or a third-party research source, never to the subject's 10-K. Specific competitor product names (e.g. AMAT's NOKOTA, Producer, Endura) belong here.
+
+**(c) End the section with a synthesis paragraph that shows how the product categories interact.** This is what makes a research report *pedagogical* rather than a catalog. For semicap, it's the Deposition → Etch → Clean → Deposition manufacturing cycle. For other industries, the equivalent: how the products compose a single customer workflow / use case / treatment regimen / installation. One paragraph; 3–5 sentences; explicit about which products sit at each step. Optionally include a small Mermaid LR or TD graph showing the loop.
+
+**(d) Required elements regardless of structure:**
   - **Per-product competitive-advantage assessment.** For each material product, a one-clause verdict (yes / partial / no) plus the moat type (technology / IP / patents, scale, switching costs, network effects, regulatory, distribution, ecosystem lock-in) — under the `*Analyst view:*` label.
   - **Flagship vs. long-tail.** Identify the 1–3 products driving the current business (state revenue / unit-mix share if disclosed; otherwise flag as analyst estimate).
-  - **Roadmap & recent launches.** Products launched, repositioned, or sunset in the last 12 months — with the company press release as the citation.
+  - **Roadmap & recent launches.** Products launched, repositioned, or sunset in the last 12 months — with the company press release as the citation. If a new platform was launched (e.g. Akara, ALTUS Halo), block-quote the press release the same way you block-quote the 10-K.
   - **Recurring / aftermarket / services business.** Many issuers have a separate business group outside the product matrix (CSBG for Lam, Services for AMAT, etc.). Treat that as its own subsection — describe what it consists of, how it's reported in the financials, why it dampens cyclicality, and the recurring-revenue economics.
 
-**Example structure (semiconductor capital equipment):**
+**Rendering the issuer's product table as a PNG (for step (a))**
+
+The 10-K HTML is downloaded locally to `financial_reports/<TICKER>/` by `fetch_financial_report.py`. To render the products page to PNG, use playwright + chromium (one-time installation: `pip install playwright && python3 -m playwright install chromium`):
+
+```python
+from playwright.sync_api import sync_playwright
+INPUT_HTML  = '/Users/x/projects/financial_agent/financial_reports/<TICKER>/<10-K-filename>.htm'
+OUTPUT_PNG  = 'reports/company/<Slug>/charts/<ticker>_10k_products_table.png'
+ANCHOR_TEXT = 'SABRE'  # or any unique product-name string from the table
+with sync_playwright() as p:
+    browser = p.chromium.launch()
+    page = browser.new_page(viewport={'width': 1200, 'height': 2000}, device_scale_factor=2)
+    page.goto(f'file://{INPUT_HTML}')
+    tbl = page.locator('table').filter(has_text=ANCHOR_TEXT).first
+    tbl.scroll_into_view_if_needed(timeout=5000)
+    bb = tbl.bounding_box()
+    page.screenshot(path=OUTPUT_PNG, clip={
+        'x': max(0, bb['x']-20), 'y': max(0, bb['y']-80),
+        'width': min(1200, bb['width']+40), 'height': min(2000, bb['height']+100)})
+    browser.close()
 ```
-4.1 The 10-K product matrix [verbatim table from 10-K Item 1, cited]
-4.2 Synthesis — how the categories interact [3–5 sentence narrative of the chip-build cycle]
-4.3 Deposition [walk each product row with pedagogical color]
-4.4 Etch [same]
-4.5 Clean [same]
+
+For SEC HTML 10-Ks the table extracts cleanly. For Chinese 年度报告 (cninfo PDFs), use `fitz` (PyMuPDF) to render the relevant page to PNG instead. Save the PNG into `reports/company/<Slug>/charts/` so the relative `![](charts/...)` reference resolves.
+
+**Example structure (semiconductor capital equipment, mixed English / Chinese in the body, used for the LRCX report):**
+```
+4.1 The 10-K product matrix [PNG embed of 10-K rendered table + verbatim markdown reproduction]
+4.2 Synthesis — how the categories interact [3–5 sentence narrative + small Mermaid LR graph]
+4.3 Deposition [for each product family: 10-K block quote → 中文释义 → *Analyst view:*]
+4.4 Etch [same pattern, per product family]
+4.5 Clean [same pattern]
 4.6 [Recurring service business — CSBG / Services / aftermarket]
 4.7 Flagship franchises and recent launches
 ```
 
-Adapt the equivalent structure for non-semicap industries: e.g. for pharma, group by Therapeutic Area; for industrial automation, by Cell / Line / Plant level.
+**Adapting for non-semicap industries:**
+- For **pharma / biotech**, group by Therapeutic Area; block-quote the 10-K's product narrative for each marketed drug; the pedagogical color explains the mechanism of action, the patient population, the position vs SoC.
+- For **industrial automation / robotics**, group by Cell / Line / Plant level; block-quote the product-family description; the pedagogical color explains where in the customer's workflow the product sits and what it integrates with.
+- For **fintech / SaaS**, group by use case; block-quote the 10-K's customer / segment narrative; the pedagogical color explains what category of work this software replaces and what the API surface looks like.
+
+The pattern (issuer's own table → verbatim quote → analyst-labeled pedagogical gloss → analyst-labeled competitive view → synthesis at the end) is industry-agnostic.
 
 ### 5. Customers & Go-to-Market (500–800 words)
 - Customer segments and profiles
