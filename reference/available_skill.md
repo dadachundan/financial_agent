@@ -4,7 +4,7 @@ Snapshot of every skill registered for this project, grouped by role and depende
 
 > **Keep this file in sync.** Whenever a skill is added, removed, or its `## Prerequisites` block changes under `.claude/skills/`, update this file in the same commit and bump the "Last updated" date below. See the [Maintenance](#maintenance) section at the bottom for the checklist.
 
-Last updated: 2026-05-23
+Last updated: 2026-05-23 (added `sec-report-summary` as a US-only sub-skill of `company-research`)
 
 ---
 
@@ -17,12 +17,19 @@ This is the only chain with **machine-enforced** upstream skills (declared via `
                   │ trading-analysis │  ← orchestrator (runs whole chain)
                   └────────┬─────────┘
                            │ fans out 3 analysts in parallel
-        ┌──────────────────┼──────────────────┐
-        ▼                  ▼                  ▼
-┌──────────────────┐ ┌─────────────┐ ┌────────────────────┐
-│ sentiment-analyst│ │ news-analyst│ │  company-research  │
-└────────┬─────────┘ └──────┬──────┘ └──────────┬─────────┘
-         └──────────────────┼───────────────────┘
+        ┌──────────────────┼──────────────────────────────┐
+        ▼                  ▼                              ▼
+┌──────────────────┐ ┌─────────────┐         ┌────────────────────┐
+│ sentiment-analyst│ │ news-analyst│         │  company-research  │
+└────────┬─────────┘ └──────┬──────┘         └──────────┬─────────┘
+         │                  │                           ▲
+         │                  │            (US issuers,   │
+         │                  │             Step 0.5)     │
+         │                  │                ┌──────────┴─────────┐
+         │                  │                │ sec-report-summary │
+         │                  │                └────────────────────┘
+         │                  │                           │
+         └──────────────────┴───────────────────────────┘
                             ▼
                   ┌───────────────────┐
                   │ bull-bear-debate  │  needs all 3 analyst reports
@@ -50,7 +57,8 @@ This is the only chain with **machine-enforced** upstream skills (declared via `
 | [trading-analysis](../.claude/skills/trading-analysis/SKILL.md) | — (orchestrator) | Runs the whole pipeline end-to-end |
 | [sentiment-analyst](../.claude/skills/sentiment-analyst/SKILL.md) | — | 7-day sentiment report (Yahoo / StockTwits / Reddit) |
 | [news-analyst](../.claude/skills/news-analyst/SKILL.md) | — | Macro + ticker news, past 30 days |
-| [company-research](../.claude/skills/company-research/SKILL.md) | — | 6–10k word deep dive |
+| [sec-report-summary](../.claude/skills/sec-report-summary/SKILL.md) | — (US-only sub-skill) | Multi-year SEC filing narrative |
+| [company-research](../.claude/skills/company-research/SKILL.md) | `sec-report-summary` (US issuers only, Step 0.5) | 6–10k word deep dive |
 | [bull-bear-debate](../.claude/skills/bull-bear-debate/SKILL.md) | 3 analyst reports | Multi-round debate transcript |
 | [research-manager](../.claude/skills/research-manager/SKILL.md) | `bull-bear-debate` | ResearchPlan + 5-tier rating |
 | [trader-plan](../.claude/skills/trader-plan/SKILL.md) | `research-manager` | Buy/Hold/Sell proposal |
@@ -93,7 +101,6 @@ idea-generation → initiating-coverage → earnings-preview → earnings-analys
 | Skill | Purpose |
 |---|---|
 | [sector-overview](../.claude/skills/sector-overview/SKILL.md) | Industry-level landscape report |
-| [sec-report-summary](../.claude/skills/sec-report-summary/SKILL.md) | Multi-year 10-K/Q/8-K digest from `db/financial_reports.db` |
 | [canslim-screener](/Users/x/.claude/skills/canslim-screener/SKILL.md) | William O'Neil CANSLIM screen (lives in `~/.claude`, not project) |
 | [catalyst-calendar](../.claude/skills/catalyst-calendar/SKILL.md) | Upcoming earnings / events |
 | [morning-note](../.claude/skills/morning-note/SKILL.md) | 7 am desk note |
@@ -105,6 +112,7 @@ idea-generation → initiating-coverage → earnings-preview → earnings-analys
 
 - **Only the trading-analysis chain has machine-enforced deps** (the `## Prerequisites` blocks with `[[…]]` wikilinks). Everything else is independent — run them in any order.
 - **`company-research` is the most reused artifact** — both the trading pipeline and `initiating-coverage` (Task 1) build on it.
+- **`sec-report-summary` is conditional**: it's a Step-0.5 sub-skill of `company-research` for US issuers only; for non-US issuers (China A-share / HK / Taiwan / Japan / Korea), `company-research` skips it and builds the historical-evolution threads directly from domicile-portal filings. It can also be invoked standalone if the user just wants the SEC narrative without the full deep dive.
 - **`trading-analysis` is the only true orchestrator**; `initiating-coverage` is 5 sequential tasks the user runs explicitly, not a one-shot pipeline.
 - **Two data-source skills feed everything else indirectly**: `earnings-upload-to-db` → `db/notes.db`, and `zsxq-recommend` / `zsxq-analyze` → `db/zsxq.db`. They're not called by other skills, but the artifacts they produce are read by analysts.
 

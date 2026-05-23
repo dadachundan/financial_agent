@@ -174,6 +174,14 @@ Secondary sources (any domicile): competitor websites and filings, Gartner/Forre
 
 ---
 
+## Prerequisites
+
+For **US issuers**, this skill runs [[sec-report-summary]] as a sub-step (Step 0.5 below). The multi-year SEC narrative it produces — per-filing highlights + a "Changes over the years" trajectory — becomes structured input for Section 4 (product evolution), Section 6 (industry trajectory), and Section 9 (risk-factor evolution). It is invoked automatically by the workflow; no user action needed.
+
+For **non-US issuers** (China A-share / HK / Taiwan / Japan / Korea), skip the sec-report-summary step — the `/sec/` infrastructure is US-only. Build the same historical-evolution threads directly from the domicile-portal filings synced in Step 0.
+
+---
+
 ## Workflow
 
 ### Step 0 — Sync filings (always run the fetch script first)
@@ -209,6 +217,20 @@ Secondary sources (any domicile): competitor websites and filings, Gartner/Forre
 **Skip the re-fetch only if:** you already ran the script earlier in this same session for this ticker. Otherwise always run it — it's idempotent and cheap.
 
 Read PDFs with `fitz` / Read tool. For image-only / scanned pages, follow the OCR flow in the project CLAUDE.md (ocrmac → Marker → vision-LM, never Tesseract).
+
+### Step 0.5 — Multi-year SEC narrative (US issuers only)
+
+For US issuers, immediately after Step 0 invoke [[sec-report-summary]] with `--ticker <TICKER> --form 10-K --last 10 --deep` to produce the per-filing highlights and the "Changes over the years" trajectory. The output lands at `reports/earnings/<TICKER>_<YYYYMMDD>.md` (update-in-place — at most one per ticker).
+
+Use that narrative as the **structured input** for:
+
+- **Section 4 (Products & Services)** — product-line transitions, sunsets, segment renames called out in the multi-year filing comparison.
+- **Section 6 (Industry)** — segment-reporting changes, geographic mix shifts (e.g. China revenue going from highlight to risk).
+- **Section 9 (Risk Assessment)** — risk-factor evolution: new categories appearing (cyber, AI, climate, tariffs), persisting categories, resolved litigation.
+
+**Do not re-run sec-report-summary if a fresh report already exists** under `reports/earnings/<TICKER>_*.md` (mtime within the current session, or the filings on disk haven't changed since the existing report was written). Read the existing report instead.
+
+**Skip this step entirely for non-US issuers** — sec-report-summary depends on the `/sec/` Flask service + `db/financial_reports.db`, which only cover SEC filings. For China A-share / HK / Taiwan / Japan / Korea, build the historical-evolution threads directly from the domicile-portal filings synced in Step 0.
 
 ### Step 1 — Initial data collection
 
