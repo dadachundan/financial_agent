@@ -17,9 +17,17 @@ Inputs: `<ticker>` and `<trade_date>` in YYYY-MM-DD form.
 
 1. **Ticker-specific news (past 30 days, split into two horizons in the report)**:
    ```bash
-   python scripts/get_news.py <ticker> <start_date> <trade_date> --limit 50
+   python scripts/get_news.py <ticker> <start_date> <trade_date>
    ```
    where `<start_date>` = `<trade_date>` minus 30 days. Each article block includes the publish date in its header — use that to bucket articles into the two horizons described in the Output section.
+
+   The fetcher combines four sources, deduped by URL/title and stratified so the 8-30 day medium-term bucket keeps a meaningful share even when Yahoo's feed is recency-skewed:
+   - `yfinance.Ticker.get_news` (primary, recency-biased)
+   - `yfinance.Search` keyed on ticker AND company name (reaches further back)
+   - Google News RSS via `feedparser` (`when:Nd` clause — deep history)
+   - SEC EDGAR 8-K listing (synthetic blocks with item-code labels and a deep link to the filing index)
+
+   Default `--limit` is 300, with stratified clipping that guarantees the medium-term bucket retains up to one-third of slots. Pass `--no-google`, `--no-edgar`, `--no-search` to disable any source. STDERR reports per-source counts so you can see at a glance whether the medium-term horizon is well-populated.
 
 2. **Global / macroeconomic news** (past 7 days):
    ```bash
