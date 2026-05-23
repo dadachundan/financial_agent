@@ -643,7 +643,8 @@ _VIEW_TMPL = r"""<!doctype html>
               transition:box-shadow .15s, border-color .15s, transform .15s}
     .ric-card:hover{box-shadow:0 2px 8px rgba(0,0,0,.1);border-color:#a9bdd1}
     .ric-card.active{box-shadow:0 2px 12px rgba(31,78,120,.22);
-                     border-color:#1F4E78;transform:translateX(-4px)}
+                     border-color:#1F4E78;transform:translateX(-4px);
+                     z-index:3}
     .ric-card:focus{outline:none;box-shadow:0 2px 14px rgba(31,78,120,.28);
                     border-color:#1F4E78}
     .ric-card.orphan{background:#fffaee;border-color:#f0d8a6}
@@ -1575,19 +1576,67 @@ _VIEW_TMPL = r"""<!doctype html>
 
       slots.sort((a, b) => a.desiredTop - b.desiredTop);
 
-      let cursor = 0;
-      for (const s of slots) {
-        const top = Math.max(s.desiredTop, cursor);
-        if (s.isOrphan) {
-          s.card.style.top = cursor + 'px';
-          cursor += s.card.offsetHeight + 10;
-        } else {
+      const GAP = 10;
+      // Active card (if any) gets pinned to its highlight anchor; the
+      // rest re-cascade around it. Keeps the open comment visually next
+      // to its quoted text even when there are dozens of comments.
+      const activeIdx = activeCardId
+        ? slots.findIndex(s => !s.isOrphan && s.card.dataset.id === String(activeCardId))
+        : -1;
+
+      let bottomCursor = 0;
+
+      if (activeIdx === -1) {
+        // No active card → original top-down cascade.
+        for (const s of slots) {
+          if (s.isOrphan) continue;
+          const top = Math.max(s.desiredTop, bottomCursor);
           s.card.style.top = top + 'px';
-          cursor = top + s.card.offsetHeight + 10;
+          bottomCursor = top + s.card.offsetHeight + GAP;
         }
+      } else {
+        const active = slots[activeIdx];
+        const activeTop = Math.max(0, active.desiredTop);
+        active.card.style.top = activeTop + 'px';
+        const activeBot = activeTop + active.card.offsetHeight;
+
+        // Above-active cards: cascade BOTTOM-UP from active.top so the
+        // card right above the active sits just above it, and each
+        // earlier card stacks above that. If the stack is taller than
+        // the available space, cards extend into negative top values
+        // (above the rail box) — preferable to overlapping each other.
+        let upCursor = activeTop - GAP;
+        for (let i = activeIdx - 1; i >= 0; i--) {
+          const s = slots[i];
+          if (s.isOrphan) continue;
+          const h = s.card.offsetHeight;
+          // Sit at the natural anchor if it fits below upCursor,
+          // otherwise push up so the card's bottom = upCursor.
+          const top = (s.desiredTop + h <= upCursor) ? s.desiredTop : (upCursor - h);
+          s.card.style.top = top + 'px';
+          upCursor = top - GAP;
+        }
+
+        // Below-active cards: cascade top-down from active.bot + GAP.
+        let cursor = activeBot + GAP;
+        for (let i = activeIdx + 1; i < slots.length; i++) {
+          const s = slots[i];
+          if (s.isOrphan) continue;
+          const top = Math.max(s.desiredTop, cursor);
+          s.card.style.top = top + 'px';
+          cursor = top + s.card.offsetHeight + GAP;
+        }
+        bottomCursor = Math.max(cursor, activeBot + GAP);
       }
-      // Ensure rail is tall enough to contain all cards.
-      rail.style.minHeight = (cursor + 40) + 'px';
+
+      // Orphans / missing-anchor cards: stack at the bottom.
+      for (const s of slots) {
+        if (!s.isOrphan) continue;
+        s.card.style.top = bottomCursor + 'px';
+        bottomCursor += s.card.offsetHeight + GAP;
+      }
+
+      rail.style.minHeight = (bottomCursor + 40) + 'px';
     }
 
     async function loadAndRender() {
