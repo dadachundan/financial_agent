@@ -721,18 +721,22 @@ _VIEW_TMPL = r"""<!doctype html>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
   <script>
     // KaTeX rendering — shared by doc body + comment bodies so LaTeX
-    // like $\rightarrow$ shows as → instead of literal text.
+    // like $\rightarrow$ or $0^\circ\text{C}$ shows as math instead of
+    // literal text.
     //
     // Critical: a plain {left:"$", right:"$"} delimiter is a footgun in
     // financial reports because text like "revenue of $5.84B and EPS of
     // $1.4" looks like one big math expression to KaTeX. We work around
-    // it by ONLY enabling single-$ math when the content starts with a
-    // backslash (i.e. a LaTeX command like \rightarrow, \alpha, \frac).
-    // Currency amounts start with a digit, so they're safe.
+    // it by ONLY enabling single-$ math when the content contains a
+    // LaTeX command (`\X`, e.g. \rightarrow, \alpha, \frac, \circ,
+    // \text). Currency amounts never contain a backslash, so they're
+    // safe — and math like `$0^\circ\text{C}$` that starts with a digit
+    // still works because `\circ` is inside.
     //
-    // Implementation: walk text nodes, replace "$\X$" with "\(\X\)" (a
-    // delimiter pair that won't collide with currency), then let
-    // auto-render handle \(...\), $$...$$, and \[...\] normally.
+    // Implementation: walk text nodes, replace "$...\X...$" with
+    // "\(...\X...\)" (a delimiter pair that won't collide with
+    // currency), then let auto-render handle \(...\), $$...$$, and
+    // \[...\] normally.
     window._katexOpts = {
       delimiters: [
         {left: "$$", right: "$$", display: true},
@@ -759,9 +763,11 @@ _VIEW_TMPL = r"""<!doctype html>
       const nodes = [];
       let n;
       while ((n = walker.nextNode())) nodes.push(n);
-      // $\latex$ → \(\latex\). Content must start with \\ so currency
-      // amounts ($5.84B...) never match.
-      const re = /\$(\\[A-Za-z][^$\n]*?)\$/g;
+      // $...\X...$ → \(...\X...\). Content must contain at least one
+      // backslash-letter LaTeX command (\rightarrow, \circ, \text…) so
+      // currency amounts ($5.84B, $1.4 …) never match. This admits
+      // expressions like $0^\circ\text{C}$ that start with a digit.
+      const re = /\$([^$\n]*?\\[A-Za-z]+[^$\n]*?)\$/g;
       for (const node of nodes) {
         if (!node.nodeValue.includes("$")) continue;
         const nv = node.nodeValue.replace(re, "\\($1\\)");
