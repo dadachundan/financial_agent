@@ -112,10 +112,10 @@ Examples:
 - `research 比亚迪` (no override) → Chinese (auto-rule: HK + Chinese filings)
 - `research NVDA` (no override) → English (auto-rule: US listing)
 
-**Bilingual mode produces two complete, separate files in the same output folder**, not one interleaved document. Each file independently meets the 6,000–10,000 word target (Chinese counted in characters). Filenames follow the per-language convention:
+**Bilingual mode produces two complete, separate files in the same output folder**, not one interleaved document. Each file independently meets the 6,000–10,000 word target (Chinese counted in characters). Filenames follow the per-language convention (no date suffix — see the "Filenames" section below):
 
-- `reports/company/<Company_Ticker>/Tesla_Research_Document_2026-05-19.md` (English)
-- `reports/company/<Company_Ticker>/Tesla_公司研究_2026-05-19.md` (Chinese)
+- `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Research_Document.md` (English)
+- `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_公司研究.md` (Chinese)
 
 Both files share the same underlying research — citations, charts, data — but write the prose natively in each language; do not literal-translate one from the other.
 
@@ -129,10 +129,11 @@ If the user gives no explicit instruction, fall back to the auto-rule above. If 
 
 **Direct quotations** stay in their original language regardless of the report's main language — add a short translation in parentheses only if the quote is load-bearing.
 
-**Filenames:**
-- Chinese reports: Simplified Chinese characters allowed in `[Company]` — `reports/安培龙_SZSE002050_公司研究_2026-05-16.md`.
-- English reports: ASCII — `reports/Tesla_Research_Document_2024-10-27.md`, `reports/Alibaba_BABA_Research_Document_2026-05-16.md`.
+**Filenames (no date suffix):**
+- Chinese reports: Simplified Chinese characters allowed in `[Company]` — `reports/company/安培龙_SZSE002050/安培龙_SZSE002050_公司研究.md`.
+- English reports: ASCII — `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Research_Document.md`, `reports/company/Alibaba_HKEX9988/Alibaba_HKEX9988_Research_Document.md`.
 - Never Japanese kana / kanji or Korean hangul in filenames.
+- Do **not** append `_YYYY-MM-DD` to research-doc filenames. Only one EN file and one ZH file exist per company, so a date in the filename adds no signal and clutters the slug folder. Put today's date inside the document as an "as of" header instead; git history tracks the actual revision date.
 
 **Section headers (Chinese reports):** 公司概览, 公司历史, 管理团队, 产品与服务, 客户与上市策略, 行业概览, 竞争格局, 市场机会, 风险评估, 参考资料.
 
@@ -459,22 +460,23 @@ If the log shows residual unknowns the user cares about, fix them before declari
 
 Save to **`reports/company/<Slug>/`** under the project root: `/Users/x/projects/financial_agent/reports/company/<Slug>/<filename>.md`. The viewer (http://localhost:5001/reports) groups by this folder structure. Create the folder if missing.
 
-**`<Slug>`** is everything that comes before `_Research_Document_` / `_公司研究_` / `_研究报告_` in the filename — i.e. the company name plus primary ticker, joined with `_`. The filename itself is repeated inside the slug folder (one folder per company can hold EN, ZH, dated re-issues).
+**`<Slug>`** is everything that comes before `_Research_Document` / `_公司研究` / `_研究报告` in the filename — i.e. the company name plus primary ticker, joined with `_`. The filename itself is repeated inside the slug folder (one folder per company holds EN and / or ZH).
 
-File name follows the report language:
-- **Chinese reports**: `[Company-中文名]_[EXCHANGE][CODE]_公司研究_[YYYY-MM-DD].md` — Simplified Chinese characters allowed.
-- **English reports**: `[Company]_[EXCHANGE][CODE]_Research_Document_[YYYY-MM-DD].md` — ASCII only.
+File name follows the report language — **no date suffix**:
+- **Chinese reports**: `[Company-中文名]_[EXCHANGE][CODE]_公司研究.md` — Simplified Chinese characters allowed.
+- **English reports**: `[Company]_[EXCHANGE][CODE]_Research_Document.md` — ASCII only.
 - Never Japanese kana / kanji or Korean hangul in filenames.
+- **Do not append `_YYYY-MM-DD` to research-doc filenames.** Only one EN file and one ZH file exist per company, so a date in the filename adds no signal and clutters the slug folder. Put today's date inside the document as an "as of" header at the top instead; git history tracks the actual revision date.
 
 Examples:
-- `reports/company/安培龙_SZSE002050/安培龙_SZSE002050_公司研究_2026-05-16.md` (A-share, Chinese report)
-- `reports/company/比亚迪_HKEX1211/比亚迪_HKEX1211_公司研究_2026-05-16.md` (HK filing in Chinese)
-- `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Research_Document_2024-10-27.md` (US, English)
-- `reports/company/Alibaba_HKEX9988/Alibaba_HKEX9988_Research_Document_2026-05-16.md` (HK, English)
-- `reports/company/Toyota_TSE7203/Toyota_TSE7203_Research_Document_2026-05-16.md` (Japan, English)
-- Tickerless private companies: use just the company name as slug, e.g. `reports/company/Unitree/Unitree_Research_Document_2026-05-16.md`.
+- `reports/company/安培龙_SZSE002050/安培龙_SZSE002050_公司研究.md` (A-share, Chinese report)
+- `reports/company/比亚迪_HKEX1211/比亚迪_HKEX1211_公司研究.md` (HK filing in Chinese)
+- `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Research_Document.md` (US, English)
+- `reports/company/Alibaba_HKEX9988/Alibaba_HKEX9988_Research_Document.md` (HK, English)
+- `reports/company/Toyota_TSE7203/Toyota_TSE7203_Research_Document.md` (Japan, English)
+- Tickerless private companies: use just the company name as slug, e.g. `reports/company/Unitree/Unitree_Research_Document.md`.
 
-EN and ZH versions of the same report share one slug folder — ZH adds the suffix `_zh` (preferred) or `_CN` before `.md`.
+EN and ZH versions of the same report share one slug folder — ZH adds the suffix `_zh` (preferred) or `_CN` before `.md`, e.g. `Tesla_NASDAQ_TSLA_Research_Document_zh.md`.
 
 Other report types live in sibling folders the viewer also surfaces:
 - `reports/sector/<topic>_<YYYY-MM-DD>.md` for thematic / industry overviews
@@ -485,14 +487,14 @@ Always write under the main project's `reports/` directory — never to a worktr
 
 ### Update-in-place rule — at most one research doc per company per language
 
-Reports under `reports/` are checked into git and are meant to be living documents. **Before writing, check whether a research doc for this company already exists** in `reports/company/<Slug>/`, and update it in place rather than creating a parallel dated copy.
+Reports under `reports/` are checked into git and are meant to be living documents. **Before writing, check whether a research doc for this company already exists** in `reports/company/<Slug>/`, and update it in place rather than creating a parallel copy.
 
 ```bash
-ls "reports/company/<Slug>/" 2>/dev/null | grep -E "_Research_Document_.*\.md|_公司研究_.*\.md|_研究报告_.*\.md"
+ls "reports/company/<Slug>/" 2>/dev/null | grep -E "_Research_Document(_zh|_CN)?\.md|_公司研究(_zh|_CN)?\.md|_研究报告(_zh|_CN)?\.md"
 ```
 
-- **Exactly one match for this language** (`_Research_Document_` = EN, `_公司研究_` / `_研究报告_` = ZH) → overwrite it at the same path. Keep the existing filename; the embedded date may be stale, but git history records the actual revision date — that is the source of truth. Update the document's internal date / "as of" header to today.
-- **Multiple matches for the same language** (legacy state from before this rule) → update the most recent by mtime, then tell the user which older duplicates exist so they can decide what to delete. Do not auto-delete.
-- **Zero matches** → create a new file using today's date in the filename, following the naming conventions above.
+- **Exactly one match for this language** (`_Research_Document` = EN, `_公司研究` / `_研究报告` = ZH) → overwrite it at the same path. Update the document's internal "as of" date header to today; git history records the actual revision dates.
+- **Multiple matches for the same language** (legacy state — old dated copies from before this rule) → consolidate into the canonical no-date filename (`<Slug>_Research_Document.md` for EN, `<Slug>_公司研究.md` for ZH), updating the most recent one and listing the older duplicates so the user can confirm deletion. Do not auto-delete.
+- **Zero matches** → create a new file at the canonical no-date path. Do **not** add a `_YYYY-MM-DD` suffix to the filename.
 
 EN and ZH editions are separate categories — one of each per company is fine, sharing the same slug folder. After writing, print the final path so the user can confirm whether it was an update or a fresh create.
