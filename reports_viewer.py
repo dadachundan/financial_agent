@@ -697,9 +697,14 @@ _VIEW_TMPL = r"""<!doctype html>
     .ric-expand-btn:hover{text-decoration:underline}
     .ric-expand-btn svg{width:13px;height:13px;flex:none}
 
-    /* Native <dialog> — no Bootstrap JS needed on the viewer page. */
+    /* Native <dialog> — no Bootstrap JS needed on the viewer page.
+       Horizontal resize handle on the bottom-right corner lets the
+       user drag to any width; the chosen width is persisted to
+       localStorage and restored next time. */
     dialog.ric-modal{border:none;border-radius:10px;padding:0;
-                     max-width:min(1200px,92vw);width:auto;
+                     width:min(1200px,92vw);
+                     min-width:360px;max-width:96vw;
+                     resize:horizontal;overflow:hidden;
                      box-shadow:0 16px 48px rgba(0,0,0,.22)}
     dialog.ric-modal::backdrop{background:rgba(0,0,0,.4)}
     .ric-modal-head{display:flex;align-items:center;justify-content:space-between;
@@ -1198,6 +1203,18 @@ _VIEW_TMPL = r"""<!doctype html>
                        ev.clientY >= r.top  && ev.clientY <= r.bottom;
         if (!inside) dlg.close();
       });
+      // Restore last-used width from localStorage (clamped to viewport),
+      // and persist further user resizes via the corner handle.
+      const STORAGE_KEY = 'ric-modal-width';
+      const savedW = parseInt(localStorage.getItem(STORAGE_KEY) || '', 10);
+      if (savedW > 0) {
+        dlg.style.width = Math.min(savedW, Math.round(window.innerWidth * 0.96)) + 'px';
+      }
+      new ResizeObserver(() => {
+        if (!dlg.open) return;
+        const w = Math.round(dlg.getBoundingClientRect().width);
+        if (w > 0) localStorage.setItem(STORAGE_KEY, String(w));
+      }).observe(dlg);
       _ricModal = { dlg, title, body };
       return _ricModal;
     }
