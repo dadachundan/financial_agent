@@ -1,10 +1,43 @@
 # Compare-companies — Report Structure
 
-The final report has 10 sections plus a References block. Word counts are loose targets — verify with `wc -w` before declaring done. Total target: **5,000–9,000 words**. The moat anatomy (§5) is the longest section and the analytical centerpiece; if it ends up shorter than any other section, the priority is wrong.
+The final report has a TL;DR section + 10 numbered sections + a References block. Word counts are loose targets — verify with `wc -w` before declaring done. Total target: **5,000–9,000 words**. The moat anatomy (§5) is the longest section and the analytical centerpiece; if it ends up shorter than any other section, the priority is wrong.
 
 Embed **4–8 visuals** (Mermaid blocks + 1–2 matplotlib PNGs for quantitative trends). Every chart gets a citation directly below.
 
 ## Per-section spec
+
+### §0 — TL;DR — At-a-glance advantages and disadvantages (~250 words) — REQUIRED FIRST SECTION
+
+**Placement: directly after the source-filings block, before the first `---` separator and before §1.** This is the first thing the reader sees, and for most readers it's the only thing they'll read end-to-end. Treat it as the headline of the report.
+
+**Format — a 3-column markdown table:**
+
+```markdown
+## TL;DR — At-a-glance advantages and disadvantages
+
+|  | ✓ Advantages | ✗ Disadvantages |
+|---|---|---|
+| **Company A (TICKER)** | • <bullet> (§N)<br>• <bullet> (§N)<br>• ... (5–8 bullets) | • <bullet> (§N)<br>• <bullet> (§N)<br>• ... (5–8 bullets) |
+| **Company B (TICKER)** | • <bullet> (§N)<br>• ... (5–8 bullets) | • <bullet> (§N)<br>• ... (5–8 bullets) |
+
+**Who is each one for?** <one-paragraph distillation framing the choice as: pick A for X, pick B for Y, or run both because Z>. The detailed evidence for every TL;DR claim follows in §1–§10 below.
+```
+
+**Per-bullet rules:**
+
+- Lead with a number or specific noun, not an adjective. `$13.5B debt locks buyback for ~2 years (§7)` beats `Heavy debt load`.
+- End with a `(§N)` section reference so a skimmer can drill straight into the evidence section.
+- 5–8 bullets per cell. Fewer than 5 = under-explored; more than 8 = padding.
+- Symmetric honesty: Disadvantages cell must have at least (Advantages count − 2) bullets. If you found 7 advantages and 1 disadvantage, you didn't look hard enough at §5.7 Cracks.
+- No hedge words ("arguably", "potentially", "may", "could").
+- No analyst self-references ("our model", "estimate", "本模型").
+- Bold the most important compound noun phrase in each bullet (`**$13.5B debt locks buyback for ~2 years**`) so the table scans at a glance.
+
+**"Who is each one for?" paragraph — required:**
+
+Three sharp options: pick A for ___, pick B for ___, or *both* (the dual-vendor reality common in duopolies). Avoid both-sidesism ("both have merit") — the reader came for a recommendation framework, not equivocation.
+
+**Worked example:** [`reports/compare/SNPS_vs_CDNS.md`](../../../../reports/compare/SNPS_vs_CDNS.md) — the canonical TL;DR for SNPS vs CDNS, with 7 advantages × 6 disadvantages per side, all referenced into §1–§10.
 
 ### §1 — One-line self-description (200–400 words)
 
@@ -103,6 +136,8 @@ Every entry is a markdown link with a date in the title where the source has a p
 
 ## Tables and charts checklist
 
+- [ ] **§0 TL;DR table** (3-col advantages/disadvantages) — placed before §1
+- [ ] **§0 "Who is each one for?" paragraph** — three sharp options, no both-sidesism
 - [ ] §1 framing table (verbatim 10-K language)
 - [ ] §2 mermaid timeline of strategic pillars
 - [ ] §3 AI side-by-side (tool / tailwind)

@@ -5,8 +5,9 @@ description: Produce a 5,000–9,000 word head-to-head comparison of two public 
 
 # Compare Companies
 
-Head-to-head deliverable: a 5,000–9,000 word markdown report that does NOT re-tell each company's story — it interrogates the **delta**. The report's job is to answer five specific questions the reader will have:
+Head-to-head deliverable: a 5,000–9,000 word markdown report that does NOT re-tell each company's story — it interrogates the **delta**. The report's job is to answer six specific questions the reader will have:
 
+0. **In 60 seconds, what are each side's advantages and disadvantages?** (TL;DR table right after the title — see §0.)
 1. **Do their products directly compete, or are they more complementary?** (Per-product overlap matrix — see §5.1.)
 2. **What is each company's actual moat — quantified, not asserted?** (Seven-subsection moat anatomy — see §5.2–5.8.)
 3. **Who are their customers, and where do those customer bases overlap?** (Customer concentration + named-win comparison — see §6.)
@@ -14,6 +15,8 @@ Head-to-head deliverable: a 5,000–9,000 word markdown report that does NOT re-
 5. **Which one should the reader bet on, and why?** (Synthesis — see §8.)
 
 A comparison report that only restates each company's pitch is a failure. The reader has already read both companies' marketing material; they came to you for the delta.
+
+**Discoverability discipline.** Most readers will scan the TL;DR + scorecard + bottom line and stop. The detailed sections (§1–§10) are evidence for the scannable layer — write them assuming the reader will skim. Tables beat paragraphs; numbers beat adjectives; explicit section cross-references (§5.5, §6) help a skimmer drill into the one section they care about.
 
 ## Core principle: accuracy over completeness — never hallucinate
 
@@ -25,9 +28,39 @@ The accuracy rules from [[company-research]] apply verbatim — read its **Core 
 - **When two sources disagree on a head-to-head number** (e.g. SemiAnalysis says one thing, an IPnest secondary citation says another), name both and prefer the primary / more-recent.
 - **The analyst's own model is NOT a source.** Never write "(Source: our model)" or "(estimate, our analysis)" for a comparison fact.
 
-## The five required deliverables
+## The six required deliverables
 
-A compare-companies report MUST contain all five. Missing any one of them is a defect — the user has explicitly asked for each.
+A compare-companies report MUST contain all six. Missing any one of them is a defect — the user has explicitly asked for each.
+
+### Required deliverable 0 — TL;DR table at the top (§0)
+
+**Placement: directly after the source-filings block, before the first `---` separator and before §1.** This is the first thing the reader sees, and for most readers it's the only thing they'll read end-to-end. Treat it as the headline of the report.
+
+**Format: a 3-column markdown table with a row per company:**
+
+```markdown
+## TL;DR — At-a-glance advantages and disadvantages
+
+|  | ✓ Advantages | ✗ Disadvantages |
+|---|---|---|
+| **Company A** | • <punchy bullet with number + §-ref> <br>• ... (5–8 bullets) | • <punchy bullet with number + §-ref> <br>• ... (5–8 bullets) |
+| **Company B** | • ... (5–8 bullets) | • ... (5–8 bullets) |
+
+**Who is each one for?** <one-paragraph distillation — pick A for X, pick B for Y, or run both because Z>. The detailed evidence for every TL;DR claim follows in §1–§10 below.
+```
+
+**Bullet discipline (applies to every cell):**
+
+- **Lead with a number or specific noun, not an adjective.** "$13.5B debt locks buyback for ~2 years" beats "Heavy debt load". "Tensilica DSP IP leader: >1.5B HiFi DSPs/year, 160+ licensees" beats "Strong DSP IP".
+- **Each bullet ends with a `(§N)` section reference** so a skimmer can drill straight into the evidence section (no anchor links needed — section numbers are enough).
+- **5–8 bullets per cell.** Fewer than 5 means under-explored; more than 8 means you're padding.
+- **Symmetric honesty.** Every Disadvantages cell must have at least as many bullets as its paired Advantages cell minus 2. If you found 7 advantages for A and only 1 disadvantage, you haven't looked hard enough — go back to §5.7 (Cracks worth naming).
+- **No hedge words.** Banned: "arguably", "potentially", "may", "could", "is generally considered". If you can't commit, drop the bullet.
+- **No analyst self-references.** No "(Source: our model)", "(estimate)", "(本模型)", etc. Every TL;DR claim must be supported by a citation in the corresponding §N body section — the TL;DR doesn't need its own citation but every fact must be cited *somewhere* in the report.
+
+**Closing one-paragraph "Who is each one for?"** Three options framed sharply: pick A for ___, pick B for ___, or *both* (the dual-vendor reality for duopolies). Avoid both-sidesism ("both have merit") — the reader came for a recommendation framework, not equivocation.
+
+See [`reports/compare/SNPS_vs_CDNS.md`](../../../reports/compare/SNPS_vs_CDNS.md) for the canonical worked example.
 
 ### Required deliverable 1 — Product overlap matrix (§5.1)
 
@@ -90,12 +123,13 @@ Two paragraphs:
 
 Then one closing paragraph that names **what the reader should watch in the next 4–8 quarters** to know which bet is winning. Avoid both-sidesism ("both could win"); name the specific catalyst that will move the verdict.
 
-## Report structure (10 sections)
+## Report structure (TL;DR + 10 sections)
 
 See `references/report_structure.md` for the full section-by-section spec, word-count targets, required tables and charts, and an example outline from SNPS_vs_CDNS.
 
 Quick summary:
 
+0. **TL;DR — At-a-glance advantages and disadvantages** (Required deliverable 0; 3-column table + "Who is each one for?" paragraph; ~250 words; placed before §1)
 1. One-line self-description side-by-side
 2. Strategic pillars side-by-side (timeline / pillar table)
 3. AI narrative — tool vs. tailwind
@@ -121,14 +155,38 @@ Same standard as [[company-research]]. Read its `references/citations.md` before
 
 ## Prerequisites
 
-This skill builds on [[company-research]]. Before drafting:
+This skill builds on [[company-research]]. **Before drafting any new content, always check the local `reports/company/` folder for prior research** — this is the most-asked question about this skill and the most common source of duplicated work if skipped.
 
-1. **Check if a research doc exists for each side.** Look under `reports/company/<Slug>/<Slug>_Research_Document.md` (EN) or `<Slug>_公司研究.md` (ZH).
-2. **If both exist and are <12 months old → read them; do not regenerate.** The compare-companies report consumes them as structured input — Section 4 (Products), Section 5 (Customers), and Section 7 (Competitive Landscape) of each research doc become starting points for the comparison's §5.1 (product matrix) and §6 (customer comparison).
-3. **If either is missing or stale → invoke [[company-research]] on the missing side first.** Do not skip this; an uncited compare-companies report will fail the citation density target.
-4. **Also pull the latest 10-K / 年度报告 / Yuho for each side**, and the most recent 10-Q / 季度报告 / quarterly update. The comparison may need raw numbers the research doc summarized.
+```bash
+# Step 1 — Resolve each side to a slug and check for existing research
+ls "reports/company/" | grep -iE "(<Name_A>|<Ticker_A>)"
+ls "reports/company/" | grep -iE "(<Name_B>|<Ticker_B>)"
 
-The skill also assumes [[sec-report-summary]] has been run on US issuers (it's a sub-step of company-research). For non-US issuers, build the multi-year evolution threads directly from domicile-portal filings.
+# Step 2 — For each match, list what's inside the slug folder
+ls "reports/company/<Slug_A>/" 2>/dev/null
+ls "reports/company/<Slug_B>/" 2>/dev/null
+```
+
+The relevant files inside each slug folder, by language:
+
+| Language | Filename pattern |
+|---|---|
+| English | `<Slug>_Research_Document.md` |
+| Simplified Chinese | `<Slug>_公司研究.md` or `<Slug>_研究报告.md` |
+| Bilingual | both of the above coexist; pick the language matching the comparison report's language |
+
+**Decision rules after the ls:**
+
+1. **Both research docs exist and are <12 months old** → read them in full; do NOT regenerate. The compare-companies report consumes them as structured input — Section 4 (Products), Section 5 (Customers), and Section 7 (Competitive Landscape) of each research doc become starting points for §5.1 (product matrix) and §6 (customer comparison) of the comparison.
+2. **One side exists, the other is missing** → invoke [[company-research]] on the missing side first. Do not draft the comparison without both deep dives in hand; an uncited compare-companies report will fail the citation density target.
+3. **Both exist but one or both are >12 months old** → invoke [[company-research]] on each stale side to refresh; the skill updates the existing file in place (no parallel copies).
+4. **Neither exists** → run [[company-research]] on both sides first, then proceed. Expect this path to take significantly longer than path (1) — flag the user at the start so they can decide whether to wait or split the work over multiple sessions.
+
+In all four paths, **also pull the latest 10-K / 年度报告 / Yuho for each side**, and the most recent 10-Q / 季度报告 / quarterly update — see `fetch_financial_report.py` (US) / `fetch_cninfo_report.py` (China A-share / HK). The comparison often needs raw numbers (RPO duration ladder, segment-by-region cuts, customer concentration footnotes) that the prior research doc summarized.
+
+For US issuers, the skill also benefits from [[sec-report-summary]] output at `reports/earnings/<TICKER>_*.md` — it's a sub-step of company-research, so if research was run recently the SEC narrative is already on disk. For non-US issuers (China A-share / HK / Taiwan / Japan / Korea), build the multi-year evolution threads directly from domicile-portal filings.
+
+**Verification before writing:** the first thing the analyst should report back to the user is the result of the existence check above — "Found research for A (<date>), missing for B, will run company-research on B first" — so the user can interject if they have a preference (skip stale-check, defer the missing side, etc.).
 
 ## Workflow
 
@@ -197,11 +255,15 @@ Apply the same Step 10 verification flow from [[company-research]] — URL check
 
 **Compare-specific additional checks:**
 
+- [ ] **TL;DR is present, placed before §1, and contains 5–8 bullets per cell.** Every bullet leads with a specific number/noun (not an adjective) and ends with a `(§N)` section reference. The Disadvantages column for each side has at least (Advantages count − 2) bullets — no whitewash.
+- [ ] **TL;DR "Who is each one for?" paragraph** names three options sharply (pick A for X, pick B for Y, or both because Z) — no both-sidesism.
+- [ ] **Prior research consulted before drafting.** Ran `ls reports/company/` for each side; if a doc existed, read it before writing anything new. Did not duplicate work.
 - [ ] The product overlap matrix has at least one row in each of the four buckets (DIRECTLY COMPETE, DIRECTLY COMPETE w/ dominant, COMPLEMENTARY, NON-OVERLAPPING) — if all rows are "DIRECTLY COMPETE", you've under-explored the matrix.
 - [ ] Every "share leader" claim in the moat anatomy has a third-party citation; none use a 10-K cite.
 - [ ] The customer-comparison section names ≥3 customers visible at *both* sides (the dual-vendor reality), backed by either each vendor's customer-page listing or a third-party article.
 - [ ] The scorecard has no row that says "depends" / "complex" / "mixed" — every row picks a side, "Tied", or "Neither".
 - [ ] The bottom line names a concrete catalyst with a date or quarter, not "the next several years".
+- [ ] Every TL;DR claim is supported by an inline citation somewhere in the body (the TL;DR cells themselves are exempt from per-bullet citations since they're a scannable summary, but the underlying fact must be cited in §N).
 
 ## Output location
 
