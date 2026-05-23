@@ -780,18 +780,38 @@ _VIEW_TMPL = r"""<!doctype html>
     import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
     mermaid.initialize({ startOnLoad:false, theme:"default" });
 
-    // Obsidian-style ==highlight== → <mark>highlight</mark>
+    // Obsidian-style ==highlight== → <mark>highlight</mark>, plus an
+    // inline extension that neutralises GFM single-tilde strikethrough.
+    // Reports use `~` as an "approximately" shorthand (e.g. `~32%`,
+    // `~$28-30B`); marked's default tokenizer would treat paired
+    // single-tildes on the same line as <del>. By matching a lone `~`
+    // (not `~~`) first via a custom extension and emitting it as text,
+    // we preempt the built-in del parser. `~~strikethrough~~` (HTML
+    // <s>/<del>) still works for explicit cases.
     marked.use({
-      extensions: [{
-        name: "obsidianHighlight",
-        level: "inline",
-        start(src) { const i = src.indexOf("=="); return i < 0 ? undefined : i; },
-        tokenizer(src) {
-          const m = /^==(?=\S)([\s\S]*?\S)==/.exec(src);
-          if (m) return { type: "obsidianHighlight", raw: m[0], tokens: this.lexer.inlineTokens(m[1]) };
+      extensions: [
+        {
+          name: "obsidianHighlight",
+          level: "inline",
+          start(src) { const i = src.indexOf("=="); return i < 0 ? undefined : i; },
+          tokenizer(src) {
+            const m = /^==(?=\S)([\s\S]*?\S)==/.exec(src);
+            if (m) return { type: "obsidianHighlight", raw: m[0], tokens: this.lexer.inlineTokens(m[1]) };
+          },
+          renderer(token) { return `<mark>${this.parser.parseInline(token.tokens)}</mark>`; },
         },
-        renderer(token) { return `<mark>${this.parser.parseInline(token.tokens)}</mark>`; },
-      }],
+        {
+          name: "literalTilde",
+          level: "inline",
+          start(src) { return src.indexOf("~"); },
+          tokenizer(src) {
+            if (src[0] === "~" && src[1] !== "~") {
+              return { type: "literalTilde", raw: "~" };
+            }
+          },
+          renderer() { return "~"; },
+        },
+      ],
     });
 
     const raw = {{ md | tojson }};
