@@ -855,9 +855,63 @@ _VIEW_TMPL = r"""<!doctype html>
       ],
     });
 
+    // Normalize GFM tables before parsing. Pasted/LLM-written markdown
+    // often breaks rows by inserting blank lines inside cells, e.g.
+    //   | A | B <br>
+    //
+    //   <br>more B | C |
+    // The blank line closes the table for marked, so the tail spills
+    // out as paragraphs. We rejoin incomplete rows (pipe count short
+    // of cols+1) by absorbing following blank + non-pipe-led lines
+    // until the row balances or we hit a clear table-end.
+    window._fixBrokenTables = function (md) {
+      const lines = String(md == null ? "" : md).split("\n");
+      const out = [];
+      let i = 0;
+      while (i < lines.length) {
+        const header = lines[i];
+        const sep = lines[i + 1];
+        const isHeader = /^\s*\|.*\|\s*$/.test(header);
+        const isSep = sep != null && /^\s*\|(?:\s*:?-+:?\s*\|)+\s*$/.test(sep);
+        if (!(isHeader && isSep)) { out.push(header); i++; continue; }
+
+        const cols = (sep.match(/\|/g).length) - 1;
+        const needed = cols + 1;
+        out.push(header); out.push(sep); i += 2;
+
+        let row = "";
+        const rowPipes = () => (row.match(/\|/g) || []).length;
+        const complete = () => row && rowPipes() >= needed;
+        const flush = () => { if (row) { out.push(row); row = ""; } };
+
+        while (i < lines.length) {
+          const ln = lines[i];
+          if (ln.trim() === "") {
+            if (!row || complete()) { flush(); break; }
+            i++; continue;
+          }
+          if (/^\s*\|/.test(ln)) {
+            flush();
+            row = ln;
+            if (complete()) flush();
+            i++; continue;
+          }
+          if (row && !complete()) {
+            row += ln;
+            if (complete()) flush();
+            i++; continue;
+          }
+          flush();
+          break;
+        }
+        flush();
+      }
+      return out.join("\n");
+    };
+
     const raw = {{ md | tojson }};
     const root = document.getElementById("content");
-    root.innerHTML = marked.parse(raw);
+    root.innerHTML = marked.parse(window._fixBrokenTables(raw));
 
     // Render LaTeX math ($\rightarrow$, $$...$$ etc.) via KaTeX. The
     // auto-render script is loaded with `defer` so it may not be ready
@@ -1075,7 +1129,7 @@ _VIEW_TMPL = r"""<!doctype html>
 
       const b = document.createElement('div');
       b.className = 'ric-body';
-      b.innerHTML = window.marked ? marked.parse(c.body || '') : (c.body || '');
+      b.innerHTML = window.marked ? marked.parse((window._fixBrokenTables || ((x)=>x))(c.body || '')) : (c.body || '');
       if (window._renderMath) window._renderMath(b);
 
       // Tables wedge themselves into the 320px rail and become unreadable.
@@ -1157,7 +1211,7 @@ _VIEW_TMPL = r"""<!doctype html>
       const { dlg, title, body } = ensureCommentModal();
       const q = c.quote || '';
       title.textContent = q.length > 140 ? q.slice(0, 140) + '…' : q;
-      body.innerHTML = window.marked ? marked.parse(c.body || '') : (c.body || '');
+      body.innerHTML = window.marked ? marked.parse((window._fixBrokenTables || ((x)=>x))(c.body || '')) : (c.body || '');
       if (window._renderMath) window._renderMath(body);
       if (typeof dlg.showModal === 'function') dlg.showModal();
       else dlg.setAttribute('open', '');
