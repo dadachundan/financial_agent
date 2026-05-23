@@ -268,6 +268,7 @@ Capture: top-1 customer % of revenue, top-5 %, multi-year trend (3 years if avai
 - **Founder (200–300 words).** Pull from LinkedIn, DEF 14A / proxy, press interviews, podcasts, shareholder letters. Capture prior 2–3 roles with *what they specifically accomplished* (numbers not titles), education, founding thesis, ownership stake today, and whether still operationally involved.
 - **Current CEO (200–300 words).** Same depth: prior 2–3 roles with concrete accomplishments, education, tenure at this company, ownership stake, comp structure.
 - **If founder is still CEO, write one combined bio (300–450 words)** — don't split into two.
+- **When rewriting an existing report**, also scrub *every* other named executive — CFO, segment presidents, CTO, COO, board chair, independent directors, former CEOs, IR contacts, anyone quoted in a press release — from Section 3 *and* from anywhere else they may have leaked into (Section 1 quotes, Section 2 timeline, Section 5/8 attributions, the verification log). Do not preserve them with a "trimmed" note or a "see prior draft" pointer; just delete the names. Past CEOs may stay only as anonymized historical context (e.g. "the company's late-1970s pivot from chemicals to equipment"), never as a name + tenure pairing. After rewriting, `grep` the report for any non-CEO / non-founder personal names to confirm.
 
 ### Step 5 — Competitive intelligence
 
