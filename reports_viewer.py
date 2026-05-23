@@ -590,6 +590,8 @@ _VIEW_TMPL = r"""<!doctype html>
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/github-markdown-css@5/github-markdown-light.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
   <style>
     body{background:#fff}
     .layout{max-width:1320px;margin:0 auto;display:flex;
@@ -708,6 +710,65 @@ _VIEW_TMPL = r"""<!doctype html>
   </button>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  <script>
+    // KaTeX rendering — shared by doc body + comment bodies so LaTeX
+    // like $\rightarrow$ shows as → instead of literal text.
+    //
+    // Critical: a plain {left:"$", right:"$"} delimiter is a footgun in
+    // financial reports because text like "revenue of $5.84B and EPS of
+    // $1.4" looks like one big math expression to KaTeX. We work around
+    // it by ONLY enabling single-$ math when the content starts with a
+    // backslash (i.e. a LaTeX command like \rightarrow, \alpha, \frac).
+    // Currency amounts start with a digit, so they're safe.
+    //
+    // Implementation: walk text nodes, replace "$\X$" with "\(\X\)" (a
+    // delimiter pair that won't collide with currency), then let
+    // auto-render handle \(...\), $$...$$, and \[...\] normally.
+    window._katexOpts = {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+      ],
+      throwOnError: false,
+      ignoredTags: ["script","noscript","style","textarea","pre","code"],
+      ignoredClasses: ["ric-quote"],   // don't try to render math in the quote preview
+    };
+    function _convertDollarLatex(root) {
+      const SKIP = new Set(["CODE","PRE","SCRIPT","STYLE","TEXTAREA","A"]);
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+        acceptNode(n) {
+          let el = n.parentNode;
+          while (el && el !== root) {
+            if (SKIP.has(el.tagName)) return NodeFilter.FILTER_REJECT;
+            if (el.classList && el.classList.contains("ric-quote")) return NodeFilter.FILTER_REJECT;
+            el = el.parentNode;
+          }
+          return NodeFilter.FILTER_ACCEPT;
+        },
+      });
+      const nodes = [];
+      let n;
+      while ((n = walker.nextNode())) nodes.push(n);
+      // $\latex$ → \(\latex\). Content must start with \\ so currency
+      // amounts ($5.84B...) never match.
+      const re = /\$(\\[A-Za-z][^$\n]*?)\$/g;
+      for (const node of nodes) {
+        if (!node.nodeValue.includes("$")) continue;
+        const nv = node.nodeValue.replace(re, "\\($1\\)");
+        if (nv !== node.nodeValue) node.nodeValue = nv;
+      }
+    }
+    window._renderMath = function(el) {
+      if (!el) return;
+      try { _convertDollarLatex(el); } catch(_) {}
+      if (window.renderMathInElement) {
+        try { window.renderMathInElement(el, window._katexOpts); } catch(_) {}
+      }
+    };
+  </script>
   <script type="module">
     import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
     mermaid.initialize({ startOnLoad:false, theme:"default" });
@@ -729,6 +790,15 @@ _VIEW_TMPL = r"""<!doctype html>
     const raw = {{ md | tojson }};
     const root = document.getElementById("content");
     root.innerHTML = marked.parse(raw);
+
+    // Render LaTeX math ($\rightarrow$, $$...$$ etc.) via KaTeX. The
+    // auto-render script is loaded with `defer` so it may not be ready
+    // yet — wait until window.renderMathInElement appears.
+    (function tryMath(tries){
+      if (window.renderMathInElement) { window._renderMath(root); return; }
+      if (tries > 50) return;
+      setTimeout(() => tryMath(tries + 1), 40);
+    })(0);
 
     root.querySelectorAll("pre code.language-mermaid").forEach(code => {
       const text = code.textContent;
@@ -938,6 +1008,7 @@ _VIEW_TMPL = r"""<!doctype html>
       const b = document.createElement('div');
       b.className = 'ric-body';
       b.innerHTML = window.marked ? marked.parse(c.body || '') : (c.body || '');
+      if (window._renderMath) window._renderMath(b);
 
       const meta = document.createElement('div');
       meta.className = 'ric-meta';
