@@ -651,6 +651,17 @@ _VIEW_TMPL = r"""<!doctype html>
     .ric-body ul,.ric-body ol{padding-left:1.2em;margin:.2em 0}
     .ric-body code{background:#f0f0f0;padding:1px 4px;border-radius:2px;font-size:.85em}
     .ric-body strong{font-weight:600}
+    /* Auto-collapse for long comments — keeps neighbouring cards from
+       getting pushed far down the rail. The fade-out hint signals
+       there's more text behind the "Show more" toggle. */
+    .ric-body.collapsible{position:relative}
+    .ric-body.collapsed{max-height:140px;overflow:hidden}
+    .ric-body.collapsed::after{content:"";position:absolute;left:0;right:0;bottom:0;
+                               height:38px;pointer-events:none;
+                               background:linear-gradient(rgba(255,255,255,0),#fff 90%)}
+    .ric-expand{font-size:.78rem;color:#0366d6;cursor:pointer;background:none;
+                border:none;padding:0;margin-top:4px;font-family:inherit}
+    .ric-expand:hover{text-decoration:underline}
     .ric-meta{font-size:.7rem;color:#888;margin-top:6px;
               font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
     .ric-actions{font-size:.78rem;margin-top:6px;display:flex;gap:12px}
@@ -1218,11 +1229,44 @@ _VIEW_TMPL = r"""<!doctype html>
         if (el.classList.contains('pending') && !el.dataset.id) return;
         el.remove();
       });
+      const newCards = [];
       for (const c of items) {
         if (c.id === editingId) continue;
-        rail.appendChild(buildCardEl(c));
+        const card = buildCardEl(c);
+        rail.appendChild(card);
+        newCards.push(card);
       }
+      // Unhide the rail BEFORE measuring — scrollHeight reads as 0
+      // while the rail is display:none, which suppresses every collapse.
       updateRailVisibility();
+      newCards.forEach(applyAutoCollapse);
+    }
+
+    // Long comment bodies push every later card far down the rail
+    // (layoutCards stacks them via `cursor`). If the body is taller than
+    // a few lines, clip it to ~140px and add a "Show more" toggle.
+    function applyAutoCollapse(card) {
+      const body = card.querySelector('.ric-body');
+      if (!body) return;
+      // Clean up any prior collapse state (re-render path).
+      const oldBtn = card.querySelector('.ric-expand');
+      if (oldBtn) oldBtn.remove();
+      body.classList.remove('collapsible', 'collapsed');
+      // Only collapse if rendered height meaningfully exceeds the cap.
+      if (body.scrollHeight <= 180) return;
+      body.classList.add('collapsible', 'collapsed');
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'ric-expand';
+      btn.textContent = 'Show more';
+      btn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        const nowCollapsed = body.classList.toggle('collapsed');
+        btn.textContent = nowCollapsed ? 'Show more' : 'Show less';
+        // Re-stack so the freed/used space ripples through neighbours.
+        layoutCards();
+      });
+      body.parentNode.insertBefore(btn, body.nextSibling);
     }
 
     function updateRailVisibility() {
