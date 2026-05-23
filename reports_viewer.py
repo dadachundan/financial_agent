@@ -687,6 +687,41 @@ _VIEW_TMPL = r"""<!doctype html>
     .ric-editor-actions .save:disabled{background:#cfd6df;cursor:not-allowed}
     .ric-editor-actions .save:not(:disabled):hover{background:#16395a}
 
+    /* "View table" button — surfaces when a comment body contains a
+       <table> that the 320px rail can't render legibly. Clicking it
+       opens .ric-modal with the full comment rendered at usable width. */
+    .ric-view-table{display:inline-flex;align-items:center;gap:4px;
+                    font-size:.78rem;color:#0366d6;cursor:pointer;
+                    background:none;border:none;padding:0;margin-top:6px;
+                    font-family:inherit}
+    .ric-view-table:hover{text-decoration:underline}
+    .ric-view-table svg{width:13px;height:13px;flex:none}
+
+    /* Native <dialog> — no Bootstrap JS needed on the viewer page. */
+    dialog.ric-modal{border:none;border-radius:10px;padding:0;
+                     max-width:min(960px,92vw);width:auto;
+                     box-shadow:0 16px 48px rgba(0,0,0,.22)}
+    dialog.ric-modal::backdrop{background:rgba(0,0,0,.4)}
+    .ric-modal-head{display:flex;align-items:center;justify-content:space-between;
+                    gap:12px;padding:10px 16px;border-bottom:1px solid #e0e4ea;
+                    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .ric-modal-head .title{font-size:.82rem;color:#555;font-style:italic;
+                           overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+                           flex:1;min-width:0;border-left:3px solid #ffd966;
+                           padding-left:8px}
+    .ric-modal-head .close{background:none;border:none;font-size:1.5rem;
+                           color:#666;cursor:pointer;padding:0 4px;line-height:1}
+    .ric-modal-head .close:hover{color:#222}
+    .ric-modal-body{padding:16px 22px;max-height:min(78vh,720px);overflow:auto}
+    .ric-modal-body table{display:table;border-collapse:collapse;margin:.5em 0;
+                          max-width:100%}
+    .ric-modal-body table th,.ric-modal-body table td{border:1px solid #d0d7de;
+                                                      padding:6px 10px;
+                                                      text-align:left;
+                                                      vertical-align:top}
+    .ric-modal-body table th{background:#f6f8fa;font-weight:600}
+    .ric-modal-body p:last-child{margin-bottom:0}
+
     /* Narrow viewports: collapse rail; fab still works as before */
     @media (max-width: 1080px) {
       .comments-rail{display:none}
@@ -1043,6 +1078,25 @@ _VIEW_TMPL = r"""<!doctype html>
       b.innerHTML = window.marked ? marked.parse(c.body || '') : (c.body || '');
       if (window._renderMath) window._renderMath(b);
 
+      // Tables wedge themselves into the 320px rail and become unreadable.
+      // Surface a "View table" button that opens a wider modal.
+      let viewBtn = null;
+      if (b.querySelector('table')) {
+        viewBtn = document.createElement('button');
+        viewBtn.type = 'button';
+        viewBtn.className = 'ric-view-table';
+        viewBtn.innerHTML =
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+          'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+          '<rect x="3" y="4" width="18" height="16" rx="1"/>' +
+          '<path d="M3 10h18M3 16h18M9 4v16M15 4v16"/></svg>' +
+          '<span>View table</span>';
+        viewBtn.addEventListener('click', (ev) => {
+          ev.stopPropagation();
+          openCommentModal(c);
+        });
+      }
+
       const meta = document.createElement('div');
       meta.className = 'ric-meta';
       meta.textContent = (c.orphan ? '⚠ orphan · ' : '') +
@@ -1059,9 +1113,54 @@ _VIEW_TMPL = r"""<!doctype html>
       dBtn.addEventListener('click', (ev) => { ev.stopPropagation(); deleteOne(c.id); });
       actions.append(eBtn, dBtn);
 
-      div.append(q, b, meta, actions);
+      div.append(q, b);
+      if (viewBtn) div.append(viewBtn);
+      div.append(meta, actions);
       div.addEventListener('click', () => setActive(c.id, true));
       return div;
+    }
+
+    // Lazy-built singleton dialog. Native <dialog> handles Esc-to-close
+    // and the backdrop layer for free, so no Bootstrap JS dependency.
+    let _ricModal = null;
+    function ensureCommentModal() {
+      if (_ricModal) return _ricModal;
+      const dlg = document.createElement('dialog');
+      dlg.className = 'ric-modal';
+      const head = document.createElement('div');
+      head.className = 'ric-modal-head';
+      const title = document.createElement('div');
+      title.className = 'title';
+      const close = document.createElement('button');
+      close.type = 'button'; close.className = 'close';
+      close.setAttribute('aria-label', 'Close');
+      close.textContent = '×';
+      close.addEventListener('click', () => dlg.close());
+      head.append(title, close);
+      const body = document.createElement('div');
+      body.className = 'ric-modal-body markdown-body';
+      dlg.append(head, body);
+      document.body.appendChild(dlg);
+      // Click on backdrop (outside the dialog box) closes it.
+      dlg.addEventListener('click', (ev) => {
+        if (ev.target !== dlg) return;
+        const r = dlg.getBoundingClientRect();
+        const inside = ev.clientX >= r.left && ev.clientX <= r.right &&
+                       ev.clientY >= r.top  && ev.clientY <= r.bottom;
+        if (!inside) dlg.close();
+      });
+      _ricModal = { dlg, title, body };
+      return _ricModal;
+    }
+
+    function openCommentModal(c) {
+      const { dlg, title, body } = ensureCommentModal();
+      const q = c.quote || '';
+      title.textContent = q.length > 140 ? q.slice(0, 140) + '…' : q;
+      body.innerHTML = window.marked ? marked.parse(c.body || '') : (c.body || '');
+      if (window._renderMath) window._renderMath(body);
+      if (typeof dlg.showModal === 'function') dlg.showModal();
+      else dlg.setAttribute('open', '');
     }
 
     function buildEditorEl({ id, quote, body, onSave, onCancel }) {
