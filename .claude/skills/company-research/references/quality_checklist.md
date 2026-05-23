@@ -53,6 +53,22 @@
 - Concrete examples and data.
 - Proper citations throughout (inline).
 
+## Verification pass (mandatory — see SKILL.md Step 10)
+
+The generating model has a documented pattern of fabricating SEC URLs, attributing analyst opinions to filings, inventing competitor product names, inventing market-share percentages, and inventing executive names. **Run Step 10 verification before declaring done.**
+
+Required before declaring done:
+
+- [ ] Every URL in the report HTTP-checked (`curl -sSL -o /dev/null -w "%{http_code}" <url>`); any 404 fixed or removed.
+- [ ] Every SEC URL has a real filename pulled from the EDGAR submissions JSON (`https://data.sec.gov/submissions/CIK<padded>.json`) — no synthetic `<doctype>_<accession>.htm` patterns.
+- [ ] No "dominant" / "leader" / "monopoly" / "co-leader" / "near-monopoly share" / "global #1" claim is attached to a 10-K citation unless the 10-K verbatim says it. These are analyst opinions; label them `*Analyst view:*` (English) or `*分析师观点：*` (Chinese) and either cite a third-party research source or leave uncited.
+- [ ] No revenue-by-sub-segment percentage (e.g. "Etch is ~45% of Systems revenue") is attached to a 10-K citation — these are analyst estimates unless the company actually publishes the breakdown.
+- [ ] No specific competitor *product* name (e.g. "AMAT NOKOTA", "Producer", "Endura") is attached to the subject's own 10-K — at minimum cite the competitor's filing or website. The subject's 10-K Competition section typically lists competitor *companies*, not products.
+- [ ] Every named executive is confirmed in an 8-K or DEF 14A. Grep the cited filing for the exact name.
+- [ ] Internal consistency: Section 1's competitive framing matches Section 7's; Section 2 timeline matches Section 1 prose; restructuring counts in narrative match the timeline numbers; product classifications (e.g. "Akara conductor vs dielectric etch") are consistent across the mermaid graph, Section 4 subsections, and Section 5 references.
+- [ ] At least five 10-K-cited financial numbers spot-checked against the actual 10-K (revenue, gross margin, customer concentration, geographic mix, segment %, restructuring headcount, R&D as % of revenue, cash returned).
+- [ ] A `<details>`-folded verification log appended after the References section, listing what was checked and any residual unknowns.
+
 ## Success Criteria — checklist before declaring done
 
 1. Total word count is 6,000–10,000 (verify with `wc -w`). Don't pad to hit a number — if the content runs lean, ship it; if it runs long with real substance, that's fine.

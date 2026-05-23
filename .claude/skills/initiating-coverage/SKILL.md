@@ -705,6 +705,20 @@ ls "reports/company/<Slug>/" 2>/dev/null | grep -E "_Initiation_Report_.*\.md$"
 - [ ] All inline citations are markdown links (NOT bare URLs, NOT "Company data")
 - [ ] Numbers match financial model exactly
 
+**Truthfulness verification — run before delivery** (catches the model's documented fabrication patterns: synthetic SEC URLs, opinions misattributed to filings, invented competitor product names, invented executive names):
+
+Follow the **Step 10 verification pass from the `company-research` skill** in full — see `.claude/skills/company-research/SKILL.md` § Step 10. The pass covers:
+
+1. **URL HTTP check** — every URL returns 200 (or known-good 301/302). 404s must be fixed or removed.
+2. **SEC filename audit** — every SEC URL ends in a real filename pulled from the EDGAR submissions JSON (`https://data.sec.gov/submissions/CIK<padded>.json`); no synthetic `<doctype>_<accession>.htm` patterns.
+3. **10-K-cited claims spot-check** — at least five financial numbers cited to the 10-K are grep-confirmed to appear in the actual 10-K text.
+4. **Opinion-attribution discipline** — no "dominant" / "leader" / "monopoly" / "co-leader" / "near-monopoly share" claim is attached to a 10-K citation unless the 10-K verbatim says it. These are analyst opinions; relabel `*Analyst view:*` and either cite a third-party research firm or leave uncited.
+5. **Competitor product names** — specific product names (e.g. AMAT's NOKOTA / Producer / Endura, KLA's tools) are NOT cited to the subject company's 10-K. If named, cite the competitor's own filing or website.
+6. **Executive names** — every named executive is grep-confirmed by exact name in the cited 8-K or DEF 14A.
+7. **Internal consistency** — Section 1's competitive framing matches Section 7's; the history timeline matches the prose; product classifications are consistent across the mermaid graph and the section subheadings.
+
+Append a `<details>`-folded **Verification log** after the Sources & References appendix listing what was checked and any residual unknowns. The log is short but mandatory — if it isn't present, the report has not actually been verified.
+
 ---
 
 ## Input Verification Protocol

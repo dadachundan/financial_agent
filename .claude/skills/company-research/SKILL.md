@@ -18,9 +18,21 @@ This is the **single most important rule** and overrides every other instruction
 - **No "this is probably around X."** No back-of-envelope estimates dressed as facts. If you need to estimate, mark it explicitly (`est., based on [reasoning]`) and show the math.
 - **Cross-check every quantitative claim against its citation.** Before pasting "revenue grew 34% YoY" with a 10-K link, confirm the 10-K actually shows 34%. The citation must support the claim — not vaguely cover the topic.
 - **Page numbers and dates must be exact.** If you cite `2024 年度报告, 第 28 页`, page 28 must be where the figure actually lives. If unsure, drop the page reference and cite the document only.
-- **No fabricated URLs** (this echoes the citation rule). If you cannot locate the real link, state that inline rather than guess a plausible URL.
+- **No fabricated URLs** (this echoes the citation rule). For SEC filings, always look up the real filename via the EDGAR submissions JSON API (`https://data.sec.gov/submissions/CIK<10-digit-padded>.json` — see `references/citations.md`); never invent synthetic filename patterns like `2025_10K_<accession>.htm` — those are 404s.
 - **Direct quotations must be verbatim.** If you can't quote exactly, paraphrase and drop the quote marks.
 - **Distinguish primary (filings, transcripts) from secondary (news, third-party) sources.** When two sources disagree, prefer the primary and note the discrepancy briefly.
+
+### Specific failure mode: do NOT misattribute sell-side opinions to filings
+
+A 10-K / 年度报告 / Yuho is a legal disclosure document. It almost never contains:
+- Specific competitor product names (e.g. AMAT's "NOKOTA", "Producer", "Endura")
+- Share-leadership claims about itself ("Lam is the leader", "dominant in X", "near-monopoly share")
+- Revenue percentages by sub-product category (e.g. "Etch is 45% of Systems revenue")
+- Co-leader / #1 / #2 rankings
+
+These are sell-side analyst assessments. **Do not attach a 10-K citation to a sentence that makes one of these claims unless the 10-K verbatim says it.** Instead, prefix the sentence with `*Analyst view:*` (English) or `*分析师观点：*` (Chinese) and either leave it uncited or cite a real industry-research source (Yole, Gartner, IDC) at a specific URL.
+
+What the 10-K Competition section typically does contain — and what you CAN cite to it — is a high-level list of named competitors (e.g. "Our primary competitors in the etch market are Applied Materials, Hitachi Ltd., and Tokyo Electron"). Quote that verbatim with a 10-K citation; do not embellish.
 
 **When in doubt, omit.** A shorter, fully-sourced report is far more valuable than a padded one with invented detail. Length targets in `references/report_structure.md` are guides, not licenses to fabricate.
 
@@ -211,9 +223,16 @@ Capture: top-1 customer % of revenue, top-5 %, multi-year trend (3 years if avai
 
 ### Step 5 — Competitive intelligence
 
-1. Identify 5–10 competitors — direct, indirect, emerging. Cross-check the company's 10-K / 年度报告 for its own competitor list.
+1. Identify 5–10 competitors — direct, indirect, emerging. **Open the company's 10-K / 年度报告 Competition section and quote its competitor list verbatim** — that is the authoritative starting point; any name you add beyond it must be sourced separately. For US issuers the Competition section is typically a paragraph under Item 1 Business. For Chinese issuers, look for `主要竞争对手` or similar in the 年度报告.
 2. For each: visit website, review filings if public, note products, differentiators, market-share estimates.
 3. Build a positioning framework (price / features / scale). Identify advantages, vulnerabilities, switching costs, network effects.
+
+**Citation discipline for competitive positioning:**
+
+- **Share-leadership claims belong to analysts, not filings.** Do NOT write "Lam is the global #1 in etch ([10-K])" unless the 10-K verbatim says "we are the global #1 in etch" — almost no 10-K says that about itself. Move share / leadership claims under an `*Analyst view:*` label and either cite a third-party research source (Yole, Gartner, TechInsights — at the specific report URL, not the firm's homepage) or leave uncited.
+- **Specific competitor product names need their own citation.** "AMAT's NOKOTA platform" is real but is NOT in the LRCX 10-K — the LRCX 10-K only names "Applied Materials" as a competitor. If you want to name an AMAT product, cite AMAT's own 10-K / website where that product is named.
+- **Segment-revenue percentages must be labeled.** If you write "Etch is ~45% of Systems revenue", that is an analyst estimate unless the company actually publishes the breakdown — mark it `(analyst estimate; not disclosed)` and do not cite the 10-K for the percentage.
+- **Internal consistency:** the competitive-position claims in Section 1 must match the detail in Section 4 (Products) and Section 7 (Competitive Landscape). If Section 1 says "Lam is the only Western supplier of X" but Section 7 says "Lam is #2 behind SCREEN of Japan in X", one of them is wrong. Fix during writing — do not ship contradictions.
 
 ### Step 6 — Industry analysis
 
@@ -253,7 +272,139 @@ Suggested: 3–5 yr revenue + gross margin trend (dual-axis); segment revenue mi
 
 ### Step 9 — Synthesis and writing
 
-Read `references/report_structure.md` for the 9-section spec and full output template. Read `references/citations.md` before drafting — inline citations are required in every section, not just at the end. Before declaring done, run through `references/quality_checklist.md` and verify total word count with `wc -w`.
+Read `references/report_structure.md` for the 9-section spec and full output template. Read `references/citations.md` before drafting — inline citations are required in every section, not just at the end.
+
+### Step 10 — Verification pass (mandatory before declaring done)
+
+**A report that has not been verified is not done.** The generating model has a documented pattern of:
+
+- Fabricating SEC URLs (synthetic filenames like `2025_10K_<accession>.htm` that don't exist on EDGAR)
+- Attributing analyst opinions to the 10-K ("Lam is regarded as ahead", "dominant moat", "near-monopoly share", "co-leader")
+- Inventing competitor product names not present in any cited filing
+- Inventing specific market-share percentages and segment-revenue splits
+- Inventing executive names and management-transition details
+
+Step 10 catches these before the report ships. **Skip Step 10 only if the user has explicitly waived it.**
+
+#### 10.1 — Verify every URL resolves
+
+```bash
+REPORT=reports/company/<Slug>/<filename>.md
+for url in $(grep -oE 'https?://[^)]+' "$REPORT" | sort -u); do
+  code=$(curl -sSL -A "Research Analyst <your-email>" --max-time 12 -o /dev/null -w "%{http_code}" "$url")
+  echo "$code  $url"
+done | grep -v '^200 ' | grep -v '^301 ' | grep -v '^302 '
+```
+
+Any 404 must be either fixed (find the real URL) or removed. 403 and 406 are usually anti-bot blocks (semi.org, Yahoo Finance, congress.gov, LinkedIn) — confirm those URLs work in a real browser before keeping them.
+
+#### 10.2 — Verify SEC filenames came from the EDGAR submissions JSON
+
+For US issuers, every SEC URL has the form:
+`https://www.sec.gov/Archives/edgar/data/<CIK>/<accession-no-dashes>/<filename>`
+
+The `<filename>` is opaque — `lrcx-20250629.htm`, `tsla-20241231.htm`, `f43373e10vk.htm`, `ny20050572x2_def14a.htm`. **Never construct it by pattern.** Look it up via the EDGAR submissions API:
+
+```bash
+curl -sS -A "Research Analyst <email>" \
+  "https://data.sec.gov/submissions/CIK<10-digit-zero-padded-CIK>.json" \
+  | python3 -c "
+import json, sys
+d = json.load(sys.stdin)
+r = d['filings']['recent']
+for i, f in enumerate(r['form']):
+    if f in ('10-K', '10-Q', '8-K', 'DEF 14A', '20-F', '6-K'):
+        print(f, r['accessionNumber'][i], r['filingDate'][i], r['primaryDocument'][i])
+"
+```
+
+For 8-K *exhibits* (the cover doc is rarely the exhibit you want), fetch the filing's directory listing:
+
+```bash
+curl -sS -A "Research Analyst <email>" \
+  "https://www.sec.gov/Archives/edgar/data/<CIK>/<accession-no-dashes>/index.json"
+```
+
+If you cannot resolve a real filename, cite the filing index page (`.../index.html`) instead of inventing one.
+
+#### 10.3 — Verify 10-K-cited claims actually appear in the 10-K
+
+Spot-check every paragraph that cites the 10-K. Cache the 10-K once:
+
+```bash
+curl -sS -A "Research Analyst <email>" \
+  "https://www.sec.gov/Archives/edgar/data/<CIK>/<accession>/<primaryDoc>" > /tmp/10k.htm
+```
+
+For each cited number / fact, grep:
+
+```bash
+grep -ioE '.{40}<search-string>.{200}' /tmp/10k.htm | sed -E 's/<[^>]+>/ /g; s/&nbsp;/ /g; s/[[:space:]]+/ /g'
+```
+
+If the number / claim isn't in the 10-K, the citation is wrong. Either find the real source or drop the claim.
+
+**Specific patterns to grep for and check:**
+- `"primary competitor"` / `"主要竞争对手"` — verify the report's competitor list matches the 10-K Competition section verbatim
+- `"approximately X%"` for any percentage cited — make sure the actual percentage appears
+- Revenue line items (`Systems Revenue`, `Customer Support`) for segment % claims
+- Restructuring / headcount claims (`Note 20`, `restructuring`)
+- Customer concentration (`major customer`, `customer concentration`)
+
+#### 10.4 — Verify executive names against 8-Ks / DEF 14A
+
+Every named executive must appear by exactly that name in the cited filing. Grep the cached 8-K / DEF 14A:
+
+```bash
+curl -sS -A "..." "<8-K URL>" | sed -E 's/<[^>]+>/ /g' | grep -i "<executive name>"
+```
+
+If the name isn't in the filing, the citation is fabricated. Remove the claim or find the right filing.
+
+#### 10.5 — Self-audit checklist
+
+Before declaring done, confirm each line:
+
+- [ ] All URLs return HTTP 200 (or known-good 301 / 302 redirect)
+- [ ] All SEC URLs end in filenames pulled from the EDGAR submissions JSON
+- [ ] No "dominant" / "leader" / "monopoly" / "co-leader" / "near-monopoly share" claim is attached to a 10-K citation unless the 10-K says it verbatim
+- [ ] No revenue-by-sub-segment percentage (e.g. "Etch is 45% of Systems") is attached to a 10-K citation — these are analyst estimates, label them as such
+- [ ] No specific competitor product name (e.g. "AMAT NOKOTA") is attached to the *subject's* 10-K — at minimum it should cite the competitor's own filing or website
+- [ ] No fabricated executive names — every named exec is confirmed in an 8-K or DEF 14A
+- [ ] No `(Source: our model)` / `(Source: our analysis)` / `(模型估算)` self-references
+- [ ] Internal consistency: Section 1's competitive claim matches Section 7's; Section 2 timeline matches Section 1 prose; restructuring counts in narrative match the timeline
+- [ ] Numbers spot-checked against the 10-K (at least: revenue, gross margin, customer concentration, geographic mix, segment %, restructuring headcount)
+
+#### 10.6 — Append a verification log to the report
+
+After the References section, append a `<details>` block listing what was checked. This makes verification visible to the reader and forces honesty about residual unknowns:
+
+```markdown
+<details>
+<summary>Verification log (Step 10) — YYYY-MM-DD</summary>
+
+**URL check** — all <N> URLs HTTP-checked YYYY-MM-DD; all return 200 / known-good 301.
+
+**SEC filenames** — resolved from EDGAR submissions JSON for CIK <padded>; primary docs: 10-K = `<filename>`, latest 10-Q = `<filename>`, DEF 14A = `<filename>`.
+
+**10-K spot-checks** (claim → location in 10-K):
+- Revenue $XB ✓ (MD&A Results of Operations)
+- Gross margin XX% ✓ (MD&A)
+- Top customer concentration NN%/MM% ✓ (Note 19 / Segment Reporting)
+- Geographic mix ✓ (Results of Operations geographic table)
+- Restructuring headcount ✓ (Note 20)
+
+**Analyst-view sentences** (intentionally not cited to a primary source):
+- Section 1: "<paragraph fragment>" — uncited; supported by industry observation.
+- Section 4.1 / 4.2 / 4.3: share-leadership claims labeled `*Analyst view:*` per skill rule.
+
+**Residual unknowns / not yet verified:**
+- <bulleted list, or "none">
+
+</details>
+```
+
+If the log shows residual unknowns the user cares about, fix them before declaring done.
 
 ---
 

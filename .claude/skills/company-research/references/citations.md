@@ -12,6 +12,52 @@ Every inline citation is a clickable markdown link: `[Title in original language
 
 **Do not use bare `(Source: ...)` parentheticals without a URL.** Every link must point to the actual document on the actual web: SEC EDGAR document URL, the specific cninfo PDF URL, the company IR page for an earnings transcript, the news-article permalink, the industry-report landing page. Do not fabricate URLs — if you cannot locate the real link, surface that fact inline rather than guessing.
 
+## SEC EDGAR URL construction — never construct filenames by pattern
+
+US filings live at:
+`https://www.sec.gov/Archives/edgar/data/<CIK-no-leading-zeros>/<accession-no-dashes>/<filename>`
+
+The `<filename>` field is **opaque** — issuers use whatever convention they like. Real examples:
+
+| Filing | Real filename |
+|---|---|
+| Lam Research 2025 10-K | `lrcx-20250629.htm` |
+| Tesla 2024 10-K | `tsla-20241231.htm` |
+| Lam Research 2008 10-K | `f43373e10vk.htm` |
+| Lam Research 2025 DEF 14A | `ny20050572x2_def14a.htm` |
+| Lam Research 8-K exhibit | `lrcx_exx991xmayx21x2024.htm` |
+
+**Synthetic patterns are 404s.** Names like `2025_10K_<accession>.htm`, `2025_DEF%2014A_DEF%2014A_<accession>.htm`, `<doctype>_<filing>_<accession>.htm` are LLM hallucinations that do not exist on EDGAR. Do not invent.
+
+**Always look up the real filename via the EDGAR submissions JSON API:**
+
+```bash
+curl -sS -A "Research Analyst <your-email>" \
+  "https://data.sec.gov/submissions/CIK<10-digit-zero-padded-CIK>.json" \
+  | python3 -c "
+import json, sys
+d = json.load(sys.stdin)
+r = d['filings']['recent']
+for i, f in enumerate(r['form']):
+    if f in ('10-K','10-Q','8-K','DEF 14A','20-F','6-K','S-1'):
+        print(f, r['accessionNumber'][i], r['filingDate'][i], r['primaryDocument'][i])
+"
+```
+
+The `primaryDocument` field is the real cover-document filename. For 8-K **exhibits** (where the cover doc is not the exhibit you want — e.g. Exhibit 99.1 press release), fetch the filing's directory listing:
+
+```bash
+curl -sS -A "..." "https://www.sec.gov/Archives/edgar/data/<CIK>/<accession-no-dashes>/index.json"
+```
+
+The `directory.item[*].name` array lists every file in the filing.
+
+**Note on CIK leading zeros.** Some SEC URLs use 10-digit zero-padded CIKs (`/0000707549/`), others use stripped (`/707549/`). The SEC server transparently 301-redirects between them, so both forms work — pick one convention and stick with it.
+
+**Find a company's CIK:** if you don't have it, use the EDGAR ticker-to-CIK lookup at `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=<TICKER>&type=10-K` and read the URL of the first result.
+
+**If you cannot resolve the real filename**, cite the filing index page (`.../index.html`) — that page is always real — rather than inventing a document URL.
+
 ## Examples (inline within flowing prose)
 
 - US filing: `revenue grew 34% YoY ([Tesla 10-K FY2024, p. 42](https://www.sec.gov/Archives/edgar/data/1318605/000162828025003063/tsla-20241231.htm))`
