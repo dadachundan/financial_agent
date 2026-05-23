@@ -82,7 +82,13 @@ If there is **no recent guidance change** to highlight, omit the banner entirely
 - **Current CEO bio: 200–300 words.** Same depth: prior 2–3 roles with concrete accomplishments, education, tenure at this company, ownership stake, comp structure.
 - **If founder is still CEO, write one combined bio (300–450 words)** — don't split into two.
 
-### 4. Products & Services (700–1,500 words) — **anchored to the issuer's own product table, quoted verbatim, written pedagogically (mixed language OK), ending with a synthesis paragraph**
+### 4. Products & Services (700–1,500 words) — **THE most important section of the report**
+
+> **Priority note:** Section 4 is the single most consequential chapter of the entire research report — see SKILL.md § "The Products & Services chapter is the most important section of the report" for the full rationale. **A weak Section 4 cannot be recovered by polishing the other sections.** Sections 5 (Customers), 6 (Industry), 7 (Competition), 8 (TAM), and 9 (Risks) all reference back to *what the company makes and how it sits in the customer's workflow*; if Section 4 is generic, every downstream section becomes hand-waving. Budget your time and word count accordingly: this section deserves more research effort than any other.
+
+**Two requirements: precise and explanatory.**
+- *Precise* = anchored to the issuer's own product matrix (embedded as an image + reproduced as markdown), with verbatim 10-K quotes for each product family, exact product names with trademark symbols, and competitor / share / leadership claims clearly labeled as analyst view (not attributed to the 10-K).
+- *Explanatory* = for each product, three pedagogical beats (what it physically does → how it differs from sibling products → strategic inflection driving demand); bilingual technical terminology (Chinese AND English side-by-side) for cross-border-investing audiences; a synthesis paragraph at the end showing how the product categories compose a single customer workflow.
 
 This is the section where reports most often degrade into either a flat product catalog or sell-side commentary dressed up as fact. Use the following structure to avoid both failure modes.
 

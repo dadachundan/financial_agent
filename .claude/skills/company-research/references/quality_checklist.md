@@ -20,12 +20,31 @@
 - Company's competitive advantages and vulnerabilities identified.
 - Specific data and examples, not generalities.
 
-## Products & Services
-- Every product on the company website enumerated (no collapsing).
-- Per-product competitive-advantage verdict (yes / partial / no) with moat type.
-- Closest named competitor product called out for each material product.
-- Flagship 1–3 products clearly distinguished from long-tail.
-- Last-12-month launches / sunsets noted.
+## Products & Services — the most important section (highest priority)
+
+**Section 4 carries more weight than any other section.** It is the analytical foundation for Sections 5–9; if it is generic or fabricated, the rest of the report is hand-waving. A report that under-invests here cannot be recovered by polishing the other chapters. See SKILL.md § "The Products & Services chapter is the most important section of the report" for the full rationale and the precise + explanatory criteria.
+
+**Precision checks (must pass):**
+- The issuer's own product table is **embedded as a rendered PNG image** at the top of Section 4 (use `.claude/skills/company-research/scripts/render_10k_section.py`), with a 10-K citation in the caption.
+- The same table is also reproduced as a markdown table immediately below the image (for searchability and link targets).
+- For each row in the matrix, the issuer's own product-family description is **block-quoted verbatim** from the 10-K / 年度报告 / Yuho with the inline citation directly above the quote.
+- Every product name spelled exactly as the issuer spells it, including ® / ™ marks and platform-name prefixes (`ALTUS®`, `Sense.i®`, not `Altus` / `Sense-i`).
+- Every technical specification (depth, speed, resistance, layer count, throughput) comes verbatim from the issuer's filing or press release, with a citation. No invented numbers.
+- Competitor product names cite the competitor's own filing / website — never the subject's 10-K.
+- "Dominant" / "leader" / "co-leader" / "near-monopoly share" claims are labeled `*Analyst view:*` and cite an industry-research source (Yole, Gartner, IDC) or stand uncited. They never carry a 10-K citation.
+- Revenue-by-sub-product-category percentages (e.g. "Etch is ~45% of Systems revenue") labeled `(analyst estimate)` unless the company publishes the split.
+
+**Explanation checks (must pass):**
+- For each material product family, three pedagogical beats present:
+  1. **What it physically does** in the customer's value-chain flow (concrete physical role, not marketing prose);
+  2. **How it differs from sibling products** in the same matrix (explicit cross-reference);
+  3. **Strategic significance** (which technology inflection / customer wave is driving demand).
+- For technical concepts, **bilingual terminology** in `Chinese / English` form (introduced with `**中文释义 / Plain-language gloss:**`). Code-switching within sentences is encouraged for cross-border-investing audiences.
+- **Synthesis paragraph at the end** showing how the product categories compose a single customer workflow (e.g. Deposition → Etch → Clean → Deposition for semicap; discovery → preclinical → clinical → marketed for pharma). Optional small Mermaid graph showing the loop.
+- Per-product **competitive-advantage verdict** (yes / partial / no) plus moat type — under the `*Analyst view:*` label.
+- **Flagship 1–3 products** clearly distinguished from long-tail.
+- **Last-12-month launches / sunsets** noted, each cited to a real press release URL.
+- Section 4 word count is in the upper half of section ranges (≥1,000 words) — *if Section 6 is longer than Section 4, the priority is wrong*; cut Section 6 and expand Section 4.
 
 ## Company Overview — Valuation Snapshot
 - Current price, market cap, TTM P/E, and TTM P/S reported (plus P/B for capital-heavy businesses, EV/EBITDA for leveraged / cyclical names).

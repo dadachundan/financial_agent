@@ -36,6 +36,53 @@ What the 10-K Competition section typically does contain — and what you CAN ci
 
 **When in doubt, omit.** A shorter, fully-sourced report is far more valuable than a padded one with invented detail. Length targets in `references/report_structure.md` are guides, not licenses to fabricate.
 
+## The Products & Services chapter is the most important section of the report
+
+After the "accuracy over completeness" rule, this is the next-highest-priority instruction. **Section 4 (Products & Services) is the single most consequential chapter in the entire report**, and a report that under-invests in Section 4 cannot be recovered by polishing the other sections.
+
+**Why Section 4 carries this weight:**
+
+1. **It is the analytical foundation for everything else.** A reader cannot evaluate Section 5 (Customers — *why* do customers buy this?), Section 6 (Industry — *what market* is the company in?), Section 7 (Competitive Landscape — *who* competes on *what*?), Section 8 (TAM — *what slice* of the market does the company actually serve?), or Section 9 (Risks — *which* products are most at risk?) without first understanding what the company actually makes and how it sits in its customer's workflow. Bury or generalize Section 4, and every downstream section becomes hand-waving.
+
+2. **It is the chapter most often fabricated by the generating model.** Section 4 is exactly the kind of content where the model is tempted to invent plausible-sounding specifics: product feature lists that sound right, competitor product names that exist somewhere but not in the cited filing, revenue-by-product percentages that are never disclosed, "Lam is the leader in X" claims with a 10-K citation that doesn't say that. The Step 10 verification pass exists primarily because of how often Section 4 fails.
+
+3. **It is the chapter that distinguishes a serious research report from a Wikipedia summary.** Sections 1, 2, 3, 6, 8 can be written by anyone with a Bloomberg terminal and a wiki crawler. Section 4, done well, requires reading the issuer's 10-K product table line by line, quoting it verbatim, and explaining what each product physically *does* in the customer's manufacturing / clinical / software flow. The reader's ability to say "now I understand why this company matters to its customers" is built or lost here.
+
+**The two requirements for Section 4 — be precise, and be explanatory.**
+
+### Precise
+
+- **Anchor to the issuer's own product matrix.** Most 10-Ks / 年度报告 / Yuho contain a Product matrix or Product Family table in Item 1 Business. **Embed the rendered original table as a PNG image** via the helper at `.claude/skills/company-research/scripts/render_10k_section.py`, *and* reproduce it as a markdown table immediately below. The image is the visual proof that Section 4 is anchored to primary disclosure; the markdown reproduction is the searchable copy. If the issuer does not publish such a table, build one from the company website (cited) and label it as analyst-constructed.
+- **Quote the issuer's own product descriptions verbatim** for each row of the matrix. Use `>` markdown block-quote syntax with the inline 10-K citation directly above the quote. Verbatim text from the issuer is by definition non-fabricated, and it gives the reader Lam's / 三星's / Pfizer's own explanation of what the product does in their words. **Do not paraphrase the 10-K — quote it.** Paraphrase is where fabrication enters.
+- **Every product name spelled exactly as the issuer spells it**, including trademark symbols (®, ™), capitalization conventions, and platform-name prefixes (e.g. `ALTUS®`, not `Altus`; `Sense.i®`, not `Sense-i`).
+- **Every technical specification** (e.g. "etches channels >10µm deep at <0.1% CD deviation and 2.5× faster", "delivers 50%+ reduction in word-line resistance", "100× faster plasma response") comes verbatim from the issuer's press release or 10-K, with a citation. Numbers without a source are deleted.
+- **Competitor product names are cited to the competitor's own filing or website**, never to the subject company's 10-K. The subject's 10-K Competition section lists competitor *companies*, not products.
+- **Analyst opinions are clearly labeled** as `*Analyst view:*` (or `*分析师观点：*`) and either cite a real industry-research source (Yole, Gartner, IDC, TrendForce — at a specific report URL) or stand uncited. They are never wrapped in a fake 10-K citation.
+
+### Explanatory
+
+- **Walk every product family with three pedagogical beats.** For each row in the issuer's matrix, write a paragraph that covers:
+  1. **What it physically does** in the customer's value-chain flow. Concrete physical role — not marketing prose. ("Electroplates copper to form the interconnect lines that carry signals between transistors", not "delivers advanced metallization solutions".)
+  2. **How it differentiates from sibling products** in the same matrix. The reader should leave able to explain why a fab needs SABRE *and* ALTUS *and* VECTOR — not just "Lam sells deposition tools". Cross-reference to the other rows: "Unlike SABRE (which plates copper for interconnect), ALTUS deposits tungsten or molybdenum for the deeper contacts and word-lines…"
+  3. **Strategic significance**: what technology inflection, customer build-out, or end-market wave is currently driving demand (HBM ramp, GAA logic transition, 400-layer NAND, advanced-packaging build-out, GLP-1 prescription growth, etc.). Cite the press release / 10-K Products text / earnings-call language for the inflection.
+- **For technical concepts, give both Chinese AND English side by side**, in `Chinese / English` or `English / Chinese` or `Chinese (English)` form. Examples: `dielectric / 介质`, `wordline / 字线`, `gate-all-around (GAA, 栅极环绕)`, `high aspect ratio (HAR, 高纵横比)`, `wafer-level packaging (WLP, 晶圆级封装)`. Code-switching freely within a sentence is encouraged — each language carries the term it expresses most compactly. The bilingual gloss is introduced with `**中文释义 / Plain-language gloss:**` so the reader knows it's the analyst's gloss, not 10-K text. (For US-domestic-only audiences with no Chinese exposure, you may drop the Chinese; but for any cross-border-investing context, bilingual is the preferred form.)
+- **End the section with a synthesis paragraph that shows how the product categories interact.** For semicap: the Deposition → Etch → Clean → Deposition manufacturing cycle. For pharma: discovery → preclinical → clinical → marketed. For industrial automation: cell → line → plant. Optionally a small Mermaid graph showing the loop. This is the "now you understand why each product matters" payoff.
+- **Use analogies where they accelerate understanding.** "TSVs are the vertical 'elevator shafts' between stacked DRAM die"; "bevel cleaning is like trimming the wafer's edge before particles flake back onto the device area"; "Striker ALD is the atomic-precision insulator tool used where SiO₂ gapfill has zero tolerance for voids." Analogies are uncited (they're the analyst's pedagogical device) — but they must be physically accurate, not loose metaphors.
+
+**Length and depth target for Section 4: 700–1,500 words** — meaningfully longer than every other section except possibly Industry Overview. If your draft has Section 4 at 500 words and Section 6 at 1,200 words, the priority is wrong; cut Section 6 and expand Section 4.
+
+**Specific failure modes that disqualify Section 4 — fix before declaring done:**
+
+- A flat list of product names with no explanation of what each does → not a research report, it's a product catalog.
+- Competitive-position language ("dominant", "leader", "co-leader", "near-monopoly share") attached to a 10-K citation → misattribution; relabel as analyst view.
+- Revenue percentages by sub-product category attributed to the 10-K → fabrication unless the company actually publishes the split; label as analyst estimate.
+- Specific competitor product names (e.g. "AMAT's NOKOTA") attached to the subject's 10-K → wrong citation chain; cite competitor's own filing.
+- Marketing language from the company's homepage substituted for 10-K verbatim quotes ("delivers cutting-edge solutions for advanced manufacturing") → not what 10-K says; replace with verbatim quote.
+- A "synthesis" paragraph that just repeats the section structure rather than showing how products interact → re-write to show the actual customer workflow / cycle.
+- No image embed of the issuer's own product table → the section reads like analyst opinion without primary anchor; run `render_10k_section.py` to fix.
+
+See `references/report_structure.md` § Section 4 for the per-row template, and `references/quality_checklist.md` for the pre-submit checklist.
+
 ## Report language
 
 Two options only: **Simplified Chinese (zh-CN)** or **English**. Never Traditional Chinese, Japanese, or Korean for the prose.
