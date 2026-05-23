@@ -687,19 +687,19 @@ _VIEW_TMPL = r"""<!doctype html>
     .ric-editor-actions .save:disabled{background:#cfd6df;cursor:not-allowed}
     .ric-editor-actions .save:not(:disabled):hover{background:#16395a}
 
-    /* "View table" button — surfaces when a comment body contains a
-       <table> that the 320px rail can't render legibly. Clicking it
-       opens .ric-modal with the full comment rendered at usable width. */
-    .ric-view-table{display:inline-flex;align-items:center;gap:4px;
+    /* "Expand" button — every comment gets one; opens .ric-modal so
+       the body renders at usable width (the 320px rail clips wide
+       content like tables and long paragraphs). */
+    .ric-expand-btn{display:inline-flex;align-items:center;gap:4px;
                     font-size:.78rem;color:#0366d6;cursor:pointer;
                     background:none;border:none;padding:0;margin-top:6px;
                     font-family:inherit}
-    .ric-view-table:hover{text-decoration:underline}
-    .ric-view-table svg{width:13px;height:13px;flex:none}
+    .ric-expand-btn:hover{text-decoration:underline}
+    .ric-expand-btn svg{width:13px;height:13px;flex:none}
 
     /* Native <dialog> — no Bootstrap JS needed on the viewer page. */
     dialog.ric-modal{border:none;border-radius:10px;padding:0;
-                     max-width:min(960px,92vw);width:auto;
+                     max-width:min(1200px,92vw);width:auto;
                      box-shadow:0 16px 48px rgba(0,0,0,.22)}
     dialog.ric-modal::backdrop{background:rgba(0,0,0,.4)}
     .ric-modal-head{display:flex;align-items:center;justify-content:space-between;
@@ -1132,24 +1132,21 @@ _VIEW_TMPL = r"""<!doctype html>
       b.innerHTML = window.marked ? marked.parse((window._fixBrokenTables || ((x)=>x))(c.body || '')) : (c.body || '');
       if (window._renderMath) window._renderMath(b);
 
-      // Tables wedge themselves into the 320px rail and become unreadable.
-      // Surface a "View table" button that opens a wider modal.
-      let viewBtn = null;
-      if (b.querySelector('table')) {
-        viewBtn = document.createElement('button');
-        viewBtn.type = 'button';
-        viewBtn.className = 'ric-view-table';
-        viewBtn.innerHTML =
-          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
-          'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
-          '<rect x="3" y="4" width="18" height="16" rx="1"/>' +
-          '<path d="M3 10h18M3 16h18M9 4v16M15 4v16"/></svg>' +
-          '<span>View table</span>';
-        viewBtn.addEventListener('click', (ev) => {
-          ev.stopPropagation();
-          openCommentModal(c);
-        });
-      }
+      // Every comment gets an "Expand" button. The 320px rail clips
+      // wide content (tables, long paragraphs) — the modal renders at
+      // up to 1200px so it's actually readable.
+      const viewBtn = document.createElement('button');
+      viewBtn.type = 'button';
+      viewBtn.className = 'ric-expand-btn';
+      viewBtn.innerHTML =
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+        'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+        '<path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>' +
+        '<span>Expand</span>';
+      viewBtn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        openCommentModal(c);
+      });
 
       const meta = document.createElement('div');
       meta.className = 'ric-meta';
@@ -1167,9 +1164,7 @@ _VIEW_TMPL = r"""<!doctype html>
       dBtn.addEventListener('click', (ev) => { ev.stopPropagation(); deleteOne(c.id); });
       actions.append(eBtn, dBtn);
 
-      div.append(q, b);
-      if (viewBtn) div.append(viewBtn);
-      div.append(meta, actions);
+      div.append(q, b, viewBtn, meta, actions);
       div.addEventListener('click', () => setActive(c.id, true));
       return div;
     }
