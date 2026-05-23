@@ -620,10 +620,21 @@ _VIEW_TMPL = r"""<!doctype html>
                    box-shadow:0 3px 10px rgba(0,0,0,.18)}
     .ric-fab svg{width:18px;height:18px;display:block}
 
-    /* Right margin rail; absolutely-positioned cards inside */
-    .comments-rail{flex:0 0 320px;position:relative;min-height:200px;
+    /* Right margin rail; absolutely-positioned cards inside. Width is
+       user-adjustable via the drag splitter on its left edge; the
+       chosen width persists to localStorage. We can't use CSS
+       `resize:horizontal` here because that needs overflow:hidden,
+       which would clip the absolutely-positioned cards. */
+    .comments-rail{flex:0 0 auto;width:320px;
+                   min-width:240px;max-width:700px;
+                   position:relative;min-height:200px;
                    padding-left:14px;padding-right:8px;box-sizing:border-box}
     .comments-rail.hidden{display:none}
+    .rail-splitter{flex:0 0 6px;align-self:stretch;cursor:col-resize;
+                   background:transparent;position:relative;z-index:5}
+    .rail-splitter:hover{background:#c8d6e5}
+    .rail-splitter.dragging{background:#1F4E78}
+    .rail-splitter.hidden{display:none}
     .ric-card{position:absolute;top:0;left:14px;right:8px;
               background:#fff;border:1px solid #e0e4ea;border-radius:8px;
               padding:10px 12px;box-shadow:0 1px 3px rgba(0,0,0,.04);
@@ -730,6 +741,7 @@ _VIEW_TMPL = r"""<!doctype html>
     /* Narrow viewports: collapse rail; fab still works as before */
     @media (max-width: 1080px) {
       .comments-rail{display:none}
+      .rail-splitter{display:none}
       .layout{max-width:980px}
     }
   </style>
@@ -741,6 +753,8 @@ _VIEW_TMPL = r"""<!doctype html>
       <div class="backlink"><a href="{{ _base }}/">&larr; back to reports</a></div>
       <div id="content"></div>
     </div>
+    <div class="rail-splitter hidden" id="railSplitter"
+         title="Drag to resize comments column"></div>
     <div class="comments-rail hidden" id="ricRail"></div>
   </div>
 
@@ -949,6 +963,43 @@ _VIEW_TMPL = r"""<!doctype html>
     const docEl   = document.querySelector('.doc');
     const fab     = document.getElementById('ricFab');
     const rail    = document.getElementById('ricRail');
+    const splitter = document.getElementById('railSplitter');
+
+    // Drag-to-resize the comments rail. Width persists to localStorage.
+    const RAIL_W_KEY = 'ric-rail-width';
+    const clampRailW = (w) => Math.max(240, Math.min(700, w));
+    (function restoreRailWidth(){
+      const w = parseInt(localStorage.getItem(RAIL_W_KEY) || '', 10);
+      if (w > 0) rail.style.width = clampRailW(w) + 'px';
+    })();
+    if (splitter) {
+      let startX = 0, startW = 0;
+      const onMove = (e) => {
+        // Dragging LEFT widens the rail (rail is on the right side).
+        rail.style.width = clampRailW(startW + (startX - e.clientX)) + 'px';
+      };
+      const onUp = () => {
+        splitter.classList.remove('dragging');
+        document.body.style.userSelect = '';
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('mouseup', onUp);
+        const w = parseInt(rail.style.width, 10);
+        if (w > 0) localStorage.setItem(RAIL_W_KEY, String(w));
+        // Re-layout cards: rail width changed → card heights/positions
+        // may shift, since they're absolutely positioned and re-flow
+        // based on each card's measured content height.
+        if (typeof layoutCards === 'function') layoutCards();
+      };
+      splitter.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        startX = e.clientX;
+        startW = rail.getBoundingClientRect().width;
+        splitter.classList.add('dragging');
+        document.body.style.userSelect = 'none';
+        document.addEventListener('mousemove', onMove);
+        document.addEventListener('mouseup', onUp);
+      });
+    }
 
     let pendingSelection = null;  // {quote, prefix, suffix, heading_anchor, rect}
     let comments        = [];     // current loaded comments (with .orphan flag)
@@ -1459,6 +1510,7 @@ _VIEW_TMPL = r"""<!doctype html>
     function updateRailVisibility() {
       const hasCards = rail.querySelectorAll('.ric-card').length > 0;
       rail.classList.toggle('hidden', !hasCards);
+      if (splitter) splitter.classList.toggle('hidden', !hasCards);
     }
 
     // Position cards next to their highlights; stack downward to avoid
