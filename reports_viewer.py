@@ -635,6 +635,8 @@ _VIEW_TMPL = r"""<!doctype html>
     .ric-card:hover{box-shadow:0 2px 8px rgba(0,0,0,.1);border-color:#a9bdd1}
     .ric-card.active{box-shadow:0 2px 12px rgba(31,78,120,.22);
                      border-color:#1F4E78;transform:translateX(-4px)}
+    .ric-card:focus{outline:none;box-shadow:0 2px 14px rgba(31,78,120,.28);
+                    border-color:#1F4E78}
     .ric-card.orphan{background:#fffaee;border-color:#f0d8a6}
     .ric-card.pending{border-color:#1F4E78;box-shadow:0 3px 14px rgba(31,78,120,.2);
                       cursor:default}
@@ -815,7 +817,9 @@ _VIEW_TMPL = r"""<!doctype html>
       const prefix = index.full.slice(Math.max(0, startOff - 32), startOff);
       const suffix = index.full.slice(endOff, endOff + 32);
       const heading = nearestHeading(range.startContainer);
-      return { quote, prefix, suffix, heading_anchor: heading, rect: range.getBoundingClientRect() };
+      return { quote, prefix, suffix, heading_anchor: heading,
+               start_off: startOff, end_off: endOff,
+               rect: range.getBoundingClientRect() };
     }
 
     // Place the floating "+" pill at the doc's right margin, aligned with
@@ -905,6 +909,17 @@ _VIEW_TMPL = r"""<!doctype html>
       docRoot.normalize();
     }
 
+    // The "pending" highlight is the temporary <mark> that anchors the
+    // not-yet-saved comment to its selection while the editor is open.
+    // Removed on cancel; replaced by the real per-id mark on save.
+    function clearPendingHighlights() {
+      docRoot.querySelectorAll('mark.ric-hl[data-cid="pending"]').forEach(m => {
+        const t = document.createTextNode(m.textContent);
+        m.parentNode.replaceChild(t, m);
+      });
+      docRoot.normalize();
+    }
+
     function fmtTime(s) { return (s || '').replace('T', ' ').replace('Z', ''); }
 
     // -- Card builders --------------------------------------------------
@@ -914,6 +929,7 @@ _VIEW_TMPL = r"""<!doctype html>
       div.className = 'ric-card' + (c.orphan ? ' orphan' : '');
       div.dataset.id = c.id;
       div.dataset.anchored = c.orphan ? '0' : '1';
+      div.tabIndex = -1;
 
       const q = document.createElement('div');
       q.className = 'ric-quote';
@@ -991,12 +1007,20 @@ _VIEW_TMPL = r"""<!doctype html>
     function openNewCommentCard(info) {
       closeAnyEditor();
       rail.classList.remove('hidden');
+      // Paint a real <mark> on the selection so the user can see what's
+      // being commented on while the editor is open — browser text-
+      // selection is dropped the moment the textarea takes focus.
+      if (typeof info.start_off === 'number' && typeof info.end_off === 'number') {
+        const idx = buildIndex();
+        const marks = wrapRange(idx, info.start_off, info.end_off, 'pending');
+        marks.forEach(m => m.classList.add('active'));
+      }
       const card = buildEditorEl({
         quote: info.quote,
         body: '',
         onSave: async (body) => {
           try {
-            await api('/inline-comments', {
+            const resp = await api('/inline-comments', {
               method: 'POST',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
@@ -1013,10 +1037,13 @@ _VIEW_TMPL = r"""<!doctype html>
             window.getSelection().removeAllRanges();
             pendingSelection = null;
             await loadAndRender();
+            const newId = resp && resp.comment && resp.comment.id;
+            if (newId) focusSavedCard(newId);
           } catch (e) { alert('Save failed: ' + e.message); }
         },
         onCancel: () => {
           card.remove();
+          clearPendingHighlights();
           pendingSelection = null;
           updateRailVisibility();
           layoutCards();
@@ -1027,11 +1054,28 @@ _VIEW_TMPL = r"""<!doctype html>
       setTimeout(() => { card._textarea.focus(); }, 50);
     }
 
+    // After save/edit, light up the new/edited card + its highlight, and
+    // scroll the card into view so the user sees where their comment
+    // landed — otherwise focus drops to <body> and the new card just
+    // appears silently in the rail.
+    function focusSavedCard(cid) {
+      setActive(cid, false);
+      const card = rail.querySelector('.ric-card[data-id="' + cid + '"]');
+      if (!card) return;
+      const r = card.getBoundingClientRect();
+      if (r.top < 80 || r.bottom > window.innerHeight - 40) {
+        card.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      }
+      try { card.focus({ preventScroll: true }); } catch (_) {}
+    }
+
     function openEditCard(c) {
       closeAnyEditor();
       editingId = c.id;
       const existing = rail.querySelector('.ric-card[data-id="' + c.id + '"]');
       if (!existing) return;
+      // Make the highlighted text in the doc visibly active while editing.
+      setActive(c.id, false);
       const card = buildEditorEl({
         id: c.id,
         quote: c.quote,
@@ -1045,6 +1089,7 @@ _VIEW_TMPL = r"""<!doctype html>
             });
             editingId = null;
             await loadAndRender();
+            focusSavedCard(c.id);
           } catch (e) { alert('Save failed: ' + e.message); }
         },
         onCancel: () => {
@@ -1062,6 +1107,7 @@ _VIEW_TMPL = r"""<!doctype html>
     function closeAnyEditor() {
       const p = rail.querySelector('.ric-card.pending[data-pending="1"]');
       if (p) p.remove();
+      clearPendingHighlights();
       if (editingId) {
         editingId = null;
         renderCards(comments);
@@ -1125,8 +1171,14 @@ _VIEW_TMPL = r"""<!doctype html>
         let desiredTop;
         let isOrphan = false;
         if (card.classList.contains('pending') && card.dataset.pending === '1') {
-          // New-comment editor (no id yet) — anchor to current selection rect
-          if (pendingSelection) {
+          // New-comment editor (no id yet) — prefer the pending <mark>'s
+          // live position so the card tracks scrolling and stays aligned
+          // with the highlight. Fall back to the cached selection rect
+          // only if the wrap step didn't run (e.g. cross-element edge case).
+          const pendingMark = docRoot.querySelector('mark.ric-hl[data-cid="pending"]');
+          if (pendingMark) {
+            desiredTop = pendingMark.getBoundingClientRect().top - railRect.top;
+          } else if (pendingSelection) {
             desiredTop = pendingSelection.rect.top - railRect.top;
           } else {
             desiredTop = 0;

@@ -35,7 +35,7 @@ In **fiscal 2025 (year ended 28 September 2025), Qualcomm generated total revenu
 
 Of FY2025 revenue, **QCT contributed USD 38.367 bn (87% of total)** and **QTL USD 5.582 bn (13%)**. Within QCT, **Handsets** generated USD 27.793 bn (72% of QCT, +12% YoY), **Automotive** USD 3.957 bn (10% of QCT, +36% YoY), and **IoT** USD 6.617 bn (17% of QCT, +22% YoY) ([QCOM FY2025 10-K, MD&A — QCT Segment](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)). QTL revenue was essentially flat year-over-year (+USD 10 M) — a notable detail given that Huawei's license expired in Q2 FY2025 and royalties from Huawei stopped flowing thereafter, but new long-term agreements with two key Chinese OEMs and a comprehensive 4G/5G license with Transsion (the dominant African/India-emerging OEM) backfilled the lost run-rate ([QCOM FY2025 10-K, MD&A — QTL Segment](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 
-![Qualcomm — Total Revenue & GAAP Gross Margin, FY2021–FY2025](../../charts/qcom_revenue_gm.png)
+![Qualcomm — Total Revenue & GAAP Gross Margin, FY2021–FY2025](charts/qcom_revenue_gm.png)
 Source: [QCOM FY2022 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/0000804328/000080432822000021/) and [QCOM FY2025 10-K, F-3 Consolidated Statements of Operations](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm).
 
 **Geographic exposure is heavily Asia-skewed.** Approximately two-thirds of QCT shipments are taken delivery of by Asian OEMs (a substantial portion in China) for sale into both China and global markets; QTL royalties are also heavily concentrated with Chinese licensees because Chinese-headquartered OEMs (Xiaomi, Oppo, vivo, Honor, Transsion) collectively account for roughly half of global non-Apple, non-Samsung handset shipments. Approximately 92% of total fiscal 2025 revenues were attributed to customers headquartered outside the United States ([QCOM FY2025 10-K, MD&A — Geographic Concentrations](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
@@ -183,7 +183,7 @@ The QCT Handsets stream generated **USD 27.793 bn in FY2025 revenue (+12% YoY)**
 
 **Flagship status:** Snapdragon 8 Elite is by far the single largest contributor to QCT Handset revenue (Qualcomm does not disclose SKU-level breakdown, but premium-tier ASPs in FY2025 drove USD 2.5 bn of incremental QCT revenue per the MD&A — implying the premium tier carries the gross-profit weight of the segment) ([QCOM FY2025 10-K, MD&A — QCT Segment Revenues](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 
-![QCT Handsets Revenue & YoY Growth, FY2023–FY2025](../../charts/qcom_handset_growth.png)
+![QCT Handsets Revenue & YoY Growth, FY2023–FY2025](charts/qcom_handset_growth.png)
 Source: [QCOM FY2025 10-K Note 8 Segment Information](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm).
 
 ### QCT — Automotive
@@ -196,7 +196,7 @@ The QCT Automotive stream generated **USD 3.957 bn in FY2025 (+36% YoY)** and is
 
 - **Snapdragon Auto Connectivity** — 5G cellular, Wi-Fi 7, Bluetooth, UWB, and V2X chips for connected-vehicle units. **Competitive verdict: Yes — extension of Qualcomm's smartphone-modem dominance into automotive cellular** ([Qualcomm Auto press release, 2026-01](https://www.qualcomm.com/news/releases/2026/01/qualcomm-drives-the-future-of-mobility-with-strong-snapdragon-di)).
 
-![QCT Automotive Quarterly Revenue Ramp](../../charts/qcom_auto_ramp.png)
+![QCT Automotive Quarterly Revenue Ramp](charts/qcom_auto_ramp.png)
 Source: QCOM quarterly 8-K earnings releases ([Q1 FY2024](https://www.sec.gov/Archives/edgar/data/0000804328/000080432824000015/qcom122423erex991.htm) through [Q2 FY2026](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
 
 ### QCT — IoT
@@ -219,7 +219,7 @@ Following the December 2025 acquisition of Alphawave Semi for USD 2.4 bn, Qualco
 
 QTL licenses Qualcomm's cellular SEP portfolio (3G CDMA2000 / WCDMA, 4G LTE, 5G NR, 5G Advanced) to "hundreds of companies" globally, with **patent licensing revenue of USD 5.582 bn (FY2025), 72% EBT margin**, and key OEM license agreements running through fiscal years 2027–2031 ([QCOM FY2025 10-K, MD&A and Note 2](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)). Royalties are typically a percentage of the wholesale device selling price, with per-unit caps. **Competitive verdict: Yes — the deepest and most durable economic moat at Qualcomm.** The portfolio is the most extensively licensed in the industry; standards-body commitments under FRAND obligations cement its centrality. The vulnerabilities are political/regulatory (antitrust scrutiny in China, EU, Korea, India has historically resulted in royalty-base resets) and structural (as 5G penetration saturates and 6G is still 3–5 years from commercial deployment, royalty-per-unit growth depends on rising device ASPs and new categories like XR/AR — both finite tailwinds).
 
-![QTL Licensing Revenue & EBT Margin, FY2021–FY2025](../../charts/qcom_qtl.png)
+![QTL Licensing Revenue & EBT Margin, FY2021–FY2025](charts/qcom_qtl.png)
 Source: [QCOM FY2022 10-K MD&A](https://www.sec.gov/Archives/edgar/data/0000804328/000080432822000021/) and [QCOM FY2025 10-K MD&A](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm).
 
 ### Recent launches and roadmap
@@ -234,11 +234,11 @@ Source: [QCOM FY2022 10-K MD&A](https://www.sec.gov/Archives/edgar/data/00008043
 
 ## 5. Customers & Go-to-Market
 
-Qualcomm's customer base is bifurcated into **chip customers (QCT)** — handset, automotive, PC, IoT, and (newly) data-center OEMs that buy Snapdragon platforms — and **license customers (QTL)** — essentially every cellular-device OEM in the world, where the license obligation attaches to the OEM regardless of whose modem chip is inside.
+Qualcomm's customer base is bifurcated into **chip customers (QCT)** — handset, automotive, PC, IoT, and (newly) data-center OEMs that buy Snapdragon platforms — and **license customers (QTL)** — essentially every cellular-device OEM in the world, where the license obligation attaches to the OEM regardless of whose modem chip is inside ([QCOM FY2025 10-K, Item 1 — QTL Licensees](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 
 ### Customer concentration — quantified
 
-Per the FY2025 10-K Note 2 (Concentrations), **three customers / licensees each accounted for 10% or more of total consolidated revenue in FY2025**:
+Per the FY2025 10-K Note 2 (Concentrations), **three customers / licensees each accounted for 10% or more of total consolidated revenue in FY2025** ([QCOM FY2025 10-K, Note 2 Concentrations](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)):
 
 ```mermaid
 pie title FY2025 revenue concentration — top 3 customers/licensees
@@ -250,20 +250,20 @@ pie title FY2025 revenue concentration — top 3 customers/licensees
 
 Source: [QCOM FY2025 10-K, Note 2 Concentrations](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm). Customer mapping (Apple/Samsung/Xiaomi) per Human Capital and MD&A disclosures.
 
-The 3-year trend (FY2023 → FY2025): Customer x **27% → 22% → 21%**; Customer y **21% → 19% → 20%**; Customer z **<10% → 12% → 13%**. The reduction in Customer x (Apple) share from 27% to 21% in two years is consistent with the published narrative — Apple's modem in-housing in iPhone 16e (Feb 2025) and increasing use of Apple-designed modems in subsequent launches will continue to compress this share. The simultaneous rise of Xiaomi from <10% to 13% reflects both Snapdragon 8 Elite premium-tier wins and the FY25 Chinese OEM license renewals.
+The 3-year trend (FY2023 → FY2025): Customer x **27% → 22% → 21%**; Customer y **21% → 19% → 20%**; Customer z **<10% → 12% → 13%** ([QCOM FY2025 10-K, Note 2 Concentrations](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)). The reduction in Customer x (Apple) share from 27% to 21% in two years is consistent with the published narrative — Apple's modem in-housing in iPhone 16e (Feb 2025) and increasing use of Apple-designed modems in subsequent launches will continue to compress this share ([Apple — "Introducing Apple C1 modem in iPhone 16e", 2025-02-19, via 9to5Mac](https://9to5mac.com/2025/02/19/apple-reveals-c1-its-first-in-house-5g-iphone-modem-replacing-qualcomm/)). The simultaneous rise of Xiaomi from <10% to 13% reflects both Snapdragon 8 Elite premium-tier wins and the FY25 Chinese OEM license renewals ([QCOM FY2025 10-K, MD&A — QTL Segment](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 
-**This concentration is a material risk and is treated as such in Section 9.** Notably, both Apple and Samsung are also **competitors** through their respective in-house modem (Apple C1) and Exynos (Samsung) silicon programs — a "frenemy" dynamic unusual at this scale.
+**This concentration is a material risk and is treated as such in Section 9.** Notably, both Apple and Samsung are also **competitors** through their respective in-house modem (Apple C1) and Exynos (Samsung) silicon programs — a "frenemy" dynamic unusual at this scale ([Fortune — Apple C1 modem story, 2025-02-19](https://fortune.com/2025/02/19/apple-iphone-16e-c1-cellular-modem-qualcomm-silicon/)).
 
 ### Customer segments
 
-- **Premium Android OEMs:** Samsung, Xiaomi, Oppo, vivo, OnePlus, Honor, Motorola/Lenovo, ASUS, Sony, Google (Pixel partial; Tensor is Google + Samsung), Nothing, Transsion. Qualcomm has supply / multi-year platform commitments with most of the above.
-- **Apple:** thin-modem only; transitioning to Apple C1 / C-series modems on a multi-year timeline. The 2023 extension of the Apple supply agreement covered 2024–2026 iPhone launches.
-- **Chinese OEMs (royalty + chip):** Xiaomi, Oppo, vivo, Honor, OnePlus, Transsion (Tecno/Infinix/Itel — Africa/India), TCL, Lenovo, ZTE, Realme. Significant FY2025 milestone: comprehensive 4G/5G license signed with Transsion, settling outstanding litigation.
-- **Automotive OEMs / Tier 1s:** BMW, GM, Volkswagen Group (Cariad), Stellantis, Mercedes-Benz, Ferrari, Renault, Honda, Hyundai-Kia, Geely, BYD, NIO, Xpeng, Li Auto, Leapmotor, Zeekr, Chery, GreatWall, plus Tier-1s Bosch, Continental, Aptiv, Magna, Veoneer, Cariad, Visteon.
-- **PC OEMs:** Microsoft (Surface), Lenovo, HP, Dell, Samsung, ASUS, Acer, Honor; over 60 Copilot+ PC designs in production.
-- **XR/AR:** Meta (Quest 3, Quest 3S, Ray-Ban smart glasses), Samsung XR (Project Moohan), Lenovo, Pico (ByteDance), HTC.
-- **Industrial / IoT:** broad, including Schneider Electric, Rockwell, Honeywell, GE, Siemens; named less prominently than mobile customers.
-- **Data center (emerging):** "leading hyperscaler" undisclosed (likely one of Amazon Web Services, Microsoft, or Meta Platforms based on Tony Pialis's pre-acquisition Alphawave engagements and industry reporting).
+- **Premium Android OEMs:** Samsung, Xiaomi, Oppo, vivo, OnePlus, Honor, Motorola/Lenovo, ASUS, Sony, Google (Pixel partial; Tensor is Google + Samsung), Nothing, Transsion. Qualcomm has supply / multi-year platform commitments with most of the above ([QCOM FY2025 10-K, Item 1 — Customers](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+- **Apple:** thin-modem only; transitioning to Apple C1 / C-series modems on a multi-year timeline. The 2023 extension of the Apple supply agreement covered 2024–2026 iPhone launches ([QCOM FY2025 10-K, MD&A — Looking Forward](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+- **Chinese OEMs (royalty + chip):** Xiaomi, Oppo, vivo, Honor, OnePlus, Transsion (Tecno/Infinix/Itel — Africa/India), TCL, Lenovo, ZTE, Realme. Significant FY2025 milestone: comprehensive 4G/5G license signed with Transsion, settling outstanding litigation ([QCOM FY2025 10-K, MD&A — QTL](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+- **Automotive OEMs / Tier 1s:** BMW, GM, Volkswagen Group (Cariad), Stellantis, Mercedes-Benz, Ferrari, Renault, Honda, Hyundai-Kia, Geely, BYD, NIO, Xpeng, Li Auto, Leapmotor, Zeekr, Chery, GreatWall, plus Tier-1s Bosch, Continental, Aptiv, Magna, Veoneer, Cariad, Visteon ([Qualcomm Auto press release, 2026-01](https://www.qualcomm.com/news/releases/2026/01/qualcomm-drives-the-future-of-mobility-with-strong-snapdragon-di)).
+- **PC OEMs:** Microsoft (Surface), Lenovo, HP, Dell, Samsung, ASUS, Acer, Honor; over 60 Copilot+ PC designs in production ([Neowin CES 2026 coverage](https://www.neowin.net/news/ces-2026-qualcomm-brings-snapdragon-x2-plus-to-mainstream-windows-11-copilot-pcs/)).
+- **XR/AR:** Meta (Quest 3, Quest 3S, Ray-Ban smart glasses), Samsung XR (Project Moohan), Lenovo, Pico (ByteDance), HTC ([Qualcomm Meta Quest 3S device page](https://www.qualcomm.com/xr-vr-ar/device-finder/meta-quest-3s)).
+- **Industrial / IoT:** broad, including Schneider Electric, Rockwell, Honeywell, GE, Siemens; named less prominently than mobile customers ([QCOM FY2025 10-K, Item 1 — IoT/Dragonwing](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+- **Data center (emerging):** "leading hyperscaler" undisclosed (likely one of Amazon Web Services, Microsoft, or Meta Platforms based on Tony Pialis's pre-acquisition Alphawave engagements and industry reporting) ([QCOM Q2 FY2026 Earnings Release, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
 
 ### Distribution channels
 
@@ -273,48 +273,48 @@ QTL license agreements with key OEMs are generally **long-term, with terms expir
 
 ### Sales cycle
 
-Mobile: 12–18 month design-in cycles for premium-tier SoCs, aligned with annual flagship launches.
-Automotive: **5–7 year design-in cycles** (RFQ → SOP → ramp), AEC-Q100 qualification, 10+ year product lifecycles. The current FY2025–2026 revenue reflects design wins booked between 2018–2022; the ~USD 45 bn pipeline reflects engagements that will generate revenue 2027–2032.
-PC: 12–18 months from design-in to shipping product, traditionally synchronized with Microsoft Surface and Lenovo annual roadmaps.
-Data center: 18–36 months for custom silicon, dominated by NRE recovery and per-chip ASPs.
+Mobile: 12–18 month design-in cycles for premium-tier SoCs, aligned with annual flagship launches ([QCOM FY2025 10-K, Item 1 — Business Operations](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+Automotive: **5–7 year design-in cycles** (RFQ → SOP → ramp), AEC-Q100 qualification, 10+ year product lifecycles. The current FY2025–2026 revenue reflects design wins booked between 2018–2022; the ~USD 45 bn pipeline reflects engagements that will generate revenue 2027–2032 ([QCOM Q2 FY2024 Earnings Release, 2024-05-01](https://www.sec.gov/Archives/edgar/data/0000804328/000080432824000038/qcom032424erex991.htm)).
+PC: 12–18 months from design-in to shipping product, traditionally synchronized with Microsoft Surface and Lenovo annual roadmaps ([Neowin CES 2026 coverage, 2026-01-06](https://www.neowin.net/news/ces-2026-qualcomm-brings-snapdragon-x2-plus-to-mainstream-windows-11-copilot-pcs/)).
+Data center: 18–36 months for custom silicon, dominated by NRE recovery and per-chip ASPs ([QCOM Q2 FY2026 Earnings Release, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
 
 ### Key partnerships
 
-- **TSMC** — primary foundry for premium Snapdragon SoCs (3nm, 2nm pipeline). Manufacturing dependency disclosed in the FY2025 10-K risk factors.
-- **Samsung Foundry & GlobalFoundries** — secondary foundry partners.
-- **Microsoft** — Copilot+ PC partnership and Windows-on-ARM development.
-- **Google** — Android platform partnership; AICore APIs.
-- **Meta Platforms** — XR/AR (Quest, Ray-Ban smart glasses).
-- **Edge Impulse / Hugging Face / Microsoft AI Foundry** — developer tooling on the Qualcomm AI Stack / AI Hub.
+- **TSMC** — primary foundry for premium Snapdragon SoCs (3nm, 2nm pipeline). Manufacturing dependency disclosed in the FY2025 10-K risk factors ([QCOM FY2025 10-K, Risk Factors — Supplier Concentration](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+- **Samsung Foundry & GlobalFoundries** — secondary foundry partners ([QCOM FY2025 10-K, Risk Factors](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+- **Microsoft** — Copilot+ PC partnership and Windows-on-ARM development ([Futurum Group — Snapdragon X2 Elite analysis, 2026](https://futurumgroup.com/insights/snapdragon-x2-elite-pushes-ai-pc-performance-to-new-heights/)).
+- **Google** — Android platform partnership; AICore APIs ([QCOM FY2025 10-K, Item 1 — Android ecosystem](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+- **Meta Platforms** — XR/AR (Quest, Ray-Ban smart glasses) ([Qualcomm Meta Quest 3S device page](https://www.qualcomm.com/xr-vr-ar/device-finder/meta-quest-3s)).
+- **Edge Impulse / Hugging Face / Microsoft AI Foundry** — developer tooling on the Qualcomm AI Stack / AI Hub ([QCOM FY2025 10-K, Item 1 — AI Stack](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 - **OpenAI** (reported industry partnership exploring custom mobile silicon, with mass production targeted 2028) ([TipRanks/Yahoo Finance March 2026 coverage](https://finance.yahoo.com/markets/stocks/articles/broadcom-vs-qualcomm-buy-one-195719940.html)).
 
 ### Customer case studies — named wins
 
-- **Samsung Galaxy S25 Ultra (2025) & Galaxy S26 Ultra (2026)** — Snapdragon 8 Elite global exclusive.
-- **Xiaomi 15 Pro / 15 Ultra / 16 series** — Snapdragon 8 Elite-powered flagship.
-- **Meta Ray-Ban smart glasses & Meta Quest 3 / 3S** — Snapdragon AR1 / XR2 Gen 2.
-- **Microsoft Surface Pro / Surface Laptop (X Elite, X2 Elite-bound)** — Copilot+ PCs.
-- **BMW iX, Mercedes-Benz EQS / E-class, GM Ultifi** — Snapdragon Cockpit.
+- **Samsung Galaxy S25 Ultra (2025) & Galaxy S26 Ultra (2026)** — Snapdragon 8 Elite global exclusive ([Qualcomm Snapdragon page](https://www.qualcomm.com/snapdragon)).
+- **Xiaomi 15 Pro / 15 Ultra / 16 series** — Snapdragon 8 Elite-powered flagship ([Qualcomm Snapdragon page](https://www.qualcomm.com/snapdragon)).
+- **Meta Ray-Ban smart glasses & Meta Quest 3 / 3S** — Snapdragon AR1 / XR2 Gen 2 ([Qualcomm Meta Quest 3S device page](https://www.qualcomm.com/xr-vr-ar/device-finder/meta-quest-3s)).
+- **Microsoft Surface Pro / Surface Laptop (X Elite, X2 Elite-bound)** — Copilot+ PCs ([Futurum Group — Snapdragon X2 Elite, 2026](https://futurumgroup.com/insights/snapdragon-x2-elite-pushes-ai-pc-performance-to-new-heights/)).
+- **BMW iX, Mercedes-Benz EQS / E-class, GM Ultifi** — Snapdragon Cockpit ([Qualcomm Auto press release, 2026-01](https://www.qualcomm.com/news/releases/2026/01/qualcomm-drives-the-future-of-mobility-with-strong-snapdragon-di)).
 - **BYD, NIO, Xpeng, Li Auto, Leapmotor, Zeekr** — Snapdragon Cockpit + Snapdragon Ride Elite ([Qualcomm Auto January 2026](https://www.qualcomm.com/news/releases/2026/01/qualcomm-drives-the-future-of-mobility-with-strong-snapdragon-di)).
 
 ---
 
 ## 6. Industry Overview
 
-Qualcomm operates at the intersection of three large, mature industries — **smartphone application processors / modems** (the cyclical core), **automotive semiconductors** (a structural-growth pivot), and **personal-computing SoCs** (an emerging-share opportunity) — plus a fourth, **data-center AI silicon** (now nascent for Qualcomm) and the underlying **cellular IP-licensing ecosystem**.
+Qualcomm operates at the intersection of three large, mature industries — **smartphone application processors / modems** (the cyclical core), **automotive semiconductors** (a structural-growth pivot), and **personal-computing SoCs** (an emerging-share opportunity) — plus a fourth, **data-center AI silicon** (now nascent for Qualcomm) and the underlying **cellular IP-licensing ecosystem** ([QCOM FY2025 10-K, MD&A — Industry Trends](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 
 ### Smartphone application processors and modems
 
-- **Industry definition (NAICS 334413).** Designers and manufacturers of integrated circuits that combine cellular modem, CPU/GPU, NPU, ISP, audio DSP, and connectivity (Wi-Fi/BT/UWB) for smartphones; revenue is a function of unit shipments × ASP.
+- **Industry definition (NAICS 334413).** Designers and manufacturers of integrated circuits that combine cellular modem, CPU/GPU, NPU, ISP, audio DSP, and connectivity (Wi-Fi/BT/UWB) for smartphones; revenue is a function of unit shipments × ASP ([QCOM FY2025 10-K, Item 1 Business](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 - **Market size.** The global smartphone application processor market is estimated at **~USD 24.6 bn in calendar 2025**, projected to reach **~USD 39.3 bn by 2035** (CAGR ~4.8%) ([SNS Insider 2025-06-18](https://www.globenewswire.com/news-release/2025/06/18/3101576/0/en/Application-Processor-Market-to-Surpass-USD-55-34-Billion-by-2032-at-a-CAGR-of-4-47-SNS-Insider.html); see also [Counterpoint Research](https://counterpointresearch.com/en/insights/global-smartphone-apsoc-market-share-quarterly)). Qualcomm itself estimates that calendar 2025 smartphone consumer demand will remain **"approximately flat" YoY**, with **mid single-digit percentage growth in 5G handsets** specifically ([QCOM FY2025 10-K, Industry Trends](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
-- **Growth drivers.** (1) Continued global 5G transition (5G handset penetration was ~50% of unit shipments in 2024 and still rising; emerging-market 5G adoption accelerating). (2) Premium-tier upgrade cycle as on-device AI features (Galaxy AI, Xiaomi HyperAI) drive ASP uplift. (3) Average smartphone ASP creep on increasingly large NPU/memory/camera bills of materials.
-- **Structure.** Consolidated at the top: **Qualcomm, MediaTek, Apple, Samsung Exynos, UNISOC, Google Tensor, Xiaomi XRing** — top-5 SoC vendors share ~80%+ of global volume. Premium-tier is more concentrated: ~62% of 2025 premium 5G handsets used Qualcomm, ~11% MediaTek, with Apple Silicon and Samsung Exynos in their respective captive products.
-- **Trends.** Vertical integration by major OEMs is the defining trend. Apple completed its A-series transition in 2010, started its modem program post-2019, and shipped Apple C1 modem in iPhone 16e (Feb 2025). Samsung uses Exynos in select regions for Galaxy S devices, increasing in coverage. Google Tensor (Samsung-fabbed) is used exclusively in Pixel. Xiaomi launched the **XRing O1** application processor (3nm) in 2025. Each is a structural pressure on Qualcomm's chip TAM, even as QTL royalty obligations follow the OEM regardless of silicon source.
+- **Growth drivers.** (1) Continued global 5G transition (5G handset penetration was ~50% of unit shipments in 2024 and still rising; emerging-market 5G adoption accelerating). (2) Premium-tier upgrade cycle as on-device AI features (Galaxy AI, Xiaomi HyperAI) drive ASP uplift. (3) Average smartphone ASP creep on increasingly large NPU/memory/camera bills of materials ([Counterpoint — GenAI smartphone SoCs 35% share, 2025](https://www.fonearena.com/blog/465788/genai-smartphone-soc-growth-2025-counterpoint.html)).
+- **Structure.** Consolidated at the top: **Qualcomm, MediaTek, Apple, Samsung Exynos, UNISOC, Google Tensor, Xiaomi XRing** — top-5 SoC vendors share ~80%+ of global volume. Premium-tier is more concentrated: ~62% of 2025 premium 5G handsets used Qualcomm, ~11% MediaTek, with Apple Silicon and Samsung Exynos in their respective captive products ([Counterpoint — Global Smartphone AP/SoC Market Share](https://counterpointresearch.com/en/insights/global-smartphone-apsoc-market-share-quarterly); [EE Times Asia — Premium Smartphone SoC Shipments 2025](https://www.eetasia.com/premium-smartphone-soc-shipments-to-surge-in-2025/)).
+- **Trends.** Vertical integration by major OEMs is the defining trend. Apple completed its A-series transition in 2010, started its modem program post-2019, and shipped Apple C1 modem in iPhone 16e (Feb 2025) ([9to5Mac — "Apple C1 modem in iPhone 16e", 2025-02-19](https://9to5mac.com/2025/02/19/apple-reveals-c1-its-first-in-house-5g-iphone-modem-replacing-qualcomm/)). Samsung uses Exynos in select regions for Galaxy S devices, increasing in coverage. Google Tensor (Samsung-fabbed) is used exclusively in Pixel. Xiaomi launched the **XRing O1** application processor (3nm) in 2025 ([Digitimes — "Xiaomi 3nm XRing", 2025-05-23](https://www.digitimes.com/news/a20250523VL203/xiaomi-xring-soc-3nm-mediatek.html)). Each is a structural pressure on Qualcomm's chip TAM, even as QTL royalty obligations follow the OEM regardless of silicon source.
 
 ### Automotive semiconductors
 
-- **Industry definition.** Application processors, MCUs, radar / lidar / camera ICs, RF for V2X / 5G cellular, Wi-Fi and Bluetooth ICs, and ADAS / autonomous-driving SoCs sold into automotive OEMs and Tier-1 suppliers.
-- **Market size.** Global automotive semiconductor market is approximately **USD 70 bn in 2025**, projected to reach **~USD 120–140 bn by 2030** at ~10% CAGR, with cockpit + connectivity + ADAS the fastest-growing sub-segments. Qualcomm's serviceable share concentrates around **digital cockpit, telematics / 5G connectivity, and ADAS / AD compute** — a roughly **USD 25–30 bn SAM**.
+- **Industry definition.** Application processors, MCUs, radar / lidar / camera ICs, RF for V2X / 5G cellular, Wi-Fi and Bluetooth ICs, and ADAS / autonomous-driving SoCs sold into automotive OEMs and Tier-1 suppliers ([Yole Group — Automotive Semiconductor Trends 2025](https://www.yolegroup.com/product/report/automotive-semiconductor-trends-2025/)).
+- **Market size.** Global automotive semiconductor market is approximately **USD 70 bn in 2025**, projected to reach **~USD 120–140 bn by 2030** at ~10% CAGR, with cockpit + connectivity + ADAS the fastest-growing sub-segments ([Spherical Insights — Automotive Semiconductor Market USD 148.6B by 2035](https://www.sphericalinsights.com/blogs/why-the-automotive-semiconductor-market-could-surpass-usd-148.6-billion-by-2035)). Qualcomm's serviceable share concentrates around **digital cockpit, telematics / 5G connectivity, and ADAS / AD compute** — a roughly **USD 25–30 bn SAM** ([QCOM Q2 FY2024 Earnings Release, 2024-05-01](https://www.sec.gov/Archives/edgar/data/0000804328/000080432824000038/qcom032424erex991.htm)).
 - **Growth drivers.** (1) Cockpit digitalization: 68% of new vehicles in 2030 projected to have embedded cellular connectivity, with 48% featuring 5G, vs. 21% in 2025 ([TechInsights July 2025, cited in QCOM FY25 10-K](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)). (2) ADAS penetration: the share of new light-duty vehicles sold globally with **Level 2 or higher autonomy will grow from 24% in 2025 to 52% in 2030** ([TechInsights November 2024](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)). (3) Software-defined vehicle (SDV) architecture consolidation: centralizing compute into 1–2 high-performance SoCs replaces ~50 distributed ECUs, expanding ASP per vehicle from ~USD 50 to USD 300+ for the SoC vendor that owns the SDV.
 - **Structure.** Fragmented historically (NXP, Renesas, Infineon, ST Microelectronics, TI, Mobileye, NVIDIA, Qualcomm); consolidating toward 3–4 leaders for cockpit + ADAS SoCs (NVIDIA, Qualcomm, Mobileye, plus captive Tesla FSD silicon). Regulatory: AEC-Q100 / ISO 26262 functional-safety qualification a meaningful barrier to entry.
 
@@ -392,7 +392,7 @@ Qualcomm faces distinct competitive sets in each of its segments. The competitiv
 
 - **Nokia, Ericsson, InterDigital, Huawei** — all hold material 4G/5G SEP portfolios but each typically commands lower per-unit royalties than Qualcomm.
 
-![Peer Valuation Snapshot — TTM P/E & P/S (May 2026)](../../charts/qcom_peer_valuation.png)
+![Peer Valuation Snapshot — TTM P/E & P/S (May 2026)](charts/qcom_peer_valuation.png)
 Source: composite of [stockanalysis.com QCOM statistics](https://stockanalysis.com/stocks/qcom/statistics/), [fullratio.com QCOM PE](https://fullratio.com/stocks/nasdaq-qcom/pe-ratio), [GuruFocus MediaTek PE](https://www.gurufocus.com/term/pettm/TPE:2454), [Stockopedia MediaTek](https://www.stockopedia.com/share-prices/media-tek-TPE:2454/), [Multiples.vc Broadcom](https://multiples.vc/public-comps/broadcom-valuation-multiples), and Yahoo Finance pages for each ticker, all accessed May 2026.
 
 ### Competitive advantages of Qualcomm
@@ -459,10 +459,10 @@ Qualcomm's FY2025 revenue of **USD 44.3 bn** captures roughly **30–35% of its 
 - **Data center:** execute the hyperscaler engagement to first shipments CY2026; use Alphawave's connectivity IP to anchor follow-on programs; potentially relaunch a merchant Oryon server CPU on a multi-year horizon.
 - **XR/AR:** maintain platform dominance; benefit from secular smart-glasses ramp (Meta Ray-Ban hitting 2 M+ units; Apple, Google entries expected).
 
-![QCT Revenue Mix — Handsets / Automotive / IoT, FY2023–FY2025](../../charts/qcom_qct_mix.png)
+![QCT Revenue Mix — Handsets / Automotive / IoT, FY2023–FY2025](charts/qcom_qct_mix.png)
 Source: [QCOM FY2025 10-K Note 8 Segment Information](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm).
 
-![Qualcomm — Free Cash Flow & Capital Returns, FY2023–FY2025](../../charts/qcom_fcf_returns.png)
+![Qualcomm — Free Cash Flow & Capital Returns, FY2023–FY2025](charts/qcom_fcf_returns.png)
 Source: [QCOM FY2025 10-K Cash Flow Statement](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm). Note: FY2025 buybacks include accelerated repurchases; new USD 20 bn authorization announced 2026-04-29 supports continued elevated pace.
 
 ---
