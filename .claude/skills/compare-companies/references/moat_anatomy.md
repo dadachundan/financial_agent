@@ -149,6 +149,55 @@ Failure modes:
 - Listing only one side's cracks — every company has them; if you found 4 for A and 0 for B, you didn't look hard enough at B.
 - "Cracks" being generic risk-factor boilerplate — if the same paragraph could appear in any company's 10-K, it doesn't belong here.
 
+## §5.8 — Other big players in this space (REQUIRED — Deliverable 6)
+
+A two-player view of a multi-player industry is misleading. Every moat anatomy must close with a survey of **3–7 other meaningful players** in the focal pair's competitive space. The focal pair (A vs B) remains the protagonist; the other players are the context that prevents readers from treating the report as a complete map.
+
+### Discovery — three sources, in this order
+
+1. **10-K Item 1 / 年度报告 / Yuho competition section** of each side — quote the named competitor list verbatim. This is the authoritative starting point.
+2. **Segment leaderboards** — IPnest (design IP), Gartner Magic Quadrant (enterprise software), IDC / IBISWorld (hardware), TrendForce (semis), IQVIA / EvaluatePharma (pharma), SemiAnalysis / SemiWiki (niche semi sub-segments), Wood Mackenzie / Rystad / S&P Global (energy / commodities).
+3. **Recent industry-research notes** (last 12 months) that name the full vendor universe.
+
+### Classification — every other player resolves to one of four buckets
+
+| Bucket | Definition | How to surface |
+|---|---|---|
+| **Primary competitor** | Overlaps directly on at least one moat dimension where A or B holds a franchise. | Dedicated 100–300 word paragraph in §5.8 + column added to §5.3 / §5.4 / §5.5 tables wherever they meaningfully share. |
+| **Adjacent player** | Overlaps on a smaller segment or different end-market. | One-sentence mention in §5.8 only; no table columns. |
+| **Acquisition target** | Has been or will be absorbed by A or B during the comparison's reporting period. | Described as "now part of A" rather than as an independent player — note the close date and post-close segment. |
+| **Domestic-market alternative** | Regional vendors limited by export controls, talent depth, or PDK access. | Call out as a §8 regional risk; no §5.8 paragraph. |
+
+### Per-paragraph content for each Primary competitor
+
+| Field | Source |
+|---|---|
+| What they do (one sentence) | Their own homepage / 10-K Item 1 Business |
+| Where they overlap with A or B | Cross-reference to §5.4 (tool-level share) or §5.5 (IP share) |
+| Estimated share of the overlapping segment | Third-party source (IPnest / Gartner / IDC / etc.) — never invent |
+| Structural position | "Leader" (clear #1 in at least one sub-segment), "Specialist" (focused on one niche), "Challenger" (gaining share from incumbents) |
+| Recent strategic moves | Last-12-months M&A, divestitures, leadership changes, major customer wins — cite press releases |
+| Why they matter to the A-vs-B decision | One sentence: do they prevent A or B from claiming an entire segment? Are they an exit option for an acquirer? Are they the third option a customer would consider? |
+
+### Worked example — SNPS vs CDNS (current production report)
+
+The other-big-players survey in `reports/compare/SNPS_vs_CDNS.md` §5.8 covers:
+
+- **Siemens EDA** (Primary, ~13% of EDA market) — owns Calibre physical verification at ~85% share; the structural #3 that holds the only sub-segment neither SNPS nor CDNS leads.
+- **Arm Holdings** (Primary, ~40% of all design IP) — dominates CPU IP; the reason SNPS exited processor IP. Every non-Intel/AMD CPU design licenses from Arm.
+- **Alphawave Semi** (Primary, ~3–4% of design IP) — interface IP specialist competing directly with SNPS on SerDes / PCIe; takeover target context.
+- **Ansys** (Acquisition target → now part of SNPS) — was the #1 multi-physics vendor before the July 2025 close.
+- **Hexagon AB Design & Engineering** (Acquisition target → closing into CDNS Q1 2026) — MSC Nastran + Adams; brings aerospace/auto OEMs into CDNS customer book.
+- **Empyrean / X-EPIC / Primarius** (Domestic-market alternative — Chinese EDA) — collectively ~5–7% of China EDA market; structurally limited by Western EDA dependencies at advanced nodes.
+
+### Failure modes
+
+- Listing other players without explaining how they affect the A-vs-B choice → pointless context; expand the "why they matter" sentence or drop them.
+- Treating §5.8 as a separate report → keep each Primary competitor's treatment to 100–300 words; readers came for A vs B, not A vs B vs C vs D vs E.
+- Inventing players not in any cited source → every named other player must come from a 10-K competitor list or a third-party industry source.
+- Forgetting to extend the §5.3 / §5.4 / §5.5 tables → the §5.8 paragraphs alone are not enough; the tables must visually show that the focal pair operates inside a larger ecosystem.
+- All Primary competitors getting the same depth → vary the treatment by relevance. Siemens EDA in an SNPS-vs-CDNS comparison deserves 300 words because it's structurally a third co-equal; Schrödinger deserves one sentence.
+
 ## Verification checklist for the moat section
 
 Before declaring §5 done:
@@ -159,4 +208,6 @@ Before declaring §5 done:
 - [ ] Every segment market-share row has a source URL.
 - [ ] No invented executive names, lawsuit titles, or product names.
 - [ ] §5.7 has at least 3 bullets *each* side — symmetric honesty.
-- [ ] The IP-roadmap inversion (or whatever structural shift in the period is most under-priced) is named explicitly in one of the seven subsections.
+- [ ] **§5.8 names 3–7 other big players** with the four-bucket classification labels visible. At least 3 are Primary competitors with 100–300 word paragraphs.
+- [ ] **§5.3 / §5.4 / §5.5 tables extended** with columns for each Primary competitor that materially affects the share picture.
+- [ ] The IP-roadmap inversion (or whatever structural shift in the period is most under-priced) is named explicitly in one of the eight subsections.

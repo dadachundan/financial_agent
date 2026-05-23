@@ -81,17 +81,18 @@ A `mermaid xychart-beta` bar chart of FY revenue by segment for each side (so th
 
 Then a paragraph per side walking the segment structure with citation to the segment-reporting note in the 10-K.
 
-### §5 — The moat anatomy (1,500–2,500 words) — THE LONGEST SECTION
+### §5 — The moat anatomy (1,800–3,000 words) — THE LONGEST SECTION
 
-Seven subsections. **See `references/moat_anatomy.md` for the per-subsection content spec.** Headline subsections (each ~200–400 words):
+**Eight** subsections. **See `references/moat_anatomy.md` for the per-subsection content spec.** Headline subsections (each ~200–400 words, except §5.8 which scales with the number of other players covered):
 
 - 5.1 Customer concentration — both just diversified, but for opposite reasons
 - 5.2 Backlog and recurring mix — both fortress-grade
-- 5.3 Channel / foundry / distribution lock-in
-- 5.4 Tool-level / sub-segment market share — where the de-facto monopolies live
-- 5.5 IP / patent / data-corpus franchise share
+- 5.3 Channel / foundry / distribution lock-in **(extend tables with columns for each Primary competitor)**
+- 5.4 Tool-level / sub-segment market share — where the de-facto monopolies live **(extend tables with columns for each Primary competitor that leads a sub-segment)**
+- 5.5 IP / patent / data-corpus franchise share **(extend tables with the dominant non-focal-pair player — e.g. Arm in design IP)**
 - 5.6 Why a customer picks one over the other
 - 5.7 Cracks worth naming on each side
+- **5.8 Other big players in this space (NEW — Required deliverable 6)** — 3–7 other meaningful players named, each Primary competitor gets a 100–300 word paragraph; classified as Primary / Adjacent / Acquisition target / Domestic-market alternative.
 
 **Required deliverable 1 (product overlap matrix)** sits inside this section as §5.1 or just before — see `references/product_overlap_matrix.md`.
 
@@ -145,9 +146,10 @@ Every entry is a markdown link with a date in the title where the source has a p
 - [ ] §5.1 product overlap matrix (DIRECTLY COMPETE / COMPLEMENTARY / NON-OVERLAPPING)
 - [ ] §5.1 customer concentration table side-by-side (top-1 / top-5 / >10%)
 - [ ] §5.2 backlog / recurring mix table
-- [ ] §5.3 foundry-node × vendor matrix (semis) OR channel matrix (consumer/SaaS) OR formulary matrix (pharma)
-- [ ] §5.4 tool-level segment share table
-- [ ] §5.5 IP franchise share table
+- [ ] §5.3 foundry-node × vendor matrix (semis) OR channel matrix (consumer/SaaS) OR formulary matrix (pharma) **— with column for each Primary competitor**
+- [ ] §5.4 tool-level segment share table **— with column for each Primary competitor that leads a sub-segment**
+- [ ] §5.5 IP franchise share table **— with the dominant non-focal-pair player included**
+- [ ] **§5.8 other-big-players section** with 3–7 named, each Primary competitor in a 100–300 word paragraph, classification labels visible
 - [ ] §6 M&A / capital-allocation table
 - [ ] §7 debt / buyback / dividend table
 - [ ] §8 distinctive risks table

@@ -5,14 +5,15 @@ description: Produce a 5,000–9,000 word head-to-head comparison of two public 
 
 # Compare Companies
 
-Head-to-head deliverable: a 5,000–9,000 word markdown report that does NOT re-tell each company's story — it interrogates the **delta**. The report's job is to answer six specific questions the reader will have:
+Head-to-head deliverable: a 5,000–9,000 word markdown report that does NOT re-tell each company's story — it interrogates the **delta**. The report's job is to answer seven specific questions the reader will have:
 
 0. **In 60 seconds, what are each side's advantages and disadvantages?** (TL;DR table right after the title — see §0.)
 1. **Do their products directly compete, or are they more complementary?** (Per-product overlap matrix — see §5.1.)
-2. **What is each company's actual moat — quantified, not asserted?** (Seven-subsection moat anatomy — see §5.2–5.8.)
+2. **What is each company's actual moat — quantified, not asserted?** (Seven-subsection moat anatomy — see §5.2–5.7.)
 3. **Who are their customers, and where do those customer bases overlap?** (Customer concentration + named-win comparison — see §6.)
 4. **What advantage does each have over the other?** (Dimension-by-dimension scorecard — see §7.)
 5. **Which one should the reader bet on, and why?** (Synthesis — see §8.)
+6. **Who else matters in this space?** (3–7 other big players surveyed alongside, with their position vs. the focal pair quantified — see §5.8.)
 
 A comparison report that only restates each company's pitch is a failure. The reader has already read both companies' marketing material; they came to you for the delta.
 
@@ -28,9 +29,9 @@ The accuracy rules from [[company-research]] apply verbatim — read its **Core 
 - **When two sources disagree on a head-to-head number** (e.g. SemiAnalysis says one thing, an IPnest secondary citation says another), name both and prefer the primary / more-recent.
 - **The analyst's own model is NOT a source.** Never write "(Source: our model)" or "(estimate, our analysis)" for a comparison fact.
 
-## The six required deliverables
+## The seven required deliverables
 
-A compare-companies report MUST contain all six. Missing any one of them is a defect — the user has explicitly asked for each.
+A compare-companies report MUST contain all seven. Missing any one of them is a defect — the user has explicitly asked for each.
 
 ### Required deliverable 0 — TL;DR table at the top (§0)
 
@@ -123,6 +124,45 @@ Two paragraphs:
 
 Then one closing paragraph that names **what the reader should watch in the next 4–8 quarters** to know which bet is winning. Avoid both-sidesism ("both could win"); name the specific catalyst that will move the verdict.
 
+### Required deliverable 6 — Other big players in the space (§5.8 + table columns)
+
+A two-player view of a multi-player industry is misleading. Every report must identify **3–7 other meaningful players** in the focal pair's competitive space and surface them in two places: as additional columns in the moat-anatomy tables where they materially affect the picture, and as a dedicated subsection §5.8 with 100–300 words per Primary competitor.
+
+**Discovery — three sources, in this order:**
+
+1. **Each side's 10-K Item 1 / 年度报告 / Yuho competition section** — quote the named competitor list verbatim. This is the authoritative starting point.
+2. **The relevant segment leaderboards** — IPnest for design IP, Gartner Magic Quadrant for enterprise software, IDC / IBISWorld for hardware, TrendForce for semis, IQVIA / EvaluatePharma for pharma, SemiAnalysis / SemiWiki for niche semi sub-segments.
+3. **Recent industry-research notes** — last 12 months only — that name the full vendor universe.
+
+**Classification — every other player resolves to one of four buckets:**
+
+| Bucket | Definition | How to surface |
+|---|---|---|
+| **Primary competitor** | Overlaps directly on at least one moat dimension where A or B holds a franchise. Examples: Siemens EDA vs SNPS/CDNS in EDA; Arm vs SNPS in processor IP; TEL/KLA/ASML vs LRCX/AMAT in semicap. | Dedicated 200–300 word paragraph in §5.8 + column added to §5.3 / §5.4 / §5.5 tables wherever they meaningfully share share. |
+| **Adjacent player** | Overlaps on a smaller segment or a different end-market. Examples: Keysight RF/microwave EDA; Schrödinger molecular simulation. | One-sentence mention in §5.8 only; no table columns. |
+| **Acquisition target** | Has been or will be absorbed by A or B during or near the comparison's reporting period. Examples: Ansys (acquired by SNPS July 2025); Hexagon D&E (closing into CDNS Q1 2026). | Described as "now part of A" rather than as an independent player — note the close date and the post-close segment. |
+| **Domestic-market alternative** | Regional vendors limited by export controls, talent depth, or PDK access. Examples: Empyrean, X-EPIC, Primarius in Chinese EDA; Tsinghua Unigroup in Chinese DRAM. | Call out as a §8 regional risk; no §5.8 paragraph. |
+
+**Where each Primary competitor surfaces in the report:**
+
+| Section | What to add |
+|---|---|
+| §0 TL;DR | One sentence in the "Who is each one for?" paragraph if a third party meaningfully changes the choice (e.g. "the third option is Siemens EDA for physical verification"). |
+| §5.3 Foundry / channel / formulary matrix | Add a column for each Primary competitor that ships in the matrix — for EDA, Siemens always appears; for semicap, ASML, KLA, TEL all appear. Omitting these makes the matrix misleading. |
+| §5.4 Tool-level share | Add a column for each Primary competitor that *leads* a sub-segment. E.g. Siemens Calibre at ~85% physical verification — without this column the table tells the reader the focal pair owns everything, which is wrong. |
+| §5.5 IP / patent / data franchise share | Add the dominant non-focal-pair player. E.g. Arm at ~40% of Design IP — without this, the IP share table is misleading because it suggests SNPS-vs-CDNS is the whole market. |
+| **§5.8 — The broader competitive landscape (NEW REQUIRED SUBSECTION inside the moat anatomy)** | 100–300 words per Primary competitor: what they do, where they overlap with A or B, their estimated share, structural position (leader / specialist / challenger), recent strategic moves (M&A, divestitures, leadership). |
+| §9 Scorecard | Optional: 1–2 rows showing where the third party would beat *both* A and B (e.g. "Physical verification | Siemens (Calibre ~85%) — neither A nor B leads"). |
+
+**Quantity rule:** at minimum 3 other players in §5.8, at maximum 7. Fewer than 3 means under-explored; more than 7 dilutes the focal pair's contrast.
+
+**Failure modes:**
+
+- Listing other players without explaining how they affect the A-vs-B choice → pointless context; remove or expand.
+- Treating §5.8 as a separate report → keep each Primary competitor's treatment to 100–300 words.
+- Inventing players not in any cited source → every named other player must come from a 10-K competitor list or a third-party industry source.
+- Forgetting to extend the §5.3 / §5.4 / §5.5 tables → the §5.8 paragraphs alone are not enough; the tables must visually show that the focal pair operates inside a larger ecosystem.
+
 ## Report structure (TL;DR + 10 sections)
 
 See `references/report_structure.md` for the full section-by-section spec, word-count targets, required tables and charts, and an example outline from SNPS_vs_CDNS.
@@ -134,7 +174,7 @@ Quick summary:
 2. Strategic pillars side-by-side (timeline / pillar table)
 3. AI narrative — tool vs. tailwind
 4. Segment structure & financial scoreboard (revenue, margin, growth, segment mix)
-5. **The moat anatomy** (7 subsections — Required deliverable 2; the longest section by word count)
+5. **The moat anatomy** (8 subsections — Required deliverables 2 + 6; the longest section by word count). Subsections: 5.1 customer concentration · 5.2 backlog & recurring mix · 5.3 channel/foundry/distribution lock-in · 5.4 tool-level segment share · 5.5 IP/patent/data franchise share · 5.6 why a customer picks one over the other · 5.7 cracks worth naming · **5.8 other big players in this space**
 6. The big bet (M&A, R&D, capital deployment — what each side is doing right now to expand TAM)
 7. Capital allocation (debt, buyback, dividend, M&A optionality)
 8. Distinctive risks (front-of-risk-factors comparison; what each 10-K leads with)
@@ -264,6 +304,9 @@ Apply the same Step 10 verification flow from [[company-research]] — URL check
 - [ ] The scorecard has no row that says "depends" / "complex" / "mixed" — every row picks a side, "Tied", or "Neither".
 - [ ] The bottom line names a concrete catalyst with a date or quarter, not "the next several years".
 - [ ] Every TL;DR claim is supported by an inline citation somewhere in the body (the TL;DR cells themselves are exempt from per-bullet citations since they're a scannable summary, but the underlying fact must be cited in §N).
+- [ ] **§5.8 names 3–7 other big players** in the focal pair's space, classified as Primary competitor / Adjacent / Acquisition target / Domestic-market alternative. At least 3 Primary competitors get 100–300 word paragraphs.
+- [ ] **§5.3, §5.4, §5.5 tables extended** with columns for each Primary competitor that materially affects the share picture (e.g. Siemens EDA in EDA tables; Arm in IP tables). Tables that show only A and B in a multi-player industry are misleading and must be expanded.
+- [ ] **Every "other big player" named came from a verifiable source** — 10-K competitor list, IPnest / Gartner / IDC / IBISWorld / TrendForce / IQVIA leaderboard, or recent industry-research note. No inventions.
 
 ## Output location
 
