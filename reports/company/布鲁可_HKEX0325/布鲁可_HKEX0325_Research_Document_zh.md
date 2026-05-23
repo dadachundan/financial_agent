@@ -39,7 +39,7 @@
 
 **规模指标（FY2025）：** 收入 RMB 29.13 亿、毛利 RMB 13.64 亿（毛利率 46.8%）、归母净利 RMB 6.34 亿、经调整净利 RMB 6.75 亿、经调整净利率 23.2%、研发开支 RMB 2.64 亿（占收入 9.1%）、销售拼搭角色类玩具 2.50 亿件、9.9 元价位段销量 1.22 亿件、年末现金及定期存款 RMB 29.08 亿、员工 935 人（[2025 年度業績公告, p. 1, p. 12, p. 28, p. 33](https://www.hkexnews.hk/listedco/listconews/sehk/2026/0313/2026031301543.pdf)）。FY2024 数据：收入 RMB 22.41 亿、毛利率 52.6%、归母净亏损 RMB 4.01 亿、经调整净利 RMB 5.85 亿（[2024 年度業績公告, 第 1 頁](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0321/2025032101646_c.pdf)）。
 
-![布鲁可 2021–2025 收入与毛利率](../../charts/bloks_revenue_gm_trend.png)
+![布鲁可 2021–2025 收入与毛利率](charts/bloks_revenue_gm_trend.png)
 Source: [布鲁可 IPO 招股章程](https://www1.hkexnews.hk/listedco/listconews/sehk/2024/1231/2024123100132_c.pdf)（2021–2023 收入），[2024 年度業績公告, 第 1 頁](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0321/2025032101646_c.pdf) 及 [2025 年度業績公告, p. 1](https://www.hkexnews.hk/listedco/listconews/sehk/2026/0313/2026031301543.pdf)。
 
 **估值快照（截至 2026-05-20 前后数据）：**
@@ -136,7 +136,7 @@ graph TD
 
 **长尾 / 退出产品（积木玩具）：** FY2024 大颗粒积木收入 RMB 39.4 百万（同比 -62.9%），FY2025 拼搭车辆+积木合计收入 RMB 69.8 百万——大颗粒积木被战略性收缩（[2024 年度業績公告, 第 24 頁](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0321/2025032101646_c.pdf)；[2025 年度業績公告, p. 28](https://www.hkexnews.hk/listedco/listconews/sehk/2026/0313/2026031301543.pdf)）。
 
-![布鲁可 FY2024 收入构成 by IP](../../charts/bloks_fy24_revenue_by_ip.png)
+![布鲁可 FY2024 收入构成 by IP](charts/bloks_fy24_revenue_by_ip.png)
 Source: [2024 年度業績公告, 第 20 頁](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0321/2025032101646_c.pdf)。
 
 **旗舰判断：** 1）**奥特曼**（48.9% 收入占比）——绝对旗舰，2025 年仍是营收支柱，但单一 IP 集中度高、授权续约风险居首；2）**变形金刚**——第二大引擎，孩之宝授权 + 9.9 元星辰版超值价位段；3）**英雄无限**——自研 IP 试金石，验证可永续性。
@@ -182,7 +182,7 @@ pie title 布鲁可 FY2025 收入构成（按渠道）
 
 **中国市场规模：** 拼搭角色类玩具是拼搭玩具中增速最快的细分赛道。市场规模由 2019 年 RMB 12 亿元增长至 2023 年 RMB 58 亿元（CAGR 49.6%），预计 2028 年达 RMB 325 亿元（CAGR 41.3%）（[弗若斯特沙利文 via 三个皮匠报告, 2025-03](https://www.sgpjbg.com/hyshuju/cffdb8d64e36b6e595bbd3267b167071.html)；[中信证券：中国拼搭玩具市场前景广阔, 2025-03-01](https://finance.sina.com.cn/stock/hkstock/ggscyd/2025-03-01/doc-inencxhk8827959.shtml)）。
 
-![中国拼搭角色类玩具市场规模 2019 / 2023 / 2028E](../../charts/bloks_tam.png)
+![中国拼搭角色类玩具市场规模 2019 / 2023 / 2028E](charts/bloks_tam.png)
 Source: [弗若斯特沙利文，引自三个皮匠报告 2025-03](https://www.sgpjbg.com/hyshuju/cffdb8d64e36b6e595bbd3267b167071.html) 与 [中信证券 / 新浪财经, 2025-03-01](https://finance.sina.com.cn/stock/hkstock/ggscyd/2025-03-01/doc-inencxhk8827959.shtml)。
 
 **增长驱动：**
@@ -216,7 +216,7 @@ Source: [弗若斯特沙利文，引自三个皮匠报告 2025-03](https://www.s
 
 **中国市场竞争格局：**
 
-![中国拼搭角色类玩具市场份额（2023 GMV）](../../charts/bloks_market_share.png)
+![中国拼搭角色类玩具市场份额（2023 GMV）](charts/bloks_market_share.png)
 Source: [灼识咨询/弗若斯特沙利文，引自西部证券与 36氪报告，2025](https://www.sgpjbg.com/hyshuju/cffdb8d64e36b6e595bbd3267b167071.html)。
 
 **主要竞争对手详解：**
@@ -283,7 +283,7 @@ quadrantChart
 - 海外市场：2025 年海外收入 RMB 3.19 亿、同比 +397%；假设 2026–2028 三年保持 80%/60%/45% 的增长，2028 年海外收入约 RMB 12–18 亿元；
 - **合计 2028E 收入潜力 RMB 103–132 亿元**（即对应 2025 年 RMB 29.1 亿的 3.5–4.5 倍空间）。
 
-![布鲁可海外业务 FY2023–FY2025](../../charts/bloks_overseas.png)
+![布鲁可海外业务 FY2023–FY2025](charts/bloks_overseas.png)
 Source: [2024 年度業績公告, 第 25 頁](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0321/2025032101646_c.pdf) 和 [2025 年度業績公告, p. 9, p. 24](https://www.hkexnews.hk/listedco/listconews/sehk/2026/0313/2026031301543.pdf)。
 
 **渗透路径与策略：**
@@ -292,7 +292,7 @@ Source: [2024 年度業績公告, 第 25 頁](https://www1.hkexnews.hk/listedco/
 3. **北美突破**：2025 年美洲收入 RMB 1.50 亿（同比 +804%），美国成为海外贡献最大单一市场（与印尼并列）（[2025 年度業績公告, p. 24](https://www.hkexnews.hk/listedco/listconews/sehk/2026/0313/2026031301543.pdf)）；
 4. **欧洲布局**：2025 年首次参展德国纽伦堡 Spielwarenmesse 玩具展，2026 年计划加速欧洲渠道。
 
-![布鲁可在售 SKU 数量 2024–2025](../../charts/bloks_sku.png)
+![布鲁可在售 SKU 数量 2024–2025](charts/bloks_sku.png)
 Source: [2024 年度業績公告, 第 20 頁](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0321/2025032101646_c.pdf) 与 [2025 年度業績公告, p. 23](https://www.hkexnews.hk/listedco/listconews/sehk/2026/0313/2026031301543.pdf)。
 
 **关键不确定性：**

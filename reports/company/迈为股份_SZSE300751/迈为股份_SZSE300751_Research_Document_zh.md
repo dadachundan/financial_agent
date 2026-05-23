@@ -47,7 +47,7 @@
 
 数据来源：[2025 年年度报告, 第 9 页](https://static.cninfo.com.cn/finalpage/2026-04-28/1225211530.PDF)。
 
-![迈为股份 FY2021–FY2025 营收与利润率走势](../../charts/maiwei_revenue_margin_trend.png)
+![迈为股份 FY2021–FY2025 营收与利润率走势](charts/maiwei_revenue_margin_trend.png)
 *来源：[2021–2025 年度报告 (cninfo)](https://static.cninfo.com.cn/finalpage/2026-04-28/1225211530.PDF)。注：2022 年营业收入采用 2024 年报追溯口径 ¥41.48 亿。*
 
 **地域分布与全球化扩张：** 2025 年公司境外收入飙升至 ¥28.79 亿，同比 +320.19%，占总营收比例由 6.97% 跃升至 35.36% ([2025 年年度报告, 第 29 页](https://static.cninfo.com.cn/finalpage/2026-04-28/1225211530.PDF))。这是公司在国内光伏深度调整周期下"出海对冲"战略的直观体现。境外业务主要由全资子公司 MAXWELL TECHNOLOGY PTE. LTD（新加坡迈为）承接。
@@ -177,7 +177,7 @@ timeline
 
 迈为股份立足**真空、激光、精密装备**三大关键技术，产品覆盖**太阳能光伏 / 显示 / 半导体**三大行业。FY2025 营收构成中，光伏行业 91.38%、半导体及显示 8.12%、其他 0.49% ([2025 年年度报告, 第 28 页](https://static.cninfo.com.cn/finalpage/2026-04-28/1225211530.PDF))。
 
-![迈为股份 FY2025 营收构成 — 海外占比首次突破 35%](../../charts/maiwei_revenue_mix.png)
+![迈为股份 FY2025 营收构成 — 海外占比首次突破 35%](charts/maiwei_revenue_mix.png)
 *来源：[2025 年年度报告, 第 28–29 页](https://static.cninfo.com.cn/finalpage/2026-04-28/1225211530.PDF)。*
 
 ```mermaid
@@ -271,10 +271,10 @@ graph TD
 - **2025 年下半年：** 多款半导体后道封装设备实现稳定量产；
 - **截至 2025 年末：** 公司研发团队规模达 1,288 人（占员工 29.47%），半导体及显示装备领域的研发投入占比超 50%，研发投入占营收比跃升至 14.22% ([2025 年年度报告, 第 27 页](https://static.cninfo.com.cn/finalpage/2026-04-28/1225211530.PDF))。
 
-![迈为股份 业务结构 — 半导体及显示 FY2025 同比 +887%](../../charts/maiwei_segment_shift.png)
+![迈为股份 业务结构 — 半导体及显示 FY2025 同比 +887%](charts/maiwei_segment_shift.png)
 *来源：[2025 年年度报告, 第 29 页](https://static.cninfo.com.cn/finalpage/2026-04-28/1225211530.PDF)。*
 
-![迈为股份 研发投入](../../charts/maiwei_rd_trend.png)
+![迈为股份 研发投入](charts/maiwei_rd_trend.png)
 *来源：[2021–2025 年度报告 (cninfo)](https://static.cninfo.com.cn/finalpage/2026-04-28/1225211530.PDF)。*
 
 ---
@@ -304,7 +304,7 @@ graph TD
 
 数据来源：[2024 年年度报告, 第 31 页](https://static.cninfo.com.cn/finalpage/2025-04-29/1223370046.PDF)、[2025 年年度报告, 第 32 页](https://static.cninfo.com.cn/finalpage/2026-04-28/1225211530.PDF)。
 
-![迈为股份 客户集中度](../../charts/maiwei_customer_concentration.png)
+![迈为股份 客户集中度](charts/maiwei_customer_concentration.png)
 *来源：[2024 / 2025 年度报告 (cninfo)](https://static.cninfo.com.cn/finalpage/2026-04-28/1225211530.PDF)。*
 
 **风险评级：高 (High)** —— **Top-1 客户占比超过 20% 阈值（接近 30%）、Top-5 客户占比超过 50%**。按照本研究框架，此应在第 9 节作为重大风险列出。由于客户身份未具名披露，第一大客户的具体身份变动需通过订单公告进一步推测；从行业格局看，疑似为**通威股份**（HJT 路线主力推动方之一）或**隆基绿能**（公司多年战略合作客户）。
@@ -556,7 +556,7 @@ quadrantChart
 **15. 利率与融资环境（低-中 — Low-Medium）**
 公司 2025 年报告期内银行借款增加，利息支出增加 ([2025 年年度报告, 第 32 页](https://static.cninfo.com.cn/finalpage/2026-04-28/1225211530.PDF))。若国内信贷收紧或公司发行可转债/定增窗口受阻，研发与产能扩张计划可能放缓。但公司归母净资产 ¥79.29 亿、现金类资产相对充裕，财务杠杆仍处可控范围。
 
-![迈为股份 单季营收与归母净利](../../charts/maiwei_quarterly_trend.png)
+![迈为股份 单季营收与归母净利](charts/maiwei_quarterly_trend.png)
 *来源：[2024 / 2025 年度报告分季度数据 + 2026 年一季度报告 (cninfo)](https://static.cninfo.com.cn/finalpage/2026-04-28/1225211530.PDF)。*
 
 ---

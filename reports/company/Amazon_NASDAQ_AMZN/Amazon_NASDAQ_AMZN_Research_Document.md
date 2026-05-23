@@ -31,14 +31,14 @@ In FY2025, Amazon generated **$716.92 bn in net sales**, **$79.98 bn in GAAP ope
 
 **How Amazon makes money.** The 10-K breaks revenue into seven service/product lines, all reaching record highs in FY2025: Online stores $269.29 bn (first-party retail, gross), Third-party seller services $172.16 bn (commissions + Fulfillment-by-Amazon), AWS $128.73 bn (compute, storage, AI), Advertising services $68.64 bn (Sponsored Products, display, Prime Video ads, DSP), Subscription services $49.62 bn (Prime + digital subs), Physical stores $22.56 bn, Other $5.94 bn ([10-K FY2025, p. 68](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm)). The four "high-margin" lines (AWS, ads, subs, 3P services) together produced ~$419 bn in FY2025 revenue — 58% of total — and account for the great majority of consolidated operating profit.
 
-![Amazon revenue by product line — FY2023 vs FY2025](../../charts/amzn_revenue_mix.png)
+![Amazon revenue by product line — FY2023 vs FY2025](charts/amzn_revenue_mix.png)
 Source: [Amazon 10-K FY2025, Note 10 — Segment Information, p. 68](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm).
 
 **Scale.** Amazon employed **approximately 1,576,000 full-time and part-time employees** at year-end 2025 ([10-K FY2025, p. 4](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm)) and operated 741.5 million sq ft of leased/owned property worldwide, including ~474 million sq ft of fulfillment and data-center space ([10-K FY2025, p. 18](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm)). FY2025 gross purchases of property and equipment reached a record **$131.8 bn** (up from $83.0 bn in 2024 and $52.7 bn in 2023), of which AWS absorbed $96.5 bn — 68% of the total — primarily for AI compute build-out ([10-K FY2025, p. 70, Note 10](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm)). Operating cash flow was $139.5 bn for FY2025 ([10-K FY2025, p. 35](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm)), but heavy investment compressed FY2025 free cash flow and the company disclosed only **$1.2 bn of trailing-twelve-month free cash flow as of 31 March 2026**, down from $25.9 bn the year prior ([Q1-2026 earnings release](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000012/amzn-20260331xex991.htm)).
 
 **Valuation snapshot (2026-05-20).** Current price $264.13; market cap ~$2.84 trn; **TTM P/E 32.2×; TTM P/S 3.83×; P/B 6.4×; EV/EBITDA 18.5×**; forward P/E 26.9× ([yfinance, 2026-05-20](https://finance.yahoo.com/quote/AMZN/key-statistics/)). Against the mega-cap-tech peer set, Amazon sits near the middle on P/E (MSFT 25.1×, META 22.1×, GOOG 29.2×, AAPL 36.6×) but **at the absolute bottom on P/S** because retail dilutes the revenue mix — $269 bn of low-margin Online Stores revenue means the consolidated company prints a sub-4× multiple even though AWS alone, valued as a peer to Azure / GCP, would warrant 8–12×.
 
-![AMZN vs. peer TTM P/E and P/S](../../charts/amzn_peer_multiples.png)
+![AMZN vs. peer TTM P/E and P/S](charts/amzn_peer_multiples.png)
 Source: live pull, [yfinance, 2026-05-20](https://finance.yahoo.com/quote/AMZN/key-statistics/) for AMZN/MSFT/GOOG/META/AAPL/WMT.
 
 Today's 32× TTM P/E is at a modest premium to its post-COVID range (low-to-mid 20s) but is **distorted by two material 2025 items**: (a) a **$2.5 bn FTC settlement charge** ($1.0 bn civil penalty, $1.5 bn restitution) recorded in Q3 2025 ([10-K FY2025, p. 23](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm); [FTC press release, 2025-09-25](https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-secures-historic-25-billion-settlement-against-amazon)) and (b) **$2.7 bn of severance** charges in FY2025 from headcount actions ($1.8 bn in Q3, $730 mn in Q4) ([10-K FY2025, p. 41](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm)). Conversely, **non-operating income added $17.3 bn**, dominated by a $15.2 bn fair-value step-up on Amazon's nonvoting preferred stock in Anthropic and reclassification gains on the prior convertible notes ([10-K FY2025, p. 50, Note 8](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm)). Adjusting for these, GAAP EPS would be meaningfully lower than reported, but a 26.9× forward P/E and a 3.83× TTM P/S still imply the market is paying a sector-proxy premium — AI infrastructure leadership, retail-margin recovery, and 20%+ AWS growth are all already in the multiple.
@@ -159,7 +159,7 @@ Commissions plus Fulfillment-by-Amazon (FBA) fees from ~2 mn active sellers. FBA
 
 Sponsored Products and Sponsored Brands inside Amazon search results, display through Amazon DSP, video ads in Prime Video (ad-tier launched January 2024 in U.S. as default), Twitch, IMDb TV, and Streaming TV ads via Fire TV. **Competitive advantage: yes — retail-data moat.** Amazon owns first-party purchase intent data that Google and Meta do not. Ad TAM share: Amazon is the #3 US digital ad seller behind Google and Meta — the triopoly held ~72% of US digital ad spend in 2025 with Amazon ~$69 bn worldwide ([Marketing Charts, 2025](https://www.marketingcharts.com/charts/us-digital-ad-spend-share-google-vs-meta-vs-amazon)). Closest competitors: Google Search Ads, Meta Ads, Walmart Connect, Microsoft Advertising / Retail Media. Growth is accelerating, not decelerating, as Prime Video and inventory expansion add reach.
 
-![Amazon advertising — 6-yr trajectory](../../charts/amzn_advertising.png)
+![Amazon advertising — 6-yr trajectory](charts/amzn_advertising.png)
 Source: [Amazon 10-Ks, FY2020–FY2025, "Net sales by similar product/service group"](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm).
 
 ### 4.4 Subscription services ($49.6 bn FY2025, +12% Y/Y)
@@ -244,7 +244,7 @@ Global retail e-commerce is forecast at **~$7 trillion in 2025**, growing high-s
 
 Synergy Research pegs the **global cloud infrastructure-services market at $419 bn in 2025** with Q4 2025 at $119 bn, growing ~30% Y/Y on AI tailwinds — "growth rates like these have not been seen since early 2022, when the market was less than half the size it is today" ([Synergy Research, 2026-02](https://www.srgresearch.com/articles/cloud-market-share-trends-big-three-together-hold-63-while-oracle-and-the-neoclouds-inch-higher)). Big three (AWS, Azure, GCP) hold 63% combined; AWS alone holds **~28%**. Growth drivers: generative-AI training and inference (the largest single workload class created in the last decade), agentic AI, code-assist (Kiro, GitHub Copilot), enterprise data-platform modernisation, and ongoing on-premise → cloud migration. Substitutes are limited at scale: hyperscale cloud has structural cost-of-capital and capex-flexibility advantages that on-premise cannot match.
 
-![Global cloud infrastructure market share, Q4 2025](../../charts/amzn_cloud_share.png)
+![Global cloud infrastructure market share, Q4 2025](charts/amzn_cloud_share.png)
 Source: [Synergy Research Group, "Cloud Market Share Trends," 2026-02](https://www.srgresearch.com/articles/cloud-market-share-trends-big-three-together-hold-63-while-oracle-and-the-neoclouds-inch-higher).
 
 ### 6.3 Digital advertising
@@ -412,13 +412,13 @@ Aggregating Amazon's served markets:
 
 Source: [Amazon 10-K FY2025, Note 10 — Segment Information, p. 68](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm).
 
-![Amazon segment operating income, 2023–2025](../../charts/amzn_segment_opinc.png)
+![Amazon segment operating income, 2023–2025](charts/amzn_segment_opinc.png)
 
-![Retail margin recovery, 2021–2025](../../charts/amzn_retail_margin.png)
+![Retail margin recovery, 2021–2025](charts/amzn_retail_margin.png)
 
-![Amazon gross capex, 2021–2025](../../charts/amzn_capex.png)
+![Amazon gross capex, 2021–2025](charts/amzn_capex.png)
 
-![AWS quarterly net sales & Y/Y growth, 1Q24–1Q26](../../charts/amzn_aws_growth.png)
+![AWS quarterly net sales & Y/Y growth, 1Q24–1Q26](charts/amzn_aws_growth.png)
 
 ### Selected balance-sheet items (USD millions, 31 December 2025 / 31 March 2026)
 

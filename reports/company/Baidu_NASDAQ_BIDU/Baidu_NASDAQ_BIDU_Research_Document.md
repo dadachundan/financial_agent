@@ -27,7 +27,7 @@ Baidu, Inc. ("Baidu") is a Beijing-headquartered Chinese internet and AI company
 
 **Scale (FY2025).** Total consolidated revenue was RMB 129.1 bn (US$ 18.5 bn at the 31-Dec-2025 reference rate), down 3% YoY from RMB 133.1 bn in 2024 ([Baidu 2025 Form 20-F, Selected Consolidated Financial Data](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). Baidu General Business contributed RMB 102.5 bn (-2% YoY), iQIYI RMB 27.3 bn (-7% YoY). FY2025 GAAP operating result swung to a loss of RMB 5.8 bn (vs. RMB 21.3 bn income in 2024) almost entirely because of a one-off RMB 16.2 bn long-lived asset impairment; net income attributable to Baidu was RMB 5.6 bn (vs. RMB 23.8 bn in 2024). Operating cash flow was -RMB 3.0 bn for the year (vs. +RMB 21.2 bn) reflecting working-capital absorption tied to the AI infrastructure build ([Baidu 2025 Form 20-F, Item 5.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
 
-![Revenue and operating margin](../../charts/bidu_revenue_margin.png)
+![Revenue and operating margin](charts/bidu_revenue_margin.png)
 *Source: [Baidu 2025 Form 20-F, Selected Consolidated Financial Data table](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm). FY2025 includes a RMB 16.2 bn long-lived asset impairment that drove the GAAP operating loss; without it, FY2025 operating margin would be roughly mid-single-digit positive.*
 
 **Employees & geography.** As of 31-Dec-2025 Baidu had ~22,100 employees in Beijing, ~11,300 elsewhere in China, and ~100 outside China — broadly ~33.5k headcount, of which ~18,600 are in R&D, ~6,400 in sales/marketing, ~5,600 in operations/service, and ~2,900 in management/administration ([Baidu 2025 Form 20-F, Item 6.D Employees](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). Revenue is overwhelmingly Chinese mainland-sourced; Apollo Go's international footprint is the principal incremental geography, with operations or live testing in 26–27 cities globally (Wuhan, Beijing, Shanghai, Shenzhen, Chengdu, Chongqing, Haikou, Sanya domestically; Abu Dhabi, Dubai and Seoul internationally; Switzerland and London announced) ([Baidu 2025 Form 20-F, Item 4.B](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm); [Baidu Q1-2026 Press Release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
@@ -51,7 +51,7 @@ Source: [Yahoo Finance — BIDU key statistics, accessed 2026-05-20](https://fin
 
 **Interpreting the multiples.** BIDU's TTM P/E of ~78x stands out — roughly 3-4x the China-internet peer median (~20x BABA, ~10x PDD, ~17x TCEHY) and far above the 25-30x mark typical for mature US ad/cloud names like GOOGL. The cause is mechanical, not narrative: FY2025 net income attributable to Baidu collapsed to RMB 5.6 bn from RMB 23.8 bn because of the RMB 16.2 bn long-lived asset impairment ([Baidu 2025 Form 20-F, Selected Consolidated Financial Data](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). Backing out the impairment, FY2025 normalised net income would be roughly RMB 18 bn and TTM P/E would print closer to the high-teens — in line with BABA and below GOOGL. Forward P/E of ~14.8x (Yahoo consensus) corroborates that the market views the impairment as one-off. The 0.36x TTM P/S is right in line with the China-internet peer cluster and well below GOOGL's 11x. P/B of 1.17x and the US$ 116.9 bn cash position vs. US$ 94.1 bn total debt indicate a balance sheet trading close to book. In short, **headline P/E is a distortion** driven by the impairment; on normalised earnings and on P/S, BIDU trades roughly in line with Chinese internet peers — neither stretched nor obviously cheap. We flag the *forward* multiple (14.8x) and the impairment normalisation as the more useful anchors.
 
-![Peer valuation](../../charts/bidu_peer_valuation.png)
+![Peer valuation](charts/bidu_peer_valuation.png)
 *Source: [Yahoo Finance, accessed 2026-05-20](https://finance.yahoo.com/quote/BIDU/key-statistics).*
 
 ---
@@ -177,10 +177,10 @@ graph TD
 ### 4.7 Flagship vs. long-tail (revenue mix)
 For FY2025, **Online marketing services were RMB 67.8 bn (-14% YoY) — ~52.5% of consolidated revenue**; "Others" (cloud services + iQIYI membership + Xiaodu + Apollo Go) was RMB 61.2 bn (+12% YoY) — ~47.5% ([Baidu 2025 Form 20-F, Item 5.A and Note 2/25 revenue disaggregation](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). The mix shift from advertising to cloud-plus-AI is the singular story for the next four quarters: in Q1-2026, "Others" within Baidu General Business reached RMB 13.4 bn (+42% YoY, 52% of Baidu General Business) and Online Marketing fell to RMB 12.6 bn (48%). This is the first quarter in Baidu's history in which advertising is *not* the largest single revenue line.
 
-![Segment mix](../../charts/bidu_segment_mix.png)
+![Segment mix](charts/bidu_segment_mix.png)
 *Source: [Baidu 2025 Form 20-F, Item 5.A segment revenue table](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm).*
 
-![Q1 2026 AI-powered Business mix](../../charts/bidu_q1_2026_ai_mix.png)
+![Q1 2026 AI-powered Business mix](charts/bidu_q1_2026_ai_mix.png)
 *Source: [Baidu Q1-2026 Press Release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm).*
 
 ### 4.8 Roadmap / launches in the last 12 months
@@ -281,7 +281,7 @@ quadrantChart
 - **Moonshot AI / Zhipu / Minimax / DeepSeek** — Domestic foundation-model challengers; smaller than Baidu but technically credible.
 - **OpenAI / Anthropic** — Globally dominant frontier models but cannot operate in mainland China.
 
-![Peer valuation snapshot](../../charts/bidu_peer_valuation.png)
+![Peer valuation snapshot](charts/bidu_peer_valuation.png)
 *Source: [Yahoo Finance — multiple ticker pages, accessed 2026-05-20](https://finance.yahoo.com/quote/BIDU/key-statistics).*
 
 **Baidu's competitive advantages.**
@@ -298,7 +298,7 @@ quadrantChart
 4. **R&D intensity will compress margins for years.** R&D was 15.8% of FY2025 revenue (RMB 20.4 bn) — manageable, but operating-margin trough may persist while the AI buildout absorbs cash ([Baidu 2025 Form 20-F](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
 5. **VIE structure / China-ADR overhang.** Discount applied to all China ADRs is partly outside Baidu's control.
 
-![R&D investment](../../charts/bidu_rd_trend.png)
+![R&D investment](charts/bidu_rd_trend.png)
 *Source: [Baidu 2025 Form 20-F, Selected Consolidated Financial Data table](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm).*
 
 ---

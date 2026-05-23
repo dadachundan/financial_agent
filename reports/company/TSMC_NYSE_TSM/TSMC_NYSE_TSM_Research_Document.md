@@ -39,7 +39,7 @@ Taiwan Semiconductor Manufacturing Company Limited ("TSMC", NYSE: TSM, TWSE: 233
 
 **Size and scale.** FY2025 net revenue was NT$3,809.1 billion (US$121.4 billion), up 31.6% year-over-year; net income attributable to shareholders was NT$1,697.6 billion (US$54.1 billion), up 46.6% (2025 20-F, Item 5). Gross margin expanded to 59.9%, operating margin to 50.8%, and net profit margin to 44.5%. The company shipped approximately 15.0 million 12-inch equivalent wafers in 2025 vs. 12.9 million in 2024. Operating cash flow reached NT$2,275.0 billion (US$72.5 billion), funding NT$1,272.4 billion (US$40.9 billion) of capex and still leaving a meaningful free-cash-flow surplus. Headcount disclosed in the 20-F places employees globally at ~83,000+ as of year-end 2025. The Q1 2026 quarterly run-rate has accelerated further: US$35.9 billion of revenue (+40.6% YoY in USD terms) and 66.2% gross margin, with Q2 guided to US$39.0–40.2 billion ([Q1-2026 earnings release, 2026-04-16](https://www.sec.gov/Archives/edgar/data/1046179/000104617926000199/a1q26e_withguidancexfinal.htm)).
 
-![Revenue and gross margin trend](../../charts/tsm_revenue_gm.png)
+![Revenue and gross margin trend](charts/tsm_revenue_gm.png)
 *Source: [TSMC 2025 Form 20-F](https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm); FX from 20-F Item 5 (weighted-average NT$/US$).*
 
 **Valuation snapshot.** Based on the most recent market quote of **US$404.35 per ADR on 2026-05-15** (one ADS = 5 common shares), the trailing P/E sits at approximately **30.5×** and the trailing P/S at roughly **15.5×** on US$131.0 billion of TTM revenue and ~US$2.05 trillion market capitalization ([financecharts.com — TSM P/E, May 2026](https://www.financecharts.com/stocks/TSM/value/pe-ratio); [marketcapof.com — TSM, May 2026](https://marketcapof.com/stocks/tsm.us/)). Forward P/E is **~25.8×** on consensus FY2026 EPS ([GuruFocus — Forward P/E, May 2026](https://www.gurufocus.com/term/forward-pe-ratio/TSM)). Over the trailing 36 months, the P/E has ranged from a low near 13× (mid-2023 trough) to a high above 35× (early-2026 peak), and the P/S from ~6× to ~16× ([macrotrends — TSM P/E history](https://www.macrotrends.net/stocks/charts/TSM/taiwan-semiconductor-manufacturing/pe-ratio)).
@@ -56,7 +56,7 @@ Peer comparison (TTM, mid-May 2026):
 
 TSMC trades at a meaningful premium to UMC and a slight discount to GFS on P/E despite delivering vastly stronger growth and margin — a sign the market is paying for the **structural AI growth premium and unmatched leading-edge moat**, but not extrapolating it indefinitely. The 30× TTM P/E sits roughly at TSMC's own ~3-year median and ~2× the broad semiconductor sector median (SOX ETF holdings median P/E near 22× per public ETF disclosures). The premium-but-not-extreme stance is driven primarily by **(a)** a sector premium tied to multi-year AI capex from US hyperscalers and NVIDIA; **(b)** a 59.9% FY2025 gross margin that no foundry peer can replicate; and **(c)** absolute scarcity of leading-edge supply, with N2 capacity reportedly sold out through 2028 ([SamMobile, 2026](https://www.sammobile.com/news/samsung-foundry-likely-to-pick-up-big-orders-as-tsmc-gets-sold-out-until-2028/)). At 15.5× P/S — well above UMC and GFS, in line with ASML — the multiple is high but defended by 31.6% FY2025 top-line growth and >30% FY2026 guidance. The valuation is not stretched enough to be a standalone risk, but compression from a multiple north of 30× would be a meaningful drag if AI capex normalises before earnings deliver into it; we flag this in Section 9.
 
-![Peer multiples — TTM P/E and P/S, May 2026](../../charts/tsm_peer_multiples.png)
+![Peer multiples — TTM P/E and P/S, May 2026](charts/tsm_peer_multiples.png)
 *Sources: [financecharts.com — TSM, May 2026](https://www.financecharts.com/stocks/TSM/value/pe-ratio); [Public.com — UMC, Apr 2026](https://public.com/stocks/umc/pe-ratio); [MacroTrends — GFS](https://www.macrotrends.net/stocks/charts/GFS/globalfoundries/pe-ratio); peer P/S calculated from quoted market caps and trailing revenue.*
 
 ---
@@ -175,7 +175,7 @@ graph TD
 - **N3 / N3E / N3P / N3X / N3C / N3A** — TSMC's 3nm family is the workhorse leading node in 2026. **24% of wafer revenue in 2025** (up from 6% in 2023 and 18% in 2024). Variants targeted at HPC (N3X — performance), smartphone (N3P — Apple A18/A19), mainstream (N3C — compact), and automotive (N3A — released to customers end-2025). **Moat: yes — TSMC is the only foundry running 3nm in volume; Samsung's 3GAE saw very limited external customer adoption.**
 - **N4 / N4P / N4C / N5 / N5P / N6 / N7** — derivative and prior-generation nodes still drive 50% of wafer revenue in 2025 (5nm 36%, 7nm 14%). Many AI accelerators (NVIDIA Hopper H100/H200 generation) and Apple M-series (M2, M3) chips remained on these nodes for cost/yield reasons.
 
-![Wafer revenue by node](../../charts/tsm_node_mix.png)
+![Wafer revenue by node](charts/tsm_node_mix.png)
 *Source: [2025 20-F, Item 5](https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm) (Technology Development table).*
 
 **Mainstream and specialty (16nm–0.25µm).** 28nm, 16nm, 40/45nm, 65nm, 90nm, and older nodes collectively account for ~26% of FY2025 wafer revenue. These nodes power power management ICs, RF, image sensors, MCUs, display drivers, and automotive bulk parts. **Moat: partial — TSMC is one of several credible suppliers; UMC, SMIC, GlobalFoundries, Samsung Foundry, Vanguard International Semiconductor (VIS), PSMC and Tower all compete here. Cost leadership at 28nm and below is TSMC's claim; scale is also material. But pricing power is weaker.**
@@ -197,7 +197,7 @@ Per the 20-F's platform reporting (2025 20-F, Item 4 & Item 5), TSMC's net reven
 
 HPC overtook Smartphone as the #1 platform in 2024 and now dwarfs it. The shift is **structurally driven by AI accelerator demand** — NVIDIA Hopper/Blackwell GPUs, AMD MI300/MI350 accelerators, Google TPU v5/v6, AWS Trainium 2, Meta MTIA, Microsoft Maia, Tesla Dojo, and Apple's M-series (whose silicon is in fact a hybrid HPC/Smartphone allocation). Specific HPC technologies TSMC promotes — N4X, N3X, N2X — represent ultra-high-frequency variants tuned for AI/HPC peak clock (2025 20-F, Item 4).
 
-![Net revenue by platform](../../charts/tsm_platform_mix.png)
+![Net revenue by platform](charts/tsm_platform_mix.png)
 *Source: [2025 20-F, Item 5](https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm).*
 
 ### C. Advanced Packaging — 3DFabric®
@@ -300,7 +300,7 @@ Global semiconductor industry revenue reached approximately **US$626 billion in 
 
 The share gap to #2 is structurally widening: TSMC's revenue grew 31.6% in 2025 while Samsung's foundry segment grew in the single digits, and SMIC (constrained by export controls from accessing EUV) is locked out of leading-edge logic. Within "advanced foundry" (≤7nm), TSMC's effective share is closer to **>90%** ([PatentPC analysis, 2025](https://patentpc.com/blog/tsmc-samsung-and-intel-whos-leading-the-semiconductor-race-latest-market-share-data)).
 
-![Foundry market share Q4 2025](../../charts/tsm_foundry_share.png)
+![Foundry market share Q4 2025](charts/tsm_foundry_share.png)
 *Source: [PatentPC industry tracker, 2025](https://patentpc.com/blog/tsmc-samsung-and-intel-whos-leading-the-semiconductor-race-latest-market-share-data); [TrendForce share commentary, 2025](https://www.trendforce.com/news/2025/11/25/news-samsung-reportedly-hits-55-60-2nm-yields-eyeing-an-edge-through-early-gaa-deployment/). Shares are pure-play foundry; Samsung Foundry as the captive-foundry portion of Samsung Semiconductor.*
 
 ### Growth rates and drivers

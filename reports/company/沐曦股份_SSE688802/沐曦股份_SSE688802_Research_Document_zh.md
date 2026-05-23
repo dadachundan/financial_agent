@@ -52,7 +52,7 @@
 
 数据来源：[沐曦股份 2025 年年度报告, 第 11–12、37–38 页](https://static.cninfo.com.cn/finalpage/2026-03-27/1225036092.PDF)。
 
-![营业收入与毛利率走势](../../charts/muxi_revenue_gm_trend.png)
+![营业收入与毛利率走势](charts/muxi_revenue_gm_trend.png)
 来源：[沐曦股份 2025 年年度报告, 第 11–12、38 页](https://static.cninfo.com.cn/finalpage/2026-03-27/1225036092.PDF)。
 
 **估值快照 (Valuation Snapshot)。** 沐曦股份属于"上市时未盈利且尚未实现盈利"的科创板第五套标准发行企业 ([沐曦股份 2025 年年度报告, 第 2 页](https://static.cninfo.com.cn/finalpage/2026-03-27/1225036092.PDF))，TTM 净利润仍为负值，**TTM P/E 不适用**（市场通常以 P/S 与远期 P/E 衡量）。
@@ -188,10 +188,10 @@ graph TD
 
 ### 2025 年收入结构与旗舰产品判断
 
-![2025 年营收构成](../../charts/muxi_2025_revenue_mix.png)
+![2025 年营收构成](charts/muxi_2025_revenue_mix.png)
 来源：[沐曦股份 2025 年年度报告, 第 38 页](https://static.cninfo.com.cn/finalpage/2026-03-27/1225036092.PDF)。
 
-![GPU 出货结构](../../charts/muxi_gpu_shipments.png)
+![GPU 出货结构](charts/muxi_gpu_shipments.png)
 来源：[沐曦股份 2025 年年度报告, 第 39 页](https://static.cninfo.com.cn/finalpage/2026-03-27/1225036092.PDF)。
 
 **旗舰判断：** 当前公司 1 个"旗舰产品" = 曦云 C500 (训推一体 GPU)。2025 年 GPU 产品及配件收入 16.31 亿元，其中训推一体板卡销量 (33,649 片) 是智算推理板卡 (4,946 片) 的 6.8 倍；按公司"训推一体板卡占主营业务收入主体"的定性描述（年报未拆分单卡均价），**估计训推一体 GPU 贡献了 2025 年收入的 70%–80%**——其余由智算推理 GPU、GPU 服务器一体机、IP/技术服务构成。
@@ -240,7 +240,7 @@ pie title 2025 年沐曦股份客户集中度 (按销售额)
 
 ### 季度营收节奏
 
-![营收节奏](../../charts/muxi_quarterly_revenue.png)
+![营收节奏](charts/muxi_quarterly_revenue.png)
 来源：[沐曦股份 2025 年年度报告, 第 11 页](https://static.cninfo.com.cn/finalpage/2026-03-27/1225036092.PDF) 与 [沐曦股份 2026 年第一季度报告, 第 1 页](https://static.cninfo.com.cn/finalpage/2026-04-30/1225262116.PDF)。
 
 ---
@@ -257,7 +257,7 @@ pie title 2025 年沐曦股份客户集中度 (按销售额)
 - **中国 AI 加速芯片市场。** 根据弗若斯特沙利文数据，2024 年中国 AI 加速芯片市场规模约为 **1,425.37 亿元**，同比 +98.49%；2025 年预计增至 **2,398.00 亿元** (+68% YoY 预期)。来源同上。
 - **中国加速计算服务器市场。** 根据 IDC 数据，2024 年中国加速计算服务器市场规模达到 **221 亿美元，同比 +134%**；预计到 2029 年中国加速计算服务器市场规模将超过千亿美元 ([沐曦股份 2025 年年度报告, 第 20 页](https://static.cninfo.com.cn/finalpage/2026-03-27/1225036092.PDF))。
 
-![中国 AI 加速芯片市场规模](../../charts/muxi_china_ai_chip_tam.png)
+![中国 AI 加速芯片市场规模](charts/muxi_china_ai_chip_tam.png)
 来源：[沐曦股份 2025 年年度报告, 第 19–20 页](https://static.cninfo.com.cn/finalpage/2026-03-27/1225036092.PDF) (2023–2025E 数据)；2026–2027 为本报告基于历史增速线性外推，仅供参考。
 
 ### 行业驱动因素
@@ -421,7 +421,7 @@ quadrantChart
 
 风险呈现"短期可控 + 中长期高度不确定"特征：(1) 短期 1–2 年靠 IPO 募资支撑现金流和研发投入，且 2025–2026 营收高速增长；(2) 中长期 (2027 年后) 取决于美国制裁走势、CUDA 替代节奏、国产先进制程突破、大模型 capex 是否维持。**对应建议跟踪关键监测指标：(a) Q2 2026 / 半年报营收增速是否维持 50%+；(b) 应收账款 / 营收比例能否回落至 30% 以下；(c) 美国 BIS 政策动态；(d) MXMACA / CUDA 兼容路线法律确定性；(e) 国产 HBM3 量产时点。**
 
-![研发投入与净亏损](../../charts/muxi_rnd_vs_loss.png)
+![研发投入与净亏损](charts/muxi_rnd_vs_loss.png)
 来源：[沐曦股份 2025 年年度报告, 第 11–12、37 页](https://static.cninfo.com.cn/finalpage/2026-03-27/1225036092.PDF)。
 
 ---

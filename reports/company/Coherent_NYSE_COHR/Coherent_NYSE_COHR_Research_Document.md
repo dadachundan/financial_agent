@@ -37,7 +37,7 @@ Coherent Corp. (NYSE: COHR), headquartered at 375 Saxonburg Boulevard, Saxonburg
 
 **Revenue + gross-margin trend (FY23–FY26E).** The chart below shows the dramatic post-merger trough-to-recovery: revenue rebased lower in FY24 as legacy industrial / electronics markets digested inventory, then re-accelerated in FY25 (+23%) on AI datacom demand, with the FY26 outlook implying another ~22–25% step-up.
 
-![COHR revenue and GAAP gross margin trend](../../charts/cohr_revenue_gm.png)
+![COHR revenue and GAAP gross margin trend](charts/cohr_revenue_gm.png)
 
 Source: [COHR 10-K FY2025, MD&A, p. 38](https://www.sec.gov/Archives/edgar/data/820318/000082031825000014/iivi-20250630.htm) for FY23–FY25; [COHR 8-K, Q3 FY2026 Earnings Press Release, 2026-05-06](https://www.sec.gov/Archives/edgar/data/820318/000119312526208972/d57080dex991.htm) for 9M FY26 and Q4 guidance midpoint.
 
@@ -61,7 +61,7 @@ Source: [Yahoo Finance summary pages, 2026-05-20](https://finance.yahoo.com/quot
 
 **Interpretation.** COHR trades at an extreme **TTM P/E of 169x** — driven by GAAP EPS that is still suppressed by amortization of acquired intangibles ($210M YTD), restructuring ($57M YTD), impairment ($20M YTD), and partly offset by an $124M gain on the sale of the aerospace & defense business; **GAAP nine-month EPS of $2.92** is not yet representative of normalized run-rate earnings ([COHR 8-K, Q3 FY2026, Table 2](https://www.sec.gov/Archives/edgar/data/820318/000119312526208972/d57080dex991.htm)). The much more informative number is the **forward P/E of 43.6x**, which falls in line with the optical-systems / photonics cohort (LITE 47.8x, FN 38.5x, IPGP 52.2x) and is materially above the broader semi capital-equipment / instrumentation cohort (MKSI 20.9x). At **TTM P/S of 10.5x** and **EV/Revenue of 10.7x**, COHR trades roughly **double the MKSI / IPGP / FN cluster** but **less than half** of Lumentum (LITE), which has re-rated dramatically on its position as the largest pure-play indium-phosphide / EML supplier into Nvidia's optical roadmap. The COHR premium is best read as **"high-growth photonics sector premium, with a still-elevated multiple compression risk if the AI datacom ramp pauses or if peers like LITE prove more vertically integrated than the market currently believes"** — see Section 9 for the explicit risk treatment. The 3-year range on the multiple is enormous: COHR's TTM P/S has expanded from ~1.4x in mid-2023 (when the stock traded below $30 on II-VI merger-integration concerns) to today's 10.5x.
 
-![COHR peer valuation snapshot](../../charts/cohr_peer_valuation.png)
+![COHR peer valuation snapshot](charts/cohr_peer_valuation.png)
 
 Source: [Yahoo Finance, 2026-05-20](https://finance.yahoo.com/quote/COHR/key-statistics/) for COHR, LITE, FN, MKSI, IPGP.
 
@@ -198,7 +198,7 @@ Of FY25 revenue of $5,810M:
 
 In the new two-segment framework starting FY26 the picture sharpens: **Datacenter & Communications = $3,660M (72%) of 9M FY26**, **Industrial = $1,413M (28%)**. The thesis is essentially the datacom segment.
 
-![COHR segment revenue mix](../../charts/cohr_segment_mix.png)
+![COHR segment revenue mix](charts/cohr_segment_mix.png)
 
 Source: [COHR 10-K FY2025, MD&A and Note 14, pp. 38–40, 79–81](https://www.sec.gov/Archives/edgar/data/820318/000082031825000014/iivi-20250630.htm); [COHR 8-K, Q3 FY26 Earnings Press Release, Table 5](https://www.sec.gov/Archives/edgar/data/820318/000119312526208972/d57080dex991.htm).
 
@@ -212,7 +212,7 @@ Source: [COHR 10-K FY2025, MD&A and Note 14, pp. 38–40, 79–81](https://www.s
 
 ### Quarterly segment trajectory — the AI ramp in pictures
 
-![COHR quarterly segment revenue](../../charts/cohr_quarterly_segment.png)
+![COHR quarterly segment revenue](charts/cohr_quarterly_segment.png)
 
 Source: [COHR 8-K, Q3 FY26 Earnings Press Release, Table 5, 2026-05-06](https://www.sec.gov/Archives/edgar/data/820318/000119312526208972/d57080dex991.htm); Q1 FY26 D&C derived from disclosed 9M FY26 D&C of $3,659.6M minus Q2 FY26 D&C $1,208.0M minus Q3 FY26 D&C $1,361.6M.
 
@@ -416,7 +416,7 @@ Management's stated playbook combines:
 - **Portfolio simplification** — divest non-core (aerospace & defense), focus on photonics-core.
 - **Deleverage + multiple expansion** — completed via $2B equity offering and Bain conversion.
 
-![COHR capex trajectory](../../charts/cohr_capex.png)
+![COHR capex trajectory](charts/cohr_capex.png)
 
 Source: [COHR 10-K FY2025, Note 14, p. 81](https://www.sec.gov/Archives/edgar/data/820318/000082031825000014/iivi-20250630.htm); [COHR 8-K, Q3 FY26 Earnings Press Release, Table 4](https://www.sec.gov/Archives/edgar/data/820318/000119312526208972/d57080dex991.htm).
 
@@ -452,7 +452,7 @@ The capex intensity step-up from ~8% in FY24 to ~11% in 9M FY26 is the single cl
 
 **10. Dilution from $2B equity offering and Bain preferred conversion.** Diluted share count rose from 155M in Q3 FY25 to 196M in Q3 FY26 (+26% diluted shares) ([COHR 8-K, Q3 FY26 Earnings Press Release, Table 2](https://www.sec.gov/Archives/edgar/data/820318/000119312526208972/d57080dex991.htm)). The dilution is largely behind the company now, but it has already absorbed a meaningful portion of the equity-narrative tailwind. *Mitigant*: balance sheet is fortified (cash $1.59B + ST investments $0.83B = $2.42B vs. debt $3.19B; net debt $0.77B vs. EBITDA run-rate of ~$1.6B-plus implies sub-0.5x net leverage on a forward basis).
 
-![COHR debt and cash trajectory](../../charts/cohr_debt_trajectory.png)
+![COHR debt and cash trajectory](charts/cohr_debt_trajectory.png)
 
 Source: [COHR 10-K FY2025, Note 7, p. 66](https://www.sec.gov/Archives/edgar/data/820318/000082031825000014/iivi-20250630.htm); [COHR 10-Q Q3 FY26, Note 8, p. 14](https://www.sec.gov/Archives/edgar/data/820318/000082031826000013/iivi-20260331.htm).
 
@@ -511,7 +511,7 @@ Source: [COHR 10-K FY2025, Note 7, p. 66](https://www.sec.gov/Archives/edgar/dat
 
 ### Charts
 
-All charts are produced by [reports/charts/cohr_charts.py](../../charts/cohr_charts.py); underlying numbers cited inline in each chart caption.
+All charts are produced by [reports/charts/cohr_charts.py](charts/cohr_charts.py); underlying numbers cited inline in each chart caption.
 
 ---
 

@@ -35,7 +35,7 @@ Broadcom Inc. (NASDAQ: AVGO) is a global designer, developer and supplier of sem
 
 **How large they are.** FY2025 total net revenue was **$63,887M** (+24% YoY from $51,574M in FY2024) and GAAP net income was **$23,126M**, an EPS of **$4.91 basic / $4.77 diluted** ([2025 10-K, Consolidated Statements of Operations, p.47](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm)). Operating income was $25,484M (40% operating margin GAAP). Free cash flow was **$26.9B** for FY2025 — operating cash flow of $27,537M less capex of $620M — equivalent to 42% of revenue ([2025 10-K, p.43](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm); [Q4 FY2025 press release](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000116/avgo-11022025x8kxex99.htm)). The balance sheet carries **$65.1B of total debt** (long-term debt $61,984M + short-term debt $3,152M) and $16,178M of cash at FY2025 year-end ([2025 10-K Consolidated Balance Sheets, p.47](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm)) — a level largely inherited from the VMware acquisition financing. The diluted share count is 4,888M as of Q1 FY26 ([Q1 FY26 8-K, 2026-03-04](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm)).
 
-![Broadcom revenue and gross margin](../../charts/avgo_revenue_margin.png)
+![Broadcom revenue and gross margin](charts/avgo_revenue_margin.png)
 
 *Source: [2025 10-K (FY23–FY25)](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm) and [2023 10-K (FY21–FY22)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001730168&type=10-K&dateb=&owner=include&count=40). FY21 reflects pre-VMware book of business; FY22 GM lift reflects software-mix shift from Brocade/CA/Symantec; FY24 GM dip is the first-year amortization-of-VMware-intangibles drag.*
 
@@ -165,7 +165,7 @@ graph TD
 
 **Recent product launches.** Tomahawk 6 (102.4T, announced 2025); Sian2 (224G SerDes-based optical DSP for 1.6T pluggables, 2025); Jericho 3-AI extensions; VMware Cloud Foundation 9.0 (March 2025) and the July 2025 VCF networking and security virtualization release ([2025 10-K, p.18](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm)).
 
-![Broadcom segment revenue mix](../../charts/avgo_segment_mix.png)
+![Broadcom segment revenue mix](charts/avgo_segment_mix.png)
 
 *Source: [2025 10-K, MD&A p.39](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm) and [Q1 FY26 8-K press release](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm).*
 
@@ -287,7 +287,7 @@ Broadcom's CEO articulated an explicit framing on the September 2024 and Decembe
 9. **Stock-based compensation dilution and "non-GAAP optionality."** SBC of **$7.6B** in FY25 ([2025 10-K, p.40](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm)) is the largest GAAP-to-non-GAAP reconciling item; unrecognized SBC of **$23.8B** ([2025 10-K, p.40](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm)) will continue to suppress GAAP earnings and dilute share count over a weighted-average 3.4-year horizon. The $10B repurchase program partially offsets dilution.
 10. **Valuation / multiple compression risk.** TTM P/E of 81.4x and TTM P/S of 29.0x sit at the high end of any historical range and at premiums to NVDA, MRVL and QCOM (see Section 1 table; [Yahoo Finance](https://finance.yahoo.com/quote/AVGO/key-statistics/), 2026-05-20). A growth disappointment of even a few percentage points relative to the implied $10.7B Q2 AI guide ([Q1 FY26 8-K](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm)) could trigger a sharp re-rate. Mitigant: forward P/E of 22.9x is materially lower and approximately at parity with NVDA.
 
-![AVGO peer valuation](../../charts/avgo_peer_valuation.png)
+![AVGO peer valuation](charts/avgo_peer_valuation.png)
 
 *Source: Yahoo Finance key-statistics for [AVGO](https://finance.yahoo.com/quote/AVGO/key-statistics/), [NVDA](https://finance.yahoo.com/quote/NVDA/key-statistics/), [MRVL](https://finance.yahoo.com/quote/MRVL/key-statistics/) and [QCOM](https://finance.yahoo.com/quote/QCOM/key-statistics/), pulled 2026-05-20.*
 
@@ -296,11 +296,11 @@ Broadcom's CEO articulated an explicit framing on the September 2024 and Decembe
 11. **Global recession / capex drawdown.** A material slowdown would hit both the cyclical broadband/storage/RF lines and could pause enterprise IT spend on VMware renewals. Mitigant: multi-year subscription structure of Infrastructure Software smooths in-quarter volatility.
 12. **Interest-rate sensitivity on refinancing.** If rates re-accelerate, the eventual refinancing of the laddered notes carries higher coupons and could compress FCF. Mitigant: Broadcom's investment-grade rating and the laddered maturity profile mean refinancing in any single year is modest.
 
-![FCF and debt](../../charts/avgo_fcf_debt.png)
+![FCF and debt](charts/avgo_fcf_debt.png)
 
 *Source: [2025 10-K Cash Flows p.43 and Balance Sheets p.47](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm); prior-year totals reconstructed from corresponding 10-K filings.*
 
-![AI revenue trajectory](../../charts/avgo_ai_revenue.png)
+![AI revenue trajectory](charts/avgo_ai_revenue.png)
 
 *Sources: FY24 AI of $12.2B from [Q4 FY24 press release (2024-12-12)](https://www.sec.gov/Archives/edgar/data/1730168/000173016824000125/avgo-11032024x8kxex99.htm); FY23 AI implied from "+220% YoY" growth into FY24; FY25 AI approximated from disclosed quarterly growth checkpoints in the FY25 earnings press releases; Q1 FY26 actual and Q2 FY26 guide from [Q1 FY26 press release (2026-03-04)](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm). FY25 full-year AI figure is reconstructed and not a single direct AVGO disclosure.*
 

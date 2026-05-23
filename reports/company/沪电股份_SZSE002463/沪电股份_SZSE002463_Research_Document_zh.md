@@ -63,7 +63,7 @@
 
 **对乘数水平的解读**：当前 TTM P/E 约 52× 显著高于全球 PCB 行业平均（10–25×）。这种溢价由三个结构性因素支持：(1) **盈利增速的绝对斜率**——2024–2025 年公司归母净利润 CAGR 约 59%（[2024 年年度报告（更正后）](https://static.cninfo.com.cn/finalpage/2025-11-28/1224831828.PDF) 与 [2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-03-25/1225027832.PDF) 对比测算），2026 Q1 业绩预告同比 +55%~+65%（[2026 年第一季度业绩预告](https://static.cninfo.com.cn/finalpage/2026-04-14/1225097796.PDF)），按 2026 全年 49–55 亿净利测算，**前瞻 P/E 仅 36–41×**；(2) **产品结构向 AI 服务器 / 高速交换机集中**——下一代 GPU 平台 PCB 已通过认证、1.6T 交换机 NPC/CPC 结构已小批量交付（[2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-03-25/1225027832.PDF) 第三节"研发投入"）；(3) **产能受限的稀缺溢价**——超低损耗树脂、HVLP 铜箔等高端原料阶段性供应偏紧（[2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-03-25/1225027832.PDF) 第三节"行业情况"）。但若 2026 下半年起新增产能集中投放，毛利率与高速交换机板块同比增速面临边际下行的可能性，这是第 9 节列示的"市场重构与同质化竞争"风险，亦是估值再平衡的核心变量。
 
-![沪电股份 2019-2025 营收、归母净利润与毛利率](../../charts/hudian_revenue_trend.png)
+![沪电股份 2019-2025 营收、归母净利润与毛利率](charts/hudian_revenue_trend.png)
 
 *数据来源：公司 [2019 年年度报告](https://static.cninfo.com.cn/finalpage/2020-03-26/1207403918.PDF)、[2020 年年度报告（更新后）](https://static.cninfo.com.cn/finalpage/2021-03-25/1209449895.PDF)、[2021 年年度报告](https://static.cninfo.com.cn/finalpage/2022-03-23/1212643055.PDF)、[2022 年年度报告（更正后）](https://static.cninfo.com.cn/finalpage/2025-11-28/1224831827.PDF)、[2023 年年度报告（更正后）](https://static.cninfo.com.cn/finalpage/2025-11-28/1224831829.PDF)、[2024 年年度报告（更正后）](https://static.cninfo.com.cn/finalpage/2025-11-28/1224831828.PDF)、[2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-03-25/1225027832.PDF)。毛利率为公司整体毛利率（PCB 业务毛利率 2025 年为 36.91%）。*
 
@@ -194,11 +194,11 @@ graph TD
 
 ### 4.3 2025 收入结构（按下游应用）
 
-![沪电股份 2025 年 PCB 收入构成（按下游应用）](../../charts/hudian_2025_mix.png)
+![沪电股份 2025 年 PCB 收入构成（按下游应用）](charts/hudian_2025_mix.png)
 
 *数据来源：[沪士电子股份有限公司 2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-03-25/1225027832.PDF)，第三节"主营业务分析"。*
 
-![数据通讯应用领域 2025 年细分营收与同比增速](../../charts/hudian_datacom_breakdown.png)
+![数据通讯应用领域 2025 年细分营收与同比增速](charts/hudian_datacom_breakdown.png)
 
 *数据来源：[沪士电子股份有限公司 2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-03-25/1225027832.PDF)，第三节"主营业务分析"。"无线/其他"同比为按余额倒推近似值。*
 
@@ -206,7 +206,7 @@ graph TD
 
 公司季度营收和净利润持续创历史新高，**2025 年四个季度 营收/归母净利润 分别为 40.38/7.62 → 44.56/9.20 → 50.19/10.35 → 54.33/11.05 亿元**，呈现非常清晰的环比加速（[2025 年一季度报告](https://static.cninfo.com.cn/finalpage/2025-04-25/1223267176.PDF)、[2025 年半年度报告](https://static.cninfo.com.cn/finalpage/2025-08-22/1224535064.PDF)、[2025 年三季度报告](https://static.cninfo.com.cn/finalpage/2025-10-29/1224755010.PDF)、[2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-03-25/1225027832.PDF)）；2026 Q1 营收 62.14 亿元、归母净利润 12.42 亿元，**同比 +53.91% / +62.90%**（[2026 年第一季度报告](https://static.cninfo.com.cn/finalpage/2026-04-23/1225147393.PDF)；同步参见 [新浪财经：AI 算力拉动高端 PCB 放量，沪电股份 Q1 营收同增 54%，2026-04-22](https://finance.sina.com.cn/stock/relnews/cn/2026-04-22/doc-inhvkqha6082058.shtml)）。
 
-![沪电股份 单季度营收与归母净利润 (2024Q1 – 2026Q1)](../../charts/hudian_quarterly.png)
+![沪电股份 单季度营收与归母净利润 (2024Q1 – 2026Q1)](charts/hudian_quarterly.png)
 
 *数据来源：公司各期 [2024 一季报](https://static.cninfo.com.cn/finalpage/2024-04-23/1219739059.PDF)、[2024 半年报](https://static.cninfo.com.cn/finalpage/2024-08-23/1220955282.PDF)、[2024 三季报](https://static.cninfo.com.cn/finalpage/2024-10-25/1221507331.PDF)、[2024 年年度报告（更正后）](https://static.cninfo.com.cn/finalpage/2025-11-28/1224831828.PDF)、[2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-03-25/1225027832.PDF) 与 [2026 一季报](https://static.cninfo.com.cn/finalpage/2026-04-23/1225147393.PDF)。*
 
@@ -214,7 +214,7 @@ graph TD
 
 公司 2025 年研发投入 **11.41 亿元**，占营收 6.02%（同比 +0.10 pct），研发人员 1,899 人（占员工总数 12.46%），同比新增 283 人。研发投入中本科及以上学历占比从 2024 年的 35.9% 提升至 44.4%，反映工程师密度持续提高；2025 年取得 25 项发明专利 + 15 项实用新型专利（[2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-03-25/1225027832.PDF) 第三节"研发投入"）。
 
-![沪电股份 研发投入与研发收入占比](../../charts/hudian_rd.png)
+![沪电股份 研发投入与研发收入占比](charts/hudian_rd.png)
 
 *数据来源：公司 [2021 年年度报告](https://static.cninfo.com.cn/finalpage/2022-03-23/1212643055.PDF)、[2022 年年度报告（更正后）](https://static.cninfo.com.cn/finalpage/2025-11-28/1224831827.PDF)、[2023 年年度报告（更正后）](https://static.cninfo.com.cn/finalpage/2025-11-28/1224831829.PDF)、[2024 年年度报告（更正后）](https://static.cninfo.com.cn/finalpage/2025-11-28/1224831828.PDF)、[2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-03-25/1225027832.PDF)。*
 
@@ -283,7 +283,7 @@ pie title 2025 年沪电股份营收按前五客户拆分 (单位: 亿元)
 
 **按细分工艺**：HLC（18+）是 2025 年增速最快的细分，2025 年市值 49.28 亿美元、同比 **+72.8%**；2026 年预计 80.02 亿美元、同比 **+62.4%**；2025–2030 CAAGR **+21.7%**。HDI 2025 同比 +26.0%、2026 同比 +14.5%、2025–2030 CAAGR +9.2%。封装基板 2025 同比 +18.2%、2026 同比 +20.5%、2025–2030 CAAGR +10.9%（[2025 年年度报告 引用 Prismark 2025Q4 研究报告](https://static.cninfo.com.cn/finalpage/2026-03-25/1225027832.PDF) 第三节"行业情况"）。
 
-![全球 PCB 市场与超高层板 HLC(18+) 规模演进 — Prismark 预测](../../charts/hudian_pcb_tam.png)
+![全球 PCB 市场与超高层板 HLC(18+) 规模演进 — Prismark 预测](charts/hudian_pcb_tam.png)
 
 *数据来源：[沪士电子股份有限公司 2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-03-25/1225027832.PDF) 第三节"行业情况"，引用 Prismark 2025Q4 研究报告。2024 年 HLC(18+) 数值由 2025 同比 +72.8% 反推。*
 
@@ -332,7 +332,7 @@ A 股市场上，沪电股份的可比公司主要是 **数据通讯 / 算力 PC
 
 价格来源：[新浪财经实时行情接口（2026-05-21 收盘）](https://hq.sinajs.cn/?list=sz002463,sz002916,sz002384,sh600183)。市值按各公司公开总股本估算，仅供横向对比参考。同业基本盘信息来自各公司最新年报：[深南电路 2025 年年度报告摘要](https://static.cninfo.com.cn/finalpage/2026-03-13/1225006759.PDF)、[东山精密 2025 年年度报告摘要](https://static.cninfo.com.cn/finalpage/2026-04-22/1225139317.PDF)、[生益科技 2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-04-25/1225195409.PDF)。
 
-![沪电股份 vs PCB 同业 总市值快照](../../charts/hudian_peers.png)
+![沪电股份 vs PCB 同业 总市值快照](charts/hudian_peers.png)
 
 *数据来源：[新浪财经实时行情接口](https://hq.sinajs.cn/?list=sz002463,sz002916,sz002384,sh600183)，2026-05-21 收盘价 × 各公司总股本估算。*
 

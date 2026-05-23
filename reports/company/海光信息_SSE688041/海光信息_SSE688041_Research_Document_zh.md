@@ -33,7 +33,7 @@
 
 **地域结构**。报告期内境内销售 (含港澳台) 占比 100%，反映公司因美国实体清单等出口管制因素而专注于中国大陆市场 ([2025 年年度报告 第三节, p. 32](https://static.cninfo.com.cn/finalpage/2026-04-08/1225083088.PDF))。
 
-![海光信息 营收/净利润/毛利率 趋势](../../charts/hygon_revenue_gm_trend.png)
+![海光信息 营收/净利润/毛利率 趋势](charts/hygon_revenue_gm_trend.png)
 
 来源: [海光信息 2022/2023/2024/2025 年度报告 (cninfo)](https://static.cninfo.com.cn/finalpage/2026-04-08/1225083088.PDF)。
 
@@ -241,7 +241,7 @@ pie title 海光信息 2025 年营收按前五大客户分布
 
 **(b) 中国加速服务器 (AI 服务器) 市场**。这是 2024–2025 年增速最为夸张的细分。IDC 数据显示：2024 年中国加速服务器市场在生成式 AI 推动下同比增长 **134.0%**，市场规模达 USD 221 亿；**2025 全年中国加速服务器出货量预计同比 +56.3% 至 98.5 万台；到 2029 年中国加速服务器市场规模将超过 USD 1,400 亿，出货量将达到 272 万台** ([2025 年年度报告 第三节, pp. 15–16](https://static.cninfo.com.cn/finalpage/2026-04-08/1225083088.PDF))。
 
-![中国加速服务器市场规模 — 2024A 至 2029E](../../charts/hygon_tam.png)
+![中国加速服务器市场规模 — 2024A 至 2029E](charts/hygon_tam.png)
 
 来源: [2025 年年度报告 第三节, pp. 15–16 — IDC 数据](https://static.cninfo.com.cn/finalpage/2026-04-08/1225083088.PDF)。
 
@@ -333,7 +333,7 @@ quadrantChart
 
 ### 7.5 同业估值比较
 
-![国产算力芯片可比公司估值](../../charts/hygon_peer_valuation.png)
+![国产算力芯片可比公司估值](charts/hygon_peer_valuation.png)
 
 来源: [东方财富 push2 API, 2026-05-20](https://quote.eastmoney.com/sh688041.html)、各公司 cninfo 年报。
 

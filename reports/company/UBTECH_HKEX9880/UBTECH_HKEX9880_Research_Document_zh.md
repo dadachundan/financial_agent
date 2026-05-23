@@ -42,7 +42,7 @@
 
 **规模指标：** 截至 2024 年 12 月 31 日，公司资产总值人民币 51.34 亿元，资产净值 22.48 亿元；研发人员构成公司员工主体 (2024 年 1-12 月研发人员薪酬支出 4.06 亿元，占研发费用 85%) ([优必选 2024 年度报告, 第 14, 16 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0430/2025043003148.pdf))。截至 2024 年 12 月 31 日，公司累计授权专利 2,680 项，较 2023 年底新增 23.39%；H1 2025 末进一步增至 2,790 项 ([优必选 2024 年度报告, 第 8 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0430/2025043003148.pdf))、[优必选 2025 年中期报告, 第 11 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0912/2025091201298.pdf))。截至 2024 年末，公司已设立 41 个间接激励持股平台，共 678 名股权激励参与者 ([2024 年报, 第 81 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0430/2025043003148.pdf))，估算员工规模约 2,200 人 ([Yahoo Finance 9880.HK, 2026-05](https://finance.yahoo.com/quote/9880.HK/))。
 
-![营业收入与毛利率](../../charts/ubtech_revenue_margin.png)
+![营业收入与毛利率](charts/ubtech_revenue_margin.png)
 *来源：[优必选 2024 年度报告, 第 14 页 (五年财务概要)](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0430/2025043003148.pdf)。*
 
 **Valuation snapshot (截至 2026-05-19)：**
@@ -230,7 +230,7 @@ FY2024 收入 RMB 477.0 mn (占比 36.5%、YoY +88.1%)，已成为公司**最大
 
 **近 12 个月产品发布与下线：** (i) Walker S2 量产 (2025-Q4)、(ii) 第四代灵巧手发布、(iii) BrainNet 2.0 + Co-Agent 架构、(iv) UGOT 与 AperBot M1 教育新品、(v) PC10 泳池机器人、C20 第二代猫砂盆、F10 智能餵食器等消费新品。未公开重大产品下线 ([优必选 2024 年度报告, 第 6-13 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0430/2025043003148.pdf))、[优必选 2025 年中期报告, 第 8-12 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0912/2025091201298.pdf))。
 
-![分部收入结构](../../charts/ubtech_segment_mix.png)
+![分部收入结构](charts/ubtech_segment_mix.png)
 *来源：[优必选 2024 年度报告, 第 15 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0430/2025043003148.pdf)。*
 
 ## 5. 客户与上市策略 (Customers & Go-to-Market)
@@ -321,7 +321,7 @@ pie title FY2024 收入按客户集中度
 
 **中国市场：** 中国是全球最大的工业机器人市场 (2024 年安装量约占全球 50%+，IFR 数据)。中国 "智能机器人" 和 "具身智能" 首次被写入 2025 年《政府工作报告》([优必选 2024 年度报告, 第 12 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0430/2025043003148.pdf))；工信部 2024 年印发《人形机器人创新发展指导意见》提出 2025 年初步建立创新体系、2027 年综合实力达到国际先进水平。
 
-![全球人形机器人 TAM](../../charts/ubtech_tam.png)
+![全球人形机器人 TAM](charts/ubtech_tam.png)
 *来源：[Goldman Sachs Insights, 2024-01](https://www.goldmansachs.com/insights/articles/the-global-market-for-robots-could-reach-38-billion-by-2035)、[Morgan Stanley, 2025-02](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050)。*
 
 ### 关键驱动因素

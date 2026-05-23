@@ -31,7 +31,7 @@ NXP Semiconductors N.V. is a Dutch-domiciled, NASDAQ-listed mixed-signal semicon
 
 **Geographic spread (sales origin, FY2025).** APAC ex-China $3,581M (29.2%), Americas $3,376M (27.5%), EMEA $3,276M (26.7%), China $2,036M (16.6%) ([10-K, p. 40](https://www.sec.gov/Archives/edgar/data/1413447/000141344726000008/nxpi-20251231.htm)). China revenue grew 6.0% YoY in 2025 while every other region declined, an early signal of the local-for-local procurement dynamic discussed in Section 9.
 
-![NXP revenue and gross margin trend](../../charts/nxpi_revenue_margin.png)
+![NXP revenue and gross margin trend](charts/nxpi_revenue_margin.png)
 Source: [NXP 2025 10-K, Income Statement, p. 65](https://www.sec.gov/Archives/edgar/data/1413447/000141344726000008/nxpi-20251231.htm) — FY2023 revenue $13,276M, GM 56.9%; FY2024 $12,614M, GM 56.4%; FY2025 $12,269M, GM 54.7% (GAAP).
 
 **Manufacturing footprint.** NXP runs a hybrid model: wholly-owned 200mm fabs in Austin (TX), Nijmegen (NL) and Hamburg (DE); a 300mm joint-venture fab (SSMC) in Singapore with TSMC; and equity stakes in two new pure-play foundry JVs to secure leading-edge capacity through the decade — **ESMC** in Dresden (with TSMC, Bosch and Infineon, €500M / ~$587M equity commitment, $183M deployed at YE2025) and **VSMC** in Singapore (with VIS, ~$1,600M equity commitment) ([10-K, pp. 8 and 50](https://www.sec.gov/Archives/edgar/data/1413447/000141344726000008/nxpi-20251231.htm)). Back-end assembly/test sites operate in Kaohsiung (Taiwan), Bangkok (Thailand), Kuala Lumpur (Malaysia), Tianjin (China) and Manchester (UK) ([10-K, p. 8](https://www.sec.gov/Archives/edgar/data/1413447/000141344726000008/nxpi-20251231.htm)).
@@ -213,10 +213,10 @@ Three legacy franchises that the company is managing for cash: **Layerscape netw
 
 Three product franchises drive most of the bull case: **(1) S32 + CoreRide for SDV**, **(2) radar SoCs for ADAS**, **(3) UWB/NFC for mobile**. The legacy MEMS sensors business was divested for $878M in Feb 2026 ([Q1 2026 release](https://www.sec.gov/Archives/edgar/data/1413447/000141344726000032/nxp1q26exhibit991.htm)) — a clear signal that Sotomayor is willing to prune.
 
-![NXP FY2025 revenue mix by end market](../../charts/nxpi_endmarket_mix.png)
+![NXP FY2025 revenue mix by end market](charts/nxpi_endmarket_mix.png)
 Source: [10-K, p. 39](https://www.sec.gov/Archives/edgar/data/1413447/000141344726000008/nxpi-20251231.htm).
 
-![NXP end-market revenue: FY2024 vs FY2025](../../charts/nxpi_endmarket_bars.png)
+![NXP end-market revenue: FY2024 vs FY2025](charts/nxpi_endmarket_bars.png)
 Source: [10-K, p. 39](https://www.sec.gov/Archives/edgar/data/1413447/000141344726000008/nxpi-20251231.htm).
 
 ### Recent launches / sunsets (last 12 months)
@@ -416,7 +416,7 @@ quadrantChart
 - NFC controllers: NXP > 50% share globally (industry consensus); STM #2.
 - UWB: NXP and Qorvo lead.
 
-![Peer multiples — TTM P/E and P/S](../../charts/nxpi_peer_multiples.png)
+![Peer multiples — TTM P/E and P/S](charts/nxpi_peer_multiples.png)
 Source: [Yahoo Finance via yfinance, 2026-05-20](https://finance.yahoo.com/quote/NXPI/).
 
 ---
@@ -502,10 +502,10 @@ The four-bucket framework follows `references/risk_taxonomy.md`. Each risk runs 
 
 ---
 
-![NXP cash flow profile](../../charts/nxpi_cashflow.png)
+![NXP cash flow profile](charts/nxpi_cashflow.png)
 Source: [10-K Consolidated Statements of Cash Flows, p. 67](https://www.sec.gov/Archives/edgar/data/1413447/000141344726000008/nxpi-20251231.htm) and Non-GAAP reconciliation, p. 54.
 
-![NXP capital returned to shareholders](../../charts/nxpi_capital_return.png)
+![NXP capital returned to shareholders](charts/nxpi_capital_return.png)
 Source: [10-K Consolidated Statements of Cash Flows, p. 67](https://www.sec.gov/Archives/edgar/data/1413447/000141344726000008/nxpi-20251231.htm).
 
 NXP returned approximately $5.4B to shareholders over FY2023–25 ($3.07B dividends + $3.33B buybacks), with $1.585B remaining under the August-2024 share repurchase authorization at YE2025 ([10-K, p. 19](https://www.sec.gov/Archives/edgar/data/1413447/000141344726000008/nxpi-20251231.htm)). The current capital-return policy targets returning the majority of free cash flow, although Q1 2026 capital return ($358M = 50.1% of non-GAAP FCF) was below historical run-rate as NXP rebuilt cash following the M&A deployment.

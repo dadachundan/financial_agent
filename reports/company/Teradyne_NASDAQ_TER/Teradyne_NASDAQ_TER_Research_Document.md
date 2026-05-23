@@ -41,7 +41,7 @@ Source: [2025 10-K § Item 1 Business / Item 7 MD&A](https://www.sec.gov/Archive
 
 **Q1 2026 inflection.** Revenue jumped to **$1,282.5m (+87% YoY)**, of which $1,111m was Semiconductor Test, $91m Robotics, and $80m Product Test ([Q1 2026 8-K Press Release, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000097210/000119312526188706/ter-ex99_1.htm)). CEO Greg Smith framed the result as a vindication of the "wafer-to-AI-data-center" strategy: **~70% of Q1 revenue was AI-related** across compute (SoC test for hyperscaler training ASICs and VIP customers), memory (HBM and DRAM final test share gains), and (prospectively) the MultiLane Test Products joint venture for AI-data-center I/O test announced in January 2026.
 
-![Revenue and gross margin trend](../../charts/ter_revenue_gm.png)
+![Revenue and gross margin trend](charts/ter_revenue_gm.png)
 Source: [Teradyne 2025 10-K MD&A](https://www.sec.gov/Archives/edgar/data/0000097210/000119312526059002/d885618d10k.htm); [Q1 2026 8-K, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000097210/000119312526188706/ter-ex99_1.htm); [2024 10-K MD&A](https://www.sec.gov/Archives/edgar/data/0000097210/000095017025023784/ter-20241231.htm).
 
 ### Valuation snapshot
@@ -64,7 +64,7 @@ Source: [Teradyne 2025 10-K MD&A](https://www.sec.gov/Archives/edgar/data/000009
 
 ### Peer valuation (TTM, May 2026)
 
-![Peer valuation](../../charts/ter_peer_valuation.png)
+![Peer valuation](charts/ter_peer_valuation.png)
 Source: [GuruFocus TER P/E](https://www.gurufocus.com/term/pettm/TER); [Google Finance Advantest 6857](https://www.google.com/finance/beta/quote/6857:TYO); [FinanceCharts KLAC](https://www.financecharts.com/stocks/KLAC/value/pe-ratio); [Cohu 8-K FY25](https://www.sec.gov/Archives/edgar/data/0000021535/000143774926003937/ex_919868.htm); [Macrotrends TER P/S](https://www.macrotrends.net/stocks/charts/TER/teradyne/price-sales).
 
 ---
@@ -225,7 +225,7 @@ Created in March 2025 by combining circuit-board test (ICT/AOI), LitePoint wirel
 
 **Robotics revenue trajectory.**
 
-![Robotics quarterly](../../charts/ter_robotics_quarterly.png)
+![Robotics quarterly](charts/ter_robotics_quarterly.png)
 Source: [Teradyne 2025 10-K § Item 7 MD&A](https://www.sec.gov/Archives/edgar/data/0000097210/000119312526059002/d885618d10k.htm); [Q1 2026 8-K, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000097210/000119312526188706/ter-ex99_1.htm); quarterly cadence reconciled to FY25 segment total of $308.3m.
 
 ### Flagship vs long-tail and recent launches
@@ -262,7 +262,7 @@ Source: [2025 10-K § Item 1 Business / § Item 7 MD&A](https://www.sec.gov/Arch
 
 The geographic mix corroborates the AI/HBM read-through: **Taiwan jumped from 21% of revenue in FY24 to 36% in FY25** (TSMC and the SoC OSATs in Taiwan including ASE, KYEC, SPIL), while **Korea collapsed from 25% to 14%** (Samsung capex pause and shift of HBM testing geography); **Japan dropped from 6% to 2%** ([2025 10-K § Item 7 MD&A](https://www.sec.gov/Archives/edgar/data/0000097210/000119312526059002/d885618d10k.htm)).
 
-![Geographic mix](../../charts/ter_geo_mix.png)
+![Geographic mix](charts/ter_geo_mix.png)
 Source: [Teradyne 2025 10-K § Item 7 MD&A](https://www.sec.gov/Archives/edgar/data/0000097210/000119312526059002/d885618d10k.htm).
 
 ### Channel and sales model
@@ -371,7 +371,7 @@ quadrantChart
 3. **Customer concentration.** Top-5 at 44% in FY25, a single direct purchaser at 19%.
 4. **Export-control headwinds in China.** ~14% of revenue in FY25; Chinese ATE competitors (Hangzhou Changchuan, Wuhan Jingce, Beijing Huafeng) not subject to the same restrictions.
 
-![Peer valuation comparison](../../charts/ter_peer_valuation.png)
+![Peer valuation comparison](charts/ter_peer_valuation.png)
 Source: [GuruFocus](https://www.gurufocus.com/term/pettm/TER); [FinanceCharts](https://www.financecharts.com/stocks/KLAC/value/pe-ratio); [Google Finance](https://www.google.com/finance/beta/quote/6857:TYO); [Cohu 8-K FY25](https://www.sec.gov/Archives/edgar/data/0000021535/000143774926003937/ex_919868.htm).
 
 ---

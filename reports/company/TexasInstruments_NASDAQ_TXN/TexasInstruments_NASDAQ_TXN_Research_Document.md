@@ -22,7 +22,7 @@ Texas Instruments Incorporated ("TI" or "the Company"; NASDAQ: TXN) is the large
 
 TI sells to **more than 100,000 customers worldwide**, with roughly half of revenue coming from customers outside the top 50 — an extraordinary level of diversification for a semiconductor company. **More than 80% of FY2025 revenue was sold direct** (via TI.com and the in-house sales force), reflecting a multi-year strategic push to disintermediate distributors and tighten customer relationships ([2025 10-K](https://www.sec.gov/Archives/edgar/data/0000097476/000009747626000059/txn-20251231.htm)). End-market exposure (FY2025, after TI realigned its market taxonomy) is approximately **Industrial 33%, Automotive 33%, Personal Electronics 21%, Data Center 9%, Communications equipment 3%, and Other ~1%**, with Industrial and Automotive together representing two-thirds of revenue — the highest of any large analog/embedded peer.
 
-![Revenue and gross margin trend](../../charts/txn_revenue_gm_trend.png)
+![Revenue and gross margin trend](charts/txn_revenue_gm_trend.png)
 *Source: [TI 10-K filings, FY2021–FY2025](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000097476&type=10-K).*
 
 **How TI makes money.** TI is an integrated device manufacturer (IDM): it designs analog and embedded chips in-house and runs the bulk of fabrication, assembly, and test inside its own facilities (over 80% of wafer fabrication and over 90% of assembly/test were internal in FY2025) ([2025 10-K — Manufacturing](https://www.sec.gov/Archives/edgar/data/0000097476/000009747626000059/txn-20251231.htm)). Products are sold per unit (one-time purchase, no subscription) with **average product life-cycles measured in decades** — many TI catalog parts remain in production for 15–25+ years after introduction — which gives TI the longest revenue-tail in the broad semiconductor industry. Gross margins reflect (a) the structural cost advantage of 300mm-wafer manufacturing (an unpackaged chip built on a 300mm wafer costs ~40% less than the same chip built on a 200mm wafer per TI's disclosed math) and (b) the volume mix among the 80,000+ SKUs ([2025 10-K — Manufacturing](https://www.sec.gov/Archives/edgar/data/0000097476/000009747626000059/txn-20251231.htm)).
@@ -33,7 +33,7 @@ TI sells to **more than 100,000 customers worldwide**, with roughly half of reve
 
 **Valuation snapshot (May 2026).** Shares closed near **$301.68**, giving TXN a market capitalization of approximately **$274.6 bn**, **TTM P/E of 51.5×**, **TTM P/S of 14.9×**, **P/B of 16.4×**, **EV/EBITDA of 32.8×**, and a dividend yield of approximately **1.88%**; 52-week price range $152.73–$310.29 ([Yahoo Finance — TXN key statistics, May 2026](https://finance.yahoo.com/quote/TXN/key-statistics/)). At 51× TTM earnings, TXN trades well above its own ~22× ten-year average and ~30× three-year average, but TTM earnings of $5.45 per diluted share remain depressed by the trough of the analog cycle and the peak of the elevated-capex/depreciation cycle. Using the forward consensus (which embeds the Q1 2026 inflection and Q2 guidance) the multiple compresses materially — **forward P/E sits in the mid-20s on consensus FY2026 EPS of roughly $7.50–$8.00**, more in line with TI's historical 22–28× band. **The "expensive" headline TTM multiple is therefore best read as a cyclical-trough optical effect** (peak capex + peak depreciation + lagging revenue recovery) rather than a structural overpricing — analogous to where ADI traded at the prior cycle low. Peer P/E values (TTM): ADI 71.8×, MCHP 425.8×, STMicroelectronics 405.4×, NXPI 29.5×, Infineon 83.7× ([Yahoo Finance peer snapshots, May 2026](https://finance.yahoo.com/quote/TXN/)). The fact that NXPI is the only peer near "normal" P/E and that MCHP and STM print 400×+ multiples is itself a tell that the entire analog/MCU group is at a depressed-earnings inflection. **Risk on the multiple is mainly that the recovery flattens (P/E re-compresses on lower-than-expected earnings) rather than further multiple expansion** — flagged in Section 9 as `valuation / multiple compression` risk.
 
-![Peer valuation comparison](../../charts/txn_peer_valuation.png)
+![Peer valuation comparison](charts/txn_peer_valuation.png)
 *Source: [Yahoo Finance — TXN, ADI, MCHP, STM, NXPI, IFNNY key statistics, May 2026](https://finance.yahoo.com/quote/TXN/key-statistics/).*
 
 ---
@@ -165,7 +165,7 @@ The three product lines that are the principal long-term revenue and FCF drivers
 - **Silicon Labs acquisition (announced 2026-02-04, close expected 1H 2027)** — material expansion of Wi-Fi/Bluetooth/Zigbee/Thread/Matter SKU set and 32-bit MCU portfolio. ~$450 mn run-rate synergies projected within 3 years post-close.
 - **Sunsets**: TI's two remaining 150mm fabs were placed in scheduled closure in FY2025 ($117 mn restructuring charge), and the custom-ASIC business was effectively de-emphasized (goodwill impaired) ([2025 10-K](https://www.sec.gov/Archives/edgar/data/0000097476/000009747626000059/txn-20251231.htm)).
 
-![Segment revenue mix, FY2021–FY2025](../../charts/txn_segment_mix.png)
+![Segment revenue mix, FY2021–FY2025](charts/txn_segment_mix.png)
 *Source: [TI 10-K filings, FY2021–FY2025](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000097476&type=10-K).*
 
 ---
@@ -185,7 +185,7 @@ pie title FY2025 revenue by end market
 ```
 *Source: [TI 2025 10-K — Markets for our products](https://www.sec.gov/Archives/edgar/data/0000097476/000009747626000059/txn-20251231.htm).*
 
-![FY2025 end-market mix](../../charts/txn_end_markets.png)
+![FY2025 end-market mix](charts/txn_end_markets.png)
 *Source: [TI 2025 10-K — Markets for our products](https://www.sec.gov/Archives/edgar/data/0000097476/000009747626000059/txn-20251231.htm).*
 
 **Customer segments.** TI's customer base spans (i) global industrial automation OEMs (Siemens, ABB, Schneider, Rockwell, Honeywell, Emerson, Hitachi), (ii) automotive Tier-1 suppliers and OEMs (Continental, Bosch, Denso, Aptiv, Magna; on the OEM side BYD, Ford, GM, Tesla, VW, Toyota, Stellantis), (iii) personal-electronics OEMs (Apple, Samsung, Lenovo, Dell, HP, Xiaomi — though no single customer reaches 10%), (iv) cloud/AI data-center hyperscalers and ODMs (estimated to include Microsoft, Meta, AWS, Google, Quanta, Foxconn, ZT Systems via the AI-server power-board ecosystem), and (v) communications-equipment OEMs (Cisco, Ericsson, Nokia, Samsung Networks). None of these is named individually in TI's 10-K because no single customer reaches the 10% disclosure threshold under ASC 280-10-50-42.
@@ -325,13 +325,13 @@ TI does not compete in highest-end leading-edge digital logic, DRAM/NAND, image 
 ### TI's penetration strategy
 Three vectors: (1) **share gain through manufacturing cost leadership** (300mm vs. 200mm produces ~40% per-die cost advantage; TI plans to translate that into pricing flexibility and design-in wins); (2) **direct-customer access** (the ongoing TI.com / direct-sales push gives TI deeper account coverage in mid-tier industrial and automotive accounts that distributor-only competitors do not reach); (3) **Silicon Labs integration** (adds wireless-connectivity and lower-end 32-bit MCU SKUs that recapture share in the IoT/connected industrial sockets where TI has lagged STM and Nordic). The cumulative effect, if executed, is a multi-year share-gain framework in a $130–170 bn TAM growing 6–8% annually.
 
-![Capex vs. cash flow from operations](../../charts/txn_capex_cycle.png)
+![Capex vs. cash flow from operations](charts/txn_capex_cycle.png)
 *Source: [TI 10-K filings, FY2019–FY2025](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000097476&type=10-K).*
 
-![Free cash flow per share, signature long-term metric](../../charts/txn_fcf_per_share.png)
+![Free cash flow per share, signature long-term metric](charts/txn_fcf_per_share.png)
 *Source: TI 10-K filings, FY2019–FY2025; diluted share counts from each respective 10-K.*
 
-![Capital return — dividends + buybacks](../../charts/txn_capital_return.png)
+![Capital return — dividends + buybacks](charts/txn_capital_return.png)
 *Source: [TI 10-K cash flow statements, FY2019–FY2025](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000097476&type=10-K).*
 
 ---
@@ -374,7 +374,7 @@ Three vectors: (1) **share gain through manufacturing cost leadership** (300mm v
 
 14. **Tariff / trade-policy risk.** A meaningful tariff escalation on Asian-assembled semiconductors (TI's Philippines, Malaysia, China test/assembly operations) would affect cost structure modestly; TI's IDM model is more insulated than fabless peers but not immune.
 
-![Geographic revenue mix](../../charts/txn_geo_mix.png)
+![Geographic revenue mix](charts/txn_geo_mix.png)
 *Source: [TI 10-K filings, FY2023–FY2025 — Geographic Area Information](https://www.sec.gov/Archives/edgar/data/0000097476/000009747626000059/txn-20251231.htm).*
 
 ---

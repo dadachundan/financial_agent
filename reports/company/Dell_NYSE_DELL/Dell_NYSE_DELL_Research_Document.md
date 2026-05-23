@@ -29,7 +29,7 @@ Dell Technologies Inc. is one of the world's largest end-to-end providers of IT 
 
 **Scale and operating model.** As of January 30, 2026 Dell employed approximately **97,000 people** globally, down from a peak in excess of 130,000 prior to two waves of post-pandemic workforce reductions; headquarters are in Round Rock, Texas ([Dell 2026 10-K, p. 12](https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm)). Dell owns manufacturing facilities in the United States, Malaysia, China, Brazil, India, Poland, and Ireland and complements them with global contract manufacturers — a deliberately distributed footprint that allowed it to keep shipping during the 2020-2022 supply shocks and that it now markets as a tariff and geopolitical hedge ([Dell 2026 10-K, p. 8](https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm)). The company also operates **Dell Financial Services (DFS)**, a captive financier that originated **$11.9 billion** in FY26 and carries a **$14.3 billion** global portfolio of financing receivables, a meaningful sales lever in long-cycle ISG deals ([Dell 2026 10-K, p. 13](https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm)).
 
-![Revenue and Gross Margin Trend FY22–FY26](../../charts/dell_revenue_margin.png)
+![Revenue and Gross Margin Trend FY22–FY26](charts/dell_revenue_margin.png)
 *Source: [Dell 2026 10-K, p. 49](https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm); [Dell 2024 10-K, p. 53](https://www.sec.gov/Archives/edgar/data/1571996/000157199624000036/dell-20240202.htm).*
 
 **Valuation snapshot (intraday 2026-05-20).** Class C Common Stock closed at **$244.73** on May 19, 2026 against a 52-week range of $106.38–$263.99. Market capitalization is **~$159 billion**, enterprise value **~$173 billion**, **TTM P/E 28.2×**, **TTM P/S 1.40×**, and EV/EBITDA 15.1× ([Yahoo Finance — DELL, 2026-05-20](https://finance.yahoo.com/quote/DELL/key-statistics/)). Book value is negative (a legacy of the 2016 EMC LBO purchase accounting and large buybacks), so P/B is not meaningful. The TTM P/E sits roughly **2× HPQ's 8.0×** (its closest pure PC peer) and **roughly in-line with SMCI's 17.6×** (its closest pure AI-server peer); HPE shows no TTM P/E because of an impairment-driven trailing loss. Lenovo (0992.HK), the only large-cap diversified peer, trades at **TTM P/E 13.9×** and a TTM P/S of about **0.27×** (HKD market cap of HK$163.7B / ≈ US$20.9B, divided by USD revenue of $78.5B) — a structurally lower multiple reflecting commodity PC mix, weaker AI exposure and HK-listing discount ([Yahoo Finance — 0992.HK, 2026-05-20](https://finance.yahoo.com/quote/0992.HK/key-statistics/)).
@@ -158,7 +158,7 @@ graph TD
 
 **Consumer PCs ($6.9B FY26 / -8% YoY).** Inspiron, XPS (now folded under Dell Pro Premium and Alienware sub-brands), and Alienware (gaming). This sub-line continues to shrink; consumer revenue fell 17% in FY25 and another 8% in FY26 ([Dell 2026 10-K, p. 54](https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm)). **Competitive advantage: weak.** Apple has effectively taken the premium consumer notebook with the M-series MacBooks, and Lenovo / HP / Acer / ASUS attack the mid-market. Dell has explicitly de-emphasized consumer marketing budget since 2023.
 
-![Segment Revenue Mix FY24–FY26](../../charts/dell_segment_mix.png)
+![Segment Revenue Mix FY24–FY26](charts/dell_segment_mix.png)
 *Source: [Dell 2026 10-K, pp. 53–54](https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm).*
 
 ### Cross-cutting offers
@@ -219,7 +219,7 @@ The global server market reached **$334 billion in 2025 by revenue**, up 78% YoY
 
 The structural dynamics are clear: AI has fundamentally re-rated the server TAM but compressed the average-margin profile. Where a traditional 2U Intel-Xeon server might have cost $5,000–$25,000 with 40%+ gross margins for the vendor, an AI-server like the XE9680 can sell for $300,000–$400,000 and yet contributes a low-double-digit (sometimes single-digit) gross margin because the Nvidia HGX baseboard alone represents most of the bill of materials. Dell's ISG-segment operating margin fell from 12.8% in FY25 to 11.7% in FY26 despite ISG revenue rising 40% — a direct illustration of the trade ([Dell 2026 10-K, p. 53](https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm)).
 
-![ISG Operating Margin vs AI Mix](../../charts/dell_ai_mix_margin.png)
+![ISG Operating Margin vs AI Mix](charts/dell_ai_mix_margin.png)
 *Source: [Dell 2026 10-K, p. 53](https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm); [Dell 2024 10-K, p. 56](https://www.sec.gov/Archives/edgar/data/1571996/000157199624000036/dell-20240202.htm).*
 
 ### Personal computing (PCs)
@@ -305,7 +305,7 @@ The TAM Dell pursues breaks into four addressable layers:
 
 Aggregating, the **total addressable market across Dell's segments was ~$600 billion in 2025**, projected to grow to **>$1.0 trillion by 2028** driven almost entirely by the AI sub-segment ([IDC + Gartner press releases cited above, 2026-01 / 2026-03](https://www.idc.com/)). Dell's $113.5B FY26 revenue is therefore a roughly **19% market share** of its addressable categories — a useful framing because it implies meaningful share-gain headroom *if* Dell continues to win the AI-server allocation and *if* Nvidia's supply continues to grow.
 
-![Dell AI-Server Ramp (Orders / Shipments / Backlog)](../../charts/dell_ai_backlog.png)
+![Dell AI-Server Ramp (Orders / Shipments / Backlog)](charts/dell_ai_backlog.png)
 *Source: [Dell quarterly 8-K earnings releases, Q4 FY25 through Q4 FY26](https://investors.delltechnologies.com/financial-information/quarterly-results/default.aspx). Q4 FY26 backlog of $43B disclosed in [Q4 FY26 earnings release, 2026-02-26](https://www.sec.gov/Archives/edgar/data/1571996/000157199626000003/exhibit991earnings8kq4fy26.htm); $30B YTD orders and $18.4B backlog disclosed in [Q3 FY26 earnings release, 2025-11-25](https://www.sec.gov/Archives/edgar/data/1571996/000157199626000118/exhibit991earnings8kq3fy26.htm); $10B 1H shipments disclosed in [Q2 FY26 earnings release, 2025-08-28](https://www.sec.gov/Archives/edgar/data/1571996/000157199625000096/exhibit991earnings8kq2fy26.htm).*
 
 ### Serviceable market and share opportunity
@@ -358,10 +358,10 @@ The FY27 plan, as articulated on the Q4 FY26 call, centers on four pillars: (1) 
 
 **15. Foreign exchange (LOW-to-MODERATE).** ~50% of revenue is non-U.S.; functional currency is USD; hedging is in place. Average FX drag in FY26 was disclosed as small (<100bps to revenue growth) ([Dell 2026 10-K, p. 50](https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm)).
 
-![Cash Generation and Capital Return FY22–FY26](../../charts/dell_fcf_capreturn.png)
+![Cash Generation and Capital Return FY22–FY26](charts/dell_fcf_capreturn.png)
 *Source: [Dell 2026 10-K, pp. 49 & 56](https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm); [Dell 2024 10-K, p. 49](https://www.sec.gov/Archives/edgar/data/1571996/000157199624000036/dell-20240202.htm); [Dell Q4 FY26 8-K, 2026-02-26](https://www.sec.gov/Archives/edgar/data/1571996/000157199626000003/exhibit991earnings8kq4fy26.htm).*
 
-![Peer Valuation Comparison](../../charts/dell_peer_valuation.png)
+![Peer Valuation Comparison](charts/dell_peer_valuation.png)
 *Source: [Yahoo Finance, accessed 2026-05-20](https://finance.yahoo.com/quote/DELL/key-statistics/). Lenovo's P/S adjusted for HKD-market-cap-vs-USD-revenue mismatch.*
 
 ---

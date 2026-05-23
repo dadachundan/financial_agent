@@ -38,7 +38,7 @@ This dual-source revenue model — upfront license fees plus a multi-decade roya
 
 **Geographic footprint.** Arm operates research and engineering centers in the U.K., Europe, North America, India, and Asia-Pacific; in FY2025 approximately 57% of revenue was attributable to customers outside the United States, with the People's Republic of China sourced exclusively through Arm Technology (China) Co. Ltd. ("Arm China") under a long-term IP licensing arrangement (the "IPLA") that runs through April 23, 2048 ([Arm 20-F FY25, "The IPLA with Arm China"](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm)).
 
-![Revenue and operating margin trend](../../charts/arm_revenue_margin.png)
+![Revenue and operating margin trend](charts/arm_revenue_margin.png)
 Source: Arm Q4 FYE26 shareholder letter (FY26 totals); [Arm 20-F FY25, Item 5.A](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm) (FY23–FY25 totals); Q4 FY24 / Q4 FY25 earnings releases for non-GAAP operating margin.
 
 ### 1.1 Valuation snapshot (data as of 2026-05-20)
@@ -54,7 +54,7 @@ Source: Arm Q4 FYE26 shareholder letter (FY26 totals); [Arm 20-F FY25, Item 5.A]
 
 Source: Yahoo Finance / yfinance, pulled 2026-05-20 for all symbols (e.g. [Arm key statistics, Yahoo Finance](https://finance.yahoo.com/quote/ARM/key-statistics/), [NVDA](https://finance.yahoo.com/quote/NVDA/key-statistics/), [AVGO](https://finance.yahoo.com/quote/AVGO/key-statistics/)). Multiples rounded to nearest whole percent.
 
-![Peer valuation comparison](../../charts/arm_peer_valuation.png)
+![Peer valuation comparison](charts/arm_peer_valuation.png)
 Source: yfinance, accessed 2026-05-20.
 
 **Interpreting Arm's multiples.** Both the 298× TTM P/E and 54.8× TTM P/S are extreme on absolute and relative bases — roughly 2× the next-richest semiconductor peer on P/S (AVGO at 29.0×) and roughly 4× the IP-software peer group (CDNS / SNPS at 12–17× P/S) ([Yahoo Finance key statistics — ARM](https://finance.yahoo.com/quote/ARM/key-statistics/); [AVGO](https://finance.yahoo.com/quote/AVGO/key-statistics/); [CDNS](https://finance.yahoo.com/quote/CDNS/key-statistics/); [SNPS](https://finance.yahoo.com/quote/SNPS/key-statistics/)). Drivers:
@@ -110,7 +110,7 @@ timeline
 
 **Recent developments (last 12 months).** Q4 FY26 record results and the Arm AGI CPU launch (Apr–May 2026) with Meta as multi-generation co-developer; design wins / deployments at Supermicro / Lenovo / Quanta / ASRock (commercial systems), Verda (European AI cloud), Cloudflare (global edge), and SAP (database / business apps on Graviton and AGI CPU) ([Arm Q4 FYE26 shareholder letter, 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm)). The cumulative effect was a 78% rally in ARM ADSs from $135 at the end of November 2025 to $253 by May 1, 2026 ([yfinance monthly close history](https://finance.yahoo.com/quote/ARM/history/)).
 
-![ARM share price history](../../charts/arm_price_history.png)
+![ARM share price history](charts/arm_price_history.png)
 Source: Yahoo Finance / yfinance, monthly close, retrieved 2026-05-20.
 
 ---
@@ -247,13 +247,13 @@ The economics are very different from Arm's historical model — Arm now bears s
 
 Approximately **53% of FY26 revenue ($2.61 bn of $4.92 bn) is royalty**, of which roughly half is mobile applications processors (~46% of royalty in FY25 per the 20-F, broadly similar in FY26 per management). The remaining royalty is split across IoT/embedded, automotive, consumer electronics, networking, and data-center, with data-center now the fastest-growing slice ("data center royalty more than doubled year-over-year" in Q4 FY26 per the shareholder letter). The remaining **47% is license + other revenue ($2.31 bn)**, driven primarily by Total Access subscriptions, custom CSS engagements, and architecture licenses (notably the Nuvia ALA dispute with Qualcomm).
 
-![Revenue mix](../../charts/arm_revenue_mix.png)
+![Revenue mix](charts/arm_revenue_mix.png)
 Source: [Arm 20-F FY25, Note 4 — Revenue](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm) and [Arm Q4 FYE26 shareholder letter](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm).
 
-![Royalty mix](../../charts/arm_royalty_mix.png)
+![Royalty mix](charts/arm_royalty_mix.png)
 Source: [Arm 20-F FY25, "Mobile Applications Processor"](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm) (note: 46% mobile-AP share of royalty is the only disaggregated end-market figure disclosed for FY25; the remaining 54% is not separately broken out).
 
-![Total Access vs. Flexible Access licensees](../../charts/arm_subscription_licenses.png)
+![Total Access vs. Flexible Access licensees](charts/arm_subscription_licenses.png)
 Source: [Arm Q4 FYE26 shareholder letter, 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm).
 
 ### 4.7 Recent launches and roadmap
@@ -278,7 +278,7 @@ Arm's FY25 20-F discloses that "our top five customers (including Arm China) col
 
 **Qualcomm** is explicitly named as a 10%-of-revenue customer in FY25: "Qualcomm…which is currently a major customer of ours and accounted for 10% of our total revenue for the fiscal year ended March 31, 2025" ([Arm 20-F FY25, "Litigation with Qualcomm and Nuvia"](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm)). The 20-F does not separately identify the remaining top-5 customers, but a reasonable inference from public design wins and ALA filings is that they include some combination of **Apple, MediaTek, Samsung Electronics, and one of the U.S. hyperscalers** (AWS, Microsoft, Google). Apple's design uses an Architecture License (ALA), which produces both license fees and per-chip royalties on every iPhone, iPad, Mac, Vision Pro, Apple Watch, and AirPods unit shipped — and was extended through at least 2040 in September 2023 ([Apple Signs New Deal With Arm to License Chip Designs Beyond 2040, CNBC, 2023-09-06](https://www.cnbc.com/2023/09/06/apple-and-arm-sign-deal-for-chip-technology-that-goes-beyond-2040.html)); MediaTek is the second-largest premium-mobile applications-processor vendor after Qualcomm and a heavy Cortex-X / A licensee.
 
-![Customer concentration](../../charts/arm_customer_mix.png)
+![Customer concentration](charts/arm_customer_mix.png)
 Source: [Arm 20-F FY25, "Risks Relating to Our Business and Industry"](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm).
 
 **Arm China is unique and warrants special treatment.** Arm China is not a subsidiary of Arm: SoftBank Group, via its controlled entity Acetone Limited, owns approximately 48% of Arm China; HOPU Investment Management owns ≈35%; and other PRC parties own ≈17% ([Arm 20-F FY25, "The IPLA with Arm China"](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm)). Arm itself holds a 10% non-voting interest in Acetone — an indirect 4.8% economic interest in Arm China. Under the IPLA (initial term through April 23, 2048), Arm China is the **exclusive distributor of Arm IP to PRC customers**, including listed Chinese companies, PRC-domiciled entities, and entities under ultimate PRC-citizen control. Arm China is contractually obligated to use Arm's model licensing terms, but Arm has no direct management rights, no operational control, and no role in Arm China's pricing decisions to its PRC sub-licensees.

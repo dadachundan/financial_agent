@@ -29,14 +29,14 @@
 
 **主营业务。** 公司目前有两条产品线：（1）**互连类芯片**——核心收入来源，涵盖内存接口芯片（DDR4/DDR5 RCD、DB 套片）、内存模组配套芯片（MRCD/MDB、CKD）、PCIe Retimer 芯片、CXL MXC 内存扩展控制器以及新增的时钟（Clock）芯片产品族；（2）**津逮®产品**——以 x86 兼容服务器 CPU、I/O 集线器（IOH）与数据保护/可信计算加速芯片为主，2025 年发布第六代津逮®性能核 CPU。2025 年互连类芯片贡献营收 51.39 亿元（占比 94.4%、毛利率 65.57%），津逮®贡献 3.08 亿元（占比 5.7%、毛利率仅 7.42%）——盈利与现金流几乎全部来自互连业务 ([2025 年年度报告，第三节 收入和成本分析，第 69 页](http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-30/688008_20260330_1.pdf))。
 
-![澜起科技 5 年营收 / 净利润 / 毛利率趋势](../../charts/montage_revenue_margin_trend.png)
+![澜起科技 5 年营收 / 净利润 / 毛利率趋势](charts/montage_revenue_margin_trend.png)
 *来源：[澜起科技 2025 年年度报告 (cninfo)](http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-30/688008_20260330_1.pdf)、2024/2023 年报。注：2023 年系 DRAM 行业去库存导致的低谷年，2024–2025 年随 DDR5 渗透率提升及 AI 服务器爆发触底反弹。*
 
 **商业模式与变现路径。** 澜起采用 Fabless 模式：自身专注芯片定义、电路设计、版图与系统验证，把晶圆制造与封装测试外包给台积电、长电科技、日月光等代工/封测厂。客户端直接面向三星电子、SK 海力士、美光科技等全球 DRAM 制造商（销售完成 RCD/DB 等内存模组所需配套芯片）以及服务器 OEM/ODM（销售 PCIe Retimer、AEC 模块、CXL MXC、津逮 CPU）。销售模式以**直销为主**（2025 年直销收入 46.19 亿、占主营 84.8%，毛利率 64.51%；代销 8.28 亿、占比 15.2%），互连业务的客户集中度极高——2025 年前五大客户贡献 42.14 亿元、占年度销售总额 **77.24%**（前五大供应商集中度更达 79.39%）([2025 年年度报告，第三节 客户与供应商](http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-30/688008_20260330_1.pdf))。
 
 **地理分布。** 由于客户是全球 DRAM 三强（韩国三星与海力士、美国美光），互连类芯片绝大多数通过澳门子公司 Montage Technology Macao Commercial Offshore Limited（MTM）以美元结算开票出海，2025 年境外营收 39.01 亿元（占主营 71.6%，毛利率 66.04%），境内营收 15.46 亿元（毛利率 52.79%，含津逮）([2025 年年度报告，境外资产说明](http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-30/688008_20260330_1.pdf))。
 
-![澜起科技 FY2025 地区营收分布](../../charts/montage_geo_mix.png)
+![澜起科技 FY2025 地区营收分布](charts/montage_geo_mix.png)
 *来源：[澜起科技 2025 年年度报告，第 69 页 "主营业务分地区情况"](http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-30/688008_20260330_1.pdf)。境外 71.6%、境内 28.4%。*
 
 **规模与人员。** 截至 2025 年末，公司总资产 137.48 亿元，归属母公司股东净资产 129.24 亿元；2026 年 3 月底 H 股发行后总资产飙升至 216.81 亿元，净资产 208.46 亿元（2026 年第一季度报告）。员工总数 783 人，其中研发技术人员 583 人（占 74.4%），硕士及以上学历占 64%，研发投入占营业收入比例 16.77%（2025 年研发支出约 9.15 亿元）([2025 年年度报告，董事长致辞及研发人员构成](http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-30/688008_20260330_1.pdf))。
@@ -73,7 +73,7 @@
 
 来源：本地 db/pe_cache.json，数据采集自 Yahoo Finance（2026-05-02 时点）。
 
-![澜起 vs 互连/EDA 同业 P/E 与毛利率](../../charts/montage_peer_comparison.png)
+![澜起 vs 互连/EDA 同业 P/E 与毛利率](charts/montage_peer_comparison.png)
 
 **多倍数偏高的主因：** (a) **DDR5 渗透红利尚未走完**——根据 JEDEC 标准与服务器迭代周期，DDR5 在 2024–2027 年仍在替代 DDR4，TrendForce 预计 2026 年 1Q 服务器 DRAM 价格 QoQ 升幅 >60%、DDR5 利润率向 HBM3e 逼近 ([TrendForce, 2025-10-29 "Tight DRAM Supply to Boost DDR5 Contract Prices"](https://www.trendforce.com/presscenter/news/20251029-12758.html))，公司 2024Q4 才量产第四子代 RCD、2025 年试产第五子代 RCD，单价提升带动 ASP 增长 ([澜起科技 2025 年年度报告 第三节 内存接口子代说明](http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-30/688008_20260330_1.pdf))；(b) **AI 算力溢价**——AI 训练与推理对 HBM、CXL 内存池化、PCIe 6.0 Retimer 的需求结构性放量，公司作为目前全球唯三家提供 PCIe 5.0 Retimer 的厂商（市场份额约 10.9%，全球第二）正在切入百亿美金赛道 ([瀾起科技 H 股招股说明书 (6809.HK), 2026-01-30, Frost & Sullivan PCIe Retimer 市场份额](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0130/2026013000008_c.pdf))；(c) **H 股上市稀缺溢价**——澜起是中国大陆少数兼具技术领导力、海外客户、A+H 平台、高度合规审计且无关联交易问题的硬科技标的，2025 年首次入选上证 50 指数成分股 ([澜起科技 2025 年年度报告 公司治理与重大事项](http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-30/688008_20260330_1.pdf))。整体看 TTM PE 偏高但与 fwd EPS 增长（卖方一致预期 2026E 归母净利约 30 亿元）匹配；若 CXL/PCIe Retimer 收入兑现不及预期，将面临估值压缩风险，已纳入第 9 节。
 
@@ -185,7 +185,7 @@ graph TD
 
 **子代演进。** 澜起的 DDR5 RCD 几乎以每年 1 个子代的节奏迭代，多次"业界首发" ([澜起科技 2025 年年度报告 DDR5 子代演进，第 19–20 页](http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-30/688008_20260330_1.pdf))：
 
-![DDR5 RCD 各子代速率演进](../../charts/montage_ddr5_roadmap.png)
+![DDR5 RCD 各子代速率演进](charts/montage_ddr5_roadmap.png)
 *来源：[澜起科技 2025 年年度报告 第三节 内存接口芯片子代说明，第 19–20 页](http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-30/688008_20260330_1.pdf)。2024Q4 业界首发的第五子代 RCD 速率达 8000 MT/s，相较第一子代 RCD 速率提升 66.7%；相比 DDR4 顶速 3200 MT/s 提升 2.5 倍。*
 
 **竞争优势判定：是 / 强。** **护城河类型：** 技术 + 标准 + 客户认证生态 + 高度集中的市场结构（自然双寡头）([澜起科技 2025 年年度报告 核心竞争力分析，第 49–50 页](http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-30/688008_20260330_1.pdf))。

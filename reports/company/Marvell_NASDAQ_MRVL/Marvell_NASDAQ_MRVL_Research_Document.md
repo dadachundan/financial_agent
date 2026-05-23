@@ -37,7 +37,7 @@ Marvell Technology, Inc. is a Wilmington, Delaware-incorporated fabless semicond
 
 **Size.** Marvell generated **$8,194.6 million in net revenue in FY26**, up **42.1% YoY** from $5,767.3 million in FY25, the third consecutive growth phase since the post-Inphi-acquisition base year of FY22 ([Marvell FY26 10-K, Item 7 MD&A](https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm)). GAAP gross margin expanded 970 basis points YoY to **51.0%** (vs. 41.3% in FY25, which was depressed by $357.9 million of impairment charges); GAAP operating income swung to **$1,322.9 million (16.1% of revenue)** from a $720.3 million GAAP operating loss in FY25. Net income was **$2,670.1 million ($3.07 diluted EPS)** in FY26 vs. an $885.0 million net loss ($1.02 diluted loss/share) in FY25 — but FY26 net income includes a one-time **$1.8 billion pre-tax gain on the August 14, 2025 sale of the automotive ethernet business to Infineon Technologies AG for $2.5 billion in cash** ([Marvell FY26 10-K, Recent Developments](https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm)). Stripping that gain, non-GAAP EPS was **$2.84** for FY26, up 81% YoY ([Q4-FY26 earnings press release, 2026-03-05](https://www.sec.gov/Archives/edgar/data/1835632/000183563226000006/q426_8kx1312026ex-991.htm)).
 
-![Marvell revenue and gross margin trend, FY23-FY26](../../charts/mrvl_revenue_gm_trend.png)
+![Marvell revenue and gross margin trend, FY23-FY26](charts/mrvl_revenue_gm_trend.png)
 
 *Source: GAAP net revenue and GAAP gross margin per [Marvell FY24 10-K (FY23 column)](https://www.sec.gov/Archives/edgar/data/1835632/000183563224000009/mrvl-20240203.htm), [Marvell FY25 10-K](https://www.sec.gov/Archives/edgar/data/1835632/000183563225000057/mrvl-20250201.htm), [Marvell FY26 10-K](https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm).*
 
@@ -61,7 +61,7 @@ Marvell is no longer a balanced data-infrastructure semi — it is now substanti
 
 P/S at **19.8×** is high in absolute terms but sits below AI-networking purer-plays: AVGO 29.0×, NVDA 25.0×, CRDO 31.3×, ALAB 48.7×. The cause is unambiguous: investors are pricing Marvell as a custom-AI-accelerator + AI-interconnect platform, not as the diversified semi it was as recently as FY23. *Forward earnings have to materialise* to justify these multiples — the 52-week low of $58.61 (less than 9 months ago) reminds the reader that sentiment can swing 200%+ in either direction. We flag this as **multiple-compression risk** in Section 9.
 
-![Marvell vs. AI-networking peer valuation, 2026-05-20](../../charts/mrvl_peer_valuation.png)
+![Marvell vs. AI-networking peer valuation, 2026-05-20](charts/mrvl_peer_valuation.png)
 
 *Source: [Yahoo Finance, 2026-05-20](https://finance.yahoo.com/quote/MRVL/key-statistics) (pulled via yfinance API).*
 
@@ -344,7 +344,7 @@ quadrantChart
 
 **Total addressable TAM** for Marvell's portfolio is roughly **$70–85 billion in 2026, growing to $130–160 billion by 2028** assuming current sector growth rates. Marvell's FY26 revenue of $8.2 billion implies roughly **10–12% share of its addressable TAM** today.
 
-![Marvell — TAM positioning and the share Marvell currently holds](../../charts/mrvl_datacenter_growth.png)
+![Marvell — TAM positioning and the share Marvell currently holds](charts/mrvl_datacenter_growth.png)
 
 *Source: Marvell data-center revenue per [10-K MD&A](https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm); FY27 not shown — management guidance for Q1-FY27 alone is $2.4B implying full-year FY27 well in excess of $10B if the AI ramp continues at the FY26 trajectory.*
 

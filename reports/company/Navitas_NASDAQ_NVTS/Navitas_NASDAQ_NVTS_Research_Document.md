@@ -29,7 +29,7 @@ Navitas Semiconductor Corporation ("Navitas," NASDAQ: NVTS) is a fabless power-s
 
 **Scale and headcount.** Navitas maintains operations in the United States, Ireland, Germany, Italy, Belgium, China, Taiwan, Thailand, South Korea and the Philippines, with principal executive offices in Torrance plus satellite design centers in Santa Clara and Irvine, California. The FY2025 10-K reports approximately 50,000 sq ft of leased corporate / R&D space in Torrance. The company holds **over 300 patents issued or pending worldwide** and entered a broad patent cross-license with Infineon Technologies in October 2024 ([2025 10-K, Item 1](https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm)). The company has been **CarbonNeutral®-certified** since launch.
 
-![Annual revenue & non-GAAP gross margin](../../charts/nvts_revenue_gm_trend.png)
+![Annual revenue & non-GAAP gross margin](charts/nvts_revenue_gm_trend.png)
 
 Source: [Navitas 2025 10-K MD&A](https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm); [FY2023 earnings 8-K, 2024-02-29](https://www.globenewswire.com/news-release/2024/02/29/2838376/0/en/Navitas-Semiconductor-Announces-Record-Fourth-Quarter-and-Full-Year-2023-Financial-Results.html); [FY2022 earnings 8-K, 2023-02-23](https://www.globenewswire.com/en/news-release/2023/02/23/2614787/0/en/Navitas-Semiconductor-Announces-Fourth-Quarter-and-Full-Year-2022-Financial-Results.html).
 
@@ -39,7 +39,7 @@ Source: [Navitas 2025 10-K MD&A](https://www.sec.gov/Archives/edgar/data/1821769
 - **TTM P/S: extreme — interpret with caution.** With TTM revenue of USD 45.9M and a market cap near USD 4.6B, NVTS trades at roughly **100× TTM sales** — third-party data services GuruFocus and Yahoo Finance show 116× and 103× respectively, with the spread driven by intraday price movement and float definitions ([GuruFocus, NVTS PS Ratio](https://www.gurufocus.com/term/ps-ratio/NVTS); [Yahoo Finance — NVTS key statistics](https://finance.yahoo.com/quote/NVTS/key-statistics/)). The relevant peer benchmarks are: **Power Integrations (POWI) ~9.2×** ([stockanalysis.com POWI](https://stockanalysis.com/stocks/powi/)), **ON Semiconductor (ON) ~4×**, **Infineon (IFX) ~3.6×** ([companiesmarketcap.com IFX](https://companiesmarketcap.com/infineon/marketcap/)), **Wolfspeed (WOLF) ~3–4×** after Chapter 11 emergence on September 29, 2025 ([WOLF Q3-FY26 8-K, 2026](https://www.sec.gov/Archives/edgar/data/0000895419/000089541926000024/ex991q3-26.htm)), and **EPC (private, not disclosed)**. NVTS is therefore trading at roughly **25–30× the sector median P/S**.
   - Cause of the premium: the stock is functioning as the **AI-power-content-on-Nvidia thematic proxy**. The 800 V HVDC architecture endorsement from NVIDIA at GTC May 21, 2025 ([NVIDIA Selects Navitas to Collaborate on Next Generation 800V HVDC Architecture, 2025-05-21](https://www.sec.gov/Archives/edgar/data/1821769/000162828025027705/ex9912025-05x21prrenvidiac.htm)), combined with two-tier price-target upgrades from sell-side (Baird $9 → $20, Needham $13 → $21 in mid-May 2026, per public sell-side coverage), have re-rated the multiple far above the comp set. The premium is **narrative-driven**, not earnings-driven — investors are paying for the FY2030 SAM ($3.5B per mgmt, 60%+ CAGR) and for the implied take-rate inside Nvidia's "Kyber" rack-scale platform ([Q1 2026 earnings press release, 2026-05-05](https://www.sec.gov/Archives/edgar/data/1821769/000110465926055620/tm2613492d1_ex99-1.htm)). At current run-rate revenue ($8.6M Q1'26 / ~$45M annualized), the multiple compresses to ~20× P/S only if revenue inflects 5× over the next 24–36 months — i.e. the multiple is **only justified on a forward "AI-design-wins ramp" basis**, not on trailing fundamentals. This is a valuation/multiple-compression risk and is carried into Section 9.
 
-![NVTS vs. peer P/S TTM](../../charts/nvts_peer_ps.png)
+![NVTS vs. peer P/S TTM](charts/nvts_peer_ps.png)
 
 Sources: [stockanalysis.com (NVTS, POWI)](https://stockanalysis.com/stocks/nvts/); [GuruFocus (NVTS PS Ratio)](https://www.gurufocus.com/term/ps-ratio/NVTS); [Yahoo Finance — POWI](https://finance.yahoo.com/quote/POWI/); [companiesmarketcap.com — IFX market cap](https://companiesmarketcap.com/infineon/marketcap/); [Wolfspeed Q3-FY26 8-K, 2026](https://www.sec.gov/Archives/edgar/data/0000895419/000089541926000024/ex991q3-26.htm).
 
@@ -286,7 +286,7 @@ quadrantChart
 - **Innoscience cost advantage** in commodity GaN.
 - **History of operating losses** (>100% of revenue every year since IPO).
 
-![Global GaN power device market share, 2024](../../charts/nvts_gan_share.png)
+![Global GaN power device market share, 2024](charts/nvts_gan_share.png)
 
 Source: [TrendForce / Bank of America, as cited by The Bamboo Works, 2025-12-08](https://thebambooworks.com/innoscience-makes-gains-in-patent-dispute-as-growing-competition-remains-bigger-threat/).
 
@@ -294,7 +294,7 @@ Source: [TrendForce / Bank of America, as cited by The Bamboo Works, 2025-12-08]
 
 Management's disclosed **2030 serviceable available market (SAM) is USD 3.5 billion, growing at 60%+ CAGR**, across the four prioritized end markets ([Q1 2026 earnings release, 2026-05-05](https://www.sec.gov/Archives/edgar/data/1821769/000110465926055620/tm2613492d1_ex99-1.htm)). Bottom-up cross-checks against Yole's October 2025 forecast — power-GaN total $3.0B by 2030 with 42% CAGR; power-SiC $10B by 2030 — bracket this SAM as **plausible but aggressive on the GaN side and conservative on the SiC side**. Navitas's SAM definition appears to include not only the GaN/SiC silicon dollar-content but also some attributed system-level value (controllers, isolators) inside the targeted PSU/SST reference designs.
 
-![FY2030 SAM by Segment](../../charts/nvts_sam_2030.png)
+![FY2030 SAM by Segment](charts/nvts_sam_2030.png)
 
 Source: [Q1 2026 earnings release, 2026-05-05](https://www.sec.gov/Archives/edgar/data/1821769/000110465926055620/tm2613492d1_ex99-1.htm) ($3.5B SAM, 60%+ CAGR). Per-segment split is indicative based on management commentary; precise split is not disclosed.
 
@@ -337,13 +337,13 @@ Against $3.5B SAM in 2030, today's $45.9M run-rate represents ~1.3% of 2030 SAM 
 
 10. **Persistent operating cash burn with no clear breakeven date.** FY2025 cash used in operating activities was **USD 42.9M**; cash balance ended at USD 236.9M ([2025 10-K Liquidity](https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm)). At current burn rates and OpEx of ~$25M/quarter on a non-GAAP basis, the cash runway is roughly **5–6 years** without further dilution. Management explicitly states "we expect to continue to incur net operating losses and negative cash flows from operations." Path to breakeven requires either (a) revenue inflecting back to ~$25M/quarter at 40%+ non-GAAP GM, or (b) further OpEx reduction beyond current guidance. **Mitigant:** Strong cash position provides time; equity raises in late 2025 funded the Navitas 2.0 transition.
 
-![Cash balance trend](../../charts/nvts_cash_balance.png)
+![Cash balance trend](charts/nvts_cash_balance.png)
 
 Source: [Navitas 2025 10-K and Q1 2026 10-Q balance sheets](https://www.sec.gov/Archives/edgar/data/1821769/000162828026030524/nvts-20260331.htm).
 
 11. **Extreme P/S multiple (~100×) creates compression risk.** NVTS trades at ~25–30× the sector-median P/S. A single negative data point (delayed NVIDIA ramp, lost design win, slower hyperscaler capex) could re-rate the multiple toward the 30–50× zone of other money-losing AI-thematic stocks — implying 40–70% downside even without a thesis break. **Mitigant:** Sell-side coverage has been raising targets (Baird $9 → $20, Needham $13 → $21 in May 2026), suggesting the buy-side is being directed by sell-side toward the AI-power thesis.
 
-![Revenue vs. R&D vs. operating loss](../../charts/nvts_rev_rd_oploss.png)
+![Revenue vs. R&D vs. operating loss](charts/nvts_rev_rd_oploss.png)
 
 Source: [Navitas 2025 10-K Statements of Operations](https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm).
 

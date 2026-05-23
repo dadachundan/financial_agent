@@ -53,7 +53,7 @@
 
 **估值解读：**截至 2026 年初，公司 TTM 仍为亏损，市场无法用 P/E 衡量，故核心定价锚为 **P/S 与 EV/Sales**。当前 ~7–11× 2026E P/S 大幅高于全球工业自动化龙头（AutoStore 上市后 P/S 一度 15× 现回落至 5–8×、Symbotic ~3–4×、KION ~0.5×），主要反映三个溢价：(1) **全球 AMR 龙头地位 + 70%+ 海外收入占比**赋予 Geek+ "中国制造业出海 + 高端 SaaS"双重 narrative；(2) **盈亏拐点临近**——市场愿意付高 P/S 换取 2026 起的盈利兑现；(3) **具身智能题材**——公司 2025 年 7 月成立全资子公司"北京极智嘉具身智能科技有限公司"，并于 2026 年初推出通用仓储人形机器人 Gino 1，催化估值重估（[新浪财经，2026-02-12](https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-02-12/doc-inhmpusi6907202.shtml)）。该多重叠加属于**典型成长性 + 题材性双重溢价**，因此一旦 2026 年盈利兑现不及预期或 Hai Robotics 等"第二名"市场份额持续追近，估值压缩风险显著（详见第 9 节）。
 
-![极智嘉收入与毛利率走势（2021–2025H1）](../../charts/geekplus_revenue_margin.png)
+![极智嘉收入与毛利率走势（2021–2025H1）](charts/geekplus_revenue_margin.png)
 
 *Source: [极智嘉招股章程（2025-06-30）](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0630/2025063000026_c.pdf)；[2025 年中期报告，第 8 页](https://static.cninfo.com.cn/finalpage/2025-09-19/1226155557.PDF)。2025H1 收入为半年度数据。*
 
@@ -235,7 +235,7 @@ pie title 2024 年极智嘉前五大客户结构（招股书披露）
 
 地理分布是 Geek+ 区别于绝大多数中国机器人公司的关键标签。**2025H1 境外收入 8.15 亿元，占总收入 79.5%**；2024 年全年境外收入占比约 78%，2023 年约 75.8%，2022 年约 73.4%（[2025 年中期报告，第 5 页](https://static.cninfo.com.cn/finalpage/2025-09-19/1226155557.PDF)；[腾讯新闻，2025-06](https://news.qq.com/rain/a/20250625A06LVP00)）。
 
-![极智嘉境外 vs 中国大陆收入占比（2022–2025H1）](../../charts/geekplus_geo_mix.png)
+![极智嘉境外 vs 中国大陆收入占比（2022–2025H1）](charts/geekplus_geo_mix.png)
 
 *Source: [极智嘉招股章程（2025-06-30）](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0630/2025063000026_c.pdf)；[2025 年中期报告，第 5、10 页](https://static.cninfo.com.cn/finalpage/2025-09-19/1226155557.PDF)。*
 
@@ -270,7 +270,7 @@ pie title 2024 年极智嘉前五大客户结构（招股书披露）
 
 但订单履约 AMR 子赛道的长期前景仍然乐观。Interact Analysis 报告的具体口径：**全球订单履约部署站点数预计将从 2024 年的 5,500 个增长到 2030 年的 18,000 个**（CAGR 约 22%）（[Automated Warehouse Online：Geek+ maintains AMR market share lead](https://www.automatedwarehouseonline.com/geekplus-maintains-global-amr-market-share-lead-seventh-year-in-a-row/)）。
 
-![2024 年全球订单履约 AMR 市场份额（按收入）](../../charts/geekplus_amr_market.png)
+![2024 年全球订单履约 AMR 市场份额（按收入）](charts/geekplus_amr_market.png)
 
 *Source: 极智嘉援引的 [Interact Analysis 2025 Mobile Robots Market Report](https://www.geekplus.com/resources/news/global-warehouse-automation-surges-as-geekplus-extends-no.1-amr-leadership-for-seven-consecutive-years)；[Automated Warehouse Online](https://www.automatedwarehouseonline.com/geekplus-maintains-global-amr-market-share-lead-seventh-year-in-a-row/)。具体竞争者份额按 Interact Analysis 公开口径"极智嘉 23% ≈ 第 2 + 第 3 名合计"，对第 2 / 第 3 名进行了示意性拆分（est.）。*
 
@@ -379,7 +379,7 @@ quadrantChart
 
 ### 盈利路径
 
-![极智嘉净亏损与经调整净亏损率收窄轨迹](../../charts/geekplus_loss_narrowing.png)
+![极智嘉净亏损与经调整净亏损率收窄轨迹](charts/geekplus_loss_narrowing.png)
 
 *Source: [极智嘉招股章程（2025-06-30）](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0630/2025063000026_c.pdf)；[2025 年中期报告，第 8、13–14 页](https://static.cninfo.com.cn/finalpage/2025-09-19/1226155557.PDF)；[腾讯新闻：年赚 24.1 亿，毛利四年复合年增速 118.5%](https://news.qq.com/rain/a/20250627A059EC00)。2022–2024 净亏损为 IFRS 口径，经调整净亏损率为非 IFRS 口径。*
 

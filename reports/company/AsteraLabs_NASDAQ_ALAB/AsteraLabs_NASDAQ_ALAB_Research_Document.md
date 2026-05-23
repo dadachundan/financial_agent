@@ -34,7 +34,7 @@ The company is headquartered at 2345 North First Street, San Jose, California, t
 
 **Geographic mix.** FY2025 revenue by billing-address geography skewed heavily Asia: Singapore US$277.0 million (32%), China US$256.3 million (30%), Taiwan US$247.4 million (29%), United States US$27.4 million (3%), Other US$44.4 million (6%) ([10-K, Note 14 — Concentrations](https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm)). The Asia weighting is an artefact of where hyperscalers' contract manufacturers and distributors take legal title to product (the actual end-customer demand sits primarily with US hyperscalers and NVIDIA's US-headquartered GPU business); it is not an indicator of Chinese end-market exposure.
 
-![ALAB — Annual revenue and margin trajectory](../../charts/alab_revenue_gm_trend.png)
+![ALAB — Annual revenue and margin trajectory](charts/alab_revenue_gm_trend.png)
 *Source: [Astera Labs FY2025 10-K, "Results of Operations"](https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm); FY2022 figures from [S-1, "Selected Consolidated Financial Data"](https://www.sec.gov/Archives/edgar/data/1736297/000119312524040419/d701115ds1.htm).*
 
 **Valuation snapshot (as of 2026-05-20, Yahoo Finance close).** Share price US$285.04, near the 52-week high of US$285.75 (52-week low: US$84.78). Market capitalisation US$48.9 billion, enterprise value ~US$40.7 billion (the ~US$8 billion gap reflects US$1.19 billion of cash and marketable securities — US$167.6 million cash and US$1,021.2 million marketable securities at 31 December 2025 — and no debt) ([Yahoo Finance — ALAB Key Statistics, 2026-05-20](https://finance.yahoo.com/quote/ALAB/key-statistics/); [10-K, Liquidity](https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm)).
@@ -223,7 +223,7 @@ pie title FY2025 revenue by direct billing customer (10-K Note 14)
 ```
 *Source: [Astera Labs FY2025 10-K, Note 14 — Concentrations of Credit Risk and Major Customers](https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm). The named "Customers" are direct billing entities — predominantly NVIDIA's manufacturing partners (Foxconn, Wistron, Quanta, etc.) and distributors — not end customers. End-customer concentration is reported separately and is **even higher**: one end customer >70%, top 3 end customers ~86%.*
 
-![ALAB — Customer concentration (10-K Note 14)](../../charts/alab_customer_concentration.png)
+![ALAB — Customer concentration (10-K Note 14)](charts/alab_customer_concentration.png)
 *Source: [Astera Labs FY2025 10-K, Note 14](https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm).*
 
 **Direct customers (10% concentration in FY2025).** From the 10-K Note 14 disclosure: Customer A 20%, Customer B 20%, Customer C 17%, Customer D 16%, Customer E 11%. In FY2024 the equivalent disclosures were: Customer F 36%, Customer D 24%, Customer G 18%, Customer B 11%. The pseudonymous labels do not map year-over-year — the company explicitly notes that "certain of the customers listed above are manufacturing partners that purchase the Company's products on behalf of the Company's end customers" and that end-customer demand shifts between manufacturing partners period to period ([Q1 FY2026 10-Q, Note — Concentrations](https://www.sec.gov/Archives/edgar/data/1736297/000173629726000020/alab-20260331.htm)).
@@ -320,7 +320,7 @@ quadrantChart
 ```
 *Author analysis; competitor list per [Astera Labs FY2025 10-K, "Competition"](https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm).*
 
-![ALAB — Peer valuation (TTM P/E and TTM P/S, 2026-05-20)](../../charts/alab_peer_valuation.png)
+![ALAB — Peer valuation (TTM P/E and TTM P/S, 2026-05-20)](charts/alab_peer_valuation.png)
 *Source: [Yahoo Finance — ALAB / CRDO / MRVL / AVGO / NVDA Key Statistics, 2026-05-20](https://finance.yahoo.com/quote/ALAB/key-statistics/).*
 
 **ALAB's competitive advantages.** (1) Fastest time-to-market in the PCIe retimer category over the past two generations; (2) the only public pure-play on rack-scale AI connectivity with a full multi-product portfolio; (3) deep design-win base inside NVIDIA reference platforms creates pull-through across hyperscalers; (4) COSMOS software lock-in once integrated into customer fleet-management plane; (5) UALink consortium positioning gives ALAB standards-body credibility incumbents cannot easily match.

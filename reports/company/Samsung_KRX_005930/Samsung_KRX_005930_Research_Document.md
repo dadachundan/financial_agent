@@ -39,7 +39,7 @@ Samsung Electronics Co., Ltd. ("Samsung Electronics" or "the Company") is the wo
 
 **How large is it?** FY2025 revenue KRW 333.6 trn (~USD 230 bn); FY2025 operating profit KRW 43.6 trn (~USD 30 bn); FY2025 capex KRW 52.7 trn, of which KRW 47.5 trn was Device Solutions ([Samsung Electronics reports 2025 capital expenditure of KRW 52.7 trillion, Investing.com 2026-01-29](https://www.investing.com/news/company-news/samsung-electronics-reports-2025-capital-expenditure-of-krw-527-trillion-93CH-4472051)). Headcount ~267,000 as of mid-2025, ~129,000 in Korea, **~128,880** as of May 2026 per stockanalysis.com ([Samsung Electronics (KRX:005930) — Stockanalysis.com](https://stockanalysis.com/quote/krx/005930/)).
 
-![Samsung Electronics revenue and operating margin trend](../../charts/samsung_revenue_margin.png)
+![Samsung Electronics revenue and operating margin trend](charts/samsung_revenue_margin.png)
 Source: Samsung Electronics FY2021–FY2025 press releases and Q1 2026 release (cited above). Q1'26 annualised = Q1 actual × 4; illustrative only, not company guidance.
 
 **Valuation snapshot (as of 2026-05-19):**
@@ -420,19 +420,19 @@ quadrantChart
 
 ## Charts (continued)
 
-![FY2025 Revenue by Division](../../charts/samsung_segment_mix.png)
+![FY2025 Revenue by Division](charts/samsung_segment_mix.png)
 Source: Samsung Electronics FY2025 Q4 press release and Harman FY25 disclosures (cited above). DS and DX numbers are gross-of-eliminations; consolidated 333.6 trn after intra-group eliminations.
 
-![HBM Market Share — Samsung vs. SK Hynix vs. Micron](../../charts/samsung_hbm_share.png)
+![HBM Market Share — Samsung vs. SK Hynix vs. Micron](charts/samsung_hbm_share.png)
 Source: [TrendForce / Astute Group, 2025](https://www.astutegroup.com/news/general/sk-hynix-holds-62-of-hbm-micron-overtakes-samsung-2026-battle-pivots-to-hbm4/) (Q2'25); [TrendForce, 2025-11](https://www.trendforce.com/news/2025/11/25/news-samsung-reportedly-hits-55-60-2nm-yields-eyeing-an-edge-through-early-gaa-deployment/) (Q3'25); [Counterpoint via Astute Group](https://www.astutegroup.com/news/general/sk-hynix-holds-62-of-hbm-micron-overtakes-samsung-2026-battle-pivots-to-hbm4/) (2026E target).
 
-![Foundry Market Share — TSMC vs. Samsung](../../charts/samsung_foundry_share.png)
+![Foundry Market Share — TSMC vs. Samsung](charts/samsung_foundry_share.png)
 Source: [TrendForce via BigGo Finance, 2025](https://finance.biggo.com/news/Akg74pwBga3fZL9MGf-A).
 
-![Forward P/E — Memory & Foundry Peers](../../charts/samsung_peer_pe.png)
+![Forward P/E — Memory & Foundry Peers](charts/samsung_peer_pe.png)
 Source: [Seoul Economic Daily, 2026-05-14](https://en.sedaily.com/news/2026/05/14/sk-hynix-forward-per-overtakes-samsung-electronics-for); [Nomura via TradingKey, 2026-05](https://www.tradingkey.com/analysis/stocks/us-stocks/261908464-nomura-samsung-skhynix-dram-tradingkey).
 
-![Samsung Annual Capex](../../charts/samsung_capex.png)
+![Samsung Annual Capex](charts/samsung_capex.png)
 Source: Samsung Electronics Q4 FY2021–FY2025 press releases (cited above); FY2026E from [Tech-Insider, 2026-03-19](https://tech-insider.org/samsung-73-billion-semiconductor-investment-2026/).
 
 ---

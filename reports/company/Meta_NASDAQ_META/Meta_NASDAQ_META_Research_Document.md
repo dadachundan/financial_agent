@@ -33,7 +33,7 @@ Meta Platforms, Inc. ("Meta") is the world's largest social-media operator and t
 
 **Scale.** Meta closed FY2025 with **revenue of $200.97 billion (+22% YoY), income from operations of $83.28 billion (+20%), free cash flow of $43.59 billion, and net income of $60.46 billion** (held back by a one-time $15.93 billion charge tied to the One Big Beautiful Bill Act tax law) ([Q4 2025 earnings release](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003832/meta-12312025xexhibit991.htm)). Cash, cash equivalents, and marketable securities stood at $81.59 billion; long-term debt rose to $58.74 billion after a $30 billion debt issuance in November 2025 to help fund the AI capex cycle. Headcount was 78,865 (+6% YoY) ([Meta 10-K FY2025, MD&A](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/0001628280-26-003942-index.htm)). Capital expenditures jumped to **$72.22 billion** in 2025 (from $39.23 billion in 2024) and are guided to $115–$135 billion in 2026.
 
-![Meta revenue and operating margin trend](../../charts/meta_revenue_margin.png)
+![Meta revenue and operating margin trend](charts/meta_revenue_margin.png)
 *Source: [Meta 10-K FY2025, Consolidated Statements of Income](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/0001628280-26-003942-index.htm); FY2021–FY2022 from prior 10-Ks.*
 
 ### Valuation snapshot
@@ -169,7 +169,7 @@ Meta has open-sourced its frontier models since Llama 1 (2023). **Llama 4 Scout 
 - **Q4 2025 / Q1 2026:** Less Personalised Ads (LPA) framework rolled out in EU under the Commission's December 2025 settlement ([EC DMA announcement, 2025-12-08](https://digital-markets-act.ec.europa.eu/meta-commits-give-eu-users-choice-personalised-ads-under-dma-2025-12-08_en)).
 - **November 2025:** Court grants judgment in Meta's favor on the FTC antitrust case (FTC appeal filed Jan 20, 2026).
 
-![Meta segment split — FoA vs. RL](../../charts/meta_segment_split.png)
+![Meta segment split — FoA vs. RL](charts/meta_segment_split.png)
 *Source: [Meta 10-K FY2025, Segment Information](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/0001628280-26-003942-index.htm) and [Q4 2025 earnings release](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003832/meta-12312025xexhibit991.htm).*
 
 ### 5. CUSTOMERS & GO-TO-MARKET
@@ -296,7 +296,7 @@ quadrantChart
 - **Reality Labs unit economics.** Cumulative ~$80B losses with no clear path to break-even on the VR side; the company is leaning increasingly on glasses, which are still pre-scale.
 - **Brand / safety risk.** Ongoing youth-safety trials and the Cambridge Analytica legacy keep reputational risk elevated.
 
-![Peer P/E comparison](../../charts/meta_pe_peers.png)
+![Peer P/E comparison](charts/meta_pe_peers.png)
 *Source: [Yahoo Finance META key statistics, 2026-05-19](https://finance.yahoo.com/quote/META/); [Public.com GOOGL P/E history](https://public.com/stocks/googl/pe-ratio); [GuruFocus SNAP P/E](https://www.gurufocus.com/term/pe-ratio/SNAP); [StockAnalysis PINS](https://stockanalysis.com/stocks/pins/statistics/). SNAP TTM EPS is negative.*
 
 ### 8. MARKET OPPORTUNITY (TAM)
@@ -319,16 +319,16 @@ quadrantChart
 
 **Penetration strategy.** Meta's playbook for capturing TAM is consistent: (i) build the surface, scale users for free, monetise via auction; (ii) where possible, vertically integrate the platform (own data centres, own silicon — MTIA — own models — Llama); (iii) keep prices low for advertisers; (iv) bundle AI capability into the existing self-serve interface so adoption is automatic. The capex super-cycle is the explicit financial commitment to (ii) — Meta argues that owning AI compute end-to-end is a structural advantage on cost-per-inference and on model-iteration cadence.
 
-![Meta capex trajectory](../../charts/meta_capex.png)
+![Meta capex trajectory](charts/meta_capex.png)
 *Source: [Meta 10-K FY2025, Liquidity and Capital Resources](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/0001628280-26-003942-index.htm) and [Q4 2025 earnings release, CFO Outlook](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003832/meta-12312025xexhibit991.htm). 2026 = midpoint of $115–$135B guided range.*
 
-![Meta DAP trend](../../charts/meta_dap.png)
+![Meta DAP trend](charts/meta_dap.png)
 *Source: [Meta 10-K FY2025, Trends in Family Metrics](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/0001628280-26-003942-index.htm); prior-year DAP from FY2022 and FY2024 10-Ks.*
 
-![Reality Labs operating losses](../../charts/meta_reality_labs.png)
+![Reality Labs operating losses](charts/meta_reality_labs.png)
 *Source: [Meta segment results — 10-K filings FY2021–FY2025](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/0001628280-26-003942-index.htm). 2020 loss approximated from FY2021 10-K comparative.*
 
-![Meta revenue growth by user geography](../../charts/meta_geo_growth.png)
+![Meta revenue growth by user geography](charts/meta_geo_growth.png)
 *Source: [Meta 10-K FY2025, Trends in Revenue by User Geography](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/0001628280-26-003942-index.htm).*
 
 ### 9. RISK ASSESSMENT

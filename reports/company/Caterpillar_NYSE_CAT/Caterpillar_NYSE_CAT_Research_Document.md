@@ -33,7 +33,7 @@ Roughly 67% of FY2025 revenue is equipment sales (new machines, engines, turbine
 
 **Scale.** Caterpillar employs **approximately 118,000 full-time persons** as of December 31, 2025, of whom approximately 51,600 are in the United States and 66,400 outside it ([Caterpillar 2025 10-K, "Human Capital", 2026-02-13](https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm)). Firm order backlog at year-end 2025 was **$51.2 billion**, a 71% jump from $30.0 billion a year earlier, with the largest increase coming from Power & Energy ([Caterpillar 2025 10-K, "Backlog", 2026-02-13](https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm)). The five-year revenue and operating-margin trajectory is shown below.
 
-![CAT revenue and operating margin FY2021–FY2025](../../charts/cat_revenue_margin.png)
+![CAT revenue and operating margin FY2021–FY2025](charts/cat_revenue_margin.png)
 *Source: [Caterpillar 2025 10-K, 2026-02-13](https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm) (FY2022–FY2025); [Caterpillar 2023 10-K, 2024-02-15](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000018230&type=10-K) (FY2021).*
 
 **Valuation snapshot.** At a recent price of **$875.50** (close 2026-05-19) Caterpillar's market capitalisation is approximately **$403 billion** and enterprise value approximately $436 billion ([Yahoo Finance CAT key statistics, 2026-05-19](https://finance.yahoo.com/quote/CAT/key-statistics)). The stock trades on a **TTM P/E of 43.7×**, **TTM P/S of 5.70×**, **P/B of 21.6×** and **EV/EBITDA of 29.9×** — a meaningful premium to the cycle-average. The five-year P/E range (2021–2026) has been roughly 12× (cycle trough multiple at Q3-2022) to today's ~44×; current TTM P/E sits more than 2× the company's pre-AI ~15–18× ten-year median.
@@ -46,7 +46,7 @@ Why the premium is unusually wide for a capital-heavy industrial:
 
 Peer comparison (TTM): **Deere (DE) 31.8× P/E, 3.27× P/S, 22.2× EV/EBITDA; Cummins (CMI) 34.7× P/E, 2.72× P/S, 19.4× EV/EBITDA; PACCAR (PCAR) 23.8× P/E, 2.12× P/S; Oshkosh (OSK) 14.0× P/E, 0.75× P/S** ([Yahoo Finance, 2026-05-19](https://finance.yahoo.com/quote/DE/key-statistics)). Komatsu (TYO:6301) ADR (KMTUY) is illiquid; the home-market listing trades at a P/E of roughly 15× ([Reuters Komatsu profile, 2026-04](https://www.reuters.com/markets/companies/6301.T)). Volvo's home-market AB Volvo (STO:VOLV-B) trades on a P/E of roughly 14–16× and a P/B in the 3-4× range ([Reuters Volvo profile, 2026-04](https://www.reuters.com/markets/companies/VOLVb.ST)). CAT's premium is therefore not just over US peers — it is global. We flag valuation/multiple-compression risk explicitly in Section 9.
 
-![Peer valuation](../../charts/cat_peer_valuation.png)
+![Peer valuation](charts/cat_peer_valuation.png)
 *Source: [Yahoo Finance key statistics, 2026-05-19](https://finance.yahoo.com/quote/CAT/key-statistics). CAT P/B of 21.6× reflects heavy buybacks shrinking book equity, not a balance-sheet issue.*
 
 ---
@@ -176,9 +176,9 @@ The portfolio:
 
 The 2026 outlook is the most bullish in the company's history: "we anticipate growth in Power Generation for both reciprocating engines and turbines and turbine-related services in 2026, driven by increasing energy demand to support data center build-out related to cloud computing and generative Artificial Intelligence (AI). Additionally, we are starting to see orders for prime power trend higher as data center customers look for alternative power solutions to keep pace with their growth" ([Caterpillar 2025 10-K Outlook, 2026-02-13](https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm)).
 
-![CAT segment revenue mix](../../charts/cat_segment_mix.png)
+![CAT segment revenue mix](charts/cat_segment_mix.png)
 
-![CAT segment operating profit](../../charts/cat_segment_profit.png)
+![CAT segment operating profit](charts/cat_segment_profit.png)
 
 *Source: [Caterpillar 2025 10-K MD&A, 2026-02-13](https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm).*
 
@@ -297,7 +297,7 @@ quadrantChart
 
 **CAT's competitive vulnerabilities:** (1) **Exposure to tariffs** — the FY2025 10-K explicitly attributes the bulk of $2.148 bn in unfavorable manufacturing costs to higher tariffs ([Caterpillar 2025 10-K MD&A, 2026-02-13](https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm)), with ~$800 mn of incremental Q1-2026 tariff cost flagged on the Q1 call. (2) Chinese excavator-OEM share gains in developing markets (Sany, XCMG, LiuGong, Zoomlion). (3) Cyclical exposure to commodity prices in Resource Industries and Power & Energy's oil-and-gas sub-vertical. (4) Cummins's deeper relationships in North American hyperscaler back-up power historically (Caterpillar is catching up but Cummins entered the data-centre market earlier).
 
-![CAT firm backlog FY2023–FY2025](../../charts/cat_backlog.png)
+![CAT firm backlog FY2023–FY2025](charts/cat_backlog.png)
 *Source: [Caterpillar 2025 10-K, "Backlog", 2026-02-13](https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm); [Caterpillar 2023 10-K backlog, 2024-02-15](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000018230&type=10-K).*
 
 ---
@@ -322,7 +322,7 @@ Combined addressable spend is approximately **$320 bn in 2024 and an estimated $
 2. **Power & Energy data-centre and oil-and-gas penetration** — large reciprocating engines for hyperscaler prime/back-up power, Solar Turbines for prime power and oil-and-gas compression. The 2026 outlook expects record-comparable Solar oil-and-gas sales and accelerated reciprocating-engine growth.
 3. **Developing-market construction recovery** — China above-10-ton excavator industry growth in 2026 from low levels, growth in Latin America and Asia Pacific outside China. SEM-brand machines positioned as the price-competitive option.
 
-![CAT FCF & capital return FY2022–FY2025](../../charts/cat_fcf_capital_return.png)
+![CAT FCF & capital return FY2022–FY2025](charts/cat_fcf_capital_return.png)
 *Source: [Caterpillar 2025 10-K cash-flow statement, 2026-02-13](https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm); historical dividends/buybacks from prior 10-Ks. FY2025 dividends paid $2.749 bn; FY2025 share repurchases $5.190 bn.*
 
 ---

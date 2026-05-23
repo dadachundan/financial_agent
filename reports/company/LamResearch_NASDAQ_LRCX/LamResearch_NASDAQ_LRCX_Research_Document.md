@@ -32,7 +32,7 @@ Lam Research Corporation ("Lam," NASDAQ: LRCX) is one of the world's three large
 
 **Scale and operating economics.** FY2025 revenue grew **+23.7% Y/Y to $18.44B**, gross margin expanded **+140bps to 48.7%**, operating margin reached 32.0%, and diluted EPS jumped **+43.1% to $4.15**. Operating cash flow was **$6.17B** (33.5% of revenue) and free cash flow was **$5.41B** ([2025 10-K MD&A](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/2025_10K_10-K_0000707549_25_000075.htm)). For the most recent quarter (Q3 FY2026, ended March 29, 2026), revenue was **$5.84B**, GAAP gross margin **49.8%**, GAAP operating margin **35.0%**, and diluted EPS **$1.45** — all sequential records — with the trailing-12-month run-rate now approaching **$21B** in revenue and **$5.7B** in net income on an annualized basis ([Q3 FY2026 release](https://www.sec.gov/Archives/edgar/data/707549/000070754926000020/lrcx_exhibitx991xq3x2026.htm)).
 
-![Revenue and Gross Margin](../../charts/lrcx_revenue_gm_trend.png)
+![Revenue and Gross Margin](charts/lrcx_revenue_gm_trend.png)
 *Source: [Lam Research 2025 Form 10-K — MD&A](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/2025_10K_10-K_0000707549_25_000075.htm); FY2022 10-K for FY2021 figures.*
 
 **Valuation snapshot (as of 2026-05-20).** LRCX closed at **$289.41**, giving a market cap of **~$362B**, against 1.25B diluted shares outstanding ([Yahoo Finance / yfinance API, 2026-05-20](https://finance.yahoo.com/quote/LRCX/key-statistics/)). TTM and forward multiples (Yahoo Finance):
@@ -54,7 +54,7 @@ LRCX trades near its 52-week high after a near-quadrupling from the April-2025 l
 
 The multiple is consistent with the WFE oligopoly group but leaves modest room for disappointment if China revenue compresses further on export-controls or if NAND CapEx stalls — KLAC, ASML and LRCX trade in a similar "AI-infra picks-and-shovels" multiple band per Yahoo Finance comps ([KLAC](https://finance.yahoo.com/quote/KLAC/key-statistics/); [ASML](https://finance.yahoo.com/quote/ASML/key-statistics/)). We flag valuation multiple-compression as a risk in Section 9.
 
-![Peer Valuation Snapshot](../../charts/lrcx_peer_valuation.png)
+![Peer Valuation Snapshot](charts/lrcx_peer_valuation.png)
 *Source: Yahoo Finance via yfinance API, 2026-05-20 ([LRCX statistics page](https://finance.yahoo.com/quote/LRCX/key-statistics/)).*
 
 ---
@@ -196,7 +196,7 @@ The recurring business consists of:
 
 CSBG revenue reached **$6.94B in FY2025**, up from $5.98B in FY2024 (+16%), and continued to grow into Q3 FY2026 ($2.11B in the quarter, vs. $1.68B Y/Y, +25%) ([Q3 FY2026 release, Three-month revenue table](https://www.sec.gov/Archives/edgar/data/707549/000070754926000020/lrcx_exhibitx991xq3x2026.htm)). The installed-base economics are powerful: industry-standard CSBG margin is approximately **+200 to +400bps above corporate gross margin** at maturity (Lam does not break this out, but management has alluded to it on earnings calls), and the recurring annuity grows at roughly the rate of cumulative installed-tool count — currently growing at high-single-digit percentages annually.
 
-![Systems vs. CSBG mix](../../charts/lrcx_systems_vs_csbg.png)
+![Systems vs. CSBG mix](charts/lrcx_systems_vs_csbg.png)
 *Source: [2025 Form 10-K — Revenue disaggregation note](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/2025_10K_10-K_0000707549_25_000075.htm).*
 
 ### 4.5 Flagship vs. long-tail; recent launches
@@ -227,12 +227,12 @@ Customer concentration is material — **top-2 = 32% in FY2025; non-U.S. = 93%**
 
 **Geographic and end-market mix.** The FY2025 revenue breakdown ([2025 10-K, p.30](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/2025_10K_10-K_0000707549_25_000075.htm)) is shown below.
 
-![Geographic mix](../../charts/lrcx_geo_mix.png)
+![Geographic mix](charts/lrcx_geo_mix.png)
 *Source: [2025 Form 10-K — Results of Operations geographic table](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/2025_10K_10-K_0000707549_25_000075.htm).*
 
 By end-market segment, FY2025 was 45% Foundry / 42% Memory / 13% Logic-IDM; the nine months ended March 29, 2026 shifted further toward Foundry at **58%** as TSMC N2 ramp and Samsung GAA spending accelerated, with Memory at 36% (HBM-led DRAM strength offset by softer NAND) and Logic-IDM at just 6% as the Intel 18A capacity build slowed ([Q3 FY2026 10-Q, p.20](https://www.sec.gov/Archives/edgar/data/707549/000070754926000022/2026Q1_10-Q_0000707549_26_000022.htm)).
 
-![End-market mix](../../charts/lrcx_end_market_mix.png)
+![End-market mix](charts/lrcx_end_market_mix.png)
 *Source: [Q3 FY2026 10-Q](https://www.sec.gov/Archives/edgar/data/707549/000070754926000022/2026Q1_10-Q_0000707549_26_000022.htm) for FY26 9-month figures; [2025 10-K](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/2025_10K_10-K_0000707549_25_000075.htm) for FY23-FY25.*
 
 **Go-to-market.** Lam sells direct via field-engineering teams co-located at customer fabs ([2025 10-K, p.5](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/2025_10K_10-K_0000707549_25_000075.htm)). Each leading-edge customer has an embedded Lam team of process engineers, field service technicians and customer-program managers — often dozens of people per fab — that supports tool installation, qualification, ramp, and ongoing process tuning. This embedded-engineer model is one of the deeper competitive moats in WFE: it both creates very high switching costs (the customer's process recipes are jointly tuned with Lam) and provides Lam an information advantage on customer roadmaps that informs R&D prioritization.
@@ -368,13 +368,13 @@ We identify 11 risks across four buckets.
 
 11. **U.S. - China trade friction and tariffs.** Tariffs on equipment imported to either the U.S. or China (e.g., from Lam's Malaysia or Korea hubs into U.S. customers, or Tualatin/Sherman output into Chinese customers) and retaliatory restrictions are ongoing. The 10-K's Risk Factors highlight this explicitly ([2025 10-K, Risk Factors](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/2025_10K_10-K_0000707549_25_000075.htm)). *Mitigant:* multiple manufacturing footprints (Oregon, Texas, Malaysia, Korea); ongoing export-license process.
 
-![Capital Return](../../charts/lrcx_capital_return.png)
+![Capital Return](charts/lrcx_capital_return.png)
 *Source: [2025 10-K Consolidated Statement of Cash Flows](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/2025_10K_10-K_0000707549_25_000075.htm); [FY2022 10-K](https://www.sec.gov/Archives/edgar/data/707549/000070754922000107/) for FY2022.*
 
-![FCF and conversion](../../charts/lrcx_fcf.png)
+![FCF and conversion](charts/lrcx_fcf.png)
 *Source: [2025 10-K Consolidated Statement of Cash Flows](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/2025_10K_10-K_0000707549_25_000075.htm).*
 
-![China share of revenue](../../charts/lrcx_china_share.png)
+![China share of revenue](charts/lrcx_china_share.png)
 *Source: [2025 10-K, Risk Factor disclosures](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/2025_10K_10-K_0000707549_25_000075.htm); [Q3 FY2026 10-Q for 9M FY26](https://www.sec.gov/Archives/edgar/data/707549/000070754926000022/2026Q1_10-Q_0000707549_26_000022.htm).*
 
 ---

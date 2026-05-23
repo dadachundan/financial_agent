@@ -48,7 +48,7 @@
 
 *FY2024 出货量为反推数据。来源：[2025 年年度报告，第 12–24 页](https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-26/688347_20260326_T64M.pdf)；[2026 年第一季度港股业绩公布](https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-05-14/688347_20260514_BJ7T.pdf)。
 
-![营业收入、归母净利与毛利率走势](../../charts/huahong_revenue_margin.png)
+![营业收入、归母净利与毛利率走势](charts/huahong_revenue_margin.png)
 
 来源：[2024 年年度报告，第 9 页](https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-03-27/688347_20250327_PDF7.pdf)（2022/2023/2024 数据）；[2025 年年度报告，第 8 页](https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-26/688347_20260326_T64M.pdf)（2025 数据）；港股 USD 数据来自各季度业绩公布。
 
@@ -174,7 +174,7 @@ graph TD
 
 来源：[2025 年年度报告，第 14–17、23 页](https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-26/688347_20260326_T64M.pdf)。
 
-![五大特色工艺平台营业收入 FY2024 vs FY2025](../../charts/huahong_segment_mix.png)
+![五大特色工艺平台营业收入 FY2024 vs FY2025](charts/huahong_segment_mix.png)
 
 来源：[2025 年年度报告，第 23 页（按技术类型划分）](https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-26/688347_20260326_T64M.pdf)。
 
@@ -192,7 +192,7 @@ graph TD
 
 ### 4.6 工艺节点结构与 8/12 英寸切换
 
-![工艺节点收入结构 FY2024 vs FY2025](../../charts/huahong_node_mix.png)
+![工艺节点收入结构 FY2024 vs FY2025](charts/huahong_node_mix.png)
 
 来源：[2025 年年度报告，第 23 页](https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-26/688347_20260326_T64M.pdf)。
 
@@ -200,7 +200,7 @@ graph TD
 
 ### 4.7 季度收入与产能利用率
 
-![季度收入与产能利用率](../../charts/huahong_quarterly.png)
+![季度收入与产能利用率](charts/huahong_quarterly.png)
 
 来源：港股 2025 Q1–Q4 与 2026 Q1 业绩公布（[Q1'25](https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-05-08/688347_20250508_PFAR.pdf)；[Q2'25](https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-08-07/688347_20250807_7DC4.pdf)；[Q3'25](https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-11-06/688347_20251106_VMUI.pdf)；[Q1'26](https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-05-14/688347_20260514_BJ7T.pdf)）。
 
@@ -243,7 +243,7 @@ pie title FY2025 营收按前 5 大客户集中度 (¥ 亿元)
 
 ### 5.2 地域分布
 
-![营业收入按地区分布](../../charts/huahong_geo_mix.png)
+![营业收入按地区分布](charts/huahong_geo_mix.png)
 
 来源：[2025 年年度报告，第 23 页](https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-26/688347_20260326_T64M.pdf)。
 
@@ -308,7 +308,7 @@ FY2025 终端市场分布：**消费电子 63.81%（¥109.40 亿，+21.9%）；�
 
 ### 6.5 资本开支与现金流周期
 
-![经营现金流 / 资本开支 / 自由现金流](../../charts/huahong_cashflow.png)
+![经营现金流 / 资本开支 / 自由现金流](charts/huahong_cashflow.png)
 
 来源：[2025 年年度报告，第 21 页](https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-26/688347_20260326_T64M.pdf)（FY2024/FY2025），[2024 年年度报告，第 24 页](https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-03-27/688347_20250327_PDF7.pdf)（FY2023）。
 

@@ -32,7 +32,7 @@
 
 **地理布局**：FY2024 中国大陆 (PRC) 收入 RMB 153.7 mn（占比 59.8%）、欧洲 RMB 36.1 mn (14.0%)、亚洲非中国 RMB 27.5 mn (10.7%)、非洲 RMB 23.3 mn (9.1%)、南美 RMB 9.0 mn (3.5%)、美国 RMB 5.6 mn (2.2%)、澳洲 RMB 2.0 mn (0.8%)（[2024 年度业绩公告 — 第 11 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0327/2025032702717.pdf)）。海外合计已达 40.2%，且 2025H1 海外收入再增 +189%。这是国产手术机器人公司中海外营收占比最高、且增长最快的一家，构成最重要的"中国制造高端医疗器械出海"投资逻辑。
 
-![FY2024 收入按地域拆分](../../charts/medbot_geo_split.png)
+![FY2024 收入按地域拆分](charts/medbot_geo_split.png)
 
 *Source: [2024 年度业绩公告，第 11 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0327/2025032702717.pdf)*
 
@@ -49,7 +49,7 @@
 - **(c) 行业稀缺性 / 龙头溢价**。在 HK 上市的纯手术机器人公司极少，机构持仓集中度高（微创医疗持 52.76% + 员工平台 10.47% + 高瓴 8.05% + CPE 源峰 3.49%，[OFweek，2024-04](https://m.ofweek.com/medical/2024-04/ART-11158-8440-30631126.html)），流通盘较小放大了倍数。
 - **可比公司**：直觉外科 (ISRG) 2026-05 P/S 约 18–20× (TTM 收入 ~84 亿美元 / 市值 ~1,650 亿美元)；Stryker (SYK) P/S 约 5–6×；Medtronic (MDT) P/S 约 3×；国产可比 — 微创医疗 (00853.HK) P/S < 2×、心通医疗-B (02160.HK) P/S 约 6×。**微创机器人当前 ~83× P/S 显著高于龙头，估值已透支至 FY2027–2028 收入；任何商业化节奏放缓或产品事件都会带来显著估值压缩风险**（详见第 9 章 — 风险评估）。
 
-![FY2021–2025E 营业收入与毛利率趋势](../../charts/medbot_revenue_gm.png)
+![FY2021–2025E 营业收入与毛利率趋势](charts/medbot_revenue_gm.png)
 
 *Source: 营业收入 [2024 年度业绩公告，第 3 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0327/2025032702717.pdf) (FY2021–2024)；FY2025E 取卖方一致预期约 RMB 455 mn ([华盛通，2025](https://www.hstong.com/news/detail/26040817010320940))。*
 
@@ -257,7 +257,7 @@ pie title FY2024 收入按客户集中度 (RMB '000, 已披露)
 
 **中国市场**：Frost & Sullivan 数据，2021 年中国市场规模约 RMB 41.9 亿元；2025 年预计达 RMB 148 亿元；2030 年预计达 RMB 709 亿元，**2025–2030 CAGR 36.7%**（[智研咨询 — 2025 国产化率分析](https://www.chyxx.com/industry/1224392.html)）。中国 CAGR 显著高于全球 — 主要驱动是 (i) 人均机器人保有量极低（中国 < 0.3 台 / 百万人 vs 美国 30+ 台 / 百万人）；(ii) 政府配置许可证 (Class A) 自 2022 年放开、2023 年起准入门槛降低；(iii) 国产替代与价格下沉双重逻辑。
 
-![手术机器人市场规模预测](../../charts/medbot_tam.png)
+![手术机器人市场规模预测](charts/medbot_tam.png)
 
 *Source: 中国市场数据 [远瞻智库报告](https://www.baogaobox.com/insights/250422000009635.html)；全球数据 [智研咨询 — 趋势研判](https://www.chyxx.com/industry/1224392.html)；卖方综合预期 ([东方财富 — 国盛证券深度报告](https://pdf.dfcfw.com/pdf/H3_AP202502111642972424_1.pdf?1739292241000.pdf=))*
 
@@ -311,7 +311,7 @@ pie title FY2024 收入按客户集中度 (RMB '000, 已披露)
 
 资料来源：[新浪财经 — 2025 腔镜激战](https://finance.sina.com.cn/stock/relnews/hk/2025-05-08/doc-inevwchs8468970.shtml)；[远瞻智库报告](https://www.baogaobox.com/insights/250602000011181.html)。
 
-![国内腔镜手术机器人中标价对比](../../charts/medbot_price_compare.png)
+![国内腔镜手术机器人中标价对比](charts/medbot_price_compare.png)
 
 *Source: 综合自 [新浪财经 — 2025 腔镜手术机器人激战，2025-05-08](https://finance.sina.com.cn/stock/relnews/hk/2025-05-08/doc-inevwchs8468970.shtml)。*
 

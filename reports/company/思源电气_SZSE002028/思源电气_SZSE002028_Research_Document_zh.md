@@ -55,7 +55,7 @@
 
 数据来源：[2025 年年度报告，第 7、14-19 页](https://static.cninfo.com.cn/finalpage/2026-04-18/1226-zh.PDF)；[2024 年年度报告，第 8、14-15 页](https://static.cninfo.com.cn/finalpage/2025-04-19/1226-zh.PDF)。
 
-![营业收入与归母净利润趋势](../../charts/sieyuan_revenue_profit_trend.png)
+![营业收入与归母净利润趋势](charts/sieyuan_revenue_profit_trend.png)
 *Source: [2022 年年度报告 (含 2020-2022 数据)](https://static.cninfo.com.cn/finalpage/2023-04-15/1226-zh.PDF) + [2025 年年度报告 (2023-2025 + 2026 经营目标)](https://static.cninfo.com.cn/finalpage/2026-04-18/1226-zh.PDF)。2026E 为公司披露的经营目标，非业绩承诺。*
 
 ### 1.2 估值快照 (2026-05-20)
@@ -192,7 +192,7 @@ graph TD
 
 ### 4.2 六大业务线 2025 业绩与定位
 
-![分产品营业收入](../../charts/sieyuan_segment_mix.png)
+![分产品营业收入](charts/sieyuan_segment_mix.png)
 *Source: [2025 年年度报告，第 16 页（营业收入构成）](https://static.cninfo.com.cn/finalpage/2026-04-18/1226-zh.PDF)*
 
 | 业务线 | 2025 收入(亿元) | 占比 | YoY | 毛利率 | 毛利率 YoY |
@@ -208,7 +208,7 @@ graph TD
 
 数据来源：[2025 年年度报告，第 16-17 页](https://static.cninfo.com.cn/finalpage/2026-04-18/1226-zh.PDF)。
 
-![分产品毛利率 2024 vs 2025](../../charts/sieyuan_gm_by_segment.png)
+![分产品毛利率 2024 vs 2025](charts/sieyuan_gm_by_segment.png)
 *Source: [2025 年年度报告，第 17 页（毛利率比上年同期增减）](https://static.cninfo.com.cn/finalpage/2026-04-18/1226-zh.PDF)*
 
 **(1) 开关类业务（41.5%，第一大业务线）**——核心产品为 1000kV 及以下 GIS/GIL（气体绝缘金属封闭开关设备）、800kV 及以下 SF6 断路器/隔离开关、35kV 及以下 GIS/C-GIS 与环网柜。最大经营主体上海思源高压开关有限公司 2025 年实现 61.04 亿元收入、12.63 亿元净利润（净利率 20.7%）。开关业务的关键看点是**特高压突破**：(i) ±800kV 柔直换流变阀侧套管首次中标南网（藏粤工程），打破国外厂商垄断；(ii) 2025 年正在开发 1100kV GIS 产品（计划 2027 年上市）、基于环保气体（替代 SF6）的 145/252kV GIS，与全球电力设备碳中和趋势对齐。([2025 年年度报告，第 14、19、27 页](https://static.cninfo.com.cn/finalpage/2026-04-18/1226-zh.PDF))
@@ -271,7 +271,7 @@ pie title 2025 年前 5 大客户占营收比例 (合计 9.48%)
 
 ### 5.2 销售区域分布
 
-![分区域营业收入](../../charts/sieyuan_geo_mix.png)
+![分区域营业收入](charts/sieyuan_geo_mix.png)
 *Source: [2025 年年度报告，第 16 页](https://static.cninfo.com.cn/finalpage/2026-04-18/1226-zh.PDF)*
 
 | 区域 | 2025 收入(亿元) | 占比 | YoY | 毛利率 |
@@ -312,7 +312,7 @@ pie title 2025 年前 5 大客户占营收比例 (合计 9.48%)
 
 ### 5.5 季节性与订单可见度
 
-![季度业绩](../../charts/sieyuan_quarterly.png)
+![季度业绩](charts/sieyuan_quarterly.png)
 *Source: [2025 年年度报告，第 8 页（分季度财务指标）](https://static.cninfo.com.cn/finalpage/2026-04-18/1226-zh.PDF) + [2026 年一季度报告，第 1 页](https://static.cninfo.com.cn/finalpage/2026-04-24/1226-zh.PDF)*
 
 公司业务**呈现明显的"前低后高"季节性**：Q1 通常仅占全年 15-17%（2025Q1: 32.27 亿 / 215.39 亿 = 15.0%；2024Q1 占比约 15.5%），Q4 通常占全年 35% 以上（2025Q4: 77.12 亿，占 35.8%）。这是中国电网设备行业的普遍特征——电网公司一般在 Q4 集中交付以完成全年投资计划。
@@ -321,7 +321,7 @@ pie title 2025 年前 5 大客户占营收比例 (合计 9.48%)
 
 **订单可见度**：2025 年末合同负债 **29.77 亿元**（同比 +25.59%），存货 **40.79 亿元**（+17.31%）——两者合计 70.56 亿元，相当于全年营收的 32.8%；新增订单 288.91 亿元，对应 2026 年 270 亿元收入目标的 **107%**——这一"在手订单 / 年度目标"覆盖率水平相当扎实。([2025 年年度报告，第 22 页](https://static.cninfo.com.cn/finalpage/2026-04-18/1226-zh.PDF))
 
-![新增订单与收入](../../charts/sieyuan_orders_revenue.png)
+![新增订单与收入](charts/sieyuan_orders_revenue.png)
 *Source: 2024 年新增订单 214.6 亿元为以 2025 年新增订单 288.91 亿元除以同比增速 (1+34.64%) 反推；其余数据出自 [2025 年年度报告，第 14、28 页](https://static.cninfo.com.cn/finalpage/2026-04-18/1226-zh.PDF)*
 
 ---

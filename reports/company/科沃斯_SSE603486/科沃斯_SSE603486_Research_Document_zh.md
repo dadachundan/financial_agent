@@ -39,14 +39,14 @@
 
 **规模 (scale)**：2025 年公司营业收入 190.40 亿元（同比 +15.10%）、归母净利润 17.58 亿元（同比 +118.13%）、扣非归母净利润 16.20 亿元（同比 +126.14%），ROE 22.19% (加权)，总资产 174.32 亿元，归属于上市公司股东的净资产 90.43 亿元，资产负债率 48.12%，经营性现金流净额 33.87 亿元（同比 +297.39%）([2025 年年度报告, 第 7、19 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=603486&announcementId=1226543678))。员工方面，截至 2025 年末公司及主要控股子公司在职员工 5,000+ 人，其中研发人员占非生产性员工 30%+，并以博士、硕士为核心团队。
 
-![营收、毛利率、净利润趋势](../../charts/ecovacs_revenue_gm_trend.png)
+![营收、毛利率、净利润趋势](charts/ecovacs_revenue_gm_trend.png)
 *Source: 整理自 [科沃斯 2021–2025 年度报告](https://www.cninfo.com.cn/new/disclosure/stock?stockCode=603486)，2023 年毛利率已按《企业会计准则解释第 18 号》将质量保证费由销售费用重分类至营业成本追溯调整。*
 
 **估值快照 (valuation snapshot, 2026-05-21 收盘)：** 现价 ¥68.74，总市值 ¥398.0 亿，流通市值 ¥394.5 亿；52 周区间 ¥61.81–¥75.55；**TTM P/E 24.58×**（基于 2025A 归母 17.58 亿）、**TTM P/S 2.09×**（基于 2025A 营收 190.4 亿）、**P/B 4.29×**（基于 2025 年末归母净资产 90.4 亿）。数据来源：[东方财富 沪 603486 行情接口 (2026-05-21)](https://quote.eastmoney.com/sh603486.html)。
 
 横向对比可比公司 TTM P/E：石头科技 (Roborock, SSE:688169) 26.09×、极米科技 (XGIMI, SSE:688696) 29.02×、美的集团 (Midea, SZSE:000333) 12.26×、莱克电气 (SSE:603355) 249.49×（受 2024 年大额减值拖累）；可比公司中位数（剔除莱克）约 26×。**判断：科沃斯 24.6× TTM P/E 较扫地机器人 / 智能小家电板块龙头中位数小幅折价**，主要因 2025 年盈利暴增 (净利润 +118%) 后市场对其可持续性持观望态度——而非估值贵或便宜。若 2026 年指引兑现（净利润 25–35% 增长，对应 22–24 亿元归母），现价隐含远期 P/E 17–18×，相对扫地机器人成长属性合理。P/S 2.09× 处于过去三年区间下沿，反映市场仍未给予"AI 家用机器人平台"溢价。([东方财富](https://quote.eastmoney.com/sh603486.html), [科沃斯 2025 年年度报告, 第 7 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=603486&announcementId=1226543678))
 
-![同业 TTM P/E 比较](../../charts/ecovacs_peer_valuation.png)
+![同业 TTM P/E 比较](charts/ecovacs_peer_valuation.png)
 *Source: [东方财富 沪市 / 深市股票行情 API (2026-05-21)](https://push2delay.eastmoney.com/api/qt/stock/get?secid=1.603486).*
 
 ---
@@ -225,7 +225,7 @@ graph TD
 - 2026-01 X11 OmniCyclone 摘 CES 2026 创新奖
 - 截至 2025 年末公司累计授权专利 2,903 项（含发明专利 844 项，其中海外发明专利 161 项），在申专利 1,948 项（含发明专利 1,341 项）；机器人 / 具身智能领域已提交专利 162 项 ([2025 年年度报告, 第 16 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=603486&announcementId=1226543678))。
 
-![分品牌收入结构](../../charts/ecovacs_segment_mix.png)
+![分品牌收入结构](charts/ecovacs_segment_mix.png)
 *Source: [科沃斯 2023–2025 年度报告](https://www.cninfo.com.cn/new/disclosure/stock?stockCode=603486).*
 
 ---
@@ -303,7 +303,7 @@ pie title 2025 年销售收入构成（按销售模式 + 地理）
 **全球家用割草机器人市场：**
 - 2024 年约 USD 12–15 亿，至 2030 年预计 USD 30–40 亿 (Grand View Research / Fortune Business Insights 公开估算)；增长动力来自"无埋线 + RTK / 视觉导航"技术成熟。
 
-![全球扫地机器人 TAM](../../charts/ecovacs_robovac_tam.png)
+![全球扫地机器人 TAM](charts/ecovacs_robovac_tam.png)
 *Source: [IDC 2025 数据 (引于 科沃斯 2025 年度报告)](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=603486&announcementId=1226543678)，2026–2027 年估算综合 IDC、Grand View Research、Fortune Business Insights 公开口径。*
 
 ### 6.3 增长驱动因素 (Growth drivers)

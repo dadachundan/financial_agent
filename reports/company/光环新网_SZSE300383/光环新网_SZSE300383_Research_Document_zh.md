@@ -29,7 +29,7 @@
 
 公司的盈利模式可拆解为三层结构：底层是"重资产、长周期、稳现金流"的 IDC 业务，按单机柜 4.4kW 等效口径，截至 2025 年末已投产机柜 8.6 万个，全国规划机柜规模超过 23 万个；中层是"流量过手型"的 AWS 中国北京区域转售业务，按客户消费 AWS 服务的金额分润；上层是无双科技的"SEM / 信息流广告代理"业务，按广告主投放金额抽取佣金。2025 年三个板块对营业收入的贡献分别为：IDC 及其增值服务 22.31 亿元 (占比 31.09%)、云计算及相关服务 48.36 亿元 (占比 67.38%)、互联网宽带接入服务 0.45 亿元 (0.62%)、其他 0.65 亿元 (0.91%) ([2025 年年度报告，"四、主营业务分析"，第 29 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=300383&announcementId=1226287000&orgId=9900015787&announcementTime=2026-04-28))。从产品结构看，公司虽然云计算收入占比最高，但 IDC 板块的毛利率显著更高 (2025 年 IDC 毛利率 29.15%、云计算毛利率仅 6.76%)，因此 IDC 才是真正的利润中心，云计算更接近"管道型"收入。
 
-![光环新网 2022-2025 营业收入与归母净利润](../../charts/sinnet_rev_ni_trend.png)
+![光环新网 2022-2025 营业收入与归母净利润](charts/sinnet_rev_ni_trend.png)
 
 *来源：[2024 年年度报告，第 12 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=300383&announcementId=1224125345&orgId=9900015787&announcementTime=2025-04-18) + [2025 年年度报告，第 13 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=300383&announcementId=1226287000&orgId=9900015787&announcementTime=2026-04-28)。2025 年净利润为商誉减值后口径，剔除减值后归母净利润 1.04 亿元。*
 
@@ -37,7 +37,7 @@
 
 **地理布局**：北京贡献 56.44 亿元 (78.63%)，是公司核心收入来源 (包括房山数据中心、中金云网、科信盛彩、酒仙桥、BDA 五座一线核心机房 + AWS 北京区域运营基地)；河北 (主要为燕郊一二三四期) 7.20 亿元 (10.03%)；上海 (嘉定一二期) 3.66 亿元 (5.10%)；香港 2.70 亿元 (3.76%)；天津 (宝坻一二三期) 1.30 亿元 (1.82%)；新疆 (乌鲁木齐) 0.39 亿元 (0.55%) ([2025 年年度报告，第 29 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=300383&announcementId=1226287000&orgId=9900015787&announcementTime=2026-04-28))。值得注意的是天津地区收入 YoY +358.18% (从 0.28 亿元跃至 1.30 亿元)，香港 YoY +77.66%，反映 2025 年宝坻一二期和新签互联网头部客户的爬坡。
 
-![2025 年营业收入按产品拆分](../../charts/sinnet_revenue_mix_2025.png)
+![2025 年营业收入按产品拆分](charts/sinnet_revenue_mix_2025.png)
 
 *来源：[2025 年年度报告，第 29 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=300383&announcementId=1226287000&orgId=9900015787&announcementTime=2026-04-28)。*
 
@@ -177,7 +177,7 @@ graph TD
 
 **(c) 无双科技 (SEM / 信息流广告 SaaS)**：公司控股子公司，业务定位为搜索引擎营销 (SEM) 与信息流 / 短视频 / 移动分发的全案代理，是百度的核心代理商之一。2025 年因宏观经济、互联网广告趋于饱和等因素，收入较上年同期下降 8.03%，毛利率 1.99% (同比下降 1.13%)，亏损加大 ([2025 年年度报告，"无双科技业绩承压加剧 客户结构调整喜忧参半"，第 20 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=300383&announcementId=1226287000&orgId=9900015787&announcementTime=2026-04-28))。**竞争优势评估：❌ 否**——该业务护城河微弱，受平台政策与客户预算波动直接影响，且与公司主业 IDC / 云计算协同有限。
 
-![分业务毛利率：2025 vs 2024](../../charts/sinnet_segment_gm.png)
+![分业务毛利率：2025 vs 2024](charts/sinnet_segment_gm.png)
 
 *来源：[2025 年年度报告，"一、报告期内公司从事的主要业务"，第 16 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=300383&announcementId=1226287000&orgId=9900015787&announcementTime=2026-04-28)。*
 
@@ -239,7 +239,7 @@ pie title 2025 年前五大客户销售集中度
 - **2024 年 2 月**：长沙项目入选国家级重要公共算力基础设施和科学实验平台"国家超级计算长沙中心" 2023-2024 年生态合作伙伴名单。
 - **2024 年 6 月**：公司以 9,760.32 万元购买北京海兰信数据科技股份有限公司子公司海鹦 (海南) 技术有限公司 90% 股权，开发跨境产业云基地。
 
-![光环新网 2025 年分地区营业收入](../../charts/sinnet_revenue_by_region.png)
+![光环新网 2025 年分地区营业收入](charts/sinnet_revenue_by_region.png)
 
 *来源：[2025 年年度报告，"营业收入整体情况 - 分地区"，第 29 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=300383&announcementId=1226287000&orgId=9900015787&announcementTime=2026-04-28)。*
 
@@ -269,7 +269,7 @@ pie title 2025 年前五大客户销售集中度
 
 **第四，技术路线向液冷 / 高密度 / 智能化迭代。** GPU 芯片功耗持续攀升 (H100 单卡 700W、H200 1000W、B200 1200W)，带动单机柜功率从 4-6kW 升至 20-50kW、未来更高，传统风冷已经无法满足散热需求，液冷技术 (浸没式 / 冷板式 / 喷淋式) 成为新主流；同时 IDC 行业从"资源密集型"向"智能密集型"跃迁，模块化建设 + 智能化运维成为标配。
 
-![光环新网机柜资源：投产规模 vs 全国规划储备](../../charts/sinnet_rack_capacity.png)
+![光环新网机柜资源：投产规模 vs 全国规划储备](charts/sinnet_rack_capacity.png)
 
 *来源：[2025 年年度报告，"第三节"，第 16 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=300383&announcementId=1226287000&orgId=9900015787&announcementTime=2026-04-28)；[2026 年第一季度报告，第 5 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=300383&announcementId=1226287012&orgId=9900015787&announcementTime=2026-04-28)。*
 
@@ -337,7 +337,7 @@ quadrantChart
 - **资产负债表压力**：2025 年末长期借款已达 35.83 亿元 (YoY +69%)，授信总额度 133.04 亿元——重资产 + 长周期投入的资金压力显著。
 - **商誉减值风险已部分释放但仍存余额**：中金云网商誉余额 2.20 亿元 (减值后)，未来若中金云网业绩继续承压，仍有再计提空间。
 
-![资产负债关键科目：2025 vs 2024](../../charts/sinnet_balance_sheet.png)
+![资产负债关键科目：2025 vs 2024](charts/sinnet_balance_sheet.png)
 
 *来源：[2025 年年度报告，"六、资产及负债状况分析"，第 47-48 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=300383&announcementId=1226287000&orgId=9900015787&announcementTime=2026-04-28)。*
 

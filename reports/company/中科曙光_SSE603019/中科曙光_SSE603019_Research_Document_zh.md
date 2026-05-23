@@ -29,7 +29,7 @@
 
 **规模与员工。** 2025 年公司实现营业收入 149.64 亿元 (YoY +13.81%)、归母净利润 21.76 亿元 (YoY +13.87%)、扣非归母净利润 18.38 亿元 (YoY +33.97%)，连续四年盈利同比增长；研发投入 16.71 亿元 (YoY +29.33%)，研发强度 10.95%，研发人员 3,199 人，占员工总数 53.1%；员工总数 6,025 人，其中博士 63 人、硕士 1,602 人 ([年报, 第 7、20–21 页](https://static.cninfo.com.cn/finalpage/2026-04-14/1224256196.PDF))。截至 2025 年末，总资产 409.54 亿元、归母净资产 222.33 亿元 ([年报, 第 7 页](https://static.cninfo.com.cn/finalpage/2026-04-14/1224256196.PDF))。注册地为天津，办公地为北京海淀区东北旺西路 8 号院 36 号楼。
 
-![中科曙光 2021–2025 营业收入与毛利率](../../charts/sugon_revenue_gm.png)
+![中科曙光 2021–2025 营业收入与毛利率](charts/sugon_revenue_gm.png)
 
 来源：[中科曙光 2022/2023/2024/2025 年度报告 (cninfo)](https://www.cninfo.com.cn/new/disclosure/stock?stockCode=603019)、按 cninfo 披露的"主营业务分产品"营业收入与营业成本计算。2024 年营收同比 -8.4%，主因下游互联网与运营商客户算力订单节奏放缓；2025 年回升至 149.64 亿元创历史新高 ([2024 年报, 第 7 页](https://static.cninfo.com.cn/finalpage/2025-03-04/1223111892.PDF))。
 
@@ -177,7 +177,7 @@ graph TD
 
 来源：[Sugon 官网产品总览](https://www.sugon.com/product/products_list)、[中科曙光 2025 年报, 第 11–14 页](https://static.cninfo.com.cn/finalpage/2026-04-14/1224256196.PDF)。
 
-![FY2025 主营收入分产品 / 分行业](../../charts/sugon_segment_mix.png)
+![FY2025 主营收入分产品 / 分行业](charts/sugon_segment_mix.png)
 
 来源：[中科曙光 2025 年年度报告, 第 17–18 页](https://static.cninfo.com.cn/finalpage/2026-04-14/1224256196.PDF)。
 
@@ -336,7 +336,7 @@ pie title 2024 年中国算力核心产业 5 万亿元构成 (粗略估算)
 3. **信息技术应用创新 (信创) 深化落地**。政务、金融、能源、科研、通信等关键行业对算力基础设施安全可控的要求持续提升，国产 CPU/加速卡/操作系统/数据库/中间件全栈替代加速；曙光是少数能提供全栈国产化解决方案的厂商。
 4. **绿色低碳转型**。"双碳"战略驱动数据中心 PUE 管控趋严，**液冷散热、余热回收、智能节能、绿电直供** 等技术快速普及，曙光数创的 PUE 1.05–1.15 级液冷方案直接对接这一刚需 ([2025 年报, 第 16、29 页](https://static.cninfo.com.cn/finalpage/2026-04-14/1224256196.PDF))。
 
-![中科曙光研发投入与强度 (2021–2025)](../../charts/sugon_rd_intensity.png)
+![中科曙光研发投入与强度 (2021–2025)](charts/sugon_rd_intensity.png)
 
 来源：[中科曙光 2021–2025 年度报告 (cninfo)](https://www.cninfo.com.cn/new/disclosure/stock?stockCode=603019)。研发投入连续 5 年增长，强度从 8.3% 提升至 11.0%，符合"以研发驱动的国产算力替代"产业逻辑。
 
@@ -381,7 +381,7 @@ pie title 2024 年中国算力核心产业 5 万亿元构成 (粗略估算)
 
 来源：[2025 年报, 第 28–29 页](https://static.cninfo.com.cn/finalpage/2026-04-14/1224256196.PDF) 及各上市公司公开披露。
 
-![国产算力同业 TTM P/E (2026-05 时点近似)](../../charts/sugon_valuation.png)
+![国产算力同业 TTM P/E (2026-05 时点近似)](charts/sugon_valuation.png)
 
 来源：[东方财富 603019 行情](https://quote.eastmoney.com/sh603019.html)、[东方财富 688041](https://quote.eastmoney.com/sh688041.html)、[东方财富 000977](https://quote.eastmoney.com/sz000977.html) 等。P/E 为 2026-05-20 时点近似 TTM 值，本报告未对外部财经数据进行精确逐位校验，比较仅用于显示曙光在国产算力板块中的相对位置。
 

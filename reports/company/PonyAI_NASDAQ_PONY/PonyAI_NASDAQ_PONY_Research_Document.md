@@ -33,7 +33,7 @@ Pony AI Inc. ("Pony.ai", NASDAQ: PONY, HKEX: 2026) is a Cayman-incorporated, Gua
 
 **Scale indicators.** Pony.ai's robotaxi fleet exceeded 1,400 vehicles by end-March 2026 (1,446 produced as of 25-Mar-2026), accumulating "over 65 million" autonomous kilometres driven ([Q4/FY2025 earnings release, 2026-03-26](https://www.sec.gov/Archives/edgar/data/1969302/000110465926034888/tm269906d1_ex99-1.htm)). Cumulative corporate customers across robotaxi engineering services grew from 52 in 2023 to 213 in 2025 ([Form 20-F FY2025](https://www.sec.gov/Archives/edgar/data/1969302/000110465926046406/pony-20251231x20f.htm)). Robotruck fleet stood at 210 vehicles (Sinotrans-partnered) by 31-Mar-2026, mixing Level 2++ intelligent trucks and Level 4 autonomous trucks. Total users on the PonyPilot+ app approached one million by late March 2026, nearly tripling YoY.
 
-![Pony.ai revenue and gross margin trend, FY2023–FY2025](../../charts/pony_revenue_gm_trend.png)
+![Pony.ai revenue and gross margin trend, FY2023–FY2025](charts/pony_revenue_gm_trend.png)
 
 Source: [Pony AI Form 20-F FY2025, Item 5.A "Operating Results"](https://www.sec.gov/Archives/edgar/data/1969302/000110465926046406/pony-20251231x20f.htm).
 
@@ -169,7 +169,7 @@ Pony.ai operates at the intersection of three industries: (i) autonomous-driving
 
 **Market size.** Estimating the L4 robotaxi industry depends heavily on assumed deployment timeline. **McKinsey ("Autonomous driving's future: Convenient and connected", January 2023)** projects passenger autonomous mobility revenue of US$300–400 bn by 2035, of which the robotaxi sub-segment could be the dominant slice in cities where TNCs and L4 fleets converge ([McKinsey, Jan 2023](https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/autonomous-drivings-future-convenient-and-connected)). **Goldman Sachs Research ("The robotaxi business could be worth US$7 trillion by 2050", May 2024)** is more bullish: it forecasts a global robotaxi market of US$25 bn in 2030, US$300 bn in 2035 and "potentially US$7 tn by 2050" — wide error bars, but a signal that mainstream sell-side has aligned around a multi-hundred-billion-dollar 2035 number ([Goldman Sachs Research, 2024](https://www.goldmansachs.com/insights/articles/the-robotaxi-business-could-be-worth-7-trillion-by-2050)). **Frost & Sullivan** — cited in Pony.ai's 20-F as the company's principal third-party industry source — estimates that L4 ride-hailing revenue in China alone could reach RMB 2.4 trn (US$330 bn) by 2030 in a high-penetration scenario ([Form 20-F FY2025, Item 4.B "Industry Overview"](https://www.sec.gov/Archives/edgar/data/1969302/000110465926046406/pony-20251231x20f.htm)). The **autonomous trucking** market is roughly 60% the size of robotaxi in 2030 forecasts, growing from a much smaller base of pilot deployments.
 
-![Global robotaxi revenue analyst forecast range, 2025-2040](../../charts/pony_tam.png)
+![Global robotaxi revenue analyst forecast range, 2025-2040](charts/pony_tam.png)
 
 Source: range derived from [McKinsey, Jan 2023](https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/autonomous-drivings-future-convenient-and-connected) and [Goldman Sachs Research, 2024](https://www.goldmansachs.com/insights/articles/the-robotaxi-business-could-be-worth-7-trillion-by-2050).
 
@@ -236,7 +236,7 @@ Note: positioning is an analyst synthesis combining (a) third-party miles-per-di
 
 **Vulnerabilities.** (i) **Customer concentration** — top-3 customers = 59.3% of FY2025 revenue is the highest of the listed L4 names. (ii) **Geographic concentration** — 97.3% of revenue from Chinese mainland, exposing the equity to single-jurisdiction regulatory shocks. (iii) **Capital intensity** — Pony.ai burned US$229m non-GAAP operating loss in 2025 and is targeting 3,000-vehicle fleet by end-2026, suggesting another US$200m+ of operating cash outflow before robotaxi can self-fund. (iv) **Adjacency competition** — Horizon Robotics, Mobileye and BYD's DiPilot are putting strong ADAS / L2++ products on the road, which over time could compress the L4 premium. (v) **Founder voting concentration** with >50% in CEO James Peng leaves equity holders with minimal change-of-control optionality.
 
-![PONY vs L4 / AV-adjacent peer TTM P/S, 2026-05-20](../../charts/pony_peer_ps.png)
+![PONY vs L4 / AV-adjacent peer TTM P/S, 2026-05-20](charts/pony_peer_ps.png)
 
 Source: Yahoo Finance / yfinance snapshot, 2026-05-20 (peer set: WRD, MBLY, TSLA, GOOGL).
 
@@ -252,7 +252,7 @@ Source: Yahoo Finance / yfinance snapshot, 2026-05-20 (peer set: WRD, MBLY, TSLA
 
 **Penetration strategy.** The strategy disclosed in the FY2025 letter to shareholders has four legs: (1) **city-level UE proof-points** — extend the Guangzhou (Nov-2025) and Shenzhen (Feb-2026) UE-breakeven moments to Beijing and Shanghai in 2026; (2) **Joint Deployment** — leverage Toyota, GTMC, OnTime and ATBB partnerships to expand fleet without one-for-one balance-sheet capex; (3) **international expansion** — Doha, Singapore, Zagreb, Seoul, Luxembourg, Dubai pilots are the first phase of a "nearly half of 20 cities are overseas by end-2026" plan; (4) **adjacent monetisation** — ADCs and Virtual Driver licensing into humanoid robotics, robosweepers, low-speed delivery (already growing 5x+ in 2025). Goldman Sachs Research estimates "Chinese robotaxi operators can achieve operating breakeven once fleet exceeds 5,000 vehicles in a single market with 70%+ utilization" ([Goldman Sachs Research, 2024](https://www.goldmansachs.com/insights/articles/the-robotaxi-business-could-be-worth-7-trillion-by-2050)) — Pony.ai's stated 3,000-vehicle 2026 target is therefore the next-but-one milestone toward a sustainable EBITDA-positive year (likely 2027–2028 by these metrics).
 
-![Pony.ai R&D, SG&A, operating loss FY2023–FY2025](../../charts/pony_rd_opex.png)
+![Pony.ai R&D, SG&A, operating loss FY2023–FY2025](charts/pony_rd_opex.png)
 Source: [Pony AI Form 20-F FY2025, Item 5.A](https://www.sec.gov/Archives/edgar/data/1969302/000110465926046406/pony-20251231x20f.htm).
 
 The path-to-breakeven analysis suggests **EBITDA breakeven** is feasible in 2027–2028 if (a) robotaxi revenue compounds at 100%+ through 2026 and 70%+ through 2027, (b) gross margins recover toward the 25–30% level seen in 2023 as the higher-margin robotaxi services mix gradually displaces the lower-margin robotruck mix, and (c) R&D growth slows from its current 50%+ run rate to a more measured 10–15% as Gen-7 / Gen-4 platforms mature. The risk is that none of those conditions hold simultaneously — see Section 9 for the formal risk catalog.

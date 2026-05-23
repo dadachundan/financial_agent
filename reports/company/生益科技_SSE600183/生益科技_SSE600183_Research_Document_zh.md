@@ -36,7 +36,7 @@
 
 **经营布局。** 公司总部位于广东东莞松山湖（注册地与办公地：东莞市松山湖园区工业西路 5 号），生产基地分布在松山湖 / 东莞本部、苏州、陕西咸阳、江西吉安、泰国（生益泰国，规划在建），并通过生益电子下属东莞 / 吉安基地生产 PCB。报告期末员工 14,531 人。([生益科技 2025 年年度报告, 第 8, 32 页](https://static.cninfo.com.cn/finalpage/2026-04-25/1225195409.PDF))
 
-![营收与盈利能力趋势](../../charts/shengyi_revenue_gm.png)
+![营收与盈利能力趋势](charts/shengyi_revenue_gm.png)
 
 资料来源：[生益科技 2025 年年度报告 (2026-04-24)](https://static.cninfo.com.cn/finalpage/2026-04-25/1225195409.PDF)、[2024 年年度报告 (2025-03-28)](https://static.cninfo.com.cn/finalpage/2025-03-29/1222952338.PDF)、[2023 年年度报告 (2024-03-28)](https://static.cninfo.com.cn/finalpage/2024-03-29/1219448691.PDF)、[2022 年年度报告 (2023-03-28)](https://static.cninfo.com.cn/finalpage/2023-03-29/1216246172.PDF)。
 
@@ -46,7 +46,7 @@
 - 同业 TTM P/E（约 2026-05）：生益电子 600183 子公司 688183 ~68×、南亚新材 688519 ~42×、华正新材 603186 ~38×、建滔积层板 0148.HK ~12×、南亚塑胶 1303.TW ~22×、ITEQ 6213.TW ~28×，**中位数 ~38×；生益科技较 A 股可比公司溢价约 70%、较港台龙头溢价 2–5 倍。**（同业估值数据来源：[ITEQ 6213.TW Valuation Measures, Yahoo Finance](https://finance.yahoo.com/quote/6213.TW/key-statistics/)、[Elite Material 2383.TW Valuation Measures, Yahoo Finance](https://finance.yahoo.com/quote/2383.TW/key-statistics/)、[Nan Ya Plastics 1303.TW Valuation Measures, Yahoo Finance](https://finance.yahoo.com/quote/1303.TW/key-statistics/)、[Kingboard Laminates 1888.HK 估值, MarketScreener](https://www.marketscreener.com/quote/stock/KINGBOARD-LAMINATES-HOLDI-6170930/)）
 - **70× P/E 解读：** 这是 **高成长 + 高端化定价的双重溢价**。驱动是 (a) AI 服务器 / GPU 板用高速 CCL（Mid/Ultra Low Loss、M6/M7/M8 级别）需求结构性放量，与北美算力 capex 周期同步（[Hyperscaler Capex 2026, NextWavesInsight, 2026](https://nextwavesinsight.com/hyperscaler-ai-capex-microsoft-google-amazon-meta-2026/)）；(b) 公司在 high-end CCL 国产替代中是首选供应商（[生益科技 2025 年年度报告, 第 9–11 页](https://static.cninfo.com.cn/finalpage/2026-04-25/1225195409.PDF)）；(c) 2025–2026 净利润正经历"二次跃升"（2026Q1 单季利润已超 11 亿元，年化 ~46 亿元），按 2026 年化盈利重估 P/E 约 50×（[生益科技 2026 年第一季度报告, 2026-04-28](https://static.cninfo.com.cn/finalpage/2026-04-29/1225230175.PDF)）。但若 AI 周期降温或铜 / 玻纤布原材料持续上行挤压毛利，估值压缩弹性显著，应纳入第 9 节风险。
 
-![同业 P/E 对比](../../charts/shengyi_pe_peers.png)
+![同业 P/E 对比](charts/shengyi_pe_peers.png)
 
 资料来源：[东方财富个股 F10, 2026-05](https://quote.eastmoney.com/sh600183.html)；同业估值为近期市场行情整理，存在波动。
 
@@ -197,7 +197,7 @@ pie title 2025 营业收入按客户集中度分布 (合计 RMB 278.67 亿)
 
 **市场规模。** 据 Prismark 预测，**全球 PCB 行业 2025 年产值 USD 851.52 亿元，同比 +15.8%**；CCL 产业产值业内估算约 USD 170–180 亿元（占 PCB 的 ~20%）。2025 年全球电子行业总产值预计 USD 2.809 万亿元，同比 +10%，**其中 AI 服务器 / 数据中心以 41.9% 的增速遥遥领先，PC +8.5%、手机 +7.5%、电视 -3.1%**。([生益科技 2025 年年度报告, 第 10 页](https://static.cninfo.com.cn/finalpage/2026-04-25/1225195409.PDF); [Prismark PCB Report: 2Q 2025 Highlights](https://www.linkedin.com/posts/prismark-partners_prismarkpcbreport-pcbsuppliers-industrysales-activity-7374489608757125120-FWbJ); [Prismark CCL Market Update](https://www.prismark.com/post/ccl-market-update))
 
-![全球 PCB / CCL 市场规模](../../charts/shengyi_industry_size.png)
+![全球 PCB / CCL 市场规模](charts/shengyi_industry_size.png)
 
 资料来源：[Prismark Partners 行业季度评论](https://www.prismark.com/)（数据为业内整理）；[生益科技 2025 年年度报告, 第 10 页](https://static.cninfo.com.cn/finalpage/2026-04-25/1225195409.PDF)。
 
@@ -218,7 +218,7 @@ pie title 2025 营业收入按客户集中度分布 (合计 RMB 278.67 亿)
 
 **市场份额格局。** 根据 Prismark 数据，公司 2024 年全球刚性覆铜板销售额市占率 13.7%，连续 12 年保持全球第二，仅次于建滔积层板（0148.HK，约 19–20%）。全球前 10 大 CCL 厂商：建滔积层板（HK）、**生益科技（CN）**、南亚塑胶（TW，1303.TW）、台光电子（TW，2383.TW）、Panasonic（JP）、ITEQ 联茂电子（TW，6213.TW）、Doosan Corp（KR）、Isola（US）、华正新材（CN，603186）、南亚新材（CN，688519）。([生益科技 2025 年年度报告, 第 10 页](https://static.cninfo.com.cn/finalpage/2026-04-25/1225195409.PDF))
 
-![全球 CCL 市场份额](../../charts/shengyi_market_share.png)
+![全球 CCL 市场份额](charts/shengyi_market_share.png)
 
 资料来源：[Prismark 2024 数据](https://www.prismark.com/)；[生益科技 2025 年年度报告, 第 10 页](https://static.cninfo.com.cn/finalpage/2026-04-25/1225195409.PDF)（生益市占率 13.7% 系公司披露，其余份额为业内估算）。
 
@@ -283,7 +283,7 @@ quadrantChart
 - **SAM (公司可服务市场)：** 公司产品覆盖刚性 CCL 全谱（占 CCL 总量约 85%，剩余 15% 为 IC substrate 用 ABF / BT 高端封装基板，公司部分参与但份额低）+ 软板 CCL（小规模）。SAM 约 USD 150 亿元（2025），其中高速 CCL SAM ~USD 45 亿元。
 - **SOM (公司当前服务市场)：** 公司 2025 年 CCL+粘结片销售额 RMB 177.74 亿元（约 USD 24–25 亿元，占全球 CCL 产值 ~14%）+ 生益电子 PCB 业务 RMB 91 亿元（约 USD 12.5 亿元）。
 
-![PCB / CCL 市场规模与预测](../../charts/shengyi_industry_size.png)
+![PCB / CCL 市场规模与预测](charts/shengyi_industry_size.png)
 
 资料来源：[Prismark Partners 季度评论](https://www.prismark.com/)；[生益科技 2025 年年度报告, 第 10 页](https://static.cninfo.com.cn/finalpage/2026-04-25/1225195409.PDF)。
 

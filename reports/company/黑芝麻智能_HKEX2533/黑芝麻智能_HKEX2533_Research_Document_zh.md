@@ -28,13 +28,13 @@
 
 **业务模式 (How they make money)。** 黑芝麻智能将自研车规级 SoC 与配套的算法、工具链、参考方案打包销售给整车厂 (OEM) 与一级零部件供应商 (Tier-1)。收入分为两大类：(i) **辅助驾驶产品及解决方案** (Autonomous Driving Products & Solutions，下称 ADP&S)，包含 "华山 (Huashan)" 与 "武当 (Wudang)" 两大芯片系列、域控制器参考板卡、行泊一体软件栈，以及面向车路云一体化、商用车的整体方案；(ii) **智能影像解决方案** (Intelligent Imaging Solutions)，主要把公司自研的 ISP 核与图像 AI 算法以 IP 授权与软件许可的方式售予手机、ODM 及消费电子客户。两大业务在 FY2024 分别占收入的 92.4% 与 7.6% ([2024 年年度报告 第 13 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0425/2025042500234.htm))。商业模式上，公司奉行 "软硬解耦 + 开放生态"——既可整套售卖芯片加自研行泊一体软件，也允许 OEM 或 Tier-1 用自研或第三方算法跑在公司硅片之上。
 
-![bsi_segment_mix](../../charts/bsi_segment_mix.png)
+![bsi_segment_mix](charts/bsi_segment_mix.png)
 
 Source: 公司 2024 年报与 2025 年中期报告，分部收入披露。
 
 **地理分布。** 收入主要来自中国大陆 OEM 与商用车客户。2025 年上半年管理层明确披露 "海外定点车型及数量创本公司历史新高，为海外布局及销售提供了坚实基础" ([2025 年中期报告 第 5 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0911/2025091100234.htm))，但截至 1H2025，海外业务尚未单独披露收入贡献，仍处于定点导入与首批出货的早期阶段。
 
-![bsi_revenue_gm](../../charts/bsi_revenue_gm.png)
+![bsi_revenue_gm](charts/bsi_revenue_gm.png)
 
 Source: [2024 年年度报告 第 4 页 四年财务概要](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0425/2025042500234.htm)；FY2025 数据来自[2025 年度业绩公告 (证券之星, 2026-03-31)](https://hk.stockstar.com/IG2026033100018744.shtml)。
 
@@ -206,7 +206,7 @@ pie title FY2024 收入按客户集中度分布
 
 ### 6.2 市场规模与结构
 
-![bsi_tam](../../charts/bsi_tam.png)
+![bsi_tam](charts/bsi_tam.png)
 
 Source: 综合 [共研网 2025–2031 年中国 ADAS 行业报告](https://m.gelonghui.com/p/1552767)、[华经情报网 2025 年中国智驾解决方案行业现状](https://www.huaon.com/channel/trend/1111396.html)、[人民网 智能驾驶加速驶来 2025-03-30](http://finance.people.com.cn/n1/2025/0330/c1004-40449801.html)、沙利文行业研究。
 
@@ -239,11 +239,11 @@ Source: 综合 [共研网 2025–2031 年中国 ADAS 行业报告](https://m.gel
 
 来源：[剖析 2024 年中国市场智驾芯片市场 (新浪财经)](https://finance.sina.com.cn/cj/2025-03-26/doc-ineqxptz9292347.shtml)、[OFweek 2024 年中国市场智能驾驶芯片市场分析](https://ee.ofweek.com/2025-03/ART-8420-2800-30659654.html)、[迈向千 T 算力时代，2024 智驾芯片王者之争 (知乎)](https://zhuanlan.zhihu.com/p/689279557)。
 
-![bsi_market_share](../../charts/bsi_market_share.png)
+![bsi_market_share](charts/bsi_market_share.png)
 
 Source: 同上，盖世汽车 / 高工智能汽车的国内乘用车前装数据。
 
-![bsi_peer_revenue](../../charts/bsi_peer_revenue.png)
+![bsi_peer_revenue](charts/bsi_peer_revenue.png)
 
 Source: 各公司 2024 年报披露——[地平线机器人 2024 年报 (东方财富 PDF)](https://stockn.xueqiu.com/09660/20250421926326.pdf)、寒武纪 2024 年报 (上交所披露)、黑芝麻智能 2024 年报。英伟达 DRIVE 中国业务、华为 MDC 收入未单独披露。
 
@@ -290,7 +290,7 @@ quadrantChart
 
 **SOM (Serviceable Obtainable Market)**：基于黑芝麻当前份额 1.6% 推断 2030 年公司若能争取到 6–10% 的国产替代份额，对应公司收入约 **30–50 亿元人民币**——这与公司管理层 "尽快实现经营性盈利" 的中期目标基本对得上 ([2024 年年度报告 第 6 页 业务展望](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0425/2025042500234.htm))。
 
-![bsi_tam](../../charts/bsi_tam.png)
+![bsi_tam](charts/bsi_tam.png)
 
 ### 8.2 增长预测与战略
 
@@ -335,7 +335,7 @@ quadrantChart
 
 **10. 市场饱和——L2+ 渗透率天花板。** 中国 L2 渗透率 2025 年已达 62.6%，未来 2–3 年增量空间逐步收窄；行业增长动能将转向 L2++ / L3+ 高阶以及商用车与 Robotaxi 替代赛道，公司必须在 A2000 / 武当下一代产品上抓住高阶节点。
 
-![bsi_burn](../../charts/bsi_burn.png)
+![bsi_burn](charts/bsi_burn.png)
 
 Source: 公司 2024 年报与 2025 年中期报告，研发开支与经营亏损口径一致——研发投入持续高于收入 200%+ 是导致经营亏损的最主要原因。
 

@@ -43,7 +43,7 @@ Source: [STM 2025 Form 20-F, Note — Net revenues by reportable segment](https:
 
 **Scale and capital intensity.** ST runs at ~140,000 200mm-equivalent wafer starts per week across 14 main fabs ([20-F, Item 4](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000932787&type=20-F)). FY2025 net capex was **$1,844 m (16% of sales)**, down from $2,642 m in 2024 and a 2023 peak above $4 bn — the 2023–25 average capex-to-revenue ratio was ~20%, reflecting two simultaneous capacity builds: the **Crolles, France** 300mm joint venture with GlobalFoundries (total €7.5 bn project, up to €2.9 bn French state aid) and the **Catania, Italy** integrated 200mm SiC substrate / device "mega-fab" (€5 bn capex, €2 bn direct Italian grant — granted EU Chips Act "Integrated Production Facility" status on 2025-10-13) ([20-F, Public Funding section](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000932787&type=20-F)).
 
-![Revenue and gross margin trend](../../charts/stm_revenue_gm_trend.png)
+![Revenue and gross margin trend](charts/stm_revenue_gm_trend.png)
 *Source: [STM 2025 Form 20-F, Item 5 — Results of Operations](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000932787&type=20-F).*
 
 **Valuation snapshot (2026-05-20 close):**
@@ -308,7 +308,7 @@ By channel: **72% direct OEM, 28% distribution** in FY2025 (vs. 73%/27% in 2024 
 - **Hesai LiDAR (Chinese auto)** — sensor and analog supplier (per public design-ins).
 - **AWS data-center optical interconnect / AI compute (Feb 2026)** — multi-year, multi-product-category.
 
-![Geographic mix](../../charts/stm_geo_mix.png)
+![Geographic mix](charts/stm_geo_mix.png)
 *Source: [STM 2025 Form 20-F, Net revenues by location of shipment](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000932787&type=20-F).*
 
 ---
@@ -360,7 +360,7 @@ The 2024–25 downturn was one of the sharpest in the analog/industrial cohort s
 
 ST competes against five core peers in the broadline analog/power/MCU/sensor space, plus a fragmented long tail of SiC-focused and niche analog/RF specialists.
 
-![Peer comparison — TTM P/S and gross margin](../../charts/stm_peer_valuation.png)
+![Peer comparison — TTM P/S and gross margin](charts/stm_peer_valuation.png)
 *Source: [Yahoo Finance — STM key statistics, snapshot 2026-05-20](https://finance.yahoo.com/quote/STM/key-statistics/).*
 
 ### Direct peers

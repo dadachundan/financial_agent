@@ -32,7 +32,7 @@ Apple Inc. designs, manufactures and markets smartphones, personal computers, ta
 
 **Geographic footprint.** Apple reports five segments: Americas (FY2025: USD 186.7B, 45% of sales), Europe (USD 102.7B, 25%; includes EMEA + India), Greater China (USD 64.4B, 15%), Japan (USD 28.7B, 7%) and Rest of Asia Pacific (USD 33.7B, 8%) ([Apple 2025 10-K, Segment Information, p. 46](https://www.sec.gov/Archives/edgar/data/0000320193/000032019325000079/aapl-20250927.htm)). International revenue is a majority of total sales, and a strengthening US dollar is a recurring headwind explicitly cited in the FY2025 MD&A. Greater China was down 4% YoY in FY2025 — the third consecutive year of decline — but reaccelerated sharply in Q2-FY2026 to +28% YoY, driven by iPhone 17 demand and a tailwind from a stronger renminbi.
 
-![Apple revenue and gross margin trend, FY2021–TTM FY2026](../../charts/aapl_revenue_gm_trend.png)
+![Apple revenue and gross margin trend, FY2021–TTM FY2026](charts/aapl_revenue_gm_trend.png)
 Source: [Apple 2025 Form 10-K, Item 7 MD&A](https://www.sec.gov/Archives/edgar/data/0000320193/000032019325000079/aapl-20250927.htm); [Apple Q2-FY2026 Form 10-Q](https://www.sec.gov/Archives/edgar/data/0000320193/000032019326000013/aapl-20260328.htm).
 
 **Valuation snapshot (as of 2026-05-19).** Closing price **USD 298.37**, market capitalization **USD 4.41T**, **TTM P/E 35.9×** (on TTM diluted EPS of USD 8.29 for the trailing twelve months ending March 28, 2026), **TTM P/S 8.1×**, dividend yield ~0.36% (USD 1.08 annualized after the May 2026 raise). The 52-week range is USD 193.46–303.20 ([Yahoo Finance, AAPL](https://finance.yahoo.com/quote/AAPL/); [Fullratio AAPL P/E, May 18 2026](https://fullratio.com/stocks/nasdaq-aapl/pe-ratio); [Capital.com AAPL market cap, May 2026](https://capital.com/en-int/markets/shares/apple-inc-share-price/market-cap)).
@@ -152,7 +152,7 @@ graph TD
 ```
 Source: [Apple 2025 10-K, Item 1, pp. 1–4](https://www.sec.gov/Archives/edgar/data/0000320193/000032019325000079/aapl-20250927.htm); [Apple.com product navigation, accessed 2026-05-20](https://www.apple.com/shop/buy).
 
-![Apple net sales by product category, FY2023–FY2025](../../charts/aapl_segment_mix.png)
+![Apple net sales by product category, FY2023–FY2025](charts/aapl_segment_mix.png)
 Source: [Apple 2025 Form 10-K, Products and Services Performance, p. 23](https://www.sec.gov/Archives/edgar/data/0000320193/000032019325000079/aapl-20250927.htm).
 
 ### iPhone — 50% of FY2025 sales
@@ -177,7 +177,7 @@ FY2025 W/H/A revenue: **USD 35.7B** (–4% YoY), the only declining category ([A
 
 FY2025 Services revenue: **USD 109.2B** (+14% YoY); Q2-FY2026: **USD 31.0B (+16% YoY)**, an all-time quarterly record ([Apple 2025 10-K, p. 24](https://www.sec.gov/Archives/edgar/data/0000320193/000032019325000079/aapl-20250927.htm); [Apple Q2-FY2026 press release, 2026-04-30](https://www.sec.gov/Archives/edgar/data/0000320193/000032019326000011/a8-kex991q2202603282026.htm)).
 
-![Apple Services revenue and gross margin, FY2021–FY2025](../../charts/aapl_services_growth.png)
+![Apple Services revenue and gross margin, FY2021–FY2025](charts/aapl_services_growth.png)
 Source: [Apple 2021–2025 Form 10-Ks](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=10-K&dateb=&owner=include&count=10).
 
 Services has six monetizable layers, each with distinct moats:
@@ -216,7 +216,7 @@ pie title FY2025 net sales by reportable segment (USD B)
 ```
 Source: [Apple 2025 10-K, Segment Information, p. 46](https://www.sec.gov/Archives/edgar/data/0000320193/000032019325000079/aapl-20250927.htm).
 
-![Apple net sales by segment, FY2024 vs FY2025](../../charts/aapl_geo_mix.png)
+![Apple net sales by segment, FY2024 vs FY2025](charts/aapl_geo_mix.png)
 
 **Customer concentration — at the company level, low.** Apple does not have customer-concentration risk in the classic 10% sense — its end-customer base is dispersed across billions of consumers. However, the 10-K customer-concentration footnote does disclose carrier and reseller concentration in trade receivables: as of September 27, 2025, **one customer represented 12% of total trade receivables**, and **third-party cellular network carriers in aggregate accounted for 34%** of total trade receivables (down from 38% in FY2024) ([Apple 2025 10-K, Note 4 Accounts Receivable, p. 36](https://www.sec.gov/Archives/edgar/data/0000320193/000032019325000079/aapl-20250927.htm)). This is moderate exposure to Verizon/AT&T/T-Mobile in the US and to comparable carriers internationally, but it is well-collateralized and diversified across geographies.
 
@@ -318,7 +318,7 @@ quadrantChart
 - **China** — both as ~15% of revenue and as ~70% of assembly base.
 - **Vision Pro / new-category problem** — Apple has not opened a new USD 10B+ revenue line since Apple Watch (2015); Vision Pro is unlikely to fill the gap.
 
-![Mega-cap valuation snapshot — TTM P/E and P/S](../../charts/aapl_peer_valuation.png)
+![Mega-cap valuation snapshot — TTM P/E and P/S](charts/aapl_peer_valuation.png)
 Source: [Fullratio P/E ratios for AAPL, MSFT, GOOGL, AMZN, May 2026](https://fullratio.com/); [Macrotrends P/S ratios](https://www.macrotrends.net/).
 
 ---
@@ -341,7 +341,7 @@ We estimate Apple's combined Services TAM at **USD 1.5T+ by 2030** with Apple ca
 
 **Wearables / Vision / health TAM.** The most speculative bucket. Apple Watch (smartwatch TAM ~USD 60B globally, Apple ~30% share by revenue), AirPods (true-wireless TAM ~USD 30B globally, Apple ~25% by revenue) and Vision Pro (XR TAM still <USD 5B at current Vision-Pro-class price points). The big optionality is health-monitoring expansion (continuous glucose, BP, sleep apnea) which could expand the smartwatch TAM by 2–3× by 2030.
 
-![Apple capital-return program, FY2021–FY2025](../../charts/aapl_capital_return.png)
+![Apple capital-return program, FY2021–FY2025](charts/aapl_capital_return.png)
 Source: [Apple 2021–2025 Form 10-Ks, Capital Return Program disclosures](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=10-K).
 
 **Penetration strategy in markets where Apple is structurally underpenetrated:**

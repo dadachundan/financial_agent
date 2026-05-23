@@ -40,7 +40,7 @@ Operationally, Advantest is profoundly **global-on-the-revenue-side and Japan-ce
 
 **Scale.** FY2025 net sales of ¥1,128.6 bn (≈ USD 7.5 bn at 150 ¥/USD) made Advantest the largest pure-play tester company globally, with revenue ~2.3× Teradyne's most recent annualized run-rate. FY2025 operating margin was **44.2%** — a level that puts Advantest near the top of the semicap industry, comparable to KLA and ahead of Applied Materials, Lam Research, and Tokyo Electron ([Advantest TYO:6857 financials at stockanalysis.com](https://stockanalysis.com/quote/tyo/6857/financials/)). Gross margin reached **64.3%** in FY2025, up from 50.6% in FY2023 — the swing reflects an extraordinary positive mix shift to high-end SoC testers tied to HPC/AI applications ([FY2025 FN](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf), p. 8; stockanalysis figures). Free cash flow was ¥302.2 bn in FY2025, the company ended the year with ¥340.0 bn of cash (¥795.7 bn of equity, 67.9% equity ratio), and returned ¥114.3 bn through buybacks plus ¥35.8 bn of dividends in the same year ([FY2025 FN, p. 7](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf)).
 
-![Revenue and margins, 5y](../../charts/advantest_revenue_margins.png)
+![Revenue and margins, 5y](charts/advantest_revenue_margins.png)
 
 *Source: net sales and margins from [Advantest FY2024 Financial Results, 2025-04-25](https://www.advantest.com/en/news/2025/ildr5p0000000il7-att/E_FR_FY2024_FN.pdf), [FY2025 Financial Results, 2026-04-27](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf), and historical FY2021–FY2022 from the [stockanalysis.com financials extract](https://stockanalysis.com/quote/tyo/6857/financials/) (S&P Global Market Intelligence template). Operating margin uses press-released operating income (so FY2023 includes ¥9 bn impairment on Essai goodwill).*
 
@@ -337,7 +337,7 @@ quadrantChart
 
 ### Peer valuation snapshot
 
-![Peer valuation](../../charts/advantest_peer_valuation.png)
+![Peer valuation](charts/advantest_peer_valuation.png)
 
 *Source: TTM P/E and P/S as of mid-May 2026, approximated from [Yahoo Finance 6857.T](https://finance.yahoo.com/quote/6857.T/), [companiesmarketcap.com — Advantest P/E](https://companiesmarketcap.com/advantest/pe-ratio/), [gurufocus TER P/E TTM](https://www.gurufocus.com/term/pettm/TER), [Yahoo Finance KLAC key statistics](https://finance.yahoo.com/quote/KLAC/key-statistics/), [Alpha Spread KLAC vs AMAT](https://www.alphaspread.com/comparison/nasdaq/klac/vs/nasdaq/amat), [Simply Wall St 8035 valuation](https://simplywall.st/stocks/jp/semiconductors/tse-8035/tokyo-electron-shares/valuation). Advantest TTM P/E shown ~50× on FY2025 reported EPS of ¥513.30, not the stale ~125× figure that some providers still print using earlier estimates.*
 

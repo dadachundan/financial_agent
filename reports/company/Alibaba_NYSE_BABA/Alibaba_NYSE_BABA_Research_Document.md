@@ -34,7 +34,7 @@ Alibaba Group Holding Limited is a Cayman-Islands–incorporated holding company
 
 **Scale.** FY2026 revenue was RMB 1,023,670 million (US$148,401 million), up 3% YoY on a reported basis, or 11% YoY excluding the disposed Sun Art and Intime offline-retail businesses ([20-F FY2026, Item 5 Operating Results](https://www.sec.gov/Archives/edgar/data/1577552/000119312526231755/0001193125-26-231755-index.htm)). Net income fell 19% to RMB 102,127 million (US$14,805 million) and non-GAAP net income fell 62% to RMB 60,658 million (US$8,794 million), reflecting (a) heavy first-year ramp of the Taobao Instant Commerce subsidies that lifted sales-and-marketing expense from RMB 144,021 million to RMB 245,023 million (+70% YoY) and (b) sharp expansion of capital expenditure to RMB 126,063 million (US$18,275 million) for AI/cloud infrastructure (FY2025 capex was RMB 85,972 million). Headcount stood at 131,462 full-time employees at March 31, 2026, up from 124,320 a year earlier and well below the FY2024 peak of 204,891 that included the now-disposed Sun Art and Intime workforces ([20-F FY2026, Item 6.D Employees](https://www.sec.gov/Archives/edgar/data/1577552/000119312526231755/0001193125-26-231755-index.htm)). Alibaba holds ~19,100 issued patents in China and ~5,500 issued patents elsewhere ([20-F FY2026, Item 5.C](https://www.sec.gov/Archives/edgar/data/1577552/000119312526231755/0001193125-26-231755-index.htm)).
 
-![Revenue and reported operating margin, FY2024–FY2026](../../charts/baba_revenue_op_margin.png)
+![Revenue and reported operating margin, FY2024–FY2026](charts/baba_revenue_op_margin.png)
 Source: [Alibaba 20-F FY2026, Item 5 Operating Results](https://www.sec.gov/Archives/edgar/data/1577552/000119312526231755/0001193125-26-231755-index.htm).
 
 **Valuation snapshot (mid-May 2026).** BABA closed at US$134.58 on 2026-05-20 with a market capitalization of roughly US$326–338 billion, depending on the source ([Capital.com BABA market-cap page, 2026-05-07](https://capital.com/en-int/markets/shares/alibaba-group-holding-limited-share-price/market-cap); [stockanalysis.com BABA statistics, 2026-05-19](https://stockanalysis.com/stocks/baba/statistics/)). TTM P/E was 21.0× and TTM P/S 2.17× as of 2026-05-19 ([stockanalysis.com BABA statistics, 2026-05-19](https://stockanalysis.com/stocks/baba/statistics/)); FinanceCharts cited an alternative P/E of 26.5× on 2026-05-12 ([FinanceCharts BABA PE, 2026-05](https://www.financecharts.com/stocks/BABA/value/pe-ratio)). The 52-week ADR range is $103.71–$192.67, putting the current quote roughly mid-range and ~30% off the cycle high ([TIKR / Alibaba ADR price history, 2026](https://www.tikr.com/blog/alibaba-stock-has-fallen-31-from-its-highs-is-baba-a-buy-in-2026)). Today's P/S of 2.17× sits 66% below the 10-year median of 6.74× ([gurufocus BABA P/S, 2026-03-11](https://www.gurufocus.com/term/ps-ratio/BABA)) and the trailing P/E sits well inside the long-run range of 11–47× implied by [Macrotrends](https://www.macrotrends.net/stocks/charts/BABA/alibaba/pe-ratio).
@@ -241,7 +241,7 @@ Roughly US$1.0–1.2 trillion in 2025 global cross-border B2C e-commerce GMV. Al
 
 The single most important growth industry for Alibaba's equity story. China's public cloud-infrastructure-services market grew 16% YoY in Q1 2025 to US$11.6 billion, accelerated to 21% in Q2 2025, then 24% in Q3 2025, and 26% in Q4 2025 ([Canalys press release on Q1 2025, 2025-07](https://www.lightreading.com/cloud/mainland-china-s-cloud-infrastructure-market-growth-accelerated-in-q1-2025-canalys); [Omdia press release on Q4 2025, 2026-04](https://omdia.tech.informa.com/pr/2026/apr/mainland-china-cloud-infrastructure-spending-rises-26percent-in-q4-2025-driven-by-ai-and-agent-growth)).
 
-![China public-cloud spend, 2024–2025](../../charts/baba_china_cloud_tam.png)
+![China public-cloud spend, 2024–2025](charts/baba_china_cloud_tam.png)
 Source: [Canalys press releases on China cloud, Q1–Q3 2025](https://www.lightreading.com/cloud/mainland-china-s-cloud-infrastructure-market-growth-accelerated-in-q1-2025-canalys); [Omdia press release on Q4 2025, 2026-04-15](https://omdia.tech.informa.com/pr/2026/apr/mainland-china-cloud-infrastructure-spending-rises-26percent-in-q4-2025-driven-by-ai-and-agent-growth).
 
 The acceleration is overwhelmingly **AI-driven**: GPU demand for both training and inference, plus an explosion of agentic-AI usage, has driven the entire cloud TAM curve upward. Industry structure: highly consolidated — top 4 (Alibaba, Huawei, Tencent, Baidu) account for ~70% of mainland public-cloud spend; international hyperscalers were excluded by IDC-licensing rules until April 2024 and remain marginal in mainland China. April-2024 rule change allowing international cloud providers to apply for IDC licenses in China introduces a long-cycle competitive risk (flagged inside the 20-F's own competition risk factor).
@@ -284,14 +284,14 @@ Three regulatory layers matter materially: **(a) China antitrust and platform-ec
 
 ### Market share — China public cloud
 
-![China public-cloud market share, 2024–2025](../../charts/baba_china_cloud_share.png)
+![China public-cloud market share, 2024–2025](charts/baba_china_cloud_share.png)
 Source: [Canalys press release on Q1 2025 mainland China cloud, 2025-07](https://www.lightreading.com/cloud/mainland-china-s-cloud-infrastructure-market-growth-accelerated-in-q1-2025-canalys); [Omdia / CRN Asia coverage of Q3 2025 share, 2025](https://www.crnasia.com/news/2025/cloud/baidu-and-alibaba-take-lead-in-china-s-ai-cloud-market); [CIW news on Alibaba Cloud IaaS share, 2025](https://www.ciw.news/p/alibaba-cloud-market-share-2025).
 
 Alibaba Cloud retained or grew share in every quarter of 2025 — from 33% in Q1 2025 to 36% in Q3 2025 — primarily by capturing the largest portion of the AI-related incremental cloud spend. Huawei Cloud is the closest competitor by share, particularly strong in government, telecom and state-owned-enterprise accounts, and has the strongest captive-silicon story (Ascend 910C); but it lags on the developer / third-party ISV ecosystem.
 
 ### Peer valuation
 
-![Peer-comparison valuation, mid-May 2026](../../charts/baba_peer_valuation.png)
+![Peer-comparison valuation, mid-May 2026](charts/baba_peer_valuation.png)
 Source: [stockanalysis.com BABA statistics, 2026-05-19](https://stockanalysis.com/stocks/baba/statistics/) for BABA's metrics; peer P/E and P/S compiled from Yahoo Finance / stockanalysis.com listings for PDD, JD, MELI, AMZN, GOOGL as of 2026-05-15 to 2026-05-19. (Numbers are TTM as of mid-May 2026 and rounded.)
 
 ### Positioning framework

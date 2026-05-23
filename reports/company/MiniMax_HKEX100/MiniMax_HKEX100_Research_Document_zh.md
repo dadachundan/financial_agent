@@ -60,7 +60,7 @@ MiniMax（中文实体名"上海稀宇极智科技有限公司"，开曼上市�
 
 **对极端 P/S 的解读：** 460× TTM P/S 显著高于已上市 AI 大模型同业（智谱 HKEX:2513 上市后 P/S 约 30×，[KuCoin 2026-01 智谱 MiniMax 估值](https://www.kucoin.com/news/flash/minimax-and-zhipu-ai-surge-in-hong-kong-market-valuations-top-300-billion-hkd)）、商汤 (~14×) 以及百度 (~1.5×)。市场实际定价的是"未来 3–5 年规模化收入 + 海外用户 + 自研全栈技术"的复合期权价值，而非当前现金流；这种估值结构对增长不及预期的容错率极低（见第 9 节"估值压缩风险"）。
 
-![MiniMax — 收入与净亏损](../../charts/minimax_revenue_loss.png)
+![MiniMax — 收入与净亏损](charts/minimax_revenue_loss.png)
 *Source: [MiniMax 港交所招股说明书 (2025-12)](https://www.fxbaogao.com/detail/5209229)，[wallstreetcn 招股书拆解](https://wallstreetcn.com/articles/3761823) 与 [36kr 业绩首披露](https://36kr.com/p/3606464589923336)。*
 
 ---
@@ -188,7 +188,7 @@ graph TD
 
 **(c) 整体 C 端用户规模**
 
-![MiniMax — 全部产品平均月活用户 MAU](../../charts/minimax_mau.png)
+![MiniMax — 全部产品平均月活用户 MAU](charts/minimax_mau.png)
 *Source: [MiniMax 招股说明书 (2025-12)](https://www.fxbaogao.com/detail/5209229)，[wallstreetcn 9M25 收入同比 +175%](https://wallstreetcn.com/articles/3766531)。*
 
 平均 MAU 从 FY2023 的 310 万跃升至 FY2024 的 1,910 万 (+516%)，并进一步增至 9M2025 的 2,760 万。累计注册个人用户 2.12 亿、企业客户超过 13 万家（[财联社 2 亿用户](https://m.cls.cn/detail/2235733)）。
@@ -199,7 +199,7 @@ MiniMax 开放平台 (api.minimaxi.chat) 提供 abab / M / Hailuo / Speech / Mus
 
 招股书披露 9M2025 开放平台 + 企业服务收入 US$15.42M，约 **28.9%** 总收入，毛利率 **69.4%**（同期 +7.1 ppt），显著高于 C 端业务 ≈4.7% 的毛利率——B 端是 MiniMax 现阶段最赚钱的板块（[新浪财经 2025-12 PK 智谱](https://finance.sina.com.cn/roll/2025-12-22/doc-inhcrpzp4753041.shtml)；[36kr 招股书 10 个真相](https://36kr.com/p/3609403248542466)）。
 
-![MiniMax — 9M2025 收入按产品线拆分](../../charts/minimax_revenue_mix.png)
+![MiniMax — 9M2025 收入按产品线拆分](charts/minimax_revenue_mix.png)
 *Source: [MiniMax 招股说明书](https://www.fxbaogao.com/detail/5209229)；[news.futunn 招股书拆解](https://news.futunn.com/en/post/66478828/in-depth-analysis-of-the-unicorn-ai-large-model-prospectus)。*
 
 ---
@@ -216,7 +216,7 @@ MiniMax 的营收结构与典型 SaaS / 企业级模型公司（如 Anthropic、
 
 ### 5.2 客户集中度
 
-![MiniMax — 客户集中度 (% of revenue)](../../charts/minimax_customer_concentration.png)
+![MiniMax — 客户集中度 (% of revenue)](charts/minimax_customer_concentration.png)
 *Source: [MiniMax 招股说明书](https://www.fxbaogao.com/detail/5209229)；[36kr 招股书 10 个真相](https://36kr.com/p/3609403248542466)。*
 
 招股书披露 2023 / 2024 / 9M2025 前五大客户收入占比 **60.5% → 44.1% → 21.7%**，最大单一客户占比 **37.2% → 30.9% → 14.7%**——随着 C 端零售型营收高速放量，企业客户集中度风险在显著下降，但绝对水平仍高于成熟 SaaS（典型 Top-5 ≤15%）。招股书未披露最大客户名称（属常规商业秘密保护）。
@@ -316,7 +316,7 @@ MiniMax-M2 在编程基准 (SWE-bench, FullStackBench) 上超过了 DeepSeek R1 
 
 ### 7.5 估值与市场定位横向对比
 
-![MiniMax — HKEX 中国 AI 公司 P/S 倍数对比](../../charts/minimax_peer_ps.png)
+![MiniMax — HKEX 中国 AI 公司 P/S 倍数对比](charts/minimax_peer_ps.png)
 *Source: HKEX 与 [Yahoo Finance 0100.HK](https://finance.yahoo.com/quote/0100.HK/) 市值 (2026-05)；各公司招股书 / FY2024 年报收入；[KuCoin MiniMax/智谱 市值](https://www.kucoin.com/news/flash/minimax-and-zhipu-ai-surge-in-hong-kong-market-valuations-top-300-billion-hkd) 与 [Ginlix Zhipu 估值分析](https://www.ginlix.ai/news/16391-analysis-of-first-day-listing-performance-and-valuation-on-the-hong-kong-stock-exchange)。*
 
 ```mermaid

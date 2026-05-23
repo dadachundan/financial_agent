@@ -61,7 +61,7 @@
 
 **FY2022–FY2025 营收与毛利率走势。**
 
-![凌云光营收与毛利率走势](../../charts/luster_revenue_gm_trend.png)
+![凌云光营收与毛利率走势](charts/luster_revenue_gm_trend.png)
 
 来源：[2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-04-29/1225251946.PDF) 第 9 页（含 FY2023 / FY2024 对比数据）；[2023 年年度报告](https://static.cninfo.com.cn/finalpage/2024-04-30/1219920751.PDF) 第 9 页（FY2022 数据）。
 
@@ -161,7 +161,7 @@ graph TD
 
 按 2025 年年报披露的产品级营收（来源：[2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-04-29/1225251946.PDF) 第 40 页）：
 
-![凌云光 FY2025 分产品营收](../../charts/luster_segment_mix.png)
+![凌云光 FY2025 分产品营收](charts/luster_segment_mix.png)
 
 来源：[2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-04-29/1225251946.PDF) 第 40 页。
 
@@ -255,7 +255,7 @@ pie title FY2025 营收按前五大客户拆分 (RMB 万元)
 
 中国机器视觉市场是全球增长最快的子市场之一。综合 GGII (高工产研) 与 IFR (国际机器人联合会) 数据：
 
-![中国机器视觉市场规模](../../charts/luster_tam.png)
+![中国机器视觉市场规模](charts/luster_tam.png)
 
 来源：综合 [GGII 高工机器视觉 2024 蓝皮书](https://www.ggii.com.cn/)、[中国机器视觉产业联盟 (CMVU) 2024 年报](http://www.cmvu.org.cn/)、[2025 年年度报告](https://static.cninfo.com.cn/finalpage/2026-04-29/1225251946.PDF) 第 12 页（公司行业部分自述）。est., 各方数据合并；不同来源对 2025 年市场规模的估算在 RMB 250–300 亿元区间。
 
@@ -329,7 +329,7 @@ quadrantChart
 
 ### 7.2 同业估值对比（截至 2026 年 5 月中旬，近似值）
 
-![机器视觉同业估值对比](../../charts/luster_peer_valuation.png)
+![机器视觉同业估值对比](charts/luster_peer_valuation.png)
 
 来源：本报告综合 [东方财富 688400 行情](http://quote.eastmoney.com/kcb/688400.html)、[东方财富 688686 奥普特](http://quote.eastmoney.com/kcb/688686.html)、[东方财富 688003 天准](http://quote.eastmoney.com/kcb/688003.html)、[东方财富 300802 矩子](http://quote.eastmoney.com/sz/300802.html)、[Yahoo Finance Cognex](https://finance.yahoo.com/quote/CGNX/)、[Yahoo Finance Keyence 6861.T](https://finance.yahoo.com/quote/6861.T/)。注：估值数据按报告日 2026-05-20 前后市场收盘价测算，存在 ±10% 的日度波动。
 

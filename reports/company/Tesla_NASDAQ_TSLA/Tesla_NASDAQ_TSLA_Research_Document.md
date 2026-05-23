@@ -50,7 +50,7 @@ Tesla sells direct to consumers through its own retail and online channels in ev
 
 Free cash flow paradoxically *improved* — to USD 6.22B in FY 2025 from USD 3.58B in FY 2024 — because Tesla cut capex by 25% YoY (USD 8.5B vs. USD 11.3B) as the wave of greenfield factories was completed and the focus shifted to maximising utilisation of existing footprint ([Q4 & FY 2025 Update, p. 5](https://www.sec.gov/Archives/edgar/data/0001318605/000162828026003837/exhibit991.htm)). Cash, cash equivalents and investments stood at USD 44.06B at year-end 2025, up USD 7.5B YoY, providing a war chest for Cybercab, Optimus, AI training compute, and the recent USD ~2B Series E investment in xAI announced January 2026.
 
-![Tesla revenue by segment, 2021–2025](../../charts/tsla_revenue_segments.png)
+![Tesla revenue by segment, 2021–2025](charts/tsla_revenue_segments.png)
 *Source: [Tesla Q4 & FY 2025 Update, p. 5](https://www.sec.gov/Archives/edgar/data/0001318605/000162828026003837/exhibit991.htm).*
 
 **Valuation snapshot (as of 18-May-2026).**
@@ -214,7 +214,7 @@ The **Model Y is the single most important product** — it carries the auto P&L
 - **Launched:** Model Y refresh + performance/standard variants; FSD v14; Robotaxi commercial service (June 2025); driverless Robotaxi rides (January 2026); Powerwall 3 broader rollout; lithium refinery pilot production (the first US spodumene-to-lithium-hydroxide refinery); 4680 cell with dry-electrode anode and cathode made in Austin; FSD launched in South Korea ([Q4 & FY 2025 Update, pp. 6–9](https://www.sec.gov/Archives/edgar/data/0001318605/000162828026003837/exhibit991.htm); [Electrek, 2026-01-28 — Tesla 4680 dry electrode](https://electrek.co/2026/01/28/tesla-puts-4680-battery-cells-back-in-model-y/)).
 - **Sunset/in transition:** Up-front FSD purchase option being phased out in favour of monthly subscriptions; the original Dojo D1 silicon programme was widely reported as restructured in 2024–2025 in favour of more H100-based plus AI5/AI6 inference focus ([Q4 & FY 2025 Update, p. 9](https://www.sec.gov/Archives/edgar/data/0001318605/000162828026003837/exhibit991.htm)).
 
-![Tesla quarterly deliveries 2024–2025](../../charts/tsla_deliveries_quarterly.png)
+![Tesla quarterly deliveries 2024–2025](charts/tsla_deliveries_quarterly.png)
 *Source: Tesla quarterly production & delivery 8-Ks: [Q1 2024](https://www.sec.gov/Archives/edgar/data/0001318605/000095017024040274/tsla-ex99_1.htm), [Q2 2024](https://www.sec.gov/Archives/edgar/data/0001318605/000162828024030714/exhibit991.htm), [Q3 2024](https://www.sec.gov/Archives/edgar/data/0001318605/000162828024041816/ex991.htm), [Q4 2024](https://www.sec.gov/Archives/edgar/data/0001318605/000162828025000007/exhibit991.htm); [Q1 2025](https://www.sec.gov/Archives/edgar/data/0001318605/000162828025016070/exhibit9911.htm), [Q2 2025](https://www.sec.gov/Archives/edgar/data/0001318605/000162828025033842/exhibit99111.htm), [Q3 2025](https://www.sec.gov/Archives/edgar/data/0001318605/000162828025043530/exhibit991111.htm), [Q4 2025](https://www.sec.gov/Archives/edgar/data/0001318605/000162828026000016/exhibit9914.htm).*
 
 ---
@@ -359,7 +359,7 @@ Tesla's Megapack competes on (i) energy density and footprint per MWh, (ii) Auto
 5. **Key-person risk.** Musk's attention is divided across SpaceX, xAI, X, Neuralink ([Bloomberg Billionaires — Elon Musk](https://www.bloomberg.com/billionaires/profiles/elon-r-musk/)).
 6. **Regulatory exposure.** Loss of US IRA EV credit, EU CO₂ revision, US-China tariff retaliation, NHTSA action on FSD/Robotaxi all materially affect earnings ([Fortune, 2025-06-10 — Tesla regulatory credits](https://fortune.com/2025/06/10/tesla-revenue-regulatory-credits-senate-republican-budget-bill/)).
 
-![Tesla vs. auto peers — TTM P/E and P/S, May 2026](../../charts/tsla_peer_valuation.png)
+![Tesla vs. auto peers — TTM P/E and P/S, May 2026](charts/tsla_peer_valuation.png)
 *Sources: TSLA [GuruFocus 12-May-2026](https://www.gurufocus.com/term/pettm/TSLA), [financecharts.com 18-May-2026](https://www.financecharts.com/stocks/TSLA/value/pe-ratio); BYD [GuruFocus 13-May-2026](https://www.gurufocus.com/term/pettm/BYDDF); Ford and GM [financecharts.com, May 2026](https://www.financecharts.com/stocks/F/value/pe-ratio); NIO [Yahoo Finance, Feb 2026](https://finance.yahoo.com/quote/NIO/key-statistics/); Li Auto and XPEV per company-published statistics pages.*
 
 ---
@@ -376,7 +376,7 @@ We size Tesla's serviceable market in three vectors that match the operating pil
 
 **SAM/SOM commentary.** The SAM for Tesla auto is more narrowly the ~30M-unit BEV + PHEV passenger-vehicle market in non-China markets (since BYD has captured China at the price points Tesla competes in, and Chinese-made Teslas face tariffs in EU/US going forward — though Tesla still produces in Shanghai for export to other markets such as Australia, Japan, Korea, India) ([Cleary Trade Watch, 2024-10 — EU CV duties](https://www.clearytradewatch.com/2024/10/definitive-duties-adopted-by-the-eu-on-chinese-battery-electric-vehicles-to-counteract-subsidies-to-apply-by-october-30/)). The Tesla 2025 CEO Award explicit milestone of 20M vehicles delivered cumulative implies that Tesla expects to ship something close to that over the next 10 years; FY 2025 cumulative was 8.9M ([Tesla 2025 Proxy / DEFA14A, 2025-09-05](https://www.sec.gov/Archives/edgar/data/0001318605/000110465925090884/tm252289d15_defa14a.htm)). To hit 20M cumulative by 2033, Tesla needs ~1.4M units/yr average — close to current run-rate.
 
-![Tesla annual energy storage deployments, 2021–2025](../../charts/tsla_energy_storage.png)
+![Tesla annual energy storage deployments, 2021–2025](charts/tsla_energy_storage.png)
 *Source: [Tesla Q4 & FY 2025 Update, p. 7](https://www.sec.gov/Archives/edgar/data/0001318605/000162828026003837/exhibit991.htm).*
 
 ### Penetration strategy
@@ -429,10 +429,10 @@ We size Tesla's serviceable market in three vectors that match the operating pil
 
 ---
 
-![Tesla GAAP gross and operating margin, 2021–2025](../../charts/tsla_gross_margin.png)
+![Tesla GAAP gross and operating margin, 2021–2025](charts/tsla_gross_margin.png)
 *Source: [Tesla Q4 & FY 2025 Update, p. 5](https://www.sec.gov/Archives/edgar/data/0001318605/000162828026003837/exhibit991.htm).*
 
-![Tesla cash generation: OCF, capex, FCF, 2021–2025](../../charts/tsla_fcf_capex.png)
+![Tesla cash generation: OCF, capex, FCF, 2021–2025](charts/tsla_fcf_capex.png)
 *Source: [Tesla Q4 & FY 2025 Update, p. 5](https://www.sec.gov/Archives/edgar/data/0001318605/000162828026003837/exhibit991.htm).*
 
 ---

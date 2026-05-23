@@ -39,7 +39,7 @@ The first three quarters of FY2026 have re-priced Oracle from a legacy software 
 - **Q3 FY26 was the first quarter in over 15 years where organic total revenue and non-GAAP EPS both grew ≥20% in USD**, with quarterly revenue of $17.19 billion (+22%), cloud revenue of $8.9 billion (+44%), and OCI/IaaS of $4.9 billion (+84%) ([Q3 FY26 8-K, 2026-03-10](https://www.sec.gov/Archives/edgar/data/1341439/000119312526100148/d132760dex991.htm)).
 - **FY26E capex of $50 billion** is roughly 75% of FY26 revenue and 2.4× FY25 capex; year-to-date through Feb-28-2026 the company spent **$39.2 billion** on capex (vs. $12.2 billion in the same 9-month period a year earlier) ([Q3 FY26 10-Q, MD&A](https://www.sec.gov/Archives/edgar/data/1341439/000119312526101045/0001193125-26-101045-index.htm)).
 
-![Oracle revenue and operating margin FY21–FY26E](../../charts/orcl_revenue_margin.png)
+![Oracle revenue and operating margin FY21–FY26E](charts/orcl_revenue_margin.png)
 Source: [Oracle FY2025 10-K, p. 64](https://www.sec.gov/Archives/edgar/data/1341439/000095017025087926/orcl-20250531.htm); FY26E = company guidance from [Q3 FY26 8-K, 2026-03-10](https://www.sec.gov/Archives/edgar/data/1341439/000119312526100148/d132760dex991.htm).
 
 **Valuation snapshot (2026-05-20).** Oracle trades at **$184.97**, a market capitalization of **~$532 billion**, a TTM revenue base of ~$64.1B, and **TTM P/E of ~33.85× (24% above its 10-year median of 27.3×)** and TTM P/S of roughly **8.3×** ([Public.com — ORCL P/E](https://public.com/stocks/orcl/pe-ratio); [GuruFocus — ORCL P/E TTM, 2026-05-13](https://www.gurufocus.com/term/pettm/ORCL); [CompaniesMarketCap — ORCL P/S](https://companiesmarketcap.com/oracle/ps-ratio/)). For context, peer multiples on the same date (TTM, May 2026):
@@ -268,7 +268,7 @@ Following NAICS 511210 (software publishers) and 518210 (data processing, hostin
 - **Enterprise applications (ERP/HCM/CRM/SCM SaaS).** ~$300B addressable software market; the SaaS subset is ~$200B and growing low-to-mid-teens. Dominated by SAP, Oracle (Fusion + NetSuite), Workday, Salesforce, Microsoft Dynamics.
 - **Cloud infrastructure (IaaS + PaaS).** Q1 2026 spending of approximately **$129 billion per quarter, growing 35% YoY**, with AWS at ~28% share, Azure ~21%, Google Cloud ~14%, Alibaba ~4%, Oracle in the low-to-mid single digits but with the highest absolute growth among the named hyperscalers in FY26 ([BusinessTats Cloud Market Share 2026](https://businesstats.com/big-three-hold-dominant-lead-in-accelerating-cloud-market/); [Programming Helper Tech, 2026](https://www.programming-helper.com/tech/cloud-computing-market-share-2026-aws-azure-google-cloud-analysis)).
 
-![Oracle revenue mix FY23 vs FY25](../../charts/orcl_segment_mix.png)
+![Oracle revenue mix FY23 vs FY25](charts/orcl_segment_mix.png)
 Source: [Oracle FY2025 10-K, p. 64](https://www.sec.gov/Archives/edgar/data/1341439/000095017025087926/orcl-20250531.htm).
 
 ### 6.2 Growth rates and key trends
@@ -366,7 +366,7 @@ quadrantChart
 
 OCI's specific Q1 2026 share is not directly reported by Synergy, but using Synergy's $129B quarterly market and Oracle's reported $3.3B Q1 FY26 IaaS revenue (which is fiscal Q1 — Aug-2025 quarter — not calendar Q1) implies a share in the mid-2% range. Oracle's clear ambition, per the company's own FY26 → FY30 OCI revenue path ($18B → $144B), is to reach the 7–9% share band by 2030, putting it within reach of Google Cloud.
 
-![Oracle vs peers — TTM P/E and P/S](../../charts/orcl_peer_multiples.png)
+![Oracle vs peers — TTM P/E and P/S](charts/orcl_peer_multiples.png)
 Source: aggregated from [Public.com](https://public.com/stocks/orcl/pe-ratio), [GuruFocus](https://www.gurufocus.com/term/pettm/ORCL), peer pages on the same site.
 
 ---
@@ -453,13 +453,13 @@ Three vectors:
 
 **(14) Rate sensitivity.** With $134B of debt, a sustained 100bp rise in the U.S. 10-year would raise refinancing cost by ~$1.0B/yr at full roll-over — a material headwind to non-GAAP EPS.
 
-![Oracle RPO trajectory FY23–Q3 FY26](../../charts/orcl_rpo_trajectory.png)
+![Oracle RPO trajectory FY23–Q3 FY26](charts/orcl_rpo_trajectory.png)
 Source: aggregated from quarterly earnings releases — [Q1 FY26](https://www.sec.gov/Archives/edgar/data/1341439/000119312525199175/d921500dex991.htm), [Q2 FY26](https://www.sec.gov/Archives/edgar/data/1341439/000119312525314207/orcl-ex99_1.htm), [Q3 FY26](https://www.sec.gov/Archives/edgar/data/1341439/000119312526100148/d132760dex991.htm).
 
-![Oracle capex ramp](../../charts/orcl_capex_ramp.png)
+![Oracle capex ramp](charts/orcl_capex_ramp.png)
 Source: [FY2025 10-K cash-flow statement](https://www.sec.gov/Archives/edgar/data/1341439/000095017025087926/orcl-20250531.htm) and [Q3 FY26 10-Q](https://www.sec.gov/Archives/edgar/data/1341439/000119312526101045/0001193125-26-101045-index.htm).
 
-![Oracle OCI vs SaaS growth](../../charts/orcl_cloud_split.png)
+![Oracle OCI vs SaaS growth](charts/orcl_cloud_split.png)
 Source: quarterly earnings releases FY25–Q3 FY26.
 
 ---

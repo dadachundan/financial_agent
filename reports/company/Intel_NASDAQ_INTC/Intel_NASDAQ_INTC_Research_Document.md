@@ -41,7 +41,7 @@ The company reports three operating segments plus an "all other" category ([Inte
 
 Geographically, Intel sold into approximately 80% non-U.S. end markets in FY2024 (the company groups customer geography by ship-to location; Singapore is the largest reported ship-to country at >25% of revenue because many OEM final-assembly partners build there) ([Intel 2024 Form 10-K, MD&A — Geographic Revenue](https://www.sec.gov/Archives/edgar/data/50863/000005086325000009/intc-20241228.htm)).
 
-![Intel revenue and gross margin](../../charts/intc_revenue_gm_trend.png)
+![Intel revenue and gross margin](charts/intc_revenue_gm_trend.png)
 Source: [Intel 2025 Form 10-K, MD&A — Consolidated Results of Operations](https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm); FY2021–FY2022 data from [Intel 2022 Form 10-K](https://www.sec.gov/Archives/edgar/data/50863/000005086323000006/intc-20221231.htm).
 
 The chart shows the magnitude of Intel's reset: revenue collapsed from USD 79.0B in FY2021 (the pandemic-PC peak) to USD 52.9B in FY2025 — a 33% retracement — while GAAP gross margin compressed from 55.4% to 34.8%. Operating profit on a GAAP basis was a loss of USD 2.21B in FY2025, compared with a USD 11.68B loss in FY2024 (driven by USD 16.55B of R&D, USD 4.62B of MG&A, and USD 2.19B of restructuring charges) ([Intel 2025 Form 10-K, MD&A — Consolidated Results](https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm)). Net loss attributable to Intel was USD 267M in FY2025, dramatically narrower than FY2024's USD 18.76B net loss, which had been swollen by a USD 8.0B non-cash tax-valuation-allowance charge.
@@ -56,7 +56,7 @@ The chart shows the magnitude of Intel's reset: revenue collapsed from USD 79.0B
 - **P/B:** 5.15x against shareholders' equity of ~USD 114B; the equity book has been re-marked by the USD 18.4B of equity issued to the U.S. Department of Commerce, SoftBank, and NVIDIA during FY2025 (described below).
 - **EV/EBITDA:** EV/TTM EBITDA ≈ 12x using management's adjusted EBITDA framework, but the GAAP picture is distorted by impairment and restructuring; an EV-to-FY2026E-EBITDA on Street consensus is ~9–10x.
 
-![Peer P/S valuation](../../charts/intc_peer_ps.png)
+![Peer P/S valuation](charts/intc_peer_ps.png)
 Source: [Yahoo Finance — INTC, AMD, AVGO, NVDA key statistics, 2026-05-20](https://finance.yahoo.com/quote/INTC/key-statistics/).
 
 **Interpretation.** Intel's P/S of 11x is roughly 4x its three-year median but still substantially below the AVGO/NVDA cohort that prices in AI-leveraged growth. The rally that lifted Intel from the high-USD-teens in early 2025 to USD 117.88 today (a ~4–5x in 14 months) has been driven by **three distinct catalysts**, not by underlying earnings recovery: (i) the August 2025 U.S. government USD 8.9B common-stock investment at USD 20.47 / share ([8-K, 2025-08-25](https://www.sec.gov/Archives/edgar/data/50863/000005086325000129/a08222025form8-kex991.htm)); (ii) the September 2025 SoftBank USD 2.0B and NVIDIA USD 5.0B equity investments ([8-K, 2025-09-18](https://www.sec.gov/Archives/edgar/data/50863/000005086325000155/a09152025form8-kex991.htm)); (iii) market belief that Intel 18A, in high-volume production since mid-2025, will close the process-node gap to TSMC's N2. The multiple is therefore **narrative-driven**: investors are paying for a successful Intel 18A node ramp, an external foundry customer book, and a sustained non-AI CPU upcycle — none of which is yet in the trailing financials. We carry valuation/multiple-compression risk into Section 9.
@@ -202,7 +202,7 @@ DCAI sells server CPUs (Xeon family), AI accelerators (Gaudi), GPUs (Max series)
 
 Intel Foundry is the **vertically integrated manufacturing arm** that develops process technology, runs Intel's fab network, and increasingly offers manufacturing capacity to external customers. FY2025 revenue was USD 17.83B (~98% intersegment, USD 307M external), and the segment posted a **USD 10.32B operating loss** ([Intel 2025 Form 10-K, MD&A — Intel Foundry](https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm)).
 
-![Intel Foundry revenue vs. operating loss](../../charts/intc_foundry_loss.png)
+![Intel Foundry revenue vs. operating loss](charts/intc_foundry_loss.png)
 Source: [Intel 2025 Form 10-K, MD&A — Intel Foundry](https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm).
 
 Process roadmap:
@@ -415,7 +415,7 @@ Intel's **share-of-serviceable-market today is ~50%** (it sold USD 53B of FY2025
 
 **13. Debt and credit-rating risk.** Intel debt was downgraded to BBB+ (Fitch, S&P) and Baa1 (Moody's) in 2024 with negative outlook; the rating agencies have been on hold pending Intel 18A milestones. Total debt of USD 46.6B against EBITDA that has been negative on a GAAP basis in two of the last three years presents an elevated rating-risk profile. Severity: **medium**.
 
-![Intel capex and free cash flow](../../charts/intc_capex_fcf.png)
+![Intel capex and free cash flow](charts/intc_capex_fcf.png)
 Source: [Intel 2025 Form 10-K, MD&A — Cash Flow](https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm).
 
 ### Macroeconomic Risks

@@ -42,7 +42,7 @@ Source: [AMD 2025 10-K, MD&A segment table](https://www.sec.gov/Archives/edgar/d
 
 **Scale.** FY2025 net revenue of $34.6B was up 34% YoY, gross margin reached 50% (vs. 49% in FY2024 and 46% in FY2023), and reported operating income was $3.69B ([AMD 2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)). GAAP net income was $4.3B; the figure benefited from discrete tax items and the divestiture gain on the ZT Manufacturing Business. Net cash from operating activities of continuing operations was $6.5B ([AMD 2025 10-K, MD&A "Liquidity"](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)). R&D expense was $8.09B (23% of revenue), among the highest absolute R&D budgets in semis ([AMD 2025 10-K, Income Statement](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)).
 
-![AMD revenue and gross margin trend](../../charts/amd_revenue_gm_trend.png)
+![AMD revenue and gross margin trend](charts/amd_revenue_gm_trend.png)
 
 Source: [AMD 2025 10-K](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm) and [AMD 2024 10-K](https://www.sec.gov/Archives/edgar/data/2488/000000248825000012/amd-20241228.htm) for FY23 comparative.
 
@@ -235,7 +235,7 @@ AMD participates in three overlapping markets: data-center compute (CPUs, GPUs, 
 
 **Data-center compute is the dominant growth driver.** Global data-center capex hit a multi-decade inflection in 2023–2025 as hyperscalers (Microsoft, Google, Amazon, Meta, Oracle), neoclouds (CoreWeave, Lambda, Crusoe) and frontier AI labs (OpenAI, xAI, Anthropic) accelerated AI infrastructure build-outs. NVIDIA's data-center segment revenue grew from $47.5B in FY2024 to $115.2B in FY2025 ([NVIDIA FY2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm)) — the single best benchmark for the magnitude of AI infrastructure demand. AMD's Data Center segment grew from $6.5B in FY2023 to $16.6B in FY2025, a 2.6× expansion in two years and the strongest growth in the company's history ([AMD 2025 10-K vs. 2024 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)).
 
-![AMD segment revenue mix](../../charts/amd_segment_mix.png)
+![AMD segment revenue mix](charts/amd_segment_mix.png)
 
 Source: [AMD 2025 10-K](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm) and [AMD 2024 10-K](https://www.sec.gov/Archives/edgar/data/2488/000000248825000012/amd-20241228.htm).
 
@@ -265,7 +265,7 @@ Source: [AMD 2025 10-K](https://www.sec.gov/Archives/edgar/data/2488/00000024882
 - **Apple Silicon** — Indirect competitor in client compute as Mac shifts erode the Wintel x86 install base.
 - **Smaller fabless AI accelerator startups** — Cerebras, Groq, SambaNova, Tenstorrent, Rebellions, Furiosa. Niche today but well-funded.
 
-![AMD Data Center segment vs Intel DCAI](../../charts/amd_vs_intel_dc.png)
+![AMD Data Center segment vs Intel DCAI](charts/amd_vs_intel_dc.png)
 
 Source: [AMD 2023, 2024, 2025 10-K filings](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=10-K) and [Intel 2023 / 2024 10-K filings](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000050863&type=10-K). Note: AMD's Data Center segment includes Instinct GPUs and Pensando; Intel's DCAI segment is Xeon + Gaudi + select networking. Apples-to-apples imperfect — chart shows the *trajectory*, not a like-for-like share.
 
@@ -275,7 +275,7 @@ Source: [AMD 2023, 2024, 2025 10-K filings](https://www.sec.gov/cgi-bin/browse-e
 
 **Competitive vulnerabilities.** (1) Software ecosystem gap vs. CUDA — the single most cited reservation in sell-side and buy-side conversations about Instinct. (2) Dependence on a single foundry partner (TSMC) for advanced nodes and CoWoS packaging. (3) The NVIDIA–Intel partnership announced in September 2025 raises the risk of bundled Intel CPU + NVIDIA GPU offerings that could foreclose part of AMD's data-center share opportunity ([AMD 2025 10-K, Risk Factors](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)). (4) Hyperscaler ASIC programs (Google TPU, Microsoft Maia, AWS Trainium) attack both NVIDIA and AMD; AMD has less ASIC IP-licensing optionality than Broadcom or Marvell.
 
-![AMD Data Center quarterly revenue ramp](../../charts/amd_dc_quarterly_ramp.png)
+![AMD Data Center quarterly revenue ramp](charts/amd_dc_quarterly_ramp.png)
 
 Source: AMD quarterly earnings press releases, Q1-FY2024 through Q1-FY2026 ([2024 Q1](https://www.sec.gov/Archives/edgar/data/2488/000000248824000054/q12024991.htm), [Q2](https://www.sec.gov/Archives/edgar/data/2488/000000248824000121/q22024991.htm), [Q3](https://www.sec.gov/Archives/edgar/data/2488/000000248824000161/q32024991.htm), [Q4](https://www.sec.gov/Archives/edgar/data/2488/000000248825000009/q42024991final.htm); [2025 Q1](https://www.sec.gov/Archives/edgar/data/2488/000000248825000045/q12025991.htm), [Q2](https://www.sec.gov/Archives/edgar/data/2488/000000248825000106/q22025991.htm), [Q3](https://www.sec.gov/Archives/edgar/data/2488/000000248825000163/q32025991.htm), [Q4](https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/q42025991.htm); [2026 Q1](https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm)).
 
@@ -287,7 +287,7 @@ Source: AMD quarterly earnings press releases, Q1-FY2024 through Q1-FY2026 ([202
 
 Management has guided publicly to a **$500B+ TAM for AI accelerators by 2028** (the so-called "data center AI accelerator TAM" framing first introduced at AMD's December 2023 "Advancing AI" event and refreshed at the June 2025 event). This is the company's primary anchor for the long-run Instinct opportunity. Sell-side ranges around the same number cluster between $400B and $600B for 2028 depending on assumed CapEx growth rates and the ASIC/merchant split.
 
-![AMD R&D trend](../../charts/amd_rd_trend.png)
+![AMD R&D trend](charts/amd_rd_trend.png)
 
 Source: [AMD 2022, 2023, 2024, 2025 10-K filings](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=10-K).
 
@@ -343,7 +343,7 @@ Source: [AMD 2022, 2023, 2024, 2025 10-K filings](https://www.sec.gov/cgi-bin/br
 
 **14. Tariffs and trade.** Tariffs on Taiwan-origin or China-assembled finished electronics could indirectly raise AMD's customers' costs and dampen demand. AMD's products are not directly tariffed at chip level today but downstream system tariffs are a transmission mechanism.
 
-![AMD peer valuation snapshot](../../charts/amd_peer_valuation.png)
+![AMD peer valuation snapshot](charts/amd_peer_valuation.png)
 
 Source: [Yahoo Finance, 2026-05-20](https://finance.yahoo.com/quote/AMD/key-statistics/) (AMD, NVDA, AVGO, INTC key-statistics pages).
 

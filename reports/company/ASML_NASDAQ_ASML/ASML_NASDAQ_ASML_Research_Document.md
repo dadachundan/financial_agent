@@ -53,7 +53,7 @@ Sources: [Yahoo Finance — AMAT](https://finance.yahoo.com/quote/AMAT/key-stati
 
 ASML's multiples are **roughly in-line with the WFE peer median P/E and modestly above on P/S**, despite the company's structurally superior return profile (52.8% gross margin and ~34.6% operating margin in FY2025 versus AMAT/LRCX in the high-40s gross / low-30s operating) ([ASML 2025 20-F](financial_reports/ASML/2025_20F_20-F_0001628280_26_011378.htm); [Applied Materials FY2025 Q4 results, 2025-11](https://www.sec.gov/Archives/edgar/data/0000006951/000162828025051998/exhibit991q42025earningsre.htm); [Lam Research FY2025 Q4 results](https://www.sec.gov/Archives/edgar/data/0000707549/000070754925000068/lrcx_exhibitx991xq4x2025.htm)). The premium is not extreme but the multiples themselves are high in absolute terms. The drivers — explicitly named on the most recent earnings call and in the 20-F — are: (a) genuine high-growth sector premium for AI-infrastructure / advanced-packaging beneficiaries; (b) the company's structural monopoly on EUV creating long-duration earnings visibility (4–5 years of order backlog at typical scenarios); (c) management's explicit 2030 revenue model of **€44–€60 bn** revenue and **56–60% gross margin** ([ASML 2024 Investor Day press release, 2024-11-14](https://www.sec.gov/Archives/edgar/data/0000937966/000093796624000024/pressreleaseinvestorday2024.htm); reaffirmed in [2025 20-F long-term outlook section](financial_reports/ASML/2025_20F_20-F_0001628280_26_011378.htm)). The market is paying for the back-end of that range. At a P/E above 50× there is meaningful valuation risk if even one of the structural drivers (China policy reversal, advanced-Logic capex pause, High-NA delay) goes the wrong way — this is carried into Section 9.
 
-![ASML revenue and gross margin trend](../../charts/asml_revenue_margin.png)
+![ASML revenue and gross margin trend](charts/asml_revenue_margin.png)
 Source: [ASML 2025 Annual Report on Form 20-F – KPIs and consolidated statement of operations](financial_reports/ASML/2025_20F_20-F_0001628280_26_011378.htm).
 
 ---
@@ -180,13 +180,13 @@ This is the recurring-revenue engine. **Net service and field option sales were 
 
 The **three flagship products driving the business** in 2025-2026 are: (1) the **NXE:3800E/F** EUV scanner (the 230 wph workhorse for advanced Logic and DRAM); (2) the **ArF immersion NXT:2050i / 2100i** (the high-volume DUV cash generator); and (3) the **EXE:5200B High-NA** system (the future of the franchise post-2028) ([ASML 2025 20-F, Q&A with the CEO](financial_reports/ASML/2025_20F_20-F_0001628280_26_011378.htm); [Tom's Hardware, ASML lithography roadmap](https://www.tomshardware.com/tech-industry/semiconductors/asml-lithograpy-roadmap-examined-from-duv-to-hyper-na)). Notable 2025 launches: TWINSCAN XT:260 (advanced packaging entry), EXE:5200B (High-NA volume successor), NXE:3800F variant. Notable sunset/phase-out: ArF dry and KrF shipments materially down YoY as the China mature-node front-loading completes ([ASML 2025 20-F, Disaggregation of revenue](financial_reports/ASML/2025_20F_20-F_0001628280_26_011378.htm)).
 
-![ASML system mix and unit shipments](../../charts/asml_system_mix.png)
+![ASML system mix and unit shipments](charts/asml_system_mix.png)
 Source: [ASML 2025 20-F, Disaggregation of revenue note](financial_reports/ASML/2025_20F_20-F_0001628280_26_011378.htm).
 
-![ASML FY2025 revenue mix](../../charts/asml_fy25_mix.png)
+![ASML FY2025 revenue mix](charts/asml_fy25_mix.png)
 Source: [ASML 2025 20-F, "Disaggregation of revenue"](financial_reports/ASML/2025_20F_20-F_0001628280_26_011378.htm).
 
-![ASML unit shipments](../../charts/asml_units.png)
+![ASML unit shipments](charts/asml_units.png)
 Source: [ASML 2025 20-F, Disaggregation of revenue – units](financial_reports/ASML/2025_20F_20-F_0001628280_26_011378.htm).
 
 ---
@@ -221,10 +221,10 @@ The Logic / Memory end-use split is **65.6% Logic / 34.4% Memory in FY2025** (�
 
 **Customer case studies.** ASML disclosed in November 2025 that it received the **TSMC Supplier "Excellence in Green Manufacturing" Award** for its product energy-efficiency innovations (specifically the lower-power configuration tested and rolled out across the installed base in 2025), evidence of deep operational integration with its largest customer ([ASML 2025 20-F, "Energy efficiency"](financial_reports/ASML/2025_20F_20-F_0001628280_26_011378.htm)).
 
-![ASML net sales by geography](../../charts/asml_geo_revenue.png)
+![ASML net sales by geography](charts/asml_geo_revenue.png)
 Source: [ASML 2025 20-F, "Total net sales and long-lived assets by geographic region"](financial_reports/ASML/2025_20F_20-F_0001628280_26_011378.htm).
 
-![ASML geographic share trend](../../charts/asml_geo_share_trend.png)
+![ASML geographic share trend](charts/asml_geo_share_trend.png)
 Source: same; percentages calculated as net sales in each geography divided by total net sales.
 
 ---
@@ -314,10 +314,10 @@ These do not directly compete on litho hardware but compete for the same custome
 3. **High-NA execution risk** — the EXE:5000/5200B ramp is technically the most complex product ever fielded by ASML; any productivity or yield delay slows the post-2027 revenue ramp ([TrendForce, EXE:5200 first shipment, 2025-07-17](https://www.trendforce.com/news/2025/07/17/news-asml-confirms-first-high-na-euv-exe5200-shipment-reportedly-prepping-for-intels-14a-in-2027/)).
 4. **Cyclicality** — even with a long-term secular tailwind, the semi-equipment industry remains cyclical (the 20-F lists this as a top risk factor). 2024 saw Logic revenue dip from €15,984m in 2023 to €13,195m before recovering to €16,054m in 2025 ([ASML 2025 20-F, Disaggregation by end use](financial_reports/ASML/2025_20F_20-F_0001628280_26_011378.htm)).
 
-![ASML vs WFE peer multiples](../../charts/asml_peer_multiples.png)
+![ASML vs WFE peer multiples](charts/asml_peer_multiples.png)
 Source: [Yahoo Finance — ASML, AMAT, LRCX, KLAC, TER key statistics, 2026-05-20](https://finance.yahoo.com/quote/ASML/key-statistics).
 
-![ASML R&D and SG&A](../../charts/asml_rd_sga.png)
+![ASML R&D and SG&A](charts/asml_rd_sga.png)
 Source: [ASML 2025 20-F, consolidated income statement](financial_reports/ASML/2025_20F_20-F_0001628280_26_011378.htm). 2023 R&D not shown to avoid sourcing a separate filing; 2024 and 2025 are from the 2025 20-F.
 
 ---

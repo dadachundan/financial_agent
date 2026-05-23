@@ -50,7 +50,7 @@
 | 全年每股股息 | HK$1.30 | HK$0.90 | +44.4% |
 | 派息率 | 接近 70% | 接近 70% | 持平 |
 
-![营业收入与毛利率 (2020-2024)](../../charts/yueyuen_revenue_gm.png)
+![营业收入与毛利率 (2020-2024)](charts/yueyuen_revenue_gm.png)
 *数据来源：[裕元 2024 年报, 第 2 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0422/2025042200842_c.pdf) 及历年年报；2020 年营收 US$8,445M，2021 US$8,533M，2022 US$8,970M。*
 
 **估值快照（截至 2026-05-13）**：
@@ -63,7 +63,7 @@
 - **三年估值区间**：TTM P/E 大致在 6×–12× 之间波动；最低位出现在 2022 年消费疲弱叠加封控时；当前处于中性偏低水平。
 - **行业可比 P/E**：丰泰企业 (TWSE:9910) ~19–21×；Stella International (HKEX:01836) ~8–9×；母公司宝成工业 (TWSE:9904) ~8–9×；宝胜国际 (HKEX:03813) ~14–15×。
 
-![同业估值倍数比较](../../charts/yueyuen_peer_valuation.png)
+![同业估值倍数比较](charts/yueyuen_peer_valuation.png)
 *数据来源：[Stockanalysis.com (0551.HK)](https://stockanalysis.com/quote/hkg/0551/statistics/)，[Disfold Taiwan Footwear ranking](https://disfold.com/taiwan/industry/footwear-accessories/companies/)，[Investing.com 0551 财务](https://cn.investing.com/equities/yue-yuen-ind-financial-summary)；同业估值为粗略 TTM 估计。*
 
 **估值倍数解读**：裕元当前 TTM P/E 约 8×、P/S 约 0.4×，**显著低于同业丰泰** (~20×) 而**与母公司宝成、Stella 接近**。低估值的核心原因不是基本面恶化（FY2024 净利同比 +42.8%），而是市场对：(1) **2025 年美国 (Trump 政府新一轮) 加征关税导致品牌客户下单转趋保守**，(2) 大陆零售（宝胜）持续承压，(3) **代工行业天花板低、ASP 难以系统性提价**，以及 (4) **大股东宝成持股 51% 流通盘较小**导致股票流动性折价。裕元高股息率（8% 以上）与稳定派息政策为估值提供支撑——若净利回到 US$400M+ 水平，按 70% 派息率推算每股股息约 HK$1.20–1.30，对应当前股价收益率仍可接近 8.5%。
@@ -225,7 +225,7 @@ EVA 鞋底、TPU、TPR、橡胶组件、鞋带、中底等。裕元的**鞋底�
 
 ### 营业收入结构图
 
-![FY2024 营业收入结构](../../charts/yueyuen_revenue_mix.png)
+![FY2024 营业收入结构](charts/yueyuen_revenue_mix.png)
 *数据来源：[裕元 2024 年报, 第 17 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0422/2025042200842_c.pdf)*
 
 ---
@@ -328,7 +328,7 @@ pie title 裕元 FY2024 营业收入按主要客户 (US$ M)
 
 ### 行业出货量与平均售价（裕元案例）
 
-![裕元制造业务出货量与 ASP](../../charts/yueyuen_volume_asp.png)
+![裕元制造业务出货量与 ASP](charts/yueyuen_volume_asp.png)
 *数据来源：[裕元 2020-2024 年报](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0422/2025042200842_c.pdf)。FY2024 ASP US$20.25/双反映**单价回落但销量回升**的行业典型特征。*
 
 ---
@@ -514,10 +514,10 @@ FY2024 派息率近 70%、自由现金流 ‑56% (US$326M vs US$744M)。若未�
 
 2024 年初红海航运中断已影响欧洲出货；台海局势紧张影响台资企业全球资产配置。**缓和**：制造业务分散在 7 国，单地区中断影响有限。
 
-![按客户交付目的地划分的营业收入](../../charts/yueyuen_geo_revenue.png)
+![按客户交付目的地划分的营业收入](charts/yueyuen_geo_revenue.png)
 *数据来源：[裕元 2024 年报附注 5, 第 127 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0422/2025042200842_c.pdf)*
 
-![2024 鞋类出货量地理分布](../../charts/yueyuen_production_geo.png)
+![2024 鞋类出货量地理分布](charts/yueyuen_production_geo.png)
 *数据来源：[裕元 2024 年报, 第 17 页](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0422/2025042200842_c.pdf)。印尼出货占比 54% — 中国 +1 战略的胜利果实。*
 
 ---

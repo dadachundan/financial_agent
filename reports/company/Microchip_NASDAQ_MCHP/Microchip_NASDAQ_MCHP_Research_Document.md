@@ -36,7 +36,7 @@ On 2026-05-07, Microchip issued formal guidance for Q1 FY27 (quarter ending June
 
 Microchip Technology designs, manufactures, and sells "smart, connected and secure embedded control solutions." Its strategic focus is general-purpose and specialized **8-bit, 16-bit, 32-bit and (since July 2024) 64-bit mixed-signal microcontrollers and microprocessors, analog, FPGA, and memory products**, marketed under a "Total System Solution" (TSS) framework that bundles silicon with software and engineering support. The company operates in two reported segments — Semiconductor Products and Technology Licensing — and sells to approximately 109,000 unique end customers globally. Source: [Microchip FY2025 Form 10-K, Item 1 Business](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm).
 
-![Revenue & gross margin trend](../../charts/mchp_revenue_gm.png)
+![Revenue & gross margin trend](charts/mchp_revenue_gm.png)
 
 *Source: Microchip [FY2022 10-K](https://www.sec.gov/Archives/edgar/data/827054/000082705422000094/0000827054-22-000094-index.htm), [FY2025 10-K](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm), and [Q4 FY26 8-K press release](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm).*
 
@@ -133,7 +133,7 @@ MCHP's product portfolio breaks into three reported product lines (per the [FY20
 | Other (FPGA / memory / license / engineering services / aerospace) | $994.9M | 22.6% | $1,345.6M | 17.6% |
 | **Total** | **$4,401.6M** | **100.0%** | **$7,634.4M** | **100.0%** |
 
-![FY25 product line mix](../../charts/mchp_product_mix.png)
+![FY25 product line mix](charts/mchp_product_mix.png)
 
 *Source: [Microchip FY2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm).*
 
@@ -199,7 +199,7 @@ pie title FY2025 net sales by channel (Microchip)
 
 **Geographic mix (FY25):** Asia 49.9% ($2,197.8M), Americas 30.2% ($1,325.7M), Europe 19.9% ($878.1M). Foreign sales were ~75% of total. Substantially all foreign sales are U.S. dollar denominated. The European weakness was specifically called out — "general weakness in the European economy, and decreases in our net sales in the European industrial and automotive markets, which were particularly weak." Source: [FY2025 10-K, Sales by Geography](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm).
 
-![FY25 geographic mix](../../charts/mchp_geo_mix.png)
+![FY25 geographic mix](charts/mchp_geo_mix.png)
 
 *Source: [Microchip FY2025 10-K, MD&A — Sales by Geography](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm).*
 
@@ -282,7 +282,7 @@ quadrantChart
 
 **Peer valuation comparison** — multiples sourced from [Yahoo Finance MCHP key statistics, May 2026](https://finance.yahoo.com/quote/MCHP/key-statistics) and peer pages cited below the chart.
 
-![Peer valuation comparison](../../charts/mchp_peer_valuation.png)
+![Peer valuation comparison](charts/mchp_peer_valuation.png)
 
 *Source: Yahoo Finance retrieved 2026-05-20 via [yfinance](https://finance.yahoo.com/quote/MCHP/key-statistics), [ADI](https://finance.yahoo.com/quote/ADI/key-statistics), [TXN](https://finance.yahoo.com/quote/TXN/key-statistics), [NXPI](https://finance.yahoo.com/quote/NXPI/key-statistics), [STM](https://finance.yahoo.com/quote/STM/key-statistics), [IFNNY](https://finance.yahoo.com/quote/IFNNY/key-statistics).*
 
@@ -296,13 +296,13 @@ The medium-term growth case rests on five overlapping vectors, all sourced from 
 
 **1. Cycle recovery and gross-margin normalization.** This is the dominant near-term driver. The trajectory is visible in the quarterly numbers ([Q4 FY26 8-K, May 7 2026](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm)):
 
-![Quarterly revenue trough and recovery](../../charts/mchp_quarterly_trough.png)
+![Quarterly revenue trough and recovery](charts/mchp_quarterly_trough.png)
 
 *Source: Microchip 8-K earnings releases for [Q4 FY25 (May 2025)](https://www.sec.gov/Archives/edgar/data/827054/000082705425000061/exhibit991q4fy25.htm), [Q1 FY26 (Aug 2025)](https://www.sec.gov/Archives/edgar/data/827054/000082705425000132/exhibit991q1fy26.htm), [Q2 FY26 (Nov 2025)](https://www.sec.gov/Archives/edgar/data/827054/000082705425000182/exhibit991q2fy26.htm), [Q3 FY26 (Feb 2026)](https://www.sec.gov/Archives/edgar/data/827054/000082705426000008/exhibit991q3fy26.htm), [Q4 FY26 (May 2026)](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm). Q1 FY25 (Jun-24) and Q2 FY25 (Sep-24) historicals are stated comparators in subsequent releases. Q3 FY25 (Dec-24) is derived from Q3 FY26 release language ("increased 15.6% from the year ago quarter": $1,186.0M / 1.156 ≈ $1,026.0M). Q1 FY27E is the mid-point of formally-issued guidance.*
 
 Gross margin recovery is steeper and more visible than the revenue recovery, because the trough quarter was loaded with unabsorbed capacity charges and inventory reserve charges ([FY2025 10-K MD&A — Gross Margin](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)):
 
-![Gross margin recovery](../../charts/mchp_gm_recovery.png)
+![Gross margin recovery](charts/mchp_gm_recovery.png)
 
 *Source: Non-GAAP gross margin disclosures in the same 8-Ks cited above; Q1 FY27E mid-point from Q4 FY26 8-K guidance ($1.442–$1.469B revenue with 62.25–63.25% non-GAAP GM); long-term target ~65% from CFO commentary on Q3 FY26 call: "we expect our gross margins to expand further toward our long-term target of 65%."*
 
@@ -385,7 +385,7 @@ n/d = not yet disclosed in FY26 10-K (filing expected late May 2026; not in our 
 
 ### Balance sheet & debt
 
-![Total debt vs. cash](../../charts/mchp_debt_cash.png)
+![Total debt vs. cash](charts/mchp_debt_cash.png)
 
 *Source: Microchip [FY2022 10-K](https://www.sec.gov/Archives/edgar/data/827054/000082705422000094/0000827054-22-000094-index.htm), [FY2023 10-K](https://www.sec.gov/Archives/edgar/data/827054/000082705423000080/0000827054-23-000080-index.htm), [FY2025 10-K balance sheets](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm). Total debt = current portion + long-term debt.*
 
@@ -395,7 +395,7 @@ Goodwill remains very large at $6,684.8M (FY25), and acquired intangibles at $2,
 
 ### Cash flow
 
-![Operating cash flow, capex, and FCF](../../charts/mchp_fcf.png)
+![Operating cash flow, capex, and FCF](charts/mchp_fcf.png)
 
 *Source: Microchip [FY2025 10-K consolidated statements of cash flows](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm).*
 

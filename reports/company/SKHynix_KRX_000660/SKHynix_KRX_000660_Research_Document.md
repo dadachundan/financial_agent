@@ -35,7 +35,7 @@ SK hynix Inc. (KRX:000660) is the world's second-largest manufacturer of dynamic
 
 **Scale indicators (FY2025).** Revenue KRW 97.1467 trillion (USD ≈ 70 bn at the average 1,387 KRW/USD 2025 rate); operating profit KRW 47.2063 trillion (49% op-margin); net profit KRW 42.9479 trillion (44% net margin). FY2025 revenue rose 46.8% YoY and operating profit doubled (+101%) ([SK hynix Posts Record Annual Financial Results in 2025, 2026-01-28](https://news.skhynix.com/sk-hynix-announces-fy25-financial-results/)). Q4 2025 alone produced revenue of KRW 32.78 trillion (+34% QoQ, +66% YoY) and operating profit of KRW 19.2 trillion at a 58% op-margin — gross margins surpassing TSMC for the first time, on a quarter where DRAM revenue rose 70.6% YoY to KRW 24.9 T and NAND rose 59% YoY to KRW 7.6 T ([Blocks & Files, 2026-01-28](https://blocksandfiles.com/2026/01/28/sk-hynix-q4-2025/); [TrendForce, 2025-12-23](https://www.trendforce.com/news/2025/12/23/news-memory-price-surge-reportedly-to-push-samsung-sk-hynix-gross-margins-above-tsmc-in-4q25)).
 
-![SK hynix revenue and operating margin, FY2020–FY2025](../../charts/skhynix_revenue_margin.png)
+![SK hynix revenue and operating margin, FY2020–FY2025](charts/skhynix_revenue_margin.png)
 Source: SK hynix Newsroom press releases — [FY2025](https://news.skhynix.com/sk-hynix-announces-fy25-financial-results/), [FY2024](https://news.skhynix.com/sk-hynix-announces-4q24-financial-results/), [FY2023](https://news.skhynix.com/sk-hynix-reports-fourth-quarter-2023-financial-results/), and prior years.
 
 **Valuation snapshot.** As of close, 2026-05-19, SK hynix traded at KRW 1,745,000, giving a market capitalization of ≈ KRW 1,243.67 trillion (USD ≈ 905 bn at 1,374 KRW/USD) ([Yahoo Finance — 000660.KS historical, accessed 2026-05-20](https://finance.yahoo.com/quote/000660.KS/history/)). On a trailing-twelve-month (TTM) basis, the company trades at:
@@ -223,7 +223,7 @@ SK hynix operates in the **memory semiconductor industry**, defined as the desig
 
 The combined DRAM + NAND market is now the single most cyclical megacap subsegment of the broader semiconductor industry. **Global DRAM revenue ran at ≈ USD 96 bn in 2024, USD 166 bn in 2025, and TrendForce projects ≈ USD 404 bn in 2026** — a 144% YoY surge driven almost entirely by AI memory pricing and HBM mix shift, not unit-volume growth ([TrendForce, 2026-01-05](https://www.trendforce.com/presscenter/news/20260105-12860.html)). **Global NAND revenue is projected to reach ≈ USD 147 bn in 2026**, up 112% YoY ([same TrendForce release](https://www.trendforce.com/presscenter/news/20260105-12860.html)). Combined memory market reaches ≈ USD 551 bn in 2026 — roughly the same size as the total foundry market.
 
-![Global DRAM industry revenue 2022–2026E](../../charts/skhynix_dram_tam.png)
+![Global DRAM industry revenue 2022–2026E](charts/skhynix_dram_tam.png)
 Source: TrendForce industry reports; [Memory Makers Prioritize Server Apps, 2026-01-05](https://www.trendforce.com/presscenter/news/20260105-12860.html) and [3Q25 DRAM revenue, 2025-11-26](https://www.trendforce.com/presscenter/news/20251126-12802.html).
 
 Within DRAM, the HBM sub-segment grew 130% YoY in 2025 and is projected by TrendForce to grow another ≈ 70% in 2026, reaching ≈ USD 58 bn ([Astute Group/TrendForce, 2026](https://www.astutegroup.com/news/general/sk-hynix-holds-62-of-hbm-micron-overtakes-samsung-2026-battle-pivots-to-hbm4/)). HBM by 2026 will consume nearly 20% of global DRAM wafer capacity even though it represents only a low-double-digit percentage of unit DRAM bits shipped — the price/area uplift is enormous (HBM commands an ASP roughly 5–8× the equivalent area of commodity DDR5).
@@ -298,7 +298,7 @@ quadrantChart
 2. **Samsung HBM catch-up.** If Samsung's HBM3E/HBM4 yields converge, Nvidia is incentivized to dual-source aggressively.
 3. **NAND scale gap to Samsung.** SK hynix + Solidigm combined is ≈ 25% NAND share, behind Samsung at ≈ 33%.
 
-![Forward P/E vs peers — May 2026](../../charts/skhynix_peer_pe.png)
+![Forward P/E vs peers — May 2026](charts/skhynix_peer_pe.png)
 Source: [Trading Key — Samsung vs SK hynix valuation, 2026](https://www.tradingkey.com/analysis/stocks/us-stocks/261663607-micron-samsung-sk-hynix-mu-stock-best-memory-stock-for-2026-tradingkey); consensus FY1 estimates.
 
 ---

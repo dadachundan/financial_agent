@@ -58,7 +58,7 @@
 
 **员工与研发:** 2025 年末公司研发人员 2,403 人（占总人数 12.0%），博士 500 人、硕士 1,336 人；研发人员薪酬合计 RMB 13.98 亿元，人均薪酬 RMB 58.2 万元（[2025 年年度报告, 第 19 页](http://static.cninfo.com.cn/finalpage/2026-03-26/)）。
 
-![中芯国际营业收入与毛利率趋势 2020-2025](../../charts/smic_revenue_gm_trend.png)
+![中芯国际营业收入与毛利率趋势 2020-2025](charts/smic_revenue_gm_trend.png)
 
 **Source:** [中芯国际 2025 年年度报告, 第 7 页](http://static.cninfo.com.cn/finalpage/2026-03-26/)；[2022 年年度报告, 第 9 页（提供 2020–2022 历史数据）](http://static.cninfo.com.cn/finalpage/2023-03-28/)。GM 2020–2022 为公司口径报告毛利率，2023–2025 为公司主营业务毛利率口径。
 
@@ -95,7 +95,7 @@
 
 \*东方财富 H 股 PE 数据缺失。来源：[东方财富各只代码行情, 2026-05-20](https://quote.eastmoney.com/)。
 
-![同业 P/S TTM 对比](../../charts/smic_peer_ps.png)
+![同业 P/S TTM 对比](charts/smic_peer_ps.png)
 
 **Source:** [东方财富 push2 API 各代码, 2026-05-20](https://push2.eastmoney.com/api/qt/stock/get)（数据点见上表）。
 
@@ -258,7 +258,7 @@ graph TD
 - **车规 eFlash（28nm 嵌入式闪存）持续推进** — 该平台一旦量产将填补国内车规级 MCU 工艺空白，是 2026–2027 年最值得跟踪的项目。
 - **新增专利：** 2025 年新增发明专利申请 290 项、获授权 509 项；截至 2025-12-31 累计授权专利 14,511 件（含发明专利 12,621 件）+ 集成电路布图设计权 94 件。来源：[2025 年年度报告, 第 17 页 §知识产权列表](http://static.cninfo.com.cn/finalpage/2026-03-26/)。
 
-![中芯国际晶圆代工应用分布 2024 vs 2025](../../charts/smic_app_mix.png)
+![中芯国际晶圆代工应用分布 2024 vs 2025](charts/smic_app_mix.png)
 
 **Source:** [2025 年年度报告, 第 26 页 §集成电路晶圆制造代工收入分析](http://static.cninfo.com.cn/finalpage/2026-03-26/)。
 
@@ -390,7 +390,7 @@ SMIC 采用**直销模式 (100%)** — 2025 年报披露"主营业务分销售�
 
 来源：各公司 2024–2025 年报 + [TrendForce — 2024Q4 Foundry Ranking](https://www.trendforce.com/news/2025/03/12/news-tsmc-leads-2024-pure-play-foundry-market-with-67-percent-share-smic-ranks-third-trendforce/)。
 
-![全球纯晶圆代工市场份额 2025E](../../charts/smic_foundry_share.png)
+![全球纯晶圆代工市场份额 2025E](charts/smic_foundry_share.png)
 
 **Source:** 估算综合 [TrendForce 季度榜单, 2025](https://www.trendforce.com/news/) + 各公司 2024–2025 年报披露 (TSMC 67%、SMIC 6%、UMC 4.6%、GFS 4.4%、HHGrace 2.6%)。SMIC 与 UMC、GFS 在纯代工口径下基本势均力敌、轮流位列全球第二/三。
 
@@ -473,7 +473,7 @@ quadrantChart
   - 14/12nm 国内独占性（在大陆 14nm 流片市场份额提升至 70%+）— 加贡献 USD 1-2 bn；
   - 28nm 新建产能填充（中芯东方、中芯西青、中芯京城新厂）— 加贡献 USD 2-3 bn。
 
-![中芯国际历年资本开支 (2021-2025)](../../charts/smic_capex.png)
+![中芯国际历年资本开支 (2021-2025)](charts/smic_capex.png)
 
 **Source:** [2025 年年度报告, 第 25 页 + 历年年报](http://static.cninfo.com.cn/finalpage/2026-03-26/) — 2021 capex RMB 27.5 bn (from 2021 年报)、2022 RMB 40.7 bn、2023 RMB 54.5 bn、2024 RMB 54.55 bn、2025 RMB 59.95 bn。
 

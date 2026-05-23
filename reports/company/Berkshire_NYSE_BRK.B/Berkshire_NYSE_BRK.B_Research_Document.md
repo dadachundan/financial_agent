@@ -30,7 +30,7 @@ Berkshire Hathaway Inc. is a Delaware-domiciled holding company, headquartered a
 
 **Scale and footprint.** At December 31, 2025, Berkshire and its subsidiaries employed approximately **387,800 people worldwide**, ~80% in the United States, ~19% unionised ([FY2025 10-K, Item 1](https://www.sec.gov/Archives/edgar/data/1067983/000119312526083899/brka-20251231.htm)). FY2025 total revenue was **$371.4B** (FY2024: $371.4B; FY2023: $364.5B) and net earnings attributable to Berkshire shareholders were **$66.97B** ([FY2025 10-K, Consolidated Statements of Earnings](https://www.sec.gov/Archives/edgar/data/1067983/000119312526083899/brka-20251231.htm)). Total assets at YE2025 were **$1.222 trillion** (vs. $1.154T at YE2024); Berkshire shareholders' equity was **$717.4B**, rising further to **$727.2B** at March 31, 2026 ([Q1-2026 10-Q, Consolidated Balance Sheets, filed 2026-05-04](https://www.sec.gov/Archives/edgar/data/1067983/000119312526083899/brka-20260331.htm)).
 
-![Segment net earnings](../../charts/brkb_segment_earnings.png)
+![Segment net earnings](charts/brkb_segment_earnings.png)
 *Source: [FY2025 10-K, MD&A § Results of Operations](https://www.sec.gov/Archives/edgar/data/1067983/000119312526083899/brka-20251231.htm). After-tax earnings attributable to Berkshire shareholders, excluding investment gains/losses and the 2025 $8.3B Kraft Heinz + Occidental impairments.*
 
 **How Berkshire makes money — the float engine.** The defining feature is the float: net policyholder funds held to pay future claims and meanwhile invested for Berkshire's benefit. Float **grew from $138B at year-end 2020 to $176B at year-end 2025** ([FY2025 10-K, Item 1 § Investments of insurance businesses](https://www.sec.gov/Archives/edgar/data/1067983/000119312526083899/brka-20251231.htm); reiterated in the [2025 annual letter, p10](https://www.berkshirehathaway.com/2025ar/2025ar.pdf)). Because Berkshire's combined property-and-casualty businesses have generated an underwriting profit in most years over the past two decades — FY2025 P&C combined ratio of 87.1% per Abel's letter, vs. five-year average of 90.7% — float has historically had a **negative cost** (i.e., the insurance subsidiaries are paid to hold the money). That money plus shareholder capital funds a $297.8B equity portfolio (the "core 4" of Apple, American Express, Coca-Cola, Moody's plus five Japanese sōgō shōsha) and a $321B short-term U.S. Treasury Bill book — the largest non-government holder of T-Bills outside money-market funds ([FY2025 10-K, Note 4](https://www.sec.gov/Archives/edgar/data/1067983/000119312526083899/brka-20251231.htm)).
@@ -52,7 +52,7 @@ Berkshire Hathaway Inc. is a Delaware-domiciled holding company, headquartered a
 
 Source: [Yahoo Finance peer pages, accessed 2026-05-20](https://finance.yahoo.com/quote/BRK-B/key-statistics).
 
-![P/B vs. P&C peers](../../charts/brkb_pb_peers.png)
+![P/B vs. P&C peers](charts/brkb_pb_peers.png)
 *Source: [Yahoo Finance, 2026-05-20](https://finance.yahoo.com/quote/BRK-B/key-statistics).*
 
 P/B is the right anchor for Berkshire because (a) the equity portfolio is marked-to-market through GAAP earnings each quarter, making P/E swing wildly on market moves Berkshire neither caused nor monetised ([FY2025 10-K, Item 7A § Market Risk Disclosures](https://www.sec.gov/Archives/edgar/data/1067983/000119312526083899/brka-20251231.htm)), and (b) a meaningful share of intrinsic value sits in retained-earnings compounding inside BHE and BNSF (capex-heavy regulated assets) and inside subsidiaries whose private-market value is well above book (PCC, See's, GEICO's brand). Buffett himself moved Berkshire's narrative away from book value over the last decade for exactly that reason ([2025 annual letter — "intrinsic value vs. book value" preface](https://www.berkshirehathaway.com/2025ar/2025ar.pdf)) — but as a relative gauge against P&C peers, P/B captures the equity-cushion-to-market discipline well.
@@ -228,7 +228,7 @@ One of six Class I freight railroads in North America (Union Pacific, BNSF, CSX,
 
 Four regulated US utilities (PacifiCorp, MidAmerican Energy, Nevada Power, Sierra Pacific) serving 5.4M retail customers; five US interstate gas pipelines (BHE GT&S, Northern Natural, Kern River) with ~20,900 miles and 21.6 Bcf/day capacity; UK distribution (Northern Powergrid — 4M customers); Alberta transmission (AltaLink — 85% of Alberta population); 6,400 MW of independent renewable projects; HomeServices of America (real-estate brokerage with 35,000 agents and a 1,400-office franchise network); 75% LNG ([FY2025 10-K, Item 1 § BHE](https://www.sec.gov/Archives/edgar/data/1067983/000119312526083899/brka-20251231.htm)). FY2025: total revenues $26.3B, net earnings attributable to Berkshire **$3.98B** (+6.7%), driven by lower PacifiCorp wildfire-loss accruals (US utilities $2.10B) and natural gas pipelines $1.15B ([FY2025 10-K, MD&A § BHE](https://www.sec.gov/Archives/edgar/data/1067983/000119312526083899/brka-20251231.htm)). **Competitive advantage: yes — regulated rate-base monopoly.** Each US utility has an exclusive service territory; allowed-return mechanisms; capex translates to rate base. PacifiCorp's wildfire-litigation exposure is the swing factor — Abel acknowledged "PacifiCorp's settlements related primarily to the 2020 Labor Day fires" and that "PacifiCorp is not an insurer of last resort" ([2025 annual letter, p13](https://www.berkshirehathaway.com/2025ar/2025ar.pdf); see also [Insurance Journal, "PacifiCorp Pays $575M to Settle Oregon, California Wildfire Claims", 2026-03-09](https://www.insurancejournal.com/magazines/mag-features/2026/03/09/860626.htm)). **Closest competitors:** NextEra Energy (NEE), Duke (DUK), Southern (SO).
 
-![BRK book value growth](../../charts/brkb_book_value.png)
+![BRK book value growth](charts/brkb_book_value.png)
 *Source: [FY2015–FY2025 10-Ks](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001067983&type=10-K&dateb=&owner=include&count=40) and [Q1-2026 10-Q](https://www.sec.gov/Archives/edgar/data/1067983/000119312526202243/brka-20260331.htm).*
 
 ### 4.4 Manufacturing, service, and retailing — 50+ businesses
@@ -258,14 +258,14 @@ FY2025: revenues **$214.3B**, pre-tax earnings $17.5B, net earnings attributable
 
 ### 4.5 The equity portfolio ($297.8B at YE2025)
 
-![Top equity holdings](../../charts/brkb_equity_holdings.png)
+![Top equity holdings](charts/brkb_equity_holdings.png)
 *Source: [2025 annual letter, p15-16](https://www.berkshirehathaway.com/2025ar/2025ar.pdf). All positions disclosed; 2025 dividends in millions.*
 
 The portfolio is unusually concentrated: the **five largest holdings = 65%** of the equity book at YE2025 (vs. 71% at YE2024 — partly the Apple trim, partly the Chevron rotation). Apple, American Express, Coca-Cola, Moody's are the "core 4" Abel committed to in his letter; the five Japanese sōgō shōsha (Mitsubishi, Itochu, Mitsui, Marubeni, Sumitomo) are a second cluster financed in yen. The portfolio also includes equity-method positions in Kraft Heinz (27.5%) and Occidental Petroleum (26.9%, common; plus an $8.5B liquidation-value preferred at 8% coupon and warrants on 83.9M shares at $59.59 strike) ([FY2025 10-K, Note 4 & Note 5](https://www.sec.gov/Archives/edgar/data/1067983/000119312526083899/brka-20251231.htm)).
 
 The 2025 $5.0B impairment of Kraft Heinz and $5.7B impairment of Occidental common are both flagged as "other-than-temporary" in the GAAP sense — the carrying values were brought down to quoted market — but Abel's letter said clearly: *"While we currently have no intention of disposing of any Occidental common stock, in our judgment, the unrealized loss was other than temporary"* ([2025 annual letter, p14](https://www.berkshirehathaway.com/2025ar/2025ar.pdf); [FY2025 10-K, Note 5 — Equity Method Investments](https://www.sec.gov/Archives/edgar/data/1067983/000119312526083899/brka-20251231.htm)). So the impairments do not signal an exit, but they do signal that Berkshire is more public-equity-portfolio-quiet than Buffett-era Berkshire.
 
-![Cash vs. equity portfolio](../../charts/brkb_cash_vs_equity.png)
+![Cash vs. equity portfolio](charts/brkb_cash_vs_equity.png)
 *Source: [FY2025 10-K, Note 4 & MD&A](https://www.sec.gov/Archives/edgar/data/1067983/000119312526083899/brka-20251231.htm).*
 
 The cash + UST position is now **$369.0B** (Insurance & Other segment), up from $321.7B at YE2024 ([FY2025 10-K, MD&A § Liquidity and Capital Resources](https://www.sec.gov/Archives/edgar/data/1067983/000119312526083899/brka-20251231.htm)). Abel: "There will undoubtedly be incremental opportunities to deploy our owners' capital without compromising Berkshire's resilience. My role is to ensure our liquidity levels and capital deployment remain intentional and deliberate. We will always aim for ownership of productive businesses over U.S. Treasuries" ([2025 annual letter, p10](https://www.berkshirehathaway.com/2025ar/2025ar.pdf)).
@@ -411,7 +411,7 @@ Berkshire's competitors must be enumerated segment-by-segment; no single "Berksh
 4. **Decentralised operating model attracts seller-friendly M&A.** Family-owned businesses (Clayton 2003, See's 1972, Marmon 2008, Bell Labs 2025) often choose Berkshire over PE because no integration disruption, no debt, no buyer's-remorse exit.
 5. **AAA-equivalent balance sheet — the "fortress."** Abel: *"We will remain an asset, not a risk, to America and the global financial system. Our cash and U.S. Treasury holdings now exceed $370 billion."* This is the deepest moat in property catastrophe reinsurance — when Berkshire writes a single-event $1-2B layer, the counterparty knows the claim will be paid.
 
-![BRK vs S&P500 10yr](../../charts/brkb_vs_sp500.png)
+![BRK vs S&P500 10yr](charts/brkb_vs_sp500.png)
 *Source: [2025 annual letter, "Berkshire's Performance vs. the S&P 500" table, p19-20](https://www.berkshirehathaway.com/2025ar/2025ar.pdf).*
 
 **Competitive vulnerabilities:**
@@ -449,7 +449,7 @@ Berkshire's "TAM" is best framed as the **capital-allocation runway** — i.e., 
 
 **Forecast growth rate.** Berkshire's per-share market value compounded at **19.7% annually from 1965 to 2025** vs. 10.5% for the S&P 500 ([2025 annual letter, p19-20 "Berkshire's Performance vs. the S&P 500" table](https://www.berkshirehathaway.com/2025ar/2025ar.pdf)). **Forward-looking compounding is structurally lower because of size** — Abel said so explicitly ([2025 annual letter, p5-6](https://www.berkshirehathaway.com/2025ar/2025ar.pdf)). A reasonable forward 5-10-year per-share value-growth range is **6-10% annually**, comprising: ~6-7% growth from BHE + BNSF + insurance underwriting + MSR organic; 1-2 pp from equity-portfolio dividends + buybacks; 1-2 pp from opportunistic re-rating of book value if $369B cash is redeployed at >10% ROE. Above that requires a mega-deal or a market dislocation enabling large equity-portfolio additions.
 
-![Float growth](../../charts/brkb_float.png)
+![Float growth](charts/brkb_float.png)
 *Source: [FY2025 10-K, Item 1 § Investments of insurance businesses](https://www.sec.gov/Archives/edgar/data/1067983/000119312526083899/brka-20251231.htm) and [2025 annual letter, p10](https://www.berkshirehathaway.com/2025ar/2025ar.pdf).*
 
 ---

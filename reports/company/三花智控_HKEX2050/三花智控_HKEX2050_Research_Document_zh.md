@@ -39,7 +39,7 @@
 
 **5 年财务趋势 (2021–2025)：**
 
-![三花智控 营收与毛利率](../../charts/sanhua_revenue_margin.png)
+![三花智控 营收与毛利率](charts/sanhua_revenue_margin.png)
 
 Source: [浙江三花智能控制股份有限公司 2025 年年度报告, 第 7、15 页](https://static.cninfo.com.cn/finalpage/2026-03-24/1225026522.PDF)；[2024 年年度报告, 第 7、12–13 页](https://static.cninfo.com.cn/finalpage/2025-03-27/1224011247.PDF)；[2022 年年度报告, 第 13 页](https://static.cninfo.com.cn/finalpage/2023-04-29/1216738795.PDF)。
 
@@ -193,7 +193,7 @@ FY2025 该板块收入 **124.27 亿元**（占比 40.07%）、同比 +9.14%；�
 
 ### 4.4 收入结构图
 
-![三花智控 分产品营收结构 (2021–2025)](../../charts/sanhua_segment_revenue.png)
+![三花智控 分产品营收结构 (2021–2025)](charts/sanhua_segment_revenue.png)
 
 Source: [2025 年年度报告, 第 15 页](https://static.cninfo.com.cn/finalpage/2026-03-24/1225026522.PDF) 与 [2024 年年度报告, 第 12 页](https://static.cninfo.com.cn/finalpage/2025-03-27/1224011247.PDF) 分产品收入构成数据。
 
@@ -328,7 +328,7 @@ pie title FY2025 营收 — 前 5 客户与其他
 
 ### 7.5 TTM P/E 同业对比
 
-![三花智控 TTM P/E 对比](../../charts/sanhua_pe_comp.png)
+![三花智控 TTM P/E 对比](charts/sanhua_pe_comp.png)
 
 Source: 各公司 TTM P/E 数据来自缓存的市场行情快照（[002050.SZ](https://qt.gtimg.cn/q=sz002050)、可比公司同源）。
 
@@ -353,7 +353,7 @@ Source: 各公司 TTM P/E 数据来自缓存的市场行情快照（[002050.SZ](
 - **整车热管理 TAM 估算 ~RMB 1,800–2,000 亿**（全球）
 - 公司 2025 汽车零部件营收 124.27 亿元 → 估算整体市占率 6–7%；车规 EXV 等单一产品的市占率显著更高（年报口径全球第一）
 
-![三花智控 NEV 热管理 TAM 估算](../../charts/sanhua_tam.png)
+![三花智控 NEV 热管理 TAM 估算](charts/sanhua_tam.png)
 
 Source: 全球 NEV 销量历史数据来自 [2025 年年度报告, 第 12 页](https://static.cninfo.com.cn/finalpage/2026-03-24/1225026522.PDF)（引 MarkLines 与乘联会数据）；2026E–2028E 销量与单车价值量为内部预估，仅供示意。
 

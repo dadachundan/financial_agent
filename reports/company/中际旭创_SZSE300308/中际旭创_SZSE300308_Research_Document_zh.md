@@ -33,13 +33,13 @@
 
 **地域分布。** 公司业务高度国际化：2025 年境外收入 RMB 346.37 亿元 (90.58%)，境内收入 RMB 36.03 亿元 (9.42%)，境外销售额同比增速 67.20%，远高于境内的 14.52%（[2025 年年度报告, 第 24 页](https://static.cninfo.com.cn/finalpage/2026-03-31/1225056459.PDF)）。境外销售回款率 98%，主要终端客户位于北美与欧洲——典型是 NVIDIA、Google、Meta、Amazon、Microsoft 等北美超大规模云厂商 (hyperscaler / CSP) 及其设备整合商。
 
-![营业收入 & 归母净利润](../../charts/innolight_revenue_gm.png)
+![营业收入 & 归母净利润](charts/innolight_revenue_gm.png)
 
 来源：[中际旭创 2025 年年度报告, 第 7 页](https://static.cninfo.com.cn/finalpage/2026-03-31/1225056459.PDF)。
 
 **规模指标。** 2025 年营业收入 RMB 382.40 亿元，同比增长 60.25%；归母净利润 RMB 107.97 亿元，同比增长 108.78%；扣非归母净利润 RMB 107.10 亿元，同比增长 111.31%；经营活动产生的现金流量净额 RMB 108.96 亿元，同比增长 244.31%；加权 ROE 升至 43.84%（2024 年为 31.23%）；总资产 RMB 452.89 亿元，归母净资产 RMB 297.65 亿元，资产负债率 30.18%（[2025 年年度报告, 第 7 页 / 第 23 页](https://static.cninfo.com.cn/finalpage/2026-03-31/1225056459.PDF)）。员工总数 11,623 人，其中研发人员 2,169 人（占 18.66%），博士 39 人、硕士 394 人（[2025 年年度报告, 第 27 页](https://static.cninfo.com.cn/finalpage/2026-03-31/1225056459.PDF)）。报告期末光通信收发模块的设计产能 2,806 万只、产量 2,376 万只、销量 2,109 万只，毛利率 42.61%（同比 +7.96 pct）。
 
-![季度营业收入 & 归母净利润](../../charts/innolight_quarterly.png)
+![季度营业收入 & 归母净利润](charts/innolight_quarterly.png)
 
 来源：[2025 年年度报告, 第 7-9 页 (季度数据)](https://static.cninfo.com.cn/finalpage/2026-03-31/1225056459.PDF)；[2026 年一季度报告, 第 3 页](https://static.cninfo.com.cn/finalpage/2026-04-17/1225111941.PDF)。
 
@@ -168,7 +168,7 @@ pie title FY2025 营业收入 — 前 5 大客户集中度
 
 **集中度风险定性。** 单一客户 (A) 占比 24.06% 已**显著超过 20% 的预警阈值**，前 5 客户 75.98% 远超 50% 的高风险阈值——本指标在第 9 节风险评估中**列为公司首要风险**。
 
-![境外/境内 收入构成](../../charts/innolight_geo_mix.png)
+![境外/境内 收入构成](charts/innolight_geo_mix.png)
 
 来源：[2025 年年度报告, 第 24 页](https://static.cninfo.com.cn/finalpage/2026-03-31/1225056459.PDF)。
 
@@ -191,7 +191,7 @@ pie title FY2025 营业收入 — 前 5 大客户集中度
 - **数通光模块**：2026 年全球市场规模有望达 USD 228 亿元；2030 年增长至 USD 414 亿元；2025-2030 CAGR ~20%。其中 800G + 1.6T 在 2026 年合计市场规模 USD 146 亿元，占整体市场 64%；3.2T 模块从 2028 年起逐步起量 ([2025 年年度报告, 第 16 页](https://static.cninfo.com.cn/finalpage/2026-03-31/1225056459.PDF))。
 - **电信光模块**：2026 年市场规模 USD 53 亿元；2030 年 USD 70 亿元；CAGR ~7%。整体进入低速增长阶段。
 
-![Lightcounting 数通光模块 TAM 预测](../../charts/innolight_tam.png)
+![Lightcounting 数通光模块 TAM 预测](charts/innolight_tam.png)
 
 来源：[2025 年年度报告, 第 17 页 图 4 — 引自 Lightcounting](https://static.cninfo.com.cn/finalpage/2026-03-31/1225056459.PDF)。
 
@@ -326,7 +326,7 @@ quadrantChart
 
 **10. 全球经济衰退 + 流动性收紧 (中)**。如果美联储 / 欧央行长期维持紧缩，叠加美国/欧洲经济衰退，超大规模云厂 capex 将比当前一致预期更为保守；同时高估值科技股估值面临系统性压缩。光模块作为"AI 主题代表性资产"将放大宏观下行风险。缓解：公司现金流强劲 (2025 经营性现金流 RMB 108.96 亿元) + 资产负债率仅 30.18% + 在手货币资金 RMB 122 亿元 ([2026 Q1 报告, 第 7 页](https://static.cninfo.com.cn/finalpage/2026-04-17/1225111941.PDF))，财务稳健性可应对中期周期波动。
 
-![研发投入与营收占比](../../charts/innolight_rd.png)
+![研发投入与营收占比](charts/innolight_rd.png)
 
 来源：[2025 年年度报告, 第 27 页](https://static.cninfo.com.cn/finalpage/2026-03-31/1225056459.PDF) (注：研发投入占营收比下降至 4.38% 主要是营收基数快速膨胀，绝对额仍同比 +25.8%)。
 

@@ -42,7 +42,7 @@
 
 **估值解读**：21.22× 的 TTM P/E 处于行业正利润可比公司的中下区间，**低于行业正 P/E 中位数 (~27×)**，但需注意公司 2025 年净利润中含 RMB ~14 亿非经常性损益 (主要来自华电新能上市公允价值变动收益)，**扣非 TTM P/E 约 28.7×**，与行业中位数基本持平。我们倾向认为公司当前估值处于"输变电与煤炭板块平价、多晶硅板块隐含为正" 的位置：① 输变电高端装备业务订单饱满 (2025 年国内输变电签约 562 亿元 +14.5%、国际 USD 20 亿 +68%)，可视为 "基本面型" 估值锚；② 多晶硅业务自 2025 年下半年开始减亏 (2025 年三季度后 N 型复投料均价上涨至 5.32 万元/吨，行业 "反内卷" 推动减亏明显，[通威股份 2025Q3 减亏 86.68%](https://www.yicai.com/news/102879608.html)、[大全能源 2025 年净亏损同比收窄 50%+](https://finance.sina.com.cn/jjxw/2026-02-26/doc-inhpemqe1284512.shtml))，但 2025 年仍计提资产减值损失合计 9.76 亿元；③ P/B 1.82× 与同业 (国电南瑞 3.85×、东方电气 2.66×) 相比偏低，反映市场对多晶硅与煤炭板块的资产质量打折 [(2025 年年度报告, 第 8 页)](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-15/600089_20260415_PNB1.pdf)。**对长期投资者，估值并不昂贵，但需要承担多晶硅产业周期波动的下行风险与煤价波动风险**。
 
-![2020–2025 营业收入、归母净利润与综合毛利率](../../charts/tbea_revenue_profit_trend.png)
+![2020–2025 营业收入、归母净利润与综合毛利率](charts/tbea_revenue_profit_trend.png)
 
 数据来源：[特变电工 2025 年年度报告, 第 8 页](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-15/600089_20260415_PNB1.pdf)、[2024 年年度报告, 第 8 页](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-04-21/600089_20250421_5DRH.pdf)、[2022 年年度报告, 第 7 页](https://static.cninfo.com.cn/finalpage/2023-04-24/1216540533.PDF)。
 
@@ -292,7 +292,7 @@ pie title 特变电工 2025 年销售集中度 (按客户)
 - **电子铝箔**：广东东阳光科技 (600673.SH)；
 - **电极箔**：广东东阳光、南通海星电子、广东华锋新能源 [(2025 年年度报告, 第 31 页)](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-15/600089_20260415_PNB1.pdf)。
 
-![特变电工 vs 同业可比公司 — TTM 市盈率](../../charts/tbea_peer_pe.png)
+![特变电工 vs 同业可比公司 — TTM 市盈率](charts/tbea_peer_pe.png)
 
 数据来源：[腾讯财经 sh600089 实时行情, 2026-05-21](https://qt.gtimg.cn/q=sh600089) 及各股票同源 API。
 
@@ -304,11 +304,11 @@ pie title 特变电工 2025 年销售集中度 (按客户)
 
 (1) **多晶硅业务对周期价格的高敏感性** — 2023–2024 年累计减损超 40 亿元 ([新华网：特变电工 2024 年归母净利润下滑 61.37%, 2025-04-22](http://www.news.cn/energy/20250422/877d141c461b4f90ad1f8235b9ebe1e3/c.html))；(2) **煤炭板块毛利率随煤价波动幅度大** — 2025 年毛利率从 ~32% 降至 22.4%；(3) **海外业务汇率敞口** — 2025 年外币报表折算差异对其他综合收益的影响达 RMB 1.77 亿元；(4) **股权激励触发未达成** — 2022 年股票期权计划未达成行权条件，反映高管业绩绑定弱化的潜在治理风险；(5) **新材料业务竞争对手集中且激烈** — 电极箔毛利率持续承压 [(2025 年年度报告, 第 33–34, 80–84 页)](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-15/600089_20260415_PNB1.pdf)。
 
-![输变电与新能源业务 2025 营收 + 毛利率](../../charts/tbea_segment_mix_2025.png)
+![输变电与新能源业务 2025 营收 + 毛利率](charts/tbea_segment_mix_2025.png)
 
 数据来源：[特变电工 2025 年年度报告, 第 32–34 页](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-15/600089_20260415_PNB1.pdf)。
 
-![分地区收入对比 (2024 vs 2025)](../../charts/tbea_geo_mix.png)
+![分地区收入对比 (2024 vs 2025)](charts/tbea_geo_mix.png)
 
 数据来源：[特变电工 2025 年年度报告, 第 33 页](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-15/600089_20260415_PNB1.pdf)。
 

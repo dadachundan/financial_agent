@@ -27,7 +27,7 @@
 
 **估值解读：** 88× P/S 处于全球医疗器械板块极端高位，主要由三个因素驱动：(i) 国产手术机器人尚处商业化早期，市场以「中国版 Intuitive Surgical」叙事进行远期定价，2024-2030 中国手术机器人 CAGR 预计 33.9%（[弗若斯特沙利文，载招股章程 p.158](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000030_c.pdf)）；(ii) 招股阶段腾讯、ADIA、UBS、华夏基金等基石投资者背书加深稀缺感；(iii) 港股 18A 章下 Pre-revenue/早期商业化生物科技股通常以管线及临床里程碑定价。本报告将该高估值列入风险因素（详见第 9 节）。
 
-![收入与毛利率](../../charts/jingfeng_revenue_gm.png)
+![收入与毛利率](charts/jingfeng_revenue_gm.png)
 
 *资料来源：[精锋医疗招股章程, p.24-26](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000030_c.pdf)。*
 
@@ -194,7 +194,7 @@ graph TD
 
 根据弗若斯特沙利文报告，公司在中国的「已授权专利数量及专利申请量在中国手术机器人公司中**排名第一**」（招股章程 p.388）。截至 2025 年 6 月，公司研发团队按核心产品划分：MP 系列 156 人、SP 系列 64 人，计划在 2-3 年内分别扩展至 170-190 人与 75-95 人（[招股章程 p.502-504](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000030_c.pdf)）。研发人员中 35% 以上持硕士或博士学位（招股章程「业务」p.848）。
 
-![专利组合](../../charts/jingfeng_patents.png)
+![专利组合](charts/jingfeng_patents.png)
 
 *资料来源：[精锋医疗招股章程, p.949-960](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000030_c.pdf)。*
 
@@ -217,7 +217,7 @@ graph TD
 
 **地域分布演变：** 2023 年与 2024 年全部收入来自中国市场；2025 年上半年随 CE 认证后海外销售启动，欧盟贡献 24.3 百万元（16.3%）、其他国家（含日韩、东盟、中东等）贡献 36.4 百万元（24.3%），中国占比降至 59.4%（[招股章程 p.26](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000030_c.pdf)）。海外占比一年内从 0% 跃升至 40%，是营收结构的最显著变化。
 
-![1H25 收入地域](../../charts/jingfeng_revenue_geo.png)
+![1H25 收入地域](charts/jingfeng_revenue_geo.png)
 
 *资料来源：[精锋医疗招股章程, p.26](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000030_c.pdf)。*
 
@@ -231,7 +231,7 @@ graph TD
 
 精锋采用《上市规则》第 18A 章「未盈利生物科技公司」通道上市，引入 **13 家基石投资者**，按发售价 HK$43.24 计算合计认购约 1 亿美元（约总募集额的 65%）（[招股章程「基石投资者」p.492-507](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000030_c.pdf)）：
 
-![基石投资者认购额](../../charts/jingfeng_cornerstone.png)
+![基石投资者认购额](charts/jingfeng_cornerstone.png)
 
 *资料来源：[精锋医疗招股章程, p.492-498](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000030_c.pdf)。*
 
@@ -278,7 +278,7 @@ graph TD
 
 ### 中国市场规模
 
-![中国手术机器人 TAM](../../charts/jingfeng_tam.png)
+![中国手术机器人 TAM](charts/jingfeng_tam.png)
 
 *资料来源：[弗若斯特沙利文，载招股章程 p.159](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000030_c.pdf)。*
 
@@ -406,7 +406,7 @@ quadrantChart
 
 招股章程「未来计划」明确将 IPO 募资约 2.0% 用于「持续优化远程手术的控制台」——这与基石投资者腾讯的潜在战略协同点契合（5G 通信 + 云基础设施 + 医疗 AI）。腾讯认购 1,000 万美元基石，未来在云通信、AI 影像识别、远程教学等领域存在战略联动空间，但目前尚无具体商业合作公告披露。
 
-![IPO 募资用途](../../charts/jingfeng_use_of_proceeds.png)
+![IPO 募资用途](charts/jingfeng_use_of_proceeds.png)
 
 *资料来源：[精锋医疗招股章程, p.500-508](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000030_c.pdf)。*
 
@@ -440,7 +440,7 @@ quadrantChart
 - 研发开支同比 2023→2024 上升 32%，但 1H24→1H25 几乎持平（约 9,600 万元），表明研发已进入「优化迭代」阶段而非新平台开发的爆发期；
 - 净亏损从 2023 年 2.13 亿元 → 2024 年 2.19 亿元 → 1H2025 年 8,910 万元（YoY 收窄 33%），亏损收窄主要来自收入增长与毛利绝对值上升。
 
-![R&D vs. 净亏损](../../charts/jingfeng_rd_loss.png)
+![R&D vs. 净亏损](charts/jingfeng_rd_loss.png)
 
 *资料来源：[精锋医疗招股章程, p.24-25](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000030_c.pdf)。*
 
@@ -455,7 +455,7 @@ quadrantChart
 
 ### 估值同业比较
 
-![同业 P/S 比较](../../charts/jingfeng_peers_ps.png)
+![同业 P/S 比较](charts/jingfeng_peers_ps.png)
 
 *资料来源：估值数据基于公开市场行情（2026-01 月底）、Intuitive Surgical 与微创医疗机器人公开财报，公司收入数据来自[精锋医疗招股章程, p.24](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000030_c.pdf)。*
 

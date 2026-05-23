@@ -29,7 +29,7 @@ Geographically, Credo is headquartered in San Jose, California (110 Rio Robles),
 
 Scale: at end-FY2025 Credo reported 749 full-time employees globally, total assets of $809.3 million, total shareholders' equity of $681.6 million, an accumulated deficit of $83.2 million, and 171.2 million ordinary shares outstanding ([10-K FY2025, balance sheet](https://www.sec.gov/Archives/edgar/data/1807794/000162828025033813/crdo-20250503.htm)). The Q3 FY2026 10-Q reported $1.3 billion in cash and short-term investments after a $722.9 million net inflow from an At-The-Market equity offering completed during the nine-month period ([Q3 FY2026 10-Q, cash-flow statement](https://www.sec.gov/Archives/edgar/data/1807794/000162828026014017/crdo-20260131.htm)). On a TTM basis through Q3 FY2026, revenue is $1.07 billion (Q3 FY26 $407.0M + Q2 FY26 $268.0M + Q1 FY26 $223.1M + Q4 FY25 $170.0M) and net income is $337.4 million.
 
-![Revenue and gross margin trend](../../charts/crdo_revenue_gm.png)
+![Revenue and gross margin trend](charts/crdo_revenue_gm.png)
 *Source: [Credo 10-K FY2025, p. 78](https://www.sec.gov/Archives/edgar/data/1807794/000162828025033813/crdo-20250503.htm); [Q3 FY2026 8-K earnings release, 2026-03-02](https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm). FY2026E sums Q1–Q3 FY26 actuals plus the Q4 FY26 guidance midpoint of $430M.*
 
 **Valuation snapshot.** As of 2026-05-20, CRDO trades at $181.53 per share with a market capitalisation of $33.5 billion, an enterprise value of $29.9 billion (cash net of debt), 184.4 million diluted shares outstanding, a trailing-twelve-month P/E of 99.1×, a forward P/E of 32.9×, and a TTM price-to-sales of 31.3× ([Yahoo Finance — CRDO key statistics, 2026-05-20](https://finance.yahoo.com/quote/CRDO/key-statistics/)). The 52-week range is $59.00–$213.80, i.e. the stock has roughly tripled over the past year as the AEC ramp went from "promising" to "category-defining." The TTM P/E of 99× is high but not extreme for what it represents: a company whose revenue grew 126% in FY2025 and is on track to grow ≈ 200% in FY2026, expanding gross margin into the high-60s and operating margin from a loss to ≈ 32% in the most recent quarter. On forward earnings the multiple compresses to 33×, which is roughly in line with the consensus AI-infrastructure peer set. The TTM P/S of 31× is the more striking number, but the forward P/S (implied) on $1.3 billion of FY26 revenue is ≈ 26×, and on consensus FY27 revenue of ≈ $1.85–2.0 billion that compresses to high-teens — again, a level that AI-infrastructure peers also command.
@@ -125,7 +125,7 @@ graph TD
 
 **Product-portfolio evolution chart:**
 
-![Revenue mix evolution](../../charts/crdo_revenue_mix.png)
+![Revenue mix evolution](charts/crdo_revenue_mix.png)
 *Source: [10-K FY2025, p. 78 — income statement](https://www.sec.gov/Archives/edgar/data/1807794/000162828025033813/crdo-20250503.htm); 9M FY2026 mix illustrative (Credo does not disaggregate product sales between AEC, IC and other categories).*
 
 ---
@@ -209,7 +209,7 @@ Credo's competitive set spans five categories: vertical-integration giants (Broa
 
 **Positioning matrix.** On the price/feature/scale axes that matter to hyperscaler procurement teams: Credo wins on **price for performance** (n-1 process node, lower wafer cost), wins on **system-level integration** (AEC as a fully-engineered cable rather than a chip kit), is at parity on **roadmap pace** (matches Broadcom/Marvell at 800G, leads at AEC), and trails on **breadth** (Broadcom and Marvell sell across switching, optical, custom-ASIC, and connectivity; Credo is connectivity-only).
 
-![Peer valuation comparison](../../charts/crdo_peer_valuation.png)
+![Peer valuation comparison](charts/crdo_peer_valuation.png)
 *Source: [Yahoo Finance — peer key statistics, 2026-05-20](https://finance.yahoo.com/quote/CRDO/key-statistics/).*
 
 **Competitive advantages — synthesised.** (i) Systems-product moat in AECs — Credo is the first / leading volume supplier of AEC-as-product to the largest North-American hyperscalers, and switching costs are high once a customer has qualified Credo's cable inside a production fabric. (ii) n-1 process-node cost advantage — gross margin of 68.5% at peak volume is consistent with structural cost advantage versus competitors built on 3 nm SerDes. (iii) Marvell-storage talent and customer relationships — the founding team's customer Rolodex is impossible to replicate. (iv) Multi-product play around a single SerDes IP base — the same IP supports AEC, DSP, retimer, line-card PHY, chiplet, and IP-licensing revenue, which spreads R&D cost over a wider product portfolio than pure-play retimer or AEC vendors achieve.
@@ -272,13 +272,13 @@ Credo's serviceable connectivity TAM has been redrawn several times in three yea
 
 **13. Taiwan geopolitical disruption.** TSMC dependence and the fact that a significant fraction of Credo's assembly partners are Taiwan-based creates concentrated geographic supply-chain risk. Mitigants: industry-wide problem (would affect Broadcom, Marvell, NVIDIA equally); incremental second-source qualifications underway across the industry but not at Credo specifically.
 
-![Operating leverage trajectory](../../charts/crdo_opex_leverage.png)
+![Operating leverage trajectory](charts/crdo_opex_leverage.png)
 *Source: [10-K FY2025, MD&A — Results of Operations](https://www.sec.gov/Archives/edgar/data/1807794/000162828025033813/crdo-20250503.htm); [Q3 FY2026 10-Q, MD&A](https://www.sec.gov/Archives/edgar/data/1807794/000162828026014017/crdo-20260131.htm).*
 
-![Quarterly revenue ramp](../../charts/crdo_quarterly_rev.png)
+![Quarterly revenue ramp](charts/crdo_quarterly_rev.png)
 *Source: Credo quarterly 8-K earnings releases, [Q1 FY25 (2024-09-04)](https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm) through [Q3 FY26 (2026-03-02)](https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm); Q4 FY26 guidance midpoint from same.*
 
-![End-customer mix Q3 FY26](../../charts/crdo_customer_mix.png)
+![End-customer mix Q3 FY26](charts/crdo_customer_mix.png)
 *Source: [Q3 FY2026 10-Q, MD&A — end-customer concentration table](https://www.sec.gov/Archives/edgar/data/1807794/000162828026014017/crdo-20260131.htm).*
 
 ---

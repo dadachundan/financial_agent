@@ -31,7 +31,7 @@ Vertiv Holdings Co (NYSE: VRT) is the largest pure-play vendor of critical digit
 
 **Scale and financial intensity.** FY2025 revenue of **$10,229.9 M** was up 27.7% YoY (vs. $8,011.8 M in FY2024) — Vertiv's revenue base has doubled in three years from $4,998.1 M in FY2021 and more than tripled in five from $4,370.6 M in FY2020. FY2025 gross margin was 36.3% (vs. 36.6% in FY2024 — essentially flat as operational leverage was absorbed by tariff cost inflation), adjusted operating margin was ~21.0% (vs. 19.6% in FY2024), net income reached $1,332.8 M (FY2024: $495.8 M, distorted by a $449.2 M non-cash warrant-liability remark), adjusted free cash flow was **$1,887 M (+66% YoY)**, and the company ended the year with $1,728.4 M cash and net leverage of ~0.5× ([Vertiv Q4 2025 Earnings Release, 2026-02-11](https://www.sec.gov/Archives/edgar/data/0001674101/000167410126000006/exhibit991vrt02112026.htm)).
 
-![Net Sales & Gross Margin, FY2020–FY2025](../../charts/vrt_revenue_gm.png)
+![Net Sales & Gross Margin, FY2020–FY2025](charts/vrt_revenue_gm.png)
 *Source: [Vertiv 2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/0001674101/000167410126000008/vrt-20251231.htm); [Vertiv 2022 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/0001674101/000162828023005248/vrt-20221231.htm) for FY2020–FY2022.*
 
 The single most important operating disclosure for the investment thesis is the **order backlog**: $15.0 B as of December 31, 2025, **+109% YoY** vs. $7.2 B at FY2024 ([Vertiv 2025 10-K, Item 1 Business — Backlog](https://www.sec.gov/Archives/edgar/data/0001674101/000167410126000008/vrt-20251231.htm)). Q4 2025 organic orders grew 252% YoY (book-to-bill of ~2.9×) and trailing-twelve-month organic orders grew 81% ([Vertiv Q4 2025 Earnings Release, 2026-02-11](https://www.sec.gov/Archives/edgar/data/0001674101/000167410126000006/exhibit991vrt02112026.htm)). The majority of backlog is firm and expected to convert within 12–18 months, giving high visibility into FY2026–FY2027 revenue. Vertiv added approximately 34,000 employees globally as of year-end 2025 and continues to expand capacity for switchgear, busway, prefab, and liquid-cooling product lines in the US, Mexico, Italy, India, and China.
@@ -321,7 +321,7 @@ Vertiv operates inside the **data-center physical infrastructure (DCPI)** indust
 
 **(1) Hyperscaler AI capex.** This is the entire story. Top-5 US hyperscale + AI-cloud capex (Amazon, Microsoft, Google, Meta, Oracle, plus the AI-native CoreWeave/Nebius cohort) is on track for **~$660–830 B in 2026**, vs. ~$388 B in 2025 and ~$246 B in 2024 — a ~70% YoY step-up in 2026, of which an estimated 60%+ is power-infrastructure (not GPUs) ([CreditSights hyperscaler capex 2026 estimates](https://know.creditsights.com/insights/technology-hyperscaler-capex-2026-estimates/); [Futurum AI Capex 2026: The $690B Infrastructure Sprint](https://futurumgroup.com/insights/ai-capex-2026-the-690b-infrastructure-sprint/); [Evertiq, 2026-05-06](https://evertiq.com/news/2026-05-06-ai-boom-pushes-hyperscaler-capex-towards-usd-830-billion-in-2026)). Microsoft has guided $190 B (~130% YoY growth), Google $180–190 B (>100% YoY), Meta $125–145 B (~85% YoY), and Amazon over $230 B.
 
-![Top-5 US Hyperscaler & AI Cloud Capex (illustrative)](../../charts/vrt_hyperscaler_capex.png)
+![Top-5 US Hyperscaler & AI Cloud Capex (illustrative)](charts/vrt_hyperscaler_capex.png)
 *Source: [CreditSights, 2026](https://know.creditsights.com/insights/technology-hyperscaler-capex-2026-estimates/); [Futurum Group, 2026](https://futurumgroup.com/insights/ai-capex-2026-the-690b-infrastructure-sprint/); [Evertiq, 2026-05-06](https://evertiq.com/news/2026-05-06-ai-boom-pushes-hyperscaler-capex-towards-usd-830-billion-in-2026). Figures aggregate Big-Four hyperscaler + Oracle disclosed/guided capex.*
 
 **(2) Rack-density step-change.** A traditional cloud rack draws 8–15 kW; an NVIDIA H100/H200 rack draws 30–50 kW; a GB200 NVL72 rack draws ~132 kW; a GB300 NVL72 rack draws ~142 kW. Each rack density step changes the power-delivery architecture (from 277/480V AC to potentially 800V DC distribution), the thermal architecture (air → rear-door liquid → direct-to-chip → immersion), and the rack/cabinet ecosystem. Vertiv's reference-design partnership with NVIDIA puts it inside every one of these architectural transitions.
@@ -416,7 +416,7 @@ quadrantChart
 
 In the **DCPI category** Vertiv is #1 or co-#1 with Schneider Electric globally. In **precision cooling** specifically, Vertiv holds ~23% global share vs. Schneider at ~22% ([Introl Blog, 2025](https://introl.com/blog/vertiv-schneider-eaton-cooling-solutions-comparison-ai-data-centers)). In **liquid cooling specifically**, Vertiv and Schneider are the named global leaders ([MarketsandMarkets, 2025](https://www.marketsandmarkets.com/ResearchInsight/data-center-liquid-cooling-market.asp)). In **large UPS** the market splits roughly Vertiv/Schneider/Eaton in the Americas with Huawei/Vertiv/Schneider in APAC and Schneider/Vertiv/Legrand in EMEA. In **switchgear** Vertiv via E&I is a top-3 vendor for data-center applications.
 
-![Peer Valuation Snapshot](../../charts/vrt_peer_val.png)
+![Peer Valuation Snapshot](charts/vrt_peer_val.png)
 *Source: [Yahoo Finance key statistics, 2026-05-20](https://finance.yahoo.com/quote/VRT/key-statistics). P/S column scaled ×5 for visibility on the bar chart; label shows raw P/S.*
 
 ---
@@ -509,16 +509,16 @@ Vertiv's serviceable obtainable market — the portion the company can realistic
 
 ## 10. Charts and Supporting Visuals
 
-![Adjusted Operating Margin Expansion](../../charts/vrt_aop_margin.png)
+![Adjusted Operating Margin Expansion](charts/vrt_aop_margin.png)
 *Source: [Vertiv Q4 2025 Earnings Release, 2026-02-11](https://www.sec.gov/Archives/edgar/data/0001674101/000167410126000006/exhibit991vrt02112026.htm); [Vertiv 2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/0001674101/000167410126000008/vrt-20251231.htm); [Vertiv 2022 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/0001674101/000162828023005248/vrt-20221231.htm). Adjusted operating margin excludes intangible amortization and contingent consideration per Vertiv's non-GAAP definitions.*
 
-![Adjusted Free Cash Flow Trajectory](../../charts/vrt_fcf.png)
+![Adjusted Free Cash Flow Trajectory](charts/vrt_fcf.png)
 *Source: [Vertiv Q4 2025 Earnings Release, 2026-02-11](https://www.sec.gov/Archives/edgar/data/0001674101/000167410126000006/exhibit991vrt02112026.htm).*
 
-![FY2025 Revenue Mix](../../charts/vrt_segment_mix.png)
+![FY2025 Revenue Mix](charts/vrt_segment_mix.png)
 *Source: [Vertiv 2025 10-K, MD&A & Note 3 Revenue](https://www.sec.gov/Archives/edgar/data/0001674101/000167410126000008/vrt-20251231.htm).*
 
-![Order Backlog Trajectory](../../charts/vrt_backlog.png)
+![Order Backlog Trajectory](charts/vrt_backlog.png)
 *FY2023, FY2024 backlog figures disclosed by Vertiv in 10-K filings; quarterly trajectory is illustrative based on management commentary on quarterly calls; FY2024 Q4 = $7.2 B and FY2025 Q4 = $15.0 B are the formally disclosed anchors. Source: [Vertiv 2025 10-K, Item 1 — Backlog](https://www.sec.gov/Archives/edgar/data/0001674101/000167410126000008/vrt-20251231.htm); [Vertiv Q4 2025 Earnings Release](https://www.sec.gov/Archives/edgar/data/0001674101/000167410126000006/exhibit991vrt02112026.htm); [Vertiv Q1 2026 Earnings Release](https://www.sec.gov/Archives/edgar/data/0001674101/000162828026026379/q12026exhibit991vrt04222026.htm).*
 
 ---

@@ -45,7 +45,7 @@
 
 来源：[智谱招股章程, 2025-12-30, p.14 & p.11](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000018_c.pdf)
 
-![收入与毛利率走势](../../charts/zhipu_revenue_gm_trend.png)
+![收入与毛利率走势](charts/zhipu_revenue_gm_trend.png)
 
 *Source: [智谱招股章程, 2025-12-30, p.14](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000018_c.pdf)*
 
@@ -211,7 +211,7 @@ graph TD
 
 按招股章程口径，智谱的客户群以**大型央企、国资金融机构、政府部门、互联网大厂、行业头部企业**为主，少量 C 端 SaaS / 开发者订阅。
 
-![客户集中度趋势](../../charts/zhipu_customer_concentration.png)
+![客户集中度趋势](charts/zhipu_customer_concentration.png)
 
 *Source: [智谱招股章程, 2025-12-30, p.20](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000018_c.pdf)*
 
@@ -271,7 +271,7 @@ graph TD
 
 ### 市场规模
 
-![中国 AI 软件市场规模预测](../../charts/zhipu_tam.png)
+![中国 AI 软件市场规模预测](charts/zhipu_tam.png)
 
 *Source: [IDC：2025–2030 中国 AI 软件市场预测, 2025-05](https://www.qianzhan.com/analyst/detail/220/250529-9ff4abb8.html)*
 
@@ -312,7 +312,7 @@ graph TD
 
 智谱在中国独立通用大模型开发商中排名第一 (6.6% 市场份额，2024)；在所有通用大模型开发商中排名第二，仅次于综合云厂商百度 ([智谱招股章程, 2025-12-30, p.10](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000018_c.pdf))。
 
-![2024 中国通用大模型市场份额](../../charts/zhipu_market_share.png)
+![2024 中国通用大模型市场份额](charts/zhipu_market_share.png)
 
 *Source: 智谱市场份额引自 [智谱招股章程, 2025-12-30, p.10](https://www.hkexnews.hk/listedco/listconews/sehk/2025/1230/2025123000018_c.pdf)；其他厂商份额为根据 [IDC 中国 AI 大模型解决方案市场 2024 报告](https://finance.sina.com.cn/stock/hkstock/hkstocknews/2025-04-29/doc-ineuvhrx5723120.shtml) 数据匡算示意。具体厂商份额数字以 IDC 公开报告为准。*
 

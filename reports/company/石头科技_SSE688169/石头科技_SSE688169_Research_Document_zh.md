@@ -48,7 +48,7 @@
 - **全球覆盖：** 产品销售至 170 多个国家和地区，累计智能扫地机器人销量超过 2,500 万台（同前，第 22 页）。
 - **市场地位：** 根据 [IDC Worldwide Quarterly Smart Vacuum Robotics Tracker, 2026-03-13](https://www.prnewswire.com/news-releases/roborock-becomes-the-worlds-no-1-smart-cleaning-robot-brand-according-to-idc-302712187.html)，公司 2025 全年家用清洁机器人整体出货 580 万台，份额 17.7%，连续三年位列全球第一；其中智能扫地机器人 (RVC) 全年份额达 21.7%（IDC 全年口径）/ H2 2025 达 27.0%（IDC 半年高位），美国、德国、韩国三大市场份额均排名第一。
 
-![营业收入与毛利率趋势](../../charts/roborock_revenue_gm_trend.png)
+![营业收入与毛利率趋势](charts/roborock_revenue_gm_trend.png)
 
 来源：[石头科技 2021/2022/2023/2024/2025 年度报告](https://static.cninfo.com.cn/finalpage/2026-04-23/1225147552.PDF)（cninfo 各年度年报"主要会计数据"章节）。
 
@@ -288,7 +288,7 @@ pie title FY2025 营业收入地区分布 (RMB 亿)
 - **境外：** RMB 104.42 亿，毛利率 48.15%，同比 +63.46%。
 - **境内：** RMB 82.39 亿，毛利率 35.07%，同比 +48.96%（国补政策助推）。
 
-![境内 vs 境外营业收入](../../charts/roborock_geo_split.png)
+![境内 vs 境外营业收入](charts/roborock_geo_split.png)
 
 来源：[石头科技 2025 年年度报告, 第 54 页](https://static.cninfo.com.cn/finalpage/2026-04-23/1225147552.PDF)。
 
@@ -342,7 +342,7 @@ pie title FY2025 营业收入地区分布 (RMB 亿)
 - **中国清洁电器市场：** 根据奥维云网 (AVC) 推总，2025 年中国清洁电器零售额 RMB 471 亿、同比 +11.3%，零售量 3,550 万台、同比 +17.0%，是 2025 年家电市场（整体 -4.3%）唯一量额双增的品类（同前，第 16 页）。
 - **全球智能割草机器人：** 公司未引用具体数字。根据 IDC 与 Strategy Analytics 的 2024/2025 报告，全球 RLM 出货约 200 万台，市场约 USD 12 亿，预计 2025–2030 年 CAGR 25%+。
 
-![全球智能扫地机器人厂商市场份额](../../charts/roborock_market_share.png)
+![全球智能扫地机器人厂商市场份额](charts/roborock_market_share.png)
 
 来源：["IDC：中国品牌包揽前五，2025 年前三季度全球扫地机器人出货量发布", 东方财富, 2025-10](https://my.idc.com/getdoc.jsp?containerId=prCHC53972025) + IDC Smart Vacuum Robotics Tracker, 2025。
 
@@ -452,7 +452,7 @@ quadrantChart
 - 2025 Q1-Q3：石头 27.0%，追觅 14.4%，科沃斯 13.7%（["IDC：中国品牌包揽前五", 东方财富, 2025-10](https://my.idc.com/getdoc.jsp?containerId=prCHC53972025)）。
 - 2025 全年：石头 21.7%，追觅升至第二、科沃斯下滑至第三（["全球扫地机器人市场格局", 21 经济网, 2026-05-11](https://www.21jingji.com/article/20260511/herald/4e095cda73dcf6181ad62738654e368f.html)）。
 
-![营收 / 销售费用 / 研发费用 / 净利润趋势](../../charts/roborock_opex_pressure.png)
+![营收 / 销售费用 / 研发费用 / 净利润趋势](charts/roborock_opex_pressure.png)
 
 来源：[石头科技 2023/2024/2025 年度报告](https://static.cninfo.com.cn/finalpage/2026-04-23/1225147552.PDF)。
 

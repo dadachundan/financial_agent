@@ -26,7 +26,7 @@ ADI ended FY2025 (year ended November 1, 2025) with **$11.02 B in revenue**, up 
 
 Geographically, FY2025 revenue split (by ship-to / distributor location, not always end-customer location) was United States $3.24 B (29%), China $2.86 B (26%), Europe $2.29 B (21%), Rest of Asia $1.49 B (13%), Japan $0.99 B (9%) and Rest of Americas $0.16 B (1%) ([ADI FY2025 10-K, Geographic Revenue](https://www.sec.gov/Archives/edgar/data/0000006281/000000628125000153/adi-20251101.htm)). China was the fastest-growing major region in FY2025, up 34% YoY. End-market mix in FY2025 was Industrial 45%, Automotive 30%, Consumer 13%, Communications 13% — a deliberate B2B-skewed mix that management calls out as ~87% of revenue ([ADI 2026 Proxy Statement](https://www.sec.gov/Archives/edgar/data/0000006281/000000628126000010/)).
 
-![ADI Revenue and Gross Margin](../../charts/adi_revenue_gm.png)
+![ADI Revenue and Gross Margin](charts/adi_revenue_gm.png)
 *Source: [ADI FY2025 10-K, Results of Operations](https://www.sec.gov/Archives/edgar/data/0000006281/000000628125000153/adi-20251101.htm); [ADI 4Q21 8-K earnings release](https://www.sec.gov/Archives/edgar/data/0000006281/000000628121000280/adiq421exhibit991.htm) (FY2021 revenue $7.318 B includes only ~10 weeks of Maxim post-close); [ADI Q2 FY2026 8-K earnings release](https://www.sec.gov/Archives/edgar/data/0000006281/000000628126000050/adi2q26exhibit991earnings.htm) (TTM 2Q26 revenue derived as FY25 − 1H FY25 + 1H FY26 = $11.020 B − $5.063 B + $6.784 B = $12.741 B).*
 
 **Valuation snapshot (as of 2026-05-20).** ADI closed at **$392.71**, equivalent to a **market capitalization of ~$191.7 B** and an **enterprise value of ~$206.9 B** on 488.2 M diluted shares outstanding ([Yahoo Finance — ADI Key Statistics, accessed 2026-05-20](https://finance.yahoo.com/quote/ADI/key-statistics/)). Key multiples — **TTM P/E 71.8×, forward P/E 29.6×, TTM P/S 16.3×, P/B 5.7×, EV/EBITDA 37.9×, dividend yield 0.98%, beta 1.19** — sit meaningfully above ADI's own long-term averages and above both Texas Instruments (TTM P/E 51.5×, P/S 14.9×) and the broader analog-semi peer group (NXPI TTM P/E 29.5× / P/S 6.2×; IFNNY 83.8× / 6.8×; MCHP 425.7× / 10.8× — distorted by trough TTM earnings; STM 405.5× / 4.7× — also trough-distorted). The reference S&P Semiconductors index has historically traded in the high-20s to mid-30s TTM P/E.
@@ -154,7 +154,7 @@ pie title FY2025 Revenue by End Market
 
 Source: [ADI FY2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/0000006281/000000628125000153/adi-20251101.htm).
 
-![ADI End Market Revenue](../../charts/adi_endmarket.png)
+![ADI End Market Revenue](charts/adi_endmarket.png)
 *Source: [ADI FY2025 10-K Results of Operations](https://www.sec.gov/Archives/edgar/data/0000006281/000000628125000153/adi-20251101.htm) for FY2023–FY2025; [Q2 FY26 8-K earnings release](https://www.sec.gov/Archives/edgar/data/0000006281/000000628126000050/adi2q26exhibit991earnings.htm) for 1H FY26.*
 
 **Customer concentration — disclosed and low.** The FY2025 10-K's Concentrations of Risk note (Note 2l) discloses that one distributor accounted for **>10% of total consolidated revenue** in fiscal 2023, but the FY2025 10-K specifically marks the table noting that no distributor exceeded 10% in fiscal 2025 or fiscal 2024 ("Revenue for this distributor was not greater than 10% of total revenue for this period"; see the XBRL footnote near the top of [the FY2025 10-K filing](https://www.sec.gov/Archives/edgar/data/0000006281/000000628125000153/adi-20251101.htm)). No individual *end* customer is disclosed as 10%+ of revenue. This is materially lower customer concentration than peers like NXPI (where Apple and several automotive Tier-1s exceed 10%) or single-thesis specialists like Cirrus Logic. **The combination of (i) ~75,000 SKUs across 100,000+ end customers, (ii) the largest single channel being distributors (where end-customer concentration is diffused across thousands of long-tail buyers), and (iii) the dominance of the Industrial end market — itself a fragmented buyer base — produces one of the lowest customer-concentration profiles in semiconductors.** This is an underrated structural strength of the ADI model: no single customer "owns" ADI's growth rate.
@@ -213,7 +213,7 @@ ADI competes with a focused set of high-performance analog suppliers and a broad
 
 5. **Microchip Technology (NASDAQ: MCHP, market cap ~$51 B)** — MCU-led but increasingly broad analog/mixed-signal. Currently in deep cyclical trough — TTM P/E 425× / P/S 10.8×.
 
-![ADI Peer Valuation](../../charts/adi_peer_valuation.png)
+![ADI Peer Valuation](charts/adi_peer_valuation.png)
 *Source: [Yahoo Finance — Key Statistics for ADI, TXN, MCHP, NXPI, STM, IFNNY, accessed 2026-05-20](https://finance.yahoo.com/quote/ADI/key-statistics/). MCHP and STM P/E figures are inflated by cyclically depressed TTM earnings.*
 
 **Adjacent / cross-platform competitors:**
@@ -275,7 +275,7 @@ ADI's served addressable market spans the high-performance segments of the analo
 - **Communications analog** (wireline + wireless infrastructure): ~$15 B in 2025, growing rapidly (>10% CAGR) on AI-data-center build-out. ADI's FY2025 Communications revenue of $1.38 B implies **~9% share**; the Q2 FY2026 79% YoY growth suggests share gains accelerating as AI infrastructure ramps.
 - **Consumer analog**: ~$25–30 B (broad category including audio, portable, home appliances). ADI's $1.43 B FY2025 Consumer revenue is **~5% share** — a relatively small position by design, given the strategic deprioritization of consumer in favor of B2B markets.
 
-![ADI Quarterly Revenue](../../charts/adi_quarterly.png)
+![ADI Quarterly Revenue](charts/adi_quarterly.png)
 *Source: [ADI FY2024–FY2025 10-Q and 10-K filings](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000006281&type=10-Q&dateb=&owner=include&count=40); [ADI Q1 and Q2 FY2026 8-K earnings releases](https://www.sec.gov/Archives/edgar/data/0000006281/000000628126000050/adi2q26exhibit991earnings.htm). FY25 quarter-of-year revenue computed by subtraction.*
 
 **ADI's serviceable market and share-gain path.** Putting the four end-market sub-TAMs together yields an addressable market of roughly **$100 B today, growing toward $135–155 B by 2030**. Against ADI's FY2025 revenue of $11.02 B, that implies ~11% share of served TAM today — comfortably room for the kind of mid-to-high-single-digit revenue growth management has historically guided to through the cycle. The Q2 FY2026 booking strength, the AI-data-center inflection in Communications, and the industrial-automation / Aerospace / Healthcare secular tailwinds together support a credible path to a **$15 B+ revenue run-rate by FY2028–FY2029**, implying steady cycle-average share gains of 50–100 basis points per year.
@@ -328,10 +328,10 @@ ADI's served addressable market spans the high-performance segments of the analo
 
 ### Capital Return Track Record (Context)
 
-![ADI Capital Return](../../charts/adi_capital_return.png)
+![ADI Capital Return](charts/adi_capital_return.png)
 *Source: [ADI 10-K filings FY2022–FY2025](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000006281&type=10-K&dateb=&owner=include&count=40), [Q2 FY26 8-K](https://www.sec.gov/Archives/edgar/data/0000006281/000000628126000050/adi2q26exhibit991earnings.htm). Trailing-twelve-month figures from Q2 FY2026 release: dividends $1.998 B, buybacks $3.045 B, total $5.043 B; prior-year figures are author approximations derived from 10-K cash-flow statements.*
 
-![ADI FCF](../../charts/adi_fcf.png)
+![ADI FCF](charts/adi_fcf.png)
 *Source: [ADI FY2025 10-K Cash Flow Statement](https://www.sec.gov/Archives/edgar/data/0000006281/000000628125000153/adi-20251101.htm); [Q2 FY26 8-K](https://www.sec.gov/Archives/edgar/data/0000006281/000000628126000050/adi2q26exhibit991earnings.htm) — TTM 2Q26 FCF $4.565 B.*
 
 The capital-return engine — ~$24 B returned over the last decade, with a 9.5% 10-year dividend CAGR ([ADI 2026 Proxy](https://www.sec.gov/Archives/edgar/data/0000006281/000000628126000010/)) — provides a meaningful yield floor for the equity even in adverse scenarios. The November 24, 2025 dividend declaration of $0.99/share quarterly (subsequently raised to $1.10 with the Q2 FY26 declaration) and the $9.65 B remaining repurchase authorization at FY2025 year-end ([ADI FY2025 10-K, Issuer Purchases](https://www.sec.gov/Archives/edgar/data/0000006281/000000628125000153/adi-20251101.htm)) demonstrate continued capital-return commitment through the cycle.

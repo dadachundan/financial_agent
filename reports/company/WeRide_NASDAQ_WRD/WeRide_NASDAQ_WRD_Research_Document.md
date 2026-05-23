@@ -29,7 +29,7 @@ WeRide is **globally deployed**: as of the 20-F filing date (April 2026), the co
 
 Headcount stood at **3,801 employees globally as of December 31, 2025**, up sharply from 3,093 (2024) and 718 (2023). The biggest driver of growth has been R&D data-processing staff hired to deliver intelligent-data services to customers and to feed WeRide's own training pipeline ([WRD 2025 20-F, Item 6.D Employees](https://www.sec.gov/Archives/edgar/data/2002510/000110465926047323/0001104659-26-047323-index.htm)).
 
-![Revenue mix + gross margin](../../charts/wrd_revenue_gm_trend.png)
+![Revenue mix + gross margin](charts/wrd_revenue_gm_trend.png)
 
 Source: [WRD 2025 Form 20-F, Item 5.A](https://www.sec.gov/Archives/edgar/data/2002510/000110465926047323/0001104659-26-047323-index.htm).
 
@@ -239,7 +239,7 @@ Forecasts diverge widely; we triangulate three credible recent estimates.
 - **Goldman Sachs** (cited via Reuters 2024) put the global robotaxi market at **~US$ 25 bn by 2030 and ~US$ 280 bn by 2035** under a base case ([Reuters, 2024-09-13](https://www.reuters.com/business/autos-transportation/global-robotaxi-fleet-could-reach-145-million-vehicles-by-2030-goldman-2024-09-13/)).
 - **WeRide's IPO prospectus** (Frost & Sullivan industry section) sized the **Chinese L4 robotaxi market at ~RMB 660 bn (~US$ 90 bn) by 2030** ([WRD F-1 prospectus, August 2024](https://www.sec.gov/Archives/edgar/data/2002510/000119312524197868/d830334df1a.htm)).
 
-![Global robotaxi TAM](../../charts/wrd_tam.png)
+![Global robotaxi TAM](charts/wrd_tam.png)
 
 Source: triangulated from [McKinsey 2023](https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/autonomous-drivings-future-convenient-and-connected) and [Reuters, "Global robotaxi fleet…", 2024-09-13](https://www.reuters.com/business/autos-transportation/global-robotaxi-fleet-could-reach-145-million-vehicles-by-2030-goldman-2024-09-13/).
 
@@ -354,7 +354,7 @@ Penetration is **regulator-gated**. WeRide management's framing is to prioritize
 
 ## 9. RISK ASSESSMENT
 
-![WRD P&L profile](../../charts/wrd_pl_trend.png)
+![WRD P&L profile](charts/wrd_pl_trend.png)
 
 Source: [WRD 2025 20-F, Item 5.A](https://www.sec.gov/Archives/edgar/data/2002510/000110465926047323/0001104659-26-047323-index.htm).
 

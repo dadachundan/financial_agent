@@ -31,7 +31,7 @@ The company operates **two reportable segments plus one discontinued / spin-off 
 
 3. **Cloud Services Business (GPU-as-a-service — being spun off as "ChronoScale").** A GPU-rental business operating out of leased colocation in Colorado, Minnesota, and Utah. Generated $84.4M in FY25 revenue ([10-K FY2025](https://www.sec.gov/Archives/edgar/data/1144879/000114487925000021/apld-20250531.htm)). On **May 5, 2026**, APLD closed a reverse-merger contribution into Nasdaq-listed Ekso Bionics, renamed **ChronoScale Corporation (NASDAQ: CHRN)**, with APLD retaining ~97% ownership and contributing $15.75M of additional cash ([Applied Digital ChronoScale closing 8-K, 2026-05-05](https://www.sec.gov/Archives/edgar/data/1144879/000149315226021333/ex99-1.htm)).
 
-![Revenue trend](../../charts/apld_revenue_trend.png)
+![Revenue trend](charts/apld_revenue_trend.png)
 
 *Source: [Applied Digital 10-K FY2025, segment note](https://www.sec.gov/Archives/edgar/data/1144879/000114487925000021/apld-20250531.htm) and [Q3 FY2026 10-Q, condensed statement of operations](https://www.sec.gov/Archives/edgar/data/1144879/000114487926000030/apld-20260228.htm). FY2026 column is the nine-month period ended Feb 28, 2026; Cloud Services has been reclassified back into continuing operations per the 10-Q.*
 
@@ -214,7 +214,7 @@ The HPC Hosting Business is APLD's investment thesis. Each "AI Factory" is a pur
 - A&R Macquarie UPA → $5B perpetual-preferred facility (October 2025)
 - A3 investment-grade refinancing on CoreWeave's project debt (April 2026), which materially improves the credit profile of APLD's $2.35B 9.250% Senior Secured Notes
 
-![Capacity by campus](../../charts/apld_capacity_mw.png)
+![Capacity by campus](charts/apld_capacity_mw.png)
 
 *Source: capacities and statuses compiled from [10-K FY2025](https://www.sec.gov/Archives/edgar/data/1144879/000114487925000021/apld-20250531.htm), [Q3 FY2026 earnings release, 2026-04-08](https://www.sec.gov/Archives/edgar/data/1144879/000114487926000029/apldq326earningsrelease.htm), [Polaris Forge 2 press release, 2025-10-22](https://www.globenewswire.com/news-release/2025/10/22/3171024/0/en/Applied-Digital-Announces-5-Billion-AI-Factory-Lease-with-U-S-Based-Investment-Grade-Hyperscaler-at-Polaris-Forge-2-ND-Campus.html), and [ELN-04 lease press release, 2025-08-29](https://www.globenewswire.com/news-release/2025/08/29/3141455/0/en/Applied-Digital-Finalizes-Additional-150MW-Lease-with-CoreWeave-in-North-Dakota.html).*
 
@@ -345,7 +345,7 @@ quadrantChart
 
 ### Peer valuation comparison
 
-![Peer P/S](../../charts/apld_ps_peers.png)
+![Peer P/S](charts/apld_ps_peers.png)
 
 *Source: [Yahoo Finance APLD key statistics](https://finance.yahoo.com/quote/APLD/key-statistics) and peer pages, pulled 2026-05-20 via yfinance. P/E is "n/m" for all peers except IREN because none are GAAP-profitable on a TTM basis. Peer median P/S of 31.0x is shown as dashed line.*
 
@@ -437,15 +437,15 @@ The triangulation lands on **$30–50B of annual U.S. addressable lease procurem
 
 16. **Recession / capex contraction.** A 2009-style hyperscaler capex contraction would freeze the uncontracted pipeline (Delta Forge 1 and the three additional speculative sites). Existing leases are largely insulated but capex-funded growth is not. **High-impact, low-probability.**
 
-![Capex funding stack](../../charts/apld_capex_stack.png)
+![Capex funding stack](charts/apld_capex_stack.png)
 
 *Source: [10-K FY2025](https://www.sec.gov/Archives/edgar/data/1144879/000114487925000021/apld-20250531.htm), [Q3 FY2026 10-Q](https://www.sec.gov/Archives/edgar/data/1144879/000114487926000030/apld-20260228.htm), [Q3 FY2026 earnings release, 2026-04-08](https://www.sec.gov/Archives/edgar/data/1144879/000114487926000029/apldq326earningsrelease.htm), and [Polaris Forge 2 lease press release, 2025-10-22](https://www.globenewswire.com/news-release/2025/10/22/3171024/0/en/Applied-Digital-Announces-5-Billion-AI-Factory-Lease-with-U-S-Based-Investment-Grade-Hyperscaler-at-Polaris-Forge-2-ND-Campus.html). Macquarie preferred is a maximum committed facility size; drawn amount is materially less.*
 
-![Dilution](../../charts/apld_share_dilution.png)
+![Dilution](charts/apld_share_dilution.png)
 
 *Source: [10-K FY2023, 10-K FY2024, 10-K FY2025, and Q3 FY2026 10-Q](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001144879&type=10-K&dateb=&owner=include&count=40) — basic shares issued at each respective period-end.*
 
-![Net loss trend](../../charts/apld_net_loss.png)
+![Net loss trend](charts/apld_net_loss.png)
 
 *Source: [10-K FY2023](https://www.sec.gov/Archives/edgar/data/1144879/000114487923000176/apld-20230531.htm), [10-K FY2024](https://www.sec.gov/Archives/edgar/data/1144879/000114487924000216/apld-20240531.htm), [10-K FY2025](https://www.sec.gov/Archives/edgar/data/1144879/000114487925000021/apld-20250531.htm), and [Q3 FY2026 10-Q](https://www.sec.gov/Archives/edgar/data/1144879/000114487926000030/apld-20260228.htm). 9M FY2026 net loss attributable to common stockholders is $138.5M; significant components include $59.7M write-down on Cloud Services held-for-sale reclassification and stock-based compensation acceleration.*
 

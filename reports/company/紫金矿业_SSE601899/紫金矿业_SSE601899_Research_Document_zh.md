@@ -43,7 +43,7 @@
 - 每 10 股派现金红利 RMB 3.8（含税），含已实施的中期分红 58 亿元，全年分红总额 160 亿元
 （数据来源：[紫金矿业 2025 年年度报告 第 15 页 主要会计数据](https://static.cninfo.com.cn/finalpage/2026-03-20/)）
 
-![5-Year Financial Trend](../../charts/zijin_5yr_financials.png)
+![5-Year Financial Trend](charts/zijin_5yr_financials.png)
 Source：[紫金矿业 2025 年年报 报告摘要 第 10 页](https://static.cninfo.com.cn/finalpage/2026-03-20/)
 
 **地域分布**：2025 年合并报表中境内业务营业收入 RMB 3,853.7 亿元 (毛利率 13.49%)，境外业务 RMB 1,986.8 亿元 (毛利率 26.88%)，境外毛利率显著高于境内主因海外资产以矿山品种为主、品位与规模优于多数境内矿山，而境内业务包含大量低毛利率的冶炼贸易环节（[2025 年报 第 45 页](https://static.cninfo.com.cn/finalpage/2026-03-20/)）。剔除内部抵销 RMB 2,349.7 亿元后，公司约 63% 营收来自中国大陆客户，其中 27% 来自上海黄金交易所。
@@ -272,10 +272,10 @@ Source: [紫金矿业 2025 年报 主要矿山保有资源量储量 第 20–24 
 
 2025 年公司主要通过控股子公司 **龙净环保**（福建龙净环保股份有限公司）布局光伏 + 储能配套（如拉果措 200MW + 540MWh 项目）以及通过 **福大紫金氢能科技** 布局氢能。这一板块体量小但战略意义明确：服务于"低碳矿物原料"战略愿景，并锁定锂矿与铜矿的"绿色溢价"客户（欧美 OEM 越来越要求绿色金属供应链）。
 
-![Revenue Mix by Product 2025](../../charts/zijin_revenue_mix_2025.png)
+![Revenue Mix by Product 2025](charts/zijin_revenue_mix_2025.png)
 Source：[紫金矿业 2025 年报 第 45 页 主营业务分产品](https://static.cninfo.com.cn/finalpage/2026-03-20/)
 
-![Segment Gross Profit Contribution 2025 (estimated)](../../charts/zijin_segment_gross_profit_2025.png)
+![Segment Gross Profit Contribution 2025 (estimated)](charts/zijin_segment_gross_profit_2025.png)
 Source：作者根据 [2025 年报 第 45 页 分产品营收 × 毛利率](https://static.cninfo.com.cn/finalpage/2026-03-20/) 测算（锂分项采用 Q1-2026 毛利率反推年化估算）。
 
 ### 4.8 2025 推出 / 投产 / 重定位的产品
@@ -518,7 +518,7 @@ quadrantChart
    - 海域金矿 12,000 吨/日采选投产后年产金 15–20 吨；
    - 沙坪沟钼矿建设。
 
-![Production Guidance 2024 → 2028](../../charts/zijin_production_guidance.png)
+![Production Guidance 2024 → 2028](charts/zijin_production_guidance.png)
 Source：[紫金矿业 2025 年报 报告摘要 第 10 页 2026–2028 年产量计划](https://static.cninfo.com.cn/finalpage/2026-03-20/)
 
 ### 8.4 渗透策略

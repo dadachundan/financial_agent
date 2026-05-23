@@ -36,7 +36,7 @@ SanDisk is the second-listed life of the SanDisk brand. The original SanDisk Cor
 
 In FY2026 the mix has been transformed by an AI-driven up-cycle in NAND. Quarterly revenue moved from **US$2,308 M in Q1 FY26 → US$3,025 M in Q2 FY26 → US$5,950 M in Q3 FY26**, with the company guiding Q4 FY26 to **US$7.75 – 8.25 B**. Cumulative non-GAAP diluted EPS for Q1–Q3 FY26 reached **US$30.83**, with management guiding **US$30.00 – 33.00** for Q4 alone. Datacenter revenue in particular went from **US$197 M in Q3 FY25 to US$1,467 M in Q3 FY26** (+644.7% YoY; +233% Q/Q) [Q3 FY2026 earnings release, 2026-04-30](https://www.sec.gov/Archives/edgar/data/2023554/000162828026028879/sndkq3-26ex991xpressrelease.htm).
 
-![Revenue and gross margin, FY2023–FY2025 (carve-out)](../../charts/sndk_revenue_gm_carveout.png)
+![Revenue and gross margin, FY2023–FY2025 (carve-out)](charts/sndk_revenue_gm_carveout.png)
 
 *Source: [SanDisk FY2025 Form 10-K, MD&A pp. 47–48](https://www.sec.gov/Archives/edgar/data/2023554/000200235425000034/sndk-20250627.htm). FY2023 and FY2024 are carve-out / predecessor; FY2025 includes ~4 months as standalone post-spin.*
 
@@ -161,11 +161,11 @@ pie title FY2025 revenue by end market (US$ M)
 
 *Source: [FY2025 10-K, p. 48](https://www.sec.gov/Archives/edgar/data/2023554/000200235425000034/sndk-20250627.htm). End-market labels updated to FY2026 nomenclature in parentheses.*
 
-![End-market revenue mix, Q3 FY25 – Q3 FY26](../../charts/sndk_end_market_mix.png)
+![End-market revenue mix, Q3 FY25 – Q3 FY26](charts/sndk_end_market_mix.png)
 
 *Source: SanDisk [Q1 FY2026](https://www.sec.gov/Archives/edgar/data/2023554/000162828025050180/sndkq1fy26ex991-pressrelea.htm), [Q2 FY2026](https://www.sec.gov/Archives/edgar/data/2023554/000162828026004121/sndkq2fy26ex991-pressrelea.htm) and [Q3 FY2026](https://www.sec.gov/Archives/edgar/data/2023554/000162828026028879/sndkq3-26ex991xpressrelease.htm) earnings releases.*
 
-![Datacenter ramp by quarter](../../charts/sndk_datacenter_ramp.png)
+![Datacenter ramp by quarter](charts/sndk_datacenter_ramp.png)
 
 *Source: SanDisk Q3 FY2026 earnings release Y/Y compare table.*
 
@@ -316,15 +316,15 @@ quadrantChart
 
 ---
 
-![Balance sheet transformation, FY25 year-end → Q2 FY26](../../charts/sndk_balance_sheet.png)
+![Balance sheet transformation, FY25 year-end → Q2 FY26](charts/sndk_balance_sheet.png)
 
 *Source: [SanDisk FY2025 10-K balance sheet](https://www.sec.gov/Archives/edgar/data/2023554/000200235425000034/sndk-20250627.htm) and [Q2 FY2026 10-Q balance sheet, April 3, 2026](https://www.sec.gov/Archives/edgar/data/2023554/000162828026029401/sndk-20260403.htm). Equity = Total assets less total liabilities.*
 
-![FY2025 revenue by geography](../../charts/sndk_geo_mix.png)
+![FY2025 revenue by geography](charts/sndk_geo_mix.png)
 
 *Source: [FY2025 10-K MD&A, p. 48](https://www.sec.gov/Archives/edgar/data/2023554/000200235425000034/sndk-20250627.htm).*
 
-![FY2026 quarterly inflection: revenue and gross margin](../../charts/sndk_fy26_inflection.png)
+![FY2026 quarterly inflection: revenue and gross margin](charts/sndk_fy26_inflection.png)
 
 *Source: SanDisk [Q1 FY2026](https://www.sec.gov/Archives/edgar/data/2023554/000162828025050180/sndkq1fy26ex991-pressrelea.htm), [Q2 FY2026](https://www.sec.gov/Archives/edgar/data/2023554/000162828026004121/sndkq2fy26ex991-pressrelea.htm), [Q3 FY2026](https://www.sec.gov/Archives/edgar/data/2023554/000162828026028879/sndkq3-26ex991xpressrelease.htm) earnings releases; Q4 FY26E uses midpoint of company-issued guide ($7.75–$8.25 B revenue, 65.0–67.0% non-GAAP GM).*
 

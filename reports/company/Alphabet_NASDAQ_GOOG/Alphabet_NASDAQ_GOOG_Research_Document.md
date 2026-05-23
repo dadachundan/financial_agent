@@ -29,7 +29,7 @@ Alphabet Inc. is the holding company of **Google** and a portfolio of "Other Bet
 
 **Scale.** Consolidated FY2025 revenue was **$402.836 B**, up **15% YoY** from $350.018 B in FY2024; operating income of **$129.039 B** (32.0% margin) was up 15%, and net income of **$132.170 B** (32.8% net margin) was up **32%**, with diluted EPS of **$10.81** vs. $8.04 ([Alphabet 2025 10-K, "Executive Overview"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)). The U.S. accounted for **48%** of revenue, EMEA 29%, APAC 17% and Other Americas 6%. Operating cash flow was **$164.7 B** and Alphabet ended FY2025 with **$126.8 B** in cash, cash equivalents and short-term marketable securities against **$46.5 B** in long-term debt (post a $64.6 B debt issuance, predominantly to pre-fund the AI capex ramp) ([Alphabet 2025 10-K, "Liquidity"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)).
 
-![Alphabet revenue and operating margin trend](../../charts/goog_revenue_margin.png)
+![Alphabet revenue and operating margin trend](charts/goog_revenue_margin.png)
 Source: [Alphabet 2025 10-K, "Consolidated Statements of Income"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm) (FY2021–FY2025 revenue and operating-income line items).
 
 **The defining macro signal for 2026 is the capex step-up.** Purchases of property and equipment jumped from **$32.3 B in 2023 → $52.5 B in 2024 → $91.4 B in 2025**, and management has guided FY2026 capex to **$175–185 B** — roughly 60% servers and 40% data centres / networking — to satisfy Google Cloud demand and to scale Gemini training and inference ([Alphabet 2025 10-K, "Capital Expenditures"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); [CNBC, 2026-02-04 "Alphabet resets the bar for AI infrastructure spending"](https://www.cnbc.com/2026/02/04/alphabet-resets-the-bar-for-ai-infrastructure-spending.html)). The number is meaningful because it dwarfs every prior capital cycle in Alphabet's history and is being recovered against a cloud backlog of **$242.8 B at YE2025** and >$460 B exiting Q1 2026 ([Alphabet 2025 10-K, "Revenue Backlog"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); [Q1 2026 earnings release](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm)).
@@ -62,7 +62,7 @@ Source: [Alphabet 2025 10-K, "Consolidated Statements of Income"](https://www.se
 
 Source: [Yahoo Finance key-statistics pages, 2026-05-20](https://finance.yahoo.com/quote/GOOG/key-statistics) (peer tickers individually).
 
-![Mag-7 peer valuation snapshot](../../charts/goog_peer_valuation.png)
+![Mag-7 peer valuation snapshot](charts/goog_peer_valuation.png)
 Source: Yahoo Finance, [GOOG](https://finance.yahoo.com/quote/GOOG/), [META](https://finance.yahoo.com/quote/META/), [MSFT](https://finance.yahoo.com/quote/MSFT/), [AMZN](https://finance.yahoo.com/quote/AMZN/), [AAPL](https://finance.yahoo.com/quote/AAPL/), [NVDA](https://finance.yahoo.com/quote/NVDA/) (TTM multiples pulled 2026-05-20).
 
 **Interpretation.** At ~29× TTM and ~27× forward, GOOG trades **above its own ~23× three-year average** ([MacroTrends, GOOGL P/E history](https://www.macrotrends.net/stocks/charts/GOOGL/alphabet/pe-ratio)) but **below the Mag-7 cohort median** of ~32× — cheaper than AAPL (36.6×) and AMZN (32.2×), and much cheaper than NVDA (45.5×). The premium versus META (22×) reflects (a) Google Cloud's 63% growth versus META's narrower, ads-only model, and (b) the option value of DeepMind / Gemini / Waymo, which are not yet near peak earnings power. The discount to AAPL reflects more direct AI-disruption exposure in Search. We do not classify the stock as stretched: P/E < 50×, P/S < 15×, and earnings are still accelerating (+82% YoY in Q1 2026). However, the **forward P/E expansion** of FY2026 will be heavily dependent on Google Cloud sustaining 50%-plus growth and operating-margin discipline as capex flows into D&A — those linkages are discussed in Sections 7 and 9.
@@ -177,7 +177,7 @@ graph TD
 ```
 Source: [Alphabet 2025 10-K, Item 1 "Business"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); revenue contributions from Note 15 of the same filing.
 
-![FY2025 segment revenue mix](../../charts/goog_segment_mix.png)
+![FY2025 segment revenue mix](charts/goog_segment_mix.png)
 Source: [Alphabet 2025 10-K, Note 15 "Information about Segments"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm).
 
 ### Flagship products — competitive-advantage assessment
@@ -245,7 +245,7 @@ Alphabet does **not** disclose any customer representing 10% or more of consolid
 
 Source: [Alphabet 2025 10-K, Note 2 "Revenue Recognition — Disaggregation of Revenues"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm).
 
-![Geographic revenue mix](../../charts/goog_geo_mix.png)
+![Geographic revenue mix](charts/goog_geo_mix.png)
 Source: [Alphabet 2025 10-K, Note 2](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm).
 
 ### Go-to-market
@@ -281,15 +281,15 @@ Global advertising will pass the **$1 trillion mark in 2026 for the first time**
 
 Cloud is on an estimated **~$800 B** total addressable market trajectory for 2026 (combined IaaS, PaaS and SaaS) and **>20% annual growth** in the AI-infrastructure sub-segment ([Programming-Helper, "Cloud Computing Market Share 2026"](https://www.programming-helper.com/tech/cloud-computing-market-share-2026-aws-azure-google-cloud-analysis); [Synergy Research data summarised in HeyGoTrade, "AWS vs Google Cloud vs Azure", 2026](https://www.heygotrade.com/en/blog/aws-vs-google-cloud-vs-azure-hyperscaler-race/)). The three hyperscalers collectively account for **~68%** of enterprise cloud spend; **AWS holds ~30%, Microsoft Azure ~25%, Google Cloud ~13%** as of Q1 2026.
 
-![Cloud infrastructure share Q1 2026](../../charts/goog_cloud_share.png)
+![Cloud infrastructure share Q1 2026](charts/goog_cloud_share.png)
 Source: [Synergy Research / HeyGoTrade, "AWS vs Google Cloud vs Azure", Q1 2026](https://www.heygotrade.com/en/blog/aws-vs-google-cloud-vs-azure-hyperscaler-race/); growth rates from each issuer's Q1 2026 earnings release.
 
-![Google Cloud trajectory](../../charts/goog_cloud_trend.png)
+![Google Cloud trajectory](charts/goog_cloud_trend.png)
 Source: [Alphabet 2025 10-K, Note 15](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); [Q1 2026 earnings release](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm) (Q1'26 annualised = $20.028B × 4).
 
 The shape of the AI-infrastructure cycle is what matters: Anthropic, OpenAI / Microsoft, Meta, xAI, Alphabet and a long tail of sovereign and enterprise AI workloads are all racing to commit power, real estate and silicon for 2026–2028 deliveries. **Combined hyperscaler capex (Alphabet + Microsoft + Amazon + Meta) is on track to exceed $500 B in 2026**, of which Alphabet alone is ~$180 B ([Ferguson Wellman, "The Magnificent Capex", 2026-05-08](https://www.fergusonwellman.com/blog/2026/5/8/the-magnificent-capex-ai-infrastructure-spending-and-who-actually-benefits)). This is at least an order of magnitude larger than any prior software-infrastructure cycle in history and will determine the relative power-law positioning in the next decade.
 
-![Alphabet capex ramp](../../charts/goog_capex.png)
+![Alphabet capex ramp](charts/goog_capex.png)
 Source: [Alphabet 2025 10-K, "Investing Activities"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); FY2026E midpoint per [CNBC, 2026-02-04 "Alphabet resets the bar for AI infrastructure spending"](https://www.cnbc.com/2026/02/04/alphabet-resets-the-bar-for-ai-infrastructure-spending.html).
 
 ### 6.3 Autonomous mobility

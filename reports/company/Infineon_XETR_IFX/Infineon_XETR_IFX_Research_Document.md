@@ -26,7 +26,7 @@ Infineon Technologies AG is Germany's largest pure-play semiconductor company an
 
 For fiscal 2025 (ended 30 September 2025), Infineon reported revenue of **€14.662 billion**, down 2 percent year-on-year, with a Segment Result of €2.560 billion and a Segment Result Margin of 17.5 percent (Source: [Infineon press release INFXX202511-021, 12 Nov 2025, "FY 2025 concluded in line with expectations"](https://www.infineon.com/press-release/2025/infxx202511-021)). FY2024 — the prior baseline year — generated €14.955 billion of revenue, down 8 percent from the €16.309 billion peak of FY2023, with a Segment Result of €3.105 billion (20.8 percent margin) reflecting the broader semiconductor downturn (Source: [Infineon press release INFXX202411-020, 12 Nov 2024](https://www.infineon.com/cms/en/about-infineon/press/press-releases/2024/INFXX202411-020.html); [EQS-News corporate release on FY 2024 results](https://www.eqs-news.com/news/corporate/infineon-technologies-ag/)). Adjusted free cash flow for FY2025 was €1.803 billion, while reported free cash flow was −€1.051 billion, the latter weighed down by the €2.18 billion cash outflow for the Marvell Automotive Ethernet acquisition (Source: [Infineon FY2025 press release INFXX202511-021](https://www.infineon.com/press-release/2025/infxx202511-021)).
 
-![Revenue and Segment Result Margin trend](../../charts/infineon_xetr_revenue_margin.png)
+![Revenue and Segment Result Margin trend](charts/infineon_xetr_revenue_margin.png)
 
 *Source: Infineon "Financial Data 2020–2024" booklet for FY2020–FY2024; Infineon FY2025 press release [INFXX202511-021](https://www.infineon.com/press-release/2025/infxx202511-021) for FY2025; FY2026e midpoint reflects management's "moderate revenue growth" framing in the FY2025 outlook.*
 
@@ -37,7 +37,7 @@ Infineon organizes its business into **four operating segments**, each reporting
 - **Green Industrial Power (GIP)** — about 13 percent of FY2024 revenue. GIP supplies IGBTs and SiC modules for solar inverters, wind turbines, traction drives, industrial motor control, and energy-storage systems.
 - **Connected Secure Systems (CSS)** — about 10 percent. CSS bundles the legacy Cypress assets (PSoC microcontrollers, AIROC Wi-Fi/Bluetooth) with security ICs (OPTIGA) and NOR/SRAM/FRAM memory, addressing IoT and embedded systems.
 
-![Segment mix](../../charts/infineon_xetr_segment_mix.png)
+![Segment mix](charts/infineon_xetr_segment_mix.png)
 
 *Source: [Infineon "Financial Data 2020–2024" booklet](https://www.infineon.com/assets/row/public/documents/corporate/investors/annual-reports/2024/2024-infineon-financial-data-2020-2024-v01-00-en.pdf), segment revenue for FY2024.*
 
@@ -47,7 +47,7 @@ Geographically, Infineon is one of the most globally balanced semiconductor comp
 
 As of 30 September 2025 Infineon employed approximately **57,000 people worldwide**, down from roughly 58,060 at the end of FY2024 as the company executed a previously announced cost program in response to the cyclical downturn (Source: [Infineon FY2025 press release INFXX202511-021](https://www.infineon.com/press-release/2025/infxx202511-021)). Around 13 to 15 percent of revenue is reinvested into research and development — FY2025 R&D spend was €2.227 billion, equivalent to 15.2 percent of revenue, the highest ratio in five years and a deliberate counter-cyclical signal (Source: derived from Infineon FY2025 income statement; reconciled with the FY2025 press release on operating cost lines).
 
-![R&D intensity](../../charts/infineon_xetr_rd_intensity.png)
+![R&D intensity](charts/infineon_xetr_rd_intensity.png)
 
 *Source: Infineon income statement, FY2022–FY2025; pulled from yfinance Ticker('IFX.DE').financials, cross-checked against [FY2024 Financial Data booklet](https://www.infineon.com/assets/row/public/documents/corporate/investors/annual-reports/2024/2024-infineon-financial-data-2020-2024-v01-00-en.pdf) and the FY2025 press release.*
 
@@ -74,7 +74,7 @@ The cause of the high TTM P/E is therefore (a) cyclically depressed earnings rat
 
 **Peer comparison (TTM, Yahoo Finance / yfinance, accessed 2026-05-20):**
 
-![Peer valuation](../../charts/infineon_xetr_peer_valuation.png)
+![Peer valuation](charts/infineon_xetr_peer_valuation.png)
 
 | Company | Ticker | TTM P/E | TTM P/S |
 |---|---|---|---|
@@ -261,7 +261,7 @@ This headline number is misleading for Infineon, however, because the company ha
 - **Automotive semiconductors** are a roughly $100 billion market in 2025 expected to grow at a 7–8 percent CAGR through 2030, reaching $132–143 billion by 2030 (Source: [Mordor Intelligence — Automotive Semiconductor Market](https://www.mordorintelligence.com/industry-reports/automotive-semiconductor-market); [Yole Group "Infineon, NXP and STMicroelectronics face rising competition in $132 billion automotive semiconductor race"](https://www.yolegroup.com/press-release/infineon-technologies-nxp-and-stmicroelectronics-face-rising-competition-in-132-billion-automotive-semiconductor-race/)). The growth drivers are well known: rising semiconductor content per vehicle (an ICE car contains roughly $400–500 of chips; a battery EV $700–1,000; a Level 2+ ADAS vehicle adds another $100+), the shift from distributed to zonal/centralised E/E architectures, and software-defined vehicle features that demand far more compute and networking content. Infineon's 13.5 percent share in 2024 makes it the segment leader.
 - **Power semiconductors** (discretes plus power ICs) — roughly $50 billion in 2025 across silicon, SiC and GaN — grow at a 6–9 percent CAGR depending on the methodology used. SiC alone is forecast to reach $12.03 billion by 2030 from $3.83 billion in 2025, a 25.7 percent CAGR (Source: [MarketsandMarkets — Silicon Carbide Market 2025-2030](https://www.marketsandmarkets.com/Market-Reports/silicon-carbide-electronics-market-439.html); [Mordor Intelligence — Silicon Carbide Power Semiconductor Market](https://www.mordorintelligence.com/industry-reports/silicon-carbide-power-semiconductor-market)). GaN is smaller but faster-growing, at roughly 9 percent CAGR per Mordor.
 
-![Two growth levers — SiC market and Infineon AI data-center power](../../charts/infineon_xetr_sic_ai_growth.png)
+![Two growth levers — SiC market and Infineon AI data-center power](charts/infineon_xetr_sic_ai_growth.png)
 
 *Source: SiC market trajectory from [MarketsandMarkets Silicon Carbide Market Report 2025-2030](https://www.marketsandmarkets.com/Market-Reports/silicon-carbide-electronics-market-439.html). Infineon AI data-center power figures: management 2026 target framed in [FY2025 press release INFXX202511-021](https://www.infineon.com/press-release/2025/infxx202511-021); out-years are author extrapolation grounded in management's "significantly increased" target language, not formally guided.*
 
@@ -334,7 +334,7 @@ A clean way to size Infineon's opportunity is to add up the four segment SAMs an
 
 **AI data center power SAM:** management's own framing is the most useful here. Infineon has *significantly increased* its AI data-center revenue target with FY2025 results (Source: [Infineon FY2025 press release INFXX202511-021](https://www.infineon.com/press-release/2025/infxx202511-021); [INFXX202510-003 800V advance](https://www.infineon.com/cms/en/about-infineon/press/press-releases/2025/INFXX202510-003.html)). Within the broader server-power semiconductor market estimated at $5–8 billion in 2025, this implies Infineon is targeting a meaningful share of a fast-growing pool driven by NVIDIA Blackwell, AMD MI400 and successor generations.
 
-![Capex investment cycle](../../charts/infineon_xetr_capex.png)
+![Capex investment cycle](charts/infineon_xetr_capex.png)
 
 *Source: Infineon "Financial Data 2020-2024" booklet and FY2025 press release INFXX202511-021 for FY2020-FY2025 capex; FY2026e per FY2025 outlook. The investment cycle 2022–2026 is dominated by Dresden 300mm silicon (€5 bn) and Kulim 3 SiC (€5 bn including phase 2).*
 

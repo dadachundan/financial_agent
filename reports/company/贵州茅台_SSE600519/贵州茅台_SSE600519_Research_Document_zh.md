@@ -35,7 +35,7 @@
 
 **5 年财务趋势**：
 
-![贵州茅台 2021–2025 营收、归母净利润与酒类毛利率](../../charts/moutai_revenue_trend.png)
+![贵州茅台 2021–2025 营收、归母净利润与酒类毛利率](charts/moutai_revenue_trend.png)
 *数据来源：[贵州茅台 2021–2025 年年度报告](https://www.cninfo.com.cn/new/disclosure/stock?stockCode=600519)。营收单位为人民币亿元，毛利率为酒类毛利率。*
 
 **估值快照**。基于 2025 年报：每股基本收益 65.66 元、归属普通股股东净资产合计 2,446.38 亿元（折每股 195.36 元，按 12.5227 亿股计算）。公司股票为典型的高 ROE 蓝筹股，过去三年市净率（P/B）大致在 6–10 倍区间，市盈率（TTM P/E）通常在 18–32 倍区间运行——2025 年首次营收净利双降后，市场对其增长曲线由"长期复利"转为"低速 + 高分红回报"重估，估值中枢自 2021 年的 60+ 倍 TTM PE 下移至 2025 年的 20 倍左右量级。**具体估值倍数需结合即时市场数据独立核验**，本报告未引用经独立验证的第三方实时报价。公司 2025 年合计分红与回购金额达 711.53 亿元，对应"分红 + 回购 / 净利润"比率高达 86.43%（[贵州茅台 2025 年年度报告, 第 33 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=600519&announcementId=1224080812)），公司已从"再投资型成长股"转为"高股息防御资产"——同样的范式调整发生于全球其他长青烈酒龙头（如 Diageo、Pernod Ricard），属于结构性合理的估值重定价（valuation re-rating）。
@@ -144,10 +144,10 @@ graph TD
 
 **未来 12 个月看点**：2025 年新增基酒产能 1,800 吨（茅台酒）+ 6,940 吨（系列酒），在 2026 年陆续释放——意味着 2031–2032 年的可销售茅台酒基酒供应将增加约 4%。同时公司在 2026 年规划中明确"打造稳固金字塔型产品结构"，预示价格层次将更清晰；陈年茅台、定制酒（custom edition）的占比有望进一步提升（[贵州茅台 2025 年年度报告, 第 15–16、22 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=600519&announcementId=1224080812)）。
 
-![贵州茅台 2025 年收入结构（产品/渠道）](../../charts/moutai_revenue_mix.png)
+![贵州茅台 2025 年收入结构（产品/渠道）](charts/moutai_revenue_mix.png)
 *数据来源：[贵州茅台 2025 年年度报告, 第 10、17 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=600519&announcementId=1224080812)。*
 
-![贵州茅台基酒实际产能 2021–2025](../../charts/moutai_capacity.png)
+![贵州茅台基酒实际产能 2021–2025](charts/moutai_capacity.png)
 *数据来源：[贵州茅台 2021–2025 年年度报告](https://www.cninfo.com.cn/new/disclosure/stock?stockCode=600519)。茅台酒基酒一般在 5 年后转化为出厂酒。*
 
 ## 5. 客户与上市策略
@@ -164,7 +164,7 @@ pie title 贵州茅台 2025 年销售集中度
 
 **渠道结构**。截至 2025 年末，公司经销商共 2,479 家（境内 2,353 + 境外 126），报告期内新增 233 家、减少 23 家境内经销商——主要是系列酒新增（[贵州茅台 2025 年年度报告, 第 17 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=600519&announcementId=1224080812)）。2025 年公司渠道收入结构为：**直销 845.43 亿（占 50.09%）+ 批发代理 842.32 亿（占 49.91%）**——直销渠道首次超过批发代理，这是中国白酒行业商业模式上的标志性事件。
 
-![贵州茅台直销 vs. 批发代理渠道收入 2021–2025](../../charts/moutai_channel_shift.png)
+![贵州茅台直销 vs. 批发代理渠道收入 2021–2025](charts/moutai_channel_shift.png)
 *数据来源：[贵州茅台 2021–2025 年年度报告](https://www.cninfo.com.cn/new/disclosure/stock?stockCode=600519)。*
 
 直销渠道的崛起来自三方面：① 公司自营专卖店与商超直营的扩张；② i 茅台 数字营销平台（2025 年收入 130.31 亿）；③ 重点商超与团购合作。直销渠道毛利率（94.58%）显著高于批发代理（87.86%），每提升 1 pp 直销比例约对应营业利润提升 0.07 pp（[贵州茅台 2025 年年度报告, 第 10、17 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=600519&announcementId=1224080812)）。
@@ -179,7 +179,7 @@ pie title 贵州茅台 2025 年销售集中度
 
 **行业定义与规模**。中国白酒行业是世界上最大的烈酒（spirits）单一品类市场。2025 年全国规模以上白酒企业累计产量 354.9 万千升——较 2016 年峰值的 1,358 万千升下降约 73.86%，反映了行业进入存量调整期（[贵州茅台 2025 年年度报告, 第 15 页](https://www.cninfo.com.cn/new/disclosure/detail?stockCode=600519&announcementId=1224080812)）。
 
-![全国规模以上白酒企业累计产量 2021–2025](../../charts/moutai_industry.png)
+![全国规模以上白酒企业累计产量 2021–2025](charts/moutai_industry.png)
 *数据来源：[贵州茅台 2021–2025 年年度报告引用国家统计局数据](https://www.cninfo.com.cn/new/disclosure/stock?stockCode=600519)。注：单位为万千升（10,000 kiloliters）。*
 
 虽然总量收缩，但行业销售收入仍维持在 8,000–9,000 亿元区间——量减价升、结构升级（structural upgrade）是行业主旋律：高端（500 元以上出厂价）与次高端（200–500 元）品类持续扩张，中低端（100 元以下）品类萎缩。2024 年规上白酒销售收入 7,963.84 亿元（同比 +5.30%）、利润总额 2,508.65 亿元（同比 +7.76%），印证"量减价升"特征（[酒展网/中酒协：2024 年白酒数据：全年营收 7,963.84 亿，利润 2,508.65 亿，2025 年](https://www.jiuzhan.com/10385.html)）。
@@ -263,7 +263,7 @@ quadrantChart
 
 **市场份额分析**。按收入计算，茅台 2025 年市占率约 20%（行业销售收入约 8,000 亿元）（[新浪财经：解码 2025 白酒行业，2025-12-28](https://www.21jingji.com/article/20251228/herald/082f87cd00bf525f0f6871caad05133a.html)）；按高端白酒（500 元以上出厂价）市占率估算超过 60%，在超高端（千元以上零售价）品类中茅台几乎处于垄断地位（[前瞻产业研究院：2025 年中国白酒行业竞争格局与市场份额](https://bg.qianzhan.com/report/detail/300/250325-628bb128.html)）。
 
-![贵州茅台 2021–2025 年度现金分红总额](../../charts/moutai_dividends.png)
+![贵州茅台 2021–2025 年度现金分红总额](charts/moutai_dividends.png)
 *数据来源：[贵州茅台 2021–2025 年年度报告及历年利润分配公告](https://www.cninfo.com.cn/new/disclosure/stock?stockCode=600519)。注：包含中期分红与年度分红，部分年份含特别分红。*
 
 ## 8. 市场机会 (TAM)

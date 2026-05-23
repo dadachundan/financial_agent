@@ -41,7 +41,7 @@
 
 **TTM P/S 约 24×**（HKD 23.91 bn ÷ FY2025 收入 RMB 900.6 m ≈ HKD 980 m）——明显高于全球家用机器人 / 智能家居硬件普通可比（iRobot 历史中枢 P/S 约 0.5–1×、Roborock 港股上市后 P/S 约 5–7×）。**为什么这么贵？** 市场把卧安定位为「具身智能 + 海外渠道已跑通」的稀缺标的（pure-play embodied AI proxy），与其说在为 FY2025 销售付费，不如说在为 FY2027–2030 onero 人形保姆机器人 + Acemate AI 教练放量的远期盈利付费。可比锚点：UBTECH（HKEX:9880）2025 年 P/S 约 65–80×（亏损更深、商业化更早期）；地平线机器人（HKEX:9660）P/S 约 30–40×；Roborock（SSE:688169）2026 上半年 P/S 约 6–8× 但已稳态盈利。卧安的 ~24× P/S 处于「概念股」与「成熟硬件」之间，对应市场对 onero 保姆机器人在 2027–2028 进入消费量产、且经调整净利率维持双位数增长的隐含预期。**风险：** 若 onero 商业化时点延后或经调整净利率回落至 5% 以下，~24× P/S 易压缩至 10–15× 区间。该估值多倍数风险已纳入第 9 节风险评估。
 
-![卧安 — 收入与毛利率趋势](../../charts/woan_revenue_gross_margin.png)
+![卧安 — 收入与毛利率趋势](charts/woan_revenue_gross_margin.png)
 Source：[2025 年年度业绩公告 第 1, 9 页](https://static.cninfo.com.cn/finalpage/2026-03-24/1225029550.PDF)。
 
 ---
@@ -133,7 +133,7 @@ timeline
 
 来源：[2025 年年度业绩公告 第 22 页 — 收入分析](https://static.cninfo.com.cn/finalpage/2026-03-24/1225029550.PDF)。
 
-![卧安 — 产品线收入 FY24 vs FY25](../../charts/woan_product_mix.png)
+![卧安 — 产品线收入 FY24 vs FY25](charts/woan_product_mix.png)
 
 ### 4.2 产品族谱（"一脑多形" 全景）
 
@@ -423,11 +423,11 @@ quadrantChart
 
 ## 资产负债表与现金流（补充）
 
-![卧安 — 经营开支分布](../../charts/woan_opex_breakdown.png)
+![卧安 — 经营开支分布](charts/woan_opex_breakdown.png)
 
-![卧安 — 资产负债表关键科目](../../charts/woan_balance_sheet.png)
+![卧安 — 资产负债表关键科目](charts/woan_balance_sheet.png)
 
-![卧安 — 收入按地区分布](../../charts/woan_geographic_split.png)
+![卧安 — 收入按地区分布](charts/woan_geographic_split.png)
 
 来源（全部）：[2025 年年度业绩公告，2026-03-24](https://static.cninfo.com.cn/finalpage/2026-03-24/1225029550.PDF)。
 

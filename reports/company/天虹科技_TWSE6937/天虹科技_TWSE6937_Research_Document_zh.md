@@ -63,7 +63,7 @@
 
 下图汇总公司 2022–2025 年合并营收与毛利率变化趋势。请留意 2025 年数字为本报告作者根据公开二手来源 (stockanalysis.com TTM revenue ~NT$2.24bn、CMoney 25Q2 单季营收 NT$512.3m 等) 拼凑估算,正本数据应以公司年报为准。
 
-![Revenue & Gross Margin Trend](../../charts/skytech_6937_revenue_margin.png)
+![Revenue & Gross Margin Trend](charts/skytech_6937_revenue_margin.png)
 
 Source: 历年数据综合自 [財報狗:半導體設備廠天虹2024喜迎歐洲訂單,雙位數增長](https://statementdog.com/news/4776)、[天虹(6937) 財務報表-營收 - Yahoo奇摩股市](https://tw.stock.yahoo.com/quote/6937.TW/revenue)、[Skytech (TPE:6937) Company Profile - Stockanalysis](https://stockanalysis.com/quote/tpe/6937/company/)。2025E 为公开来源 TTM revenue 推估,非正本年报。
 
@@ -94,7 +94,7 @@ Source: 历年数据综合自 [財報狗:半導體設備廠天虹2024喜迎歐�
 
 **用大白话讲:** 现在 100 倍的 P/E,买的不是 2025 年 NT$3.01 EPS,而是市场对 2027–2028 年订单放量后 EPS 可能回升至 NT$10+ 的"看涨期权"。如果 CoWoS/PLP/SiC 三主题落空任一条,P/E 都将被强力压缩。
 
-![Valuation vs. peers](../../charts/skytech_6937_valuation.png)
+![Valuation vs. peers](charts/skytech_6937_valuation.png)
 
 Source: 本报告作者综合 [鉅亨網 天虹 6937 簡介](https://www.cnyes.com/twstock/6937/company/profile)、[财报狗](https://statementdog.com/analysis/6937);全球设备龙头 P/E 引用自 Yahoo Finance、Bloomberg 公开页面截图区间值 (近 6 个月)。
 
@@ -212,7 +212,7 @@ Source: 综合 [TWSE 市场观察 新上市公司天虹6937](https://www.twse.co
 
 天虹的营收结构在过去 4 年里有显著变化,从"零组件为主"逐步走向"零组件与设备并重",并以设备成长率高于零组件作为主驱动。
 
-![Revenue Mix](../../charts/skytech_6937_segment_mix.png)
+![Revenue Mix](charts/skytech_6937_segment_mix.png)
 
 Source: 估算自 [富果直送 天虹科技分析](https://blog.fugle.tw/post/skytech-analysis)、[NewSight 天虹科技 第三代半導體薄膜設備大廠](https://newsight.tw/737);公司未在公开免费来源逐年正式披露此切割,本图为本报告作者根据多份二手报导拼凑估算 (estimate),实际数字以年报为准。
 
@@ -274,7 +274,7 @@ Source: 综合 [富果直送 天虹科技分析](https://blog.fugle.tw/post/skyt
 - **其他客户营收占比均低于 10%**,包括联电 (UMC)、汉磊集团 (Episil)、华润微电子 (CR Micro)、力积电 (PSMC)、世界先进 (Vanguard) 等。这是好事——客户分散度高、单一客户掉队不会造成致命冲击。
 - **2023 年中国大陆区域营收占比 45% (vs. 2022 的 30%)**——主要因第三代半导体 SiC 设备在中国大陆放量。这同时是机会与风险:机会是中国大陆 SiC 产业仍处早期高资本支出阶段,设备需求强;风险是地缘政治与美国设备出口管制可能波及到台湾设备厂的对陆销售。
 
-![Geographic Mix](../../charts/skytech_6937_geo_mix.png)
+![Geographic Mix](charts/skytech_6937_geo_mix.png)
 
 Source: [富果直送 天虹科技分析](https://blog.fugle.tw/post/skytech-analysis)。
 
@@ -313,7 +313,7 @@ Source: [富果直送 天虹科技分析](https://blog.fugle.tw/post/skytech-ana
 - **ALD + PVD 子集** 约 US$8 亿,这是天虹设备业务直接对标的市场。
 - **先进封装设备** 约 US$5 亿,且 2024–2028 年 CAGR 预估高于整体 WFE。
 
-![TAM Funnel](../../charts/skytech_6937_tam.png)
+![TAM Funnel](charts/skytech_6937_tam.png)
 
 Source: 本报告作者基于公开行业研究 (SEMI、Gartner、TechInsights 等) 的多份公开汇总数字综合估算 (estimate),非正本研究报告原始数字;读者作正式 TAM 测算时应取 SEMI World Fab Forecast 与 Gartner Semiconductor Capital Spending Forecast 之正本数字。
 
@@ -415,7 +415,7 @@ Source: 定位由本报告作者综合多份公开行业评论 ([forecastock 应
 
 ### 8.4 单季 EPS 趋势与基本面观察
 
-![Quarterly EPS](../../charts/skytech_6937_quarterly_eps.png)
+![Quarterly EPS](charts/skytech_6937_quarterly_eps.png)
 
 Source: 综合 [天虹2024 Q1 EPS 1.25元 - 财报狗](https://statementdog.com/analysis/6937/eps)、[CMoney 25Q2 EPS 0.28元](https://www.cmoney.tw/notes/note-detail.aspx?nid=979953)、[nStock 6937 EPS](https://www.nstock.tw/stock_info?stock_id=6937&status=6) 估算;部分单季数字为估算 (estimate) 而非正本季报披露。
 

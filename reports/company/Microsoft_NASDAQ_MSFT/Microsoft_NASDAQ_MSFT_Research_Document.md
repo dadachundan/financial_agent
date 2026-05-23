@@ -39,7 +39,7 @@ The business reports in three segments after an August-2024 restatement that mov
 
 Source: [Microsoft FY2025 Form 10-K — Segment Results of Operations](https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/0000950170-25-100235-index.htm).
 
-![Revenue and Operating Margin Trend](../../charts/msft_revenue_margin_trend.png)
+![Revenue and Operating Margin Trend](charts/msft_revenue_margin_trend.png)
 Source: Microsoft FY2021–FY2025 Form 10-K filings ([FY2025 10-K, Income Statements](https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/0000950170-25-100235-index.htm); [FY2021 10-K via SEC EDGAR](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=10-K&dateb=&owner=include&count=40)).
 
 **Microsoft Cloud** — a non-GAAP rollup of Microsoft 365 Commercial cloud, Azure & other cloud services, the commercial portion of LinkedIn, and Dynamics 365 — grew **23% YoY to $168.9B** in FY2025 (up from $137.7B in FY2024 and $111.6B in FY2023). Through the first nine months of FY2026, the cloud has continued to compound: Q1 FY26 $49.1B (+26%), Q2 FY26 $51.5B (+26%), Q3 FY26 $54.5B (+29%). ([Microsoft Q3 FY2026 Earnings Release](https://www.sec.gov/Archives/edgar/data/789019/000119312526191457/msft-ex99_1.htm))
@@ -212,7 +212,7 @@ Inside Azure, the **Azure OpenAI Service / AI Foundry** sits at the center of th
 
 The capacity story is the operative constraint. The Q3 FY26 release disclosed **commercial RPO of $627B (+99% YoY)** — multi-year contracted demand the company cannot fulfill until additional datacenter capacity comes online. Hood has repeatedly stated Azure will remain "capacity-constrained through at least the end of [FY2026]." Microsoft added approximately **1 GW of new datacenter capacity in Q3 FY26 alone**. ([Windows News — Q3 FY26 datacenter capacity, 2026-04-29](https://windowsnews.ai/article/microsoft-adds-1-gw-of-datacenter-capacity-in-q3-fy2026-revenue-hits-829-billion.416504); [Directions on Microsoft — Q1 FY26 cloud supply](https://www.directionsonmicrosoft.com/microsoft-q1-fy26-earnings-cloud-supply-constraints-to-last-through-at-least-june-2026/))
 
-![Azure constant-currency growth, FY24 Q1 – FY26 Q3](../../charts/msft_azure_growth.png)
+![Azure constant-currency growth, FY24 Q1 – FY26 Q3](charts/msft_azure_growth.png)
 Source: Microsoft quarterly earnings press releases ([FY26 Q3](https://www.sec.gov/Archives/edgar/data/789019/000119312526191457/msft-ex99_1.htm), [FY26 Q2](https://www.sec.gov/Archives/edgar/data/789019/000119312526027198/msft-ex99_1.htm), [FY26 Q1](https://www.sec.gov/Archives/edgar/data/789019/000119312525256310/msft-ex99_1.htm), [FY25 Q4](https://www.sec.gov/Archives/edgar/data/789019/000095017025100226/msft-ex99_1.htm), and prior).
 
 **Server products** (SQL Server, Windows Server, Visual Studio, System Center) are the on-premises license complement, still ~$25B/year and growing modestly — these revenues are increasingly tied to hybrid Azure Arc deployments. ([FY2025 10-K — Revenue by significant product and service offerings](https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/0000950170-25-100235-index.htm))
@@ -235,10 +235,10 @@ The third segment is the consumer franchise plus the search-advertising business
 - **Property and equipment, net** rose from $135.6B to $205.0B in one year (+51%) as datacenter buildouts hit the balance sheet. ([FY2025 10-K — Balance Sheet](https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/0000950170-25-100235-index.htm))
 - **Long-term debt** sits at $40.2B (down from $42.7B), giving Microsoft net cash of ~$54B even after a record capex year. ([FY2025 10-K — Balance Sheet](https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/0000950170-25-100235-index.htm))
 
-![Capital expenditures by fiscal year](../../charts/msft_capex.png)
+![Capital expenditures by fiscal year](charts/msft_capex.png)
 Source: Microsoft FY2021–FY2025 Form 10-K filings and Q3 FY2026 press release ([FY2025 10-K — Cash Flows Statements](https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/0000950170-25-100235-index.htm); [The Register — Microsoft Q3 FY26 capex, 2026-04-30](https://www.theregister.com/2026/04/30/microsoft_q3_2026/)). FY26E is implied from Q1-Q3 actuals and Q4 guided run-rate.
 
-![Microsoft Cloud revenue trend](../../charts/msft_cloud_revenue.png)
+![Microsoft Cloud revenue trend](charts/msft_cloud_revenue.png)
 Source: Microsoft FY2025 10-K and Q1–Q3 FY2026 earnings releases.
 
 ---
@@ -325,7 +325,7 @@ Microsoft competes — by its own description in the FY2025 10-K — with "softw
 | PC operating system | Apple macOS, Google ChromeOS, Linux distros | ~70% of installed PC OS share, dominant in enterprise |
 | Console / gaming | Sony PlayStation, Nintendo, Tencent (mobile) | #1 by content publishing post-Activision; #2 by console install base |
 
-![Peer TTM P/E and P/S multiples — MSFT vs GOOG, ORCL, AMZN, AAPL](../../charts/msft_peer_multiples.png)
+![Peer TTM P/E and P/S multiples — MSFT vs GOOG, ORCL, AMZN, AAPL](charts/msft_peer_multiples.png)
 Source: Yahoo Finance via yfinance, snapshot 2026-05-20 ([MSFT key statistics](https://finance.yahoo.com/quote/MSFT/key-statistics) and equivalent pages for peers).
 
 ### Competitive positioning vs. each major rival

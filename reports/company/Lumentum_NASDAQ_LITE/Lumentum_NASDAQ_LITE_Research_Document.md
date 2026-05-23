@@ -33,7 +33,7 @@ The business is highly globalised. Lumentum employed **approximately 10,562 full
 
 **Financial scale.** FY2025 net revenue was **$1,645.0 m**, up 21.0% from $1,359.2 m in FY2024 and recovering from a 23.1% prior-year decline. GAAP net income was **$25.9 m** ($0.37 diluted EPS), turning positive after a $546.5 m FY2024 GAAP loss; non-GAAP net income was $146.4 m ($2.06 diluted EPS) ([Q4-FY25 release, 2025-08-12](https://www.sec.gov/Archives/edgar/data/0001633978/000162828025039896/lite_ex991xq4fy25.htm)). Through the first nine months of FY2026 (ended March 28, 2026) revenue accelerated to **$2,007.7 m**, GAAP net income to $226.6 m and non-GAAP gross margin to 43.8%, with the Q3 quarter alone delivering record $808.4 m (+90.1% Y/Y) and non-GAAP operating margin of 32.2% ([Q3-FY26 release, 2026-05-05](https://www.sec.gov/Archives/edgar/data/0001633978/000162828026030530/lite_ex991xq3fy26.htm)). Management's Q4-FY26 guide of $960 m–$1,010 m / 35.0–36.0% non-GAAP OM / $2.85–$3.05 non-GAAP EPS implies a full-FY2026 revenue print of roughly **$2.97–$3.02 bn**, very nearly doubling the FY2025 base.
 
-![Lumentum revenue and GAAP gross margin, FY23-FY26E](../../charts/lumentum_revenue_gm.png)
+![Lumentum revenue and GAAP gross margin, FY23-FY26E](charts/lumentum_revenue_gm.png)
 Source: [Lumentum FY2025 10-K, p. 50](https://www.sec.gov/Archives/edgar/data/0001633978/000162828025040830/lite-20250628.htm); [Q3-FY26 earnings release, 2026-05-05](https://www.sec.gov/Archives/edgar/data/0001633978/000162828026030530/lite_ex991xq3fy26.htm). FY26E = 9-month actuals plus Q4 mid-guide ($985 m).
 
 **Valuation snapshot (May 20, 2026).** The stock closed near **$877** (public.com market-cap page), giving a market capitalisation of roughly **$75.5 bn** ([public.com — LITE market cap](https://public.com/stocks/lite/market-cap)). On the latest reported TTM-trailing four-quarter earnings, the trailing P/E is **roughly 142×–167×** depending on share-count and pro-forma assumptions ([financecharts.com — LITE P/E (May 2026)](https://www.financecharts.com/stocks/LITE/value/pe-ratio); [public.com — LITE P/E](https://public.com/stocks/lite/pe-ratio)). The forward P/E is **~50×** ([GuruFocus — LITE forward P/E 49.77](https://www.gurufocus.com/term/forward-pe-ratio/LITE)). Calendar-TTM revenue (last four reported quarters: Q4-FY25, Q1-FY26, Q2-FY26, Q3-FY26) equals $480.7 + 533.8 + 665.5 + 808.4 = **$2,488.4 m**, giving a TTM **P/S of ~30×**. The stock has risen **~+1,030% in the last 52 weeks** ([public.com — LITE market cap](https://public.com/stocks/lite/market-cap)).
@@ -169,10 +169,10 @@ The three flagship product lines driving the current narrative are: **(1) EML / 
 
 **Sunsets in the last 12 months:** the FY25 10-K confirms management discontinued in-house development of **coherent DSPs and Radio-Frequency Integrated Circuits (RFICs)** as part of restructuring ([10-K MD&A p. 52](https://www.sec.gov/Archives/edgar/data/0001633978/000162828025040830/lite-20250628.htm)). This freed ~$10 m of annual salary expense and concentrated R&D into laser-chip and CPO programs. **Launches:** the NVIDIA partnership press release frames the next-generation silicon-photonics CPO and OCS products as joint roadmap items for delivery into NVIDIA gigawatt-scale AI factories.
 
-![Lumentum revenue by segment, FY23-FY25](../../charts/lumentum_segment_mix.png)
+![Lumentum revenue by segment, FY23-FY25](charts/lumentum_segment_mix.png)
 Source: [Lumentum FY2025 10-K, MD&A — Segment net revenue, p. 50](https://www.sec.gov/Archives/edgar/data/0001633978/000162828025040830/lite-20250628.htm).
 
-![Lumentum quarterly revenue and non-GAAP operating margin](../../charts/lumentum_quarterly.png)
+![Lumentum quarterly revenue and non-GAAP operating margin](charts/lumentum_quarterly.png)
 Source: [Q1-FY25, Q2-FY25, Q3-FY25, Q4-FY25, Q1-FY26, Q2-FY26, Q3-FY26 earnings releases](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001633978&type=8-K&dateb=&owner=include&count=40); Q4-FY26 figures = mid-point of management guide ($985 m revenue, 35.5% non-GAAP OM).
 
 ---
@@ -217,10 +217,10 @@ pie title FY2025 net revenue by ship-to country (10-K Item 7)
 
 Source: [Lumentum FY2025 10-K, p. 51](https://www.sec.gov/Archives/edgar/data/0001633978/000162828025040830/lite-20250628.htm).
 
-![Lumentum 10%-plus customers by share of revenue, FY23-FY25](../../charts/lumentum_customer_conc.png)
+![Lumentum 10%-plus customers by share of revenue, FY23-FY25](charts/lumentum_customer_conc.png)
 Source: [Lumentum FY2025 10-K, p. 9 — Customer concentration](https://www.sec.gov/Archives/edgar/data/0001633978/000162828025040830/lite-20250628.htm).
 
-![Lumentum FY2025 revenue by ship-to country/region](../../charts/lumentum_geo.png)
+![Lumentum FY2025 revenue by ship-to country/region](charts/lumentum_geo.png)
 Source: [Lumentum FY2025 10-K, p. 51 — Revenue by Region](https://www.sec.gov/Archives/edgar/data/0001633978/000162828025040830/lite-20250628.htm).
 
 ### 5.3 Contract structure, go-to-market and channel
@@ -335,10 +335,10 @@ quadrantChart
 - **Module-layer commoditisation** — Chinese module vendors price-compress the segment in which Cloud Light competes.
 - **Stretched valuation** — TTM P/E ~165× / P/S ~30× leaves no room for execution misses.
 
-![Peer valuation comparison (May 2026)](../../charts/lumentum_peer_valuation.png)
+![Peer valuation comparison (May 2026)](charts/lumentum_peer_valuation.png)
 Source: [public.com — LITE market cap, May 2026](https://public.com/stocks/lite/market-cap); [financecharts.com — LITE / COHR P/E](https://www.financecharts.com/stocks/LITE/value/pe-ratio); [Simply Wall St — COHR P/S 11.96×](https://simplywall.st/stocks/us/tech/nyse-cohr/coherent/valuation); [macrotrends — MRVL P/E 57×](https://www.macrotrends.net/stocks/charts/MRVL/marvell-technology/pe-ratio); [companiesmarketcap.com — CIEN](https://companiesmarketcap.com/ciena/marketcap/). CIEN P/E approximated from market cap and forward earnings — directional only.
 
-![Lumentum capacity reinvestment: R&D, SG&A and PP&E](../../charts/lumentum_capacity.png)
+![Lumentum capacity reinvestment: R&D, SG&A and PP&E](charts/lumentum_capacity.png)
 Source: [Lumentum FY2025 10-K MD&A](https://www.sec.gov/Archives/edgar/data/0001633978/000162828025040830/lite-20250628.htm); [Q3-FY26 release balance sheet — PP&E net $964.3 m at March 28 2026](https://www.sec.gov/Archives/edgar/data/0001633978/000162828026030530/lite_ex991xq3fy26.htm).
 
 ---

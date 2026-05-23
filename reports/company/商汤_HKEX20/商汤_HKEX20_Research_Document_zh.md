@@ -56,7 +56,7 @@
 - **为何 P/S 偏高 — 投资者付的是什么？**  原因主要是 (a) **生成式 AI 高增长溢价**：H1 2025 GenAI 同比 +72.7%、占比升至 77%，被视为中国少数"纯正生成式 AI 上市标的"；(b) **稀缺的算力 + 大模型 + 应用三位一体公司**，机构按 EV / 算力 (Petaflops) 与 EV / GenAI 收入估值（高盛预期 2026 年首度 EBITDA 转正约 RMB 2.05 亿元 ([东方财富报告综述，2026-02](https://caifuhao.eastmoney.com/news/20260210175133978925530))）；(c) **股票流通筹码相对集中**：WVR Beneficiaries（徐立 + 王晓刚 + 徐冰）合计行使 17.12% 投票权，叠加 Amind (软银) 18.66% + SenseTalent 5.42%，自由流通市值 / 总市值偏低，技术面易被叙事推升。这一估值水位也是后文 §9 的关键风险之一：一旦 GenAI 收入失速或大模型同质化升级，**P/S 压缩到 5-8 倍即对应 50%-70% 跌幅**。
 - **负 P/E 的成因**：核心仍是研发费用绝对值 RMB 41.3 亿元（占营收 109.6%）+ 资产减值 RMB 7.8 亿元 + 算力折旧 RMB 14.3 亿元，公司用每一块毛利同时支撑 1.27 块研发投入，规模化效应尚未跑通 ([2024 年报 — Management Discussion 第 12-15 页](https://www.hkexnews.hk/listedco/listconews/sehk/2025/0424/2025042400917.pdf))。
 
-![](../../charts/sensetime_revenue_gm_trend.png)
+![](charts/sensetime_revenue_gm_trend.png)
 *来源：[商汤 2024 年度报告 — Five-Year Financial Summary，第 5 页](https://www.hkexnews.hk/listedco/listconews/sehk/2025/0424/2025042400917.pdf)。*
 
 ---
@@ -387,7 +387,7 @@ quadrantChart
 
 来源：[IDC AP AI Spending Forecast 2025-09](https://my.idc.com/getdoc.jsp?containerId=prAP53348125)、[Grand View Research China GenAI](https://www.grandviewresearch.com/horizon/outlook/generative-ai-market/china)、[Mordor Intelligence China AI DC](https://www.mordorintelligence.com/industry-reports/china-artificial-intelligence-ai-data-center-market)、[Statista China AI Outlook](https://www.statista.com/outlook/tmo/artificial-intelligence/china)，作者综合估算（汇率 USD/RMB = 7.1）。
 
-![](../../charts/sensetime_compute_growth.png)
+![](charts/sensetime_compute_growth.png)
 *来源：[商汤 2024 年报，第 4 页](https://www.hkexnews.hk/listedco/listconews/sehk/2025/0424/2025042400917.pdf) + [2025 中期报告，第 4 页](https://media-sensetime.todayir.com/20250828223203738111816058_en.pdf)。*
 
 **SAM (可服务市场)**：剔除 (a) 国际市场（受制裁限制）、(b) 互联网巨头自建部分（约 35% 自给）、(c) 政府 / 央企自建（约 20%），商汤的 SAM 约 **TAM 的 35-40%**，即 2025 年 ~RMB 600 亿、2030 年 ~RMB 2,800 亿。
@@ -494,7 +494,7 @@ TTM P/S 约 20 倍，相对于港股科技板块 (P/S 中位数 4-5 倍) 高 3-4
 
 ### 图表数据脚本
 
-- [`reports/charts/sensetime_charts.py`](../../charts/sensetime_charts.py) — 6 张图表的生成脚本
+- [`reports/charts/sensetime_charts.py`](charts/sensetime_charts.py) — 6 张图表的生成脚本
 
 ---
 

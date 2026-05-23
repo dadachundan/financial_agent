@@ -37,7 +37,7 @@ Micron Technology, Inc. is one of three remaining at-scale producers of dynamic 
 
 The Q1-FY2026 quarter (ended November 27, 2025) re-set the trajectory: revenue of **$13.64B** (up 57% YoY), GAAP gross margin **56.0%**, non-GAAP EPS **$4.78**, and operating cash flow **$8.41B** — already half of FY2025's full-year OCF in a single quarter ([Q1-FY2026 earnings press release, 2025-12-17](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/a2026q1ex991-pressrelease.htm)).
 
-![Micron revenue and gross margin](../../charts/micron_revenue_gm.png)
+![Micron revenue and gross margin](charts/micron_revenue_gm.png)
 *Source: [Micron 2022 10-K (FY21/22) and 2025 10-K (FY23-25 Consolidated Results)](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm). The FY23 trough (−9% GAAP GM) and the FY25 recovery to 40% capture the full memory cycle in three years.*
 
 **Valuation snapshot (as of 2026-05-20).** Yahoo Finance shows MU trading at **$727.42**, market cap **~$820.7 bn** (1.13 bn diluted shares), **TTM P/E 34.4×**, **forward P/E 7.1×**, **P/S (TTM) 14.1×**, **P/B 11.3×**, with a 52-week range of **$90.93–$818.67** ([Yahoo Finance MU key statistics, retrieved 2026-05-20](https://finance.yahoo.com/quote/MU/key-statistics)).
@@ -160,10 +160,10 @@ graph TD
 
 *Source: [Micron 2025 10-K, Note 21 Revenue, Item 1 Business segment descriptions, Note 27 Segment Information](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm).*
 
-![FY2025 segment mix](../../charts/micron_segment_mix.png)
+![FY2025 segment mix](charts/micron_segment_mix.png)
 *Source: [Micron 2025 10-K, Note 27 Revenue by Business Unit](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm). CMBU is now the largest segment, having overtaken MCBU in FY2025.*
 
-![DRAM vs NAND mix](../../charts/micron_dram_nand_mix.png)
+![DRAM vs NAND mix](charts/micron_dram_nand_mix.png)
 *Source: [Micron 2025 10-K, Note 21 Revenue by Technology](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm). DRAM was 76% of FY2025 revenue and is the dominant earnings driver.*
 
 ### DRAM products
@@ -376,7 +376,7 @@ The legacy Intel NAND business; competes in enterprise SSD. Material in the data
 
 ### Positioning verdict
 
-![Peer valuation snapshot](../../charts/micron_peer_valuation.png)
+![Peer valuation snapshot](charts/micron_peer_valuation.png)
 *Source: [Yahoo Finance, retrieved 2026-05-20](https://finance.yahoo.com/quote/MU/key-statistics).*
 
 Micron occupies a **"both-DRAM-and-NAND-scale-but-not-Samsung-scale"** position in the industry — large enough to fund the HBM4 / 1-gamma / EUV roadmap, focused enough to execute, but reliant on retaining its HBM qualifications and continuing to invest at the pace of SK Hynix.
@@ -430,7 +430,7 @@ HBM is the single biggest opportunity. At a 2025 HBM market estimated at $25–3
 - **HBM technology shift to in-package compute / 3D stacked logic** that doesn't favor Micron's HBM4/HBM4E roadmap.
 - **Sovereign capacity overbuild** — CHIPS Act, EU Chips Act, India PLI, Japan METI all subsidizing fab additions; in aggregate this could create commodity-DRAM oversupply in 2027–2029.
 
-![Capex vs OCF](../../charts/micron_capex_ocf.png)
+![Capex vs OCF](charts/micron_capex_ocf.png)
 *Source: [Micron 2025 10-K Cash Flow Statement](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm). The capex doubling in FY2025 (to $15.86B gross) reflects both HBM advanced-packaging investment and the start of Idaho/Clay greenfield spending. Operating cash flow more than doubled, keeping free cash flow positive.*
 
 ---

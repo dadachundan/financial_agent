@@ -28,7 +28,7 @@ NVIDIA Corporation designs and sells a full-stack accelerated computing platform
 
 Revenue in FY26 reached **USD 215.9 billion**, up 65% year-over-year from USD 130.5 billion in FY25 and approximately 8x the USD 26.97 billion reported in FY23 ([FY2026 10-K MD&A](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm)). Net income was USD 120.07 billion (55.6% net margin; diluted EPS USD 4.90), with GAAP operating income of USD 130.4 billion at a 60.4% operating margin ([FY2026 10-K, Consolidated Statements of Income](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm)). Free cash flow for FY26 was USD 96.6 billion ([Q4 FY26 press release, Non-GAAP reconciliation](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm)). The company employs ~42,000 people across 38 countries, of whom ~31,000 are in research and development — more than half of NVIDIA's engineers work on software, not chip design ([FY2026 10-K, Human Capital Management](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm)).
 
-![NVIDIA — 5-year revenue and margin trend](../../charts/nvda_revenue_margin.png)
+![NVIDIA — 5-year revenue and margin trend](charts/nvda_revenue_margin.png)
 Source: [NVIDIA FY2026 10-K, MD&A and Note 16](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm); FY22 and FY23 from [FY2024 10-K, Note 17](https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm).
 
 **Business model.** NVIDIA reports in two operating segments: **Compute & Networking** (Data Center, Automotive, AI software) and **Graphics** (GeForce, Quadro/RTX PRO, GeForce NOW, automotive infotainment). In FY26 Compute & Networking generated **USD 193.5 billion (89.6% of revenue)** and Graphics USD 22.5 billion (10.4%) ([FY2026 10-K, Note 16](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm)). Looking at the company's four "specialized markets" disclosure (the more business-relevant view):
@@ -80,7 +80,7 @@ Inside Data Center, NVIDIA split out the Compute and Networking sub-lines for th
 
 Source: [Yahoo Finance quote pages, 2026-05-20](https://finance.yahoo.com/quote/NVDA/key-statistics/).
 
-![NVIDIA — peer valuation comparison](../../charts/nvda_peer_valuation.png)
+![NVIDIA — peer valuation comparison](charts/nvda_peer_valuation.png)
 Source: [Yahoo Finance, 2026-05-20](https://finance.yahoo.com/quote/NVDA/key-statistics/).
 
 **Interpreting NVDA's multiples.** A 45.7x TTM P/E and 25.1x TTM P/S are elevated vs. the broader S&P 500 (~20-23x P/E, 2-3x P/S) but **lower than every direct AI-leverage peer except Intel** (which has no current earnings). AVGO trades at 29x TTM P/S; AMD at 149x TTM P/E. Three drivers explain NVDA's multiple, each defensible from the filings:
@@ -231,7 +231,7 @@ graph TD
 
 The Data Center segment is now the company. Within it, **Compute (GPUs + CPUs + systems)** was USD 162.4 billion in FY26 and **Networking** was USD 31.4 billion. The combination — selling not just the accelerator but the scale-up fabric, scale-out fabric, DPUs, CPUs and software that connects up to hundreds of thousands of GPUs into a single training/inference system — is what NVIDIA calls "data-center-scale" and what allows it to capture a far larger fraction of customer infrastructure spend than a discrete-GPU vendor ever could ([FY2026 10-K, Item 1 — Data Center](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm)).
 
-![Quarterly Data Center revenue trajectory FY24–FY26](../../charts/nvda_dc_quarterly.png)
+![Quarterly Data Center revenue trajectory FY24–FY26](charts/nvda_dc_quarterly.png)
 Source: NVIDIA quarterly press releases, [Q1 FY24 through Q4 FY26 (2023-05-24 through 2026-02-25)](https://investor.nvidia.com/financial-info/financial-reports/).
 
 **Hopper (H100, H200, H20 — prior generation).** Originally launched in 2022 (H100), with H200 in 2024. H20 is the China-compliant SKU designed in late 2023 to fit within the October 2023 export-control thresholds; following the April 2025 license requirement, H20 demand collapsed and NVIDIA took a USD 4.5 billion charge ([FY2026 10-K, MD&A — Government Regulations](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm)). Hopper systems still ship into long-tail enterprise/government deployments, but the data-center mix is now Blackwell-dominant. *Competitive advantage: high — at launch H100 had no peer for transformer training; AMD MI300X reached parity for selected inference workloads by 2024 but lagged in training-cluster economics.*
@@ -340,7 +340,7 @@ NVIDIA sells through:
 
 Sales cycles span from days (commodity GeForce / Pro Viz cards) to 18+ months (sovereign AI factory deployments). Solution-architecture cost-of-sales is meaningful — embedded in SG&A which was 2.1% of FY26 revenue (USD 4.6B) despite a USD 215.9B top line ([FY2026 10-K, MD&A — Operating Expenses](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm)).
 
-![Revenue by customer-HQ geography FY24–FY26](../../charts/nvda_geo_mix.png)
+![Revenue by customer-HQ geography FY24–FY26](charts/nvda_geo_mix.png)
 Source: [FY2026 10-K, Note 16 — Geographic Revenue](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm).
 
 ### Named recent wins
@@ -511,7 +511,7 @@ The FY26 10-K's strategic statements (Item 1 — Business Strategies) emphasize 
 4. **Ecosystem investment** — USD 17.5B FY26 venture portfolio + USD 3.5B in datacenter shell/power guarantees creates pull-through demand for NVIDIA hardware.
 5. **Open-model leadership** — Nemotron 3, Cosmos, Earth-2 and Alpamayo establish NVIDIA as the preferred runtime for the most-deployed open foundation models.
 
-![NVIDIA segment mix FY22–FY26](../../charts/nvda_segment_mix.png)
+![NVIDIA segment mix FY22–FY26](charts/nvda_segment_mix.png)
 Source: [FY2026 10-K, Note 16](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm) for FY24–FY26; [FY2024 10-K, Note 17](https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm) for FY22–FY23.
 
 The Data Center share rising from ~40% in FY22 to ~90% in FY26 is the most consequential portfolio mix shift in U.S. semiconductor history at this scale. Gaming, Pro Viz and Automotive grew nicely in absolute terms over FY24–FY26 but were dwarfed by the AI Data Center build-out.
@@ -556,7 +556,7 @@ The Data Center share rising from ~40% in FY22 to ~90% in FY26 is the most conse
 
 **14. AI capex over-build / hyperscaler capex pullback (HIGH if it materializes).** Hyperscaler capex doubled YoY in 2025 and is forecast to grow ~45% in 2026 ([Bloomberg Intelligence, 2026-02](https://www.bloomberg.com/professional/blog/)). Any single quarter of consensus pullback — driven by AI ROI concerns, power constraints biting, or a credit-cycle shock — would compress NVDA's growth outlook and multiple simultaneously. Mitigants: sovereign AI, enterprise on-prem, neocloud and physical-AI demand provide diversification away from hyperscaler exposure, though hyperscalers remain the dominant near-term buyer. **Severity: HIGH (most consequential macro risk).**
 
-![NVIDIA — FCF vs. capital returned](../../charts/nvda_fcf_capital_return.png)
+![NVIDIA — FCF vs. capital returned](charts/nvda_fcf_capital_return.png)
 Source: [FY2026 10-K, Statements of Cash Flows](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm) for FY24–FY26; [FY2024 10-K](https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm) and [FY2022 10-K](https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/) for prior years.
 
 The capital-returns chart is reassuring in the macro context: NVIDIA generated USD 96.6B of FCF in FY26 and returned USD 41.1B to shareholders — i.e., the buyback rate has plenty of room to absorb a multi-quarter capex digestion period at customers while still growing the cash balance.
