@@ -95,7 +95,7 @@ timeline
 
 Source: [AMD 2025 10-K](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm), [AMD–OpenAI 8-K, 2025-10-06](https://www.sec.gov/Archives/edgar/data/2488/000119312525230895/d28189dex991.htm), and [AMD Q1-FY2026 10-Q on MI325 license, 2026-05-06](https://www.sec.gov/Archives/edgar/data/2488/000000248826000076/amd-20260328.htm).
 
-**The three strategic pivots that matter.** First, the **Zen reset**. By 2014 AMD had ceded both PC CPU and server share to Intel, posting an annual operating loss; Dr. Lisa Su's first decision as CEO was to consolidate engineering behind a new microarchitecture and design methodology ("Zen"), which shipped as Ryzen in March 2017 and EPYC in June 2017. Zen restored AMD as a credible x86 alternative and powered an order-of-magnitude expansion in market cap.
+**The three strategic pivots that matter.** First, the **Zen reset**. By 2014 AMD had ceded PC CPU share to Intel — Computing and Graphics segment revenue fell 16% YoY (FY13 $3.72B → FY14 $3.13B) on a 27% unit-shipment decline — and posted a full-year total operating loss of $(155)M and a net loss of $(403)M ([AMD FY2014 10-K, MD&A and Income Statement](https://www.sec.gov/Archives/edgar/data/2488/000119312515054362/d871455d10k.htm)). Dr. Lisa Su's first decision as CEO was to consolidate engineering behind a new microarchitecture and design methodology ("Zen"), which shipped as Ryzen in March 2017 and EPYC in June 2017. Zen restored AMD as a credible x86 alternative and powered an order-of-magnitude expansion in market cap.
 
 Second, the **Xilinx and Pensando combination (2022)**. The $49B all-stock Xilinx deal added FPGAs, adaptive SoCs, and a deep customer base in aerospace/defense, comms infrastructure, industrial, and automotive — markets with lower cyclicality and higher gross margins than mainstream PC CPUs. Pensando added programmable DPUs and the foundation for AMD's AI-NIC roadmap (Pollara 400, Vulcano). AMD still carries roughly $2.25B/year of acquisition-related intangible amortization from the Xilinx purchase price allocation ([AMD 2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)).
 
@@ -414,6 +414,7 @@ Source: Stockanalysis.com statistics pages for [AMD](https://stockanalysis.com/s
 - [AMD Annual Report on Form 10-K for FY2025, filed 2026-02-04](https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm)
 - [AMD Quarterly Report on Form 10-Q for Q1-FY2026, filed 2026-05-06](https://www.sec.gov/Archives/edgar/data/2488/000000248826000076/amd-20260328.htm)
 - [AMD Annual Report on Form 10-K for FY2024, filed 2025-02-05](https://www.sec.gov/Archives/edgar/data/2488/000000248825000012/amd-20241228.htm)
+- [AMD Annual Report on Form 10-K for FY2014, filed 2015-02-19](https://www.sec.gov/Archives/edgar/data/2488/000119312515054362/d871455d10k.htm) (used to verify the FY2014 operating-loss reference point in Section 2)
 - [AMD Definitive Proxy Statement (DEF 14A) for 2026 Annual Meeting, filed 2026-03-27](https://www.sec.gov/Archives/edgar/data/2488/000119312526129057/d85856ddef14a.htm)
 
 ### Press releases and 8-K exhibits (AMD)
@@ -482,6 +483,7 @@ Three URLs in the prior version of this report were SEC-style synthetic guesses 
 - R&D expense $8,091M (=$8.09B) ✓ (Income Statement)
 - Operating cash flow $6,493M (=$6.5B, rounded), continuing operations only ✓ (Cash Flow Statement)
 - OpenAI warrant 160 million shares at $0.01 ✓ (Stockholders' Equity note)
+- FY2014 operating loss $(155)M, net loss $(403)M, Computing & Graphics revenue $3.13B (down 16% YoY on 27% unit-shipment decline) ✓ (FY2014 10-K MD&A + Income Statement); cited in Section 2 to substantiate the "ceded PC CPU share to Intel, posting an annual operating loss" pre-Zen context. (Note: the server-share clause from earlier drafts was trimmed — the FY14 10-K shows Enterprise/Embedded/Semi-Custom revenue *up* because of PS4/Xbox One semi-custom launches; server-share loss to Intel is the industry-tracker consensus but not directly evidenced by AMD's own segment data, so the report sticks to PC CPU only.)
 - $14B buyback authority / $9.4B remaining ✓ (MD&A Liquidity)
 - ZT Systems acquisition $3.2B cash + 8.3M AMD shares ✓ (MD&A)
 - ZT Manufacturing divestiture to Sanmina $2.4B cash + 1.2M Sanmina shares + up to $450M contingent ✓ (MD&A)
