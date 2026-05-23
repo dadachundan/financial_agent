@@ -4,7 +4,7 @@ Snapshot of every skill registered for this project, grouped by role and depende
 
 > **Keep this file in sync.** Whenever a skill is added, removed, or its `## Prerequisites` block changes under `.claude/skills/`, update this file in the same commit and bump the "Last updated" date below. See the [Maintenance](#maintenance) section at the bottom for the checklist.
 
-Last updated: 2026-05-23 (added `sec-report-summary` as a US-only sub-skill of `company-research`)
+Last updated: 2026-05-23 (added `compare-companies` head-to-head comparison skill, built on `company-research`)
 
 ---
 
@@ -89,12 +89,15 @@ idea-generation → initiating-coverage → earnings-preview → earnings-analys
                        └─────── builds on ───┐                                       │
                                              ▼                                       ▼
                                      company-research                         thesis-tracker
+                                             │
+                                             └── consumed by ──▶ compare-companies (head-to-head)
 ```
 
 - [initiating-coverage](../.claude/skills/initiating-coverage/SKILL.md) is a 5-task workflow whose Task-1 is essentially `company-research`.
 - [earnings-preview](../.claude/skills/earnings-preview/SKILL.md) → [earnings-analysis](../.claude/skills/earnings-analysis/SKILL.md) → [model-update](../.claude/skills/model-update/SKILL.md) is the quarterly cycle for a name already under coverage.
 - [thesis-tracker](../.claude/skills/thesis-tracker/SKILL.md) is the long-running journal that consumes results from the others.
 - [idea-generation](../.claude/skills/idea-generation/SKILL.md) seeds the funnel.
+- [compare-companies](../.claude/skills/compare-companies/SKILL.md) takes two `company-research` outputs and produces a head-to-head comparison focused on the delta — product overlap matrix, moat anatomy, customer overlap, dimension-by-dimension scorecard. Output to `reports/compare/<A>_vs_<B>.md`. If a research doc is missing or stale, it invokes `company-research` on the missing side first.
 
 ## 4. Standalone, no dependencies
 
@@ -111,7 +114,7 @@ idea-generation → initiating-coverage → earnings-preview → earnings-analys
 ## Key observations
 
 - **Only the trading-analysis chain has machine-enforced deps** (the `## Prerequisites` blocks with `[[…]]` wikilinks). Everything else is independent — run them in any order.
-- **`company-research` is the most reused artifact** — both the trading pipeline and `initiating-coverage` (Task 1) build on it.
+- **`company-research` is the most reused artifact** — the trading pipeline, `initiating-coverage` (Task 1), and `compare-companies` (one per side) all build on it.
 - **`sec-report-summary` is conditional**: it's a Step-0.5 sub-skill of `company-research` for US issuers only; for non-US issuers (China A-share / HK / Taiwan / Japan / Korea), `company-research` skips it and builds the historical-evolution threads directly from domicile-portal filings. It can also be invoked standalone if the user just wants the SEC narrative without the full deep dive.
 - **`trading-analysis` is the only true orchestrator**; `initiating-coverage` is 5 sequential tasks the user runs explicitly, not a one-shot pipeline.
 - **Two data-source skills feed everything else indirectly**: `earnings-upload-to-db` → `db/notes.db`, and `zsxq-recommend` / `zsxq-analyze` → `db/zsxq.db`. They're not called by other skills, but the artifacts they produce are read by analysts.
