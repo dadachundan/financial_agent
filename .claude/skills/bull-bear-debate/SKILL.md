@@ -21,6 +21,13 @@ This skill needs three analyst reports in the conversation context as markdown b
 
 **If any report is missing**, run the corresponding analyst skill(s) first — invoke the missing ones in parallel (one Agent subagent per skill, single message with multiple tool calls) before starting the debate. The analyst skills have no further prerequisites.
 
+**Before re-running [[company-research]]** (a 10–30 min, 6,000–10,000-word deep dive), check for a cached report first:
+
+1. If invoked via [[trading-analysis]], `reports/<TICKER>_<TRADE-DATE>/company-research.md` is already populated — read it.
+2. Otherwise glob `reports/company/*<TICKER>*/` — folders follow `<Company>_<EXCHANGE><TICKER>` (e.g. `AMD_NASDAQ_AMD`, `Tesla_NASDAQ_TSLA`, `安培龙_SZSE002050`). Read the `*_Research_Document.md` / `*_公司研究.md` / `*_研究报告.md` file inside. If its mtime is < 30 days old, use it as `company_research_report`.
+
+Only invoke [[company-research]] fresh if neither cache hits. `sentiment_report` and `news_report` are short-lived by design — always run those analyst skills fresh.
+
 For a clean full-pipeline run from scratch, prefer [[trading-analysis]] over invoking this skill standalone.
 
 ## Inputs
