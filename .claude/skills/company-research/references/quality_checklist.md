@@ -9,11 +9,9 @@
 - Objectivity and balance.
 
 ## Management Bios
-- **CEO / founder gets the deepest bio (250–350 words)** — they're the single biggest determinant of long-run outcome. Go deeper for founder-led, supervoting-control, or unusually consequential CEOs.
-- CFO bio: 150–200 words.
-- 1–2 other executives chosen for thesis relevance: 80–120 words each.
+- **Cover the founder and the current CEO only — nothing else.** No CFO, no other executives, no governance footer, no track-record synthesis.
+- Founder bio: 200–300 words. Current CEO bio: 200–300 words. If founder is still CEO, write one combined bio (300–450 words).
 - Each bio includes current role, prior 2–3 roles with *what specifically they accomplished* (numbers, not titles), education, tenure, ownership stake.
-- Plus a governance footer (board, insider %, comp structure) and a one-paragraph track-record synthesis.
 
 ## Competitive Analysis
 - 5–10 specific competitors analyzed.
@@ -67,7 +65,7 @@
 6. Reader finishes able to understand:
    - What the company does and how it makes money
    - **Every product the company sells (from a thorough company-website walk) and which specific products have a competitive advantage — including moat type and closest named competitor product**
-   - Quality and track record of management team
+   - Background of the founder and current CEO
    - Company's competitive position
    - Market opportunity size
    - Key risks to consider

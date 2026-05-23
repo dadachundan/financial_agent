@@ -157,7 +157,7 @@ Read PDFs with `fitz` / Read tool. For image-only / scanned pages, follow the OC
    - **Walk the entire product / solutions navigation tree.** Enumerate every distinct product, SKU family, or service line — even 10–30+ items. Do not collapse them.
    - For each product page, capture: official name + variants/tiers, one-sentence description, target customer, pricing model if disclosed, key specs/differentiators the company highlights, any "new"/"flagship" badges.
    - Identify named customers, homepage logos, partner/integration lists, customer case studies.
-   - Capture leadership / Team page (names, titles, prior employers) — feed into Step 3.
+   - From the leadership / Team page, capture **only the founder and current CEO** (name, title, prior employers) — feed into Step 4. Skip the rest of the team.
    - Read blog / newsroom for the **last 12 months** to detect launches, sunsets, repositioning.
    - For non-English companies, read the **native-language site** (e.g. `company.com.cn`) — English IR pages are often a stripped subset and miss SKUs.
 2. **Regulatory filings** — start from the local cache pulled in Step 0; only fetch fresh if the cache is stale (see freshness rules above). Route by domicile per the data-sources table. Note filing dates and the portal used.
@@ -203,13 +203,11 @@ Capture: top-1 customer % of revenue, top-5 %, multi-year trend (3 years if avai
 
 ### Step 4 — Management research
 
-**The CEO / founder is the most important bio — spend the most depth there.** A strong founder-CEO is often the single biggest long-run driver; the rest of the team is supporting cast.
+**Cover the founder and the current CEO only — nothing else.** Skip CFO, other executives, governance footer, and track-record synthesis. The management chapter should be short and focused.
 
-1. **CEO / founder (250–350 word bio, deeper if founder-led / supervoting / unusually consequential).** Pull from LinkedIn, DEF 14A / proxy, press interviews, podcasts, shareholder letters. Capture prior 2–3 roles with *what they specifically accomplished* (numbers not titles), education, tenure at this company, ownership stake, comp structure, public profile. If founder, also the founding thesis and whether they still own materially.
-2. **CFO (150–200 words).** Prior roles, IPO / M&A / capital-markets track record, prior public-company CFO experience.
-3. **1–2 other execs (80–120 words each).** Pick by thesis relevance — CTO at a chip co, CRO at sales-led SaaS, head of largest segment at a conglomerate.
-4. **Governance (80–150 words).** Board composition / independence, insider ownership %, comp structure (cash vs. equity, perf-linked %), related-party transactions, governance flags.
-5. **Track record synthesis (50–100 words).** Has this team delivered before? Where are the gaps?
+- **Founder (200–300 words).** Pull from LinkedIn, DEF 14A / proxy, press interviews, podcasts, shareholder letters. Capture prior 2–3 roles with *what they specifically accomplished* (numbers not titles), education, founding thesis, ownership stake today, and whether still operationally involved.
+- **Current CEO (200–300 words).** Same depth: prior 2–3 roles with concrete accomplishments, education, tenure at this company, ownership stake, comp structure.
+- **If founder is still CEO, write one combined bio (300–450 words)** — don't split into two.
 
 ### Step 5 — Competitive intelligence
 

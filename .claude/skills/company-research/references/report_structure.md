@@ -75,14 +75,12 @@ If there is **no recent guidance change** to highlight, omit the banner entirely
 - Key acquisitions (bullet list with year + rationale)
 - Recent developments (last 1–2 years) — keep tight; details that affect the current thesis can move to Section 4 / 5 / 7 / 8 instead of bloating history.
 
-### 3. Management Team (600–900 words)
-**CEO / founder is the most important bio — spend the most depth there.** A strong founder-CEO can be the single biggest determinant of long-run outcome; everyone else is supporting cast.
+### 3. Management Team (300–500 words)
+**Cover the founder and the current CEO only — nothing else.** No CFO, no other executives, no governance footer, no track-record synthesis. Keep this chapter tight.
 
-- **CEO or founder bio: 250–350 words** (deeper if the company is founder-led or the CEO is unusually consequential — Musk-tier, founder-with-supervoting, recent-arrival-with-mandate). Cover: prior 2–3 roles, *what specifically they accomplished* (numbers, not titles), education, years in industry, tenure at this company, ownership stake, comp structure, public profile / interviews / writing. If founder, also: founding thesis and whether they still own materially.
-- **CFO bio: 150–200 words.** Prior roles, IPO / M&A / capital-markets track record, tenure, any prior public-company CFO experience.
-- **1–2 other executives (COO / CTO / CPO / heads of key segments): 80–120 words each.** Pick whoever is most material to the thesis — e.g. the CTO at a chip company, the chief revenue officer at a sales-led SaaS, the head of the largest segment at a conglomerate.
-- **Governance footer (80–150 words):** board composition and independence, insider ownership %, comp structure (cash vs. equity, performance-linked %), any related-party transactions or governance flags. Bullet form is fine.
-- **Management track record assessment (50–100 words):** one-paragraph synthesis — has this team delivered before? Where are the gaps?
+- **Founder bio: 200–300 words.** Prior 2–3 roles with *what specifically they accomplished* (numbers, not titles), education, founding thesis, ownership stake today, and whether still operationally involved.
+- **Current CEO bio: 200–300 words.** Same depth: prior 2–3 roles with concrete accomplishments, education, tenure at this company, ownership stake, comp structure.
+- **If founder is still CEO, write one combined bio (300–450 words)** — don't split into two.
 
 ### 4. Products & Services (700–1,000 words) — **grounded in a thorough company-website walk, not a generic summary**
 - **Full product portfolio enumeration.** List every distinct product / service line found on the website. Group by segment if the company organizes them that way, but do not omit minor SKUs.
@@ -156,11 +154,11 @@ TABLE OF CONTENTS
 2. COMPANY HISTORY (800–1,200 words)
 [Content]
 
-3. MANAGEMENT TEAM (1,000–1,400 words)
-[Name], [Title]
-[300–400 word bio]
-[Repeat for 3–4 executives]
-[Governance section]
+3. MANAGEMENT TEAM (300–500 words)
+[Founder name]
+[200–300 word bio — prior roles, founding thesis, ownership, current role]
+[Current CEO name] — skip if same person as founder
+[200–300 word bio — prior roles, tenure, ownership, comp]
 
 4. PRODUCTS & SERVICES (700–1,000 words)
 [Full enumeration of every product from the company website,
