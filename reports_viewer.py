@@ -1445,22 +1445,28 @@ _VIEW_TMPL = r"""<!doctype html>
     function setActive(cid, scrollDoc) {
       activeCardId = cid;
       let activeCard = null;
+      let layoutDirty = false;
+      // Single-open (Google-Docs style): expand the active card's body,
+      // re-collapse every other collapsible card.
       rail.querySelectorAll('.ric-card').forEach(c => {
         const isActive = c.dataset.id === String(cid);
         c.classList.toggle('active', isActive);
         if (isActive) activeCard = c;
-      });
-      // Auto-expand the active card's body (Google-Docs style: clicking
-      // a comment opens it). Other cards keep whatever state they're in.
-      if (activeCard) {
-        const body = activeCard.querySelector('.ric-body');
-        if (body && body.classList.contains('collapsed')) {
+        const body = c.querySelector('.ric-body');
+        if (!body || !body.classList.contains('collapsible')) return;
+        const btn = c.querySelector('.ric-expand');
+        const wasCollapsed = body.classList.contains('collapsed');
+        if (isActive && wasCollapsed) {
           body.classList.remove('collapsed');
-          const btn = activeCard.querySelector('.ric-expand');
           if (btn) btn.textContent = 'Show less';
-          if (typeof layoutCards === 'function') layoutCards();
+          layoutDirty = true;
+        } else if (!isActive && !wasCollapsed) {
+          body.classList.add('collapsed');
+          if (btn) btn.textContent = 'Show more';
+          layoutDirty = true;
         }
-      }
+      });
+      if (layoutDirty && typeof layoutCards === 'function') layoutCards();
       docRoot.querySelectorAll('mark.ric-hl').forEach(m => {
         m.classList.toggle('active', m.dataset.cid === String(cid));
       });
