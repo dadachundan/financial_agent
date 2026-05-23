@@ -157,7 +157,7 @@ Deposition tools *add* material to the wafer surface; together they build the me
 
 > "Copper deposition lays down the electrical wiring for most semiconductor devices. Even the smallest defect — say, a microscopic pinhole or dust particle — in these conductive structures can impact device performance, from loss of speed to complete failure. The SABRE ECD product family, which helped pioneer the copper interconnect transition, offers the precision needed for copper damascene manufacturing in logic and memory. System capabilities include cobalt deposition for logic applications and copper deposition directly on various liner materials..."
 
-**中文释义：** SABRE 做的是**电镀铜（ECD）**——通过电化学反应把铜"长"在晶圆上，形成连接每一个晶体管的"金属线"（互连）。"Damascene"（大马士革工艺）指的是先在介质层挖出沟槽和孔，然后电镀填铜、最后用 CMP 抛掉表面多余铜的工艺路径，是逻辑芯片与 DRAM 后段金属层的标准做法。**SABRE 3D** 把这一工艺扩展到 **3D 封装** 场景——为 HBM（高带宽内存）的**硅通孔（TSV）** 充铜、做晶圆级封装（WLP）和扇出型封装（fan-out），相当于在堆叠 DRAM 之间打通垂直"电梯通道"。每一颗 HBM 堆叠、每一片先进封装中介层都会拉动 SABRE 3D 的设备需求。
+**中文释义 / Plain-language gloss:** SABRE 做的是 **电镀铜 / Cu electroplating (ECD, electrochemical deposition)** —— 通过电化学反应把 copper 长在 wafer 上，形成连接每个 transistor 的 **互连线 / interconnect**（也就是芯片里的"金属导线"）。**Damascene 工艺 / 大马士革工艺** 指的是 "dig-then-fill" 的流程：先在 **介质层 / dielectric layer** 上挖出 trench / 沟槽 和 via / 通孔，然后电镀填铜，最后用 **CMP / 化学机械抛光** 把表面多余的铜磨平 —— 是逻辑芯片和 DRAM 后段 metal layers（BEOL, back-end-of-line）的行业标准。**SABRE 3D** 把同一工艺扩展到 **3D packaging / 三维先进封装**：HBM 高带宽内存的 **TSV / 硅通孔 (through-silicon via)** 充铜、wafer-level packaging (WLP, 晶圆级封装)、fan-out 扇出型封装 —— 相当于在堆叠 DRAM 之间打通垂直的"电梯通道"。每一颗 HBM 堆叠 + 每一片 advanced-packaging interposer 都拉动 SABRE 3D 的设备需求。
 
 ***Analyst view:*** widely regarded as the leading single-wafer Cu ECD supplier for two decades; AMAT (NOKOTA / Raider) and Ebara are the nearest external competitors, with Lam particularly entrenched in advanced packaging.
 
@@ -167,7 +167,7 @@ Deposition tools *add* material to the wafer surface; together they build the me
 
 > "Tungsten and/or molybdenum deposition is used to form conductive features such as contacts, vias, and wordlines on a chip. These features are small, often narrow, and use only a small amount of metal, so minimizing resistance and achieving complete fill can be difficult. At these nanoscale dimensions, even slight imperfections can impact device performance or cause a chip to fail. Our ALTUS systems combine CVD and ALD technologies to deposit the highly conformal or selective films as needed for advanced tungsten or molybdenum metallization (ALTUS Halo) applications in both [logic and memory]. The Multi-Station Sequential Deposition architecture enables nucleation layer formation and bulk CVD/ALD fill to be performed in the same chamber (in situ)."
 
-**中文释义：** ALTUS 做的是**钨（W）/ 钼（Mo）金属沉积**——填的是**逻辑芯片的接触孔（contact）/ 通孔（via）** 和 **3D NAND 的字线（wordline）**——也就是芯片里最深、最窄的"金属插塞"。CVD = 化学气相沉积（一层化学反应一次性长上去），ALD = 原子层沉积（一原子层一原子层地铺，精度极高）。ALTUS 把两种技术放在同一个"多腔体串联"（Multi-Station Sequential Deposition）腔室里——先用 ALD 长一层"种子层"（nucleation layer）打底，再用 CVD 把剩下的体积填满，保证整个孔无空洞（void-free）。**ALTUS Halo**（2025 年 2 月发布）是 Lam 第一台大批量出货的**钼金属 ALD** 工具——为什么用钼替代钨？在 3D NAND 字线越叠越多、单条字线越来越细的情况下，钼薄膜下的电阻率比钨低，Lam 宣称可让字线电阻降低 50%+，Micron 是早期客户。
+**中文释义 / Plain-language gloss:** ALTUS 做的是 **钨 (tungsten, W) 和钼 (molybdenum, Mo) 金属沉积** —— 填的是 **逻辑芯片的 contact / 接触孔** 和 via / 通孔，以及 **3D NAND 的 wordline / 字线** —— 也就是芯片里最深、最窄的"金属插塞 / metal plug"。两种核心技术：**CVD (化学气相沉积 / chemical vapor deposition)** 用气态反应物在 wafer 上发生化学反应、把固态膜"长"出来；**ALD (原子层沉积 / atomic layer deposition)** 是 CVD 的精度极致版 —— 一次只让一层 atomic-thickness 的膜长出来，可以做到 sub-nm 的厚度控制。ALTUS 把两种技术放在同一个 **Multi-Station Sequential Deposition (多腔体串联沉积)** 腔室里：先用 ALD 长一层 **nucleation layer / 种子层** 打底（保证后续金属能均匀附着），再用 CVD 把剩余体积填满，确保整个孔 **void-free / 无空洞**。**ALTUS Halo**（2025 年 2 月发布）是 Lam 第一台大批量出货的 **钼金属 ALD / molybdenum ALD** 工具 —— 为什么用 Mo 替代 W？随着 3D NAND wordline 越叠越多、每条 wordline 越来越细，**resistivity / 电阻率** 成为瓶颈：Mo 在薄膜厚度下的电阻率低于 W，Lam 宣称 ALTUS Halo 可让 wordline 电阻降低 50%+；Micron 已被列为 early adopter / 早期客户。
 
 ***Analyst view:*** AMAT competes with Endura W; the moly transition is a key incremental opportunity for Lam through the >300-layer NAND roadmap ([Lam Research — Ushers in New Era with ALTUS® Halo, 2025-02-19](https://newsroom.lamresearch.com/2025-02-19-Lam-Research-Ushers-in-New-Era-of-Semiconductor-Metallization-with-ALTUS-R-Halo-for-Molybdenum-Atomic-Layer-Deposition)).
 
@@ -177,7 +177,7 @@ Deposition tools *add* material to the wafer surface; together they build the me
 
 > "Dielectric film deposition processes are used to form some of the most difficult-to-produce insulating layers in a semiconductor device, including those used in the latest transistors and 3D structures. In some applications, these films require dielectric films to be exceptionally uniform and defect free since slight imperfections are multiplied greatly in subsequent layers. Our VECTOR PECVD products are designed to provide the performance and flexibility needed to create these enabling structures within a wide range of challenging device applications."
 
-**中文释义：** 介质沉积做的是**绝缘层**（dielectric / insulator，不导电的二氧化硅或 low-k 材料），目的不是导电，而是**隔离两条挨得很近的金属线**——防止漏电和信号串扰（crosstalk）。**PECVD（等离子体增强 CVD）** 用等离子体激活化学反应，可以在较低温度下长出均匀薄膜——这对已有金属层的晶圆很重要（高温会损坏下层）。VECTOR 是 Lam 的主力 PECVD 平台，被用在层间介质（ILD）、间隙填充（gapfill）等场景。
+**中文释义 / Plain-language gloss:** **介质沉积 / dielectric film deposition** 做的是 **绝缘层 / insulator layer**（不导电的 SiO₂ 二氧化硅 或 low-k 低介电常数 materials），目的不是 conduct 电流，而是 **隔离 / isolate** 两条挨得很近的 metal lines —— 防止 **漏电 / leakage** 和 **信号串扰 / signal crosstalk**。**PECVD (Plasma-enhanced CVD, 等离子体增强化学气相沉积)** 用 plasma / 等离子体 激活化学反应，可以在 **较低温度 / lower temperature** 下长出均匀薄膜 —— 这对已经沉积过 metal layers 的 wafer 很重要（高温会损坏下层金属）。VECTOR 是 Lam 的主力 PECVD 平台，主要用在 **inter-layer dielectric (ILD, 层间介质)** 和 gapfill / 间隙填充 等应用。
 
 #### Striker® — ALD for advanced Dielectric Films
 
@@ -185,7 +185,7 @@ Deposition tools *add* material to the wafer surface; together they build the me
 
 > "The latest memory, logic, and imaging devices require extremely thin, highly conformal dielectric films for continued device performance improvement and scaling. For example, ALD films are critical for low-k spacers for device power consumption/speed, dielectric gapfills in high aspect ratio features for isolation and device performance, as well as for spacer-based multiple patterning schemes where the spacers help define critical dimensions. These applications have little tolerance for voids and even the smallest defect. The Striker single-wafer ALD products provide [these capabilities]…"
 
-**中文释义：** Striker 是 Lam 的**介质 ALD 平台**——一层原子一层原子地长出极薄、极均匀的绝缘膜。典型应用：**低-k 间隔层（low-k spacers）**（决定晶体管栅极宽度，进而决定芯片速度和功耗）、**自对准多重图形化（SAQP/SADP）的间隔层**（在 EUV 之前是定义先进节点关键尺寸的核心工艺）、以及 3D NAND 高纵横比沟道的填充。一句话：Striker = "原子级精度的介质 ALD"，常被用在最难、最不能容忍空洞的场合。
+**中文释义 / Plain-language gloss:** Striker 是 Lam 的 **介质 ALD / dielectric ALD 平台** —— 一层 atom 一层 atom 地长出极薄、极均匀的 insulator films。典型应用：**low-k spacers / 低介电常数间隔层**（决定 transistor gate / 晶体管栅极 的宽度，进而决定芯片速度和 power consumption / 功耗）、**SAQP / SADP (self-aligned quadruple / double patterning, 自对准多重图形化) 的 spacer layer**（在 EUV 普及之前是定义先进 node 关键 CD / critical dimension 的核心工艺）、以及 3D NAND **high aspect ratio (HAR, 高纵横比)** 沟道的 dielectric fill。一句话总结：Striker = "atomic-level precision dielectric ALD / 原子级精度的介质 ALD"，常被部署在最难、最 zero-defect-tolerance 的工艺步骤上。
 
 #### SPEED® — HDP-CVD gapfill for legacy dielectric gapfill
 
@@ -193,13 +193,13 @@ Deposition tools *add* material to the wafer surface; together they build the me
 
 > "Dielectric gapfill processes deposit critical insulation layers between conductive and/or active areas by filling openings of various aspect ratios between conducting lines and between devices. With advanced devices, the structures being filled can be very tall and narrow. As a result, high-quality dielectric films are especially important due to the ever-increasing possibility of cross-talk and device failure. Our SPEED HDP-CVD products provide a multiple dielectric film solution for high-quality gapfill with industry-leading throughput and reliability."
 
-**中文释义：** **HDP-CVD（高密度等离子体 CVD）** 适合传统节点（成熟工艺）的间隙填充——晶体管与晶体管之间、金属线与金属线之间的绝缘材料。它的优势是**吞吐量高、可靠性好**，但在最先进节点已经在被 ALD 替代（ALD 精度更高）。SPEED 因此是 Lam 在成熟工艺（mature node）市场的主力 deposition 工具。
+**中文释义 / Plain-language gloss:** **HDP-CVD (High-Density Plasma CVD, 高密度等离子体化学气相沉积)** 适合 **mature node / 传统节点 / 成熟工艺** 的 **gapfill / 间隙填充** —— 在 transistor 与 transistor 之间、metal line 与 metal line 之间填 insulator。其优势是 **high throughput / 高吞吐量、高 reliability / 可靠性**，但在 leading-edge nodes / 最先进节点 已经在被 ALD 替代（ALD 精度更高、可填更窄的缝）。SPEED 因此是 Lam 在 mature-node 市场（28nm 及以上的成熟工艺）的主力 deposition 工具，尤其重要于中国大陆和台湾的成熟节点 fab 扩产周期。
 
 ***Analyst view (VECTOR / Striker / SPEED):*** AMAT's Producer platform is the principal external competitor for many of these PECVD applications; relative positioning varies by film stack and customer.
 
 #### Aether® — dry photoresist (joint ASML / IMEC)
 
-Lam runs ALD across the ALTUS and Striker platforms and is co-developing a **dry-photoresist** solution (Aether®) with ASML and IMEC for EUV / high-NA EUV lithography ([Lam Research — Entegris/Gelest dry resist ecosystem, 2022-07-12](https://newsroom.lamresearch.com/2022-07-12-Lam-Research,-Entegris,-Gelest-Team-Up-to-Advance-EUV-Dry-Resist-Technology-Ecosystem); [SK hynix dry-resist qualification, mid-2022](https://www.prnewswire.com/news-releases/lam-research-teams-up-with-sk-hynix-to-enhance-dram-production-cost-efficiency-with-breakthrough-dry-resist-euv-technology-301567359.html)). **中文释义：** 传统光刻使用旋涂的湿法光刻胶；Aether 是**干法光刻胶**——直接用 ALD 长一层光刻胶薄膜，没有旋涂的均匀性问题，在 EUV / 高 NA EUV 下能拿到更细的图形精度。Lam 不做光刻机，但通过 Aether 切入光刻胶环节，跟着 ASML 高 NA EUV 的进度赚钱。
+Lam runs ALD across the ALTUS and Striker platforms and is co-developing a **dry-photoresist / 干法光刻胶** solution (Aether®) with ASML and IMEC for EUV / high-NA EUV lithography ([Lam Research — Entegris/Gelest dry resist ecosystem, 2022-07-12](https://newsroom.lamresearch.com/2022-07-12-Lam-Research,-Entegris,-Gelest-Team-Up-to-Advance-EUV-Dry-Resist-Technology-Ecosystem); [SK hynix dry-resist qualification, mid-2022](https://www.prnewswire.com/news-releases/lam-research-teams-up-with-sk-hynix-to-enhance-dram-production-cost-efficiency-with-breakthrough-dry-resist-euv-technology-301567359.html)). **中文释义 / Plain-language gloss:** 传统 photolithography / 光刻 使用 **spin-coated wet photoresist / 旋涂的湿法光刻胶**（液态 resist 滴在 wafer 上、高速旋转、形成均匀薄膜）。Aether 是 **dry photoresist / 干法光刻胶** —— 直接用 ALD 在 wafer 上长出一层 photoresist film，没有 spin-coating 带来的 thickness uniformity 问题，在 EUV / high-NA EUV 节点能拿到更细的 pattern resolution / 图形精度。Lam 不做 scanner / 光刻机，但通过 Aether 切入 EUV photoresist 生态，跟着 ASML 的 high-NA roadmap 受益。
 
 ### 4.4 Etch — "patterning down"
 
@@ -211,7 +211,7 @@ Etch tools *remove* material with atomic precision — taking the films Depositi
 
 > "Conductor etch helps shape the electrically active materials used in the parts of a semiconductor device. Even a slight variation in these miniature structures can degrade device performance. In fact, these structures are so tiny and sensitive that etch processes push the boundaries of the basic laws of physics and chemistry. Our Kiyo product family delivers the high-performance capabilities needed to precisely and consistently form these features precisely and with high productivity. Proprietary Hydra technology in Kiyo products improves CD uniformity by correcting for incoming pattern variability, and atomic-scale variability control with production-worthy throughput."
 
-**中文释义：** **导体刻蚀（conductor etch）** 是在硅、多晶硅、金属这些"会导电的"材料上做减法——典型的活儿就是定义晶体管的**栅极（gate）** 和金属互连线。在 3nm 以下逻辑节点（TSMC N2、Samsung SF2、Intel 18A），关键的工艺步是**栅极环绕（GAA）选择性刻蚀**——必须横向（lateral）地把多余硅蚀刻干净，留下纳米片（nanosheet）形成晶体管沟道；这是 FinFET 时代没有的工艺。**Hydra** 是 Kiyo 内部的 chamber-level 调节技术：可以在同一个 chamber 内部针对晶圆上不同区域调整刻蚀均匀性，对入站晶圆的图形偏差做出"自适应"补偿，是先进节点拿下 CD（critical dimension）一致性的关键。
+**中文释义 / Plain-language gloss:** **导体刻蚀 / conductor etch** 是在 silicon / 硅、polysilicon / 多晶硅、metal / 金属 这些 conductive materials / 会导电的材料 上做"减法"—— 典型的活儿就是定义 transistor 的 **gate / 栅极** 和 metal interconnect lines / 金属互连线。在 sub-3nm logic nodes（TSMC N2、Samsung SF2、Intel 18A/14A），关键工艺步是 **gate-all-around selective etch / 栅极环绕选择性刻蚀** —— 必须 lateral / 横向 地把多余 Si 蚀刻干净，留下 **nanosheet / 纳米片** 形成 transistor channel；这是 FinFET 时代没有的工艺。**Hydra** 是 Kiyo 的 in-chamber tuning / 腔内调节 技术：可以在同一个 chamber / 腔室 内部针对 wafer 上不同 zones / 区域 独立调整刻蚀均匀性，对入站 wafer 的 incoming pattern variability / 图形偏差 做出 adaptive / 自适应 补偿 —— 是先进节点拿到 CD uniformity / 关键尺寸一致性 的核心。
 
 #### Versys® Metal — Conductor Etch (Metal hardmask / interconnect)
 
@@ -219,7 +219,7 @@ Etch tools *remove* material with atomic precision — taking the films Depositi
 
 > "Metal etch processes play a key role in connecting the individual components that form an IC, such as forming wires and electrical connections. These processes can also be used to drill through metal hardmasks that are used to form the wiring for advanced devices. To enable these critical etch steps, the Versys Metal product family provides high-productivity capability on a flexible platform. Superior CD, profile uniformity, and uniformity control are enabled by a symmetrical chamber design with independent process [controls]…"
 
-**中文释义：** Versys Metal 专做**金属刻蚀**——既包括直接刻金属导线，也包括刻**金属硬掩膜（metal hardmask）** ——在先进逻辑节点，由于光刻胶太薄撑不住后续的深刻蚀，行业普遍用金属（典型是 TiN 或 W）做掩膜层，先在金属层上图形化、再用这个"硬掩膜"去导引下层介质的深刻蚀。Versys 的卖点是腔体对称设计 + 独立工艺控制 = CD 与轮廓均匀。
+**中文释义 / Plain-language gloss:** Versys Metal 专做 **metal etch / 金属刻蚀** —— 既包括直接刻 metal interconnect lines / 金属导线，也包括刻 **metal hardmask / 金属硬掩膜**。在先进 logic nodes，photoresist / 光刻胶 太薄撑不住后续的 deep etch / 深刻蚀，行业普遍用 **metal hardmask**（典型材料是 TiN / 氮化钛 或 W / 钨）作为掩膜层：先在 metal layer 上做 patterning / 图形化、再用这个"硬掩膜"去导引下层 dielectric / 介质 的深刻蚀。Versys 的卖点是 **symmetrical chamber design / 对称腔体设计** + **independent process control / 独立工艺控制** = 优秀的 CD uniformity 和 profile uniformity / 轮廓均匀性。
 
 #### Akara® — newest Conductor Etch platform (Feb 2025 launch)
 
@@ -227,7 +227,7 @@ Etch tools *remove* material with atomic precision — taking the films Depositi
 
 > "Akara, a breakthrough innovation in plasma etch and the most advanced conductor etch tool available. Akara delivers novel plasma processing technologies that enable the unmatched etch precision and performance… Integrated on Lam's high-productivity Sense.i platform, Akara leverages Lam's proprietary DirectDrive technology to deliver the controlled creation of atomic-scale features with plasma responses that are 100× faster…"
 
-**中文释义：** Akara 是 Lam 2025 年 2 月发布的下一代**导体刻蚀**平台（注意：是导体刻蚀，不是介质刻蚀——Lam 自己的发布稿明确把 Akara 定位为 "the most advanced conductor etch tool available"），主打三大目标节点：**GAA 逻辑、4F² DRAM、CFET（互补 FET）、3D DRAM**。它建在 **Sense.i®** 高产能平台上，用 **DirectDrive®** 等离子体控制技术——号称等离子体响应速度比上一代快 100 倍——这意味着可以在亚纳米级别精细控制刻蚀深度。Akara 是 Lam 在 2025–2027 年 GAA 节点放量周期最重要的产品。
+**中文释义 / Plain-language gloss:** Akara 是 Lam 2025 年 2 月发布的下一代 **conductor etch / 导体刻蚀** 平台（注意：是 conductor etch，不是 dielectric etch —— Lam 自己的 press release 明确把 Akara 定位为 "the most advanced conductor etch tool available"），主打四大 target applications：**GAA logic / 栅极环绕逻辑、4F² DRAM、CFET (complementary FET, 互补场效应管)、3D DRAM**。它构建在 **Sense.i®** high-productivity platform / 高产能平台 上，用 **DirectDrive®** plasma control / 等离子体控制 技术 —— 号称 plasma response / 等离子体响应速度 比上一代快 100×。这意味着可以在 **sub-nanometer / 亚纳米** 级别精细控制 etch depth / 刻蚀深度。Akara 是 Lam 在 2025-2027 年 GAA node ramp / 节点放量周期 最重要的 product launch。
 
 ***Analyst view (Kiyo / Versys / Akara):*** Tokyo Electron is generally regarded as the most direct external competitor in advanced conductor etch ([TEL FY2025 Q4 results presentation, 2025-05](https://www.tel.com/ir/library/report/l8gqgo00000000gl-att/fy25q4presentations-e.pdf)).
 
@@ -237,7 +237,7 @@ Etch tools *remove* material with atomic precision — taking the films Depositi
 
 > "Dielectric etch carves patterns in insulating materials to create barriers between the electrically conductive parts of a semiconductor device. For advanced devices, these structures can be extremely tall and thin and involve complex, sensitive materials. Slight deviations from the target feature profile — even at the atomic level — can negatively affect electrical properties of the device. To precisely create these challenging structures, our Flex product family offers differentiated technologies and application-focused capabilities for critical dielectric etch applications."
 
-**中文释义：** Flex 做的是**介质刻蚀**——在绝缘材料（二氧化硅、low-k 介质）上挖图形。和导体刻蚀（Kiyo）区分：导体刻蚀刻"会导电"的部分（栅极、金属线），介质刻蚀刻"不导电"的部分（隔离层）。Flex 的核心特征是**多频率受限等离子体设计**（multi-frequency confined plasma），通过多个射频频率分别独立调谐"刻什么"和"怎么刻"——例如同时控制刻蚀速率、垂直度、选择性——是高深宽比沟道的核心。
+**中文释义 / Plain-language gloss:** Flex 做的是 **dielectric etch / 介质刻蚀** —— 在 insulating materials / 绝缘材料（SiO₂ / 二氧化硅, low-k dielectrics / 低介电常数介质）上挖图形。和 conductor etch / 导体刻蚀（Kiyo）的区分：conductor etch 刻"会导电"的部分（gate / 栅极、metal lines / 金属线），dielectric etch 刻"不导电"的部分（insulator / 绝缘层）。Flex 的核心特征是 **multi-frequency confined plasma / 多频率受限等离子体** 设计 —— 通过多个 RF frequencies / 射频 分别独立调谐 "what to etch / 刻什么" 和 "how to etch / 怎么刻"，例如同时控制 etch rate / 刻蚀速率、verticality / 垂直度、selectivity / 选择性 —— 是 high aspect ratio (HAR, 高深宽比) channels / 沟道 的核心工艺。
 
 #### Vantex® — Dielectric Etch for 3D NAND (Sense.i platform)
 
@@ -245,11 +245,11 @@ Etch tools *remove* material with atomic precision — taking the films Depositi
 
 > "Dielectric etch processes remove non-conductive materials during the manufacturing of a semiconductor device. Leading-edge memory devices have especially challenging structures, such as extremely deep holes and trenches, that must be manufactured with tight tolerances. Our latest dielectric etch system, Vantex creates high aspect ratio device features while maintaining critical dimension (CD) uniformity and selectivity. Vantex is part of our Sense.i platform and offers advanced RF technology and repeatable wafer-to-wafer performance enabled by Equipment Intelligence solutions to meet the needs of advanced memory manufacturing, primarily in 3D NAND high aspect ratio hole, trench, contact, and capacitor cell applications."
 
-**中文释义：** Vantex 是 Flex 之后的下一代介质刻蚀，是 Lam 最新（latest）的介质刻蚀系统，专为 **3D NAND 的高纵横比（high aspect ratio, HAR）孔、沟槽、接触孔和电容单元** 而设计。3D NAND 现在已经叠到 400 层以上，单条沟道（channel hole）的纵横比超过 60:1——要垂直打穿 400 层堆叠介质而不让上层和下层的 CD 偏差超过 0.1%，是整个晶圆制造里最难的刻蚀工艺。Vantex 建在 **Sense.i** 平台上，配合 Lam 的**Equipment Intelligence®** 软件做**逐片（wafer-to-wafer）** 工艺补偿——是 NAND 进入 400-1000 层时代的关键工具。
+**中文释义 / Plain-language gloss:** Vantex 是 Flex 的下一代 dielectric etch / 介质刻蚀 系统，是 Lam 当前最新（latest）的介质刻蚀工具，专为 **3D NAND 的 HAR (high aspect ratio, 高纵横比) holes / 孔、trenches / 沟槽、contacts / 接触孔 和 capacitor cells / 电容单元** 而设计。3D NAND 现在已经叠到 400+ layers / 400 层以上，单条 channel hole / 沟道孔 的 aspect ratio / 纵横比 超过 60:1 —— 要 vertically 打穿 400 层堆叠 dielectric 而不让上下层 CD / 关键尺寸 偏差超过 0.1%，是整个 wafer fab / 晶圆制造 里最难的刻蚀工艺。Vantex 建在 **Sense.i** 平台上，配合 Lam 的 **Equipment Intelligence® / 设备智能化** software 做 **wafer-to-wafer / 逐片** 工艺补偿（每片 wafer 独立优化参数）—— 是 NAND 进入 400-1000 layer / 层 时代的核心工具。
 
 #### Cryo® 3.0 — cryogenic dielectric etch upgrade
 
-Lam's **Cryo® 3.0** cryogenic-etch upgrade (announced July 2024) is an upgrade to the Flex/Vantex platforms: it cools the wafer to extremely low temperatures during etch, which improves selectivity and lets the tool drill **channels >10µm deep at <0.1% critical-dimension deviation and 2.5× faster** than prior generations ([Lam Research — Introduces Lam Cryo™ 3.0, 2024-07-31](https://newsroom.lamresearch.com/2024-07-31-Lam-Research-Introduces-Lam-Cryo-TM-3-0-Cryogenic-Etch-Technology-to-Accelerate-Scaling-of-3D-NAND-for-the-AI-Era)). **中文释义：** "低温（cryo）刻蚀"通过把晶圆冷却到极低温度（典型 -50 °C 至 -100 °C 区间），让等离子体里的副产物在侧壁上瞬间凝结、阻挡侧向刻蚀——结果是垂直方向刻得更深、横向偏差更小。Cryo 3.0 是 NAND 突破 400 层的关键工艺；3D NAND 路线图目标是 2030 年达到 ~1000 层 ([Lam Research — The Road to 1000 Layer 3D NAND](https://newsroom.lamresearch.com/road-1000-layer-3D-NAND); [TrendForce — Samsung targets 1,000-layer NAND by 2030, 2025-02-26](https://www.trendforce.com/news/2025/02/26/news-samsung-reportedly-targets-1000-layer-nand-by-2030-rolls-out-wafer-bonding-at-400-layers/))。
+Lam's **Cryo® 3.0** cryogenic-etch upgrade (announced July 2024) is an upgrade to the Flex/Vantex platforms: it cools the wafer to extremely low temperatures during etch, which improves selectivity and lets the tool drill **channels >10µm deep at <0.1% critical-dimension deviation and 2.5× faster** than prior generations ([Lam Research — Introduces Lam Cryo™ 3.0, 2024-07-31](https://newsroom.lamresearch.com/2024-07-31-Lam-Research-Introduces-Lam-Cryo-TM-3-0-Cryogenic-Etch-Technology-to-Accelerate-Scaling-of-3D-NAND-for-the-AI-Era)). **中文释义 / Plain-language gloss:** **Cryogenic etch / 低温刻蚀** 通过把 wafer 冷却到极低温度（典型 **-50 °C 至 -100 °C** 区间），让 plasma byproducts / 等离子体副产物 在 **sidewall / 侧壁** 上瞬间凝结、阻挡 lateral etch / 侧向刻蚀 —— 结果是 vertical / 垂直方向 刻得更深、horizontal deviation / 横向偏差 更小。Cryo 3.0 是 NAND 突破 400 layers / 层 的关键工艺 enabler；3D NAND industry roadmap / 行业路线图 目标是 2030 年达到 **~1000 layers / 层** ([Lam Research — The Road to 1000 Layer 3D NAND](https://newsroom.lamresearch.com/road-1000-layer-3D-NAND); [TrendForce — Samsung targets 1,000-layer NAND by 2030, 2025-02-26](https://www.trendforce.com/news/2025/02/26/news-samsung-reportedly-targets-1000-layer-nand-by-2030-rolls-out-wafer-bonding-at-400-layers/))。
 
 ***Analyst view (Flex / Vantex / Cryo 3.0):*** Tokyo Electron has developed its own cryogenic dielectric etch for 400+ layer NAND, positioning itself as the most direct competitor at this node ([TechPowerUp — TEL channel-hole etch for 400-layer NAND](https://www.techpowerup.com/309892/tokyo-electron-develops-memory-channel-hole-etching-for-400-layer-3d-nand-flash)).
 
@@ -259,7 +259,7 @@ Lam's **Cryo® 3.0** cryogenic-etch upgrade (announced July 2024) is an upgrade 
 
 > "Plasma etch processes used to remove silicon and other materials deep into the wafer are collectively referred to as deep silicon etch. These may be deep trenches for CMOS image sensors, trenches for power and other devices, TSVs for HBM and advanced packaging, and other high aspect ratio features. These are created by etching through multiple materials sequentially, where each new material involves a change in the etch process. The Syndion etch product family is optimized for deep silicon etch, providing the fast process switching with depth and cross-wafer uniformity [control]…"
 
-**中文释义：** Syndion 做的是**深硅刻蚀（deep silicon etch）** ——直接在硅晶圆上刻穿、不是刻介质。三大典型应用：(1) **HBM 和先进封装的硅通孔（TSV）**——也就是为 HBM 堆叠里上下层 DRAM 之间打通的"垂直电梯"；(2) **CMOS 图像传感器**的深沟槽；(3) **功率器件**（功率 MOSFET、IGBT 等）的沟槽。其核心难度在于：要等温度、选择性、深度同时稳定下刻穿数十微米的硅，且整个晶圆上 1000 个通孔的深度均一——Syndion 通过"快速工艺切换"（fast process switching）解决这一点。每一颗 HBM3E / HBM4 堆叠都要拉 Syndion 的设备。
+**中文释义 / Plain-language gloss:** Syndion 做的是 **deep silicon etch / 深硅刻蚀** —— 直接在 silicon wafer / 硅晶圆 上刻穿，而不是刻 dielectric / 介质。三大典型应用：(1) **HBM 和 advanced packaging 的 TSV (through-silicon via, 硅通孔)** —— 也就是为 HBM 堆叠里上下层 DRAM 之间打通的"vertical elevator / 垂直电梯"；(2) **CMOS image sensor / 图像传感器** 的 deep trenches / 深沟槽；(3) **power devices / 功率器件**（power MOSFET、IGBT 等）的 trench。核心难度：要在 temperature / 温度、selectivity / 选择性、depth / 深度 三个维度同时稳定 —— 还要刻穿数十 microns / 微米 的 Si，并且整片 wafer 上数千个 vias 的深度必须 uniform / 均一 —— Syndion 通过 **fast process switching / 快速工艺切换** 解决：在不同阶段切换等离子体配方（钝化-刻蚀-钝化-刻蚀，称为 Bosch process / 博世工艺 或其变体）。每一颗 HBM3E / HBM4 堆叠都要拉 Syndion 的设备。
 
 ***Analyst view:*** third-party reporting indicates Lam is a primary supplier of TSV etch for HBM at Samsung and SK hynix, although neither side discloses tool-by-tool sourcing ([iNEWS — Lam supplies TSV for HBM, 2025](https://inf.news/en/tech/93e514891b03af13b5df9e4ea8305fb8.html)).
 
@@ -273,14 +273,14 @@ The 10-K table groups all four Lam wet-clean platforms together under "Wafer Cle
 
 > "Wafer surface conditioning, also referred to as cleaning, removes contaminants such as particles, residues, films, and other unwanted materials that accumulate on the wafer surface throughout the chip manufacturing process. Even microscopic particles left over from an etch step or a chemical mechanical planarization (CMP) step can degrade or destroy the functionality of the chip if they are not removed before the next process step." ([2025 10-K — Wafer Cleaning narrative](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/lrcx-20250629.htm))
 
-**中文释义：** **湿法清洗（wet clean）** 用化学药液（如氢氟酸 HF、SC-1、SC-2、稀释氨水等）配合超纯水对晶圆表面做"洗澡"——把上一道刻蚀或 CMP（化学机械抛光）留下的颗粒、薄膜残留、金属离子统统冲掉。**单晶圆湿法清洗（single-wafer wet clean）** 取代了过去的"批清洗"（即一次浸几十片到化学槽里），优势是每片晶圆都获得相同处理、避免批次间的污染交叉。Lam 的四个清洗平台各有侧重：
+**中文释义 / Plain-language gloss:** **Wet clean / 湿法清洗** 用 chemical solutions / 化学药液（HF / 氢氟酸、SC-1、SC-2、稀释氨水等）配合 ultra-pure water (UPW, 超纯水) 对 wafer surface / 晶圆表面 做"sterile wash"——把上一道 etch / 刻蚀 或 CMP (chemical-mechanical planarization, 化学机械抛光) 留下的 particles / 颗粒、film residues / 薄膜残留、metal ions / 金属离子 统统冲掉。**Single-wafer wet clean / 单晶圆湿法清洗** 取代了上一代的 **batch clean / 批清洗**（一次浸几十片到 chemical tank / 化学槽 里），优势是每片 wafer 都获得相同处理、避免 batch-to-batch contamination crossover / 批次间污染交叉。Lam 四个清洗平台的定位：
 
-- **EOS®**：综合性单晶圆湿清洗主力平台；
-- **DV-Prime®**：定位先进节点高产能（high-throughput）；
-- **Da Vinci®**：金属互连相关清洗；
-- **SP Series**：通用清洗（Lam 历史最久的清洗品牌之一，2008 年从 SEZ 收购而来）。
+- **EOS®** —— 综合性 single-wafer wet clean / 单晶圆湿清洗 主力平台；
+- **DV-Prime®** —— 定位 leading-edge nodes / 先进节点 的 high-throughput / 高产能 清洗；
+- **Da Vinci®** —— interconnect / 金属互连 相关的清洗；
+- **SP Series** —— general-purpose / 通用清洗（Lam 历史最久的清洗品牌之一，2008 年从奥地利 SEZ Group 收购而来）。
 
-清洗在先进节点的重要性来自一个数学事实：一片晶圆要经历数百道工序，每一道都有一定的良率损失。如果颗粒控制不到位，几道工序的累积良率会从 99% 变成 50%；颗粒计数（particle count）直接决定先进节点的良率。
+清洗在先进 node / 节点 的重要性来自一个数学事实：一片 wafer 要经历数百道 process steps / 工艺步骤，每一道都有 yield loss / 良率损失。如果 particle control / 颗粒控制 不到位，cumulative yield / 累积良率 会从 99% 变成 50% —— **particle count / 颗粒计数** 直接决定先进节点的良率，因此清洗工具的需求随节点 scaling 而上升。
 
 ***Analyst view:*** **Screen Holdings (Japan)** is widely regarded as the global market leader in single-wafer wet clean; Lam is generally considered #2 by share, with stronger relative positioning at U.S. and Korean customers ([SCREEN Holdings — Investor Relations](https://www.screen.co.jp/en/ir)).
 
@@ -290,7 +290,7 @@ The 10-K table groups all four Lam wet-clean platforms together under "Wafer Cle
 
 > "Bevel cleaning removes unwanted masks, residues, and films from the edge of a wafer between manufacturing steps. If not cleaned, these materials become defect sources. For instance, they can flake off and re-deposit on the device area during subsequent processes. Even a single particle that lands on a critical part of a device can ruin the entire chip. By inserting bevel clean processes at strategic points, these potential defect sources can be eliminated and more functional chips produced. By combining the precise control and flexibility of plasma with technology that p[recisely targets the bevel]…"
 
-**中文释义：** **Bevel（晶圆边缘）** 指晶圆最外圈的一小条"圆边"——300mm 晶圆边缘大约 2-3mm 宽，但所有工序都不会刻意覆盖这一圈。问题是：晶圆在腔体里被夹具夹住、高速旋转、薄膜在边缘也会沉积——这些薄膜在边缘是"半成品"，结构脆弱，下一道工序时可能**剥落（flaking）** 飞回到晶圆中心的器件区，瞬间毁掉整片晶圆。Coronus 用**干法等离子体**专门"剥离"这一圈边缘的薄膜——和正面湿清洗不同，Coronus 只对准 bevel，不会污染正面。这是一个"小但毛利率高"的细分市场，也是 Lam 在清洗类别里相对独享的工艺。
+**中文释义 / Plain-language gloss:** **Bevel / 晶圆边缘** 指 wafer 最外圈的一小条"圆边"—— 300mm wafer 的 bevel 大约 2-3mm 宽，但所有 process steps 都不会刻意覆盖这一圈。问题是：wafer 在 process chamber / 工艺腔体 里被 clamps / 夹具 夹住、高速旋转、film deposition / 薄膜沉积 在 bevel 上也会发生 —— 这些薄膜在边缘是"half-finished / 半成品"，structurally fragile / 结构脆弱，在下一道工序的高温或机械应力下可能 **flake off / 剥落** 飞回到 wafer center 的 device area / 器件区，瞬间毁掉整片 wafer。Coronus 用 **dry plasma / 干法等离子体** 专门 strip / 剥离 这一圈 bevel 上的 film flakes —— 和 front-side wet clean / 正面湿清洗 不同的是，Coronus 只对准 bevel ring，不会污染 wafer 正面。是一个 **small-volume but high-margin / 小但毛利率高** 的细分市场，也是 Lam 在 clean / 清洗 类别里相对独享的工艺。
 
 ### 4.6 Customer Support Business Group (CSBG) — the recurring annuity outside the product matrix
 

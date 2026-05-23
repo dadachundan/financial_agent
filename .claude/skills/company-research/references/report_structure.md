@@ -96,12 +96,15 @@ Most semiconductor / industrial / hardware / pharma issuers publish a product ma
 
 If the issuer does not publish such a table, build one from the website's product navigation (citing the website) and label it explicitly as analyst-constructed.
 
-**(b) Walk each row with verbatim 10-K quotes + native-language pedagogy.**
+**(b) Walk each row with verbatim 10-K quotes + bilingual pedagogy.**
 
 For each product family in the matrix, follow this exact three-part pattern:
 
   1. **10-K verbatim (block quote).** Quote the 10-K's Product Family description directly — use `> "…"` markdown block-quote syntax with the inline 10-K citation right above the quote. Verbatim text from the issuer is by definition non-fabricated and gives the reader Lam's own explanation of what the product does.
-  2. **Native-language pedagogical explanation** (introduced with a heading like `**中文释义：**` for Chinese audience, or no special heading for English-language reports — but in either case clearly labeled as the analyst's plain-language gloss, *not* attributed to the 10-K). This is where the analyst earns their pay: explain in 3–6 sentences (a) the underlying physics / process / mechanism using analogies where helpful, (b) how this product differs from its sibling products in the same matrix, and (c) the strategic inflection currently driving demand. **Mixing Chinese into a primarily English report is encouraged when the topic is deeply technical** — Chinese has dense, idiomatic vocabulary for semiconductor process steps (薄膜、刻蚀、互连、字线、栅极, etc.) that compresses what English needs several sentences to explain. Don't be shy about it.
+  2. **Bilingual pedagogical explanation** introduced with the label `**中文释义 / Plain-language gloss:**`. Clearly labeled as the analyst's plain-language gloss, *not* attributed to the 10-K. This is where the analyst earns their pay: explain in 3–6 sentences (a) the underlying physics / process / mechanism using analogies where helpful, (b) how this product differs from its sibling products in the same matrix, and (c) the strategic inflection currently driving demand.
+     - **For every technical term, give both Chinese AND English side-by-side** in the form `Chinese / English` or `English / Chinese` or `Chinese (English)`. Examples: `dielectric / 介质`, `通孔 (via)`, `wordline / 字线`, `CMP (chemical-mechanical planarization, 化学机械抛光)`, `gate-all-around (GAA, 栅极环绕)`. This serves bilingual readers (often the same reader: a Chinese-native analyst working in English-speaking firms, or vice versa) and prevents either-language vocabulary gaps from blocking comprehension.
+     - **Code-switching freely is fine** — sentences can start in one language and end in the other, e.g., "SABRE 做的是 **电镀铜 / Cu electroplating (ECD)** —— 通过 electrochemical reaction 把 copper 长在 wafer 上, forming the **互连线 / interconnect**…". This compressed style is denser than either monolingual version because it leverages each language's strengths: Chinese for compact process names, English for proper-noun technologies and IUPAC chemistry.
+     - For non-Chinese-reading audiences (e.g. company-research reports targeting US-domestic-only consumers), you may use the heading `**Plain-language gloss:**` alone and skip Chinese — but for any cross-border-investing context (any Chinese-listed company, any US semicap/EV/battery/biotech name with significant Chinese supply chain) the bilingual form is preferred.
   3. ***Analyst view:* sentence** — competitive context only, cited to the competitor's filing or website or a third-party research source, never to the subject's 10-K. Specific competitor product names (e.g. AMAT's NOKOTA, Producer, Endura) belong here.
 
 **(c) End the section with a synthesis paragraph that shows how the product categories interact.** This is what makes a research report *pedagogical* rather than a catalog. For semicap, it's the Deposition → Etch → Clean → Deposition manufacturing cycle. For other industries, the equivalent: how the products compose a single customer workflow / use case / treatment regimen / installation. One paragraph; 3–5 sentences; explicit about which products sit at each step. Optionally include a small Mermaid LR or TD graph showing the loop.
@@ -114,27 +117,44 @@ For each product family in the matrix, follow this exact three-part pattern:
 
 **Rendering the issuer's product table as a PNG (for step (a))**
 
-The 10-K HTML is downloaded locally to `financial_reports/<TICKER>/` by `fetch_financial_report.py`. To render the products page to PNG, use playwright + chromium (one-time installation: `pip install playwright && python3 -m playwright install chromium`):
+A reusable helper script lives at `.claude/skills/company-research/scripts/render_10k_section.py`. It takes a local 10-K HTML path, an anchor string (any unique text inside the target element — usually a product name), and an output path; it screenshots the located element at retina resolution and saves a PNG.
 
-```python
-from playwright.sync_api import sync_playwright
-INPUT_HTML  = '/Users/x/projects/financial_agent/financial_reports/<TICKER>/<10-K-filename>.htm'
-OUTPUT_PNG  = 'reports/company/<Slug>/charts/<ticker>_10k_products_table.png'
-ANCHOR_TEXT = 'SABRE'  # or any unique product-name string from the table
-with sync_playwright() as p:
-    browser = p.chromium.launch()
-    page = browser.new_page(viewport={'width': 1200, 'height': 2000}, device_scale_factor=2)
-    page.goto(f'file://{INPUT_HTML}')
-    tbl = page.locator('table').filter(has_text=ANCHOR_TEXT).first
-    tbl.scroll_into_view_if_needed(timeout=5000)
-    bb = tbl.bounding_box()
-    page.screenshot(path=OUTPUT_PNG, clip={
-        'x': max(0, bb['x']-20), 'y': max(0, bb['y']-80),
-        'width': min(1200, bb['width']+40), 'height': min(2000, bb['height']+100)})
-    browser.close()
+**One-time setup** (skip if playwright is already installed in the project):
+
+```bash
+pip install playwright
+python3 -m playwright install chromium
 ```
 
-For SEC HTML 10-Ks the table extracts cleanly. For Chinese 年度报告 (cninfo PDFs), use `fitz` (PyMuPDF) to render the relevant page to PNG instead. Save the PNG into `reports/company/<Slug>/charts/` so the relative `![](charts/...)` reference resolves.
+**Usage:**
+
+```bash
+# Default: anchor by a product name inside the target <table>
+python3 .claude/skills/company-research/scripts/render_10k_section.py \
+    --html financial_reports/LRCX/<10-K-filename>.htm \
+    --anchor SABRE \
+    --output reports/company/<Slug>/charts/<ticker>_10k_products_table.png
+
+# Or: specify a CSS selector directly
+python3 .claude/skills/company-research/scripts/render_10k_section.py \
+    --html financial_reports/<TICKER>/<10-K-filename>.htm \
+    --selector "table.products" \
+    --output reports/company/<Slug>/charts/<ticker>_10k_products_table.png \
+    --pad-top 150  # extra header padding if the section title doesn't fit
+```
+
+**How it works internally:**
+1. Launches headless chromium via playwright.
+2. Loads the local 10-K HTML file via `file://` URL — works with the HTML SEC EDGAR serves; no network round-trip needed since the file is cached locally by `fetch_financial_report.py`.
+3. Locates the target element either by `--anchor` (text-content filter on `<table>`) or by `--selector` (CSS selector).
+4. Calls `page.screenshot(clip=bounding_box + padding)` to crop just the element + small padding to include the section heading and any caption.
+5. Saves at `device_scale_factor=2` (retina) for crisp PNGs.
+
+**Choosing a good anchor.** Pick a unique product or product-family name that appears only inside the target `<table>` — e.g. for Lam's product table, `SABRE` works because it's a unique product family. For Apple, `iPhone` would be too generic (appears across many tables); use a more specific anchor like `Mac Studio` or a sentence from a unique paragraph. If no unique anchor exists, fall back to `--selector` with a CSS path.
+
+**For Chinese 年度报告 (cninfo PDFs)**, use `fitz` (PyMuPDF) to render the relevant page to PNG instead — see the project's `render_pdf_pages.py` pattern. The helper script above is HTML-only.
+
+Save all rendered PNGs into `reports/company/<Slug>/charts/` so the relative `![](charts/...)` reference resolves from the markdown report.
 
 **Example structure (semiconductor capital equipment, mixed English / Chinese in the body, used for the LRCX report):**
 ```
