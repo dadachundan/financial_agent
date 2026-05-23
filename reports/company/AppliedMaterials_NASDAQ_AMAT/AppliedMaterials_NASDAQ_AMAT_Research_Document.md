@@ -110,7 +110,7 @@ timeline
     title Applied Materials key milestones
     1967 : Founded by Michael A. McNeilly in Mountain View, California
     1972 : IPO on Nasdaq (AMAT)
-    1976 : James C. Morgan becomes CEO; refocus on equipment
+    1976 : Founder departs; company refocuses from chemicals to equipment
     1984 : Builds dedicated manufacturing / service presence in Japan
     1993 : Crosses $1B revenue
     2000 : Cycle-peak revenue near $9B; acquires Etec Systems (mask making)
@@ -128,7 +128,7 @@ timeline
 
 *Sources: [2025 10-K](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm); [2026 DEF 14A Proxy Statement](https://www.sec.gov/Archives/edgar/data/6951/000119312526027307/d71992ddef14a.htm); [Q2 FY26 press release](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm).*
 
-Applied Materials was founded in 1967 and went public on Nasdaq in 1972. Under James C. Morgan (CEO 1976–2003) the Company became the world's largest wafer-fab equipment supplier by following foundry and memory capex to Asia and acquiring adjacent product franchises. The arc has three load-bearing inflection points worth surfacing because each still shapes today's competitive profile:
+Applied Materials was founded in 1967 and went public on Nasdaq in 1972. Through a multi-decade transformation that pivoted the company from chemicals to equipment in the late 1970s, Applied followed foundry and memory capex to Asia and absorbed a series of adjacent product franchises to become the world's largest wafer-fab equipment supplier. The arc has three load-bearing inflection points worth surfacing because each still shapes today's competitive profile:
 
 1. **Asia-first globalization (1980s–90s):** Applied was among the first US capital-equipment suppliers to build dedicated R&D, manufacturing and field-service presence in Japan, Korea and Taiwan. The structural result is that by FY2025, *"In fiscal 2025, approximately 89% of our net revenue was to customers in regions outside the United States,"* with Asia-Pacific concentrated as the largest customer region. ([2025 10-K](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))
 2. **Materials-engineering platform consolidation (2000s–2010s):** Applied absorbed Etec Systems (mask making, 2000), Brooks Automation's wafer-handling business (2007), Semitool (CMP/ECP, 2009) and Varian Semiconductor (ion implant, 2011 for $4.9B). The single most consequential of these was Varian — it brought Gary Dickerson, who became CEO in 2013 and remains in the role. ([2026 DEF 14A, "Director and Nominee Biographies"](https://www.sec.gov/Archives/edgar/data/6951/000119312526027307/d71992ddef14a.htm))
@@ -144,7 +144,7 @@ The skill calls for founder and current CEO only. AMAT's founder (Michael A. McN
 
 ### 3.1 Founder — Michael A. McNeilly (founded 1967; departed 1976)
 
-Michael A. McNeilly co-founded Applied Materials in 1967 in Mountain View, California, originally to supply chemicals and chemical-vapor-deposition systems to the nascent integrated-circuit industry. He departed in 1976, and the Company pivoted away from chemicals to focus on equipment under James C. Morgan; the founder has no current operational role, no current ownership stake, and no current board presence. The 1972 Nasdaq listing under ticker AMAT was completed during his tenure. ([2026 DEF 14A, "Director and Nominee Biographies"](https://www.sec.gov/Archives/edgar/data/6951/000119312526027307/d71992ddef14a.htm) — director list shows McNeilly is not a current director or 5% holder.)
+Michael A. McNeilly co-founded Applied Materials in 1967 in Mountain View, California, originally to supply chemicals and chemical-vapor-deposition systems to the nascent integrated-circuit industry. He departed in 1976, and the Company pivoted away from chemicals to focus on equipment; the founder has no current operational role, no current ownership stake, and no current board presence. The 1972 Nasdaq listing under ticker AMAT was completed during his tenure. ([2026 DEF 14A, "Director and Nominee Biographies"](https://www.sec.gov/Archives/edgar/data/6951/000119312526027307/d71992ddef14a.htm) — director list shows McNeilly is not a current director or 5% holder.)
 
 ### 3.2 Current CEO — Gary E. Dickerson (President & CEO since 2013)
 
@@ -161,7 +161,7 @@ Gary Dickerson is one of the longest-tenured CEOs in US semiconductor capital eq
 - President of Applied since 2012; CEO since 2013 (13 years).
 - Director nominee on the 2026 ballot. ([2026 DEF 14A, "Director Nominee Biographies"](https://www.sec.gov/Archives/edgar/data/6951/000119312526027307/d71992ddef14a.htm))
 - Ownership stake is less than 1% of shares outstanding (the proxy's beneficial-ownership table lists all directors and NEOs as a group at <1%). The board's stock-ownership guidelines require the CEO to own ≥6× base salary in stock.
-- FY2025 total target compensation comprised base salary of $1,030,000, target annual cash bonus, and target long-term equity awards in PSU and RSU form. The 2026 proxy notes that PSUs granted to Dickerson and to Prabu G. Raja (SPG President) for the FY2024–FY2025 measurement cycle *"fully vested at the end of fiscal 2025"* because Applied's TSR exceeded the maximum performance hurdle — a structural feature of the comp design that aligns CEO pay with multi-year shareholder return rather than annual earnings.
+- FY2025 total target compensation comprised base salary of $1,030,000, target annual cash bonus, and target long-term equity awards in PSU and RSU form. The 2026 proxy notes that the CEO's FY2024–FY2025 PSU awards *"fully vested at the end of fiscal 2025"* because Applied's TSR exceeded the maximum performance hurdle — a structural feature of the comp design that aligns CEO pay with multi-year shareholder return rather than annual earnings.
 
 **Why this CEO matters to the equity story.** Dickerson's 13-year run has delivered ~4× revenue growth (from ~$7B in FY13 to $28.4B in FY25, ~12% CAGR) and operating-margin expansion from mid-teens to ~32% (non-GAAP, Q2 FY26 run-rate) — that combination is among the best multi-cycle records in WFE. He has missed twice on transformative M&A (TEL 2014–15; Kokusai 2019–21) — those are genuine execution failures and have left Applied without scaled batch-ALD and furnace exposure — but he has otherwise compounded EPS and dividend per share consistently; the 2026 dividend was raised 15% to $0.53/quarter, marking nine consecutive years of increases. ([Q2 FY26 press release, dividend section](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm))
 
@@ -691,9 +691,8 @@ Yahoo Finance and appliedmaterials.com URLs return 503/403 to command-line `curl
 
 **Executive-name verification** (against 2026 DEF 14A `/tmp/amat_def14a_2026.htm`):
 - "Gary E. Dickerson — President and Chief Executive Officer" ✓
-- "Prabu G. Raja" (referenced only in Section 8.4 context, not in trimmed Section 3) ✓
-- "Thomas J. Iannotti" (referenced as Independent Chair in earlier draft; trimmed in latest version since Section 3 now covers CEO only) ✓ — name confirmed in filing
 - Founder Michael A. McNeilly — not listed in DEF 14A as director or 5% holder ✓ (consistent with the narrative that he departed in 1976)
+- Report scope intentionally limited to founder + current CEO; no other executives named.
 
 **Q2 FY26 press release verbatim quotes** (against `/tmp/amat_q2_fy26.htm`):
 - *"we now expect our semiconductor equipment business to grow more than 30 percent in calendar 2026"* ✓
