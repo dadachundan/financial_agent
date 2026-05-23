@@ -136,7 +136,7 @@ The team has delivered through two complete cycles. Strengths: deep technical be
 
 ## 4. Products & Services
 
-Lam organizes its portfolio around **three process categories — Deposition, Etch, and Clean** — plus the recurring CSBG service business. This taxonomy is reproduced verbatim in the 10-K's product table ([2025 10-K, p.4](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/lrcx-20250629.htm)).
+Lam organizes its product portfolio around **three WFE process categories — Deposition, Etch, and Clean** — described in the 10-K's Item 1 Business narrative; the Customer Support Business Group (CSBG) is a separate group covering services, spares, upgrades and non-leading-edge (Reliant) equipment ([2025 10-K, Item 1 Business](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/lrcx-20250629.htm)). For financial reporting Lam operates as a **single reportable segment**; revenue is disclosed in just two lines — **Systems revenue** (new leading-edge deposition, etch, clean and other WFE equipment) and **Customer support-related revenue and other** (CSBG plus Reliant). The Deposition / Etch / Clean / CSBG four-way split used throughout this report is a Lam-disclosed *product* taxonomy, not a separately reported revenue table ([2025 10-K, Note 4 — Segment Reporting and MD&A](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/lrcx-20250629.htm)).
 
 ```mermaid
 graph TD
