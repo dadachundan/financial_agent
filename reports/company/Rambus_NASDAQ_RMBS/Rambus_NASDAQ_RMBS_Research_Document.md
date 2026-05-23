@@ -182,14 +182,14 @@ John Shinn leads legal and IP licensing strategy — a critical role for Rambus 
 
 ### Governance footer
 
-The Rambus board has **eight directors**, of which **seven are independent**. The chair is **Charles Kissner** (since 2012), a veteran of Aviat Networks, ShoreTel, Stratex, and earlier AT&T. Other independent directors include:
+The Rambus board has **eight directors**, of which **seven are independent**. The chair is **Charles Kissner** (since 2012), a veteran of Aviat Networks, ShoreTel, Stratex, and earlier AT&T ([Rambus 2026 DEF 14A, Director biographies](https://www.sec.gov/Archives/edgar/data/917273/000119312526096458/0001193125-26-096458-index.htm)). Other independent directors include:
 
-- **Meera Rao** (Audit Committee chair) — former CFO of **Monolithic Power Systems** (a direct memory-IF chip competitor of Rambus's), also on the Impinj board.
-- **Necip Sayiner** — former EVP of **Renesas Electronics Corporation** (another direct memory-IF competitor) and former CEO of Intersil; provides direct competitor-side semiconductor leadership experience.
-- **Emiko Higashi** — Tohmon Capital Partners founder; ex-Wasserstein Perella tech M&A head; board member at Takeda, Rapidus (Japanese 2nm foundry).
-- **Steven Laub** — former CEO of Atmel and earlier President & COO of Lattice Semiconductor.
-- **Victor Peng** — *appointed February 12, 2026*; former President of AMD (2022–2024) and former CEO of Xilinx (2018–2022); arguably the highest-profile semiconductor industry addition to the board in recent years and a clear signal of the company's data-center / AI orientation.
-- **Eric Stang** — semiconductor industry veteran.
+- **Meera Rao** (Audit Committee chair) — former CFO of **Monolithic Power Systems** (a direct memory-IF chip competitor of Rambus's), also on the Impinj board ([Rambus 2026 DEF 14A, Director biographies](https://www.sec.gov/Archives/edgar/data/917273/000119312526096458/0001193125-26-096458-index.htm)).
+- **Necip Sayiner** — former EVP of **Renesas Electronics Corporation** (another direct memory-IF competitor) and former CEO of Intersil; provides direct competitor-side semiconductor leadership experience ([Rambus 2026 DEF 14A, Director biographies](https://www.sec.gov/Archives/edgar/data/917273/000119312526096458/0001193125-26-096458-index.htm)).
+- **Emiko Higashi** — Tohmon Capital Partners founder; ex-Wasserstein Perella tech M&A head; board member at Takeda, Rapidus (Japanese 2nm foundry) ([Rambus 2026 DEF 14A, Director biographies](https://www.sec.gov/Archives/edgar/data/917273/000119312526096458/0001193125-26-096458-index.htm)).
+- **Steven Laub** — former CEO of Atmel and earlier President & COO of Lattice Semiconductor ([Rambus 2026 DEF 14A, Director biographies](https://www.sec.gov/Archives/edgar/data/917273/000119312526096458/0001193125-26-096458-index.htm)).
+- **Victor Peng** — *appointed February 12, 2026*; former President of AMD (2022–2024) and former CEO of Xilinx (2018–2022); arguably the highest-profile semiconductor industry addition to the board in recent years and a clear signal of the company's data-center / AI orientation ([Victor Peng Joins Rambus Board, 8-K, 2026-02-12](https://www.sec.gov/Archives/edgar/data/917273/000119312526048728/d83049dex991.htm)).
+- **Eric Stang** — semiconductor industry veteran ([Rambus 2026 DEF 14A, Director biographies](https://www.sec.gov/Archives/edgar/data/917273/000119312526096458/0001193125-26-096458-index.htm)).
 
 Per the proxy, approximately **86%** of NEO target compensation (and ~92% for the CEO) is performance-linked. Major institutional holders are **BlackRock 13.9%**, **Vanguard 11.6%**, **T. Rowe Price 5.0%**. No insider holds more than 1% — the company is not founder-controlled and is widely held by institutions ([Rambus 2026 DEF 14A, Security Ownership table](https://www.sec.gov/Archives/edgar/data/917273/000119312526096458/0001193125-26-096458-index.htm)).
 
@@ -307,8 +307,8 @@ The **DDR5 RCD chipset business** is the unambiguous flagship — it drove +41% 
 Rambus sells through three distinct go-to-market channels reflecting the three revenue streams:
 
 1. **Memory Interface Chips** — sold directly and through distributors to (a) **memory module manufacturers** (Samsung, SK hynix, Micron) who integrate the chipsets onto RDIMM / MRDIMM modules, (b) **OEMs and hyperscalers** for direct integration ([Rambus 2025 10-K, p. 5](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
-2. **Silicon IP** — sold via direct global sales force to chipmakers building custom silicon, ASSPs, and FPGAs (including AI accelerator and GPU vendors).
-3. **Patent Licensing** — direct enterprise sales, multi-year license agreements with major semiconductor and system companies.
+2. **Silicon IP** — sold via direct global sales force to chipmakers building custom silicon, ASSPs, and FPGAs (including AI accelerator and GPU vendors) ([Rambus 2025 10-K, Item 1 — Silicon IP](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
+3. **Patent Licensing** — direct enterprise sales, multi-year license agreements with major semiconductor and system companies ([Rambus 2025 10-K, Item 1 — Patent Licensing](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
 
 ### Customer concentration
 
@@ -320,11 +320,11 @@ Per the FY2025 10-K, three customers were ≥10% of revenue at some point in the
 | Customer B | 18% | 17% | **18%** |
 | Customer C | <10% | 12% | <10% |
 
-**Top-2 customer share in FY2025 = ~41%; top-3 in FY2024 = 52%.** The customer names are not disclosed in the 10-K under standard ASC 280 application, but cross-referencing the geographic split (South Korea USD 329m; Singapore USD 164m) and the named-customer disclosure language ("Our memory interface chips are sold to major DRAM manufacturers, Micron, Samsung and SK hynix") makes the identifications nearly certain:
+**Top-2 customer share in FY2025 = ~41%; top-3 in FY2024 = 52%.** The customer names are not disclosed in the 10-K under standard ASC 280 application, but cross-referencing the geographic split (South Korea USD 329m; Singapore USD 164m) and the named-customer disclosure language ("Our memory interface chips are sold to major DRAM manufacturers, Micron, Samsung and SK hynix") makes the identifications nearly certain ([Rambus 2025 10-K, Concentrations and Geographic Revenue](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)):
 
-- **Customer A** (23%) is almost certainly **Samsung Electronics** (South Korea, the largest single DRAM supplier and largest Rambus chip buyer)
-- **Customer B** (18%) is almost certainly **SK hynix** (South Korea; the second major DRAM customer; also strategic on HBM controllers)
-- **Customer C** (when present at 12% in FY2024) is most likely **Micron Technology** (Singapore-contracted entity)
+- **Customer A** (23%) is almost certainly **Samsung Electronics** (South Korea, the largest single DRAM supplier and largest Rambus chip buyer) ([TrendForce, Global DRAM Revenue 3Q25, 2025-11-26](https://www.trendforce.com/presscenter/news/20251126-12802.html))
+- **Customer B** (18%) is almost certainly **SK hynix** (South Korea; the second major DRAM customer; also strategic on HBM controllers) ([TrendForce, Global DRAM Revenue 3Q25, 2025-11-26](https://www.trendforce.com/presscenter/news/20251126-12802.html))
+- **Customer C** (when present at 12% in FY2024) is most likely **Micron Technology** (Singapore-contracted entity) ([Rambus 2025 10-K, Note on Geographic Revenue](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm))
 
 ```mermaid
 pie title FY2025 revenue by top customers (USD m, est.)
@@ -335,23 +335,23 @@ pie title FY2025 revenue by top customers (USD m, est.)
 ```
 *Source: [Rambus FY2025 10-K, Concentrations of Risk note](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm); customer-name attribution is the author's inference from geographic disclosure and 10-K text, not directly disclosed.*
 
-**Risk severity:** Top-1 customer at 23% **exceeds the 20% materiality threshold**; top-2 at 41% is high but not yet ≥50%; top-3 in any single year (FY24) hit 52%. This is **material customer-concentration risk**, carried into Section 9. The mitigant is that the top customers are **strategic partners (DRAM makers)** not arms-length end-buyers — their incentive is to qualify multiple RCD suppliers and Rambus is currently winning share at the expense of Renesas more than displacing any single customer. The "customer is also a competitor" failure mode is minimal: the top customers are upstream (DRAM) not lateral.
+**Risk severity:** Top-1 customer at 23% **exceeds the 20% materiality threshold**; top-2 at 41% is high but not yet ≥50%; top-3 in any single year (FY24) hit 52%. This is **material customer-concentration risk**, carried into Section 9. The mitigant is that the top customers are **strategic partners (DRAM makers)** not arms-length end-buyers — their incentive is to qualify multiple RCD suppliers and Rambus is currently winning share at the expense of Renesas more than displacing any single customer. The "customer is also a competitor" failure mode is minimal: the top customers are upstream (DRAM) not lateral ([Rambus 2025 10-K, Concentrations of Risk note](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
 
-Geographic concentration mirrors customer concentration: **70% of FY2025 revenue is recognized in South Korea + Singapore**, reflecting the DRAM-maker contracting locations.
+Geographic concentration mirrors customer concentration: **70% of FY2025 revenue is recognized in South Korea + Singapore**, reflecting the DRAM-maker contracting locations ([Rambus 2025 10-K, Note on Geographic Revenue](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
 
 ### Sales cycle and contract structure
 
-- **Memory Interface Chips** — standard purchase orders with limited cancellation windows. Sold direct and via distributors. JEDEC standardization gates entry: a new RCD must be qualified by DRAM makers AND ratified by JEDEC AND validated by Intel/AMD platform engineering teams, typically a 18–24 month process.
-- **Silicon IP** — license + royalty deals, often 3–10 year duration.
-- **Patent Licensing** — fixed, variable, or hybrid royalty structures over up to 10 years. Renewal-driven revenue lumpiness is the biggest quarter-to-quarter variability driver in the P&L. CXMT (China) being a named licensee is strategically important — China is the fastest-growing DRAM region.
+- **Memory Interface Chips** — standard purchase orders with limited cancellation windows. Sold direct and via distributors. JEDEC standardization gates entry: a new RCD must be qualified by DRAM makers AND ratified by JEDEC AND validated by Intel/AMD platform engineering teams, typically a 18–24 month process ([Rambus 2025 10-K, Item 1 Business](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
+- **Silicon IP** — license + royalty deals, often 3–10 year duration ([Rambus 2025 10-K, Item 1 Business — Silicon IP](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
+- **Patent Licensing** — fixed, variable, or hybrid royalty structures over up to 10 years. Renewal-driven revenue lumpiness is the biggest quarter-to-quarter variability driver in the P&L. CXMT (China) being a named licensee is strategically important — China is the fastest-growing DRAM region ([Rambus 2025 10-K, Item 1 Business — Patent Licensing](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm); [Tom's Hardware, CXMT-Rambus patent deal](https://www.tomshardware.com/news/cxmt-patent-agreement-rambus-china-dram-memory)).
 
 ### Named customer / partner wins
 
-- **AMD** — patent licensee; new CFO came from AMD; CXL / PCIe IP customer
-- **NVIDIA** — patent licensee; GDDR7 controller IP target customer; LPDDR5X SOCAMM2 chipset positioned for NVIDIA-led server module form factor
-- **Broadcom, Marvell, MediaTek, Qualcomm** — patent licensees; Silicon IP customers
-- **Samsung, SK hynix, Micron** — both patent licensees AND Memory Interface Chip customers (the dual relationship is the structural advantage)
-- **CXMT** — China DRAM patent licensee (new / recently disclosed)
+- **AMD** — patent licensee; new CFO came from AMD; CXL / PCIe IP customer ([Rambus 2025 10-K, Item 1 Business — Licensees](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm))
+- **NVIDIA** — patent licensee; GDDR7 controller IP target customer; LPDDR5X SOCAMM2 chipset positioned for NVIDIA-led server module form factor ([Q1-FY2026 earnings release, 2026-04-27](https://www.sec.gov/Archives/edgar/data/917273/000119312526182076/rmbs-ex99_1.htm))
+- **Broadcom, Marvell, MediaTek, Qualcomm** — patent licensees; Silicon IP customers ([Rambus 2025 10-K, Item 1 Business — Licensees](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm))
+- **Samsung, SK hynix, Micron** — both patent licensees AND Memory Interface Chip customers (the dual relationship is the structural advantage) ([Rambus 2025 10-K, Item 1 Business](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm))
+- **CXMT** — China DRAM patent licensee (new / recently disclosed) ([Tom's Hardware, CXMT Signs Patent Deal With Rambus](https://www.tomshardware.com/news/cxmt-patent-agreement-rambus-china-dram-memory))
 
 ---
 
@@ -359,7 +359,7 @@ Geographic concentration mirrors customer concentration: **70% of FY2025 revenue
 
 ### 6.1 Industry definition and scope
 
-Rambus competes in three adjacent but technically distinct semiconductor sub-industries: **(a) memory interface chip components for server / data-center DRAM modules**, **(b) semiconductor IP licensing**, and **(c) memory and security patent licensing**. The first is part of the broader **DRAM module ecosystem** (NAICS 334413, Semiconductor and Related Device Manufacturing); the second sits in the **semiconductor IP / EDA industry** (effectively a sub-segment dominated by Cadence and Synopsys); the third is a unique structural-IP licensing market.
+Rambus competes in three adjacent but technically distinct semiconductor sub-industries: **(a) memory interface chip components for server / data-center DRAM modules**, **(b) semiconductor IP licensing**, and **(c) memory and security patent licensing**. The first is part of the broader **DRAM module ecosystem** (NAICS 334413, Semiconductor and Related Device Manufacturing); the second sits in the **semiconductor IP / EDA industry** (effectively a sub-segment dominated by Cadence and Synopsys); the third is a unique structural-IP licensing market ([Rambus 2025 10-K, Item 1 Business](https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/0001193125-26-057101-index.htm)).
 
 ### 6.2 Memory interface chip / DDR5 RDIMM market
 
@@ -506,7 +506,7 @@ Rambus's two-pronged strategy through 2027:
 
 ### Industry / Market Risks
 
-**R7 — Competitive intensity from Montage (Chinese SoE-linked).** Montage Technology (SSE: 688008) is a Chinese-domiciled, Shanghai-listed memory interface chip supplier that has been growing aggressively (2024 revenue more than doubled) and is the natural beneficiary of China DRAM expansion (CXMT). Montage has explicit Chinese state policy support as the domestic alternative to US / Japanese suppliers. The competitive pressure is bidirectional: Montage limits Rambus's TAM upside in China; Montage's broader-market push (Samsung, SK hynix, Micron qualifications) puts incremental pressure on RCD pricing and share globally. **As of mid-2026, Rambus still leads on Gen-5 RCD speed-bins and MRDIMM chipset readiness; the share-loss risk is more 2027–2028 than near-term.** Mitigant: 3-supplier structural preference at DRAM-maker level.
+**R7 — Competitive intensity from Montage (Chinese SoE-linked).** Montage Technology (SSE: 688008) is a Chinese-domiciled, Shanghai-listed memory interface chip supplier that has been growing aggressively (2024 revenue more than doubled) and is the natural beneficiary of China DRAM expansion (CXMT). Montage has explicit Chinese state policy support as the domestic alternative to US / Japanese suppliers. The competitive pressure is bidirectional: Montage limits Rambus's TAM upside in China; Montage's broader-market push (Samsung, SK hynix, Micron qualifications) puts incremental pressure on RCD pricing and share globally. **As of mid-2026, Rambus still leads on Gen-5 RCD speed-bins and MRDIMM chipset readiness; the share-loss risk is more 2027–2028 than near-term.** Mitigant: 3-supplier structural preference at DRAM-maker level ([SCMP, Shanghai chip firm doubles quarterly profit (Montage), 2025](https://www.scmp.com/tech/tech-trends/article/3307646/tech-war-shanghai-chip-firm-doubles-quarterly-profit-china-expands-supply-chain-role); [Yicai, Montage Technology 2024 Annual Results, 2025-04](https://www.yicaiglobal.com/star50news/2025_04_166816163513262669832)).
 
 **R8 — Cyclical DRAM downturn.** Memory pricing is famously cyclical; a DRAM oversupply / pricing collapse cycle would compress DDR5 module shipments and Rambus's RCD volume. The 2022 DRAM downturn cut module shipments materially; a repeat in 2026–2027 would be a meaningful overhang on the product revenue line. Mitigant: cycle-resistant patent royalty layer (40% of revenue) ([TrendForce, Memory Makers Prioritize Server Applications, 2026-01-05](https://www.trendforce.com/presscenter/news/20260105-12860.html)).
 

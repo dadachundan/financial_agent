@@ -346,9 +346,9 @@ quadrantChart
 
 **13. US-China geopolitics (high severity).** Tariffs, export controls, entity-list actions, and broader technology-decoupling moves all pose material downside. The 2024 1260H episode is a direct precedent ([Hesai 6-K, 2024-08-20](https://www.sec.gov/Archives/edgar/data/1861737/000110465924091092/0001104659-24-091092-index.htm)). Mitigant: HK dual listing, diversifying customer base across geographies, and direct engagement with US regulators ([Hesai Group Announces Pricing of Global Offering, 2025-09-11](https://www.sec.gov/Archives/edgar/data/1861737/000110465925089277/tm2525492d1_6k.htm)).
 
-**14. China EV demand / interest-rate cycle (moderate severity).** Hesai is leveraged to Chinese passenger-car volume, which is itself sensitive to PBOC rate policy, household balance sheets, and EV subsidies. A China consumer-demand slowdown or end of new-energy-vehicle (NEV) policy support would directly compress Hesai's largest market. Mitigant: lidar attach-rate growth has so far outrun NEV unit-volume softness because lidar penetrates per-vehicle even as total industry volume is flat.
+**14. China EV demand / interest-rate cycle (moderate severity).** Hesai is leveraged to Chinese passenger-car volume, which is itself sensitive to PBOC rate policy, household balance sheets, and EV subsidies. A China consumer-demand slowdown or end of new-energy-vehicle (NEV) policy support would directly compress Hesai's largest market ([Hesai 2024 20-F, "Risk Factors"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)). Mitigant: lidar attach-rate growth has so far outrun NEV unit-volume softness because lidar penetrates per-vehicle even as total industry volume is flat ([Yole Group — China takes the lead in automotive LiDAR, 2025-06](https://www.yolegroup.com/press-release/china-takes-the-lead-in-automotive-lidar-a-market-set-to-quadruple-by-2030/)).
 
-**15. FX exposure (low–moderate severity).** Hesai reports in RMB but a meaningful share of revenue is invoiced in USD (US OEM customer) and EUR (Stuttgart-served customers). Sustained RMB appreciation would compress reported revenue and margin; Hesai does not disclose extensive hedging.
+**15. FX exposure (low–moderate severity).** Hesai reports in RMB but a meaningful share of revenue is invoiced in USD (US OEM customer) and EUR (Stuttgart-served customers). Sustained RMB appreciation would compress reported revenue and margin; Hesai does not disclose extensive hedging ([Hesai 2024 20-F, "Item 5 — Operating and Financial Review"](https://www.sec.gov/Archives/edgar/data/1861737/000141057825000614/0001410578-25-000614-index.htm)).
 
 ---
 
@@ -386,7 +386,9 @@ quadrantChart
 
 ### Industry research (cited by Hesai in disclosures)
 
-- [Yole Group — Automotive lidar market tracker](https://www.yolegroup.com/) — third-party rankings cited by Hesai in the FY2025 press release.
-- [Frost & Sullivan — Lidar industry forecasts](https://www.frost.com/) — third-party TAM cited by Hesai.
-- [GGII (Gaogong Industry Institute, 高工产研)](http://www.gaogong-isuppli.com/) — Chinese lidar industry tracker, cited by Hesai.
-- [Gasgoo (盖世汽车)](https://www.gasgoo.com/) — Chinese auto-industry research, cited by Hesai for OEM design-win counts.
+- [Yole Group — Automotive LiDAR 2025 report landing page](https://www.yolegroup.com/product/report/automotive-lidar-2025/) — third-party rankings cited by Hesai in the FY2025 press release.
+- [Yole Group — China takes the lead in automotive LiDAR: A market set to quadruple by 2030, 2025-06](https://www.yolegroup.com/press-release/china-takes-the-lead-in-automotive-lidar-a-market-set-to-quadruple-by-2030/) — Yole press release referenced in industry analysis.
+- [RoboSense Ranked No. 1 in Global Passenger Car LiDAR Market Share, citing Yole 2024 Annual Report, 2025-04-08](https://www.robosense.ai/en/news-show-1894) — Yole-sourced market-share table redistributed by RoboSense.
+- Frost & Sullivan — Lidar industry forecasts (cited by Hesai inside the Q4 2025 press release; consult the [Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm) for the relevant data points).
+- GGII (Gaogong Industry Institute, 高工产研) — Chinese lidar industry tracker, cited inside the [Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm).
+- Gasgoo (盖世汽车) — Chinese auto-industry research, cited inside the [Hesai Q4 2025 Press Release](https://www.sec.gov/Archives/edgar/data/1861737/000110465926033591/tm269592d1_ex99-1.htm) for OEM design-win counts.

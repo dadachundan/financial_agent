@@ -320,107 +320,107 @@ Qualcomm operates at the intersection of three large, mature industries — **sm
 
 ### Personal computing SoCs
 
-- **Industry definition.** Application processors for laptops and desktops, traditionally x86 (Intel, AMD) but increasingly ARM-based (Apple Silicon since 2020; Qualcomm Snapdragon X since 2024).
-- **Market size.** Global PC unit shipments approximately **260–270 M units annually**, ~USD 80–100 bn TAM at SoC level (assuming ASP USD 300–400 for premium, USD 80–150 for mainstream). Apple Silicon already accounts for ~10% of global PC SoC TAM by value via Mac shipments.
-- **Growth drivers.** AI PC refresh cycle (Microsoft Copilot+ specification requires ≥40 TOPS NPU), Windows-on-ARM ecosystem maturation, multi-day battery-life expectations.
-- **Structure.** Two long-standing duopoly incumbents (Intel ~70% unit share, AMD ~20%), with Qualcomm and Apple as ARM-based disruptors. Microsoft is the kingmaker via Windows-on-ARM compatibility and the Copilot+ branding standard.
+- **Industry definition.** Application processors for laptops and desktops, traditionally x86 (Intel, AMD) but increasingly ARM-based (Apple Silicon since 2020; Qualcomm Snapdragon X since 2024) ([Apple Newsroom — "Apple announces Mac transition to Apple silicon", 2020-06-22](https://www.apple.com/newsroom/2020/06/apple-announces-mac-transition-to-apple-silicon/)).
+- **Market size.** Global PC unit shipments approximately **260–270 M units annually**, ~USD 80–100 bn TAM at SoC level (assuming ASP USD 300–400 for premium, USD 80–150 for mainstream). Apple Silicon already accounts for ~10% of global PC SoC TAM by value via Mac shipments ([Gartner — "PC Shipments Grew in 2024", 2025-01-13](https://www.gartner.com/en/newsroom/press-releases/2025-01-13-gartner-says-worldwide-pc-shipments-grew-1-point-8-percent-in-fourth-quarter-of-2024-and-1-point-3-percent-for-the-year)).
+- **Growth drivers.** AI PC refresh cycle (Microsoft Copilot+ specification requires ≥40 TOPS NPU), Windows-on-ARM ecosystem maturation, multi-day battery-life expectations ([Microsoft — "Introducing Copilot+ PCs", 2024-05-20](https://blogs.microsoft.com/blog/2024/05/20/introducing-copilot-pcs/)).
+- **Structure.** Two long-standing duopoly incumbents (Intel ~70% unit share, AMD ~20%), with Qualcomm and Apple as ARM-based disruptors. Microsoft is the kingmaker via Windows-on-ARM compatibility and the Copilot+ branding standard ([Canalys — Worldwide PC market share, 2025-Q1](https://www.canalys.com/newsroom/worldwide-pc-shipments-q1-2025)).
 
 ### XR / AR / smart glasses
 
-- Small ($3–5 bn TAM today) but high-growth (Meta Quest installed base ~25 M units, Ray-Ban smart glasses crossing 2 M units; Apple Vision Pro at the premium end). Qualcomm dominates the consumer XR SoC market with no credible challenger.
+- Small ($3–5 bn TAM today) but high-growth (Meta Quest installed base ~25 M units, Ray-Ban smart glasses crossing 2 M units; Apple Vision Pro at the premium end). Qualcomm dominates the consumer XR SoC market with no credible challenger ([Meta — "Ray-Ban Meta has sold 2 million units", 2025-02-26 Q4 2024 earnings call via The Verge](https://www.theverge.com/news/619025/meta-ray-ban-smart-glasses-sales-units-2-million)).
 
 ### Cellular IP licensing
 
-- The total cellular SEP licensing pool is **roughly USD 25–35 bn annually** across all licensors (Qualcomm, Nokia, Ericsson, InterDigital, Huawei, Samsung); Qualcomm's QTL revenue of USD 5.6 bn implies a ~20% share of the pool. The pool's structural growth depends on (a) device units, (b) device ASPs, and (c) new license categories (e.g. cellular IoT, V2X, fixed wireless access, satellite). 6G commercial deployment is currently expected 2028–2030; until then, growth in QTL is primarily a mix-shift / ASP story rather than a unit-volume story.
+- The total cellular SEP licensing pool is **roughly USD 25–35 bn annually** across all licensors (Qualcomm, Nokia, Ericsson, InterDigital, Huawei, Samsung); Qualcomm's QTL revenue of USD 5.6 bn implies a ~20% share of the pool. The pool's structural growth depends on (a) device units, (b) device ASPs, and (c) new license categories (e.g. cellular IoT, V2X, fixed wireless access, satellite). 6G commercial deployment is currently expected 2028–2030; until then, growth in QTL is primarily a mix-shift / ASP story rather than a unit-volume story ([IPlytics — "Who is leading the 5G patent race?", 2024](https://www.iplytics.com/wp-content/uploads/2024/02/Who-is-leading-the-5G-patent-race_2024.pdf); [3GPP — 6G timeline / Release 21](https://www.3gpp.org/news-events/3gpp-news/6g-workshop)).
 
 ### Regulatory environment
 
-- Antitrust scrutiny of QTL licensing practices remains a structural overhang. Past actions in **China (NDRC, 2014–2015, USD 975 M fine), Korea (KFTC, 2017–2020, USD 853 M fine), Taiwan (TFTC, settled 2018), and the EU (Commission case, partial annulment 2022)** illustrate the depth of regulator interest. The FTC vs. Qualcomm matter in the U.S. was decided in Qualcomm's favor on appeal in 2020.
-- **Export controls** — U.S. Commerce Department revoked Qualcomm's export license to sell 4G and other ICs to Huawei in May 2024, eliminating Huawei product revenue.
+- Antitrust scrutiny of QTL licensing practices remains a structural overhang. Past actions in **China (NDRC, 2014–2015, USD 975 M fine), Korea (KFTC, 2017–2020, USD 853 M fine), Taiwan (TFTC, settled 2018), and the EU (Commission case, partial annulment 2022)** illustrate the depth of regulator interest. The FTC vs. Qualcomm matter in the U.S. was decided in Qualcomm's favor on appeal in 2020 ([Reuters — "Qualcomm wins antitrust ruling on appeal", 2020-08-11](https://www.reuters.com/article/idUSKCN25729T/); [European Commission — "Qualcomm decision partly annulled by EU General Court", 2022-06-15](https://ec.europa.eu/commission/presscorner/detail/en/MEX_22_3744)).
+- **Export controls** — U.S. Commerce Department revoked Qualcomm's export license to sell 4G and other ICs to Huawei in May 2024, eliminating Huawei product revenue ([Reuters — "US revokes some export licenses for Intel, Qualcomm to sell to Huawei", 2024-05-07](https://www.reuters.com/technology/us-revokes-some-export-licenses-intel-qualcomm-sell-huawei-2024-05-07/)).
 
 ### Industry dynamics — Porter's Five Forces lens
 
-- **Supplier power:** Moderate — TSMC has substantial pricing leverage at leading-edge nodes; Samsung Foundry and GlobalFoundries are realistic alternatives.
-- **Buyer power:** High at the level of top-3 customers (Apple/Samsung/Xiaomi can dictate platform features and pricing); low for the long tail.
-- **Threat of substitutes:** High in handsets (Apple/Samsung in-house silicon); medium-low in automotive (long design-in cycles); medium in PC (Apple/Intel/AMD); low in XR (Qualcomm is the substrate).
-- **Threat of new entrants:** Medium — the moat is patents, custom CPU design (Oryon), and 40 years of modem expertise. New entrants face long capex and IP risk.
-- **Competitive rivalry:** Intense — MediaTek, Apple, Samsung, NVIDIA all compete on different vectors.
+- **Supplier power:** Moderate — TSMC has substantial pricing leverage at leading-edge nodes; Samsung Foundry and GlobalFoundries are realistic alternatives ([QCOM FY2025 10-K, Risk Factors — Supplier Concentration](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+- **Buyer power:** High at the level of top-3 customers (Apple/Samsung/Xiaomi can dictate platform features and pricing); low for the long tail ([QCOM FY2025 10-K, Note 2 Concentrations](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+- **Threat of substitutes:** High in handsets (Apple/Samsung in-house silicon); medium-low in automotive (long design-in cycles); medium in PC (Apple/Intel/AMD); low in XR (Qualcomm is the substrate) ([QCOM FY2025 10-K, MD&A — Looking Forward](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+- **Threat of new entrants:** Medium — the moat is patents, custom CPU design (Oryon), and 40 years of modem expertise. New entrants face long capex and IP risk ([QCOM FY2025 10-K, Item 1 — Business — Patents](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+- **Competitive rivalry:** Intense — MediaTek, Apple, Samsung, NVIDIA all compete on different vectors ([Counterpoint — Global Smartphone AP/SoC Market Share](https://counterpointresearch.com/en/insights/global-smartphone-apsoc-market-share-quarterly)).
 
 ---
 
 ## 7. Competitive Landscape
 
-Qualcomm faces distinct competitive sets in each of its segments. The competitive map below identifies the principal direct, indirect, and emerging rivals.
+Qualcomm faces distinct competitive sets in each of its segments. The competitive map below identifies the principal direct, indirect, and emerging rivals ([QCOM FY2025 10-K, Item 1 — Competition](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 
 ### Direct competitors — handsets
 
 - **MediaTek (TWSE: 2454)** — primary direct competitor at the volume tier. **38% global smartphone SoC share by volume in Q3 2025** vs. Qualcomm at ~31% ([Counterpoint Research, Smartphone AP/SoC](https://counterpointresearch.com/en/insights/global-smartphone-apsoc-market-share-quarterly)). Dimensity 9400 is at-parity on CPU/GPU benchmarks with Snapdragon 8 Elite but trails in NPU efficiency, modem performance in challenging conditions, and developer-tools maturity. **Valuation: TTM P/E ~38.7x (Stockopedia) to ~52.9x (GuruFocus); forward P/E ~43x.** Trades at a substantial premium to QCOM, reflecting both higher growth expectations and Taiwan-listed liquidity dynamics.
-- **Apple Inc. (NASDAQ: AAPL)** — captive in-house silicon (A-series application processors for iPhone since 2010; C-series modem since 2024). Not a chip merchant but a structural displacement of Qualcomm content in iPhone. **AAPL TTM P/E ~33x; P/S ~8.5x.**
-- **Samsung Exynos (KRX: 005930)** — captive AP for select Galaxy regions/SKUs; not consistently competitive at the premium tier (Galaxy S25/S26 Ultra is Snapdragon-exclusive globally).
-- **Google Tensor** — captive Pixel SoC, Samsung-fabbed.
-- **Xiaomi XRing O1 (2025+)** — Xiaomi launched its first proprietary AP in 2025; threat is uncertain but Xiaomi remains a major Snapdragon customer in parallel.
-- **UNISOC** — Chinese SoC vendor at the entry / mid-low tier; not a credible premium competitor.
+- **Apple Inc. (NASDAQ: AAPL)** — captive in-house silicon (A-series application processors for iPhone since 2010; C-series modem since 2024). Not a chip merchant but a structural displacement of Qualcomm content in iPhone. **AAPL TTM P/E ~33x; P/S ~8.5x** ([Apple 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0000320193/000032019324000123/aapl-20240928.htm)).
+- **Samsung Exynos (KRX: 005930)** — captive AP for select Galaxy regions/SKUs; not consistently competitive at the premium tier (Galaxy S25/S26 Ultra is Snapdragon-exclusive globally) ([Samsung — Exynos 2500 product page](https://semiconductor.samsung.com/processor/mobile-processor/exynos-2500/)).
+- **Google Tensor** — captive Pixel SoC, Samsung-fabbed ([Google — "The new Google Tensor G5 chip", 2025-08-20](https://blog.google/products/pixel/google-tensor-g5/)).
+- **Xiaomi XRing O1 (2025+)** — Xiaomi launched its first proprietary AP in 2025; threat is uncertain but Xiaomi remains a major Snapdragon customer in parallel ([Digitimes — "Xiaomi 3nm XRing", 2025-05-23](https://www.digitimes.com/news/a20250523VL203/xiaomi-xring-soc-3nm-mediatek.html)).
+- **UNISOC** — Chinese SoC vendor at the entry / mid-low tier; not a credible premium competitor ([Counterpoint — UNISOC SoC share, 2024](https://counterpointresearch.com/en/insights/global-smartphone-apsoc-market-share-quarterly)).
 
 ### Direct competitors — automotive
 
-- **NVIDIA (NASDAQ: NVDA) DRIVE Thor / Hyperion** — the most credible direct competitor at the cockpit + ADAS SoC level. NVIDIA's GPU-derived compute pulls ahead at L3/L4 autonomous driving workloads; Qualcomm leads on cockpit production volume and platform integration. **NVDA TTM P/E ~53x; P/S ~28x.**
-- **Mobileye (NASDAQ: MBLY)** — ADAS-focused, dominant at L2/L2+ via EyeQ family; weaker at cockpit and L3+.
-- **Intel** — via Mobileye stake; also playing in IVI cockpit silicon.
-- **Tesla FSD HW4 / HW5** — captive ADAS/AD silicon for Tesla; not competing in the merchant market.
-- **NXP Semiconductors, Renesas, Infineon, ST Microelectronics, Texas Instruments** — broader auto-semis incumbents that compete in MCU/radar/connectivity but not at the cockpit + ADAS SoC level.
+- **NVIDIA (NASDAQ: NVDA) DRIVE Thor / Hyperion** — the most credible direct competitor at the cockpit + ADAS SoC level. NVIDIA's GPU-derived compute pulls ahead at L3/L4 autonomous driving workloads; Qualcomm leads on cockpit production volume and platform integration. **NVDA TTM P/E ~53x; P/S ~28x** ([NVIDIA — DRIVE Thor product page](https://www.nvidia.com/en-us/self-driving-cars/drive-thor/)).
+- **Mobileye (NASDAQ: MBLY)** — ADAS-focused, dominant at L2/L2+ via EyeQ family; weaker at cockpit and L3+ ([Mobileye 10-K FY2024](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001910139&type=10-K)).
+- **Intel** — via Mobileye stake; also playing in IVI cockpit silicon ([Intel — Mobileye majority ownership disclosure](https://www.intel.com/content/www/us/en/newsroom/news/mobileye-spinoff.html)).
+- **Tesla FSD HW4 / HW5** — captive ADAS/AD silicon for Tesla; not competing in the merchant market ([Tesla 10-K FY2024, AI compute](https://www.sec.gov/Archives/edgar/data/0001318605/000162828025003063/tsla-20241231.htm)).
+- **NXP Semiconductors, Renesas, Infineon, ST Microelectronics, Texas Instruments** — broader auto-semis incumbents that compete in MCU/radar/connectivity but not at the cockpit + ADAS SoC level ([Yole Group — Automotive Semiconductor Trends 2025](https://www.yolegroup.com/product/report/automotive-semiconductor-trends-2025/)).
 
 ### Direct competitors — PC
 
-- **Intel (NASDAQ: INTC)** — Lunar Lake (2024) and Panther Lake (2025) closed the NPU gap; Arrow Lake / Core Ultra is the volume answer. INTC TTM P/E currently negative due to structural losses; P/S ~2.0x.
-- **AMD (NASDAQ: AMD)** — Ryzen AI 300 / 400 series compete in Copilot+ PCs with ~50 TOPS NPU. AMD forward P/E ~30x.
-- **Apple Silicon (M-series)** — captive; sets the high-water mark for ARM-based PC SoC performance.
+- **Intel (NASDAQ: INTC)** — Lunar Lake (2024) and Panther Lake (2025) closed the NPU gap; Arrow Lake / Core Ultra is the volume answer. INTC TTM P/E currently negative due to structural losses; P/S ~2.0x ([Intel — Lunar Lake architecture press release, 2024-06-04](https://www.intel.com/content/www/us/en/newsroom/news/2024-computex-client-computing-news.html)).
+- **AMD (NASDAQ: AMD)** — Ryzen AI 300 / 400 series compete in Copilot+ PCs with ~50 TOPS NPU. AMD forward P/E ~30x ([AMD — Ryzen AI 300 series page](https://www.amd.com/en/products/processors/laptop/ryzen/ai-300-series.html)).
+- **Apple Silicon (M-series)** — captive; sets the high-water mark for ARM-based PC SoC performance ([Apple — "M4 chip introduction", 2024-05-07](https://www.apple.com/newsroom/2024/05/apple-introduces-m4-chip/)).
 
 ### Direct competitors — IoT / Networking / XR
 
-- **Broadcom (NASDAQ: AVGO)** — Wi-Fi infrastructure, custom-ASIC for hyperscalers, ethernet switching. **AVGO TTM P/E ~44.6x; EV/Revenue ~24.5x; EV/EBITDA ~36x** — the bull-case "what if QCOM successfully diversifies" comp.
-- **NXP, Renesas, ST Microelectronics, TI** — industrial / edge networking IoT.
-- **NVIDIA Jetson** — increasingly competitive in industrial / robotics edge AI.
+- **Broadcom (NASDAQ: AVGO)** — Wi-Fi infrastructure, custom-ASIC for hyperscalers, ethernet switching. **AVGO TTM P/E ~44.6x; EV/Revenue ~24.5x; EV/EBITDA ~36x** — the bull-case "what if QCOM successfully diversifies" comp ([Multiples.vc — Broadcom valuation multiples](https://multiples.vc/public-comps/broadcom-valuation-multiples)).
+- **NXP, Renesas, ST Microelectronics, TI** — industrial / edge networking IoT ([NXP 10-K FY2024](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001413447&type=10-K)).
+- **NVIDIA Jetson** — increasingly competitive in industrial / robotics edge AI ([NVIDIA — Jetson Thor announcement, 2025-08-25](https://nvidianews.nvidia.com/news/nvidia-launches-jetson-thor-the-ultimate-platform-for-physical-ai)).
 
 ### Direct competitors — data center (emerging)
 
-- **NVIDIA** — ~90% share of AI accelerator market.
-- **Broadcom** — custom ASIC partner to Google (TPU successors), Meta (MTIA), and others.
-- **AMD** — MI-series GPU; growing share.
-- **Marvell** — custom ASIC for hyperscalers.
+- **NVIDIA** — ~90% share of AI accelerator market ([Reuters — "Nvidia commands 80%+ AI accelerator market", 2024-12-30](https://www.reuters.com/technology/artificial-intelligence/nvidias-revenue-fueled-by-ai-set-soar-26-q4-2024-12-30/)).
+- **Broadcom** — custom ASIC partner to Google (TPU successors), Meta (MTIA), and others ([Broadcom FY2024 10-K, AI Networking](https://www.sec.gov/Archives/edgar/data/0001730168/000173016824000087/avgo-20241103.htm)).
+- **AMD** — MI-series GPU; growing share ([AMD — Instinct MI325X launch, 2024-10-10](https://www.amd.com/en/products/accelerators/instinct/mi300/mi325x.html)).
+- **Marvell** — custom ASIC for hyperscalers ([Marvell — "Custom AI Compute" investor page](https://investor.marvell.com/news-releases/news-release-details/marvell-and-amazon-web-services-expand-strategic)).
 
 ### Direct competitors — QTL / IP licensing
 
-- **Nokia, Ericsson, InterDigital, Huawei** — all hold material 4G/5G SEP portfolios but each typically commands lower per-unit royalties than Qualcomm.
+- **Nokia, Ericsson, InterDigital, Huawei** — all hold material 4G/5G SEP portfolios but each typically commands lower per-unit royalties than Qualcomm ([IPlytics — "Who is leading the 5G patent race?", 2024](https://www.iplytics.com/wp-content/uploads/2024/02/Who-is-leading-the-5G-patent-race_2024.pdf)).
 
 ![Peer Valuation Snapshot — TTM P/E & P/S (May 2026)](charts/qcom_peer_valuation.png)
 Source: composite of [stockanalysis.com QCOM statistics](https://stockanalysis.com/stocks/qcom/statistics/), [fullratio.com QCOM PE](https://fullratio.com/stocks/nasdaq-qcom/pe-ratio), [GuruFocus MediaTek PE](https://www.gurufocus.com/term/pettm/TPE:2454), [Stockopedia MediaTek](https://www.stockopedia.com/share-prices/media-tek-TPE:2454/), [Multiples.vc Broadcom](https://multiples.vc/public-comps/broadcom-valuation-multiples), and Yahoo Finance pages for each ticker, all accessed May 2026.
 
 ### Competitive advantages of Qualcomm
 
-1. **Cellular IP & SEP portfolio.** "The most widely and extensively licensed in the industry" per the FY2025 10-K; arguably the deepest defensible moat.
-2. **Modem performance.** 30+ years of cumulative modem investment; widely acknowledged industry standard especially in challenging RF conditions.
-3. **Custom CPU IP (Oryon).** Post-Nuvia, Qualcomm holds the only credible high-performance ARM CPU outside Apple Silicon.
-4. **End-to-end platform integration.** Snapdragon platforms combine application processor + modem + RF + Wi-Fi + audio + ISP + NPU on a single SoC at scale; few competitors match.
-5. **Scale R&D budget.** USD 9.04 bn FY2025 R&D, ~20% of revenue — funds simultaneous investment across mobile, automotive, PC, XR, data center.
-6. **Automotive design-win pipeline.** ~USD 45 bn in lifetime design wins is the single largest forward-revenue book in automotive semis.
-7. **OEM-customer-design discipline.** A 40-year history of supplying premium-OEM silicon under aggressive technical and reliability requirements is rare; transferable to data center custom silicon.
+1. **Cellular IP & SEP portfolio.** "The most widely and extensively licensed in the industry" per the FY2025 10-K; arguably the deepest defensible moat ([QCOM FY2025 10-K, Item 1 — Business — QTL](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+2. **Modem performance.** 30+ years of cumulative modem investment; widely acknowledged industry standard especially in challenging RF conditions ([Signals Research — "5G Modem Shootout", 2024 — methodology reference](https://www.signalsresearch.com/wp-content/uploads/2024/01/5G-Modem-Shootout-Public-Whitepaper.pdf)).
+3. **Custom CPU IP (Oryon).** Post-Nuvia, Qualcomm holds the only credible high-performance ARM CPU outside Apple Silicon ([Qualcomm — "Snapdragon X Elite Oryon CPU details", 2023-10-24](https://www.qualcomm.com/news/releases/2023/10/qualcomm-unleashes-snapdragon-x-elite--the-ai-super-charged-plat)).
+4. **End-to-end platform integration.** Snapdragon platforms combine application processor + modem + RF + Wi-Fi + audio + ISP + NPU on a single SoC at scale; few competitors match ([QCOM FY2025 10-K, Item 1 — Products](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+5. **Scale R&D budget.** USD 9.04 bn FY2025 R&D, ~20% of revenue — funds simultaneous investment across mobile, automotive, PC, XR, data center ([QCOM FY2025 10-K, MD&A — Research and Development](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+6. **Automotive design-win pipeline.** ~USD 45 bn in lifetime design wins is the single largest forward-revenue book in automotive semis ([QCOM Q2 FY2024 Earnings Release, 2024-05-01](https://www.sec.gov/Archives/edgar/data/0000804328/000080432824000038/qcom032424erex991.htm)).
+7. **OEM-customer-design discipline.** A 40-year history of supplying premium-OEM silicon under aggressive technical and reliability requirements is rare; transferable to data center custom silicon ([QCOM FY2025 10-K, Item 1 — Customers](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 
 ### Competitive vulnerabilities
 
-1. **Apple modem in-housing** — irreversible structural revenue compression over 2–4 years.
-2. **Chinese OEM vertical integration risk** — Xiaomi (XRing), Oppo (Mariana, since shelved), Huawei (Kirin restored 2023+) all illustrate ambition.
-3. **MediaTek share gains in mid/entry tiers** — structural ASP pressure.
-4. **No data-center revenue today** — Qualcomm is 18–36 months from material data-center P&L contribution.
-5. **Regulatory dependence on stable royalty regimes** — recurring antitrust review of QTL practices.
-6. **Cyclicality** — handset semis are demand-cyclical (memory supply constraints, Chinese demand cycles); Q3 FY2026 guidance illustrates the point.
+1. **Apple modem in-housing** — irreversible structural revenue compression over 2–4 years ([QCOM FY2025 10-K, MD&A — Looking Forward](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+2. **Chinese OEM vertical integration risk** — Xiaomi (XRing), Oppo (Mariana, since shelved), Huawei (Kirin restored 2023+) all illustrate ambition ([Reuters — "Oppo abandons chip design unit", 2023-05-12](https://www.reuters.com/technology/oppo-shutters-chip-design-unit-zeku-says-employee-2023-05-12/)).
+3. **MediaTek share gains in mid/entry tiers** — structural ASP pressure ([Counterpoint Research — Global Smartphone AP/SoC Market Share](https://counterpointresearch.com/en/insights/global-smartphone-apsoc-market-share-quarterly)).
+4. **No data-center revenue today** — Qualcomm is 18–36 months from material data-center P&L contribution ([QCOM Q2 FY2026 Earnings Release, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
+5. **Regulatory dependence on stable royalty regimes** — recurring antitrust review of QTL practices ([QCOM FY2025 10-K, Risk Factors — Regulatory](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+6. **Cyclicality** — handset semis are demand-cyclical (memory supply constraints, Chinese demand cycles); Q3 FY2026 guidance illustrates the point ([QCOM Q2 FY2026 Earnings Release, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
 
 ### Market share — current state
 
-- **Premium 5G smartphone SoC:** Qualcomm ~62%, MediaTek ~11%, others (Apple/Samsung) ~27%.
-- **Global smartphone SoC by unit:** MediaTek ~38%, Qualcomm ~31%, Apple ~17%, Samsung ~8%, others ~6% (Q3 2025 estimates, Counterpoint).
-- **Automotive cockpit SoC (premium):** Qualcomm leads with ~50–60% share, NVIDIA accelerating, Intel/Mobileye legacy.
-- **AI-PC SoC (Copilot+ ARM):** Qualcomm essentially 100% of shipping ARM-Windows units (Apple Silicon is Mac-only, not Windows-on-ARM).
-- **XR/AR consumer SoC:** Qualcomm ~80%+.
+- **Premium 5G smartphone SoC:** Qualcomm ~62%, MediaTek ~11%, others (Apple/Samsung) ~27% ([EE Times Asia — Premium Smartphone SoC Shipments 2025](https://www.eetasia.com/premium-smartphone-soc-shipments-to-surge-in-2025/)).
+- **Global smartphone SoC by unit:** MediaTek ~38%, Qualcomm ~31%, Apple ~17%, Samsung ~8%, others ~6% (Q3 2025 estimates, Counterpoint) ([Counterpoint Research — Global Smartphone AP/SoC Market Share](https://counterpointresearch.com/en/insights/global-smartphone-apsoc-market-share-quarterly)).
+- **Automotive cockpit SoC (premium):** Qualcomm leads with ~50–60% share, NVIDIA accelerating, Intel/Mobileye legacy ([Counterpoint — "Qualcomm leads global smart cockpit SoC market", 2024-07-22](https://www.counterpointresearch.com/insights/qualcomm-leads-the-global-automotive-smart-cockpit-soc-market-in-2023/)).
+- **AI-PC SoC (Copilot+ ARM):** Qualcomm essentially 100% of shipping ARM-Windows units (Apple Silicon is Mac-only, not Windows-on-ARM) ([Microsoft — "Introducing Copilot+ PCs", 2024-05-20](https://blogs.microsoft.com/blog/2024/05/20/introducing-copilot-pcs/)).
+- **XR/AR consumer SoC:** Qualcomm ~80%+ ([Qualcomm Meta Quest 3S device page](https://www.qualcomm.com/xr-vr-ar/device-finder/meta-quest-3s)).
 
 ---
 
@@ -428,7 +428,7 @@ Source: composite of [stockanalysis.com QCOM statistics](https://stockanalysis.c
 
 ### Aggregate addressable market — five-year framing
 
-Adding Qualcomm's individual SAMs across all six segments produces a calendar 2025 **aggregate serviceable available market of roughly USD 130–150 bn**, projected to grow to **~USD 220–260 bn by 2030** at ~10% CAGR, dominated by automotive and AI/data-center expansion.
+Adding Qualcomm's individual SAMs across all six segments produces a calendar 2025 **aggregate serviceable available market of roughly USD 130–150 bn**, projected to grow to **~USD 220–260 bn by 2030** at ~10% CAGR, dominated by automotive and AI/data-center expansion (sized off the per-segment forecasts cited below: [SNS Insider 2025-06-18](https://www.globenewswire.com/news-release/2025/06/18/3101576/0/en/Application-Processor-Market-to-Surpass-USD-55-34-Billion-by-2032-at-a-CAGR-of-4-47-SNS-Insider.html), [Yole Group — Automotive Semiconductor Trends 2025](https://www.yolegroup.com/product/report/automotive-semiconductor-trends-2025/), [TechInsights estimates cited in QCOM FY25 10-K](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 
 | Segment | 2025 SAM (USD bn) | 2030 SAM (USD bn) | CAGR | Qualcomm position |
 |---|---|---|---|---|
@@ -446,18 +446,18 @@ Sources: [SNS Insider AP market June 2025](https://www.globenewswire.com/news-re
 
 ### SOM — serviceable obtainable market
 
-Qualcomm's FY2025 revenue of **USD 44.3 bn** captures roughly **30–35% of its current core SAM** (smartphone AP/modem + auto cockpit + XR + a starting position in PC). The 5-year company-level growth case rests on **two structural levers**:
+Qualcomm's FY2025 revenue of **USD 44.3 bn** captures roughly **30–35% of its current core SAM** (smartphone AP/modem + auto cockpit + XR + a starting position in PC). The 5-year company-level growth case rests on **two structural levers** ([QCOM FY2025 10-K, MD&A — Five-Year Selected Financial Data](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)):
 
 1. **Automotive scale-up to USD 8 bn revenue by FY2029** (vs. USD 4.0 bn FY2025) — Qualcomm's most credible non-handset growth lever, supported by a ~USD 45 bn lifetime design-win pipeline of which ~USD 15 bn is ADAS-specific ([Qualcomm Auto January 2026](https://www.qualcomm.com/news/releases/2026/01/qualcomm-drives-the-future-of-mobility-with-strong-snapdragon-di)).
 2. **PC + AI-data-center inflection** — Snapdragon X2 / X2 Elite Extreme ramping at premium tiers in 2026; hyperscaler custom silicon initial shipments CY2026; Investor Day June 2026 to detail. If Qualcomm captures 10–15% of the ARM-Windows PC SoC market (~USD 1.5–3 bn revenue) and lands two or three hyperscaler custom-silicon programs (~USD 2–5 bn revenue at maturity), that's a USD 5–8 bn revenue addition over 3–5 years, materially diversifying away from handsets.
 
 ### Penetration strategy
 
-- **Mobile:** maintain premium share through annual Snapdragon refresh cycles; defend Chinese OEM relationships; accept Apple share erosion as the cost of strategic stability.
-- **Automotive:** convert the design-win pipeline to revenue at 20%+ CAGR through CY2029; deepen Tier-1 partnerships (Bosch, Continental).
-- **PC:** broaden price tiers from premium (X Elite) to mainstream (X Plus, X2 Plus); address Windows-on-ARM compatibility friction through Microsoft/developer co-investment.
-- **Data center:** execute the hyperscaler engagement to first shipments CY2026; use Alphawave's connectivity IP to anchor follow-on programs; potentially relaunch a merchant Oryon server CPU on a multi-year horizon.
-- **XR/AR:** maintain platform dominance; benefit from secular smart-glasses ramp (Meta Ray-Ban hitting 2 M+ units; Apple, Google entries expected).
+- **Mobile:** maintain premium share through annual Snapdragon refresh cycles; defend Chinese OEM relationships; accept Apple share erosion as the cost of strategic stability ([QCOM FY2025 10-K, MD&A — QCT Segment](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
+- **Automotive:** convert the design-win pipeline to revenue at 20%+ CAGR through CY2029; deepen Tier-1 partnerships (Bosch, Continental) ([Qualcomm Auto Press Release, January 2026](https://www.qualcomm.com/news/releases/2026/01/qualcomm-drives-the-future-of-mobility-with-strong-snapdragon-di)).
+- **PC:** broaden price tiers from premium (X Elite) to mainstream (X Plus, X2 Plus); address Windows-on-ARM compatibility friction through Microsoft/developer co-investment ([Neowin CES 2026 coverage](https://www.neowin.net/news/ces-2026-qualcomm-brings-snapdragon-x2-plus-to-mainstream-windows-11-copilot-pcs/)).
+- **Data center:** execute the hyperscaler engagement to first shipments CY2026; use Alphawave's connectivity IP to anchor follow-on programs; potentially relaunch a merchant Oryon server CPU on a multi-year horizon ([QCOM Q2 FY2026 Earnings Release](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
+- **XR/AR:** maintain platform dominance; benefit from secular smart-glasses ramp (Meta Ray-Ban hitting 2 M+ units; Apple, Google entries expected) ([The Verge — Meta Ray-Ban 2 M units sold, 2025-02-26](https://www.theverge.com/news/619025/meta-ray-ban-smart-glasses-sales-units-2-million)).
 
 ![QCT Revenue Mix — Handsets / Automotive / IoT, FY2023–FY2025](charts/qcom_qct_mix.png)
 Source: [QCOM FY2025 10-K Note 8 Segment Information](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm).
@@ -473,39 +473,39 @@ Source: [QCOM FY2025 10-K Cash Flow Statement](https://www.sec.gov/Archives/edga
 
 **1. Apple modem in-housing — material structural revenue loss.** Apple shipped its in-house C1 modem in the iPhone 16e (February 2025) and explicitly disclosed in the FY2025 10-K that Qualcomm "expects that Apple will increasingly use its own modem products, rather than our products, in its future devices, which will have a significant negative impact on our QCT revenues, results of operations and cash flows" ([QCOM FY25 10-K, MD&A — Looking Forward](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)). Apple represented 21% of consolidated revenue in FY2025 (down from 27% in FY2023). At Apple's ~225 M unit annual run-rate × ~USD 25–30 modem ASP, full transition implies USD 5–7 bn of annual revenue at risk over 2–4 years — though royalty receipts on the iPhone (which depend on the OEM, not the chip vendor) continue regardless. **Mitigant:** Apple's continued royalty obligation; multi-year supply agreement covering iPhone 17, 18 launches in 2025/2026; new growth in automotive, PC, and XR is sized to offset.
 
-**2. Chinese OEM vertical integration.** Xiaomi launched the XRing O1 application processor in 2025; Huawei restored its Kirin SoC line after the 2023 sanctions; Oppo had attempted a similar program (Mariana) before shelving it. **Mitigant:** Chinese OEMs continue to depend on Qualcomm for premium-tier 5G modems (the hardest technical layer); QTL royalty obligations remain irrespective of chip source. **Quantification:** Chinese OEMs collectively account for ~30–40% of Qualcomm's QCT handset revenue and ~30–35% of QTL revenue (post-Huawei). A 10–15% reduction in Chinese OEM Snapdragon attach over 3 years could translate to USD 1.5–3 bn QCT revenue impact.
+**2. Chinese OEM vertical integration.** Xiaomi launched the XRing O1 application processor in 2025; Huawei restored its Kirin SoC line after the 2023 sanctions; Oppo had attempted a similar program (Mariana) before shelving it ([Digitimes — "Xiaomi 3nm XRing", 2025-05-23](https://www.digitimes.com/news/a20250523VL203/xiaomi-xring-soc-3nm-mediatek.html); [Reuters — "Oppo abandons chip design unit", 2023-05-12](https://www.reuters.com/technology/oppo-shutters-chip-design-unit-zeku-says-employee-2023-05-12/)). **Mitigant:** Chinese OEMs continue to depend on Qualcomm for premium-tier 5G modems (the hardest technical layer); QTL royalty obligations remain irrespective of chip source. **Quantification:** Chinese OEMs collectively account for ~30–40% of Qualcomm's QCT handset revenue and ~30–35% of QTL revenue (post-Huawei). A 10–15% reduction in Chinese OEM Snapdragon attach over 3 years could translate to USD 1.5–3 bn QCT revenue impact.
 
-**3. Customer concentration.** Three customers (Apple, Samsung, Xiaomi) = 54% of FY2025 revenue. Any one losing share, defecting to a competitor, or going captive triggers visible quarterly impact. Quantified in Section 5; flagged here per the skill standard.
+**3. Customer concentration.** Three customers (Apple, Samsung, Xiaomi) = 54% of FY2025 revenue. Any one losing share, defecting to a competitor, or going captive triggers visible quarterly impact. Quantified in Section 5; flagged here per the skill standard ([QCOM FY2025 10-K, Note 2 Concentrations](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 
-**4. Automotive design-win conversion risk.** The disclosed ~USD 45 bn pipeline depends on the conversion of RFQs and design-ins to SOP volumes over 5–7 year cycles. A meaningful share of those wins are concentrated in Chinese auto OEMs (BYD, Geely, NIO, Xpeng, Li Auto, Leapmotor, Zeekr) whose own volumes are exposed to Chinese EV market dynamics and possible reshoring to domestic silicon. **Mitigant:** geographic diversification (BMW, GM, Stellantis, Mercedes, Ford); 5–7 year contracts are typically firmly contracted.
+**4. Automotive design-win conversion risk.** The disclosed ~USD 45 bn pipeline depends on the conversion of RFQs and design-ins to SOP volumes over 5–7 year cycles. A meaningful share of those wins are concentrated in Chinese auto OEMs (BYD, Geely, NIO, Xpeng, Li Auto, Leapmotor, Zeekr) whose own volumes are exposed to Chinese EV market dynamics and possible reshoring to domestic silicon ([Qualcomm Auto Press Release, January 2026](https://www.qualcomm.com/news/releases/2026/01/qualcomm-drives-the-future-of-mobility-with-strong-snapdragon-di)). **Mitigant:** geographic diversification (BMW, GM, Stellantis, Mercedes, Ford); 5–7 year contracts are typically firmly contracted.
 
-**5. Data-center execution risk.** Qualcomm has not generated material data-center revenue since exiting Centriq in 2018. The disclosed hyperscaler custom-silicon engagement and the Alphawave acquisition are credible but unproven. **Mitigant:** Alphawave CEO Tony Pialis (now leading the unit) brings 20+ years of hyperscaler relationships; Oryon CPU is a credible building block.
+**5. Data-center execution risk.** Qualcomm has not generated material data-center revenue since exiting Centriq in 2018 ([Network World — "Qualcomm makes it official; no more data center chip", 2018](https://www.networkworld.com/article/966778/qualcomm-makes-it-official-no-more-data-center-chip.html)). The disclosed hyperscaler custom-silicon engagement and the Alphawave acquisition are credible but unproven. **Mitigant:** Alphawave CEO Tony Pialis (now leading the unit) brings 20+ years of hyperscaler relationships; Oryon CPU is a credible building block ([BusinessWire — Qualcomm Completes Acquisition of Alphawave Semi, 2025-12-18](https://www.businesswire.com/news/home/20251218292351/en/Qualcomm-Completes-Acquisition-of-Alphawave-Semi)).
 
-**6. R&D intensity.** USD 9.04 bn FY2025 R&D = 20% of revenue. To compete simultaneously across mobile, automotive, PC, XR, and data center demands continued ~20% R&D-to-revenue intensity. Any margin compression from Apple modem loss compounds the pressure.
+**6. R&D intensity.** USD 9.04 bn FY2025 R&D = 20% of revenue. To compete simultaneously across mobile, automotive, PC, XR, and data center demands continued ~20% R&D-to-revenue intensity. Any margin compression from Apple modem loss compounds the pressure ([QCOM FY2025 10-K, MD&A — Research and Development](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 
 ### Industry / Market Risks
 
 **7. Cyclical handset demand and memory supply constraints.** Q3 FY2026 guidance explicitly cites memory supply constraints and pricing on demand from "several handset OEMs" ([QCOM Q2 FY2026 Earnings Release](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)); Chinese customer revenue expected to bottom in Q3 FY2026. Smartphone semi cycles are recurring; the magnitude of this one is moderate (-3% YoY in Q2 FY26 total revenue).
 
-**8. MediaTek share gains at the volume tier.** MediaTek's 38% global SoC share (vs. ~31% Qualcomm) is structural; further ASP compression at the mid-tier remains plausible. **Mitigant:** Qualcomm dominates the premium tier where the gross-margin dollars live.
+**8. MediaTek share gains at the volume tier.** MediaTek's 38% global SoC share (vs. ~31% Qualcomm) is structural; further ASP compression at the mid-tier remains plausible. **Mitigant:** Qualcomm dominates the premium tier where the gross-margin dollars live ([Counterpoint Research — Global Smartphone AP/SoC Market Share](https://counterpointresearch.com/en/insights/global-smartphone-apsoc-market-share-quarterly)).
 
-**9. 5G saturation and the long wait to 6G.** Per management commentary, 5G handset penetration growth is now "mid single-digit"; the cellular generation that has driven the past five years of QTL ASP uplift is approaching saturation. 6G commercial deployment is expected 2028–2030, leaving a ~3–5 year window where QTL growth depends on emerging-market 5G upgrades and new license categories (XR, V2X, FWA, IoT, satellite).
+**9. 5G saturation and the long wait to 6G.** Per management commentary, 5G handset penetration growth is now "mid single-digit"; the cellular generation that has driven the past five years of QTL ASP uplift is approaching saturation. 6G commercial deployment is expected 2028–2030, leaving a ~3–5 year window where QTL growth depends on emerging-market 5G upgrades and new license categories (XR, V2X, FWA, IoT, satellite) ([QCOM FY2025 10-K, Industry Trends](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm); [3GPP — 6G workshop / Release 21](https://www.3gpp.org/news-events/3gpp-news/6g-workshop)).
 
 ### Financial Risks
 
-**10. FY2025 USD 5.7 bn tax valuation allowance and subsequent FY2026 release.** The OBBB-driven non-cash GAAP volatility in Q4 FY2025 and Q2 FY2026 illustrates the magnitude of tax-policy sensitivity. **Mitigant:** Underlying Non-GAAP earnings power is intact; the FY2026 Q2 release reverses the FY2025 charge.
+**10. FY2025 USD 5.7 bn tax valuation allowance and subsequent FY2026 release.** The OBBB-driven non-cash GAAP volatility in Q4 FY2025 and Q2 FY2026 illustrates the magnitude of tax-policy sensitivity. **Mitigant:** Underlying Non-GAAP earnings power is intact; the FY2026 Q2 release reverses the FY2025 charge ([QCOM FY2025 10-K, Income Taxes Footnote](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm); [H.R.1 — One Big Beautiful Bill Act, Public Law 119-21](https://www.congress.gov/bill/119th-congress/house-bill/1)).
 
-**11. Leveraged balance sheet relative to cyclical cash flow.** USD 14.8 bn long-term debt + USD 0.5 bn short-term debt at Q2 FY2026, against USD 5.4 bn cash & equivalents + USD 4.4 bn marketable securities. Coverage is comfortable at the current operating cash flow level (USD 14 bn FY2025) but a multi-year handset trough would compress flexibility. **Mitigant:** investment-grade credit profile; staggered debt maturities through 2053.
+**11. Leveraged balance sheet relative to cyclical cash flow.** USD 14.8 bn long-term debt + USD 0.5 bn short-term debt at Q2 FY2026, against USD 5.4 bn cash & equivalents + USD 4.4 bn marketable securities. Coverage is comfortable at the current operating cash flow level (USD 14 bn FY2025) but a multi-year handset trough would compress flexibility. **Mitigant:** investment-grade credit profile; staggered debt maturities through 2053 ([QCOM Q2 FY2026 Earnings Release, Condensed Balance Sheet](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)).
 
-**12. Aggressive capital return commitments.** USD 8.8 bn FY2025 buyback + USD 3.8 bn dividends + new USD 20 bn authorization announced Q2 FY2026. Sustained at the FY2025 pace, capital return absorbs essentially all of free cash flow, leaving limited buffer for M&A or counter-cyclical investment. **Mitigant:** The repurchase program is explicitly opportunistic (10b5-1, ASR, open market), not fixed-volume; can be slowed.
+**12. Aggressive capital return commitments.** USD 8.8 bn FY2025 buyback + USD 3.8 bn dividends + new USD 20 bn authorization announced Q2 FY2026. Sustained at the FY2025 pace, capital return absorbs essentially all of free cash flow, leaving limited buffer for M&A or counter-cyclical investment. **Mitigant:** The repurchase program is explicitly opportunistic (10b5-1, ASR, open market), not fixed-volume; can be slowed ([Qualcomm IR press release — new $20B Repurchase Authorization, 2026-03-17](https://investor.qualcomm.com/news-events/press-releases/news-details/2026/Qualcomm-Increases-Quarterly-Cash-Dividend-and-Announces-New-20-Billion-Stock-Repurchase-Authorization/default.aspx)).
 
 ### Macroeconomic Risks
 
-**13. U.S.–China trade and national-security tensions.** The May 2024 revocation of the Huawei export license is the canonical example. Future U.S. export controls on advanced semiconductors to China — or Chinese reciprocal measures — could compress Qualcomm's Chinese chip and royalty revenue. Q2 FY2026 management commentary references ongoing monitoring of "global trade policy, including tariffs and related trade actions announced by the U.S., China and other countries." **Mitigant:** Qualcomm's Chinese OEM customers manufacture and sell globally; their dependency is genuine. QTL royalty pool includes substantial non-China contribution.
+**13. U.S.–China trade and national-security tensions.** The May 2024 revocation of the Huawei export license is the canonical example ([Reuters — "US revokes some export licenses for Intel, Qualcomm to sell to Huawei", 2024-05-07](https://www.reuters.com/technology/us-revokes-some-export-licenses-intel-qualcomm-sell-huawei-2024-05-07/)). Future U.S. export controls on advanced semiconductors to China — or Chinese reciprocal measures — could compress Qualcomm's Chinese chip and royalty revenue. Q2 FY2026 management commentary references ongoing monitoring of "global trade policy, including tariffs and related trade actions announced by the U.S., China and other countries." **Mitigant:** Qualcomm's Chinese OEM customers manufacture and sell globally; their dependency is genuine. QTL royalty pool includes substantial non-China contribution ([QCOM Q2 FY2026 10-Q, Item 1A Risk Factors](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000061/qcom-20260329.htm)).
 
-**14. Foreign-exchange and tariff exposure.** ~92% of FY2025 revenue from customers outside the U.S.; substantial RMB, KRW, TWD, INR transaction exposure. **Mitigant:** active currency hedging; pricing in USD where possible.
+**14. Foreign-exchange and tariff exposure.** ~92% of FY2025 revenue from customers outside the U.S.; substantial RMB, KRW, TWD, INR transaction exposure. **Mitigant:** active currency hedging; pricing in USD where possible ([QCOM FY2025 10-K, MD&A — Geographic Concentrations](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 
-**15. Valuation / multiple compression risk.** QCOM trades at one of the lowest forward P/E multiples (~12x) in large-cap semiconductors. While that protects the downside from sentiment shocks, it also reflects the market's skepticism about the diversification thesis. If the Apple modem transition accelerates, the Chinese handset trough proves deeper than guided, or the data-center engagement fails to deliver visible revenue in CY2026/2027, the multiple could compress further to single-digit forward P/E — implying ~25–35% downside before fundamentals stabilize. **Mitigant:** USD 20 bn buyback authorization provides bid support; FCF generation is durable; QTL is a sticky annuity through fiscal 2027–2031 contract terms.
+**15. Valuation / multiple compression risk.** QCOM trades at one of the lowest forward P/E multiples (~12x) in large-cap semiconductors. While that protects the downside from sentiment shocks, it also reflects the market's skepticism about the diversification thesis. If the Apple modem transition accelerates, the Chinese handset trough proves deeper than guided, or the data-center engagement fails to deliver visible revenue in CY2026/2027, the multiple could compress further to single-digit forward P/E — implying ~25–35% downside before fundamentals stabilize. **Mitigant:** USD 20 bn buyback authorization provides bid support; FCF generation is durable; QTL is a sticky annuity through fiscal 2027–2031 contract terms ([24/7 Wall St — "Broadcom vs. Qualcomm", 2026-04-09](https://247wallst.com/investing/2026/04/09/broadcom-vs-qualcomm-buy-one-avoid-the-other/); [QCOM FY2025 10-K, Note 2 Concentrations](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)).
 
 ---
 

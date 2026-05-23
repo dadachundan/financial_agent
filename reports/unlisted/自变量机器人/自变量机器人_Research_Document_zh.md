@@ -331,37 +331,37 @@ quadrantChart
 
 来源：定位依据各公司一手新闻材料的描述（在上表中已注明）综合 **作者判断**；坐标轴为定性维度。
 
-**自变量机器人的竞争优势：**
+**自变量机器人的竞争优势**（[财新国际，2026-04-21](https://www.caixinglobal.com/2026-04-21/x-square-robot-raises-new-funds-targets-home-trials-by-may-102436558.html)）：
 
-1. **股东结构广度**——它是唯一一家同时获得阿里巴巴、字节跳动、美团、小米四家战略股权背书的中国具身智能初创公司，这意味着下游消费渠道与大规模中文数据合作在理论上只需一两通电话便可触达。明显风险的缓释因素：四家战略投资人均不具备独占性，可能反过来稀释任何单一合作的纵深。
-2. **开源分发护城河**——WALL-OSS 是截至 2026 年中下载量最大的中国系开源具身基础模型（依据 [Hugging Face x-square-robot](https://huggingface.co/x-square-robot) 上的下载数——此为时点数据）。
-3. **研究密度 / 人才护城河**——王潜与王昊的组合较为罕见地兼具机器人学习与原生大模型预训练背景；据报道团队研发占比超过 90%。
-4. **迭代速度**——公司自成立以来每 2–3 个月发布一次重要模型，迭代节奏快于任何已披露的同行。
+1. **股东结构广度**——它是唯一一家同时获得阿里巴巴、字节跳动、美团、小米四家战略股权背书的中国具身智能初创公司，这意味着下游消费渠道与大规模中文数据合作在理论上只需一两通电话便可触达（[财新国际，2026-04-21](https://www.caixinglobal.com/2026-04-21/x-square-robot-raises-new-funds-targets-home-trials-by-may-102436558.html)）。明显风险的缓释因素：四家战略投资人均不具备独占性，可能反过来稀释任何单一合作的纵深。
+2. **开源分发护城河**——WALL-OSS 是截至 2026 年中下载量最大的中国系开源具身基础模型（依据 [Hugging Face x-square-robot](https://huggingface.co/x-square-robot) 上的下载数——此为时点数据；最接近的开源对标为[NVIDIA Isaac GR00T N1 on Hugging Face](https://huggingface.co/nvidia/GR00T-N1-2B)）。
+3. **研究密度 / 人才护城河**——王潜与王昊的组合较为罕见地兼具机器人学习与原生大模型预训练背景；据报道团队研发占比超过 90%（[投中网，"中国团队自研全球顶尖机器人大脑"，2025-05-26](https://www.chinaventure.com.cn/news/108-20250526-386450.html)）。
+4. **迭代速度**——公司自成立以来每 2–3 个月发布一次重要模型，迭代节奏快于任何已披露的同行（[Robot Report，"X Square Robot debuts foundation model"](https://www.therobotreport.com/x-square-robot-debuts-foundation-model-embodied-ai-100m-series-a/)）。
 
-**竞争劣势：**
+**竞争劣势**（[Tech Buzz China，Unitree](https://techbuzzchina.substack.com/p/unitree-humanoid-hype-vs-robotic)）：
 
-1. **缺乏硬件护城河**——宇树不到 6,000 美元的人形机器人，价格上对自变量底盘成本形成数量级的压制。如果硬件商品化的速度超过软件差异化的速度，公司估值溢价将面临风险。
-2. **缺乏经过验证的产品-市场匹配**——58 同城试点是目前唯一具有一定规模的商业部署，且依赖合作伙伴中介。直接面向客户的营收为零。
-3. **单一区域敞口**——目前没有任何海外商业活动的公开证据。PI、Skild、Figure 与 1X 在出发点上便是全球化布局。
-4. **美国出口管制的悬顶之剑**——若美国对中国具身智能训练算力（高端 GPU）的限制进一步收紧，将直接制约自变量的模型训练节奏。
+1. **缺乏硬件护城河**——宇树不到 6,000 美元的人形机器人，价格上对自变量底盘成本形成数量级的压制（[SCMP，2025-07-30](https://www.scmp.com/tech/tech-trends/article/3319637/chinas-unitree-debuts-us5900-humanoid-robot-race-make-cheaper-products)）。如果硬件商品化的速度超过软件差异化的速度，公司估值溢价将面临风险。
+2. **缺乏经过验证的产品-市场匹配**——58 同城试点是目前唯一具有一定规模的商业部署，且依赖合作伙伴中介。直接面向客户的营收为零（[PR Newswire 58 同城合作公告，2026-03-18](https://www.prnewswire.com/news-releases/x-square-robot-and-58com-launch-chinas-first-home-cleaning-robot-service-in-shenzhen-302717188.html)）。
+3. **单一区域敞口**——目前没有任何海外商业活动的公开证据。PI、Skild、Figure 与 1X 在出发点上便是全球化布局（[Figure AI 维基百科](https://en.wikipedia.org/wiki/Figure_AI)；[1X Technologies 维基百科](https://en.wikipedia.org/wiki/1X_Technologies)）。
+4. **美国出口管制的悬顶之剑**——若美国对中国具身智能训练算力（高端 GPU）的限制进一步收紧，将直接制约自变量的模型训练节奏（[Lawfare，"特朗普的 AI 芯片出口管制"](https://www.lawfaremedia.org/article/trump-s-illegal-ai-chip-export-controls--and-who-can-challenge-them)；[IFP，"美国是否应向中国出售 Blackwell 芯片？"](https://ifp.org/the-b30a-decision/)）。
 
-**市场份额分析。** 除 WALL-OSS 在开源下载量上的份额外，市场份额在当前阶段并不是一个有意义的指标——全球商业型人形机器人的存量很可能仅在数万台水平，主要由宇树、优必选与特斯拉 Optimus 的内部试点构成。没有任何参与者的在用机器人保有量超过万台级别。
+**市场份额分析。** 除 WALL-OSS 在开源下载量上的份额外，市场份额在当前阶段并不是一个有意义的指标——全球商业型人形机器人的存量很可能仅在数万台水平，主要由宇树、优必选与特斯拉 Optimus 的内部试点构成。没有任何参与者的在用机器人保有量超过万台级别（[PR Newswire UBTECH Walker S2，2025-11](https://www.prnewswire.com/news-releases/ubtech-humanoid-robot-walker-s2-begins-mass-production-and-delivery-with-orders-exceeding-800-million-yuan-302616924.html)；[Tech Buzz China，Unitree](https://techbuzzchina.substack.com/p/unitree-humanoid-hype-vs-robotic)）。
 
 ---
 
 ## 8. 市场机会（TAM）
 
-**TAM 定义。** 对自变量机器人而言，相关的市场机会嵌套在三层不同范围中：
+**TAM 定义。** 对自变量机器人而言，相关的市场机会嵌套在三层不同范围中（[Morgan Stanley 2050 人形机器人框架](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050)；[Goldman Sachs 2035 人形机器人展望](https://www.goldmansachs.com/insights/articles/the-global-market-for-robots-could-reach-38-billion-by-2035)）：
 
 - **TAM**——全球范围内、一台具备通用能力的家庭 / 服务人形机器人在合理情形下可替代或增强的服务类年度支出。锚定基准为摩根士丹利 2050 年 5 万亿美元的口径（[摩根士丹利，"Humanoid Robot Market Expected to Reach $5 Trillion by 2050"](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050)）。2035 年视角下，则以高盛约 380 亿美元的基准情形作为更保守的锚（[高盛](https://www.goldmansachs.com/insights/articles/the-global-market-for-robots-could-reach-38-billion-by-2035)）。
 - **SAM（可服务的可触达市场）**——未来五年内自变量切实可触达市场中，家庭服务及邻近服务行业任务（保洁、养老辅助、家庭物流）的年度支出。自下而上估算：仅中国地区每年约 2,000–4,000 亿美元（即城市家庭服务支出 × 可触达比例）；为估算值，并非公开披露数据。
 - **SOM（可获取的可触达市场）**——以当前资金与产能条件，自变量到 2030 年在中国家庭服务市场中实际可获取的份额。即使在乐观假设下（部署 5 万台机器，单台综合年收入 3 万美元，含模型服务费），也只对应 **每年约 15 亿美元** 的营收基础——有意义，但远不至于定义品类。
 
-**市场增长预测。** 保守的市场共识大致呈现如下走势：
+**市场增长预测。** 保守的市场共识大致呈现如下走势（[高盛](https://www.goldmansachs.com/insights/articles/the-global-market-for-robots-could-reach-38-billion-by-2035)；[摩根士丹利](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050)）：
 
-- **2025 → 2030：** 高盛基准情形意味着，全球年出货量从目前的数千台量级提升至 2030 年的超过 25 万台——五年增长约 10 倍，且几乎全部用于工业场景。
-- **2030 → 2035：** 高盛看到目标市场规模相对此前基准扩大 6 倍以上，达到约 380 亿美元，消费 / 服务份额开始显现。
-- **2035 → 2050：** 摩根士丹利预计市场将出现垂直跃迁，达到 5 万亿美元规模——前提是成本下降到消费者可承受的水平（即一台具备可靠性能的人形机器人售价低于 10,000 美元）。
+- **2025 → 2030：** 高盛基准情形意味着，全球年出货量从目前的数千台量级提升至 2030 年的超过 25 万台——五年增长约 10 倍，且几乎全部用于工业场景（[高盛人形机器人分析](https://www.goldmansachs.com/insights/goldman-sachs-research/global-automation-humanoid-robot-the-ai-accelerant)）。
+- **2030 → 2035：** 高盛看到目标市场规模相对此前基准扩大 6 倍以上，达到约 380 亿美元，消费 / 服务份额开始显现（[高盛 2035 展望](https://www.goldmansachs.com/insights/articles/the-global-market-for-robots-could-reach-38-billion-by-2035)）。
+- **2035 → 2050：** 摩根士丹利预计市场将出现垂直跃迁，达到 5 万亿美元规模——前提是成本下降到消费者可承受的水平（即一台具备可靠性能的人形机器人售价低于 10,000 美元）（[摩根士丹利 2050 人形机器人框架](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050)）。
 
 ```mermaid
 graph LR
@@ -372,15 +372,15 @@ graph LR
 
 来源：综合自[高盛人形机器人分析](https://www.goldmansachs.com/insights/articles/the-global-market-for-robots-could-reach-38-billion-by-2035)与[摩根士丹利 2050 人形机器人框架](https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050)。
 
-**自变量的可服务市场。** 公司近期最清晰的切入点是 **中国城市家庭服务**，58 同城试点是这一切入路径的样板。中国有约 2.5 亿城镇家庭；若其中 10% 愿意以每月约 500 元人民币订阅"机器人辅助保洁"，仅此一项就形成 **每年约 1,500 亿元人民币（约 210 亿美元）的可触达营收池**，且尚未涵盖养老、儿童相关任务以及宠物 / 植物照看等场景。在激进假设下，2030 年自变量可获取份额仍小于该池子的 1%——对公司层面意义重大（年营收 1–5 亿美元），但远不构成品类定义级体量。
+**自变量的可服务市场。** 公司近期最清晰的切入点是 **中国城市家庭服务**，58 同城试点是这一切入路径的样板（[PR Newswire 58 同城合作公告，2026-03-18](https://www.prnewswire.com/news-releases/x-square-robot-and-58com-launch-chinas-first-home-cleaning-robot-service-in-shenzhen-302717188.html)）。中国有约 [2.5 亿城镇家庭（参见 2024 年中国家庭统计数据）](https://www.china-briefing.com/news/chinas-evolving-labor-market-2025/)；若其中 10% 愿意以每月约 500 元人民币订阅"机器人辅助保洁"，仅此一项就形成 **每年约 1,500 亿元人民币（约 210 亿美元）的可触达营收池**，且尚未涵盖养老、儿童相关任务以及宠物 / 植物照看等场景。在激进假设下，2030 年自变量可获取份额仍小于该池子的 1%——对公司层面意义重大（年营收 1–5 亿美元），但远不构成品类定义级体量（参考[高盛 2035 年约 380 亿美元基准情形](https://www.goldmansachs.com/insights/articles/the-global-market-for-robots-could-reach-38-billion-by-2035)对全球渗透上限的框定）。
 
-**渗透策略。** 战略上可看到三个递进切入点：
+**渗透策略。** 战略上可看到三个递进切入点（[财新国际，2026-04-21](https://www.caixinglobal.com/2026-04-21/x-square-robot-raises-new-funds-targets-home-trials-by-may-102436558.html)；[KrAsia"PR stunt"访谈](https://kr-asia.com/a-pr-stunt-x-square-robot-ceo-says-humanoid-robots-dont-belong-in-factories-calls-for-focus-on-generalization)）：
 
-1. **第一阶段（2024–2026，当前所处阶段）：** 通过服务平台（58 同城）开展合作中介的 B2B2C，目的是积累真实家庭交互数据并跑通参考性收入。目标：将部署级可靠性提升到可商业化水平，并取得第一笔商业现金流。
-2. **第二阶段（2026–2028，预计）：** 直接面向消费者的订阅模式——机器人租赁 + 持续的模型更新服务费。前提是可靠性突破自变量尚未公开的某个内部阈值。
-3. **第三阶段（2028 年之后）：** 以低于 5 万元人民币的硬件售价开展"硬件作为产品"模式，叠加模型服务的持续性收入。前提是硬件 BoM 大幅下降——这取决于宇树式的成本工程能力，或与小米生态供应链的合作深度。
+1. **第一阶段（2024–2026，当前所处阶段）：** 通过服务平台（58 同城）开展合作中介的 B2B2C，目的是积累真实家庭交互数据并跑通参考性收入。目标：将部署级可靠性提升到可商业化水平，并取得第一笔商业现金流（[PR Newswire 58 同城合作公告，2026-03-18](https://www.prnewswire.com/news-releases/x-square-robot-and-58com-launch-chinas-first-home-cleaning-robot-service-in-shenzhen-302717188.html)）。
+2. **第二阶段（2026–2028，预计）：** 直接面向消费者的订阅模式——机器人租赁 + 持续的模型更新服务费。前提是可靠性突破自变量尚未公开的某个内部阈值。可比的消费者订阅定价示例可见[1X Technologies NEO 499 美元/月](https://en.wikipedia.org/wiki/1X_Technologies)。
+3. **第三阶段（2028 年之后）：** 以低于 5 万元人民币的硬件售价开展"硬件作为产品"模式，叠加模型服务的持续性收入。前提是硬件 BoM 大幅下降——这取决于宇树式的成本工程能力，或与小米生态供应链的合作深度（[SCMP，宇树 5,900 美元 R1，2025-07-30](https://www.scmp.com/tech/tech-trends/article/3319637/chinas-unitree-debuts-us5900-humanoid-robot-race-make-cheaper-products)）。
 
-整个策略 **方向上可行，但每一阶段都尚未被验证**。2026–2028 年投资论据的关键问题是：第一阶段的部署能否产生足够强的数据飞轮，把可靠性推升至消费者接受门槛之上。
+整个策略 **方向上可行，但每一阶段都尚未被验证**。2026–2028 年投资论据的关键问题是：第一阶段的部署能否产生足够强的数据飞轮，把可靠性推升至消费者接受门槛之上（[财新国际，2026-04-21](https://www.caixinglobal.com/2026-04-21/x-square-robot-raises-new-funds-targets-home-trials-by-may-102436558.html)；[PR Newswire WALL-B，2026-04-22](https://www.prnewswire.com/news-releases/x-square-robot-unveils-new-embodied-ai-model-says-robots-will-arrive-in-homes-in-35-days-302751047.html)）。
 
 ---
 
@@ -388,41 +388,41 @@ graph LR
 
 ### 公司特定风险
 
-1. **执行风险——第一阶段可靠性。** 2026 年 5 月的家庭试点是公司面临的首次真实应力测试。若失败案例（拖鞋被放进厨房、任务中途死机等）在社交媒体上扩散，并形成"中国人形机器人进家——其实不行"的叙事，公司即便在技术上仍处于业内领先地位，也可能面临实质性的叙事破裂。缓释因素：王潜已在公开层面坦承当前的失效模式，明确将本次部署定位为"田野研究"。严重性：未来 12 个月内为中-高；随着部署成熟逐步下降。
+1. **执行风险——第一阶段可靠性。** 2026 年 5 月的家庭试点是公司面临的首次真实应力测试（[财新国际，2026-04-21](https://www.caixinglobal.com/2026-04-21/x-square-robot-raises-new-funds-targets-home-trials-by-may-102436558.html)）。若失败案例（拖鞋被放进厨房、任务中途死机等）在社交媒体上扩散，并形成"中国人形机器人进家——其实不行"的叙事，公司即便在技术上仍处于业内领先地位，也可能面临实质性的叙事破裂。缓释因素：王潜已在公开层面坦承当前的失效模式，明确将本次部署定位为"田野研究"（[PR Newswire WALL-B，2026-04-22](https://www.prnewswire.com/news-releases/x-square-robot-unveils-new-embodied-ai-model-says-robots-will-arrive-in-homes-in-35-days-302751047.html)）。严重性：未来 12 个月内为中-高；随着部署成熟逐步下降。
 
-2. **客户集中度——单一渠道敞口。** 58 同城合作是目前唯一具备规模的商业部署。一旦失去这一关系或其大幅收窄，商业营收将归零。缓释因素：四家战略投资人（阿里 / 字节 / 美团 / 小米）提供了潜在的替代渠道。严重性：2026 年偏高；随着第二批合作伙伴上线下降。
+2. **客户集中度——单一渠道敞口。** 58 同城合作是目前唯一具备规模的商业部署（[PR Newswire 58 同城合作公告，2026-03-18](https://www.prnewswire.com/news-releases/x-square-robot-and-58com-launch-chinas-first-home-cleaning-robot-service-in-shenzhen-302717188.html)）。一旦失去这一关系或其大幅收窄，商业营收将归零。缓释因素：四家战略投资人（阿里 / 字节 / 美团 / 小米）提供了潜在的替代渠道（[财新国际，2026-04-21](https://www.caixinglobal.com/2026-04-21/x-square-robot-raises-new-funds-targets-home-trials-by-may-102436558.html)）。严重性：2026 年偏高；随着第二批合作伙伴上线下降。
 
-3. **王潜的关键人物依赖。** 创始人的研究信念本身就是公司最重要的知识产品。其离开或丧失行动能力造成的伤害，会比一般早期 AI 实验室更为显著，因为王潜的具体架构主张（端到端 VLA、"世界统一模型"）并未被中国具身智能广义共同体完全接受。严重性：中-高；缓释因素是 CTO 王昊互补的角色。
+3. **王潜的关键人物依赖。** 创始人的研究信念本身就是公司最重要的知识产品（[Pandaily 创始人专访](https://pro.pandaily.com/p/x-square-robots-wang-qian-robots)；[量子位 MEET2026，2025-12](https://www.qbitai.com/2025/12/363184.html)）。其离开或丧失行动能力造成的伤害，会比一般早期 AI 实验室更为显著，因为王潜的具体架构主张（端到端 VLA、"世界统一模型"）并未被中国具身智能广义共同体完全接受（[36Kr，"具身智能大模型没法抄国外作业"](https://36kr.com/p/3312504088306690)）。严重性：中-高；缓释因素是 CTO 王昊互补的角色（[网易科技 CTO 访谈](https://www.163.com/dy/article/KPHBBHMO05568W0A.html)）。
 
-4. **技术过时风险。** 具身智能架构正以 6–12 个月的节奏演进。PI、Skild 或 Google DeepMind 的某次成功发布有可能重新锚定行业最高水平，从而使自变量的叙事溢价被重置。缓释因素：开源分发护城河即便在竞争对手短期基准领先的情况下，也能形成一定锁定效应。严重性：中等。
+4. **技术过时风险。** 具身智能架构正以 6–12 个月的节奏演进。PI、Skild 或 Google DeepMind 的某次成功发布有可能重新锚定行业最高水平，从而使自变量的叙事溢价被重置（[π_0.5 论文，2025-04-22](https://arxiv.org/abs/2504.16054)；[NVIDIA Isaac GR00T N1，2025-03](https://nvidianews.nvidia.com/news/nvidia-isaac-gr00t-n1-open-humanoid-robot-foundation-model-simulation-frameworks)）。缓释因素：开源分发护城河即便在竞争对手短期基准领先的情况下，也能形成一定锁定效应（[Hugging Face 上的 WALL-OSS](https://huggingface.co/x-square-robot)）。严重性：中等。
 
-5. **供应商集中度——执行器与灵巧手。** 中国灵巧手及高自由度执行器供应集中在少数厂商（傅利叶智能、RobStride、Inspire Robotics 等）。其中任意一家若与 Galbot、AgiBot 或宇树形成独家供货，便会迫使自变量在时间压力下寻找次级供应商。严重性：中等。
+5. **供应商集中度——执行器与灵巧手。** 中国灵巧手及高自由度执行器供应集中在少数厂商（傅利叶智能、RobStride、Inspire Robotics 等）（[Inspire Robots 公司官网](https://en.inspire-robots.com/)；[Gasgoo，"灵巧手量产竞赛拉开帷幕"](https://autonews.gasgoo.com/articles/news/from-prototypes-to-production-dexterous-hands-kick-off-a-mass-production-race-2016425582734970881)；[Global Times，"灵巧工具从实验室到现实，中国加快商业化"](https://www.globaltimes.cn/page/202509/1342863.shtml)）。其中任意一家若与 Galbot、AgiBot 或宇树形成独家供货，便会迫使自变量在时间压力下寻找次级供应商。严重性：中等。
 
-6. **地理集中度。** 全部业务集中在中国大陆。无任何美国 / 欧盟商业活动可以佐证。严重性：中等——目前 TAM 限于中国。
+6. **地理集中度。** 全部业务集中在中国大陆。无任何美国 / 欧盟商业活动可以佐证（[Caproasia，2026-04-27](https://www.caproasia.com/2026/04/27/china-intelligent-robot-startup-x-square-robot-technology-raised-293-million-cny-2-billion-in-series-b-funding-round-founded-in-2023-by-wang-qian-investors-include-alibaba-meituan-bytedance-ho/)）。严重性：中等——目前 TAM 限于中国。
 
 ### 行业 / 市场风险
 
-7. **来自具有结构性优势的美国同行的竞争压力。** Figure（390 亿美元）、PI（目标 110 亿美元）、Skild（目标 140 亿美元）合计资本基础约为自变量的 30 倍，且对英伟达 Blackwell 级训练算力的获取不受限制。若美国同行能在自变量达到消费级可靠性之前，通过 API 把全球水准的 VLA 模型送入中国大众市场，国内市场的本土优势将被削弱。严重性：高。
+7. **来自具有结构性优势的美国同行的竞争压力。** Figure（390 亿美元）、PI（目标 110 亿美元）、Skild（目标 140 亿美元）合计资本基础约为自变量的 30 倍，且对英伟达 Blackwell 级训练算力的获取不受限制（[Figure C 轮，2025-09](https://www.figure.ai/news/series-c)；[TechCrunch，PI 110 亿美元谈判，2026-03-27](https://techcrunch.com/2026/03/27/physical-intelligence-is-reportedly-in-talks-to-raise-1-billion-again/)；[TechCrunch，Skild 140 亿美元谈判，2025-12-08](https://techcrunch.com/2025/12/08/softbank-and-nvidia-reportedly-in-talks-to-fund-skildai-at-14b-nearly-tripling-its-value/)）。若美国同行能在自变量达到消费级可靠性之前，通过 API 把全球水准的 VLA 模型送入中国大众市场，国内市场的本土优势将被削弱。严重性：高。
 
-8. **监管与标准风险。** 工信部 2026 版人形机器人标准仍在落地阶段。一种较为严苛的解读（例如强制第三方认证、强制按整机投保责任险）将明显拖慢部署节奏。严重性：中等。
+8. **监管与标准风险。** 工信部 2026 版人形机器人标准仍在落地阶段（[China Daily，2026-03-01](https://www.chinadaily.com.cn/a/202603/01/WS69a3f8d6a310d6866eb3aeba.html)；[SESEC 分析，2026-04-01](https://sesec.eu/2026/04/01/chinas-first-standards-system-for-humanoid-robots-and-embodied-intelligence/)）。一种较为严苛的解读（例如强制第三方认证、强制按整机投保责任险）将明显拖慢部署节奏。严重性：中等。
 
-9. **中国人形机器人赛道的市场饱和 / 产能过剩风险。** 中国集群（Galbot、AgiBot、自变量、千寻、逐际、Robotera、Kepler、优必选、宇树）资金充裕，但所瞄准的终端市场高度重叠。2027–2028 年出现一轮洗牌的可能性较大，部分公司可能被迫进行困境并购或退出市场。严重性：中等——自变量的蓝筹股东结构提高了存活率，但并不能保证胜出。
+9. **中国人形机器人赛道的市场饱和 / 产能过剩风险。** 中国集群（Galbot、AgiBot、自变量、千寻、逐际、Robotera、Kepler、优必选、宇树）资金充裕，但所瞄准的终端市场高度重叠（[Crunchbase News，"具身智能助力中国机器人创下融资纪录"](https://news.crunchbase.com/robotics/embodied-ai-fuels-record-funding-china-ipo-momentum-builds/)；[财新国际，AgiBot，2026-02-23](https://www.caixinglobal.com/2026-02-23/chinas-ai-robotics-raises-fresh-funds-at-over-10-billion-yuan-valuation-102416310.html)；[The AI Insider，Robotera A+ 轮，2025-11-27](https://theaiinsider.tech/2025/11/27/chinese-humanoid-robotics-company-robotera-secures-usd-140m-in-series-a-funding/)）。2027–2028 年出现一轮洗牌的可能性较大，部分公司可能被迫进行困境并购或退出市场。严重性：中等——自变量的蓝筹股东结构提高了存活率，但并不能保证胜出。
 
 ### 财务风险
 
-10. **估值 / 估值倍数压缩风险。** 在隐含约 14 亿美元、且无经审计营收的估值水平下，自变量目前的定价属于"叙事倍数"。若 2026 年 5 月的家庭试点未能在年底前转化为可信的规模故事，下一轮融资可能向下重估。中国同行目前聚集于 14–30 亿美元区间（Galbot 是异常值）；下行情形可能将自变量重估至 5–10 亿美元。严重性：中-高。
+10. **估值 / 估值倍数压缩风险。** 在隐含约 14 亿美元、且无经审计营收的估值水平下，自变量目前的定价属于"叙事倍数"（[财新国际，2026-04-21](https://www.caixinglobal.com/2026-04-21/x-square-robot-raises-new-funds-targets-home-trials-by-may-102436558.html)）。若 2026 年 5 月的家庭试点未能在年底前转化为可信的规模故事，下一轮融资可能向下重估。中国同行目前聚集于 14–30 亿美元区间（Galbot 是异常值）；下行情形可能将自变量重估至 5–10 亿美元（[PR Newswire Galbot 30 亿美元，2025-12-20](https://www.prnewswire.com/news-releases/galbot-secures-over-300-million-in-new-funding-breaking-records-with-3-billion-valuation-in-chinas-humanoid-robot-sector-302647204.html)；[Caproasia，Spirit AI 15 亿美元，2026-02-26](https://www.caproasia.com/2026/02/26/china-robotics-startup-spirit-ai-raised-280-million-at-1-5-billion-valuation-founded-in-2024-by-han-fengtao-members-from-university-of-california-berkeley-tsinghua-university-peking-university/)）。严重性：中-高。
 
-11. **现金消耗节奏风险。** 28 个月内九轮融资、累计募集 6 亿美元以上，意味着公司隐含的烧钱速度并不低（考虑到员工与训练算力支出，估计 2026 年烧钱速率约为每年 1–2 亿美元——**为估算，并未披露**）。一旦出现中国 VC 资本寒冬（类似 2022 年 LLM 出清），如下一轮融资被延迟 6–12 个月，公司将陷入困难处境。严重性：中等。
+11. **现金消耗节奏风险。** 28 个月内九轮融资、累计募集 6 亿美元以上，意味着公司隐含的烧钱速度并不低（考虑到员工与训练算力支出，估计 2026 年烧钱速率约为每年 1–2 亿美元——**为估算，并未披露**）（[Caproasia，2026-04-27](https://www.caproasia.com/2026/04/27/china-intelligent-robot-startup-x-square-robot-technology-raised-293-million-cny-2-billion-in-series-b-funding-round-founded-in-2023-by-wang-qian-investors-include-alibaba-meituan-bytedance-ho/)）。一旦出现中国 VC 资本寒冬（类似 2022 年 LLM 出清），如下一轮融资被延迟 6–12 个月，公司将陷入困难处境（[PitchBook，"VC 撤离中国 AI 投资"](https://pitchbook.com/news/articles/vcs-pull-back-from-china-ai-investment)）。严重性：中等。
 
-12. **缺乏盈利路径披露。** 自变量尚未公布任何关于单位经济、毛利率或盈亏平衡时间表的指引。对一家 B 轮阶段的基础模型公司来说这是正常现象，但也意味着其财务风险敞口比典型的中国 A 股 IPO 候选公司更宽。严重性：结构性 / 持续存在。
+12. **缺乏盈利路径披露。** 自变量尚未公布任何关于单位经济、毛利率或盈亏平衡时间表的指引（[X Square Robot 官网](https://x2robot.com/en)）。对一家 B 轮阶段的基础模型公司来说这是正常现象，但也意味着其财务风险敞口比典型的中国 A 股 IPO 候选公司更宽。严重性：结构性 / 持续存在。
 
 ### 宏观经济风险
 
-13. **美国对高端训练算力的出口管制。** 任何进一步收紧 H100/H200/Blackwell 在中国可获得性的措施，都会直接限制自变量的模型训练节奏。缓释因素：中国替代方案（华为昇腾）正在改进，但软件生态仍有差距。严重性：中-高；持续性。
+13. **美国对高端训练算力的出口管制。** 任何进一步收紧 H100/H200/Blackwell 在中国可获得性的措施，都会直接限制自变量的模型训练节奏（[Lawfare，"特朗普的 AI 芯片出口管制"](https://www.lawfaremedia.org/article/trump-s-illegal-ai-chip-export-controls--and-who-can-challenge-them)；[IFP，"美国是否应向中国出售 Blackwell 芯片？"](https://ifp.org/the-b30a-decision/)；[Built In，"特朗普取消对华 AI 芯片禁令"](https://builtin.com/articles/trump-lifts-ai-chip-ban-china-nvidia)）。缓释因素：中国替代方案（华为昇腾）正在改进，但软件生态仍有差距。严重性：中-高；持续性。
 
-14. **中国宏观 / 消费服务需求疲软。** 2026–2027 年若中国消费环境疲弱，将放缓 58 同城试点向付费订阅基础的转化，并压缩第二阶段的可触达切入空间。严重性：中等。
+14. **中国宏观 / 消费服务需求疲软。** 2026–2027 年若中国消费环境疲弱，将放缓 58 同城试点向付费订阅基础的转化，并压缩第二阶段的可触达切入空间（[Rhodium Group，"中国经济：2025 年调整，展望 2026"](https://rhg.com/research/chinas-economy-rightsizing-2025-looking-ahead-to-2026/)；[CNBC，"中国推出激励消费新计划"，2026-01-30](https://www.cnbc.com/2026/01/30/china-services-consumption-plan-domestic-demand-reform.html)）。严重性：中等。
 
-15. **境外融资轮次的汇率敞口。** 近期多个轮次（A+、A++、B 轮）以美元等值口径在境外结构上披露。若人民币兑美元贬值，将机械性地降低以美元计价的算力采购融资能力。严重性：低-中。
+15. **境外融资轮次的汇率敞口。** 近期多个轮次（A+、A++、B 轮）以美元等值口径在境外结构上披露（[CNBC，2025-09-08](https://www.cnbc.com/2025/09/08/alibaba-leads-100-million-investment-in-chinese-humanoid-robot-startup.html)；[TechNode，2026-01-12](https://technode.com/2026/01/12/x-square-robot-secures-140-million-in-funding-from-bytedance-sequoia-and-others/)）。若人民币兑美元贬值，将机械性地降低以美元计价的算力采购融资能力。严重性：低-中。
 
 ---
 

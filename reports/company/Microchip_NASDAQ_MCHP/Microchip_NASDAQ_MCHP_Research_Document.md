@@ -40,7 +40,7 @@ Microchip Technology designs, manufactures, and sells "smart, connected and secu
 
 *Source: Microchip [FY2022 10-K](https://www.sec.gov/Archives/edgar/data/827054/000082705422000094/0000827054-22-000094-index.htm), [FY2025 10-K](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm), and [Q4 FY26 8-K press release](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm).*
 
-**Headline FY26 (year ended March 31, 2026):**
+**Headline FY26 (year ended March 31, 2026)**, per the [Q4 FY26 earnings release Exhibit 99.1, May 7, 2026](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm):
 - Net sales: **$4,713.1M** (+7.1% YoY from $4,401.6M)
 - GAAP gross margin: 57.7%; non-GAAP gross margin: 58.5%
 - GAAP operating income: $490.1M (10.4%); non-GAAP operating income: $1,238.2M (26.3%)
@@ -50,7 +50,7 @@ Microchip Technology designs, manufactures, and sells "smart, connected and secu
 
 Source: [Microchip Q4 FY26 earnings release](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm).
 
-**Valuation snapshot (snapshot May 2026, Yahoo Finance via yfinance):**
+**Valuation snapshot (snapshot May 2026)**, sourced from [Yahoo Finance MCHP key statistics, retrieved 2026-05-20 via yfinance](https://finance.yahoo.com/quote/MCHP/key-statistics):
 
 | Metric | MCHP | Implication |
 |---|---|---|
@@ -93,7 +93,7 @@ timeline
 
 Microchip was founded in 1989 as a spinout from General Instrument's microelectronics division, focused initially on the PIC family of 8-bit microcontrollers — a product line that has gone on to ship in tens of billions of units. The company IPO'd on NASDAQ in 1993, and Steve Sanghi has been its central figure since being named CEO in October 1991. Source: [FY2025 10-K, Information About Our Executive Officers](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm).
 
-Two large acquisitions transformed the company's revenue base and balance sheet, both documented in MCHP's SEC filings and contemporaneous press releases:
+Two large acquisitions transformed the company's revenue base and balance sheet, both documented in MCHP's SEC filings and contemporaneous press releases ([FY2025 10-K, Business and Acquisition Notes](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)):
 
 - **Atmel (April 2016, ~$3.56B equity / $3.40B enterprise value):** added AVR microcontrollers (well-known to the hobbyist / Arduino community), smartcard/security ICs, and a broader automotive footprint. The transaction was at $8.15/share in cash and stock with ~$170M of expected FY19 synergies ([Microchip–Atmel acquisition announcement, 8-K Exhibit 99.1, January 19, 2016](https://www.sec.gov/Archives/edgar/data/0000872448/000157104916010841/t1600178_ex99-1.htm)).
 - **Microsemi (May 2018, ~$8.35B):** added non-volatile FPGAs (PolarFire, IGLOO, RTG4, SmartFusion, ProASIC), aerospace & defense radiation-hardened parts, atomic clocks and timing solutions, Ethernet/PCIe networking ICs (including Switchtec PCIe switches and timing/synchronization for data center), and silicon carbide power devices. Financed with $3B of new term loans and $2B of high-grade secured bonds; closing was approved by 99.5% of Microsemi shares voted ([Microchip Technology Announces Completion of Microsemi Acquisition, May 29, 2018](https://ir.microchip.com/news-events/press-releases/detail/399/microchip-technology-announces-completion-of-microsemi-acquisition)). Microsemi roughly doubled MCHP's revenue and saddled it with ~$8B of debt that the company has been working down ever since.
@@ -223,7 +223,7 @@ Microchip operates in the **embedded control semiconductors** segment — overla
 
 **Cyclical character.** The analog and MCU end markets are heavily cyclical, with cycle peaks driven by lead-time-extension-induced double-ordering and troughs driven by destocking. The most recent cycle peaked for MCHP in fiscal Q1 FY23 (June 2022 quarter) and bottomed in fiscal Q4 FY25 (March 2025 quarter). The peak-to-trough revenue decline was -53% on a quarterly basis ($2,069M Q1 FY23 vs. $970.5M Q4 FY25). This is *more severe* than the cycle TXN, ADI, or NXPI experienced — a function of MCHP's relatively heavier exposure to industrial automation (which destocked harder than auto), shorter customer-order coverage at the peak, and pricing/inventory practices that hadn't been re-baselined since the Sanghi-era "preferred supply program" was launched in 2021. Source: peak quarter revenue inferred from [FY2023 10-K MD&A historical net sales table](https://www.sec.gov/Archives/edgar/data/827054/000082705423000080/0000827054-23-000080-index.htm).
 
-**Structural drivers.** Despite the cyclicality, the structural growth thesis for embedded control silicon is intact, drawing on MCHP's own filings and contemporaneous industry releases:
+**Structural drivers.** Despite the cyclicality, the structural growth thesis for embedded control silicon is intact, drawing on MCHP's own filings and contemporaneous industry releases ([FY2025 10-K, Item 1 Business — End Markets](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)):
 
 - **Semiconductor content per system continues to rise** — the FY25 10-K cites "increasing semiconductor content in our customers' products" as a long-term tailwind ([FY2025 10-K, Item 1 Business](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)).
 - **Electrification and energy efficiency** — every smart meter, EV powertrain, e-bike, electric tool, heat pump, and industrial motor drive is silicon-rich and requires MCUs + analog + power management ([FY2025 10-K Item 1 — End Markets](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)).
@@ -261,7 +261,7 @@ quadrantChart
 
 *Author's qualitative positioning, informed by FY25 gross margins (ADI ~63%, TXN ~57%, NXPI ~56%, MCHP non-GAAP target ~65%, STM ~34%, IFNNY ~41%) per [Yahoo Finance May 2026 snapshot](https://finance.yahoo.com/quote/MCHP/key-statistics).*
 
-**Direct peers (broadline analog + MCU, sells to many of the same customers):**
+**Direct peers (broadline analog + MCU, sells to many of the same customers)**, with figures pulled from each peer's most recent annual filing ([FY2025 10-K Competition section for the named peer set](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)):
 
 - **Analog Devices (NASDAQ: ADI).** $191B market cap; FY25 revenue $11,019.7M (+17% YoY) and GAAP gross margin 61.5%, with Industrial 45% / Automotive 30% / Consumer 13% / Comms 13% segment mix ([ADI FY2025 Annual Report Form 10-K, p. F-3](https://www.sec.gov/Archives/edgar/data/6281/000119312526020138/d75638dars.pdf); [ADI Reports Strong Fourth Quarter and Fiscal 2025 Financial Results, Nov 25 2025](https://investor.analog.com/news-releases/news-release-details/analog-devices-reports-strong-fourth-quarter-and-fiscal-2025)). Acquired Maxim Integrated in 2021; competes most directly with MCHP's analog and mixed-signal lines but has minimal MCU overlap.
 - **Texas Instruments (NASDAQ: TXN).** $274B market cap; FY24 revenue $15.641B with TTM capex ~$4.8–4.9B funding the Sherman, TX and Lehi, UT 300mm fab build-out ([TXN FY2024 Form 10-K](https://www.sec.gov/Archives/edgar/data/0000097476/000009747625000007/txn-20241231.htm); [Texas Instruments selects Lehi, Utah, for its next 300-millimeter wafer fab, Feb 15 2023](https://www.ti.com/about-ti/newsroom/news-releases/2023/2023-02-15-texas-instruments-selects-lehi--utah--for-its-next-300-millimeter-semiconductor-wafer-fab.html)). The $60B U.S. fab program ([TI plans to invest more than $60B to manufacture foundational semiconductors in the U.S.](https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-plans-to-invest-more-than--60-billion-to-manufacture-billions-of-foundational-semiconductors-in-the-us.html)) is the structural overbuild argument MCHP must contend with.
@@ -340,21 +340,21 @@ The FY25 gross margin headwinds were specifically itemized in the 10-K: a $132.3
 
 **7. Tariff and export-control exposure.** 75% of revenue is foreign-sourced (50% Asia); manufacturing relies on outside foundries (TSMC and others) for 64% of wafer needs. New tariffs (US-China, US-EU, US-Mexico/Canada) or expanded EAR / export-control actions could compress demand or raise costs. Mitigant: management has implemented an "Asia-based shipment program to mitigate tariff impact." Tariffs are a Q4 FY26 / Q1 FY27 watch item — management cited "balancing this with geopolitical concerns and the non-quantifiable impact of tariffs" in May 2025 guidance. Source: [Q4 FY25 8-K](https://www.sec.gov/Archives/edgar/data/827054/000082705425000061/exhibit991q4fy25.htm).
 
-**8. Foundry concentration and Taiwan risk.** A significant portion of outsourced wafers comes from TSMC and other Asian foundries. Any disruption to Taiwan operations (geopolitical, natural disaster, regulatory) would directly impact 64% of MCHP's product output. Mitigant: dual-sourcing where feasible, U.S. fab capacity at Fab 4/5 for selected products.
+**8. Foundry concentration and Taiwan risk.** A significant portion of outsourced wafers comes from TSMC and other Asian foundries; 64% of FY25 product output came from external foundries ([FY2025 10-K, Manufacturing section](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)). Any disruption to Taiwan operations (geopolitical, natural disaster, regulatory) would directly impact this slice. Mitigant: dual-sourcing where feasible, U.S. fab capacity at Fab 4/5 for selected products.
 
-**9. Competitive overbuild.** TXN's 300mm capex cycle (Sherman TX, Lehi UT) is adding analog/MCU capacity at scale; Chinese fabs (SMIC, Hua Hong) are adding mature-node capacity. If overall industry capacity additions outpace demand growth, pricing power could compress. Mitigant: MCHP's proprietary, design-locked customer base is less price-elastic than commodity SKUs.
+**9. Competitive overbuild.** TXN's 300mm capex cycle (Sherman TX, Lehi UT) is adding analog/MCU capacity at scale ([TI plans to invest more than $60B to manufacture foundational semiconductors in the U.S.](https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-plans-to-invest-more-than--60-billion-to-manufacture-billions-of-foundational-semiconductors-in-the-us.html)); Chinese fabs (SMIC, Hua Hong) are adding mature-node capacity. If overall industry capacity additions outpace demand growth, pricing power could compress. Mitigant: MCHP's proprietary, design-locked customer base is less price-elastic than commodity SKUs ([FY2025 10-K MD&A — pricing commentary](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)).
 
 ### Financial risks
 
-**10. Series A preferred convertibility and dilution.** The $1.485B Series A mandatory convertible converts to common stock in 2028 — current diluted share guidance for Q1 FY27 already includes the converted shares (~22.7-23.0M incremental shares). Mitigant: dilution is known and visible in non-GAAP diluted share counts; the conversion eliminates the preferred dividend going forward.
+**10. Series A preferred convertibility and dilution.** The $1.485B Series A mandatory convertible converts to common stock in 2028 ([Microchip 8-K announcing Series A Mandatory Convertible Preferred Stock, March 25, 2025](https://www.sec.gov/Archives/edgar/data/0000827054/000119312525062515/d943799d8k.htm)) — current diluted share guidance for Q1 FY27 already includes the converted shares (~22.7-23.0M incremental shares). Mitigant: dilution is known and visible in non-GAAP diluted share counts ([Q4 FY26 8-K, share-count reconciliation](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm)); the conversion eliminates the preferred dividend going forward.
 
-**11. Margin recovery shortfall.** The non-GAAP gross margin target of 65% requires both volume recovery (driving factory utilization) and product mix improvement. If recovery stalls at 60-62%, GAAP EPS recovery would lag the bull case. Mitigant: Q4 FY26 already at 61.6% non-GAAP GM and rising sequentially; Q1 FY27 guide mid-point 62.75%.
+**11. Margin recovery shortfall.** The non-GAAP gross margin target of 65% requires both volume recovery (driving factory utilization) and product mix improvement. If recovery stalls at 60-62%, GAAP EPS recovery would lag the bull case. Mitigant: Q4 FY26 already at 61.6% non-GAAP GM and rising sequentially; Q1 FY27 guide mid-point 62.75% ([Q4 FY26 earnings release, May 7 2026](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm)).
 
-**12. Free cash flow constraint until inventory normalizes.** FY25 operating cash flow was $898.1M (vs. $2,892.7M FY24 and $3,621.0M FY23); FY26 should improve materially but is still below normalized peak. Mitigant: dividend ($984M FY26) is currently covered by OCF plus inventory reduction; share repurchases have been substantially reduced ($96.5M FY25 vs. $982.1M FY24 — see FY25 10-K cash flow statement) preserving capital for debt paydown.
+**12. Free cash flow constraint until inventory normalizes.** FY25 operating cash flow was $898.1M (vs. $2,892.7M FY24 and $3,621.0M FY23) ([FY2025 10-K consolidated cash flow statement](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)); FY26 should improve materially but is still below normalized peak. Mitigant: dividend ($984M FY26 per [Q4 FY26 8-K](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm)) is currently covered by OCF plus inventory reduction; share repurchases have been substantially reduced ($96.5M FY25 vs. $982.1M FY24 per the FY25 10-K cash flow statement) preserving capital for debt paydown.
 
 ### Macro risks
 
-**13. End-market double-dip in industrial and auto.** European industrial weakness specifically cited in FY25 10-K; auto inventory at OEMs and Tier-1s could be a second-leg headwind in 2026. Mitigant: management commentary suggests broad-based improvement across end markets through Q4 FY26.
+**13. End-market double-dip in industrial and auto.** European industrial weakness specifically cited in FY25 10-K ("general weakness in the European economy, and decreases in our net sales in the European industrial and automotive markets") ([FY2025 10-K, Sales by Geography](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)); auto inventory at OEMs and Tier-1s could be a second-leg headwind in 2026. Mitigant: management commentary suggests broad-based improvement across end markets through Q4 FY26 ([Q4 FY26 8-K — qualitative end-market commentary](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm)).
 
 ---
 
@@ -381,7 +381,7 @@ Per the consolidated statements of operations in the [FY2025 10-K](https://www.s
 | Non-GAAP operating margin % | n/d | n/d | 24.5% | 26.3% |
 | Non-GAAP diluted EPS | n/d | n/d | $1.31 | $1.64 |
 
-n/d = not yet disclosed in FY26 10-K (filing expected late May 2026; not in our local cache as of report date).
+n/d = not yet disclosed in FY26 10-K (filing expected late May 2026; not in our local cache as of report date — see [SEC EDGAR Microchip filings index](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000827054&type=10-K&dateb=&owner=include&count=10)).
 
 ### Balance sheet & debt
 
@@ -389,9 +389,9 @@ n/d = not yet disclosed in FY26 10-K (filing expected late May 2026; not in our 
 
 *Source: Microchip [FY2022 10-K](https://www.sec.gov/Archives/edgar/data/827054/000082705422000094/0000827054-22-000094-index.htm), [FY2023 10-K](https://www.sec.gov/Archives/edgar/data/827054/000082705423000080/0000827054-23-000080-index.htm), [FY2025 10-K balance sheets](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm). Total debt = current portion + long-term debt.*
 
-Total debt has been reduced from $7,687.4M (FY22) to $5,630.4M (FY25), a $2.06B paydown over three years. Cash has built from $234M (FY23) to $771.7M (FY25), reflecting tighter capex and the $1.485B preferred issuance net of $1.30B of debt retirement.
+Total debt has been reduced from $7,687.4M (FY22) to $5,630.4M (FY25), a $2.06B paydown over three years ([FY2022 10-K](https://www.sec.gov/Archives/edgar/data/827054/000082705422000094/0000827054-22-000094-index.htm) and [FY2025 10-K balance sheets](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)). Cash has built from $234M (FY23) to $771.7M (FY25), reflecting tighter capex and the $1.485B preferred issuance net of $1.30B of debt retirement ([Microchip 8-K announcing Series A Mandatory Convertible Preferred Stock, March 25, 2025](https://www.sec.gov/Archives/edgar/data/0000827054/000119312525062515/d943799d8k.htm)).
 
-Goodwill remains very large at $6,684.8M (FY25), and acquired intangibles at $2,389.0M — together 59% of total assets ($15,374.6M). This is the Microsemi acquisition's lingering balance-sheet footprint.
+Goodwill remains very large at $6,684.8M (FY25), and acquired intangibles at $2,389.0M — together 59% of total assets ($15,374.6M) ([FY2025 10-K consolidated balance sheet](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)). This is the Microsemi acquisition's lingering balance-sheet footprint.
 
 ### Cash flow
 
@@ -399,36 +399,36 @@ Goodwill remains very large at $6,684.8M (FY25), and acquired intangibles at $2,
 
 *Source: Microchip [FY2025 10-K consolidated statements of cash flows](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm).*
 
-Free cash flow followed revenue down — from $3,134.8M (FY23) to $2,607.6M (FY24) to $772.1M (FY25) — but **the FY25 figure was achieved despite a -42% revenue decline**, demonstrating the working-capital release and capex discipline of the recovery plan. FY26 cash flow figures will appear in the forthcoming FY26 10-K; based on press release commentary (sequential debt paydown, distributor and internal inventory both declining), we expect FY26 FCF in the $1.0-1.3B range, **above FY25 despite still being below normalized**.
+Free cash flow followed revenue down — from $3,134.8M (FY23) to $2,607.6M (FY24) to $772.1M (FY25) per the [FY2025 10-K consolidated cash flow statement](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm) — but **the FY25 figure was achieved despite a -42% revenue decline**, demonstrating the working-capital release and capex discipline of the recovery plan. FY26 cash flow figures will appear in the forthcoming FY26 10-K; based on press release commentary (sequential debt paydown, distributor and internal inventory both declining — [Q4 FY26 8-K](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm)), we expect FY26 FCF in the $1.0-1.3B range, **above FY25 despite still being below normalized**.
 
 ### Capital allocation priorities
 
-Per Sanghi's commentary across FY25-FY26 earnings calls, the priority stack is:
+Per Sanghi's commentary across FY25-FY26 earnings calls, the priority stack is ([Q4 FY26 8-K](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm); [FY2025 10-K MD&A](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)):
 
-1. **Debt reduction** (CFO Bjornholt: "We remain focused on debt reduction as a priority").
+1. **Debt reduction** (CFO Bjornholt: "We remain focused on debt reduction as a priority" — [Q4 FY26 8-K commentary](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm)).
 2. **Common dividend** — held flat at $0.455/share quarterly ($1.82 annualized) through the trough; FY26 dividend payments of $984M.
-3. **Share repurchases** — substantially curtailed during the downturn ($96.5M in FY25 vs. $982.1M in FY24); no signal of imminent resumption.
+3. **Share repurchases** — substantially curtailed during the downturn ($96.5M in FY25 vs. $982.1M in FY24 — [FY2025 10-K cash flow statement](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)); no signal of imminent resumption.
 4. **Selective capex** — FY27 guided to ~$100M, with major Fab 4 / Fab 5 expansion plans paused.
 
-Total capital returned to shareholders in FY25 was $1,066M (dividends + buybacks); $984M in FY26 (essentially all dividend).
+Total capital returned to shareholders in FY25 was $1,066M (dividends + buybacks); $984M in FY26 (essentially all dividend) ([FY2025 10-K MD&A](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm); [Q4 FY26 8-K](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm)).
 
 ---
 
 ## 11. Thesis summary
 
-**Microchip Technology is a high-quality, cycle-sensitive embedded control franchise emerging from one of the deepest revenue troughs in its history.** The thesis decomposes into three quantifiable bets:
+**Microchip Technology is a high-quality, cycle-sensitive embedded control franchise emerging from one of the deepest revenue troughs in its history** ([FY2025 10-K MD&A](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm); [Q4 FY26 8-K](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm)). The thesis decomposes into three quantifiable bets:
 
-1. **Cycle recovery has begun and the FY25 bottom holds.** The May 2026 Q4 FY26 print (revenue $1.311B vs. $1.260B guidance mid-point; up 35.1% YoY; up 10.6% sequentially) and the June 2026 mid-quarter guidance of $1.4555B confirm that bookings, design activity, and channel sell-through are all inflecting positively. Channel inventory has bled down to 26 days (near the low end of the historical 17-43 day range), removing the largest single overhang.
+1. **Cycle recovery has begun and the FY25 bottom holds.** The May 2026 Q4 FY26 print (revenue $1.311B vs. $1.260B guidance mid-point; up 35.1% YoY; up 10.6% sequentially) and the June 2026 mid-quarter guidance of $1.4555B confirm that bookings, design activity, and channel sell-through are all inflecting positively ([Q4 FY26 earnings release, May 7 2026](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm)). Channel inventory has bled down to 26 days (near the low end of the historical 17-43 day range), removing the largest single overhang.
 
-2. **Gross margin and operating leverage normalize.** Non-GAAP gross margin has expanded from 52.0% (Q4 FY25 trough) to 61.6% (Q4 FY26) to 62.75% guided (Q1 FY27 mid). The long-term target is ~65%. Incremental non-GAAP gross margins through the recovery have run 70%+ — meaningful operating leverage as utilization climbs.
+2. **Gross margin and operating leverage normalize.** Non-GAAP gross margin has expanded from 52.0% (Q4 FY25 trough — [Q4 FY25 8-K](https://www.sec.gov/Archives/edgar/data/827054/000082705425000061/exhibit991q4fy25.htm)) to 61.6% (Q4 FY26) to 62.75% guided (Q1 FY27 mid — [Q4 FY26 8-K](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm)). The long-term target is ~65%. Incremental non-GAAP gross margins through the recovery have run 70%+ ([Q1 FY26 8-K](https://www.sec.gov/Archives/edgar/data/827054/000082705425000132/exhibit991q1fy26.htm)) — meaningful operating leverage as utilization climbs.
 
-3. **Balance-sheet de-risking continues.** Total debt has been reduced by ~$2B since FY22; the Series A preferred ($1.485B) is mandatorily convertible in 2028, eliminating that interest-equivalent obligation; capex is curtailed (~$100M FY27 vs. $500M historical) preserving cash for further debt paydown.
+3. **Balance-sheet de-risking continues.** Total debt has been reduced by ~$2B since FY22 ([FY2022 10-K](https://www.sec.gov/Archives/edgar/data/827054/000082705422000094/0000827054-22-000094-index.htm) vs. [FY2025 10-K balance sheets](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)); the Series A preferred ($1.485B) is mandatorily convertible in 2028 ([Microchip 8-K announcing Series A Mandatory Convertible Preferred Stock, March 25, 2025](https://www.sec.gov/Archives/edgar/data/0000827054/000119312525062515/d943799d8k.htm)), eliminating that interest-equivalent obligation; capex is curtailed (~$100M FY27 vs. $500M historical) preserving cash for further debt paydown.
 
-The principal counter-arguments are (a) a second leg lower in industrial/auto demand triggered by tariffs or recession, (b) capacity overbuild by TXN and Chinese fabs compressing the eventual margin ceiling below 65%, and (c) China-MCU pricing pressure on the 8-bit franchise.
+The principal counter-arguments are (a) a second leg lower in industrial/auto demand triggered by tariffs or recession ([Q4 FY25 8-K — management tariff commentary](https://www.sec.gov/Archives/edgar/data/827054/000082705425000061/exhibit991q4fy25.htm)), (b) capacity overbuild by TXN and Chinese fabs compressing the eventual margin ceiling below 65% ([TI plans to invest more than $60B in U.S. fabs](https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-plans-to-invest-more-than--60-billion-to-manufacture-billions-of-foundational-semiconductors-in-the-us.html)), and (c) China-MCU pricing pressure on the 8-bit franchise ([FY2025 10-K, Competition section](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)).
 
-**Valuation context.** TTM P/E of 425x is meaningless — it reflects FY26 GAAP EPS of $0.22 distorted by Microsemi amortization, restructuring, and preferred dividends. The honest multiples are forward P/E (22.9x, cheapest of the premium analog/MCU peer group at ADI 29.6x, TXN 32.0x, IFNNY 27.0x) and TTM P/S (10.7x, mid-pack). If non-GAAP EPS normalizes to a $3.50–4.50 run-rate over FY28–FY29 (consistent with a $6.0–6.5B normalized revenue and 26–30% non-GAAP operating margin), today's $93.60 price implies a normalized P/E of 20-27x — within ADI/TXN territory.
+**Valuation context.** TTM P/E of 425x is meaningless — it reflects FY26 GAAP EPS of $0.22 distorted by Microsemi amortization, restructuring, and preferred dividends ([Q4 FY26 8-K — GAAP/non-GAAP reconciliation](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm)). The honest multiples are forward P/E (22.9x, cheapest of the premium analog/MCU peer group at ADI 29.6x, TXN 32.0x, IFNNY 27.0x per [Yahoo Finance May 2026 snapshot](https://finance.yahoo.com/quote/MCHP/key-statistics)) and TTM P/S (10.7x, mid-pack). If non-GAAP EPS normalizes to a $3.50–4.50 run-rate over FY28–FY29 (consistent with a $6.0–6.5B normalized revenue and 26–30% non-GAAP operating margin — built on [FY22-FY24 10-K revenue history](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm) and CFO long-term margin commentary on the [Q3 FY26 call](https://www.sec.gov/Archives/edgar/data/827054/000082705426000008/exhibit991q3fy26.htm)), today's $93.60 price implies a normalized P/E of 20-27x — within ADI/TXN territory.
 
-This is fundamentally **a cycle-recovery and self-help story** at one of the most established U.S. semiconductor IDMs. The bull case is a multi-quarter re-rating as forward earnings materialize; the bear case is that cycle recovery stalls and the GAAP/non-GAAP gap remains optically punishing while leverage stays elevated.
+This is fundamentally **a cycle-recovery and self-help story** at one of the most established U.S. semiconductor IDMs ([FY2025 10-K Item 1 Business](https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/0000827054-25-000077-index.htm)). The bull case is a multi-quarter re-rating as forward earnings materialize; the bear case is that cycle recovery stalls and the GAAP/non-GAAP gap remains optically punishing while leverage stays elevated ([Q4 FY26 8-K, GAAP/non-GAAP reconciliation tables](https://www.sec.gov/Archives/edgar/data/827054/000082705426000012/exhibit991q4fy26.htm)).
 
 ---
 

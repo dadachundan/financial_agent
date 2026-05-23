@@ -120,11 +120,11 @@ timeline
 
 ### 首席财务官（CFO）
 
-**未公开披露。** 截至本报告撰写之时，智平方科技尚未公开任命首席财务官。一家投后估值14亿美元的公司在没有公开任命CFO的情况下完成B轮融资，相对而言略显反常；这暗示该职务要么由一位未曾公开亮相的财务负责人担任，要么资本市场层面的职责仍由郭彦东本人结合外部顾问（鉴于国泰海通参投B轮，可能即为其顾问）担纲。*已标注为信息披露缺口。*
+**未公开披露。** 截至本报告撰写之时，智平方科技尚未公开任命首席财务官。一家投后估值14亿美元的公司在没有公开任命CFO的情况下完成B轮融资，相对而言略显反常；这暗示该职务要么由一位未曾公开亮相的财务负责人担任，要么资本市场层面的职责仍由郭彦东本人结合外部顾问（鉴于国泰海通参投B轮，可能即为其顾问）担纲（[Caixin Global, 2026-02-23](https://www.caixinglobal.com/2026-02-23/chinas-ai-robotics-raises-fresh-funds-at-over-10-billion-yuan-valuation-102416310.html)；[AI² Robotics — About page](https://ai2robotics.com/en/about/)）。*已标注为信息披露缺口。*
 
 ### 其他高管与核心团队
 
-公司尚未发布官方英文版的高管团队页面，除创始人之外的具名CXO目前尚未对外披露。公开陈述将核心团队来源描述为：
+公司尚未发布官方英文版的高管团队页面，除创始人之外的具名CXO目前尚未对外披露（[AI² Robotics — About page](https://ai2robotics.com/en/about/)）。公开陈述将核心团队来源描述为（[Bianews, 2025-09](https://www.bianews.com/news/details?id=222141)；[36氪 PitchHub — 智平方科技](https://pitchhub.36kr.com/project/2353549897566085)）：
 
 - **微软（雷德蒙）** —— AI / CV研究院校友
 - **谷歌** —— AI研究与机器人方向校友
@@ -144,13 +144,13 @@ timeline
 
 ### 履历综合评估
 
-就最重要的座位（首席执行官）而言，单一创始人简历较为有利。郭彦东具备值得信赖的一线研究履历（微软、普渡博士），并且——对于工业机器人商业化论点至关重要——拥有两段消费级规模交付智能终端的运营经验（小鹏的车辆、OPPO的手机）。短板在于队伍深度：在没有公开任命CFO、COO、CTO的情况下，智平方实际上是在押注郭彦东本人能够将四个高级管理岗位压缩为一人——在不足200人的初创公司中尚可，但随着员工规模向支撑10,000台/年制造产线所需的水平扩张，这一点将构成压力。
+就最重要的座位（首席执行官）而言，单一创始人简历较为有利。郭彦东具备值得信赖的一线研究履历（微软、普渡博士），并且——对于工业机器人商业化论点至关重要——拥有两段消费级规模交付智能终端的运营经验（小鹏的车辆、OPPO的手机）（[腾讯新闻, 2025-03-07](https://news.qq.com/rain/a/20250307A034DJ00)；[Bianews, 2025-09](https://www.bianews.com/news/details?id=222141)）。短板在于队伍深度：在没有公开任命CFO、COO、CTO的情况下，智平方实际上是在押注郭彦东本人能够将四个高级管理岗位压缩为一人——在不足200人的初创公司中尚可，但随着员工规模向支撑10,000台/年制造产线所需的水平扩张，这一点将构成压力（[新浪财经, 2025-04-18 — 2028年万台产能计划](https://finance.sina.com.cn/roll/2025-04-18/doc-inetqkks4824724.shtml)）。
 
 ---
 
 ## 4. 产品与服务
 
-截至2026年中，智平方科技的产品组合建立在单一基础模型"大脑"（Alpha Brain / GOVLA）与两款机器人"躯体"SKU（AlphaBot 1、AlphaBot 2）之上，第三款产品——小型化模块化"智魔方"（Zhi-Mo-Fang，有时译作"Smart Cube"）服务亭——更多用作演示载体而非高量产品。
+截至2026年中，智平方科技的产品组合建立在单一基础模型"大脑"（Alpha Brain / GOVLA）与两款机器人"躯体"SKU（AlphaBot 1、AlphaBot 2）之上，第三款产品——小型化模块化"智魔方"（Zhi-Mo-Fang，有时译作"Smart Cube"）服务亭——更多用作演示载体而非高量产品（[AI² Robotics — About page](https://ai2robotics.com/en/about/)；[Interesting Engineering, "World's first modular AI service space"](https://interestingengineering.com/ai-robotics/china-modular-embodied-ai-service-space)）。
 
 ```mermaid
 graph TD
@@ -277,12 +277,12 @@ pie title 智平方科技 — 已披露客户收入集中度（定性，2025）
 
 ### 行业定义与范围
 
-智平方科技所处行业可被最准确地描述为**具身智能 / 通用智能机器人**，其中公司具体瞄准两个子细分：
+智平方科技所处行业可被最准确地描述为**具身智能 / 通用智能机器人**，其中公司具体瞄准两个子细分（[Premia Partners — Embodied AI China](https://www.premia-partners.com/insight/embodied-ai-china-as-the-global-powerhouse-for-industrial-and-humanoid-robotics)）：
 
-1. **工业移动操作机器人与人形机器人** —— 在工厂、晶圆厂、实验室中与人类工人并肩或替代人类工人作业的机器人。
-2. **服务 / 商业人形机器人** —— 部署于零售、餐饮、公共信息环境的机器人。（智平方科技的智魔方载体定位于此处，但截至2026年并非公司收入中心。）
+1. **工业移动操作机器人与人形机器人** —— 在工厂、晶圆厂、实验室中与人类工人并肩或替代人类工人作业的机器人（[NE时代, 2025-09](https://ne-time.cn/web/article/36685)）。
+2. **服务 / 商业人形机器人** —— 部署于零售、餐饮、公共信息环境的机器人。（智平方科技的智魔方载体定位于此处，但截至2026年并非公司收入中心）（[Interesting Engineering — modular AI service space](https://interestingengineering.com/ai-robotics/china-modular-embodied-ai-service-space)）。
 
-相邻行业包括传统工业机器人（发那科Fanuc、ABB、安川Yaskawa——智能水平较低的关节臂机器人）、协作机器人（优傲Universal Robots、斗山Doosan——智能水平有限）、自主移动机器人（极智嘉Geek+、海柔创新Hai Robotics——具备移动但无操作灵巧性）以及商业服务机器人（普渡Pudu、擎朗KEENON——窄域自主能力）。
+相邻行业包括传统工业机器人（发那科Fanuc、ABB、安川Yaskawa——智能水平较低的关节臂机器人）、协作机器人（优傲Universal Robots、斗山Doosan——智能水平有限）、自主移动机器人（极智嘉Geek+、海柔创新Hai Robotics——具备移动但无操作灵巧性）以及商业服务机器人（普渡Pudu、擎朗KEENON——窄域自主能力）（[China Briefing — Chinese Humanoid Robot Market](https://www.china-briefing.com/news/chinese-humanoid-robot-market-opportunities/)）。
 
 ### 市场规模与结构
 
@@ -423,39 +423,39 @@ quadrantChart
 
 ### 公司特有风险
 
-**1. 执行风险——管理层能否完成10倍产能爬坡？** 从1,000台/年铭牌产线扩张到10,000台/年产线，是供应链采购、质量管控与装配纪律的阶跃性变化。团队具备消费电子制造履历（OPPO、小鹏）——这一点有所助益——但没有成员此前管理过工业机器人级规模的工厂。若爬坡失败，将直接证伪B轮叙事。*严重程度：高。缓释因素：供应商基础深度；惠科在手订单提供需求确定性。*
+**1. 执行风险——管理层能否完成10倍产能爬坡？** 从1,000台/年铭牌产线扩张到10,000台/年产线，是供应链采购、质量管控与装配纪律的阶跃性变化（[新浪财经, 2025-04-18 — 2028年万台产能计划](https://finance.sina.com.cn/roll/2025-04-18/doc-inetqkks4824724.shtml)）。团队具备消费电子制造履历（OPPO、小鹏）——这一点有所助益——但没有成员此前管理过工业机器人级规模的工厂（[Bianews, 2025-09 — 创始人访谈](https://www.bianews.com/news/details?id=222141)）。若爬坡失败，将直接证伪B轮叙事。*严重程度：高。缓释因素：供应商基础深度；惠科在手订单提供需求确定性。*
 
-**2. 客户集中度风险——前一大客户占比约40–60%为实质性水平。** 虽然智平方科技并未正式披露最大客户集中度，但仅惠科合同（三年约人民币5亿元）即很可能占据2026–2028年在手订单的多数份额。**若前一大客户>20%或前五大客户>50%，即视为实质性。** 智平方科技合理推测在两条线之上。惠科目前并未向机器人方向纵向整合（去风险压力较低），但惠科一旦出现延期或范围缩减，将对公司收入轨迹形成不成比例的冲击。*严重程度：高。缓释因素：奔驰、晶能、生物科技方向的业务拓展管道正在推进。*
+**2. 客户集中度风险——前一大客户占比约40–60%为实质性水平。** 虽然智平方科技并未正式披露最大客户集中度，但仅惠科合同（三年约人民币5亿元）即很可能占据2026–2028年在手订单的多数份额（[NE时代, 2025-09 — 智平方斩获人形机器人大单](https://ne-time.cn/web/article/36685)）。**若前一大客户>20%或前五大客户>50%，即视为实质性。** 智平方科技合理推测在两条线之上。惠科目前并未向机器人方向纵向整合（去风险压力较低），但惠科一旦出现延期或范围缩减，将对公司收入轨迹形成不成比例的冲击（[网易, 2025-09 — 卷完融资拼大单](https://c.m.163.com/news/a/K96P0P3P05129QAF.html)）。*严重程度：高。缓释因素：奔驰、晶能、生物科技方向的业务拓展管道正在推进。*
 
-**3. 关键人物依赖——郭彦东即公司。** 创始人持股约69%（Pre-A+前；融资后比例下降但据推测仍为多数），是每一次对外沟通的公开代表，事实上同时承担CEO、CTO、首席科学家的职能。没有公开任命CFO进一步加深这种依赖。任何不可履职或离职事件都将造成严重扰动。*严重程度：高。缓释因素：来自微软、OPPO、小鹏的深度工程团队储备，但在公开层面未具名。*
+**3. 关键人物依赖——郭彦东即公司。** 创始人持股约69%（Pre-A+前；融资后比例下降但据推测仍为多数），是每一次对外沟通的公开代表，事实上同时承担CEO、CTO、首席科学家的职能（[腾讯新闻, 2025-03-07 — 郭彦东控股69%](https://news.qq.com/rain/a/20250307A034DJ00)）。没有公开任命CFO进一步加深这种依赖。任何不可履职或离职事件都将造成严重扰动。*严重程度：高。缓释因素：来自微软、OPPO、小鹏的深度工程团队储备，但在公开层面未具名（[新浪财经, 2025-09-28](https://finance.sina.com.cn/stock/t/2025-09-28/doc-infsamfc8725940.shtml)）。*
 
-**4. 产品 / 技术过时风险——VLA架构赛跑。** Alpha Brain / GOVLA是若干种合理VLA架构之一；谷歌、X方机器人等正在探索其他路径。如果某竞争对手发表明显占优的模型（相当于VLA领域的"AlphaGo时刻"），Alpha Brain可能被反超。*严重程度：中偏高。缓释因素：来自已部署机队的数据飞轮；快速迭代节奏。*
+**4. 产品 / 技术过时风险——VLA架构赛跑。** Alpha Brain / GOVLA是若干种合理VLA架构之一；谷歌、X方机器人等正在探索其他路径（[The Robot Report, 2026-01 — X Square Robot WALL-A](https://www.therobotreport.com/x-square-robot-secures-140m-in-funding-for-ai-foundation-models/)）。如果某竞争对手发表明显占优的模型（相当于VLA领域的"AlphaGo时刻"），Alpha Brain可能被反超（[量子位, 2024 — 具身智能GPT-2时刻](https://blog.csdn.net/QbitAI/article/details/144755756)）。*严重程度：中偏高。缓释因素：来自已部署机队的数据飞轮；快速迭代节奏。*
 
-**5. 硬件形态过时风险。** 智平方选择了轮式+升降腰腿而非双足行走。如果任务经济学转向只能由双足行走机器人进入的环境（户外不平整地形、无电梯的多层场景），则其形态选择将成为负担。*严重程度：低偏中。缓释因素：目标垂直行业绝大多数为室内 / 平地工业场景，在此处轮式是优势而非弱点。*
+**5. 硬件形态过时风险。** 智平方选择了轮式+升降腰腿而非双足行走（[Aparobot — AlphaBot 2 spec page](https://www.aparobot.com/robots/alphabot-2)）。如果任务经济学转向只能由双足行走机器人进入的环境（户外不平整地形、无电梯的多层场景），则其形态选择将成为负担（[OFweek, 2025-04 — 对标特斯拉Optimus](https://m.ofweek.com/ai/2025-04/ART-201700-8110-30662149.html)）。*严重程度：低偏中。缓释因素：目标垂直行业绝大多数为室内 / 平地工业场景，在此处轮式是优势而非弱点。*
 
-**6. 地理集中度风险。** 总部位于深圳；所有已披露客户均为中国本土（奔驰这一参考客户据推测为奔驰中国业务）。收入地理多元化有限。*严重程度：中。缓释因素：国际扩张已被列为2026–2027年的明确优先事项。*
+**6. 地理集中度风险。** 总部位于深圳；所有已披露客户均为中国本土（奔驰这一参考客户据推测为奔驰中国业务）（[21经济网, 2025-04-18](https://www.21jingji.com/article/20250418/herald/375a27631a594da3b2c3d8d804ade0e7.html)）。收入地理多元化有限。*严重程度：中。缓释因素：国际扩张已被列为2026–2027年的明确优先事项（[The Robot Report, 2026-02](https://www.therobotreport.com/ai2-robotics-raises-series-b-funding-advance-alphabot-embodied-ai/)）。*
 
 ### 行业 / 市场风险
 
-**7. 竞争烈度——赛道资本充裕的同行已经饱和。** 约20家中国人形机器人初创公司，其中若干家估值已超过10亿美元。X方机器人融资规模（约4亿美元）已高于智平方。Galbot估值更高（30亿美元vs智平方14亿美元）。2027–2028年随着赛道商品化加剧，毛利压力可能显现。*严重程度：高。缓释因素：基础模型差异化；首发的工业客户参考案例。*
+**7. 竞争烈度——赛道资本充裕的同行已经饱和。** 约20家中国人形机器人初创公司，其中若干家估值已超过10亿美元（[XCarspace — Top 20 Chinese Humanoid Robot Companies](https://xcarspace.com/top-20-chinese-humanoid-robot-companies-ranked-by-valuation/)）。X方机器人融资规模（约4亿美元）已高于智平方。Galbot估值更高（30亿美元vs智平方14亿美元）（[Inforcapital, 2026-04 — X Square Robot B轮](https://inforcapital.com/news/embodied-ai-startup-x-square-robot-raises-nearly-276m-in-series-b-led-by-xiaomi-and-sequoia-china/)；[Robotics & Automation News, 2025-12-20 — Galbot 30亿美元](https://roboticsandautomationnews.com/2025/12/20/humanoid-robot-maker-galbot-raises-300-million-and-reaches-3-billion-valuation/97783/)）。2027–2028年随着赛道商品化加剧，毛利压力可能显现。*严重程度：高。缓释因素：基础模型差异化；首发的工业客户参考案例。*
 
-**8. 监管 / 安全规则趋严风险。** 中国的人-机交互安全标准仍处于发展阶段。共享人-机工作空间的国家或职业安全法规一旦出台严格规定，可能显著抬高集成成本。*严重程度：中。缓释因素：AlphaBot的力反馈架构有利于合规运行。*
+**8. 监管 / 安全规则趋严风险。** 中国的人-机交互安全标准仍处于发展阶段。共享人-机工作空间的国家或职业安全法规一旦出台严格规定，可能显著抬高集成成本（[工信部, 2023-10 — 人形机器人创新发展指导意见](https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2023/art_48fe01d562644aedb7ea3f4256df8190.html)）。*严重程度：中。缓释因素：AlphaBot的力反馈架构有利于合规运行（[Aparobot — AlphaBot 2 spec page](https://www.aparobot.com/robots/alphabot-2)）。*
 
-**9. 技术颠覆——替代范式。** 模块化任务专属机器人（如简化控制的专用AMR）若取得突破，可能在某些垂直行业削弱通用人形机器人的价值主张。*严重程度：低偏中。缓释因素：资本与学界注意力大势坚定支持通用VLA路线，反转可能性较小。*
+**9. 技术颠覆——替代范式。** 模块化任务专属机器人（如简化控制的专用AMR）若取得突破，可能在某些垂直行业削弱通用人形机器人的价值主张（[知乎, 2026 — 国内人形机器人公司盘点](https://zhuanlan.zhihu.com/p/1997605413038866853)）。*严重程度：低偏中。缓释因素：资本与学界注意力大势坚定支持通用VLA路线，反转可能性较小（[TheAIInsider, 2025-12-31 — 机器人融资年度回顾](https://theaiinsider.tech/2025/12/31/ai-insiders-robotics-funding-year-in-review/)）。*
 
 ### 财务风险
 
-**10. 估值 / 倍数压缩风险。** 14亿美元投后估值、年化收入低于人民币5亿元（分析师估算，*未予披露*），智平方科技的隐含市销率为30至100倍。与同行可比，但绝对水平极高。如果2026年产能未能转化为2026年签约在手订单，下一轮融资估值持平或下调的可能性即上升。2028年商业化里程碑实质上是B轮估值的隐含承销假设。*严重程度：高。缓释因素：惠科在手订单；基础模型期权价值；板块估值顺风。*
+**10. 估值 / 倍数压缩风险。** 14亿美元投后估值、年化收入低于人民币5亿元（分析师估算，*未予披露*），智平方科技的隐含市销率为30至100倍（[Caproasia, 2026-02-24](https://www.caproasia.com/2026/02/24/china-robot-company-ai%C2%B2-robotics-yandong-eric-guo-raised-144-million-funding-at-1-4-billion-valuation-founded-in-2023-by-yandong-eric-guo/)）。与同行可比，但绝对水平极高。如果2026年产能未能转化为2026年签约在手订单，下一轮融资估值持平或下调的可能性即上升。2028年商业化里程碑实质上是B轮估值的隐含承销假设（[新浪财经, 2025-04-18 — 2028年万台产能计划](https://finance.sina.com.cn/roll/2025-04-18/doc-inetqkks4824724.shtml)）。*严重程度：高。缓释因素：惠科在手订单；基础模型期权价值；板块估值顺风。*
 
-**11. 资金需求与现金消耗。** 一年内完成12轮融资合计约1.58亿美元，公司既展示了融资能力，也隐含了高现金消耗率。资本市场持续敞口取决于股权市场对中国人形机器人板块的情绪——一旦2026年宇树IPO表现不及预期或某家头部同行遭遇挫折，该情绪可能出现显著压缩。*严重程度：中偏高。缓释因素：一线战略投资人股东结构提供下行兜底。*
+**11. 资金需求与现金消耗。** 一年内完成12轮融资合计约1.58亿美元，公司既展示了融资能力，也隐含了高现金消耗率（[Robotics 24/7, 2026 — 12轮融资](https://www.robotics247.com/article/ai-robotics-raises-over-140m-in-series-b-round)；[Crunchbase — AI² Robotics profile](https://www.crunchbase.com/organization/ai%C2%B2-robotics)）。资本市场持续敞口取决于股权市场对中国人形机器人板块的情绪——一旦2026年宇树IPO表现不及预期或某家头部同行遭遇挫折，该情绪可能出现显著压缩（[KraneShares — Unitree IPO Guide, 2026](https://kraneshares.com/a-complete-guide-to-unitree-robotics-2026-ipo-why-it-matters-for-star-market-etf-kstr-humanoid-robotics-etf-koid/)）。*严重程度：中偏高。缓释因素：一线战略投资人股东结构提供下行兜底。*
 
-**12. 盈利时间表。** 没有披露的GAAP / IFRS盈利路径。宇树作为唯一盈利同行，是在出货量约5,500台 / 收入人民币17亿元的规模上才实现盈利——智平方距此规模还需数年。*严重程度：中。缓释因素：客户在手订单提供收入可见度；问题在于毛利率轨迹，但未予披露。*
+**12. 盈利时间表。** 没有披露的GAAP / IFRS盈利路径。宇树作为唯一盈利同行，是在出货量约5,500台 / 收入人民币17亿元的规模上才实现盈利——智平方距此规模还需数年（[Rest of World, 2026 — Unitree IPO](https://restofworld.org/2026/unitree-china-humanoid-robot-shanghai-ipo/)；[The Next Web, 2026 — Unitree GD01 IPO](https://thenextweb.com/news/unitree-gd01-mecha-humanoid-robot-ipo)）。*严重程度：中。缓释因素：客户在手订单提供收入可见度；问题在于毛利率轨迹，但未予披露。*
 
 ### 宏观经济风险
 
-**13. 中国工业资本支出周期风险。** 工业机器人需求与中国制造业资本支出呈顺周期关系。半导体、汽车或显示产能扩张大幅放缓将直接压制智平方科技的订单管道。*严重程度：中。缓释因素：人工替代经济性使机器人即便在资本支出持平环境下也愈发具吸引力。*
+**13. 中国工业资本支出周期风险。** 工业机器人需求与中国制造业资本支出呈顺周期关系。半导体、汽车或显示产能扩张大幅放缓将直接压制智平方科技的订单管道（[Premia Partners — Embodied AI China](https://www.premia-partners.com/insight/embodied-ai-china-as-the-global-powerhouse-for-industrial-and-humanoid-robotics)）。*严重程度：中。缓释因素：人工替代经济性使机器人即便在资本支出持平环境下也愈发具吸引力（[国家统计局, 2025-05-16 — 2024年城镇单位就业人员年平均工资情况](https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959826.html)）。*
 
-**14. 地缘政治风险——出口管制与军民两用考量。** 出口到部分市场（美国、欧盟、英国）的中国具身机器人可能面临两用出口管制或进口侧的政治审查。反向看，美国对用于中国AI训练的高端GPU实施限制，也会影响Alpha Brain的训练基础设施。*严重程度：中。缓释因素：国产算力替代方案趋于成熟；近期商业化绝大部分在国内。*
+**14. 地缘政治风险——出口管制与军民两用考量。** 出口到部分市场（美国、欧盟、英国）的中国具身机器人可能面临两用出口管制或进口侧的政治审查（[Premia Partners — Embodied AI China](https://www.premia-partners.com/insight/embodied-ai-china-as-the-global-powerhouse-for-industrial-and-humanoid-robotics)）。反向看，美国对用于中国AI训练的高端GPU实施限制，也会影响Alpha Brain的训练基础设施（[新浪财经, 2025-09-28 — 没有技术自信中国机器人就没有创新突破](https://finance.sina.com.cn/stock/t/2025-09-28/doc-infsamfc8725940.shtml)）。*严重程度：中。缓释因素：国产算力替代方案趋于成熟；近期商业化绝大部分在国内。*
 
 ---
 
