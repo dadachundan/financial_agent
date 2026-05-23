@@ -25,7 +25,7 @@ For each enabled analyst, spawn a subagent in parallel using the Agent tool with
 
 - [[sentiment-analyst]] → `sentiment_report`
 - [[news-analyst]] → `news_report`
-- [[company-research]] → `company_research_report` — deep institutional-grade fundamental coverage (business, management, products, customers, competition, TAM, risks). **Before spawning, check `reports/company/` for an existing report on this ticker.** If one is less than 30 days old, read it and pass its contents as `company_research_report` instead of re-running — company-research is a 6,000–10,000-word deep dive that takes ~10–30 min. When you do run it fresh, after it completes copy the produced markdown to `reports/<TICKER>_<TRADE-DATE>/company-research.md` so the assembly step (Step 7) finds it in the canonical run folder.
+- [[company-research]] → `company_research_report` — deep institutional-grade fundamental coverage (business, management, products, customers, competition, TAM, risks). **Before spawning, check `reports/company/` for an existing report on this ticker** by globbing `reports/company/*_<TICKER>/` and selecting the most-recently-modified match (see [`output_path.md`](../../../references/output_path.md)). If a `*_Research_Document.md` inside is less than 30 days old, read it and pass its contents as `company_research_report` instead of re-running — company-research is a 6,000–10,000-word deep dive that takes ~10–30 min. The deep-dive lives at the company-folder root and is *not* copied into `trading/<TRADE-DATE>/`; the assembly step (Step 7) reads it directly from `<company-folder>/<*>_Research_Document.md`.
 
 Wait for all three to return (or skip any analyst not in `--analysts`).
 
@@ -63,33 +63,39 @@ Output: `final_trade_decision` (markdown PortfolioDecision).
 
 ### Step 7 — Final report assembly
 
-By this point each sub-skill has written its own section to disk under `reports/<TICKER>_<TRADE-DATE>/`:
+By this point each sub-skill has written its own section to disk under the resolved `<company-folder>/trading/<TRADE-DATE>/`:
 
 ```
-reports/<TICKER>_<TRADE-DATE>/
-├── sentiment-analyst.md
-├── news-analyst.md
-├── company-research.md
-├── bull-bear-debate.md
-├── research-manager.md
-├── trader-plan.md
-├── risk-debate.md
-└── portfolio-decision.md
+reports/company/<COMPANY_FOLDER>/
+├── <COMPANY_FOLDER>_Research_Document.md   ← time-invariant (from company-research)
+├── charts/                                  ← optional, from company-research
+├── valuation/                               ← optional, from initiating-coverage
+└── trading/<TRADE-DATE>/                    ← time-variant pipeline outputs
+    ├── sentiment-analyst.md
+    ├── news-analyst.md
+    ├── bull-bear-debate.md
+    ├── research-manager.md
+    ├── trader-plan.md
+    ├── risk-debate.md
+    ├── portfolio-decision.md
+    └── full_report.md                       ← written by this step
 ```
+
+See [`output_path.md`](../../../references/output_path.md) for how `<company-folder>` is resolved from `<TICKER>`.
 
 Assemble `full_report.md` as a single markdown document with these top-level sections, in order:
 
 1. Header: `# Trading Analysis: <TICKER> @ <TRADE-DATE>` plus a one-sentence executive line pulled from the PortfolioDecision's Executive Summary.
-2. `## Sentiment Analyst Report` — contents of `sentiment-analyst.md`.
-3. `## News Analyst Report` — contents of `news-analyst.md`.
-4. `## Company Research Report` — contents of `company-research.md`.
+2. `## Sentiment Analyst Report` — contents of `sentiment-analyst.md` (same dir).
+3. `## News Analyst Report` — contents of `news-analyst.md` (same dir).
+4. `## Company Research Report` — contents of the `<COMPANY_FOLDER>_Research_Document.md` at the company-folder root (one level up from `trading/<TRADE-DATE>/`).
 5. `## Bull / Bear Debate` — contents of `bull-bear-debate.md`.
 6. `## Research Plan` — contents of `research-manager.md`.
 7. `## Trader Proposal` — contents of `trader-plan.md`.
 8. `## Risk Debate` — contents of `risk-debate.md`.
 9. `## Portfolio Decision` — contents of `portfolio-decision.md`.
 
-Write the assembled markdown to `reports/<TICKER>_<TRADE-DATE>/full_report.md` using the Write tool, then print the full report to the user.
+Write the assembled markdown to `<company-folder>/trading/<TRADE-DATE>/full_report.md` using the Write tool, then print the full report to the user.
 
 The PortfolioDecision step has already persisted the final decision to `memory/trading_memory.md` as well.
 

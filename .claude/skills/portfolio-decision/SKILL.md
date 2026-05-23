@@ -62,17 +62,19 @@ If `past_context` is non-empty, incorporate its lessons; otherwise rely solely o
 
 ## Persist output
 
-After producing the markdown, write it to `reports/<TICKER>_<TRADE-DATE>/portfolio-decision.md` using the Write tool. `<TICKER>` is uppercased; `<TRADE-DATE>` is `YYYY-MM-DD`. Parent directories are created automatically. Consumed by [[trading-analysis]] when assembling `full_report.md`.
+After producing the markdown, write it to `<company-folder>/trading/<TRADE-DATE>/portfolio-decision.md` using the Write tool. `<TICKER>` is uppercased; `<TRADE-DATE>` is `YYYY-MM-DD`. Parent directories are created automatically. Consumed by [[trading-analysis]] when assembling `full_report.md`.
+
+Resolve `<company-folder>` per [`output_path.md`](../../../references/output_path.md): glob `reports/company/*_<TICKER>/` and pick the most-recently-modified match; fall back to `reports/company/<TICKER>/` if none exists.
 
 ## Memory write
 
-After the file is written, append it to the decision log:
+After the file is written, append it to the decision log (pass the resolved file path to `--decision-file`):
 
 ```bash
 python scripts/memory_log.py append \
     --ticker <TICKER> \
     --trade-date <YYYY-MM-DD> \
-    --decision-file reports/<TICKER>_<TRADE-DATE>/portfolio-decision.md
+    --decision-file <company-folder>/trading/<YYYY-MM-DD>/portfolio-decision.md
 ```
 
 This creates a `pending` entry that a later reflection job can update with realized returns. See [memory format](../../../references/memory_format.md) for schema details.

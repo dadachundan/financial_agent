@@ -76,4 +76,6 @@ If a source returned `<unavailable>` or no posts, say so explicitly — never fa
 
 ## Persist output
 
-After producing the report, write it to `reports/<TICKER>_<TRADE-DATE>/sentiment-analyst.md` using the Write tool. `<TICKER>` is uppercased; `<TRADE-DATE>` is `YYYY-MM-DD`. Parent directories are created automatically. Consumed by [[trading-analysis]] when assembling `full_report.md`.
+After producing the report, write it to `<company-folder>/trading/<TRADE-DATE>/sentiment-analyst.md` using the Write tool. `<TICKER>` is uppercased; `<TRADE-DATE>` is `YYYY-MM-DD`. Parent directories are created automatically. Consumed by [[trading-analysis]] when assembling `full_report.md`.
+
+Resolve `<company-folder>` per [`output_path.md`](../../../references/output_path.md): glob `reports/company/*_<TICKER>/` and pick the most-recently-modified match; fall back to `reports/company/<TICKER>/` if none exists.

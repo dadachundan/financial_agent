@@ -23,10 +23,9 @@ This skill needs three analyst reports in the conversation context as markdown b
 
 **Before re-running [[company-research]]** (a 10–30 min, 6,000–10,000-word deep dive), check for a cached report first:
 
-1. If invoked via [[trading-analysis]], `reports/<TICKER>_<TRADE-DATE>/company-research.md` is already populated — read it.
-2. Otherwise glob `reports/company/*<TICKER>*/` — folders follow `<Company>_<EXCHANGE><TICKER>` (e.g. `AMD_NASDAQ_AMD`, `Tesla_NASDAQ_TSLA`, `安培龙_SZSE002050`). Read the `*_Research_Document.md` / `*_公司研究.md` / `*_研究报告.md` file inside. If its mtime is < 30 days old, use it as `company_research_report`.
+Glob `reports/company/*_<TICKER>/` and pick the most-recently-modified match (see [`output_path.md`](../../../references/output_path.md)). Folders follow `<Company>_<EXCHANGE><TICKER>` (e.g. `AMD_NASDAQ_AMD`, `Tesla_NASDAQ_TSLA`, `安培龙_SZSE002050`). Read the `*_Research_Document.md` / `*_公司研究.md` / `*_研究报告.md` file at the folder root. If its mtime is < 30 days old, use it as `company_research_report`.
 
-Only invoke [[company-research]] fresh if neither cache hits. `sentiment_report` and `news_report` are short-lived by design — always run those analyst skills fresh.
+Only invoke [[company-research]] fresh if no cache hits. `sentiment_report` and `news_report` are short-lived by design — always run those analyst skills fresh.
 
 For a clean full-pipeline run from scratch, prefer [[trading-analysis]] over invoking this skill standalone.
 
@@ -81,4 +80,6 @@ See [debate methodology](../../../references/debate_methodology.md) for addition
 
 ## Persist output
 
-After producing the transcript, write it to `reports/<TICKER>_<TRADE-DATE>/bull-bear-debate.md` using the Write tool. `<TICKER>` is uppercased; `<TRADE-DATE>` is `YYYY-MM-DD`. Parent directories are created automatically. Consumed by [[trading-analysis]] when assembling `full_report.md`.
+After producing the transcript, write it to `<company-folder>/trading/<TRADE-DATE>/bull-bear-debate.md` using the Write tool. `<TICKER>` is uppercased; `<TRADE-DATE>` is `YYYY-MM-DD`. Parent directories are created automatically. Consumed by [[trading-analysis]] when assembling `full_report.md`.
+
+Resolve `<company-folder>` per [`output_path.md`](../../../references/output_path.md): glob `reports/company/*_<TICKER>/` and pick the most-recently-modified match; fall back to `reports/company/<TICKER>/` if none exists.
