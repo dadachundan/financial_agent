@@ -97,9 +97,14 @@ def _derive_type_label(stem: str, bucket: str) -> str:
 
 
 def _derive_kind(stem: str) -> str:
-    """Kind axis used by the dropdown filter — same markers as
-    _derive_type_label but returns 'other' instead of the bucket fallback,
-    so the kind filter only matches research / valuation / initiation files."""
+    """Kind axis used by the dropdown filter. Mirrors _derive_type_label so
+    a row's TYPE column label is exactly what the kind dropdown filters on:
+      - analyst stems  → ANALYST_TYPE_LABELS value (NEWS_ANALYST, …)
+      - kind markers   → Research_Document / Valuation_Analysis / Initiation_Report
+      - everything else → 'other'
+    """
+    if stem in ANALYST_TYPE_LABELS:
+        return ANALYST_TYPE_LABELS[stem]
     m = _MARKER_RE.search(stem)
     if m:
         return _MARKER_TO_LABEL[m.group(1)]
@@ -469,6 +474,11 @@ __URLPATCH__
           <option value="kind:Research_Document">Research_Document</option>
           <option value="kind:Valuation_Analysis">Valuation_Analysis</option>
           <option value="kind:Initiation_Report">Initiation_Report</option>
+        </optgroup>
+        <optgroup label="By trading stage">
+          {% for t in analyst_types %}
+            <option value="kind:{{ t }}">{{ t }}</option>
+          {% endfor %}
         </optgroup>
       </select>
       <label><input type="checkbox" id="showMoreCols"> Show more columns</label>
@@ -1845,6 +1855,7 @@ def index():
         rows=rows,
         sectors=sectors,
         buckets=buckets,
+        analyst_types=list(ANALYST_TYPE_LABELS.values()),
         pending=pending_count(),
         _nav=_nw.NAV_HTML,
     )
