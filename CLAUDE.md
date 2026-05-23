@@ -1,14 +1,3 @@
-# Available Skills
-
-The authoritative graph view of every skill registered for this project lives in [available_skill.md](available_skill.md). Read it when you need to know which skill to invoke, how skills depend on each other, or what the trading pipeline cascade looks like.
-
-**Keep it in sync.** Whenever you add, remove, or change a skill's `## Prerequisites` block under `.claude/skills/`, update `available_skill.md` in the same commit (and bump the "Last updated" date at the top of the file). Specifically:
-
-1. Adding a new skill under `.claude/skills/<name>/SKILL.md` → add a row in the relevant section.
-2. Removing a skill → delete its row and any references / arrows in the diagrams.
-3. Changing the `[[wikilink]]` upstream deps of a trading-pipeline skill → update the arrow in section 1.
-4. Changing the parallel fan-out of [trading-analysis](.claude/skills/trading-analysis/SKILL.md) (e.g. a new analyst joins) → update the diagram.
-
 # Workflow Instructions
 
 Before writing any code:
@@ -138,3 +127,7 @@ When generating NEW research / valuation / sector / earnings notes from scratch,
       max_completion_tokens=512,
   )
   ```
+
+# Skills
+
+If you change a skill (add, remove, or modify its `## Prerequisites`), update [reference/available_skill.md](reference/available_skill.md) in the same commit.

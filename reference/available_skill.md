@@ -1,6 +1,8 @@
 # Available Skills — Graph View
 
-Snapshot of every skill registered for this project, grouped by role and dependency chain. Keep this file in sync whenever a skill is added, removed, or its prerequisites change (see [CLAUDE.md](CLAUDE.md) → "Available Skills").
+Snapshot of every skill registered for this project, grouped by role and dependency chain.
+
+> **Keep this file in sync.** Whenever a skill is added, removed, or its `## Prerequisites` block changes under `.claude/skills/`, update this file in the same commit and bump the "Last updated" date below. See the [Maintenance](#maintenance) section at the bottom for the checklist.
 
 Last updated: 2026-05-23
 
@@ -45,15 +47,15 @@ This is the only chain with **machine-enforced** upstream skills (declared via `
 
 | Skill | Prereqs | Output |
 |---|---|---|
-| [trading-analysis](.claude/skills/trading-analysis/SKILL.md) | — (orchestrator) | Runs the whole pipeline end-to-end |
-| [sentiment-analyst](.claude/skills/sentiment-analyst/SKILL.md) | — | 7-day sentiment report (Yahoo / StockTwits / Reddit) |
-| [news-analyst](.claude/skills/news-analyst/SKILL.md) | — | Macro + ticker news, past 30 days |
-| [company-research](.claude/skills/company-research/SKILL.md) | — | 6–10k word deep dive |
-| [bull-bear-debate](.claude/skills/bull-bear-debate/SKILL.md) | 3 analyst reports | Multi-round debate transcript |
-| [research-manager](.claude/skills/research-manager/SKILL.md) | `bull-bear-debate` | ResearchPlan + 5-tier rating |
-| [trader-plan](.claude/skills/trader-plan/SKILL.md) | `research-manager` | Buy/Hold/Sell proposal |
-| [risk-debate](.claude/skills/risk-debate/SKILL.md) | `trader-plan` + 3 analyst reports | 3-way risk transcript |
-| [portfolio-decision](.claude/skills/portfolio-decision/SKILL.md) | `risk-debate`, `trader-plan`, `research-manager` | Final rating (terminal) |
+| [trading-analysis](../.claude/skills/trading-analysis/SKILL.md) | — (orchestrator) | Runs the whole pipeline end-to-end |
+| [sentiment-analyst](../.claude/skills/sentiment-analyst/SKILL.md) | — | 7-day sentiment report (Yahoo / StockTwits / Reddit) |
+| [news-analyst](../.claude/skills/news-analyst/SKILL.md) | — | Macro + ticker news, past 30 days |
+| [company-research](../.claude/skills/company-research/SKILL.md) | — | 6–10k word deep dive |
+| [bull-bear-debate](../.claude/skills/bull-bear-debate/SKILL.md) | 3 analyst reports | Multi-round debate transcript |
+| [research-manager](../.claude/skills/research-manager/SKILL.md) | `bull-bear-debate` | ResearchPlan + 5-tier rating |
+| [trader-plan](../.claude/skills/trader-plan/SKILL.md) | `research-manager` | Buy/Hold/Sell proposal |
+| [risk-debate](../.claude/skills/risk-debate/SKILL.md) | `trader-plan` + 3 analyst reports | 3-way risk transcript |
+| [portfolio-decision](../.claude/skills/portfolio-decision/SKILL.md) | `risk-debate`, `trader-plan`, `research-manager` | Final rating (terminal) |
 
 ## 2. Pair: zsxq report library
 
@@ -68,8 +70,8 @@ Both read `db/zsxq.db`. Recommend reads metadata only; analyze extracts the full
 
 | Skill | Purpose |
 |---|---|
-| [zsxq-recommend](.claude/skills/zsxq-recommend/SKILL.md) | Surface candidate `file_id`s from the recent feed |
-| [zsxq-analyze](.claude/skills/zsxq-analyze/SKILL.md) | Deep-read one PDF and answer a question about it |
+| [zsxq-recommend](../.claude/skills/zsxq-recommend/SKILL.md) | Surface candidate `file_id`s from the recent feed |
+| [zsxq-analyze](../.claude/skills/zsxq-analyze/SKILL.md) | Deep-read one PDF and answer a question about it |
 
 ## 3. Coverage-lifecycle workflows (no hard deps — logical order)
 
@@ -81,21 +83,21 @@ idea-generation → initiating-coverage → earnings-preview → earnings-analys
                                      company-research                         thesis-tracker
 ```
 
-- [initiating-coverage](.claude/skills/initiating-coverage/SKILL.md) is a 5-task workflow whose Task-1 is essentially `company-research`.
-- [earnings-preview](.claude/skills/earnings-preview/SKILL.md) → [earnings-analysis](.claude/skills/earnings-analysis/SKILL.md) → [model-update](.claude/skills/model-update/SKILL.md) is the quarterly cycle for a name already under coverage.
-- [thesis-tracker](.claude/skills/thesis-tracker/SKILL.md) is the long-running journal that consumes results from the others.
-- [idea-generation](.claude/skills/idea-generation/SKILL.md) seeds the funnel.
+- [initiating-coverage](../.claude/skills/initiating-coverage/SKILL.md) is a 5-task workflow whose Task-1 is essentially `company-research`.
+- [earnings-preview](../.claude/skills/earnings-preview/SKILL.md) → [earnings-analysis](../.claude/skills/earnings-analysis/SKILL.md) → [model-update](../.claude/skills/model-update/SKILL.md) is the quarterly cycle for a name already under coverage.
+- [thesis-tracker](../.claude/skills/thesis-tracker/SKILL.md) is the long-running journal that consumes results from the others.
+- [idea-generation](../.claude/skills/idea-generation/SKILL.md) seeds the funnel.
 
 ## 4. Standalone, no dependencies
 
 | Skill | Purpose |
 |---|---|
-| [sector-overview](.claude/skills/sector-overview/SKILL.md) | Industry-level landscape report |
-| [sec-report-summary](.claude/skills/sec-report-summary/SKILL.md) | Multi-year 10-K/Q/8-K digest from `db/financial_reports.db` |
+| [sector-overview](../.claude/skills/sector-overview/SKILL.md) | Industry-level landscape report |
+| [sec-report-summary](../.claude/skills/sec-report-summary/SKILL.md) | Multi-year 10-K/Q/8-K digest from `db/financial_reports.db` |
 | [canslim-screener](/Users/x/.claude/skills/canslim-screener/SKILL.md) | William O'Neil CANSLIM screen (lives in `~/.claude`, not project) |
-| [catalyst-calendar](.claude/skills/catalyst-calendar/SKILL.md) | Upcoming earnings / events |
-| [morning-note](.claude/skills/morning-note/SKILL.md) | 7 am desk note |
-| [earnings-upload-to-db](.claude/skills/earnings-upload-to-db/SKILL.md) | PDF ingest into `db/notes.db` (data-plumbing, not analysis) |
+| [catalyst-calendar](../.claude/skills/catalyst-calendar/SKILL.md) | Upcoming earnings / events |
+| [morning-note](../.claude/skills/morning-note/SKILL.md) | 7 am desk note |
+| [earnings-upload-to-db](../.claude/skills/earnings-upload-to-db/SKILL.md) | PDF ingest into `db/notes.db` (data-plumbing, not analysis) |
 
 ---
 
@@ -115,6 +117,6 @@ Update this file when any of the following change:
 1. A skill is **added** under `.claude/skills/` — add a row to the relevant section.
 2. A skill is **removed** — delete its row and any references.
 3. A skill's **`## Prerequisites`** block changes (new `[[wikilink]]` upstream skill, or one removed) — update the arrow in section 1.
-4. The orchestrator behavior of [trading-analysis](.claude/skills/trading-analysis/SKILL.md) changes (e.g. a new analyst joins the parallel fan-out).
+4. The orchestrator behavior of [trading-analysis](../.claude/skills/trading-analysis/SKILL.md) changes (e.g. a new analyst joins the parallel fan-out).
 
 Also bump the "Last updated" date at the top.
