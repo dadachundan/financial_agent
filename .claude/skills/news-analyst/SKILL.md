@@ -53,6 +53,40 @@ A markdown report providing **specific, actionable insights with supporting evid
 
 Bucket each ticker-news headline by inspecting its date in the fetcher output header (`### Title (source: Publisher, YYYY-MM-DD)`). If 30 days returned <5 articles total, say so and consolidate the two ticker subsections into one — don't pad either with overlap.
 
+## Section numbering (required)
+
+Every `##` and `###` heading in the report **must carry a hierarchical numeric prefix** so readers and downstream skills can reference any subsection by number. No exceptions — Executive Take, Summary table, References all get a number too.
+
+- Top-level `##` sections are numbered `1.`, `2.`, `3.`, … in document order — e.g. `## 1. Executive Take`, `## 2. Ticker news — near-term catalysts (≤7 days before <trade_date>)`.
+- Sub-sections `###` within a top-level section get `<parent>.<child>` numbering — e.g. `### 2.1 Morgan Stanley Overweight upgrade is the dominant single catalyst`, `### 2.2 Bernstein and B. Riley reinforce the analyst-call cluster`.
+- If you nest a `####` heading, continue the pattern: `#### 2.1.1 …`. Avoid going deeper than three levels.
+- The number sits between the heading marker and the title, separated by a single space. Use the `1.` form for top level (with trailing period) and `1.1` for sub-levels (no trailing period), matching the canonical example below.
+- Sub-section bullets and tables inside a section do NOT get section numbers — only the headings themselves.
+
+Canonical opening shape:
+
+```markdown
+# <TICKER> News Analyst Report — Trade Date <YYYY-MM-DD>
+
+## 1. Executive Take
+…
+
+## 2. Ticker news — near-term catalysts (≤7 days before <trade_date>)
+
+### 2.1 <first theme>
+…
+
+### 2.2 <second theme>
+…
+
+## 3. Ticker news — medium-term themes (8–30 days before <trade_date>)
+
+### 3.1 <first theme>
+…
+```
+
+If a section is consolidated (e.g. <5 articles total), keep the numeric prefix on whatever sections remain — re-number so the sequence stays contiguous (1, 2, 3, …), no gaps.
+
 ## Citations (required)
 
 Every claim grounded in a fetched headline or filing **must carry a clickable markdown-link citation** of the form `[Publisher · YYYY-MM-DD](url)` (or `[SEC Form 4](url)` for insider txns). Pull the URLs from the `Link:` lines in the fetcher output — never invent one, never just write `(source: Yahoo Finance)` without a URL.
