@@ -96,19 +96,11 @@ def _derive_type_label(stem: str, bucket: str) -> str:
     return bucket
 
 
-def _derive_kind(stem: str) -> str:
-    """Kind axis used by the dropdown filter. Mirrors _derive_type_label so
-    a row's TYPE column label is exactly what the kind dropdown filters on:
-      - analyst stems  → ANALYST_TYPE_LABELS value (NEWS_ANALYST, …)
-      - kind markers   → Research_Document / Valuation_Analysis / Initiation_Report
-      - everything else → 'other'
-    """
-    if stem in ANALYST_TYPE_LABELS:
-        return ANALYST_TYPE_LABELS[stem]
-    m = _MARKER_RE.search(stem)
-    if m:
-        return _MARKER_TO_LABEL[m.group(1)]
-    return "other"
+def _derive_kind(stem: str, bucket: str) -> str:
+    """Kind axis used by the dropdown filter. Identical to _derive_type_label
+    so the set of distinct kinds equals the set of distinct TYPE column
+    labels — the dropdown is therefore a 1:1 mirror of what the user sees."""
+    return _derive_type_label(stem, bucket)
 
 
 def _all_tickers(name: str) -> list[str]:
@@ -160,7 +152,7 @@ def _parse(rel_path: Path) -> dict:
     # AMD_Valuation_Analysis at a glance.
     display = stem
     type_label = _derive_type_label(stem, bucket)
-    kind = _derive_kind(stem)
+    kind = _derive_kind(stem, bucket)
 
     # Sub-fold files (e.g. company/<slug>/trading/<date>/news-analyst.md)
     # need extra context in display because the filename alone ("news-analyst")
@@ -313,7 +305,7 @@ def _parse_docx(rel_path: Path) -> dict:
     # collapse to the same "AMD" label in the table.
     display = stem
     type_label = _derive_type_label(stem, bucket)
-    kind = _derive_kind(stem)
+    kind = _derive_kind(stem, bucket)
 
     # Same sub-fold treatment as _parse() so a deep .docx surfaces with
     # parent context (and a per-path pair_key).
@@ -465,21 +457,13 @@ __URLPATCH__
       </select>
       <select id="bucketFilter" title="Filter by report type">
         <option value="">All report types</option>
-        <optgroup label="By location">
-          {% for b in buckets %}
-            <option value="bucket:{{ b }}">{{ b }}</option>
-          {% endfor %}
-        </optgroup>
-        <optgroup label="By kind">
-          <option value="kind:Research_Document">Research_Document</option>
-          <option value="kind:Valuation_Analysis">Valuation_Analysis</option>
-          <option value="kind:Initiation_Report">Initiation_Report</option>
-        </optgroup>
-        <optgroup label="By trading stage">
-          {% for t in analyst_types %}
-            <option value="kind:{{ t }}">{{ t }}</option>
-          {% endfor %}
-        </optgroup>
+        {% for group_label, kinds in type_groups %}
+          <optgroup label="{{ group_label }}">
+            {% for k in kinds %}
+              <option value="type:{{ k }}">{{ k }}</option>
+            {% endfor %}
+          </optgroup>
+        {% endfor %}
       </select>
       <label><input type="checkbox" id="showMoreCols"> Show more columns</label>
       <div class="spacer"></div>
@@ -493,7 +477,7 @@ __URLPATCH__
           <th data-sort="ticker" class="col-extra">Ticker</th>
           <th data-sort="sector" class="col-extra">Sector</th>
           <th data-sort="mktcap" style="text-align:right">Market Cap</th>
-          <th data-sort="bucket" class="col-extra">Type</th>
+          <th data-sort="kind" class="col-extra">Type</th>
           <th data-sort="rating" class="col-extra">Rating</th>
           <th class="col-extra">Comment</th>
           <th data-sort="ts" class="active">Created <span class="sort-ind">▼</span></th>
@@ -589,9 +573,9 @@ __URLPATCH__
         const s  = sectorFilter.value || "";
         const tk = bucketFilter.value || "";
 
-        // Type filter encodes the axis in the value: "bucket:<name>" or "kind:<name>".
-        const tkAxis = tk.startsWith("kind:") ? "kind" : tk.startsWith("bucket:") ? "bucket" : "";
-        const tkVal  = tk.split(":", 2)[1] || "";
+        // Type filter — single axis. Value is "type:<kind>" matching data-kind,
+        // which is the exact label shown in the TYPE column.
+        const tkVal = tk.startsWith("type:") ? tk.slice(5) : "";
 
         let visible = 0;
         for (const r of rows) {
@@ -599,9 +583,7 @@ __URLPATCH__
           const rowSector = r.dataset.sector || "";
           const matchQ  = !q || hay.includes(q);
           const matchS  = !s || (s === "__none__" ? rowSector === "" : rowSector === s);
-          const matchT  = !tkAxis
-            || (tkAxis === "bucket" && r.dataset.bucket === tkVal)
-            || (tkAxis === "kind"   && r.dataset.kind   === tkVal);
+          const matchT  = !tkVal || r.dataset.kind === tkVal;
           const show = matchQ && matchS && matchT;
           r.style.display = show ? "" : "none";
           if (show) visible++;
@@ -1844,18 +1826,32 @@ def index():
         # Kind is computed in _parse() / _parse_docx() via _derive_kind()
         # so it stays in sync with the TYPE column label.
 
-    # Dropdown options — present every known sector and bucket plus any
-    # extras we actually see in the data.
+    # Dropdown options — present every known sector and any extras
+    # actually in the data.
     seen_sectors = {r["sector"] for r in rows if r["sector"]}
     sectors = list(ALL_SECTORS) + sorted(s for s in seen_sectors if s not in ALL_SECTORS)
-    buckets = sorted({r.get("bucket", "") for r in rows if r.get("bucket")})
+
+    # TYPE filter options. The dropdown is a 1:1 mirror of the TYPE column,
+    # so we derive the option lists from the set of distinct kinds that
+    # actually appear in the data, partitioned into three semantic groups.
+    seen_kinds = {r["kind"] for r in rows if r.get("kind")}
+    type_groups = []
+    marker_labels = [v for v in dict.fromkeys(_MARKER_TO_LABEL.values()) if v in seen_kinds]
+    if marker_labels:
+        type_groups.append(("Reports", marker_labels))
+    stage_labels = [v for v in ANALYST_TYPE_LABELS.values() if v in seen_kinds]
+    if stage_labels:
+        type_groups.append(("Trading stages", stage_labels))
+    classified = set(marker_labels) | set(stage_labels)
+    other_labels = sorted(seen_kinds - classified)
+    if other_labels:
+        type_groups.append(("By folder", other_labels))
 
     return render_template_string(
         _INDEX_TMPL,
         rows=rows,
         sectors=sectors,
-        buckets=buckets,
-        analyst_types=list(ANALYST_TYPE_LABELS.values()),
+        type_groups=type_groups,
         pending=pending_count(),
         _nav=_nw.NAV_HTML,
     )
