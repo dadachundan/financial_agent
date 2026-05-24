@@ -122,17 +122,10 @@ __URLPATCH__
   <h2 class="mb-1">📄 zsxq PDF Index</h2>
   <p class="text-muted mb-2" style="font-size:.85rem">DB: {{ db_path }}</p>
 
-  <!-- Stats row -->
-  <div class="d-flex stat-badges mb-2">
-    <span class="badge bg-dark    fs-6">Total {{ stats.total }}</span>
-    <span class="badge bg-primary fs-6">Downloaded {{ stats.downloaded }}</span>
-    <span class="badge bg-warning text-dark fs-6">Unclassified {{ stats.unclassified }}</span>
-    <span class="badge text-dark fs-6" style="background:#d1f0d8;border:1px solid #b7dfbf">🤖 AI {{ stats.cat_ai }}</span>
-    <span class="badge text-dark fs-6" style="background:#d1ecf1;border:1px solid #bee5eb">🦾 Robotics {{ stats.cat_robotics }}</span>
-    <span class="badge text-dark fs-6" style="background:#e2d9f3;border:1px solid #c5b3e6">💡 Semi {{ stats.cat_semi }}</span>
-    <span class="badge text-dark fs-6" style="background:#fff3cd;border:1px solid #ffe083">⚡ Energy {{ stats.cat_energy }}</span>
+  <!-- Top toolbar (only useful action left) -->
+  <div class="d-flex mb-2">
     <a href="{{ _base | default('') }}/feed" target="_blank"
-       class="btn btn-sm btn-outline-primary ms-2">📓 ZSXQ Notes</a>
+       class="btn btn-sm btn-outline-primary">📓 ZSXQ Notes</a>
   </div>
 
   {#-- URL-fragment helpers used by the rating / bank / claude / comment / sort
