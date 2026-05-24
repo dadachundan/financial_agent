@@ -23,6 +23,37 @@ After completing a task and verifying that it works (by running tests or the app
    Port 5001 is reserved for the user's own running server — never start a test server on 5001 and never kill 5001.
 6. If the architecture changes, update `architecture.md`.
 
+# Database Safety (MANDATORY — never touch real data)
+
+**NEVER run a destructive query against any SQLite file under `db/` — these contain the user's real research notes, comments, ratings, classifications, and downloaded report metadata. Lost data cannot be recovered.**
+
+Forbidden, no exceptions:
+
+- `DELETE FROM <table>` without a primary-key `WHERE` clause that targets ONLY the row(s) you yourself just inserted seconds ago in this same shell.
+- `DROP TABLE`, `TRUNCATE`, `UPDATE … SET … WHERE 1=1`, `DELETE FROM <table> WHERE created_at > '…'` against `db/notes.db`, `db/zsxq.db`, `db/financial_reports.db`, `db/cninfo_reports.db`, `db/report_annotations.db`, or any other file under `db/`.
+- Wiping a table "to clean up test data" — even if you "just created the rows", you do not know whether the user added their own in another tab/session in between.
+
+Approved testing patterns:
+
+1. **Copy the DB to /tmp and point the test server at the copy.**
+   ```bash
+   cp db/notes.db /tmp/notes.test.db
+   # Run the module against the test copy via env var or DB_PATH override.
+   # After testing: rm /tmp/notes.test.db
+   ```
+2. **Use a throwaway `file_id` that can never collide with real data.** For zsxq experiments, pick a value like `999000000000001` (well above any real zsxq id) and scope every insert/delete to that single id:
+   ```sql
+   DELETE FROM pdf_inline_comments WHERE file_id = 999000000000001;
+   ```
+3. **Use the HTTP API instead of raw SQL** — POST a row, capture the returned `id`, DELETE that exact id by primary key. Never write a `WHERE` clause that could match a real row.
+4. **Read-only inspection is always fine** (`SELECT …`, `.schema`, `sqlite3 db.db .tables`).
+
+Before any `DELETE`/`UPDATE`/`DROP` against a `db/*.db` file:
+- Confirm the file path starts with `/tmp/` or matches a known-test name (`*.test.db`, `*.sandbox.db`).
+- If it starts with `db/`, stop and ask the user instead of guessing.
+
+This rule exists because in this session I ran `DELETE FROM pdf_inline_comments` to clear what I thought was my own test data — and silently wiped the user's two real comments on the Nomura PDF. That is the failure mode this rule prevents.
+
 # UI Verification (MANDATORY)
 
 After adding or modifying any UI feature — especially new buttons, modals, or navigation flows:
