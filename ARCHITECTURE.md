@@ -120,7 +120,7 @@ PDF.js-based reader for the zsxq PDF library. Mirrors the UX of the `/claude-rep
 - Scanned pages (empty text layer) auto-enable a region-drag overlay; the dragged rect is OCR'd server-side so even scanned-only reports get the same quote-based UX.
 
 ### `pdf_inline_comments.py` — SQLite layer for PDF inline comments
-Mirror of `report_inline_comments.py` with extra `file_id`, `page`, and `rect_json` columns. Stores selection-anchored markdown comments in `db/notes.db`.
+Mirror of `report_inline_comments.py` with extra `file_id`, `page`, and `rect_json` columns. Stores selection-anchored markdown comments in `db/notes.db`. A row with an empty `body` is a *pure highlight* (no comment text); the viewer renders just the `<mark>` on the page and shows no rail card. Clicking such a mark pops a tiny [💬 Add comment / 🗑 Delete] toolbar so the user can upgrade or remove it.
 
 ### `pdf_page_ocr.py` — Per-page OCR cache for synthetic text layers
 For scanned PDFs (no embedded text) the viewer requests `/pdf-page-ocr` per page; this module renders the page via fitz, runs ocrmac (Apple Vision) to get word boxes, and caches them in `db/notes.db` table `pdf_page_ocr (file_id, page, words_json, ocr_at)`. The viewer injects those words as positioned transparent `<span>`s into PDF.js's text layer so native browser text selection works the same way it does on vector PDFs — and the same way Apple Preview's "select text on a scanned PDF" feature works (Preview is also calling Apple Vision under the hood).

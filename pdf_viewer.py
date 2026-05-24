@@ -90,10 +90,12 @@ def register(zsxq_bp: Blueprint, db_path_provider) -> None:
         except (TypeError, ValueError):
             return jsonify(error="file_id/page must be int"), 400
         quote = (data.get("quote") or "").strip()
-        body = (data.get("body") or "").strip()
+        # body may be empty — that's a highlight-only entry (no comment).
+        # We still require a quote (or rect) so there's something to anchor.
+        body = (data.get("body") or "")
         rect = data.get("rect")  # {x,y,w,h} in PDF page CSS px at scale=1, or None
-        if not file_id or not page or not body:
-            return jsonify(error="file_id, page, body required"), 400
+        if not file_id or not page:
+            return jsonify(error="file_id, page required"), 400
         if not quote and not rect:
             return jsonify(error="quote or rect required"), 400
         row = _pic.create(
@@ -110,9 +112,8 @@ def register(zsxq_bp: Blueprint, db_path_provider) -> None:
     @zsxq_bp.route("/pdf-inline-comments/<int:cid>", methods=["PATCH"])
     def pdf_ic_update(cid: int):
         data = request.get_json(silent=True) or {}
-        body = (data.get("body") or "").strip()
-        if not body:
-            return jsonify(error="body required"), 400
+        # body may be empty (downgrading a comment to a plain highlight).
+        body = (data.get("body") or "")
         row = _pic.update(cid, body)
         if not row:
             return jsonify(error="not found"), 404
@@ -335,16 +336,36 @@ _VIEWER_TMPL = r"""<!doctype html>
     .pdf-page .region-rubber{position:absolute;background:rgba(31,78,120,.18);
                              border:1.5px dashed #1F4E78;pointer-events:none}
 
-    /* Floating "+" pill at the selection's right edge */
+    /* Floating action toolbar at the selection's right edge: [🖍 highlight | 💬 comment] */
     .pic-fab{position:absolute;z-index:1500;background:#fff;
-             border:1px solid #cfd6df;border-radius:50%;
-             width:34px;height:34px;padding:0;cursor:pointer;
-             box-shadow:0 2px 6px rgba(0,0,0,.18);display:none;
-             align-items:center;justify-content:center;color:#1F4E78;
-             transition:background .15s,border-color .15s,box-shadow .15s}
-    .pic-fab:hover{background:#eef4fb;border-color:#1F4E78;
-                   box-shadow:0 3px 10px rgba(0,0,0,.24)}
-    .pic-fab svg{width:18px;height:18px;display:block}
+             border:1px solid #cfd6df;border-radius:22px;
+             padding:3px;cursor:default;
+             box-shadow:0 2px 8px rgba(0,0,0,.22);display:none;
+             align-items:center;gap:2px;
+             transition:box-shadow .15s}
+    .pic-fab.show{display:inline-flex}
+    .pic-fab button{background:none;border:none;cursor:pointer;
+                    width:32px;height:32px;border-radius:50%;
+                    display:flex;align-items:center;justify-content:center;
+                    color:#1F4E78;padding:0;font-size:1rem;
+                    transition:background .12s}
+    .pic-fab button:hover{background:#eef4fb}
+    .pic-fab button.hl:hover{background:#fff3b8;color:#7a5b00}
+    .pic-fab button svg{width:18px;height:18px;display:block}
+
+    /* Popover that appears when you click an existing highlight */
+    .pic-hl-pop{position:absolute;z-index:1600;background:#fff;
+                border:1px solid #cfd6df;border-radius:22px;
+                padding:3px;display:none;align-items:center;gap:2px;
+                box-shadow:0 3px 10px rgba(0,0,0,.24)}
+    .pic-hl-pop.show{display:inline-flex}
+    .pic-hl-pop button{background:none;border:none;cursor:pointer;
+                       width:32px;height:32px;border-radius:50%;
+                       display:flex;align-items:center;justify-content:center;
+                       color:#1F4E78;padding:0;font-size:.95rem;
+                       transition:background .12s}
+    .pic-hl-pop button:hover{background:#eef4fb}
+    .pic-hl-pop button.danger:hover{background:#fdecea;color:#c0392b}
 
     /* Comments rail — clone of /claude-reports/view comments-rail */
     .comments-rail{flex:0 0 auto;width:340px;min-width:240px;max-width:700px;
@@ -498,17 +519,46 @@ _VIEWER_TMPL = r"""<!doctype html>
     <div class="comments-rail hidden" id="picRail"></div>
   </div>
 
-  <button class="pic-fab" id="picFab" type="button" title="Add comment">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7
-               8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8
-               8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0
-               0 1 8 8v.5z"/>
-      <line x1="9" y1="11.5" x2="15" y2="11.5"/>
-      <line x1="12" y1="8.5" x2="12" y2="14.5"/>
-    </svg>
-  </button>
+  <div class="pic-fab" id="picFab" role="toolbar" aria-label="Annotate selection">
+    <button type="button" class="hl" id="picFabHighlight"
+            title="Highlight only (no comment)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14.5 4.5l5 5M3 21l4-1 11-11-4-4L3 16v5zM12.5 6.5l5 5"/>
+      </svg>
+    </button>
+    <button type="button" class="cm" id="picFabComment" title="Add comment">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7
+                 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8
+                 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0
+                 0 1 8 8v.5z"/>
+        <line x1="9" y1="11.5" x2="15" y2="11.5"/>
+        <line x1="12" y1="8.5" x2="12" y2="14.5"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Popover that appears when a saved highlight is clicked. -->
+  <div class="pic-hl-pop" id="picHlPop" role="toolbar" aria-label="Highlight actions">
+    <button type="button" class="cm" id="picHlPopComment" title="Add comment">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7
+                 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8
+                 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0
+                 0 1 8 8v.5z"/>
+      </svg>
+    </button>
+    <button type="button" class="danger" id="picHlPopDelete" title="Delete highlight">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="3 6 5 6 21 6"/>
+        <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+      </svg>
+    </button>
+  </div>
 
   <div id="toast" class="toast"></div>
 
@@ -573,6 +623,11 @@ _VIEWER_TMPL = r"""<!doctype html>
   const API_BASE = {{ _base|tojson }};
   const docEl   = document.getElementById('doc');
   const fab     = document.getElementById('picFab');
+  const fabHl   = document.getElementById('picFabHighlight');
+  const fabCm   = document.getElementById('picFabComment');
+  const hlPop   = document.getElementById('picHlPop');
+  const hlPopComment = document.getElementById('picHlPopComment');
+  const hlPopDelete  = document.getElementById('picHlPopDelete');
   const rail    = document.getElementById('picRail');
   const splitter = document.getElementById('railSplitter');
   const zoomVal  = document.getElementById('zoomVal');
@@ -952,34 +1007,100 @@ _VIEWER_TMPL = r"""<!doctype html>
     };
   }
 
-  // ── Floating "+" fab anchored at selection right-edge ────────────────
+  // ── Floating action toolbar anchored at selection right-edge ─────────
   function showFab(rect) {
-    fab.style.display = 'flex';
+    fab.classList.add('show');
     fab.style.top  = (window.scrollY + rect.top - 6) + 'px';
     fab.style.left = (window.scrollX + rect.right + 8) + 'px';
   }
-  function hideFab() { fab.style.display = 'none'; }
+  function hideFab() { fab.classList.remove('show'); }
+  function hideHlPop() { hlPop.classList.remove('show'); hlPop._cid = null; }
 
   document.addEventListener('mouseup', function(e) {
-    if (fab.contains(e.target)) return;
-    if (rail.contains(e.target)) return;
+    if (fab.contains(e.target))   return;
+    if (hlPop.contains(e.target)) return;
+    if (rail.contains(e.target))  return;
     setTimeout(() => {
       const info = getTextSelectionInfo();
       if (!info) { hideFab(); return; }
       pendingSel = { kind: 'text', ...info };
+      hideHlPop();
       showFab(info.rect);
     }, 0);
   });
   document.addEventListener('mousedown', function(e) {
-    if (fab.contains(e.target)) return;
-    if (rail.contains(e.target)) return;
+    if (fab.contains(e.target))   return;
+    if (hlPop.contains(e.target)) return;
+    if (rail.contains(e.target))  return;
+    // mousedown on an existing highlight is handled by the mark's own
+    // click listener (we don't hide the popover here so the click on the
+    // mark can show it cleanly).
+    if (e.target && e.target.classList && (e.target.classList.contains('pic-hl') ||
+                                            e.target.classList.contains('rect-hl'))) return;
     hideFab();
+    hideHlPop();
   });
-  fab.addEventListener('click', function() {
+
+  // 💬 fab → full comment editor (current behaviour)
+  fabCm.addEventListener('click', function(ev) {
+    ev.stopPropagation();
     if (!pendingSel) return;
     hideFab();
     editingId = null;
     openNewCommentCard(pendingSel);
+  });
+  // 🖍 fab → instant highlight save, no editor, no rail card
+  fabHl.addEventListener('click', async function(ev) {
+    ev.stopPropagation();
+    if (!pendingSel) return;
+    hideFab();
+    await saveHighlightOnly(pendingSel);
+    window.getSelection().removeAllRanges();
+    pendingSel = null;
+  });
+
+  async function saveHighlightOnly(info) {
+    try {
+      const persistedRect = (info.kind === 'region' && info.rect) ? info.rect : null;
+      await api('/pdf-inline-comments', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+          file_id: FILE_ID, page: info.page,
+          quote: info.quote || '', prefix: info.prefix || '', suffix: info.suffix || '',
+          rect: persistedRect, body: '',
+        }),
+      });
+      await loadAndRender();
+    } catch (e) { showToast('Highlight save failed: ' + e.message, 'error'); }
+  }
+
+  // Show the highlight popover at a mark's right edge.
+  function showHlPop(targetEl, cid) {
+    const r = targetEl.getBoundingClientRect();
+    hlPop.classList.add('show');
+    hlPop._cid = cid;
+    hlPop.style.top  = (window.scrollY + r.top - 6) + 'px';
+    hlPop.style.left = (window.scrollX + r.right + 8) + 'px';
+  }
+  hlPopDelete.addEventListener('click', async (ev) => {
+    ev.stopPropagation();
+    const cid = hlPop._cid; if (!cid) return;
+    hideHlPop();
+    try {
+      await api('/pdf-inline-comments/' + cid, { method: 'DELETE' });
+      await loadAndRender();
+    } catch (e) { showToast('Delete failed: ' + e.message, 'error'); }
+  });
+  hlPopComment.addEventListener('click', (ev) => {
+    ev.stopPropagation();
+    const cid = hlPop._cid; if (!cid) return;
+    hideHlPop();
+    const c = comments.find(x => x.id === cid);
+    if (!c) return;
+    // Open the rail editor pre-populated for THIS row. Save will PATCH the
+    // existing row (no new id), upgrading it from highlight to comment.
+    openEditCard(c);
   });
 
   // ── Region-drag selection (Shift+drag, or "Region mode" toggle) ─────
@@ -1064,6 +1185,7 @@ _VIEWER_TMPL = r"""<!doctype html>
     if (e.key === 'Shift' && !regionMode) {
       document.querySelectorAll('.pdf-page').forEach(d => d.classList.add('region-mode'));
     }
+    if (e.key === 'Escape') { hideFab(); hideHlPop(); }
   });
   document.addEventListener('keyup', (e) => {
     if (e.key === 'Shift' && !regionMode) {
@@ -1184,13 +1306,20 @@ _VIEWER_TMPL = r"""<!doctype html>
     for (const c of comments) {
       if (c.page !== pageNum) continue;
       let anchored = false;
+      const hasBody = !!(c.body && c.body.trim());
+      // A click on a body-bearing highlight activates its rail card; a
+      // body-less highlight has no rail card, so it pops a tiny [💬 🗑]
+      // toolbar instead.
+      const onClick = (m) => (ev) => {
+        ev.stopPropagation();
+        if (hasBody) setActive(c.id, false);
+        else         showHlPop(m, c.id);
+      };
       if (c.quote && c.quote.trim()) {
         const found = findInIndex(idx, c);
         if (found) {
           const marks = wrapRange(idx, found.start, found.end, c.id);
-          marks.forEach(m => m.addEventListener('click', (ev) => {
-            ev.stopPropagation(); setActive(c.id, false);
-          }));
+          marks.forEach(m => m.addEventListener('click', onClick(m)));
           anchored = true;
         }
       }
@@ -1203,10 +1332,8 @@ _VIEWER_TMPL = r"""<!doctype html>
         r.style.top    = (c.rect.y * scale) + 'px';
         r.style.width  = (c.rect.w * scale) + 'px';
         r.style.height = (c.rect.h * scale) + 'px';
-        r.title = c.quote || 'region comment';
-        r.addEventListener('click', (ev) => {
-          ev.stopPropagation(); setActive(c.id, false);
-        });
+        r.title = hasBody ? (c.quote || 'comment') : 'highlight';
+        r.addEventListener('click', onClick(r));
         div.appendChild(r);
         anchored = true;
       }
@@ -1520,9 +1647,8 @@ _VIEWER_TMPL = r"""<!doctype html>
   function openEditCard(c) {
     closeAnyEditor();
     editingId = c.id;
-    const existing = rail.querySelector('.pic-card[data-id="' + c.id + '"]');
-    if (!existing) return;
     setActive(c.id, false);
+    const existing = rail.querySelector('.pic-card[data-id="' + c.id + '"]');
     const card = buildEditorEl({
       id: c.id,
       page: c.page,
@@ -1546,8 +1672,16 @@ _VIEWER_TMPL = r"""<!doctype html>
         layoutCards();
       },
     });
-    card.style.top = existing.style.top;
-    existing.replaceWith(card);
+    if (existing) {
+      // Editing an existing comment-bearing card in place.
+      card.style.top = existing.style.top;
+      existing.replaceWith(card);
+    } else {
+      // Highlight → comment conversion: no rail card exists yet, append one.
+      rail.classList.remove('hidden');
+      if (splitter) splitter.classList.remove('hidden');
+      rail.appendChild(card);
+    }
     layoutCards();
     setTimeout(() => { card._textarea.focus(); }, 50);
   }
@@ -1625,6 +1759,9 @@ _VIEWER_TMPL = r"""<!doctype html>
     });
     for (const c of items) {
       if (c.id === editingId) continue;
+      // Highlight-only rows (empty body) have no rail card; the mark on
+      // the page IS the entire UI. Click the mark for [💬 add comment / 🗑 delete].
+      if (!c.body || !c.body.trim()) continue;
       const card = buildCardEl(c);
       rail.appendChild(card);
     }
