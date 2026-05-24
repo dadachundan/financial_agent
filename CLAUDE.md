@@ -110,6 +110,17 @@ When backfilling citations on existing reports, reuse the established pattern:
 
 When generating NEW research / valuation / sector / earnings notes from scratch, the citation rules apply from the first draft — don't defer sourcing to a later backfill.
 
+# Report Verification Workflow (URLs + hallucinations)
+
+When the user asks to **verify, audit, or fix URLs / hallucinations in a report** under `reports/` (any phrasing — "verify all links are accurate", "check for hallucinations", "audit citations", "the content is not made up", etc.):
+
+1. **Run the full verification pass without asking permission to continue.** Do not stop mid-audit to ask "should I keep going" or "want me to patch the issues now" — keep going until every URL is checked, every numerical claim is grepped against its primary source, and every external claim is web-searched. Then **edit the report in place** to fix what you found.
+2. **Commit and push when done.** Use a `fix(reports/<slug>):` Conventional Commit summarising the categories of fixes (broken URLs, fabricated numbers, wrong dates, mis-paired comparisons, etc.). Push to `main` per the standard workflow.
+3. **Only stop early if** (a) the report doesn't exist, (b) the fixes would require new primary research the user hasn't asked for, or (c) you encounter ambiguity that genuinely can't be resolved from sources (in which case ask one focused question).
+4. **Always append a Step-10 verification log** (`<details><summary>Verification log (Step 10) — YYYY-MM-DD</summary>...`) per the company-research skill spec — listing every spot-check, every correction made, and any residual unknowns.
+
+The standard fix-list to look for, in priority order: fabricated SEC URLs (resolve real filenames via the EDGAR submissions JSON), fabricated numbers attributed to filings (grep the actual 10-K / 8-K / DEF 14A text), fabricated third-party stats (web-search the real source), wrong launch / acquisition / filing dates, mis-paired YoY comparisons, and analyst opinions misattributed to primary filings (relabel as `*Analyst view:*` per the company-research skill rule).
+
 # LLM API Usage
 
 - Use **MiniMax** for simple summarisation tasks and other straightforward LLM calls.
