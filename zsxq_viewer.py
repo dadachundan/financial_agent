@@ -1520,17 +1520,29 @@ def feed():
         s = (s or "").strip().replace("\n", " ")
         return s if len(s) <= n else s[: n - 1].rstrip() + "…"
 
+    import re as _re_h
+    _HEADING_RE = _re_h.compile(r'^(#{1,5})(\s)', _re_h.MULTILINE)
+
+    def _demote_headings(text: str) -> str:
+        # Demote every markdown heading by one level so a body that starts
+        # with `##` nests under the annotation's own `##` heading (becoming
+        # `###`), `###` → `####`, etc. Capped at h6 by the {1,5} bound.
+        return _HEADING_RE.sub(r'#\1\2', text)
+
     def _format_annotation(ann: dict) -> str:
         page = ann.get("page") or 0
-        quote = _excerpt(ann.get("quote") or "", 140)
+        quote_full = (ann.get("quote") or "").strip().replace("\n", " ")
         body = (ann.get("body") or "").strip()
+        label = (quote_full[:40].rstrip() + "…") if len(quote_full) > 40 else quote_full
+        heading = f'## P{page} — “{label}”' if label else f"## P{page}"
+        parts: list[str] = [heading]
+        if quote_full:
+            parts.append(f"> {quote_full}")
         if body:
-            head = f"**p{page}**" + (f" — *“{quote}”*" if quote else "")
-            return f"{head}\n\n{body}"
-        # Highlight-only: show the quote as the content (no body to render).
-        if quote:
-            return f"**p{page}** — 🖍 *“{quote}”*"
-        return f"**p{page}** — 🖍 (region highlight)"
+            parts.append(_demote_headings(body))
+        if not quote_full and not body:
+            parts.append("🖍 *(region highlight)*")
+        return "\n\n".join(parts)
 
     rows: list[dict] = []
     for file_id, info in by_id.items():

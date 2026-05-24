@@ -39,18 +39,16 @@
   .toc-date    { font-size:.68rem; color:#bbb; display:block; margin-bottom:.1rem; }
 
   .feed-col  { flex:1; min-width:0; height:100%; display:flex; flex-direction:column; overflow:hidden; }
-  #feedContainer {
-    flex:1; overflow-y:scroll; scroll-snap-type:y mandatory;
-    padding-bottom:1rem;
-  }
-  #feedContainer::-webkit-scrollbar { width:6px; }
-  #feedContainer::-webkit-scrollbar-thumb { background:#ccc; border-radius:3px; }
+  #feedContainer { flex:1; overflow:hidden; min-height:0; padding-bottom:1rem; }
+  /* Obsidian-style: only the active card is shown, and the card itself is
+     the scroll container so the outline can scroll within it. */
   .feed-card { background:#fff; border-radius:12px; box-shadow:0 1px 4px rgba(0,0,0,.08);
-               margin-bottom:1rem; padding:1.5rem 1.75rem;
-               scroll-snap-align:start; scroll-snap-stop:always;
-               /* each card takes the full container height so only one shows at a time */
-               min-height:calc(100vh - 120px);
-               overflow-y:auto; box-sizing:border-box; }
+               padding:1.5rem 1.75rem;
+               height:100%; overflow-y:auto; box-sizing:border-box;
+               display:none; }
+  .feed-card.active { display:block; }
+  .feed-card::-webkit-scrollbar { width:6px; }
+  .feed-card::-webkit-scrollbar-thumb { background:#ccc; border-radius:3px; }
   .feed-card.pinned { border-left:3px solid #198754; }
   .feed-meta  { font-size:.8rem; color:#888; margin-bottom:.75rem; }
   .feed-title { font-size:1rem; font-weight:600; color:#1a56db; margin-bottom:.9rem;
@@ -69,7 +67,42 @@
   .feed-body code { background:#f0f0f0; padding:1px 4px; border-radius:3px; font-size:.88em; }
   .feed-body pre  { background:#f6f8fa; padding:.75em; border-radius:6px; overflow:auto; }
 
-  @media (max-width: 480px) { .toc-sidebar { display:none; } }
+  /* Anchor target id used by outline jumps. */
+  .feed-body h1, .feed-body h2, .feed-body h3, .feed-body h4 { scroll-margin-top:8px; }
+
+  /* Right-side outline panel — lists headings of the *active* card,
+     mirrors the look of the /obsidian/ outline. */
+  .outline-sidebar { width:220px; flex-shrink:0;
+                     height:100%; display:flex; flex-direction:column;
+                     transition:width .2s; overflow:hidden;
+                     background:#f5f5f5; border-left:1px solid #e0e0e0;
+                     border-radius:8px; padding:.75rem 0; box-sizing:border-box; }
+  .outline-sidebar.collapsed { width:32px; padding:.75rem 0; background:transparent; border-left:none; }
+  .outline-sidebar.collapsed .outline-search,
+  .outline-sidebar.collapsed .outline-list { display:none; }
+  .outline-sidebar.collapsed .outline-header span.outline-label { display:none; }
+  .outline-header { font-size:.7rem; font-weight:700; color:#999; letter-spacing:.08em;
+                    text-transform:uppercase; margin:0 .75rem .5rem;
+                    display:flex; align-items:center; justify-content:space-between; }
+  .outline-toggle { background:none; border:none; cursor:pointer; color:#aaa; font-size:.9rem;
+                    padding:0; line-height:1; flex-shrink:0; }
+  .outline-toggle:hover { color:#555; }
+  .outline-list   { overflow-y:auto; flex:1; padding-bottom:.5rem; }
+  .outline-item   { display:block; font-size:.75rem; color:#666;
+                    padding:.25rem .75rem; cursor:pointer; line-height:1.4;
+                    text-decoration:none; white-space:nowrap;
+                    overflow:hidden; text-overflow:ellipsis;
+                    border-left:2px solid transparent; }
+  .outline-item:hover  { color:#3f51b5; background:#e8eaf6; }
+  .outline-item.h1     { color:#3949ab; font-weight:600; }
+  .outline-item.h2     { padding-left:1.4rem; }
+  .outline-item.h3     { padding-left:2.1rem; font-size:.72rem; }
+  .outline-item.h4     { padding-left:2.8rem; font-size:.72rem; color:#888; }
+  .outline-item.active { border-color:#7986cb; color:#3f51b5; background:#e8eaf6; }
+  .outline-empty       { font-size:.72rem; color:#bbb; padding:.5rem .75rem; font-style:italic; }
+
+  @media (max-width: 760px) { .outline-sidebar { display:none; } }
+  @media (max-width: 480px) { .toc-sidebar     { display:none; } }
 </style>
 </head>
 <body>
@@ -124,6 +157,16 @@ __URLPATCH__
     </div>
   </div>
 
+  <nav class="outline-sidebar" id="outlineSidebar">
+    <div class="outline-header">
+      <span class="outline-label">Outline</span>
+      <button class="outline-toggle" id="outlineToggle" title="Collapse outline">›</button>
+    </div>
+    <div class="outline-list" id="outlineList">
+      <div class="outline-empty">No headings</div>
+    </div>
+  </nav>
+
 </div>
 
 <script src="/static/vendor/bootstrap.bundle.min.js"></script>
@@ -147,26 +190,86 @@ document.querySelectorAll('.feed-body').forEach(el => {
   el.innerHTML = marked.parse(el.dataset.md || '');
 });
 
+const cards    = Array.from(document.querySelectorAll('.feed-card'));
+const tocItems = Array.from(document.querySelectorAll('.toc-item'));
+
+// Outline panel — populated from the active card's headings.
+const outlineSidebar = document.getElementById('outlineSidebar');
+const outlineToggle  = document.getElementById('outlineToggle');
+const outlineList    = document.getElementById('outlineList');
+let _activeCard      = null;
+let _outlineScrollHandler = null;
+
+if (localStorage.getItem('feedOutlineCollapsed') === '1') {
+  outlineSidebar.classList.add('collapsed');
+  outlineToggle.textContent = '‹';
+}
+outlineToggle.addEventListener('click', () => {
+  const collapsed = outlineSidebar.classList.toggle('collapsed');
+  outlineToggle.textContent = collapsed ? '‹' : '›';
+  localStorage.setItem('feedOutlineCollapsed', collapsed ? '1' : '0');
+});
+
+function buildOutlineFor(card) {
+  if (!card) return;
+  if (_activeCard && _outlineScrollHandler) {
+    _activeCard.removeEventListener('scroll', _outlineScrollHandler);
+  }
+  _activeCard = card;
+
+  const body = card.querySelector('.feed-body');
+  const headings = body ? Array.from(body.querySelectorAll('h1, h2, h3, h4')) : [];
+
+  outlineList.innerHTML = '';
+  if (!headings.length) {
+    outlineList.innerHTML = '<div class="outline-empty">No headings</div>';
+    return;
+  }
+  headings.forEach((h, i) => {
+    if (!h.id) h.id = 'h-' + card.id + '-' + i;
+    const a = document.createElement('a');
+    a.className = 'outline-item ' + h.tagName.toLowerCase();
+    a.textContent = h.textContent;
+    a.href = '#';
+    a.title = h.textContent;
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const headingTop = h.getBoundingClientRect().top
+                       - card.getBoundingClientRect().top
+                       + card.scrollTop;
+      card.scrollTo({ top: headingTop - 8, behavior: 'smooth' });
+    });
+    outlineList.appendChild(a);
+  });
+
+  const _topOf = h => h.getBoundingClientRect().top
+                    - card.getBoundingClientRect().top
+                    + card.scrollTop;
+  _outlineScrollHandler = () => {
+    const top = card.scrollTop + 16;
+    let activeIdx = 0;
+    headings.forEach((h, i) => { if (_topOf(h) <= top) activeIdx = i; });
+    Array.from(outlineList.children).forEach((el, i) => {
+      el.classList.toggle('active', i === activeIdx);
+    });
+  };
+  card.addEventListener('scroll', _outlineScrollHandler, { passive: true });
+  _outlineScrollHandler();
+}
+
 function scrollToCard(idx) {
-  const card = document.getElementById('card-' + idx);
-  const container = document.getElementById('feedContainer');
-  if (card && container) {
-    container.scrollTo({ top: card.offsetTop, behavior: 'smooth' });
+  // Single-card view: hide all cards, activate the chosen one, rebuild outline.
+  cards.forEach((c, i) => c.classList.toggle('active', i === idx));
+  tocItems.forEach((t, i) => t.classList.toggle('active', i === idx));
+  const card = cards[idx];
+  if (card) {
+    card.scrollTop = 0;
+    buildOutlineFor(card);
   }
 }
 
-const cards    = Array.from(document.querySelectorAll('.feed-card'));
-const tocItems = Array.from(document.querySelectorAll('.toc-item'));
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const idx = cards.indexOf(e.target);
-      tocItems.forEach((t, i) => t.classList.toggle('active', i === idx));
-      if (tocItems[idx]) tocItems[idx].scrollIntoView({ block: 'nearest' });
-    }
-  });
-}, { threshold: 0.15 });
-cards.forEach(c => observer.observe(c));
+// Activate the first card on initial load.
+if (cards[0]) scrollToCard(0);
 
 function openLocal(el) {
   const url = el.dataset.open;
