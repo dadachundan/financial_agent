@@ -147,29 +147,14 @@ __URLPATCH__
     <div class="d-flex filter-row">
       <span class="filter-label">Search:</span>
       <input id="searchBox" type="text" class="form-control form-control-sm"
-             placeholder="Search name / title / ticker / tag…"
-             style="max-width:280px" value="{{ current_q }}"
+             placeholder="Search name / title / ticker / tag / file id…"
+             style="max-width:320px" value="{{ current_q }}"
              onkeydown="if(event.key==='Enter'){applySearch(this.value)}">
       <button class="btn btn-sm btn-outline-secondary" onclick="applySearch(document.getElementById('searchBox').value)">Apply</button>
       {% if current_q %}
       <a href="#" onclick="applySearch('');return false" class="btn btn-sm btn-link text-muted p-0 ms-1">✕</a>
       {% endif %}
       <span id="matchCount" class="text-muted small align-self-center ms-1"></span>
-    </div>
-
-    <!-- File ID filter row -->
-    <div class="d-flex filter-row">
-      <span class="filter-label">File ID:</span>
-      <input id="fileIdBox" type="text" class="form-control form-control-sm"
-             placeholder="e.g. 184124452551222"
-             style="max-width:260px" value="{{ current_file_id }}"
-             onkeydown="if(event.key==='Enter'){applyFileId(this.value)}">
-      <button class="btn btn-sm btn-outline-secondary"
-              onclick="applyFileId(document.getElementById('fileIdBox').value)">Apply</button>
-      {% if current_file_id %}
-      <a href="#" onclick="applyFileId('');return false"
-         class="btn btn-sm btn-link text-muted p-0 ms-1">✕ clear</a>
-      {% endif %}
     </div>
 
     <!-- Group filter row -->
@@ -308,7 +293,7 @@ __URLPATCH__
                            or row.semiconductor_related == 1 or row.energy_related == 1) %}
         {%- set unclassed = (row.ai_related is none) %}
         <tr class="{{ 'row-match' if any_cat else ('row-unclassed' if unclassed else 'row-no-match') }}"
-            data-search="{{ (row.name ~ ' ' ~ (row.topic_title or '') ~ ' ' ~ (row.tickers or '') ~ ' ' ~ (row.tags or '') ~ ' ' ~ (row.comment or ''))|lower }}">
+            data-search="{{ (row.name ~ ' ' ~ (row.topic_title or '') ~ ' ' ~ (row.tickers or '') ~ ' ' ~ (row.tags or '') ~ ' ' ~ (row.comment or '') ~ ' ' ~ (row.file_id|string))|lower }}">
           <td class="text-muted">{{ idx }}</td>
           <td class="text-nowrap">{{ (row.create_time or '')[:16].replace('T', ' ') }}</td>
           <td class="name-col">{{ row.name }}</td>
@@ -745,14 +730,6 @@ __MCW_FOOTER__
     window.location.href = '?' + params.toString();
   }
 
-  function applyFileId(fid) {
-    const params = new URLSearchParams(window.location.search);
-    params.delete('page');
-    const v = (fid || '').trim();
-    if (v) { params.set('file_id', v); } else { params.delete('file_id'); }
-    window.location.href = '?' + params.toString();
-  }
-
   function editTags(fileId, btn) {
     const wrapper = btn.closest('[data-tags]');
     const cell    = btn.closest('td');
@@ -954,8 +931,7 @@ def _build_where(f: str, ticker: str, tag: str,
                  min_claude_rating: int = 0,
                  unrated: bool = False,
                  bank: str = "",
-                 with_comment: bool = False,
-                 file_id: str = "") -> tuple[str, list]:
+                 with_comment: bool = False) -> tuple[str, list]:
     """Build WHERE clause + params from filter args (shared by index and print-view)."""
     conditions: list[str] = []
     params: list = []
@@ -991,9 +967,10 @@ def _build_where(f: str, ticker: str, tag: str,
     if q:
         like = f"%{q}%"
         conditions.append(
-            "(name LIKE ? OR topic_title LIKE ? OR tickers LIKE ? OR tags LIKE ? OR comment LIKE ?)"
+            "(name LIKE ? OR topic_title LIKE ? OR tickers LIKE ? OR tags LIKE ? "
+            "OR comment LIKE ? OR CAST(file_id AS TEXT) LIKE ?)"
         )
-        params.extend([like, like, like, like, like])
+        params.extend([like, like, like, like, like, like])
     if group_id:
         conditions.append("group_id = ?")
         params.append(group_id)
@@ -1007,14 +984,6 @@ def _build_where(f: str, ticker: str, tag: str,
         params.append(bank)
     if with_comment:
         conditions.append("comment IS NOT NULL AND comment != ''")
-    if file_id:
-        fid = file_id.strip()
-        if fid.isdigit():
-            conditions.append("file_id = ?")
-            params.append(int(fid))
-        else:
-            conditions.append("CAST(file_id AS TEXT) LIKE ?")
-            params.append(f"%{fid}%")
     where = ("WHERE " + " AND ".join(conditions)) if conditions else ""
     return where, params
 
@@ -1200,7 +1169,10 @@ def index():
         min_rating = 0
     bank = request.args.get("bank", "").strip()
     q = request.args.get("q", "").strip()
-    file_id = request.args.get("file_id", "").strip()
+    # Back-compat: legacy ?file_id=… URLs fold into the unified search box.
+    legacy_file_id = request.args.get("file_id", "").strip()
+    if legacy_file_id and not q:
+        q = legacy_file_id
     with_comment = request.args.get("with_comment") == "1"
     try:
         page = max(1, int(request.args.get("page", 1)))
@@ -1233,7 +1205,7 @@ def index():
         "FROM pdf_files"
     ).fetchone()
 
-    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id, min_claude_rating, unrated, bank, with_comment, file_id)
+    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id, min_claude_rating, unrated, bank, with_comment)
     order      = "ASC" if sort == "asc" else "DESC"
     order_col  = "page_count" if sort_by == "pages" else "create_time"
     # NULLs last for page_count sort
@@ -1286,7 +1258,6 @@ def index():
         all_group_ids=all_group_ids,
         all_banks=all_banks,
         current_bank=bank,
-        current_file_id=file_id,
         with_comment=with_comment,
         flomo_enabled=bool(_FLOMO_WEBHOOK_URL),
         db_path=DB_PATH,
@@ -1544,20 +1515,52 @@ def feed():
             parts.append("🖍 *(region highlight)*")
         return "\n\n".join(parts)
 
+    def _interleave_by_page(legacy: str, anns: list[dict]) -> str:
+        """Merge legacy `## P{n}` sections with inline annotations in page order.
+
+        Inline annotations for page N appear immediately after the legacy
+        section for page N, so the reader sees everything about P4 together
+        before moving to P6, P7, etc.
+        """
+        legacy = (legacy or "").strip()
+        sect_re = _re_h.compile(r'(?=^##\s+P\d+\b)', _re_h.MULTILINE)
+        parts = sect_re.split(legacy) if legacy else []
+        header_blob = (parts[0].strip() if parts else "")
+        legacy_sections: dict[int, list[str]] = {}
+        for section in parts[1:]:
+            m = _re_h.match(r'##\s+P(\d+)\b', section)
+            if m:
+                legacy_sections.setdefault(int(m.group(1)), []).append(section.rstrip())
+
+        inline_by_page: dict[int, list[dict]] = {}
+        for a in anns:
+            inline_by_page.setdefault(a.get("page") or 0, []).append(a)
+
+        all_pages = sorted(set(legacy_sections) | set(inline_by_page))
+        out: list[str] = []
+        if header_blob:
+            out.append(header_blob)
+        for page in all_pages:
+            for sec in legacy_sections.get(page, []):
+                out.append(sec)
+            for ann in inline_by_page.get(page, []):
+                out.append(_format_annotation(ann))
+        return "\n\n".join(out).strip()
+
     rows: list[dict] = []
     for file_id, info in by_id.items():
         annotations = inline_by_file.get(file_id, [])
         annotations.sort(key=lambda a: (a.get("page") or 0, a.get("id") or 0))
 
-        parts: list[str] = []
         legacy_body = (info.get("comment") or "").strip()
-        if legacy_body:
-            parts.append(f"**Overview** *(whole-PDF note)*\n\n{legacy_body}")
-        for ann in annotations:
-            parts.append(_format_annotation(ann))
-        if not parts:
+        if legacy_body and annotations:
+            combined = _interleave_by_page(legacy_body, annotations)
+        elif legacy_body:
+            combined = legacy_body
+        elif annotations:
+            combined = "\n\n".join(_format_annotation(a) for a in annotations)
+        else:
             continue
-        combined = "\n\n---\n\n".join(parts)
 
         # Card date = newest of legacy + inline timestamps so the most
         # recently annotated PDFs rise to the top.
