@@ -135,55 +135,24 @@ __URLPATCH__
        class="btn btn-sm btn-outline-primary ms-2">📓 ZSXQ Notes</a>
   </div>
 
-  <!-- Status filters -->
+  {#-- URL-fragment helpers used by the rating / bank / claude / comment / sort
+       links below. Originally lived inside the Status row; that row was
+       removed but other rows still depend on these variables. --#}
+  {%- set sp   = ('&sort=' ~ current_sort if current_sort != 'desc' else '') ~ ('&sort_by=' ~ current_sort_by if current_sort_by != 'date' else '') %}
+  {%- set tp   = ('&ticker=' ~ current_ticker) if current_ticker else '' %}
+  {%- set tagp = ('&tag='    ~ current_tag)    if current_tag    else '' %}
+  {%- set dp   = ('&date_from=' ~ current_date_from if current_date_from else '') ~ ('&date_to=' ~ current_date_to if current_date_to else '') %}
+  {%- set rp   = ('&min_rating=' ~ current_min_rating) if current_min_rating else '' %}
+  {%- set crp  = ('&min_claude_rating=' ~ current_min_claude_rating) if current_min_claude_rating else '' %}
+  {%- set qp   = ('&q=' ~ current_q) if current_q else '' %}
+  {%- set bp   = ('&bank=' ~ current_bank) if current_bank else '' %}
+  {%- set cwp  = '&with_comment=1' if with_comment else '' %}
+
   <div class="filter-section">
+    <!-- Search row -->
     <div class="d-flex filter-row">
-      <span class="filter-label">Status:</span>
-      {%- set sp   = ('&sort=' ~ current_sort if current_sort != 'desc' else '') ~ ('&sort_by=' ~ current_sort_by if current_sort_by != 'date' else '') %}
-      {%- set tp   = ('&ticker=' ~ current_ticker) if current_ticker else '' %}
-      {%- set tagp = ('&tag='    ~ current_tag)    if current_tag    else '' %}
-      {%- set dp   = ('&date_from=' ~ current_date_from if current_date_from else '') ~ ('&date_to=' ~ current_date_to if current_date_to else '') %}
-      {%- set rp   = ('&min_rating=' ~ current_min_rating) if current_min_rating else '' %}
-      {%- set crp  = ('&min_claude_rating=' ~ current_min_claude_rating) if current_min_claude_rating else '' %}
-      {%- set qp   = ('&q=' ~ current_q) if current_q else '' %}
-      {%- set bp   = ('&bank=' ~ current_bank) if current_bank else '' %}
-      {%- set cwp  = '&with_comment=1' if with_comment else '' %}
-    <a href="?filter=all{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
-         class="btn btn-sm {{ 'btn-dark' if current_filter=='all' else 'btn-outline-dark' }}">All ({{ stats.total }})</a>
-      <a href="?filter=downloaded{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
-         class="btn btn-sm {{ 'btn-primary' if current_filter=='downloaded' else 'btn-outline-primary' }}">Downloaded ({{ stats.downloaded }})</a>
-      <a href="?filter=unclassified{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
-         class="btn btn-sm {{ 'btn-warning text-dark' if current_filter=='unclassified' else 'btn-outline-warning' }}">Unclassified ({{ stats.unclassified }})</a>
-    </div>
-
-    <!-- Category filters -->
-    <div class="d-flex filter-row">
-      <span class="filter-label">Category:</span>
-      <a href="?filter=cat_ai{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
-         class="btn btn-sm {{ 'btn-success' if current_filter=='cat_ai' else 'btn-outline-success' }}">🤖 AI ({{ stats.cat_ai }})</a>
-      <a href="?filter=cat_robotics{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
-         class="btn btn-sm {{ 'btn-info' if current_filter=='cat_robotics' else 'btn-outline-info' }}">🦾 Robotics ({{ stats.cat_robotics }})</a>
-      <a href="?filter=cat_semi{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
-         class="btn btn-sm {{ 'btn-secondary' if current_filter=='cat_semi' else 'btn-outline-secondary' }}">💡 Semiconductor ({{ stats.cat_semi }})</a>
-      <a href="?filter=cat_energy{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
-         class="btn btn-sm {{ 'btn-warning text-dark' if current_filter=='cat_energy' else 'btn-outline-warning' }}">⚡ Energy ({{ stats.cat_energy }})</a>
-      <a href="?filter=cat_any{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
-         class="btn btn-sm {{ 'btn-dark' if current_filter=='cat_any' else 'btn-outline-dark' }}">Any category ({{ stats.cat_any }})</a>
-      <a href="?filter=cat_none{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
-         class="btn btn-sm {{ 'btn-light border' if current_filter=='cat_none' else 'btn-outline-secondary' }}">None ({{ stats.cat_none }})</a>
-    </div>
-
-    <!-- Ticker + Search row -->
-    <div class="d-flex filter-row">
-      <span class="filter-label">Ticker:</span>
-      <select id="tickerSelect" class="form-select form-select-sm" style="max-width:200px"
-              onchange="applyTicker(this.value)">
-        <option value="">All tickers</option>
-        {% for t in all_tickers %}
-        <option value="{{ t }}" {{ 'selected' if t == current_ticker else '' }}>{{ t }}</option>
-        {% endfor %}
-      </select>
-      <input id="searchBox" type="text" class="form-control form-control-sm ms-2"
+      <span class="filter-label">Search:</span>
+      <input id="searchBox" type="text" class="form-control form-control-sm"
              placeholder="Search name / title / ticker / tag…"
              style="max-width:280px" value="{{ current_q }}"
              onkeydown="if(event.key==='Enter'){applySearch(this.value)}">
@@ -192,22 +161,6 @@ __URLPATCH__
       <a href="#" onclick="applySearch('');return false" class="btn btn-sm btn-link text-muted p-0 ms-1">✕</a>
       {% endif %}
       <span id="matchCount" class="text-muted small align-self-center ms-1"></span>
-    </div>
-
-    <!-- Tag filter row -->
-    <div class="d-flex filter-row">
-      <span class="filter-label">Tag:</span>
-      <select id="tagSelect" class="form-select form-select-sm" style="max-width:200px"
-              onchange="applyTag(this.value)">
-        <option value="">All tags</option>
-        {% for t in all_tags %}
-        <option value="{{ t }}" {{ 'selected' if t == current_tag else '' }}>{{ t }}</option>
-        {% endfor %}
-      </select>
-      {% if current_tag %}
-      <a href="#" onclick="applyTag('');return false"
-         class="btn btn-sm btn-link text-muted p-0">✕ clear</a>
-      {% endif %}
     </div>
 
     <!-- File ID filter row -->
