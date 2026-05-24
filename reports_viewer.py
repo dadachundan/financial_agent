@@ -11,6 +11,7 @@ marked.js + mermaid.js. Filesystem layout:
       sector/<file>.md              — sector / thematic
       compare/<file>.md             — head-to-head
       earnings/<file>.md            — earnings notes
+      explanation/<file>.md         — one-off explainers / primers / glossaries
       other/<file>.md               — anything that didn't classify
 """
 from __future__ import annotations
@@ -79,6 +80,13 @@ _MARKER_TO_LABEL = {
 }
 _MARKER_RE = re.compile(r"_(" + "|".join(re.escape(k) for k in _MARKER_TO_LABEL) + r")")
 
+# Bucket-folder overrides for the TYPE column label. Use this when the
+# bucket name itself should display as an uppercase canonical label
+# (the default for any unmapped bucket is the bucket name verbatim).
+_BUCKET_LABELS = {
+    "explanation": "EXPLANATION",
+}
+
 
 def _derive_type_label(stem: str, bucket: str) -> str:
     """Label shown in the TYPE column. Priority:
@@ -87,14 +95,15 @@ def _derive_type_label(stem: str, bucket: str) -> str:
     2. Report-kind marker in filename (_Valuation_Analysis → Valuation_Analysis).
        Strips the company / ticker prefix so e.g. Hesai_NASDAQ_HSAI_Valuation_Analysis
        and AMD_Valuation_Analysis both show as just "Valuation_Analysis".
-    3. Bucket name (company / sector / compare / earnings / other / unlisted).
+    3. Bucket label override (explanation → EXPLANATION).
+    4. Bucket name (company / sector / compare / earnings / other / unlisted).
     """
     if stem in ANALYST_TYPE_LABELS:
         return ANALYST_TYPE_LABELS[stem]
     m = _MARKER_RE.search(stem)
     if m:
         return _MARKER_TO_LABEL[m.group(1)]
-    return bucket
+    return _BUCKET_LABELS.get(bucket, bucket)
 
 
 def _derive_kind(stem: str, bucket: str) -> str:
@@ -395,6 +404,7 @@ __MCW_CSS__
     .bucket-tag.sector{background:#fef5e6;border-color:#f0d8a6;color:#7a5118}
     .bucket-tag.compare{background:#f3eaf7;border-color:#dac3ea;color:#5a2a85}
     .bucket-tag.earnings{background:#eaf2fb;border-color:#c4d8ef;color:#1d4a85}
+    .bucket-tag.explanation{background:#e6f4f1;border-color:#b8dcd3;color:#1e6e5e}
     .sector-pill{display:inline-block;font-size:.74rem;padding:.08rem .5rem;border-radius:10px;
          background:#f1f3f7;color:#3a4a5e;border:1px solid #dadfe6;white-space:nowrap}
     .ticker{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.83rem;color:#444;

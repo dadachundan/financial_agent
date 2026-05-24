@@ -32,6 +32,15 @@ After adding or modifying any UI feature — especially new buttons, modals, or 
 5. Do not consider UI work done until you have a screenshot or eval result proving each new interaction works.
 6. **Always stop the server (`preview_stop` + `lsof -ti :5002 | xargs kill -9`) the moment testing is finished.** Never leave a test server running.
 
+# One-off Explanations / Primers / Glossaries
+
+When the user asks for a one-off explanation, primer, glossary, or technical-term reference (anything that explains *concepts* rather than analyzing a company, sector, comparison, or earnings release), save it as a markdown file under `reports/explanation/`. This makes the doc visible on the `http://localhost:5001/claude-reports/` viewer under the **EXPLANATION** type (defined in `reports_viewer.py` via `_BUCKET_LABELS`).
+
+- Path: `reports/explanation/<descriptive_slug>.md` — kebab-case or snake_case; include the topic + source in the slug (e.g. `glossary_nomura_greater_china_semi_2026-30F.md`, `explainer_backside_power_delivery.md`).
+- TYPE column shows `EXPLANATION` (teal pill). Filterable via the report-type dropdown.
+- Don't create a sub-folder per explanation — keep the directory flat.
+- Always commit the file in the same task it was created (Conventional Commits, e.g. `docs(explanation): …`).
+
 # Editable Table Columns
 
 When the user asks to make a field in a table editable, always use the `md_comment_widget.py` pattern:
