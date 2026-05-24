@@ -25,19 +25,25 @@ After completing a task and verifying that it works (by running tests or the app
 
 # Database Safety (MANDATORY — non-negotiable, zero exceptions)
 
-**Any path that starts with `db/` is the user's real, irreplaceable data. Treat it as read-only from Claude's hands.**
+**Every `*.db` file inside this project is the user's real, irreplaceable data. Treat all of them as read-only from Claude's hands.**
 
 This has gone wrong more than once. Past failures include (at least): wiping `pdf_inline_comments` to clear "test data" and taking real comments along with it; clearing `notes.db` rows during another session. The rule below exists to make the failure mode mechanically impossible, not to remind future-Claude to be careful.
 
+## What's covered
+
+**ALL `*.db` files in the project**, no matter where they live. This includes — but is not limited to — files under `db/` (`db/notes.db`, `db/zsxq.db`, `db/financial_reports.db`, `db/cninfo_reports.db`, `db/report_annotations.db`, `db/market_cap_cache.db`, `db/indicators.db`, `db/markdown_reports.db`, `db/knowledge_graph.db`, `db/graph_mirror.db`), files at the project root (`zsxq.db`, `knowledge_graph.db`, `graph_mirror.db`), files in subdirectories (`youtube/video_summaries.db`, anywhere else), and any new database file that appears in the future without an explicit `.test.db` / `.sandbox.db` suffix.
+
+If a path matches `*.db` and is not under `/tmp/` and doesn't end in `.test.db` / `.sandbox.db`, **it is real user data.**
+
 ## The rule
 
-Against any file matching `db/**.db` (zsxq.db, notes.db, financial_reports.db, cninfo_reports.db, report_annotations.db, market_caps.db, fx_rates.db, knowledge_graph.db, anything else):
+Against any of those files:
 
 - `DELETE`, `DROP`, `TRUNCATE`, `UPDATE`, `INSERT`, `ALTER`, `REPLACE`, `VACUUM` — **forbidden**, full stop. No "but I just inserted that row" carve-out. No "but it's clearly test data" carve-out. No `WHERE id = N` carve-out. No.
-- `cp db/*.db …`, `mv db/*.db …`, `rm db/*.db`, `> db/*.db`, redirecting any process output onto a file in `db/` — **forbidden**.
+- `cp <db> …` overwriting another real db, `mv <db> …`, `rm <db>`, `> <db>` redirecting any process output onto a real db — **forbidden**.
 - Schema migrations (`ALTER TABLE`, `CREATE TABLE`) are forbidden too. If a new column is needed, write a one-shot migration script, have the user run it themselves, and `git status` afterwards to confirm exactly one file changed.
 
-The only thing Claude is allowed to do against `db/**` is read: `SELECT`, `.schema`, `.tables`, `PRAGMA table_info(...)`, `sqlite3 db.db ".dump table | head"`. That's it.
+The only thing Claude is allowed to do against a real `*.db` is read: `SELECT`, `.schema`, `.tables`, `PRAGMA table_info(...)`, `sqlite3 path.db ".dump table | head"`, copying TO `/tmp/` (`cp db/notes.db /tmp/notes.test.db` is fine — the source is read-only-ish, the destination is a sandbox path).
 
 ## How to actually test code that writes to a DB
 
@@ -47,11 +53,11 @@ There is exactly one approved pattern. Everything else is a violation.
    ```bash
    cp db/notes.db /tmp/notes.test.db    # one-time per test session
    # then either:
-   #   (a) symlink: rm db/notes.db && ln -s /tmp/notes.test.db db/notes.db    ← still forbidden, the link is in db/
-   #   (b) env var: PIC_DB_PATH=/tmp/notes.test.db python main.py --port 5002
-   #   (c) edit a single LOCAL line of pdf_inline_comments.py:
+   #   (a) env var, if the module supports DB_PATH override:
+   #         PIC_DB_PATH=/tmp/notes.test.db python main.py --port 5002
+   #   (b) edit a single LOCAL line of pdf_inline_comments.py:
    #         DB_PATH = Path("/tmp/notes.test.db")
-   #       then revert the line via `git checkout pdf_inline_comments.py` BEFORE committing
+   #       then revert via `git checkout pdf_inline_comments.py` BEFORE committing
    ```
 2. Run all test inserts / deletes against `/tmp/notes.test.db`. `DELETE FROM pdf_inline_comments;` is fine there — that file is yours.
 3. When testing is done: `rm /tmp/notes.test.db`. `git diff` to confirm no source file points at /tmp anymore. The real `db/notes.db` was never touched.
@@ -66,7 +72,7 @@ Before running any `sqlite3` / `psql` / Python script that opens a DB, the liter
 path.startswith("/tmp/")  or  path.endswith(".test.db")  or  path.endswith(".sandbox.db")
 ```
 
-If it doesn't — stop, no exceptions. Ask the user. Even reading from the real DB to "check the schema" is fine, but the moment the command could write, the path check is the gate.
+If it doesn't, the command is permitted ONLY if its read-only nature is obvious at a glance — `SELECT …`, `.schema`, `PRAGMA …`, `.tables`, or piping `.dump` to `head`. Anything else — even something that "should be" a SELECT — stop and ask. The path check is the gate; it's stricter than "is this destructive?" because intent doesn't survive a typo.
 
 # UI Verification (MANDATORY)
 
