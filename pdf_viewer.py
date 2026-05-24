@@ -724,9 +724,13 @@ _VIEWER_TMPL = r"""<!doctype html>
       return;
     }
     const vp = page.getViewport({ scale });
+    // Render at device-pixel resolution (Retina = 2x) so canvas is crisp;
+    // CSS width stays at viewport.width so layout doesn't change. PDF.js v4
+    // applies the dpr factor via the `transform` arg on render().
+    const dpr = window.devicePixelRatio || 1;
     const canvas = document.createElement('canvas');
-    canvas.width  = Math.floor(vp.width);
-    canvas.height = Math.floor(vp.height);
+    canvas.width  = Math.floor(vp.width  * dpr);
+    canvas.height = Math.floor(vp.height * dpr);
     canvas.style.width  = vp.width  + 'px';
     canvas.style.height = vp.height + 'px';
     const ctx = canvas.getContext('2d');
@@ -746,8 +750,11 @@ _VIEWER_TMPL = r"""<!doctype html>
     div.appendChild(overlay);
     wireRegionOverlay(div, overlay, pageNum);
 
+    const renderTransform = dpr !== 1 ? [dpr, 0, 0, dpr, 0, 0] : null;
     try {
-      await page.render({ canvasContext: ctx, viewport: vp, canvas }).promise;
+      await page.render({
+        canvasContext: ctx, viewport: vp, canvas, transform: renderTransform,
+      }).promise;
     } catch (e) {
       console.error('canvas render failed', pageNum, e);
       pageRendered[idx] = false;
