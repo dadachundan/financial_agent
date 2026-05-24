@@ -122,11 +122,10 @@ __URLPATCH__
   <h2 class="mb-1">📄 zsxq PDF Index</h2>
   <p class="text-muted mb-2" style="font-size:.85rem">DB: {{ db_path }}</p>
 
-  <!-- Top toolbar (only useful action left) -->
-  <div class="d-flex mb-2">
-    <a href="{{ _base | default('') }}/feed" target="_blank"
-       class="btn btn-sm btn-outline-primary">📓 ZSXQ Notes</a>
-  </div>
+  {#-- Top toolbar removed — Total/Downloaded/Unclassified/AI/Robotics/Semi/
+       Energy badges were vestigial after the Status + Category filter rows
+       were dropped, and the 📓 ZSXQ Notes link is already in the side nav
+       (see nav_widget2.NAV_HTML). --#}
 
   {#-- URL-fragment helpers used by the rating / bank / claude / comment / sort
        links below. Originally lived inside the Status row; that row was
