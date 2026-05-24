@@ -32,6 +32,7 @@ import nav_widget2 as nw2
 from zsxq_viewer import (
     _extract_annotations_from_pdf,
     _format_annotations,
+    _prune_orphan_images,
 )
 
 from db_paths import db_path, db_dir
@@ -1222,7 +1223,7 @@ def sync_annotations(note_id: int):
     import time as _time
     import concurrent.futures as _cf
     conn = get_conn()
-    row = conn.execute("SELECT local_path, name FROM notes WHERE id=?", (note_id,)).fetchone()
+    row = conn.execute("SELECT local_path, name, comment FROM notes WHERE id=?", (note_id,)).fetchone()
     conn.close()
     if not row or not row["local_path"]:
         return jsonify(ok=False, error="No local file"), 404
@@ -1248,6 +1249,7 @@ def sync_annotations(note_id: int):
 
     print(f"                   ✓ {len(anns)} annotation(s) in {elapsed:.1f}s")
     comment = _format_annotations(anns)
+    _prune_orphan_images(row["comment"] or "", comment)
     now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     conn = get_conn()
     conn.execute("UPDATE notes SET comment=?, comment_updated_at=? WHERE id=?",

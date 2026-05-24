@@ -1938,6 +1938,41 @@ def _format_annotations(anns: list[dict]) -> str:
     return "\n".join(lines)
 
 
+_UPLOAD_URL_RE = __import__("re").compile(r"/uploads/([\w/.\-]+\.png)")
+
+
+def _prune_orphan_images(old_md: str, new_md: str) -> int:
+    """Delete /uploads/*.png files referenced by ``old_md`` but not ``new_md``.
+
+    Returns the number of files actually unlinked. Refuses to touch anything
+    that resolves outside ``UPLOADS_DIR`` — the relative_to() check is the
+    only thing standing between a bad regex match and rm'ing arbitrary files.
+    """
+    old = set(_UPLOAD_URL_RE.findall(old_md or ""))
+    new = set(_UPLOAD_URL_RE.findall(new_md or ""))
+    orphans = old - new
+    if not orphans:
+        return 0
+    uploads_root = UPLOADS_DIR.resolve()
+    deleted = 0
+    for tail in orphans:
+        p = (UPLOADS_DIR / tail).resolve()
+        try:
+            p.relative_to(uploads_root)
+        except ValueError:
+            print(f"                   ⚠ refusing to delete outside uploads: {p}")
+            continue
+        if p.suffix.lower() != ".png" or not p.exists():
+            continue
+        try:
+            p.unlink()
+            deleted += 1
+            print(f"                   🗑 pruned orphan: {tail}")
+        except Exception as exc:
+            print(f"                   ⚠ could not delete {p}: {exc}")
+    return deleted
+
+
 @zsxq_bp.route("/sync-annotations/<int:file_id>", methods=["POST"])
 def sync_annotations(file_id: int):
     """Read PDF annotations from disk and save them to the comment field."""
@@ -1945,7 +1980,7 @@ def sync_annotations(file_id: int):
     import concurrent.futures as _cf
     conn = get_conn()
     row = conn.execute(
-        "SELECT local_path, name FROM pdf_files WHERE file_id = ?", (file_id,)
+        "SELECT local_path, name, comment FROM pdf_files WHERE file_id = ?", (file_id,)
     ).fetchone()
     conn.close()
 
@@ -1991,6 +2026,7 @@ def sync_annotations(file_id: int):
         print(f"                   p.{a['page']} [{a['type']}] {preview!r}")
 
     comment = _format_annotations(anns)
+    _prune_orphan_images(row["comment"] or "", comment)
     import datetime as _dt
     now = _dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     conn = get_conn()

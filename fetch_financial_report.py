@@ -1389,11 +1389,11 @@ def sync_annotations(report_id: int):
     import time as _time
     import concurrent.futures as _cf
     import datetime as _dt
-    from zsxq_viewer import _extract_annotations_from_pdf, _format_annotations
+    from zsxq_viewer import _extract_annotations_from_pdf, _format_annotations, _prune_orphan_images
 
     conn = get_conn()
     row = conn.execute(
-        "SELECT local_path, ticker, period FROM reports WHERE id = ?", (report_id,)
+        "SELECT local_path, ticker, period, comment FROM reports WHERE id = ?", (report_id,)
     ).fetchone()
     conn.close()
 
@@ -1429,6 +1429,7 @@ def sync_annotations(report_id: int):
 
     print(f"                       ✓ {len(anns)} annotation(s) in {elapsed:.1f}s")
     comment = _format_annotations(anns)
+    _prune_orphan_images(row["comment"] or "", comment)
     now = _dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     conn = get_conn()
     conn.execute(
