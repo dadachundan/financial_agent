@@ -23,36 +23,50 @@ After completing a task and verifying that it works (by running tests or the app
    Port 5001 is reserved for the user's own running server — never start a test server on 5001 and never kill 5001.
 6. If the architecture changes, update `architecture.md`.
 
-# Database Safety (MANDATORY — never touch real data)
+# Database Safety (MANDATORY — non-negotiable, zero exceptions)
 
-**NEVER run a destructive query against any SQLite file under `db/` — these contain the user's real research notes, comments, ratings, classifications, and downloaded report metadata. Lost data cannot be recovered.**
+**Any path that starts with `db/` is the user's real, irreplaceable data. Treat it as read-only from Claude's hands.**
 
-Forbidden, no exceptions:
+This has gone wrong more than once. Past failures include (at least): wiping `pdf_inline_comments` to clear "test data" and taking real comments along with it; clearing `notes.db` rows during another session. The rule below exists to make the failure mode mechanically impossible, not to remind future-Claude to be careful.
 
-- `DELETE FROM <table>` without a primary-key `WHERE` clause that targets ONLY the row(s) you yourself just inserted seconds ago in this same shell.
-- `DROP TABLE`, `TRUNCATE`, `UPDATE … SET … WHERE 1=1`, `DELETE FROM <table> WHERE created_at > '…'` against `db/notes.db`, `db/zsxq.db`, `db/financial_reports.db`, `db/cninfo_reports.db`, `db/report_annotations.db`, or any other file under `db/`.
-- Wiping a table "to clean up test data" — even if you "just created the rows", you do not know whether the user added their own in another tab/session in between.
+## The rule
 
-Approved testing patterns:
+Against any file matching `db/**.db` (zsxq.db, notes.db, financial_reports.db, cninfo_reports.db, report_annotations.db, market_caps.db, fx_rates.db, knowledge_graph.db, anything else):
 
-1. **Copy the DB to /tmp and point the test server at the copy.**
+- `DELETE`, `DROP`, `TRUNCATE`, `UPDATE`, `INSERT`, `ALTER`, `REPLACE`, `VACUUM` — **forbidden**, full stop. No "but I just inserted that row" carve-out. No "but it's clearly test data" carve-out. No `WHERE id = N` carve-out. No.
+- `cp db/*.db …`, `mv db/*.db …`, `rm db/*.db`, `> db/*.db`, redirecting any process output onto a file in `db/` — **forbidden**.
+- Schema migrations (`ALTER TABLE`, `CREATE TABLE`) are forbidden too. If a new column is needed, write a one-shot migration script, have the user run it themselves, and `git status` afterwards to confirm exactly one file changed.
+
+The only thing Claude is allowed to do against `db/**` is read: `SELECT`, `.schema`, `.tables`, `PRAGMA table_info(...)`, `sqlite3 db.db ".dump table | head"`. That's it.
+
+## How to actually test code that writes to a DB
+
+There is exactly one approved pattern. Everything else is a violation.
+
+1. **Copy the relevant DB to `/tmp/` BEFORE starting the test server, and point the test server at the copy:**
    ```bash
-   cp db/notes.db /tmp/notes.test.db
-   # Run the module against the test copy via env var or DB_PATH override.
-   # After testing: rm /tmp/notes.test.db
+   cp db/notes.db /tmp/notes.test.db    # one-time per test session
+   # then either:
+   #   (a) symlink: rm db/notes.db && ln -s /tmp/notes.test.db db/notes.db    ← still forbidden, the link is in db/
+   #   (b) env var: PIC_DB_PATH=/tmp/notes.test.db python main.py --port 5002
+   #   (c) edit a single LOCAL line of pdf_inline_comments.py:
+   #         DB_PATH = Path("/tmp/notes.test.db")
+   #       then revert the line via `git checkout pdf_inline_comments.py` BEFORE committing
    ```
-2. **Use a throwaway `file_id` that can never collide with real data.** For zsxq experiments, pick a value like `999000000000001` (well above any real zsxq id) and scope every insert/delete to that single id:
-   ```sql
-   DELETE FROM pdf_inline_comments WHERE file_id = 999000000000001;
-   ```
-3. **Use the HTTP API instead of raw SQL** — POST a row, capture the returned `id`, DELETE that exact id by primary key. Never write a `WHERE` clause that could match a real row.
-4. **Read-only inspection is always fine** (`SELECT …`, `.schema`, `sqlite3 db.db .tables`).
+2. Run all test inserts / deletes against `/tmp/notes.test.db`. `DELETE FROM pdf_inline_comments;` is fine there — that file is yours.
+3. When testing is done: `rm /tmp/notes.test.db`. `git diff` to confirm no source file points at /tmp anymore. The real `db/notes.db` was never touched.
 
-Before any `DELETE`/`UPDATE`/`DROP` against a `db/*.db` file:
-- Confirm the file path starts with `/tmp/` or matches a known-test name (`*.test.db`, `*.sandbox.db`).
-- If it starts with `db/`, stop and ask the user instead of guessing.
+If a module's DB path can't be overridden without code edits, **add an env-var override in that module in the same commit as the feature**. Future-Claude shouldn't have to choose between editing source code and risking the real DB.
 
-This rule exists because in this session I ran `DELETE FROM pdf_inline_comments` to clear what I thought was my own test data — and silently wiped the user's two real comments on the Nomura PDF. That is the failure mode this rule prevents.
+## Sanity check before any DB-touching command
+
+Before running any `sqlite3` / `psql` / Python script that opens a DB, the literal path string in the command must satisfy:
+
+```
+path.startswith("/tmp/")  or  path.endswith(".test.db")  or  path.endswith(".sandbox.db")
+```
+
+If it doesn't — stop, no exceptions. Ask the user. Even reading from the real DB to "check the schema" is fine, but the moment the command could write, the path check is the gate.
 
 # UI Verification (MANDATORY)
 
