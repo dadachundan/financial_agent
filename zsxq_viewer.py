@@ -1565,13 +1565,14 @@ def feed():
         card_date = max(info.get("date") or "", latest_inline)
 
         rows.append({
-            "id":       info["id"],
-            "name":     info.get("name") or "",
-            "comment":  combined,
-            "date":     card_date,
-            "badge":    info.get("bank") or "ZSXQ",
-            "pinned":   0,
-            "open_url": "/zsxq/open-local/" + str(info["id"]),
+            "id":         info["id"],
+            "name":       info.get("name") or "",
+            "comment":    combined,
+            "date":       card_date,
+            "badge":      info.get("bank") or "ZSXQ",
+            "pinned":     0,
+            "open_url":   "/zsxq/open-local/" + str(info["id"]),
+            "viewer_url": "/zsxq/pdf-viewer/" + str(info["id"]),
         })
 
     # Also pull SEC reports with comments — same DB schema lives in

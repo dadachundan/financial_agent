@@ -146,11 +146,17 @@ __URLPATCH__
         {{ row.date[:10] }}
         {% if row.badge %} · <span class="badge bg-light text-secondary border">{{ row.badge }}</span>{% endif %}
       </div>
+      {% if row.viewer_url %}
+      <a class="feed-title" href="{{ row.viewer_url }}" target="_blank" rel="noopener">
+        {{ row.name | replace('.pdf','') }}
+      </a>
+      {% else %}
       <span class="feed-title"
             data-open="{{ row.open_url | default((_base | default('')) ~ '/open-local/' ~ row.id) }}"
             onclick="openLocal(this)">
         {{ row.name | replace('.pdf','') }}
       </span>
+      {% endif %}
       <div class="feed-body" data-md="{{ row.comment | e }}"></div>
     </div>
     {% endfor %}
