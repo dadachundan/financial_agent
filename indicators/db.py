@@ -5,7 +5,13 @@ import sqlite3
 import time
 from pathlib import Path
 
-_DB_PATH: Path = Path(__file__).parent.parent / "db" / "indicators.db"
+# `db_paths` lives at the project root; this module is `indicators/db.py`.
+# Project root is on sys.path because main.py runs from there.
+import sys
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from db_paths import db_path  # noqa: E402
+
+_DB_PATH: Path = db_path("indicators.db")
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS snapshots (

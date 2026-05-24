@@ -374,3 +374,66 @@ class TestIngestQueries:
     def test_pdfs_limit_zero_means_all(self, gi, pdfs_conn):
         rows = gi.get_pending_pdfs(pdfs_conn, reindex=False, limit=0)
         assert len(rows) == 8
+
+
+# ── FINAGENT_DB_DIR override tests ─────────────────────────────────────────────
+
+class TestFinagentDbDirOverride:
+    """Setting FINAGENT_DB_DIR must redirect every DB-using module that goes
+    through db_paths.db_path / db_dir. This is the mechanical guarantee
+    behind the *Database Safety* rule in CLAUDE.md.
+    """
+
+    def _reimport(self, monkeypatch, tmp_path):
+        """Import db_paths fresh under a sandbox FINAGENT_DB_DIR."""
+        monkeypatch.setenv("FINAGENT_DB_DIR", str(tmp_path))
+        # Re-import db_paths so it re-reads the env var.
+        for name in list(sys.modules):
+            if name == "db_paths":
+                del sys.modules[name]
+        import db_paths
+        return db_paths
+
+    def test_db_dir_honors_env(self, monkeypatch, tmp_path):
+        db_paths = self._reimport(monkeypatch, tmp_path)
+        assert db_paths.db_dir() == tmp_path.resolve()
+
+    def test_db_path_honors_env(self, monkeypatch, tmp_path):
+        db_paths = self._reimport(monkeypatch, tmp_path)
+        assert db_paths.db_path("notes.db") == (tmp_path / "notes.db").resolve()
+
+    def test_default_when_env_unset(self, monkeypatch, tmp_path):
+        monkeypatch.delenv("FINAGENT_DB_DIR", raising=False)
+        for name in list(sys.modules):
+            if name == "db_paths":
+                del sys.modules[name]
+        import db_paths
+        assert db_paths.db_dir() == PROJECT_ROOT / "db"
+
+    @pytest.mark.parametrize("module_path,attr", [
+        ("pdf_inline_comments.py", "DB_PATH"),
+        ("pdf_page_ocr.py",        "DB_PATH"),
+        ("report_inline_comments.py", "DB_PATH"),
+        ("report_annotations.py",  "DB_PATH"),
+        ("market_cap_cache.py",    "_DB_PATH"),
+        ("graph_mirror.py",        "_DEFAULT_MIRROR"),
+        ("zsxq_common.py",         "DEFAULT_DB"),
+    ])
+    def test_module_honors_env(self, monkeypatch, tmp_path, module_path, attr):
+        """Each DB-using module's path constant lands inside FINAGENT_DB_DIR."""
+        monkeypatch.setenv("FINAGENT_DB_DIR", str(tmp_path))
+        for name in list(sys.modules):
+            if name.split(".")[0] in {"db_paths", pathlib.Path(module_path).stem}:
+                del sys.modules[name]
+        mod = _load(module_path)
+        resolved = getattr(mod, attr)
+        assert str(resolved).startswith(str(tmp_path.resolve())), \
+            f"{module_path}.{attr} -> {resolved} did not honor FINAGENT_DB_DIR={tmp_path}"
+
+    def test_is_sandbox_path_helper(self, monkeypatch, tmp_path):
+        db_paths = self._reimport(monkeypatch, tmp_path)
+        assert db_paths.is_sandbox_path("/tmp/notes.db")
+        assert db_paths.is_sandbox_path("/anywhere/notes.test.db")
+        assert db_paths.is_sandbox_path("/anywhere/test.sandbox.db")
+        assert not db_paths.is_sandbox_path("/Users/x/projects/financial_agent/db/notes.db")
+        assert not db_paths.is_sandbox_path("db/zsxq.db")

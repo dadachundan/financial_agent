@@ -47,22 +47,36 @@ The only thing Claude is allowed to do against a real `*.db` is read: `SELECT`, 
 
 ## How to actually test code that writes to a DB
 
-There is exactly one approved pattern. Everything else is a violation.
+There is exactly one approved pattern. Every Python module in the project that opens a SQLite DB resolves its path through `db_paths.db_path(name)` / `db_paths.db_dir()` (see [db_paths.py](db_paths.py)). Setting the single environment variable **`FINAGENT_DB_DIR`** redirects ALL of them at once. That's the only mechanism Claude should ever use to point the app at test data.
 
-1. **Copy the relevant DB to `/tmp/` BEFORE starting the test server, and point the test server at the copy:**
-   ```bash
-   cp db/notes.db /tmp/notes.test.db    # one-time per test session
-   # then either:
-   #   (a) env var, if the module supports DB_PATH override:
-   #         PIC_DB_PATH=/tmp/notes.test.db python main.py --port 5002
-   #   (b) edit a single LOCAL line of pdf_inline_comments.py:
-   #         DB_PATH = Path("/tmp/notes.test.db")
-   #       then revert via `git checkout pdf_inline_comments.py` BEFORE committing
-   ```
-2. Run all test inserts / deletes against `/tmp/notes.test.db`. `DELETE FROM pdf_inline_comments;` is fine there — that file is yours.
-3. When testing is done: `rm /tmp/notes.test.db`. `git diff` to confirm no source file points at /tmp anymore. The real `db/notes.db` was never touched.
+```bash
+# 1. Copy the DBs you'll be writing to into a sandbox dir
+mkdir -p /tmp/finagent-test
+cp db/notes.db db/zsxq.db /tmp/finagent-test/   # whatever you need
 
-If a module's DB path can't be overridden without code edits, **add an env-var override in that module in the same commit as the feature**. Future-Claude shouldn't have to choose between editing source code and risking the real DB.
+# 2. Run the app or a script with the env var set
+FINAGENT_DB_DIR=/tmp/finagent-test python main.py --port 5002
+#  → pdf_inline_comments.DB_PATH         = /tmp/finagent-test/notes.db
+#  → pdf_page_ocr.DB_PATH                = /tmp/finagent-test/notes.db
+#  → report_inline_comments.DB_PATH      = /tmp/finagent-test/notes.db
+#  → report_annotations.DB_PATH          = /tmp/finagent-test/report_annotations.db
+#  → zsxq_common.DEFAULT_DB              = /tmp/finagent-test/zsxq.db
+#  → fetch_financial_report.DB_FILE      = /tmp/finagent-test/financial_reports.db
+#  → fetch_cninfo_report.DB_FILE         = /tmp/finagent-test/cninfo_reports.db
+#  → market_cap_cache._DB_PATH           = /tmp/finagent-test/market_cap_cache.db
+#  → graph_mirror._DEFAULT_MIRROR        = /tmp/finagent-test/graph_mirror.db
+#  → indicators/db._DB_PATH              = /tmp/finagent-test/indicators.db
+#  → zep_app.GRAPH_DIR / ZSXQ_DB         = /tmp/finagent-test/{graphiti_db,zsxq.db}
+
+# 3. Test freely — DELETE / DROP / TRUNCATE are all fine against
+#    /tmp/finagent-test/*.db because the path passes the sandbox check
+#    (starts with /tmp/).
+
+# 4. When done:
+rm -rf /tmp/finagent-test
+```
+
+If you add a NEW Python module that opens a `.db` file, **you MUST resolve its path through `db_paths.db_path()` in the same commit as the module**. Hardcoding `Path(__file__).parent / "db" / "foo.db"` is a regression — the FINAGENT_DB_DIR override won't reach it, and future-Claude is one mis-typed `DELETE FROM` away from data loss. The test class `TestFinagentDbDirOverride` in [tests/test_db_paths.py](tests/test_db_paths.py) is the gate: add a parametrize entry for the new module's `DB_PATH` constant so CI catches the regression.
 
 ## Sanity check before any DB-touching command
 

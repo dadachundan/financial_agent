@@ -44,8 +44,14 @@ def _find_project_root() -> Path:
     return SCRIPT_DIR
 
 
-GRAPH_DIR    = _find_project_root() / "db" / "graphiti_db"
-ZSXQ_DB      = _find_project_root() / "db" / "zsxq.db"
+from db_paths import db_dir, db_path
+
+# Honor FINAGENT_DB_DIR if set; otherwise fall back to the git-root db/.
+# _find_project_root() (above) walks up to .git so worktrees share data;
+# db_dir() lets tests redirect everything to /tmp/.
+_HONORED_ROOT = db_dir() if "FINAGENT_DB_DIR" in os.environ else (_find_project_root() / "db")
+GRAPH_DIR    = _HONORED_ROOT / "graphiti_db"
+ZSXQ_DB      = _HONORED_ROOT / "zsxq.db"
 GROUP_ID     = "financial-pdfs"
 # SQLite mirror — always readable, even while ingest holds the KuzuDB write lock
 import threading

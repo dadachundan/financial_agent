@@ -22,8 +22,10 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Optional
 
-# Mirror lives next to knowledge_graph/ directory
-_DEFAULT_MIRROR = Path(__file__).parent / "db" / "graph_mirror.db"
+from db_paths import db_path
+
+# Mirror lives in the canonical db/ dir (overridable via FINAGENT_DB_DIR).
+_DEFAULT_MIRROR = db_path("graph_mirror.db")
 
 
 # ── Connection ────────────────────────────────────────────────────────────────

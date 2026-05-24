@@ -22,10 +22,11 @@ from datetime import date
 from pathlib import Path
 
 from sector_map import to_yfinance
+from db_paths import db_path
 
 log = logging.getLogger(__name__)
 
-_DB_PATH = Path(__file__).parent / "db" / "market_cap_cache.db"
+_DB_PATH = db_path("market_cap_cache.db")
 _DB_LOCK = threading.Lock()
 
 

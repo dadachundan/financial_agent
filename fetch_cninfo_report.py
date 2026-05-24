@@ -31,10 +31,12 @@ import nav_widget2 as nw2
 
 # ── Paths & config ─────────────────────────────────────────────────────────────
 
+from db_paths import db_path
+
 SCRIPT_DIR  = Path(__file__).parent
 REPORTS_DIR = SCRIPT_DIR / "cninfo_reports"
 UPLOADS_DIR = SCRIPT_DIR / "uploads"
-DB_FILE     = SCRIPT_DIR / "db" / "cninfo_reports.db"
+DB_FILE     = db_path("cninfo_reports.db")
 
 REPORTS_DIR.mkdir(exist_ok=True)
 

@@ -25,9 +25,11 @@ import requests
 
 API_BASE = "https://api.zsxq.com/v2"
 
+from db_paths import db_path
+
 SCRIPT_DIR              = Path(__file__).parent
 DEFAULT_CHROME_PROFILE  = Path("~/Library/Application Support/Google/Chrome").expanduser()
-DEFAULT_DB              = SCRIPT_DIR / "db" / "zsxq.db"
+DEFAULT_DB              = db_path("zsxq.db")
 DEFAULT_DOWNLOADS       = Path("~/Downloads/zsxq_reports").expanduser()
 
 HEADERS = {

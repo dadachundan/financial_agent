@@ -15,8 +15,17 @@ from pathlib import Path
 from jinja2 import DictLoader, Environment
 from flask import Flask, request, jsonify
 
+# `db_paths` lives at the project root; this module is `youtube/viewer.py`.
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).parent.parent))
+from db_paths import db_dir  # noqa: E402
+
 SCRIPT_DIR = Path(__file__).parent
-DB_PATH    = SCRIPT_DIR / "video_summaries.db"
+# Default lives next to this script for historical reasons, but honor
+# FINAGENT_DB_DIR so tests can sandbox it.
+import os as _os
+DB_PATH = (db_dir() / "video_summaries.db") if "FINAGENT_DB_DIR" in _os.environ \
+          else (SCRIPT_DIR / "video_summaries.db")
 
 app = Flask(__name__)
 

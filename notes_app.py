@@ -34,12 +34,14 @@ from zsxq_viewer import (
     _format_annotations,
 )
 
+from db_paths import db_path, db_dir
+
 SCRIPT_DIR              = Path(__file__).parent
-DB_PATH                 = SCRIPT_DIR / "db" / "notes.db"
+DB_PATH                 = db_path("notes.db")
 MANUAL_REPORT_DIR       = Path.home() / "Downloads" / "zsxq_report" / "manual_report"
-TICKER_MAP_PATH         = SCRIPT_DIR / "db" / "name_to_ticker.json"
+TICKER_MAP_PATH         = db_dir() / "name_to_ticker.json"
 TICKER_NAME_CACHE_PATH  = SCRIPT_DIR / "ticker_name_cache.json"
-TICKER_DISPLAY_PATH     = SCRIPT_DIR / "db" / "ticker_display.json"
+TICKER_DISPLAY_PATH     = db_dir() / "ticker_display.json"
 
 # Suffixes whose buckets get enriched with the Chinese company name.
 # Korean (.KS / .KP) and Taiwan (.TW) tickers stay as plain symbols.

@@ -14,7 +14,9 @@ from datetime import datetime
 from pathlib import Path
 from threading import Lock
 
-DB_PATH = Path(__file__).parent / "db" / "report_annotations.db"
+from db_paths import db_path
+
+DB_PATH = db_path("report_annotations.db")
 _LOCK = Lock()
 _INITED = False
 

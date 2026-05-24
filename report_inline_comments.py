@@ -16,7 +16,9 @@ from datetime import datetime
 from pathlib import Path
 from threading import Lock
 
-DB_PATH = Path(__file__).parent / "db" / "notes.db"
+from db_paths import db_path
+
+DB_PATH = db_path("notes.db")
 _LOCK = Lock()
 _INITED = False
 
