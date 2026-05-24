@@ -31,6 +31,7 @@ from pathlib import Path
 from flask import Blueprint, abort, jsonify, render_template_string, request
 
 import pdf_inline_comments as _pic
+import pdf_page_ocr as _ppo
 import nav_widget2 as _nw
 
 
@@ -123,6 +124,29 @@ def register(zsxq_bp: Blueprint, db_path_provider) -> None:
         if not ok:
             return jsonify(error="not found"), 404
         return "", 204
+
+    # ── Per-page OCR (synthetic text layer for scanned pages) ──────────
+    @zsxq_bp.route("/pdf-page-ocr", methods=["POST"])
+    def pdf_page_ocr_route():
+        data = request.get_json(silent=True) or {}
+        try:
+            file_id = int(data.get("file_id") or 0)
+            page = int(data.get("page") or 0)
+        except (TypeError, ValueError):
+            return jsonify(error="bad payload"), 400
+        if not file_id or not page:
+            return jsonify(error="file_id/page required"), 400
+        cached = _ppo.get(file_id, page)
+        if cached is not None:
+            return jsonify(words=cached, cached=True)
+        row = _pdf_row(file_id)
+        if not row or not row["local_path"] or not Path(row["local_path"]).exists():
+            return jsonify(error="pdf not found"), 404
+        try:
+            words = _ppo.compute(file_id, page, row["local_path"])
+        except Exception as e:
+            return jsonify(error=f"OCR failed: {e}"), 500
+        return jsonify(words=words, cached=False)
 
     # ── On-demand region OCR (for scanned pages) ────────────────────────
     @zsxq_bp.route("/pdf-ocr-region", methods=["POST"])
@@ -290,17 +314,24 @@ _VIEWER_TMPL = r"""<!doctype html>
     .pdf-page .region-overlay{position:absolute;inset:0;z-index:4;
                               cursor:crosshair;background:transparent;
                               display:none}
-    .pdf-page.region-mode .region-overlay,
-    .pdf-page.scanned   .region-overlay{display:block}
-    .pdf-page.region-mode .textLayer,
-    .pdf-page.scanned   .textLayer{pointer-events:none}
-    /* Visual hint that this page is scanned + region-select is the only path */
-    .pdf-page.scanned::after{content:"SCANNED — drag a region to OCR";
-                             position:absolute;top:6px;left:8px;
-                             background:rgba(255,200,0,.92);color:#5a3a00;
-                             padding:2px 8px;border-radius:3px;font-size:.7rem;
-                             font-family:-apple-system,sans-serif;font-weight:600;
-                             pointer-events:none;letter-spacing:.02em;z-index:5}
+    .pdf-page.region-mode .region-overlay{display:block}
+    .pdf-page.region-mode .textLayer{pointer-events:none}
+    /* While OCR is in flight on a scanned page, show a small spinner badge.
+       Once the synthetic text layer lands, the class is removed and the
+       page behaves like any text-selectable page. */
+    .pdf-page.ocr-loading::after{content:"⏳ OCR…";
+                                 position:absolute;top:6px;left:8px;
+                                 background:rgba(255,200,0,.92);color:#5a3a00;
+                                 padding:2px 8px;border-radius:3px;font-size:.7rem;
+                                 font-family:-apple-system,sans-serif;font-weight:600;
+                                 pointer-events:none;letter-spacing:.02em;z-index:5}
+    /* Synthetic OCR word spans — transparent, covering the word's bbox, so
+       native text selection across them produces the OCR'd string. */
+    .textLayer span.ocr-word{color:transparent;position:absolute;
+                             white-space:nowrap;cursor:text;
+                             transform-origin:0 0;line-height:1;
+                             font-family:-apple-system,BlinkMacSystemFont,
+                                         "Helvetica Neue",sans-serif}
     .pdf-page .region-rubber{position:absolute;background:rgba(31,78,120,.18);
                              border:1.5px dashed #1F4E78;pointer-events:none}
 
@@ -783,16 +814,76 @@ _VIEWER_TMPL = r"""<!doctype html>
     // Build the per-page text index used for quote-anchored highlights.
     pageTextIndex[idx] = buildIndex(textLayerDiv);
 
-    // Scanned pages have no text layer — auto-enable region mode for them
-    // so a plain drag does an OCR region selection (no Shift required).
+    // Empty / near-empty text layer = scanned page (or CID-encoded fonts
+    // PDF.js can't decode). Trigger backend OCR and inject the word boxes
+    // as a synthetic text layer so native text selection works — same UX
+    // Apple Preview offers via on-demand Vision OCR.
     if ((pageTextIndex[idx].full || '').trim().length < 8) {
-      div.classList.add('scanned');
-      // 'scanned' pages also show region overlay always; see CSS.
+      div.classList.add('scanned', 'ocr-loading');
+      injectOcrTextLayer(pageNum, textLayerDiv, vp).then(() => {
+        // Rebuild the index from the synthetic spans so quote-based
+        // anchoring works on this page too.
+        pageTextIndex[idx] = buildIndex(textLayerDiv);
+        div.classList.remove('ocr-loading');
+        // Re-anchor any comments that were waiting on this page.
+        anchorCommentsOnPage(pageNum);
+        layoutCards();
+      }).catch(e => {
+        div.classList.remove('ocr-loading');
+        console.warn('OCR text-layer failed for page', pageNum, e);
+      });
     }
 
     // Anchor any comments belonging to this page.
     anchorCommentsOnPage(pageNum);
     layoutCards();
+  }
+
+  // Fetch OCR'd word boxes for a scanned page and inject them as positioned
+  // spans inside the PDF.js text layer div. Spans are transparent + cover
+  // their word's bbox, so native text selection picks up the OCR'd text.
+  async function injectOcrTextLayer(pageNum, textLayerDiv, vp) {
+    let resp;
+    try {
+      resp = await api('/pdf-page-ocr', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ file_id: FILE_ID, page: pageNum }),
+      });
+    } catch (e) { throw e; }
+    const words = (resp && resp.words) || [];
+    if (!words.length) return;
+    const W = vp.width, H = vp.height;
+    // PDF.js's textLayer CSS already styles spans (color:transparent,
+    // position:absolute). We just add positioned spans and a trailing
+    // newline-ish separator between rows so multi-line selections produce
+    // readable copy-paste output.
+    let prevRow = -1;
+    for (const w of words) {
+      const top  = w.y * H;
+      const left = w.x * W;
+      const ww   = w.w * W;
+      const hh   = w.h * H;
+      // Group into rough text rows (~8px tolerance in CSS px). Insert a
+      // line-break span between rows so the browser inserts '\n' on copy.
+      const rowKey = Math.round(top / 8);
+      if (rowKey !== prevRow && prevRow !== -1) {
+        const br = document.createElement('br');
+        textLayerDiv.appendChild(br);
+      }
+      prevRow = rowKey;
+      const span = document.createElement('span');
+      span.className = 'ocr-word';
+      span.style.left   = left + 'px';
+      span.style.top    = top  + 'px';
+      span.style.width  = ww   + 'px';
+      span.style.height = hh   + 'px';
+      // font-size approximates the box height so character widths roughly
+      // match. Trailing space so adjacent word selections include a space.
+      span.style.fontSize = Math.max(4, hh) + 'px';
+      span.textContent = w.t + ' ';
+      textLayerDiv.appendChild(span);
+    }
   }
 
   // ── Selection capture (text-layer, parallel to /claude-reports) ──────
@@ -1073,16 +1164,22 @@ _VIEWER_TMPL = r"""<!doctype html>
   }
 
   function anchorCommentsOnPage(pageNum) {
-    const idx = pageTextIndex[pageNum - 1];
     const div = pageDivs[pageNum - 1];
-    if (!idx || !div) return;
+    if (!div) return;
     // Strip any prior anchors (rect overlays + marks) for this page.
     div.querySelectorAll('.rect-hl').forEach(el => el.remove());
     div.querySelectorAll('mark.pic-hl').forEach(m => {
       const t = document.createTextNode(m.textContent);
       m.parentNode.replaceChild(t, m);
     });
-    div.querySelector('.textLayer') && div.querySelector('.textLayer').normalize();
+    const tl = div.querySelector('.textLayer');
+    if (tl) tl.normalize();
+    // The stored pageTextIndex may point at text nodes that got replaced
+    // when an earlier pending <mark> was painted in. Rebuild from the
+    // (now-clean) text layer so node references and offsets line up.
+    const idx = tl ? buildIndex(tl) : null;
+    pageTextIndex[pageNum - 1] = idx;
+    if (!idx) return;
 
     for (const c of comments) {
       if (c.page !== pageNum) continue;
@@ -1359,13 +1456,18 @@ _VIEWER_TMPL = r"""<!doctype html>
       body: '',
       onSave: async (body) => {
         try {
+          // Only persist rect for region selections — text selections use the
+          // quote+prefix+suffix triple to re-anchor. The text-selection
+          // info.rect is in window pixels (from range.getBoundingClientRect),
+          // not page space, so it's not a valid fallback anchor anyway.
+          const persistedRect = (info.kind === 'region' && info.rect) ? info.rect : null;
           const payload = {
             file_id: FILE_ID,
             page: info.page,
             quote: info.quote || '',
             prefix: info.prefix || '',
             suffix: info.suffix || '',
-            rect: info.rect || null,
+            rect: persistedRect,
             body,
           };
           const resp = await api('/pdf-inline-comments', {
