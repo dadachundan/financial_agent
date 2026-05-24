@@ -336,8 +336,10 @@ _VIEWER_TMPL = r"""<!doctype html>
     .pdf-page .region-rubber{position:absolute;background:rgba(31,78,120,.18);
                              border:1.5px dashed #1F4E78;pointer-events:none}
 
-    /* Floating action toolbar at the selection's right edge: [🖍 highlight | 💬 comment] */
-    .pic-fab{position:absolute;z-index:1500;background:#fff;
+    /* Floating action toolbar at the selection's right edge: [🖍 highlight | 💬 comment].
+       Position-FIXED (viewport-relative) so it stays anchored to the selection
+       even as the user scrolls — preserves the toolbar from drifting off-screen. */
+    .pic-fab{position:fixed;z-index:1500;background:#fff;
              border:1px solid #cfd6df;border-radius:22px;
              padding:3px;cursor:default;
              box-shadow:0 2px 8px rgba(0,0,0,.22);display:none;
@@ -354,7 +356,7 @@ _VIEWER_TMPL = r"""<!doctype html>
     .pic-fab button svg{width:18px;height:18px;display:block}
 
     /* Popover that appears when you click an existing highlight */
-    .pic-hl-pop{position:absolute;z-index:1600;background:#fff;
+    .pic-hl-pop{position:fixed;z-index:1600;background:#fff;
                 border:1px solid #cfd6df;border-radius:22px;
                 padding:3px;display:none;align-items:center;gap:2px;
                 box-shadow:0 3px 10px rgba(0,0,0,.24)}
@@ -1013,37 +1015,62 @@ _VIEWER_TMPL = r"""<!doctype html>
   }
 
   // ── Floating action toolbar anchored at selection right-edge ─────────
+  // Position is viewport-relative (.pic-fab is position:fixed). Keeping it
+  // in sync with the LIVE selection via selectionchange + scroll listeners
+  // means the toolbar follows the selection as you scroll, instead of
+  // sticking at the original document position and silently going off-screen.
   function showFab(rect) {
     fab.classList.add('show');
-    fab.style.top  = (window.scrollY + rect.top - 6) + 'px';
-    fab.style.left = (window.scrollX + rect.right + 8) + 'px';
+    fab.style.top  = (rect.top - 6) + 'px';
+    fab.style.left = (rect.right + 8) + 'px';
   }
   function hideFab() { fab.classList.remove('show'); }
   function hideHlPop() { hlPop.classList.remove('show'); hlPop._cid = null; }
 
-  document.addEventListener('mouseup', function(e) {
-    if (fab.contains(e.target))   return;
-    if (hlPop.contains(e.target)) return;
-    if (rail.contains(e.target))  return;
-    setTimeout(() => {
-      const info = getTextSelectionInfo();
-      if (!info) { hideFab(); return; }
-      pendingSel = { kind: 'text', ...info };
-      hideHlPop();
-      showFab(info.rect);
-    }, 0);
+  function refreshFabFromSelection() {
+    const info = getTextSelectionInfo();
+    if (!info) { hideFab(); pendingSel = null; return; }
+    pendingSel = { kind: 'text', ...info };
+    // Re-read the rect from the LIVE range so scroll / DOM mutations don't
+    // freeze the fab at a stale position.
+    const sel = window.getSelection();
+    const r = sel.rangeCount ? sel.getRangeAt(0).getBoundingClientRect() : info.rect;
+    // Hide cleanly when the selection is fully outside the viewport — the
+    // toolbar lurking just above/below the visible area is confusing.
+    const vh = window.innerHeight;
+    if (r.bottom < 4 || r.top > vh - 4) { hideFab(); return; }
+    showFab(r);
+  }
+  // selectionchange fires per-character during drag-select — debounce to
+  // ~90ms so we don't thrash on every mousemove.
+  let _fabDebounce = null;
+  document.addEventListener('selectionchange', () => {
+    clearTimeout(_fabDebounce);
+    _fabDebounce = setTimeout(refreshFabFromSelection, 90);
   });
+  // Keep the fab pinned to its selection while the user scrolls.
+  window.addEventListener('scroll', () => {
+    if (!fab.classList.contains('show')) return;
+    refreshFabFromSelection();
+  }, { passive: true, capture: true });
+
+  // Mousedown elsewhere closes the highlight popover (a click on a mark or
+  // inside the fab/rail/popover itself preserves its state).
   document.addEventListener('mousedown', function(e) {
     if (fab.contains(e.target))   return;
     if (hlPop.contains(e.target)) return;
     if (rail.contains(e.target))  return;
-    // mousedown on an existing highlight is handled by the mark's own
-    // click listener (we don't hide the popover here so the click on the
-    // mark can show it cleanly).
     if (e.target && e.target.classList && (e.target.classList.contains('pic-hl') ||
                                             e.target.classList.contains('rect-hl'))) return;
-    hideFab();
     hideHlPop();
+  });
+
+  // Prevent fab button mousedown from stealing focus / collapsing selection.
+  // Without preventDefault, clicking the button can shift focus out of the
+  // text layer and the browser drops the selection before our click handler
+  // reads it — fab vanishes mid-click.
+  [fabHl, fabCm, hlPopComment, hlPopDelete].forEach(b => {
+    b.addEventListener('mousedown', (ev) => ev.preventDefault());
   });
 
   // 💬 fab → full comment editor (current behaviour)
@@ -1080,14 +1107,25 @@ _VIEWER_TMPL = r"""<!doctype html>
     } catch (e) { showToast('Highlight save failed: ' + e.message, 'error'); }
   }
 
-  // Show the highlight popover at a mark's right edge.
+  // Show the highlight popover at a mark's right edge. Viewport-relative
+  // coords (popover is position:fixed) so it tracks the mark even on scroll.
   function showHlPop(targetEl, cid) {
     const r = targetEl.getBoundingClientRect();
     hlPop.classList.add('show');
     hlPop._cid = cid;
-    hlPop.style.top  = (window.scrollY + r.top - 6) + 'px';
-    hlPop.style.left = (window.scrollX + r.right + 8) + 'px';
+    hlPop._anchor = targetEl;
+    hlPop.style.top  = (r.top - 6) + 'px';
+    hlPop.style.left = (r.right + 8) + 'px';
   }
+  // Keep the highlight popover pinned to its mark on scroll.
+  window.addEventListener('scroll', () => {
+    if (!hlPop.classList.contains('show')) return;
+    const a = hlPop._anchor;
+    if (!a || !a.isConnected) { hideHlPop(); return; }
+    const r = a.getBoundingClientRect();
+    hlPop.style.top  = (r.top - 6) + 'px';
+    hlPop.style.left = (r.right + 8) + 'px';
+  }, { passive: true, capture: true });
   hlPopDelete.addEventListener('click', async (ev) => {
     ev.stopPropagation();
     const cid = hlPop._cid; if (!cid) return;
