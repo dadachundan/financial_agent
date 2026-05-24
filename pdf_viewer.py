@@ -810,10 +810,15 @@ _VIEWER_TMPL = r"""<!doctype html>
       return;
     }
     const vp = page.getViewport({ scale });
-    // Render at device-pixel resolution (Retina = 2x) so canvas is crisp;
-    // CSS width stays at viewport.width so layout doesn't change. PDF.js v4
-    // applies the dpr factor via the `transform` arg on render().
-    const dpr = window.devicePixelRatio || 1;
+    // Render the canvas backing-store at a *supersampled* resolution so
+    // text stays crisp even when:
+    //   - DPR=2 (Retina)                              → 2× supersample
+    //   - DPR=1 on a HiDPI / scaled external monitor  → still 2× supersample
+    //     (Apple Preview / Chrome's built-in PDF viewer do the same; without
+    //     this, OS-side display scaling smears the bitmap)
+    //   - the user uses browser Cmd+ zoom              → DPR rises above 1
+    // We take max(devicePixelRatio, 2) capped at 3 to keep GPU memory sane.
+    const dpr = Math.min(3, Math.max(2, window.devicePixelRatio || 1));
     const canvas = document.createElement('canvas');
     canvas.width  = Math.floor(vp.width  * dpr);
     canvas.height = Math.floor(vp.height * dpr);
