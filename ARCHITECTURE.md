@@ -107,6 +107,20 @@ Real-time cross-asset market indicators: liquidity, credit, volatility, and cros
 Browser for the 知识星球 research group PDF library.
 - Key routes: `GET /zsxq/` (UI), `GET /zsxq/pdfs` (JSON), `GET /zsxq/pdf/<id>`, `POST /zsqx/rate/<id>`, `POST /zsxq/comment/<id>`
 - **DB**: `db/zsxq.db`
+- Mounts `pdf_viewer.register(zsxq_bp, ...)` for the in-browser PDF viewer at the bottom of the module.
+
+### `pdf_viewer.py` — In-browser PDF viewer with selection-anchored markdown comments
+PDF.js-based reader for the zsxq PDF library. Mirrors the UX of the `/claude-reports` markdown viewer (right-rail comment cards anchored to selected text via a TextQuoteSelector).
+- Key routes (mounted on `zsxq_bp`):
+  - `GET /zsxq/pdf-viewer/<file_id>` — viewer HTML
+  - `GET/POST/PATCH/DELETE /zsxq/pdf-inline-comments[/<id>]` — CRUD
+  - `POST /zsxq/pdf-ocr-region` — on-demand region OCR (fitz native-text first, ocrmac Apple Vision fallback) for scanned pages
+- **DB**: `db/notes.db` table `pdf_inline_comments` (managed by `pdf_inline_comments.py`)
+- Vector pages → native text selection captures quote+prefix+suffix and re-anchors via whitespace-normalized index lookup on reload.
+- Scanned pages (empty text layer) auto-enable a region-drag overlay; the dragged rect is OCR'd server-side so even scanned-only reports get the same quote-based UX.
+
+### `pdf_inline_comments.py` — SQLite layer for PDF inline comments
+Mirror of `report_inline_comments.py` with extra `file_id`, `page`, and `rect_json` columns. Stores selection-anchored markdown comments in `db/notes.db`.
 
 ---
 

@@ -46,6 +46,12 @@ DB_PATH: Path = DEFAULT_DB
 # Kick off AKShare ticker-name cache load (instant if cache exists; bg thread if not)
 _tn.init()
 
+# Mount the new in-browser PDF viewer (selection-anchored markdown comments).
+# Routes land at /zsxq/pdf-viewer/<file_id> and /zsxq/pdf-inline-comments/*.
+# DB_PATH is mutated at startup, so register with a lazy provider.
+import pdf_viewer as _pdf_viewer
+_pdf_viewer.register(zsxq_bp, lambda: DB_PATH)
+
 # ── HTML template ─────────────────────────────────────────────────────────────
 
 TEMPLATE = """
@@ -477,6 +483,9 @@ __URLPATCH__
             {% if row.local_path %}
               <a href="{{ _base | default('') }}/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank"
                  class="btn btn-outline-danger open-btn">📄 Open</a>
+              <a href="{{ _base | default('') }}/pdf-viewer/{{ row.file_id }}" target="_blank"
+                 class="btn btn-outline-primary btn-sm ms-1"
+                 title="In-browser viewer with selection-anchored markdown comments">🖍 Annotate</a>
               <button class="btn btn-outline-secondary btn-sm ms-1 open-btn"
                       onclick="openLocal({{ row.file_id }}, this)"
                       title="{{ row.local_path }}">🗂 Local</button>
