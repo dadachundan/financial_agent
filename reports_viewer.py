@@ -821,6 +821,15 @@ _VIEW_TMPL = r"""<!doctype html>
                               cursor:pointer;font-family:inherit;font-weight:500}
     .ric-editor-actions .save:disabled{background:#cfd6df;cursor:not-allowed}
     .ric-editor-actions .save:not(:disabled):hover{background:#16395a}
+    .ric-editor-hint{font-size:.72rem;color:#888;margin-right:auto;
+                     font-style:italic}
+    /* Paste/drag-and-drop images shouldn't blow out the 320px rail or
+       the modal. Keep them responsive in both views. */
+    .ric-body img,.ric-modal-body img{max-width:100%;height:auto;
+                                      border-radius:4px;display:block;
+                                      margin:.4em 0}
+    .ric-editor textarea.upl-dragover{border-color:#1F4E78;
+                                      background:#f0f6ff}
 
     /* "Expand" button — every comment gets one; opens .ric-modal so
        the body renders at usable width (the 320px rail clips wide
@@ -1451,10 +1460,72 @@ _VIEW_TMPL = r"""<!doctype html>
           onCancel();
         }
       });
+
+      // Image paste & drag-and-drop. POSTs to the shared /upload-image
+      // route (mounted by md_comment_widget at the app root) and
+      // inserts `![](url)` at the cursor. Same path renders as <img>
+      // in the rail card AND in the expand modal because both pass
+      // through marked.parse().
+      async function uploadImageFile(file) {
+        const token = `__upl_${Date.now()}_${Math.random().toString(36).slice(2,8)}__`;
+        const placeholder = `![${token}]()`;
+        const s = ta.selectionStart, e = ta.selectionEnd;
+        ta.value = ta.value.slice(0, s) + placeholder + ta.value.slice(e);
+        ta.selectionStart = ta.selectionEnd = s + placeholder.length;
+        save.disabled = !ta.value.trim();
+        try {
+          const fd = new FormData();
+          const subtype = (file.type.split('/')[1] || 'png').toLowerCase();
+          const ext = subtype === 'jpeg' ? 'jpg' : subtype;
+          fd.append('image', file, `pasted-${Date.now()}.${ext}`);
+          const r = await fetch('/upload-image', { method: 'POST', body: fd });
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          const j = await r.json();
+          const url = j && j.data && j.data.filePath;
+          if (!url) throw new Error('no filePath in response');
+          ta.value = ta.value.replace(placeholder, `![](${url})`);
+        } catch (err) {
+          ta.value = ta.value.replace(placeholder, '');
+          alert('Image upload failed: ' + (err && err.message ? err.message : err));
+        }
+        save.disabled = !ta.value.trim();
+      }
+      ta.addEventListener('paste', (ev) => {
+        const cd = ev.clipboardData;
+        if (!cd || !cd.items) return;
+        for (const it of cd.items) {
+          if (it.kind === 'file' && it.type.startsWith('image/')) {
+            const f = it.getAsFile();
+            if (f) { ev.preventDefault(); uploadImageFile(f); return; }
+          }
+        }
+        // No image in clipboard — let the browser's default text paste run.
+      });
+      ta.addEventListener('dragover', (ev) => {
+        if (ev.dataTransfer && Array.from(ev.dataTransfer.items || [])
+            .some(i => i.kind === 'file' && i.type.startsWith('image/'))) {
+          ev.preventDefault();
+          ta.classList.add('upl-dragover');
+        }
+      });
+      ta.addEventListener('dragleave', () => ta.classList.remove('upl-dragover'));
+      ta.addEventListener('drop', (ev) => {
+        ta.classList.remove('upl-dragover');
+        const files = ev.dataTransfer && ev.dataTransfer.files;
+        if (!files || !files.length) return;
+        const imgs = Array.from(files).filter(f => f.type.startsWith('image/'));
+        if (!imgs.length) return;
+        ev.preventDefault();
+        imgs.forEach(uploadImageFile);
+      });
+
       cancel.addEventListener('click', (ev) => { ev.stopPropagation(); onCancel(); });
       save.addEventListener('click',   (ev) => { ev.stopPropagation();
                                                  if (!save.disabled) onSave(ta.value.trim()); });
-      row.append(cancel, save);
+      const hint = document.createElement('span');
+      hint.className = 'ric-editor-hint';
+      hint.textContent = 'paste / drop image';
+      row.append(hint, cancel, save);
       ed.append(ta, row);
       div.append(q, ed);
       div._textarea = ta;
