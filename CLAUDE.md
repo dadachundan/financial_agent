@@ -1,5 +1,7 @@
 # Workflow Instructions
 
+When the user asks for a fix — "fix it", "patch it", "why does X render like that", or any phrasing that points at a concrete bug they want closed — **just fix it**. Do not ask "want me to apply the fix?" / "should I patch this?" / "do you want me to go ahead?" The request to fix is already on the table; asking again is friction. Diagnose, edit, verify, commit, push. If the fix branches (two plausible approaches with real trade-offs), pick the better one and say so in the commit message — don't stall on confirmation.
+
 Before writing any code:
 1. Ensure the current branch is synced to `main` HEAD:
 ```

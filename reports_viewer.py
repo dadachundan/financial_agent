@@ -945,10 +945,23 @@ _VIEW_TMPL = r"""<!doctype html>
       // backslash-letter LaTeX command (\rightarrow, \circ, \text…) so
       // currency amounts ($5.84B, $1.4 …) never match. This admits
       // expressions like $0^\circ\text{C}$ that start with a digit.
-      const re = /\$([^$\n]*?\\[A-Za-z]+[^$\n]*?)\$/g;
+      //
+      // Lookarounds (?<!\$) and (?!\$) keep this from biting into a
+      // $$...$$ display-math pair — otherwise the inner $...\X...$ gets
+      // converted to \(...\) and KaTeX renders the inside while the
+      // outer $ chars survive as stray literal text around the formula.
+      const re = /(?<!\$)\$([^$\n]*?\\[A-Za-z]+[^$\n]*?)\$(?!\$)/g;
+      // $X$ → \(X\) for short single-identifier inline math like $CD$,
+      // $x_1$, $E$. The content must start with a letter and stay below
+      // ~16 chars of [A-Za-z0-9_^{}], so it never matches a currency
+      // amount (digits/comma/period start) or a multi-word sentence
+      // spanning two unrelated dollar amounts. The same lookarounds
+      // keep $$...$$ untouched.
+      const reIdent = /(?<![\$\w])\$([A-Za-z][A-Za-z0-9_^{}]{0,15})\$(?![\$\w])/g;
       for (const node of nodes) {
         if (!node.nodeValue.includes("$")) continue;
-        const nv = node.nodeValue.replace(re, "\\($1\\)");
+        let nv = node.nodeValue.replace(re, "\\($1\\)");
+        nv = nv.replace(reIdent, "\\($1\\)");
         if (nv !== node.nodeValue) node.nodeValue = nv;
       }
     }
