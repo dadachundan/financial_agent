@@ -155,9 +155,11 @@ def fig_peer_multiples():
 def fig_geographic_mix():
     # FY25 10-K MD&A "Revenues by region, based on ship-to location"
     regions = ["China", "Taiwan", "Korea", "Japan", "North America", "Europe & Other"]
-    fy23 = [27, 24, 18, 11, 12, 8]      # %
-    fy24 = [43, 18, 9, 11, 12, 7]
-    fy25 = [33, 27, 12, 11, 11, 6]
+    # FY25 10-K MD&A: China, Taiwan, Korea, North America, Japan, Europe & Israel, Rest of Asia.
+    # "Europe & Other" = Europe & Israel + Rest of Asia in this chart.
+    fy23 = [27, 24, 18, 9, 12, 10]
+    fy24 = [43, 18, 9, 10, 11, 9]
+    fy25 = [33, 27, 12, 9, 11, 8]
     x = np.arange(len(regions))
     width = 0.27
     fig, ax = plt.subplots(figsize=(10, 5.5))
@@ -179,6 +181,37 @@ def fig_geographic_mix():
     plt.close(fig)
 
 
+# ── 7) Quarterly revenue trend (Q1 FY25 – Q3 FY26 + Q4 FY26 guide) ──────────
+def fig_quarterly_trend():
+    quarters = ["Q1\nFY25", "Q2\nFY25", "Q3\nFY25", "Q4\nFY25",
+                "Q1\nFY26", "Q2\nFY26", "Q3\nFY26", "Q4 FY26\n(guide mid)"]
+    # All from quarterly earnings 8-Ks (Oct 30 2024 → Apr 29 2026).
+    # Q4 FY26 guidance midpoint from Apr 29 2026 release.
+    # Q2 FY25 GAAP EPS reflects a $239.1M ($1.76/share) goodwill impairment.
+    rev = [2_843, 3_077, 3_063, 3_175, 3_210, 3_297, 3_415, 3_575]
+    eps_non_gaap = [7.33, 8.20, 8.41, 9.38, 8.81, 8.85, 9.40, 10.55]
+    fig, ax1 = plt.subplots(figsize=(11, 5.5))
+    colors = ["#1f4e79"]*7 + ["#888888"]
+    bars = ax1.bar(quarters, rev, color=colors)
+    ax1.set_ylabel("Quarterly revenue (USD millions)", color="#1f4e79")
+    ax1.set_ylim(0, max(rev)*1.15)
+    for b, v in zip(bars, rev):
+        ax1.text(b.get_x() + b.get_width()/2, v + 50, f"${v:,}M",
+                 ha="center", fontsize=9, color="#1f4e79", fontweight="bold")
+    ax2 = ax1.twinx()
+    ax2.plot(quarters, eps_non_gaap, color="#c0504d", marker="o", linewidth=2.2,
+             label="Non-GAAP diluted EPS ($)")
+    for x, y in zip(quarters, eps_non_gaap):
+        ax2.text(x, y + 0.18, f"${y:.2f}", ha="center", fontsize=9, color="#c0504d")
+    ax2.set_ylabel("Non-GAAP diluted EPS ($)", color="#c0504d")
+    ax2.set_ylim(6, 12)
+    ax1.set_title("KLA — Quarterly Revenue and Non-GAAP EPS, Q1 FY2025 – Q4 FY2026E",
+                  fontsize=13, fontweight="bold")
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "klac_quarterly_trend.png"), dpi=150, bbox_inches="tight")
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     fig_revenue_gm()
     fig_segment_revenue()
@@ -186,7 +219,8 @@ if __name__ == "__main__":
     fig_fcf_capital_return()
     fig_peer_multiples()
     fig_geographic_mix()
+    fig_quarterly_trend()
     print("Saved charts:")
     for name in ("revenue_gm", "segments", "services", "capital_return",
-                 "peer_multiples", "geo_mix"):
+                 "peer_multiples", "geo_mix", "quarterly_trend"):
         print(f"  {OUT}/klac_{name}.png")
