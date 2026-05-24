@@ -131,31 +131,8 @@ __URLPATCH__
     <span class="badge text-dark fs-6" style="background:#d1ecf1;border:1px solid #bee5eb">🦾 Robotics {{ stats.cat_robotics }}</span>
     <span class="badge text-dark fs-6" style="background:#e2d9f3;border:1px solid #c5b3e6">💡 Semi {{ stats.cat_semi }}</span>
     <span class="badge text-dark fs-6" style="background:#fff3cd;border:1px solid #ffe083">⚡ Energy {{ stats.cat_energy }}</span>
-    {% if stats.no_pdf > 0 %}
-    <button class="btn btn-sm btn-outline-danger ms-2"
-            onclick="deleteNoPdf({{ stats.no_pdf }})">🗑 Delete {{ stats.no_pdf }} rows without PDF</button>
-    {% endif %}
-    <a href="{{ _base | default('') }}/print-view?{{ query_string }}" target="_blank"
-       class="btn btn-sm btn-outline-secondary ms-2">📄 Export PDF</a>
     <a href="{{ _base | default('') }}/feed" target="_blank"
        class="btn btn-sm btn-outline-primary ms-2">📓 ZSXQ Notes</a>
-    <button class="btn btn-sm btn-outline-info ms-2"
-            onclick="enrichTickers(this)"
-            title="Look up Chinese company names for bare ticker codes (e.g. 688981 → 中芯国际 688981)">🏷 Enrich Tickers</button>
-    <!-- Download new posts -->
-    <div class="d-flex align-items-center gap-1 ms-2">
-      <input id="dlCount" type="number" value="20" min="1" max="500"
-             class="form-control form-control-sm" style="width:70px"
-             title="Number of posts to download">
-      <button class="btn btn-sm btn-outline-success" onclick="startZsxqDownload()"
-              id="dlBtn">⬇ Fetch new</button>
-    </div>
-  </div>
-  <!-- Download log (hidden until active) -->
-  <div id="dlPanel" style="display:none" class="mb-2">
-    <div id="dlLog" style="font-family:monospace;font-size:.75rem;height:140px;
-         overflow-y:auto;background:#1e1e1e;color:#d4d4d4;border-radius:6px;
-         padding:6px 10px"></div>
   </div>
 
   <!-- Status filters -->
@@ -1539,25 +1516,104 @@ def set_comment(file_id: int):
 
 @zsxq_bp.route("/feed")
 def feed():
+    """Merged research-notes feed.
+
+    For every zsxq PDF that has *either* a legacy whole-PDF comment
+    (`pdf_files.comment`, the field set via the index-page comment box or
+    via the 📌 sync-annotations button) *or* one or more selection-anchored
+    comments/highlights from the in-browser viewer
+    (`pdf_inline_comments` in db/notes.db), we render one card per PDF
+    with all of its annotations concatenated, ordered by page number.
+
+    SEC reports with a comment are merged in as before.
+    """
     from flask import render_template_string
     from pathlib import Path as _Path
+    import pdf_inline_comments as _pic
+    _pic.init_db()
+
     conn = get_conn()
-    zraw = conn.execute("""
-        SELECT file_id AS id, name, comment, bank,
+    legacy_raw = conn.execute("""
+        SELECT file_id AS id, name, comment, bank, local_path,
                COALESCE(comment_updated_at, create_time, '') AS date
         FROM   pdf_files
         WHERE  comment IS NOT NULL AND comment != ''
     """).fetchall()
+    by_id: dict[int, dict] = {r["id"]: dict(r) for r in legacy_raw}
+
+    # Per-page comments/highlights from the in-browser viewer.
+    inline_conn = sqlite3.connect(_pic.DB_PATH)
+    inline_conn.row_factory = sqlite3.Row
+    inline_rows = inline_conn.execute("""
+        SELECT id, file_id, page, quote, body,
+               COALESCE(updated_at, created_at) AS date
+        FROM   pdf_inline_comments
+    """).fetchall()
+    inline_conn.close()
+
+    inline_by_file: dict[int, list[dict]] = {}
+    for ir in inline_rows:
+        inline_by_file.setdefault(ir["file_id"], []).append(dict(ir))
+
+    # Fill in PDF metadata for files that have only inline annotations.
+    extra_ids = [fid for fid in inline_by_file if fid not in by_id]
+    if extra_ids:
+        placeholders = ",".join(["?"] * len(extra_ids))
+        extra = conn.execute(
+            f"SELECT file_id AS id, name, bank, local_path, "
+            f"  COALESCE(create_time, '') AS date "
+            f"FROM pdf_files WHERE file_id IN ({placeholders})",
+            tuple(extra_ids),
+        ).fetchall()
+        for r in extra:
+            by_id[r["id"]] = dict(r) | {"comment": ""}
     conn.close()
 
-    rows = [
-        dict(r) | {
-            "badge":    r["bank"] or "ZSXQ",
+    def _excerpt(s: str, n: int = 120) -> str:
+        s = (s or "").strip().replace("\n", " ")
+        return s if len(s) <= n else s[: n - 1].rstrip() + "…"
+
+    def _format_annotation(ann: dict) -> str:
+        page = ann.get("page") or 0
+        quote = _excerpt(ann.get("quote") or "", 140)
+        body = (ann.get("body") or "").strip()
+        if body:
+            head = f"**p{page}**" + (f" — *“{quote}”*" if quote else "")
+            return f"{head}\n\n{body}"
+        # Highlight-only: show the quote as the content (no body to render).
+        if quote:
+            return f"**p{page}** — 🖍 *“{quote}”*"
+        return f"**p{page}** — 🖍 (region highlight)"
+
+    rows: list[dict] = []
+    for file_id, info in by_id.items():
+        annotations = inline_by_file.get(file_id, [])
+        annotations.sort(key=lambda a: (a.get("page") or 0, a.get("id") or 0))
+
+        parts: list[str] = []
+        legacy_body = (info.get("comment") or "").strip()
+        if legacy_body:
+            parts.append(f"**Overview** *(whole-PDF note)*\n\n{legacy_body}")
+        for ann in annotations:
+            parts.append(_format_annotation(ann))
+        if not parts:
+            continue
+        combined = "\n\n---\n\n".join(parts)
+
+        # Card date = newest of legacy + inline timestamps so the most
+        # recently annotated PDFs rise to the top.
+        latest_inline = max((a.get("date") or "" for a in annotations), default="")
+        card_date = max(info.get("date") or "", latest_inline)
+
+        rows.append({
+            "id":       info["id"],
+            "name":     info.get("name") or "",
+            "comment":  combined,
+            "date":     card_date,
+            "badge":    info.get("bank") or "ZSXQ",
             "pinned":   0,
-            "open_url": "/zsxq/open-local/" + str(r["id"]),
-        }
-        for r in zraw
-    ]
+            "open_url": "/zsxq/open-local/" + str(info["id"]),
+        })
 
     # Also pull SEC reports with comments — same DB schema lives in
     # db/financial_reports.db. Merge into the same feed.
