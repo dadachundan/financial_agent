@@ -25,8 +25,10 @@ import json as _json
 from flask import Flask, Blueprint, Response, abort, jsonify, render_template_string, request, send_file
 import ticker_names as _tn
 
+from db_paths import db_path
+
 SCRIPT_DIR       = Path(__file__).parent
-DEFAULT_DB       = SCRIPT_DIR / "db" / "zsxq.db"
+DEFAULT_DB       = db_path("zsxq.db")
 UPLOADS_DIR      = SCRIPT_DIR / "uploads"
 
 try:
@@ -1670,6 +1672,10 @@ def _ocr_region(page, rect, scale: float = 2.0, full_width: bool = False) -> str
         request = Vision.VNRecognizeTextRequest.alloc().init()
         request.setRecognitionLevel_(Vision.VNRequestTextRecognitionLevelAccurate)
         request.setUsesLanguageCorrection_(True)
+        # Pin languages — without this Vision auto-detects per crop and
+        # sometimes mis-classifies Chinese characters as Cyrillic on small
+        # or stylized snippets (e.g. chart titles, watermarks).
+        request.setRecognitionLanguages_(["zh-Hans", "zh-Hant", "en-US"])
         handler.performRequests_error_([request], None)
         results = request.results() or []
         texts = [r.topCandidates_(1)[0].string() for r in results if r.topCandidates_(1)]
