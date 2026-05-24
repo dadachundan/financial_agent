@@ -903,48 +903,72 @@ _VIEWER_TMPL = r"""<!doctype html>
 
   // Fetch OCR'd word boxes for a scanned page and inject them as positioned
   // spans inside the PDF.js text layer div. Spans are transparent + cover
-  // their word's bbox, so native text selection picks up the OCR'd text.
+  // each word's bbox, so native text selection picks up the OCR'd text AND
+  // Chrome's find-in-page highlights the right region (vs. highlighting the
+  // wrong column inside a line-level span when the layout font's metrics
+  // don't match the PDF's font).
+  //
+  // ocrmac returns LINE-level bboxes. We use a hidden canvas to measure
+  // each word's pixel width in the layout font, then proportionally
+  // allocate the line's CSS width across the words so each word sits
+  // approximately where its glyphs appear on the canvas underneath.
+  const _measureCanvas = document.createElement('canvas');
+  const _measureCtx = _measureCanvas.getContext('2d');
+  function _measureTextWidth(text, fontSize) {
+    _measureCtx.font = fontSize + 'px -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif';
+    return _measureCtx.measureText(text).width;
+  }
   async function injectOcrTextLayer(pageNum, textLayerDiv, vp) {
-    let resp;
-    try {
-      resp = await api('/pdf-page-ocr', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({ file_id: FILE_ID, page: pageNum }),
-      });
-    } catch (e) { throw e; }
-    const words = (resp && resp.words) || [];
-    if (!words.length) return;
+    const resp = await api('/pdf-page-ocr', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ file_id: FILE_ID, page: pageNum }),
+    });
+    const lines = (resp && resp.words) || [];
+    if (!lines.length) return;
     const W = vp.width, H = vp.height;
-    // PDF.js's textLayer CSS already styles spans (color:transparent,
-    // position:absolute). We just add positioned spans and a trailing
-    // newline-ish separator between rows so multi-line selections produce
-    // readable copy-paste output.
+
     let prevRow = -1;
-    for (const w of words) {
-      const top  = w.y * H;
-      const left = w.x * W;
-      const ww   = w.w * W;
-      const hh   = w.h * H;
-      // Group into rough text rows (~8px tolerance in CSS px). Insert a
-      // line-break span between rows so the browser inserts '\n' on copy.
+    for (const line of lines) {
+      const top   = line.y * H;
+      const left  = line.x * W;
+      const lineW = line.w * W;
+      const lineH = line.h * H;
+      const fontSize = Math.max(4, lineH);
+
+      // Row separator: an inserted <br> between visually-distinct rows
+      // produces '\n' in copy-paste output and matches the line breaks the
+      // user would expect across a paragraph.
       const rowKey = Math.round(top / 8);
       if (rowKey !== prevRow && prevRow !== -1) {
-        const br = document.createElement('br');
-        textLayerDiv.appendChild(br);
+        textLayerDiv.appendChild(document.createElement('br'));
       }
       prevRow = rowKey;
-      const span = document.createElement('span');
-      span.className = 'ocr-word';
-      span.style.left   = left + 'px';
-      span.style.top    = top  + 'px';
-      span.style.width  = ww   + 'px';
-      span.style.height = hh   + 'px';
-      // font-size approximates the box height so character widths roughly
-      // match. Trailing space so adjacent word selections include a space.
-      span.style.fontSize = Math.max(4, hh) + 'px';
-      span.textContent = w.t + ' ';
-      textLayerDiv.appendChild(span);
+
+      // Split the line text into tokens, KEEPING whitespace so we can
+      // accumulate offsets correctly. Emit a span per non-empty token.
+      const tokens = (line.t || '').split(/(\s+)/);
+      const fullW = Math.max(0.0001, _measureTextWidth(line.t, fontSize));
+      const k = lineW / fullW;  // scale from layout-font pixels → OCR bbox CSS pixels
+      let cumLayoutW = 0;
+      for (const tok of tokens) {
+        const tokW = _measureTextWidth(tok, fontSize);
+        if (tok && tok.trim()) {
+          const span = document.createElement('span');
+          span.className = 'ocr-word';
+          span.style.left     = (left + cumLayoutW * k) + 'px';
+          span.style.top      = top + 'px';
+          span.style.width    = Math.max(2, tokW * k) + 'px';
+          span.style.height   = lineH + 'px';
+          span.style.fontSize = fontSize + 'px';
+          // Trailing space → adjacent word selections include a space when
+          // copied. Browser also positions a real space glyph that helps
+          // selection extension across word boundaries.
+          span.textContent = tok + ' ';
+          textLayerDiv.appendChild(span);
+        }
+        cumLayoutW += tokW;
+      }
     }
   }
 
