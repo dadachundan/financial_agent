@@ -369,8 +369,12 @@ _VIEWER_TMPL = r"""<!doctype html>
     .pic-hl-pop button:hover{background:#eef4fb}
     .pic-hl-pop button.danger:hover{background:#fdecea;color:#c0392b}
 
-    /* Comments rail — clone of /claude-reports/view comments-rail */
-    .comments-rail{flex:0 0 auto;width:340px;min-width:240px;max-width:700px;
+    /* Comments rail — clone of /claude-reports/view comments-rail.
+       Default width scales with viewport via clamp() so the rail keeps
+       proportions on a wide monitor; user can still drag to override
+       (the chosen width is persisted to localStorage). */
+    .comments-rail{flex:0 0 auto;width:clamp(340px, 28vw, 720px);
+                   min-width:240px;max-width:720px;
                    position:relative;min-height:200px;
                    padding:24px 8px 24px 14px;box-sizing:border-box;
                    background:#3a3e41}
@@ -506,6 +510,8 @@ _VIEWER_TMPL = r"""<!doctype html>
     <button type="button" class="zoom-btn" id="zoomOut" title="Zoom out">−</button>
     <span class="zoom-val" id="zoomVal">100%</span>
     <button type="button" class="zoom-btn" id="zoomIn" title="Zoom in">+</button>
+    <button type="button" class="zoom-btn" id="zoomFit"
+            title="Fit page to the available document width">⤢ Fit</button>
     <span class="page-info">
       <input type="number" class="page-input" id="pageInput" min="1" value="1">
       / <span id="pageTotal">?</span>
@@ -737,8 +743,40 @@ _VIEWER_TMPL = r"""<!doctype html>
     setupLazyRender();
     setupPageInputTracker();
 
+    // Auto-fit page width to the available document panel on first load,
+    // so users on wide monitors don't see a tiny page floating in the
+    // middle. The user can still zoom in/out from there.
+    fitToWidth({ skipRerender: true });
+
     // Pre-fetch comments and render orphan-able cards immediately.
     await loadAndRender();
+  }
+
+  // Compute the scale that makes the median page width fill the doc
+  // panel, then apply it. Called from the topbar ⤢ Fit button + once on
+  // initial load. `skipRerender` is used during loadPdf to avoid an
+  // unnecessary re-render cycle before any page has rendered.
+  function fitToWidth(opts) {
+    let docW = Math.max(200, docEl.clientWidth - 24);
+    // If the rail is currently hidden (no comments yet) but the viewport
+    // is wide enough to show it, reserve its CSS-default width so the
+    // first comment doesn't shrink the doc panel mid-session.
+    if (rail.classList.contains('hidden') && window.innerWidth > 1080) {
+      const railDefaultW = Math.min(720, Math.max(340, window.innerWidth * 0.28));
+      docW -= railDefaultW + 6;  // splitter width
+    }
+    const widths = pageDivs.map(d => d._intrinsic && d._intrinsic.w).filter(Boolean);
+    if (!widths.length) return;
+    widths.sort((a, b) => a - b);
+    const medianW = widths[Math.floor(widths.length / 2)];
+    const newScale = Math.max(0.5, Math.min(3.0, docW / medianW));
+    if (opts && opts.skipRerender) {
+      scale = newScale;
+      zoomVal.textContent = Math.round(scale * 100) + '%';
+      for (const d of pageDivs) sizePage(d, d._intrinsic);
+    } else {
+      applyScale(newScale);
+    }
   }
 
   function sizePage(div, dims) {
@@ -1979,6 +2017,7 @@ _VIEWER_TMPL = r"""<!doctype html>
   // ── Zoom controls + page input ──────────────────────────────────────
   document.getElementById('zoomIn').addEventListener('click', () => applyScale(scale + 0.1));
   document.getElementById('zoomOut').addEventListener('click', () => applyScale(scale - 0.1));
+  document.getElementById('zoomFit').addEventListener('click', () => fitToWidth());
   pageInput.addEventListener('change', () => {
     const n = parseInt(pageInput.value, 10);
     if (n >= 1 && n <= (pdfDoc && pdfDoc.numPages || 1)) scrollToPage(n);
