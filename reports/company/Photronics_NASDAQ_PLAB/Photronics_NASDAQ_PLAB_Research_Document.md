@@ -209,4 +209,147 @@ graph TD
 
 Unlike a Lam Research (CSBG) or an Applied Materials (AGS — Applied Global Services), Photronics does **not** disaggregate an aftermarket / installed-base / service revenue line — there is no equivalent recurring-revenue segment to compare. The reason is the photomask business model itself: every mask is a single-use master delivered once for a given design, with no ongoing service fee per customer. The recurring nature of the business comes instead from **customer relationships** (once Photronics is qualified for a customer, "we will receive a specified percentage of that customer's photomask orders" — [PLAB 10-K FY25, Item 1](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)) and **revenue recognition** (Note 10 shows USD 818M of FY25 revenue recognized "over time" — 96% of total — vs. $31M "at a point in time", reflecting how mask sets are typically progressively delivered over the design ramp). The "over time" recognition pattern is the closest analog to a recurring-revenue moat ([PLAB 10-K FY25, Note 10 Revenue](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)).
 
+## 5. Customers & Go-to-Market
+
+### Customer segmentation and named buyers
+
+Photronics' customer set falls into four primary buckets, all serving downstream chip or panel manufacturing:
+
+1. **Pure-play foundries** — TSMC, Samsung Foundry, GlobalFoundries, UMC, SMIC, Hua Hong Semiconductor, Vanguard International Semiconductor (VIS), Powerchip / PSMC, Nexchip, ICRD;
+2. **Integrated device manufacturers (IDMs) and memory makers** — Intel, Micron, SK Hynix, Samsung (memory), Texas Instruments, STMicroelectronics, Infineon, NXP, ON Semiconductor;
+3. **Fabless semiconductor designers** — broad long-tail of designers releasing new tape-outs through one of the foundries above;
+4. **FPD makers** — Samsung Display, LG Display, BOE, China Star Optoelectronics (TCL CSOT), Tianma, Innolux, AUO, Japan Display.
+
+Photronics does **not name individual customers in the 10-K** ([PLAB 10-K FY25, Item 1](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)) — only "Customer A, B, and C" — but the customer roster above is reconstructible from the JV structures (TSMC is the historical anchor for the PDMC Taiwan JV; Samsung is the historical anchor for the Korea facility, where FPD R&D sits; BOE / China Star / Tianma / SMIC / Hua Hong are the primary anchors for the Xiamen PDMCX JV) and from the 10-K's own description of "integrated device manufacturers, fabless semiconductor companies, and 'pure-play' foundries" as customer types ([PLAB 10-K FY25, Item 1 Markets](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)).
+
+### Customer concentration (REQUIRED — disclosed in 10-K)
+
+Photronics is transparent on concentration metrics, though anonymous on names:
+
+> "During 2025, we sold our products to approximately **636 customers**. For fiscal year 2025, **Customer A, B and C accounted for approximately 16%, 13% and 8%, of consolidated revenue, respectively**. For fiscal year 2024, Customer A, B and C accounted for approximately 15%, 12% and 9% of consolidated revenue, respectively. For fiscal year 2023, Customer A, B and C accounted for approximately 14%, 10% and 13% of consolidated revenue, respectively. **No other customer represented 10% or more of consolidated revenue in any of the three fiscal years**. **Our five largest customers, in the aggregate, accounted for approximately 50%, 50% and 51% of our revenue in 2025, 2024 and 2023**, respectively." — [PLAB 10-K FY25, Item 1 Markets](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)
+
+This is **a material concentration profile**: top-1 customer ≥14% for three consecutive years; top-2 combined 29% in FY25 (vs. 27% FY24 and 24% FY23 — the trend is *up*, not down); top-3 = 37% in FY25; top-5 has held steady at ~50%. By the Section 9 risk-taxonomy thresholds (top-1 > 10% / top-5 > 30% triggers risk-disclosure; top-1 > 20% or top-5 > 50% is "material"), Photronics meets the "material" threshold at top-5 = 50% in two of three years and is right at the line in FY25. The risk is carried into Section 9.
+
+```mermaid
+pie showData title FY25 revenue by customer concentration (anonymous per 10-K disclosure)
+    "Customer A" : 16
+    "Customer B" : 13
+    "Customer C" : 8
+    "Customers 4-5 (combined)" : 13
+    "All other (631 customers)" : 50
+```
+
+*Source: percentages from [PLAB 10-K FY25, Item 1 Markets](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm). Customers 4-5 derived as the difference: top-5 cumulative (50%) minus top-3 cumulative (37%).*
+
+**Three-year trend.** Top-5 share of 50% / 50% / 51% (FY25 / FY24 / FY23) — essentially flat. Top-1 share of 16% / 15% / 14% has crept up slightly each year. Top-2 + Top-3 combined has moved from 24%+13%=37% (FY23, where Cust C briefly outranked Cust B) to 27%+9%=36% (FY24) to 29%+8%=37% (FY25). **The headline story is mix-shift inside the top customer**, not aggregate concentration drift. Concentration severity is **material** by the project's risk-taxonomy definition (top-5 > 50% in two of three years).
+
+### Contract structure and switching costs
+
+Photronics describes the supplier-qualification process as a high-bar gating step that creates switching cost:
+
+> "Generally, Photronics and each of its customers engage in a **qualification and correlation process** before we become an approved supplier. Thereafter, based on the customer's specifications, we typically negotiate pricing parameters for the customer's order. **In many instances, we enter into sales arrangements with an understanding that, as long as our performance is competitive, we will receive a specified percentage of that customer's photomask orders**." — [PLAB 10-K FY25, Item 1 Industry](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)
+
+Translation: once a Photronics fab is qualified for a given customer's process, the customer typically commits a fixed share of mask orders (e.g. 30% / 40% / 50% split between two or three approved mask suppliers) rather than re-bidding every order. This is the operational moat — mask qualification is expensive in time (months to qualify a new mask supplier for a new wafer fab process) and in customer-side risk (a sub-optimally written mask can ruin a $20M wafer lot). So while no individual order is binding, the customer's annual mask spend share is sticky.
+
+### Go-to-market — direct sales with local-language teams
+
+Photronics goes to market via **direct sales** — there is no channel / distributor layer. From the 10-K:
+
+> "We conduct our sales and marketing activities primarily through a staff of **full-time sales personnel and customer service representatives who work closely with the Company's management and technical personnel**. We support non-U.S. customers through both our domestic and foreign facilities and consider our presence in non-U.S. markets to be an important factor in attracting new customers, as it provides global solutions to our customers, minimizes delivery time, and allows us to serve customers that utilize manufacturing foundries outside of the United States, principally in Asia." — [PLAB 10-K FY25, Item 1 Sales and Marketing](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)
+
+The recent SVP-Global-Sales appointment of Jeff Catlin in January 2026 ([Photronics press release 2026-01-08](https://www.globenewswire.com/news-release/2026/01/08/3215308/0/en/Photronics-Appoints-Jeff-Catlin-Senior-Vice-President-Global-Sales.html)) was framed as creating "a unified" global sales organization — suggesting the prior structure was regionally siloed (which fits the 11-site facility footprint). Whether this consolidation produces meaningful cross-region sell-through (e.g. a Korean AMOLED customer using Photronics' Korea + China facilities together) is a near-term operational watchpoint.
+
+### Geographic footprint of revenue
+
+![Photronics revenue by geography of origin (FY23–FY25)](../../charts/photronics_geo_mix.png)
+
+*Source: [PLAB 10-K FY25, Note 10 Revenue by Geographic Origin](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm) — the table disaggregates revenue by location in which it was earned (i.e., manufacturing-site origin, not customer billing address).*
+
+Taiwan is the largest origin geography ($284M FY25, 33%), reflecting the PDMC Taiwan JV's central role serving TSMC/UMC. China is the second-largest at $221M (26%) — predominantly the PDMCX Xiamen and Hefei facilities serving SMIC, Hua Hong, Nexchip, BOE, Tianma, China Star. Korea ($158M, 19%) is the FPD Cheonan facility serving Samsung Display / LG Display. The US ($149M, 18%) primarily comprises Boise (Micron-anchored), Brookfield, and Allen — with Intel and Texas Instruments / ST / Infineon as additional anchor customers. Europe ($34M, 4%) is the Dresden and Manchester / Bridgend sites serving European IDMs (Infineon, STMicroelectronics, NXP, Bosch) — small but defensible. **Cross-border note**: PDMCX's "revenue by geography of origin" is China-sited but the customers themselves are global, so the geographic-origin table understates the true cross-border revenue exposure.
+
+## 6. Industry Overview
+
+### Industry definition and scope
+
+The **global photomask industry** is the supply of high-precision optical masters used in semiconductor (IC) photolithography and flat-panel-display (FPD) lithography. Total industry revenue in 2024 was approximately **USD 9.8 billion**, split between IC photomasks (~$6.2B, ~63% of total) and FPD photomasks (~$3.6B, ~37%) ([SEMI 2024 Photomask Equipment & Materials Report — referenced via Nomura Greater China Semi note, p. 18-25](/Users/x/projects/financial_agent/reports/sector/半导体材料.md); [Yole Group Photomask Industry 2024](https://www.yolegroup.com/) — referenced via the same Nomura note). The industry is unusual in two ways: (a) **captive manufacturing** by IDMs (Intel, Samsung, TSMC's internal mask shops) accounts for a meaningful share (~35%) of total industry output — a residual of an older era when chipmakers built their own mask shops; (b) **merchant** suppliers like Photronics, Toppan, and DNP serve the remaining ~65%, with the trend over the last decade gradually moving toward merchant supply as the capital cost of leading-edge mask-writing tools rises.
+
+![Global photomask market — IC vs FPD, merchant vs captive (2024)](../../charts/photronics_market_split.png)
+
+*Source: Industry sizing composed from [SEMI Photomask Materials & Equipment Reports (annual)](https://www.semi.org/en) cited in [Nomura Greater China Semi note, p. 18-30](/Users/x/projects/financial_agent/reports/sector/半导体材料.md); merchant-vs-captive split aligns with [PLAB 10-K FY25 Item 1 Markets narrative](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm) on the historical trend back toward independent merchant supply.*
+
+### Growth rates and drivers
+
+The photomask market historically grows at a **mid-single-digit CAGR** — analyst consensus ranges from 4% to 7% — substantially slower than the broader semiconductor materials market (Nomura's anchor sector note projects ~6–8% CAGR for materials overall, 2024–2030) ([Nomura Greater China Semi note, p. 18-30](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)). The structural drivers are:
+
+1. **Design tape-out volume.** Mask demand is driven by the number of distinct designs released to production, not by wafer volume. A design refresh cycle that quickens (e.g. annual NVIDIA architecture refreshes, monthly fabless ASIC tape-outs) directly grows mask demand.
+2. **Layer count per advanced design.** At 28nm a logic chip has ~40 mask layers; at 5nm it has ~60; at 3nm it can exceed 65 — and with backside power delivery (BPD, expected 2028+) it adds an additional ~5 layers. **More layers per design = more masks per tape-out.**
+3. **EUV transition for the leading edge.** EUV masks are 5–10× more expensive than equivalent DUV masks — but Photronics does not participate, so EUV growth is not in PLAB's TAM.
+4. **AMOLED IT-panel ramp.** The shift of laptops, tablets, and monitors from LCD to AMOLED panels through 2024–2028 is creating a fresh design wave at LG Display, Samsung Display, BOE — directly addressable by Photronics' Korea facility ([Photronics press release 2026-03-31](https://www.globenewswire.com/news-release/2026/03/31/3265409/0/en/Photronics-Receives-Advanced-Mask-Writer-Expanding-AMOLED-Leadership.html); cross-referenced to industry projections in [Nomura Greater China Semi note](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)).
+5. **China-local foundry expansion.** SMIC, Hua Hong, Nexchip, GTA Semiconductor, and the growing wave of Chinese specialty fabs (BCD power, MCU, analog) need mask supply that cannot easily come from US-sanctioned channels — Photronics' Xiamen and Hefei JVs are structurally positioned for this ([Nomura Greater China Semi note, p. 12-14 on TSMC's domestic supply-chain rebalancing — same dynamic applies to China-domestic fabs](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)).
+
+### Industry structure — oligopoly with a long tail
+
+The merchant photomask industry is **highly concentrated at the leading edge**: only **Toppan, DNP, Hoya, and Photronics** can credibly supply ≤28nm IC masks at scale, and only Toppan, DNP, and Hoya have certified EUV mask production ([Yole Group photomask reports — referenced via Nomura Greater China Semi note p. 38-39](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)). At mainstream nodes the field broadens to include **Compugraphics (UK)**, **LG Innotek (Korea)**, **SK-Electronics (Japan)**, **Taiwan Mask Corporation**, **Shenzhen Newway Photomask**, **Shenzhen Qingyi Photomask**, and **Tekscend Photomask** — all of which Photronics names in its 10-K Competition section verbatim ([PLAB 10-K FY25, Item 1 Competition](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm); same list also appears in [Item 1A Risk Factors](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)).
+
+**Supplier power.** Photomask makers are themselves dependent on a narrow supply base: synthetic-quartz mask blanks from a small set of Japanese / Korean suppliers (Shin-Etsu, Hoya, AGC, Asahi), pellicles from a small set of specialty chemical suppliers, and mask-writing equipment from a near-duopoly (NuFlare in Japan for variable-shaped-beam; IMS Nanofabrication in Austria for multi-beam). The 10-K notes: "Raw materials used by Photronics generally include: high precision quartz substrates (including large area substrates for FPD), which are used as photomask starting blanks and are primarily obtained from **Japanese and South Korean suppliers**" ([PLAB 10-K FY25, Item 1 Resources](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)). Equipment supplier risk is also called out: "We rely on a **limited number of equipment suppliers** to develop and provide the equipment used in the photomask manufacturing process" ([same](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)).
+
+**Buyer power.** Photomask buyers are heavily concentrated — TSMC alone accounts for ~60% of global foundry revenue and a disproportionate share of advanced-node mask demand; Samsung Foundry adds another ~12%; the China foundries (SMIC, Hua Hong, Nexchip) collectively another ~10%. This gives the top 3–5 customers significant pricing power against merchant mask suppliers, especially at advanced nodes where buyer options are limited to 3–4 qualified suppliers globally.
+
+**Substitutes.** Direct-write electron-beam lithography (no mask required) has been a perennial threat since the 1990s but has never reached economically viable throughput for commercial wafer production — it remains a research and prototype tool. Multi-patterning (using 2 or 3 masks per critical layer to push design rules) actually *increases* mask demand. **The substitution risk to the industry is essentially zero on a 5-year horizon**; the substitution risk *within* the industry is the EUV-to-DUV mix shift (which favors EUV-capable players against DUV-only players like Photronics).
+
+### Regulatory environment
+
+The photomask industry sits on **two regulatory fault lines**: (a) **export controls** — US BIS Entity List restrictions and EAR foreign direct product rule (FDPR) restrictions on exports of advanced semiconductor manufacturing technology to China and certain end-users; (b) **tariffs** — including the US Commerce Section 232 investigation into semiconductors and semiconductor manufacturing equipment that PLAB flagged as a new risk factor in its FY25 10-K. Both bear directly on Photronics' China operations:
+
+> "Based on the complex relationships between the United States and certain foreign countries including, but not limited to China, there is inherent risk that political, diplomatic and national security influences might lead to trade disputes, impacts and/or disruptions to our operations or our ability to sell our photomasks. **The United States and other countries have imposed and may continue to impose trade restrictions and have also levied tariffs and taxes on certain semiconductor and FPD products.**" — [PLAB 10-K FY25, Item 1A Risk Factors](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)
+
+The **OBBB Act** ("One Big Beautiful Bill Act", enacted July 4, 2025) was also flagged in the FY25 10-K as material to FY26 tax planning ([PLAB FY25 multi-year SEC narrative](/Users/x/projects/financial_agent/reports/earnings/PLAB_20260525.md)).
+
+## 7. Competitive Landscape
+
+### The competitor list — verbatim from the 10-K
+
+PLAB names its competitors directly in two parallel locations in the FY25 10-K:
+
+> "Our competitors include **Compugraphics International, Ltd., Dai Nippon Printing Co., Ltd (outside of Taiwan and China), Hoya Corporation, LG Innotek Co., Ltd., Shenzhen Newway Photomask Making Co., Ltd., Shenzhen Qingyi Photomask, Ltd., SK-Electronics Co., Ltd., Taiwan Mask Corporation, and Tekscend Photomask.** We also compete with semiconductor and FPD manufacturers' captive photomask manufacturing operations that supply photomasks for internal use and, in some instances, also for external customers and foundries." — [PLAB 10-K FY25, Item 1 Competition](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm) (and again in [Item 1A Risk Factors competitive intensity section](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))
+
+The "DNP outside of Taiwan and China" qualifier is critical: in Taiwan and China, **DNP is Photronics' JV partner via PDMC and PDMCX** — i.e., partner, not competitor. Globally elsewhere, DNP is a direct competitor.
+
+Notable omissions from the 10-K's competitor list: **Toppan Holdings, Inc.** Photronics' single largest global merchant competitor by photomask revenue is not named in the Competition section — an unusual omission. Whether this is because Photronics regards Toppan as a partner-adjacent player (Toppan and DNP often serve overlapping customers but in non-overlapping geographies / nodes), an oversight, or a deliberate de-emphasis, the analyst should not infer. For the analytical mapping below, Toppan is included as a competitor based on third-party industry coverage (Nomura, SEMI, Yole) — but it is not on PLAB's own list.
+
+### The competitive map (analyst-constructed)
+
+| Competitor | Position | Geographic strength | Technology strength | Notes |
+|---|---|---|---|---|
+| **Toppan Holdings (7911 JP)** | Largest global merchant photomask supplier by revenue (~30% of merchant market — analyst est.) | Japan, Taiwan, US, EU | EUV-certified; full advanced-node coverage | Not named in PLAB 10-K Competition section but universally regarded as the lead merchant competitor |
+| **DNP — Dai Nippon Printing (7912 JP)** (ex-Taiwan, ex-China) | Second-largest global merchant supplier | Japan (primary) | EUV-certified | **Photronics JV partner inside Taiwan and China** — competitor only elsewhere |
+| **Hoya Corporation (7741 JP)** | EUV mask blank and EUV mask leader | Japan, Korea | ~80% global EUV mask blank share ([Nomura sector note, p. 18-30](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)) | The blank/write/inspection vertical integration makes Hoya a critical EUV-tier player |
+| **LG Innotek (011070 KS)** | Captive + merchant FPD masks (Korea) | Korea | High-end FPD | Direct competitor for Korean AMOLED FPD mask business |
+| **SK-Electronics (6677 JP)** | FPD and IC mask supplier | Japan | FPD high-end + mainstream IC | Niche FPD overlap with PLAB's Korea / Taichung sites |
+| **Compugraphics International (UK)** | UK-based mainstream IC + FPD merchant supplier | UK / EU | Mainstream nodes | Competitor for PLAB's Manchester / Bridgend / Dresden European business |
+| **Shenzhen Newway Photomask** | China domestic merchant supplier | China | Mainstream IC (rising) | The most active China-domestic competitor — has been ramping advanced-node capability with state support |
+| **Shenzhen Qingyi Photomask** | China domestic merchant supplier | China | Mainstream IC + FPD | Smaller scale than Newway but expanding |
+| **Tekscend Photomask** | US / Asia merchant supplier (joint venture between Toppan and IBM, now Toppan-led) | US, Asia | Mainstream IC | Spun out of Toppan's US operations |
+| **Taiwan Mask Corporation (2338 TT)** | Taiwan domestic merchant supplier | Taiwan | Mainstream IC | Smaller competitor to PLAB's PDMC Taiwan JV |
+| **Captive IDM mask shops** (Intel, Samsung, TSMC internal, Micron internal) | Captive | Globally distributed at each IDM | Mainly leading-edge | Compete only on insourced layers — but increasingly outsource as capital cost rises |
+
+*Sources for competitor information beyond PLAB's 10-K: [Nomura Greater China Semi note, p. 18-30 and p. 38-39](/Users/x/projects/financial_agent/reports/sector/半导体材料.md); each competitor's own corporate website (linked in 4.3–4.5 above); Yole Group's 2024 Photomask Industry Report (subscription required — referenced via Nomura note).*
+
+### Photronics' competitive advantages
+
+1. **Largest US-headquartered merchant photomask supplier with the most diverse geographic footprint.** Eleven facilities across five regions — no other merchant supplier matches that diversity. Toppan and DNP are Japan-headquartered with smaller offshore footprints; Hoya is concentrated in Japan and Korea. *Analyst view:* this is Photronics' single largest structural moat.
+2. **Mainstream node leadership outside Japan.** *Analyst view:* in mainstream IC masks below 28nm-equivalent, Photronics is widely regarded as one of the leading non-captive suppliers outside Japan ([Nomura sector note discussion of merchant photomask competitive landscape, p. 18-30](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)). The 10-K confirms only that mainstream nodes are "the majority of designs currently being fabricated in volume" and that Photronics has "full lines of photomasks" at these nodes ([PLAB 10-K FY25, Item 1 Industry](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)).
+3. **Korea FPD R&D center → AMOLED leadership position.** The Cheonan facility's geographic and customer proximity to Samsung Display and LG Display, combined with the March 2026 advanced-mask-writer delivery, positions Photronics for the multi-year AMOLED IT-panel cycle.
+4. **China JV with DNP gives privileged access to a non-trivial slice of Chinese semi demand.** SMIC, Hua Hong, Nexchip, and the China-domestic IC supply chain has been actively shifting away from US-controlled supply lines under export-control pressure; Photronics' PDMCX consolidates into US financials but is operationally a China-domestic supplier — a useful hybrid status.
+5. **Capital discipline and shareholder return.** The buyback program is sized ($97.4M in FY25 = ~3.2% of market cap returned in a single year) and the balance sheet is clean (net cash position; minimal debt) — uncommon among photomask peers ([PLAB 10-K FY25, Item 5](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)).
+
+### Photronics' competitive vulnerabilities
+
+1. **EUV exclusion is structural.** The transition from DUV to EUV at the very leading edge — currently 5%-ish of total industry mask demand by *layer count* but ~25%+ of high-end IC mask *value* — is one of three major industry trends Photronics will not capture. *Analyst view:* as long as Toppan, DNP, and Hoya continue to dominate EUV mask supply, Photronics is locked out of the value-pool at the highest ASP tier.
+2. **China geopolitical compression.** PDMCX is 50.01% / 49.99% Photronics / DNP — but every facility in China that supplies semiconductor masks is a potential target for both US export controls (limiting Photronics' ability to ship advanced equipment or technology there) and China's countervailing industrial policy (favoring Newway / Qingyi / Tekscend / SMIC-internal). The risk is bidirectional.
+3. **Customer concentration steady at top-2 ≥29%.** While top-5 = 50% is below the project's "high severity" threshold, top-2 = 29% (with top-1 creeping up year-over-year) is meaningful. Cust A (likely TSMC or Samsung, per analyst inference) defection would cause material revenue dislocation.
+4. **Operating leverage in capex pulse.** The FY26 $330M capex guide doubles prior-year and triples FY23/24 — if the high-end IC and FPD ramp is slower than the capex implies, FY26 / FY27 free cash flow gets squeezed and the buyback may need to slow.
+
+
+
 
