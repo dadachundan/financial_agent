@@ -774,6 +774,23 @@ _VIEW_TMPL = r"""<!doctype html>
               font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
               font-size:.88rem;cursor:pointer;
               transition:box-shadow .15s, border-color .15s, transform .15s}
+    /* Per-card resize grip — sits on the card's left edge so users see
+       it without having to discover the thin rail-splitter. Dragging it
+       resizes the whole rail (cards are width-constrained to the rail,
+       so per-card width isn't independent). */
+    .ric-card-resize{position:absolute;left:-1px;top:0;bottom:0;width:8px;
+                     cursor:col-resize;display:flex;align-items:center;
+                     justify-content:center;
+                     border-top-left-radius:8px;border-bottom-left-radius:8px;
+                     transition:background .15s}
+    .ric-card-resize::before{content:"";width:2px;height:32px;
+                             background:#cbd1d9;border-radius:1px;
+                             transition:background .15s,width .15s,height .15s}
+    .ric-card:hover .ric-card-resize::before{background:#9aa3ad}
+    .ric-card-resize:hover{background:rgba(31,78,120,.06)}
+    .ric-card-resize:hover::before{background:#1F4E78;width:3px;height:40px}
+    .ric-card-resize.dragging{background:rgba(31,78,120,.12)}
+    .ric-card-resize.dragging::before{background:#1F4E78;width:3px;height:40px}
     .ric-card:hover{box-shadow:0 2px 8px rgba(0,0,0,.1);border-color:#a9bdd1}
     .ric-card.active{box-shadow:0 2px 12px rgba(31,78,120,.22);
                      border-color:#1F4E78;transform:translateX(-4px);
@@ -1128,14 +1145,17 @@ _VIEW_TMPL = r"""<!doctype html>
       const w = parseInt(localStorage.getItem(RAIL_W_KEY) || '', 10);
       if (w > 0) rail.style.width = clampRailW(w) + 'px';
     })();
-    if (splitter) {
+    // Reusable so per-card grips (.ric-card-resize) get the same
+    // behavior as the rail splitter — both resize the rail.
+    function attachRailDrag(handleEl) {
+      if (!handleEl) return;
       let startX = 0, startW = 0;
       const onMove = (e) => {
         // Dragging LEFT widens the rail (rail is on the right side).
         rail.style.width = clampRailW(startW + (startX - e.clientX)) + 'px';
       };
       const onUp = () => {
-        splitter.classList.remove('dragging');
+        handleEl.classList.remove('dragging');
         document.body.style.userSelect = '';
         document.removeEventListener('mousemove', onMove);
         document.removeEventListener('mouseup', onUp);
@@ -1146,16 +1166,18 @@ _VIEW_TMPL = r"""<!doctype html>
         // based on each card's measured content height.
         if (typeof layoutCards === 'function') layoutCards();
       };
-      splitter.addEventListener('mousedown', (e) => {
+      handleEl.addEventListener('mousedown', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         startX = e.clientX;
         startW = rail.getBoundingClientRect().width;
-        splitter.classList.add('dragging');
+        handleEl.classList.add('dragging');
         document.body.style.userSelect = 'none';
         document.addEventListener('mousemove', onMove);
         document.addEventListener('mouseup', onUp);
       });
     }
+    attachRailDrag(splitter);
 
     let pendingSelection = null;  // {quote, prefix, suffix, heading_anchor, rect}
     let comments        = [];     // current loaded comments (with .orphan flag)
@@ -1376,7 +1398,14 @@ _VIEW_TMPL = r"""<!doctype html>
       dBtn.addEventListener('click', (ev) => { ev.stopPropagation(); deleteOne(c.id); });
       actions.append(eBtn, dBtn);
 
-      div.append(q, b, viewBtn, meta, actions);
+      // Left-edge grip — wider drag target right on the card so users
+      // see and grab it (the thin rail-splitter was too easy to miss).
+      const grip = document.createElement('div');
+      grip.className = 'ric-card-resize';
+      grip.title = 'Drag to resize comments column';
+      attachRailDrag(grip);
+
+      div.append(grip, q, b, viewBtn, meta, actions);
       div.addEventListener('click', () => setActive(c.id, true));
       return div;
     }
