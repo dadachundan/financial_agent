@@ -112,7 +112,7 @@ Examples:
 - `research 比亚迪` (no override) → Chinese (auto-rule: HK + Chinese filings)
 - `research NVDA` (no override) → English (auto-rule: US listing)
 
-**Bilingual mode produces two complete, separate files in the same output folder**, not one interleaved document. Each file independently meets the 6,000–10,000 word target (Chinese counted in characters). Filenames follow the per-language convention (no date suffix — see the "Filenames" section below):
+**Bilingual mode produces two complete, separate files in the same output folder**, not one interleaved document. Each file independently meets the 6,000–10,000 word target (Chinese counted in characters). Filenames follow the per-language convention (no date suffix — see the "Filenames" section below; **English / pinyin component is mandatory in both files**):
 
 - `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Research_Document.md` (English)
 - `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_公司研究.md` (Chinese)
@@ -130,9 +130,10 @@ If the user gives no explicit instruction, fall back to the auto-rule above. If 
 **Direct quotations** stay in their original language regardless of the report's main language — add a short translation in parentheses only if the quote is load-bearing.
 
 **Filenames (no date suffix):**
-- Chinese reports: Simplified Chinese characters allowed in `[Company]` — `reports/company/安培龙_SZSE002050/安培龙_SZSE002050_公司研究.md`.
-- English reports: ASCII — `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Research_Document.md`, `reports/company/Alibaba_HKEX9988/Alibaba_HKEX9988_Research_Document.md`.
-- Never Japanese kana / kanji or Korean hangul in filenames.
+- **MANDATORY: every filename must include the company's English / pinyin name as the first slug component** — even for Chinese reports. The English name is what makes a file findable via `grep -r Kinik` / Spotlight / the viewer's search. A filename with only Chinese characters fails this test. **Format: `[EnglishName]_[中文名]_[EXCHANGE][CODE]`** (Chinese name optional but recommended for cross-language search).
+- Chinese reports: `reports/company/Kinik_中砂_TWSE1560/Kinik_中砂_TWSE1560_公司研究.md`, `reports/company/Anpeilong_安培龙_SZSE002050/Anpeilong_安培龙_SZSE002050_公司研究.md`. The English / pinyin component is **mandatory**, the Chinese name component is **strongly recommended** (so the file is findable by either name); ticker is mandatory.
+- English reports: ASCII — `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Research_Document.md`, `reports/company/Alibaba_HKEX9988/Alibaba_HKEX9988_Research_Document.md`. For Chinese companies, may also include 中文名: `reports/company/BYD_比亚迪_HKEX1211/BYD_比亚迪_HKEX1211_Research_Document.md`.
+- Never Japanese kana / kanji or Korean hangul in filenames; use Romaji / Romanization (e.g. `Toyota_TSE7203`, `Samsung_KRX005930`).
 - Do **not** append `_YYYY-MM-DD` to research-doc filenames. Only one EN file and one ZH file exist per company, so a date in the filename adds no signal and clutters the slug folder. Put today's date inside the document as an "as of" header instead; git history tracks the actual revision date.
 
 **Section headers (Chinese reports):** 公司概览, 公司历史, 管理团队, 产品与服务, 客户与上市策略, 行业概览, 竞争格局, 市场机会, 风险评估, 参考资料.
@@ -486,18 +487,20 @@ Save to **`reports/company/<Slug>/`** under the project root: `/Users/x/projects
 **`<Slug>`** is everything that comes before `_Research_Document` / `_公司研究` / `_研究报告` in the filename — i.e. the company name plus primary ticker, joined with `_`. The filename itself is repeated inside the slug folder (one folder per company holds EN and / or ZH).
 
 File name follows the report language — **no date suffix**:
-- **Chinese reports**: `[Company-中文名]_[EXCHANGE][CODE]_公司研究.md` — Simplified Chinese characters allowed.
-- **English reports**: `[Company]_[EXCHANGE][CODE]_Research_Document.md` — ASCII only.
-- Never Japanese kana / kanji or Korean hangul in filenames.
+- **MANDATORY: every filename starts with an English / pinyin name** so users can `grep` or search by either language. A filename like `中砂_TWSE1560_公司研究.md` is **wrong** — it cannot be found by searching for "Kinik". Correct: `Kinik_中砂_TWSE1560_公司研究.md`.
+- **Chinese reports**: `[EnglishName]_[中文名]_[EXCHANGE][CODE]_公司研究.md`. English / pinyin is **required first**; Chinese name **optional but recommended**; ticker required.
+- **English reports**: `[EnglishName]_[EXCHANGE][CODE]_Research_Document.md` (ASCII only) or `[EnglishName]_[中文名]_[EXCHANGE][CODE]_Research_Document.md` for Chinese companies.
+- Never Japanese kana / kanji or Korean hangul in filenames; use Romaji / Romanization.
 - **Do not append `_YYYY-MM-DD` to research-doc filenames.** Only one EN file and one ZH file exist per company, so a date in the filename adds no signal and clutters the slug folder. Put today's date inside the document as an "as of" header at the top instead; git history tracks the actual revision date.
 
 Examples:
-- `reports/company/安培龙_SZSE002050/安培龙_SZSE002050_公司研究.md` (A-share, Chinese report)
-- `reports/company/比亚迪_HKEX1211/比亚迪_HKEX1211_公司研究.md` (HK filing in Chinese)
+- `reports/company/Anpeilong_安培龙_SZSE002050/Anpeilong_安培龙_SZSE002050_公司研究.md` (A-share, Chinese report)
+- `reports/company/BYD_比亚迪_HKEX1211/BYD_比亚迪_HKEX1211_公司研究.md` (HK filing in Chinese)
+- `reports/company/Kinik_中砂_TWSE1560/Kinik_中砂_TWSE1560_公司研究.md` (TW, Chinese report)
 - `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Research_Document.md` (US, English)
 - `reports/company/Alibaba_HKEX9988/Alibaba_HKEX9988_Research_Document.md` (HK, English)
 - `reports/company/Toyota_TSE7203/Toyota_TSE7203_Research_Document.md` (Japan, English)
-- Tickerless private companies: use just the company name as slug, e.g. `reports/company/Unitree/Unitree_Research_Document.md`.
+- Tickerless private companies: use just the English / pinyin name as slug, e.g. `reports/company/Unitree/Unitree_Research_Document.md`.
 
 EN and ZH versions of the same report share one slug folder — ZH adds the suffix `_zh` (preferred) or `_CN` before `.md`, e.g. `Tesla_NASDAQ_TSLA_Research_Document_zh.md`.
 

@@ -171,6 +171,24 @@ The corresponding DB columns on `pdf_files` are `ocr_text` (cached
 page-marked text) and `ocr_at` (timestamp). Both are added by
 `ocr_pdf.py` on first use — no manual migration.
 
+# Research Report Filenames (MANDATORY — must include English / pinyin name)
+
+**Every research-report file and folder under `reports/company/` MUST start with the company's English or pinyin name as the first slug component**, even when the report itself is written in Chinese. The English name is what makes the file findable via `grep`, Spotlight, the viewer's search box, or just visual scanning of `ls`. A filename containing only Chinese characters (e.g. `中砂_TWSE1560_公司研究.md`) **fails this rule** — a reader searching for "Kinik" will not find it.
+
+**Correct format**: `[EnglishName]_[中文名 optional]_[EXCHANGE][CODE]_<suffix>.md`
+
+Examples:
+- ✅ `reports/company/Kinik_中砂_TWSE1560/Kinik_中砂_TWSE1560_公司研究.md`
+- ✅ `reports/company/BYD_比亚迪_HKEX1211/BYD_比亚迪_HKEX1211_Research_Document.md`
+- ✅ `reports/company/Anpeilong_安培龙_SZSE002050/Anpeilong_安培龙_SZSE002050_公司研究.md`
+- ✅ `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Research_Document.md` (no Chinese name needed for US issuers)
+- ❌ `reports/company/中砂_TWSE1560/中砂_TWSE1560_公司研究.md` — unsearchable by English name
+- ❌ `reports/company/比亚迪_HKEX1211/比亚迪_HKEX1211_公司研究.md` — same
+
+For Japanese / Korean issuers, use Romaji / Romanization (e.g. `Toyota_TSE7203`, `Samsung_KRX005930`) — never kana, kanji-only, or hangul.
+
+This rule also applies to **all other report categories** (`reports/sector/`, `reports/compare/`, `reports/earnings/`, `reports/explanation/`): the filename must contain enough English text to be searchable. Pure-Chinese filenames are not acceptable for cross-language discoverability.
+
 # Citation Standard for Research Reports
 
 All markdown reports under `reports/` (company / sector / compare / earnings / unlisted / etc.) must meet the project's paragraph-level citation standard. The authoritative spec is `.claude/skills/company-research/references/citations.md`. Summary:
