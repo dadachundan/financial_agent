@@ -87,7 +87,6 @@ __MCW_HEAD__
     .name-col       { max-width:180px; word-break:break-all; }
     .title-col      { max-width:200px; word-break:break-word; }
     .analysis-col   { max-width:200px; word-break:break-word; }
-    .cat-col        { min-width:80px; }
     .ticker-badge   { font-size:.72rem; font-weight:600; margin:1px 2px; display:inline-block;
                       background:#e8f0fe; color:#1a56db; border:1px solid #c3d3f7;
                       border-radius:4px; padding:1px 5px; white-space:nowrap; }
@@ -95,11 +94,6 @@ __MCW_HEAD__
     #searchBox      { max-width:240px; }
     .page-footer    { margin-top:24px; font-size:.8rem; color:#888; }
     .count-badge    { font-size:.75rem; }
-    .cat-badge      { font-size:.65rem; font-weight:700; padding:1px 4px; border-radius:3px;
-                      display:inline-block; margin:1px 0; white-space:nowrap; }
-    .cat-yes        { background:#d1f0d8; color:#155724; border:1px solid #b7dfbf; }
-    .cat-no         { background:#f0f0f0; color:#999;    border:1px solid #ddd; }
-    .cat-unk        { background:#fff8e1; color:#856404; border:1px solid #ffe083; }
     .tag-badge      { font-size:.72rem; font-weight:600; margin:1px 2px; display:inline-block;
                       background:#fce8d4; color:#8a3d00; border:1px solid #f0c090;
                       border-radius:4px; padding:1px 5px; white-space:nowrap; text-decoration:none; }
@@ -269,7 +263,6 @@ __URLPATCH__
           <th>File name</th>
           <th class="col-extra">🤖</th>
           <th>Title</th>
-          <th class="col-extra">Categories</th>
           <th class="col-extra">Tickers</th>
           <th class="col-extra">Tags</th>
           <th class="col-extra">Size</th>
@@ -306,23 +299,6 @@ __URLPATCH__
             {%- else %}{%- endif %}
           </td>
           <td class="title-col">{{ row.topic_title or '—' }}</td>
-
-          <!-- 4-category badges -->
-          <td class="cat-col col-extra">
-            {%- macro cat_badge(val, label) %}
-              {%- if val == 1 %}
-                <span class="cat-badge cat-yes">{{ label }}</span>
-              {%- elif val == 0 %}
-                <span class="cat-badge cat-no">{{ label }}</span>
-              {%- else %}
-                <span class="cat-badge cat-unk">{{ label }}?</span>
-              {%- endif %}
-            {%- endmacro %}
-            {{ cat_badge(row.ai_related,           '🤖 AI') }}
-            {{ cat_badge(row.robotics_related,     '🦾 Rob') }}
-            {{ cat_badge(row.semiconductor_related,'💡 Semi') }}
-            {{ cat_badge(row.energy_related,       '⚡ Nrg') }}
-          </td>
 
           <!-- Tickers cell -->
           <td class="col-extra" style="max-width:110px" id="tickers-cell-{{ row.file_id }}">
