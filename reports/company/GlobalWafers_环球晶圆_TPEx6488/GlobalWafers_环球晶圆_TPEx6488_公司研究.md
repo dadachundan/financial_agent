@@ -247,3 +247,42 @@ graph LR
 **销售渠道**：100% 直销 (Direct Sales)——硅片是 high-touch / high-customization 产品，每家客户的 spec 都有差异 (晶向、电阻率范围、氧含量上限、表面颗粒数等)，不存在分销商或贸易商；公司在台 / 美 / 日 / 韩 / 德都设直营销售办公室对应客户工厂 ([GlobalWafers 公司联系页](https://www.sas-globalwafers.com/en/contact/))。每个大客户配 KAM (Key Account Manager) + Application Engineer 双口对接。
 
 **上市治理与股权结构**：环球晶 2011 年从 SAS 中美晶拆分挂牌台湾柜买中心 (TPEx) 而非主板 (TWSE)——这是因为拆分时营收门槛刚好满足 TPEx 但不到 TWSE 创新板要求；之后随着规模扩大并未转板。**控制股权 51% 在 SAS 手里**，徐秀蘭 + 盧明光家族通过 SAS 间接控制，独董按 TPEx 治理规定占董事会 1/3 ([环球晶 2024 年报 § 股权结构与董事会, p. 12-25](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/))。**派息政策**：公司明确 50% payout 政策——FY2025 EPS NT$15.29 × 50.4% = 配息 NT$7.70 ([TechNews 2026-03-11 报导](https://finance.technews.tw/2026/03/11/globalwafers-eps-for-2025-is-15-29-yuan/))。这种「稳定派息 + 50% 留存 + 母公司 SAS 控股」的治理结构让公司在做大额 capex 决策 (Sherman USD 7.5 bn) 时不需要散户投票否决——是 BPD / AI 等长周期决策能落地的治理前提。
+
+## 6. 行业概览
+
+### 6.1 全球 300mm 硅晶圆市场规模与历史轨迹
+
+半导体硅片 (semiconductor silicon wafer) 是半导体材料市场最大的单一品类，2025 全球硅片销售约 **USD 13-14 bn**，占整个半导体材料市场 (~USD 80 bn) 的约 **17%**；其中 300mm (12 寸) 硅片销售约 USD 9-10 bn，是硅片细分的绝对主流 ([SEMI Silicon Wafer 出货报告, 2025 年度回顾](https://www.semi.org/en/products-services/market-data/silicon-shipment-statistics))；按 wafer area (MSI / million square inches) 计算，2025 全球硅片出货约 **12,500-13,000 MSI**，其中 300mm 约 8,000-8,500 MSI，是 200mm 的 ~3 倍 ([SUMCO 2024 年报 § 市场数据, p. 35-42](https://www.sumcosi.com/english/news/)) ([野村 2026-05-21, p. 18-20, Fig. 24-26 半导体材料市场拆分](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。
+
+**历史轨迹 (2019-25)**：300mm 硅片市场经历过两轮显著周期：(a) 2017-2018 上行 (5G + iPhone + 数据中心) 把单价从 USD 90 拉到 USD 130 (+44%)；(b) 2019-2020 下行 + 2021-22 第二轮上行 (远程办公 / 加密货币挖矿 / 汽车短缺) ASP 高点回到 ~USD 140-150；(c) 2023-25 三年长下行 (PC / 智能手机 / 一般 IDM 库存修正)，ASP 跌回 ~USD 105-115，是行业 5 年来最深下行 ([野村 2026-05-21, p. 19-21 历史价格轨迹](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))，([SUMCO Q4 FY2024 法说会演示, 2025-02](https://www.sumcosi.com/english/ir/library/result/))。环球晶 Q1 2026 业绩管理层定调「Q1 2026 + Q4 2025 是本轮 8 寸 / 12 寸晶圆价格谷底」也呼应这个时间节点 ([semiconalpha Q1 2026 分析, 2026-05-09](https://semiconalpha.substack.com/p/globalwafers-q1-2026-may-be-viewed))。
+
+### 6.2 增长驱动——AI / HBM / BPD / Wafer-bonded NAND 四叠加
+
+野村 2026-05-21 报告的核心论点是**「2027-30F 是硅片需求结构性重估窗口」**，理由是四个 incremental wafer demand 同时打开 ([野村 2026-05-21, p. 6-12 关键技术深入](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))：
+
+1. **AI 数据中心 + HBM**：每颗 NVIDIA Blackwell GPU 集成 8 颗 HBM3E，每颗 HBM 是 12 层 stacked DRAM——单 die 用硅量 12×；2026F H100 + B200 + B300 出货合计 250 万颗，对应增量 HBM 需求 ~9-10 万片 12 寸 wafer/月 (vs 2023 几乎为零)，是过去 18 个月硅片厂利用率回弹的主要原因 ([TrendForce HBM 报告, 2025-Q4 update](https://www.trendforce.com/research/dram-memory-market))。
+2. **Backside Power Delivery (BPD)**：TSMC A16 (2026 量产) + Intel 18A (2025 试产) + Samsung 2nm 节点全部用 BPD 工艺——把电源网络挪到晶圆背面，需要**两片硅 + 多次 wafer bonding + thinning 到 ~1µm**，单 die 用硅量较 FinFET 翻倍。野村测算 BPD 对硅片需求的 incremental 贡献 = 2027F ~5% / 2028F ~10% / 2030F ~18% 全球 300mm 需求 ([野村 2026-05-21, p. 6-9 BPD 用硅量测算](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。
+3. **Wafer-bonded NAND (YMTC Xtacking) + DRAM-on-Logic (WoW)**：YMTC Xtacking 把外设逻辑层和存储 cell 分别在两片 wafer 上生产再 bond——单 die 用硅量 2×；2026-28F Samsung / SK Hynix / Micron 也跟进 wafer-bonded NAND，硅片增量 ~3-4% 全球 NAND wafer 需求/年 ([Samsung Semiconductor V-NAND 路线图](https://semiconductor.samsung.com/news-events/tech-blog/))。
+4. **Photonic SOI + RF SOI**：1.6T / 3.2T 光模块 + Co-Packaged Optics (CPO) 需要 photonic SOI 衬底；5G/Wi-Fi 7/Wi-Fi 8 + UWB 需要 RF-SOI——后者市场 2025 ~USD 1.2 bn，2027 ~USD 2 bn (CAGR ~30%) ([Soitec FY24/25 Universal Registration Document § Market](https://www.soitec.com/en/investors/regulated-information))，([Chemical Research Insight SOI 报告, 2026-02](https://chemicalresearchinsight.com/2026/02/25/top-10-companies-in-the-si-on-insulator-soi-wafer-market-2026-semiconductor-foundries-powering-next-gen-electronics/))。
+
+**叠加结果**：野村测算 300mm 硅片需求 2025-30F CAGR ~**7-9%**，其中 BPD + HBM + WoW 三个 「非传统需求」 贡献占增量约 60%，传统智能手机 / PC / 一般 IDM 仅 ~40% ([野村 2026-05-21, p. 18-20](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。SUMCO 在 2025-02 CapMarkets Day 给出更激进的口径：「AI demand 占 2030F 300mm 需求 50%」 ([SUMCO 2025-02 Capital Markets Day 演示](https://www.sumcosi.com/english/ir/library/result/))。
+
+![300mm 硅片产能利用率](../../charts/globalwafers_capacity_util.png)
+
+*图 4：环球晶圆产能利用率 (12" / 8" / 6") 2024-26 季度轨迹——12 寸 2024 谷底 78% → 2025 ~85% → 2026E 92% → 2026E H2 满产；8 寸 / 6 寸跟随 1 季度。Sources: [中国时报 2025-08-06 Q2 法说会](https://www.chinatimes.com/newspapers/20250806000132-260202)，[semiconalpha Q1 2026 分析](https://semiconalpha.substack.com/p/globalwafers-q1-2026-may-be-viewed)，[Digitimes 2026-04-10](https://www.digitimes.com/news/a20260410PD207/globalwafers-revenue-2026-12-inch-market.html)。*
+
+### 6.3 行业结构——双寡头 + 三巨头长期稳态
+
+300mm 硅片行业结构是「教科书级寡头」：日本 Shin-Etsu Chemical + SUMCO 双巨头合计份额 ~50-55%，第二梯队 GlobalWafers + Siltronic + SK Siltron 合计 ~35-40%，剩下 ~5-10% 是中国上海新昇 / 沪硅产业 / TCL 中环新切入产能与小厂 ([野村 2026-05-21, Fig. 35 300mm 硅片 league table](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。这个结构 2017 年以来基本未变——理由是 (a) 单座 12 寸厂 USD 3-5 bn 资本投入门槛；(b) 客户验证周期 18-24 个月，新厂从开工到第一片合格交付要 4-5 年；(c) 工艺 know-how 在化学纯度 / 晶体生长 / 表面颗粒控制上没有捷径，必须靠多代工程师沉淀 ([Bain 半导体材料行业分析 2023, 2023-11](https://www.bain.com/insights/the-semiconductor-decade-a-trillion-dollar-industry/))。
+
+**供给端 (Supplier Power)**：硅片厂的关键投入是 high-purity poly-Si (多晶硅料)——上游供应商 Hemlock Semiconductor、Wacker、OCI、GCL 等 (后者主要做太阳能级)；高纯电子级多晶硅 (10N+ ~99.99999999%) 全球仅 4 家可大规模供应，议价权偏上游。但 GWC 通过长约锁定 + 自家德州 / 韩国厂 colocate 多晶硅产线，缓解了部分风险 ([GlobalWafers 2024 Annual Report § Supply Chain, p. 47-50](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/))。
+
+**买方端 (Buyer Power)**：尽管前 10 大客户合计占行业需求 75%+，但他们之间不能切换——TSMC 不能突然把全部 wafer 订单转给 Samsung Foundry；HBM 客户验证 wafer 周期 18 个月。因此买方议价权弱于上游供应商，这是硅片厂在 2022-25 周期下行中毛利率仍维持 25%+ (vs 2015 周期下行毛利率跌到 5%) 的根本原因 ([Morningstar GlobalWafers 2025-11 报告](https://www.morningstar.com/company-reports/1269167-globalwafers-outlook-gradually-improves-in-2025-benefits-from-new-tsmc-us-investment))。
+
+### 6.4 监管环境——CHIPS Act + 出口管制 + 国产化
+
+**美国 CHIPS Act (2022 签署)**：USD 52 bn 联邦直接补贴 + USD 24 bn investment tax credit (ITC) 给在美投资的半导体厂；环球晶 Sherman 厂 2024-12 拿到 USD 406 mn 直接补贴 + 估计 USD 350-450 mn ITC，是台资硅片厂在美最大单笔补贴 ([环球晶 CHIPS Act 公告 2024-12-17](https://www.sas-globalwafers.com/en/gwc_news_en_20241217/))。**欧盟 EU Chips Act (2023)**：EUR 43 bn 总投入，主要给 Intel / TSMC / Infineon 等晶圆厂，GWC 在 Italy Novara 12 寸 epi 扩产可受益部分补贴 ([European Commission Chips Act Q&A](https://digital-strategy.ec.europa.eu/en/policies/european-chips-act))。**日 / 韩补贴**：日本 METI 给 GWC Yonezawa 厂 FZ HV 扩产部分补贴 (~JPY 9 bn)；韩国 Cheonan 厂 wafer 扩产享受工业园区税收优惠 ([日本经产省 METI Yonezawa 补贴公告, 2024](https://www.meti.go.jp/english/))。
+
+**中美出口管制对硅片影响**：美国 BIS 2022-10 + 2023-10 + 2024-12 三轮出口管制主要针对芯片成品 (advanced AI chip) + EUV 设备，**没有把硅片本身列入出口管制清单**——但 12 寸硅片是芯片生产的必需输入，间接受影响。野村明确：「如果美国把 300mm 硅片列入 entity list 或加 25%+ 关税，对中国晶圆厂的冲击将远大于设备管制」([野村 2026-05-21, p. 13-14 TSMC 与本土化](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。环球晶因美 / 日 / 欧产能完整，能避开关税；纯亚洲产能厂商 (如 SUMCO) 反而面临更大不确定性 (详见 §9.7)。
+
+*分析师观点：* 硅片行业的「双寡头 + 三巨头」格局过去 8 年没变过，未来 5 年也大概率不变——除非中国国产 12 寸硅片在 2027 前突破 commercial-grade (沪硅产业 / 上海新昇 / TCL 中环 / 国大硅产 当前 12 寸良率 60-75%，距 commercial 95%+ 还有 5-7 年差距)。这是野村给 GlobalWafers Buy 评级、目标 3.2× P/B 估值的底层假设——如果这个假设动摇，估值锚就会松动。
