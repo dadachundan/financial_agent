@@ -101,12 +101,16 @@ After adding or modifying any UI feature — especially new buttons, modals, or 
 
 # One-off Explanations / Primers / Glossaries
 
-When the user asks for a one-off explanation, primer, glossary, or technical-term reference (anything that explains *concepts* rather than analyzing a company, sector, comparison, or earnings release), save it as a markdown file under `reports/explanation/`. This makes the doc visible on the `http://localhost:5001/claude-reports/` viewer under the **EXPLANATION** type (defined in `reports_viewer.py` via `_BUCKET_LABELS`).
+**Default behavior: just answer in chat. Do NOT save to a file unless the user explicitly asks.**
+
+When the user asks "what is X" / "explain Y" / "tell me about Z" / "什么是…" / etc., reply directly in the conversation. No file. No `reports/explanation/` write. No commit. Even if the topic is technical or the answer is long.
+
+Save to disk **only** when the user explicitly says "save this", "write this to a file", "add to explanation folder", "保存", or similar. In that case:
 
 - Path: `reports/explanation/<descriptive_slug>.md` — kebab-case or snake_case; include the topic + source in the slug (e.g. `glossary_nomura_greater_china_semi_2026-30F.md`, `explainer_backside_power_delivery.md`).
-- TYPE column shows `EXPLANATION` (teal pill). Filterable via the report-type dropdown.
+- The viewer at `http://localhost:5001/claude-reports/` surfaces the file under the **EXPLANATION** type (teal pill, defined in `reports_viewer.py` via `_BUCKET_LABELS`).
 - Don't create a sub-folder per explanation — keep the directory flat.
-- Always commit the file in the same task it was created (Conventional Commits, e.g. `docs(explanation): …`).
+- Commit in the same task using Conventional Commits, e.g. `docs(explanation): …`.
 
 # Editable Table Columns
 
