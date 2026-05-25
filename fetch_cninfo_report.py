@@ -601,9 +601,6 @@ __URLPATCH__
     <div id="formBtns" class="d-flex gap-1"></div>
     <span id="rowCount" class="text-muted ms-auto" style="font-size:.78rem"></span>
   </div>
-  <!-- ── Company chips ── -->
-  <div id="companyChips" class="d-flex gap-1 flex-wrap mb-2"></div>
-
   <!-- ── Reports table ── -->
   <div class="table-responsive">
     <table class="table table-sm table-hover table-bordered align-middle" id="repTable">
@@ -614,7 +611,8 @@ __URLPATCH__
           <th>Company</th>
           <th>Period / Title</th>
           <th>Type</th>
-          <th>Date</th>
+          <th>Filed</th>
+          <th>Downloaded</th>
           <th>Size</th>
           <th>Comment</th>
           <th>Actions</th>
@@ -636,7 +634,6 @@ let _filteredRows = [];
 let _page = 1;
 const PAGE_SIZE = 50;
 let _actForm = null;      // active form-type filter
-let _actTicker = null;    // active company/ticker filter
 
 // ── Colour badges ──────────────────────────────────────────────────────────────
 function badgeClass(ft) {
@@ -651,7 +648,6 @@ function loadReports() {
   fetch('/reports').then(r => r.json()).then(data => {
     _rows = data;
     rebuildFormBtns();
-    rebuildCompanyChips();
     applyFilters();
   });
 }
@@ -677,28 +673,6 @@ function rebuildFormBtns() {
   });
 }
 
-function rebuildCompanyChips() {
-  const counts = {};
-  const names  = {};
-  _rows.forEach(r => {
-    counts[r.ticker] = (counts[r.ticker] || 0) + 1;
-    if (r.company_name) names[r.ticker] = r.company_name;
-  });
-  const tickers = Object.keys(counts).sort();
-  const div = document.getElementById('companyChips');
-  div.innerHTML = '';
-  tickers.forEach(t => {
-    const btn = document.createElement('button');
-    const active = t === _actTicker;
-    btn.className = 'btn btn-sm ' + (active ? 'btn-dark' : 'btn-outline-secondary');
-    btn.style.cssText = 'font-size:.72rem;padding:.1rem .5rem';
-    const label = names[t] ? `${names[t]} <span style="opacity:.6;font-size:.68rem">${t}</span>` : t;
-    btn.innerHTML = `${label} <span class="badge bg-light text-dark">${counts[t]}</span>`;
-    btn.onclick = () => { _actTicker = _actTicker === t ? null : t; rebuildCompanyChips(); applyFilters(); };
-    div.appendChild(btn);
-  });
-}
-
 function applyFilters() {
   const q    = document.getElementById('search').value.toLowerCase();
   const exch = document.getElementById('filterExchange').value;
@@ -706,9 +680,8 @@ function applyFilters() {
   _filteredRows = _rows.filter(r => {
     if (exch      && !(r.ticker || '').startsWith(exch + ':')) return false;
     if (_actForm  && r.form_type !== _actForm)                  return false;
-    if (_actTicker && r.ticker !== _actTicker)                  return false;
     if (q) {
-      const hay = [r.ticker, r.company_name, r.period, r.form_type, r.filed_date]
+      const hay = [r.ticker, r.company_name, r.period, r.form_type, r.filed_date, r.created_at]
                    .join(' ').toLowerCase();
       if (!hay.includes(q)) return false;
     }
@@ -741,6 +714,7 @@ function _renderPage() {
           title="${esc(r.period)}">${esc(r.period)}</td>
       <td><span class="${badgeClass(r.form_type)}">${esc(r.form_type)}</span></td>
       <td>${r.filed_date || ''}</td>
+      <td class="text-muted" style="font-size:.78rem">${(r.created_at || '').slice(0,10)}</td>
       <td class="text-muted">${sz}</td>
       ${commentHtml}
       <td>
