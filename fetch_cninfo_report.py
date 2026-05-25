@@ -611,8 +611,8 @@ __URLPATCH__
           <th>Company</th>
           <th>Period / Title</th>
           <th>Type</th>
-          <th>Filed</th>
-          <th>Downloaded</th>
+          <th class="sortable" data-sort-key="filed_date" style="cursor:pointer;user-select:none">Filed <span class="sort-ind"></span></th>
+          <th class="sortable" data-sort-key="created_at" style="cursor:pointer;user-select:none">Downloaded <span class="sort-ind"></span></th>
           <th>Size</th>
           <th>Comment</th>
           <th>Actions</th>
@@ -634,6 +634,8 @@ let _filteredRows = [];
 let _page = 1;
 const PAGE_SIZE = 50;
 let _actForm = null;      // active form-type filter
+let _sortKey = 'filed_date';
+let _sortDir = 'desc';    // 'asc' | 'desc'
 
 // ── Colour badges ──────────────────────────────────────────────────────────────
 function badgeClass(ft) {
@@ -688,6 +690,8 @@ function applyFilters() {
     return true;
   });
 
+  _sortRows();
+  _paintSortIndicators();
   _page = 1;
   _renderPage();
   _renderPager();
@@ -811,8 +815,43 @@ async function deleteRow(id) {
   }
 }
 
+// ── Sorting ────────────────────────────────────────────────────────────────────
+function _sortRows() {
+  const k = _sortKey;
+  const dir = _sortDir === 'asc' ? 1 : -1;
+  _filteredRows.sort((a, b) => {
+    const av = a[k] || '';
+    const bv = b[k] || '';
+    if (av < bv) return -1 * dir;
+    if (av > bv) return  1 * dir;
+    return (a.id - b.id) * dir;
+  });
+}
+function _paintSortIndicators() {
+  document.querySelectorAll('#repTable th.sortable').forEach(th => {
+    const ind = th.querySelector('.sort-ind');
+    if (!ind) return;
+    ind.textContent = (th.dataset.sortKey === _sortKey)
+      ? (_sortDir === 'asc' ? ' ▲' : ' ▼')
+      : '';
+  });
+}
+function _onSortClick(th) {
+  const k = th.dataset.sortKey;
+  if (_sortKey === k) {
+    _sortDir = (_sortDir === 'asc') ? 'desc' : 'asc';
+  } else {
+    _sortKey = k;
+    _sortDir = 'desc';
+  }
+  applyFilters();
+}
+
 // ── Init ───────────────────────────────────────────────────────────────────────
 __MCW_JS__
+document.querySelectorAll('#repTable th.sortable').forEach(th => {
+  th.addEventListener('click', () => _onSortClick(th));
+});
 loadReports();
 </script>
 </body>
