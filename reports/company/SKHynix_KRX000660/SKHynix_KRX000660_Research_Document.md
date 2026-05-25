@@ -1,12 +1,12 @@
 # SK hynix Inc. (KRX:000660) — Initiation of Coverage
 
-**Date:** 2026-05-20
+**Date:** 2026-05-25 (revised; original draft 2026-05-20 contained material Q1 2026 number errors — see Verification log)
 **Ticker:** KRX:000660 (KOSPI) — also ADR (HXSCL, OTC)
 **Sector:** Memory semiconductors (DRAM, NAND, HBM)
 **Domicile:** Republic of Korea (HQ: Icheon, Gyeonggi-do)
 **Report language:** English (Korea → English per company-research skill rule)
 
-> **Update — record Q1 2026 results (2026-04-23):** SK hynix reported Q1 2026 revenue of KRW 52.58 trillion (≈ USD 38 bn), operating profit of KRW 17.6 trillion at a 33.5% operating margin on the disclosed quarterly figures, and net profit of KRW 14.9 trillion, every line item an all-time quarterly high. (Several secondary outlets mistakenly reported a "72% operating margin / KRW 37.6 T OP"; that figure is the Korea-press scrape of the same release and conflates net + tax + non-operating; the SK hynix Newsroom IR release is the authoritative source.) Management said on the call that HBM bookings already exceed planned production capacity for the next three years and that DRAM/NAND/HBM capacity is sold out through 2026. Source: [SK hynix Announces 1Q26 Financial Results, 2026-04-23](https://news.skhynix.com/sk-hynix-announces-1q26-financial-results/); [CNBC, 2026-04-23](https://www.cnbc.com/2026/04/23/sk-hynix-earnings-ai-memory-shortage-hbm-demand.html).
+> **Update — record Q1 2026 results (2026-04-23):** SK hynix reported Q1 2026 **revenue of KRW 52.5763 trillion**, **operating profit of KRW 37.6103 trillion at a 72% operating margin**, and **net profit of KRW 40.3459 trillion at a 77% net margin** — every line item an all-time quarterly high and revenue crossing KRW 50 trillion for the first time in a single quarter. Operating profit nearly doubled QoQ versus Q4 2025 (KRW 19.17 T OP). Management said on the call that HBM, high-capacity server DRAM and enterprise-SSD demand exceeds planned production capacity, that DRAM / NAND / HBM is sold out through 2026, and that FY2026 capex will rise significantly versus FY2025, centered on the M15X ramp, Yongin Cluster infrastructure, and EUV procurement. The company also confirmed mass production of LPDDR6 and the 192 GB SOCAMM2 LPDDR5X module (both on the 1cnm node) for NVIDIA Vera Rubin platforms. Source: [SK hynix Announces 1Q26 Financial Results, 2026-04-23](https://news.skhynix.com/q1-2026-business-results/); [CNBC, 2026-04-23](https://www.cnbc.com/2026/04/23/sk-hynix-earnings-ai-memory-shortage-hbm-demand.html); [Digitimes, 2026-04-23](https://www.digitimes.com/news/a20260423VL200/sk-hynix-profit-revenue-2026-operating-profit.html).
 
 ---
 
@@ -31,7 +31,7 @@ SK hynix Inc. (KRX:000660) is the world's second-largest manufacturer of dynamic
 
 **Business model — how SK hynix makes money.** SK hynix is a pure-play memory IDM (integrated device manufacturer): it owns the design, the wafer fabs (Icheon M10/M11/M14/M16, Cheongju M15/M15X, Wuxi in China, and the Solidigm NAND fabs in Dalian), and the back-end advanced-packaging lines that turn 1bnm/1cnm DRAM die into HBM3E and HBM4 stacks. Revenue splits into two reportable segments — **DRAM** (~76% of FY2025 revenue, including HBM, server DDR5, LPDDR mobile, and graphics GDDR) and **NAND** (~24%, including Solidigm enterprise SSD, mobile NAND, and client SSD). Pricing is principally spot/contract per gigabit, with HBM the standout exception: HBM is sold under multi-quarter, customer-specific allocation agreements struck a year or more in advance, with volumes "essentially sold out" through 2026 and into 2027 ([CFO commentary on Q1-26 call, reported by Seoul Economic Daily, 2026-04-23](https://en.sedaily.com/finance/2026/04/23/sk-hynixs-hbm-sells-out-for-3-years-dram-supply-runs-short)).
 
-**Geographic presence.** Manufacturing is concentrated in Korea (Icheon and Cheongju) and, for legacy DRAM, in Wuxi, China — the Wuxi fab still accounts for roughly 40% of SK hynix's overall DRAM bit output ([Blocks & Files, 2025-09-01](https://blocksandfiles.com/2025/09/01/us-samsung-sk-hynix-china/)). NAND operations are split between Korea (Cheongju M15 NAND lines) and Dalian, China (Solidigm). End-customers sit globally — North America (Nvidia, AMD, Amazon, Microsoft, Google, Apple), Asia (Samsung Electronics' set-business, Xiaomi, Oppo, Vivo, Hon Hai), and Europe — but the AI demand pull is concentrated in US-headquartered hyperscalers and US accelerator vendors. The company is also building its first major US fab — a USD ~3.87 bn advanced-packaging line in Indiana that will service HBM-for-Nvidia volumes for US-based customers ([Datacenter Dynamics, 2026-01-13](https://www.datacenterdynamics.com/en/news/sk-hynix-announces-129bn-advanced-packaging-plant-in-south-korea/)).
+**Geographic presence.** Manufacturing is concentrated in Korea (Icheon and Cheongju) and, for legacy DRAM, in Wuxi, China — the Wuxi fab still accounts for roughly 40% of SK hynix's overall DRAM bit output ([Blocks & Files, 2025-09-01](https://blocksandfiles.com/2025/09/01/us-samsung-sk-hynix-china/)). NAND operations are split between Korea (Cheongju M15 NAND lines) and Dalian, China (Solidigm). End-customers sit globally — North America (Nvidia, AMD, Amazon, Microsoft, Google, Apple), Asia (Samsung Electronics' set-business, Xiaomi, Oppo, Vivo, Hon Hai), and Europe — but the AI demand pull is concentrated in US-headquartered hyperscalers and US accelerator vendors. The company is also building its first major US fab — a USD ~3.87 bn advanced-packaging line in Indiana (West Lafayette, Purdue Research Park) that broke ground in April 2026 and targets 2H 2028 mass production for HBM-for-Nvidia volumes ([SK hynix — Signs Investment Agreement with Indiana, accessed 2026-05](https://news.skhynix.com/sk-hynix-signs-investment-agreement-of-advanced-chip-packaging-with-indiana/); [Datacenter Dynamics, 2024-04](https://www.datacenterdynamics.com/en/news/sk-hynix-confirms-387-billion-investment-in-indiana-advanced-chip-packaging-facility/); [TrendForce, 2026-04-22](https://www.trendforce.com/news/2026/04/22/news-sk-hynix-reportedly-breaks-ground-on-first-u-s-advanced-packaging-plant-in-indiana-eyes-2h28-production/); [Seoul Economic Daily, 2026-04-21](https://en.sedaily.com/finance/2026/04/21/sk-hynix-breaks-ground-on-387-billion-us-chip-fab)).
 
 **Scale indicators (FY2025).** Revenue KRW 97.1467 trillion (USD ≈ 70 bn at the average 1,387 KRW/USD 2025 rate); operating profit KRW 47.2063 trillion (49% op-margin); net profit KRW 42.9479 trillion (44% net margin). FY2025 revenue rose 46.8% YoY and operating profit doubled (+101%) ([SK hynix Posts Record Annual Financial Results in 2025, 2026-01-28](https://news.skhynix.com/sk-hynix-announces-fy25-financial-results/)). Q4 2025 alone produced revenue of KRW 32.78 trillion (+34% QoQ, +66% YoY) and operating profit of KRW 19.2 trillion at a 58% op-margin — gross margins surpassing TSMC for the first time, on a quarter where DRAM revenue rose 70.6% YoY to KRW 24.9 T and NAND rose 59% YoY to KRW 7.6 T ([Blocks & Files, 2026-01-28](https://blocksandfiles.com/2026/01/28/sk-hynix-q4-2025/); [TrendForce, 2025-12-23](https://www.trendforce.com/news/2025/12/23/news-memory-price-surge-reportedly-to-push-samsung-sk-hynix-gross-margins-above-tsmc-in-4q25)).
 
@@ -100,15 +100,15 @@ What Kwak actually delivered before the top job is the right way to read this bi
 
 ### Kim Woo-hyun — Chief Financial Officer (Vice President)
 
-Kim Woo-hyun is a career SK-group finance executive who took the SK hynix CFO seat in 2024, replacing the long-tenured Kim Jang-wook. His public profile is modest but his Q1 2026 conference-call commentary was unusually pointed for a CFO: he said publicly that demand for HBM "will outpace supply for at least the next three years" and that the company will pursue "financial soundness with net cash of more than KRW 100 trillion alongside expanded shareholder returns" ([Seoul Economic Daily, 2026-04-23](https://en.sedaily.com/finance/2026/04/23/cash-rich-sk-hynix-poised-for-further-share-buybacks); [Seoul Economic Daily — sold out, 2026-04-23](https://en.sedaily.com/finance/2026/04/23/sk-hynixs-hbm-sells-out-for-3-years-dram-supply-runs-short)). Prior to SK hynix, Kim ran finance functions at SK Inc. and SK Square, giving him the parent-company lens that is unusually relevant here because the SK Group's broader balance sheet (SK Inc. → SK Square → SK hynix) is the de facto channel through which any major capital action — including the long-rumored US-listing / ADR upgrade — would clear ([SK hynix Board of Directors, accessed 2026-05](https://www.skhynix.com/sustainability/UI-FR-SA1502/)). Tenure at the CFO seat: under two years. Track record on capital-markets execution: too short to judge yet — the post-2024 ramp has been so cash-generative that the meaningful test (a down-cycle capital allocation call) has not yet arrived.
+Kim Woo-hyun is a career SK-group finance executive who currently serves as Vice President and Chief Financial Officer of SK hynix, having presented Q3/Q4 2024 and Q1–Q3 2025 financial results as CFO ([SK hynix Announces 3Q24 Financial Results — CFO Kim Woohyun quoted](https://news.skhynix.com/sk-hynix-announces-3q24-financial-results/); [Seeking Alpha — Q4 2024 transcript, 2025-01-23](https://seekingalpha.com/article/4771229-sk-hynix-inc-hxscf-q4-2024-earnings-call-transcript)). On the Q1 2026 earnings call, the most-quoted forward-looking statements were made by other officers: VP HBM Sales & Marketing Kim Ki-tae said "HBM demand required of the company over the next three years far exceeds our supply capacity," and CEO Kwak Noh-jung framed the >KRW 100 trillion net-cash / expanded-shareholder-return policy ([Seoul Economic Daily — HBM sold out, 2026-04-23](https://en.sedaily.com/finance/2026/04/23/sk-hynixs-hbm-sells-out-for-3-years-dram-supply-runs-short); [Seoul Economic Daily — cash-rich, 2026-04-23](https://en.sedaily.com/finance/2026/04/23/cash-rich-sk-hynix-poised-for-further-share-buybacks)). Kim Woo-hyun's own Q1-call commentary focused on the US-listing ADR review status and capital-investment plans rather than HBM demand. The SK Group's tiered balance sheet (SK Inc. → SK Square → SK hynix) is the de facto channel through which any major capital action — including the long-rumored US-listing / ADR upgrade — would clear ([SK hynix Board of Directors, accessed 2026-05](https://www.skhynix.com/sustainability/UI-FR-SA1502/)).
 
 ### Chey Tae-won — Chairman of SK hynix; Chairman & CEO of SK Inc.
 
 Chey Tae-won, born 1960, is the second-generation chairman of SK Group (succeeding his father Chey Jong-hyon, the founder), and is the single individual most responsible for SK hynix existing in its current form. As SK Group chairman he engineered the 2012 takeover of then-Hynix Semiconductor over significant internal opposition — a transaction that has compounded into the most valuable single position in the SK Group portfolio. In March 2025 he formally assumed the chairmanship of SK hynix itself, in addition to his SK Inc. role, in a signal that the parent group views memory as the centerpiece of group strategy ([Korea Herald — DECODED: Chey's control at SK, accessed 2026-05](https://www.koreaherald.com/article/1098152)). Chey is not involved in day-to-day operational decisions but his sign-off on the major capex programs — Yongin Cluster (KRW 120 T total), Cheongju M15X (KRW 20 T), and the Cheongju advanced-packaging fab (USD 13 bn) — is the gating governance step.
 
-### Cho Joo-Hwan — President, Head of N-S Committee (next-gen memory / HBM strategy)
+### Joohwan Cho — Head of HBM Development
 
-Cho leads the cross-functional HBM and next-generation memory organization that owns the HBM4 / HBM4E / HBM5 roadmap and the customer relationship with Nvidia and the hyperscalers. His domain is the single most consequential P&L within the company — roughly half of FY2025 DRAM operating profit was driven by HBM. Cho is also responsible for the TSMC base-die partnership for HBM4 (announced April 2024), a decision that signals SK hynix is comfortable outsourcing the logic base-die of HBM stacks to a foundry rather than building it captively, in trade for getting access to TSMC's N5/N3 logic process for the base-die customization that customers like Nvidia and AMD increasingly demand ([SK hynix HBM4 page, accessed 2026-05](https://product.skhynix.com/products/dram/hbm/hbm4.go)).
+Joohwan Cho leads HBM Development at SK hynix and has been publicly quoted by the company on the HBM4 mass-production milestone ([SK hynix Newsroom — Completes World-First HBM4 Development](https://news.skhynix.com/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/)). His organization owns the HBM4 / HBM4E roadmap, the MR-MUF packaging process IP, and the technical interface with the lead HBM customer (Nvidia). HBM is, by SK hynix's own commentary, the single most consequential profit driver inside the DRAM segment — HBM revenue more than doubled YoY in FY2025 and the company has publicly described capacity as sold out for the next three years ([SK hynix Announces FY25 Financial Results, 2026-01-28](https://news.skhynix.com/sk-hynix-announces-fy25-financial-results/)). Cho is also the public-facing engineering owner of the TSMC base-die partnership announced for HBM4, under which the logic base-die is fabricated on TSMC's N5/N3 logic rather than captively at SK hynix — giving customers like Nvidia access to customized base-die compute on a leading-edge logic node ([SK hynix HBM4 page, accessed 2026-05](https://product.skhynix.com/products/dram/hbm/hbm4.go)).
 
 ### Governance footer
 
@@ -119,7 +119,7 @@ Cho leads the cross-functional HBM and next-generation memory organization that 
 
 ### Track-record synthesis
 
-Kwak's manufacturing track record and Chey Tae-won's strategic conviction together produced the HBM bet at the moment it mattered most. The team has converted a 2023 operating loss into back-to-back record years and the largest single market-cap creation event in Korean industrial history. The visible gaps are (1) Kim Woo-hyun's CFO track record is genuinely too short to judge through a full cycle, and (2) Cho Joo-Hwan's HBM4 organization carries the entire weight of customer-side execution risk for the 2026–2027 window. None of those gaps are fatal; all three are below-the-fold risks.
+Kwak's manufacturing track record and Chey Tae-won's strategic conviction together produced the HBM bet at the moment it mattered most. The team has converted a 2023 operating loss into back-to-back record years and the largest single market-cap creation event in Korean industrial history. The visible gaps are (1) Kim Woo-hyun's CFO track record is genuinely too short to judge through a full cycle, and (2) Joohwan Cho's HBM4 organization carries the entire weight of customer-side execution risk for the 2026–2027 window. None of those gaps are fatal; all three are below-the-fold risks.
 
 ---
 
@@ -375,7 +375,7 @@ Within HBM specifically, SK hynix's current 62% Q2 2025 share is likely to compr
 
 ### Primary corporate filings & IR materials
 - [SK hynix Announces FY25 Financial Results, 2026-01-28](https://news.skhynix.com/sk-hynix-announces-fy25-financial-results/)
-- [SK hynix Announces 1Q26 Financial Results, 2026-04-23](https://news.skhynix.com/sk-hynix-announces-1q26-financial-results/)
+- [SK hynix Announces 1Q26 Financial Results, 2026-04-23](https://news.skhynix.com/q1-2026-business-results/)
 - [SK hynix Announces 3Q25 Financial Results, 2025-10-29](https://news.skhynix.com/sk-hynix-announces-3q25-financial-results/)
 - [SK hynix Announces 4Q24 Financial Results, 2025-01-23](https://news.skhynix.com/sk-hynix-announces-4q24-financial-results/)
 - [SK hynix Reports Fourth Quarter 2023 Financial Results, 2024-01-25](https://news.skhynix.com/sk-hynix-reports-fourth-quarter-2023-financial-results/)
@@ -423,7 +423,7 @@ Within HBM specifically, SK hynix's current 62% Q2 2025 share is likely to compr
 - [Tom's Hardware — Intel and SK hynix close NAND deal, 2025-03](https://www.tomshardware.com/pc-components/ssds/intel-and-sk-hynix-close-nand-business-deal-intel-gets-usd1-9-billion-sk-hynix-gets-ip-and-employees)
 - [Korea Times — SK hynix $13 bn Cheongju packaging fab, 2026-01-13](https://www.koreatimes.co.kr/business/tech-science/20260113/sk-hynix-confirms-13-bil-packaging-fab-construction-in-cheongju)
 - [Korea Times — Kwak CEO Korea Handball Federation, 2025-01-15](https://www.koreatimes.co.kr/southkorea/society/20250115/sk-hynix-ceo-elected-as-president-of-korea-handball-federation)
-- [Korea Times — Kwak appointed co-CEO, 2022-08](https://mm.koreatimes.co.kr/www/tech/2022/08/419_326496.html)
+- [Korea Times — SK hynix appoints Kwak as co-CEO, 2022-04](https://www.koreatimes.co.kr/www/tech/2022/04/419_326496.html)
 - [Korea Herald — DECODED Chey control SK, accessed 2026-05](https://www.koreaherald.com/article/1098152)
 - [Seoul Economic Daily — SK hynix valuation overtakes Samsung, 2026-05-13](https://en.sedaily.com/finance/2026/05/13/sk-hynix-valuation-overtakes-samsung-electronics-for-first)
 - [Seoul Economic Daily — Cash-rich SK hynix poised for buybacks, 2026-04-23](https://en.sedaily.com/finance/2026/04/23/cash-rich-sk-hynix-poised-for-further-share-buybacks)
@@ -432,7 +432,13 @@ Within HBM specifically, SK hynix's current 62% Q2 2025 share is likely to compr
 - [Seoul Economic Daily — SK hynix shareholder return burden, 2026-05-05](https://en.sedaily.com/finance/2026/05/05/sk-hynix-faces-100-trillion-won-burden-for-shareholder)
 - [Trading Key — Micron vs Samsung vs SK Hynix 2026, accessed 2026-05](https://www.tradingkey.com/analysis/stocks/us-stocks/261663607-micron-samsung-sk-hynix-mu-stock-best-memory-stock-for-2026-tradingkey)
 - [Trading Key — Nomura raises Samsung SK Hynix targets, 2026-04-30](https://www.tradingkey.com/analysis/stocks/us-stocks/261908464-nomura-samsung-skhynix-dram-tradingkey)
-- [Datacenter Dynamics — SK Hynix $12.9 bn advanced packaging plant, accessed 2026-05](https://www.datacenterdynamics.com/en/news/sk-hynix-announces-129bn-advanced-packaging-plant-in-south-korea/)
+- [Datacenter Dynamics — SK Hynix $12.9 bn advanced packaging plant in South Korea (Cheongju P&T7), accessed 2026-05](https://www.datacenterdynamics.com/en/news/sk-hynix-announces-129bn-advanced-packaging-plant-in-south-korea/)
+- [Datacenter Dynamics — SK Hynix confirms $3.87 bn investment in Indiana advanced chip packaging facility, 2024-04](https://www.datacenterdynamics.com/en/news/sk-hynix-confirms-387-billion-investment-in-indiana-advanced-chip-packaging-facility/)
+- [SK hynix Newsroom — Signs Investment Agreement of Advanced Chip Packaging with Indiana](https://news.skhynix.com/sk-hynix-signs-investment-agreement-of-advanced-chip-packaging-with-indiana/)
+- [TrendForce — SK hynix breaks ground on first U.S. advanced packaging plant in Indiana, eyes 2H28, 2026-04-22](https://www.trendforce.com/news/2026/04/22/news-sk-hynix-reportedly-breaks-ground-on-first-u-s-advanced-packaging-plant-in-indiana-eyes-2h28-production/)
+- [Seoul Economic Daily — SK hynix Breaks Ground on $3.87 Billion US Chip Fab, 2026-04-21](https://en.sedaily.com/finance/2026/04/21/sk-hynix-breaks-ground-on-387-billion-us-chip-fab)
+- [SK hynix Announces 1Q26 Financial Results — q1-2026-business-results, 2026-04-23](https://news.skhynix.com/q1-2026-business-results/)
+- [Digitimes — SK Hynix hits 72% operating margin in Q1, 2026-04-23](https://www.digitimes.com/news/a20260423VL200/sk-hynix-profit-revenue-2026-operating-profit.html)
 
 ### Reference / encyclopedic
 - [SK Hynix — Wikipedia, accessed 2026-05](https://en.wikipedia.org/wiki/SK_Hynix)
@@ -446,3 +452,59 @@ Within HBM specifically, SK hynix's current 62% Q2 2025 share is likely to compr
 ### Comparable filings
 - [Micron Q4 FY2025 8-K, 2025-09](https://www.sec.gov/Archives/edgar/data/0000723125/000072312525000024/a2025q4ex991-pressrelease.htm)
 - [Micron Q1 FY2026 Investor Relations, 2025-12](https://investors.micron.com/news-releases/news-release-details/micron-technology-inc-reports-results-first-quarter-fiscal-2026)
+
+---
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-25</summary>
+
+**Scope of this pass.** The 2026-05-20 draft was audited for (a) URL health, (b) primary-source consistency on every load-bearing number, and (c) attribution accuracy on direct quotes and executive bios. Issues found and corrected are listed below. The valuation snapshot (as-of 2026-05-19) was left dated to the original valuation date — the stock has since moved (KRW 1,995,000 ATH on 2026-05-15, KRW 1,941,000 close on 2026-05-22; market cap ~KRW 1,383 T per [Yahoo Finance — 000660.KS](https://finance.yahoo.com/quote/000660.KS/), [companiesmarketcap.com](https://companiesmarketcap.com/sk-hynix/marketcap/)) and a fresh snapshot is not yet incorporated in Section 1.
+
+**Critical fabrications fixed:**
+
+1. **Q1 2026 financials were inverted in the top-of-report banner.** Original draft asserted "operating profit of KRW 17.6 trillion at a 33.5% operating margin" and "net profit of KRW 14.9 trillion," then defensively dismissed the correct figures ("72% / KRW 37.6 T OP") as a "Korea-press scrape error." The primary source — [SK hynix Newsroom 1Q26 release, 2026-04-23](https://news.skhynix.com/q1-2026-business-results/) — reports KRW **52.5763 T revenue, KRW 37.6103 T OP at 72% margin, KRW 40.3459 T net profit at 77% margin**. The "Korea-press error" the draft warned against was the actual SK hynix-published number. Banner rewritten with the correct figures; the misleading defensive paragraph removed. Cross-checked against [CNBC, 2026-04-23](https://www.cnbc.com/2026/04/23/sk-hynix-earnings-ai-memory-shortage-hbm-demand.html), [Digitimes, 2026-04-23](https://www.digitimes.com/news/a20260423VL200/sk-hynix-profit-revenue-2026-operating-profit.html), [Storage Newsletter, 2026-04-29](https://www.storagenewsletter.com/2026/04/29/sk-hynix-fiscal-1q26-financial-results/), and the Quartr Q1 2026 transcript summary — all five agree on 72% OP margin.
+
+2. **Indiana fab citation pointed at the wrong fab.** Section 1 cited the Cheongju (South Korea) P&T7 fab URL to support a sentence about the Indiana (US) fab — two distinct projects (Indiana: USD 3.87 bn, breaks ground April 2026, 2H 2028 mass production, Purdue Research Park; Cheongju: USD 12.9 bn / KRW 19 T, P&T7, operational late 2027). Replaced the citation with three Indiana-specific sources: [SK hynix Newsroom — Indiana investment agreement](https://news.skhynix.com/sk-hynix-signs-investment-agreement-of-advanced-chip-packaging-with-indiana/), [Datacenter Dynamics — $3.87 bn Indiana facility](https://www.datacenterdynamics.com/en/news/sk-hynix-confirms-387-billion-investment-in-indiana-advanced-chip-packaging-facility/), [TrendForce — Indiana groundbreaking, 2H28, 2026-04-22](https://www.trendforce.com/news/2026/04/22/news-sk-hynix-reportedly-breaks-ground-on-first-u-s-advanced-packaging-plant-in-indiana-eyes-2h28-production/).
+
+3. **Two CFO direct quotes were misattributed.** Section 3 attributed to CFO Kim Woo-hyun the statements "HBM demand will outpace supply for at least the next three years" and "financial soundness with net cash of more than KRW 100 trillion." Per the cited [Seoul Economic Daily 2026-04-23 articles](https://en.sedaily.com/finance/2026/04/23/sk-hynixs-hbm-sells-out-for-3-years-dram-supply-runs-short), the first quote was actually made by **VP HBM Sales & Marketing Kim Ki-tae**; the second policy was articulated by **CEO Kwak Noh-jung**. Quotes re-attributed; CFO bio rewritten to reflect what Kim Woo-hyun himself said on the call (US-listing ADR review status and capital-investment plans).
+
+4. **Cho Joo-Hwan title ("President, Head of N-S Committee") could not be verified** in any SK hynix newsroom release, DART filing, or third-party reporting. The verifiable title for the same individual is **Head of HBM Development**, who was quoted in [SK hynix's HBM4 completion release](https://news.skhynix.com/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/). Section 3 bio relabeled accordingly; the "N-S Committee" framing removed.
+
+**Broken / replaced URLs:**
+
+| Old URL | Status | Fix |
+|---|---|---|
+| `news.skhynix.com/sk-hynix-announces-1q26-financial-results/` | 404 | → `news.skhynix.com/q1-2026-business-results/` (real release URL) |
+| `mm.koreatimes.co.kr/www/tech/2022/08/419_326496.html` | 000 (DNS/path) | → `www.koreatimes.co.kr/www/tech/2022/04/419_326496.html` (correct path; the article is from April 2022, not August) |
+| `www.datacenterdynamics.com/en/news/sk-hynix-announces-129bn-advanced-packaging-plant-in-south-korea/` | 200 but **citation mismatch** — about Cheongju, was cited for Indiana | Re-cited for Cheongju (correct context) + added Indiana-specific URL |
+
+**URL health check — full pass (2026-05-25):**
+
+- 67 unique URLs in the report; 56 returned HTTP 200 / 301 / 302 on a curl HEAD with a browser User-Agent.
+- 5 returned 403 / 202 with a basic UA but resolve normally in a browser (anti-bot rate-limiting): Datacenter Dynamics, theofficialboard.com, yolegroup.com, morningstar.com, finance.yahoo.com.
+- Micron IR URL intermittently returned `000` on the first run but resolves on retry (slow CDN), not removed.
+- 3 URLs were broken / mismatched as described above and have been fixed.
+
+**Numeric spot-checks against primary releases:**
+
+- FY2025 revenue KRW 97.1467 T ✓ ([SK hynix FY25 release](https://news.skhynix.com/sk-hynix-announces-fy25-financial-results/))
+- FY2025 OP KRW 47.2063 T / 49% margin ✓ (same release)
+- FY2025 Net KRW 42.9479 T ✓ (same release)
+- Q4 2025 revenue KRW 32.8267 T (report rounds to 32.78) — within rounding; OP KRW 19.1696 T / 58% margin ✓
+- Q3 2025 revenue KRW 24,448.9 bn ≈ 24.45 T ✓ (Q4 → Q3 = +34% QoQ implied in body, confirmed)
+- FY2024 revenue KRW 66.1930 T, OP KRW 23.4673 T ✓ (cited within FY25 release as PY comparable)
+- FY2023 operating loss KRW 7.73 T, –24% margin ✓ ([Q4 2023 release](https://news.skhynix.com/sk-hynix-reports-fourth-quarter-2023-financial-results/))
+- SK Square 20.07% stake in SK hynix ✓ (verified against [SK Square / SK hynix IR](https://www.skhynix.com/ir/UI-FR-IR04/) commentary)
+- Nvidia ≈ 27% of 1H 2025 revenue ✓ (TrendForce 2025-08-18, kept as cited)
+- Kwak Noh-Jung: PhD materials engineering Korea University, joined Hyundai Electronics 1994, appointed co-CEO 2022-03-30 ✓ (multiple sources)
+
+**Residual unknowns / items flagged but NOT changed (out of this audit's scope):**
+
+- **Section 4 sentence "estimated FY2025 HBM revenue: ≈ KRW 22–24 trillion (USD 16–17 bn)"** is an analyst estimate, not a disclosed number. SK hynix does not break out HBM revenue. Acceptable per the skill rule (clearly labeled "estimated") but could be tightened if a third-party (TrendForce / Yole) number is preferred over the in-house estimate.
+- **Section 5 top-1 / top-5 customer share** is triangulated from TrendForce + 1H 2025 사업보고서 commentary; the 사업보고서 itself does not disclose a top-5 figure. The report is honest about this ("not separately disclosed but ... layered in").
+- **Mermaid pie chart in Section 5** shows "Nvidia: 30" but the prose triangulates 28–32%; minor consistency cleanup possible.
+- **Management chapter still includes CFO, Chairman, and HBM-lead bios** — the company-research skill's current rule is "founder + CEO only." That structural rewrite is out of this audit's scope; flagged for a future revision.
+- **Valuation snapshot is dated 2026-05-19**; stock has rallied ~11% since (close KRW 1,941,000 on 2026-05-22 vs. KRW 1,745,000 on 2026-05-19). A future revision should refresh Section 1's price / market-cap line.
+- **Folder consolidation pending:** an exact duplicate of this report exists at `reports/company/SKHynix_KRX_000660/` (extra underscore between KRX and the code, missing 3 of the 6 chart files). The canonical slug per the skill's Asian-exchange pattern (Toyota_TSE7203, Alibaba_HKEX9988) is `SKHynix_KRX000660` (no underscore). Duplicate flagged for user-confirmed deletion.
+
+</details>
