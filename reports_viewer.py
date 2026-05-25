@@ -753,10 +753,20 @@ _VIEW_TMPL = r"""<!doctype html>
                    position:relative;min-height:200px;
                    padding-left:14px;padding-right:8px;box-sizing:border-box}
     .comments-rail.hidden{display:none}
-    .rail-splitter{flex:0 0 6px;align-self:stretch;cursor:col-resize;
-                   background:transparent;position:relative;z-index:5}
-    .rail-splitter:hover{background:#c8d6e5}
-    .rail-splitter.dragging{background:#1F4E78}
+    /* 8px-wide hit target with a 2px centered line so the handle is
+       discoverable at a glance — previously `background:transparent`
+       hid it entirely and users didn't realize the rail was resizable. */
+    .rail-splitter{flex:0 0 8px;align-self:stretch;cursor:col-resize;
+                   position:relative;z-index:5;background:transparent;
+                   transition:background .15s}
+    .rail-splitter::before{content:"";position:absolute;left:50%;top:0;
+                           bottom:0;width:2px;margin-left:-1px;
+                           background:#dfe3ea;border-radius:1px;
+                           transition:background .15s,width .15s,margin-left .15s}
+    .rail-splitter:hover{background:rgba(31,78,120,.06)}
+    .rail-splitter:hover::before{background:#1F4E78;width:4px;margin-left:-2px}
+    .rail-splitter.dragging{background:rgba(31,78,120,.12)}
+    .rail-splitter.dragging::before{background:#1F4E78;width:4px;margin-left:-2px}
     .rail-splitter.hidden{display:none}
     .ric-card{position:absolute;top:0;left:14px;right:8px;
               background:#fff;border:1px solid #e0e4ea;border-radius:8px;
