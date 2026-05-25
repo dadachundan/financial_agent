@@ -144,6 +144,7 @@ __URLPATCH__
          id="card-{{ loop.index0 }}" data-text="{{ row.comment | e }}">
       <div class="feed-meta">
         {{ row.date[:10] }}
+        {% if row.source_label %} · <span class="badge {{ row.source_css or 'bg-light text-dark border' }}">{{ row.source_label }}</span>{% endif %}
         {% if row.badge %} · <span class="badge bg-light text-secondary border">{{ row.badge }}</span>{% endif %}
       </div>
       {% if row.viewer_url %}

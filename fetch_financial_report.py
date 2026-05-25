@@ -1473,6 +1473,9 @@ def sync_annotations(report_id: int):
     )
     conn.commit()
     conn.close()
+    # Mirror to pdf_inline_comments so /zsxq/feed sees these annotations.
+    import pdf_inline_comments as _pic
+    _pic.replace_synced("sec", report_id, anns)
     return jsonify(ok=True, count=len(anns), comment=comment)
 
 

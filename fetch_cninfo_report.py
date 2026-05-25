@@ -1142,6 +1142,9 @@ def sync_annotations(rid: int):
                 "UPDATE cninfo_reports SET comment=? WHERE id=?",
                 (comment, rid),
             )
+    # Mirror to pdf_inline_comments so /zsxq/feed sees these annotations.
+    import pdf_inline_comments as _pic
+    _pic.replace_synced("cn", rid, anns)
     return jsonify(ok=True, count=len(anns), comment=comment)
 
 

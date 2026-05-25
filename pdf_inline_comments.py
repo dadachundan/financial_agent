@@ -51,7 +51,7 @@ def init_db() -> None:
         if _INITED:
             return
         with _conn() as conn:
-            # Fresh table — created with the `source` column from the start.
+            # Fresh table — created with the full multi-source schema.
             conn.execute(
                 """
                 CREATE TABLE IF NOT EXISTS pdf_inline_comments (
@@ -64,6 +64,7 @@ def init_db() -> None:
                   suffix      TEXT NOT NULL DEFAULT '',
                   rect_json   TEXT,
                   body        TEXT NOT NULL,
+                  origin      TEXT NOT NULL DEFAULT 'inline',
                   created_at  TEXT NOT NULL,
                   updated_at  TEXT NOT NULL
                 )
@@ -73,10 +74,11 @@ def init_db() -> None:
                 "CREATE INDEX IF NOT EXISTS idx_pic_file_id "
                 "ON pdf_inline_comments(file_id)"
             )
-            # Pre-existing tables may not have `source` yet — bring them
-            # up to date with a purely-additive ADD COLUMN (sets all
-            # existing rows to 'zsxq', which matches what they were).
-            # Same self-healing pattern as `CREATE TABLE IF NOT EXISTS`.
+            # Pre-existing tables may not have `source` / `origin` yet —
+            # bring them up to date with purely-additive ADD COLUMNs (set
+            # existing rows to 'zsxq' / 'inline', which matches what they
+            # already are). Same self-healing pattern as CREATE TABLE
+            # IF NOT EXISTS — both columns are non-destructive.
             cols = {r[1] for r in conn.execute("PRAGMA table_info(pdf_inline_comments)")}
             if "source" not in cols:
                 print(
@@ -86,6 +88,15 @@ def init_db() -> None:
                 conn.execute(
                     "ALTER TABLE pdf_inline_comments "
                     "ADD COLUMN source TEXT NOT NULL DEFAULT 'zsxq'"
+                )
+            if "origin" not in cols:
+                print(
+                    "[pdf_inline_comments] adding `origin` column "
+                    "(default 'inline') to existing table"
+                )
+                conn.execute(
+                    "ALTER TABLE pdf_inline_comments "
+                    "ADD COLUMN origin TEXT NOT NULL DEFAULT 'inline'"
                 )
             conn.execute(
                 "CREATE INDEX IF NOT EXISTS idx_pic_source_file "
@@ -106,15 +117,21 @@ def _row_to_dict(r: sqlite3.Row) -> dict:
             rect = json.loads(r["rect_json"])
         except Exception:
             rect = None
-    # `source` may be absent on pre-migration rows; default to 'zsxq' to match
-    # historical reality (the table only held zsxq data before).
+    # `source` / `origin` may be absent on pre-migration rows; default to
+    # 'zsxq' / 'inline' to match historical reality (the table only held
+    # in-browser zsxq comments before).
     try:
         source = r["source"] or "zsxq"
     except (IndexError, KeyError):
         source = "zsxq"
+    try:
+        origin = r["origin"] or "inline"
+    except (IndexError, KeyError):
+        origin = "inline"
     return {
         "id": r["id"],
         "source": source,
+        "origin": origin,
         "file_id": r["file_id"],
         "page": r["page"],
         "quote": r["quote"],
@@ -147,6 +164,7 @@ def create(
     suffix: str,
     rect: dict | None,
     body: str,
+    origin: str = "inline",
 ) -> dict:
     init_db()
     now = _now()
@@ -154,9 +172,11 @@ def create(
     with _LOCK, _conn() as conn:
         cur = conn.execute(
             "INSERT INTO pdf_inline_comments "
-            "(source, file_id, page, quote, prefix, suffix, rect_json, body, created_at, updated_at) "
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-            (source, file_id, page, quote, prefix, suffix, rect_json, body, now, now),
+            "(source, file_id, page, quote, prefix, suffix, rect_json, body, origin, "
+            " created_at, updated_at) "
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            (source, file_id, page, quote, prefix, suffix, rect_json, body, origin,
+             now, now),
         )
         new_id = cur.lastrowid
         conn.commit()
@@ -164,6 +184,67 @@ def create(
             "SELECT * FROM pdf_inline_comments WHERE id=?", (new_id,)
         ).fetchone()
     return _row_to_dict(row)
+
+
+def replace_synced(source: str, file_id: int, annotations: list[dict]) -> int:
+    """Replace this file's 'synced' rows with a fresh batch from a PDF sync.
+
+    Used by every */sync-annotations route to mirror the 📌-extracted
+    annotations into the shared pdf_inline_comments table (so the unified
+    /zsxq/feed can show them alongside in-browser comments). Wipes only
+    rows where origin='synced' for this (source, file_id) — user-typed
+    in-browser comments (origin='inline') are untouched.
+
+    `annotations` is the list returned by zsxq_viewer._extract_annotations_from_pdf
+    — dicts with keys {page, type, text, note}. We map them onto rows as:
+      - quote = the highlighted/extracted text (for Highlight/Underline/Image)
+      - body  = the user's note (sticky-note Text/FreeText, or the highlight's
+                attached note)
+      - page  = annotation's page (1-indexed)
+      - prefix/suffix/rect_json = '' / NULL (PDF annotations don't carry
+                text-layer prefix/suffix; rect could be added later for
+                inline-overlay rendering)
+
+    Returns the number of rows inserted.
+    """
+    init_db()
+    now = _now()
+    with _LOCK, _conn() as conn:
+        conn.execute(
+            "DELETE FROM pdf_inline_comments "
+            "WHERE source=? AND file_id=? AND origin='synced'",
+            (source, file_id),
+        )
+        inserted = 0
+        for ann in annotations:
+            page = int(ann.get("page") or 0)
+            if not page:
+                continue
+            text = (ann.get("text") or "").strip()
+            note = (ann.get("note") or "").strip()
+            atype = ann.get("type") or "Highlight"
+            # Highlight-like (incl. Underline/StrikeOut/Squiggly) → text is
+            # the *highlighted span*, lives in `quote`. Note (if any) → body.
+            # Free-text/sticky note → text is the user's typed content, body.
+            # Image capture → text is `![](url)`, store in body so feed renders.
+            if atype in ("Highlight", "Underline", "StrikeOut", "Squiggly"):
+                quote, body = text, note
+            elif atype == "Image":
+                quote, body = "", text
+            else:  # Text, FreeText
+                quote, body = "", (note or text)
+            if not quote and not body:
+                continue
+            conn.execute(
+                "INSERT INTO pdf_inline_comments "
+                "(source, file_id, page, quote, prefix, suffix, rect_json, "
+                " body, origin, created_at, updated_at) "
+                "VALUES (?, ?, ?, ?, '', '', NULL, ?, 'synced', ?, ?)",
+                (source, file_id, page, quote, body, now, now),
+            )
+            inserted += 1
+        conn.commit()
+    return inserted
 
 
 def update(comment_id: int, body: str) -> dict | None:

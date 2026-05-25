@@ -1290,6 +1290,9 @@ def sync_annotations(note_id: int):
                  (comment, now, note_id))
     conn.commit()
     conn.close()
+    # Mirror to pdf_inline_comments so /zsxq/feed sees these annotations.
+    import pdf_inline_comments as _pic
+    _pic.replace_synced("manual", note_id, anns)
     return jsonify(ok=True, count=len(anns), comment=comment)
 
 
@@ -1440,6 +1443,9 @@ def scan_manual_report():
                     )
                     conn.commit()
                     conn.close()
+                    # Mirror into pdf_inline_comments so /zsxq/feed picks it up.
+                    import pdf_inline_comments as _pic
+                    _pic.replace_synced("manual", note_id, anns)
                     yield f"data:   → {len(anns)} annotation(s) extracted\n\n"
                 else:
                     yield f"data:   → no annotations\n\n"

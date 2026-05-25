@@ -46,7 +46,7 @@ def main() -> int:
 
     conn = sqlite3.connect(notes)
     try:
-        # pdf_inline_comments — add `source` column + composite index.
+        # pdf_inline_comments — add `source` + `origin` columns + index.
         if not _has_col(conn, "pdf_inline_comments", "source"):
             print("  pdf_inline_comments: ADD COLUMN source TEXT NOT NULL DEFAULT 'zsxq'")
             conn.execute(
@@ -55,6 +55,14 @@ def main() -> int:
             )
         else:
             print("  pdf_inline_comments: 'source' column already present, skipping")
+        if not _has_col(conn, "pdf_inline_comments", "origin"):
+            print("  pdf_inline_comments: ADD COLUMN origin TEXT NOT NULL DEFAULT 'inline'")
+            conn.execute(
+                "ALTER TABLE pdf_inline_comments "
+                "ADD COLUMN origin TEXT NOT NULL DEFAULT 'inline'"
+            )
+        else:
+            print("  pdf_inline_comments: 'origin' column already present, skipping")
         if not _has_index(conn, "idx_pic_source_file"):
             print("  pdf_inline_comments: CREATE INDEX idx_pic_source_file(source,file_id)")
             conn.execute(

@@ -1433,70 +1433,227 @@ def set_comment(file_id: int):
 
 @zsxq_bp.route("/feed")
 def feed():
-    """Merged research-notes feed.
+    """Unified research-notes feed across all four PDF sources.
 
-    For every zsxq PDF that has *either* a legacy whole-PDF comment
-    (`pdf_files.comment`, the field set via the index-page comment box or
-    via the 📌 sync-annotations button) *or* one or more selection-anchored
-    comments/highlights from the in-browser viewer
-    (`pdf_inline_comments` in db/notes.db), we render one card per PDF
-    with all of its annotations concatenated, ordered by page number.
+    For every PDF (zsxq / sec / cn / manual) that has *either* a legacy
+    whole-PDF comment (`<table>.comment` — set via the index-page comment
+    box or, pre-multi-source rollout, via the 📌 sync button) *or* one
+    or more rows in the shared `pdf_inline_comments` table (in-browser
+    selection-anchored comments OR synced PDF annotations mirrored
+    in via `pdf_inline_comments.replace_synced`), we render one card
+    per (source, file_id) with all annotations concatenated by page.
 
-    SEC reports with a comment are merged in as before.
+    Source resolution order per (source, file_id):
+      1. If the shared `pdf_inline_comments` table has rows → render those.
+      2. Otherwise fall back to the source table's legacy `comment` column.
     """
     from flask import render_template_string
     from pathlib import Path as _Path
     import pdf_inline_comments as _pic
     _pic.init_db()
 
-    conn = get_conn()
-    legacy_raw = conn.execute("""
-        SELECT file_id AS id, name, comment, bank, local_path,
-               COALESCE(comment_updated_at, create_time, '') AS date
-        FROM   pdf_files
-        WHERE  comment IS NOT NULL AND comment != ''
-    """).fetchall()
-    by_id: dict[int, dict] = {r["id"]: dict(r) for r in legacy_raw}
-
-    # Per-page comments/highlights from the in-browser viewer.
+    # ── 1. Pull every annotation row (multi-source) ──────────────────────
     inline_conn = sqlite3.connect(_pic.DB_PATH)
     inline_conn.row_factory = sqlite3.Row
     inline_rows = inline_conn.execute("""
-        SELECT id, file_id, page, quote, body,
+        SELECT id, source, file_id, page, quote, body, origin,
                COALESCE(updated_at, created_at) AS date
         FROM   pdf_inline_comments
+        ORDER BY page ASC, id ASC
     """).fetchall()
     inline_conn.close()
 
-    inline_by_file: dict[int, list[dict]] = {}
-    for ir in inline_rows:
-        inline_by_file.setdefault(ir["file_id"], []).append(dict(ir))
+    grouped: dict[tuple[str, int], list[dict]] = {}
+    for r in inline_rows:
+        grouped.setdefault((r["source"], r["file_id"]), []).append(dict(r))
 
-    # Fill in PDF metadata for files that have only inline annotations.
-    extra_ids = [fid for fid in inline_by_file if fid not in by_id]
-    if extra_ids:
-        placeholders = ",".join(["?"] * len(extra_ids))
-        extra = conn.execute(
-            f"SELECT file_id AS id, name, bank, local_path, "
-            f"  COALESCE(create_time, '') AS date "
-            f"FROM pdf_files WHERE file_id IN ({placeholders})",
-            tuple(extra_ids),
-        ).fetchall()
-        for r in extra:
-            by_id[r["id"]] = dict(r) | {"comment": ""}
-    conn.close()
+    # ── 2. Per-source metadata + legacy-comment loaders ─────────────────
+    # Each loader returns {file_id: meta_dict} for the requested IDs PLUS
+    # any IDs that have a non-empty legacy `comment` column (so legacy
+    # PDFs that were synced before this rollout still appear).
+    SOURCE_PILLS = {
+        "zsxq":   {"label": "ZSXQ",   "css": "bg-primary text-white"},
+        "sec":    {"label": "SEC",    "css": "bg-success text-white"},
+        "cn":     {"label": "CN",     "css": "bg-danger text-white"},
+        "manual": {"label": "MANUAL", "css": "bg-secondary text-white"},
+    }
 
-    def _excerpt(s: str, n: int = 120) -> str:
-        s = (s or "").strip().replace("\n", " ")
-        return s if len(s) <= n else s[: n - 1].rstrip() + "…"
+    def _load_zsxq() -> dict[int, dict]:
+        out: dict[int, dict] = {}
+        conn = get_conn()
+        try:
+            wanted = [fid for (s, fid) in grouped if s == "zsxq"]
+            extra = conn.execute("""
+                SELECT file_id FROM pdf_files
+                WHERE  comment IS NOT NULL AND comment != ''
+            """).fetchall()
+            ids = sorted(set(wanted) | {r["file_id"] for r in extra})
+            if not ids:
+                return out
+            placeholders = ",".join("?" * len(ids))
+            rows = conn.execute(
+                f"SELECT file_id, name, comment, bank, "
+                f"  COALESCE(comment_updated_at, create_time, '') AS date "
+                f"FROM pdf_files WHERE file_id IN ({placeholders})",
+                tuple(ids),
+            ).fetchall()
+        finally:
+            conn.close()
+        for r in rows:
+            fid = r["file_id"]
+            out[fid] = {
+                "name":           r["name"] or f"PDF {fid}",
+                "legacy_comment": (r["comment"] or "").strip(),
+                "legacy_date":    r["date"] or "",
+                "badge":          r["bank"] or "ZSXQ",
+                "viewer_url":     f"/zsxq/pdf-viewer/{fid}",
+                "open_url":       f"/zsxq/open-local/{fid}",
+            }
+        return out
 
+    def _load_sec() -> dict[int, dict]:
+        out: dict[int, dict] = {}
+        try:
+            import fetch_financial_report as _sec
+            conn = _sec.get_conn()
+        except Exception as e:
+            print(f"[feed] sec metadata skipped: {e}")
+            return out
+        try:
+            wanted = [fid for (s, fid) in grouped if s == "sec"]
+            extra = conn.execute("""
+                SELECT id FROM reports
+                WHERE  comment IS NOT NULL AND comment != ''
+            """).fetchall()
+            ids = sorted(set(wanted) | {r["id"] for r in extra})
+            if not ids:
+                return out
+            placeholders = ",".join("?" * len(ids))
+            rows = conn.execute(
+                f"SELECT id, ticker, company_name, period, form_type, comment, "
+                f"  COALESCE(comment_updated_at, filed_date, '') AS date "
+                f"FROM reports WHERE id IN ({placeholders})",
+                tuple(ids),
+            ).fetchall()
+        finally:
+            conn.close()
+        for r in rows:
+            name = f"{r['ticker']} {r['period']}"
+            if r["form_type"]:
+                name += f" ({r['form_type']})"
+            out[r["id"]] = {
+                "name":           name,
+                "legacy_comment": (r["comment"] or "").strip(),
+                "legacy_date":    r["date"] or "",
+                "badge":          r["ticker"] or "SEC",
+                "viewer_url":     f"/sec/pdf-viewer/{r['id']}",
+                "open_url":       f"/sec/open-local/{r['id']}",
+            }
+        return out
+
+    def _load_cn() -> dict[int, dict]:
+        out: dict[int, dict] = {}
+        try:
+            import fetch_cninfo_report as _cn
+            conn = _cn.get_conn()
+        except Exception as e:
+            print(f"[feed] cn metadata skipped: {e}")
+            return out
+        try:
+            wanted = [fid for (s, fid) in grouped if s == "cn"]
+            # cninfo_reports may not have a `comment` column in legacy DBs.
+            schema_cols = {row[1] for row in conn.execute("PRAGMA table_info(cninfo_reports)")}
+            extra: list = []
+            if "comment" in schema_cols:
+                extra = conn.execute("""
+                    SELECT id FROM cninfo_reports
+                    WHERE comment IS NOT NULL AND comment != ''
+                """).fetchall()
+            ids = sorted(set(wanted) | {r["id"] for r in extra})
+            if not ids:
+                return out
+            placeholders = ",".join("?" * len(ids))
+            comment_col = "comment" if "comment" in schema_cols else "''"
+            date_expr = (
+                "COALESCE(comment_updated_at, filed_date, '')"
+                if "comment_updated_at" in schema_cols else
+                "COALESCE(filed_date, '')"
+            )
+            rows = conn.execute(
+                f"SELECT id, ticker, company_name, period, form_type, "
+                f"  {comment_col} AS comment, {date_expr} AS date "
+                f"FROM cninfo_reports WHERE id IN ({placeholders})",
+                tuple(ids),
+            ).fetchall()
+        finally:
+            conn.close()
+        for r in rows:
+            name = f"{r['ticker']} {r['period']}"
+            if r["form_type"]:
+                name += f" ({r['form_type']})"
+            out[r["id"]] = {
+                "name":           name,
+                "legacy_comment": (r["comment"] or "").strip(),
+                "legacy_date":    r["date"] or "",
+                "badge":          r["ticker"] or "CN",
+                "viewer_url":     f"/cn/pdf-viewer/{r['id']}",
+                "open_url":       f"/cn/open-local/{r['id']}",
+            }
+        return out
+
+    def _load_manual() -> dict[int, dict]:
+        out: dict[int, dict] = {}
+        try:
+            import notes_app as _nx
+            conn = _nx.get_conn()
+        except Exception as e:
+            print(f"[feed] manual metadata skipped: {e}")
+            return out
+        try:
+            wanted = [fid for (s, fid) in grouped if s == "manual"]
+            extra = conn.execute("""
+                SELECT id FROM notes
+                WHERE  comment IS NOT NULL AND comment != ''
+            """).fetchall()
+            ids = sorted(set(wanted) | {r["id"] for r in extra})
+            if not ids:
+                return out
+            placeholders = ",".join("?" * len(ids))
+            rows = conn.execute(
+                f"SELECT id, name, ticker, type, comment, "
+                f"  COALESCE(comment_updated_at, created_at, '') AS date "
+                f"FROM notes WHERE id IN ({placeholders})",
+                tuple(ids),
+            ).fetchall()
+        finally:
+            conn.close()
+        for r in rows:
+            label_parts = [r["ticker"] or "", r["type"] or "", r["name"] or ""]
+            label = " ".join(p for p in label_parts if p).strip() or f"Note {r['id']}"
+            out[r["id"]] = {
+                "name":           label,
+                "legacy_comment": (r["comment"] or "").strip(),
+                "legacy_date":    r["date"] or "",
+                "badge":          r["ticker"] or "MANUAL",
+                "viewer_url":     f"/manual-report/pdf-viewer/{r['id']}",
+                "open_url":       f"/manual-report/open-local/{r['id']}",
+            }
+        return out
+
+    meta_by_source = {
+        "zsxq":   _load_zsxq(),
+        "sec":    _load_sec(),
+        "cn":     _load_cn(),
+        "manual": _load_manual(),
+    }
+
+    # ── 3. Render helpers (per-annotation markdown blocks) ───────────────
     import re as _re_h
     _HEADING_RE = _re_h.compile(r'^(#{1,5})(\s)', _re_h.MULTILINE)
 
     def _demote_headings(text: str) -> str:
-        # Demote every markdown heading by one level so a body that starts
-        # with `##` nests under the annotation's own `##` heading (becoming
-        # `###`), `###` → `####`, etc. Capped at h6 by the {1,5} bound.
+        # Demote each markdown heading by one level so a body that begins
+        # with `##` nests under the annotation's own `##` heading.
         return _HEADING_RE.sub(r'#\1\2', text)
 
     def _format_annotation(ann: dict) -> str:
@@ -1504,7 +1661,7 @@ def feed():
         quote_full = (ann.get("quote") or "").strip().replace("\n", " ")
         body = (ann.get("body") or "").strip()
         label = (quote_full[:40].rstrip() + "…") if len(quote_full) > 40 else quote_full
-        heading = f'## P{page} — “{label}”' if label else f"## P{page}"
+        heading = f'## P{page} — "{label}"' if label else f"## P{page}"
         parts: list[str] = [heading]
         if quote_full:
             parts.append(f"> {quote_full}")
@@ -1514,96 +1671,47 @@ def feed():
             parts.append("🖍 *(region highlight)*")
         return "\n\n".join(parts)
 
-    def _interleave_by_page(legacy: str, anns: list[dict]) -> str:
-        """Merge legacy `## P{n}` sections with inline annotations in page order.
-
-        Inline annotations for page N appear immediately after the legacy
-        section for page N, so the reader sees everything about P4 together
-        before moving to P6, P7, etc.
-        """
-        legacy = (legacy or "").strip()
-        sect_re = _re_h.compile(r'(?=^##\s+P\d+\b)', _re_h.MULTILINE)
-        parts = sect_re.split(legacy) if legacy else []
-        header_blob = (parts[0].strip() if parts else "")
-        legacy_sections: dict[int, list[str]] = {}
-        for section in parts[1:]:
-            m = _re_h.match(r'##\s+P(\d+)\b', section)
-            if m:
-                legacy_sections.setdefault(int(m.group(1)), []).append(section.rstrip())
-
-        inline_by_page: dict[int, list[dict]] = {}
-        for a in anns:
-            inline_by_page.setdefault(a.get("page") or 0, []).append(a)
-
-        all_pages = sorted(set(legacy_sections) | set(inline_by_page))
-        out: list[str] = []
-        if header_blob:
-            out.append(header_blob)
-        for page in all_pages:
-            for sec in legacy_sections.get(page, []):
-                out.append(sec)
-            for ann in inline_by_page.get(page, []):
-                out.append(_format_annotation(ann))
-        return "\n\n".join(out).strip()
-
+    # ── 4. Build one row per (source, file_id) ───────────────────────────
     rows: list[dict] = []
-    for file_id, info in by_id.items():
-        annotations = inline_by_file.get(file_id, [])
-        annotations.sort(key=lambda a: (a.get("page") or 0, a.get("id") or 0))
+    # Cover keys that have inline annotations OR legacy comment (or both).
+    all_keys: set[tuple[str, int]] = set(grouped)
+    for source, by_id in meta_by_source.items():
+        for fid, m in by_id.items():
+            if m["legacy_comment"]:
+                all_keys.add((source, fid))
 
-        legacy_body = (info.get("comment") or "").strip()
-        if legacy_body and annotations:
-            combined = _interleave_by_page(legacy_body, annotations)
-        elif legacy_body:
-            combined = legacy_body
-        elif annotations:
-            combined = "\n\n".join(_format_annotation(a) for a in annotations)
+    for (source, fid) in all_keys:
+        meta = meta_by_source.get(source, {}).get(fid)
+        if not meta:
+            # PDF row deleted from parent table but inline rows linger — skip.
+            continue
+        annotations = grouped.get((source, fid), [])
+        if annotations:
+            # Modern path: render inline annotations as ## P{n} blocks.
+            comment_md = "\n\n".join(_format_annotation(a) for a in annotations)
         else:
+            # Pre-mirror path: fall back to the legacy aggregated comment.
+            comment_md = meta["legacy_comment"]
+        if not comment_md.strip():
             continue
 
-        # Card date = newest of legacy + inline timestamps so the most
-        # recently annotated PDFs rise to the top.
         latest_inline = max((a.get("date") or "" for a in annotations), default="")
-        card_date = max(info.get("date") or "", latest_inline)
+        card_date = max(meta["legacy_date"] or "", latest_inline) or meta["legacy_date"]
 
+        pill = SOURCE_PILLS[source]
         rows.append({
-            "id":         info["id"],
-            "name":       info.get("name") or "",
-            "comment":    combined,
-            "date":       card_date,
-            "badge":      info.get("bank") or "ZSXQ",
-            "pinned":     0,
-            "open_url":   "/zsxq/open-local/" + str(info["id"]),
-            "viewer_url": "/zsxq/pdf-viewer/" + str(info["id"]),
+            "id":           fid,
+            "source":       source,
+            "source_label": pill["label"],
+            "source_css":   pill["css"],
+            "name":         meta["name"],
+            "comment":      comment_md,
+            "date":         card_date,
+            "badge":        meta["badge"],
+            "pinned":       0,
+            "open_url":     meta["open_url"],
+            "viewer_url":   meta["viewer_url"],
         })
-
-    # Also pull SEC reports with comments — same DB schema lives in
-    # db/financial_reports.db. Merge into the same feed.
-    try:
-        import fetch_financial_report as _sec
-        sconn = _sec.get_conn()
-        sraw = sconn.execute("""
-            SELECT id, ticker, company_name, period, form_type, comment,
-                   COALESCE(comment_updated_at, filed_date, '') AS date
-            FROM   reports
-            WHERE  comment IS NOT NULL AND comment != ''
-        """).fetchall()
-        sconn.close()
-        for r in sraw:
-            name = f"{r['ticker']} {r['period']}"
-            if r["form_type"]:
-                name += f" ({r['form_type']})"
-            rows.append({
-                "id":       r["id"],
-                "name":     name,
-                "comment":  r["comment"],
-                "date":     r["date"] or "",
-                "badge":    r["ticker"] or "SEC",
-                "pinned":   0,
-                "open_url": "/sec/open-local/" + str(r["id"]),
-            })
-    except Exception as exc:
-        print(f"[zsxq feed] SEC merge skipped: {exc}")
 
     rows.sort(key=lambda r: r["date"] or "", reverse=True)
 
@@ -2033,7 +2141,12 @@ def sync_annotations(file_id: int):
                  (comment, now, file_id))
     conn.commit()
     conn.close()
-    print(f"                   💾 saved to DB")
+    # Mirror each annotation as a row in pdf_inline_comments so the
+    # unified /zsxq/feed can show synced annotations alongside in-browser
+    # comments across all four PDF sources.
+    import pdf_inline_comments as _pic
+    inline_n = _pic.replace_synced("zsxq", file_id, anns)
+    print(f"                   💾 saved to DB ({inline_n} inline-comment rows mirrored)")
     return jsonify(ok=True, count=len(anns), comment=comment)
 
 
