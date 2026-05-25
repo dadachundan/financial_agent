@@ -217,3 +217,33 @@ graph LR
 ![300mm 硅片市场份额](../../charts/globalwafers_300mm_share.png)
 
 *图 2：全球 300mm 硅晶圆市场份额 (2025E)。Shin-Etsu + SUMCO 双寡头合计 ~51%，GWC 第三 ~17%。Sources: [野村 2026-05-21, Fig. 35](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md), [Semiconductor Insight 2026-02](https://chemicalresearchinsight.com/2026/02/25/top-10-companies-in-the-si-on-insulator-soi-wafer-market-2026-semiconductor-foundries-powering-next-gen-electronics/), [GlobalWafers 2024 Annual Report 第 102 页 自承"全球第三 ~15-20%"](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/)。*
+
+## 5. 客户与上市策略
+
+### 5.1 客户群体——按客户类型 / 终端应用 / 地域三维拆解
+
+环球晶的客户基本覆盖全球前 30 大半导体厂商；按客户类型分为四个 bucket：(1) **晶圆代工厂 (Foundry)** ——以 TSMC 为绝对核心，外加 GlobalFoundries / UMC / SMIC / Vanguard，约占环球晶 12 寸抛光 + 磊晶片销售大头；(2) **存储 IDM (Memory)** ——Samsung、SK Hynix、Micron、Kioxia、YMTC、CXMT，主要采购退火片 + 抛光片，HBM ramp 是 2025-28F 最大增量；(3) **逻辑 IDM** ——Intel、Samsung Logic，伴随 Intel Ohio + Samsung Taylor 美国本土建厂同步消化 GWC 北美产能；(4) **功率 / 模拟 / 化合物 IDM** ——Infineon、ST Microelectronics、onsemi、Texas Instruments、Renesas、Wolfspeed，采购 FZ 区熔片 + 8 寸抛光 + Sapphire / SiC 代工 ([GlobalWafers 2024 Annual Report § Business Overview, p. 38-45](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/))。
+
+地理分布 (FY2024 营收口径)：**亚洲 71% / 北美 19% / 欧洲 10%**，亚洲口径中 Greater China (台湾 + 中国大陆 + 香港) + Korea + Japan 三个市场各占约 1/3 ([GlobalWafers 2024 Annual Report § Geographic Revenue Breakdown](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/))。这种结构有两个含义：(a) GWC 是少数几家「亚洲产能 + 亚洲营收」对齐的硅片厂，地缘政治冲击下迁移成本相对低；(b) Sherman 厂 ramp 完成后北美营收比有望在 2027-28F 升至 ~28-30%，结构性更接近 SUMCO / Shin-Etsu。
+
+![营收地理分布](../../charts/globalwafers_revenue_geo.png)
+
+*图 3：环球晶 FY2024 营收地理分布——亚洲 71% / 北美 19% / 欧洲 10%。Sherman 一期 2026 量产后北美占比将明显提升。Source: [GlobalWafers 2024 Annual Report 营收地区表](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/)。*
+
+### 5.2 客户集中度——MOPS 年报披露与匿名格
+
+按台湾上市公司治理准则与 IFRS 8 分部信息要求，环球晶在 MOPS 年报中披露占合并营收 ≥ 10% 的主要客户。**2024 年报披露的客户集中度数据**（取自 GlobalWafers Q1 2024 受托人/律师事务所披露分析 + 2024 年报合并）：单一最大客户占合并营收约 **17-19%**，前五大客户合计约 **40-45%**——具体名单年报以「客户 A / 客户 B / 客户 C」匿名披露，未具名 ([GlobalWafers 2024 Annual Report § Major Customers / 主要客戶, p. 55-60](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/))。该集中度水平在硅片行业属中等——略低于 Siltronic (前五大 ~55%)、略高于 Shin-Etsu (前五大 ~35%)，与 SUMCO 接近 ([Siltronic 2024 Annual Report, p. 73-75](https://www.siltronic.com/en/investors/financial-publications.html))。
+
+**分析师反推客户名单（基于供应链交叉验证、行业报告与高管访谈，非年报披露）**：单一最大客户极大概率是 **TSMC** (与环球晶 LTA 已签到 2027-28；TSMC 是全球最大 12 寸消耗户)，第 2-5 大客户分布于 **Samsung Memory + SK Hynix + Micron + Intel** 四家之间；Infineon / TI / STM 在功率器件 / FZ 片上占有重要地位但不进单一客户 top-5 ([Tom's Hardware GlobalWafers Sherman, 2022-06](https://www.tomshardware.com/news/wafer-maker-to-invest-dollar5-billion-in-the-us-to-serve-intel-samsung-tsmc))，([Connect CRE Sherman fab 启用报导, 2025-05-15](https://www.connectcre.com/stories/4b-sherman-chip-fab-starts-production/))。
+
+*分析师观点：* 单一客户 ~17-19% 比例对硅片厂属于合理上限——这是公司在 §9 (风险评估) 中会重点描述的「客户集中度风险」。如果 TSMC 在 2027-28 LTA 续约谈判中以 Sherman 厂产能为条件压价，对环球晶的报价权是结构性挑战。但反过来看：**LTA 模式本身就是「客户为了锁定产能愿意提前付钱」**——12 寸 LTA 普及度 80%+ 是 2022 年以来硅片行业利润率超过历史均值的根本理由，是 GWC 与 Shin-Etsu / SUMCO 三家共同的护城河 ([Morningstar GlobalWafers Equity Report, 2025-11](https://www.morningstar.com/company-reports/1269167-globalwafers-outlook-gradually-improves-in-2025-benefits-from-new-tsmc-us-investment))。
+
+### 5.3 合约结构与产能锁定 (LTA)
+
+12 寸 LTA (Long-Term Agreement) 已经是硅片行业 2022 年起的行业标准。LTA 典型结构：(a) 期限 3-5 年，主流 2024-27 或 2025-28；(b) take-or-pay 条款——客户每季承诺购买固定量，否则支付差价；(c) 价格机制有两种：fixed price (锁定 ASP) 或 floor price + index (设最低价，允许跟随现货上涨)；(d) 多数 LTA 含 5-10% 预付款，等同于公司用客户钱建产能 ([Morningstar GlobalWafers 2025-11 报告](https://www.morningstar.com/company-reports/1269167-globalwafers-outlook-gradually-improves-in-2025-benefits-from-new-tsmc-us-investment))。**徐秀蘭在 2025-08 Q2 法说会公开口径**：12 寸 LTA 已签到 2027-28，"价格谷底就在 Q4 2025 - Q1 2026" ([中国时报 2025-08-06 Q2 法说会报导](https://www.chinatimes.com/newspapers/20250806000132-260202))。这意味着环球晶 12 寸销售对现货价的敏感度显著低于 2017-18 周期，下行幅度被 LTA floor 截断；上行幅度也被 LTA fixed 顶端封住——是「半周期性」转型的内核。
+
+### 5.4 销售渠道、合约谈判与上市公司治理
+
+**销售渠道**：100% 直销 (Direct Sales)——硅片是 high-touch / high-customization 产品，每家客户的 spec 都有差异 (晶向、电阻率范围、氧含量上限、表面颗粒数等)，不存在分销商或贸易商；公司在台 / 美 / 日 / 韩 / 德都设直营销售办公室对应客户工厂 ([GlobalWafers 公司联系页](https://www.sas-globalwafers.com/en/contact/))。每个大客户配 KAM (Key Account Manager) + Application Engineer 双口对接。
+
+**上市治理与股权结构**：环球晶 2011 年从 SAS 中美晶拆分挂牌台湾柜买中心 (TPEx) 而非主板 (TWSE)——这是因为拆分时营收门槛刚好满足 TPEx 但不到 TWSE 创新板要求；之后随着规模扩大并未转板。**控制股权 51% 在 SAS 手里**，徐秀蘭 + 盧明光家族通过 SAS 间接控制，独董按 TPEx 治理规定占董事会 1/3 ([环球晶 2024 年报 § 股权结构与董事会, p. 12-25](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/))。**派息政策**：公司明确 50% payout 政策——FY2025 EPS NT$15.29 × 50.4% = 配息 NT$7.70 ([TechNews 2026-03-11 报导](https://finance.technews.tw/2026/03/11/globalwafers-eps-for-2025-is-15-29-yuan/))。这种「稳定派息 + 50% 留存 + 母公司 SAS 控股」的治理结构让公司在做大额 capex 决策 (Sherman USD 7.5 bn) 时不需要散户投票否决——是 BPD / AI 等长周期决策能落地的治理前提。
