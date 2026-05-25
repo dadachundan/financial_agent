@@ -60,6 +60,35 @@ app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
 _DB_PATH = DB_FILE
 
 
+# Mount the in-browser PDF viewer (selection-anchored markdown comments).
+# Routes land at /sec/pdf-viewer/<report_id>, /sec/pdf-inline-comments/*, etc.
+import pdf_viewer as _pdf_viewer
+
+
+def _sec_pdf_meta(report_id: int) -> dict | None:
+    conn = sqlite3.connect(str(_DB_PATH))
+    conn.row_factory = sqlite3.Row
+    try:
+        row = conn.execute(
+            "SELECT local_path, ticker, period, form_type "
+            "FROM reports WHERE id = ?",
+            (report_id,),
+        ).fetchone()
+    finally:
+        conn.close()
+    if not row or not row["local_path"]:
+        return None
+    label = f"{row['ticker']} {row['form_type'] or ''} {row['period'] or ''}".strip()
+    return {
+        "local_path": row["local_path"],
+        "name": Path(row["local_path"]).name,
+        "title": label or f"SEC {report_id}",
+    }
+
+
+_pdf_viewer.register(sec_bp, source="sec", path_provider=_sec_pdf_meta)
+
+
 # ── Database ──────────────────────────────────────────────────────────────────
 
 def get_conn() -> sqlite3.Connection:
@@ -986,7 +1015,12 @@ function _renderPage() {
         data-comment="${htmlEsc(r.comment || '')}" title="Click to preview / edit"></span></td>`;
     const openBtn  = r.local_path
       ? `<a href="${base}/file/${r.id}" target="_blank"
-           class="btn btn-outline-secondary btn-sm del-btn" title="Open in browser">📄</a>`
+           class="btn btn-outline-danger btn-sm del-btn" title="Open in browser">📄</a>`
+      : '';
+    const annotateBtn = r.local_path
+      ? `<a href="${base}/pdf-viewer/${r.id}" target="_blank"
+           class="btn btn-outline-primary btn-sm del-btn ms-1"
+           title="In-browser viewer with selection-anchored markdown comments">🖍</a>`
       : '';
     const localBtn = r.local_path
       ? `<button onclick="openLocal(${r.id},this)"
@@ -1010,6 +1044,7 @@ function _renderPage() {
       ${commentHtml}
       <td style="white-space:nowrap">
         ${openBtn}
+        ${annotateBtn}
         ${localBtn}
         ${pinBtn}
       </td>

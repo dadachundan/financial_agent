@@ -48,11 +48,34 @@ DB_PATH: Path = DEFAULT_DB
 # Kick off AKShare ticker-name cache load (instant if cache exists; bg thread if not)
 _tn.init()
 
-# Mount the new in-browser PDF viewer (selection-anchored markdown comments).
+# Mount the in-browser PDF viewer (selection-anchored markdown comments).
 # Routes land at /zsxq/pdf-viewer/<file_id> and /zsxq/pdf-inline-comments/*.
-# DB_PATH is mutated at startup, so register with a lazy provider.
+# DB_PATH is mutated at startup, so resolve lazily in the provider.
 import pdf_viewer as _pdf_viewer
-_pdf_viewer.register(zsxq_bp, lambda: DB_PATH)
+
+
+def _zsxq_pdf_meta(file_id: int) -> dict | None:
+    import sqlite3 as _sql
+    conn = _sql.connect(DB_PATH)
+    conn.row_factory = _sql.Row
+    try:
+        row = conn.execute(
+            "SELECT local_path, name, topic_title FROM pdf_files "
+            "WHERE file_id = ?",
+            (file_id,),
+        ).fetchone()
+    finally:
+        conn.close()
+    if not row:
+        return None
+    return {
+        "local_path": row["local_path"],
+        "name": row["name"] or "",
+        "title": row["topic_title"] or row["name"] or f"PDF {file_id}",
+    }
+
+
+_pdf_viewer.register(zsxq_bp, source="zsxq", path_provider=_zsxq_pdf_meta)
 
 # ── HTML template ─────────────────────────────────────────────────────────────
 

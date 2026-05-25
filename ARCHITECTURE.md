@@ -107,23 +107,24 @@ Real-time cross-asset market indicators: liquidity, credit, volatility, and cros
 Browser for the 知识星球 research group PDF library.
 - Key routes: `GET /zsxq/` (UI), `GET /zsxq/pdfs` (JSON), `GET /zsxq/pdf/<id>`, `POST /zsqx/rate/<id>`, `POST /zsxq/comment/<id>`
 - **DB**: `db/zsxq.db`
-- Mounts `pdf_viewer.register(zsxq_bp, ...)` for the in-browser PDF viewer at the bottom of the module.
+- Mounts `pdf_viewer.register(zsxq_bp, source="zsxq", path_provider=…)` for the in-browser PDF viewer. Sibling registrations exist in `fetch_financial_report.py` (sec), `fetch_cninfo_report.py` (cn), and `notes_app.py` (manual) so all four PDF libraries share the same viewer + comment store.
 
 ### `pdf_viewer.py` — In-browser PDF viewer with selection-anchored markdown comments
-PDF.js-based reader for the zsxq PDF library. Mirrors the UX of the `/claude-reports` markdown viewer (right-rail comment cards anchored to selected text via a TextQuoteSelector).
-- Key routes (mounted on `zsxq_bp`):
-  - `GET /zsxq/pdf-viewer/<file_id>` — viewer HTML
-  - `GET/POST/PATCH/DELETE /zsxq/pdf-inline-comments[/<id>]` — CRUD
-  - `POST /zsxq/pdf-ocr-region` — on-demand region OCR (fitz native-text first, ocrmac Apple Vision fallback) for scanned pages
-- **DB**: `db/notes.db` table `pdf_inline_comments` (managed by `pdf_inline_comments.py`)
+PDF.js-based reader for any PDF library on disk. Mirrors the UX of the `/claude-reports` markdown viewer (right-rail comment cards anchored to selected text via a TextQuoteSelector). Source-agnostic — each parent app registers it via `register(bp, *, source, path_provider)` where `path_provider(file_id) -> {local_path, name, title}` resolves the PDF for that source.
+- Key routes (mounted on the parent blueprint; e.g. `/zsxq`, `/sec`, `/cn`, `/manual-report`):
+  - `GET /<bp>/pdf-viewer/<file_id>` — viewer HTML
+  - `GET /<bp>/pdf-viewer-pdf/<file_id>` — raw PDF bytes for PDF.js
+  - `GET/POST/PATCH/DELETE /<bp>/pdf-inline-comments[/<id>]` — CRUD (results filtered by source)
+  - `POST /<bp>/pdf-page-ocr`, `POST /<bp>/pdf-ocr-region` — OCR endpoints
+- **DB**: `db/notes.db` tables `pdf_inline_comments` and `pdf_page_ocr`, both namespaced by `(source, file_id)`.
 - Vector pages → native text selection captures quote+prefix+suffix and re-anchors via whitespace-normalized index lookup on reload.
 - Scanned pages (empty text layer) auto-enable a region-drag overlay; the dragged rect is OCR'd server-side so even scanned-only reports get the same quote-based UX.
 
 ### `pdf_inline_comments.py` — SQLite layer for PDF inline comments
-Mirror of `report_inline_comments.py` with extra `file_id`, `page`, and `rect_json` columns. Stores selection-anchored markdown comments in `db/notes.db`. A row with an empty `body` is a *pure highlight* (no comment text); the viewer renders just the `<mark>` on the page and shows no rail card. Clicking such a mark pops a tiny [💬 Add comment / 🗑 Delete] toolbar so the user can upgrade or remove it.
+Stores selection-anchored markdown comments in `db/notes.db` keyed by `(source, file_id, page)` where `source ∈ {zsxq, sec, cn, manual}` and `file_id` is the parent-table primary key (`pdf_files.file_id` / `reports.id` / `cninfo_reports.id` / `notes.id`). A row with an empty `body` is a *pure highlight* (no comment text); the viewer renders just the `<mark>` on the page and shows no rail card. Clicking such a mark pops a tiny [💬 Add comment / 🗑 Delete] toolbar so the user can upgrade or remove it. `init_db()` self-heals existing tables by adding the `source` column (default `'zsxq'`) if missing; a standalone migration script `migrate_add_source_to_pdf_tables.py` is also provided for explicit pre-deploy migration.
 
 ### `pdf_page_ocr.py` — Per-page OCR cache for synthetic text layers
-For scanned PDFs (no embedded text) the viewer requests `/pdf-page-ocr` per page; this module renders the page via fitz, runs ocrmac (Apple Vision) to get word boxes, and caches them in `db/notes.db` table `pdf_page_ocr (file_id, page, words_json, ocr_at)`. The viewer injects those words as positioned transparent `<span>`s into PDF.js's text layer so native browser text selection works the same way it does on vector PDFs — and the same way Apple Preview's "select text on a scanned PDF" feature works (Preview is also calling Apple Vision under the hood).
+For scanned PDFs (no embedded text) the viewer requests `/<bp>/pdf-page-ocr` per page; this module renders the page via fitz, runs ocrmac (Apple Vision) to get word boxes, and caches them in `db/notes.db` table `pdf_page_ocr (source, file_id, page, words_json, ocr_at)`. The viewer injects those words as positioned transparent `<span>`s into PDF.js's text layer so native browser text selection works the same way it does on vector PDFs — and the same way Apple Preview's "select text on a scanned PDF" feature works (Preview is also calling Apple Vision under the hood). Like `pdf_inline_comments`, the cache namespaces by `(source, file_id, page)` and self-heals legacy schemas.
 
 ---
 

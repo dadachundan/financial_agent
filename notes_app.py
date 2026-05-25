@@ -51,6 +51,35 @@ _CN_TICKER_SUFFIX_RE = re.compile(r"\.(HK|SZ|SS|SH)$", re.IGNORECASE)
 notes_bp = Blueprint("notes", __name__)
 
 
+# Mount the in-browser PDF viewer (selection-anchored markdown comments).
+# Routes land at /manual-report/pdf-viewer/<note_id>, etc.
+import pdf_viewer as _pdf_viewer
+
+
+def _notes_pdf_meta(note_id: int) -> dict | None:
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    try:
+        row = conn.execute(
+            "SELECT local_path, name, ticker, type FROM notes WHERE id = ?",
+            (note_id,),
+        ).fetchone()
+    finally:
+        conn.close()
+    if not row or not row["local_path"]:
+        return None
+    label_parts = [row["ticker"] or "", row["type"] or "", row["name"] or ""]
+    label = " ".join(p for p in label_parts if p).strip()
+    return {
+        "local_path": row["local_path"],
+        "name": row["name"] or Path(row["local_path"]).name,
+        "title": label or f"Note {note_id}",
+    }
+
+
+_pdf_viewer.register(notes_bp, source="manual", path_provider=_notes_pdf_meta)
+
+
 # ── Database ──────────────────────────────────────────────────────────────────
 
 def get_conn():
@@ -533,6 +562,11 @@ __URLPATCH__
               <a href="{{ _base | default('') }}/pdf/{{ row.id }}" target="_blank"
                  class="btn btn-sm btn-outline-danger btn-open">
                 📄 Open
+              </a>
+              <a href="{{ _base | default('') }}/pdf-viewer/{{ row.id }}" target="_blank"
+                 class="btn btn-sm btn-outline-primary btn-annotate"
+                 title="In-browser viewer with selection-anchored markdown comments">
+                🖍 Annotate
               </a>
               <button class="btn btn-sm btn-outline-secondary btn-local"
                       onclick="openLocal({{ row.id }}, this)">

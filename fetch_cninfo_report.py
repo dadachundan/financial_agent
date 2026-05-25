@@ -124,6 +124,39 @@ app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
 _DB_PATH = DB_FILE
 
 
+# Mount the in-browser PDF viewer (selection-anchored markdown comments).
+# Routes land at /cn/pdf-viewer/<rid>, /cn/pdf-inline-comments/*, etc.
+import pdf_viewer as _pdf_viewer
+
+
+def _cn_pdf_meta(rid: int) -> dict | None:
+    import sqlite3 as _sql
+    conn = _sql.connect(str(_DB_PATH))
+    conn.row_factory = _sql.Row
+    try:
+        row = conn.execute(
+            "SELECT local_path, ticker, company_name, period, form_type "
+            "FROM cninfo_reports WHERE id = ?",
+            (rid,),
+        ).fetchone()
+    finally:
+        conn.close()
+    if not row or not row["local_path"]:
+        return None
+    label = (
+        f"{row['ticker']} {row['company_name'] or ''} "
+        f"{row['form_type'] or ''} {row['period'] or ''}"
+    ).strip()
+    return {
+        "local_path": row["local_path"],
+        "name": Path(row["local_path"]).name,
+        "title": label or f"CN {rid}",
+    }
+
+
+_pdf_viewer.register(cn_bp, source="cn", path_provider=_cn_pdf_meta)
+
+
 # ── Stock list cache ───────────────────────────────────────────────────────────
 
 _stock_cache: dict[str, dict] = {}  # market → {code: {"orgId": ..., "name": ...}}
@@ -721,11 +754,21 @@ function _renderPage() {
       <td class="text-muted" style="font-size:.78rem">${(r.created_at || '').slice(0,10)}</td>
       <td class="text-muted">${sz}</td>
       ${commentHtml}
-      <td>
+      <td style="white-space:nowrap">
         <a href="${window._BASE||''}/open/${r.id}" target="_blank"
-           class="btn btn-outline-secondary btn-sm del-btn" title="Open PDF">📄</a>
+           class="btn btn-outline-danger btn-sm del-btn" title="Open in browser">📄</a>
+        <a href="${window._BASE||''}/pdf-viewer/${r.id}" target="_blank"
+           class="btn btn-outline-primary btn-sm del-btn ms-1"
+           title="In-browser viewer with selection-anchored markdown comments">🖍</a>
+        <button onclick="openLocal(${r.id},this)"
+                class="btn btn-outline-secondary btn-sm del-btn ms-1"
+                title="Open in local app">🗂</button>
+        <button onclick="syncAnnotations(${r.id},this)"
+                class="btn btn-outline-success btn-sm del-btn ms-1"
+                title="Extract annotations from PDF → save to comment">📌</button>
         <button onclick="deleteRow(${r.id},this)"
-                class="btn btn-outline-danger btn-sm del-btn ms-1" title="Delete">🗑</button>
+                class="btn btn-outline-danger btn-sm del-btn ms-1"
+                title="Delete">🗑</button>
       </td>
     </tr>`;
   }).join('');
@@ -808,11 +851,63 @@ function startDownload() {
 // ── Delete ─────────────────────────────────────────────────────────────────────
 async function deleteRow(id) {
   if (!confirm('Delete this report record and file?')) return;
-  const r = await fetch(`/delete/${id}`, {method: 'DELETE'});
+  const r = await fetch(`${window._BASE||''}/delete/${id}`, {method: 'DELETE'});
   if (r.ok) {
     _rows = _rows.filter(x => x.id !== id);
     applyFilters();
   }
+}
+
+// ── Open in local app (macOS Preview, etc.) ──────────────────────────────────
+function openLocal(rid, btn) {
+  const orig = btn.textContent;
+  fetch(`${window._BASE||''}/open-local/${rid}`)
+    .then(r => r.json())
+    .then(data => {
+      if (!data.ok) {
+        btn.textContent = '❌';
+        btn.title = data.error || 'Could not open file';
+        setTimeout(() => { btn.textContent = orig; btn.title = 'Open in local app'; }, 2500);
+      }
+    })
+    .catch(() => {
+      btn.textContent = '❌';
+      setTimeout(() => { btn.textContent = orig; }, 2500);
+    });
+}
+
+// ── Sync annotations (extract PDF annotations → save to comment) ─────────────
+function syncAnnotations(rid, btn) {
+  const orig = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = '⏳';
+  fetch(`${window._BASE||''}/sync-annotations/${rid}`, { method: 'POST' })
+    .then(r => r.json())
+    .then(data => {
+      btn.disabled = false;
+      if (data.ok) {
+        const cell = document.getElementById('comment-cell-' + rid);
+        if (cell) {
+          const span = cell.querySelector('.comment-preview');
+          if (span) {
+            span.dataset.comment = data.comment || '';
+            if (typeof renderAllCommentCells === 'function') renderAllCommentCells();
+          }
+        }
+        btn.textContent = '✅';
+        btn.title = data.count + ' annotation(s) saved to comment';
+        setTimeout(() => { btn.textContent = orig; btn.title = 'Extract annotations from PDF → save to comment'; }, 2500);
+      } else {
+        btn.textContent = '❌';
+        btn.title = data.error || 'No annotations found';
+        setTimeout(() => { btn.textContent = orig; btn.title = 'Extract annotations from PDF → save to comment'; }, 2500);
+      }
+    })
+    .catch(() => {
+      btn.disabled = false;
+      btn.textContent = '❌';
+      setTimeout(() => { btn.textContent = orig; }, 2000);
+    });
 }
 
 // ── Sorting ────────────────────────────────────────────────────────────────────
@@ -948,6 +1043,106 @@ def save_comment(rid: int):
             "UPDATE cninfo_reports SET comment=? WHERE id=?", (comment, rid)
         )
     return jsonify({"ok": True})
+
+
+@cn_bp.route("/open-local/<int:rid>")
+def open_local(rid: int):
+    """Open the report's local file in the system default viewer."""
+    import subprocess
+    import sys
+    with get_conn() as conn:
+        row = conn.execute(
+            "SELECT local_path FROM cninfo_reports WHERE id=?", (rid,)
+        ).fetchone()
+    if not row or not row["local_path"]:
+        return jsonify(ok=False, error="No local file recorded"), 404
+    path = Path(row["local_path"])
+    if not path.exists():
+        return jsonify(ok=False, error=f"File not found: {path}"), 404
+    try:
+        if sys.platform == "darwin":
+            subprocess.Popen(["open", str(path)])
+        elif sys.platform.startswith("win"):
+            subprocess.Popen(["start", "", str(path)], shell=True)
+        else:
+            subprocess.Popen(["xdg-open", str(path)])
+    except Exception as exc:
+        return jsonify(ok=False, error=str(exc)), 500
+    return jsonify(ok=True)
+
+
+@cn_bp.route("/sync-annotations/<int:rid>", methods=["POST"])
+def sync_annotations(rid: int):
+    """Read PDF annotations from disk and save them to the comment field.
+
+    Reuses the extraction & formatting helpers from zsxq_viewer so the
+    output format matches the ZSXQ feed and SEC viewer exactly.
+    """
+    import concurrent.futures as _cf
+    import datetime as _dt
+    import time as _time
+    from zsxq_viewer import (
+        _extract_annotations_from_pdf,
+        _format_annotations,
+        _prune_orphan_images,
+    )
+
+    with get_conn() as conn:
+        row = conn.execute(
+            "SELECT local_path, ticker, period, comment FROM cninfo_reports "
+            "WHERE id = ?",
+            (rid,),
+        ).fetchone()
+
+    if not row or not row["local_path"]:
+        return jsonify(ok=False, error="No local file"), 404
+
+    path = Path(row["local_path"])
+    if not path.exists():
+        return jsonify(ok=False, error="File not found on disk"), 404
+
+    if path.suffix.lower() != ".pdf":
+        return jsonify(ok=False, error="Not a PDF (only PDFs have annotations)"), 200
+
+    print(f"[cn sync-annotations] 📌 {row['ticker']} {row['period']}")
+    print(f"                      path: {path}  ({path.stat().st_size/1024:.0f} KB)")
+    t0 = _time.time()
+
+    _TIMEOUT = 120.0
+    with _cf.ThreadPoolExecutor(max_workers=1) as _pool:
+        _fut = _pool.submit(_extract_annotations_from_pdf, path)
+        try:
+            anns = _fut.result(timeout=_TIMEOUT)
+        except _cf.TimeoutError:
+            return jsonify(ok=False, error=f"Timed out after {_TIMEOUT:.0f}s"), 200
+        except Exception as exc:
+            import traceback; traceback.print_exc()
+            return jsonify(ok=False, error=str(exc)), 200
+
+    elapsed = _time.time() - t0
+    if not anns:
+        print(f"                      ⚠ no annotations found ({elapsed:.1f}s)")
+        return jsonify(ok=False, error="No annotations found in PDF"), 200
+
+    print(f"                      ✓ {len(anns)} annotation(s) in {elapsed:.1f}s")
+    comment = _format_annotations(anns)
+    _prune_orphan_images(row["comment"] or "", comment)
+    now = _dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    with get_conn() as conn:
+        # cninfo_reports may not have comment_updated_at yet — update only what
+        # exists. Check via PRAGMA so we stay safe on legacy schemas.
+        cols = {r[1] for r in conn.execute("PRAGMA table_info(cninfo_reports)")}
+        if "comment_updated_at" in cols:
+            conn.execute(
+                "UPDATE cninfo_reports SET comment=?, comment_updated_at=? WHERE id=?",
+                (comment, now, rid),
+            )
+        else:
+            conn.execute(
+                "UPDATE cninfo_reports SET comment=? WHERE id=?",
+                (comment, rid),
+            )
+    return jsonify(ok=True, count=len(anns), comment=comment)
 
 
 # Register blueprint on the standalone app (after all routes are defined)

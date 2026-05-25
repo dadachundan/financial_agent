@@ -6,18 +6,29 @@ text selection works the way it does in Apple Preview (which is just calling
 Apple Vision under the hood).
 
 This module exposes:
-- get(file_id, page) -> list[dict] | None   (cached words; None if missing)
-- compute(file_id, page, local_path) -> list[dict]   (OCRs the page via fitz
-  + ocrmac, caches the result, returns it)
-- compute_and_cache_lazy(...)               (compute() but skip if cached)
+- get(source, file_id, page) -> list[dict] | None   (cached words; None if missing)
+- compute(source, file_id, page, local_path) -> list[dict]
+  (OCRs the page via fitz + ocrmac, caches the result, returns it)
+- compute_if_missing(...)                           (compute() but skip if cached)
 
 Each word dict is `{text, x, y, w, h}` in *normalised* page coords (0..1,
 origin TOP-LEFT — already flipped from ocrmac's bottom-left convention so
 the frontend doesn't have to know). The viewer multiplies by the rendered
 viewport size to position each <span>.
 
-Storage: db/notes.db, table pdf_page_ocr (file_id INT, page INT, words_json
-TEXT, ocr_at TEXT, PRIMARY KEY (file_id, page)).
+`source` is one of 'zsxq', 'sec', 'cn', 'manual' — namespaces the cache so
+two libraries with overlapping integer ids can both cache their pages.
+
+Storage: db/notes.db, table pdf_page_ocr. Run
+`python migrate_add_source_to_pdf_tables.py` once on existing installs to
+add the `source` column to the pre-existing table.
+
+PRIMARY KEY note: the existing schema uses PRIMARY KEY (file_id, page). To
+avoid the data-loss risk of a table rebuild, we keep it. In practice zsxq
+file_ids are huge (~10^14) and sec/cn/manual ids are small (< 10^6), so
+cross-source collisions are extremely rare. On the off chance one occurs,
+INSERT OR REPLACE silently overwrites and the displaced source's next page
+view triggers a fresh OCR — graceful degradation.
 """
 from __future__ import annotations
 
@@ -50,9 +61,11 @@ def init_db() -> None:
         if _INITED:
             return
         with _conn() as conn:
+            # Fresh table — created with the `source` column from the start.
             conn.execute(
                 """
                 CREATE TABLE IF NOT EXISTS pdf_page_ocr (
+                  source     TEXT NOT NULL DEFAULT 'zsxq',
                   file_id    INTEGER NOT NULL,
                   page       INTEGER NOT NULL,
                   words_json TEXT NOT NULL,
@@ -61,16 +74,30 @@ def init_db() -> None:
                 )
                 """
             )
+            # Existing tables (pre-multi-source): add `source` with default
+            # 'zsxq' so legacy rows keep their meaning. Self-healing, same
+            # pattern as `CREATE TABLE IF NOT EXISTS` above.
+            cols = {r[1] for r in conn.execute("PRAGMA table_info(pdf_page_ocr)")}
+            if "source" not in cols:
+                print(
+                    "[pdf_page_ocr] adding `source` column "
+                    "(default 'zsxq') to existing table"
+                )
+                conn.execute(
+                    "ALTER TABLE pdf_page_ocr "
+                    "ADD COLUMN source TEXT NOT NULL DEFAULT 'zsxq'"
+                )
             conn.commit()
         _INITED = True
 
 
-def get(file_id: int, page: int) -> list[dict] | None:
+def get(source: str, file_id: int, page: int) -> list[dict] | None:
     init_db()
     with _conn() as conn:
         row = conn.execute(
-            "SELECT words_json FROM pdf_page_ocr WHERE file_id=? AND page=?",
-            (file_id, page),
+            "SELECT words_json FROM pdf_page_ocr "
+            "WHERE source=? AND file_id=? AND page=?",
+            (source, file_id, page),
         ).fetchone()
     if not row:
         return None
@@ -80,19 +107,22 @@ def get(file_id: int, page: int) -> list[dict] | None:
         return None
 
 
-def _save(file_id: int, page: int, words: list[dict]) -> None:
+def _save(source: str, file_id: int, page: int, words: list[dict]) -> None:
     init_db()
     now = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    payload = json.dumps(words, separators=(",", ":"))
     with _LOCK, _conn() as conn:
         conn.execute(
-            "INSERT OR REPLACE INTO pdf_page_ocr (file_id, page, words_json, ocr_at) "
-            "VALUES (?, ?, ?, ?)",
-            (file_id, page, json.dumps(words, separators=(",", ":")), now),
+            "INSERT OR REPLACE INTO pdf_page_ocr "
+            "(source, file_id, page, words_json, ocr_at) "
+            "VALUES (?, ?, ?, ?, ?)",
+            (source, file_id, page, payload, now),
         )
         conn.commit()
 
 
-def compute(file_id: int, page: int, local_path: str, *, zoom: float = 2.0,
+def compute(source: str, file_id: int, page: int, local_path: str, *,
+            zoom: float = 2.0,
             languages: tuple[str, ...] = ("en-US", "zh-Hans")) -> list[dict]:
     """OCR a single page and cache the result. Returns the words list."""
     import fitz  # type: ignore
@@ -134,12 +164,13 @@ def compute(file_id: int, page: int, local_path: str, *, zoom: float = 2.0,
     # browser builds a selection across our spans, the resulting string is
     # in natural reading order.
     words.sort(key=lambda d: (round(d["y"] * 200), round(d["x"] * 200)))
-    _save(file_id, page, words)
+    _save(source, file_id, page, words)
     return words
 
 
-def compute_if_missing(file_id: int, page: int, local_path: str) -> list[dict]:
-    cached = get(file_id, page)
+def compute_if_missing(source: str, file_id: int, page: int,
+                       local_path: str) -> list[dict]:
+    cached = get(source, file_id, page)
     if cached is not None:
         return cached
-    return compute(file_id, page, local_path)
+    return compute(source, file_id, page, local_path)

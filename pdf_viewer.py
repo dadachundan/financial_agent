@@ -1,7 +1,7 @@
 """In-browser PDF viewer with selection-anchored markdown comments.
 
 Mirrors the UX of /claude-reports/view/<md> (right-rail cards anchored to
-selected text via TextQuoteSelector) but for the zsxq PDF library.
+selected text via TextQuoteSelector) but for any PDF library on disk.
 
 Renders the PDF client-side with PDF.js so text selection, quote
 extraction (prefix + selected + suffix) and `<mark>` wrapping work the
@@ -11,67 +11,91 @@ the backend, which runs ocrmac (Apple Vision) on the cropped image and
 returns the OCR'd text as the quote — so quote-based anchoring is
 unified across vector and scanned PDFs.
 
-Routes registered onto the zsxq blueprint (so URL prefix is /zsxq):
+Routes registered on the parent blueprint (URL prefix becomes the
+viewer's namespace, e.g. /zsxq, /sec, /cn, /manual-report):
 
   GET    /pdf-viewer/<file_id>             — viewer page
+  GET    /pdf-viewer-pdf/<file_id>         — raw PDF bytes (used by PDF.js)
   GET    /pdf-inline-comments              — list  (?file_id=N)
   POST   /pdf-inline-comments              — create
   PATCH  /pdf-inline-comments/<id>         — update body
   DELETE /pdf-inline-comments/<id>         — delete
+  POST   /pdf-page-ocr                     — OCR a full page (cached)
   POST   /pdf-ocr-region                   — OCR a rect on a page
 
-Storage: pdf_inline_comments table in db/notes.db (see pdf_inline_comments.py).
+Storage: `pdf_inline_comments` and `pdf_page_ocr` in db/notes.db. Both
+tables namespace rows by (source, file_id) so the four PDF libraries
+share storage cleanly. See pdf_inline_comments.py + pdf_page_ocr.py.
+
+`register(bp, *, source, path_provider)`:
+- bp: Flask Blueprint to attach routes to. The blueprint's URL prefix
+  becomes the viewer's namespace.
+- source: one of 'zsxq' | 'sec' | 'cn' | 'manual'.
+- path_provider: callable (file_id: int) -> dict | None returning the
+  PDF's metadata: {local_path: str, name: str, title: str}. Each
+  parent app (zsxq_viewer, fetch_financial_report, fetch_cninfo_report,
+  notes_app) wires this to its own DB lookup.
 """
 from __future__ import annotations
 
 import io
-import sqlite3
 from pathlib import Path
 
-from flask import Blueprint, abort, jsonify, render_template_string, request
+from flask import Blueprint, abort, jsonify, render_template_string, request, send_file
 
 import pdf_inline_comments as _pic
 import pdf_page_ocr as _ppo
-import nav_widget2 as _nw
 
 
-def register(zsxq_bp: Blueprint, db_path_provider) -> None:
-    """Attach all PDF-viewer routes to the existing zsxq blueprint.
+def register(bp: Blueprint, *, source: str, path_provider) -> None:
+    """Attach all PDF-viewer routes to the given blueprint.
 
-    db_path_provider is a zero-arg callable returning the current zsxq DB
-    path (zsxq_viewer.DB_PATH is mutated at startup, so we resolve lazily).
+    See module docstring for parameter semantics.
     """
+    if source not in {"zsxq", "sec", "cn", "manual"}:
+        raise ValueError(f"unknown source: {source!r}")
 
-    def _pdf_row(file_id: int) -> dict | None:
-        conn = sqlite3.connect(db_path_provider())
-        conn.row_factory = sqlite3.Row
-        try:
-            row = conn.execute(
-                "SELECT file_id, name, local_path, topic_title, page_count "
-                "FROM pdf_files WHERE file_id = ?",
-                (file_id,),
-            ).fetchone()
-        finally:
-            conn.close()
-        return dict(row) if row else None
+    def _meta(file_id: int) -> dict | None:
+        info = path_provider(file_id)
+        if not info:
+            return None
+        # Tolerate provider returning Row-like or dict-like objects.
+        return {
+            "local_path": info["local_path"] if "local_path" in info else None,
+            "name": info["name"] if "name" in info else "",
+            "title": info["title"] if "title" in info else "",
+        }
 
-    @zsxq_bp.route("/pdf-viewer/<int:file_id>")
+    @bp.route("/pdf-viewer/<int:file_id>")
     def pdf_viewer(file_id: int):
-        row = _pdf_row(file_id)
-        if not row or not row["local_path"]:
+        m = _meta(file_id)
+        if not m or not m["local_path"]:
             abort(404, "No local file recorded for this PDF.")
-        if not Path(row["local_path"]).exists():
-            abort(404, f"File not found on disk: {row['local_path']}")
+        if not Path(m["local_path"]).exists():
+            abort(404, f"File not found on disk: {m['local_path']}")
         return render_template_string(
             _VIEWER_TMPL,
             file_id=file_id,
-            name=row["name"] or "",
-            title=row["topic_title"] or row["name"] or f"PDF {file_id}",
-            _nav=_nw.NAV_HTML,
+            name=m["name"] or "",
+            title=m["title"] or m["name"] or f"PDF {file_id}",
         )
 
+    @bp.route("/pdf-viewer-pdf/<int:file_id>")
+    def pdf_viewer_pdf(file_id: int):
+        """Serve the raw PDF bytes for PDF.js to fetch. The template uses
+        this URL (not the parent app's own PDF route) so pdf_viewer stays
+        self-contained — different parent apps use different naming
+        (zsxq /pdf/<id>, sec /file/<id>, cn /open/<id>, manual /pdf/<id>)."""
+        m = _meta(file_id)
+        if not m or not m["local_path"]:
+            abort(404, "No local file recorded for this PDF.")
+        path = Path(m["local_path"])
+        if not path.exists():
+            abort(404, f"File not found on disk: {path}")
+        return send_file(path, mimetype="application/pdf")
+
     # ── CRUD ────────────────────────────────────────────────────────────
-    @zsxq_bp.route("/pdf-inline-comments", methods=["GET"])
+    @bp.route("/pdf-inline-comments", methods=["GET"])
     def pdf_ic_list():
         try:
             file_id = int(request.args.get("file_id", "0"))
@@ -79,9 +103,9 @@ def register(zsxq_bp: Blueprint, db_path_provider) -> None:
             return jsonify(error="invalid file_id"), 400
         if not file_id:
             return jsonify(error="missing file_id"), 400
-        return jsonify(comments=_pic.list_for_file(file_id))
+        return jsonify(comments=_pic.list_for_file(source, file_id))
 
-    @zsxq_bp.route("/pdf-inline-comments", methods=["POST"])
+    @bp.route("/pdf-inline-comments", methods=["POST"])
     def pdf_ic_create():
         data = request.get_json(silent=True) or {}
         try:
@@ -99,6 +123,7 @@ def register(zsxq_bp: Blueprint, db_path_provider) -> None:
         if not quote and not rect:
             return jsonify(error="quote or rect required"), 400
         row = _pic.create(
+            source=source,
             file_id=file_id,
             page=page,
             quote=quote,
@@ -109,7 +134,7 @@ def register(zsxq_bp: Blueprint, db_path_provider) -> None:
         )
         return jsonify(comment=row), 201
 
-    @zsxq_bp.route("/pdf-inline-comments/<int:cid>", methods=["PATCH"])
+    @bp.route("/pdf-inline-comments/<int:cid>", methods=["PATCH"])
     def pdf_ic_update(cid: int):
         data = request.get_json(silent=True) or {}
         # body may be empty (downgrading a comment to a plain highlight).
@@ -119,7 +144,7 @@ def register(zsxq_bp: Blueprint, db_path_provider) -> None:
             return jsonify(error="not found"), 404
         return jsonify(comment=row)
 
-    @zsxq_bp.route("/pdf-inline-comments/<int:cid>", methods=["DELETE"])
+    @bp.route("/pdf-inline-comments/<int:cid>", methods=["DELETE"])
     def pdf_ic_delete(cid: int):
         ok = _pic.delete(cid)
         if not ok:
@@ -127,7 +152,7 @@ def register(zsxq_bp: Blueprint, db_path_provider) -> None:
         return "", 204
 
     # ── Per-page OCR (synthetic text layer for scanned pages) ──────────
-    @zsxq_bp.route("/pdf-page-ocr", methods=["POST"])
+    @bp.route("/pdf-page-ocr", methods=["POST"])
     def pdf_page_ocr_route():
         data = request.get_json(silent=True) or {}
         try:
@@ -137,20 +162,20 @@ def register(zsxq_bp: Blueprint, db_path_provider) -> None:
             return jsonify(error="bad payload"), 400
         if not file_id or not page:
             return jsonify(error="file_id/page required"), 400
-        cached = _ppo.get(file_id, page)
+        cached = _ppo.get(source, file_id, page)
         if cached is not None:
             return jsonify(words=cached, cached=True)
-        row = _pdf_row(file_id)
-        if not row or not row["local_path"] or not Path(row["local_path"]).exists():
+        m = _meta(file_id)
+        if not m or not m["local_path"] or not Path(m["local_path"]).exists():
             return jsonify(error="pdf not found"), 404
         try:
-            words = _ppo.compute(file_id, page, row["local_path"])
+            words = _ppo.compute(source, file_id, page, m["local_path"])
         except Exception as e:
             return jsonify(error=f"OCR failed: {e}"), 500
         return jsonify(words=words, cached=False)
 
     # ── On-demand region OCR (for scanned pages) ────────────────────────
-    @zsxq_bp.route("/pdf-ocr-region", methods=["POST"])
+    @bp.route("/pdf-ocr-region", methods=["POST"])
     def pdf_ocr_region():
         data = request.get_json(silent=True) or {}
         try:
@@ -164,8 +189,8 @@ def register(zsxq_bp: Blueprint, db_path_provider) -> None:
             return jsonify(error="bad payload"), 400
         if not file_id or not page or w <= 1 or h <= 1:
             return jsonify(error="file_id/page/rect required"), 400
-        row = _pdf_row(file_id)
-        if not row or not row["local_path"] or not Path(row["local_path"]).exists():
+        m = _meta(file_id)
+        if not m or not m["local_path"] or not Path(m["local_path"]).exists():
             return jsonify(error="pdf not found"), 404
 
         try:
@@ -174,7 +199,7 @@ def register(zsxq_bp: Blueprint, db_path_provider) -> None:
             return jsonify(error="PyMuPDF not installed"), 500
 
         try:
-            doc = fitz.open(row["local_path"])
+            doc = fitz.open(m["local_path"])
         except Exception as e:
             return jsonify(error=f"fitz open failed: {e}"), 500
         try:
@@ -627,7 +652,7 @@ _VIEWER_TMPL = r"""<!doctype html>
     "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/build/pdf.worker.min.mjs";
 
   const FILE_ID  = {{ file_id|tojson }};
-  const PDF_URL  = {{ (_base + '/pdf/' + (file_id|string))|tojson }};
+  const PDF_URL  = {{ (_base + '/pdf-viewer-pdf/' + (file_id|string))|tojson }};
   const API_BASE = {{ _base|tojson }};
   const docEl   = document.getElementById('doc');
   const fab     = document.getElementById('picFab');
