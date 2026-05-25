@@ -1093,11 +1093,28 @@ _VIEWER_TMPL = r"""<!doctype html>
     const prefix = idx.full.slice(Math.max(0, startOff - 32), startOff);
     const suffix = idx.full.slice(endOff, endOff + 32);
     const rect = range.getBoundingClientRect();
+    // Page-space rect (CSS px at scale=1) — stable across reload/rescale, so
+    // we can use it as a fallback overlay anchor when quote+prefix+suffix
+    // re-location fails (e.g. PDFs whose text layer has no inter-word
+    // whitespace, so the selected "Taiwan has the…" never matches
+    // "Taiwanhasthe…" in the normalised index).
+    const pageDiv = pageDivs[pageNum - 1];
+    let pageRect = null;
+    if (pageDiv) {
+      const pb = pageDiv.getBoundingClientRect();
+      pageRect = {
+        x: (rect.left - pb.left) / scale,
+        y: (rect.top  - pb.top)  / scale,
+        w: rect.width  / scale,
+        h: rect.height / scale,
+      };
+    }
     return {
       page: pageNum, quote, prefix, suffix,
       start_off: startOff, end_off: endOff,
       rect: { top: rect.top, left: rect.left, right: rect.right, bottom: rect.bottom,
               width: rect.width, height: rect.height },
+      pageRect,
     };
   }
 
@@ -1180,7 +1197,12 @@ _VIEWER_TMPL = r"""<!doctype html>
 
   async function saveHighlightOnly(info) {
     try {
-      const persistedRect = (info.kind === 'region' && info.rect) ? info.rect : null;
+      // Region selections: info.rect is already page-space ({x,y,w,h}).
+      // Text selections: info.pageRect carries the page-space rect for
+      // fallback re-anchoring when quote re-location fails on reload.
+      const persistedRect = (info.kind === 'region' && info.rect)
+        ? info.rect
+        : (info.pageRect || null);
       await api('/pdf-inline-comments', {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
@@ -1713,11 +1735,14 @@ _VIEWER_TMPL = r"""<!doctype html>
       body: '',
       onSave: async (body) => {
         try {
-          // Only persist rect for region selections — text selections use the
-          // quote+prefix+suffix triple to re-anchor. The text-selection
-          // info.rect is in window pixels (from range.getBoundingClientRect),
-          // not page space, so it's not a valid fallback anchor anyway.
-          const persistedRect = (info.kind === 'region' && info.rect) ? info.rect : null;
+          // Region selections: info.rect is already page-space ({x,y,w,h}).
+          // Text selections: info.pageRect is the page-space conversion of
+          // the live selection rect (the viewport info.rect is unusable
+          // post-reload). Persisting it gives the page renderer a fallback
+          // overlay anchor when quote+prefix+suffix re-location fails.
+          const persistedRect = (info.kind === 'region' && info.rect)
+            ? info.rect
+            : (info.pageRect || null);
           const payload = {
             file_id: FILE_ID,
             page: info.page,
@@ -1946,8 +1971,20 @@ _VIEWER_TMPL = r"""<!doctype html>
           desiredTop = 0;
         }
       } else if (card.dataset.anchored === '0') {
-        desiredTop = Number.MAX_SAFE_INTEGER;
-        isOrphan = true;
+        // Anchor failed (quote couldn't be re-located and no rect overlay
+        // was drawn). Position the card next to its source page anyway —
+        // banishing to the rail bottom landed it at top:0px when no other
+        // anchored cards were present, which on a deep page = top of the
+        // document, so the card visually "jumped to the beginning".
+        const cid = card.dataset.id;
+        const c = comments.find(x => x.id === parseInt(cid, 10));
+        const pd = c ? pageDivs[c.page - 1] : null;
+        if (pd) {
+          desiredTop = pd.getBoundingClientRect().top - railRect.top;
+        } else {
+          desiredTop = Number.MAX_SAFE_INTEGER;
+          isOrphan = true;
+        }
       } else {
         const cid = card.dataset.id;
         const mk = document.querySelector('mark.pic-hl[data-cid="' + cid + '"]')
