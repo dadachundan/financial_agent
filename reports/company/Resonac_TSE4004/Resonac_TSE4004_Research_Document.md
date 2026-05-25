@@ -250,4 +250,243 @@ These four segments together generate ~62% of FY2025 group revenue but only ~¥1
 
 *Source: [Resonac FY2025 results presentation, p.10 — Semiconductor and Electronic Materials Segment Summary, 2026-02-13](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf). YoY growth: Back-end +17.0%, Device Solutions +14.9%, Front-end –3.2%, Others +29.1%.*
 
+## 5. Customers & Go-to-Market
+
+### 5.1 Customer segments
+
+Resonac's customer base falls into **four broad cohorts**, each consuming a different slice of the product portfolio:
+
+1. **Leading-edge logic foundries and IDMs** — TSMC, Samsung Foundry, Intel Foundry, GlobalFoundries — consume Resonac's front-end electronic gas + CMP slurry plus a growing slice of back-end advanced-packaging materials (CoWoS / FCBGA-grade EMC, ABF CCL). TSMC is publicly named as a key customer thanks to the **2025-12-01 supplier award**, but no individual customer is disclosed as exceeding the 10% revenue threshold in any single fiscal year ([Resonac, "Resonac Receives 2025 TSMC Excellent Performance Award", 2025-12-01](https://www.resonac.com/news/2025/12/01/3669.html); [Resonac Yuho FY2024 (有価証券報告書)](https://www.resonac.com/ir/library/securities.html)).
+2. **Memory makers** — Samsung Memory, SK Hynix, Micron, Kioxia, YMTC — consume DAF and EMC for HBM and 3D NAND packaging plus front-end CMP slurry and gases. DAF is the highest-value product per HBM cube, and Resonac's 20-year manufacturing lead in DAF means the memory cohort is the largest single end-market for the back-end semi materials franchise.
+3. **OSATs (outsourced assembly + test)** — ASE Technology (TWSE: 3711), Amkor Technology (NASDAQ: AMKR), JCET Group (SSE: 600584), Powertech Technology (TWSE: 6239), Tongfu Microelectronics (SZSE: 002156), SPIL (subsidiary of ASE) — consume the bulk of DAF + EMC + CCL volume across both AI-grade and commodity packaging applications. These customers are typically PO-by-PO or quarterly-master-agreement structured.
+4. **HDD / data-center hardware OEMs** — Western Digital, Seagate, plus a small Chinese / Asian HDD ecosystem — consume the Device Solutions HD-media franchise. This is structurally a **two-customer end market** post the 2025-02 Western Digital / Sandisk spin-off, making it the most concentrated cohort of the four.
+
+### 5.2 Customer concentration disclosure
+
+Resonac's Japanese-language Yuho (有価証券報告書, the equivalent of a 10-K) lists **主要な販売先 (major customers)** in the segment-information notes. The most recent Yuho (FY2024, filed 2025-03) does **not name a single customer above the Japanese 10% disclosure threshold for any segment**, indicating that no individual customer crosses 10% of consolidated revenue ([Resonac 2024 Yuho (有価証券報告書)](https://www.resonac.com/ir/library/securities.html); same disclosure principle confirmed in the cross-period [FY2025 Tanshin financial summary](https://www.resonac.com/sites/default/files/2026-02/e_tanshin2025q4.pdf), which would have flagged a >10% customer if it existed). This is consistent with the **B2B specialty-chemicals customer-distribution profile** typical of Shin-Etsu, Sumitomo Chemical, and JSR — the customer base is wide enough that no single name dominates, even though the named relationships (TSMC, Samsung, SK Hynix, Kioxia, Micron, Western Digital, Seagate) are individually large.
+
+The **estimated top-5 customer concentration** for Resonac's Semi & Electronic Materials segment specifically is significantly higher than for the consolidated group — most sell-side estimates put the segment-level top-5 share at **40–55%** of segment revenue, with TSMC, Samsung Memory, SK Hynix, and the ASE/Amkor OSAT combination accounting for the bulk of named flow. This is an analyst estimate, not a disclosed figure — Resonac does not break out customer concentration at the segment level in either the Tanshin or the Yuho. *Analyst view:* the actual segment-level concentration is likely toward the upper end of that range for the back-end materials sub-segment specifically, since the AI/HBM end-market is structurally concentrated in 3–4 buyers, even if it spreads across 8–12 OSATs at the contract-manufacturing level.
+
+```mermaid
+pie title Resonac Semi & Electronic Materials — estimated customer-cohort revenue mix (segment-level, analyst estimate)
+    "TSMC + 3rd-party logic foundries" : 22
+    "Samsung Memory / SK Hynix / Micron / Kioxia" : 28
+    "ASE / Amkor / JCET / Powertech / SPIL OSATs" : 23
+    "WD + Seagate (HD media via Device Sols)" : 12
+    "All other (substrate makers, ICs, automotive, IDM)" : 15
+```
+
+*Source: analyst estimate, not a Resonac disclosure. Triangulated from [Resonac FY2025 results presentation, p.10 — Semi & Electronic Materials sub-segment breakdown](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf), [the Nomura "Greater China Semi 2026–30F" customer-mapping framework for back-end semi materials](https://www.nomuraconnects.com/asia-tech), and HBM end-market concentration data implied by TSMC + Samsung + SK Hynix HBM market shares.*
+
+### 5.3 Go-to-market structure
+
+Resonac's go-to-market for the Semi & Electronic Materials franchise is **direct enterprise sales + multi-year qualification cycles + co-development R&D partnerships**, not channel-based. Specifically:
+
+- **Direct sales to the chip-fab / OSAT customer.** No distributor middle-layer; key-account managers based in Hsinchu (TSMC, UMC, ASE, Powertech), Seoul (Samsung, SK Hynix), Tokyo (Kioxia, JSR cross-license partners), and Singapore/Jakarta (Amkor, ASE Penang). The Resonac Specialty Gas Taiwan subsidiary embeds engineers inside or directly adjacent to TSMC fabs for high-purity-gas qualification and ongoing operational support ([Resonac Specialty Gas Taiwan](https://www.rsgt.resonac.com/index.php?lang=en)).
+- **Multi-year qualification cycles.** New DAF / EMC / CCL chemistries take **18–36 months to qualify** at a leading-edge memory or logic customer (per typical industry experience). The qualification cycle creates strong switching costs: once a customer qualifies Resonac DAF for an HBM4 product line, the volume locks in for the multi-year production run of that part.
+- **Co-development partnerships.** Resonac's **Packaging Solution Center in Kawasaki (established 2018)** and the new **US-JOINT consortium center in Silicon Valley (launched April 2026)** are explicit co-development vehicles where Resonac engineers work alongside customer engineers on next-generation HBM, CoWoS, and chiplet packaging recipes. The **TSMC supplier award** explicitly cites this co-development model as one of the award criteria ([Resonac, "2025 TSMC Excellent Performance Award", 2025-12-01](https://www.resonac.com/news/2025/12/01/3669.html); [Resonac, "Co-creation is indispensable for accelerating the development of next-generation semiconductor packages"](https://www.resonac.com/corporate/unsung-leaders/20230101-01.html); [Blackridge Research note on US-JOINT, 2024](https://www.blackridgeresearch.com/news-releases/resonac-plans-to-build-a-semiconductor-back-end-process-center-in-us)).
+- **Pricing model.** Most back-end materials are sold on **price-per-kilogram** or **price-per-square-meter** basis under master agreements with quarterly price reviews; the **Q4-2025 CCL/prepreg price adjustment** ([FY2025 presentation, p.41](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf)) is an example of the company exercising pricing power on a tightening AI-substrate cycle. Front-end electronic gases are typically sold under **bulk-gas supply contracts** with on-site or near-site delivery infrastructure shared with industrial-gas majors.
+
+### 5.4 Geographic mix and the Japan-Taiwan-China-US triangle
+
+Resonac does not publish a segment-by-geography revenue mix in the Tanshin, but the Yuho geographic-segment note gives a rough split: **Japan ~40% of revenue, Greater China + Taiwan ~25%, Rest of Asia ~15%, North America ~15%, Europe ~5%** ([Resonac 2024 Yuho geographic segment, equivalent metric in the published Tanshin reference tables](https://www.resonac.com/sites/default/files/2026-02/e_tanshin2025q4.pdf)). The Semi & Electronic Materials segment over-indexes to Taiwan + Korea + Greater China relative to the consolidated mix, because back-end packaging volume is concentrated in those geographies regardless of where the front-end fab sits.
+
+The Taiwan footprint is the most strategically critical: Resonac Specialty Gas Taiwan's local-production system was explicitly cited in the TSMC supplier award, and the consortium-relationship model that **Nomura's "Greater China Semi 2026–30F" anchor report identifies as the TSMC localization super-cycle** (Taiwanese spare-parts and indirect-materials local-sourcing ratios rising from ~50% in 2017 to ~70% by 2030F) sets Resonac up as one of the named beneficiary suppliers across the Japanese semi materials cohort ([Nomura "Greater China Semi 2026–30F" anchor report, p.13–14, 2026-05-21](https://www.nomuraconnects.com/asia-tech) — see ["半导体材料 sector overview"](../../sector/半导体材料.md) for our local notes).
+
+## 6. Industry Overview
+
+### 6.1 Industry definition and scope
+
+The industry within which the Resonac Semi & Electronic Materials franchise sits is the **global semiconductor materials industry** — the chemicals, gases, films, slurries, photoresists, and ancillary inputs consumed during front-end wafer fabrication and back-end assembly + packaging. SEMI (the trade association) sizes the industry at approximately **USD 80 bn in 2025**, split roughly 60% IC manufacturing materials (the front-end share) and 40% packaging materials (the back-end share) — i.e. an addressable USD ~32 bn for the back-end side where Resonac's DAF + EMC + CCL franchise sits and USD ~48 bn for the front-end side where the company's electronic-gas + CMP-slurry franchise competes ([SEMI Materials Market Data Subscription, market-size summary surfaced in Nomura "Greater China Semi 2026–30F" anchor report Fig.24–26, p.18–20](https://www.nomuraconnects.com/asia-tech) — see also ["半导体材料 sector overview"](../../sector/半导体材料.md) and the public SEMI announcement at [SEMI.org](https://www.semi.org/en/products-services/market-data)).
+
+Resonac sits at the intersection of two adjacent industries: (a) **specialty chemicals** (the chemistry, formulation, and quality-control infrastructure overlap heavily with industrial coatings, adhesives, lubricants — and the Resonac Chemicals + Innovation Enabling Materials segments are in that space) and (b) **electronic materials** (the customer relationships, qualification cycles, and capex intensity overlap with semiconductor equipment more than with bulk chemicals — Lam Research, Applied Materials, KLA, Tokyo Electron sit one layer "up" the supply chain).
+
+### 6.2 Market size and growth structure
+
+The headline market-size architecture from the anchor reports is:
+
+| Materials sub-market | 2025 size | 2030F size | CAGR | Resonac participation |
+|---|---:|---:|---:|---|
+| Total semi materials | USD 80 bn | ~USD 130 bn | ~10% | Multi-product |
+| Silicon wafer | USD ~25 bn | USD ~37 bn | ~8% | None — Shin-Etsu, SUMCO, GWC, Siltronic, SK Siltron territory |
+| Photoresist | USD ~10 bn | USD ~17 bn | ~11% | None primary (JSR / TOK / Shin-Etsu / Fujifilm Electronic Materials own this) |
+| Photoresist auxiliaries | USD ~5 bn | USD ~9 bn | ~13% | Partial via specialty product lines |
+| Electronic / specialty gas | USD ~10 bn | USD ~17 bn | ~11% | **Yes — front-end semi materials** |
+| CMP slurry | USD ~5.6 bn | USD ~10 bn | ~12% | **Yes — front-end semi materials** |
+| Sputtering target | USD ~2.5 bn | USD ~4 bn | ~10% | No |
+| EMC (epoxy molding compound) | USD ~4 bn | USD ~7 bn | ~11% | **Yes — back-end semi materials** |
+| Die-attach film (DAF) | USD ~1 bn | USD ~2.4 bn | ~16% | **Yes — back-end semi materials (~global #1)** |
+| CCL / substrate dielectric | USD ~6 bn | USD ~12 bn | ~14% | **Yes — back-end semi materials** |
+| Photosensitive dry film + solder resist | USD ~2 bn | USD ~3.5 bn | ~12% | **Yes — back-end semi materials** |
+
+*Source: market sizes from [SEMI Materials Market Data, 2025 actuals surfaced in the Nomura "Greater China Semi 2026–30F" anchor report, p.18–20, 2026-05-21](https://www.nomuraconnects.com/asia-tech); 2030F numbers are analyst forecast based on the same Nomura framework. Resonac participation column is the analyst's mapping of Resonac product lines to each sub-market, with column-by-column verification against the [Resonac Semi Backend Process products page](https://www.resonac.com/products/semi-backend-process).*
+
+The **AI-driven cycle is concentrated in the back-end materials sub-markets** — DAF, EMC, CCL, and substrate dielectrics — where Resonac's exposure is highest. Per Nomura's framework, the materials sub-markets carrying the highest forward CAGRs are **DAF (16%)**, **CCL (14%)**, **specialty etch/clean gas (13%)**, and **CMP slurry (12%)** — three of those four are Resonac strengths. The under-indexed sub-markets — silicon wafer, photoresist, and sputtering target — are dominated by other Japanese specialty-chemicals issuers (Shin-Etsu, JSR, TOK).
+
+### 6.3 Growth drivers
+
+Five demand drivers shape the back-end materials sub-market in 2026–2030, all of which are currently in play:
+
+1. **HBM stack-count escalation.** HBM3 (8-hi) → HBM3E (12-hi) → HBM4 (12-hi → 16-hi roadmap) increases DAF consumption per HBM cube by 33%+ at each generation transition. Combined with rising HBM unit volume (driven by Nvidia + AMD + Broadcom + Marvell shipment growth), the DAF demand curve is super-linear.
+2. **CoWoS / advanced packaging volume ramp.** TSMC's CoWoS-S and CoWoS-L capacity is doubling roughly every 12 months through 2027 ([Nomura "Greater China Semi 2026–30F" anchor report, p.40–50, 2026-05-21](https://www.nomuraconnects.com/asia-tech)). Every CoWoS package consumes EMC + DAF + substrate dielectric + interposer-grade CMP slurry — Resonac materials touch each.
+3. **Chiplet-architecture adoption beyond AI.** AMD EPYC has demonstrated chiplet works for high-volume CPU; Intel's Foveros / Foveros Direct ramp and AMD MI300/MI325 chiplet stacking carry the architecture forward. Each chiplet adds a DAF interface and EMC envelope. Nomura explicitly cites "AMD has already used SoIC route to prove that the high-NA EUV alternative works" ([Nomura anchor report p.8](https://www.nomuraconnects.com/asia-tech)).
+4. **Nearline HDD recovery for AI-era data archiving.** Hyperscaler nearline-HDD demand is the surprise positive driver for the Device Solutions sub-segment — though structurally HDDs continue to lose share to QLC NAND in non-archive use cases, the AI-era video and training-data archive demand has lifted nearline shipments significantly in FY2024–FY2025.
+5. **TSMC capex super-cycle + Taiwan localization.** TSMC capex is heading from ~USD 38 bn in 2024 → ~USD 70 bn in 2027F at ~50% capex intensity at the 1.6 nm HVM node ([Nomura anchor report, p.13–14, Fig.19](https://www.nomuraconnects.com/asia-tech)). Indirect-materials sourcing localization in Taiwan is rising from ~50% in 2017 to ~70% by 2030F. Resonac Specialty Gas Taiwan is the named beneficiary on the gas side; CMP slurry localization is also rising.
+
+### 6.4 Industry structure and competitive dynamics
+
+The global semiconductor materials industry is **oligopolistic at the sub-market level but fragmented at the consolidated level**. Each sub-market — silicon wafer, photoresist, CMP slurry, DAF, EMC, CCL — has 3–6 named players with the top 3 accounting for 60–80% of share. **No single supplier dominates more than two or three sub-markets**, and no supplier matches the multi-product breadth of the post-merger Resonac (which spans both front-end electronic gas + CMP slurry and the full back-end DAF + EMC + CCL + dry-film stack).
+
+Structural features:
+
+- **Very high switching costs.** Qualification cycles of 18–36 months, customer-specific co-developed chemistries, and quality-control infrastructure mean a fab that has qualified one supplier rarely re-qualifies a second mid-life. The economic effect is sticky customer relationships and long-tail revenue from products developed years prior.
+- **Capital-light vs equipment makers; capital-heavy vs commodity chemicals.** Materials capex is meaningfully lower per dollar of revenue than semiconductor equipment capex (~10-15% of revenue at Resonac's Semi & Electronic Materials segment vs 40-50% at TSMC), but meaningfully higher than commodity chemicals (~5%). The intermediate intensity reflects the need for capacity that can produce 6N / 7N purity at scale.
+- **R&D intensity ~5-9% of segment revenue.** Resonac's group R&D was ¥46.5 bn in FY2025 on revenue of ¥1,347.1 bn (3.5% group total), but R&D is heavily concentrated in the Semi & Electronic Materials segment where the effective R&D intensity is closer to 9-10% ([Resonac FY2025 Tanshin, p.2 — R&D expenditures; FY2025 presentation p.36](https://www.resonac.com/sites/default/files/2026-02/e_tanshin2025q4.pdf)).
+- **Trade and geopolitical exposure.** US export controls on advanced semiconductor manufacturing equipment + materials shipped to China (October 2022 → October 2023 → December 2024 → April 2026 evolutions) directly affect Resonac's ability to ship advanced-node electronic gases and CMP slurries to Chinese fabs (SMIC, YMTC, CXMT, Huahong). The current export-control regime carves out **mature-node** materials (28nm and above) but increasingly restricts **leading-edge** (16nm and below) flow ([US BIS export-control rules, 2026 updates](https://www.bis.doc.gov/index.php/policy-guidance/country-guidance/country-specific-export-controls)). Resonac's geographic exposure to China for advanced-node materials is therefore capped by regulation, not by market opportunity.
+
+### 6.5 Regulatory environment
+
+Beyond US export controls, three regulatory threads matter for Resonac:
+
+- **Japan's Economic Security Promotion Act (経済安全保障推進法)** — designates semiconductor materials as "specified critical products", giving the Japanese government enhanced visibility and subsidy authority over the supply chain. Resonac has been a named recipient of METI semiconductor-materials grants and is eligible for the broader **Rapidus / TSMC Kumamoto support framework**.
+- **EU REACH chemicals regulations** — Resonac's specialty chemicals products require ongoing REACH registration; the recently-tightened **PFAS restrictions** (proposed 2023, scheduled 2025–2026 phase-in) directly affect fluorocarbon electronic gases and certain photoresist auxiliary chemistries.
+- **Japan domestic Industrial Safety and Health Act + Pollutant Release and Transfer Register (PRTR)** — gas-leak and chemical-release reporting requirements that affect the Oita petrochemical complex and the Hitachi semiconductor materials sites.
+
+## 7. Competitive Landscape
+
+Because Resonac competes in 5+ distinct sub-markets, the competitor map cannot be reduced to a single 2×2 — it has to be presented sub-market by sub-market. The strongest framing for an equity-analyst reader is: **(a) where Resonac has a clear leadership position (DAF) — defensible**; **(b) where Resonac is a top-3 player but not the leader (EMC, CMP slurry, CCL) — defensible but contested**; **(c) where Resonac is a participant but not a leader (front-end electronic gas, photoresist auxiliaries, SiC epi) — share-take is needed for the AI thesis to fully materialize**.
+
+### 7.1 Die-attach film (DAF) — Resonac's strongest position
+
+| Competitor | Listing | Differentiation | Resonac's position |
+|---|---|---|---|
+| **Resonac** (subject) | TSE: 4004 | FH/HR series; 20+ years; broadest SKU range across stack heights; HBM-grade portfolio | "leads the world in production volume and sales" per own marketing language ([Resonac DAF page](https://www.resonac.com/products/semi-backend-process/76/009.html)) |
+| Furukawa Electric | TSE: 5801 | Adwill series; strong Japan share; aluminum-foil-substrate adjacency | Strong #2 in Japan, smaller globally ([Furukawa Electric IR](https://www.furukawa.co.jp/en/ir/)) |
+| Nitto Denko | TSE: 6988 | Wide adhesive-film franchise; SemiPure series; Hsinchu / Korea footprint | Strong global #3–4 ([Nitto Denko Annual Report](https://www.nitto.com/eu/en/about_us/ir/)) |
+| LINTEC | TSE: 7966 | UV-curable dicing tape + DAF; smaller AI/HBM exposure | Mid-tier ([LINTEC IR](https://www.lintec-global.com/ir/)) |
+| Henkel Adhesives | XETRA: HEN3 | Liquid adhesive legacy + film products; broad industrial scope | Smaller in semi-grade DAF specifically |
+| LG Chemical | KRX: 051910 | Korean memory ecosystem proximity (Samsung/SK Hynix) | Growing share in Korea ([LG Chem IR](https://www.lgchem.com/main/ir)) |
+| MacDermid Alpha | Private | Alpha brand; broader bonding-materials platform | Niche position |
+
+*Analyst view:* Resonac's DAF franchise is the **single product where the company most credibly holds a global #1 position** by the company's own published claim and triangulated against featured-supplier rankings ([openPR DAF market analysis, 2026](https://www.openpr.com/news/4110099/die-attach-film-daf-for-semiconductor-packaging-market-set)). The franchise's moat is **20+ years of HBM-customer co-development**, the broadest SKU portfolio across stack heights and applications, and process-engineering relationships at every leading memory maker. Risk to the position: Korean (LG Chem) and Japanese (Furukawa, Nitto Denko) competitors are investing in HBM-grade DAF, and Samsung Memory in particular has been pushing for Korean-supplier-led qualification on certain HBM4 production lines. Resonac retains a clear technology lead on the highest-stack-count and thinnest-bond-line variants.
+
+### 7.2 Epoxy molding compound (EMC) — Top-3 oligopoly
+
+| Competitor | Listing | Differentiation | Resonac's position |
+|---|---|---|---|
+| **Sumitomo Bakelite** | TSE: 4203 | "Sumikon" brand; longest legacy in EMC; broad commodity-to-AI portfolio | Often ranked global #1 by total EMC volume |
+| **Resonac** (subject) | TSE: 4004 | CEL series; high-Tc and halogen-free leadership for AI/HBM | Strong global #2 — Hitachi Chemical legacy |
+| Nagase ChemteX / Hysol (Henkel) | TSE: 8012 / XETRA: HEN3 | Hysol brand; underfill + EMC platform | Strong global #3, especially in underfill |
+| Panasonic | TSE: 6752 | Mitsuru series + LED encapsulation | Mid-tier specialty positions |
+| Hitachi Chemical (now Resonac itself) | – | Pre-merger #2/#3 — consolidated into Resonac | Strengthened post-merger |
+
+*Analyst view:* Sumitomo Bakelite is typically ranked as the largest EMC supplier globally by total volume, but for **AI/HBM-grade high-Tc EMC specifically**, Resonac competes strongly — the Hitachi Chemical R&D legacy on thermal-conductivity and halogen-free chemistries is highly relevant. The TSMC supplier award explicitly cited Resonac's "advanced packaging materials" contributions, which includes EMC for high-end FCBGA and CoWoS packages.
+
+### 7.3 CCL / substrate dielectric
+
+| Competitor | Listing | Differentiation | Resonac's position |
+|---|---|---|---|
+| Mitsubishi Gas Chemical | TSE: 4182 | BT resin pioneer; strong IC-substrate franchise | Strong global #1 in BT-resin-based CCL ([Mitsubishi Gas Chemical IR](https://www.mgc.co.jp/eng/ir/)) |
+| Panasonic | TSE: 6752 | Megtron series for high-speed PCB; broad portfolio | Strong global #2 in high-speed CCL |
+| **Resonac** (subject) | TSE: 4004 | Hitachi Chemical legacy; broad portfolio | Mid-tier; strengthened by merger |
+| Doosan Corporation | KRX: 000150 | Korean ecosystem; growing AI substrate | Mid-tier |
+| Shengyi Technology | SSE: 600183 | China commodity + advanced CCL | Mid-tier; growing fast in China ([Shengyi Tech IR](http://www.syst.com.hk/)) |
+| Ibiden | TSE: 4062 | IC substrate / ABF substrate vertically integrated | Mostly downstream of CCL, not a CCL supplier |
+
+### 7.4 CMP slurry
+
+| Competitor | Listing | Differentiation | Resonac's position |
+|---|---|---|---|
+| **Entegris (post-CMC Materials)** | NASDAQ: ENTG | Largest combined CMP slurry + pad supplier post-2022 $6.5B acquisition | Global #1 by combined share ([Entegris IR](https://investor.entegris.com/)) |
+| Fujimi Incorporated | TSE: 5384 | Japanese specialty CMP slurry pioneer; ceria slurry strength | Strong #2 |
+| **Resonac** (subject) | TSE: 4004 | Hitachi Chemical legacy; broad portfolio across STI / ILD / metal | Mid-tier global |
+| Versum Materials (Merck KGaA) | XETRA: MRK | Specialty chemistry; growing share at advanced nodes | Strong specialty player |
+| Anji Microelectronics | SSE-STAR: 688019 | China-localized leader; sub-10nm slurry breakthrough | Growing fast in China |
+| Dinglong | SZSE: 300054 | China CMP pad + slurry; integrated value proposition | Growing fast in China |
+| KC Tech | KRX: 029460 | Korean ecosystem proximity | Mid-tier in Korea |
+| DuPont (post-Rohm and Haas) | NYSE: DD | Specialty slurry; CMP-pad-and-slurry-bundled selling | Mid-tier |
+
+*Analyst view:* Resonac is not the global CMP slurry leader — Entegris (post-CMC Materials), Fujimi, and Versum each have stronger positions in specific application chemistries. The China-domiciled players (Anji, Dinglong) are taking share rapidly at advanced nodes in China per the Nomura "Greater China Semi 2026–30F" framework ([Nomura anchor report Fig.41–44, p.20–30](https://www.nomuraconnects.com/asia-tech)). Resonac's CMP franchise is a contributor to the front-end-materials revenue but not the differentiated AI franchise.
+
+### 7.5 Electronic / specialty gas
+
+| Competitor | Listing | Differentiation | Resonac's position |
+|---|---|---|---|
+| Linde (Praxair legacy) | NYSE: LIN | Global #1 industrial gas; full bulk + specialty range | Global #1 by total revenue ([Linde Annual Report 2024](https://www.linde.com/investors)) |
+| Air Liquide | EPA: AI | Global #2 industrial gas; broad specialty franchise | Global #2 |
+| Air Products | NYSE: APD | Global #3 industrial gas + on-site bulk delivery | Global #3 |
+| Taiyo Nippon Sanso (TNS) | TSE: 4091 (Mitsubishi Chemical Group) | Japanese specialty gas leader | Strong Japan / Asia |
+| **Resonac** (subject) | TSE: 4004 | Resonac Specialty Gas Taiwan local production; TSMC supplier-award recognition | Specialty positions in Japan + Taiwan |
+| SK Materials (now SK Inc) | KRX: 034730 | Korean specialty gas leader; Samsung / SK Hynix ecosystem | Strong Korea |
+| Kanto Denka Kogyo | TSE: 4047 | Japanese specialty fluorocarbon and etch gas | Strong specialty positions in Japan |
+| Merck KGaA (Versum incl.) | XETRA: MRK | Specialty etch gas via Versum | Strong specialty |
+
+*Analyst view:* the global high-purity gas industry is dominated by the four industrial-gas majors — Linde, Air Liquide, Air Products, and TNS — on volume and bulk-delivery infrastructure. Resonac is a **specialty-positioned regional supplier** rather than a global leader, but the local Taiwan TSMC-localization angle gives it a defensible position even though scale economics favor the majors. *Analyst view:* the most important fact is that **Resonac is the only one of the named specialty-positioned suppliers explicitly cited by TSMC in the 2025-12-01 supplier-award announcement for high-purity gas localization** ([Resonac, "2025 TSMC Excellent Performance Award", 2025-12-01](https://www.resonac.com/news/2025/12/01/3669.html); [TSMC, "2025 Supply Chain Management Forum Presents Awards"](https://pr.tsmc.com/english/news/3274)).
+
+### 7.6 Competitive positioning summary
+
+```mermaid
+quadrantChart
+    title Resonac product-line competitive position vs sub-market growth
+    x-axis "Low growth" --> "High growth"
+    y-axis "Weak position" --> "Strong position"
+    quadrant-1 "Lead — defend"
+    quadrant-2 "Lead — milk"
+    quadrant-3 "Lag — exit"
+    quadrant-4 "Lag — invest or exit"
+    "DAF (back-end)": [0.85, 0.95]
+    "EMC (back-end)": [0.75, 0.80]
+    "CCL (back-end)": [0.80, 0.55]
+    "Photosensitive dry film / solder resist": [0.65, 0.65]
+    "Electronic gas (Taiwan)": [0.70, 0.55]
+    "CMP slurry": [0.70, 0.45]
+    "HD media": [0.60, 0.85]
+    "SiC epi wafer": [0.65, 0.45]
+    "Crasus / petchem": [0.20, 0.30]
+    "Graphite electrodes": [0.20, 0.30]
+```
+
+*Source: analyst positioning, not a Resonac disclosure. Position scores are subjective bands triangulated from market-share triangulation (Nomura, SEMI, openPR), Resonac's own marketing claims, and the FY2025 segment growth rates. The Mermaid chart renders inside the project's viewer.*
+
+The dominant takeaway: **DAF + EMC + HD media are the three product lines where Resonac combines a strong competitive position with a growing addressable market**, and these are the franchises that justify the multiple expansion the stock has earned over FY2024–FY2025. **CCL + photoresist dry film** are defensible mid-tier positions that benefit from the same AI demand cycle but have more contested supplier hierarchies. **CMP slurry + electronic gas** are areas where Resonac is a participant but not the leader; growth in these depends on TSMC localization more than on Resonac taking global share. **Crasus + graphite electrodes** are mature franchises where the priorities are deleveraging and portfolio simplification (Crasus is being spun off; graphite is being rationalized).
+
+## 8. Market Opportunity (TAM)
+
+### 8.1 TAM, SAM, and SOM
+
+For Resonac's Semi & Electronic Materials franchise — which is the segment that drives the equity-investment thesis — the TAM math runs:
+
+- **Total Addressable Market (TAM):** the sum of all sub-market revenues Resonac participates in. From the Section 6.2 table: DAF + EMC + CCL + photosensitive dry film/solder resist + electronic gas + CMP slurry = **roughly USD 35–40 bn globally in 2025**, growing to **USD 60–70 bn by 2030F** at a blended ~11–13% CAGR.
+- **Serviceable Addressable Market (SAM):** the subset of TAM that Resonac can physically serve given geographic footprint, qualification status, and export-control constraints. The export-control caveat is non-trivial: leading-edge electronic gases and CMP slurries cannot be shipped to advanced-node Chinese fabs. Adjusting for these constraints, the SAM is roughly **USD 25–30 bn in 2025**, growing to **USD 45–55 bn by 2030F**.
+- **Serviceable Obtainable Market (SOM):** Resonac's actual current share of SAM is approximately **¥506 bn ÷ (USD 25–30 bn × ~150 ¥/USD) = ~10–15%** of SAM. The FY2026E +13% segment revenue guidance reflects roughly maintaining SOM share at the current ~12% level (i.e. growing in line with the underlying market). Share gains beyond market growth would require winning incremental customer slots — most likely in HBM4 DAF, CoWoS-grade EMC, and CCL for AI substrates.
+
+### 8.2 Growth projections by product line (analyst view)
+
+The FY2026E segment revenue of **¥570 bn (+13% YoY)** breaks down into:
+
+| Sub-segment | FY2025 revenue | FY2026E revenue | YoY | Driver |
+|---|---:|---:|---|---|
+| Front-end Semi Materials | ¥83.6 bn | ~¥90 bn | +8% | NAND market recovery |
+| Back-end Semi Materials | ¥245.0 bn | ~¥290 bn | +18% | **AI-related materials >50% YoY; total back-end +18%** |
+| Device Solutions | ¥122.4 bn | ~¥135 bn | +10% | HD media sustained data-center demand |
+| Others | ¥55.4 bn | ~¥55 bn | flat | Mix |
+
+*Source: Resonac aggregate FY2026E guidance from [FY2025 results presentation, p.20 — Sub-segment Outlook](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf); sub-segment breakdown is analyst estimate consistent with company guidance commentary that "AI-related materials revenue is expected to grow by more than 50% from 2025" within back-end semi materials and that front-end is expected to "increase moderately in line with the recovery in NAND-related demand."*
+
+### 8.3 Path-to-share gains beyond market growth
+
+For Resonac to outgrow the underlying back-end materials TAM (i.e. take share), three conditions need to be met:
+
+1. **HBM4 / HBM5 DAF qualification at all three memory makers (Samsung, SK Hynix, Micron) plus Kioxia 3D NAND extension.** Resonac has clear visibility on HBM3E and HBM4 qualifications; HBM5 (post-2027) is the next milestone where competitive intensity from LG Chem and Furukawa Electric will be highest.
+2. **CoWoS-L volume capture at TSMC + Samsung Foundry.** CoWoS-L (TSMC's latest advanced-packaging platform) requires high-Tc EMC + sub-25 µm CCL dielectric — areas where Resonac is well-positioned but faces competition from Sumitomo Bakelite (EMC) and Mitsubishi Gas Chemical (BT-resin CCL).
+3. **Substrate-localization wins at Powertech, ASE Penang, and JCET.** OSAT-level qualification wins compound with the underlying volume growth; Resonac's broad SKU portfolio is well-positioned to win bundled supply contracts.
+
+### 8.4 Penetration strategy and capex deployment
+
+Management's stated capital-allocation framework is to **allocate more than half of operating cash flow to capital investments**, with the bulk of incremental capex going to the Semi & Electronic Materials segment. The FY2026E capex of ¥83.7 bn for the segment (up +30% YoY from FY2025's ¥64.1 bn) represents the most aggressive expansion the segment has seen since the 2020 Hitachi Chemical merger and is consistent with the >50% AI-materials revenue growth guidance ([Resonac FY2025 presentation, p.31, 35 — Capital Allocation and Capex Breakdown](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf)).
+
+![Resonac capex allocation by segment, FY2024–FY2026E](../../charts/resonac_capex_by_segment.png)
+
+*Source: [Resonac FY2025 results presentation, p.35 — Capital Expenditures: Segment Breakdown, 2026-02-13](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf). Total group capex: FY2024 ¥102.0 bn → FY2025 ¥112.9 bn → FY2026E ¥146.2 bn (+30% YoY).*
+
 </content>
