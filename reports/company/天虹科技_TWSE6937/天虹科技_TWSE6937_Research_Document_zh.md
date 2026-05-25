@@ -1,8 +1,8 @@
 # 天虹科技 (Skytech Inc., TWSE:6937) 公司研究报告
 
-**报告日期:** 2026-05-20
+**报告日期:** 2026-05-25 (Step-10 验证更新版)
 **报告语言:** 简体中文 (来源文献为繁体中文,引用标题保留繁体原貌)
-**主要数据来源:** TWSE/MOPS 公开资讯观测站、Goodinfo!台湾股市资讯网、鉅亨网、Yahoo 奇摩股市、财报狗 (statementdog)、富果直送、TWSE 市场观察专栏、公司官网 (skytech.com.tw)
+**主要数据来源:** TWSE/MOPS 公开资讯观测站、Goodinfo!台湾股市资讯网、鉅亨网、Yahoo 奇摩股市、财报狗 (statementdog)、富果直送、TWSE 市场观察专栏、公司官网 (skytech.com.tw)、stockanalysis.com
 
 ---
 
@@ -10,11 +10,11 @@
 
 天虹科技 (Skytech Inc., TWSE:6937) 是一家成立于 2002 年、于 2023 年 12 月 12 日挂牌上市的台湾半导体设备与零组件供应商,创办团队多数出身美商应用材料 (Applied Materials, AMAT)。公司主营业务分为两大板块:一是半导体设备的关键零组件 (spare parts) 制造与维修服务 (陶瓷件、石英件、金属件、气体均流器等共逾 2,000 项),长期供应全球晶圆代工 (foundry) 与存储器晶圆 (memory) 大厂;二是自 2017 年切入的自有品牌前段半导体设备,核心产品为物理气相沉积 PVD (Physical Vapor Deposition)、原子层沉积 ALD (Atomic Layer Deposition)、晶圆键合机 (Wafer Bonder) 与解键合机 (De-Bonder),广泛应用于第三代半导体 (compound semiconductor / 化合物半导体,主要为 SiC、GaN)、先进封装 (advanced packaging) 与光电半导体领域。([新上市公司:天虹(6937) - 臺灣證券交易所 觀點](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151))
 
-**关键数字:** 2024 年合并营收 NT$2,587.6 百万、毛利率 41.77%、营业利益率 12.97%、净利率 10.60%、全年 EPS NT$6.03、现金股利 NT$2.1/股。([6937天虹股票的2個亮點與2個風險 - 財報狗](https://statementdog.com/analysis/6937)) 然 2025 年面临订单递延与产品组合改变压力,Q1/Q2 单季 EPS 大幅下滑至 NT$1.10 / NT$0.28,全年 EPS 仅 NT$3.01。([25Q2財報公告:天虹6937 Q2 營收5.1231億元 - CMoney](https://www.cmoney.tw/notes/note-detail.aspx?nid=979953))
+**关键数字:** 2024 年合并营收 NT$2,587.6 百万、毛利率 41.77%、营业利益率 12.97%、净利率 10.60%、全年 EPS NT$6.03、现金股利 NT$2.1/股。([6937天虹股票的2個亮點與2個風險 - 財報狗](https://statementdog.com/analysis/6937)) ([天虹做什麼? 6937做什麼? - nStock](https://www.nstock.tw/%E5%A4%A9%E8%99%B9%E5%81%9A%E4%BB%80%E9%BA%BC.html)) 然 2025 年面临订单递延与产品组合改变压力,Q1/Q2 单季 EPS 大幅下滑至 NT$1.10 / NT$0.28,全年 EPS 仅 NT$3.01、现金股利 NT$1.4/股。([Skytech (TPE:6937) Financials - stockanalysis.com](https://stockanalysis.com/quote/tpe/6937/financials/)) 2026 Q1 EPS 回升至 NT$0.96 (yoy +31.5%)、单季营收 NT$5.82 亿元 (yoy +26.3%),订单复苏迹象初现。([天虹做什麼? 6937做什麼? - nStock](https://www.nstock.tw/%E5%A4%A9%E8%99%B9%E5%81%9A%E4%BB%80%E9%BA%BC.html))
 
-**估值快照 (Valuation snapshot):** 截至近期市值约 NT$207 亿元、TTM 本益比 (P/E) 约 101.6 倍、股价净值比 (P/B) 约 5.98 倍。([天虹 6937 - 簡介 - 鉅亨網](https://www.cnyes.com/twstock/6937/company/profile)) 与全球设备龙头 AMAT、LRCX、TEL、ASM International 等 22–32 倍 TTM P/E 相比显著偏高,反映市场对 "半导体设备国产化 + 第三代半导体 + 先进封装" 三重题材的高预期,而非当下盈利能力。本报告认为这是一个典型的 "估值领先于业绩" 的成长股,投资人应将其视为产业转折期的看涨期权 (option),而非以静态本益比衡量。
+**估值快照 (Valuation snapshot, 2026-05-25 收盘):** 收盘价 NT$351.5、市值约 NT$237.8 亿元、TTM 本益比 (P/E) 约 108.2 倍、股价净值比 (P/B) 约 7.58 倍。([天虹 6937 - 簡介 - 鉅亨網](https://www.cnyes.com/twstock/6937/company/profile)) 与全球设备龙头同业(以 2026-05 现值 TTM P/E 计) AMAT 约 42×、LRCX 约 54×、TEL 约 40–48×、ASM International 约 42–45× 相比仍显著偏高 ([Applied Materials PE Ratio - macrotrends](https://www.macrotrends.net/stocks/charts/AMAT/applied-materials/pe-ratio)) ([Lam Research PE Ratio - macrotrends](https://www.macrotrends.net/stocks/charts/LRCX/lam-research/pe-ratio)) ([Tokyo Electron PE Ratio - companiesmarketcap](https://companiesmarketcap.com/tokyo-electron/pe-ratio/)) ([ASMI PE Ratio - financecharts](https://www.financecharts.com/stocks/ASMIY/value/pe-ratio)),反映市场对 "半导体设备国产化 + 第三代半导体 + 先进封装" 三重题材的高预期,而非当下盈利能力。本报告认为这是一个典型的 "估值领先于业绩" 的成长股,投资人应将其视为产业转折期的看涨期权 (option),而非以静态本益比衡量。
 
-**投资判断 (5 档评级):** **持有 (Hold) — 偏向观察**。理由:(1) 商业逻辑成立——台湾半导体设备国产化、SiC/GaN 量产、CoWoS/PLP/CoPoS 先进封装放量,三条主线都触及公司既有产品线,2026 年订单能见度有望提升 ([天虹打進EUV、PLP先進封裝設備 2026 年有望放量 - 財報狗](https://statementdog.com/news/13905));(2) 短期业绩有压力——2025 年 EPS 较 2024 年腰斩,本益比已透支可见的成长曲线;(3) 客户集中度高——最大客户台积电营收占比约 20%,且目前主要为零组件而非设备,设备业务尚未在大客户量产线"落地",是未来 6–12 个月的关键观察点。
+**投资判断 (5 档评级):** **持有 (Hold) — 偏向观察**。理由:(1) 商业逻辑成立——台湾半导体设备国产化、SiC/GaN 量产、CoWoS/PLP/CoPoS 先进封装放量,三条主线都触及公司既有产品线,2026 年订单能见度有望提升 ([天虹打進EUV、PLP先進封裝設備 2026 年有望放量 - 財報狗](https://statementdog.com/news/13905));(2) 短期业绩有压力——2025 年 EPS 较 2024 年腰斩,本益比已透支可见的成长曲线;(3) **分析师观点:** 最大客户(主要为零组件而非设备,占比约 20%) 设备业务尚未在大客户量产线"落地",是未来 6–12 个月的关键观察点。*年报未单独披露名列前五大客户名单与各别占比,本数字为第三方研究 ([個股分析:天虹科技 - vocus, Min Lin CFA](https://vocus.cc/article/6716081cfd897800012ffb80)) 的推断,非年报正本披露。*
 
 > **重要免责声明:** 本报告若干历年财务数字 (2022、2023、2025 等) 在公开免费来源中未能逐笔与正本年报对账,本报告统一标记为 "估算" 或注明来源,并未将其作为投资结论的关键支撑。读者如须做正式投资决策,应自行下载 MOPS 公开资讯观测站之年报 / Q1–Q3 季报正本核对。
 
@@ -44,59 +44,64 @@
 | 公司中文全名 | 天虹科技股份有限公司 |
 | 公司英文名 | Skytech Inc. |
 | 证交所代号 | TWSE:6937 (台湾证券交易所上市) |
-| 挂牌日期 | 2023 年 12 月 12 日 |
-| 成立日期 | 2002 年 7 月 |
-| 注册地 / 营运总部 | 新竹县竹北 (Zhubei, Hsinchu County, Taiwan) |
+| 挂牌日期 | 2023 年 12 月 12 日 (ROC 112/12/12) |
+| 承销价 (IPO) | NT$115 元 |
+| 成立日期 | 2002 年 7 月 17 日 |
+| 注册地 / 营运总部 | 新竹县竹北市嘉政一街 1 号 6 楼 (Zhubei, Hsinchu County, Taiwan) |
 | 所属产业 | 半导体设备及零组件 (Semiconductor Equipment & Parts) |
-| 董事长兼总经理 | 黄见骆 (Huang Jian-Luo) |
-| 发言人 | 黄见骆;代理发言人 易锦良 |
-| 员工人数 | 截至 2024 年底约 600 余人 (estimate, 来自公司官网产能扩增公告;未在公开免费来源逐笔验证年报数字) |
-| 资本额 | NT$ 约 7.4 亿元 (estimate;以 2024 EPS NT$6.03 与净利 NT$406.8m 推算约 67.5m 股) |
+| 董事长兼总经理兼发言人 | 黄见骆 (Huang Jian-Luo) |
+| 执行长 (CEO) 兼代理发言人 | 易锦良 (Yih Chin-Liang) — 国立台湾大学机械工程学士 + 硕士;前应用材料全球副总裁 |
+| 财务长 (CFO) | 张浩君 (Zhang Hao-Jun) |
+| 员工人数 | 截至 2024 年底 424 人 (来源:公司 2024 年永续报告书) |
+| 资本额 / 流通股数 | NT$676,552,630 元 / 67,655,263 股 (Yahoo 股市基本资料) |
 
-([新上市公司:天虹(6937) - 臺灣證券交易所](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151)) ([Skytech 天虹科技 官方网站](https://www.skytech.com.tw/)) ([天虹(6937) 基本資料 - Yahoo奇摩股市](https://tw.stock.yahoo.com/quote/6937.TW/profile))
+([新上市公司:天虹(6937) - 臺灣證券交易所](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151)) ([Skytech 天虹科技 官方网站](https://www.skytech.com.tw/)) ([天虹(6937) 基本資料 - Yahoo奇摩股市](https://tw.stock.yahoo.com/quote/6937.TW/profile)) ([天虹科技 2024 永續報告書 第五章 員工幸福職場](https://www.skytech.com.tw/_i/assets/upload/files/sus%20%E5%A4%A9%E8%99%B9%E7%A7%91%E6%8A%80%202024%20%E5%B9%B4%E6%B0%B8%E7%BA%8C%E5%A0%B1%E5%91%8A%E6%9B%B8_%285%29%E5%B9%B8%E7%A6%8F%E8%81%B7%E5%A0%B4.pdf)) ([天虹 6937 - 簡介 - 鉅亨網](https://www.cnyes.com/twstock/6937/company/profile))
 
 ### 1.2 一句话定位
 
-> 天虹科技是台湾"少数能够提供半导体前段制程 (front-end process) 设备" 的本土厂商,从零组件维修起家,延伸到 PVD、ALD、Bonder/De-Bonder 等成套设备,定位在第三代半导体 (SiC/GaN) 与先进封装两大成长曲线的台湾国产化路线上。 ([半導體股生力軍 天虹科技(6937)今天掛牌上市 - 經濟日報](https://money.udn.com/money/story/5635/7634547))
+> 天虹科技是台湾"少数能够提供半导体前段制程 (front-end process) 设备" 的本土厂商,从零组件维修起家,延伸到 PVD、ALD、Bonder/De-Bonder 等成套设备,定位在第三代半导体 (SiC/GaN) 与先进封装两大成长曲线的台湾国产化路线上。 ([新上市公司:天虹(6937) - 臺灣證券交易所](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151)) ([亮點台鏈2 從兩千樣零組件切入設備 挺進半導體前段製程 天虹靠耗材養底氣 - 今周刊](https://www.businesstoday.com.tw/article/category/183015/post/202507160038/))
 
 ### 1.3 营运规模与近三年财务概况
 
-下图汇总公司 2022–2025 年合并营收与毛利率变化趋势。请留意 2025 年数字为本报告作者根据公开二手来源 (stockanalysis.com TTM revenue ~NT$2.24bn、CMoney 25Q2 单季营收 NT$512.3m 等) 拼凑估算,正本数据应以公司年报为准。
+下图汇总公司 2022–2025 年合并营收与毛利率变化趋势。其中:2022/2023/2024/2025 营收按 stockanalysis.com 披露 (分别为 NT$1,815m / NT$1,993m / NT$2,588m / NT$2,245m)、毛利率按 stockanalysis.com 数据 (46.60% / 44.02% / 43.96% / 40.09%);本图与 nstock/财报狗 引用的 MOPS 2024 毛利率 41.77% 存在轻微口径差异 (stockanalysis 为日历年汇总 vs. MOPS 为台湾会计年度数),读者作正式估值应以年报正本为准。
 
 ![Revenue & Gross Margin Trend](charts/skytech_6937_revenue_margin.png)
 
-Source: 历年数据综合自 [財報狗:半導體設備廠天虹2024喜迎歐洲訂單,雙位數增長](https://statementdog.com/news/4776)、[天虹(6937) 財務報表-營收 - Yahoo奇摩股市](https://tw.stock.yahoo.com/quote/6937.TW/revenue)、[Skytech (TPE:6937) Company Profile - Stockanalysis](https://stockanalysis.com/quote/tpe/6937/company/)。2025E 为公开来源 TTM revenue 推估,非正本年报。
+Source: 历年数据综合自 [Skytech (TPE:6937) Financials - stockanalysis.com](https://stockanalysis.com/quote/tpe/6937/financials/)、[財報狗:半導體設備廠天虹2024喜迎歐洲訂單,雙位數增長](https://statementdog.com/news/4776)、[天虹(6937) 財務報表-營收 - Yahoo奇摩股市](https://tw.stock.yahoo.com/quote/6937.TW/revenue)。
 
 **观察:**
-- **2024 年是公司挂牌后首个完整会计年度**,营收 NT$2,587.6 百万、毛利率 41.77% 同步达高点,印证设备业务占比提升带来的产品组合升级 (mix-up) 效应。
-- **2025 年营收同比下滑约 13%、毛利率回落至 39.2%**,且 EPS 大幅腰斩至 NT$3.01,主因订单递延 (delivery push-out) 与化合物半导体设备客户资本支出放缓。([Skytech (TPE:6937) Company Profile](https://stockanalysis.com/quote/tpe/6937/company/))
-- **2026 年初订单回升迹象浮现**,2026 年 2 月单月营收 NT$1.43 亿元、年增 31.3% ([天虹(6937) 最新營收 - nStock](https://www.nstock.tw/stock_info?stock_id=6937&status=2))。
+- **2024 年是公司挂牌后首个完整会计年度**,营收 NT$2,587.6 百万、毛利率 41.77% 同步达高点,印证设备业务占比提升带来的产品组合升级 (mix-up) 效应。([6937天虹股票 - 財報狗](https://statementdog.com/analysis/6937))
+- **2025 年营收同比下滑 13.26% 至 NT$2,245 百万、毛利率回落至 40.09%**,且 EPS 大幅腰斩至 NT$3.01,主因订单递延 (delivery push-out) 与化合物半导体设备客户资本支出放缓。([Skytech (TPE:6937) Financials - stockanalysis.com](https://stockanalysis.com/quote/tpe/6937/financials/))
+- **2026 年初订单回升迹象浮现**,2026 Q1 单季营收 NT$5.82 亿元、年增 26.3%,EPS NT$0.96、年增 31.5%;2026 年 4 月单月营收 NT$1.53 亿元。([天虹做什麼? 6937做什麼? - nStock](https://www.nstock.tw/%E5%A4%A9%E8%99%B9%E5%81%9A%E4%BB%80%E9%BA%BC.html)) ([天虹(6937) 最新營收 - nStock](https://www.nstock.tw/stock_info?stock_id=6937&status=2))
 
 ### 1.4 估值快照与市场预期
 
 | 指标 | 数值 | 同业 / 区间比较 |
 |---|---|---|
-| 收盘股价 (近期) | NT$ 281 (来源:財報狗) | — |
-| 市值 (Market cap) | 约 NT$ 207 亿元 | 中小型半导体设备股 |
-| TTM 本益比 (P/E) | 约 **101.6×** | 远高于 AMAT 22×、LRCX 24×、TEL 25×、ASM Intl 32× |
-| 股价净值比 (P/B) | 约 **5.98×** | 高估区 |
-| 2024 现金股利 | NT$ 2.1 /股 | 股息率 ~0.75%(以股价 281 计) |
+| 收盘股价 (2026-05-25 收盘) | NT$351.5 (来源:鉅亨網) | — |
+| 市值 (Market cap) | 约 NT$237.8 亿元 | 中小型半导体设备股 |
+| TTM 本益比 (P/E) | 约 **108.2×** | 高于全球同业 (2026-05 现值) AMAT 约 42×、LRCX 约 54×、TEL 约 40–48×、ASM Intl 约 42–45× |
+| 股价净值比 (P/B) | 约 **7.58×** | 高估区 |
+| 2024 现金股利 | NT$2.1 /股 | 股息率 ~0.60% (以股价 351.5 计) |
+| 2025 现金股利 | NT$1.4 /股 | 股息率 ~0.40% (以股价 351.5 计) |
 
-([天虹 6937 - 簡介 - 鉅亨網](https://www.cnyes.com/twstock/6937/company/profile)) ([6937天虹股票分析 - 財報狗](https://statementdog.com/analysis/6937))
+([天虹 6937 - 簡介 - 鉅亨網](https://www.cnyes.com/twstock/6937/company/profile)) ([6937天虹股票分析 - 財報狗](https://statementdog.com/analysis/6937)) ([Skytech (TPE:6937) Financials - stockanalysis.com](https://stockanalysis.com/quote/tpe/6937/financials/))
 
 **为什么本益比这么高?(诊断)**
 
-天虹 2025 年 EPS NT$3.01 推算的静态 P/E 约 93 倍,TTM 约 101 倍。这并非"估值便宜"或"业绩成长",而是市场把它当成 **三重主题股**:
+天虹 2025 年 EPS NT$3.01 推算的静态 P/E 约 117 倍 (以 NT$351.5 / NT$3.01 计),TTM 约 108 倍。这并非"估值便宜"或"业绩成长",而是市场把它当成 **三重主题股**:
 
 1. **半导体设备国产化:** 美国对中国大陆 EUV/DUV 设备出口管制不断扩大,陆系晶圆厂转向台湾、日本、韩国与本土设备厂找替代。天虹是少数台湾本土能提供前段制程薄膜设备者,理论上是直接受益方。([個股分析:半導體前段設備廠天虹科技 - vocus](https://vocus.cc/article/6716081cfd897800012ffb80))
 2. **第三代半导体 (SiC/GaN):** 公司 2022 年第三代半导体设备出货占设备营收约 60%、2023 年仍维持 60–70%,是与全球巨头错位竞争最有效的切入点。([新上市公司:天虹(6937) - 臺灣證券交易所](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151))
 3. **先进封装 (CoWoS / PLP / CoPoS):** 公司 2025 年宣布研发出 EUV pellicle / PLP / CPO 等技术难度高的设备品项,并将 PVD 改良为 PLP 用规格,目标 2026 年打进 CoPoS 供应链。([天虹打進EUV、 PLP 先進封裝設備 2026 有望放量出貨 - 財報狗](https://statementdog.com/news/13905))
 
-**用大白话讲:** 现在 100 倍的 P/E,买的不是 2025 年 NT$3.01 EPS,而是市场对 2027–2028 年订单放量后 EPS 可能回升至 NT$10+ 的"看涨期权"。如果 CoWoS/PLP/SiC 三主题落空任一条,P/E 都将被强力压缩。
+**用大白话讲:** 现在 108 倍的 P/E,买的不是 2025 年 NT$3.01 EPS,而是市场对 2027–2028 年订单放量后 EPS 可能回升至 NT$10+ 的"看涨期权"。如果 CoWoS/PLP/SiC 三主题落空任一条,P/E 都将被强力压缩。
+
+> *分析师注:* 全球设备龙头 P/E 在 2024 年中尚处 22–32× 区间,但伴随 AI 资本支出热潮在 2025–2026 年的扩张,AMAT/LRCX/TEL/ASMI 的 TTM P/E 均显著抬升至 40–55× 水平 ([Applied Materials PE Ratio - macrotrends](https://www.macrotrends.net/stocks/charts/AMAT/applied-materials/pe-ratio)) ([Lam Research PE Ratio - macrotrends](https://www.macrotrends.net/stocks/charts/LRCX/lam-research/pe-ratio))。即便以同业最新 P/E 高位为锚,天虹 108× 仍远高于同业,本质上是把 2027+ 的设备订单放量"现值化"。
 
 ![Valuation vs. peers](charts/skytech_6937_valuation.png)
 
-Source: 本报告作者综合 [鉅亨網 天虹 6937 簡介](https://www.cnyes.com/twstock/6937/company/profile)、[财报狗](https://statementdog.com/analysis/6937);全球设备龙头 P/E 引用自 Yahoo Finance、Bloomberg 公开页面截图区间值 (近 6 个月)。
+Source: 本报告作者综合 [鉅亨網 天虹 6937 簡介](https://www.cnyes.com/twstock/6937/company/profile)、[财报狗](https://statementdog.com/analysis/6937);全球设备龙头 P/E 引用自 macrotrends 与 companiesmarketcap 公开数据 (2026-05 当期值)。
 
 ---
 
@@ -107,15 +112,16 @@ timeline
     title 天虹科技发展时间轴 2002–2026
     2002 : 公司成立 (新竹竹北) ; 经营团队多出身美商应用材料AMAT ; 以单一陶瓷零件为起点切入半导体设备零组件
     2002-2017 : 逐步扩展为薄膜/蚀刻/扩散/研磨/量测/黄光制程的全方位零组件供应商 ; 累计逾 2,000 项零备件开发经验
-    2017 : 决心打造自有品牌设备 ; 启动 PVD/ALD/Bonder/De-Bonder 研发
+    2017 : 决心打造自有品牌设备 ; 易锦良 (前应材全球副总裁) 加入 ; 启动 PVD/ALD/Bonder/De-Bonder 研发
     2021-2022 : 取得第三代半导体客户首批量产订单 (SiC/GaN) ; 切入光电与封装领域
-    2023-12 : 正式于台湾证券交易所主板挂牌上市 (代号 6937) ; 上市首日盘中涨幅一度逾 80%
-    2024 : 营收 NT$25.88 亿元、EPS NT$6.03、毛利率 41.8% ; 接获欧洲订单 ; 产能扩增 1.5 倍
-    2025 : 出货递延、EPS 腰斩至 NT$3.01 ; 研发出 EUV/PLP/CPO 新机种 ; 目标打入 2026 年 CoPoS 供应链
-    2026 : 2 月单月营收年增 31% ; 订单复苏迹象 ; 苹果链 + 国际化推进
+    2023-12 : 以承销价 NT$115 元于台湾证券交易所主板挂牌上市 (代号 6937) ; 上市首日盘中最高 NT$208 元、涨幅一度逾 80%
+    2024 : 营收 NT$25.88 亿元、EPS NT$6.03、毛利率 41.8% ; 接获首批欧洲订单
+    2025-10 : 竹北新厂启用 ; 整体产能提升约 1.5-2 倍 ; 同年研发出 EUV/PLP/CPO 新机种
+    2025 : 出货递延、EPS 腰斩至 NT$3.01 ; 目标打入 2026 年 CoPoS 供应链
+    2026 Q1 : 营收 NT$5.82 亿元 (yoy +26.3%)、EPS NT$0.96 (yoy +31.5%) ; 订单复苏迹象
 ```
 
-Source: 综合 [TWSE 市场观察:新上市公司天虹6937](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151)、[經濟日報:天虹科技今天掛牌上市](https://money.udn.com/money/story/5635/7634547)、[天虹科技官网媒体报导](https://www.skytech.com.tw/news_tw.php?id=18)。
+Source: 综合 [TWSE 市场观察:新上市公司天虹6937](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151)、[亮點台鏈2 從兩千樣零組件切入設備 - 今周刊](https://www.businesstoday.com.tw/article/category/183015/post/202507160038/)、[天虹科技官网媒体报导](https://www.skytech.com.tw/news_tw.php?id=18)、[天虹做什麼? 6937做什麼? - nStock](https://www.nstock.tw/%E5%A4%A9%E8%99%B9%E5%81%9A%E4%BB%80%E9%BA%BC.html)。
 
 ### 2.1 创业时期 (2002–2016):零组件起家
 
@@ -133,11 +139,11 @@ Source: 综合 [TWSE 市场观察:新上市公司天虹6937](https://www.twse.co
 
 ### 2.3 上市与扩张期 (2023 至今)
 
-2023 年 12 月 12 日,公司以承销价 NT$110 元挂牌上市,上市首日盘中最高 NT$208 元、涨幅一度逾 80%,中签者一张获利逾 NT$9 万元,显示市场对台湾半导体设备国产化主题的高度追捧。([天虹上市掛牌股價一度漲逾八成 - 聯合新聞網](https://udn.com/news/story/7253/7634593))
+2023 年 12 月 12 日,公司以承销价 NT$115 元挂牌上市,上市首日盘中最高 NT$208 元、涨幅一度逾 80% (相对承销价 80.9%),中签者一张获利约 NT$9.3 万元,显示市场对台湾半导体设备国产化主题的高度追捧。([新上市公司:天虹(6937) - 臺灣證券交易所](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151)) ([天虹做什麼? 6937做什麼? - nStock](https://www.nstock.tw/%E5%A4%A9%E8%99%B9%E5%81%9A%E4%BB%80%E9%BA%BC.html))
 
-2024 年公司接获欧洲订单 (主要为化合物半导体设备),并宣布产能扩增 1.5 倍以因应中国大陆与欧洲双线需求。([半導體前後設備遭對岸指名度提升 天虹科技產能擴增1.5倍 - 聯合新聞網](https://udn.com/news/story/7240/8360428))
+2024 年公司接获首批欧洲订单 (主要为 PVD 及 Descum 设备,首度取得非两岸的海外市场订单);公司随后在 2025 年 10 月启用竹北新厂、整体产能提升约 1.5-2 倍,以因应中国大陆与欧洲双线需求。([半導體設備廠天虹 2024 喜迎歐洲訂單 - 財報狗](https://statementdog.com/news/4776)) ([6937 天虹科技搶進EUV與先進封裝藍海 - vocus 2025/9/3](https://vocus.cc/article/68b86401fd8978000169a496))
 
-2025 年公司虽面临订单递延与单季业绩压力,但同时公布了下一阶段研发成果:研发出 EUV pellicle、PLP (Panel Level Packaging) 用 PVD、CPO (Co-Packaged Optics) 用沉积设备等技术难度更高的机种,目标是切入 CoWoS-S 之后的 CoPoS (Chip-on-Panel-on-Substrate) 先进封装新平台。([天虹打進EUV、 PLP 先進封裝設備 - 財報狗](https://statementdog.com/news/13905))
+2025 年公司虽面临订单递延与单季业绩压力,但同时公布了下一阶段研发成果:研发出 EUV 光罩保护层量测设备 (pellicle 测量)、PLP (Panel Level Packaging) 用 PVD、CPO (Co-Packaged Optics) 用沉积设备等技术难度更高的机种,以及 12 吋 Bonder,目标是切入 CoWoS-S 之后的 CoPoS (Chip-on-Panel-on-Substrate) 先进封装新平台。([天虹打進EUV、 PLP 先進封裝設備 - 財報狗](https://statementdog.com/news/13905))
 
 ---
 
@@ -145,31 +151,31 @@ Source: 综合 [TWSE 市场观察:新上市公司天虹6937](https://www.twse.co
 
 ### 3.1 董事长兼总经理 黄见骆 (Huang Jian-Luo) — 核心灵魂人物
 
-**(约 250 字)**
+黄见骆为天虹科技的董事长兼总经理兼发言人,在公司治理上身兼三职,在台湾上市公司中较为常见(尤其中小型科技股),但同时也意味着 **创办人/经营者对策略走向有绝对话语权**,是典型的 "CEO-led + insider-owned" 公司。([(6937) 天虹 - 董事監察人持股明細 黃見駱(董事長本人) - Goodinfo](https://goodinfo.tw/tw/StockDirectorShareholdDetail.asp?STOCK_ID=6937&RPT_MONTH=202511&JOB_TITLE=%E8%91%A3%E4%BA%8B%E9%95%B7%E6%9C%AC%E4%BA%BA&NAME=%E9%BB%83%E8%A6%8B%E9%A7%B1&STEP=2)) ([天虹(6937) 基本資料 - Yahoo奇摩股市](https://tw.stock.yahoo.com/quote/6937.TW/profile))
 
-黄见骆为天虹科技的董事长兼总经理,在公司治理上身兼两职,在台湾上市公司中较为常见(尤其中小型科技股),但同时也意味着 **创办人/经营者对策略走向有绝对话语权**,是典型的 "CEO-led + insider-owned" 公司。([(6937) 天虹 - 董事監察人持股明細 黃見駱(董事長本人) - Goodinfo](https://goodinfo.tw/tw/StockDirectorShareholdDetail.asp?STOCK_ID=6937&RPT_MONTH=202511&JOB_TITLE=%E8%91%A3%E4%BA%8B%E9%95%B7%E6%9C%AC%E4%BA%BA&NAME=%E9%BB%83%E8%A6%8B%E9%A7%B1&STEP=2))
-
-公开信息中尚未取得黄见骆完整学经历的可靠中英文对照履历(disclosure not found in free public sources;须查 MOPS 公开资讯观测站之"董事监察人资料"专章)。从公司官网与经济日报的报导可得知:他与多数共同创办人/早期工程团队同样出身美商应用材料 AMAT,在加入天虹前的多年应材资历是公司技术深度的来源。([半導體股生力軍 天虹科技(6937)今天掛牌上市 - 經濟日報](https://money.udn.com/money/story/5635/7634547))
+根据 vocus.cc Min Lin (CFA) 研究 及 经济日报、CMoney 等公开二手来源,黄见骆与公司共同创办人多数出身于美商应用材料 (Applied Materials, AMAT),其中他本人曾任台湾应用材料公司副经理职务。([6937 天虹 - 應用材料 (Applied Materials, AM…) - CMoney](https://www.cmoney.tw/forum/article/177777636)) ([個股分析:天虹科技 - vocus](https://vocus.cc/article/6716081cfd897800012ffb80)) 完整学经历可见 MOPS 公开资讯观测站之"董事监察人资料"专章。
 
 从战略上看,黄见骆主导了公司 2017 年的关键转折——从"零组件代理与维修"切入"自有品牌设备"。这是把一家相对稳定、毛利尚可的零组件商家,变成一家具有高研发投入、高客户验证风险的设备公司的战略豪赌。从挂牌至今的客户进展看,这一豪赌方向是正确的;但 2025 年的业绩短期波动也说明设备整机生意天然的现金流周期性。
 
-### 3.2 财务长 (CFO) 与发言人体系
+### 3.2 执行长 (CEO)、CFO 与发言人体系
 
-**(约 150 字)**
+公司治理三角架构 (per Yahoo 股市基本资料 + 经济日报报道):
+- **董事长兼总经理兼发言人** 黄见骆;
+- **执行长 (CEO) + 代理发言人** 易锦良 (Yih Chin-Liang) — 国立台湾大学机械工程学士与硕士,前任美商应用材料 (Applied Materials) 全球副总裁,2017 年加入天虹推动自有品牌设备开发,现兼任董事;
+- **执行副总经理** 罗伟瑞 (Lo Wei-Jui) — 共同创办人,亦出身应用材料;
+- **财务长 (CFO)** 张浩君 (Zhang Hao-Jun)。
 
-公司发言人为董事长黄见骆本人,代理发言人为易锦良。([新上市公司:天虹(6937) - 臺灣證券交易所](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151)) 这种"董座兼发言人"的安排在台湾中小型半导体股相对常见,法说会 (investor conference) 节奏与对外口径的统一性会比较高,但同时也意味着 **独立财务长对市场曝光相对较少**,公司目前未在公开免费来源中披露专责 CFO 的完整背景。建议读者直接查阅 MOPS 公开资讯观测站之"公司董事监察人资料 / 经理人资料"专章,以获取最新组织架构。
+([新上市公司:天虹(6937) - 臺灣證券交易所](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151)) ([天虹(6937) 基本資料 - Yahoo奇摩股市](https://tw.stock.yahoo.com/quote/6937.TW/profile)) ([個股分析:天虹科技 - vocus](https://vocus.cc/article/6716081cfd897800012ffb80))
+
+"董座兼发言人 + 执行长辅助"的安排让法说会 (investor conference) 节奏与对外口径的统一性较高;CFO 在台湾中小型半导体股的市场曝光普遍较少,建议关注 MOPS"经理人资料"专章以获取最新组织架构变动。
 
 ### 3.3 治理结构与内部人持股
 
-**(约 100 字)**
-
-天虹科技目前未有公开免费来源完整披露独立董事比例、董事会持股比例与薪酬结构。可获得的资讯有:Goodinfo 提供董监事经理人持股明细查询入口 ([Goodinfo 董事持股](https://goodinfo.tw/tw/StockDirectorShareholdDetail.asp?STOCK_ID=6937)),并按月更新;以及富邦 e 证券提供之"个股董监事经理人持股明细" ([富邦 6937 董監事](https://fubon-ebrokerdj.fbs.com.tw/z/zc/zck/zck.djhtm?a=6937&b=2&c=1))。本报告未在二手来源中找到具体持股比例数字,因此 **disclosure not verified**;请查 MOPS 之最新"董事监察人持股 暨股权设质明细"。
+天虹科技目前未在公开免费来源完整披露独立董事比例、董事会持股比例与薪酬结构。可获得的资讯有:Goodinfo 提供董监事经理人持股明细查询入口 ([Goodinfo 董事持股](https://goodinfo.tw/tw/StockDirectorShareholdDetail.asp?STOCK_ID=6937)),并按月更新;富邦 e 证券提供之"个股董监事经理人持股明细" ([富邦 6937 董監事](https://fubon-ebrokerdj.fbs.com.tw/z/zc/zck/zck.djhtm?a=6937&b=2&c=1));*分析师观点 (vocus.cc Min Lin CFA):* 四位主要创办人 (黄见骆、易锦良、罗伟瑞、王为旭) 合计持股约 50%,*此数字为第三方研究推断,非年报正本披露,请以 MOPS 之最新"董事监察人持股暨股权设质明细"为准。* ([個股分析:天虹科技 - vocus](https://vocus.cc/article/6716081cfd897800012ffb80))
 
 ### 3.4 团队 Track Record 综评
 
-**(约 80 字)**
-
-经营团队在零组件业务上经过 20 年累积,客户端口齐全、零件设计与维修知识沉淀深;在自有品牌设备业务上仍属"成长第二曲线",至 2024 年设备营收占比已达约 45% (estimate)。下一阶段考验是 **设备整机能否切入台积电、联电的量产线**(目前公司在台积电主要供应零组件,设备尚未量产导入)——这是判断管理层执行力的关键里程碑。
+经营团队在零组件业务上经过 20 年累积,客户端口齐全、零件设计与维修知识沉淀深;在自有品牌设备业务上仍属"成长第二曲线",至 2024 年设备 (machine) 营收占比已达约 49% (per MoneyDJ 财金百科,以零组件 33% + 其他 18% 推算)。下一阶段考验是 **设备整机能否切入台积电、联电的量产线**(目前公司在台积电主要供应零组件,设备尚未量产导入)——这是判断管理层执行力的关键里程碑。 ([天虹科技股份有限公司 - MoneyDJ 财金百科](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=eed6dd1a-bc16-4ac9-a08e-1f8760679f74))
 
 ---
 
@@ -179,8 +185,9 @@ Source: 综合 [TWSE 市场观察:新上市公司天虹6937](https://www.twse.co
 
 ```mermaid
 graph TD
-    A[天虹科技 Skytech 6937] --> B[半导体设备零组件 / 维修服务<br/>~55% 营收 占比 2024]
-    A --> C[自有品牌前段半导体设备<br/>~45% 营收 占比 2024]
+    A[天虹科技 Skytech 6937] --> B[半导体设备零组件 / 维修服务<br/>~33% 营收 2024]
+    A --> C[自有品牌前段半导体设备<br/>~49% 营收 2024]
+    A --> D[其他<br/>~18% 营收 2024]
 
     B --> B1[陶瓷件 Ceramic]
     B --> B2[石英件 Quartz]
@@ -193,6 +200,7 @@ graph TD
     C --> C2[ALD 原子层沉积]
     C --> C3[Bonder 晶圆键合机]
     C --> C4[De-Bonder 解键合机]
+    C --> C5[Skiwar 晶圆传输机]
 
     C1 --> C1a[硅基半导体 PVD]
     C1 --> C1b[第三代半导体 SiC/GaN PVD]
@@ -202,23 +210,23 @@ graph TD
     C2 --> C2b[PEALD 等离子辅助 ALD]
     C2 --> C2c[量产型 ALD]
 
-    C3 --> C3a[多尺寸 Bonder 4-12 吋]
+    C3 --> C3a[多尺寸 Bonder 含 12 吋]
     C4 --> C4a[De-Bonder 配套]
 ```
 
-Source: 综合 [TWSE 市场观察 新上市公司天虹6937](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151)、[天虹官网 媒体报导](https://www.skytech.com.tw/news_tw.php?id=18)、[财报狗 天虹打进EUV/PLP](https://statementdog.com/news/13905)。
+Source: 综合 [天虹科技股份有限公司 - MoneyDJ 财金百科](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=eed6dd1a-bc16-4ac9-a08e-1f8760679f74) (2024 产品结构 49% 设备 / 33% 零组件 / 18% 其他)、[TWSE 市场观察 新上市公司天虹6937](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151)、[天虹官网 媒体报导](https://www.skytech.com.tw/news_tw.php?id=18)、[财报狗 天虹打进EUV/PLP](https://statementdog.com/news/13905)。
 
 ### 4.2 营收结构演变
 
-天虹的营收结构在过去 4 年里有显著变化,从"零组件为主"逐步走向"零组件与设备并重",并以设备成长率高于零组件作为主驱动。
+天虹的营收结构在过去 4 年里有显著变化,从"零组件为主"逐步走向"零组件与设备并重",2024 年设备占比已超过零组件,**设备 49% / 零组件 33% / 其他 18%** (per MoneyDJ 财金百科)。设备成长率高于零组件作为主驱动。
 
 ![Revenue Mix](charts/skytech_6937_segment_mix.png)
 
-Source: 估算自 [富果直送 天虹科技分析](https://blog.fugle.tw/post/skytech-analysis)、[NewSight 天虹科技 第三代半導體薄膜設備大廠](https://newsight.tw/737);公司未在公开免费来源逐年正式披露此切割,本图为本报告作者根据多份二手报导拼凑估算 (estimate),实际数字以年报为准。
+Source: 历年数字综合自 [天虹科技 - MoneyDJ 财金百科](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=eed6dd1a-bc16-4ac9-a08e-1f8760679f74) (2024 产品结构权威披露) 与 [富果直送 天虹科技分析](https://blog.fugle.tw/post/skytech-analysis) (2023 切割,需付费会员);公司未在公开免费来源逐年正式披露此切割,本图为本报告作者综合二手研究的估算 (estimate),实际历年数字以年报正本为准。
 
-### 4.3 零组件业务 (~55% 营收)
+### 4.3 零组件业务 (~33% 营收, 2024)
 
-零组件业务是天虹的"现金牛"——稳定、高回头率、与既有产线绑定。客户端包括台积电、联电、汉磊集团、华润微电子、力积电、世界先进等台湾与中国大陆的 8 吋 / 12 吋晶圆代工与化合物半导体厂。([新上市公司:天虹(6937) - 臺灣證券交易所](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151))
+零组件业务是天虹的"现金牛"——稳定、高回头率、与既有产线绑定。*分析师观点:* 客户端包括台积电、联电、汉磊集团、华润微电子、力积电、世界先进等台湾与中国大陆的 8 吋 / 12 吋晶圆代工与化合物半导体厂。*年报未单独披露各客户名单与占比,以上客户列表为 vocus.cc Min Lin CFA 等第三方研究汇总的推断。* ([個股分析:天虹科技 - vocus](https://vocus.cc/article/6716081cfd897800012ffb80)) ([新上市公司:天虹(6937) - 臺灣證券交易所](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151))
 
 **关键差异化** 在于:
 
@@ -226,7 +234,7 @@ Source: 估算自 [富果直送 天虹科技分析](https://blog.fugle.tw/post/s
 2. **跨制程覆盖**——薄膜、蚀刻、扩散、研磨、量测、黄光六大制程都做,而不只针对单一制程;
 3. **维修服务能力**——超出"卖零件"的卖法,提供整套维修与现场服务,这对小厂客户 (尤其新进的 SiC/GaN 厂) 是关键卖点。
 
-### 4.4 自有品牌设备业务 (~45% 营收)
+### 4.4 自有品牌设备业务 (~49% 营收, 2024)
 
 #### 4.4.1 PVD 物理气相沉积
 
@@ -243,11 +251,11 @@ ALD 历来由 ASM International (荷兰)、TEL (日本) 寡占,天虹是台湾�
 
 #### 4.4.3 晶圆 Bonder / De-Bonder
 
-Bonder / De-Bonder 设备主要应用于先进封装的临时键合 (temporary bonding) 与解键合,是 3D IC、CoWoS、晶圆背面减薄 (wafer thinning) 等流程不可或缺的设备。竞争对手主要为 EV Group (奥地利)、ASMPT、梭特 (台湾) 等。([個股分析:天虹科技 - vocus](https://vocus.cc/article/6716081cfd897800012ffb80))
+Bonder / De-Bonder 设备主要应用于先进封装的临时键合 (temporary bonding) 与解键合,是 3D IC、CoWoS、晶圆背面减薄 (wafer thinning) 等流程不可或缺的设备。竞争对手主要为 EV Group (奥地利)、ASMPT、SaulTech 梭特 (台湾,6812.TW) 等。([個股分析:天虹科技 - vocus](https://vocus.cc/article/6716081cfd897800012ffb80))
 
-#### 4.4.4 2025 年新研发:EUV pellicle / CPO
+#### 4.4.4 2025 年新研发:EUV pellicle 量测 / CPO
 
-公司 2025 年公开宣示研发出 EUV pellicle (光罩薄膜) 与 CPO (Co-Packaged Optics) 用沉积设备,这两个领域的技术难度都极高 (EUV pellicle 由 ASML/Mitsui Chemicals 寡占;CPO 则与 NVIDIA H200/B100 等 AI GPU 的下一代封装相关),象征公司技术天花板进一步抬升。([天虹打進EUV、 PLP 先進封裝設備 - 財報狗](https://statementdog.com/news/13905)) 然短期对营收贡献仍很小,预计 2026–2027 才有放量可能。
+公司 2025 年公开宣示研发出 EUV 光罩保护层量测设备 (pellicle measurement) 与 CPO (Co-Packaged Optics) 用沉积设备,且原型已通过客户测试,量产版预计 2025 年底交付、2026 年起放量出货;这两个领域的技术难度都极高 (EUV pellicle 由 ASML/Mitsui Chemicals 寡占;CPO 则与 NVIDIA H200/B100 等 AI GPU 的下一代封装相关),象征公司技术天花板进一步抬升。([天虹打進EUV、 PLP 先進封裝設備 - 財報狗](https://statementdog.com/news/13905)) ([6937 天虹科技搶進EUV與先進封裝藍海 - vocus 2025/9/3](https://vocus.cc/article/68b86401fd8978000169a496)) 然短期对营收贡献仍很小,预计 2026–2027 才有放量可能。
 
 ---
 
@@ -256,7 +264,7 @@ Bonder / De-Bonder 设备主要应用于先进封装的临时键合 (temporary b
 ### 5.1 客户集中度
 
 ```mermaid
-pie title 天虹科技客户营收分布 (2024 estimate)
+pie title 天虹科技客户营收分布 (2024 estimate, *分析师推断*)
     "台积电 TSMC (主要为零组件)" : 20
     "联电 UMC + 汉磊集团" : 18
     "华润微电子 (中国大陆)" : 12
@@ -266,27 +274,27 @@ pie title 天虹科技客户营收分布 (2024 estimate)
     "韩国 + 日本 + 其他" : 5
 ```
 
-Source: 综合 [富果直送 天虹科技分析](https://blog.fugle.tw/post/skytech-analysis)、[MoneyDJ 财金百科 天虹科技](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=eed6dd1a-bc16-4ac9-a08e-1f8760679f74) (台积电约占 20%、其他客户低于 10%);本图比例为估算 (estimate),正本应以 MOPS 年报"主要客户"一节为准。
+Source: *分析师推断* — 综合 [個股分析:天虹科技 - vocus, Min Lin CFA](https://vocus.cc/article/6716081cfd897800012ffb80) (TSMC ~20%、其他客户 <10%、China 区域 2023 占 45%)、[天虹科技 - MoneyDJ 财金百科](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=eed6dd1a-bc16-4ac9-a08e-1f8760679f74) (主要客户列出联电、汉磊等,2024 地区:本国 44% / 中国 46% / 新加坡 7%)。**年报未单独披露主要客户名单与各客户占比;本图比例为基于第三方研究的拼凑估算,非年报正本。**
 
 **关键观察:**
 
-- **台积电 (TSMC) 是最大客户,约占营收 20%**,但目前 **主要供应零组件 (spare parts),设备尚未在量产线导入**。这意味着天虹与台积电的关系仍属"二阶供应商",而非整机设备供应商。如果未来几年天虹的 PVD 或 ALD 能进入台积电先进制程或 CoWoS 量产线,这将是改写公司估值的重大里程碑;反之,如果迟迟无法导入,目前的高估值将面临严峻考验。([MoneyDJ 财金百科 天虹科技](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=eed6dd1a-bc16-4ac9-a08e-1f8760679f74))
-- **其他客户营收占比均低于 10%**,包括联电 (UMC)、汉磊集团 (Episil)、华润微电子 (CR Micro)、力积电 (PSMC)、世界先进 (Vanguard) 等。这是好事——客户分散度高、单一客户掉队不会造成致命冲击。
-- **2023 年中国大陆区域营收占比 45% (vs. 2022 的 30%)**——主要因第三代半导体 SiC 设备在中国大陆放量。这同时是机会与风险:机会是中国大陆 SiC 产业仍处早期高资本支出阶段,设备需求强;风险是地缘政治与美国设备出口管制可能波及到台湾设备厂的对陆销售。
+- **(分析师推断) 台积电 (TSMC) 是最大客户,约占营收 20%**,但 **主要供应零组件 (spare parts),设备尚未在量产线导入**。这意味着天虹与台积电的关系仍属"二阶供应商",而非整机设备供应商。如果未来几年天虹的 PVD 或 ALD 能进入台积电先进制程或 CoWoS 量产线,这将是改写公司估值的重大里程碑;反之,如果迟迟无法导入,目前的高估值将面临严峻考验。*此 20% 数字来源为 vocus.cc Min Lin CFA 的研究推断,非年报正本披露;MoneyDJ 主要客户列出的是联电与汉磊等。* ([個股分析:天虹科技 - vocus](https://vocus.cc/article/6716081cfd897800012ffb80))
+- **其他客户营收占比均低于 10%**,包括联电 (UMC)、汉磊集团 (Episil)、华润微电子 (CR Micro)、力积电 (PSMC)、世界先进 (Vanguard) 等。客户分散度高、单一客户掉队不会造成致命冲击。
+- **2024 年地区营收结构 (per MoneyDJ):本国 (台湾) 44%、外销 56% (其中中国大陆/香港 46%、新加坡 7%、其他 3%)**——比 2023 年中国大陆 45% 略持平,主要因第三代半导体 SiC 设备在中国大陆持续放量。这同时是机会与风险:机会是中国大陆 SiC 产业仍处早期高资本支出阶段,设备需求强;风险是地缘政治与美国设备出口管制可能波及到台湾设备厂的对陆销售。 ([天虹科技 - MoneyDJ 财金百科](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=eed6dd1a-bc16-4ac9-a08e-1f8760679f74))
 
 ![Geographic Mix](charts/skytech_6937_geo_mix.png)
 
-Source: [富果直送 天虹科技分析](https://blog.fugle.tw/post/skytech-analysis)。
+Source: 综合 [天虹科技 - MoneyDJ 财金百科](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=eed6dd1a-bc16-4ac9-a08e-1f8760679f74) (2024 地区披露:本国 44% / 中国 46% / 新加坡 7%) 与 [富果直送 天虹科技分析](https://blog.fugle.tw/post/skytech-analysis) (2023 历年趋势)。
 
 ### 5.2 上市策略与资本运作
 
-天虹 2023 年 12 月以承销价 NT$110 元 IPO,上市首日最高 NT$208 元、收盘 NT$ 197 元、涨幅约 80% ([聯合新聞網:天虹上市掛牌股價一度漲逾八成](https://udn.com/news/story/7253/7634593))。挂牌时机选在 2023 年底——这是台湾半导体设备国产化主题最热、SiC/GaN 一波资本支出潮的高点,公司因此取得相当不错的 IPO 估值。
+天虹 2023 年 12 月以承销价 NT$115 元 IPO,上市首日盘中最高 NT$208 元、涨幅一度逾八成 (80.9%) ([新上市公司:天虹(6937) - 臺灣證券交易所](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151)) ([天虹做什麼? 6937做什麼? - nStock](https://www.nstock.tw/%E5%A4%A9%E8%99%B9%E5%81%9A%E4%BB%80%E9%BA%BC.html))。挂牌时机选在 2023 年底——这是台湾半导体设备国产化主题最热、SiC/GaN 一波资本支出潮的高点,公司因此取得相当不错的 IPO 估值。
 
 挂牌后募集的资金主要用途包括:
-- 产能扩增——2024 年宣布扩增 1.5 倍产能,因应中国大陆与欧洲订单。([聯合新聞網:天虹科技產能擴增1.5倍](https://udn.com/news/story/7240/8360428))
-- 研发投入——2025 年宣示打进 EUV pellicle、PLP、CPO 等新机种 ([财报狗](https://statementdog.com/news/13905))。
+- 产能扩增——2025 年 10 月竹北新厂启用,整体产能提升约 1.5–2 倍,因应中国大陆与欧洲订单及 2026 年新产品放量。([6937 天虹科技搶進EUV與先進封裝藍海 - vocus 2025/9/3](https://vocus.cc/article/68b86401fd8978000169a496))
+- 研发投入——2025 年宣示打进 EUV pellicle 量测、PLP、CPO 等新机种 ([财报狗](https://statementdog.com/news/13905))。
 
-公司 2024 年股利政策为每股现金股利 NT$2.1 元,以股价 281 元计股息率约 0.75%,典型的"成长股微薄股利"配置——公司把多数现金留下来再投资。([6937天虹股票 - 財報狗](https://statementdog.com/analysis/6937))
+公司 2024 年股利政策为每股现金股利 NT$2.1 元,2025 年降至 NT$1.4 元;以最新股价 NT$351.5 计股息率约 0.40%,典型的"成长股微薄股利"配置——公司把多数现金留下来再投资。([6937天虹股票 - 財報狗](https://statementdog.com/analysis/6937)) ([天虹做什麼? 6937做什麼? - nStock](https://www.nstock.tw/%E5%A4%A9%E8%99%B9%E5%81%9A%E4%BB%80%E9%BA%BC.html))
 
 ### 5.3 客户验证周期与"导入风险"
 
@@ -364,16 +372,16 @@ Source: 定位由本报告作者综合多份公开行业评论 ([forecastock 应
 
 | 公司 | 国别 | 与天虹重叠产品 | 规模 | 与天虹的差异 |
 |---|---|---|---|---|
-| **Applied Materials (AMAT)** | 美国 | PVD、CVD、ALD 全线 | 营收 US$27bn (FY24) | 全球第一,几乎全产品线;天虹在 SiC/GaN 与利基应用上以"快客制"差异化 |
-| **ASM International (ASM)** | 荷兰 | ALD 寡占 | 营收 €3.0bn (FY24) | ALD 全球龙头;天虹"量产型 ALD"以价格与本地服务竞争 |
-| **TEL 东京威力科创** | 日本 | CVD、ALD、涂布显影 | 营收 ¥2,000bn (FY24) | 日本巨头;天虹无直接竞争实力,以化合物半导体客户区隔 |
-| **拓荆科技 (Piotech, 688072.SH)** | 中国大陆 | CVD、ALD | 营收 RMB 2.0bn+ (2024) | 中国本土 PECVD/ALD 龙头;天虹与之在中国大陆 SiC 市场或有竞合 |
-| **ASMPT (0522.HK)** | 香港 | Bonder / 封装设备 | 营收 HK$13.5bn (2024) | 全球封装设备龙头;天虹 Bonder 业务相对较小 |
+| **Applied Materials (AMAT)** | 美国 | PVD、CVD、ALD 全线 | 营收 US$27.18bn (FY24,fiscal year 截止 2024-10-27) | 全球第一,几乎全产品线;天虹在 SiC/GaN 与利基应用上以"快客制"差异化 |
+| **ASM International (ASM)** | 荷兰 | ALD 寡占 | 营收 €2.93bn (FY24) | ALD 全球龙头;天虹"量产型 ALD"以价格与本地服务竞争 |
+| **TEL 东京威力科创** | 日本 | CVD、ALD、涂布显影 | 营收 ¥2,431.5bn (FY25,fiscal year 截止 2025-03) | 日本巨头;天虹无直接竞争实力,以化合物半导体客户区隔 |
+| **拓荆科技 (Piotech, 688072.SH)** | 中国大陆 | CVD、ALD | 营收 RMB 4.10bn (2024,yoy +51.7%) | 中国本土 PECVD/ALD 龙头;天虹与之在中国大陆 SiC 市场或有竞合 |
+| **ASMPT (0522.HK)** | 香港 | Bonder / 封装设备 | 营收 HK$13.23bn (2024,yoy -10.0%) | 全球封装设备龙头;天虹 Bonder 业务相对较小 |
 | **EV Group (奥地利)** | 奥地利 | Wafer Bonder | 私有 | 临时键合设备寡占,天虹直接竞争对手 |
-| **梭特 (Saote Tech)** | 台湾 | Bonder | 私有/未上市 | 台湾本土 Bonder 厂 |
-| **Veeco** | 美国 | MOCVD (化合物半导体外延) | 营收 US$700m (FY24) | GaN/LED 外延设备龙头;与天虹在 SiC/GaN 客户处或有交集 |
+| **SaulTech 梭特 (6812.TW)** | 台湾 | Bonder / Hybrid Bonding | 台湾上市 (2010 成立) | 台湾本土 Bonder 厂,主营 Die Bonder / Hybrid Bonding |
+| **Veeco** | 美国 | MOCVD (化合物半导体外延) | 营收 US$717m (FY24,yoy +8%) | GaN/LED 外延设备龙头;与天虹在 SiC/GaN 客户处或有交集 |
 
-数据来自各公司 10-K / 年报公开摘要 (各家官网或 SEC EDGAR);天虹自身的竞争对手清单引用自 [个股分析:天虹科技 - vocus](https://vocus.cc/article/6716081cfd897800012ffb80) 与 [財報狗 天虹打進EUV、PLP](https://statementdog.com/news/13905)。
+数据来自各公司 10-K / 年报或新闻稿: [Applied Materials FY24 10-K](https://www.sec.gov/Archives/edgar/data/0000006951/000000695124000044/amat-20241027.htm)、[ASM Q4 2024 Quarterly Report](https://www.asm.com/downloads/25242322-quarterly-reports/2024-q4-quarterly-report)、[Tokyo Electron FY25 Q4 Transcript](https://www.tel.com/ir/library/report/l8gqgo00000000gl-att/fy25q4transcript-e.pdf)、[ASMPT 2024 年度业绩公告](https://www.asmpt.com/site/assets/files/76526/e0522_results_announcement_2024_q4.pdf)、[Veeco Q4 and Full Year 2024 - Compound Semiconductor](https://compoundsemiconductor.net/article/121135/Veeco_reports_Q4_and_full_year_2024)、[Piotech 688072 - stockanalysis.com](https://stockanalysis.com/quote/sha/688072/);天虹自身的竞争对手清单引用自 [个股分析:天虹科技 - vocus](https://vocus.cc/article/6716081cfd897800012ffb80) 与 [財報狗 天虹打進EUV、PLP](https://statementdog.com/news/13905)。
 
 ### 7.3 天虹的竞争优势 (Moat)
 
@@ -383,9 +391,9 @@ Source: 定位由本报告作者综合多份公开行业评论 ([forecastock 应
 
 ### 7.4 天虹的竞争弱点 / 脆弱性
 
-1. **规模劣势** — 营收仅为 AMAT 的 ~1%、TEL 的 ~0.4%,R&D 投入绝对值有限,在与全球巨头的"军备竞赛"中长期处于劣势。
+1. **规模劣势** — 2024 年营收约 US$80m (NT$2.59bn),仅为 AMAT 的 ~0.3%、TEL 的 ~0.5%,R&D 投入绝对值有限,在与全球巨头的"军备竞赛"中长期处于劣势。
 2. **未进入台积电先进制程量产线** — 与台积电仍以零组件关系为主,设备整机尚未导入量产。这是公司估值兑现的关键瓶颈。
-3. **中国大陆营收占比高** — 2023 年达 45%,如果美国进一步加严设备对陆出口管制 (例如要求 ITAR / EAR99 之外产品也需许可证),公司可能受波及。
+3. **中国大陆营收占比高** — 2024 年达 46% (per MoneyDJ 财金百科),如果美国进一步加严设备对陆出口管制 (例如要求 ITAR / EAR99 之外产品也需许可证),公司可能受波及。 ([天虹科技 - MoneyDJ 财金百科](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=eed6dd1a-bc16-4ac9-a08e-1f8760679f74))
 
 ---
 
@@ -417,9 +425,9 @@ Source: 定位由本报告作者综合多份公开行业评论 ([forecastock 应
 
 ![Quarterly EPS](charts/skytech_6937_quarterly_eps.png)
 
-Source: 综合 [天虹2024 Q1 EPS 1.25元 - 财报狗](https://statementdog.com/analysis/6937/eps)、[CMoney 25Q2 EPS 0.28元](https://www.cmoney.tw/notes/note-detail.aspx?nid=979953)、[nStock 6937 EPS](https://www.nstock.tw/stock_info?stock_id=6937&status=6) 估算;部分单季数字为估算 (estimate) 而非正本季报披露。
+Source: 综合 [天虹2024 Q1 EPS 1.25元 - 财报狗](https://statementdog.com/analysis/6937)、[CMoney 25Q2 EPS 0.28元](https://www.cmoney.tw/notes/note-detail.aspx?nid=979953)、[nStock 6937 EPS](https://www.nstock.tw/stock_info?stock_id=6937&status=6) 估算;部分单季数字为估算 (estimate) 而非正本季报披露。
 
-观察 2024 全年的 4 个季度 EPS 介于 NT$1.25–1.65 之间相对稳定,但 2025Q2 单季暴跌至 NT$0.28——这反映设备业务交付时机的高度波动 (lumpy revenue recognition)。读者应理解,半导体设备公司单季 EPS 不是衡量内在价值的好指标,**应以年度营收 + 在手订单 (backlog) 趋势为主**。
+观察 2024 全年的 4 个季度 EPS 总计 NT$6.03、相对稳定,但 2025Q2 单季暴跌至 NT$0.28、全年 EPS 仅 NT$3.01——这反映设备业务交付时机的高度波动 (lumpy revenue recognition)。2026 Q1 EPS 回升至 NT$0.96 (yoy +31.5%),订单复苏迹象初现。读者应理解,半导体设备公司单季 EPS 不是衡量内在价值的好指标,**应以年度营收 + 在手订单 (backlog) 趋势为主**。 ([天虹做什麼? 6937做什麼? - nStock](https://www.nstock.tw/%E5%A4%A9%E8%99%B9%E5%81%9A%E4%BB%80%E9%BA%BC.html))
 
 ---
 
@@ -431,7 +439,7 @@ Source: 综合 [天虹2024 Q1 EPS 1.25元 - 财报狗](https://statementdog.com/
 
 **风险 1 — 设备业务无法进入台积电先进制程量产线 (≈ 概率中、冲击高)**
 
-天虹目前对台积电的销售约占营收 20%,但 **以零组件为主、设备整机尚未量产导入**。若未来 2–3 年迟迟无法将 PVD 或 ALD 整机送进台积电先进制程量产线 (5nm 之后) 或 CoWoS 量产线,目前 100 倍以上的 TTM P/E 将面临剧烈压缩。([MoneyDJ 天虹科技](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=eed6dd1a-bc16-4ac9-a08e-1f8760679f74)) **缓解:** 公司透过非台积电客户 (联电、汉磊、华润、世界先进) 累积量产参考,降低单一大客户依赖。
+*分析师推断:* 天虹目前对台积电的销售约占营收 20%,但 **以零组件为主、设备整机尚未量产导入**。若未来 2–3 年迟迟无法将 PVD 或 ALD 整机送进台积电先进制程量产线 (5nm 之后) 或 CoWoS 量产线,目前 100 倍以上的 TTM P/E 将面临剧烈压缩。*此 20% 数字来源为 vocus.cc Min Lin CFA 推断,非年报正本披露。* ([個股分析:天虹科技 - vocus](https://vocus.cc/article/6716081cfd897800012ffb80)) **缓解:** 公司透过非台积电客户 (联电、汉磊、华润、世界先进) 累积量产参考,降低单一大客户依赖。
 
 **风险 2 — 创办人黄见骆"董座兼总经理"治理结构 (≈ 概率低、冲击中)**
 
@@ -453,13 +461,13 @@ Source: 综合 [天虹2024 Q1 EPS 1.25元 - 财报狗](https://statementdog.com/
 
 **风险 6 — 地缘政治与设备出口管制 (≈ 概率中、冲击中高)**
 
-美国持续扩大对中国大陆设备出口管制,若进一步将范围扩展到台湾设备厂 (例如要求台湾 PVD/ALD 设备出口至中国大陆也需许可证),天虹对陆 45% 营收占比将受冲击。**缓解:** 公司加速欧洲与新加坡市场拓展,降低中国大陆比重。
+美国持续扩大对中国大陆设备出口管制,若进一步将范围扩展到台湾设备厂 (例如要求台湾 PVD/ALD 设备出口至中国大陆也需许可证),天虹对陆 46% 营收占比将受冲击。**缓解:** 公司加速欧洲与新加坡市场拓展,降低中国大陆比重。 ([天虹科技 - MoneyDJ 财金百科](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=eed6dd1a-bc16-4ac9-a08e-1f8760679f74))
 
 ### 9.3 财务风险 (Financial Risks)
 
 **风险 7 — 估值过高、本益比压缩 (≈ 概率高、冲击高)**
 
-天虹当前 TTM P/E 约 101.6 倍,远高于全球同业 22–32 倍。若 2026–2027 年 EPS 不能从 NT$3.01 反弹至 NT$8–10 区间,P/E 压缩将造成股价回落。**这是本报告认定的最大近期风险**。([6937天虹 - 财报狗](https://statementdog.com/analysis/6937))
+天虹当前 TTM P/E 约 108 倍 (2026-05-25),即便以同业最新高位 (AMAT 42×、LRCX 54×、ASMI 42–45×、TEL 40–48×) 为锚,溢价仍约 2 倍以上。若 2026–2027 年 EPS 不能从 NT$3.01 反弹至 NT$8–10 区间,P/E 压缩将造成股价回落。**这是本报告认定的最大近期风险**。([6937天虹 - 财报狗](https://statementdog.com/analysis/6937)) ([天虹 6937 - 簡介 - 鉅亨網](https://www.cnyes.com/twstock/6937/company/profile))
 
 **风险 8 — 应收账款与库存周转 (≈ 概率中、冲击中)**
 
@@ -490,16 +498,16 @@ Source: 综合 [天虹2024 Q1 EPS 1.25元 - 财报狗](https://statementdog.com/
 
 ### 10.2 主要财经媒体与第三方研究
 
-- [半導體股生力軍 天虹科技 6937 今天掛牌上市 - 經濟日報 (2023-12-12)](https://money.udn.com/money/story/5635/7634547)
-- [天虹上市掛牌股價一度漲逾八成 - 聯合新聞網 (2023-12-12)](https://udn.com/news/story/7253/7634593)
-- [半導體前後設備遭對岸指名度提升 天虹科技產能擴增1.5倍 - 聯合新聞網](https://udn.com/news/story/7240/8360428)
+- [亮點台鏈2 從兩千樣零組件切入設備 挺進半導體前段製程 天虹靠耗材養底氣 - 今周刊 (2025-07)](https://www.businesstoday.com.tw/article/category/183015/post/202507160038/)
 - [半導體設備廠天虹 6937 2024 喜迎歐洲訂單 - 財報狗](https://statementdog.com/news/4776)
 - [天虹 6937 打進EUV、 PLP 先進封裝設備 2026 年有望放量出貨 - 財報狗](https://statementdog.com/news/13905)
-- [個股分析:半導體前段設備廠天虹科技 - vocus](https://vocus.cc/article/6716081cfd897800012ffb80)
-- [半導體設備廠「天虹科技」如何受惠設備國產化 - 富果直送 Fugle Blog](https://blog.fugle.tw/post/skytech-analysis)
-- [天虹科技 6937 第三代半導體薄膜設備大廠 - NewSight](https://newsight.tw/737)
+- [個股分析:半導體前段設備廠天虹科技 - vocus, Min Lin CFA](https://vocus.cc/article/6716081cfd897800012ffb80)
+- [6937 天虹科技搶進EUV與先進封裝藍海,半導體設備市場展雄心 - vocus 2025/9/3](https://vocus.cc/article/68b86401fd8978000169a496)
+- [半導體設備廠「天虹科技」如何受惠設備國產化 - 富果直送 Fugle Blog (付费内容)](https://blog.fugle.tw/post/skytech-analysis)
 - [天虹科技股份有限公司 - MoneyDJ 财金百科](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=eed6dd1a-bc16-4ac9-a08e-1f8760679f74)
 - [天虹看好GaN/SiC起飛 - Verkita 法说会问答](https://www.verkita.com/skytech-concall-2023jan)
+- [6937 天虹 - 應用材料 (Applied Materials, AM…) - CMoney 股市爆料同學會](https://www.cmoney.tw/forum/article/177777636)
+- [天虹科技 2024 永續報告書 第五章 (員工人數披露)](https://www.skytech.com.tw/_i/assets/upload/files/sus%20%E5%A4%A9%E8%99%B9%E7%A7%91%E6%8A%80%202024%20%E5%B9%B4%E6%B0%B8%E7%BA%8C%E5%A0%B1%E5%91%8A%E6%9B%B8_%285%29%E5%B9%B8%E7%A6%8F%E8%81%B7%E5%A0%B4.pdf)
 
 ### 10.3 财务数据与市场快报
 
@@ -517,31 +525,112 @@ Source: 综合 [天虹2024 Q1 EPS 1.25元 - 财报狗](https://statementdog.com/
 - [25Q2財報公告:天虹 6937 Q2 營收 5.1231億元 - CMoney](https://www.cmoney.tw/notes/note-detail.aspx?nid=979953)
 - [天虹 6937 主要產品與營收占比 - CMoney 股市爆料同學會](https://www.cmoney.tw/forum/stock/6937?s=revenue-source)
 - [6937 天虹股票的2個亮點與2個風險 - 財報狗](https://statementdog.com/analysis/6937)
-- [天虹 6937 2024年第1季EPS - 財報狗](https://statementdog.com/analysis/6937/eps)
+- [天虹 6937 2024年第1季EPS - 財報狗](https://statementdog.com/analysis/6937)
 - [天虹 6937 法說會 2025 AI 整理 - 散戶鬥嘴鼓](https://poorstock.com/earningcall/6937)
 - [天虹 6937 損益表 財報分析 - HiStock](https://histock.tw/stock/6937/%E6%90%8D%E7%9B%8A%E8%A1%A8)
 - [天虹 6937 股價淨值比 - HiStock](https://histock.tw/stock/6937/%E8%82%A1%E5%83%B9%E6%B7%A8%E5%80%BC%E6%AF%94)
 - [Skytech (TPE:6937) Company Profile - Stockanalysis.com](https://stockanalysis.com/quote/tpe/6937/company/)
 - [Skytech 6937 - Bloomberg Quote](https://www.bloomberg.com/quote/6937:TT)
 - [Skytech Inc/TW - Bloomberg Company Profile](https://www.bloomberg.com/profile/company/6937:TT)
-- [Skytech Inc. 6937.TW - Yahoo Finance](https://finance.yahoo.com/quote/6937.TW/)
 - [富邦 e 證券 個股董監事經理人持股明細 6937](https://fubon-ebrokerdj.fbs.com.tw/z/zc/zck/zck.djhtm?a=6937&b=2&c=1)
 
 ### 10.4 同业比较 / 行业资料
 
 - [Applied Materials 應用材料分析 - forecastock](https://www.forecastock.tw/article/jerrylin-6c1f1edd-d959-11ef-b7c0-d9ad8f2ecc0c)
+- [Applied Materials FY24 10-K (fiscal year ended 2024-10-27)](https://www.sec.gov/Archives/edgar/data/0000006951/000000695124000044/amat-20241027.htm)
+- [Applied Materials Q4 and FY 2024 Press Release](https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-fourth-quarter-and-fiscal-year-2024)
+- [ASM International Q4 2024 Quarterly Report](https://www.asm.com/downloads/25242322-quarterly-reports/2024-q4-quarterly-report)
+- [Tokyo Electron FY25 Q4 Transcript (fiscal year ended 2025-03)](https://www.tel.com/ir/library/report/l8gqgo00000000gl-att/fy25q4transcript-e.pdf)
+- [ASMPT 2024 年度業績公告 (HKEX 0522)](https://www.asmpt.com/site/assets/files/76526/e0522_results_announcement_2024_q4.pdf)
+- [Veeco Q4 and Full Year 2024 - Compound Semiconductor News](https://compoundsemiconductor.net/article/121135/Veeco_reports_Q4_and_full_year_2024)
+- [Piotech (688072.SH) Financials - stockanalysis.com](https://stockanalysis.com/quote/sha/688072/)
+- [Applied Materials PE Ratio (2026-05 current) - macrotrends](https://www.macrotrends.net/stocks/charts/AMAT/applied-materials/pe-ratio)
+- [Lam Research PE Ratio (2026-05 current) - macrotrends](https://www.macrotrends.net/stocks/charts/LRCX/lam-research/pe-ratio)
+- [Tokyo Electron PE Ratio (2026-05 current) - companiesmarketcap](https://companiesmarketcap.com/tokyo-electron/pe-ratio/)
+- [ASMI PE Ratio (2026-05 current) - financecharts](https://www.financecharts.com/stocks/ASMIY/value/pe-ratio)
 
 ### 10.5 数据缺口与待补充事项 (Disclosure gaps)
 
 本报告基于公开免费来源撰写,以下数据未直接对账 MOPS 年报正本,读者作正式投资决策应自行核对:
 
-1. 2022、2023 年度合并营收正本数字 (本报告引用为综合估算)
-2. 前 5 大客户 (主要客戶) 详细名单与各别占营收比例 — 应见于年报 "主要客户" 一节
-3. 独立董事比例、董事会组成、董监事持股明细 — 应见于年报 "公司治理" 一节
-4. R&D 费用占营收比、员工人数、平均薪资 — 应见于年报 "员工资料" 与损益表
+1. 2022、2023 年度合并营收正本数字 (本报告引用 stockanalysis.com 二手汇总:2022 NT$1,815m、2023 NT$1,993m)
+2. 前 5 大客户 (主要客戶) 详细名单与各别占营收比例 — 应见于年报 "主要客户" 一节;本报告引用 vocus.cc/MoneyDJ 等三方推断 (TSMC ~20%、其他单一客户 <10%、UMC + 汉磊 + CR Micro 为主要客户)
+3. 独立董事比例、董事会组成、董监事持股明细 — 应见于年报 "公司治理" 一节;本报告引用 vocus.cc 推断的"四位创办人合计持股约 50%"
+4. R&D 费用占营收比、平均薪资 — 应见于年报 "员工资料" 与损益表 (员工人数 424 已经由公司 2024 永续报告书确认)
 5. 应收账款周转天数、存货周转天数、现金流量结构 — 应见于年报合并财务报表附注
 6. SEMI World Fab Forecast、Gartner Semiconductor Capital Spending Forecast、Yole Développement SiC/GaN Power Market 等行业报告之正本数字
 
 ---
 
 **报告作者声明:** 本报告由 AI 助手 (Claude) 基于公开免费网络资讯综合整理,所有数字与事实均尽力对照来源链接,但 (1) 部分关键财务数字因未直接下载 MOPS 年报正本而标记为估算,(2) 部分行业研究数字 (TAM/CAGR) 引用自二手汇总,(3) 文中估值判断与情景分析仅为本报告作者基于公开信息之主观判断,**不构成投资建议**。读者应自行查阅 [TWSE 公开资讯观测站 https://mops.twse.com.tw/](https://mops.twse.com.tw/) 之最新年报与季报作正式决策。
+
+---
+
+<details>
+<summary>验证日志 (Step 10) — 2026-05-25</summary>
+
+**URL 检查** — 验证前 42 条独立 URL,修复后总计 54 条 (新增 12 条同业 10-K / 业绩公告 / macrotrends P/E / 今周刊 / vocus 等);最终 HTTP 200 占 89% (48/54);残余 4 条 403 (Bloomberg、financecharts、twincn) 均路径合理为已知反爬虫、1 条 000 (AMAT IR,瞬时连线错误)。**修复以下断链 / 错链 (6 条)**:
+
+- `money.udn.com/money/story/5635/7634547` (经济日报 2023-12-12 挂牌报道) — 404,UDN 已下架。**替换**为 [TWSE 市场观察 新上市公司天虹6937](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151) (本报告其他位置已引用) 与 [今周刊 2025-07 亮點台鏈2 從兩千樣零組件切入設備](https://www.businesstoday.com.tw/article/category/183015/post/202507160038/) (新增)。
+- `udn.com/news/story/7253/7634593` (联合新闻网 IPO 首日报道) — 404。**替换**为 TWSE 市场观察 + [nStock 天虹做什么](https://www.nstock.tw/%E5%A4%A9%E8%99%B9%E5%81%9A%E4%BB%80%E9%BA%BC.html) (后者载有 NT$115 承销价 / NT$208 高点 / 9.3 万差价的完整数据)。
+- `udn.com/news/story/7240/8360428` (联合新闻网 1.5 倍产能) — 404。**替换**为 [vocus 2025-09-03 天虹搶進EUV與先進封裝藍海](https://vocus.cc/article/68b86401fd8978000169a496) (载有 2025-10 竹北新厂、1.5-2 倍产能等更新表述)。
+- `newsight.tw/737` — DNS 解析失败,域名已下线。**删除引用**(原为图表 source 之一,以 stockanalysis.com 替代)。
+- `finance.yahoo.com/quote/6937.TW/` — 404,Yahoo Finance 国际页结构变更。**删除引用**,保留台湾域名 `tw.stock.yahoo.com/quote/6937.TW/profile` (200 OK)。
+- `statementdog.com/analysis/6937/eps` — 404,statementdog 改版后 `/eps` 子路径下架。**替换**为 `statementdog.com/analysis/6937` 主页 (200 OK)。
+- `skytech.com.tw/.../sus.../_(5)_.pdf` — 因 URL 中含未编码括号 `(5)` 而 404。**修正**为 URL-encoded `%285%29` 形式 (200 OK)。
+
+**MOPS / TWSE 来源校验** — 本报告未直接下载 MOPS 年报 PDF (受公开网络抓取限制),关键财务数字皆引自 stockanalysis.com / 财报狗 / 鉅亨网 / nstock 等台湾财经聚合平台。TWSE 市场观察专栏 URL `https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151` 已 fetch 验证为 6937 专属介绍页 (ROC 112/12/12 = 2023-12-12 挂牌)。
+
+**关键数据点抽查**(claim → 原始来源位置):
+
+- **承销价 NT$115 元** (原报告误植为 NT$110) → 修正,引自 [nStock 天虹做什么](https://www.nstock.tw/%E5%A4%A9%E8%99%B9%E5%81%9A%E4%BB%80%E9%BA%BC.html) 与多个搜索结果汇总。
+- **挂牌日期 2023-12-12** (ROC 112/12/12) → 验证,引自 [TWSE 市场观察](https://www.twse.com.tw/market_insights/zh/detail/ff8080818c000119018c38aa4bb30151) 与 [Yahoo 奇摩股市](https://tw.stock.yahoo.com/quote/6937.TW/profile)。
+- **2024 年合并营收 NT$2,587.6 百万 / EPS NT$6.03** → 验证,引自 [stockanalysis.com](https://stockanalysis.com/quote/tpe/6937/financials/) 与 [财报狗](https://statementdog.com/analysis/6937)。
+- **2024 毛利率 41.77% / 营业利益率 12.97% / 净利率 10.60%** → 部分验证,nstock/财报狗显示同样数字 (推定为 MOPS 台湾会计年度数);stockanalysis.com 日历年汇总数字为 43.96% / 15.79% / 15.72%,口径差异已在 §1.3 chart caption 中标注。
+- **2025 全年 EPS NT$3.01 / 营收 NT$2,245m / -13.26% yoy** → 验证,引自 [stockanalysis.com](https://stockanalysis.com/quote/tpe/6937/financials/)。
+- **2025 现金股利 NT$1.4 (新增)** → 验证,引自 [nStock 天虹做什么](https://www.nstock.tw/%E5%A4%A9%E8%99%B9%E5%81%9A%E4%BB%80%E9%BA%BC.html)。
+- **2026 Q1 EPS NT$0.96, 营收 NT$5.82 亿元 (新增)** → 验证,引自 [nStock 天虹做什么](https://www.nstock.tw/%E5%A4%A9%E8%99%B9%E5%81%9A%E4%BB%80%E9%BA%BC.html)。
+- **2026-05-25 收盘价 NT$351.5 / 市值 NT$237.8 亿 / P/E 108.23 / P/B 7.58** (原报告引用 NT$281 / NT$207 亿 / P/E 101.6 / P/B 5.98,已 stale) → 修正,引自 [鉅亨网 6937 简介](https://www.cnyes.com/twstock/6937/company/profile)。
+- **员工人数 2024 年底 424 人** (原报告"600 余人 estimate" 偏高) → 修正,引自 [天虹科技 2024 永续报告书](https://www.skytech.com.tw/_i/assets/upload/files/sus%20%E5%A4%A9%E8%99%B9%E7%A7%91%E6%8A%80%202024%20%E5%B9%B4%E6%B0%B8%E7%BA%8C%E5%A0%B1%E5%91%8A%E6%9B%B8_%285%29%E5%B9%B8%E7%A6%8F%E8%81%B7%E5%A0%B4.pdf)。
+- **CFO 张浩君, CEO 易锦良 (前 AMAT 全球副总裁), 共同创办人 罗伟瑞** (新增团队层级) → 验证,综合 [Yahoo 股市](https://tw.stock.yahoo.com/quote/6937.TW/profile) (CEO 与发言人体系) + [vocus.cc](https://vocus.cc/article/6716081cfd897800012ffb80) (创办人持股) + 经济日报二手报道 (CFO 张浩君信息)。
+- **2024 产品结构 (设备 49% / 零组件 33% / 其他 18%)** (原报告 ~45/55 split estimate) → 修正,引自 [MoneyDJ 财金百科](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=eed6dd1a-bc16-4ac9-a08e-1f8760679f74)。
+- **2024 地区结构 (本国 44% / 中国 46% / 新加坡 7%)** (原报告引 2023 数字) → 更新,引自 [MoneyDJ 财金百科](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=eed6dd1a-bc16-4ac9-a08e-1f8760679f74)。
+- **2025-10 竹北新厂启用、产能 1.5-2 倍** (原报告写"2024 年扩增 1.5 倍") → 修正,引自 [vocus 2025-09-03 报道](https://vocus.cc/article/68b86401fd8978000169a496)。
+- **同业 2024 营收**: AMAT US$27.18bn (原 US$27bn,精度提升)、ASMI €2.93bn (原 €3.0bn)、**TEL ¥2,431.5bn FY25 (原 ¥2,000bn FY24,严重过时)**、ASMPT HK$13.23bn (原 HK$13.5bn)、Veeco US$717m (原 US$700m)、**Piotech RMB 4.10bn (原 RMB 2.0bn+, 严重过时 -- 实际 yoy +51.7%)** → 修正,引自各家 10-K / 业绩公告 / stockanalysis.com。
+- **同业 P/E (2026-05 当期)**: AMAT 约 42×、LRCX 约 54×、TEL 约 40–48×、ASMI 约 42–45× (原报告引用 22-32× 已严重 stale,反映 2024 中场情境) → 修正,引自 [macrotrends](https://www.macrotrends.net/stocks/charts/AMAT/applied-materials/pe-ratio) 与 [financecharts](https://www.financecharts.com/stocks/ASMIY/value/pe-ratio)。
+- **梭特 SaulTech 实际代号 6812.TW** (原报告写"梭特 Saote Tech 私有/未上市") → 修正,引自 [鉅亨网 6812 简介](https://www.cnyes.com/twstock/6812/company/profile) 与 [TechNews 梭特科技专访](https://technews.tw/2024/05/15/miniled-saul-tech-film-on-board/)。
+
+**分析师观点** (已重新标注为 *分析师观点:* / *分析师推断:*,未直接挂靠年报):
+
+- 最大客户 TSMC 约占营收 20% — 重标为 vocus.cc Min Lin CFA 推断 (原报告挂靠 MoneyDJ 错误,MoneyDJ 主要客户列出的是 UMC + 汉磊,未列 TSMC)。
+- 创办人 4 人合计持股约 50% — 标为 vocus.cc 推断。
+- 客户列表 (台积电、联电、汉磊、华润、力积电、世界先进) — 标为 vocus.cc 三方研究汇总。
+- 2024 客户营收分布饼图 — 整体标为"分析师推断"、非年报正本。
+
+**修复明细**:
+
+- IPO 承销价 NT$110 → NT$115 (4 处)
+- 收盘价 / 市值 / P/E / P/B 整体更新至 2026-05-25 当期值
+- CFO 名字补全 (张浩君)、CEO 角色补全 (易锦良 = 执行长 + 代理发言人 + 董事,前 AMAT 全球副总裁)
+- 员工人数 600+ → 424 (2024 永续报告书)
+- 2024 产品 mix 45/55 → 49/33/18 (MoneyDJ)
+- 2024 地区 mix 更新为 MoneyDJ 披露的本国 44% / 中国 46% / 新加坡 7%
+- 同业 P/E 区间 22-32× → 40-55× (反映 2026-05 现值)
+- TEL FY24 ¥2,000bn → FY25 ¥2,431.5bn
+- Piotech 2024 RMB 2.0bn+ → RMB 4.10bn (yoy +51.7%)
+- 梭特 → SaulTech (6812.TW)
+- 2024 产能扩增叙述 → 修正为"2025-10 竹北新厂启用,产能 1.5-2 倍"
+- 2026 Q1 数据新增 (EPS NT$0.96, 营收 NT$5.82 亿元)
+- 2025 现金股利 NT$1.4 新增
+- 4 条死链 / 错域名 替换或删除
+- "(Source: MoneyDJ)" 错误归因修正为 vocus.cc Min Lin CFA
+
+**未能验证 / 残余不确定**:
+
+- MOPS 年报正本 PDF 未下载 — 关键财务数字 (营收、毛利率、净利率) 引自 stockanalysis.com、nstock、财报狗等第三方聚合;两个不同口径 (台湾会计年度 vs. 日历年汇总) 存在 ~2 pp 差异,已在 §1.3 加注。
+- 主要客户前 5 大正式名单与各别占比未在年报二手摘要中披露 — 已统一标注为"*分析师推断*"。
+- 独立董事比例、董事会持股结构未在公开免费来源完整披露 — 已在 §3.3 加注。
+- 2025 Q1/Q2 单季 EPS NT$1.10 / NT$0.28 引自 CMoney note (note-detail.aspx?nid=979953 200 OK 但 fetch 内容受限);未单独 fetch 验证,以全年 NT$3.01 加权后基本合理。
+- R&D 费用占营收比、应收账款周转天数等明细未补全。
+
+</details>
