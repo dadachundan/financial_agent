@@ -97,19 +97,30 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
     if skipped_cn:
         print(f"Skipped {skipped_cn} 中文版/CHS_/三个皮匠报告/景略咨询 file(s).")
 
-    # Skip topics with more than 3 files (one-for-one / paid packs)
+    # Skip topics with more than 3 files (one-for-one / paid packs),
+    # except topics tagged #外资研报 which routinely bundle a day's notes.
     topic_file_counts = Counter(
         (e.get("topic") or {}).get("topic_id") for e in entries
     )
+    exempt_topic_ids = {
+        tid
+        for e in entries
+        if (tid := (e.get("topic") or {}).get("topic_id")) is not None
+        and "#外资研报" in clean_zsxq_text(
+            ((e.get("topic") or {}).get("talk") or {}).get("text") or ""
+        )
+    }
     before_bulk = len(pdf_entries)
     pdf_entries = [
         e for e in pdf_entries
         if (tid := (e.get("topic") or {}).get("topic_id")) is None
         or topic_file_counts[tid] <= 3
+        or tid in exempt_topic_ids
     ]
     skipped_bulk = before_bulk - len(pdf_entries)
     if skipped_bulk:
-        print(f"Skipped {skipped_bulk} file(s) from topics with >3 attachments.")
+        print(f"Skipped {skipped_bulk} file(s) from topics with >3 attachments "
+              f"(#外资研报 exempt).")
 
     # Apply to_date upper bound
     if to_date:
@@ -294,15 +305,25 @@ def _run_query(query: str, args, session, conn, out_dir: Path,
     topic_file_counts = Counter(
         (e.get("topic") or {}).get("topic_id") for e in entries
     )
+    exempt_topic_ids = {
+        tid
+        for e in entries
+        if (tid := (e.get("topic") or {}).get("topic_id")) is not None
+        and "#外资研报" in clean_zsxq_text(
+            ((e.get("topic") or {}).get("talk") or {}).get("text") or ""
+        )
+    }
     before_bulk = len(pdf_entries)
     pdf_entries = [
         e for e in pdf_entries
         if (tid := (e.get("topic") or {}).get("topic_id")) is None
         or topic_file_counts[tid] <= 3
+        or tid in exempt_topic_ids
     ]
     skipped_bulk = before_bulk - len(pdf_entries)
     if skipped_bulk:
-        print(f"Skipped {skipped_bulk} file(s) from topics with >3 attachments.")
+        print(f"Skipped {skipped_bulk} file(s) from topics with >3 attachments "
+              f"(#外资研报 exempt).")
 
     print(f"Found {len(pdf_entries)} PDF(s) matching {query!r}.\n")
 
