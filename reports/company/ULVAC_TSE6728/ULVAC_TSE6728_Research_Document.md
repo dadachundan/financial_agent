@@ -88,3 +88,162 @@ In his eight years as CEO Mr. Iwashita has presided over (i) the 2017–2019 cap
 
 ---
 
+## 4. Products & Services
+
+This is the most important section of the report. ULVAC's primary identity is an **equipment maker** that bundles **materials, components, and analytical instruments** off the same vacuum-technology platform. The two reportable segments — Vacuum Equipment Business and Vacuum Application Business — and the four equipment sub-lines plus two application sub-lines are quoted verbatim from the FY2025.6 Yuho-style filing and the Q3 FY26 supplemental sales table.
+
+### 4.1 The ULVAC segment matrix (verbatim, FY25.6 + Q3 FY26)
+
+ULVAC's own segment-information note describes the two reportable segments as:
+
+> The Vacuum Equipment Business consists of products such as sputtering equipment for LCDs, organic EL production equipment, evaporation roll-to-roll equipment, sputtering equipment for semiconductor production, vacuum pumps, and measuring equipment, and we develop, manufacture, sell, and provide maintenance services for these products. The Vacuum Application Business consists of vacuum-applied products such as sputtering target materials and analytical instrument-related products, and we develop, manufacture, sell, and provide maintenance services for these products.
+
+Source: [FY25 Financial Results, Notes on segment information, p. 21](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf).
+
+The Q3 FY2026.6 supplemental disclosure (9 months ended March 2026) gives the four-way sub-split of Vacuum Equipment and the two-way split of Vacuum Application:
+
+| Segment | Sub-line | 9M FY26.6 sales (¥M) | % of segment | YoY |
+|---|---|---:|---:|---:|
+| **Vacuum Equipment Business** (¥150,005M total, OP ¥12,769M) | Semiconductor & electronic device production equipment | 63,063 | 42.1% | n.d. (orders ↑) |
+|  | Display & energy-related production equipment | 45,469 | 30.3% | up YoY |
+|  | Components (vacuum pumps, measuring instruments, power supplies) | 25,954 | 17.3% | steady |
+|  | Industrial equipment (incl. rare-earth magnet equipment, leak detectors after reclassification) | 15,519 | 10.3% | up YoY |
+| **Vacuum Application Business** (¥41,626M total, OP ¥1,863M) | Materials (sputter targets + related) | 19,860 | 47.7% | up YoY |
+|  | Others (surface-analysis instruments, mask blanks) | 21,767 | 52.3% | up YoY |
+
+Source: [Q3 FY26 Financial Results, Supplemental Sales Information, p. 15](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf).
+
+For full FY2025.6, the company also disclosed product-level sales and FY26 forecast (in ¥bn), showing more dramatic mix shifts in the FY26 plan:
+
+| Item | FY25.6 actual | FY26.6 forecast | YoY |
+|---|---:|---:|---:|
+| Semiconductor & electronic device equipment | 89.3 | 100.5 | **+12.5%** |
+| Display & energy-related equipment | 53.1 | 39.0 | **–26.6%** |
+| Components | 43.1 | 35.0 | –18.9% |
+| Industrial equipment | 13.5 | 20.0 | **+48.6%** |
+| Vacuum Application — Materials | 26.6 | 23.5 | –11.7% (FPD JV de-consolidation) |
+| Vacuum Application — Others | 25.5 | 32.0 | +25.3% (mask-blanks ramp) |
+| **Total** | **251.2** | **250.0** | –0.5% |
+
+Source: [FY25 Financial Results, Net sales forecast by product, p. 6](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf). Note: as of Q3 FY26, sales guidance was lifted to ¥260bn (from ¥250bn) — see top-of-report banner.
+
+```mermaid
+graph TD
+    A[ULVAC, Inc.<br/>FY26E ¥260bn sales] --> B[Vacuum Equipment<br/>~79% sales, OPM ~8.5%]
+    A --> C[Vacuum Application<br/>~21% sales, OPM ~4.5%]
+    B --> B1[Semiconductor &<br/>Electronic Device<br/>≈¥100bn FY26E]
+    B --> B2[Display & Energy<br/>Production Equipment<br/>≈¥39bn FY26E]
+    B --> B3[Components<br/>≈¥35bn FY26E]
+    B --> B4[Industrial Equipment<br/>≈¥20bn FY26E]
+    C --> C1[Materials<br/>Sputter targets, etc.<br/>≈¥23bn FY26E]
+    C --> C2[Others<br/>Mask blanks, surface analysis<br/>≈¥32bn FY26E]
+    B1 --> B1a[Sputter / MHM / ashing<br/>Mature-node logic + memory<br/>+ advanced packaging]
+    B2 --> B2a[OLED evaporation + sputter<br/>EV battery R&D<br/>Roll-to-roll]
+    B3 --> B3a[Turbo pumps, dry pumps<br/>Leak detectors, measuring]
+    B4 --> B4a[Rare-earth magnet equipment<br/>R&D vacuum systems]
+    C1 --> C1a[Al / Ti / Cu / Mo / W<br/>ITO / IGZO targets]
+    C2 --> C2a[PHI surface analysis<br/>OLED mask blanks]
+```
+
+### 4.2 Synthesis — how the categories interact in one customer workflow
+
+A FPD or semiconductor fab uses ULVAC products in a **single physical-vapour-deposition (PVD) loop**: ULVAC's **vacuum pumps** (Components) pull the deposition chamber to high vacuum; an ULVAC **sputter or evaporation tool** (Semi/Display equipment) physically delivers a thin film by ejecting atoms from a **sputter target** (Materials) onto the substrate; an ULVAC **leak detector** (Components) confirms chamber integrity; and an ULVAC **surface-analysis instrument** (Others — typically a PHI XPS/Auger system) characterises the deposited film during process-development. The **flagship sale is the equipment** — that's where ULVAC's sales engineers earn their margin — but the **lifetime annuity** is the pump consumables + sputter-target refills + analytical-instrument calibration that follow the equipment install for 5–10 years. This bundled cycle is the structural reason ULVAC's Vacuum Application segment grows even when the Vacuum Equipment segment cycles down: the installed base keeps consuming targets / pump parts / spares regardless of new-tool orders, which is what dampens the equipment-cycle volatility shown in the FY24→FY25→FY26 OP trajectory.
+
+### 4.3 Vacuum Equipment — Semiconductor & Electronic Device Production Equipment (≈42% of equipment segment)
+
+**10-K-equivalent verbatim from FY25.6 Yuho-style filing:**
+> In semiconductor and electronic device production equipment, although investment in advanced logic and memory sectors remained robust and the advanced packaging sector also performed well, orders received and net sales declined year on year due to a reactionary decrease in power device investments in Japan and China.
+
+Source: [FY25 Financial Results, p. 2](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf).
+
+**Plain-language gloss:** This sub-line is the **largest single product family** in the group (~¥89bn in FY25 rising to a planned ~¥100bn in FY26) and houses ULVAC's flagship semiconductor sputter equipment for **MHM (Metal Hard Mask, 金属硬掩膜)** — a patterning-stack film used as an etch-resistant cap during deep-etch steps in DRAM capacitor formation and in advanced logic back-end-of-line. The Q3 FY26 Q&A is precise that ULVAC has an "**overwhelming share in MHM for mature nodes**" — what management calls **"de facto standard status"** — built on a proprietary stress-controlled-film-deposition technology that competing AMAT / TEL sputter tools have struggled to match for this specific application ([Q3 FY26 Q&A, item 5](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)). Beyond MHM the family also covers **PR ashing (光刻胶灰化 — plasma stripping of photoresist after etch) for WLP and PLP advanced packaging**, and **metal sputter for DRAM/NAND POR (Process of Record, 工艺标准) processes**.
+
+Within this family, the **advanced-packaging ashing tool** is the second pillar — ULVAC describes itself in Q3 FY26 as achieving "de facto standard status in the descum process" of WLP / PLP packaging on the back of its "fine plasma technology" ([Q3 FY26 Q&A, item 5](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)). Full-year ashing-equipment orders were raised to ~¥20bn in FY26, with PLP-specific contributions of ¥4–5bn for Taiwanese OSATs and Japanese substrate makers. This makes ULVAC a direct beneficiary of the same AI-GPU-packaging capex wave that drives Besi (hybrid bonding) and Kinik (CMP conditioner for advanced packaging) — though at a smaller dollar scale per tool than the leading-edge plays.
+
+*Analyst view:* ULVAC's competitive advantage in this family is **process-specific niche dominance** rather than horizontal scale: the MHM share and ashing share are real and high (management's "de facto standard" language is unusual for a Japanese filing), but the addressable served market is a thin slice of the broader semi-equipment TAM that AMAT / LRCX / TEL / ASMI compete in. The flagship competitor for general-purpose sputter is **Applied Materials' Endura platform** (cited in [AMAT's own 10-K](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AMAT&type=10-K) as their primary PVD platform); the flagship competitor for ashing is **Hitachi High-Tech** and **Plasma-Therm**; ULVAC defends share on application-specificity, not platform-versatility. Moat type = **technology (process IP) + switching cost (POR qualification)**; rated **partial-to-strong** within the served niche, **weak** outside it. The decade-long stress-controlled MHM process IP cannot be replicated by a new entrant on a 1–2 year horizon, and the customer-qualification cost for swapping a POR-qualified sputter tool is exactly the same multi-quarter pain that gives LRCX / AMAT their installed-base defensibility.
+
+### 4.4 Vacuum Equipment — Display & Energy-Related Production Equipment (≈30% of equipment segment)
+
+**10-K-equivalent verbatim from FY25.6 Yuho-style filing:**
+> While investment in OLEDs for IT panels began to gain momentum, orders received and net sales fell short of the previous year's level, as the adoption of EV batteries for in-vehicle use aimed at achieving smaller size, larger capacity, and improved safety required more time, causing delays in investment.
+
+Source: [FY25 Financial Results, p. 2](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf). Note the name change from "FPD Production Equipment" to "Display & Energy-related Production Equipment" starting July 2025, which folds in EV-battery-related vacuum equipment ([FY25, p. 6 footnote (2)](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf)).
+
+**Plain-language gloss:** This is the historic ULVAC franchise — **sputter and evaporation tools for FPD** (LCD and OLED) panel makers — with EV-battery R&D vacuum equipment recently bolted on. The product line includes the **SOLCIET, SATELLA, and NEW-ZELDA OLED organic-EL production systems** (organic-evaporation chambers used to deposit the emissive organic layer in OLED stacks), **cluster-type PE-CVD systems** (for the inorganic encapsulation films that protect the organic stack from moisture), and **OLED-specific sputter tools** for the ITO / IGZO TFT layers that drive each pixel ([ULVAC GmbH OLED equipment page](https://ulvac.eu/products/equipment/by-application/oled/)). The roll-to-roll evaporation line — vacuum-coating onto continuous polymer or metal-foil web — services touch-panel transparent-electrode and EV-battery-foil markets.
+
+The strategic colour for FY26 is mixed. The **FY26 plan was originally cut from ¥53bn to ¥39bn (–26.6%)** on slower EV battery capex and a paused-out AR/VR sputter project in China ([FY25 Financial Results, p. 6](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf)). But in Q3 FY26 management raised the full-year **orders** outlook to **¥70bn (up ¥30bn vs original plan)** on the back of "new line investments for G8-size OLED from Chinese manufacturers and additional LCD equipment investment projects" ([Q3 FY26 Q&A, item 7](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)) — meaning sales will catch up in FY27. The G8.6 (8.7-gen) OLED retrofit cycle at Chinese makers (Visionox, BOE, CSOT) for tablet- and laptop-sized OLED panels is the most concrete near-term catalyst for the line.
+
+*Analyst view:* ULVAC's market position in OLED organic-evaporation equipment is **strong in cluster-type systems for sputter / inorganic layers** but **weak in the all-important emissive-layer linear-source evaporation** where Canon Tokki (private, Canon-owned) has a 70–80%+ share at flagship Korean and Chinese OLED fabs. ULVAC competes with Canon Tokki, **Sunic System (KOSDAQ:171090)**, **Avaco (KOSDAQ:083930)**, and **Applied Materials** for the broader OLED equipment market that totalled approximately USD 1.5bn in 2022 and is projected to reach ~USD 3bn by 2027 at ~15% CAGR ([OLED Deposition Equipment Market report, Market Research Future / DixieGrimes summary](https://github.com/DixieGrimes/Market-Research-Report-List-1/blob/main/oled-deposition-equipment-market.md)). Moat type = **scale + integrated bundle** (ULVAC's sputter + materials + components co-sell to FPD makers is more bundled than competitors); rated **partial — strong in sputter, weak in evaporation**.
+
+### 4.5 Vacuum Equipment — Components (≈17% of equipment segment; AI-server tailwind)
+
+**10-K-equivalent verbatim from FY25.6 Yuho-style filing:**
+> In the components business, orders received remained at a high level and net sales exceeded the previous year, supported by strong demand for vacuum pumps, measuring devices, power supply devices, and leak test equipment for cooling systems such as those used in AI servers, semiconductors, electronic devices, and consumer devices.
+
+Source: [FY25 Financial Results, p. 2](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf).
+
+**Plain-language gloss:** Vacuum components are the **mid-cycle smoother** in the ULVAC P&L. The product line covers (i) **turbomolecular pumps and dry pumps** that maintain vacuum in fab process chambers — every ULVAC sputter / etch / CVD tool ships with multiple pumps, and the global installed base of all fab tools (not just ULVAC's) is a perpetual after-market for ULVAC pumps; (ii) **measuring instruments** including vacuum gauges, residual-gas analysers (RGA), and process-monitoring sensors; (iii) **leak detectors** — including the helium mass-spec leak detectors used in fab utilities and, increasingly, in AI-server liquid-cooling-loop QA (every Nvidia H200 / B200 server with liquid cooling needs leak-tested cooling-loop assemblies before shipment, and the leak-test equipment is exactly the same physics as a fab leak detector); and (iv) **power supplies** for plasma-process tools.
+
+The strategic significance is the **AI-server-cooling angle**: with NVIDIA / AMD GPU racks now standardising on liquid cooling (cold-plate or immersion), the manifold / cold-plate assemblies need helium-leak-test 100% before integration, and ULVAC is one of three or four global suppliers of the dedicated test stations. This makes Components a **leveraged play on AI-server unit growth** that does not depend on fab capex cycles — a useful diversifier off the more cyclical equipment lines. The recent reclassification in FY26 that moves leak-testing equipment out of Components and into Industrial Equipment (see §4.6) was a presentational change reflecting the maturing of leak-test as a stand-alone business; the underlying tailwind is unchanged ([Q3 FY26 Financial Results, p. 3](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf)).
+
+*Analyst view:* This line is ULVAC's most defensible. The two principal pump competitors are **Edwards (part of Atlas Copco)** and **Pfeiffer Vacuum (FR:PFV, ~50% Busch-owned)** — both are larger in the open-market pump business but neither bundles with an in-house equipment franchise the way ULVAC does. Moat type = **switching cost + installed-base annuity** (a fab that has standardised on ULVAC pumps for a 200mm or 300mm fab does not rip-and-replace), plus **bundle pull** from the equipment franchise. Rated **strong** within the captive ULVAC installed base, **partial** in open-market pump tenders. The FY26 plan cut to ¥35bn (from ¥43bn FY25) reflects a recoil from the FY24–FY25 peak of fab utility build-outs — not a structural weakening of the franchise.
+
+### 4.6 Vacuum Equipment — Industrial Equipment (≈10% of equipment segment; rare-earth re-rating)
+
+**10-K-equivalent verbatim from FY25.6 Yuho-style filing (mixed — see also Q3 FY26 update):**
+> Orders received and net sales declined year on year due to weak demand for high-performance magnet production equipment.
+
+Source: [FY25 Financial Results, p. 2](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf). But the Q3 FY26 update is materially more bullish:
+
+> In the rare earth magnet field, high-performance magnet manufacturing equipment performed strongly as capital investment aimed at diversifying supply chains began in earnest. … leak testing equipment for cooling systems used in air conditioners and AI servers remained steady.
+
+Source: [Q3 FY26 Financial Results, p. 3](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf).
+
+**Plain-language gloss:** Industrial Equipment is the **most interesting structural-growth story** in the FY26 narrative. ULVAC is one of a handful of global suppliers of **vacuum melting / sintering / coating equipment for high-performance NdFeB (neodymium-iron-boron, 钕铁硼) magnets** — the rare-earth permanent magnets used in EV traction motors, wind-turbine generators, robotics actuators, and consumer electronics voice coils. The vacuum-process step is essential because rare-earth metals oxidise instantly at ambient pressure; magnet production requires melting and sintering under inert gas in a controlled-atmosphere furnace.
+
+The strategic inflection is the **US/EU/Japan rare-earth supply-chain-diversification capex**. After two decades of >85% Chinese share in NdFeB production, the US Inflation Reduction Act (IRA) and the EU Critical Raw Materials Act have triggered onshoring projects — MP Materials in Texas, Hitachi Metals / Proterial in Japan and the US, GM-Vacuumschmelze in Germany — each of which buys vacuum melting / sintering / coating equipment from a small set of suppliers including ULVAC. Q3 FY26 management said the line "has historically maintained orders at around ¥20.0 billion" but now "by capturing strong demand for rare-earth magnets and related products, we expect orders to stabilize at the ¥35.0–45.0 billion level over the next 3–5 years" ([Q3 FY26 Q&A, item 8](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)). The FY26 sales plan was raised to ¥20bn (vs ¥13.5bn FY25 actual, +48.6%) and FY27–FY28 will see the inflection meaningfully larger.
+
+*Analyst view:* Industrial Equipment goes from "boring legacy line item" to "the most under-discussed bull case for ULVAC". Competitors include **Inductotherm Group**, **Consarc**, **ALD Vacuum Technologies (DE)**, and **Chinese state-owned suppliers** — but the Western-magnet-onshoring projects are explicitly seeking non-Chinese equipment supply, which boxes ULVAC into a privileged competitive set. Moat type = **technology + geopolitical preference**; rated **strong** for the next 3–5 years, with the qualifier that the rare-earth capex window may close once onshore capacity catches up to nameplate. The equipment is also "a high-margin product based on existing technologies" per management — meaning the gross margin profile is the best in the equipment segment, not the worst.
+
+### 4.7 Vacuum Application — Materials (≈48% of application segment; Nomura Fig. 44)
+
+**10-K-equivalent verbatim from FY25.6 Yuho-style filing:**
+> Orders received and net sales both increased year on year, primarily owing to the continued high operating rate of FPD and semiconductor and electronic device related plants.
+
+Source: [FY25 Financial Results, p. 3](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf).
+
+**Plain-language gloss:** This is the sub-segment that lands ULVAC in the Nomura "Greater China Semi" Fig. 44 sputter-target league table. ULVAC's Materials business produces **high-purity metal and oxide-ceramic sputter targets** — including aluminium, titanium, copper, molybdenum, tungsten, tantalum, and indium tin oxide (ITO) / indium gallium zinc oxide (IGZO, 铟镓锌氧化物) targets — at manufacturing sites in Japan, Korea (ULVAC KOREA), Taiwan (ULVAC Materials Taiwan, unconsolidated), China (ULVAC Materials Suzhou, being JV'd out 2026-05), and the US (TIGOLD CORPORATION). The targets are consumed inside ULVAC's own sputter equipment and inside competing AMAT / TEL / Canon Tokki sputter chambers at panel and semi fabs. A representative recent product innovation: **bonded sputter targets for OLED and touch displays with 28% better uniformity and 19% lower target-cracking incidence** under high-vacuum conditions ([ICO Optics Sputter Coating Market report citing ULVAC bonded-target spec](https://www.ico-optics.org/sputter-coating-market-growth-to-2035-driven-by-semiconductors-displays/)).
+
+The structural backdrop is what the Nomura report calls **"the materials long re-rating cycle"** ([reports/sector/半导体材料.md](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md)): GAA logic + High-NA EUV + Backside Power Delivery (BPD) + advanced packaging + glass-core substrates all increase the unit-consumption of sputter target material per wafer (more film layers, more film types, more deep-via fills). The total semiconductor-sputter-target market was estimated at ~USD 4.5bn in 2023 and growing at ~5.8% CAGR per Cognitive Market Research ([Cognitive Market Research, Semiconductor Sputtering Targets](https://www.cognitivemarketresearch.com/semiconductor-sputtering-targets-market-report), 2024 publication). Per Nomura's Fig. 26 from the 2026-05-21 anchor report, sputter targets are ~3% of the ~USD 80bn global semiconductor-materials market — implying a ~USD 2.4bn semi-target slice with another ~USD 2bn for FPD-target — so the addressable target market is ~USD 4–5bn globally ([reports/sector/半导体材料.md](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md), citing Nomura 2026-05-21 Fig. 26, 35-44).
+
+The most consequential 2026 event for this line is the **partial divestment of the China FPD-target manufacturing operation** — ULVAC Materials (Suzhou) being transferred into a Beijing-based JV (Beijing Fengke Jingsheng Electronic Materials) majority-owned by Fengke Xinchuang fund with KFMI and ULVAC as minority partners, generating a ~¥7.8bn one-time gain in FY26 ([Q3 FY26 Financial Results, Important Subsequent Events, pp. 12–14](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf)). Background: KFMI's own sputter target sales surged 40% to CNY 2.3bn (~USD 325M) in their previous fiscal year, with BOE as anchor customer, and the integration aims at "resource sharing, complementary advantages, and enhanced market competitiveness" for the FPD target sub-market ([Yicai Global, 2025-08-14](https://www.yicaiglobal.com/news/kfmi-ulvac-to-integrate-their-flat-panel-display-target-materials-businesses)). The non-China target operations (Japan, Korea, Taiwan, US) remain wholly inside ULVAC.
+
+*Analyst view:* ULVAC is **a smaller, equipment-integrated sputter-target player** competing against **JX Advanced Metals (TSE:5016, spun out of JX Nippon Mining 2025)**, **Tosoh (TSE:4042)** via Tosoh SMD, **Materion (NYSE:MTRN)**, **Mitsui Mining & Smelting / Mitsui Kinzoku (TSE:5706)**, and **KFMI (SHE:300666)** itself ([Maximize Market Research, sputter target competitor list](https://www.maximizemarketresearch.com/market-report/global-sputtering-target-market/102381/); [Coherent Market Insights, copper sputter target competitor list](https://www.coherentmarketinsights.com/market-insight/copper-sputtering-target-market-6221)). ULVAC's edge is **the equipment-material co-sell to FPD makers** — its sputter targets are sold bundled with the sputter chambers that consume them, which gives it pull-through-share at customers who buy both. It is **not** a sputter-target leader in pure semiconductor (where JX, Tosoh, and Materion are larger), and **not** likely to become one. Moat type = **bundle-pull + technology** for FPD-targets, **partial** for semi-targets; rated **partial** overall in the materials sub-segment. The China-FPD JV restructuring is a tacit admission that standalone scale was not achievable in that geographic-product cell.
+
+### 4.8 Vacuum Application — Others (≈52% of application segment; PHI + mask blanks)
+
+**10-K-equivalent verbatim from FY25.6 Yuho-style filing:**
+> Both orders received and net sales increased year on year, mainly due to the contribution from businesses related to surface analyzer equipment and mask blanks for high-definition, high-performance displays.
+
+Source: [FY25 Financial Results, p. 3](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf).
+
+**Plain-language gloss:** "Others" is a mis-leading label for what is actually a **deep portfolio of analytical and specialty-vacuum products**, including **Physical Electronics USA / ULVAC-PHI** (XPS, AES, TOF-SIMS, scanning Auger surface-analysis instruments — the global reference brand for these techniques, alongside Thermo Fisher and Bruker) and **OLED mask blanks for high-definition / high-performance displays** (the metal masks through which OLED organic-evaporation deposits the pixel pattern; the mask itself is fabricated using vacuum-deposition processes that ULVAC supplies). FY26 plan was raised to ¥32bn (+25.3% YoY) reflecting both PHI growth and the OLED mask-blank ramp tied to G8 IT-OLED panel production.
+
+*Analyst view:* The PHI surface-analysis business is a small but extremely defensible niche — Thermo Fisher (US) and Bruker (US/DE) are the principal global competitors, but PHI's XPS install base in semi / metals / pharma research labs is sticky on legacy software and operator-training cost. Mask blanks for OLED are a high-value-add specialty ULVAC defends with its own evaporation and lithography process IP. Moat type = **brand + technology + switching cost**; rated **strong** for surface analysis, **partial** for mask blanks.
+
+### 4.9 Recurring / aftermarket business
+
+Unlike Lam Research (CSBG) or Applied Materials (AGS), ULVAC does not break out a separate "Services" segment — the recurring-revenue stream (spare parts, maintenance contracts, vacuum-pump consumables, target-material refills, surface-analysis instrument calibration) is embedded inside both segments. Indirect evidence: of the FY25 Vacuum Equipment ¥199bn sales, ¥78.5bn (39%) was "transferred at a point in time" (= consumables / spare parts / aftermarket-style transactions), and ¥120.6bn (61%) was "transferred over time" (= multi-month build-and-installs). For Vacuum Application, ¥41.6bn (80%) was point-in-time. Source: [FY25 Financial Results, segment-disaggregation table, p. 22](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf). *Analyst view:* a ULVAC investor should mentally pencil in **~25–30% of group revenue as recurring** even though it is not segmented out — this is what supports the segment-profit floor in down-cycle years (e.g., FY25 vs FY24).
+
+### 4.10 Flagship franchises and recent launches
+
+The three flagship ULVAC product franchises are:
+
+1. **MHM sputter for mature-node logic** — de-facto-standard status per management's own language; the single most defensible commercial position the company has, driving the ¥31bn FY26 logic-orders plan ([Q3 FY26 Q&A, item 5](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)).
+2. **PR ashing / descum for advanced packaging (WLP + PLP)** — de-facto-standard descum process; ¥20bn FY26 plan; direct AI-GPU-packaging tailwind.
+3. **Rare-earth magnet vacuum equipment** — ¥35–45bn structural run-rate over the next 3–5 years; high-margin; aligned with Western supply-chain-diversification capex.
+
+Recent launches in the last 12 months include the bonded sputter targets for OLED with measurable uniformity / yield gains (no specific launch date disclosed in the IR materials read); the leak-test stations for AI-server cooling loops (reclassified into Industrial Equipment from FY26); and the Value-Up Plan's commitment to **modular-design equipment standardisation in Semiconductor & Electronics** for cost reduction ([Q3 FY26 Q&A, item 9](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)). The Value-Up Plan also targets a 70% reduction in equipment design lead-time by FY ending June 2031 (currently ~30% of the way there at ~20% reduction).
+
+---
+
