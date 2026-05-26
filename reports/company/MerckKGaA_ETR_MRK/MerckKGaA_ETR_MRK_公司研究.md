@@ -115,3 +115,131 @@ timeline
 **持股与薪酬**。Beckmann 持有未披露但少量的默克 KGaA 股份（公司不受美国《证券法》第 16 节申报约束，且德国相当于 DEF 14A 的披露仅披露管理层持股的合计数）。作为 KGaA 结构下的执行委员会成员，薪酬由合伙人委员会的人事委员会（由家族控制）设定，而非由自由流通股东选举的监事会设定 —— 2024 年德国 DAX 工业 CEO 的典型总薪酬约 €700-900 万，默克 KGaA 2024 年薪酬报告披露 Belén Garijo 总薪酬 €830 万；根据一致的薪酬政策，Beckmann 作为集团 CEO 的薪酬包预计在此范围 ([Capital Markets Day 2025](https://www.emdgroup.com/en/news/capital-markets-day-16-10-2025.html); [AR 2024 Remuneration Report](https://www.emdgroup.com/en/annualreport/2024/))。股权故事的解读：一位有深厚半导体材料运营经验的长期任职内部人士，现在掌舵集团。将电子业务负责人升任集团 CEO 本身就是一个信号 —— 家族委员会认为公司长期价值的根基在电子材料业务，医疗健康和生命科学日益扮演辅助角色。
 
 ---
+
+## 4. 产品与服务 —— 电子业务 (EMD Electronics) 深度拆解
+
+本节 *有意* 过度倾斜于 **半导体解决方案** 业务单位（约占电子业务销售的 69%，FY2024 约 €26 亿），因为这是与野村 2026-05-21 锚定报告相关的部分，也是寻求半导体材料超级周期敞口的投资者关注的部分。Display Solutions / Optronics（约 20%）与 Surface Solutions（约 11%，正在剥离）将简要处理。第 4 节是报告的承重章节，预计在此约 1,500 字。
+
+### 4.1 2024 年报产品矩阵 —— 电子业务
+
+电子业务产品分类的最权威单一文档基准是 2024 年报的 **Company Profile and Structure: Electronics** 章节。逐字引用 ([Annual Report 2024 — Electronics Company Profile](https://www.reports.emdgroup.com/en/annualreport/2024/management-report/fundamental-information-about-the-group/company-profile-and-structure/electronics.html))：
+
+> *"The Electronics business sector is an integral part of the semiconductor ecosystem, providing materials, the related delivery equipment and tools for metrology and inspection. The business sector comprises the business units **Semiconductor Solutions**, **Display Solutions**, and **Surface Solutions**."*
+
+半导体解决方案单位进一步划分为四个业务领域，同样来自年报 ([same source](https://www.reports.emdgroup.com/en/annualreport/2024/management-report/fundamental-information-about-the-group/company-profile-and-structure/electronics.html))：
+
+| 业务单元 | 业务领域 | 产品类别 | FY2024 占比 |
+|---|---|---|---|
+| **半导体解决方案 (Semiconductor Solutions)** | **薄膜 (Thin Films)** | 用于原子级沉积的介电与金属材料（ALD/CVD 前驱体）| ~25% Semi Sol. |
+| 半导体解决方案 | **配方 (Formulations)** | 光刻胶 + 光刻辅材 (AZ®)、化学机械抛光 (CMP) 抛光液 | ~30% Semi Sol. |
+| 半导体解决方案 | **特种气体 (Specialty Gases)** | 用于晶圆加工的高纯气体（NF₃、WF₆、SiH₄、NH₃、刻蚀混合气）| ~25% Semi Sol. |
+| 半导体解决方案 | **输送系统与服务 (Delivery Systems & Services, DS&S)** | MEGASYS® 气柜、大宗化学品输送、点式混合器、服务 | ~15% Semi Sol. |
+| 半导体解决方案 | **量测与检测 (Metrology & Inspection)** | Unity-SC 3D 光学仪表（2024 年 10 月后）| ~5% Semi Sol. |
+| **显示解决方案 / Optronics (Display Solutions / Optronics)** | LC + 图形化 | 液晶 (liquid crystal)、OLED 发光 + 传输材料、显示光刻胶、反应介晶 | 100% Display |
+| **表面解决方案 (Surface Solutions)**（剥离中）| 活性成分 + 功能材料 | 化妆品活性物、汽车涂料颜料 (Xirallic®、Iriodin®) | 100% Surface |
+
+*资料来源：以上矩阵为分析师根据 [Annual Report 2024, Electronics Company Profile section](https://www.reports.emdgroup.com/en/annualreport/2024/management-report/fundamental-information-about-the-group/company-profile-and-structure/electronics.html) 所述结构编制；业务领域收入拆分为分析师根据 Versum legacy 收入（收购时约 $14 亿）、AZ legacy 收入和披露的 FY2024 半导体解决方案合计进行的三角验证估算，非公司披露。*
+
+### 4.2 综合视图 —— 电子产品类别在晶圆厂工艺流程中的相互作用
+
+在逐一走访每个业务领域前，值得先展示 **默克 KGaA 电子产品在晶圆制造周期中被消耗的位置**。一片前沿节点晶圆（TSMC N2、三星 2nm GAA、Intel 18A、SK 海力士 1c DRAM）大约经过 ~600–1,000 道工艺步骤；默克 KGaA 材料在其中相当一部分被使用 —— 但在每个节点的所有主导步骤中都不可或缺：
+
+```mermaid
+graph LR
+    A[裸硅晶圆<br>来自 SUMCO / Shin-Etsu / GlobalWafers] -->|清洗 + 表面预处理<br>Versum 配方清洗剂| B(薄膜沉积)
+    B -->|ALD/CVD 前驱体<br>Mecaro Thin Films| C(光刻)
+    C -->|AZ 光刻胶 +<br>BARC + 显影液| D(刻蚀)
+    D -->|NF3、SF6、氟碳<br>特种气体| E(CMP 平坦化)
+    E -->|Versum CMP 抛光液<br>+ CMP 后清洗| F(注入 / 退火)
+    F --> G(金属化)
+    G -->|Cu / W / Mo ALD<br>+ 特种气体| H(检测 + 量测)
+    H -->|Unity-SC 光学<br>量测，2024 年起| I(重复 600-1000 步)
+    I --> J[完工晶粒<br>到 OSAT / 先进封装]
+    J -->|混合键合化学品、<br>TSV 填充化学品、<br>RDL 配方| K[最终堆叠产品]
+```
+
+需要记住的综合视图是：3nm 节点的一片晶圆在清洗步骤经过默克 KGaA 材料，每个沉积步骤再次经过（Thin Films + Specialty Gases），每个光刻步骤再次经过（Formulations / AZ 光刻胶），每个 CMP 步骤再次经过（Versum 抛光液 + CMP 后清洗），现在 —— Unity-SC 收购后 —— 在某些量测 / 检测检查点也会经过。**默克 KGaA 的竞争优势真正在于"晶圆周期覆盖广度"**，而非任何单一产品的主导地位。这与 Entegris（纯化 + 滤芯 + 抛光液，没有光刻胶）、JSR（光刻胶主导，其他狭窄）或 Resonac（抛光液强，其他狭窄）形成对比。广度正是 2019 年 Versum 收购的明确逻辑 —— Beckmann 本人在 2019 年的行业访谈中将默克定位为"广基础供应商"与 Entegris 的纯标的模式形成对比 ([SEMI Versum / Merck deal coverage](https://www.semi.org/en/news-resources/Merck-EMD_Electronics))。
+
+### 4.3 薄膜 —— ALD / CVD **先进前驱体 (advanced precursors for ALD/CVD)**（Versum + Mecaro legacy）
+
+根据 [Annual Report 2024 product description](https://www.reports.emdgroup.com/en/annualreport/2024/management-report/fundamental-information-about-the-group/company-profile-and-structure/electronics.html)：
+
+> *"\"Thin Films\" offers dielectrics and metallic materials for atomic-level deposition."*
+
+**中文释义 / Plain-language gloss**："前驱体" (precursor) 是以蒸气形式被引入真空腔室、与加热晶圆表面发生反应的化学试剂，沉积出目标材料的单个原子层 —— 二氧化硅、氮化硅、氧化铪、氮化钛、钨、钼、钌等。**ALD / 原子层沉积** (atomic layer deposition) 以极高的厚度控制每次沉积一个单分子层；**CVD / 化学气相沉积** (chemical vapor deposition) 以更高速率沉积，但精度稍逊。两者都关键性地依赖前驱体分子的化学特性 —— "良好行为"的前驱体在目标温度清洁分解，沉积目标原子且不留碳残留，也不损坏相邻材料。随着节点缩小（N3 → N2 → A14 → A10）以及 3D-NAND 堆叠层数增至 400+，*每片晶圆上不同 ALD/CVD 步骤的数量* 和 *每步纯度容差* 都呈指数级上升。这是野村行业总览所述 GAA → BPD → CFET 转换最直接的受益方向 ([行业总览，第 6-9 页](../../sector/半导体材料.md))。
+
+**与其他产品的差异化**：薄膜位于光刻（AZ 光刻胶 + BARC）、刻蚀（特种气体）和 CMP（Versum 抛光液）的 *上游* —— 是 *材料沉积* 之后，下游步骤再对其图形化、刻蚀或平坦化。薄膜内部，介电前驱体（用于栅极绝缘、电容薄膜、互连 ILD）是与金属前驱体（用于钨 / 钼 / 钌 / 钴填充、铜阻挡层）截然不同的分子家族。Mecaro 收购具体增强了默克 KGaA 面向韩国存储客户的介电前驱体家族 ([Mecaro closing announcement](https://www.emdgroup.com/en/news/chemical-closing.html); [Innovations in ALD and ALE webinar series](https://www.emdgroup.com/en/s/semi-webinar-series/revolutionizing-materials-and-products.html))。
+
+***分析师观点：*** 默克 KGaA / EMD Electronics 是 **全球前 3 大先进前驱体供应商之一**，与 **法液空 Air Liquide**（Voltaix legacy，2013 年收购）、**DNF / SK Specialty Chemicals**（韩国）、**ADEKA**（日本）以及交易前已有的 Versum legacy 配方并列。竞争优势：**部分** —— 默克 KGaA 拥有化学 IP 和规模，但客户认证周期为 18–24 个月，且因每家主要 fab 倾向于双源采购关键前驱体以保证供应安全，市场较分散。最接近的同类竞品：法液空的 **enScribe™** 与 **Voltaix™** 前驱体家族 ([Air Liquide ALOHA + Voltaix product page](https://www.airliquide.com/group/activities/electronics))。野村报告明确指出 ALD 前驱体是 GAA / BPD 转换的"用量规模"增长驱动力，多个韩国前驱体供应商（DNF / 韩松化学 / SK Specialty）也将获益。
+
+### 4.4 配方 —— 光刻胶 (AZ®) 与 CMP 抛光液 (Versum-legacy)
+
+根据 [Annual Report 2024 product description](https://www.reports.emdgroup.com/en/annualreport/2024/management-report/fundamental-information-about-the-group/company-profile-and-structure/electronics.html)：
+
+> *"\"Formulations\" provides lithography products and chemical-mechanical planarization materials."*
+
+这是一个 **双子产品** 类别，竞争动态截然不同，需要分别处理。
+
+**4.4.a — 光刻胶（AZ® 品牌，来自 2014 年 AZ Electronic Materials 收购）**。根据 [Photoresists product page](https://www.emdgroup.com/en/expertise/displays/solutions/photoresist-materials.html)，默克 KGaA 在 AZ® 品牌下的光刻组合包括 **光刻胶、图形增强材料（BARC 抗反射涂层）、工艺材料（显影液、边缘湿化学清除剂、光刻胶去除剂）、旋涂硬掩膜、DSA（定向自组装）**。具体命名家族包括 **AZ® NLOF® / pLOF** i-line lift-off 光刻胶、**AZ® 4500 系列** 用于半导体封装与先进晶圆级工艺的厚膜光刻胶，以及 **AZ® 910 Remover** NMP-free 光刻胶去除剂 ([AZ 4500 datasheet](https://www.microchemicals.com/dokumente/datenblaetter/tds/merck/en/tds_az_4500_series.pdf); [AZ Lift-off Resists page](https://www.emdgroup.com/en/expertise/semiconductors/offering/lift-off-resists.html))。
+
+**中文释义 / Plain-language gloss**：光刻胶 (photoresist / 光刻胶) 是一种感光聚合物涂层，在通过图形掩膜暴露紫外（或 EUV）光之前旋涂在晶圆上。光线照射处，聚合物要么交联（负胶），要么变得可溶（正胶），随后的显影液冲洗去除相应区域 —— 在晶圆上留下定义下游刻蚀 / 沉积 / 注入操作的 2D 图形。**AZ® 品牌在 i-line、KrF（248 nm）和 ArF 浸没（193 nm）光刻胶上最强**，用于成熟节点和中阶逻辑加 3D-NAND 非关键层 —— *不在* 关键光刻所用的前沿 ArF / EUV 光刻胶。**JSR、东京应化 (TOK)、住友化学、富士胶片电子材料、信越化学** 主导 EUV ([Mordor Intelligence photoresist market analysis](https://www.mordorintelligence.com/industry-reports/photoresist-market); [Fountyl: Japanese companies monopolize EUV photoresist](https://www.fountyltech.com/news/japanese-companies-monopolize-the-euv-photoresist-supply-market/))。默克 KGaA 的特定强项在 **图形化辅材（BARC、硬掩膜、边缘湿化学清除剂）以及更广泛的"光刻胶材料生态系统"**，它从能够将光刻胶 + 辅材 + 显影液 + 去除剂打包为一站式解决方案中获益，简化了 fab 供应链 ([Green solvents launch, 2021](https://www.emdgroup.com/en/news/green-solvents-for-chip-production-22-07-2021.html))。
+
+***分析师观点：*** 在更广泛的光刻胶市场（DUV + EUV，2024 年约 $26 亿）中，JSR 持有约 22%，TOK / 富士胶片 / 信越 / 东进合计另占约 30%，**默克 KGaA (AZ®) 处于 top 10 的尾部，估计约 5–8% 份额** ([Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/photoresist-market/companies); [GMInsights photoresist analysis](https://www.gminsights.com/industry-analysis/photoresist-chemicals-for-advanced-lithography-market))。竞争优势：**部分** —— 广泛辅材组合 + 打包销售 vs 日本纯光刻胶领导者。最接近的竞品：JSR 的 **ARX1671J** EUV 光刻胶、TOK 的 **TDUR-Pi** 系列。还要注意野村对 2029-30 起用于 High-NA EUV（NA 0.55）的 **金属氧化物光刻胶 (Metal-Oxide Resist, MOR)** 的强调 —— 这是化学拐点，默克 KGaA 在金属前驱体化学（薄膜）和图形化材料上的专长有望融合，若 MOR 按预期商业化，将赋予其结构性优势 ([行业总览，第 10-12 页](../../sector/半导体材料.md))。
+
+**4.4.b — CMP 抛光液 (post 2019 Versum 收购，与默克 legacy 合并)**。2019 年 Versum 收购使默克 KGaA 跃居 **CMP 抛光液全球 #2**（Versum + 默克 legacy CMP 合计），仅次于富士胶片电子材料（2023 年底收购 Entegris 电子化学品业务，合计份额约 31%）。根据 [行业研究，2024 年 CMP 抛光液市场约 $30 亿](https://reports.valuates.com/market-reports/QYRE-Auto-14V14904/global-cmp-materials-for-semiconductor)，前 8 大供应商合计占约 77% 份额。2024 年 CMP 抛光液估计份额表：
+
+![CMP 抛光液市场份额 2024 —— 分析师编制](../../charts/merckkgaa_cmp_market_share.png)
+*资料来源：分析师根据 [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/photoresist-market) + [Valuates CMP Materials report](https://reports.valuates.com/market-reports/QYRE-Auto-14V14904/global-cmp-materials-for-semiconductor) + [Fortune Business Insights specialty gas / materials reports](https://www.fortunebusinessinsights.com/us-electronic-specialty-gas-market-114856) 编制；份额为分析师估算，非公司披露。*
+
+**中文释义 / Plain-language gloss**：CMP / **化学机械抛光** (chemical-mechanical planarization) 是晶圆加工步骤，将晶圆按压在抛光垫上，含纳米颗粒的化学活性抛光液在两者之间流动 —— 复合化学作用（抛光液化学攻击表面材料）与机械作用（抛光垫微观粗糙度擦磨）留下平坦、抛光的表面，为下一个光刻步骤准备。不同的"CMP 步骤"使用不同抛光液 —— **Cu CMP**（铜互连平坦化，最大单一类别）、**W CMP**（钨塞平坦化）、**STI CMP**（浅沟槽隔离氧化物）、**ILD CMP**（层间介质）、**barrier CMP**（Cu 与介质之间的 TaN/Ti 阻挡层）。CMP 步骤数随逻辑节点推进而上升 —— N5 需要约 25 道 CMP 步骤，N3 约 30 道，N2 + BPD 预计将突破 35 道 ([行业总览，BPD 分析第 6-9 页](../../sector/半导体材料.md))。
+
+***分析师观点：*** 根据野村锚定报告，CMP 抛光液领军榜为 **富士胶片（含 Entegris 电子化学品）约 31%，Versum (默克 KGaA) 约 18%，Fujimi/CMC 约 18%，Resonac 约 14%，其他（杜邦 / 安集 / KC Tech）约 19%** ([行业总览，第 69 页](../../sector/半导体材料.md))。竞争优势：**强** —— CMP 抛光液有 24 个月的认证周期、客户不轻易切换、Versum 时代在先进节点 Cu 和 W 抛光液的 IP 密集。最接近的竞品：Fujimi 的 **Compol™ 80** 家族、安集的 **Polishing 3000 系列** 抛光液 ([Anji Microelectronics product page](http://www.anjimicro.com/en/products.aspx))。N2 + BPD 晶圆键合周期是 *直接* 顺风，因为背面供电网络需要 reclaim wafer + 极致薄化 + 额外 CMP 循环 ([行业总览，BPD 分析](../../sector/半导体材料.md))。
+
+### 4.5 特种气体 (Specialty Gases)（Versum legacy）
+
+根据 [Annual Report 2024](https://www.reports.emdgroup.com/en/annualreport/2024/management-report/fundamental-information-about-the-group/company-profile-and-structure/electronics.html)：
+
+> *"\"Specialty Gases\" delivers high-purity gases for wafer processing."*
+
+**中文释义 / Plain-language gloss**：特种气体 (**电子特气** / specialty gases) 是用于沉积（甲硅烷 SiH₄、氨 NH₃、用于钨 CVD 的六氟化钨 WF₆）、刻蚀（用于腔体清洗的三氟化氮 NF₃、用于硅刻蚀的六氟化硫 SF₆、用于介质刻蚀的氟碳 C₄F₆/CF₄）、掺杂（乙硼烷 B₂H₆、磷化氢 PH₃、砷化氢 AsH₃）以及大宗惰性（氮、氦、氩 —— 通常由空分工业气体公司提供）的超高纯无机和氟碳气体。Versum 收购使默克 KGaA 在半导体特种气体中获得 **全球 #5 地位**，前四为林德（含工业气体 + Linde Electronics）、法液空、Air Products、Resonac，与大阳日酸 (Taiyo Nippon Sanso) / 三井化学根据产品切片大致并列 ([Fortune Business Insights specialty gas report](https://www.fortunebusinessinsights.com/us-electronic-specialty-gas-market-114856); [Mordor Intelligence specialty gas market](https://www.mordorintelligence.com/industry-reports/specialty-gas-market))。
+
+***分析师观点：*** 竞争优势：**部分** —— 默克 KGaA 是可信的全球 #4-#5，但缺乏工业气体玩家（林德、法液空、APD）能在客户现场提供的大宗气体基础设施（它们经常将大宗 N₂ 与特种气体打包销售 —— 一种默克 KGaA 在没有空分布点的情况下无法匹敌的护城河）。最接近的竞品：Linde Electronics 的 SPECTRA 系列、法液空的 ALPHAGAZ / ALOHA、Air Products 的特种氟碳组合 ([Linde Electronics page](https://www.lindeus.com/industries/electronics); [Air Liquide Electronics page](https://www.airliquide.com/group/activities/electronics))。因此特种气体是默克 KGaA 最明显存在结构性天花板的细分。
+
+### 4.6 输送系统与服务 DS&S（Versum legacy 设备业务）
+
+根据 [Annual Report 2024](https://www.reports.emdgroup.com/en/annualreport/2024/management-report/fundamental-information-about-the-group/company-profile-and-structure/electronics.html)：
+
+> *"\"Delivery Systems & Services\" installs equipment for chemical and gas handling, including MEGASYS® services."*
+
+**中文释义 / Plain-language gloss**：DS&S 是设备 + 服务混合业务：默克 KGaA 设计并制造 **MEGASYS® 气柜**（位于每个晶圆加工腔室旁，按精确比例混合并计量特种气体，并供给腔室）、大宗化学品输送系统（将 CMP 抛光液、光刻胶、显影液从中央存储输送至使用点的管路 + 泵 + 罐）以及 **点式混合器与滤芯**（在注入腔室前的毫秒级完成配方最终配制）。2022 年建成的 Chandler / 亚利桑那州工厂专门用于 DS&S 设备制造 —— 默克 KGaA 称该 $3,900 万投资是"半导体设备与服务领域的最大单笔投资" ([EMD Electronics Arizona opening, 2022](https://www.chandleraz.gov/news-center/emd-electronics-celebrates-opening-new-arizona-factory-contributing-states-growing))。
+
+***分析师观点：*** DS&S 在 2024–2025 年承受 **周期性拖累**，因 fab 客户推迟设备相关资本支出项目（传统资本支出周期动力学 —— 当 fab 稼动率下滑，设备交付滞后）。Q1 2025 DS&S 下滑"低两位数百分比"，2025 年 Q4 / 2026 年 Q1 趋稳 ([Q1 2025 earnings release, 2025-05-15](https://www.emdgroup.com/en/news/q1-2025-15-05-2025.html); [TipRanks Q4 2025 transcript summary](https://www.tipranks.com/news/company-announcements/merck-kgaa-earnings-call-signals-cautious-upswing))。竞争优势：在装机锁定上 **强**（一旦 MEGASYS 气柜安装至 fab，更换它们是数季度的改造项目）；但在新建项目上 **中等**，那里法液空和林德能与各自的特种气体捆绑积极竞争。DS&S 按分析师三角验证约占半导体解决方案销售的 15%，公司已指引 DS&S 在"2026 年不再是增长逆风" ([Investing.com Q1 2026 transcript](https://www.investing.com/news/transcripts/earnings-call-transcript-merck-kgaa-beats-q1-2026-expectations-stock-rises-6-93CH-4684993))。
+
+### 4.7 显示解决方案 / Optronics —— LC + **OLED 材料** + 显示光刻胶 + 量测
+
+根据 [Annual Report 2024](https://www.reports.emdgroup.com/en/annualreport/2024/management-report/fundamental-information-about-the-group/company-profile-and-structure/electronics.html)：
+
+> *"\"Display Solutions\" develops liquid crystals (LC), display patterning materials (photoresists), materials for organic light-emitting diodes (OLED), and reactive mesogens. Display Solutions will operate under the name \"Optronics\" as of 2025."*
+
+**中文释义 / Plain-language gloss**：Display Solutions 是默克原液晶业务的延续 —— 默克 KGaA 1904 年开创液晶 (liquid crystal) 化学，至今仍是 LCD 面板用 LC 混合物的全球 #1 供应商，唯一可信的竞争对手为 **JNC（前 Chisso）和 DIC**。在 OLED 领域，默克 KGaA 参与 **发光材料** 层（在电流流过时发光的主体 + 掺杂分子），与 **Universal Display Corporation (UDC, NASDAQ:OLED) —— 主导磷光发光 IP 持有者 —— 出光兴产 (Idemitsu Kosan, TSE:5019)、住友化学、LG 化学 (KS:051910) 以及三星 SDI** 共同竞争 ([OLED Materials Market Research analysis](https://www.marketresearchfuture.com/reports/oled-materials-market/companies); [UDC Q3 2025 8-K context](https://www.sec.gov/Archives/edgar/data/0001005284/000119312525269519/oled-ex99_2.htm))。2024 年 10 月的 Unity-SC 收购为半导体封装侧增加了 3D 光学量测能力，这是"Optronics"重命名的战略逻辑 —— 将单位从"我们销售材料的显示器"扩展至"任何默克光学物理 + 材料专长可差异化的应用"。
+
+***分析师观点：*** 竞争优势：在 OLED 上 **部分**（UDC + 出光的 IP 更强）；在 LC 上 **强**（在位 + 100+ 年 R&D 历史），但市场结构性衰退；在量测上 **早期 / 不确定**（Unity-SC 收入低于 €1 亿，需与 KLA、Camtek、Onto Innovation、日立高新竞争）。最接近的竞品：UDC 的 **PHOLED™** 磷光发光体平台、出光的蓝光 OLED 发光化学。Display Solutions 单位 FY2024 销售额 **€7.48 亿**，有机增长适度下滑；改名为 Optronics、Unity-SC 收购以及聚焦显示以外光学应用的新方向，都表明管理层认为该单位"纯 LCD 遗产"时代正在淡去 ([Unity-SC closing release, 2024-10-31](https://www.emdgroup.com/en/news/unity-sc-acquisition-and-optronics-31-10-2024.html); [BusinessWire Unity-SC release](https://www.businesswire.com/news/home/20241030134076/en/The-Electronics-Business-of-Merck-KGaA-Darmstadt-Germany-Completes-Acquisition-of-Unity-SC-and-Strengthens-Optronics-Offering-to-Better-Serve-the-Semiconductor-Industry))。
+
+### 4.8 表面解决方案 (Surface Solutions) —— 2025 年正在剥离
+
+根据 [Annual Report 2024](https://www.reports.emdgroup.com/en/annualreport/2024/management-report/fundamental-information-about-the-group/company-profile-and-structure/electronics.html)，Surface Solutions 提供 *"用于化妆品的活性成分和用于汽车涂料的功能性解决方案"* —— 具体包括 **Xirallic®** 效果颜料系列（高端汽车漆面的闪光金属饰面）、**Iriodin®** 云母基化妆品颜料以及珠光效果着色剂。该单位 FY2024 销售额约 €4.06 亿，2024 年公告剥离给 **环球新材国际控股有限公司 (HKEX:6616)**；预计 2025 年完成 ([AR 2024 Cash Flow / Investing Activities section](https://www.emdgroup.com/en/annualreport/2024/notes/operating-assets-liabilities-and-contingent-liabilities/cash-flow-from-investing-activities.html); [FY2024 press release, 2025-03-06](https://www.emdgroup.com/en/news/q4-2024-06-03-2025.html))。
+
+***分析师观点：*** Surface Solutions 与半导体逻辑无关；剥离使电子业务到 2026 年聚焦于纯半导体 + 显示，并剔除一项估值倍数较低、周期性较强（汽车涂料）的业务 —— 从分类估值 (sum-of-the-parts) 角度看显然是正面动作。
+
+### 4.9 近期发布与路线图（最近 12 个月）
+
+- **2024 年 Q4 — Unity-SC 收购完成（€1.44 亿）**。用于混合键合、HBM 堆叠、异构集成的 3D 光学量测 ([Unity-SC release, 2024-10-31](https://www.emdgroup.com/en/news/unity-sc-acquisition-and-optronics-31-10-2024.html))。
+- **2025 年 12 月 1 日 — 高雄超级工厂启用（€5 亿、150,000 m²、约 150 个新增工作岗位）**。默克 KGaA 全球最大半导体材料园区，生产薄膜、配方材料、特种气体。LEED 金牌认证；50% 电力来自可再生能源抵消 ([Kaohsiung release, 2025-12-01](https://www.merckgroup.com/en/news/inauguration-kaohsiung-megasite.html))。
+- **2025 年 1 月 1 日 — Display Solutions 更名为 "Optronics"**，传达超越传统显示的光学技术扩展焦点 ([Unity-SC + Optronics announcement, 2024-10-31](https://www.emdgroup.com/en/news/unity-sc-acquisition-and-optronics-31-10-2024.html))。
+- **2025 年 — Surface Solutions 剥离流程**至环球新材国际，使电子业务聚焦半导体 + 显示。
+- **2025 年 10 月 16 日 — "Level Up Next" 计划在资本市场日宣布**，接续 €30 亿+ 的 Level Up 计划（2021–2025）；将投资野心延伸至约 2030 年，聚焦 AI 驱动的半导体材料需求 ([Capital Markets Day 2025](https://www.emdgroup.com/en/news/capital-markets-day-16-10-2025.html))。
+
+![Level Up 计划资本支出 + R&D 2021–2025E](../../charts/merckkgaa_levelup_capex.png)
+*资料来源：分析师基于累计 >€30 亿投资承诺 ([Electronics invests in growth, 2021-09-20](https://www.emdgroup.com/en/news/electronics-invests-in-growth-20-09-2021.html)) 与各项目单独披露（高雄 €5 亿、Arizona $3,900 万、Mecaro 未披露、Unity-SC €1.44 亿）的估算。*
+
+---

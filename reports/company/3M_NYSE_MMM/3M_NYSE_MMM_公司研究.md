@@ -123,3 +123,132 @@ timeline
 在 3M,Brown 的薪酬结构与工业 CEO 同业基准保持一致——以业绩为权重—— 2026 年 DEF 14A 委托书披露其包含基本工资,加上以三年相对 TSR 和累计经营利润为目标的长期股权 ([3M 2026 DEF 14A — Compensation Discussion and Analysis](https://www.sec.gov/Archives/edgar/data/66740/000006674026000151/mmm-20260324.htm))。其个人直接持股仍处于任期早期建立阶段(CEO 入职股权按多年解锁)。未来两年,投资人应该关注的是:Brown 能否在 3M 复刻他在 Harris 时代的剧本——积极的组合优化、运营模式重塑和有耐心的资本配置——这正是 [3M 2025 投资者日](https://investors.3m.com/news-events/events-presentations/detail/20250226-3m-2025-investor-day) 框架的三大支柱。早期证据(FY2025 调整后利润率扩张 200bp、剥离熔融石英及精密研磨业务、FY2026 EPS 8.50–8.70 美元的明确指引)与 Harris 时代的节奏一致。风险在于 3M 的结构性问题比 Harris 难——没有像美国国防部那样的反周期单一客户作为基础订单托底,且诉讼尾部规模超过 Brown 在 L3Harris 时期面对的任何挑战。
 
 **创始人背景。** 3M 的五位 1902 年创始人—— Henry Bryan、Hermon Cable、John Dwan、William McGonagle 和 Dr. J. Danley Budd ——都是最初失败的刚玉采矿项目的投资人;他们中没有一位贯穿现代时期保持运营参与,公司早已过渡到职业经理人主导。因此,创始人个人简介并非评估今日 3M 的合适视角——更有意义的框架是 **Inge Thulin (2012–2018) → Mike Roman (2018–2024) → William Brown (2024 至今) 的 CEO 接班序列** ([3M 公司历史页面](https://www.3m.com/3M/en_US/company-us/about-3m/history/))。Roman 任期结束伴随着 Solventum 拆分、PFAS 退出公告、PWS 和解——这些极具影响力的组合举动定义了 Brown 时代的初始条件。Roman 在过渡期内继续以特别顾问身份留任董事会 ([3M 8-K 日期 2024-04-30](https://www.sec.gov/Archives/edgar/data/66740/000006674024000051/mmm-20240430.htm))。
+
+## 4. 产品与服务
+
+> **读者注。** 3M 是一家拥有 6 万 SKU 的综合集团,为每一款 3M 产品撰写完整的产品矩阵将耗费一整份独立报告。本节聚焦于 **Transportation & Electronics 部门**总体,以及 **Electronics Materials Solutions 部门** 和 **Advanced Materials 部门**——这两个 T&E 部门承载着半导体相关产品族 (CMP 抛光垫、CMP 抛光垫修整器、防尘薄膜、表面预处理磨料、显示薄膜、先进氟聚合物),也是 3M 出现在野村半导体复兴论份额图表中的核心分析依据。Safety & Industrial 和 Consumer 部门虽占 67% 营收、对合并论断很重要,但因不是本次启动覆盖的分析重点,将在 Section 4 末尾以简明形式总结。**投资人若将 MMM 视作半导体材料标的,必须意识到半导体子业务在 3M 总营收中占比仅为低个位数百分比——对半导体供应链叙事确实重要,但不是 MMM 整体的盈利杠杆。** 这一张力是本节最重要的认知框架。
+
+### 4.1 10-K 的产品矩阵 — 三大部门、十六个子部门
+
+10-K 并未发布像半导体设备或制药公司那样的精美产品组合表,但 Item 1 Business 中确实包含一张结构化的三列矩阵,将每个业务部门映射到底层子部门、代表性创收活动和示例品牌。**完整复现如下** ([3M 10-K FY2025,Item 1 Business — Business Segments](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm)):
+
+| 业务部门 | 底层子部门 / 业务 | 代表性创收活动 | 示例品牌 / 产品 |
+|---|---|---|---|
+| **Safety and Industrial** | Abrasives; Automotive Aftermarket; Electrical Markets; Industrial Adhesives and Tapes; Industrial Specialties Division; Personal Safety; Roofing Granules | 工业磨料与精加工;车身修复方案;工业专用品(个人卫生用品、遮蔽、包装材料);电气产品与材料用于建筑、维护、配电、电气 OEM;结构粘合剂和胶带;呼吸、听力、眼部和坠落保护方案;用于沥青瓦的天然及染色矿物颗粒 | 3M Cubitron 磨料;Scotch-Brite 磨料;Scotch 乙烯胶带;3M Temflex 乙烯胶带;3M Scotchkote 涂料;3M Dynatel 定位器;3M Scotchcast 树脂;3M VHB 胶带;3M Scotchlite 反光材料;Scotch 包装胶带;3M DBI-Sala 防坠落;3M Scott 自给式呼吸器;3M Peltor 防护通讯;一次性和重复使用呼吸器;Scotchgard 瓦片保护 |
+| **Transportation and Electronics** | **Advanced Materials**;**Automotive and Aerospace**;**Commercial Branding and Transportation**;**Display Materials and Systems**;**Electronics Materials Solutions** | 高级陶瓷方案;车辆紧固/粘合、薄膜、降噪与温控;广告与车队标识用大幅面图形薄膜;高速公路和车辆安全反光标识;**光管理薄膜和电子组装方案;航空、工业/商业方案;芯片封装和互连方案;半导体生产材料;数据中心方案** | 3M Nextel 陶瓷纤维和纺织品;Thinsulate 声学绝缘和汽车部件;3M Scotchlite 图形薄膜;3M Scotchcal 和 3M Controltac 商业图形;3M Diamond Grade DG3 反光板;**电子显示增强薄膜和光学透明胶;电子互连产品** |
+| **Consumer** | Consumer Safety and Well-Being;Home and Auto Care;Home Improvement;Packaging and Expression | 家用清洁产品;消费空气质量产品;挂画配件;零售磨料、油漆配件和安全产品;文具与办公用品;汽车外观产品;消费创可贴、胶带、护具 | Command 粘贴挂钩;Filtrete HVAC 空气过滤器;Scotch-Brite 清洁海绵;Meguiar's 洗车;Scotch 胶带;Post-it 便利贴;Nexcare 创可贴;Scotchgard 喷雾 |
+
+*来源:[3M 10-K FY2025,Item 1 Business — Business Segments 表](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm) 完整复现;粗体强调突出 Transportation & Electronics 部门中与半导体相关的行。*
+
+**Note 3 中按部门级别的营收披露**让我们能精确定位 T&E 各个部分的资金流向 ([3M 10-K FY2025,Note 3 — Disaggregated Revenue Information](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm)):
+
+| 子部门 (FY 净销售,百万美元) | FY2023 | FY2024 | FY2025 |
+|---|---|---|---|
+| Advanced Materials | 1,167 | 969 | **858** |
+| Automotive and Aerospace | 1,925 | 1,912 | 1,901 |
+| Commercial Branding and Transportation | 2,546 | 2,528 | 2,602 |
+| Electronics | 2,863 | 2,971 | **2,911** |
+| **Transportation and Electronics 部门合计** | **8,501** | **8,380** | **8,272** |
+
+*来源:[3M 10-K FY2025,Note 3 — Net sales by division](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm)。注意 Note 3 的 "Electronics" 行是合并财务行,包含 Display Materials and Systems + Electronics Materials Solutions + 部分先进封装——即 Note 3 将 T&E 五个子部门中的两个折叠成一条财务披露行;Item 1 Business 矩阵将其拆开仅用于描述目的。*
+
+![3M Transportation & Electronics 子部门营收走势 FY2023–FY2025](../../charts/3m_te_division_revenue.png)
+
+*来源:[3M 10-K FY2025,Note 3 Disaggregated Revenue Information](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm)。Advanced Materials 下降反映 PFAS 制造产品退出(FY2025 剔除 6.69 亿美元营收);Electronics 是较稳定的板块,承载着半导体相关 CMP、防尘薄膜、背磨胶带 (back-grind tape) 子业务。*
+
+**两条观察对半导体投资论很重要:**
+
+1. **Advanced Materials 营收从 11.67 亿美元 (FY2023) 降至 8.58 亿美元 (FY2025) —— 两年下降 26%。** 10-K MD&A 将该差距解释为 PFAS 制造产品退出:3M 于 2025 年底前完全退出氟聚合物制造,而 Advanced Materials 就是承载氟聚合物营收的子部门 ([3M 10-K FY2025,Item 7 MD&A — Transportation and Electronics 部门](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))。PFAS 退出特别在 FY2025 剔除了 6.69 亿美元净销售("Manufactured PFAS products" 非 GAAP 调整);剔除 PFAS 后,T&E 有机增长 +2.0%。这对半导体投资论在结构上重要,因为某些半导体邻近产品(尤其是用于晶圆厂的载片膜和腔体的先进氟聚合物薄膜)依赖该氟聚合物化学体系;3M 保留对客户的氟聚合物购买义务到 2025 及之后通过第三方供货——但氟聚合物衍生半导体产品的长期供应位置在退出后结构性走弱。
+2. **Electronics 营收(含半导体相关 Electronics Materials Solutions 加 Display Materials and Systems)FY2025 为 29.11 亿美元 —— 与 FY2023 和 FY2024 相差仅 ~3% 范围内。** 这是 T&E 内最稳定的财务行,意味着即使在 PFAS 噪声和消费电子周期下,3M 的电子材料业务结构上保持韧性。*分析师视角:* 表面数字掩盖了内部结构变化——显示薄膜面临 OLED 替代风险(LCD 显示量损失),而半导体生产材料 (CMP 抛光垫、CMP 抛光垫修整器、表面预处理磨料、防尘薄膜) 正乘着 AI capex 浪潮——这正是野村报告所定义的 2026–30 长期景气主线。3M 并未发布 Electronics 内部拆分,因此分析师只能从半导体供应商客户侧的评论中推断走势。
+
+### 4.2 综合 —— T&E 电子板块各产品如何组合成一个半导体晶圆厂的采购清单
+
+要理解 3M 看似分散的半导体产品族为何具有内在一致性,可以想象典型 5nm/3nm 逻辑晶圆厂(或 HBM4 存储产线)运行的晶圆厂采购流: **硅晶圆** (来自 Shin-Etsu / SUMCO / GlobalWafers) → **光刻** (来自 ASML,需要 **光罩坯料 / 光罩防尘薄膜** —— 防尘薄膜是悬挂在光罩活性面上的亚微米透明薄膜,防止颗粒污染) → **沉积** → **刻蚀** → **化学机械抛光 (CMP)** 使每层沉积后表面平整,使用 **CMP 抛光垫** (来自 DuPont / 3M / Fujibo / JSR / Dinglong),由 **CMP 抛光垫修整器** (来自 Kinik / 3M / Saesol / Entegris) 持续修整 → **清洗** → 然后进入下一沉积步骤。完成多次循环后,**完成的晶圆被背磨变薄**(使用 **表面预处理磨料**来自 3M / Disco / Apex),然后流到 OSAT 进行 **先进封装互连材料和介电膜**(Electronics Materials Solutions 单独子线)收尾。最后,完成的器件进入 **商业显示模组**,3M 的 **Display Materials and Systems** 薄膜(增亮膜 / 光管理 / 光学透明胶)叠加在 LCD 或 OLED 堆栈上。**3M 是极少数在 4 个独立步骤上触达晶圆厂的供应商**(CMP 抛光垫、CMP 抛光垫修整器、表面预处理磨料、光罩防尘薄膜)——尽管单一接触点都不足以让 3M 成为顶级半导体材料品牌,但这种 "广度" 让 3M 在客户对话中有杠杆——同一个现场应用工程师可以将多个供应议题打包到一次季度评审中。*分析师视角:* 这种 "有广度但缺深度" 是 3M 半导体业务的结构性特征,解释了为什么份额持续但很少能占据主导。
+
+```mermaid
+graph LR
+    A[硅晶圆<br/>GlobalWafers/Shin-Etsu] --> B[光刻<br/>ASML + 光罩 + 防尘薄膜]
+    B --> C[沉积 / 刻蚀]
+    C --> D[化学机械抛光 CMP]
+    D --> E[清洗 / 检测]
+    E --> C
+    D --> F[背磨与减薄]
+    F --> G[先进封装<br/>OSAT]
+    G --> H[显示模组<br/>+ 光管理薄膜]
+    style B fill:#ffeb99,stroke:#333,stroke-width:1px
+    style D fill:#ffeb99,stroke:#333,stroke-width:1px
+    style F fill:#ffeb99,stroke:#333,stroke-width:1px
+    style H fill:#ffeb99,stroke:#333,stroke-width:1px
+    classDef threem fill:#ffeb99
+```
+
+*高亮(金色)节点为 3M 通过 Transportation & Electronics 部门内的 Electronics Materials Solutions 和 Display Materials and Systems 子部门,在晶圆厂工作流中占据实质供应位置的 4 个步骤。来源:工作流综合自 [3M 10-K FY2025,Item 1 — Transportation and Electronics 矩阵](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm) 和 [野村《Greater China Semi》2026-05-21,p. 18–30 供应商排行榜 (Fig 35–44)](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)。*
+
+### 4.3 Electronics Materials Solutions — CMP 抛光垫修整器
+
+10-K 描述该产品族的原文:
+
+> "Light management films and electronics assembly solutions; aerospace, industrial / commercial solutions; **chip packaging and interconnection solutions; semiconductor production materials; solutions for data centers**" ([3M 10-K FY2025,Item 1 Business — Transportation and Electronics 矩阵](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+
+10-K Item 1 Business 矩阵将 CMP 抛光垫修整器、CMP 抛光垫、光罩防尘薄膜、背磨磨料全部塞进了 **"semiconductor production materials" / 半导体生产材料** 这一个伞形词组——即 10-K 并未单独命名任何子产品族。如果投资人想要具体产品名,必须查阅 (a) 3M Electronics Materials Solutions 官网,(b) 行业研究报告例如野村半导体材料报告,或 (c) 直接竞争对手的财报(Kinik、Dinglong)在那里 3M 被点名为参照对手。
+
+**通俗解释 —— CMP 抛光垫修整器的物理工作原理 (中文 + English):**
+
+CMP (**chemical mechanical planarization / 化学机械抛光**) 是晶圆厂工艺步骤,将沉积或刻蚀之后留下的三维起伏表面研磨平整—— 平到下一层可以干净地沉积上去。研磨由大型旋转的 **抛光垫 (polishing pad)** 完成,垫面浸满化学浆料,同时溶解和摩擦晶圆顶层。每片晶圆(或每几片晶圆)处理后,垫面本身会被抛光残留物玻璃化;若不持续保持新鲜纹理,抛光速率会下降,均一性也会崩溃。"刷新" 垫面纹理的任务属于 **CMP 抛光垫修整器 / CMP pad conditioner / CMP 修整盘** —— 一片镶嵌金刚石的小型圆盘,在抛光过程中在垫面上往复摆动,持续重新打磨(再纹理化)垫面。修整盘上的金刚石涂层在使用周期内会逐渐磨损;修整盘是真正的耗材,每几周需要更换。*物理类比:* 如果 CMP 抛光垫是磨刀石,那么 CMP 抛光垫修整器就是让磨刀石不变光滑的金刚砂块。没有新鲜的修整器,CMP 步骤会劣化;没有 CMP,整个晶圆厂工艺每隔几步就会停摆。
+
+3M 的抛光垫修整器业务位于 Electronics Materials Solutions 内——历史地位是该品类两个最初的领导者之一,另一位是台湾的 Kinik (TWSE:1560)。根据野村 CMP 抛光垫修整器供应商排行榜 (2026-05-21 [《Greater China Semi》](/Users/x/projects/financial_agent/reports/sector/半导体材料.md) 中的 Fig 43),份额地图为 **Kinik 60-70% + 3M + Saesol + Entegris** ——即 Kinik 占主导,3M 是最大非亚洲挑战者但份额持续下降,尤其在 sub-7nm 先进节点上,Kinik 在 N2 节点的 80% 份额已成事实标准。*分析师视角:* **3M 的 CMP 抛光垫修整器是明显的部分竞争优势**,护城河类型 = 品牌认知 + 30 年客户关系,但 **结构性份额流失** 到 Kinik 在先进节点。3M 内 CMP 抛光垫修整器业务被卖方估为约 200–300 百万美元年化营收(即占 Electronics 的 ~10%),对 3M 的 Electronics Materials Solutions 子部门来说属于重要,但对 3M 整体非重要—— Kinik 抢份额的轨迹是主导风险。
+
+*分析师视角:* **最接近的具名竞争产品** —— Kinik 的 "Diagrid" CMP 抛光垫修整器系列 ([Kinik 公司官网](https://www.kinik.com.tw)) 是直接对标。韩国竞争对手 Saesol Diamond 推出 "PDC" 系列;美日竞争对手 Entegris 在其更广的 CMP 耗材组中销售较小规模的修整器业务 ([Entegris 10-K FY2024,Item 1 Business](https://www.sec.gov/Archives/edgar/data/1101302/000110130225000015/entg-20241231.htm))。3M 自身的产品品牌名在 FY2025 10-K 中仍未披露。
+
+### 4.4 Electronics Materials Solutions — CMP 抛光垫
+
+同一 10-K Item 1 "半导体生产材料" 伞形也覆盖 3M 的 CMP 抛光垫线,销售的是实际旋转的抛光圆盘(晶圆在其上被抛光)。野村 CMP 抛光垫供应商排行榜 (2026-05-21 报告 Fig 42) 列出全球供应商集合为 **DuPont / 3M / Fujibo / JSR / Dinglong / 其他** ([行业研报](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)) —— DuPont (通过其收购 Rohm and Haas) 是长期份额领导者,全球 >50%;3M 历史上是三家西方挑战者之一,但份额比修整器低,且不断被 Dinglong (300054.SZ) 在中国晶圆厂、被 JSR 在韩国和日本晶圆厂蚕食。
+
+**通俗解释:** CMP 抛光垫 / polishing pad 是耗材抛光表面——通常是带有工程化孔隙的聚氨酯复合材料——提供 CMP 步骤的机械力。垫的化学组成、硬度、表面微粗糙度、沟槽图案均可调;**每条新工艺节点都需要 pad 配方重新认证**。经济结构是耗材式 razor-blade:每台抛光设备每班烧掉一两片垫;垫 ASP 为 100–300 美元 / 片;经过认证的客户关系黏性强,因为重新认证风险显著。*物理类比:* CMP 抛光垫是砂纸,浆料是切削液,抛光垫修整器是磨砂纸器——客户在每台晶圆厂设备上同时更换这三者。
+
+*分析师视角:* **3M 的 CMP 抛光垫业务是部分竞争优势** —— 护城河类型 = 与少数领先晶圆代工厂的共同研发关系——但全球范围内 **并非** 结构性 #1 或 #2。DuPont 是份额领导者,Dinglong 是中国份额抢占者。3M 的抛光垫业务被卖方估计为 100–200 百万美元年化营收,是 Electronics 行内最大的单一客户集中风险之一,因为抛光垫认证周期(每个新节点 2+ 年)意味着失去一个大客户等于在 5+ 年内失去他们。5 年战略问题是 3M 抛光垫业务能否在 AI 节点爬坡 (N2 / N1.6 / A10) 中保住——客户审查正处于历史最高水平。
+
+### 4.5 Electronics Materials Solutions — 光罩防尘薄膜与背磨磨料
+
+同样的 "半导体生产材料" 伞形还覆盖 10-K 未单独命名的两个较小但战略上有趣的产品线:
+
+**光罩防尘薄膜 (mask pellicle)。** 防尘薄膜是一层亚微米厚的透明薄膜,安装在金属框架上,拉伸覆盖在光罩活性图案面上,防止颗粒缺陷污染。防尘薄膜是耗材——当其因长期暴露于深紫外 (DUV) 或极紫外 (EUV) 光而积累损伤时被更换。EUV 防尘薄膜尤其关键(也尤其难制造),因为它必须对 13.5nm 波长透明,同时承受数十千瓦的 EUV 功率;EUV 防尘薄膜供应链被 **Mitsui Chemicals** (2024 年收购 ASML 防尘薄膜项目) 和 **Shin-Etsu Chemical** 主导,**3M 历史上是 DUV (193nm 和 248nm) 防尘薄膜的供应商** 作为其 Electronics Materials Solutions 业务的子组件 ([3M 10-K FY2025,Item 1](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm) + [野村《Greater China Semi》2026-05-21 供应商排行榜 p. 38-39](/Users/x/projects/financial_agent/reports/sector/半导体材料.md))。*分析师视角:* **3M 在光罩防尘薄膜上是参与者,而非领导者** —— 战略问题是 3M 能否从 Mitsui / Shin-Etsu 手中赢得 EUV 防尘薄膜认证份额,这需要 3M 尚未公开承诺的多年材料科学投资。
+
+**背磨胶带 (back-grind tape) 与表面预处理磨料。** 晶圆厂制造完成后,完工晶圆被从约 775μm 机械研磨至最薄 ~25μm —— 这正是 3D 堆叠(HBM、SoIC、键合 NAND)成为可能的关键。**3M 销售在背磨过程中保护正面电路的背磨胶带**,加上背磨后抛光用的表面预处理磨料。背磨胶带和磨料线是小但高利润的细分市场,3M 的粘合剂和磨料传承赋予其结构防御优势;竞争压力来自 Lintec (日本)、Mitsui (日本)、以及 Disco Corp (TSE: 6146) 更广设备和耗材业务中的背磨细分。
+
+### 4.6 Display Materials and Systems — 光管理薄膜与 OCA
+
+该子部门的 10-K 原文:
+
+> "**Electronic display enhancement films and optically clear adhesives**" ([3M 10-K FY2025,Item 1 Business — Display Materials and Systems 品牌行](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+
+**通俗解释:** 增亮膜 / brightness-enhancement films / BEF 是叠加于 LCD 显示器背光模组内的多层光学工程化微复制聚合物薄膜;它们回收并重新定向背光 LED 发出的光朝观察者方向,有效将同等 LED 功率下的轴向亮度提升 2–3 倍。3M 的增亮膜 (BEF) 业务建立在公司的微复制 / microreplication 技术平台上,过去二十年是高端 LCD 电视和笔记本电脑显示的事实 BEF 标准。光学透明胶 / optically clear adhesives (OCAs) 是用于将盖板玻璃与智能手机和平板电脑中 LCD 或 OLED 显示模组粘合的透明压敏胶层;3M 在 OCA 中与 H+P / Hitachi Chemical、Dexerials、LG Chem 以及多家中国供应商竞争。
+
+*分析师视角:* **Display Materials and Systems 随着全球显示市场从 LCD 转向 OLED 在结构性下降。** OLED 自发光,无需背光,消除了 BEF (该子部门内最大单一产品线) 的需求。3M 已尝试通过 AMOLED 新薄膜产品(可折叠手机功能膜、OLED 堆栈超薄 OCA、偏振控制薄膜)抵消 BEF 下降——FY2024 / FY2025 10-K 评论明确提到 "**新产品上市与规格胜出支撑了份额提升**" 在电子领域 ([3M 10-K FY2025,Item 7 — Transportation and Electronics 2024 segment results](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm)) ——但 BEF 结构性下降不太可能被完全抵消,Display Materials and Systems 中期内将是横盘到下降的业务。
+
+### 4.7 Advanced Materials — 氟聚合物、陶瓷与 PFAS 退出
+
+10-K 原文:
+
+> "Advanced ceramic solutions" ([3M 10-K FY2025,Item 1 Business — Advanced Materials representative activities](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+
+Advanced Materials 是 T&E 内规模较小(FY2025 净销售 8.58 亿美元,从 FY2023 的 11.67 亿下降)、结构上更具争议的子部门。产品组合历史上由三部分构成:**(1) 高性能氟聚合物和氟化学品**(传统 PFAS 业务,用于一切——从电线绝缘到晶圆厂载片膜到耐化学储罐);**(2) Nextel 陶瓷纤维**(用于航空排气管、隔热毯、高温过滤);**(3) Thinsulate 品牌绝缘和其他工程化非织造布**。PFAS 制造产品退出在 2022 年(宣布)和 2025 年(最后制造年)之间将整个氟聚合物营收基数从该子部门移除。3M 在 Q4 2025 完成正式退出,对剩余处置相关资产的折旧年限和残值进行了最终调整 ([3M 10-K FY2025,Item 7 MD&A — Transportation and Electronics](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))。PFAS 退出后留下的 Advanced Materials 是 Nextel 陶瓷业务 + 残余非 PFAS 第三方氟聚合物业务 + 特种非织造和工程材料。*分析师视角:* **PFAS 退出后的 Advanced Materials 是更小、更低增长、更高质量的业务** —— 但它失去了 2010 年代后期承载的大部分可选性,当时 3M 的氟聚合物化学被低估为晶圆厂载片材料。
+
+### 4.8 Transportation & Electronics 之外 — 占营收 67% 的其余业务
+
+**Safety and Industrial (FY2025 113.85 亿美元,占合并销售 45.6%,部门 OI 利润率 22.7%)。** 3M 最大的部门。以 Personal Safety 子部门 (35.44 亿美元 — 呼吸防护、听力防护、坠落防护 — 基于 2015–2017 年收购的 3M Scott、Peltor、DBI-Sala 品牌) 和 Industrial Adhesives and Tapes 子部门 (22.66 亿美元 — VHB 丙烯酸泡沫胶带、Scotch-Weld 结构粘合剂、Scotch 包装胶带) 为锚。Abrasives 线 (13.40 亿美元 — Cubitron、Scotch-Brite) 在战略上与 Electronics Materials Solutions 中的背磨磨料线相连;许多相同的工程化磨粒技术可以跨界。Electrical Markets 子部门 (13.94 亿美元) 销售至电网现代化终端市场,受益于数据中心电气化拉动。Roofing Granules 子部门 (4.90 亿美元) 独具特色——彩色涂层矿物颗粒销售给沥青瓦制造商;这是一个稳态利基,从矿坑所有权获得结构护城河 ([3M 10-K FY2025,Note 3 — Disaggregated Revenue](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))。
+
+**Consumer (FY2025 49.20 亿美元,占合并销售 19.7%)。** 四个子部门:Consumer Safety and Well-Being (11.08 亿美元 — Nexcare 粘贴创可贴、ACE 压缩护具);Home and Auto Care (12.00 亿美元 — Scotch-Brite 清洁海绵、Filtrete HVAC 空气过滤器、Meguiar's 洗车);Home Improvement (14.86 亿美元 — Command 粘贴挂钩、Scotchgard 保护剂、家用 Scotch 胶带);Packaging and Expression (11.26 亿美元 — Post-it 便利贴、办公用 Scotch 胶带、零售磨料)。Consumer 是结构上增长较低、利润率较低的部门——FY2025 有机增长率为负。*分析师视角:* Consumer 部门可能在 Brown 的 "绩效、增长、资本配置" 框架下成为下一个 SOTP 式组合决定(剥离或拆分)的对象——尽管管理层目前并未公开释放此信号。
+
+### 4.9 近期新品与路线图(过去 12 个月)
+
+Brown 时代强调 **商业卓越和渐进新品发布**,而非高调新平台。FY2025 财报电话会议和新闻稿披露的近期新品和产品路线图:
+
+- **3M 投资者日 2025-02-26** 引入 "新经营模式" 框架,并将电子、数据中心、航空航天指定为 T&E 内的三个 "spec-in" 增长方向 ([3M 投资者日 2025 — 完整演示文稿活动页](https://investors.3m.com/news-events/events-presentations/detail/20250226-3m-2025-investor-day))。
+- **熔融石英业务剥离(2025 年 6 月)** 从 T&E 移除一条小型电子相关子线 "以略低于该业务账面价值的微薄对价出售" ([3M 10-K FY2025,Note 4](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))。
+- **精密研磨与精加工持有待售(2025 年 9 月)** 显示愿意修剪规模不足的 Safety & Industrial 资产 —— 年化销售约 1.3 亿美元,预计 2026 上半年出售 ([3M 10-K FY2025,Note 4](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))。
+- **FY2026 指引启动(2026-01-20)** —— 调整后 EPS 8.50–8.70 美元、调整后经营利润率扩张 70–80bp、有机销售增长 3% ([3M Q4 2025 业绩公告 2026-01-20](https://www.sec.gov/Archives/edgar/data/66740/000006674026000003/q42025-8kerexx991.htm)) ——战略信息是 Brown 瞄准受控的顶线增长 + 持续利润率扩张,*非* "大型战略下注" 周期。
+
+### 4.10 旗舰业务与 Section 4 综合
+
+读者若仅记得 3M 产品组合的一个心智模型,应是:**3M 是一家拥有 51 个技术平台的综合集团,其当今三个最高质量业务为 (1) Personal Safety (3M Scott + Peltor + DBI-Sala —— 2015–2017 年收购周期的结果),(2) Industrial Adhesives & Tapes (VHB + Scotch-Weld —— 传统粘合剂化学业务),(3) Cubitron / Scotch-Brite 磨料。** 半导体相关业务—— CMP 抛光垫、CMP 抛光垫修整器、光罩防尘薄膜、背磨磨料、先进封装介电材料 —— 位于 Transportation & Electronics 部门内 Electronics Materials Solutions 和 Advanced Materials 子部门,合计占 3M 总营收的低个位数百分比。**这些半导体业务对野村 "半导体复兴" 论很有战略意义,但对 MMM 近期 EPS 走势不具备财务实质性影响**;FY2026 主导盈利驱动仍然是商业卓越定价 + 跨更广组合的 PFAS 退出清理。Section 7 将逐产品走过竞争格局;Section 9 将分析 PFAS / CAE / Solventum 三件套如何组合成定义今日 MMM 股权论的财务负担。
