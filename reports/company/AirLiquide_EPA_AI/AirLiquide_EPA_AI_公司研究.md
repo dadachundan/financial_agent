@@ -228,3 +228,115 @@ graph TD
 气体与服务四条业务线加上两条辅助分部构成**一条分层式工业气体价值链**：上游锚定 ASU 装置群 (大宗工业气体物理基础) 与氦气 / 氢气采购网络，下游发散为四个不同客户触达动作 ——**工业气体零售钢瓶/液罐**面向 SME 长尾、**医疗保健钢瓶+居家护理**面向医疗渠道、**大宗工业气体驻厂**面向重工业、**电子驻厂+特种+先进材料+设备**面向半导体 / 显示 / 光伏生态。工程与建设是**内部供应链**，负责实物资产建设；全球市场与技术是**研发到商业化的过渡桥梁**，承接下一周期业务 (可再生 H₂、生物气、氢能交通)；创新园区是**上游实验室**，孵化新分子。资本开支周期是**时序引擎**，把今天的合同胜利在 18-30 个月后转化为报告期营收。这一垂直一体化结构 ——分子研发 → 工程建设 → 资产运营 → 多渠道分销 → 服务包覆 ——既赋予 Air Liquide 公用事业般的现金流稳定性，也赋予其特种化学品般的技术 IP 选择权。
 
 ---
+
+## 5. 客户与上市策略
+
+Air Liquide 的客户基础**结构上高度分散** ——URD 2024 披露的「**全球 60 个国家、约 430 万客户与患者**」反映出跨越截然不同渠道的客户聚合：工业气体零售业务单独拥有**约 100 万家 SME 客户**、医疗保健服务**约 1,500 万居家护理患者** (技术上每位皆为一个计费账户)、大宗工业气体业务全球**约 2,000-3,000 家大型工业合同客户**、电子业务**集中度高、约 100-200 家晶圆厂客户** ——但无单一渠道客户超过集团合并营收的 5%，URD 2024 也未披露 Top-1 或 Top-5 客户集中度指标，这与高度分散的渠道结构一致 ([URD 2024, p. 5, "Customer base"](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf); [Air Liquide — Investing in Air Liquide IR page](https://www.airliquide.com/investors/investing-air-liquide))。
+
+```mermaid
+pie title Air Liquide ——FY2024 营收按客户渠道分类
+    "工业气体零售 (约 100 万 SME)" : 46
+    "大宗工业气体 (约 2-3k 客户)" : 28
+    "医疗保健 (约 1500 万患者 + 医院)" : 17
+    "电子 (约 100-200 家晶圆厂)" : 10
+    "其他 (E&C + GM&T)" : 5
+```
+
+*数据来源：作者基于 [Air Liquide URD 2024, p. 7](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf) 的分部营收结构构建。账户数：工业气体零售约 100 万 SME (URD 2024 p. 22)、医疗保健约 1,500 万患者 (URD 2024 p. 26)、电子业务约 100-200 个独立半导体 / 显示 / 光伏晶圆厂 (基于全球晶圆厂普查推算)。*
+
+### 5.1 四条客户渠道
+
+**(a) 工业气体零售客户基础 ——最广、最分散、集中度最低。** 全球约 100 万家 SME 账户，覆盖所有焊接店、金属加工厂、食品加工商、酿酒厂、气相色谱实验室和分析仪器拥有者——他们购买钢瓶气或液态罐。无单一账户具有重要意义。客户获取战略是**线路密度** ——每瓶配送的边际成本随线路密度急剧下降，因此战略护城河需要数十年逐条线路构筑。2016 年 Airgas 收购一举将集团北美账户基础翻倍 ([URD 2024, p. 22](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf); [Air Liquide IR — Investing in Air Liquide](https://www.airliquide.com/investors/investing-air-liquide))。
+
+**(b) 大宗工业气体客户基础 ——按行业垂直集中，由 15-20 年合同锚定。** Air Liquide 在 URD 中并未具名披露大宗工业气体客户 (业内惯例 ——长期合同的保密性源于合同条款)，但披露的行业垂直包括 **一体化钢厂** (安赛乐米塔尔 ArcelorMittal、浦项制铁 POSCO、新日铁 Nippon Steel、JSW、宝武钢铁 ——其中多数由 Air Liquide 驻厂供应 O₂)、**石化与乙烯裂解装置** (法国诺曼底 TotalEnergies、比利时 INEOS、中东 / 中国 Sinopec / SABIC、美国湾岸 Dow Chemical)、**合成氨与化肥** (Nutrien、Yara)、**炼油厂** (所有主要企业) 以及**玻璃 / 陶瓷**。合同期 15-20 年，客户依照付不议条款承担提货承诺；续约因此是该业务线最重要的商业循环 ([URD 2024, p. 18-19](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf); [TotalEnergies-Air Liquide Normandy hydrogen JV, 2023-09-14](https://totalenergies.com/media/news/press-releases/totalenergies-and-air-liquide-join-forces-green-hydrogen-decarbonize))。
+
+**(c) 医疗保健客户基础 ——公立医保主导，受规管，受老龄化驱动。** 客户分为：(i) 医院 (大宗医用 O₂ 罐、麻醉用 N₂O)，受规管并通过国家医疗保健系统签约；(ii) **约 1,500 万家居家护理患者**，接受家庭氧疗、睡眠呼吸暂停 CPAP 设备、呼吸支持等服务。居家护理患者技术上是 Air Liquide 居家护理子公司 (法国 VitalAire 等) 的合同账户，通过国家医保计划付费 ——护城河在于**处方粘性**以及竞争对手复制 Air Liquide 最后一公里配送网络的成本劣势 ([URD 2024, p. 26-27](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf))。
+
+**(d) 电子客户基础 ——集中化、半实名、驻厂照付不议合同锚定。** 这是报告读者最关心的部分。电子晶圆厂客户群**全球 <200 家**，主要由主要代工厂、存储厂与 IDM 构成。Air Liquide 在 2022-2026 年的新闻稿中披露的具体客户合同包括：
+
+| 年份 | 客户 | 地点 | Air Liquide 产品 | 投资 | 来源 |
+|---|---|---|---|---|---|
+| 2022-01 | **台积电 (TSMC)** | 美国亚利桑那州凤凰城 (Fab 21) | H₂ / He / CO₂ (超纯驻厂) | 约 $60m | [TSMC Arizona on-site PR, 2022-01-25](https://www.airliquide.com/group/press-releases-news/2022-01-25/air-liquide-announces-long-term-agreement-supply-semiconductor-manufacturing-site-arizona) |
+| 2022-10 | 「**全球两家最大的半导体制造商**」(未具名；​**台积电**加上很可能是**美光台中** ——台湾中科园区集中) | 台湾台中 | 超纯 N₂ / O₂ / Ar (年产 20 亿 Nm³)；3 座工厂通过 Air Liquide Far Eastern 合资公司 | €500m | [Taiwan €500m PR, 2022-10-19](https://www.airliquide.com/group/press-releases-news/2022-10-19/air-liquide-invest-500-million-euros-three-new-plants-semiconductor-sector-taiwan) |
+| 2024-06 | **美光科技 (Micron)** | 美国爱达荷州 (HBM 存储扩产) | 超纯 N₂ + 载气 (存储芯片制造) | >$250m | [Micron Idaho PR, 2024-06-05](https://www.airliquide.com/group/press-releases-news/2024-06-05/air-liquide-signed-major-contract-support-semiconductor-industry-us-investment-more-250-million) |
+| 2025-07 | 「**两家早期采用客户**」(未具名；按韩国位置和钼替代钨在 V-NAND ≥256 + GAA 逻辑中的应用，逻辑上为**三星**+**SK 海力士**) | 韩国京畿道华城 | **Subleem** 钼前驱体 (全球最大产能) | 未披露 | [Hwaseong Mo PR, 2025-07-21](https://www.airliquide.com/group/press-releases-news/2025-07-21/air-liquide-strengthens-its-advanced-materials-leadership-new-molybdenum-manufacturing-plant-south) |
+| 2025-07 | **VSMC (Vanguard Singapore Manufacturing Co.)** ——台积电 / 恩智浦 / 世界先进合资 | 新加坡 (12 英寸成熟节点晶圆厂) | 驻厂超纯载气、15 年合同 | €70m | [Air Liquide H1 2025 PR, 2025-07-29](https://www.airliquide.com/group/press-releases-news/2025-07-29/leveraging-performance-and-growth-engines-air-liquide-remains-track-1st-half-2025) |
+| 2025 | 未具名德国晶圆厂 (按 Magdeburg / Dresden 时序与规模，可能为 **台积电 / ESMC Dresden**) | 德国 | 新建半导体气体综合体 | €250m | [Air Liquide H1 2025 PR, 2025-07-29](https://www.airliquide.com/group/press-releases-news/2025-07-29/leveraging-performance-and-growth-engines-air-liquide-remains-track-1st-half-2025) |
+| 2026-03 | **台湾多家晶圆厂** (沉积与刻蚀材料供应链) | 台湾台中 | 先进材料工厂 (首座在台) | (2019 年以来在台湾累计投入 >€1bn) | [Taichung Advanced Materials plant PR, 2026-03-25](https://www.airliquide.com/group/press-releases-news/2026-03-25/air-liquide-inaugurates-its-first-advanced-materials-manufacturing-plant-taiwan-strengthening-next) |
+
+在四客户层级披露的模式呈**高度多样化** ——台积电、三星、SK 海力士、美光、格芯 (在 URD-2024 较广义的「电子客户基础」叙述中也有出现) 以及一系列成熟节点晶圆厂 ——但**区域上**电子客户群**集中于三大半导体超级集群**：台湾 (台积电生态)、韩国 (三星 + SK 海力士)、美国 (美光、英特尔、格芯、台积电亚利桑那)，中国 (中芯国际 SMIC、长鑫存储、长江存储)、欧洲 (英特尔马格德堡、ESMC 德累斯顿、格芯德累斯顿) 与新加坡 (VSMC、格芯新加坡) 是增长前沿。CEO 决定将集团资本开支 30%+ 投向电子业务，本质上是押注这群高度集中客户群体的资本支出持续。
+
+### 5.2 上市策略与合同结构
+
+四条渠道采用**四种不同的销售动作**：
+
+- **工业气体零售 ——直销 + 分支机构 / 经销网络。** 全球约 10,000 名销售代表与客服 (Airgas 后)。平均单笔合同 €5k-€500k/年。每年基于公布的指数重置定价；FY2024 工业气体零售业务 +4.0% 的定价效应即来自该有节奏的年度重置 ([URD 2024, p. 22-23](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf); [Air Liquide FY2024 PR, p. 2, 2025-02-21](https://www.airliquide.com/group/press-releases-news/2025-02-21/2024-building-record-margin-improvement-and-major-commercial-successes-fueling-future-growth-air))。
+- **大宗工业气体 ——约 50 家超大客户的全球客户经理 + 投标式绿地项目。** 平均合同：€100m-€1bn 项目资本承诺，15-20 年期摊销。销售周期 18-36 个月 (RFP 到合同签署) + 18-30 个月 (FID 到首笔营收)。合同框架：照付不议 + 电费 / 通胀指数化 + 资本回收。
+- **医疗保健 ——受规管渠道销售 + 居家护理外勤网络。** 医院销售 (全球约 600 家医疗大宗账户) + 居家护理代表 (法国、西班牙、德国、美国共约 5,000 人)，承担 1,500 万患者交付。
+- **电子 ——晶圆厂直销 + 先进材料多年认证流程。** 载气驻厂合同销售周期 24-36 个月 (RFP → FID → 建设 → 投运)；先进材料认证每分子 × 每工艺节点 × 每客户需要 2-3 年，但一旦认证完成，前驱体将在该节点 HVM 生命周期内被锁定。
+
+### 5.3 合作伙伴与 ADVANCE 2025 商业骨架
+
+电子业务与能源转型 (未来十年的两大周期驱动) 中具名的合作伙伴包括：
+
+- **远东集团 (Far Eastern Group，台湾)** ——合资公司**远东亚液 (Air Liquide Far Eastern, ALFE)** 是台湾所有重大工业气体项目的执行平台；2022 年 10 月 €500m 三厂台湾项目即在 ALFE 内执行 ([Taiwan €500m PR, 2022-10-19](https://www.airliquide.com/group/press-releases-news/2022-10-19/air-liquide-invest-500-million-euros-three-new-plants-semiconductor-sector-taiwan))。
+- **西门子能源 (Siemens Energy)** ——合资开发 PEM 电解槽 (Normand'Hy 200 MW、荷兰 ELYgator 200 MW) ([Normand'Hy story page](https://www.airliquide.com/stories/hydrogen/air-liquide-normandhy-collective-adventure-serving-energy-transition))。
+- **TotalEnergies** ——诺曼底炼油厂脱碳，Normand'Hy 200 MW 中 100 MW 氢气产能分配给 TotalEnergies 在 Gonfreville 的炼油厂，15 年长协 ([TotalEnergies-Air Liquide JV PR, 2023-09-14](https://totalenergies.com/media/news/press-releases/totalenergies-and-air-liquide-join-forces-green-hydrogen-decarbonize))。
+- **DIG Airgas (2026-01-13 起属于 Air Liquide)** ——韩国独立气体头部企业，承载韩国电子 + 工业气体零售 + 氢能增长 ([DIG Airgas closing PR, 2026-01-13](https://www.airliquide.com/group/press-releases-news/2026-01-13/closing-dig-airgas-acquisition-air-liquide-becomes-industrial-gas-leader-dynamic-south-korean-market))。
+
+### 5.4 客户集中度评估
+
+Air Liquide URD 2024 **未**披露量化的 Top-1 或 Top-5 客户占营收比例 ——这与欧洲对高度分散的多渠道工业业务的实际操作一致，因为单一客户无人达到 10% 重要性门槛。***分析师观点：***考虑到 (i) 约 100 万家 SME 工业气体零售基础；(ii) 约 1,500 万患者医疗保健基础；(iii) 大宗工业气体业务约 50 家大客户跨越多个垂直行业；(iv) 即使最集中的电子子分部也仅有 <€2.5bn 营收分散于 >100 家晶圆厂，**任何单一客户都不太可能超过集团合并营收的 3-4%**，Top-5 客户也不太可能超过 10-12%。这一结构低于美国半导体设备同业 (LRCX、AMAT、KLAC ——每家 Top-3 客户集中度达到 50-65%)，远低于美国特种化学品同业 (Entegris、DuPont Electronics)，也低于 Linde / Air Products / 日本酸素 (均具备类似多元化但医疗保健基础较小)。这意味着任何单一客户续约失败都不会成为投资逻辑的破坏因素；主要的客户端风险是行业级的 (半导体资本开支调整、医疗系统价格压力、炼油业务萎缩)，而非账户级的。这是现金流耐久性的结构性来源。
+
+---
+
+## 6. 行业概览
+
+Air Liquide 运营于**两个增长与结构属性截然不同的行业**，市场机会评估须分别审视：(i) **全球工业气体行业** (集团整体)；(ii) **半导体 / 电子特种气体 + 先进材料子行业** (即电子业务线)。两个行业共用 Air Liquide 的上游 ASU 装置群，但在增长结构、监管环境与竞争格局上根本不同。
+
+### 6.1 全球工业气体行业
+
+全球工业气体市场 2024 年规模为**约 USD 110-120bn** (主流市场研究机构数据：Market.us 报 $112.7bn (2024)，到 2034 年 CAGR 8.5% 至 $254.8bn；Market Data Forecast 报 $108.6bn；Maximize Market Research 报 $118.9bn) ([Market.us — Industrial Gases Market Size & Share, 2024](https://market.us/report/industrial-gases-market/); [Market Data Forecast — Global Industrial Gases Market](https://www.marketdataforecast.com/market-reports/industrial-gases-market); [Statista — Global Industrial Gas Industry topic page](https://www.statista.com/topics/9233/global-industrial-gas-industry/))。按 Air Liquide FY2024 工业气体营收 USD 29.4bn (€27.06bn × FY2024 平均汇率约 1.085 USD/EUR) 计算，集团全球市场份额约 **24%**，仅次于林德 (Linde) 约 $33bn 的 ~27%。**前五大企业 ——林德、Air Liquide、Air Products、日本酸素 (Nippon Sanso)、Messer ——合计控制全球市场约 73-78% 份额**，使其成为全球最集中的重工业行业之一；剩余 22-27% 由区域专家 (日本岩谷、中国杭州杭氧、印度 INOX Air 等) 与国别企业瓜分。
+
+![FY2024 全球工业气体五大企业营收 (USD bn)](../../charts/airliquide_peer_revenue.png)
+
+*数据来源：公司年报——[Linde 10-K FY2024](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001707925&type=10-K)；[Air Liquide URD 2024](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf)；[Air Products FY2024 10-K](https://www.airproducts.com/-/media/files/en/about/2024-annual-report.pdf)；[Nippon Sanso FY24 (TSE:4091) Integrated Report](https://www.nipponsanso-hd.co.jp/en/ir/library/integrated-report.html)；[Messer SE 公司信息](https://www.messer.com/about-us)。USD 数据按 FY2024 平均汇率换算。*
+
+增长率在全球总量层面为**中-高单位数** (Market.us 报 2034 年 CAGR 8.5%，其他来源报 6.7-7.5%)，驱动因素为：(i) **电子 / 半导体资本开支超级周期** (AI 基础设施扩张)；(ii) **清洁能源转型** (工业脱碳用绿氢、化工与炼油用碳捕集)；(iii) **新兴市场工业化** (印度、东南亚、拉美的气体消费随钢铁、化工、电子产能扩张而增长)；(iv) **医疗老龄化**。逆风为**成熟市场工业活动疲软** (欧洲钢铁结构性衰退、北美化工产能合理化)、**能源成本波动** (可通过指数化合同模式管理，但造成报告期营收噪音)、**监管 CO₂ 定价** (对低碳氢供应商如 Air Liquide 是利好，但对传统灰氢业务的成本传导构成风险)。
+
+### 6.2 行业结构 ——供应商议价、买方议价、进入壁垒
+
+工业气体行业的五力结构是重工业中最为有利的之一，这也是林德与 Air Liquide 各自维持 >20% 经常性营业利润率的原因：
+
+- **供应商议价：低。** 主要原料是*空气* (大气 N₂/O₂/Ar)，免费；电力是主要可变成本，通过指数化合同传导给客户。氦气采购 (卡塔尔、阿尔及利亚、俄罗斯、坦桑尼亚、美国 BLM 储备) 是唯一的供应商集中点，且在 2018-2022 年氦气短缺期间一度形成瓶颈；俄乌战争实际上将俄罗斯氦气移出西方供应链，使全球市场紧绷约 18 个月。氢气采购分为蒸汽甲烷重整 (SMR，成熟、大规模) 与电解 (增长，资本密集型)。
+- **买方议价：分散层面适中，驻厂合同层面较高。** 工业气体零售客户较小，单一客户无议价能力；医疗保健买方为大型公立医保系统，具备定价能力但通常通过年度调价协议管理。**议价杠杆点是大宗工业气体 / 电子驻厂合同续约** ——台积电、三星或美光的续约周期是一个高赌注的招标，2-3 家行业前五竞争对手按美分 / scfm 报价，2-3% 价差可决定一份 $1bn+ 的合同走向。部分被切换成本锁定 (晶圆厂重新铺管不容易) 与多年销售周期 (客户在续约前通常已与现任供应商合作多年) 所抵消。
+- **进入壁垒：极高。** 建设可竞争的全球 ASU 装置群、驻厂工程能力 (全球仅少数工程公司能建设 5,000 吨/天晶圆厂规格 ASU)、先进前驱体的 IP 基础 (每分子需 5-10 年 R&D + 认证投资)、医疗保健的监管负担、氦气采购网络 ——都是非凡的壁垒。**自二战后再无全球规模的工业气体公司诞生** ——目前的竞争集合仍是这 5 家公司 (30-50 年来一直如此)，行业整合靠并购驱动而非新进。
+- **替代品：技术层面有限，能源转型层面增长。** 大气气体没有化学替代品。能源转型的替代是**灰氢 → 绿氢**，是 Air Liquide 作为受益者而非受冲击者的*行业内*替代。
+- **竞争激烈度：高但有秩序。** 4-5 家寡头在单一合同上竞争激烈，但通常维持行业层面的定价纪律 (指数化合同模式与长期合同结构均稳定定价)。
+
+### 6.3 电子 / 半导体特种气体 + 先进材料子行业
+
+电子子行业绝对收入规模小得多 (特种气体单独约 USD 5-10bn，按定义口径，对比全行业 $110bn)，但**结构性增长率与毛利率高于工业气体大行业**。市场规模因定义不同而有差异：
+
+- **半导体特种气体市场**：USD 6.2bn (2024) → USD 9.5bn (2030)，CAGR 7.4% ([Strategic Market Research — Semiconductor Specialty Gas Market Report, 2024-2030](https://www.strategicmarketresearch.com/market-report/semiconductor-specialty-gas-market))
+- **半导体气体合计 (特种 + 大宗驻厂)**：USD 10.5bn (2024) → USD 14.7bn (2030)，CAGR 5.8% ([Research and Markets — Semiconductor Gas Market 2025-2030](https://www.researchandmarkets.com/reports/6094301/semiconductor-gas-market-global-strategic))
+- **电子特种气体市场**：USD 5.1bn (2025) → USD 6.9bn (2032)，CAGR 4.4% ([Persistence Market Research — Electronic Specialty Gases Market Forecast 2032](https://www.persistencemarketresearch.com/market-research/electronic-specialty-gases-market.asp))
+- **APAC IG 2025 大会预测**：电子特种气体 2030 年前**年增 6%**，亚太占消费量 **69%** ([Gasworld — APAC IG 2025: Electronic specialty gases market set for 6% annual growth to 2030, 2025-09](https://www.gasworld.com/story/apac-ig-2025-electronic-specialty-gases-market-set-for-6-annual-growth-to-2030/2169567.article/))
+
+以上数据不含**先进前驱体材料** ——Yole、TechCet、SEMI 通常将该子市场 2024 年规模估为额外 ~$3-5bn，并以低双位数 CAGR 增长 (受 GAA + V-NAND ≥256 + 先进封装驱动)。野村 2026-2030 行业展望将**全球半导体材料市场置于 2025 年约 USD 80bn 水平**，其中特种气体约 13% (约 $10bn)，CMP 浆料 / 抛光垫、光刻胶、先进前驱体 / 掺杂剂为其余主要桶 (见 [reports/sector/半导体材料.md — Nomura 2026-2030 semi materials outlook, 2026-05-21](../../sector/半导体材料.md))。Air Liquide €2.5bn 电子业务对应这一 ~$15-20bn 综合特种气体 + 先进材料 TAM，即**广义口径份额约 15-20%** ——仅次于 Resonac (NF₃ / 特种气体) 与 Merck Electronics (先进材料)。
+
+### 6.4 行业趋势 ——2024-2030 年的关键变化
+
+驱动 Air Liquide 增长结构变化的五大行业趋势：
+
+1. **AI 半导体资本开支超级周期。** 台积电单家 2027F 资本开支预计达 **$70bn** (野村)，三星与 SK 海力士在扩大存储产能 (HBM、V-NAND ≥256 层)，英特尔 / 美光 / 格芯在 CHIPS 法案补贴下建设美国产能。每条新增晶圆开工线消耗的载气与特种材料是相同产能在上一节点的 2-4 倍 (更多循环、更多 ALD 步骤、更多清洗步骤)。这是 Air Liquide €1.5bn+ 电子资本开支储备的结构性驱动。
+2. **清洁能源转型 / 可再生氢气。** Air Liquide 承诺 2035 年前投入 >€8bn 用于可再生 / 低碳 H₂；Normand'Hy 200 MW 2026 年投运；荷兰 ELYgator 200 MW 随后。集团正定位为欧洲化工 / 炼油从灰氢转型时的首选供应商 ([Normand'Hy story page](https://www.airliquide.com/stories/hydrogen/air-liquide-normandhy-collective-adventure-serving-energy-transition); [Green Car Congress — Normand'Hy 400m+ PEM, 2023-09-24](https://www.greencarcongress.com/2023/09/20230924-airliquide.html))。
+3. **美国回流 + CHIPS 法案 + 欧洲芯片法案。** 半导体制造重新平衡回美国与欧洲 (英特尔俄亥俄 + 亚利桑那、台积电亚利桑那、三星泰勒、美光博伊西 + 雪城、格芯纽约 + 新加坡 + 德累斯顿、ESMC 德累斯顿、英特尔马格德堡、Crolles 2 扩建) 是一个十年期建设周期，为西方系气体巨头 (尤其是 Air Liquide 与 Linde) 创造直接的电子驻厂合同机会。
+4. **亚洲整合 ——韩国再进入 + 台湾深耕。** DIG Airgas 收购 (€2.85bn) 在阔别 10 年后重新建立 Air Liquide 在韩国的地位，提供即时的电子 + 工业气体零售 + 氢能平台。台湾扩张 (2022 €500m 三厂 + 2026 台中先进材料厂) 深化了与台积电 / 联电 / 世界先进 / 力积电的客户关系基础。
+5. **CO₂ 定价作为毛利升级。** 随欧盟碳成本上升 (欧盟 ETS 2024-2025 年间维持 €70-100/吨，且预计向上) 与美国各州实施碳定价，**低碳 H₂ 的支付意愿机械式上升**。Air Liquide 是最有潜力变现的主要企业 ——林德更多偏向美国市场 (碳价上升较慢)、APD 更多偏向沙特蓝氢。
+
+### 6.5 行业定义与相邻行业
+
+NAICS 分类：**325120 (工业气体制造)** 适用于大宗气体与服务业务；**325199 (其他基础有机化学品制造)** 适用于电子先进前驱体业务；**621610 (居家保健服务)** 适用于医疗保健居家护理；**541330 (工程服务)** 适用于工程与建设。集团整体对应欧盟 NACE Rev 2 分类 20.11 (工业气体)、26.11 (半导体电子元件 ——用于电子特种材料)、86.10 / 86.90 (医疗)。与 Air Liquide 产品有交集的相邻行业包括特种化学品 (Merck KGaA、DuPont Electronic Materials、Resonac)、工业自动化 / 泵 (Atlas Copco / Edwards Vacuum)、可再生能源设备 (西门子能源、McPhy、Nel Hydrogen 等电解槽)。
+
+---
