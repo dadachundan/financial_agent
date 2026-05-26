@@ -286,3 +286,92 @@ graph LR
 **中美出口管制对硅片影响**：美国 BIS 2022-10 + 2023-10 + 2024-12 三轮出口管制主要针对芯片成品 (advanced AI chip) + EUV 设备，**没有把硅片本身列入出口管制清单**——但 12 寸硅片是芯片生产的必需输入，间接受影响。野村明确：「如果美国把 300mm 硅片列入 entity list 或加 25%+ 关税，对中国晶圆厂的冲击将远大于设备管制」([野村 2026-05-21, p. 13-14 TSMC 与本土化](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。环球晶因美 / 日 / 欧产能完整，能避开关税；纯亚洲产能厂商 (如 SUMCO) 反而面临更大不确定性 (详见 §9.7)。
 
 *分析师观点：* 硅片行业的「双寡头 + 三巨头」格局过去 8 年没变过，未来 5 年也大概率不变——除非中国国产 12 寸硅片在 2027 前突破 commercial-grade (沪硅产业 / 上海新昇 / TCL 中环 / 国大硅产 当前 12 寸良率 60-75%，距 commercial 95%+ 还有 5-7 年差距)。这是野村给 GlobalWafers Buy 评级、目标 3.2× P/B 估值的底层假设——如果这个假设动摇，估值锚就会松动。
+
+## 7. 竞争格局
+
+### 7.1 六大对手——亚 / 欧 / 美 + 中国新势力
+
+300mm 硅晶圆是「双寡头 + 三巨头 + 中国挑战者」的三层结构。环球晶 (GWC) 处于第二梯队头部位置，与 SUMCO 之间份额差距长期维持 ~10pp，与 Siltronic 之间维持 ~5pp 领先；与中国新势力（沪硅产业 / TCL 中环 / 上海新昇）则有 commercial-grade 良率代差。下表按 2025E 全球 300mm 份额 + 关键运营指标整理 ([野村 2026-05-21, Fig. 35 300mm league table](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))，([Mordor Intelligence 300mm 硅片市场报告, 2025-Q4](https://www.mordorintelligence.com/industry-reports/silicon-wafer-market))：
+
+| 厂商 | 上市代码 | 总部 | 2025E 全球 300mm 份额 | 12 寸月产能 | LTA 占比 | 关键差异化 |
+|---|---|---|---|---|---|---|
+| **Shin-Etsu Handotai (信越化学半导体)** | TYO:4063 (母公司) | 日本东京 | ~28% | ~2.6 mn pcs/月 | 80%+ | 全球最大、annealed wafer 标杆 |
+| **SUMCO** | TYO:3436 | 日本东京 | ~23% | ~2.0 mn pcs/月 | 85%+ | 12 寸 polished + epi 二把手，HBM 退火片大供 |
+| **环球晶 GlobalWafers** | TPEx:6488 | 台湾新竹 | ~17% | ~1.4 mn pcs/月 (含 Sherman 一期) | 80%+ | 唯一亚 / 欧 / 美三洲完整 12 寸产能 |
+| **Siltronic AG** | ETR:WAF | 德国慕尼黑 | ~12% | ~1.0 mn pcs/月 | 80%+ | 欧洲本土、Singapore 12 寸厂 (2024 竣工) |
+| **SK Siltron** | 未上市 (SK 集团) | 韩国 | ~10% | ~0.9 mn pcs/月 | 80%+ | SK Hynix 内供 + 部分外供，SiC 衬底领跑 |
+| **TCL 中环 (TCL Zhonghuan)** | SZSE:002129 | 中国天津 | ~3-4% | ~0.4 mn pcs/月 | <50% | 中国最大、12 寸良率追赶中 (~80%) |
+| **沪硅产业 (NSIG)** | SSE:688126 (科创板) | 中国上海 | ~2-3% | ~0.3 mn pcs/月 | <50% | 国家集成电路基金重点扶持、上海新昇并表 |
+
+数据源：([SUMCO 2024 年报 § 市场份额](https://www.sumcosi.com/english/news/))，([Siltronic 2024 Annual Report § Market Overview](https://www.siltronic.com/en/investors/financial-publications.html))，([TCL 中环 2024 年报 § 半导体硅片业务](http://static.cninfo.com.cn/finalpage/2025-04-29/1223218728.PDF))，([沪硅产业 2024 年报 § 公司业务](http://static.cninfo.com.cn/finalpage/2025-04-30/1223247293.PDF))，([Mordor Intelligence, 2025-Q4](https://www.mordorintelligence.com/industry-reports/silicon-wafer-market))。
+
+### 7.2 维度 1——份额与规模（GWC 第三、与 SUMCO 差距稳定）
+
+*分析师观点：* GWC 2017 整合 SunEdison 之后从全球第六跳到第三，与 SUMCO 之间 ~10pp 份额差距过去 8 年基本未变。这背后是「客户 LTA + cleanroom 资本壁垒」的结构性原因——每家硅片厂的 LTA 一旦签订到 2027-28 年，份额转移要等下一轮 LTA 续约（2028-30 年）才有可能。Shin-Etsu 母公司 (信越化学)同时是全球最大光阻 (photoresist) + EUV 光阻 + KrF/ArF 光阻供应商，其半导体硅片事业部 (Shin-Etsu Handotai, SEH) 是日资硅片帝国的「皇冠资产」，2024 财年合并营收约 JPY 700-800 bn (约 USD 5 bn) ([信越化学 2024 综合财报 § 半导体硅事业部 营收](https://www.shinetsu.co.jp/en/ir/library/integrated/))。
+
+**SUMCO (TYO:3436)** 是与环球晶最直接的对标对手——同为「纯硅片厂」(pure-play wafer maker)，没有信越化学那种光阻 / 多晶硅料的多元化业务作为缓冲。SUMCO 2025 财年合并营收约 JPY 380-400 bn (约 USD 2.6 bn)，是 GWC FY2025 营收 (USD 1.94 bn) 的 ~1.35×；但 SUMCO 在 2023-25 周期下行中累计亏损更深 (2024 净亏损 ~JPY 50 bn)，财务体质明显比 GWC 弱 ([SUMCO Q4 FY2024 法说会演示, 2025-02](https://www.sumcosi.com/english/ir/library/result/))。SUMCO 在 12 寸退火片 / DRAM 用 wafer 上份额领先 GWC，但在「美国本土产能」「FZ HV」「SOI」三个差异化领域 GWC 反而占优——是过去 8 年 SUMCO 把 GWC 拉开但没拉大的根本原因。
+
+**Siltronic AG (ETR:WAF)** 是环球晶 2020 想吞下但未成的德国对手——2022 失败后 Siltronic 仍独立运营，2024 年完成 Singapore 12 寸厂 (FabNext) 建设投产，目前总产能约 1.0 mn pcs/月。但 Siltronic 在 2023-25 周期下行中股价从 EUR 140 (2022 峰值) 跌到 EUR 35-45 (2026-Q1)，市值缩水 70%+；Siltronic 2024 净亏损 EUR ~50 mn，是历史首次年度亏损 ([Siltronic 2024 Annual Report § Financial Performance](https://www.siltronic.com/en/investors/financial-publications.html))。**讽刺的反转**：当年环球晶 EUR 4.35 bn 报价对应 ~EUR 130/股；现在 Siltronic 市值约 EUR 1.3 bn，仅当年报价的 30%——徐秀蘭 2024 接受 Reuters 采访时承认「如果当初成功收购、过去 3 年的整合 + 周期下行成本，会显著拖累 GWC 财务」([Reuters Siltronic 行业反思报导, 2025-05](https://www.reuters.com/technology/))。
+
+### 7.3 维度 2——技术领先性（Shin-Etsu / SUMCO 在退火片领先，GWC 在 SOI / FZ 占优）
+
+技术领先性按产品维度评估，没有单一冠军：
+
+- **12 寸抛光片基础工艺**：Shin-Etsu = SUMCO > GWC ≈ Siltronic > SK Siltron > TCL 中环 > 沪硅产业。日本两家「化学纯度 + 表面颗粒控制」的差距是 6 大对手中最大的技术护城河；这就是为什么 12 寸主流抛光片 ASP 排序：Shin-Etsu Premium > SUMCO Premium > GWC Premium > 国产 ([SUMCO 12 寸抛光片产品页](https://www.sumcosi.com/products/polished_wafer.html))。
+- **退火片 (Annealed)**：SUMCO > Shin-Etsu > GWC > Siltronic > SK Siltron。SUMCO 的 P-grade 退火片是 Micron HBM 产线指定耗材；GWC 在退火片上技术成熟但产能规模与 SUMCO 差 ~3-4×；TCL 中环和沪硅产业的 12 寸退火片量产能力仍处于「客户验证」阶段 ([SUMCO Annealed Wafer 页](https://www.sumcosi.com/products/annealed_wafer.html))。
+- **SOI / FZ / 化合物**：GWC = Siltronic > Shin-Etsu > SUMCO > 中国厂。这是环球晶通过 2008-16 多笔小并购 (Globitech epi / Topsil FZ / SunEdison SOI) 累积的差异化护城河——非 12 寸主流但毛利率高、客户绑定深。Soitec (ETR:SOI) 在 photonic SOI 与 FD-SOI 上是 quasi-monopoly，但 RF-SOI / BESOI 上 GWC 和 Shin-Etsu 都有竞争产品 ([Soitec FY24/25 URD § SOI Markets](https://www.soitec.com/en/investors/regulated-information))。
+- **化合物 (Sapphire / SiC / GaAs)**：环球晶仅做代工抛光 + 磊晶，自己不做衬底单晶；这块产品线的「技术领先」属于 Wolfspeed (NYSE:WOLF) / II-VI Coherent (NASDAQ:COHR) / SK Siltron CSS / 江丰电子 (SSE:300666) 等专精厂 ([Wolfspeed FY25 10-K § Power Materials](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000895419&type=10-K&dateb=&owner=include&count=40))。
+
+GWC 2024 年报第 94-95 页用产品矩阵表对外披露产品分类，下图为年报原页截图（图 5 / 图 6）。
+
+![GWC 2024 年报 第 94 页 产品矩阵](../../charts/globalwafers_2024_ar_p94_products.png)
+
+*图 5：环球晶 2024 年报第 94 页——按 wafer type / diameter / application 的产品矩阵全表。Source: [GlobalWafers 2024 Annual Report § Business Overview Product Matrix p.94](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/)。*
+
+![GWC 2024 年报 第 95 页 产品矩阵 续](../../charts/globalwafers_2024_ar_p95_products.png)
+
+*图 6：环球晶 2024 年报第 95 页——产品矩阵续表，列出磊晶 / 退火 / SOI / FZ / 扩散 / 化合物各类别下的具体 SKU 与应用场景。Source: [GlobalWafers 2024 Annual Report § Business Overview Product Matrix p.95](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/)。*
+
+### 7.4 维度 3——客户黏性与 LTA 暴露
+
+LTA 锁定到 2027-28 的占比是 6 大对手共同的护城河，但暴露结构有差异：
+
+- **Shin-Etsu / SUMCO**：LTA 占比 85%+，最大客户均为 TSMC + Samsung + Micron + SK Hynix——客户集中度最高但单一客户也最稳定。
+- **环球晶**：LTA 占比 80%+，单一最大客户 ~17-19% 极大概率为 TSMC ([Tom's Hardware GlobalWafers Sherman 客户分析, 2022-06](https://www.tomshardware.com/news/wafer-maker-to-invest-dollar5-billion-in-the-us-to-serve-intel-samsung-tsmc))，前五大涵盖 TSMC + Samsung Memory + SK Hynix + Micron + Intel；Sherman 厂 ramp 后预期 Intel + Texas Instruments + Samsung Taylor 的本土客户比重上升。
+- **Siltronic**：LTA 占比 80%+，但客户集中度更高 (前五大 ~55%)，对 European IDM (Infineon / STM / NXP) 暴露大；Singapore 厂建成后正在追逐 Asia 客户。
+- **SK Siltron**：超过 60% 卖给 SK 集团内部 (SK Hynix Memory + DRAM)，剩余 ~40% 外卖；客户结构是 6 大对手中最不分散的——但反过来 SK 集团的内供给了它最稳的需求 floor ([SK Siltron 公司概览 (SK 集团 2024 报告)](https://www.sk.com/en/about-us/business/sk-siltron/))。
+- **TCL 中环 / 沪硅产业**：LTA 占比 <50%，主要是 SMIC + 华虹 + 长鑫存储 + 长江存储等中国本土 fab，地缘对冲价值高但 ASP 普遍比国际 LTA 低 10-15% ([TCL 中环 2024 年报 § 客户结构](http://static.cninfo.com.cn/finalpage/2025-04-29/1223218728.PDF))。
+
+### 7.5 维度 4——地理布局与 capex 周期
+
+```mermaid
+quadrantChart
+    title 300mm 硅片厂——产能扩张速度 × 技术领先性 (2025-28F)
+    x-axis "产能扩张速度 (Slow)" --> "Fast"
+    y-axis "技术领先性 (Lower)" --> "Higher"
+    quadrant-1 "领先者扩张快"
+    quadrant-2 "领先者守城"
+    quadrant-3 "追赶者守城"
+    quadrant-4 "追赶者扩张快"
+    "Shin-Etsu": [0.30, 0.95]
+    "SUMCO": [0.40, 0.88]
+    "GlobalWafers": [0.85, 0.75]
+    "Siltronic": [0.55, 0.65]
+    "SK Siltron": [0.50, 0.60]
+    "TCL 中环": [0.90, 0.45]
+    "沪硅产业 NSIG": [0.95, 0.35]
+```
+
+**环球晶最显著的差异化在「Fast 扩张 + High 领先性」象限**——Sherman USD 7.5 bn + 意大利 Novara + 韩国 Cheonan + 日本 Yonezawa + 台湾新竹合计三年 capex 计划是 6 大对手中最激进；同时技术领先性虽不及 Shin-Etsu / SUMCO，但显著领先 Siltronic / SK Siltron / 中国新势力 ([Evertiq, 2025-05-21](https://evertiq.com/design/2025-05-21-globalwafers-opens-texas-wafer-plant-announces-major-expansionr))，([Digitimes 2025-08-11 GWC CHIPS Act 报导](https://www.digitimes.com/news/a20250811VL204/globalwafers-texas-silicon-wafer-fab-chips-act.html))。Shin-Etsu / SUMCO 选择「Slow 扩张 + Highest 领先」——日本两家 2025-28 capex 节奏明显克制，原因是 (a) JPY 贬值让出口 ASP 已经赚了汇率红利，(b) 担心扩产打破 LTA 价格 floor；这是环球晶野村 Buy 论点的「相对优势」逻辑 ([SUMCO 2025-02 Capital Markets Day 演示](https://www.sumcosi.com/english/ir/library/result/))。
+
+![Capex 周期对比](../../charts/globalwafers_capex_cycle.png)
+
+*图 7：环球晶 vs SUMCO vs Siltronic 三家 capex/营收 比对 (2020-26E)。环球晶在 2023-26 周期 capex 强度最高、SUMCO 最克制、Siltronic 居中。Source: [GlobalWafers 2024 Annual Report 现金流量表](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/)，[SUMCO 2024 年报 § 现金流](https://www.sumcosi.com/english/ir/library/result/)，[Siltronic 2024 Annual Report 现金流量表](https://www.siltronic.com/en/investors/financial-publications.html)。*
+
+### 7.6 同业估值对照
+
+![同业估值对比](../../charts/globalwafers_peer_valuation.png)
+
+*图 8：300mm 硅片五巨头估值对比 (2026-05-25)。GWC TTM P/E 44.3× 显著高于 Shin-Etsu (30×)、SUMCO 与 Siltronic 处于亏损 N.M.。SK Siltron 未上市无市场估值。Sources: [Yahoo Finance 6488.TWO](https://finance.yahoo.com/quote/6488.TWO/key-statistics/)，[Stockanalysis.com 4063 信越化学](https://stockanalysis.com/quote/tyo/4063/)，[SUMCO 2025-02 法说会演示](https://www.sumcosi.com/english/ir/library/result/)，[Siltronic 2024 年报投资人简报](https://www.siltronic.com/en/investors/financial-publications.html)。*
+
+*分析师观点：* GWC TTM P/E 44× 远高于 Shin-Etsu 30×，这种「估值倒挂」反映三件事：(a) 市场已经把 GWC 定价为「最具弹性的周期复苏标的」(轻仓 Shin-Etsu / 重仓 GWC 在 2026 进入周期上行更有 leverage)；(b) Shin-Etsu 多元业务 (光阻 + 硅料) 平滑了周期 P/E，反观 GWC 是纯硅片厂、底部估值会反映周期 trough；(c) BPD / HBM 单 die 用硅量翻倍的 ASP 弹性如果释放，GWC 这种 12 寸高占比厂会被首先受益。**风险**：如果 BPD 推迟到 2028 后或中国国产化突破，GWC 这种「估值倒挂」会先于 Shin-Etsu 被市场修正——这是野村 TP TWD 850 估值的关键脆弱点 (详见 §9.6)。
