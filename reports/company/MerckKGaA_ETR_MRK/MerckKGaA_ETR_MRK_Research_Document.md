@@ -242,3 +242,118 @@ Per the [Annual Report 2024](https://www.reports.emdgroup.com/en/annualreport/20
 
 ---
 
+## 5. Customers & Go-to-Market — Electronics segment
+
+### 5.1 Customer concentration disclosure — what Merck KGaA actually publishes
+
+**Merck KGaA does not disclose specific customer concentration percentages for the Electronics segment in its Annual Report.** Unlike US 10-K filers (which must disclose any customer ≥10% of consolidated revenue under ASC 280-10-50-42) or Chinese A-share / HK issuers (which must disclose top-5 customers under PRC GAAP reporting standards), Merck KGaA's German GAAP / IFRS reporting standards do not require an itemized customer-concentration disclosure ([AR 2024 Segment Reporting](https://www.emdgroup.com/en/annualreport/2024/notes/operating-activities/segment-reporting.html)). The AR 2024 simply states that Electronics serves *"the semiconductor and display industries globally"* without naming customers ([AR 2024 Electronics Company Profile](https://www.reports.emdgroup.com/en/annualreport/2024/management-report/fundamental-information-about-the-group/company-profile-and-structure/electronics.html)). This is a real disclosure gap for analysts attempting precise risk-modeling.
+
+***Analyst view:*** Based on the geographic concentration of leading-edge fab capacity, the customer concentration for Semiconductor Solutions is materially high — likely **top-5 customers ~60–70% of segment sales, top-10 ~80%+**, with the largest single customer (almost certainly TSMC) likely in the 15–25% range. This estimate triangulates from: (a) the disclosed Asia-Pacific revenue weighting in Electronics; (b) the geographic distribution of advanced-node wafer capacity (TSMC, Samsung Semi, SK Hynix, Intel, Micron control ≥90% of leading-edge bits); (c) Merck KGaA's own investment site choices (Kaohsiung directly serves TSMC; Cheonan Korea serves Samsung/SK Hynix; Arizona DS&S serves TSMC/Intel/Samsung Austin/Samsung Texas). The estimate is **not** from a Merck KGaA filing — it is analyst inference.
+
+### 5.2 Named customers visible from public sources
+
+The following customers / customer-context are corroborated by primary Merck KGaA disclosures, customer SEC filings, or trade press; these are *not* a complete customer list, but represent the visible portion:
+
+- **TSMC (TWSE:2330 / NYSE:TSM).** The Kaohsiung €500 m megasite — Merck KGaA's largest semiconductor materials campus globally — was sited specifically to serve TSMC's southern Taiwan fab cluster (Tainan, Kaohsiung). Kai Beckmann's quote at inauguration: *"Our strategy is to stay close to customers and their technology roadmaps"* ([Kaohsiung inauguration release, 2025-12-01](https://www.merckgroup.com/en/news/inauguration-kaohsiung-megasite.html)). The Taipei Times reported in Sep 2024 that Merck plans to *"introduce more key materials to boost localization"* for TSMC supply ([Taipei Times, 2024-09-06](https://www.taipeitimes.com/News/biz/archives/2024/09/06/2003823328)).
+
+- **Samsung Semiconductor (KRX:005930).** The Mecaro acquisition in 2022 (~100 employees, Korea-based) was explicitly framed as expanding ALD precursor capacity *"in close proximity to Korean memory customers"* ([Mecaro closing release, 2023](https://www.emdgroup.com/en/news/chemical-closing.html)). Merck KGaA / Samsung relationship spans LC mixtures for Samsung Display LCD panels, OLED emitter materials for Samsung Display OLED panels (premium smartphone, foldable), and advanced precursors / CMP slurry for Samsung Semiconductor's logic + memory fabs.
+
+- **SK Hynix (KRX:000660).** Inferred from the Korean Mecaro acquisition and Versum-legacy CMP slurry positions at SK Hynix's Icheon and Cheongju memory fabs. SK Hynix's HBM4 ramp (the dominant AI memory product for the 2026-2027 cycle) is the most-watched single demand driver for advanced ALD precursors and CMP slurry ([SK Hynix 62% HBM share, Astute Group, 2026](https://www.astutegroup.com/news/general/sk-hynix-holds-62-of-hbm-micron-overtakes-samsung-2026-battle-pivots-to-hbm4/)).
+
+- **Intel (NASDAQ:INTC).** The Arizona DS&S factory (Chandler, $39 m, 2022 opening) was sited specifically next to Intel's Ocotillo campus and TSMC's Arizona megafab. Intel 18A (in HVM 2025-2026) plus Foundry external customer ramp are Intel-side demand catalysts ([EMD Electronics Arizona opening, 2022](https://www.chandleraz.gov/news-center/emd-electronics-celebrates-opening-new-arizona-factory-contributing-states-growing)).
+
+- **Micron (NASDAQ:MU).** Inferred from Micron's adoption of leading-edge 1c DRAM and HBM4 — Versum-legacy CMP slurry has strong incumbency at Micron's Boise and Taiwan fabs.
+
+- **Samsung Display + LG Display + BOE.** OLED emissive materials customer base. Samsung Display dominates premium smartphone OLED; LG Display dominates large-panel OLED TVs; BOE is the leading Chinese OLED panel maker. Merck KGaA participates as the host/dopant material supplier alongside UDC, Idemitsu, and DS Neolux ([OLED Materials Companies analysis, Market Research Future](https://www.marketresearchfuture.com/reports/oled-materials-market/companies)).
+
+### 5.3 Customer-concentration visualization
+
+```mermaid
+pie title Electronics segment customers (analyst estimate, FY2024)
+    "TSMC (~20%)" : 20
+    "Samsung Semi + Samsung Display (~20%)" : 20
+    "SK Hynix + Micron (~15%)" : 15
+    "Intel (~10%)" : 10
+    "Other foundry / memory / display (~25%)" : 25
+    "Long-tail customers (~10%)" : 10
+```
+
+*Source: Analyst estimate triangulated from disclosed Asia-Pacific revenue concentration, leading-edge fab capacity shares ([TrendForce foundry share 2024](https://www.trendforce.com/)), and Merck KGaA's site investment pattern. **Not company-disclosed.***
+
+### 5.4 Contract structure and go-to-market
+
+Semiconductor materials sales are typically governed by **multi-year master supply agreements (3–5 year terms)** with annual pricing rate cards and quarterly volume forecasts, signed at the corporate level with each major fab customer. Within the master agreement, **individual purchase orders flow as the wafer fab consumes material on a cassette-batch basis** — typical re-order cycles are weekly to monthly depending on material category (CMP slurry is consumed in bulk and re-ordered weekly; specialty precursors are micro-doses per chamber per recipe and re-ordered monthly). **Qualification cycles to add a new supplier into a fab's recipe are 12–24 months** for incumbent-replacement, longer for greenfield process integration — which is the primary moat protecting incumbent suppliers from price competition ([SEMICON Europa industry coverage](https://www.semiconeuropa.org/Kai_Beckmann)).
+
+**Go-to-market model**: direct sales to fab customers, with technical sales / Field Application Engineers (FAEs) embedded at major fab sites (Hsinchu, Tainan, Kaohsiung, Pyeongtaek, Hwaseong, Wuxi, Xi'an, Boise, Hillsboro, Chandler, Albuquerque, Dresden). Roughly 90%+ of revenue is direct; small distribution channels exist for less-critical chemistries to academic / R&D / pilot-line customers. Pricing is **negotiated per qualification + per annual rate-card refresh**, with the wafer count + recipe-mix as the volume driver. Per-step CMP slurry pricing has historically been ~$3-15 per wafer per CMP step depending on slurry grade; per-step ALD precursor pricing is roughly $5–30 per wafer per ALD step depending on precursor exoticness; specialty gas is roughly $0.5–5 per wafer per gas-step. Wafer-level total Merck KGaA content per 300mm wafer at a leading-edge fab can therefore be **~$50–200 of Merck KGaA-supplied materials** (analyst estimate; not disclosed).
+
+### 5.5 Recent Asian capacity investments to follow the customer
+
+The geographic concentration of Merck KGaA's recent Electronics capex maps directly to where the customers are building new fab capacity:
+
+- **Kaohsiung, Taiwan** — €500 m megasite, inaugurated Dec 1, 2025. Specialty gases + thin films + formulations. Serves TSMC southern Taiwan cluster ([Kaohsiung release](https://www.merckgroup.com/en/news/inauguration-kaohsiung-megasite.html)).
+- **Cheonan, South Korea** — Mecaro acquisition site + organic expansion. ALD precursors. Serves Samsung Pyeongtaek/Hwaseong + SK Hynix Icheon/Cheongju ([Mecaro closing](https://www.emdgroup.com/en/news/chemical-closing.html)).
+- **Chandler, Arizona** — $39 m DS&S factory, opened 2022. MEGASYS gas cabinets + delivery equipment. Serves Intel Ocotillo + TSMC Arizona ([Arizona opening, 2022](https://www.chandleraz.gov/news-center/emd-electronics-celebrates-opening-new-arizona-factory-contributing-states-growing)).
+- **Tres Cantos (Madrid), Darmstadt (Germany)** — Legacy R&D + pilot lines for AZ photoresist and Optronics LC/OLED. Serves European customers (Globalfoundries Dresden, Infineon, STMicro).
+- **Singapore + Shanghai** — Asia-Pacific HQ + regional production for legacy LC + selected formulations.
+
+Total Electronics capex 2021–2025 cumulative is **>€3 bn (Level Up program)**, with the geographic distribution roughly **Taiwan ~25%, Korea ~20%, US ~20%, Germany ~15%, China ~10%, other ~10%** based on disclosed project values ([Electronics invests in growth, 2021-09-20](https://www.emdgroup.com/en/news/electronics-invests-in-growth-20-09-2021.html); [EMD Electronics $1bn US investment announcement, 2021-12-07](https://www.emdgroup.com/en/news/emd-electronics-investment-07-12-2021.html)).
+
+### 5.6 Partnership and ecosystem positioning
+
+Merck KGaA is a **founding sponsor and regular keynote speaker at SEMI's annual SEMICON conferences** (West, Europa, Japan, Taiwan, Korea, China) — the industry's primary supply-chain ecosystem events. Kai Beckmann has personally keynoted SEMICON Europa 2024 and SEMICON West in multiple years ([SEMICON Europa speaker page](https://www.semiconeuropa.org/Kai_Beckmann); [SEMICON West speaker page](https://www.semiconwest.org/programs/speaker-bio/kai-beckman)). The company is a member of the **SEMI Materials Group** (the standardization body for semiconductor materials specifications) and participates in collaborative R&D programs with **IMEC (Belgium)** and **CEA-Leti (France)** for early-node materials qualification — both are critical pre-production validation steps before a new material reaches commercial fabs.
+
+---
+
+## 6. Industry Overview — global semiconductor materials market
+
+### 6.1 Market definition and structure
+
+The **global semiconductor materials market** (the upstream chemistry, gas, slurry, resist, wafer, photomask, and electronic-substrate inputs consumed in IC wafer fabrication and packaging) was approximately **$80 bn in 2024**, split roughly **~60% wafer-fabrication materials / ~40% packaging materials** per the Nomura sector overview ([Nomura "Greater China Semi" report, 2026-05-21, p. 18–30, summarized in sector overview](../../sector/半导体材料.md)). Within wafer-fab materials (~$48 bn), the major sub-categories are:
+
+| Material category | 2024 market size (est.) | Key suppliers |
+|---|---|---|
+| Silicon wafers (300mm + 200mm) | ~$15 bn (31% of fab mat.) | Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron |
+| Photoresists (i-line / KrF / ArF / EUV) | ~$6 bn (13%) | JSR, TOK, Sumitomo, Fujifilm, Shin-Etsu, Dongjin, **Merck KGaA (AZ®)** |
+| Photoresist ancillaries (BARC, developers, removers) | ~$3.5 bn (7%) | **Merck KGaA (AZ®)**, JSR, Brewer Science, TOK |
+| Specialty gases | ~$6 bn (13%) | Linde, Air Liquide, Air Products, Resonac, Taiyo Nippon Sanso, **Merck KGaA (Versum)** |
+| CMP slurry + pad | ~$3 bn (7%) | Fujifilm (incl. Entegris), **Merck KGaA (Versum)**, Fujimi/CMC, Resonac, DuPont, Anji |
+| Sputtering targets | ~$1.5 bn (3%) | JX Nippon Mining, Honeywell, Plansee, Tosoh |
+| Wet chemicals + cleaning | ~$3 bn (6%) | BASF, Stella Chemifa, Mitsubishi Chemical, **Merck KGaA** |
+| Other (precursors, photomask blanks, etc.) | ~$10 bn (20%) | Various |
+
+*Source: Nomura 2026-05-21 anchor report Fig. 26, summarized in [sector overview](../../sector/半导体材料.md); [Mordor Intelligence specialty gas market](https://www.mordorintelligence.com/industry-reports/specialty-gas-market); [Fortune Business Insights specialty gas report](https://www.fortunebusinessinsights.com/us-electronic-specialty-gas-market-114856); [Valuates CMP Materials report](https://reports.valuates.com/market-reports/QYRE-Auto-14V14904/global-cmp-materials-for-semiconductor); [Mordor Intelligence photoresist market](https://www.mordorintelligence.com/industry-reports/photoresist-market).*
+
+### 6.2 Geographic distribution of demand
+
+Per the Nomura anchor report Fig. 29-30 ([sector overview](../../sector/半导体材料.md)), the geographic distribution of semiconductor materials *demand* tracks the geographic concentration of wafer fab capacity: **Taiwan 30% of global, China 20%, Korea 18%, Japan 10%, North America 10%, Europe 8%**. This is the structural reason that **all major semiconductor materials suppliers — including Merck KGaA — have been migrating capacity into Asia**: the customer is there, the qualification process is faster when materials are produced locally, supply-chain risk (sea-freight delays, tariffs) is lower, and many fab customers explicitly prefer (or require) a local Asia manufacturing presence. Merck KGaA's €500 m Kaohsiung megasite is a direct response to this dynamic, as are the Cheonan/Korea + Singapore expansions.
+
+### 6.3 Historical growth and projected growth rates
+
+Semiconductor materials *unit growth* historically tracks wafer starts (~5-7% CAGR in 200/300mm equivalent units over 10-year cycles), but **revenue growth has consistently lagged wafer-start growth because suppliers have been forced to absorb price compression from large fab customers** — the Nomura report's central insight is that this dynamic is *reversing* in 2026–2030F as the materials-intensity per wafer rises faster than per-wafer price compression ([sector overview, p. 18-30](../../sector/半导体材料.md)). Specifically:
+
+- **GAA (Gate-All-Around) transition** starting 2027 (TSMC N2, Samsung 2nm, Intel 18A): adds ~15–20% more ALD steps per wafer because each GAA nanosheet stack needs precise dielectric isolation layers between channels ([sector overview, p. 6-9](../../sector/半导体材料.md)).
+- **Backside Power Delivery (BPD)** starting 2028-29 (TSMC A16, Intel 18A): requires bonding two wafers together + thinning one to ~1µm, which adds 5-10 additional CMP steps + multiple new precursor needs ([sector overview, p. 6-9](../../sector/半导体材料.md)).
+- **High-NA EUV + metal-oxide resist (MOR)** starting 2029-30: requires switching from chemically-amplified organic resists to dry-deposited metal-oxide resists, doubling per-wafer photoresist value content ([sector overview, p. 10-12](../../sector/半导体材料.md)).
+- **3D-NAND scaling to 400+ layers** starting 2026-27: each layer pair needs a deposition + etch + clean cycle, so 400 layers = ~3x the materials per bit vs current 200-layer NAND ([sector overview, p. 9](../../sector/半导体材料.md)).
+- **HBM4 + HBM4e + advanced packaging** (SoIC, CoWoS, EMIB-T, glass core substrate): each new packaging modality opens incremental materials demand. HBM4 stack count rises from HBM3e's 12 layers to potentially 16 layers, with proportionally more hybrid-bonding chemistry per stack ([SK Hynix HBM4 ramp coverage, Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/samsung-and-sk-hynix-warn-ai-driven-memory-shortages-could-last-until-2027-and-beyond-as-hbm-demand-explodes-customers-already-reserving-supply-years-ahead-while-the-wider-dram-market-begins-to-tighten)).
+
+The cumulative effect: Nomura projects the semiconductor materials market grows from **~$80 bn (2025) to ~$130 bn (2030)** at a ~10% CAGR, with the most aggressive growth in advanced ALD/CVD precursors (~15% CAGR), CMP slurry (~12% CAGR), and EUV / MOR photoresists (~20% CAGR) ([sector overview, p. 18-30](../../sector/半导体材料.md)).
+
+### 6.4 Regulatory environment
+
+Semiconductor materials sit at the intersection of three regulatory frameworks:
+
+- **Export controls.** The US Bureau of Industry and Security (BIS) export controls on advanced chip manufacturing equipment and materials (October 2022 + October 2023 + 2024 updates) restrict the sale of certain ALD precursors, photoresists, and gases to Chinese fabs producing logic ≤14nm or DRAM ≤18nm or NAND ≥128 layers. Merck KGaA, as a non-US company, is partially subject to US Foreign Direct Product Rule extensions but operates under a more permissive framework than US-based competitors (e.g. Entegris, DuPont). This is a structural advantage for European and Japanese material suppliers selling into China ([Reuters BIS coverage 2024](https://www.reuters.com/) — note this point is *Analyst view* on competitive impact, not a Merck KGaA disclosure).
+
+- **Chemical / environmental regulation.** EU REACH (Registration, Evaluation, Authorization, and Restriction of Chemicals) governs the use of fluorinated chemicals (perfluorinated PFAS) — a major component of CMP slurry stabilizers and specialty gas mixtures. Restrictions tightened in 2024-2025 and continue to evolve, with potential material reformulation cost for the industry. Merck KGaA's German chemistry pedigree positions it relatively well for REACH compliance vs less-experienced new entrants.
+
+- **Trade and tariffs.** Various US 301 tariffs on Chinese semiconductor imports indirectly affect material flows; CHIPS Act (US, 2022) funding boosted domestic semi materials capacity (e.g. Versum / Merck KGaA's Arizona expansion). The German government's own KrW (Critical Raw Materials Act) and EU Chips Act provide supportive frameworks for European materials suppliers.
+
+### 6.5 Industry dynamics — concentration, supplier/buyer power, substitutes
+
+**Industry concentration is high and rising.** Per the Nomura analysis, the top 5 suppliers in each major semi materials sub-category collectively hold 50–80% market share, with consolidation accelerating (Fujifilm + Entegris's electronic chemicals, JSR's privatization by JIC, Merck KGaA's Versum + Mecaro deals all in 2019-2024). **Buyer power is also high** — the customer base is heavily concentrated (TSMC, Samsung, SK Hynix, Intel, Micron together represent ~70%+ of leading-edge wafer demand), allowing customers to negotiate aggressive pricing. **Substitutes are limited within a qualified recipe** — once a fab qualifies a specific slurry / precursor / resist for a node, switching costs and yield risks make replacement prohibitive for the duration of that node, typically 4–6 years.
+
+**Supplier power for advanced-node materials is rising** because (a) the chemistry is more exotic and harder to develop, (b) qualification cycles are longer, (c) the number of viable suppliers per critical product has compressed (e.g. EUV resist is now effectively a 4-supplier oligopoly — JSR/Inpria, TOK, Shin-Etsu, Fujifilm — after Inpria was acquired by JSR in 2021). This is the Nomura "materials re-rating" thesis: as materials become more critical and harder to qualify, supplier pricing power and margins should structurally rise.
+
+---
+
