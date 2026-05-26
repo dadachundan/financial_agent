@@ -197,3 +197,69 @@ Basic Metals 分部 FY25 实现 **¥3,041 亿营收 / ¥745 亿营业利润**—
 近 12 个月内会影响 FY26–28 产品路线图的发布和产能公告：**Mesa AZ 半导体溅射靶工厂投产（2024 年 11 月）**、宣布的 **¥33 亿 InP 衬底约 50% 产能提升（2025 年 10 月）**、**正在考虑中的 Rapidus ¥50 亿股权投资**（TrendForce 2026 年 1 月报道）及同步签订的北海道 2nm 晶圆厂材料供应合同（[TrendForce — JX Advanced Metals plans ¥5bn investment in Rapidus + critical materials supply, 2026-01-21](https://www.trendforce.com/news/2026/01/21/news-jx-advanced-metals-reportedly-plans-%C2%A55b-investment-in-rapidus-along-with-critical-materials-supply/)），以及 **计划中的 2025 年 11 月与三菱材料关于铜 / 先进材料的战略供应 MOU**（[Mitsubishi Materials — Execution of a Memorandum of Understanding Concerning the Integration of Recycling Businesses, 2025-11-11](https://www.mmc.co.jp/corporate/en/news/2025/news20251111.html)）。
 
 ---
+
+## 5. 客户与上市策略
+
+JX 的客户基础按三个分部清晰分为三大不同群组，并由公司垂直整合的产品供应结构所塑造。
+
+**Functional Materials 客户** 是全球领先的逻辑和存储晶圆厂。尽管 Yuho 在 ASC 280 / IAS 8 下不将任一 Functional Materials 客户列为重大客户（无单一客户达到 IFRS 10% 披露门槛），但在第 9 页**直接点名 TSMC 和英特尔为发奖客户**——*"連続 4 年获得英特尔设立的 EPIC Distinguished Supplier Award (2021–2024)，并于 2024 年获得 TSMC 设立的 Excellent Performance Award"*（[JX Advanced Metals 有価証券報告書 第23期, p.9 (verbatim)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。独立行业报道和 [野村 sector report 2026-05-21](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) 印证客户名单包括 **TSMC、三星电子、英特尔、SK 海力士、美光、铠侠、GlobalFoundries、UMC、SMIC、YMTC 和 Rapidus**——实质上覆盖全球所有领先制程逻辑和存储晶圆厂。Yuho 披露 FY25 半导体溅射靶销售的地理分布（台湾 36%、韩国 17%、美国 11%、日本 11%、中国 12%、其他 13%）与这些客户晶圆厂的地理分布一一对应——即使没有公司名级别披露，也是有效的客户集中度代理指标（[JX Advanced Metals 有価証券報告書 第23期, p.9](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。
+
+![JX Advanced Metals FY25 半导体溅射靶销售按地区分布](../../charts/jxadvanced_sputter_geo.png)
+*资料来源：[JX Advanced Metals 有価証券報告書 第23期, p.9 (販売比率)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)。台湾占比高反映 TSMC 领先制程产能集中。*
+
+**FY25 IFRS 10% 客户披露指向单一客户：占合并营收 28.6% 的 PPC (Pan Pacific Copper) — Basic Metals 分部**，FY25 销售 ¥2,045 亿（[JX Advanced Metals 有価証券報告書 第23期, p.106 (注記 7 (5) 主要な顧客に関する情報)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。PPC 是与三井金属、（2024 年 3 月起）丸红的铜冶炼合资公司——JX 保留 47.8% 权益法持股——因此这 28.6% "集中度" 是集团内向自身联营冶炼公司销售铜精矿的内部资金流，而非真实的第三方客户集中。**Functional Materials 与 ICT Materials 各自无单一客户超过 10% 门槛**（同一 Yuho 注记）。这是与股权投资者相关的事实：从 *真实* 终端客户集中度（实际消耗 JX 产品的晶圆厂）来看，JX 的集中度非常低——但按 *关联方* 指标，IFRS 披露被 JX 自身参股的冶炼合资公司的集团内铜销售所主导。
+
+对风险的含义：JX 不承担 Tatsuta 电线或 TSMC-富士康式供应商的逐家客户集中风险，但确实承担 **晶圆厂层级集中度**——其前 3–5 家晶圆厂（TSMC、三星、英特尔、SK 海力士、美光）合计消耗 Functional Materials 分部的份额大致相当于这些公司在领先节点上的产能份额（合计约 70–80%，*分析师估算*）。§9 风险讨论将此作为顶层集中度处理，即使 10% 披露未将其标出。
+
+```mermaid
+pie title FY25 半导体溅射靶发运目的地 (按分部销售 %)
+    "台湾 (TSMC + UMC)" : 36
+    "韩国 (三星 + SK 海力士)" : 17
+    "美国 (英特尔 + 美光)" : 11
+    "日本 (铠侠 + Rapidus)" : 11
+    "中国 (SMIC + YMTC 等)" : 12
+    "其他" : 13
+```
+*资料来源：[JX Advanced Metals 有価証券報告書 第23期, p.9](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf) — 复刻 Yuho 地区分布，每地区点名的晶圆厂为分析师依各区主要晶圆厂位置标注。*
+
+**ICT Materials 客户逻辑不同——价值链多一层中介**。JX 向 **CCL（覆铜板）和 FPC 厂** 销售压延铜箔——主要为亚洲 CCL/FPC 供应链（鸿海 / 富士康柔性 PCB 部门、住友电气、臻鼎、Mektron 等）——**这些 CCL/FPC 厂再将产品出货到苹果、三星、华为、特斯拉、比亚迪、蔚来、AI 服务器 ODM 等**。Yuho 直接论述了这一 "**市场开发型策略**"——JX 直接与终端 OEM（苹果、三星、智能手机、可穿戴和移动出行品牌）对接，在 OEM 选择 CCL/FPC 供应商之前先把材料规格植入 OEM 的设计——载于第 11 页（[JX Advanced Metals 有価証券報告書 第23期, p.11 (②市場開発型アプローチ — エンドユーザー20年以上の関係)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。20 年关系是核心护城河：一旦 JX 的 HA 级铜箔被纳入苹果 Pro / 三星 Galaxy / 特斯拉主板的 BOM，CCL 厂没法替换——需要回到 OEM 端重启验证周期。
+
+**Basic Metals 客户** 是大宗铜买家——主要是亚洲电线杆和电气设备厂——以及 ENEOS Trading（已剥离为 JX Metals Trading）作为遗留的内部销售渠道。定价按 LME 价加冶炼 / 精炼溢价，合同通常为年度框架协议 + 月度提货。这是价格接受者业务；JX 的差异化在于 **PCL100/mb 和 MR100/mb 100% 回收铜 SKU**，针对寻求可溯源铜的晶圆厂和 OEM 以一定溢价销售（[JX Advanced Metals 有価証券報告書 第23期, p.29](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。
+
+**销售渠道。**溅射靶和 InP 客户均直接销售——通常为多年供货协议，技术服务关系经由区域销售 / 工程枢纽运行：钱德勒（亚利桑那）的 JX Advanced Metals USA、平泽的 JX Advanced Metals Korea、龙潭的 Taiwan Nikko Metals、苏州的 Nikko Metals Suzhou、Goslar 的 TANIOBIS（[JX Advanced Metals 有価証券報告書 第23期, p.15 (関係会社の状況 — 主要子会社の所在地と機能)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。压延铜箔和 Ti-Cu 连接器条带经由 CCL/FPC 分销商和内部 JX Metals Trading 网络。铜阴极和铜锭直接销售给工业客户和经由 Pan Pacific Copper。先进溅射靶在新节点（例如 TSMC N3 钽靶）全验证认证可需 12–18 个月——这是新进入者难以分得份额的结构性原因之一。
+
+值得标注的 2024–25 年最大伙伴关系信号是 **TSMC 亚利桑那量产**——这是 JX 建设 Mesa AZ 工厂的明确理由——TSMC 凤凰城 Fab 21（距 JX Mesa 厂约 50 公里）于 2025–26 年开始 N4/N3 量产，随后 N2 产能跟进，TSMC 本地采购政策让 JX 获得这些晶圆出货的合格供应商身份（*分析师观点：* 这是野村 sector report 中 TSMC 本土化论点下 JX "本地内容" 胜出的运营基础——[reports/sector/半导体材料.md — 野村 2026-05-21, p.13-14 (TSMC 本土化清单 — 直接受益方: AEMC / Ingentec / Kinik / GWC, JX 隐含)](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)）。
+
+---
+
+## 6. 行业概览
+
+JX 在三个截然不同的行业中竞争，它们共享同一原料骨架（铜、稀有金属），但在客户结构、增长曲线、竞争烈度和资本周期上各不相同。
+
+### 6.1 半导体材料 — 高估值的核心论点
+
+全球半导体材料行业 2025 年规模约 **USD 800 亿**，按 [野村 "Greater China Semi 2026–30F" 报告, 2026-05-21, p.18](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) 大致分为 60% IC 制造材料和 40% 封装材料。在 IC 制造内的支出权重为：**硅晶圆 ~31%、光刻胶 ~13%、光刻胶辅料 ~7%、特气 ~13%、CMP 浆料和垫 ~7%、溅射靶材 ~3%**（[reports/sector/半导体材料.md — Fig 26 比例分解](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)）。溅射靶线因此是整体材料市场中单位数百分比的一小部分——按 Yuho 引用富士经济 2023 年 ¥1,462 亿（约合 USD 10.4 亿，按 2023 年末 ¥141/USD）——但 JX 64% 全球份额意味着公司捕获其中大头（[JX Advanced Metals 有価証券報告書 第23期, p.9-10 (note 1/2 引用富士经济 2023 年实绩)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。
+
+结构性增长驱动来自 **硅晶圆出货面积预测**：TechInsights 《全球硅需求历史与预测》2025 年 3 月预测 **2023→2027 总硅出货面积复合年增长率 7.1%**，其中 **≤5nm 节点的 CAGR 达到 36.9%**——溅射靶单位销量增长快于晶圆面积，因为更先进节点单晶圆有 **更多互连层、对应更多溅射工艺步骤**（[JX Advanced Metals 有価証券報告書 第23期, p.19 (経営環境 ①フォーカス事業：半導体材料セグメント — TechInsights "Worldwide Silicon Demand History and Forecast" 2025-03)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)；[TechInsights — 企业主页 / Silicon Demand Forecast 服务线 引用见 JX Yuho p.19](https://www.techinsights.com/)）。第二层驱动是 **AI 服务器出货 2023–2028 CAGR 30.2%**（Prismark Partners）和 **数据中心 GPU 出货 2023–2027 CAGR 42.4%**（富士奇美拉总研）——两者直接拉动 Functional Materials 的溅射靶 + InP 衬底 + Ta 电容粉末需求（[JX Advanced Metals 有価証券報告書 第23期, p.19 (AIサーバ出荷台数 30.2% CAGR per Prismark / GPU出荷数量 42.4% CAGR per 富士キメラ総研)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。
+
+[野村 sector report, 2026-05-21](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) 标识的 **2026–2030 技术拐点浪潮** 同时叠加多个 JX 受益主题：(a) **GAA / N1.6 / A16 逻辑节点切换** 每片晶圆增加 20–30% 溅射步骤 (Cu、Ta、Ti、Co、W)；(b) **背面供电 (BPD)** 通过晶圆键合 + 减薄要求晶圆背面增加一层铜互连；(c) **SoIC / 混合键合** 本身轻溅射靶用量但增加键合界面高纯度铜垫需求；(d) **High-NA EUV**（同一野村报告判断）本身不取代溅射，但加快金属栅 / 金属填充工艺，依赖 Co / W 溅射靶；(e) **SiPh / CPO 量产** 将 InP 衬底需求推入 2026–28 超级周期；(f) **HBM4 / DRAM-on-logic (WoW)** 推升存储侧铜靶需求。野村报告 Fig 44 排行榜将 JX 置于半导体溅射靶份额第一位（[reports/sector/半导体材料.md — p.69-70 (Fig 35-44 供应商排行榜)](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)）。
+
+### 6.2 FPC / 压延铜箔 — 智能手机、可穿戴、电动车柔性基板
+
+按富士奇美拉总研 2023 年数据，高端 RA 压延铜箔市场规模 **¥405 亿 / ~USD 2.9 亿**——比更广义的铜箔市场（包括电池用 ED 铜箔、低端 CCL 等）小得多——但是 *最高利润率* 的细分领域，也是 JX 主张 78% 份额的所在（[JX Advanced Metals 有価証券報告書 第23期, p.11 (注１ 富士キメラ総研 "2024エレクトロニクス実装ニューマテリアル便覧")](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。Prismark Partners 2024 年第四季度《Printed Circuit Report》预测 FPC 面积 **2024–2029 CAGR 7.8%**（[JX Advanced Metals 有価証券報告書 第23期, p.20 (注 Prismark Partners LLC "The Printed Circuit Report Fourth Quarter / March 2025")](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)；[Prismark Partners — Printed Circuit Reports 发行人 引用见 JX Yuho p.20](https://www.linkedin.com/company/prismark-partners/)）。Yuho 自身分析的增长驱动包括：智能手机 / PC AI 功能加载，要求更小 / 更高功能的柔性零件；可穿戴（智能手表、智能眼镜），弯折寿命要求高；**电动车 / xEV / ADAS** 领域信号屏蔽柔性线缆繁多；长期看，**服务机器人 / 工业机器人** 应用需要在反复机械应力下复杂柔性布线（[JX Advanced Metals 有価証券報告書 第23期, p.20 (②情報通信材料セグメント — 経営環境)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。
+
+RA 铜箔类别的结构性风险是 **被特殊级 ED（电解）铜箔替代**——但 JX 引用的 IPC 弯折寿命数据（53 万次 vs 17 万次，约 3 倍优势）是过去 20 年保持的护城河，短期内不会翻盘，因为底层冶金机制（轧制 + 退火产生的晶粒结构与电解沉积截然不同）结构性差异。
+
+### 6.3 化合物半导体 — InP、CdZnTe 和光互连超级周期
+
+按 [野村 sector report, 2026-05-21, p.11-12 + 60-65](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)，InP 衬底市场绝对规模较小（晶圆层级几亿美元），但是 **整个 AI / 光模块价值链上供应最紧张的单一材料**。需求由 **1.6T / 800G 光模块** 驱动（每个模块包含一个或多个基于 InP 的 EML 或 DFB CW 激光器），以及新兴 **CPO（共封装光学）** 将激光器 + 调制器直接放入 ASIC 封装。供应受三个因素约束：晶体生长环节 ~50% 晶圆良率（InP 晶体机械脆弱，采用液封提拉或 VGF 法生长，本质上比硅 CZ 更难）；中国在 2024 年末为反制美国半导体制裁实施的铟金属出口管制；以及 Veeco 和 Aixtron 等 MOCVD 外延设备的 >12 个月交付周期（[reports/sector/半导体材料.md — 野村 2026-05-21, p.60-65](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)；[AInvest — InP Substrate Industry Surges, 2025-10](https://semiconductorinsight.com/blog/inp-substrate-industry-surges-jx-advanced-metals-expands-capacity-axt-restores-exports-fraunhofer-unveils-150-mm-inp-on-gaas-wafers/)）。市场由 **三家商用供应商主导——JX Advanced Metals（日本）、住友电气（日本）、AXT（美国上市但中国制造）**——加上 Lumentum / Coherent 的 IDM 自用供给（不在商用市场流通）。野村预测假设供应紧张状态持续至少到 2028F。
+
+### 6.4 铜冶炼与精炼 — 基础业务背景
+
+按 [国际铜研究小组 2024 World Copper Factbook](https://icsg.org/copper-factbook/)，全球铜精铜需求在 2020 年代以低单位数速度增长，预计在能源转型 / EV 电气化的十年内加速——EV 用铜量是燃油车的 4 倍（电机线圈 + 电池组），而电网规模可再生能源（太阳能逆变器、风电输电、储能）单兆瓦耗铜远超传统化石燃料发电（[JX Advanced Metals 有価証券報告書 第23期, p.20 (③基礎材料セグメント — 経営環境)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)；[国际铜研究小组 — Copper Factbook 2024](https://icsg.org/copper-factbook/)）。反面是结构性供给紧张——现有铜矿矿石品位逐年下降、项目管线审批周期多年、LME 铜价 FY25 在 USD 4–5/lb (405–492 美分/磅) 区间波动——按 JX Yuho 披露，FY25 触及 **2024 年 5 月历史高点 492 美分/磅**，最后以 425 美分/磅收尾（[JX Advanced Metals 有価証券報告書 第23期, p.38 (LME銅価 — 期初405 → 5月最高492 → 期末439 → 期平均425)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。佐贺关冶炼厂受益于这一供应紧张背景，因为铜精矿短缺会推升加工费 / 精炼费 (TC/RC) 经济性。
+
+### 6.5 行业结构 — 供应商力量、买方力量、进入壁垒
+
+在三大行业中，JX 处于结构上有利的位置：**(a) 极高的上游原材料控制**（唯一拥有自有铜矿权益 + 冶炼厂的溅射靶同业）；**(b) 极高的下游客户切换成本**（TSMC N3 合格的溅射靶难以第二来源切换——验证周期 12–18 个月，且承担晶圆厂中断风险）；**(c) 极高进入壁垒**——在 6N / 9N 纯化工艺（全球少数设施拥有电解产能）、RA 铜箔轧制工艺（日立工厂的 RA 铜轧制线是全球仅有的两条具备所需弯折寿命冶金的线之一）、以及 InP 晶体生长（全球仅 3 家商用供应商）；**(d) 中等但上升的监管顺风** 来自来源可追溯和 ESG 采购要求（PCL100/mb / MR100/mb 是商业回应）。JX 在三大业务中唯一处于价格接受者地位的是铜冶炼，但该分部对股权相关利润率贡献最小。
+
+---
