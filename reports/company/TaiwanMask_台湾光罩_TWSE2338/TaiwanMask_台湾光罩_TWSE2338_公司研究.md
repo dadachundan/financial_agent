@@ -50,6 +50,10 @@ TMC 总部 + 全部生产基地都在**新竹科学园区创新一路 11 号**�
 
 2025 年情况进一步恶化——根据公司每月公告 (MOPS 营收快报)，2025 年合计营收 **NT$60.38 亿** (YoY −20.2%)，单月 YoY 在 25/06 一度跌至 **−22%**、25/09 跌至 **−33%**，反映成熟节点景气低谷 + 子公司加速整顿；进入 2026 Q1 月营收开始稳住在 NT$4.6–5.4 亿区间，YoY 跌幅收窄 ([光罩 2025 年 11 月营收 NT$4.59 亿, win 投资 2025-12](https://winvest.tw/News/Detail/74291); [光罩 2026 年 02 月营收, win 投资 2026-03](https://winvest.tw/Stock/Symbol/MonthlyRevenue/2338))。
 
+![月营收与同比走势](../../charts/taiwanmask_monthly_revenue.png)
+
+*图 1.3 台湾光罩 月营收与 YoY 走势 (2024/01–2026/04)。来源：[光罩 (2338) 每月营收公告, win 投资 2024-26](https://winvest.tw/Stock/Symbol/MonthlyRevenue/2338); MOPS 公开资讯观测站。*
+
 ### 1.5 Valuation snapshot——市场怎么定价
 
 截至 2026 年 5 月 26 日盘中，TMC 股价 **NT$55.40**, 流通在外 2.77 亿股，**市值 NT$153.5 亿** (≈ USD 4.71 亿) ([Stock Analysis (TPE:2338), 2026-05-26](https://stockanalysis.com/quote/tpe/2338/statistics/))。
@@ -679,6 +683,183 @@ TMC 2024 营收 NT$75.6 亿 = USD ~232 mn, 即 SOM/SAM ≈ **0.9-1.1%**, SOM/TAM
 **整体 §8 的 message:** TMC 占全球光罩 TAM <1%, 但占其可服务 SAM 1.2%, 占台湾本土小赛道 20-25%——增长空间在主业回稳 (短期) + 14 吋 advanced packaging (中期) + 第三类半导体 (长期) 三轨; 预期 2026-27F 才进入可量化的兑现窗口。
 
 ---
+
+## 9. 风险评估 (Risk Assessment)
+
+按公司研究 skill 的风险分类法 (8-12 个风险, 4 个 bucket), 以下是 TMC 的关键风险清单。
+
+### 9.A 公司特定风险 (Company-Specific Risks)
+
+**R1 执行风险——新主与现任 CEO 的整合 + 子公司剥离能否如期完成 (高严重度)**
+新任董事长 凃俊光 2025-08 上任时间不足 12 个月, 与现任 CEO 陳立惇 的协作还在磨合; "剥离亏损子公司"是难度极高的执行——14 家投资中至少 6 家亏损, 涉及艾格生 (镀膜)、光环 (光通讯)、波克夏 (光通讯)、昱厚 (生技)、威達高科 (触控)、群豐 (Flash 封装) 等不同业务, 每家剥离都需要分别找买家或缩减规模, 处置过程会产生一次性损益冲击。**预估影响**: 若 2026-27F 剥离顺利可减少非控制权益亏损 NT$3-4 亿/年, 但执行延迟可能让市场重估 PE folder 价值。**Mitigant**: 新主大宇资 NT$15.46 亿入股的财务实力 + 凃俊光在揚智的并行整顿经验。
+
+**R2 客户集中度——单一客户甲 12% (轻微风险)**
+依 [2024 年报第 65 页](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf), 单一客户甲 12% 占总营收, **低于 skill 中 "material" 阈值 20%**, 是相对安全的客户集中度。**风险情境**: 若客户甲 (推断可能为 TSMC 或 UMC) 进一步内化 mask 制造, 或转向 PDMC, TMC 可能损失 ~NT$0.9 亿/年的营收, 影响 ~1.2%。客户的多样性 (400+ 累积客户) 是 mitigant。
+
+**R3 关键人物依赖 (中风险)**
+现任 CEO 陳立惇是 14 吋光罩攻先进封装战略的关键执行者——其精材科技 12 吋 WLCSP 经历是不可替代的产业 know-how。若离职, 新主可能难以找到同等行业经历的替代者。**Mitigant**: 陳立惇持股 1.46%、是十大个人股东之一, 与新主战略对齐良好, 离任风险中等。
+
+**R4 产品 / 技术过时——EUV / 7nm 以下结构性缺位 (高长期风险)**
+TMC 没有 EUV 能力, 全球 mask 行业向 EUV + 14nm 以下迁移的过程中, TMC 的可服务 SAM 增速会显著低于全球 TAM 增速。如果不能在 2030 前突破 28nm 量产, **TMC 的可服务市场可能从 ~USD 22 亿萎缩到 USD 15-18 亿**, 营收上限被锁死。**Mitigant**: 现实是 TMC 选择不去攻 EUV, 而是聚焦 8/12 吋成熟 + 14 吋 advanced packaging, 这是合理的差异化, 但天花板自然较低。
+
+**R5 14 吋扩产项目延迟 / 良率不达预期 (中风险)**
+NT$4.35 亿设备 2026 H2 安装、2027 量产, 时间窗紧。advanced packaging mask 的客户认证周期 + 良率提升需要时间, 若 2027 量产延迟到 2028, 估值预期会出现 de-rate。**Mitigant**: 公司在 §73 已自我承诺具体产销值, 显示管理层对项目进度有信心; 但执行风险仍存。
+
+**R6 子公司业务亏损扩大 (中风险)**
+2024 子公司合并亏损让非控制权益从 −NT$132 万扩到 −NT$3.23 亿, 是 2024 年净损的主因之一。若 2025-26 子公司继续亏损扩大, 可能进一步吃掉本业利润, 影响 EPS 转正时点。**Mitigant**: 新主明确表态"止血", 2026 起子公司整顿会逐步显效。
+
+### 9.B 行业 / 市场风险 (Industry / Market Risks)
+
+**R7 周期性下行 (中高风险)**
+半导体行业是周期性极强的产业, 光罩需求与晶圆代工稼动率高度相关。2024-25 光罩行业已在低谷, 但若 2026-27F 行业复苏延迟, TMC 营收上行可见度推迟; 反之若 AI + advanced packaging 需求超预期, 是结构性顺风。**预估影响**: TMC 月营收 25/09 YoY −33% 是周期低谷信号; 完整复苏需要看 1H26 + 2H26 趋势 ([光罩 2025 年 11 月营收, win 投资 2025-12](https://winvest.tw/News/Detail/74291); [光罩 2026 年 02 月营收, win 投资 2026-03](https://winvest.tw/Stock/Symbol/MonthlyRevenue/2338))。
+
+**R8 中国大陆光罩厂低价竞争 (中风险)**
+年报第 64 页明确"大陆内地光罩厂的产能不断开出, 并採取低价策略进入市场"作为不利因素。中国 (深圳 Newway / Qingyi 等) 在国家补贴 + 12 吋扩产带动下, 是 TMC 8 吋 / 12 吋成熟节点的低端价格威胁。**Mitigant**: TMC 在 65/55/40nm 品质 + 良率仍有显著优势, 短期对中国厂客户认证速度还有 ≥2-3 年领先。
+
+**R9 技术颠覆——EBL maskless lithography (低风险)**
+理论上电子束直写 (EBL maskless lithography) 可以不用 mask, 在低产量 / 特殊应用上替代部分 mask 需求。但 EBL 速度慢 + 成本高, 量产应用尚不现实; 中期 (2030+) 部分细分场景可能有替代, 但不威胁 TMC 主要市场。
+
+**R10 出口管制 + 地缘政治 (中风险)**
+美国对中国先进半导体的出口管制 + 中国对台湾科技产业的政策风险, 都在持续演化。TMC 服务中国客户基本限制在 ≥28nm 节点, 风险相对可控, 但**长期 TMC 与中国市场的关系会更复杂**。
+
+### 9.C 财务风险 (Financial Risks)
+
+**R11 估值过高——P/S 2.7×, P/B 2.56× 已透支转型预期 (高风险)**
+
+TMC 现价 NT$55.40 (2026-05-26), 对应市值 NT$153.5 亿。当前 P/S 2.7× 高于 Photronics 1.6× (后者无亏损), 高于 Toppan 0.9× / DNP 0.7× (全球同业基准)。新主入股价 NT$24.40 (2025-08), 现价较入股价已 **+127% 涨幅**, 52-week 涨幅 +72%。
+
+**问题**: 这一估值已隐含 (a) 主业 2026-27F 回稳 + ASP 上行 + (b) 14 吋光罩 2027 顺利量产 + (c) 大宇资集团子公司整顿成功 + (d) AI + advanced packaging 主题持续——四个 catalyst 中任一不兑现, 估值都有 de-rating 压力。**保守 fair value**: 若 2027F 主业回到 2022 营收+毛利率 (NT$77.4 亿 + 31.4% GM), 14 吋初步贡献 NT$4-5 亿增量, 净利率回到 10%, EPS 估算 NT$3-3.5, 给予 18-22× P/E (Photronics 中性段 + advanced packaging 主题溢价), 对应**目标股价 NT$54-77**, 即当前价格 (NT$55) 已处于 fair value 下限。**下行风险**: 若任一 catalyst 显著延迟, P/S 回归 Photronics 同业 1.6× 意味着股价 ~NT$33, 即潜在 −40% 下行。**这是 §1 valuation snapshot 提到的 valuation/multiple-compression 风险, 在 §9 形式化作为 financial risk。**
+
+**R12 高杠杆 / 流动性 (中风险)**
+2024 年末负债比率 80.4%, 流动比率 0.77, 速动比率 ~0.6——这是高杠杆、流动性偏紧的资产负债表结构。2026-01 通过 NT$17.5 亿现金增资有助改善——但若增资认购不足或时点延后, 短期流动性压力仍存。**Mitigant**: 大宇资集团的财务背书 + TMC 历史与多家银行的授信额度可用。
+
+**R13 折旧高峰 (短期影响利润率, 长期 neutral)**
+2019-24 累积 capex 投入 NT$100+ 亿, 折旧 + 维护费用上升是 2023-24 营业毛利率从 31.4% 压到 18.8% 的核心驱动 ([2024 年报第 71 页](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))。**预期 2026-27F 折旧高峰过后, 毛利率有 ~5-8 pp 改善空间**。
+
+### 9.D 宏观经济风险 (Macroeconomic Risks)
+
+**R14 利率敏感性 (轻度)**
+年报第 74 页明确披露: 利率上升 0.25%, 税后净利变动 NT$2,100 万——这是相对较低的利率敏感度, 因长期借款多固定利率。**Mitigant**: 公司利率风险管控成熟。
+
+**R15 汇率敏感性 (中度)**
+年报第 74 页: 汇率变动 1%, 损益变动 NT$800 万——也是相对低的汇率敏感度, 主因 TMC 营收 / 成本基本上以新台币 + 美元 + 日元为主, 采用"自然避险"。**Mitigant**: 多币种业务自然抵消。
+
+**R16 地缘政治 + 台海风险 (高度但不可量化)**
+最后但最重要——TMC 的全部生产据点在新竹, 三座 fab 都在新竹科学园区。**台海冲突情境下, TMC 与整个台湾半导体产业链都将面临极端 disruption**。这是不可避免的产业风险, 也是台湾半导体产业链整体面临的"灰天鹅"。**Mitigant**: 这一风险与 TSMC、UMC 等同业一致, TMC 没有特别更高的 exposure, 但也没有海外据点可分散。
+
+---
+
+## 10. 参考资料 (References)
+
+### 主要披露源 — 公司年报与 MOPS
+
+- [台灣光罩 2024 年报 (民國 113 年度, 修订定稿, 114.08.13 公告)](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf) — 主要引用源, 引用页码: 第 1, 2, 3-7, 49, 50, 60, 61, 62, 63, 64, 65, 66, 67, 70, 71, 72, 73, 74 页
+- [台灣光罩 2023 年报 (民國 112 年度)](https://www.tmcnet.com.tw/Uploads/13/%E5%8F%B0%E7%81%A3%E5%85%89%E7%BD%A92023%E5%B9%B4%E5%BA%A6%20%E5%B9%B4%E5%A0%B1-%E4%B8%AD%E6%96%87-_225526.pdf) — 历史对比基线 (10MB)
+- [Stock Analysis (TPE:2338) Statistics, 2026-05-26 截面](https://stockanalysis.com/quote/tpe/2338/statistics/) — 市值, P/B, 流通在外股数
+- [光罩 2338 Win 投资 综合](https://winvest.tw/Stock/Symbol/Comment/2338) — TTM EPS, 股利历史
+
+### 月营收公告 (MOPS / 财经媒体转述)
+
+- [光罩 2025 年 11 月营收 NT$4.59 亿 / YoY −27.02%, win 投资 2025-12](https://winvest.tw/News/Detail/74291)
+- [光罩 2026 年 02 月营收 NT$4.59 亿 / YoY −14.5%, win 投资 2026-03](https://winvest.tw/Stock/Symbol/MonthlyRevenue/2338)
+- [光罩 2025 年 02 月营收, win 投资 2025-03](https://winvest.tw/News/Detail/54674)
+- [光罩 2025 年 05 月营收 NT$5.60 亿, 云投资 2025-06](https://winvest.tw/News/Detail/60831)
+
+### 经营权与战略变化新闻 (last 12 months)
+
+- [大宇資董座凃俊光接任台灣光罩董事長, Yahoo, 2025-08-01](https://tw.stock.yahoo.com/news/%E5%A4%A7%E5%B1%95%E9%80%B2%E8%BB%8D%E5%8D%8A%E5%B0%8E%E9%AB%94%E6%B1%BA%E5%BF%83%EF%BC%81%E5%A4%A7%E5%AE%87%E8%B3%87%E8%91%A3%E5%BA%A7%E5%87%83%E4%BF%8A%E5%85%89%E6%8E%A5%E4%BB%BB%E5%8F%B0%E7%81%A3%E5%85%89%E7%BD%A9%E8%91%A3%E4%BA%8B%E9%95%B7-092440713.html)
+- [台灣光罩董事長確定換人, 知新闻, 2025-08-01](https://knews.com.tw/news/8D6BD39FD28FF286F6B447B8CCFD3AE0)
+- [光罩攻先进封装商机 斥资 4.35 亿元扩产, ETtoday, 2025-12-23](https://finance.ettoday.net/news/3088738)
+- [半導體》光罩攻先進封裝商機 斥資 4.35 億元擴產, 中时旺得富, 2025-12-23](https://wantrich.chinatimes.com/news/20251223900408-420101)
+- [強攻先進封裝市場！台灣光罩砸 4.35 億元擴充 14 吋光罩產線, 远见, 2025-12-23](https://www.gvm.com.tw/article/126804)
+- [台灣光罩啟動增資強化競爭力！主流製程升級、擴充 14 吋光罩產能, TechNews, 2026-01-08](https://technews.tw/2026/01/08/taiwan-mask-taiwan-launches-capital-increase-to-enhance-competitiveness/)
+- [多軌並行布局 台灣光罩引領蛻變搶占先進封裝市場, 今周刊, 2026-01-09](https://www.businesstoday.com.tw/article/category/183015/post/202601090020/)
+- [台灣光罩回歸本業拚轉盈 製程升級助攻 ASP 續揚, 经济日报, 2026-01](https://money.udn.com/money/story/5612/9222106)
+- [台灣光罩串聯子公司鎖定自動化製造！波若威入主 7 年, 财讯, 2024](https://www.wealth.com.tw/articles/69ad8cb4-6738-42c1-8226-c4071b5e8809)
+- [台灣光罩转型七年有成，波若威領軍拓展自動化製造新版圖, TechNews, 2025-02-08](https://finance.technews.tw/2025/02/08/story-of-tmcnet/)
+
+### 历史与公司基础资料
+
+- [维基百科：台灣光罩 (TWSE:2338)](https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%85%89%E7%BD%A9)
+- [MoneyDJ 理财网 台灣光罩 wiki](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=2b4ab57f-fb7a-4d56-8ef9-762c9fcf7d2e)
+- [Yahoo Finance Taiwan 光罩 (2338.TW)](https://finance.yahoo.com/quote/2338.TW/)
+- [财报狗 2338 EPS 与营收数据](https://statementdog.com/analysis/2338/eps)
+
+### 竞争对手与全球行业披露源
+
+- [Photronics FY2025 10-K (CIK 0000810136, accession 0001140361-25-045801, 2025-12-17 filed)](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm) — verbatim 引用 TMC 作为同业, 全球玩家清单
+- [Photronics PDMC 合资公告, 2014-04-04](https://photronicsinc.gcs-web.com/news-releases/news-release-details/photronics-announces-closing-joint-venture-taiwan-dai-nippon)
+- [台灣美日先進光罩 (PDMC) 官网](https://www.pdmc.com.tw/) — TMC 在新竹的最直接对手
+- [TOPPAN Holdings: Toppan Photomask to Rebrand as Tekscend Photomask, 2024-10-01](https://www.holdings.toppan.com/en/news/2024/10/newsrelease241001_1.html)
+- [TSMC Mask Services 介绍](https://www.tsmc.com/english/dedicatedFoundry/services/mask_services)
+- [UMC 光罩服务介绍](https://www.umc.com/zh-TW/StaticPage/mask_service)
+
+### 行业研究与市场规模
+
+- [Nomura "Greater China Semi: A guide to Semi renaissance in 2026~30F", 2026-05-21 — 半导体材料 anchor report (Figure 36 列示 TMC)](../sector/半导体材料.md)
+- [Mordor Intelligence: Photomask Market Outlook 2024-2030](https://www.mordorintelligence.com/industry-reports/photomask-market)
+- [IMARC Group: Photomask Market Size 2024-2033](https://www.imarcgroup.com/photomask-market)
+- [Datamintelligence Photomask Market Report 2024-2031](https://www.datamintelligence.com/research-report/photomask-market)
+- [Exactitude Consultancy: Photomask Market USD 6.36 bn by 2030, 2024-07-31](https://www.globenewswire.com/news-release/2024/07/31/2921845/0/en/Photomask-Market-is-expected-to-be-valued-at-USD-6-36-billion-by-2030-Exactitude-Consultancy.html)
+
+---
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL 检查**: 所有 inline 引用 URL 均为公开网址, 关键 URLs HTTP 检查:
+- ✓ TMC 2024 年报 URL `https://www.tmcnet.com.tw/Uploads/13/...` 已离线下载 (1.9 MB, 82 页) 并交叉验证多个引用页码 (页 1, 60-67, 70-74)
+- ✓ Photronics FY2025 10-K URL 已下载 (2.8 MB), Competition section verbatim 引用核对成功 — TMC 在第 7 页明确列示为竞争对手
+- ✓ PDMC 官网 URL `https://www.pdmc.com.tw/` — 不可访问 (SSL 失败), 但是公开站点存在 (Photronics SEC 公告引用)
+- ⚠ 经济日报 (`money.udn.com/.../5491262`) 一则 2021 年报道 URL 已失效 (404), 已在文中标注 "(URL 已失效, 由相关报道转述)" 并以 `money.udn.com/industry/company/光罩` 主题页面作为替代引用
+
+**SEC 文件名解析 (EDGAR submissions JSON 验证)**:
+- ✓ Photronics CIK 810136 → 最近 10-K accession 0001140361-25-045801, 文件名 `ef20057458_10k.htm` (确认 2025-12-17 提交), 已通过 `data.sec.gov/submissions/CIK0000810136.json` API 验证
+
+**TMC 2024 年报关键数据 spot-check** (claim → 年报位置):
+- ✓ FY2024 合并营收 NT$75.61 亿 (页 1, 页 71)
+- ✓ FY2024 税后净损 NT$7.86 亿 (页 1, 页 71)
+- ✓ FY2024 营业毛利率 18.8% (页 71)
+- ✓ ≤0.13µm 高阶光罩 2024 营收 NT$13.60 亿 / 2023 NT$11.37 亿 / YoY +20% (页 63)
+- ✓ FY2024 地区分布 国内 36.2% / 亚洲 61.8% / 其他 2.0% (页 62)
+- ✓ FY2024 单一客户甲 12% / "销货净额逾百分之十以上之客户仅 1 家" (页 65)
+- ✓ FY2024 最大供应商 SK KF 38% (页 65)
+- ✓ FY2024 研发费用 NT$3.89 亿 (页 62)
+- ✓ 2025 + 2026 高阶光罩规划增量产销值 (页 73): NT$14.6 亿 / NT$16.3 亿; 毛利 NT$7.3 亿 / NT$8.2 亿
+- ✓ 转投资亏损分析 (页 73): 昱厚生技 / 威達高科 / 光環科技 / 波克夏 损益认列
+- ✓ 员工人数 1,241 / 1,346 (页 66)
+- ✓ 利率敏感度 NT$2,100 万 / 汇率敏感度 NT$800 万 (页 74)
+
+**Photronics 10-K 引用 spot-check**:
+- ✓ "Competitors include ... Taiwan Mask Corporation ..." (FY2025 10-K, 第 7 页)
+- ✓ 非美国营收占总收 82% / 83% / 86% (FY2025 / 2024 / 2023, FY2025 10-K)
+- ✓ 7 个制造据点: 台湾 3 + 中国 2 + 韩国 1 + 美国 3 + 欧洲 2 (FY2025 10-K)
+
+**分析师观点 (intentionally not 10-K cited)**:
+- §1.5 valuation snapshot 解读 — P/S 2.7× 高于同业的原因诊断 (uncited; 分析师推断, 基于多个 catalyst 叠加观察)
+- §4.2.3, §4.5.4 护城河 verdict — `*分析师观点：*` 明确标注, 不挂 10-K 引用
+- §5.2 客户甲 = TSMC 或 UMC 的推断 — 明确标注 `*分析师推断 (基于公开报道)*`
+- §6.3 SOM/SAM 估算 — 明确标注 `*分析师整理 / 分析师估算*`
+- §8.4 14 吋光罩 2027 营收 NT$5-8 亿增量 — 明确标注 `*分析师估算*`
+- §9 R11 fair value NT$54-77 区间 — 明确标注 "保守 fair value"
+
+**残留不确定项 (residual unknowns)**:
+- 客户甲身份 — 年报刻意未具名, 只能根据公开报道推断为 TSMC 或 UMC
+- 大宇资 NT$15.46 亿入股股权变动通知的 MOPS 重大事项原文 URL — 未直接核对 (引用为媒体转述)
+- 凃俊光 个人持股 — 在 2024 年报刊印日早于其接任日 (2025-08-01), 故年报未披露
+- LCD / LED / Bumping 各别营收占比 — 年报第 60 页仅披露半导体类 >90%, 未细分
+- 子公司具体剥离时间表 — 公司未公开披露
+
+**Citation count check**: `grep -oE '\[[^]]+\]\(http[^)]+\)' <report>.md | wc -l` = ~80 inline citations across 9 sections + References block. 远超 skill 40+ 要求。
+
+**Image embed 检查**: 6 个 PNG 图表全部嵌入: `taiwanmask_revenue_margin.png` (§1), `taiwanmask_peer_valuation.png` (§1), `taiwanmask_advanced_node.png` (§4), `taiwanmask_geographic_mix.png` (§5), `taiwanmask_market_split.png` (§6), `taiwanmask_monthly_revenue.png` (报告中未直接嵌入, 但仍可使用 — *见下方注解*)。
+
+*注解*: monthly revenue 图表 (`taiwanmask_monthly_revenue.png`) 显示 2024/01-2026/04 月度营收与 YoY, 因 §1.4 文字已较密集描述了 25/09 −33% / 25/11 −27% 等关键节点, 图表未直接嵌入。如需嵌入, 可加在 §1.4 末段或 §6.3 行业增长驱动段。
+
+</details>
+
+---
+
 
 
 
