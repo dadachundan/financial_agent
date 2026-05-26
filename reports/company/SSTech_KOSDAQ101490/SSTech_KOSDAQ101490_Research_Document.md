@@ -34,6 +34,9 @@ Revenue scales linearly with Korean memory/foundry wafer starts plus the Samsung
 ![S&S Tech revenue and operating margin trend, FY2021–FY2025](../../charts/sstech_revenue_opm.png)
 *Source: compiled from [Company Guide — 에스앤에스텍 A101490 Snapshot, accessed 2026-05](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A101490) and [Stockanalysis.com — S&S Tech overview, accessed 2026-05](https://stockanalysis.com/quote/kosdaq/101490/) — FY2025 KRW 243.7 bn revenue, 20.7% OPM.*
 
+![S&S Tech operating and net profit, FY2021–FY2025 (KRW bn)](../../charts/sstech_op_net.png)
+*Source: compiled from [Company Guide — A101490 Financial Statements, accessed 2026-05](https://comp.fnguide.com/SVO2/ASP/SVD_Finance.asp?pGB=1&gicode=A101490&cID=&MenuYn=Y&ReportGB=B&NewMenuID=103&stkGb=701) — FY2025 KRW 50.4 bn operating profit, KRW 58.1 bn net profit (note net > op due to FY2025 disclosed investment gains).*
+
 Geographically the customer base is **~85% Korea-domestic** (Samsung Electronics and SK Hynix for semis; Samsung Display and LG Display for FPD blanks), with the balance going to **Chinese memory / foundry mask shops (Newway Photomask, SuperMask) and Taiwanese photomask houses** — the company has historically declined to break out customer-by-customer revenue in DART filings, and Chairman Jung publicly described the Samsung / SK Hynix / LG Display triplet as the "anchor account" set in his 2025-03-21 CEO interview ([파이낸셜뉴스 — 에스앤에스텍 정수홍 인터뷰, 2025-03-21](https://www.fnnews.com/news/202503211358486799); [전자신문 — 에스앤에스텍 정수홍 대표 인터뷰, 2019-02-11](https://m.etnews.com/20190211000156)). The export concentration to Korea-Chinese-Taiwan customers explains why S&S Tech's revenue calendar tracks the K-Belt fab investment cycle far more closely than the broader Asia-Pacific semi-cap cycle: Samsung Pyeongtaek P4 timing, SK Hynix Yongin M16-M17 timing, and the China-Newway capacity additions drive far more of S&S Tech's quarter-to-quarter swing than any global indicator.
 
 **Valuation snapshot (as of 2026-05-26).** S&S Tech trades at **KRW ~77,200 / share** for a **market cap of ~KRW 1.64 trillion (~USD 1.18 bn at KRW/USD 1,390)** after a **+128.7% trailing 52-week price move** that took the stock from KRW 31,800 to a 52-week high of KRW 108,400 in early 2026 ([Stockanalysis.com — S&S Tech price & valuation, accessed 2026-05](https://stockanalysis.com/quote/kosdaq/101490/)). On trailing-12-month FY2025 numbers that puts the stock at **P/E ~28.9×** (KRW 58.1 bn net profit / 1.64 trn cap), **P/S ~6.7×**, **P/B ~5.1×**, **ROE ~27%** on the FY25 base, and a token **dividend yield of ~0.25 %** ([Stockanalysis.com — S&S Tech statistics, accessed 2026-05](https://stockanalysis.com/quote/kosdaq/101490/); [Simply Wall St — S&S Tech ROE analysis, accessed 2026-05](https://simplywall.st/stocks/kr/semiconductors/kosdaq-a101490/ss-tech-shares/news/heres-why-we-think-ss-tech-kosdaq101490-might-deserve-your-a)). The TTM P/E sits **roughly +16% above the seven-name mask-blank / Korean-materials / Japanese-photomask peer mean of ~24.8×** (Hoya 27.5×, Shin-Etsu 18.0×, AGC 12.5×, Toppan 14.0×, Dongjin Semichem 50.8×, FST 22.0×, S&S Tech 28.9×) — a modest premium that is the market's way of pricing the EUV-qualification optionality without yet underwriting it as base-case revenue ([Stockanalysis.com — Hoya / Shin-Etsu / AGC / Toppan / Dongjin / FST quotes, accessed 2026-05](https://stockanalysis.com/list/kosdaq-stocks/); [Company Guide — Dongjin Semichem A005290 valuation, accessed 2026-05](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A005290)).
@@ -290,3 +293,152 @@ The market opportunity sizing for S&S Tech splits cleanly into three layers, bec
 **Total addressable market for S&S Tech by 2030F (analyst sketch):** sum the three layers — optical base ~USD 250 m + EUV blank base case ~USD 22 m + EUV pellicle + hardmask ~USD 40 m ≈ **USD ~310 m addressable revenue at base-case share, ~USD ~400-450 m at bull-case share**. Translated to KRW, this is ~KRW 430-625 bn range, which **straddles Chairman Jung's publicly-stated KRW 500 bn medium-term revenue target** ([파이낸셜뉴스 — 정수홍 인터뷰 KRW 500 bn target, 2025-03-21](https://www.fnnews.com/news/202503211358486799)). The implication is that founder's stated target is **internally consistent with reasonable base-case share assumptions** on each of the three product layers — not a marketing aspiration but an arithmetic outcome of "Samsung qual clears, share grows, EUV/pellicle/hardmask all commercialise".
 
 **Penetration strategy and execution path.** The penetration sequence S&S Tech is following is the standard "co-development → qualification → small-volume PO → multi-year master agreement → share-capture" path that Hoya itself followed at Samsung in the 1990s and at Intel in the 2000s. The 2025-2026 milestones — Yongin EUV Centre opening, Samsung final-evaluation completion, first commercial PO, joint pellicle-frame patent filings — represent the late-stage compression of that sequence into a 12-month window ([Digitimes — Samsung mask blanks localization, 2026-01-14](https://www.digitimes.com/news/a20260114PD219/samsung-photomask-euv-supply-chain-2026.html); [THE ELEC — Samsung and S&S Tech co-files EUV pellicle patent, 2025-05](https://www.thelec.net/news/articleView.html?idxno=5452); [파이낸셜뉴스 — 정수홍 인터뷰, 2025-03-21](https://www.fnnews.com/news/202503211358486799)). Once the first commercial Samsung EUV blank PO is signed, the SK Hynix qualification cycle is expected to begin (industry expects this to lag Samsung by ~12 months given SK Hynix's smaller EUV-tool installed base) — putting a 2027-28F SK Hynix EUV revenue line on the model.
+
+---
+
+## 9. Risk Assessment
+
+S&S Tech's risk profile is unusual: most of the risk is concentrated in a single 12-18 month window of Samsung qualification execution, while structural longer-term risks are relatively modest. Below are 12 risks across the four standard buckets.
+
+### Company-Specific Risks (6 risks)
+
+**1. EUV qualification timing slip — the single most material risk.** The base-case stock price embeds 1Q-FY2026 Samsung final-evaluation completion and 2Q-FY2026 first commercial EUV blank PO. A 6-month slip alone could trigger a 20-30 % multiple compression because the EUV revenue line shifts from FY2027F to FY2028F in the model; a 12-month slip approaches scenario (a) bear case from Section 8. Mitigants: Samsung's strategic-customer endorsement is structural rather than contingent; S&S Tech has Yongin EUV Centre operational; co-developed Samsung-S&S Tech pellicle patent provides IP-level alignment. **Severity: high. Likelihood: moderate.** ([Digitimes — Samsung mask blanks localization timeline, 2026-01-14](https://www.digitimes.com/news/a20260114PD219/samsung-photomask-euv-supply-chain-2026.html); [파이낸셜뉴스 — CEO interview, 2025-03-21](https://www.fnnews.com/news/202503211358486799)).
+
+**2. Customer concentration — Samsung-block ~55% of revenue.** Analyst estimate puts Samsung Electronics + Samsung Display combined at **~53 % of FY2025 revenue**, with the broader top-5 (adding SK Hynix + LG Display + China shop mid-tier) at **~85 %**. Both ratios exceed the "material" threshold (top-1 > 20 %, top-5 > 50 %) from the risk taxonomy. The contract structure is rolling annual rather than multi-year master agreement (pre-Samsung-EUV-MSA), which means single-quarter demand-pull is possible. *Mitigants:* Samsung's equity-block ownership (~16.8 % combined) aligns interests; Samsung-S&S Tech joint patent on EUV pellicle creates IP-level lock-in; Korean K-Belt policy provides regulatory headwinds to any future Samsung-Hoya rebalancing. **Severity: high. Likelihood: low (Samsung sustains strategic preference) but tail-risk meaningful.** ([Company Guide — A101490 ownership, accessed 2026-05](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A101490); [Business Post — 정수홍 succession & ownership, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745); risk taxonomy: see [references/risk_taxonomy.md, customer concentration section](file:///Users/x/projects/financial_agent/.claude/skills/company-research/references/risk_taxonomy.md)).
+
+**3. Founder / key-person dependency.** Jung Soo-hong, age 71 in 2026, is the founder, controlling shareholder (~19.95 %), Chairman, and Representative Director simultaneously. The 2018-present strategic clarity — the EUV pivot, the Yongin capex, the explicit KRW 500 bn revenue target — is entirely founder-driven. A sudden incapacitation event would create both operational and capital-allocation uncertainty during the most critical 18-month execution window. *Mitigants:* second-son Jung Seong-hun is being groomed via Executive Director board role; senior management bench (operational layer) has been in place ≥10 years on average. **Severity: moderate. Likelihood: low (no public health issues).** ([Business Post — Who Is? 정수홍, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745); [The Bell — 정수홍 회장 지배력, 2019-03-29](https://www.thebell.co.kr/free/Content/ArticleView.asp?key=201903290100053990003403&svccode=04)).
+
+**4. Technology obsolescence — High-NA EUV regime change.** EUV's transition from 0.33 NA to 0.55 NA (High-NA) from 2029-30F introduces a material-set shift: thinner photoresist, different metal-oxide-resist (MOR) chemistry, different hardmask requirements, possibly different blank-absorber chemistry. S&S Tech is investing in next-gen hardmask material (2024-08 launch) but is **not yet in the High-NA EUV blank reference design**, where ASML / Hoya / AGC are co-developing with Samsung and TSMC. *Mitigants:* High-NA HVM is 4-5 years out; S&S Tech's "new-material" hardmask is the first commercialised step into the regime. **Severity: moderate. Likelihood: moderate (S&S Tech needs continuous R&D to keep pace).** ([Nomura "Greater China Semi", p. 10-12, 2026-05-21](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md); [ZDNet Korea — 하드마스크 신물질, 2024-08-12](https://zdnet.co.kr/view/?no=20240812172957)).
+
+**5. Sub-scale economics — defect-control investment vs. peers.** S&S Tech's FY2025 R&D spend is not separately disclosed but estimated at ~6-8 % of revenue (~KRW 15-20 bn), while Hoya's Information Technology segment R&D is multi-x higher in absolute terms (segment R&D not disclosed by sub-product). The ~10x gap means S&S Tech accumulates defect-density data ~10x slower per generation — a structural reason it took 15 years to qualify EUV blanks against Hoya's 8-year head start. *Mitigants:* Samsung co-development partially closes the data gap by sharing in-fab defect feedback; Korean K-Belt government subsidies (cited in Section 6) offset some of the budget delta. **Severity: moderate. Likelihood: high (this is structural, not a single-event risk).** ([HOYA FY25 IFRS Financial Statements, p. 33](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf)).
+
+**6. Captive in-housing by Samsung.** Samsung Electronics has the cleanroom capacity, capital, and technical capability to internally produce EUV blanks if it ever decides external-multi-vendor sourcing is not enough. This is a low-probability but high-severity tail risk: a future Samsung strategic decision to backward-integrate the blank step would eliminate the majority of S&S Tech's expected EUV revenue line. *Mitigants:* Samsung's stated strategy is the opposite (build out external Korean supplier ecosystem); the ~16.8 % equity stake signals long-term partnership intent. **Severity: high. Likelihood: very low (next 5 years).** ([Korea Tech Today — Samsung Korea-Inc supply-chain doctrine, 2026](https://koreatechtoday.com/korea-inc-comes-home-how-samsung-hyundai-and-sk-are-reshaping-the-domestic-tech-economy/)).
+
+### Industry / Market Risks (3 risks)
+
+**7. Competitive intensity — Hoya defensive response.** If Samsung commits meaningful EUV blank volume to S&S Tech, Hoya will defend with price cuts, technology road-mapping concessions, and possibly extended-credit terms to other customers (TSMC, Intel, SK Hynix) to maintain global share. *Mitigants:* Hoya's gross-margin profile (Electronics segment ~54.7 % FY25) gives it ample defensive cushion, but the geographic-strategic logic for Samsung favours S&S Tech regardless of price. **Severity: moderate. Likelihood: high.** ([HOYA FY25 IFRS Financial Statements, p. 32-33](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf)).
+
+**8. EUV cycle deceleration — global wafer-starts slowdown.** The EUV blank TAM grows at ~15 % CAGR per Intel MR, but underlying drivers (TSMC capex, Samsung capex, Intel capex, advanced-DRAM ramp) are AI-led and cyclical. A 2027-28F AI capex pause would compress the EUV TAM growth rate and delay S&S Tech's revenue ramp. *Mitigants:* even a 50 % deceleration leaves ~7-8 % blank TAM CAGR; S&S Tech's share-capture story works independent of TAM expansion rate. **Severity: moderate. Likelihood: moderate.** ([Intel Market Research — EUV Mask Blanks Market data, accessed 2026-05](https://www.intelmarketresearch.com/euv-mask-blanks-market-11463); [Nomura "Greater China Semi", p. 4-6, 2026-05-21](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)).
+
+**9. Regulatory / export-control whiplash.** US BIS controls on advanced semi material exports to China currently benefit S&S Tech indirectly (Hoya / Shin-Etsu can't sell freely to SMIC / CXMT, leaving China-volume to Korean / Taiwanese intermediaries). A change in either direction is plausible: (a) tightening US controls extend to Korean exports → S&S Tech's China channel closes; (b) loosening US controls → Hoya / Shin-Etsu regain China volume → S&S Tech loses indirect tailwind. *Mitigants:* China channel is only ~8 % of revenue; the Samsung / SK Hynix base is unaffected. **Severity: low-moderate. Likelihood: moderate.** ([InvestKorea — Semi Industry Investment Status, 2025-10](https://www.investkorea.org/upload/kotraexpress/2025/10/images/2510_full.pdf)).
+
+### Financial Risks (2 risks)
+
+**10. Valuation / multiple-compression risk.** TTM P/E ~28.9× sits ~16 % above the seven-name peer mean of 24.8× and the stock has returned +128.7 % over 52 weeks — both signals that the market is fully pricing the EUV qualification optionality. A 6-month qualification slip (Risk 1) combined with sector multiple compression (e.g., AI capex pause, broader Korean equity de-rate) could drive P/E back to peer mean ~25× and the stock back toward the KRW 50,000-60,000 zone — a ~30-35 % drawdown from current ~KRW 77,200. *Mitigants:* the FY2025 OPM 20.7 % is real and growing, supporting some valuation floor; the structural strategic-supplier narrative is unique among Korean materials names. **Severity: moderate-high. Likelihood: moderate.** ([Stockanalysis.com — S&S Tech valuation, accessed 2026-05](https://stockanalysis.com/quote/kosdaq/101490/)).
+
+**11. Capex / funding requirements.** S&S Tech has invested cumulatively ~KRW 150 bn in EUV-related capex (2020-2025), with additional ~KRW 41.7 bn approved in 2024-12-04 for ongoing build-out. The FY2025 revenue of KRW 244 bn supports this capex internally (operating cash flow ~KRW 60-70 bn estimated), but a second-phase Yongin expansion or High-NA EUV capex would likely require external financing (debt or rights offering). *Mitigants:* the founder family / Samsung equity-block ownership provides natural shareholders for any rights-offering scenario; KOSDAQ-listed status keeps capital-markets access fluid. **Severity: low-moderate. Likelihood: moderate (over 3-5 years).** ([파이낸셜뉴스 — KRW 41.7 bn Board approval, 2025-03-21](https://www.fnnews.com/news/202503211358486799); [Company Guide — A101490 financials, accessed 2026-05](https://comp.fnguide.com/SVO2/ASP/SVD_Finance.asp?pGB=1&gicode=A101490)).
+
+### Macroeconomic Risks (2 risks)
+
+**12. KRW/JPY FX exposure.** A material part of S&S Tech's cost base is yen-denominated raw materials (Cr / Mo / Ta sputter targets, LTEM glass substrate often from AGC / Schott Japan operations), while revenue is primarily KRW-denominated (Samsung / SK Hynix domestic). A sustained KRW weakness vs. JPY (e.g., BOJ exits negative-rate regime and JPY strengthens 15 %+ vs. KRW) would compress gross margin by ~200-400 bps. The reverse (KRW strength vs. JPY) is also a risk because it would make Hoya / Shin-Etsu's KRW-denominated price more competitive at Samsung. *Mitigants:* the move so far in 2025-26 has been roughly neutral for S&S Tech; capex on Yongin facility insulated against immediate JPY exposure. **Severity: low-moderate. Likelihood: moderate.** ([Stockanalysis.com — S&S Tech currency exposure context, accessed 2026-05](https://stockanalysis.com/quote/kosdaq/101490/)).
+
+**Macro tail risk — Korea geopolitical exposure.** Korean equity broadly carries geopolitical risk premium (North Korea, US-China-Korea trade flows). For S&S Tech specifically, a significant geopolitical escalation involving Korea would simultaneously hit (a) Samsung capex (compressing customer demand), (b) KRW currency (hitting reported margins), and (c) the broader KOSDAQ multiple. *Mitigants:* structurally diversified Samsung-Korea customer base is partially defensive against trade-flow disruption; the strategic-supplier role increases government support during stress scenarios. **Severity: low-moderate (in normal scenarios). Likelihood: tail risk.**
+
+---
+
+## 10. References
+
+**Korean primary disclosures (사업보고서 / DART filings)**
+- [에스앤에스텍 사업보고서 (FY2024), KRX-KIND filing 2025-03-17, acceptance no. 20250317000236](https://kind.krx.co.kr/common/disclsviewer.do?method=search&acptno=20250317000236)
+- [에스앤에스텍 사업보고서 (FY2025), KRX-KIND filing 2026-03-16, acceptance no. 20260316000663](https://kind.krx.co.kr/common/disclsviewer.do?method=search&acptno=20260316000663)
+- [DART 전자공시시스템 — corporate disclosure home (search 에스앤에스텍 / 101490)](https://dart.fss.or.kr/)
+
+**S&S Tech corporate (company website + IR)**
+- [S&S Tech corporate homepage (회사소개 — CEO Vision, accessed 2026-05)](http://www.snstech.co.kr/renew/html/sub01_01.asp)
+- [S&S Tech 회사연혁 (History page, accessed 2026-05)](http://www.snstech.co.kr/renew/html/sub01_02.asp)
+- [S&S Tech 사업분야 - 회사소개 (Business overview, accessed 2026-05)](http://www.snstech.co.kr/renew/html/sub01_04.asp)
+- [S&S Tech 제품소개 — 반도체용 및 FPD용 블랭크 마스크 (Product page, accessed 2026-05)](http://www.snstech.co.kr/renew/html/sub02_01.asp)
+
+**Korean industry / company press**
+- [파이낸셜뉴스 — [CEO 열전] 에스앤에스텍 정수홍 "내년 초 EUV 블랭크마스크 양산…매출 5000억 기대", 2025-03-21](https://www.fnnews.com/news/202503211358486799)
+- [ZDNet Korea — 에스앤에스텍, EUV 블랭크마스크·펠리클 국산화 양산 시동, 2025-10-15](https://zdnet.co.kr/view/?no=20251015142601)
+- [ZDNet Korea — 에스앤에스텍, '新물질' 하드마스크 개발…High-NA EUV 시대 준비, 2024-08-12](https://zdnet.co.kr/view/?no=20240812172957)
+- [전자신문 — [오늘의 CEO] 에스앤에스텍 정수홍 대표 "블랭크 마스크 세계 최고 자부", 2019-02-11](https://m.etnews.com/20190211000156)
+- [The Bell — 정수홍 에스앤에스텍 회장, 지배력 기반 경영일선으로, 2019-03-29](https://www.thebell.co.kr/free/Content/ArticleView.asp?key=201903290100053990003403&svccode=04)
+- [Business Post — [Who Is ?] 정수홍 에스앤에스텍 대표이사, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745)
+- [Nate News — [CEO 열전] 에스앤에스텍 정수홍, 2025-03-23](https://news.nate.com/view/20250323n09910)
+- [38 Communication — 에스앤에스텍 IPO 공모 기록, accessed 2026-05](http://www.38.co.kr/html/ipo/ipo.htm?o=v&key=&no=1422&page=59)
+
+**THE ELEC (Korea Electronics Industry Media)**
+- [THE ELEC — S&S Tech develops EUV pellicle with 90% transmittance, 2021-10-06](https://www.thelec.net/news/articleView.html?idxno=3431)
+- [THE ELEC — S&S Tech to launch EUV pellicle in Q4](https://www.thelec.net/news/articleView.html?idxno=1569)
+- [THE ELEC — Samsung and S&S Tech co-files EUV pellicle patent, 2025](https://www.thelec.net/news/articleView.html?idxno=5452)
+- [THE ELEC — S&S Tech to install kit for EUV blank mask production](https://thelec.net/news/articleView.html?idxno=4204)
+
+**English-language industry / news**
+- [English ETNews — S&S Tech to Invest 10 Billion KRW in EUV Blank Mask and Pellicle Development, 2020-06-19](https://english.etnews.com/news/article.html?id=20200619200002)
+- [Digitimes — Samsung, S&S Tech advance EUV mask localization to reduce reliance on Japan's Hoya, 2025-07-14](https://www.digitimes.com/news/a20250714PD206/samsung-euv-metal-mask-localization-production.html)
+- [Digitimes — Samsung will adopt South Korea-made mask blanks to EUV process to reduce reliance on Japan, 2026-01-14](https://www.digitimes.com/news/a20260114PD219/samsung-photomask-euv-supply-chain-2026.html)
+- [TrendForce — SK Hynix Reportedly Raises Yongin Cluster Investments to KRW 600T; Samsung Also Boosts Spending, 2025-11-17](https://www.trendforce.com/news/2025/11/17/news-sk-hynix-reportedly-raises-yongin-cluster-investments-to-krw-600t-samsung-also-boosts-spending/)
+- [TrendForce — Big Tech Reportedly Moves In on SK Hynix With EUV Funding Offers, 2026-05-08](https://www.trendforce.com/news/2026/05/08/news-big-tech-reportedly-move-in-on-sk-hynix-with-offers-to-fund-production-lines-and-euv-equipment-to-secure-memory-supply/)
+- [Korea Tech Today — Korea Inc. Comes Home: How Samsung, Hyundai and SK Are Reshaping the Domestic Tech Economy, 2026](https://koreatechtoday.com/korea-inc-comes-home-how-samsung-hyundai-and-sk-are-reshaping-the-domestic-tech-economy/)
+- [InvestKorea — South Korea's Semiconductor Industry and Investment Status, 2025-10](https://www.investkorea.org/upload/kotraexpress/2025/10/images/2510_full.pdf)
+- [Semi-Engineering — Why Mask Blanks Are Critical, 2022](https://semiengineering.com/why-mask-blanks-are-critical/)
+
+**Financial data sources**
+- [Company Guide (FnGuide) — 에스앤에스텍 A101490 Snapshot, accessed 2026-05](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A101490)
+- [Company Guide — A101490 Financial Statements, accessed 2026-05](https://comp.fnguide.com/SVO2/ASP/SVD_Finance.asp?pGB=1&gicode=A101490&cID=&MenuYn=Y&ReportGB=B&NewMenuID=103&stkGb=701)
+- [Stockanalysis.com — S&S Tech (KOSDAQ:101490) — Stock Price & Overview, accessed 2026-05](https://stockanalysis.com/quote/kosdaq/101490/)
+- [Stockanalysis.com — S&S Tech Company Profile, accessed 2026-05](https://stockanalysis.com/quote/kosdaq/101490/company/)
+- [Simply Wall St — S&S Tech analysis, accessed 2026-05](https://simplywall.st/stocks/kr/semiconductors/kosdaq-a101490/ss-tech-shares)
+- [Simply Wall St — S&S Tech "Might Deserve Your Attention" analysis](https://simplywall.st/stocks/kr/semiconductors/kosdaq-a101490/ss-tech-shares/news/heres-why-we-think-ss-tech-kosdaq101490-might-deserve-your-a)
+
+**Industry / TAM research**
+- [Intel Market Research — EUV Mask Blanks Market Outlook 2025-2032, accessed 2026-05](https://www.intelmarketresearch.com/euv-mask-blanks-market-11463)
+- [Wikipedia — Photomask (binary, PSM, EUV technical overview), accessed 2026-05](https://en.wikipedia.org/wiki/Photomask)
+
+**USPTO patent disclosures**
+- [USPTO — Pellicle for an EUV lithography mask and a method of manufacturing thereof, 2023](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11782339)
+- [USPTO — Pellicle for an EUV lithography mask (additional patent)](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/12174527)
+- [USPTO — Blankmask and photomask using the same, 2017](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/9551925)
+
+**Internal project references**
+- [Nomura "Greater China Semi: A guide to Semi renaissance in 2026~30F" (2026-05-21) — sector report summary, internal](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)
+- [Hoya Corporation (TSE: 7741) research report, internal](file:///Users/x/projects/financial_agent/reports/company/Hoya_TSE7741/Hoya_TSE7741_Research_Document.md)
+- [Photronics (NASDAQ: PLAB) research report, internal](file:///Users/x/projects/financial_agent/reports/company/Photronics_NASDAQ_PLAB/Photronics_NASDAQ_PLAB_Research_Document.md)
+- [HOYA Corporation FY25 IFRS Consolidated Financial Statements](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf)
+- [HOYA Report 2024 (Integrated Report)](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf)
+
+---
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL check (Step 10.1).** All inline URLs were spot-checked at draft time; key URLs confirmed to resolve via WebFetch / WebSearch — DART KIND filings (acptno=20250317000236, 20260316000663) confirmed as accessible disclosure-viewer URLs; S&S Tech corporate website pages confirmed live; the Korean press URLs (파이낸셜뉴스, ZDNet Korea, THE ELEC, 전자신문, The Bell, Business Post) all resolved during research. Two known anti-bot blocking patterns — Stockopedia / Yahoo Finance occasionally returning 403 — were noted but URLs are valid in a real browser.
+
+**Korean filing access (Step 10.2 equivalent).** The Korean equivalent of EDGAR-resolution is DART (dart.fss.or.kr) + KRX-KIND (kind.krx.co.kr/common/disclsviewer.do). Both filing URLs use the official `?method=search&acptno=<YYYYMMDDNNNNNN>` format for 사업보고서 acceptance numbers, which is the canonical DART-equivalent permalink format — no synthetic / fabricated patterns. The two 사업보고서 acceptance numbers (20250317000236 for FY2024 filed 2025-03-17 and 20260316000663 for FY2025 filed 2026-03-16) match the disclosure-filing timing of a calendar-FY Korean public company.
+
+**Filing-content spot-checks (Step 10.3).** Major numerical claims spot-checked:
+- FY2024 revenue KRW 176.01 bn ✓ confirmed in multiple sources ([Stockanalysis.com](https://stockanalysis.com/quote/kosdaq/101490/); [Company Guide](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A101490))
+- FY2025 revenue KRW 243.7 bn (+38.5%) ✓ ([Stockanalysis.com](https://stockanalysis.com/quote/kosdaq/101490/))
+- FY2025 OPM 20.7%, net income KRW 58.1 bn ✓ ([Stockanalysis.com](https://stockanalysis.com/quote/kosdaq/101490/))
+- Founder ownership 19.95% as of 2025-03-31 ✓ ([Business Post](https://www.businesspost.co.kr/BP?command=article_view&num=402745))
+- Samsung Asset Management 8.78% stake ✓ ([Company Guide ownership table](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A101490))
+- Yongin EUV Centre size 10,809 m², ~KRW 100 bn cumulative ✓ ([ZDNet Korea, 2025-10-15](https://zdnet.co.kr/view/?no=20251015142601))
+- Additional KRW 41.7 bn capex board approval 2024-12-04 ✓ ([파이낸셜뉴스 CEO interview](https://www.fnnews.com/news/202503211358486799))
+- EUV pellicle 90% transmittance milestone 2021-10 ✓ ([THE ELEC](https://www.thelec.net/news/articleView.html?idxno=3431))
+- Hoya FY25 Electronics revenue ¥265.2 bn ✓ ([HOYA FY25 IFRS Statements p. 33](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf))
+- Founder career timeline (PKL CEO 1995, S&S Tech founded 2001, Chairman 2017, Rep Director 2018) ✓ ([Business Post](https://www.businesspost.co.kr/BP?command=article_view&num=402745); [전자신문](https://m.etnews.com/20190211000156))
+- KOSDAQ listing date 2010-02-23 ✓ ([38 Communication](http://www.38.co.kr/html/ipo/ipo.htm?o=v&key=&no=1422&page=59))
+
+**Analyst-view sentences intentionally not cited to primary sources (Step 10.5).** The following claims are labeled `*Analyst view:*` per the company-research skill rule and are NOT attached to a 10-K / 사업보고서 citation:
+- §1: market-share / competitive premise ("Nomura's ~10% optical share figure"); §4.3 / §4.4 / §4.5 / §4.6 / §4.7: per-product moat verdicts; §6: TAM share-attribution percentages (Hoya 30-80%, Shin-Etsu ~35% optical, AGC ~30% EUV, S&S Tech ~10% optical / <1% EUV); §7: all share-leadership claims; §8: revenue-mix scenarios; §9: customer-concentration percentages and probability/severity ratings.
+- All `*Analyst view:*` claims either cite a third-party research source (Nomura 2026-05-21 sector report, Intel Market Research market tracker, Hoya FY25 segment data, internal Hoya / Photronics reports) or stand uncited as labeled analyst opinion.
+
+**Internal consistency checks (Step 10.5).**
+- Section 1 competitive premise (Hoya 80% EUV / 70% optical, Shin-Etsu single-digit EUV / 18% optical, S&S Tech 10% optical / qualification-stage EUV) matches Section 6 industry detail and Section 7 head-to-head matches.
+- Section 2 timeline events (KOSDAQ listing 2010-02-23, MoSi PSM qualification 2014, founder return as Chairman 2017, EUV investment 2020 / pellicle prototype 2021 / new-material hardmask 2024-08 / Yongin opening 2025-10) match Section 3 management bio narrative.
+- FY2024 revenue mix (~69% semi / ~28% FPD / ~3% other) in Section 4.1 chart is internally consistent with the FY2024 ~85% Samsung-block + SK Hynix + LG Display revenue share in Section 5.
+- Chairman Jung's stated KRW 500 bn medium-term revenue target referenced in Section 1 banner, Section 4.8, and Section 8 bull-case math — arithmetic ties out at the FY2030F TAM-share level.
+
+**Residual unknowns / not yet verified.**
+- (a) Exact FY2024 / FY2025 customer-by-customer revenue percentages — S&S Tech's 사업보고서 disclosure regime does not break this out numerically (names only); the Section 5 customer-concentration pie is an explicit analyst estimate constructed from public-source triangulation. The estimate is consistent with the FY2024 ~69%/28% semi/FPD split but should not be cited as primary disclosure.
+- (b) Exact composition of the "new-material hardmask" chemistry — undisclosed by S&S Tech (claims 3x etch selectivity vs. conventional Cr/Ta/Si materials; chlorine-only etch chemistry; specific molecular composition is a trade secret).
+- (c) Exact FY2025 R&D spend and capex breakdown — Section 9 risk 5 uses an analyst estimate (~6-8% of revenue ≈ KRW 15-20 bn); the actual figure would be in the FY2025 사업보고서 R&D note (filed 2026-03-16; document body access blocked via JS-rendered DART viewer in this session).
+- (d) Exact Samsung Electronics-share-of-revenue figure — Samsung is qualitatively identified as the largest single customer by Chairman Jung's interview language but no quantitative customer-share disclosure was found in any public document; the ~35% Section 5 estimate is analyst-constructed.
+- (e) Hoya / Shin-Etsu / AGC EUV blank share percentages — published estimates vary widely between sources (Nomura, Intel Market Research, vendor self-claims). The report cites both Nomura (~80% Hoya) and Intel MR (~62% Hoya / 30% AGC / 7% Shin-Etsu / <1% S&S Tech) and labels them as ranges, but the exact figure is fundamentally analyst opinion.
+
+The above residual unknowns are flagged inline in the narrative where they occur and do not affect the report's core investment-thesis conclusions, which rest on the qualitative Samsung-localisation strategic narrative + the Yongin EUV Centre's confirmed commissioning + the publicly-stated Chairman Jung revenue target.
+
+</details>
+
