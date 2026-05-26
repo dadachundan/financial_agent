@@ -323,4 +323,131 @@ The wafer industry is subject to multiple overlapping regulatory frameworks: **e
 
 **Barriers to entry.** The barriers are **extreme** for 300mm wafer production: ~JPY 200-400 bn ($1.3-2.7 bn) capex for a greenfield plant, 4-6 years construction + qualification time, hundreds of process patents requiring licensing or independent R&D, and a multi-year customer-qualification cycle. The most recent successful new entrant at the 300mm level was the Chinese National Silicon Industry Group, which took roughly a decade to ramp meaningful 300mm volume. At the 200mm-and-below level, barriers are moderate — Chinese new-build has demonstrated meaningful entry over 2022-26 — but the economics are unattractive.
 
+---
+
+## 7. Competitive Landscape
+
+### 7.1 The five-supplier structure of 300mm wafers
+
+The competitive landscape for 300mm wafers — the economically critical wafer size for any leading-edge fab — is a stable, well-defined **five-supplier oligopoly**: Shin-Etsu Chemical (TSE:4063) through its Shin-Etsu Handotai (SEH) subsidiary, SUMCO Corporation (TSE:3436), GlobalWafers (TPEx:6488), Siltronic AG (ETR:WAF), and SK Siltron (private; subsidiary of SK Group). Together these five account for ~85% of global 300mm capacity and have all five been listed in this exact group in nearly every industry analysis since 2010 ([Intel Market Research — Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85), [Future Market Insights — Semiconductor Wafer Market](https://www.futuremarketinsights.com/reports/semiconductor-wafers-market), [Nomura Greater China Semi 2026-30F Renaissance, Fig 35, 2026-05-21](https://www.intelmarketresearch.com/silicon-wafer-market-85)).
+
+The remaining ~15% is split among **Chinese new-build (National Silicon Industry Group / 国大硅产, ESWIN, Zhonghuan Semiconductor — primarily at 200mm and below with growing 300mm presence), Soitec (Euronext:SOI — specialty SOI substrates), Wafer Works (smaller-diameter specialty), RS Technologies (TSE:3445 — reclaimed wafer specialist)**, and other smaller specialty houses.
+
+### 7.2 Competitor-by-competitor — the four other 300mm suppliers
+
+**Shin-Etsu Chemical / Shin-Etsu Handotai (TSE:4063) — the #1 globally.** Shin-Etsu's wafer subsidiary SEH controls ~28% of global 300mm capacity with monthly output exceeding 2.2 million wafers ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85), [Shin-Etsu Silicon Wafers product page](https://www.shinetsu.co.jp/en/products/electronics-materials/silicon-wafers/)). SEH operates 13 global wafer facilities across Japan, US, Malaysia, Taiwan, and Europe, and began 300mm mass production in February 2001 ([SEH America — About Us](https://sehamerica.com/about-us/)). Shin-Etsu's competitive advantages versus SUMCO are: (i) larger scale (more wafers/month → better fixed cost absorption), (ii) parent-company diversification (Shin-Etsu Chemical's PVC + silicones + rare-earth magnet + photoresist + EUV mask blank franchises mean SEH does not have to bear cyclical wafer losses alone), and (iii) longer-term integrated relationships with key customers given its earlier 300mm ramp. Shin-Etsu's overall TSE:4063 parent trades at TTM P/E ~27.9× — reflecting the conglomerate's premium — while the SEH wafer subsidiary's standalone economics are not separately disclosed ([Shin-Etsu Annual Report 2025 Financial Section](https://www.shinetsu.co.jp/wp-content/uploads/2025/07/Financial-Section.pdf), [stockanalysis.com — TYO:4063 statistics](https://stockanalysis.com/quote/tyo/4063/statistics/)).
+
+**GlobalWafers (TPEx:6488) — the #3 globally with active US/EU expansion.** Taiwan-listed GlobalWafers (the international consolidator of MEMC, Topsil, Covalent Materials, and SunEdison Semiconductor) holds ~16-18% of global 300mm capacity and is the most aggressive on the geographic-expansion axis: the **US$7.5 bn Sherman, Texas 300mm wafer factory** entered Phase 2 in January 2026 as part of the company's CHIPS Act-funded build-out, and the company has been similarly investing in Italy and Japan ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85), [GlobalWafers IR](https://www.gwafers.com.tw/eng/index.html)). The Nomura "Greater China Semi 2026-30F Renaissance" report (2026-05-21) upgraded GlobalWafers to BUY with a price target of TWD 850 (from TWD 480), citing the convergence of US/EU/Taiwan capacity build-out, the BPD (backside power delivery) / wafer-bonded NAND / silicon photonics demand wave, and the 2027-28F upcycle ([Nomura Greater China Semi 2026-30F Renaissance, 2026-05-21](https://www.intelmarketresearch.com/silicon-wafer-market-85)). GlobalWafers' competitive advantages versus SUMCO are: (i) US/EU footprint that benefits from CHIPS Act / Chips Act subsidies, (ii) more recent capex vintage (newer equipment, lower historical depreciation drag), and (iii) more diversified customer base across IDMs and foundries.
+
+**Siltronic AG (ETR:WAF) — the #4 globally and the only Western-headquartered competitor.** Frankfurt-listed Siltronic, the 1968-founded German wafer specialist majority-owned by Wacker Chemie (now ~31% stake after 2017 sell-down), holds ~12-14% of global 300mm capacity ([Siltronic Annual Report 2025, p. 18](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf), [Wikipedia — Siltronic](https://en.wikipedia.org/wiki/Siltronic)). Siltronic operates four production complexes: Burghausen (Germany), Freiberg (Saxony), Portland (Oregon), and Singapore (where the new Fab S2 entered planned depreciation in August 2025 — note the parallel mechanic with SUMCO's Imari/Yonezawa cycle). FY2025 revenue was EUR 1.35 bn at a net loss of EUR ‑77.9 m as the Singapore depreciation began ([Siltronic Annual Report 2025, p. 2](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf)). Siltronic's competitive advantages versus SUMCO are: (i) Western headquarters and EU/US production providing geopolitical diversification, (ii) the Wacker Chemie polysilicon supply integration in Burghausen, and (iii) tight historical relationship with Samsung via the SSW joint venture in Singapore. The failed 2020-22 GlobalWafers takeover of Siltronic — blocked when the German BMWi failed to issue a certificate of non-objection by the January 2022 deadline — reflects the strategic value placed on European wafer sovereignty ([Siltronic ad-hoc — Public tender offer not completed, 2022-02-01](https://www.siltronic.com/en/investors/financial-releases/ad-hoc-reports/siltronic-ag-public-tender-offer-by-globalwafers-will-not-be-completed-as-offer-conditions-have-not-been-fulfilled-within-the-applicable-deadline-2191243-1643673381.html), [CNBC — GlobalWafers bid for Siltronic fails, 2022-02-01](https://www.cnbc.com/2022/02/01/globalwafers-bid-for-siltronic-fails-amid-tech-sovereignty-concerns-.html)).
+
+**SK Siltron (private; subsidiary of SK Group) — the #5 globally with Korean memory exposure.** SK Group's wafer subsidiary holds ~10-12% of global 300mm capacity, with its franchise anchored on **Samsung-and-SK-Hynix supply** for DRAM and NAND production in Korea and US ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85)). SK Siltron is the smallest of the five 300mm-capable suppliers but has been growing share via Korean memory customer pull and via the 2020 acquisition of DuPont's SiC wafer business (which expanded the company's specialty substrate offering). SK Siltron is not publicly listed and standalone financials are not disclosed. The competitive advantage versus SUMCO is the deep Korean memory customer relationships; the disadvantage is the smaller scale.
+
+### 7.3 Positioning framework — where SUMCO sits in the 5-supplier landscape
+
+The standard analyst positioning framework for 300mm wafer suppliers is along two axes: **scale + technology depth** (vertical) versus **geographic / customer diversification** (horizontal).
+
+```mermaid
+quadrantChart
+    title 300mm Silicon Wafer Supplier Positioning
+    x-axis "Lower geographic / customer diversification" --> "Higher diversification"
+    y-axis "Lower scale + technology depth" --> "Higher depth"
+    quadrant-1 "Diversified leader"
+    quadrant-2 "Scale leader"
+    quadrant-3 "Specialty / regional"
+    quadrant-4 "Diversified challenger"
+    "Shin-Etsu (SEH)": [0.6, 0.92]
+    "SUMCO": [0.5, 0.78]
+    "GlobalWafers": [0.78, 0.6]
+    "Siltronic": [0.72, 0.5]
+    "SK Siltron": [0.32, 0.42]
+```
+
+*Source: Analyst-constructed framework based on capacity, geographic footprint, and customer-base disclosures from each company's FY2025 annual reports and the cross-supplier analysis in [Intel Market Research — Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85) and [Nomura Greater China Semi 2026-30F Renaissance, Fig 35, 2026-05-21](https://www.intelmarketresearch.com/silicon-wafer-market-85).*
+
+*Analyst view:* SUMCO occupies the **"Scale leader with growing diversification"** position — second-largest scale globally, but more concentrated in Japan-domiciled production than GlobalWafers (Taiwan/US/EU) or Siltronic (Germany/US/Singapore). The Phase-2 Yonezawa/Imari expansion has reinforced scale rather than diversification — a strategic choice consistent with Japan's METI Economic Security Promotion Act priorities (which favored domestic capacity) but which leaves SUMCO more exposed to Japan-specific risks (earthquake, yen volatility, METI policy shifts) than the more geographically diversified competitors.
+
+### 7.4 SUMCO's competitive advantages
+
+**(i) Scale at 300mm.** SUMCO is the **#2 globally** at 300mm production volume — ~21-23% of global capacity vs. Shin-Etsu's ~28% ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85)). This scale matters for fixed-cost absorption, customer relationship depth (you cannot supply TSMC's 2nm volume at sub-scale), and process-yield refinement (more wafers produced → more data → better statistical process control).
+
+**(ii) Process IP at the AI-grade leading edge.** SUMCO is one of only **three suppliers globally** (with Shin-Etsu and possibly Siltronic) qualified for TSMC's most demanding sub-3nm EW production. This qualification is the result of decades of process-IP development and cannot be replicated by a new entrant in <5-7 years. SUMCO's leading-edge logic + HBM wafer mix at ~20% of 300mm revenue is the direct economic expression of this technical position ([SUMCO Q3 FY2025 transcript, Alpha Spread](https://www.alphaspread.com/security/tse/3436/investor-relations/earnings-call/q3-2025), [SemiVision via X — Q3 FY2025 300mm commentary](https://x.com/semivision_tw/status/1993466357208563725)).
+
+**(iii) LTA-driven revenue visibility.** The 2021-onward LTA-with-prepayment regime gives SUMCO 2-3 years of forward revenue visibility, materially better than any prior cycle ([Digitimes, "Silicon wafer suppliers continue to enjoy LTA pull-ins"](https://www.digitimes.com/news/a20220407PD210/ic-manufacturing-silicon-wafer.html)). This is a shared industry advantage but matters disproportionately for SUMCO given the magnitude of the JPY ~400 bn Phase-2 capex programme.
+
+**(iv) Polysilicon supply integration via HPSA.** SUMCO's captive HPSA polysilicon facility in Theodore, Alabama provides supply security and price discipline on the most important raw material input ([SUMCO Network — HPSA Alabama](https://www.sumcosi.com/english/corporate/offices/)). This is unique among the five suppliers (Siltronic is supplied by parent Wacker; the others purchase polysilicon).
+
+**(v) Japanese supply-chain ecosystem integration.** SUMCO's deep ties with Japanese crystal-pulling equipment suppliers (Ferrotec), Japanese epi-equipment makers, Japanese polysilicon suppliers (Tokuyama), Japanese chemicals (Stella Chemifa for HF), and METI subsidy support create an ecosystem advantage that is durable.
+
+### 7.5 SUMCO's competitive vulnerabilities
+
+**(i) Geographic concentration in Japan.** The largest share of SUMCO's 300mm capacity is in Japan (Imari, Yonezawa) — exposing the franchise to Japan-specific risks (earthquake, JPY/USD FX volatility, METI policy shifts) that more diversified competitors (GlobalWafers in US/EU, Siltronic in Germany/Singapore) can hedge.
+
+**(ii) Depreciation step-up timing.** The JPY ~400 bn Phase-2 programme is converting to depreciation roughly 2 years before the AI-led 300mm demand wave fully absorbs the new capacity — this is the proximate cause of the current operating losses and is a vulnerability versus competitors with later or staggered capex cycles.
+
+**(iii) 200mm exposure.** SUMCO retained meaningful 200mm capacity well into 2024-25, even as Chinese new-build crushed the 200mm pricing environment. The Miyazaki 200mm exit (announced February 2025, effective late 2026) is an admission of strategic late-action; the late timing means SUMCO bore more 200mm losses than competitors who exited earlier.
+
+**(iv) Single-product company.** Unlike Shin-Etsu (whose parent's PVC/silicones/photoresist segments cushion wafer cyclicality), SUMCO is essentially single-product — every revenue dollar comes from silicon wafers, so cyclical downturns translate directly to bottom-line stress.
+
+### 7.6 Market share assessment (peer-comparison)
+
+The cleanest cross-supplier comparison uses **300mm wafer monthly capacity** rather than revenue (because product mix differences distort the revenue picture). The five-supplier shares as of 2025:
+
+| Supplier | 300mm capacity share | Listed market | TTM revenue (most recent FY) |
+|---|---|---|---|
+| Shin-Etsu Chemical / SEH | ~28% | TSE:4063 | ¥2,561 bn (consolidated, FY2024) |
+| SUMCO | ~21-23% | TSE:3436 | ¥409.6 bn (CY2025) |
+| GlobalWafers | ~16-18% | TPEx:6488 | TWD ~60-70 bn (estimate, FY2025) |
+| Siltronic | ~12-14% | ETR:WAF | EUR 1.35 bn (FY2025) |
+| SK Siltron | ~10-12% | private | not disclosed |
+
+*Source: Capacity shares from [Intel Market Research — Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85) and [Nomura Greater China Semi 2026-30F Renaissance, Fig 35, 2026-05-21](https://www.intelmarketresearch.com/silicon-wafer-market-85); revenue figures from [Shin-Etsu Annual Report 2025 Financial Section](https://www.shinetsu.co.jp/wp-content/uploads/2025/07/Financial-Section.pdf), [SUMCO Corporate Profile](https://www.sumcosi.com/english/corporate/profile.html), [Siltronic Annual Report 2025, p. 2](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf), and GlobalWafers IR.*
+
+*Analyst view:* The market structure is durable. The competitive landscape over the next 3-5 years is unlikely to add a sixth meaningful 300mm supplier (because of the 5+ year construction-qualification cycle for any greenfield), and the existing five are highly unlikely to consolidate further (the 2020-22 GlobalWafers/Siltronic deal failure showed that even friendly cross-border deals face regulatory hurdles). Share shifts will be incremental and driven by who executes capex programmes most efficiently and who lands the best customer LTAs.
+
+---
+
+## 8. Market Opportunity (TAM)
+
+### 8.1 TAM sizing and methodology
+
+The **Total Addressable Market** for silicon wafers — the global merchant market for polished/annealed/epi/JIW/SOI/RPW wafers across all diameters — is currently sized at **~US$13-17 bn per annum** for 2024-25, with most credible forecasts converging at **~US$22-28 bn by 2030F** ([Intel Market Research — Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85), [Future Market Insights — Semiconductor Wafer Market](https://www.futuremarketinsights.com/reports/semiconductor-wafers-market), [Market Growth Reports — 300mm Silicon Wafers Market](https://www.marketgrowthreports.com/market-reports/300mm-silicon-wafers-market-103422), [Business Research Insights — 300mm Wafer Market](https://www.businessresearchinsights.com/market-reports/300mm-12-inch-silicon-wafer-market-115938)). The methodology is **bottom-up unit-and-ASP**: number of wafers shipped per month per diameter × average selling price per wafer × 12 = annual revenue. SEMI's annual silicon-wafer report is the industry-standard reference for the unit data, while the ASP data is partially supplied by SEMI and partially estimated by the analyst houses based on company disclosures.
+
+The **300mm sub-TAM** specifically is sized at **~US$9-12 bn in 2024-25**, representing ~65-72% of the total wafer market by revenue ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85), [Valuates Reports — Single Crystal Silicon Wafers (300mm) Market](https://reports.valuates.com/market-reports/QYRE-Auto-21H9107/global-single-crystal-silicon-wafers-300mm)). The **200mm sub-TAM** is approximately **US$3-5 bn**, and the **150mm-and-below sub-TAM** is approximately **US$1-2 bn**.
+
+### 8.2 SAM — Serviceable Addressable Market for SUMCO
+
+SUMCO's **Serviceable Addressable Market** is the portion of the TAM that SUMCO is technically and commercially qualified to address. This is essentially **the entire global merchant wafer market across all diameters from 100mm through 300mm** — SUMCO produces every category in the matrix, has plants positioned across Japan, US, Taiwan, Indonesia, and serves all the major chipmaker geographies. The only exclusions are: (i) SOI products at >200mm (which SUMCO does not produce — Soitec has the franchise), (ii) any specialty wafer types not in SUMCO's matrix (SiC for SiC power devices, GaN for RF — different substrates entirely), and (iii) any volume reserved for captive supply at chipmakers with in-house wafer capability (Samsung historically had some captive capacity, though has largely exited).
+
+Numerically, SAM is approximately **95-98% of TAM**, or **~US$12-16 bn in 2024-25** and **~US$21-27 bn by 2030F**.
+
+### 8.3 SOM — Serviceable Obtainable Market for SUMCO
+
+SUMCO's **Serviceable Obtainable Market** — the share of SAM that SUMCO realistically captures given competitor presence and customer-supplier relationships — is its **current market share of ~21-23% in 300mm** and approximately similar shares in 200mm-and-below. Applied to the TAM, this is:
+
+- 2024-25 SOM ≈ 21-23% × $13-17 bn = **~$2.7-3.9 bn** annually
+- 2030F SOM ≈ 21-23% × $22-28 bn = **~$4.6-6.4 bn** annually
+
+This range bookends SUMCO's actual reported revenue (CY2025 ~JPY 410 bn ≈ US$2.6 bn at JPY 155/USD), confirming the SOM framework is consistent with disclosed financials.
+
+### 8.4 Market growth projections and SUMCO's penetration strategy
+
+Industry forecasts cluster around **6-9% CAGR for 300mm wafer demand through 2030**, driven by the four trends described in Section 6.4 (AI-led 300mm demand, HBM consumption, advanced packaging, leading-edge logic node migration) ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85), [Future Market Insights](https://www.futuremarketinsights.com/reports/semiconductor-wafers-market), [Business Research Insights — 300mm Wafer Market](https://www.businessresearchinsights.com/market-reports/300mm-12-inch-silicon-wafer-market-115938)). SUMCO's **penetration strategy** has three explicit prongs:
+
+**Prong 1: Defend and grow share in 300mm AI-grade wafer franchise.** Through the Imari/Yonezawa Phase-2 capex programme, the Miyazaki 200mm exit (freeing resources for 300mm), and continued qualification work with TSMC, Samsung, Micron, SK Hynix on leading-edge nodes. The "20% of 300mm revenue from AI/HBM" metric disclosed in Q3 FY2025 is the explicit measure of progress here.
+
+**Prong 2: Exit unprofitable 200mm capacity selectively.** The Miyazaki shutdown is the first move; SUMCO has signaled willingness to further rationalize 200mm capacity if pricing does not normalize. The strategic preference is to redeploy 200mm engineering and operational headcount to 300mm production rather than pure shrinkage.
+
+**Prong 3: Maintain niche positions in JIW, SOI, RPW.** These are smaller-volume but pricing-stable franchises that provide product-mix diversification and customer-stickiness benefits.
+
+### 8.5 Quantifying the upside scenario
+
+A **base-case scenario** for SUMCO over the 2026-30F horizon: if SUMCO holds 21-23% share of a 300mm market growing at 7% CAGR and a 200mm market growing at 3% CAGR (net of Miyazaki exit), revenue would grow from CY2025 ~JPY 410 bn to **CY2030F ~JPY 580-650 bn**, an OP recovery to **~JPY 80-120 bn (~14-19% margin)** as the Phase-2 depreciation peak passes and AI-led volume absorbs fixed cost.
+
+A **bull-case scenario** would add (i) market-share gains in 300mm AI-grade EW (driven by SUMCO's earlier qualification at sub-3nm nodes), (ii) pricing power as the AI-led demand wave outpaces capacity additions, and (iii) yen depreciation supporting USD-priced LTA economics. Bull case CY2030F revenue **~JPY 700-800 bn**, OP **~JPY 150-200 bn (~22-25% margin)**, matching or exceeding the FY2022 cycle peak.
+
+A **bear-case scenario** would feature (i) Chinese 300mm new-build (National Silicon, ESWIN) capturing meaningful share at the trailing-edge of 300mm production, (ii) AI demand deceleration as hyperscaler capex normalizes, and (iii) Japanese yen strength compressing USD-LTA margin. Bear case CY2030F revenue **~JPY 450-500 bn**, OP **~JPY 30-50 bn (~7-10% margin)**, a muted recovery that does not justify current capex.
+
+*Analyst view:* The base-case is consistent with sell-side consensus and SUMCO's own multi-year LTA visibility. The bull-case is what justifies the current ~2.7× P/S multiple and the equity rerating since end-2024. The bear-case is the principal risk and is the structural reason for the Q1 FY2026 stock pullback. Investors taking a position in SUMCO are essentially betting that the AI-led 300mm demand wave is at least as durable as the consensus base-case, with optionality on the bull-case scenario over a 3-5 year horizon.
+
 
