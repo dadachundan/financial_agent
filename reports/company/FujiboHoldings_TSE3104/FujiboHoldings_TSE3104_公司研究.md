@@ -296,3 +296,109 @@ CMP 抛光垫并不在美国半导体设备出口管制清单上（与光刻机�
 不存在商业上可行的**非 CMP** 平坦化 3 nm 以下晶圆的方法 —— 1990 年代曾尝试的替代方案（回刻 + 旋涂玻璃）已被放弃，因其无法满足现代光刻所需的全晶圆均匀性。因此富士紡的替代风险是**CMP 内部**：例如 DuPont VisionPad™ / Ikonic™ 或湖北鼎龙 DL-720 系列正在商业化的替代抛光垫化学体系（含硅、含铜等）或新抛光垫架构（多层、微纹理表面）。至今为止，富士紡通过连续微调维持了特殊等级的利基，但 DuPont 新抛光垫平台发布的节奏（Ikonic™ 明确瞄准 sub-28 nm 先进工艺）是结构性威胁 —— 富士紡通过台湾 R&D 中心建设来应对。
 
 ---
+
+## 7. 竞争格局
+
+CMP 抛光垫的竞争格局有点特殊：**顶部营收份额深度集中，但技术维度上高度分散** —— 真正具规模的全球供应商基本上只有 7 家，每一家都通过客户地理、抛光垫产品族与节点档位占据了一个可防御的差异化利基。富士紡的竞争位置不是由它与 DuPont IC1000™ 在头对头位置如何竞争来定义，而是由它在**先进节点 CMP 软垫上的特殊等级利基**加上**日本客户偏好的惯性**所定义。
+
+### 7.1 — 直接竞争对手（点名 + 资料来源）
+
+**(a) DuPont (NYSE:DD) — 全球标准制定者。** DuPont 通过继承自 Rodel 的品牌（1999 年被 Rohm & Haas 收购，后归入 Dow Chemical，目前位于 DuPont Electronics & Industrial 事业部）是事实标准供应商 —— *"DuPont is the leading player in the CMP pads market, offering a diverse range of products such as IC1000 and IC1400"*（[Cognitive Market Research — CMP Pad market](https://www.cognitivemarketresearch.com/cmp-pad-market-report)）。**IC1000™ 系列**是行业标准硬垫；**VisionPad™** 是下一代先进节点平台；**Ikonic™** 是 *"targeting advanced processes below 28 nm node"* 的平台（[NITTA DuPont — PolishingPad product page](https://www.nittadupont.co.jp/en/category-products/pad)）。DuPont 在日本的销售布局由 **NITTA DuPont 株式会社**承担 —— 这是 1983 年由 Nitta 株式会社与 Rodel（现 DuPont）成立的合资公司。DuPont 集团明确表示 *"works closely with teams at sites in Taiwan, Korea, and their joint venture—NITTA DuPont Inc.—in Japan to develop, scale, and supply materials"*（[DuPont — Materials for CMP](https://www.dupont.com/electronics-industrial/semiconductor-cmp.html)）。
+
+2025 年 5 月，DuPont 宣布拟将其 Electronics 业务分拆为独立上市的新公司 **Qnity Electronics Inc.**（已向 SEC 提交 Form 10-12B），其中包括 CMP 抛光垫业务 —— 分拆预计于 2026 年完成，届时将首次形成与富士紡可比的纯粹抛光垫上市公司（[Qnity Electronics Form 10-12B/A, SEC EDGAR](https://www.sec.gov/Archives/edgar/data/0002058873/000119312525215621/d942851dex211.htm)）。*分析师观点：* DuPont 的销量规模、研磨液 / 抛光垫 / 清洗液一体化产品组合的广度、以及数十年的合格供应商惯性，使其成为全球防御度最高的抛光垫在位龙头；富士紡能击败 DuPont 的场景仅限于特殊等级，以及客户主动寻求二供时。
+
+**(b) Entegris / CMC Materials (NASDAQ:ENTG) — 全球第二，研磨液强 / 抛光垫弱。** Entegris 在 2022 年以 USD 65 亿收购 Cabot Microelectronics ("CMC Materials")，跃升为更广义 CMP 耗材市场的第二位 —— *"following its acquisition of Cabot Microelectronics (CMC Materials), Entegris solidified its second-place ranking with an estimated $2.2 billion in revenue"*（[Dr. Robert Castellano — DuPont takes #1 in semi consumables, 2025](https://drrobertcastellano.substack.com/p/dupont-takes-1-position-in-semiconductor)）。但 *"for the pad segment, DuPont continues to be the dominant supplier, representing over 50% of the market"* —— Entegris 的第二位主要靠研磨液（Cabot 带来的传统 SemiSperse / Q8000 系列）；其抛光垫业务规模较小、聚焦于通过 CMC 继承的特殊等级。*分析师观点：* Entegris/CMC 在抛光垫上不是富士紡的核心威胁 —— 它们在研磨液上的竞争更激烈。
+
+**(c) 湖北鼎龙 (SZSE:300054) — 中国国产替代挑战者。** 鼎龙是最具颠覆性的新兴竞争对手。他们已经获得 **中芯国际 (SMIC)** 对 **DL-720 系列硬质 CMP 抛光垫在 28 nm 与 14 nm 逻辑器件上**的认证 —— *"marking a significant milestone in Chinese domestic CMP consumable qualification and reducing SMIC's supply chain dependence on international pad suppliers"*（[OpenPR — Semiconductor CMP Pad market 2025](https://www.openpr.com/news/4253861/semiconductor-cmp-polishing-pad-latest-market-report-2025)）。野村 2026-05-21 半导体材料 primer（本报告引用的 sector 框架）给予鼎龙 **买入** 评级、目标价从 CNY 42 上调至 **CNY 104**，对应 2027 年 96× P/E —— 反映市场对国产替代红利的共识（[reports/sector/半导体材料.md, 项目内 sector ref](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/半导体材料.md)）。鼎龙对富士紡的威胁不在于从富士紡现有的日 / 台 / 韩客户席位中夺走份额（合格供应商惯性较强），而在于吞掉本来会随中国晶圆厂扩张流向富士紡的中国市场机会。*分析师观点：* 鼎龙是富士紡大陆营收贡献的长期主要对手；目前富士紡的大陆份额很小，风险是"机会成本"而非"份额流失"。
+
+**(d) JSR Micro / JSR Corporation (TSE:4185) — 日本同业，研磨液主导。** *"JSR Micro, the electronic materials subsidiary of JSR Corporation, holds approximately 8% of the global CMP pads market, with a concentrated focus on advanced logic and memory applications in Japan, South Korea, and Taiwan"*（[Cognitive Market Research](https://www.cognitivemarketresearch.com/cmp-pad-market-report)；[JSR Micro — Advanced Cleans and CMP](https://www.jsrmicro.com/electronic-materials/advanced-cleans-cmp)）。JSR 在地理布局与客户群上与富士紡最为接近，但 JSR 整体规模大得多（营收约 ¥4,300 亿日元，以光刻胶为主）且当前正被 JIC（日本政府背景的并购基金）私有化，造成中期所有权悬念。*分析师观点：* JSR 在日 / 台 / 韩先进逻辑账户上与富士紡正面对决，且拥有光刻胶与研磨液业务的捆绑销售杠杆；富士紡靠抛光垫特殊等级 + 日本客户偏好竞争。
+
+**(e) 3M (NYSE:MMM)。** 3M 通过其电子材料业务销售较小规模的 CMP 抛光垫组合，同时配套销售在 CMP 业务上占主导地位的 **金刚石修整盘 (diamond conditioner) 业务**。3M 在抛光垫上规模较小（全球 1-3% 份额），但作为深口袋的战略在位者拥有跨产品议价杠杆。*分析师观点：* 不是富士紡在抛光垫上的核心威胁。
+
+**(f) SKC + SKC Solmics (KRX:011790)。** 韩国特种材料企业；从韩国向 Samsung / SK 海力士晶圆厂集群供应抛光垫。规模小于富士紡，但在韩国内存集群中拥有可防御的本地位置。
+
+**(g) 长尾 —— FNS Tech、TWI、IVT Technologies、Tech-Polishing（台湾）以及数家中国大陆抛光垫制造商**（如 安集科技 Anji Microelectronics 邻近的研磨液 / 抛光垫野心）。安集主要在研磨液领域竞争，但与鼎龙一同是有计划扩张抛光垫份额的中国名义之一（[Anji Microelectronics SSE:688019](http://quote.eastmoney.com/sh688019.html)）。
+
+### 7.2 — 富士紡相对全场的竞争地位
+
+富士紡具体的结构性优势，按重要性排序：
+
+1. **特殊等级软垫领导地位**。公司声称 —— *"captured the top market share in the mainstay field of advanced process soft pads"* —— 给予富士紡一个可防御的特殊等级利基，并且这一利基随先进节点对软垫精抛需求的增加而结构性增长（[Integrated Report 2024, p. 18](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)）。这是公司组合中最强的单一竞争护城河。*分析师观点：* 这是支撑富士紡投资逻辑相对 DuPont 在位优势的差异化抓手。
+
+2. **五家工厂 + 台湾 R&D 布局**。富士紡是特种竞争对手中拥有最广泛抛光垫制造布局的厂商（[Fujibo Polishing Pad Business overview](https://www.fujibo.co.jp/en/division/polishingpad/)）。台南工厂 + 苗栗 R&D 中心让富士紡相比任何非 DuPont、非 3M 竞争对手都更贴近台湾客户集群。
+
+3. **日本客户偏好 + 合格供应商惯性**。日本晶圆厂（铠侠、瑞萨）、日本硅晶圆制造商（信越、SUMCO）、日本硬盘基板制造商在二供席位决策中偏好日本供应商 —— 这种"买日"模式在日本供应链内部真实且持久（[Nomura 半导体材料 primer, 2026-05-21, 项目内 sector ref](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/半导体材料.md)）。
+
+4. **控股公司层面的过度资本化**。净现金 + 71% 自有资本比率意味着富士紡可以在逆周期里继续投资，并压制更小的二级竞争对手 —— ¥57 亿日元（约 USD 3,600 万）的苗栗 R&D 中心支票，对一家更小的中国 / 韩国二级竞争对手几乎是无法想象的（[Yuho 2025, p. 4 — 連結経営指標等](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。
+
+富士紡具体的结构性弱点：
+
+1. **相对 DuPont + Entegris 的规模劣势**。DuPont 销售多个数十亿美元的抛光垫组合；富士紡销售约 USD 1.2 亿（FY3/25）。在纯经济学 R&D 对比上，规模在位者可以摊销更多应用工程师、更多抛光垫平台发布与更多客户试用周期。
+
+2. **没有捆绑供应杠杆**。DuPont、Entegris、JSR、3M 把抛光垫与研磨液 / 清洗化学品 / 修整盘 / 光刻胶一起销售 —— 富士紡是纯粹的抛光垫单一产品厂商，没有互补 CMP 耗材。这让富士紡是"小额项目"供应商，缺乏跨产品议价杠杆。
+
+3. **鼎龙的中国国产替代红利**。鼎龙在中国晶圆厂集群中获得认证的速度比富士紡触达中国客户的速度更快，且政策方向（国产替代）会放大这一优势。
+
+4. **服装 + 其他事业部对集团倍数的拖累**。即便抛光垫业务驱动合并故事，仍有约 25% 的集团销售来自生活服装与其他业务 —— 二者都是零增长或负 OP 的业务，相对一个假设性的纯抛光垫分拆，会压制合并倍数。
+
+### 7.3 — 竞争位置图
+
+```mermaid
+quadrantChart
+    title CMP 抛光垫竞争位置 — 技术广度 vs 规模
+    x-axis "窄特种" --> "广产品组合"
+    y-axis "小批量特种" --> "大批量在位者"
+    quadrant-1 "规模 + 广度"
+    quadrant-2 "量级特种"
+    quadrant-3 "利基玩家"
+    quadrant-4 "特殊 + 利基"
+    "DuPont (含 NITTA DuPont)": [0.85, 0.95]
+    "Entegris/CMC": [0.7, 0.7]
+    "JSR Micro": [0.55, 0.6]
+    "Fujibo": [0.5, 0.55]
+    "Hubei Dinglong 鼎龙": [0.7, 0.55]
+    "3M": [0.45, 0.55]
+    "SKC": [0.35, 0.4]
+    "FNS Tech / TWI / Tech-Polishing": [0.2, 0.3]
+```
+
+![Fujibo 同业 TTM P/E 比较](../../charts/fujibo_peer_pe.png)
+
+资料来源：Yahoo Finance + stockanalysis.com 同业页面，2026 年 5 月 —— 参见 [stockanalysis.com Fujibo 3104.T](https://stockanalysis.com/quote/tyo/3104/)、[JSR 4185.T](https://stockanalysis.com/quote/tyo/4185/)、[Entegris ENTG](https://stockanalysis.com/stocks/entg/)、[DuPont DD](https://stockanalysis.com/stocks/dd/)。
+
+---
+
+## 8. 市场机会 (TAM)
+
+### 8.1 — 自上而下规模
+
+全球 CMP 抛光垫 TAM：
+
+- **2024 年估算市场规模：约 USD 8.95 亿**（Cognitive Market Research 基准）。Mordor Intelligence 下限：约 USD 8.5 亿。TECHCET 上限（更广义分类，含部分研磨垫）：约 USD 11 亿。*基础：[Cognitive Market Research CMP Pad market report](https://www.cognitivemarketresearch.com/cmp-pad-market-report) + [Mordor Intelligence CMP pad market](https://www.mordorintelligence.com/industry-reports/chemical-mechanical-polishing-pad-market) + [TECHCET CMP forecast 2024](https://techcet.com/semiconductor-cmp-pad-slurry-forecast/)。*
+- **2031 预测 TAM：约 USD 13-15 亿**，对应 5 年 CAGR 约 5.5-6.5% —— 略高于晶圆设备增长，与 §6 提到的每片晶圆 CMP 步骤增长驱动一致。
+- **亚太份额：约 75%（台 + 韩 + 日 + 中合计）**；中国大陆是 **增速最快的地区，2024-2030 年 CAGR 9.3%**（[Knowledge Sourcing — semiconductor polishing pad market 2030](https://www.knowledge-sourcing.com/report/semiconductor-polishing-pads-market)）。
+
+### 8.2 — 富士紡的 SAM / SOM
+
+富士紡的可服务可达市场 (SAM, served addressable market) 是全球抛光垫 TAM 中富士紡产品组合 + 客户布局可触达的子集：
+
+- **地理 SAM**：日本 + 台湾 + 韩国 + 美国 / 欧洲 / 东南亚的可出口部分 ≈ USD 8.95 亿 TAM 中的约 USD 7-7.5 亿（中国大陆部分随鼎龙认证成熟而对富士紡日益封闭）。
+- **产品 SAM**：硬垫 CMP（FXA）+ 软垫 CMP（Suede）+ 硅晶圆初抛（FP）+ LCD / 光刻掩膜（FX）+ 晶圆固持（Back Pad）—— 基本覆盖全部抛光垫市场。研磨垫（NEXTILE）是较小的毗邻业务。
+
+富士紡的 **SAM 份额 ≈ 16-17%**（¥193 亿日元 / 约 USD 1.2 亿 / (USD 7 亿 × 约 0.18)）—— 这是一个 DuPont 约 50% 之下、超过任何非 DuPont 非 Entegris 竞争对手的可防御第二梯队席位。**2025-30 区间 SOM 上行潜力**：如果富士紡保持 16% SAM 份额，且 SAM 从约 USD 7 亿增长到 2030 年约 USD 10 亿（5 年 CAGR 约 7%），则抛光垫分部营收从约 USD 1.2 亿升至约 USD 1.6 亿 —— 在不增加份额的情况下也有 30%+ 营收顺风。如果再叠加在台 / 韩集群通过二供认证获得 2-3 ppt 的增量 SAM 份额（这正是苗栗 R&D 中心的战略意图），**抛光垫分部到 FY3/2030 营收可能达到 ¥270-300 亿日元** —— 也就是单分部本身就超过当前整个集团（[Cognitive Market Research forecast + Yuho 2025 segment data](https://www.cognitivemarketresearch.com/cmp-pad-market-report)）。
+
+### 8.3 — 交叉验证
+
+自下而上视角与三个独立三角法验证一致：
+
+1. **富士紡自身的 MTP 目标（*增强 21-25*）为 FY3/26 营收 ¥600 亿、OP ¥100 亿、OP 利润率 16.7%、ROE ≥10%、ROIC ≥10%**（[Yuho 2025, p. 29 — 中期経営計画目標](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。FY3/26 指引为 ¥454 亿 / ¥75 亿（经 1H 上修后），仍明显低于 MTP 目标 —— 2021 年制定 MTP 时 AI-CMP 需求尚未进入管理层视野，目标本身结构性偏激进。公司尚未发布 *增强 26-30* 的接力 MTP，但预计将在 2026 年 5 月的 IR Day 公布。
+
+2. **资本支出节奏**。FY3/25 集团资本支出 ¥61 亿日元（研发 + 抛光垫重），其中 ¥36 亿投向抛光垫业务 —— 这是抛光垫资本支出史上最高的一年。这是多年的产能建设承诺，只有当富士紡内部的 SAM 份额与增长测算证明合理时才有意义（[Yuho 2025, p. 32 — 設備投資](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。
+
+3. **行业分析师共识**。多份卖方半导体材料 primer（野村、瑞穗、MS 亚洲）把 CMP 抛光垫子板块列为半导体材料宇宙中两到三个结构顺风分类之一，驱动因子是先进节点 CMP 步骤数增长 + HBM + BPD + SiC（[reports/sector/半导体材料.md — 项目内 sector ref](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/半导体材料.md)）。
+
+### 8.4 — 渗透策略
+
+富士紡公开的渗透策略包含三条：(1) 在先进节点 CMP 客户上扩张软垫份额（苗栗中心是抓手），(2) 在富士紡当前是二供的客户上扩大硬垫销售，(3) 通过连续改进产品周期维持 LCD 玻璃 / 硬盘 / 硅晶圆的份额（[Top Message, Fujibo IR](https://www.fujibo.co.jp/en/ir/message/)；[Integrated Report 2024, p. 17-18](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)）。苗栗中心 2027 年完工的目标时点，与 TSMC 在 2-nm / 1.4-nm 节点的扩产窗口同步对齐 —— 这是有意设计。
+
+---
