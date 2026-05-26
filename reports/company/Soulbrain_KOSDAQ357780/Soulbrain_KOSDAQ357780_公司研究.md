@@ -298,3 +298,78 @@ Soulbrain 经营 **半导体湿法化学品与特种材料 (semiconductor wet ch
 
 *资料来源：[Economy6 韩国券商汇编，2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html)；半导体材料 ~75–76%、二次电池 ~13–16%、显示 ~9–11%。Soulbrain DART 사업보고서 披露三业务段拆分但不披露逐客户分布；图中所用为券商一致区间的中位值。*
 
+## 7. 竞争格局
+
+### 7.1 按化学品分类的竞争对手图谱
+
+评估 Soulbrain 的竞争地位最有效的方法是 **按化学品逐项分析**，而不是当作单一整体——因为每个子业务段面临不同的竞争集合。
+
+| 化学品 | Soulbrain 在韩国份额估计 | 全球 Tier-1 在位者 | 韩 / 中挑战者 |
+|---|---|---|---|
+| **HF / BOE** | 35–45% (韩国本土) | Stella Chemifa (日，全球 ~30%)、Morita (日)、Resonac (日) | SK Materials (韩，韩国 ~25%)、Foosung (韩，韩国 ~15%)、多氟多 / 巨化 (中) |
+| **H₃PO₄ SiN 剥离** | 30–40% (韩国本土) | Stella Chemifa、Solvay (比)、Resonac | Dongjin Semichem (韩)、DNF (韩) |
+| **CMP 抛光液 — Cu/Cu 阻挡层 (HBM)** | 50–65% (2024 年之前曾为 ~95%) | Fujimi (日)、Entegris/Cabot (美)、Resonac/Hitachi (日)、Versum/Merck (德) | Dongjin Semichem (韩)、安集微 (中)、鼎龙股份 (中)、UBmaterials (韩) |
+| **CMP 抛光液 — 铈基 STI / Wet Nano** | 30–40% (韩国本土) | Entegris、Versum、Resonac、Fujimi、KC Tech (韩) | 安集微、鼎龙、UBmaterials |
+| **CMP 抛光液 — 二氧化硅 ILD/IMD** | 25–35% (韩国本土) | Entegris、Versum、Cabot、Fujimi | KC Tech (韩，韩国 ~25%)、鼎龙、安集微 |
+| **CVD/ALD 前驱体 (HfO₂/ZrO₂)** | 20–30% (韩国本土) | Merck (Versum)、Air Liquide / EMG | DNF、Hansol Chemical、Mecaro、UP Chemical (均韩国) |
+| **LIB 电解液** | 15–25% (全球商业供应商) | 三菱化学 (日)、MGL/UBE (日) | Enchem (韩)、Chunbo (韩)、天赐高新 (中)、新宙邦 (中)、Soulbrain MI (美) |
+
+*估算综合自 [reports/sector/半导体材料.md](../../sector/半导体材料.md) (野村 Fig 35-44)；[Yano Research，2024](https://www.yanoresearch.com/press/press.php/3921)；[韩国券商汇编 — Economy6，2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html)；[Businesskorea，2023-10-30](https://www.businesskorea.co.kr/news/articleView.html?idxno=203197)；[Fujifilm Electronic Materials 领先，2024-09](https://www.webnewswire.com/2024/09/03/fujifilm-electronic-material-takes-lead-in-cmp-slurry-market-for-hbm-says-the-information-network/)。*分析师观点：* 数字均为通过多份卖方研报三角推算的点估计；大部分子段没有公开发布的精确市场份额数据。*
+
+### 7.2 头对头：Soulbrain vs. KC Tech
+
+最贴近的单一可比公司是 **KC Tech (KOSDAQ:281820)**。两者都是韩国本土特种化学品厂家，主要敞口在三星 + SK 海力士；都在 CMP 抛光液领域竞争 (KC Tech 历史上在二氧化硅 ILD/IMD 较强，Soulbrain 在 HBM Cu 抛光液主导)；都有 HF / 湿法刻蚀业务。野村 2026 锚定报告在 Fig 41 中将其合并为"KC Tech / Soulbrain (KR)"作为 CMP 抛光液——明确说明这是两家独立公司被合并是因为它们在韩国本土的合计份额具有信息量，即使两家的单独占比未公开披露 ([reports/sector/半导体材料.md](../../sector/半导体材料.md) — Fig 41 引用)。
+
+运营层面 KC Tech 更宽 (也制造 CMP 设备与晶圆搬运机器人，FY24 营收约 ₩1.2 万亿)，但 Soulbrain 单位营收的盈利能力更强，且更聚焦于高利润的先进节点耗材。*分析师观点：* 在股权叙事层面 Soulbrain 较 KC Tech 估值溢价 (~40 倍 vs. ~14 倍 TTM PE)，因为 (a) HBM Cu CMP socket 比大宗抛光液利润率高；(b) Soulbrain 在分立后讲故事更纯粹；(c) Soulbrain 的 HF / BOE / 磷酸宽度带来更多本地化顺风敞口。两家公司在大多数 socket 上并不直接相互蚕食——三星与 SK 海力士执行多源策略，确保两家都有一席之地。
+
+### 7.3 头对头：Soulbrain vs. Fujimi (TSE:5384)
+
+Fujimi 是在 2024 年中期 **在韩国 HBM Cu 抛光液销售上从 Soulbrain 手中夺回领先的日本全球 Tier-1 CMP 抛光液厂家** ([Fujifilm Electronic Materials 领先，2024-09](https://www.webnewswire.com/2024/09/03/fujifilm-electronic-material-takes-lead-in-cmp-slurry-market-for-hbm-says-the-information-network/))。Fujimi 有约 70 年的抛光液配方历史，以及强大的二氧化硅 + 氧化铈产品组合；其在 HBM Cu 上的竞争优势据报是更细致的磨料颗粒分布，在 SK 海力士更严的 HBM3E 验证关上实现了更低的晶圆缺陷数。Soulbrain 的应对是 (a) 在板桥 R&D 中心加速自身的颗粒工程研发；(b) 推动在三星与 SK 海力士实现 HBM4 / HBM4E 验证；(c) 借助韩国战略资产支持确保至少维持双源地位。*分析师观点：* Fujimi-Soulbrain 在 HBM Cu 抛光液上的动态目前是 **轮换份额竞争 (rotating-share competition)** 而非静态主导——两家都向两个客户出货，季度份额会根据价格与良率表现轮换。
+
+### 7.4 间接 / 新兴竞争对手
+
+- **Dongjin Semichem (KOSDAQ:005290)。** 韩国本土商业化学品公司，2025 年突破进入 SK 海力士 HBM CMP 供应 ([THE ELEC，2024](https://www.thelec.net/news/articleView.html?idxno=4751))。威胁 Soulbrain "韩国唯一本土 HBM 抛光液"叙事。还在 H₃PO₄、前驱体、光刻胶显影液上有交集。Dongjin TTM 约 12 倍 PE——相对 Soulbrain 折价反映规模更小、HBM 敞口更低。
+- **安集微电子 (SSE:688019)。** 中国 sub-10nm CMP 抛光液领军企业，随 SMIC + YMTC + 华虹快速成长。与三星 / SK 海力士目前直接重叠较少，但中国本土存储扩张是长期威胁。野村对安集微评级买入、目标价 360 元 (42 倍 2027F PE)，反映了比 Soulbrain 更激进的估值倍数 ([reports/sector/半导体材料.md](../../sector/半导体材料.md) — 安集推荐部分)。
+- **鼎龙股份 (SZSE:300054)。** 中国多元化材料厂——CMP 垫 + 抛光液 + 光刻胶 + ArF 辅料。战略威胁在宽度：与 Soulbrain 一样横跨多个子化学品。野村给到 96 倍 2027F PE——极端估值反映当前份额近零但对中国本土存储扩张存在期权 ([reports/sector/半导体材料.md](../../sector/半导体材料.md) — 鼎龙板块)。
+- **Hansol Chemical (KOSPI:014680)。** 韩国 H₂O₂ + 前驱体 + 电池粘结剂公司，在前驱体与电池材料上与 Soulbrain 有交集。TTM 约 13 倍 PE——相对 Soulbrain 折价因为 HBM 敞口更低。
+- **DNF (KOSDAQ:092070)、Mecaro (KOSDAQ:241770)、UP Chemical (未上市)。** 韩国前驱体专家，更窄但更深。与 Soulbrain 在 HfO₂ / ZrO₂ 前驱体 socket 竞争；它们合起来让韩国前驱体市场结构性分散，阻止 Soulbrain 独占。
+- **Stella Chemifa (TSE:4109)、Morita Chemical (日，未上市)、Resonac (TSE:4004)。** HF / BOE 全球日本 Tier-1 在位者；2019 贸易争端把它们在韩份额大幅压低，但仍保有 >50% 全球非韩份额，并继续在韩国厂家尚未匹敌的高端等级上竞争。
+
+### 7.5 Soulbrain 的竞争优势与脆弱性
+
+**优势 (护城河清单)：**
+- **韩国战略材料特许经营**——在 HF / BOE / 湿法刻蚀化学品上拥有韩国生态外厂家难以复制的准保护地位 (监管 + 客户政治护城河)。
+- **三星 + SK 海力士的联合验证深度**——每个等级都在多年 R&D 周期内与客户共同配方；每个 socket 的切换成本以数千万美元计 (切换成本护城河)。
+- **湿法化学品栈宽度**——单一供应商提供刻蚀液 + CMP + 前驱体 + 电镀，降低客户 SKU 管理负担并产生交叉销售杠杆 (规模 / 范围护城河)。
+- **HBM Cu CMP 在位者份额**——即便 Fujimi / Dongjin 在分享，Soulbrain 仍是 AI 存储周期中利润率最高、能见度最高产品 socket 的 Tier-1 供应商 (产品结构护城河)。
+- **美国本地化期权**——Taylor 得州磷酸厂 + Kokomo 印第安纳电解液厂赋予公司任何韩国本土同行 (Dongjin、KC Tech、Hansol) 尚不具备的非韩营收基础 (进行中的地理护城河)。
+
+**脆弱性：**
+- **>70% 客户集中度在三星 + SK 海力士**——NAND/DRAM 资本支出的前一大削减 (如 2022–23) 直接削减 Soulbrain 营收 15–25%。2023 年 ₩8,440 亿营收低谷就是周期最低点证据。
+- **HBM Cu CMP 独占侵蚀**——Fujimi 在 2024 年夺取领先、Dongjin 在 2025 年突破，意味着溢价叙事在结构上比 2023 年讲法更脆弱。
+- **铈基原料在中国集中度**——全球 >85% 氧化铈加工在中国；任何美中贸易摩擦升级都会通过上游原料击中 Soulbrain 的铈基抛光液业务。
+- **生产基地集中在韩国**——直到 Taylor 在 2026–29 年爬坡，生产足迹仍以韩国为主——暴露于韩国工资上涨、电价上涨与韩元波动。
+- **HfO₂/ZrO₂ 前驱体在更分散的韩国市场中竞争**——这里的份额上行更困难。
+
+![Soulbrain vs. 同业 TTM 市盈率](../../charts/soulbrain_peer_pe.png)
+
+*资料来源：TTM PE 值取自 [Stockanalysis，KOSDAQ:357780](https://stockanalysis.com/quote/kosdaq/357780/)；安集微与鼎龙取自 [野村 Greater China Semi 2026-2030 锚定报告](https://www.cninfo.com.cn/)，已在 [reports/sector/半导体材料.md](../../sector/半导体材料.md) 中汇总；Resonac 取自 [Yahoo Finance — 4004.T](https://finance.yahoo.com/quote/4004.T/)；Entegris 取自 [Yahoo Finance — ENTG](https://finance.yahoo.com/quote/ENTG/)；Fujimi 取自 [Yahoo Finance — 5384.T](https://finance.yahoo.com/quote/5384.T/)；韩国小盘股取自 FnGuide 汇编。虚线为未加权同业中位 (~19 倍)。*
+
+## 8. 市场机会 (TAM)
+
+**自下而上的 TAM** 测算针对 Soulbrain 主要产品集，等于 (a) 韩国晶圆厂可服务的半导体湿法化学品 TAM；(b) Soulbrain 本地化投资解锁的美中海外晶圆厂湿法化学品 TAM；(c) Soulbrain MI 布局的电池电解液 TAM 之和。以野村 2025 行业追踪作为锚：
+
+- **2025 年全球半导体材料 TAM：约 800 亿美元** ([reports/sector/半导体材料.md](../../sector/半导体材料.md) — 野村 Fig 24-25)。制造材料切片：约 480 亿美元 (60%)。
+- **Soulbrain 服务的湿法化学品子段** (HF/BOE/H₃PO₄ ~7%、CMP 抛光液 ~7%、前驱体 ~5%、电镀 + 辅料 ~3%) 合计约 22% 制造材料份额，即 **2025 年约 105 亿美元 TAM**。
+- **韩国晶圆厂可服务子集** (韩国占全球晶圆开工 18%)：约 19 亿美元。
+- **HBM 驱动的湿法化学品增量 TAM** 到 FY28 (三星 2026 年 HBM 产能 +50%、HBM4/4E 到 2028 年爬坡)：仅 CMP 抛光液每年增量约 8–12 亿美元。
+
+折算到 Soulbrain 的可服务 / 可获份额市场：
+- **可服务市场 (SAM, Serviceable Available Market)** 半导体产品组合：2025 年约 25 亿美元 / 年 (韩国 + 中国 + 初步美国布局)，到 2028 年随着 HBM4 + Taylor + 三星西安增长至约 40–50 亿美元。
+- **当前份额 (SOM, Share of Market)**：Soulbrain FY24 半导体业务段 ≈ ₩6,500 亿 ≈ 4.75 亿美元，对应 SAM 的约 19%——与 §7.1 中按化学品的份额估算一致。
+- **FY28 SOM 目标**：若 Soulbrain 维持约 20% SAM 份额，半导体营收到 2028 年增长至 **约 9–10 亿美元 (₩1.2–1.4 万亿)**。加上电池电解液 + 显示，FY28 合并营收路径 **₩1.4–1.5 万亿** 是卖方的多头情景——相对 FY25 实际 ₩9,230 亿，意味着 3 年内营收扩张超过 50% ([Economy6，2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html)，[reports/sector/半导体材料.md](../../sector/半导体材料.md))。
+
+**增长率** 分解：约 10% 来自半导体材料 TAM 底层增长 (野村"长期重估"逻辑)；约 5–8% 来自 HBM 强度增量 (每片晶圆更多抛光液)；约 3–5% 来自美国本地化营收叠加；约 −2% 来自显示业务段萎缩。净 17–20% 营收 CAGR 到 FY28 是可达的，但要求 (a) HBM4 spec-in 不被 Fujimi / Dongjin 抢走；(b) Taylor 得州按期爬坡；(c) 三星存储资本支出不大幅削减。
+
+**渗透策略** 直接、且已在执行：(a) 通过对下一节点验证的深度联合开发 **防御** 已有的三星 / SK 海力士 socket (即 HBM4 铈基抛光液之争)；(b) 通过得州工厂 **地理扩张** 至三星 Taylor + TSMC 凤凰城；(c) 在韩国冠军布局内 **纵向扩张** 至相邻的电池 / 显示化学品；(d) 随着三星 / SK 海力士在 2019 年后整合多源策略，**重建 HF / BOE 定价能力** (韩国冠军在结构上获益)。单一最大的 TAM 解锁动作将是 **在亚利桑那对 TSMC 完成 CMP 抛光液或 HF / BOE 验证**——TSMC 历来很少采购韩国 / 中国化学品，但得州工厂首次把 Soulbrain 物理上带入 TSMC 验证视野。
+
