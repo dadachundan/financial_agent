@@ -477,3 +477,188 @@ Linde 锚定 **右上象限——规模领跑者 + 完整特种电子深度 + �
 这一组合解释了为什么 Linde 营收预测在 2030 年前以 **GDP + 4–5 ppt** 增长，而不是行业潜在的 GDP + 2–3 ppt —— 在更高增长的电子与清洁氢端不成比例的份额获取，抵消在更慢增长的包装 / 区域中国端的小幅份额流失。
 
 ---
+
+## 9. 风险评估
+
+### 公司特定风险
+
+**1. $7.1 bn 合同积压的项目执行风险。** Linde 积压包括多个超大额（每个 $1–2 bn）的蓝氢与清洁氨项目（Beaumont 与 ExxonMobil 长协；Woodside / OCI Beaumont 清洁 NH₃；Dow Path-2-Zero），开车日期跨度 2025–2028。$1.5 bn 项目延期 6–12 个月会推迟 **每年约 $120–200 mn 营收与 $45–75 mn 营业利润**。缓解：Linde 的 Engineering 是内部板块（成本 / 工期纪律优于外包 EPC 同业）、合同含延迟开车补偿条款、积压如今分散于半打点名项目而非集中在一个。严重程度：**中**；可能性：**中-高**（大型 EPC 项目历史上易滑期）。
+
+**2. 氦气价 / 量周期性。** 如 §4.5 所述，氦的波动可让 FY 营收与利润率移动 50–100 bps。**FY25 分部间氦销售从 FY23 的 $509 mn 降至 $436 mn** ([Linde 2025 10-K, Note 18 footnote (a)](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)) —— 这约 $73 mn 的差额是 2022 价格飙升后氦价正常化的营业利润信号。严重程度：**低-中**（反复但有边界）。
+
+**3. CEO / 董事长集中在 Sanjiv Lamba。** 如 §3 所述，2026 年 1 月董事会决定让 Lamba 兼任董事长 + CEO（取代分离的 Angel 任董事长结构），引入由首席独立董事缓解但未根除的治理集中风险 ([Linde 2026 DEF 14A — Linde's Corporate Governance Framework](https://www.sec.gov/Archives/edgar/data/1707925/000119312526192209/lin-20260429.htm))。严重程度：**低**（行业标准缓解机制到位）；治理事件可能性：**低**但非零。
+
+**4. 中国大陆份额流失给本土化气体供应商。** 中国供应链本土化政策对新国资晶圆厂与钢厂项目优待本土驻厂供应商（盈德、杭氧、林格）。Linde 保留与台资及多国晶圆厂在华运营的关系，但中国大陆份额轨迹是缓慢下行。严重程度：**中**（受影响营收基础是 APAC FY25 $6.7 bn 营收的部分，非全部）；可能性：**高**（趋势已经发生）。
+
+**5. 重组 / 一次性费用波动。** **FY25 含 $273 mn 的成本削减计划及其他费用**，对比 FY24 $145 mn ([Linde 2025 10-K, MD&A — Reconciliation](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))，对 GAAP 营业利润有压缩。虽管理层在调整后口径中剔除，但这一规模的持续费用表明持续的足迹优化活动，可能压缩 GAAP 利润率。严重程度：**低**（费用占营业利润很小部分，集中在整合尾期）。
+
+### 行业 / 市场风险
+
+**6. 台积电 / 三星 / SK 海力士资本开支放缓。** 野村《大中华半导体》报告把整个 2026–30F 材料论题 **以 AI 资本开支超级周期持续为前提** ([reports/sector/半导体材料.md](../../sector/半导体材料.md))。若代工 / DRAM / NAND 资本开支因超大规模云厂的 AI 支出回撤或宏观衰退而急速减速，会推迟新晶圆厂 ASU 合同并放缓电子气量增。Linde 电子暴露（按 FY24 终端市场饼图约 9% 营收、剔除 Engineering）意味着量级有界，但电子的边际增长贡献明显高于 9%。严重程度：**中**；可能性：**低-中**（未来 24 个月内）。
+
+**7. 清洁氢补贴反转。** IRA 45V 生产税抵免与欧盟氢能银行是政策产物，未来政府可修改。美国财政部 2024 年 12 月发布的 45V 终版指南保留了可运作的氢气抵免制度，是结构性正面，但 2027 年后政策变化可能暂停 Linde 清洁氢项目转化管线。严重程度：**中**（现有 $7.1 bn 积压是合同确定不可削减；2027 年后新中标有风险）；可能性：**低**（2026–27）但 **中**（更长期）。
+
+**8. 能源成本离散度正常化。** Linde 行业领先的 29.8% 调整后营业利润率部分反映 2022 后能源成本离散度的持续——使有最严格合同结构的运营商受益。若全球能源市场再正常化（美国天然气与欧洲天然气收敛、电价价差收窄），合同传导优势的区分度会下降。严重程度：**低**（能源成本纪律是结构性的，不仅是合同条款套利）；可能性：**中**（3–5 年窗口）。
+
+**9. 电子特种气竞争强度。** SK Specialty（韩）、Resonac（日）、Versum / EMD Electronics（默克控股下的德）、液空 Voltaix 各自在 3nm 以下友好纯度上投资产能。Linde 特种气板块必须通过台积电亚利桑那、三星 Taylor 和韩国晶圆厂的产能扩张保卫份额。严重程度：**低-中**（特种气是 Linde 的小营收线）；可能性：**中**（竞争强度已在动态中）。
+
+### 财务风险
+
+**10. 高资本密集度 / FCF 转化在积压峰值。** Linde FY25 资本开支 $5.26 bn 是公司历史最高，受清洁氢项目开工与电子晶圆厂 ASU 推动。资本开支预计在 **FY26 见顶于 $5.0–5.5 bn** ([Q1-2026 Earnings Press Release](https://www.sec.gov/Archives/edgar/data/1707925/000165495426004202/lin_ex991.htm)) —— 远高于 2018–2022 的 $2.5–3.5 bn 基线。2026–2028 FCF 形态比历史更紧，FCF/OCF 转化从历史的约 70% 降至约 50%。严重程度：**低**（FCF 仍 $5+ bn；回购 / 分红能力保留）；可能性：**高**（已披露）。
+
+**11. 估值 / 倍数压缩风险。** 34.4× TTM P/E 下，Linde 比液空 (30.3×) 与 Air Products (30.5×) 高 **2–3 P/E 转**，反映质量与成长溢价。若 FY26 EPS 落在指引下限 ($17.60) 且倍数压缩一转至约 30×，按 $528 隐含价（$17.60 × 30× = $528），相对现价 $517.58 跌约 10%。压缩催化因素：清洁氢项目取消、电子资本开支减速、Linde 特定费用、或更广泛的利率走势压低长久期成长复合。严重程度：**中**；可能性：**低-中**（公司盈利一致性是结构性缓解）。
+
+**12. 利率敏感度在更高债务下。** Linde FY25 净债务借款 **$2.9 bn** ([Linde 2025 10-K, Statements of Cash Flows](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))，为 OCF 之上的回购 + 项目资本开支融资。FY25 净利息费用 $255 mn，对比 FY24 $256 mn ([Linde 2025 10-K, MD&A Reconciliation](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))。在更高更久利率下再融资在 3 年窗口添 ~$50–100 mn 增量年利息——相对 $10 bn OCF 重大但很小。严重程度：**低**；可能性：**中**。
+
+### 宏观风险
+
+**13. 地缘政治 / 中国政策风险。** 除上述 §4 中国本土化份额流失外，Linde 也暴露于 (a) 美国对流向中国晶圆厂的先进工业气产品（稀有气体、特种氟化物）潜在出口管制；(b) 中国镓 / 锗 / 稀有气出口限制反制，影响 Linde 特种气供应链；(c) 欧盟 CBAM 驱动的碳足迹披露影响竞争定位。严重程度：**中**；可能性：**中**（地缘政治风险在全球气体行业广泛分布，非 Linde 独有）。
+
+**14. 外汇敞口。** 约 64% FY25 销售在美国外，Linde 暴露 USD / EUR / RMB / KRW / TWD / BRL 折算。**FY25 EMEA 分部销售报告 +2%，但含 +3% 汇率顺风** ([Linde 2025 10-K, MD&A — EMEA](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))。公司通过自然对冲（运营币种发债、能源成本传导按当地计价）与外币子公司净投资的衍生品对冲管理。USD 5% 走强压报告 EPS 约 2–3%，但对调整后 EPS 影响较小。严重程度：**低**（结构性管理成熟）；可能性：**中**。
+
+**风险评级热图（汇总）：**
+
+| 风险 # | 风险名称 | 严重程度 | 可能性 | 综合 |
+|---|---|---|---|---|
+| 1 | 项目执行 / 积压滑期 | 中 | 中-高 | **中** |
+| 2 | 氦周期性 | 低-中 | 高 | **中** |
+| 3 | 董事长/CEO 集中 | 低 | 低 | 低 |
+| 4 | 中国大陆份额流失 | 中 | 高 | **中** |
+| 5 | 重组费用 | 低 | 中 | 低 |
+| 6 | 台积电 / 三星资本开支减速 | 中 | 低-中 | **中** |
+| 7 | 清洁 H₂ 补贴反转 | 中 | 低 (2026–27) / 中 (长期) | **中** |
+| 8 | 能源成本离散度正常化 | 低 | 中 | 低 |
+| 9 | 特种电子气竞争 | 低-中 | 中 | 低 |
+| 10 | 高资本开支 / FCF 压缩 | 低 | 高（已披露） | 低 |
+| 11 | 34× P/E 倍数压缩 | 中 | 低-中 | **中** |
+| 12 | 利率敏感度 | 低 | 中 | 低 |
+| 13 | 地缘政治 / 中国政策 | 中 | 中 | **中** |
+| 14 | 外汇折算 | 低 | 中 | 低 |
+
+Linde 综合风险图景异常 **平衡**：没有单一风险达到"临界"级别，最高评级风险（项目执行、氦周期、中国份额、倍数压缩）各自独立有界且有缓解。这与 Linde 在工业周期复合中作为更高质量复合者的声誉一致，支持相对同业的结构性 P/E 溢价——但不排除多个"中等"风险同时爆发（例如 AI 资本开支暂停 + 氦价下跌 + 清洁氢项目滑期同财年发生）时的不对称下行。
+
+---
+
+## 10. 参考资料
+
+### SEC EDGAR — Linde plc (CIK 0001707925)
+
+- [Linde 2025 10-K (filed 2026-02-25, FY ended 2025-12-31)](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm) —— Item 1 Business、1A Risk Factors、7 MD&A、8 Financial Statements、Notes 1–18 的主要来源。
+- [Linde 2024 10-K (filed 2025-02-26, FY ended 2024-12-31)](https://www.sec.gov/Archives/edgar/data/1707925/000162828025007990/lin-20241231.htm) —— FY24 基线比较。
+- [Linde Q1 FY2026 10-Q (filed 2026-05-01, qtr ended 2026-03-31)](https://www.sec.gov/Archives/edgar/data/1707925/000162828026029165/lin-20260331.htm) —— Q1 FY26 分部细节。
+- [Linde 2026 DEF 14A (filed 2026-04-29)](https://www.sec.gov/Archives/edgar/data/1707925/000119312526192209/lin-20260429.htm) —— 治理、董事 / CEO 简介、高管薪酬。
+- [Linde 8-K — Q1-FY2026 Earnings Press Release Exhibit 99.1 (filed 2026-05-01)](https://www.sec.gov/Archives/edgar/data/1707925/000165495426004202/lin_ex991.htm) —— Q1 业绩与 FY26 指引上调。
+- [Linde 8-K — Q4-FY2025 Earnings Press Release Exhibit 99.1 (filed 2026-02-05)](https://www.sec.gov/Archives/edgar/data/1707925/000165495426000913/lin_ex991.htm) —— FY26 初始指引。
+- [Linde 2017 10-K (filed 2018-03-23) — predecessor / Zamalight plc filing](https://www.sec.gov/Archives/edgar/data/1707925/000170792518000004/lindeplc201710k.htm) —— Praxair-Linde 合并文件。
+- [SEC EDGAR Linde plc filings page (CIK lookup, Zamalight prior-name disclosure)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001707925&type=10-K&dateb=&owner=include&count=10)。
+
+### Linde 公司 / IR 资源
+
+- [Linde 2024 Annual Report to Shareholders](https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/full-year-financial-reports/2024-annual-report-to-shareholders.pdf) —— FY24 终端市场与分销模式饼图；财务摘要页（§1、§4、§5 复用）。
+- [Linde corporate website — Corporate Heritage page](https://www.linde.com/about-linde/corporate-heritage)。
+- [Linde corporate website — About Us](https://www.linde.com/about-us)。
+- [Linde Electronics Brochure — Leading in electronic gases (PDF)](https://assets.linde.com/-/media/celum-connect/2023/12/21/15/11/linde20electronics20brochure185963.pdf)。
+- [Linde Press Release — Linde Signs Agreement with ExxonMobil for Carbon Dioxide Off-take (2023-04-04)](https://www.linde.com/news-and-media/2023/linde-signs-agreement-with-exxonmobil-for-carbon-dioxide-off-take)。
+
+### 同业与第三方文件引用
+
+- [Air Products and Chemicals — 2025 10-K (filed 2025-11-20)](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm)。
+- [Air Liquide S.A. — 2024 Universal Registration Document](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf)。
+- [Air Liquide Electronics — Semiconductors page](https://electronics.airliquide.com/who-we-are/our-markets/semiconductors-0)。
+- [Dow Chemical — 2025 10-K (filed 2026-02-03)](https://www.sec.gov/Archives/edgar/data/1751788/000175178826000018/dow-20251231.htm)。
+- [TSMC FY2024 Form 20-F (CIK 0001046179)](https://www.sec.gov/Archives/edgar/data/1046179/000119312525083423/d896993d20f.htm)。
+- [Samsung Semiconductor — CHIPS Act announcement, 2024-04-15](https://semiconductor.samsung.com/sas/local-news/samsung-electronics-to-receive-up-to-6-4-billion-in-direct-funding-under-the-chips-and-science-act/)。
+- [OCI Global Press Release — Sale of Clean Ammonia Project to Woodside (2024-08-05)](https://oci-global.com/news-stories/press-releases/oci-global-announces-agreement-for-the-sale-of-its-clean-ammonia-project-in-beaumont-texas-to-woodside-energy/)。
+- [Messer SE & Co. KGaA 2024 Annual Report](https://www.messergroup.com/documents/20127/3575944/Annual+report+Messer+SE+&+Co.+KGaA+2024.pdf/7f9c2405-33eb-959b-bd5e-f39474612da0?t=1750834034633) —— FY24 集团销售约 EUR 4.5 bn。
+- [Hydrogen Council — Hydrogen Insights 2024](https://hydrogencouncil.com/en/hydrogen-insights-2024/)。
+- [Hydrogen Council — A breakthrough in low-carbon ammonia](https://hydrogencouncil.com/en/a-breakthrough-in-low-carbon-ammonia/)。
+
+### 市场数据资源
+
+- [Yahoo Finance — LIN Key Statistics](https://finance.yahoo.com/quote/LIN/key-statistics/)（2026-05-25 访问）。
+- [Yahoo Finance — APD Key Statistics](https://finance.yahoo.com/quote/APD/key-statistics/)。
+- [Yahoo Finance — AI.PA Key Statistics](https://finance.yahoo.com/quote/AI.PA/key-statistics/)。
+- [Yahoo Finance — 4091.T (Nippon Sanso) Key Statistics](https://finance.yahoo.com/quote/4091.T/key-statistics/)。
+- [Yahoo Finance — 4063.T (Shin-Etsu Chemical) Key Statistics](https://finance.yahoo.com/quote/4063.T/key-statistics/)。
+
+### 内部交叉引用
+
+- [reports/sector/半导体材料.md — 野村《大中华半导体 2026–30F》锚定研究摘要 (2026-05-21)](../../sector/半导体材料.md)。
+
+---
+
+<details>
+<summary>核查日志 (Step 10) — 2026-05-26</summary>
+
+**URL 检查 ——** 报告中每个 URL 都于 2026-05-26 进行 HTTP 检查。31 个唯一 markdown 链接中，**26 个返回 HTTP 200**；剩余 5 个（均为 `finance.yahoo.com` 的 LIN / APD / AI.PA / 4091.T / 4063.T 估值页面）因 Yahoo 反爬虫重定向返回 curl-403/404，但**全部 5 个已在真实浏览器中确认可用**（2026-05-25 手动验证）。按 skill 的 URL 检查指引，对已知可用市场数据宿主的反爬虫 403/404 可接受。
+
+SEC URL（全部以 `Research Analyst lx00617@gmail.com` UA 按 SEC 公平访问政策确认 200）：
+- Linde 10-K FY2025: `lin-20251231.htm` (accession 0001628280-26-011430) —— 200。
+- Linde 10-K FY2024: `lin-20241231.htm` (accession 0001628280-25-007990) —— 200。
+- Linde 10-Q Q1-FY2026: `lin-20260331.htm` (accession 0001628280-26-029165) —— 200。
+- Linde DEF 14A 2026: `lin-20260429.htm` (accession 0001193125-26-192209) —— 200。
+- Linde 8-K (Q1 FY26 earnings cover): `lin_8k.htm` (accession 0001654954-26-004202) —— 200。
+- Linde 8-K Ex.99.1 (Q1 FY26 press release): `lin_ex991.htm` (accession 0001654954-26-004202) —— 200。
+- Linde 8-K Ex.99.1 (Q4 FY25 press release): `lin_ex991.htm` (accession 0001654954-26-000913) —— 200。
+- Linde 8-K (Frankfurt 退市): `d806251d8k.htm` (accession 0001193125-24-036171) —— 200。
+- Linde 2017 10-K (predecessor Zamalight): `lindeplc201710k.htm` (accession 0001707925-18-000004) —— 200。
+- Air Products 2025 10-K: `apd-20250930.htm` (CIK 0000002969, accession 0000002969-25-000055) —— 200。
+- Dow 2025 10-K: `dow-20251231.htm` (CIK 0001751788, accession 0001751788-26-000018) —— 200。
+- TSMC FY2024 20-F: `d896993d20f.htm` (CIK 0001046179) —— 200。
+- SEC EDGAR Linde 公司页 (CIK 0001707925) —— 200。
+
+**SEC 文件名 ——** 所有 SEC URL 均通过 `https://data.sec.gov/submissions/CIK0001707925.json` (Linde)、`CIK0000002969.json` (Air Products)、`CIK0001751788.json` (Dow)、`CIK0001046179.json` (TSMC) 解析；未使用合成文件名模式。
+
+**非 SEC URL 抽查：**
+- `https://www.linde.com/news-and-media/2023/linde-signs-agreement-with-exxonmobil-for-carbon-dioxide-off-take` —— 200（Beaumont CCS 长协稿）。
+- `https://www.linde.com/about-linde/corporate-heritage` —— 200。
+- `https://www.linde.com/about-us` —— 200。
+- `https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/full-year-financial-reports/2024-annual-report-to-shareholders.pdf` —— 200（Linde 2024 ARS）。
+- `https://assets.linde.com/-/media/celum-connect/2023/12/21/15/11/linde20electronics20brochure185963.pdf` —— 200（Linde Electronics 手册）。
+- `https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf` —— 200。
+- `https://electronics.airliquide.com/who-we-are/our-markets/semiconductors-0` —— 200。
+- `https://corporate.messergroup.com/en/web/guest/annual-reports` —— 200。
+- `https://www.messergroup.com/documents/20127/3575944/Annual+report+Messer+SE+&+Co.+KGaA+2024.pdf/...` —— 200。
+- `https://hydrogencouncil.com/en/hydrogen-insights-2024/` —— 200。
+- `https://hydrogencouncil.com/en/a-breakthrough-in-low-carbon-ammonia/` —— 200。
+- `https://oci-global.com/news-stories/press-releases/.../oci-global-announces-agreement.../` —— curl 反爬虫 403，真实浏览器确认 200（2026-05-26）。
+- `https://semiconductor.samsung.com/sas/local-news/samsung-electronics-to-receive-up-to-6-4-billion-in-direct-funding-under-the-chips-and-science-act/` —— 200。
+
+**10-K 抽查（claim → 10-K 位置）：**
+- FY25 营收 $33,986 mn ✓ ([10-K, Item 1 General: "$33,986 million ... for 2025"](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))。
+- FY25 员工 65,177 ✓ ([10-K, Item 1 Employees: "As of December 31, 2025, Linde had 65,177 employees worldwide"](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))。
+- FY25 分部营收 (Americas $15,208 / EMEA $8,549 / APAC $6,661 / Engineering $2,250 / Other $1,318) ✓ ([10-K, Note 18 Segment Information](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))。
+- FY25 资本开支 $5,261 mn ✓ ([10-K, MD&A Executive Summary](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))。
+- FY25 经营现金流 $10,350 mn ✓ ([10-K, MD&A Executive Summary](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))。
+- FY25 分红 $2,811 mn；净回购 $4,578 mn ✓ ([10-K, MD&A Executive Summary](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))。
+- FY25 调整后营业利润 $10,137 mn，调整后营业利润率 29.8% ✓ ([10-K, MD&A 与 Note 18](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))。
+- FY25 调整后 EPS $16.46（YoY +6%）✓ ([10-K, MD&A](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))。
+- "Linde is not dependent upon a single customer or a few customers" ✓（10-K Item 1 Customers 原文）。
+- 竞争对手列表（液空、Air Products、Messer、Mitsubishi Chemical / Taiyo Nippon Sanso）✓（10-K Item 1 Competition 原文）。
+- 年末 2025 制气销售积压 $7.3 bn ✓ ([10-K, MD&A Liquidity](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)) —— 注：Q1 FY26 业绩稿后续修正为 $7.1 bn（在引用处已注明）。
+- 约 64% 2025 销售在美国外 ✓ ([10-K, Item 1 International](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))。
+
+**DEF 14A 抽查：**
+- Sanjiv Lamba 简介（61 岁，2022-03-01 任 CEO，2026-01-31 起任董事长，前 COO 2021-01 至 2022-02，前 EVP APAC 自 2018 起，1989 始于 BOC India）✓ ([2026 DEF 14A, Director Nominees](https://www.sec.gov/Archives/edgar/data/1707925/000119312526192209/lin-20260429.htm))。
+- Robert L. Wood 自 2022-03-01 起任首席独立董事 ✓ ([2026 DEF 14A](https://www.sec.gov/Archives/edgar/data/1707925/000119312526192209/lin-20260429.htm))。
+- 普华永道自 2019 年起担任审计师 ✓ ([2026 DEF 14A, Audit Matters](https://www.sec.gov/Archives/edgar/data/1707925/000119312526192209/lin-20260429.htm))。
+
+**8-K（业绩稿）抽查：**
+- Q1 FY26 营收 $8,781 mn，EPS $3.98，调整后 EPS $4.33，营业利润率 30.0% ✓ ([Q1 8-K Ex.99.1](https://www.sec.gov/Archives/edgar/data/1707925/000165495426004202/lin_ex991.htm))。
+- FY26 指引：初始 $17.40–$17.90（2026-02-05），修正 $17.60–$17.90（2026-05-01）✓（Q4 FY25 与 Q1 FY26 业绩稿交叉核对）。
+- $7.1 bn 合同制气销售在手项目 ✓（Q1 FY26 稿）。
+
+**分析师观点句（有意未引用主要来源）：**
+- §1 估值溢价理由：标记"分析师观点"；以行业观察 + 野村板块背景支持。
+- §4 份额领跑表述（如"西方晶圆厂领跑者并在亚洲晶圆厂与同业并列领跑"）：按 skill 规则标记 `*分析师观点：*`。
+- §7.6 全球市场份额数字：明确表述为"分析师构造估算"，非 10-K 数据。
+- §8 TAM 规模与 CAGR：明确为分析师构造，使用披露的同业营收 + 野村预测。
+
+**残留未知 / 未核实：**
+- Linde 没有除"非依赖于单一或少数客户"10-K 表述之外的具体 top-1 / top-5 客户营收份额披露；§5 客户清单基于业绩稿与 IR 材料，非客户集中度披露表。
+- §4.10 引用的 2024 ARS 终端市场饼图来自已发布年报；报告日期时 2025 ARS 尚未发布。
+- 氦回收 / 来源细节超出 10-K 原文部分依赖行业观察；具体 Linde 氦业务营收不单独披露。
+- 盈德气体营收数字是分析师估算 —— 公司自 2017 年私有化后未发布审计年报。
+
+</details>
+
