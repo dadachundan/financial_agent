@@ -201,3 +201,57 @@ graph LR
 
 ---
 
+## 5. 客户与上市策略
+
+由于区域工业气体客户群多元，**客户集中度结构性偏低**。FY2025 10-K 明确披露："We do not have a homogeneous customer base or end market, and no single customer accounts for more than 10% of our consolidated sales. We do have concentrations of customers in specific industries, primarily refining, chemicals, and electronics. Within each of these industries, we have several large-volume customers with long-term contracts. A negative trend affecting one of these industries, or the loss of one of these major customers, although not material to our consolidated sales, could have an adverse impact on our financial results" ([FY2025 10-K, Item 1 Business — "Customers"](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。由于没有任何客户达到 ASC 280-10-50-42 的 10% 销售额披露阈值，APD 在分部附注中不具名披露客户 — 这是与 Linde 和 Air Liquide 共享的结构性披露特征，也与纯前驱体专家（如 Resonac，前 3 大客户份额常 >50%，详见 [reports/sector/半导体材料.md](../../sector/半导体材料.md)）形成本质区别。
+
+虽然 *集中度* 数字低，APD 的客户名册中包含许多全球最大的工业买家。按行业划分：在 **炼油**，大客户关系包括美国湾区和鹿特丹的主要炼油商（ExxonMobil、Marathon Petroleum、Phillips 66、Shell、BP、TotalEnergies 是墨西哥湾沿岸氢气管道网络最大的客户，详见多家行业媒体报道）；在 **化工**，全球烯烃 / 芳烃 / 甲醇玩家（Dow、LyondellBasell、BASF、SABIC）用 APD 的工艺气体作为基本原料；在 **金属**，一体化钢铁和铝业生产商（ArcelorMittal、Nucor、Steel Dynamics、Alcoa、Norsk Hydro）购买驻厂氧气和氩气；在 **电子**，全球四大先进晶圆厂领导者 — **TSMC（美国亚利桑那）、三星（美国德州和韩国平泽）、Intel（美国多地）、Micron（博伊西、玛纳萨斯、Lehi、纽约）** — 通过驻厂购买大宗及大宗特种气体；在 **医疗和食品**，分散的钢瓶气体客户通过商品渠道采购。三星平泽超级合同是 APD 历史上披露的最大单一客户承诺，也被明确描述为公司「迄今为止在半导体行业最大的投资」— 但即使到 2030 年全产能爬坡，也不会让三星超过 10% 披露阈值 ([Air Products 新闻稿, 2026-04-29](https://www.airproducts.com/company/news-center/2026/04/0429-air-products-gas-supply-samsung-semiconductor-fab-south-korea); [PR Newswire, 2026-04-29](https://www.prnewswire.com/news-releases/air-products-to-expand-industrial-gas-supply-for-samsung-electronics-next-generation-semiconductor-fab-in-south-korea-302757497.html))。
+
+```mermaid
+pie title APD 收入按终端市场分布（分析师据 10-K 叙述估算）
+    "炼油与化工" : 35
+    "电子（大宗 + 大宗特种）" : 18
+    "金属（钢、铝、有色）" : 15
+    "制造、食品和医疗" : 22
+    "能源生产（EOR、气化）" : 6
+    "设备（Rotoflow、Gardner、ASU）" : 4
+```
+*分析师据 [FY2025 10-K, Item 1 Business 与 Note 26 分部信息](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm) 构造的拆分。APD 不公布终端市场收入百分比 — 这是依据叙述描述和客户行业大致规模的方向性估计。*
+
+**合同结构。** 驻厂供应模式合同 — 占总销售约一半 — 「一般由 15 至 20 年长期合同治理」并「通常包括固定月费和/或最低采购要求，附以基于外部指数的价格调整条款」([FY2025 10-K, "Supply Modes"](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。商品液体和钢瓶气体合同较短（5 年或以内）且不含最低采购要求。电力、天然气和烃类原料成本通过定价公式、附加费和代加工安排传导 — 10-K 措辞明确："We mitigate electricity, natural gas, and hydrocarbon price fluctuations contractually through pricing formulas, surcharges, cost pass-through provisions, and tolling arrangements"。这种传导是 APD 在工业电价飙升时利润率不会崩塌的结构原因；也是销量（而非价格）成为决定增量调整后 EBITDA 最重要变量的结构原因。
+
+**地理 / 分部上市策略。** 按 FY2025 分部重整，APD 报告五个区域分部：**美洲**（FY25 销售 $5,040.1M，FY24 重述）/ 亚洲 $3,224.3M / 欧洲 $2,823.4M / 中东和印度 $134.4M / 公司及其他 $878.4M；FY25 合并分部经营利润 $2,857.7M ([FY2025 10-K, Note 26 — Business Segment and Geographic Information](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。每个区域都有自己的分部总裁向 CEO 汇报。销售模式直接 — APD 的商业团队谈判驻厂合同；客户做出资本配置承诺；APD 建造、拥有并运营资产；服务团队负责持续可靠性。一份多十年期驻厂合同的决策周期通常是 12–24 个月（从最初商业对话到签约），施工周期再加 24–36 个月 — 这意味着三星平泽的商业对话可能始于 2023–2024 年，并要到 2028 年以后才会产生收入。
+
+**地理结构变迁。** 美国销售占总销售的比重从 FY23 的 $5,234.2M / 41.5% 略降至 FY24 的 $4,914.0M / 40.6%，再降至 FY25 的 $4,692.5M / 39.0%；中国销售大致持平（$1,988.1M → $1,951.5M → $1,933.5M / 16.1%）；「其他海外业务」从 $5,377.7M 增至 $5,235.1M 再增至 $5,411.3M / 45.0% — 反映 NEOM 建设带来的沙特 / 中东敞口加强 ([FY2025 10-K Geographic Information](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。亚洲电子推进 — 三星平泽 + 约 $10 亿亚洲电子订单 — 是该区域近期收入增长轨迹超过美洲的可见原因；未来 5 年管理层定位让亚洲在总盘中持续提升份额。
+
+**客户案例。** APD 过去 24 个月最显眼的具名客户胜出包括：（i）**三星平泽** 2026 年 4 月供应三星下一代晶圆厂大宗特种气体合同 ([PR Newswire, 2026-04-29](https://www.prnewswire.com/news-releases/air-products-to-expand-industrial-gas-supply-for-samsung-electronics-next-generation-semiconductor-fab-in-south-korea-302757497.html))；（ii）**NASA Artemis II 任务**，APD 为其提供液氢和氦气，并宣布在佛州 Cocoa 新建 ASU 支持持续航天发射需求 ([Q2-FY26 PR](https://www.sec.gov/Archives/edgar/data/2969/000000296926000018/exhibit99131mar26.htm))；（iii）ACWA-Power-and-NEOM Green Hydrogen Company JV，APD 为绿氨长期承购方，Yara 为下游分销伙伴 ([NEOM 新闻稿, 2023](https://www.neom.com/en-us/newsroom/neom-green-hydrogen-investment))。除此之外，APD 大部分客户关系都不见诸新闻稿，因为驻厂供气合同的商业敏感性（价格、最低用量、合同期限）使买卖双方都倾向保持沉默。
+
+![APD: 估算的全球驻厂工业气体（大气驻厂）市场份额](../../charts/airproducts_market_share.png)
+*来源: 分析师综合公开行业份额评论（[Linde 2024 Annual Report](https://www.sec.gov/Archives/edgar/data/0001707925/000162828025007990/lin-20241231.htm)、[Air Liquide 2024 Universal Registration Document](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf)、[Nippon Sanso FY2024 Integrated Report](https://jp.nipponsanso.com/en/ir/library/integrated_report.html)、[TechSci Research 关于 Linde-Praxair 合并的行业笔记](https://www.techsciresearch.com/news/2899-linde-praxair-merger-what-is-it-and-how-does-it-impact-global-industrial-gases-market.html)）。数字仅供方向性参考；没有单一来源公布统一份额表。*
+
+*分析师观点:* 客户集中度按 10% 销售阈值衡量 **较低**，但在行业垂直层面 **中高** — 炼油与电子加起来可能占合并销售的约 50%（按终端市场计），任一行业持续下行都会显著压缩 APD 的增长轨迹，即使没有单一客户重谈合同。半导体驻厂合同特别长（15–20 年），物理上 ASU / 管道资产紧邻客户围墙使得切换实际不可能 — 护城河是结构性的，但是双刃剑：当晶圆厂被关停（如 Intel 2024 年的产能合理化），照付不议收入仍可持续，但增量销量便消失了。
+
+---
+
+## 6. 行业概览
+
+**定义和范围。** 工业气体行业生产和分销大气气体（氧气、氮气、氩气 — 自空气分离）、工艺气体（氢气、氦气、二氧化碳、一氧化碳、合成气、乙炔）和特种气体（用于分析、电子和医疗的高纯混合气），按标准产业分类 NAICS 325120（工业气体制造）和欧洲 Prodcom 编码 20.11.1 划分 ([US Census Bureau NAICS Manual, 2022 — 325120 Industrial Gas Manufacturing](https://www.census.gov/naics/?input=325120&year=2022&details=325120))。客户群覆盖几乎所有重工业 — 炼油、化工、钢铁、铝业、玻璃、水泥、食品 / 饮料、电子、医疗、航天 — 供应模式细分（驻厂 / 商品液体 / 钢瓶）在功能上是行业级而非企业级的。
+
+**市场规模。** 行业报告大致收敛于 **2025 年全球工业气体市场规模约 $1,150–1,200 亿**，2033–2035 年预测值在 $1,700–2,500 亿之间，对应 2025–2035 年 CAGR 6–8.5%（视来源不同）：Data Insights Market 报告 2025 年 $1,182 亿增长至 2033 年 $1,716 亿（CAGR 约 5.5%）([Data Insights Market, "Industrial Gases Market 2026–2033"](https://www.datamintelligence.com/research-report/industrial-gases-market))；Research Nester 预计 2025 年 $1,200 亿 → 2035 年 $2,267 亿，CAGR 6.5%([Research Nester Industrial Gas Market](https://www.researchnester.com/reports/industrial-gas-market/1384))；Market.us 预计 2024 年 $1,127 亿 → 2034 年 $2,548 亿，CAGR 8.5%，驱动因素是氢气、半导体和脱碳 ([Market.us Industrial Gases Market](https://market.us/report/industrial-gases-market/))。亚太地区主导，占 2025 年收入约 36%，超过北美约 30%、欧洲约 22%，差距因中国半导体和电动车建设以及印度产能增长而扩大。
+
+**行业结构 — 高度集中。** 在 2016 年 Air Liquide / Airgas 合并和 2018 年 Linde / Praxair 合并后，前 5 大玩家持有全球市场约 80–84% 份额：**Air Liquide**（FY2024 收入约 €271 亿 / 约 $295 亿，按收入排第一）和 **Linde plc**（FY2024 收入约 $330 亿，按收入和市值都是最大 — 市值约 $2,200 亿）各持约 28–30% 全球份额；**Air Products**（约 $120 亿收入）持约 10–12%，为全球 #3；**Messer SE & Co. KGaA**（德国私营，营收约 €40 亿）和 **Nippon Sanso Holdings / Taiyo Nippon Sanso (TNSC)**（FY2024 收入约 ¥1.27 万亿 / 约 $80 亿）构成前五的剩余两位 ([Markets and Markets — Industrial Gases Market Report, 2025–2030](https://www.marketsandmarkets.com/Market-Reports/industrial-gases-market-143368202.html); [TechSci Research — Linde-Praxair merger impact](https://www.techsciresearch.com/news/2899-linde-praxair-merger-what-is-it-and-how-does-it-impact-global-industrial-gases-market.html); [Linde plc 2024 Annual Report](https://www.sec.gov/Archives/edgar/data/0001707925/000162828025007990/lin-20241231.htm))。其余约 16–20% 由区域和钢瓶气体专业玩家分散持有（日本 Iwatani、意大利 SOL Group、中国 Yingde Gases 和杭州杭氧、印度 INOX Air Products 等）。
+
+**增长驱动。** 当前周期内有三项结构性驱动加速工业气体需求，对 APD 的收入结构影响各异：
+
+1. **AI 半导体资本支出超级周期至 2030 年。** 据 [Nomura Greater China Semi 2026–30F 报告（综合在 reports/sector/半导体材料.md）](../../sector/半导体材料.md)，TSMC FY2027 资本支出预测约 $700 亿（资本支出强度约占收入 50%），全球晶圆厂设备 + 设施总支出至 2030 年以低双位数复合增长。每座先进新晶圆厂需要驻厂氮气（500–1,500 吨/日）、氧气、氩气、氢气和管道级氦气 — 大宗特种供应合同通常在晶圆厂投产前 2–3 年签订。APD 的三星平泽胜出（2026 年 4 月）和 FY26 二季度业绩会披露的约 $10 亿亚洲电子订单是该驱动的可见商业标记 ([Q2-FY26 transcript](https://www.fool.com/earnings/call-transcripts/2026/04/30/air-products-apd-q2-2026-earnings-transcript/))。
+2. **脱碳 / 清洁氢能。** 美国《通胀削减法案》(IRA, 2022) 下的 45V 制氢生产税抵免、欧盟「可再生氢战略」目标到 2030 年实现 10 Mt 国内绿氢生产，以及日本、韩国、印度和沙特阿拉伯的类似政策合计代表了工业历史上规模最大的低碳氢需求脉冲。NEOM 和路易斯安那是 APD 在该趋势上的押注；需求爬坡的时点（炼油烃类回路替代、氨作船用燃料、钢铁直接还原）决定了多十亿美元资本承诺是否兑现低双位数 ROIC，还是产生另一轮减值周期。最近的 EPA 提案（2025 年 9 月）拟终止联邦 Subpart P 强制温室气体报告，给美国增加了政策不确定性 ([FY2025 10-K, "Environmental Regulation"](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。
+3. **回流和供应链韧性。** 2022–2024 年俄罗斯 / 阿尔及利亚 / 卡塔尔氦气供应冲击和中国 2024 年稀有气体出口管制扰动了氦气与大宗特种供应链；APD（FY26 二季度）公告增加美国液化产能、动用 Amarillo 战略储气库、重新部署全球 ISO 集装箱，是直接响应；客户对供应安全的需求现已成为大宗特种市场单独的价格支撑力量 ([Q2-FY26 PR](https://www.sec.gov/Archives/edgar/data/2969/000000296926000018/exhibit99131mar26.htm))。美国《CHIPS 法案》和韩国 / 台湾 / 日本 / 欧盟类似的激励包将晶圆厂投资拉入 APD 已有驻厂基础的地理（德州、亚利桑那、平泽、新加坡），有利于既有玩家。
+
+**监管环境。** 行业主要受环境、运输安全和产品纯度规制约束，而非直接经济监管。碳定价机制 — 欧盟排放交易体系 (ETS)、加州限额与交易、中国 ETS、韩国 ETS、荷兰 CO₂ 税（自 2021 年）和台湾「气候变化因应法」执行（自 2023 年，碳费征收以 2026 年排放为目标，2025 年起开征）— 合计提高了 APD SMR 基灰氢生产的合规成本，但同时也提高了其蓝氢和绿氢产出的相对竞争力 ([FY2025 10-K, "Environmental Regulation"](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。欧盟《企业可持续性报告指令》(CSRD) 和加州《气候企业数据责任法》增加披露成本。低温液体运输规制（美国 DOT、欧洲 ADR）和氦气储气规制保持稳定。当今 APD 单一最重要的监管不确定性是 **45V 清洁氢气生产税抵免** — 美国财政部 2024 年关于时间匹配和「附加性」的最终规则决定了 Massena NY 绿氢项目（现已取消）和路易斯安那蓝氢项目是否能获得完整或部分抵免。
+
+**行业动态 — 供需双方议价能力。** 前五家持有约 80% 份额，行业结构上是寡头垄断 — 在管道网络存在的地理（墨西哥湾沿岸氢气、鹿特丹–安特卫普 ARA 簇、新加坡裕廊、德国 Ruhr-Rhine 走廊、中国长三角），供应方（气体公司）定价能力高；其他地理中等。买方议价能力集中在极大型客户（一座大型炼油厂或晶圆厂可以发起竞价 RFP 强制重置价格），但客户群整体上过于分散难以主导条款。**驻厂客户的切换成本极高** — ASU 或氢气装置物理上贴在客户围墙边，且专门为其产量和纯度建造；15–20 年合同被实物资本无法回退所锚定。这是 APD、Linde 和 Air Liquide 在完整经济周期内能以低波动复合收入和股息的结构原因。替代品极少 — 工业客户消耗的低温 O₂/N₂/Ar 在体量上没有经济可行的替代 — 不过「商品空分」（最小驻厂客户自建小型发生器）是利基替代。
+
+**与行业的轨迹比较。** 与更广义的 **半导体材料行业**（[reports/sector/半导体材料.md, 2026-05](../../sector/半导体材料.md)）相比 — Nomura 预测 2025 年全球半导体材料收入约 $800 亿，大部分流向硅晶圆、光刻胶、CMP 和电子级气体（NF₃、硅烷、WF₆ 等，Versum 拆分后 *不在* APD 组合中）— APD 通过 *大宗气体* 切片而非前驱体切片参与半导体周期。这是一种增长较慢但合同保护更强的敞口：大宗气驻厂合同与新晶圆厂建设 1:1 增长（与资本支出同步），而前驱体收入既随新晶圆厂建设也随工艺节点强度增长（每次工艺节点切换，单晶圆前驱体消耗量上升）。所以 APD 的电子敞口更具周期性（绑晶圆厂资本支出），但节点切换风险更小（绑硅晶圆开工，而非先进节点良率爬坡）。
+
+---
+
