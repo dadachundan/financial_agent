@@ -509,3 +509,178 @@ TMC's annual report p. 61 provides a crisp market structure: **captive mask shop
 - **Tax.** Taiwan corporate tax rate 20%; TMC applies this rate. Investment Tax Credit on R&D spending plus park-zone tax incentives are tools for managing historical loss carryforwards.
 
 ---
+
+## 7. Competitive Landscape
+
+### 7.1 Global merchant photomask players — TMC's position in the international competitor roster (per Photronics 10-K p. 7, verbatim)
+
+Photronics, the world's second-largest merchant photomask shop, filed its FY2025 10-K (CIK 0000810136, accession 0001140361-25-045801) on December 17, 2025. The Competition section explicitly names the global competitor roster:
+
+> "The semiconductor equipment industry is highly competitive and is characterized by a small number of participants ranging in size. **Our competitors include Compugraphics International, Ltd., Dai Nippon Printing Co., Ltd (outside of Taiwan and China), Hoya Corporation, LG Innotek Co., Ltd., Shenzhen Newway Photomask Making Co., Ltd., Shenzhen Qingyi Photomask, Ltd., SK-Electronics Co., Ltd., Taiwan Mask Corporation, and Tekscend Photomask.** We also compete with semiconductor and FPD manufacturers' captive photomask manufacturing operations that supply photomasks for internal use and, in some instances, also for external customers and foundries." ([Photronics FY2025 10-K, p. 7](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))
+
+**Two key takeaways from this verbatim:**
+1. **TMC is explicitly named by Photronics as a global competitor** (Taiwan Mask Corporation) — Photronics treats TMC as an industry peer. This citation is a primary third-party validation, not analyst inference.
+2. **DNP is qualified as "outside of Taiwan and China"** — because DNP is the joint-venture partner with Photronics in Taiwan (PDMC) and Mainland China (PDMCX), DNP does not compete with Photronics in those two geographies but is a JV partner there.
+
+### 7.2 Detailed competitor analysis (7 direct competitors + 1 JV relationship)
+
+**(1) Photronics (NASDAQ:PLAB)** — headquartered in Brookfield, CT; FY2025 (year ended October 2025) revenue of **USD 866.9 mn** ([Photronics FY2025 10-K](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)). **One of the world's largest merchant photomask shops** with 7 manufacturing sites (3 Taiwan + 2 China + 1 Korea + 3 US + 2 Europe (new)).
+- Customers: TSMC, UMC, Samsung, Intel, GlobalFoundries.
+- Relationship to TMC: **PLAB competes directly with TMC in Taiwan and China through the PDMC and PDMCX joint ventures; broader indirect competition in Korea, the US, and Europe.**
+- Node coverage: full node range (including EUV, though EUV volume vs. Hoya remains small).
+- Valuation: P/E 14.0×, P/S 1.6×, market cap USD 1.85 bn.
+
+**(2) PDMC (台湾美日先进光罩) / Photronics DNP Mask Corporation** — Hsinchu Science Park, a 50.01% Photronics + 49.99% DNP joint venture formed in April 2014 by combining Photronics' PSMC (Photronics Semiconductor Mask Corporation — note: this PSMC is not Powerchip Semiconductor Manufacturing Corp / 力积电; both abbreviate to PSMC in Chinese, but they are distinct entities, easily confused) with DNP's DPTT subsidiary ([Photronics 2014 PDMC JV closing announcement, 2014-04-04](https://photronicsinc.gcs-web.com/news-releases/news-release-details/photronics-announces-closing-joint-venture-taiwan-dai-nippon)). **PDMC is TMC's most direct competitor in domestic Taiwan.**
+- Self-positioning: "the largest domestic supplier of leading edge photomasks in Taiwan with the scale to address **14 nm and beyond** technology" ([Photronics 2014 PDMC JV closing announcement](https://photronicsinc.gcs-web.com/news-releases/news-release-details/photronics-announces-closing-joint-venture-taiwan-dai-nippon)).
+- Self-positioning (continued): "global largest merchant photomask manufacturer, with **three production sites** currently introducing the most advanced 40nm and 28nm technologies" ([PDMC website](https://www.pdmc.com.tw/)).
+- Key differentiation: PDMC plays at the high end (sub-28nm down to 14nm) and is TSMC and UMC's outsourcing partner for advanced nodes. TMC plays at 90–40nm mid-node + 8-inch mature. **The two overlap directly at 28nm but do not compete at other nodes.**
+
+**(3) Tekscend Photomask (formerly Toppan Photomask, renamed October 2024)** — owned by Japan's Toppan Holdings, reorganized in October 2024 ([TOPPAN Holdings announcement, 2024-10-01](https://www.holdings.toppan.com/en/news/2024/10/newsrelease241001_1.html)); IPO'd August 2025 at USD 2 bn valuation. **Among the global top-2 merchant photomask shops**, focused on high-end IC nodes plus LCD large-area masks.
+- Relationship to TMC: competitive on the high-end IC node + large-panel mask axes — but TMC is not in the sub-14nm high-end battlefield.
+
+**(4) Dai Nippon Printing (DNP, TSE:7912)** — Japan's leading photomask player; joins forces with Photronics on Greater China coverage via the PDMC (Taiwan) and PDMCX (Xiamen) joint ventures; **outside Taiwan and China, competes directly with Photronics**. The mask business is one sub-segment of DNP's broader group portfolio (print + electronics + packaging + semiconductor), and separate disclosure is limited.
+- Relationship to TMC: in domestic Taiwan, **not a direct competitor** (DNP appears through PDMC); in China / Korea / Japan markets, a potential competitor.
+
+**(5) Hoya Corporation (TSE:7741)** — Japanese giant whose photomask business is centered on **EUV mask substrate (mask blank)** — with ~80% global share of EUV mask blanks ([Nomura Greater China Semi: A guide to Semi renaissance in 2026~30F, p. 38, 2026-05-21](../sector/半导体材料.md)).
+- Relationship to TMC: **not a direct competitor — Hoya is the upstream mask-blank supplier, not a mask-write shop. TMC is in fact one of Hoya's downstream customers.**
+- Valuation: P/E 26.8×, P/S 6.1× — reflecting Hoya's diversified (medical + information storage + semiconductor) high-quality portfolio.
+
+**(6) SK-Electronics (Korea)** — part of the SK group, focused on LCD large-area masks plus partial IC masks.
+- Relationship to TMC: indirect competitor in LCD and small-to-medium panel masks.
+- Key fact: **TMC and the SK group have a bi-directional trading relationship** — TMC's 2024 annual report p. 65 discloses "SK KF" (SK Key Foundry, SK Hynix's 8-inch wafer foundry) as the largest mask-blank supplier at 38% of total procurement. TMC simultaneously buys mask blanks from and sells finished masks to the SK group.
+
+**(7) LG Innotek (Korea)** — LG Group's optoelectronics arm, with a partial photomask business. Not a direct TMC competitor.
+
+**(8) Compugraphics International (UK)** — small European photomask player. Not a direct TMC competitor.
+
+**(9) Shenzhen Newway Photomask + Shenzhen Qingyi Photomask (China)** — China's domestic players, expanding under national semiconductor-industry support and primarily supplying China's domestic 8 / 12-inch mature-node fabs. **These are TMC's most direct low-end price competitors in the China market** — TMC's annual report p. 64 explicitly cites "Mainland Chinese mask shops continuing capacity additions with low-price strategy entering the market" as an adverse factor.
+
+### 7.3 Competitive-dimension positioning (4×4 matrix)
+
+```mermaid
+quadrantChart
+    title Global photomask players — node depth vs. scale positioning
+    x-axis Deeper node (10nm) --> Mature node (200nm)
+    y-axis Small scale --> Large scale
+    quadrant-1 High-end / large
+    quadrant-2 Mid-node / large
+    quadrant-3 Mid-node / small
+    quadrant-4 High-end / small
+    Hoya: [0.15, 0.95]
+    Tekscend: [0.20, 0.75]
+    DNP: [0.25, 0.70]
+    Photronics: [0.30, 0.60]
+    PDMC: [0.35, 0.40]
+    SK-Electronics: [0.50, 0.45]
+    TMC: [0.65, 0.30]
+    Shenzhen Newway: [0.85, 0.25]
+    Compugraphics: [0.55, 0.15]
+```
+
+**X-axis:** further left = deeper node (high-end, EUV / sub-14nm); further right = more mature (8-inch).
+**Y-axis:** higher = larger player (revenue + market cap + global footprint).
+
+**TMC's current position [0.65, 0.30]:** mid-node (40–65nm in volume, 28nm in qualification) and small-to-mid scale (USD 232 mn revenue vs. Photronics USD 867 mn / Hoya in the multi-billions). This positioning **reflects TMC's "Asia-domestic mid-node" role in the global photomask ecosystem — deliberately misaligned with the high-end players and not contesting the EUV / sub-14nm battlefield**.
+
+**The 14-inch advanced-packaging mask push is TMC's attempt to shift toward the top-left quadrant** — but the near-term effect is limited because advanced-packaging masks are not a node extension but a separate product category, and won't move TMC forward on the IC-node frontier.
+
+### 7.4 TMC's competitive strengths (explicitly listed in the annual report p. 63, "Competitive Niche")
+
+> Quoted verbatim from [2024 年報, p. 63, 業務發展計畫 - 4. 競爭利基](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf):
+
+1. "(1) Possessing mature-process capacity and advanced-development capability. From 0.11µm (and above) through 90 / 65 / 55 / 40nm, the company delivers customer-satisfying volume-production technology."
+2. "(2) Possessing advanced-process technology and capacity at 28nm (and below). The company maintains close relationships with key customers in pace with their technology roadmap."
+3. "(3) Through collaboration with the group subsidiary Mirle Automation, the company offers one-stop service combining wafer-fab and mask-manufacturing, enabling customers' faster time-to-market."
+
+**Analyst's reorganized view of TMC's true competitive strengths (vs. global peers):**
+
+| Strength | Intensity | Note |
+|---|---|---|
+| 1. 36-year accumulated 400+ customer relationships | **Strong** | Customer switching costs are punitive (6–18 months re-qualification + yield risk). TMC's accumulated customer base is a structural moat. |
+| 2. Geographic position — Hsinchu Science Park, walking distance to Taiwan fabs | **Medium-strong** | Mask turnaround of 24–72 hours is a physical constant; Taiwan-domestic fabs choosing TMC enjoy "zero time-zone, zero logistics" naturally. PDMC has the same advantage; Europe / US-based Photronics (China / Korea / Europe sites) does not. |
+| 3. "Full node coverage" — 0.5µm to 40nm across 8-inch + 12-inch mature | **Medium** | High-end players are uninterested in this range, making it TMC's differentiation niche. |
+| 4. Group-internal one-stop service via Mirle Automation | **Medium** | One-stop wafer + mask service for mainland Chinese, Korean, Southeast Asian IC design houses. Differentiates TMC from PDMC and other international peers. |
+| 5. Group subsidiary relationships (XinTec, Wang-Neng, Photop, etc.) | **Weak-medium** | Diversification was potentially a strength in 2017-23, but it became a drag in 2024-25 and is now flagged for divestiture under the new sponsor. |
+| 6. 14-inch mask for advanced packaging | **Unrealized** | Trial production 2H26 / volume 2027 — option value over 3 years but not yet realized. |
+
+### 7.5 TMC's competitive weaknesses
+
+1. **No EUV / sub-7nm high-end capability** — structural weakness, long-term marginalization risk.
+2. **No overseas production sites** — annual report p. 64 explicitly notes "no overseas production footprint, vulnerable to domestic labor-supply shortages." This is also the root cause of weak Europe / US market traction.
+3. **Seven years of subsidiary-diversification financial baggage** — subsidiary losses + parent-level high leverage (year-end 2024 debt ratio 80.4%) + structural sub-peer ROE → caps valuation premium.
+4. **Upstream mask-blank dependence on Hoya + Shin-Etsu + SK-Electronics** — annual report p. 64 is explicit. This is unavoidable industry reality, but bargaining room is small and upstream price hikes flow straight through to margin compression.
+5. **Mainland-Chinese photomask shops' low-price entry** — incremental pricing pressure.
+
+---
+
+## 8. Market Opportunity (TAM / SAM / SOM)
+
+### 8.1 TAM sizing — global photomask market
+
+**TAM (Total Addressable Market):**
+- 2024: ~**USD 5.1 bn** (including IC masks + LCD/FPD masks + bumping / large-area masks in full).
+- 2030F: **USD 6.3–7.0 bn** (range across 3–4 research houses; 2024-2030 CAGR ~3–5%).
+- Sources: [Mordor Intelligence, 2024-2030](https://www.mordorintelligence.com/industry-reports/photomask-market), [IMARC, 2024-2033](https://www.imarcgroup.com/photomask-market), [Exactitude Consultancy, 2024](https://www.globenewswire.com/news-release/2024/07/31/2921845/0/en/Photomask-Market-is-expected-to-be-valued-at-USD-6-36-billion-by-2030-Exactitude-Consultancy.html).
+
+**TAM breakdown:**
+- IC photomask: ~75–80% (~USD 3.8–4.0 bn).
+- FPD / LCD large-area mask: ~10–15% (~USD 0.5–0.8 bn).
+- Bumping / WLP large-area mask: ~5–10% (~USD 0.3–0.5 bn).
+- Other (LED, MEMS, compound semiconductor): ~2–5%.
+
+### 8.2 SAM (Serviceable Addressable Market) — segments TMC can realistically serve
+
+TMC has no EUV / sub-7nm capability and weak Europe / US channels, so the addressable market should be net of:
+- Global EUV mask market: ~USD 0.8–1.0 bn (Hoya mask blank + 5+ EUV mask write shops) — TMC cannot serve.
+- Global sub-14nm mask market: ~USD 1.2–1.5 bn — TMC cannot serve (PDMC + Photronics + Tekscend + DNP).
+- Global 28nm-to-65nm mask market: ~USD 1.0–1.2 bn — TMC **is qualifying, partially serviceable**.
+- Global 8-inch + 12-inch mature (≥65nm) mask market: ~USD 1.5–1.8 bn — **TMC's primary SAM**.
+- Global LCD / FPD masks: ~USD 0.5–0.8 bn — TMC serves only small-to-medium panels, ~USD 0.1 bn.
+- Global bumping / large-area masks: ~USD 0.3–0.5 bn — TMC's 9-inch + 14-inch expansion targets, ~USD 50–150 mn SAM.
+- **Combined SAM = USD 1.5–1.8 + 1.0–1.2*0.5 + 0.1 + 0.05–0.15 ≈ USD 2.2–2.7 bn** (i.e., ~40–50% of global TAM).
+
+### 8.3 SOM (Serviceable Obtainable Market) — what TMC currently captures
+
+TMC's FY2024 revenue of NT$7.56 bn = USD ~232 mn. SOM / SAM ≈ **0.9–1.1%**; SOM / TAM ≈ **0.5%** — TMC holds <1% of the global photomask market and ~1% of its serviceable SAM.
+
+**Drilling down:**
+- Within the USD 1.8–1.9 bn merchant-photomask SAM, TMC's USD 232 mn ≈ **1.2%**.
+- Within the Asia (Taiwan + China + Korea + Japan + Southeast Asia) USD 1.2–1.3 bn merchant SAM, TMC ≈ **1.8–2.0%**.
+- Within Taiwan domestic USD 0.3–0.4 bn merchant SAM (mostly PDMC + TMC), TMC ≈ **20–25%** — **the genuinely strong submarket, second only to PDMC's 75–80%**.
+
+### 8.4 SOM growth opportunities — incremental space 2026-2030F
+
+**Opportunity 1 (short-term, 2026-27F): main-business stabilization plus 40nm / 28nm node-mix uplift driving ASP**
+- TMC's own annual report p. 73, §"Material Capex — Expected Effects," self-discloses 2025 incremental output of 12,500 plates / sales NT$1,460 mn / gross profit NT$730 mn, and 2026 incremental output of 13,500 plates / NT$1,630 mn / NT$820 mn — a very specific self-commitment ([2024 年報, p. 73](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf)).
+- Even on a conservative 70% realization, 2026 main-business incremental revenue is ~NT$1.1 bn (+14-15% YoY), and once subsidiary divestitures eliminate the non-controlling-interest loss drag, EPS turning positive becomes a visible scenario.
+
+**Opportunity 2 (medium-term, 2026-28F): 14-inch mask advanced-packaging order ramp**
+- NT$435 mn capex (approved December 2025) plus the NT$1.75 bn equity raise (approved January 2026), part of which funds the 14-inch line.
+- A 14-inch large-area mask ASP is 4–8× a standard 12-inch reticle; gross margin 50%+ (implied by annual-report p. 73 financial guidance).
+- *Analyst estimate:* trial production 2H26; full ramp 2027, contributing NT$500–800 mn incremental revenue and NT$250–400 mn gross profit.
+- Customer targets: Taiwan-domestic advanced-packaging hub (TSMC CoWoS, ASE / SPIL, XinTec, ChipMOS).
+
+**Opportunity 3 (mid-long-term, 2027-30F): TSMC localization strategy + AI compute demand passthrough**
+- [Nomura, 2026-05-21, p. 13-14](../sector/半导体材料.md) estimates TSMC Taiwan-local spare-parts + indirect materials sourcing rising from ~50% (2017) to ~70% (2030F) — a structural tailwind.
+- TSMC's in-house mask shop cannot absorb mature-node + bumping overflow, so outsourcing continues — TMC is a beneficiary.
+
+**Opportunity 4 (long-term, 2028-30F): compound-semiconductor SiC / GaN mask demand expansion**
+- Compound-semiconductor 8-inch manufacturing (Wolfspeed 8-inch SiC, ROHM 6-inch → 8-inch) needs masks; TMC is already serving these.
+- EV / industrial power / 5G base-station demand drives SiC / GaN penetration.
+
+### 8.5 Investment strategy — TMC's capital allocation
+
+Per the 2024 annual report p. 72-73:
+- 2024 actual capex of NT$2,005 mn (primarily buildings + exposure equipment + inspection / metrology / process / repair / environmental tools).
+- 2024 operating cash inflow: NT$1,050 mn.
+- Year-end 2024 cash: NT$1,430 mn (sufficient to support a mid-sized 2025 capex).
+- The new sponsor is rebalancing 2025-26 capex pacing — trimming non-core projects and concentrating on the 14-inch and 28nm lines.
+
+**Capital efficiency:**
+- ROIC 2024 = operating profit NT$221 mn / (equity NT$4.07 bn + long-term debt NT$7.29 bn) ≈ **2.0%** — well below WACC, value-destructive zone.
+- ROE 2024 = net loss NT$786 mn / average equity NT$4.59 bn ≈ **−17%** — value-destructive.
+- A 2027F return to historical means (ROIC 6–8% / ROE 10–12%) implies meaningful market-cap upside but requires a 2–3-year validation window.
+
+**§8 takeaway:** TMC captures <1% of global photomask TAM, ~1.2% of its serviceable SAM, and 20–25% of Taiwan's domestic small-segment niche. Growth space is concentrated across three tracks — main-business stabilization (short-term) + 14-inch advanced packaging (medium-term) + compound-semiconductor (long-term) — with the quantifiable realization window starting in 2026-27F.
+
+---
