@@ -112,3 +112,99 @@ George C. Macricostas 于 2025 年中 **年龄 55 岁** ([Photronics CEO-transit
 George 此前最重要的运营经验是 **创办、担任董事长并出任 RagingWire Data Centers, Inc. 的 CEO**，这是一家美国关键任务级批发型托管数据中心提供商 ([Photronics CEO-transition 8-K dated 2025-05-28](https://www.sec.gov/Archives/edgar/data/810136/000114036125020569/ef20049681_8k.htm))。他在 **2014 年带领 RagingWire 80% 出售给日本 NTT**——当时国际数据中心并购最大笔之一——并于 2018 年完成尾部出售，最终将公司完整交付 NTT。数据中心建设经历对运营光罩公司不是显见的准备，但有两项技能可迁移：跨场地大额资本支出管理（NTT-RagingWire 在北弗吉尼亚、萨克拉门托、达拉斯、芝加哥建造了超大规模托管站点），以及与日本战略伙伴的合作管理（NTT 交易先于 Photronics 在台湾与厦门和 DNP 的伙伴方式之外）([Photronics CEO-transition 8-K](https://www.sec.gov/Archives/edgar/data/810136/000114036125020569/ef20049681_8k.htm))。他更早在 PLAB 担任 **负责 IT 基础设施的高级副总裁**——不是直接运营岗位，但接触了全球多厂制造商的数据流 ([Photronics 2026 DEF 14A, p. 9](https://www.sec.gov/Archives/edgar/data/810136/000153949726000750/n5545_x1-def14a.htm))。
 
 George Macricostas 在备案中自称"投资人与创业者"，"在业务运营与信息技术领域拥有超过 30 年的技术与业务管理经验" ([Photronics CEO-transition 8-K](https://www.sec.gov/Archives/edgar/data/810136/000114036125020569/ef20049681_8k.htm))。**保留 Frank Lee 为 PDMC 台湾子公司董事长兼总经理直至退休** 的有意安排，在亚洲枢纽（贡献多数营收）保留运营连续性——George 因此是接手一个结构性受支撑的角色，而非清洁式接管，过渡期的执行风险被压低。公司在 2025-05 的 8-K 中表示，将"修订其与 Macricostas 先生的现有雇佣协议，反映其作为 CEO 的角色，具体条款由薪酬委员会同意确定"——正式 CEO 薪酬方案条款在 2026 DEF 14A 的薪酬讨论部分披露 ([Photronics 2026 DEF 14A, Executive Compensation discussion](https://www.sec.gov/Archives/edgar/data/810136/000153949726000750/n5545_x1-def14a.htm))。
+
+## 4. 产品与服务
+
+§4 基于 **Photronics FY25 10-K Item 1 "Business"——Industry 与 Markets 子节**——这是发行人自身的产品叙述。Photronics 并未像 LRCX 或 AMAT 那样发布表格化的产品矩阵；相反，产品系列以叙述形式呈现，沿两个轴组织：**终端市场（IC 光罩 (IC photomask) vs FPD 光罩 (flat-panel display photomask — 用于 LCD / OLED / microLED)）** 与 **技术分层（高端 vs 主流）**。10-K 对此定义如下：
+
+> "'High-end' photomasks support 28 nanometer and smaller design nodes for ICs and Generation 10.5+, AMOLED, and LTPS display-based process technologies for FPDs. However, 32 nanometer and above geometries for semiconductors and Generation 8 and below (excluding AMOLED and LTPS) process technologies for displays, which we refer to as 'mainstream' photomasks, constitute the majority of designs currently being fabricated in volume." — [PLAB 10-K FY25, Item 1 Industry](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)
+
+由此形成的四个产品单元——每个都对应 Item 7 MD&A 中披露的 FY25 营收数字——构成实际的产品矩阵。
+
+### 4.1 产品矩阵（基于 10-K 叙述 + Item 7 营收表分析师重构）
+
+| 终端市场 | 分层 | 定义 | FY25 营收 ($M) | FY24 营收 ($M) | FY23 营收 ($M) | YoY |
+|---|---|---|---:|---:|---:|---:|
+| **IC** | 高端 | ≤28nm 半导体设计节点；多束 (multi-beam) 电子束写入 | **$238.9M** | $228.5M | $194.9M | +4.6% |
+| **IC** | 主流 | ≥32nm 半导体节点（仍是设计量主体） | **$376.2M** | $409.7M | $456.3M | −8.2% |
+| **FPD** | 高端 | 第 10.5 代+ TFT-LCD、AMOLED、LTPS 面板显示光罩 | **$195.5M** | $195.4M | $200.8M | +0.1% |
+| **FPD** | 主流 | ≤第 8 代 LCD（不含 AMOLED/LTPS） | **$38.7M** | $33.4M | $40.0M | +15.7% |
+| **总计** | | | **$849.3M** | $866.9M | $892.1M | −2.0% |
+
+*数据来源：营收数字来自 [PLAB 10-K FY25, Note 10 Revenue (Revenue by Product Type)](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)；定义部分逐字引用自 [PLAB 10-K FY25, Item 1 Industry](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)。*
+
+![Photronics FY23–FY25 营收组合——IC 高端 / IC 主流 / FPD 高端 / FPD 主流](../../charts/photronics_revenue_mix.png)
+
+*数据来源：[PLAB 10-K FY25, Note 10 Revenue by Product Type table](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)。*
+
+矩阵立刻揭示两点。第一，**主流 IC 两年内下滑 $80M (−17.5%)**，而 **高端 IC 增长 $44M (+22.5%)** — 这是核心组合切换故事。第二，**主流 FPD 在 FY25 反弹 +15.7%**，前两年走平或微跌，由中国 G8 显示 IT 与平板出货放量驱动（Photronics 厦门与合肥工厂直接对接 BOE、TCL 华星 (China Star)、天马 (Tianma) 的需求）。
+
+### 4.2 综合分析——产品类目如何在客户流程中互动
+
+一个半导体设计在 Photronics 的产品组合中沿如下顺序流转：一家无晶圆厂设计公司或 IDM 完成芯片版图设计，把 GDS-II / OASIS 设计文件交给 Photronics，订购一套光罩——通常 **一片 5nm/3nm 逻辑芯片 30-60 层、一颗带 TSV 的 HBM4 DRAM 堆叠 40-80+ 层、一颗电源管理或 65nm 传统控制器 10-20 层**。前约 5 层关键层（front-end-of-line、栅极、接触、M1）如果芯片处于 先进节点 (advanced nodes, ≤28nm) 则需高端光罩——这些层经过 Photronics 在新竹（台湾）或 Boise（爱达荷研发厂）的多束电子束写入系统。中段的互连层（M2-M10）可使用主流 IC 光罩。仅在最前沿（≤5nm 与 EUV 关键层），设计才完全脱离 Photronics 的可寻址范围——这些 **EUV 光罩 (Photronics 暂未进入)** 由 Hoya（光罩基板）以及 Toppan 或 DNP（光罩写入与图形化）提供，唯一能图形化 EUV 光罩的写入机是 Intel 旗下 IMS-Vienna 的多束机型。**EUV 关键层之外的所有光罩层 Photronics 都能制造**；对一颗先进节点设计而言，这仍是 90%+ 层数与多数 ASP。FPD 流程并行：BOE 合肥 G10.5 LCD 线、Samsung Display 牙山 (Asan) AMOLED 线、LG Display 坡州 LTPS 线每季都释出新面板设计，AMOLED/LTPS 由 Photronics 韩国 (Cheonan) 制造，G8.6 及以下由 Photronics 台中覆盖。这两条流程（IC + FPD）共享的物理设备少，但共享面向客户的销售团队、IT 系统与公司财务。
+
+### 4.3 IC 光罩——高端（≤28nm）
+
+**10-K 原文** ([PLAB 10-K FY25, Item 1 Markets](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))：
+
+> "We support customers across the full spectrum of IC Production by manufacturing photomasks using electron beam or optical (laser-based) lithography systems. In addition, we have added the most advanced electron beam mask writing system for IC mask writing that employs a **multi-beam writing architecture** to deliver speed and performance improvements over existing systems."
+
+> "Currently, research and development for IC photomasks are primarily focused on photomasks enabling **wafer geometries of 7 nanometer node and smaller, including EUV** and, for FPDs on Generation 8.6 AMOLED and photomasks for more advanced FPD display integration across all sizes. In addition, we note the role AI is playing in driving the technology roadmap for IC devices and our technology program covers multiple initiatives to deliver **AI grade photomasks in IC and advanced packaging applications**."
+
+**通俗解读。** 现代逻辑与存储芯片通过 *步进机* (stepper) 或 *扫描机* (scanner) 印到硅片上——这是一种光学设备，把光线聚焦穿过 *reticle*（光罩），逐层曝光下方的光刻胶。在 ≤28nm，图案变得极致密集，**光学邻近效应修正 (OPC) 与逆向光刻 (ILT)** 给光罩设计加上几亿个细小的辅助特征，把文件从 GB 级吹胀到每张光罩 TB 级。要以可接受的吞吐量把这些图形写下来，光罩车间使用 **电子束写入机** — 而在最前沿，使用 **多束电子束写入机**（IMS Nanofabrication / NuFlare MBM-2000 这一级设备），并行发射数千束。Photronics 提到的多束写入机正是使其能以可接受的周期时间竞争 ≤28nm 高端光罩的关键。战略性拐点是 **AI / HBM / 先进封装周期**：TSMC 每一个新 N3 / N3P / N3X 变体（用于 NVIDIA、AMD、Google、AWS、Meta 的 AI 加速器）都需要一套新光罩；每一代新的 HBM3E / HBM4 基底芯片亦然。因此高端光罩需求与前三四大 IC 客户的流片节奏紧耦合，而非晶圆体量。**关键警示——EUV 不在范围内。** Photronics 并 *不是* EUV 可生产的光罩供应商。EUV 光罩生产需要多层反射 Ru/Mo 镀膜的光罩基板（来自 **Hoya**——全球基板份额约 80%，见 [野村行业报告 p. 18-30](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)）以及专用 EUV 写入机与 EUV 光罩检测（KLA Teron + Lasertec 系统）。量产级 EUV 光罩来自 **Toppan、DNP、Hoya**（截至 2025 年仅有这三家认证的 EUV 光罩供应商）以及 TSMC、Samsung Foundry、Intel 内部少量自营。因此 Photronics 的"高端 ≤28nm"包含 **深紫外 DUV (193i ArF, KrF, i-line, g-line)** 全套——EUV *之下* 的所有波长工具。这使 Photronics 成为先进节点芯片中不需要 EUV 的层（即使在一颗 3nm 芯片中仍占多数层）的 主流 DUV 合作伙伴，但在需要 EUV 的层上则结构性不在场。
+
+*分析师观点：* 在高端 IC 光罩，Photronics 是 *邻接* EUV 寡头而非其成员的可靠合作方。其护城河类型是 **规模 + 全球临近性 + 多束写入机所有权**——而非技术领先。最接近的竞争产品是 **Toppan 的 ≤28nm DUV 光罩线** ([Toppan IR — 微电子业务](https://www.toppanholdings.com/en/about/business/electronics/)) 以及 **DNP 在日本/中国的光罩业务** ([DNP IR — 电子产品分部](https://www.global.dnp/biz/electronics/))。Photronics 在该层级对 Toppan/DNP 的优势是 *地理*：Boise IDM 客户（Micron）或新竹代工客户（TSMC、UMC）从 Photronics 比从东京 DNP/Toppan 厂得到更短周期。这一优势真实但被相对削弱——因为这两家日本玩家也在亚洲设有本地工厂。
+
+### 4.4 IC 光罩——主流（≥32nm）
+
+**10-K 原文** ([PLAB 10-K FY25, Item 1 Industry](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))：
+
+> "32 nanometer and above geometries for semiconductors and Generation 8 and below (excluding AMOLED and LTPS) process technologies for displays, which we refer to as 'mainstream' photomasks, **constitute the majority of designs currently being fabricated in volume**. At these geometries and at various high-end nodes, we can produce full lines of photomasks. Moreover, **there is no significant technology employed by our competitors that is not available to us**."
+
+**通俗解读。** "主流 IC"覆盖全球芯片产量的 28nm 及以上主体——每一颗微控制器、电源管理 IC、模拟/混合信号器件、CMOS 图像传感器、显示驱动 IC、车用控制器、BCD 功率芯片都在 0.18 µm / 90nm / 65nm / 40nm / 28nm 制造。这些节点的晶圆总量远大于 ≤7nm，而 **不同光罩设计的数量也更大**（一颗 0.18 µm 电源管理芯片一套光罩通常 $50K；一颗 5nm AI 加速器一套光罩 $20M+，但只有一个客户设计）。因此主流 IC 产生高 *单位量* 与高 *客户数*（Photronics 共服务约 636 客户——其中绝大部分属主流 IC），但每张光罩 ASP 较低。主流 IC 光罩在 KrF / i-line / g-line 激光写入机与常规单束电子束设备上写入——远不如高端用的多束写入机耗资本。主流 IC 线对 Photronics 的战略意义在于：它是 **营收基础**（FY25 $376M，占总营收 ~44%）也是 **组合阻力**：两年间下滑 $80M，因为客户延长产品周期、放慢设计释出节奏。FY26 Q1 主流 IC 同比走平——这是 PLAB 多头论据所需的拐点。
+
+*分析师观点：* 在主流 IC，Photronics 定位为日本以外的领先非自营供应商——11 厂布局与台湾、中国大陆的合资带来 较小的中国本土供应商（Newway、Qingyi、Tekscend）在质量/良率上暂未达到的周期与价格优势，也带来日本玩家（Toppan、DNP）在质量可匹配但难以在中国本地物流经济性上匹配的 SMIC、华虹、晶合 (Nexchip) 客户优势。护城河类型是 **规模 + 本地化 + 多客户关系密度**。最接近的竞争产品是 **深圳市新益昌 (Newway) 光罩的主流 IC 线** ([Newway 公司网站](http://www.newwaymask.com/))、**Hoya 的主流 IC 光罩线** ([Hoya IR — 电子业务](https://www.hoya.com/en/business/electronics/))，以及上述 **Toppan / DNP**。（注：以上方向性定位为分析师推断，并非直接见于 PLAB 10-K——§7 将展开竞争地理并引第三方数据。）
+
+### 4.5 FPD 光罩——高端（第 10.5 代+、AMOLED、LTPS）
+
+**10-K 原文** ([PLAB 10-K FY25, Item 1 R&D](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))：
+
+> "Research and development for FPD photomasks is primarily conducted at Photronics Korea, Ltd., our subsidiary in South Korea."
+
+> "We have added the most advanced electron beam mask writing system for IC mask writing that employs a multi-beam writing architecture... For FPD, the mask fabrication utilizes **only optical writing systems to write the mask patterns**." ([same Markets section](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))
+
+FPD 产品最近的重大事件是 2026-03-31 的公告：Photronics 在其韩国 Cheonan 工厂 **接收了"最先进的光罩写入机"用于 AMOLED 应用** ([Photronics press release 2026-03-31](https://www.globenewswire.com/news-release/2026/03/31/3265409/0/en/Photronics-Receives-Advanced-Mask-Writer-Expanding-AMOLED-Leadership.html))——新闻稿明确把 Photronics 定位为"扩大 AMOLED 领导地位"，这一自称的领导力定位与 10-K 中的研发中心描述一致。
+
+**通俗解读。** FPD 光罩在 *物理尺寸* 上远大于 IC 光罩——第 10.5 代光罩约 **1.5 m × 1.5 m**，第 8.6 代光罩约 **2.5 m × 2.2 m**，相比 6 英寸 (152mm) 见方的 IC 光罩。大面积基板本身就是一种专门的合成石英基板（来自日本极少数供应商——主要是 AGC 与 Asahi），在面板级光罩上写图案需要 **激光直写系统**（典型如 Heidelberg Instruments DWL 或 Photronics 自研 MicroMask），而非电子束写入机。AMOLED 与 LTPS 面板——用于 iPhone、三星 Galaxy、OLED TV，以及越来越多的 iPad / MacBook / IT 显示尺寸——比传统 LCD 需要更密的背板图案，因此光罩有更紧的 CD（次 2 µm）并需要多色调半色调图案。Photronics 的 Cheonan 韩国工厂是全球高端 FPD 光罩中心；战略拐点是 **AMOLED IT 面板放量**（Apple 的 iPad Pro M4 OLED 线、Samsung Display 牙山第 8 代 AMOLED 线、BOE 绵阳 B12 AMOLED 线），从 2024 末启动并贯穿 2025-26 加速。
+
+*分析师观点：* 在高端 FPD 光罩，Photronics 的 Cheonan 工厂结构性受益——与 Samsung Display（牙山）和 LG Display（坡州）地理临近，韩国是全球 AMOLED 中心。护城河类型是 **地理 + 资本规模**（大面积光罩写入机本身每台数千万美元；2026-03 的写入机交付即此类投资之一）。最接近的竞争产品是 **LG Innotek 的 FPD 光罩业务** ([LG Innotek IR](https://www.lginnotek.com/main.do)) 以及 **SK-Electronics Co., Ltd. 的 FPD 光罩线** ([SK Electronics 概览](https://www.sk-electronics.co.jp/eng/))。Toppan 也参与 FPD 光罩。PLAB 10-K Competition 部分将 "LG Innotek Co., Ltd." 与 "SK-Electronics Co., Ltd." 列为其竞争对手 ([PLAB 10-K FY25 Item 1 Competition](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。
+
+### 4.6 FPD 光罩——主流（≤第 8 代 LCD）
+
+这是四条线中规模最小的（FY25 $38.7M，约占总营收 4%），但 2025 年 YoY 增速最高（+15.7%）：故事核心是 **中国 G8 LCD IT 与平板建设**——BOE、天马、TCL 华星等中国面板厂正在第 8 代消化 AMOLED 替代后挤出的 PC 与平板的 IT 显示量 ([PLAB FY25 多年度 SEC 叙述](/Users/x/projects/financial_agent/reports/earnings/PLAB_20260525.md))。Photronics 的厦门与合肥工厂直接对接这一建设。10-K 叙述确认 FPD 研发在 Cheonan 韩国，但主流 G8 LCD 产出由中国与台湾工厂承担 ([PLAB 10-K FY25 Item 1](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。
+
+*分析师观点：* 主流 FPD 是一个战术性增长杠杆，而非战略性护城河。其毛利贡献明显低于 IC 高端。护城河类型是 **对中国面板客户的地理本地化**——与中国本地主流 IC 同逻辑。该线难以扩展超过 PLAB 总营收中个位数百分比，但为中国工厂提供增量产能利用。
+
+### 4.7 客户工作流程——Mermaid 图
+
+```mermaid
+graph TD
+    A[客户设计 — 无晶圆厂 / IDM / 面板厂] --> B[移交 GDS-II / OASIS 文件]
+    B --> C{层类型?}
+    C -->|EUV 关键层 ≤5nm| D[发送至 EUV 光罩供应商 — Toppan / DNP / Hoya]
+    C -->|193i / KrF / i-line / g-line ≤28nm| E[Photronics IC 高端<br>台湾 / 美国 — 多束电子束写入机]
+    C -->|≥32nm 主流节点| F[Photronics IC 主流<br>全球 11 厂]
+    C -->|FPD G10.5+ / AMOLED / LTPS| G[Photronics FPD 高端<br>韩国 Cheonan — 激光写入机]
+    C -->|FPD ≤G8 LCD| H[Photronics FPD 主流<br>中国 / 台湾 厂]
+    E --> I[光罩写入 → 缺陷检测 → 修补 → 清洗 → 防尘膜 → 出货]
+    F --> I
+    G --> I
+    H --> I
+    I --> J[客户晶圆厂 — 光罩装入步进/扫描机进行晶圆/面板印刷]
+```
+
+*数据来源：流程综合自 [PLAB 10-K FY25, Item 1 Industry + Markets + R&D](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)；EUV 供应商关系自 [野村大中华半导体报告, p. 38-39](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)。*
+
+### 4.8 售后/服务与经常性收入定位
+
+与 Lam Research（CSBG 客户支持业务集团）或 Applied Materials（AGS 应用全球服务）不同，Photronics **不** 拆分售后/装机基础/服务收入线——没有可比的经常性收入分部。原因在于光罩业务模式本身：每张光罩都是为一个给定设计一次性交付的母版，没有持续的客户服务费。业务的经常性来自 **客户关系**（一旦 Photronics 通过客户资格认证，"将获得该客户光罩订单的某一固定比例" — [PLAB 10-K FY25, Item 1](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)）和 **收入确认**（Note 10 显示 FY25 营收中 USD 818M（96%）按"随时间"确认，仅 $31M 按"时点"确认，反映光罩组通常随设计放量节奏渐次交付）。这种"随时间"的确认是与经常性收入护城河最接近的类比 ([PLAB 10-K FY25, Note 10 Revenue](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。
