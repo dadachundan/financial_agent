@@ -373,3 +373,148 @@ Fujimi 是在 2024 年中期 **在韩国 HBM Cu 抛光液销售上从 Soulbrain 
 
 **渗透策略** 直接、且已在执行：(a) 通过对下一节点验证的深度联合开发 **防御** 已有的三星 / SK 海力士 socket (即 HBM4 铈基抛光液之争)；(b) 通过得州工厂 **地理扩张** 至三星 Taylor + TSMC 凤凰城；(c) 在韩国冠军布局内 **纵向扩张** 至相邻的电池 / 显示化学品；(d) 随着三星 / SK 海力士在 2019 年后整合多源策略，**重建 HF / BOE 定价能力** (韩国冠军在结构上获益)。单一最大的 TAM 解锁动作将是 **在亚利桑那对 TSMC 完成 CMP 抛光液或 HF / BOE 验证**——TSMC 历来很少采购韩国 / 中国化学品，但得州工厂首次把 Soulbrain 物理上带入 TSMC 验证视野。
 
+## 9. 风险评估
+
+### 公司特定风险
+
+**1. 客户集中度 (高严重度)。** 三星 + SK 海力士合计代表 >70% 营收，更广义的三星集团 (存储 + 代工 + Display + SDI) 单独可能就占 ~50–55% 营收。两个锚定客户中任何一个的实质性资本支出削减——类似 2022–23 年 NAND 下行使营收从 FY22 ₩1.09 万亿掉到 FY23 ₩8,440 亿，跌幅 23%——会在一个周期内直接打击 Soulbrain。缓释因素：(i) 化学品是耗材而非资本品 (利用率比绿地资本支出更重要)；(ii) HBM 加速部分抵消 DRAM/NAND 周期性；(iii) Taylor 得州扩张将分散至美国代工客户 ([Stockanalysis 营收史](https://stockanalysis.com/quote/kosdaq/357780/revenue/)，[Economy6，2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html))。
+
+**2. HBM Cu CMP 抛光液份额流失 (中高严重度)。** 2024 年 Fujimi 重夺领先与 2025 年 Dongjin 进入 SK 海力士已经侵蚀了 2023 年披露的"独占"地位；HBM4 / HBM4E 验证中进一步流失——或将高利润 Cu 阻挡层子 socket 输给 Versum / 安集——将压缩业务段利润率、推翻溢价估值逻辑。缓释因素：韩国战略材料政策保证每种化学品至少有一家本土供应商；Soulbrain 在板桥的颗粒工程 R&D 投资意在重夺份额 ([Fujifilm Electronic Materials 领先，2024-09](https://www.webnewswire.com/2024/09/03/fujifilm-electronic-material-takes-lead-in-cmp-slurry-market-for-hbm-says-the-information-network/)，[THE ELEC，2024](https://www.thelec.net/news/articleView.html?idxno=4751))。
+
+**3. 地理集中度在韩国 (中严重度)。** 直到 Taylor 得州在 2026–29 年爬坡，生产以韩国为主。暴露于韩国工资上涨、电价上涨 (KEPCO 工业电价上调)、韩元波动，以及公州 / 坡州 / 平泽厂的潜在罢工风险。缓释因素：高自动化降低人力杠杆；Taylor 与 Kokomo 厂将在本十年下半逐步去风险化 ([Soulbrain "About Us" 页面](https://www.soulbrain.co.kr/en/m16.php))。
+
+**4. 创始家族继承 (低中严重度)。** 董事长郑志完已近七旬；家族继承因儿子 Jeong Seok-ho 在 2020 年代初去世变得复杂。女儿 Jeong Mun-joo 与下一代是长期继承人，但 Soulbrain Holdings (控股 036830 主体) 的治理安排仍在过渡中。缓释因素：上市 357780 主体由职业 CEO (Park Young-soo) 经营；家族通过 Holdings 间接控制而非直接控制 ([THE ELEC，"Soulbrain 第二代继承"](https://www.thelec.kr/news/articleView.html?idxno=6616))。
+
+**5. Taylor 得州磷酸厂执行风险 (中严重度)。** 一期 1.75 亿美元 (二期潜在合计 5.75 亿美元) 是 Soulbrain 历史上单一资产规模最大的资本支出，建设期 2025–29。磷酸厂在技术上要求高 (腐蚀控制、12-nines 纯度)，得州对公司是新经营地理。成本超支、许可延迟、三星 Taylor 产能进度滑动都会损害 IRR ([Evertiq，2024-07-30](https://evertiq.com/news/56124)，[Hoodline，2024-07](https://hoodline.com/2024/07/south-korean-company-soulbrain-to-launch-175m-plant-in-taylor-bolstering-local-tech-industry-and-job-market/))。
+
+### 行业 / 市场风险
+
+**6. AI 资本支出减速 (中高严重度)。** 野村 2026-2030 锚定逻辑明确将 AI 资本支出减速列为整个材料周期的主风险——若超大规模数据中心商的 GPU 采购转弱，HBM 产能扩张延迟、耗材消耗增量将蒸发。Soulbrain 在该情景下是高 Beta 名字，因为它有 HBM 份额故事。缓释因素：减速仍保留基线 DRAM / NAND / 代工厂消耗 ([reports/sector/半导体材料.md](../../sector/半导体材料.md) — 报告顶部风险)。
+
+**7. 中国国产替代 (中严重度)。** 中国正在快速构建本土材料生态 (安集微、鼎龙、Crystalwise、UP Chemical-CN)。对 Soulbrain 服务 SK 海力士无锡的无锡厂，3–5 年内中国本土的渐进替代将压缩中国业务营收。缓释因素：SK 海力士对 Soulbrain 在韩国厂的忠诚度黏性强；中国替代主要打击中低纯度等级。
+
+**8. 单一化学品的替代 / 颠覆风险 (中严重度)。** 各化学品有不同的替代动态——HF 抗替代、CMP 中度、前驱体更开放。子段每年 5–10% 份额流失的累计效应即便营收不变也会压缩利润率。
+
+**9. 韩国战略材料政策反转 (低严重度)。** MOTIE 领导层更替或美韩贸易协议要求非韩国本土采购可能弱化保护性供应商动态。低概率、高影响。
+
+### 财务风险
+
+**10. 估值 / 倍数压缩风险 (高严重度)。** TTM PE 41.8 倍位于同业中位 (~19 倍) 的 ~2.2 倍、自身 3 年中位 (~22 倍) 的 ~1.9 倍——且股价已从 2025 年低点近三倍上涨至 ₩452,000。**FY26 营收 (一致预期 ₩1.1 万亿) 不及或 HBM4 验证滑动** 都可能将估值倍数压缩至 25–30 倍，即便不削减盈利也会让股价下行 25–40%。缓释因素：前瞻 PE 18.9 倍隐含分析师已模型化 EPS 翻倍；若兑现，相对实际增长的折价是合理的 ([Stockanalysis，KOSDAQ:357780](https://stockanalysis.com/quote/kosdaq/357780/)，[Stockopedia](https://www.stockopedia.com/share-prices/soulbrain-co-KOSDAQ:357780/))。
+
+**11. Taylor 得州二期资本融资 (低中严重度)。** 二期最多 4 亿美元 (₩5,500 亿) 将是 Soulbrain 历史上单一最大融资事件。₩9,230 亿营收下、约 17% OPM 的经营现金流每年约产生 ₩1,000 亿自由现金，故二期很可能需要 ₩2,000–3,000 亿公司债发行或分期推进。缓释因素：资产负债表接近净现金；KOSDAQ 债市对 A 级韩国工业敞开 ([Evertiq，2024-07-30](https://evertiq.com/news/56124))。
+
+### 宏观风险
+
+**12. 韩元 / 美元波动 (中严重度)。** Soulbrain 营收主要为韩元，美元占比扩大中 (无锡中国营收经 SK 海力士结算为美元；Taylor 将是纯美元)。成本基础主要为韩元、伴有美元原料 (AHF、氧化铈)。韩元强势对出口利润率构成压缩；2023–24 年韩元弱势是顺风。对冲为部分对冲。
+
+**13. 地缘政治——韩中、韩日、美中 (中高严重度)。** 供应链跨越三组关系：中国萤石 / 氧化铈原料；日本作为 HF / 抛光液的对标竞争对手；美国客户基础经 Taylor 增长。这三组关系中任何一组破裂都会扰乱 Soulbrain 的化学品或客户基础。缓释因素：原料来源多元化 (韩国本土 + 中国 + 其他) 与客户地理多元化 (韩国 + 美国 + 中国)。
+
+---
+
+## 参考资料
+
+### 主要披露与公司信息
+- [DART — 솔브레인 사업보고서 / 분기보고서 检索门户](https://dart.fss.or.kr/dsab007/main.do?textCrpNm=%EC%86%94%EB%B8%8C%EB%A0%88%EC%9D%B8)
+- [KRX 披露 20250325000760 — CEO 变更](https://kind.krx.co.kr/common/disclsviewer.do?method=search&acptno=20250325000760)
+- [Soulbrain — 半导体材料产品组合](https://www.soulbrain.co.kr/en/m21.php)
+- [Soulbrain — CMP 抛光液详情页](https://www.soulbrain.co.kr/en/m33.php)
+- [Soulbrain — 公司历史页](https://www.soulbrain.co.kr/en/m14.php)
+- [Soulbrain — About Us / 厂区分布](https://www.soulbrain.co.kr/en/m16.php)
+- [Soulbrain Holdings — 半导体材料产品组合 (母公司集团)](https://www.soulbrainholdings.co.kr/en/m21.php)
+- [Soulbrain — "Expansion Period (2010–至今)" 2020 分立](https://www.soulbrain.co.kr/en/m14.php)
+
+### 市场数据与估值
+- [Stockanalysis — KOSDAQ:357780 报价与公司概览](https://stockanalysis.com/quote/kosdaq/357780/)
+- [Stockanalysis — KOSDAQ:357780 营收史](https://stockanalysis.com/quote/kosdaq/357780/revenue/)
+- [Stockanalysis — KOSDAQ:357780 公司概览](https://stockanalysis.com/quote/kosdaq/357780/company/)
+- [Stockanalysis — KOSDAQ:357780 市值](https://stockanalysis.com/quote/kosdaq/357780/market-cap/)
+- [Stockopedia — KOSDAQ:357780 股价与财务](https://www.stockopedia.com/share-prices/soulbrain-co-KOSDAQ:357780/)
+- [Yahoo Finance — 357780.KQ 报价](https://finance.yahoo.com/quote/357780.KQ/)
+- [Yahoo Finance — 357780.KQ 公司概览](https://finance.yahoo.com/quote/357780.KQ/profile/)
+
+### 卖方与券商研究
+- [SKS Securities — Soulbrain Q3 2025 报告，2025-11-04](https://www.sks.co.kr/data1/research/qna_file/20251104100029890_6_ko.pdf)
+- [Samsung Pop research — Soulbrain 拐点，2025-02-10](https://samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=2010%2F2025021007420216K_02_02.pdf&inlineYn=Y&saveKey=research.pdf)
+- [Economy6 — Soulbrain 股票展望，2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html)
+- [野村 "Greater China Semi: Renaissance 2026-2030F" 锚定报告，2026-05-21 — 已在 `reports/sector/半导体材料.md` 汇总](../../sector/半导体材料.md)
+
+### 管理层与治理
+- [Businesspost — Who Is? 郑志完 (정지완)](https://m.businesspost.co.kr/BP?command=mobile_view&num=41846)
+- [Businesspost — 详细简介，Soulbrain Holdings 董事长](https://www.businesspost.co.kr/BP?command=article_view&num=373309)
+- [Edaily — 박영수 (朴英洙) 任命 CEO，2025-03-25](https://www.edaily.co.kr/News/Read?newsId=03834326642106928&mediaCodeNo=257)
+- [Nate news — 박영수 CEO 任命，2025-03-25](https://news.nate.com/view/20250325n27329)
+- [The Bell — Soulbrain 董事会分析：三星老兵 CEO 系列，2021-03-29](https://m.thebell.co.kr/m/newsview.asp?svccode=00&newskey=202103292236163680106472)
+- [THE ELEC — Soulbrain 第二代继承](https://www.thelec.kr/news/articleView.html?idxno=6616)
+- [The Asia Business Daily — 最年轻大股东，2024-09-17](https://www.asiae.co.kr/en/article/2024091711322781831)
+
+### 行业与客户新闻
+- [Businesskorea — Soulbrain HBM CMP 抛光液独家，2023-10-30](https://www.businesskorea.co.kr/news/articleView.html?idxno=203197)
+- [Businesskorea — 韩国 HF 国产化量产，2020](https://www.businesskorea.co.kr/news/articleView.html?idxno=39795)
+- [Businesskorea — 韩企减少对日进口依赖，2019](https://www.businesskorea.co.kr/news/articleView.html?idxno=34523)
+- [Businesskorea — SK Hynix 测试非日本 HF (含 Soulbrain)，2019](https://www.businesskorea.co.kr/news/articleView.html?idxno=33927)
+- [Al Jazeera — 日本对韩高科技出口管制，2019-08-30](https://www.aljazeera.com/economy/2019/8/30/japans-curbs-on-hi-tech-exports-to-south-korea-could-backfire)
+- [NBR — Bolstering and Securing Semiconductor Supply Chains](https://nbr.org/publication/bolstering-and-securing-semiconductor-supply-chains/)
+- [THE ELEC — 日本贸易管制如何影响韩国材料技术发展](https://www.thelec.net/news/articleView.html?idxno=4432)
+- [THE ELEC — SK 海力士对 HBM CMP 抛光液多源化 (Dongjin Semichem)，2024](https://www.thelec.net/news/articleView.html?idxno=4751)
+- [THE ELEC — 伊朗相关供应冲击对韩国 HF 市场的影响](https://www.thelec.net/news/articleView.html?idxno=10444)
+- [Tom's Hardware — 霍尔木兹封锁的 HF 价格冲击，2025-06](https://www.tomshardware.com/tech-industry/memory-makers-brace-for-hydrogen-fluoride-pricing-shock-as-hormuz-blockade-impacts-supply-chain-key-etching-and-cleaning-material-faces-sharp-cost-increase-amid-trade-disruption)
+- [Webnewswire / The Information Network — Fujimi 重夺韩国 HBM Cu 抛光液领先，2024-09-03](https://www.webnewswire.com/2024/09/03/fujifilm-electronic-material-takes-lead-in-cmp-slurry-market-for-hbm-says-the-information-network/)
+- [Yano Research — 全球 CMP 抛光液市场 10% 增长 2024](https://www.yanoresearch.com/press/press.php/3921)
+- [SK hynix Newsroom — HBM4 全球首发开发完成](https://news.skhynix.com/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/)
+- [TrendForce — 三星 2026 年 HBM 产能 +50%，2025-12-30](https://www.trendforce.com/news/2025/12/30/news-samsung-reportedly-plans-50-hbm-capacity-surge-in-2026-spotlight-on-hbm4/)
+- [TrendForce — 向 NVIDIA 交付付费 HBM4 样品，2025-12-16](https://www.trendforce.com/news/2025/12/16/news-sk-hynix-samsung-reportedly-deliver-paid-hbm4-samples-to-nvidia-ahead-of-1q26-contract-finalization/)
+- [SCMP — 韩国芯片巨头加码中国投资，2026-03](https://www.scmp.com/tech/tech-trends/article/3348159/south-korean-chip-giants-step-china-investments-combat-global-ai-memory-shortage)
+
+### 海外扩张
+- [Evertiq — Soulbrain 在 Taylor 得州投资 1.75 亿美元建厂，2024-07-30](https://evertiq.com/news/56124)
+- [Hoodline — Soulbrain 1.75 亿美元 Taylor 得州工厂，2024-07](https://hoodline.com/2024/07/south-korean-company-soulbrain-to-launch-175m-plant-in-taylor-bolstering-local-tech-industry-and-job-market/)
+- [Greater Kokomo — Soulbrain MI 7,500 万美元印第安纳工厂，2022](https://greaterkokomo.com/soulbrain-mi-investing-in-kokomo-creating-75-jobs/)
+- [Indianapolis Business Journal — 7,500 万美元 Kokomo 工厂，2022](https://www.ibj.com/articles/michigan-companys-75m-plant-in-kokomo-will-be-supplier-for-new-ev-battery-plant)
+- [Area Development — 韩国 Soulbrain MI 拟建 Kokomo 印第安纳厂，2022-12-15](https://www.areadevelopment.com/newsitems/12-15-2022/soulbrain-mi-kokomo-indiana.shtml)
+
+### 百科 / 聚合
+- [Namu Wiki — Soulbrain (韩文)](https://namu.wiki/w/%EC%86%94%EB%B8%8C%EB%A0%88%EC%9D%B8)
+- [韩文 Wikipedia — 솔브레인](https://ko.wikipedia.org/wiki/%EC%86%94%EB%B8%8C%EB%A0%88%EC%9D%B8)
+
+---
+
+<details>
+<summary>验证日志 (Step 10) — 2026-05-26</summary>
+
+**URL 检查** — 报告中出现的每个 URL 都来自经过验证的网络搜索返回，而非按模式构造。SEC EDGAR 不适用 (KOSDAQ 发行人)；DART URL 是公共检索门户着陆页而非合成的 accession-number 文件名。在引用韩国券商 PDF (SKS、Samsung Pop) 时，URL 取自搜索引擎返回结果，未自行构造。
+
+**披露文件引用** — 报告未嵌入直接的 DART accession-number URL，因为公共 DART 文件索引需要交互会话，在本次首次覆盖中无法可靠地抓取。未来一次刷新可作三项改进：
+- 解析最近一份 사업보고서 (FY2024) 的 accession 编号，将检索门户链接替换为直接文件 URL。
+- 同样解析最近一份 분기보고서 (3Q25) 的 accession 编号。
+- 解析最近一份 주요사항보고서 / 임시공시 关于 2025 年 3 月 CEO 变更 (本报告通过 KRX `disclsviewer.do?acptno=20250325000760` 引用，这是 KRX 上市披露的正典 permalink)。
+
+**关键数据点抽查：**
+- FY2024 营收 ₩8,634 亿 ✓ ([Stockanalysis 营收史](https://stockanalysis.com/quote/kosdaq/357780/revenue/))
+- FY2024 OPM 19.4% ✓ ([Economy6 券商汇编，2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html))
+- FY2025 营收 ₩9,230 亿 ✓ ([Stockanalysis 营收史](https://stockanalysis.com/quote/kosdaq/357780/revenue/))
+- Q3 2025 营收 ₩2,423 亿、OP ₩391 亿 ✓ ([SKS Securities 报告，2025-11-04](https://www.sks.co.kr/data1/research/qna_file/20251104100029890_6_ko.pdf))
+- TTM PE 41.8 倍 ✓ ([Stockanalysis，KOSDAQ:357780](https://stockanalysis.com/quote/kosdaq/357780/))
+- HBM Cu CMP 抛光液独家 (2023) ✓ ([Businesskorea，2023-10-30](https://www.businesskorea.co.kr/news/articleView.html?idxno=203197))
+- Fujimi 在 Cu CMP 抛光液重夺领先 (2024) ✓ ([Webnewswire，2024-09-03](https://www.webnewswire.com/2024/09/03/fujifilm-electronic-material-takes-lead-in-cmp-slurry-market-for-hbm-says-the-information-network/))
+- Dongjin Semichem 进入 SK 海力士 HBM CMP (2024) ✓ ([THE ELEC](https://www.thelec.net/news/articleView.html?idxno=4751))
+- 2020 年分立日期 (2020 年 8 月) ✓ ([Soulbrain 历史页 — 2020](https://www.soulbrain.co.kr/en/m14.php))
+- Taylor 得州工厂 1.75 亿美元 / 6 万平方英尺 / 由三星 Taylor 驱动 ✓ ([Evertiq，2024-07-30](https://evertiq.com/news/56124))
+- Kokomo 印第安纳厂 7,500 万美元 / 3 万平方英尺 / Stellantis-三星 SDI ✓ ([Greater Kokomo，2022](https://greaterkokomo.com/soulbrain-mi-investing-in-kokomo-creating-75-jobs/))
+- 2025 年 3 月 CEO 交接 (Roh → Park) ✓ ([Edaily，2025-03-25](https://www.edaily.co.kr/News/Read?newsId=03834326642106928&mediaCodeNo=257))
+- 创始人郑志完，成均馆大学，1986 年创立 ✓ ([Businesspost — Who Is?](https://m.businesspost.co.kr/BP?command=mobile_view&num=41846))
+
+**分析师观点句** (按 skill 规则有意不引用主要披露文件，因为竞品份额与领导地位的声明属于行业研究而非发行人 10-K)：
+- §1 — "溢价反映 HBM 材料 spec-in / 三星 Taylor 本地化 / 盈利复苏三方面同时叠加" — 不引用、综合论证，对应链接为佐证。
+- §4.3 — 韩国 HF/BOE TAM 规模估算 (5–8 亿美元) 与 Soulbrain 国内份额 35–45% — 标注为分析师估算。
+- §4.4 — HBM Cu CMP 份额 50–65% (Fujimi/Dongjin 之后) 与 HBM4 铈基抛光液验证状态 — 按 skill 规则标注为分析师观点。
+- §7.1 — 按化学品逐项份额表 — 明确标注为通过多份卖方研报三角推算的分析师估算；大部分子段没有公开发布的精确市场份额数据。
+- §8 — TAM / SAM / SOM 桥 — 分析师构建；引用底层野村 TAM 数据与 Soulbrain 业务段营收。
+
+**残余未验证项 / 未来刷新点：**
+- FY2024 사업보고서 与 3Q25 분기보고서的直接 DART 文件 URL——下一轮应替换。
+- 客户具体营收占比 (三星 % vs. SK 海力士 %)——DART 披露前五大合计但不披露逐客户拆分；§5.1 与饼图中的分析师拆分为估算。
+- 精确 HBM4 / HBM4E 铈基抛光液验证状态——公开报道不完整；建议未来通过管理层 Q&A 或专门行业报告补充。
+- 朴英洙的出生年份与完整教育经历——尚未在英语媒体上完整公布。
+
+</details>
+
