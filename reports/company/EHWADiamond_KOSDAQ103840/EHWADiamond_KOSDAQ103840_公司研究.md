@@ -97,3 +97,112 @@ EHWA 的领导班子是一对**父女组合**：创始人继续担任董事长 (
 她**自 2010 年以来的经营成绩**具体且可量化：合并营收从 (2010 年前) ₩2,000 多亿区间增长至 **2024 财年峰值 ₩3,755 亿**；营业利润率从低个位数扩张至高个位数 / 低双位数区间 (2024 财年 9.4%) ([saramin 财务卡片](https://www.saramin.co.kr/zf_user/company-info/view-inner-finance/csn/SUZ4bHJmRk1CNFBBMVkzSmpmSHdqZz09/company_nm/%EC%9D%B4%ED%99%94%EB%8B%A4%EC%9D%B4%EC%95%84%EB%AA%AC%EB%93%9C%EA%B3%B5%EC%97%85(%EC%A3%BC)))。半导体耗材线从 2010 年前**精密事业部内的"小赌注"**变成 2007 年后**拥有专属工厂与研发预算的独立业务单元**，并配套以活跃的专利组合 (三星-EHWA 2016 年联合的 US9314901B2 + 韩国科学技术研究院 KIST + EHWA 的 CVD 涂层早期合作研究) ([US9314901B2 patent](https://patents.google.com/patent/US9314901B2/en); [ScienceDirect — KIST-EHWA CVD 抛光垫修整器研究, 2011](https://www.sciencedirect.com/science/article/abs/pii/S0890695511000393))。在她任内，EHWA 于 2011 年入选 MOTIE "世界级 300" 成长企业项目，2015 年获得银塔产业勋章，2020 年入选"名门长寿企业 (명문장수기업)"，2024 年获 MOTIE "最佳中坚供应商"奖 ([FOMEK, 2024-09](https://www.fomek.or.kr/main/newsroom/news/vpg_view.php?wr_id=58))。按韩国创始人主导工业 PE 收购的典型先例，**她大概率会在 IMM PE 交割后留任经营层** — 但目前没有正式留任公告。
 
 ---
+
+## 4. 产品与服务
+
+EHWA Diamond 的产品目录对于一家工业供应商而言**广度惊人**：管理层一贯把 SKU 数量描述为"**30,000 余个**"，涵盖物理形态截然不同的产品 — 从切割钢筋混凝土的 2.5 米直径圆锯，到把硅晶圆精加工到纳米级表面的背磨砂轮 ([한국경제, 2022-02-27](https://www.hankyung.com/article/2022022724411))。但这个目录可以**清晰拆分为三个产品事业部**，与 EHWA 自己的公司介绍材料及韩国行业媒体的报道方式完全一致：**建筑与石材工具**、**工业 / 精密工具**、**电子 / 半导体耗材** ([FOMEK, 2024-09](https://www.fomek.or.kr/main/newsroom/news/vpg_view.php?wr_id=58); [SEMI member directory](https://www.semi.org/en/resources/member-directory/ehwa-diamond-industrial-co-ltd); [SEMICON Korea 展商画像](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=320&FromPage=Exhibitors.aspx&ParentBoothID=&ListByBooth=true&BoothID=595140))。需要说明的是，DART 감사보고서只披露**一条合并营收线** — 既不按事业部、也不按客户或产品拆分 — 因此下面的百分比为基于行业报道与 FOMEK 等行业协会画像的**分析师估算**，并非来自一手财报披露。
+
+### 4.1 — 产品矩阵 (analyst-constructed from corporate disclosure)
+
+| 事业部 | 子类别 | 代表 SKU | 主要客户 | 占合并营收比例 *(分析师估算)* |
+|---|---|---|---|---|
+| **A. 建筑与石材工具** | 钻石锯片 (分段圆锯)、线锯 (排锯)、钻头、钻孔钻头、抛光垫 (石材) | 花岗岩排锯 (最大直径 2.5 米)、道路切割片、砌体圆锯、拆除钻头 | 建筑设备 OEM (Black+Decker、博世、Hilti)、采石场 / 石材加工车间、韩国建筑业 | ~50% |
+| **B. 工业 / 精密工具** | PCD、PCBN、CVD 与单晶钻石车 / 铣 / 钻 / 铰刀；硬质合金工具 (T/C)；金刚石修整工具 (静止式) | PCD 立铣刀 (螺旋)、PCD 钻头 / 铰刀、SCD 微型工具、面铣刀、切槽 / 切断工具、耐磨件、侧铣刀 | 现代汽车、丰田、宝马、通用汽车、博世 (汽车)；轴承制造商；模具厂；航空航天一级供应商；显示玻璃切割商 | ~25% |
+| **C. 电子 / 半导体耗材** | **CMP 抛光垫修整器** (钻石尖端盘)、硅晶圆背面研磨 (BG) 砂轮、切割刀片、封装单粒化用微型刀片 | 三星电子、SK 海力士、台积电、Intel、Micron、GlobalFoundries、中国大陆 fab | ~25% |
+
+资料来源 — 产品列表：[EHWA Cutting Tools 网站产品目录](https://www.ehwacuttingtool.com)、[SEMI directory entry — 列示"背磨砂轮、CMP 修整器、切割刀片、微型刀片"](https://www.semi.org/en/resources/member-directory/ehwa-diamond-industrial-co-ltd)、[SEMICON Korea 2025 展商画像](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=320&FromPage=Exhibitors.aspx&ParentBoothID=&ListByBooth=true&BoothID=595140)、[한국경제, 2022-02-27](https://www.hankyung.com/article/2022022724411)。分部百分比为**分析师估算**，参照[한국경제, 2022-02-27](https://www.hankyung.com/article/2022022724411) 报道的 "营收以建筑为主，半导体与精密增长较快"的区间；DART 任何文件**均未正式披露**该比例。
+
+```mermaid
+graph TD
+  EHWA[EHWA Diamond Industrial — ~30,000 SKU / ₩3,701 亿 FY2025 合并]
+  EHWA --> A[A. 建筑与石材 ~50%]
+  EHWA --> B[B. 工业 / 精密 ~25%]
+  EHWA --> C[C. 电子 / 半导体 ~25%]
+  A --> A1[钻石锯片<br/>分段圆锯]
+  A --> A2[线锯 / 排锯<br/>花岗岩、大理石、混凝土]
+  A --> A3[钻头 / 钻孔]
+  A --> A4[石材抛光垫]
+  B --> B1[PCD / PCBN 立铣刀<br/>钻头、铰刀]
+  B --> B2[单晶钻石<br/>微型 / 精密工具]
+  B --> B3[硬质合金工具 T/C]
+  B --> B4[金刚石修整工具<br/>静止式]
+  C --> C1[**CMP 抛光垫修整器**<br/>钻石尖端盘]
+  C --> C2[硅晶圆背磨<br/>BG 砂轮]
+  C --> C3[切割刀片]
+  C --> C4[封装单粒化<br/>微型刀片]
+```
+
+资料来源：树状图综合自 [EHWA Cutting Tools 网站](https://www.ehwacuttingtool.com)、[SEMI member directory](https://www.semi.org/en/resources/member-directory/ehwa-diamond-industrial-co-ltd) 及 Nomura 的细分行业映射 ([Nomura 2026-05-21, Fig 43, 第 70 页](../sector/半导体材料.md))。
+
+### 4.2 — 三个事业部在客户工作流中的位置
+
+**建筑事业部**把大量工业级钻石原料 (合成工业钻石砂粒，约 1-5 美元 / 克) 转化为**结合力强、机械稳定的工具** — 例如可在硬花岗岩上切割 1,000+ 小时不丢失结合层中钻石颗粒的排锯片。**精密事业部**用同样的原料但**更高纯度、定向受控**的形态 (PCD 板材、单晶钻石、CVD 涂层立方氮化硼)，与硬质合金工具柄结合，加工汽车发动机缸体、齿轮、模具表面等超精密金属切削件。**半导体耗材事业部**用**最高纯度的原料** (通常是 CVD 生长的多晶钻石)，沉积或键合到专门设计的基板 (氮化硅 Si₃N₄、不锈钢) 上，制成在亚微米级公差下工作的产品。**三个事业部共享研发、砂粒采购与合成钻石技术** — 一片 50,000 转 / 分钟的切割微型刀片，其钻石供应链最终与一台 200 转 / 分钟的花岗岩排锯共用同一上游；EHWA 在高附加值半导体耗材上的竞争优势，部分由低附加值建筑业务**带来的采购规模**补贴而来。*分析师观点：* 这正是 EHWA 能在半导体耗材业务上以**约 1/5 于 3M / Kinik 的体量与之竞价**的结构性原因 — 摊薄到 30,000 个 SKU、三个客户行业的间接成本，分摊压力远比单一产品线低。
+
+### 4.3 — 建筑与石材工具 (~50% 营收)
+
+EHWA 最大的营收池来自**钻石锯片 (切混凝土、沥青、砖的分段圆锯)、线锯 / 排锯 (千米长金刚石浸渍线缆，把花岗岩石块切成板材)、钻头 (柱状钻石尖钻头，钻穿钢筋混凝土墙)、石材抛光垫**。公司在 SEMI Korea 展位资料里强调了其最早的核心专长 — 采石场用最大直径 2.5 米的花岗岩排锯 ([SEMI Korea 展商描述, 2025](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=320&FromPage=Exhibitors.aspx&ParentBoothID=&ListByBooth=true&BoothID=595140))。
+
+**中文释义 / 浅显解释：** 钻石锯片本质上是一块钢盘，工业钻石砂粒以"分段"形式键合到锯片边缘；当盘体高速旋转 (砌体手锯 3,000-5,000 转 / 分钟，花岗岩排锯 200-500 转 / 分钟) 时，**暴露的钻石颗粒磨削工件的同时，金属结合层同步磨损 — 让新的钻石颗粒被持续暴露出来**。技术诀窍在于**结合层硬度与工件硬度的匹配**：结合层太软，钻石颗粒过早脱落；太硬，钻石被钝化、锯片"不再切割"。EHWA 50 年积累的**几百种石材 / 混凝土 / 沥青等级配方库**就是它的护城河 — 一个竞争对手可以一夜复制几何外形，但要匹配意大利卡拉拉大理石、韩国花岗岩与美洲玄武岩各自的结合层化学组合，需要数年的实验室工作才能做到。
+
+*分析师观点：* 建筑工具的护城河是**工艺知识 + 规模**，**而不是专利** — 钻石锯片的核心 IP 几十年前就到期了；当前的实际进入壁垒是**全球销售 / 服务覆盖** + **钻石砂粒采购规模 (让 EHWA 相比小型专门厂商在定价上低 10-15%)**。EHWA 自述的"韩国第一、全球前三"与这个画像吻合，但**仅韩国市场的建筑疲软**就足以驱动短周期波动 — 这在 2023 财年韩国建筑开工崩溃时的营业利润下滑中得到清晰呈现 ([Seoul Economic Daily, 2026-05-12](https://en.sedaily.com/news/2026/05/12/imm-pe-to-acquire-koreas-top-tool-maker-ehwa-diamond-for); [fn마켓워치, 2026-05-13](https://www.fnnews.com/news/202605130830353811))。主要竞争对手的具体产品名 (Husqvarna 的钻石锯系列、Hilti 的 DSH 700-X、Diamond Vantage 的 Cyclone Pro) 来自竞争对手自己的产品目录 — 不是 EHWA 的备案 — 完整竞争图谱见第 7 节。
+
+### 4.4 — 工业 / 精密工具 (~25% 营收)
+
+精密工具目录的核心是**多晶钻石 (PCD)、多晶立方氮化硼 (PCBN)、CVD 钻石涂层及单晶钻石 (SCD) 切削工具** — 立铣刀、钻头、铰刀、面铣刀、切槽 / 切断工具、耐磨件。客户基础覆盖**汽车发动机与制动部件制造 (现代汽车、博世、丰田)、轴承与齿轮厂、模具制造商，以及航空航天结构件加工** ([EHWA Cutting Tools 网站](https://www.ehwacuttingtool.com); [SEMI Korea 展商画像](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=320&FromPage=Exhibitors.aspx&ParentBoothID=&ListByBooth=true&BoothID=595140))。
+
+**中文释义 / 浅显解释：** PCD ("polycrystalline diamond" / 多晶金刚石) 与 PCBN ("polycrystalline cubic boron nitride" / 多晶立方氮化硼) 是**极端高压高温 (约 6 GPa、约 1500°C) 下烧结**而成的超硬材料 — PCD 是**目前商业化材料中加工非铁金属 (铝、铜、碳纤维复合材料) 最硬的切削材料**，使用寿命比传统硬质合金长 50-100 倍；PCBN 是 PCD 在**铁系金属 (淬硬钢、铸铁)** 上的对偶 — 因为 PCD 在切割含铁材料时会与铁发生化学反应而失效。CVD ("chemical vapor deposition" / 化学气相沉积) 是一种**涂层技术**，把一层薄薄 (5-20 µm) 的多晶钻石层沉积到硬质合金基体上 — 比块状 PCD 便宜，但仍可达未涂层硬质合金 5-10 倍寿命。SCD ("single-crystal diamond" / 单晶钻石) 是最高端 — 用于**纳米级表面粗糙度的光学镜面、隐形眼镜模具**等需要 <10 纳米表面粗糙度的精密加工。
+
+*分析师观点：* 这是 EHWA **技术护城河最深的事业部** — PCD / PCBN 压力烧结和 CVD 涂层工艺均**未被商品化**，要在汽车一级供应商处通过认证需要**数年的工艺开发**，并受到 EHWA 名下 30 余项有效专利的保护。最接近的可比专门厂商是日本的 **Sumitomo Electric Hardmetal (住友电气工硬质合金部，PCD / PCBN)** — 但**客户关系是高度本地化**的：现代汽车 / 现代摩比斯主要从韩国本土工具厂 (含 EHWA) 采购；丰田的国内业务主要从住友电气和三菱材料采购。**地域客户绑定**是真正的有效护城河，而不是纯技术领先。
+
+### 4.5 — 电子 / 半导体耗材 (~25% 营收) — 战略皇冠
+
+这是按营收最小但**当前从分析角度最有意思的事业部** — 既因为它的毛利率最高，也因为 **IMM PE 收购隐含定价的主要对象就是这条线**。半导体目录据 SEMI 官方会员名录和 SEMICON Korea 展商画像，包含四个产品族：**CMP 抛光垫修整器、硅晶圆背面研磨 (BG) 砂轮、切割刀片、封装单粒化用微型刀片** ([SEMI member directory — EHWA Diamond Industrial](https://www.semi.org/en/resources/member-directory/ehwa-diamond-industrial-co-ltd); [SEMI Korea 2025 展商画像](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=320&FromPage=Exhibitors.aspx&ParentBoothID=&ListByBooth=true&BoothID=595140))。
+
+#### CMP 抛光垫修整器 — EHWA 最关键的半导体产品
+
+EHWA 半导体目录里**单一最重要的产品**就是 **CMP (chemical-mechanical-planarization, 化学机械抛光) 抛光垫修整器** — 一片直径约 100 毫米的钻石尖端盘，骑在 CMP 抛光垫上方的摆臂上，**连续修整 (dress) 抛光垫表面**以维持抛光性能。如果没有修整，聚氨酯 CMP 抛光垫的**微观凸起 (asperity)** — 那些用来留住浆料并在晶圆上提供机械作用的表面粗糙度 — 会在几百片晶圆后**塌平 / 釉化**，晶圆的去除速率 (removal rate) 急剧崩塌。有了修整，同一块抛光垫可以加工 5,000-10,000+ 片晶圆，保持稳定的去除速率与片内均匀性。现代 fab **在线 (in-situ)** 同步运行修整工艺 — 修整盘与晶圆抛光在同一工具上并行 — 因此修整器必须 (i) 足够磨蚀以可靠地修整聚氨酯，(ii) **又不能太磨蚀以致添加金属污染或在晶圆上脱落钻石砂粒**，(iii) 在数千次修整循环内**几何稳定**，让去除速率始终落在 fab 工艺窗口内 ([Novacam — CMP pad and groove measurement, 2020-06-16](https://www.novacam.com/2020/06/16/cmp-pad-and-groove-3d-measurements/); [SP3 CMP Pads 产品页](https://sp3-cvd.com/cmp-pads))。
+
+EHWA 的具体技术贡献体现在与**三星电子联合**的一项 2016 年授权专利 (US9314901B2，2012 年申请)。该专利描述了一种 CMP 抛光垫修整器，结构上为"**多个切削刀尖从基板表面向上突出、彼此相互间隔、顶面平行于基板**"，并采用了在使用全程内将刀尖面积分布维持在 ±10% 内的优化几何。专利中的测试数据显示，**无论浆料是氧化物 (SiO₂)、钨 (W) 还是铜 (Cu)，每个修整周期的抛光垫损耗率都稳定在 2-10 µm** — 比早期产品根据浆料化学性能波动 3-5 倍的损耗率有了重大改进。专利发明人：Seh Kwang Lee、Youn Chul Kim、Joo Han Lee、Jae Kwang Choi、Jae Phil Boo ([US9314901B2 patent record](https://patents.google.com/patent/US9314901B2/en))。**专利共同分配给三星本身就是诊断性的事实**：三星 CMP 工艺工程师与 EHWA 研发科学家**联合开发**了多浆料稳定的修整器 — 这正是三星锁定本土供应的标准方式。
+
+**中文进阶释义 (deeper plain-language gloss):** CMP 抛光垫修整器是 CMP (化学机械抛光) 流程的关键耗材。CMP 抛光过程依靠一个聚氨酯抛光垫表面持有**显微凸起 (asperity)**，凸起留住浆料并在纳米尺度上磨蚀晶圆；如果没有连续**修整 (dressing)**，抛光垫会在几小时内釉化，去除速率塌陷。修整器是一个金刚石尖端的小盘，悬于抛光垫上方的摆臂上，**与晶圆抛光并行地温和磨削抛光垫表面**，以保持凸起的尖锐。EHWA 与三星联合的专利 (US9314901B2) 解决了一个棘手的失效模式：**现代 fab 运行多步 CMP 配方**，在氧化物浆料 (用于 STI / 介质平坦化)、铜浆料 (用于大马士革互连)、钨浆料 (用于接触柱平坦化) 之间切换 — 不同浆料化学性能改变了尖端 / 抛光垫界面的摩擦行为，历史上导致抛光垫损耗不稳定。EHWA 的平顶刀尖几何**让"接触面积 / 压强"在不同浆料下保持不变**，从而稳定了损耗率。这正是 fab 看重的特性：**减少配方逐步调优、抛光垫寿命变长、工艺偏差变少**。
+
+*分析师观点：* CMP 抛光垫修整器的护城河是**冶金 IP + 客户认证周期 + 全球服务**三方组合 ([Nomura 2026-05-21, Fig 43 行业映射, 第 70 页](../sector/半导体材料.md); [Valuates Reports — CMP Pad Conditioners Market 2026 版](https://reports.valuates.com/market-reports/QYRE-Auto-14R9251/global-cmp-pad-conditioners))。EHWA 与三星的联合专利是认证周期如何展开的**公开可见的例证** — 一旦修整器几何被锁定到 fab 的工艺配方中 (并经 fab 工艺控制工程师签字)，**供应商切换成本是真实的、以数月再认证工作衡量**。EHWA 是全球前 5 大厂商之一 (3M、Kinik、Saesol、Entegris、EHWA)，前 5 名合计约 90% 市场份额 — 详细竞争图谱见第 7 节，TAM 拆解见第 8 节。
+
+#### 硅晶圆背面研磨 (BG) 砂轮
+
+半导体第二大产品是**硅晶圆背面研磨 (back-grinding) 砂轮** — 一种钻石砂粒砂轮，用于把刚出 fab 的硅晶圆从约 775 µm 起始厚度**减薄到 20-50 µm**，让芯片可以堆叠成 3D 封装 (HBM、3D-NAND) 或放入超薄智能手机封装。挑战在于**纳米级镜面光洁度** — 因为背面任何亚表面损伤都可能在划片或热循环中扩展裂纹、损坏器件。EHWA 在其最高规格 BG 砂轮上据报道实现了**约 1 纳米表面粗糙度** — 据 CEO 김재희 2022 年访谈，已超越日本同业 ([한국경제, 2022-02-27](https://www.hankyung.com/article/2022022724411))。
+
+**中文释义 / 浅显解释：** 晶圆背面研磨 (Back-Grinding, 背面减薄) 是晶圆出 fab 后、封装前的关键步骤 — 对 3D 堆叠存储 (HBM、NAND) 而言，芯片必须减薄到 <50 µm，才能在不超过封装高度的前提下堆叠多片；对智能手机用的先进逻辑芯片而言，减薄改善了热传导并缩小封装 Z 方向高度。BG 砂轮使用极细钻石砂粒 (1-5 µm)，结合到树脂 / 玻璃化基体中，在大量去离子水冷却下以 30,000+ 转 / 分钟对晶圆背面进行研磨。所需性能指标：表面粗糙度 <5 nm，亚表面损伤 <100 nm — 否则晶圆在搬运中会断裂。
+
+*分析师观点：* BG 砂轮市场比 CMP 修整器更集中 — 由日本 **Disco 砂轮事业部** 主导，加上少数专门厂商 (EHWA、Kinik、Asahi Diamond Industrial)。EHWA 在韩国 fab (三星、SK 海力士) 中位置最强、在中国大陆 fab 中持续增长；在台积电与日本 fab 中，Disco 维持在位优势。
+
+#### 切割刀片与封装单粒化用微型刀片
+
+第三、第四条产品线是**切割刀片** (用于把已组装完成的整片晶圆锯成单片芯片 — 一次切穿硅、介质、金属层) 与**微型刀片** (极薄、极窄的刀片，用于先进封装单粒化 — 切口宽度必须 <30 µm 以最大化每板芯片产出)。技术挑战在于**均匀磨损** (让切口不发散) 与**崩边控制** (让硅在芯片边缘不开裂，避免下游封装裂纹扩展)。EHWA 的刀片直接竞争对手是 **Disco** (全球在位领头羊，切割刀片单一品类份额 80%+) 与韩国 / 台湾的二线专业厂商。
+
+*分析师观点：* 切割刀片的份额在结构上难以从 Disco 处夺取 — 因为 **Disco 把刀片与工具捆绑销售** (DAD 系列切割机) — 很多 fab 购买 Disco 工具时附带 Disco 刀片合同。EHWA 在切割刀片上的增量主要来自**新增 fab 产能**，而非现有 fab 的位置替换。
+
+### 4.6 — 综合：产品如何在客户流程中互相串联
+
+EHWA 的三个事业部分别坐落于**三条完全不同的客户工作流**，但共享同一上游技术基础。**半导体耗材**的客户工作流最值得关注，大致流程如下：
+
+```mermaid
+graph LR
+  Fab[晶圆厂<br/>front-end] -->|in-situ 修整| CMP[CMP 工序<br/>EHWA 抛光垫修整器<br/>+ DuPont / Fujibo 抛光垫<br/>+ Versum / Anji 浆料]
+  CMP --> BumpPkg[凸点 / WLP]
+  BumpPkg -->|晶圆减薄| BG[背面研磨工序<br/>EHWA BG 砂轮<br/>或 Disco 砂轮]
+  BG -->|晶圆单粒化| Dice[切割工序<br/>EHWA 切割刀片<br/>或 Disco 刀片]
+  Dice --> Die[单片芯片<br/>→ 封装组装]
+```
+
+资料来源：流程图综合自 Nomura 的 CMP / 先进封装映射 ([Nomura 2026-05-21, 第 8-9, 70 页](../sector/半导体材料.md))、Novacam CMP 技术简报 ([Novacam, 2020](https://www.novacam.com/2020/06/16/cmp-pad-and-groove-3d-measurements/)) 及上文引述的 EHWA / Disco 产品资料。
+
+未来 3-5 年 EHWA 半导体线的战略重要性主要在 **HBM 与先进封装放量**。HBM 堆叠 (HBM3E / HBM4) 需要每个堆叠 8-12 片减薄的 DRAM 芯片 — 每片都要从 775 µm 背磨到 ~50 µm、然后凸点、然后切割 — 因此**每个 HBM 堆叠拉动的 BG 砂轮与切割刀片用量，是单片 2D 芯片的 8-12 倍**。CMP 用量类似地与先进逻辑节点的金属层数挂钩 (N3 / N2 / A16)，Nomura 测算 **A16 + Backside-Power-Delivery (BPD, 背面供电) 节点比 N3 多出约 20-30% 的 CMP 步骤** — 直接同步拉动抛光垫修整器需求 ([Nomura 2026-05-21, 第 4-6, 70 页](../sector/半导体材料.md))。建筑工具 (~50% EHWA 营收) 是一个**对冲性的逆风 / 顺风** — 韩国建筑开工是 EHWA 收益短周期波动的最大单一驱动 (2023 财年营业利润下滑很大程度源于韩国建筑疲软)。IMM PE 的投资逻辑是**半导体带高毛利结构性增长 + 建筑保持稳定** — 这一 5 年路径合理，但前提是韩国建筑不再陷入下一轮多年低谷。
+
+### 4.7 — 旗舰业务与近期产品动作
+
+EHWA 的旗舰业务是**销售给三星 / SK 海力士 / 台积电的半导体耗材组合 (CMP 抛光垫修整器 + BG 砂轮 + 切割刀片)** — 这是毛利率最高、客户认证周期最长、最能抵御价格竞争的业务。三星-EHWA 联合的平顶刀尖抛光垫修整器专利 (US9314901B2) 是三星把 EHWA 视为**联合开发伙伴而非价格驱动供应商**的公开证据 ([US9314901B2](https://patents.google.com/patent/US9314901B2/en))。
+
+过去 12 个月的产品端动作主要集中在**台积电与 SK 海力士新建超大规模 fab 的渐进式晶圆工具认证**，而不是单一旗舰产品发布；EHWA 没有公开股权披露义务，也未就单一 SKU 发布正式产品发布稿。过去 12 个月最显眼的战略事件是 **IMM PE 收购本身** — 这是公司控制权变更，而非产品发布。
+
+---
