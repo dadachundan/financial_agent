@@ -402,3 +402,142 @@ quadrantChart
 富士紡公开的渗透策略包含三条：(1) 在先进节点 CMP 客户上扩张软垫份额（苗栗中心是抓手），(2) 在富士紡当前是二供的客户上扩大硬垫销售，(3) 通过连续改进产品周期维持 LCD 玻璃 / 硬盘 / 硅晶圆的份额（[Top Message, Fujibo IR](https://www.fujibo.co.jp/en/ir/message/)；[Integrated Report 2024, p. 17-18](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)）。苗栗中心 2027 年完工的目标时点，与 TSMC 在 2-nm / 1.4-nm 节点的扩产窗口同步对齐 —— 这是有意设计。
 
 ---
+
+## 9. 风险评估
+
+### 公司特定风险
+
+**1. 相对 DuPont 的规模劣势（影响大、持久）。** 富士紡约 USD 1.2 亿抛光垫营收不足 DuPont 抛光垫营收的 8%，这限制了富士紡的 R&D 预算、应用工程师人数与客户试用产能。DuPont 瞄准 sub-28 nm 的 Ikonic™ 发布是对富士紡 FXA / Suede 等级的直接技术挑战。*缓解：* 富士紡的特殊等级软垫利基、日本客户偏好以及 ¥57 亿苗栗 R&D 中心建设可在应用工程贴近度上桥接规模差距。资料来源：[Yuho 2025, p. 34 — Miaoli investment](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)；[NITTA DuPont — Ikonic platform](https://www.nittadupont.co.jp/en/category-products/pad)。
+
+**2. 鼎龙中国国产替代（影响上升、中期）。** 鼎龙获 SMIC 对 DL-720 系列 28/14 nm 硬垫的认证，标志着中国 CMP 抛光垫本土化的起步；中国晶圆厂是全球 TAM 中增速最快的地区，且政策顺风结构性。富士紡的损失主要是"机会成本"（未能赢得中国市场的增长），而非现有客户的份额流失。*缓解：* 富士紡当前的大陆营收较小；公司战略性聚焦 TSMC / Samsung / SK 海力士集群可以回避国产替代压力。资料来源：[OpenPR — Semiconductor CMP Pad market 2025](https://www.openpr.com/news/4253861/semiconductor-cmp-polishing-pad-latest-market-report-2025)。
+
+**3. 工业化学品前 2 大客户集中（实质、持久）。** 住友商事ケミカル（19.2% 合并销售）+ 三井化学（13.7%）= 32.9% 合并营收来自两家交易对手，均位于工业化学品分部。任何一方续约失利都会让集团 OP 减少 5-8%。*缓解：* 合同制造关系具有黏性（柳井化学工厂的合格供应商护城河），新的第五家柳井工厂 2026 年 4 月投产可分散客户结构。资料来源：[Yuho 2025, p. 27 — 販売実績 top-2 disclosure](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)。
+
+**4. 服装分部结构性下行（影响小、持久）。** 生活服装营收过去 5 年以上持平至下行，FY3/25 OP 同比下滑 25%，归因于成本通胀 + 量贩渠道疲软。集团减值风险：服装分部固定资产净值 ¥21 亿日元（如果结构改革失败，是小额但非零的减值敞口）。*缓解：* 井上时代延续了中野时代的调整；电商 + 海外高端品牌销售部分对冲。资料来源：[Yuho 2025, p. 23 — 固定資産の減損リスク](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)。
+
+**5. 单薄管理层的关键人物风险（中低影响、持久）。** 富士紡的高管团队规模较小（9 名董事，其中 4 名社外）；井上社长是 AI-CMP 增长故事的公开代言人，抛光垫业务的运营负责人是望月喜美（富士紡爱媛社长）。团队规模小到一次意外离职即可造成接班悬念。*缓解：* 2022 年 6 月中野→井上交接顺畅；井上时代下公司穿越周期持续增长、战略未有偏移。
+
+### 行业 / 市场风险
+
+**6. 半导体周期性（影响大、周期性）。** 抛光垫业务虽是耗材模式但直接绑定晶圆开工量；2023 年下行周期中，富士紡抛光垫分部营收回落至 ¥134 亿日元（vs FY3/22 峰值 ¥151 亿），营业利润崩塌至 ¥11 亿日元，随后在 FY3/25 回升至 ¥47 亿。下一轮半导体下行周期可能在典型周期性压力情景下压缩富士紡抛光垫分部 OP 50-70%。*缓解：* 抛光垫消耗模式相对设备 OEM 周期性形成部分护城河，AI / HBM / 先进节点产品组合提高了跨周期 CMP 步骤强度。资料来源：[Integrated Report 2024, p. 17 — segment performance](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)。
+
+**7. EUV CMP 步骤增长的不确定性（中等影响、长期）。** 抛光垫需求假设取决于先进逻辑节点与 3D-NAND 每片晶圆 CMP 步骤数的增加。如果 EUV / High-NA EUV 取代了某些 CMP 密集型集成方案（例如 5nm 处 LELE → 单图案），CMP 步骤增长可能低于共识。*缓解：* 最可信的分析师共识（野村、TECHCET）仍假设 CMP 步骤数随每个节点继续增长 —— EUV 替代风险对研磨液更相关，对抛光垫影响相对小。资料来源：[reports/sector/半导体材料.md, 项目内 sector ref](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/半导体材料.md)。
+
+**8. DuPont / Entegris 抛光垫平台发布的竞争强度（中等影响）。** DuPont 的 Ikonic™ + VisionPad™ 发布以及 Entegris/CMC 持续的抛光垫投资可能在 5-nm / 3-nm 过渡期内对富士紡特殊等级份额构成压力。*缓解：* 富士紡的特殊等级利基历史上抵御过 DuPont 的多次平台发布；驻场应用工程的护城河真实存在。
+
+**9. 中国关税 / 科技脱钩的间接影响（中低影响）。** 美国关税政策可能通过减慢本应更快的中国晶圆厂资本支出建设间接打击富士紡，即便直接美国关税敞口被披露为"ごく一部" / 很小。反之，脱钩格局也帮助富士紡保留非中国客户份额。*缓解：* 富士紡的地理结构偏向台 / 韩 / 日晶圆厂而非中国大陆。资料来源：[FY3/26 1H 決算短信, p. 3 — 米国の関税政策の影響](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251031/20251030582961.pdf)。
+
+### 财务风险
+
+**10. 汇率（日元升值）风险（中等影响、近期）。** 富士紡抛光垫业务出口比例高（Yuho 中将出口比例定性为"高"），主要以美元结算。日元从 ¥158 升至 ¥130 / USD（约 5 年区间最强值）会让报告口径下的抛光垫分部营收压缩 18-20%。*缓解：* 公司使用远期外汇 + 外汇应付款做部分自然对冲；中期外汇不可建模。资料来源：[Yuho 2025, p. 21 — 事業等のリスク (2) 為替相場の変動](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)。
+
+**11. 估值 / 倍数压缩风险（低影响）。** 富士紡 TTM P/E 约 8.7×，明显低于项目质量检查清单中标记为高估的"行业中位数 2 倍"红线。压缩方向风险因此不是核心担忧；如果有什么的话，估值倍数有向同业可比水平（Entegris 约 30×、鼎龙约 96×）扩张的空间。*缓解：* 不适用 —— 此风险对富士紡未实质性触发。资料来源：[stockanalysis.com — Fujibo Holdings, 3104.T](https://stockanalysis.com/quote/tyo/3104/)。
+
+### 宏观风险
+
+**12. 日本 Effissimo / 激进股东悬念（中低影响、隐性）。** Effissimo Capital Management Pte. Ltd. 在 Yuho 大量保有报告中披露持有富士紡约 15.9%（2025 年 2 月），尽管低于正式列入大股东表的阈值，但仍是仅次于 Master Trust Bank 的第二大已披露受益持股人。Effissimo 的激进股东履历（最著名的是 2017-2023 年间在东芝的介入）形成隐性风险 —— 管理层可能被推动以比井上当前节奏更快的服装剥离 / 抛光垫分拆时间表行事。*缓解：* Effissimo 在日本语境下的披露与被动持股一致，井上 2025 年 5 月的资本回报政策升级（35% 派息 + 3.5% DOE + ¥5 亿回购）看上去部分是对大股东对话的响应。资料来源：[Yuho 2025, p. 38 — Effissimo Capital Management 大量保有報告書 note](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)。
+
+**13. 地缘政治（台海尾部风险）（低概率 / 高影响）。** 台海重大事件 —— TSMC + UMC + 台南 / 苗栗产业集群中断 —— 将同时切断富士紡台南工厂产出（5 大全球工厂之一）、让已支出于苗栗 R&D 中心的 ¥11.5 亿日元变成搁浅资本、并扰乱客户群。*缓解：* 日本 4 家工厂提供生产冗余；苗栗中心是 R&D 而非高固定成本制造。
+
+---
+
+## 10. 参考资料
+
+### 主备案文件 — 富士紡控股
+
+- [富士紡ホールディングス 第205期 有価証券報告書 (FY3/25 Yuho), filed 2025-06-25, 129 pages](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf) —— 本报告中所有分部数据、前列客户披露、capex / R&D、管理层与股东数据的权威主披露。
+- [富士紡ホールディングス 2025年３月期 決算短信 (FY3/25 kessan), filed 2025-05-15, 19 pages](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20250515/20250513543721.pdf) —— 年度决算公告，包含分部叙述 + 初步 FY3/26 指引。
+- [富士紡ホールディングス 2026年３月期 第２四半期（中間期）決算短信 (1H FY3/26 kessan), filed 2025-10-31](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251031/20251030582961.pdf) —— 上半年业绩 + 上修指引 + 股息增加。
+- [Fujibo Integrated Report 2024 (EN), published 2024 by Fujibo Holdings (52 pages, English)](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf) —— 井上致辞、分部业绩点评、11 年财务概要、可持续 / 治理概览。
+- [Fujibo Holdings IR Library landing page](https://www.fujibo.co.jp/ir/library/) —— 决算短信、综合报告、事业报告、中期计划目录。
+
+### 富士紡产品 / 公司页面
+
+- [Polishing Pad Business overview (EN)](https://www.fujibo.co.jp/en/division/polishingpad/)
+- [POLYPAS product family landing page](https://www.fujibo.co.jp/en/division/polishingpad/product/)
+- [POLYPAS FP series (non-woven first-polish)](https://www.fujibo.co.jp/en/division/polishingpad/product/627/)
+- [POLYPAS FX series (filler-impregnated)](https://www.fujibo.co.jp/en/division/polishingpad/product/1282/)
+- [POLYPAS FXA series (non-filler hard urethane CMP pad)](https://www.fujibo.co.jp/en/division/polishingpad/product/1143/)
+- [POLYPAS Suede series (final-finishing soft pad)](https://www.fujibo.co.jp/en/division/polishingpad/product/1283/)
+- [POLYPAS Back Pad series (wax-free wafer retention)](https://www.fujibo.co.jp/en/division/polishingpad/product/1284/)
+- [Fujibo Company History page (EN)](https://www.fujibo.co.jp/en/company/history/)
+- [Top Message — President Masahide Inoue (EN)](https://www.fujibo.co.jp/en/ir/message/)
+
+### 竞争对手主资料
+
+- [DuPont — Materials for Chemical Mechanical Planarization (CMP)](https://www.dupont.com/electronics-industrial/semiconductor-cmp.html)
+- [NITTA DuPont — PolishingPad product family (IC1000 / VisionPad / Ikonic)](https://www.nittadupont.co.jp/en/category-products/pad)
+- [Qnity Electronics, Inc. — Form 10-12B/A — DuPont Electronics spin filing, SEC EDGAR](https://www.sec.gov/Archives/edgar/data/0002058873/000119312525215621/d942851dex211.htm)
+- [JSR Micro — Advanced Cleans and CMP](https://www.jsrmicro.com/electronic-materials/advanced-cleans-cmp)
+- [JSR Micro — CMP Slurry product page](https://www.jsrmicro.com/cmp-slurry)
+- [Hubei Dinglong — SZSE:300054 (Eastmoney)](http://quote.eastmoney.com/sz300054.html)
+- [Anji Microelectronics — SSE:688019 (Eastmoney)](http://quote.eastmoney.com/sh688019.html)
+
+### 行业研究（第三方）
+
+- [Cognitive Market Research — CMP Pad Market 2025](https://www.cognitivemarketresearch.com/cmp-pad-market-report) —— USD 8.95 亿 2024 基准；5.8% CAGR 预测。
+- [Mordor Intelligence — CMP Pad Market Companies & Forecast 2024-2029](https://www.mordorintelligence.com/industry-reports/chemical-mechanical-polishing-pad-market/companies)
+- [TECHCET — Semiconductor CMP Pad & Slurry Forecast, 2024](https://techcet.com/semiconductor-cmp-pad-slurry-forecast/) —— 6% YoY 耗材增长，USD 34 亿更广义 CMP 市场。
+- [Hengce Research — Global Semiconductor CMP Polishing Pad Market Research Report 2025](https://www.hengceresearch.com/products/semiconductor-c-m-p-polishing-pad/68987)
+- [Knowledge Sourcing — Semiconductor Polishing Pads Market, Size, Forecast 2030](https://www.knowledge-sourcing.com/report/semiconductor-polishing-pads-market) —— APAC 75% 份额，中国 9.3% CAGR。
+- [OpenPR — Semiconductor CMP Polishing Pad Latest Market Report 2025](https://www.openpr.com/news/4253861/semiconductor-cmp-polishing-pad-latest-market-report-2025) —— 鼎龙 / 中芯国际 DL-720 认证细节。
+- [Dr. Robert Castellano (The Information Network) — "DuPont Takes #1 position in Semiconductor Consumables Market in 2024", 2025](https://drrobertcastellano.substack.com/p/dupont-takes-1-position-in-semiconductor)
+- [C&EN — "Entegris to acquire electronic materials maker CMC for $6.5 billion", 2021-11-26](https://cen.acs.org/business/mergers-&-acquisitions/Entegris-acquire-electronic-materials-maker/99/i45)
+- [Grand View Research — Chemical Mechanical Planarization Market Size Report, 2030](https://www.grandviewresearch.com/industry-analysis/chemical-mechanical-planarization-market-report)
+- [Mordor Intelligence — CMP Pad Market Forecasts to 2031](https://www.mordorintelligence.com/industry-reports/chemical-mechanical-polishing-pad-market)
+
+### 市场数据
+
+- [stockanalysis.com — Fujibo Holdings, 3104.T (TYO)](https://stockanalysis.com/quote/tyo/3104/) —— 当前报价、市值、P/E、P/S、营收 / 净利润趋势。
+- [Yahoo Finance — 3104.T quote](https://finance.yahoo.com/quote/3104.T/) —— 52 周区间 + 日内报价。
+- [Yahoo Finance — 3104.T profile](https://finance.yahoo.com/quote/3104.T/profile/) —— 公司描述。
+- [stockanalysis.com — JSR Corporation, 4185.T (peer)](https://stockanalysis.com/quote/tyo/4185/)
+- [stockanalysis.com — Entegris, ENTG (peer)](https://stockanalysis.com/stocks/entg/)
+- [stockanalysis.com — DuPont, DD (peer)](https://stockanalysis.com/stocks/dd/)
+- [Simply Wall St — Fujibo Holdings analysis](https://simplywall.st/stocks/jp/consumer-durables/tse-3104/fujibo-holdings-shares)
+
+### 项目内交叉引用
+
+- [reports/sector/半导体材料.md — Nomura 2026-05-21 半导体材料 primer](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/半导体材料.md) —— 用于 CMP 抛光垫 / 研磨液 / 修整盘梯队表和富士紡 / Kinik / 鼎龙覆盖说明的行业框架。
+
+---
+
+<details>
+<summary>验证日志 (Step 10) — 2026-05-26</summary>
+
+**URL 检查** —— 全文 50+ 个 URL 都链接到公开真实域名：富士紡 IR 网站 (fujibo.co.jp)、Yahoo Finance disclosure (storage-yahoo.jp)、kitaishihon.s3（Yuho 镜像）、SEC EDGAR (sec.gov)、stockanalysis.com、finance.yahoo.com、Cognitive Market Research、Mordor Intelligence、TECHCET、DuPont、NITTA DuPont、JSR Micro、Eastmoney、OpenPR、C&EN、Grand View Research。无伪造 SEC 文件名。唯一的项目内 GitHub URL (`reports/sector/半导体材料.md`) 是同一仓库内的自引用。
+
+**备案文件引用** —— 来源是真正的 Yuho PDF（kitaishihon S3 镜像 EDINET 备案文件，129 页第三方缓存；未列出原 EDINET URL 是因为 EDINET 需要会话令牌绑定查询而非直接 deep link，故使用次优规范镜像）。两份 Yahoo Finance 披露平台托管的 PDF（FY3/25 决算短信 + 1H FY3/26 决算短信）都是所有 TSE 上市公司披露工作流通用的规范镜像。
+
+**数量级抽样核对**（声明 → 来源位置）：
+- FY3/25 净销售 ¥42,912 mm（+18.8% YoY）✓（[FY3/25 kessan, p. 1](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20250515/20250513543721.pdf)）。
+- FY3/25 营业利润 ¥6,476 mm（+129.8%）✓（同上）。
+- 抛光垫分部销售 ¥19,307 mm / OP ¥4,729 mm ✓（[Yuho 2025, p. 24](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。
+- 前 2 大客户披露（住友商事ケミカル 19.2%、三井化学 13.7%）✓（[Yuho 2025, p. 27](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。
+- 员工总数 1,319 + 抛光垫 443 ✓（[Yuho 2025, p. 11](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。
+- 自有资本比率 71.3% ✓（[FY3/25 kessan, p. 1](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20250515/20250513543721.pdf)）。
+- FY3/26 1H 净销售 ¥22,528 mm（+7.0%）+ OP ¥3,771 mm（+26.0%）✓（[1H FY3/26 kessan, p. 1](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251031/20251030582961.pdf)）。
+- FY3/26 上修指引 ¥454 亿 / ¥75 亿 / ¥77 亿 / ¥50 亿 ✓（同上 page 1）。
+- 股息指引上调至 ¥160（原 ¥150）✓（同上）。
+- 苗栗 R&D 中心投资 ¥57 亿、已支出 ¥11.5 亿 ✓（[Yuho 2025, p. 34](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。
+- 控股公司化时间为 2005 年 9 月 ✓（与原题"2016"不一致 —— 参见 [Fujibo history page](https://www.fujibo.co.jp/en/company/history/)）。
+- 社长：井上雅偉，1987-04 入社，2022-06 起 CEO ✓（[Yuho 2025, p. 48](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。
+- Effissimo 持股 15.93%（截至 2025-02-21）✓（[Yuho 2025, p. 38](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。
+- 量化股息政策：派息 35%、DOE 3.5% ✓（[Top Message, Fujibo IR](https://www.fujibo.co.jp/en/ir/message/)）。
+- 创立 1896 / OSE+TSE 上市 1949 / 富士紡爱媛 1977 / 抛光垫市场进入 1998 ✓（[Fujibo history page](https://www.fujibo.co.jp/en/company/history/) + [Integrated Report 2024, p. 5](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)）。
+
+**分析师视角句子**（明确标注、未引向主披露）：
+- §6.2 全球 CMP 抛光垫份额拆分（DuPont 约 50%、Entegris 约 26%、JSR 约 8%、富士紡约 5%、鼎龙约 4%、其他约 7%）—— 标注为"*分析师观点*"，由 Cognitive Market Research、Mordor Intelligence、Hengce 三角拟合而成；未归到任何单一备案文件。
+- §4 每个产品的竞争优势判断（yes / partial）—— 标注为"*分析师观点*"，未引用或交叉引向竞争对手资料。
+- §4.4 IC1000"行业标准"声明 —— 引向 NITTA DuPont（在日本分销 IC1000 的合资公司），而非富士紡 Yuho。
+- §4.6 富士紡"先进工艺软垫最高市场份额" —— 这是富士紡自己在 Integrated Report (p. 18) 中的声明，按此引用；这也是全报告中唯一以公司自身为出处的份额声明。
+
+**残留未确认 / 已知限制：**
+- EDINET 直接 URL 拉取需会话令牌；Yuho 引用使用 kitaishihon S3 镜像（第三方但 PDF 内容完全相同）。对特定页码引用的进一步验证最终都会定位到同一份 PDF 内容。
+- 富士紡未在公开披露中点名具体抛光垫客户（与日本中型公司技术零部件供应商的行业惯例一致）；对 TSMC / Samsung / SK 海力士 / 美光 / 铠侠 / Intel 的客户群推断是分析师基于地理布局 + 先进晶圆厂客户全集 + 行业报道交叉引用构建的。没有任何 Yuho 原文点名任何具体晶圆厂客户。
+- Q1 FY3/26 决算短信（2025 年 7 月公告）在搜索结果中被引用但未抓取为主 PDF；FY3/26 走势锚定于 1H 决算短信（2025 年 10 月），后者已涵盖 Q1。
+- 持股母公司层面（单体）财务指标表位于 Yuho p. 3；合并表位于 Yuho p. 4 —— 来自市场数据源的 TTM P/E 与合并而非单体口径一致。FY3/24 单体行的 67.7× P/E 是单体口径，刻意未作为合并估值参考。
+- §1 估值快照 + §7.3 图中引用的鼎龙 / 安集 / JSR / Entegris / DuPont 同业 P/E 值取自 stockanalysis.com / Yahoo Finance 在 2026 年 5 月中旬的 TTM 数据；每次财报发布后可能实质性变动。
+
+</details>
+
