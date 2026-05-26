@@ -281,3 +281,116 @@ EHWA 在这一子行业的竞争位置**在韩国与东南亚最强** (现代汽
 钻石工具行业**没有专门的监管制度** — 没有类似医疗的 MDR / FDA 审批、金融的 CFTC 清算、或核的 NRC 许可。半导体耗材线受制于**fab 工艺配方认证** (12-18 个月周期，fab 特定) 加上一般工业设备合规 (RoHS、REACH 适用于结合层化学品，ISO 9001 / 汽车的 IATF 16949)。**地缘政治出口管制** — 美国 BIS 对中国出口先进工具的限制 — 适用于上游先进晶圆 fab 设备 (ASML EUV、AMAT 蚀刻、Lam 蚀刻)，**当前不限制 CMP 修整器级耗材** ([investkorea 半导体门户](https://www.investkorea.org/ik-en/cntnts/i-312/web.do))。但若美中关系进一步恶化，EHWA 的中国子公司 (威海、福建、上海) 有可能成为关税 / 制裁向量。
 
 ---
+
+## 7. 竞争格局
+
+EHWA 的三个事业部面对**三套完全不同的竞争对手**。由于半导体耗材线在战略上最重要 — 既是 IMM PE 交易投资逻辑的核心、也是 EHWA 长期叙事的核心 — 本节将主要聚焦于该子行业的竞争图谱，建筑工具与精密工具的竞争对手则简略介绍。
+
+### 7.1 半导体耗材竞争 — CMP 抛光垫修整器 (头号产品)
+
+CMP 抛光垫修整器子市场是**前 5 主导的寡占结构**，合计份额约 90%。五大全球玩家 — 以及 EHWA 相对各家的定位 — 如下：
+
+| 竞争对手 | 总部 / 上市地 | 子细分聚焦 | 份额 *(分析师估算, 2024)* | 相对 EHWA 的核心优势 |
+|---|---|---|---|---|
+| **3M Company** | 美国 (NYSE:MMM) | 全产品线；"全球在位 #1" | ~15% | 全球规模；与更广的半导体耗材 (清洗、磨料) 交叉销售 |
+| **Kinik 中砂** | 台湾 (TWSE:1560) | CMP、再生晶圆、BG；纯线；台积电锚定 | ~60% (仅 CMP 修整器) | 台积电 N2 / A16 节点已认证；Nomura 预测 N2 节点份额约 80% |
+| **EHWA Diamond** | 韩国 (私营；IMM PE 前) | CMP、BG、切割；广泛工业基础 | ~8% | 三星联合开发深度 (US9314901B2 联合专利)；韩国 K-Belt 本土在位优势 |
+| **Saesol Diamond 새솔다이아몬드** | 韩国 (私营) | 聚焦 CMP, SKU 较窄 | ~7% | 韩国纯线专门厂商；SK 海力士关系 |
+| **Entegris** | 美国 (NASDAQ:ENTG) | CMP 浆料 + 修整器 + 抛光垫捆绑 | ~5% | 浆料-修整器-抛光垫系统捆绑；Intel / Micron 渗透强 |
+| 其他 (Shinhan Diamond、Nippon Steel & Sumikin、Asahi、CP Tools) | 各种 | 长尾 | ~5% | 区域专门位置 |
+
+资料来源：份额区间引自行业研究 ([Valuates Reports — CMP Pad Conditioners Market 2026 版](https://reports.valuates.com/market-reports/QYRE-Auto-14R9251/global-cmp-pad-conditioners)) 与 Nomura 行业映射 ([Nomura 2026-05-21, Fig 43, 第 70 页](../sector/半导体材料.md))。Kinik 约 60% 份额位于公开区间高端，反映 Nomura 给出的 "60-70%" 读数；上表保守取 60%。EHWA 约 8% 是分析师估算 — 综合"前 5 = 90%"数据点、点名的前 3 名 (3M、Kinik、Saesol) 大致份额、以及与 EHWA 整体半导体耗材营收水平 (FY2025 ₩3,701 亿合并营收对应 ~6,500-8,000 万美元) 一致性而成。
+
+![分析师视角 — CMP 抛光垫修整器全球份额, 2024-25](../../charts/ehwadiamond_pad_conditioner_share.png)
+
+资料来源：份额区间来自 [Valuates Reports 2026 版](https://reports.valuates.com/market-reports/QYRE-Auto-14R9251/global-cmp-pad-conditioners)、[Nomura 2026-05-21 Fig 43, 第 70 页](../sector/半导体材料.md) 与 [openPR — CMP Pad Conditioners 2022](https://www.openpr.com/news/2865451/cmp-pad-conditioners-market-2022-growing-rapidly-with-latest)。
+
+#### Kinik (TWSE:1560) — 主导性竞争对手
+
+**Kinik 是 CMP 抛光垫修整器全球第一**，Nomura 测算其在台积电 N2 节点上占据**约 80% 份额** — 这是一个独特的高集中度位置，源于 Kinik 是**唯一在台积电最先进节点完成认证的台湾修整器专门厂商** ([Nomura "Greater China Semi 2026~30F", 第 15-17 页](../sector/半导体材料.md))。Kinik 相对 EHWA 的定位：Kinik 更纯半导体 (营收 ~70%+ 来自半导体耗材)、定位台积电领先节点、且公开上市 — 因此对全球资金分配者更可见。EHWA 相对 Kinik 的定位：EHWA 更广的产品组合带来**Kinik 没有的客户多元化** (三星、SK 海力士、韩国 K-Belt 本土流入)。*分析师观点：* 任何针对新韩国 fab 产能的正面竞标中，EHWA 的 K-Belt 本土供应商偏好 + 三星联合开发深度让其占据**结构性优势**；但在台湾与台积电海外 fab (亚利桑那、熊本、德累斯顿)，Kinik 保持在位优势。
+
+#### 3M — 广产品线在位者
+
+**3M 的 CMP 抛光垫修整器线是更广的半导体耗材组合 (清洗、磨料、薄膜、气体过滤) 的一部分**，让 3M 在大型 fab 上拥有**交叉销售杠杆**。CMP 修整器特定份额估计为全球 ~15%，3M 在 28/45/65nm 传统节点产线最强、在所有主要 fab 都有覆盖 ([3M CMP Pad Conditioner C Series 产品页](https://www.3m.com/3M/en_US/p/d/b5005469001/); [3M CMP Pad Conditioners 半导体类别页](https://www.3m.com/3M/en_US/p/c/electronics-components/cmp-materials/cmp-pad-conditioners/i/electronics/semiconductor/))。*分析师观点：* 3M 比纯线厂商 (Kinik、EHWA、Saesol) 更脆弱地暴露于**集团层面组合再优先排序** — 3M 近年已分拆 / 重组多个业务单元，CMP 修整器线对母公司而言规模偏小。如果出现剥离或降优先级，将对 EHWA 与 Kinik 形成顺风。
+
+#### Saesol Diamond — 最近的韩国对手
+
+**Saesol Diamond 是 EHWA 最近的韩国竞争对手** — 1999 年成立的纯线 CMP 修整器专门厂商，总部位于韩国，与 SK 海力士关系紧密，对中国大陆 fab 有明确敞口 ([Saesol Diamond SEMI directory entry](https://www.semi.org/en/resources/member-directory/saesol-diamond-co-ltd); [SAESOL 公司画像 via SPS International](https://www.sps-international.com/brands/saesol/))。Saesol 相对 EHWA 的定位：更纯半导体 (营收 ~100% 来自 CMP 相关)、聚焦韩国与中国 fab、无建筑或精密工具的稀释。EHWA 相对 Saesol 的定位：更广的产品组合 (三星关系更深、BG / 切割 / 微型刀片组合更广)、整体营收规模大得多、国际布局强得多 (14 个产能基地 vs. Saesol 较窄的韩国 / 中国布局)。*分析师观点：* Saesol 是**EHWA 半导体线如果被分拆出来会是什么样**的"看涨情景" — 高增长、纯半导体盈利流，估值会接近 Kinik 级别倍数。**IMM PE 是否最终把 EHWA 半导体线分拆，是这次收购隐含的最有趣中期 M&A 选择权**。
+
+#### Entegris — 捆绑威胁
+
+**Entegris (NASDAQ:ENTG) 是前 5 中唯一以系统销售方式捆绑浆料 + 抛光垫 + 修整器的厂商**，让其在偏好单一供应商方案的 fab 上拥有商业杠杆。CMP 修整器全球份额约 5%，但在 Intel 与 Micron 上有较强位置。*分析师观点：* Entegris 的捆绑逻辑在结构上吸引人，但**复利缓慢** — fab 仍主要对三种 CMP 耗材分开多源采购，以保持定价杠杆。**不是 EHWA 韩国 fab 在位优势的近期威胁**。
+
+```mermaid
+quadrantChart
+    title CMP 抛光垫修整器 — 竞争定位 (分析师观点)
+    x-axis "韩国 / 中国 fab 锚定" --> "台湾 / 美国 fab 锚定"
+    y-axis "更窄 SKU" --> "更广产品组合"
+    quadrant-1 "广产品线 + 台湾 / 美国"
+    quadrant-2 "广产品线 + 韩国 / 中国"
+    quadrant-3 "窄 + 韩国 / 中国"
+    quadrant-4 "窄 + 台湾 / 美国"
+    Kinik: [0.78, 0.42]
+    "3M": [0.62, 0.85]
+    EHWA: [0.32, 0.78]
+    Saesol: [0.25, 0.22]
+    Entegris: [0.70, 0.65]
+```
+
+资料来源：定位估计基于各公司网站的点名客户披露 + Nomura 行业映射 ([Nomura 2026-05-21, Fig 43, 第 70 页](../sector/半导体材料.md))。
+
+### 7.2 BG 砂轮与切割刀片竞争
+
+在 **BG 砂轮与切割刀片**领域，在位者是 **Disco Corporation (TSE:6146)** — 日本专门厂商，把切割 / 研磨工具与配套耗材捆绑销售。Disco 切割刀片份额据报道**全球 >80%**，BG 砂轮份额同样主导。EHWA、Kinik 与 Asahi Diamond Industrial (TSE:6140) 是**可信的专门替代** — EHWA 在韩国最强、Kinik 在台湾、Asahi 在日本 ([Disco Corporation, 公式企业网站](https://www.disco.co.jp/eg/))。*分析师观点：* 切割刀片份额在结构上**难以从 Disco 夺取**，因为工具-耗材捆绑；BG 砂轮份额更可争夺，因为 BG 步骤与研磨工具品牌**较解耦**。
+
+### 7.3 工业 / 精密工具竞争
+
+PCD/PCBN/CVD 精密工具子行业前 5 (**Sumitomo Electric Hardmetal、Sandvik Coromant、Element Six、Kennametal、EHWA**) 合计占 ~60% 份额，其余分散于区域专门厂商。EHWA 的竞争优势在**韩国 (现代汽车 / 摩比斯)、东南亚，并在中国大陆增长**；日本与欧洲的一级供应商仍分别绑定 Sumitomo Electric 与 Sandvik。**切换成本在这一子细分高** (汽车一级供应商 12-18 个月认证周期)，但**新 EV 工厂代表了 EHWA 积极争取的再认证机会**。
+
+### 7.4 建筑工具竞争
+
+建筑工具子行业**全球分散** — 前 5 大厂商 (**Husqvarna (瑞典)、Hilti (列支敦士登)、Tyrolit (奥地利)、Diamond Vantage (美)、EHWA**) 合计占 <30% 份额。EHWA 的位置**在韩国、亚太出口市场，以及意大利 / 德国石材切割市场最强** (EHWA Europe GmbH 总部位于法兰克福)。**品牌与分销主导技术**在这一子细分。
+
+### 7.5 EHWA 的竞争优势与脆弱性 — 综述
+
+**优势：** (i) 三星 CMP 修整器联合开发深度 (US9314901B2 联合专利)，(ii) 韩国 K-Belt 本土供应商偏好 (三星 / SK 海力士)，(iii) 14 个产能基地的全球制造网络 — 少有专门竞争对手能匹敌，(iv) 50 年累积的冶金 / 结合层 know-how 跨三个事业部，(v) 跨事业部砂粒采购的规模优势。
+
+**脆弱性：** (i) 在台积电领先节点上规模远小于 Kinik，(ii) 建筑工具周期性拖累合并毛利率结构，(iii) 历史上**狭窄的股东基础** (即将随 IMM PE 改变) 限制了 M&A 选择权，(iv) **较低的可见度** (私营披露制度) 让客户胜利更难被资本化，(v) **中国大陆修整器进入者** (Goodfor、河南 Funik 专门子部门) 正在传统节点上**逐步缩小价格 / 性能差距**。
+
+---
+
+## 8. 市场机会 (TAM)
+
+EHWA 的可寻址市场跨三个事业部加总而成；**半导体耗材 TAM 是最高 CAGR 与最高毛利的切片**，也是 IMM PE 交易隐含定价的对象。
+
+### 8.1 CMP 抛光垫修整器 TAM — 头号机会
+
+全球 CMP 抛光垫修整器子市场为 **2024 年 2.60 亿美元，预测 2032 年增长至 4.46 亿美元、CAGR 7.3%**，引自 Valuates Reports 2026 版市场研究 ([Valuates Reports — CMP Pad Conditioners Market 2026 版](https://reports.valuates.com/market-reports/QYRE-Auto-14R9251/global-cmp-pad-conditioners))。2025 年生产量 171 万件，平均售价每件 202 美元。其中 **CVD 钻石抛光垫修整器份额 56%** (随着先进节点 fab 偏好 CVD 以求更清洁的颗粒缺陷率而上升)，传统钻石砂粒修整器占其余。亚太占需求 84%、北美 10%、欧洲 5% ([Valuates Reports](https://reports.valuates.com/market-reports/QYRE-Auto-14R9251/global-cmp-pad-conditioners))。**韩国 2022 年单一占全球需求约 24%**，反映三星 + SK 海力士的 CMP 产能 ([CMP Diamond Pad Conditioner market via Verified Market Reports](https://www.verifiedmarketreports.com/product/cmp-diamond-pad-conditioner-market-size-and-forecast/))。
+
+### 8.2 相邻半导体耗材 TAM
+
+- **硅晶圆背面研磨 (BG) 砂轮：** ~2025 年 4 亿美元、CAGR ~8% — 主要由 HBM / 3D-NAND 堆叠层数驱动 (每片减薄芯片 = 一次砂轮通过)。
+- **切割刀片：** ~2025 年 6 亿美元、CAGR ~6% — 大致跟踪总晶圆切割量。
+- **先进封装单粒化用微型刀片：** ~2025 年 1.5 亿美元、CAGR ~10% — 由 FOWLP / CoWoS / SoIC 渗透驱动。
+
+EHWA 可寻址的**半导体耗材合计 TAM 因此 ~2025 年 14 亿美元、2030 年增至 ~20 亿美元、CAGR ~7%**。
+
+### 8.3 建筑与工业精密 TAM
+
+建筑工具全球 TAM 约 **80 亿美元**、CAGR ~3-4%；PCD / PCBN 工业精密 TAM 约 40 亿美元、CAGR ~5-7% (隐含自 Sumitomo Electric Hardmetal 年报披露区间)。EHWA 在两者中**理论上都覆盖完整 TAM** — 即无任何地理 / 客户子集 EHWA 原则上不能竞标 — 但实际全球份额为个位数。
+
+### 8.4 EHWA 的 SAM 与 SOM
+
+EHWA 的**可服务可寻址市场 (SAM, Serviceable Addressable Market)** — 即 EHWA 现有地理布局、客户关系与产品认证可以主动竞标的 TAM 切片 — 大致为：
+
+- **半导体耗材 SAM ≈ 8 亿美元** (韩国 + 中国 + 部分台湾 + 部分日本 fab)，EHWA 份额 ~10% = ~8,000 万美元。
+- **工业精密 SAM ≈ 15 亿美元** (全球汽车一级供应商生态，剔除日本与欧洲在位位置)，EHWA 份额 ~5% = ~7,500 万美元。
+- **建筑 SAM ≈ 50 亿美元** (全球，剔除美国国内与中国特种)，EHWA 份额 ~2.5% = ~1.25 亿美元。
+
+合计基于 SAM 的营收 ~2.80 亿美元，与 FY2025 的 2.70 亿美元合并营收基本一致。**半导体耗材的份额增益** (每提升 1 个百分点的 CMP 修整器份额 = 增量 ~260 万美元营收) 是**最具增益力的增长杠杆** — 但**现实上行受制于前 5 寡占结构与技术认证周期**。*分析师观点：* 5 年内 EHWA 半导体耗材份额**从 ~8% 翻倍到 ~15%** (由三星 / SK 海力士 / 台积电产能扩张 + K-Belt 本土供应商偏好驱动) 是**合理但雄心勃勃**；**翻三倍不现实，除非收购竞争对手**。
+
+### 8.5 渗透策略
+
+IMM PE 在交易后的公开策略是**继续 R&D 投资 + 全球客户扩张 + 供应链杠杆**，**经营上转化为：** (a) 招募更多半导体工程人才 (三星 / SK 海力士工艺工程师转会可以加速韩国 fab 认证)，(b) **扩展美国布局** (Irvine 办公室规模偏小；一个实际的美国半导体 fab 服务中心可帮助台积电亚利桑那 / 三星 Taylor / Micron Boise 渗透)，(c) **深化印度布局** — 随印度 fab (Tata Electronics、Micron Sanand) 上线，(d) 潜在**M&A** 收购小型竞争对手以补能力或份额。建筑与精密工具业务预计是**稳定贡献而非增长论点**。
+
+---
