@@ -227,3 +227,74 @@ graph TD
 
 *资料来源：[Soulbrain "Semiconductor Materials" 页面](https://www.soulbrain.co.kr/en/m21.php)；[Soulbrain Holdings Semi Materials 页面](https://www.soulbrainholdings.co.kr/en/m21.php)；[Greater Kokomo MI 公告，2022](https://greaterkokomo.com/soulbrain-mi-investing-in-kokomo-creating-75-jobs/)。业务段占比：[Economy6，2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html)。*
 
+## 5. 客户与上市策略
+
+### 5.1 客户画像与集中度
+
+Soulbrain 的客户基础——出于有意设计与竞争必然性——**极度集中于三星电子与 SK 海力士**。DART 사업보고서§"주요매출처" (主要销售目的地) 通常披露前五大客户的合计份额，但不披露单一客户百分比；行业共识与 Soulbrain 自身的对外口径将三星 + SK 海力士合计份额定为 **合并营收 >70%**，其中三星占比较大 ([Businesskorea，2023-10-30](https://www.businesskorea.co.kr/news/articleView.html?idxno=203197)，[韩国券商汇编 — Economy6，2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html)，[Namu Wiki — Soulbrain](https://namu.wiki/w/%EC%86%94%EB%B8%8C%EB%A0%88%EC%9D%B8))。LG Display + 三星 Display 合计另占约 8–10% (显示化学品业务段)；三星 SDI + SK On + LG Energy Solution 通过 Soulbrain MI 的电解液业务与母公司的极耳铅带供应再贡献约 10–14%。OSAT、中国晶圆代工厂 (SMIC) 与海外存储客户长尾合计低于 10% ([Economy6，2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html))。
+
+这一集中度因此结构性地 **超过项目"高严重度"客户集中度阈值** (前一大 > 30%、前五大 > 50%)——我们在第 9 节将其列为首要风险。*分析师观点：* 限定条件是三星与 SK 海力士合起来基本就是整个韩国 DRAM / HBM / NAND 行业；一家韩国专用化学品商业供应商要回避这一敞口，唯一办法是成为中国 / 台湾 / 美国本土供应商——Soulbrain 正通过 Taylor TX (TSMC AZ + 三星 Taylor) 与无锡 (SK 海力士无锡) 逐步实现这一点。最贴切的类比——安集微电子 (SSE:688019) 对 SMIC + YMTC + 华虹 >70% 的集中度——证明材料厂家对本土领头羊的集中是行业的默认状态，不是 Soulbrain 独有的问题。
+
+```mermaid
+pie title FY2024 营收按客户构成 (Soulbrain Co., 357780) — 估算
+    "三星电子 (存储 + 代工)" : 42
+    "SK 海力士" : 30
+    "LG Display + 三星 Display" : 9
+    "三星 SDI + SK On + LG ES (电池)" : 12
+    "其他 (OSAT、中国、美国商业)" : 7
+```
+
+*估算综合自 [韩国券商汇编 — Economy6，2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html)；[Businesskorea，2023-10-30](https://www.businesskorea.co.kr/news/articleView.html?idxno=203197)；以及行业标准业务段比率。Soulbrain DART 披露前五大客户合计份额但不披露逐客户拆分；上述分布属于分析师估算，未来若有管理层 Q&A 可进一步验证。*
+
+### 5.2 合同结构与切换成本
+
+Soulbrain 的客户关系是围绕 **长周期联合验证 (joint qualification)** 而非分散订单建立的。一种新化学品——新的 HF 等级、新的 CMP 抛光液配方、新的 Cu 阻挡层抛光液——典型经历 (a) **在客户 R&D 厂的实验室验证** (3–6 个月)；(b) **来料质量检验 (IQC) 批次一致性认证** (3 个月)；(c) **在真实器件周期上的中试线联合开发** (6–12 个月)；(d) **在具名器件节点上的全量产验证**。一旦验证通过，该化学品就锁定在该节点的全寿命周期内——DRAM 通常 3–5 年、代工厂 5–8 年——因为周期中途的再验证有可能毁掉器件。这造就了每 socket 数千万美元量级的切换成本，也是为什么 HF / CMP / 前驱体商业供应商即便看起来产品已大宗化、仍能赚到 15–25% 营业利润率的护城河。2019 年 HF 国产化的故事是教科书级案例：即便首尔下了国家安全命令，三星与 SK 海力士仍然花了 6–18 个月才把 HF 来源从 Stella Chemifa (日本) 切换到 Soulbrain + SK Materials。
+
+定价通常采用 **绑定上游原料的年度合同 + 季度调整条款**：HF 绑定萤石 / 无水 HF (AHF)，抛光液绑定氧化铈原料与磨料成本，电解液绑定锂盐。Soulbrain 在历史上以 1–2 季度滞后传导约 70–80% 的原料波动；成本下行年份 (如 2022–23 年 NAND 开工不足) 利润率压缩，紧供应年份 (如 2024–25 年 HBM 上量) 利润率扩张。2025 年 Q3 业绩——营收 ₩2,420 亿 (+10% YoY)、营业利润 ₩390 亿 (毛利率 16%)——反映的是早期复苏，而非完整的 HBM 加速；卖方预期完整加速将落在 FY26 (一致预期 ₩1.1 万亿营收、~18% OPM) ([SKS Securities 报告，2025-11-04](https://www.sks.co.kr/data1/research/qna_file/20251104100029890_6_ko.pdf)，[Samsung Pop 研究，2025-02-10](https://samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=2010%2F2025021007420216K_02_02.pdf&inlineYn=Y&saveKey=research.pdf))。
+
+### 5.3 地理结构与本地化顺风
+
+按生产基地地理看，韩国占绝对主导——公州、坡州、平泽、世宗、龙仁与城南总部合计承载主要产能 ([Soulbrain "About Us" 页面](https://www.soulbrain.co.kr/en/m16.php))。但按 **客户晶圆厂地理** 看，画面更分散，因为三星与 SK 海力士都运营 Soulbrain 供货的海外大厂：三星的奥斯汀 / Taylor 得州 (代工厂，170–440 亿美元规模) 与西安 (存储 / NAND)；SK 海力士的无锡 (DRAM) 与大连 (NAND)。2024 年 SK 海力士无锡资本支出重启 (2025 年投资约 ₩5,810 亿，YoY +102%)、三星西安投资 (₩4,650 亿，YoY +67%) 直接转化为无锡产线对 Soulbrain 的增量需求 ([Seoul Economic Daily / SCMP，2026-03](https://www.scmp.com/tech/tech-trends/article/3348159/south-korean-chip-giants-step-china-investments-combat-global-ai-memory-shortage))。
+
+**Taylor 得州磷酸厂** (一期 1.75 亿美元，潜在合计 5.75 亿美元) 是最具决定意义的地理新增。它在物理上替代了三星 Taylor 湿法化学品消耗的跨太平洋海运段，并把 Soulbrain 带到 **TSMC 650 亿美元亚利桑那工厂** 的近距离——首次开辟一条面向非三星 Tier-1 客户的平行销售通道。*分析师观点：* Taylor 工厂同时是防范未来美韩贸易摩擦的去风险化举措；韩国对美国代工 / 晶圆基地的中间投入品出口在更激进的关税体系下面临风险，得州本地化产能恰好中和这一敞口。
+
+### 5.4 上市策略：直接现场工程 + 三星式联合开发
+
+Soulbrain 在与晶圆厂的接口上不使用经销商。销售直接由 **常驻三星华城 / 平泽与 SK 海力士利川 / 清州的现场应用工程师 (FAE, field application engineer)** 主导——这些工程师亲临客户现场进行工艺控制优化。R&D 模式是 **与客户联合开发**：配方知识产权通常共同所有，客户的来料质量团队从功能上延伸为供应商 QC 流水线的一部分。这是韩日材料厂家的标准做法——JSR / 东京应化与台积电的光刻胶合作、信越对所有客户的硅片、Hoya 与三星 / 英特尔的 EUV 掩模坯都是同样模式。该模式以深度的客户绑定 (护城河) 换取客户集中度 (风险)——两者本是一枚硬币的两面。
+
+## 6. 行业概览
+
+### 6.1 行业定义与范围
+
+Soulbrain 经营 **半导体湿法化学品与特种材料 (semiconductor wet chemistry & specialty materials)** 子行业——这是更广义约 7,000 亿美元半导体价值链中的约 800 亿美元 / 年子集 ([野村 Greater China Semi 2026-2030 锚定报告，2026-05-21](https://www.cninfo.com.cn/)，详情可见 [reports/sector/半导体材料.md](../../sector/半导体材料.md))。野村 2026 锚定分析将 2025 年 800 亿美元半导体材料市场分为 IC 制造材料 (~60%) 与封装材料 (~40%)；制造材料切片内部构成为硅片 ~31%、光刻胶 ~13%、光刻胶辅料 ~7%、特种气体 ~13%、**CMP ~7%**、溅射靶材 ~3%，其余为其他湿法化学品 (HF / BOE / H₃PO₄、前驱体、电镀)。Soulbrain 在 **HF / BOE / 湿法刻蚀化学 (~6–8% 制造材料份额)、CMP 抛光液 (~7%)、CVD/ALD 前驱体 (~4–5%)** 三个子行业中竞争——合计构成公司主要半导体产品集 2025 年 **约 120–140 亿美元的 TAM** ([reports/sector/半导体材料.md](../../sector/半导体材料.md) — 野村 Fig 24-30 综合)。
+
+按 **地理分布** 看，材料市场锚定在韩中日台四国：台湾 30% (代工厂驱动)、中国 20%、韩国 18%、日本 10%、北美 10%、欧洲 8%（野村 2024 Fig 29-30 综合） ([reports/sector/半导体材料.md](../../sector/半导体材料.md))。韩国 18% 份额——由三星 + SK 海力士支撑——构成 Soulbrain 国内特许经营的实际 TAM；公司的美国 (得州、印第安纳) 与中国 (无锡) 扩张事实上是 (a) 对三星美国代工本地化、(b) SK 海力士无锡运营对全球 DRAM 周期不可或缺这两项的押注。
+
+### 6.2 成长驱动——HBM、GAA、BPD、先进封装
+
+三股长期力量支撑 FY26–FY30 增长逻辑：
+
+1. **HBM 加速。** 三星据报到 2026 年底将 HBM 产能锁定在约每月 25 万片晶圆 (YoY +50%)，三大厂 (三星、SK 海力士、Micron) 都将在 2026 年开始 HBM4 量产 ([Trendforce，2025-12-30](https://www.trendforce.com/news/2025/12/30/news-samsung-reportedly-plans-50-hbm-capacity-surge-in-2026-spotlight-on-hbm4/)，[Trendforce，2025-12-16](https://www.trendforce.com/news/2025/12/16/news-sk-hynix-samsung-reportedly-deliver-paid-hbm4-samples-to-nvidia-ahead-of-1q26-contract-finalization/))。由于 TSV 铜填充与过量去除步骤，HBM 单片晶圆的 CMP 抛光液消耗是常规 DRAM 的 2–3 倍；HBM4 → HBM4E 的代际过渡进一步扩大 TSV 数量与 12-Hi → 16-Hi 堆叠层数，进一步放大抛光液强度。
+2. **GAA / 先进逻辑过渡。** 三星 2nm GAA (gate-all-around，栅极环绕) 加速与 TSMC N2 GAA 项目都将介质堆叠转向 ALD 沉积的高 k 材料 (HfO₂ / ZrO₂ / La 基)，并要求每金属层增加 CMP 步骤——野村估计 A16 (Apple 硅) + BPD 相对 3nm 基线每片晶圆增加 20–30% 的 CMP 步骤 ([reports/sector/半导体材料.md](../../sector/半导体材料.md) — 引用 Kinik)。
+3. **背面供电 (BPD, backside-power-delivery) + 晶圆键合 NAND。** BPD 需要两片晶圆键合 + 减薄至约 1 微米，产生新的 CMP / 清洗 / 刻蚀 / 前驱体需求；YMTC 的晶圆键合 Xtacking NAND 与 SoIC / 混合键合先进封装建设也增加单片晶圆的 CMP / 刻蚀 / 清洗消耗 ([reports/sector/半导体材料.md](../../sector/半导体材料.md) — 野村技术时间表 Fig 3)。
+
+合力效应就是野村所称的"材料长期重估 (long-term re-rating of semiconductor materials)"——自 2010 年代以来首次，单位芯片产出的材料消耗将从 FY27 开始结构性上升 ([reports/sector/半导体材料.md](../../sector/半导体材料.md) — TL;DR §5)。
+
+### 6.3 监管与地缘政治环境
+
+最具影响力的监管层是 (a) **美国对中国先进节点设备 / 化学品出口的管制** (BIS 2022 年 10 月 7 日及后续规则)，限制了 Soulbrain 中国厂业务在非先进节点的消耗范围；(b) **韩国战略材料认定** 对 HF / 光刻胶 / FPI 的覆盖，赋予 Soulbrain 准国家级冠军地位与对 MOTIE / KSEMI 开发补贴的访问权；(c) **美国 IRA / CHIPS Act 激励** 对韩国材料厂家在美投资的支持——Soulbrain MI 的 Kokomo 厂与 Taylor 得州磷酸厂均符合资格；(d) **中国稀土 + 萤石出口管制** (自 2010 年起断续、2024 年升级)，对铈基抛光液与 HF 的上游原料构成威胁；(e) **伊朗-霍尔木兹供应链风险** 影响 AHF 原料，2024 年曾导致韩国 HF 价格冲击 ([Tom's Hardware，2025-06](https://www.tomshardware.com/tech-industry/memory-makers-brace-for-hydrogen-fluoride-pricing-shock-as-hormuz-blockade-impacts-supply-chain-key-etching-and-cleaning-material-faces-sharp-cost-increase-amid-trade-disruption)，[THE ELEC，2024](https://www.thelec.net/news/articleView.html?idxno=10444))。整体监管环境对 Soulbrain **中等偏正面**：本地化顺风 + 韩国战略支持超过中国厂限制与原料脆弱性。
+
+### 6.4 行业结构——以主导存储客户为中心的分散商业供应商层
+
+半导体湿法化学品商业供应商层在结构上分散：每种化学品有 5–8 家大份额供应商，无一独大。对 **HF / BOE**，全球供应商包括 Stella Chemifa (日)、Morita (日)、Showa Denko / Resonac (日)、Soulbrain (韩)、SK Materials (韩)、Foosung (韩)、中国本土厂 (多氟多、巨化)；对 **CMP 抛光液**，排行榜是 Entegris (Cabot) ~25–30%、Versum/Merck ~15–20%、Resonac ~10–15%、Fujimi ~8–12%、Soulbrain + KC Tech 合计 ~10–15%，长尾为安集微、鼎龙、UBmaterials、Dongjin 等 ([reports/sector/半导体材料.md](../../sector/半导体材料.md) — 野村 Fig 35-44)；对 **CVD/ALD 前驱体**，供应商包括 Air Liquide / EMG、Merck (Versum)、SK Materials、Soulbrain、DNF、Hansol Chemical、UP Chemical、Mecaro、JSR——比 CMP 还要分散。买方则 **高度集中**——三星、SK 海力士、台积电、Intel、Micron 合计约占全球晶圆开工的 ~80%——因此客户具有结构性议价优势，这也是为什么供应商利润率是 15–25% 而非技术复杂度本应支撑的 30–50%。
+
+按子段看 **替代风险特征** 也不同：HF / BOE 最难颠覆 (新供应商需要 18 个月验证 + 客户联合开发)；CMP 抛光液替代风险中等 (Fujimi 2024 年末重夺 HBM Cu 抛光液领先就是警示案例)；CVD/ALD 前驱体替代风险中等 (多源是客户默认策略)；电池电解液替代风险更高 (配方大宗化；价格敏感)。Soulbrain 跨这些化学品的多元化部分是防御性——它稀释了单一产品被颠覆的风险。
+
+### 6.5 "韩国材料冠军 (Korean material champion)"投资逻辑
+
+从韩国本土视角看行业：2019 年日本贸易争端永久改变了韩国对化学材料采购的产业政策态度。MOTIE (产业通商资源部) 认定 **65 项"战略物品"** (소재·부품·장비 핵심 품목) 用于加速本地化，配合公私联合投资——其中 Soulbrain 的 HF / BOE / CMP 抛光液 / 前驱体组合是头号受益者 ([NBR，"Bolstering and Securing Semiconductor Supply Chains"](https://nbr.org/publication/bolstering-and-securing-semiconductor-supply-chains/)，[THE ELEC，2024](https://www.thelec.net/news/articleView.html?idxno=4432))。隐含交易：三星与 SK 海力士优先认证韩国本土供应商，MOTIE 补贴 R&D 与产能扩张，供应商获得国家战略资产地位——类似日本对待 Stella Chemifa / 信越 / Hoya 集群，或台湾对待台积电本地设备与材料供应链的做法。结果是 Soulbrain (以及 SK Materials / Foosung / Dongjin Semichem) 处于一个准保护的市场细分中，100% 纯粹的价格竞争并不运作。*分析师观点：* 这就是 Soulbrain 交易在 40 倍 TTM PE 的结构性原因——市场为这种保护身份在 HBM4 / GAA 周期内延续的期权付费。
+
+![Soulbrain FY2024 营收业务段构成](../../charts/soulbrain_segment_mix.png)
+
+*资料来源：[Economy6 韩国券商汇编，2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html)；半导体材料 ~75–76%、二次电池 ~13–16%、显示 ~9–11%。Soulbrain DART 사업보고서 披露三业务段拆分但不披露逐客户分布；图中所用为券商一致区间的中位值。*
+
