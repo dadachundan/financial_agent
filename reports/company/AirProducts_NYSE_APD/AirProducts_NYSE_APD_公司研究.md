@@ -319,7 +319,172 @@ quadrantChart
 
 **渗透策略。** 管理层声明的框架（Q2-FY26 评论）是 **（1）通过提高驻厂合同利用率和推动非氦气价格改善（现有合同有挂钩指数（工业 PPI、电力、天然气）的自动调价条款）来释放盈利增长** — 这是「收割」杠杆，预计在 FY2028 之前每年贡献约 $0.50–$1.00 EPS；**（2）优化大型项目**，通过完成 NEOM（2027 年年中）和路易斯安那（2028 年）、投产后解除 NEOM 债务合并（改善杠杆比率）、并在 2028–2030 年分阶段投产三星平泽系统；**（3）维持资本纪律**，将 FY2026 资本支出保持在约 $40 亿（较 FY2025 峰值削减约 $30 亿），并在 NEOM 债务解除合并后恢复股票回购 ([Q2-FY26 PR](https://www.sec.gov/Archives/edgar/data/2969/000000296926000018/exhibit99131mar26.htm); [Motley Fool transcript](https://www.fool.com/earnings/call-transcripts/2026/04/30/air-products-apd-q2-2026-earnings-transcript/))。
 
-5 年视野内 TAM 扩张最大单一问题是 **绿氨 / 船用燃料需求爬坡**。如果航海脱碳监管强制全球船队的有意义份额转向氨（目前 <0.1% 的船用燃料），绿氢需求增长一个数量级，NEOM 成为结构性低估资产，APD 作为唯一拥有 >500 吨/日 绿氢装置投产的生产商，地位成为多十年期复合 inglier。如果需求爬坡延迟（如最近沙特 NEOM 评论 [Energy Connects, 2025-05](https://www.energyconnects.com/news/renewables/2025/may/saudi-arabia-s-mega-neom-hydrogen-project-faces-demand-risk/) 显示的市场争论），NEOM 现金流长期为负，减值风险拖累持续。这个单一议题是股权故事的最大右尾期权。
+5 年视野内 TAM 扩张最大单一问题是 **绿氨 / 船用燃料需求爬坡**。如果航海脱碳监管强制全球船队的有意义份额转向氨（目前 <0.1% 的船用燃料），绿氢需求增长一个数量级，NEOM 成为结构性低估资产，APD 作为唯一拥有 >500 吨/日 绿氢装置投产的生产商的地位成为多十年期复合驱动力。如果需求爬坡延迟（如最近沙特 NEOM 评论 [Energy Connects, 2025-05](https://www.energyconnects.com/news/renewables/2025/may/saudi-arabia-s-mega-neom-hydrogen-project-faces-demand-risk/) 显示的市场争论），NEOM 现金流长期为负，减值风险拖累持续。这个单一议题是股权故事的最大右尾期权。
 
 ---
+
+## 9. 风险评估
+
+### 公司特定风险
+
+**R1 — 氢能超级项目执行风险（NEOM、路易斯安那）。** *严重度: 高。* APD 在 NEOM 绿氢 JV（沙特阿拉伯，约 80% 完成，目标 2027 年年中首产氨）和路易斯安那清洁能源综合体（约 $45 亿预算，2028 年启动，正在搜寻股权伙伴）合计承诺约 $130 亿资本。FY2025 $37 亿减值（针对三个小型美国清洁能源项目）表明一次错失执行决策的成本是真实且巨大的；如果 NEOM 滑过 2027 年投产、Yara 承购条款重启、或路易斯安那未能以可接受条款吸引股权伙伴，二次减值周期成为可能。缓解措施：管理层有意将新战略范围限定为 *保留* NEOM 和路易斯安那，FY2026 资本支出削减（约 $40 亿 vs FY25 $70 亿）主要由结束小型项目资助，而不是消减旗舰 ([FY2025 10-K, Note 5 Business and Asset Actions](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm); [Energy Connects 关于 NEOM 需求风险, 2025-05](https://www.energyconnects.com/news/renewables/2025/may/saudi-arabia-s-mega-neom-hydrogen-project-faces-demand-risk/))。
+
+**R2 — 维权股东介入后的战略过渡风险。** *严重度: 中高。* Mantle Ridge 代理权之争才在 2025 年 1 月落幕；CEO Eduardo Menezes 截至本文撰写时仅在任 16 个月；十名董事会成员中有三人与维权股东保持一致。风险在于维权股东驱动的战略重置（资本支出缩减、更快现金回报、更严格 ROIC）与气体驻厂业务的长周期性（15–20 年合同、多年期建设）发生冲突，产生内部摩擦减缓执行或导致区域分部总裁的人员更替。缓解措施：Menezes 深厚的 Praxair / Linde 背景给予他经营层面的合法性；董事会向 Mantle Ridge 代理权之争费用支付 $2,470 万 ([APD 2026 DEF 14A, 治理板块](https://www.sec.gov/Archives/edgar/data/2969/000130817925000643/apd-20251210.htm)) 显示了正在运作的合作关系。
+
+**R3 — 氦气价格周期。** *严重度: 中。* 氦气在过去 3 年一直是显著的波动源 — 先是 2022–2023 年短缺推动价格大涨，然后 2024–2026 年随卡塔尔和俄罗斯供应缓解而软化。FY26 二季度管理层专门提到氦气价格作为当前逆风，部分被非氦气价格改善对冲。氦气贡献了不成比例的合并毛利份额（氦气单价毛利远高于大宗大气），所以持续下行周期对 P&L 的影响超出收入结构所暗示的程度。缓解措施：APD 的美国战略储气库（Amarillo、Beaumont）和最近供应链韧性举措提供了部分隔离；依赖氦气的客户（半导体、MRI）以多年期合同锚定价格，平滑现货价格周期 ([Q2-FY26 PR](https://www.sec.gov/Archives/edgar/data/2969/000000296926000018/exhibit99131mar26.htm); [FY2025 10-K, Production](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。
+
+**R4 — 行业层面（非客户层面）的电子客户集中。** *严重度: 中。* 没有单一客户突破 10% 销售披露阈值，但 APD 的电子分部增长高度集中于全球最大的 4–6 家晶圆厂客户（TSMC AZ、三星 TX 和韩国、Intel 美国、Micron 美国、可能还有长江存储或 SMIC）。持续的半导体资本支出下行周期 — 由内存价格崩溃或区域晶圆厂政策反转（如美国 CHIPS 法案资金重大变化）驱动 — 将压缩当前为结构性增长论提供基础的电子顺风。缓解措施：客户行业多元化（炼油 + 化工 + 金属 + 医疗）让组合其余部分缓冲任何单一行业的下行 ([FY2025 10-K, "Customers"](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。
+
+**R5 — 相对 Linde / Air Liquide 的较小规模竞争位势。** *严重度: 中。* APD 收入约 $120 亿，约为 Linde 的 36%、Air Liquide 的 41%。规模差距直接转化为每元收入 R&D 更低、地理扩张更慢、结构性利润率差距（调整后约 24% vs Linde 约 28%）。在 5–10 年视野内，规模劣势可能复合 — APD 也缺乏明显的大规模并购路径（2018 年 Linde-Praxair 合并已要求大量剥离才能过审；假设的 APD-Air-Liquide 交易也面临同样问题）。缓解措施：APD 的竞争位势分部内强大（参与的每个主要类别都是前三），Linde 利润率差距可能在 Linde 合并后生产率红利饱和后压缩。
+
+### 行业 / 市场风险
+
+**R6 — Linde 和 Air Liquide 电子推进的竞争强度。** *严重度: 中。* Linde 和 Air Liquide 都在亚洲和美国的先进晶圆厂驻厂合同上积极投标。Linde Electronics 尤其声明其半导体业务的多年期双位数增长目标。三星平泽胜出是 APD 相对 Linde 的重大份额扩张；未来胜出将要求 APD 持续在客户承诺前对专用电子基础设施投资。缓解措施：APD 在平泽管道网络的既有地位和 30 年三星关系创造了能够穿越周期性 RFP 的切换成本护城河 ([Linde 2024 Annual Report Electronics 分部](https://www.sec.gov/Archives/edgar/data/0001707925/000162828025007990/lin-20241231.htm))。
+
+**R7 — 45V 清洁氢气税抵免的监管不确定性。** *严重度: 中。* 45V 生产税抵免是支撑路易斯安那蓝氢和 NEOM 绿氨对美出口经济性的最大单一补贴。财政部 2024 年末最终规则规定了时间匹配和「附加性」约束，使 Massena NY 项目（已退出的三个项目之一）不合格。未来政府可能收窄或放宽 45V 资格，重大影响路易斯安那 ROIC 和美国承购方承诺多十年绿氨合同的意愿。缓解措施：NEOM 服务全球而非美国独家的承购市场，对 45V 敞口较小；路易斯安那 ROIC 对 45V 敏感，但管理层目标是在不获得完整抵免的情况下也能成立的商业经济性 ([FY2025 10-K, Environmental Regulation](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。
+
+**R8 — 电解槽成本曲线带来的技术颠覆。** *严重度: 5 年内低-中。* 如果电解槽资本支出下降快于预测（由中国供应规模化驱动），绿氢成本进一步下降，NEOM 的结构性价值上升 — 但同样趋势也使驻厂客户自发电变得经济，降低气体供应商在较小氢气合同中的角色。净效应对 APD 作为超级项目运营商不对称为正。缓解措施：APD 的管道网络模型在客户自发电不经济的规模上主导。
+
+**R9 — 地缘政治 / 中东敞口。** *严重度: 中。* 沙特阿拉伯有 $69 亿长期资产（NEOM JV）加上中东各地的权益法投资。以色列–伊朗–也门地区动荡、美国–沙特外交风险、红海航运风险都会传导至 NEOM 运营。缓解措施：与 ACWA Power 和 NEOM（沙特主权实体）的合资伙伴关系创造了强烈的东道国对齐；10-K 的监管划分和 FY2025 中国 JV $680 万减值显示管理层在地缘政治条件需要时愿意行动。
+
+### 财务风险
+
+**R10 — 杠杆和信用评级维护。** *严重度: 中。* NEOM 和路易斯安那已在建设期显著抬高总债务；APD 的净债务 / EBITDA 处于历史区间上端。管理层计划在投产时（2027 年年中）解除 NEOM 债务合并，应该一步改善报告杠杆比率。在此之前，任何运营下行（氦气价格、电子周期、炼油利润率压缩）都可能压力支撑 APD 低融资成本的 A 级信用评级。缓解措施：$90 亿项目订单储备提供收入可见度；44 年股息纪录信号管理层对财务纪律的承诺 ([Air Products 连续 44 年提股息, 2026-01](https://www.investing.com/news/company-news/air-products-increases-quarterly-dividend-to-181-per-share-93CH-4468906))。
+
+**R11 — 估值 / 倍数压缩风险。** *严重度: 低-中。* 在远期 P/E 约 21× 和 EV/EBITDA 约 21×，APD 大致与 Air Liquide 一致，相对 Linde 折价 — 不算同业拉伸，但绝对水平也不便宜。TTM P/E 30.5× 因 FY2025 减值扭曲，不是有用的倍数。风险在于盈利失望（NEOM 滑、氦气价格长期疲软、半导体下行周期）与板块降级同时发生，对股权产生双击。缓解措施：2.5% 股息收益率和 44 年增长纪录提供估值地板；维权董事会不太可能容忍多年期股价漂移而不行动 ([Stock Analysis APD Statistics](https://www.stockanalysis.com/stocks/apd/statistics/))。
+
+### 宏观经济风险
+
+**R12 — 工业需求周期性。** *严重度: 中。* 炼油、化工、金属和电子合计占 APD 收入约 70%；四者都是经济周期性的。全球工业放缓 — 由中国房地产疲软、美联储鹰派意外或欧洲工业能源成本压力驱动 — 将放缓新驻厂合同授标，即使现有照付不议合同继续产生收入。缓解措施：合同结构（15–20 年照付不议附最低采购）意味着现有收入大体绝缘；仅新项目转化放缓。
+
+**R13 — 汇率敞口。** *严重度: 低-中。* FY2025 销售约 61% 为非美国；最大单一非美元敞口是人民币（$19.3 亿 / 16% 销售）。美元强势压缩翻译收入；Q2-FY26 评论专门点出「四个百分点的有利汇率」作为可能反转的二季度顺风。缓解措施：驻厂合同结构通常以本地货币计价并配输入成本传导，为经营利润提供自然对冲；APD 也使用跨币种掉期和远期外汇为增量对冲 ([FY2025 10-K, Note 15 Financial Instruments](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。
+
+---
+
+## 10. 参考资料
+
+### 主要文件 — SEC EDGAR
+
+- [Air Products FY2025 10-K（2025-11-20 提交；财年截至 2025-09-30）](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm) — Item 1 Business、MD&A、Note 4 Gain on Sale of Business、Note 5 Business and Asset Actions、Note 26 Segment & Geographic Information。
+- [Air Products FY2024 10-K（2024-11-21 提交；财年截至 2024-09-30）](https://www.sec.gov/Archives/edgar/data/2969/000000296924000056/apd-20240930.htm) — 前期分部报告参考。
+- [Air Products 2026 DEF 14A（2025-12-11 提交）](https://www.sec.gov/Archives/edgar/data/2969/000130817925000643/apd-20251210.htm) — 董事候选人、CEO Menezes 简历、Mantle Ridge 代理权之争历史、治理板块。
+- [Air Products Q2-FY2026 10-Q（2026-04-30 提交；截至 2026-03-31 的季度）](https://www.sec.gov/Archives/edgar/data/2969/000000296926000020/apd-20260331.htm) — 当季财务报表。
+- [Q2-FY2026 业绩新闻稿（8-K 附件 99.1, 2026-04-30）](https://www.sec.gov/Archives/edgar/data/2969/000000296926000018/exhibit99131mar26.htm) — 指引上调、三星胜出、氦气评论。
+- [APD 8-K（2025-02-04）— Menezes 任 CEO 附件 99.1](https://www.sec.gov/Archives/edgar/data/2969/000000296925000012/exhibit99131dec24.htm) — CEO 过渡披露。
+- [APD 8-K（2025-02-24）— 退出三个美国清洁能源项目](https://www.sec.gov/Archives/edgar/data/2969/000119312525033509/d830166d8k.htm) 及 [附件 99.1](https://www.sec.gov/Archives/edgar/data/2969/000119312525033509/d830166dex991.htm) — 减值公告。
+
+### 公司新闻稿与 IR
+
+- [Air Products Company History page](https://www.airproducts.com/company/history) — 1940 年由 Leonard Pool 创立；1957 年迁阿伦敦；主要里程碑。
+- [Air Products 新闻稿, 2025-02-04 — 董事会任命 Menezes 为 CEO](https://www.airproducts.com/company/news-center/2025/02/0204-air-products-board-appoints-eduardo-menezes-ceo)。
+- [Air Products 新闻稿, 2025-02-24 — 退出三个美国项目](https://www.airproducts.com/company/news-center/2025/02/0224-air-products-to-exit-three-us-based-projects)。
+- [Air Products 新闻稿, 2025-01-22 — 连续 43 年股息提升至 $1.79/季度](https://www.airproducts.com/company/news-center/2025/01/0122-air-products-increases-quarterly-dividend-for-43rd-consecutive-year)。
+- [Air Products 新闻稿, 2026-04-29 — 三星平泽大宗特种气体供应系统](https://www.airproducts.com/company/news-center/2026/04/0429-air-products-gas-supply-samsung-semiconductor-fab-south-korea)。
+- [PR Newswire, 2026-04-29 — 三星供应扩张细节](https://www.prnewswire.com/news-releases/air-products-to-expand-industrial-gas-supply-for-samsung-electronics-next-generation-semiconductor-fab-in-south-korea-302757497.html)。
+- [Investing.com, 2026-01 — 季度股息提升至 $1.81 / 股（连续 44 年）](https://www.investing.com/news/company-news/air-products-increases-quarterly-dividend-to-181-per-share-93CH-4468906)。
+
+### 竞争对手文件
+
+- [Linde plc 2024 Annual Report](https://www.sec.gov/Archives/edgar/data/0001707925/000162828025007990/lin-20241231.htm) — 全球 #1 工业气体公司；电子分部。
+- [Air Liquide 2024 Universal Registration Document](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf) — 按收入全球 #2；电子分部细节。
+- [Nippon Sanso Holdings FY2024 Integrated Report](https://jp.nipponsanso.com/en/ir/library/integrated_report.html) — 日本最大工业气体公司。
+
+### 行业研究
+
+- [Markets and Markets — Industrial Gases Market Report, 2025–2030](https://www.marketsandmarkets.com/Market-Reports/industrial-gases-market-143368202.html) — 前 5 名约 80% 份额数据。
+- [Data Insights — Industrial Gases Market 2026–2033](https://www.datamintelligence.com/research-report/industrial-gases-market) — 2025 年 $1,182 亿 → 2033 年 $1,716 亿。
+- [Research Nester — Industrial Gas Market 2025–2035](https://www.researchnester.com/reports/industrial-gas-market/1384) — 2025 年 $1,200 亿 → 2035 年 $2,267 亿。
+- [Market.us — Industrial Gases Market](https://market.us/report/industrial-gases-market/) — 2024 年 $1,127 亿 → 2034 年 $2,548 亿。
+- [TechSci Research — Linde-Praxair 合并影响](https://www.techsciresearch.com/news/2899-linde-praxair-merger-what-is-it-and-how-does-it-impact-global-industrial-gases-market.html) — 合并后市场结构。
+- [US Census Bureau NAICS Manual 325120 Industrial Gas Manufacturing, 2022](https://www.census.gov/naics/?input=325120&year=2022&details=325120) — 行业定义。
+- [内部 — reports/sector/半导体材料.md (Nomura Greater China Semi 2026-30F, 2026-05)](../../sector/半导体材料.md) — 半导体材料行业背景。
+
+### 项目特定来源
+
+- [NEOM Green Hydrogen Company 财务关闭新闻稿, 2023](https://www.neom.com/en-us/newsroom/neom-green-hydrogen-investment) — 与 ACWA Power 和 NEOM 的 $84 亿 JV。
+- [Inside Saudi, 2025-10-01 — NEOM 氢能项目状态](https://www.insidesaudi.media/articles/2025-10-01-a-hydrogen-superpower) — 约 80% 完成，2026 年末 / 2027 年中目标。
+- [路易斯安那州经济发展署 — Air Products $45 亿蓝氢综合体公告, 2021](https://www.opportunitylouisiana.gov/news/air-products-announces-4-5-billion-blue-hydrogen-clean-energy-complex)。
+- [gasworld, 2025 — 路易斯安那蓝氢项目路径](https://www.gasworld.com/story/air-products-sees-potential-path-forward-for-paused-louisiana-blue-hydrogen-project/2168127.article/) — 股权伙伴搜寻。
+- [Energy Connects, 2025-05 — NEOM 氢能需求风险评论](https://www.energyconnects.com/news/renewables/2025/may/saudi-arabia-s-mega-neom-hydrogen-project-faces-demand-risk/)。
+- [ASM International — Air Products 重回氢气业务核心, 2025](https://www.asminternational.org/air-products-to-withdraw-from-three-us-projects-refocuses-on-core-hydrogen-and-energy-initiatives/)。
+
+### 新闻和分析
+
+- [C&EN, 2019-04 — Versum accepts sweetened deal from Merck KGaA](https://cen.acs.org/business/mergers-&-acquisitions/Versum-accepts-sweetened-deal-Merck/97/web/2019/04) 和 [Versum 8-K, 2019-04-12](https://www.sec.gov/Archives/edgar/data/0001660690/000119312519104578/d725673dex991.htm) — Versum 拆分历史（APD 2017 拆分 Versum；默克 KGaA 2019 收购）。
+- [Chemical & Engineering News, 2025-02 — Air Products 任命 Menezes 为 CEO](https://cen.acs.org/business/Air-Products-names-Eduardo-Menezes/103/i3)。
+- [Chemical Week, Jan 2025 — Mantle Ridge 赢得三席](https://chemweek.mydigitalpublication.com/articles/mantle-ridge-wins-three-seats-in-air-products-proxy-battle) — 代理权之争结果。
+- [Motley Fool — APD Q2 FY26 Earnings Transcript, 2026-04-30](https://www.fool.com/earnings/call-transcripts/2026/04/30/air-products-apd-q2-2026-earnings-transcript/) — $90 亿订单储备、$25 亿传统、$10 亿亚洲电子。
+- [Investing.com — APD Q2 2026 业绩 slides 概要](https://www.investing.com/news/company-news/air-products-q2-2026-slides-earnings-beat-on-volume-margin-expansion-93CH-4649823)。
+- [Wikipedia — Air Products](https://en.wikipedia.org/wiki/Air_Products) — 公司历史。
+- [Prabook biography — Leonard Parker Pool](https://prabook.com/web/leonard_parker.pool/1052656) — 创始人简历。
+
+### 市场数据
+
+- [Stock Analysis — APD Statistics 页面，访问于 2026-05-26](https://www.stockanalysis.com/stocks/apd/statistics/) — 价格、市值、P/E、P/S、P/B、EV/EBITDA、股息收益率、贝塔。
+
+---
+
+<details>
+<summary>验证日志 (Step 10) — 2026-05-26</summary>
+
+**SEC 文件名验证。** 所有 SEC URL 通过 EDGAR submissions JSON API 解析 **CIK 0000002969** ([data.sec.gov/submissions/CIK0000002969.json](https://data.sec.gov/submissions/CIK0000002969.json))。主要文件名确认：
+- FY2025 10-K → `apd-20250930.htm`（接收编号 0000002969-25-000055，2025-11-20 提交）
+- FY2024 10-K → `apd-20240930.htm`（接收编号 0000002969-24-000056，2024-11-21 提交）
+- 2026 DEF 14A → `apd-20251210.htm`（接收编号 0001308179-25-000643，2025-12-11 提交）
+- Q2-FY26 10-Q → `apd-20260331.htm`（接收编号 0000002969-26-000020，2026-04-30 提交）
+- Q2-FY26 8-K → `apd-20260430.htm`；附件 99.1 → `exhibit99131mar26.htm`（接收编号 0000002969-26-000018）
+- 2025 年 2 月 CEO 任命 8-K 附件 99.1 → `exhibit99131dec24.htm`（接收编号 0000002969-25-000012）
+- 2025 年 2 月项目退出 8-K → `d830166d8k.htm` + 附件 99.1 → `d830166dex991.htm`（接收编号 0001193125-25-033509）
+未使用合成模式。
+
+**10-K 抽查**（声明 → 在 10-K 中的位置原文）：
+- 「约 21,300 名员工，75% 在美国之外」→ Item 1 Business → Human Capital Management ✓
+- FY25 总销售 $12,037.3M；FY24 $12,100.6M；FY23 $12,600.0M → Note 26 Segment & Geographic Information ✓
+- 分部经营利润 FY25 $2,857.7M；FY24 $2,947.5M；FY23 $2,739.2M → 对账表 ✓
+- 合并经营亏损 FY25 $(877.0)M；FY24 $4,466.1M → 同一对账表 ✓
+- 业务和资产行动 FY25 $(3,747.0)M、股东维权 $(86.3)M、出售业务收益 FY25 $67.3M / FY24 $1,575.6M → 对账表 ✓
+- 美国销售 $4,692.5M、中国 $1,933.5M、其他 $5,411.3M → Geographic Information ✓
+- 沙特阿拉伯长期资产 $6,910.6M（FY23 $1,818.1M）→ Geographic Information ✓
+- 「我们没有同质的客户基础……没有单一客户超过 10%」→ Item 1 → Customers ✓
+- 大气「约一半」合并工业气体销售 → Item 1 → Our Businesses ✓
+- 10-K 点名的竞争对手：「Air Liquide S.A., Linde plc, and Messer Group GmbH, as well as regional competitors」→ Item 1 → Regional Industrial Gases ✓
+- LNG 出售收益 $16 亿 FY24 四季度 → Item 1 → Industrial Gases Equipment ✓
+- 约 560 项美国专利、2,650 项海外专利 → Item 1 → Technology Development ✓
+- $24.7M Mantle Ridge 费用报销 FY25 三季度 → 2026 DEF 14A → 治理板块 ✓
+- Menezes 2025-02-07 任命 + Linde EMEA 2018-21 + Praxair 此前 30 年 → 2026 DEF 14A → Director Bio ✓
+- Mantle Ridge 提名 4 名董事，3 名当选（Hilal、Reilley、Evans）→ 2026 DEF 14A → 治理板块 ✓
+
+**Q2-FY26 PR 交叉核对：**
+- 调整后 EPS $3.20，同比上升 19%；GAAP EPS $3.19 同比 >130% → PR 开篇段 ✓
+- FY26 调整后 EPS 指引上调至 $13.00–$13.25 → PR 指引板块 ✓
+- FY26 资本支出约 $40 亿 → PR 指引板块 ✓
+- 三星韩国晶圆厂胜出 → PR 新闻和亮点 ✓
+- 氦气供应链评论 → PR 新闻和亮点 ✓
+
+**分析师观点句**（有意不引用至主要来源）：
+- §1 估值解读段 — 未引用；基于观察到的行业倍数差，标注「分析师观点」
+- §4 — §4.3、4.4、4.5 跨段「结论 = 是，护城河 = 规模 + 管道网络」判断 — 标注 `*分析师观点:*`（按 skill 规则）
+- §5 — 客户集中度解读底线段 — 标注 `*分析师观点:*`
+- §7 — 竞争优势 / 弱点段 — 标注 `*分析师观点:*`
+- §7 — 竞争定位表 — 标注「分析师据公开行业研究的判断」
+- §8 — SAM 和 SOM 估计 — 作为分析师 sizing 标注
+- §5 终端市场收入饼图 — 标注「分析师构造的拆分」
+
+**执行高管姓名验证：**
+- Eduardo Menezes (CEO) — 在 2026 DEF 14A 和 2025-02-04 8-K 附件 99.1 中确认
+- Paul C. Hilal（Mantle Ridge 创始人 / 董事）— 在 2026 DEF 14A Director Bio 确认
+- Dennis H. Reilley（前 Praxair CEO，现任 APD 董事）— 在 2026 DEF 14A 确认
+- Andrew W. Evans（前 Southern Company CFO，现任 APD 董事）— 在 2026 DEF 14A 确认
+- Seifi Ghasemi（前 CEO 2014-2025）— 在 2026 DEF 14A 历史引用中确认
+- Leonard Pool（创始人，1906-1975）— 通过 Air Products Company History 页面和 Wikipedia / Prabook 确认
+- Frank Pavlis（1940 年早期联合工程师）— 通过 Wikipedia / Prabook 确认
+
+**残余未知 / 未验证：**
+- 管理层重申 FY26 资本支出「约 $40 亿」但尚未按项目分解 — 路易斯安那 / NEOM / 三星拆分未在 PR 中
+- 三星平泽合同总金额未披露；2028–2030 分阶段投产时间表来自新闻稿
+- 超过合并 $2,857.7M 的 FY25 按区域分部经营利润详情在 Note 26 中，未全部抄录至本报告
+- 6 张 PNG 图表由前会话生成；其源数据已引用但 PNG 中的精确数据标签未在本报告中重新生成（图表按提供接受）
+- 本中文版与英文版同期撰写，所有数据点、引用 URL 和图表与英文版同源；中文版保留 10-K 直接引述的英文原文（按 skill 规则）以保证可验证性
+
+</details>
 
