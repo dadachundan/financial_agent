@@ -200,3 +200,69 @@ graph LR
 - **2025-11** — 过去 12 个月获得五项供应商奖项：Intel "EPIC Supplier Award"（2025 年 4 月）、SSMC "Best Supplier Award"（2025 年 9 月）、Samsung "BEST in Value Award"（2025 年 9 月）、Micron "Outstanding Supplier Performance"（2025 年 11 月）、STMicroelectronics "Best Silicon Supplier Award"（2025 年 11 月） ([Investor Presentation April 2026, p. 23](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Siltronic_InvestorPresentation__.pdf))。五项奖项覆盖存储（Samsung、Micron）、逻辑（Intel）、晶圆代工（SSMC——TSMC 与 NXP 在新加坡的合资公司）、功率（STM）——完整客户横截面的清晰确认。
 
 ---
+
+## 5. 客户与上市策略
+
+Siltronic **直销**硅片给半导体元件制造商——硅片行业不存在分销商或渠道伙伴——由"销售、应用技术、工艺技术、质量管理与物流"五个职能合编的"重点客户团队"对接 ([Annual Report 2025, p. 20](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。除生产基地配套的销售职能外，公司在东京（日本）、首尔（韩国）、上海（中国）设有专门的销售公司 ([Annual Report 2025, p. 116](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。
+
+**客户集中度结构性较高，但披露有限。** Siltronic 自家《风险与机会报告》量化的 Top-10 客户份额："我们的销售额中**超过三分之二**来自前 10 大客户。如果重要客户大幅减少甚至终止订单，可能对我们的资产、财务状况和经营业绩产生重大不利影响" ([Annual Report 2025, p. 40, Competition risk](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。公司**未**披露单一最大客户的具体百分比，也未在分部注释中具名披露客户。基于新闻稿、供应商奖项披露与第三方报道，Top-10 客户名单包括：**Samsung Electronics**（SSW 合资伙伴，行业研究普遍认为是单一或并列最大客户）、**Intel**（Q1 2026 IR 通过 EPIC Award 提及）、**Micron**（Outstanding Supplier Award）、**STMicroelectronics**（Best Silicon Supplier Award）、**Infineon**（第三方报道列为 200 mm + FZ 主要客户）、**TSMC**（亚洲晶圆代工中的 300 mm 客户，含新加坡 SSMC 合资公司）、**SK Hynix**（存储客户）、**GlobalFoundries**（晶圆代工，部分靠近 Dresden 厂）、**Nexperia**（200 mm Power）、以及 **Bosch / Mitsubishi / Sony / Renesas**（轮换性 Top-10 进入者）——基于 [Slkoric tech-web — Power semi era SiC, 2025](https://www.slkoric.com/tech-web/511779.html) 行业资料汇总。
+
+```mermaid
+pie title FY2025 销售按客户地域分布（占 EUR 13.467 亿 %）
+    "台湾 + 中国（大陆）36.4%" : 36.4
+    "韩国 25.4%" : 25.4
+    "亚洲（除 TW/CN/KR）14.3%" : 14.3
+    "美国 10.3%" : 10.3
+    "欧洲（除德国）6.8%" : 6.8
+    "德国 5.1%" : 5.1
+    "合并 / 其他 1.7%" : 1.7
+```
+*资料来源：[Siltronic Annual Report 2025, p. 152, Note 18 Segment reporting](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf)。*
+
+**亚洲贡献 FY2025 销售 76%**（台湾 + 中国大陆 36.4%，韩国 25.4%，亚洲其余（含新加坡 + 日本）14.3%），较 FY2024 的 73% 进一步上升——客户结构在亚洲集中是当下 300 mm 硅片供应商的结构性现实。欧洲份额从 16% 收缩至 12%，主因 SD 产线关闭剥离了主要为欧洲客户服务的产能；美国维持 10%。德国本土仅占销售 5.1%——对一家总部在慕尼黑的德国公司而言，这一数字相当醒目 ([Annual Report 2025, p. 152, segment table](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。
+
+![Siltronic FY24 vs FY25 地域销售对比](../../charts/siltronic_geographic_mix.png)
+*资料来源：[Siltronic Annual Report 2025, p. 152, Note 18 Segment reporting](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf)。*
+
+**终端市场结构在六大用途间分散良好。** FY25 硅片面积消耗拆分：**智能手机 21%、服务器 / AI 18%、汽车 16%、PC 14%、工业 13%、其他 18%** ([Q1 2026 Conference Call Presentation, p. 10](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Q1_2026_conference_call_presentation__.pdf))。让 AI 论点成立的关键在 2026e 面积增速结构：服务器预计 +44% YoY，工业 +10%，汽车 +3%，其他 +3%，智能手机 ‑10%，PC ‑10%。剔除库存影响后合计 +7%。
+
+![Siltronic 终端市场硅片面积分布](../../charts/siltronic_segment_mix.png)
+*资料来源：[Q1 2026 Conference Call Presentation, p. 10, Siltronic estimates](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Q1_2026_conference_call_presentation__.pdf)。*
+
+**合同结构高度向带预付款的长期协议 (LTA) 倾斜。** 在新加坡 Fab S2，"**长期协议 (LTA) 覆盖比例高达 80%，并附高额预付款**" ([Investor Presentation April 2026, p. 12](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Siltronic_InvestorPresentation__.pdf))——即新厂产能的 4/5 已锁定在多年期最低量协议中，客户预先支付部分硅片价款帮助 Capex 融资。机会报告补充："我们已与多家主要客户签订多年逐步增加订货量的长期供货合同，这有助于为新加坡投资融资并确保新增产能" ([Annual Report 2025, p. 45, Opportunity report](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。但 LTA 模式的反面同样被披露："**长期协议之外的价格效应与不利的产品组合**" 在 FY25 对销售额产生负面影响 ([Annual Report 2025, p. 26](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))——非 LTA 现货销量构成全行业的边际定价缓冲，下行周期里首先承压。
+
+**截至 2025 年末，客户预付款余额约 EUR 2.92 亿**（即 Note 16 合同到期表中"其他"项下的 EUR 2.921 亿，[Annual Report 2025, p. 150](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf)）——相对于约 EUR 20 亿累计新加坡 Capex 而言数额可观。
+
+**典型客户案例 — 已获得的供应商奖项。** 过去 12 个月获颁的五项供应商奖项（Intel EPIC、Samsung BEST in Value、Micron Outstanding Supplier、STM Best Silicon Supplier、SSMC Best Supplier）整体确认了 Siltronic 在存储（Samsung + Micron）、逻辑（Intel）、晶圆代工（TSMC-Singapore 的 SSMC 合资公司）、功率（STM）四个客户类型中的认证地位——也就是完整客户横截面 ([Investor Presentation April 2026, p. 23](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Siltronic_InvestorPresentation__.pdf))。最战略性的一项是 **SSMC 奖项**——SSMC 是 TSMC–NXP 在新加坡的合资公司，承接两家的需求；SSMC 认证实际上等于 TSMC 对新加坡 Fab S2 的认证。
+
+*分析师观点：* 客户集中度按 5–10% 单一客户阈值衡量已属**重大风险**——Samsung 几乎确定占收入 >15%（既是合资伙伴、又是最大存储厂、韩国销售线本身已占收入 25.4%），Top-5 可能合计达到 50–60%。这一集中度在硅片行业并不罕见（Shin-Etsu Handotai 与 SUMCO 客户结构相近）——任何一家 Top-5 硅片厂都基本服务相同约 20 家晶圆厂——但仍构成第 9 章的一项独立风险因子。
+
+---
+
+## 6. 行业概览
+
+半导体硅片是整个半导体价值链的结构性基础。根据 Q1 2026 Investor Presentation（p. 5），2025 年电子产业价值链按层级拆分：终端市场 >USD 5 万亿 → 半导体器件制造商约 USD 7,860 亿 → **半导体硅片约 USD 114 亿** → 上游电子级多晶硅 (polysilicon) 约 USD 14 亿 ([Investor Presentation April 2026, p. 5](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Siltronic_InvestorPresentation__.pdf))。即硅片行业约占半导体收入价值的 1.5%，对应客户群约 1,300 家晶圆厂与约 50 家无晶圆设计厂（Nvidia、AMD、Qualcomm、Apple、Broadcom、MediaTek）。上游多晶硅自身是约 EUR 14 亿的市场，由 Wacker Chemie、Hemlock、OCI、Tokuyama、Mitsubishi 共同主导。
+
+**市场规模与增速。** SEMI 行业组织按硅片面积 (wafer area) 跟踪出货量——这是标准量度。2025 年全球硅片面积出货增长 **5.8%**，相比 2024 年的下滑 2.7% 显著反弹 ([Annual Report 2025, p. 23, Industry trends, SEMI press release 10 Feb 2026](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。Omdia 2026 年 1 月预测 2026 年全球面积增速 **+5%**（剔除库存消化效应前），Siltronic 自家终端市场拆分预计 +7%（剔除库存前） ([Investor Presentation April 2026, p. 8](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Siltronic_InvestorPresentation__.pdf))。野村《Greater China Semi 2026-30F Renaissance》（2026-05-21）测算 **2025 年全球半导体材料市场规模约 USD 800 亿**，其中硅片占约 31%（约 USD 250 亿，含 specialty / SOI / 非硅片；主流抛光 + 磊晶硅片约 USD 110–130 亿——即与上文 USD 114 亿口径吻合） ([reports/sector/半导体材料.md](../../sector/半导体材料.md))。
+
+**结构：高度集中、监管密集、资本密集。** 五大厂——Shin-Etsu Chemical、SUMCO、GlobalWafers、Siltronic、SK Siltron——合计控制 "2025 年全球 300 mm 产能约 85%" ([intelmarketresearch.com — Silicon wafer market 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85))。Top-5 合计在硅片总收入中占比约 82% ([intelmarketresearch.com — Semiconductor silicon wafer market 2025-2032](https://www.intelmarketresearch.com/semiconductor-silicon-wafer-market-16631))。Siltronic 自家 Q1 2026 IR 资料则称 Top 5 服务"市场约 75%" ([Investor Presentation April 2026, p. 6](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Siltronic_InvestorPresentation__.pdf))。结构性原因清晰：一座新 300 mm 工厂耗资 USD 20–30 亿（[Siltronic 新加坡 Fab S2 截至 2024 年累计 EUR 20 亿](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Siltronic_InvestorPresentation__.pdf)）；每个节点 / 每个 fab 的客户认证周期 18–24 个月（即新进入者若想服务 TSMC 的 2 nm 量产，必须在 2023 年就已通过相关品类的认证）；多晶硅供应链同样寡头化（Wacker、Hemlock、OCI、Tokuyama、Mitsubishi）。
+
+**未来 5 年的增长驱动：**
+1. **AI 服务器建设** — 单一最大近端需求拉动力，2026e 服务器细分 300 mm 硅片面积增速 +44% YoY ([Q1 2026 Conference Call Presentation, p. 10](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Q1_2026_conference_call_presentation__.pdf))。
+2. **HBM / 先进封装 (advanced packaging)** — 每个 HBM4 堆叠消耗 8–16 颗 DRAM die（传统 DRAM 为 4–8 颗），野村报告还提示 2028–29 年量产的**背面供电 (Backside Power Delivery, BPD, 背面供电)** 工艺需要"两片硅晶圆 + 多次键合 + thinning 到约 1µm"——结构上提升单器件硅片消耗 ([reports/sector/半导体材料.md](../../sector/半导体材料.md))。
+3. **键合 NAND（YMTC Xtacking）+ DRAM-on-logic（WoW，Wafer-on-Wafer）** — 同样在野村报告中被定位为 2026–28 年拐点，会增加单芯片硅片面积。
+4. **EV / 工业功率电子** — 200 mm + PowerFZ® 背后的结构性上行，当前处于库存消化期，但 10–15 年 CAGR 大概率 >8%。
+5. **TSMC Capex 超级周期** — 野村预计 TSMC 2027F Capex 约 USD 700 亿（vs 2024 年约 USD 380 亿），Capex 强度约 50%。对应 300 mm 硅片需求拉动对 Shin-Etsu、SUMCO、GWC、Siltronic 均具结构性意义 ([reports/sector/半导体材料.md](../../sector/半导体材料.md))。
+
+**逆风因素：**
+- **中国 300 mm 硅片产能。** 多家中国厂商（国大硅产 / Guoda Silicon、Zing Semi / 中环领先、ESWIN）正在扩张 300 mm 抛光与磊晶产能；野村报告明确将"中国 300 mm 硅片产能成熟"列为 GWC、Soitec、SUMCO 的 Top-5 风险 ([reports/sector/半导体材料.md](../../sector/半导体材料.md))。Siltronic 管理层补充："现有及新的中国竞争对手可能比预期更早或更大规模扩张产能，威胁我们至少维持市场份额的战略目标" ([Annual Report 2025, p. 40, Competition risk](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。
+- **200 mm 库存消化** — 管理层称 Power 细分库存"持续高位" ([Annual Report 2025, p. 47, Outlook](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。
+- **宏观 / 汇率** — Siltronic 收入约 80% 以 USD 结算，成本以 EUR 为主；EUR/USD 年均汇率从 2024 年 1.08 升至 2025 年 1.13——CFO 指其为 FY25 单一最大逆风 ([Annual Report 2025, p. 26](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。FY26 指引假设 EUR/USD 1.18，意味着进一步压力。
+
+**监管环境。** 硅片制造商面临三类监管：(i) **外资投资审查 (foreign-investment review)** ——2020–22 年 GlobalWafers / Siltronic 收购案是典型案例；德国 BMWi 在 §55 Außenwirtschaftsverordnung (AWV) 外资审查程序下，未能在 2022 年 1 月 31 日截止日前出具无异议证书，交易自动失效 ([Reuters via Nippon.com — GlobalWafers' Siltronic deal fails as Germany misses deadline, 2022-02-01](https://www.nippon.com/en/news/reu20220201KBN2K522P/))；(ii) **半导体先进制造的出口管制** ——美国"外国直接产品规则"和 EU 对应规则对客户级限制不断更新，直接影响 Siltronic 可向哪些中国晶圆厂供货（"日益频繁、快速变化的贸易限制与经济制裁"——[Annual Report 2025, p. 42](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf)）；(iii) **EU 绿色 / CSRD / ESG 规则** ——Siltronic 是 CSRD 适用主体，须按 ISAE 3000 标准由 PwC 审计非财务报告，并依 EU Taxonomy Regulation (Article 8) 与 Responsible Business Alliance (RBA) Code of Conduct 披露 ([Annual Report 2025, p. 61, Combined Non-Financial Statement](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。
+
+**供应商关系。** 最大的结构性投入依赖是多晶硅 (polysilicon)——主要从 Wacker Chemie 在 Burghausen 共址厂区按长期协议采购（同时数个其他 Wacker 生产基地及其他供应商也已通过认证） ([Annual Report 2025, p. 41, Procurement risks](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。FY25 总采购额 **EUR 10 亿**，分布在约 3,600 家供应商上，前 7% 供应商贡献 90% 采购金额 ([Annual Report 2025, p. 86, Procurement and supplier management](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。地域分布：约 40% 亚洲，约 60% 欧洲 + 北美。四大采购品类为多晶硅、设备、服务、耗材。
+
+**行业周期性。** 管理层直言："这些波动的时点与幅度可显著不同。此外，终端市场变动传导至我们生产的时滞可能超过 6 个月" ([Annual Report 2025, p. 20](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。硅片周期下行时滞后终端约 6 个月，上行时滞后约 3–6 个月——这一结构性事实反映在 FY21–25 销售轨迹中：EUR 14 亿 → 18 亿 → 15 亿 → 14 亿 → 13 亿——是 2021 年 COVID 时期半导体景气与 2022–24 年回吐的延迟回声。
+
+---
