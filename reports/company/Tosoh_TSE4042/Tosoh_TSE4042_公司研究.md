@@ -279,3 +279,101 @@ Engineering 集团 (FY25 营收 ¥169.3 bn / OPM 19.9% —— 集团内利润率
 模式很清晰:FY26–28 资本开支约一半投向先进技术 (分离介质 + Tosoh SMD),其余在化学链增长 (MDI / HDI) 与低碳化 (生物质发电) 之间分配 —— 与战略组合再平衡叙事一致。
 
 ---
+
+## 5. 客户与市场进入策略
+
+### 5.1 客户集中度
+
+东曹分部信息附注明确指出披露口径与结果:**"This information is omitted because there are no external customers that account for 10% or more of net sales in the consolidated statements of income."** (因不存在合并收入占比 ≥10% 的外部客户,故省略披露) —— [Tosoh"FY2025 合并经营业绩",p.16 (主要客户信息)](https://www.tosoh.com/File%20Library/Tosoh/News%20Release/Tosoh-Reports-Its-Consolidated-Results-for-Fiscal-2025.pdf)。也就是说,在合并层面没有单一对手方触发 ASC 280 / 日本 GAAP 分部报告 10% 阈值。日本 GAAP Yuho 仅要求 10% 阈值披露,因此前五大客户份额并未单独列示 —— 客户集中度只能从定性叙述 + 地域销售表中按分部层级推断。
+
+不过 *分部层面* 的客户集中度,实质上远高于合并数字所暗示。**Specialty 集团 Advanced Materials 子板块** (尤其是溅射靶材) 销售面对的客户极度集中:全球前 10 大逻辑 / DRAM / NAND 晶圆厂 (TSMC、三星、Intel、SK Hynix、Micron、铠侠 / 西部数据、GlobalFoundries、中芯国际、华虹宏力、长鑫存储) 合计代表 PVD 靶 wafer-starts 可寻址市场约 80%。因此 Tosoh SMD 在子板块内的实际客户集中度即便不触发合并层 10% 阈值 (因 Tosoh SMD 本身仅占集团收入约 5% *Analyst estimate*),在子板块内已属偏高 —— 前 3 大客户可能超 SMD 营收 50%,TSMC + 三星 + Micron + Intel + SK Hynix 合计应当贡献绝大部分订单。*Analyst view:* Tosoh SMD Q2 FY26 ¥19.3 bn 减值符合这一模式 —— 一旦"美国半导体市场"(东曹自述披露原文) 走弱,少数几家客户的去库就足以让 SMD 营收双位数百分比波动。
+
+**Engineering 集团 / Organo Corporation** 客户结构类似:水处理系统订单大、不均匀、集中于全球头部晶圆厂 —— TSMC Arizona、Intel Ohio、Samsung Texas、Micron Boise、长鑫合肥、中芯国际上海、Rapidus 千岁。订单积压可见度高 (多季度 / 多年期合同),但分部内客户集中度高。**Bioscience** 客户群最为分散 —— 生物制药 + 医院诊断合起来代表数千个采购中心,无单一账户构成实质性集中。
+
+```mermaid
+pie
+    title 东曹分部级客户集中度 (Analyst estimate)
+    "前 10 大逻辑 / DRAM / NAND 晶圆厂 (TSMC / 三星 / Intel / Micron / SK Hynix / 铠侠 / GF / 中芯国际 / 华虹 / 长鑫) — Advanced Materials + Engineering" : 35
+    "亚洲聚合物 / 化学品加工企业 — 氯碱 + 石化" : 30
+    "生物制药 + 诊断 — Bioscience" : 12
+    "牙科实验室、光纤厂 — 氧化锆" : 8
+    "其他 (电池厂、炼油催化剂、水泥、食品/医疗包装)" : 15
+```
+
+### 5.2 分销与市场进入策略
+
+东曹运营 **"直销 + 分销网络"混合模式**,按分部不同:
+
+- **化学链 (石化 + 氯碱):** 对日本与亚洲的大型聚合物 / PVC / MDI / 烧碱客户直销,辅以日本综合商社 (三菱商事、双日、丸红) 区域贸易网络供应东南亚、印度、拉美、中东等地的小批量物料。定价基本与石脑油 / 亚洲基准价按月度或季度公式联动 —— 这就是 FY25 → FY26E 预测中可见到的 ±15% 同比营收摆动的来源 (PVC 600-700 美元/吨,较 FY25 745 美元下调;MDI 1,700-1,850 美元,较 FY25 1,930 美元下调,详见 [Tosoh FY26 上半期业绩,p.17 (FY26 预测假设)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf))。
+- **Specialty / Advanced Materials:** 由东曹电子材料事业部 (东京总部) + Tosoh SMD 销售团队 (Grove City + 加州、德州、俄勒冈、亚利桑那区域办公室) 直销给已合格的半导体晶圆厂客户。溅射靶材按 **多年期主供应协议** 销售,合同锁定认证状态 —— 客户不能在不重新认证替代靶材的前提下切换供应商,而重新认证需要数百片测试晶圆 + 6–12 个月与显著的良率风险。这是业务客户粘性护城河的核心:一旦东曹钛靶被认证进入 (比如) TSMC N3 逻辑产线 BOM,直到该产线降产或客户主动启动认证替换,东曹靶就一直留在 BOM 中。
+- **Bioscience:** 由 Tosoh Bioscience Inc. (美国 King of Prussia, PA)、Tosoh Bioscience GmbH (德国 Griesheim)、Tosoh Europe NV (比利时 Vilvoorde) 与 Tosoh China (上海) 直销;在东曹无直接覆盖的市场,以分销商合作补足。HPLC 柱业务按 **目录 + 直接报价模式** 卖给生物制药 R&D 实验室 (小规格分析柱);按 **主供应协议** 卖给商业化生产中的制备级大柱 (大规格、多年期)。AIA 临床诊断按 **"先放仪器、再卖试剂"模式** 销售 —— 仪器经常折价卖给医院检验科,长期通过试剂耗材 (HbA1c 试剂卡盒) 在仪器 5–10 年服务期内回收。经典剃刀-刀片模型。
+- **Engineering / Organo:** 直接项目工程销售给晶圆厂建设方 —— 通常 Organo 在建厂前 12–24 个月中标,按完工百分比法分阶段确认营收。
+
+### 5.3 名义客户 (经新闻 / 案例可核实)
+
+东曹 Yuho 不披露具体客户名称,仅笼统说"半导体行业、电子行业、汽车、制药"。第三方公开渠道可以反推到买方:
+
+- **TSMC、三星、Intel、SK Hynix、Micron、铠侠、GlobalFoundries** 均在野村"大中华半导体 2026-30F"报告中被点名为霍尼韦尔 / JX Advanced Metals / 东曹 / Materion / Plansee / 三井金属矿业 / ULVAC 溅射靶供应群所服务的晶圆厂 ([Nomura"Greater China Semi 2026-30F Renaissance Guide",2026-05-21,Fig 44,p.69 — 本地副本于行业报告](../../sector/半导体材料.md))。具体而言,东曹 Ti / TiN / W-silicide / Mo-silicide 靶在被点名客户的 DRAM 存取晶体管金属化、NAND 字线栅极堆叠、逻辑厂阻挡 / 衬底步骤中均有使用。
+- **Organo Corporation 客户名单 (取自母公司分部披露):** "Large-scale projects, mainly in the electronics industry" —— H1 FY26 节点点名多项日本 + 中国台湾半导体厂建设项目正在进行中 ([Tosoh"FY2026 上半期累计经营业绩",2025-11-04,p.12 (Engineering 分部叙述)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf))。
+- **生物制药 TSKgel 客户:** 辉瑞、罗氏、诺华、赛诺菲、礼来、艾伯维、默克 KGaA、武田 —— 在 Tosoh Bioscience 客户案例研究与 TSKgel SEC 柱使用学术论文共同作者署名中均可识别,基本覆盖全球生物制药生产宇宙。
+
+### 5.4 地域结构与销售渠道含义
+
+FY2025 按地区销售净额:日本 ¥521.5 bn (49%)、中国 ¥153.8 bn (14%)、其他亚洲 ¥236.1 bn (22%)、其他地区 ¥152.1 bn (14%) —— 详见 [Tosoh"FY2025 合并经营业绩",p.16](https://www.tosoh.com/File%20Library/Tosoh/News%20Release/Tosoh-Reports-Its-Consolidated-Results-for-Fiscal-2025.pdf)。日本占比结构性偏高,因为 (a) 氯碱集团 PVC / 烧碱客户集中于本州岛内加工厂,(b) 石化集团主要销售给日本及韩国 / 中国台湾的近邻,(c) Engineering 集团水处理业务按项目所在地确认收入 (目前以日本 + 中国台湾为主)。Specialty 集团销售构成在地理分布上明显更分散 —— Tosoh SMD 美国溅射靶销售归入"其他地区 (美洲)";Tosoh Bioscience 欧洲临床诊断营收归入"其他地区 (欧洲)";Specialty 出口在中国大陆、韩国、中国台湾归入"其他亚洲"。
+
+![东曹按地区销售净额 — FY2024 vs FY2025](charts/tosoh_geographic_mix.png)
+
+资料来源:[Tosoh"FY2025 合并经营业绩",p.16](https://www.tosoh.com/File%20Library/Tosoh/News%20Release/Tosoh-Reports-Its-Consolidated-Results-for-Fiscal-2025.pdf)。
+
+预计 FY2026–FY2028 中长期经营计划窗口期内,地理结构将逐步向"其他亚洲 + 其他地区"倾斜:新越南 Tosoh Polyurethane MDI 分馏装置 (2027 年春) 把聚氨酯营收带入东南亚;Tosoh SMD 扩产 (已完成) 与 FY26-27 分离介质扩产支撑半导体 + 生物制药需求基本在日本以外;希腊 Tosoh Hellas 电解二氧化锰子公司是欧洲一次电池材料的桥头堡。管理层在 FY2026–2028 计划中明确希望以"其他亚洲 + 其他地区"在合并营收中的提升,对冲历来拖累估值的日本本土周期暴露。
+
+### 5.5 合作伙伴生态
+
+值得一提的战略关系:
+
+- **东曹 + Organo Corporation (权益法关联公司,持股 44.1%):** 单一最深关系 —— Organo 是 Engineering 集团核心,东曹持股带有更长的"瑞穗 (Mizuho) 系产业关系"色彩 ([Wikipedia / 公司沿革](https://en.wikipedia.org/wiki/Tosoh))。Organo 与栗田工业是日本两大超纯水龙头,东曹-Organo 关系给东曹电子材料销售团队带来唯一的"进入 Organo 客户项目"通道。
+- **瑞穗银行、三井住友信托银行、MUFG 银行** 为主要贷款行 (FY2025 末:瑞穗 ¥12.5 bn、SMBC ¥10.5 bn、农林中金 ¥8.8 bn、山口银行 ¥8.7 bn、MUFG ¥1.8 bn 余额,详见 [Tosoh 第 126 期事業報告書,p.20](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf)),反映第三方资料提到的瑞穗系附属关系。
+- **分销 / 商社合作:** 三菱商事、双日、丸红等综合商社负责亚洲聚合物 / 化学品分销;Heraeus、Materion 在溅射靶领域是东曹 *竞争* 对手,但在相邻薄膜沉积产品上互供。
+
+---
+
+## 6. 行业概览
+
+### 6.1 半导体材料行业 —— 东曹主要增长终端
+
+按野村"大中华半导体 2026-30F 复兴指南"(2026-05-21,Fig 24-26 / pp.30-32) 框架 —— 本团队跨覆盖区使用的标准买方参照 —— **2025 年全球半导体材料市场约 800 亿美元**,大致按 60% / 40% 比例分布于 IC 制造材料 (硅晶圆、光刻胶 + 辅助化学品、特种气体、CMP 浆料 / 抛光垫、溅射靶、导体 / 介质化学品) 与 IC 封装材料 (基板、引线框、键合线、模塑料、底部填充、焊球) ([Nomura "Greater China Semi 2026-30F Renaissance Guide",2026-05-21,pp.30-32 — 本地副本于行业报告](../../sector/半导体材料.md))。在 IC 制造材料中,硅晶圆占约 31%、光刻胶 + 辅料约 20%、特种气体约 13%、CMP 浆料 + 抛光垫约 7%、溅射靶约 3% —— 也就是按野村口径,全球半导体溅射靶 TAM 约 **16–20 亿美元**,与 [Verified Market Research 2025 估计的 31.6 亿美元](https://www.verifiedmarketresearch.com/product/sputtering-target-material-for-semiconductor-market/) 大致吻合 (差异来自定义:野村口径仅金属靶,VMR 含氧化物 / 氮化物 / ITO + 显示靶外溢)。
+
+行业增速:[Future Market Insights 2025 预测](https://www.futuremarketinsights.com/reports/sputtering-targets-market) 全应用溅射靶市场 **由 2025 年 61.89 亿美元增至 2035 年 85.63 亿美元,CAGR 4.5%** —— 而 *半导体子板块* 增速明显更快 (2026–2030 估计 7–8% CAGR,据 [Verified Market Research 2024-2032 预测 7.4% CAGR,2024 年 17.8 亿美元增至 2032 年 30.7 亿美元](https://www.verifiedmarketresearch.com/product/sputtering-target-material-for-semiconductor-market/)),原因是野村列举的 GAA / BPD / HBM 堆叠驱动:每片晶圆金属沉积步骤增多、金属种类增多 (钴与钼新入混合)、先进节点晶圆投片量上升。野村框架明确把 **GAA (2027 年量产)、Backside Power Delivery (2028–29 量产)、晶圆键合 NAND (2027 量产)、DRAM-on-logic (2028 量产)** 列为再定价溅射靶每片晶圆消耗的技术拐点 ([Nomura"Greater China Semi 2026-30F Renaissance Guide",2026-05-21,Fig 3 / p.4 (技术演进时间表)](../../sector/半导体材料.md))。
+
+### 6.2 行业结构 —— 上游高度集中,细分赛道分散
+
+半导体溅射靶市场 **顶部高度集中、长尾分散**。前 5 大供应商 —— JX Advanced Metals (按 JX 自身综合报告披露约 60%)、Materion (约 11%)、霍尼韦尔 (约 5–8%)、Praxair / Linde Electronics (约 4–6%)、Plansee (约 3–5%) —— 合计约 57% 收入份额 ([Future Market Insights 2025 玩家集中度](https://www.futuremarketinsights.com/reports/sputtering-targets-market))。东曹处于全球第 5–7 位,份额约 3–5% (*Analyst estimate*),并列的还有三井金属矿业 (Proterial / 原日立金属溅射靶业务母公司)、ULVAC,以及快速崛起的中国新进入者 (江丰电子 Konfoong Materials、有研新材 Grikin Advanced Materials、宁波江丰,加韩国 Heesung,以及若干较小的中国省级玩家)。
+
+进入门槛较高:(a) **纯度冶金** (4N 至 6N 基础金属须经电子束熔炼、热 / 冷等静压,经轧制 / 锻造形成微控晶粒,亚 ppm 金属杂质);(b) **多年期晶圆厂认证周期**,对每个 (金属 × 节点 × 工艺平台) 组合分别认证;(c) **本地供给经济** (亚洲晶圆厂偏好亚洲供应商;美国晶圆厂偏好俄亥俄 / 德州供应商;欧洲晶圆厂偏好欧洲供应商);(d) **回收靶的规模经济** —— 使用过 (被溅完) 的靶被回送供应商再加工或重熔,这是一项有规模效应的经济流程,有利于大批量在位玩家。这些门槛是 JX、Materion、霍尼韦尔合计占稳约 75% 份额十年的原因,但并非不可突破:2022–2025 年中国新进入者江丰、有研在中国晶圆厂尾节点市场抢份额就是反证。
+
+### 6.3 行业趋势与驱动
+
+- **GAA + BPD + 先进封装堆叠:** 据野村,2027–2030 年的先进逻辑技术栈 (GAA + Backside Power Delivery + 若量产 CFET + 由 SoIC / CoWoS 推动的先进封装) 较 FinFET 基础上,每片晶圆 PVD 步骤多 20–30% —— 等比例提升溅射靶单片消耗。新 GAA / CFET nanosheet 金属化也带来新的金属混合需求 (更多用于细鳍金属化的钴、用于若干层的钼)。
+- **HBM 堆叠层数 (HBM3E → HBM4 → HBM4E):** 每个 HBM die 都有独立后段金属化;HBM4 (16-Hi) 2026 年量产、HBM4E (20-24-Hi) 2027–28 年量产,即便单位出货量不计入,每 GB HBM 金属沉积单位用量也结构性上升。
+- **中国溅射靶竞争激化:** 江丰、有研及其他中国玩家在中芯国际、长鑫、华虹宏力等国内晶圆厂客户群快速扩张产能 —— 西方 / 日本在位者在中国大陆面临结构性逆风。
+- **美国 CHIPS 法案 + 本土供给偏好:** Tosoh SMD Grove City 俄亥俄布局对应 Intel Ohio / TSMC Arizona / Samsung Texas / Micron Boise 资本开支潮;2025 年 12 月 Tosoh SMD 扩产正是回应。但 FY26 H1 ¥19.3 bn 减值说明时点的不确定性 —— 晶圆厂量产时点滑动,靶需求随之波动。
+
+### 6.4 东曹所处的相邻行业
+
+除半导体溅射靶外,以下相邻行业语境对东曹相关:
+
+- **氯碱 / PVC / MDI (氯碱集团):** 全球数千亿美元的大宗化学行业,由中国主导 (中石化、万华化学、上海石化),日本 / 韩国 / 欧洲玩家通过特种衍生品差异化。MDI 子板块更集中 (万华化学、巴斯夫、科思创、亨斯曼、陶氏、东曹 / NPI、三井化学 — 前 7 大约 85% 全球产能) 且毛利高于大宗氯碱基底。
+- **石化 (石化集团):** 数万亿美元行业,日本结构性弱势于中东与美国页岩气基烯烃产能 —— 这也是东曹选择"专业化战略"作为竞争应对的原因。
+- **生物制药生产工具 (Bioscience):** 80–100 亿美元的 HPLC + 介质 + 诊断耗材行业,年增速 6–9%,主要玩家包括 Cytiva (前 GE Healthcare Life Sciences,现归丹纳赫)、Merck KGaA / MilliporeSigma、赛默飞、东曹、Bio-Rad、安捷伦、沃特世。东曹在 SEC + 离子交换 HPLC 介质中位列前三。
+- **晶圆厂超纯水 (Engineering):** 一座先进节点晶圆厂建设几亿美元 / 年的资本开支项,主要玩家为日本栗田工业 + Organo、法国 Veolia + Suez、美国 Evoqua (现归 Xylem)、Pall (丹纳赫)、Pentair。Organo + 栗田在日本 / 中国台湾 / 韩国晶圆厂项目中份额较大。
+- **牙科陶瓷 + 光纤套管 (氧化锆):** 全球氧化锆粉数亿美元市场,东曹占主导,圣戈班、国瓷材料 (Sinocera) 以及更小的细分专供商提供细分品种。
+
+### 6.5 监管环境
+
+东曹运营在三类监管框架下:
+
+- **半导体材料:** 受美/欧/日出口管制制度 (ITAR、EAR、Wassenaar) 对先进节点材料与设备的限制;美国 BIS 2022 年 10 月 + 2023 年 10 月 + 2024 年扩张规则对若干先进工艺材料向指定中国晶圆厂的销售构成限制。东曹相对暴露中等 —— 溅射靶并未列入最严管制清单,但中美脱钩压力已让东曹客户群"双轨":中国晶圆厂偏好中国溅射靶供应商,美国晶圆厂偏好美国本土 Tosoh SMD。
+- **化学品 (REACH / TSCA / 日本国内 PRTR):** 化学行业常规合规负担 —— 东曹每年提交 TSCA / REACH / 日本国内化学物质管理报告,由 FY2025 KPMG AZSA LLC 审计 (母公司审计费 ¥87 mn,集团合计 ¥266 mn)。
+- **制药材料 (Bioscience):** 用于商业药物生产的分离介质须符合 FDA / EMA / PMDA cGMP 要求;每个药物管线的柱认证周期 12–24 个月。
+
+---
