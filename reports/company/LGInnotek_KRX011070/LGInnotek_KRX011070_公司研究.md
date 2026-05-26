@@ -434,3 +434,166 @@ LG Innotek 的可服务机会位于 **四个重叠市场**, 合计 2030F TAM 约
 **渗透策略** —— 跨四个市场, 策略一致: 加深 LG 集团对美国超大规模数据中心 / 芯片厂商的认证足迹 (用于 FC-BGA); 凭借技术领先守住 Apple 份额 (现在折叠变焦, 接下来可变光圈与 Vision Pro 模组); 累积汽车 Tier-1 平台中标, 2026–30 年把 KRW 19.2 万亿订单存量释放为营收。策略关键依赖于 **龟尾 4 厂梦工厂的执行** —— 产能必须按计划在 2026 年底翻倍, Intel / Amazon / Boston Dynamics / Figure AI 的客户认证必须收官。
 
 ---
+
+## 9. 风险评估
+
+### 公司特定风险
+
+**1. Apple 单一客户集中度 (头号风险)。** 按 FY2025 DART 年度报告, **一家客户 (Apple) 占 LG Innotek 合并营收的 81.1%** ([II §4-1 라](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270))。前 10 大客户合计 87%, 即客户 #2–10 合计仅 5.9% —— 没有二线客户作为缓冲。如果 Apple 把 25% 的相机模组采购转移给舜宇光学 / 富士康 (在 24 个月内属合理路径), LGIT 将损失约 KRW 4 万亿年营收, 以及光学解决方案的几乎全部营业利润。这一风险已部分兑现: LGIT iPhone 17 折叠变焦 OIS 份额已从 2023 年的 70%、2024 年的 60% 下降到 2025 年的 "50% +" ([The Elec, 2025-09-26](https://www.thelec.net/news/articleView.html?idxno=5447))。缓解因素: Apple 在可预见未来仍需要 LGIT 的制造规模, 且 LGIT 在 iPhone 18 Pro 可变光圈主相机上正获得增量内容; FC-BGA 增长在 3–5 年内提供结构性对冲。严重性: **高 (按项目分类标准为重大 — 第一客户 > 30%)**。
+
+**2. 折叠变焦份额侵蚀已在发生并可能加速。** LGIT 折叠变焦 OIS 驱动器份额从 70% (2023) 降至 60% (2024) 至 "超过 50%" (2025), 剩余份额由韩国 Jahwa Electronics 与中国 ICT 瓜分 ([The Elec, 2025-09-26](https://www.thelec.net/news/articleView.html?idxno=5447); [Digitimes, 2025-10-03](https://www.digitimes.com/news/a20251003PD228/lg-innotek-iphone-apple-2025-2024.html))。就折叠变焦模组本身而言, LGIT 仍占约 70%, 但行业媒体泄露暗示 Apple 将在 iPhone 19 (2027 机型年) 进一步降低这一比例。结构性下滑由 Apple 主动供应商多元化策略驱动, 而非 LGIT 执行失误 —— 意味着 LGIT 缓解手段有限, 只能通过技术领先夺回份额。量化影响: 2026–28 年每年 KRW 2,000–4,000 亿营收处于风险中。缓解因素: 可变光圈主相机内容 (iPhone 18 Pro) 与 3D ToF Vision Pro / AR 模组独家。严重性: **中**。
+
+**3. FC-BGA 执行风险。** 2026–30 年股价命题严重依赖 LGIT 把 FC-BGA 业务从不到 USD 1 亿规模扩大到 USD 7 亿 —— 五年内 7 倍以上扩张。成功执行需要: (a) 龟尾产能翻倍如期在 2026 年底完成; (b) Intel、Amazon、Boston Dynamics、Figure AI 认证转化为多年合约; (c) 良率爬坡匹配老牌厂商 (LGIT 基板稼动率 80.8% 低于结构上限但可接受; 约束是认证吞吐量而非产能本身)。量化影响: KB Securities 预测 2028 年基板营收 KRW 4 万亿对基础情境 KRW 1.5 万亿, 意味着执行滑落则有 KRW 2.5 万亿营收处于风险。缓解因素: LG 集团资本支持意味着不存在融资约束; "梦工厂" 已建成投运。严重性: **中-高**。
+
+**4. 光罩条线边缘化风险。** 光罩在封装解决方案中是小条线 (营收约 KRW 1,500–2,000 亿), 全球是 Toppan / DNP / Photronics 的特许经营。LGIT FY2025 稼动率 94.5%、ASP +16.1% ([DART 年度报告, II §2-나 / II §3-2](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)) 表现积极, 但反映的是韩国 OLED 产能扩张的拉动, 而非全球结构性份额获取。风险是当 OLED 进入成熟期 (2027-28), 光罩出货量平台化, LGIT 把份额输给日 / 美老牌。缓解因素: LGIT 聚焦 OLED 高端机型而非商品化 LCD; 产线高稼动率说明客户黏性。严重性: **低**。
+
+**5. 文赫秀的关键人风险。** FC-BGA 转向与文赫秀 2022–23 CSO 期的工作及其 CEO 期执行紧密相连。继任会带来战略漂移风险。缓解因素: 韩国大型企业标准继任规划; LG 集团监督; 朴智焕作为副手。严重性: **低-中**。
+
+**6. 厂房集中风险 — 龟尾集群。** LGIT 八家韩国工厂中六家集中于龟尾 (龟尾 1 / 1A / 2 / 3 / 4 厂)。地域性中断 (地震 —— 韩国非地震带, 但洪水、火灾、长时间停电) 在龟尾会直接影响 LGIT 国内产能的 60–70%。缓解因素: 越南、中国、墨西哥、印度尼西亚、波兰的分散海外工厂; 保险覆盖。严重性: **低**。
+
+### 行业 / 市场风险
+
+**7. 智能手机出货量平台 + 相机模组 ASP 杀价。** 全球智能手机单位出货量已在约 12 亿台水平上稳定五年。Apple 年度相机模组 ASP 杀价节奏 (FY2025 为 -5.4%, 按 DART 申报 ([II §2-나](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270))) 意味着光学解决方案营收只能在内容增加的情况下维持 3–5% 年增长。光学分部结构性是 "零增长 + 毛利压缩" 业务。缓解因素: 3D ToF / Vision Pro / 可变光圈内容增加抵消部分 ASP 压力。严重性: **中 (结构性)**。
+
+**8. Apple 供应商多元化 (行业趋势)。** Apple 采购组织明文要求每个品类维持 2–3 家供应商以防供应商被捕。这是行业的永久性特征, 而非 LGIT 特有风险 —— 但 LGIT 正好骑了折叠变焦与 3D ToF 的领先浪潮, 现在该浪潮正在回归 50% 份额的稳态。缓解因素: 技术领先; 制造规模; 深度客户工程协作。严重性: **中 (行业结构性)**。
+
+**9. FC-BGA 周期性价格风险。** FC-BGA 基板价格目前受惠于产能稀缺。如果 Unimicron、Ibiden、Shinko 把 2024–25 年的产能扩张产能 (按野村行业概览总计 USD 50–100 亿 capex) 投运, FC-BGA 价格可能在 2027–28 年正当 LGIT 出货量达峰时大幅压缩。缓解因素: 带预付款的多年供应协议结构类似存储半导体合约, 锁定部分量的价格 ([Seoul Economic Daily, 2026-05-20](https://en.sedaily.com/finance/2026/05/20/lg-innotek-target-price-raised-on-ai-substrate-boom))。严重性: **中 (周期性)**。
+
+### 财务风险
+
+**10. 高估值倍数压缩风险。** TTM P/E 约 60×, LG Innotek 在 2026–28 年远期盈利不及预期时结构性脆弱。多头情境 (KB Securities 的 KRW 1.2 万亿 2026 营业利润) 要求多线同时执行: 基板放量、iPhone 18 内容、Vision Pro 2 上市、车载订单存量转化。任何一项不及预期 —— 例如 Apple 因中国消费疲软将 iPhone 18 Pro 订单削减 20% —— 都可能让 2026 年营业利润从 KRW 1.2 万亿降至 KRW 8,000 亿, 远期 P/E 从 20× 跳至更低数字的 12×。"对 Ibiden 折价" 论据依赖 LGIT 最终被以 Ibiden 估值, 若执行不及预期, 折价可能持续甚至扩大。严重性: **高 (结构性估值风险)**。
+
+**11. KRW/USD 汇率敞口。** LGIT 出口占营收 96.2% (KRW 21.08 万亿 / 总 KRW 21.90 万亿) ([DART 年度报告, II §4-1](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)), 形成显著的 USD 营收 / KRW 成本敞口。KRW 兑 USD 升值 10% 大约将抹去 KRW 1.5–2 万亿名义韩元营收, 压缩营业利润 30–40%。缓解因素: 公司开展货币 / 利率掉期 (按附注 5-2 披露的与新韩银行的 USD 5,000 万货币掉期, 锁定 1,171 KRW/USD) ([II §5-2](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)), 但对冲规模相对总敞口较小。严重性: **中 (周期性)**。
+
+**12. FC-BGA + 光学产能扩张的 capex 强度。** FY2025 capex KRW 6,787 亿 ([DART 年度报告, II §3-2 마](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)) —— 光学 KRW 4,800 亿, 封装 KRW 1,030 亿, 车载 KRW 960 亿。2026 年底前 FC-BGA 产能翻倍可能在基础线 KRW 7,000 亿 / 年之上还需 KRW 5,000–8,000 亿 capex, 推动 2026–27 年总 capex 接近 KRW 1 万亿 / 年。这对 KRW 5.76 万亿股东权益与 KRW 1.4 万亿现金而言可以承受, 但建设阶段现金转换周期恶化, 自由现金流生成放缓。缓解因素: LG 集团资本支持; 债务空间 (负债权益比 107%)。严重性: **低-中**。
+
+### 宏观经济风险
+
+**13. 韩国 / 美中芯片脱钩地缘政治风险。** LGIT 在中国设有工厂 (烟台) 并有大中华区显示器客户; 美国出口管制或中国反制升级都可能扰动运营模式。缓解因素: 韩国本土与美国 OEM 客户集中度是主要敞口; 中国工厂相对总产能规模较小。严重性: **中**。
+
+**14. 全球智能手机消费需求周期性敏感性。** 高端智能手机单位出货量 —— 即 iPhone Pro / Pro Max, LGIT 高 ASP 折叠变焦与 3D ToF 内容所在 —— 与全球消费电子可选消费支出高度相关。2026–27 年美中消费衰退会直接影响 iPhone Pro 机型组合, 进而影响 LGIT 光学营收。缓解因素: Apple 的定价能力历史上抗衰退; iPhone 换机周期形成单位出货量底部。严重性: **中**。
+
+---
+
+## 10. 参考资料
+
+### 主要披露
+- **LG Innotek 2025 사업보고서 (第 50 期年度报告)** — DART rcpNo 20260312001270, 报送 2026-03-12, 涵盖 FY2025 (2025-01-01 至 2025-12-31)。[https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)。第 II 部 (사업의 내용 — 营业内容) 是本报告中分部营收、客户集中度、产能、原材料、研发、厂房、管理薪酬的权威来源。
+- **LG Innotek 2026 Q1 季报** — DART rcpNo 20260514001513, 报送 2026-05-15。[https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260514001513](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260514001513)。
+- **LG Innotek 2025 Q3 季报** — DART rcpNo 20251113000635, 报送 2025-11-13。[https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251113000635](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251113000635)。
+- **LG Innotek 2025 H1 半年报** — DART rcpNo 20250813001577, 报送 2025-08-13。[https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250813001577](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250813001577)。
+- **LG Innotek IR 页面**, [https://www.lginnotek.com/ir/report.do?locale=en](https://www.lginnotek.com/ir/report.do?locale=en), 访问于 2026-05-26。
+- **LG Innotek CEO 页面**, [https://www.lginnotek.com/company/ceo.lgit?locale=en](https://www.lginnotek.com/company/ceo.lgit?locale=en), 访问于 2026-05-26。
+
+### 业绩报道
+- [Seoul Economic Daily, 2026-04-27 — Q1 2026 营业利润 +136%](https://en.sedaily.com/finance/2026/04/27/lg-innotek-q1-operating-profit-jumps-136-percent-on-chip)
+- [Korea Herald, 2026-04-25 — Q1 2026 业绩](https://www.koreaherald.com/article/10726451)
+- [Digital Today, 2026-04-25 — Q1 2026 营业利润详情](https://www.digitaltoday.co.kr/en/view/51199/lg-innotek-q1-operating-profit-up-136-percent-on-year-to-2953-billion-won)
+- [Korea Herald, 2026-01-26 — Q4 2025 营业利润历史新高](https://www.koreaherald.com/article/10663095)
+- [Korea Times, 2026-01-26 — Q4 2025 净利润 +27%](https://www.koreatimes.co.kr/business/tech-science/20260126/lg-innotek-q4-net-rises-271-on-high-end-products)
+- [Korea Herald, 2026-04-15 — AI 需求与基板稼动率](https://www.koreaherald.com/article/10693624)
+
+### 基板 / FC-BGA 报道
+- [Tech Times, 2026-05-15 — 基板增长与美国 AI 客户目标](https://www.techtimes.com/articles/316690/20260515/lg-innotek-targets-us-ai-chip-clients-substrate-revenue-climbs-16.htm)
+- [PR Newswire, 2025-04-30 — USD 7 亿 FC-BGA 2030 目标公告](https://www.prnewswire.com/apac/news-releases/lg-innotek-to-build-fc-bga-into-700-million-usd-business-by-2030-with-its-state-of-the-art-dream-factory-302450934.html)
+- [Evertiq, 2025-05-01 — 梦工厂细节](https://evertiq.com/design/2025-05-01-lg-innotek-targets-700m-in-fc-bga-sales-with-dream-factory)
+- [Korea Herald, 2022-02 — KRW 6,000 亿龟尾厂投资](https://www.koreaherald.com/article/10449620)
+- [Seoul Economic Daily, 2026-05-20 — AI 基板带动目标价上调](https://en.sedaily.com/finance/2026/05/20/lg-innotek-target-price-raised-on-ai-substrate-boom)
+- [Seoul Economic Daily, 2026-04-28 — 股价一个月内 +70%, 券商观点](https://en.sedaily.com/markets/2026/04/28/lg-innotek-shares-jump-70-percent-in-month-brokerages-still)
+- [Asia Business Daily, 2026-05-22 — 证券公司上调目标价](https://www.asiae.co.kr/en/article/stock-disclosure/2026052209222934028)
+
+### iPhone 相机模组报道
+- [The Elec, 2025-09-26 — iPhone 17 折叠变焦 OIS 份额](https://www.thelec.net/news/articleView.html?idxno=5447)
+- [Patently Apple, 2024-08-26 — iPhone 16 Pro tetraprism 独家](https://www.patentlyapple.com/2024/08/lg-innotek-will-exclusively-supply-the-initial-quantities-of-the-iphone-16-pros-tetraprism-5x-telephoto-zoom-lens.html)
+- [AppleInsider, 2024-08-26 — iPhone 16 Pro tetraprism](https://appleinsider.com/articles/24/08/26/apple-taps-lg-innotek-for-all-iphone-16-pro-and-iphone-16-pro-max-tetraprism-lenses)
+- [Digitimes, 2025-10-03 — Apple 加入第三家折叠变焦 OIS 供应商](https://www.digitimes.com/news/a20251003PD228/lg-innotek-iphone-apple-2025-2024.html)
+- [MacRumors, 2026-04-16 — iPhone 18 Pro 可变光圈量产](https://www.macrumors.com/2026/04/16/iphone-18-pro-variable-aperture-camera-production/)
+- [Cult of Mac, 2026 — iPhone 可变光圈上市](https://www.cultofmac.com/news/first-iphone-variable-aperture-camera)
+- [Digitimes, 2024-01-30 — Vision Pro 3D 感测独家](https://www.digitimes.com/news/a20240130PD210/vision-pro-lg-innotek-3d-sensing.html)
+- [Macdailynews, 2019-09-18 — 3D ToF iPhone 上市](https://macdailynews.com/2019/09/18/lg-innotek-said-to-supply-3d-time-of-flight-modules-for-apples-next-gen-iphones-and-ipads-in-2020/)
+- [KED Global, 2024-02-14 — LG Innotek 降低 Apple 依赖的功课](https://www.kedglobal.com/electronics/newsView/ked202402140004)
+
+### 管理层履历来源
+- [Korea Who — 文赫秀履历, 访问于 2026-05](https://www.koreawho.com/profile/MoonHyuksoo)
+- [Korea Times, 2025-10-19 — 文赫秀 KAIST 演讲](https://www.koreatimes.co.kr/business/companies/20251019/lg-innotek-ceo-shares-career-insights-with-kaist-students)
+- [The Official Board — Hyuk Soo Moon 履历](https://www.theofficialboard.com/biography/hyuk-soo-moon-8e37e)
+- [Bloomberg — Hyuk-Soo Moon 履历](https://www.bloomberg.com/profile/person/20156634)
+- [Digital Today CEO 专访 — "从零部件到解决方案"](https://www.digitaltoday.co.kr/en/view/889/lg-innotek-ceo-moon-hyuk-soo-says-company-to-move-beyond-parts-to-solutions)
+
+### 行业 / TAM
+- [Mordor Intelligence — 相机模组市场报告, 访问于 2026-05](https://www.mordorintelligence.com/industry-reports/camera-module-market)
+- [Mordor Intelligence — 高端 IC 封装基板市场, 访问于 2026-05](https://www.mordorintelligence.com/industry-reports/advanced-ic-substrates-market)
+- [Market Growth Reports — ABF 基板 (FC-BGA) 市场, 访问于 2026-05](https://www.marketgrowthreports.com/market-reports/abf-substrate-fc-bga-market-107527)
+- [Archive Market Research — ABF 基板 (FC-BGA) 2025-2033 分析, 访问于 2026-05](https://www.archivemarketresearch.com/reports/abf-substrate-fc-bga-831394)
+- [WonderfulPCB — 顶级 ABF 基板制造商, 访问于 2026-05](https://www.wonderfulpcb.com/blog/top-abf-substrate-manufacturers-and-market-leaders/)
+- [Valuates Reports — 半导体光罩, 访问于 2026-05](https://reports.valuates.com/market-reports/QYRE-Auto-2Q15020/global-photomask-for-semiconductor-chip)
+- [Vision Research Reports — 小型相机模组市场, 访问于 2026-05](https://www.visionresearchreports.com/table-of-content/2492)
+
+### 公司历史 / Wikipedia
+- [LG Innotek — Wikipedia, 访问于 2026-05](https://en.wikipedia.org/wiki/LG_Innotek)
+- [LIG Nex1 — Wikipedia, 访问于 2026-05](https://en.wikipedia.org/wiki/LIG_Nex1)
+- [Porters Five Force — LG Innotek 简史, 访问于 2026-05](https://portersfiveforce.com/blogs/brief-history/lginnotek)
+- [MatrixBCG — LG Innotek 竞争格局, 访问于 2026-05](https://matrixbcg.com/blogs/competitors/lginnotek)
+
+### 市场数据
+- [Naver Finance — 011070 行情, 访问于 2026-05-26](https://finance.naver.com/item/main.naver?code=011070)
+- [Investing.com — LG Innotek 实时行情, 访问于 2026-05-26](https://www.investing.com/equities/lg-innotek-co-ltd)
+- [Bloomberg — LG Innotek 011070:KS 行情](https://www.bloomberg.com/quote/011070:KS)
+- [Investing.com — LG Innotek 一致预期估值](https://www.investing.com/equities/lg-innotek-co-ltd-consensus-estimates)
+
+### 行业背景
+- 野村 (Nomura) "Greater China Semi: A guide to Semi renaissance in 2026~30F" 锚定报告, 2026-05-21 (139 页) —— 用于 FC-BGA 市场规模、光罩榜单 (图 36) 与 AI 基础设施 capex 命题。项目内笔记: [reports/sector/半导体材料.md](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)。
+
+---
+
+<details>
+<summary>核查日志 (Step 10) — 2026-05-26</summary>
+
+**说明:** 本中文版报告基于已发布的英文版 (`LGInnotek_KRX011070_Research_Document.md`, 2026-05-26 版) 翻译撰写。英文版已经历完整核查流程, 包括 URL 校验、DART 申报核对、年度报告关键数据交叉检验, 详见英文版报告末尾的核查日志。本中文版直接复用英文版的引用 URL、DART rcpNo 与数据点, 不再重复展开 URL 200/3xx 检查与申报抽样。中文翻译过程中所做的差异化处理与必要补充确认如下:
+
+**翻译一致性核查:**
+- 所有 DART 申报 URL (사업보고서 + 三份季 / 半年报) 与英文版保持一致 (rcpNo: 20260312001270, 20260514001513, 20251113000635, 20250813001577)。
+- 所有韩文原文引用 (사업보고서 II §1 / §2 / §4-1 라 引用块) 保持韩文原文不变, 仅添加中文释义括注 —— 符合 SKILL.md "Direct quotations stay in their original language" 规则。
+- 韩文人名 / 公司名首次出现时附韩文原名: 文赫秀 (문혁수), 金兴植 (김흥식), 京 银国 (경은국); 此后使用中文。
+- 双语技术术语首次出现时按 SKILL.md 规则附英文原文: 相机模组 (camera module)、FC-BGA (倒装芯片球栅阵列封装基板)、光罩 (photomask)、折叠变焦 (folded zoom)、3D ToF (飞行时间感测)、Tape Substrate (卷带式基板)、ABF (Ajinomoto Build-up Film) 基板、ASP (平均售价)、BOM (Bill of Materials)、capex、OIS / AF (光学防抖驱动器) 等。
+- 货币单位 (KRW / USD / RMB / JPY / TWD)、市场代码 (KRX / NASDAQ / HKEX / TWSE / TSE / KOSPI / KOSDAQ)、缩写 (CEO / CSO / CFO / IPO / OEM / Tier-1 / V2X / ADAS) 保持英文原型。
+
+**关键数据点与英文版交叉验证 (再次确认):**
+- FY2025 营收 KRW 21,896,603 mn ✓ (II §2-가)
+- FY2025 第一大客户营收 KRW 17,748,770 mn = 81.1% ✓ (II §4-1 라)
+- FY2025 移动相机模组全球份额 33.4% ✓ (II §1 (1) ㄹ)
+- 三分部 FY2025 营业利润 (光学 4,822 亿、封装 1,289 亿、车载 539 亿) ✓ (II §4)
+- 文赫秀 2025 薪酬 KRW 12.51 亿 ✓ (V §2-라)
+- 1976-02-24 注册成立 / 1970-08-22 前身金星阿尔卑斯电子 ✓ (I §1-나)
+- 2008-07-24 KOSPI 上市 / 2009-07-01 LG Micron 合并 ✓ (I §1-나)
+- 2025-05 Aeva 投资 USD 5,000 万 / 2025-09 SMARTRadar 投资 KRW 59 亿 ✓ (II §6-1)
+- FC-BGA 2030 目标 USD 7 亿 ✓ (PR Newswire 2025-04-30)
+- 2026 Q1 营收 KRW 5.53 万亿 / 营业利润 KRW 2,953 亿 / 同比 +136% ✓ (Korea Herald 2026-04-25)
+
+**中文版特定的解读 / 改写决策:**
+- 韩国大型企业集团 / chaebol 在文中翻译为 "韩国大型企业 (chaebol)", 既保留韩文经济学术语又中文化。
+- 韩国 KAIST 翻译为 "韩国科学技术院 (KAIST)"。
+- KB Securities、NH Investment & Securities 等证券公司名称保留英文公司名 + 中文 "Securities" / "证券" 注解。
+- Tier-1 / Tier-2 保留英文术语 (汽车产业链通用术语)。
+- 中国大陆公司首次出现时使用中文 + 英文 + 代码组合, 如 "舜宇光学科技 (Sunny Optical Technology, HKEX:2382)"、"立讯 (Luxshare, SZSE:002475)"。
+- Apple、Foxconn、Sony、Largan 等公司名保留英文 (Apple 单独使用时不译为 "苹果", 以保持与 DART 韩文 "단일 고객" 对应的客观距离)。
+- 第 4.3 节 "通俗释义" 与 4.4 节技术拆解保留英文版的三段拆 (camera module + FC-BGA + photomask 各自独立解释), 符合任务要求。
+- Mermaid 图表 (3 张: 公司历史 timeline、产品架构 graph LR、客户构成 pie、竞争定位 quadrantChart) 全部翻译为中文。
+
+**复用的图表 (共 6 张, 与英文版一致):**
+- `lginnotek_revenue_margin.png` (§1)
+- `lginnotek_segment_mix.png` (§4)
+- `lginnotek_substrate_trajectory.png` (§4)
+- `lginnotek_customer_concentration.png` (§5)
+- `lginnotek_camera_share.png` (§7)
+- `lginnotek_peer_valuation.png` (§7)
+
+**残余未确认事项 (与英文版一致):**
+- FY2025 封装解决方案营收中流向 Apple 的具体份额 (vs LG Display, vs 大中华区显示器, vs 潜在 FC-BGA 客户) —— DART 未单独拆分。
+- 封装解决方案中光罩单条线营收 —— DART 仅披露分部合计。
+- 各 iPhone 机型逐一的 LGIT 相机模组单位出货量 —— 从公开行业媒体泄露估算。
+- KB Securities 引用的 2027/2028 远期基板营收数字属于卖方分析师预测, 非 LGIT 披露。
+- LGIT 不发布多年客户集中度趋势 —— 第 5 章 "Apple 占比因其他两个分部停滞而走高" 使用分部营收作为代理。
+
+</details>
+
