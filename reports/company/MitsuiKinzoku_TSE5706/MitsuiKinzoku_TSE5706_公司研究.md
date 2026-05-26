@@ -101,3 +101,149 @@ timeline
 
 自 **2024 年 6 月** 起，池信担任 **代表董事 / 执行副社长 / 公司经营规划与管理本部本部长** —— 既是事实上的内部 CFO 等价角色，也是 2025–2027 中期计划财务框架（与能登共同制定）的实际设计师。任职新职务时个人持股 **0.01%（约 ¥3.1 亿元市值）** —— 以西方标准偏低，符合工薪经理人而非创业股东的经济模式 ([Simply Wall St — Mitsui Kinzoku management analysis](https://simplywall.st/stocks/jp/materials/tse-5706/mitsui-kinzoku-shares/management))。其 CEO 任前的三大履历板块 —— **铜箔生产战略、金属事业规划、公司经营规划** —— 恰好对应三井金属矿业 2030 年增长轨迹的三大运营支柱：工程材料板块的扩张（铜箔子业务他十年前曾领导）、金属板块的回收 / 精炼生产力（他曾管事业规划）以及公司财务 / 组合框架（2025–2027 计划中正式化的 ROIC-Spread + 业务级别 WACC 模型）。因此本次接班最准确的解读是 **延续 / 执行委托**，而非战略方向调整 —— 池信继承能登写好的剧本，主要任务是兑现 FY2027 里程碑（经常利润 ¥150–160 亿元、工程材料板块 OP 利润率 mid-to-high teens、铜箔产能至 1,200 吨/月 VSP）以及 FY2030 长期目标 ([Integrated Report 2025, p.13 — 2025–2027 MTP financial trajectory](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf))。
 
+## 4. 产品与服务
+
+本节锚定于三井金属矿业自身在 **2025–2027 新中期经营计划**、**Integrated Report 2025（工程材料 / 金属 / 业务创新板块章节）** 与 **FY2025 Results & FY2026 Forecast presentation（工程材料事业部销售明细）** 中发布的板块 / 事业部分类，这三份资料共同替代美国 10-K 的"Item 1 Business"地位。按公司研究 skill 规则，凡是直接引述三井金属矿业本身语言的段落，引用紧贴引文上方；本分析师对份额 / 市场地位的判断标注为 `*分析师观点：*`，并尽量引用公司自身的营销文本（公司在份额披露上罕见地慷慨）或第三方行业资料。
+
+### 4.1 五板块矩阵（公司自身的分类法）
+
+公司按 **2025–2027 中期计划组织结构**（2025 年 4 月生效）划分为五大板块：工程材料、金属、汽配 (Mobility)、业务创新、本部。四个运营板块对应下表中的事业部级产品矩阵。
+
+| 板块 | 事业部 / 主要产品（公司自身语言） | FY2024 销售额 (¥亿) | FY2024 OP 占集团 % | 公司披露的高份额产品 |
+|---|---|---:|---:|---|
+| **工程材料 (Engineered Materials)** | 铜箔事业部（电解铜箔、**MicroThin™** 含载体铜箔、内置电容）；催化剂事业部（汽车、摩托车、通用引擎排气净化催化剂）；工程粉体事业部（导电粉、电子材料超细粉、焊锡粉、雾化粉、**电池材料 (battery cathode)** —— 储氢合金、锂锰氧化物）；稀有材料事业部（钽 / 铌氧化物 / 碳化物、氧化铈 (cerium oxide) 研磨剂、稀土氧化物 / 化合物 / 金属制品）；陶瓷事业部（耐火材料、精密陶瓷 (fine ceramics)、铝水处理系统）；PVD 材料事业部（透明导电薄膜、氧化物半导体靶、**溅射靶 (sputter target)** 材料） | **246.2** | 46.2% | **含载体铜箔全球 95%**（半导体封装）；**高端 VSP™ 全球 40%**（AI 服务器）；**氧化铈研磨剂 40%**（玻璃基板）；**氧化物半导体靶 40%**（LCD）；**催化剂 50%**（摩托车）；**电池材料（储氢合金）30%**（HEV）；**铜粉 30%**（MLCC）；**METALOFILTER® 85%**（铝液过滤） |
+| **金属 (Metals)** | 锌事业部（Zn、Zn 合金、Zn 制品、"高重骨料"）；铅事业部（Pb、Sn、Bi、Sb 三氧化物、Pb 化合物）；铜与贵金属事业部（Cu、Au、Ag、硫酸）；矿产资源事业部（Zn / Pb / Cu 精矿、地热资源） | **326.4** | 51.0% | Zn 49% 国内份额；Pb 50%；Cu 27%；Sn 100%；再生 Bi 61% |
+| **汽配 (Mobility)** | 汽车门锁；压铸件；汽车粉末冶金件；遗留汽车催化剂（Mitsui Kinzoku ACT —— 已于 2025 年 11 月剥离） | **重组中 / 部分剥离** | 衰退中 | — |
+| **业务创新 (Business Creation)** | 全固态电池用 A-SOLiD® 固态电解质；**HRDP®** 半导体芯片贴装可剥离载板；铜浆；CO₂ 制甲醇催化剂（研发中） | 较小（前商业化） | 负（R&D 投入） | A-SOLiD® 全固态电池"关键材料"；HRDP® 客户采用通道延伸至 2030 |
+| **本部 (Corporate)** | 总部 / 财务 / 未分配 | n/a | n/a | n/a |
+
+*来源：[Mitsui Kinzoku Integrated Report 2025, pp.32, 34, 16 — Engineered Materials Sector / Metals Sector / Business Creation Sector divisions and Key Top-Share Products](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf); [FY2025 Results & FY2026 Forecast presentation, pp.8–10, 25 — Segment / Engineered Materials sales](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027)。FY2024 板块比例采用 2025–2027 中期计划重述后的结构。*
+
+### 4.2 综合解读 —— 各事业部在客户工作流中如何互动
+
+工程材料板块是公司估值倍数的来源 —— 板块内五个事业部并非平行的无关业务。它们共享 **三项基础核心技术** ——"分离与精炼、粉体控制、电化学、溶液化学"（与金属冶炼业务 150 年积累的同一技能集），且分布于 **先进电子价值链的相邻环节**：PVD 材料事业部供应在显示背板与半导体晶圆上沉积薄膜的 **溅射靶**；稀有材料事业部供应用于晶圆与下游玻璃基板平坦化的 **氧化铈 CMP 研磨剂 (CMP slurry)**；铜箔事业部供应成为 PCB 与封装基板导体层的 **电解铜箔**；工程粉体事业部供应连接封装与电路板的 **导电铜粉 / 焊锡粉**；陶瓷事业部供应金属处理上游生产设备所用的 **耐火 / 精密陶瓷**。催化剂事业部是工程材料中主要的非电子产品线，是 1966 年从中央研究所起步的传统汽车 / 摩托车催化转化器业务，使用与公司今天金属板块贵金属回收相同的 Pt 族金属溶液化学技术。详见报告末尾的资料引用。
+
+```mermaid
+graph LR
+    A[三井金属矿业<br/>核心技术] --> B[分离与精炼]
+    A --> C[粉体控制]
+    A --> D[电化学]
+    A --> E[溶液化学]
+
+    B --> F[金属板块<br/>Zn/Pb/Cu/PGM 冶炼<br/>E-scrap 回收]
+    C --> G[工程粉体<br/>Cu / 焊锡 / 电池]
+    C --> H[稀有材料<br/>CeO2 研磨剂<br/>Ta/Nb 氧化物]
+    D --> I[铜箔<br/>MicroThin™ + VSP™<br/>+ 嵌入式电容]
+    E --> J[PVD 材料<br/>ITO + 氧化物半导体<br/>溅射靶]
+    E --> K[催化剂<br/>排气净化 + CO2 制甲醇]
+
+    F --> L[E-scrap → 再生 Cu/Au/Ag<br/>回流冶炼网络]
+    I --> M[FC-BGA / IC 基板 / HDI PCB]
+    J --> M
+    G --> M
+    H --> N[半导体晶圆 CMP / 玻璃基板研磨]
+    K --> O[汽车 / 摩托车 OEM + 未来 CCU]
+    M --> P[AI 服务器 / GPU / 智能手机 PCB]
+```
+
+*来源：分析师据 [Mitsui Kinzoku Integrated Report 2025 pp.4, 32, 34 — Core technologies and divisional structure](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf) 以及 p.35 E-scrap 回收网络描述绘制。*
+
+### 4.3 铜箔事业部 —— 战略主轴（工程材料 45% 营收、FY2025 增长故事 100% 由其驱动）
+
+铜箔事业部 FY2025 实现 **¥135.0 亿营收（同比 +44.8%，从 ¥93.2 亿增长而来）** 与大约 **¥30 亿营业利润**（估算；公司仅披露事业部销售额，板块级 OP 由分析师估算 —— 依据是公司将 FY2024 到 FY2025 板块 OP 同比增加额 ¥14.8 亿归因于铜箔的描述）([FY2025 Results & FY2026 Forecast presentation, p.25 — Engineered Materials Sales by Division; FY2025 Q2 Telephone Conference Q&A, p.12 — "14.8-billion-yen increase in profit"](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))。事业部含两大主要产品系列加上较小的嵌入式电容产品线。
+
+![三井金属矿业 工程材料各事业部营收 FY2024 → FY2025](../../charts/mitsuikinzoku_engmat_division.png)
+
+*来源：[Mitsui Kinzoku FY2025 Results & FY2026 Forecast presentation, p.25 — Engineered Materials Sales by Division (Copper Foil, Catalysts, Engineered Powders, Others)](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027)。四个事业部 FY2025 全部同比增长，其中铜箔领跑 +44.8% YoY，催化剂 +30.1% YoY（PGM 价格成本传导部分解释了催化剂的高增长）。*
+
+#### 4.3.1 MicroThin™ —— 超薄铜箔（含载体，全球 ~95% 份额）
+
+> [MicroThin™ 产品页 —— "MicroThin™ is a two-layer copper foil consisting of a firm 18µm carrier foil and an ultra-thin copper foil of 5µm or less attached with a release"](https://em.mitsui-kinzoku.com/douhaku/en/technology/microthin)
+
+> "MicroThin™ is an extremely thin electrodeposited copper foil with a carrier, combining a copper foil thickness ranging from 1.5 μm to 5 μm suitable for forming fine circuits, and has been traditionally mainly used for **semiconductor package substrates** and **motherboards for smartphones**. Demand for MicroThin in non-smartphones, especially in data centers and other communication infrastructure, is expected to continue to increase in the long-term." ([MicroThin™ technology page](https://em.mitsui-kinzoku.com/douhaku/en/technology/microthin))
+
+**中文释义：** MicroThin™ 是一片 18µm 厚的载体铜箔 (carrier foil) + 一层 1.5–5µm 的超薄铜箔 (ultra-thin Cu foil) 经过剥离层 (release layer) 黏合而成的"两层结构"(two-layer composite)。基板厂 (substrate maker) 拿到 MicroThin 后，把它整体压合到 ABF 这种介质层 (dielectric, 味之素积层膜 / Ajinomoto Build-up Film) 上，**再把 18µm 厚的载体铜箔剥掉** —— 留在 ABF 上的就是那一层 1.5–5µm 的超薄铜箔，可承载细线路 / 细间距电路 (fine line / fine pitch circuits)。这解决了传统薄铜箔的根本问题 —— 厚度 <5µm 时铜箔在面板级基板线上变得无法可靠搬运（像保鲜膜一样卷曲、起皱），而 18µm 载体在压合工序中提供刚性支撑。没有 MicroThin 的工艺，就**无法做出 AI 加速器、GPU、服务器 CPU、现代智能手机 AP（应用处理器）所用的 FC-BGA 封装基板（倒装球栅阵列封装基板）所要求的 L/S（线宽 / 线距）<10µm / <10µm 的细线路**。旗舰应用是整个 AI 加速器宇宙赖以构建的 **ABF 基板** —— 每一颗 Hopper / Blackwell 级 NVIDIA GPU、每一颗 TPU 级定制 ASIC、每一颗前沿 CPU 都坐在带有 MicroThin™ 作为导体层的 ABF FC-BGA 基板上。另一主要应用是 **HDI（高密度互连）PCB** 用于旗舰智能手机 —— iPhone 级旗舰主板依靠类似的细线路技术。
+
+*分析师观点：* 三井金属矿业的 MicroThin™ 在"超薄含载体铜箔"品类中持有 **~95% 全球份额** —— 这一份额由公司自身 Integrated Report 披露 ([Integrated Report 2025, p.32 — Key Top-Share Products: "Copper foil with carrier film 95% global"](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf)) —— 在准商品材料品类中极不寻常，外部分析者将其定性为"准垄断" ([SemiconSAM, "Copper Foil: Mitsui's near-monopoly is creating a supply shortage", 2025](https://www.semiconsam.com/p/copper-foil-mitsuis-near-monopoly))。护城河类型是 (i) **独有的剥离层化学工艺** —— 载体铜箔与薄铜层之间的粘合需要在数千米长、>1 米宽的卷材上均匀，使基板厂可以干净剥离而不撕裂；这项工艺约花了 20 年的工艺工程才打磨成熟；(ii) **客户认证锁定** —— 一旦基板厂（Ibiden、Shinko Electric、Unimicron、Nan Ya PCB、Kinsus、AT&S）将 MicroThin 认证进其基板工艺，切换成本极高，认证周期需 12–24 个月；(iii) **规模经济** —— 三井 >1 米宽幅产线和上尾工厂的累计产能带来的成本优势使有利可图的二供入场极难。最直接的对标竞品是 **JX Advanced Metals 的 JX-Cu 含载体铜箔（JX Metals JTC 系列）** —— 该品类的日本 #2，但份额仅个位数 ([JX Advanced Metals corporate materials product page](https://www.jx-nmm.com/english/))。韩国对手 **Iljin Materials**（现并入 Lotte Energy Materials）历史上聚焦锂电池铜箔，而非 MicroThin 等价的 HDI / 封装类别。
+
+#### 4.3.2 电解铜箔 VSP™ —— HVLP3+ 档 AI 服务器 PCB 用（高端档全球 ~40% 份额）
+
+> [VSP™ Production Capacity Enhancement release, 2025-08-20 — "Mitsui Kinzoku's VSP™ copper foil for high-frequency circuit boards has been used in servers, routers, switches and other high-performance communication infrastructure equipment, since it greatly contributes to the reduction of transmission loss in printed circuit boards at high frequency signal bands. Currently, its demand is acceleratingly growing faster than originally planned for AI server-related applications, particularly Mitsui Kinzoku's VSP™ HVLP5 under the transition from the development phase to the mass-production phase, and further expansion is expected to the future."](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=ImEZB60e3oE%3D&tabid=278&mid=824&TabModule1277=0)
+
+**中文释义：** VSP™ 是一种电解铜箔 (electrodeposited Cu foil)，其哑光面（粗糙面，用于抓合介质层）经特殊工艺处理至 **极低表面粗糙度** —— 行业按哑光面 Rz（峰谷粗糙度）划分档次。常规 ED 铜箔 Rz 约 6–10 µm（粗糙度高）；VLP（Very Low Profile，低轮廓）为 2–4 µm；HVLP（Hyper Very Low Profile，超低轮廓）<1.0 µm；三井的旗舰 **HVLP5（和下一代 HVLP4）** 将 Rz 压至 0.5 µm 以下 ([Altium / Zach Peterson, "Types of PCB Copper Foil for High-Frequency Design"](https://resources.altium.com/p/types-pcb-copper-foil-high-frequency-design); [HVLP market research, 2024](https://dataintelo.com/report/global-hvlp-hyper-very-low-profile-copper-foil-market))。物理机理 —— 在高频段（100 GHz+）电磁信号因集肤效应 (skin effect) 主要沿导体表面传输，任何表面粗糙度都直接转化为传输损耗 (transmission loss / insertion loss)。对一条 56 GBd 或 112 GBd 的 AI 服务器背板 SerDes 通道，从 VLP 档转到 HVLP5 档可使插入损耗降低 15–25% —— 决定了长 PCB 走线下信号是否能闭环。旗舰应用为 **AI 服务器 PCB 背板**，承载加速器板间 SerDes 通道（NVIDIA H200 / B200 / GB200 NVL72 机架、AMD MI300/MI355、Google TPUv5/v6、AWS Trainium2、Meta MTIA）以及相关 **交换芯片**（Broadcom Tomahawk 5/6、NVIDIA Quantum InfiniBand）。次要应用为 **路由器 / 交换机 / 5G 基站设备**，信号完整性驱动溢价定价。
+
+![三井金属矿业 VSP 电解铜箔产能路线图](../../charts/mitsuikinzoku_vsp_capacity.png)
+
+*来源：[Mitsui Kinzoku — "VSP™ Electro-Deposited Copper Foil for High-Frequency Circuit Boards Production Capacity Additionally Enhanced", news release 2025-08-20, pp.1–2](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=ImEZB60e3oE%3D&tabid=278&mid=824&TabModule1277=0)；长期 1,200 吨/月目标见 [Record of FY2025 Q2 Telephone Conference, p.11, Nov 2025](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=rXEqWGnOMII%3D&tabid=204&mid=1027&TabModule903=0)。2025 年 8 月公告明确 2026 年 3 月达 720 吨/月、2026 年 9 月达 840 吨/月；2025 年 11 月电话会议进一步追加 2025–2027 计划期间向 1,200 吨/月迈进的层次。*
+
+*分析师观点：* 三井金属矿业 **高端 VSP™ 在 AI 服务器相关的 HVLP3+ 档持有 ~40% 全球份额** —— 公司在 Integrated Report 中明确披露"High-grade VSP™ 40% / For AI servers" ([Integrated Report 2025, p.32 — Key Top-Share Products](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf))。VSP™ 量产规模在过去 18 个月内激增：从 **扩产前的 420 吨/月** 提升至 **2025 年 8 月的 620 吨/月**，按 2025 年 8 月扩产公告将于 2026 年 3 月达 720 吨/月、**2026 年 9 月达 840 吨/月** —— 公司又在 **2025 年 11 月 11 日** 进一步公告 **长期目标 1,200 吨/月** ([VSP™ Capacity Enhancement release, 2025-08-20](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=ImEZB60e3oE%3D&tabid=278&mid=824&TabModule1277=0); [Q2 FY2025 Telephone Conference, p.11 — 1,200 t capacity](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=rXEqWGnOMII%3D&tabid=204&mid=1027&TabModule903=0); [SMM commentary on the expansion](https://news.metal.com/newscontent/103558198))。产能分布于 **台湾工厂（Mitsui Copper Foil Taiwan）至 2026 年 3 月约 600 吨/月** 与 **马来西亚工厂（Mitsui Copper Foil (Malaysia) Sdn Bhd）约 120 吨/月** —— 地理分散有意降低台海单点失败风险。护城河结构与 MicroThin™ 类似但份额稍弱，原因是 VSP™ 直接面对 **JX Advanced Metals 的 JX-EFL HVLP 铜箔、Furukawa Electric 的 HVLP 档次产品、KCFT / Lotte Energy Materials（韩）、Iljin Materials（韩）以及中国新进者 Jiujiang Defu、Wason Copper Foil、Nuode（诺德股份）** 的竞争 —— 这些对手当前主要在 HVLP3 以下档次，但低档价格压力会逐渐向上传导。HVLP3+ 铜箔的最直接对手是 **JX Advanced Metals (TSE:5016；前身为 JX Nippon Mining & Metals；自 ENEOS Holdings 拆出，IPO 于 2025-03)** —— 高端 HVLP 铜箔的日本 #2 ([JX Advanced Metals electronic materials](https://www.jx-nmm.com/english/))。**需求预测：到 2030 年全球 HVLP3+ 铜箔需求约 2,400 吨/月**（行业第三方）([Dataintelo HVLP Copper Foil Market Research Report 2034](https://dataintelo.com/report/global-hvlp-hyper-very-low-profile-copper-foil-market))，意味着三井金属矿业 2026 年 9 月的 840 吨/月产能将占未来市场的约 35%，而 1,200 吨/月扩产公告则将该比例提升至约 50%。
+
+#### 4.3.3 标准 ED-Cu 箔与嵌入式电容
+
+标准电解铜箔业务（非 HVLP 应用：智能手机子板、汽车 PCB、消费电子 PCB）加上 **嵌入式电容 (embedded capacitor)** 薄膜电容材料合计构成铜箔事业部约 30–35% 的营收。该子线 **并非增长引擎** —— 韩国 / 中国厂商在标准档次的竞争已使过去 5 年毛利率压至商品档水位，管理层在 2025–2027 计划中明确表示要 **把产品组合向 HVLP4 / HVLP5 / MicroThin 倾斜**，而非扩张标准档产能 ([FY2025 Q2 Telephone Conference Q&A, p.12–13 — "increase the proportion of higher value-added products within the VSP™ category"](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=rXEqWGnOMII%3D&tabid=204&mid=1027&TabModule903=0))。嵌入式电容产品是细分黏合箔 + 薄膜介质的特殊变体，在高端主板内部直接植入去耦电容 —— 是营收较小但具防御性的特色定位。
+
+### 4.4 催化剂事业部 —— 汽车催化剂 (automotive catalyst) 与排气净化（摩托车催化剂全球 ~50% 份额第一）
+
+> [Integrated Report 2025, p.32 — Engineered Materials Sector divisions list](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf):
+> "Catalysts Division — Catalysts for detoxifying exhaust gas (for automobiles, motorcycles, and utility engines)"
+
+催化剂事业部 FY2025 实现 **¥120.6 亿营收（同比 +30.1%，从 ¥92.7 亿增长）** ([FY2025 Results presentation, p.25 — Engineered Materials Sales by Division](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027)) —— 但同比增长中相当部分来自 PGM（铂族金属）成本传导，而非单位销量增长，因为三井金属矿业按 LBMA 市价对 PGM 含量进行成本加成计价。
+
+**中文释义：** 三元催化转化器 (three-way catalytic converter / TWC) 装在每一辆汽油 ICE 车辆的排气管上，将 NOx + CO + 未燃烧碳氢化合物转化为 N₂ + CO₂ + H₂O。活性材料是分散在 **蜂窝陶瓷 (ceramic honeycomb monolith) 载体** 上的 **铂族金属（Pt / Pd / Rh）涂层 (washcoat)**。三井金属矿业是与 N.E. Chemcat 和 Cataler 并列的日本三大涂层制造商之一；全球市场则由"西方三巨头" **Johnson Matthey (英国)、BASF (德国)、Umicore (比利时)** 主导，乘用车汽车催化剂全球市场约 70% 集中在其手中。三井最强势的定位在 **摩托车催化剂** —— Honda、Yamaha、Suzuki、Kawasaki 是全球摩托 OEM 主导者，日本供应链偏好倾向三井 —— 以及 **通用 / 小引擎催化剂**（链锯、发电机、割草机）。2025 年 11 月剥离的 **Mitsui Kinzoku ACT**（泰国汽车门锁业务）是 Mobility 板块退出而非催化剂退出；催化剂业务本身在 FY2025 已通过厂房搬迁费 ¥3 亿元正在重新布局 ([FY2025 Q2 Telephone Conference, p.10 — "relocation costs of the catalysts business plant in Thailand"](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=rXEqWGnOMII%3D&tabid=204&mid=1027&TabModule903=0))。
+
+*分析师观点：* 三井金属矿业公告 **摩托车催化剂全球 ~50% 份额**，依据是 Integrated Report 中的"Catalyst for exhaust purifier — 50% / For motorcycles" ([Integrated Report 2025, p.32](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf)) —— 鉴于日本在全球摩托 OEM 中的主导地位，这一数字可信。在更大的乘用车汽车催化剂市场，公司主要是日本 OEM（Toyota、Honda、Nissan）的 tier-2 供应商，份额并未达到摩托车的水平。位于美国肯塔基州 Frankfort 的 Mitsui Kinzoku Catalysts America 工厂（2013 年建成）为公司提供北美布点 ([Lane Report, "Mitsui Kinzoku Catalysts America to open plant in Frankfort", 2013-08](https://www.lanereport.com/23557/2013/08/mitsui-kinzoku-catalysts-america-to-open-plant-in-frankfort-create-50-jobs/))。最直接的对手产品：**Johnson Matthey 三元和 SCR 催化剂（TWC、JM catalyst family）** ([Johnson Matthey Clean Air Catalysts](https://matthey.com/en/products-and-markets/other-markets/clean-air-solutions))；**BASF 的 PremAir® 和 FourFlex® 三元催化剂** ([BASF Mobile Emissions Catalysts](https://basf-catalystsmetals.com/industries/automotive-transportation/mobile-emissions-control-catalysts/mobile-emissions-motorcycle-and-general-engine-catalysts))；**Umicore 的汽车催化剂**。长周期风险是 BEV 替代 —— 纯电动汽车无需催化剂，板块将在 2030 年代随 BEV 渗透率提升而进入长期衰退；对冲点是全球摩托车催化剂市场继续增长（印度、印尼、越南排放法规收紧 + ICE 摩托需求稳定）以及新兴的 **混合动力催化剂** 机会（混动车型仍需 TWC，且混动至 2030 年仍在抢占市场）。
+
+### 4.5 工程粉体、稀有材料、陶瓷、PVD —— 配套的特种材料业务
+
+工程材料板块内四个较小事业部 FY2025 合计营收 **¥72.9 亿元**（工程粉体 ¥40.9 亿元、其他 ¥32.0 亿元 —— 是稀有材料 / 陶瓷 / PVD 的合成）([FY2025 Results presentation, p.25 — Engineered Materials Sales by Division](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))。每个事业部都是具备防御份额的特色业务，其中数个直接命中野村 2026-05-21 大中华半导体报告的半导体材料长期重估论。
+
+> [Integrated Report 2025, p.32 — Engineered Materials Sector divisions list](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf):
+> "**Engineered Powders Division** — Conductive powders, ultrafine powder for electronic materials, solder powder, atomized powder, battery materials (hydrogen storage alloy, lithium manganese oxide)
+>
+> **Rare Material Division** — Oxidized/carbonized tantalum and niobium, cerium oxide abrasives, rare earth products (oxides, rare earth compounds, metal products, rare earth salts, processed products)
+>
+> **Ceramics Division** — Refractory materials, fine ceramics, molten aluminum treatment systems
+>
+> **PVD Materials Division** — Transparent conductive thin film applications, oxide semiconductor applications, sputtering target materials"
+
+**工程粉体 —— 电池材料与 MLCC 铜粉。** 该事业部最具战略意义的产品线是 **混合动力车用镍氢电池（NiMH）储氢合金**（三井声称约 30% 全球份额）。Toyota 的混合动力系统在多个车型中继续使用 NiMH 化学体系作为启动电池（该化学体系在此应用上比锂离子更耐热），而三井金属矿业是 AB5 型储氢合金的全球两到三大供应商之一。第二条战略产品线是 **多层陶瓷电容（MLCC）用铜粉** —— 用作村田、TDK、三星电机 MLCC 内电极（声称约 30% 份额）—— 这是与 ADAS / EV / 5G 电子单车 / 单设备用量相关的长周期增长业务。
+
+**稀有材料 —— CMP 与玻璃研磨用氧化铈研磨剂。** 三井金属矿业披露 **玻璃基板用氧化铈研磨剂 ~40% 全球份额** ([Integrated Report 2025, p.32](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf)) —— 这一定位与野村板块综述提到的 **CMP（化学机械抛光）研磨液 (CMP slurry)** 生态部分重合。氧化铈是 **LCD / OLED 玻璃基板研磨**（沉积步骤前显示玻璃的最终精修）的工艺主力，历史上也是早期 **硅晶圆 CMP** 关键研磨剂（虽然今天大多被 Cabot / Fujimi / Versum 的二氧化硅 / 氧化铝研磨液替代，但氧化铈在 STI / 氧化层 CMP 上仍保有细分定位）。**钽 / 铌氧化物** 子产品线虽规模较小但毛利率高，用于 **MLCC 阳极**、**特种光学玻璃**、**铌酸压电体**。
+
+**陶瓷 —— METALOFILTER® 与耐火材料。** METALOFILTER® 铝液过滤产品 —— 在铸造前用于清除铝液中夹杂物 —— 依据 Integrated Report 持有 **~85% 全球份额** ([Integrated Report 2025, p.32](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf))。这是服务于全球铝铸造行业（汽车轮毂、易拉罐、结构铸件）的细分但具防御性的特色定位。
+
+**PVD 材料 —— 溅射靶与 ITO 靶（野村 Fig. 44 涉及的供应线）。** PVD 材料事业部产出三大主要产品族：**透明导电薄膜靶（主要为 ITO —— 氧化铟锡 —— 用于 LCD / OLED / 触控面板背板的溅射靶）**、**氧化物半导体靶（如 IGZO / In-Ga-Zn-O —— 高分辨率 LCD / OLED 显示背板的标准有源层材料）** 在 LCD 应用中持有 **~40% 全球份额**、以及用于半导体晶圆制造的 **溅射靶材料** ([Integrated Report 2025, p.32 — "Oxide semiconductor target material 40% / For liquid crystal displays"](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf); [Nomura "Greater China Semi 2026-30F" anchor report, Fig. 44, p.30 — sputter materials supplier league](https://www.nomuraconnects.com/))。公司还运营一条 **使用再生铟的 ITO 靶产品线** —— 在公司内部 LCA 体系下被认证为"环境贡献产品"之一 —— 用以化解中国对铟出口管控引起的长期供应链风险。
+
+*分析师观点：* 三井金属矿业的 PVD / 溅射靶业务 **份额与战略份量弱于铜箔业务** —— 与 **JX Advanced Metals（半导体溅射靶全球 #1，~60% 份额）、Tosoh Corporation (TSE:4042，高端金属合金靶)、Materion (NYSE:MTRN，高端材料靶)、Honeywell、ULVAC、Praxair S.T. Technology、Heraeus** 不在同一竞争梯队。公司定位在 **氧化物半导体（IGZO）与 ITO 靶** 等特色细分加上规模较小的金属合金靶 —— 公司是野村报告 Fig. 44 标注的供应商，但在溅射靶供应链中并非最具战略意义的名字。战略意义体现在 **上游技术读出** —— 三井金属矿业的 PVD 材料 know-how 是氧化物半导体 / 显示背板 / 未来 BPD（背面供电）相关材料形态的领先指标；作为独立营收业务的投资意义则较弱。
+
+### 4.6 金属板块 —— 冶炼 + 回收网络（FY2025 ¥376.7 亿营收、¥70.8 亿 OP）
+
+金属板块是公司 1874 年源头业务，至今仍是营收主力 —— FY2025 实现 **¥376.7 亿（合并营收的 49.7%）和营业利润 ¥70.8 亿（合并 OP 的 54.1%，部分由库存效应驱动）** ([FY2025 Results presentation, pp.9, 14 — Metals sector breakdown](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))。板块运营 **日本国内七大冶炼厂** —— 神冈（岐阜，Zn-Pb）、八户（青森，Zn-Pb-ISP）、竹原（广岛，Cu）、日比/玉野（冈山，与 JX 合资 Cu）、彦岛（山口，Cu/Pb）、串木野（鹿儿岛，Au/Ag）、三池（福冈，Cu/Pb 飞灰回收）—— 共同构成管理层称为"冶炼网络"的体系，能够工业规模处理复杂多金属原料流（电子废料 E-scrap、含 Sn/Sb/Bi 杂质的铅精矿渣等）。
+
+**国内市场份额（Integrated Report 披露）：** 三井金属矿业是 **日本最大锌生产商（49%）** ([Integrated Report 2025, p.34](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf))，锌产品中 **再生原料占比 50%**，铅产品中 **再生占比 69%** —— 全球非铁冶炼商中极少能比肩的回收强度。铅事业部产出 Pb（50% 国内份额）、Sn（100% —— 日本唯一主要 Sn 精炼商）、Bi（国内回收 Sn / Bi 流中 61% 再生份额）、Sb 化合物。铜与贵金属事业部产出 Cu（27% 国内份额）、Au、Ag、以及来自铜电解粘液 (slime) 的 PGM 副产品流。矿产资源事业部运营 **秘鲁 Huanzala 锌-铅矿**（公司主要海外矿业资产，1968 年起投产）与小规模 **地热资源** 业务。
+
+*分析师观点：* 金属板块是公司的 **商品周期性** 部分，长期来看难以重估超过其常态化 PE 约 10 倍。FY2025 经常利润 ¥75.1 亿元中约 **¥25–30 亿元为非经常性的库存 / 汇率 / 铅品质组合效应**，将在 FY2026 反转 ([FY2025 Results presentation, pp.15–16 — Metals difference analysis](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))；按 FY2026 假设金属价格（LME 锌 $3,000/t、铅 $2,000/t、铜 $4.54/lb、JPY 150/USD）的底层经常利润约 ¥20–25 亿元 —— 公司将其指引为"真实利润"基准，并据此设定 FY2030 金属业务 **¥20 亿元实际 P&L 基础** 利润目标。因此该板块战略意义不在于账面利润，而在于：(a) **E-scrap 回收能力** —— 随着 2020 年代后期全球再生非铁金属供应（来自报废电子产品、EV 电池、铅酸电池）持续增长，三井金属矿业的七厂网络足以处理单一金属冶炼厂无法处理的复杂多金属原料流；以及 (b) **PGM 回收流** 反哺汽车催化剂闭环。日本非铁冶炼同业最接近的可比公司有 **Pan Pacific Copper / JX Advanced Metals（Cu 冶炼 + PGM）、Mitsubishi Materials (TSE:5711, Cu 冶炼 + 水泥 + 高级材料)、Sumitomo Metal Mining (TSE:5713, Ni 冶炼 + Cu + Au + 电池正极材料)、Toho Zinc (TSE:5707, Zn)、DOWA Holdings (TSE:5714, Zn-Pb + 高级材料)**。
+
+### 4.7 汽配板块 —— 已剥离 ACT，残余压铸 / 粉末冶金
+
+汽配板块是 2025–2027 计划组合理性化的主要"被处置者"。**Mitsui Kinzoku ACT Corporation**（泰国总部的汽车门锁 + 中控锁子公司，FY2024 营收约 ¥107 亿元）已于 **2025 年 11 月 4 日完成出售** 给 **Inteva Products**，处置录得 ¥18.8 亿元特别损失 ([FY2025 Q2 Telephone Conference, pp.2, 7 — Mitsui Kinzoku ACT transfer; FY2025 Results presentation p.26 — Loss on sale of shares of ACT Corporation ¥18.8 bn](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))。残余汽配板块包括 **压铸件**（用于 Toyota / Honda / Nissan 的引擎和变速箱铸件）、**粉末冶金件**（变速箱和引擎用烧结部件）以及 **汽车排气催化剂** 子线（重组后归入工程材料，不属于汽配）。板块当前营收约 ¥35 亿元，结构性低毛利率；管理层已暗示在 2025–2027 计划推进中可能进一步剥离 / 整合。
+
+### 4.8 业务创新板块 —— A-SOLiD®、HRDP® 与 CO₂ 制甲醇
+
+业务创新板块属于公司"双元（ambidexterity）"框架中的"探索"侧 —— 当下绝对营收很小，但任一旗舰开发产品达到商业化规模都具有战略期权价值。
+
+> [Integrated Report 2025, p.30 — Business Creation Sector strategy](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf):
+> "**A-SOLiD®** — All-solid-state batteries are expected to be the next generation of storage batteries. In FY2021, we started to produce and supply A-SOLiD®, a solid electrolyte that is a key material for all-solid-state batteries… we plan to start operation of a line with four times the initial production capacity in the second half of this year."
+
+> "**HRDP®** — Product development using our HRDP®, a special carrier for next-generation semiconductor chip mounting, has been consistently commencing at many customers, including composite chip module and IC chip mounting device manufacturers. It is highly evaluated as contributing to shorter cycle times and higher yields in the production processes of next-generation semiconductor packages."
+
+**A-SOLiD®** 是用于全固态锂电池的 **硫化物基固态电解质 (sulfide-based solid electrolyte)** —— 与 Toyota 和 Samsung 公开承诺 2027–2030 年 EV 应用商业化的同类材料属于同一大类。三井金属矿业是全球三到四家能在量产规模上提供可行硫化物电解质的厂商之一（其余包括 Mitsui Chemicals、Resonac 的氢氧化钙钛矿电解质、Toyota 自研材料）。板块已被列入 METI（日本经济产业省）"确保蓄电池稳定供应"专项名单，获得补贴和供给侧协调资源。
+
+**HRDP® (High Resolution De-bondable Panel)** 是用于下一代半导体芯片贴装的特种载板 —— 战略意义在于 **玻璃芯基板 (glass-core substrate) / FOPLP（Fan-Out Panel-Level Packaging，扇出型面板级封装）** 工艺，需要将一面板的裸 die 在载板上重构、加工，然后在后续封装步骤中剥离。该产品于 2025 年 10 月从业务创新板块转移至工程材料板块（同时转移 ¥1 亿元相关成本）—— 信号是公司认为 HRDP® 即将进入规模化商业化阶段。*分析师观点：* HRDP® 若成功，将是公司对野村板块报告中玻璃芯 / FOPLP / 先进封装命题的直接敞口。客户管线含"复合芯片模组与 IC 芯片贴装设备制造商" —— 公司未具名，但暗示涵盖日本 OSAT 与设备客户 ([Integrated Report 2025, p.30](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf))。
+
+**CO₂ 制甲醇催化剂** —— 在公司印度催化剂生产据点研发中，作为 2025–2027 计划碳中和主题的一部分；距离营收贡献仍有数年 ([Integrated Report 2025, p.20 — CCU (Carbon Capture and Utilization) themes](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf))。
+
+### 4.9 综合 —— 旗舰业务与 12 个月内的关键动作
+
+当前驱动三井金属矿业投资命题的旗舰 1–3 业务确立无疑：(1) **MicroThin™ 含载体铜箔** ~95% 全球份额；(2) **电解铜箔 VSP™ HVLP3+ 档次** ~40% 高端档全球份额，产能向 1,200 吨/月扩张；(3) **催化剂事业部** 在摩托车催化剂全球 ~50% 份额。前两项 FY2025 合计实现 **¥135 亿元营收（同比 +45%）**，承担了公司未来三年几乎所有盈利增长。过去 12 个月内具体支持该旗舰组合的公司动作包括：(a) **2025 年 8 月 20 日 VSP™ 铜箔产能扩张公告**（420 → 840 吨/月，经台湾 + 马来西亚布局）；(b) **2025 年 11 月 11 日 VSP™ 后续产能公告**（1,200 吨/月长期目标）；(c) **2025 年 10 月商号缩短** 为 "Mitsui Kinzoku Company, Limited"；(d) **2025 年 11 月 4 日剥离 Mitsui Kinzoku ACT**（泰国汽车门锁业务）—— 将资本再分配至工程材料增长方向；(e) **2025 年 10 月 HRDP® 从业务创新板块迁入工程材料板块**，信号是前商业化状态 ([FY2025 Results presentation, p.26 — transient factors; FY2025 Q2 Telephone Conference pp.8, 11 — HRDP transfer and VSP capacity actions; VSP capacity release of 2025-08-20](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027); [VSP™ Production Capacity Enhancement release 2025-08-20](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=ImEZB60e3oE%3D&tabid=278&mid=824&TabModule1277=0))。
+
