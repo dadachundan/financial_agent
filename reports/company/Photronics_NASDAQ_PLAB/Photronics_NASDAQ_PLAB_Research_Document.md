@@ -420,6 +420,60 @@ If the global photomask TAM grows at ~5–6% CAGR through 2030 (consensus midpoi
 
 12. **Semiconductor and FPD industry cyclical demand.** Photomask demand is loosely correlated with semi capex and design-tape-out velocity, both of which are cyclical. The 2022-2024 industry downcycle showed up in PLAB's mainstream IC line (−18% over two years). A renewed cycle downturn — particularly an AI-capex-led pullback in advanced-node tape-out volume — would compress revenue and margin simultaneously. **Severity: low-medium.** Mitigants: diverse customer base (636 customers) and balanced IC/FPD mix dampens cyclicality vs. a pure-play foundry.
 
+---
 
+## 10. References
+
+Consolidated, deduplicated list of every source cited inline in this report. Organized primary-to-secondary: SEC EDGAR primary filings first (the documentary record of issuer disclosure), then 8-K material events, then issuer press releases and IR-controlled web content, then sector / industry research, then peer issuer cross-references, then market-data and pricing sources. Each entry is a clickable markdown link with the document title in its original form.
+
+### 10.1 SEC EDGAR primary filings (Photronics, Inc. — CIK 0000810136)
+
+Resolved via the EDGAR submissions JSON at `https://data.sec.gov/submissions/CIK0000810136.json`.
+
+- [Photronics 10-K for fiscal year ended October 31, 2025](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm) — filed 2025-12-17, accession `0001140361-25-045801`, primary document `ef20057458_10k.htm`. The single most-cited document in this report — anchors Sections 1, 2, 4, 5, 6, 7, 8, and 9. Item 1 Business (Industry, Markets, Competition, R&D, Sales and Marketing, Resources, Properties, Segment), Item 1A Risk Factors, Item 5 Market for Registrant's Common Equity and Issuer Purchases, Item 7 MD&A (Results of Operations, Liquidity and Capital Resources), and Note 6 (PDMCX JV) and Note 10 (Revenue Disaggregation) are the primary anchors.
+- [Photronics 10-Q for quarterly period ended February 1, 2026 (Q1 FY26)](https://www.sec.gov/Archives/edgar/data/810136/000114036126009004/plab-20260201.htm) — filed 2026-03-11, accession `0001140361-26-009004`, primary document `plab-20260201.htm`. Confirms Q1 FY26 revenue +6.1% YoY (first positive YoY print since FY23) and the high-end IC +19% / mainstream FPD +51% mix-shift evidence cited in Section 1.
+- [Photronics 2026 DEF 14A Proxy Statement](https://www.sec.gov/Archives/edgar/data/810136/000153949726000750/n5545_x1-def14a.htm) — filed 2026-02-23, accession `0001539497-26-000750`, primary document `n5545_x1-def14a.htm`. Source for the founder and CEO biographical detail in Section 3 (page 9 director biographies for Constantine S. Macricostas and George C. Macricostas), as well as the governance committee structure and the Macricostas Family Foundation reference.
+
+### 10.2 SEC EDGAR 8-K material events (Photronics, Inc.)
+
+- [Photronics 8-K dated May 28, 2025 — Item 5.02 CEO transition](https://www.sec.gov/Archives/edgar/data/810136/000114036125020569/ef20049681_8k.htm) — accession `0001140361-25-020569`, primary document `ef20049681_8k.htm`. The official disclosure of George C. Macricostas's appointment as Chairman & CEO and Frank Lee's transition to PDMC Taiwan presidency. Source for the CEO biographical material in Section 3 and the CEO-transition-risk discussion in Section 9 risk 4.
+
+### 10.3 Issuer press releases (Photronics IR — GlobeNewswire)
+
+- [Photronics Announces Executive Officer Appointments — Eric Rivera elevated to President in addition to CFO (2026-01-13)](https://www.globenewswire.com/news-release/2026/01/13/3217819/0/en/Photronics-Announces-Executive-Officer-Appointments.html) — Section 2 Recent Developments.
+- [Photronics Appoints Jeff Catlin Senior Vice President, Global Sales (2026-01-08)](https://www.globenewswire.com/news-release/2026/01/08/3215308/0/en/Photronics-Appoints-Jeff-Catlin-Senior-Vice-President-Global-Sales.html) — Section 2 Recent Developments and Section 5 Go-to-Market.
+- [Photronics Receives Advanced Mask Writer, Expanding AMOLED Leadership (2026-03-31)](https://www.globenewswire.com/news-release/2026/03/31/3265409/0/en/Photronics-Receives-Advanced-Mask-Writer-Expanding-AMOLED-Leadership.html) — Section 2 Recent Developments, Section 4.5 FPD high-end, Section 6 growth drivers, Section 7 competitive advantages, and Section 8 SOM.
+
+### 10.4 Sector / industry research
+
+- [Nomura, "Greater China Semi: A guide to Semi renaissance in 2026~30F" (sector note, 2026-05-21) — locally cached anchor reference](/Users/x/projects/financial_agent/reports/sector/半导体材料.md) — anchor sector context document. Referenced in this report for: photomask industry sizing (p. 18-30), merchant-vs-captive split (p. 18-30), EUV supplier dynamics (p. 38-39), Hoya's ~80% EUV mask blank share (p. 18-30), and TSMC-style local-supply rebalance dynamic applied analogously to China-domestic fabs (p. 12-14). The underlying primary sources synthesized in the Nomura note include SEMI's annual Photomask Equipment & Materials reports and Yole Group's annual Photomask Industry reports.
+- [SEMI (Semiconductor Equipment and Materials International) — corporate site (anti-bot block on direct page fetch; referenced via Nomura anchor)](https://www.semi.org/en) — industry-association source for the annual Photomask Equipment & Materials Report cited in Section 6 industry sizing. Subscription required for full report; abstract/summary is the public-facing extract referenced through the Nomura sector note.
+- [Yole Group — corporate site (anti-bot block; referenced via Nomura anchor)](https://www.yolegroup.com/) — referenced for annual Photomask Industry Report. The specific report citation is subscription-bound; the Nomura sector note synthesizes Yole's industry sizing and used as the verifiable anchor.
+
+### 10.5 PLAB earnings narrative — locally cached multi-year SEC summary
+
+- [Photronics multi-year SEC narrative — generated from `/sec/` infrastructure via `sec-report-summary`](/Users/x/projects/financial_agent/reports/earnings/PLAB_20260525.md) — internal report aggregating per-filing highlights and year-over-year change narrative across PLAB's recent 10-K filings. Referenced for FY26 capex telegraphing, OBBB Act tax-law impact disclosure, PSMC license renewal (July 2025), and the noncontrolling-interest split (DNP's $53.8M share of consolidated net income in FY25).
+
+### 10.6 Peer photomask supplier IR / corporate sites (Section 7 Competitive Landscape)
+
+- [Toppan Holdings — Microelectronics business](https://www.toppanholdings.com/en/about/business/electronics/) — referenced for the closest competitive product position at ≤28nm DUV mask line (Section 4.3) and as the largest global merchant photomask supplier by revenue (Section 7 competitive map).
+- [Dai Nippon Printing (DNP) — Electronics segment](https://www.global.dnp/biz/electronics/) — referenced for DNP's photomask business as the second-largest global merchant supplier and as PLAB's JV partner inside Taiwan and China (Section 4.3, Section 7 competitive map). DNP is named verbatim in PLAB's 10-K Competition section ("Dai Nippon Printing Co., Ltd (outside of Taiwan and China)").
+- [Hoya Corporation — Electronics business](https://www.hoya.com/en/business/) — referenced for Hoya's EUV mask blank and EUV mask leadership (~80% global blank share). Hoya is named verbatim in PLAB's 10-K Competition section.
+- [LG Innotek — corporate site](https://www.lginnotek.com/) — referenced for high-end FPD competitive overlap in Korea (Section 4.5). LG Innotek is named verbatim in PLAB's 10-K Competition section.
+- [SK-Electronics Co., Ltd. — corporate overview](https://www.sk-electronics.co.jp/eng/) — referenced for FPD and mainstream IC overlap (Section 4.5). SK-Electronics is named verbatim in PLAB's 10-K Competition section.
+- [Shenzhen Newway Photomask Making Co., Ltd. — corporate site](http://www.newwaymask.com/) — referenced for China-domestic mainstream IC competition (Section 4.4). Newway is named verbatim in PLAB's 10-K Competition section. (Note: HTTP fetch timed out during verification — site may be intermittently reachable; URL preserved as the issuer's named-competitor reference.)
+
+Additional competitors named in PLAB's 10-K Competition section but without separate corporate-site citations in this report (their function in the analysis is solely to confirm PLAB's verbatim competitor list, not to provide independent product evidence): Compugraphics International, Ltd.; Shenzhen Qingyi Photomask, Ltd.; Taiwan Mask Corporation; Tekscend Photomask.
+
+### 10.7 Market-data and valuation sources (Section 1 Valuation snapshot)
+
+- [Stockanalysis.com — PLAB overview](https://stockanalysis.com/stocks/plab/) — source for current price (~USD 51.5), market cap (USD 3.03B), TTM EPS (USD 2.33), TTM P/E (22.1×), TTM P/S (~3.5×), 52-week range (USD 32.0–53.0), and IPO date (March 1987).
+- [Stockanalysis.com — PLAB financials (cash flow page)](https://stockanalysis.com/stocks/plab/financials/) — source for the FY21 / FY22 historical capex baseline figures used in the Section 8 capex profile chart.
+- [Yahoo Finance — AMAT key statistics](https://finance.yahoo.com/quote/AMAT/key-statistics/) — TTM P/E peer benchmark for Applied Materials (~21×). Note: direct curl access returns 200 only with a browser user-agent (UA-block on default user agents); the URL is browser-verifiable.
+- [Yahoo Finance — LRCX key statistics](https://finance.yahoo.com/quote/LRCX/key-statistics/) — TTM P/E peer benchmark for Lam Research (~28×). Same browser-UA caveat as AMAT.
+- [WSJ market data — Toppan Holdings (7911 TYO)](https://www.wsj.com/market-data/quotes/JP/XTKS/7911) — source for Toppan TTM P/E (~12×) referenced in Section 1 peer comparison. WSJ returns 401 to scripted curl probes (anti-bot); URL is browser-verifiable.
+- [WSJ market data — Dai Nippon Printing (7912 TYO)](https://www.wsj.com/market-data/quotes/JP/XTKS/7912) — source for DNP TTM P/E (~14×). Same WSJ caveat.
+- [Bloomberg — PHLX Semiconductor SOX Index quote](https://www.bloomberg.com/quote/SOX:IND) — sector-average P/E (~28×) context. Bloomberg returns 403 to scripted curl probes (anti-bot); URL is browser-verifiable.
+- [NASDAQ — PLAB market activity profile](https://www.nasdaq.com/market-activity/stocks/plab) — listing-exchange profile referenced in the header. Returns 000 to default curl (HTTP/2 stream termination — anti-bot); URL is browser-verifiable.
 
 
