@@ -103,3 +103,129 @@ Reeder 在 GlobalFoundries 之前的履历则横跨 CEO 级运营职位与多家
 
 Loy 任期内两笔决定性 M&A——**2014 年的 ATMI 收购**（约 $11.5 亿）与 **2022 年的 CMC Materials 收购**（EV $65 亿）——合在一起，把 Entegris 从一家不到 $10 亿规模的过滤与搬运专家，转型为一家 $30 亿规模、多元化的电子材料平台。Loy 同时自 2013-07 起任 SEMI（全球电子制造供应链行业协会）董事，并曾任主席直至 2022-12 ([Entegris 2025 10-K, Executive Officers](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。执行董事长身份让 Loy 持续介入行业层面的协调与长期 M&A 管道——他不是一位象征性的离任 CEO，而是公司在战略层面的实质性锚定。
 
+## 4. 产品与服务
+
+第 4 节是后续所有章节的分析基础——讲清楚 Entegris **物理上做出了什么产品**、每个产品在晶圆厂工艺流程中的位置在哪、护城河在哪里。Entegris 在 FY25 10-K Item 1 业务章节按 **半导体制造过程的 8 个工艺步骤** 组织其产品叙事——其产品被消耗于：光刻 (Photolithography)、蚀刻与光阻剥除 (Etch and Resist Strip)、沉积 (Deposition)、离子注入 (Ion Implant)、化学机械抛光 (CMP)、晶圆与光罩搬运 (Wafer and Reticle Transport)、化学品输送 (Chemical Handling)、晶圆与封装测试 (Wafer and Package Testing) ([Entegris 2025 10-K, Item 1 — The Semiconductor Ecosystem](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。本节按顺序拆解每个步骤，锚定到 10-K 的原文产品描述，并以一整条 "晶圆穿越晶圆厂" 的串联视角作收。
+
+### 4.1 10-K 中的产品 × 工艺步骤矩阵
+
+下表完整复刻 10-K 中的矩阵组织方式，并对每条产品线标注它主要落在 MS 还是 APS 分部。
+
+| 晶圆厂工艺步骤 | Entegris 产品族 | 所属分部 |
+|---|---|---|
+| 光刻 (Photolithography) | 液体过滤、超高纯包装、高精度分配系统 | APS |
+| 光刻 (Photolithography) | 气体微污染控制 | APS |
+| 蚀刻与光阻剥除 (Etch & Resist Strip) | 选择性蚀刻化学品（含 3D-NAND、GAA） | MS |
+| 蚀刻与光阻剥除 (Etch & Resist Strip) | 蚀刻后配方清洗液 | MS |
+| 蚀刻与光阻剥除 (Etch & Resist Strip) | 过滤纯化、精密工程涂层 | APS / MS |
+| 沉积 (Deposition) | 先进前驱体材料 (CVD、ALD、PVD) | MS |
+| 沉积 (Deposition) | 过滤纯化（气、液两种） | APS |
+| 离子注入 (Ion Implant) | 通过 Safe Delivery Source (SDS®) 与真空致动钢瓶 (VAC) 输送的注入气体 | MS |
+| 离子注入 (Ion Implant) | 静电吸盘、低温电浆涂层（用于 IMP 工艺机台） | APS |
+| CMP | 抛光液 (W、Cu、氧化物、阻障层 Ta、Mo、Al、SiC、GaN) | MS |
+| CMP | 抛光垫 | MS |
+| CMP | CMP 后清洗化学品 | MS |
+| CMP | 抛光液过滤器与制程监控装置 | APS |
+| 晶圆 / 光罩搬运 (Transport) | FOUP、晶圆载具、SMIF pod、EUV reticle pod | APS |
+| 化学品输送 (Chemical Handling) | 桶装、柔性包装、编码连接器、IntelliGen® 分配系统 | APS |
+| 化学品输送 (Chemical Handling) | 超纯阀件、接头、管路、传感器 | APS |
+| 晶圆 / 封装测试 (Test) | 探针卡 / 测试座清洁耗材、聚合物产品 | APS |
+
+资料：[Entegris 2025 10-K, Item 1 — The Semiconductor Ecosystem](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)。分部归属来自同一文件分部章节。
+
+### 4.2 综合 —— 一片晶圆走完整个晶圆厂的视角
+
+要理解为什么晶圆厂愿意从一家供应商采购这么宽的产品组合，可以跟随一片 300mm 晶圆走完十天左右的处理流程。晶圆抵达时坐在一只 Entegris **FOUP** 里——这只密封聚合物盒承载它从硅基板供应商一路送达晶圆厂。在光刻单元，一组 Entegris **液体过滤器与 IntelliGen® 分配系统** 把光阻 (photoresist) 无污染地涂布到晶圆上；一只 Entegris **气体微污染过滤器** 确保扫描机周围的空气化学背景低于 ppt 量级。蚀刻段，Entegris **选择性蚀刻化学品** 雕出图形；**配方清洗液** 剥除残留物。沉积段，一种 Entegris **CVD 或 ALD 前驱体**（例如钼或钨前驱体）经由 Entegris **气体过滤器** 送达腔体，铺出 Å 量级精确的薄膜。CMP 段，Entegris **抛光液**（来自 CMC 资产）与 **抛光垫**（来自 CMC 资产）平坦化薄膜；下游 Entegris **抛光液过滤器**（传统 Entegris 过滤业务）在颗粒重新落回晶圆之前拦截聚集的颗粒；Entegris **CMP 后清洗液** 除去抛光液化学残留。然后整个循环重复——先进逻辑器件典型需要 **800–1,200 个工艺步骤**。在后段，Entegris **EUV 光罩盒** 保护承载光刻图案的光罩；Entegris **探针卡清洁耗材** 维持测试座的接触界面以验证晶粒功能。
+
+这种 "可组合性"——抛光液 + 抛光液过滤器 + CMP 后清洗 + 抛光液监控——是 CMC Materials 收购的核心整合逻辑。10-K 直接如此表述：*"With CMC Materials, we will be able to better serve our customers, invest more in engineering, research and development and bring complementary, co-optimized solutions to market faster"* ([Entegris 2025 10-K, Item 1 — Acquisition rationale](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。没有任何竞争对手能从一家供应商提供 CMP "抛光—清洗" 循环的全部四个环节。
+
+```mermaid
+graph LR
+    A[FOUP 晶圆载具] --> B[光刻: 过滤器 + 分配 + 气体过滤]
+    B --> C[蚀刻: 化学品 + 清洗 + 涂层]
+    C --> D[沉积: 前驱体 + 过滤器]
+    D --> E[离子注入: SDS 气体 + 静电吸盘]
+    E --> F[CMP: 抛光液 + 抛光垫 + 清洗 + 抛光液过滤器]
+    F -.重复 800-1200 步.-> B
+    F --> G[测试: 探针卡清洗 + 光罩盒]
+```
+
+### 4.3 光刻材料 —— 过滤作为护城河
+
+> *"Photolithography is a process used to print complex circuit patterns onto wafers. The wafer is coated with a thin film of light-sensitive photoresist, exposed to light, and developed to create the pattern. Our products used throughout this process include: Liquid filtration, high-purity packaging and high-precision dispense systems that ensure pure, accurate and uniform distribution of contamination-free photoresists onto the wafer, enabling optimum yields; and Gas microcontamination control solutions that eliminate airborne contaminants that can disrupt the photolithography processes."* —— [Entegris 2025 10-K, Item 1](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)
+
+**通俗解释：** 光阻 (Photoresist, PR, 光刻胶) 是 ASML EUV 扫描机曝光晶圆时记录芯片图案的感光薄膜。PR 化学品中一颗超过 ~10nm 的悬浮粒子，或晶圆厂空气中几个 ppt 的胺类杂质，就能毁掉潜像并报废晶粒。Entegris 不生产 PR 本身（那是 Tokyo-Ohka / JSR / Shin-Etsu / Sumitomo 形成的寡占领域）——Entegris 做的是 **把颗粒从 PR 中过滤出来的滤芯**（PR 在分配到晶圆瞬间通过过滤器）、**保持 PR 从制造商到晶圆厂全程洁净的高纯度包装**、**把化学品均匀涂布到旋转晶圆上的 IntelliGen® 精密分配阀**，以及 **维持扫描机周围洁净室空气化学背景的气体微污染过滤器**。随着 EUV（尤其是当前的 Low-NA EUV 与即将量产的 High-NA EUV）把关键尺寸缩到 8nm 以下，颗粒容忍度大致按尺寸的立方收紧——也就是说，**光刻单元污染控制每片晶圆的重要性是上升而非下降的**，即便 PR 本身正在迁移到 Lam 的干式光阻或金属氧化物光阻化学体系。
+
+*分析师观点：* Entegris 的光刻单元业务是整个组合中护城河最深的一块。滤芯膜化学（PFA 基础、不对称孔结构）、IntelliGen® 阀的精度，以及与全球三、四家光刻胶供应商的工艺整合，共同构建出延续数十年的客户关系和高昂的切换成本。10-K Competition 章节点名的光刻过滤竞争对手包括 **Pall Corporation (隶属于 Danaher Corporation)** 与 **EMD Performance Materials division of Merck KGaA** ([Entegris 2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))；中国厂商 **科百特 (Cobetter Filtration)** 是 10-K 唯一点名的中国本土同业，专门针对相同的膜类别 ([Entegris 2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。
+
+### 4.4 蚀刻与光阻剥除 —— 用于 3D-NAND 与 GAA 的选择性化学品
+
+> *"During the etch process, thin film areas are selectively removed from the wafer surface to create the desired circuit pattern. The hardened resist must then be removed and the etched area cleaned using high-purity chemicals. Our products used during and after etch include: Selective etch chemistries enabling high aspect ratio structures, including 3D-NAND and gate-all-around (GAA) devices; Formulated cleaning solutions for photoresist and post-etch residue removal; Filters and purifiers that ensure purity of cleaning chemistries and achieve desired etch yields; and Precision-engineered coatings that protect equipment surfaces from corrosive chemistries and erosion while minimizing particle generation."* —— [Entegris 2025 10-K, Item 1](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)
+
+**通俗解释：** 蚀刻化学品（etch chemistries, 刻蚀化学品）是能选择性溶解某一种材料——硅、氮化硅、氧化硅、钨或钼——而让 *相邻的* 材料完好的反应性液体和气体（"选择比"，selectivity）。对 3D NAND 而言，晶圆厂需要把 200+ 层交替的 SiN/SiO₂ 堆叠刻出一个从顶到底贯穿的笔直深孔 **(高纵横比刻蚀, High-Aspect-Ratio Etch, HAR)**。选择比必须接近完美，否则孔会"上宽下窄"导致存储单元失效。对 GAA 逻辑而言，制造商需要选择性蚀刻 SiGe 沟道 *而保留 Si 纳米片* 完好——这是一类 2nm 级特征下与 HAR 平行的化学难题。Entegris 的 **配方清洗液** 随后剥除蚀刻副产物以及残留 PR。**精密工程涂层**（来自 ATMI 历史的能力）以喷涂方式覆盖在腔体内壁，保护蚀刻设备免受腐蚀。
+
+*分析师观点：* 蚀刻化学品段落比光刻过滤更竞争——FY25 10-K Competition 章节列出的主要对手包括 **EMD Performance Materials division of Merck KGaA**（原 Versum）、**Air Liquide 先进材料部门**、**安集科技 (Anji Microelectronics, Shanghai)**、以及 **林德 (Linde plc)** ([Entegris 2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。差异化关键在于与刻蚀机台厂商（Lam Research、Tokyo Electron）的工艺整合度。Entegris 的优势是 "捆绑"：一个为特定 Lam KIYO™ 腔体认证的配方清洗液，加上确保它持续保持洁净的过滤器。单一化学品供应商难以匹配这套深度。
+
+### 4.5 沉积 —— 钼 (Mo) 替代潮中的前驱体
+
+> *"During the deposition process, certain materials are transferred to the wafer surfaces through physical vapor deposition, or PVD, chemical vapor deposition, or CVD, and atomic-layer deposition, or ALD. Our products are critical to enabling new device architectures and ensuring device performance and manufacturing yields. These products include: Advanced precursor materials that meet the semiconductor industry's composition, uniformity and thickness requirements for deposited films; and Filtration and purification products that remove contaminants during deposition, reducing wafer defects."* —— [Entegris 2025 10-K, Item 1](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)
+
+**通俗解释：** 原子层沉积 (ALD, 原子层沉积) 通过交替脉冲两种气态 **前驱体 (前驱体)** 一原子层一原子层地构筑薄膜。前驱体是一种为该目标定制设计的有机金属分子——例如用于栅氧 ALD 的铪 amide，或用于先进 NAND / DRAM 中钼字线工艺的钼氧氯化物。化学性质特殊、纯度要求极致（金属杂质要求 ppb 以下），前驱体的蒸气压 / 挥发性 / 分解行为都必须为特定机台 recipe 量身调校。10-K 明确点出 **钼转型**：*"As leading semiconductor manufacturers implement molybdenum into advanced nodes, Entegris is uniquely positioned to support this transition and to solve challenges associated with integrating a new material through our expertise and solutions in precursors, deposition, etch, CMP consumables and contamination control"* ([Entegris 2025 10-K, Item 1](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。在亚 3nm 逻辑与 400+ 层 NAND 中，Mo 是最可能替代钨作为接触金属 / 字线金属的候选——因为 Mo 在所需的薄膜厚度下电阻率更低；Entegris 是少数几家拥有完整 Mo 工作流的供应商——Mo 前驱体 + Mo 蚀刻化学品 + Mo CMP 抛光液 + Mo CMP 后清洗。
+
+*分析师观点：* 沉积前驱体业务在行业上是高度集中化的——FY25 10-K 列出的竞争对手包括 **Air Liquide 先进材料部门**、**EMD Performance Materials (Merck KGaA)** 与 **林德 (Linde plc)** ([Entegris 2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。上文描述的 Mo 工作流是真正差异化的，也是管理层近期电话会议中最常被讨论的结构性增长动力 ([ENTG Q4-FY25 Earnings 8-K, 2026-02-10](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000009/entgq42025ex991.htm))。
+
+### 4.6 离子注入 —— SDS® 气体输送即整个业务护城河
+
+> *"Ion implantation is a repeated process that introduces dopants into semiconductor wafers to enhance conductivity. Our products used during ion implant include: Implant process gases and mixtures delivered through our Safe Delivery Source (SDS) and Vacuum Actuated Cylinders (VAC) systems for safe, effective and efficient delivery; and Electrostatic chucks and proprietary low-temperature plasma coatings for core components critical to ion implantation equipment."* —— [Entegris 2025 10-K, Item 1](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)
+
+**通俗解释：** 离子注入气体本质上是 *剧毒*：三氟化硼 (BF₃)、砷化氢 (AsH₃)、磷化氢 (PH₃)——皆有毒、自燃，在低浓度即可致死。**Safe Delivery Source® (SDS®)** 系统——ATMI 的发明、入市已超过 25 年——把注入气体吸附在亚常压气瓶内部的固态吸附剂上。气瓶在密封状态下处于真空；即便破裂，气体也不会涌入晶圆厂。**真空致动钢瓶 (Vacuum Actuated Cylinders, VAC)** 是面向不可吸附气体的并行技术。Entegris 是事实上的行业标准 SDS 供应商——每家主要离子注入机台厂商（Applied Materials、Axcelis）都把 SDS 列为安全输送选项。**静电吸盘 (ESC, 静电吸盘)** 与 **低温电浆涂层**（用于离子注入机台）是独立但相关的业务——属于腔体配件销售而非耗材。
+
+*分析师观点：* SDS 业务是 Entegris 组合中利润率与切换成本同时最高的业务之一。一旦晶圆厂安全官批准了 SDS 工作流，要切换到竞争对手的输送技术意味着整套 EHS 重新认证——是 12 到 24 个月级别的周期。离子注入气体输送的直接对手极为有限；FY25 10-K Competition 章节把 **Air Liquide 先进材料部门** 与 **林德 (Linde plc)** 列为更广义的特种气体竞争对手 ([Entegris 2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。
+
+### 4.7 化学机械抛光 (CMP) —— 来自 CMC 资产的核心
+
+> *"CMP is a polishing process used to planarize, or flatten, layers of material that have been deposited on silicon wafers. Our offerings include: CMP slurries for polishing semiconductor materials, including tungsten, dielectric materials, copper, tantalum (commonly referred to as 'barrier'), molybdenum, aluminum, silicon carbide (SiC) and gallium nitride (GaN); CMP polishing pads used with slurries across a range of polishing tools, wafers, technology nodes and applications, including tungsten, copper, and dielectrics; Formulated cleaning chemistries that remove residues from wafer surfaces after the CMP process; Filtration and purification solutions that remove select particles and contaminants from slurries and cleaning chemistries to prevent wafer defects; and Process monitoring and control equipment to maintain CMP slurry integrity."* —— [Entegris 2025 10-K, Item 1](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)
+
+**通俗解释：** **化学机械抛光 (CMP, 化学机械抛光)** 是把芯片每一层金属与介质平坦化的关键工艺——没有 CMP，先进逻辑器件的多层堆叠在前几层金属化之后就会变成 "崎岖山脉"。**抛光液 (slurry, 抛光液)** 是干这件事的核心耗材：在氧化剂中悬浮二氧化硅 (silica) 或氧化铈 (ceria) 纳米颗粒（金属层如钨、铜），或在 pH 缓冲液中悬浮（介质层）。不同抛光液针对不同材料：钨抛光液用氧化性化学把 W 转化为 WO₃（再由 silica 机械磨除）；铜抛光液用络合剂（多数为甘氨酸）形成可溶的 Cu²⁺ 络合物；氧化铈基介质抛光液利用 Ce⁴⁺ → Ce³⁺ 氧化还原循环选择性进攻 SiO₂。**抛光垫 (pad, 抛光垫)** 是将抛光液压紧在晶圆表面的多孔聚合物垫；垫面修整 (pad conditioner) 的金刚石颗粒——中砂 Kinik 的业务领域——维持垫面粗糙度让它持续抓住抛光液而不会被磨光 ([项目行业笔记](../../sector/半导体材料.md))。**CMP 后清洗 (post-CMP clean)** 把残余抛光液 / 颗粒 / 金属离子从晶圆上去除，再进入下一个工艺。**抛光液过滤器** 在循环回路上拦截聚集的颗粒，避免它们重新沉积造成划伤。
+
+CMC Materials 收购后的 Entegris CMP 业务，是行业里结构上最宽的：抛光液化学跨越 W、Cu、介质（氧化物）、阻障层 (Ta)、Mo、Al，以及 **SiC 和 GaN**（SiC/GaN 抛光液来自 2020-01 收购的 Sinmat，金额 $7500 万，2022 年并入 CMC 平台——参见 [Entegris-Sinmat press release, 2020-01-10](https://www.businesswire.com/news/home/20200110005216/en/Entegris-Acquires-CMP-Slurry-Manufacturer-Sinmat))。抛光垫业务来自 CMC。过滤业务是 Entegris 自身的传统。完整的整合故事是——业内没有其他对手能从单一合格供应商交付 "抛光液 + 抛光垫 + CMP 后清洗 + 抛光液过滤器" 全部四个组件，且符合先进节点认证。
+
+*分析师观点：* 按野村《Greater China Semi: Guide to Semi renaissance 2026–30F》(2026-05-21) 的全球 CMP 抛光液 league table，CMC 收购后 Entegris 排名第一，被列入名单的对手集合是 **Resonac (Showa Denko)、Versum (现 EMD/Merck KGaA)、Fujimi Incorporated、安集 (Anji Microelectronics)、KC Tech、Soulbrain、鼎龙 (Dinglong)** ([行业笔记](../../sector/半导体材料.md), 基于野村 Figs. 41–44)。CMP 抛光垫方面同样以 Entegris (CMC 资产) 与 **杜邦 (DuPont)** 为首（杜邦历史上以 IC1000 垫族占据主导）、**富士纺 (Fujibo Holdings)**、**3M**、**鼎龙** (中国)、与 **JSR** ([行业笔记](../../sector/半导体材料.md))。Entegris 的护城河是 "捆绑"：晶圆厂买 CMC 的 Microplanar® 抛光液，通常会同时买配套的 Epic® 抛光垫与 IntelliPolish® 控制系统——更换其中任何一个组件都不简单，因为抛光垫与抛光液化学是高度耦合的。FY25 10-K Competition 章节中与 CMP 重叠的竞争对手还有 **EMD Performance Materials**、**Qnity Electronics**（DuPont 电子材料分拆）、与 **安集** ([Entegris 2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。来自中国的两家新进入者——安集与鼎龙——是中期内 mature node 抛光液定价权的实质性威胁。
+
+### 4.8 晶圆与光罩搬运 —— FOUP 与 EUV 光罩盒业务
+
+> *"Our products, including front-opening unified pods (FOUPs), wafer transport and process carriers, standard mechanical interface pods (SMIF pods) and extreme ultraviolet (EUV) reticle pods, protect wafers and reticles from damage or abrasion and ensure purity during transportation and automated processing. This protection is essential because wafer processing involves hundreds of steps over several weeks, making damaged wafers costly to scrap."* —— [Entegris 2025 10-K, Item 1](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)
+
+**通俗解释：** **FOUP (Front-Opening Unified Pod, 前开式晶圆传送盒)** 是一只装 25 片晶圆的密封塑料盒，物理穿梭于晶圆厂的每一台工艺设备之间。FOUP 是 300mm 制造里的 *库存单位*——现代晶圆厂天花板轨道的 AMHS (Automated Material Handling System) 自动搬运系统以 5+ m/s 速度移动 FOUP。FOUP 必须 (i) 在运输中隔绝空气污染、(ii) 让晶圆持续接地以释放静电、(iii) 经受机器人成千上万次装载 / 卸载循环而不放气 (outgassing)、(iv) 标准化对接每家机台厂商的 load port。**EUV 光罩盒** 是光罩 (photomask) 的对应容器——尤其关键，因为 EUV 光罩是 *无 pellicle* 的（深紫外光时代的保护薄膜在 EUV 还不实用）——任何落在光罩上的颗粒都会复制到它后续曝光的每片晶圆上。Entegris EUV 光罩盒提供真空转移能力，使光罩从存储到扫描机的运输全程不暴露于大气。10-K 直接表述：*"Our EUV reticle pod provides defect-free protection of EUV reticles during shipping, storage, handling and vacuum-transferring operations"* ([Entegris 2025 10-K, Item 1](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。
+
+*分析师观点：* FOUP 业务是 Entegris 最悠久的业务——直接继承自 Fluoroware 1960 年代的聚合物载具，也是 Entegris 在全球持续保持市场龙头超过 20 年的唯一产品类别。FY25 10-K Competition 章节点名的主要对手为 **Shin-Etsu Polymer Co. Ltd.**（日本）、**家登精密 (Gudeng Precision Industrial)**（台湾）、与 **Aicello Corporation**（日本，规模较小） ([Entegris 2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。第三方市场追踪机构估算 Entegris 在 300mm FOUP 全球市场单一供应商份额最大，通常估计 30–40%；Shin-Etsu Polymer 在日本主导，家登在台湾主导 ([FOUP carrier market research, 2025](https://reports.valuates.com/market-reports/QYRE-Auto-3K10126/global-foup-and-fosb))。在 EUV 光罩盒细分，Entegris 在 TSMC、三星、Intel 的 EUV 晶圆厂均为事实上唯一合格供应商——这种近乎垄断的地位是 ASML High-NA EUV 量产周期中的天然护城河。
+
+### 4.9 化学品输送、晶圆/封装测试，以及 IntelliGen® 平台
+
+FY25 10-K 还有两个较小的产品类别。**化学品输送 (Chemical Handling)** 包括 *"超高纯化学品容器，包括桶装、柔性包装与相关编码连接系统，用于维持化学品纯度、最大化利用率并确保安全运输"* 以及 *"超纯阀件、接头、管路、传感与控制产品，用于晶圆厂内化学品分配"* ([Entegris 2025 10-K, Item 1](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。旗舰产品线是 **IntelliGen® 高精度液体分配系统**，10-K 描述其能 *"在保留高价值化学品并降低缺陷的同时，整合阀件控制与过滤装置技术，实现先进化学品的均匀涂布"* ([Entegris 2025 10-K, Item 1](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。
+
+**晶圆与封装测试** 包括探针卡 / 测试座清洁耗材，以及提升前端机台正常运行时间 (uptime) 的聚合物产品——这是一个小而高利润率的类别。*分析师观点：* 搬运与测试两类不是战略性增长驱动——它们是稳定的循环耗材流，与 SDS 在离子注入中类似，由于已被嵌入客户机台工作流而具有粘性。
+
+### 4.10 工程研发 —— 整合护城河的来源
+
+Entegris 2025 年末雇用 **约 1,600 名 ER&D 工程师**，FY25 ER&D 支出 **$3.292 亿**（FY24 为 $3.161 亿）([Entegris 2025 10-K, MD&A — ER&D expenses](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。ER&D 占净销售约 **10.3%**——对一家材料公司而言这是较高水平，反映出这一组合需要对每位客户每代节点逐项 SKU 完成认证。公司在 2025-12-31 持有 **约 4,400 件有效专利**（其中约 850 件为美国专利）以及 **约 2,400 件正在申请的专利** ([Entegris 2025 10-K, Patents and Other Intellectual Property Rights](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。ER&D 中心与客户晶圆厂物理相邻——台湾、韩国、美国、日本、加拿大、中国、新加坡、马来西亚——同时与 **斯坦福、耶鲁、MIT、伊利诺伊大学、SUNY Albany、Fraunhofer Institute、imec、CEA-LETI** 合作发展材料路线图 ([Entegris 2025 10-K, ER&D](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。
+
+### 4.11 MS 业务深拆 —— 抛光液、特种气体、配方化学品
+
+**MS 分部 (Materials Solutions) FY25 营收 $1,406.7M，同比基本持平**——是 CMC 整合最直接受益的分部，承载了公司未来 3 年最重要的两项结构性增长机会：CMP 抛光液在先进节点的步数扩张，以及钼工作流的整体量产 ([Entegris 2025 10-K, Segment Reporting](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。在 MS 内部可以按 "面向化学品" 进一步拆分为四块——CMP 抛光液与抛光垫、沉积前驱体、离子注入气体（SDS 平台）、配方蚀刻与清洗化学品——每一块都对应不同的护城河深度与定价权曲线。
+
+CMP 抛光液与抛光垫合在一起是 MS 内的最大单一品类，行业上 Entegris 在抛光液方面排名第一、在抛光垫方面排名第二（仅次于杜邦/Qnity）。结构性优势在于 CMP 工序步数的非线性扩张——根据野村估算，A16+ 节点搭配 Backside Power Delivery (BPD) 后 CMP 步数比 N3 多出 20–30% ([行业笔记](../../sector/半导体材料.md)，引用野村 Fig. 8)，叠加 400+ 层 3D NAND 的每层 CMP 循环，使得抛光液 + 抛光垫 + 后清洗 的 "每片晶圆消耗金额" 显著上升。沉积前驱体段则承载钼工作流的核心——Mo 前驱体 (典型为 MoO₂Cl₂ 或 Mo(CO)₆) 已经在主要客户的 NAND 字线工艺中量产、在先进逻辑接触金属化工艺中处于 last-mile 认证阶段；这是管理层在 Q4-FY25 与 Q1-FY26 电话会议中反复强调的结构性新动力 ([ENTG Q4-FY25 Earnings 8-K, 2026-02-10](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000009/entgq42025ex991.htm))。
+
+离子注入气体（SDS 平台）是 MS 内利润率最高的子业务——SDS 已经接近事实上的行业唯一安全输送选项，在主要晶圆厂均为单一供应商；EHS 认证周期天然抬高切换成本，使这块业务承担起 MS 整体利润率的下限。配方蚀刻与清洗化学品在 MS 内规模最分散——竞争烈度最高、与机台厂商 (Lam、TEL) 的协同程度决定每个 SKU 的胜负；CMC 资产带来的抛光后清洗化学品 (post-CMP clean) 与 Entegris 自身的蚀刻后清洗化学品在客户端形成 "整套清洗方案" 的卖点，但相对 SDS 的护城河仍较浅。
+
+### 4.12 APS 业务深拆 —— 过滤、FOUP、化学品输送、IntelliGen®
+
+**APS 分部 (Advanced Purity Solutions) FY25 营收 $1,799.1M，同比 -2.8%**——是公司更大的分部，承载传统 Entegris 的过滤、搬运、化学品输送业务，并以纯度控制 (purity control) 为统一主题 ([Entegris 2025 10-K, Segment Reporting](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。FY25 同比小幅下降主要来自工业与非半导体终端市场疲软，半导体端反而保持微正增长。APS 同样可按四个子类深拆——液气过滤器、FOUP 与 EUV 光罩盒、化学品输送 (含 IntelliGen®)、测试耗材——其中前两块是最具结构性护城河的资产。
+
+液气过滤器是 APS 的传统核心——Mykrolis 资产的延续，覆盖从光阻分配前的 PR 过滤、到 CMP 抛光液过滤、到 ALD 前驱体气流过滤的全谱使用场景。护城河来自三层：PFA 膜化学的工艺壁垒（即便是 Pall 这样的全球工业过滤龙头也难以在先进节点光刻单元置换 Entegris）、与 PR 厂商 (TOK、JSR、Shin-Etsu、Sumitomo) 长达 20+ 年的协同认证、以及与 IntelliGen® 分配系统的系统级整合（过滤 + 分配为一体的解决方案）。
+
+FOUP 与 EUV 光罩盒是 Entegris 全组合中护城河最深的业务——FOUP 在 300mm 市场单一供应商份额 30–40%，EUV 光罩盒在 TSMC / 三星 / Intel 的 EUV 晶圆厂为事实上唯一合格供应商。这块业务的增长方式不依赖步数扩张而依赖 EUV 装机量扩张——随着 ASML High-NA EUV 在 TSMC 1.6nm 节点 (~2028F) 上量产，光罩盒装机量将大幅扩张，且属于近 100% 增量收入。
+
+化学品输送（含 IntelliGen® 与超纯阀件 / 接头 / 管路 / 传感器）是 APS 的稳定基底——属于晶圆厂 capex 中 "化学品分配系统 (CDS)" 的供应类别，随 fab 数量增长而扩张，但增速温和。测试耗材是最小但利润率最高的子类——探针卡 / 测试座清洁耗材是耗损件，随测试机台年代际推进而稳步消耗。
+
+
