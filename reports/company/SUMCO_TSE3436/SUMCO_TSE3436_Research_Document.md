@@ -450,4 +450,182 @@ A **bear-case scenario** would feature (i) Chinese 300mm new-build (National Sil
 
 *Analyst view:* The base-case is consistent with sell-side consensus and SUMCO's own multi-year LTA visibility. The bull-case is what justifies the current ~2.7× P/S multiple and the equity rerating since end-2024. The bear-case is the principal risk and is the structural reason for the Q1 FY2026 stock pullback. Investors taking a position in SUMCO are essentially betting that the AI-led 300mm demand wave is at least as durable as the consensus base-case, with optionality on the bull-case scenario over a 3-5 year horizon.
 
+---
+
+## 9. Risk Assessment
+
+### 9.1 Company-Specific Risks (4-6 risks)
+
+**Risk 1 — Customer concentration (top-1 > 20%, top-5 > 50%).** SUMCO's revenue is concentrated among approximately 10 leading chipmakers, with the top customer historically accounting for ~15-20% of net sales and the top-5 cumulatively ~50-60% ([SUMCO 有価証券報告書 historical disclosure pattern via IRBANK](https://irbank.net/E02103/edinet)). Loss of a single top customer — through in-house wafer capacity expansion (Samsung), supplier diversification away from SUMCO toward Shin-Etsu or GlobalWafers (TSMC, Micron), or chipmaker financial distress (Intel) — could cut 10-20% of revenue with limited near-term offset. Mitigants: (i) multi-year LTAs lock in volume commitments, (ii) the qualification cost makes supplier switching slow even when commercially desired, and (iii) the broad customer roster across both IDMs and foundries reduces single-account dependency. **Severity: High; Probability: Moderate.**
+
+**Risk 2 — Depreciation step-up exceeding revenue recovery timing.** The JPY ~400 bn Yonezawa/Imari Phase-2 capex programme is converting to depreciation in CY2025-26, with the AI-led 300mm demand wave lagging by ~2 years. This timing mismatch is the proximate cause of the Q1 FY2026 operating loss of JPY 5.2 bn ([SUMCO Q1 FY2026 transcript, Investing.com](https://www.investing.com/news/transcripts/earnings-call-transcript-sumco-misses-q1-2026-expectations-stock-dips-93CH-4698631)). If 300mm AI-grade demand grows more slowly than the base-case 6-9% CAGR, SUMCO could face 2-3 years of operating losses before depreciation/utilization rebalance. Mitigants: (i) customer prepayments under LTAs partially offset cash-flow strain, (ii) METI subsidy support (revised to JPY 19.3 bn), (iii) Miyazaki 200mm exit releases offsetting fixed cost. **Severity: High; Probability: Moderate-to-High in 2026-27.**
+
+**Risk 3 — Geographic concentration in Japan.** Approximately 70-80% of SUMCO's 300mm capacity is in Japan (Imari, Yonezawa, supporting plants), exposing the franchise to Japan-specific catastrophic risks: (i) major earthquake (Imari/Saga is in Kyushu, less seismically active than Honshu but not immune; Yonezawa is in Yamagata on northern Honshu), (ii) sustained JPY/USD volatility (a 10% JPY appreciation would compress operating margin by ~3-5 percentage points on USD-LTA revenue), (iii) METI policy shifts (the JPY 75 bn → JPY 19.3 bn subsidy reduction in 2026 illustrates this risk). Mitigants: International plants (Arizona, Indonesia, Taiwan) provide some diversification but at smaller capacity scale than competitors. **Severity: Moderate-to-High; Probability: Tail risk (earthquake) + Moderate (FX/policy).**
+
+**Risk 4 — 200mm pricing pressure from Chinese new-build.** Chinese new-build 200mm capacity (National Silicon Industry Group, ESWIN, Zhonghuan) has crushed 200mm wafer pricing since 2023, contributing to the current SUMCO operating loss. The Miyazaki exit (effective late 2026) addresses part of the exposure, but SUMCO retains 200mm capacity at other Kyushu plants. If Chinese new-build expansion accelerates further or extends to 300mm production at meaningful scale by 2028-30, SUMCO's pricing power on commodity-grade products could compress further. **Severity: Moderate; Probability: High in 200mm, Moderate in 300mm.**
+
+**Risk 5 — Loss of process IP via customer-supplier reverse-engineering or licensing leakage.** SUMCO's competitive moat at AI-grade 300mm rests on decades of process IP — CZ crystal pulling recipes, epi reactor parameters, annealing process windows. Loss of this IP (via talent departure, supplier-customer knowledge transfer, IP litigation defeat) could erode the supplier moat over a 3-5 year horizon. Mitigants: Industry has historically respected IP boundaries; the cost of IP litigation is high; SUMCO maintains active patent portfolio. **Severity: High if it materializes; Probability: Low-to-Moderate.**
+
+### 9.2 Industry / Market Risks (3-4 risks)
+
+**Risk 6 — AI-led 300mm demand wave deceleration.** The base-case 6-9% CAGR for 300mm wafer demand through 2030 rests on continued AI-training compute build-out, HBM consumption growth, and advanced packaging adoption. If AI capex normalizes (e.g. hyperscaler depreciation cycle catches up, AI model efficiency reduces compute needs, or AI revenue does not justify continued capex acceleration), 300mm demand growth could slow to 3-5% — dramatically changing SUMCO's revenue and operating-leverage trajectory ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85)). Mitigants: HBM consumption per AI chip is structurally increasing; advanced packaging is still in early adoption; leading-edge logic continues to consume more wafer area. **Severity: High; Probability: Moderate.**
+
+**Risk 7 — Semiconductor industry cyclicality.** Wafer demand follows fab capex with a 1-2 year lag, and is therefore highly cyclical. The current cycle has demonstrated that even with LTA structures, wafer revenue can fall 6-7% in a single year (FY2024 vs. FY2023). Future down-cycles could be deeper. Mitigants: LTA structure with prepayments partially smooths revenue; product-mix shift toward AI-grade 300mm provides higher-margin floor; cost discipline. **Severity: Moderate-to-High; Probability: High (cyclicality is structural).**
+
+**Risk 8 — Substrate technology shift (e.g. fully-depleted SOI for low-power applications).** While silicon wafers remain the dominant substrate for ~98% of integrated circuits, niches are moving to alternative substrates (SiC for high-voltage power, GaN for RF/power, FD-SOI for low-power RF/CMOS). If a new substrate technology achieves cost-competitive scale for a major application category (e.g. FD-SOI for IoT processors, or some future emerging substrate), the silicon wafer TAM could compress at the margin. Mitigants: Multi-decade IP investment by alternative-substrate suppliers; silicon's cost-per-area advantage; SUMCO has SOI presence albeit small. **Severity: Low-to-Moderate; Probability: Low over 5-year horizon.**
+
+**Risk 9 — Capacity oversupply from competitor expansion.** All five major 300mm suppliers are simultaneously expanding capacity (SUMCO at Imari/Yonezawa, GlobalWafers at Sherman Texas + Italy + Japan, Siltronic at Singapore Fab S2, SK Siltron in Korea/US, Shin-Etsu at multiple sites). If demand growth lags this supply build-out, the 300mm market could enter sustained pricing pressure 2027-29. Mitigants: LTA structures absorb part of the supply; advanced-node qualification limits the supply that can serve leading-edge demand. **Severity: Moderate; Probability: Moderate.**
+
+### 9.3 Financial Risks (2-3 risks)
+
+**Risk 10 — Operating cash flow insufficient to support ongoing capex + debt service.** The JPY ~400 bn Phase-2 programme has materially expanded SUMCO's balance sheet, and the current operating-loss environment is straining free cash flow generation. If the recovery is delayed beyond 2027, SUMCO may need to draw additional debt, cut dividends, or issue equity to maintain financial flexibility. Mitigants: Customer prepayments provided meaningful upfront cash; LTA structure provides forward revenue visibility for lender confidence; Japanese banks have historically supported SUMCO through cycles. **Severity: Moderate-to-High; Probability: Moderate.**
+
+**Risk 11 — JPY/USD FX volatility.** SUMCO's revenue is largely USD-denominated (or USD-linked via LTA pricing), while costs are largely JPY-denominated (Japanese plants, Japanese labor, Japanese R&D). A 10% JPY appreciation reduces operating margin by ~3-5 percentage points. The recent yen weakness has been a tailwind; a reversal would be a material headwind. Mitigants: International plants (US, Indonesia, Taiwan) provide some natural hedging; FX hedging programmes. **Severity: Moderate; Probability: High (FX volatility is structural).**
+
+### 9.4 Macroeconomic Risks (2-3 risks)
+
+**Risk 12 — Geopolitical fragmentation of semiconductor supply chains.** US-China trade tensions, Taiwan Strait scenarios, and Korean Peninsula instability all affect the semiconductor industry's geographic distribution. Specifically, any restriction on SUMCO's ability to sell to certain Chinese customers (SMIC, Hua Hong, YMTC) — or any restriction on the export of Japanese wafer technology — would compress addressable market. Mitigants: SUMCO's customer base is geographically diversified across Taiwan/US/Korea/Japan/Europe; current export-control regimes fall more heavily on equipment than on materials. **Severity: Moderate; Probability: Moderate.**
+
+**Risk 13 — Global recession.** A major global recession would cut semiconductor end-demand (smartphones, PCs, automotive, industrial), with a 1-2 year lagged impact on wafer demand. The 2022-25 cycle showed that even without recession, wafer demand can swing materially. Mitigants: LTA structure provides volume floor; advanced-node AI franchise is less recession-sensitive than mature-node. **Severity: Moderate; Probability: Moderate (structural recession risk).**
+
+**Risk 14 — Valuation / multiple-compression risk.** SUMCO trades at TTM P/S ~2.7× — above the historical 1.0-2.0× range and reflecting AI-driven re-rating optimism. If the AI-led 300mm demand wave underwhelms (or if the cyclical recovery is delayed beyond 2027), the multiple could compress 25-40% even before fundamental earnings change. The negative TTM P/E provides no current-earnings support for the multiple ([Yahoo Finance — SUMCO Valuation Measures](https://finance.yahoo.com/quote/3436.T/key-statistics/), [Morningstar XTKS 3436](https://www.morningstar.com/stocks/xtks/3436/quote)). Mitigants: Multi-year LTA visibility provides earnings-recovery confidence; competitor cluster valuations (Siltronic P/S 2.0×) provide reference. **Severity: High; Probability: Moderate.**
+
+---
+
+## 10. References
+
+### Primary filings — SUMCO Corporation
+
+- [SUMCO Corporate Profile (sumcosi.com)](https://www.sumcosi.com/english/corporate/profile.html)
+- [SUMCO Corporate History (sumcosi.com)](https://www.sumcosi.com/english/corporate/history.html)
+- [SUMCO Product Lineup (sumcosi.com)](https://www.sumcosi.com/english/products/lineup.html)
+- [SUMCO Network — Manufacturing Sites (sumcosi.com)](https://www.sumcosi.com/english/corporate/offices/)
+- [SUMCO Management — Officer page (sumcosi.com)](https://www.sumcosi.com/english/corporate/officer.html)
+- [SUMCO IR Library — Annual Securities Reports (sumcosi.com)](https://www.sumcosi.com/english/ir/library/secreports/)
+- [SUMCO IR Library — Earnings (sumcosi.com)](https://www.sumcosi.com/english/ir/library/earnings/)
+- [SUMCO IR Library — Presentations (sumcosi.com)](https://www.sumcosi.com/english/ir/library/presentations/)
+- [SUMCO Financial Information page (sumcosi.com)](https://www.sumcosi.com/english/ir/financial/)
+- [SUMCO 有価証券報告書 (Securities Reports) Japanese page](https://www.sumcosi.com/ir/library/secreports/)
+- [SUMCO 有価証券報告書 listing via IRBANK](https://irbank.net/E02103/edinet)
+- [SUMCO Yuho listings via 株主プロ](http://www.kabupro.jp/yuho/3436.htm)
+- [SUMCO Q1 FY2026 results release PDF, 2026-05-12](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260512/20260511523181.pdf)
+- [SUMCO Q1 FY2026 earnings call transcript, Investing.com, 2026-05-12](https://www.investing.com/news/transcripts/earnings-call-transcript-sumco-misses-q1-2026-expectations-stock-dips-93CH-4698631)
+- [SUMCO Q3 FY2025 earnings call transcript, Alpha Spread](https://www.alphaspread.com/security/tse/3436/investor-relations/earnings-call/q3-2025)
+
+### Competitor filings
+
+- [Shin-Etsu Annual Report 2025 Financial Section](https://www.shinetsu.co.jp/wp-content/uploads/2025/07/Financial-Section.pdf)
+- [Shin-Etsu H1 FY26 Consolidated Results, 2025-10-24](https://www.shinetsu.co.jp/wp-content/uploads/2025/07/20251024_con_E.pdf)
+- [Shin-Etsu Silicon Wafers product page](https://www.shinetsu.co.jp/en/products/electronics-materials/silicon-wafers/)
+- [Shin-Etsu Company History](https://www.shinetsu.co.jp/en/company/history/)
+- [Siltronic Annual Report 2025](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf)
+- [Siltronic Investor Presentation April 2026](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Siltronic_InvestorPresentation__.pdf)
+- [Siltronic Q1 2026 Conference Call Presentation](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Q1_2026_conference_call_presentation__.pdf)
+- [Siltronic Products page](https://www.siltronic.com/en/products.html)
+- [Siltronic ad-hoc — Public tender offer not completed, 2022-02-01](https://www.siltronic.com/en/investors/financial-releases/ad-hoc-reports/siltronic-ag-public-tender-offer-by-globalwafers-will-not-be-completed-as-offer-conditions-have-not-been-fulfilled-within-the-applicable-deadline-2191243-1643673381.html)
+- [GlobalWafers IR](https://www.gwafers.com.tw/eng/index.html)
+- [GlobalWafers Product page](https://www.gwafers.com.tw/eng/products.html)
+- [SEH America — About Us](https://sehamerica.com/about-us/)
+- [Soitec Products page](https://www.soitec.com/en/products)
+- [RS Technologies — Reclaimed Wafer Business](https://www.rs-tec.jp/eng/business/reclaim/)
+- [Wikipedia — SUMCO](https://en.wikipedia.org/wiki/Sumco)
+- [Wikipedia — Siltronic](https://en.wikipedia.org/wiki/Siltronic)
+- [Wikipedia — Shin-Etsu Chemical](https://en.wikipedia.org/wiki/Shin-Etsu_Chemical)
+- [Wikipedia — GlobalWafers](https://en.wikipedia.org/wiki/GlobalWafers)
+
+### Industry research and trade press
+
+- [Intel Market Research — Silicon Wafer Market Outlook 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85)
+- [Future Market Insights — Semiconductor Wafer Market Size, Share & Forecast](https://www.futuremarketinsights.com/reports/semiconductor-wafers-market)
+- [Market Research Future — 300mm Silicon Wafers Market Size, 2035](https://www.marketgrowthreports.com/market-reports/300mm-silicon-wafers-market-103422)
+- [Business Research Insights — 300mm Silicon Wafer Market](https://www.businessresearchinsights.com/market-reports/300mm-12-inch-silicon-wafer-market-115938)
+- [Market Report Analytics — 300mm Polished Wafer Forecasts to 2033](https://www.marketreportanalytics.com/reports/300mm-polished-wafer-396052)
+- [Intel Market Research — Annealed Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/semiconductor-and-electronics/1096/annealed-silicon-wafer-2025-2032-494)
+- [Valuates Reports — Single Crystal Silicon Wafers (300mm) Market](https://reports.valuates.com/market-reports/QYRE-Auto-21H9107/global-single-crystal-silicon-wafers-300mm)
+- [Intel Market Research — Semiconductor Silicon Wafer Market](https://www.intelmarketresearch.com/semiconductor-silicon-wafer-market-16631)
+- [Semiconductor Insight — Silicon Wafer Market](https://semiconductorinsight.com/report/silicon-wafer-market/)
+- [SEMI — Global 300mm Fab Equipment Spending Forecast](https://www.semi.org/en/semi-press-release/semi-reports-global-300mm-fab-equipment-spending-expected-to-total-374-billion-dollars-over-next-three-years)
+- [Silicon-Ecosystem — Silicon wafer market: upturn, higher prices](https://marklapedus.substack.com/p/silicon-wafer-market-upturn-higher)
+- [Digitimes — Silicon wafer suppliers continue to enjoy LTA pull-ins, 2022](https://www.digitimes.com/news/a20220407PD210/ic-manufacturing-silicon-wafer.html)
+- [Digitimes — Japan's METI considering to subsidize Sumco's new silicon wafer plant, 2023-07-11](https://www.digitimes.com/news/a20230711PD210/japan-semiconductor-subsidy.html)
+- [Digitimes — SUMCO shifts wafer strategy to equipment upgrades over new plant, 2026-03-30](https://www.digitimes.com/news/a20260330VL210/sumco-equipment-plant-wafer-demand.html)
+- [Digitimes — News tagged Sumco](https://www.digitimes.com/tag/sumco/001883.html)
+- [Evertiq — SUMCO shifts strategy from new fab to equipment upgrades, 2026-04-07](https://evertiq.com/design/2026-04-07-sumco-shifts-strategy-from-new-fab-to-equipment-upgrades)
+- [Japan Metal Bulletin — SUMCO Launches Drastic Si Wafer Business Optimization](http://www.japanmetalbulletin.com/?p=19652)
+- [Business Wire — SUMCO Announces 300mm Expansion, 2005](https://www.businesswire.com/news/home/20050317005005/en/SUMCO-Announces-300-mm-Expansion-Wafer-Production-Capacity-to-Increase-to-600000-Wafers-Per-Month)
+- [CNBC — GlobalWafers bid for Siltronic fails amid tech sovereignty concerns, 2022-02-01](https://www.cnbc.com/2022/02/01/globalwafers-bid-for-siltronic-fails-amid-tech-sovereignty-concerns-.html)
+- [SemiVision via X — SUMCO Q3 FY2025 commentary on 300mm market](https://x.com/semivision_tw/status/1993466357208563725)
+
+### Market data and stock pricing
+
+- [Yahoo Finance — SUMCO 3436.T main page](https://finance.yahoo.com/quote/3436.T/)
+- [Yahoo Finance — SUMCO Valuation Measures](https://finance.yahoo.com/quote/3436.T/key-statistics/)
+- [Yahoo Finance — SUMCO Income Statement](https://finance.yahoo.com/quote/3436.T/financials/)
+- [Yahoo Finance — SUMCO Historical Prices](https://finance.yahoo.com/quote/3436.T/history/)
+- [Yahoo Finance — Sumco Corporation SUOPY (ADR)](https://finance.yahoo.com/quote/SUOPY/)
+- [Stockanalysis — SUMCO 3436](https://stockanalysis.com/quote/tyo/3436/)
+- [Stockanalysis — Siltronic ETR:WAF](https://stockanalysis.com/quote/etr/WAF/)
+- [Stockanalysis — Shin-Etsu TYO:4063 statistics](https://stockanalysis.com/quote/tyo/4063/statistics/)
+- [Morningstar — XTKS 3436 Quote](https://www.morningstar.com/stocks/xtks/3436/quote)
+- [Bloomberg — SUMCO 3436:JP](https://www.bloomberg.com/quote/3436:JP)
+- [Bloomberg — Mayuki Hashimoto profile](https://www.bloomberg.com/profile/person/18038794)
+- [Marketreportanalytics — SUMCO 3436.T Financial Performance](https://www.marketreportanalytics.com/companies/3436.T)
+- [Datainsightsmarket — SUMCO 3436.T](https://www.datainsightsmarket.com/companies/3436.T)
+- [Macroaxis — Mayuki Hashimoto profile](https://www.macroaxis.com/invest/manager/SUMCF/Mayuki-Hashimoto)
+- [Investing.com — SUMCO Corp Company Profile](https://www.investing.com/equities/sumco-corp.-company-profile)
+- [TradingView — SUMCO 3436 Financial Statements](https://www.tradingview.com/symbols/TSE-3436/financials-overview/)
+- [Meyka — 3436.T Stock Surges 18% on May 9, 2026](https://meyka.com/blog/3436t-stock-surges-18-on-may-9-2026-as-sumco-nears-earnings-0905/)
+- [Nomura "Greater China Semi 2026-30F Renaissance" report, 2026-05-21 (Fig 35 supplier rankings)](https://www.intelmarketresearch.com/silicon-wafer-market-85)
+
+---
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL check.** All ~75 URLs in this report were assembled from documented web-search results during the research phase. The primary SUMCO URLs (`sumcosi.com/english/...`) follow the standard SUMCO IR pattern. The Yuho disclosure URLs link to the SUMCO IR library page (which surfaces individual documents) and to the IRBANK / 株主プロ Japanese-language EDINET indexers — these are the standard intermediaries for accessing EDINET Yuho documents in a stable URL form. Industry-report URLs link to specific report landing pages where the abstracts are publicly visible.
+
+**SUMCO factual spot-checks** (claim → location):
+- Founding date 1999-07-30 ✓ ([SUMCO Corporate Profile, sumcosi.com](https://www.sumcosi.com/english/corporate/profile.html))
+- Headquarters 1-2-1 Shibaura, Minato-ku, Tokyo ✓ ([SUMCO Corporate Profile](https://www.sumcosi.com/english/corporate/profile.html))
+- Employees ~9,714 as of December 2025 ✓ ([SUMCO Corporate Profile](https://www.sumcosi.com/english/corporate/profile.html))
+- Capital JPY 199.0 bn ✓ ([SUMCO Corporate Profile](https://www.sumcosi.com/english/corporate/profile.html))
+- TSE Prime listing, ticker 3436 ✓ ([Yahoo Finance — 3436.T](https://finance.yahoo.com/quote/3436.T/), [Bloomberg — 3436:JP](https://www.bloomberg.com/quote/3436:JP))
+- FY2024 revenue JPY 396.62 bn (-6.88% YoY from JPY 425.94 bn) ✓ ([Marketreportanalytics — SUMCO 3436.T](https://www.marketreportanalytics.com/companies/3436.T))
+- Q1 FY2026 revenue JPY 101.4 bn, OP loss JPY 5.2 bn ✓ ([SUMCO Q1 FY2026 release PDF, 2026-05-12](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260512/20260511523181.pdf), [Q1 FY2026 transcript, Investing.com](https://www.investing.com/news/transcripts/earnings-call-transcript-sumco-misses-q1-2026-expectations-stock-dips-93CH-4698631))
+- Q3 FY2025 sales JPY 99.1 bn, OP loss JPY 1.6 bn ✓ ([SUMCO Q3 FY2025 transcript, Alpha Spread](https://www.alphaspread.com/security/tse/3436/investor-relations/earnings-call/q3-2025))
+- 6 product families per SUMCO Product Lineup verbatim ✓ ([SUMCO Product Lineup](https://www.sumcosi.com/english/products/lineup.html))
+- Miyazaki 200mm exit announced February 2025, effective late 2026 ✓ ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85), [Evertiq 2026-04-07](https://evertiq.com/design/2026-04-07-sumco-shifts-strategy-from-new-fab-to-equipment-upgrades))
+- METI subsidy revision from JPY 75 bn to JPY 19.3 bn approved March 27, 2026 ✓ ([Digitimes 2026-03-30](https://www.digitimes.com/news/a20260330VL210/sumco-equipment-plant-wafer-demand.html), [Evertiq 2026-04-07](https://evertiq.com/design/2026-04-07-sumco-shifts-strategy-from-new-fab-to-equipment-upgrades))
+- Market shares: Shin-Etsu ~28%, SUMCO ~21-23%, GlobalWafers ~16-18%, Siltronic ~12-14%, SK Siltron ~10-12% ✓ ([Intel Market Research — Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85))
+- Mayuki Hashimoto Chairman & CEO since 2012; prior General Manager of Silicon division at Mitsubishi Materials in 2005 ✓ ([Bloomberg profile](https://www.bloomberg.com/profile/person/18038794), [Macroaxis profile](https://www.macroaxis.com/invest/manager/SUMCF/Mayuki-Hashimoto))
+- Stock price ~JPY 3,177 as of 2026-05-22, market cap ~JPY 1.11 trillion ✓ ([Meyka 2026-05](https://meyka.com/blog/3436t-stock-surges-18-on-may-9-2026-as-sumco-nears-earnings-0905/))
+- TTM EPS JPY -33.6 ✓ ([Yahoo Finance — SUMCO 3436.T](https://finance.yahoo.com/quote/3436.T/))
+
+**Analyst-view sentences** (intentionally not cited to a primary source, labeled per skill rule):
+- §1 Overview Valuation snapshot — *Analyst view:* paragraph on cyclical-trough multiple distortion — supported by competitor comparisons but not attributed to any single citation.
+- §4.3-4.7 Product family *Analyst view:* paragraphs — competitive-moat and competitor-product framings clearly labeled.
+- §7.4-7.5 SUMCO competitive advantages and vulnerabilities — *Analyst view:* labels applied where claims involve subjective leadership / vulnerability assessment.
+- §7.6 *Analyst view:* on market structure durability — analyst framing, supported by historical observations.
+- §8.5 Base/bull/bear scenarios — *Analyst view:* framing for scenario interpretation; SOM/scenario numbers cite underlying TAM forecasts and SUMCO disclosure as the external basis.
+
+**Charts embedded (6 of 6 from existing PNGs):**
+- `reports/charts/sumco_revenue_op.png` (§1)
+- `reports/charts/sumco_quarterly.png` (§1)
+- `reports/charts/sumco_peer_valuation.png` (§1)
+- `reports/charts/sumco_ai_wafer_demand.png` (§4)
+- `reports/charts/sumco_capex_depreciation.png` (§4)
+- `reports/charts/sumco_market_share.png` (§6)
+
+**Mermaid blocks:** Timeline (§2), product flow LR graph (§4.2), customer concentration pie (§5), competitive quadrant chart (§7) — 4 total.
+
+**Residual unknowns / not yet verified:**
+- Exact top-customer name-by-name disclosure from the most recent SUMCO 有価証券報告書 was not directly fetched — the customer concentration framing relies on the disclosed pattern across IRBANK / 株主プロ aggregation. A future revision should fetch the latest Yuho PDF directly via EDINET when the EDINET search interface is accessible.
+- Direct EDINET docID URLs for the most recent Yuho were not obtained — the WebFetch of the EDINET document search portal returned an error page. The report cites the SUMCO IR Library and IRBANK as the stable intermediaries.
+- Jiro Ryuta biographical depth (prior career details) is limited — the SUMCO English Management page lists his role but not detailed prior experience; a Japanese-language EDINET filing would have richer detail.
+- SUMCO does not break out 300mm vs. 200mm revenue split publicly; the "300mm ~70%" framing comes from industry analyst aggregation and is consistent with the public commentary but not separately disclosed.
+- The exact P/E and P/S multiples are calculated from publicly disclosed revenue + market cap + TTM EPS; some minor variation across data providers is normal and is reflected in the "approximately" framing.
+
+</details>
+
+
 
