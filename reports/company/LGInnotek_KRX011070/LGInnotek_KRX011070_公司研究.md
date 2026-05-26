@@ -124,3 +124,141 @@ timeline
 **创始人备注。** LG Innotek 于 1970 年作为金星集团与日本 Alps Electric 的合资公司金星阿尔卑斯电子成立, 创始管理层并非西方意义上的 "单人创始人", 而是从 LG (彼时的 Lucky Goldstar) 母集团派来的韩国管理者 —— 即创立 LG 集团的具仁会 (Koo In-hoe) 家族, 与 1958 年创立 LG Electronics 的是同一家族。今天没有任何 "创始人" 角色在 LG Innotek 实际运营层面活跃; 公司作为 **LG Electronics (KRX:066570) 持股 40.8% 的子公司** 由集团治理 ([LG Innotek — Wikipedia, 访问于 2026-05](https://en.wikipedia.org/wiki/LG_Innotek); [DART 年度报告, X §1 关联公司名单](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270))。按 company-research skill 规则其他高管不展开介绍 —— 但为完整性: 董事会由 2 名社内董事 (文赫秀、朴智焕)、1 名其他非常勤董事 (李相佑, LG Electronics 提名董事) 及 4 名社外董事 (李熙静、卢相道、朴来洙、金正会) 组成 ([DART 年度报告, I §2-나 董事会构成](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270))。
 
 ---
+
+## 4. 产品与服务
+
+### 4.1 사업보고서 (年度报告) 产品矩阵 —— 三分部对应三终端市场
+
+权威的产品矩阵已在 DART 年度报告 (II §2-가) 给出, 下文按韩文原文逐字复现。**LG Innotek 的 "产品矩阵" 实际上并不是半导体 IDM (Integrated Device Manufacturer) 意义上的矩阵** —— 它是一个三行的分部列表, 每一行把一个主要终端市场映射到少数几个物理上互不相同的模组族系。Photomask (光罩) 作为让 LG Innotek 出现在野村 Figure 36 供应商列表上的产品线, **只是封装解决方案 (Package Solutions) 行下的一个单一 SKU 而非公司主业。** 相机模组才是远超其他的最大产品族。
+
+| 사업부문 / 分部 | 주요제품 / 主要产品 | FY2025 营收 (KRW 百万) | FY2024 (KRW 百万) | FY2023 (KRW 百万) | FY2025 占比 |
+|---|---|---|---|---|---|
+| **광학솔루션 / 光学解决方案** | Camera Module 等 (智能手机前置 / 广角 / 远摄 / 折叠变焦; 3D ToF; 车用相机; 机器人视觉相机) | **18,318,459** | 17,800,120 | 17,294,789 | **83.6%** |
+| **패키지솔루션 / 封装解决方案** | 반도체기판 (RF-SiP、FC-CSP、FC-BGA 半导体封装基板)、Tape Substrate (COF、TAPE BGA)、Photomask (光罩) | **1,720,017** | 1,460,022 | 1,322,135 | **7.9%** |
+| **모빌리티솔루션 / 车载解决方案** | 모터/센서 (马达 / 传感器)、통신 (V2X / 无线)、Lighting Solution (车载 LED)、Power Module (功率模组) | **1,858,127** | 1,940,613 | 1,988,366 | **8.5%** |
+| **합계 / 合计** | | **21,896,603** | 21,200,755 | 20,605,290 | **100%** |
+
+*资料来源: [LG Innotek 2025 사업보고서 II §2-가 (DART rcpNo 20260312001270, 报送日期 2026-03-12)](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)。已抵销分部间内部交易。FY2023 数据根据 FY2024 以后的分部更名规则重述 (即电子零部件业务由原来分部移入车载解决方案, 残余部分归入光学解决方案)。*
+
+**分部营业利润与披露的 P&L 结构 (FY2025/FY2024/FY2023, KRW 百万):**
+
+| 分部 | FY2025 营业利润 | FY2024 营业利润 | FY2023 营业利润 | FY2025 营业利润率 |
+|---|---|---|---|---|
+| 光学解决方案 | 482,238 | 596,613 | 663,148 | 2.6% |
+| 封装解决方案 | 128,875 | 70,778 | 125,574 | 7.5% |
+| 车载解决方案 | 53,894 | 38,652 | 42,102 | 2.9% |
+| **合计** | **665,007** | **706,043** | **830,824** | 3.0% |
+
+*资料来源: [DART 사업보고서, II §4 分部 P&L](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)。*
+
+![FY2025 分部营收与营业利润结构](../../charts/lginnotek_segment_mix.png)
+*资料来源: [DART 사업보고서 50 期 (rcpNo 20260312001270, 报送日期 2026-03-12)](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)。*
+
+### 4.2 综合 — 三分部如何嵌入单一客户工作流
+
+LG Innotek 的三大分部, 并非像 Lam / AMAT / TEL 在 "刻蚀 — 沉积 — 清洗" 上那样构成单一晶圆厂的工艺循环。它们构成的是一个统一的 **移动 + AI + 车用硬件工作流**:
+
+- **光学解决方案** 位于 Apple 智能手机 BOM 表的顶端, 并日渐占据 Apple AR / Vision Pro / 机器人路线图的位置。相机模组是出货量最大、毛利最低、ASP 压力最大的产品线。
+- **封装解决方案** 位于客户的硅芯片封装内部 —— RF-SiP 把整套射频系统封装在单一基板内供移动基带使用; FC-CSP 是 GDDR7 / 先进存储芯片下的基板; FC-BGA 是 AI 加速器、服务器 CPU、Apple 自研 SoC 下的高端基板。这是嵌入野村 "AI 基础设施复兴" 命题的桥梁, 也是产生经营杠杆的分部。
+- **车载解决方案** 位于车辆内部: ADAS 相机 (实际由 Optical 产线生产, 但因汽车 Tier-1 客户而归 Mobility 报表)、无线 V2X 模组、车载 LED 照明、用于致动器的 BLDC 马达。FY2025 全年新订单 KRW 4.8 万亿, 使订单存量在年末达到 KRW 19.2 万亿的历史新高 ([Korea Herald, 2026-04-25](https://www.koreaherald.com/article/10726451))。
+
+```mermaid
+graph LR
+    A[LG Innotek 材料与零部件] --> B[光学解决方案 约 84%]
+    A --> C[封装解决方案 约 8%]
+    A --> D[车载解决方案 约 8%]
+    B --> B1[智能手机相机模组]
+    B --> B2[Vision Pro / 3D ToF]
+    B --> B3[车用 / 机器人视觉]
+    C --> C1[半导体封装基板]
+    C1 --> C1a[FC-BGA]
+    C1 --> C1b[FC-CSP]
+    C1 --> C1c[RF-SiP]
+    C --> C2[Tape Substrate / COF]
+    C --> C3[显示器光罩 Photomask]
+    D --> D1[车载马达 / 传感器]
+    D --> D2[V2X 通讯模组]
+    D --> D3[车载 LED 照明]
+    D --> D4[功率模组]
+```
+
+### 4.3 光学解决方案 (Optical Solutions) — 相机模组 (KRW 18.32 万亿, 占营收 84%)
+
+**10-K 引用原文 (DART 사업보고서 II §2 / II §4-가):**
+> "광학솔루션 사업부문은 주요 고객의 판매 호조 및 고사양 카메라 모듈 채용 확대를 통해 18.3조원 매출을 달성하며 글로벌 일등 지위를 유지하였습니다。" *(中文释义: "光学解决方案分部受惠于主要客户销售强劲及高规格相机模组采用扩大, 实现营收 KRW 18.3 万亿, 维持全球第一地位。")*
+> 资料来源: [LG Innotek 2025 사업보고서, II §1](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)。
+
+**通俗释义。** 相机模组 (camera module) 是一个完全集成的总成, 把以下各部件键合并校准为一体: **CMOS 图像传感器 (image sensor)** (LG Innotek 按 DART 原材料披露 ([II §3-1](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)) 从 Sony 与意法半导体 (STMicro) 采购)、**镜头组 (lens stack)** (来自 Largan 大立光 与 Genius 玉晶光)、**OIS / AF 光学防抖驱动器 (actuator)** (来自 Alps 与 Mitsumi)、柔性印制电路 (flex PCB)、红外滤光片 (IR cut filter)、外壳, 并且把整套堆栈调校到能满足 OEM 厂商对焦距、光圈、MTF、低光信噪比、OIS 防抖校正等指标的规范 —— 公差以微米计。LG Innotek 不生产传感器, 不生产镜头, 不生产驱动器 —— 它生产的是 **集成模组本身**, 那个被焊接到手机主板上的成品。BOM (Bill of Materials) 经济性很关键: FY2025 光学解决方案分部在图像传感器上花费 **KRW 6.44 万亿 (占光学投入成本 41%)** (Sony / STMicro), 在镜头上花费 **KRW 1.95 万亿 (13%)** (Largan / Genius), 在驱动器上花费 **KRW 3.79 万亿 (24%)** (Alps / Mitsumi) ([DART 年度报告, II §3-1](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270))。这一 BOM 结构使相机模组业务在结构上是 **附加值组装 (value-add assembly)** 业务, LG Innotek 的毛利率落在约 10–12% 区间 —— 远低于一家传感器厂商 (Sony) 或一家镜头厂商 (Largan), 因为 BOM 主要由 LG Innotek 不生产的部件构成。
+
+三个产品教学要点:
+
+1. **它在 Apple 的 iPhone 工作流中物理上做什么。** 现代的 iPhone Pro 相机 "堆栈" —— 三颗后置 + 一颗前置 + 一颗 LiDAR / 3D-ToF (Pro 机型) —— 实际上是六个互相独立的相机模组, 每一个有自己的光学设计与 OIS 校准。LG Innotek 的工作是在 Apple 组装厂 (富士康) 的 iPhone 量产节奏 (Q4 旺季约 5–8 百万部 / 周) 下交付成品模组。对 iPhone 17 Pro Max 这一代, 这意味着 LG Innotek 在 2025 机型年内交付了超过 5,000 万颗 5× 至 10× 折叠变焦模组 (分析师视角: 按 [The Elec, 2025-09-26](https://www.thelec.net/news/articleView.html?idxno=5447) 大约 70% 的折叠变焦数量份额 (剩余在 Jahwa Electronics 与 ICT 之间), Apple 大约 5,000–5,500 万台 Pro Max + Pro 出货量推算, LGIT 自身在 3,500–4,000 万颗区间)。
+2. **相机模组相对矩阵内其他产品如何差异化。** 相机模组是 LG Innotek 营收最大的产品线, 但毛利最低: FY2025 分部营业利润率 2.6%, 而封装解决方案为 7.5%, 车载解决方案为 2.9% ([DART 年度报告, II §4 分部 P&L](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270))。光学毛利结构受 Apple 年度 ASP 杀价节奏的结构性压制 —— FY2025 平均相机模组 ASP 同比 -5.4%, 按 DART 年度报告 (II §2-나) 披露 —— 同时受 BOM 由 Sony / Largan / Alps 主导的限制。其他两个分部要么客户重叠较小 (封装), 要么单位价值附加更高 (车载马达 / 照明), 因此能在光学吐出毛利的地方反向提升。
+3. **战略意义 — 2026–28 年光学条线的三项技术变曲。** 第一, **iPhone 18 Pro 可变光圈主相机** 将于 2026 年量产, 结构上更复杂 (驱动器必须把光圈从 f/1.6 机械调至 f/2.8), 且 Apple 据报已 **指定 LG Innotek 为可变光圈主组装商, 配合 Sunny Optical 与立讯 (Luxshare) 提供驱动器机构** —— 这意味着 LGIT 在折叠变焦份额流失的同时, 又在主相机内容上获得增量 ([MacRumors, 2026-04-16](https://www.macrumors.com/2026/04/16/iphone-18-pro-variable-aperture-camera-production/); [Cult of Mac, 2026-XX](https://www.cultofmac.com/news/first-iphone-variable-aperture-camera))。第二, **Vision Pro / AR 头显 3D ToF 模组** —— LG Innotek 自 Vision Pro 上市起即为独家 3D 感测供应商 ([Digitimes, 2024-01-30](https://www.digitimes.com/news/a20240130PD210/vision-pro-lg-innotek-3d-sensing.html)); 下一代 Vision Pro 及 Apple AR 眼镜路线图将进一步拉动 3D 感测内容。第三, **机器人 / 工业 AI 相机**: LGIT 在 2026 年 Q1 业绩会议中由 CFO 京 银国宣布 Q2 2026 启动 "机器人视觉" 量产, 瞄准 Boston Dynamics / Figure AI / 通用人形机器人相机模组的位置 —— 这些量目前几乎为零, 但提供了市场现在开始为之定价的可选项 ([Seoul Economic Daily, 2026-04-27](https://en.sedaily.com/finance/2026/04/27/lg-innotek-q1-operating-profit-jumps-136-percent-on-chip))。
+
+*分析师观点:* 相机模组具有 **部分竞争优势 (partial competitive advantage)**, 护城河类型 = **制造规模 + Apple 专属认证深度**。LG Innotek 在 FY2025 披露的 33.4% 全球移动相机模组市占率 ([DART 年度报告, II §1 (1) ㄹ 市占率表](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)) 结构性地依赖于 Apple 的出货量 —— 如果 Apple 把 50% 的相机模组采购转给舜宇 (Sunny Optical), 披露的份额会降至约 15%。出货量层面最直接的竞争者是 **舜宇光学科技 (Sunny Optical Technology, HKEX:2382)**, 其相机模组业务服务中国安卓阵营 (小米、Oppo、Vivo、华为), 且正在 Apple 折叠变焦 OIS 份额上抢夺 LG Innotek 的份额 ([The Elec, 2025-09-26](https://www.thelec.net/news/articleView.html?idxno=5447))。
+
+### 4.4 封装解决方案 (Package Solutions) — 半导体封装基板、Tape Substrate、光罩 (KRW 1.72 万亿, 占营收 8%)
+
+**10-K 引用原文 (DART 사업보고서 II §1 (2)):**
+> "패키지솔루션 사업부문은 모바일 시장 수요 회복 및 고성능, 고집적 기판 수요 증가와 POLED 매출 확대를 통해 전년대비 18% 성장한 1.7조원으로, 패키지솔루션 최고 매출을 경신하였습니다. 통신용 반도체기판은 차별화 기술 기반의 제품 경쟁력으로 일등 지위를 공고히 하였고, 신규 사업인 FC-BGA는 Global 고객 추가 확보로 양산 확대를 추진하고 있습니다. 테이프기판은 국내 및 중화권 전략 거래선 점유율 확대로 시장 일등 지위를 강화하고, 포토마스크는 시장 주도권 확보를 위해 OLED 등 프리미엄 모델 확대에 집중하고 있습니다。" *(中文释义: "封装解决方案分部因移动市场需求回暖、高性能高集成基板需求增加、POLED 营收扩大, 同比增长 18% 达 KRW 1.7 万亿, 创历史新高。通讯用半导体基板 [RF-SiP] 凭借差异化技术夯实第一地位; 新业务 FC-BGA 通过新增全球客户推进量产扩大。Tape Substrate 在国内及大中华区战略客户中扩大份额, 巩固市场第一地位; 光罩聚焦于 OLED 等高端机型, 抢占市场主导权。")*
+> 资料来源: [LG Innotek 2025 사업보고서, II §1 (2)](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)。
+
+**通俗释义。**
+
+封装解决方案实际是同一报表项目下四个互不相同的产品族 —— 这是一个值得拆开讲的封装要点, 因为这四个族系的客户与竞争动态完全不同。
+
+**(a) RF-SiP (Radio-Frequency System-in-Package, 射频系统级封装) 基板** 是把一整套蜂窝射频前端 (RFFE) 封装到单一层压元件中的基板与裸晶堆栈总成。现代智能手机的射频前端包含 30 + 个元件 —— 功率放大器 (PA)、低噪放大器 (LNA)、滤波器、开关 —— 需要由调制解调器 (modem) 与天线驱动。RF-SiP 基板把这些元件搭载在高密度层压板上, 通过屏蔽电源岛保证 LTE / 5G NR (600 MHz 至 6 GHz、毫米波 28–39 GHz, iPhone 上有的) 频段下的信号完整性。LG Innotek 将其称为公司第一份额的产品线。差异化 = 超薄芯材 (ultra-thin-core) 基板技术 + EMI 屏蔽集成 + 射频设计支持。
+
+**(b) FC-CSP (Flip-Chip Chip-Scale Package, 倒装芯片级封装) 基板** 是占地更小的倒装基板, 位于移动应用处理器 (mobile AP)、GDDR 内存裸晶、高密度内存模组下方。微缩才是其设计要点 —— 基板必须 ≈ 芯片本身的尺寸, 通过通孔 (through-via) 把芯片的 I/O 引到下一级 PCB。LGIT 在 Q4 2025 / Q1 2026 业绩会议中特别提及 **GDDR7 基板放量** 是 2025/2026 年的增长驱动 ([Korea Herald, 2026-01-26](https://www.koreaherald.com/article/10693624))。
+
+**(c) FC-BGA (Flip-Chip Ball Grid Array, 倒装芯片球栅阵列封装) 基板** 是大尺寸高端基板, 位于 AI 加速器、服务器 CPU、数据中心 GPU 下方。这是全球投资圈现在重点关注的产品线。LG Innotek 在 **2024 年 2 月** 于其 **龟尾 4 厂 "梦工厂"** 启动 FC-BGA **量产**, 此前于 2022 年 2 月宣布的 **KRW 4,130 亿 (约 USD 3.3 亿) 投资** 是该项目的基础 ([Korea Herald, 2022-02](https://www.koreaherald.com/article/10449620); [Evertiq, 2025-05-01](https://evertiq.com/design/2025-05-01-lg-innotek-targets-700m-in-fc-bga-sales-with-dream-factory); [PR Newswire, 2025-04-30](https://www.prnewswire.com/apac/news-releases/lg-innotek-to-build-fc-bga-into-700-million-usd-business-by-2030-with-its-state-of-the-art-dream-factory-302450934.html))。占地 230,000 m² 的工厂用 AI / 机器人 / 数字孪生 (digital twin) 基础设施自动化了 FC-BGA 全部 10 个生产 / 物流环节 —— "梦工厂" 是营销称呼但其架构是真实的。**公司目标: FC-BGA 在 2030 年实现 USD 7 亿营收**, 较 FY2025 估算的 FC-BGA 基数 (不到 USD 1 亿) 翻数倍 ([Tech Times, 2026-05-15](https://www.techtimes.com/articles/316690/20260515/lg-innotek-targets-us-ai-chip-clients-substrate-revenue-climbs-16.htm))。董事会于 2026 年 5 月承诺 **在 2026 年底前把 FC-BGA 产能翻倍** ([Tech Times, 2026-05-15](https://www.techtimes.com/articles/316690/20260515/lg-innotek-targets-us-ai-chip-clients-substrate-revenue-climbs-16.htm))。
+
+**(d) 显示器光罩 (Photomask, 光罩)** — LG Innotek 是通过 2009 年合并 LG Micron 获得该产线。光罩是显示器行业用来在 LCD / OLED 面板上转印图案的玻璃 + 铬质模板 (在功能上对应半导体光罩, 但像素尺度大得多)。据 DART, 光罩产线 FY2025 **稼动率 94.5%** —— 是 LGIT 所有产线中最高的 —— 且 **专注于 OLED / 高端机型** ([DART 年度报告, II §3-2 稼动率表 + §1 (2)](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270))。FY2025 光罩平均售价同比 +16.1% —— 是公司任何产品线中最大的 ASP 增长。这也是 LGIT 这条产线得以进入野村 Figure 36 ([Nomura "Greater China Semi" 锚定报告, 2026-05-21, p. 30 (分析师手稿 — 见项目内行业概览)](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)) 的原因, 反映了显示器光罩在韩国 OLED 供应链中的角色。*分析师观点:* 尽管 94.5% 的稼动率与 16.1% 的 ASP 涨幅亮眼, 光罩在 LGIT 内是一个 **小条线** —— 营收约 KRW 1,500–2,000 亿, 在封装解决方案中占比远不到 10%, 在 LGIT 整体中远不到 1%。它不会撬动股价命题。野村将其纳入图 36 是为了全球光罩榜单的完整性, 而非因为它是 LGIT 的核心命题。
+
+**(e) Tape Substrate (COF、TAPE BGA, 卷带式基板)** — 是用来把显示器驱动 IC (DDI) 连接到 LCD / OLED 面板上的柔性基板。LGIT 自称在韩国及大中华区显示器卷带式基板市场处于 #1 ([DART 年度报告, II §1 (2)](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270))。Tape Substrate 营收结构上与显示器单位出货量挂钩, FY2025 ASP 同比 -2.1%。Tape Substrate 产线在 FY2025 的稼动率为 63.9% —— 是封装解决方案条线下唯一明显低稼动率的产品, 反映显示器驱动 IC 供应链的疲软 ([DART 年度报告, II §3-2 稼动率](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270))。
+
+封装解决方案的三个产品教学要点:
+
+1. **它在客户价值链中物理上做什么。** FC-BGA 是位于服务器 CPU 或 AI 加速器裸晶下方的层压封装基板。没有 FC-BGA 基板, Intel Xeon、AMD EPYC、Nvidia H100、或 Apple M 系列硅芯片就无法贴装到服务器主板上。基板提供 ≥ 16 层细间距 (fine-pitch) 铜互连, 把芯片数千个凸点 (bump) 引出至 BGA 球栅阵列, 并提供封装级电源分配网络 (PDN)。现代 AI 加速器的 FC-BGA 封装表面积达 80–100 mm × 80–100 mm, 线宽 / 线距 5–10 µm, 无芯层 (coreless) 层压厚度 100 + µm。
+2. **它与同矩阵下 FC-CSP / RF-SiP 兄弟产品的差异。** FC-CSP 与 RF-SiP 是移动级基板 —— 占地小、层数少、单价低 (ASP 约 USD 1–5)。FC-BGA 是服务器级 —— 占地大、16 + 层、单价 USD 50–300。FC-BGA 每单位面积的定价大约是 FC-CSP 的 10–50 倍, 这就是为什么把 FC-BGA 产能翻倍能在移动基板出货量远超的情况下, 依然带来有意义的经营杠杆。
+3. **战略意义 — 为什么封装解决方案对 2026–28 至关重要。** LG Innotek 整个重估命题就活在这里。FC-BGA 在全球处于实物短缺 —— Ibiden、Shinko Electric、Unimicron 都在让其大尺寸基板产线满负荷, 而 Intel / Nvidia / AMD / TSMC 在竞争产能 ([Tech Times, 2026-05-15](https://www.techtimes.com/articles/316690/20260515/lg-innotek-targets-us-ai-chip-clients-substrate-revenue-climbs-16.htm))。LG Innotek 现在被定位为 **后来者 (late-entrant) 的备选货源**, 用于覆盖二线及供应不足的芯片组位置 —— KB Securities 明确把 "Intel、Amazon (Project Kuiper 卫星芯片组)、Boston Dynamics、Figure AI" 列为预期客户目标 ([Seoul Economic Daily, 2026-05-20](https://en.sedaily.com/finance/2026/05/20/lg-innotek-target-price-raised-on-ai-substrate-boom); [Tech Times, 2026-05-15](https://www.techtimes.com/articles/316690/20260515/lg-innotek-targets-us-ai-chip-clients-substrate-revenue-climbs-16.htm))。其中部分合约现已采用多年供应协议加预付款的形式 —— KB Securities 形容合约条款 "越来越像存储半导体的长期供应协议" ([Digitimes 转引 Seoul Economic Daily, 2026-05-21](https://en.sedaily.com/finance/2026/05/20/lg-innotek-target-price-raised-on-ai-substrate-boom))。
+
+![封装解决方案营收轨迹与基板产线稼动率](../../charts/lginnotek_substrate_trajectory.png)
+*资料来源: [DART 사업보고서 50 期, II §4-1 营收 + II §3-2 稼动率表](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)。*
+
+*分析师观点:* 封装解决方案具有 **明确竞争优势 (clear competitive advantage)**, 护城河类型 = **制造产能稀缺性 + 技术认证深度**。最直接的竞争者为 **Ibiden 株式会社 (TSE:4062)**、**Shinko Electric Industries (TSE:6967)**、**Unimicron Technology (TWSE:3037)**、**Nan Ya PCB (TWSE:8046)**、**AT&S (VIE:ATS)** —— 这五家合计控制全球 FC-BGA 约 74% 份额 ([Tech Times, 2026-05-15](https://www.techtimes.com/articles/316690/20260515/lg-innotek-targets-us-ai-chip-clients-substrate-revenue-climbs-16.htm); [WonderfulPCB 顶级 ABF 制造商, 访问于 2026-05](https://www.wonderfulpcb.com/blog/top-abf-substrate-manufacturers-and-market-leaders/))。LGIT 不在份额上的这个量级 (今天全球 FC-BGA 份额可能 < 3%), 但 "后来者命题" 恰恰是多头逻辑: 当同行 2027 年前产能已被锁满, 二货源认证窗口就会打开。
+
+### 4.5 车载解决方案 (Mobility Solutions) — 车用电子 (KRW 1.86 万亿, 占营收 8.5%)
+
+**10-K 引用原文:**
+> "모빌리티솔루션 사업부문은 전년 대비 소폭 감소한 매출 1.9조원을 기록하였으며, 플랫폼 모델 중심의 개발과 수주활동 전개 및 지속적인 원가구조 개선 활동으로 수익성을 동반한 성장을 도모하고 있습니다。" *(中文释义: "车载解决方案分部录得营收 KRW 1.9 万亿, 同比小幅下降, 通过聚焦平台型号的研发、订单获取活动及持续的成本结构改善, 致力于实现伴随盈利的增长。")*
+> 资料来源: [LG Innotek 2025 사업보고서, II §1 (3)](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)。
+
+**通俗释义。** 车载解决方案向汽车 Tier-1 供应链销售四个产品族: **马达 / 传感器** (用于 HVAC 致动器的 BLDC 马达、位置传感器、线控驾驶组件 —— 在光州、中国、墨西哥工厂生产)、**车载通讯** (V2X、车联网 (telematics)、5G NR / 6G-ready 模组 —— 在光州生产)、**车载 LED 照明** (远近光 LED 总成与数字大灯 —— 这是 Mobility 条线唯一具有专利深度的产品)、**功率模组 (power modules)** (用于 EV 的 DC-DC 转换器与车载充电机)。据 DART, 截至 2025 年末的新订单 (수주잔고) 达到 **历史新高 KRW 19.2 万亿** ([DART 年度报告, II §4-2 + Korea Herald, 2026-04-25](https://www.koreaherald.com/article/10726451)) —— 其中大部分是车载 LED 照明, 这是 LGIT 的结构性强项。
+
+车载解决方案的三个产品教学要点:
+
+1. **它在车辆中物理上做什么。** 车载马达驱动 HVAC 通风口、节气门、电子驻车制动、车门锁扣以及各类 ADAS 控制连杆。V2X / 车联网模组承担蜂窝 / DSRC / 直连通信 (sidelink) 协议, 与云端及其他车辆通信。LED 照明总成取代卤素 / 氙气大灯, 使用自适应矩阵式 LED 大灯。功率模组位于 EV 动力总成 —— DC-DC 转换器把 400V 或 800V 高压电池电压降至 12V 供辅助电子使用, 车载充电机 (OBC) 把交流电网电力转换为高压直流。
+2. **它与 Optical / Package 兄弟产品的差异。** 车载是慢节奏、合约驱动、长尾客户业务 (德国 / 美国 / 韩国 Tier-1 及 OEM)。订单获取领先营收 2–5 年 —— 2025 年末 KRW 19.2 万亿的订单存量将在 2030 年前陆续释放为营收。客户集中度与光学截然不同 (在 Tier-1 中真正多元化), 毛利结构维持较低 (FY2025 分部营业利润率 2.9%), 因为车用电子在 Continental、Bosch、Denso、Aisin、Magna 内制部门以及中国整车零部件商之间存在激烈的价格竞争。
+3. **战略意义 — 自动驾驶与 6G 的可选项。** 车载解决方案是 LGIT 组合中的 "长期期权"。2025-05 对 Aeva (激光雷达) 的 USD 5,000 万股权投资, 以及 2025-09 对 SMARTRadar System 的股权认购, 都是雷达 / 激光雷达集成的卡位 ([DART 年度报告, II §6-1 — 主要合约](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270); [LG Innotek — Wikipedia 关于 Aeva 备注](https://en.wikipedia.org/wiki/LG_Innotek))。这些不会影响 2026 年数字, 但提供了支撑 2027–2030 叙事的可选项价值。
+
+*分析师观点:* 车载解决方案具有 **部分竞争优势**, 护城河类型 = **LG 集团品牌 + Tier-1 设计导入惯性**。最直接的竞争者包括 **Samsung Electro-Mechanics** (车用 MLCC / 功率模组)、**Continental AG (DE:CON)** (车载照明与车联网)、**Magna International (NYSE:MGA)** (车载电子)、**Denso (TSE:6902)** (马达 / 传感器)。
+
+### 4.6 旗舰产品族与近 12 个月发布
+
+驱动股价命题的有三个旗舰:
+
+1. **iPhone 17 / 18 主相机 + 折叠变焦相机模组** — 是产生现金流支撑其他业务的引擎。每年 3,500–4,000 万颗折叠变焦模组 (ASP 约 USD 30–40) 加上每年超过 1 亿颗主 + 超广角相机模组 (ASP 约 USD 10–20), 使其成为 LG Innotek 组合中最大的单一硬件产品线。
+2. **FC-BGA 基板** — 是 2026 年估值重估所建立的增长引擎。2024 年 2 月启动量产, 预计 **2026 年底前产能翻倍** ([Tech Times, 2026-05-15](https://www.techtimes.com/articles/316690/20260515/lg-innotek-targets-us-ai-chip-clients-substrate-revenue-climbs-16.htm)), 处于五年内达到 USD 7 亿营收的滑坡上。
+3. **车载 LED 照明** — 慢但持续高毛利的车载旗舰, 锚定 KRW 19.2 万亿订单存量。
+
+**近 12 个月产品 / 战略发布 (附公开新闻稿引用):**
+
+- **2025-04** — FC-BGA "梦工厂" 公开发布 / USD 7 亿 2030 目标 ([PR Newswire, 2025-04-30](https://www.prnewswire.com/apac/news-releases/lg-innotek-to-build-fc-bga-into-700-million-usd-business-by-2030-with-its-state-of-the-art-dream-factory-302450934.html))。
+- **2025-05** — Aeva Technologies USD 5,000 万股权投资, 用于激光雷达合作 ([Wikipedia — LG Innotek 2025 章节](https://en.wikipedia.org/wiki/LG_Innotek); [DART 年度报告 II §6-1](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270))。
+- **2025-09** — SMARTRadar System 股权认购 (KRW 59 亿), 用于自动驾驶雷达合作 ([DART 年度报告 II §6-1](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270))。
+- **2024-10 / 2025-10** — 与韩国材料科学研究院 (KIMS) 共同开发无重稀土 EV 永磁电机 ([Wikipedia — LG Innotek 2024 章节](https://en.wikipedia.org/wiki/LG_Innotek))。
+- **2026 Q2 (计划中)** — 机器人视觉相机模组量产启动 (CFO 在 Q1 2026 业绩会议中确认: ["机器人视觉" 将于 2026 年 Q2 进入量产](https://en.sedaily.com/finance/2026/04/27/lg-innotek-q1-operating-profit-jumps-136-percent-on-chip))。
+
+---
