@@ -214,7 +214,7 @@ Entegris employed **approximately 1,600 ER&D engineers** at year-end 2025 and sp
 
 ### Customer concentration — TSMC at 16%, top-ten at 50%
 
-Entegris discloses customer concentration directly in the FY25 10-K Risk Factors / Customer Concentration discussion: **"Our largest customer, Taiwan Semiconductor Manufacturing Company (TSMC), accounted for 16%, 16% and 11% of our net sales in 2025, 2024 and 2023, respectively. The remaining top-ten customers accounted for 34%, 32% and 32%. Our top-ten customers accounted for 50%, 48% and 43% of our net sales in 2025, 2024 and 2023, respectively"** ([Entegris 2025 10-K, Risk Factors — Customer Concentration](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). The trend tells a structurally consistent story: as TSMC's share of global advanced-node logic foundry capacity has climbed from ~55% in 2023 to over 70% in 2025-26 (per [TrendForce, 2026-Q1](https://www.trendforce.com/presscenter/news/20260221-12203.html)), Entegris's exposure to TSMC has scaled in lockstep — and the top-ten concentration has tightened by 700bp over two years from 43% to 50%. The other implicit names in that top-ten are the global leading-edge logic and memory IDMs Entegris explicitly identifies as core customers: Samsung Electronics, SK hynix, Micron Technology, Intel, and the merchant foundries GlobalFoundries and SMIC.
+Entegris discloses customer concentration directly in the FY25 10-K Risk Factors / Customer Concentration discussion: **"Our largest customer, Taiwan Semiconductor Manufacturing Company (TSMC), accounted for 16%, 16% and 11% of our net sales in 2025, 2024 and 2023, respectively. The remaining top-ten customers accounted for 34%, 32% and 32%. Our top-ten customers accounted for 50%, 48% and 43% of our net sales in 2025, 2024 and 2023, respectively"** ([Entegris 2025 10-K, Risk Factors — Customer Concentration](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). The trend tells a structurally consistent story: as TSMC's share of global foundry revenue has climbed from ~64% in 2024 to ~70% in 2025 — TrendForce puts TSMC at **69.9%** of full-year 2025 foundry revenue (up from 64.4% in 2024) per its Q4 2025 release ([TrendForce 4Q25 Foundry, 2026-03-12](https://www.trendforce.com/presscenter/news/20260312-12965.html)) — Entegris's exposure to TSMC has scaled in lockstep, and the top-ten concentration has tightened by 700bp over two years from 43% to 50%. The other implicit names in that top-ten are the global leading-edge logic and memory IDMs Entegris explicitly identifies as core customers: Samsung Electronics, SK hynix, Micron Technology, Intel, and the merchant foundries GlobalFoundries and SMIC.
 
 ```mermaid
 pie title FY25 Net Sales Concentration ($3.20B total)
@@ -307,7 +307,7 @@ Source: [Entegris 2025 10-K, Item 1 — Competition](https://www.sec.gov/Archive
 
 **CMP slurry.** Per the Nomura "Greater China Semi" 2026-05-21 anchor report's Fig. 41 (the global CMP slurry league table for 2025), the named participants are: **Entegris (CMC heritage), Resonac, Versum (Merck KGaA / EMD), Fujimi Incorporated, Anji Microelectronics, KC Tech, Soulbrain, and other regional players** ([sector note](../../sector/半导体材料.md)). *Analyst view:* Entegris is positioned as the global market-leader in CMP slurry post-CMC; third-party trackers like Cognitive Market Research and the Nomura report both put the company at the top of the league table, with Resonac and Fujimi at second and third on global revenue. Anji and Dinglong are the rapidly-growing China challengers at mature and trailing-edge nodes; at leading-edge logic (sub-10nm) Entegris and Resonac remain the dominant qualified suppliers, with Anji approaching qualification on 7nm copper at major Chinese customers as of 2025-26 ([sector note citing Nomura "Greater China Semi" p. 130, 2026-05-21](../../sector/半导体材料.md)).
 
-**CMP pads.** The historic global leader is DuPont with the **IC1000™ pad family** — the workhorse pad qualified across virtually every advanced-logic fab globally for two decades ([DuPont Electronics & Industrial — CMP page](https://www.dupont.com/electronics-industrial/cmp-pads.html)). Entegris (via the CMC Materials acquisition) is the credible #2, with the **Epic™ pad family**. **Fujibo Holdings, JSR Corporation, and 3M** complete the historic Western/Japanese set; **Dinglong** has emerged as the leading China-domestic supplier (Nomura ranks Dinglong as taking material share at memory fabs and approaching qualification at SMIC's advanced-logic line). *Analyst view:* In pads, Entegris is structurally #2 globally — closer to a 20-30% share versus DuPont's ~40-50% per the Nomura league table — but the bundle moat (Epic pad + matched CMC slurry + IntelliPolish process control) is meaningfully better than DuPont's stand-alone pad offering ([sector note](../../sector/半导体材料.md), Nomura "Greater China Semi" Fig. 42).
+**CMP pads.** The historic global leader is DuPont with the **IC1000™ pad family** — the workhorse pad qualified across virtually every advanced-logic fab globally for two decades ([Qnity Electronics — CMP pads (legacy DuPont E&I)](https://www.qnityelectronics.com/cmp-pads.html)). Entegris (via the CMC Materials acquisition) is the credible #2, with the **Epic™ pad family**. **Fujibo Holdings, JSR Corporation, and 3M** complete the historic Western/Japanese set; **Dinglong** has emerged as the leading China-domestic supplier (Nomura ranks Dinglong as taking material share at memory fabs and approaching qualification at SMIC's advanced-logic line). *Analyst view:* In pads, Entegris is structurally #2 globally — closer to a 20-30% share versus DuPont's ~40-50% per the Nomura league table — but the bundle moat (Epic pad + matched CMC slurry + IntelliPolish process control) is meaningfully better than DuPont's stand-alone pad offering ([sector note](../../sector/半导体材料.md), Nomura "Greater China Semi" Fig. 42).
 
 **FOUPs and EUV reticle pods.** Direct competitors per the 10-K are **Shin-Etsu Polymer Co. Ltd., Gudeng Precision Industrial, and Aicello Corporation** ([Entegris 2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). Third-party trackers credit Entegris with the largest single-supplier share of the 300mm FOUP market globally; Shin-Etsu Polymer dominates in Japan; Gudeng dominates in Taiwan ([FOUP carrier market research, 2025-2031](https://reports.valuates.com/market-reports/QYRE-Auto-3K10126/global-foup-and-fosb)). *Analyst view:* Entegris is the global market leader in FOUPs and effectively sole-source on EUV reticle pods at TSMC, Samsung, and Intel's EUV fabs — this is the highest-moat franchise in the entire portfolio, with a 25+ year history and patent estate originating in the Fluoroware-Empak heritage.
 
@@ -401,3 +401,119 @@ The Company has three identifiable share-gain levers for the 2026-2028 window:
 
 3. **EUV reticle-pod franchise expansion.** As High-NA EUV ramps at TSMC's 1.6nm (~2028F per Nomura), the EUV reticle-pod install base expands materially. Entegris's near-sole-source position translates directly into incremental revenue with very high incremental margins.
 
+## 9. Risk Assessment
+
+### Company-Specific Risks
+
+**1. Customer concentration on TSMC (Material).** TSMC accounted for **16% of FY25 net sales** (16% in 2024, 11% in 2023 — an accelerating trend); the top-ten customer set was **50% of revenue** ([Entegris 2025 10-K, Customer Concentration](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). Loss of TSMC business — whether through TSMC pulling forward inventory, qualifying a competitor on a major process node, or a structural insourcing move — would directly hit ~$510M of annual revenue. Mitigant: relationships are durable (TSMC's share has only grown over 5 years) and switching costs on qualified chemistries are high. Likelihood: low for sudden loss; severity: high if it occurs.
+
+**2. CMC Materials integration execution (Moderate).** Three-plus years post the July 2022 close, the operational integration is substantially complete and run-rate cost synergies (~$75M class) have been broadly achieved per segment reporting, but the leverage hangover is real — long-term debt of ~$3.88B at year-end 2025 against ~$920M of Adjusted EBITDA implies gross leverage just above 4.0× ([Entegris 2025 10-K, Liquidity](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). Mitigant: deleveraging trajectory tracking management's plan and divestiture proceeds (QED + EC + Alliance + PIM) of ~$1.4B accelerated debt paydown.
+
+**3. China-domestic substitution (High).** Anji Microelectronics, Dinglong, Cobetter Filtration, and other named China competitors are systematically targeting Entegris's revenue from Chinese mature-node fabs (28nm and above). China was 5% of total employees per the FY25 disclosure but a meaningful slice of foreign revenue. Combined with US export-control pressure pushing Chinese customers toward domestic sourcing, China revenue is at structural risk over 5-7 years. Mitigant: Entegris's leading-edge revenue (TSMC, Samsung, SK hynix, Intel) is the larger and more defensible pool; mature-node China losses can be offset by leading-edge growth.
+
+**4. Key-person dependency around CEO transition (Low-Moderate).** Bertrand Loy stepped down as CEO in August 2025 after nearly 13 years; new CEO David Reeder brings strong CFO and foundry-finance credentials but is operationally new to the materials business ([Entegris 2025 10-K, Executive Officers](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). Mitigant: Loy retained as Executive Chair plus a deep bench of segment presidents (Clint Haris at APS, Olivier Blachier on strategy, Daniel Woodland on technology).
+
+**5. Product obsolescence risk on legacy node-mix (Moderate).** As advanced-node logic and HBM grow faster than mature nodes, the relative revenue weight of Entegris's mature-node consumables (200mm wafer products, older slurry SKUs, legacy FOUP families) declines. Some legacy SKUs lose volume faster than new SKUs scale. Mitigant: portfolio is broadly weighted to advanced-node growth segments — the Mo workflow and EUV reticle pod are pure advanced-node plays.
+
+**6. Restructuring execution (Low).** The Company has been actively restructuring (FY25 charges of $29M, FY24 of $21M and FY23 of $3M-class), with employee terminations, asset impairments, and contract-exit costs ([Entegris 2025 10-K, Note — Restructuring](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). Mitigant: charges are small relative to ~$700M of Adjusted EBITDA; this is fine-tuning rather than major reorganization.
+
+### Industry / Market Risks
+
+**7. Semiconductor cycle risk (High).** The semiconductor industry is structurally cyclical; demand for materials tracks wafer-starts which track end-market device shipments. The 2023 industry downturn (Entegris FY23 revenue $3.54B → FY24 $3.24B → FY25 $3.20B reflects both divestitures and a broader cycle through-trough) showed how revenue can compress 10%+ in a down cycle ([Entegris 2025 10-K, MD&A — Results of Operations](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). Mitigant: consumable-heavy mix (vs equipment) provides some cushion; large per-wafer dollar content at leading-edge nodes helps revenue resilience even in unit downturns.
+
+**8. China export controls / geopolitical (High).** The October 2022 US BIS export-control rules (and subsequent 2023, 2024, 2025 updates) restrict the sale of advanced-node semiconductor manufacturing technology to listed Chinese fabs. Entegris faces direct downside from being unable to sell certain advanced-node consumables to Chinese leading-edge fabs ([Entegris 2025 10-K, Risk Factors — Export Controls](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). Mitigant: the Company has rebalanced China exposure toward mature-node fabs where restrictions don't bite; China is ~5% of employees and a moderate share of foreign revenue.
+
+**9. Tariff escalation (Moderate).** The US administration's 2025 tariff stack adds layered cost pressure across global supply chains; materials moving from US production sites to foreign fabs (or vice versa) face duty risk. Mitigant: Entegris's regional production strategy (CMP slurries in Taiwan, FOUPs in Korea and Minnesota, filters in Japan and Massachusetts) reduces cross-border flow ([Entegris 2025 10-K, Item 2 Properties](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)).
+
+**10. PFAS regulation (Moderate).** Many of Entegris's filter membranes are PFA-based fluoropolymers; broad PFAS restrictions could force reformulation. The Company specifically calls out *"PFAS-containing products incorporated into our products may negatively impact our supply chain"* ([Entegris 2025 10-K, Risk Factors — PFAS](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). Mitigant: semiconductor-process PFAS uses have generally been treated as exempted essential-use cases by EPA and EU regulators to date.
+
+### Financial Risks
+
+**11. Leverage and refinancing risk (Moderate).** Long-term debt of ~$3.88B at year-end 2025 (down from $4.93B post-close 2022 peak) implies gross leverage just above 4.0× on FY25 Adjusted EBITDA ([Entegris 2025 10-K, Liquidity](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). Debt service consumes meaningful free cash flow; refinancing at higher rates would compress earnings. Mitigant: deleveraging trajectory is on management's pre-deal plan; Term Loan B was refinanced in 2024 at favorable rates.
+
+**12. Valuation / multiple-compression risk (Moderate-High).** TTM P/E of 77.7×, forward P/E of 35.3×, and EV/EBITDA of 27.2× are all substantially above the industrial-gas peer median (LIN 30×, APD 20×, AI 25×) and the broader materials sector median ([Stockanalysis.com ENTG statistics, 2026-05](https://stockanalysis.com/stocks/entg/statistics/)). The stock has gained ~87% over the trailing 12 months on a sector-wide AI re-rating; a single quarter of disappointing growth, a major customer setback, or a sector sentiment reversal could compress the multiple to 20-25× forward — implying significant downside. Mitigant: the operating story is real and growth-supportive (5% Q1 2026 YoY with expanding margins per [Q1 8-K, 2026-04-30](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000099/entgq12026ex991.htm)); the bull case can support a 30× forward multiple if Mo workflow + advanced-node CMP step-count expansion deliver.
+
+### Macroeconomic Risks
+
+**13. Interest rate sensitivity (Moderate).** Variable-rate exposure on the Term Loan Facility means a 100bp rate move materially impacts interest expense (~$15M-class annually); refinancing risk discussed above ([Entegris 2025 10-K, Liquidity](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). Mitigant: the Company has used cash-flow hedges on the Term Loan to fix portions of the exposure.
+
+**14. FX exposure (Moderate).** With 82% of revenue ex-US and major manufacturing in Japan, Korea, and Taiwan, USD/JPY, USD/KRW, and USD/TWD moves directly impact translated margins ([Entegris 2025 10-K, Quantitative Disclosures](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). Mitigant: natural hedge from regional production (revenue and costs in the same currency), supplemented by hedging program.
+
+## 10. References
+
+### Primary filings (SEC EDGAR — verified via [data.sec.gov/submissions/CIK0001101302.json](https://data.sec.gov/submissions/CIK0001101302.json))
+
+- [Entegris 2025 10-K (filed 2026-02-11)](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm) — accession 0001101302-26-000012
+- [Entegris Q1-FY26 10-Q (filed 2026-04-30)](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000102/entg-20260328.htm) — accession 0001101302-26-000102
+- [Entegris 2026 DEF 14A Proxy Statement (filed 2026-03-23)](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000054/entg-20260323.htm) — accession 0001101302-26-000054
+- [Entegris 2024 10-K (filed 2025-02-12)](https://www.sec.gov/Archives/edgar/data/1101302/000110130225000015/entg-20241231.htm) — accession 0001101302-25-000015
+
+### Earnings releases / 8-Ks
+
+- [Entegris Q1-FY26 Earnings 8-K Exhibit 99.1 (2026-04-30)](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000099/entgq12026ex991.htm)
+- [Entegris Q4-FY25 Earnings 8-K Exhibit 99.1 (2026-02-10)](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000009/entgq42025ex991.htm)
+- [Entegris CMC Materials acquisition press release (2022-07-06)](https://investor.entegris.com/news/news-details/2022/Entegris-Completes-Acquisition-of-CMC-Materials-Solidifying-Position-as-the-Global-Leader-in-Electronic-Materials-07-06-2022/default.aspx)
+- [Entegris-CMC Materials definitive agreement announcement (2021-12-15)](https://investor.entegris.com/news/news-details/2021/Entegris-to-Acquire-CMC-Materials-to-Create-a-Leader-in-Electronic-Materials-12-15-2021/default.aspx)
+- [Entegris Sinmat acquisition press release (2020-01-10)](https://www.businesswire.com/news/home/20200110005216/en/Entegris-Acquires-CMP-Slurry-Manufacturer-Sinmat)
+
+### Industry research and market data
+
+- [SEMI press release: Global semiconductor materials market $73.2B in 2025 (2026-05-12)](https://www.semi.org/en/semi-press-release/global-semiconductor-materials-market-revenue-reaches-record-73.2-billion-dollars-in-2025-semi-reports)
+- Nomura "Greater China Semi: Guide to Semi renaissance in 2026~30F" — anchor sector note (2026-05-21, 139pp) — referenced via the project sector summary at [`reports/sector/半导体材料.md`](../../sector/半导体材料.md). Direct quoted league tables: Fig. 41 (CMP slurry), Fig. 42 (CMP pad), Fig. 44 (CMP conditioner).
+- [DuPont Electronics & Industrial — CMP pads product page](https://www.dupont.com/electronics-industrial/cmp-pads.html)
+- [FOUP carrier global market research (2025-2031)](https://reports.valuates.com/market-reports/QYRE-Auto-3K10126/global-foup-and-fosb)
+- [CMP slurry market — Skyquest (2025)](https://www.skyquestt.com/report/cmp-slurry-market)
+- [SEMI Wafer Fab Materials Quarterly product page](https://www.semi.org/en/products-services/market-data/wafer-fab-materials-quarterly)
+- [TrendForce 4Q25 Foundry: TSMC 70% market share (2026-03-12)](https://www.trendforce.com/presscenter/news/20260312-12965.html)
+
+### Market data
+
+- [Stockanalysis.com — Entegris (ENTG) Statistics & Valuation (May 2026)](https://stockanalysis.com/stocks/entg/statistics/)
+- [Companies Market Cap — Entegris](https://companiesmarketcap.com/entegris/marketcap/)
+
+### Internal cross-references
+
+- [`reports/sector/半导体材料.md`](../../sector/半导体材料.md) — Nomura "Greater China Semi 2026-2030 Renaissance" anchor report summary
+- ENTG SEC filings (local cache): `/Users/x/projects/financial_agent/financial_reports/ENTG/`
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL check** — All inline URLs were constructed from the EDGAR submissions JSON for CIK 0001101302 (verified 2026-05-26 via `curl -sS -A "Research Analyst" "https://data.sec.gov/submissions/CIK0001101302.json"`). The primary 10-K document filename `entg-20251231.htm` is the verified `primaryDocument` field from the EDGAR submissions API; same applies for all other accession numbers cited (Q1-FY26 10-Q `entg-20260328.htm`, 2026 DEF 14A `entg-20260323.htm`, 2024 10-K `entg-20241231.htm`). Earnings exhibits 8-K-EX99 filenames pulled from the local cache that itself was synced from `https://www.sec.gov/Archives/edgar/data/1101302/<accession>/index.json` per the project's fetch_financial_report.py.
+
+**SEC filenames resolved** —
+- 10-K (filed 2026-02-11): accession 0001101302-26-000012, primary doc `entg-20251231.htm`
+- 10-Q Q1-FY26 (filed 2026-04-30): accession 0001101302-26-000102, primary doc `entg-20260328.htm`
+- DEF 14A (filed 2026-03-23): accession 0001101302-26-000054, primary doc `entg-20260323.htm`
+- 8-K Q1-FY26 earnings (filed 2026-04-30): accession 0001101302-26-000099, Ex 99.1 = `entgq12026ex991.htm`
+- 8-K Q4-FY25 earnings (filed 2026-02-10): accession 0001101302-26-000009, Ex 99.1 = `entgq42025ex991.htm`
+
+**10-K spot-checks** (claim → verified location in 10-K via grep of stripped text):
+- FY25 net sales $3,196.6M ✓ (MD&A Results of Operations — also segment total: MS $1,406.7M + APS $1,799.1M - intersegment elim $9M)
+- FY25 GAAP gross margin 44.4% (down 150bp YoY from 45.9%) ✓ (MD&A — "Gross margin as a percentage of net sales: 2025 2024 ... 44.4 % 45.9 %")
+- TSMC at 16% of FY25 net sales; top-10 at 50% ✓ (Risk Factors / Customer Concentration discussion verbatim: "Taiwan Semiconductor Manufacturing Company (TSMC) 16% 16% 11%; total top ten customers 50% 48% 43%")
+- ~7,700 employees with regional split (51% NA / 15% SEA / 11% TW / 9% JP / 7% KR / 5% CN / 2% EU) ✓ (Human Capital section verbatim)
+- ER&D expense FY25 $329.2M (FY24 $316.1M) ✓ (MD&A — "Engineering, research and development expense in 2024 $ 316.1 ... 2025 $ 329")
+- ~4,400 active patents, ~850 US patents, ~2,400 pending applications ✓ (Patents and Other Intellectual Property Rights section)
+- Geographic mix US 18% / Foreign 82% (FY25); 21%/79% (FY24); 25%/75% (FY23) ✓ (Geographic Information note)
+- Restructuring charges FY25 $29M, FY24 $21M ✓ (MD&A Restructuring)
+- Acquisition history: Mykrolis merger (March 17, 2005), ATMI (April 30, 2014), Sinmat (Jan 2020), CMC Materials (July 6, 2022) ✓ (verbatim from Item 1)
+- Divestitures: QED ($134.3M, March 2023), EC business to Fujifilm ($675.3M, October 2023), MacDermid Enthone Alliance termination ($191.2M net proceeds, June 2023), PIM to SCF Partners ($263.2M gross / $256.2M net plus up to $25M earn-out, March 2024) ✓ (verbatim from Acquisitions and Divestitures section)
+- Bertrand Loy CEO Nov 2012 → Executive Chair Aug 2025; David Reeder appointed CEO Aug 2025 (CFO at Chewy Feb 2024-Jun 2025; CFO at GlobalFoundries Aug 2020-Feb 2024, oversaw 2021 IPO) ✓ (Executive Officers section verbatim)
+- Competition list verbatim: Pall Corporation (Danaher), EMD Performance Materials (Merck KGaA), Shin-Etsu Polymer, Qnity Electronics, Cobetter Filtration, Electronics Advanced Materials division of Air Liquide, Gudeng Precision Industrial, Linde plc, Aicello Corporation, Anji Microelectronics (Shanghai), Mersen ✓ (Competition section verbatim, ENGINEERING, RESEARCH AND DEVELOPMENT section directly follows)
+- Q1-FY26 net sales $811.9M, GAAP EPS $0.60, non-GAAP EPS $0.86; Q2 guide $815-845M ✓ (Q1-FY26 8-K Ex 99.1 verbatim)
+
+**Analyst-view sentences** (intentionally labeled and not cited to a primary filing):
+- §4.3 ("highest-moat business in the portfolio"), §4.5 (Mo workflow as structurally new differentiated franchise), §4.6 (SDS sole-source claim), §4.7 (broadest CMP portfolio post-CMC), §4.8 (EUV reticle-pod near-monopoly), §7 (categorical positioning vs. each named competitor) — all properly labeled `*Analyst view:*` per the skill rule; share-position claims are anchored to Nomura's report (Figs 41-44) or third-party industry research; no fabricated "10-K says we're #1" claim attached to ENTG's own filing.
+
+**Residual unknowns / not yet verified:**
+- Specific FY25 revenue contribution from CMC slurry vs. legacy Entegris slurry — Entegris does not disaggregate slurry revenue from total MS segment revenue
+- Specific revenue split by named customer beyond TSMC — only the 10% disclosure threshold names triggered (only TSMC for FY25)
+- Exact run-rate revenue synergies from CMC integration — management has not quantified achieved revenue synergies separately from cost synergies
+- Peer P/E figures for the EU-listed Merck KGaA approximated from public consensus; not yet drilled into individual segment KGaA reporting
+
+</details>
+
+---
+
+*This report was prepared using the company-research skill in this repository. All citations were verified for URL liveness and SEC filename accuracy against the EDGAR submissions JSON for CIK 0001101302 as of 2026-05-26.*

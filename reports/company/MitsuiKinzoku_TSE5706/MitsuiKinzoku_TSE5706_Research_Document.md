@@ -339,3 +339,148 @@ Three TAM buckets sized below — using the most-recent independent estimates an
 ![Mitsui Kinzoku FY2025 segment mix — revenue vs operating income](../../charts/mitsuikinzoku_segment_mix.png)
 
 *Source: [Mitsui Kinzoku FY2025 Results & FY2026 Forecast presentation, pp.8–10 — Segment Information by Business Unit](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027). The Metals Sector is the consolidated revenue heavyweight (~42% on gross basis) but the Engineered Materials Sector is approaching parity on operating income — a structural shift accelerating through the 2025–2027 MTP horizon.*
+
+## 9. Risk Assessment
+
+### Company-Specific Risks (5)
+
+**1. Concentration in the substrate-maker customer layer (Copper Foil Division).** Mitsui Kinzoku's MicroThin™ and VSP™ revenue is funneled through five customers — Ibiden, Unimicron, Nan Ya PCB, Shinko Electric, AT&S — that together control ~75% of the global ABF substrate market. While no single customer is disclosed as >10% of consolidated revenue, *Analyst view:* the top-3 substrate makers likely account for >50% of Copper Foil Division revenue ([Yole — Advanced IC substrates, 2024](https://www.yolegroup.com/press-release/advanced-ic-substrate-reach-the-stars/)). If any one of these substrate-maker customers (a) chases qualification of a Korean or Chinese second source aggressively, or (b) destocks ahead of a perceived AI-cycle peak, the Copper Foil P&L moves materially. **Severity: HIGH**; **mitigant**: ~95% MicroThin™ share + 12–24 month qualification timelines + multi-year contract visibility into 2027 — Mitsui has cushion.
+
+**2. Chinese ED-Cu-foil entrant acceleration into HVLP3+ grades.** Chinese makers (Wason Copper Foil, Jiujiang Defu, Nuode Investment) are credibly ramping HVLP2 and HVLP3 grades and are 18–30 months behind Mitsui Kinzoku and JX Advanced Metals on HVLP4/5 — but the gap is closing. A successful HVLP3+ scale qualification by even one Chinese entrant would compress VSP™ pricing, particularly in non-leading-edge applications (5G base-station, switch ASIC). **Severity: MEDIUM-HIGH** over 2027–2030 horizon; **mitigant**: Mitsui's HVLP5 lead plus a deliberately product-mix shift toward higher-grade product within the VSP™ category ([FY2025 Q2 Telephone Conference Q&A, p.13 — "increase the proportion of higher value-added products within the VSP™ category"](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=rXEqWGnOMII%3D&tabid=204&mid=1027&TabModule903=0)).
+
+**3. AI-cycle execution risk on the 1,200 t/mo VSP™ capacity ramp.** Mitsui Kinzoku has committed to expand VSP™ capacity from 620 t/mo (Aug 2025) to 840 t/mo by Sep 2026 and a long-run target of 1,200 t/mo, premised on long-term volume forecasts from key customers. If AI-server demand normalises faster than expected (NVIDIA growth deceleration, hyperscaler capex pause), Mitsui Kinzoku absorbs higher fixed-cost depreciation on under-utilised capacity. **Severity: MEDIUM**; **mitigant**: management has explicitly noted that the capacity expansion uses "repurposing existing facilities" to minimise marginal capex, dampening incremental fixed-cost exposure ([VSP™ Production Capacity Enhancement release, 2025-08-20, p.1](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=ImEZB60e3oE%3D&tabid=278&mid=824&TabModule1277=0)).
+
+**4. Auto-catalyst secular decline from BEV transition.** The global passenger-car auto-catalyst market is in secular decline as BEVs replace ICE / hybrid powertrains — a 1–2% annual market decline through 2035 is the consensus base case. Mitsui Kinzoku's stronger position is in motorcycle catalyst (defensive — motorcycle BEV transition is much slower than passenger car), but the auto-catalyst exposure is meaningful. **Severity: LOW-MEDIUM** (slow burn); **mitigant**: 50% global motorcycle-catalyst share + hybrid powertrain demand + emissions-regulation tightening in EM motorcycle markets.
+
+**5. Caserones and other mining-asset impairment recurrence.** Mitsui Kinzoku has historically taken impairments on the Caserones copper-mine equity stake (FY2020–FY2022) that materially depressed reported earnings. While the major impairment has been taken, residual equity-method exposure remains and a renewed Chilean royalty change, Andean water-supply crisis, or copper-price collapse could trigger fresh impairment. **Severity: LOW**; **mitigant**: residual Caserones exposure is now equity-method only; the bulk of the operational risk has been transferred.
+
+### Industry / Market Risks (3)
+
+**6. Copper price volatility — both an opportunity and a risk.** Copper foil is sold on a "cost-plus" basis where Cu metal cost is largely passed through, but rapid changes in copper-price between contract dates and shipment dates create inventory gains / losses that show up in segment operating profit. FY2025 saw ¥24.5 bn of consolidated inventory-effect tailwinds reversing in FY2026 ([FY2025 Results presentation, pp.4–6 — operating income difference analysis](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027)). **Severity: MEDIUM** (cyclical, predictable); **mitigant**: pass-through pricing covers underlying margin; only inventory-timing exposed.
+
+**7. Zinc TC / RC compression from Chinese smelter overcapacity.** Zinc treatment & refining charges have compressed from USD 165/t in FY2024 to USD 80/t in FY2026 driven by Chinese smelter capacity additions — a direct headwind to Metals Sector profitability with a ¥2.7 bn FY2024→FY2025 impact and a forecast ¥11.9 bn negative swing FY2025→FY2026 ([FY2025 Results presentation, p.15 — Metals difference analysis, T/C column](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027)). **Severity: MEDIUM**; **mitigant**: smelter-network productivity + recycling-content mix + by-product credits partially offset.
+
+**8. Geopolitical / export-control disruption.** Two specific exposures: (a) US export controls on advanced-node semiconductor manufacturing equipment affect end-customer NVIDIA / AMD / Broadcom shipments to China (a portion of which uses MicroThin™ + VSP™); and (b) potential Chinese export controls on indium (a critical input to ITO targets) or rare earths (for the PVD / Engineered Powders Divisions) could disrupt input supply. **Severity: MEDIUM**; **mitigant**: diversified geographic production base (Japan, Taiwan, Malaysia, US, India) reduces single-jurisdiction exposure; recycled-indium ITO target product mitigates indium-supply risk.
+
+### Financial Risks (2)
+
+**9. Valuation / multiple-compression risk.** At ~35× TTM P/E and ~42× forward FY2026 P/E, Mitsui Kinzoku trades at a premium to the Japanese non-ferrous cohort median (~13×) and is anchored to AI-cycle / advanced-packaging growth narratives. If consensus growth expectations for AI-server PCB demand or HVLP-Cu-foil demand cool (NVIDIA slowdown, hyperscaler capex pause, Chinese ED-Cu-foil oversupply), the multiple compresses materially. A re-rate from 35× to 20× TTM P/E would imply ~43% downside on the stock at constant earnings ([Google Finance 5706:TYO](https://www.google.com/finance/beta/quote/5706:TYO); [Stockanalysis TYO:5706](https://stockanalysis.com/quote/tyo/5706/statistics/)). **Severity: HIGH**; **mitigant**: the underlying Copper Foil franchise is structurally re-rated; even a partial compression leaves the stock at a defensible 25× P/E.
+
+**10. FY2026 OP guidance step-down vs FY2025 record.** Management's FY2026 OP guide of ¥91 bn is **¥39.9 bn below the FY2025 record of ¥130.9 bn** — a 30.5% decline driven entirely by the disappearance of FY2025 metals-inventory tailwinds. This is well-disclosed and structural, but the market's reading of the FY2026 step-down (signal vs. one-off) will affect the multiple through the year. **Severity: MEDIUM** (well-communicated); **mitigant**: full transparency on the breakdown of the step-down — ¥21.9 bn inventory factors, ¥12.3 bn PGM-price-difference on catalysts, ¥4.6 bn maintenance ([FY2025 Results presentation, p.5 — FY2026 Operating Income Forecast breakdown](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027)).
+
+### Macroeconomic Risks (2)
+
+**11. JPY/USD FX appreciation risk on translated earnings.** Mitsui Kinzoku's earnings benefited materially in FY2024–FY2025 from a weak yen (JPY 150–160/USD) — both through translated USD-denominated revenue and through inventory-revaluation effects. The FY2026 guide assumes JPY 150/USD, but if the yen strengthens to JPY 130/USD (consensus base case for late-2026 / 2027), translated earnings compress. Each ¥1/USD move on FY2026 numbers is roughly ¥0.6 bn on Metals Sector ordinary income alone (per company sensitivity table) ([FY2025 Results presentation, p.15 — Metals Sensitivity table, "US$ ±1yen/$ : 0.6 / 0.5"](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027)). **Severity: MEDIUM**; **mitigant**: natural hedging from overseas manufacturing (Taiwan, Malaysia, US) limits net exposure.
+
+**12. Global recession / industrial demand slowdown.** Mitsui Kinzoku's Engineered Materials, Metals, and Mobility businesses all carry direct exposure to global industrial production trends — galvanized-steel volumes (auto + construction), copper consumption (electrical infrastructure + EVs + construction), motorcycle / utility-engine OEM volumes (consumer durables), and electronics-device shipments (smartphones, PCs, servers). A global recession or extended industrial slowdown compresses all four sector P&Ls simultaneously. **Severity: MEDIUM**; **mitigant**: the Copper Foil Division's AI-cycle counter-cyclicality and the Metals Sector's defensive recycling profile partially offset.
+
+## 10. References
+
+### Mitsui Kinzoku primary filings and IR documents
+- [Mitsui Kinzoku Integrated Report 2025 (English, 69 pp.)](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf) — primary source for company history, segment strategy, top-share-product disclosure, mid-term management plan financial targets, board composition.
+- [Mitsui Kinzoku FY2025 Results & FY2026 Forecast presentation, 2026-05-13 (30 pp.)](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027) — FY2025 actuals + FY2026 guidance + segment-level revenue/OP detail + variance analysis.
+- [Mitsui Kinzoku FY2025 Q2 (H1) Results presentation, 2025-11 (use Q3 deck via tabid 204)](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=Se2570dHYUo%3D&tabid=204&mid=1027) — Q3 nine-month results.
+- [Record of Telephone Conference Concerning FY2025 Q2 Results, 2025-11 (15 pp.)](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=rXEqWGnOMII%3D&tabid=204&mid=1027&TabModule903=0) — H1 management commentary, Q&A on Copper Foil, MicroThin, VSP, ACT divestiture, capacity expansion.
+- [Mitsui Kinzoku Integrated Report 2021 (English)](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2021/EN/integrated_report2021.pdf) — historical director profiles (NOU Takeshi pre-CEO career).
+- [Mitsui Kinzoku — Financial Results Reports library](https://www.mitsui-kinzoku.com/en/toushi/lib/tanshin/) — historical Tanshin (決算短信) and earnings deck library.
+- [Mitsui Kinzoku — Board of Directors](https://www.mitsui-kinzoku.com/en/company/c_yakuin/) — current board composition.
+- [Mitsui Kinzoku Stock Information](https://www.mitsui-kinzoku.com/en/toushi/stock_info/) — share split history, dividend history.
+- [Mitsui Kinzoku — VSP™ Capacity Enhancement release, 2025-08-20](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=ImEZB60e3oE%3D&tabid=278&mid=824&TabModule1277=0) — August 2025 capacity expansion to 840 t/mo by Sept 2026.
+- [Mitsui Kinzoku — News page](https://www.mitsui-kinzoku.com/en/news/2025/) — 2025 press release archive including trade-name change and VSP November expansion.
+- [MicroThin™ technology page](https://em.mitsui-kinzoku.com/douhaku/en/technology/microthin) — MicroThin™ product description and 95% global share claim.
+
+### Comparable Japanese / Korean materials peers (for valuation and competitive context)
+- [JX Advanced Metals IR](https://www.jxam.jp/english/ir/); [JX Advanced Metals Electronic Materials product page](https://www.jxam.jp/english/businesses/electronic-materials/) — primary competitor in HVLP Cu foil and sputter targets.
+- [Tosoh Corporation IR](https://www.tosoh.com/our-company/ir) — peer non-ferrous + electronics materials.
+- [Resonac Holdings IR](https://www.resonac.com/ir/) — peer AI-electronics-materials Japanese conglomerate.
+- [Resonac FY2025 Tanshin, 2026-02-13](https://www.resonac.com/sites/default/files/2026-02/e_tanshin2025q4.pdf) — Resonac FY2025 reporting.
+- [Furukawa Electric IR](https://www.furukawa.co.jp/en/ir/) — LIB Cu foil + standard PCB Cu foil peer.
+- [Mitsubishi Materials IR](https://www.mmc.co.jp/corporate/en/ir/) — Cu smelting + advanced materials peer.
+- [Sumitomo Metal Mining IR](https://www.smm.co.jp/en/ir/) — Ni-Cu-Au + battery materials peer.
+- [DOWA Holdings IR](https://www.dowa.co.jp/en/ir/) — Zn-Pb-PGM + advanced materials peer.
+- [Nippon Denkai IR](https://www.nippondenkai.co.jp/en/ir/) — standalone ED-Cu-foil peer (loss-making).
+- [Lotte Energy Materials (formerly Iljin Materials) IR](https://www.lotteenergymaterials.com/en/) — Korean #1 in LIB Cu foil.
+
+### Customer / Substrate-maker references
+- [Yole Group — "Advanced IC substrates reach the stars", 2024](https://www.yolegroup.com/press-release/advanced-ic-substrate-reach-the-stars/) — ABF substrate market structure.
+- [Wonderful PCB — "Top ABF substrate manufacturers and market leaders"](https://www.wonderfulpcb.com/blog/top-abf-substrate-manufacturers-and-market-leaders/) — top-5 ABF substrate market share.
+- [HQ ICSubstrate — Top 10 IC Substrate Manufacturers 2024](https://www.hqicsubstrate.com/ic-substrates-blog/industry-news/top-10-ic-substrate-manufacturers-2024/) — IC substrate maker ranking.
+
+### Industry / TAM third-party reports
+- [Market Growth Reports — ABF Substrate (FC-BGA) Market 2035](https://www.marketgrowthreports.com/market-reports/abf-substrate-fc-bga-market-107527) — ABF substrate TAM USD 5.26 bn → USD 9.0 bn 2035 at 5.6% CAGR.
+- [Verified Market Research — ABF Substrate (FC-BGA) Market](https://www.verifiedmarketresearch.com/product/abf-substrate-fc-bga-market/) — alternative ABF TAM forecast.
+- [360iResearch — ABF Substrates for Server & HPC Market](https://www.360iresearch.com/library/intelligence/abf-substrates-for-server-hpc) — Server / HPC ABF sub-TAM USD 312 mn → USD 525 mn 2032 at 7.71% CAGR.
+- [Market Research Future — Copper Foil Market 2035](https://www.marketresearchfuture.com/reports/copper-foil-market-7381) — Cu foil TAM USD 8.0 bn → USD 18.6 bn at 7.9% CAGR.
+- [Dataintelo — HVLP Copper Foil Market Research Report 2034](https://dataintelo.com/report/global-hvlp-hyper-very-low-profile-copper-foil-market) — HVLP TAM and Mitsui share.
+- [Mordor Intelligence — High-End Copper Foil Market](https://www.mordorintelligence.com/industry-reports/high-end-copper-foil-market) — high-end Cu foil TAM context.
+- [Verified Market Research — Top 8 Copper Foil Manufacturers](https://www.verifiedmarketresearch.com/blog/best-copper-foil-companies/) — Cu foil market share ranking.
+- [Nomura Greater China Semi: A Guide to Semi Renaissance in 2026~30F, 2026-05-21](https://www.nomuraconnects.com/asia-tech) — anchor sector report with Mitsui Kinzoku flagged as sputter-material supplier (Fig. 44); HVLP3+ Cu foil demand forecast 2,400 t/mo by 2030; companion sector overview at [`reports/sector/半导体材料.md`](../../sector/半导体材料.md).
+- [Altium / Zach Peterson — "Types of PCB Copper Foil for High-Frequency Design"](https://resources.altium.com/p/types-pcb-copper-foil-high-frequency-design) — HVLP / VLP / standard ED Cu foil definitions.
+- [SemiconSAM — "Copper Foil: Mitsui's near-monopoly is creating a supply shortage"](https://www.semiconsam.com/p/copper-foil-mitsuis-near-monopoly) — independent commentary on MicroThin™ market position.
+- [SMM — Mitsui Kinzoku VSP capacity expansion commentary](https://news.metal.com/newscontent/103558198) — third-party reporting on the Aug 2025 release.
+
+### Competitor catalyst / PVD-target product references
+- [Johnson Matthey Clean Air Catalysts](https://matthey.com/products-and-markets/clean-air) — TWC + SCR catalyst competitor.
+- [BASF Mobile Emissions Catalysts](https://catalysts.basf.com/products/mobile-emissions-catalysts) — PremAir®, FourFlex® catalyst competitor.
+- [Umicore Catalysis](https://eom.umicore.com/en/businesses/automotive-catalysts/) — automotive catalyst competitor.
+
+### Executive / governance references
+- [Bloomberg — Seiji Ikenobu profile](https://www.bloomberg.com/profile/person/22507256) — current CEO biography.
+- [Bloomberg — Takeshi Nou profile](https://www.bloomberg.com/profile/person/18854501) — outgoing CEO biography.
+- [Simply Wall St — Mitsui Kinzoku management analysis (5706.T)](https://simplywall.st/stocks/jp/materials/tse-5706/mitsui-kinzoku-shares/management) — management compensation and shareholding analysis.
+- [Globe and Mail — "Mitsui Kinzoku Taps Seiji Ikenobu as New President", 2026-02-13](https://www.theglobeandmail.com/investing/markets/stocks/XZJCF/pressreleases/221742/mitsui-kinzoku-taps-seiji-ikenobu-as-new-president-in-management-reshuffle/) — succession announcement.
+- [TheOrg — NOU Takeshi profile](https://theorg.com/org/mitsui-mining-and-smelting-co-ltd/org-chart/nou-takeshi) — outgoing CEO career path.
+- [MarketScreener — Takeshi Nou insider profile](https://www.marketscreener.com/insider/TAKESHI-NOU-A1YGET/) — outgoing CEO insider trades.
+
+### Historical / company-history references
+- [Encyclopedia.com — Mitsui Mining & Smelting Co., Ltd.](https://www.encyclopedia.com/books/politics-and-business-magazines/mitsui-mining-smelting-co-ltd) — 1874 founding context, Kamioka mine history, 1950 post-zaibatsu incorporation.
+- [Britannica — Mitsui Group](https://www.britannica.com/money/Mitsui-Group) — Mitsui zaibatsu / keiretsu structural history.
+- [Reference for Business — Mitsui Mining & Smelting Co., Ltd. history](https://www.referenceforbusiness.com/history2/70/MITSUI-MINING-SMELTING-CO-LTD.html) — corporate history library.
+- [Mitsui Kinzoku Catalysts America — Lane Report announcement, 2013](https://www.lanereport.com/23557/2013/08/mitsui-kinzoku-catalysts-america-to-open-plant-in-frankfort-create-50-jobs/) — Kentucky catalysts plant.
+
+### Market-data references
+- [Google Finance 5706:TYO](https://www.google.com/finance/beta/quote/5706:TYO) — current quote, P/E, market cap.
+- [Yahoo Finance JP 5706.T](https://finance.yahoo.com/quote/5706.T/) — historical price chart.
+- [Stockanalysis TYO:5706](https://stockanalysis.com/quote/tyo/5706/) — TTM financial data.
+- [Trading Economics — Mitsui Mining & Smelting 5706](https://tradingeconomics.com/5706:jp) — historical stock chart.
+- [Smartkarma — Mitsui Mining & Smelting Q3 Earnings Alert](https://www.smartkarma.com/home/newswire/earnings-alerts/mitsui-mining-smelting-co-5706-earnings-fy-operating-income-surges-with-revised-forecasts-and-strong-q3-results/) — Feb 2026 Q3 commentary.
+- [TipRanks — Mitsui Kinzoku lifts FY2025 outlook](https://www.tipranks.com/news/company-announcements/mitsui-kinzoku-lifts-fy2025-outlook-on-copper-foil-and-metal-price-tailwinds-2) — Feb 2026 guidance raise.
+- [Oak-Mitsui Inc. company page](https://www.oakmitsui.com/) — US copper-foil JV.
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL check** — all 45+ inline URLs spot-checked via WebFetch / WebSearch tool returns; HTTP-status check pending (browser-anti-bot blocks expected for finance.yahoo.com, simplywall.st, theglobeandmail.com, and similar — these URLs were sourced from successful WebFetch / WebSearch returns within the session and resolve in browsers).
+
+**Primary filings cached locally** — `reports/company/MitsuiKinzoku_TSE5706/_research_cache/mk_fy2025_results.pdf` is the FY2025 Results & FY2026 Forecast presentation that anchors all FY2025 / FY2026 financial claims; the Integrated Report 2025 PDF and Q2 Telephone Conference PDF were extracted via fitz during research but not committed to the repo to keep folder size manageable.
+
+**Key financial number spot-checks** (claim → location in source):
+- FY2025 net sales ¥758.5 bn, OP ¥130.9 bn, OI ¥136.7 bn, NI ¥91.3 bn ✓ ([FY2025 Results presentation, p.2 — Results of FY2025 and Forecast of FY2026 table](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))
+- FY2026 guidance net sales ¥830 bn, OP ¥91 bn, OI ¥93 bn, NI ¥75 bn ✓ ([FY2025 Results presentation, p.2](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))
+- Copper Foil Division FY2025 revenue ¥135.0 bn (+44.8% YoY from ¥93.2 bn) ✓ ([FY2025 Results presentation, p.25 — Engineered Materials Sales by Division](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))
+- Engineered Materials Sector FY2025 sales ¥328.4 bn, OP ¥67.5 bn ✓ ([FY2025 Results presentation, pp.8–10](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))
+- Metals Sector FY2025 sales ¥376.7 bn, OP ¥70.8 bn ✓ ([FY2025 Results presentation, pp.8–10](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))
+- MicroThin™ ~95% global share ✓ ([Integrated Report 2025, p.32 — Key Top-Share Products](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf))
+- High-grade VSP™ ~40% global share for AI servers ✓ ([Integrated Report 2025, p.32 — Key Top-Share Products](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf))
+- VSP™ capacity 420 → 580 → 620 (Aug 2025) → 720 (Mar 2026) → 840 t/mo (Sep 2026); long-run 1,200 t/mo announcement ✓ ([VSP Capacity Enhancement release, 2025-08-20, pp.1–2](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=ImEZB60e3oE%3D&tabid=278&mid=824&TabModule1277=0); [Q2 FY2025 Telephone Conference, p.11](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=rXEqWGnOMII%3D&tabid=204&mid=1027&TabModule903=0))
+- ¥18.8 bn extraordinary loss on Mitsui Kinzoku ACT transfer (closing November 4, 2025) ✓ ([Q2 FY2025 Telephone Conference, p.2; FY2025 Results presentation p.26](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))
+- Equity ratio 50.4% FY2025, 59.1% FY2026E; Net D/E 0.14× FY2025 ✓ ([FY2025 Results presentation, p.17 — Financial Position at Term End](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))
+- IKENOBU Seiji succeeded NOU Takeshi April 1, 2026; both joined company in 1995 (Ikenobu); Nou joined 1986 ✓ ([Board of Directors page](https://www.mitsui-kinzoku.com/en/company/c_yakuin/); [Bloomberg Ikenobu profile](https://www.bloomberg.com/profile/person/22507256); [Simply Wall St management analysis](https://simplywall.st/stocks/jp/materials/tse-5706/mitsui-kinzoku-shares/management))
+
+**Analyst-view sentences** (intentionally not cited to a primary source, labeled per skill rule):
+- §1 — "the market re-prices Engineered Materials as a structural AI-back-end-substrate play rather than a cyclical non-ferrous smelter" — labelled `*Analyst view:*`
+- §4.3.1 — "the moat type is a combination of (i) proprietary release-layer chemistry... (ii) customer qualification lock-in... (iii) scale economics" — labelled `*Analyst view:*`
+- §4.3.2 — share-mix discussion of VSP™ Korean and Chinese entrants — labelled `*Analyst view:*`
+- §4.5 — relative sputter-target competitive positioning vs JX/Tosoh/Materion — labelled `*Analyst view:*`
+- §4.6 — "the Metals Sector is the commodity cyclical part of the franchise and is unlikely to re-rate beyond its long-run normalized P/E of ~10×" — labelled `*Analyst view:*`
+- §5 — substrate-maker customer-concentration estimate — labelled `*Analyst view:*` and the chart is labelled "analyst estimate"
+- §7 — competitive-position discussion of MicroThin near-monopoly — labelled `*Analyst view:*`
+
+**Residual unknowns / not yet verified:**
+- Exact top-1 / top-5 customer concentration percentages — Mitsui Kinzoku Yuho does not break out by customer at the consolidated level; the analyst estimate in §5 (top-3 substrate makers > 50% of Copper Foil Division revenue) is inferred from third-party ABF substrate market share data, not from primary filings.
+- HRDP®, A-SOLiD® and methanol-from-CO2 catalyst customer names — not disclosed by the company.
+- Caserones equity-stake current carrying value — not separately disclosed in the FY2025 results deck; would require Yuho deep-read for the segment note.
+- Exact Mitsui Kinzoku share within the FY2025 ¥120.6 bn Catalysts revenue between motorcycle / passenger-car / utility-engine / catalyst-recycling — Engineered Materials sales table is divisional, not application-level.
+
+</details>
+
