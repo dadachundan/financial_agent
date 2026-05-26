@@ -497,7 +497,7 @@ The **penetration strategy** is straightforward and already executing: (a) **def
 - HBM Cu CMP slurry exclusive (2023) ✓ ([Businesskorea, 2023-10-30](https://www.businesskorea.co.kr/news/articleView.html?idxno=203197))
 - Fujimi lead-taking on Cu CMP (2024) ✓ ([Webnewswire, 2024-09-03](https://www.webnewswire.com/2024/09/03/fujifilm-electronic-material-takes-lead-in-cmp-slurry-market-for-hbm-says-the-information-network/))
 - Dongjin Semichem entry to SK hynix HBM CMP (2024) ✓ ([THE ELEC](https://www.thelec.net/news/articleView.html?idxno=4751))
-- 2020 spin-off date August 2020 ✓ ([Solactive, 2020-08-06](https://www.solactive.com/spin-off-soulbrain-holdings-co-ltd-6th-august-2020/))
+- 2020 spin-off date August 2020 ✓ ([Soulbrain History page — 2020](https://www.soulbrain.co.kr/en/m14.php))
 - Taylor TX plant USD 175 mn / 60,000 sq ft / Samsung-Texas-driven ✓ ([Evertiq, 2024-07-30](https://evertiq.com/news/56124))
 - Kokomo IN plant USD 75 mn / 30,000 sq ft / Stellantis-Samsung SDI ✓ ([Greater Kokomo, 2022](https://greaterkokomo.com/soulbrain-mi-investing-in-kokomo-creating-75-jobs/))
 - CEO transition March 2025 (Roh → Park) ✓ ([Edaily, 2025-03-25](https://www.edaily.co.kr/News/Read?newsId=03834326642106928&mediaCodeNo=257))
