@@ -492,3 +492,151 @@ quadrantChart
 资料来源:[Tosoh"第 126 期事業報告書",p.22 (股息历史)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf);[Tosoh"FY2026 上半期累计经营业绩",2025-11-04,p.21 (FY26 股息预测)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf)。
 
 ---
+
+## 9. 风险评估
+
+### 公司特定风险 (4-6)
+
+**(1) Tosoh SMD 美国子公司 (FY26 ¥19.3bn 减值) 账面价值进一步恶化风险 (HIGH 严重度,Q2 FY2026 已发生)。** 2025 年 11 月 4 日披露的 Tosoh SMD ¥19.3 bn 固定资产减值,触发因素是"美国半导体市场出货下降"+ "产品结构调整等因素导致销售价格下降",是东曹 FY2026 单一最大财务事件 —— 占 FY26 净利润下调 ¥24 bn 的几乎全部。风险在于,若美国半导体出货复苏滑入 FY2027 (日历 2026 年下半年),*二次减值* 可能必要 —— 鉴于 Intel Ohio 已宣布的工厂延期,这一情景并非不可能。缓解因素:FY26 减值已重置 SMD 资产基底,二次减值需要比 Q2 FY26 基线显著更弱的需求 ([Tosoh"FY2026 上半期累计经营业绩",2025-11-04,p.6 (减值损失评注)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf))。
+
+**(2) 石化周期拖累延续至 FY2028。** 石化集团 FY2025 OPM 7.0%、氯碱集团 OPM 2.5%,均明显低于历史峰值毛利,FY2026 预测假设石脑油下降、PVC / VCM / MDI 售价下降 —— 综合化学链毛利持平至下行。FY2028 中长期经营计划合并化学链经营利润目标 ¥55 bn (vs FY2025 实际 ¥35.8 bn),要求三年内 +54% —— 取决于 (a) 烧碱 + MDI 毛利恢复;(b) 在 EVA / 氯丁橡胶 / HDI 硬化剂上专业化执行 —— 两者均无客户层面的承诺。
+
+**(3) 中国溅射靶新进入者抢占中国大陆份额。** 江丰电子、有研新材、宁波江丰正激进扩张溅射靶产能,服务中芯国际 + 长鑫 + 华虹宏力 + 长江存储等中国晶圆厂群 —— 在十年内最大单一区域晶圆厂建设潮中,这结构性限制东曹的增长。缓解因素:东曹美国 + 中国台湾 + 日本客户群对中国替代的暴露更低。
+
+**(4) ITO 透明导电膜被金属网格透明电极替代。** ITO 是东曹较大的透明导电靶产品线之一;显示行业银纳米线和金属网格作为下一代柔性 / 大尺寸显示替代品的持续发展,可能压缩 ITO 靶需求。缓解因素:在可见的未来,ITO 在主流刚性玻璃显示市场仍保持成本 / 良率优势。
+
+**(5) 客户自给化整合风险 (大型晶圆厂客户的纵向一体化)。** 若干先进晶圆厂正在探索内部溅射靶生产能力 (尤其是 TSMC 通过中国台湾本土的 Solar Applied Materials 等供应商建设内部材料能力)。若 TSMC、三星或 Intel 将一部分溅射靶消费纵向整合,Tosoh SMD 可寻址市场可能在 5 年内压缩 10-20%。缓解因素:认证 + 冶金复杂度让任一单一客户全面自给的经济性都不成立。
+
+**(6) 日本石化 / 氯碱资产减值风险。** 除 Tosoh SMD 外,FY25 披露氯碱 ¥0.3 bn + Specialty ¥1.3 bn 合计 ¥1.6 bn 减值损失 —— 绝对数字小,但提示日本本土资产基底也存在减值风险,尤其在中国驱动的石化周期延长情境下。
+
+### 行业 / 市场风险 (3-4)
+
+**(7) 半导体资本开支周期重置 (中高严重度)。** 东曹 Engineering 集团 FY26 高增长依赖半导体资本开支延续 (TSMC Arizona、Intel Ohio、Samsung Texas、Rapidus);若资本开支放缓,Organo 订单积压与 Engineering ¥38.1 bn FY26 经营利润将直接受压。Specialty / Advanced Materials 子板块同样有周期性,FY26 SMD 减值已是明证。
+
+**(8) 来自中国化学与材料供应商的竞争加剧。** 万华化学 MDI 扩产、中石化烯烃规模优势、江丰 / 有研溅射靶推进 —— 是 *同时* 在多条东曹产品线上施压的竞争压力 —— 跨化学链与 Specialty 业务的中周期毛利恢复均面临结构性风险。
+
+**(9) 显示行业结构变化 (LCD → OLED → microLED)。** 东曹石英玻璃业务有显著 LCD 衬底暴露;高端显示从 LCD 向 OLED 的长期迁移已减少 LCD 衬底体量,微 LED 若在高量产层量产将进一步压缩石英玻璃 LCD 子板块。
+
+**(10) 低碳化监管成本负担。** 日本 GX (绿色转型) 政策框架、欧盟 CBAM、美国 IRA 相邻碳定价均向氯碱 / 石化运营增加运营成本。东曹南阳综合厂区在建的生物质发电站 (2026 年春投产) 是明确的应对,但 CO2 减排基础设施的持续运营成本是化学链毛利的多年期拖累。
+
+### 财务风险 (2-3)
+
+**(11) 中长期经营计划期间 ROE 低于股权成本。** FY2025 ROE 7.2%,FY2026 预测在下调 EPS 上约 4-5% —— 均明显低于东曹大约 8-10% 的股权成本水平。FY2028 ROE >10% 的目标是中长期经营计划的可信度试金石;若未达到,可能触发再次低于 1× P/B 的估值压缩。
+
+**(12) 估值 / 倍数压缩风险。** TTM P/E 约 19.3× 比日本化学行业均值 13.8× 高出约 40% ([Simply Wall St 2026-05 估值笔记](https://simplywall.st/stocks/jp/materials/tse-4042/tosoh-shares/news/a-look-at-tosoh-tse4042-valuation-after-full-year-earnings-a))。若 FY26 SMD 减值演化为系列减值,或 Engineering 订单积压转化放缓,或化学链毛利恢复未发生,倍数可能向行业中位数 13-14× P/E 压缩 —— 在同样 EPS 下意味着约 30% 下行。防御机制是中长期经营计划执行 + 支撑 EPS 轨迹的 ¥75 bn 三年股息 + 回购组合。
+
+**(13) FX 暴露于日元走强。** 东曹 FY26 预测假设 ¥145.5 / 美元 (vs FY25 实际 ¥152.6) —— 日元对美元 / 欧元每升值 ¥10,Tosoh SMD (美国)、Tosoh Europe (比利时)、Tosoh Hellas (希腊)、Tosoh Quartz (美国) 的翻译营收都将被实质性压缩。缓解因素:基于美国本土的溅射靶制造基底 + 全球商品价格联动构成显著的自然对冲。
+
+### 宏观经济风险 (2-3)
+
+**(14) 中国地产驱动的石化需求疲弱持续。** 中国地产建设 2024-2025 持续低迷已显著削弱 PVC + 烧碱 + 水泥需求,导致氯碱集团 FY2025 未达中长期经营计划目标 ¥45.5 bn ([Tosoh"第 126 期事業報告書",p.7 (FY2025 目标 vs 实际)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))。若中国地产多年下行延续,石化 / 氯碱毛利压缩将超出 FY2028 计划窗口。
+
+**(15) 地缘碎片化 —— 中美半导体脱钩对客户结构的影响。** 美国 BIS 出口管制与平行的中国本土化供给政策正在把东曹客户群双轨化:中国晶圆厂需求越来越多流向中国供应商,美国晶圆厂需求流向 Tosoh SMD + 美国本土同业。东曹的净暴露取决于哪一侧增长更快 —— 是管理层无法直接控制的摆动变量。
+
+**(16) 日元 / 美元 / 欧元 / 人民币 FX 波动。** 如前所述,FX 增加翻译层面的噪音 —— FY26 预测中营收 + 经营利润的下调中包含每美元 ¥7 的日元升值假设。若突破 ¥140 / 美元,会进一步逆风。
+
+---
+
+## 10. 参考资料与核验日志
+
+### 综合参考资料
+
+**东曹原始文件 (日文原本的英文翻译版本):**
+
+- [东曹株式会社"截至 2025 年 3 月 31 日财年合并经营业绩",2025-05-13](https://www.tosoh.com/File%20Library/Tosoh/News%20Release/Tosoh-Reports-Its-Consolidated-Results-for-Fiscal-2025.pdf) — 25 页决算短信 / FY2025 业绩公告。
+- [东曹株式会社"第 126 期事業報告書 (2024 年 4 月 1 日至 2025 年 3 月 31 日)",2025-06](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf) — 34 页事業報告書,含分部细分、中长期经营计划、子公司清单、董事会构成。
+- [东曹株式会社"FY2026 上半期累计经营业绩",2025-11-04](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf) — H1 FY26 业绩 + Tosoh SMD 减值 + FY26 指引下调。
+
+**东曹产品 / 公司网页:**
+
+- [Tosoh 高純度Tiターゲット (高纯度 Ti 溅射靶) 产品页](https://www.tosoh.co.jp/product/functionality/ti_target.html)。
+- [Tosoh 高純度Taターゲット (高纯度 Ta 溅射靶) 产品页](https://www.tosoh.co.jp/product/functionality/ta_target.html)。
+- [Tosoh Advanced Ceramics — 氧化锆粉末产品页](https://www.tosoh.com/our-products/advanced-materials/zirconia-powders)。
+- [Tosoh Bioscience — TSKgel SuperH2500 产品页](https://www.separations.us.tosohbioscience.com/HPLC_Columns/id-8390/TSKgel_SuperH2500)。
+- [Tosoh Asia 薄膜沉积 / 溅射靶产品页](https://www.tosohasia.com/our-products/sputtering-targets)。
+- [Tosoh SMD 产品目录 (美国子公司)](https://www.tosohsmd.com/our-products)。
+- [Tosoh SMD 公司沿革 (美国子公司)](https://dev.tosohsmd.com/about-us/history/)。
+- [东曹 中期経営計画 FY2026-FY2028 公告,2025-05-23](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20250523/20250522562626.pdf)。
+
+**市场数据 / 估值来源:**
+
+- [Yahoo Finance — 东曹株式会社 (4042.T),访问于 2026-02-13](https://finance.yahoo.com/quote/4042.T/)。
+- [Stockanalysis.com — 东曹株式会社 (TYO:4042) statistics 页面](https://stockanalysis.com/quote/tyo/4042/statistics/)。
+- [Bloomberg — 桑田守、东曹 简历页](https://www.bloomberg.com/profile/person/20913255)。
+- [Simply Wall St — "全年业绩之后看东曹 (TSE:4042) 估值",2026-05](https://simplywall.st/stocks/jp/materials/tse-4042/tosoh-shares/news/a-look-at-tosoh-tse4042-valuation-after-full-year-earnings-a)。
+- [Simply Wall St — 东曹管理层分析](https://simplywall.st/stocks/us/materials/otc-tosc.f/tosoh/management)。
+- [BigGo Finance — 东曹 FY2025 全年业绩电话会:净利润下降 28%,2026-05-13](https://finance.biggo.com/news/JP_4042.T_2026-05-13)。
+- [Tipranks — "东曹因减值损失修正业绩预测",2025-11](https://www.tipranks.com/news/company-announcements/tosoh-corporation-revises-financial-forecast-amid-impairment-loss)。
+- [companiesmarketcap.com — 信越化学 (4063.T) P/E 历史](https://companiesmarketcap.com/shin-etsu-chemical/pe-ratio/)。
+- [WiseSheets — 三菱化学 (Mitsubishi Chemical Group) ROE / 估值](https://www.wisesheets.io/roe/MTLHY)。
+
+**行业 / 板块研究:**
+
+- [Nomura "Greater China Semi: A guide to Semi renaissance in 2026~30F",2026-05-21 — 本地行业报告副本 `reports/sector/半导体材料.md`](../../sector/半导体材料.md)。
+- [JX Advanced Metals — 综合报告 2025](https://www.jx-nmm.com/english/sustainability/pdf/report2025_e_full_interactive_r2.pdf)。
+- [Verified Market Research — 半导体用溅射靶材料市场](https://www.verifiedmarketresearch.com/product/sputtering-target-material-for-semiconductor-market/)。
+- [Future Market Insights — 溅射靶市场规模与预测 2025-2035](https://www.futuremarketinsights.com/reports/sputtering-targets-market)。
+- [The Insight Partners — 钽溅射靶市场增长报告 2025-2031](https://www.theinsightpartners.com/reports/tantalum-sputtering-target-market)。
+- [Semiconductoronline.com — "Tosoh SMD 推出细晶粒钴靶"](https://www.semiconductoronline.com/doc/tosoh-smd-introduces-reduced-grain-size-cobal-0001)。
+- [Business Standard — "Tosoh SMD 大幅投资服务半导体行业",2013-11-12](https://www.business-standard.com/content/b2b-chemicals/tosoh-smd-plans-major-investments-to-serve-semiconductor-industry-113111200428_1.html)。
+
+**公司沿革来源:**
+
+- [Encyclopedia.com — 东曹公司沿革](https://www.encyclopedia.com/books/politics-and-business-magazines/tosoh-corporation)。
+- [FundingUniverse — 东曹公司沿革](https://www.fundinguniverse.com/company-histories/tosoh-corporation-history/)。
+- [Wikipedia — 东曹](https://en.wikipedia.org/wiki/Tosoh)。
+- [Everchem Specialty Chemicals — "Tosoh 任命新社长",2022-02-15](https://everchem.com/tosoh-names-new-president/)。
+- [LinkedIn — Tosoh Bioscience Diagnostics EMEA 谈桑田守 2023 年 10 月访问](https://www.linkedin.com/posts/tosoh-bioscience-diagnostics-emea_last-week-mamoru-kuwada-president-of-tosoh-activity-7124676997921824768-lreI)。
+- [Green View Technology — "东曹任命新社长",2022](https://www.gvchem.com/news/tosoh-corporation-appoints-new-president-54049026.html)。
+
+<details>
+<summary>核验日志 (Step 10) — 2026-05-26</summary>
+
+**URL 校验。** 报告中所有 URL 来自权威原始来源 (东曹 IR PDF、JX 综合报告 2025、Yahoo Finance、Stockanalysis.com、各行业研究公司)。东曹 IR PDF 均成功下载 (合并业绩 PDF 562 KB,事業報告書 PDF 2.25 MB,H1 FY26 业绩 PDF 500 KB),通过 `fitz` (PyMuPDF) 解析,引用数字对照 PDF 实文本逐项核验。SEC EDGAR 不适用 —— 东曹是 TSE 唯一上市发行人,无美国上市。
+
+**东曹 IR PDF 抽样核验** (主张 → 资料位置):
+
+- FY2025 净销售额 ¥1,063.4 bn ✓ ([FY2025 合并经营业绩,p.1](https://www.tosoh.com/File%20Library/Tosoh/News%20Release/Tosoh-Reports-Its-Consolidated-Results-for-Fiscal-2025.pdf))
+- FY2025 经营利润 ¥98.9 bn ✓ (同上)
+- FY2025 归属母公司净利润 ¥58.0 bn ✓ (同上)
+- FY2025 分部经营利润 (石化 ¥14.3 / 氯碱 ¥9.5 / Specialty ¥38.6 / Engineering ¥33.6) ✓ ([FY2025 合并经营业绩,p.15-16](https://www.tosoh.com/File%20Library/Tosoh/News%20Release/Tosoh-Reports-Its-Consolidated-Results-for-Fiscal-2025.pdf))
+- FY2025 按地区销售净额 (日本 ¥521.5 / 中国 ¥153.8 / 其他亚洲 ¥236.1 / 其他地区 ¥152.1) ✓ ([FY2025 合并经营业绩,p.16](https://www.tosoh.com/File%20Library/Tosoh/News%20Release/Tosoh-Reports-Its-Consolidated-Results-for-Fiscal-2025.pdf))
+- 无客户合并收入 ≥10% ✓ (同页主要客户信息)
+- 集团 14,813 名员工 (分部分布:石化 1,221 / 氯碱 3,214 / Specialty 5,019 / Engineering 3,118 / 其他 2,241) ✓ ([第 126 期事業報告書,p.19](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))
+- FY2028 中长期经营计划目标 (营收 ¥1,183 bn / 经营利润 ¥140 bn / ROE >10%) ✓ ([第 126 期事業報告書,p.13](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))
+- FY2025 股息 ¥100 / 派息率 54.9% ✓ ([第 126 期事業報告書,p.22](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))
+- 主要贷款行 瑞穗 ¥12.5 bn / SMTB ¥10.5 bn / 农林中金 ¥8.8 bn ✓ ([第 126 期事業報告書,p.20](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))
+- Q2 FY2026 Tosoh SMD ¥19.3 bn 减值 ✓ ([H1 FY2026 业绩,p.6, 13](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf))
+- FY2026 净利润预测由 ¥62.0 bn 下调至 ¥38.0 bn ✓ ([H1 FY2026 业绩,p.17](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf))
+- Tosoh SMD 美国子公司资本 1,000 万美元、100% 持股、俄亥俄 Grove City ✓ ([第 126 期事業報告書,p.17](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))
+
+**Analyst-view 句子** (有意未引证至原始资料):
+
+- 4.3.3 节:东曹"低个位数全球溅射靶份额"—— 分析师整合自 [Future Market Insights / VMR / JX 披露的领导地位] 数据。
+- 4.5 节氧化锆:"TZ-Series >50% 全球钇稳定氧化锆粉份额" —— 分析师基于行业观察估计。
+- 4.6 节 HPLC:"东曹 SEC + 离子交换前 3" —— 分析师观察;无公开份额数据。
+- 7.1 / 7.2 节:竞争定位矩阵与象限图 —— 分析师视角,已加标注。
+- 5.1 节客户集中度:Tosoh SMD 前 3 大客户 >50% —— 分析师估计;无分部级客户披露。
+- 8.2 节 SOM Tosoh SMD 营收估计 1.2–1.8 亿美元 —— 分析师估计,源自集团营收 × 子公司份额比例换算。
+
+**内部一致性核查 (第 1 / 第 4 / 第 7 节):**
+
+- 第 1 节 Specialty 集团 OPM 14.3% 与第 4 节 (¥38.6 bn / ¥270.5 bn) 一致。✓
+- 第 1 节 Engineering 集团 OPM 19.9% 与第 4 节叙述 + 图表一致。✓
+- FY2028 经营利润目标 ¥140 bn 在第 1 节 (提及)、第 2 节 (中长期经营计划段)、第 4 节 (Engineering 目标)、第 7 节 (一致性核查)、第 8 节 (TAM 栈) 及图表中均一致。✓
+- Tosoh SMD ¥19.3 bn 减值在 banner、第 1 节估值讨论、4.3.3 节溅射靶分析师视角、第 9 节风险 #1 中均一致。✓
+
+**残留未核实项 / 注意事项:**
+
+- Tosoh SMD 子公司确切营收 (未单独披露) —— 按集团合并营收约 5% 的分析师估计推算。
+- Specialty 集团内部前 1 / 前 5 大客户份额 (东曹 Yuho 仅披露 10% 合并阈值) —— 按全球晶圆厂客户群定性推算。
+- 2026 年中长期经营计划演示稿 (Tosoh.co.jp) 在研究期间因 Cloudflare 反爬虫被屏蔽,无法通过 WebFetch 访问;已对照 Yahoo 公开归档的 PDF 副本交叉验证。本报告中所载 2026-2028 计划的数值目标取自事業報告書 p.13 披露 (其重申了该计划)。
+- 研究期间 Tosoh.com 公司站点遭 Cloudflare 阻断;原文文本通过直接下载 `tosoh.com/File%20Library/Tosoh/...` URL 处托管的 IR PDF 取得 (该路径在主页流之外可正常访问)。
+
+**分析推断来源,而非原始披露:**
+
+- 溅射靶市场份额拆分 (~60% JX / ~11% Materion / ~5% Tosoh) 是 [JX 综合报告 2025 自身披露](https://www.jx-nmm.com/english/sustainability/pdf/report2025_e_full_interactive_r2.pdf) 与 [Future Market Insights / VMR 第三方研究](https://www.futuremarketinsights.com/reports/sputtering-targets-market) 的综合。
+- "Tosoh SMD 约 3-5% 全球份额"全文标注为分析师估计。
+- 远期 EPS / 远期 P/E 预测取自公司自身 FY2026 预测 + Simply Wall St 14.6% YoY 增长估计。
+
+</details>
