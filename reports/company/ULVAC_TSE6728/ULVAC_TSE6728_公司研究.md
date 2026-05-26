@@ -384,3 +384,153 @@ ULVAC 的 **TAM (Total Addressable Market)** 是其六大产品线可寻址市�
 **增长驱动 — 2026-30 窗口。** 与 ULVAC 组合最契合的三大结构性驱动是：（i）**AI 服务器封装资本开支**（先进封装 + HBM + GPU 服务器建设——驱动 2026 至 2030 年的灰化、溅射、检漏需求）；（ii）**中国成熟制程扩产**（绕过美国出口管制的 28nm / 14nm / 7nm 半导体成熟制程本地化，驱动 MHM 溅射与零部件需求）；（iii）**西方稀土永磁在岸化**（¥350-450 亿 / 年的工业设备运行率）；（iv）BOE / CSOT / Visionox / Tianma 的 **IT-OLED 改造与 G8.6 扩张**。前三个为 3-5 年顺风；第四个为 2-3 年窗口。*分析师观点：* 这四驱动组合支持公司到 FY26-FY27 的 ¥3,000 亿收入目标，尽管 16% 营业利润率目标看似激进——FY26 实际仅约 7.3%（¥190 亿 / ¥2,600 亿）——差距正是 Value-Up Plan 利润纪律意在于 FY27-FY28 关闭的，管理层在 Q3 FY26 明确将「加速利润改善始于截至 2028 年 6 月的财年起」作为新框架 ([Q3 FY26 Q&A, 第 9 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf))。
 
 ---
+
+## 9. 风险评估
+
+### 公司特有风险
+
+**1. 毛利率恢复执行风险。** Value-Up Plan 目标 FY26.6 达到 16% 营业利润率，但 FY26 实际跟踪约 7.3%（¥190 亿 OP / ¥2,600 亿销售）。即便剔除 ¥58 亿一次性损失，底层 OPM 约 9.5%——远低于目标。管理层应对是将「加速利润改善」框架推后至 **FY28 及以后** ([Q3 FY26 Q&A, 第 9 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf))——这是默认承认原始 FY26 目标无法达成。可能性：**高**；严重性：**中等**（成本下降真实存在，但时点延后）。缓解因素：模块化设计设备节省已开始实现约 ¥10 亿可变成本下降；FPD 溅射靶合资关闭一个结构性低毛利业务。
+
+**2. 客户终端市场集中度——中国 + FPD。** 中国客户所在地收入占集团 34%；FPD 相关客户（BOE、CSOT、Tianma、Visionox、三星显示、LG Display、AUO）合计在显示器 / 能源设备、材料中 FPD 切片、零部件中 FPD 切片合计吸纳 30% 以上。无单一客户达到 10% ([FY25 财报, 主要客户注释, p. 23](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf))，但中国地理 + FPD 客户的组合是最大的结构性敞口。近期 G8.6 OLED 改造周期已缓冲此风险，但未来任何中国 FPD 资本开支削减都将直接压缩 ULVAC 30% 以上的收入。严重性：**高**；可能性：**中等**（中国资本开支周期本质上块状）。
+
+**3. FPD 溅射靶合资执行风险（KFMI / Fengke 交易）。** 2026-05-12 董事会决议将 100% ULVAC Materials (Suzhou) 转入由 Fengke（PE 基金）控股、KFMI 与 ULVAC 作为少数股东的北京合资公司。执行风险包括监管审批延迟、PE 多数股东与运营合作伙伴之间的治理纠纷、ULVAC 与 KFMI 技术之间的整合风险，以及若去合并感知不佳带来的声誉风险。在 FY26 入账 ¥78 亿一次性收益还抬高了 FY27 内生利润增长的视觉门槛 ([Q3 FY26 财报, 重要事后事项, pp. 12–14](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf))。可能性：**中等**；严重性：**中等**。
+
+**4. 设备周期波动——订单簿「丰歉交替」(feast or famine)。** Q3 FY26 9 个月接单 ¥2,362 亿，同比 +44%；FY25 接单 ¥2,260 亿，同比 –13%；振幅结构性嵌入设备业务。订单余额 ¥1,440 亿（9M FY26 设备分部）提供 9–12 个月收入可见性，但客户驱动的项目推迟（Q3 FY26 披露一项——¥14 亿半导体项目「因客户侧因素」延期至 FY27 [Q3 FY26 Q&A 第 4 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)) 反复出现。严重性：**中等**；可能性：**高**（这是结构性的，无法回避）。
+
+**5. 产品 / 技术过时——领先制程缺席。** ULVAC 不参与驱动最大 AI 逻辑资本开支美元的 High-NA EUV / GAA / 背面供电资本开支流。MHM 业务锚定成熟制程；若领先制程需求长期蚕食成熟制程份额（这是 Intel 18A / Samsung 2nm 的隐含赌注），ULVAC 的 MHM TAM 压缩。缓解因素：管理层投资模块化设计平台以扩展可寻址应用；稀土永磁与封装顺风是多元化对冲。严重性：**中等**（缓慢移动）；可能性：**中低**（成熟制程需求未来 10 年以上具粘性）。
+
+### 行业 / 市场风险
+
+**6. WFE / FPD 资本开支周期宏观。** 整个 ULVAC 业务体系搭乘全球半导体 + FPD 资本开支周期。2026-30 野村展望乐观（TSMC 资本开支升至约 700 亿美元、约 50% 资本强度，结构性 HBM/封装增长），但全球 AI 资本开支暂停——野村自身将其标记为对其乐观论点的唯一母风险——将在下行年压缩 ULVAC 订单簿 20–40% ([reports/sector/半导体材料.md, 「主要风险」](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。严重性：**高**；可能性：**中等**。
+
+**7. 竞争强度——中国本土供应商崛起。** KFMI、北京 Naura 北方华创、AMEC 中微、Konfoong 福工以及其他中国真空设备与靶材供应商正在中国市场获取份额——恰好是 ULVAC 收入敞口 34% 之处。KFMI/Fengke 合资部分是对此的防御性回应。严重性：**中高**；可能性：**高**（这是影响每个非中国向中国出口供应商的中国本地化大趋势）。
+
+**8. 美国 / 日本出口管制升级。** 美国 BIS / 日本 METI 对中国先进制程晶圆厂设备出口的管制自 2022 年起持续收紧。ULVAC 的中端制程定位相对 AMAT / LRCX / TEL / KLA / ASML *直接*敞口较低，但任何向成熟制程或真空零部件类别的升级都将直接打击 34% 中国收入基础。严重性：**中等**；可能性：**中等**（监管轨迹是单向收紧）。
+
+**9. 稀土供应 / 中国出口限制。** Q3 FY26 管理层明确标记「关于从中国顺利采购稀土及其他材料的不确定性正在增加」 ([Q3 FY26 Q&A, 第 10 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf))。这是一个双刃风险：（a）ULVAC 自身溅射靶生产的投入依赖中国稀土材料；（b）ULVAC 稀土永磁设备客户依赖稀土供应，因此中国出口限制将同时抬高 ULVAC 成本*并*加速西方对 ULVAC 设备的在岸化需求。净效应**混合**，但运营成本侧是较大的近期风险。
+
+### 财务风险
+
+**10. 估值 / 倍数压缩风险。** 在 TTM P/E 约 38× 与按指引 FY26 EPS 的前瞻 P/E 约 24× 交易，ULVAC 处于日本半导体设备中盘股区间高位。12 个月股价回报 +97% 反映 AI 资本开支重估，但底层盈利减速（FY25 OP –10.9%、FY26 OP 指引 –28%）造成的 P/E 扩张依赖 FY27-28 复苏兑现。前瞻 P/E 向 16–18× 压缩 20–30% 意味着股价约 ¥7,000–7,700（vs 当前约 ¥9,587）。可能性：**中等**；严重性：**中高**。缓解因素：FY26 史上最强订单簿、结构性稀土顺风、FPD 溅射靶合资一次性收益。
+
+**11. 外汇（日元）敞口。** ULVAC 以日元报告，但 FY25 约 69% 收入在海外赚取。日元相对美元升值 10%（例如 ¥150 → ¥135）机械上压缩报告收入 7%。反之，日元疲软在不增加底层销量的情况下抬升报告数字——日本投资者应在心中折扣 FY24–FY25 日元疲软的部分助推。严重性：**中等**；可能性：**中等**（日元方向难以预测；当前疲软已助推，未来升值将造成损害）。
+
+### 宏观经济风险
+
+**12. AI 资本开支暂停 / 支出纪律。** 整个多头论点（HBM / 封装 / AI 逻辑）取决于超大规模数据中心 + 代工资本开支持续以当前运行率进行。任何 Microsoft / Meta / Amazon 资本开支减速——无论何种原因（计算效率突破、监管行动、衰退期现金保留）——将在 2–3 季度内压缩 TSMC、Samsung、SK hynix 资本开支，并在 4–6 季度内压缩 ULVAC 订单簿。严重性：**极高**；可能性：**低至中等**（AI 基建周期仍有顺风，但下行情景不平凡）。
+
+**13. 地缘政治——中国 / 台海、韩国紧张。** 中国-台湾动能事件将同时冻结 ULVAC 的 TSMC / 大陆中国收入（约占集团 45%）。韩国相关供应链中断（朝核挑衅、Samsung/SK hynix 韩国劳工行动）将打击 13% 韩国敞口。严重性：**高至极高**；可能性：**低**。缓解因素：地理多元化（日本 + 美国 + 欧盟 + 东南亚约 42% 收入）；不集中于任何单一晶圆厂。
+
+![ULVAC 同业比较 — 前瞻 P/E 与营收规模](../../charts/ulvac_peer_comparison.png)
+
+*来源：前瞻 P/E 与营收规模为分析师从 [TradingView TSE:6728](https://www.tradingview.com/symbols/TSE-6728/)、[TradingView WFE 同业](https://www.tradingview.com/symbols/NASDAQ-AMAT/)、最新公司财报与行业媒体估值摘要三角化得出的估算；Canon Tokki 为私营（Canon 子公司），故无上市可比公司。*
+
+---
+
+## 参考资料
+
+### 主要财报 — ULVAC
+
+- [ULVAC 截至 2026 年 3 月 31 日的 9 个月综合财务业绩（Q3 FY2026.6，日期 2026-05-12）](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf) — 18 页，FY26 9M 分部数据、FY26 指引修订与 FPD 溅射靶合资事后事项的关键来源。
+- [ULVAC FY2026.6 Q3 Key Q&A 摘要](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf) — 2026-05-12 分析师简报的 4 页 Q&A，包括 MHM 份额评论与 Value-Up Plan 进度。
+- [ULVAC 截至 2025 年 6 月 30 日的财年综合财务业绩（日期 2025-08-13）](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf) — 29 页，完整分部表与地理结构。
+- [ULVAC Q2 FY2026.6 财报（日期 2026-02-10）](https://data.swcms.net/file/ulvac-ir/dam/jcr:47a41985-eb17-4d54-a162-edb0e6992cc9/140120260210553493.pdf)。
+- [ULVAC Q1 FY2026.6 财报（日期 2025-11-11）](https://data.swcms.net/file/ulvac-ir/dam/jcr:f5b96d1c-4458-4f8b-8389-df282eb09374/140120251111595721.pdf)。
+- [ULVAC Q3 FY2025.6 财报（日期 2025-05-13）](https://data.swcms.net/file/ulvac-ir/dam/jcr:0ff53756-670c-42b6-9ce0-c08c5e5e4cfb/140120250513545735.pdf)。
+- [ULVAC Q2 FY2025.6 财报（日期 2025-02-12）](https://data.swcms.net/file/ulvac-ir/dam/jcr:986cb059-297a-41e9-8ecc-1e1f852380ea/140120250212569919.pdf)。
+- [ULVAC FY2025.6 财报演示稿（日期 2025-08-15）](https://ir.ulvac.co.jp/en/ir/newsrelease/PressRelease-20250815002/main/0/link/Scripts%20for%20Presentation_Material_for_FY2025_EN_1.pdf) — Value-Up Plan KPI（¥3,000 亿销售、35% 毛利率、16% 营业利润率、¥630 亿累计现金流、14% ROE FY26 目标）。
+
+### ULVAC 公司页面与综合报告
+
+- [ULVAC IR Library](https://ir.ulvac.co.jp/en/ir/library.html) — 财报、演示、事实表、价值报告的中央索引。
+- [ULVAC Business Highlights — 多年度财务摘要](https://ir.ulvac.co.jp/en/ir/financial/businesshighlights.html) — FY21–FY25 净销售、营业利润、经常利润、净利润；关键历史锚。
+- [ULVAC Value Report (Integrated Report) 2025 — 完整 PDF](https://www.ulvac.co.jp/en/sustainability/report/pdf/2025/2025_ulvac_e_all.pdf) — 14.5 MB；企业理念、价值创造流程、中期管理计划、治理、财务数据。
+- [ULVAC Value Report (Integrated Report) 2024 — 完整 PDF](https://www.ulvac.co.jp/en/sustainability/report/pdf/2024/2024_ulvac_e_all.pdf) — 14.7 MB。
+- [ULVAC 2024 财务概览（节选）](https://www.ulvac.co.jp/en/sustainability/report/pdf/2024/2024_ulvac_e_24.pdf) — Value-Up Plan KPI 推出。
+- [ULVAC Company History](https://www.ulvac.co.jp/en/company/history/) — 创立（1952）、海外扩张时间线、名称变更。
+- [ULVAC 管理层架构（董事与高管，截至 2025-12-01）](https://www.ulvac.co.jp/en/company/directors_officers/) — 岩下节男（社长兼 CEO）、青木贞夫（CFO）、董事会构成。
+- [ULVAC 新闻：Q3 FY2025.06 财报演示稿](https://ir.ulvac.co.jp/en/ir/newsrelease/PressRelease-2025051304.html)。
+- [ULVAC 新闻：Q2 FY2025.06 财报演示稿](https://ir.ulvac.co.jp/en/ir/newsrelease/PressRelease-2025021202.html)。
+- [ULVAC GmbH OLED 设备页](https://ulvac.eu/products/equipment/by-application/oled/) — SOLCIET / SATELLA / NEW-ZELDA 产品线说明。
+- [ULVAC 2015 可持续发展报告时间表附录](https://www.ulvac.co.jp/eng/_csr/eco/report/pdf/2015/2.pdf) — 用于里程碑交叉核对的历史十年时间线。
+- [Reference for Business — ULVAC, Inc. 公司历史](https://www.referenceforbusiness.com/history2/97/ULVAC-Inc.html) — 创始人背景、早期战略里程碑（美国 NRC 代理）。
+
+### 管理层简历
+
+- [Bloomberg 个人资料 — 岩下节男, ULVAC Inc.](https://www.bloomberg.com/profile/person/17438855) — 2017 年 7 月起任社长兼 CEO；1984 年加入。
+- [Crunchbase — 岩下节男, ULVAC Technologies](https://www.crunchbase.com/person/setsuo-iwashita) — 对照传记。
+- [GSA「Get to Know the CEO」专访岩下节男](https://www.gsaglobal.org/get-to-know-the-ceo-setsuo-iwashita-president-%EF%BC%86-ceo-of-ulvac-inc/) — CEO 关于战略优先级的评论。
+
+### 行业 / 子分部研究
+
+- [野村「Greater China Semi: A guide to Semi renaissance in 2026~30F」 — 内部摘要 reports/sector/半导体材料.md](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md) — Fig. 26（溅射靶 = 800 亿美元半导体材料 TAM 的 3%）；Fig. 44（包含 ULVAC 的溅射靶联赛榜）；Fig. 35-44 供应商联赛表。
+- [Cognitive Market Research — 半导体溅射靶市场 2024](https://www.cognitivemarketresearch.com/semiconductor-sputtering-targets-market-report) — 2023 年 45 亿美元市场，5.8% 年化复合增长率。
+- [Coherent Market Insights — 铜溅射靶市场 2025-2032](https://www.coherentmarketinsights.com/market-insight/copper-sputtering-target-market-6221) — 包括 JX Nippon、三井、ULVAC、KFMI、Tosoh、Plasmaterials 的竞争对手列表。
+- [Maximize Market Research — 溅射靶市场 2026-2032](https://www.maximizemarketresearch.com/market-report/global-sputtering-target-market/102381/) — Tosoh / ULVAC 市场背景。
+- [IndexBox — 溅射镀膜市场预测 2026-2035](https://www.indexbox.io/blog/sputter-coating-market-growth-to-accelerate-by-2035-driven-by-semiconductor-and-display-demand/) — AMAT / ULVAC / TEL 合计约 45% 溅射镀膜市场份额。
+- [WiseGuy Reports — OLED 沉积设备市场研究报告 2032](https://www.wiseguyreports.com/reports/oled-deposition-equipment-market) — 2023 年 42 亿美元 → 2032 年 125 亿美元 OLED 沉积 TAM（CAGR 约 12.6%）；Canon Tokki 60%+ 份额；ULVAC、AMAT、Avaco、Sunic、YAS 竞争集合。
+- [ICO Optics — 溅射镀膜市场增长至 2035](https://www.ico-optics.org/sputter-coating-market-growth-to-2035-driven-by-semiconductors-displays/) — ULVAC 键合靶均匀性 / 良率规格引用。
+
+### 交易与新闻
+
+- [Yicai Global — KFMI / ULVAC 探讨 FPD 材料合作, 2025-08-14](https://www.yicaiglobal.com/news/kfmi-ulvac-to-integrate-their-flat-panel-display-target-materials-businesses) — KFMI FPD 溅射靶业务规模（人民币 23 亿 / +40% YoY）、BOE 锚定客户关系、合资公告。
+
+### 估值 / 市场数据
+
+- [TradingView — TSE:6728 ULVAC, Inc. 股票摘要](https://www.tradingview.com/symbols/TSE-6728/) — 当前价 ¥9,587、市值 ¥4,627 亿、TTM P/E 约 38×、股息率 1.62%、历史高 ¥11,450 (2024-05-27)、1 年回报 +97%。
+- [Yahoo Finance — ULVAC Inc 6728.T](https://finance.yahoo.com/quote/6728.T/) — 替代估值快照。
+- [Yahoo Finance — ULVAC Key Statistics](https://finance.yahoo.com/quote/6728.T/key-statistics/) — TTM 比率交叉核对。
+- [Investing.com — Ulvac Inc TYO:6728](https://www.investing.com/equities/ulvac-inc) — 同业交叉参考。
+- [Stockopedia — Ulvac TYO:6728](https://www.stockopedia.com/share-prices/ulvac-TYO:6728/) — 次级估值参考。
+- [Simply Wall St — ULVAC 估值笔记](https://simplywall.st/stocks/jp/semiconductors/tse-6728/ulvac-shares/news/assessing-ulvac-tse6728-valuation-after-weaker-half-year-res) — 卖方 / 分析师评论交叉参考。
+
+### 竞争对手主要来源（§7 归属）
+
+- [Applied Materials FY2024 10-K (EDGAR)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000006951&type=10-K)。
+- [Lam Research FY2025 10-K (EDGAR)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000707549&type=10-K)。
+- [Tokyo Electron Integrated Report / Annual Report 页](https://www.tel.com/ir/library/ar/index.html)。
+- [Pfeiffer Vacuum Investor Relations](https://www.pfeiffer-vacuum.com/en/investor-relations/) — 真空泵竞争对手。
+
+---
+
+<details>
+<summary>验证日志 (Step 10) — 2026-05-26</summary>
+
+**URL 抽样核对。** 所有 50+ 内联 URL 均为：（a）从 [ULVAC IR Library](https://ir.ulvac.co.jp/en/ir/library/result.html) WebFetch 结果返回的真实 `data.swcms.net` ULVAC IR PDF 路径构造；（b）WebFetch 返回的 ULVAC 企业 `ulvac.co.jp` 路径；或（c）WebSearch 返回的第三方域名锚定页面。无伪造的 SEC EDGAR URL；§7 中 AMAT / LRCX / TEL 指针链接到 EDGAR `browse-edgar` 搜索而非伪造文件名。
+
+**分部数据抽样核对。**
+- FY2025.6 净销售 ¥251.184 亿（同比 –3.8%）— 确认 [FY25 财报, p. 1](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf)。
+- FY2025.6 营业利润 ¥26.523 亿（–10.9%）— 同源确认。
+- 真空设备分部 FY25 销售 ¥199.050 亿 — 确认 [FY25 分部表, p. 22](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf)。
+- 真空应用分部 FY25 销售 ¥52.134 亿 — 同源确认。
+- Q3 FY2026.6（截至 Mar 2026 的 9M）净销售 ¥191.631 亿（+2.1%）、OP ¥14.719 亿（–29.1%）、接单 ¥236.185 亿（+44.1%）— 确认 [Q3 FY26 财报, p. 2](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf)。
+- 9M FY26 真空设备子线分拆（半导体 42.1%、显示 30.3%、零部件 17.3%、工业 10.3%）— 确认 [Q3 FY26 补充销售信息, p. 15](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf)。
+- FY25 地理结构（日本 ¥78.054 亿、中国 ¥86.518 亿、韩国 ¥31.472 亿、台湾 ¥28.109 亿、其他 ¥27.030 亿 = ¥251.184 亿）— 确认 [FY25 财报, p. 23](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf)。
+- 客户集中度：「特定客户的销售未达净销售的 10% 或以上」— 同页 FY24 与 FY25 披露确认。
+- FPD 溅射靶合资 / KFMI 事后事项含 ¥78 亿一次性收益 — 确认 [Q3 FY26 财报, 重要事后事项, pp. 12–14](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf)。
+- MHM「事实标准」份额措辞 — 确认逐字出现于 [Q3 FY26 Q&A, 第 5 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)。
+- 稀土永磁设备 ¥350-450 亿运行率 — 确认 [Q3 FY26 Q&A, 第 8 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)。
+- Value-Up Plan 目标（¥3,000 亿销售 / 35% 毛利率 / 16% 营业利润率 / ¥630 亿累计现金流 / 14% ROE FY26）— 确认 [FY25 演示稿](https://ir.ulvac.co.jp/en/ir/newsrelease/PressRelease-20250815002/main/0/link/Scripts%20for%20Presentation_Material_for_FY2025_EN_1.pdf) 与 WebSearch 结果。
+- 岩下节男履历（1984 年加入、2017 年 7 月起 CEO、前 ULVAC 中国控股会长兼总经理）— 跨 [Bloomberg 个人资料](https://www.bloomberg.com/profile/person/17438855)、[Crunchbase](https://www.crunchbase.com/person/setsuo-iwashita)、[ULVAC 管理层架构页](https://www.ulvac.co.jp/en/company/directors_officers/) 确认。
+- 1952 年由井町 / 林 / 柴田创立 + 松下 / 大泽 / 藤山 / 山本 / 广濑作为种子出资人 — 确认 [Reference for Business](https://www.referenceforbusiness.com/history2/97/ULVAC-Inc.html)，[ULVAC Company History](https://www.ulvac.co.jp/en/company/history/) 给出时间线（但未点名创始人）佐证。
+
+**分析师观点句**（特意标注 `*分析师观点：*` 而非引用主要文件）：
+- §1 估值同业框架与 24× 前瞻公允倍数锚定。
+- §4.3「工艺特定的细分主导」框架。
+- §4.4 OLED 有机蒸发份额（Canon Tokki 70-80%+、ULVAC 仅 OLED 外围）— 基于 OLED 沉积设备市场研究报告。
+- §4.5 干式真空泵份额（Edwards ~40%、Pfeiffer ~25%、ULVAC 10-15%）— 分析师三角化。
+- §4.7 ULVAC 在 JX/Tosoh/Materion/三井金属溅射靶联赛中的「中游」位置 — 基于 Coherent Market Insights 与 Cognitive Market Research 竞争对手列表，*非* ULVAC 财报明示。
+- §7 象限图定位为分析师构造。
+- §7 单一市场份额百分比（MHM >50%、Descum >40%、真空泵 ~10-15%、纯半导体靶中个位数）为分析师三角化，明确标注。
+- §8 TAM/SAM/SOM 聚合为分析师基于命名外部研究机构的构造；分析师自身的算术过程明示，并未作为主要来源数据断言。
+
+**本稿未解决的残余未知项：**
+- 完整 FY25 客户名单 — 未披露，原因是无单一客户 >10% 触发日本会计准则规则。
+- 按工序步骤 / 按地区的精确份额数字 — ULVAC 未公开披露；估算为分析师三角化。
+- 具体设备 ASP / 单台出货数 — 未披露。
+- 按地区员工分拆 — 按 2025 价值报告参考为合计约 6,800 人（完整价值报告 PDF 14.5MB，本稿未完整 OCR；数字来自二级 WebFetch 摘要）。
+- 第 1 节图表中 FY24 之前的历史营收数字（FY21 ¥1,995 亿、FY22 ¥2,454 亿）取自先前 IR 摘要披露，未对原始财报重新核对；FY23-FY26 数字取自 FY25 财报 PDF（已核对）与 FY26 管理层指引（已核对）。图表因此方向准确，但 FY24 之前的具体小数未交叉核对。
+- 完整 2025 综合报告（价值报告）因文件大小限制未完整 OCR；对其引用为 WebFetch 与 WebSearch 摘要而非逐字。
+
+</details>
+
