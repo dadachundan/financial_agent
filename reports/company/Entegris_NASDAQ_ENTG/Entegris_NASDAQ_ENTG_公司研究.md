@@ -301,5 +301,122 @@ WFM 行业整体属于中度集中而非寡占——在任何一个化学品类�
 
 **第三，关税暴露**：10-K 提到 *"The impact of tariffs and a volatile trade environment"*——美国 2025 年关税堆栈给全球供应链带来层叠的成本压力 ([Entegris 2025 10-K, Risk Factors](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。Entegris 的缓冲方式是区域生产：CMP 抛光液在台湾、FOUP 在韩国与明尼苏达、过滤器在日本与马萨诸塞——可以从区域工厂为区域客户供货。
 
+## 7. 竞争格局
+
+### 10-K 锚定的竞争对手清单（原文照录）
+
+FY25 10-K Item 1 业务章节的 Competition 段落直接点名公司的主要竞争对手。下面是按原文复刻的清单，并在每个名字后用方括号标注其主要重叠的分部：
+
+- **Pall Corporation (Danaher Corporation 旗下)** —— APS（液 / 气过滤）
+- **EMD Performance Materials division of Merck KGaA** —— 两个分部均有（CMP 抛光液、沉积前驱体、配方化学品；该业务是 Merck KGaA 于 2019 年收购的 Versum Materials）
+- **Shin-Etsu Polymer Co. Ltd.** —— APS（晶圆载具 / FOUP）
+- **Qnity Electronics, Inc.** —— 两个分部均有（这是杜邦电子与工业业务在 2025 年末完成的分拆，承接杜邦的 CMP 抛光垫、光阻、其它电子材料业务）
+- **科百特 (Cobetter Filtration)** —— APS（中国本土过滤膜）
+- **Air Liquide 先进电子材料部门 (Electronics Advanced Materials)** —— MS（特种气体、前驱体、配方化学品）
+- **家登精密 (Gudeng Precision Industrial)** —— APS（台湾 FOUP 供应商）
+- **林德 (Linde plc)** —— MS（特种气体、沉积前驱体）
+- **Aicello Corporation** —— APS（日本 FOUP / 包装——规模较小）
+- **安集科技 (Anji Microelectronics, Shanghai)** —— MS（CMP 抛光液——中国领先挑战者）
+- **Mersen** —— APS（石墨配件与工程材料）
+
+资料：[Entegris 2025 10-K, Item 1 — Competition](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)。注：清单里没有 Resonac (Showa Denko)、Fujimi Incorporated、鼎龙、KC Tech、Soulbrain 等名字是有意义的，反映出 (a) 仅在某些细分产品类别交集，或 (b) 仅在区域市场重叠。这些名字会在下文按行业分析师覆盖来补充。
+
+### 分类别竞争位置
+
+**CMP 抛光液。** 按野村《Greater China Semi》(2026-05-21) 锚定报告 Fig. 41（2025 年全球 CMP 抛光液 league table），列出的参与者为：**Entegris (CMC 资产)、Resonac、Versum (Merck KGaA / EMD)、Fujimi Incorporated、安集 (Anji Microelectronics)、KC Tech、Soulbrain，以及其它区域性厂商** ([行业笔记](../../sector/半导体材料.md))。*分析师观点：* CMC 收购后 Entegris 已是全球 CMP 抛光液龙头；Cognitive Market Research 和野村报告都把公司置于 league table 顶端，Resonac 与 Fujimi 分列全球营收第二、第三。安集与鼎龙是在 mature 与 trailing-edge 节点高速成长的中国挑战者；在先进逻辑 (sub-10nm)，Entegris 与 Resonac 仍是主要的合格供应商，截至 2025–26 安集接近在主要中国客户的 7nm 铜抛光液认证 ([行业笔记，引用野村《Greater China Semi》p. 130, 2026-05-21](../../sector/半导体材料.md))。
+
+**CMP 抛光垫。** 历史全球龙头是杜邦——以 **IC1000™ 垫族** 为代表的产品已在全球几乎所有先进逻辑晶圆厂认证使用超过 20 年 ([Qnity Electronics — CMP pads (legacy DuPont E&I)](https://www.qnityelectronics.com/cmp-pads.html))。Entegris (经 CMC Materials 收购) 是可信的 #2，以 **Epic™ 垫族** 为旗舰。**富士纺 (Fujibo Holdings)、JSR Corporation、3M** 构成历史西方 / 日本厂商集合；**鼎龙 (Dinglong)** 已成为中国本土领先厂商（野村把鼎龙列为在存储厂获得显著份额、并接近中芯先进逻辑线认证的厂商）。*分析师观点：* 在抛光垫上，Entegris 结构性 #2 全球——按野村 league table，份额约 20–30%，杜邦约 40–50%——但 "Epic 垫 + 配套 CMC 抛光液 + IntelliPolish 工艺控制" 的捆绑护城河比杜邦的独立垫产品要深 ([行业笔记](../../sector/半导体材料.md)，野村 Fig. 42)。
+
+**FOUP 与 EUV 光罩盒。** 10-K 直接点名的对手为 **Shin-Etsu Polymer Co. Ltd.、家登精密 (Gudeng Precision Industrial)、Aicello Corporation** ([Entegris 2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。第三方追踪机构给出 Entegris 在 300mm FOUP 全球单一供应商份额最大；Shin-Etsu Polymer 在日本主导；家登在台湾主导 ([FOUP carrier market research, 2025-2031](https://reports.valuates.com/market-reports/QYRE-Auto-3K10126/global-foup-and-fosb))。*分析师观点：* Entegris 是 FOUP 全球龙头，并在 TSMC、三星、英特尔 EUV 晶圆厂实际为唯一合格的 EUV 光罩盒供应商——这是整个组合中护城河最深的业务，拥有 25 年以上的历史和从 Fluoroware-Empak 资产延伸而来的专利组合。
+
+**液 / 气过滤。** 10-K 直接点名的对手为 **Pall Corporation**（Danaher 旗下）与 **科百特 (Cobetter Filtration)**（中国本土）。*分析师观点：* Pall 是工业过滤的历史全球龙头，但 Entegris 在半导体液体过滤（光阻分配的应用场景）的主导地位明确——与 IntelliGen® 分配系统的整合是关键差异化。科百特是中国挑战者，瞄准中芯、长江存储、长鑫存储的进口替代。PFA 膜化学的壁垒是真实的——即便是 Pall 也难以在先进节点光刻单元置换 Entegris。
+
+**特种气体（CVD / ALD 前驱体 + 离子注入气体）。** 10-K 直接点名的对手为 **EMD Performance Materials、Air Liquide 先进材料部门、林德 (Linde plc)** ([Entegris 2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。*分析师观点：* 这是竞争最激烈的类别。工业气体巨头（Air Liquide、林德——2018 年 Praxair 与 Linde 合并后的实体）拥有更广的气体分销网络和更低的散装气体成本；Entegris 的边缘在于来自 ATMI 资产的 SDS® 安全输送技术（用于剧毒离子注入气体），以及新节点沉积的定制前驱体合成能力（Mo 前驱体是主要例子）。在离子注入气体细分，SDS 业务在多数主要晶圆厂接近事实上唯一供应商。
+
+```mermaid
+quadrantChart
+    title 半导体材料竞争定位（产品广度 × 先进节点能力）
+    x-axis 窄产品广度 --> 宽产品广度
+    y-axis 偏向 Trailing-Edge --> 偏向 Leading-Edge
+    quadrant-1 先进节点专家
+    quadrant-2 先进节点全能
+    quadrant-3 Trailing-Edge 窄产品
+    quadrant-4 Trailing-Edge 宽产品
+    Entegris: [0.85, 0.85]
+    Merck/EMD: [0.75, 0.7]
+    Resonac: [0.55, 0.65]
+    Air Liquide AM: [0.4, 0.6]
+    Linde: [0.4, 0.5]
+    Pall (Danaher): [0.3, 0.5]
+    DuPont/Qnity: [0.45, 0.7]
+    Anji: [0.2, 0.45]
+    Dinglong: [0.35, 0.4]
+    Shin-Etsu Polymer: [0.2, 0.65]
+    Gudeng: [0.15, 0.5]
+```
+
+### Entegris 的结构性优势
+
+公司的竞争位置建立在五项有具体产品支撑的优势上，每一项都对应到第 4 节具体的产品族：
+
+1. **广度 + 整合度。** 没有其它材料供应商能在 "抛光液 + 抛光垫 + CMP 后清洗 + 抛光液过滤器 + 分配系统 + FOUP" 全部六项上从单一合格供应商交付。CMC 收购正是为了把 "抛光液 / 抛光垫" 那一段补齐，完成捆绑。这种广度让 Entegris 能向先进节点 CMP 操作部门 pitch "单一供应商优化"——在良率爬坡阶段是真实的卖点。
+
+2. **光刻单元过滤业务。** 与全球三、四家光阻供应商（Tokyo Ohka、JSR、Shin-Etsu Chemical、Sumitomo）20 年的协同开发，造就出在亚纳米颗粒容忍度下难以复制的过滤膜化学与 IntelliGen® 分配动力学。先进节点光刻单元是组合内防守最严的类别。
+
+3. **离子注入的 SDS® 安全输送。** 来自 ATMI 资产的 SDS 技术在每家主要晶圆厂的离子注入工艺中接近单一供应商。EHS 认证周期产生的切换成本以年为单位计算。
+
+4. **EUV 光罩盒的近垄断地位。** 真空转移 EUV 光罩盒在 TSMC、三星、英特尔皆已认证；没有其它对手获得对等认证。随 High-NA EUV 在 2027–28 量产，这块业务将随 EUV 光罩装机基数同步增长。
+
+5. **钼工作流整合。** Entegris 是少数几家拥有完整 Mo 工作流的供应商——前驱体 + 沉积过滤器 + Mo 蚀刻化学品 + Mo CMP 抛光液 + Mo CMP 后清洗。随 Mo 在亚 3nm 逻辑与先进 NAND 中替代 W，这是 2026–28 期间将具体兑现的结构性新优势。
+
+### Entegris 的竞争脆弱性
+
+三项结构性脆弱性值得点名：
+
+1. **中国本土在 mature node 的替代。** 安集、鼎龙、科百特、Sino-American Silicon Products (SAS) 等正在系统性地针对 Entegris 在中国 mature node 晶圆厂（28nm 以上）的营收。经济逻辑很直接：中国晶圆厂若继续依赖美国注册供应商面临持续升级的出口管制风险，且中国政府有明确的进口替代激励项目。Entegris 在中国 mature node 的营收在 5–7 年的视野下存在结构性风险；先进节点营收则较为防御。
+
+2. **抛光液在 trailing-edge 节点商品化。** Mature node (28nm 以上) 的 CMP 抛光液化学（氧化物、钨、铜）日益商品化——使 Cabot Microelectronics 历史上享受溢价定价的技术差异化在 trailing-edge 比 leading-edge 窄。安集与鼎龙在这些节点的价格竞争力强。
+
+3. **集中度集中在 TSMC。** TSMC 占净销售 16% 既是优势（TSMC 在代工营收的份额正在提升，叠加 Entegris 的增长）也是单点风险（TSMC 库存周期、TSMC 在 A16 节点上的认证失利、或 TSMC 主要客户流失会直接打击 Entegris）。
+
+## 8. 市场机会 (TAM)
+
+### TAM 规模与 Entegris 可服务的子集
+
+全球半导体材料市场 **2025 年达 $732 亿**，其中 **WFM 为 $458 亿（占总数 62.6%）**，封装材料为其余 ([SEMI press release, 2026-05-12](https://www.semi.org/en/semi-press-release/global-semiconductor-materials-market-revenue-reaches-record-73.2-billion-dollars-in-2025-semi-reports))。Entegris FY25 净销售 $31.97 亿，对应全球材料份额约 **4.4%（占总材料），或约 7%（占 WFM）**——是一个有意义但不主导的份额，对应碎片化行业（其中最大单一供应商可能是硅片龙头信越化学，约 12% 全球材料份额）。
+
+![Semi materials TAM](../../charts/entegris_tam.png)
+
+*资料：2021–2025 实际值来自 [SEMI MMDS press releases](https://www.semi.org/en/semi-press-release/global-semiconductor-materials-market-revenue-reaches-record-73.2-billion-dollars-in-2025-semi-reports)；2026–2028 预测按 SEMI 的 ~8% CAGR 外推，与先进节点 + AI 需求带来的隐含爬坡一致。WFM 占总数维持 62–65%。*
+
+### Serviceable Available Market —— Entegris 具体类别暴露
+
+在 ~$458 亿 WFM 中，Entegris 的组合精确地针对以下子段（括号内为占 WFM 的近似份额与 Entegris 在该子段的份额）：
+
+- **CMP 耗材（抛光液 + 抛光垫 + 清洗 + 过滤）** ≈ $45–50 亿（按野村 7% 抛光液 + 配套抛光垫 / 清洗，约占 WFM 10–11%）。Entegris 是全球龙头，合计份额约 **30–35%** ([行业笔记](../../sector/半导体材料.md)，野村 Fig. 41–42)。
+- **晶圆载具 / FOUP / 光罩盒** ≈ 第三方追踪给出全球 $10–15 亿 ([FOUP carrier market research, 2025-2031](https://reports.valuates.com/market-reports/QYRE-Auto-3K10126/global-foup-and-fosb))；Entegris 份额约 **30–40%**。EUV 光罩盒是其中较小但增速最快的子类别。
+- **液 / 气制程过滤** ≈ 全球 $30–40 亿；Entegris 是全球前 2 之一（与 Pall / Danaher 并列）。
+- **沉积前驱体（CVD、ALD、PVD）** ≈ 全球 $35–45 亿，并在先进节点增速最快；Entegris 在前 5 之列，与 EMD/Merck、Air Liquide、林德、ASM Microelectronic Chemicals (ASMI 子公司) 等竞争。
+- **离子注入气体（SDS 输送 + 散装）** ≈ 全球 $5–10 亿；Entegris 通过 SDS 业务接近主要晶圆厂单一供应商。
+- **特种蚀刻 + 清洗配方** ≈ 全球 $20–30 亿；Entegris 在前 5，与 EMD/Merck、Versum、Showa Denko、鼎龙等竞争。
+- **化学品输送（IntelliGen、阀件、桶装、包装）** ≈ 全球 $15–20 亿；Entegris 是龙头。
+
+将 Entegris 可服务子段相加 ≈ **~$160–200 亿**——意味着 Entegris $32 亿营收对应 2025 年 SAM 的 **17–20% 渗透率**。这是长期增长论点的标题数字：相邻类别（沉积前驱体、ALD 化学、蚀刻配方）的份额提升空间，加上先进节点耗材绝对 TAM 扩张，构成复合增长机会。
+
+### 增长数字 —— 2026–2028
+
+图表中 2026E–2028E 预测对应全球半导体材料从 $732 亿增至 ~$930 亿，三年 **CAGR 8.4%**，混合 WFM 约 10% 与封装约 5–6%。在 Entegris 的足迹内，CMP 耗材（抛光液 + 抛光垫）是增速最快的子段之一——CAGR 约 7–9%，由 A16 / N2 / 1.6nm 逻辑与 400 层 NAND 的步数扩张驱动 ([行业笔记](../../sector/半导体材料.md)，引用野村 p. 8)。先进节点沉积前驱体（Mo、ALD 化学）是最高增速子段——CAGR 10–12%，也是管理层近期电话会议中专门点出的结构性新动力 ([ENTG Q4-FY25 Earnings 8-K, 2026-02-10](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000009/entgq42025ex991.htm))。
+
+标题结论是：Entegris 的 TAM 真实、扩张，且公司在沉积前驱体与 CMP 上有可识别的份额提升机会，应能让营收复合增长接近材料行业增长率上限并延伸到 2028 年。35× 远期 P/E 是否合理，则取决于沉积前驱体与 Mo 工作流故事是否能按管理层暗示的节奏兑现。
+
+### 渗透策略
+
+公司有三条可识别的份额提升杠杆，用于 2026–2028 的视野窗口：
+
+1. **将 CMC 抛光液 / 抛光垫客户交叉销售到 Entegris 过滤 + 分配。** CMC 完成三年后，这一直是明示的营收协同论点。管理层没有干净地量化已实现的营收协同（交易宣布时只给出过 $7500 万级的运行率成本协同，按分部报告基本已实现），但整合故事在向先进节点 CMP 客户 pitch 捆绑广度时最可见。
+
+2. **赢下钼工作流。** 随着 Mo 在先进逻辑接触 / 字线、DRAM / NAND 互连中替代 W，Entegris 完整的 "Mo 前驱体 + Mo 蚀刻 + Mo CMP 抛光液 + Mo 清洗" 方案，成为不愿同时管理 5 家供应商的晶圆厂阻力最小的认证选择。这是 10-K 行业趋势讨论中管理层把它列为最优先的战略事项。
+
+3. **EUV 光罩盒业务扩张。** 随着 High-NA EUV 在 TSMC 1.6nm (~2028F 按野村) 量产，EUV 光罩装机基数将明显扩张。Entegris 接近单一供应商的位置直接转化为增量营收，且对应非常高的边际利润率。
 
 
