@@ -684,3 +684,192 @@ Per the 2024 annual report p. 72-73:
 **§8 takeaway:** TMC captures <1% of global photomask TAM, ~1.2% of its serviceable SAM, and 20–25% of Taiwan's domestic small-segment niche. Growth space is concentrated across three tracks — main-business stabilization (short-term) + 14-inch advanced packaging (medium-term) + compound-semiconductor (long-term) — with the quantifiable realization window starting in 2026-27F.
 
 ---
+
+## 9. Risk Assessment
+
+Per the company-research skill's risk taxonomy (8–12 risks across 4 buckets), the key risk inventory follows.
+
+### 9.A Company-specific risks
+
+**R1 Execution risk — integration of new sponsor + incumbent CEO; subsidiary divestiture timing (high severity)**
+
+Incoming chairman Tu Junguang has been in seat <12 months and is still calibrating with CEO Chen Lidun. "Divesting loss-making subsidiaries" is a high-difficulty execution challenge — at least 6 of 14 investments are loss-making, spanning Edgetech (coating), Photop (optical comms), Browave (optical comms), Yusheng (biotech), VITAVision (touch IC), GroupVisions (Flash packaging), etc. Each divestiture requires finding a buyer or scaling down, and disposal causes one-off P&L hits. **Estimated impact:** if 2026-27F divestitures land, non-controlling-interest losses fall by NT$300–400 mn / year; execution delays risk a PE-folder valuation reset. **Mitigant:** Dayu Capital's NT$1.546 bn injection provides financial firepower; Tu has parallel restructuring experience at Sunplus.
+
+**R2 Customer concentration — single largest customer at 12% (mild risk)**
+
+Per [2024 年報 p. 65](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf), the largest single customer is at 12% — **below the skill's "material" threshold of 20%** — and is relatively safe. **Scenario:** if Customer A (inferred TSMC or UMC) shifts more mask production in-house or to PDMC, TMC could lose ~NT$90 mn / year (~1.2% of revenue). The breadth of the customer base (400+ accumulated) is the mitigant.
+
+**R3 Key-person dependence (medium risk)**
+
+CEO Chen Lidun is the central execution driver of the 14-inch advanced-packaging strategy; his XinTec 12-inch WLCSP background is hard to replace. Departure would force the sponsor to find someone with equivalent industry depth. **Mitigant:** Chen holds 1.46% of shares (top-10 individual shareholder), with incentives well-aligned to the new sponsor's strategy. Departure risk is medium.
+
+**R4 Product / technology obsolescence — structural absence of EUV / sub-7nm (high long-term risk)**
+
+TMC has no EUV capability. As the global mask industry migrates to EUV + sub-14nm, TMC's serviceable SAM grows materially slower than the global TAM. If TMC cannot achieve 28nm volume by 2030, **its serviceable market could shrink from ~USD 2.2 bn to USD 1.5–1.8 bn**, capping revenue ceilings. **Mitigant:** TMC has deliberately chosen not to chase EUV, instead focusing on 8/12-inch mature + 14-inch advanced packaging — a reasonable differentiation strategy, though the ceiling is necessarily lower.
+
+**R5 14-inch expansion delay / yield miss (medium risk)**
+
+NT$435 mn equipment installs 2H26, volume 2027 — a tight execution window. Advanced-packaging mask customer-qualification cycles plus yield ramp take time; if 2027 volume slips to 2028, valuation expectations may de-rate. **Mitigant:** the company's annual report §73 already includes specific production-and-revenue commitments, signaling management confidence; but execution risk remains.
+
+**R6 Subsidiary loss expansion (medium risk)**
+
+2024 subsidiary consolidation pushed non-controlling-interest results from a NT$−1.32 mn drag to NT$−323 mn — the main contributor to the year's net loss. If 2025-26 subsidiary losses continue to widen, they could continue to consume main-business profit and delay the EPS turn. **Mitigant:** the new sponsor has explicitly committed to "stop the bleeding," and 2026 subsidiary cleanup should show gradual progress.
+
+### 9.B Industry / market risks
+
+**R7 Cyclical downturn (medium-high risk)**
+
+The semiconductor industry is highly cyclical; photomask demand correlates closely with wafer-fab utilization. 2024-25 has already troughed in the photomask cycle, but if 2026-27F recovery slips, TMC's revenue uplift visibility slips with it. Conversely, if AI + advanced-packaging demand outperforms, it becomes a structural tailwind. **Estimated impact:** TMC's September 2025 monthly revenue at YoY −33% was the cycle's low; full recovery visibility requires the 1H26 + 2H26 trend to confirm ([TMC November 2025 monthly revenue, Win Invest 2025-12](https://winvest.tw/News/Detail/74291); [TMC February 2026 monthly revenue, Win Invest 2026-03](https://winvest.tw/Stock/Symbol/MonthlyRevenue/2338)).
+
+**R8 Mainland-Chinese photomask shops' low-price competition (medium risk)**
+
+Annual report p. 64 explicitly cites "mainland mask-shop capacity continuing to come online with low-price entry strategies" as an adverse factor. Under national subsidies and the 12-inch capacity expansion, Shenzhen Newway and Qingyi pose a low-end price threat at 8 / 12-inch mature nodes. **Mitigant:** TMC's 65/55/40nm yield and quality continue to outpace mainland competitors; the customer-qualification lead is ≥2–3 years.
+
+**R9 Technology disruption — EBL maskless lithography (low risk)**
+
+Theoretically, electron-beam direct write (EBL maskless lithography) can substitute for some mask demand in low-volume / specialty applications. But EBL is slow and expensive; volume application is not yet realistic. Medium-term (2030+), some niche segments may see substitution, but it does not threaten TMC's main market.
+
+**R10 Export controls + geopolitics (medium risk)**
+
+US export controls toward China and Chinese policy risk toward Taiwan are evolving. TMC's China-bound mask service is limited to ≥28nm — controllable for now — but **the TMC-China relationship will get more complex over time**.
+
+### 9.C Financial risks
+
+**R11 Valuation premium — P/S 2.7×, P/B 2.56× already paying up for transformation (high risk)**
+
+TMC trades at NT$55.40 (2026-05-26), implying a market cap of NT$15.35 bn. Current P/S of 2.7× sits above Photronics' 1.6× (and Photronics is not loss-making), above Toppan's 0.9× and DNP's 0.7×. The new-sponsor entry price was NT$24.40 (2025-08); the current price is **+127% above the entry price** and the 52-week return is +72%.
+
+**The issue:** this valuation already prices in (a) 2026-27F main-business stabilization with ASP uplift + (b) successful 14-inch volume in 2027 + (c) Dayu Capital subsidiary turnaround + (d) AI / advanced-packaging theme persistence — any one catalyst missing creates de-rating pressure. **Conservative fair value:** if 2027F main-business returns to 2022 levels (NT$7.74 bn revenue + 31.4% GM), 14-inch contributes NT$400–500 mn incremental, and net margin recovers to 10%, EPS lands around NT$3–3.5. At 18–22× P/E (Photronics' neutral range + advanced-packaging theme premium), fair value implies **NT$54–77** — placing today's NT$55 near the lower bound. **Downside:** if any catalyst materially slips, P/S regression to Photronics-comparable 1.6× implies NT$33, a ~40% downside. **This is the valuation / multiple-compression risk referenced in §1.5 and formalized here as a financial risk.**
+
+**R12 High leverage / liquidity (medium risk)**
+
+Year-end 2024 debt ratio of 80.4%, current ratio 0.77, quick ratio ~0.6 — a high-leverage, tight-liquidity balance sheet. The January 2026 NT$1.75 bn cash equity raise meaningfully helps — but if subscription comes in light or timing slips, short-term liquidity pressure remains. **Mitigant:** Dayu Capital's financial backing plus TMC's existing bank credit lines.
+
+**R13 Depreciation peak (short-term margin drag, long-term neutral)**
+
+NT$10+ bn of accumulated 2019-24 capex translates to elevated depreciation and maintenance costs — the core driver of the gross-margin compression from 31.4% in 2022 to 18.8% in 2024 ([2024 年報 p. 71](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf)). **Expectation:** once the 2026-27F depreciation peak passes, gross margin should improve ~5–8 pp.
+
+### 9.D Macroeconomic risks
+
+**R14 Interest-rate sensitivity (mild)**
+
+Annual report p. 74: a 0.25% interest-rate move changes net income by NT$21 mn — a relatively low sensitivity given the long-term debt mix is largely fixed-rate. **Mitigant:** the company's interest-rate risk management is mature.
+
+**R15 FX sensitivity (mild-medium)**
+
+Annual report p. 74: a 1% FX move changes P&L by NT$8 mn — also a relatively low sensitivity, because TMC's revenue / cost base is split across NT$, USD, and JPY in a "natural-hedge" structure. **Mitigant:** multi-currency operations naturally offset.
+
+**R16 Geopolitics + Taiwan Strait risk (high but unquantifiable)**
+
+Final and most consequential — all of TMC's production sites are in Hsinchu, with three fabs inside Hsinchu Science Park. **A Taiwan Strait conflict scenario would force TMC and the entire Taiwan semiconductor value chain into extreme disruption.** This is an unavoidable industry risk and a "grey-swan" sitting on top of all Taiwan semiconductor names. **Mitigant:** the exposure is shared with TSMC, UMC, and other Taiwan-domestic semis — TMC is not disproportionately exposed — but it also has no overseas footprint for diversification.
+
+---
+
+## 10. References
+
+### Primary disclosure sources — annual report and MOPS
+
+- [台灣光罩 2024 年報 (民國 113 年度, 修訂定稿, 114.08.13 公告)](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf) — primary source; pages cited: 1, 2, 3-7, 49, 50, 60, 61, 62, 63, 64, 65, 66, 67, 70, 71, 72, 73, 74.
+- [台灣光罩 2023 年報 (民國 112 年度)](https://www.tmcnet.com.tw/Uploads/13/%E5%8F%B0%E7%81%A3%E5%85%89%E7%BD%A92023%E5%B9%B4%E5%BA%A6%20%E5%B9%B4%E5%A0%B1-%E4%B8%AD%E6%96%87-_225526.pdf) — historical comparison baseline (10MB).
+- [Stock Analysis (TPE:2338) Statistics, 2026-05-26](https://stockanalysis.com/quote/tpe/2338/statistics/) — market cap, P/B, shares outstanding.
+- [TMC 2338 — Win Invest summary](https://winvest.tw/Stock/Symbol/Comment/2338) — TTM EPS, dividend history.
+
+### Monthly revenue disclosures (MOPS / financial-media relay)
+
+- [TMC November 2025 monthly revenue NT$459 mn / YoY −27.02%, Win Invest 2025-12](https://winvest.tw/News/Detail/74291)
+- [TMC February 2026 monthly revenue NT$459 mn / YoY −14.5%, Win Invest 2026-03](https://winvest.tw/Stock/Symbol/MonthlyRevenue/2338)
+- [TMC February 2025 monthly revenue, Win Invest 2025-03](https://winvest.tw/News/Detail/54674)
+- [TMC May 2025 monthly revenue NT$560 mn, Win Invest 2025-06](https://winvest.tw/News/Detail/60831)
+
+### Control-change and strategy news (trailing 12 months)
+
+- [Daewoo Resources chairman Tu Junguang to chair Taiwan Mask, Yahoo, 2025-08-01](https://tw.stock.yahoo.com/news/%E5%A4%A7%E5%B1%95%E9%80%B2%E8%BB%8D%E5%8D%8A%E5%B0%8E%E9%AB%94%E6%B1%BA%E5%BF%83%EF%BC%81%E5%A4%A7%E5%AE%87%E8%B3%87%E8%91%A3%E5%BA%A7%E5%87%83%E4%BF%8A%E5%85%89%E6%8E%A5%E4%BB%BB%E5%8F%B0%E7%81%A3%E5%85%89%E7%BD%A9%E8%91%A3%E4%BA%8B%E9%95%B7-092440713.html)
+- [台灣光罩董事長確定換人, Knews, 2025-08-01](https://knews.com.tw/news/8D6BD39FD28FF286F6B447B8CCFD3AE0)
+- [光罩攻先進封裝商機 斥資 4.35 億元擴產, ETtoday, 2025-12-23](https://finance.ettoday.net/news/3088738)
+- [半導體》光罩攻先進封裝商機 斥資 4.35 億元擴產, Chinatimes Wantrich, 2025-12-23](https://wantrich.chinatimes.com/news/20251223900408-420101)
+- [強攻先進封裝市場！台灣光罩砸 4.35 億元擴充 14 吋光罩產線, Global Views Monthly, 2025-12-23](https://www.gvm.com.tw/article/126804)
+- [台灣光罩啟動增資強化競爭力！主流製程升級、擴充 14 吋光罩產能, TechNews, 2026-01-08](https://technews.tw/2026/01/08/taiwan-mask-taiwan-launches-capital-increase-to-enhance-competitiveness/)
+- [多軌並行布局 台灣光罩引領蛻變搶占先進封裝市場, Business Today, 2026-01-09](https://www.businesstoday.com.tw/article/category/183015/post/202601090020/)
+- [台灣光罩回歸本業拚轉盈 製程升級助攻 ASP 續揚, Economic Daily, 2026-01](https://money.udn.com/money/story/5612/9222106)
+- [台灣光罩串聯子公司鎖定自動化製造！波若威入主 7 年, Wealth Magazine, 2024](https://www.wealth.com.tw/articles/69ad8cb4-6738-42c1-8226-c4071b5e8809)
+- [台灣光罩转型七年有成，波若威領軍拓展自動化製造新版圖, TechNews, 2025-02-08](https://finance.technews.tw/2025/02/08/story-of-tmcnet/)
+
+### Company history and base data
+
+- [Wikipedia: 台灣光罩 (TWSE:2338)](https://zh.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%85%89%E7%BD%A9)
+- [MoneyDJ 台灣光罩 company profile](https://www.moneydj.com/kmdj/wiki/wikiviewer.aspx?keyid=2b4ab57f-fb7a-4d56-8ef9-762c9fcf7d2e)
+- [Yahoo Finance Taiwan: 光罩 (2338.TW)](https://finance.yahoo.com/quote/2338.TW/)
+- [Statementdog: 2338 EPS and revenue data](https://statementdog.com/analysis/2338/eps)
+
+### Competitor and global-industry disclosures
+
+- [Photronics FY2025 10-K (CIK 0000810136, accession 0001140361-25-045801, filed 2025-12-17)](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm) — verbatim citation of TMC as a global competitor.
+- [Photronics 2014 PDMC JV closing announcement, 2014-04-04](https://photronicsinc.gcs-web.com/news-releases/news-release-details/photronics-announces-closing-joint-venture-taiwan-dai-nippon)
+- [台灣美日先進光罩 (PDMC) website](https://www.pdmc.com.tw/) — TMC's most direct competitor in Hsinchu.
+- [TOPPAN Holdings: Toppan Photomask to Rebrand as Tekscend Photomask, 2024-10-01](https://www.holdings.toppan.com/en/news/2024/10/newsrelease241001_1.html)
+- [TSMC Mask Services](https://www.tsmc.com/english/dedicatedFoundry/services/mask_services)
+- [UMC mask service](https://www.umc.com/zh-TW/StaticPage/mask_service)
+
+### Industry research and market sizing
+
+- [Nomura "Greater China Semi: A guide to Semi renaissance in 2026~30F", 2026-05-21 — semiconductor materials anchor (Figure 36 lists TMC)](../sector/半导体材料.md)
+- [Mordor Intelligence: Photomask Market Outlook 2024-2030](https://www.mordorintelligence.com/industry-reports/photomask-market)
+- [IMARC Group: Photomask Market Size 2024-2033](https://www.imarcgroup.com/photomask-market)
+- [Datamintelligence Photomask Market Report 2024-2031](https://www.datamintelligence.com/research-report/photomask-market)
+- [Exactitude Consultancy: Photomask Market USD 6.36 bn by 2030, 2024-07-31](https://www.globenewswire.com/news-release/2024/07/31/2921845/0/en/Photomask-Market-is-expected-to-be-valued-at-USD-6-36-billion-by-2030-Exactitude-Consultancy.html)
+
+---
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL checks:** all inline-cited URLs are public; key URLs checked:
+- TMC 2024 annual report URL `https://www.tmcnet.com.tw/Uploads/13/...` was downloaded for offline cross-validation against multiple cited pages (p. 1, 60-67, 70-74). All references verified.
+- Photronics FY2025 10-K URL downloaded; Competition section verbatim verified — TMC explicitly listed as a competitor on p. 7.
+- PDMC website `https://www.pdmc.com.tw/` is not directly reachable in some browsers (SSL handshake variability), but the site exists per Photronics SEC filings.
+- One 2021 Economic Daily article URL (`money.udn.com/.../5491262`) is dead (404); flagged in text as "(URL retired; relayed by secondary coverage)" with `money.udn.com/industry/company/光罩` topic page as the replacement reference.
+
+**SEC filename resolution (EDGAR submissions JSON verified):**
+- Photronics CIK 810136 → most recent 10-K accession 0001140361-25-045801, filename `ef20057458_10k.htm` (filed 2025-12-17), confirmed against the `data.sec.gov/submissions/CIK0000810136.json` API.
+
+**TMC 2024 annual-report key-data spot-checks (claim → page):**
+- FY2024 consolidated revenue NT$7,561 mn (p. 1, p. 71) — verified.
+- FY2024 net loss after tax NT$786 mn (p. 1, p. 71) — verified.
+- FY2024 operating gross margin 18.8% (p. 71) — verified.
+- ≤0.13µm advanced-node mask 2024 revenue NT$1,360 mn / 2023 NT$1,137 mn / YoY +20% (p. 63) — verified.
+- FY2024 regional split: domestic 36.2% / Asia 61.8% / other 2.0% (p. 62) — verified.
+- FY2024 single largest customer 12% / "only one customer over 10%" (p. 65) — verified.
+- FY2024 largest supplier SK KF 38% (p. 65) — verified.
+- FY2024 R&D expenses NT$389 mn (p. 62) — verified.
+- 2025 + 2026 advanced-mask planned incremental sales (p. 73): NT$1,460 mn / NT$1,630 mn; gross profit NT$730 mn / NT$820 mn — verified.
+- Equity-method loss breakdown (p. 73): Yusheng / VITAVision / Photop / Browave — verified.
+- Headcount 1,241 / 1,346 (p. 66) — verified.
+- Interest-rate sensitivity NT$21 mn / FX sensitivity NT$8 mn (p. 74) — verified.
+
+**Photronics 10-K spot-checks:**
+- "Competitors include ... Taiwan Mask Corporation ..." (FY2025 10-K p. 7) — verified.
+- Non-US revenue share 82% / 83% / 86% (FY2025 / 2024 / 2023, FY2025 10-K) — verified.
+- 7 manufacturing sites: Taiwan 3 + China 2 + Korea 1 + US 3 + Europe 2 (FY2025 10-K) — verified.
+
+**Analyst views (intentionally not cited to 10-K):**
+- §1.5 valuation snapshot reading — P/S 2.7× peer-relative diagnosis (uncited; analyst inference combining multiple catalysts).
+- §4.2.3, §4.5.4 moat verdicts — marked `*Analyst view:*` explicitly; not 10-K-cited.
+- §5.2 Customer A = TSMC or UMC inference — explicitly marked `*Analyst inference (based on public reporting)*`.
+- §6.3 SOM / SAM sizing — explicitly marked `*Analyst estimate*`.
+- §8.4 14-inch 2027 incremental revenue NT$500–800 mn — explicitly marked `*Analyst estimate*`.
+- §9 R11 fair value NT$54–77 range — explicitly marked "conservative fair value."
+
+**Residual unknowns:**
+- Customer A's identity — the filing deliberately withholds it; inference to TSMC or UMC only.
+- The MOPS material-information original URL for Dayu Capital's NT$1,546 mn stake-acquisition disclosure — not directly verified (citation relays through media coverage).
+- Tu Junguang's personal shareholding — the 2024 annual report's printing date predates his August 1, 2025 appointment, so the filing does not disclose this.
+- LCD / LED / Bumping individual revenue shares — annual report p. 60 discloses only that semiconductor >90%; no sub-line detail.
+- Specific subsidiary divestiture timetable — not publicly disclosed.
+
+**Citation count check:** approximately 80 inline citations across §1-§9 plus the References block. Above the skill's 40+ floor.
+
+**Image embed check:** 6 PNG charts confirmed: `taiwanmask_revenue_margin.png` (§1), `taiwanmask_peer_valuation.png` (§1), `taiwanmask_monthly_revenue.png` (§1), `taiwanmask_advanced_node.png` (§4), `taiwanmask_geographic_mix.png` (§5), `taiwanmask_market_split.png` (§6) — all six charts now embedded in the English version.
+
+</details>
+
+---
