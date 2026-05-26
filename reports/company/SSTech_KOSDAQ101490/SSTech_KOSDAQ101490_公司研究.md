@@ -47,3 +47,49 @@ S&S Tech (에스앤에스텍，KOSDAQ: 101490) 是韩国唯一一家专注于 **
 *分析师观点 (Analyst view):* 近端 de-rate 触发因素是 **三星 EUV 资格认证 (qualification) 时点滑动**。如果三星 2026 年 1 / 2 月的最终评估里程碑滑后 ≥6 个月，股价可能回吐过去一年 +128% 涨幅，因为当前 ~6.7× P/S 估值已经把 EUV 收入计入 FY2027F。反之，如果三星在 1H-FY2026 发出首批吨数级采购订单 (PO)，估值倍数可能向 Dongjin Semichem 50× 区间上行 — 详见第 8 节 (TAM) 与第 9 节 (风险)。
 
 ---
+
+## 2. 公司历史
+
+S&S Tech 于 **2001 年 2 月 22 日**在韩国大邱成立 — 选址大邱是创始人郑寿弘的本籍地，他在大邱本地的庆北国立大学 (Kyungpook National University, KNU) 取得了 1981 年高分子工学 (polymer engineering) 学士与 1999 年半导体工程硕士学位，同时大邱—庆北 (Daegu-Gyeongbuk) 工业集群供应链能就近提供超净石英基板搬运、Cr / MoSi 溅射靶材等关键配套，这是早期空白光罩产线的硬约束 ([Business Post — Who Is? 정수홍 에스앤에스텍 대표이사, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745); [S&S Tech 회사소개 — CEO Vision, accessed 2026-05](http://www.snstech.co.kr/renew/html/sub01_01.asp))。创业初衷 — 从公司首批监管备案文件起就明确写出 — 非常简单: **把当时三星电子和现代电子 (SK 海力士前身) 100% 从日本进口的 photomask blank 国产化**，并以 2000 年代末韩国 LCD 厂扩产周期作为切入点的入门级产品。
+
+```mermaid
+timeline
+    title S&S Tech 关键里程碑, 2001–2026
+    2001 : 大邱由郑寿弘创立; LCD 级 Cr blank 中试线
+    2003 : 来自三星显示与 LG 显示的 LCD 空白光罩首笔商业收入
+    2008 : 韩国存储厂首次通过半导体级二元 blank (Cr-on-glass) 资格认证
+    2010 : KOSDAQ 挂牌 (2 月 23 日, 代码 101490)
+    2014 : MoSi 衰减型 PSM (ArF) 在三星电子通过资格认证
+    2017 : 创始人郑寿弘回任董事长; 设定 EUV blank 开发战略
+    2020 : 公告 KRW 10 bn 投资计划用于 EUV blank + pellicle
+    2021 : 韩国首张全尺寸 EUV pellicle 原型，透过率 90%
+    2024 : "新物质" hardmask 发布瞄准 High-NA EUV; FY24 营收 KRW 176 bn
+    2024-12 : 董事会追加批准 KRW 41.7 bn EUV 量产 capex
+    2025-10 : 龙仁 EUV 中心 (10,809 m², 累计 ~KRW 100 bn) 落成
+    2026-Q1 : EUV blank 与 pellicle 量产目标启动 — 三星资格认证窗口
+```
+*资料来源: 基于 [S&S Tech 회사연혁, accessed 2026-05](http://www.snstech.co.kr/renew/html/sub01_02.asp); [Business Post — Who Is? 정수홍, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745); [THE ELEC — S&S Tech EUV pellicle, 2021-10-06](https://www.thelec.net/news/articleView.html?idxno=3431); [ZDNet Korea — 용인 EUV 센터 준공, 2025-10-15](https://zdnet.co.kr/view/?no=20251015142601); [38 Communication — 에스앤에스텍 IPO record, accessed 2026-05](http://www.38.co.kr/html/ipo/ipo.htm?o=v&key=&no=1422&page=59) 整理。*
+
+**2001–2009 阶段** 是一段漫长、烧钱的爬坡期: Cr-on-glass FPD blank 作为入门产品切入，但 LCD blank 行业当时已经是日本在位玩家 (Hoya、Ulcoat、Toppan) 主导的低毛利赛道，要在三星显示牙山 (Tangjeong) 厂和 LG 显示坡州 (Paju) 厂通过资格认证，需要先积累约 5 年的零粒子缺陷数据才能售出一片对等晶圆量的商业 mask。半导体级转型从 **2008 年**开始 — 二元 Cr blank 在韩国某家存储厂通过资格认证 (申报文件未披露首位客户名称，当时业内传闻是当时仍处于 Hynix-pre-SK 控股结构下的海力士半导体)，**2010 年 2 月 23 日 KOSDAQ 上市**是支撑公司从 FPD-only 跨入 semi-blank 规模的关键融资事件 ([38 Communication — 에스앤에스텍 코스닥 상장 record, accessed 2026-05](http://www.38.co.kr/html/ipo/ipo.htm?o=v&key=&no=1422&page=59); [전자신문 — 에스앤에스텍 정수홍 대표 인터뷰, 2019-02-11](https://m.etnews.com/20190211000156))。
+
+**2014 年 MoSi PSM 资格认证**是接下来的战略拐点: PSM 是一种相移吸收膜栈，让晶圆厂在 ArF 浸没式光刻上通过 pattern 边缘的相消干涉印出亚解析度特征 (典型场景为 45 nm 半节距 DRAM) — 在三星电子的 DRAM / NAND 产线上通过这一品类资格认证，让 S&S Tech 从"二号 LCD blank 供应商"升级到"先进逻辑 blank 上对 Hoya 可信的备选供应商" ([Wikipedia — Photomask (Phase Shift Mask 讨论), accessed 2026-05](https://en.wikipedia.org/wiki/Photomask))。三年后的 **2017 年 3 月**，创始人郑寿弘 — 此前的 IPO 后年份分别在 PKL (韩国 photomask 厂、相邻产业玩家)、Portronics Asia 任职，并以原始投资人身份回到公司视野 — 回任董事长，并把公司战略章程重置为以 **EUV blank + EUV pellicle 开发**为多年战略优先级。一年内的 2018 年 3 月，他正式接任 Representative Director (代表理事 / CEO) 头衔 ([Business Post — Who Is? 정수홍, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745); [The Bell — 정수홍 에스앤에스텍 회장, 지배력 기반 경영일선으로, 2019-03-29](https://www.thebell.co.kr/free/Content/ArticleView.asp?key=201903290100053990003403&svccode=04))。
+
+**2020–2025 EUV 计划**是当前股价故事的承托。2020 年 6 月董事会通过首期 KRW 10 bn 投资用于 EUV blank + pellicle 开发设备 ([English ETNews — S&S Tech to Invest 10 Billion KRW in EUV Blank Mask and Pellicle Development, 2020-06-19](https://english.etnews.com/news/article.html?id=20200619200002))。2021 年 10 月公司公布**单程透过率 90% 的 EUV pellicle 原型** — 这一数字之所以重要，是因为当时唯一商业化的 EUV pellicle 是三井化学 (Mitsui Chemicals) 多晶硅膜，单程透过率 ~88%，而单程透过率每低 1 pp 都意味着在一台 USD 150 m 的 EUV 扫描仪上扣减一笔可观的产能税 ([THE ELEC — S&S Tech develops EUV pellicle with 90% transmittance, 2021-10-06](https://www.thelec.net/news/articleView.html?idxno=3431))。2024 年 8 月又新增 **新物质 hardmask 产品线** — 一种化学定制的吸收 / 刻蚀掩膜薄膜，相对常规材料的刻蚀选择比提升约 3 倍，并采用纯氯刻蚀化学，定位 High-NA EUV 时代更薄光刻胶的工艺需求 ([ZDNet Korea — 에스앤에스텍 신물질 하드마스크 개발, 2024-08-12](https://zdnet.co.kr/view/?no=20240812172957))。**2024-12-04 董事会批准追加 KRW 41.7 bn 用于龙仁 EUV 厂建设**，资助了设备安装的后半段; **2025-10-15 龙仁 EUV 中心开幕仪式**正式标志量产准备就位 — 董事长郑寿弘在开幕现场公开把"EUV 量产后年营收 5,000 亿韩元 (KRW 500 bn)"作为公司中长期目标 ([파이낸셜뉴스 — 정수홍 CEO 인터뷰: "내년 초 EUV 블랭크마스크 양산, 매출 5000억 기대", 2025-03-21](https://www.fnnews.com/news/202503211358486799); [ZDNet Korea — 용인 EUV 센터 준공, 2025-10-15](https://zdnet.co.kr/view/?no=20251015142601))。
+
+近期的**接班相关事件**对股权故事有意义。2024 年下半年创始人郑寿弘将 10 万股 (按当时市价约 KRW 2.6 bn) 赠与次子郑成勋 (정성훈, Jung Seong-hun, 1988 年生)，把次子持股比例提升至约 0.94%，并对外释放长期接班结构信号: **次子接 S&S Tech 主体，长子郑时俊 (정시준, Jung Si-jun) 接 S&S Investment 子公司** (一家工业控股 / 风险投资载体) ([The Bell — 정수홍 회장 지배력 기반, 2019-03-29](https://www.thebell.co.kr/free/Content/ArticleView.asp?key=201903290100053990003403&svccode=04); [Business Post — Who Is? 정수홍 succession discussion, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745))。这一结构在**未来 24 个月内不构成颠覆性变量** — 郑寿弘仍同时担任董事长与代表理事，次子目前为执行董事 (Executive Director) — 但它锁定了 EUV 爬坡背后的长期资本配置框架。
+
+---
+
+## 3. 管理团队
+
+S&S Tech 在管理层面是一家**处于拐点上的创始人 CEO 公司**。郑寿弘既是创始人，也是当前的代表理事 (대표이사) — 按 company-research 流程惯例，本节将"创始人"与"CEO"合并为一条人物履历，而不是拆成两个分块。
+
+**郑寿弘 (정수홍, Jung Soo-hong) — 创始人、董事长兼代表理事。** 1955 年 7 月 18 日生于大邱，郑寿弘是韩国 photomask 行业最资深的高管之一 — 一段长达 45 年的职业序列与 S&S Tech 今日产品矩阵的技术层级几乎一一映射 ([Business Post — Who Is? 정수홍 에스앤에스텍 대표이사, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745))。他 **1981 年获庆北国立大学高分子工学学士学位** (高分子化学是 photoresist 与 pellicle 膜材的基础，两者今天都出现在 S&S Tech 的产品矩阵中)，**1999 年获 KNU 产业研究生院半导体工程硕士** — 这是他职业中段在出任 PKL 韩国 CEO 期间完成的进修 ([Business Post — Who Is? 정수홍, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745); [The Bell — 정수홍 에스앤에스텍 회장 지배력 기반 경영일선으로, 2019-03-29](https://www.thebell.co.kr/free/Content/ArticleView.asp?key=201903290100053990003403&svccode=04))。
+
+值得展开的三段重要从业经历，每一段都对应今天 S&S Tech 运营论点中的某一层。**(1)** **1988-1993 年任 Korea DuPont 工厂厂长**，主管 photoresist 加 photomask 材料生产线，学到了支撑超低缺陷 blank-mask 制造所需的**湿化学工艺控制** — defects/cm² 缺陷密度归根到底是洁净室微粒控制与化学品纯度的函数，这两块都是 DuPont 的看家本领 ([Business Post — Who Is? 정수홍 career timeline, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745))。**(2)** **1995-约 2001 年任 PKL (Photokure Limited，后与 Photronics 合资为 Photronics-PKL) 总裁 / 代表理事** — 这是一家从 Hoya / Shin-Etsu 采购 blank、为三星和海力士做电子束雕刻的韩国 photomask 厂。在 PKL 的这一任让郑寿弘从客户一侧吃透了**韩国晶圆厂愿意为什么样的缺陷规格、交期 cadence 与 blank 单价买单**，他随后把这些理解直接翻译成 2001 年的上游新进入者 ([전자신문 — 정수홍 대표 인터뷰: "블랭크 마스크 세계 최고 자부", 2019-02-11](https://m.etnews.com/20190211000156))。**(3)** **2008-2017 年任 PKL (Photronics 合资后) 董事长** — 这一时期 S&S Tech 从一家 sub-KRW 50 bn 的 LCD-blank 专业户长大为多品类的韩国 semi-材料公司，并完成 KOSDAQ 上市; 创始人在期间保留控股股东经济权益但未直接出任日常运营。2017 年 3 月他作为董事长回任 S&S Tech，2018 年加冠代表理事头衔，是因为 EUV 转型需要创始人级别的资本配置决断 ([The Bell — 정수홍 회장 지배력 기반, 2019-03-29](https://www.thebell.co.kr/free/Content/ArticleView.asp?key=201903290100053990003403&svccode=04); [Business Post — Who Is? 정수홍, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745))。
+
+郑寿弘 2017 年至今的执掌签字风格集中体现在 **(a)** 多年期 EUV capex 重金投入 (2020 年 KRW 10 bn 首期批准、2021-2024 年大邱与龟尾建设、2024-12-04 龙仁追加 KRW 41.7 bn，累计约 KRW 150 bn)，**(b)** 对外明示的营收目标 (2025 年 3 月访谈中宣告"EUV 量产后年营收 5,000 亿韩元中长期目标")，以及 **(c)** 创始人家族持股集中 — 截至 2025-03-31 他个人持有约 4.28 百万股 (约 **占总股本 19.95%**)，加上家族 / 次子相关方持股块约 22%，对位 **三星关联持股块约 16.8%** (其中三星资产管理 8.78%)，后者是三星作为战略客户给予的资本侧背书 ([Business Post — Who Is? 정수홍 shareholding, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745); [Company Guide — 에스앤에스텍 A101490 ownership table, accessed 2026-05](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A101490); [파이낸셜뉴스 — 정수홍 CEO 인터뷰, 2025-03-21](https://www.fnnews.com/news/202503211358486799))。薪酬结构在 DART 标准披露门槛外没有更多细节; 股权敞口 (按当前价计算约 KRW 320–330 bn) 远大于任何现金薪酬信号 — 这是一种典型的创始人股权对齐，而不是激励设计层面的对齐。
+
+接班结构 — 在第 2 节有提到 — 把**次子郑成勋 (정성훈, 1988 年生) 定位为 S&S Tech 主体的接班人** (他作为执行董事在董事会任职，并在 2024 年下半年获得创始人 10 万股赠与)，**长子郑时俊 (정시준) 主导 S&S Investment 子公司**。这种切分被韩国财经媒体普遍解读为一种刻意安排: 主营运营公司由一位继承人接班，而风险 / 工业投资活动放在平行载体里 ([The Bell — 정수홍 회장 지배력 기반, 2019-03-29](https://www.thebell.co.kr/free/Content/ArticleView.asp?key=201903290100053990003403&svccode=04); [Business Post — Who Is? 정수홍 succession, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745))。未来 12-24 个月，日常运营领导权完全保留在创始人手上 — 考虑到三星 EUV 资格认证窗口的关键性，这种创始人连续性是正面信号，而不是需要刻意提示的关键人风险。
+
+---
