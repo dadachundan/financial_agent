@@ -57,3 +57,47 @@ FY2025 的绝对数字背后,真正的投资故事是结构性产品组合再平
 资料来源:[Tosoh"FY2025 合并经营业绩",p.15](https://www.tosoh.com/File%20Library/Tosoh/News%20Release/Tosoh-Reports-Its-Consolidated-Results-for-Fiscal-2025.pdf)。
 
 ---
+
+## 2. 公司沿革
+
+东曹株式会社于 **1935 年 2 月 11 日** 在山口县德山以 **東洋曹達工業株式会社 (Toyo Soda Manufacturing Co., Ltd.)** 名义创立 —— 设立初衷是为日本玻璃工业生产碳酸钠 (纯碱),并于次年建成南阳综合厂区,作为以海水盐为原料的氯碱一体化基地 ([Encyclopedia.com — 东曹公司沿革](https://www.encyclopedia.com/books/politics-and-business-magazines/tosoh-corporation);[Wikipedia — 东曹,引证企业披露](https://en.wikipedia.org/wiki/Tosoh))。选址带有明显战略考量:山口沿海一带,工厂可使用海水卤水和氨原料 (Solvay 法关键投入),同时贴近中京工业带,内陆下游客户 (玻璃、陶瓷、纸浆造纸) 触手可及。Solvay 法纯碱产线在二战期间相继扩展为溴 (1942) 与烧碱 (1943) —— 后者即九十年后仍支撑集团利润基底的氯碱业务起点。
+
+战后,公司沿垂直一体化方向扩张 —— 1950 年代末进入氯乙烯单体,1960 年代进入 PVC 树脂,1970 年代在日本经济进入高增长拐点后,于四日市综合厂区上马乙烯裂解装置,确立至今支撑氯碱集团的"盐 → 氯 → VCM → PVC"完整产业链 ([FundingUniverse — 东曹公司沿革](https://www.fundinguniverse.com/company-histories/tosoh-corporation-history/))。随后一系列精细化学多元化举措接续展开:1980 年代推出高硅沸石催化剂 (面向全球 FCC 与 SDA 应用的炼油客户)、氧化锆陶瓷粉 (TZ-Series 系列,面向口腔、结构件、套管等应用),以及 1971 年推出的 **TSKgel HPLC 分离柱** —— 使东曹成为日本最早进入生命科学工具市场、最终壮大为今日 Tosoh Bioscience 部门的厂商之一 ([Tosoh Bioscience separations 产品页 — TSKgel 推出历史](https://www.separations.us.tosohbioscience.com/HPLC_Columns/id-8390/TSKgel_SuperH2500))。
+
+公司现代史上最关键的战略举措是 **1987 年品牌更名为 Tosoh Corporation** —— 由 Toyo-Soda → Tosoh 的缩写,既宣告东曹意图作为全球特化品集团被外界识别,也告别"国内氯碱/纯碱厂商"的旧标签 ([Wikipedia — 东曹,1987 年更名](https://en.wikipedia.org/wiki/Tosoh))。同年,东曹收购 **Tosoh SMD, Inc.** 美国子公司前身 (后于 1988 年在俄亥俄州 Grove City 正式设立) —— 此后这家高纯度溅射靶材子公司随 1990 年代美国晶圆厂建设潮承载东曹品牌进入美国半导体供应链 ([Tosoh SMD 公司沿革](https://dev.tosohsmd.com/about-us/history/))。
+
+```mermaid
+timeline
+    title 东曹株式会社 — 主要里程碑
+    1935 : 以东洋曹达工业名义在山口县德山创立 (为日本玻璃业生产 Solvay 法纯碱)
+    1936 : 南阳综合厂区投产 (海水卤水氯碱一体化;至今仍是集团最大生产基地)
+    1942 : 溴生产投产 (今日 Specialty 集团溴衍生物业务起点)
+    1943 : 烧碱投产 (今日氯碱集团起点产线)
+    1971 : TSKgel HPLC 分离柱推出 (今日生命科学部门基石产品)
+    1980s : 高硅沸石、氧化锆陶瓷、电子材料线相继并入 Specialty 集团
+    1987 : 更名 Tosoh Corporation;收购美国溅射靶材业务 (Tosoh SMD 1988 年在俄亥俄 Grove City 设立)
+    2006 : 收购日本聚氨酯工业 NPI (2014 年并入母公司;今日 MDI / HDI 业务)
+    2013-14 : Tosoh SMD Grove City 俄亥俄扩建 — 新增 82,500 平方英尺,服务 450 mm 晶圆时代溅射靶材研发
+    2022 : 桑田 守 (Mamoru Kuwada) 出任代表取缔役、社长 (2022 年 3 月、AGM 6 月)
+    2024 : 设立 Tosoh Vietnam Polyurethane Co., Ltd;粗 MDI 分馏装置在建 (2027 年春投产)
+    2025 : 5 月 — 公布 FY2026–FY2028 新中长期经营计划,采用化学链 + 先进技术两组合
+    2025-11 : Q2 FY2026 Tosoh SMD 美国溅射靶材资产计提 ¥19.3 bn 减值;FY26 净利润指引由 ¥62.0 bn 下调至 ¥38.0 bn
+```
+
+2006 年对 **日本聚氨酯工业 (Nippon Polyurethane Industry / NPI)** 的并购 —— 一家国内 MDI / TDI / 聚氨酯原料生产商 —— 是现代东曹史上规模最大的 M&A;NPI 于 2014 年并入母公司,集中了如今归于氯碱集团的 MDI 业务 ([Wikipedia — 东曹,2006 年 NPI 收购](https://en.wikipedia.org/wiki/Tosoh))。聚氨酯由此成为氯碱集团的战略支点:中国产能扩张让 PVC 逐步走向大宗化,高附加值的 MDI / HDI 硬化剂线则成为分部的增长引擎,公司已公告 **Tosoh Vietnam Polyurethane Co., Ltd** 粗 MDI 分馏装置 (2027 年春投产,纳入 FY2026–2028 中长期经营计划资本支出)、南阳综合厂区 HDI 衍生品产能扩张 (2026 年夏投产) ([Tosoh"FY2025 合并经营业绩",p.21 (Topics)](https://www.tosoh.com/File%20Library/Tosoh/News%20Release/Tosoh-Reports-Its-Consolidated-Results-for-Fiscal-2025.pdf))。越南 MDI 装置与中国的 **Tosoh (Ruian) Polyurethane** 共同卡位东南亚聚氨酯需求增长 —— 中国本土市场已步入成熟。
+
+近年最具决定性的战略转向是 **2025 年 5 月公布的 FY2026–FY2028 中长期经营计划**:把四大报告分部正式重组为两大战略组合 —— **化学链业务** (石化 + 氯碱,即传统大宗产业链) 与 **先进技术业务** (Specialty 内的生命科学与 Advanced Materials 子板块 + Engineering 内的水处理) —— 并明确承诺将三年内增量资本支出 ¥220–250 bn 的主要部分配置给先进技术业务,以兑现 FY2031 ¥170 bn 经营利润目标 ([Tosoh"第 126 期事業報告書",pp.10, 12-14](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))。计划同时把 **¥50 bn 三年回购** 写入股东回报政策,作为 ¥100 / 股最低股息基础上的补充机制 (若基础股息低于派息率 50% 的下限,则通过回购把派息率拉至 50%) —— 这是公司历史上最激进的资本回报承诺,也意在回应自 2022 年以来长期低于 1× P/B 的估值困境 ([Tosoh"FY2026 上半期累计经营业绩",p.21 (股东回报)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf))。Q2 FY2026 Tosoh SMD 减值恰好发生在这一战略转向中段 —— 是对 Advanced Materials 增长叙事的战术挫折,但并不否定中长期经营计划所赖以建立的结构性产品组合再平衡。
+
+---
+
+## 3. 管理团队
+
+**桑田 守 (Mamoru Kuwada)** — 代表取缔役、社长 (自 2022 年 3 月 1 日起任职)
+
+桑田守于 **2022 年 3 月 1 日** 出任东曹代表取缔役、社长,并于 2022 年 6 月第 124 期股东大会上获得正式确认,接替同日转任公司顾问的前任社长 **山本 寿宣 (Toshinori Yamamoto)** ([Everchem Specialty Chemicals — "Tosoh 任命新社长",2022-02-15](https://everchem.com/tosoh-names-new-president/);[Bloomberg 简历 — 桑田守、东曹](https://www.bloomberg.com/profile/person/20913255))。这一人事任命具有重要的结构性意义:桑田守此前担任东曹 **副社长** 与 **Specialty Materials Division (特种材料事业部)** 负责人 —— 即在升任母公司 CEO 之前,他长期主管 Advanced Materials / 电子材料业务 (溅射靶材、石英玻璃、氧化锆、HPLC),由此成为东曹现代史上首位出身高毛利特化品端、而非来自传统氯碱 / 石化大宗产业链端的社长 ([Tosoh 官方公告,经 PUDaily 转发 — "东曹任命新社长",2022](https://www.gvchem.com/news/tosoh-corporation-appoints-new-president-54049026.html);[LinkedIn — Tosoh Bioscience Diagnostics EMEA 谈桑田守 2023 年 10 月访问](https://www.linkedin.com/posts/tosoh-bioscience-diagnostics-emea_last-week-mamoru-kuwada-president-of-tosoh-activity-7124676997921824768-lreI))。这与 2025 年 5 月中长期经营计划明确把先进技术业务作为增长引擎的资本配置取向高度一致:由 Specialty / 电子材料业务体系内成长起来的 CEO,正是押注 Specialty 增长的最合适旗手。
+
+桑田守是典型的东曹内部成长型高管 —— 据 Bloomberg 简历,他于 1980 年代末加入东曹,在 Specialty Materials Division 内部跨越多个职能与事业部负责人岗位,直至 2022 年升任 ([Bloomberg 简历 — 桑田守](https://www.bloomberg.com/profile/person/20913255);[Simply Wall St "东曹管理层分析"](https://simplywall.st/stocks/us/materials/otc-tosc.f/tosoh/management))。其 FY2025 总薪酬约 ¥124 mn,固定薪 47.6%、绩效挂钩部分 (现金奖金 + 限制性股权激励) 52.4% —— 对 TOPIX 上市的日本化学公司 CEO 而言属于合理水平 ([Tosoh"第 126 期事業報告書",p.24 (董事薪酬合计)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf);2022 年 LinkedIn / Simply Wall St 披露的薪酬构成)。董事绩效薪酬挂钩三项指标 —— 合并经常性利润 (FY2024:¥95.9 bn)、每股年度股息 (¥85) 与 CSR 关键议题达成率 —— 这一结构把管理层现金奖金与盈利、股息政策绑定,但不含明确的 ROE / EPS 增长门槛 ([Tosoh"第 126 期事業報告書",p.26 (绩效薪酬政策)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))。其在东曹的"准创始命题"是 Specialty Materials / 电子材料业务的扩张 —— 在他主管事业部的十余年间,Tosoh SMD 溅射靶材产能完成两轮扩建 (2013–14 年 Grove City 82,500 平方英尺扩建,服务 450 mm 晶圆研发;2025 年冬投产的最新一轮节点扩建),Specialty Group 经营利润由十几亿日元区间近翻倍至 FY2024–FY2025 的 ¥30+ bn 至 ¥40+ bn 区间 ([Business Standard — "Tosoh SMD 大幅投资服务半导体行业",2013-11-12](https://www.business-standard.com/content/b2b-chemicals/tosoh-smd-plans-major-investments-to-serve-semiconductor-industry-113111200428_1.html);[Tosoh FY26 上半期业绩,2025-11-04,p.4 (Topics — 2025 年冬溅射靶材产能)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf))。
+
+东曹九十年历史先于任何现代意义上的"单一创始人" —— 1935 年东洋曹达工业由山口县一批工业与商社利益方共同发起,作为战前日本化学工业整体布局的一部分,而非由具名企业家独自创立。本报告因此遵循公司研究 skill 的常规做法,仅聚焦在任 CEO 简历 ([Encyclopedia.com — 东曹创立背景](https://www.encyclopedia.com/books/politics-and-business-magazines/tosoh-corporation))。Specialty 战略方向的延续性由 **大道 信克 (Nobukatsu Ohmichi)** 承担 —— 现任副社长、Specialty Group 总裁、Advanced Materials 事业部长,即桑田守在 Specialty Materials 主管位置上的继任者 —— 但按公司研究 skill 的覆盖范围,本节人物部分至现任 CEO 为止 ([Tosoh"第 126 期事業報告書",p.24 (执行官名单)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))。
+
+---
