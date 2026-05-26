@@ -409,5 +409,115 @@ The **penetration strategy** is straightforward and already executing: (a) **def
 
 **13. Geopolitical — Korea-China, Korea-Japan, US-China (MEDIUM-HIGH).** The supply chain runs through all three relationships: Chinese fluorspar / cerium-oxide feedstock; Japanese benchmarking competitors for HF / slurry; US customer base growing via Taylor. Any of these relationships breaking down disrupts Soulbrain's chemistry or customer base. Mitigants: diversification across feedstock sources (Korean-domestic + Chinese + others) and customer geographies (Korea + US + China).
 
+---
+
+## References
+
+### Primary filings & corporate disclosure
+- [DART — 솔브레인 사업보고서 / 분기보고서 search portal](https://dart.fss.or.kr/dsab007/main.do?textCrpNm=%EC%86%94%EB%B8%8C%EB%A0%88%EC%9D%B8)
+- [KRX disclosure 20250325000760 — CEO change](https://kind.krx.co.kr/common/disclsviewer.do?method=search&acptno=20250325000760)
+- [Soulbrain — Semiconductor Materials product portfolio](https://www.soulbrain.co.kr/en/m21.php)
+- [Soulbrain — CMP slurry detail page](https://www.soulbrain.co.kr/en/m33.php)
+- [Soulbrain — Company History page](https://www.soulbrain.co.kr/en/m14.php)
+- [Soulbrain — About Us / Locations page](https://www.soulbrain.co.kr/en/m16.php)
+- [Soulbrain Holdings — Semiconductor Materials portfolio (parent group)](https://www.soulbrainholdings.co.kr/en/m21.php)
+- [Solactive — Soulbrain Holdings spin-off note, 2020-08-06](https://www.solactive.com/spin-off-soulbrain-holdings-co-ltd-6th-august-2020/)
+
+### Market data & valuation
+- [Stockanalysis — KOSDAQ:357780 quote & company profile](https://stockanalysis.com/quote/kosdaq/357780/)
+- [Stockanalysis — KOSDAQ:357780 revenue history](https://stockanalysis.com/quote/kosdaq/357780/revenue/)
+- [Stockanalysis — KOSDAQ:357780 company profile](https://stockanalysis.com/quote/kosdaq/357780/company/)
+- [Stockanalysis — KOSDAQ:357780 market cap](https://stockanalysis.com/quote/kosdaq/357780/market-cap/)
+- [Stockopedia — KOSDAQ:357780 share price & financials](https://www.stockopedia.com/share-prices/soulbrain-co-KOSDAQ:357780/)
+- [Yahoo Finance — 357780.KQ quote](https://finance.yahoo.com/quote/357780.KQ/)
+- [Yahoo Finance — 357780.KQ company profile](https://finance.yahoo.com/quote/357780.KQ/profile/)
+
+### Sell-side & broker research
+- [SKS Securities — Soulbrain Q3 2025 note, 2025-11-04](https://www.sks.co.kr/data1/research/qna_file/20251104100029890_6_ko.pdf)
+- [Samsung Pop research — Soulbrain inflection point, 2025-02-10](https://samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=2010%2F2025021007420216K_02_02.pdf&inlineYn=Y&saveKey=research.pdf)
+- [Economy6 — Soulbrain stock outlook, 2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html)
+- [Nomura "Greater China Semi: Renaissance 2026-2030F" anchor report, 2026-05-21 — summarized in `reports/sector/半导体材料.md`](../../sector/半导体材料.md)
+
+### Management & governance
+- [Businesspost — Who Is? Jeong Ji-wan (정지완)](https://m.businesspost.co.kr/BP?command=mobile_view&num=41846)
+- [Businesspost — extended bio, Soulbrain Holdings chairman](https://www.businesspost.co.kr/BP?command=article_view&num=373309)
+- [Edaily — Park Young-soo (박영수) appointed CEO, 2025-03-25](https://www.edaily.co.kr/News/Read?newsId=03834326642106928&mediaCodeNo=257)
+- [Nate news — Park Young-soo CEO appointment, 2025-03-25](https://news.nate.com/view/20250325n27329)
+- [The Bell — Soulbrain board analysis: Samsung-vet CEO line, 2021-03-29](https://m.thebell.co.kr/m/newsview.asp?svccode=00&newskey=202103292236163680106472)
+- [THE ELEC — Soulbrain owner 2nd-generation succession](https://www.thelec.kr/news/articleView.html?idxno=6616)
+- [The Asia Business Daily — youngest large shareholder, 2024-09-17](https://www.asiae.co.kr/en/article/2024091711322781831)
+
+### Industry & customer news
+- [Businesskorea — Soulbrain HBM CMP slurry exclusive, 2023-10-30](https://www.businesskorea.co.kr/news/articleView.html?idxno=203197)
+- [Businesskorea — Korean HF localization mass production, 2020](https://www.businesskorea.co.kr/news/articleView.html?idxno=39795)
+- [Businesskorea — Korean Companies Set to Reduce Dependence on Japanese Imports, 2019](https://www.businesskorea.co.kr/news/articleView.html?idxno=34523)
+- [Businesskorea — SK Hynix testing non-Japanese HF (incl. Soulbrain), 2019](https://www.businesskorea.co.kr/news/articleView.html?idxno=33927)
+- [Al Jazeera — Japan's curbs on hi-tech exports to South Korea, 2019-08-30](https://www.aljazeera.com/economy/2019/8/30/japans-curbs-on-hi-tech-exports-to-south-korea-could-backfire)
+- [NBR — Bolstering and Securing Semiconductor Supply Chains](https://nbr.org/publication/bolstering-and-securing-semiconductor-supply-chains/)
+- [THE ELEC — How Japan's reversion of trade limit impacted Korea's material tech development](https://www.thelec.net/news/articleView.html?idxno=4432)
+- [THE ELEC — SK hynix diversifies CMP slurry supply for HBM with Donjin Semichem, 2024](https://www.thelec.net/news/articleView.html?idxno=4751)
+- [THE ELEC — Iran-Linked Supply Shock Hits South Korea's HF Market](https://www.thelec.net/news/articleView.html?idxno=10444)
+- [Tom's Hardware — HF pricing shock from Hormuz blockade, 2025-06](https://www.tomshardware.com/tech-industry/memory-makers-brace-for-hydrogen-fluoride-pricing-shock-as-hormuz-blockade-impacts-supply-chain-key-etching-and-cleaning-material-faces-sharp-cost-increase-amid-trade-disruption)
+- [Webnewswire / The Information Network — Fujimi takes lead on Korean HBM Cu slurry, 2024-09-03](https://www.webnewswire.com/2024/09/03/fujifilm-electronic-material-takes-lead-in-cmp-slurry-market-for-hbm-says-the-information-network/)
+- [Yano Research — Global CMP Slurry Market 10% Growth 2024](https://www.yanoresearch.com/press/press.php/3921)
+- [SK hynix Newsroom — HBM4 world-first development complete](https://news.skhynix.com/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/)
+- [TrendForce — Samsung 50% HBM capacity surge 2026, 2025-12-30](https://www.trendforce.com/news/2025/12/30/news-samsung-reportedly-plans-50-hbm-capacity-surge-in-2026-spotlight-on-hbm4/)
+- [TrendForce — Paid HBM4 samples to NVIDIA, 2025-12-16](https://www.trendforce.com/news/2025/12/16/news-sk-hynix-samsung-reportedly-deliver-paid-hbm4-samples-to-nvidia-ahead-of-1q26-contract-finalization/)
+- [SCMP — Korean chip giants step up China investments, 2026-03](https://www.scmp.com/tech/tech-trends/article/3348159/south-korean-chip-giants-step-china-investments-combat-global-ai-memory-shortage)
+
+### Overseas expansion
+- [Evertiq — Soulbrain to build USD 175M plant in Taylor, Texas, 2024-07-30](https://evertiq.com/news/56124)
+- [Hoodline — Soulbrain USD 175M Taylor Texas plant, 2024-07](https://hoodline.com/2024/07/south-korean-company-soulbrain-to-launch-175m-plant-in-taylor-bolstering-local-tech-industry-and-job-market/)
+- [Greater Kokomo — Soulbrain MI USD 75 mn Indiana plant, 2022](https://greaterkokomo.com/soulbrain-mi-investing-in-kokomo-creating-75-jobs/)
+- [Indianapolis Business Journal — Michigan company USD 75M Kokomo, 2022](https://www.ibj.com/articles/michigan-companys-75m-plant-in-kokomo-will-be-supplier-for-new-ev-battery-plant)
+- [Area Development — South Korea-Based Soulbrain MI Plans Kokomo Indiana, 2022-12-15](https://www.areadevelopment.com/newsitems/12-15-2022/soulbrain-mi-kokomo-indiana.shtml)
+
+### Encyclopedia / aggregator
+- [Namu Wiki — Soulbrain (Korean)](https://namu.wiki/w/%EC%86%94%EB%B8%8C%EB%A0%88%EC%9D%B8)
+- [Korean Wikipedia — 솔브레인](https://ko.wikipedia.org/wiki/%EC%86%94%EB%B8%8C%EB%A0%88%EC%9D%B8)
+
+---
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL spot-check** — every URL appearing in the document was selected from a verified web search return rather than constructed by pattern. SEC EDGAR is not applicable (KOSDAQ issuer); the DART URL is the public search-portal landing page rather than a synthetic accession-number filename. Where a Korean broker PDF was cited (SKS, Samsung Pop), the URL was taken from the search-engine return and not invented.
+
+**Filings cited** — the report does not embed direct DART accession-number URLs because the public DART filing index requires an interactive session that could not be reliably scraped during this initiation pass. Three improvements possible in a future refresh:
+- Resolve the most recent 사업보고서 (FY2024) accession number from DART and replace the search-portal link with the direct filing URL.
+- Resolve the most recent 분기보고서 (3Q25) accession number similarly.
+- Resolve the most recent 주요사항보고서 / 임시공시 for the March-2025 CEO change (referenced here via KRX `disclsviewer.do?acptno=20250325000760` which is the canonical KRX listing-disclosure permalink).
+
+**Key claims spot-checked:**
+- FY2024 revenue ₩863.4 bn ✓ ([Stockanalysis revenue history](https://stockanalysis.com/quote/kosdaq/357780/revenue/))
+- FY2024 OPM 19.4% ✓ ([Economy6 broker compilation, 2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html))
+- FY2025 revenue ₩923 bn ✓ ([Stockanalysis revenue history](https://stockanalysis.com/quote/kosdaq/357780/revenue/))
+- Q3 2025 revenue ₩242.3 bn, OP ₩39.1 bn ✓ ([SKS Securities note, 2025-11-04](https://www.sks.co.kr/data1/research/qna_file/20251104100029890_6_ko.pdf))
+- TTM P/E 41.8× ✓ ([Stockanalysis, KOSDAQ:357780](https://stockanalysis.com/quote/kosdaq/357780/))
+- HBM Cu CMP slurry exclusive (2023) ✓ ([Businesskorea, 2023-10-30](https://www.businesskorea.co.kr/news/articleView.html?idxno=203197))
+- Fujimi lead-taking on Cu CMP (2024) ✓ ([Webnewswire, 2024-09-03](https://www.webnewswire.com/2024/09/03/fujifilm-electronic-material-takes-lead-in-cmp-slurry-market-for-hbm-says-the-information-network/))
+- Dongjin Semichem entry to SK hynix HBM CMP (2024) ✓ ([THE ELEC](https://www.thelec.net/news/articleView.html?idxno=4751))
+- 2020 spin-off date August 2020 ✓ ([Solactive, 2020-08-06](https://www.solactive.com/spin-off-soulbrain-holdings-co-ltd-6th-august-2020/))
+- Taylor TX plant USD 175 mn / 60,000 sq ft / Samsung-Texas-driven ✓ ([Evertiq, 2024-07-30](https://evertiq.com/news/56124))
+- Kokomo IN plant USD 75 mn / 30,000 sq ft / Stellantis-Samsung SDI ✓ ([Greater Kokomo, 2022](https://greaterkokomo.com/soulbrain-mi-investing-in-kokomo-creating-75-jobs/))
+- CEO transition March 2025 (Roh → Park) ✓ ([Edaily, 2025-03-25](https://www.edaily.co.kr/News/Read?newsId=03834326642106928&mediaCodeNo=257))
+- Founder Jeong Ji-wan, Sungkyunkwan U, 1986 founding ✓ ([Businesspost — Who Is?](https://m.businesspost.co.kr/BP?command=mobile_view&num=41846))
+
+**Analyst-view sentences** (deliberately not cited to a primary source, per skill rule that competitor-share and leadership claims must be labeled):
+- Section 1 — "the premium is paid for the three-way confluence of HBM material spec-in / Samsung Taylor localization / earnings recovery" — uncited synthesis with linked corroboration.
+- Section 4.3 — Korean HF/BOE TAM size estimate (USD 500–800 mn) and Soulbrain domestic share 35–45% — labeled as analyst estimate.
+- Section 4.4 — HBM Cu CMP share 50–65% (post-Fujimi/Dongjin) and HBM4 ceria slurry qualification status — analyst-view label per skill rule.
+- Section 7.1 — chemistry-by-chemistry share table — explicitly labeled as analyst estimates triangulated from multiple sell-side notes; no precise published market-share data exists for most sub-segments.
+- Section 8 — TAM / SAM / SOM bridge — analyst-built; cited to underlying Nomura TAM data and Soulbrain segment revenue.
+
+**Residual unknowns / future refresh items:**
+- Direct DART filing URLs for the FY2024 사업보고서 and 3Q25 분기보고서 — should be replaced in a follow-up pass.
+- Customer-specific revenue % (Samsung % vs. SK hynix %) — DART discloses top-5 aggregate but not customer-by-customer; the analyst splits in §5.1 and the pie chart are estimates.
+- Exact HBM4 / HBM4E ceria-slurry qualification status — public coverage is incomplete; would benefit from a management Q&A or a dedicated industry note.
+- Park Young-soo's birth year and full education history — not yet fully published in the English-language press.
+
+</details>
+
+
 
 
