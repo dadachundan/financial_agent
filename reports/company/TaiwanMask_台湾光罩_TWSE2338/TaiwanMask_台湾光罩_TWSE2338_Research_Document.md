@@ -197,3 +197,165 @@ Given there is no single individual founder and the current chairman has been in
 ***Analyst view (3.3 synthesis):*** Chen Lidun is the execution spine for TMC's repositioning from "group diversification" back to "main-business upgrade." His XinTec 12-inch WLCSP experience maps directly onto the current 14-inch advanced-packaging push — that is the central reason Dayu Capital retained him as CEO. If the 2026-27F 14-inch ramp lands, Chen is the key execution agent. If it slips, he is the primary accountable executive.
 
 ---
+
+## 4. Products & Services (Most Important Section)
+
+> **Section positioning:** Per the company-research skill's principle that "Products & Services is the most important section of the report," this section is the longest in absolute terms. **4.1 anchors on TMC's own product-matrix table from the annual report (verbatim).** **4.2–4.5 cover photomasks by customer industry (IC / LCD / LED / Bumping), each using a three-block structure: annual-report verbatim → English gloss → analyst view.** **4.6 covers the technology-node roadmap and the new 14-inch advanced-packaging line.** **4.7 closes with a synthesis on where the photomask sits in the customer's wafer-manufacturing flow.**
+
+### 4.1 TMC's own disclosed product matrix (verbatim, 2024 年報 p. 60)
+
+The table below is TMC's product matrix from the 2024 annual report (p. 60, §"Business Content – (1) Business Scope – 2. Current Goods and Service Items of the Company"), translated word-for-word with **no recomposition or inference** — this is the only auditable, self-disclosed matrix TMC has issued.
+
+> "As the semiconductor industry's integrated-circuit fabs and production equipment continue to evolve, the photomask products we can supply are as follows:" ([2024 年報, p. 60](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))
+
+| Customer industry | Customer's exposure tool | TMC's mask specification |
+|---|---|---|
+| **IC (integrated circuits)** | Stepper, Scanner | Projection 5× / 4× / 2.5× / 2× Reticle (5" and 6") |
+| **LCD (liquid crystal display)** | Nikon | Masks up to 7" |
+| **LED (light-emitting diode)** | ASML | (5" ~ 7") |
+| **Bumping (wafer-level packaging bumps)** | Aligner | Large area mask (8" ~ 24") |
+
+Source: [2024 年報, p. 60, 業務內容](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf).
+
+**Several direct observations:**
+
+1. **IC is the absolute core.** Page 60 of the same report states: "The company's principal business is producing photomasks used in wafer foundry processes; among these, the semiconductor category is the most important — **accounting for over 90% by customer industry**. The remainder is photomasks for liquid crystal displays (LCD / LED) and for wafer-level chip-scale packaging (Bumping)." IC is therefore ≥90% of the customer base, with LCD/LED/Bumping combined under 10%.
+2. **The tool list mirrors the customer-equipment mix.** Stepper/Scanner (ASML PAS 5500 + TWINSCAN, Nikon NSR series — i.e., mainstream wafer foundries); 7" masks for Nikon LCD exposure systems; ASML for LED; and aligner-class tools for 8–24" large-area masks (i.e., bumping and WLCSP). **TMC does not touch EUV** — every tool listed sits in the DUV stack: i-line (365nm) → KrF (248nm) → ArF (193nm) → ArF immersion (193nm wet).
+3. **The size delta — 5"/6"/7"/8"-24" — matters.** 5×/4×/2.5×/2× projection masks (standard 5"–6" reticle, industry slang "small reticle") cover the bulk of 8-inch and 12-inch wafer production. The 8"–24" "large-area masks" are bumping masks for wafer-level chip-scale packaging (WLCSP) + RDL (Re-Distribution Layer) + bump processes — and this is the product category targeted by the December 2025 NT$435 mn capex for the 14-inch line (see §4.6).
+
+### 4.2 IC photomasks (core business, ≥90% of customer mix)
+
+#### 4.2.1 Annual-report verbatim citation
+
+> "Photomasks occupy a pivotal position in the semiconductor value chain, accounting for 13% of semiconductor manufacturing materials. The product specifications follow the technology roadmap of the integrated-circuit industry. As the IC industry continues its drive toward higher precision, the most advanced photomask technology has entered R&D and production at the 2nm node and below. The company has invested in new equipment and developed the related processes; **its technology has been qualified by customers at the 65 / 55 / 40nm nodes and has entered volume production**." ([2024 年報, p. 60-61](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))
+
+> "Short-term plan: grow share at 55 / 65nm; expand share of mature-mask manufacturing. Mid-term plan: ramp 28 / 40nm masks into volume production. Mid-to-long-term plan: continue investing in advanced-mask development, develop new processes, and broaden the customer base." ([2024 年報, p. 62, 業務發展計畫](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))
+
+#### 4.2.2 English gloss
+
+**The physical role of the photomask (reticle) in IC manufacturing:** a modern CMOS wafer flows through **30–90 lithography steps**. At each step, the wafer is resist-coated, loaded into a stepper or scanner, and UV light is projected through the **photomask** for that step, imaging the pattern onto the resist; development, etch, clean, and recoat follow before the next layer begins. The mask itself is the template carrying the circuit pattern. A TSMC 16nm process needs roughly 50–60 mask layers; 28nm needs ~40; 65/55nm needs ~25–30; 0.13µm needs ~15–20 ([TSMC mask service overview](https://www.tsmc.com/english/dedicatedFoundry/services/mask_services); [UMC mask service](https://www.umc.com/zh-TW/StaticPage/mask_service)).
+
+**TMC's footprint across the node spectrum:**
+- **0.5–0.13µm (8-inch mature-node bedrock).** TMC's 36-year accumulated base — customers include Taiwan 8-inch fabs (VIS / Vanguard, Winbond, parts of UMC's 8-inch capacity) plus overseas 8-inch fabs (China, Korea, Japan) and an accumulated 400+ IC design houses.
+- **90 / 65 / 55nm (12-inch mature+) — stable in volume production.** Heavy investment since 2019 (high-end JEOL e-beam writers); volume-production stability achieved in 2023-24. Customer mix is led by PSMC (Powerchip, 力积电), VIS / Vanguard, parts of UMC's 12-inch fleet, plus Korean and Chinese 12-inch mature-node fabs.
+- **40nm — customer qualification complete, ramping in production.** Annual report pages 2 and 62 explicitly note "40nm masks reached volume-production maturity in calendar 2025." **This is the central ASP-uplift driver in the main business** — the ≤0.13µm advanced-node revenue line grew +20% YoY in 2023→2024, with the share moving from 15.8% to 18.0% ([2024 年報, p. 63, 高階產品的拓展](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf)).
+- **28nm — in customer qualification, scheduled for 2025-26 production.** This is the mainstream node for SoC, IoT, and automotive electronics — and the ceiling of TMC's high-end aspiration.
+
+![≤0.13µm advanced-node mask revenue share trend](../../charts/taiwanmask_advanced_node.png)
+
+*Exhibit 4.1 Taiwan Mask — ≤0.13µm advanced-node mask revenue share trend (2023 vs. 2024). Source: [2024 年報, p. 63](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf).*
+
+**The technology ladder — why masks get exponentially more expensive at advanced nodes (technical differentiation):**
+
+- **0.5µm down to 0.13µm — binary photomask.** Chrome (Cr) absorber layer on quartz substrate, i.e., the "standard mask" — light transmits where the chrome is removed and is blocked where chrome remains. This was the 1980s–2000s mainstream.
+- **90 / 65nm onward — OPC mask (Optical Proximity Correction).** Diffraction begins distorting the patterned image, so the mask deliberately introduces compensating features ("hammerheads," "serifs") that pre-distort the layout so that the printed image returns to the intended shape. This adds significant complexity to mask design and writing — e-beam write time per mask increases 2–5×.
+- **65 / 55nm onward — PSM (Phase Shift Mask).** A phase-shifting layer (e.g., MoSi, molybdenum-silicide) is added to introduce a 180° phase difference between adjacent regions, sharpening edge contrast through destructive interference. Categories include attenuated PSM (att-PSM) and alternating PSM (alt-PSM). TMC's annual report (p. 60 + p. 62) explicitly references both OPC and PSM as core in-house technologies.
+- **40nm and below — ArF immersion (193nm wet).** Double-patterning or triple-patterning doubles mask counts and raises per-reticle ASP; volume yield is much harder. This is the node TMC is currently ramping.
+- **28nm — ArF immersion + advanced OPC + advanced PSM.** Multi-exposure for the densest layers; defect specifications under 30nm; e-beam write time of 12–24 hours per plate. This is the node TMC is in customer qualification on, not yet in volume.
+- **14 / 10 / 7 / 5 / 3 / 2nm — EUV.** 13.5nm vacuum UV, reflective masks with Mo/Si multilayer reflector, Ru capping, and Ta-based absorber. The mask blank is dominated by Hoya (~80% global share). **TMC does not do EUV — this is the structural "ceiling" of TMC's addressable market** ([Nomura Greater China Semi: A guide to Semi renaissance in 2026~30F, p. 38-39, 2026-05-21](../sector/半导体材料.md)).
+
+#### 4.2.3 *Analyst view: IC mask moat strength*
+
+**Moat profile:** customer-qualification stickiness + manufacturing experience curve + geography + partial process IP (e-beam writing know-how).
+- **Customer-qualification stickiness (primary moat).** Bringing a new chip from tape-out to volume production requires the customer to spend 6–18 months qualifying the mask shop (CD uniformity, defect, overlay, line-edge roughness). Once a part is in volume on a given mask shop, switching costs are punitive (re-qualification + risk). TMC's 36-year accumulated "400+ customers" base ([2024 年報, p. 61](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf)) is the bedrock of this moat.
+- **Geography (medium moat).** Annual report p. 60 is explicit: "Business expansion in the Europe / US time-zone-distant geographies remains inconvenient, with long shipping lead times..." Photomask turnaround windows are short (24–72 hours for a re-spin) — time-zone proximity and same-day logistics are a structural barrier. With Taiwan-based fabs plus the 12-inch expansion in Korea, Japan, and mainland China, **physical proximity is TMC's natural moat in Asia.**
+- **E-beam writing know-how (limited moat).** The core tools (JEOL JBX-3050, NuFlare EBM-9500) are all made in Japan and available to every player. Differentiation lies in process tuning, defect repair, and yield ramp — TMC's 36 years of accumulation matter, but PDMC (Photronics + DNP JV) has been at it ≥10 years in the same Hsinchu cluster. TMC is not a sole owner of this know-how.
+
+**Core competitive position (vs. global peers):**
+- vs. **Photronics (PLAB) / Toppan-Tekscend / DNP / Hoya** (the four international players who together hold ≥80% of merchant photomask). TMC does not touch EUV or sub-14nm advanced logic — but it focuses on **8-inch mature + 12-inch 90–40nm + 28nm qualification**, which is a deliberate node-level differentiation. Main battlefield: Taiwan domestic + Asia 8-inch capacity expansion (CIS, power devices, MCUs, automotive analog).
+- vs. **PDMC / Photronics DNP Mask Corporation (台湾美日先进光罩)** — the most direct competitor in Hsinchu, the Photronics+DNP joint venture. PDMC focuses on sub-14nm and 28nm leading-edge nodes, supplying TSMC and UMC's overflow at the higher end. **TMC focuses on 90–40nm and 8-inch mature; the two overlap only at 28nm (where TMC is catching up via qualification).** At other nodes the two are not direct competitors.
+- vs. **mainland Chinese photomask shops (Shenzhen Newway, Shenzhen Qingyi, and newer entrants).** This is TMC's most direct low-end threat. Chinese 8-inch / 12-inch mature-capacity expansion plus national subsidies feed domestic photomask demand. **They use price as a wedge into mature nodes.** TMC's annual report (p. 64) explicitly cites this as an "adverse factor." Chinese shops still lag at 12-inch 65/55nm and below on yield and defect performance.
+
+**Verdict: partial moat (medium)** — concentrated in Taiwan domestic + Korea/Japan + 12-inch mature nodes. The absence of EUV and sub-7nm capability constrains long-term ceiling.
+
+### 4.3 LCD photomasks (~5–7% of revenue; small-to-medium high-PPI panels)
+
+#### 4.3.1 Annual-report verbatim citation
+
+> "In the LCD market, photomasks are applied to **higher-resolution small-to-medium panels**, with stitching of multiple masks used to meet panel-fab process requirements." ([2024 年報, p. 60-61](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))
+
+#### 4.3.2 English gloss
+
+LCD masks are used by display panel fabs — they are typically much larger than IC masks (starting at 7" and ranging up to 14×17"+ for large panels) and serve TFT array, color filter, and pixel electrode patterning. TMC plays in the **"small-to-medium panel, high-resolution, stitching-based"** sub-segment — the typical application being high-PPI TFT masks for small-to-medium smartphone, tablet, and automotive displays.
+
+**Stitching is the key technical divider.** When customer panel sizes exceed a single mask's exposure field, the layout must be split across multiple masks. Each mask exposes an adjacent region, and overlay control (<0.5µm) is used to "seamlessly stitch" the patterns. This requires the mask shop to provide stitching-ready designs and the manufacturing know-how — a differentiated niche held by only a small number of large-mask players.
+
+#### 4.3.3 *Analyst view*
+
+LCD masks are a "niche supplement" for TMC — global G10.5+ large-panel fabs (BOE, TCL CSOT, LG Display) source mainly from Toppan-Tekscend, SK-Electronics, and LG Innotek, where individual mask ASPs run into the millions to tens of millions in NT$. Entry barriers are high (limited large-mask blank supply, limited writer-tool availability). **TMC is not in that main battlefield** — instead it competes in ≤7" small-to-medium high-PPI masks against Korea's SK-Electronics, Compugraphics, and others. This business is also tied to the panel-industry cycle (2024 small-to-medium LCD ASPs remain depressed). *Analyst estimate (year-end 2024):* ~3–5% of TMC revenue.
+
+### 4.4 LED photomasks (~1–2% of revenue, niche)
+
+LED masks serve epitaxy fabs and LED die fabs — typical sizes 5–7", and TMC uses ASML-class tooling to support. Customers are mostly Taiwan-based LED firms (Epistar, Lextar — the two merged into Ennostar / 富采投控). The business stayed stable after the broader LED cyclical downturn but is small; 2024 revenue is not separately disclosed, but *analyst estimate* puts it at ~1–2% of group revenue.
+
+### 4.5 Bumping / wafer-level packaging masks (~5–8% of revenue, the core of 14-inch expansion)
+
+#### 4.5.1 Annual-report verbatim citation
+
+> "Advanced packaging technology continues to evolve, with bumping and RDL processes performed directly on the wafer. These processes require photomasks — including **9-inch masks (used on 8-inch wafers) and 14-inch masks (used on 12-inch wafers)** — to deliver this service." ([2024 年報, p. 60-61](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))
+
+#### 4.5.2 English gloss
+
+**Bumping / wafer-level packaging (WLP) masks** are used in processes where packaging steps occur directly on the wafer prior to dicing. Traditional packaging dices the wafer first and packages the die separately; **wafer-level packaging** instead completes Cu pillars, solder bumps, and RDL (redistribution layer) processing on the intact wafer.
+
+**What makes WLP masks distinctive:**
+1. **Large size.** 8-inch wafers (200mm diameter) use 9-inch masks (228mm side); 12-inch wafers (300mm diameter) use 14-inch masks (366mm side). Compared with standard 5"/6" IC reticles, the area is 5–15× larger.
+2. **Relaxed nodes.** WLP processes are typically 0.5µm to 2µm — no need for ArF or EUV; i-line / KrF is sufficient.
+3. **High unit price.** A 9–14-inch large-area mask runs 3–8× the ASP of a 5"/6" reticle — the central financial rationale for TMC's 14-inch push.
+4. **Different customer base.** The buyers are OSATs (ASE, Amkor), wafer-level packaging specialists (XinTec, ChipMOS), and the IDM and foundry plays in advanced packaging (TSMC's CoWoS / SoIC sites, Intel's EMIB-T facility).
+
+#### 4.5.3 14-inch masks for advanced-packaging interposers — the December 2025 NT$435 mn capex
+
+On December 23, 2025, TMC's board approved NT$435 mn of equipment investment to expand 14-inch mask capacity, targeting **2.5D / 3D advanced-packaging silicon interposers** and **heterogeneous-integration chiplet** flows:
+
+- **CoWoS (Chip-on-Wafer-on-Substrate) and SoIC (System-on-Integrated-Chip)** — TSMC's advanced-packaging platforms, standard for HBM3/HBM4 + AI ASIC stacks. HBM3E and GPU die interconnect through a silicon interposer on the 12-inch wafer, with the **interposer's RDL layers and TSV vias requiring 14-inch masks**.
+- **EMIB-T (Embedded Multi-die Interconnect Bridge with TSV)** — Intel's advanced-packaging platform, which uses a similar mask-size profile.
+- **Broadcom's glass core-substrate roadmap** ([Nomura, 2026-05-21, p. 11 + p. 85-88](../sector/半导体材料.md)) also touches large masks, but the dominant bottlenecks lie in TGV processing and glass substrates; mask cost is a smaller share.
+
+> CEO Chen Lidun, speaking in January 2026: "**14-inch masks are the key enabler for advanced-packaging interposers — the single most important product line for TMC over the next three years**." ([Economic Daily: Taiwan Mask refocuses on the core business as process upgrades lift ASP, 2026-01](https://money.udn.com/money/story/5612/9222106); [Business Today, 2026-01-09](https://www.businesstoday.com.tw/article/category/183015/post/202601090020/))
+
+Equipment installation began in 1H26 (per the announcement). 2H26 is targeted for trial production and 2027 for revenue contribution at scale ([ETtoday: Taiwan Mask invests NT$435 mn to expand 14-inch capacity, 2025-12-23](https://finance.ettoday.net/news/3088738)). The annual report's p. 73, §"Material Capex — Expected Effects," self-discloses incremental 2025 and 2026 high-end mask plan: 2025 — 12,500 plates / sales value NT$1,460 mn / gross profit NT$730 mn; 2026 — 13,500 plates / NT$1,630 mn / NT$820 mn. The implied **gross margin is 50%, materially above the group's 18.8%** — the explicit data point underpinning ASP and margin re-rating ([2024 年報, p. 73](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf)).
+
+#### 4.5.4 *Analyst view: How attainable is the 14-inch moat?*
+
+**Positive signals:** AI compute demand is driving HBM + advanced-packaging capacity, and 2026-30F is the CoWoS / SoIC capacity-expansion peak. TMC is **the only domestic-capital 14-inch mask player in Taiwan** (PDMC is a US-Japan joint venture; the international players Photronics / Toppan / DNP / Hoya do not have 14-inch mask lines on the island). The Taiwan-localization strategies at TSMC, UMC, and Powerchip should bias order flow toward TMC ([Nomura Greater China Semi: A guide to Semi renaissance in 2026~30F, p. 12-14, TSMC localization roster, 2026-05-21](../sector/半导体材料.md)).
+
+**Negative signals:** Bumping mask ASP and gross margin are high, but customer qualification windows are long (3–6 months) and TSMC's CoWoS line uses an in-house mask shop as the preferred source. **TMC's outsourced share is therefore limited** — likely to capture only the spillover share of advanced-packaging mask demand. The NT$435 mn equipment outlay and the NT$1.6 bn 2027 revenue contribution embedded in the company's plan remain to be validated.
+
+**Verdict: partial moat; growth visibility medium.**
+
+### 4.6 Technology-node roadmap and R&D investment
+
+**R&D expenses:**
+- 2024: **NT$389 mn** ([2024 年報, p. 62](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf)). 5.1% of revenue.
+- 2025 plan: approximately **NT$270 mn** ([2024 年報, p. 74, 未來研發計畫](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf)). ~4.5% of revenue — the modest cut reflects the new sponsor's refocus on core operations and the trimming of non-core R&D.
+
+**R&D outputs (2024):** development of 28 / 40 / 55 / 65nm mask volume-production processes ([2024 年報, p. 62](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf)).
+
+**Short / mid / long-term development plan (verbatim, annual report p. 62):**
+- **Short-term:** grow market share at 55 / 65nm; expand the mature-mask manufacturing share.
+- **Mid-term:** ramp 28 / 40nm masks into volume production.
+- **Mid-to-long-term:** continue investing in advanced-mask development; develop new processes; broaden the customer base.
+
+### 4.7 Synthesis — the photomask's position in the customer's wafer-fab flow
+
+```mermaid
+graph LR
+    A[IC design house<br/>tape-out GDSII] -->|EDA fracture| B[TMC mask shop<br/>e-beam writing + inspection + pellicle]
+    B -->|24-72hr turnaround per mask| C[Wafer foundry<br/>UMC/PSMC/Vanguard/TSMC]
+    C -->|30-60 lithography steps per wafer| D[Wafer dicing & test/packaging]
+    D --> E[End product]
+    B -.->|14&quot; large mask<br/>for advanced packaging| F[OSAT / WLP fab<br/>ASE / Amkor / XinTec]
+    F -->|2.5D/3D HBM+ASIC interposer| D
+```
+
+The photomask's position in the IC manufacturing flow is crisp — **between the IC design house and the wafer fab, the photomask is the template-supply linchpin**. TMC serves both the classic "design → mask → wafer → packaging" main flow (≥90% of revenue) and the new 14-inch mask supply into OSAT / WLP advanced-packaging flows (currently <10% of revenue, but the central growth lever for 2026-28F).
+
+**Relationships across the value chain:**
+- **Upstream:** mask blanks (blank photomasks) are imported primarily from Hoya / Shin-Etsu in Japan and SK-Electronics in Korea; pellicles and chemicals are similarly imported. Annual report p. 64 is explicit: "The blank photomasks used by the company are purchased entirely from major suppliers in Japan and Korea; mask pellicles and mask cassettes are partially supplied domestically, with the balance from Japan, the US, and Korea; chemicals are purchased from major suppliers in Japan, the US, and Germany, with domestic supply available for some categories."
+- **Downstream:** Taiwan + Asia wafer foundries and packaging-test customers.
+- **Horizontal synergy:** the **Mirle Automation subsidiary** acts as a "wafer-fab procurement service" agent — booking orders into TSMC, UMC, PSMC, etc. on behalf of mainland-Chinese, Korean, and Southeast-Asian IC design houses, and **importing those design houses' mask orders back to TMC**. This is the explicit "competitive niche" cited on p. 63 of the annual report.
+
+**Overall verdict on TMC's products:** 36 years of accumulated mature-node moat (8-inch + 12-inch 90–40nm) is genuine — customer stickiness driven primarily by physical proximity and long-running qualification relationships. The mid-node 28nm position is in a qualification window and is the central ASP-uplift driver for 2026-27F. **14-inch advanced-packaging masks are the long-term option value, but realization needs 2–3 years, and the share price has paid up for it in advance.**
+
+---
