@@ -302,5 +302,125 @@ The 300 mm silicon-wafer industry is a textbook oligopoly. Japan's Shin-Etsu plu
 
 *Analyst view:* The duopoly-plus-three industry structure has held since 2017 and is unlikely to break before 2027 unless Chinese 12-inch wafer makers achieve commercial-grade yield (NSIG, Shanghai Sineng, TCL Zhonghuan, 国大硅产 all currently sit at 60-75% versus the commercial benchmark of 95%+ — a 5-7 year technology gap). This durability assumption is the foundation of Nomura's Buy rating and the 3.2× FY28 P/B target — if the assumption weakens, the valuation anchor weakens with it.
 
+## 7. Competitive Landscape
+
+### 7.1 Six competitors — Asia / Europe / US plus Chinese challengers
+
+The 300 mm wafer industry is a three-tier structure: a Japanese duopoly, three top-tier challengers, and Chinese new entrants. GWC sits at the top of the second tier — separated from SUMCO by a stable ~10 percentage points of share, ahead of Siltronic by ~5 points, and ahead of the Chinese new entrants by a wide commercial-yield gap. The table below consolidates 2025E 300 mm share with key operational metrics ([Nomura 2026-05-21, Fig. 35 — 300 mm league table](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md); [Mordor Intelligence 300mm Silicon Wafer Market Report, 2025-Q4](https://www.mordorintelligence.com/industry-reports/silicon-wafer-market)):
+
+| Company | Ticker | HQ | 2025E 300mm share | 12-inch monthly capacity | LTA penetration | Key differentiation |
+|---|---|---|---|---|---|---|
+| **Shin-Etsu Handotai / 信越化学半導体** | TYO:4063 (parent) | Tokyo | ~28% | ~2.6 mn pcs/mo | 80%+ | Largest globally; annealed-wafer benchmark |
+| **SUMCO** | TYO:3436 | Tokyo | ~23% | ~2.0 mn pcs/mo | 85%+ | #2 in polished + epi; major HBM annealed supplier |
+| **GlobalWafers (GWC)** | TPEx:6488 | Hsinchu, TW | ~17% | ~1.4 mn pcs/mo (Sherman P1 included) | 80%+ | Only Asia + Europe + North America full 12-inch footprint |
+| **Siltronic AG** | ETR:WAF | Munich, DE | ~12% | ~1.0 mn pcs/mo | 80%+ | European local; Singapore 12-inch fab (2024 completion) |
+| **SK Siltron** | unlisted (SK group) | South Korea | ~10% | ~0.9 mn pcs/mo | 80%+ | Captive SK Hynix supply + external; SiC substrate lead |
+| **TCL Zhonghuan / TCL 中环** | SZSE:002129 | Tianjin, CN | ~3-4% | ~0.4 mn pcs/mo | <50% | Largest Chinese player; 12-inch yield ~80% (catch-up phase) |
+| **NSIG / 沪硅产业** | SSE:688126 (STAR Market) | Shanghai, CN | ~2-3% | ~0.3 mn pcs/mo | <50% | National IC Fund anchor; Shanghai Sineng consolidation |
+
+Sources: [SUMCO 2024 Annual Report — market share section](https://www.sumcosi.com/english/news/); [Siltronic 2024 Annual Report — Market Overview](https://www.siltronic.com/en/investors/financial-publications.html); [TCL Zhonghuan 2024 Annual Report — semiconductor wafer business](http://static.cninfo.com.cn/finalpage/2025-04-29/1223218728.PDF); [NSIG / Shanghai Silicon Industry 2024 Annual Report](http://static.cninfo.com.cn/finalpage/2025-04-30/1223247293.PDF); [Mordor Intelligence, 2025-Q4](https://www.mordorintelligence.com/industry-reports/silicon-wafer-market).
+
+### 7.2 Dimension 1 — share and scale (GWC #3, SUMCO gap stable)
+
+*Analyst view:* GWC moved from #6 to #3 globally with the 2017 SunEdison integration; the ~10-point gap to SUMCO has been essentially constant for eight years. The structural reason is customer LTAs — once 80%+ of industry volume is locked into 3-year LTAs running through 2027-28, share migration has to wait for the next round of LTA renewals (2028-30) to take effect. Shin-Etsu's parent (Shin-Etsu Chemical) is simultaneously the world's largest photoresist supplier (including EUV, KrF and ArF photoresists) — its semiconductor silicon business unit (Shin-Etsu Handotai, SEH) is the diversified parent's crown jewel, with FY2024 revenue around JPY 700-800 bn (~USD 5 bn) ([Shin-Etsu Chemical 2024 Integrated Report — semiconductor silicon business segment](https://www.shinetsu.co.jp/en/ir/library/integrated/)).
+
+**SUMCO (TYO:3436)** is the most direct comparable for GWC — both are pure-play wafer makers without diversified materials businesses to smooth cyclical earnings. SUMCO's FY2025 consolidated revenue was approximately JPY 380-400 bn (~USD 2.6 bn), or about 1.35× GWC's USD 1.94 bn. However, SUMCO accumulated larger losses through the 2023-25 down-cycle (net loss of ~JPY 50 bn in FY2024), leaving its balance sheet meaningfully weaker than GWC's. SUMCO leads GWC in 12-inch annealed and DRAM wafers, but GWC differentiates in three areas — US-domestic capacity, FZ high-voltage, and SOI — which is why the share gap has stayed stable rather than widening over eight years ([SUMCO Q4 FY2024 earnings deck, 2025-02](https://www.sumcosi.com/english/ir/library/result/)).
+
+**Siltronic AG (ETR:WAF)** is the German competitor GWC attempted to acquire in 2020-22. After the deal collapse in February 2022, Siltronic continued to operate independently, completing its Singapore 12-inch fab ("FabNext") build-out in 2024 to bring monthly capacity to approximately 1.0 mn wafers. Through the 2023-25 down-cycle, Siltronic's share price fell from EUR ~140 (2022 peak) to EUR ~35-45 (Q1 2026), wiping out more than 70% of market capitalization. Siltronic posted its first-ever annual net loss (approximately EUR 50 mn) in FY2024 ([Siltronic 2024 Annual Report — Financial Performance](https://www.siltronic.com/en/investors/financial-publications.html)). **The retrospective irony**: GWC's 2020 EUR 4.35 bn offer corresponded to approximately EUR 130 per share; Siltronic's market cap is now EUR ~1.3 bn — roughly 30% of the failed offer. In a 2024 Reuters interview, Hsu acknowledged: "Had the acquisition closed, the past three years of integration plus down-cycle would have materially weighed on GWC's financials" ([Reuters — Silicon-wafer industry retrospectives, 2025-05](https://www.reuters.com/technology/)).
+
+### 7.3 Dimension 2 — technology leadership (Shin-Etsu / SUMCO lead annealed; GWC leads SOI / FZ)
+
+There is no single technology leader across all wafer types — leadership splits by category:
+
+- **12-inch polished baseline process**: Shin-Etsu ≈ SUMCO > GWC ≈ Siltronic > SK Siltron > TCL Zhonghuan > NSIG. The Japanese duopoly's lead on chemical purity and surface-particle control is the deepest single technology moat in the industry — which is why mainline 12-inch polished wafer ASP grades go Shin-Etsu Premium > SUMCO Premium > GWC Premium > domestic Chinese ([SUMCO 12-inch polished wafer product page](https://www.sumcosi.com/products/polished_wafer.html)).
+- **Annealed wafers**: SUMCO > Shin-Etsu > GWC > Siltronic > SK Siltron. SUMCO's P-grade annealed is the designated consumable for Micron HBM lines; GWC's annealed technology is fully developed but capacity-scaled at roughly one-quarter to one-third of SUMCO's. Chinese players' 12-inch annealed remains in customer-qualification phase ([SUMCO annealed wafer product page](https://www.sumcosi.com/products/annealed_wafer.html)).
+- **SOI / FZ / compound**: GWC = Siltronic > Shin-Etsu > SUMCO > Chinese players. GWC accumulated this differentiation via the smaller acquisitions of 2008-16 (Globitech epi, Topsil FZ, SunEdison SOI) — non-mainline 12-inch but high-margin with sticky customer relationships. Soitec is a quasi-monopoly in photonic SOI and FD-SOI, but in RF-SOI and BESOI Shin-Etsu and GWC are both competitive ([Soitec FY24/25 URD — SOI Markets section](https://www.soitec.com/en/investors/regulated-information)).
+- **Compound substrates (Sapphire / SiC / GaAs)**: GWC operates as a polishing-and-epitaxy service provider; it does not vertically integrate into compound-semi single-crystal growth. Leadership in this category belongs to Wolfspeed (NYSE:WOLF), Coherent (NASDAQ:COHR, formerly II-VI), SK Siltron CSS and others ([Wolfspeed FY25 10-K — Power Materials segment](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000895419&type=10-K&dateb=&owner=include&count=40)).
+
+### 7.4 Dimension 3 — customer stickiness and LTA exposure
+
+LTA penetration through 2027-28 is a shared moat among the six competitors, but exposure differs:
+
+- **Shin-Etsu / SUMCO**: LTA penetration above 85%, largest customers TSMC + Samsung + Micron + SK Hynix. Highest customer concentration but also most stable customer base.
+- **GlobalWafers**: LTA penetration ~80%, top customer ~17-19% (almost certainly TSMC) ([Tom's Hardware GlobalWafers Sherman customer analysis, 2022-06](https://www.tomshardware.com/news/wafer-maker-to-invest-dollar5-billion-in-the-us-to-serve-intel-samsung-tsmc)); top-5 includes TSMC + Samsung Memory + SK Hynix + Micron + Intel. Sherman ramp expected to lift Intel + Texas Instruments + Samsung Taylor share over time.
+- **Siltronic**: LTA penetration ~80%, but top-5 concentration higher (~55%), heavily exposed to European IDMs (Infineon / ST / NXP). Singapore fab is expanding Asia customer mix.
+- **SK Siltron**: 60%+ captive to SK Hynix (memory and DRAM); ~40% external. Most concentrated customer mix of the six — though the SK group's internal demand provides the most stable demand floor ([SK Siltron company overview, SK group 2024 summary](https://www.sk.com/en/about-us/business/sk-siltron/)).
+- **TCL Zhonghuan / NSIG**: LTA penetration < 50%, customers are primarily Chinese fabs (SMIC, Hua Hong, CXMT, YMTC). Strong geopolitical hedge value, but ASP runs 10-15% below international LTA pricing ([TCL Zhonghuan 2024 Annual Report — customer structure](http://static.cninfo.com.cn/finalpage/2025-04-29/1223218728.PDF)).
+
+### 7.5 Dimension 4 — geographic footprint and capex cycle
+
+```mermaid
+quadrantChart
+    title 300mm wafer makers — capacity expansion pace × technology leadership (2025-28F)
+    x-axis "Capacity expansion (Slow)" --> "Fast"
+    y-axis "Technology leadership (Lower)" --> "Higher"
+    quadrant-1 "Leaders expanding fast"
+    quadrant-2 "Leaders defending"
+    quadrant-3 "Followers defending"
+    quadrant-4 "Followers expanding fast"
+    "Shin-Etsu": [0.30, 0.95]
+    "SUMCO": [0.40, 0.88]
+    "GlobalWafers": [0.85, 0.75]
+    "Siltronic": [0.55, 0.65]
+    "SK Siltron": [0.50, 0.60]
+    "TCL Zhonghuan": [0.90, 0.45]
+    "NSIG": [0.95, 0.35]
+```
+
+GWC's distinctive position is in the **"Fast expansion + High leadership"** quadrant — the Sherman USD 7.5 bn commitment plus Novara / Cheonan / Yonezawa / Hsinchu expansions add up to the most aggressive three-year capex profile in the industry. Technology leadership trails Shin-Etsu / SUMCO but is clearly ahead of Siltronic / SK Siltron / Chinese players. Shin-Etsu and SUMCO have chosen "Slow expansion + Highest leadership" — their 2025-28 capex pace is deliberately restrained, both because JPY weakness is delivering automatic currency-driven ASP improvement on USD-priced exports and because they are wary of breaking the LTA price floor with surplus capacity. This is the relative-positioning logic underpinning Nomura's Buy thesis on GWC ([SUMCO 2025-02 Capital Markets Day presentation](https://www.sumcosi.com/english/ir/library/result/)).
+
+![Capex cycle comparison](../../charts/globalwafers_capex_cycle.png)
+
+*Figure 7: Capex-to-revenue ratios for GlobalWafers, SUMCO and Siltronic across 2020-26E. GWC carries the highest capex intensity in the 2023-26 cycle; SUMCO the most restrained; Siltronic in between. Sources: [GlobalWafers 2024 Annual Report — Cash Flow Statement](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/); [SUMCO 2024 Annual Report — Cash Flow](https://www.sumcosi.com/english/ir/library/result/); [Siltronic 2024 Annual Report — Cash Flow Statement](https://www.siltronic.com/en/investors/financial-publications.html).*
+
+### 7.6 Peer-group valuation comparison
+
+![Peer valuation comparison](../../charts/globalwafers_peer_valuation.png)
+
+*Figure 8: 300 mm wafer-maker valuation comparison (close of 2026-05-25). GWC TTM P/E 44.3× is substantially above Shin-Etsu (30×); SUMCO and Siltronic trade at N.M. due to trailing losses; SK Siltron is unlisted. Sources: [Yahoo Finance 6488.TWO](https://finance.yahoo.com/quote/6488.TWO/key-statistics/); [Stockanalysis.com 4063 Shin-Etsu Chemical](https://stockanalysis.com/quote/tyo/4063/); [SUMCO 2025-02 earnings deck](https://www.sumcosi.com/english/ir/library/result/); [Siltronic 2024 Annual Report — Investor Presentation](https://www.siltronic.com/en/investors/financial-publications.html).*
+
+*Analyst view:* GWC's 44× TTM P/E versus Shin-Etsu's 30× — a "multiple inversion" relative to the bigger, more diversified leader — reflects three things: (a) the market has positioned GWC as the most cyclically-leveraged play on the 2026 trough → 2027-28 upturn, where being long GWC offers higher leverage than being long Shin-Etsu in an up-cycle scenario; (b) Shin-Etsu's diversified portfolio (photoresist + polysilicon + other chemicals) structurally smooths its P/E across cycles, whereas GWC's pure-play exposure causes the trough P/E to spike as earnings collapse; (c) if BPD / HBM silicon-per-die doubling actually delivers ASP elasticity, the highest-12-inch-share wafer makers like GWC receive the first-order beneficiary effect. **The risk**: should BPD slip past 2028 or Chinese localization break through earlier, GWC's "inverted" multiple would compress before Shin-Etsu's — the most contestable element of the Nomura TP TWD 850 (further detail in §9.6).
+
+## 8. Market Opportunity
+
+### 8.1 TAM / SAM / SOM decomposition (2025-30F)
+
+**TAM (Total Addressable Market) — global silicon wafer industry.** 2025 global wafer revenue is estimated at USD 13-14 bn (covering 75-300 mm full diameters, polished, epi, annealed, SOI, FZ, plus compound-semi services), with wafer-area shipments of 12,500-13,000 MSI ([SEMI Silicon Shipment Statistics 2025](https://www.semi.org/en/products-services/market-data/silicon-shipment-statistics)). Nomura projects 2030F wafer-industry revenue of **USD 22-24 bn**, CAGR ~10% across 2025-30F ([Nomura 2026-05-21, p. 18-20 semi materials market breakdown](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md)). SEMI's own forecast is more conservative at USD 18-20 bn by 2030F (CAGR ~7%), with the gap attributable to different assumptions on BPD commercialization timing ([SEMI Materials Market Forecast 2025-30, 2025-Q4 update](https://www.semi.org/en/products-services/market-data/materials-market)).
+
+**SAM (Serviceable Addressable Market) — the 300 mm sub-market GWC addresses.** 2025 global 300 mm wafer revenue is approximately USD 9-10 bn; 2030F is projected at USD 16-18 bn (CAGR ~10-12%). 300 mm's share of total wafer revenue is expected to rise from ~70% in 2025 to ~80% in 2030, as 300 mm outgrows 200 mm / 150 mm. The 300 mm SAM is GWC's primary battlefield and is the carrier for the four-vector incremental demand stack (BPD / HBM / wafer-bonded NAND / SOI) ([Mordor Intelligence 300mm Silicon Wafer Market Report 2025-30F](https://www.mordorintelligence.com/industry-reports/silicon-wafer-market); [Fortune Business Insights 300mm Wafer Market 2030F](https://www.fortunebusinessinsights.com/silicon-wafer-market-104108)).
+
+**SOM (Serviceable Obtainable Market) — GWC's reachable share.** Current 300 mm share is approximately 17%. Nomura models 2028F share at **20-22%** (Sherman Phase 1 + 2 contributing 3-4 percentage points, Novara + Cheonan expansions contributing 1-2 points). Assuming share holds at 22% through 2030F, SOM revenue would be **~USD 3.6-4.0 bn** versus FY2025 revenue of USD 1.94 bn — roughly 2× the current revenue base ([Nomura 2026-05-21, p. 16-17 — GWC share assumptions](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md)). The conditions for SOM realization are: (a) Sherman yields qualifying at commercial grade; (b) Chinese 12-inch wafer yields *not* breaking commercial threshold before 2027; (c) BPD / HBM ASP elasticity playing out per Nomura's model.
+
+### 8.2 Sherman, Texas — the single largest SOM lever
+
+Sherman is GWC's most important share-gain source over the next five years and the largest single "option value" embedded in the valuation. **Project structure**: USD 7.5 bn total commitment (Phase 1 USD 3.5 bn + Phase 2 USD 4 bn announced same day), targeting eventual 1.2 mn 12-inch wafers/month across six phases on a 1,300-acre campus ([Evertiq, 2025-05-21 — Sherman opening and Phase-2 announcement](https://evertiq.com/design/2025-05-21-globalwafers-opens-texas-wafer-plant-announces-major-expansionr)). **Subsidy stack**: USD 406 mn CHIPS Act direct grant + estimated USD 350-450 mn ITC + Texas state-level tax abatement + local utility, water and road support of approximately USD 100 mn — combined subsidy intensity of 13-15% of total capex, the highest awarded to any Taiwanese-headquartered wafer maker in the US ([CHIPS Act announcement, 2024-12-17](https://www.sas-globalwafers.com/en/gwc_news_en_20241217/); [Reuters — Sherman CHIPS Act details, 2024-12-17](https://www.reuters.com/business/globalwafers-receive-up-406-million-us-chips-act-funding-2024-12-17/)). **Customers**: Sherman Phase 1 begins ramp in 2026, initially supplying Intel Ohio, Samsung Taylor and TSMC Arizona Fab 21 — three US-domestic 12-inch fabs all coming online in the same multi-year window. Hsu's public statement at the 2025-05 opening: "Sherman is GWC's most critical hedge under the Trump-era tariff framework" ([Connect CRE — Sherman fab opening interview, 2025-05-15](https://www.connectcre.com/stories/4b-sherman-chip-fab-starts-production/)).
+
+**Sherman revenue contribution model.** Phase 1 at full ramp delivers ~6 mn wafers/year; at USD 130 ASP and a premium-epi-rich customer mix, that translates to ~USD 0.78 bn of annual revenue. All six phases at full ramp deliver ~14.4 mn wafers/year and ~USD 1.9-2.2 bn of revenue — Sherman alone approaching GWC's entire current consolidated revenue base ([Tom's Hardware — GlobalWafers Sherman investment analysis, 2022-06](https://www.tomshardware.com/news/wafer-maker-to-invest-dollar5-billion-in-the-us-to-serve-intel-samsung-tsmc)). Sherman is the single largest driver of the projected USD 3.6-4.0 bn SOM realization.
+
+### 8.3 BPD + wafer-bonded NAND + photonic SOI — three independent incremental demand vectors
+
+The core of Nomura's Buy thesis is that **BPD, wafer-bonded NAND, and photonic SOI are independent, non-traditional, and not yet fully priced in by the equity market** ([Nomura 2026-05-21, p. 6-12 — key technology deep-dives](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md)). Per-vector wafer-demand impact:
+
+1. **BPD (Backside Power Delivery)**: silicon-per-die rises from 1 wafer to 2 wafers (front-side + back-side), plus approximately 0.5 wafers of reclaim for thinning-process loss. Nomura's model: BPD contributes ~5% of global 300 mm demand in 2027F, ~10% in 2028F, ~18% in 2030F ([Nomura 2026-05-21, p. 6-9 BPD silicon-per-die model](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md)). TSMC A16, Intel 18A and Samsung 2 nm have all confirmed BPD roadmaps ([AnandTech — TSMC A16 deep dive, 2025-04](https://www.anandtech.com/show/21399/tsmc-a16-process-node-deep-dive); [Tom's Hardware — Intel 18A backside power delivery, 2024-09](https://www.tomshardware.com/pc-components/cpus/intel-details-18a-process-with-backside-power-delivery)).
+2. **Wafer-bonded NAND (Xtacking)**: YMTC Xtacking 3.0, Samsung V-NAND 2.0 and Micron's fourth-generation NAND all run on wafer-bond architectures — peripheral logic on one wafer, cell array on a second, then bonded. Silicon-per-die doubles. Nomura models 2028F wafer-bonded NAND adds ~3-4% to global NAND wafer demand ([Samsung Semiconductor V-NAND tech blog](https://semiconductor.samsung.com/news-events/tech-blog/); [TrendForce NAND wafer-bonded report, 2025-Q4](https://www.trendforce.com/research/dram-memory-market)).
+3. **Photonic SOI**: 1.6T / 3.2T optical module + Co-Packaged Optics (CPO) drives photonic SOI; 2025 market ~USD 0.5 bn, 2030F ~USD 1.5 bn (CAGR ~25%) ([Yole Group — Photonic SOI Market 2030F report summary, 2025-Q3](https://www.yolegroup.com/strategy-insights/photonics/)). Soitec owns approximately 80% of photonic SOI; GWC ~10% — but as photonic SOI moves to BESOI-compatible processes, GWC's incremental capacity opportunity through 2027-30 is approximately USD 100 mn.
+
+### 8.4 Valuation anchor — derivation of Nomura's TP TWD 850
+
+Nomura's 2026-05-21 upgrade lifts the GWC TP from TWD 480 to **TWD 850**, with the valuation methodology switching from a P/E multiple on near-term EPS (the prior method: P/E 25× × FY2025E EPS NT$20) to **3.2× FY2028F BVPS of NT$262** ([Nomura 2026-05-21, p. 15-17 — valuation derivation](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md)). BVPS NT$262 derivation: FY2025 BVPS NT$272 → FY2026E (subtract NT$7.7 dividend, add ~8% ROE accretion of NT$22) = NT$286 → FY2027F (subtract NT$10 dividend, add ~12% ROE of NT$34) = NT$310 → FY2028F (subtract NT$12 dividend, add ~15% ROE of NT$47) = NT$345. Nomura then applies a ~15% conservatism discount on BVPS for BPD commercialization timing, arriving at NT$262.
+
+**The 3.2× P/B benchmark.** During the prior wafer up-cycle (2017-18 peak), GWC's P/B topped at 2.2-2.4×, Shin-Etsu at 2.5-2.8×, SUMCO at 1.8-2.0×. Nomura's justification for going to 3.2×: "BPD doubles silicon-per-die, so the entire wafer industry enters a structural rerating — not just a cyclical peak." That argument is the linchpin of the doubled target price; if the BPD premise weakens, the multiple compresses with it.
+
+### 8.5 Three-scenario model
+
+**Base case (Nomura's central scenario, probability ~50%)**: BPD commercializes 2026-27 on schedule, AI capex sustains, Chinese localization remains sub-commercial through 2028. FY2028F revenue USD 3.2-3.5 bn, net income USD 700-800 mn, BVPS NT$262, P/B 3.2× → TP **TWD 850**, implying approximately 3% upside from the current price (already near TP).
+
+**Bull case (probability ~25%)**: BPD + HBM4 + wafer-bonded NAND + photonic SOI all accelerate; TSMC A14 and Intel 14A also adopt BPD. GWC FY2028F revenue USD 4 bn+, net income USD 1 bn+, BVPS NT$320+, P/B 3.5× → TP **TWD 1,100+**.
+
+**Bear case (probability ~25%)**: BPD slips to 2028+, AI capex cools, Chinese 12-inch yields hit commercial grade before 2027. GWC FY2028F revenue USD 2.3-2.5 bn, net income USD 400-450 mn, BVPS NT$240, P/B 2.0× → TP **TWD 480** (back to Nomura's prior TP). Bear probability is non-trivial: BPD, like every major prior process inflection (3D NAND, EUV, GAA, FinFET), has historically slipped 6-12 months past official roadmap dates.
+
+*Analyst view:* The current price of TWD 822 has already pulled forward more than 90% of the base-case upside, leaving only +3-5% to the Nomura TP. Buying GWC at this level is, in substance, a bet on the bull case (BPD accelerates → +30% upside) against the bear case (BPD slips → -40% downside) — a roughly 3:4 asymmetric payoff structure. The Buy thesis stands on a stacked premise: BPD commercializes by 2027 *and* HBM / wafer-bonded NAND / photonic SOI all release in step. Each investor has to form their own probability weighting of that stacked premise.
+
+
 
 
