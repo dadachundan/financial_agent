@@ -314,3 +314,73 @@ ULVAC 处于三个不同行业的交集——**半导体资本设备**、**FPD �
 *来源：ULVAC FY2025.6 ([财报, p. 1](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf)) 与 Q3 FY2026.6 ([财报, p. 2](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf))。*
 
 ---
+
+## 7. 竞争格局
+
+ULVAC 在**两条不同竞争轴**上展开竞争，且两组竞争对手几乎不重叠，因此应分别分析：（i）由全球前五（AMAT、ASML、TEL、LRCX、KLA）加上一长串专业玩家主导的**半导体资本设备轴**，ULVAC 位于长尾；以及（ii）由 Canon Tokki、Edwards/Atlas Copco、Pfeiffer Vacuum、JX Advanced Metals、Tosoh、Materion、KFMI 与 Sunic / Avaco 构成的**真空技术 / 溅射靶 / FPD 设备轴**。第一条轴收入风险更高但 ULVAC 份额低；第二条风险更低但 ULVAC 结构性份额更高。
+
+**直接竞争对手 — 半导体资本设备（溅射 / 刻蚀 / 灰化）。** 命名的主要竞争对手为 **Applied Materials**（NASDAQ:AMAT——通过 Endura 平台成为全球第一 PVD/溅射供应商，见 [Applied Materials FY2024 10-K Business section](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000006951&type=10-K))、**Tokyo Electron 东京电子**（TSE:8035——TEL 的 Trias 与 Telius PVD 平台，见 [TEL Integrated Report 页](https://www.tel.com/ir/library/ar/index.html))、**Lam Research**（NASDAQ:LRCX——主要为刻蚀与沉积，见 [Lam Research FY2025 10-K](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000707549&type=10-K))、**Hitachi High-Tech 日立高新**（日立旗下私营子公司——主要的等离子灰化竞争对手），以及 **Canon Anelva**（私营——Canon 的半导体溅射部门，与面向 OLED 的 Canon Tokki 不同）。ULVAC 相对这些对手的优势是**工艺应用特定份额**（MHM, Descum）而非横向广度——AMAT 的 Endura 装机基础全球约为 ULVAC 溅射装机基础的 10×，但 ULVAC 在 MHM POR 采纳上是成熟制程逻辑与存储的事实标准（管理层口径）([Q3 FY26 Q&A, 第 5 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf))。
+
+**直接竞争对手 — FPD / OLED 设备。** OLED 沉积工具集合由 **Canon Tokki（私营 Canon 子公司——在线性源有机蒸发这最具战略价值的 OLED 工具中占 60%+ 份额）** 主导，**Sunic System (KOSDAQ:171090)**、**Avaco (KOSDAQ:083930)**、**YAS（私营韩国）** 与 **Applied Materials** 构成 OLED 设备竞争集合的其余部分 ([Oled Deposition Equipment Market Research Report 2032 / WiseGuy Reports](https://www.wiseguyreports.com/reports/oled-deposition-equipment-market))。ULVAC 在 OLED 中的发力点是**溅射、封装与掩膜基板等 OLED 产线的外围步骤**——它不拥有线性源发光层步骤。在更广泛的溅射镀膜（LCD、触控、光学）领域，按 Sputter Coating Market Forecast 2026，前三大玩家 AMAT、ULVAC、TEL 合计控制约 45% 全球溅射镀膜市场 ([IndexBox / Sputter Coating Market 2035 forecast](https://www.indexbox.io/blog/sputter-coating-market-growth-to-accelerate-by-2035-driven-by-semiconductor-and-display-demand/))——即 ULVAC 在全球溅射镀膜中很可能为第二或第三玩家，即便它是半导体 PVD 的利基玩家。
+
+**直接竞争对手 — 真空泵与零部件。** **Edwards（Atlas Copco AB 旗下，STO:ATCO-A）** 是面向晶圆厂干式真空泵的全球第一；**Pfeiffer Vacuum (FR:PFV，2024 年被 Busch SE 私有化后由其多数持股)** 第二；**荏原制作所 Ebara Corporation (TSE:6361)** 通过收购 Boc Edwards 业务及平行研发成为干式真空泵强势第三；**ULVAC** 居第三至第四，凭借捆绑拉动优势；**Busch**（德国私营）与 **Leybold**（Atlas Copco 旗下）构成前六。市场结构相对设备或靶材市场更具寡头垄断特征，前四家控制约 70% 干式真空泵收入。
+
+**直接竞争对手 — 溅射靶。** 据野村 Fig. 44 溅射靶联赛榜并在 Coherent Market Insights ([Copper Sputter Target Market 报告](https://www.coherentmarketinsights.com/market-insight/copper-sputtering-target-market-6221)) 确认：**JX Advanced Metals (TSE:5016——2025 年从 JX Nippon Mining 新分拆；最大的纯玩家半导体靶供应商)**、**Tosoh (TSE:4042——通过 Tosoh SMD 在氧化物与稀有金属靶领域强势)**、**Materion (NYSE:MTRN——美国特种)**、**三井金属矿业 (TSE:5706——铜、铟、锡、铅专家)**、**Honeywell Electronic Materials**、**Plansee SE（私营——难熔金属）**、**KFMI (SHE:300666——中国份额提升者)** 与 **ULVAC**。*分析师观点：* ULVAC 的相对份额属**中游**——在纯靶材收入上低于 JX、Tosoh、三井金属，但高于许多更小的专业供应商。其在该分部的真正竞争优势是自家溅射腔体的捆绑拉动——一种纯靶材供应商无法复制的纵向集成优势。
+
+```mermaid
+quadrantChart
+    title 真空技术竞争图 — ULVAC 与 WFE 同业、靶材厂商
+    x-axis "中端 / 成熟制程" --> "领先制程"
+    y-axis "单一产品线" --> "捆绑（设备+材料+零部件）"
+    quadrant-1 领先 + 捆绑
+    quadrant-2 捆绑利基专家
+    quadrant-3 单线利基
+    quadrant-4 领先制程纯玩家
+    ULVAC: [0.32, 0.85]
+    Applied Materials: [0.85, 0.62]
+    Tokyo Electron: [0.78, 0.48]
+    Lam Research: [0.82, 0.42]
+    ASML: [0.95, 0.18]
+    Canon Tokki: [0.42, 0.32]
+    Edwards / Atlas Copco: [0.55, 0.15]
+    Pfeiffer Vacuum: [0.45, 0.20]
+    JX Advanced Metals: [0.62, 0.25]
+    Tosoh: [0.50, 0.30]
+    Materion: [0.45, 0.35]
+    KFMI: [0.30, 0.35]
+```
+
+**定位框架——三个竞争维度。** 在**广度维度**（公司触及晶圆厂多少道工序步骤？），ULVAC 相对 AMAT / TEL / LRCX 处于狭窄端，但相对 JX / Tosoh / Materion / KFMI 处于宽端。在**集成维度**（设备 + 材料 + 零部件一体化？），ULVAC 处于整个竞争图最集成的一端——没有其他玩家同时销售溅射腔体、溅射靶以及为之供气的真空泵。在**领先制程维度**（公司是否在 N3 / N2 / A16 逻辑节点竞争？），ULVAC 牢牢处于中端 / 成熟制程端（MHM 业务是成熟制程逻辑，非 GAA / High-NA EUV）。这一三维定位是投资者应当替代「不包括 ULVAC 的 WFE 前五」框架的认知模型：公司是一家**狭窄 + 集成 + 中端的真空专业户**，拥有可防御的利基且无领先制程野心。
+
+**竞争优势。** ULVAC 可防御的优势是：（i）**捆绑拉动**——唯一从一家公司销售设备 + 材料 + 零部件的玩家，使其在 FPD 厂商及偏好少数供应商的晶圆厂享有联合销售优势；（ii）**MHM 工艺 IP**——难以复制的数十年应力可控薄膜专业知识；（iii）面向先进封装的**Descum 工艺 IP**——TSMC OSAT 客户处的事实标准份额；（iv）**稀土永磁设备 + 地缘政治偏好**——西方在岸化项目的非中国供应替代，区别于 ALD Vacuum Technologies；（v）**PHI 表面分析品牌**——XPS / Auger / SIMS 的全球参考品牌。这些个体上没有十亿美元级护城河，但聚合起来形成一个可防御的专业特许经营。
+
+**竞争弱势。** 三大结构性弱点值得标记：（a）**相对 AMAT / LRCX / TEL 的规模差距**——ULVAC 约 ¥2,600 亿（约 17 亿美元）收入约为 AMAT（约 270 亿美元）的 6%、TEL（约 180 亿美元 / 日元 2.8 万亿）的 7%，限制了单一工艺技术的研发预算；（b）**领先制程缺席**——ULVAC 不会参与驱动 TSMC / Intel / Samsung 最大 AI 逻辑资本开支美元的 High-NA EUV / GAA 资本开支浪潮，使公司只能收割二阶导（成熟制程、封装）机会；（c）**FPD 供给过剩敞口**——中国 FPD 厂商资本开支周期是 ULVAC 订单簿波动的最大单一外部驱动，且本质上块状；（d）**中国客户集中度**——34% 的收入，伴随客户侧资本开支削减或出口管制扰动的地缘政治风险升高。
+
+**市场份额——校准。** ULVAC 服务子分部的纯玩家全球份额未在颗粒度上公开披露。*分析师观点：* 在半导体 MHM 溅射中，ULVAC 在成熟制程逻辑与 DRAM 应用上的份额，按管理层「事实标准」措辞推断很可能 **>50%**；在 WLP/PLP Descum / 灰化中，服务工序步骤的份额 **>40%**；在 IT-OLED 面板用 OLED 溅射中**约 25–35%**；在干式真空泵中**约 10–15%**，落后于 Edwards（约 40%）与 Pfeiffer（约 25%）；在溅射靶中，广义市场**中个位数 %**，FPD 靶在合资前为**约 10–15%**（现正合并入 KFMI 合资）。这些是分析师从公司评论与行业媒体三角化得出的估算——并非 ULVAC 公开披露或独立审计。
+
+---
+
+## 8. 市场机会 (TAM)
+
+ULVAC 的 **TAM (Total Addressable Market)** 是其六大产品线可寻址市场之和，各自独立尺寸且增长画像不同。下表数据为基于 SEMI、野村、Cognitive Market Research、Maximize Market Research 与 Future Market Insights 三角化得出的 2025-26 最佳公开数据估算。
+
+| ULVAC 产品线 | TAM 2025E (USD bn) | 5 年 CAGR | 来源 |
+|---|---:|---:|---|
+| 半导体溅射 / PVD 设备 | 4–5 | 5–7% | [reports/sector/半导体材料.md, 野村 2026-05-21 WFE 分解](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md) |
+| 半导体等离子剥离 / 灰化 | 1.5–2 | 6–10%（AI 封装） | 推论自 WLP/PLP 封装资本开支轨迹 |
+| OLED 沉积设备 | 4.2 → 12.5 (2032) | ~12.6% | [WiseGuy Reports, OLED Deposition Equipment Market Research Report 2032](https://www.wiseguyreports.com/reports/oled-deposition-equipment-market) |
+| 真空泵与零部件 | 8 | 4–6% | 行业媒体三角化；Atlas Copco / Pfeiffer 财报 |
+| 溅射靶材料（半导体 + FPD） | 4–5 | 5–6% | [Cognitive Market Research 2024](https://www.cognitivemarketresearch.com/semiconductor-sputtering-targets-market-report)；[Maximize Market Research 2025](https://www.maximizemarketresearch.com/market-report/global-sputtering-target-market/102381/) |
+| 稀土永磁 / 工业真空设备 | 1–2 | 10–15%（在岸化） | 推论自美国 / 欧盟在岸化项目管道 ([Q3 FY26 Q&A 第 8 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)) |
+| 表面分析仪器（PHI 利基） | 0.5–1 | 3–5% | Thermo Fisher / Bruker 财报与行业媒体 |
+| **ULVAC 合计 TAM** | **约 20–25 美元 bn** | **约 6–8%** | 合计 |
+
+**SAM (可服务可寻址市场)。** ULVAC 参与其 TAM 中约 **40–50%**——它不在某些子类竞争（AMAT Endura 主导的领先制程逻辑 PVD；Canon Tokki 主导的线性源 OLED 有机蒸发；某些专业真空泵子类）。SAM 因此约为 **90–120 亿美元**。
+
+**SOM (可服务可获得市场) / 当前份额。** 集团收入约 17 亿美元（按 ¥150/USD 折算 FY26E ¥2,600 亿）隐含**约 14–19% 的 SAM 份额**（加权平均）。各产品线差异巨大——MHM 溅射 >50%、干式真空泵约 10–15%、纯半导体靶中个位数——故加权平均掩盖了可防御利基中的真实强势与公开市场产品线中的真实弱势。
+
+**渗透策略。** Value-Up Plan 的增长论点**并非主要靠 TAM 扩张**（服务市场增长 6–8%，非 15%），而是通过成本纪律实现**毛利率扩张**（模块化设计设备、设计交付期缩减、FPD 溅射靶合资交割后的固定成本合理化、员工优化达成计划约 40%）。渗透策略选择性叠加：（a）通过将「事实标准」地位延伸到下一代客户扩产（额外中国成熟制程晶圆厂阶段、额外 TSMC OSAT 封装线）**获取 MHM / Descum 份额**；（b）作为非中国设备替代赢得**西方稀土永磁资本开支**；（c）通过 OLED IGZO 与与设备联合销售捆绑的高纯铜靶**变现自家溅射靶装机基础**。
+
+**增长驱动 — 2026-30 窗口。** 与 ULVAC 组合最契合的三大结构性驱动是：（i）**AI 服务器封装资本开支**（先进封装 + HBM + GPU 服务器建设——驱动 2026 至 2030 年的灰化、溅射、检漏需求）；（ii）**中国成熟制程扩产**（绕过美国出口管制的 28nm / 14nm / 7nm 半导体成熟制程本地化，驱动 MHM 溅射与零部件需求）；（iii）**西方稀土永磁在岸化**（¥350-450 亿 / 年的工业设备运行率）；（iv）BOE / CSOT / Visionox / Tianma 的 **IT-OLED 改造与 G8.6 扩张**。前三个为 3-5 年顺风；第四个为 2-3 年窗口。*分析师观点：* 这四驱动组合支持公司到 FY26-FY27 的 ¥3,000 亿收入目标，尽管 16% 营业利润率目标看似激进——FY26 实际仅约 7.3%（¥190 亿 / ¥2,600 亿）——差距正是 Value-Up Plan 利润纪律意在于 FY27-FY28 关闭的，管理层在 Q3 FY26 明确将「加速利润改善始于截至 2028 年 6 月的财年起」作为新框架 ([Q3 FY26 Q&A, 第 9 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf))。
+
+---
