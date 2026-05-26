@@ -485,5 +485,127 @@ DNP 的可服务市场是第 4 节走过的每个产品 TAM 之和，按 DNP 的
 
 **渗透策略。** DNP 实现 FY2028 营业利润目标 ¥1,300 亿日元的路径是**重点业务增长贡献增量营业利润 ¥270 亿 + 稳定 / 改革 / 增长潜力业务 ¥115 亿，被成本通胀和其他项目 ~¥100 亿日元抵消** ([DNP FY2025 results, p. 26 — Operating Profit Change Outlook FY2025 → FY2028](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf))。仅电子板块就贡献 +¥143 亿日元营业利润（¥507 亿 → FY2028 ¥650 亿日元）——由光罩销售指数扩张 + G8 FMM 爬坡 + 早期玻璃芯贡献驱动 ([DNP FY2025 results, p. 35 — Profit Growth Outlook for Three Segments](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf))。支持该计划的资本支出承诺是**FY2026-2028 累计 ~¥3,000 亿日元**，涵盖三个板块，~¥2,000 亿日元用于重点业务，~¥1,000 亿日元用于基础设施 / 替换 ([DNP FY2025 results, p. 32](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf))。
 
+## 9. 风险评估
+
+DNP 承担独特的风险特征，结合典型日本集团企业治理与结构性风险，以及一级半导体材料供应商的周期性 / 技术特定风险。下面的 11 项风险跨越四个风险分类桶。
+
+### 公司特定风险
+
+**1. 集团企业估值折扣风险和资本配置重置反转（公司特定，高可能性 / 中等影响）。** 尽管有 ¥3,000 亿日元回购 + ¥2,200 亿日元政策性持股解除，DNP PBR 仅从 0.9× (2023 年 3 月) 升至 1.1× (2026 年 3 月)——适度的重新定价，使 DNP 相对 Hoya、Tekscend 和其他纯日本电子名以有意义的折价交易。如果管理层放缓或暂停回购 / 交叉持股处置速度（例如为 Rapidus 入股扩张或玻璃芯资本支出加速融资），活跃投资者支持和 PBR 重新定价可能逆转。FY2026 ¥500 亿日元回购 + FY2027 ≥¥300 亿日元是中等雄心的延续，但**显著低于 FY2023 ¥1,000+ 亿日元 / 年的运行率** ([DNP FY2025 results, p. 13 + p. 40](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf))。**缓解：** 管理层明确的 FY2026-2028 计划重申股东回报框架（累进式股息和两年 ≥¥800 亿日元回购底线）。
+
+**2. FMM 客户集中——三星显示器分散（公司特定，中高可能性 / 高影响）。** 最显著的客户集中度敞口是 FMM 线的三星显示器关系。三星已明确**终止 DNP 独家**，并将 FMM 与 Wave Electronics、APS Holdings 和 TGO Tech 共同开发作为韩国国内替代战略的一部分 ([OLED-Info — DNP terminated Samsung exclusivity](https://www.oled-info.com/dai-nippon-printing-supply-fmm-masks-boe-display))。如果韩国替代品在高 PPI iPhone OLED 层（最高 ASP FMM 业务）认证，DNP 可能在 3-5 年内失去 30-50% 的 FMM 收入。**缓解：** 京东方面板厂 QHD 级 FMM 客户入引（生产中）加上 Kurosaki G8 IT-OLED 产能给 DNP 在最快增长的 FMM 子细分市场的非三星锚点。
+
+**3. FY2025-FY2027 资本支出脉冲带来的电子板块折旧拖累（公司特定，高可能性 / 中等影响）。** Kurosaki G8 线、Kamifukuoka 光罩扩张、Kuki 玻璃芯试产线，以及计划增加的 MBMW 写入机都通过加速折旧打击损益表。FY2025 电子板块营业利润 **同比下降 -11.6% 至 ¥507 亿日元，尽管销售 +1.6% 增长**，因为这种折旧步阶上升加上 Q4 半导体存储短缺 FMM 影响 ([DNP FY2025 results, p. 9 — Electronics commentary](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf))。FY2026 计划将电子板块营业利润重置为 ¥540 亿日元——但如果光罩 / FMM 量低于计划，折旧拖累成为多年拖累而非单年重置。**缓解：** 当收入赶上产能时，折旧部分自我纠正；FY2028 营业利润指引 ¥650 亿日元嵌入追赶。
+
+**4. 玻璃芯技术执行风险（公司特定，高可能性 / 低-中等影响）。** 玻璃芯 / TGV 计划是真正的新技术——(i) 成本经济性需要改善约 30% 才能与有机 FCBGA 竞争，(ii) RDL 粘附 / 热循环可靠性在生产规模下未经验证，(iii) 2025 年底 / 2026 年上半年的客户采用决定可能滑移如果 Broadcom / Intel 决定推迟平台过渡 ([Nomura sector note, p. 85 — TGV cost economics + RDL adhesion bottlenecks](/Users/x/projects/financial_agent/reports/sector/半导体材料.md); [DNP IR-Day 2025, p. 60](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf))。在 ¥300 亿日元 FY2026-2028 资本支出承诺加上量产进行时大量增量投资的情况下，如果计划推迟，这是有意义的财务敞口。**缓解：** 试产线让 DNP 在承诺量产资本支出之前迭代技术并评估客户兴趣；¥3,000 亿日元 FY2026-2028 资本支出包络吸收推迟 / 加速风险。
+
+**5. 关键人物依赖——北岛社长继任（公司特定，低可能性 / 中等影响）。** 北岛义斉自 2018 年 6 月以来是 DNP 每个战略举措的架构师——板块重组、艾略特时代资本配置重置、FY2026-2028 中期计划，以及光罩 / FMM / 电池铝塑膜资本支出优先化。他的强制退休窗口在 2028-2030 年打开；继任中村修（电子主管，1962 年生）将是连续性友好型，但引入一些执行风险。**缓解：** 三个板块的管理深度已稳步加强；继任很可能是内部晋升，有多年重叠。
+
+### 行业 / 市场风险
+
+**6. AI 资本支出周期减速同时影响光罩 + 玻璃芯（行业，中低可能性 / 高影响）。** 野村行业报告明确将 AI 资本支出减速标记为支撑整个材料复兴论点的"假设之母" ([Nomura sector note, p. 102 — Key Risks](/Users/x/projects/financial_agent/reports/sector/半导体材料.md))。如果 TSMC 2027 年资本支出从 ~USD 700 亿回缩，DNP 的领先节点光罩需求和玻璃芯 / 先进封装基板需求同时下降。完整的周期性影响将是电子板块 2-3 年的收入和利润率压缩。**缓解：** DNP 的光罩量也由主流和成熟节点流片活动驱动，AI 周期敏感性较低；FMM 和电池铝塑膜业务非相关。
+
+**7. 中国 FMM 国内替代加速（行业，中等可能性 / 中等影响）。** 中国政府对 Wave Electronics、佛山康佳精密和其他 FMM 开发商的补贴在加速；京东方、Visionox 和 CSOT 越来越倾向于在技术差距缩小时从国内供应商双采购 FMM。FY2028+ 是该风险结晶为 DNP 在大批量中国 OLED 客户群份额损失的时间点。**缓解：** 京东方高 PPI FMM 截至目前仍由 DNP 供应；DNP 在 Kurosaki 的 G8 IT-OLED 能力在技术上比中国替代品领先 2-3 年。
+
+**8. EUV 工具路线图 / High-NA 加速或减速（行业，中等可能性 / 中等影响）。** DNP 的光罩计划围绕 TSMC、三星、Intel 和 Rapidus 从 2027 年起的 **2nm + High-NA EUV** 节点爬坡构建。如果 High-NA EUV（ASML EXE 平台）部署滑移 12-18 个月——鉴于工程复杂性，这已经是非平凡的风险——DNP 的光罩量赶上折旧脉冲就被推迟。相反，如果 CFET（互补 FET）3D 晶体管路径作为 High-NA 的替代方案出现，光罩路线图可能在 DNP 偏好下重新洗牌（野村报告将其标记为讨论较少的可能情境）([Nomura sector note, p. 6, 40-41](/Users/x/projects/financial_agent/reports/sector/半导体材料.md))。
+
+**9. 半导体存储供应导致的 OLED 行业周期性（行业，中等可能性 / 中等影响）。** Q4 FY2025 出现有意义的半导体存储短缺，压缩智能手机 OEM 生产时间表，将 FMM 需求拉低在 DNP 的数字界面线 ([DNP FY2025 results, p. 9](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf))。存储器周期在结构上波动，FMM 是衍生需求业务：当 OEM 削减智能手机生产，FMM 消耗在一个季度内下降。如果存储紧张延伸到 FY2026，风险持续。
+
+### 财务风险
+
+**10. 基础盈利波动 vs. 政策性持股收益对标题 EPS 扭曲（财务，高可能性 / 中等影响）。** FY2024（截至 2025 年 3 月 31 日财年）净利润被累计 ¥2,200 亿日元的政策性持股处置收益拉抬；FY2025 仍受益于剩余处置。随着交叉持股投资组合接近 <10% 目标（目前 13.4%），特殊收益顺风消失，标题 EPS 即使在营业利润继续增长的情况下也可能从 FY2024 峰值下降 15-20%。FY2026 净利润指引 ¥950 亿日元（-8.6% YoY）反映这种衰退 ([DNP FY2025 results, p. 27 — FY2026 Performance Outlook](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf))。出于估值目的，**营业利润轨迹**是更清晰的信号；标题 EPS 将机械压缩。**缓解：** 管理层在 FY2026 指引和"剔除特殊性损益的 ROE"披露框架中对这种动态透明。
+
+**11. FY2026 ¥1,000 亿日元公司债发行 + 杠杆上升（财务，低可能性 / 低影响）。** DNP 在 2025 年 4 月发行 ¥1,000 亿日元公司债，用于资助新光电气 SPC 投资以及持续资本支出加股东回报 ([DNP FY2025 results, p. 17 — Financial Strategy, ¥100 bn bond issuance April 2025](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf))。净债务仍适度（远低于 1× EBITDA），即使在 BOJ 2024-25 收紧周期后，日元利率仍低。在当前规模下风险是良性的，但如果资本支出升级和发行更多债务，值得监控。
+
+### 宏观风险
+
+**12. 日元对美元走强反转 FY2024-25 FX 顺风（宏观，中等可能性 / 中等影响）。** DNP FY2024 → FY2025 营业利润步骤包含 **(0.7) bn 外汇影响**（适度），FY2026 计划假设 150¥/$——比 FY2024 平均 153¥/$ 和 BOJ 收紧前的 145¥/$ 水平显著疲软 ([DNP FY2025 results, p. 4 + p. 29](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf))。如果日元在 2026 年穿过 140 或更低（例如 BOJ 收紧 + Fed 同时放松），FX 对 DNP 的 USD / EUR 计价收入的影响可能是 ~¥100 亿日元营业利润拖累。光罩和电池铝塑膜收入有有意义的 USD 敞口。
+
+**13. 中东地缘政治升级影响石化 / 能源投入成本（宏观，中等可能性 / 低-中等影响）。** DNP FY2026 指引包括 Q1 FY2026 的明确 ¥(20) 亿日元中东影响（来自升高的石化原材料和能源成本）([DNP FY2025 results, p. 27](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf))。如果升级延伸到 1H-2026，影响可能上升到 ¥50-100 亿日元营业利润。**缓解：** 替代采购计划和成本传递（合同允许的情况下）减少直接敞口。
+
+## 参考资料
+
+### 主要发行人备案与说明会资料
+- [DNP Integrated Report 2025 (FY3/2025) — full PDF, 59 pages](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/annual/DNP_integrated2025e.pdf.coredownload.pdf)
+- [DNP FY2025 Financial Results + FY2026-2028 Medium-Term Management Plan briefing materials, 2026-05-13](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf)
+- [DNP Group IR-Day 2025 presentation deck, 2025-07-10](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf)
+- [DNP press release — DNP Accelerates Development of Photomask Manufacturing Process for 2nm Generation EUV Lithography, 2024-03](https://www.global.dnp/news/detail/20173706_4126.html)
+- [DNP press release — DNP Invests in Rapidus to Support the Establishment of Mass Production for Next-Generation Semiconductors, 2026-02-24](https://www.businesswire.com/news/home/20260224169578/en/DNP-Invests-in-Rapidus-to-Support-the-Establishment-of-Mass-Production-for-Next-Generation-Semiconductors)
+- [DNP Group press release — Announcement of Progress of Investment in Special Purpose Company for the Acquisition of Shares of Shinko Electric Industries](https://www.global.dnp/ko/news/detail/20175580_4126.html)
+- [Mitsui Chemicals — Notice Regarding Commencement of Tender Offer to Acquire Shares in SHINKO ELECTRIC INDUSTRIES, 2025-02-17](https://jp.mitsuichemicals.com/en/release/2025/2025_0217/index.htm)
+- [Mitsui Chemicals — ASML and Mitsui Chemicals Sign License Agreement for EUV pellicle business, 2019-05-31](https://jp.mitsuichemicals.com/en/release/2019/2019_0531_01/index.htm)
+
+### 相关主要备案（合资伙伴 + 同业）
+- [Photronics, Inc. 10-K FY25, filed 2025-12](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)
+- [Toppan Holdings Inc. news release — Toppan Photomask to Rebrand as Tekscend Photomask, 2024-10-01](https://www.holdings.toppan.com/en/news/2024/10/newsrelease241001_1.html)
+- [Tekscend Photomask About page — eight global facilities](https://www.photomask.com/en/about/)
+
+### 活跃投资者与新闻报道
+- [Elliott Statement on Dai Nippon Printing, PR Newswire, 2023-03-09](https://www.prnewswire.com/news-releases/elliott-statement-on-dai-nippon-printing-301768540.html)
+- [Nasdaq.com — Dai Nippon Printing up 13% on share buyback plan; gets Elliott's support, 2023-03-10](https://www.nasdaq.com/articles/dai-nippon-printing-up-13-on-share-buyback-plan-gets-elliotts-support)
+- [Digitimes — Shinko Electric to delist in June, eye DNP and Mitsui Chemicals partnership on backend process materials, 2025-03-21](https://www.digitimes.com/news/a20250321PD206/shinko-electric-mitsui-chemicals-materials-partnership-fujitsu.html)
+- [Digitimes — DNP to supply photomasks to Rapidus for 2nm chips in 2027, 2024-03-27](https://www.digitimes.com/news/a20240327PD213/dai-nippon-printing-photomask-rapidus-2nm.html)
+
+### OLED FMM 行业报道
+- [OLED-Info — Dai Nippon Printing to supply FMM masks to BOE Display + Samsung Display diversifying](https://www.oled-info.com/dai-nippon-printing-supply-fmm-masks-boe-display)
+- [OLED-Info — DNP starts producing 8-Gen FMM masks at its new $140 million Kurosaki plant](https://www.oled-info.com/dnp-starts-producing-8-gen-fmm-masks-its-new-140-million-kuosaki-plant)
+- [English etnews — DNP Agrees to Supply Shadow Masks to a Chinese Panel Manufacturer for QHD Resolution OLED, 2017-06-20](https://english.etnews.com/20170620200002)
+
+### 光罩市场规模
+- [SNS Insider via GlobeNewswire — Photomask Market Size to Surpass USD 7.22 Billion by 2032, 2025-08-18](https://www.globenewswire.com/news-release/2025/08/18/3134697/0/en/Photomask-Market-Size-to-Surpass-USD-7-22-Billion-by-2032-at-a-CAGR-of-4-31-Research-by-SNS-Insider.html)
+- [Mordor Intelligence — Photomask Market Size, Outlook, Trends & Global Report 2030](https://www.mordorintelligence.com/industry-reports/photomask-market)
+- [openPR — Photomask Market Report citing DNP / Hoya / Tekscend / Photronics share data](https://www.openpr.com/news/3563930/photomask-market-report-analysis-research-studies-dai-nippon)
+- [AInvest — Tekscend Photomask's USD 2 Billion Tokyo IPO, 2025-08](https://www.ainvest.com/news/tekscend-photomask-2-billion-tokyo-ipo-strategic-bet-semiconductor-supply-chain-resilience-2508/)
+- [Indian Chemical News — Mitsui Chemicals becomes world's first EUV pellicle manufacturer](https://www.indianchemicalnews.com/chemical/mitsui-chemicals-becomes-worlds-first-euv-pellicle-manufacturer-8881)
+
+### 配套研究报告（本项目内）
+- [Sector overview — Nomura "Greater China Semi: A guide to Semi renaissance in 2026~30F"](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)
+- [Photronics, Inc. (NASDAQ:PLAB) company research](../Photronics_NASDAQ_PLAB/Photronics_NASDAQ_PLAB_Research_Document.md)
+- [Hoya Corporation (TSE:7741) company research](../Hoya_TSE7741/Hoya_TSE7741_Research_Document.md)
+- [Resonac Holdings (TSE:4004) company research](../Resonac_TSE4004/Resonac_TSE4004_Research_Document.md)
+
+### 市场数据源
+- [Companies Market Cap — Dai Nippon Printing P/E ratio history](https://companiesmarketcap.com/dai-nippon-printing/pe-ratio/)
+- [Companies Market Cap — DNP market capitalization](https://companiesmarketcap.com/dai-nippon-printing/marketcap/)
+- [Yahoo Finance — 7912.T quote](https://finance.yahoo.com/quote/7912.T/)
+- [Stockanalysis.com — PLAB overview](https://stockanalysis.com/stocks/plab/)
+
+<details>
+<summary>第 10 步验证日志 — 2026-05-26</summary>
+
+**URL 检查。** 报告中 130+ 个独特 URL 在起草过程中已对照已拉取到 `/tmp/dnp/` 中的发行人源文档手动抽查。主要 DNP IR PDF URL（integrated2025、q4pre、irday25、mar26pre）全部确认可达，内容通过 `fitz` 提取验证。Photronics 10-K URL 通过 [PLAB 配套研究文件](../Photronics_NASDAQ_PLAB/Photronics_NASDAQ_PLAB_Research_Document.md) 的验证过程交叉确认。PLAB 10-K FY25 的 SEC EDGAR URL（`ef20057458_10k.htm`）按 PLAB 报告中使用的 EDGAR submissions JSON 确认真实。基于 WebSearch 的 URL（Elliott PR、OLED-Info、Mitsui Chemicals、Digitimes、GlobeNewswire、SNS Insider）是公开新闻 / 新闻稿 URL，可在抓取时解析。
+
+**作为主要源使用的发行人备案。**
+- DNP Integrated Report 2025 (FY3/2025) — 59 页，实收资本 ¥1,140 亿日元、流通股数 524,480,692 股、员工 36,890 名、创立 1876 年、总部东京市谷加贺町、ADR DNPLY 2:1、股票代码 7912 TSE。
+- DNP FY2025 业绩说明会资料 (2026-05-13) — 46 页，FY2025 销售 ¥1.5125 万亿日元、营业利润 ¥1,010 亿日元、ROE 8.9%、电子板块营业利润 ¥507 亿日元、FY2026 指引销售 ¥1.53 万亿 / 营业利润 ¥1,080 亿日元、FY2028 营业利润目标 ¥1,300 亿日元、FY2026 ¥500 亿日元回购 + FY2027 ≥¥300 亿日元。
+- DNP IR-Day 2025 资料 (2025-07-10) — 75 页，FY2024 Focus Business Areas 表（信息安全 ¥1,770 亿 / 影像 ¥740 亿 / 出行 ¥710 亿 / 工业高性能材料 ¥600 亿 / 数字界面 ¥1,820 亿 / 半导体 ¥660 亿日元）、光罩销售计划 FY2028 指数 155 vs FY2024 100、玻璃芯量产 2028。
+
+**发行人声明抽查。**
+- 电子 FY2025 营业利润 ¥507 亿日元 → 在 [Q4 资料 p. 6](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf) 中确认。
+- FY2028 营业利润目标 ¥1,300 亿日元 → 在 [Q4 资料 p. 26](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf) 中确认。
+- DNP"在商业光罩市场中拥有顶尖市场份额"描述符 → 逐字逐句来自 [Q4 资料 p. 22 脚注](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf)。
+- OLED 金属遮罩 / 电池铝塑膜 / 光学薄膜 / 染料升华热介质的"全球第一份额"标记 (◇) → 逐字按 [Q4 资料 p. 22 + IR-Day p. 45](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf)。
+- Kurosaki G8 金属遮罩线 2024 年 5 月起运营 → 在 [IR-Day 资料 p. 72](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf) 中确认。
+- Kuki 工厂玻璃芯试产 2025 年底完工 → 在 [IR-Day 资料 p. 60](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf) 中确认。
+- ¥2,200 亿日元政策性持股处置累计 → 在 [Q4 资料 p. 17](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf) 中确认。
+- 17.79% 信託银行 Master Trust 第一大股东 + 北岛家族未列入前 10 → 在 [Integrated Report 2025 p. 57](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/annual/DNP_integrated2025e.pdf.coredownload.pdf) 中确认。
+
+**研究过程中所做的实质性更正。**
+- 最初提示将 DNP 描述为"全球 2 家商业 EUV 防尘薄膜 (pellicle) 供应商之一（与三井化学）"。按主要来源不正确：**三井化学是 ASML 授权下唯一的商业 EUV 防尘薄膜供应商**，已在岩国大竹工厂建立专用组装产能。DNP 不制造 EUV 防尘薄膜——DNP 制造 EUV 光罩板，这是单独的供应链步骤。报告已按正确定位写就：DNP 是 EUV 光罩供应商；Hoya 供应底层光罩坯料（~80% 全球份额）；三井化学供应防尘薄膜。通过 [Mitsui Chemicals 2019-05-31 press release](https://jp.mitsuichemicals.com/en/release/2019/2019_0531_01/index.htm) 和 [Indian Chemical News](https://www.indianchemicalnews.com/chemical/mitsui-chemicals-becomes-worlds-first-euv-pellicle-manufacturer-8881) 确认。
+
+**分析师观点句**（有意标记为分析师观点，不归属于备案文件）：
+- §1 估值解读段落（P/E 倍数背景、"回购驱动的资本回报计划是明确杠杆"）。
+- §4.3 / §4.4 / §4.5 / §4.6 / §4.7 / §4.8 份额领先和护城河类型评估全部按技能规则前缀为`*分析师观点：*`。
+- §7 象限图位置是分析师推导的。
+- §8 TAM 市场份额推断 DNP 占商业光罩层 80% 标记为"不切实际地高"，并给出更现实的解读。
+
+**尚未验证的剩余未知。**
+- DNP FMM 收入中归属于三星显示器 vs 京东方 vs 其他面板厂家的确切份额（DNP 不分拆披露）。
+- DNP 光罩收入中通过 PDMC / PDMCX vs 直接 Kamifukuoka 的确切美元数字——PLAB 仅披露合并 Photronics 层面收入。
+- Kuki 工厂玻璃芯试产线晶圆等效单位的产出产能（未披露）。
+- DNP FY2025 研发开销分配给玻璃芯 vs 光罩 vs FMM 的具体数字（仅披露集团层 ¥422 亿日元研发总开销）。
+- 北岛家族持股比例（无前 10 大股东披露；估计 <1% 但未确认）。
+
+</details>
 
 
