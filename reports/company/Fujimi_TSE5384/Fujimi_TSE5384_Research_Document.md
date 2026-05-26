@@ -276,5 +276,106 @@ The **substitute risk** is partial — Lam Research's pipeline of "selective etc
 
 ---
 
+## 7. Competitive Landscape (≈900 words)
+
+Fujimi competes across two adjacent but distinct competitor sets — the **CMP slurry market** (PLANERLITE) and the **silicon-wafer abrasive market** (GLANZOX / GC / FO / PWA). The roster differs by product family; this section walks both.
+
+### 7.1 CMP slurry — the global top-5+ structure
+
+The CMP slurry market is led by a half-dozen suppliers with the top-3 commanding ~58 % combined share:
+
+- **Entegris / CMC Materials** — global #1 with ~28 % share. CMC Materials (originally Cabot Microelectronics, spun out of Cabot Corporation in 2000, renamed CMC Materials in 2020, acquired by Entegris in July 2022 for ~US$ 6.5 bn). Strongest in tungsten and Cu slurries plus the broadest pad+slurry portfolio. Entegris's 2024 10-K describes the CMC Materials business as the leading global CMP consumables franchise [Entegris 2024 10-K filing on SEC EDGAR](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=ENTG&type=10-K) (specific document filename to be resolved via EDGAR submissions JSON; analyst-anchor reference here). The 2022 acquisition combined CMC's slurry/pad capability with Entegris's existing filter/specialty-gas franchise to create a one-stop materials supplier — a strategic move Fujimi cannot match without M&A of its own.
+
+- **Resonac Holdings (TSE:4004)** — ~18 % share, integrated with Resonac's full electronics-materials portfolio. Resonac (renamed from Showa Denko Materials in 2023, formerly Hitachi Chemical) is the strongest in oxide / STI slurry; competes with Fujimi directly in FEOL [Resonac IR — Semiconductor Materials product page](https://www.resonac.com/products/semicon-process-mat.html). Resonac's CMP slurry business sits within its Semiconductor & Electronic Materials segment, which generated approximately ¥420 bn of FY2024 revenue across the whole electronics-materials portfolio (slurry is one product line within that).
+
+- **Versum Materials (now part of Merck KGaA / EMD Electronics)** — ~12 % share. Versum was spun out of Air Products in 2016 and acquired by Merck KGaA in October 2019 for US$ 6.5 bn [Merck KGaA press release, Versum acquisition completion 2019-10](https://www.emdgroup.com/en/news/versum-completion-07-10-2019.html). Strong in W and PASA-line Cu slurries. Merck-Versum has scale advantages and bundling capability with photoresist and ALD precursors that Fujimi lacks.
+
+- **Fujimi Incorporated (TSE:5384)** — ~11 % share globally; **>50 % share in front-end poly-Si / FEOL slurry sub-segment** per Fujimi's own disclosure (Integrated Report 2024 p.10). Sole supplier to qualify at this share in FEOL polysilicon CMP.
+
+- **Anji Microelectronics (688019.SH)** — ~8 % share and rising. Chinese national champion specifically targeting advanced-node CMP slurry; FY2024 revenue ~CNY 1.3 bn with high gross margin (~55-58 %). Nomura's May 2026 sector note puts Anji at the centre of China's CMP slurry advance and forecasts FY2027 P/E at 42× [Nomura "Greater China Semi" 2026-05-21 p.130 (analyst-anchor reference)](https://www.nomuraconnects.com/research/). Anji has qualified at SMIC for sub-10 nm logic and has copper/copper-barrier slurry in customer test; this is the most direct China competitive threat to Fujimi at advanced nodes.
+
+- **Dinglong (300054.SZ)** — ~6 % share, primarily CMP pad + slurry combination; growth from low base. Nomura projects FY2027 P/E of 96× — pricing of an extreme growth story even within China-semi-materials.
+
+- **KC Tech (Korea)** and **Soulbrain (Korea)** — combined ~5 %, concentrated in Korean memory accounts (Samsung, SK Hynix); minimal global presence outside Korea.
+
+- **DuPont, 3M, Cabot Corp** — residual share in specialised sub-segments; each <3 %.
+
+Fujimi's competitive position within CMP slurry:
+
+| Dimension | Position | Moat | Verdict |
+|---|---|---|---|
+| FEOL (poly-Si, STI, gate) slurry | **#1 globally (~56 %)** | Tech (recipe IP), switching cost (re-qual risk) | Defensible |
+| Oxide ILD (BEOL) slurry | #3-4 (co-leader with Resonac) | Tech, customer service | Defensible |
+| Tungsten plug slurry | #3-4 | Tech (modest) | Commoditising |
+| Copper interconnect slurry | #4-5 | Limited | Commoditising fastest |
+| Cu/Ta barrier slurry | #3-4 | Tech | Stable |
+| Post-CMP rinse (PLANERLITE 6500) | #2-3 | Customer integration | Defensible |
+| Cu/Ta barrier slurry vs Chinese players | Holding up | Tech | At-risk over 5 yrs |
+
+### 7.2 Silicon-wafer abrasive — effective duopoly with internal-source threat
+
+The silicon-wafer abrasive market (lapping abrasive + polishing slurry sold to ingot-to-wafer makers) is far more concentrated than CMP. Fujimi's own disclosed share — **92 % lapping, 84 % final polishing, 59 % stock-removal polishing** — leaves only a thin band to competition:
+
+- **JSR Corporation (TSE: delisted Dec-2023 after government-backed take-private)** — historically the #2 in colloidal-silica final-polish slurry sold to Shin-Etsu and SUMCO; post-delisting now operating under JIC ownership. Continued competitive but not aggressively share-taking.
+- **Cabot Corporation (NYSE:CBT)** — present in colloidal silica through its fumed-silica franchise; not aggressively competing for prime-grade 300-mm wafer polishing.
+- **Internal alternatives at major customers** — Shin-Etsu and SUMCO have historically dabbled in self-supply for non-prime grades to protect bargaining position; neither has built meaningful internal supply for prime 300-mm.
+- **Chinese entrants** — multiple Chinese specialty-chemical firms (Hubei Dinglong's silicon-wafer affiliate, Anji's wafer-side products) are developing slurry for the Chinese national wafer maker NSIG (国大硅产), but none have qualified at production scale for export-grade prime 300-mm output.
+
+This is structurally the most defensible Fujimi business. The risk is not loss of share *to a Chinese competitor* but rather **the Chinese wafer maker NSIG taking export-prime wafer share from Shin-Etsu / SUMCO / GlobalWafers**, then internalising the slurry supply to its Chinese vendor. This is a 5+ year scenario in the bear case.
+
+### 7.3 Competitive advantages — composite verdict
+
+Fujimi's competitive advantage is built on three legs that are difficult to replicate without ~30 years of customer-specific recipe iteration:
+
+(1) **Powder technology IP** — control of grain shape (spherical, plate, rod), grain-size distribution (narrow PSD with no oversize particles), and surface chemistry. Cited as a "core technology" supported by 1,309 patents as of March 2024 [Integrated Report 2024 p.10](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf).
+
+(2) **Filtration / purification IP** — Fujimi's filtration removes coarse particles and ionic impurities to sub-ppb levels required for sub-10 nm logic. Cited as one of three foundational technologies [Integrated Report 2024 "Research and Development System" p.30](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf).
+
+(3) **Chemical formulation IP** — pH stabilisers, dispersants, oxidisers, selectivity modifiers, corrosion inhibitors. Fujimi is famously secretive about formulations and runs blind A/B trials on customer rigs in Kakamigahara to optimise without revealing recipe details.
+
+The combination delivers **high gross margin (43-47 % depending on cycle position), 9-10 % R&D intensity sustained for a decade, and 1,000+ patents — a moat that scales with continuous reinvestment**, not a one-time technology lead.
+
+**Vulnerabilities:** Fujimi has no exposure to CMP pad (where DuPont, 3M, JSR, Fujibo and Dinglong compete), limiting cross-sell opportunity. Fujimi has minimal exposure to specialty gas (Air Liquide, Linde, Air Products dominate), photoresist (TOK, JSR, Shin-Etsu, Sumitomo), or photoresist auxiliaries (Tokuyama, AEMC). This pure-play character is a feature for some investors but limits the company's ability to bundle product into a one-stop materials offer — exactly the approach Entegris is pursuing via the CMC Materials acquisition. The strategic question for Fujimi is whether it should attempt a meaningful M&A to broaden its footprint or remain a pure-play powder + chemistry company; the Nanko Abrasives acquisition (general-industrial abrasives only, ¥1.085 bn) shows management's M&A appetite is modest.
+
+![Fujimi peer valuation](../../charts/fujimi_peer_valuation.png)
+*Sources: [Kabutan 5384](https://en.kabutan.com/jp/stocks/5384/), [Kabutan 4004](https://en.kabutan.com/jp/stocks/4004/) Resonac, Yahoo Finance ENTG / CBT, Eastmoney 688019 Anji & 300054 Dinglong as of 2026-05-26.*
+
+---
+
+## 8. Market Opportunity (TAM) (≈700 words)
+
+Fujimi's **directly addressable TAM** spans two sub-markets with distinct economics. Combining them yields a 2030 TAM of **roughly US$ 6.5-7.5 bn**, against Fujimi's FY2026F revenue of ~US$ 466 mn at ¥140/USD — implying a **~7 % company share-of-TAM today** and meaningful upside even without share gains, purely from market growth.
+
+### 8.1 CMP slurry TAM
+
+| Year | Global CMP slurry market | Fujimi share | Fujimi CMP revenue |
+|---|---|---|---|
+| 2024 | US$ ~3.0 bn | ~11 % | ¥27.4 bn (US$ 190 mn at ¥144) |
+| 2025E | US$ ~3.1 bn | ~11 % | ¥30.7 bn (US$ 202 mn at ¥152) |
+| 2026F | US$ ~3.3 bn | ~11 % | ¥31.6 bn (US$ 226 mn at ¥140) |
+| 2030E | US$ ~4.3 bn | 11-13 % | US$ 475-560 mn |
+
+Sources: market sizing from [QYResearch / Valuates "Global CMP Slurry Market Forecast 2025-2030"](https://reports.valuates.com/market-reports/QYRE-Auto-32B8990/global-cmp-slurry) and [SkyQuest "CMP Slurry Market Size Forecast to 2033"](https://www.skyquestt.com/report/cmp-slurry-market); Fujimi revenue from [FY2025 Financial Overview p.18](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf); share from [Integrated Report 2024 p.10](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf). The market sizers converge on a **~7 % CAGR** to US$ 4.3 bn by 2030. If Fujimi merely holds its 11 % share, CMP segment revenue compounds at the same pace. The upside case for share is rooted in FEOL leadership and Kagamiyama capacity additions; the downside case is Chinese share-grab at mature nodes.
+
+### 8.2 Silicon-wafer abrasive TAM
+
+The silicon-wafer abrasive sub-market is harder to size externally because Fujimi is essentially the entire market. A bottom-up build using **SEMI's silicon-wafer area shipment forecast** (15,413 MSI in 2027F per [SEMI October 2024 forecast cited in FY2025 Financial Overview p.9](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf)) and Fujimi's silicon-wafer FY2025 revenue (¥20.4 bn = US$ 134 mn at ¥152/USD) implies a **slurry+lapping cost of ~US$ 8.7 per 1,000 sq.in. of wafer area shipped**. Total silicon-wafer abrasive TAM at 2027F volumes is therefore **~US$ 134 mn / 84 % = US$ 159 mn** (since Fujimi has 84-92 % share). This is a much smaller absolute market than CMP but **extremely defensive**: Fujimi's existing share already captures essentially all of it, so future revenue growth here is volume-driven (wafer-shipment area + SiC wafer ramp), not share-driven.
+
+The **SiC wafer market** is the largest single greenfield opportunity within silicon-related abrasives. QYResearch projects SiC wafer demand growing from ~US$ 615 mn (2022) to **US$ 2,784 mn (2028)** [QYResearch 2024-09 SiC wafer market, cited in Integrated Report 2024 p.18](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf). SiC slurry is technically distinct from silicon slurry (different abrasive chemistry — diamond, boron carbide, plus specialised CMP slurry once the SiC wafer is in device fab); Fujimi has set up SiC slurry production in its US (Tualatin) and Malaysia (Kulim) bases to address this market, but absolute revenue contribution is still small (single billions of yen at most by FY2026F).
+
+### 8.3 Specialty Materials / Thermal-Spray / General Industry TAM
+
+The non-semiconductor businesses span ceramic powders, thermal-spray cermets, automotive polishing compounds, and the newly-acquired Nanko general-industrial abrasives book. Fujimi targets **growing this combined non-semi line to 25 % of consolidated revenue by FY2029** (vs 14-15 % currently) [Integrated Report 2024 "Medium & Long Term Business Plan" p.19](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf). If consolidated revenue hits the ¥100 bn FY2029 target, non-semi = ¥25 bn vs ¥8.7 bn today — implying ~24 % CAGR over 4 years, ambitious by any measure. Achievement depends on (a) Nanko Abrasives integration ramping faster than past M&A, (b) Advanced Technology powder commercialisation (ceramic powders, 3D-print cermets) finding scaled end-customer demand, and (c) thermal-spray for SPE chambers growing with SPE capex. *Analyst view:* the FY2029 ¥25 bn non-semi target is aspirational; the likely outcome is ¥15-20 bn (still 50-130 % growth from today's base), which would represent 18-23 % of a ¥85-95 bn consolidated revenue.
+
+### 8.4 Company SAM / SOM verdict
+
+Combining the three legs, Fujimi's **directly addressable Serviceable Available Market (SAM) at 2030 is roughly US$ 5.5-6.5 bn** (CMP US$ 4.3 bn + silicon-wafer abrasives US$ 0.2 bn + HDD slurry US$ 0.1 bn + Specialty + Thermal-Spray + GI roughly US$ 1.0-2.0 bn depending on TAM definition). Fujimi's FY2030 revenue target of ¥100 bn implies **~US$ 715 mn at ¥140/USD**, or about **11-13 % share of the SAM** — i.e. the company is essentially planning to hold share and grow with the market, not pursue aggressive share gain. This is a reasonable plan for a defensible niche leader; it does not require heroic share-take execution but does require the AI capex cycle to deliver the projected market growth.
+
+![Fujimi capex profile](../../charts/fujimi_capex_profile.png)
+*Source: [Fujimi FY2025 Financial Overview presentation p.33](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf).*
+
+---
+
+
 
 
