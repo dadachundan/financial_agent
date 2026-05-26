@@ -255,3 +255,71 @@ pie title APD 收入按终端市场分布（分析师据 10-K 叙述估算）
 
 ---
 
+## 7. 竞争格局
+
+Air Products 在几乎每个区域和每种供应模式中都与同一群大型工业气体生产商正面交锋。按 FY2025 10-K 原文："Each of the regional industrial gases segments competes against three global industrial gas companies: Air Liquide S.A., Linde plc, and Messer Group GmbH, as well as regional competitors. Competition in industrial gases is based primarily on price, reliability of supply, and the development of industrial gas applications. We derive a competitive advantage in locations where we have pipeline networks, which enable us to provide a reliable and economic supply of products to our larger customers" ([FY2025 10-K, Item 1 Business — "Regional Industrial Gases"](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。注意 10-K 措辞的明确与不明确：它明确点名了 Air Liquide、Linde 和 Messer；未点名 Nippon Sanso，但亚洲竞争重叠完全相同。特种 / 电子专家（Resonac、SK Materials、Versum/EMD）不在此名单上，因为 APD 在 2017 年 Versum 拆分中退出了该竞争集。
+
+**五大直接全球竞争对手:**
+
+1. **Linde plc (NYSE: LIN)** — 按收入和市值都是全球 #1（FY2024 收入约 $330 亿，市值约 $2,200 亿）。由 2018 年 Praxair 和德国 Linde 合并而成，总部位于英国 Woking，主要在纽交所上市。在美洲、亚洲和欧洲的 **驻厂大气和氢气** 业务与 APD 重叠最深。Linde 拥有全球最深的管道网络足迹（墨西哥湾沿岸氢气管道是 APD 和 Linde 的最主要单一资产；Linde 在德国 Ruhr 的管道无人能敌）。Linde **电子事业部 (Linde Electronics)** 是行业内客户份额最强的电子业务 — 以 TSMC 台湾晶圆厂、三星韩国和 Intel 美国为支柱 — 与 APD 平泽和亚洲电子业务直接竞争 ([Linde plc 2024 Annual Report](https://www.sec.gov/Archives/edgar/data/0001707925/000162828025007990/lin-20241231.htm))。Linde 以更高估值倍数交易（FY27E P/E 约 26×、EV/EBITDA 约 17×），反映其更优的利润率结构（FY2024 调整后经营利润率约 28% vs APD 约 24%）。
+2. **Air Liquide SA (EPA: AI / OTC: AIQUY)** — 按收入是全球 #1（FY2024 约 €271 亿 / $295 亿）和欧洲主导玩家；总部巴黎。在欧洲和（2016 年收购 Airgas 后）美国商品气体市场与 APD 有长期竞争历史 — Airgas 交易让 Air Liquide 获取了 APD 历史上在美国分销中持有的规模。Air Liquide 的 **电子事业部** 在结构上与 APD 类似（大宗 + 大宗特种 + 部分历史保留前驱体），但收入更大。2024 年通用注册文件披露电子分部收入 €34 亿（占集团约 12%），同比高单位数增长 ([Air Liquide 2024 Universal Registration Document](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf))。
+3. **Messer SE & Co. KGaA** — 德国私营公司（总部 Bad Soden），全球最大的私人工业气体公司，营收约 €40 亿。在欧洲拥有强大的大宗气体业务；在 2018 年收购 Linde 美国大宗气体剥离资产（Linde-Praxair 合并的美国 / 欧盟监管要求）后在美国有适度业务。Messer 主要在欧洲大气和商品气体上与 APD 竞争，在管道或电子上较少。
+4. **Nippon Sanso Holdings Corp (Taiyo Nippon Sanso, TYO: 4091)** — 日本最大工业气体公司，营收约 ¥1.27 万亿 / $80 亿，美国和亚洲业务增长。在亚洲电子领域与 APD 重叠最强（TNSC 供应主要日本半导体客户，包括 SK Hynix 韩国、Kioxia 日本、华虹中国）。TNSC 的特种气体业务（美国 TNSC 子公司 Matheson）在大宗特种上比前驱体专家更直接与 APD 竞争 ([Nippon Sanso FY2024 Integrated Report](https://jp.nipponsanso.com/en/ir/library/integrated_report.html))。
+5. **Resonac Holdings (TYO: 4004)** — 由 2023 年昭和电工与昭和电工材料合并而成；在 **离散电子气体前驱体**（NF₃、SiH₄、高纯 HCl、WF₆）和半导体材料上最强 — 这正是 APD 2017 年通过 Versum 退出的赛道。按 Nomura 行业报告，Resonac 在 NF₃ 刻蚀清洗气和 ALD 用高纯氨上全球 #1（[reports/sector/半导体材料.md](../../sector/半导体材料.md)）。Resonac 与 APD 今日的竞争重叠仅在 *大宗* 气体上 — APD 不在 NF₃ 上与 Resonac 竞标；二者在一些亚洲电子驻厂合同中竞争，当客户同时授标大宗和特种包时同台。
+
+**区域 / 钢瓶气体专家。** 全球大厂之下，区域玩家主要在钢瓶分销和小体量商品上竞争：**Iwatani Corp**（TYO: 8088，日本氦气分销领导者）；**SOL Group**（意大利私人医疗气体专家）；**杭州杭氧 (Hangzhou Hangyang Co)**（SHA: 002430，中国 ASU 制造商，驻厂业务增长）；**Yingde Gases**（HKEX: 02168 — 2017 年私有化，大量中国钢厂气体客户基础）；**INOX Air Products**（与 APD 自身的印度合资 — JV 伙伴关系而非直接竞争）；**SIAD**（意大利私人）；**Praxair Surface Technologies**（Linde 表面涂层气体品牌的遗留）。这些都不是重大的全球竞争者，但在本地有特许优势的地理中可能成为 APD 的局部困扰。
+
+**定位框架 — APD 按维度的竞争位势。**
+
+| 维度 | Linde | Air Liquide | APD | Messer | TNSC | APD 结论 |
+|---|---|---|---|---|---|---|
+| 全球收入规模 | #1 | #2 | #3 | #5 | #4 | 较 Linde / AL 约小 3 倍 |
+| 美国驻厂 H₂ 管道 | #1（湾区 + 东北部） | #2（湾区，经 Airgas+） | #2（湾区） | n/a | n/a | 强，由管道网络防御 |
+| 美国商品 + 钢瓶 | #2（Praxair 合并后） | #1（Airgas） | #3 | #4 | #4（Matheson） | 较小规模，增长慢 |
+| 全球大气驻厂 | #1 | #2 | #3 | #5 | #4 | 在每个主要地理为前三 |
+| 电子驻厂大宗 | #1 | #2 | #3 | n/a | #4 | 在韩国 / 台湾 / 美国晶圆厂簇强；三星胜出 = 追赶 |
+| 电子前驱体（NF₃、硅烷等） | #2（Linde Electronics） | #3（Air Liquide 先进材料） | **无** | n/a | #2（与 Resonac、SK Materials） | Versum 拆分后已退出；不在此赛道 |
+| 绿 / 蓝氢规模化 | #2 | #1（早期氨项目） | **#1**（NEOM + 路易斯安那） | n/a | n/a | 首动但执行负担 |
+| 全球氦气商品 | #1 | #2 | #3（与 TNSC） | n/a | #3 | 强，叠加美国战略储气优势 |
+| EBITDA 利润率 (FY24) | 约 28% | 约 25% | 约 24%（调整后） | n/a（私营） | 约 12% | 低于 Linde，与 AL 相当，结构性高于 TNSC |
+| 5 年收入 CAGR FY19-24 | 约 5%（合并协同） | 约 5% | 约 5%（氢气资本支出抬升） | n/a | 约 6% | 与主要玩家一致 |
+
+*来源: 各发行人 FY2024 年报 — [Linde 2024 Annual Report](https://www.sec.gov/Archives/edgar/data/0001707925/000162828025007990/lin-20241231.htm)、[Air Liquide 2024 URD](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf)、[APD FY2025 10-K](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm)、[Nippon Sanso FY24 Integrated Report](https://jp.nipponsanso.com/en/ir/library/integrated_report.html)。竞争位势排名（#1/#2/#3）是分析师据公开行业研究的判断；APD 自己的 10-K 点名 Air Liquide、Linde 和 Messer 为三大直接全球竞争对手但不主张顺序。*
+
+**APD 的主要竞争优势。** *分析师观点:*（i）**管道网络** 位于美国墨西哥湾沿岸（氢气 + 大气）、鹿特丹–安特卫普 ARA 簇、新加坡裕廊和韩国平泽 — 这些是竞争对手短期内无法复制的实物资产，10-K 明确将其点名为「在我们拥有管道网络的地点的竞争优势」([FY2025 10-K, Regional Industrial Gases](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))；（ii）**多十年期客户合同**（15–20 年照付不议）配合价格传导条款，产生支撑 44 年股息纪录的债券替代型现金流；（iii）**绿氢规模化首动地位**（NEOM 是唯一 >500 吨/日临近投产的绿氢项目）；（iv）**美国氦气战略储气** 在 Amarillo 和 Beaumont，最近由管理层 Q2-FY26 供应链韧性举措加固 ([Q2-FY26 PR](https://www.sec.gov/Archives/edgar/data/2969/000000296926000018/exhibit99131mar26.htm))。
+
+**APD 的竞争弱点。** *分析师观点:*（i）**集团层面规模较 Linde 和 Air Liquide 小** — APD 收入约为 Linde 的 36%，直接转化为每元收入 R&D 投入更低、资本设备采购规模更小、新晶圆厂机会的地理覆盖较慢；（ii）**与 Linde 的利润率差距**（调整后约 24% vs Linde 约 28%）反映 Praxair 合并后 Linde 获得而 APD 没有的生产率红利；（iii）**Versum 拆分后特种敞口缺口** — APD 在 NF₃、硅烷、WF₆ 或其他离散电子前驱体上无业务，所以当半导体工艺节点强度增长（即每片晶圆更多层、更多材料）时，APD 捕获大宗气体增长但不捕获前驱体升级；（iv）**NEOM 和路易斯安那的执行拖累** — 在两个项目都投产并签订承购合同之前，APD 相对 Linde 和 Air Liquide 将持续以执行风险溢价折价；（v）**维权股东驱动的战略过渡风险** — Mantle Ridge / Menezes 时代仅 16 个月；投资者对战略重置的信心是临时的，直到 FY2027–28 投产周期落地。
+
+```mermaid
+quadrantChart
+    title 工业气体竞争定位 — 规模 vs 电子大宗实力
+    x-axis "集团收入规模较低" --> "集团收入规模较高"
+    y-axis "电子大宗实力较低" --> "电子大宗实力较高"
+    quadrant-1 "规模领先+电子强"
+    quadrant-2 "较小且专注电子"
+    quadrant-3 "较小且组合广"
+    quadrant-4 "规模领先+电子弱"
+    "Linde": [0.92, 0.92]
+    "Air Liquide": [0.85, 0.78]
+    "Air Products": [0.55, 0.70]
+    "Nippon Sanso": [0.42, 0.65]
+    "Messer": [0.32, 0.20]
+    "Resonac": [0.18, 0.85]
+```
+
+---
+
+## 8. 市场机会
+
+**总可寻址市场 (TAM)。** 采用收敛的行业研究估计（[Data Insights Market](https://www.datamintelligence.com/research-report/industrial-gases-market)、[Research Nester](https://www.researchnester.com/reports/industrial-gas-market/1384)、[Market.us](https://market.us/report/industrial-gases-market/)、[Markets and Markets](https://www.marketsandmarkets.com/Market-Reports/industrial-gases-market-143368202.html)），**2025 年全球工业气体 TAM 约 $1,150–1,200 亿**，2033–2034 年预测在 **$1,700 亿（Data Insights，CAGR 约 5.5%）至 $2,550 亿（Market.us，CAGR 约 8.5%）** 之间，反映了氢气脱碳和 AI 半导体资本支出需求顺风如何快速转化为实际合同的不确定性。中点预测（CAGR 约 7% 至 2033 年约 $2,150 亿）意味着可寻址机会在未来 8 年扩张约 $1,000 亿 — 即每年净新增 $120–130 亿行业级收入，按 APD 全球份额约 10–12% 比例对应每年约 $12–15 亿 TAM 自然扩张（份额转移前）。
+
+**可服务可寻址市场 (SAM)。** APD 的 SAM 是 TAM 中 APD 拥有可信商业参与权的子集。剔除：（a）离散电子前驱体板块（约 $100–120 亿收入，由 Resonac / EMD / SK Materials / Linde Electronics 特种业务持有 — APD 在 Versum 拆分后无业务）；（b）APD 无商品业务的地理的钢瓶气体分销（特别是大部分非洲、巴西 / 智利以外的拉美大部分、以及 INOX Air Products JV 之外的纯农村印度）；（c）低于商品经济阈值的最小商品客户；得到 **2025 年 SAM 约 $850–900 亿**，2033 年增至约 $1,550–1,650 亿。APD 当前收入约 $120 亿对应 SAM 份额约 13–14% — 略高于全球市场份额数字，因为 APD 在参与的类别（大气驻厂、氢气、氦气）上具有过度配置，并在最慢增长的类别上（新兴市场钢瓶气）结构性缺席。
+
+**可服务可获得市场 (SOM)。** APD 的 SOM 是 SAM 中 APD 同时拥有商业参与权 *和* 可信竞争位势赢取的切片 — 即在 APD 拥有现有管道 / 网络资产或已知既有客户关系的驻厂合同。APD 可服务机会的地理集中在 **美国湾区氢气和大气**（管道在位者）、**美国亚利桑那 / 德州 / 纽约半导体簇**（TSMC AZ、三星 TX、Micron NY/爱达荷、Intel 美国既有客户）、**韩国平泽–华城晶圆厂簇**（在三星胜出后结构性成为 APD 最大单一晶圆厂簇）、**新加坡裕廊**（长期管道在位者）、**沙特阿拉伯和中东**（NEOM JV + 下游石化扩张）、以及 **鹿特丹–安特卫普 ARA 炼油簇**。APD 的 SOM 今日大致 **$300–350 亿**，2033 年增至约 $550–600 亿 — 意味着如果 APD 捕获其全部 SOM 份额，到 2033 年可实现 $200–250 亿收入的现实路径，对比当前 $120 亿。这个数学就是为什么 FY2026 调整后 EPS 指引（$13.00–13.25）有可信度暗示一条多年期复合路径，在没有进一步并购的情况下也能到 FY2030 实现约 $20+ 调整后 EPS。
+
+**渗透策略。** 管理层声明的框架（Q2-FY26 评论）是 **（1）通过提高驻厂合同利用率和推动非氦气价格改善（现有合同有挂钩指数（工业 PPI、电力、天然气）的自动调价条款）来释放盈利增长** — 这是「收割」杠杆，预计在 FY2028 之前每年贡献约 $0.50–$1.00 EPS；**（2）优化大型项目**，通过完成 NEOM（2027 年年中）和路易斯安那（2028 年）、投产后解除 NEOM 债务合并（改善杠杆比率）、并在 2028–2030 年分阶段投产三星平泽系统；**（3）维持资本纪律**，将 FY2026 资本支出保持在约 $40 亿（较 FY2025 峰值削减约 $30 亿），并在 NEOM 债务解除合并后恢复股票回购 ([Q2-FY26 PR](https://www.sec.gov/Archives/edgar/data/2969/000000296926000018/exhibit99131mar26.htm); [Motley Fool transcript](https://www.fool.com/earnings/call-transcripts/2026/04/30/air-products-apd-q2-2026-earnings-transcript/))。
+
+5 年视野内 TAM 扩张最大单一问题是 **绿氨 / 船用燃料需求爬坡**。如果航海脱碳监管强制全球船队的有意义份额转向氨（目前 <0.1% 的船用燃料），绿氢需求增长一个数量级，NEOM 成为结构性低估资产，APD 作为唯一拥有 >500 吨/日 绿氢装置投产的生产商，地位成为多十年期复合 inglier。如果需求爬坡延迟（如最近沙特 NEOM 评论 [Energy Connects, 2025-05](https://www.energyconnects.com/news/renewables/2025/may/saudi-arabia-s-mega-neom-hydrogen-project-faces-demand-risk/) 显示的市场争论），NEOM 现金流长期为负，减值风险拖累持续。这个单一议题是股权故事的最大右尾期权。
+
+---
+
