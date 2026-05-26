@@ -94,3 +94,158 @@ timeline
 高桥于 **2015 年作为高级公司研究员 (Senior Corporate Fellow) 加入昭和电工株式会社**,这是他在传统日本综合企业中的首个岗位。此后五年间他陆续晋升至公司高管与董事职位,包括**首席战略官 (CSO)**——他在该岗位上策划了 2020 年完成的日立化成收购战略。**2022 年 1 月**他被任命为 (原) 昭和电工社长兼 CEO,并在 **2023 年 1 月 1 日更名生效**时同时担任 Resonac Holdings 与 Resonac Corporation 的相同职位 ([Resonac Executive Profile](https://www.resonac.com/corporate/exec/takahashi.html); [Resonac, "New Year Message from Hidehito Takahashi, President and CEO", 2022-01-04](https://www.resonac.com/news/2022/01/04/1057.html))。截至本报告撰写时,他担任合并后 Resonac 实体 CEO 的任期接近 **3.5 年**。他不是创始人,不持有创始人规模的股权;其薪酬结构与持股按力森诺科 Yuho (有価証券報告書) 披露,处于受薪高管而非创始人 / 股东级别。
 
 高桥所执行的战略命题——以及迄今的成绩单——可归纳为三条命题。**第一**,日立化成 / 昭和电工的合并应通过半导体材料 R&D 与销售层面的*运营协同效应*得到证明 (FY2025 实绩:半导体与电子材料分部核心营业利润 ¥108.4 亿日元,**同比 +47%**,EBITDA 利润率 30.2%——大体验证了协同效应命题)。**第二**,合并债务负担可通过投资组合简化实现去杠杆 (FY2025 实绩:净负债 / EBITDA 从 FY2023 的 7.9× 降至 FY2025 的 3.5×,FY2026E 指引为 2.9×——按节奏推进,可在现金流量表中验证)。**第三**,石化与大宗化学品业务可与高利润率半导体材料业务分离,且不破坏任何一方价值 (FY2025 实绩:Crasus Chemical 部分分拆已通过日本税务合规分拆要求、获得 TSE 上市批准、正等待公司治理审批执行——按公司自身披露的主要里程碑,2026 年完成在轨 [FY2025 决算说明会资料 p.29](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf))。三条命题在公开记分牌上目前均处于积极状态。
+
+## 4. 产品与服务
+
+本节锚定于力森诺科自身的产品分类法,数据来自 **Resonac Semi Backend Process 产品页**、**FY2025 决算说明会资料 (分部摘要 p.10–14)** 与 **2024 年可持续发展报告**——三者合计构成美国 10-K 「Item 1 Business」章节的功能替代。按照公司研究技能规范,引述力森诺科自身语言的段落直接在引文上方标注出处;关于分析师对市场份额 / 领先地位的判断则以 `*分析师观点:*` 明确标识,要么引用力森诺科自身的营销表述 (当公司确实主张某个数字时),要么保持不引证。
+
+### 4.1 力森诺科分部 / 子板块产品矩阵
+
+力森诺科披露五个经营分部。整个集团层面损益表由**半导体与电子材料**主导;下表展示 FY2025 实绩以及半导体与电子材料分部按 FY2025 决算说明会资料 p.10 披露的子板块明细。
+
+| 分部 | 子板块 | FY2025 营收 (¥ 亿日元) | FY2025 核心营业利润 (¥ 亿日元) | EBITDA 利润率 |
+|---|---|---:|---:|---:|
+| **半导体与电子材料** | 前道半导体材料 *(高纯气体、CMP 抛光液)* | 83.6 | – | – |
+|  | 后道半导体材料 *(EMC、DAF、覆铜板、感光干膜、感光阻焊剂)* | 245.0 | – | – |
+|  | 器件解决方案 *(HD 介质、SiC 外延片)* | 122.4 | – | – |
+|  | 其他 | 55.4 | – | – |
+|  | **分部合计** | **506.3** | **108.4** | **30.2%** |
+| **移动出行** | 塑料模制品、摩擦材料、粉末冶金、铝特殊部件 | 178.4 | 4.4 | 9.8% |
+| **创新使能材料** | 功能性树脂、功能化学品、涂料材料、陶瓷 | 92.2 | 10.4 | 17.6% |
+| **化学品** | 基础化学品 (工业气体)、石墨 (石墨电极 + 锂电池负极材料) | 174.4 | (5.5) | 5.4% |
+| **Crasus Chemical** *(2026 年计划部分分拆)* | 烯烃及衍生物、有机化学品、合成树脂 | 300.3 | 4.7 | 3.5% |
+| **其他 / 调整项** | 抵消、剥离相关账面残值 | 95.5 | (13.2) | (3.2%) |
+| **集团合计** | — | **1,347.1** | **109.1** | **15.1%** |
+
+*来源: [Resonac FY2025 决算说明会资料, p.8–14 — 营收、核心营业利润与 EBITDA 利润率:分部明细, 2026-02-13](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf); [Resonac FY2025 Tanshin, p.4–7 — 分部营收与核心营业利润](https://www.resonac.com/sites/default/files/2026-02/e_tanshin2025q4.pdf)。公开披露中未给出子板块核心营业利润分解,公司仅按子板块披露营收。*
+
+![Resonac FY2025 分部营收与核心营业利润结构](../../charts/resonac_segment_mix_fy2025.png)
+
+*来源: 同上表。注意半导体与电子材料分部的 ¥108.4 亿日元核心营业利润实际上吸收了化学品 + 其他 / 调整项合计 ¥(7.7) 亿日元的亏损,才能产生集团核心营业利润 ¥109.1 亿日元。*
+
+### 4.2 综合分析——产品组之间如何互动
+
+力森诺科的产品组合构成一个**两层业务模式**。高速度、高利润率的一层是半导体与电子材料业务,它嵌入四大半导体制造工艺步骤中的三个:(i) **前道晶圆制造 (front-end)** (高纯电子特种气体 + CMP 抛光液 + 光刻胶辅料);(ii) **后道封装 (back-end)** (DAF + 环氧塑封料 + 覆铜板 + 感光干膜 + 感光阻焊剂);(iii) **后晶圆器件制造** (用于 HDD 的 HD 介质 + 用于功率器件的 SiC 外延片)。低速度、低利润率 (某些年份甚至亏损) 的一层是传统化学品 + Crasus 化学品 + 移动出行 + 创新使能材料 + 其他业务的组合——这些分部合计贡献约 62% 营收,但净核心营业利润贡献基本为零。计划于 2026 年内完成的 Crasus Chemical 部分分拆即是对最大单一低利润率板块的外科手术式切除;FY2026E 指引显示*剔除 Crasus 后*的集团 **EBITDA 利润率为 21.6%,而合并口径为 17.9%** ([FY2025 决算说明会资料, p.18](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf))。
+
+```mermaid
+graph TD
+    R[Resonac Holdings — 五大可报告分部]
+    R --> SEM[半导体与电子材料 — FY25 ¥506 亿日元, EBITDA 利润率 30%]
+    R --> MOB[移动出行 — ¥178 亿日元, EBITDA 利润率 10%]
+    R --> IEM[创新使能材料 — ¥92 亿日元, EBITDA 利润率 18%]
+    R --> CHE[化学品 — ¥174 亿日元, EBITDA 利润率 5%]
+    R --> CRA[Crasus 化学品 — ¥300 亿日元, EBITDA 利润率 4% — 2026 年计划部分分拆]
+    SEM --> FE[前道:高纯气体、CMP 抛光液 — ¥84 亿日元]
+    SEM --> BE[后道:EMC、DAF、CCL、干膜、阻焊剂 — ¥245 亿日元]
+    SEM --> DS[器件解决方案:HD 介质、SiC 外延片 — ¥122 亿日元]
+    CHE --> BC[基础化学品:工业气体]
+    CHE --> GR[石墨:石墨电极 + 负极材料]
+```
+
+力森诺科产品所服务的半导体制造工作流为:
+
+**(晶圆) → CMP 抛光液 → 高纯气体 (刻蚀 / 清洗) → 光刻胶辅料 → (前道完成) → 切割胶带 → DAF 贴片膜 → 环氧塑封料封装 → 覆铜板基板 → 感光干膜 / 阻焊剂 → (后道完成) → (HDD 装配使用 HD 介质) 或 (功率器件装配使用 SiC 外延片)**
+
+任何一颗 AI 加速器 (英伟达 H100/H200/B100、AMD Instinct MI300/MI325、博通 XPU、Marvell 定制 ASIC 等) 在离开 OSAT 前**至少会接触四类力森诺科产品**:高纯刻蚀气体 (前道)、CMP 抛光液 (前道)、用于 HBM 堆叠和芯粒-中介层 (chiplet-to-interposer) 粘接的 DAF (后道)、以及围绕封装外缘的 EMC 塑封料 (后道)。HBM 堆叠层数 (8-hi → 12-hi → 16-hi) 与每个加速器封装中的芯粒 (chiplet) 数提升使每颗 AI 加速器消耗的 Resonac 材料量增加——这正是管理层对 **FY2026 AI 相关后道营收同比增长 >50% 指引**的运营机制 ([Resonac FY2025 决算说明会资料, p.20 — 子板块展望](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf))。
+
+### 4.3 后道半导体材料——AI/HBM 利润引擎 (¥245 亿日元营收, 同比 +17%)
+
+这是力森诺科半导体与电子材料业务最大的子板块,也是与 AI 加速器和 HBM 出货量关联度最高的子板块。四大旗舰产品族:**贴片膜 / 芯片粘接膜 (die-attach film, DAF)**、**环氧塑封料 (epoxy mold compound, EMC)**、**覆铜板 (copper-clad laminate, CCL)** 与**感光干膜 / 阻焊剂**。合计构成 **FY2025 分部营收约 48%**,并在 FY2024–FY2026E 资本支出 (capex) 增量中占据多数份额。
+
+#### 4.3.1 贴片膜 (DAF)——力森诺科最强势的单一产品
+
+来自 Resonac 英文产品页对 **FH/HR 系列切割粘接膜 (DAF)** 的 10-K 等价表述为 ([Resonac, "Dicing Die Bonding Film FH/HR Series"](https://www.resonac.com/products/semi-backend-process/76/009.html)):
+
+> "Resonac's die attach films (DAF) combine function of dicing tapes and die bonding films suitable for semiconductor wafer singulation and bonding process. … Resonac has marketed its DAF for more than 20 years and leads the world in production volume and sales."
+
+该产品线包含具体型号:**FH-9011**、**HR-9004**、**HR-900-N50**、**HR-900-N45**、**HR-300-S34**、**FH-4013**、**HR-400-N45**、**FH-SC13** 与 **HR-5104**,根据目标应用,弹性模量在 25 °C 下覆盖 **600 MPa 至 8000 MPa** 区间 ([Resonac DAF 产品页](https://www.resonac.com/products/semi-backend-process/76/009.html))。Resonac 逐字列出的目标应用包括「3D NAND 与 DRAM 存储器件」、引线框架应用、**FOW (film over wire) 与 FOD (film over die)** 封装,以及 **SDBG (Stealth Dicing Before Grinding, 隐形切割先磨)** 工艺。
+
+**中文释义 / 通俗解释:** DAF (贴片膜 / 芯片粘接膜) 是一种在后道封装过程中同时承担两项功能的薄聚合物薄膜:在晶圆单颗分离 (wafer singulation, 切割) 阶段作为**切割胶带 (dicing tape)** 使用 (锯片切穿硅晶圆并停在 DAF 上),随后作为**粘片胶 (die-bonding adhesive)** 将分离后的每颗芯片粘接到基板或在 3D 堆叠中粘接到另一颗芯片上。如果没有 DAF,粘片步骤将不得不依赖液体胶水点胶——而液体胶水对于 **HBM 堆叠所需的 <10 µm 粘接厚度**而言过于不精确、过于厚重。一颗 HBM4 12-hi 堆栈需要在 12 颗 DRAM 芯片加 1 颗逻辑底芯之间安插 11 层 DAF——每层界面 ≤ 5 µm 厚,任何空洞或颗粒都会造成良率损失。对于高端 AI 加速器,DAF 还会出现在底部 HBM 芯片与硅中介层之间 (**芯粒-中介层粘接**),以及在每个逻辑芯粒与中介层之间。粘接厚度的均匀性、降低热应力的低弹性模量与高粘接强度是 **HR-900-N50 / HR-900-N45 产品组合分化**的三大相互竞争的指标 (针对不同堆叠高度与芯片尺寸搭配不同的弹性模量 / 粘接性组合)。
+
+*分析师观点:* DAF 是力森诺科 (继承自日立化成) 最可信地占据**全球销量与销售额领先地位**的产品,这一点由上面引用的 Resonac 自身营销表述明确支持。独立第三方市场分析将「古河电气、汉高黏合剂 (Henkel Adhesives)、LG 化学、力森诺科、日东电工、MacDermid Alpha、LINTEC」列为 DAF 主要供应商,多源共识将力森诺科全球销量份额定位为 >40% ([openPR, "Die Attach Film (DAF) for Semiconductor Packaging Market", 2026](https://www.openpr.com/news/4110099/die-attach-film-daf-for-semiconductor-packaging-market-set))。野村「Greater China Semi 2026–30F Renaissance」报告也在其 CMP 抛光液与后道材料供应商排名中明确提及「Resonac」 ([Nomura "Greater China Semi" anchor report, p.34–44, 2026-05-21](https://www.nomuraconnects.com/asia-tech) — 另见 ["半导体材料 sector overview"](../../sector/半导体材料.md) 本地笔记)。HBM4 需求是近期最主要的拐点:按 JEDEC 路线图,16-hi HBM4 堆栈相对 12-hi HBM3E 每颗 HBM cube 的 DAF 用量增加约 33%,英伟达 + AMD + 博通在 FY2026–FY2027 间针对使用 HBM4 的 AI 加速器的出货量按 OEM 披露持续放量。
+
+#### 4.3.2 环氧塑封料 (EMC)——封装外缘的封装材料
+
+Resonac 英文产品页对 **CEL 系列引线框架环氧塑封料**的 10-K 等价表述为 ([Resonac, "Epoxy Molding Compounds for Lead Frame"](https://www.resonac.com/products/semi-backend-process/76/011.html)):
+
+> "Resonac's epoxy molding compounds seal and protect the areas around the chips of semiconductor packages assembled with various metal lead frames. … Excellent moisture and thermal shock resistance. … Excellent reflow crack resistance. … Resonac has established a supply system to globally provide these materials from five sites."
+
+产品线包含具体型号 **CEL-9240 ZHF10HT3W**、**CEL-9240 HF10**、**CEL-8240 HF10**、**CEL-9200 HF10** 与 **CEL-9200 HF9**;旗舰型号 CEL-9240 ZHF10HT3W 的关键规格为**玻璃化温度 125 °C、导热系数 3 W/mK、弯曲模量 30 GPa**——其中提升的导热系数正是 AI 应用的关键指标,因为封装外缘的 EMC 必须将封装内部传导的热量耗散到散热片 ([Resonac EMC 产品页](https://www.resonac.com/products/semi-backend-process/76/011.html))。Resonac 列出的目标封装包括「DIP、SOP、TSOP、QFP、TQFP、LQFP、QFN 与 PLCC」——即每一种常规引线框架封装。对于有机基板封装 (用于 BGA / FCBGA 倒装芯片封装,高端 CPU/GPU 的典型格式),Resonac 出售独立的 **CEL 有机基板系列**;对于**倒装芯片底部填充 (flip-chip underfill)**,则有 **CEL-C 液体封装系列** ([Resonac, 后道工艺类目页](https://www.resonac.com/products/semi-backend-process))。
+
+**中文释义 / 通俗解释:** EMC (环氧塑封料, epoxy mold compound) 是包裹每一颗常规半导体封装的硅芯片 + 引线框架 + 键合线的**「黑色塑料状」材料 (塑封料)**。化学成分为**环氧树脂 + 填料 (通常为二氧化硅) + 固化剂 + 阻燃剂 + 着色剂**,混合后压制成颗粒,随后在转移成型 (transfer molding) 步骤中加热并注入模具腔体环绕芯片。对于 AI / HBM,相关的子集是**高导热 (high-Tc) EMC** (CEL-9240 ZHF10HT3W 为 3 W/mK,而通用 EMC 约 0.7 W/mK) 与**低 CTE / 低翘曲 EMC**——后者用于薄封装,堆叠引起的回流期翘曲会造成粘接面开裂。CEL-9240 产品代码中的「ZHF」前缀代表无卤阻燃剂化学,在几乎所有车规与 AI 级应用中现已成为强制要求。
+
+*分析师观点:* 力森诺科是与**住友电木 (Sumitomo Bakelite, TSE:4203)** 与 **长濑 ChemteX / Hysol (汉高)** 并列的全球三大 EMC 供应商之一,三家合计按体量占据 HBM 级 EMC 供应的大部分。Resonac 官网没有像 DAF 那样明确主张全球第一 (DAF 是明确主张) ——独立份额排名将住友电木在传统引线框架 EMC 体量上稍稍领先,但力森诺科在 AI/HBM 级高导热 EMC 上具有竞争力,这正是日立化成 R&D 遗产最强的领域 ([住友电木 2024 综合报告](https://www.sumibe.co.jp/english/ir/library/ir/index.html) 确认 EMC 业务但未公开份额数字)。台积电的供应商表彰明确称赞力森诺科「先进封装材料」("advanced packaging materials") 方面的贡献——用于高端 FCBGA 与 CoWoS 封装的 EMC 正是该奖项范围的主要项目之一 ([Resonac, "2025 TSMC Excellent Performance Award", 2025-12-01](https://www.resonac.com/news/2025/12/01/3669.html))。
+
+#### 4.3.3 覆铜板 (CCL)——有机封装的基板
+
+覆铜板 (CCL) 是 FCBGA 封装所用有机基板的基础层——也就是经过减成法光刻 (subtractive lithography) 形成基板金属走线的**玻纤增强环氧 + 铜箔**。力森诺科的 CCL 业务在后道半导体材料下报告,主要服务于 OSAT 客户 (ASE、Amkor、JCET、Powertech) 与基板制造商 (Unimicron、Nan Ya PCB、Ibiden、Shinko、Kinsus)。在 Q4-2025,管理层对**覆铜板与半固化片 (prepreg) 实施了价格调整** ([Resonac FY2025 决算说明会资料, p.41 — 新闻摘要](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf)),反映出投入成本持续向客户传导,以及 AI 基板周期的紧张。
+
+**中文释义 / 通俗解释:** CCL (覆铜板, copper-clad laminate) 是 PCB 或 IC 基板最基础的结构输入——一片单面或双面层压铜箔的玻纤增强环氧 (FR-4 / BT 树脂 / ABF 同类) 片材。对于 AI/HBM 封装,位于 CoWoS / FCBGA 封装内部的 **ABF (Ajinomoto Build-up Film) 基板**要求 <25 µm 的介电层厚度与超低翘曲;力森诺科的 CCL 业务以逐层半固化片组件的形式喂入这个堆叠。AI 加速器出货量越高,每颗加速器封装所需的基板层数越多 (CoWoS-L 可达 14+ 层,而传统 FCBGA 仅 10–12 层),因此每颗加速器封装的 CCL 营收按 AI 复杂度呈超线性增长。
+
+*分析师观点:* CCL 领域比 DAF 或 EMC 更分散;**三菱瓦斯化学 (BT 树脂先驱)**、**日立化成遗产 (现为 Resonac)**、**松下 (Megtron 系列)**、**斗山公司**与**生益科技 (SH PCB)** 是层堆叠中的主要供应商,没有单一玩家份额超过 25%。力森诺科的 CCL 业务通过日立化成并购得到加强,但仍是公司三大后道旗舰产品中营收最小的一项。
+
+#### 4.3.4 感光干膜 + 感光阻焊剂
+
+感光干膜 (photosensitive dry film, PDF / 干膜) 与阻焊剂是在 CCL 基板上图案化铜线路的**光刻掩膜材料**——一种层压在基板表面的可光成像聚合物,经掩膜曝光、显影,然后在铜刻蚀后被剥离。Resonac 的产品线同时服务于**常规 PCB 制造商**与 **IC 基板制造商**,后者为高利润率 / 低体量业务。
+
+**中文释义 / 通俗解释:** 感光干膜 (光致干膜) 是定义铜线路在基板 / PCB 制造刻蚀步骤中的**光刻掩膜层**——化学上与光刻胶 (photoresist) 类似,但以预制薄膜形式层压而非以液体形式旋涂。阻焊剂 (绿色 / 黑色阻焊层) 则是**防止焊料流到非预定区域**的涂层,即赋予 PCB 着色外观的那一层。对于 AI / HBM 基板,两层都要求**<10 µm 分辨率**以定义细间距走线——比通用 PCB 应用要求高得多。
+
+*分析师观点:* 力森诺科在该领域与**日立化成遗产 (即其自身)** 作为历史领导者,以及**杜邦** (已将其 Riston 干膜业务分拆给群创 / 长兴材料)、**旭化成**与**昭和电工本身**竞争。该业务通过 2020 年日立化成并购得到加强而非根本性转变。
+
+### 4.4 前道半导体材料——电子特种气体 + CMP 抛光液 (¥83.6 亿日元营收, 同比小幅下降)
+
+该子板块包含**高纯电子特种气体** (硅烷、二氯硅烷、氨气、氯化氢、特种刻蚀与清洗气体) 与 **CMP 抛光液**。FY2025 营收同比下降 3.2% 至 ¥83.6 亿日元,FY2025 Tanshin 给出两个具体因素:**剥离尾气处理设备业务** (退出非核心硬件邻接业务) 与 **NAND 需求复苏缓慢** ([Resonac FY2025 Tanshin, p.4](https://www.resonac.com/sites/default/files/2026-02/e_tanshin2025q4.pdf))。FY2026 指引预期前道营收随 NAND 需求正常化而出现「温和」复苏。
+
+#### 4.4.1 高纯电子特种气体
+
+力森诺科的高纯气体业务通过**力森诺科特种气体台湾股份有限公司 (Resonac Specialty Gas Taiwan, RSGT)** 及母公司日本 / 新加坡工厂运营,供应台积电、联电、力积电以及领先的台湾 OSAT 客户 ([Resonac Specialty Gas Taiwan](https://www.rsgt.resonac.com/index.php?lang=en))。台积电供应商表彰明确点名「在台湾建立高纯气体本地生产体系」——即为台积电大规模量产 (HVM) 晶圆厂提供本地化的台湾气体生产。这是力森诺科与台积电本地化绑定最深的前道产品类别,直接联接到野村锚定报告所定义的**台积电 FY2027 资本支出超级周期达到 700 亿美元** ([Nomura "Greater China Semi" anchor report, p.13, 2026-05-21](https://www.nomuraconnects.com/asia-tech))。
+
+**中文释义 / 通俗解释:** 电子特种气体 (electronic specialty gas, 电子特气) 是前道晶圆制造所用的超高纯度气体 (99.9999% / 6N 或更高) 的统称——典型品种包括**硅烷 / SiH₄** (用于硅 CVD)、**二氯硅烷 / SiH₂Cl₂** (用于低温 CVD)、**氨气 / NH₃** (用于氮化硅沉积)、**HBr / Cl₂ / NF₃** (用于刻蚀),以及一份不断扩展的特种氟碳化合物清单。每座领先逻辑 / 存储晶圆厂每天消耗数千立方米的几十种气体物种,而「每个气瓶可加工晶圆数」的经济性随每个工艺节点的演进而趋紧——亚 2nm GAAFET (gate-all-around) 节点的气体消耗约为成熟节点逻辑的 2 倍。
+
+*分析师观点:* 全球高纯电子特种气体市场由四大工业气体巨头主导——**林德 (前 Praxair)**、**法液空 (Air Liquide)**、**空气产品 (Air Products)** 与**大阳日酸 (Taiyo Nippon Sanso, TNS,现属三菱化学集团)**——加上区域特种供应商,包括力森诺科、**关东电化工业 (Kanto Denka Kogyo)** (日本)、**SK Materials** (韩国)、**Versum (现为默克 KGaA 一部分)**,以及**昭和电工 AG 氟碳合资公司** (美国 / 台湾)。力森诺科按销量并非全球市场领导者——该头衔属于林德 / 法液空——但在特种刻蚀与清洗气体化学方面具有竞争力,并且是少数被台积电明确表彰为「**台湾本地生产支持**」的供应商之一,这正是与野村「本地化超级周期」逻辑相关的背景。
+
+#### 4.4.2 CMP 抛光液
+
+力森诺科的 CMP 抛光液 (CMP slurry) 业务 (继承自日立化成) 在全球**CMP 抛光液寡头格局**中与**Versum (默克 KGaA)、CMC Materials (现属 Entegris)、Fujimi Incorporated、杜邦 (Rohm and Haas 后)、JSR、安集微电子 (688019 CH) 与鼎龙股份 (300054 CH)** 等竞争 ([Nomura sector report Fig.35–44, 2026-05-21](https://www.nomuraconnects.com/asia-tech) — 另见 ["半导体材料 sector overview"](../../sector/半导体材料.md))。按野村市场规模数据,全球 CMP 抛光液市场 2025 年达到约 **总半导体材料 800 亿美元中 CMP 占约 7%** (即约 56 亿美元) ([Nomura anchor report Fig.24–26, p.18–20](https://www.nomuraconnects.com/asia-tech))。
+
+**中文释义 / 通俗解释:** CMP (chemical-mechanical planarization, 化学机械抛光) 是前道晶圆处理中**在每层金属或介电材料沉积后将晶圆表面平坦化**的步骤——若无 CMP,晶圆表面会逐渐出现凸起与凹陷,使后续光刻在先进节点下无法进行。CMP 抛光液 (CMP slurry) 即承担抛光任务的**研磨颗粒 (例如氧化铈、氧化铝、二氧化硅) + 化学反应剂**悬浮液。每个领先工艺节点的每个 CMP 步骤都使用根据下层材料 (Cu、W、介质等) 调谐的不同抛光液化学,且每片晶圆的 CMP 抛光液总消耗量正在迅速上行——伴随 **GAA + BPD (背面供电, backside power delivery) + 先进封装**的演进,野村估计 A16 + BPD 节点 CMP 步骤增量为 +20–30% ([Nomura anchor report, p.6–9](https://www.nomuraconnects.com/asia-tech))。
+
+*分析师观点:* 力森诺科在野村 CMP 抛光液供应商排名表中被点名——「Entegris / Resonac / Versum / Fujimi / 安集 / KC Tech」——但**并非全球第一**;Entegris (并购 CMC Materials 后) 拥有最大合并份额,而中国本土供应商安集 (688019 CH) 与鼎龙 (300054 CH) 正在先进节点上加速份额扩张 ([Nomura sector report Fig.41, 2026-05-21](https://www.nomuraconnects.com/asia-tech))。力森诺科的 CMP 业务是前道材料营收的贡献者,但并非差异化的 AI 业务——AI 逻辑居住在后道 DAF + EMC 堆叠中,而非 CMP 抛光液中。
+
+### 4.5 器件解决方案——HD 介质 + SiC 外延片 (¥122.4 亿日元, 同比 +15%)
+
+该子板块在结构上与半导体与电子材料分部其他业务不同。它包含两个最终产品业务,其消费方并非芯片晶圆厂,而是**下游器件制造商**:
+
+#### 4.5.1 HD 介质 (HDD 铝基板碟片)
+
+力森诺科是**全球最大的独立铝基板 HDD 介质供应商**——即常规硬盘内部存储数据的金属碟片。客户基础本质上只有两个:**西部数据 (HDD 业务,2025-02 Sandisk 分拆后) 与希捷 (Seagate)**。「器件解决方案」子板块 FY2025 营收同比增长 15%,管理层归因于「HD 介质营收因数据中心需求复苏、由稳定的数据中心需求支撑而增长」——AI 时代由超大规模视频与训练数据存储工作负载推动的近线 HDD 需求拐点 ([Resonac FY2025 决算说明会资料, p.10](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf))。
+
+**中文释义 / 通俗解释:** HD 介质 (HDD 硬盘碟片) 是 **HDD 内部的铝合金碟片**,表面涂覆薄磁性膜以存储位 (bit) 数据。每个 HDD 内含 1 至 12 片碟片,取决于容量;近线数据中心 HDD (这是 AI 时代的成长板块) 使用 8–12 片碟片,总驱动容量 32–36 TB。碟片基板精度加工至**亚纳米表面粗糙度**,以便磁头能够在 <10 nm 高度悬浮飞行而不碰撞。力森诺科是两家独立全球供应商之一 (另一家为**古河电气**)。
+
+*分析师观点:* HD 介质是个两极分化的业务。一方面,**超大规模 AI 工作负载需求驱动近线 HDD 出货量大幅复苏**,西部数据与希捷在 FY2024–FY2025 都报告强劲需求。另一方面,**QLC NAND 正在非近线场景中稳步取代 HDD**,长期趋势仍向下。管理层关于 HD 介质的投资组合评估语言 (可考虑分拆 / 出售的独立业务) 与该二元性一致——如果 AI 尾部需求正常化,母公司可在估值峰值时把这个高现金流业务变现。
+
+#### 4.5.2 SiC 外延片
+
+力森诺科是全球前三大**碳化硅 (SiC) 外延片**供应商之一——即在 SiC 衬底上外延生长的 SiC 层,该层成为功率电子器件 (EV 牵引逆变器、快充、工业电机驱动) 的有源层。FY2025 该产品线「因 EV 市场放缓而保持持平」 ([Resonac FY2025 Tanshin, p.4](https://www.resonac.com/sites/default/files/2026-02/e_tanshin2025q4.pdf))——反映了同期影响 SiC 同业 Wolfspeed、II-VI/Coherent 与 onsemi 的更广泛 EV 投资放缓。
+
+**中文释义 / 通俗解释:** SiC 外延片 (SiC 外延片) 是通过 MOCVD 在 6 英寸或 8 英寸 SiC 衬底上生长的薄 (通常 5–15 µm) 单晶 SiC 层,功率半导体器件 (MOSFET、肖特基二极管) 在其上加工。Wolfspeed (Cree)、Coherent、ROHM、意法半导体、英飞凌与力森诺科是 SiC 供应链主要参与者;力森诺科在外延层环节而非衬底环节竞争。SiC 功率器件相比硅 MOSFET 提供**>50% 的开关损耗降低与 3–4 倍的工作频率提升**,因此在 EV 牵引逆变器与 DC 快充中胜出。
+
+### 4.6 化学品 + 移动出行 + 创新使能材料 + Crasus 化学品 (传统业务组合)
+
+这四个分部合计贡献 FY2025 集团营收的约 62%,但净核心营业利润仅约 ¥140 亿日元;在 FY2026 预测中,传统业务组合相对于半导体与电子材料分部基本不贡献增量利润增长。简要描述:
+
+- **化学品 (FY2025 营收 ¥174 亿日元、核心营业损失 ¥5.5 亿日元):** 基础化学品下的工业气体 (CO₂ + 特种工业气体),与石墨子板块下的**石墨电极 + 锂电池负极材料**。石墨电极子业务在 FY2024–FY2025 处于周期性下行 (「石墨电极市场疲软导致销量与价格双降,营收下降、营业损失扩大」),是分部最大的单一拖累 ([Resonac FY2025 Tanshin, p.5; 决算说明会资料 p.13](https://www.resonac.com/sites/default/files/2026-02/e_tanshin2025q4.pdf))。管理层在 Q4-2025 公告「合理化措施」并预期该分部在 FY2026 凭借重组效应和适度终端市场复苏回归 ¥80 亿日元的核心营业利润 ([FY2025 决算说明会资料, p.21, 41](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf))。
+- **移动出行 (¥178 亿日元营收, ¥4.4 亿日元核心营业利润):** 塑料模制品、摩擦材料、粉末冶金、铝特殊部件——昭和电工材料汽车业务的残余传统业务。2026 Q2 日本与泰国汽车塑料件业务退出将显著缩小该分部 ([FY2025 决算说明会资料, p.20](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf))。
+- **创新使能材料 (¥92 亿日元营收, ¥10.4 亿日元核心营业利润):** 功能性树脂、功能化学品、涂料材料、陶瓷——具有 17.6% EBITDA 利润率的盈利特种业务,但营收增长有限。
+- **Crasus 化学品 (¥300 亿日元营收, ¥4.7 亿日元核心营业利润):** 烯烃及衍生物、有机化学品、合成树脂——以大分作为中心的昭和电工传统石化综合体。**计划于 2026 年内部分分拆**,Resonac 在分拆后保留 <20% 股权。
+
+### 4.7 近期产品发布与认可 (过去 12 个月)
+
+- **2025-12-01 — Resonac 获颁「2025 TSMC 优秀业绩奖——卓越技术开发与生产支持」** ("2025 TSMC Excellent Performance Award – Excellent Technology Development and Production Support"),表彰先进封装材料与台湾高纯气体生产本地化的贡献 ([Resonac 新闻稿, 2025-12-01](https://www.resonac.com/news/2025/12/01/3669.html); [TSMC 新闻稿, 2025 Supply Chain Management Forum](https://pr.tsmc.com/english/news/3274))。
+- **2026-04 — 美日下一代半导体封装技术联合研发中心 (US-JOINT) 在硅谷启动**,作为美日封装合作载体,Resonac 为创始工业成员 ([Blackridge Research, 2024](https://www.blackridgeresearch.com/news-releases/resonac-plans-to-build-a-semiconductor-back-end-process-center-in-us); [Resonac 关于 US-JOINT 的企业新闻, 2026-04](https://www.resonac.com/))。
+- **2025-Q4 — 覆铜板与半固化片价格调整**,作为 FY2025 业绩发布会要点之一——在 AI 需求收紧的基板周期上,将投入成本小幅但有意义地转嫁给 AI 基板客户 ([FY2025 决算说明会资料, p.41](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf))。
+- **2025-Q4 — 石墨电极业务合理化措施公告**——石墨子板块的产能削减,包括欧洲场地的封存 ([FY2025 决算说明会资料, p.41](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf))。
+
+![Resonac 半导体与电子材料子板块营收 FY2024 vs FY2025](../../charts/resonac_semi_subsegment.png)
+
+*来源: [Resonac FY2025 决算说明会资料, p.10 — 半导体与电子材料分部摘要, 2026-02-13](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf)。同比增长:后道 +17.0%,器件解决方案 +14.9%,前道 –3.2%,其他 +29.1%。*
