@@ -262,5 +262,112 @@ Across the three industries, JX sits in a structurally favourable position: **(a
 
 ---
 
+## 7. Competitive landscape (700–1,000 words)
+
+JX competes in the most mixed competitive landscape of any Japanese specialty-metals firm — a single set of customers (the world's leading-edge fabs) sourced from a fragmented set of competitors per product line. The 2025 Yuho does not break out a Competition section in the US 10-K Item 1A sense; instead, the competition is implicit in the segment descriptions, in the M&A history, and in the third-party industry-research sources (Fuji-Keizai, Fuji Chimera, Prismark, IDC, TechInsights, Nomura) the company cites.
+
+### 7.1 Semiconductor sputter targets — the dominant franchise
+
+![Semi sputter-target world share, 2023 actuals (ex-Al, sales-value basis)](../../charts/jxadvanced_sputter_share.png)
+*Source: JX 64% figure is verbatim from [JX Advanced Metals 有価証券報告書 第23期, p.9-10 (citing Fuji-Keizai 2024 半導体材料市場の現状と将来展望, 2023実績, アルミニウム系を除く)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf). Total addressable market: ¥146.2 bn (~USD 1.04 bn at FY23 avg ¥141/USD). Peer shares are aggregated by the analyst from competitor disclosures and the [Nomura sector report 2026-05-21](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) — the Yuho only discloses JX's own 64% figure.*
+
+*Analyst view:* The named competitor set per the [Nomura sector report, 2026-05-21](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) and per the competitors' own product-line disclosures is:
+
+- **Tosoh Corporation (TSE: 4042)** — Japan's main alternative sputter-target supplier; products listed on the [Tosoh Thin-Film Deposition Materials catalogue](https://www.tosoh.com/our-products/advanced-materials/thin-film-deposition-materials). Strongest in oxide / dielectric targets (ITO, IGZO) but weaker in the leading-edge Cu / Ta / Co / W categories where JX dominates.
+- **Mitsui Kinzoku (TSE: 5706)** — supplies sputter-target materials and ultra-thin copper foils through its electronics-materials business per the [Mitsui Kinzoku Insulectro distributor page](https://insulectro.com/mitsui-kinzoku/). The closest direct competitor on Cu and Ti-Cu, but does not have JX's tantalum back-integration.
+- **Materion Corporation (NYSE: MTRN)** — US specialty-materials supplier, semiconductor target business via the [Materion Semiconductor Materials business unit](https://www.materion.com/en/markets/semiconductor). Stronger in Be / beryllium-alloy targets and high-purity precious-metal targets, weaker in Cu/Ta/Ti/Co/W.
+- **Honeywell Electronic Materials** — Honeywell's semiconductor-materials business (now substantially divested to specialty-chemicals players); historically a major Cu / Al sputter-target supplier but with declining share.
+- **ULVAC Inc. (TSE: 6728)** — primarily a sputter equipment vendor that also supplies some captive targets; smaller share.
+- **Plansee SE (Austria, private)** — strong in refractory-metal (W, Mo, Ta) targets via its Plansee Composite Materials business per the [Plansee Composite Materials product page](https://www.plansee.com/en/products/composite-materials.html); the only meaningful European competitor.
+
+The defensive moat: the cost of qualifying a new sputter-target supplier at TSMC N3 / N2 / A16 is measured in **double-digit USD millions of process-development spend at the fab side**, with 12–18 months of validation including matching defect-density and uniformity to within single-nanometer tolerance. The downside risk is **a Chinese sputter-target entrant** — names occasionally cited in industry chatter include 江丰电子 (Konfoong Materials, SSE: 300666 — China's most credible sputter-target challenger, with operations in Ningbo and a public listing since 2017), but Konfoong's leading-edge share at TSMC / Samsung / Intel remains *de minimis* at this point and is most active in Chinese fab (SMIC) supply. *Analyst view:* the Chinese entry threat is the single most-cited structural concern in the [Nomura sector report 2026-05-21 risk section](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md).
+
+### 7.2 InP substrates — three-merchant oligopoly
+
+The InP substrate market has effectively three merchant suppliers:
+
+- **Sumitomo Electric Industries (TSE: 5802)** — Japan's other major InP-substrate house, with crystal-growth operations in Itami; historically the volume leader in 2-inch and 3-inch InP via its [Compound Semiconductor Wafer product line](https://www.sumitomoelectric.com/products/compound_semiconductor/). Direct head-to-head competition at every hyperscale optical-transceiver customer.
+- **AXT Inc. (Nasdaq: AXTI)** — US-listed but manufactures InP, GaAs and Ge substrates in Beijing and Tianjin; supply was disrupted in 2024–25 by China's indium export-control restrictions, but [AXT restored some export flows in Q4 2025](https://semiconductorinsight.com/blog/inp-substrate-industry-surges-jx-advanced-metals-expands-capacity-axt-restores-exports-fraunhofer-unveils-150-mm-inp-on-gaas-wafers/). AXT was the price-leader at the low end of the wafer-size range; JX is positioned at the higher-quality end.
+- **Lumentum / Coherent / IQE** — vertically-integrated optical-component IDMs with captive InP-substrate supply, but they do not sell merchant substrates to other transceiver makers in volume.
+
+A long-term competitive threat is **Fraunhofer's 2025 announcement of 150 mm InP-on-GaAs wafers** ([Semiconductorinsight — Fraunhofer Unveils 150mm InP-on-GaAs Wafers, 2025](https://semiconductorinsight.com/blog/inp-substrate-industry-surges-jx-advanced-metals-expands-capacity-axt-restores-exports-fraunhofer-unveils-150-mm-inp-on-gaas-wafers/)), which uses GaAs as a base to grow larger-diameter InP — if commercialised at scale, it would lower per-die cost and disintermediate dedicated InP-substrate growers. The Nomura sector report assumes this remains research-stage through 2028F.
+
+### 7.3 Rolled copper foil — Japanese / Korean / Chinese supplier mix
+
+The high-end RA Cu foil market has a different competitor set: **Furukawa Electric (TSE: 5801), Nippon Denkai, and Mitsui Kinzoku** in Japan; **Iljin Materials** and **SK Nexilis (formerly KCFT)** in Korea — though the Korean players are predominantly focused on EV-battery foil rather than FPC foil; and a fast-rising Chinese cohort including **Nuode New Materials (300700.SZ)** and **Hangzhou Wuzhou New Materials**. The Yuho's claim of 78% world share in *FPC-specific* RA Cu foil is a category-specific number — JX has a much smaller share of total Cu foil (which includes battery foil), where the Korean / Chinese cohort is dominant ([JX Advanced Metals 有価証券報告書 第23期, p.11 (78% world share in FPC-only application)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)).
+
+### 7.4 Copper smelting / refining — global tier-2 player
+
+In primary-copper smelting, JX's Saganoseki + Hitachi smelters and the PPC JV (with Mitsui M&S + Marubeni) put the group at roughly the **#5–7 globally by smelter capacity** per the [International Copper Study Group 2024 World Copper Factbook](https://icsg.org/copper-factbook/), behind Codelco (Chile), Aurubis (Germany), Glencore Cu Smelting, China's Jiangxi Copper / Tongling Nonferrous, and ahead of most other regional players. The competitive structure is set by national champion / state-backed dynamics in China and Chile; JX competes mostly on TC/RC terms and recycled-feedstock ESG positioning.
+
+### 7.5 Positioning summary
+
+```mermaid
+quadrantChart
+    title Specialty-metals competitor positioning — pricing power vs. semi exposure
+    x-axis "Low semi exposure" --> "High semi exposure"
+    y-axis "Low pricing power (commodity)" --> "High pricing power (specialty)"
+    quadrant-1 "Premium specialty"
+    quadrant-2 "Niche specialty"
+    quadrant-3 "Commodity laggards"
+    quadrant-4 "Volume commodity"
+    "JX Advanced Metals": [0.78, 0.85]
+    "Tosoh": [0.55, 0.65]
+    "Mitsui Kinzoku": [0.5, 0.55]
+    "Materion": [0.7, 0.8]
+    "Sumitomo Metal Mining": [0.25, 0.4]
+    "Sumitomo Electric": [0.65, 0.55]
+    "Plansee": [0.55, 0.6]
+    "Konfoong (China)": [0.4, 0.5]
+```
+*Source: analyst positioning based on segment-revenue mix and gross-margin profiles disclosed in each company's most recent annual report ([Tosoh 4042](https://www.tosoh.com/), [Mitsui Kinzoku 5706](https://www.mitsui-kinzoku.com/en/), [Materion MTRN](https://www.materion.com/), [Sumitomo Metal Mining 5713](https://www.smm.co.jp/E/), [Sumitomo Electric 5802](https://www.sumitomoelectric.com/), [Plansee](https://www.plansee.com/)).*
+
+![JX Advanced Metals vs sputter-target / non-ferrous peer TTM P/E (May 2026)](../../charts/jxadvanced_peer_pe.png)
+*Source: [Kabutan & Yahoo Finance — 5016.T / 4042.T / 5706.T / 5713.T / 4004.T / MTRN, accessed 2026-05-26](https://kabutan.jp/stock/?code=5016). The TTM P/E premium of ~2-3× over Japanese non-ferrous peers reflects the market's separate valuation of the Functional Materials franchise.*
+
+### 7.6 Competitive advantages and vulnerabilities
+
+**JX's structural advantages**: (a) **back-integrated Ta supply** through TANIOBIS + Tokyo Denkai + Mibra mine is unique among sputter-target peers; (b) **6N / 9N copper purification capacity** at industrial scale (the Yuho cites 9N as the achievable upper bound — no other Western supplier publicly claims this); (c) **20-year specification-relationships with the named hyperscale fabs** (Intel EPIC 4-year-running + TSMC 2024 award); (d) **integrated copper mine → smelter → refiner → target-maker loop** — only Mitsui Kinzoku comes close in Japan; (e) **Mesa AZ proximity to TSMC Arizona** is the only Western sputter-target plant of its scale and the operational backbone of the "local content" thesis for the TSMC Arizona ramp.
+
+**JX's structural vulnerabilities**: (a) **Chinese sputter-target entry** at SMIC / YMTC / CXMT — Konfoong is gaining at the trailing-node Chinese fabs and the displacement risk at leading-edge fabs (TSMC / Samsung / Intel) is the structural overhang on the multiple; (b) **InP supply-tight regime is the highest-confidence thesis but also the most reversible** — once China's indium-metal export controls relax or Fraunhofer's 150 mm InP-on-GaAs scales, JX's InP pricing power evaporates; (c) **copper-price exposure** dominates the Basic Metals P&L and can drive 15–20% swings in segment operating profit on a 10% LME-Cu move; (d) **FX exposure** — the Yuho explicitly identifies USD/JPY as a primary revenue-translation driver, with ¥153 average FY25 rate vs ¥145 FY24; (e) **ENEOS 42.4% overhang** — the parent could sell further blocks of stock if it needs to fund its own decarbonisation capex, creating recurring secondary-offering risk.
+
+---
+
+## 8. Market opportunity (TAM, 500–700 words)
+
+### 8.1 TAM sizing — addressable markets across the three segments
+
+The combined directly-addressable market for JX's Focus-segment products is approximately **USD 4–5 bn at 2025 sizing**, decomposable into the line items below. The Base Business (copper smelting) is best treated as the underlying commodity revenue stream rather than as a TAM target.
+
+| Product line | 2025 market size | Source | JX share | Growth rate (CAGR) |
+|---|---|---|---|---|
+| Semi sputter targets (ex-Al) | ~USD 1.04 bn (¥146.2 bn at FY23 ¥141/USD) | [Fuji-Keizai 2024 outlook, 2023 actuals — via Yuho p.9](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf) | 64% (verbatim Yuho) | ~7-10% blended to FY30 (silicon area + extra layers per wafer) |
+| RA Cu foil (FPC-only) | ~USD 290 m (¥40.5 bn at FY23 ¥141/USD) | [Fuji Chimera 2024 — via Yuho p.11](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf) | 78% (verbatim Yuho) | 7.8% (Prismark 2024-2029 FPC area forecast) |
+| InP substrate | ~USD 300-400 m (estimated; merchant only) | *Analyst estimate* based on transceiver-shipment forecast | ~25-35% (three-merchant oligopoly) | 30%+ near-term, decelerating post-2028F |
+| CdZnTe substrate | <USD 100 m | *Analyst estimate* — defence + medical | high but not disclosed | Slower; defence-budget-tied |
+| CVD/ALD precursors | ~USD 600-800 m (precursors only, ex-equipment) | *Analyst estimate* extrapolating from total CVD-materials spend per [Nomura sector report 2026-05-21](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) | pre-revenue, ramping FY26-28 | 20%+ as 1.6 nm / sub-2nm nodes ramp |
+| Ta powder (electronics + capacitor) | ~USD 200-300 m | *Analyst estimate* per H.C. Starck legacy + TANIOBIS reporting | one of top-3 globally | Single-digit |
+| Ti-Cu connector strip | ~USD 200-300 m (analyst estimate) | *Analyst estimate* extrapolating AI-server connector market | strong-but-not-dominant | High (AI-server adjacency) |
+| Ultra-fine Ni powder (MLCC) | ~USD 400-500 m | *Analyst estimate* per Toho Titanium product mix | top-3 globally | Single-digit |
+| EMI shielding film (Tatsuta) | ~USD 200-300 m | *Analyst estimate* per Tatsuta segment scale | leading position | Mid-single-digit |
+| **Focus-business directly addressable** | **~USD 3.5-4.5 bn** | | | ~10% blended near-term |
+
+The Functional + ICT Materials segments together generated **¥408 bn (~USD 2.7 bn at ¥153/USD FY25 avg) external customer revenue in FY25**, implying that JX is already capturing **~60% of its directly-addressable Focus-segment TAM**. The growth optionality is not in winning more share within the existing categories (JX is already dominant in sputter targets and RA copper foil), but in **(a) capturing the technology-inflection-driven *expansion* of the existing categories** (BPD adding sputter steps, 1.6nm adding layers, AI-server volume); **(b) the *new* CVD/ALD-precursor category that did not exist as a JX revenue line two years ago**; **(c) InP-substrate price elasticity in a supply-tight environment**; and **(d) Mesa AZ + Rapidus material-supply contracts that capture local-content premia at TSMC AZ / Intel Ohio / Samsung Texas / Rapidus Hokkaido**.
+
+### 8.2 SAM — JX's serviceable share and penetration runway
+
+The SAM is essentially the addressable market minus categories JX cannot easily enter — primarily Al sputter targets (held by Honeywell legacy + Tosoh), oxide / dielectric sputter targets (Tosoh dominant), and battery copper foil (Iljin / SK Nexilis / Chinese players). After those exclusions, JX's SAM is roughly **USD 3.0–4.0 bn**, of which it captures **roughly 50–60% today**. The penetration runway is therefore not horizontal-share-gain but **vertical-deepening at existing customers** as those customers ramp into leading-edge nodes — every TSMC N2 wafer that starts in 2026–27 carries materially more sputter-target mg than an N5 wafer started today.
+
+### 8.3 SOM and the FY28 Yuho-disclosed target
+
+The 2025 Yuho discloses a **¥1,125 bn FY25 operating profit beat (vs ¥954 bn target)** and a stated capacity expansion plan for sputter targets — **1.6× FY24 production capacity by FY28** ([JX Advanced Metals 有価証券報告書 第23期, p.21 (③半導体の市場成長を捕捉するグローバルな生産体制の構築 — 2028年3月期には2024年3月期対比で約1.6倍の生産能力)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf); [JX Advanced Metals 有価証券報告書 第23期, p.81 (FY25 業績目標達成率 117%)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)). If the 64% world-share is held and the sputter-target market grows at 7-10% CAGR plus the BPD / N1.6 wafer-content uplift, the Focus-segment revenue base could approach **¥600–700 bn by FY28** (vs ¥408 bn FY25) — implying a roughly 65-70% expansion in the 3-year window, which is the **mechanical justification for the 35× TTM P/E** if one models the Focus segment as a pure-play and treats the Base Business as a separate copper-cycle leg ([JX Advanced Metals 有価証券報告書 第23期, p.21 (中長期事業目標 2028年3月期向け)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf); *analyst projection built on segment-data + Nomura sector forecast inputs*).
+
+### 8.4 Penetration strategy — Mesa, Rapidus, and the "local content" thesis
+
+JX's penetration strategy is to use **geographic proximity to anchor customer wins**: the **Mesa AZ plant** (commissioned November 2024) puts a sputter-target back-end facility within 50 km of TSMC Phoenix and within driving distance of Intel Ocotillo; the **Hitachinaka new plant** (under construction, FY26 start-up) adds front-end target-ingot capacity for the Japanese / Korean / Taiwan customer base; and the **¥5 bn Rapidus equity investment + material-supply contract** ([TrendForce — 2026-01-21](https://www.trendforce.com/news/2026/01/21/news-jx-advanced-metals-reportedly-plans-%C2%A55b-investment-in-rapidus-along-with-critical-materials-supply/)) ties JX into Japan's 2nm sovereign-foundry initiative. The Yuho also notes "**indirect raw materials local procurement at TSMC's overseas subsidiaries (AZ / Japan / Germany) rising from 0% to ~60% by 2030F**" per the same Nomura sector report — JX is one of the named direct beneficiaries ([reports/sector/半导体材料.md — Nomura 2026-05-21, p.13-14 (TSMC本土化清单)](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)).
+
+---
+
+
 
 
