@@ -263,3 +263,109 @@ RA 铜箔类别的结构性风险是 **被特殊级 ED（电解）铜箔替代**
 在三大行业中，JX 处于结构上有利的位置：**(a) 极高的上游原材料控制**（唯一拥有自有铜矿权益 + 冶炼厂的溅射靶同业）；**(b) 极高的下游客户切换成本**（TSMC N3 合格的溅射靶难以第二来源切换——验证周期 12–18 个月，且承担晶圆厂中断风险）；**(c) 极高进入壁垒**——在 6N / 9N 纯化工艺（全球少数设施拥有电解产能）、RA 铜箔轧制工艺（日立工厂的 RA 铜轧制线是全球仅有的两条具备所需弯折寿命冶金的线之一）、以及 InP 晶体生长（全球仅 3 家商用供应商）；**(d) 中等但上升的监管顺风** 来自来源可追溯和 ESG 采购要求（PCL100/mb / MR100/mb 是商业回应）。JX 在三大业务中唯一处于价格接受者地位的是铜冶炼，但该分部对股权相关利润率贡献最小。
 
 ---
+
+## 7. 竞争格局
+
+JX 处于所有日本特殊金属公司中最复杂的竞争格局——同一组客户（全球领先制程晶圆厂）由分散的产品线竞争对手供应。2025 年 Yuho 没有专门的 Competition 章节（US 10-K Item 1A 意义上的）；竞争分析隐含在分部描述、M&A 历史以及公司引用的第三方行业研究机构（富士经济、富士奇美拉、Prismark、IDC、TechInsights、野村）的来源中。
+
+### 7.1 半导体溅射靶 — 主导特许经营
+
+![半导体溅射靶全球份额, 2023 年实绩 (剔除铝系, 销售额基准)](../../charts/jxadvanced_sputter_share.png)
+*资料来源：JX 64% 数字直引自 [JX Advanced Metals 有価証券報告書 第23期, p.9-10 (引用富士经济 2024 半導体材料市場の現状と将来展望, 2023 年实绩, アルミニウム系を除く)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)。可寻址市场：¥1,462 亿（约合 USD 10.4 亿，按 FY23 平均 ¥141/USD）。同业份额由分析师从竞争对手披露及 [野村 sector report 2026-05-21](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) 汇总——Yuho 只披露 JX 自身的 64%。*
+
+*分析师观点：* 按 [野村 sector report, 2026-05-21](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) 及竞争对手自身产品线披露，点名的竞争对手包括：
+
+- **东曹株式会社 (Tosoh, TSE: 4042)** — 日本主要替代溅射靶供应商；产品列于 [东曹薄膜沉积材料目录](https://www.tosoh.com/our-products/advanced-materials/thin-film-deposition-materials)。在氧化物 / 介电靶（ITO、IGZO）较强，但在 JX 主导的前沿 Cu / Ta / Co / W 类别较弱。
+- **三井金属 (Mitsui Kinzoku, TSE: 5706)** — 通过电子材料业务供应溅射靶材和超薄铜箔，见 [三井金属 Insulectro 分销商页](https://insulectro.com/mitsui-kinzoku/)。Cu 和 Ti-Cu 最直接的竞争者，但缺乏 JX 的钽后向整合。
+- **Materion (NYSE: MTRN)** — 美国特殊材料供应商，半导体靶业务通过 [Materion 半导体材料业务部](https://www.materion.com/en/markets/semiconductor)。在 Be / 铍合金靶和高纯度贵金属靶较强，在 Cu/Ta/Ti/Co/W 较弱。
+- **霍尼韦尔电子材料 (Honeywell Electronic Materials)** — 霍尼韦尔半导体材料业务（大部分已剥离给特殊化学品公司）；历史上是主要 Cu / Al 溅射靶供应商，但份额持续下降。
+- **ULVAC Inc. (TSE: 6728)** — 主要是溅射设备供应商，也供应一些内部靶材；份额较小。
+- **Plansee SE（奥地利，私营）** — 通过 Plansee Composite Materials 业务在难熔金属（W、Mo、Ta）靶较强，见 [Plansee — 溅射靶产品页](https://www.plansee.com/en/products/components/sputtering-targets.html)；欧洲唯一有意义的竞争者。
+
+防御性护城河：在 TSMC N3 / N2 / A16 上认证新溅射靶供应商的成本以 **晶圆厂端双位数百万美元的工艺开发支出** 衡量，12–18 个月的验证包括将缺陷密度和均匀性匹配到单纳米精度。下行风险是 **中国溅射靶进入者**——业内偶尔提及的名字包括 **江丰电子 (Jiangfeng Konfoong Materials, SSE: 300666)** — 中国最有可信度的溅射靶挑战者，宁波运营基地，2017 年公开上市——但江丰在 TSMC / 三星 / 英特尔上的前沿份额至今 *微不足道*，主要活跃于中国大陆晶圆厂 (SMIC) 供应。*分析师观点：* 中国进入威胁是 [野村 sector report 2026-05-21 风险章节](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) 提及最多的结构性担忧。
+
+### 7.2 InP 衬底 — 三家商用寡头
+
+InP 衬底市场实际仅有三家商用供应商：
+
+- **住友电气工业 (Sumitomo Electric Industries, TSE: 5802)** — 日本另一家主要 InP 衬底厂家，伊丹的晶体生长业务；历史上在 2 英寸和 3 英寸 InP 的量产领导者，通过其 [化合物半导体 / InP 晶圆产品线](https://global-sei.com/products/csc/csc_a.html)。在所有超大规模光模块客户处与 JX 直接对垒。
+- **AXT Inc. (Nasdaq: AXTI)** — 美国上市但在北京和天津制造 InP、GaAs 和 Ge 衬底；2024–25 年因中国铟出口管制供应受扰，但 [AXT 2025 年第四季度恢复部分出口](https://semiconductorinsight.com/blog/inp-substrate-industry-surges-jx-advanced-metals-expands-capacity-axt-restores-exports-fraunhofer-unveils-150-mm-inp-on-gaas-wafers/)。AXT 是较小尺寸晶圆的价格领导者；JX 定位于更高质量端。
+- **Lumentum / Coherent / IQE** — 垂直整合的光学元器件 IDM，自带 InP 衬底供应，但不大规模对外销售商用衬底。
+
+长期竞争威胁是 **Fraunhofer 2025 年宣布的 150 mm InP-on-GaAs 晶圆**（[Semiconductorinsight — Fraunhofer Unveils 150mm InP-on-GaAs Wafers, 2025](https://semiconductorinsight.com/blog/inp-substrate-industry-surges-jx-advanced-metals-expands-capacity-axt-restores-exports-fraunhofer-unveils-150-mm-inp-on-gaas-wafers/)），利用 GaAs 作为基底生长更大直径 InP——若大规模商业化，将降低每芯片成本，并使专用 InP 衬底厂商被中间化掉。野村 sector report 假设这一技术到 2028F 仍处于研究阶段。
+
+### 7.3 压延铜箔 — 日本 / 韩国 / 中国供应商组合
+
+高端 RA 铜箔市场的竞争对手集合不同：日本 **古河电气 (TSE: 5801)、日本电解、三井金属**；韩国 **Iljin Materials** 和 **SK Nexilis (原 KCFT)**——韩国企业主要专注于 EV 电池铜箔而非 FPC 铜箔；以及一批快速崛起的中国厂商，包括 **诺德新材料 (300700.SZ)** 和 **杭州五州新材料**。Yuho 关于 *FPC-only* RA 铜箔 78% 全球份额的主张是类别特定的——JX 在整体铜箔市场（包括电池铜箔）的份额小得多，韩国 / 中国对手在该处占主导（[JX Advanced Metals 有価証券報告書 第23期, p.11 (FPC-only 应用 78% 全球份额)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。
+
+### 7.4 铜冶炼 / 精炼 — 全球第二梯队
+
+在原铜冶炼上，JX 的佐贺关 + 日立冶炼厂和 PPC 合资公司（与三井金属 + 丸红）按 [国际铜研究小组 2024 World Copper Factbook](https://icsg.org/copper-factbook/) 大约位列 **全球冶炼产能第 5-7 位**，落后于 Codelco（智利）、Aurubis（德国）、Glencore 铜冶炼业务、中国江西铜业 / 铜陵有色，领先于大多数其他区域厂家。竞争结构由中国和智利的国家冠军 / 国资支持公司主导；JX 主要在 TC/RC 条款和回收原料 ESG 定位上竞争。
+
+### 7.5 定位总结
+
+```mermaid
+quadrantChart
+    title 特殊金属竞争对手定位 — 定价能力 vs 半导体敞口
+    x-axis "低半导体敞口" --> "高半导体敞口"
+    y-axis "低定价能力 (大宗)" --> "高定价能力 (特殊)"
+    quadrant-1 "高端特殊"
+    quadrant-2 "细分特殊"
+    quadrant-3 "大宗滞后者"
+    quadrant-4 "大宗规模"
+    "JX Advanced Metals": [0.78, 0.85]
+    "东曹 Tosoh": [0.55, 0.65]
+    "三井金属": [0.5, 0.55]
+    "Materion": [0.7, 0.8]
+    "住友金属矿山": [0.25, 0.4]
+    "住友电气": [0.65, 0.55]
+    "Plansee": [0.55, 0.6]
+    "江丰 (中国)": [0.4, 0.5]
+```
+*资料来源：分析师根据各公司最新年报披露的分部营收构成与毛利率特征进行定位（[东曹 4042](https://www.tosoh.com/)、[三井金属 5706](https://www.mitsui-kinzoku.com/en/)、[Materion MTRN](https://www.materion.com/)、[住友金属矿山 5713](https://www.smm.co.jp/E/)、[住友电气 5802](https://www.sumitomoelectric.com/)、[Plansee](https://www.plansee.com/)）。*
+
+![JX Advanced Metals 与溅射靶 / 非铁同业 TTM P/E 对比 (2026 年 5 月)](../../charts/jxadvanced_peer_pe.png)
+*资料来源：[Kabutan 与 Yahoo Finance — 5016.T / 4042.T / 5706.T / 5713.T / 4004.T / MTRN, 2026-05-26](https://kabutan.jp/stock/?code=5016)。相对日本有色同业 ~2-3 倍的 TTM P/E 溢价反映市场对 Functional Materials 特许经营的独立重估。*
+
+### 7.6 竞争优势与脆弱性
+
+**JX 的结构性优势**：(a) **后向整合的 Ta 供应**（经由 TANIOBIS + 东京电解 + Mibra 矿）在溅射靶同业中独此一家；(b) **工业规模的 6N / 9N 铜纯化产能**（Yuho 引用 9N 为可达上限——任何其他西方供应商未公开声称达到此水平）；(c) **与点名超大规模晶圆厂的 20 年规格关系**（英特尔 EPIC 四年连续 + TSMC 2024 年奖项）；(d) **铜矿 → 冶炼 → 精炼 → 靶材厂的整合闭环**——日本唯一接近的是三井金属；(e) **Mesa AZ 邻近 TSMC 亚利桑那** 是唯一同规模的西方溅射靶工厂，也是 TSMC 亚利桑那量产 "本地内容" 论点的运营基础。
+
+**JX 的结构性脆弱性**：(a) **中国溅射靶进入** 在 SMIC / YMTC / CXMT——江丰在中国大陆尾随节点晶圆厂正在抢占份额，对领先制程晶圆厂（TSMC / 三星 / 英特尔）的替代风险是估值倍数的结构性悬挂；(b) **InP 供应紧张状态最高确信度但也最可逆转**——一旦中国放松铟金属出口管制或 Fraunhofer 150 mm InP-on-GaAs 加速规模化，JX 的 InP 定价能力将蒸发；(c) **铜价敞口** 主导 Basic Metals P&L，可以驱动 LME-Cu 10% 涨跌引发 15-20% 分部营业利润波动；(d) **汇率敞口**——Yuho 明确将 USD/JPY 列为主要营收换算驱动因素，FY25 平均 ¥153，FY24 平均 ¥145；(e) **ENEOS 42.4% 悬挂**——母公司可能进一步出售股票为自身脱碳资本开支提供资金，形成持续的二次发行风险。
+
+---
+
+## 8. 市场机会 (TAM)
+
+### 8.1 TAM 规模 — 三大分部的可寻址市场
+
+JX 重点业务产品的合并直接可寻址市场约为 **2025 年规模 USD 40-50 亿**，可拆分为下表各条目。基础业务（铜冶炼）最好作为底层商品营收流而非 TAM 目标处理。
+
+| 产品线 | 2025 年市场规模 | 资料来源 | JX 份额 | 增长率 (CAGR) |
+|---|---|---|---|---|
+| 半导体溅射靶 (剔除 Al) | ~USD 10.4 亿 (¥1,462 亿 按 FY23 ¥141/USD) | [富士经济 2024 outlook, 2023 年实绩 — 引用见 Yuho p.9](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf) | 64% (直引 Yuho) | ~7-10% 复合 至 FY30 (硅面积 + 单晶圆层数增加) |
+| RA 铜箔 (仅 FPC) | ~USD 2.9 亿 (¥405 亿 按 FY23 ¥141/USD) | [富士奇美拉 2024 — 引用见 Yuho p.11](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf) | 78% (直引 Yuho) | 7.8% (Prismark 2024-2029 FPC 面积预测) |
+| InP 衬底 | ~USD 3-4 亿 (估算；仅商用) | *分析师估算* 基于光模块出货预测 | ~25-35% (三家商用寡头) | 短期 30%+，2028F 后减速 |
+| CdZnTe 衬底 | <USD 1 亿 | *分析师估算* — 国防 + 医疗 | 高但未披露 | 较慢；与国防预算挂钩 |
+| CVD/ALD 前驱体 | ~USD 6-8 亿 (仅前驱体，不含设备) | *分析师估算* 由 [野村 sector report 2026-05-21](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) CVD 材料总支出推算 | 尚无收入，FY26-28 启动 | 20%+ 随 1.6 nm / sub-2nm 节点量产 |
+| Ta 粉末 (电子 + 电容) | ~USD 2-3 亿 | *分析师估算* 来自 H.C. Starck 历史和 TANIOBIS 报告 | 全球前三 | 单位数 |
+| Ti-Cu 连接器条带 | ~USD 2-3 亿 (分析师估算) | *分析师估算* 由 AI 服务器连接器市场推算 | 强但非主导 | 高 (AI 服务器相邻) |
+| 超细 Ni 粉 (MLCC) | ~USD 4-5 亿 | *分析师估算* 来自东邦钛产品组合 | 全球前三 | 单位数 |
+| EMI 屏蔽膜 (Tatsuta) | ~USD 2-3 亿 | *分析师估算* 来自 Tatsuta 分部规模 | 领先地位 | 中单位数 |
+| **重点业务直接可寻址** | **~USD 35-45 亿** | | | 短期内 ~10% 复合 |
+
+Functional + ICT Materials 分部合并 FY25 实现 **¥4,083 亿 (~USD 27 亿，按 FY25 平均 ¥153/USD) 对外客户营收**，意味着 JX 已经捕获其 **直接可寻址重点业务 TAM 约 60%**。增长可选性不在现有类别内继续抢份额（JX 在溅射靶和 RA 铜箔中已占主导），而在 **(a) 捕获技术拐点带来的现有类别 *扩张***（BPD 增加溅射步骤、1.6nm 增加层数、AI 服务器销量）；**(b) 两年前还不是 JX 营收线的 *新的* CVD/ALD 前驱体类别**；**(c) 供应紧张环境下的 InP 衬底价格弹性**；**(d) Mesa AZ + Rapidus 材料供应合同捕获 TSMC AZ / Intel Ohio / 三星 Texas / Rapidus 北海道的本地内容溢价**。
+
+### 8.2 SAM — JX 可服务份额和渗透跑道
+
+SAM 本质上是可寻址市场减去 JX 难以进入的类别——主要是 Al 溅射靶（霍尼韦尔遗留 + 东曹掌握）、氧化物 / 介电溅射靶（东曹主导）和电池铜箔（Iljin / SK Nexilis / 中国厂商）。排除这些后，JX 的 SAM 约 **USD 30-40 亿**，目前捕获 **约 50-60%**。渗透跑道因此不是横向份额抢占，而是 **现有客户内的垂直深化**——每片 TSMC N2 晶圆 2026-27 年开始量产，其携带的溅射靶用量比今日量产的 N5 晶圆显著增加。
+
+### 8.3 SOM 与 FY28 Yuho 披露的目标
+
+2025 年 Yuho 披露 **FY25 营业利润超目标 ¥1,125 亿 (vs 目标 ¥954 亿)** 和溅射靶产能扩张计划——**FY28 达到 FY24 产能的 ~1.6 倍**（[JX Advanced Metals 有価証券報告書 第23期, p.21 (③半導体の市場成長を捕捉するグローバルな生産体制の構築 — 2028年3月期には2024年3月期対比で約1.6倍の生産能力)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)；[JX Advanced Metals 有価証券報告書 第23期, p.81 (FY25 業績目標達成率 117%)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。如果 64% 全球份额保持，溅射靶市场以 7-10% CAGR 增长加上 BPD / N1.6 单晶圆用量提升，重点业务营收基础到 FY28 可接近 **¥6,000-7,000 亿**（vs FY25 ¥4,083 亿）——意味着 3 年窗口内约 65-70% 扩张，这是把重点业务视作纯增长股、基础业务视作独立铜周期支腿时，35 倍 TTM P/E 的 **机械性合理化依据**（[JX Advanced Metals 有価証券報告書 第23期, p.21 (中長期事業目標 2028年3月期向け)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)；*分析师以分部数据 + 野村 sector 预测输入构建的推断*）。
+
+### 8.4 渗透策略 — Mesa、Rapidus 与 "本地内容" 论点
+
+JX 的渗透策略是通过 **地理邻近性锚定客户胜出**：**Mesa AZ 工厂**（2024 年 11 月投产）将溅射靶后段设施置于距 TSMC 凤凰城 50 公里、距英特尔 Ocotillo 驾车距离内；**常陆那珂新工厂**（在建，FY26 启动）为日本 / 韩国 / 台湾客户基础新增前段靶坯锭产能；**Rapidus 的 ¥50 亿股权投资 + 材料供应合同**（[TrendForce — 2026-01-21](https://www.trendforce.com/news/2026/01/21/news-jx-advanced-metals-reportedly-plans-%C2%A55b-investment-in-rapidus-along-with-critical-materials-supply/)）将 JX 与日本 2nm 主权晶圆厂倡议绑定。Yuho 还提到 "**TSMC 海外子公司间接原材料本地采购（亚利桑那 / 日本 / 德国）从 0% 升至 2030F ~60%**"，依据是同一野村 sector report——JX 是被点名的直接受益方之一（[reports/sector/半导体材料.md — 野村 2026-05-21, p.13-14 (TSMC 本土化清单)](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)）。
+
+---
