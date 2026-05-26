@@ -283,3 +283,121 @@ The 10-K calls out three regulatory pressure points. **First, PFAS regulation**:
 
 **Third, tariff exposure**: the 10-K names *"The impact of tariffs and a volatile trade environment"* — particularly relevant as the US administration's 2025 tariff stack adds layered cost pressure across global supply chains ([Entegris 2025 10-K, Risk Factors](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). Entegris's mitigation is regional production: CMP slurries are made in Taiwan, FOUPs in Korea and Minnesota, filters in Japan and Massachusetts — so the Company can typically serve a regional customer from a regional plant.
 
+## 7. Competitive Landscape
+
+### 10-K-anchored competitor list (verbatim)
+
+Section 1 of the FY25 10-K (Item 1 Business) names the Company's principal competitors directly. The list is reproduced below — every name pulled verbatim from the Competition discussion, with the segment they primarily overlap noted in brackets:
+
+- **Pall Corporation (part of Danaher Corporation)** — APS (liquid + gas filtration)
+- **EMD Performance Materials division of Merck KGaA** — both segments (CMP slurry, deposition precursors, formulated chemistries; this was the former Versum Materials business that Merck KGaA acquired in 2019)
+- **Shin-Etsu Polymer Co. Ltd.** — APS (wafer carriers / FOUPs)
+- **Qnity Electronics, Inc.** — both segments (this is the DuPont electronics-and-industrial spin-off that completed in late 2025, carrying DuPont's CMP pads, photoresists, and other electronic-materials businesses)
+- **Cobetter Filtration** — APS (China-domestic filter membranes)
+- **Electronics Advanced Materials division of Air Liquide** — MS (specialty gases, precursors, formulated chemistries)
+- **Gudeng Precision Industrial** — APS (Taiwan FOUP supplier)
+- **Linde plc** — MS (specialty gases, deposition precursors)
+- **Aicello Corporation** — APS (Japanese FOUP / packaging — smaller scale)
+- **Anji Microelectronics (Shanghai) Co., Ltd** — MS (CMP slurry — leading China challenger)
+- **Mersen** — APS (graphite components and engineered materials)
+
+Source: [Entegris 2025 10-K, Item 1 — Competition](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm). Note: the absence of certain expected names — Resonac (Showa Denko), Fujimi Incorporated, Dinglong, KC Tech, Soulbrain — is meaningful and reflects either (a) competition only at specific narrow product categories or (b) regional-only overlap. Those names appear elsewhere in industry analyst coverage and are added below with appropriate sourcing.
+
+### Category-by-category positioning
+
+**CMP slurry.** Per the Nomura "Greater China Semi" 2026-05-21 anchor report's Fig. 41 (the global CMP slurry league table for 2025), the named participants are: **Entegris (CMC heritage), Resonac, Versum (Merck KGaA / EMD), Fujimi Incorporated, Anji Microelectronics, KC Tech, Soulbrain, and other regional players** ([sector note](../../sector/半导体材料.md)). *Analyst view:* Entegris is positioned as the global market-leader in CMP slurry post-CMC; third-party trackers like Cognitive Market Research and the Nomura report both put the company at the top of the league table, with Resonac and Fujimi at second and third on global revenue. Anji and Dinglong are the rapidly-growing China challengers at mature and trailing-edge nodes; at leading-edge logic (sub-10nm) Entegris and Resonac remain the dominant qualified suppliers, with Anji approaching qualification on 7nm copper at major Chinese customers as of 2025-26 ([sector note citing Nomura "Greater China Semi" p. 130, 2026-05-21](../../sector/半导体材料.md)).
+
+**CMP pads.** The historic global leader is DuPont with the **IC1000™ pad family** — the workhorse pad qualified across virtually every advanced-logic fab globally for two decades ([DuPont Electronics & Industrial — CMP page](https://www.dupont.com/electronics-industrial/cmp-pads.html)). Entegris (via the CMC Materials acquisition) is the credible #2, with the **Epic™ pad family**. **Fujibo Holdings, JSR Corporation, and 3M** complete the historic Western/Japanese set; **Dinglong** has emerged as the leading China-domestic supplier (Nomura ranks Dinglong as taking material share at memory fabs and approaching qualification at SMIC's advanced-logic line). *Analyst view:* In pads, Entegris is structurally #2 globally — closer to a 20-30% share versus DuPont's ~40-50% per the Nomura league table — but the bundle moat (Epic pad + matched CMC slurry + IntelliPolish process control) is meaningfully better than DuPont's stand-alone pad offering ([sector note](../../sector/半导体材料.md), Nomura "Greater China Semi" Fig. 42).
+
+**FOUPs and EUV reticle pods.** Direct competitors per the 10-K are **Shin-Etsu Polymer Co. Ltd., Gudeng Precision Industrial, and Aicello Corporation** ([Entegris 2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). Third-party trackers credit Entegris with the largest single-supplier share of the 300mm FOUP market globally; Shin-Etsu Polymer dominates in Japan; Gudeng dominates in Taiwan ([FOUP carrier market research, 2025-2031](https://reports.valuates.com/market-reports/QYRE-Auto-3K10126/global-foup-and-fosb)). *Analyst view:* Entegris is the global market leader in FOUPs and effectively sole-source on EUV reticle pods at TSMC, Samsung, and Intel's EUV fabs — this is the highest-moat franchise in the entire portfolio, with a 25+ year history and patent estate originating in the Fluoroware-Empak heritage.
+
+**Liquid + gas filtration.** Direct competitors per the 10-K are **Pall Corporation** (part of Danaher) and **Cobetter Filtration** (China). *Analyst view:* Pall is the historic global leader across industrial filtration, but Entegris is dominant specifically in semiconductor liquid filtration (the photoresist-dispense use case) where the integration with IntelliGen® dispense systems is the differentiator. Cobetter is the credible China challenger pursuing import substitution at SMIC, YMTC, and CXMT. The PFA-membrane chemistry barrier is real — even Pall has struggled to displace Entegris at advanced-node litho cells.
+
+**Specialty gases (CVD / ALD precursors + implant gases).** Direct competitors per the 10-K are **EMD Performance Materials, Air Liquide's Advanced Materials division, and Linde plc** ([Entegris 2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)). *Analyst view:* This is the most-contested category. The industrial-gas majors (Air Liquide, Linde, formerly Praxair, now part of Linde post-2018 merger) have larger gas-distribution networks and lower bulk-gas costs; Entegris's edge is in the ATMI-heritage SDS® safe-delivery technology for hazardous implant gases and in custom precursor synthesis for new-node deposition (the Mo precursor is a leading example). In implant gases specifically, the SDS franchise approaches sole-source at most major fabs.
+
+```mermaid
+quadrantChart
+    title Semi-Materials Competitive Positioning (Breadth × Leading-Edge Capability)
+    x-axis Narrow Product Breadth --> Broad Product Breadth
+    y-axis Trailing-Edge Focus --> Leading-Edge Focus
+    quadrant-1 Leading-Edge Specialists
+    quadrant-2 Leading-Edge Broadliners
+    quadrant-3 Trailing-Edge Narrow
+    quadrant-4 Trailing-Edge Broad
+    Entegris: [0.85, 0.85]
+    Merck/EMD: [0.75, 0.7]
+    Resonac: [0.55, 0.65]
+    Air Liquide AM: [0.4, 0.6]
+    Linde: [0.4, 0.5]
+    Pall (Danaher): [0.3, 0.5]
+    DuPont/Qnity: [0.45, 0.7]
+    Anji: [0.2, 0.45]
+    Dinglong: [0.35, 0.4]
+    Shin-Etsu Polymer: [0.2, 0.65]
+    Gudeng: [0.15, 0.5]
+```
+
+### Entegris's structural advantages
+
+The Company's competitive position rests on five tangible advantages, each anchored to a specific product family discussed in Section 4:
+
+1. **Breadth-with-integration.** No other materials supplier offers slurry + pad + post-CMP clean + slurry filter + dispense system + FOUP from a single qualified supplier. The CMC acquisition was specifically about adding the slurry/pad piece to complete the bundle. This breadth lets Entegris pitch single-vendor optimization to fab CMP operations — a real value-prop in yield ramp.
+
+2. **Litho-cell filtration franchise.** Two decades of co-development with the world's three or four photoresist makers (Tokyo Ohka, JSR, Shin-Etsu Chemical, Sumitomo) have produced filter membrane chemistries and IntelliGen® dispense kinetics that are difficult to replicate at sub-nanometer particle tolerance. The advanced-node litho-cell is the most defended category.
+
+3. **SDS® safe-delivery in ion implant.** The ATMI-heritage SDS technology approaches sole-source status at every major fab's implant operation. EHS approval cycles create switching costs measured in years.
+
+4. **EUV reticle pod near-monopoly.** The vacuum-transfer EUV reticle pod is qualified at TSMC, Samsung, and Intel; no competitor has equivalent qualification. As High-NA EUV ramps in 2027-28, this franchise grows directly with the EUV mask install base.
+
+5. **Molybdenum-workflow integration.** Entegris is one of very few suppliers with the complete Mo workflow — precursor + deposition filter + Mo etch chemistry + Mo CMP slurry + Mo post-CMP clean. As Mo replaces W in sub-3nm logic and advanced NAND, this is the structurally new advantage that materializes through 2026-28.
+
+### Entegris's competitive vulnerabilities
+
+Three structural vulnerabilities are worth naming explicitly:
+
+1. **China-domestic substitution at mature nodes.** Anji Microelectronics, Dinglong, Cobetter, Sino-American Silicon Products (SAS) and others are systematically targeting Entegris's revenue at Chinese mature-node fabs (28nm and above). The economic logic is simple: Chinese fabs face escalating US export-control risk if they remain reliant on US-domiciled suppliers, and the China government has explicit import-substitution incentive programs. Entegris's mature-node revenue from China is at structural risk over 5-7 years; the leading-edge revenue is more defensible.
+
+2. **Slurry commoditization at trailing-edge.** CMP slurry chemistry for mature nodes (oxide, tungsten, copper at 28nm and above) is increasingly commoditized — the technical differentiation that justified Cabot Microelectronics' historical premium pricing is narrower at trailing-edge than at leading-edge. Anji and Dinglong are competitive on price at these nodes.
+
+3. **Concentration on TSMC.** TSMC at 16% of net sales is both an advantage (TSMC's share-of-foundry is rising, which compounds Entegris's growth) and a single-point risk (a TSMC inventory cycle, a TSMC qualification setback at A16, or a major TSMC customer loss directly hits Entegris).
+
+## 8. Market Opportunity (TAM)
+
+### Sized TAM and the Entegris-addressable slice
+
+The global semiconductor materials market reached **$73.2 billion in 2025**, of which **Wafer Fab Materials was $45.8 billion (62.6% of total)** and Packaging Materials was the balance ([SEMI press release, 2026-05-12](https://www.semi.org/en/semi-press-release/global-semiconductor-materials-market-revenue-reaches-record-73.2-billion-dollars-in-2025-semi-reports)). Entegris's FY25 net sales of $3,196.6M imply a global share of approximately **4.4% of total semiconductor materials, or ~7% of Wafer Fab Materials** — a meaningful but not dominant share of a fragmented industry where the largest single supplier (likely Shin-Etsu Chemical, the silicon wafer leader) sits at ~12% of materials globally.
+
+![Semi materials TAM](../../charts/entegris_tam.png)
+
+*Source: 2021-2025 actuals from [SEMI MMDS press releases](https://www.semi.org/en/semi-press-release/global-semiconductor-materials-market-revenue-reaches-record-73.2-billion-dollars-in-2025-semi-reports); 2026-2028 forecast extrapolated at SEMI's ~8% CAGR consistent with the implied ramp from advanced-node + AI demand. Wafer Fab Materials share of total holds around 62-65%.*
+
+### Serviceable Available Market — Entegris's specific category exposures
+
+Within the ~$45.8B Wafer Fab Materials market, Entegris's product portfolio specifically addresses (approximate share-of-WFM and Entegris's share-of-each):
+
+- **CMP consumables (slurry + pad + clean + filter)** ≈ $4.5–5.0B (10–11% of WFM per Nomura's 7% slurry + ancillary pad/clean). Entegris is the global leader at ~30-35% combined share ([sector note](../../sector/半导体材料.md), Nomura "Greater China Semi" Fig. 41-42).
+- **Wafer carriers / FOUPs / reticle pods** ≈ $1.0–1.5B globally per third-party trackers ([FOUP carrier market research, 2025-2031](https://reports.valuates.com/market-reports/QYRE-Auto-3K10126/global-foup-and-fosb)); Entegris at ~30-40% share. EUV reticle pod sub-category is a small but rapidly-growing slice within this.
+- **Liquid + gas process filtration** ≈ $3–4B globally; Entegris is one of the top 2 globally (with Pall/Danaher).
+- **Deposition precursors (CVD, ALD, PVD)** ≈ $3.5–4.5B globally and growing fastest at advanced nodes; Entegris is in the top 5 with EMD/Merck, Air Liquide, Linde, ASM Microelectronic Chemicals (a subsidiary of ASMI), and others.
+- **Ion implant gases (SDS-delivered + bulk)** ≈ $0.5–1.0B globally; Entegris near-sole-source at major fabs through the SDS franchise.
+- **Specialty etch + clean formulations** ≈ $2–3B globally; Entegris is a top-5 player with EMD/Merck, Versum, Showa Denko, and Dinglong.
+- **Chemical handling (IntelliGen, valves, drums, packaging)** ≈ $1.5–2B globally; Entegris is the leader.
+
+Sum of Entegris-addressable categories ≈ **~$16-20B** — implying Entegris's $3.2B revenue represents roughly **17-20% of its serviceable available market** in 2025. This is the headline TAM number that frames the long-term growth case: the runway to grow share in adjacent categories (deposition precursors, ALD chemistry, etch formulations) plus the absolute TAM expansion in leading-edge consumables compounds.
+
+### Growth math — 2026 to 2028
+
+The 2026E-2028E forecast in the chart above implies global semiconductor materials growing from $73.2B to ~$93B over three years — a **8.4% CAGR**, blending Wafer Fab Materials at ~10% and Packaging at ~5-6%. Within Entegris's footprint, CMP consumables (slurry + pad) is one of the highest-growth sub-categories at ~7-9% CAGR driven by step-count expansion at A16 / N2 / 1.6nm logic and 400-layer NAND ([sector note](../../sector/半导体材料.md), citing Nomura "Greater China Semi" p. 8). Deposition precursors at advanced nodes (Mo, ALD chemistries) is the highest-growth sub-category at 10-12% CAGR — and is the structural new tailwind specifically called out in management's recent earnings commentary ([ENTG Q4-FY25 Earnings 8-K, 2026-02-10](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000009/entgq42025ex991.htm)).
+
+The headline takeaway: Entegris's TAM is real, growing, and the company has identifiable share-gain opportunities in deposition precursors and CMP that should let revenue compound at the high end of the materials industry's growth rate through 2028. Whether the stock multiple ($35× forward P/E) is justified by that growth depends largely on whether the deposition-precursor and Mo-workflow stories deliver on the timeline management has implied.
+
+### Penetration strategy
+
+The Company has three identifiable share-gain levers for the 2026-2028 window:
+
+1. **Cross-sell CMC slurry/pad customers into Entegris filtration + dispense.** Three years post-CMC, this has been the explicit revenue-synergy thesis. Management has not quantified achieved revenue synergies in a clean way (only run-rate cost synergies of $75M-class were specified at deal announcement, and these have been broadly achieved per the segment reporting), but the integration story is most visible in the breadth-of-bundle pitch to advanced-node CMP customers.
+
+2. **Win the molybdenum workflow.** As Mo replaces W in advanced logic contacts/word-lines and in DRAM/NAND interconnects, Entegris's complete Mo-precursor + Mo-etch + Mo-CMP-slurry + Mo-clean offering becomes the path-of-least-friction qualification choice for fabs that don't want to manage five separate suppliers for one new metal system. This is the highest-priority strategic priority management calls out in the 10-K Industry Trends discussion.
+
+3. **EUV reticle-pod franchise expansion.** As High-NA EUV ramps at TSMC's 1.6nm (~2028F per Nomura), the EUV reticle-pod install base expands materially. Entegris's near-sole-source position translates directly into incremental revenue with very high incremental margins.
+
