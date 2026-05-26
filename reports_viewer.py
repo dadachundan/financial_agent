@@ -144,7 +144,10 @@ def _parse(rel_path: Path) -> dict:
             stem = stem[: -len(suf)]
             break
     else:
-        if "_研究报告_" in stem or "_公司研究_" in stem:
+        # Filenames use the Chinese research marker as a suffix (e.g. `<Slug>_公司研究.md`)
+        # or, rarely, as a middle component (`<Slug>_公司研究_2026-05-25.md`).
+        # Match both — substring without trailing underscore, OR endswith of the marker.
+        if any(stem.endswith(m) or f"{m}_" in stem for m in ("_研究报告", "_公司研究")):
             lang = "zh"
 
     # Pair key: same bucket + same slug + same kind, regardless of marker/lang.
