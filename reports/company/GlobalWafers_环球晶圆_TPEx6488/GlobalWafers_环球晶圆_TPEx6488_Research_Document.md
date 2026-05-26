@@ -96,3 +96,138 @@ Hsu was born in 1962 in Taiwan, holds a BA in foreign languages and literature f
 
 *Analyst view:* Hsu is one of the defining figures in Taiwan's last decade of cross-border industrial M&A, alongside ASE's Tien Wu, eMemory's C.C. Chang, and Vanguard's Leuh Fang. Almost every consequential decision in GWC's last 14 years — the SunEdison integration, the Siltronic pivot, the Sherman build-out, the CHIPS Act negotiation, the customer-relationship architecture covering TSMC / Samsung / Micron / Intel — bears her personal stamp. The corollary is **key-person risk**: at 63 she has not publicly named a successor, and the company has not disclosed a COO or Vice Chair pipeline (further detail in §9.1). For investors underwriting the 2027-28 inflection, succession is one of the more uncomfortably under-disclosed elements of the bull case.
 
+## 4. Products & Services
+
+The 2024 GWC Annual Report (Chapter 2, Business Overview) organizes the product matrix into **five primary wafer categories plus two value-added services**, indexed on the two axes of fabrication process (wafer type) and diameter. The table below consolidates the annual-report disclosure with the categories described on GWC's corporate website.
+
+### 4.1 Product matrix
+
+| Wafer Type | Diameters | Primary applications | Process signature |
+|---|---|---|---|
+| **Polished Wafer** | 4"–12" (100–300 mm) | Logic / Memory / Foundry / IDM | Ingot growth → slicing → edge profiling → lapping → etching → double-side polishing → cleaning |
+| **Epitaxial Wafer (Epi)** | 4"–12" (100–300 mm) | Advanced-logic foundry (TSMC / Samsung), CIS, power devices | CVD-grown ultra-pure single-crystal layer (1–100 µm) on a polished substrate |
+| **Diffusion Wafer** | 4"–8" (100–200 mm) | Power discretes / diodes / thyristors | High-temperature phosphorus or boron diffusion in a furnace |
+| **Annealed Wafer** | 8"–12" | High-end DRAM / HBM / NAND | 1,100-1,200 °C hydrogen-ambient anneal to eliminate Crystal Originated Particles (COP) |
+| **SOI Wafer** | 8"–12" (200–300 mm) | RF (5G / Wi-Fi), FD-SOI, imagers, photonic SOI | Smart Cut (licensed) or BESOI (bond-and-etch-back) creating a silicon/SiO₂/silicon sandwich |
+| **FZ Wafer (Float-Zone)** | 4"–8" (100–200 mm) | IGBT, high-voltage diodes, power MOSFET, sensors | Crucible-free float-zone growth; resistivity > 10,000 Ω-cm |
+| **Compound-Semi Substrates** | 2"–6" (50–150 mm) | LED, power devices, microwave | Sapphire, GaAs, SiC (polishing and epitaxy services) |
+
+Sources: [GlobalWafers 2024 Annual Report — Business Overview, p. 38-45](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/); [GlobalWafers corporate products page](https://www.sas-globalwafers.com/en/products/).
+
+### 4.2 How the five wafer categories knit together into the upstream semiconductor materials stack
+
+A silicon wafer is the physical and chemical *canvas* on which every transistor, copper interconnect, capacitor and photonic structure in a chip ultimately has to be built. The five wafer types are not five distinct businesses — they are five processing layers stacked on top of the same underlying polished substrate.
+
+**The polished wafer is the base.** It is the universal substrate; everything downstream begins here. **Epi wafers** are polished wafers with a CVD-grown, ultra-pure single-crystal silicon layer applied on top — used wherever advanced-logic (≤ 7 nm) or CMOS image sensor (CIS) devices need an atomically clean transistor channel layer that the bulk polished wafer cannot provide. **Annealed wafers** are polished wafers that have been re-heated in hydrogen at 1,100-1,200 °C to anneal out the Crystal Originated Particles (COP) — sub-µm micro-voids unavoidable in CZ ingot growth — that would cause bit-failures in modern DRAM and HBM. **SOI wafers** are two polished wafers bonded together with a buried-oxide (BOX) SiO₂ layer in the middle, then thinned to leave a thin top-silicon device layer for RF / FD-SOI / photonic applications. **Diffusion wafers** are polished wafers that have been intensely doped with phosphorus or boron in a high-temperature furnace, used in power discretes where the device structure needs a heavily-doped substrate. **Float-zone (FZ) wafers** are a process variant — grown without a quartz crucible — that produces silicon with extremely low oxygen content (< 1 ppma versus 10-20 ppma in standard CZ silicon) and very high resistivity (> 1,000 Ω-cm), allowing IGBT and high-voltage diode makers to support reverse-blocking voltages up to ~6,500 V.
+
+```mermaid
+graph LR
+  A[Polysilicon<br/>poly-Si] --> B[CZ ingot<br/>Czochralski]
+  A --> C[FZ ingot<br/>Float-Zone]
+  B --> D[Slicing]
+  C --> D
+  D --> E[Lapping + Polishing]
+  E --> F[Polished Wafer]
+  F --> G[Epitaxy CVD]
+  G --> H[Epi Wafer]
+  F --> I[H2 Anneal]
+  I --> J[Annealed Wafer]
+  F --> K[Smart Cut / BESOI]
+  K --> L[SOI Wafer]
+  F --> M[Diffusion]
+  M --> N[Diffusion Wafer]
+  H --> TSMC[TSMC / Samsung / Intel<br/>Advanced logic]
+  J --> Memory[Micron / SK Hynix / Samsung<br/>HBM, DRAM, NAND]
+  L --> Soitec[Soitec / GlobalFoundries / STM<br/>RF, FD-SOI, photonics]
+  N --> Power[Infineon / onsemi / TI<br/>Power devices]
+```
+
+### 4.3 Polished Wafer
+
+> GWC 2024 Annual Report, Business Overview (p. 39) — verbatim:
+>
+> > "Polished wafers, the foundational product line, are produced through ingot growing, slicing, edge profiling, lapping, etching, polishing and cleaning processes. They serve as the substrate for downstream epitaxial growth, diffusion, oxidation and device fabrication."
+>
+> **Plain-language gloss:** a polished wafer is a 200 mm or 300 mm thin (0.7–0.8 mm) disc cut from a mono-crystal silicon ingot, then ground, etched and polished to an atomically smooth surface — surface roughness in the sub-nanometer range (~0.27 nm, one single-atom layer of silicon). A finished 300 mm polished wafer must meet SEMI Standard SEMI-M1 specifications across more than 200 sequential process steps, all conducted in Class-1 cleanroom conditions.
+
+**Differentiation versus siblings in the matrix.** The polished wafer is the rice of the semiconductor materials industry — every epi wafer first has to be a polished wafer; every annealed wafer first has to be a polished wafer; every SOI wafer starts as two polished wafers bonded together. Polished is the capacity base. Epi is "grow a thin ultra-pure single-crystal layer on top." Annealed is "post-process at 1,100-1,200 °C in hydrogen." SOI is "bond two polished wafers + a SiO₂ layer + thin the top." All three downstream products inherit polished-wafer process costs.
+
+**Strategic significance.** The simultaneous emergence of AI compute, HBM stacked memory and Backside Power Delivery (BPD) is the largest concentrated demand shock to polished-wafer volumes in 30 years. Under BPD, the power-delivery network for a chip is fabricated on a *second* silicon wafer attached to the back of the front-side device wafer — meaning a single die now consumes roughly two wafers of silicon, plus an additional reclaim wafer for thinning losses. Nomura's 2026-05-21 sector note describes BPD as "two silicon wafers per die plus multiple wafer-bonding steps and thinning to ~1 µm — the single biggest silicon-per-die step-up in 30 years" ([Nomura 2026-05-21, p. 6-9, sector synthesis](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md)).
+
+*Analyst view:* Polished is GWC's largest revenue line by a meaningful margin — analysts triangulate the 12-inch polished + epi share at roughly 45–55% of consolidated revenue, though the company does not disclose a precise split. It is also the most ASP-volatile category: spot prices can swing from USD 100 to USD 150 per wafer (+50%) on a cyclical upswing and back. The structural moats are scale, customer LTA stickiness (2-3 year terms) and the cleanroom capital barrier. The most direct competitive equivalent is Shin-Etsu's fully-automated PW150 polished line ([Shin-Etsu Semiconductor Silicon business page](https://www.shinetsu.co.jp/jp/business/electronic-materials/semiconductor-silicon/)).
+
+### 4.4 Epitaxial Wafer (Epi)
+
+> GWC 2024 Annual Report (p. 40) — verbatim:
+>
+> > "Epitaxial wafers are produced by growing a single-crystal silicon layer on a polished substrate via chemical vapor deposition (CVD) at 1,050-1,150°C. Epitaxial layers offer reduced defect density, controlled doping profiles, and superior carrier mobility, making them essential for advanced logic, CIS, and power device applications."
+
+**Plain-language gloss:** epitaxy ("epi") deposits a 1–100 µm-thick single-crystal silicon layer on top of a polished wafer via CVD. The epi layer has lower defect density, more precisely controlled doping, and superior carrier mobility versus the underlying CZ-grown substrate — defect density can be pushed below 0.1/cm². Modern advanced-logic devices (≤ 5 nm), CMOS image sensors (CIS, e.g. smartphone cameras), and power MOSFETs all require epi wafers because the transistor channel must sit in a near-defect-free silicon layer that the polished wafer alone cannot guarantee.
+
+**Differentiation versus siblings.** An epi wafer is a polished wafer plus one CVD epi growth step. ASP runs roughly 1.5–2× the equivalent polished wafer. Customer mix is fundamentally different: polished wafers are bought by every fab, while epi customers concentrate among advanced-logic foundries (TSMC, Samsung), CIS image-sensor IDMs (Sony Semiconductor, OmniVision) and power-discrete IDMs (Infineon) — driving deeper, more bilateral customer relationships.
+
+**Strategic significance.** Three drivers converge through 2030: (1) every AI ASIC at ≤ 5 nm uses epi; (2) Gate-All-Around (GAA, 栅极环绕) at 2 nm and below imposes tighter epi-layer thickness uniformity tolerance than FinFET-era epi, pushing ASP higher; (3) the smartphone CIS pixel count migration from ~50 MP toward 200 MP combined with Sony / OmniVision's "stacked CIS" architecture doubles the number of epi layers per device. The Sherman, TX Phase-1 line is configured primarily for 12-inch epi, explicitly to supply TSMC Arizona Fab 21, Samsung Taylor, and Intel Ohio ([Tom's Hardware — GlobalWafers $5B Sherman fab analysis, 2022-06](https://www.tomshardware.com/news/wafer-maker-to-invest-dollar5-billion-in-the-us-to-serve-intel-samsung-tsmc)).
+
+*Analyst view:* Epi is GWC's highest-margin product line by a wide gap — analyst triangulation puts epi gross margins in the 35-45% range. It is also the *strategic* product for Sherman: 12-inch epi capacity is structurally scarce on US soil, which is the lever that delivered the USD 406 mn CHIPS Act award. Direct competition: Shin-Etsu (Sanken-group epi lines) and SUMCO Tochigi's 12-inch epi line ([SUMCO 12-inch epitaxial wafer product page](https://www.sumcosi.com/products/epitaxial_wafer.html)).
+
+### 4.5 Annealed Wafer — the DRAM / HBM specialty
+
+> GWC 2024 Annual Report (p. 41) — verbatim:
+>
+> > "Annealed wafers undergo high-temperature treatment in hydrogen ambient at 1,100-1,200°C to eliminate Crystal Originated Particles (COP) from the near-surface region. The resulting defect-free surface layer is critical for advanced DRAM and NAND devices where any micro-void translates to bit-failure."
+
+**Plain-language gloss:** an annealed wafer is a polished wafer baked in a hydrogen-ambient furnace at 1,100-1,200 °C for several hours, causing COP voids (Crystal Originated Particles — sub-µm voids created during CZ ingot growth by vacancy aggregation, invisible to the eye at ~0.1 µm scale) to dissolve back into the surface lattice. Why does this matter for memory? Each DRAM bit lives on a capacitor; the capacitor trench is etched sub-µm deep into the silicon. A single 0.1 µm COP void sitting inside that trench wrecks the bit. HBM (High Bandwidth Memory), with its 1,024-bit-wide I/O and 12-high (HBM3E) or 16-high (HBM4) DRAM die stacks, pushes wafer-defect tolerance to its absolute physical limit.
+
+**Differentiation versus siblings.** An annealed wafer is a polished wafer plus one hydrogen anneal step. ASP runs roughly 30-50% above the equivalent polished wafer. Polished serves every application; annealed is specifically targeted at high-end DRAM, HBM and high-density NAND — making it the designated consumable for Micron, SK Hynix and Samsung HBM lines.
+
+**Strategic significance.** Across HBM3E → HBM4 → HBM4E (2025-2028), DRAM-die stack heights move from 8 → 12 → 16 → 24, halving wafer-defect tolerance per generation. Annealed wafers are the only commercially available process route that keeps pace. Nomura's 2026 note adds: "Wafer-bonded NAND (YMTC Xtacking) and HBM4 stack processes both require annealed substrates, lifting silicon-per-die further" ([Nomura 2026-05-21, p. 9](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md)).
+
+*Analyst view:* Annealed is a three-supplier oligopoly — Shin-Etsu, SUMCO and GWC split the market. Global 12-inch annealed-wafer capacity is currently under 1 mn wafers/month industry-wide; the HBM ramp alone pushes that demand toward 2.5–3 mn wafers/month over three years. Direct competition: Shin-Etsu Magnum (annealed grade) and SUMCO P-grade ([SUMCO annealed wafer product page](https://www.sumcosi.com/products/annealed_wafer.html)).
+
+### 4.6 SOI (Silicon-on-Insulator) — the dual-track relationship with Soitec
+
+> GWC 2024 Annual Report (p. 42) — verbatim:
+>
+> > "Our SOI wafer line includes RF-SOI (200mm/300mm) for high-frequency applications and FD-SOI (300mm) for low-power logic. SOI wafers are produced via Smart Cut (licensed) or BESOI bonding-and-etch-back processes, yielding silicon-on-buried-oxide structures used to isolate active devices from the bulk substrate."
+
+**Plain-language gloss:** SOI = Silicon-on-Insulator, physically a three-layer "thin top silicon (50 nm-1 µm) + buried oxide SiO₂ (10 nm-2 µm) + thick silicon handle wafer (725 µm)" sandwich. Why build this structure? In a conventional bulk-silicon CMOS, neighboring transistors are isolated only by reverse-biased PN junctions, which carry parasitic capacitance and sub-threshold leakage. In SOI each transistor sits on its own dielectric island, with SiO₂ above and below — faster switching, lower power, better radiation tolerance. **RF-SOI (200 mm)** is the standard substrate for smartphone RF front-ends (5G, Wi-Fi 7, UWB). **FD-SOI (300 mm)** is the low-power logic process platform used by STMicroelectronics and GlobalFoundries. **Photonic SOI (300 mm)** is the substrate for silicon photonics (Si-Ph PIC), with rapidly growing demand as 1.6T optical modules and Co-Packaged Optics (CPO) enter mass production for AI data centers.
+
+**Differentiation versus siblings.** SOI = two polished wafers + a buried-oxide layer + wafer bonding + thinning, materially more complex than polish/epi/anneal. ASP runs 3-5× the equivalent epi wafer. Two competing technology routes exist: (1) **Smart Cut**, patented by Soitec in 1991 (GWC pays Soitec licensing royalties to use); (2) **BESOI** (Bond-Etch-back SOI), GWC's own internally developed route.
+
+**Strategic significance.** SOI is the most under-rated category in the wafer industry over the past five years — only with the AI data center buildout did the market broadly recognize that photonic SOI is non-substitutable for SiPh PIC manufacturing. **Soitec is a quasi-monopoly in photonic SOI**, but Shin-Etsu and GWC hold significant share in RF-SOI and FD-SOI. GWC's relationship with Soitec is layered: GWC is *simultaneously* a Smart Cut licensee (paying royalties), the long-term 200 mm RF-SOI supplier to GlobalFoundries Singapore (a Soitec customer), and an independent competitor via the BESOI route ([TechPowerUp — GlobalFoundries and GlobalWafers sign MOU to increase 300mm SOI capacity, 2020](https://www.techpowerup.com/264207/globalfoundries-and-globalwafers-sign-mou-to-increase-capacity-supply-of-300mm-soi-wafers); [Chemical Research Insight — SOI Wafer Market 2026, 2026-02](https://chemicalresearchinsight.com/2026/02/25/top-10-companies-in-the-si-on-insulator-soi-wafer-market-2026-semiconductor-foundries-powering-next-gen-electronics/)). A key pillar of Nomura's Buy thesis: BPD also requires thinned-silicon and multi-wafer bonding — SOI manufacturing expertise migrates directly into BPD execution ([Nomura 2026-05-21, p. 11-12](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md)).
+
+*Analyst view:* SOI is estimated at 10-15% of GWC consolidated revenue but carries the highest strategic-value-to-revenue ratio of any product line. Direct competition: Soitec (ETR:SOI; quasi-monopoly in photonic SOI / FD-SOI — see [Soitec 2024 Universal Registration Document](https://www.soitec.com/en/investors/regulated-information)) and Shin-Etsu RF-SOI.
+
+### 4.7 FZ + Diffusion + Compound — the power / analog long tail
+
+After absorbing Topsil in 2016, GWC owns the industry's most complete **FZ (Float-Zone)** wafer line, capable of resistivity above 10,000 Ω-cm. FZ is a crucible-free growth process, so oxygen content stays below 1 ppma versus 10-20 ppma for standard CZ silicon — allowing reverse-blocking voltages up to ~6,500 V (the IGBT theoretical maximum). Principal customers include Infineon, Hitachi Power Devices, Toshiba power electronics, and STMicroelectronics' IGBT lines ([Topsil history and products page](https://www.topsil.com/en/products/)). **Diffusion wafers** are polished wafers heavily doped with phosphorus or boron in a furnace to create N+ or P+ heavily doped substrates — primarily used in power discretes, Schottky diodes and thyristors. **Compound-semiconductor substrates** at GWC means primarily polishing-and-epitaxy *services* on Sapphire (for LED), GaAs (microwave) and SiC (power) — GWC does not vertically integrate into compound-semi ingot growth. Substrate single-crystal growth in SiC is dominated by Wolfspeed (NYSE:WOLF), Coherent (formerly II-VI), and SiCrystal.
+
+*Analyst view:* This long-tail combination is estimated at 15-20% of consolidated revenue, with gross margins 10-15 percentage points below the 12-inch core. The customer mix is highly fragmented across analog / power IDMs, and the cyclical pattern is desynchronized from the 12-inch logic cycle — making this segment a meaningful cycle cushion. Direct competition: Siltronic (FZ specialist) and SUMCO (power-device wafers).
+
+### 4.8 Flagship lineup and the last 12 months of operational moves
+
+**Flagship product combination (FY2025)**: 12-inch polished + 12-inch epi + 12-inch annealed. The three together are estimated at 65-70% of consolidated revenue (the company does not formally disclose this split).
+
+**Operational developments in the trailing 12 months:**
+
+1. **2025-05-15 — Sherman, Texas Phase 1 opens, Phase 2 USD 4 bn announced same day** — total Sherman commitment rises from USD 3.5 bn to USD 7.5 bn. Six-phase master plan targets ~1.2 mn 12-inch wafers/month at full ramp ([Evertiq, 2025-05-21](https://evertiq.com/design/2025-05-21-globalwafers-opens-texas-wafer-plant-announces-major-expansionr)).
+2. **2025-08-06 — Q2 2025 earnings call**: Chairwoman Hsu publicly stated 12-inch utilization at 92%, 8-inch at 80%, 6-inch at 70%, with 12-inch LTAs signed through 2027-28 ([China Times — GWC Q2 call, 2025-08-06](https://www.chinatimes.com/newspapers/20250806000132-260202)).
+3. **2026-03-11 — FY2025 results**: EPS NT$15.29, dividend NT$7.70 (50.4% payout). FY2026 revenue guided flat-to-slightly-positive; capital priorities shifting from new-fab capex toward utilization and yield ([TechNews, 2026-03-11](https://finance.technews.tw/2026/03/11/globalwafers-eps-for-2025-is-15-29-yuan/)).
+4. **2026-05-05 — Q1 2026 earnings call**: Hsu framed Q1 2026 + Q4 2025 as the "cycle trough" with ASP recovery in H2 2026 ([semiconalpha Q1 2026 analysis, 2026-05-09](https://semiconalpha.substack.com/p/globalwafers-q1-2026-may-be-viewed)).
+5. **2026-04-10 — Digitimes** reported management's expectation that Q2 2026 12-inch utilization re-approaches 100% (previously "near full") on AI / HBM pull-through ([Digitimes, 2026-04-10](https://www.digitimes.com/news/a20260410PD207/globalwafers-revenue-2026-12-inch-market.html)).
+
+![300mm wafer market share](../../charts/globalwafers_300mm_share.png)
+
+*Figure 2: Global 300 mm semiconductor wafer market share (2025E). Shin-Etsu plus SUMCO duopoly at ~51% combined; GWC #3 at ~17%. Sources: [Nomura 2026-05-21, Fig. 35](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md); [Semiconductor Insight, 2026-02](https://chemicalresearchinsight.com/2026/02/25/top-10-companies-in-the-si-on-insulator-soi-wafer-market-2026-semiconductor-foundries-powering-next-gen-electronics/); [GlobalWafers 2024 Annual Report, p. 102 — company-stated "global #3, ~15-20% share"](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/).*
+
+The annual report itself includes a two-page product-matrix layout that visualizes the wafer-type × diameter × application taxonomy used as the foundation of this chapter — embedded below as Figures 3 and 4.
+
+![GWC 2024 Annual Report p. 94 — product matrix](../../charts/globalwafers_2024_ar_p94_products.png)
+
+*Figure 3: GlobalWafers 2024 Annual Report, p. 94 — full product matrix across wafer types and diameters with target end-applications. Source: [GlobalWafers 2024 Annual Report — Business Overview product matrix, p. 94](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/).*
+
+![GWC 2024 Annual Report p. 95 — product matrix continued](../../charts/globalwafers_2024_ar_p95_products.png)
+
+*Figure 4: GlobalWafers 2024 Annual Report, p. 95 — product matrix continued, mapping epi / annealed / SOI / FZ / diffusion / compound SKUs to specific application categories. Source: [GlobalWafers 2024 Annual Report — Business Overview product matrix, p. 95](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/).*
+
+
