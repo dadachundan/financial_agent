@@ -288,3 +288,150 @@ KC Tech 的渗透策略在三个向量上运作。**(1) 垂直：每片晶圆更
 
 ![KC Tech 季度营收与营业利润 — 1Q24 至 1Q26](../../charts/kctech_quarterly_trend.png)
 *资料来源：[Investing.com KCTech 财报, 2026-05](https://kr.investing.com/equities/kctech-earnings); [The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433); [씽크풀, 2024-04 실적속보](https://m.thinkpool.com/stockDiscuss/281820/cont/11862550); [데이터투자, 2025-11-11](https://www.datatooza.com/article/20251111115540957952ef38be23_80).*
+
+## 9. 风险评估
+
+### 公司特有风险
+
+**(1) 客户集中度 —— 重大、高严重度。** 三星电子与 SK 海力士合计驱动 KC Tech 大部分营收（前 2 名很可能 >75%、前 5 名很可能 >90%—参考 FY2026 Q1 地理分布 89.2% 韩国营收 + 韩国客户基础以这两家为主）([The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433); [The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。三星 HBM 市场份额对 SK 海力士的失利（2025 Q3 三星 22% vs SK 海力士 57%）直接影响 KC Tech 与三星挂钩的浆料拉动 ([SK Hynix' Lead Shrinks in HBM (Semiecosystem, 2025-10)](https://marklapedus.substack.com/p/sk-hynix-lead-shrinks-in-dram-hbm))。2023 年内存周期低谷期间集团营收压缩 21%—这是该风险量级的历史佐证。**缓解措施：** 美国俄勒冈尤金扩张支持 Intel / GlobalFoundries / 三星奥斯汀；CXMT（中国）营收的增长多元化；长周期 JDP 关系对两家韩国客户都形成转换成本。
+
+**(2) 地理集中度 (89% 韩国) —— 高严重度。** FY2026 Q1 韩国营收 89.2% 意味着任何韩国特有事件（三星资本支出暂停、K-Belt 政策反转、韩元贬值、韩国政治动荡）都会非比例地压缩营收 ([The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433))。即使适度的国际多元化（尤金办公室、中国台湾 / 日本 / 新加坡探索）距离意义性的营收贡献也还有数年。**缓解措施：** K-Belt 政策框架为韩国本地材料厂商提供多十年顺风；三星海外建厂（泰勒得州）创造「跟随客户」路径。
+
+**(3) 关键人物风险 —— 中等严重度。** 会长高锡泰（1954 年生）今年 71 岁，正逐步把 KC Inc. 股份转给儿子高尚杰（1982 年生），但高尚杰尚未在 KC Tech 担任董事职务 ([businesspost.co.kr 고석태 회장](https://www.businesspost.co.kr/BP?command=article_view&num=370779))。2021 年起的双 CEO 架构（梁好根 + 崔东圭）已在经营层面降低单人风险，但会长级继任过渡是多年事件，可能在 2020 年代末造成战略不确定。**缓解措施：** 通过 KC Inc. 控股结构有序进行继任；梁好根具备 TCK + KC Inc. 前 CEO 的经营深度。
+
+**(4) 设备侧周期性风险 —— 中等严重度。** 设备营收（CMP 抛光机、K-3000 清洗机）订单驱动、形态块状；Q4 FY2024 营收同比下降 23%，即便长周期浆料故事仍然完整 ([씽크풀, 2024-04 실적속보](https://m.thinkpool.com/stockDiscuss/281820/cont/11862550))。设备侧交付节奏制造的季度波动会模糊结构性更高速的浆料故事。**缓解措施：** 材料占比上升（现集团 ~40%）提供日益扩大的稳定器；材料业务随晶圆厂稼动率扩张而非资本支出扩张，缓冲了周期性。
+
+**(5) 供应商集中度（稀土铈输入）—— 中等严重度。** 氧化铈 (cerium oxide)—KC Tech 旗舰 STI / ILD 浆料的关键输入—是轻稀土副产品，中国持有全球 >85% 稀土精炼能力 ([Yano Research 2024](https://www.yanoresearch.com/press/press.php/3921))。如果中国对稀土氧化物实施出口限制政策事件，KC Tech 原料成本可能显著上升，极端情况下可能被迫暂停生产。**缓解措施：** 战略性铈库存积累；在韩国与美国政策推动下的多源认证（澳大利亚、越南、巴西稀土替代）。
+
+### 行业 / 市场风险
+
+**(6) 全球老牌厂商竞争强度 —— 高严重度。** Cabot / Fujifilm 与 Resonac 在三星奥斯汀（美国）、TSMC、Intel 都有几十年的老资格，在三星平泽也有显著位置。KC Tech 仅在国家级冠军 / K-Belt 倾向之下赢得利润；如果三星放松倾向（例如为了 Cabot 在规模上更好的价格或 Resonac 更先进的化学品），KC Tech 的浆料位置可能被取代 ([Yano Research 2024](https://www.yanoresearch.com/press/press.php/3921); [Persistence Market Research 2026](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp))。**缓解措施：** 设备 + 材料协同研发护城河；K-Belt 政策方向的持续性；长周期 JDP 关系。
+
+**(7) HBM 爬坡减速 —— 中等严重度。** 2024–2027 年 CMP 浆料增长故事的重要部分依赖于 HBM 营收在 2027 年前年增长率维持 40–50% 的假设 ([Persistence Market Research 2026](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp))。如果 AI 加速器资本支出减速快于预期（如超大规模厂商资本支出重置，或更快转向低步骤数 HBM 替代方案），KC Tech 与 HBM 挂钩的浆料拉动会压缩。**缓解措施：** 更长周期的 BSPDN 顺风独立于 HBM 之外；三星 2nm 先进逻辑步骤数增长无论 HBM 占比如何都将继续。
+
+**(8) BSPDN 采用延迟或路径变化 —— 中等严重度。** 野村 2026-05-21 论点部分依赖于三星 2nm / 1.4nm 与 TSMC A16 上的 BSPDN 采用驱动每片晶圆 CMP 步骤数 20–30% 阶跃 ([Nomura sector report (in 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。如果 BSPDN 延迟（领先沿良率 / 成本问题），或如果替代架构（CFET 3D 堆叠晶体管、先进晶圆键合 NAND）成为优先路径，那么 BSPDN 特有的步骤数增长可能不会体现在 KC Tech 浆料营收中。**缓解措施：** CFET 与晶圆键合 NAND 替代路径 *同样* 提升 CMP 步骤数，只是技术路径不同；底层增长驱动器（每片晶圆 CMP 更多）对架构路径不确定性具备抗压性。
+
+**(9) 地缘政治风险 —— 美中出口管制与稀土限制 —— 中等严重度。** KC Tech 的 CXMT 业务（以及可能的三星西安）受不断演进的美国出口管制审查；管制收紧可能关闭公司当前依靠的中国营收多元化通道。同时中国的稀土出口政策应对可能抬高输入成本 ([Inquivix Technologies: South Korea Semiconductor Ecosystem](https://inquivixtech.com/korea-semiconductor-ecosystem/); [Yano Research 2024](https://www.yanoresearch.com/press/press.php/3921))。**缓解措施：** 韩国作为美国盟友 + 实质性中国贸易利益的地缘政治位置给 KC Tech 一定缓冲；按副会长的口径，公司的战略已从中国扩张转向俄勒冈（美国）办公室，体现了对该风险的认知与应对。
+
+### 财务风险
+
+**(10) 估值 / 倍数压缩风险 —— 高严重度。** KC Tech TTM 市盈率 ~27 倍显著高于 3 年均值 10–15 倍与韩国小盘半导体设备同业中位数 ~18 倍 ([Stockopedia KCTech](https://www.stockopedia.com/share-prices/kc-tech-co-KRX:281820/); [FN Guide A281820](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A281820))。溢价由 FY2026 Q1 +344% 营业利润印迹与材料占比扩张共识叙事驱动。如果 FY2026 / FY2027 盈利让人失望（如三星资本支出暂停、材料结构性占比回退、设备交付滑落），倍数会快速压缩—从 27 倍回到 15–18 倍意味即使盈利不变也有约 35–45% 价格重置。**缓解措施：** 卖方已上调估算（如 DS 投资证券基于 2026F 营业利润 650 亿韩元上调目标价至 5 万韩元—[데이터투자, 2025-11-11](https://www.datatooza.com/article/20251111115540957952ef38be23_80)），但现货已超越该位置；FY2026 / FY2027 印迹需承担验证倍数的责任。
+
+**(11) 外汇敞口 —— 低至中等严重度。** KC Tech 以韩元报告；11% 非韩国营收（中 + 美）与显著的美元计价原料输入（铈前体、特种化学品）让公司具备一定的自然对冲外汇敞口。韩元相对美元贬值通常利好出口营收，但施压输入成本；净敞口适中而非灾难性 ([The Elec, 2026-04-30 地理分布](https://www.thelec.net/news/articleView.html?idxno=10433))。**缓解措施：** 跨币种敞口相对总营收占比较小；公司历来不是有意义的外汇折算故事。
+
+### 宏观经济风险
+
+**(12) 内存周期敏感性 —— 高严重度。** KC Tech 的营收与盈利与 DRAM + NAND 资本支出周期紧密挂钩，后者本身随更广义内存价格周期波动。FY2023 年 21% 营收压缩说明了下行周期事件的量级；HBM 崛起提供部分结构性对冲（HBM 是更高毛利 / 更多 CMP 步骤产品，对更广义 DRAM 价格敏感性低），但 KC Tech 仍是周期股。**缓解措施：** 材料营收（与稼动率挂钩）周期性低于设备营收（与资本支出挂钩）；60/40 的设备-材料拆分提供结构性缓冲。
+
+**(13) 利率敏感性 —— 低严重度。** 无显著债务、相对潜在产业并购者的较小市值，KC Tech 不是主要利率敏感品种。利率上升会广义压缩 KOSDAQ 小盘估值，但历来不是 KC Tech 特定倍数区间的主要驱动器。
+
+## 10. 参考资料
+
+### 主要资料 —— KC Tech 公司
+
+- [KC Tech 公司概览页](https://www.kctech.com/page/overview.php) — 确认 2017 年（11 月）拆分日期、双 CEO 架构、总部（京畿道安城市）
+- [KC Tech 英文主页](https://www.kctech.com/eng/) — 产品族分类（半导体 / 显示器 / 材料）
+- [KC Tech 位置页](https://www.kctech.com/page/location1.php) — 安城总部 + 东滩 R&D 中心
+- [KC Tech / SEMICON Korea 2025 展位](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=234&ListByBooth=true&BoothID=633102&Nav=False) — Ventus CMP 系统与氧化铈 / 二氧化硅浆料产品规格
+- [KC Tech 사업보고서 FY2024 on KIND (acceptance no. 20250318001963)](https://kind.krx.co.kr/common/disclsviewer.do?method=searchInitInfo&acptNo=20250318001963) — 2025-03-18 提交的正式年度报告
+- [KC Tech 분기보고서 (Q3 FY2025) on KIND (20251113000360)](https://kind.krx.co.kr/common/disclsviewer.do?method=search&acptno=20251113000360) — 2025-11-13 提交的季度报告
+- [KC Inc. 母公司沿革（英文）](https://www.kct.co.kr/eng/page/company3.php) — 确认 2017 年拆分机制（「KC survived by human division; KC Tech, newly established」）
+- [Komachine — KC Tech 产品列表](https://www.komachine.com/en/companies/kc-tech) — Wezen BF / Wezen BS / K-3000 型号识别
+- [Komachine — KC Tech Wet Cleaning System (韩文)](https://www.komachine.com/ko/companies/kc-tech/products/61131-wet-cleaning-system) — K-3000 规格
+
+### 财报 / 分析师覆盖
+
+- [The Elec, 2026-04-30:「KC Tech First-Quarter Operating Profit Jumps 344% on Semiconductor Demand」](https://www.thelec.net/news/articleView.html?idxno=10433) — Q1 FY2026 印迹 + 地理分布
+- [데이터투자, 2025-11-11:「2분기 연속 서프라이즈…케이씨텍, 목표가 5만원 상향에 25% 상승 여력」](https://www.datatooza.com/article/20251111115540957952ef38be23_80) — DS 投资证券目标价 + 2026F 估算
+- [씽크풀 실적속보, 2024-04 (Q4 2024 results)](https://m.thinkpool.com/stockDiscuss/281820/cont/11862550) — 4Q24 营收 / 营业利润同比下降
+- [인사이트코리아,「케이씨텍, CMP slurry의 실적 성장성에 주목」](http://www.insightkorea.co.kr/news/articleView.html?idxno=102310) — CMP 浆料营收轨迹 + 客户清单 + 估值语境
+
+### 管理层简介
+
+- [businesspost.co.kr,「[Who Is ?] 고석태 케이씨텍 회장」](https://www.businesspost.co.kr/BP?command=article_view&num=370779) — 会长高锡泰简历、学历、持股、继任
+- [파이낸셜뉴스, 2021-08-11:「케이씨텍, 양호근·최동규 각자 대표 체제」](https://www.fnnews.com/news/202108111629170231) — 2021 年双 CEO 任命（梁好根、崔东圭）
+- [The Worldfolio 副会长 Ho Keun Yang 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/) — 战略、美国扩张、2027 年目标
+- [The Worldfolio:「KCTech Boosts Global CMP Solutions」](https://www.theworldfolio.com/news/kctech-boosts-global-cmp-solutions/5239/) — 额外管理层语录
+
+### 市场数据 / 估值
+
+- [FN Guide Snapshot, 케이씨텍 (A281820)](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A281820) — TTM 市盈率、市净率、ROE、FY2025 财务摘要
+- [Stockopedia KCTech Co (KRX:281820)](https://www.stockopedia.com/share-prices/kc-tech-co-KRX:281820/) — 3 年财务摘要 + 2027 预测
+- [Stockopedia Soulbrain (KRX:357780)](https://www.stockopedia.com/share-prices/soulbrain-KRX:357780/) — 同业对比
+- [Yahoo Finance Wonik Materials (KOSDAQ:104830)](https://finance.yahoo.com/quote/104830.KQ/) — 同业对比
+- [Investing.com KCTech 281820.KS 历史数据](https://www.investing.com/equities/kctech-historical-data) — 当前价格、52 周区间
+- [Investing.com KCTech 财报](https://kr.investing.com/equities/kctech-earnings) — 季度营收历史
+
+### 行业 / 竞争
+
+- [Yano Research 新闻稿: 全球 CMP 浆料市场 2024 增长 10%](https://www.yanoresearch.com/press/press.php/3921) — 全球 CMP 浆料市场规模 + 集中度
+- [Persistence Market Research: CMP Slurry Market Forecast 2026 to 2033](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp) — 前 3 / 前 5 集中度数字
+- [Skyquest: CMP Slurry Market Size, Share, Forecast Report (2033)](https://www.skyquestt.com/report/cmp-slurry-market) — 另一份市场规模
+- [Mordor / Research and Markets: CMP Slurry Market 2025-2030](https://www.researchandmarkets.com/reports/5176839/chemical-mechanical-planarization-cmp-slurry) — 另一份市场规模
+- [Pondax: 先进节点 CMP 的硅溶胶磨料, 2026-05](https://www.pondax.com/technique-edge/2026/05/breaking-the-atomic-level-planarization-barrier-advances-in-morphology-engineering-and-surface-chemistry-of-silica-sol-abrasives-for-advanced-node-cmp/) — sub-2nm 二氧化硅浆料技术趋势
+- [JEES: CMP 浆料种类详解 — 氧化物、STI、铜、钨与延伸](https://jeez-semicon.com/blog/cmp-slurry-types-explained-oxide-sti-copper-tungsten-beyond/) — 化学品入门
+- [Applied Materials CMP 产品页](https://www.appliedmaterials.com/in/en/semiconductor/semiconductor-technologies/cmp.html) — AMAT Reflexion GT 竞争语境
+- [Ebara Technologies CMP Systems 产品页](https://www.ebaratech.com/product-category/chemical-mechanical-polishing-systems/) — Ebara Frex 竞争语境
+- [SEMI Korea Materials Conference 2024 insights](https://www.semi.org/en/blogs/technology-and-trends/semiconductor-materials-key-industry-growth-enabler-insights-from-smc-korea-2024) — K-Belt 政策框架 + 韩国材料国产化
+- [Inquivix Technologies: Deep Dive South Korea Semiconductor Ecosystem](https://inquivixtech.com/korea-semiconductor-ecosystem/) — K-Belt 4,710 亿美元晶圆厂投资项目
+- [ResearchGate: 先进节点氧化铈颗粒 CMP 后清洗的挑战与解决方案](https://www.researchgate.net/publication/353303115_Challenges_and_Solutions_for_Post-CMP_Cleaning_of_Ceria_Particles_for_Advanced_Technology_Nodes) — CMP 后清洗化学品挑战
+- [KC Tech 氧化铈浆料挑战介绍，Fraunhofer CMP40 会议](https://www.isit.fraunhofer.de/content/dam/isit/de/documents/cmp40/4_KCTECH_advanced%20colloidal%20ceria%20slurry%20challenges.pdf) — KC Tech 先进氧化铈浆料技术演示
+- [Semiecosystem (Mark Lapedus): SK Hynix' Lead Shrinks in DRAM, HBM, 2025-10](https://marklapedus.substack.com/p/sk-hynix-lead-shrinks-in-dram-hbm) — 2025 Q3 HBM 市场份额（SK 海力士 57%、三星 22%）
+- [Webpronews: Samsung Chairman Advances HBM, 2nm Tech in Bid for Chip Dominance, 2025](https://www.webpronews.com/samsung-chairman-advances-hbm-2nm-tech-in-bid-for-chip-dominance/) — 三星 2nm 与 HBM 语境
+- [Nomura 2026-05-21 Greater China Semiconductor 2026-2030F sector report (摘要在 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md) — Fig 41-42 CMP 浆料牌位表；BSPDN / HBM 步骤数论点
+
+### 百科 / 公司注册
+
+- [케이씨텍 위키백과 (韩国维基百科)](https://ko.wikipedia.org/wiki/%EC%BC%80%EC%9D%B4%EC%94%A8%ED%85%8D) — FY2024 集团营收 / 营业利润 / 净利润、持股、总部
+- [잡코리아 KC Tech 기업정보](https://www.jobkorea.co.kr/recruit/co_read/c/kctech11) — 员工数（~800）、本土 CMP 设备国产化诉求
+- [Anji Microelectronics 2024 年度报告 (上交所科创板)](https://star.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-04-16/688019_20250416_8014.pdf) — 用于 W2W 混合键合 / CMP 步骤试产语境
+
+<details>
+<summary>第 10 步验证日志 — 2026-05-26</summary>
+
+**URL 检查。** 文档中约 50 条 URL 均参考研究阶段（WebSearch / WebFetch）返回内容的资料来源起草。生产环境下若某条 URL 不可达，建议跟进作正式 `curl` HTTP 状态扫描；DART 渲染 URL（`dart.fss.or.kr/dsaf001/main.do`）被 WebFetch 反爬机制屏蔽，但浏览器访问有效。KIND.krx.co.kr URL 经验证存在（披露受理号 `20250318001963` 与 `20251113000360` 通过 web search 检索并由韩国披露搜索结果确认）。
+
+**SEC 文件名** —— 不适用。KC Tech 是 KOSDAQ 上市的韩国发行人；主要披露在 DART（전자공시시스템 — dart.fss.or.kr）与 KIND（상장공시시스템 — kind.krx.co.kr），不在 SEC EDGAR。skill 的 EDGAR submissions-JSON 验证流程不适用。
+
+**韩国披露资料抽查。**
+- FY2024 集团营收 3,854 亿韩元 ✓ —— 经 [韩文维基百科](https://ko.wikipedia.org/wiki/%EC%BC%80%EC%9D%B4%EC%94%A8%ED%85%8D)、[Stockopedia](https://www.stockopedia.com/share-prices/kc-tech-co-KRX:281820/)、[FN Guide](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A281820) 交叉佐证
+- FY2024 营业利润 498 亿韩元 ✓ —— Wikipedia + Stockopedia
+- FY2023 营收 2,869 亿韩元 ✓ —— Stockopedia 3 年系列
+- FY2026 Q1 营收 1,561 亿韩元 +101% YoY ✓ —— [The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433)
+- FY2026 Q1 营业利润 348 亿韩元 +344% YoY ✓ —— The Elec, 2026-04-30
+- FY2026 Q1 地理分布（89.2% / 8.9% / 1.9%）✓ —— The Elec, 2026-04-30
+- FY2026 Q1 半导体 vs 显示器分布（94.3% / 5.7%）✓ —— The Elec, 2026-04-30
+- 2017 年从 KC Inc. 拆分（「KC survived by human division; KC Tech, newly established」）✓ —— [KC Inc. 公司沿革](https://www.kct.co.kr/eng/page/company3.php) 与 [businesspost.co.kr 고석태 회장](https://www.businesspost.co.kr/BP?command=article_view&num=370779)
+- 会长高锡泰 1954-03-31 生、成均馆大学化学工程 1980 年毕业、大成氧气 1980-1986、1987 年创办 KC ✓ —— businesspost.co.kr 고석태 프로필
+- 持股：高锡泰持 KC Tech 4.64%（968,292 股）；家族合计约 50% ✓ —— businesspost.co.kr 고석태 프로필
+- 双 CEO 梁好根 (양호근) + 崔东圭 (최동규) 于 2021-08-11 任命 ✓ —— [파이낸셜뉴스, 2021-08-11](https://www.fnnews.com/news/202108111629170231)
+- 副会长口径（「不要卖产品 —— 要卖信任」）✓ —— [The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/)
+- Ventus 30% 效率提升 + 12 腔清洗 + 多区域抛光头 ✓ —— Worldfolio 专访 + [SEMICON Korea 2025 展位](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=234&ListByBooth=true&BoothID=633102&Nav=False)
+- 氧化铈浆料 80-300 nm 颗粒粒度 ✓ —— SEMICON Korea 2025 展位
+- CMP 浆料营收轨迹（KRW 60 bn → 150 bn 从 2019 到 2023）✓ —— [인사이트코리아, 2024](http://www.insightkorea.co.kr/news/articleView.html?idxno=102310)
+- 客户清单（三星、SK 海力士、GlobalFoundries、Intel、CXMT）✓ —— Worldfolio 专访
+- HBM 2025 Q3 市场份额（SK 海力士 57%、三星 22%）✓ —— [Semiecosystem (Mark Lapedus), 2025-10](https://marklapedus.substack.com/p/sk-hynix-lead-shrinks-in-dram-hbm)
+- 全球 CMP 浆料市场 2024 年 16 亿美元 +10% YoY ✓ —— [Yano Research 2024](https://www.yanoresearch.com/press/press.php/3921)
+- CMP 浆料前 3 份额 ~51%（Cabot/Fujifilm、Resonac、Fujimi）✓ —— [Persistence Market Research 2026](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp)
+- K-半导体战略 4,710 亿美元 / 16 座厂 / 至 2047 年 ✓ —— [Inquivix Technologies](https://inquivixtech.com/korea-semiconductor-ecosystem/)
+- DS 投资证券目标价 5 万韩元 2025-11 上调 ✓ —— [데이터투자, 2025-11-11](https://www.datatooza.com/article/20251111115540957952ef38be23_80)
+
+**分析师观点句（有意不挂主源）。**
+- 第 1 节：估值快照 —— 叙事溢价论点的「分析师观点」框架，源：现货、同业倍数、卖方目标
+- 第 4.3 / 4.4 / 4.5 节：每产品的竞争优势裁决（部分护城河评级）按 skill 规则标记 `*分析师观点*`
+- 第 6.1 / 6.2 节：行业增长驱动器框架参考 Nomura 行业报告 + Yano Research + KC Tech 新闻
+- 第 7.4 节：象限图位置为分析师示意序数
+- 第 8.1 节：SAM 数学为分析师从公开市场规模 + KC Tech 营收输入构造的，并已标明
+
+**残留未知 / 尚未核实：**
+- 正式前 1 / 前 5 客户集中度百分比 —— 韩国 DART 사업보고서内含此字段（「주요매출처」）但不能通过索引网页直接检索；分析以地理分布作强代理
+- 浆料 vs 设备具体营收拆分是副会长口径方向性 40/60 表述（Worldfolio 专访），非 KC Tech 披露行项目
+- FY2026 Q1「698.4 亿韩元设备订单」披露源自较旧 씽크풀 文章（用于格式背景）；确认具体最近订单需要直接 DART 订单披露检索
+- KC Tech 2025 年二氧化硅 / 金属浆料量产爬坡细节 —— 公开信息显示铜浆料「研发中」、金属浆料「扩张中」，但每步骤在三星处的生产认证状态未披露
+
+</details>
+
+
+
+
+
