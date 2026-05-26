@@ -266,3 +266,74 @@ pie title FY2025 销售按客户地域分布（占 EUR 13.467 亿 %）
 **行业周期性。** 管理层直言："这些波动的时点与幅度可显著不同。此外，终端市场变动传导至我们生产的时滞可能超过 6 个月" ([Annual Report 2025, p. 20](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。硅片周期下行时滞后终端约 6 个月，上行时滞后约 3–6 个月——这一结构性事实反映在 FY21–25 销售轨迹中：EUR 14 亿 → 18 亿 → 15 亿 → 14 亿 → 13 亿——是 2021 年 COVID 时期半导体景气与 2022–24 年回吐的延迟回声。
 
 ---
+
+## 7. 竞争格局
+
+Siltronic 在五供应商行业中竞争，竞争结构由三个因素塑造：**规模经济**（每座 300 mm 工厂 >USD 20 亿）、**客户认证成本**（每个节点 / 每个 fab 认证周期 18–24 个月）、以及**亚洲客户需求的区域集中**（Siltronic 76% 亚洲收入大致是行业平均水平）。按 Siltronic 自家测算，Top 5——Shin-Etsu Handotai、SUMCO、GlobalWafers、Siltronic、SK Siltron——合计占硅片市场约 75% ([Investor Presentation April 2026, p. 6](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Siltronic_InvestorPresentation__.pdf))；行业研究则称 300 mm 这一具体细分中的集中度更高，约 85% ([intelmarketresearch.com](https://www.intelmarketresearch.com/silicon-wafer-market-85))。
+
+**竞争对手 1 — Shin-Etsu Handotai（信越半导体；信越化学 TSE:4063 的全资子公司）。** 按面积与收入计算的全球 #1 硅片供应商。隶属 Shin-Etsu Chemical 集团（市值约 USD 450 亿），半导体（Handotai）业务约贡献集团收入 1/4 ([Shin-Etsu Handotai company page](https://www.shinetsu.co.jp/en/products/handotai/index.html))。优势：规模、产品宽度（抛光、磊晶、退火 (annealed)、SOI）、与日本晶圆厂（Renesas、Sony、Kioxia）的捕获客户关系。劣势：地理分散度低于 Siltronic（高度依赖日本 / 美国晶圆厂基础）。滚动 P/E 约 21–25× ([companiesmarketcap — Shin-Etsu](https://companiesmarketcap.com/shin-etsu-chemical/pe-ratio/))，倍数反映的是多元化化学品 + 材料组合，而非纯硅片溢价。
+
+**竞争对手 2 — SUMCO（TSE:3436）。** 按面积计算的全球 #2 硅片供应商。也是与 Siltronic 最直接的纯硅片同业——SUMCO 几乎全部收入都来自硅片。优势：规模（按行业估算占全球 300 mm 产能约 30%）、研发、与日本客户的稳定关系。劣势：当前 TTM 不盈利（每股亏损 JPY ‑33.6——[Yahoo Finance 3436.T](https://finance.yahoo.com/quote/3436.T/)）、Capex 负担重、以及 2025 年 2 月宣布的 2026 年末退出宫崎 200 mm 生产、集中资源于 AI 级 300 mm 的决定 ([intelmarketresearch.com](https://www.intelmarketresearch.com/silicon-wafer-market-85))。宫崎退出对 Siltronic 200 mm Power 业务是利好——它移除全球 200 mm 供应约 2–3%。
+
+**竞争对手 3 — GlobalWafers Co. Ltd.（环球晶圆，TPEx:6488，台湾；母公司：中美晶 TPEx:5483）。** #3 硅片供应商，2011 年从 Sino-American Silicon Products（SAS / 中美晶）分拆而出，此后凭借大举并购扩张——含 2016 年收购 SunEdison Semiconductor 以及 2020–22 年未成的 EUR 43.5 亿对 Siltronic 收购案。GWC 在 9 个国家拥有 18 个生产基地 ([Wikipedia — GlobalWafers](https://en.wikipedia.org/wiki/GlobalWafers))。优势：地理广度、激进 Capex（德州工厂耗资 USD 50 亿，目标 2027 年达到 120 万片/年，针对美国客户的安全供应需求）、以及规模。**关键吊诡**：GWC 母公司中美晶仍持有 **13.67% 的 Siltronic 股份**（截至 2025 年 12 月 31 日，[Annual Report 2025, p. 16, Shareholder structure](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf)）——这是失败收购前累积、至今尚未完全减持的残余股。野村《Greater China Semi 2026-30F Renaissance》报告于 2026 年 5 月将 GWC 评级由 Neutral 上调至 **Buy**，目标价由 TWD 480 提至 TWD 850——市场视 GWC 为 AI 硅片周期的结构性赢家 ([reports/sector/半导体材料.md](../../sector/半导体材料.md))。*分析师观点：* GWC 是 Siltronic 最直接的可比公司（终端市场结构相近、规模相近、客户基础相近）——GWC 的重估为 Siltronic 提供直接的相对价值拉动。
+
+**竞争对手 4 — SK Siltron Co. Ltd.（韩国，未上市；SK Inc. 子公司）。** 总体第 5、300 mm 上第 4–5。2017 年 SK 集团以 KRW 6,200 亿从 LG 集团收购 LG Siltron 股权后转为私有。优势：来自姐妹公司 SK Hynix（存储）的稳定提货、激进 300 mm Capex、近期收购杜邦 (DuPont) 碳化硅 (SiC) 硅片业务（切入 SiC 功率电子相邻业务）。劣势：地域分散度低（高度韩国）、私有（无股权流动性供同业基准比对）。*分析师观点：* SK Siltron 是 Samsung 与 SK Hynix 订单上 Siltronic 最直接的地域竞争者，而 Siltronic 的 SSW 合资（与 Samsung）提供部分抵消。
+
+**竞争对手 5 — Wafer Works（合晶科技，TWSE:6182，台湾；以 200 mm 与再生 (re-claim) 硅片为主）。** 长尾中的较小竞争者；在 200 mm Power 与模拟晶圆厂供应链中相关。并非 300 mm 先进节点对手。
+
+**相邻 / 间接竞争者。** Top 5 之外：(i) **Soitec（EPA:SOI）** ——绝缘体上硅 (silicon-on-insulator, SOI) 专家，在 RF 前端与部分逻辑应用中与 Siltronic 磊晶业务竞争；野村对 Soitec 维持 Buy 评级，目标价 EUR 250，看好 RF + photonic SOI 需求 ([reports/sector/半导体材料.md](../../sector/半导体材料.md))；(ii) **中国 300 mm 硅片新进入者**（国大硅产 / Guoda、Zing Semi / 中环领先、ESWIN——均在双循环战略下为国内晶圆厂建设 12 寸产能）。这些新进入者目前在先进节点上尚无认证能力（仅成熟节点已通过认证），但正在吸收之前归属 Top 5 的 28/40/65 nm 边际订单；(iii) **GlobalFoundries 在新加坡的内部硅片产线** — 范围有限。
+
+```mermaid
+quadrantChart
+    title 竞争格局 — Top-5 硅片厂（2026）
+    x-axis 规模较小 --> 规模较大
+    y-axis 地理分散度低 --> 地理分散度高
+    Shin-Etsu Handotai: [0.85, 0.55]
+    SUMCO: [0.75, 0.45]
+    GlobalWafers: [0.68, 0.85]
+    Siltronic: [0.55, 0.75]
+    SK Siltron: [0.50, 0.30]
+    Soitec (SOI specialist): [0.30, 0.50]
+    中国新进入者: [0.35, 0.10]
+```
+
+**Siltronic 的竞争优势：**
+1. **唯一总部位于西方的 Top-5 硅片厂。** 出于技术主权 (tech sovereignty) 考量，Siltronic 是美国、欧盟、以及亚洲（中国除外）晶圆厂在多元化、远离日 / 韩 / 台供应商时的首选结构性选项。2022 年 GWC 收购案破裂尽管阶段性痛苦，却锁定了 Siltronic 的独立性与"欧洲技术主权"定位 ([Investor Presentation April 2026, p. 6](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Siltronic_InvestorPresentation__.pdf))。
+2. **同时在德国与新加坡具备 300 mm 磊晶能力。** 新加坡 Fab S2 磊晶线是亚洲唯一一条不属于日资公司的 300 mm 磊晶产能，给予 Siltronic 美元成本基础下的独特磊晶卡位。
+3. **强势 Power / 200 mm + FZ 组合**叠加 SUMCO 宫崎退出——200 mm Power 净份额机会。
+4. **新加坡 Fab S2 长期协议覆盖 80% + 预付款。** 现货供应商所没有的可见性 + 客户承诺。
+5. **客户奖项轨迹。** 2025 年获得 5 项供应商奖项，覆盖存储、逻辑、晶圆代工、功率——完整客户横截面。
+6. **Wacker 多晶硅关系。** Burghausen 共址、多重供应商认证的多晶硅供应——纯硅片同业不具备的供应链韧性。
+
+**Siltronic 的竞争劣势：**
+1. **相对 Shin-Etsu 与 SUMCO 处于次规模。** 硅片是规模驱动游戏，多数第三方研究将 Siltronic 排在全球第 4——头部的成本曲线优势真实存在。
+2. **没有 SOI / SiC / GaN 平台。** Soitec 在 SOI 上占据主导；Wolfspeed、ROHM、Coherent、SK Siltron、Resonac 在 SiC 上占据主导；Siltronic 在这两个高增长邻接硅片细分中均不参与。Power 电子需求在 2026–35 年视野内将结构性地由 Si IGBT 迁向 SiC MOSFET，而 Siltronic 不直接受益于这一迁移。
+3. **净债务 EUR 8.365 亿 + 契约压力。** 新加坡 Capex 加重了资产负债表——Shin-Etsu 与 SUMCO 拥有更强的资产负债表，在更长下行周期中以更低的资本成本维持。
+4. **80% USD 收入 + EUR 成本基础。** 结构性汇率错配在严格对冲纪律之外构成长期逆风。
+
+![Siltronic 同业估值对比](../../charts/siltronic_peer_valuation.png)
+*资料来源：[Stockanalysis.com (2026-05-25)](https://stockanalysis.com/quote/etr/WAF/), [Yahoo Finance](https://finance.yahoo.com/quote/4063.T/), [companiesmarketcap](https://companiesmarketcap.com/shin-etsu-chemical/pe-ratio/)。*
+
+---
+
+## 8. 市场机会
+
+**TAM（硅片，2025 年）。** 按 Siltronic Q1 2026 IR 资料（p. 5，引自 WSTS、SEMI SMG、TechInsights），**2025 年全球面向半导体行业的硅片市场约 USD 114 亿**，下游半导体器件市场为 USD 7,860 亿 ([Investor Presentation April 2026, p. 5](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Siltronic_InvestorPresentation__.pdf))。加入非硅特种衬底（SOI、SiC、GaN、蓝宝石），硅片材料 TAM 接近野村报告中的约 USD 150 亿 ([reports/sector/半导体材料.md](../../sector/半导体材料.md))。半导体材料超集（硅片 + 光刻胶 + 光刻胶辅材 + 特气 + CMP + 靶材 + 其他）2025 年约 USD 800 亿（野村测算）。
+
+**SAM（Siltronic 实际服务的硅片市场）。** Siltronic 不参与 SiC、GaN、蓝宝石、感光器异型衬底、石英 / 玻璃核心衬底——因此 SAM 约等于"抛光 + 磊晶硅片市场 — 由 ESWIN、Zing Semi、Guoda 服务的中国本土成熟节点份额"。按 Top-5 占硅片市场约 75% 扣除约 10% 中国本土，估算 SAM 约为 **USD 80–90 亿**（2025 年），高度集中在面向先进节点逻辑与存储的 300 mm。
+
+**SOM 与市场份额轨迹。** Siltronic FY25 收入 EUR 13.467 亿 ≈ USD 15.2 亿（按 FY25 平均 EUR/USD 1.13）。相对 USD 114 亿硅片 TAM，约 **13% 收入份额** —— 与 Top 5 中第 4 名地位一致。在对未来更关键的 300 mm 特定细分中，Siltronic 体积份额接近 15%。对比 SEMI 给出的 2026–2030 年硅片面积 CAGR 5–6%（300 mm 25 年 CAGR 6%），Siltronic 若仅保持份额，收入即可实现约 6–8% CAGR；若叠加 SUMCO 宫崎让出和西方供应商偏好下的份额增益，可达 8–10% CAGR。
+
+**增长投影。** 三条向量复合：
+- **AI 服务器需求** — 主导性近端驱动。Q1 2026 IR 中 2026e 服务器细分硅片面积 +44% YoY ([Q1 2026 Conference Call Presentation, p. 10](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Q1_2026_conference_call_presentation__.pdf))，与 hyperscalers（Microsoft、Google、AWS、Meta）的数据中心 Capex 直接挂钩。
+- **功率电子上行** — 200 mm + FZ + PowerFZ® 在 EV / 风 / 光 / 数据中心电源转换链上的长期定位。2026e 终端数据仍显示 200 mm 拖累，但 2027-30 趋势应当反转。
+- **BPD + 键合 NAND + WoW DRAM-on-logic** — 野村报告标记的 2028–29 工艺拐点，能在 4–5 年累计视野内将硅片 TAM 推高约 15–25%（提升单 die 硅片消耗） ([reports/sector/半导体材料.md](../../sector/半导体材料.md))。
+
+**Siltronic 可服务的机会与份额策略。** 决定份额路径的三个杠杆：
+1. **新加坡 Fab S2 爬坡** — 满产估计新增 300 mm 月产能 100,000+ 片（Siltronic 未公开精确产能），将公司全球产能较 2024 年基础抬升 30–40%。
+2. **客户认证覆盖** — 2025 年五项奖项（Intel、Samsung、Micron、STM、SSMC/TSMC）一扫到位，反映客户端认证宽度。
+3. **西方供应商偏好** — EU Chips Act 激励、美国 CHIPS Act 工厂建设、以及供应链韧性带来的地缘溢价。
+
+**渗透情景（分析师视角，非预测）。** 若 Siltronic 维持份额且全球硅片市场按 SEMI 5–6% CAGR 增长至 2030 年，FY30 收入将约为 EUR 17–19 亿——较 FY25 低点翻倍，但仍与 FY21 高点持平。若 Siltronic 获 100–200 bp 份额增益（吸收 SUMCO 宫崎让出的产能 + 西方供应商偏好），FY30 收入可达 EUR 20–23 亿。若新加坡中期 EBITDA 利润率 >50% 目标实现 + 集团稳态 EBITDA 利润率 28–32%，FY30 EBITDA 可达 EUR 5.50–7.00 亿——对比 FY25 低点 EUR 3.17 亿。*此情景以 [SEMI — Worldwide silicon wafer shipments to rebound 5.4% in 2025, new record by 2028, 2025-10-28](https://www.semi.org/en/semi-press-release/semi-reports-global-silicon-wafer-shipments-to-rebound-5.4-percent-in-2025-with-new-record-expected-by-2028) + Siltronic 自家 [Investor Presentation April 2026, p. 7](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Siltronic_InvestorPresentation__.pdf) 的 CAGR 数据为锚；份额增益假设系分析师构建，非公司指引。*
+
+---
