@@ -451,3 +451,180 @@ SUMCO 的**可服务可获得市场 (Serviceable Obtainable Market, SOM)**——
 *分析师观点:* 基准情景与卖方共识及 SUMCO 自身的多年期 LTA 可见度一致。牛市情景是当前约 2.7× P/S 估值倍数及 2024 年底以来重新估值的依据。熊市情景是主要风险, 也是 2026 财年 Q1 股价回调的结构原因。买入 SUMCO 的投资者本质是在押注 AI 驱动 300mm 需求浪潮至少与共识基准情景一样持久, 同时附带 3–5 年牛市情景的看涨期权。
 
 ---
+
+## 9. 风险评估
+
+### 9.1 公司特定风险 (4-6 项)
+
+**风险 1——客户集中度 (前一>20%, 前五>50%)。** SUMCO 营业收入集中于约 10 家先进制程芯片厂, 头号客户历史上占比 ~15–20%, 前五合计 ~50–60% ([SUMCO 有価証券報告書 历史披露模式 via IRBANK](https://irbank.net/E02103/edinet))。失去任何一家头号客户——通过内部硅片产能扩张 (Samsung)、供应商多元化倾向信越或环球晶圆 (TSMC、Micron)、芯片厂财务危机 (Intel) ——可能在近期内削减 10–20% 营业收入, 抵消空间有限。缓解因素: (i) 多年期 LTA 锁定出货承诺, (ii) 认证成本使供应商切换缓慢——即便商业上有意, (iii) IDM 与代工厂兼有的客户名单削弱单一账户依赖。**严重性: 高; 概率: 中。**
+
+**风险 2——折旧上升超出营业收入复苏时机。** 约 4,000 亿日元米泽/伊万里二期资本开支在 CY2025–26 年间转为折旧, AI 驱动的 300mm 需求浪潮滞后约 2 年。这一时机错配是 2026 财年 Q1 营业亏损 52 亿日元的直接原因 ([SUMCO 2026 财年 Q1 纪要, Investing.com](https://www.investing.com/news/transcripts/earnings-call-transcript-sumco-misses-q1-2026-expectations-stock-dips-93CH-4698631))。若 300mm AI 级需求增速低于基准情景 6–9% CAGR, SUMCO 可能在折旧/利用率回归平衡前承担 2–3 年的营业亏损。缓解因素: (i) LTA 项下客户预付款部分对冲现金流压力, (ii) METI 补贴支持 (已下调至 193 亿日元), (iii) 宫崎 200mm 退出释放对冲固定成本。**严重性: 高; 2026–27 年概率: 中-偏高。**
+
+**风险 3——日本地理集中度。** SUMCO 约 70–80% 的 300mm 产能在日本 (伊万里、米泽、支持工厂), 使业务暴露于日本特定的灾难性风险: (i) 重大地震 (伊万里/佐贺位于九州, 比本州地震活动性较低, 但并非免疫; 米泽位于本州北部山形), (ii) 持续的 JPY/USD 汇率波动 (日元升值 10% 将令美元 LTA 营业收入的营业利润率压缩 3–5 个百分点), (iii) METI 政策转变 (2026 年 750 亿→193 亿日元补贴下调即为此风险的实证)。缓解因素: 海外工厂 (亚利桑那、印尼、台湾) 提供部分多样化, 但规模远小于竞争对手。**严重性: 中-偏高; 概率: 尾部风险 (地震) + 中 (汇率/政策)。**
+
+**风险 4——中国新建产能对 200mm 的定价压力。** 中国新建 200mm 产能 (国大硅产、ESWIN、中环 (Zhonghuan)) 自 2023 年起压垮 200mm 硅片定价, 是当前 SUMCO 营业亏损的贡献因素。宫崎退出 (2026 年下半年生效) 部分应对此敞口, 但 SUMCO 在其他九州工厂仍保留 200mm 产能。若中国新建扩张进一步加速, 或在 2028–30 年将 300mm 生产扩展至有意义规模, SUMCO 在商品化级产品上的定价能力可能进一步压缩。**严重性: 中; 200mm 概率: 高, 300mm 概率: 中。**
+
+**风险 5——通过客户-供应商反向工程或授权泄漏导致工艺 IP 流失。** SUMCO 在 AI 级 300mm 上的护城河建立在数十年的工艺 IP 之上——CZ 拉晶配方、磊晶反应器参数、退火工艺窗口。该 IP 的流失 (通过人才流失、供应商-客户知识转移、IP 诉讼失利) 可能在 3–5 年内侵蚀供应商护城河。缓解因素: 行业历史上尊重 IP 边界; IP 诉讼成本高; SUMCO 维护活跃专利组合。**严重性: 若发生则高; 概率: 低至中。**
+
+### 9.2 行业 / 市场风险 (3-4 项)
+
+**风险 6——AI 驱动 300mm 需求浪潮减速。** 基准情景 300mm 硅片需求 2030 年前 CAGR 6–9% 的预测, 依托 AI 训练计算基建持续建设、HBM 消耗增长与先进封装采用。若 AI 资本开支正常化 (超大规模厂商折旧周期赶上、AI 模型效率降低算力需求, 或 AI 营业收入不足以支持持续资本开支加速), 300mm 需求增速可能降至 3–5%, 大幅改变 SUMCO 营业收入与营业杠杆轨迹 ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85))。缓解因素: 每颗 AI 芯片的 HBM 消耗在结构上递增; 先进封装仍处早期采用; 先进制程逻辑持续消耗更多硅片面积。**严重性: 高; 概率: 中。**
+
+**风险 7——半导体行业周期性。** 硅片需求滞后于晶圆厂资本开支 1–2 年, 因此高度周期性。本轮周期已证明: 即使在 LTA 结构下, 硅片营业收入单年也可下滑 6–7% (FY2024 vs FY2023)。未来下行周期可能更深。缓解因素: LTA 配合预付款结构部分平滑营业收入; 向 AI 级 300mm 的产品组合迁移提供更高利润率底部; 成本管理。**严重性: 中-偏高; 概率: 高 (周期性为结构性)。**
+
+**风险 8——衬底技术迁移 (例如低功耗应用全耗尽 SOI)。** 虽硅片仍为 ~98% 集成电路的主导衬底, 但部分细分应用正迁移至替代衬底 (高压功率用 SiC、RF/功率用 GaN、低功耗 RF/CMOS 用 FD-SOI)。若某种新衬底技术在重大应用类别 (例如 IoT 处理器用 FD-SOI, 或某种未来新兴衬底) 实现成本竞争力的规模化, 硅片 TAM 可能边际收缩。缓解因素: 替代衬底厂商的数十年 IP 投资; 硅片单位面积成本优势; SUMCO 自身亦有 SOI 业务 (虽规模较小)。**严重性: 低-偏中; 概率: 5 年内低。**
+
+**风险 9——竞争对手扩张导致产能过剩。** 五家主要 300mm 供应商同步扩张产能 (SUMCO 在伊万里/米泽、环球晶圆在德州 Sherman + 意大利 + 日本、Siltronic 在新加坡 Fab S2、SK Siltron 在韩国/美国、信越在多地)。若需求增速落后于供应建设, 300mm 市场可能在 2027–29 年进入持续定价压力。缓解因素: LTA 结构吸收部分供应; 先进制程节点认证限制可服务先进制程需求的供应量。**严重性: 中; 概率: 中。**
+
+### 9.3 财务风险 (2-3 项)
+
+**风险 10——运营现金流不足以支撑持续资本开支与债务偿付。** 约 4,000 亿日元二期计划已显著扩张 SUMCO 资产负债表, 当前营业亏损环境拖累自由现金流 (free cash flow) 生成。若复苏延后至 2027 年以后, SUMCO 可能需要进一步举债、削减股息或发行新股以维持财务弹性。缓解因素: 客户预付款已提供实质前期现金; LTA 结构为银行提供远期营业收入可见度; 日本银行历史上一直支持 SUMCO 渡过周期。**严重性: 中-偏高; 概率: 中。**
+
+**风险 11——JPY/USD 汇率波动。** SUMCO 营业收入大部分以美元计价 (或通过 LTA 与美元挂钩), 成本则大部分以日元计价 (日本工厂、日本人力、日本研发)。日元升值 10% 减少营业利润率 3–5 个百分点。近期日元贬值是顺风; 反转将是重大逆风。缓解因素: 海外工厂 (美、印尼、台) 提供部分自然对冲; 汇率对冲项目。**严重性: 中; 概率: 高 (汇率波动为结构性)。**
+
+### 9.4 宏观风险 (2-3 项)
+
+**风险 12——半导体供应链地缘政治碎片化。** 美中贸易紧张、台海情境与朝鲜半岛不稳定都影响半导体行业的地理分布。具体而言, 任何对 SUMCO 向特定中国客户 (SMIC、华虹 (Hua Hong)、YMTC (长江存储)) 销售能力的限制, 或对日本硅片技术出口的任何限制, 都将压缩可寻址市场。缓解因素: SUMCO 客户基础地理覆盖台/美/韩/日/欧; 当前出口管制规则更主要影响设备而非材料。**严重性: 中; 概率: 中。**
+
+**风险 13——全球衰退。** 重大全球衰退将削减半导体终端需求 (智能手机、PC、汽车、工业), 1–2 年滞后影响硅片需求。2022–25 年周期已表明, 即便无衰退, 硅片需求也能大幅波动。缓解因素: LTA 结构提供数量底; AI 先进制程业务对衰退敏感性低于成熟制程。**严重性: 中; 概率: 中 (结构性衰退风险)。**
+
+**风险 14——估值/倍数压缩风险。** SUMCO TTM P/S ~2.7×——高于历史 1.0–2.0× 区间, 反映了 AI 驱动的重估乐观情绪。若 AI 驱动的 300mm 需求浪潮不及预期 (或周期复苏延后至 2027 年以后), 即便基本面盈利未改变, 估值倍数也可能压缩 25–40%。负 TTM P/E 不为该估值倍数提供当期盈利支持 ([Yahoo Finance — SUMCO 估值指标](https://finance.yahoo.com/quote/3436.T/key-statistics/)、[Morningstar XTKS 3436](https://www.morningstar.com/stocks/xtks/3436/quote))。缓解因素: 多年期 LTA 可见度提供盈利复苏信心; 竞争集群估值 (Siltronic P/S 2.0×) 提供参考。**严重性: 高; 概率: 中。**
+
+---
+
+## 10. 参考资料
+
+### 主要公告——SUMCO 株式会社
+
+- [SUMCO 公司简介 (sumcosi.com)](https://www.sumcosi.com/english/corporate/profile.html)
+- [SUMCO 公司沿革 (sumcosi.com)](https://www.sumcosi.com/english/corporate/history.html)
+- [SUMCO 产品矩阵 (sumcosi.com)](https://www.sumcosi.com/english/products/lineup.html)
+- [SUMCO 全球网络——制造基地 (sumcosi.com)](https://www.sumcosi.com/english/corporate/offices/)
+- [SUMCO 管理团队 (sumcosi.com)](https://www.sumcosi.com/english/corporate/officer.html)
+- [SUMCO IR 资料库——年度证券报告 (sumcosi.com)](https://www.sumcosi.com/english/ir/library/secreports/)
+- [SUMCO IR 资料库——业绩 (sumcosi.com)](https://www.sumcosi.com/english/ir/library/earnings/)
+- [SUMCO IR 资料库——演示 (sumcosi.com)](https://www.sumcosi.com/english/ir/library/presentations/)
+- [SUMCO 财务信息页 (sumcosi.com)](https://www.sumcosi.com/english/ir/financial/)
+- [SUMCO 有価証券報告書 (日文页)](https://www.sumcosi.com/ir/library/secreports/)
+- [SUMCO 有価証券報告書 via IRBANK](https://irbank.net/E02103/edinet)
+- [SUMCO Yuho via 株主プロ](http://www.kabupro.jp/yuho/3436.htm)
+- [SUMCO 2026 财年 Q1 业绩公告 PDF, 2026-05-12](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260512/20260511523181.pdf)
+- [SUMCO 2026 财年 Q1 业绩说明会纪要, Investing.com, 2026-05-12](https://www.investing.com/news/transcripts/earnings-call-transcript-sumco-misses-q1-2026-expectations-stock-dips-93CH-4698631)
+- [SUMCO 2025 财年 Q3 业绩说明会纪要, Alpha Spread](https://www.alphaspread.com/security/tse/3436/investor-relations/earnings-call/q3-2025)
+
+### 竞争对手公告
+
+- [信越 2025 年报财务部分](https://www.shinetsu.co.jp/wp-content/uploads/2025/07/Financial-Section.pdf)
+- [信越 H1 FY26 合并业绩, 2025-10-24](https://www.shinetsu.co.jp/wp-content/uploads/2025/07/20251024_con_E.pdf)
+- [信越硅片产品页](https://www.shinetsu.co.jp/en/products/electronics-materials/silicon-wafers/)
+- [信越公司沿革](https://www.shinetsu.co.jp/en/company/history/)
+- [Siltronic 2025 年报](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf)
+- [Siltronic 投资者演示 2026 年 4 月](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Siltronic_InvestorPresentation__.pdf)
+- [Siltronic 2026 Q1 电话会议演示](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Q1_2026_conference_call_presentation__.pdf)
+- [Siltronic 产品页](https://www.siltronic.com/en/products.html)
+- [Siltronic ad-hoc——公开要约收购未完成, 2022-02-01](https://www.siltronic.com/en/investors/financial-releases/ad-hoc-reports/siltronic-ag-public-tender-offer-by-globalwafers-will-not-be-completed-as-offer-conditions-have-not-been-fulfilled-within-the-applicable-deadline-2191243-1643673381.html)
+- [环球晶圆 IR](https://www.gwafers.com.tw/eng/index.html)
+- [环球晶圆产品页](https://www.gwafers.com.tw/eng/products.html)
+- [SEH America——关于我们](https://sehamerica.com/about-us/)
+- [Soitec 产品页](https://www.soitec.com/en/products)
+- [RS Technologies——回收硅片业务](https://www.rs-tec.jp/eng/business/reclaim/)
+- [Wikipedia — SUMCO](https://en.wikipedia.org/wiki/Sumco)
+- [Wikipedia — Siltronic](https://en.wikipedia.org/wiki/Siltronic)
+- [Wikipedia — 信越化学](https://en.wikipedia.org/wiki/Shin-Etsu_Chemical)
+- [Wikipedia — 环球晶圆](https://en.wikipedia.org/wiki/GlobalWafers)
+
+### 行业研究与媒体报道
+
+- [Intel Market Research — Silicon Wafer Market Outlook 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85)
+- [Future Market Insights — Semiconductor Wafer Market Size, Share & Forecast](https://www.futuremarketinsights.com/reports/semiconductor-wafers-market)
+- [Market Research Future — 300mm Silicon Wafers Market Size, 2035](https://www.marketgrowthreports.com/market-reports/300mm-silicon-wafers-market-103422)
+- [Business Research Insights — 300mm Silicon Wafer Market](https://www.businessresearchinsights.com/market-reports/300mm-12-inch-silicon-wafer-market-115938)
+- [Market Report Analytics — 300mm Polished Wafer Forecasts to 2033](https://www.marketreportanalytics.com/reports/300mm-polished-wafer-396052)
+- [Intel Market Research — Annealed Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/semiconductor-and-electronics/1096/annealed-silicon-wafer-2025-2032-494)
+- [Valuates Reports — 单晶硅 (300mm) 市场](https://reports.valuates.com/market-reports/QYRE-Auto-21H9107/global-single-crystal-silicon-wafers-300mm)
+- [Intel Market Research — Semiconductor Silicon Wafer Market](https://www.intelmarketresearch.com/semiconductor-silicon-wafer-market-16631)
+- [Semiconductor Insight — Silicon Wafer Market](https://semiconductorinsight.com/report/silicon-wafer-market/)
+- [SEMI — 全球 300mm 工厂设备支出预测](https://www.semi.org/en/semi-press-release/semi-reports-global-300mm-fab-equipment-spending-expected-to-total-374-billion-dollars-over-next-three-years)
+- [Silicon-Ecosystem — Silicon wafer market: upturn, higher prices](https://marklapedus.substack.com/p/silicon-wafer-market-upturn-higher)
+- [Digitimes — Silicon wafer suppliers continue to enjoy LTA pull-ins, 2022](https://www.digitimes.com/news/a20220407PD210/ic-manufacturing-silicon-wafer.html)
+- [Digitimes — 日本 METI 拟补贴 SUMCO 新硅片工厂, 2023-07-11](https://www.digitimes.com/news/a20230711PD210/japan-semiconductor-subsidy.html)
+- [Digitimes — SUMCO 转向设备升级而非新厂, 2026-03-30](https://www.digitimes.com/news/a20260330VL210/sumco-equipment-plant-wafer-demand.html)
+- [Digitimes — Sumco 相关新闻](https://www.digitimes.com/tag/sumco/001883.html)
+- [Evertiq — SUMCO 战略转向设备升级, 2026-04-07](https://evertiq.com/design/2026-04-07-sumco-shifts-strategy-from-new-fab-to-equipment-upgrades)
+- [日本金属公报 — SUMCO 启动激进硅片业务最优化](http://www.japanmetalbulletin.com/?p=19652)
+- [Business Wire — SUMCO 宣布 300mm 扩产, 2005](https://www.businesswire.com/news/home/20050317005005/en/SUMCO-Announces-300-mm-Expansion-Wafer-Production-Capacity-to-Increase-to-600000-Wafers-Per-Month)
+- [CNBC — 环球晶圆收购 Siltronic 失败因技术主权关切, 2022-02-01](https://www.cnbc.com/2022/02/01/globalwafers-bid-for-siltronic-fails-amid-tech-sovereignty-concerns-.html)
+- [SemiVision via X — SUMCO 2025 财年 Q3 300mm 市场点评](https://x.com/semivision_tw/status/1993466357208563725)
+
+### 市场数据与股价
+
+- [Yahoo Finance — SUMCO 3436.T 主页](https://finance.yahoo.com/quote/3436.T/)
+- [Yahoo Finance — SUMCO 估值指标](https://finance.yahoo.com/quote/3436.T/key-statistics/)
+- [Yahoo Finance — SUMCO 利润表](https://finance.yahoo.com/quote/3436.T/financials/)
+- [Yahoo Finance — SUMCO 历史价格](https://finance.yahoo.com/quote/3436.T/history/)
+- [Yahoo Finance — Sumco Corporation SUOPY (ADR)](https://finance.yahoo.com/quote/SUOPY/)
+- [Stockanalysis — SUMCO 3436](https://stockanalysis.com/quote/tyo/3436/)
+- [Stockanalysis — Siltronic ETR:WAF](https://stockanalysis.com/quote/etr/WAF/)
+- [Stockanalysis — 信越 TYO:4063 统计](https://stockanalysis.com/quote/tyo/4063/statistics/)
+- [Morningstar — XTKS 3436 报价](https://www.morningstar.com/stocks/xtks/3436/quote)
+- [Bloomberg — SUMCO 3436:JP](https://www.bloomberg.com/quote/3436:JP)
+- [Bloomberg — 桥本真幸简历](https://www.bloomberg.com/profile/person/18038794)
+- [Marketreportanalytics — SUMCO 3436.T 财务表现](https://www.marketreportanalytics.com/companies/3436.T)
+- [Datainsightsmarket — SUMCO 3436.T](https://www.datainsightsmarket.com/companies/3436.T)
+- [Macroaxis — 桥本真幸简历](https://www.macroaxis.com/invest/manager/SUMCF/Mayuki-Hashimoto)
+- [Investing.com — SUMCO Corp 公司简介](https://www.investing.com/equities/sumco-corp.-company-profile)
+- [TradingView — SUMCO 3436 财务报表](https://www.tradingview.com/symbols/TSE-3436/financials-overview/)
+- [Meyka — 3436.T 股价于 2026 年 5 月 9 日大涨 18%](https://meyka.com/blog/3436t-stock-surges-18-on-may-9-2026-as-sumco-nears-earnings-0905/)
+- [野村《大中华区半导体 2026-30F 复兴》报告, 2026-05-21 (图 35 供应商排名)](https://www.intelmarketresearch.com/silicon-wafer-market-85)
+
+---
+
+<details>
+<summary>核查日志 (Step 10) — 2026-05-26</summary>
+
+**URL 检查。** 本报告中约 75 条 URL 均在研究阶段通过有据可循的网页搜索结果汇编而成。主要 SUMCO URL (`sumcosi.com/english/...`) 遵循 SUMCO IR 标准模式。Yuho 披露 URL 链接到 SUMCO IR 资料库页 (其上列示个别文件) 以及 IRBANK / 株主プロ 等日文版 EDINET 索引器——这些是稳定 URL 形式访问 EDINET 有価証券報告書 的标准中介。行业报告 URL 链接到摘要公开可见的具体报告着陆页。本核查日志对照英文版核查记录: 所有该等 URL 在英文版核查中已 HTTP 检查通过 (200 或已知良好的 301/302)。
+
+**SUMCO 事实核查** (主张 → 位置):
+- 创立日期 1999-07-30 ✓ ([SUMCO 公司简介, sumcosi.com](https://www.sumcosi.com/english/corporate/profile.html))
+- 总部 1-2-1 Shibaura, Minato-ku, Tokyo ✓ ([SUMCO 公司简介](https://www.sumcosi.com/english/corporate/profile.html))
+- 员工约 9,714 人, 截至 2025 年 12 月 ✓ ([SUMCO 公司简介](https://www.sumcosi.com/english/corporate/profile.html))
+- 注册资本 1,990 亿日元 ✓ ([SUMCO 公司简介](https://www.sumcosi.com/english/corporate/profile.html))
+- 在 TSE Prime 上市, 代码 3436 ✓ ([Yahoo Finance — 3436.T](https://finance.yahoo.com/quote/3436.T/)、[Bloomberg — 3436:JP](https://www.bloomberg.com/quote/3436:JP))
+- FY2024 营业收入 3,966.2 亿日元 (相较 FY2023 4,259.4 亿日元同比下滑 6.88%) ✓ ([Marketreportanalytics — SUMCO 3436.T](https://www.marketreportanalytics.com/companies/3436.T))
+- 2026 财年 Q1 营业收入 1,014 亿日元, 营业亏损 52 亿日元 ✓ ([SUMCO 2026 财年 Q1 公告 PDF, 2026-05-12](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260512/20260511523181.pdf)、[2026 财年 Q1 纪要, Investing.com](https://www.investing.com/news/transcripts/earnings-call-transcript-sumco-misses-q1-2026-expectations-stock-dips-93CH-4698631))
+- 2025 财年 Q3 营业收入 991 亿日元, 营业亏损 16 亿日元 ✓ ([SUMCO 2025 财年 Q3 纪要, Alpha Spread](https://www.alphaspread.com/security/tse/3436/investor-relations/earnings-call/q3-2025))
+- SUMCO 产品矩阵的 6 大产品系列 (原文照录) ✓ ([SUMCO 产品矩阵](https://www.sumcosi.com/english/products/lineup.html))
+- 宫崎 200mm 退出于 2025 年 2 月宣布, 2026 年下半年生效 ✓ ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85)、[Evertiq 2026-04-07](https://evertiq.com/design/2026-04-07-sumco-shifts-strategy-from-new-fab-to-equipment-upgrades))
+- METI 补贴自 750 亿日元下调至 193 亿日元, 2026 年 3 月 27 日批准 ✓ ([Digitimes 2026-03-30](https://www.digitimes.com/news/a20260330VL210/sumco-equipment-plant-wafer-demand.html)、[Evertiq 2026-04-07](https://evertiq.com/design/2026-04-07-sumco-shifts-strategy-from-new-fab-to-equipment-upgrades))
+- 市场份额: 信越约 28%、SUMCO 约 21–23%、环球晶圆约 16–18%、Siltronic 约 12–14%、SK Siltron 约 10–12% ✓ ([Intel Market Research — Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85))
+- 桥本真幸自 2012 年起任董事长兼 CEO; 此前为 2005 年三菱材料硅业部门总经理 ✓ ([Bloomberg 简历](https://www.bloomberg.com/profile/person/18038794)、[Macroaxis 简历](https://www.macroaxis.com/invest/manager/SUMCF/Mayuki-Hashimoto))
+- 股价约 3,177 日元 (截至 2026-05-22), 市值约 1.11 万亿日元 ✓ ([Meyka 2026-05](https://meyka.com/blog/3436t-stock-surges-18-on-may-9-2026-as-sumco-nears-earnings-0905/))
+- TTM EPS -33.6 日元 ✓ ([Yahoo Finance — SUMCO 3436.T](https://finance.yahoo.com/quote/3436.T/))
+
+**分析师观点段落** (按专项规则有意不引用单一主要来源, 已加 `*分析师观点:*` 标签):
+- §1 公司概览估值快照——*分析师观点:* 段关于周期底部 + 折旧倍数失真——由竞争对手对比支持, 但未归因于单一引用。
+- §4.3–4.7 各产品系列 *分析师观点:* 段——竞争护城河与对位竞争产品框架均明确标识。
+- §7.4–7.5 SUMCO 竞争优势与脆弱性——所有涉及主观领导力/脆弱性评估的主张均加 *分析师观点:* 标签。
+- §7.6 *分析师观点:* 关于市场结构持久性——分析师框架, 由历史观察支持。
+- §8.5 基准/牛市/熊市情景——*分析师观点:* 框架用于情景解读; SOM/情景数字以底层 TAM 预测与 SUMCO 披露为外部基础。
+
+**已嵌入图表 (6/6 来自现有 PNG):**
+- `reports/charts/sumco_revenue_op.png` (§1)
+- `reports/charts/sumco_quarterly.png` (§1)
+- `reports/charts/sumco_peer_valuation.png` (§1)
+- `reports/charts/sumco_ai_wafer_demand.png` (§4)
+- `reports/charts/sumco_capex_depreciation.png` (§4)
+- `reports/charts/sumco_market_share.png` (§6)
+
+**Mermaid 图块:** 时间线 (§2)、产品流 LR 图 (§4.2)、客户集中度饼图 (§5)、竞争四象限图 (§7) — 共 4 个。
+
+**残余未核查项 / 未确认事项:**
+- 最近一期 SUMCO 有価証券報告書 中按客户名披露的最大客户具体数据未直接获取——客户集中度框架依赖 IRBANK / 株主プロ 等聚合披露的模式。后续修订应在 EDINET 搜索接口可访问时, 直接获取最新 Yuho PDF。
+- 最近一期 Yuho 的 EDINET docID 直接 URL 未取得——WebFetch EDINET 文档搜索门户返回错误页。本报告引用 SUMCO IR 资料库与 IRBANK 作为稳定中介。
+- 龍田二郎传记深度有限 (此前职业经历)——SUMCO 英文管理团队页仅列示其当前职位, 而非详细此前经历; 日文版 EDINET 文件应有更丰富细节。
+- SUMCO 未公开披露 300mm 与 200mm 营业收入拆分; "300mm 占约 70%"的框架来自行业分析师汇总, 与公开评论一致, 但并非单独披露。
+- P/E 与 P/S 倍数由公开披露的营业收入 + 市值 + TTM EPS 计算得出; 不同数据提供方间存在小幅差异, 故采用"约"框架。
+- 英文版与中文版共用相同研究底层; 引用 URL 完全一致 (报告链接标题已译为中文呈现, 但 URL 自身不变)。
+
+</details>
+
