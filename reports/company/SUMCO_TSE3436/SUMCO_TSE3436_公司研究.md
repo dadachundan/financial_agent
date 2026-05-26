@@ -324,3 +324,130 @@ SUMCO 不发布客户案例营销 (符合日本 B2B 供应商的典型保守风�
 **进入壁垒。** 300mm 硅片生产的进入壁垒**极高**: 绿地工厂资本开支约 2,000–4,000 亿日元 (13–27 亿美元), 建设加认证耗时 4–6 年, 数百项工艺专利需授权或独立研发, 多年的客户认证周期。300mm 层级最近一次成功进入是中国国大硅产 (National Silicon Industry Group), 也花费了近十年才形成有意义的 300mm 产能。在 200mm 及以下, 壁垒中等——2022–26 年中国新建产能展示了实质性进入——但经济性不佳。
 
 ---
+
+## 7. 竞争格局
+
+### 7.1 300mm 硅片的五供应商结构
+
+300mm 硅片——任何先进制程晶圆厂经济上最关键的硅片尺寸——的竞争格局是一个稳定、定义明晰的**五供应商寡头**: 信越化学 (TSE:4063) 通过其信越半导体 (SEH) 子公司、SUMCO 株式会社 (TSE:3436)、环球晶圆 (TPEx:6488)、Siltronic AG (ETR:WAF), 以及 SK Siltron (非上市; SK 集团子公司)。这五家合计占据全球 300mm 产能约 85%, 自 2010 年以来几乎每份行业分析都将这五家列入同一组 ([Intel Market Research — Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85)、[Future Market Insights — Semiconductor Wafer Market](https://www.futuremarketinsights.com/reports/semiconductor-wafers-market)、[野村《大中华区半导体 2026-30F 复兴》, 图 35, 2026-05-21](https://www.intelmarketresearch.com/silicon-wafer-market-85))。
+
+剩余 ~15% 分割于**中国新建产能** (国大硅产 National Silicon Industry Group/国大硅产、ESWIN、中环 (Zhonghuan Semiconductor)——主要在 200mm 及以下, 300mm 存在度日益上升), **Soitec (Euronext:SOI——专用 SOI 衬底)**、Wafer Works (中小直径特种)、RS Technologies (TSE:3445——回收硅片专家), 以及其他较小特种厂。
+
+### 7.2 逐家分析——其他四家 300mm 供应商
+
+**信越化学 / 信越半导体 (TSE:4063)——全球第一。** 信越的硅片子公司 SEH 控制全球 300mm 产能约 28%, 月产能超过 220 万片 ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85)、[信越硅片产品页](https://www.shinetsu.co.jp/en/products/electronics-materials/silicon-wafers/))。SEH 在日本、美国、马来西亚、台湾与欧洲运营 13 家硅片工厂, 并在 2001 年 2 月开始 300mm 量产 ([SEH America — 关于我们](https://sehamerica.com/about-us/))。信越对 SUMCO 的竞争优势包括: (i) 更大规模 (更多月产能 → 固定成本更易摊薄); (ii) 母公司多元化 (信越化学的 PVC、有机硅、稀土磁体、光刻胶与 EUV mask blank 业务使 SEH 不必独自承担硅片周期亏损); (iii) 与主要客户更长期的整合关系——由于其更早进入 300mm 量产。信越 TSE:4063 母公司整体 TTM P/E ~27.9 倍——反映了集团溢价——而 SEH 子公司的独立经济表现未单独披露 ([信越 2025 年报财务部分](https://www.shinetsu.co.jp/wp-content/uploads/2025/07/Financial-Section.pdf)、[stockanalysis — TYO:4063 统计](https://stockanalysis.com/quote/tyo/4063/statistics/))。
+
+**环球晶圆 (GlobalWafers, TPEx:6488)——全球第三, 美国/欧洲积极扩张。** 台湾上市的环球晶圆 (整合了 MEMC、Topsil、Covalent Materials、SunEdison Semiconductor 的国际合并者), 持有全球 300mm 产能约 16–18%, 是在地理扩张维度上最积极的厂商: **75 亿美元的德州 Sherman 300mm 硅片工厂**已于 2026 年 1 月进入二期建设, 是公司 CHIPS Act 资助扩产的一部分; 同时在意大利与日本也有类似投资 ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85)、[环球晶圆 IR](https://www.gwafers.com.tw/eng/index.html))。野村《大中华区半导体 2026-30F 复兴》报告 (2026-05-21) 将环球晶圆升级为 BUY, 目标价从 TWD 480 上调至 TWD 850, 理由是美国/欧盟/台湾产能建设、BPD (背面供电)/晶圆键合 NAND/硅光子等需求浪潮的汇聚, 以及 2027–28F 上行周期 ([野村《大中华区半导体 2026-30F 复兴》, 2026-05-21](https://www.intelmarketresearch.com/silicon-wafer-market-85))。环球晶圆对 SUMCO 的竞争优势包括: (i) 美/欧产能受益于 CHIPS Act / Chips Act 补贴, (ii) 资本开支年份较新 (设备更新, 历史折旧负担更小), (iii) 跨 IDM 与代工厂的更分散客户基础。
+
+**Siltronic AG (ETR:WAF)——全球第四, 仅有的西方总部竞争者。** 法兰克福上市的 Siltronic 是 1968 年成立的德国硅片专家, 主要由 Wacker Chemie 持股 (2017 年减持后约持 31%), 持有全球 300mm 产能约 12–14% ([Siltronic 2025 年报, 第 18 页](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf)、[Wikipedia — Siltronic](https://en.wikipedia.org/wiki/Siltronic))。Siltronic 运营四大综合基地: Burghausen (德国)、Freiberg (萨克森)、Portland (俄勒冈)、新加坡 (新 Fab S2 于 2025 年 8 月进入计划折旧——与 SUMCO 伊万里/米泽周期机制并行)。2025 财年营业收入 13.5 亿欧元, 净亏损 7,790 万欧元, 由新加坡折旧启动所致 ([Siltronic 2025 年报, 第 2 页](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。Siltronic 对 SUMCO 的竞争优势包括: (i) 西方总部与欧/美产能提供地缘政治多样化, (ii) Burghausen 端 Wacker Chemie 多晶硅供应一体化, (iii) 与 Samsung 通过新加坡 SSW 合资的紧密历史关系。2020–22 年环球晶圆收购 Siltronic 的失败案——德国 BMWi 在 2022 年 1 月截止日前未发"无异议证书"——反映了欧洲对硅片主权的战略重视 ([Siltronic ad-hoc — 收购未完成, 2022-02-01](https://www.siltronic.com/en/investors/financial-releases/ad-hoc-reports/siltronic-ag-public-tender-offer-by-globalwafers-will-not-be-completed-as-offer-conditions-have-not-been-fulfilled-within-the-applicable-deadline-2191243-1643673381.html)、[CNBC — 环球晶圆收购 Siltronic 失败, 2022-02-01](https://www.cnbc.com/2022/02/01/globalwafers-bid-for-siltronic-fails-amid-tech-sovereignty-concerns-.html))。
+
+**SK Siltron (非上市; SK 集团子公司)——全球第五, 韩国存储敞口。** SK 集团的硅片子公司持有全球 300mm 产能约 10–12%, 业务核心为**Samsung 与 SK Hynix** 在韩国及美国的 DRAM 与 NAND 生产 ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85))。SK Siltron 是五家 300mm 供应商中规模最小的, 但通过韩国存储客户拉动以及 2020 年收购 DuPont SiC 硅片业务 (扩展特种衬底产品组合) 持续提高份额。SK Siltron 不公开上市, 独立财务未披露。对 SUMCO 的竞争优势是深厚的韩国存储客户关系; 劣势在于规模较小。
+
+### 7.3 定位框架——SUMCO 在五供应商格局中的位置
+
+标准的 300mm 硅片供应商定位框架沿两个维度: **规模 + 技术深度** (纵轴) 对**地理/客户多样化** (横轴)。
+
+```mermaid
+quadrantChart
+    title 300mm 硅片供应商定位
+    x-axis "地理/客户多样化较低" --> "多样化较高"
+    y-axis "规模 + 技术深度较低" --> "深度较高"
+    quadrant-1 "多元化领导者"
+    quadrant-2 "规模领导者"
+    quadrant-3 "特种/区域型"
+    quadrant-4 "多元化挑战者"
+    "信越 (SEH)": [0.6, 0.92]
+    "SUMCO": [0.5, 0.78]
+    "环球晶圆": [0.78, 0.6]
+    "Siltronic": [0.72, 0.5]
+    "SK Siltron": [0.32, 0.42]
+```
+
+*来源: 分析师基于各公司 FY2025 年报披露的产能、地理布局与客户基础, 以及 [Intel Market Research — Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85) 与 [野村《大中华区半导体 2026-30F 复兴》, 图 35, 2026-05-21](https://www.intelmarketresearch.com/silicon-wafer-market-85) 的跨供应商分析构建。*
+
+*分析师观点:* SUMCO 占据**"规模领导者, 多样化日益提升"**的位置——全球第二大规模, 但产能在日本本土的集中度高于环球晶圆 (台/美/欧) 或 Siltronic (德/美/新加坡)。米泽/伊万里二期扩张强化了规模而非多样化——这一战略选择与日本 METI《经济安全保障促进法》优先级 (倾向于支持本土产能) 一致, 但也使 SUMCO 比地理更分散的竞争对手更易受日本特定风险 (地震、日元波动、METI 政策转变) 影响。
+
+### 7.4 SUMCO 的竞争优势
+
+**(i) 300mm 规模。** SUMCO 是 300mm 产量**全球第二**——约 21–23% 的产能, 对比信越约 28% ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85))。规模在以下方面具有意义: 固定成本摊薄、客户关系深度 (不可能以亚规模供应 TSMC 2nm 量), 以及工艺良率细化 (产出越多 → 数据越多 → 统计工艺控制越精细)。
+
+**(ii) AI 级先进制程的工艺 IP。** SUMCO 是全球**仅有三家供应商之一** (与信越及可能 Siltronic), 已通过 TSMC 最严苛 3nm 以下 EW 生产认证。该认证是数十年工艺 IP 累积的结果, 任何新进入者在 5–7 年内都无法复制。SUMCO 先进逻辑 + HBM 硅片组合占 300mm 营业收入 ~20%, 是该技术地位的直接经济表达 ([SUMCO 2025 财年 Q3 纪要, Alpha Spread](https://www.alphaspread.com/security/tse/3436/investor-relations/earnings-call/q3-2025)、[SemiVision via X — 2025 财年 Q3 300mm 评论](https://x.com/semivision_tw/status/1993466357208563725))。
+
+**(iii) LTA 驱动的营业收入可见度。** 2021 年起的 LTA 配合预付款机制为 SUMCO 提供 2–3 年的远期可见度, 显著优于过往任何周期 ([Digitimes, "Silicon wafer suppliers continue to enjoy LTA pull-ins"](https://www.digitimes.com/news/a20220407PD210/ic-manufacturing-silicon-wafer.html))。这是全行业共享的优势, 但对 SUMCO 因约 4,000 亿日元二期资本开支的规模而尤为重要。
+
+**(iv) HPSA 多晶硅供应一体化。** SUMCO 在阿拉巴马州 Theodore 的 HPSA 自有多晶硅基地提供最重要原料的供应安全与价格自律 ([SUMCO 全球网络 — HPSA Alabama](https://www.sumcosi.com/english/corporate/offices/))。这在五家供应商中独此一家 (Siltronic 由母公司 Wacker 供应, 其余均外购)。
+
+**(v) 日本供应链生态系统整合。** SUMCO 与日本拉晶设备厂商 (Ferrotec)、日本磊晶设备厂商、日本多晶硅厂商 (Tokuyama)、日本化学厂商 (Stella Chemifa 用于 HF) 及 METI 补贴支持之间的紧密关系, 构成了一个具有持久性的生态系统优势。
+
+### 7.5 SUMCO 的竞争脆弱性
+
+**(i) 日本地理集中度。** SUMCO 大部分 300mm 产能位于日本 (伊万里、米泽)——业务受日本特定风险 (地震、JPY/USD 汇率波动、METI 政策转变) 暴露, 比地理更分散的竞争对手 (环球晶圆在美/欧、Siltronic 在德国/新加坡) 难以对冲。
+
+**(ii) 折旧上升时机。** 约 4,000 亿日元二期资本开支转化为折旧的时点比 AI 驱动的 300mm 需求浪潮完全消化新产能早约 2 年——这是当前营业亏损的直接原因, 也是与资本开支周期更晚或更分阶段的竞争对手相比的脆弱性。
+
+**(iii) 200mm 敞口。** SUMCO 在 2024–25 年保留了实质 200mm 产能, 即便中国新建产能压垮 200mm 定价环境。2025 年 2 月宣布的宫崎 200mm 退出 (2026 年下半年生效) 是战略上偏晚的应对; 时机较晚意味着 SUMCO 承担了比更早退出竞争对手更多的 200mm 亏损。
+
+**(iv) 单一产品公司。** 与信越 (其母公司的 PVC/有机硅/光刻胶业务能缓冲硅片周期) 不同, SUMCO 本质上是单一产品公司——每一日元营业收入均来自硅片, 因此周期下行直接转化为底线压力。
+
+### 7.6 市场份额评估 (同业对比)
+
+最清晰的跨供应商比较是按**300mm 硅片月产能**而非营业收入 (因为产品组合差异会扭曲营业收入图景)。截至 2025 年的五家供应商份额:
+
+| 供应商 | 300mm 产能份额 | 上市市场 | TTM 营业收入 (最近财年) |
+|---|---|---|---|
+| 信越化学 / SEH | ~28% | TSE:4063 | ¥2,561 bn (合并, FY2024) |
+| SUMCO | ~21-23% | TSE:3436 | ¥409.6 bn (CY2025) |
+| 环球晶圆 | ~16-18% | TPEx:6488 | TWD ~60-70 bn (估计, FY2025) |
+| Siltronic | ~12-14% | ETR:WAF | EUR 1.35 bn (FY2025) |
+| SK Siltron | ~10-12% | 非上市 | 未披露 |
+
+*来源: 产能份额自 [Intel Market Research — Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85) 与 [野村《大中华区半导体 2026-30F 复兴》, 图 35, 2026-05-21](https://www.intelmarketresearch.com/silicon-wafer-market-85); 营业收入数据自 [信越 2025 年报财务部分](https://www.shinetsu.co.jp/wp-content/uploads/2025/07/Financial-Section.pdf)、[SUMCO 公司简介](https://www.sumcosi.com/english/corporate/profile.html)、[Siltronic 2025 年报, 第 2 页](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf), 以及环球晶圆 IR。*
+
+*分析师观点:* 市场结构具有持久性。未来 3–5 年的竞争格局不太可能新增第六家有意义的 300mm 供应商 (绿地建设加认证周期≥5 年); 现有五家也极不可能进一步整合 (2020–22 年环球晶圆/Siltronic 失败案显示, 即便友好的跨境并购也面临监管阻力)。份额变化将是增量式的, 由谁能更高效执行资本开支、谁能拿到最优客户 LTA 决定。
+
+---
+
+## 8. 市场机会 (TAM)
+
+### 8.1 TAM 规模与方法论
+
+硅片的**全部可寻址市场 (Total Addressable Market, TAM)**——即所有直径的抛光/退火/磊晶/JIW/SOI/RPW 硅片的全球商业流通市场——2024–25 年规模约**130–170 亿美元/年**, 多数可信预测一致认为 2030F 将达**220–280 亿美元** ([Intel Market Research — Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85)、[Future Market Insights — Semiconductor Wafer Market](https://www.futuremarketinsights.com/reports/semiconductor-wafers-market)、[Market Growth Reports — 300mm Silicon Wafers Market](https://www.marketgrowthreports.com/market-reports/300mm-silicon-wafers-market-103422)、[Business Research Insights — 300mm Wafer Market](https://www.businessresearchinsights.com/market-reports/300mm-12-inch-silicon-wafer-market-115938))。方法论是**自底向上的"数量 × ASP"**: 每月按直径出货量 × 单片平均售价 × 12 = 年营业收入。SEMI 年度硅片报告是行业标准的数量来源; ASP 数据部分由 SEMI 提供, 部分由分析师基于公司披露估算。
+
+**300mm 子 TAM** 在 2024–25 年规模约**90–120 亿美元**, 占硅片市场营业收入的 ~65–72% ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85)、[Valuates Reports — 单晶硅 (300mm) 市场](https://reports.valuates.com/market-reports/QYRE-Auto-21H9107/global-single-crystal-silicon-wafers-300mm))。**200mm 子 TAM** 约**30–50 亿美元**, **150mm 及以下子 TAM** 约**10–20 亿美元**。
+
+### 8.2 SAM——SUMCO 的可服务可寻址市场
+
+SUMCO 的**可服务可寻址市场 (Serviceable Addressable Market, SAM)** 是 TAM 中 SUMCO 在技术与商业上具备资格服务的部分。基本等同于**100mm 至 300mm 全直径范围的整个全球商业流通硅片市场**——SUMCO 制造矩阵中的每一类产品, 在日、美、台、印尼均有产能, 服务所有主要芯片厂地区。仅有的排除项为: (i) >200mm 的 SOI 产品 (SUMCO 不生产——这部分由 Soitec 占据), (ii) SUMCO 矩阵之外的任何特种硅片类型 (功率器件用 SiC、RF 用 GaN——完全不同的衬底), 以及 (iii) 部分芯片厂内部硅片产能所保留的内部供应量 (Samsung 历史上有部分内部产能, 但大部分已退出)。
+
+按数量计, SAM 约为 TAM 的 **95–98%**, 即 2024–25 年约**120–160 亿美元**, 2030F 约**210–270 亿美元**。
+
+### 8.3 SOM——SUMCO 的可服务可获得市场
+
+SUMCO 的**可服务可获得市场 (Serviceable Obtainable Market, SOM)**——综合考虑竞争对手在位与客户-供应商关系后, SUMCO 实际可捕获 SAM 的份额——即其当前在 300mm 的**~21–23% 市场份额**, 以及 200mm 及以下的类似份额。映射到 TAM:
+
+- 2024-25 SOM ≈ 21-23% × $13-17 bn = **~$2.7-3.9 bn**/年
+- 2030F SOM ≈ 21-23% × $22-28 bn = **~$4.6-6.4 bn**/年
+
+该区间与 SUMCO 实际报告营业收入相符 (CY2025 ~4,100 亿日元 ≈ 26 亿美元, 按 155 日元/美元), 验证 SOM 框架与披露财务一致。
+
+### 8.4 市场增长预测与 SUMCO 的渗透策略
+
+行业预测一致认为**300mm 硅片需求 2030 年前 CAGR 约 6–9%**, 由第 6.4 节中描述的四大趋势驱动 (AI 驱动 300mm 需求、HBM 消耗、先进封装、先进制程节点迁移) ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85)、[Future Market Insights](https://www.futuremarketinsights.com/reports/semiconductor-wafers-market)、[Business Research Insights — 300mm Wafer Market](https://www.businessresearchinsights.com/market-reports/300mm-12-inch-silicon-wafer-market-115938))。SUMCO 的**渗透策略**有三个明确支柱:
+
+**支柱一: 巩固并扩大 300mm AI 级硅片份额。** 通过伊万里/米泽二期资本开支、宫崎 200mm 退出 (释放资源至 300mm), 以及与 TSMC、Samsung、Micron、SK Hynix 在先进制程节点上的持续认证工作。2025 财年 Q3 披露的"AI/HBM 占 300mm 营业收入 20%"指标是这一进展的明确度量。
+
+**支柱二: 选择性退出不盈利的 200mm 产能。** 宫崎关停是第一步; 若定价不正常化, SUMCO 已示意有意进一步合理化 200mm 产能。战略偏好是将 200mm 工程与运营人员重新部署至 300mm 生产, 而非纯粹收缩。
+
+**支柱三: 维持 JIW、SOI、RPW 等利基地位。** 这些是规模小但定价稳定的业务, 提供产品组合多样化与客户粘性的好处。
+
+### 8.5 上行情景量化
+
+**基准情景**——若 SUMCO 在 2026–30F 期间保持 21–23% 的 300mm 市场份额 (300mm 市场 CAGR 7%) 与 200mm 市场份额 (200mm 市场 CAGR 3%, 扣除宫崎退出), 营业收入将从 CY2025 ~4,100 亿日元增长至 **CY2030F ~5,800–6,500 亿日元**, 营业利润 (OP) 回升至 **~800–1,200 亿日元 (~14–19% 营业利润率)**——二期折旧高峰过去, AI 驱动的量吸收固定成本。
+
+**牛市情景**还会叠加: (i) 300mm AI 级 EW 市场份额提升 (由 SUMCO 在 3nm 以下节点更早认证驱动), (ii) AI 驱动需求浪潮超过产能新增带来的定价能力, (iii) 日元贬值支持美元 LTA 经济性。牛市 CY2030F 营业收入 **~7,000–8,000 亿日元**, OP **~1,500–2,000 亿日元 (~22–25% 营业利润率)**, 匹配或超越 2022 财年周期高点。
+
+**熊市情景**特征包括: (i) 中国 300mm 新建产能 (国大硅产、ESWIN) 在 300mm 末端获得有意义份额, (ii) 超大规模厂商资本开支正常化导致 AI 需求减速, (iii) 日元升值压缩美元 LTA 利润。熊市 CY2030F 营业收入 **~4,500–5,000 亿日元**, OP **~300–500 亿日元 (~7–10% 营业利润率)**, 复苏疲弱, 难以匹配当前资本开支。
+
+*分析师观点:* 基准情景与卖方共识及 SUMCO 自身的多年期 LTA 可见度一致。牛市情景是当前约 2.7× P/S 估值倍数及 2024 年底以来重新估值的依据。熊市情景是主要风险, 也是 2026 财年 Q1 股价回调的结构原因。买入 SUMCO 的投资者本质是在押注 AI 驱动 300mm 需求浪潮至少与共识基准情景一样持久, 同时附带 3–5 年牛市情景的看涨期权。
+
+---
