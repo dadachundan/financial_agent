@@ -6,6 +6,8 @@ Do **not** save citations for the end. Every non-trivial factual claim — reven
 
 **Density target: ≥1 citation per paragraph across all 9 sections, plus the References block at the end.** A 6,000–10,000 word report at ~150 words per paragraph yields ~40–70 paragraphs; expect ~50–100 inline citations across the body. Reports landing under 40 inline citations have insufficient sourcing — go back and cite uncited paragraphs before submitting.
 
+**IR sub-density target: ≥8–12 of those citations point at investor-relations materials** (earnings decks, investor day decks, conference presentations, Integrated Reports, Mid-term Plans, IPO prospectuses, shareholder letters) when the company has an active IR program. See § "Investor-relations materials — slide-level citation discipline" below for the format and per-section coverage rules.
+
 ## Format: markdown links to real URLs
 
 Every inline citation is a clickable markdown link: `[Title in original language](https://real-website-url)`.
@@ -63,7 +65,16 @@ The `directory.item[*].name` array lists every file in the filing.
 - US filing: `revenue grew 34% YoY ([Tesla 10-K FY2024, p. 42](https://www.sec.gov/Archives/edgar/data/1318605/000162828025003063/tsla-20241231.htm))`
 - China A-share filing: `industrial cobot shipments rose 41% ([安培龙 2024 年度报告, 第 28 页](https://static.cninfo.com.cn/finalpage/2025-04-20/1222612345.PDF))`
 - HK filing: `gross margin expanded 220bps ([比亚迪 2024 年报, p. 87](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0327/2025032700234.pdf))`
-- Earnings call: `CEO flagged a Tier-1 ramp ([Q4-2024 earnings call transcript, 2025-03-12](https://ir.example.com/events/2025-03-12-q4-call))`
+- Earnings call transcript: `CEO flagged a Tier-1 ramp ([Q4-2024 earnings call transcript, 2025-03-12](https://ir.example.com/events/2025-03-12-q4-call))`
+- **Earnings deck (per slide):** `Data-center revenue mix rose to 62% in Q4 ([Q4-FY2024 earnings deck, Slide 7 — Segment Mix, 2025-03-12](https://ir.example.com/.../q4-fy24-deck.pdf))`
+- **Investor Day deck (per slide):** `Management's TAM build reaches $58B by 2028 ([Lam Research Investor Day 2024, Slide 23 — TAM Build (citing Yole 2024)](https://investor.lamresearch.com/.../investor-day-2024.pdf))`
+- **Industry-conference deck (per slide):** `New customer cohorts now contribute 38% of bookings ([CEO at JPMorgan Healthcare 2025, Slide 14, 2025-01-13](https://ir.example.com/.../jpm-hc-2025.pdf))`
+- **Japanese Integrated Report:** `Synthetic resin segment ROIC reached 14% ([Sumitomo Chemical 統合報告書 2024, p. 47](https://www.sumitomo-chem.co.jp/.../integrated_report_2024.pdf))`
+- **Japanese Mid-term Plan:** `Capex of JPY 600bn through FY2027 targets advanced-material capacity ([Shin-Etsu 中期経営計画 2024-2027, Slide 18](https://www.shinetsu.co.jp/.../mtp_2024-2027.pdf))`
+- **Korean Investor Presentation:** `Foundry utilization recovered to 78% in Q4 ([Samsung Electronics Q4 2024 Earnings Presentation, p. 12](https://www.samsung.com/.../earnings_q4_2024.pdf))`
+- **A-share 业绩说明会 / 投资者交流活动记录:** `公司表示机器人业务客户数已扩至 42 家 ([安培龙 2024 年度业绩说明会 PPT, 第 9 页, 2025-04-22](https://static.cninfo.com.cn/...))`, `管理层确认 H2 产能爬坡按计划推进 ([安培龙 投资者关系活动记录表 2025-03-15, 第 4 页](https://static.cninfo.com.cn/...))`
+- **IPO prospectus / S-1 / 招股说明书:** `招股书披露公司 2021 年前五大客户合计占比 53.7% ([安培龙 招股说明书, 2022-08-15, 第 1-1-189 页](https://static.cninfo.com.cn/...))`
+- **CEO shareholder letter:** `Bezos framed AWS as a "primitives" business, not a managed-services business ([Amazon 2014 Shareholder Letter](https://www.aboutamazon.com/.../2014-letter-to-shareholders))`
 - Company website / IR page: `the flagship product is the X1 module ([Anpeilong product page](https://www.anpeilong.com/products/x1))`
 - News article: `Reuters reported a 2025 capacity expansion ([Reuters, 2025-02-14](https://www.reuters.com/...))`
 - Industry report: `global market reached $42B in 2024 ([Gartner, "Industrial Robotics Market Forecast, 2025–2030", 2025-01](https://www.gartner.com/...))`
@@ -81,6 +92,37 @@ The `directory.item[*].name` array lists every file in the filing.
 - Direct quotations are quoted in the original language; add a short translation in parentheses only if load-bearing for the reader.
 - Distinguish primary sources (company filings, transcripts) from secondary (news, third-party research). Prefer primary.
 - If a fact has no verifiable URL (e.g. private interview, ephemeral snapshot), state that inline rather than inventing a link.
+
+## Investor-relations materials — slide-level citation discipline
+
+Investor decks (quarterly earnings deck, investor day deck, conference appearances) and IR publications (Integrated Report, Mid-term Plan, ESG / sustainability report) are first-class primary sources for company-research reports — frequently *more* informative than the formal filing for the things readers care most about (TAM the company endorses, segment economics, customer cohorts, capex roadmap). See SKILL.md § "Investor presentations are first-class primary sources" for the full collection bar; the citation rules below apply once you have the materials in hand.
+
+**Slide-level granularity, not deck-level.** A 60-slide investor day PDF is a document, not a citation. Cite the specific slide: `[Lam Research Investor Day 2024 deck, Slide 23 — TAM Build](https://ir.lamresearch.com/.../investor-day-2024.pdf)`. For Integrated Reports / Mid-term Plans, cite the page number the same way: `[Sumitomo Chemical 統合報告書 2024, p. 47](https://...)`. The slide / page number is what makes the citation verifiable — a deck-level link forces the reader to skim 60 slides.
+
+**Include the event date and slide topic in the link title.** Format: `[<Company> <Event-or-Doc-Name>, <Slide / Page>, <YYYY-MM-DD>](URL)`. Examples:
+- `[NVIDIA GTC 2025 keynote, Slide 42 — Blackwell roadmap, 2025-03-18](https://nvidia.com/.../gtc25-keynote.pdf)`
+- `[Tesla Q4-2024 earnings deck, Slide 11 — Energy storage backlog, 2025-01-29](https://ir.tesla.com/.../q4-2024-update.pdf)`
+- `[Samsung Electronics Q3 2024 Earnings Presentation, p. 8 — Memory ASP, 2024-10-31](https://www.samsung.com/.../q3-2024-earnings.pdf)`
+
+**Source-chain TAM citations.** Most IR decks pull TAM numbers from Yole / Gartner / IDC / TechInsights / Bloomberg-NEF. The right citation is the *deck* with a chain label, not the underlying research firm's homepage:
+
+- ✅ `[Hesai Investor Day 2024, Slide 14 — Lidar TAM (citing Yole 2024)](https://ir.hesai.com/.../investor-day-2024.pdf)` → reader clicks through to Hesai's own deck and sees Yole credited on the slide
+- ❌ `[Yole Group](https://www.yolegroup.com/)` → homepage; reader cannot verify the number
+- ❌ `[Yole, "Lidar Market 2024"](https://www.yolegroup.com/product/lidar-2024/)` → if the report is paywalled and the analyst has not actually read it, citing the product page falsely implies access; prefer the source-chain form
+
+**Canonical URLs only — chase redirects to the PDF or hosted page.** IR sites use redirect-tag URLs (`/news-events/...`, `/financials/...`) that may rotate. When the deck is hosted as a PDF, link to the PDF directly. For US issuers, the 8-K Exhibit 99.2 on EDGAR is the most durable host — prefer it over the IR-site copy for quarterly decks when both exist.
+
+**Transcript vs. deck are separate citations on the same event.** Cite the transcript when quoting CEO / CFO language; cite the deck when referencing a chart or numeric callout. Same earnings event often generates 4–6 distinct citations: opening prepared remarks (transcript), Q&A response (transcript), revenue mix slide (deck), guidance bridge slide (deck), capital allocation slide (deck).
+
+**Density bar — minimum 8–12 IR citations in a finished report.** A 6,000–10,000 word company-research report on a public company with an active IR program must reach **at least 8 distinct IR-material citations** across the body (separate from filings, news, third-party research). Reports below the bar have under-used IR materials — go back and find the right slides. Reports on Japanese / Korean / European issuers with an Integrated Report or Mid-term Plan should typically reach **12+ IR citations** because those documents are unusually source-dense.
+
+**Coverage by section.** When IR slides exist that cover the section's content, the section *must* contain at least one IR citation:
+- Section 1 (Overview) — latest-quarter KPI bridge or capital-allocation slide
+- Section 4 (Products) — roadmap slide or product-family-mix chart
+- Section 6 (Industry) — management's industry framing slide
+- Section 8 (TAM) — the IR deck's TAM build slide is the most-cited source in most reports
+
+If a section that *should* have IR coverage lacks it, that is a quality defect — fix before submitting.
 
 ## Freshness rule for web sources
 

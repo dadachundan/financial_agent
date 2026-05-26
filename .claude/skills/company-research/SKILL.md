@@ -83,6 +83,60 @@ After the "accuracy over completeness" rule, this is the next-highest-priority i
 
 See `references/report_structure.md` § Section 4 for the per-row template, and `references/quality_checklist.md` for the pre-submit checklist.
 
+## Investor presentations are first-class primary sources — use exhaustively when available
+
+After 10-Ks / 年度报告 / Yuho, **investor-relations materials are the next-most-load-bearing source category** in a research report — often *more* informative than the formal filings for the specific things research readers care most about: segment-mix economics, TAM / SAM views the company itself endorses, customer-cohort disclosures the legal filings round off, capital-allocation roadmaps, capacity build-out plans, and management's own framing of the competitive moat. **Whenever IR materials exist, treat collecting them as a non-optional Step 1 task and cite them aggressively throughout the report.**
+
+**What "IR materials" means — collect ALL of these when they exist:**
+
+- **Quarterly earnings deck** (slides accompanying each earnings call, every quarter — usually filed as 8-K Exhibit 99.2 for US issuers, or posted on the IR site for non-US issuers). These contain the freshest segment-mix charts, geographic mix, customer cohort updates, and KPI bridges.
+- **Quarterly earnings call transcript** (or audio webcast if no transcript). The Q&A section in particular surfaces detail that doesn't appear anywhere else — competitor positioning, customer ramp dynamics, gross-margin drivers, capacity expansion timing.
+- **Annual investor day / capital markets day deck** (typically held every 1–3 years; 100+ slides; multi-year guidance and TAM build-up). Each annual / triennial Investor Day is its own goldmine — pull every one available going back ~3–5 years.
+- **Industry conference presentations** (JPMorgan Healthcare, SEMICON, OFC, CES, Bank of America Industrials, Goldman Sachs Communacopia, Morgan Stanley TMT, Citi Global Tech, etc.). Each major conference appearance typically has a deck on the IR site — these contain crisper strategy framings than the formal earnings deck.
+- **Industry / product event keynotes** (NVIDIA GTC, Apple WWDC, Tesla AI Day / Battery Day, Salesforce Dreamforce, Microsoft Ignite, AWS re:Invent product keynotes when the speaker is the CEO or CFO). For product-led companies these contain the most detailed product roadmaps.
+- **Annual integrated report / ESG report / corporate sustainability report** (especially for Japanese, European, and Asian issuers — these often contain TAM views, segment narratives, and customer-base detail that don't appear in the Yuho / annual report). Japanese issuers' "Integrated Report" / 統合報告書 is often the richest single document.
+- **Annual shareholder letter** (Buffett-style; for issuers that publish one — Amazon, Berkshire, JPMorgan, Klarna, etc.). Often contains the CEO's own framing of strategy and competitive moat in their own words.
+- **IPO prospectus / S-1 / 招股说明书 / F-1** (for any company that IPO'd in the last 5–10 years — the prospectus is often the most detailed business description ever published about the company, with TAM/SAM/SOM, customer concentration, technology architecture, and competitive landscape laid out in much more depth than subsequent annuals).
+- **Secondary offering / convertible offering decks** (when present — often contain refreshed business descriptions and forward-looking commentary).
+
+**Where to find them:**
+
+- **US issuers:** company IR website (`investors.<company>.com` or `ir.<company>.com`) → "Events & Presentations" / "Quarterly Results" / "Investor Day" pages. SEC EDGAR 8-K filings often attach the deck as Exhibit 99.2 (search the filing's `index.json` directory listing). S-1 / prospectus on EDGAR.
+- **China A-share / HK issuers:** company IR site (公司IR / 投资者关系页面), cninfo (巨潮资讯) attaches 业绩说明会 / 投资者交流活动记录, HKEX news room for HK issuers, and most large-cap A-share names publish 业绩说明会 PPTs at the same time as the 年度报告. Search cninfo for `投资者关系活动记录表` (formal Q&A logs are filed quarterly).
+- **Taiwan issuers:** MOPS (公開資訊觀測站) → 法人說明會 (analyst meeting decks) and 重大訊息 sections.
+- **Japan issuers:** company IR site → 「決算説明会資料」 (earnings call deck) + 「統合報告書」 (Integrated Report) + 「中期経営計画」 (Mid-term Plan / MTP — published every 3–5 years, contains multi-year revenue / margin / capex / ROIC targets and is by far the densest forward-looking source). TDnet (https://www.release.tdnet.info/) for the earnings-day press release; the deck is on the company site.
+- **Korea issuers:** company IR site → "Earnings Release" PDFs + investor relations presentation archives. DART for the formal filings.
+- **Private companies:** founder / CEO conference keynotes on YouTube, podcast transcripts (a16z, 20VC, Acquired, Stratechery, BG2, etc.), pitch decks if leaked to TechCrunch / The Information.
+
+**Where IR slides are particularly load-bearing — and what they unlock by section:**
+
+| Section | What IR slides typically contribute that's not in the 10-K |
+|---|---|
+| **1. Overview** | Latest-quarter revenue / margin chart with management's stated 1–2-yr guide; LTM KPI bridge (price × volume × mix); capital-allocation framework slide |
+| **4. Products** | Roadmap slides showing what's launching in 6 / 12 / 24 months; product-family TAM breakdown; "design wins" customer logos |
+| **5. Customers** | Customer-cohort retention / NRR cohort charts; named customer logos (10-Ks rarely name customers beyond the >10% threshold); geographic-mix Sankey |
+| **6. Industry** | Management's own TAM / SAM build-up (with assumptions); industry-growth waterfall (units × ASP × penetration) — often more granular than third-party research |
+| **7. Competitive** | Competitive-moat narrative slides ("Why we win"); side-by-side feature matrices; share-trajectory charts (handle with care — these are self-serving, but the data points are usually citable) |
+| **8. TAM** | The IR deck's TAM slide is **the single most-cited TAM source** in most reports — management has done the build-up work and the slide cites the underlying research firm. Cite the deck as primary; chain-cite the underlying research as secondary |
+| **9. Risks** | Management's own risk framing (which risks they're actively mitigating, capex plans for second-source supply, geographic-diversification roadmap) |
+
+**Citation discipline for IR materials:**
+
+- **Cite the deck at the slide level, not the deck level.** A 60-slide investor-day PDF is not a citation; "Slide 23" or "Slide 23 (TAM build)" is. Format: `[Lam Research Investor Day 2024 deck, Slide 23 — TAM build](https://ir.lamresearch.com/...)`.
+- **Pull the host page URL, not a redirect link.** IR sites use redirect tags (`/news/...`, `/events/...`); follow them to the PDF or hosted page and use the canonical URL. If the deck is hosted as a PDF on the IR site, link the PDF directly.
+- **Source-chain TAM citations.** When the IR deck cites Yole / Gartner / IDC for the TAM number, the citation is `[Company Investor Day 2024 deck, Slide 23 — TAM (citing Yole 2024)](https://ir.company.com/.../investor-day-2024-deck.pdf)`. The reader clicks through to the company's own deck and sees Yole credited there.
+- **Earnings call transcripts vs. earnings decks are separate sources.** Cite the transcript when quoting CEO / CFO language; cite the deck for any chart or numeric callout. They are often complementary on the same earnings event — cite both when both are used.
+- **Investor Day decks rarely get updated** — once you've cited one, lock the date and slide number in the title (the URL might rotate; SEC EDGAR is the most durable host for US issuers since the deck is filed as an 8-K exhibit). Re-verify the URL during Step 10.
+
+**The "density bar" for IR citations in a finished report:**
+
+- **At minimum 8–12 distinct IR-material citations** across the body (separate from filings, news, third-party research) when the company has a public IR program.
+- **At least 1 IR citation in each of Sections 1, 4, 6, 8** when slides exist that cover that ground.
+- **The latest 2 quarterly earnings decks AND the latest investor-day deck** should each be cited at least once. If only 1 of the 3 is cited, you have under-used IR materials — go back and find the right slide.
+- **For Japanese / Korean / European issuers with an Integrated Report or Mid-term Plan**, that single document should generate 5–10 citations on its own (TAM, segment KPIs, capex plan, ESG / climate plan, geographic strategy).
+
+If the company has effectively no IR program (small-cap, pre-IPO private, or genuinely doesn't host any deck publicly), note that fact explicitly in the verification log and lean harder on filings + third-party research instead. **Do not skip IR collection just because it's annoying — the absence is itself a data point worth flagging.**
+
 ## Report language
 
 Two options only: **Simplified Chinese (zh-CN)** or **English**. Never Traditional Chinese, Japanese, or Korean for the prose.
@@ -163,15 +217,17 @@ See [`references/citations.md`](references/citations.md) for the full rules, per
 
 **SEC EDGAR only covers US issuers. Do not look for non-US filings there.**
 
-- **US** → SEC EDGAR: latest 10-K, recent 10-Qs, DEF 14A, recent 8-Ks. Helper: `fetch_financial_report.py` (DB: `db/financial_reports.db`).
-- **China A-share / HK** → cninfo (巨潮资讯, https://www.cninfo.com.cn/): 年度报告, 季度报告 / 半年度报告, 重大事项公告. Ticker format `SZSE:002050`, `SSE:688802`, `HKEX:2513`. Helper: `fetch_cninfo_report.py` — run from `/Users/x/projects/financial_agent` so files land in `cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/`. Chinese-language disclosures are authoritative; English IR pages are secondary.
-- **Taiwan (TWSE / TPEx)** → MOPS (公開資訊觀測站, https://mops.twse.com.tw/): 年報, Q1–Q3 reports, 重大訊息.
-- **Japan** → EDINET (https://disclosure2.edinet-fsa.go.jp/) for Yuho (有価証券報告書) + Shihanki (四半期報告書); TDnet (https://www.release.tdnet.info/) for 決算短信. English IR PDFs ("Integrated Report") on the company site for narrative.
-- **Korea** → DART (https://dart.fss.or.kr/, English: https://englishdart.fss.or.kr/): 사업보고서, 반기보고서, 분기보고서, 주요사항보고서.
-- **Other** → country's official portal (SEDAR+ Canada, ASX Australia, LSE RNS UK, BSE/NSE India). Do NOT fall back to SEC EDGAR unless the issuer is a 20-F / 6-K filer.
-- **Private companies** → company website + blog, press coverage, LinkedIn for bios, Crunchbase/PitchBook for funding history.
+- **US** → SEC EDGAR: latest 10-K, recent 10-Qs, DEF 14A, recent 8-Ks. Helper: `fetch_financial_report.py` (DB: `db/financial_reports.db`). **IR portal (mandatory pull):** `investors.<company>.com` or `ir.<company>.com` → Events & Presentations (earnings decks, investor days, conference presentations), Quarterly Results (transcripts), SEC Filings → 8-K Exhibit 99.2 attachments.
+- **China A-share / HK** → cninfo (巨潮资讯, https://www.cninfo.com.cn/): 年度报告, 季度报告 / 半年度报告, 重大事项公告. Ticker format `SZSE:002050`, `SSE:688802`, `HKEX:2513`. Helper: `fetch_cninfo_report.py` — run from `/Users/x/projects/financial_agent` so files land in `cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/`. Chinese-language disclosures are authoritative; English IR pages are secondary. **IR portal (mandatory pull):** company IR page (`<company>.com/investors` / 投资者关系) for 业绩说明会 PPT + 投资者交流活动记录; cninfo also files `投资者关系活动记录表` quarterly with formal Q&A logs.
+- **Taiwan (TWSE / TPEx)** → MOPS (公開資訊觀測站, https://mops.twse.com.tw/): 年報, Q1–Q3 reports, 重大訊息. **IR portal (mandatory pull):** MOPS 法人說明會 (analyst meeting decks) section + company IR page.
+- **Japan** → EDINET (https://disclosure2.edinet-fsa.go.jp/) for Yuho (有価証券報告書) + Shihanki (四半期報告書); TDnet (https://www.release.tdnet.info/) for 決算短信. **IR portal (mandatory pull):** company IR site → 「決算説明会資料」 (earnings deck per quarter), 「統合報告書」 (Integrated Report — annual; often the single richest source for narrative, TAM, segment economics), 「中期経営計画」 (Mid-term Plan — every 3–5 years; multi-year revenue / margin / capex / ROIC targets).
+- **Korea** → DART (https://dart.fss.or.kr/, English: https://englishdart.fss.or.kr/): 사업보고서, 반기보고서, 분기보고서, 주요사항보고서. **IR portal (mandatory pull):** company IR site → Earnings Release PDFs (quarterly), Investor Presentations archive, Annual Report PDF (often distinct from the DART 사업보고서 — the IR-site annual is glossier and more narrative).
+- **Other** → country's official portal (SEDAR+ Canada, ASX Australia, LSE RNS UK, BSE/NSE India). Do NOT fall back to SEC EDGAR unless the issuer is a 20-F / 6-K filer. **IR portal (mandatory pull):** every major issuer has a public IR site — collect quarterly decks + annual report + any capital-markets-day deck.
+- **Private companies** → company website + blog, press coverage, LinkedIn for bios, Crunchbase/PitchBook for funding history. For IPO-stage names, the S-1 / F-1 / 招股说明书 prospectus on the local exchange portal is the deepest single source.
 
 Secondary sources (any domicile): competitor websites and filings, Gartner/Forrester/IDC industry reports, trade press, LinkedIn for executive bios.
+
+**See § "Investor presentations are first-class primary sources" above for the full IR-collection bar — every IR portal listed above carries materials that should yield 8–12+ citations in the finished report.**
 
 ---
 
@@ -244,7 +300,16 @@ Use that narrative as the **structured input** for:
    - Read blog / newsroom for the **last 12 months** to detect launches, sunsets, repositioning.
    - For non-English companies, read the **native-language site** (e.g. `company.com.cn`) — English IR pages are often a stripped subset and miss SKUs.
 2. **Regulatory filings** — start from the local cache pulled in Step 0; only fetch fresh if the cache is stale (see freshness rules above). Route by domicile per the data-sources table. Note filing dates and the portal used.
-3. **Earnings materials** — latest transcript, latest investor presentation, last 12 months of press releases. **Specifically look for any change to full-year guidance** (raised / cut / reaffirmed-with-color / initiated) — capture the old range, new range, disclosure date, and stated driver. If a change exists, it goes in the top-of-report banner described in `references/report_structure.md` (before the TOC), not buried in Section 1. For Chinese issuers, also check 业绩预告 / 业绩快报 — these often pre-announce a guidance change before the formal 半年度 / 年度报告.
+3. **Earnings materials and investor presentations** — see the dedicated section above § "Investor presentations are first-class primary sources" for the full collection bar. **At minimum, pull every one of the following that exists; if any is missing, note it in the verification log:**
+   - **Latest 2 quarterly earnings call transcripts** (most-recent first).
+   - **Latest 2 quarterly earnings decks** (PDF slides accompanying each earnings call — 8-K Exhibit 99.2 for US issuers, IR site for others).
+   - **Most recent annual investor day / capital markets day deck**, plus the prior one if within the last 3 years.
+   - **All industry-conference presentations from the last 12 months** (JPM Healthcare, SEMICON, OFC, BofA Industrials, Goldman Communacopia, Morgan Stanley TMT, Citi Tech, etc. — whatever fits the issuer's sector).
+   - **Latest annual integrated / sustainability / ESG report** if the issuer publishes one (especially Japanese / European / Korean issuers — these often contain TAM and segment narratives the formal filing skips).
+   - **Latest Mid-term Plan / 中期経営計画 / Long-Range Plan** (Japan, Korea, Europe — typically refreshed every 3–5 years).
+   - **IPO prospectus / S-1 / 招股说明书** if IPO was within the last ~5–10 years.
+   - **Last 12 months of press releases** — scan for new product launches, customer wins, capacity announcements, M&A.
+   - **Specifically look for any change to full-year guidance** (raised / cut / reaffirmed-with-color / initiated) — capture old range, new range, disclosure date, and stated driver. If a change exists, it goes in the top-of-report banner described in `references/report_structure.md` (before the TOC), not buried in Section 1. For Chinese issuers, also check 业绩预告 / 业绩快报 — these often pre-announce a guidance change before the formal 半年度 / 年度报告.
 4. **Document basic facts** — founding date, HQ, employees, products/services, key customers.
 
 ### Step 2 — Valuation snapshot (always pull P/E and P/S)

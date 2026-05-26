@@ -4,7 +4,7 @@ Snapshot of every skill registered for this project, grouped by role and depende
 
 > **Keep this file in sync.** Whenever a skill is added, removed, or its `## Prerequisites` block changes under `.claude/skills/`, update this file in the same commit and bump the "Last updated" date below. See the [Maintenance](#maintenance) section at the bottom for the checklist.
 
-Last updated: 2026-05-23 (added `compare-companies` head-to-head comparison skill, built on `company-research`)
+Last updated: 2026-05-27 (`company-research`: investor-relations materials elevated to first-class primary sources — 8–12+ IR citations per report, slide-level granularity, per-section coverage bar)
 
 ---
 

@@ -4,16 +4,16 @@ The final report has 9 sections plus a References block. Word counts are loose t
 
 Embed **4–8 charts** across the report (mix of matplotlib PNGs and Mermaid blocks). Suggested placement:
 
-| Section | Chart |
-|---|---|
-| 1 Overview | Revenue + gross margin trend (PNG, 3–5 yr, dual-axis) |
-| 2 History | Mermaid `timeline` block |
-| 4 Products | Mermaid `graph TD` product tree |
-| 5 Customers | Mermaid `pie` — top 3–5 customer concentration |
-| 7 Competitive | Mermaid `quadrantChart` **or** peer-comparison bars (PNG) |
-| 8 TAM | Market-size growth chart (PNG) |
+| Section | Chart | IR-deck slide that often anchors it |
+|---|---|---|
+| 1 Overview | Revenue + gross margin trend (PNG, 3–5 yr, dual-axis) | Latest earnings-deck "Revenue + Margin Bridge" slide |
+| 2 History | Mermaid `timeline` block | Investor day "Our journey" slide (when present) |
+| 4 Products | Mermaid `graph TD` product tree | Investor day product-portfolio slide |
+| 5 Customers | Mermaid `pie` — top 3–5 customer concentration | Investor day customer-logo / cohort slide |
+| 7 Competitive | Mermaid `quadrantChart` **or** peer-comparison bars (PNG) | Investor day "Why we win" / feature-matrix slide |
+| 8 TAM | Market-size growth chart (PNG) | Investor day TAM build slide (the single most useful IR slide) |
 
-Every chart needs a citation directly underneath in the same markdown-link format used in prose. PNGs go in `reports/charts/<company>_<name>.png`.
+Every chart needs a citation directly underneath in the same markdown-link format used in prose. PNGs go in `reports/charts/<company>_<name>.png`. **When an IR deck has the data behind a chart, embed the rendered IR slide as a PNG (using `render_10k_section.py`-style page screenshot for PDFs) instead of rebuilding the chart from scratch** — the slide is the most authoritative form of the chart, the company endorses the numbers, and the reader can trace the source. Cite the slide directly underneath.
 
 ## Top-of-report banner — guidance changes (REQUIRED when present)
 
@@ -62,6 +62,7 @@ If there is **no recent guidance change** to highlight, omit the banner entirely
 - Where do they operate? (geographic presence)
 - How large are they? (revenue, employees, customers)
 - Key metrics and scale indicators
+- **IR primary input:** Latest 1–2 quarterly earnings deck (revenue + margin bridge slide, segment-mix slide, capital-allocation slide). At least one citation in this section should be to a recent earnings-deck slide; cite the slide number explicitly.
 - **Valuation snapshot (REQUIRED).** Current price, market cap, **TTM P/E**, **TTM P/S** (plus P/B for capital-heavy businesses and EV/EBITDA for leveraged / cyclical names). Include the 3-year range of each multiple and the sector / peer median (3–5 named comps) so today's number has context. Cite the market-data source (Yahoo Finance / Eastmoney / Kabutan / DART, etc.) with a direct URL.
   - **If P/E is negative** → state why: cash-burning growth, one-off charge (impairment, litigation, write-down), cyclical trough, or structural decline. Name the specific income-statement line driving the loss and cite the filing.
   - **If P/E > 50× TTM (or > 2× sector median) or P/S > 15× (or > 3× sector median)** → name the cause: high-growth sector premium (AI infra, GLP-1, EV battery, advanced packaging — say which), temporarily depressed earnings, narrative / sector-proxy premium, M&A speculation, or small-float distortion. **Cite evidence** (sell-side note, earnings-call language, peer that re-rated similarly, sector ETF flows). Do not leave the multiple unexplained.
@@ -120,6 +121,7 @@ For each product family in the matrix, follow this exact three-part pattern:
   - **Flagship vs. long-tail.** Identify the 1–3 products driving the current business (state revenue / unit-mix share if disclosed; otherwise flag as analyst estimate).
   - **Roadmap & recent launches.** Products launched, repositioned, or sunset in the last 12 months — with the company press release as the citation. If a new platform was launched (e.g. Akara, ALTUS Halo), block-quote the press release the same way you block-quote the 10-K.
   - **Recurring / aftermarket / services business.** Many issuers have a separate business group outside the product matrix (CSBG for Lam, Services for AMAT, etc.). Treat that as its own subsection — describe what it consists of, how it's reported in the financials, why it dampens cyclicality, and the recurring-revenue economics.
+  - **IR primary input:** Section 4 should draw from the investor day deck's product / roadmap slides, the latest earnings deck's product-segment slides, and any industry-conference deck where the CEO walked product roadmap. **At least 2 IR-deck citations in Section 4** when the company publishes IR materials — typically the latest investor day deck (roadmap and TAM slides) plus the latest quarterly deck (segment-mix slide). Block-quote the slide text when the company's own framing is load-bearing, the same way you block-quote the 10-K.
 
 **Rendering the issuer's product table as a PNG (for step (a))**
 
@@ -183,6 +185,7 @@ The pattern (issuer's own table → verbatim quote → analyst-labeled pedagogic
 ### 5. Customers & Go-to-Market (500–800 words)
 - Customer segments and profiles
 - **Customer concentration (REQUIRED).** Quantify top-1 and top-5 customer share of revenue from the latest annual filing, plus the 3-year trend if available. Name the top customers when disclosed. Cite the specific filing section (e.g. `年度报告` § 前五名客户, 10-K segment note, Yuho `主要な販売先`). State the contract structure (master agreement vs. PO-by-PO, multi-year vs. annual) and whether any top customer is also a competitor / vertically integrating. **If top-1 > 20% or top-5 > 50%, flag it explicitly here and carry it into Section 9 as a material risk.** If the company does not disclose, say so — do not skip.
+- **IR primary input:** IR decks often name customers the filing only references by category (e.g. "a leading hyperscaler"). Pull customer-logo slides, customer-cohort retention charts, geographic-mix Sankeys, NRR cohort charts from the latest investor day deck and recent quarterly decks — typically 1–2 IR citations in this section.
 - Distribution channels
 - Sales strategy and cycle
 - Key partnerships
@@ -195,6 +198,7 @@ The pattern (issuer's own table → verbatim quote → analyst-labeled pedagogic
 - Key trends and drivers
 - Regulatory environment
 - Industry dynamics (fragmentation, supplier/buyer power, substitutes)
+- **IR primary input:** Management's industry framing — every IR deck has 2–4 slides setting up the industry context (often clearer than the company's own filing). Pull these from the latest investor day deck and key industry-conference appearances. At least 1 IR citation here.
 
 ### 7. Competitive Landscape (700–1,000 words)
 - Analysis of 5–10 key competitors (direct, indirect, emerging)
@@ -202,6 +206,7 @@ The pattern (issuer's own table → verbatim quote → analyst-labeled pedagogic
 - Company's competitive advantages
 - Competitive vulnerabilities
 - Market share analysis
+- **IR primary input:** Investor day "Why we win" slides, side-by-side feature matrices, share-trajectory charts. **Handle with care** — these slides are self-serving by design — but the underlying data points are citable, and the *omission* of a key competitor on a competitive-positioning slide is itself signal. Often 1 IR citation here.
 
 ### 8. Market Opportunity / TAM (500–700 words)
 - TAM sizing and methodology
@@ -209,6 +214,7 @@ The pattern (issuer's own table → verbatim quote → analyst-labeled pedagogic
 - Market growth projections
 - Company's serviceable market and share opportunity
 - Penetration strategy
+- **IR primary input — most-cited source in this section.** The IR deck's TAM build slide is almost always the most-cited single TAM source in the report; management has done the build-up work and chained-cited the underlying research firm (Yole, Gartner, IDC, etc.). Cite the deck as primary with a source-chain label (e.g. `[Company Investor Day 2024 deck, Slide 23 — TAM (citing Yole 2024)](URL)`); chain-cite the underlying research firm as secondary. **Minimum 2 IR citations in Section 8** for any issuer that publishes a TAM build — typically the latest investor day deck plus the latest annual / Integrated Report.
 
 ### 9. Risk Assessment (600–900 words)
 - 8–12 distinct risks across 4 buckets (see `risk_taxonomy.md`)

@@ -8,6 +8,18 @@
 - **Pre-submit citation count check:** `grep -oE '\[[^]]+\]\(http[^)]+\)' <report>.md | wc -l` should yield ≥40 for a 6,000–10,000 word report. Reports below the threshold have unsourced paragraphs — find and cite them before submitting.
 - Objectivity and balance.
 
+## Investor-relations coverage (separate from the ≥40 inline-citation bar)
+
+IR materials are first-class primary sources — see SKILL.md § "Investor presentations are first-class primary sources" and citations.md § "Investor-relations materials — slide-level citation discipline" for the full rules.
+
+- [ ] **At least 8–12 distinct IR-material citations** across the body when the company has a public IR program. Count via `grep -oE '\[[^]]*(deck|Slide|earnings deck|Investor Day|investor day|統合報告書|Integrated Report|Mid-term Plan|中期経営計画|业绩说明会|投资者关系活动|招股说明书|Shareholder Letter|Earnings Presentation|说明会 PPT)[^]]*\]\(http' <report>.md | wc -l`. Reports under 8 IR citations have under-used IR materials — go back and find the right slides.
+- [ ] **Section 1, 4, 6, 8 each contain at least 1 IR citation** when slides exist that cover that ground. Section 8 typically contains the heaviest IR citation density (2+) because the TAM build slide is the most-cited single source.
+- [ ] **Latest 2 quarterly earnings decks AND the latest investor-day deck** are each cited at least once. If only 1 of the 3 is cited, that's under-use.
+- [ ] **For Japanese / Korean / European issuers with an Integrated Report or Mid-term Plan**, that document generated 5+ citations on its own (TAM, segment KPIs, capex plan, ESG, geographic strategy).
+- [ ] **Every IR citation is slide-level / page-level, not deck-level.** Format check: `grep -E '\[[^]]*(deck|Investor Day|統合報告書|Mid-term Plan)[^]]*\]\(' <report>.md | grep -vE '(Slide|p\.|第 [0-9]+ 页|, p [0-9])'` should return no lines.
+- [ ] **TAM citations sourced from IR decks use chain labels** (`citing Yole/Gartner/IDC`) — the click lands on the company's own slide, not the research firm's homepage.
+- [ ] If the company has no public IR materials, the verification log explicitly states "no public IR program; relied on filings + third-party research" — absence is logged, not hidden.
+
 ## Management Bios
 - **Cover the founder and the current CEO only — nothing else.** No CFO, no other executives, no governance footer, no track-record synthesis.
 - Founder bio: 200–300 words. Current CEO bio: 200–300 words. If founder is still CEO, write one combined bio (300–450 words).
