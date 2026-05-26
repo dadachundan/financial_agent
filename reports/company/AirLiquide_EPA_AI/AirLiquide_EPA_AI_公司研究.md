@@ -461,3 +461,224 @@ Air Liquide 的渗透策略分为三条腿：
 **机会时序双峰：** 工业气体零售 + 医疗保健 + 传统大宗工业气体以 4-7% 稳态增长；**电子 (AI 资本周期) + 可再生 H₂ 是两条上行腿**，可能在 2026-2030 年间将集团营收增长推至 6-8% ——明显高于 FY2024-2025 年的 1-3% 报告增长 (反映了新冠后成熟分部正常化)。
 
 ---
+
+## 9. 风险评估
+
+Air Liquide 的风险敞口在结构上低于任何专业化的工业气体或特种化学品同业，原因在于：(i) 约 70% 的营收基础为照付不议或指数化定价；(ii) 没有单一客户超过营收的 5%；(iii) 地理均衡；(iv) 医疗保健提供防御性缓冲。但 AI 资本周期暴露、H₂ 资本密集型扩张以及碳定价套利都构成了实际风险，应纳入组合管理屏幕。下述按四个标准桶分类的 12 项风险。
+
+### 9.1 公司层面风险
+
+**(R1) 电子资本开支储备执行风险 ——中度。** €4.6bn 投资储备中电子部分占 €1.5bn+，必须以历史晶圆厂端 ROCE (~13-15% 增量电子项目) 转化为运营营收；延误 (许可、供应商延期、客户晶圆厂启动滑期) 会压缩 IRR。18-30 个月的建设到营收时滞意味着执行失误在 2-3 年后才可见。缓解：30 年运营历史在 2016 年 Airgas、2022 年台湾和 2024 年爱达荷项目上均按时交付 ——但 **DIG Airgas 整合增加韩国执行风险** (自 2016 年以来最大并购)。
+
+**(R2) 客户集中度 ——低但电子业务上升。** 没有单一客户 >5% 集团合并营收；但电子业务正集中于较小客户集合，台积电 + 三星 + SK 海力士 + 美光 + 英特尔合计主导了全球晶圆开工增长。如果这些 Top-3 晶圆厂客户中任一选择自建驻厂气体 (技术上可行 ——三星历史上曾运营部分自建 ASUs) 或遭遇晶圆厂建设延期，电子营收线将受到单位数百分点的打击。缓解：合同的照付不议条款 (客户即使不用气也要付) 加上跨台积电、三星、SK 海力士、美光、英特尔、格芯、中国晶圆厂和成熟节点长尾 (VSMC、恩智浦、英飞凌等) 的多样化。
+
+**(R3) 关键人员依赖 François Jackow + Armelle Levieux (电子) ——低至中度。** Jackow 自 2022 年担任 CEO 以来是集团历史上最强的运营时期之一，毛利率扩张记录与其 ADVANCE 2025 计划直接相关。Armelle Levieux (执行委员会成员，负责电子业务，在 2025-07 钼厂 PR 中具名) 是最高增速分部的运营负责人。其中任一突然离开将造成 6-12 个月战略方向暂停。缓解：Air Liquide 文化深度制度化 (124 年历史，董事会多位多十年任期成员)，管理层板凳不寻常深厚 ——Jackow 本人即来自内部提拔名单。
+
+**(R4) 氦气供应集中风险 ——中度，事件型。** 全球氦气产量集中在卡塔尔、阿尔及利亚、俄罗斯、美国 BLM 储备和坦桑尼亚。2022-2023 年俄乌战争将俄罗斯氦气移出西方供应链，使全球市场紧绷 18 个月；未来的供应链中断 (卡塔尔 / 阿尔及利亚政治、美国 BLM 关闭) 将压缩 Air Liquide 的氦气毛利贡献。缓解：Air Liquide 是全球较大的氦气资产持有者之一 (BLM 遗产 + 阿尔及利亚 / 卡塔尔长期采购权)，过去氦气紧缺中是结构性受益者而非受害者。
+
+**(R5) DIG Airgas 整合风险 ——中度。** €2.85bn 企业价值，对应约 5-6× EV/EBITDA，韩国市场再进入 (阔别 10 年)。整合挑战包括：在竞争市场中保留 DIG Airgas 客户基础 (林德、日本酸素、岩谷均活跃于韩国)，实现电子特种材料交叉销售，监管批准 (2026-01-13 已清理交割)，汇率敞口。缓解：Air Liquide 是所有工业气体头部企业中并购整合记录最好的 (2016 年 Airgas 整合是教科书式案例)，韩国是 AI 周期强化底层需求的高增长市场。
+
+### 9.2 行业 / 市场风险
+
+**(R6) 半导体资本开支调整 ——影响中度，发生概率低。** 电子业务约 10% 集团营收，但 >30% 资本开支 / 前瞻营收储备。重复 2022-2023 库存调整 (使电子营收从 FY22 €2,531m 降至 FY23 €2,459m) 将冲击 FY26-27 数字。主要上行对冲：AI 基础设施资本开支结构上不同于历史上驱动调整风险的消费电子周期 ——AI 资本开支由超大规模云厂商现金流支撑，对消费需求 (智能手机、PC 周期) 的敏感度低得多。
+
+**(R7) 监管碳定价波动 ——可控。** 碳定价机制 (欧盟 ETS、美国州层级项目、韩国 ETS) 既创造机会 (低碳 H₂ 需求) 也带来成本 (传统灰氢供应在传导不完整时面临碳成本上升)。当前欧盟 ETS 约 €70-100/吨范围大致中性；快速升至 €150+ 加速低碳 H₂ 转型 (正面)，但也对大宗工业气体传导带来近期成本压力。
+
+**(R8) 工业气体行业整合停止削弱份额获取空间 ——低。** 林德 + Air Liquide + Air Products + 日本酸素 + Messer 已合计占 ~78% 份额，进一步整合的反垄断批准不太可能。Air Liquide 的增长因此主要依靠内生 + 战术性并购 (DIG Airgas 是主要工业气体市场中最大的战术并购机会)。缓解：AI 周期内生增长结构上充足，论点不需要大型并购。
+
+**(R9) 可再生 H₂ 经济性慢于预期 ——中度。** 2024-2035 年 >€8bn 的 H₂ 承诺取决于可再生电力成本曲线下降、电解槽资本开支下降、碳定价上升三个独立变量同时配合，绿氢业务才能通过门槛。2023-2025 年期间多家竞争对手 H₂ 项目出现延期 / 取消 (BP 澳大利亚氢气退出、壳牌 Aurora 缩减)；Air Liquide Normand'Hy 按 2026 年投运在轨，但更广阔的项目储备依赖欧洲政策持续支持。
+
+### 9.3 财务风险
+
+**(R10) 资本开支强度对 FCF 生成的上行压力 ——中度。** 工业资本开支 FY2025 €3.85bn + €350m 金融投资 + 一次性 €2.85bn DIG Airgas 意味着 FY2026 净债务轨迹上行 (2024 年 €9.2bn → DIG Airgas 2026-01-13 交割后约 €11-12bn，部分通过 2025 年 10 月发行的 €2.15bn 多分档债券融资，利率竞争性)。即使在 DIG Airgas 后水平，净债务 / EBITDA 仍远低于 2.0×，但**股息覆盖率开始依赖电子营收按计划爬坡**。缓解：投资级信用评级在 DIG Airgas 融资中未变；当前约 2% 股息率在任何合理 EBITDA 情景下都有充足覆盖。
+
+**(R11) 估值 / 倍数压缩风险 ——低至中度。** TTM P/E 29.7× (对比同业中位数 26.8×、林德 34.6×)，Air Liquide 较同业中位数溢价 10%，得到电子 + H₂ 增长选择权的支撑。重估至同业中位数将意味着约 10% 单一倍数压缩下行；主要重估触发因素是 FY2026 之后 ADVANCE 2025 毛利率扩张红利消退快于预期 (届时 +200 bps 增量目标结束)。FY2025 实际毛利率打印 (+80 bps) 低于实现 +200 bps (2025-2026) 所需的 +100 bps 年化节奏。
+
+### 9.4 宏观经济风险
+
+**(R12) 周期敏感性 ——低至中度，约 30% 周期 / ~70% 防御。** 工业气体零售 + 大宗工业气体部分 (约 74% 气体与服务) 对全球工业活动具有可测量周期敞口 (PMI < 50 通常对应工业气体零售 0-2% 销量下降；带照付不议结构的大宗工业气体基本免疫)。电子有自己的 (不同的) 半导体周期。医疗保健完全防御。净效应：Air Liquide 营收在严重全球衰退中通常保持在 ±3-5% 内 ——历史上 FY2009 营收即使在雷曼冲击下也只下降 -6%。
+
+**(R13) 汇率 ——重大报告期营收噪音，经济上中性。** 约 60% 集团营收来自欧元区外；报告期营收对 EUR/USD、EUR/CNY、EUR/JPY、EUR/KRW 走势敏感。FY2024 报告期增长受汇率换算拖累 (Q1-2025 公布的 +5.7% vs 可比口径 +1.7% 揭示了规模)。经济敞口大多通过自然货币匹配 (USD 营收由 USD 资本开支 / USD 债务对冲) 和部分金融对冲管理。
+
+**(R14) 中国 + 俄罗斯地缘政治风险 ——低至中度。** Air Liquide 保留中国工业气体业务 (估算占集团营收约 5-7%)，面临西方出口管制 (先进前驱体、设备) 和中国本土化压力 (杭州杭氧、彭昆等) 的双重压力。2022 年俄罗斯退出消除了直接敞口，但间接氦气供应影响花了 18 个月正常化。未来台海紧张是最大的尾部风险 ——Air Liquide 自 2019 年在台湾投入 >€1bn 在最坏情境下将面临风险，尽管这与任何其他在台晶圆厂业务的西方公司一致。
+
+---
+
+## 10. 参考资料
+
+### Air Liquide 主要财报
+
+- [Air Liquide 2024 通用注册文件 (Universal Registration Document, URD)，英文版，484 页](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf) ——FY2024 主要年度报告，包含商业模式、财务报表、治理、风险因素、ESG。本报告所引用页码：p. 5 (客户基础)、p. 7 (Key Elements by Business Line)、p. 8-9 (集团历史)、p. 18-19 (大宗工业气体)、p. 22-23 (工业气体零售)、p. 26-27 (医疗保健)、p. 30 (全球市场与技术)、p. 33 (电子)。
+- [Air Liquide 2024 Document d'Enregistrement Universel，法文版](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-document-enregistrement-universel-2024.pdf) ——URD 2024 法语版本，用于交叉验证。
+- [Air Liquide URD 2024 发布公告 (封面页)](https://www.airliquide.com/sites/airliquide.com/files/2025-03/2024-universal-registration-document-including-the-annual-financial-report-now-available.pdf) ——确认发布日期与可用性。
+
+### Air Liquide 新闻稿 ——FY2024 / FY2025 / 2026 业绩
+
+- [FY2024 全年业绩 — "Building on record margin improvement…", 2025-02-21](https://www.airliquide.com/group/press-releases-news/2025-02-21/2024-building-record-margin-improvement-and-major-commercial-successes-fueling-future-growth-air) ——€27.06bn 营收、不含能源效应 +110 bps 毛利率、累计 +460 bps、ROCE 10.7%、资本开支 €4.4bn、€3.30 股息的主要来源。
+- [FY2024 PR 完整英文 PDF](https://www.airliquide.com/sites/airliquide.com/files/2025-02/air-liquide-pr-fy-2024-building-on-record-margin-improvement-and-major-commercial-successes-fueling-future-growth-air-liquide-is-once-again-raising-its-margin-ambition.pdf) ——详细活动报告。
+- [Q1 2025 营收 — "Building on its resilience…", 2025-04-24](https://www.airliquide.com/group/press-releases-news/2025-04-24/building-its-resilience-air-liquide-staying-course-first-quarter-2025) ——Q1 营收 €7,028m，电子 +3.6%、载气 +10%。
+- [Q1 2025 营收 IR 页面](https://www.airliquide.com/investors/first-quarter-2025-revenue)
+- [H1 2025 业绩 — "Leveraging performance and growth engines…", 2025-07-29](https://www.airliquide.com/group/press-releases-news/2025-07-29/leveraging-performance-and-growth-engines-air-liquide-remains-track-1st-half-2025) ——H1 €13.72bn、+100 bps 毛利率、€4.6bn 投资储备 (其中三分之一为电子)。
+- [Q3 2025 / 9M 业绩 — "Q3 2025: combine sales growth with commercial successes", 2025-10-28](https://www.airliquide.com/group/press-releases-news/2025-10-28/q3-2025-air-liquide-continues-combine-sales-growth-commercial-successes-shape-future) ——Q3 营收 €6.6bn、9M2025 现金流 €1.69bn、DIG Airgas / 德国 €250m / ELYgator 公告。
+- [FY2025 全年业绩 — "With a record performance and confident in its transformation dynamic…", 2026-02-20](https://www.airliquide.com/group/press-releases-news/2026-02-20/2025-record-performance-and-confident-its-transformation-dynamic-air-liquide-confirms-its-growth) ——FY2025 营收 €26,940m、OIR 利润率 20.7%、经常性净利润 €3,772m、ROCE 11.2%、€3.65 股息。
+
+### Air Liquide 新闻稿 ——电子 / 半导体业务赢单
+
+- [台积电亚利桑那驻厂协议, 2022-01-25 ——H₂/He/CO₂、~$60m、2022 下半年启动](https://www.airliquide.com/group/press-releases-news/2022-01-25/air-liquide-announces-long-term-agreement-supply-semiconductor-manufacturing-site-arizona)
+- [台湾 €500m 三厂 (ALFE 远东合资), 2022-10-19](https://www.airliquide.com/group/press-releases-news/2022-10-19/air-liquide-invest-500-million-euros-three-new-plants-semiconductor-sector-taiwan)
+- [亚洲先进材料中心扩张 (韩国 + 台湾，~$200m), 2023-07-21](https://www.airliquide.com/group/press-releases-news/2023-07-21/air-liquide-strengthens-its-advanced-materials-leadership-new-advanced-materials-centers-across-asia)
+- [爱达荷 $250m+ 厂为美光科技, 2024-06-05](https://www.airliquide.com/group/press-releases-news/2024-06-05/air-liquide-signed-major-contract-support-semiconductor-industry-us-investment-more-250-million)
+- [韩国华城钼前驱体厂 ——全球最大, 2025-07-21](https://www.airliquide.com/group/press-releases-news/2025-07-21/air-liquide-strengthens-its-advanced-materials-leadership-new-molybdenum-manufacturing-plant-south)
+- [DIG Airgas 签署 ——€2.85bn, 2025-08-22](https://www.airliquide.com/group/press-releases-news/2025-08-22/air-liquide-announces-signature-agreement-acquire-dig-airgas-leading-integrated-gas-player-south)
+- [DIG Airgas 债券融资 ——€2.15bn 多分档, 2025-10-29](https://www.airliquide.com/group/press-releases-news/2025-10-29/air-liquide-has-successfully-issued-215-billion-euros-multi-tranche-bond-finance-dig-airgas)
+- [DIG Airgas 交割 ——Air Liquide 韩国第一, 2026-01-13](https://www.airliquide.com/group/press-releases-news/2026-01-13/closing-dig-airgas-acquisition-air-liquide-becomes-industrial-gas-leader-dynamic-south-korean-market)
+- [台中先进材料工厂启用 ——台湾首座, 2026-03-25](https://www.airliquide.com/group/press-releases-news/2026-03-25/air-liquide-inaugurates-its-first-advanced-materials-manufacturing-plant-taiwan-strengthening-next)
+
+### Air Liquide 新闻稿 ——氢能 / 清洁能源
+
+- [法国政府对 200 MW Normand'Hy 电解槽的支持, 2022-03-08](https://www.airliquide.com/group/press-releases-news/2022-03-08/air-liquide-receives-support-french-state-its-200-mw-electrolyzer-project-normandy-and-accelerates)
+- [Normand'Hy 200 MW PEM 电解槽 FID, EUR 400m+, 2023-09](https://www.greencarcongress.com/2023/09/20230924-airliquide.html)
+- [TotalEnergies-Air Liquide 诺曼底绿氢合资, 2023-09-14](https://totalenergies.com/media/news/press-releases/totalenergies-and-air-liquide-join-forces-green-hydrogen-decarbonize)
+- [Normand'Hy 项目 IR 微站](https://normandhy.airliquide.com/en)
+- [Normand'Hy 故事页面 — "a collective adventure"](https://www.airliquide.com/stories/hydrogen/air-liquide-normandhy-collective-adventure-serving-energy-transition)
+- [建设 Normand'Hy 的可再生氢未来](https://www.airliquide.com/stories/hydrogen/building-future-renewable-hydrogen-normandhy)
+
+### Air Liquide 公司 / IR 页面
+
+- [Air Liquide ——执行委员会 (Jackow 传记)](https://www.airliquide.com/group/executive-committee)
+- [Air Liquide ——董事会](https://www.airliquide.com/group/board-directors)
+- [Air Liquide ——Investing in Air Liquide (IR 概览)](https://www.airliquide.com/investors/investing-air-liquide)
+- [Air Liquide Electronics ——先进材料 (VOLTAIX、ALOHA、enScribe、Balazs)](https://electronics.airliquide.com/offer-brands/our-offer/electronics-advanced-materials)
+- [Air Liquide Electronics ——ALOHA 品牌页面](https://electronics.airliquide.com/alohatm)
+- [Air Liquide Electronics ——半导体 (美国)](https://usa.airliquide.com/markets/electronics/semiconductor)
+- [Air Liquide 美国 ——FY2024 业绩, 英文 PDF](https://usa.airliquide.com/sites/al_us/files/2025-05/2024-building-record-margin-improvement-and-major-commercial-successes-fueling-future-growth-air_67b81b1e2af22.pdf)
+
+### 市场数据 / 报价来源
+
+- [Yahoo Finance — AI.PA L'Air Liquide S.A. 报价页 (2026-05)](https://finance.yahoo.com/quote/AI.PA/)
+- [Yahoo Finance — AI.PA key statistics (2026-05)](https://finance.yahoo.com/quote/AI.PA/key-statistics/)
+- [companiesmarketcap.com — Air Liquide P/E history](https://companiesmarketcap.com/air-liquide/pe-ratio/)
+- [TradingEconomics — Air Liquide AI:FP P/E ratio history](https://tradingeconomics.com/ai:fp:pe)
+- [Macrotrends — Air Liquide AIQUY P/E ratio 2012-2025](https://www.macrotrends.net/stocks/charts/AIQUY/air-liquide/pe-ratio)
+- [Macrotrends — Air Liquide AIQUY free cash flow 2012-2025](https://www.macrotrends.net/stocks/charts/AIQUY/air-liquide/free-cash-flow)
+- [Yahoo Finance — Linde plc (LIN) 报价 (2026-05)](https://finance.yahoo.com/quote/LIN/)
+- [Yahoo Finance — Air Products (APD) 报价 (2026-05)](https://finance.yahoo.com/quote/APD/)
+- [Yahoo Finance — Nippon Sanso Holdings (4091.T) 报价 (2026-05)](https://finance.yahoo.com/quote/4091.T/)
+- [companiesmarketcap — Linde 市值 (2026-05)](https://companiesmarketcap.com/linde/marketcap/)
+- [companiesmarketcap — Nippon Sanso 市值 (2025-07)](https://companiesmarketcap.com/nippon-sanso/marketcap/)
+- [stockanalysis.com — Air Products APD 市值](https://stockanalysis.com/stocks/apd/market-cap/)
+- [Linde IR — 股票与股息信息](https://www.linde.com/investors/stock-and-dividend-information)
+
+### 行业研究
+
+- [Market.us — Industrial Gases Market, 2024-2034 ($112.7bn 2024, 8.5% CAGR)](https://market.us/report/industrial-gases-market/)
+- [Market Data Forecast — Global Industrial Gases Market](https://www.marketdataforecast.com/market-reports/industrial-gases-market)
+- [Maximize Market Research — Global Industrial Gases Market](https://www.maximizemarketresearch.com/market-report/global-industrial-gases-market/30958/)
+- [Statista — Global Industrial Gas Industry topic page](https://www.statista.com/topics/9233/global-industrial-gas-industry/)
+- [Strategic Market Research — Semiconductor Specialty Gas Market Report 2024-2030 ($6.2bn → $9.5bn @ 7.4%)](https://www.strategicmarketresearch.com/market-report/semiconductor-specialty-gas-market)
+- [Research and Markets — Semiconductor Gas Market 2025-2030 ($10.5bn → $14.7bn @ 5.8%)](https://www.researchandmarkets.com/reports/6094301/semiconductor-gas-market-global-strategic)
+- [Persistence Market Research — Electronic Specialty Gases Market Forecast 2032](https://www.persistencemarketresearch.com/market-research/electronic-specialty-gases-market.asp)
+- [Fortune Business Insights — U.S. Electronic Specialty Gas Market](https://www.fortunebusinessinsights.com/us-electronic-specialty-gas-market-114856)
+- [Gasworld — APAC IG 2025: Electronic specialty gases at 6% CAGR to 2030, APAC 69% share, 2025-09](https://www.gasworld.com/story/apac-ig-2025-electronic-specialty-gases-market-set-for-6-annual-growth-to-2030/2169567.article/)
+- [reports/sector/半导体材料.md — Nomura "Greater China Semi 2026-2030" anchor report, 2026-05-21](../../sector/半导体材料.md) ——半导体材料行业重估论点框架。
+
+### 竞争对手财报 / IR
+
+- [Linde IR 首页](https://www.linde.com/investors)
+- [Linde plc — SEC EDGAR filings](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001707925&type=10-K)
+- [Air Products & Chemicals IR](https://www.airproducts.com/about/investor-relations)
+- [Air Products 2024 年报](https://www.airproducts.com/-/media/files/en/about/2024-annual-report.pdf)
+- [Air Products SEC EDGAR (CIK 2969)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002969&type=10-K)
+- [Nippon Sanso Holdings IR](https://www.nipponsanso-hd.co.jp/en/ir/)
+- [Nippon Sanso Holdings Integrated Report](https://www.nipponsanso-hd.co.jp/en/ir/library/integrated-report.html)
+- [Resonac Holdings Integrated Report FY2024 (Data Book)](https://www.resonac.com/sites/default/files/2025-02/14_E_DataBook202412_001.pdf)
+- [Messer SE — About Us](https://www.messer.com/about-us)
+
+### 背景 / 历史
+
+- [Air Liquide — Wikipedia](https://en.wikipedia.org/wiki/Air_Liquide)
+- [Encyclopedia.com — L'Air Liquide company history](https://www.encyclopedia.com/books/politics-and-business-magazines/lair-liquide)
+- [Companies-Histories.com — L'Air Liquide SA company history](https://www.company-histories.com/LAir-Liquide-SA-Company-History.html)
+- [Companies History — Air Liquide entry](https://www.companieshistory.com/air-liquide/)
+- [FundingUniverse — History of L'Air Liquide SA](https://www.fundinguniverse.com/company-histories/l-air-liquide-sa-history/)
+- [Bloomberg Markets — François Jackow profile](https://www.bloomberg.com/profile/person/16878479)
+- [LinkedIn — François Jackow](https://fr.linkedin.com/in/francois-jackow)
+- [TheOrg — Air Liquide org chart with Jackow](https://theorg.com/org/air-liquide/org-chart/francois-jackow)
+- [Acast / In Good Company podcast — François Jackow CEO of Air Liquide](https://shows.acast.com/in-good-company-with-nicolai-tangen/episodes/francois-jackow-ceo-of-air-liquide)
+- [Semiconductor Today — Air Liquide to acquire Voltaix, 2013-06-17](https://www.semiconductor-today.com/news_items/2013/JUN/AIRLIQUIDE_170613.html)
+- [TSMC Arizona — Wikipedia (lists Air Liquide and Linde as supply partners)](https://en.wikipedia.org/wiki/TSMC_Arizona)
+- [Wired — Encyclopedia entry on L'Air Liquide](https://en-academic.com/dic.nsf/enwiki/1144593)
+
+---
+
+<details>
+<summary><b>验证日志 (Step 10) ——2026-05-26</b></summary>
+
+**URL 检查** ——已抽样检查上述主要财报 / 新闻稿 / 市场数据 URL：
+- ✅ FY2024 业绩 PR (Air Liquide IR) ——200
+- ✅ URD 2024 PDF (Air Liquide IR) ——200
+- ✅ 台积电亚利桑那 PR (2022-01-25) ——200
+- ✅ 美光爱达荷 PR (2024-06-05) ——200
+- ✅ 华城钼前驱体厂 PR (2025-07-21) ——200
+- ✅ DIG Airgas 签署 PR (2025-08-22) ——200
+- ✅ DIG Airgas 交割 PR (2026-01-13) ——200
+- ✅ 台湾 €500m 三厂 PR (2022-10-19) ——200
+- ✅ H1 2025 PR (2025-07-29) ——200
+- ✅ Q1 2025 PR (2025-04-24) ——200
+- ✅ Q3 2025 PR HTML (2025-10-28) ——200
+- ✅ FY2025 PR (2026-02-20) ——200
+- ✅ Normand'Hy 电解槽 PR (2022-03-08) ——200
+- ✅ TotalEnergies-Air Liquide JV PR (2023-09-14) ——200
+- ✅ 先进材料品牌页面 (electronics.airliquide.com) ——200
+- ✅ ALOHA 品牌页面 (electronics.airliquide.com) ——200
+- ✅ Wikipedia — Air Liquide; TSMC Arizona ——200
+- ✅ Yahoo Finance AI.PA、LIN、APD、4091.T 报价 ——200
+- ✅ companiesmarketcap.com — Air Liquide / Linde / Nippon Sanso ——200
+- ✅ Market.us — Industrial Gases Market 报告页 ——200
+- ✅ Strategic Market Research — Semiconductor Specialty Gas Market ——200
+
+**主要源头锚点 (财报，而非新闻)：**
+- 所有 URD 2024 页码 (p. 5、7、8-9、18-19、22-23、26-27、30、33) 已与 §4.1 内嵌的 URD 第 33 页 PNG 及 URD 发布公告交叉验证。
+- §4.3 电子业务描述按 URD 2024 第 33 页原文逐句引用 (verbatim) (引用部分已嵌入图像中)。
+
+**10-K 类抽查 (主张 → 主要财报中的位置)：**
+- FY2024 营收 €27,058m ✓ (FY2024 PR, p. 1；URD 2024 财务亮点)
+- FY2024 经常性营业利润率 19.9% ✓ (FY2024 PR, p. 1)
+- FY2024 经常性净利润 €3,466m ✓ (FY2024 PR, p. 1)
+- FY2024 经常性 ROCE 10.7% ✓ (FY2024 PR, p. 1)
+- FY2024 资本开支决策 €4.4bn ✓ (FY2024 PR, p. 4-5)
+- FY2024 提议股息 €3.30/股 ✓ (FY2024 PR, p. 7)
+- FY2024 净债务 €9,159m ✓ (FY2024 PR, p. 7)
+- FY2024 气体与服务营收 €25,808m ✓ (FY2024 PR, p. 2)
+- FY2024 业务线结构 (工业气体零售 €11,966m / 大宗工业气体 €7,120m / 医疗保健 €4,274m / 电子 €2,510m) ✓ (URD 2024 p. 7 "Key Elements by Business Line"，内嵌图像)
+- Q1 2025 营收 €7,028m，电子 +3.6%，载气 +10% ✓ (Q1 2025 PR)
+- H1 2025 营收 €13.72bn，OIR 毛利率 +100 bps，投资储备 €4.6bn ✓ (H1 2025 PR)
+- 台积电亚利桑那合同 ~$60m，H₂ / He / CO₂ 产品 ✓ (TSMC Arizona PR 2022-01-25)
+- 美光爱达荷合同 >$250m ✓ (Micron Idaho PR 2024-06-05)
+- DIG Airgas €2.85bn EV ✓ (DIG Airgas signing PR 2025-08-22)
+
+**分析师观点句子 (有意标记，未引用主要源)：**
+- §1 估值讨论：多元溢价框架——已标记「*分析师观点：*」；以同业 P/E 数据支撑
+- §4.3.1 载气强护城河判定——已标记「*分析师观点：*」；以行业观察支撑
+- §4.3.2 特种材料部分护城河判定——已标记「*分析师观点：*」
+- §4.3.3 先进材料护城河判定——已标记「*分析师观点：*」
+- §4.3.4 设备中等护城河判定——已标记「*分析师观点：*」
+- §4.4 工业气体零售护城河判定——已标记「*分析师观点：*」
+- §4.5 大宗工业气体护城河判定——已标记「*分析师观点：*」
+- §4.6 医疗保健护城河判定——已标记「*分析师观点：*」
+- §5.4 客户集中度评估——已标记「*分析师观点：*」 ——Air Liquide 不披露 Top-1 / Top-5 客户份额；定性评估锚定于披露的渠道结构
+- §7.4 市场份额表——已明确标记「*分析师观点：*」；数字为基于竞争对手财报 + 野村行业数据的三角推算，非 Air Liquide URD 披露
+- §6.4 行业趋势排序——作者观点，锚定于行业 / 资本开支披露
+
+**客户集中度披露** ——Air Liquide URD 2024 **不**披露量化的 Top-1 / Top-5 客户营收份额指标。§5.4 明确指出这一缺失并提供基于渠道结构披露的分析师评估；这一披露缺失与欧洲对高度分散多渠道工业业务的实际操作一致 ——没有客户达到 10% 重要性门槛。
+
+**竞争对手产品提及** ——任何具名竞争对手产品 (Resonac NF₃、Merck Versum 前驱体 SKU 等) 均未归因到 Air Liquide URD；所有竞争对手产品 / 业务提及均引用竞争对手自有财报或网站 (例如 Resonac integrated report 对 NF₃ 领导地位、Merck KGaA 对 Versum 收购)。
+
+**本报告范围内未验证的剩余未知项：**
+- 2025-10 €2.15bn DIG Airgas 债券定价细节仅根据新闻稿标题描述；分档详情 (票面、期限) 未单独验证。
+- €250m 德国 2025 半导体气体综合项目客户从 H1 2025 PR 推测 (「可能是 ESMC 德累斯顿」)；Air Liquide 未公开具名晶圆厂。
+- 韩国钼厂早期采用客户从地理位置 + 产品适用性推测 (「逻辑上为三星 + SK 海力士」)；Air Liquide 未具名。
+- 工程与建设内部营收 (合并时消除的集团内部部分，支撑 €4.4bn 资本开支) 在公开层面未按项目粒度披露。
+
+</details>
+
