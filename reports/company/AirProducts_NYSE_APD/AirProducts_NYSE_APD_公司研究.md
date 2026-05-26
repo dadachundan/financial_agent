@@ -91,3 +91,113 @@ Menezes 在任 16 个月内交出了一份连贯的重置故事：资本支出�
 
 ---
 
+## 4. 产品与服务
+
+> **重要提示:** §4 是本报告最关键的章节。APD **不** 在 10-K 中公布独立的「电子级气体 (electronic-grade gas)」或产品口径收入表 — 仅按区域（美洲、亚洲、欧洲、中东和印度、公司及其他）报告，产品类别只在 Item 1 业务章节定性描述。这与 Resonac、Linde Electronics 或 Air Liquide Advanced Materials 的报告口径有本质区别，后者将电子前驱体单独列示。因此理解 APD 的产品矩阵最好的方式是 **「分子 × 供应模式」网格**（大气 / 工艺 / 特种 × 驻厂 / 商品 / 钢瓶）叠加 **终端应用维度**（炼油、化工、金属、电子、食品 / 医疗），区域分部则是 P&L 的呈现层。
+
+### 4.1 — APD 的「产品矩阵」— 分子 × 供应模式 × 终端应用
+
+按 FY2025 10-K Item 1 表述：「Our industrial gases business, which is organized and operated regionally in the Americas, Asia, Europe, and Middle East and India segments, produces and sells atmospheric gases such as oxygen, nitrogen, and argon (primarily recovered by the cryogenic distillation of air); process gases such as hydrogen, helium, carbon dioxide, carbon monoxide, and syngas (a mixture of hydrogen and carbon monoxide); and specialty gases. Overall regional industrial gases sales constituted over 90% of consolidated sales in fiscal years 2025, 2024, and 2023, approximately half of which were attributable to atmospheric gases」([FY2025 10-K, Item 1 Business — "Our Businesses"](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。
+
+将 10-K 叙述综合为下表的产品矩阵（10-K 中并无原生表格 — 此表由分析师据原文构造）：
+
+| 分子 | 生产工艺 | 供应模式 | 主要终端应用 | 合同结构 |
+|---|---|---|---|---|
+| **氧气 (O₂)** | 低温空分 | 驻厂管道 + 商品液体 | 钢铁、玻璃、水泥、炼油气化、医疗 | 15–20 年照付不议（驻厂）；5 年（商品） |
+| **氮气 (N₂)** | 低温空分 | 驻厂管道 + 商品液体 + 钢瓶 | 半导体晶圆厂腔体惰化、食品冷冻、金属惰化、化学反应器封闭 | 15–20 年 / 5 年 / 单笔订单 |
+| **氩气 (Ar)** | 低温空分（O₂/N₂ 副产） | 商品液体 + 钢瓶 | 金属焊接保护气、半导体溅射 / 腔体吹扫 | 5 年或单笔订单 |
+| **氢气 (H₂) — 灰氢** | 蒸汽甲烷重整 (SMR)，天然气原料 | 驻厂管道（墨西哥湾沿岸网络、鹿特丹、新加坡） | 炼油加氢裂化 + 加氢精制；石化原料 | 15–20 年照付不议 |
+| **氢气 (H₂) — 蓝氢** | SMR + 碳捕集 / 封存 | 驻厂管道（路易斯安那 ~2028 年） | 炼油减碳；氨 / 电子燃料 | 长期承购谈判中 |
+| **氢气 (H₂) — 绿氢** | 可再生电力电解（NEOM 光伏 + 风电） | 以绿氨形式出口（Yara 承购） | 重型动力、船用燃料氨、化肥 | NEOM JV 由 APD 母公司承购 |
+| **氦气 (He)** | 天然气 / CO₂ 提取副产；地下储气库（德州 Amarillo、Beaumont） | 商品 ISO 容器 + 液化 | 半导体晶圆冷却、MRI 磁体冷却、光纤制造、航天吹扫 | 3–5 年供应协议 |
+| **一氧化碳 (CO) / 合成气** | 带分离的 SMR；部分氧化 | 驻厂管道 | 乙酸、聚氨酯、酮醇、甲醇 | 15–20 年 |
+| **二氧化碳 (CO₂)** | 副产物纯化（乙醇发酵、化肥）；少量大气分离 | 商品液体 + 钢瓶 | 饮料碳化、食品冷冻、EOR | 3–5 年 |
+| **特种 / 大宗特种气体** | 高纯混合与灌装 | 客户围墙旁的商品撬装 | 半导体工艺气体（仅大宗高纯 — **三氟化氮 (NF₃)**、**硅烷 (SiH₄, silane)**、**六氟化钨 (WF₆)** 在 Versum 拆分后已 *不在* APD 组合中） | 5–15 年 |
+| **设备（公司及其他分部）** | 自有设计 + 制造 | 一次性项目销售 | ASU、烃类回收、液氦 / 液氢运输罐；Rotoflow 涡轮膨胀机；Gardner Cryogenics 容器 | 项目制 |
+
+*据 [FY2025 10-K, Item 1 Business 的 "Our Businesses"、"Production"、"Supply Modes"、"End Use"、"Industrial Gases Equipment"](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm) 及 [Air Products 公司历史产品时间线](https://www.airproducts.com/company/history) 构造。*
+
+理解 APD 经济模型的第二个关键轴是 **供应模式结构**。按 10-K 表述，驻厂（大型管道 / 越围）贡献「approximately half」总销售额，商品气体（液体散装 + 钢瓶）贡献余下大部分，设备销售在 FY2025、FY2024 和 FY2023 各财年均 <10% ([FY2025 10-K, "Supply Modes"](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。驻厂业务正是长合同期、价格传导和管道网络护城河的所在 — 也是高资本密集度（因此也是 FY2025 减值风险）集中的地方。
+
+### 4.2 — 产品如何协同 — APD 的客户工作流
+
+Air Products 的产品组合在每个大型工业现场构成单一的客户工作流：APD 在客户围墙内部或紧邻处建造 **空气分离装置 (ASU)** 或 **氢气装置 (SMR / 气化炉)**；管道气体在 15–20 年照付不议合同下连续流入客户工艺；多余的液体产品被收集、用槽车运输并在每座 ASU 约 200 英里配送半径内向商品客户转售；在管道网络存在的地方（墨西哥湾沿岸氢气管道、鹿特丹–安特卫普网络、新加坡裕廊系统），跨客户负荷平衡使原本高固定成本的资产成为单位经济显著更优的网络业务。同一分子（氧气、氢气）因此以三种不同价格出现在三条不同的收入流上 — 驻厂（单价最低、合同最长、资本最高）、商品液体（中等）和钢瓶（单价最高、承诺最短）— 区域分部 P&L 就是这三种模式加上设备销售的代数和。氦气是显著例外：因氦气资源在地理上高度集中（美国 Hugoton 气田、卡塔尔、俄罗斯、阿尔及利亚）且运输需要低温 ISO 容器，APD 的氦气业务必须是全球性的，且运行于较短（3–5 年）的供应合同上，相比管道业务更频繁地重新定价 — 这一特征解释了近季度氦气业务的上行和下行意外。
+
+```mermaid
+graph LR
+    A[空分装置 / SMR / 气化炉] --> B[驻厂管道 ~50% 销售]
+    A --> C[过剩液体 ~30% 销售]
+    A --> D[低温容器]
+    C --> E[商品液体散装]
+    C --> F[钢瓶 ~15% 销售]
+    D --> G[氦 / H2 运输]
+    H[设备设计 + 制造] --> I[设备销售 <10% 销售]
+    J[客户围墙] --> A
+    B -.-> J
+    style B fill:#cce5ff
+    style C fill:#ffe5cc
+    style F fill:#ccffcc
+    style I fill:#f0f0f0
+```
+
+### 4.3 — 大气气体 (O₂, N₂, Ar) — 约占合并销售 ~50%
+
+**10-K 原文:** "Atmospheric gases are produced through various air separation processes, with cryogenic distillation being the most prevalent" ([FY2025 10-K, "Production"](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。终端应用，10-K 表述："Oxygen is used in combustion and industrial heating applications, including in the steel, certain nonferrous metals, glass, and cement industries. Nitrogen applications are used in food processing for freezing and preserving flavor, and nitrogen is used for inerting in various fields, including the metals, chemical, and semiconductor industries" ([FY2025 10-K, "End Use"](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。
+
+**通俗释义:** ASU 是一座高大的低温蒸馏塔，利用液态沸点差异将室内空气物理分离为构成分子 — 氧气在 −183 °C、氩气在 −186 °C、氮气在 −196 °C 液化，所以将空气冷却至约 −190 °C 再蒸馏即可得到 >99.5% 纯度的三股气流。经济上的关键在于 **电力是最大单一成本要素** — 通常占现金生产成本的 60–70%，FY2025 10-K 明确证实："Electricity is the largest cost component in the production of atmospheric gases" ([FY2025 10-K, "Production"](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。长期电力供应合同和现场热电联产在工业电价上涨时倾向于让 APD 受益（成本通过 10-K 所述的「定价公式、附加费、成本传导条款」机制传导），在现货电价下跌时则反向。
+
+**与其他类别的差异:** O₂/N₂/Ar 是大宗化分子 — 物理纯度是二元的（要么交付 99.5%，要么客户的晶圆厂 / 熔炉 / 炼油厂报警），因此竞争维度集中在供应可靠性、合同条款和地理就近性。这与特种气体（晶圆厂工艺腔体的定制混合和高纯散装）形成对比 — 后者以配方和纯度认证差异化；也不同于氦气 — 后者由全球供给复杂度和地质稀缺主导成本结构。
+
+**战略意义:** 大气气体是 APD 业务的 **债券替代型核心**。15–20 年合同 + 价格传导在完整电价周期内提供稳定的低双位数 ROIC，这是为什么 APD、Linde、Air Liquide 三家合计持有全球驻厂大气市场约 80% 份额，也是为什么公司的财务画像更像一家受监管的公用事业而非化学品制造商。氮气的半导体子分部是当前增长最快的细分：一座先进逻辑 / DRAM 晶圆厂每天消耗 500–1,500 公吨氮气用于腔体惰化和吹扫 — 与一座中型钢厂相当 — 三星平泽超级合同正是这种合同类型 ([Air Products 三星新闻稿, 2026-04-29](https://www.airproducts.com/company/news-center/2026/04/0429-air-products-gas-supply-samsung-semiconductor-fab-south-korea))。
+
+*分析师观点:* APD 在大气驻厂的竞争位势强劲（结论 = 有护城河；护城河 = 规模 + 管道网络经济 + 15–20 年合同切换成本），在不同地理上与 Linde 在全球 #2 或 #3 之间。最直接的竞品是 Linde 的驻厂 ASU 业务，详见 [Linde plc 2024 Annual Report](https://www.sec.gov/Archives/edgar/data/0001707925/000162828025007990/lin-20241231.htm)（2018 年 Praxair 合并后 Linde 超越 APD 成为全球 #1）。
+
+### 4.4 — 工艺气体 — 氢气、氦气、一氧化碳、合成气
+
+**10-K 原文:** "Hydrogen is a process gas that is typically produced by purifying byproduct sources obtained from chemical and petrochemical industries without carbon capture, commonly referred to as 'gray hydrogen.' We primarily produce gray hydrogen. In addition, we are advancing projects that produce low-carbon hydrogen from hydrocarbons with carbon capture ('blue hydrogen') and carbon-free hydrogen from renewable energy ('green hydrogen'), such as the NEOM Green Hydrogen Project in Saudi Arabia" ([FY2025 10-K, "Production"](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。
+
+**通俗释义:** 氢气生产按碳足迹分为三种「颜色」。**灰氢**（目前占全球供应约 95%）来自 SMR — 天然气 + 蒸汽在约 800 °C 镍催化剂上 → H₂ + CO + CO₂，CO₂ 排放至大气。**蓝氢** 工艺与 SMR 相同但在出口烟囱处捕集 CO₂ 并将其封存至地下；分子本身完全一致，差异在于碳足迹披露。**绿氢** 通过可再生电力电解水 — 通常是 PEM（质子交换膜）或碱性电解槽 — 无化石输入；成本结构由零碳电力的成本主导。APD 现有的 **墨西哥湾沿岸氢气管道网络**（从休斯顿航道穿过路易斯安那直达鲍蒙特 / 阿瑟港炼油集群，相当于「美国版鹿特丹」）是全球最大的灰氢管道之一，是 APD 当前在美国炼油氢业务规模的基石资产。
+
+**氦气** 在结构上与其他工艺气体不同：按 10-K 表述："Helium is produced as a byproduct of gases extracted from underground reservoirs, primarily natural gas and CO₂ purified before resale. Because helium is generally sourced globally at long distances from point of sale, we maintain an inventory of helium in our fleet of ISO containers as well as in underground storage facilities in Amarillo, Texas and Beaumont, Texas" ([FY2025 10-K, "Production"](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。氦气对电子的相关性 — 晶圆冷却、MRI 磁体泄漏检测、等离子物理 — 加上地理稀缺性（美国 Amarillo BLM Cliffside 设施和 Hugoton 气田是两大美国来源；国际供给来自卡塔尔、俄罗斯和阿尔及利亚）使得氦气业务持续是供给冲击定价能力与需求冲击定价压力的交错。FY26 二季度管理层专门提到氦气价格疲软作为顺风的部分对冲，并宣布从 Amarillo 储气库提取、增加美国液化产能、并重新部署全球 ISO 集装箱以增强韧性 ([Q2-FY26 PR](https://www.sec.gov/Archives/edgar/data/2969/000000296926000018/exhibit99131mar26.htm))。
+
+**战略意义:** 氢气是 APD 清洁能源战略豪赌的展开场。NEOM（绿氢）和路易斯安那（蓝氢）合计代表 **约 $130 亿承诺资本** — 相当于净 PP&E 基数的一半 — 围绕一项多十年命题：脱碳监管、炼油客户净零承诺以及氨作为船用燃料的采用将创造一个可观的低碳氢结构性买方。在 Menezes 时代命题完好无损 — NEOM 和路易斯安那都在 2025 年 2 月战略重置中被明确 *保留* — 但时间表比原 2024–2026 投产窗口拉长。NEOM 投产为 2027 年年中；路易斯安那 2028 年；承购协议（NEOM 氨的 Yara、路易斯安那的股权伙伴选定）仍在谈判中。*分析师观点:* 氢气是模型中方差最大的一行 — 干净的执行路径带来低双位数 ROIC 和 FY2028 起的多年期 EPS 顺风；投产时点滑坡或承购永久受损则带来二次减值周期。
+
+*分析师观点:* 在全球灰氢管道业务上 APD 是明确的前三供应商（结论 = 是；护城河 = 管道 + 15–20 年炼油照付不议合同），与 Linde 和 Air Liquide 并列。在规模化绿氢上，APD 真正是第一家（唯一一家在建 >500 吨/日 绿氢装置）；在规模化蓝氢上，也是第一家（路易斯安那是在建最大蓝氢承诺）。在氦气上，APD 是三大主要供应商之一（Linde、APD、Air Liquide），合计持有全球商品氦气市场约 60–70%，Iwatani Corp 和 Messer 也具有体量。
+
+### 4.5 — 特种 / 电子级气体 — Versum 拆分后仅做大宗
+
+这是关于 Air Products 最容易被误解的一个分部。**APD 不销售离散事件级电子前驱体** — NF₃、硅烷 (SiH₄)、WF₆、**三氯化硼 (BCl₃)**、ALD 用氨、沉积级钨前驱体等。这些产品类别在 2017 年 Versum 拆分中被划入 Versum Materials，今天由默克 KGaA 持有（EMD Electronics 子公司），与 Resonac（昭和电工电子材料业务 — 见 [reports/sector/半导体材料.md](../../sector/半导体材料.md)）、SK Materials 和 Linde Electronics 在竞争。APD 的电子业务收入集中于通过驻厂管道和客户撬装交付的 **大宗及大宗特种气体**：N₂（腔体惰化）、O₂（燃烧 / 氧化）、H₂（外延和载气）、氦气（晶圆冷却）、氩气（溅射和大批量制造腔体吹扫）以及大宗特种层（超高纯 N₂、多 9 等级氢气、特殊混合气）。
+
+「大宗 vs 前驱体」的区分对投资命题有重要意义，因为（i）大宗业务毛利率较低但合同期限远长（15–20 年 vs 1–3 年）；（ii）大宗气体的竞争位势 *与* 前驱体 *截然不同* — APD 与 Linde Electronics、Air Liquide Electronics、Nippon Sanso（TNSC）和 Messer Electronics 在 **管道供应 + 驻厂可靠性** 上竞争，而不是与前驱体专家 Resonac / SK Materials / Versum 竞争；（iii）AI 驱动的半导体资本支出周期（按 Nomura 的研究综合在 [reports/sector/半导体材料.md](../../sector/半导体材料.md)，TSMC FY2027 资本支出约 $700 亿）与新晶圆厂建设 1:1 拉动大宗气体需求，不论该厂是逻辑、DRAM、HBM 还是先进封装，而前驱体需求结构则更多依赖工艺节点和工艺组合。
+
+**战略意义:** 三星平泽大宗特种气体超级合同（2026 年 4 月）和亚洲电子项目订单（FY26 二季度业绩会披露在「亚洲电子项目执行中」额外约 $10 亿，[Motley Fool transcript, 2026-04-30](https://www.fool.com/earnings/call-transcripts/2026/04/30/air-products-apd-q2-2026-earnings-transcript/)）是 Menezes 任内亚洲电子推进的可见标记 — 在 APD 已有装机基础的德州（TSMC 亚利桑那由 APD 凤凰城周边管道网络供应，详见多家行业媒体报道）和韩国（平泽被扩展为「全球范围内规模最大的电子业务支援基地」，详见 [三星公告, 2026-04-29](https://www.airproducts.com/company/news-center/2026/04/0429-air-products-gas-supply-samsung-semiconductor-fab-south-korea)）的地理上，公司决定积极争夺晶圆厂驻厂合同以巩固和扩大领先地位。
+
+*分析师观点:* 在半导体驻厂的大宗与大宗特种领域，APD 是可信的前三供应商（结论 = 是；护城河 = 驻厂资产 + 15–20 年合同 + 可靠性记录），落后于 Linde Electronics（Praxair 合并后全球 #1，与 TSMC + Intel 关系最深，详见 [Linde plc 2024 Annual Report Electronics 板块](https://www.sec.gov/Archives/edgar/data/0001707925/000162828025007990/lin-20241231.htm)），与 Air Liquide Electronics 大致并列。在离散事件级前驱体（NF₃、硅烷、WF₆ 等）上，Versum 拆分后 APD 实际份额为零 — 相关对比集合是 Resonac、EMD Electronics（默克 KGaA / 前 Versum）、SK Materials 和 Linde Electronics 的特种业务线。
+
+### 4.6 — 设备业务（公司及其他）— <10% 销售
+
+**10-K 原文:** "We design and manufacture equipment for air separation, hydrocarbon recovery and purification, and liquid helium and liquid hydrogen transport and storage. The Corporate and other segment includes activity related to the sale of cryogenic and gas processing equipment for air separation … The Corporate and other segment also includes the results of our Rotoflow business, which manufactures turboexpanders and other precision rotating equipment, and our Gardner Cryogenics business, which fabricates helium and hydrogen transport and storage containers" ([FY2025 10-K, "Industrial Gases Equipment"](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。
+
+**通俗释义:** 设备业务是项目制收入流 — APD 向那些选择自有自营气体供应资产的客户销售完整 ASU（或烃类回收 / 纯化装置）— 通常是大型油气生产商和体量极大的化工 / 石化综合体，因为它们的供应量经济性更偏向自营。**Rotoflow** 涡轮膨胀机是精密旋转机械，用于从气体膨胀中提取制冷能量（任何低温装置的关键效率部件）。**Gardner Cryogenics** 制造在低温温度下全球运输液氢和液氦的特种 ISO 容器和真空绝热罐 — 这些是氦气业务的「卡车」，客户群较小但锁定，主要是氦气和航天客户。
+
+**战略意义:** 设备业务是反周期杠杆，也是一种「不下注驻厂资本」的赚取利润方式。当客户为资产付费时，APD 捕获工程 / 采购 / 施工的利润，而不承担多十年期的资产负债表敞口。**2024 年 9 月 30 日将 LNG 工艺技术设备业务卖给霍尼韦尔，确认约 $16 亿税前收益**，移除了该分部最高毛利的部分 ([FY2025 10-K, Note 4 Gain on Sale of Business](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm)) — LNG 业务此前贡献约 $1.35 亿经营利润（FY24）和约 $1.20 亿（FY23）。留下来的是稳态低温设备业务和 Rotoflow / Gardner 的特种产品。
+
+### 4.7 — 旗舰项目、订单储备和近期发布
+
+理解 APD 当前最有信息量的产品旗舰透镜是其 **项目订单储备**，Q2-FY26 披露为约 **$90 亿盈利贡献项目**，其中包括 >$25 亿传统工业气体订单和约 $10 亿在执行的亚洲电子项目 ([Motley Fool — APD Q2 FY26 Earnings Transcript, 2026-04-30](https://www.fool.com/earnings/call-transcripts/2026/04/30/air-products-apd-q2-2026-earnings-transcript/))。三个旗舰主导该订单：
+
+1. **NEOM 绿氢项目（沙特阿拉伯）** — 总项目成本 $84 亿，JV 层面 APD / ACWA Power / NEOM 公司各持 50/50，APD 作为绿氨产品的独家承购方。目标约 600 吨/日绿氢转化为约 120 万吨/年绿氨，面向船用燃料和化肥市场。报告进度约 80% 完成；目标 2026 年底 / 2027 年中首产氨。投产后管理层计划解除 JV 合并报表，从 APD 资产负债表移除相关债务 ([NEOM Green Hydrogen Company 财务关闭新闻稿, 2023](https://www.neom.com/en-us/newsroom/neom-green-hydrogen-investment); [Q2-FY26 transcript](https://www.fool.com/earnings/call-transcripts/2026/04/30/air-products-apd-q2-2026-earnings-transcript/); [Inside Saudi, 2025-10-01](https://www.insidesaudi.media/articles/2025-10-01-a-hydrogen-superpower))。
+2. **路易斯安那清洁能源综合体（阿森松教区）** — 原 $45 亿预算，全球最大蓝氢综合体，SMR + 自热重整器 + CO₂ 封存到湾区碳酸盐含水层；启动延至 2028 年，在 Menezes 任内启动积极股权伙伴搜寻以优化 APD 的股权出资额 ([gasworld, 2025](https://www.gasworld.com/story/air-products-sees-potential-path-forward-for-paused-louisiana-blue-hydrogen-project/2168127.article/); 原 [路易斯安那州经济发展署公告, 2021](https://www.opportunitylouisiana.gov/news/air-products-announces-4-5-billion-blue-hydrogen-clean-energy-complex))。
+3. **三星平泽大宗特种气体供应系统** — 2026 年 4 月 29 日公告，APD「迄今为止在半导体行业最大的投资」，向三星新一代先进半导体晶圆厂供应氮气、氧气、氩气和氢气；分阶段投产 2028–2030 年；平泽成为 APD「全球范围内规模最大的电子业务支援基地」([Air Products 新闻稿, 2026-04-29](https://www.airproducts.com/company/news-center/2026/04/0429-air-products-gas-supply-samsung-semiconductor-fab-south-korea); [PR Newswire, 2026-04-29](https://www.prnewswire.com/news-releases/air-products-to-expand-industrial-gas-supply-for-samsung-electronics-next-generation-semiconductor-fab-in-south-korea-302757497.html))。
+
+过去 12 个月的其他重新定位包括：在佛罗里达州 Cocoa 新建一座 ASU 服务 NASA Artemis 火箭发射市场（液氢 + 氦气用于火箭燃料系统）；为管理全球客户供应链韧性而新增氦气储气和美国液化产能；以及 Q2-FY26 公告将季度股息提升至 $1.81（连续第 44 年提股息）([Q2-FY26 PR](https://www.sec.gov/Archives/edgar/data/2969/000000296926000018/exhibit99131mar26.htm); [Air Products 股息新闻稿, 2026-01](https://www.investing.com/news/company-news/air-products-increases-quarterly-dividend-to-181-per-share-93CH-4468906))。
+
+![APD: 10 年股息轨迹](../../charts/airproducts_dividend_history.png)
+*来源: [Air Products 股息新闻稿（连续 44 年提股息）](https://www.airproducts.com/company/news-center/2025/01/0122-air-products-increases-quarterly-dividend-for-43rd-consecutive-year) 及 [2026-01 季度股息提升至 $1.81](https://www.investing.com/news/company-news/air-products-increases-quarterly-dividend-to-181-per-share-93CH-4468906)。*
+
+### 4.8 — 综合 — 各类别如何交互
+
+最好把 Air Products 理解为 **同一资产负债表上的三项整合业务**。（1）**债券替代型核心**：大气驻厂、灰氢驻厂、氦气商品 — 长久期、价格传导、ROIC 稳定、股息驱动。这大约占经营利润的 80%，是股息覆盖故事的全部底层。（2）**电子顺风层**：美洲（TSMC 亚利桑那、三星德州、Micron 美国、Intel）和亚洲（三星平泽、亚洲电子 ~$10 亿订单）半导体晶圆厂的大宗与大宗特种 — 与核心同分子，但由于 AI 半导体资本支出周期（至 ~2030 年）增长斜率结构性更陡。（3）**清洁能源期权层**：NEOM（绿氢 → 氨）、路易斯安那（蓝氢 + 封存）。高资本密集度、多年期建设、非对称回报 — 上行是 2028 年起多十亿 ROIC 顺风；下行是 FY2025 $37 亿减值为 *已退出项目* 预演的二次减值周期。模型最后汇总到单一数字 — 调整后 EPS — FY2026 指引（$13.00–$13.25）就是管理层对这三层 + 价格 + 资本纪律 + 汇率在当前周期内平衡结果的表达 ([Q2-FY26 PR](https://www.sec.gov/Archives/edgar/data/2969/000000296926000018/exhibit99131mar26.htm))。
+
+---
+
