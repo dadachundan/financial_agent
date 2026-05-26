@@ -358,3 +358,148 @@ pie title 电子业务客户（分析师估算，FY2024）
 **先进节点材料的供应商议价权正在上升**，因为 (a) 化学品更稀有、开发更难、(b) 认证周期更长、(c) 每个关键产品的可行供应商数量已经压缩（如 EUV 光刻胶在 JSR 2021 年收购 Inpria 后，已实质成为 4 供应商寡头 —— JSR/Inpria、TOK、信越、富士胶片）。这是野村"材料重估"论：随着材料变得更关键、更难以认证，供应商定价权和利润率应当结构性上升。
 
 ---
+
+## 7. 竞争格局
+
+### 7.1 按电子产品线划分的直接竞争对手
+
+默克 KGaA 的竞争地位因产品线不同而差异极大，因为没有任何单一竞争对手能在 CMP 抛光液 + ALD 前驱体 + 光刻胶 + 光刻辅材 + 特种气体 + OLED 材料的广度上匹敌。最接近的"广基础"竞争对手是 **富士胶片电子材料**，2023 年 11 月收购 Entegris 电子化学品业务后，现在覆盖 CMP 抛光液 + 清洗化学 + 光刻胶 + ALD 前驱体。下文是按产品的竞争图：
+
+| 子产品 | 默克 KGaA 地位 | #1 竞品 | #2-#3 竞品 |
+|---|---|---|---|
+| **CMP 抛光液** | #2 (Versum, ~18% 份额)| 富士胶片（含 Entegris 电化, ~31%）| Fujimi/CMC、Resonac、安集、杜邦 |
+| **ALD/CVD 前驱体** | 前 3（Versum + Mecaro）| 法液空 (Voltaix, enScribe)| ADEKA、DNF/SK Specialty、Hansol Chem、Nata、Versum=MRK |
+| **光刻胶 (DUV + EUV)** | ~前 7-8（AZ，~5-8%）| JSR (~22%)| TOK、住友、信越、富士胶片、东进 |
+| **光刻辅材 (BARC、硬掩膜)** | 前 2-3（AZ）| JSR | Brewer Science、TOK、住友 |
+| **特种气体（电子级）** | 前 5（Versum）| 林德（含工业气体）| 法液空、Air Products、Resonac、大阳日酸 |
+| **液晶 (LC) 用于 LCD** | #1（默克 KGaA, ~50-60%）| JNC（前 Chisso）| DIC、NIDEC |
+| **OLED 发光材料** | 前 5 | UDC (NASDAQ:OLED)| 出光、住友、三星 SDI、LG 化学、DS Neolux |
+| **DS&S 设备** | 前 2-3（Versum + 内生）| 林德 + 法液空混合 | Edwards（阿特拉斯·科普柯）、MKS Instruments |
+| **3D 光学量测** | 子规模（Unity-SC，2024 年后）| KLA | Camtek、Onto Innovation、日立高新、Park Systems |
+
+*资料来源：分析师根据 [Mordor Intelligence photoresist analysis](https://www.mordorintelligence.com/industry-reports/photoresist-market)、[Valuates CMP Materials report](https://reports.valuates.com/market-reports/QYRE-Auto-14V14904/global-cmp-materials-for-semiconductor)、[Fortune Business Insights specialty gas](https://www.fortunebusinessinsights.com/us-electronic-specialty-gas-market-114856)、[OLED Materials companies, Market Research Future](https://www.marketresearchfuture.com/reports/oled-materials-market/companies)、[野村行业总览](../../sector/半导体材料.md) 编制。*
+
+### 7.2 五大主要直接竞争对手深度对比
+
+**1. 富士胶片电子材料 (TSE:4901)**。2023 年收购 Entegris 电子化学品业务后，富士胶片是 **与默克 KGaA Electronics 最直接可比的广组合竞争对手** —— 覆盖 CMP 抛光液（现全球 #1，约 31%）、特种气体、光刻胶（KrF + ArF + ArFi）、配方清洗、ALD 前驱体。富士胶片对日本 fab 客户（索尼、瑞萨、铠侠）有结构性更高的敞口，但在中国台湾和韩国正在获取份额。**脆弱性**：富士胶片母公司（富士胶片控股）比仅有电子材料更多元（数字成像、医疗健康、文件）—— 与默克 KGaA 类似的集团折价动力学。详见 [富士胶片研究报告](../Fujifilm_TSE4901/Fujifilm_TSE4901_Research_Document.md)。
+
+**2. Resonac Holdings (TSE:4004)**。合并昭和电工 + 日立化学（2023 年更名 Resonac）。在 CMP 抛光液（~14% 份额）、光刻辅材（日立 legacy）、光罩坯料（SDK legacy）和特种气体方面较强。一直在积极投资硅谷半导体材料产能（2024 年 7 月启动的"US-JOINT"联盟）和全球扩张 ([Resonac US-JOINT consortium announcement](https://www.businesswire.com/news/home/20240725537728/en/))。**优势**：深厚日本 OEM 客户关系、光罩坯料接近垄断。**脆弱性**：合并基础上的全球规模比默克 KGaA Electronics 小；昭和电工 + 日立化学合并集成复杂性持续。
+
+**3. 林德 (NYSE:LIN) + 法液空 (EPA:AI) + Air Products (NYSE:APD)**。这三家工业气体巨头通过其专门电子子公司（Linde Electronics、Air Liquide Electronics、Air Products Electronics）主导特种气体切片。它们综合了：(a) fab 现场的大宗气体基础设施（生产 N₂、O₂、Ar 的空分装置）、(b) 高纯特种气体、(c) 越来越多的前驱体化学（尤其是法液空通过 2013 年收购的 Voltaix）。默克 KGaA 无法匹敌它们的大宗气体 + 现场 fab 基础设施模式 —— 但反过来，工业气体巨头也没有默克 KGaA 的 CMP 抛光液 + 光刻胶 + OLED 广度。详见 [法液空研究报告](../AirLiquide_EPA_AI/AirLiquide_EPA_AI_Research_Document.md) 和 [Air Products 研究报告](../AirProducts_NYSE_APD/AirProducts_NYSE_APD_Research_Document.md)。
+
+**4. Entegris (NASDAQ:ENTG)**。2023 年 11 月以 $7 亿剥离电子化学品业务给富士胶片后，Entegris 现在更聚焦于 **纯化 + 滤芯 + 化学品处理 + 先进前驱体**。在先进前驱体方面是默克 KGaA 直接竞争对手（部分保留 CMC Materials 抛光液 IP、Sinmat 抛光液、气体纯化器、ESD 安全晶圆载具）。**优势**：纯半导体敞口（零集团折价）、滤芯领域强大在位。**脆弱性**：剥离后规模小于默克 KGaA Electronics；估值溢价（32× P/E）留给倍数扩张的空间较少。
+
+**5. JSR Corporation（原 TSE:4185，2024 年 3 月被 JIC 私有化）**。在 EUV 光刻胶上占主导（含 Inpria 合计约 22% 份额），是任何光刻胶线的最大单一竞争对手之一 —— 但日本国家投资基金（JIC，日本投资公司）2024 年将 JSR 私有化，明确目的是整合日本半导体材料供应，提出 JSR + TOK + Inpria + 其他合并为单一国家冠军的可能性 ([JSR JIC tender offer coverage](https://www.bloomberg.com/news/articles/2023-06-25/jsr-soars-after-state-backed-jic-said-to-mull-buyout-of-chipmaker))。对默克 KGaA 而言，JSR 私有化在 EUV 光刻胶上是 **结构性负面**（给 JSR 更多耐心资金，无需季度 EPS 压力即可推进长周期 R&D + 并购），但在全球独立竞争对手数量减少方面是 **正面**。
+
+### 7.3 间接 / 相邻竞争对手
+
+- **杜邦 (NYSE:DD)**。在半导体材料中规模较小（CMP 抛光垫、聚酰亚胺、光刻胶），但在部分子类别是可信的 #3-#5。近期聚焦互连解决方案（先进封装介电）与默克 KGaA 的 Thin Films 重叠。详见 [杜邦研究报告](../DuPont_NYSE_DD/DuPont_NYSE_DD_Research_Document.md)。
+
+- **东京应化 (TOK) — TSE:4186**。约 $15 亿收入，EUV 光刻胶 + KrF/ArF 光刻胶聚焦。在 DUV 光刻胶上是默克 KGaA AZ 的直接竞争对手。
+
+- **信越化学 (TSE:4063) / SUMCO (TSE:3436) / GlobalWafers (TWSE:6488)**。硅晶圆供应商。非直接材料竞争对手但相邻于同一 fab 供应链 —— 默克 KGaA 不生产硅晶圆。
+
+- **东进 Semichem (KOSDAQ:005290)**。韩国特种化学品 —— 在部分光刻胶 + CMP 抛光液上与默克 KGaA 在三星 / SK 海力士竞争。详见 [东进研究报告](../DongjinSemichem_KOSDAQ005290/)。
+
+- **豪雅 (Hoya, TSE:7741)**。光罩坯料近垄断（EUV 坯料 ~80% 份额）—— 与默克 KGaA 光刻胶业务相邻但在结构上不同的价值链步骤。
+
+- **安集科技 (SSE:688019)**。中国 CMP 抛光液挑战者 —— 领先国内玩家，在中国半导体自主可控驱动下快速增长。与默克 KGaA Versum 在中国 fab 直接对决。
+
+### 7.4 竞争定位框架
+
+将主要电子材料竞争对手在 **产品广度（单产品专家 vs 广组合）** 与 **规模（收入 + 客户份额）** 两个维度上绘制：
+
+```mermaid
+quadrantChart
+    title 电子材料竞争定位
+    x-axis 单产品专家 --> 广组合
+    y-axis 规模较小 --> 规模较大
+    quadrant-1 广 + 大（规模领导者）
+    quadrant-2 单产品 + 大（聚焦巨头）
+    quadrant-3 单产品 + 小（小众）
+    quadrant-4 广 + 小（多元子规模）
+    Merck KGaA Electronics: [0.85, 0.78]
+    Fujifilm El. Materials: [0.80, 0.85]
+    Linde Electronics: [0.55, 0.85]
+    Air Liquide Elec.: [0.55, 0.80]
+    Entegris: [0.65, 0.55]
+    Resonac: [0.70, 0.65]
+    JSR (pre-PE): [0.40, 0.55]
+    TOK: [0.30, 0.40]
+    DuPont Semi: [0.60, 0.50]
+    Dongjin Semichem: [0.45, 0.35]
+    UDC OLED: [0.10, 0.40]
+    Anji Micro: [0.25, 0.25]
+```
+
+框架说明了默克 KGaA Electronics 的中心定位：**广组合 + 大规模（右上象限）**，与富士胶片电子材料并列。这种定位比以下任一情形都更难复制：纯专家（UDC、TOK、JSR）需要数十年并购才能匹敌广度；或工业气体巨头（林德、法液空）需要收购多个化学品平台（CMP、光刻胶、OLED）。最接近的近期竞争融合威胁是富士胶片继续通过进一步并购扩张 —— 以及任何由 JSR + TOK + 昭和电工 / Resonac 整合产生的日本国家冠军。
+
+### 7.5 竞争优势与脆弱性
+
+**优势**
+
+1. **晶圆周期覆盖广度** —— 默克 KGaA 材料触及沉积、光刻、刻蚀、CMP、封装，以及现在的量测。没有任何单一产品掩盖周期；某一环节的弱势由其他环节的强势补偿。
+2. **Versum + Mecaro 整合** —— 五年的整合工作意味着 CMP 抛光液 + ALD 前驱体在客户层面的交叉销售现已确立。
+3. **亚洲产能布局** —— €5 亿高雄 + Mecaro 韩国 + 新加坡扩张使默克 KGaA 比多数美国总部竞争对手更靠近客户。
+4. **家族控股、耐心资本** —— 在医疗健康专利悬崖期间愿意花费 €30 亿+ 投资电子业务，这种跨周期资本支出决策是少数受季度 EPS 驱动的竞争对手不会做的。
+5. **REACH / 化学 IP 传承** —— 350+ 年配方化学专长转化为更快的客户认证和比小竞争对手更广的 IP 防御。
+
+**脆弱性**
+
+1. **集团折价** —— 电子业务仅占集团销售的 18%；股权按医疗健康 + 生命科学定价，因此电子业务的正面拐点被稀释。
+2. **无大宗工业气体** —— 无法在 fab 现场以林德、法液空、Air Products 那样将大宗 N₂ / O₂ / Ar 与特种气体打包。
+3. **EUV 光刻胶子规模** —— AZ 品牌在 DUV 上较强，但 EUV 光刻胶业务相对 JSR / 信越 / TOK 较小。
+4. **DS&S 周期性** —— Q1 2025 DS&S 下滑凸显半导体解决方案收入基础约 15% 暴露于 fab 设备资本支出周期，而非仅晶圆开工量。
+5. **中国地缘** —— 电子业务收入的 ~10–15% 暴露于中国 fab 客户，易受美中出口管制收紧或中国国产供应商（安集、Hansol、NATA）份额上升影响。
+
+---
+
+## 8. 市场机会 (TAM)
+
+### 8.1 默克 KGaA Electronics 的自上而下 TAM 量化
+
+**总潜在市场 (TAM)**。根据野村锚定报告和 SEMI 材料组数据，全球半导体材料 TAM（默克 KGaA 参与的所有子类别并集）2024 年约为 **~$480 亿（晶圆制造材料）+ $320 亿（封装材料）= ~$800 亿总计** ([行业总览，第 18-30 页](../../sector/半导体材料.md))。其中默克 KGaA 今天参与约 ~$450-500 亿 TAM 覆盖（剔除硅晶圆、光罩坯料、溅射靶材、封装基板 —— 默克 KGaA 未参与的类别）。加上 OLED 材料 TAM（~$20 亿 2024 → ~$80 亿 2030F，18% CAGR，见 [IMARC Group OLED materials report](https://www.imarcgroup.com/oled-materials-market)）和 3D 光学量测 TAM（~$10 亿，分散），总 **可寻址 TAM 约为 2025 年 ~$500-550 亿**。
+
+![电子业务净销售额 — FY2020 至 FY2024](../../charts/merckkgaa_electronics_revenue.png)
+*资料来源：[Merck KGaA Annual Reports 2020–2024](https://www.emdgroup.com/en/investors/reports-and-financials.html); 历史 Statista 交叉验证；季度新闻稿的有机增长。FY2020 基线为 Performance Materials（更名前）。*
+
+### 8.2 可服务市场 (SAM)
+
+在 $500-550 亿 TAM 中，**SAM** —— 默克 KGaA 已有产品线在 fab 客户处获认证的子类别 —— 约为 **~$250-300 亿（2025 年）**，包括：
+
+- CMP 抛光液：~$30 亿 TAM，默克 KGaA 全参与
+- 光刻胶 + 辅材：~$90 亿 TAM，默克 KGaA 参与 DUV 光刻胶 + 全辅材组合（~$40 亿有效 SAM）
+- 特种气体：~$60 亿 TAM，默克 KGaA 作为 #5 参与（~$20 亿有效 SAM）
+- ALD/CVD 前驱体：~$30 亿 TAM，默克 KGaA 前 3（~$20 亿有效 SAM）
+- 湿化学品 + 配方清洗：~$30 亿 TAM，部分参与（~$10 亿）
+- OLED + 显示：~$20 亿 TAM，部分（默克 KGaA 前 5，~$5 亿）
+- LCD 液晶：~$5 亿 TAM，默克 KGaA 主导（~$3 亿）
+- DS&S 设备：~$10 亿 TAM，~$4 亿
+- 3D 量测：~$10 亿 TAM，~$1 亿（Unity-SC 萌芽）
+
+今天有效 SAM 合计：**~$130-150 亿**，对比 FY2024 电子业务收入约 $41 亿（€38 亿按 $1.08 = $41 亿）。这意味着今天的 **SAM 实际占比 ~28-32%** —— 一个健康的份额，若默克 KGaA 能在 EUV 光刻胶、特种气体和 OLED 中夺取份额，则有显著上行空间。
+
+### 8.3 SOM 与 2030 增长路径
+
+**SOM（可获得市场）** 是默克 KGaA 在 5 年规划期内可现实占领的 SAM 份额，考虑客户认证周期 + 竞争动力学。乐观情景：SOM 从 ~$40 亿（2024）增至 **~$70 亿（2030F）**，~10% CAGR —— 与野村对半导体材料 10% CAGR 的整体预测一致，且略高于默克 KGaA 自身 2024 资本市场日中期 **5-9% 有机增长走廊**（从 3-6% 上调）([Capital Markets Day 2024](https://www.emdgroup.com/en/news/capital-markets-day-17-10-2024.html))。悲观情景：5% CAGR → 2030F 约 $55 亿。该走廊框定了未来 5 年集团预期 EBITDA 增长中 ~30% 来自电子业务 —— 鉴于该板块近期约 15% EBITDA 贡献，这是有意义的拐点。
+
+***分析师观点：*** 最可能的 2030F 电子业务收入为 **€55-70 亿（~$60-75 亿）**，按 7-9% 中点 CAGR 计算，半导体解决方案完成主要工作（两位数低端有机增长），Optronics + DS&S 适度贡献。如果组合继续向更高价值的先进前驱体倾斜（EUV 相关前驱体的毛利率据报道为 60%+），并远离类大宗的 Display Solutions，则利润率上行可期。
+
+### 8.4 渗透策略
+
+默克 KGaA 5 年渗透策略以 **四大增长向量** 为中心，与野村锚定报告半导体材料超级周期论一致：
+
+1. **AI / 先进节点逻辑**。GAA 栅极介电用 ALD 前驱体、额外平坦化步骤用 CMP 抛光液、先进刻蚀用特种气体 —— 全部受益于 2026-2027 开始的 TSMC N2 + 三星 2nm + Intel 18A 放量 ([行业总览，第 6-9 页](../../sector/半导体材料.md))。Q1 2026 半导体解决方案已实现 7.5% 有机增长，半导体材料具体增速为低两位数 ([Q1 2026 press release](https://www.emdgroup.com/en/news/q1-2026-13-05-2026.html))。
+
+2. **HBM / DRAM 缩放**。SK 海力士和三星的 HBM4 放量、加 DRAM 1c 节点转换的材料需求，驱动先进前驱体 + CMP 抛光液增量量。默克 KGaA Mecaro / 韩国产能直接服务此需求。
+
+3. **3D-NAND 缩放**。每位元材料强度随层数上升；预测的 400+ 层 NAND（2026-2027）相比当前 200 层需要约 3 倍每位元沉积 + 刻蚀材料。
+
+4. **先进封装**。混合键合、TSV 填充、RDL、玻璃核心基板 —— 每种都打开增量 TAM，Unity-SC 量测嵌入同一先进封装价值链。
+
+支持这些向量的资本配置：2025 年 10 月资本市场日宣布的 **"Level Up Next"** 计划将 2021-2025 €30 亿+ 电子业务投资延伸至 2030 年，类似规模的资本支出预算，主要聚焦亚洲半导体材料产能 ([Capital Markets Day 2025, 2025-10-16](https://www.emdgroup.com/en/news/capital-markets-day-16-10-2025.html))。
+
+![集团板块 + 电子业务单元组合 — FY2024](../../charts/merckkgaa_segment_mix.png)
+*资料来源：[FY2024 Q4 press release, 2025-03-06](https://www.emdgroup.com/en/news/q4-2024-06-03-2025.html); [AR 2024 Electronics Course of Business](https://www.emdgroup.com/en/annualreport/2024/management-report/report-on-economic-position/course-of-business-and-economic-position/electronics.html)。*
+
+---
