@@ -385,3 +385,148 @@ capex 轨迹是管理层 TAM 捕捉立场的可见信号：FY26 的 $330M 是 FY
 ### TAM 增长与 Photronics 相对份额
 
 若全球光罩 TAM 至 2030 年以约 5-6% CAGR 增长（Yole / SEMI 共识中位数），可寻址市场从 2024 年 $9.8B 扩张至 2030 年约 $13.5B。Photronics 的 SAM 按比例增长至约 $8.5B。若 Photronics 保持约 13% 全球 SAM 份额，意味 2030 年营收潜力约 $1.1B-$1.2B — 较 FY25 $849M 提升 30%+ —— 通过中个位数有机增长可实现。若 Photronics 从中国本土扩展 + AMOLED FPD 获取份额（2030 年 SAM 适度提升 +2 至 +3 个百分点），营收可达约 $1.4B-$1.5B。**不对称上行情景是中国 + AMOLED 建设；不对称下行情景是 EUV 持续吞噬高端 IC 光罩价值占比**，将在 Photronics 不能切实切入 EUV 的情况下侵蚀其可寻址份额。
+
+## 9. 风险评估
+
+### 公司特定风险（5 项）
+
+1. **EUV 不在场 / 结构性技术鸿沟。** Photronics 并非 EUV 认证光罩供应商，10-K 也未发出短期进入信号。随着 EUV 在最前沿持续扩展——特别是 TSMC 与 Samsung Foundry 自 2029-2030 起放量 High-NA EUV——Photronics 对最具价值的先进节点光罩层的可寻址份额结构性收缩。缓解因素是 EUV *之下* 的层（任一先进设计中仍占 90%+ 层数）牢牢在 PLAB 范围内，但价值池漂移真实存在。**严重程度：中-高。缓解因素：** 多束写入机赋能 DUV 层 ASP 继续提升；AI 驱动设计刷新增加总层数。([野村大中华半导体报告, p. 38-39](/Users/x/projects/financial_agent/reports/sector/半导体材料.md); [PLAB 10-K FY25, Item 1 R&D + Item 1A](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))
+
+2. **客户集中度 — top-1 ≥16%、top-5 ≥50%（重大）。** 三年披露格局 (FY23-FY25) 为 top-1 = 14%/15%/16%、top-5 = 51%/50%/50%，头部客户每年微升。PLAB 未点名客户，但地理与合资结构暗示 TSMC、Samsung、BOE / 中国显示厂、及一两家中国代工厂占主导。最大客户流失将驱动 >15% 营收冲击与不成比例的利润影响（top-1 可能运行高于平均组合）。**严重程度：重大。** 缓解因素：636 客户提供长尾可替代营收，资格认证型销售安排为客户合格后提供多年可见性 ([PLAB 10-K FY25, Item 1 Markets + Item 1A 风险因素](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。
+
+3. **中国合资 (PDMCX) 的看跌/看涨期权风险 + 中国地缘风险。** 在 PDMCX 合资协议下，DNP 拥有"将其合资权益卖给 Photronics 的权利，或购买我们在合资中的权益"的选项，若触发某些所有权份额阈值，须在"获得所需批准与放行的三个工作日内"按退出方的净账面价值份额完成交割 ([PLAB 10-K FY25, Item 7 + Note 6 PDMCX](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。截至 2025-10-31，Photronics 与 DNP 净投资各约 $160.4M — 这意味强制收购将要求 Photronics 在三天内动用约 $160M 现金（约市值 5%）。复合性结构风险是：整个中国布局（PDMCX 厦门 + 合肥）处于美中贸易与出口管制升级环境内。**严重程度：中。** 缓解因素：资产负债表充足现金可吸收看跌期权；底层合资经济性（FY25 $19.5M PDMCX 净利贡献）增厚 — 失去其 50% 可消化。
+
+4. **CEO 过渡风险。** George C. Macricostas（创始人之子）于 2025-05-28 接替 Frank Lee。虽然过渡提前披露且 Lee 保留 PDMC 台湾子公司总经理职位，但新 CEO 此前在 PLAB 的角色是 IT 基础设施（非光罩营运），外部 CEO 经验是数据中心 (RagingWire / NTT)。在大额 capex 周期、客户关系管理、与 DNP 合资伙伴谈判方面，由相对营运经验较浅的 CEO 执行的风险不容忽视。**严重程度：中。** 缓解因素：Lee 在退休前保留亚洲营运参与；Macricostas 家族继续在董事会的存在（创始人 + 儿子 CEO）提供治理连续性 ([Photronics CEO-transition 8-K dated 2025-05-28](https://www.sec.gov/Archives/edgar/data/810136/000114036125020569/ef20049681_8k.htm); [Photronics 2026 DEF 14A](https://www.sec.gov/Archives/edgar/data/810136/000153949726000750/n5545_x1-def14a.htm))。
+
+5. **capex 脉冲 → FY26-FY27 自由现金流压缩。** FY26 capex 指引约 $330M（vs FY25 实际 $188M、FY23/FY24 各约 $131M）是历史基准的 2.5 倍。若高端 IC 组合切换与 AMOLED FPD 放量未按 capex 隐含时间表兑现，FY26 FCF 可能转为负——这将是十年以来首次。**严重程度：低-中。** 缓解因素：资产负债表稳健（净现金、无长期债务），回购可暂停，管理层明确把 capex 与营收增长（而非仅产能维护）挂钩 ([PLAB 10-K FY25, Item 1A + Item 7](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。
+
+### 行业 / 市场风险（3 项）
+
+6. **来自日本领导者（Toppan、DNP）与崛起中国本土供应商的竞争强度。** Toppan 与 DNP（台湾、中国大陆之外）在主流至先进 DUV 的每个节点都与 Photronics 正面竞争，且二者 EUV 定位更强。中国本土玩家（Newway、Qingyi、Tekscend、台湾光罩）在国家支持下快速扩展，越来越多在主流 IC 节点与 Photronics 历史份额抢夺。10-K 承认："We expect to face continued competition which, in the past, has led to pressure to reduce prices. We believe the pressure to reduce prices, together with the significant investment required in capital equipment to manufacture high-end photomasks will continue in the future" ([PLAB 10-K FY25, Item 1 Competition](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。**严重程度：中。** 缓解因素：11 厂地理布局提供的周期防御性是日本玩家无法在每个区域本地匹配的。
+
+7. **EUV 光罩基板 / 检测设备在 Hoya / Lasertec 的垄断化。** EUV 光罩基板约 80% 是 Hoya，Lasertec 是 EUV actinic 光罩检测的唯一供应商。EUV 相关材料与设备的极窄供应基底限制了 Photronics 与竞争对手对 EUV 的投资能力——双刃剑。**严重程度：低**（因为 Photronics 目前不参与 EUV，这主要是行业结构性进入壁垒观察，而非 PLAB 直接风险）。([野村大中华半导体报告, p. 38-39](/Users/x/projects/financial_agent/reports/sector/半导体材料.md))
+
+8. **FPD 周期波动性。** FPD 线占 Photronics 营收约 28%，比 IC 波动更大（FY24 FPD 营收同比 −5%，FY25 +2%，主流 FPD 因中国 G8 需求单年波动 +16%）。LCD 转 AMOLED 在 IT 面板与电视上是多年顺风，但季度需求可能因韩国面板厂 capex 与中国国家导向显示投资急剧波动。**严重程度：低-中。** 缓解因素：FPD 高端 ASP 随 AMOLED 密度要求增长持续抬升；该线全周期盈利。
+
+### 财务风险（2 项）
+
+9. **外汇敞口。** "We recorded a net loss from changes in foreign currency exchange rates of $8.3 million in our [FY25] consolidated statements of income" ([PLAB 10-K FY25, Item 1A 风险因素](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。Photronics P&L 以 USD 计价，但主要营运子公司的功能货币包括新台币 (NTD)、韩元 (KRW)、人民币 (RMB)、日元、新元——使翻译 FX 成为有意义且不可预测的摆动因素。**严重程度：低-中。** 缓解因素：本币营收部分被本币成本天然对冲；管理层不签订投机性衍生品。
+
+10. **估值 / 倍数压缩风险——温和。** PLAB 22× TTM P/E 与半导体设备板块中位数一致，相对光罩可比 Toppan / DNP（约 12-14×）有溢价。溢价可以用 PLAB 更纯粹的光罩暴露与更高毛利证立，但若 (a) FY26 组合切换拐点未兑现、(b) 中国合资触发看跌期权、(c) 关税 / Section 232 结果对地理营收组合形成负面再定价，留下的缓冲有限。倍数压缩路径（如回到 16-18×）将隐含距当前水平 20-25% 下行。**严重程度：低。** 缓解因素：持续回购、防御性现金状态、5%+ 隐含股息率为估值提供下限 ([Stockanalysis.com PLAB 概览](https://stockanalysis.com/stocks/plab/); 同业 P/E 基准讨论见 §1 估值快照)。
+
+### 宏观经济风险（2 项）
+
+11. **美中贸易限制、关税 (Section 232)、与 OBBB Act 税务影响。** FY25 10-K 新增关于美国商务部 Section 232 半导体与半导体设备调查、加 OBBB Act 联邦税法变更的风险因素语言。两者均可能实质性改变 Photronics 跨境产品流或有效税率 ([PLAB 10-K FY25, Item 1A 风险因素](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm); [PLAB FY25 多年度 SEC 叙述](/Users/x/projects/financial_agent/reports/earnings/PLAB_20260525.md))。**严重程度：中。** 缓解因素：82% 非美营收基本免受美国境内关税结构影响；OBBB Act 税率影响正纳入 FY26 规划。
+
+12. **半导体与 FPD 行业周期性需求。** 光罩需求与半导体 capex 与设计流片节奏松散相关，二者皆周期性。2022-2024 行业下行周期已在 PLAB 主流 IC 线呈现（两年 −18%）。新一轮周期下行——尤其 AI capex 主导的先进节点流片量回调——将同时压缩营收与利润率。**严重程度：低-中。** 缓解因素：多元客户基础（636 家）与平衡的 IC/FPD 组合相比单一纯代工，对周期更具缓冲。
+
+## 10. 参考资料 + Step 10 校验日志
+
+### 主要参考资料（按类型）
+
+**SEC 一级备案（Photronics, CIK 810136）：**
+
+- [PLAB FY25 10-K, accession 0001140361-25-045801（2025-12-17 备案，截至 2025-10-31）](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm) — Items 1 Business（含 Industry / Markets / R&D / Competition / Resources）、1A 风险因素、2 Properties、5 股东权益与回购、7 MD&A、Note 6 PDMCX、Note 10 Revenue。本报告主要引用源。
+- [PLAB Q1 FY26 10-Q, accession 0001140361-26-009004（2026-02 备案，截至 2026-02-01）](https://www.sec.gov/Archives/edgar/data/810136/000114036126009004/plab-20260201.htm) — Q1 FY26 营收同比 +6.1% 拐点。
+- [PLAB 2026 DEF 14A, accession 0001539497-26-000750（2026-01 备案）](https://www.sec.gov/Archives/edgar/data/810136/000153949726000750/n5545_x1-def14a.htm) — 董事 / 高管简历 (p. 9 Macricostas 家族)、薪酬讨论。
+- [PLAB 8-K, accession 0001140361-25-020569（2025-05-28 CEO 交接）](https://www.sec.gov/Archives/edgar/data/810136/000114036125020569/ef20049681_8k.htm) — George C. Macricostas 接任 CEO 公告与背景。
+
+**Photronics 新闻稿（GlobeNewswire 公关稿）：**
+
+- [Photronics 新闻稿 2026-01-08：Jeff Catlin 任 SVP Global Sales](https://www.globenewswire.com/news-release/2026/01/08/3215308/0/en/Photronics-Appoints-Jeff-Catlin-Senior-Vice-President-Global-Sales.html)
+- [Photronics 新闻稿 2026-01-13：高管任命](https://www.globenewswire.com/news-release/2026/01/13/3217819/0/en/Photronics-Announces-Executive-Officer-Appointments.html) — Eric Rivera 升任 President。
+- [Photronics 新闻稿 2026-03-31：先进光罩写入机交付（AMOLED 领导地位）](https://www.globenewswire.com/news-release/2026/03/31/3265409/0/en/Photronics-Receives-Advanced-Mask-Writer-Expanding-AMOLED-Leadership.html)
+
+**行业研究 / 第三方数据：**
+
+- [野村《大中华半导体：2026-2030 复兴指南》, 2026-05-21（139 页, Donnie Teng / Frank Fan / Manabu Akizuki / Shigeki Okazaki）](/Users/x/projects/financial_agent/reports/sector/半导体材料.md) — 全球光罩市场规模、EUV 光罩基板份额（Hoya ~80%）、商用 vs 自营拆分、TAM CAGR 共识。
+- [SEMI Photomask Equipment & Materials Reports（年度）](https://www.semi.org/en) — 经野村行业报告引用。
+- [Yole Group Photomask Industry 2024](https://www.yolegroup.com/) — 经野村行业报告引用。
+- [PLAB FY25 多年度 SEC 叙述（项目内部）](/Users/x/projects/financial_agent/reports/earnings/PLAB_20260525.md) — 五年营收轨迹、PSMC 授权续约、OBBB Act 备注。
+
+**市场数据：**
+
+- [Stockanalysis.com PLAB 概览](https://stockanalysis.com/stocks/plab/) — 股价、TTM EPS、市值、52 周区间。
+- [Stockanalysis.com PLAB 财务页面](https://stockanalysis.com/stocks/plab/financials/) — 历史 FY21 / FY22 capex 数字。
+- [WSJ Market Data — Toppan 7911 JP](https://www.wsj.com/market-data/quotes/JP/XTKS/7911) / [DNP 7912 JP](https://www.wsj.com/market-data/quotes/JP/XTKS/7912) — 日本同业 P/E。
+- [Yahoo Finance AMAT 关键统计](https://finance.yahoo.com/quote/AMAT/key-statistics/) / [LRCX](https://finance.yahoo.com/quote/LRCX/key-statistics/) — 半导体设备同业 P/E。
+- [Bloomberg PHLX SOX 指数](https://www.bloomberg.com/quote/SOX:IND) — 板块均值。
+- [NASDAQ PLAB 个股资料](https://www.nasdaq.com/market-activity/stocks/plab) — 上市状态。
+
+**竞争对手网站（在 §7 援引）：**
+
+- [Toppan Holdings IR — 微电子业务](https://www.toppanholdings.com/en/about/business/electronics/)
+- [Dai Nippon Printing IR — 电子产品分部](https://www.global.dnp/biz/electronics/)
+- [Hoya IR — 电子业务](https://www.hoya.com/en/business/electronics/)
+- [LG Innotek IR](https://www.lginnotek.com/main.do)
+- [SK-Electronics 概览](https://www.sk-electronics.co.jp/eng/)
+- [深圳 Newway 光罩公司网站](http://www.newwaymask.com/)
+
+### 图表清单（6 张 PNG）
+
+| # | 图表文件名 | 章节 | 数据来源 |
+|---|---|---|---|
+| 1 | `photronics_revenue_margin.png` | §1 公司概览 | PLAB FY25 10-K Item 7（FY23-FY25 营收、毛利率、净利润） |
+| 2 | `photronics_peer_pe.png` | §1 估值快照 | Stockanalysis.com / WSJ / Yahoo Finance / Bloomberg（PLAB vs Toppan / DNP / AMAT / LRCX / SOX） |
+| 3 | `photronics_revenue_mix.png` | §4 产品矩阵 | PLAB FY25 10-K Note 10（IC 高端 / IC 主流 / FPD 高端 / FPD 主流） |
+| 4 | `photronics_geo_mix.png` | §5 地理足迹 | PLAB FY25 10-K Note 10（按起源地理营收） |
+| 5 | `photronics_market_split.png` | §6 行业概览 | SEMI / Yole / 野村行业报告（全球光罩市场 IC vs FPD、商用 vs 自营） |
+| 6 | `photronics_capex.png` | §8 市场机会 | PLAB FY25 10-K Item 7 + FY26 指引（FY21-FY26E capex） |
+
+<details>
+<summary>校验日志 (Step 10) — 2026-05-26</summary>
+
+**URL 检查** — 报告中所有引用 URL 在编写时按以下原则确认：
+- 所有 SEC EDGAR 链接（accession 0001140361-25-045801 = FY25 10-K；0001140361-26-009004 = Q1 FY26 10-Q；0001140361-25-020569 = 2025-05-28 8-K；0001539497-26-000750 = 2026 DEF 14A）来自英文版报告同次校验中通过 EDGAR submissions JSON 解析得到的实际文件名（`ef20057458_10k.htm`、`plab-20260201.htm`、`ef20049681_8k.htm`、`n5545_x1-def14a.htm`），非模式构造。
+- 所有 GlobeNewswire 新闻稿 URL 复用英文版报告同次校验的真实路径（含 `/3215308/0/en/`、`/3217819/0/en/`、`/3265409/0/en/` 的稿件 ID）。
+- 行业研究链接（野村行业报告）为项目内本地文件路径，由其他 Photronics 报告与 Anpeilong、3M 等同期报告共同引用、内容稳定。
+
+**SEC 文件名** — 通过 EDGAR submissions JSON 解析（CIK 0000810136 / 810136 零填充至 10 位），FY25 10-K 主文件 = `ef20057458_10k.htm`，Q1 FY26 10-Q 主文件 = `plab-20260201.htm`，2025-05-28 8-K 主文件 = `ef20049681_8k.htm`，2026 DEF 14A 主文件 = `n5545_x1-def14a.htm`。
+
+**10-K 关键数字核对**（声明 → 在 10-K 中的位置）：
+- FY25 营收 $849.3M ✓ (Item 7 MD&A 运营业绩 / Note 10 营收分解)
+- FY24 / FY23 营收 $866.9M / $892.1M ✓ (同上三年对比)
+- FY25 毛利率 35.3%、FY23 37.7% ✓ (Item 7 毛利率讨论)
+- 归属 PLAB 股东净利润 FY25 $136.4M ✓ (Item 7 + 合并利润表)
+- 少数股东权益净利润 FY25 $53.8M / 合并净利润 $190.2M ✓ (Item 7 + 合并利润表)
+- FY25 全球员工 1,908 人 ✓ (Item 1 Human Capital)
+- 客户集中度三年趋势 (top-1: 14% / 15% / 16%; top-5: 51% / 50% / 50%) ✓ (Item 1 Markets)
+- 总客户数 636 ✓ (Item 1 Markets)
+- FY25 营收按起源地理（台湾 $283.8M、中国 $221.0M、韩国 $158.5M、美国 $148.9M、欧洲 $34.1M、其他 $2.9M）✓ (Note 10)
+- FY25 capex 实际 $188.1M、FY24 / FY23 各 $130.9M / $131.3M ✓ (Item 7 Liquidity)
+- FY26 capex 指引"约 $330M" ✓ (Item 1A + Item 7)
+- FY25 回购实际 $97.4M ✓ (Item 5 Issuer Purchases)
+- 2025-06 额外回购授权 $25M ✓ (Item 5)
+- FY25 产品类型营收拆分（IC 高端 $238.9M / IC 主流 $376.2M / FPD 高端 $195.5M / FPD 主流 $38.7M）✓ (Note 10)
+- 96% 营收按"随时间"确认（USD 818M）✓ (Note 10)
+- FY25 外汇损失 $8.3M ✓ (Item 1A 风险因素)
+- 11 制造工厂跨 5 地理区域 ✓ (Item 2 Properties)
+- 竞争对手清单 ✓ (Item 1 Competition — 与 §7 表格一致)
+- PDMCX 看跌/看涨期权条款 + 三业务日交割 + $160.4M 各方净投资 ✓ (Item 7 + Note 6 PDMCX)
+- 2025-05-28 Frank Lee 卸任 / George C. Macricostas 接任 CEO ✓ (8-K Item 5.02 + 2026 DEF 14A p. 9)
+- CFO 2024-05-23 任命 Eric Rivera / 2026-01-12 加任 President ✓ (新闻稿 2026-01-13)
+- 2026-03-31 先进光罩写入机交付 AMOLED 用 ✓ (新闻稿 2026-03-31)
+
+**分析师观点句**（明确以 `*分析师观点：*` 标记，未引证一级源 — 符合 SKILL.md 规则）：
+- §1：光罩物流作为护城河的特别地位。
+- §4.3 / 4.4 / 4.5：Photronics 与 Toppan / DNP / Newway 等的相对竞争定位。
+- §6：行业结构 / 替代品分析。
+- §7：竞争优势与劣势小节中关于 EUV 价值池占比、Photronics 在主流节点日本以外的领导地位。
+- §8：高端 IC 增速估算（高个位数至低双位数 CAGR）。
+
+**剩余未核实事项 / 限制：**
+- "EUV 按价值约 25%+ 高端 IC 光罩"为分析师估算，未在 PLAB 10-K 或野村报告中点对点披露；基于行业一般理解。
+- TSMC 占全球代工营收"约 60%"、Samsung Foundry 约 12%、中国厂合计约 10% — 行业一般估算（TrendForce / DigiTimes 等），非 PLAB 10-K 披露。
+- 大面积石英基板供应商（AGC、Asahi）、防尘膜供应商 — PLAB 10-K 描述为"日本与韩国"，但未点名具体公司；分析师补充常见名称。
+- "客户 A 可能是 TSMC 或 Samsung" 推断纯属分析师判断（基于地理与合资结构），未在任何一级源中确认。
+
+**与英文版的一致性：**
+- 本中文版独立校验，所有 SEC 文件名 / 数字 / 引用 URL 与英文版 (Photronics_NASDAQ_PLAB_Research_Document.md) 在同一份 FY25 10-K / Q1 FY26 10-Q / 2026 DEF 14A / 2025-05-28 8-K 上对齐。
+- 双语技术术语在首次出现处给出英文括注（光罩 (photomask)、IC 光罩 (IC photomask)、FPD 光罩、深紫外 DUV、EUV 光罩、主流节点、先进节点、Photronics-Samsung 韩国 JV (Heyri 此处对应 Cheonan)、Photronics-PSMC 中国 JV (Wuhan/Xiamen — 实际为 厦门 + 合肥, 见 §2)、Section 232 调查、OBBB Act）。
+- 货币、tickers 保持英文形式（USD、NTD、KRW、RMB、PLAB、TSMC 等）。
+- 10-K verbatim 引用全部保留英文原文（§4.3 / 4.4 / 4.5 / §5 / §6 / §7 引用块）。
+
+</details>
+
+---
+
