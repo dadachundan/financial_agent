@@ -56,3 +56,58 @@ FY2024 气体与服务业务的区域结构为**美洲 40.0% / EMEA 39.5% / 亚�
 Air Liquide 当前 29.7× 的市盈率较同业中位数 (26.8×) **溢价约 10%**，较 Linde **折价约 10%** ——三大估值驱动因素：(a) €4.6bn 在建投资项目中三分之一来自电子业务 (气体与服务最高增速、最高利润率的业务线)，因此真实盈利可预见性高于同业；(b) 在 2022-2025 已实现 +460 bps 营业利润率扩张的基础上，2025-2026 再增 +200 bps 的目标，为多年复利型故事，是 APD 等可比公司无法对标的；(c) DIG Airgas 提供了一个新的高增长韩国市场特许经营权。***分析师观点：***当前估值倍数相对于底层合同的现金流耐久性 (>70% 照付不议 + 指数化) 并不算高估；主要的下行重估风险是 FY2026 之后 ADVANCE 2025 效率提升红利消退快于市场预期 ——见 §9 的风险讨论。
 
 ---
+
+## 2. 公司历史
+
+Air Liquide 于 **1902 年 11 月 8 日在巴黎成立**。工业家 **Paul Delorme** 召集 24 位认购人 (多数为工程师)，共同为物理学家 **Georges Claude (乔治·克劳德)** 在两年前发现的空气液化工艺融资。公司原名为「液态空气，专门研究和开发 Georges Claude 工艺的公司 (Air liquide, a company for the study and exploitation of Georges Claude processes)」，初始资本为 100,000 法郎 (FRF)。Claude 的反向布雷顿循环 (reverse-Brayton-cycle) 工艺通过将空气冷却至 −183 ℃ 以下、然后通过分馏液态空气分离纯 O₂、N₂、Ar——其成本明显低于当时主流的林德 (Linde) 工艺，使新公司一开始就具备成本优势 ([Air Liquide — Wikipedia (founding history)](https://en.wikipedia.org/wiki/Air_Liquide); [Encyclopedia.com — L'Air Liquide history](https://www.encyclopedia.com/books/politics-and-business-magazines/lair-liquide); [URD 2024, "Group history" p. 8-9](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf))。公司于 **1913 年 2 月**登陆巴黎交易所，距成立仅 11 年。
+
+```mermaid
+timeline
+    title Air Liquide — 1902 至 2026 关键里程碑
+    1902 : Paul Delorme + Georges Claude 在巴黎创立
+    1906-13 : 在比利时、意大利、巴西、西班牙、日本、加拿大、瑞典建厂
+    1913 : 巴黎交易所上市
+    1916-18 : 一战期间 O2 / 乙炔供应业务规模扩大 10 倍
+    1962 : 在法国推出医疗保健 (家庭氧疗) 业务
+    1969 : 首套大型空分装置 (ASU) 投入钢铁行业；1970 年代石化扩张
+    1986 : 收购 Big Three Industries (美国阳光地带扩张)
+    2007 : François Jackow 出任 Air Liquide 日本 CEO
+    2007-12 : 推出 ALOHA 前驱体平台；半导体材料业务建立
+    2013 : 收购 Voltaix (Si/Ge/B 前驱体, 美国)
+    2016 : 以 USD 13.4bn 收购 Airgas (集团历史最大并购)
+    2022-04 : Benoit Potier 将 CEO 移交给 François Jackow；保留董事长职位
+    2022-10 : EUR 500m 台湾合资 (3 座工厂, 年产 20 亿 Nm3 N2/O2/Ar)
+    2022-11 : 启动 ADVANCE 2025 战略计划
+    2023-09 : Normand'Hy 200 MW PEM 电解槽做出最终投资决定 (FID)，超 EUR 400m
+    2024-06 : 美国爱达荷州投资超 USD 250m，服务美光科技 (存储芯片)
+    2025-07 : 全球最大钼前驱体工厂 (韩国华城) 投产
+    2025-08 : 签署 DIG Airgas 协议，EUR 2.85bn，2016 年以来最大并购
+    2026-01 : DIG Airgas 交割完成 ——Air Liquide 成为韩国市场第一
+    2026-03 : 在台湾启用首座先进材料工厂 (台中)
+```
+
+*资料来源：[Air Liquide — Wikipedia (history)](https://en.wikipedia.org/wiki/Air_Liquide)；[Air Liquide URD 2024, p. 8-9](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf)；[Voltaix 收购 (Semiconductor Today, 2013-06-17)](https://www.semiconductor-today.com/news_items/2013/JUN/AIRLIQUIDE_170613.html)；[Taiwan €500M JV PR, 2022-10-19](https://www.airliquide.com/group/press-releases-news/2022-10-19/air-liquide-invest-500-million-euros-three-new-plants-semiconductor-sector-taiwan)；[Idaho / Micron PR, 2024-06-05](https://www.airliquide.com/group/press-releases-news/2024-06-05/air-liquide-signed-major-contract-support-semiconductor-industry-us-investment-more-250-million)；[South Korea Mo plant PR, 2025-07-21](https://www.airliquide.com/group/press-releases-news/2025-07-21/air-liquide-strengthens-its-advanced-materials-leadership-new-molybdenum-manufacturing-plant-south)；[DIG Airgas signing PR, 2025-08-22](https://www.airliquide.com/group/press-releases-news/2025-08-22/air-liquide-announces-signature-agreement-acquire-dig-airgas-leading-integrated-gas-player-south)；[Taichung plant PR, 2026-03-25](https://www.airliquide.com/group/press-releases-news/2026-03-25/air-liquide-inaugurates-its-first-advanced-materials-manufacturing-plant-taiwan-strengthening-next)。*
+
+集团现代历史的形成有三次关键战略转向。**首先是 1916-1986 年驻厂供气大宗工业气体模式的建立**——经历两次世界大战，集团发现工业气体行业最赚钱的不是钢瓶销售业务，而是建在钢厂或化工厂背后的专用空分装置，由长达 15-20 年的照付不议合同支撑。这一模式经 1970 年代欧洲石化扩张周期和阳光地带建设 (1986 年收购 Big Three Industries) 不断精炼，构成今日电子驻厂模式 (台积电亚利桑那 / 美光爱达荷为 2020 年代版本) 的架构基础，与 1970 年代埃克森美孚安特卫普 (ExxonMobil Antwerp) 项目结构相似 ([Encyclopedia.com — L'Air Liquide history](https://www.encyclopedia.com/books/politics-and-business-magazines/lair-liquide); [URD 2024, "Large Industries business model" p. 18](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf))。
+
+**其次是 2007-2013 年电子特种材料业务的建立**——集团意识到半导体行业的驻厂大宗气体业务再有价值，如果不与高附加值前驱体 / 高端材料端绑定，最终仍将面临价格商品化。集团于 2007 年自主推出 **ALOHA™** 前驱体平台 (CVD/ALD 用硅、高 k 介质和金属前驱体)，并于 2013 年以未披露金额收购 **Voltaix** (美国，Si/Ge/B 特种分子，收购时营收约 USD 50m)，从而显著扩大该业务规模 ([Voltaix 收购 (Semiconductor Today, 2013-06-17)](https://www.semiconductor-today.com/news_items/2013/JUN/AIRLIQUIDE_170613.html); [Air Liquide Electronics — Advanced Materials offer](https://electronics.airliquide.com/offer-brands/our-offer/electronics-advanced-materials))。
+
+**第三是 2016 年收购 Airgas**——以 **USD 13.4bn 企业价值**收购美国最大的工业气体零售商，瞬间为集团新增 17,000 名美国员工和约 90 万家工业客户账户，将美洲从集团第三大区域提升为最大单一营收贡献区。该交易由 François Jackow 在 2014-2016 年担任集团战略副总裁期间主导整合，奠定了今日美洲电子业务扩张 (爱达荷、亚利桑那) 的足迹基础 ([Air Liquide URD 2024, "Group history" p. 9](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf); [Bloomberg — François Jackow profile](https://www.bloomberg.com/profile/person/16878479))。
+
+2024-2026 年近期重要进展可归纳为三大主题，是后文分析的基础：(i) **AI 半导体资本开支超级周期 (super-cycle)** ——爱达荷美光合同 ($250m+, 2024-06)、三座台湾工厂 (€500m, 2022-10)、韩国钼前驱体厂 (2025-07)、德国 €250M 综合项目 (2025)、台中先进材料工厂 (2026-03)；(ii) **绿氢 (green hydrogen) 规模化** ——Normand'Hy 200 MW PEM 电解槽 (€400m+，FID 2023-09)、荷兰 ELYgator 200 MW；(iii) **DIG Airgas 韩国市场再进入** (€2.85bn，2025 年 8 月签约 / 2026 年 1 月完成交割) ——自 2016 年 Airgas 以来最大并购，是亚太再加速的战略中枢 ([DIG Airgas signing PR, 2025-08-22](https://www.airliquide.com/group/press-releases-news/2025-08-22/air-liquide-announces-signature-agreement-acquire-dig-airgas-leading-integrated-gas-player-south))。
+
+---
+
+## 3. 管理团队
+
+**François Jackow ——首席执行官 (自 2022 年 6 月 1 日起)**
+
+François Jackow 是 Air Liquide 124 年历史上的第七位首席执行官，也是自 Benoît Potier (1995-2022) 以来首位完全从 Air Liquide 内部成长起来的 CEO，而非从工程与建设 (E&C) 通道晋升。Jackow 于 **1993 年**约 26 岁时加入 Air Liquide，最初在美国和荷兰任职，前十年在大宗工业气体与工程建设业务线担任商务开发及营销职务。**2002 年**被任命为创新副总裁，负责集团 R&D 与先进技术——亦因此而对 ALOHA 前驱体早期开发拥有直接所有权，是今日电子业务的技术基础 (这在工业气体行业 CEO 中较为少见，大多数同业从大宗工业气体运营条线晋升) ([Air Liquide Executive Committee — François Jackow biography](https://www.airliquide.com/group/executive-committee); [Bloomberg — François Jackow profile](https://www.bloomberg.com/profile/person/16878479); [LinkedIn — François Jackow](https://fr.linkedin.com/in/francois-jackow))。
+
+**2007 年**他被任命为 Air Liquide 日本总裁兼首席执行官，常驻东京，负责管理集团运营最为复杂的子公司之一 (运营复杂、工业气体零售客户基础高度分散、电子客户高度集中于胜高 (SUMCO)、信越化学、瑞萨电子、东芝)，任期四年。**2011 年**他返回巴黎担任大宗工业气体全球业务线副总裁；**2014 年**进入执行委员会，担任集团战略副总裁，并以此身份主导了 **2016 年 USD 13.4bn 收购 Airgas** ——集团历史上最大并购的尽职调查与整合规划 ([Air Liquide Executive Committee — François Jackow biography](https://www.airliquide.com/group/executive-committee); [TheOrg — François Jackow](https://theorg.com/org/air-liquide/org-chart/francois-jackow); [Acast — "In Good Company" François Jackow podcast, 2024](https://shows.acast.com/in-good-company-with-nicolai-tangen/episodes/francois-jackow-ceo-of-air-liquide))。
+
+教育背景：毕业于**巴黎高等师范学院 (École Normale Supérieure Paris)** (化学 / 物理学本科)，**哈佛大学 (Harvard University)** 化学硕士，**工程师学院 (Collège des Ingénieurs)** MBA。加入 Air Liquide 之前曾任职于**壳牌 (Shell)** (工业风险分析师) 和**欧莱雅 (L'Oréal)** (研究助理) ——两段经历在工业气体行业 CEO 中均不常见，与 Jackow 把 Air Liquide 定位为「一家恰好运送气体的深科技材料公司 (deep-tech materials company that happens to ship gas)」而非传统管道与钢瓶公用事业的理念一致 ([Air Liquide Executive Committee biography](https://www.airliquide.com/group/executive-committee); [Bloomberg — François Jackow profile](https://www.bloomberg.com/profile/person/16878479))。
+
+Jackow 于 **2022 年 6 月 1 日**正式接任 CEO，并在 2022 年 11 月宣布 ADVANCE 2025 计划。其三年的运营记录在工业气体同业中表现突出：经常性营业利润率在 **2022-2025 年累计扩张 +460 bps** (不含能源效应，为集团历史最高)，经常性 ROCE 由 2021 年的 9.4% 上升至 **2025 年的 11.2%**，2024 年资本开支决策达到创纪录的 **€4.4bn**，H1-2025 投资项目储备达到 **€4.6bn**，其中电子业务占三分之一 ([Air Liquide FY2024 PR, p. 1, 2025-02-21](https://www.airliquide.com/group/press-releases-news/2025-02-21/2024-building-record-margin-improvement-and-major-commercial-successes-fueling-future-growth-air); [Air Liquide FY2025 PR, 2026-02-20](https://www.airliquide.com/group/press-releases-news/2026-02-20/2025-record-performance-and-confident-its-transformation-dynamic-air-liquide-confirms-its-growth); [Air Liquide H1 2025 PR, 2025-07-29](https://www.airliquide.com/group/press-releases-news/2025-07-29/leveraging-performance-and-growth-engines-air-liquide-remains-track-1st-half-2025))。他持有约 10,500 股 Air Liquide 股票 (URD 2024 治理披露)，薪酬结构约为固定 25% / 浮动 75%，浮动部分与经常性净利润、经常性 ROCE 以及 ADVANCE 2025 效率与 CO₂ 减排目标挂钩 ([URD 2024, "Executive compensation" Chapter 4](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf))。
+
+---
