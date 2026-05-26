@@ -159,3 +159,60 @@ KC Tech 的 CMP 抛光机产品分为两大型号系列。**Ventus** 是「下�
 
 ![KC Tech CMP 浆料营收轨迹 2019-2025E](../../charts/kctech_slurry_trajectory.png)
 *资料来源：[인사이트코리아,「케이씨텍, CMP slurry의 실적 성장성에 주목」](http://www.insightkorea.co.kr/news/articleView.html?idxno=102310); 2024E / 2025E 为基于卖方研报运行率推算（例如 [데이터투자 2025-11-11 DS투자증권 추정](https://www.datatooza.com/article/20251111115540957952ef38be23_80)）—标 "E" 表示估算。*
+
+## 5. 客户与销售模式
+
+### 5.1 客户集中度
+
+KC Tech 没有在已被索引的公开年度报告摘要中披露前 1 / 前 5 客户百分比（韩国 DART 사업보고서 / 业务报告内含「주요매출처 / 主要销售对象」字段，但不能通过索引网页全部检索—FY2024 사업보고서 rcpNo 为 `20250318001963`，2025-03-18 在 KIND 提交 ([KIND 케이씨텍 사업보고서 20250318001963](https://kind.krx.co.kr/common/disclsviewer.do?method=searchInitInfo&acptNo=20250318001963)))。从有据可查的媒体报道与管理层访谈可以核实的是，客户结构 **高度集中** 在两个名字上：三星电子与 SK 海力士合计驱动绝大部分营收，其中三星比 SK 海力士显著更大 ([인사이트코리아, 2024](http://www.insightkorea.co.kr/news/articleView.html?idxno=102310); [The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。副会长在 2025 年明确点名这两家：「与三星和 SK 海力士合作对 KC Tech 的发展至关重要，因为他们是全球内存芯片领头羊，对技术标准要求极高」。除两家本土锚定客户外，同篇访谈披露的境外客户名单包括 **GlobalFoundries、Intel 与 CXMT（长鑫存储，中国 DRAM 制造商）**—这些主要用于浆料业务，设备业务仍以韩国为主 ([The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。
+
+显示器板块客户包括 LG Display、京东方 BOE、华星光电 CSOT、三星 Display—LCD 至 OLED 转型是该板块需求的周期驱动因子 ([인사이트코리아, 2024](http://www.insightkorea.co.kr/news/articleView.html?idxno=102310))。报道中的 FY2026 Q1 地理分布—韩国 89.2%、中国 8.9%、美国 1.9%—是最清晰的公开客户集中度代理：三星本土厂 + SK 海力士利川 / 清州产线基本贡献 89.2% 的韩国营收，8.9% 的中国营收主要是 CXMT 长鑫（可能还有三星西安），所以 **前 2 客户合计很可能 >75% 的总营收、前 5 合计 >90%** ([The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433))。在公司研究风险分类框架中，这种集中度满足任何合理「重大」定义，并在第 9 节作为最高严重度的公司特有风险被纳入。
+
+```mermaid
+pie title KC Tech FY2026 Q1 营收按地域分布（客户代理）
+    "韩国 (三星 + SK 海力士)" : 89.2
+    "中国 (CXMT + 三星西安)" : 8.9
+    "美国 (Intel + GlobalFoundries)" : 1.9
+```
+*资料来源：[The Elec, 2026-04-30:「KC Tech First-Quarter Operating Profit Jumps 344%」](https://www.thelec.net/news/articleView.html?idxno=10433)。客户归属地由分析师从公开报道推断；KC Tech 不披露具体客户营收。*
+
+### 5.2 销售模式与合同结构
+
+KC Tech 的销售模式是韩国半导体材料厂商标准的 **联合研发项目 (JDP, joint development program) 模式**—即 KC Tech 工程师在工艺研发阶段共驻三星平泽与 SK 海力士利川实验室，客户与公司共投 R&D 努力把 KC Tech 的浆料或设备在每个新节点上认证完成，一旦认证通过 KC Tech 就进入该工艺步骤的 BOM（物料清单），直到下一个主要节点切换 ([The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。这就是浆料业务多季度可见性的结构性原因：在某节点认证通过后，氧化铈浆料就一直销售到该节点停止生产为止—即使三星把领先优势节点切换到下一个更小节点之后。合同结构通常是采购订单制（非长期照付不议），但认证成本（无论经济上还是时间上—认证周期 12–24 个月）形成的实际转换成本，比合同期限所暗示的更大。同样动态适用于设备侧：一台经三星认证的 Ventus 抛光机要维持规格必须配 KC Tech 自己的浆料，要换浆料供应商就要重新认证—也就是说，设备安装会带动浆料营收，而浆料立足点又有助于赢得下一个设备订单 ([The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。
+
+韩国政府的 **「K-半导体战略 / K-Belt strategy」** 国产化策略—一项国家级方案，目标到 2047 年向 16 座新厂及配套供应链注入约 4,710 亿美元投资—是 KC Tech 国内主营业务的政策顺风 ([Inquivix Technologies: South Korea Semiconductor Ecosystem](https://inquivixtech.com/korea-semiconductor-ecosystem/))。K-Belt 战略具备两党共识基础，明确目标是降低对日本（2019 年贸易争端后）与美国（CHIPS 法案时代）材料供应商的依赖；CMP 浆料—历史上由美国 (Cabot/Entegris) 与日本 (日立/Resonac、富士美) 厂商主导—是被国产化政策定向的最具战略性的材料类别之一。在 CMP 材料具体赛道上，KC Tech 与 Soulbrain 是这项政策杠杆的主要受益者 ([SEMI Korea Materials Conference 2024](https://www.semi.org/en/blogs/technology-and-trends/semiconductor-materials-key-industry-growth-enabler-insights-from-smc-korea-2024))。
+
+### 5.3 客户案例与近期赢单
+
+过去 18 个月最明确的有据可查客户赢单是 KC Tech FY2026 Q1 财报印迹前披露的 **698.4 亿韩元半导体设备订单**—约占一季营收 18%，与 1Q26 +101% YoY 营收增长的订单模式一致 ([The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433))。KC Tech 在订单披露中未透露买方名字（韩国披露规则允许大客户匿名），但卖方研究覆盖加上订单时间点（恰逢三星 HBM4 爬坡加速）强烈暗示买方是三星电子。在更早的周期点，KC Tech 在 SK 海力士无锡（中国）厂为浆料供应所做的布局是一次值得关注的跨境胜局，给公司带来了首笔中国营收基础 ([인사이트코리아, 2024](http://www.insightkorea.co.kr/news/articleView.html?idxno=102310))。
+
+韩文维基百科 KC Tech 条目与其他媒体报道均强调 KC Tech「独家国产化 HBM 制造用 CMP 设备」—也就是说，在韩国生态系统内，没有其他国产供应商提供经 HBM 产线认证的完全国产化 300mm CMP 抛光机 ([케이씨텍 위키백과](https://ko.wikipedia.org/wiki/%EC%BC%80%EC%9D%B4%EC%94%A8%ED%85%8D); [잡코리아 KC Tech 기업정보](https://www.jobkorea.co.kr/recruit/co_read/c/kctech11))。这是公司最接近「国家冠军」级别的诉求，也是其在三星 HBM 产线 CMP 设备订单中持续占有份额的结构性原因。
+
+## 6. 行业概览
+
+### 6.1 CMP 浆料市场 —— 全球规模与增长
+
+全球 CMP 浆料市场规模因研究机构不同而存在分歧—矢野经济研究所 (Yano Research) 2024 年报告把市场规模定在 **2024 年约 16 亿美元 + 同比 +10% 增长** ([Yano Research 新闻稿: 全球 CMP 浆料市场 2024 增长 10%](https://www.yanoresearch.com/press/press.php/3921))；更激进的预测（如 Mordor Intelligence 称 2025 年 65 亿美元、2030 年达 93 亿美元、7.2% CAGR）似乎将 CMP 垫、调理器与 CMP 后清洗化学品也包含在同一数字内，而仅限于浆料的较窄定义在 2024 年市场规模约 16–21 亿美元、2030 年中等单位数 CAGR 增长 ([CMP Slurry Market — Persistence Market Research](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp); [Skyquest CMP Slurry Forecast 2033](https://www.skyquestt.com/report/cmp-slurry-market))。本文采用最干净的参考数字—Yano Research 2024 年窄定义 CMP 浆料 16 亿美元，2025 年 +10% 至 17.6 亿美元，按相同 CAGR 在 2030 年约 23–25 亿美元 ([Yano Research 2024](https://www.yanoresearch.com/press/press.php/3921))。
+
+增长驱动器都很清楚且主要是结构性而非周期性的。**(1) 层数与 CMP 步骤数都在上升：** 每一个从 5nm 下降至 2nm、A16 的新逻辑节点，每片晶圆的 CMP 步骤都会增加（更多金属化层、需要平坦化的高深宽比 TSV / 接触刻蚀、自对准多重图案化步骤），所以晶圆产量不变情况下浆料需求自然增长 ([Nomura sector report (in 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。**(2) HBM 在每 die 上倍增浆料用量：** 8-Hi / 12-Hi / 16-Hi 堆叠的 HBM die，每一层相对标准 DRAM 都额外增加多道 TSV + 键合垫 CMP 步骤；多家研究机构追踪显示 HBM 营收在 2027 年前年增长率约 40–50% ([Persistence Market Research CMP Slurry 2026-2033](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp); [SK Hynix' Lead Shrinks in HBM (Semiecosystem, 2025-10)](https://marklapedus.substack.com/p/sk-hynix-lead-shrinks-in-dram-hbm))。**(3) BSPDN 是一次性的阶跃函数：** 三星在 2nm 或 1.4nm 采用 BSPDN、TSMC 在 A16 采用之后，每片晶圆 CMP 步骤数在一次节点切换中阶跃约 20–30%，且在多个后续节点继承 ([Nomura sector report (in 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。**(4) 晶圆对晶圆混合键合 (W2W HB)** 在 HBM 领先沿与先进 3D 逻辑上引入了过去没有等价物的全新 CMP 步骤类别—键合前对超低表面粗糙度的多步 CMP ([Anji Microelectronics 2024 年度报告 (上交所科创板)](https://star.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-04-16/688019_20250416_8014.pdf) 讨论了客户 W2W 试产)。
+
+这些驱动器是复合性的：KC Tech 的可寻址浆料市场不是按 7% 的浆料市场 CAGR 增长，而是按「产量增长 × 步骤数增长 × 层数增长」三者相乘的积来扩张—这就是为什么 KC Tech、安集科技、鼎龙这些专业浆料厂商近年来营收以 20–40% 的速度复合增长，而 CMP 垫整体市场只增长个位数 ([인사이트코리아, 2024 (CMP slurry trajectory)](http://www.insightkorea.co.kr/news/articleView.html?idxno=102310); [Anji Microelectronics 2024 年度报告 (上交所科创板)](https://star.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-04-16/688019_20250416_8014.pdf))。
+
+### 6.2 行业结构 —— 集中度、供应商力量、买方力量
+
+CMP 浆料是 **集中度高的行业**。前 3 大厂商—Cabot/Entegris（2024 年剥离后归 Fujifilm）、Resonac（昭和电工 + 日立化学合并）、富士美 (Fujimi)—合计持有全球约 **51%** 市场份额；前 5 大（再加杜邦 DuPont 与默克 Merck KGaA / Versum）合计持有全球约 **64%** 营收 ([CMP Slurry Market — Yano Research 2024](https://www.yanoresearch.com/press/press.php/3921); [Persistence Market Research 2026](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp))。剩余约 35–40% 的全球市场分散在 10+ 家区域与专业厂商手中，包括 AGC、JSR Corporation、Soulbrain、KC Tech、安集科技 (688019.SS) 与鼎龙股份 (300054.SZ) ([Persistence Market Research 2026](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp))。KC Tech 处于第二梯队—在韩国意义重大，在全球饼图中份额边缘，但因其客户基础（韩国内存）本身在全球半导体饼图内占比扩张，所以增长率显著高于行业平均。
+
+野村 (Nomura) 2026-05-21 行业报告把 CMP 浆料厂商划分为五个桶（参考 Fig 41-42 牌位表）：**(1) Entegris / Cabot**—美国老牌厂商，铜与金属浆料主导；**(2) Resonac**—日本钨与氧化物浆料龙头；**(3) Versum / Merck KGaA**—先进节点 STI 上较强；**(4) Fujimi 富士美**—日本 sub-10nm 硅溶胶专业户；**(5) 安集 / 鼎龙 (中国) + KC Tech / Soulbrain (韩国)**—骑乘国家国产化政策的本土龙头层 ([Nomura sector report (in 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。KC Tech 与 Soulbrain 被野村研究员归入同一个 Fig 41 单元，因为他们都被定义为三星 / SK 海力士浆料国产化的韩国本土龙头—但两家在产品结构上有差异，仅部分产品重叠（KC Tech 以氧化铈为主，二氧化硅与金属薄弱；Soulbrain 较广但氧化铈深度不及）。
+
+**供应商力量** 为中等。CMP 浆料原料—高纯度氧化铈 (CeO₂)、胶体硅、超纯水、表面活性剂—来自一组相对集中的上游化学品厂商；稀土氧化铈尤其受中国稀土出口政策影响（中国持有全球 >85% 稀土精炼能力；铈是轻稀土副产品）([Yano Research 2024](https://www.yanoresearch.com/press/press.php/3921))。**买方力量** 偏强—三星与 SK 海力士合计占 KC Tech 拉动需求的主导份额，并以双源 / 三源关键材料分供的行业惯例避免被供应商俘获，每个新节点都会认证多种化学配方 ([SEMI Korea Materials Conference 2024](https://www.semi.org/en/blogs/technology-and-trends/semiconductor-materials-key-industry-growth-enabler-insights-from-smc-korea-2024))。抗衡的力量是认证成本—一旦三星在某节点认证一款浆料，中途切换的成本足够高，KC Tech 已经建立的位置就具有粘性。
+
+### 6.3 监管与地缘政治环境
+
+CMP 材料产业位于三个重叠的地缘政治压力点中心。**(1) 美中出口管制**—2022 年起美国商务部对先进半导体制造技术对中国出口的限制主要针对设备（应用材料、Lam、KLA），但材料供应链是次要目标；KC Tech 体量较小但正在增长的 CXMT（中国 DRAM）业务也受先进节点适用产品的许可审查 ([Inquivix Technologies: South Korea Semiconductor Ecosystem](https://inquivixtech.com/korea-semiconductor-ecosystem/))。**(2) 日韩贸易摩擦**—2019 年日本对韩出口限制（氟化氢、光刻胶前体）加速了韩国政府与产业对材料国产化的投资；CMP 浆料是 K-Belt 国产化建设明确针对的类别之一，KC Tech 直接受益于政策 ([SEMI Korea Materials Conference 2024](https://www.semi.org/en/blogs/technology-and-trends/semiconductor-materials-key-industry-growth-enabler-insights-from-smc-korea-2024))。**(3) 稀土供应**—氧化铈从集中在中国的轻稀土精炼链条采购；任何中国稀土出口政策动作都会直接传导至 KC Tech 氧化铈浆料的输入成本（该风险在第 9 节详述）。
+
+### 6.4 行业技术路线图
+
+未来五年 CMP 浆料技术路线图沿三条并行线展开。**第一，sub-2nm STI / ILD**—从 ArF 浸没 + 多重图案化转向 EUV + GAA 架构，要求新的氧化铈化学品具备更窄的颗粒粒度分布（当前 80–300 nm，sub-2nm 时代要进至 30–80 nm）以及在更长抛光窗口内更稳定的选择性 ([KC Tech 氧化铈浆料介绍，Fraunhofer CMP40 会议](https://www.isit.fraunhofer.de/content/dam/isit/de/documents/cmp40/4_KCTECH_advanced%20colloidal%20ceria%20slurry%20challenges.pdf); [Pondax: 先进节点 CMP 的硅溶胶磨料, 2026-05](https://www.pondax.com/technique-edge/2026/05/breaking-the-atomic-level-planarization-barrier-advances-in-morphology-engineering-and-surface-chemistry-of-silica-sol-abrasives-for-advanced-node-cmp/))。**第二，HBM 专用浆料**—HBM4 / HBM4e 的 TSV CMP 与键合垫 CMP 要求与标准 DRAM CMP 截然不同的流变学和去除率画像，以及能在不损伤下层铜互连情况下移除铈颗粒的 CMP 后清洗化学品 ([ResearchGate: 先进节点氧化铈颗粒 CMP 后清洗的挑战与解决方案](https://www.researchgate.net/publication/353303115_Challenges_and_Solutions_for_Post-CMP_Cleaning_of_Ceria_Particles_for_Advanced_Technology_Nodes))。**第三，BSPDN 专用浆料与设备**—一旦三星 2nm 与 TSMC A16 开始采用 BSPDN，背面 CMP 序列将要求新的浆料配方与新的设备配置（晶圆倒置、上方无保护膜）—KC Tech 联合安集科技、鼎龙股份正在为这次过渡布局材料与设备，野村 2026-05-21 报告称之为「下一波 CMP 超级周期」([Nomura sector report (in 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。
+
+![KC Tech vs 韩国 CMP 浆料国产化框架](../../charts/kctech_korea_localization.png)
+*资料来源：分析师构造框架；份额数字基于 [Yano Research 2024](https://www.yanoresearch.com/press/press.php/3921)、[Nomura sector report (in 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md) 以及 [The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/) 估算，非公司披露。*
