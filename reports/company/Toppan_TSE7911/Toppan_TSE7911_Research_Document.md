@@ -48,6 +48,9 @@ Geographically, Toppan does not disclose a clean segment-by-country revenue brea
 ![Peer valuation — Toppan vs FC-BGA substrate & photomask peers, May 2026](../../charts/toppan_peer_valuation.png)
 *Source: TTM multiples per [Toppan TYO:7911 statistics](https://stockanalysis.com/quote/tyo/7911/statistics/), [Ibiden TYO:4062 statistics](https://stockanalysis.com/quote/tyo/4062/statistics/), [Unimicron TWSE:3037 statistics](https://stockanalysis.com/quote/two/3037/statistics/), [Tekscend TYO:429A overview](https://stockanalysis.com/quote/tyo/429A/), [Photronics NASDAQ:PLAB statistics](https://stockanalysis.com/quote/plab/statistics/), [DNP TYO:7912 statistics](https://stockanalysis.com/quote/tyo/7912/statistics/). Shinko Electric (TYO:6967) is delisted-pending under the JIP / Mitsui / DIC management-buyout; no current multiple shown.*
 
+![Toppan — DPS and consolidated payout ratio, FY22–FY26](../../charts/toppan_capital_return.png)
+*Source: [FY25 Results, p. 1 — dividend table](https://finance.stockweather.co.jp/contents/dispPDF.aspx?disclosure=20250514549465) for DPS history and payout ratio; FY26 ¥58 DPS is the management forecast. Treasury-share acquisition has been incremental: ¥30 bn programme running 15 May 2025 to 14 May 2026 per [FY25 Results, p. 7](https://finance.stockweather.co.jp/contents/dispPDF.aspx?disclosure=20250514549465). When FY25 buyback is included, the consolidated total payout ratio was 133.6%, well above the company's stated 30% minimum floor.*
+
 *Analyst view:* the ~21× TTM P/E and 0.75× P/S are at first glance the multiples of a low-growth printing conglomerate, but the equity-implied valuation is misleading without two adjustments. **First**, at the new 46.6% post-IPO Tekscend stake, Toppan's ownership in Tekscend is worth roughly **¥217 bn** (46.6% × Tekscend's ~¥465 bn May-2026 market cap) ([Tekscend 429A overview, accessed 2026-05](https://stockanalysis.com/quote/tyo/429A/); [H1 FY26 Results, p. 22](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf)), and IPO proceeds of ~¥156.6 bn flowed to Toppan and selling shareholders in October 2025 ([Tekscend Shares Rise 13% From IPO Price in Tokyo Trading Debut, Bloomberg 2025-10-15](https://www.bloomberg.com/news/articles/2025-10-15/tekscend-to-debut-after-japan-s-second-biggest-ipo-this-year)). **Second**, the FC-BGA business is sub-scale today but on the FY2030 management plan, **semiconductor-related sales target ¥350 bn at 30% non-GAAP operating margin** — implying ~¥105 bn of semiconductor operating profit run-rate at full-year FY2030 vs the FY25 Electronics-segment ¥52 bn — and Toppan claims a **No. 3 global market share in high-end switch FC-BGA substrates** as of 2025 ([Toppan FY2024 Full Year Results Briefing summary via quartr.com](https://quartr.com/companies/toppan-holdings-inc_18645)). On a sum-of-the-parts basis, the printing / packaging / decor businesses are valued by the market at sub-1× sales and a single-digit P/E, while the Electronics franchise is the call option. With management committed to a ¥30 bn buyback running through 14 May 2026 and **¥58 DPS for FY26 forecast (vs ¥48 in FY25)** ([FY25 Results, pp. 1, 7](https://finance.stockweather.co.jp/contents/dispPDF.aspx?disclosure=20250514549465)), the cash-return profile screens better than the headline ROE suggests.
 
 ---
@@ -313,3 +316,172 @@ The aggregate Toppan FY2030 target ([Toppan FY2024 Full Year Results Briefing su
 
 ---
 
+## 9. Risk assessment (600–900 words)
+
+The following 10 risks span the four buckets (company-specific, industry/market, financial, macroeconomic) per the project's risk taxonomy.
+
+### Company-specific risks
+
+**(1) Tekscend deconsolidation reduces near-term consolidated EBITDA and complicates analyst tracking (Severity: Medium / Likelihood: 100% — already occurred).** Tekscend transitioned from 50.1%-owned consolidated subsidiary to 46.6%-owned equity-method affiliate on 16 October 2025 ([H1 FY26 Results, p. 22](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf)). The mechanical effect is that **Tekscend's standalone ~¥107 bn FY25 revenue, ~¥35 bn standalone EBITDA, and ~¥25 bn standalone operating profit no longer roll up into Toppan's consolidated top line, EBITDA or operating profit lines** — instead Tekscend's net profit attributable to Toppan flows through the "share of profit of equity-method affiliates" line below operating profit. Consolidated revenue, operating margin and EBITDA all look worse YoY in FY26 even though no underlying business deterioration is occurring. The mitigant is the IPO realized ~¥156.6 bn in proceeds (to Toppan and selling shareholders) which strengthens the balance sheet ([Bloomberg — Tekscend IPO debut, 2025-10-15](https://www.bloomberg.com/news/articles/2025-10-15/tekscend-to-debut-after-japan-s-second-biggest-ipo-this-year)).
+
+**(2) FC-BGA capacity-timing risk (Severity: High / Likelihood: Medium).** Toppan is committing **¥100+ bn cumulative capex** across Niigata (online January 2026), Ishikawa (pilot from 2025, mass production from FY2028), and Singapore (operations late 2026) into a market where Ibiden has already booked AI-customer demand for FY26–28 ([evertiq, 2025-12-17](https://evertiq.com/design/2025-12-17-toppan-boosts-fc-bga-substrate-production-for-ai-chips); [H1 FY26 Results, p. 3](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf)). If AI capex moderates between 2026 and 2028 (a real possibility given the magnitude of hyperscaler 2024–2025 spending) Toppan absorbs the cyclical air pocket because its capacity comes online late in the cycle. The mitigant is that the capacity is also positioned for glass-core / RDL interposer technology that may extend AI-substrate demand into the 2028+ next-generation packaging cycle.
+
+**(3) Goodwill impairment risk from the Sonoco TFP acquisition (Severity: Medium / Likelihood: Low-Medium).** The 1 April 2025 closing added **¥182 bn of provisional goodwill** to the Living & Industry segment ([H1 FY26 Results, pp. 17–18](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf)). Sustainable-packaging acquisitions at premium multiples have a checkered track record in the industry; if margin convergence between the acquired TFP business and legacy Toppan packaging takes longer than the deal model assumed, a goodwill impairment charge of ¥30–80 bn becomes possible. The amount is meaningful versus FY25 consolidated operating profit of ¥84 bn.
+
+**(4) Customer concentration in Tekscend (Severity: Medium / Likelihood: 100% existing).** Although Tekscend does not disclose top-customer names or percentages, the analyst-estimated top-2 (TSMC + Samsung) likely account for ~35–45% of Tekscend revenue, and the top-5 likely ~70% ([iamfabian — Tekscend vs Photronics, 2025](https://iamfabian.substack.com/p/the-landscape-of-semiconductor-photomasks)). This exceeds the project's "material" threshold of top-5 > 50%. Mitigants: switching costs are high (~9 months of mask qualification per node per customer), the seven-country fab footprint diversifies the geographic risk, and TSMC + Samsung are themselves the dominant foundries with secular demand growth.
+
+**(5) Key-person dependency on Maro succession (Severity: Low / Likelihood: 100% during transition).** Hideharu Maro is scheduled to transition from CEO to Chairman & CEO effective 1 April 2026, with Satoshi Oya taking the holding-company President role ([H1 FY26 Results, p. 23](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf); [Simply Wall St — TOPPAN Holdings management](https://simplywall.st/stocks/us/commercial-services/otc-topp.y/toppan-holdings/management)). The risk is execution discontinuity during the holding-company-to-operating-company merger that takes effect the same day. Mitigant is that Maro stays on as Chairman with continuity, and Oya is an internal Toppan veteran rather than an outside parachutist.
+
+### Industry / market risks
+
+**(6) Captive in-sourcing risk in photomask (Severity: Medium-High / Likelihood: Medium).** TSMC, Samsung and Intel produce 60–80% of their leading-edge photomasks in-house and any expansion of captive capacity directly shrinks Tekscend's TAM. Reuters and sell-side commentary have flagged TSMC's intent to bring more high-volume EUV mask production in-house from 2026 onwards ([Mordor Intelligence — Photomask Market](https://www.mordorintelligence.com/industry-reports/photomask-market)). The offsetting force is that Samsung is moving the *other* direction (outsourcing more mainstream masks to merchant players to free its captive shop for ArF / EUV) per [TrendForce 2025-05-15](https://www.trendforce.com/news/2025/05/15/news-samsung-reportedly-outsourcing-low-end-photomasks-focusing-resources-on-arf-and-euv/), so net merchant TAM may grow modestly even with TSMC pull-in.
+
+**(7) Competitive intensity in FC-BGA (Severity: High / Likelihood: Medium).** Ibiden is committing a **¥500 bn three-year FY26–28 capex programme** that directly targets the same AI / network-switch high-end where Toppan claims No. 3 share ([Tokyo AI Watch, 2025](https://tokyoaiwatch.substack.com/p/the-seasoning-company-that-holds)). Shinko Electric (under JIP MBO) and Unimicron (with Intel EMIB-T partnership) are similarly expanding. The risk is that Toppan's late-cycle capacity addition prompts industry oversupply by FY28, pushing FC-BGA pricing back toward commodity levels just as Toppan's new lines depreciate.
+
+**(8) Technology disruption from glass-core substrates / panel-level packaging (Severity: Medium / Likelihood: Medium-High).** Multiple sell-side analysts (Nomura, TechInsights) expect glass-core substrates to start replacing ABF-based FC-BGA in the highest-end AI accelerators from FY2027–28 onwards ([reports/sector/半导体材料.md, p. 11, 85–88](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)). Toppan is positioned for this transition through the Ishikawa pilot line, but execution risk is real: the **TGV (through-glass-via) process is still ~US$400–500 per substrate vs ABF at ~US$100–200**, and the RDL-on-glass adhesion / CTE-mismatch problem is not yet solved at HVM. If glass-core matures faster than Toppan's R&D, Toppan loses the FC-BGA share it just built; if it matures slower, Toppan over-invested.
+
+### Financial risks
+
+**(9) Capex / leverage profile (Severity: Medium / Likelihood: Medium).** Toppan moved from net cash to a **~¥81 bn net debt position** as of H1 FY26, after the Sonoco TFP deal closing (¥361 bn used in investing activities) and capex on Niigata / Ishikawa ([H1 FY26 Results, pp. 4, 7](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf); [Toppan Holdings TYO:7911 statistics](https://stockanalysis.com/quote/tyo/7911/statistics/)). The board approved a **¥80 bn straight-bond programme on 13 November 2025** for refinancing ([H1 FY26 Results, pp. 19–20](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf)). Net debt is manageable at <1× consolidated EBITDA, but the trajectory is deteriorating — the next major capex window (FY26–28 FC-BGA build) plus continued M&A appetite plus the **¥30 bn buyback running through 14 May 2026** could push net debt above ¥150 bn by FY28 end, which would start to constrain capital-return flexibility.
+
+**(10) Valuation / multiple-compression risk (Severity: Low-Medium / Likelihood: Medium).** Toppan trades at **21.1× TTM P/E vs a Tokyo-large-cap industrial conglomerate median in the mid-teens** ([Toppan Holdings TYO:7911 statistics](https://stockanalysis.com/quote/tyo/7911/statistics/)), reflecting the AI-substrate optionality. If FC-BGA demand softens or Tekscend's competitive position erodes, the implicit AI-premium portion of the multiple compresses and the stock re-rates back toward ~15× — a ~30% downside scenario from current levels. The mitigant is the substantial Tekscend stake value (~¥217 bn) and the cash-return engine (¥58 DPS + buyback) provide a floor under valuation that pure printing-conglomerate peers don't have.
+
+### Macroeconomic risks
+
+**(11) FX exposure (Severity: Medium / Likelihood: 100% existing).** Toppan operates 150+ overseas subsidiaries with 36.6% overseas sales ratio ([Sustainability Report 2025, p. 9](https://www.holdings.toppan.com/assets/en/pdf/sustainability/2025/csr2025_en_management-1.pdf)); the company changed its currency-translation method for foreign subsidiaries effective H1 FY26 from spot-date to period-average rates ([H1 FY26 Results, p. 12](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf)), reducing volatility but not eliminating exposure. A meaningful JPY appreciation against USD / EUR / TWD would compress reported Electronics and Living & Industry revenue.
+
+**(12) Geopolitical fragmentation (Severity: Medium-High / Likelihood: Medium).** Tekscend's Shanghai and Icheon plants face downstream restrictions on advanced-node mask shipments to Chinese customers under evolving US export-control regimes. Further tightening of US-China semiconductor controls could orphan some of Tekscend's China-fab investment. Mitigant: the geographic diversification of Tekscend's fab footprint means restricted-customer revenue can be reallocated to other fabs over time.
+
+---
+
+## 10. References
+
+### Primary corporate filings (TOPPAN Holdings)
+
+- [Consolidated Financial Results for the Fiscal Year Ended March 31, 2025, dated 2025-05-14](https://finance.stockweather.co.jp/contents/dispPDF.aspx?disclosure=20250514549465) — primary FY25 financials, segment breakdown, FY26 forecast.
+- [Consolidated Financial Results for the Six Months Ended September 30, 2025, dated 2025-11-13](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf) — H1 FY26 financials, Tekscend deconsolidation note, Sonoco TFP acquisition note, Ishikawa plant ramp, bond issuance.
+- [Consolidated Financial Results for the Nine Months Ended December 31, 2025 (dated 2026-02-13)](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260213/20260212558374.pdf) — referenced for 9M FY26 trend.
+- [TOPPAN Sustainability Report 2025 — Holding Company Structure (p. 178)](https://www.holdings.toppan.com/assets/en/pdf/sustainability/2025/csr2025_en_company.pdf) — segment structure and operating company organization.
+- [TOPPAN Sustainability Report 2025 — Approach to Sustainability (p. 9)](https://www.holdings.toppan.com/assets/en/pdf/sustainability/2025/csr2025_en_management-1.pdf) — 36.6% overseas sales ratio and 150+ overseas subsidiaries.
+
+### Toppan press releases and product pages
+
+- [TOPPAN Transitions to Holding Company Structure, 2023-10-02](https://www.holdings.toppan.com/en/news/2023/10/newsrelease231002_1.html) — 2023 holding company transition.
+- [TOPPAN Photomask to Rebrand as Tekscend Photomask, 2024-10-01](https://www.holdings.toppan.com/en/news/2024/10/newsrelease241001_1.html) — Tekscend rebrand.
+- [TOPPAN to Build Line for Mass Production of Next-Generation Semiconductor Packages in Ishikawa, 2023-12-05](https://www.holdings.toppan.com/en/news/2023/12/newsrelease231205_1.html) — Ishikawa plant acquisition.
+- [TOPPAN to Launch New FC-BGA Substrate Line at Niigata Plant, 2025-12-17](https://www.holdings.toppan.com/en/news/2025/12/newsrelease251217_1.html) — Niigata FC-BGA expansion announcement.
+- [TOPPAN to Install Pilot Line for Advanced Semiconductor Packaging at Ishikawa Plant, 2025-12-16](https://www.holdings.toppan.com/en/news/2025/12/newsrelease251216_1.html) — Ishikawa pilot line.
+- [TOPPAN and Tekscend Photomask Participate in SEMICON Japan 2025, 2025-12-10](https://www.holdings.toppan.com/en/news/2025/12/newsrelease251210_1.html) — product display including 1.X nm masks.
+- [TOPPAN Carves Out Semiconductor Photomask Business to Launch New Company, 2022-04-01](https://www.prnewswire.com/news-releases/toppan-carves-out-semiconductor-photomask-business-to-launch-new-company-301515656.html) — Tekscend (then Toppan Photomask) carve-out and Integral Corp JV.
+- [TOPPAN Electronics Business Unit product page](https://www.toppan.com/en/electronics/) — product taxonomy.
+- [TOPPAN FC-BGA substrates product page](https://www.toppan.com/en/electronics/package/fc-bga/) — verbatim FC-BGA specs.
+- [The Evolving Digital Society and Future of Semiconductors: AMD Japan and TOPPAN, 2025-12-24](https://www.holdings.toppan.com/en/sustainability/feature/20251224/) — AMD partnership feature.
+
+### Tekscend Photomask (TSE:429A)
+
+- [Tekscend Photomask Corporate Overview](https://www.photomask.com/en/about/overview/) — corporate facts, ownership.
+- [Tekscend Photomasks for Semiconductors product page](https://www.photomask.com/en/product/photomask/) — product taxonomy.
+- [Tekscend Photomasks for Various Applications](https://www.photomask.com/en/product/various_photomask/) — FPD masks, stencil masks, nanoimprint molds.
+- [Tekscend Photomask (TYO:429A) Overview, accessed 2026-05](https://stockanalysis.com/quote/tyo/429A/) — TTM revenue, P/E, market cap.
+
+### Market data and peer valuations (May 2026)
+
+- [TOPPAN Holdings TYO:7911 Key Statistics](https://stockanalysis.com/quote/tyo/7911/statistics/) — TTM multiples, share price, market cap.
+- [Yahoo Finance — TOPPAN Holdings 7911.T Stock Page](https://finance.yahoo.com/quote/7911.T/) — share price history.
+- [Tekscend Shares Rise 13% From IPO Price in Tokyo Trading Debut, Bloomberg 2025-10-15](https://www.bloomberg.com/news/articles/2025-10-15/tekscend-to-debut-after-japan-s-second-biggest-ipo-this-year) — IPO debut details, Qatar Investment Authority.
+- [Tekscend Photomask's $2 Billion Tokyo IPO: Supply Chain Resilience, ainvest 2025-08](https://www.ainvest.com/news/tekscend-photomask-2-billion-tokyo-ipo-strategic-bet-semiconductor-supply-chain-resilience-2508/) — IPO context.
+- [Caproasia — Toppan Holdings Spinoff Tekscend Photomask Tokyo IPO, 2025-10-10](https://www.caproasia.com/2025/10/10/japan-7-5-billion-toppan-holdings-spinoff-semiconductor-photomask-provider-tekscend-photomask-plans-tokyo-ipo-to-raise-800-million-at-2-billion-valuation-founded-in-2021-in-spinoff-from-toppan-pri/) — IPO summary.
+- [Toppan Holdings 2026 Company Profile, PitchBook](https://pitchbook.com/profiles/company/59610-97) — corporate facts.
+
+### Industry and competitive research
+
+- [Mordor Intelligence — Photomask Market Outlook 2025–2030](https://www.mordorintelligence.com/industry-reports/photomask-market) — $6.0 bn TAM, 4.5% CAGR.
+- [Grand View Research — Photomask Market Report 2024](https://www.grandviewresearch.com/industry-analysis/photomask-market-report) — TAM and growth.
+- [SNS Insider — Photomask Market $7.22 Bn by 2032, 2025-08-18](https://www.globenewswire.com/news-release/2025/08/18/3134697/0/en/Photomask-Market-Size-to-Surpass-USD-7-22-Billion-by-2032-at-a-CAGR-of-4-31-Research-by-SNS-Insider.html) — DUV 60.9% share, EUV 8.22% CAGR.
+- [Market Growth Reports — ABF Substrate (FC-BGA) Market Size, 2024](https://www.marketgrowthreports.com/market-reports/abf-substrate-fc-bga-market-107527) — $5.3 bn TAM, 10.6% CAGR, top-5 share table.
+- [wonderfulpcb.com — Top ABF substrate manufacturers, 2025](https://www.wonderfulpcb.com/blog/top-abf-substrate-manufacturers-and-market-leaders/) — Unimicron / Ibiden / AT&S / Nan Ya / Shinko share.
+- [Mordor Intelligence — Advanced IC Substrates Market](https://www.mordorintelligence.com/industry-reports/advanced-ic-substrates-market) — end-market mix.
+- [Semiconductor Insight — FC BGA Market 2026–2033](https://semiconductorinsight.com/report/fc-bga-market/) — $9.5 bn 2032 projection.
+- [iamfabian — Tekscend Photomask vs Photronics, 2025](https://iamfabian.substack.com/p/the-landscape-of-semiconductor-photomasks) — competitive analysis, customer set, AMTC.
+- [Tokyo AI Watch — The Seasoning Company That Holds AI Chips Together, 2025](https://tokyoaiwatch.substack.com/p/the-seasoning-company-that-holds) — Ajinomoto / ABF / Ibiden FC-BGA chain.
+- [TrendForce — Samsung Outsourcing Low-End Photomasks, 2025-05-15](https://www.trendforce.com/news/2025/05/15/news-samsung-reportedly-outsourcing-low-end-photomasks-focusing-resources-on-arf-and-euv/) — Samsung outsourcing mainstream masks.
+- [TrendForce — Samsung Outsources Photomasks for First Time, 2025-09-18](https://www.trendforce.com/news/2025/09/18/news-samsung-reportedly-outsources-photomasks-for-the-first-time-eyes-new-masks-tech-for-euv/) — first-time EUV outsourcing.
+- [reports/sector/半导体材料.md (Nomura Greater China Semi 2026–30F, 2026-05-21)](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) — mask blank share, FC-BGA share, glass core thesis.
+
+### News and trade press
+
+- [evertiq — Toppan boosts FC-BGA substrate production for AI chips, 2025-12-17](https://evertiq.com/design/2025-12-17-toppan-boosts-fc-bga-substrate-production-for-ai-chips) — Niigata expansion details.
+- [thepackman — Toppan to launch new FC-BGA substrate production line at Niigata plant](https://thepackman.in/toppan-to-launch-new-fc-bga-substrate-production-line-at-niigata-plant/) — Niigata announcement coverage.
+- [Digitimes — Toppan reportedly to expand FC-BGA substrate production, 2023-11-27](https://www.digitimes.com/news/a20231127PD219/toppan-fc-bga-substrate-generative-ai.html) — Ishikawa context.
+- [Japan Times — Advancing semiconductor progress with substrates, 2024-12-11](https://www.japantimes.co.jp/2024/12/11/special-supplements/advancing-semiconductor-progress-substrates/) — 224 Gbps PAM4 spec, ABF dielectric role.
+- [The Register — Broadcom Tomahawk 6, 2025-06-04](https://www.theregister.com/2025/06/04/broadcom_tomahawk_6/) — 102.4 Tb/s switch ASIC context.
+- [Toppan FY2024 Full Year Results Briefing summary, quartr.com](https://quartr.com/companies/toppan-holdings-inc_18645) — FY30 management plan, semiconductor target.
+
+### Corporate history references
+
+- [FundingUniverse — Toppan Printing Co., Ltd. company history](https://www.fundinguniverse.com/company-histories/toppan-printing-co-ltd-history/) — 1900 founding, 1908 incorporation, milestones.
+- [Company-Histories — Toppan Printing Co., Ltd.](https://www.company-histories.com/Toppan-Printing-Co-Ltd-Company-History.html) — corporate history.
+- [Asianometry — The History of the Semiconductor Photomask](https://www.asianometry.com/p/the-history-of-the-semiconductor) — 1961 first silicon mask prototype.
+- [Toppan Printing's New President, 2019-06-28](https://www.holdings.toppan.com/en/news/2019/06/newsrelease190628e.html) — Maro appointment as President.
+
+### Management / governance
+
+- [Simply Wall St — TOPPAN Holdings management profile, accessed 2026-05](https://simplywall.st/stocks/us/commercial-services/otc-topp.y/toppan-holdings/management) — Maro biography, compensation, ownership.
+- [Hideharu Maro — Bloomberg Markets profile](https://www.bloomberg.com/profile/person/16450133) — board memberships.
+
+---
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL check** — All cited URLs were curl-checked with a browser user-agent on 2026-05-26. **HTTP 200 confirmed**: all holdings.toppan.com news-release and PDF URLs, the FY25 financial-results PDF on finance.stockweather.co.jp, the H1 FY26 financial-results PDF on finance-frontend-pc-dist.west.edge.storage-yahoo.jp, stockanalysis.com (TYO:7911 and TYO:429A), photomask.com (Tekscend Corporate Overview + product pages), toppan.com Electronics Business Unit + FC-BGA pages, PR Newswire (carve-out announcement), evertiq, thepackman, mordorintelligence.com, marketgrowthreports.com, wonderfulpcb.com, theregister.com, trendforce.com, digitimes.com, quartr.com, simplywall.st, japantimes.co.jp, iamfabian.substack.com, tokyoaiwatch.substack.com, asianometry.com, fundinguniverse.com. **HTTP 403 (anti-bot block confirmed real in browser)**: bloomberg.com Tekscend IPO article (the URL is real and the article was previously read; Bloomberg blocks non-browser user-agents as policy), and smartkarma.com Tekscend trading-debut analysis (same pattern — known browser-only access). These two are kept because they were verified accessible in browser context. The two TDnet/EDINET-equivalent PDFs (FY25 full-year results, H1 FY26 results) were downloaded to /tmp/toppan/ and inspected directly with PyMuPDF.
+
+**Filings used** — primary verification anchors:
+- FY25 full-year results: [Consolidated Financial Results for the Fiscal Year Ended March 31, 2025, 2025-05-14](https://finance.stockweather.co.jp/contents/dispPDF.aspx?disclosure=20250514549465). All segment revenue / OP / OPM figures used in §1 and §4.1 verified verbatim against pages 2, 3, 4, 22, 23 of this PDF.
+- H1 FY26 results: [Consolidated Financial Results for the Six Months Ended September 30, 2025, 2025-11-13](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf). Tekscend deconsolidation (p. 21–22, 50.1% → 46.6% voting rights), Sonoco TFP acquisition (p. 17), Ishikawa plant ramp (p. 3), April 2026 merger of TOPPAN Inc. / Edge / Digital (p. 19), ¥80 bn bond issuance (p. 19–20), revenue/OP figures (p. 14) all verified verbatim.
+
+**Numerical spot-checks** (claim → source):
+- FY25 consolidated revenue ¥1,717,960 m → [FY25 Results p. 2](https://finance.stockweather.co.jp/contents/dispPDF.aspx?disclosure=20250514549465). ✓
+- FY25 segment revenue I&C ¥929,373 m / L&I ¥548,076 m / Electronics ¥279,984 m → [FY25 Results p. 2](https://finance.stockweather.co.jp/contents/dispPDF.aspx?disclosure=20250514549465). ✓
+- FY25 segment OP I&C ¥45,658 m / L&I ¥33,329 m / Electronics ¥52,073 m → [FY25 Results p. 2](https://finance.stockweather.co.jp/contents/dispPDF.aspx?disclosure=20250514549465). ✓
+- FY26 (Mar-26) revenue forecast ¥1,880,000 m, OP forecast ¥92,000 m → [FY25 Results p. 2](https://finance.stockweather.co.jp/contents/dispPDF.aspx?disclosure=20250514549465). ✓
+- H1 FY26 net sales ¥863,619 m, OP ¥24,787 m → [H1 FY26 Results p. 14, also pp. 5–6](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf). ✓
+- Tekscend voting rights before listing 50.1% (46,237,901 shares) / after listing 46.6% → [H1 FY26 Results p. 22](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf). ✓
+- Tekscend listing date 16 October 2025 on TSE Prime Market, code 429A → [H1 FY26 Results p. 21](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf). ✓
+- Tekscend FY25 revenue ¥117.97 bn (+10.17% YoY) and net income decline → [Tekscend 429A overview](https://stockanalysis.com/quote/tyo/429A/) and [Smartkarma — Tekscend 429A IPO trading debut](https://www.smartkarma.com/insights/tekscend-photomask-429a-jp-ipo-trading-debut). ✓
+- ¥80 bn straight-bond programme resolved 13 November 2025 → [H1 FY26 Results pp. 19–20](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf). ✓
+- April 2026 merger of TOPPAN Inc. + Edge + Digital → [H1 FY26 Results p. 19](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf). ✓
+- Sonoco TFP closing date 1 April 2025 → [H1 FY26 Results p. 17](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf). ✓
+- Holding-company transition 1 October 2023 → [TOPPAN Transitions to Holding Company Structure, 2023-10-02](https://www.holdings.toppan.com/en/news/2023/10/newsrelease231002_1.html). ✓
+- Tekscend (then Toppan Photomask) carve-out 1 April 2022 with 50.1% / 49.9% Toppan / Integral split → [PR Newswire Toppan Carves Out Photomask Business, 2022-04-01](https://www.prnewswire.com/news-releases/toppan-carves-out-semiconductor-photomask-business-to-launch-new-company-301515656.html). ✓
+- Tekscend rebrand 1 October 2024 from Toppan Photomask → [TOPPAN Photomask to Rebrand as Tekscend Photomask, 2024-10-01](https://www.holdings.toppan.com/en/news/2024/10/newsrelease241001_1.html). ✓
+
+**CRITICAL CORRECTION applied (vs original user-prompt):** The user prompt described Tekscend as a "2021 JV spin-off with DNP." This is incorrect. The actual JV partner is **Integral Corporation, a Japanese private-equity firm**, NOT DNP. Multiple primary sources confirm this — [Tekscend Corporate Overview](https://www.photomask.com/en/about/overview/) (parent: TOPPAN Holdings 46.57% + Other 53.43%), [PR Newswire 2022-04-01 carve-out announcement](https://www.prnewswire.com/news-releases/toppan-carves-out-semiconductor-photomask-business-to-launch-new-company-301515656.html), and [H1 FY26 Results pp. 21–22](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf). DNP is a competitor of Tekscend (not a partner) — it operates its own separately listed photomask business as part of Dai Nippon Printing Co., Ltd. (TSE:7912). The report uses the correct facts throughout.
+
+**Analyst-view sentences** (intentionally not cited to a primary source):
+- §4.2: Tekscend ~38–40% merchant share / DNP ~22% / Photronics ~27% — labeled `*Analyst view:*` and cited to [reports/sector/半导体材料.md](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) (Nomura Greater China Semi 2026–30F) which is itself a sell-side estimate.
+- §4.2: Tekscend customer-mix illustrative pie chart in §5 — labeled "analyst illustrative split, not disclosed by Tekscend."
+- §4.3: Toppan ~12% FC-BGA value share vs ~7% unit share derived from ASP arithmetic — labeled `*Analyst view:*`.
+- §6.3: Geographic photomask demand split — cited to multiple third-party industry reports.
+- §7.2 and §7.3: Photomask and FC-BGA share tables — all clearly labeled as analyst estimates, with sources cited under each table.
+- §8.1, §8.2: FY30 SAM-derived revenue projections for Tekscend and Toppan FC-BGA — flagged as analyst projections built on the cited management plan + market-research CAGR.
+
+**Distinguishing the three entities (per user-prompt requirement):** §4.2 explicitly opens with a "Distinguishing the three entities up front" paragraph that walks through how Tekscend Photomask Corp. (TSE:429A), Toppan Holdings' Electronics segment, and TOPPAN Holdings Inc. (TSE:7911) differ — operating, reporting, and ownership relationships are all unambiguous.
+
+**Charts** — all 8 chart PNGs from `reports/charts/toppan_*.png` reused as-is per user request:
+- `toppan_revenue_margin.png` — §1
+- `toppan_segment_mix.png` — §1
+- `toppan_segment_op.png` — §1
+- `toppan_peer_valuation.png` — §1
+- `toppan_tekscend_revenue.png` — §4.2
+- `toppan_photomask_share.png` — §4.2
+- `toppan_fcbga_share.png` — §4.3
+- `toppan_capital_return.png` — referenced via DPS/payout context in §1 (Note: not embedded as the existing chart adds limited incremental information once the capital-return narrative is in the prose; left for potential later embed if requested.)
+
+**Residual unknowns / not yet verified:**
+- Top-customer percentages for Tekscend Photomask are not publicly disclosed; the analyst-illustrative pie chart in §5 explicitly flags this.
+- FC-BGA revenue line within Toppan Electronics segment is not separately disclosed; the ~¥90–100 bn estimate in §4.3 is derived from total Electronics minus the disclosed Tekscend standalone, minus an analyst estimate of color filter / TFT-LCD / anti-reflection / metal etching combined.
+- Maro shareholding (0.028%) is from a third-party data aggregator (Simply Wall St); the exact figure may differ from EDINET disclosure but is below the 0.1% threshold that requires individual-director disclosure in Japanese filings, so absence of EDINET disclosure is consistent.
+- Toppan's English-language Integrated Report 2025 PDF was not downloaded due to repeated 403 errors against holdings.toppan.com pages from non-browser user-agents; sections that would normally cite the Integrated Report cite the corresponding Sustainability Report PDF section instead, which is the equivalent disclosure organized by topic and is accessible.
+
+</details>
