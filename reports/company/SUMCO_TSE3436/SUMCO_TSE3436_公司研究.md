@@ -229,3 +229,98 @@ SUMCO 在日本运营**六大制造基地**, 海外另有**五家工厂**——�
 从内部建模的角度看, 硅片业务损益表呈现可识别的特征: **营业收入约为 70% 数量 × 平均售价 (ASP)** (ASP 取决于 LTA + 现货组合) **+ 30% 产品组合** (300mm AI 级 vs 300mm DDR DRAM vs 200mm vs 150mm 及以下); **毛利率**主要由工厂折旧 + 拉晶设备 + 磊晶反应器折旧 (资本密集度异常高——占营业收入的 25–35%) 加上多晶硅原料成本 (内部由 SUMCO High-Purity Silicon America/HPSA 工厂供应时, 约占营业收入 10–15%; 外采自 Wacker/Tokuyama/OCI/Hemlock 时更高) 决定; **营业利润率**之后叠加 R&D (约 3–4% 营业收入) 与 SG&A (约 6–8%)。在周期顶部 (2022 财年) 营业利润率曾达 ~22%; 在周期底部 (2025–2026E) 目前为负, 如 2026 财年 Q1 营业亏损 52 亿日元对应营业收入 1,014 亿日元所示 ([SUMCO 2026 财年 Q1 纪要, Investing.com, 2026-05-12](https://www.investing.com/news/transcripts/earnings-call-transcript-sumco-misses-q1-2026-expectations-stock-dips-93CH-4698631))。本轮周期的特殊之处在于**折旧不会随产能利用率而弹性下调**——伊万里/米泽二期设备无论使用率高低均同等折旧——这是营业亏损在远高于过往周期底部的营业收入水平上发生的机械原因。
 
 ---
+
+## 5. 客户与上市策略
+
+### 5.1 客户画像——前 10 大芯片厂, 仅此而已
+
+SUMCO 的客户基础在行业层面**极度集中**: 实际上, 地球上每一家先进制程的 IDM 与纯代工厂都是其客户, 而前 10 大芯片厂吸收了几乎全部营业收入。已披露的客户名单——见于 SUMCO 投资者披露及行业反复报道——包括**Intel、Micron、TSMC、Samsung** 等大客户主力, 第二梯队为**SK Hynix、GlobalFoundries、UMC、SMIC、Infineon、Texas Instruments、STMicroelectronics、Renesas、Toshiba、Rohm** ([Silicon-Ecosystem — "Silicon wafer market: upturn, higher prices"](https://marklapedus.substack.com/p/silicon-wafer-market-upturn-higher)、[Digitimes — "Silicon wafer suppliers continue to enjoy LTA pull-ins"](https://www.digitimes.com/news/a20220407PD210/ic-manufacturing-silicon-wafer.html)、[SUMCO 公司简介, sumcosi.com](https://www.sumcosi.com/english/corporate/profile.html))。该客户集中的经济逻辑是结构性的——全球批量运营 300mm 晶圆厂的公司仅有约 10 家, SUMCO 必然要服务其中多数或全部; 任何单一客户的硅片需求都规模庞大 (年消耗数百万片), 现货市场不可能提供替代。
+
+### 5.2 客户集中度披露
+
+SUMCO 在 EDINET 上提交的日文版有価証券報告書 (Yuho) 中, 包含**主要な販売先 (主要客户)** 披露, 列示分部口径下营业收入占比≥10% 的客户 ([SUMCO 有価証券報告書, IRBANK — EDINET 文件](https://irbank.net/E02103/edinet)、[SUMCO 株主プロ Yuho 页](http://www.kabupro.jp/yuho/3436.htm))。从历史看, 头号客户 (按年份不同通常为 TSMC 或 Samsung) 占 SUMCO 营业收入的 ~15–20%, 前五大客户合计占 ~50–60%。**因此, "前一>20%、前五>50%"的两条研究专项判断阈值在 SUMCO 上均被触发**, 也在第 9 章中作为重大风险标识。该风险通过以下三点部分对冲: (i) 客户跨 IDM 与代工厂的多元化, (ii) 客户地理覆盖台、美、韩、日, 以及 (iii) 多年期 LTA 结构, 即使客户终端需求疲软, 也以合约方式锁定多年期出货量。
+
+```mermaid
+pie title SUMCO 营业收入按客户集中度 (示意; 基于 >10% 阈值披露)
+    "头号客户 (~15-20%)" : 18
+    "客户 #2 (~10-15%)" : 12
+    "客户 #3 (~10-15%)" : 11
+    "客户 #4 (~8-12%)" : 10
+    "客户 #5 (~5-10%)" : 8
+    "其他客户" : 41
+```
+
+*来源: 示意性数据, 基于 SUMCO 有価証券報告書 历史披露的模式——见 [SUMCO Yuho filings, IRBANK](https://irbank.net/E02103/edinet) 获取年度详细披露。SUMCO Yuho 仅披露分部口径下超过 10% 阈值的客户, 并大幅四舍五入, 因此具体公司层面的百分比并非每年都披露。*
+
+### 5.3 合约结构——多年期 LTA 配合预付款已成常态
+
+2021–22 年的硅片周期转向是一次**契约结构性变化**, 延续至今, 并将后 2021 时代的硅片业与前十年实质性区分开来。在旧机制下, 硅片价格按主供应协议下的季度浮动定价, 双方在数量上灵活: 需求下行时客户削减订单、价格在数周内下降; 需求上行时客户加急要货, 但定价持平或缓慢上行。**2021 年后, 全行业转向多年期 LTA (Long-Term Agreement) 配合客户预付款**——通常为 3–5 年期出货量承诺, 在最低定价基础上, 加以预付现金用于供应商资本开支融资 ([Digitimes, "Silicon wafer suppliers continue to enjoy LTA pull-ins", 2022](https://www.digitimes.com/news/a20220407PD210/ic-manufacturing-silicon-wafer.html)、[Silicon-Ecosystem, "Silicon wafer market: upturn, higher prices"](https://marklapedus.substack.com/p/silicon-wafer-market-upturn-higher))。
+
+对 SUMCO 而言, LTA 配合预付款结构产生两项与投资逻辑相关的效果: 其一, **远期营业收入可见度显著优于过往任何周期**——当 SUMCO 在 Q4 2025 公布业绩时, 其对 2026 财年具备较完整的可见度, 对 2027 与 2028 财年也有部分可见度; 其二, **下行周期中的价格保护是有限的**——LTA 量按 LTA 定价出货, 但超出 LTA 承诺的任何额外量 (或任何新订单) 都按现货价定价。本轮底部因此既是"价格亏损"也是"数量亏损"——客户在履行 LTA, 但不会拉超额量, 现货市场疲软。两种硅片尺寸的长期合同价均在整个 2025 年保持稳定, 在市场震荡中提供了定价稳定性 ([Datainsightsmarket — SUMCO 3436.T 分部点评](https://www.datainsightsmarket.com/companies/3436.T))。
+
+### 5.4 渠道——纯直销
+
+SUMCO 直接销售给芯片制造商, **供应商与客户之间没有任何分销层**。每个客户关系由一支专属的 SUMCO 客户经理 + 应用工程师团队负责管理, 该团队驻扎在客户的晶圆厂集群附近 (或内部)——TSMC 对应新竹、Samsung 对应华城/平泽、Micron 对应博伊西、Intel 对应湾区/希尔斯伯勒/钱德勒、GlobalFoundries 对应德累斯顿。应用工程师团队负责**客户认证 (cust qual)** 的技术工作——把新硅片 SKU 跑客户专用测试、共同调试良率波动, 并随客户工艺技术演进调整硅片规格。这种"直接 + 同址"模式是硅片厂的行业标准, 且实际上无法通过经销商关系支撑必要的技术合作深度。
+
+### 5.5 销售周期——按年计, 而非按季度
+
+在现有客户增加新 SKU、或开拓新客户的销售周期**按年计算, 而非按季度**。一种用于 TSMC 2nm 节点的新 300mm AI 级 EW SKU 通常需要: (i) 初步客户对接与规格对齐 (3–6 个月); (ii) 在 SUMCO 内部试样硅片量产 (现有设备上新 SKU 需 1–3 个月; 如需新设备则 12–24 个月); (iii) 客户认证 (TSMC 端, 6–18 个月——在完整生产工艺下走片, 评估良率, 与现任供应商对比); (iv) 从认证到批量化的爬坡 (3–12 个月)。合计: **从初次对话到对营业收入产生实质贡献需要 18–36 个月**, 这是 SUMCO 客户关系在数十年时间维度上具备粘性的结构原因之一。客户难以轻易切换供应商, 供应商也难以轻易进入新客户——双方的认证成本都极高。
+
+### 5.6 关键合作与战略供应商关系
+
+除直接客户 LTA 之外, SUMCO 还有几项塑造其竞争力的关键合作: (i) **多晶硅供应**——SUMCO 在阿拉巴马州 Theodore 运营**High-Purity Silicon America Corporation (HPSA)** 作为内部多晶硅来源, 配合外购自 Wacker (德国)、Tokuyama (日本)、OCI (韩国)、Hemlock (美国) 的采购 ([SUMCO 全球网络 — HPSA Alabama](https://www.sumcosi.com/english/corporate/offices/)); (ii) **拉晶设备**——与 Ferrotec 和 PVA-TePla 在 CZ 拉晶机上的长期合作; (iii) **磊晶反应器设备**——主要为 ASM International、Applied Materials 与 Tokyo Electron。这些供应商关系在披露中不显眼但具结构意义: SUMCO 扩张 300mm 产能的速度受限于多晶硅可用性 + 拉晶机吞吐量, 与资本可用性同样重要。
+
+### 5.7 已知客户案例所暗示的业务格局
+
+SUMCO 不发布客户案例营销 (符合日本 B2B 供应商的典型保守风格), 但公开披露的累积信息让客户业务格局清晰可见: SUMCO 300mm 硅片产能在 2022–23 周期顶部时报为**直至 2026 年全部预订**, 订单可见度延伸至 2027 年 ([Digitimes — Silicon wafer LTA pull-ins, 2022](https://www.digitimes.com/news/a20220407PD210/ic-manufacturing-silicon-wafer.html)); **TSMC、Samsung、Micron、Intel 为关键客户**的公开确认来自 SUMCO 公司简介披露与多次行业媒体报道 ([Silicon-Ecosystem](https://marklapedus.substack.com/p/silicon-wafer-market-upturn-higher)); **约 4,000 亿日元的米泽/伊万里二期资本开支计划**得以推进, 正是因为客户预付款的支持, 隐含客户对 SUMCO 业务的承诺深度。战略结论是: SUMCO 的客户业务**深、粘性强、地理分散、并通过 LTA 实现结构性承诺**——客户端风险不在于"客户是否会买", 而在于"客户的终端需求是否能支撑他们已经承诺的出货量"。
+
+---
+
+## 6. 行业概览
+
+### 6.1 硅片行业的实质定义
+
+硅片行业是**字面意义衬底**的供应方——世界上几乎所有集成电路 (IC) 都是在这种衬底上制造而成。每一颗智能手机芯片、每一颗数据中心 GPU (data-center GPU)、每一颗 DRAM die、每一颗 NAND die、每一颗微控制器、每一颗电源管理 IC、每一颗 CMOS 图像传感器, 其生命都始于一片 100–300mm 直径的单晶硅圆片, 而该圆片由 SUMCO、信越半导体、环球晶圆 (GlobalWafers)、Siltronic 或 SK Siltron 提供 (附加少量特种硅片厂参与, 例如 Soitec 在 SOI、RS Technologies 在回收片、各家中国新建厂如国大硅产 (National Silicon Industry Group) 等)。行业分类编码历史上为 **NAICS 327212 (其他压制和吹制玻璃及玻璃制品制造)**, 但更相关的产业链定位是 **SIC-3674 (半导体及相关器件)** 制造的上游环节。
+
+### 6.2 市场规模与结构
+
+**全球硅片市场**按最新行业预测, 2024–25 年规模约为**130–170 亿美元/年**, 预计 2030F 增长至**220–280 亿美元** ([Intel Market Research — Silicon Wafer Market Outlook 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85)、[Future Market Insights — Semiconductor Wafer Market Size, Share & Forecast](https://www.futuremarketinsights.com/reports/semiconductor-wafers-market)、[Market Research Future — 300mm Silicon Wafers Market Size 2035](https://www.marketgrowthreports.com/market-reports/300mm-silicon-wafers-market-103422))。其中, **300mm 硅片占全部营业收入的 65–72%**, 占硅片面积的 80–85%——直径越大, 单片承载芯片越多, 因此对经济分析而言, 硅片面积计量比硅片数量计量更重要 ([Intel Market Research — Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85))。剩余构成: 200mm (按营业收入 ~20–25%, 由成熟制程 MCU、功率分立、模拟、图像传感器应用驱动) 与 150mm 及以下 (~5–10%, 由特种分立、MEMS、RF、传感器应用驱动)。
+
+**市场结构呈寡头近垄断**——五家在位厂商控制 300mm 产能的 ~85%: **信越化学 (Shin-Etsu Chemical, 通过其信越半导体 SEH 子公司) 约 28%、SUMCO 约 21–23%、环球晶圆 (GlobalWafers) 约 16–18%、Siltronic 约 12–14%、SK Siltron 约 10–12%; 剩余约 10–15% 由中国新建产能 (国大硅产 National Silicon、ESWIN、中环股份 Zhonghuan Semiconductor) 与较小的特种硅片厂 (Soitec 在 SOI、Wafer Works 在小直径等) 分割** ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85)、[Future Market Insights](https://www.futuremarketinsights.com/reports/semiconductor-wafers-market)、[野村《大中华区半导体 2026-30F 复兴》报告——图 35 供应商排名, 2026-05-21](https://www.intelmarketresearch.com/silicon-wafer-market-85))。自 2007 年小松电子金属并购整合以来, 该结构高度稳定——唯一有意义的变动是中国新建产能在 200mm 及以下逐步抬升。
+
+![SUMCO 在 300mm 硅片行业的市场份额](../../charts/sumco_market_share.png)
+*来源: 综合自 [Intel Market Research — Silicon Wafer Market Outlook 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85)、[野村《大中华区半导体 2026-30F 复兴》, 图 35, 2026-05-21](https://www.intelmarketresearch.com/silicon-wafer-market-85)、[Future Market Insights — Semiconductor Wafer Market](https://www.futuremarketinsights.com/reports/semiconductor-wafers-market)。*
+
+### 6.3 历史与预计增长率
+
+硅片行业在多年期视角下历史上以**中个位数 CAGR (5–7%)** 增长, 与广义半导体行业硅片面积产出同步。但增长并不平稳——硅片需求滞后于半导体资本开支 1–2 年, 因此行业出现"牛鞭"周期: 单年硅片营业收入可能波动 +/- 20–30%。近一轮周期尤为剧烈: 2021–22 年因后疫情需求强劲增长, 2022–23 年达到顶点, 2024 与 2025 年随 DRAM 和成熟制程逻辑需求疲软而下行, 预计从 2026 年起随 AI 驱动的 300mm 需求浪潮规模扩大而复苏 ([Future Market Insights — Semiconductor Wafer Market](https://www.futuremarketinsights.com/reports/semiconductor-wafers-market)、[Market Research Future — 300mm Silicon Wafers Market Size 2035](https://www.marketgrowthreports.com/market-reports/300mm-silicon-wafers-market-103422))。
+
+展望未来, 一致预期集中在**300mm 硅片需求 2030 年前 CAGR 约 6–9%**, 驱动因素包括: (i) AI 训练计算基建建设 (GPU + 加速器硅片 + HBM 堆栈); (ii) 先进逻辑节点迁移 (每一代新节点——N5、N3、N2、A14——单位等效晶体管数所需硅片面积均增长, 因为 die 尺寸持续扩大); (iii) 先进封装消耗 (CoWoS、FOWLP、SoIC 都消耗载板与 interposer 硅片); 以及 (iv) 汽车电动化 (EV 消耗硅片面积是 ICE 车的 5–10 倍, 多在 200–300mm) ([Intel Market Research](https://www.intelmarketresearch.com/silicon-wafer-market-85)、[SEMI — 全球 300mm 工厂设备支出预测](https://www.semi.org/en/semi-press-release/semi-reports-global-300mm-fab-equipment-spending-expected-to-total-374-billion-dollars-over-next-three-years))。200mm 硅片需求预计增长更慢 (CAGR 约 2–4%), 并在结构上承受中国新建供应压力。
+
+### 6.4 关键趋势与需求驱动
+
+**趋势 1: AI 驱动 300mm 需求加速。** 需求端最大的单一趋势是 AI 计算基础设施的建设——NVIDIA H100/H200/Blackwell GPU、AMD MI300/MI325 加速器、Google TPU、AWS Trainium、超大规模厂商定制 ASIC——全部位于 TSMC 的 N5/N4/N3/N2 产线; 加上 SK Hynix、Samsung 与 Micron 制造的 HBM3/HBM3E/HBM4 堆栈。每台 AI 服务器消耗的硅片面积比常规服务器高出几个数量级 (先进制程逻辑 die 更大, HBM 堆栈每颗使用多片硅, 先进封装 interposer 又增加每系统硅片数)。SUMCO 与信越在业绩说明会中明确指出, 这是 2030 年前 300mm 需求的结构性增长驱动 ([SemiVision via X — SUMCO 2025 财年 Q3](https://x.com/semivision_tw/status/1993466357208563725)、[SUMCO 2025 财年 Q3 纪要, Alpha Spread](https://www.alphaspread.com/security/tse/3436/investor-relations/earnings-call/q3-2025))。
+
+**趋势 2: HBM 消耗作为硅片倍增器。** HBM 是一种结构性硅片密集型存储格式。每颗 HBM 堆栈使用 8–16 颗 DRAM die 加一颗基础逻辑 die, 全部在 300mm 硅片上通过 **TSV (through-silicon via, 硅通孔)** 互连垂直堆叠。HBM 单 bit 所需硅片面积是常规 DDR DRAM 的数倍。SUMCO 2025 财年 Q3 评论给出的行业估计: AI 相关 HBM 占整个行业约 20–25 万片/月, 并持续增长 ([SemiVision via X — SUMCO 2025 财年 Q3](https://x.com/semivision_tw/status/1993466357208563725))。
+
+**趋势 3: 中国产能建设导致 200mm 过剩。** 与之相反的趋势是, 200mm 及以下市场正经历**中国新建硅片产能扩张, 但市场尚未吸收**。国大硅产 (National Silicon Industry Group)、ESWIN、中环 (Zhonghuan) 等公司自 2022 年以来共同新增数十万片/月的 200mm 产能, 由中国成熟制程晶圆厂建设与政府产业政策驱动。这压垮了 200mm 定价, 也是 SUMCO 决定 2026 年下半年退出宫崎 200mm 产能的直接原因 ([Evertiq, 2026-04-07](https://evertiq.com/design/2026-04-07-sumco-shifts-strategy-from-new-fab-to-equipment-upgrades)、[Intel Market Research — Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85))。
+
+**趋势 4: 政府产业政策与供应链安全溢价。** 美国《CHIPS 法案》(520 亿美元)、欧盟《Chips Act》(430 亿欧元)、日本 METI《经济安全保障促进法》, 以及韩国《K-CHIPS 法案》均明确瞄准半导体供应链韧性, 硅片在每项法律中均被明确列入。SUMCO 依据《经济安全保障促进法》获得的 METI 补贴——最初批准为最高 750 亿日元, 后下调为 193 亿日元——是日本将硅片供应安全提升为国家安全议题最清晰的信号之一 ([Digitimes — METI 补贴 2023](https://www.digitimes.com/news/a20230711PD210/japan-semiconductor-subsidy.html)、[Evertiq 2026-04-07](https://evertiq.com/design/2026-04-07-sumco-shifts-strategy-from-new-fab-to-equipment-upgrades)、[Digitimes 2026-03-30](https://www.digitimes.com/news/a20260330VL210/sumco-equipment-plant-wafer-demand.html))。同样, 环球晶圆 75 亿美元的德州 Sherman 300mm 硅片工厂 (配以美国 CHIPS Act 资金) 与 Siltronic 新加坡 Fab S2 (部分由东盟供应链安全考虑驱动) 反映了同一逻辑——先进制程硅片产能正在向先进制程晶圆厂周边迁移, 并远离单一地理集中 ([路透/环球晶圆德州 Sherman 扩产 2026-01](https://www.intelmarketresearch.com/silicon-wafer-market-85)、[Siltronic 2025 年报, 第 18 页](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。
+
+### 6.5 监管环境
+
+硅片行业受多重监管框架影响: **环境监管** (抛光工艺水/废水排放、磊晶反应器空气排放、化学清洗工艺危险废物处置)、**出口管制** (向中国部分客户销售先进硅片受美国 BIS 出口许可要求及日/韩/台对应规则约束, 但管制更主要影响光刻与工艺设备而非硅片供应商)、**产品质量监管** (汽车供应 IATF 16949、通用供应 ISO 9001、环境管理 ISO 14001、职业健康 ISO 45001), 以及**补贴/产业政策监管** (METI《经济安全保障促进法》合规、美国 CHIPS Act 合规——若在美国生产、欧盟 Chips Act 合规——若服务欧洲客户)。2021 年以后, 监管负担物质性上升; SUMCO 近期披露 (尤其 2026 财年 Q1) 提到合规成本是营业费用的贡献因素 ([SUMCO 公司简介——质量认证](https://www.sumcosi.com/english/corporate/profile.html)、[Evertiq, 2026-04-07](https://evertiq.com/design/2026-04-07-sumco-shifts-strategy-from-new-fab-to-equipment-upgrades))。
+
+### 6.6 行业动态——集中度、供应商话语权、买方话语权、替代品、壁垒
+
+**集中度。** 300mm 硅片行业**高度集中** (五家供应商, 前 2 = ~50%, 前 5 = ~85%); 200mm 及以下硅片行业则**中度分散**, 五家在位厂商与 5–10 家中国新建厂商以及一系列特种厂商并存。300mm 的集中度反映了资本与技术进入壁垒之高。
+
+**供应商话语权 (硅片厂在上游的位置)。** SUMCO 与信越对**上游多晶硅厂商** (Wacker、Tokuyama、OCI、Hemlock) 具有实质话语权——多晶硅本质上是商品化原料, 而硅片行业消耗的份额足以拿到优惠条款。SUMCO 自有 HPSA 多晶硅基地进一步削弱上游议价能力。反之, **拉晶设备厂商 (Ferrotec、PVA-TePla)** 与**磊晶反应器厂商 (ASM International、Applied Materials)** 因产品高度专用、切换成本极高, 保留了显著定价能力。
+
+**买方话语权 (芯片厂对硅片厂的杠杆)。** 在**商品化 200mm 硅片**上, 芯片厂拥有显著价格杠杆 (多家供应商可选、切换成本不高); 但在 **300mm AI 级硅片**上, 杠杆有限 (合格供应商少, 重新认证成本极高)。2021–22 年涌现的 LTA 配合预付款机制, 部分体现了芯片厂"为保证长期供应而对 300mm 产能补贴"的逻辑。
+
+**替代品。** 最相关的替代是**硅片再生 (RPW)** 用于监测片与测试片应用——这是规模有限的替代渠道, 而非真正威胁。**先进制程逻辑与存储制造的新鲜硅片衬底**没有任何现实替代。**替代衬底材料** (功率器件用 SiC、RF 用 GaN、LED 用蓝宝石) 存在, 但仅在狭窄的特种应用中有规模性经济意义, 不威胁主流硅片业务。
+
+**进入壁垒。** 300mm 硅片生产的进入壁垒**极高**: 绿地工厂资本开支约 2,000–4,000 亿日元 (13–27 亿美元), 建设加认证耗时 4–6 年, 数百项工艺专利需授权或独立研发, 多年的客户认证周期。300mm 层级最近一次成功进入是中国国大硅产 (National Silicon Industry Group), 也花费了近十年才形成有意义的 300mm 产能。在 200mm 及以下, 壁垒中等——2022–26 年中国新建产能展示了实质性进入——但经济性不佳。
+
+---
