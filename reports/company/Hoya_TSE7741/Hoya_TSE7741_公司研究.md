@@ -46,3 +46,49 @@ Life Care 分部本身又分为两个截然不同的子业务。**Health Care re
 35× 左右的 TTM P/E **比医疗器械行业中位数 ~25.8× 高出约 35%** ([Gurufocus — Medical Devices industry PE, accessed 2026-05](https://www.wisesheets.io/pe-ratio/ESLOY))，略低于 EssilorLuxottica 的 ~38.8×，明显高于 Carl Zeiss Meditec 的 ~26.2×。*分析师观点：* 这个溢价的最佳解读并非 Life Care 独自支撑（仅 Life Care 大约只能给到 22–25×），而是市场对 Information Technology 利润流单独定价、隐含 ~50× 分部税前——这是对 EUV 空白光罩垄断、HAMR / 玻璃 HDD 基板拐点、以及持续的回购 + 注销引擎的认可（FY25 当年共回购库藏股 ¥150 亿日元、注销 ¥97.9 亿日元） ([HOYA FY25 IFRS Financial Statements, p. 11](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf))。考虑到该股过去 52 周累计回报已达 **+52.2%**，AI 驱动的半导体设备 / 材料逻辑已经将分部估值充分重估 ([Yahoo Finance — 7741.T, accessed 2026-05](https://finance.yahoo.com/quote/7741.T/))，目前估值倍数已经明显拉伸，EUV 需求出现任何周期性波动（或信越突袭份额）都将构成实质性估值风险——这点将在第 9 章讨论。
 
 ---
+
+## 2. 公司历史
+
+HOYA 由 **山中正一与山中茂兄弟** 于 **1941 年 11 月 1 日** 创立，最初在东京西郊的保谷市（今西东京市）建立光学玻璃生产工厂——厂址所在的地名后来便成为了公司名称 ([HOYA Corporation company history page, accessed 2026-05](https://www.hoya.com/en/company/history/); [Companies History — Hoya](https://www.companieshistory.com/hoya/))。公司在 1944 年正式法人化，1945 年战时光学玻璃需求骤减后转入水晶玻璃餐具业务；水晶产品成为 HOYA 第一个产生现金流的业务，为后来切入眼镜镜片提供了资金 ([HOYA Corporation company history page](https://www.hoya.com/en/company/history/))。
+
+公司于 **1961 年 10 月在东京证券交易所二部上市**，1973 年 2 月升至一部，产品线在此期间已扩展到 **渐进多焦点眼镜镜片（1967）、软性隐形眼镜（1972）、人工晶状体（1987）以及硬盘玻璃基板（1991）** ([HOYA Corporation company history page, accessed 2026-05](https://www.hoya.com/en/company/history/); [Companies History — Hoya entry](https://www.companieshistory.com/hoya/))。1984 年公司名称从"保谷硝子工业"简化为"HOYA Corporation"。1980 年代至 2000 年代管理层的战略洞见在于专注**底层材料 / 基板**，而非下游模组——一旦你能制造成为硬盘盘片的玻璃磁盘、成为光罩的光学坯料、或成为隐形眼镜的高分子镜柸，你就坐在一个高利润率的瓶颈环节，那些更显眼的下游组装厂商绕不开你。
+
+```mermaid
+timeline
+    title HOYA Corporation 关键里程碑，1941–2025
+    1941 : 由山中兄弟于保谷市创立
+    1961 : 东证二部上市
+    1967 : 推出渐进多焦点眼镜镜片
+    1991 : HDD 玻璃磁盘商业化
+    2007 : 要约收购 PENTAX（相机 + 医疗）
+    2011 : 成像业务剥离至理光
+    2013 : 收购精工爱普生眼镜镜片业务
+    2014 : 取得 Seiko Optical Products 控股权
+    2017 : 收购 3M 安全护目镜业务
+    2022 : 以 ¥22 亿日元向 Western Digital 出售 HDD 磁介质业务
+    2022 : 池田晋升集团 CEO
+    2024 : Hunters International 勒索软件攻击影响 Vision Care 业务
+    2025 : ¥150 亿日元回购，资金来自 Kioxia 持股变现
+```
+
+两笔收购最为决定性。**2007 年 12 月至 2008 年 4 月的 PENTAX 要约收购** 同时带来两条业务线——消费相机 / 成像板块后来于 2011 年剥离给理光，而 **软性内窥镜业务则一直保留至今，即 Pentax Medical**，为 HOYA 在消化道内窥镜领域奠定了基础地位 ([HOYA Corporation company history page](https://www.hoya.com/en/company/history/); [SafeVision blog — All About HOYA](https://safevision.com/blog/all-about-hoya/))。**2013–14 年的 Seiko Optical Products 系列交易** 收购了精工爱普生的眼镜镜片制造业务，并取得精工镜片销售子公司的控股权——与 HOYA 原有的 Hoya、Pentax、Tokai 品牌合并后，HOYA 跻身全球第二或第三大眼镜镜片厂商，仅次于 EssilorLuxottica，与 Carl Zeiss 平起平坐 ([Nishimura & Asahi — HOYA / Seiko Epson deal advisory, 2014](https://www.nishimura.com/en/experience/work/5321); [PR Newswire — HOYA, Seiko and Epson agreements, 2013](https://www.prnewswire.com/news-releases/hoya-seiko-and-epson-agreements-executed-in-the-field-of-optical-products-business-179637771.html))。
+
+2010 年代和 2020 年代 HOYA 的特征更多是**减法而非加法**。包括 2011 年成像业务剥离给理光；**2022 年以 ¥22 亿日元（约 US$235 m）向 Western Digital 出售磁介质（溅射）业务**——HOYA 保留上游玻璃基板生产，退出利润率较低的镀膜环节；以及最近对医疗内窥镜销售 / 工厂网络的重组（CEO 池田在 FY26 Q2 业绩会议上表示"约 70–80% 的必要决策已经完成，剩下的只是执行问题"） ([HOYA FY26 Q2 Earnings Call Transcript, p. 21](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf); [PR Newswire — Western Digital to acquire HOYA magnetic media, 2009 announcement, 2022 closure](https://www.prnewswire.com/news-releases/western-digitalr-to-acquire-hoyas-magnetic-media-operations-92263279.html))。这些动作反映了一种长期的组合管理哲学：果断退出无法做到行业领先的位置，将获得的资金要么投入扩产（电子业务的昭岛 / 三岛 / 熊本 / 越南 / 老挝 / 重庆工厂），要么进行股票回购。
+
+近期值得关注的两次冲击：**(a) 2024 年 3 月 30 日发现的 Hunters International 勒索软件攻击**，使多家镜片实验室 Vision Care 订单处理系统中断约 4 周，攻击者索要 US$10 m 赎金被 HOYA 拒绝 ([Bleeping Computer — Optics giant Hoya hit with $10M ransomware demand, 2024-04](https://www.bleepingcomputer.com/news/security/optics-giant-hoya-hit-with-10-million-ransomware-demand/); [SecurityWeek — Lens Maker Hoya scrambling to restore systems, 2024-04](https://www.securityweek.com/lens-maker-hoya-scrambling-to-restore-systems-following-cyberattack/))；**(b) 多年期的转让定价税务诉讼** 中，日本国税不服审判所部分撤销了 FY2007–11 的补税评估，HOYA 仍在就剩余部分上诉——已预付的应收款 ¥7.9 亿日元 + ¥4.5 亿日元 + ¥8.0 亿日元在 FY25 审计意见中被列为关键审计事项 ([HOYA FY25 IFRS Financial Statements, p. 4](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf))。
+
+---
+
+## 3. 管理团队
+
+山中兄弟（正一与茂）早已不在世，HOYA 自 1980 年代以来一直是非家族控股的职业经理人公司——所以今天唯一相关的传记细节是现任集团社长兼 CEO。
+
+**池田英一郎（Eiichiro Ikeda）——代表执行役、社长兼 CEO（自 2022 年 3 月起任）。** 池田是 HOYA 33 年内部老兵，1992 年入职，在每一个主要运营部门历练后晋升至最高职位。他拥有中央大学工学学士学位，担任 CEO 后将办公基地设在 HOYA 新加坡区域总部——这是有意为之的信号，意味着 HOYA 的重心是亚太运营而非东京总部 ([HOYA Corporation Leadership page, accessed 2026-05](https://www.hoya.com/en/company/directors/); [Bloomberg — Eiichiro Ikeda profile](https://www.bloomberg.com/profile/person/18799019); [Equilar ExecAtlas — Eiichiro Ikeda](https://people.equilar.com/bio/person/eiichiro-ikeda-hoya-corporation/39560383))。
+
+池田的三段成型经验恰恰对应于当前驱动股票故事的三个产品业务。**(1) 自 2010 年初担任 Memory Disk Division 联席 CEO 兼 Media 总经理**——即制造 HDD 玻璃基板的部门，他随后通过将磁介质溅射业务出售给 Western Digital 完成重组，同时保留 HOYA 在基板本体上的垄断地位；该交易于 2022 年以 ¥22 亿日元成交 ([Equilar ExecAtlas — Eiichiro Ikeda](https://people.equilar.com/bio/person/eiichiro-ikeda-hoya-corporation/39560383); [PR Newswire — Western Digital to acquire HOYA magnetic media](https://www.prnewswire.com/news-releases/western-digitalr-to-acquire-hoyas-magnetic-media-operations-92263279.html))。**(2) 自 2010 年末起负责 Optical Lens 光学镜片业务**，深入了解全球眼镜镜片的成本结构和 Seiko 整合手册；这一经验奠定了他目前对 Pentax Medical / IOL 工厂网络重组的判断——他正在整合工厂，尽管短期会带来 6–9 个月的利润率压力 ([HOYA FY26 Q2 Earnings Call Transcript, 2025-10-31, p. 21](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。**(3) 自 2013 年起任信息技术分部执行役 / COO，2015 年起任集团 CTO，2019 年起任 Eyecare 部门社长**，使他对光罩坯料制造物理和 EUV 工艺控制有直接技术理解 ([Equilar ExecAtlas — Eiichiro Ikeda](https://people.equilar.com/bio/person/eiichiro-ikeda-hoya-corporation/39560383); [Bloomberg — Eiichiro Ikeda profile](https://www.bloomberg.com/profile/person/18799019))。
+
+池田 ~3 年 CEO 任期的特征是 **(a)** 激进的资本回报——FY25 内回购库藏股 ¥150 亿日元、同年注销 ¥97.9 亿日元，2026 年仍在执行追加的 ¥100 亿日元计划——部分资金来自 Kioxia 持股变现；按 CFO 广冈披露，Kioxia 处置款"目前正用于资助持续的股票回购计划" ([HOYA FY25 IFRS Financial Statements, p. 11](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf); [HOYA FY26 Q2 Earnings Call Transcript, p. 20](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf); [The Globe and Mail / TipRanks — HOYA ends ¥100 bn buyback and cancels 1.06% of shares, 2025](https://www.theglobeandmail.com/investing/markets/markets-news/Tipranks/1638099/hoya-ends-yen100-billion-buyback-and-cancels-1-06-of-its-shares/))；**(b)** 在 EUV 空白光罩和 HDD 基板上有节制但意义重大的产能投资（FY26 ¥55 亿日元资本支出包中 60–70% 投向这两条产品线）；**(c)** 在大宗化的市场上有意识地拒绝追逐份额——FY26 Q2 关于 HDD 玻璃基板定价的评论坦率指出铝基板竞争将限制涨价空间 ([HOYA FY26 Q2 Earnings Call Transcript, pp. 23–24](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
+
+池田个人持股数量在 EDINET 上的有价证券报告书与 HOYA 英文 IR 资料中均未单独披露——日本披露规则仅要求单个董事持股超过 0.1% 才需提示，根据未披露这一事实可推断池田持股低于该阈值。其薪酬结构包含中长期激励组件（绩效股票单位 / PSU），其支付与 ESG 指标部分挂钩——这是首席战略官 (CSO) 中川友子在 FY26 Q2 业绩会议中的说明 ([HOYA FY26 Q2 Earnings Call Transcript, pp. 15, 18](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
+
+---
