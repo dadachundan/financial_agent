@@ -304,3 +304,84 @@ Photronics 通过 **直销** 销售——没有渠道商/分销商层。来自 1
 > "Based on the complex relationships between the United States and certain foreign countries including, but not limited to China, there is inherent risk that political, diplomatic and national security influences might lead to trade disputes, impacts and/or disruptions to our operations or our ability to sell our photomasks. **The United States and other countries have imposed and may continue to impose trade restrictions and have also levied tariffs and taxes on certain semiconductor and FPD products.**" — [PLAB 10-K FY25, Item 1A Risk Factors](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)
 
 **OBBB Act (美国税法 2025)** ("One Big Beautiful Bill Act"，2025-07-04 生效) 也在 FY25 10-K 中被列为对 FY26 税务规划具重大影响的事项 ([PLAB FY25 多年度 SEC 叙述](/Users/x/projects/financial_agent/reports/earnings/PLAB_20260525.md))。
+
+## 7. 竞争格局
+
+### 竞争对手清单——10-K 原文
+
+PLAB 在 FY25 10-K 的两处平行位置点名其竞争对手：
+
+> "Our competitors include **Compugraphics International, Ltd., Dai Nippon Printing Co., Ltd (outside of Taiwan and China), Hoya Corporation, LG Innotek Co., Ltd., Shenzhen Newway Photomask Making Co., Ltd., Shenzhen Qingyi Photomask, Ltd., SK-Electronics Co., Ltd., Taiwan Mask Corporation, and Tekscend Photomask.** We also compete with semiconductor and FPD manufacturers' captive photomask manufacturing operations that supply photomasks for internal use and, in some instances, also for external customers and foundries." — [PLAB 10-K FY25, Item 1 Competition](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)（并再次出现于 [Item 1A 风险因素中的竞争强度部分](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)）
+
+"DNP outside of Taiwan and China" 这一限定语关键：在台湾与中国大陆，**DNP 是 Photronics 的合资伙伴（通过 PDMC 与 PDMCX）**——即伙伴而非竞争对手。在全球其他地方，DNP 是直接竞争对手。
+
+10-K 竞争对手清单中值得注意的遗漏：**Toppan Holdings, Inc.**。按光罩营收计 Photronics 单一最大的全球商用竞争对手并未出现在 Competition 部分——一个不寻常的遗漏。分析师对此不应作过度推断（可能是 Photronics 把 Toppan 视为伴生玩家——Toppan 与 DNP 经常服务重叠客户但在不重叠的地理/节点上，可能是无意遗漏，或刻意淡化）。在下列分析地图中，Toppan 基于第三方行业研究（野村、SEMI、Yole）作为竞争对手列入——但它并不在 PLAB 自有名单上。
+
+### 竞争地图（分析师重构）
+
+| 竞争对手 | 定位 | 地理优势 | 技术优势 | 备注 |
+|---|---|---|---|---|
+| **Toppan Holdings (7911 JP)** | 按营收最大全球商用光罩供应商（约商用市场 30% — 分析师估算） | 日本、台湾、美国、欧盟 | EUV 认证；全先进节点覆盖 | 未列于 PLAB 10-K Competition，但业界公认为头号商用竞争对手 |
+| **DNP — Dai Nippon Printing (7912 JP)**（除台湾、中国大陆外） | 全球第二大商用供应商 | 日本（主） | EUV 认证 | **Photronics 在台湾与中国大陆为合资伙伴** — 仅在其他地区为竞争对手 |
+| **Hoya Corporation (7741 JP)** | EUV 光罩基板与 EUV 光罩领导者 | 日本、韩国 | 全球 EUV 光罩基板份额约 80% ([野村行业报告 p. 18-30](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)) | 基板/写入/检测的垂直整合使 Hoya 成为 EUV 层关键玩家 |
+| **LG Innotek (011070 KS)** | 自营 + 商用 FPD 光罩（韩国） | 韩国 | 高端 FPD | 韩国 AMOLED FPD 光罩业务直接竞争 |
+| **SK-Electronics (6677 JP)** | FPD 与 IC 光罩供应商 | 日本 | FPD 高端 + 主流 IC | 与 PLAB 韩国 / 台中工厂细分 FPD 重叠 |
+| **Compugraphics International (英国)** | 英国主流 IC + FPD 商用供应商 | 英国 / 欧盟 | 主流节点 | 与 PLAB Manchester / Bridgend / Dresden 欧洲业务竞争 |
+| **深圳 Newway 光罩** | 中国本土商用供应商 | 中国 | 主流 IC（崛起中） | 中国本土最积极的竞争对手——获国家支持中扩展先进节点能力 |
+| **深圳 Qingyi 光罩** | 中国本土商用供应商 | 中国 | 主流 IC + FPD | 规模小于 Newway，但在扩张 |
+| **Tekscend Photomask** | 美国/亚洲商用供应商（原 Toppan 与 IBM 合资，现 Toppan 主导） | 美国、亚洲 | 主流 IC | 由 Toppan 美国营运分拆 |
+| **Taiwan Mask Corporation (2338 TT) 台湾光罩** | 台湾本土商用供应商 | 台湾 | 主流 IC | PDMC 台湾合资的小规模竞争对手 |
+| **IDM 自营光罩车间** (Intel、Samsung、TSMC 内部、Micron 内部) | 自营 | 分布于各 IDM | 主要在最前沿 | 仅在内供层竞争——但随资本成本上升，外包比重在增加 |
+
+*PLAB 10-K 之外的竞争对手资料来源：[野村大中华半导体报告 p. 18-30 与 p. 38-39](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)；每家竞争对手的自有公司网站（链接见 4.3-4.5）；Yole Group 2024 Photomask Industry Report（需订阅 — 通过野村报告引用）。*
+
+### Photronics 的竞争优势
+
+1. **美国总部最大商用光罩供应商，地理布局最多元。** 5 区域 11 厂——无其他商用供应商能匹配这一多元度。Toppan 与 DNP 是日本总部，海外布局较小；Hoya 集中在日本与韩国。*分析师观点：* 这是 Photronics 单一最大的结构性护城河。
+2. **日本以外的主流节点领导地位。** *分析师观点：* 在 28nm-当量以下的主流 IC 光罩，Photronics 被业内普遍视为日本以外领先的非自营供应商之一 ([野村行业报告关于商用光罩竞争格局的讨论, p. 18-30](/Users/x/projects/financial_agent/reports/sector/半导体材料.md))。10-K 仅确认主流节点是"目前批量制造设计的主体"，且 Photronics 在该节点"提供完整光罩线" ([PLAB 10-K FY25, Item 1 Industry](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。
+3. **韩国 FPD 研发中心 → AMOLED 领先定位。** Cheonan 工厂地理与客户相邻 Samsung Display 与 LG Display，结合 2026-03 先进光罩写入机交付，使 Photronics 定位于多年期 AMOLED IT 面板周期。
+4. **中国大陆 DNP 合资带来对中国半导体需求的特殊准入。** SMIC、华虹、晶合及中国本土 IC 供应链在出口管制压力下，持续将供应链从美国管控线路上转移；Photronics 的 PDMCX 在美财务上并表但运营上是中国本土供应商——一个有用的混合身份。
+5. **资本纪律与股东回报。** 回购计划规模合宜（FY25 已部署 $97.4M，约市值 3.2% 单年返还）且资产负债表干净（净现金，无长期债务）— 在光罩同业中罕见 ([PLAB 10-K FY25, Item 5](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。
+
+### Photronics 的竞争劣势
+
+1. **EUV 不在场是结构性的。** 从 DUV 到 EUV 在最前沿的过渡——目前按 *层数计* 约 5% 的行业光罩需求，但按 *价值计* 占高端 IC 光罩约 25%+ — 是 Photronics 不会捕捉到的三个主要行业趋势之一。*分析师观点：* 只要 Toppan、DNP、Hoya 继续主导 EUV 光罩供应，Photronics 就被锁在最高 ASP 层级的价值池之外。
+2. **中国地缘政治压力。** PDMCX 为 Photronics / DNP 50.01% / 49.99% — 但每一家在中国供应半导体光罩的工厂都是 美方出口管制（限制 Photronics 输出先进设备或技术到那里）与中方对冲性产业政策（偏向 Newway / Qingyi / Tekscend / SMIC 内部）的潜在目标。该风险是双向的。
+3. **客户集中度稳定在 top-2 ≥29%。** 虽然 top-5 = 50% 低于本项目的"高严重度"阈值，top-2 = 29%（top-1 每年微升）已具实质意义。客户 A（按分析师推断可能是 TSMC 或 Samsung）的流失会造成实质性营收错位。
+4. **capex 脉冲带来的运营杠杆。** FY26 $330M capex 指引使前一年翻倍、是 FY23/24 的三倍——若高端 IC 与 FPD 放量节奏慢于 capex 隐含，FY26 / FY27 自由现金流被压缩，回购可能需要放缓。
+
+## 8. 市场机会 (TAM)
+
+### TAM 与 SAM
+
+2024 年 **全球光罩 TAM** 约 **USD 98 亿** ([SEMI 年度光罩材料报告，经野村行业报告 p. 18-30 引用](/Users/x/projects/financial_agent/reports/sector/半导体材料.md))。在该 TAM 内，Photronics 的 **可寻址市场 (SAM)** — 商用供给部分（排除自营约 35%）— 约 **USD 63 亿**。商用 SAM 中，商用 IC 子市场约 $4.0B（不含 EUV，EUV 给自营 + 三大 EUV 商用合计另增约 $0.5B-$1B），商用 FPD 子市场约 $2.3B。所以 Photronics 的可寻址市场大致如下：
+
+- **IC 商用 SAM（≤28nm DUV + 主流）**：约 $4.0B
+- **FPD 商用 SAM（G10.5+, AMOLED, LTPS + 主流）**：约 $2.3B
+- **Photronics 总 SAM**：约 $6.3B
+
+Photronics FY25 营收 $849M 意味 **全球 SAM 份额约 13%**，是全球前三大商用供应商之一，也是美国总部最大玩家。（Toppan 与 DNP 按总光罩营收均较大，但其自营/商用与 IC/FPD 拆分不同。）
+
+### SOM 与下一美元来自哪里
+
+Photronics 的 **可实现市场 (SOM)** — 它能通过 FY26 capex 周期及之后切实成长进入的部分 — 集中于四块：
+
+1. **高端 IC（次 28nm DUV）的流片密度。** 即便没有 EUV 准入，先进节点设计中 EUV 关键层之下的可寻址层数仍庞大。随着 TSMC 代工客户的 AI 驱动设计刷新节奏加快，Photronics 高端 IC 线应跟随流片速度。*分析师观点：* 这是单一最具防御性的增长杠杆——2028 年前实现高个位数至低双位数 CAGR 可期。
+2. **韩国 Cheonan FPD AMOLED 放量。** 2026-03 光罩写入机交付直接证明 Photronics 预期在新一代 AMOLED IT 面板设计周期中拿到可观份额 ([Photronics 新闻稿 2026-03-31](https://www.globenewswire.com/news-release/2026/03/31/3265409/0/en/Photronics-Receives-Advanced-Mask-Writer-Expanding-AMOLED-Leadership.html))。
+3. **中国本土代工厂扩建。** 随 SMIC、华虹、晶合继续扩张成熟节点产能服务中国本土 IC 供应链（BCD 功率、MCU、图像传感器、显示驱动 IC），Photronics 厦门与合肥工厂处于良好位置——尤其在美国境内光罩直接供给面临出口管制摩擦的情境下。野村锚定行业报告预测 TSMC 风格的"本土供应链再平衡"对中国本土厂同样适用，对非美总部光罩供应商意义重大 ([野村大中华半导体报告 p. 12-14](/Users/x/projects/financial_agent/reports/sector/半导体材料.md))。
+4. **美国本土代工厂建设（TSMC 亚利桑那、Samsung 德州、Intel 俄亥俄规划中）。** 2026-2030 新增美国本土晶圆厂产能需要本地光罩供给——而 Photronics 的三家美国工厂（Boise、Brookfield、Allen）是 Toppan 与 DNP 较窄美国布局之外最合理的商用供应商。
+
+![Photronics capex 轨迹 FY21–FY26E](../../charts/photronics_capex.png)
+
+*数据来源：capex 数字来自 [PLAB 10-K FY25 Item 7 Liquidity and Capital Resources](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)（capex 支付为 2025、2024、2023 年分别 $188.1M、$130.9M、$131.3M）；FY21 / FY22 数字来自往年 10-K 经 [Stockanalysis.com PLAB 财务](https://stockanalysis.com/stocks/plab/financials/) 现金流页面；FY26E 来自 [PLAB 10-K FY25 Item 1A](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm) 与 [Item 7](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm) 中"约 $330M"指引。*
+
+capex 轨迹是管理层 TAM 捕捉立场的可见信号：FY26 的 $330M 是 FY23/FY24 基准的 2.5 倍，是公司自 2018-2019 中国合资建设以来披露的最大投资周期。capex 集中于：
+- **高端 IC 支援** — 额外多束写入机、检测设备、修补设备，用于 ≤28nm DUV；
+- **寿命到期光罩写入系统替换** 至老厂；
+- **AMOLED FPD 产能** 至韩国 Cheonan，与 2026-03 写入机交付一致。
+
+自由现金流将在 FY26 实质性收缩——可能轻微为负，或对照 FY23-FY25 平均经营现金流约 $220M/年走平——但回购计划（FY25 末剩余授权约 $28M）暗示管理层对 FY27 吞吐量与组合回报有信心。
+
+### TAM 增长与 Photronics 相对份额
+
+若全球光罩 TAM 至 2030 年以约 5-6% CAGR 增长（Yole / SEMI 共识中位数），可寻址市场从 2024 年 $9.8B 扩张至 2030 年约 $13.5B。Photronics 的 SAM 按比例增长至约 $8.5B。若 Photronics 保持约 13% 全球 SAM 份额，意味 2030 年营收潜力约 $1.1B-$1.2B — 较 FY25 $849M 提升 30%+ —— 通过中个位数有机增长可实现。若 Photronics 从中国本土扩展 + AMOLED FPD 获取份额（2030 年 SAM 适度提升 +2 至 +3 个百分点），营收可达约 $1.4B-$1.5B。**不对称上行情景是中国 + AMOLED 建设；不对称下行情景是 EUV 持续吞噬高端 IC 光罩价值占比**，将在 Photronics 不能切实切入 EUV 的情况下侵蚀其可寻址份额。
