@@ -262,3 +262,67 @@ graph LR
 - **2026 Q2 (计划中)** — 机器人视觉相机模组量产启动 (CFO 在 Q1 2026 业绩会议中确认: ["机器人视觉" 将于 2026 年 Q2 进入量产](https://en.sedaily.com/finance/2026/04/27/lg-innotek-q1-operating-profit-jumps-136-percent-on-chip))。
 
 ---
+
+## 5. 客户与上市策略
+
+**Apple 客户集中度。** 据 FY2025 DART 年度报告 (II §4-1 라):
+
+> "당기 연결실체 총 수익 중 매출액 10% 이상을 차지하는 단일 고객에 대한 매출은 광학/패키지 등의 매출 17,748,770백만원이며 매출액 기준 상위 10개 고객으로의 매출은 전체 매출의 87%를 구성합니다。" *(中文释义: "本期合并实体总收入中, 占营收 10% 以上的单一客户销售额 [光学 / 封装等] 为 KRW 17,748,770 百万, 按营收计前 10 大客户合计占总营收的 87%。")*
+> 资料来源: [LG Innotek 2025 사업보고서, II §4-1 라](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)。
+
+**因此第一大客户占 FY2025 营收 81.1%** (KRW 17.75 万亿 / KRW 21.90 万亿)。LGIT 未在披露中点名该客户, 但所有公开媒体引用均把它指认为 **Apple Inc.** —— 包括近期 Tech Times / Seoul Economic Daily / KED Global, 以及历史上 AppleInsider / Patently Apple 追溯到早期 iPhone 时代的报道 ([Tech Times, 2026-05-15](https://www.techtimes.com/articles/316690/20260515/lg-innotek-targets-us-ai-chip-clients-substrate-revenue-climbs-16.htm) 明确指出 "Apple 依赖 (83% of revenue)"; [KED Global, 2024-02-14](https://www.kedglobal.com/electronics/newsView/ked202402140004) 称 "LG Innotek 的功课: 降低对 Apple 的依赖"; [The Elec, 2025-09-26](https://www.thelec.net/news/articleView.html?idxno=5447))。在 KRW 17.75 万亿总额中, 绝大多数是相机模组营收 (光学解决方案), 较小部分是 RF-SiP / FC-CSP 流向 Apple 自研芯片的基板营收 (封装解决方案) —— DART 披露中明文写作 "광학/패키지" (光学 / 封装)。
+
+![FY2025 客户集中度](../../charts/lginnotek_customer_concentration.png)
+*资料来源: [DART 사업보고서 50 期, II §4-1 라](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270)。第一大客户占比 = KRW 17,748,770 mn ÷ KRW 21,896,603 mn = 81.1%; 按披露前 10 大客户合计 87%, 即客户 #2–10 合计约 5.9%。*
+
+**客户分群与其他具名账户。** Apple 之外, 具名客户与潜在客户包括:
+- **Apple Inc. (NASDAQ:AAPL)** — 光学解决方案 (相机模组) + 封装解决方案 (RF-SiP、FC-CSP, 服务 A 系列与 M 系列自研硅芯片)。按披露估算占总营收 81%。
+- **LG Display Co. (KRX:034220)** — Tape Substrate / COF / 光罩客户 (集团内, 因 LG Display 同属 LG 集团且按 Wikipedia ([访问于 2026-05](https://en.wikipedia.org/wiki/LG_Innotek)) 持有 LG Innotek 23.1% 股权)。备注: 按 DART 关联公司名单 (X §1), LG Display 列在 LG 集团关联公司; LG Display 不动产租赁合约 (2022-12 签订, 金额未披露) 列入 DART 主要合约 ([II §6-1](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270))。
+- **大中华区显示器公司 (BOE 京东方、Tianma 天马)** — Tape Substrate / COF 客户, 据公司叙述 ([II §1 (2)](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270))。
+- **Intel (NASDAQ:INTC)** — FC-BGA 潜在客户, 据 Digitimes / Tech Times 报道 ([Tech Times, 2026-05-15](https://www.techtimes.com/articles/316690/20260515/lg-innotek-targets-us-ai-chip-clients-substrate-revenue-climbs-16.htm); [Digitimes, 2026-05-21 (付费墙)](https://www.digitimes.com/news/a20260521PD204/lg-innotek-substrate-intel-operating-profit-technology.html))。
+- **Amazon (Project Kuiper 卫星芯片组)** — FC-BGA 潜在客户, 来源同上。
+- **Boston Dynamics / Figure AI** — FC-BGA 潜在客户 (机器人芯片组), 来源同上。
+- **德国 / 韩国 / 美国整车 OEM (现代-起亚、GM、Mercedes-Benz)** — 车载 LED 照明与马达 / 传感器客户 (车载解决方案); 2025 年末订单存量 KRW 19.2 万亿。
+
+```mermaid
+pie title FY2025 营收构成按客户 (估算)
+    "Apple (光学 + 封装)" : 81
+    "LG Display + 大中华区显示器" : 6
+    "汽车 Tier-1 (车载)" : 8
+    "其他 (零散基板 + 光罩)" : 5
+```
+
+**分销 / 销售策略 (DART §4-1 다):** 公司明确把策略描述为 "通过战略合作进行客户定制化差异化", 即直接销售、客户团队主导、多年认证驱动的合约销售。付款条件: 国内 = 现金 / 赊销; 出口 = 信用证、电汇; 国际贸易术语 = FOB / CIF / DAP / DDP ([DART 年度报告, II §4-1 나-다](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270))。
+
+**客户集中度结论: 重大风险。** 按项目分类标准, **第一客户 > 20% = 重大; 第一客户 > 30% = 高; 第一客户 = 81% 意味着集中度已达结构性上限**。三年披露历史可用 (以光学解决方案营收作为 Apple 营收代理): FY2023 KRW 17.29 万亿、FY2024 KRW 17.80 万亿、FY2025 KRW 18.32 万亿 —— Apple 营收尽管面临 ASP 杀价仍同比增长中个位数 %, 因为 Apple 在每部手机上承接了 LGIT 更多内容 (折叠变焦、3D ToF)。因此绝对集中度自 2023 年以来稳定, 但占比因其他两个分部停滞而走高。风险不在于 Apple 停止采购 —— Apple 需要 LGIT 的产能 —— 而在于 Apple 结构性地分散采购 (具体指折叠变焦 OIS 份额由 LGIT 流向 Jahwa / ICT, 如 iPhone 17 vs iPhone 15 已经发生的那样), 长期压低 LGIT 相机模组毛利。
+
+---
+
+## 6. 行业概览
+
+LG Innotek 运营于四个迥异的行业交汇处 —— 移动相机模组、半导体封装基板、显示器电子零部件、汽车电子 —— 每个行业有自己的规模、增长动力与供应结构。各分部经济上互不相干, 但通过 LGIT 共享的制造规模、材料科学深度、韩国产业政策定位而联系起来。
+
+**行业 1 — 移动相机模组。** 按行业研究, 全球移动相机模组市场 2025 年规模约 **USD 380–420 亿**, 2025–2030 年 CAGR 约 4% ([Mordor Intelligence 相机模组报告, 访问于 2026-05](https://www.mordorintelligence.com/industry-reports/camera-module-market); [Vision Research Reports CCM 市场表, 访问于 2026-05](https://www.visionresearchreports.com/table-of-content/2492))。营收增长结构上较慢, 因为智能手机单位出货量已在约 12 亿台 / 年的水平上趋平 —— 每一美元相机模组增长都来自 ASP 而非单位。ASP 增长依赖功能升级: 3D ToF、潜望式 / 折叠变焦、更大传感器、更高 OIS 规格。行业结构性集中: LG Innotek、舜宇光学、Samsung Electro-Mechanics、Foxconn-Sharp 以及三家中国二线 (欧菲光、丘钛科技、信利光电) 合计控制约 70-80% 供应。
+
+**行业 2 — 半导体封装基板 (FC-BGA / FC-CSP / RF-SiP)。** 按行业研究, 全球 ABF (Ajinomoto Build-up Film) 基板 (FC-BGA) 市场 2025 年规模约 **USD 53 亿**, 前五大 (Unimicron、Ibiden、Nan Ya PCB、Shinko Electric、AT&S/Kinsus) 持有约 74% 市占率 ([Market Growth Reports ABF 基板市场, 访问于 2026-05](https://www.marketgrowthreports.com/market-reports/abf-substrate-fc-bga-market-107527); [Tech Times, 2026-05-15](https://www.techtimes.com/articles/316690/20260515/lg-innotek-targets-us-ai-chip-clients-substrate-revenue-climbs-16.htm); [WonderfulPCB ABF 制造商, 访问于 2026-05](https://www.wonderfulpcb.com/blog/top-abf-substrate-manufacturers-and-market-leaders/))。市场至 2030 年 CAGR 约 10–15%, 由 AI 加速器出货量与服务器 CPU 复杂度驱动, 但瓶颈是 **产能而非需求** —— 主要厂商满负荷, 新增产能从开始到认证完成需要 3–4 年才能商业放量。这是 LG Innotek 后来者 FC-BGA 策略具有商业牵引力的结构性原因。广义 IC 封装基板市场 (含 FC-CSP 与 RF-SiP) 2025 年规模约 **USD 170–200 亿**, 集中度类似 ([Mordor Intelligence 高端 IC 封装基板市场, 访问于 2026-05](https://www.mordorintelligence.com/industry-reports/advanced-ic-substrates-market))。野村 Greater China Semi 锚定报告把全球半导体材料 2025 年规模置于 USD 800 亿, 其中封装材料约 40%, 基板是封装材料最大的子类 ([Nomura Greater China Semi 锚定报告, 2026-05-21, p. 18-19 (分析师手稿 — 见项目内行业概览)](/Users/x/projects/financial_agent/reports/sector/半导体材料.md))。
+
+**行业 3 — 显示器电子零部件 (光罩、Tape Substrate、OLED)。** 全球显示器光罩市场 2025 年规模约 **USD 10–20 亿**, 集中于 Toppan (日本)、Photronics (美国)、Hoya (日本)、DNP (日本) 与 LG Innotek ([Valuates Reports 光罩市场, 访问于 2026-05](https://reports.valuates.com/market-reports/QYRE-Auto-2Q15020/global-photomask-for-semiconductor-chip))。市场随 OLED 面板尺寸扩大与像素密度提升而稳定中个位数 % 增长。COF / Tape Substrate 市场规模类似 (USD 10–20 亿), 与 LCD / OLED 显示器驱动 IC 出货量挂钩。
+
+**行业 4 — 汽车电子。** LGIT 范围内 (马达、传感器、LED 照明、功率模组) 全球车用电子市场 2025 年规模约 **USD 1,000 + 亿**, 由 EV 渗透率、单车 ADAS 内容、LED / 矩阵大灯转型驱动, 高个位数 % 增长。市场高度碎片化, 跨 Tier-1 老牌 (Bosch、Continental、Denso、Magna、ZF、Aisin)、韩国专业商 (LG 集团、Samsung Electro-Mechanics、Mobis) 与快速崛起的中国厂商。
+
+**关键行业趋势与驱动因素 (未来 24 个月):**
+1. **AI 基础设施 capex 超级周期。** 按野村, TSMC 2027F capex 约 USD 700 亿, 全球超大规模数据中心 AI capex 总额 USD 3,000+ 亿, 拉动基板 / 封装需求。FC-BGA 行业历史上首次出现多年供应能见度。
+2. **iPhone 单机相机内容。** Apple 在 2026–28 年向 iPhone 18 Pro 加入可变光圈、更高像素主传感器、Vision Pro 衍生 3D 感测扩散至主流 iPhone。过去五年每部手机相机模组 ASP 已近乎翻倍 —— LGIT 捕获之。
+3. **Apple 供应商多元化。** Apple 在每个主要零部件位置上结构性增加二 / 三货源。ICT 与 Jahwa Electronics 在 iPhone 17 上抢走 LGIT 的折叠变焦 OIS 份额 ([The Elec, 2025-09-26](https://www.thelec.net/news/articleView.html?idxno=5447)); 舜宇光学与立讯加入 iPhone 18 相机模组供应 ([MacRumors, 2026-04-16](https://www.macrumors.com/2026/04/16/iphone-18-pro-variable-aperture-camera-production/))。
+4. **OLED 显示器扩张。** 显示器光罩与 COF 增长与 LG Display、Samsung Display、BOE、Tianma 的 OLED 产能扩张挂钩。DART 申报明确把 POLED 营收扩大列为 2025 年增长驱动 ([II §1 (2)](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270))。
+5. **EV 电子平台整合。** 车载 LED 照明与 BLDC 马达需求随 EV 渗透率与 ADAS 内容增长。随着美中脱钩收紧, 韩国整车 OEM (现代-起亚) 与美国 OEM (GM) 越来越倾向选择韩国 Tier-2 零部件供应商。
+
+**监管环境。** LG Innotek 在韩国监管负担较低 —— 韩国产业通商资源部 (MOTIE) 不对电子零部件企业实施其他行业 (制药 / 金融科技级) 的审批周期。两个宏观监管变量起约束作用: (a) **美国对华先进半导体出口管制** (这在结构上有利于韩国 FC-BGA 厂商对接美国芯片企业); (b) **韩国围绕 iPhone 供应链的贸易政策** —— 即韩国在 IRA / CHIPS 法案下与美国的双边关系是否带来额外补贴利好。迄今 LG Innotek 是这些政策的受益者而非受害者。2024 年韩国 K-Chips 法案明确将 FC-BGA / 先进封装投资纳入税收抵免范围, 帮助资助龟尾 4 厂梦工厂扩建 ([韩国政府政策, 转引自 PR Newswire, 2025-04-30](https://www.prnewswire.com/apac/news-releases/lg-innotek-to-build-fc-bga-into-700-million-usd-business-by-2030-with-its-state-of-the-art-dream-factory-302450934.html))。
+
+**行业结构 / 供需动态:**
+- **买方** — Apple (单一买方占 80% + 营收) 议价能力极强; 汽车 Tier-1 议价均衡 (多卖家多买家); FC-BGA AI 客户当前议价能力偏弱 (产能稀缺超过供应水平)。
+- **供方** — Sony / STMicro (图像传感器)、Largan / Genius (镜头)、Alps / Mitsumi (驱动器) 是 LGIT 相机模组的集中供应商; LGIT 在光学上游议价能力有限。基板原材料 (FCCL、铜箔、ABF、味之素薄膜、玻璃布) 集中在日本, 这对封装解决方案的扩产构成供应链风险。
+- **替代品** — 相机模组面临零技术替代 (每部手机都需要相机); FC-BGA 面临新兴玻璃基板威胁 (按野村行业概览 2027–28 年量产, 但博通独家直到那时 ([Nomura Greater China Semi 锚定报告 p. 85](/Users/x/projects/financial_agent/reports/sector/半导体材料.md))); 光罩在 OLED 时间窗口内无替代风险。
+- **进入门槛** — 相机模组高 (Apple 级认证需 3–5 年 + 工装投资 + 洁净厂房建造); FC-BGA 极高 (10 年认证 + 单一晶圆厂 USD 10 亿 capex); 光罩中等 (日 / 美老牌牢固, 但成熟玩家可守); 车载低 (许多小 Tier-1 候选)。
+
+---
