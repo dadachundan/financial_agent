@@ -294,3 +294,109 @@ CMP polishing pads are not on US export-control lists for semiconductors equipme
 There is no commercially viable **non-CMP** way to planarise a sub-3-nm wafer — the alternative (etchback + spin-on glass) was abandoned in the 1990s because it could not deliver the cross-wafer uniformity that modern lithography requires. The substitute risk for Fujibo is therefore **intra-CMP**: alternative pad chemistries (silica-impregnated, copper-doped, etc.) or alternative pad architectures (multi-layer, micro-textured surfaces) being commercialised by DuPont's VisionPad™ / Ikonic™ or by Hubei Dinglong's DL-720 series. So far Fujibo has held its specialty-grade niches through continuous incremental tuning, but the pace of new-pad-platform launches at DuPont (Ikonic™ explicitly targets sub-28 nm advanced processes) is a structural threat that Fujibo addresses via the Taiwan R&D centre buildout.
 
 ---
+
+## 7. Competitive Landscape
+
+The CMP-pad competitive landscape is unusual: it is **deeply concentrated at the top of revenue share but fragmented in technology** — there are essentially seven serious global suppliers, and each one occupies a different defensible niche by customer geography, pad family, and node tranche. Fujibo's competitive position is defined less by where it competes head-to-head with DuPont's IC1000™ and more by the **specialty-grade soft-pad niche in advanced-node CMP** plus its **Japanese-customer-preference inertia**.
+
+### 7.1 — Direct competitors (named, with sources)
+
+**(a) DuPont (NYSE:DD) — the global standard-setter.** DuPont, via its inherited Rodel franchise (acquired 1999 by Rohm & Haas, then absorbed by Dow Chemical and now under DuPont's Electronics & Industrial division), is the de facto standard supplier — *"DuPont is the leading player in the CMP pads market, offering a diverse range of products such as IC1000 and IC1400"* ([Cognitive Market Research — CMP Pad market](https://www.cognitivemarketresearch.com/cmp-pad-market-report)). The **IC1000™ Series** is the industry-standard hard pad; **VisionPad™** is the next-gen advanced-node platform; **Ikonic™** is the platform "*targeting advanced processes below 28 nm node*" ([NITTA DuPont — PolishingPad product page](https://www.nittadupont.co.jp/en/category-products/pad)). DuPont's Japan footprint runs through **NITTA DuPont Incorporated**, a 1983 joint venture between Nitta Corporation and Rodel (now DuPont). The DuPont organisation explicitly *"works closely with teams at sites in Taiwan, Korea, and their joint venture—NITTA DuPont Inc.—in Japan to develop, scale, and supply materials"* ([DuPont — Materials for CMP](https://www.dupont.com/electronics-industrial/semiconductor-cmp.html)).
+
+In May 2025, DuPont announced the planned spin-off of its Electronics business into a new public company, **Qnity Electronics Inc.** (Form 10-12B filed with SEC), which will house the CMP-pad business — the spin will likely complete in 2026 and creates a pure-play comparable to Fujibo for the first time ([Qnity Electronics Form 10-12B/A, SEC EDGAR](https://www.sec.gov/Archives/edgar/data/0002058873/000119312525215621/d942851dex211.htm)). *Analyst view:* DuPont's volume scale, breadth of slurry / pad / cleaner co-product offer, and decades of qualified-supplier inertia make it the most defended pad incumbent globally; Fujibo wins against DuPont only on specialty grades and on customers actively seeking a second-source.
+
+**(b) Entegris / CMC Materials (NASDAQ:ENTG) — #2 globally, slurry-strong but pad-weak.** Entegris acquired Cabot Microelectronics ("CMC Materials") in 2022 for $6.5 bn, vaulting to #2 in the broad CMP consumables market — *"following its acquisition of Cabot Microelectronics (CMC Materials), Entegris solidified its second-place ranking with an estimated $2.2 billion in revenue"* ([Dr. Robert Castellano — DuPont takes #1 in semi consumables, 2025](https://drrobertcastellano.substack.com/p/dupont-takes-1-position-in-semiconductor)). However, *"for the pad segment, DuPont continues to be the dominant supplier, representing over 50% of the market"* — Entegris' #2 is largely driven by slurry (where Cabot brought the legacy SemiSperse / Q8000 series); their pad business is smaller and concentrated in specialty grades inherited via CMC. *Analyst view:* Entegris/CMC is not the binding competitive threat to Fujibo on pads — they compete more aggressively on slurry.
+
+**(c) Hubei Dinglong (SZSE:300054) — the Chinese-domestic-substitution challenger.** Dinglong is the most disruptive emerging competitor. They received qualification approval from **SMIC** for the **DL-720 series hard CMP pads at 28 nm and 14 nm logic devices** — *"marking a significant milestone in Chinese domestic CMP consumable qualification and reducing SMIC's supply chain dependence on international pad suppliers"* ([OpenPR — Semiconductor CMP Pad market 2025](https://www.openpr.com/news/4253861/semiconductor-cmp-polishing-pad-latest-market-report-2025)). The Nomura 2026-05-21 semi-materials primer (the sector-overview reference cited in this report's brief) has Dinglong rated **Buy** with a price target raised to **CNY 104** from CNY 42 on a 96× 2027 P/E, reflecting consensus on the localisation tailwind ([reports/sector/半导体材料.md, project-internal sector ref](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/半导体材料.md)). Dinglong's threat is less about taking market share from Fujibo's existing Japanese / Taiwanese / Korean customer slots — where qualified-supplier inertia is strong — and more about absorbing the China market opportunity that would otherwise eventually flow to Fujibo as Chinese fabs scale. *Analyst view:* Dinglong is the binding long-run competitor for Fujibo's mainland-China revenue; for now, Fujibo's mainland share is small and the risk is "opportunity cost" rather than "share loss."
+
+**(d) JSR Micro / JSR Corporation (TSE:4185) — Japanese co-incumbent, slurry-dominant.** *"JSR Micro, the electronic materials subsidiary of JSR Corporation, holds approximately 8% of the global CMP pads market, with a concentrated focus on advanced logic and memory applications in Japan, South Korea, and Taiwan"* ([Cognitive Market Research](https://www.cognitivemarketresearch.com/cmp-pad-market-report); [JSR Micro — Advanced Cleans and CMP](https://www.jsrmicro.com/electronic-materials/advanced-cleans-cmp)). JSR is the closest analog to Fujibo in terms of footprint and customer base, but unlike Fujibo, JSR is much larger overall (revenue ~¥430 bn, dominated by photoresist) and is currently being taken private by JIC (the Japanese government-backed buyout fund), creating ownership-overhang complexity in the medium term. *Analyst view:* JSR competes head-to-head with Fujibo at JP / TW / KR advanced-logic accounts and has the advantage of bundled-supply leverage from the photoresist and slurry franchises; Fujibo competes on pad specialty grades + Japanese-customer preference.
+
+**(e) 3M (NYSE:MMM).** 3M sells a smaller CMP-pad portfolio largely via its Electronic Materials business, plus the dominant CMP **conditioner (diamond disc)** business that complements pad sales. 3M is a smaller pad competitor in revenue terms (1-3% global share) but a deep-pocketed strategic incumbent with cross-product leverage. *Analyst view:* not the binding competitive threat to Fujibo on pads.
+
+**(f) SKC + SKC Solmics (KRX:011790).** Korean specialty-materials maker; supplies pads to the Samsung / SK Hynix wafer-fab cluster from Korea. Smaller scale than Fujibo, but defensible local position in the Korea memory cluster.
+
+**(g) Long tail — FNS Tech, TWI, IVT Technologies, Tech-Polishing (Taiwan), and several mainland-Chinese pad makers (e.g., 安集 Anji Microelectronics' adjacent slurry / pad ambitions).** Anji is more relevant as a slurry competitor but is one of several Chinese names with ambition to expand pad share alongside Dinglong ([Anji Microelectronics SSE:688019](http://quote.eastmoney.com/sh688019.html)).
+
+### 7.2 — Fujibo's positioning vs the field
+
+Fujibo's specific structural advantages, ranked by load-bearing weight:
+
+1. **Specialty-grade soft pad leadership.** The company's claim — *"captured the top market share in the mainstay field of advanced process soft pads"* — gives Fujibo a defensible specialty-grade niche that is structurally growing as advanced nodes need more soft-pad finishing passes ([Integrated Report 2024, p. 18](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)). This is the strongest single competitive moat in the franchise. *Analyst view:* this is the differentiator that justifies the Fujibo investment thesis vs the DuPont incumbency.
+
+2. **Five plants + Taiwan R&D footprint.** Fujibo has the highest pad-making manufacturing footprint among specialty competitors ([Fujibo Polishing Pad Business overview](https://www.fujibo.co.jp/en/division/polishingpad/)). The Tainan plant + Miaoli R&D centre give Fujibo a tighter physical proximity to the Taiwan customer cluster than any non-DuPont, non-3M competitor.
+
+3. **Japanese-customer preference + qualified-supplier inertia.** Japanese fabs (Kioxia, Renesas), Japanese silicon-wafer makers (Shin-Etsu, SUMCO), and Japanese hard-disk substrate makers prefer Japanese suppliers in second-source slot decisions — the "buy Japan" pattern is real and durable inside the Japanese supply chain ([Nomura semi-materials primer, 2026-05-21, project-internal reference](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/半导体材料.md)).
+
+4. **Holdings-level balance-sheet over-capitalisation.** Net cash + 71% equity ratio means Fujibo can invest counter-cyclically through downturns and outspend smaller second-tier competitors — relevant when the Miaoli R&D centre ¥5.7 bn cheque (~$36 mm) would be unthinkable for a smaller Chinese / Korean second-tier competitor ([Yuho 2025, p. 4 — 連結経営指標等](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)).
+
+Fujibo's specific structural vulnerabilities:
+
+1. **Scale disadvantage vs DuPont + Entegris.** DuPont sells multiple billion-dollar pad portfolios; Fujibo sells ~$120 mm (FY3/25). On any pure-economics R&D comparison, the volume incumbent can amortise more application engineers, more pad-platform launches, and more customer-trial cycles.
+
+2. **No bundled-supply leverage.** DuPont, Entegris, JSR, and 3M sell pads alongside slurries / cleaning chemistries / conditioners / photoresist — Fujibo is a pure-play pad maker without complementary CMP consumables. This makes Fujibo a "small-line-item" supplier and removes cross-product negotiation leverage.
+
+3. **Dinglong's Chinese-localisation tailwind.** Dinglong is gaining qualifications inside the Chinese fab cluster faster than Fujibo can reach Chinese customers, and the policy direction (CN substitution push) compounds this.
+
+4. **Apparel + Other drag on group multiple.** Even with the polishing-pad business driving the consolidated story, ~25% of group sales come from Lifestyle Apparel and Other — both of which are zero-growth or negative-OP businesses that compress the consolidated multiple vs a hypothetical pure-play pad spinoff.
+
+### 7.3 — Positioning chart
+
+```mermaid
+quadrantChart
+    title CMP Pad Competitive Positioning — Technology Breadth vs Scale
+    x-axis "Narrow specialty" --> "Broad pad portfolio"
+    y-axis "Small-volume specialist" --> "Large-volume incumbent"
+    quadrant-1 "Scale + breadth"
+    quadrant-2 "Volume specialists"
+    quadrant-3 "Niche players"
+    quadrant-4 "Specialty + niche"
+    "DuPont (incl. NITTA DuPont)": [0.85, 0.95]
+    "Entegris/CMC": [0.7, 0.7]
+    "JSR Micro": [0.55, 0.6]
+    "Fujibo": [0.5, 0.55]
+    "Hubei Dinglong": [0.7, 0.55]
+    "3M": [0.45, 0.55]
+    "SKC": [0.35, 0.4]
+    "FNS Tech / TWI / Tech-Polishing": [0.2, 0.3]
+```
+
+![Fujibo vs peers — TTM P/E](../../charts/fujibo_peer_pe.png)
+
+Source: Yahoo Finance + stockanalysis.com peer pages, May 2026 — see [stockanalysis.com Fujibo 3104.T](https://stockanalysis.com/quote/tyo/3104/), [JSR 4185.T](https://stockanalysis.com/quote/tyo/4185/), [Entegris ENTG](https://stockanalysis.com/stocks/entg/), [DuPont DD](https://stockanalysis.com/stocks/dd/).
+
+---
+
+## 8. Market Opportunity (TAM)
+
+### 8.1 — Top-down sizing
+
+Global CMP polishing-pad TAM:
+
+- **2024 estimated market size: ~$895 mm** (Cognitive Market Research baseline). Lower-bound from Mordor Intelligence: ~$850 mm. Higher-bound from broader-classification TECHCET (which can include some lapping pads): ~$1.1 bn. *Built on [Cognitive Market Research CMP Pad market report](https://www.cognitivemarketresearch.com/cmp-pad-market-report) + [Mordor Intelligence CMP pad market](https://www.mordorintelligence.com/industry-reports/chemical-mechanical-polishing-pad-market) + [TECHCET CMP forecast 2024](https://techcet.com/semiconductor-cmp-pad-slurry-forecast/).*
+- **2031 forecast TAM: ~$1.3-1.5 bn**, implying a 5-year CAGR of ~5.5-6.5% — moderately above wafer-equipment growth and consistent with the per-wafer-CMP-step-growth driver discussed in §6.
+- **Asia-Pacific share: ~75% (TW + KR + JP + CN combined)**; China alone is the **fastest-growing region at 9.3% CAGR 2024-2030** ([Knowledge Sourcing — semiconductor polishing pad market 2030](https://www.knowledge-sourcing.com/report/semiconductor-polishing-pads-market)).
+
+### 8.2 — Fujibo's SAM / SOM
+
+Fujibo's served addressable market (SAM) is the subset of the global pad TAM accessible to Fujibo's product portfolio + customer footprint:
+
+- **Geographic SAM**: Japan + Taiwan + Korea + the export-accessible portion of US / Europe / SE Asia ≈ ~$700-750 mm of the $895 mm TAM (the China-domestic portion is increasingly closed to Fujibo as Dinglong's qualifications mature).
+- **Product SAM**: Hard-pad CMP (FXA) + soft-pad CMP (Suede) + silicon-wafer first-polish (FP) + LCD/photomask (FX) + wafer-mount (Back Pad) — i.e., essentially the entire pad market. Lapping (NEXTILE) is a small adjacency.
+
+Fujibo's **share-of-SAM ≈ 16-17% of SAM** (¥19.3 bn / ~¥120 mm / ($700 × ~0.18)) — a defensible second-tier slot below DuPont's ~50% share but ahead of every non-DuPont, non-Entegris competitor. The implied **SOM upside over the 2025-30 horizon**: if Fujibo holds its 16% SAM share and the SAM grows from ~$700 mm to ~$1.0 bn by 2030 (5-yr CAGR ~7%), then pad-segment revenue rises from ~$120 mm to ~$160 mm — a 30%+ revenue tailwind without any share gain. Add 2-3 ppt of incremental SAM share captured from second-source qualifications inside the Taiwan-Korea cluster (the Miaoli R&D centre's strategic intent), and **the polishing-pad segment could plausibly reach ¥27-30 bn of revenue by FY3/2030** — i.e., the segment alone larger than the entire current group ([Cognitive Market Research forecast + Yuho 2025 segment data](https://www.cognitivemarketresearch.com/cmp-pad-market-report)).
+
+### 8.3 — Cross-checks
+
+The bottoms-up view is consistent with three independent triangulations:
+
+1. **Fujibo's own MTP target (`Zokyo 21-25`) is FY3/26 revenue ¥60 bn, OP ¥10 bn, OP margin 16.7%, ROE ≥10%, ROIC ≥10%** ([Yuho 2025, p. 29 — 中期経営計画目標](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)). The FY3/26 guide is ¥45.4 bn / ¥7.5 bn (after 1H upward revision), well below the MTP target — the MTP was set in 2021 when AI-CMP demand was not yet on management's radar, and the targets were structurally aggressive. The company has not yet articulated a `Zokyo 26-30` follow-on but is expected to disclose at the May 2026 IR Day.
+
+2. **Capex pacing.** FY3/25 group capex was ¥6.1 bn (research-and-pad-heavy), of which ¥3.6 bn went into the polishing-pad business — the highest pad-capex year ever. This is a multi-year build-out commitment that only makes sense if Fujibo's internal SAM-share-and-growth math justifies it ([Yuho 2025, p. 32 — 設備投資](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)).
+
+3. **Industry analyst consensus.** Multiple sell-side semi-materials primers (Nomura, Mizuho, MS Asia) have flagged the CMP-pad sub-sector as one of two or three structurally tailwind-favoured sub-segments inside the semi-materials universe, driven by step-count-growth at advanced nodes + HBM + BPD + SiC ([reports/sector/半导体材料.md — project-internal sector ref](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/半导体材料.md)).
+
+### 8.4 — Penetration strategy
+
+Fujibo's stated penetration strategy is three-pronged: (1) expand soft-pad share at advanced-node CMP customers (the Miaoli centre is the lever), (2) increase hard-pad sales at customers where Fujibo is currently a second-source, and (3) maintain LCD-glass / hard-disk / silicon-wafer share with continuous-improvement product cycles ([Top Message, Fujibo IR](https://www.fujibo.co.jp/en/ir/message/); [Integrated Report 2024, p. 17-18](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)). The Miaoli centre's stated 2027 completion targets a ramp window that aligns with the 2-nm / 1.4-nm node ramp window at TSMC — by design.
+
+---
