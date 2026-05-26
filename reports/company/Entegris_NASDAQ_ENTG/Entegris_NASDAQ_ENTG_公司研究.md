@@ -419,4 +419,121 @@ quadrantChart
 
 3. **EUV 光罩盒业务扩张。** 随着 High-NA EUV 在 TSMC 1.6nm (~2028F 按野村) 量产，EUV 光罩装机基数将明显扩张。Entegris 接近单一供应商的位置直接转化为增量营收，且对应非常高的边际利润率。
 
+## 9. 风险评估
+
+### 公司特定风险
+
+**1. 客户集中度——TSMC（重大）。** TSMC 占 **FY25 净销售 16%**（FY24 16%、FY23 11%——是加速上行的趋势）；top-10 客户集合占 **50%** ([Entegris 2025 10-K, Customer Concentration](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。TSMC 业务流失——无论是 TSMC 提前消化库存、在主要工艺节点认证了竞争对手、或转向结构性内部化——都将直接打击约 $5.1 亿的年化营收。缓冲：关系结构耐久（TSMC 在过去 5 年的份额只增不减），已认证化学品的切换成本极高。突发流失的可能性低；一旦发生，严重性高。
+
+**2. CMC Materials 整合执行（中等）。** 2022-07 交割已过去 3 年多，运营整合大体完成，运行率成本协同（约 $7500 万级）按分部报告基本兑现；但杠杆余韵真实存在——2025 年末长期债务 ~$38.8 亿对应调整后 EBITDA ~$9.2 亿，毛杠杆刚高于 4.0× ([Entegris 2025 10-K, Liquidity](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。缓冲：去杠杆轨迹与管理层计划一致，且 QED + EC + Alliance + PIM 共 ~$14 亿剥离收益加速了债务偿还。
+
+**3. 中国本土替代（高）。** 安集、鼎龙、科百特，以及其它点名的中国对手，正在系统性地针对 Entegris 在中国 mature node 晶圆厂（28nm 以上）的营收。中国占 FY25 员工总数 5%，但海外营收中占有意义的份额。叠加美国出口管制压力，中国晶圆厂被推向本土采购——Entegris 中国营收在 5–7 年的视野下存在结构性风险。缓冲：Entegris 在先进节点（TSMC、三星、SK 海力士、英特尔）的营收基数更大、更具防御性；中国 mature node 损失可以被先进节点增长抵消。
+
+**4. CEO 换届的关键人物依赖（低到中等）。** Bertrand Loy 在 2025-08 卸任 CEO，距其担任该职位已近 13 年；接任的 David Reeder 拥有强 CFO 与代工厂财务背景，但在材料业务层面是新人 ([Entegris 2025 10-K, Executive Officers](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。缓冲：Loy 留任执行董事长，加上分部总裁层面的资深班底——APS 的 Clint Haris、负责战略的 Olivier Blachier、负责技术的 Daniel Woodland。
+
+**5. 老节点 SKU 产品组合的过时风险（中等）。** 随着先进节点逻辑与 HBM 增长快于 mature node，Entegris 老节点耗材（200mm 晶圆产品、老款抛光液 SKU、老款 FOUP 系列）的营收比重下降。一些老 SKU 销量下滑的速度，比新 SKU 上量的速度更快。缓冲：组合整体偏向先进节点增长——Mo 工作流与 EUV 光罩盒是纯先进节点驱动。
+
+**6. 重组执行（低）。** 公司持续在重组（FY25 重组费用 $2900 万，FY24 $2100 万，FY23 约 $300 万级），涉及员工裁员、资产减值、合同退出成本 ([Entegris 2025 10-K, Note — Restructuring](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。缓冲：费用规模相对调整后 EBITDA ~$7 亿较小；这是微调而非大型重组。
+
+### 行业 / 市场风险
+
+**7. 半导体周期风险（高）。** 半导体行业结构性周期性——材料需求跟随晶圆开始量，而晶圆开始量又跟随终端器件出货。2023 年行业下行（Entegris FY23 营收 $35.4 亿 → FY24 $32.4 亿 → FY25 $32.0 亿——其中既有剥离效应也有较广泛的周期穿底）表明营收在下行周期能压缩 10% 以上 ([Entegris 2025 10-K, MD&A — Results of Operations](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。缓冲：耗材为主的组合（相对设备）有一定缓冲；先进节点每片晶圆美元含量大，在单元下行周期中也维持了一定营收韧性。
+
+**8. 中国出口管制 / 地缘政治（高）。** 2022-10 美国 BIS 出口管制规则（以及 2023、2024、2025 的更新）限制向被列名中国晶圆厂销售先进节点半导体制造技术。Entegris 直面无法向中国先进节点晶圆厂销售某些先进节点耗材的下行 ([Entegris 2025 10-K, Risk Factors — Export Controls](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。缓冲：公司已把中国暴露重平衡到 mature node 晶圆厂（受管制约束较弱）；中国占员工 5% 与适中比例的海外营收。
+
+**9. 关税升级（中等）。** 美国 2025 年关税堆栈在全球供应链增加分层成本压力——从美国生产基地向海外晶圆厂（或反向）流转的材料面临关税风险。缓冲：Entegris 的区域生产策略（CMP 抛光液在台湾、FOUP 在韩国与明尼苏达、过滤器在日本与马萨诸塞）减少了跨境流量 ([Entegris 2025 10-K, Item 2 Properties](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。
+
+**10. PFAS 监管（中等）。** Entegris 许多过滤膜是 PFA 基础的氟聚合物；广泛 PFAS 限制将迫使配方迁移。公司专门点出 *"PFAS-containing products incorporated into our products may negatively impact our supply chain"* ([Entegris 2025 10-K, Risk Factors — PFAS](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。缓冲：半导体工艺 PFAS 应用迄今被 EPA 与欧盟监管机构视为豁免的必要用途。
+
+### 财务风险
+
+**11. 杠杆与再融资风险（中等）。** 2025 年末长期债务 ~$38.8 亿（较 2022 年 CMC 收购后 $49.3 亿峰值下降）对应 FY25 调整后 EBITDA 隐含毛杠杆刚高于 4.0× ([Entegris 2025 10-K, Liquidity](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。债务服务消耗有意义的自由现金流；按较高利率再融资将压缩盈余。缓冲：去杠杆轨迹按管理层交易前计划推进；Term Loan B 已于 2024 年以较好利率完成再融资。
+
+**12. 估值 / 倍数压缩风险（中到高）。** TTM P/E 77.7×、远期 P/E 35.3×、EV/EBITDA 27.2× 都明显高于工业气体同业中位数（LIN 30×、APD 20×、AI 25×）与广义材料板块中位数 ([Stockanalysis.com ENTG statistics, 2026-05](https://stockanalysis.com/stocks/entg/statistics/))。股价在过去 12 个月因板块整体 AI 重估上涨约 87%；单一季度增长低于预期、主要客户挫折、或板块情绪反转，都可能把倍数压缩到远期 20–25×——意味着明显下行空间。缓冲：运营故事真实且支持增长（Q1 2026 同比 +5% 并伴随利润率扩张——[Q1 8-K, 2026-04-30](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000099/entgq12026ex991.htm)）；若 Mo 工作流与先进节点 CMP 步数扩张兑现，多头论点能支撑 30× 远期倍数。
+
+### 宏观经济风险
+
+**13. 利率敏感性（中等）。** Term Loan Facility 的浮动利率暴露意味着 100bp 利率变动对利息支出有重要影响（每年约 $1500 万级）；再融资风险见上文 ([Entegris 2025 10-K, Liquidity](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。缓冲：公司已用现金流套保锁定了部分 Term Loan 浮动利率暴露。
+
+**14. 汇率暴露（中等）。** 82% 营收来自美国境外，主要制造在日本、韩国、台湾——USD/JPY、USD/KRW、USD/TWD 直接影响折算后的利润率 ([Entegris 2025 10-K, Quantitative Disclosures](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。缓冲：来自区域生产的自然对冲（营收与成本同币种），加上对冲计划补充。
+
+## 10. 参考资料
+
+### 主要 SEC 文件（通过 [data.sec.gov/submissions/CIK0001101302.json](https://data.sec.gov/submissions/CIK0001101302.json) 验证）
+
+- [Entegris 2025 10-K (filed 2026-02-11)](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm) —— accession 0001101302-26-000012
+- [Entegris Q1-FY26 10-Q (filed 2026-04-30)](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000102/entg-20260328.htm) —— accession 0001101302-26-000102
+- [Entegris 2026 DEF 14A Proxy Statement (filed 2026-03-23)](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000054/entg-20260323.htm) —— accession 0001101302-26-000054
+- [Entegris 2024 10-K (filed 2025-02-12)](https://www.sec.gov/Archives/edgar/data/1101302/000110130225000015/entg-20241231.htm) —— accession 0001101302-25-000015
+
+### 季报与 8-K
+
+- [Entegris Q1-FY26 Earnings 8-K Exhibit 99.1 (2026-04-30)](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000099/entgq12026ex991.htm)
+- [Entegris Q4-FY25 Earnings 8-K Exhibit 99.1 (2026-02-10)](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000009/entgq42025ex991.htm)
+- [Entegris CMC Materials acquisition press release (2022-07-06)](https://investor.entegris.com/news/news-details/2022/Entegris-Completes-Acquisition-of-CMC-Materials-Solidifying-Position-as-the-Global-Leader-in-Electronic-Materials-07-06-2022/default.aspx)
+- [Entegris-CMC Materials definitive agreement announcement (2021-12-15)](https://investor.entegris.com/news/news-details/2021/Entegris-to-Acquire-CMC-Materials-to-Create-a-Leader-in-Electronic-Materials-12-15-2021/default.aspx)
+- [Entegris Sinmat acquisition press release (2020-01-10)](https://www.businesswire.com/news/home/20200110005216/en/Entegris-Acquires-CMP-Slurry-Manufacturer-Sinmat)
+
+### 行业研究与市场数据
+
+- [SEMI press release: Global semiconductor materials market $73.2B in 2025 (2026-05-12)](https://www.semi.org/en/semi-press-release/global-semiconductor-materials-market-revenue-reaches-record-73.2-billion-dollars-in-2025-semi-reports)
+- 野村《Greater China Semi: Guide to Semi renaissance in 2026~30F》—— 锚定行业笔记 (2026-05-21, 139pp)，通过项目行业摘要 [`reports/sector/半导体材料.md`](../../sector/半导体材料.md) 引用。直接引用的 league table：Fig. 41 (CMP 抛光液)、Fig. 42 (CMP 抛光垫)、Fig. 44 (CMP conditioner)。
+- [DuPont 电子与工业——CMP 抛光垫产品页](https://www.dupont.com/electronics-industrial/cmp-pads.html)
+- [FOUP carrier 全球市场研究 (2025-2031)](https://reports.valuates.com/market-reports/QYRE-Auto-3K10126/global-foup-and-fosb)
+- [CMP 抛光液市场——Skyquest (2025)](https://www.skyquestt.com/report/cmp-slurry-market)
+- [SEMI Wafer Fab Materials Quarterly 产品页](https://www.semi.org/en/products-services/market-data/wafer-fab-materials-quarterly)
+- [TrendForce 4Q25 Foundry: TSMC 70% 市场份额 (2026-03-12)](https://www.trendforce.com/presscenter/news/20260312-12965.html)
+
+### 市场数据
+
+- [Stockanalysis.com —— Entegris (ENTG) Statistics & Valuation (May 2026)](https://stockanalysis.com/stocks/entg/statistics/)
+- [Companies Market Cap —— Entegris](https://companiesmarketcap.com/entegris/marketcap/)
+
+### 内部交叉引用
+
+- [`reports/sector/半导体材料.md`](../../sector/半导体材料.md) —— 野村《Greater China Semi 2026-2030 Renaissance》锚定报告摘要
+- ENTG SEC 文件（本地缓存）：`/Users/x/projects/financial_agent/financial_reports/ENTG/`
+
+<details>
+<summary>验证日志 (Step 10) —— 2026-05-26</summary>
+
+**URL 检查** —— 所有内联 URL 均根据 CIK 0001101302 的 EDGAR submissions JSON 构造（2026-05-26 通过 `curl -sS -A "Research Analyst" "https://data.sec.gov/submissions/CIK0001101302.json"` 核对）。主 10-K 文件名 `entg-20251231.htm` 是 EDGAR submissions API 中 `primaryDocument` 字段的核对值；其它 accession 号亦同（Q1-FY26 10-Q `entg-20260328.htm`、2026 DEF 14A `entg-20260323.htm`、2024 10-K `entg-20241231.htm`）。8-K-EX99 文件名来自本地缓存（缓存内容由项目脚本 `fetch_financial_report.py` 自 `https://www.sec.gov/Archives/edgar/data/1101302/<accession>/index.json` 同步）。
+
+**SEC 文件名核对** ——
+- 10-K（提交于 2026-02-11）：accession 0001101302-26-000012，primary doc `entg-20251231.htm`
+- 10-Q Q1-FY26（提交于 2026-04-30）：accession 0001101302-26-000102，primary doc `entg-20260328.htm`
+- DEF 14A（提交于 2026-03-23）：accession 0001101302-26-000054，primary doc `entg-20260323.htm`
+- 8-K Q1-FY26 季报（提交于 2026-04-30）：accession 0001101302-26-000099，Ex 99.1 = `entgq12026ex991.htm`
+- 8-K Q4-FY25 季报（提交于 2026-02-10）：accession 0001101302-26-000009，Ex 99.1 = `entgq42025ex991.htm`
+
+**10-K 点查**（声明 → 在 10-K 中通过 grep 抽样文本核对）：
+- FY25 净销售 $3,196.6M ✓（MD&A Results of Operations——也对应分部加总：MS $1,406.7M + APS $1,799.1M - 内部销售消除 $9M）
+- FY25 GAAP 毛利率 44.4%（同比 -150bp，对照 FY24 45.9%）✓（MD&A——"Gross margin as a percentage of net sales: 2025 2024 ... 44.4 % 45.9 %"）
+- TSMC 占 FY25 净销售 16%；top-10 占 50% ✓（Risk Factors / Customer Concentration 段落原文："Taiwan Semiconductor Manufacturing Company (TSMC) 16% 16% 11%; total top ten customers 50% 48% 43%"）
+- 约 7,700 员工，地区分布（北美 51% / 东南亚 15% / 台湾 11% / 日本 9% / 韩国 7% / 中国 5% / 欧洲 2%）✓（Human Capital 段落原文）
+- FY25 ER&D 支出 $329.2M（FY24 $316.1M）✓（MD&A——"Engineering, research and development expense in 2024 $ 316.1 ... 2025 $ 329"）
+- 约 4,400 件有效专利，约 850 件美国专利，约 2,400 件正在申请的专利 ✓（Patents and Other Intellectual Property Rights 段落）
+- 地理 mix 美国 18% / 海外 82%（FY25）；21%/79%（FY24）；25%/75%（FY23）✓（Geographic Information 注释）
+- 重组费用 FY25 $29M、FY24 $21M ✓（MD&A Restructuring）
+- 收购历史：Mykrolis 合并 (2005-03-17)、ATMI (2014-04-30)、Sinmat (2020-01)、CMC Materials (2022-07-06) ✓（Item 1 原文）
+- 剥离历史：QED ($134.3M, 2023-03)、EC 业务给富士胶片 ($675.3M, 2023-10)、终止 MacDermid Enthone 联盟（净 $191.2M, 2023-06）、PIM 给 SCF Partners (毛 $263.2M / 净 $256.2M 加最多 $25M earn-out, 2024-03) ✓（Acquisitions and Divestitures 段落原文）
+- Bertrand Loy 任 CEO 2012-11 → 2025-08 转任执行董事长；David Reeder 2025-08 接任 CEO（前 Chewy CFO 2024-02 至 2025-06；前 GlobalFoundries CFO 2020-08 至 2024-02，主导 2021 年 IPO）✓（Executive Officers 段落原文）
+- Competition 清单原文：Pall Corporation (Danaher)、EMD Performance Materials (Merck KGaA)、Shin-Etsu Polymer、Qnity Electronics、Cobetter Filtration、Air Liquide 电子先进材料部门、Gudeng Precision Industrial、Linde plc、Aicello Corporation、Anji Microelectronics (Shanghai)、Mersen ✓（Competition 段落原文；紧接其后的是 ENGINEERING, RESEARCH AND DEVELOPMENT 段落）
+- Q1-FY26 净销售 $811.9M、GAAP EPS $0.60、非 GAAP EPS $0.86；Q2 指引 $815-845M ✓（Q1-FY26 8-K Ex 99.1 原文）
+
+**分析师视角句**（有意标注、并未引用为主要文件）：
+- §4.3（"组合中护城河最深"）、§4.5（Mo 工作流作为结构性新差异化）、§4.6（SDS 单一供应商论断）、§4.7（CMC 收购后 CMP 组合最宽）、§4.8（EUV 光罩盒近垄断地位）、§7（针对每个点名竞争对手的分类定位）—— 全部依规则妥善标注为 `*分析师观点：*`；份额位置的论断锚定到野村报告 (Fig. 41-44) 或第三方行业研究；未把 "10-K 称我们是第一" 这种伪造的论断附着到 ENTG 自家文件。
+
+**残留未核实事项 / 暂未深入：**
+- CMC 抛光液与 Entegris 原有抛光液在 FY25 营收的具体贡献——Entegris 没有把抛光液营收从 MS 分部总营收中拆出
+- TSMC 以外的客户营收明细——只有跨越 10% 披露门槛的客户被单独点名（FY25 仅 TSMC）
+- CMC 整合的运行率营收协同精确数字——管理层未把已实现的营收协同与成本协同分别量化
+- 欧洲上市的 Merck KGaA 同业 P/E 数字按公开一致预期近似，未深入到 KGaA 分部级报告
+
+</details>
+
+---
+
+*本报告使用本仓库 company-research skill 编写。所有引用均按 CIK 0001101302 的 EDGAR submissions JSON（截至 2026-05-26）核对了 URL 有效性与 SEC 文件名准确性。*
+
 
