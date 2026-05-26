@@ -60,3 +60,51 @@ SUMCO 株式会社 (株式会社SUMCO, TSE Prime:3436) 是**全球第二大单�
 因此, 投资逻辑的核心在于**2026–27 财年是否为本轮周期的底部年, 以及 SUMCO 能否在折旧高峰到来之前, 将其 AI 级 300mm 产能转化为定价能力**。从结构背景看——硅片需求本质上与全球硅片面积产出绑定, 而硅片面积产出又与先进制程的晶体管密度、HBM 堆栈层数、先进封装 (advanced packaging) 以及 AI 服务器的单位增长挂钩——前景仍然向好。风险在于时机: 管理层在 2026 财年 Q1 业绩说明会上指出, 200mm 市场正常化可能要等到 2026 年下半年或 2027 年初 ([SUMCO 2026 财年 Q1 纪要, Investing.com, 2026-05-12](https://www.investing.com/news/transcripts/earnings-call-transcript-sumco-misses-q1-2026-expectations-stock-dips-93CH-4698631))。下文第 4 章 (产品)、第 6 章 (行业)、第 7 章 (竞争) 与第 8 章 (TAM) 将逐一展开这些机制的详细推演。
 
 ---
+
+## 2. 公司历史
+
+SUMCO 的体制基因异常复杂: 现代公司是**四个独立日本硅片业务**、三家日本金属集团 (住友、三菱、九州电子金属), 以及一家可追溯至 1937 年的不锈钢前身公司的合并继承者, 这一切通过 1990 至 2002 年间的三十年并购整合, 并以 2005 年的最终公司更名收尾 ([SUMCO 公司沿革](https://www.sumcosi.com/english/corporate/history.html)、[SUMCO 公司简介](https://www.sumcosi.com/english/corporate/profile.html))。最早可追溯的血脉是 1937 年 1 月成立的**大阪特殊钢制造株式会社**, 后于 **1952 年 11 月更名为大阪钛工业株式会社**——这一冶金基础后来切入单晶硅拉制业务, 并最终成为前身硅片业务之一 ([SUMCO 公司沿革, sumcosi.com](https://www.sumcosi.com/english/corporate/history.html))。
+
+整个 1980–1990 年代, 日本硅片产业与全球半导体行业从 6 英寸到 8 英寸 (200mm) 衬底, 再到首批 300mm 试产线的演进同步整合。**1993 年 1 月住友集团将其硅片业务更名为"住友 Sitix 株式会社" (Sumitomo Sitix Corp.)**; 三菱材料硅业 (Mitsubishi Materials Silicon Corp.) 则作为另一独立法人单独运营。两家公司当时都是面临残酷价格周期压力的中等规模独立厂商, 这种压力最终推动了跨公司整合 ([SUMCO 公司沿革](https://www.sumcosi.com/english/corporate/history.html)、[Wikipedia — SUMCO 株式会社](https://en.wikipedia.org/wiki/Sumco))。
+
+后来成为 SUMCO 的法人载体, 于 **1999 年 7 月 30 日**正式成立: 住友金属工业、三菱材料公司与三菱材料硅业联合设立**硅联合制造株式会社 (Silicon United Manufacturing Corp., 即シリコンユナイテッドマニュファクチャリング 的直译英文)**, 用于建设一座共有的全新 300mm 硅片制造工厂, 因为预计任何单个发起股东都无法独立承担一座绿地 300mm 工厂超过 1,000 亿日元的资本支出 ([SUMCO 公司沿革](https://www.sumcosi.com/english/corporate/history.html)、[SUMCO 公司简介](https://www.sumcosi.com/english/corporate/profile.html))。**2002 年 2 月**, 该法人载体吸收了住友金属工业的硅片资产, 与三菱材料硅业合并, 并更名为**住友三菱硅业株式会社 (SUMCO, Sumitomo Mitsubishi Silicon Corp.)**——SUMCO 缩写源于"Sumitomo + Mitsubishi Silicon Corp."的拼接。这是 SUMCO 缩写首次对外使用 ([SUMCO 公司沿革](https://www.sumcosi.com/english/corporate/history.html))。**2005 年 8 月 1 日**, 控股公司正式将注册商号定为"SUMCO 株式会社", 同时在东京证券交易所第一部 (现 Prime 市场) 首次公开发行上市 ([SUMCO 公司简介](https://www.sumcosi.com/english/corporate/profile.html)、[Wikipedia — SUMCO](https://en.wikipedia.org/wiki/Sumco))。
+
+第二段重要历史——**2006 年收购小松电子金属 (Komatsu Electronic Metals)**——奠定了 SUMCO 全球第二大硅片厂的地位。小松电子金属 (一家自小松制作所工业机械集团衍生出来的独立上市硅片厂) 通过 2006 年的要约收购被吸收, 至 2007 年完成结构性合并, 新增约 20% 的产能, 并将 SUMCO 推上自此长期占据的全球份额位置 ([Wikipedia — SUMCO](https://en.wikipedia.org/wiki/Sumco))。综观从 1937 年大阪特殊钢的源头, 到 1992 年九州电子金属并入、1999 年硅联合制造合资项目、2002 年住友硅片资产并购, 再到 2006–07 年小松电子金属收购, SUMCO 在不到二十年内将日本除信越外几乎每一项有意义的硅片业务整合到了同一个公司载体之中。
+
+**重要里程碑时间线。**
+
+```mermaid
+timeline
+    title SUMCO 株式会社——战略里程碑 (1937–2026)
+    1937 : 大阪特殊钢制造株式会社成立 (最早血脉)
+    1952 : 更名为大阪钛工业株式会社
+    1992 : 九州电子金属并入住友硅片集团
+    1993 : 住友硅片资产组建为住友 Sitix 株式会社
+    1999 : 硅联合制造株式会社合资公司成立 (住友金属 + 三菱材料 + 三菱材料硅业) — 用于共建 300mm 工厂
+    2002 : 收购住友金属硅片业务 + 合并三菱材料硅业 — 更名为住友三菱硅业 (SUMCO)
+    2005 : 更名为 SUMCO 株式会社 — 8 月在东京证券交易所第一部 IPO
+    2006 : 要约收购小松电子金属 (2007 完成吸收) — SUMCO 跃升为全球第二大硅片厂
+    2014 : 硅片下行周期资本开支大幅暂停; 200mm 产能合理化
+    2021 : 全行业 LTA 配合预付款机制锁定 2022–26 出货量; SUMCO 宣布约 4,000 亿日元米泽/伊万里二期 300mm 扩产计划
+    2023 : 经济产业省 (METI) 依据《经济安全保障促进法》批准最高 750 亿日元的二期产能补贴
+    2024 : 财年截止日从 3 月底调整为 12 月底; 宣布宫崎 200mm 工厂将停产 (2026 年下半年生效)
+    2026 : 2026 年 3 月 METI 补贴下调至 193 亿日元 — SUMCO 从新建工厂转向升级现有设施以生产 AI 级先进硅片
+```
+
+*来源: 综合自 [SUMCO 公司沿革](https://www.sumcosi.com/english/corporate/history.html)、[Wikipedia — SUMCO](https://en.wikipedia.org/wiki/Sumco)、[Evertiq — "SUMCO 战略由新工厂转向设备升级", 2026-04-07](https://evertiq.com/design/2026-04-07-sumco-shifts-strategy-from-new-fab-to-equipment-upgrades)、[Digitimes — "SUMCO 转向设备升级策略", 2026-03-30](https://www.digitimes.com/news/a20260330VL210/sumco-equipment-plant-wafer-demand.html)、[Digitimes — "日本 METI 拟补贴 SUMCO 新硅片工厂", 2023-07-11](https://www.digitimes.com/news/a20230711PD210/japan-semiconductor-subsidy.html)、[SemiVision via X, "SUMCO 2025 财年 Q3 300mm 市场点评"](https://x.com/semivision_tw/status/1993466357208563725)。*
+
+**三大战略性转折塑造了现代 SUMCO。** 第一, **1999–2002 年的硅联合整合**——通过让住友与三菱共担资本开支, 把 SUMCO 从一个亚规模硅片厂转变为信越半导体可信任的对位次席; 没有这个合资载体, 这两家母公司都不太可能独立建成具竞争力的 300mm 工厂, 全球硅片业很可能至今仍由三四家亚规模日本厂商分庭抗礼, 而非现在的"双寡头加三"格局 ([SUMCO 公司沿革](https://www.sumcosi.com/english/corporate/history.html))。第二, **2006 年小松电子金属并购**深化了整合: 小松业务在客户结构上与 SUMCO 形成互补、在地理上更分散, 消除了一家亚规模竞争者, 并结晶出现行的全球五家供应商结构 (信越、SUMCO、环球晶圆 GlobalWafers、Siltronic、SK Siltron), 该结构在过去二十年保持高度稳定 ([Wikipedia — SUMCO](https://en.wikipedia.org/wiki/Sumco))。第三, **2021–24 年 LTA 配合预付款机制 + 产能扩张周期**——由后疫情需求冲击及美国《CHIPS 法案》/日本 METI/韩国《K-CHIPS 法案》时代对硅片安全供应战略价值的认知所触发——使 SUMCO 投入约 4,000 亿日元于米泽/伊万里二期产能, 资金来源为客户预付款及 (后被下调的) METI《经济安全保障促进法》补贴 ([Digitimes, "METI 拟补贴 SUMCO", 2023-07-11](https://www.digitimes.com/news/a20230711PD210/japan-semiconductor-subsidy.html)、[Evertiq, "SUMCO 战略由新工厂转向", 2026-04-07](https://evertiq.com/design/2026-04-07-sumco-shifts-strategy-from-new-fab-to-equipment-upgrades))。
+
+**近期动态 (2024–2026)。** 与投资逻辑相关的三件事: (1) **2025 年 2 月 SUMCO 宣布宫崎工厂 200mm 硅片生产将于 2026 年下半年终止**, 将该等同产能与团队改投至 300mm AI 级输出——这是一项明确的"退出与中国新建产能在 200mm 商品化市场上厮杀"决定 ([Intel Market Research — Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85)、[Evertiq, 2026-04-07](https://evertiq.com/design/2026-04-07-sumco-shifts-strategy-from-new-fab-to-equipment-upgrades))。(2) **2026 年 3 月**, METI 依据《经济安全保障促进法》批准修订后的《供应稳定确保计划》, 将最高补贴从 750 亿日元下调至**193 亿日元**, 并以伊万里/米泽现有设施升级取代原定的绿地新建工厂——管理层将此调整定调为"将资源重新分配至先进硅片技术能力", 而非战略后退 ([Evertiq, 2026-04-07](https://evertiq.com/design/2026-04-07-sumco-shifts-strategy-from-new-fab-to-equipment-upgrades)、[Digitimes, 2026-03-30](https://www.digitimes.com/news/a20260330VL210/sumco-equipment-plant-wafer-demand.html))。(3) **2024 年日历年 SUMCO 将财年截止日从 3 月 31 日改为 12 月 31 日**, 形成一个 9 个月的过渡财年, 部分科目同比可比性被打断; 2025 年以后阅读 SUMCO 披露的投资者须核对所披露的报告期 ([SUMCO IR——财务信息](https://www.sumcosi.com/english/ir/financial/))。
+
+---
+
+## 3. 管理团队
+
+按照本研究专项的规范, 本章仅覆盖**创始人血脉与现任 CEO**——不涉及 CFO、董事会主席或其他董事。SUMCO 不同寻常之处在于"创始人"是体制性而非个人化的: 该公司是 1999 年由住友金属工业、三菱材料及三菱材料硅业之间的合资决策所创立, 而非由某位魅力型个人发起。现代时代最接近创始人角色的代表是**桥本真幸 (Mayuki Hashimoto)**——他于 1970 年代初进入前身公司, 2012 年出任董事长兼 CEO, 在 2012–22 年间主导了资本开支克制、2021 年的产能扩张转向, 以及 LTA 配合预付款的契约重构, 目前仍留任董事; 因此, 现代战略的运营创建者是桥本真幸; 现任社长 (兼代表董事 CEO) 为**龍田二郎 (Jiro Ryuta)** ([SUMCO 管理团队页面, sumcosi.com](https://www.sumcosi.com/english/corporate/officer.html)、[Bloomberg — 桥本真幸简历](https://www.bloomberg.com/profile/person/18038794))。
+
+**桥本真幸 (Mayuki Hashimoto) — 创始人式角色 / 2012–2024 年董事长兼 CEO, 现任董事 (约 250–350 字)。** 桥本在 SUMCO 的核心角色是 2012 年至 2024–25 年间的董事会主席与首席执行官, 期间完成了领导层过渡 ([Bloomberg — Mayuki Hashimoto](https://www.bloomberg.com/profile/person/18038794)、[SUMCO 管理团队](https://www.sumcosi.com/english/corporate/officer.html))。在加入 SUMCO 之前, 他的职业生涯在三菱材料公司——最为人熟知的是**2005 年时任三菱材料"电子材料 & 元件公司"硅业部门总经理**, 该部门正是三菱方面注入 SUMCO 整合的硅片业务 ([Macroaxis — 桥本真幸简历](https://www.macroaxis.com/invest/manager/SUMCF/Mayuki-Hashimoto))。三菱根脉至关重要: 1999 年 SUMCO 由住友 + 三菱合资成立时, 运营层主导权偏向三菱方; 桥本 2012 年晋升为董事长/CEO 即为该血脉内部的代际交接。他十余年 CEO 任期所定义的运营优先级有**三项**: (i) 在 2014–20 年硅片下行周期保持极致资本开支克制 (2014 年分析师特别指出 SUMCO 进行了一次"激进的硅片业务最优化"——关闭亚规模产线、削减固定成本——为 2021 年后的上行周期奠定了可盈利基础) ([日本金属公报 — "SUMCO 启动激进硅片业务最优化"](http://www.japanmetalbulletin.com/?p=19652)); (ii) 行业牵头**2021 年 LTA 配合预付款机制**, 将硅片合约从季度现货转换为多年期出货承诺, 并配以客户预付款, 大幅提升远期可见度 ([Digitimes, "Silicon wafer suppliers continue to enjoy LTA pull-ins"](https://www.digitimes.com/news/a20220407PD210/ic-manufacturing-silicon-wafer.html)); (iii) 2021–22 年宣布的**约 4,000 亿日元产能扩张计划**, 以米泽/伊万里为核心, 将 LTA 承诺转化为厂房、单晶炉与磊晶反应器 (epi reactor)。桥本在领导层接班后仍任 SUMCO 董事, 保证其所设定战略方向的延续性 ([SUMCO 管理团队](https://www.sumcosi.com/english/corporate/officer.html))。其本人在 SUMCO 的持股按惯例披露于 EDINET 上的年度委托书, 与日本资深高管常见的小额股权持有水平一致 ([株主プロ — SUMCO 3436 有価証券報告書一览](http://www.kabupro.jp/yuho/3436.htm))。
+
+**龍田二郎 (Jiro Ryuta) — 现任社长 (President) 兼 CEO / 代表董事 (约 200–250 字)。** 根据 SUMCO 管理团队最新披露, **龍田二郎**身兼董事会主席及社长 (President) 兼 CEO, 并具备**代表董事 (Representative Director)** 身份 ([SUMCO 管理团队页面, sumcosi.com](https://www.sumcosi.com/english/corporate/officer.html))。龍田出任 CEO 反映了桥本时代的代际交接, 代表的是延续而非战略断裂: 已公布的轨迹——完成米泽/伊万里二期资本开支、退出宫崎 200mm、把 (下调后) METI 支持的投资重新配置于 AI 级先进硅片设备升级, 并在 2025–26 年周期底部坚守 LTA 出货承诺——正是桥本所设的剧本。管理层的运营深度可见于 2025 财年 Q3 与 2026 财年 Q1 的业绩说明会, 其对 HBM 市场份额、5nm 以下逻辑硅片定价、200mm 市场正常化时点的评论非常细致 ([SUMCO 2025 财年 Q3 业绩说明会, Alpha Spread](https://www.alphaspread.com/security/tse/3436/investor-relations/earnings-call/q3-2025)、[SUMCO 2026 财年 Q1 纪要, Investing.com](https://www.investing.com/news/transcripts/earnings-call-transcript-sumco-misses-q1-2026-expectations-stock-dips-93CH-4698631))。执行副社长 (Executive Vice President) 久保染慎一 (Shinichi Kubozoe) 与广田成也 (Naruya Hirota) 同样身为代表董事, 共同组成最高运营委员会 ([SUMCO 管理团队](https://www.sumcosi.com/english/corporate/officer.html))。龍田现任职位以外的生平资料在 SUMCO 英文 IR 中未有详细披露——跟踪该公司的分析师通常通过 EDINET 日文版的有価証券報告書 获取高管完整背景 ([SUMCO 有価証券報告書 — IRBANK](https://irbank.net/E02103/edinet))。SUMCO 高管的薪酬结构遵循日本公司治理常规——以固定现金加多年期限制性股票为主, 持股规模较小; 因此, 利益对齐机制以任期与声誉为主, 而非通过股权财富积累。
+
+---
