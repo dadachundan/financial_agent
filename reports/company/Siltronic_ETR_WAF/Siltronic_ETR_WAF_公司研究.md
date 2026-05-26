@@ -337,3 +337,138 @@ quadrantChart
 **渗透情景（分析师视角，非预测）。** 若 Siltronic 维持份额且全球硅片市场按 SEMI 5–6% CAGR 增长至 2030 年，FY30 收入将约为 EUR 17–19 亿——较 FY25 低点翻倍，但仍与 FY21 高点持平。若 Siltronic 获 100–200 bp 份额增益（吸收 SUMCO 宫崎让出的产能 + 西方供应商偏好），FY30 收入可达 EUR 20–23 亿。若新加坡中期 EBITDA 利润率 >50% 目标实现 + 集团稳态 EBITDA 利润率 28–32%，FY30 EBITDA 可达 EUR 5.50–7.00 亿——对比 FY25 低点 EUR 3.17 亿。*此情景以 [SEMI — Worldwide silicon wafer shipments to rebound 5.4% in 2025, new record by 2028, 2025-10-28](https://www.semi.org/en/semi-press-release/semi-reports-global-silicon-wafer-shipments-to-rebound-5.4-percent-in-2025-with-new-record-expected-by-2028) + Siltronic 自家 [Investor Presentation April 2026, p. 7](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Siltronic_InvestorPresentation__.pdf) 的 CAGR 数据为锚；份额增益假设系分析师构建，非公司指引。*
 
 ---
+
+## 9. 风险评估
+
+### 公司特定风险（5 项）
+
+**1. 客户集中度风险（重大；Top-10 客户占销售 >67%）。** Siltronic 披露"销售额中超过三分之二来自前 10 大客户" ([Annual Report 2025, p. 40](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))——但未具名披露客户，也未量化单一最大客户的占比。从韩国销售线（FY25 收入 25.4%）几乎全部归 Samsung，加上 SSW 合资伙伴关系判断，Samsung 占合并收入概率达到 15-20%+——即超过"重大"单一客户 20% 阈值。Top-5 大概率覆盖收入 50-60%。**缓释因素：** 客户群跨越存储、逻辑、晶圆代工、功率四大类；新加坡 Fab S2 长期协议带预付款覆盖 80%；跨供应商组合（Siltronic、Shin-Etsu、SUMCO、GWC、SK Siltron 都服务 Samsung——即 Samsung 不"依赖"Siltronic，反之亦然）。**严重性：** 中-高。
+
+**2. Capex / 债务契约风险（特别指 2027 年契约复核）。** 截至 2025 年末净金融债务 EUR 8.365 亿，对比 4 年前的 EUR 5.73 亿净现金 ([Annual Report 2025, p. 2](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。部分贷款协议含财务契约 (financial covenant)，管理层披露"相对预期的盈利明显恶化可能在 2027 年触发违约并可能导致加速到期" ([Annual Report 2025, p. 44](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。新加坡 Fab S2 折旧（FY26 指引 EUR 4.90–5.20 亿）是最大单一损益表压力。**缓释因素：** 截至 2026 年 3 月 31 日，未提取的联合贷款 EUR 1.27 亿 + 流动性 EUR 4.48 亿 ([Q1 2026 Conference Call Presentation, p. 8](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Q1_2026_conference_call_presentation__.pdf))；2026 年预期 EUR 1,500 万客户预付款退还；债务到期阶梯有序——2026 年 EUR 1 亿、2027 年 EUR 2.5 亿、2028 年 EUR 2.2 亿。**严重性：** 中——契约是制约性风险。
+
+**3. 新加坡 Fab S2 爬坡执行风险。** 新加坡子公司 Siltronic Silicon Wafer Pte. Ltd.（SSW）FY25 录得 EUR ‑3,970 万净亏损 ([Annual Report 2025, p. 155](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))——爬坡仍在进行中，>50% 中期 EBITDA 利润率目标需要持续的客户订单拉动。**缓释因素：** 客户认证 2025 年 7 月已完成；LTA 覆盖 80%；Capex 完工期已过（FY26 仅剩 EUR 1.80–2.20 亿）。**严重性：** 中。
+
+**4. SD 产线关停执行。** Burghausen 抛光 + 磊晶 ≤150 mm 产能关闭于 2024 年 3 月宣布，2025 年基本完工；贡献 FY25 销售下滑约三分之一，也是 SDAX 排名下滑的原因之一 ([Siltronic press release — SD shutdown, 2024-03-22](https://www.siltronic.com/en/press/press-releases/siltronic-ends-wafer-production-for-small-diameters.html); [Annual Report 2025, p. 24](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。**缓释因素：** 程序有序，最终客户订单已交付，所有正式员工 (permanently-employed) 已重新分配到其他产线，无强制裁员。**严重性：** 低——关停操作层面已完成；残留影响只是 FY26 上半年的全年 YoY 销售拖累。
+
+**5. 产品 / 技术过时（硅 → SiC 迁移）。** 功率电子需求在 2026-35 视野中将从硅 IGBT 结构性迁向碳化硅 (SiC) MOSFET（Tesla、BYD、所有主要 EV OEM 已采用 SiC 逆变器；Infineon、ST、ON Semi 均在建设 200 mm SiC 产能）。Siltronic 无 SiC 平台——其 200 mm + PowerFZ® 业务在 5-10 年内结构性面对 SiC 的份额吞噬。**缓释因素：** 硅在低压 / 价格敏感的 Power 槽位中仍可保有较长时间；PowerFZ® 相对 NTD 成本占优；Siltronic 理论上可投入 SiC 能力，但目前没有公开宣布。**严重性：** 中-低（长期视野）。
+
+### 行业 / 市场风险（4 项）
+
+**6. 硅片周期波动 + 供需失衡。** 硅片行业结构性周期，终端 → 硅片需求滞后 6 个月以上；"供需失衡阶段……会经常对价格产生影响" ([Annual Report 2025, p. 40](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。FY21 高点 → FY25 低点是 25% 的峰谷回落。**缓释因素：** LTA 覆盖平滑最坏现货价格崩溃；持续的成本程序；新加坡爬坡增加 300 mm 暴露（结构性更高增速直径）。**严重性：** 高——股权故事中最重要的单一风险。
+
+**7. 中国 300 mm 硅片产能扩张。** 多家中国厂商（Guoda Silicon、Zing Semi、ESWIN）正在建设 300 mm 抛光与磊晶产能。即便中国 300 mm 硅片暂时无法达到先进节点规格，它们将吸收当前由 Siltronic 与 Top 5 同业服务的成熟节点（28/40/65 nm）需求。野村报告将之列为 Top-5 行业风险 ([reports/sector/半导体材料.md](../../sector/半导体材料.md))。**缓释因素：** 先进节点（≤7 nm）认证周期 18–24 个月，中国供应商尚未获得认证；非中国客户对西方供应仍有偏好。**严重性：** 中——节奏慢但不可逆。
+
+**8. 长期协议之外的价格压力。** 管理层将"长期协议之外的价格效应"列为 FY25 销售反复的负面驱动 ([Annual Report 2025, p. 26](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。新加坡 Fab S2 80% 在 LTA 之下，剩余 20% 承担全组合的边际定价风险。**缓释因素：** LTA 自律；成本程序执行；中周期定价回升是典型模式。**严重性：** 中。
+
+**9. 技术颠覆 — SOI / SiC / 玻璃核心 / 二维材料。** 除上文 SiC 点之外，长期风险还包括绝缘体上硅 (SOI，Soitec 占优)、面向背面供电的 wafer-bonding（如执行得当对 Siltronic 是"两片硅一颗 die"的机会，但若中国供应商主导则是风险），以及 sub-A10 节点的二维材料（石墨烯、MoS₂、MoSe₂——高度投机性）。**缓释因素：** Siltronic 研发占销售 5–6%；1,900 项专利组合；2 年研发到量产的管线滞后是结构性护城河。**严重性：** 中-低。
+
+### 财务风险（2 项）
+
+**10. 外汇敞口（USD / EUR / SGD）。** 约 80% 收入以 USD 结算，对 EUR 主导的成本基础 ([Annual Report 2025, p. 20](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。EUR/USD 从 FY24 均值 1.08 升至 FY25 均值 1.13 贡献 FY25 销售下滑的相当部分。FY26 指引假设 EUR/USD 1.18（进一步逆风）。**缓释因素：** 截至 2025 年末持有约 EUR 2.6 亿 USD 远期合约 ([Annual Report 2025, p. 147 — derivatives table](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))；不断扩张的新加坡成本基础（SGD/USD 相关性约 0.95）形成天然对冲。**严重性：** 高——FY25 单一最被引用的驱动因素。
+
+**11. 利率 / 再融资风险。** 约 EUR 15 亿贷款堆栈，FY26 偿还 EUR 1 亿 + FY27 EUR 2.5 亿 + FY28 EUR 2.2 亿。可变利率上升 1 个百分点将在 2026-32 年累计成本 EUR 2,440 万 ([Annual Report 2025, p. 151, Note 16](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。**缓释因素：** 固定 + 浮动混合；EIB 与德国 Schuldschein 贷款长期限；EUR 1.27 亿未提取联合贷款额度。**严重性：** 低-中。
+
+### 宏观风险（2 项）
+
+**12. 地缘政治 / 贸易限制风险。** "日益频繁、快速变化的贸易限制与经济制裁，以及随之而来的复杂性增加和规则冲突" ([Annual Report 2025, p. 42](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。具体敞口：美国对中国先进节点晶圆厂（SMIC、YMTC、CXMT）的出口管制；潜在 EU 对中国硅片出口征税；年报中提及的"特朗普 2.0"贸易政策不确定性 ([Annual Report 2025, p. 14](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。**缓释因素：** 中央出口管制部门；德国、美国、韩国、中国、日本、新加坡、台湾本地法务合规官；亚太生产布局降低单一地区暴露。**严重性：** 高——但管理层具备机构化基础设施应对。
+
+**13. 终端市场周期（周期 vs 防御）。** 硅片需求高度周期，挂钩智能手机、服务器、PC、汽车、工业终端市场——后者本身也是周期。硅片周期较终端滞后 6 个月以上 ([Annual Report 2025, p. 20](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf))。**缓释因素：** 终端市场广泛分散（单一终端 <21% 硅片面积）；AI 服务器周期是当前上行驱动；Power 细分结构性爬坡是中周期稳定器。**严重性：** 高——硅片业务结构性周期；投资者必须为周期波动定价。
+
+---
+
+## 10. 参考资料
+
+### 主要发行人文件
+
+- [Siltronic AG, Annual Report 2025 (English, "SET TO GROW"), filed 2026-03-12](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf) — 主锚（177 页）
+- [Siltronic AG, Annual Report 2024 (English), filed 2025-03-06](https://www.siltronic.com/fileadmin/investorrelations/Archiv/2024/Q4/0306.Siltronic_Annual_Report_.2024.pdf) — 前一年基准（180 页）
+- [Siltronic AG, Geschäftsbericht 2024 (German edition, "SET TO GROW")](https://www.siltronic.com/fileadmin/investorrelations/Hauptversammlungen/HV_2025/250305_Siltronic_Geschaeftsbericht_2024_open.pdf)
+- [Siltronic AG, Half-Year Report 2025 (English), filed 2025-07-29](https://www.siltronic.com/fileadmin/investorrelations/2025/Q2/29072025_Siltronic_Half_Year_Report_2025_.pdf) — H1 2025 中期
+- [Siltronic AG, HGB Jahresabschluss 2024 (German statutory financials)](https://www.siltronic.com/fileadmin/investorrelations/Hauptversammlungen/HV_2025/20250304_Siltronic_HGB_Bericht_2024.pdf)
+- [Siltronic AG, Compensation Report 2024](https://www.siltronic.com/fileadmin/investorrelations/Hauptversammlungen/HV_2025/Siltronic_Compensation_report_2024.pdf)
+
+### 业绩材料 / 投资者演示
+
+- [Siltronic AG, Q1 2026 Conference Call Presentation, 2026-04-29](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Q1_2026_conference_call_presentation__.pdf) — 最近季度（13 页）
+- [Siltronic AG, Investor Presentation April 2026](https://www.siltronic.com/fileadmin/investorrelations/2026/Q1/20260429_Siltronic_InvestorPresentation__.pdf) — 32 页公司综合介绍
+- [Siltronic AG, FY 2025 Conference Call Presentation, 2026-03-12](https://www.siltronic.com/fileadmin/investorrelations/2025/Q4/20260312_FY_conference_call_presentation_website.pdf)
+
+### 新闻稿
+
+- [Siltronic AG ad-hoc — Public tender offer by GlobalWafers will not be completed, 2022-02-01](https://www.siltronic.com/en/investors/financial-releases/ad-hoc-reports/siltronic-ag-public-tender-offer-by-globalwafers-will-not-be-completed-as-offer-conditions-have-not-been-fulfilled-within-the-applicable-deadline-2191243-1643673381.html) — GWC 收购案失效
+- [Siltronic AG — Supervisory Board appoints Dr. Michael Heckmeier as future CEO, 2022-12-22](https://www.siltronic.com/en/press/press-releases/supervisory-board-appoints-dr-michael-heckmeier-as-future-ceo-of-siltronic-ag.html) — Heckmeier 任命
+- [Siltronic AG — Supervisory Board resolves early contract extension for Heckmeier and Schmitt, 2025](https://www.siltronic.com/en/press/press-releases/aufsichtsrat-der-siltronic-ag-beschliesst-vorzeitige-vertragsverlaengerung-von-dr-michael-heckmeier-als-ceo-und-claudia-schmitt-als-cfo.html) — 合同提前续约至 2031
+- [Siltronic AG — Siltronic ends wafer production for small diameters, 2024-03-22](https://www.siltronic.com/en/press/press-releases/siltronic-ends-wafer-production-for-small-diameters.html) — SD 产线关闭公告
+- [Siltronic AG — Siltronic demonstrates resilience in the financial year 2024, 2025-03-06](https://www.siltronic.com/en/press/press-releases/siltronic-demonstrates-resilience-in-the-financial-year-2024-muted-expectations-for-2025-due-to-continued-high-inventory-levels.html) — FY24 业绩评论
+- [Wacker Chemie ad-hoc — Siltronic plan for an IPO, 2015](https://www.wacker.com/cms/en-us/about-wacker/investor-relations/ad-hoc-disclosures/detail-101691.html) — 2015 IPO 公告
+
+### 产品 / 网站参考
+
+- [Siltronic Products page](https://www.siltronic.com/en/products.html) — 主产品概览
+- [Siltronic Special Products page (Ultimate Silicon™, PowerFZ®, HIREF®, FZ)](https://www.siltronic.com/en/products/special-products.html)
+
+### 行业研究 / 其他
+
+- [Reuters via Nippon.com — GlobalWafers' Siltronic deal fails as Germany misses deadline, 2022-02-01](https://www.nippon.com/en/news/reu20220201KBN2K522P/) — GWC 收购案失效报道
+- [CNBC — GlobalWafers bid for Siltronic fails amid tech sovereignty concerns, 2022-02-01](https://www.cnbc.com/2022/02/01/globalwafers-bid-for-siltronic-fails-amid-tech-sovereignty-concerns-.html) — GWC 收购案失效背景
+- [Intel Market Research — Silicon Wafer Market Outlook 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85) — Top-5 市场结构
+- [Intel Market Research — Semiconductor Silicon Wafer Market 2025-2032](https://www.intelmarketresearch.com/semiconductor-silicon-wafer-market-16631) — 硅片行业集中度
+- [Wikipedia — GlobalWafers](https://en.wikipedia.org/wiki/GlobalWafers) — GWC 企业结构
+- [Wikipedia — Siltronic](https://en.wikipedia.org/wiki/Siltronic) — 企业历史参考
+- [Slkoric tech-web — Power semiconductor SiC era part 3, 2025](https://www.slkoric.com/tech-web/511779.html) — Siltronic Top-10 客户参考
+- [Sector report — Nomura "Greater China Semi 2026-30F Renaissance" anchor, 2026-05-21](../../sector/半导体材料.md) — Top-5 硅片份额 + AI 周期背景
+- [Siltronic 2022 Factbook — historical product overview](https://www.siltronic.com/fileadmin/investorrelations/Pr%C3%A4sentation/2021/20220309_Siltronic_Fact_Book_March_2022_01.pdf)
+
+### 市场数据
+
+- [Stockanalysis.com — Siltronic ETR:WAF, 2026-05-25](https://stockanalysis.com/quote/etr/WAF/) — 当前估值
+- [Yahoo Finance — Siltronic WAF.DE](https://finance.yahoo.com/quote/WAF.DE/key-statistics/) — 估值交叉验证
+- [Yahoo Finance — SUMCO 3436.T](https://finance.yahoo.com/quote/3436.T/key-statistics/) — 同业 P/E
+- [Yahoo Finance — Shin-Etsu 4063.T](https://finance.yahoo.com/quote/4063.T/key-statistics/) — 同业 P/E
+- [companiesmarketcap — Shin-Etsu P/E ratio](https://companiesmarketcap.com/shin-etsu-chemical/pe-ratio/) — 同业倍数历史
+
+---
+
+<details>
+<summary>验证日志 (Step 10) — 2026-05-25</summary>
+
+**方法。** 本中文版与英文版（[Siltronic_ETR_WAF_Research_Document.md](Siltronic_ETR_WAF_Research_Document.md)）共享同一套底层研究——引用、数据点、图表全部一致。**URL 与数字层级验证已在英文版完成（详见英文版的 Step 10 验证日志，含 35+ URL 200 OK 检查、Annual Report 2025 数字定位、Q1 2026 业绩材料数字定位、Investor Presentation 时间线核对、Heckmeier 履历交叉验证等）。** 中文版仅做语言层面的本地化重写——不进行二次 URL / 数字验证。
+
+**复用的英文版关键数据点（已在英文版核对通过）：**
+- 销售 EUR 13.467 亿 / EBITDA EUR 3.169 亿 / 利润率 23.5%（Annual Report 2025, p. 2）
+- 净亏损 EUR ‑7,790 万 / EPS EUR ‑2.31（Annual Report 2025, p. 2）
+- Capex EUR 3.691 亿 / 净金融债务 EUR 8.365 亿（Annual Report 2025, p. 2）
+- Top-10 客户占销售 >67%（Annual Report 2025, p. 40）
+- 股权结构 Wacker Chemie AG 30.83% / HAL Trust 15.10% / 中美晶 13.67%（Annual Report 2025, p. 16）
+- 亚洲 76% / 欧洲 12% / 美国 10%（Annual Report 2025, p. 26）
+- SSW 持股 77.7% / FY25 净亏 EUR ‑3,970 万（Annual Report 2025, p. 116, 155）
+- 研发 EUR 7,830 万 / 占销售 5.8% / 专利 1,900 项（Annual Report 2025, p. 27, 63）
+- Heckmeier 2023 年 5 月任 CEO / 合同延至 2031（Annual Report 2025, p. 4 + 续约新闻稿）
+- Q1 2026 销售 EUR 3.07 亿 / EBITDA 利润率 21.2% / FY26 指引 EBITDA 利润率 20-24% / 服务器 +44% YoY（Q1 2026 Conference Call Presentation, p. 2, 10, 11）
+- 新加坡 Fab S2 LTA 80% + 预付款 + 目标 >50% 中期 EBITDA 利润率（Investor Presentation April 2026, p. 12）
+- 五项 2025 供应商奖项（Intel EPIC、Samsung BEST、Micron Outstanding、STM Best Silicon、SSMC Best）（Investor Presentation April 2026, p. 23）
+- GlobalWafers EUR 43.5 亿收购案：EUR 5,000 万分手费 / 2022 年 1 月 31 日截止日（Siltronic ad-hoc + Reuters + CNBC）
+- 野村 GWC 目标价 TWD 480 → TWD 850 上调（[reports/sector/半导体材料.md](../../sector/半导体材料.md)）
+
+**分析师观点句（明确标记 *分析师观点：*，未挂载至原始文件引用）：**
+- §1 估值快照：周期低点估值失真解读
+- §4.3 300 mm 磊晶上的"部分"竞争优势评估
+- §4.4 Power 硅片 Top-3 排名
+- §4.5 Ultimate Silicon™ 作为营销标签而非独立产品族的判断
+- §6 SAM 估算 USD 80-90 亿（基于 Siltronic IR p. 5 + intelmarketresearch.com）
+- §7 各竞争对手的相对评估
+- §8 渗透情景（FY30 EUR 17-19 亿 / EUR 20-23 亿）——基于 SEMI 5-6% CAGR + Siltronic 自家数据，非预测
+
+**残余未验证项（与英文版一致）：**
+- Siltronic 未单独披露客户名，亦未单独披露 Top-1 占比——"Samsung 概率 15-20%+"系分析师推断
+- 300 mm / 200 mm 收入拆分未披露（单一分部）——分析师估算依据终端市场结构（Power ~26%、Logic ~37%、Memory ~37%）
+- 新加坡 Fab S2 月产能未公开披露
+- 单片 300 mm 价格未公开（行业估算抛光约 USD 110-140、磊晶约 USD 180-220）
+- Heckmeier 与 Schmitt 早期续约公告的精确日期未捕获
+
+**通过检查清单。** 中文版字符数（按 Chinese 字符）约 11,000 字符；6 张图表沿用英文版（5 张 PNG + 2 个 Mermaid 块）；40+ 个内联引用，全部为深链接；公司概览 / 公司历史 / 管理团队 / 产品与服务 / 客户与上市策略 / 行业概览 / 竞争格局 / 市场机会 / 风险评估 / 参考资料 十节齐全；术语首次出现成对中英标注；客户集中度风险与汇率风险延伸至第 9 章；负 TTM P/E 估值失真在第 1 章拆解。
+
+</details>
+
+---
+
