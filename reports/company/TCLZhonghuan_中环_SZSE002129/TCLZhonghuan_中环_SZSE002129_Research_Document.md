@@ -351,3 +351,73 @@ The company sits simultaneously within **PV manufacturing** and **semiconductor 
 **"Anti-involution" + policy drivers**: In 2025 China's Ministry of Industry and Information Technology (MIIT) issued anti-involution policy guidance, urging the PV industry to improve supply / demand balance via M&A consolidation and price discipline. Polysilicon / wafer prices recovered in Q3 2025, but Q4 demand softened and prices came back under pressure. With BC-cell differentiation and overseas market opening in 2026, the industry may begin a slow recovery ([TCL 中环 2025 年年度报告, p. 10](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)).
 
 **International trade barriers**: US Section 201 / 301 / AD/CVD tariffs on Chinese PV, the *One Big Beautiful Bill Act* (BBBA) restricting Chinese-background modules in the US market, and EU Carbon Border Adjustment Mechanism (CBAM) tariffs on Chinese PV products are all critical headwinds to TCL Zhonghuan's globalization — Maxeon's transformation difficulties are a direct example.
+
+## 7. Competitive Landscape
+
+Competition spans two distinct domains, addressed separately.
+
+### 7.1 Semiconductor-wafer competitors (Zhonghuan Advanced's reference set)
+
+**International top-5 leaders — primary benchmarks (the ceiling for TCL Zhonghuan's 12-inch leading-edge logic ambitions)**:
+
+(1) **Shin-Etsu Chemical (信越化学, `TYO:4063`)** — Global 12-inch share ~31%; the gap to domestic Chinese players on revenue scale, technology depth, and customer stickiness will take 5-10 years to close. Announced 14% capacity expansion in 2025 to address AI demand ([12 Inch Semiconductor Silicon Wafer Market 2025, Market Growth Reports](https://www.marketgrowthreports.com/market-reports/12-inch-semiconductor-silicon-wafer-market-123690)).
+
+(2) **SUMCO Corporation (`TYO:3436`)** — Global #2, 12-inch share ~27%. Technology depth comparable to Shin-Etsu, with a particular specialism in EUV multi-layer mask substrates and other emerging applications.
+
+(3) **GlobalWafers (环球晶圆, `TPE:6488`)** — Global #3, 12-inch share ~14%. A Taiwanese player deeply embedded with TSMC. Nomura's 2026-05-21 anchor lifted GWC from Neutral to Buy with a TP raised from TWD 480 to TWD 850, citing the convergence of BPD + wafer-bonded NAND + photonic-SOI demand ([Nomura GC Semi 2026-30F, pp. 15-17, 2026-05-21 (local summary)](../../sector/半导体材料.md)). GWC is TCL Zhonghuan's most important benchmark outside mainland China.
+
+(4) **Siltronic AG (`FRA:WAF`)** — Global #4; Europe's sole player. Customer base centred on US/European IDMs; limited China-market exposure.
+
+(5) **SK Siltron** — A subsidiary of Korea's SK Group, supplying primarily Samsung and SK hynix; an important SiC-substrate (automotive electronics) build-out is also in train.
+
+**Key domestic competitors**:
+
+(6) **NSIG (沪硅产业 / National Silicon Industry Group, `SSE:688126`)** — **The "NSIG / Zhonghuan (CN)" pairing in Nomura's Figure 35 refers to these two specific entities.** NSIG, founded in 2015, holds three principal subsidiaries: Shanghai Simgo (300mm polished + epi, founded 2014, China's first industrialised 300mm wafer producer), Simgui Technology (200mm SOI, China's largest SOI capacity), and Okmetic (Finnish 200mm specialty substrates, acquired in 2016) ([硅产业集团, NSIG 官网](http://www.nsig.com/) · [控股新傲科技, NSIG 公告](http://www.nsig.com/news/6)). 2024 revenue ¥3.388 bn; 9M 2025 ¥2.641 bn; 1H 2025 net loss -¥0.37 bn (loss narrowed YoY) ([沪硅产业 2024 年年度报告, 上交所 2025-04-24](https://static.cninfo.com.cn/finalpage/2025-04-24/1223237698.PDF)). 300mm capacity is 750,000 wafers/month, with 2026 expansion plans toward 600,000 wafers/month. **NSIG vs Zhonghuan Advanced — the key distinctions**: (a) NSIG started 12-inch 5nm-and-below leading-edge logic qualification (SMIC / TSMC) earlier and has deeper customer relationships there; (b) NSIG has a complete SOI product line (Simgui Technology), while Zhonghuan Advanced has no publicly disclosed SOI capacity; (c) Zhonghuan Advanced has larger scale in 8-inch and 6-inch power-device wafers — 2024 "other silicon materials" revenue of ¥4.687 bn versus NSIG's ¥3.388 bn.
+
+(7) **Lion Microelectronics (立昂微, `SSE:605358`)** — 12-inch polished wafer (including substrate wafers) capacity of 150,000 wafers/month + 12-inch epitaxial capacity 100,000 wafers/month (Quzhou + Jiaxing sites). 1H 2025 revenue ¥1.666 bn (+14.18% YoY); net loss -¥0.127 bn ([12 英寸大硅片加速扩产, OFweek 电子工程网 2025-09](https://ee.ofweek.com/2025-09/ART-8420-2816-30669819.html)). Lion is strongest in power-device wafers + RF substrates + 6-inch SiC, and competes head-to-head with Zhonghuan Advanced in 6/8-inch power-device wafers.
+
+(8) **GRINM-Semi (有研硅, `SSE:688432`)** — A subsidiary of Beijing GRINM Group, specialising in 8-inch and large-diameter silicon materials + specialty processes (FZ float-zone, special doping). In November 2024 acquired a 70% stake in Japan's DGT, entering the semiconductor-equipment components market ([中国半导体硅片行业市场分析, 智研咨询 2025-02](https://finance.sina.com.cn/stock/relnews/cn/2025-02-27/doc-inemwynh7120899.shtml)). A direct competitor to Zhonghuan Advanced in the 4-6 inch FZ silicon market.
+
+(9) **Eswin Materials (奕斯伟材料)** — A Beijing BOE-affiliated player, primarily in 12-inch polished + epitaxial wafers, with capacity around 500,000 wafers/month. Unlisted, but capacity expansion has been aggressive; market chatter of a 2025 IPO plan.
+
+(10) **Zhongxin Wafer (中欣晶圆, STAR-board IPO pending)** — 8/12-inch polished + epitaxial wafers, with 2024 capacity of about 550,000 wafers/month. Customer focus on domestic IDMs and analog-device makers.
+
+![China 12-inch semiconductor-wafer capacity comparison — end-2025](../../charts/tclzhonghuan_12in_capacity.png)
+
+*Source: [2025 中国硅片上市公司研究报告, 集微咨询 2025-12](https://jiweipreview.laoyaoba.com/html/news/newsdetail?news_id=952288) · [12 英寸大硅片加速扩产, OFweek 电子工程网 2025-09](https://ee.ofweek.com/2025-09/ART-8420-2816-30669819.html) · [TCL 中环 2024 年年度报告, p. 20](https://static.cninfo.com.cn/finalpage/2025-04-26/1223330188.PDF)*
+
+### 7.2 PV industry competitors
+
+(1) **LONGi Green Energy (`SSE:601012`)** — The originator of the M10 (182mm) roadmap; PV-wafer market share #2 (~17.3%); the most direct size-format competitor to TCL Zhonghuan. 2024 wafer shipments around 108.5 GW; in 2025 LONGi pivoted hard into BC cells (HPBC 2.0), directly competing with TCL Zhonghuan's BC roadmap ([隆基绿能 2024 年报数据综合](https://stcn.com/article/detail/1287881.html)).
+
+(2) **JA Solar (`SSE:002459`), JinkoSolar (`SSE:688223`), Trina Solar (`SSE:688599`), CSI Solar (`SSE:688472`)** — The "big four" integrated module leaders, spanning from wafer to module fully integrated, posing the most direct threat to TCL Zhonghuan's module business. Combined 2024 module shipments above 200 GW — well above TCL Zhonghuan's 15.1 GW.
+
+(3) **Tongwei (`SSE:600438`)** — The world's largest polysilicon + solar-cell producer, with module-line build-out from 2024 onward, competing with TCL Zhonghuan across wafer + cell + module links.
+
+(4) **Shuangliang Energy-Saving (`SSE:600481`), Hojinatech (`SSE:601908`), Shangji Automation (`SSE:603185`)** — Tier-2 wafer makers exerting mid-market pressure on TCL Zhonghuan's wafer business.
+
+**SWOT synthesis**:
+
+- **Strengths (S)**: (a) G12 large-format patent system + smart-CZ technology lead; (b) Zhonghuan Advanced is the #1 by revenue domestically in semi wafers; (c) TCL Group capital backing and globalisation resources; (d) The PIF Middle East JV is one of the rare "value-chain localization overseas" cases for a Chinese player.
+- **Weaknesses (W)**: (a) Two consecutive years of PV losses with cash-flow pressure; (b) No public breakthrough yet on 5nm-and-below leading-edge logic TSMC qualification for the semi-wafer business; (c) Maxeon's large impairment overhang is not yet fully cleared; (d) Three CEOs in 18 months raises questions about organizational stability.
+- **Opportunities (O)**: (a) Semiconductor-materials "long-cycle re-rating" period (per Nomura's anchor, starting 2027F); (b) Middle East / Saudi / Central-Asia overseas-module localization window; (c) BC-cell differentiation + Yidao New Energy integration synergies; (d) 12-inch localization rate still only ~10% — vast room.
+- **Threats (T)**: (a) PV-industry capacity not yet fully cleared; 2026-27 price war may continue; (b) NSIG 12-inch polished capacity ramping to 600,000 wafers/month in 2026 — direct competition with Zhonghuan Advanced for SMIC / Hua Hong wallet share; (c) Shin-Etsu / SUMCO's customer stickiness and yield advantage on 5nm-and-below logic remains unshakable short-term; (d) Maxeon cash-flow deterioration may continue to drag the parent's reported numbers.
+
+## 8. Market Opportunity (TAM)
+
+**Semiconductor silicon materials market (Zhonghuan Advanced TAM)**:
+
+Per Nomura's 2026-05-21 anchor estimate ([Nomura GC Semi 2026-30F, pp. 18-30](https://www.nomura.com/)), 2025 global semiconductor-materials sales reach **USD ~80 bn**, split into IC-manufacturing (front-end) ~60% (USD ~48 bn) + packaging materials (back-end) ~40% (USD ~32 bn). Manufacturing-materials mix (Nomura Fig. 26): silicon wafers 31% (USD ~14.9 bn), photoresist 13%, photoresist ancillaries 7%, specialty gases 13%, CMP 7%, sputtering targets 3%. **Global silicon-wafer TAM (12 + 8 + 6 + others) is around USD 18-20 bn**, of which 12-inch is ~USD 13.3 bn (2025).
+
+**Zhonghuan Advanced SAM (serviceable addressable market)**: The current served market spans: Chinese 8/12-inch wafer fabs (TAM ~USD 4-5 bn) + Chinese power-device makers (TAM ~USD 1-1.5 bn) + select overseas customers (TSMC, SK hynix, Infineon — contributing <USD 0.5 bn). Total SAM ~ **USD 6-7 bn (¥43-50 bn)**. 2025 Zhonghuan Advanced revenue of ¥5.71 bn (USD ~0.8 bn) appears to suggest 10-15% SAM share, but this calculation conflates 4-8 inch specialty wafers (FZ, 6-inch power) with 12-inch — and pure 12-inch leading-edge logic penetration remains low.
+
+**SOM (serviceable obtainable market)**: Per the company's implied 2030 roadmap — 12-inch capacity from current 1.2 million wafers/month expanding to 1.5-2.0 million wafers/month; 8-inch from 700-900 thousand wafers/month to 1.2 million wafers/month — at an average ASP of USD 60-100/wafer, the theoretical revenue ceiling reaches USD 12-18 bn (¥85-130 bn). That implies 50-100% upside from current revenue levels.
+
+**PV TAM**:
+
+Per CPIA, 2025 global new PV installations reached 580 GW; per IEA / SolarPower Europe forecasts, 2030 new installs of 800-1,000 GW and cumulative installs of 3,500-4,500 GW imply annual wafer demand of 1,200-1,500 GW (including inventory, exports, station planning). The PV-wafer market thus carries 2-3× growth runway over the next 5 years — **but the per-watt ASP at which TAM converts into revenue keeps falling**. 2024 per-watt wafer ASP was ~¥1.2; 2025 ~¥0.9 — against an industry theoretical breakeven of ¥1.0-1.1, implying 2024-25 per-watt wafer losses of ¥0.1-0.3. The takeaway: **PV TAM is growing in GW but shrinking in ¥/W**.
+
+**Penetration strategy**:
+
+- Semi side: (a) Complete 5nm-and-below leading-edge logic customer qualification through 2026-28; (b) Ramp 12-inch epitaxial capacity into the HBM / AI-ASIC supply chain; (c) Plug the SOI gap via either acquisition or organic R&D to capture 1.6T optical-comms + CPO demand; (d) Localize overseas (Mexico / Southeast Asia / Europe) to mitigate geopolitical risk.
+- PV side: (a) BC-cell differentiation + Maxeon US market + Yidao New Energy commercialization; (b) Middle East / Saudi / Central-Asia overseas-module localization; (c) Execute on "anti-involution" via M&A consolidation to raise concentration.
