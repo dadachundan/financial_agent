@@ -322,3 +322,79 @@ graph TD
 
 *资料来源：[DNP FY2025 results, p. 35 — Profit Growth Outlook for Three Segments (Electronics FY2025 ¥50.7 bn → FY2028 ¥65 bn) + p. 38 — Strategy by Segment: Electronics](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf)。*
 
+## 5. 客户与上市策略
+
+DNP 的客户基础按产品族差异很大——没有单一集中客户驱动整个公司的损益表。半导体光罩线通过直接销售（Kamifukuoka 工厂）和 Photronics 合资公司（PDMC 新竹和 PDMCX 厦门）服务全球晶圆代工厂。精密金属遮罩线集中在韩国和中国 OLED 面板厂家。电池铝塑膜线通过约 20 家命名工厂服务全球 EV 电池供应链。智能卡和 BPO 线服务日本金融机构和日本政府。染料升华影像介质线服务全球照片打印机 OEM（HiTi、三菱等）。由于 DNP 不像美国 10-K 那样在正式 Yuho（有価証券報告書）中披露主要客户集中度，下面的分析是从 IR-Day 2025 资料、FY2025 业绩说明会和 Photronics 合资公司披露中各业务板块陈述的客户集合构建的。
+
+**光罩客户集合。** DNP 的直接商业光罩客户锚定在日本 IDM 和新的 Rapidus 北海道试产线上。IR-Day 2025 资料明确列出合作示例："纳米压印开发：KIOXIA、佳能。EUV 光罩开发：imec、Rapidus。对快速增长的中国市场的及时响应：PDMC/X。半导体技术与光罩技术的结合：ST Microelectronics。日本半导体公司。与其他材料和设备制造商联合开发。" ([DNP IR-Day 2025, p. 56](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf))。PDMC 台湾合资公司（Photronics 合并）在 IC 光罩层服务 TSMC、UMC、世界先进、PSMC 和主要 IDM 的台湾厂；PDMCX 厦门合资公司服务 SMIC、华虹、合肥晶合、GlobalFoundries 成都和中国国内 IC 供应链——DNP 在这些流中的经济权益通过 Photronics 少数股东权益股息流和管理技术和 IP 共享的基础合资协议获得 ([PLAB 10-K FY25, Note 6 PDMCX + Exhibit Index references to PDMC Joint Venture Operating Agreement](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。**Rapidus 2nm 锚点**（2024 年首批光罩交付，2026-27 全面试产爬坡）是单一最具战略意义的新客户，验证了 DNP 在 sub-3nm 的 MBMW 工艺成熟度，并为后续先进节点商业业务提供可信参考。
+
+**精密金属遮罩 (FMM) 客户集合。** DNP 的 FMM 客户是全球 OLED 面板厂家：**三星显示器（韩国 Asan — 历史上 DNP 的锚点，现仍是最大客户量）、京东方 (BOE Display)（合肥、重庆、绵阳——作为战略二供入引）**；LG 显示器（坡州——OLED TV 使用 Open-Mask + WOLED，但中小型 OLED 使用 FMM）；加上 Visionox、天马、华星 (CSOT) 和 Japan Display 用于小众 / 较小批量应用。与三星显示器的历史独家关系几年前结束；DNP 现在积极向京东方供应 QHD 分辨率 FMM 作为有意的分散 ([OLED-Info — Dai Nippon Printing to supply FMM masks to BOE Display + Samsung diversifying its FMM products](https://www.oled-info.com/dai-nippon-printing-supply-fmm-masks-boe-display); [English etnews — DNP Agrees to Supply Shadow Masks to a Chinese Panel Manufacturer for QHD OLED, 2017-06-20](https://english.etnews.com/20170620200002))。客户集中度风险是真实的——三星显示器几乎肯定占 DNP FMM 收入 >30%，苹果作为 iPhone OLED 供应背后的需求端锚点存在于三星显示器之后。
+
+**电池铝塑膜客户集合。** DNP 在 IR-Day 2025 资料 p. 47 上披露了约 20 个具体的电池铝塑膜工厂位置——这是客户透明度的显著水平。主要客户和工厂包括：**LG 新能源**（波兰；LG MI；LG Ultium No. 1/2 与 GM；LG-GM JV；LG-本田 JV；LG-Stellantis JV；LG-现代 JV；LG 丰田专用工厂；LG 韩国 / 中国）；**SK On**（SKon 匈牙利；SKon 韩国 / 中国；SKon-福特 JV TN；SKon-福特 JV KY；SKon-现代 JV）；**AESC**（UK 紧邻日产工厂；法国雷诺工厂内；中国；日本茨城县座间）；**Skon**（匈牙利；韩国 / 中国）；**Verkor**（法国——2025 年新）；**Farasis**（中国）；加上新采用的丰田和本田软包电芯计划 ([DNP IR-Day 2025, p. 47 — Major Battery Pouch Plants map](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf))。地理分布——明确**北美在满载产能下 350g+，欧洲 250g+，亚洲 200g+**——显示 DNP 已为亚洲以外的 EV 工厂建设浪潮做好定位 ([same source](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf))。
+
+**智能卡 / BPO 客户集合。** DNP 在金融智能卡领域拥有日本第一份额，主要日本大型银行（三菱日联、三井住友、瑞穗）、主要信用卡网络（JCB、JR-东日本 Suica）和日本政府身份 / 健康保险卡计划是锚点账户。FY2025 提振信息安全营业收入的大规模 BPO 项目（参考 Q4 资料 p. 7）似乎是日本本土金融服务合同，但客户名称未披露。**FY2025 Rubicon SEZC 整合**将智能卡平台延伸至全球市场，是该线 FY2026 及以后的主要增长杠杆 ([DNP FY2025 results, p. 7 + p. 16 — Rubicon integration; FY2026 outlook on Information Security global expansion](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf))。
+
+**客户集中度分析。** DNP 的 Yuho **不像美国 10-K 那样披露主要客户集中度百分比**（日本 GAAP / IFRS-J 披露仅要求披露占板块净销售 ≥10% 的客户`主要な販売先`列表，DNP 的板块级 Yuho 披露未将任何特定客户标记为在集团级别越过该阈值）。集团级单一客户 >10% 的缺失反映了在光罩 / FMM / 电池铝塑膜 / 智能卡线之间的四向分散——没有单一终端客户集中度会突破 10% 的集团级报告触发器。
+
+```mermaid
+pie title DNP 按终端市场预计收入构成 FY2025
+    "出版 / 印刷 / 信息通信" : 50
+    "工业高性能 + 出行（生活产业除制药）" : 22
+    "医疗 / 制药 (CMIC CMO)" : 12
+    "电子 — 光罩 & EUV & NIL" : 6
+    "电子 — FMM + 光学薄膜" : 7
+    "电子 — 玻璃芯 + 其他" : 3
+```
+
+*资料来源：分析师估算，基于 [DNP FY2025 results, p. 6 — segment sales breakdown](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf) 和 [DNP IR-Day 2025, p. 10 — Focus Business Areas FY2024 sales for individual product lines](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf) 构建；板块级收入已披露，但 IR-Day Focus-Business 分解为 FY2024 基线水平。信息通信和生活产业内的拆分通过 FY2025 板块收入 ¥7,503 亿 + ¥5,123 亿日元按 FY2024 Focus-Business 构成（信息安全 ¥1,770 亿 + 影像 ¥740 亿 + 出行 ¥710 亿 + 电池铝塑膜 ¥600 亿日元）比例分配估算。*
+
+**上市策略。** DNP 几乎完全**直接 B2B 销售**通过全球客户团队结构。没有有意义的分销 / 渠道安排——每个产品都通过长期主协议（典型 3-5 年期，带续约条款）或通过基于项目的合同（BPO 服务、PET 无菌灌装系统安装）销售给工业客户。光罩业务使用 Kamifukuoka 直销给日本客户渠道和 Photronics 合资公司渠道服务非日本客户，合资公司的商业团队处理晶圆代工厂客户界面和定价。FMM 业务通过 DNP 韩国和中国销售办公室直接销售给面板厂家；电池铝塑膜业务通过相同的区域客户结构直接销售给 EV 电芯厂家。**基于主协议的合同**主导收入（估计 FY2025 销售 80%+），这给收入可见性但限制定价灵活性——DNP 必须通过工艺效率改进吸收成本输入通胀，而不是不断提高客户价格，这部分解释了 FY2025 业绩说明会对多个板块的评论指向**"原材料价格上涨、人工费用"**作为利润率逆风 ([DNP FY2025 results, p. 4 — Change in Operating Profit](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf))。
+
+**值得注意的战略合作伙伴关系。** 除了客户关系，DNP 还有几个关键的商业 / 股权合作伙伴关系塑造其竞争位置：(1) **Photronics 合资公司**在台湾（PDMC, 2013）和中国（PDMCX, 2018）——DNP 持有合资协议股权，让其能通过 Photronics 现场设施服务 TSMC、UMC、SMIC 和华虹；PLAB 合并并 DNP 接收少数股东权益经济 ([PLAB 10-K FY25, Note 6 PDMCX + Exhibit Index references to PDMC Joint Venture Operating Agreement](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。(2) **DT Fine Electronics** — 与铠侠 (KIOXIA)（存储器厂）的合资公司，向 KIOXIA 的先进存储器运营提供光罩供应；DNP 持有运营控制，专务董事中村修担任董事长兼代表董事 ([DNP Integrated Report 2025, p. 41 — Osamu Nakamura biography](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/annual/DNP_integrated2025e.pdf.coredownload.pdf))。(3) **Rapidus 入股** — 2026 年 2 月入股以正式确立北海道 2nm 试产线的光罩供应关系 ([DNP press release — DNP Invests in Rapidus, 2026-02-24](https://www.businesswire.com/news/home/20260224169578/en/DNP-Invests-in-Rapidus-to-Support-the-Establishment-of-Mass-Production-for-Next-Generation-Semiconductors))。(4) **新光电气 SPC 财团** — DNP 持有 JIC 主导的 SPC 工具公司 15%，与三井化学 (5%) 和 JIC Capital (80%) 一起完成对新光电气 ¥4,000 亿日元要约收购；战略逻辑是将 DNP 嵌入新光电气面向客户的 FCBGA 封装基板供应，为最终玻璃芯过渡做准备 ([Mitsui Chemicals — Notice Regarding Commencement of Tender Offer, 2025-02-17](https://jp.mitsuichemicals.com/en/release/2025/2025_0217/index.htm); [Digitimes — Shinko Electric to delist in June, eye DNP and Mitsui Chemicals partnership on backend process materials, 2025-03-21](https://www.digitimes.com/news/a20250321PD206/shinko-electric-mitsui-chemicals-materials-partnership-fujitsu.html))。(5) **CMIC CMO**（FY2023 合并）给 DNP 制药合同生产平台，将包装特许经营延伸到 API 和制剂。(6) **DNP Hikari Kinzoku**（FY2024 合并）将装饰薄膜特许经营延伸到 HMI 级别的汽车内饰组件。
+
+## 6. 行业概览
+
+DNP 的"行业"不是单一市场，而是由 P&I 工艺平台链接的六个结构上不同的行业。为分析清晰，本节走过对半导体 / 先进电子论点最重要的四个行业——**商业光罩行业、OLED FMM 行业、锂离子电池组件行业和先进封装基板行业**——并仅在背景上参考更广泛的日本集团企业印刷市场。
+
+### 6.1 商业光罩行业
+
+全球光罩市场规模由 DNP 自身在 2025 年估算为 **商业 USD ~690m + 内部 ~USD 15 亿**，商业部分在 2020-2028 年间以 **7.06% CAGR 增长** ([DNP IR-Day 2025, p. 54 — Photomask Merchant Market Actual/Forecasts](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf))。第三方 SNS Insider、Mordor Intelligence 和 GlobalGrowthInsights 将光罩总规模（内部 + 商业）估算为 **2025 年 USD 51 亿增长到 2032 年 USD 72.2-73.2 亿，CAGR ~4.1-4.31%** ([SNS Insider via GlobeNewswire — Photomask Market Size to Surpass USD 7.22 Billion by 2032, 2025-08-18](https://www.globenewswire.com/news-release/2025/08/18/3134697/0/en/Photomask-Market-Size-to-Surpass-USD-7-22-Billion-by-2032-at-a-CAGR-of-4-31-Research-by-SNS-Insider.html); [Mordor Intelligence — Photomask Market Size, Outlook, Trends & Global Report 2030](https://www.mordorintelligence.com/industry-reports/photomask-market))。第三方来源覆盖比 DNP 狭窄的仅商业预测更广泛的市场定义。
+
+**结构。** 该行业有两个不同的层：**(i) 内部供应** — TSMC、Samsung Foundry、Intel 和美光都运营内部光罩工厂，生产其自身大部分 EUV 和先进节点 ArF 光罩；(ii) **商业供应** — DNP、Tekscend（前 Toppan Photomask）、Photronics、Hoya（先进节点 IC 和特种光罩小份额）和较小的区域参与者（Newway/深圳、Compugraphics）服务没有内部产能的晶圆代工厂和 IDM，并在内部工厂峰值利用率时吸收外溢需求。内部 vs 商业拆分按 2025 年美元价值大约为 **60% 内部 / 40% 商业** — 内部主导在领先节点（EUV）最高，并在主流和尾部节点经济有利外包时迅速下降。
+
+**驱动因素（长周期结构性）。**(i) **先进节点的流片速度** — 每个新芯片设计需要一套新光罩；AI 加速器设计周期已从 NVIDIA / AMD / Google TPU 的 24+ 个月缩短为 12-18 个月，推动 ASIC 光罩需求。(ii) **节点演进 EUV 光罩需求** — 每个 EUV 光罩 ASP 是 ArF 光罩的 5-10×，因此尽管单位数量较少，收入增长集中在 EUV 产品族。(iii) **领先节点商业份额扩张** — UMC、GlobalFoundries、中国国内晶圆代工厂（SMIC、华虹、合肥晶合）以及新的日本 Rapidus 都需要 EUV 光罩供应但没有内部 EUV 光罩工厂，结构性扩展商业池。(iv) **NIL 用于存储器的出现** — 2027-28 KIOXIA NAND 在佳能 FPA-1200NZ2C NIL 系统上的爬坡创造了一个并行的 NIL 模具市场，DNP 是唯一商业供应商 ([DNP IR-Day 2025, p. 56 — Nanoimprinting partnership with KIOXIA and Canon](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf))。
+
+**驱动因素（短周期）。** 流片活动受**无晶圆设计公司 R&D 预算和 IDM 资本支出周期**制约。野村行业报告将 TSMC 2027 年资本支出约 USD 700 亿（资本强度 ~50%）描述为本周期最大的单一需求拉动，1.6nm / 1.4nm / 1.0nm 节点演进随后的爬坡是 2030 年代光罩需求的量驱动 ([Nomura sector note, p. 4–6 + p. 13–14](/Users/x/projects/financial_agent/reports/sector/半导体材料.md))。
+
+**区域动态。** 光罩供应集中在**日本**（DNP Kamifukuoka、Tekscend 东京 / 熊本、Hoya 秋田）、**台湾**（PDMC 新竹、台湾光罩）、**美国**（Photronics 布鲁克菲尔德 / 艾伦 / 博伊西、Tekscend Round Rock TX）、**韩国**（Photronics 天安、LG Innotek / SK-Electronics 用于 FPD）、**中国**（PDMCX 厦门 + Photronics 合肥 + Newway 深圳 + 青邑 Tekscend 深圳）和欧洲（Compugraphics 格伦罗西斯 UK + Photronics 德累斯顿 + 曼彻斯特）。地理集中反映了关键首套光罩层 24 小时交付要求 ([PLAB 10-K FY25, Item 1 — first-mask-set delivery within 24 hours](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)) 和光罩工厂与晶圆代工厂中枢共址的必要性。
+
+### 6.2 OLED 精密金属遮罩 (FMM) 行业
+
+OLED FMM 市场按美元价值在结构上比光罩规模小（估计 **2025 年全球 USD ~5-8 亿**），但增长更高——IT-OLED 爬坡（iPad Pro M4 + MacBook OLED + 平板）加上可折叠智能手机品类即使在智能手机出货量持平的情况下也驱动结构性单位量增长 ([DNP IR-Day 2025, p. 71 — Omdia OLED Smartphone / Tablet / Notebook PC / Automotive shipment forecasts](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf))。
+
+**结构。** 三家日本企业（DNP、Toppan，以及较小程度上的日立金属三岛工厂用于铟瓦合金供应）在 G6 规模下主导高 PPI FMM 的技术 IP；G8 IT 规模 FMM 是更小的俱乐部（DNP Kurosaki + 少数韩国厂家在评估中）。韩国供应链——APS Holdings、Wave Electronics、TGO Tech，加上 SK Micron 和 Poongwon 的上游铟瓦 / 镍精炼链——在结构上有条件在 FY2026-2030 期间替代日本 FMM 供应，如果国内替代补贴和三星显示器分散推动达到规模。中国 FMM 国内替代（Wave Electronics、佛山康佳精密）处于较早阶段，主要服务京东方、Visionox、天马、CSOT。
+
+**驱动因素。** (i) **iPad Pro / MacBook OLED 爬坡** — 苹果 2024 年将 iPad Pro 线过渡到 AMOLED 是催化剂；MacBook OLED 在 2026-27 产品管线中；两者都驱动显著的新 G8 规模 FMM 需求。(ii) **可折叠智能手机扩散** — 三星 Galaxy Z Fold/Flip + 研发中的苹果可折叠 iPhone 需要更薄 / 更高精度的 FMM。(iii) **OLED TV 增长**在 >65 英寸豪华层——尽管 LG 显示器对大型 TV 使用 Open-Mask + WOLED 而非 RGB-FMM，更广泛 OLED 品类增长仍然为中小型 IT 和智能手机部分拉动 FMM 需求。(iv) **车用 AMOLED** — 特斯拉、奔驰 EQ 和其他高端 EV 厂家为仪表盘和信息娱乐配备 OLED。
+
+### 6.3 锂离子电池铝塑膜行业
+
+DNP 估计全球 EV 电池电芯市场是软包需求的主要驱动；IR-Day 2025 资料绘制 DNP 客户工厂图并推断在其命名客户群完全爬坡时约 200-350 GWh 的年化电芯产能 ([DNP IR-Day 2025, p. 47](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf))。软包格式 2025 年在全球总 Li-ion 电芯量中约占 30-35%（vs 圆柱形约 30% 和方形约 35%），软包份额在 EV 应用中增长，因为重量能量密度更高和硅负极兼容性。
+
+**结构。** 软包薄膜市场由 **DNP（全球第一）、Resonac（前昭和电工包装——现在是 DNP 子公司）、Youlchon Chemical（韩国，LG 新能源内部供应）**主导，Selen Science（较小）和 Targray（加拿大分销）是较小规模。DNP 在 FY2024 整合 Resonac Packaging 是市场结构性收紧的有意义事件——DNP 现在控制传统 DNP 产能和前昭和电工产能，将商业供应格局有效减少到三家参与者（DNP + Youlchon + 较小剩余）。
+
+**驱动因素。** (i) **北美和欧洲的 EV 电芯产能扩张** — Blue Oval SK、LG-Stellantis、LG-GM Ultium、AESC 法国 / UK、Verkor 法国 ([DNP IR-Day 2025, p. 47](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf))。(ii) **软包格式份额增长**在高端 EV 电池组中由于硅负极路线图。(iii) **IT 设备电芯需求**（智能手机、笔记本、可穿戴）——稳定但增长较低。(iv) **储能** — 增长最慢但价格最敏感的子部分。
+
+**逆风。** (i) **2025 年美国 EV 补贴取消**显著抑制美国电池电芯利用率，并迫使 LG ES、SK On 和松下推迟数家美国工厂爬坡；DNP Q4 FY2025 业绩明确将其归为利润率逆风 ([DNP FY2025 results, p. 10 — Industrial High-Performance Materials commentary](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf))。(ii) 中国国内软包薄膜供应在上升（宁德时代主要使用方形化学，但二级软包计划存在）。(iii) **固态电池商业化** — 如果固态电池爬坡，软包作为格式仍可行，但薄膜堆栈构成改变。
+
+### 6.4 先进封装基板行业 — FCBGA + 玻璃芯
+
+先进封装基板行业目前由**新光电气、Ibiden、Unimicron、Nan Ya PCB、Kyocera 和 AT&S 的有机 FCBGA 基板**主导；**味之素精细技术**供应 ABF (Ajinomoto Build-up Film) 介质。该市场正在经历野村行业报告描述的 **2027-2028 玻璃芯过渡** — Broadcom 是领头客户名，Intel 是强力第二，chiplet 封装 + HBM + AI 加速器需求浪潮提供需求端拉动。DNP 通过 Kuki 工厂试产线（2025 年底）进入该市场，目标是 2028 年商业规模生产 ([DNP IR-Day 2025, p. 60](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf); [Nomura sector note, p. 11, 85-88](/Users/x/projects/financial_agent/reports/sector/半导体材料.md))。
+
+**驱动因素。**(i) AI 加速器封装尺寸增长（B200 约 H100 面积的 2×，未来封装可能更大）。(ii) chiplet 采用（AMD EPYC 14-CCD 架构验证多 die FCBGA / 玻璃芯模式）。(iii) HBM4 堆栈高度增长将基板平整度容差推到有机 FCBGA 能力之下。(iv) >1.6T 光 I/O（CPO 和 224G PAM4 SerDes）信号完整性受益于玻璃比 ABF 更低的介质损耗。
+
+**瓶颈。** (i) **TGV 成本经济性** — 当前试产规模约 USD 400-500/单位需要降至 <USD 400 才能在规模下与 ~USD 200 ABF 基板竞争 ([Nomura sector note, p. 85](/Users/x/projects/financial_agent/reports/sector/半导体材料.md))。(ii) **RDL 对玻璃的粘附** — 叠层介质（仍是 ABF，应用于玻璃芯之上）对玻璃的粘附不如对有机芯，引起热循环可靠性担忧。(iii) **客户采用决定时间** — DNP 自己的评论说采用决定在 2025 年底 / 2026 年上半年，2028 年起量产。
+
+### 6.5 日本集团企业印刷行业 — 背景
+
+DNP 的传统印刷业务（出版印刷、商业印刷、包装印刷、装饰印刷）位于长期下降或低增长的日本 / 全球市场环境中。日本出版印刷量自 2010 年代初以来每年下降 ~3-5%；商业印刷跟踪日本中小企业营销活动（~持平）；包装印刷跟踪全球消费品包装（低个位数增长）。DNP 的 FY2023-FY2025 中期计划对这些线执行了结构性改革——工厂关闭、组织重组、固定资产处置——到 FY2025 累计产生 ¥215 亿日元的利润提升，FY2028 之前还有 ≥¥50 亿日元的额外计划 ([DNP FY2025 results, p. 33 — Structural Reform Action Plan](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf))。传统印刷业务因此是**收缩但利润率改善**的特征，而非论点驱动增长楔形。
+
