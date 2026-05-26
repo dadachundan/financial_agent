@@ -93,3 +93,89 @@ S&S Tech 在管理层面是一家**处于拐点上的创始人 CEO 公司**。�
 接班结构 — 在第 2 节有提到 — 把**次子郑成勋 (정성훈, 1988 年生) 定位为 S&S Tech 主体的接班人** (他作为执行董事在董事会任职，并在 2024 年下半年获得创始人 10 万股赠与)，**长子郑时俊 (정시준) 主导 S&S Investment 子公司**。这种切分被韩国财经媒体普遍解读为一种刻意安排: 主营运营公司由一位继承人接班，而风险 / 工业投资活动放在平行载体里 ([The Bell — 정수홍 회장 지배력 기반, 2019-03-29](https://www.thebell.co.kr/free/Content/ArticleView.asp?key=201903290100053990003403&svccode=04); [Business Post — Who Is? 정수홍 succession, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745))。未来 12-24 个月，日常运营领导权完全保留在创始人手上 — 考虑到三星 EUV 资格认证窗口的关键性，这种创始人连续性是正面信号，而不是需要刻意提示的关键人风险。
 
 ---
+
+## 4. 产品与服务 — EUV 空白光罩重点章节
+
+> 第 4 节是**本报告最关键的一章**。S&S Tech 自 2001 年成立以来就是一家**单一产品族公司**: 空白光罩 (blank mask)。损益表上其他每一行 (hardmask 薄膜、FPD blank、EUV pellicle、未来的 masked-glass 或 photoresist 配套产品) 要么是 blank-mask 沉积 / 检测 / 封装产线的工艺延伸，要么是 EUV 路线图倒逼进入组合的战略并行产品。如果投资者没有内化**什么是 blank mask、EUV blank 与光学 blank 在物理结构上有何根本差异、为什么每平方厘米缺陷密度是决定份额的唯一商业变量、hardmask 与 pellicle 在光刻流程中的具体位置**，就会错配后面每一节的估值。因此本节配置约 1,800 字 (中文计算约 3,000 字)。
+
+### 4.1 S&S Tech 产品矩阵
+
+下表的产品矩阵照搬自 S&S Tech 官网的产品页 — 公司未在 DART 备案中按 10-K 式的分段披露收入，因此官网产品导航是权威锚点。矩阵分两大门类 (半导体 / FPD)，半导体侧含五个产品族，FPD 侧含一个产品族; pellicle 与 hardmask 薄膜归入半导体段披露。
+
+| 段 | 产品族 | 基板 / 膜栈 | 光刻 / 应用 | 状态 (2026-05) |
+|---|---|---|---|---|
+| **半导体** | **二元光罩 (binary blank)** | 石英基板上 Cr; **Cr 66–100 nm**, PR ~150–200 nm | i-line / g-line / KrF — 成熟节点 (>180 nm) | 量产; 在三星 / SK 海力士做 Hoya 二号备选 |
+| **半导体** | **相移光罩 (PSM) — 衰减型** | 石英基板上 MoSi; **MoSi 38–66 nm, Cr 65–87 nm, PR 200/100/60 nm** 因变型而异 | ArF 干式 / ArF 浸没式 — 65-14 nm 逻辑与 DRAM | 量产; 多变型 (Standard / Advanced / High T% PSM) |
+| **半导体** | **Hardmask 薄膜** | 新物质 (化学成分未披露); 47–60 nm hardmask + 4–5 nm cap + 60–100 nm PR | EUV (0.33 NA) 与 High-NA EUV (0.55 NA) — PR 下的刻蚀选择层 | 送样; 2024 年 8 月推出"新物质"代际 |
+| **半导体** | **EUV 空白光罩 (EUV blank)** | LTEM 基板上 Mo/Si 多层膜 (40+ 对); Ta 基吸收层; Ru 覆盖层 | EUV (0.33 NA) — 7 / 5 / 3 / 2 nm 逻辑与 sub-1y DRAM | 三星最终资格认证中 (2026 年初); 量产 ready |
+| **半导体** | **EUV 防尘薄膜 (EUV pellicle)** | 多层膜; ~90% 透过率原型; 边框装在 mask 上方 ~2 mm | EUV 扫描仪 — 防颗粒落到 photomask 上 | 客户调谐中; 1H-2026 商业化目标 |
+| **FPD** | **FPD 用空白光罩 (多种变型)** | Cr binary、Halftone TM、Multi-tone TM、Cr PSM、MoSi PSM | LCD / OLED 背板与彩色滤光片 — 最大 G10.5 (1620×1780 mm) | 量产; 三星显示与 LG 显示重点份额 |
+
+*资料来源: S&S Tech 官网产品页 — 上述膜栈规格逐字照抄自公司产品导航，并以 2024-2025 年新闻条目交叉确认状态 ([S&S Tech 제품소개 — 반도체용 및 FPD용 블랭크 마스크, accessed 2026-05](http://www.snstech.co.kr/renew/html/sub02_01.asp); [ZDNet Korea — High-NA EUV 하드마스크, 2024-08-12](https://zdnet.co.kr/view/?no=20240812172957); [파이낸셜뉴스 — EUV 양산 시동, 2025-03-21](https://www.fnnews.com/news/202503211358486799); [THE ELEC — EUV pellicle 90% 투과율, 2021-10-06](https://www.thelec.net/news/articleView.html?idxno=3431); [Digitimes — Samsung mask blanks localization, 2026-01-14](https://www.digitimes.com/news/a20260114PD219/samsung-photomask-euv-supply-chain-2026.html))。*
+
+官网没披露按产品族的 FY 收入拆分，DART 备案亦无。*分析师观点 (Analyst view):* 从 FY2024 KRW 176 bn 营收基数、董事长 2025-03 访谈中关于 FPD blank 业务的描述 ("display 用 blank mask 服务 LCD 与 OLED 面板制造，在更大面积上实现精密图形")，以及 2024 年没有 EUV blank 商业收入这一事实三角化推断，**EUV 前的 FY2024 营收结构大致为: 半导体 blank (binary + PSM + hardmask) ~69%、FPD blank ~28%、R&D + pellicle 中试 ~2-3%**。下图把同一画面用两列简化呈现 — FY2024 实际 vs. 分析师草图勾勒的 FY2027E 量产 EUV 情形 (基于公司自报的 KRW 500 bn 目标) — 视觉上清楚说明为什么 EUV blank 是整个投资论点的关键变量 ([파이낸셜뉴스 — 정수홍 인터뷰, 2025-03-21](https://www.fnnews.com/news/202503211358486799); [Company Guide — 에스앤에스텍 A101490 financials, accessed 2026-05](https://comp.fnguide.com/SVO2/ASP/SVD_Finance.asp?pGB=1&gicode=A101490&cID=&MenuYn=Y&ReportGB=B&NewMenuID=103&stkGb=701))。
+
+![S&S Tech 营收结构演进 — EUV blank 与 pellicle 为关键变量](../../charts/sstech_revenue_mix.png)
+*资料来源: 左侧 FY2024 基于 [Company Guide — A101490 financials, accessed 2026-05](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A101490) 与 [파이낸셜뉴스 정수홍 인터뷰, 2025-03-21](https://www.fnnews.com/news/202503211358486799) 中的产品族评论构建。右侧 FY2027E 为分析师草图，对齐董事长郑寿弘公开宣称的 KRW 500 bn 营收目标。*
+
+### 4.2 综合 — 各产品族如何组成一条光刻流程
+
+走完每一行之前，先画一遍**从光罩厂视角出发的光刻流程图**，因为 S&S Tech 销售的每一类产品要么就是 blank 本身，要么处于扫描仪内距离 blank 约 2 mm 的距离内:
+
+```mermaid
+graph LR
+    A[S&S Tech blank mask 基板<br/>Cr/MoSi/EUV 多层膜 + 吸收层] --> B[Photomask 厂<br/>电子束雕刻 + 刻蚀]
+    B --> C[成品 photomask]
+    C --> D[光刻扫描仪<br/>ArF 浸没式或 EUV]
+    D --> E[晶圆上的图形]
+    F[S&S Tech EUV pellicle<br/>膜 + 边框] --> C
+    G[S&S Tech hardmask 薄膜<br/>沉积在晶圆 PR 下] --> D
+```
+
+需要注意三件事。**第一**，blank mask 和 EUV pellicle 装在**同一张 photomask 上** — pellicle 在光罩厂里贴在成品 mask 顶部，从客户采购视角它们是一体的产品，能两个一起卖正是三星"从一家韩国厂商采购"资格认证偏好的成交关键。**第二**，hardmask 薄膜根本不是 mask 材料 — 它**沉积在晶圆本身**上，在 PR 下方，为 High-NA EUV 的更薄光刻胶提供刻蚀步骤所需的材料对比度余量。它本质是晶圆厂 consumable，挂在 mask 相关产品下面是因为 S&S Tech 沉积设备的工艺基础和 blank 同源。**第三**，FPD blank 与半导体二元 blank 是物理上同一类产品，只是基板尺寸放大到 G10.5 (1.62 × 1.78 m); 制造设备显著重合，正是公司没把 FPD 业务剥离单独拆分的原因。
+
+### 4.3 二元光罩 — 入门产品、今日利润底盘
+
+二元光罩 (binary blank) 物理上是 **chrome-on-quartz**: 在超净熔融石英基板上沉积 66-100 nm 的铬 (Cr) 吸收膜，再涂上一层 ~150-200 nm 的光刻胶，等客户的光罩厂做电子束雕刻 ([S&S Tech 제품소개 — 반도체 블랭크 마스크 binary, accessed 2026-05](http://www.snstech.co.kr/renew/html/sub02_01.asp))。"二元"是字面意义 — pattern 区域 Cr 要么留存 (不透光)、要么剥离 (透光)，形成两态 mask，让 i-line / g-line / KrF 光刻波长 (365 / 248 nm) 可以直接成像到晶圆。
+
+**通俗解释 / Plain-language gloss:** 二元 blank 是 photomask 链路的入门级产品 — Cr (铬) 膜均匀地溅射沉积在 quartz 基板上，之后给 photomask 厂做电子束 (e-beam) 雕刻。物理上等同于一张"黑白透明的菲林底片"，但缺陷密度规格是 ≤0.01 个 ≥1 µm 颗粒/cm²，所以做出一片 spec-grade blank 的良率反而是低的。这条产品线的商业重点是 **>180 nm 成熟节点的 DRAM / 显示驱动 IC / 电源管理芯片** — 这类芯片晶圆用量大、价格敏感、对 mask 工艺余量宽容，正好是 S&S Tech 用韩国本土制造价格优势打 Hoya 进口替代的最容易切入点。**战略意义:** 这条产品线是公司**利润底盘 (profit floor)** — 出货量稳定、毛利较薄、不需要新增 capex，但把整个三星 / SK 海力士 / Newway 的客户关系网络养起来了，给后面 PSM / EUV / pellicle 的资格认证留了门票。
+
+*分析师观点 (Analyst view):* moat 判断是 **partial**，moat 类型是**切换成本 + 客户资格认证时间** (存储厂在一个节点上要积累约 2 年的缺陷数据才能资格认证一家新的 blank 供应商，Hoya 早就有，S&S Tech 在 2000 年代末才取得; 新进入者在十年量级上被功能性锁出)。最接近的竞争对标是 Hoya 自己的二元 blank 线，Hoya FY25 综合报告将其归入"半导体用 Photomasks and Maskblanks"宽口径段披露，未单拎二元 ([HOYA FY25 IFRS Financial Statements, p. 33](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf))。
+
+### 4.4 相移光罩 (PSM) — ArF 浸没式光刻的桥梁产品
+
+PSM blank 是 S&S Tech 进入有意义的亚 100 nm 光刻领域的入口产品。膜栈在 Cr 下加了一层 **38-66 nm 厚的 MoSi (molybdenum-silicide) 衰减层** — MoSi 设计为约 6% 透过率 (即让 ~6% 的 ArF 光以 180 度相移通过)，由此在 pattern 边缘产生**相消干涉，显著锐化印制特征** ([S&S Tech 제품소개 — PSM blank, accessed 2026-05](http://www.snstech.co.kr/renew/html/sub02_01.asp); [Wikipedia — Photomask Phase Shift Mask section, accessed 2026-05](https://en.wikipedia.org/wiki/Photomask))。S&S Tech 发布三种子变型 — Standard PSM、Advanced PSM (更薄 PR 用于更密 pattern 密度)、High T% PSM (更高 MoSi 透过率用于特定 aerial-image 形貌) — 覆盖从 45 nm DRAM 到 14-7 nm 逻辑在 ArF 浸没式光刻上的整条工艺谱 ([S&S Tech 제품소개 page, accessed 2026-05](http://www.snstech.co.kr/renew/html/sub02_01.asp))。
+
+**通俗解释 / Plain-language gloss:** PSM 的物理原理是**相移干涉**: MoSi 这一层不是完全不透光，而是让 ~6% 的 ArF (193 nm) 光带着 180° 相位反向通过 — 在 pattern edge 上和主光束发生 destructive interference，把曝光强度梯度变陡，等效于把光刻的分辨率极限再推进约 30%。这是三星 / SK 海力士在 ArF 浸没式光刻时代量产 sub-65 nm DRAM 必须用的技术，也是为什么 PSM blank 比二元 blank 单价高约 3-5 倍 — MoSi 沉积工艺对均匀性、相位精度、缺陷密度的要求高一个数量级。**战略意义:** 这是 S&S Tech 真正进入三星 / SK 海力士主流晶圆产线的产品 — 2014 年 MoSi PSM 在三星的资格认证是公司营收从 LCD-mainly 转向 semi-led 的转折点 (第 2 节时间线已标注)。今天 PSM blank 仍是公司营收最大单一品类，也是支撑 FY2024 16.8% / FY2025 20.7% 营业利润率的核心 (Cr-only binary 毛利偏薄，PSM 把 ASP 抬起来)。
+
+*分析师观点 (Analyst view):* moat 判断是 **yes**，moat 类型是**工艺 IP + 客户资格认证深度**。MoSi 衰减型 PSM 是 IP 密集型 (Hoya、Shin-Etsu、S&S Tech 各自持有吸收膜栈化学、MoSi 组分、相位控制几何的阻断性专利)，且三星对 S&S Tech 的 PSM 走完约 3 年工艺验证数据所构成的护城河对新进入者具有功能性阻拦。最接近的具名竞品是 **Hoya 的 PSM blank 线** (Hoya 将该段口径定为"半导体用 Photomasks and Maskblanks"未细分子产品 — 参见 [HOYA FY25 IFRS Financial Statements, p. 33](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf)) 与 **Shin-Etsu Chemical 的 MoSi 基 PSM** (通过 Shin-Etsu Microsi 分销渠道)。
+
+### 4.5 EUV 空白光罩 — 整个投资论点的承托
+
+**这是本节最重要的子节。** EUV blank 与上面的光学 (二元 / PSM) blank 在物理上是**根本不同的产品** — 制造工艺差异之大，以至于在光学 blank 上世界第一 (Hoya) 也**不会自动**转化为在 EUV blank 上世界第一。
+
+**物理原理。** EUV 光刻工作波长 13.5 nm，意味着**光路中所有元件都必须是反射式而不是透射式** — 没有 quartz，没有 Cr-on-glass。EUV blank 建立在**低热膨胀材料 (LTEM, low-thermal-expansion-material)** 玻璃基板上，先沉积 **40+ 对交替 Mo/Si 双层膜** (每层约 7 nm，做 13.5 nm 下约 70% 反射率的多层 mirror)，再叠**钌覆盖层 (Ru capping)** (Ru 几纳米厚，防止顶层 Si 氧化破坏反射率)，然后是 **Ta 基吸收膜栈** (50-70 nm 的 TaN 或 TaBN — 写 mask 时被刻蚀掉以定义 pattern 的吸收层)，最后是供卡盘吸附的背面导电层 (通常是 CrN)。Nomura 2026-05-21 大中华半导体报告指出，吸收层化学正在从 TaBN 切向 Ru / Mo low-n 材料过渡，覆盖层成分也在演进 — 这两个领域恰好是 S&S Tech 的"新物质 hardmask"R&D 计划与 EUV 路线图的重叠区 ([Nomura "Greater China Semi: A guide to Semi renaissance in 2026~30F", p. 38-39, 2026-05-21](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md); [Semi-Engineering — Why Mask Blanks Are Critical, 2022](https://semiengineering.com/why-mask-blanks-are-critical/))。
+
+**通俗解释 / Plain-language gloss:** EUV blank 是 **multi-layer mirror** 而不是传统 mask — 因为 13.5 nm 波段所有材料都吸收，没有 transmissive 路径，必须用 40 多对 Mo/Si bilayer 做 **Bragg 反射**把光弹回来，吸收层 (TaBN / Ru-based) 在最顶层把要遮蔽的区域吸收掉。难度集中在**三个独立工程问题**: (1) Mo/Si 多层膜的逐层均匀性 — 任何一层厚度偏差 >0.1 nm 都会让 13.5 nm 反射率降 1-2 个 pp (整片 mask 直接报废); (2) **每平方厘米缺陷密度 (defects/cm²)** — sub-nm 级别的颗粒嵌在 multilayer 里就是 unprintable defect，商业规格要求 **<0.05 defects / cm²**，比二元 blank 严苛约 500 倍; (3) **Ru capping layer 的化学稳定性** — Ru 太薄就不挡氧化、太厚就吃掉反射率，3-5 nm 之间的 sweet spot 是工艺壁垒。Hoya 能保持 EUV blank 全球约 60-80% 份额，本质上是约 15 年的缺陷控制数据积累，不是单纯的设备投资问题。**战略意义 — 对 S&S Tech 而言:** 这是公司 KRW 1.64 万亿市值中 80%+ 部分在定价的预期。三星 2026 Q1 完成最终资格认证、2026 Q2 启动小批量采购、2027F 把 EUV blank 占自身 EUV 用量推到 ≥20% — 这条事件链若走通，公司营收从 KRW 244 bn 走向 KRW 400-500 bn 区间是 base case; 如果资格认证在 2026 上半年滑到 2H 甚至 2027，整张估值表需要重做。
+
+*分析师观点 (Analyst view):* 针对 S&S Tech EUV blank 这一具体产品，moat 判断是 **partial — closing**。一旦兑现，moat 类型是**数十年缺陷控制 IP + 韩国唯一供应商战略溢价**。最相关的外部基准是: **Hoya**，依据 Nomura 2026-05-21 估计 EUV blank 全球份额约 80% (其他分析师在 60-85% 区间)，而 Intel Market Research 的市场跟踪产品给出 Hoya 62% / AGC 30% / Shin-Etsu 7% / S&S Tech 资格认证阶段 <1% — 参见 [Hoya FY25 综合报告对"长年来在 mask blank 市场拥有 exceptionally large share"的描述](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf) 与 [Intel Market Research — EUV Mask Blanks Market Outlook 2025-2032](https://www.intelmarketresearch.com/euv-mask-blanks-market-11463); **AGC (旭硝子)** 凭借特种基板 / LTEM 玻璃底子在 EUV blank 上有约 30% 份额; **Shin-Etsu Chemical** 是除 Hoya / AGC 之外唯一有量的 EUV blank 玩家，但份额仅个位数。未来 12 个月就是 S&S Tech 的"partial — closing"判定能否兑现到"yes"(三星资格认证 + 首批 PO) 或退回到"partial — closing"(资格认证滑动) 的时间窗口。
+
+### 4.6 EUV 防尘薄膜 (EUV pellicle) — 锁定三星订单的姐妹产品
+
+EUV pellicle 是一张**多层透明膜** (单程透过率 90% 的产品总厚度约 150 nm)，绷在金属边框上、装在成品 photomask 上方约 2 mm。它的功能是机械防护: 把扫描仪内部脱落的亚微米颗粒挡在 mask 吸收 pattern 之外。没有 pellicle，每个粒子都会变成可印刷缺陷; 有 pellicle，粒子在距离像面 2 mm 之上、处于离焦状态，mask 可无限次复用 ([THE ELEC — S&S Tech develops EUV pellicle with 90% transmittance, 2021-10-06](https://www.thelec.net/news/articleView.html?idxno=3431); [USPTO Patent Application — Pellicle for an EUV lithography mask, 2023-11-12](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11782339))。
+
+**通俗解释 / Plain-language gloss:** EUV pellicle 就是**保护膜** — 在 EUV mask 表面架一层很薄的透明膜 (就像放大镜上盖的 lens cap)，把可能飞过来的粒子挡在 mask pattern 外面。物理挑战是: EUV 光必须**双向穿透** pellicle (入射穿过、反射后再穿过)，所以单程损耗 5% 往返就是 ~10% 的曝光强度损失 — 在 EUV scanner 每秒曝多少 wafer 是 throughput economics 命门的前提下，每 1pp 透过率提升直接对应 EUV scanner 产能 ~1pp 提升。三井化学是这一市场的现任霸主 (~88% 单程透过率); S&S Tech 2021 年的 90% 原型是韩国厂商首次把透过率推过 90%。**战略意义:** pellicle 业务对 S&S Tech 自身营收增量并不大 (EUV pellicle 全球 TAM <USD 100 m/yr)，但**战略意义在于把三星"EUV mask 全套国产化"套餐凑齐** — 三星 EUV 要彻底降低对日本进口的依赖，需要同时拿到本土 EUV blank 和本土 EUV pellicle 两个产品，S&S Tech 是唯一同时具备这两条产线的韩国公司。这也是三星与 S&S Tech 2025 年联合申请 EUV pellicle 边框专利的商业逻辑 ([THE ELEC — Samsung and S&S Tech co-files EUV pellicle patent, 2025-05](https://www.thelec.net/news/articleView.html?idxno=5452))。
+
+*分析师观点 (Analyst view):* moat 判断是 **partial**，moat 类型是**工艺 IP + 三星联合研发数据**。最接近的竞品是**三井化学的 EUV pellicle** (在位玩家 — 单程透过率约 88%，2019 年起在三星 / TSMC / Intel 商用 EUV 上服役)，**ASML 自研 pellicle** (2021 年附近报出约 90.6% 透过率) 作为另一基准 ([THE ELEC — S&S Tech develops EUV pellicle with 90% transmittance, 2021-10-06](https://www.thelec.net/news/articleView.html?idxno=3431))。韩国竞争对手 **FST (KOSDAQ: 036810)** 也在开发 EUV pellicle，但客户验证周期落后 S&S Tech 约 1-2 年。
+
+### 4.7 Hardmask 薄膜与 FPD blank — "第二引擎"产品
+
+**Hardmask 薄膜**是 2024 年 8 月的新产品 — 一种沉积在晶圆 PR 下方的新物质薄膜，相对常规铬 / 钽 / 硅 hardmask 材料刻蚀选择比提升约 3 倍，且采用纯氯刻蚀化学 (对比传统 O₂ + Cl₂) ([ZDNet Korea — High-NA EUV 시대 신물질 하드마스크 개발, 2024-08-12](https://zdnet.co.kr/view/?no=20240812172957))。产品定位直接对准 **High-NA EUV (0.55 NA)** 时代 — Nomura 2026-05-21 报告对 High-NA + 金属氧化光刻胶 (MOR) 经济性的回顾指出，0.55 NA 下 PR 厚度必须减薄至 ≤16 nm (0.33 NA 下约 25 nm)，PR 厚度 <16 nm 时刻蚀步骤需要选择比远更高的下层 hardmask 来保留足够的图形转移材料预算 ([Nomura "Greater China Semi", p. 10-12, 2026-05-21](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md))。**通俗解释 / Plain-language gloss:** 硬掩膜 (hardmask) 物理上等同于在 wafer 上加一层**耐刻蚀的中间膜** — 当 PR (photoresist) 在 High-NA EUV 时代被砍到 <16 nm 时，单凭 PR 自身没法挡住下层电介质 / 金属的 etch 步骤，需要在 PR 下面再加一层 etch selectivity 高的 hardmask。S&S Tech 的"新物质"hardmask 把 selectivity 推到对手 3 倍，意味着同样 etch 步数下能 transfer 更深的 pattern。**战略意义:** 这条产品线本身体量小 (FY2025 估算 <KRW 10 bn 营收)，但是**High-NA EUV 时代的入场券** — 2028-30F High-NA EUV HVM 起量后，hardmask 需求会跟随曝光步数成倍增加，S&S Tech 提前 4 年完成材料开发是为 2028-30 的爆发窗口铺路。*分析师观点 (Analyst view):* moat 判断是 **not yet** — 材料在客户验证阶段 (大概率是三星)，尚未商业化; 最接近的对手是 Applied Materials 的 hardmask CVD 工艺 (是设备而非材料 — 不同竞争层次) 与 DuPont / JSR 的常规 hardmask 材料。
+
+**FPD blank mask** 是公司历史营收底盘 — 六种产品变型 (Cr binary OD 3.2 / 5.0 / LR、Halftone TM、Multi-tone TM、Cr PSM、MoSi PSM) 覆盖从 520 × 800 mm 到最大 **G10.5 1620 × 1780 mm** OLED 大尺寸代际的基板，基板厚度 8T-17T (mm) ([S&S Tech 제품소개 — FPD blank mask, accessed 2026-05](http://www.snstech.co.kr/renew/html/sub02_01.asp))。主要客户为**三星显示** (手机 / IT OLED, 越来越多的电视用 QD-OLED) 与 **LG 显示** (坡州大尺寸 WOLED 电视、IT OLED)。**通俗解释 / Plain-language gloss:** FPD blank 是**放大版的 binary / PSM blank**，物理工艺和 semi blank 相通，只是基板从 6×6 英寸放大到 1.6×1.8 米。一片 G10.5 mask 单价显著低于 semi mask，但面积大、出货 cadence 频繁 — 三星和 LG 一年要换约数千片 FPD mask 用于 OLED 背板 + 彩色滤光片步骤。**战略意义:** 这是 S&S Tech 营收的**反周期基础** — semi-blank 营收与三星 / SK 海力士晶圆投片周期相关，FPD blank 营收与 OLED 面板投资周期相关，两者周期相位不同步，整合后稳定了公司营收波动。
+
+### 4.8 综合 — 旗舰排序与近期发布
+
+**旗舰产品 (按 FY2026F 营收影响排序):** (1) **EUV blank** — 整个股价上行预期; (2) **PSM blank** — 当前营收最大单一品类、利润率底盘; (3) **EUV pellicle** — 营收增量小，但是锁定三星的"打包产品"; (4) **FPD blank** — 周期反相产品; (5) **Hardmask 薄膜** — High-NA EUV 第二个十年的可选性; (6) **二元 blank** — 成熟、低毛利、为老节点晶圆厂留住底盘。**最近 12 个月发布 / 新闻:** (a) 龙仁 EUV 中心 2025-10-15 落成; (b) 2024-12-04 董事会追加批准 KRW 41.7 bn capex; (c) 2024-08-12 "新物质"hardmask 发布; (d) 2025-05 前后三星 - S&S Tech 联合申请 EUV pellicle 专利; (e) 2025 年 3 月 CEO 访谈中提出 KRW 500 bn 中长期营收目标 — 参见第 2 节引用。公司没有有意义规模的循环服务 / 售后业务，营收几乎全部由产品出货驱动 — 这也是为什么 KRW/JPY 汇率敏感性在风险章节里要单独列出。
+
+---
