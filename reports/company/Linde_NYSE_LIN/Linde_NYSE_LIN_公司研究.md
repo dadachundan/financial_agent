@@ -271,3 +271,84 @@ graph TD
 *资料：[Linde 2024 Annual Report to Shareholders — Financial Highlights, End Markets pie](https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/full-year-financial-reports/2024-annual-report-to-shareholders.pdf)。注意：Linde 不单独披露特种电子气营收，9% 的 Electronics 一块同时包含晶圆厂大宗气和特种前驱体子业务。*
 
 ---
+
+## 5. 客户与上市策略
+
+Linde 客户集中度披露中最重要的一句是 10-K 一句简短表述：
+
+> **"Linde is not dependent upon a single customer or a few customers."**
+> — [Linde 2025 10-K, Item 1 Business — Customers](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)
+
+这是美国公司在 ASC 280-10-50-42 下表示"**没有客户 ≥10% 合并营收**"时使用的标准措辞；对分析师而言意味着**没有任何单一客户驱动集团 10% 以上的营收**，而在 $34 bn 营收基础下，第一大客户的份额几乎肯定在低个位数。Linde 在全球各分销渠道合计**约 200 万客户** ([Linde corporate website — About Us](https://www.linde.com/about-us) —— 分析师按披露的市场覆盖估算近似值，非 10-K 披露)，按这一规模其客户簿是全球工业气体同业中最分散的。代价是：缺乏客户披露意味着投资者不能直接验证电子 vs 炼厂 vs 医疗的标称营收结构；只能通过终端市场饼图（§4.10）、按厂区资本开支披露与管理层电话会的色彩三角化推算。
+
+**按渠道的客户细分。** 在驻厂吨级渠道中，最顶层客户都是有足够规模设置专用 ASU 的全球巨头：
+
+- **炼厂：** ExxonMobil（Beaumont TX 清洁 H₂、Baytown TX H₂ 管道）、BP（Whiting IN、Cherry Point WA）、Marathon（Galveston Bay、Detroit）、Phillips 66（Sweeny TX）、Valero（Houston、Diamond Green Diesel JV）、Shell（Convent / Norco LA 管网复合）、Saudi Aramco / Motiva。这些客户锚定 **美国墨西哥湾管网复合体**，是 Linde 单一最有价值的基础设施资产。
+- **钢厂：** ArcelorMittal（全球）、Nucor、Steel Dynamics、Cleveland-Cliffs（美国）、Tata Steel（印度 / 荷兰）、POSCO（韩国）、宝武（中国）、JFE / 新日铁（日本）。
+- **化工 / 石化：** Dow（Path-2-Zero 阿尔伯塔 + 多家美国站点）、LyondellBasell、BASF、SABIC、INEOS、Reliance Industries（印度）、中石化。
+- **电子 / 半导体：** 台积电（新竹、南科、亚利桑那）、三星代工与三星电子内存（平泽、华城、Taylor TX）、SK 海力士（利川、清州、无锡通过 JV）、Intel（Ocotillo AZ、俄亥俄 New Albany、以色列 Kiryat Gat、爱尔兰 Leixlip）、Micron（爱达荷 Boise、弗吉尼亚 Manassas、广岛、新加坡）、Global Foundries（Malta NY、德累斯顿）、Texas Instruments（Sherman TX、Lehi UT）、长江存储与长鑫存储（中国，通过本地 JV 服务）。
+- **可再生 / 清洁能源工业气体客户：** Woodside / OCI（Beaumont 清洁 NH₃）、Ørsted、Iberdrola、ENGIE，以及大量带电解槽的区域公用事业商和炼厂减碳项目长尾。
+
+10-K 指明 **驻厂供气合同为全需求合同，期限通常 10–20 年，含最低采购量与价格调升条款** ([Linde 2025 10-K, Item 1 — Industrial Gases Distribution, On-site](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))。这正是为 Linde 创造永续价值基石的合同结构：典型驻厂 ASU 资本开支 $300–600 mn、经济寿命 25 年，通过 (i) 覆盖折旧 + 维护、与吞吐量无关的固定月度"设施费 (facility fee)"、(ii) 量 / 消费计费、(iii) 电力 / 天然气成本传导（涨价时保护毛利），以合同 IRR 回本。
+
+merchant 与包装板块服务的是更长尾的客户基础——数万家焊接 / 制造车间、区域食品加工厂、医院、实验室、大学研究组、R&D 实验室。这些渠道靠 **物流密度与配送可靠性** 而非价格取胜；印第安纳州中部的客户经济上无法被最近灌装厂在 400 公里外的对手服务。这就是为什么 **区域管网 / merchant 集群** —— 集中在墨西哥湾、五大湖走廊、北欧（莱茵河谷）、长江流域、韩 / 台晶圆厂集群 —— 是行业内防守最严密的竞争位置。
+
+**地理客户集中度。** 如 §1 所述，FY25 约 64% 销售来自美国之外，但随时间美国份额上升——因 IRA 驱动的氢项目管线将新增资本开支偏向美国墨西哥湾与德州 / 路易斯安那站点。2025 年资本开支拆分 —— **约 60% Americas / 21% APAC / 约 19% EMEA 与其他** ([Linde 2025 10-K, MD&A — Capital Expenditures](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)) —— 隐含 Americas 分部到 2030 年将随驻厂项目陆续投运而进一步获取营收份额。APAC 分部 20% 的营收份额尤其偏向电子晶圆厂与长江流域工业集群；**APAC 调整后营业利润率 FY25 为 29.0%**，对比集团 29.8%，是三个地区分部中最低（Americas 31.2%，EMEA 35.7% —— EMEA 偏离是因结构偏向更高毛利的特种 + 包装气体）。
+
+```mermaid
+pie title FY2025 Linde 销售按可报告分部（剔除 Other，单位 $ mn）
+    "Americas $15,208" : 15208
+    "EMEA $8,549" : 8549
+    "APAC $6,661" : 6661
+    "Engineering $2,250" : 2250
+```
+*资料：[Linde 2025 10-K, MD&A — Segment Discussion](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)。*
+
+**上市策略（go-to-market motion）。** Linde 通过 (i) 一支按行业垂直（炼厂、钢铁、化工、电子、医疗）组织的全球驻厂 / 吨级销售队伍；(ii) 一支带钢瓶 / 散装配送路由的区域 merchant 销售队伍，兼任本地物流；(iii) 一个包装气体零售 / 分销网络（在部分市场 Linde 自有零售门店，美国品牌如 **Praxair Distribution** 与 **Linde Gas & Equipment**，辅以独立分销商）；以及 (iv) 一个 Engineering 业务拓展团队，追逐企业内（Linde 自身气体业务）与外（炼厂、石化复合体、LNG 工厂）EPC 机会。销售周期从 **驻厂吨级中标的 18+ 个月**（客户承诺 15 年长协）到 **一通电话** 的钢瓶补货不等。
+
+**客户案例（最近 12–24 个月点名中标）：**
+
+- **台积电亚利桑那一期 / 二期** —— 多台驻厂 ASU 供超高纯 N₂、O₂、Ar、He，加上集成特种气分发给凤凰城 Fab 21 集群。Linde 在台积电新竹、南科已是数十年的大宗气合作伙伴；亚利桑那中标延续到首座美国境内的领先节点晶圆厂 ([TSMC FY2024 Form 20-F, Item 4 — Arizona Fab](https://www.sec.gov/Archives/edgar/data/1046179/000119312525083423/d896993d20f.htm))。
+- **三星代工 Taylor TX** —— 大规模 ASU 与电子特种气供应给三星 440 亿美元美国晶圆厂建设；几十年合同 ([Samsung Semiconductor — CHIPS Act announcement, 2024-04-15](https://semiconductor.samsung.com/sas/local-news/samsung-electronics-to-receive-up-to-6-4-billion-in-direct-funding-under-the-chips-and-science-act/))。
+- **ExxonMobil Beaumont 清洁 H₂** —— Linde 拥有装置，Exxon 承接 CO₂ 做永久 CCS 封存；这是 Linde 在德州首个商业化规模的蓝氢一体化项目（详 §4.4）([Linde Press Release, 2023-04-04](https://www.linde.com/news-and-media/2023/linde-signs-agreement-with-exxonmobil-for-carbon-dioxide-off-take))。
+- **Dow Path-2-Zero Fort Saskatchewan AB** —— 基于 ATR 的蓝氢供给 Dow 的净零乙烯装置；项目支持 Dow 2050 净零承诺 ([Dow 2025 10-K, Path 2 Zero](https://www.sec.gov/Archives/edgar/data/1751788/000175178826000018/dow-20251231.htm))。
+- **OCI / Woodside Beaumont 清洁氨** —— Linde 投资 $1.8 bn 建驻厂清洁 H₂，为 1.1 mt/年低碳氨提供原料，瞄准欧洲进口市场；首批 H₂ 2026 年流出 ([OCI Press Release, 2024-08-05](https://oci-global.com/news-stories/press-releases/oci-global-announces-agreement-for-the-sale-of-its-clean-ammonia-project-in-beaumont-texas-to-woodside-energy/))。
+
+**对 §9 风险的含义：** 由于没有客户 ≥10% 营收、合同结构为几十年照单照付带能源传导，**Linde 的客户集中度风险在公司研究全集中是最低的之一**。相关的反向风险——§9 涉及——是 **$7.1 bn 合同积压的项目执行风险**：一次延迟开车、一次客户长协重谈或一次政治驱动的清洁能源项目取消，都会推迟营收与 IRR 实现，即使底层合同仍然有效。
+
+---
+
+## 6. 行业概览
+
+全球工业气体行业在 2025 年产生约 **USD 110–120 bn 营收**，长期实际增长 CAGR 约 **GDP + 2–3 个百分点**（即稳通胀环境下名义 ~5–6%）——明显快于工业生产，因为 (a) 单位 GDP 气体强度的长期上升（食品加工、电子、医疗）、(b) 把客户场地内的 captive 装置外包给 Linde / 液空 / Air Products 的浪潮，以及 (c) 由 IRA、欧盟氢能银行、亚洲绿氢补贴驱动的清洁氢 / 脱碳投资周期。行业 **结构上在顶部高度集中** —— 四大全球巨头（Linde、液空、Air Products、Nippon Sanso / 太阳日酸）合计占 merchant + 驻厂营收约 70–75%，区域 / 特种玩家（Messer、SOL Group、盈德气体、杭氧、林格、信越前 Praxair 巴西资产、岩谷、SK Specialty）瓜分余下约 25–30%。
+
+**行业 NAICS / SIC。** Linde 主要 SIC 代码 **2810 — Industrial Inorganic Chemicals** ([SEC EDGAR — Linde company filings page](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001707925&type=10-K&dateb=&owner=include&count=10))。在 NAICS 中，工业气体归 **325120 — Industrial Gas Manufacturing**；工程 / EPC 板块归 **541330 — Engineering Services**。
+
+**子行业增速与驱动 (2025E–2030E)：**
+
+| 子板块 | 2024 大致规模 | 隐含 CAGR 2024–2030E | 主要驱动 | Linde 定位 |
+|---|---|---|---|---|
+| **大气气体 — 驻厂吨级** | ~$25 bn | ~5–7% | 炼厂、钢铁、电子、大型晶圆厂建设 | 一级；全球份额 >35% |
+| **大气气体 — merchant** | ~$30 bn | ~3–4% | 焊接 / 加工，GDP 挂钩 | 一级，区域密度强 |
+| **包装气体 / 钢瓶** | ~$35 bn | ~2–3% | 中小企业、医院、实验室 | 全球前三；美国第 1 |
+| **特种 / 电子气** | ~$10 bn | ~10–15% | 3nm 以下晶圆厂、GAA / BPD 节点 | 前三；与 APD、液空、太阳日酸并列 |
+| **氦** | ~$5–6 bn | 周期 (–10% 到 +30% YoY) | MRI 安装、半导体冷却 | 西方前二，与 APD 并列 |
+| **清洁 / 蓝 / 绿氢** | ~$5 bn (2024 商业) → ~$35 bn (2030E) | ~30%+ | IRA 45V、欧盟氢能银行、亚洲绿氢补贴 | 蓝氢领跑，绿氢部分 |
+| **医疗气体（含家庭护理）** | ~$10 bn | ~4–5% | 老龄化、COPD、OSA | 美国一级（通过 Lincare）；EMEA / APAC 区域 |
+
+*资料：分析师构造，借鉴公司分部色彩与第三方行业研究；每一行规模为四舍五入近似数。具体数字的直接引用见本报告其他位置。*
+
+**塑造 FY26 → FY30 的关键趋势与拐点：**
+
+1. **"AI 资本开支超级周期"及其电子气体顺风。** 野村《大中华半导体 2026~30F 复兴指南》（2026 年 5 月）估算 **台积电 2027F 资本开支约 USD 70 bn** —— 1.6 nm 节点资本开支强度约 50% —— 并预测未来五年（2026–2030）是 High-NA EUV 上量整合光刻栈之前的"材料 + 设备"窗口期 ([Nomura Greater China Semi 2026–30F summary, 2026-05-21](../../sector/半导体材料.md))。每一座新晶圆厂仅 N₂ 一项就消费 50–100 mn cf/d，加上热氧化用 10–20 mn cf/d 的氧、加上等离子工艺用 Ar 驻厂大宗、加上特种 NF₃ / WF₆ / 硅烷 / 掺杂气。Linde 在台积电亚利桑那、三星 Taylor、SK 海力士清州的驻厂中标使其能在亚洲以外捕捉这一浪潮的最大份额。
+2. **清洁氢 S 曲线。** IRA **45V 生产税抵免**对最低碳强度氢最高 **USD 3.00 / kg** 的补贴结构性地把蓝 / 绿氢补到约 $1.50/kg 当量与灰氢竞争（灰 SMR 2025 约 $1.20–1.50/kg）。已宣布的美国清洁氢项目（含 FID 与非 FID）数十个，但 *实际* 达到 FID 并开工的更接近半打 —— Linde 的 Beaumont 与 Air Products 路易斯安那蓝氨项目最显眼。2025 年财政部 45V 终版指导允许"附加性 + 时段匹配 + 可送达性"用于绿氢，解决了 2024 年间冻结项目承诺的一个主要不确定性。
+3. **能源成本离散度成为 Linde 的隐藏顺风。** 工业气体定价权随**能源成本离散度**放大：当天然气 / 电价飙升（如 2022 俄乌切断后），驻厂合同中的传导条款会把成本转嫁给客户，Linde 利润率几无损失；没有可比合同保护的对手则面临利润率侵蚀。前 Praxair 的合同模板——2018 合并后成为公司标准——尤为针对此点设计；液空与 Air Products 有类似但历史上纪律更弱的合同结构。2022 年开始的地区天然气价离散度到 2026 年并未完全正常化；Linde FY25 调整后 29.8% 营业利润率部分反映合同结构的持续受益。
+4. **氦周期（大部分）正常化。** 2022–2023 因联邦氦储备拍卖中断及俄 / 阿供应受限造成的氦短缺，到 FY25 已基本正常化——卡塔尔 North Field 扩建完成 + 美国回收率改善。周期未完——卡塔尔 / 俄罗斯 / 阿尔及利亚周边地缘事件可能随时再引入冲击——但结构性短缺缓解。
+5. **中国半导体产业本土化政策。** 中国对半导体供应链本土化的推动延伸到工业气体——本地玩家（盈德气体、杭氧、林格、中国工业气体）通过国资晶圆厂（YMTC、长鑫、中芯国际）的优先采购规则蚕食外资巨头份额。Linde 通过与台资晶圆厂（台积电中国是明显例子）的关系以及中国合资公司运营保留地位，但其中国大陆营收强度低于全球平均。液空面临同样动力学。这是缓慢的份额流失故事而非突发中断。
+6. **欧盟净零产业法与欧洲蓝氢转向。** 欧盟氢能银行 2024 / 2025 年首批拍卖以补贴价格（约 €4–5/kg）支持绿氢；第二批已开始把蓝氢纳入，因欧盟认识到仅靠绿氢不足以快速脱碳难减排部门。Linde 的 EMEA 分部从欧洲氢浪潮中获益既通过 Engineering EPC 中标（电解槽、ATR 装置）也通过驻厂供气合同（向 EU ETS Phase 4 下脱碳的炼厂供气）。
+
+**监管环境。** 行业是 **安全监管的**（美国 OSHA、欧盟 ATEX、中国 GB 危险气体标准）；**环境监管的**（美国 EPA Class VI 井下 CCS 许可、欧盟 CBAM 一致的产品碳足迹披露）；**贸易监管的**（中国对稀有气体与特种氟化物的出口管制波及全行业 —— 见 §9）；以及医用 / 家庭护理氧业务的 **医疗产品监管**（Medicare 报销表、医院气体系统的 Joint Commission 认证）。
+
+**行业动态 —— 波特五力（一段总结）。** *买方议价权分化*：大型驻厂客户（炼厂、晶圆厂）议价能力强，但通过合同到期时的多方招标行使——Linde 凭规模与关系赢得大部分。*供方议价权中等*：能源（电、天然气）是主要成本，由多家竞争性供应商提供；特种投入化学品来自更集中的供应基础（如 Solvay 的氟化前驱体），但传导条款中和风险。*新进入威胁低*：ASU + 管网的资本密集度高得令人却步，在位者享受 30+ 年累积运营经验优势。*大气气体的替代威胁低*（无法替代高纯氮气用于晶圆厂吹扫）*但氢气替代威胁显著*（绿氢可在经济性允许处替代灰氢）。*四大之间内部对抗激烈但有纪律* —— 产能扩张基于合同积压而非投机性，这正是为何行业平均 ROC 维持在 20% 中区。
+
+---
