@@ -227,3 +227,71 @@ pie title S&S Tech 营收按客户拆分 (分析师估计, FY2025)
 **行业结构**呈**头部集中、尾部碎片**特征。前三家 (Hoya, Shin-Etsu, AGC) 大概率占合并光学 + EUV blank 营收的 >75% (上文分析师估计累加)。后五家以下 (Toppan, S&S Tech, FST, 中国 SuperMask, Photronics 自营 blank) 分剩余约 25%。进入壁垒在功能上**不可逾越** — 商业 EUV blank 缺陷密度规格 ~0.05/cm² 需要约 5 年洁净室学习曲线、单设施 USD 100m+ capex，以及 ~3 年客户验证数据才能签下第一笔商业 PO。过去 20 年里唯一的入场者是 S&S Tech (韩国，2001-2026 爬坡) 与 AGC (凭玻璃基板 / LTEM 底子进入 EUV); 自 AGC 之后 EUV 层面没有任何新晋玩家取得有意义份额。买方力量集中 (三星、TSMC、SK 海力士、Intel 合占先进逻辑 + 先进 DRAM blank 的绝大部分采购); 原材料供应方力量中等 (Cr / MoSi / Ta / Mo/Si 溅射靶材、超纯 LTEM 玻璃基板由 Plansee、Materion、AGC、Schott、Corning 等供应)。Blank-mask 产品自身没有任何替代品 — 每一道光刻步骤都需要 blank-mask 输入，技术地平线上看不到任何替代材料类。
 
 ---
+
+## 7. 竞争格局
+
+S&S Tech 在一片少于十家玩家的全球版图中竞争。下面五家直接头对头对手 — 加上两家相邻 / 间接威胁 — 覆盖整张竞争地图。
+
+**1. HOYA Corporation (TSE: 7741) — EUV 上的在位者、光学 PSM 上的定价者。** Hoya 电子相关产品段 FY25 营收 ¥265.2 bn (≈USD 1.7 bn) — 包含"半导体用 Photomasks and Maskblanks、FPD 用 Photomasks、HDD 用玻璃盘片" — Hoya 自身将其 photomask blank 业务描述为"长年来在 mask blank 市场拥有 exceptionally large share"，并继续"凭低缺陷产品和下一代研发的优势引领该领域" ([HOYA FY25 IFRS Financial Statements, p. 33](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf); [HOYA Report 2024, p. 102](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf); [Hoya_TSE7741 research report, 内部参考](file:///Users/x/projects/financial_agent/reports/company/Hoya_TSE7741/Hoya_TSE7741_Research_Document.md))。*分析师观点 (Analyst view):* Nomura 2026-05-21 估算 Hoya 占 EUV blank ~80% 份额、光学 blank ~70% 份额 (各分析师在 EUV 上估计 60-85%)。Hoya 的结构性优势在于 (a) ~30 年的光学 blank 缺陷密度数据通过 Akishima / Mishima 洁净室迁移到 EUV; (b) 与 TSMC 和 Intel 的联合开发关系比 EUV 节点早约 5 年; (c) 旗下垂直整合的 LTEM 玻璃 / Mo-Si 溅射靶材自供。Hoya 在 S&S Tech 面前的弱点是**对三星的战略客户集中度风险** — 一旦三星把 Hoya 配额从 ~80% 在 5 年内压到 50-60% 并把 volume 引向 S&S Tech，即便 TAM 在增长，Hoya 的 EUV blank 营收线也会受到实质性冲击。
+
+**2. Shin-Etsu Chemical (TSE: 4063) — 光学 blank 头名、EUV blank 第三名。** Shin-Etsu 的 photomask blank 业务归属公司"电子与功能材料"段，其中 photoresist + photomask blank 合并营收没有单独披露，是该段每年约 USD 3 bn 营收的组成部分 ([Shin-Etsu Chemical FY2024 Annual Report, accessed 2026-05](https://www.shinetsu.co.jp/en/ir/library/annualreport/))。*分析师观点 (Analyst view):* Shin-Etsu 的光学 photomask blank 份额按 Intel Market Research 2024 估计为全球第一 ~35%，但 EUV blank 份额按同一来源仅 ~7% — 这是 Shin-Etsu 正在投资扩张但尚未对 Hoya 构成实质性逼近的位置。Shin-Etsu 的光学优势源自和它做全球第一晶圆业务同一套垂直整合的化学 / 硅基板底子; EUV 上的弱点是在多层膜镜 IP 竞赛中晚于 Hoya / AGC。
+
+**3. AGC (Asahi Glass, TSE: 5201) — 从 EUV 基板专家做成 blank 供应商。** AGC 的特种玻璃 / LTEM 底子让它成为早期 EUV blank 开发的天然伙伴，Intel Market Research 的跟踪估计 AGC 在 EUV blank 上份额 ~30% — 仅次于 Hoya ([Intel Market Research — EUV Mask Blanks Market Outlook 2025-2032, accessed 2026-05](https://www.intelmarketresearch.com/euv-mask-blanks-market-11463))。*分析师观点 (Analyst view):* AGC 的竞争位锚在 LTEM 基板 / 盖板玻璃供应 (它也向 Hoya 与 Shin-Etsu 自己的 EUV blank 线供应 LTEM 基板)，由此具备"没有我家玻璃就走不了"的部分上游杠杆 — 这是 S&S Tech 没有的。在光学 blank 上 AGC 是 niche 玩家; 在 EUV pellicle 上 AGC 也有独立开发但还不是有意义的商业供应商。
+
+**4. Toppan Photomasks / Tekscend Photomask (TSE: 7911) — 兼营 blank 的 photomask 厂。** Toppan 结构上不同 — 主营是**成品 photomask** (与 Photronics 和 DNP 竞争，参见 [reports/company/Photronics_NASDAQ_PLAB/](file:///Users/x/projects/financial_agent/reports/company/Photronics_NASDAQ_PLAB/Photronics_NASDAQ_PLAB_Research_Document.md))，自营 blank 主要为其自有 mask 写产线服务。*分析师观点 (Analyst view):* Toppan 是下游客户兼竞争者 — 它从 Hoya / S&S Tech / Shin-Etsu 采购部分 blank，内部生产部分自用 blank (主要供二元 / 成熟节点)。EUV blank 位基本为零，因为自营线的成本结构无法和 Hoya 的规模匹配。对 S&S Tech 的战略含义是: Toppan 在 blank 上是边缘竞争威胁，但是 blank 供应合约层面是重要的下游客户。
+
+**5. FST Co., Ltd. (KOSDAQ: 036810) — 第二家韩国入场者，主攻 pellicle。** FST 是次重要的韩国对手 — 也在开发 EUV pellicle，但**客户验证周期落后 S&S Tech 约 1-2 年**，**没有有意义的 EUV blank 计划** ([THE ELEC — S&S Tech develops EUV pellicle with 90% transmittance, 2021-10-06](https://www.thelec.net/news/articleView.html?idxno=3431) — 文中提及 FST 为竞争开发方)。*分析师观点 (Analyst view):* FST 是 pellicle 上唯一可信的韩国头对头对手，但 EUV blank 线上目前不构成可信威胁。FST 对 S&S Tech 的实际风险是**光学 pellicle 上的价格竞争**，而不是 EUV blank 份额。
+
+**6. 三星 / Intel / TSMC 自有光罩厂 — 隐含的"make vs. buy"威胁。** 三家头部晶圆厂都自营 photomask 设施 (三星城南、Intel Aloha、TSMC 新竹)，**历史上不自营 blank 制造** — 都是从 Hoya / Shin-Etsu / S&S Tech / AGC 采购、内部写 pattern。*分析师观点 (Analyst view):* "三星自营 EUV blank"是真实的长期风险 — 三星的洁净室能力与资本支出完全有能力把 blank 步骤向后整合。但是三星明示的战略是反向的: 建设外部韩国供应商生态 (S&S Tech 是首要代表)，不是垂直整合。非对称风险是**未来三星战略重思可能完全终结 S&S Tech 的 EUV 故事** — 第 9 节标注为低概率高烈度尾部风险。
+
+**7. 中国新晋玩家 (SuperMask, Newway 内部 blank 开发)。** 中国有多家国家背书 blank-mask 国产化项目 (SMIC、长鑫存储、长江存储都资助过内部或关联项目)，但**还没有任何商业化规模产品出现**。*分析师观点 (Analyst view):* 结构性壁垒和别人一样 — 缺陷密度学习曲线。中国新晋玩家在商业规格上至少落后 S&S Tech 5-7 年，US BIS 出口管制还限制其访问 ASML 工艺验证基础设施。未来十年的威胁很小。
+
+**定位框架。** 将七家对手映射到 **(x 轴) 缺陷密度 / 工艺质量 vs. (y 轴) 韩国国内战略位**两个对 S&S Tech 股权故事最关键的维度上，得到下面这个 2×2:
+
+```mermaid
+quadrantChart
+    title Mask blank 竞争定位 (缺陷控制 vs 韩国战略位)
+    x-axis "低缺陷控制成熟度" --> "高缺陷控制成熟度"
+    y-axis "弱韩国战略位" --> "强韩国战略位"
+    quadrant-1 "韩国冠军 (target)"
+    quadrant-2 "韩国新晋"
+    quadrant-3 "次规模 / 迟到"
+    quadrant-4 "全球在位者"
+    Hoya: [0.92, 0.30]
+    Shin-Etsu: [0.85, 0.20]
+    AGC: [0.80, 0.25]
+    Toppan: [0.45, 0.20]
+    S&S Tech 今日: [0.60, 0.80]
+    S&S Tech 2027F: [0.78, 0.92]
+    FST: [0.40, 0.60]
+    中国新晋: [0.20, 0.10]
+```
+
+象限图直观显示结构性机会: S&S Tech 当前位于**"韩国新晋"**象限 — 强韩国战略位、中等缺陷控制成熟度。2026-27F 一旦三星资格认证通过，公司轨迹将向**"韩国冠军"**象限迁移 — 高缺陷控制成熟度 (通过三星商业 PO 验证) + 最强可能的韩国战略位。Hoya / Shin-Etsu / AGC 仍锚定在**"全球在位者"**象限 — 缺陷控制深度领先，但随着三星降日依赖，其韩国战略位持续走弱。
+
+**S&S Tech 的竞争优势**综合: (a) **唯一同时拥有光学 + EUV blank 产品线 + EUV pellicle 的韩国专业户**，是天然的三星国产化首选 — Hoya / Shin-Etsu / AGC 都是日企，FST 产品幅度更窄; (b) **15 年客户数据飞轮**积累了三星电子、三星显示、SK 海力士、LG 显示的关系基础 — 任何新进入者都无法复制; (c) **创始人主导的资本配置决断** — 郑寿弘累计在 EUV 上投入约 KRW 150 bn，而公司 2017 年期末账上现金仅约 KRW 50 bn，这种非对称创始人 bet 是 Hoya 这样的在位者从存量回报视角无法匹配的; (d) **地理上贴近三星平泽 / 华城 / 龙仁厂** — 龙仁 EUV 中心距离三星最先进的晶圆厂约 30 分钟，对缺陷反馈循环时间比 Hoya / Shin-Etsu 从日本空运的 ~24 小时延迟具备本质性优势 ([ZDNet Korea — 용인 EUV 센터, 2025-10-15](https://zdnet.co.kr/view/?no=20251015142601))。
+
+**S&S Tech 的竞争弱点**综合: (a) **相对 Hoya 规模不足** — 在 ~USD 180m FY2025 营收对 Hoya 电子段 ~USD 1.7bn，S&S Tech 累计的缺陷数据约少 10 倍、R&D 预算约少 10 倍，约束其追赶 Hoya EUV 路线图的速度; (b) **单一司法管辖敞口** — 韩国身份既是战略优势也是战略风险: 未来三星采购战略若重新偏向日本胜过韩国 (政治上不太可能但并非不可能) 将摧毁 S&S Tech 的价值主张; (c) **没有自有基板供应** — S&S Tech 依赖第三方 LTEM 玻璃供应 (大概率是 AGC 和 / 或 Schott)，这意味着垂直整合的对手 (最相关的是 AGC) 在 EUV 基板上有内嵌毛利优势; (d) **EUV pellicle 仍是单程 90% vs. ASML 的 90.6%** — EUV 扫描仪的产能经济学算术让这 ~0.6 pp 透过率差距仍是 ASML / 三井可对 S&S Tech 持有的客户决策性输入。
+
+---
+
+## 8. 市场机会 (TAM)
+
+S&S Tech 的市场机会规模可清晰拆分为三层，因为公司营收轨迹在每一层上由不同驱动主导。
+
+**第 1 层 — 光学 blank mask: 稳态增长的基础。** 合并光学 blank TAM (二元 + PSM + 配套) 2024 年约 USD 1.5-2.0 bn (第 6 节多源三角化)，按 ~4-6% 长期晶圆投片量 CAGR 增长。S&S Tech 在该段的 ~10% 全球份额 (Nomura 2026-05-21 估计) 映射到**今日约 USD 175-200 m 可寻址营收**，若仅守住当前份额，到 2030 年可增至约 USD 250 m ([Nomura "Greater China Semi", Fig. 35-44, p. 18-20, 2026-05-21](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md); [Intel Market Research — Mask Blanks Market data, accessed 2026-05](https://www.intelmarketresearch.com/euv-mask-blanks-market-11463))。按 KRW/USD ~1,390 折算，这是 KRW ~240-270 bn 区间 — 与 S&S Tech FY2025 实际营收 (KRW 243.7 bn) 落点一致，在合理三角化误差范围内验证了 ~10% 份额估计的内在一致性。**对股价的含义:** 光学 blank 基本盘单独就能支撑当前营收线。估值溢价完全由第 2 / 3 层贡献。
+
+**第 2 层 — EUV blank mask: 上行杠杆。** EUV blank TAM 2024 年 **USD ~194 m**，按 Intel MR 预测以 **~15% CAGR** 增长到 2032 年 **USD ~597 m** — 由 TSMC / 三星 / Intel 每片晶圆 EUV 层数增长加上 2029-30F High-NA EUV 起量驱动 ([Intel Market Research — EUV Mask Blanks Market Outlook 2025-2032, accessed 2026-05](https://www.intelmarketresearch.com/euv-mask-blanks-market-11463))。即便给出保守的份额捕获假设，这一层仍承托主要的上行空间。
+
+![全球 EUV mask blank TAM, 2024-2032 — 15% CAGR 窗口 2026-27 打开](../../charts/sstech_euv_tam.png)
+*资料来源: [Intel Market Research — EUV Mask Blanks Market Outlook 2025-2032, accessed 2026-05](https://www.intelmarketresearch.com/euv-mask-blanks-market-11463) 基础 TAM 外推。S&S Tech 三星资格认证窗口高亮依据 [Digitimes — Samsung mask blanks localization, 2026-01-14](https://www.digitimes.com/news/a20260114PD219/samsung-photomask-euv-supply-chain-2026.html) 的时点。*
+
+**S&S Tech EUV 份额情景:** **(a) 熊市情景** — 三星资格认证滑后 2026 Q2 之后，S&S Tech 拿下 FY2030 EUV TAM <2% ≈ USD 9 m ≈ KRW 12 bn — 即 EUV bet 在十年内基本上商业失败; **(b) 基准情景** — 三星资格认证 1H-2026 通过，S&S Tech 拿下 **FY2030 EUV TAM ~5% ≈ USD 22 m ≈ KRW 30 bn**，约相当于 FY2025 营收的 12%，但毛利率显著更高 (EUV blank ASP 为光学的 5-10 倍); **(c) 牛市情景** — 三星资格认证通过 + SK 海力士资格认证跟进 + 中国出口邻近性推动量增 → S&S Tech 拿下 **FY2030 EUV TAM ~12-15% ≈ USD 55-65 m ≈ KRW 75-90 bn**，约相当于 FY2025 营收的 30-37%，EUV 毛利率约 45-55%。**关键是，即便牛市情景也是毛利杠杆而不是营收杠杆** — TAM 贡献的最大头仍是光学 blank 基本盘。EUV bet 的回报是**毛利扩张 + 估值倍数 re-rate**，而不是营收爆发。
+
+**第 3 层 — EUV pellicle + hardmask 第二个十年的可选性。** EUV pellicle TAM 绝对美元规模小 (2024 全球约 USD 50-100 m，随 EUV 扫描仪安装基数增长); hardmask 薄膜专门为 High-NA EUV 的 TAM 更小 (今日 USD 20-40 m, 随 2029-30F High-NA 量起增长)。*分析师观点 (Analyst view):* 两者合计到 2030F 基准情景下可为 S&S Tech 贡献 **USD 30-50 m 可寻址营收**，2032 年随 High-NA EUV 规模化向 USD 80-120 m 攀升。两条产品都有战略意义 — pellicle 锁定三星订单、hardmask 把公司延伸到下一代光刻制式 — 但都不撬动 FY2026F / FY2027F 股权故事的算术。
+
+**S&S Tech 到 2030F 的总可寻址市场 (分析师草图):** 三层求和 — 光学基本盘 ~USD 250 m + EUV blank 基准情景 ~USD 22 m + EUV pellicle + hardmask ~USD 40 m ≈ **USD ~310 m 基准情景可寻址营收，牛市份额下达 ~USD 400-450 m**。折算成 KRW 约 430-625 bn 区间，**横跨董事长郑寿弘公开宣布的 KRW 500 bn 中长期营收目标** ([파이낸셜뉴스 — 정수홍 인터뷰 KRW 500 bn target, 2025-03-21](https://www.fnnews.com/news/202503211358486799))。含义是: 创始人陈述目标**与每一层产品的合理基准情景份额假设算术上内在一致** — 不是营销 aspiration，而是"三星资格认证通过、份额成长、EUV / pellicle / hardmask 都商业化"这一情景的算术结果。
+
+**渗透策略与执行路径。** S&S Tech 走的渗透序列是标准的"联合开发 → 资格认证 → 小批量 PO → 多年期 master agreement → 份额捕获" — Hoya 自己 1990 年代在三星、2000 年代在 Intel 跑过同样路径。2025-2026 的里程碑 — 龙仁 EUV 中心开幕、三星最终评估完成、首批商业 PO、联合 pellicle 边框专利申报 — 代表着该序列被压缩到 12 个月窗口内的后段冲刺 ([Digitimes — Samsung mask blanks localization, 2026-01-14](https://www.digitimes.com/news/a20260114PD219/samsung-photomask-euv-supply-chain-2026.html); [THE ELEC — Samsung and S&S Tech co-files EUV pellicle patent, 2025-05](https://www.thelec.net/news/articleView.html?idxno=5452); [파이낸셜뉴스 — 정수홍 인터뷰, 2025-03-21](https://www.fnnews.com/news/202503211358486799))。一旦首批三星 EUV blank 商业 PO 签订，SK 海力士的资格认证周期将启动 (业内预期落后三星约 12 个月，因为 SK 海力士 EUV 工具装机基数较小) — 把 2027-28F SK 海力士 EUV 营收线放到模型上。
+
+---
