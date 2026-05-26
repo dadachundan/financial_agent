@@ -115,3 +115,159 @@ His time at TCL Zhonghuan has been brief: he became COO in 2024, and on March 24
 According to the 2026 Q1 report, Ouyang's primary focus areas are three-pronged: (1) **shoring up the PV-wafer relative-competitiveness gap** — non-silicon processing costs per wafer fell more than 40% YoY in 2025; (2) **accelerating the module-business M&A and integration** — taking control of Yidao New Energy and integrating the existing BC + TOPCon + half-cell capacity; (3) **steady advancement of the semiconductor-materials business** — Zhonghuan Advanced posted ¥1.44 bn in Q1 2026 revenue (+8.5% YoY) ([Ibid., p. 7](https://static.cninfo.com.cn/finalpage/2026-04-28/1225219941.PDF)). Individual shareholdings are not separately disclosed; CEO compensation per company policy is structured as base salary + performance bonus + equity incentives, but with two consecutive years of losses, no cash dividends were paid and no equity-incentive exercises were disclosed ([TCL 中环 2025 年年度报告, pp. 32-33](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)).
 
 *Analyst view:* The quick rotation from Shen Haoping (deep technical roots, industry standing) → Wang Yanjun (technical + M&A) → Ouyang Hongping (operations / cost-out) reflects the board's strategic adjustment toward **"operations and finance first at the cyclical bottom"** — but it also raises questions about management-team stability and the continuity of long-term technology strategy. Two specific items worth tracking: (a) whether Shen's vice-chairman role continues to anchor BC-cell and G12 roadmap continuity, and (b) whether Ouyang can drive the PV-module segment to operating-cash-flow breakeven within 12-18 months.
+
+## 4. Products & Services
+
+The company is structured around three product platforms built on the common monocrystalline-silicon feedstock: **PV materials + PV cells/modules + semiconductor materials**. Semiconductor materials are the central focus of this report (since coverage was initiated from Nomura's Figure 35); the two PV businesses are larger in revenue but deeper into a cyclical trough. This section uses the 2025 annual-report product matrix as the anchor and walks each product family through a three-beat structure: **verbatim quote → bilingual plain-language gloss → analyst view**.
+
+### 4.1 Company product matrix — from the 2025 Annual Report § Revenue Composition
+
+The table below maps TCL Zhonghuan's 2025 revenue mix, sourced from the *Revenue Composition* paragraph in the [2025 Annual Report, p. 14](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF). The company does not publish an English-language product catalog; the matrix below is reproduced from the Chinese-language PDF section:
+
+| Platform | Product Family | 2025 Rev (¥bn) | % of Total | YoY |
+|----------|----------------|---------------|------------|------|
+| New-Energy PV | **PV wafers** (G12/G12R monocrystalline + some external silicon-ingot sales) | 12.24 | 42.13% | -26.49% |
+| New-Energy PV | **PV modules** (TOPCon / BC / half-cell / multi-cut / Maxeon SunPower) | 9.32 | 32.10% | +60.45% |
+| New-Energy PV | **PV power stations** (EPC + self-held station tariffs) | 1.16 | 4.00% | +209.77% |
+| Semi materials | **Semiconductor wafers** (Zhonghuan Advanced: 6/8/12-inch polished + epitaxial + SOI + 4-6 inch FZ) | 5.71 | 19.64% | +21.75% |
+| Other | Ancillary services, power resale, etc. | 0.62 | 2.13% | -34.30% |
+| **Total** | | **29.05** | 100% | +2.22% |
+
+*Source: [TCL 中环 2025 年年度报告, p. 14 "营业收入构成" table](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)*
+
+![TCL Zhonghuan revenue mix by product: 2024 vs 2025](../../charts/tclzhonghuan_segment_mix.png)
+
+*Source: [TCL 中环 2025 年年度报告, p. 14](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF) · [2024 年年度报告, p. 18](https://static.cninfo.com.cn/finalpage/2025-04-26/1223330188.PDF)*
+
+```mermaid
+graph TD
+    A[TCL Zhonghuan Product Matrix] --> B[New-Energy PV]
+    A --> C[Semiconductor Materials Zhonghuan Advanced]
+    B --> B1[PV wafers ¥12.24bn]
+    B --> B2[PV modules ¥9.32bn]
+    B --> B3[PV power stations ¥1.16bn]
+    B1 --> B1a[G12 210mm monocrystalline]
+    B1 --> B1b[G12R 210x182 monocrystalline]
+    B1 --> B1c[N-type wafers 95%+ share]
+    B2 --> B2a[TOPCon modules]
+    B2 --> B2b[BC modules incl. Maxeon IP]
+    B2 --> B2c[Half-cell / multi-cut]
+    B2 --> B2d[Maxeon SunPower dual brand]
+    C --> C1[12-inch 300mm polished]
+    C --> C2[12-inch 300mm epitaxial]
+    C --> C3[8-inch 200mm polished + epi]
+    C --> C4[6-inch power-device wafers]
+    C --> C5[4-6 inch FZ monocrystalline industrial/military]
+    C --> C6[SOI wafers via potential expansion]
+```
+
+### 4.2 How the three product platforms sit in customer workflows
+
+The three product lines operate in **two entirely separate value chains**:
+
+**PV manufacturing value chain (upstream → downstream):**
+Polysilicon feedstock → **TCL Zhonghuan monocrystalline silicon ingots (Czochralski pulling)** → **TCL Zhonghuan wafers (slicing)** → solar-cell makers (TOPCon / HJT / BC) → **TCL Zhonghuan modules (including Yidao New Energy)** → EPC / project developers → end power plants. The "wafer + module + power station" vertical coverage means TCL Zhonghuan bears both wafer-pricing cyclicality and downstream module-and-station demand swings.
+
+**Semiconductor wafer value chain (upstream → downstream):**
+Electronic-grade polysilicon feedstock → **Zhonghuan Advanced silicon ingots (CZ / FZ pulling)** → **Zhonghuan Advanced wafers (slicing, grinding, polishing, epitaxy, SOI)** → wafer fabs (SMIC / 中芯国际, Hua Hong / 华虹, YMTC / 长江存储, CXMT / 长鑫存储, TSMC, SK hynix, Infineon, etc.) → fabless / IDM design houses → end electronics. Zhonghuan Advanced sits at the absolute upstream of this chain — it is the "foundation slab" on which chips are built.
+
+The three families below are walked through the three-beat structure: **what it physically does → how it differentiates → strategic significance**.
+
+### 4.3 Semiconductor wafers (Zhonghuan Advanced) — central focus of this report
+
+> **Verbatim quote from the annual report:** 报告期内，公司半导体材料业务坚持"国内领先，全球追赶"战略，产品出货超 1,200MSI，实现营业收入 57.07 亿元，同比增长 21.75%，营收及出货量继续稳居国内半导体硅片行业前列。2025 年，公司运营效率显著提升，已覆盖国内外重点客户，综合竞争力国内行业领先。
+> ("In the reporting period, the company's semiconductor-materials business adhered to the 'domestic leadership, global catch-up' strategy. Shipments exceeded 1,200 MSI, revenue reached ¥5.707 bn (+21.75% YoY), with revenue and shipments continuing to rank among the top of the domestic semiconductor-wafer industry. In 2025 operating efficiency improved significantly, key domestic and international customers were covered, and comprehensive competitiveness leads the domestic industry.")
+> — [TCL 中环 2025 年年度报告, p. 15](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)
+
+**Bilingual plain-language gloss:**
+
+Semiconductor silicon wafers (半导体硅片, also called "electronic-grade silicon wafers" / 电子级硅片) are the physical foundation of all chip manufacturing — **every CMOS logic IC, DRAM / NAND memory chip, analog / power / RF chip starts with a silicon wafer**. Physically they are circular discs ranging from 50.8 mm (2-inch) to 300 mm (12-inch) in diameter, ~775 μm thick, of ultra-high-purity (>99.9999999%) monocrystalline silicon. The front surface is polished via chemical-mechanical polishing (CMP / 化学机械抛光) down to atomic-level flatness; the backside is typically ground or coated.
+
+Zhonghuan Advanced's current product family covers the following formats:
+
+(1) **12-inch (300mm) polished wafers (PW):** Used in advanced logic (28nm and below), HBM / DDR5 DRAM, 3D NAND, AI ASICs. Year-end 2024 capacity was 700,000 wafers/month with a 2025 target of expanding (including Xinxin) toward 1.2 million wafers/month ([TCL 中环 2024 年年度报告, p. 20](https://static.cninfo.com.cn/finalpage/2025-04-26/1223330188.PDF)). The 12-inch PW process pain points are: **the crystal-pulling furnace's thermal-field control must hold a 300mm-diameter silicon ingot to <1 ppba metallic-contaminant levels and <10 defects/cm²**; the wafer slicing must take a 1m+ silicon ingot, cut it into <0.78mm-thick wafers, and polish to Ra <0.1nm surface roughness. The 2024 12-inch revenue line was ¥2.331 bn, +70% YoY — the fastest-growing and highest-margin sub-product within Zhonghuan Advanced ([Ibid., p. 20](https://static.cninfo.com.cn/finalpage/2025-04-26/1223330188.PDF)).
+
+(2) **12-inch (300mm) epitaxial wafers (EPI):** A 1-50 μm monocrystalline-silicon film is grown on the polished-wafer surface via chemical vapor deposition (CVD / 化学气相沉积). The dopant concentration is more precisely controlled, and defect density is lower than the bulk wafer — making EPI the substrate of choice for advanced logic (10nm and below) and high-performance CMOS image sensors (CIS). After the Zhonghuan-Advanced + Xinxin merger, capacity is 250,000 epitaxial wafers/month (including the expansion project) + 100,000 polished wafers/month, totaling ~350,000 12-inch wafers/month when fully built out ([投资约 58 亿, 中环领先半导体大硅片扩建项目, 化合物半导体 2025-03](https://www.compoundsemiconductorchina.net/company-news.asp?id=6149)).
+
+(3) **8-inch (200mm) polished + epitaxial wafers:** Used in power devices (IGBT, MOSFET, pre-SiC alternatives), PMICs, automotive electronics, MEMS. The 2025 year-end target for 8-inch polished capacity is 900,000 wafers/month, making Zhonghuan Advanced one of China's largest 8-inch players. While 8-inch is a mature node, global demand continues to grow on the back of AI / automotive — making it Zhonghuan Advanced's "cash cow" sub-product family ([2025 年中环领先扩建项目, 化合物半导体 2025-03](https://www.compoundsemiconductorchina.net/company-news.asp?id=6149)).
+
+(4) **6-inch (150mm) power-device wafers:** Primarily supplied to domestic power-device makers (Silan Microelectronics, Yangjie Tech, China Resources Micro, etc.). The "Inner Mongolia Zhonghuan Advanced Semi Materials" subsidiary specialises in this segment.
+
+(5) **4-to-6-inch FZ silicon (float-zone) single crystal:** This is the product family where Shen Haoping's career started in 1983. Zhonghuan holds a domestic market share above 65% and has ranked #1 in China for 5 consecutive years; in global FZ production it is the world's #3 ([光伏"孤岛"TCL 中环和它的灵魂 CEO, 证券时报 2024-08](https://stcn.com/article/detail/1287881.html)). FZ silicon — relative to CZ (Czochralski / 直拉法) — has fewer impurities and more uniform resistivity, and is used in high-voltage power semiconductors (HVDC thyristors and IGBT modules), radiation detectors, and specialised military-grade devices.
+
+(6) **SOI (silicon-on-insulator) wafers:** Not separately disclosed in the company's annual report. *Note*: China's largest SOI-wafer maker is Shanghai Simgui Technology (a subsidiary of NSIG / 沪硅产业, not Zhonghuan). TCL Zhonghuan itself does not have publicly disclosed SOI capacity — which is one of the granular distinctions versus NSIG that Nomura's Figure 35 elides when grouping the two together. See §7 for the comparison.
+
+In terms of factory footprint: 12-inch polished + epitaxial lines are concentrated in **Yixing, Jiangsu (Zhonghuan Advanced Semi Technology)** and **Hohhot, Inner Mongolia (Inner Mongolia Zhonghuan Advanced)**; 8-inch lines are in Tianjin (Tianjin Zhonghuan Advanced) and Wuxi (the former Xinxin sites); 6-inch power-device wafers are mainly in Inner Mongolia and Tianjin; 4-6 inch FZ is in Tianjin (Huanou Semiconductor). All semiconductor subsidiaries benefit from the "IC-enterprise VAT super-deduction of 15%" + the western-region corporate-income-tax preferential rate of 15% ([TCL 中环 2025 年年度报告, pp. 127, 144](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)).
+
+*Analyst view:* Zhonghuan Advanced is **#1 by revenue domestically** — 2024 "other silicon materials" revenue (a proxy for semi wafers) was ¥4.687 bn, well above NSIG's ¥3.388 bn over the same period and ahead of Lion Microelectronics' (立昂微) estimated ¥1.8-2.0 bn semi-business contribution ([沪硅产业 2024 年年度报告 摘要, 2025-04](https://file.finance.qq.com/finance/hs/pdf/2025/04/24/1223237696.PDF)). In 2025 Zhonghuan Advanced revenue grew to ¥5.707 bn (+21.75%), widening the gap further. **Internationally, however, Zhonghuan Advanced remains a follower** — the global top five (Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron) collectively hold 85%+ market share ([12 Inch Semiconductor Silicon Wafer Market 2025, Market Growth Reports](https://www.marketgrowthreports.com/market-reports/12-inch-semiconductor-silicon-wafer-market-123690)), while Zhonghuan Advanced + NSIG + Lion + GRINM-Semi collectively hold ~6-7% globally ([2025 中国硅片行业上市公司研究报告, 集微咨询 2025-12](https://finance.sina.com.cn/stock/relnews/cn/2025-12-24/doc-inhcwxmi4307989.shtml)). **Moat grade: partial** — at 8-inch the company has scale and cost advantages; at 12-inch polished it has domestic scale leadership but still trails Shin-Etsu and SUMCO on yield and defect density for 5nm-and-below logic wafers. The 12-inch epitaxial-wafer domestic-substitution rate is only ~10%, with very high technology and yield bars. Competitive benchmark: Shin-Etsu's 12-inch global share is ~31% and it announced 14% capacity expansion in 2025 to address AI-semi demand ([Shin-Etsu Chemical, 2025 report cited](https://www.marketgrowthreports.com/market-reports/12-inch-semiconductor-silicon-wafer-market-123690)).
+
+![TCL Zhonghuan (Zhonghuan Advanced) semi-materials segment revenue: 2022-2025](../../charts/tclzhonghuan_semi_revenue.png)
+
+*Source: [TCL 中环 2025 年年度报告, p. 14](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF) · [2024 年年度报告, p. 18](https://static.cninfo.com.cn/finalpage/2025-04-26/1223330188.PDF) · 2022 "other silicon materials" line of ¥1.951 bn from [2022 年年度报告, p. 18](https://static.cninfo.com.cn/finalpage/2023-03-29/1216246676.PDF)*
+
+### 4.4 PV monocrystalline-silicon wafers (G12 / G12R)
+
+> **Verbatim quote from the annual report:** 2025 年，光伏行业竞争加剧驱动产品结构升级，提升高价值产品占比，G12R 硅片逐步成为主流尺寸……公司光伏材料板块实现营业收入 122.38 亿元，同比减少 26.49%，硅片市占率居于行业第一，销售规模行业领先……公司联动战略供应商优化用料结构，并通过资源集约管理、单台效率提升、人力成本控制、能耗降低等方式，提升公司资产效率和效益。报告期内，公司硅片工费同比下降超 40%。
+> ("In 2025, intensified competition in the PV industry drove product-mix upgrades, raising the share of high-value products; G12R wafers gradually became the mainstream size. … The company's PV-materials segment achieved revenue of ¥12.238 bn, down 26.49% YoY; wafer market share ranks #1 in the industry and sales scale leads the industry. … Through coordinated supplier partnerships to optimize material structure, plus resource consolidation, per-tool throughput improvement, headcount-cost control, and energy-cost reduction, the company improved asset efficiency. During the reporting period, wafer non-silicon processing cost fell more than 40% YoY.")
+> — [TCL 中环 2025 年年度报告, pp. 14-15](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)
+
+**Bilingual plain-language gloss:**
+
+PV wafers (photovoltaic silicon wafer / 太阳能单晶硅片) are the physical substrate of a solar cell — the "canvas" on which sunlight is converted to electricity. Physically they are square sheets of side length 182-210 mm and thickness 110-130 μm, produced by pulling a ~3m-long ~310mm-diameter silicon ingot via the Czochralski (CZ) method from high-purity polysilicon feedstock, then sliced, edge-ground, lapped, cleaned, and textured.
+
+**G12 (210mm)** is the wafer format championed by TCL Zhonghuan: area 44,096 mm², diagonal 295 mm, side length 210 mm — an 80.5% area increase over the legacy M2 (156.75mm) format ([TCL 中环 2025 年年度报告, p. 2](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)). **The advantages of larger format**: per-wafer power output is higher (~700W vs M10's ~580W), and per-GW deployment requires fewer wafers — diluting downstream slicing, cell, module, and installation labor / tooling / framing costs and lowering the levelized cost of energy (LCOE / 平准化度电成本). **G12R (210x182)**, the "rectangular 210" format introduced in 2024 — 210mm × 182mm — is designed to be compatible with the M10 (182mm) equipment ecosystem, easing adoption in mainstream applications, and ramped quickly to mainstream status in 2025 ([210 硅片颠覆: TCL 中环的尺寸跨越, 新浪财经 2025-03-31](https://finance.sina.com.cn/roll/2025-03-31/doc-inerqfen1026795.shtml)).
+
+The company's N-type wafer mix has reached 95%+ — "N-type" refers to phosphorus-doping during pulling to form n-type conductive monocrystalline silicon, which is the input for downstream high-efficiency cell architectures (TOPCon / HJT / BC) ([TCL 中环 2024 年年度报告, p. 22 N-type product R&D project](https://static.cninfo.com.cn/finalpage/2025-04-26/1223330188.PDF)). Year-end 2024 wafer capacity stood at 190 GW; full-year 2024 wafer shipments were ~125.8 GW (+10.5% YoY) and 18.9% market share ([Ibid., p. 14](https://static.cninfo.com.cn/finalpage/2025-04-26/1223330188.PDF)). 2025 wafer shipments were 1.335 bn pieces in G10-equivalent terms (-6.61% YoY); industry market share slipped 4-5 percentage points as competitor capacity came on stream ([硅片综合市占率下滑, TCL 中环如何扭转颓势？, 第一财经 2025-04-30](https://www.yicai.com/news/102593444.html)).
+
+*Analyst view:* The G12 roadmap is the core moat that allowed TCL Zhonghuan to capture the "wafer market share #1" title in 2020-2023. But from 2024 LONGi M10 (182mm), JinkoSolar N-type, Junda / Tongwei and other peers ramped competing capacity quickly. Combined with the polysilicon-feedstock price collapse, the industry has been mired in waves of all-cost → cash-cost → below-cash-cost price wars. 2024-25 PV-wafer gross margins of -20.53% / -19.44% mean **per-watt of wafer is losing cash** ([TCL 中环 2024 年年度报告, p. 19](https://static.cninfo.com.cn/finalpage/2025-04-26/1223330188.PDF) · [TCL 中环 2025 年年度报告, p. 16](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)). **Moat grade: partial** — G12 patent system + intelligent CZ pulling (95% automation) + furnace thermal-field design remain leading, but the wafer itself is increasingly commoditised at large format — LONGi, JinkoSolar, Shuangliang and other top players are on G12R nearly simultaneously. Competitive benchmark: LONGi Green Energy (`SSE:601012`) shipped 108.5 GW of wafers in 2024 at ~17.3% market share, the most direct competitor ([隆基绿能 2024 年报数据综合](https://stcn.com/article/detail/1287881.html)).
+
+### 4.5 PV cells + modules (TOPCon / BC / half-cell / multi-cut)
+
+> **Verbatim quote from the annual report:** 2025 年，公司光伏电池组件板块实现营业收入 93.24 亿元，同比增长 60.45%，营收占比达 32.10%，光伏组件出货 15.1GW，产品结构、业务及客户开拓、品牌能力较 2024 年均有提升……公司电池及组件业务具备 BC、TOPCon、多分片等多领域的技术和工艺积累、专利体系及持续研发能力。
+> ("In 2025, the company's PV cells / modules segment achieved revenue of ¥9.324 bn, +60.45% YoY, contributing 32.10% of total revenue. Module shipments were 15.1 GW. Product mix, business / customer development, and brand capability all improved over 2024. … The cells / modules business has accumulated technology, process know-how, IP, and continuous R&D capability across BC, TOPCon, and multi-cut formats.")
+> — [TCL 中环 2025 年年度报告, p. 14](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)
+
+**Bilingual plain-language gloss:**
+
+PV modules (PV module / 光伏组件) are the assembled, ready-to-deploy power blocks formed by stringing and laminating cell sheets — combining cells + EVA encapsulation film + glass front + aluminum frame + junction box + back-sheet into a standard rectangular module (typically ~2m × 1m, ~25kg) with per-module power output of 500-720W.
+
+The company's current product matrix includes:
+
+(1) **TOPCon modules**: Built around N-type TOPCon (Tunnel Oxide Passivated Contact / 隧穿氧化层钝化接触) cells with mass-production efficiency of 24-25%; this is the mainstream industry roadmap for 2024-2026.
+
+(2) **BC (Back-Contact) modules**: The company gained access to the core BC-cell IP via its controlling stake in Maxeon. BC cells place both positive and negative electrodes on the back of the cell, eliminating front-side metallization that shadows incident light, allowing mass-production efficiency above 24% ([TCL 中环 2025 年年度报告, p. 19 BC PV-module R&D project](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)). The January 2026 controlling stake in Yidao New Energy (a domestic N-type TOPCon leader) was specifically aimed at accelerating BC-module commercialization ([TCL 中环的"破局之战": 控股一道新能源, 新浪财经 2026-01-19](https://finance.sina.com.cn/stock/s/2026-01-19/doc-inhhxvex9063465.shtml)).
+
+(3) **Half-cell + multi-cut modules**: Laser-cut each cell into halves / thirds / quarters to reduce per-cell current and I²R loss, increasing module output power. In 2025 the company completed half-cell line conversion and reached 24.2% multi-cut-module efficiency ([TCL 中环 2025 年年度报告, p. 19](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)).
+
+(4) **TCL Solar + SunPower dual-brand**: The domestic market uses the "TCL Solar" brand; international markets use "SunPower" (acquired via Maxeon). 2025 saw the first GW-level breakthroughs in international shipments ([Ibid., p. 14](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)).
+
+*Analyst view:* The module business has been the core "gap-filling" exercise for 2024-2025 — 2024 module revenue was ¥5.81 bn on 8.3 GW shipments; 2025 module revenue grew to ¥9.32 bn on 15.1 GW shipments (+82.31%). But because of the industry-wide price war + the company's own module scale still trailing JA Solar, LONGi, and JinkoSolar (integrated module top three), the gross margin came in at -6.22%, still negative ([Ibid., p. 16](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)). **Moat grade: no (TOPCon) / partial (BC)** — TOPCon is now an industry-commodity product with no proprietary moat for anyone; BC, with the Maxeon IP base + the company's own R&D, could potentially command a phased premium from 2026 onward if scale ramp succeeds. Competitive benchmark: JA Solar (`SSE:002459`), LONGi Green Energy (`SSE:601012`), JinkoSolar (`SSE:688223`), and Trina Solar (`SSE:688599`) are all direct competitors.
+
+### 4.6 Flagship products and the trailing-12-month launches
+
+The current "flagship scorecards" for 2024-2026 are:
+
+- **Semiconductor**: 12-inch polished + epitaxial wafers — #1 by revenue domestically; 2025 segment revenue ¥5.71 bn;
+- **PV wafers**: G12R (launched 2024, mainstream status reached during 2025);
+- **PV modules**: BC modules (line conversion complete in 2025, mass-production ramp through 2026).
+
+**Trailing-12-month new products / strategic actions**:
+- Early 2025: BC + half-cell line conversion completed; multi-cut module mass production began ([TCL 中环 2025 年年度报告, p. 19 TBC pilot-line project](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)).
+- March 2025: 210R wafers became the company's new mainstream size ([210 硅片颠覆, 新浪财经 2025-03-31](https://finance.sina.com.cn/roll/2025-03-31/doc-inerqfen1026795.shtml)).
+- 2H 2025: International module shipments reached the GW level ([TCL 中环 2025 年年度报告, p. 14](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)).
+- January 16, 2026: Announcement of the planned controlling stake in Yidao New Energy (BC + TOPCon capacity backstop) ([TCL 中环的"破局之战", 新浪财经 2026-01-19](https://finance.sina.com.cn/stock/s/2026-01-19/doc-inhhxvex9063465.shtml)).
+- February 2026: Maxeon announces planned disposal of Malaysian subsidiary SPMI (100%) ([TCL 中环 2025 年年度报告, p. 144](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)).
+
+### 4.7 Synthesis — how the three product lines interact in customer flows
+
+The most distinctive feature of TCL Zhonghuan is its occupation of **two parallel and independent silicon-based value chains** simultaneously:
+
+1. **Semiconductor value chain**: "Electronic-grade polysilicon → Zhonghuan Advanced silicon ingots → Zhonghuan Advanced wafers → wafer fabs (SMIC / Hua Hong / YMTC / TSMC) → IC design houses → end electronics." Zhonghuan Advanced is the upstream raw-materials supplier on this chain — high margins, high technology barriers, demand driven by the global semiconductor capex cycle.
+
+2. **PV value chain**: "Polysilicon feedstock → TCL Zhonghuan silicon ingots → TCL Zhonghuan wafers → cells → modules (incl. Maxeon + Yidao) → EPC → power stations." On this chain the company spans wafer → module → station, three positions vertically — the highest degree of integration, but also the most exposed to price-cycle shocks.
+
+The shared foundation between the two chains: **monocrystalline-silicon pulling processes, thermal-field design, smart manufacturing, and cleaning / polishing equipment**. Shen Haoping's annual-report letters have repeatedly emphasised "the silicon-materials platform with monocrystalline silicon as the starting point" — meaning know-how from PV-side smart manufacturing can be deployed into the semi-side to drive down costs and improve efficiency ([TCL 中环 2024 年年度报告, p. 14](https://static.cninfo.com.cn/finalpage/2025-04-26/1223330188.PDF)). But **the cycle desynchronization between the two chains is also the company's biggest double-edged sword** — the semiconductor cycle is in an upturn through 2024-2026 (AI-driven), while the PV cycle is in a downturn through 2024-2026 (capacity oversupply). This means the semi platform's earnings contribution is currently being drowned out by PV-platform losses.
+
+![TCL Zhonghuan gross margin by segment: 2023-2025](../../charts/tclzhonghuan_gm_trend.png)
+
+*Source: [TCL 中环 2025 年年度报告, p. 16](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF) · [2024 年年度报告, p. 19](https://static.cninfo.com.cn/finalpage/2025-04-26/1223330188.PDF) · [2023 年年度报告, p. 17](https://static.cninfo.com.cn/finalpage/2024-04-26/1219863251.PDF)*
