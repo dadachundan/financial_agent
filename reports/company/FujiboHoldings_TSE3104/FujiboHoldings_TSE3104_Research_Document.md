@@ -102,3 +102,101 @@ Although the company-research skill instructs the analyst to cover only the foun
 The current board has nine directors, of which four are independent outside directors (44%, comfortably above TSE prime-market standards); Ms. Ruth Marie Jarman is the longest-serving outside director (June 2019) — an unusual non-Japanese voice on a 130-year-old Japanese mid-cap ([Yuho 2025, p. 41 — コーポレート・ガバナンスの状況等](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)). Other inside-director context — CFO Tatsuya Sasaki (since 2023, ex-MUFG Research & Consulting), Yoshimi Mochizuki (Polishing Pad Business head, also President of Fujibo Ehime) — is intentionally omitted per the skill's "founder + current CEO only" guidance, except where the operating-business heads are explicitly cited in their business-line sections.
 
 ---
+
+## 4. Products & Services
+
+This is by a wide margin the most consequential section of the report. Fujibo's value to a portfolio is in one product family — **POLYPAS®** — split across five materially distinct sub-series sold into CMP-pad, silicon-wafer, hard-disk and LCD-glass polishing. Everything else (industrial chemicals, apparel, moulds) is either a feeder business that funded the pad reinvestment or a slow-melting legacy. The reader needs to leave §4 able to articulate which POLYPAS sub-series sits at which step in the customer's wafer-fab flow, why DuPont's IC1000 has not displaced Fujibo from Japanese / Taiwanese / Korean customer slots, and what the soft-vs-hard pad mix means for incremental margins as the AI-CMP cycle deepens.
+
+### 4.1 — Fujibo's segment-level disclosure (Yuho verbatim)
+
+Per the 第205期 Yuho (fiscal year ending March 2025), the polishing-pad business sits inside the "研磨材事業 (Abrasives Business)" segment, whose main product disclosure reads:
+
+> "区分: 研磨材事業 — 主要製品等: 超精密加工用研磨材, 不織布, 合皮 — 製造: フジボウ愛媛㈱, 台湾富士紡精密材料股份有限公司"
+
+That is — *"Segment: Abrasives Business. Main products: ultra-high-precision-processing abrasives, non-woven fabric, synthetic leather. Manufacturers: Fujibo Ehime Co., Ltd. and Taiwan Fujibo Precision Materials Co., Ltd."* The two "non-woven" and "synthetic leather" line items are largely the cushioning / backing materials sold into the same customers as full pads. Source: [Yuho 2025, p. 7 — 事業の内容](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf).
+
+The Yuho's narrative of the FY3/25 segment performance — the canonical, verbatim source for §4 — reads:
+
+> "ア．研磨材事業: 2023年前半に底を打った世界の半導体市場は、2024年に入り緩やかな回復が続いています。このような中、超精密加工用研磨材の半導体デバイス用途(ＣＭＰ)は、生成ＡＩの普及によるＨＢＭなどのメモリや最先端ロジック向け半導体の需要の増加とそれに伴う一部ユーザーの在庫水準の引き上げにより受注が増加しました。シリコンウエハー用途は、汎用品用途の需要は弱いものの、先端品用途の需要は堅調で一定水準の売上を確保しました。ハードディスク用途はデータセンター向けの需要が戻り、液晶ガラス用途では期後半からＴＶ需要の増加によってパネルの消費も加速しており、受注も回復しました。"
+
+— i.e., *"the polishing-pad business saw orders increase in semiconductor-device CMP applications driven by HBM and leading-edge logic, along with some customer inventory restock; silicon-wafer demand was weak for commodity wafers but firm for advanced grades; hard-disk demand recovered on the back of data-centre orders; LCD-glass orders recovered from the second half on TV-panel restock."* The result: **segment net sales ¥19,307 mm (+43.9% YoY) and operating profit ¥4,729 mm (+334.8%)** ([Yuho 2025, p. 24 — 経営成績](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)). The 24.5% segment operating margin in FY3/25 is the highest the company has ever reported on the polishing-pad business and reflects (a) the operating leverage of pulling utilisation up the cost curve at fixed capacity, and (b) the structural mix shift toward higher-priced soft pads for advanced-node CMP.
+
+### 4.2 — Synthesis: how the product categories interact in the customer workflow
+
+Every advanced-logic / memory / wafer-substrate customer of Fujibo runs the **same six-step ultra-precision-finishing loop** on every wafer: **lap → first polish → CMP layer 1 (oxide / dielectric) → CMP layer 2 (metal / Cu / W) → final polish → cleaning + back-pad mount**. Fujibo touches steps 2-6 with the POLYPAS family:
+
+```mermaid
+graph LR
+  A[Lapping<br/>NEXTILE T/U] --> B[First polish<br/>POLYPAS FP / FXA]
+  B --> C[CMP oxide / dielectric<br/>POLYPAS FXA hard]
+  C --> D[CMP metal / Cu / W<br/>POLYPAS FXA + Suede]
+  D --> E[Final polish<br/>POLYPAS Suede]
+  E --> F[Mount / back-pad<br/>POLYPAS Back Pad]
+  F -.cycle.-> B
+```
+
+A typical 300 mm advanced-logic line will use four or five different POLYPAS pads in this loop, replaced every 8–24 hours of pad-life depending on the layer; Fujibo wins or loses each socket on the basis of (a) defect density (scratches per wafer), (b) wafer-to-wafer uniformity, and (c) the slope of removal-rate decay as pads age. This is why "solution-type contract model" (see §5) and on-site application-engineering presence in Taiwan / Korea matter more than headline product specs — the spec is qualified during a 6–12 month customer trial against the specific slurry / conditioner combination the customer uses.
+
+### 4.3 — POLYPAS® (FP series): non-woven first-polish pads
+
+> "Non-woven fabric type polishing pad developed for stock removal (first polishing). … Applications: Initial and final polishing of silicon and compound semiconductor wafers; optical-lens and glass-component finishing; processing of plastic lenses, stainless steel, and copper plates. Key properties: 'High flatness' and 'Low scratch' characteristics. Available in soft to hard variants for different material requirements." ([POLYPAS FP series product page](https://www.fujibo.co.jp/en/division/polishingpad/product/627/))
+
+**中文释义 / Plain-language gloss:** The FP series is the "rough cut" of the polishing flow. Non-woven (不織布) means the polyurethane resin is impregnated into a felt-like cloth rather than cast as a closed-cell foam — this gives the pad a softer, more conformable surface that removes the largest mountains on the wafer (the "stock removal" step, 粗研磨) without leaving deep scratches. Each FP grade is tuned by changing the cloth's fibre density, the polyurethane impregnation level, and the foaming control of the felt — Fujibo can deliver dozens of micro-variants for the same product code. The FP pad's role in the customer workflow is to flatten a wafer that has just come off lapping (where ¥10 µm of as-cut variation is normal) down to ~1 µm flatness for the subsequent CMP steps to take over. Strategic significance: FP is the high-volume / lower-ASP layer of the POLYPAS franchise — incremental growth here tracks 200/300 mm wafer-starts, not advanced-node intensity.
+
+*Analyst view:* FP-class pads are the most directly substitutable product family in the POLYPAS portfolio — Hubei Dinglong (鼎龙) sells a near-identical felt-based first-polish pad into mainland Chinese fabs at lower price, and Fujibo's qualified-supplier moat is shallower at this level. The differentiation premium is in the FXA / Suede sub-series, not FP. Moat type for FP = scale + qualified-supplier inertia; competitive verdict = partial.
+
+### 4.4 — POLYPAS® (FXA series): non-filler hard urethane pads — the CMP workhorse
+
+> "A non-filler type hard urethane pad designed for diverse polishing applications. This pad demonstrates superior performance characteristics, including resistance to temperature-related hardness variations and uniform foam structure. … Constructed from hard urethane without fillers. Notable properties include: 'High flatness' and minimal scratch production, temperature-stable hardness performance, independent uniform foam composition. Applications: semiconductor wafer polishing (first and final stages), LCD glass substrate finishing, optical lens and material polishing." ([POLYPAS FXA series product page](https://www.fujibo.co.jp/en/division/polishingpad/product/1143/))
+
+**中文释义 / Plain-language gloss:** FXA is the head-to-head competitor to DuPont's IC1000 — both are closed-cell, hard polyurethane (硬质聚氨酯) cast pads with engineered pore structures for **chemical-mechanical planarisation (CMP, 化学机械抛光)** at the device front-end. "Non-filler" (无填料) means the polyurethane foam is the active polishing medium itself — abrasive grit is delivered via the slurry, not embedded in the pad — which is the modern standard for advanced-node CMP because pad-embedded abrasive causes defect counts that GAA / sub-3 nm logic cannot tolerate. "Temperature-stable hardness" is the analogue of IC1000's claim to flat removal-rate from start to end of pad life: in CMP, friction heats the pad surface to 50-80°C and softer pads droop, producing wafer-edge over-polish. The "uniform foam composition" claim points at the pore-size distribution that Fujibo controls via its proprietary casting process — this is the differentiation lever vs IC1000 for **wafer-to-wafer uniformity (WIWNU, within-wafer non-uniformity, 片内不均匀性)** when polishing **inter-metal dielectric (IMD, 层间介质)** or **shallow-trench isolation (STI, 浅沟槽隔离)** at the 5-nm / 3-nm node.
+
+The strategic significance is acute. The "trend of semiconductor miniaturization and layering" — Fujibo's exact corporate phrasing ([Top Message, Fujibo IR](https://www.fujibo.co.jp/en/ir/message/)) — means **more CMP steps per wafer at every node transition**: 28-nm logic uses ~10 CMP steps, 5-nm logic uses ~15-18, 3-nm and beyond uses 20+. Each step is a hard-pad consumable. HBM (High Bandwidth Memory, 高带宽内存) for AI accelerators adds another CMP-intensive consumer because every HBM die stack uses through-silicon vias (TSVs, 硅通孔) that need an additional Cu CMP step per layer. Fujibo's FXA family is the product that captures this step-growth — and the company has been explicit that capacity expansion (Nyugawa + Oita + a new Taiwan-side line) is targeted at hard-pad sales specifically ([Yuho 2025, p. 14 — 優先的に対処すべき事業上及び財務上の課題](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)).
+
+*Analyst view:* FXA-class hard pads are where Fujibo plays competitively against DuPont's IC1000™ and Hubei Dinglong's DL-720 series. DuPont retains the de-facto-standard label for IC1000 — *"the IC1000™ Series is a CMP industry standard that is now being used in a wide range of CMP applications"* ([NITTA DuPont — IC1000 product page](https://www.nittadupont.co.jp/en/category-products/pad)); Dinglong only crossed the 28/14 nm qualification line at SMIC in late 2024 with the DL-720 series ([Hubei Dinglong CMP localisation report, 2025](https://www.openpr.com/news/4253861/semiconductor-cmp-polishing-pad-latest-market-report-2025)). Fujibo's FXA wins specialty grades in the JP / TW / KR customer base where the customer wants a non-IC1000 second-source for line yield or contract-pricing leverage. Moat type for FXA = process IP + qualified-supplier inertia + Japanese-customer preference; verdict = partial competitive advantage (yes vs Dinglong / 3M / SKC; partial vs IC1000).
+
+### 4.5 — POLYPAS® (FX series): filler-impregnated pads for glass + non-CMP
+
+> "Engineered with built-in filler technology. It combines characteristics from the FXA series while adding self-abrasive properties unique to the built-in filler type. This product line offers extensive customization in hardness, density, abrasive grain types, and grain size distribution. … Applications: glass substrate polishing for displays and photomasks; optical lens and glass component finishing; plastic lenses, stainless steel, and copper plate polishing; panel cleaning operations." ([POLYPAS FX series product page](https://www.fujibo.co.jp/en/division/polishingpad/product/1282/))
+
+**中文释义 / Plain-language gloss:** FX is the same hard-urethane foam as FXA, but with abrasive grains baked into the pad itself — "built-in filler" (内装填料). This makes FX a "self-abrasive" pad: it doesn't need an abrasive slurry to do useful work, just a chemistry-only slurry or water. The trade-off is the FX pad must be discarded faster (the grain inventory inside the pad burns out) but the customer saves on slurry cost. The target use cases are largely **non-semiconductor**: LCD-glass substrate polish, photomask blank polish, optical-lens finish — applications where the wafer / substrate is value-dense but the polishing step doesn't have the defect-density requirements of front-end CMP. FX has therefore been the swing-factor in the LCD recovery the Yuho commentary keeps citing ("液晶ガラス用途では中国の補助金政策によりパネル需要が好調に推移" — *"LCD glass demand was strong thanks to Chinese subsidy policy"* — [FY3/26 1H 決算短信, p. 2](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251031/20251030582961.pdf)).
+
+*Analyst view:* FX is the most defensible POLYPAS sub-series in volume terms because the LCD-glass and photomask supply chains are dominated by Japanese (AGC, Nippon Electric Glass, Hoya) and Korean (Corning Korea) customers who have decades-old relationships with Fujibo. Moat = customer-relationship + qualified-supplier inertia; verdict = yes.
+
+### 4.6 — POLYPAS® (Suede series): final-finishing pads
+
+> "A polishing pad engineered for final finishing of semiconductor wafers and hard disks. The product addresses growing industry demands for 'high precision and flatness of the finished surface' while emphasizing the importance of the pad's own uniformity. … 'Scratch-free' performance, 'Chemical-resistant and abrasion-resistant' properties." ([POLYPAS Suede series product page](https://www.fujibo.co.jp/en/division/polishingpad/product/1283/))
+
+**中文释义 / Plain-language gloss:** Suede (麂皮 / 仿麂皮) refers to a soft polyurethane top layer with a porous, suede-like microstructure that creates very gentle abrasive contact — the **soft pad** half of the CMP cookbook. In a typical CMP module, the hard pad (FXA) does the bulk material removal at the start of each polishing step, and the soft pad (Suede) does the **finishing pass** for the last few hundred angstroms — the step that determines defect count and surface roughness. Fujibo has explicitly said it has "**captured the top market share in the mainstay field of advanced-process soft pads**" — *"we have captured the top market share in the mainstay field of advanced process soft pads based on our high reputation among customers earned through our high-performance, high-quality products and provision of flexible solutions that meet the different performance requirements of each customer"* ([Integrated Report 2024, p. 18](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)). This is the single most important sentence in the entire Integrated Report — it is the company's claim of a defensible niche-No. 1 position in **soft pads for advanced-node CMP**, the segment that grows fastest as nodes shrink.
+
+The Suede family is also used for **silicon-wafer final polishing** (the last polish on a bare-silicon wafer before it ships to the fab) — and for **hard-disk substrate final polish**, the application that drove Fujibo's data-centre-driven HDD-segment recovery in FY3/25.
+
+*Analyst view:* Suede is the strongest competitive-advantage product in the POLYPAS portfolio — Fujibo's claimed leadership position in advanced-process soft pads is one of the few share-leadership claims in any pad-supplier filing globally, and it is the most defensible product against incremental Chinese-substitution risk because it is the layer where defect-density tolerance is tightest. Moat = process IP + on-site application engineering + qualified-supplier inertia; verdict = yes (the strongest of the POLYPAS family).
+
+### 4.7 — POLYPAS® (Back Pad series): wafer-retention pads
+
+> "Developed to retain semiconductor silicon wafers and LCD glass substrates without wax. Users can choose mounting pads tailored to their polishing needs for optimal flatness. The product line includes insert types (frameless) and template types (framed)." ([POLYPAS Back Pad series product page](https://www.fujibo.co.jp/en/division/polishingpad/product/1284/))
+
+**中文释义 / Plain-language gloss:** Back pads are the **wax-free wafer-carrier mounting pads** that hold the wafer face-down against the polishing head during CMP. Pre-back-pad designs used wax to glue the wafer to the carrier, which required messy cleaning after polishing and introduced wax-residue defect modes. The wax-free back pad is now the global standard — Fujibo's role here is to supply a high-flatness, wafer-non-marring back-pad that the customer changes out at a slower cadence than the polishing pad itself.
+
+*Analyst view:* Back pads are a quieter franchise — high margin, low-growth, sticky customer base — and act as a "tail" annuity inside the POLYPAS bundle. They rarely show up in any market-share analysis because the dollar volume is small relative to top-side pads, but they're part of why Fujibo wins multi-product CMP-consumable deals against single-product competitors. Moat = bundle + qualified-supplier inertia; verdict = partial.
+
+### 4.8 — NEXTILE® lapping pads (adjacency)
+
+NEXTILE T and U series are **lapping pads** rather than CMP polishing pads — they sit at the earliest, coarsest step in the wafer / glass finishing flow ([NEXTILE product page, Fujibo](https://www.fujibo.co.jp/en/division/polishingpad/product/)). They are technologically adjacent to the POLYPAS family (same polyurethane chemistry, different fibre structure) and serve the same customers, but at lower margin and lower revenue mix. They're listed for completeness; they are not the franchise.
+
+### 4.9 — The other three operating segments (brief)
+
+- **Industrial Chemicals (化学工業品事業)** — Yanai Chemical Industry's contract-manufacturing business: fine-chemical intermediates for pharma, agrochem, electronic materials and functional chemicals for the big Japanese chemical players. FY3/25 sales ¥13.5 bn (+7.6%), operating profit ¥1.2 bn (+37.0%). The Yanai Headquarters Plant + Takefu Plant run at high utilisation; a fifth plant comes on stream in April 2026 (¥6.2 bn invested, of which ¥1.2 bn already spent). Customer concentration is high — **top-2 customers (Sumitomo Shoji Chemical 19.2% of consolidated sales, Mitsui Chemicals 13.7%)** sit inside this business ([Yuho 2025, p. 27 — 販売実績](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)).
+- **Lifestyle Apparel (生活衣料事業)** — Body Wild brand men's underwear + Angle women's underwear + Asamerry / Airmerry high-end lines. FY3/25 sales ¥7.0 bn (flat), operating profit ¥0.6 bn (−25.0%). This is the heritage textile business; Inoue's predecessor cut it from 60% of sales (FY3/06) to ~16% (FY3/25). It is structurally declining in domestic sales but holding up overseas thanks to Japan-brand cachet ([Yuho 2025, p. 25 — 生活衣料事業](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)).
+- **Other (Chemical Products / Auto-parts / Moulds)** — FY3/25 sales ¥3.2 bn (−1.8%), operating loss ¥57 mm vs ¥59 mm profit prior year. Inoue is positioning the "Chemical Products" piece (precision plastic injection for medical devices + digital cameras) as the **fourth pillar** to follow polishing pads / industrial chemicals / apparel, but the GFI / IPM 2022 acquisition is still in investment mode ([Yuho 2025, p. 25 — その他](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)).
+
+### 4.10 — Roadmap and recent launches (last 12 months)
+
+The two largest stated investment programmes are (a) the **Nyugawa Plant technology development annex** completed in 2024 and now driving FY3/25 pad mix-up, and (b) the **Miaoli Taiwan R&D Centre** at ¥5.7 bn — Fujibo's first overseas R&D centre and explicitly framed as a Taiwan-customer co-development hub for TSMC-cluster advanced-node CMP qualification ([Yuho 2025, p. 34 — 重要な設備の新設等](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf); [Top Message, Fujibo IR](https://www.fujibo.co.jp/en/ir/message/)). There is no individual new-product press release at SKU level — POLYPAS is a continuous-improvement product family, not a discrete-launch business.
+
+![Fujibo capex and R&D investment](../../charts/fujibo_capex_rd.png)
+
+Source: [Integrated Report 2024 — 11 Years Financial Summary, p. 47 + Yuho 2025 p. 32](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf).
+
+---
