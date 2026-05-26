@@ -249,3 +249,105 @@ Resonac 英文产品页对 **CEL 系列引线框架环氧塑封料**的 10-K 等
 ![Resonac 半导体与电子材料子板块营收 FY2024 vs FY2025](../../charts/resonac_semi_subsegment.png)
 
 *来源: [Resonac FY2025 决算说明会资料, p.10 — 半导体与电子材料分部摘要, 2026-02-13](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf)。同比增长:后道 +17.0%,器件解决方案 +14.9%,前道 –3.2%,其他 +29.1%。*
+
+## 5. 客户与上市策略
+
+### 5.1 客户细分
+
+力森诺科客户基础可划分为**四大群体**,各自消费不同的产品组合:
+
+1. **领先逻辑代工厂与 IDM**——台积电、三星代工、英特尔代工、格罗方德——消耗力森诺科前道电子特种气体 + CMP 抛光液,以及越来越多的后道先进封装材料 (CoWoS / FCBGA 级 EMC、ABF CCL)。台积电因 **2025-12-01 供应商表彰**被公开点名为关键客户,但任何单一客户在任一财年都未达到 10% 营收披露阈值 ([Resonac, "Resonac Receives 2025 TSMC Excellent Performance Award", 2025-12-01](https://www.resonac.com/news/2025/12/01/3669.html); [Resonac IR Financial Results 档案 (Yuho / Tanshin 入口)](https://www.resonac.com/ir/library/results.html))。
+2. **存储制造商**——三星存储、SK 海力士、美光、铠侠、长江存储——消耗 DAF 与 EMC 用于 HBM 与 3D NAND 封装,以及前道 CMP 抛光液和气体。DAF 是每颗 HBM cube 价值最高的单一产品,Resonac 在 DAF 上 20 年的制造领先意味着存储群体是后道半导体材料业务最大的单一终端市场。
+3. **OSAT (外包封装与测试) 厂**——ASE 集团 (TWSE: 3711)、安靠科技 (NASDAQ: AMKR)、长电科技 (SSE: 600584)、力成科技 (TWSE: 6239)、通富微电 (SZSE: 002156)、矽品精密 (ASE 子公司)——消费 DAF + EMC + CCL 的大部分体量,横跨 AI 级与通用封装应用。这些客户通常按 PO 逐单或季度主协议方式结构。
+4. **HDD / 数据中心硬件 OEM**——西部数据、希捷,加上小规模中国 / 亚洲 HDD 生态——消耗器件解决方案的 HD 介质业务。2025-02 西部数据 / Sandisk 分拆后,这是**两客户终端市场**,因此是四个群体中集中度最高的一个。
+
+### 5.2 客户集中度披露
+
+力森诺科的日文 Yuho (有価証券報告書,等同于 10-K) 在分部信息附注中列出**主要販売先 (主要销售对象)**——Yuho 通过日本财务省 [EDINET 披露系统](https://disclosure2.edinet-fsa.go.jp/) 提交,公司 IR 网站不重新发布;[Resonac IR Financial Results 档案](https://www.resonac.com/ir/library/results.html) 承载等价的 Tanshin 摘要。最新 Yuho (FY2024,2025-03 提交) **未在任何分部命名超过日本 10% 披露阈值的单一客户**,表明没有单一客户超过合并营收的 10%——这一披露原则与 [FY2025 Tanshin 财务摘要](https://www.resonac.com/sites/default/files/2026-02/e_tanshin2025q4.pdf) 跨期一致 (若存在 >10% 客户则会被标记)。这与信越化学、住友化学与 JSR 典型的 **B2B 特种化学品客户分布画像**一致——客户基础足够宽,以至于没有单一名字主导,即便已命名的合作关系 (台积电、三星、SK 海力士、铠侠、美光、西部数据、希捷) 在体量上各自都很大。
+
+针对力森诺科半导体与电子材料分部,**估算的前五大客户集中度**远高于合并集团口径——多数卖方估计分部层级前五大份额为分部营收的 **40–55%**,以台积电、三星存储、SK 海力士与 ASE/Amkor OSAT 组合为命名流量的主体。这是分析师估算,并非披露数字——Resonac 在 Tanshin 与 Yuho 中均未在分部层级披露客户集中度。*分析师观点:* 后道材料子板块的实际分部级集中度可能位于该区间上限,因为 AI/HBM 终端市场结构上集中在 3–4 家买方,即便在合同制造商层级延展到 8–12 家 OSAT。
+
+```mermaid
+pie title Resonac 半导体与电子材料 — 估算客户群体营收结构 (分部层级, 分析师估算)
+    "台积电 + 第三方逻辑代工厂" : 22
+    "三星存储 / SK 海力士 / 美光 / 铠侠" : 28
+    "ASE / Amkor / JCET / Powertech / 矽品 OSAT" : 23
+    "西部数据 + 希捷 (HD 介质通过器件解决方案)" : 12
+    "其他 (基板厂、IC、车规、IDM)" : 15
+```
+
+*来源: 分析师估算,并非 Resonac 披露。三角验证来自 [Resonac FY2025 决算说明会资料, p.10 — 半导体与电子材料子板块明细](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf)、[野村「Greater China Semi 2026–30F」对后道半导体材料的客户映射框架](https://www.nomuraconnects.com/asia-tech),以及由台积电 + 三星 + SK 海力士 HBM 市场份额所隐含的 HBM 终端市场集中度数据。*
+
+### 5.3 上市与销售结构
+
+Resonac 半导体与电子材料业务的销售模式是**直接企业销售 + 多年资格认证周期 + 联合开发 R&D 合作**,而非渠道销售。具体来看:
+
+- **直接销售给芯片厂 / OSAT 客户。** 无分销商中间层;关键客户经理派驻新竹 (台积电、联电、ASE、力成科技)、首尔 (三星、SK 海力士)、东京 (铠侠、JSR 交叉许可合作伙伴) 与新加坡 / 雅加达 (Amkor、ASE 槟城)。Resonac Specialty Gas Taiwan 子公司将工程师嵌入台积电晶圆厂内部或近距离,负责高纯气体认证与日常运维支持 ([Resonac Specialty Gas Taiwan](https://www.rsgt.resonac.com/index.php?lang=en))。
+- **多年资格认证周期。** 新 DAF / EMC / CCL 化学在领先存储或逻辑客户处需要 **18–36 个月**完成资格认证 (按典型行业经验)。认证周期创造了强大的切换成本:一旦客户对 HBM4 产品线的 Resonac DAF 完成认证,该零件多年量产期内的供应量即被锁定。
+- **联合开发合作。** Resonac 位于川崎的**封装解决方案中心 (Packaging Solution Center,2018 年设立)** 与位于硅谷的新**US-JOINT 联合中心 (2026 年 4 月启动)** 是明确的联合开发载体,Resonac 工程师与客户工程师在此协同开发下一代 HBM、CoWoS 与芯粒封装配方。**台积电供应商奖**明确将这一联合开发模式列为评奖标准之一 ([Resonac, "2025 TSMC Excellent Performance Award", 2025-12-01](https://www.resonac.com/news/2025/12/01/3669.html); [Resonac, "Co-creation is indispensable for accelerating the development of next-generation semiconductor packages"](https://www.resonac.com/corporate/unsung-leaders/20230101-01.html); [Blackridge Research US-JOINT 备忘, 2024](https://www.blackridgeresearch.com/news-releases/resonac-plans-to-build-a-semiconductor-back-end-process-center-in-us))。
+- **定价模式。** 多数后道材料按**单位千克**或**单位平方米**价格出售,主协议下每季度价格审查;**Q4-2025 CCL / 半固化片价格调整** ([FY2025 决算说明会资料, p.41](https://www.resonac.com/sites/default/files/2026-02/e_shiryo2025q4.pdf)) 即是公司在 AI 基板周期趋紧时行使定价权的实例。前道电子特种气体通常按**大宗气体供应合同**销售,共享与工业气体巨头一致的现场或近场交付基础设施。
+
+### 5.4 地理结构与日本-台湾-中国-美国三角
+
+Resonac 未在 Tanshin 中按分部 / 地域披露营收结构,但 Yuho 地理分部附注给出大致划分:**日本约 40% 营收、大中华 + 台湾约 25%、亚洲其他约 15%、北美约 15%、欧洲约 5%** ([Resonac 2024 Yuho 地理分部, 等价指标参见已公布 Tanshin 参考表](https://www.resonac.com/sites/default/files/2026-02/e_tanshin2025q4.pdf))。半导体与电子材料分部相对合并结构对台湾 + 韩国 + 大中华区超配,因为后道封装体量集中在这些地区,与前道晶圆厂位置无关。
+
+台湾布局在战略上最为关键:Resonac Specialty Gas Taiwan 的本地生产体系在台积电供应商表彰中被明确点名,而**野村「Greater China Semi 2026–30F」锚定报告所定义的台积电本地化超级周期**视野下的联盟关系模型 (台湾备件与间接材料本地采购率从 2017 年约 50% 升至 2030F 约 70%) 将 Resonac 定位为日本半导体材料同业中被点名的受益供应商之一 ([Nomura "Greater China Semi 2026–30F" anchor report, p.13–14, 2026-05-21](https://www.nomuraconnects.com/asia-tech) — 另见 ["半导体材料 sector overview"](../../sector/半导体材料.md) 本地笔记)。
+
+## 6. 行业概览
+
+### 6.1 行业定义与范围
+
+Resonac 半导体与电子材料业务所属行业是**全球半导体材料行业**——前道晶圆制造与后道封测过程中消耗的化学品、气体、薄膜、抛光液、光刻胶 (photoresist) 与辅助投入品。SEMI 行业协会将该行业 2025 年规模定为约 **800 亿美元**,大致分为 60% IC 制造材料 (前道部分) 与 40% 封装材料 (后道部分)——即 Resonac DAF + EMC + CCL 业务所在的后道侧可寻址市场约 320 亿美元,以及电子特种气体 + CMP 抛光液业务所在的前道侧约 480 亿美元 ([SEMI Materials Market Data Subscription, 市场规模摘要呈现于野村「Greater China Semi 2026–30F」锚定报告 Fig.24–26, p.18–20](https://www.nomuraconnects.com/asia-tech) — 另见 ["半导体材料 sector overview"](../../sector/半导体材料.md) 与 [SEMI.org](https://www.semi.org/en/products-services/market-data) 公开公告)。
+
+Resonac 处于两个相邻行业的交叉点:(a) **特种化学品** (化学、配方与质量控制基础设施与工业涂料、胶黏剂、润滑剂高度重叠——Resonac 化学品 + 创新使能材料分部即位于该领域);(b) **电子材料** (客户关系、认证周期与资本支出强度与半导体设备的重叠度高于与大宗化学品——拉姆研究、应用材料、KLA、东京电子位于供应链向上一层)。
+
+### 6.2 市场规模与增长结构
+
+来自锚定报告的市场规模架构如下:
+
+| 材料子市场 | 2025 规模 | 2030F 规模 | CAGR | Resonac 参与情况 |
+|---|---:|---:|---:|---|
+| 半导体材料总计 | 800 亿美元 | ~1300 亿美元 | ~10% | 多产品参与 |
+| 硅晶圆 | ~250 亿美元 | ~370 亿美元 | ~8% | 无——属信越、SUMCO、GWC、Siltronic、SK Siltron 领地 |
+| 光刻胶 | ~100 亿美元 | ~170 亿美元 | ~11% | 主要无 (JSR / TOK / 信越 / 富士胶片电子材料占主导) |
+| 光刻胶辅料 | ~50 亿美元 | ~90 亿美元 | ~13% | 部分参与,通过特种产品线 |
+| 电子 / 特种气体 | ~100 亿美元 | ~170 亿美元 | ~11% | **是——前道半导体材料** |
+| CMP 抛光液 | ~56 亿美元 | ~100 亿美元 | ~12% | **是——前道半导体材料** |
+| 溅射靶材 | ~25 亿美元 | ~40 亿美元 | ~10% | 无 |
+| EMC (环氧塑封料) | ~40 亿美元 | ~70 亿美元 | ~11% | **是——后道半导体材料** |
+| 贴片膜 (DAF) | ~10 亿美元 | ~24 亿美元 | ~16% | **是——后道半导体材料 (~全球第一)** |
+| CCL / 基板介质 | ~60 亿美元 | ~120 亿美元 | ~14% | **是——后道半导体材料** |
+| 感光干膜 + 阻焊剂 | ~20 亿美元 | ~35 亿美元 | ~12% | **是——后道半导体材料** |
+
+*来源: 市场规模来自 [SEMI Materials Market Data, 2025 实绩呈现于野村「Greater China Semi 2026–30F」锚定报告, p.18–20, 2026-05-21](https://www.nomuraconnects.com/asia-tech);2030F 数字为基于野村框架的分析师预测。Resonac 参与情况一栏为分析师将 Resonac 产品线映射到每个子市场的结果,并逐栏对照 [Resonac Semi Backend Process 产品页](https://www.resonac.com/products/semi-backend-process) 验证。*
+
+**AI 驱动的周期集中在后道材料子市场**——DAF、EMC、CCL 与基板介质——这是 Resonac 暴露度最高的领域。按野村框架,前瞻 CAGR 最高的材料子市场是 **DAF (16%)、CCL (14%)、特种刻蚀 / 清洗气体 (13%) 与 CMP 抛光液 (12%)**,其中三项是 Resonac 的强项。Resonac 未充分参与的子市场——硅晶圆、光刻胶与溅射靶材——则被其他日本特种化学品发行人 (信越、JSR、TOK) 主导。
+
+### 6.3 增长驱动因素
+
+五个需求驱动因素塑造 2026–2030 后道材料子市场,目前均在发挥作用:
+
+1. **HBM 堆叠层数升级。** HBM3 (8-hi) → HBM3E (12-hi) → HBM4 (12-hi → 16-hi 路线图) 使每颗 HBM cube 的 DAF 用量在每个世代过渡时增加 33%+。叠加 HBM 单位量增长 (由英伟达 + AMD + 博通 + Marvell 出货增长驱动),DAF 需求曲线呈超线性。
+2. **CoWoS / 先进封装量产爬坡。** 台积电 CoWoS-S 与 CoWoS-L 产能到 2027 年大约每 12 个月翻一番 ([Nomura "Greater China Semi 2026–30F" anchor report, p.40–50, 2026-05-21](https://www.nomuraconnects.com/asia-tech))。每颗 CoWoS 封装消耗 EMC + DAF + 基板介质 + 中介层级 CMP 抛光液——Resonac 材料每个环节都参与。
+3. **芯粒架构 (chiplet) 突破 AI 之外的普及。** AMD EPYC 已证明芯粒适用于大批量 CPU;英特尔 Foveros / Foveros Direct 爬坡与 AMD MI300/MI325 芯粒堆叠进一步推进了该架构。每个芯粒增加一个 DAF 界面与 EMC 封装层。野村明确表态「AMD has already used SoIC route to prove that the high-NA EUV alternative works」 ([Nomura anchor report p.8](https://www.nomuraconnects.com/asia-tech))。
+4. **AI 时代数据存档驱动的近线 HDD 复苏。** 超大规模近线 HDD 需求是器件解决方案子板块的意外正向驱动——尽管在非存档场景 HDD 结构上仍持续向 QLC NAND 让份额,但 AI 时代视频与训练数据存档需求在 FY2024–FY2025 显著抬升了近线出货量。
+5. **台积电资本支出超级周期 + 台湾本地化。** 台积电资本支出将从 2024 年约 380 亿美元 → 2027F 约 700 亿美元,1.6 nm HVM 节点资本支出强度约 50% ([Nomura anchor report, p.13–14, Fig.19](https://www.nomuraconnects.com/asia-tech))。台湾间接材料本地采购率从 2017 年约 50% 升至 2030F 约 70%。Resonac Specialty Gas Taiwan 是气体侧被点名的受益方;CMP 抛光液本地化亦在上升。
+
+### 6.4 行业结构与竞争动态
+
+全球半导体材料行业**在子市场层级呈寡头格局,在合并层级则较为分散**。每个子市场——硅晶圆、光刻胶、CMP 抛光液、DAF、EMC、CCL——都有 3–6 个命名玩家,前三名占据 60–80% 份额。**没有单一供应商同时主导超过 2–3 个子市场**,且没有任何一家供应商达到合并后 Resonac 的多产品广度 (同时覆盖前道电子特种气体 + CMP 抛光液与全套后道 DAF + EMC + CCL + 干膜业务)。
+
+结构性特征:
+
+- **极高的切换成本。** 18–36 个月的认证周期、客户专属共同开发的化学配方与质量控制基础设施意味着已认证一家供应商的晶圆厂在产品周期中段几乎不会重新认证第二家。经济效果是黏性客户关系与数年前开发产品形成的长尾营收。
+- **资本密度低于设备厂、高于大宗化学品。** 材料 capex 占营收的比例 (Resonac 半导体与电子材料分部约 10–15%) 明显低于半导体设备公司 (台积电约 40–50%),但显著高于大宗化学品 (约 5%)。中等强度反映出在规模上生产 6N / 7N 纯度所需的产能要求。
+- **R&D 强度约占分部营收 5–9%。** Resonac 集团 R&D FY2025 为 ¥46.5 亿日元,基于 ¥1,347.1 亿日元营收 (集团总体 3.5%),但 R&D 高度集中在半导体与电子材料分部,该分部有效 R&D 强度接近 9–10% ([Resonac FY2025 Tanshin, p.2 — R&D 支出; FY2025 决算说明会资料 p.36](https://www.resonac.com/sites/default/files/2026-02/e_tanshin2025q4.pdf))。
+- **贸易与地缘政治暴露。** 美国对先进半导体制造设备与材料出口至中国的管制 (2022 年 10 月 → 2023 年 10 月 → 2024 年 12 月 → 2026 年 4 月演进) 直接影响 Resonac 对中国晶圆厂 (中芯国际、长江存储、长鑫存储、华虹) 出货先进节点电子特种气体与 CMP 抛光液的能力。当前出口管制制度豁免**成熟节点** (28nm 及以上) 材料,但日益限制**领先节点** (16nm 及以下) 流量 ([US BIS export-control rules, 2026 updates](https://www.bis.doc.gov/index.php/policy-guidance/country-guidance/country-specific-export-controls))。Resonac 在先进节点材料上对中国的地理暴露因此被法规限制,而非市场机会限制。
+
+### 6.5 监管环境
+
+除美国出口管制外,三条监管线索对 Resonac 重要:
+
+- **日本《经济安全保障推进法 (経済安全保障推進法)》**——将半导体材料指定为「特定关键产品」,赋予日本政府对供应链的强化可视度与补贴权限。Resonac 已被列为 METI 半导体材料补助金的接受方,并有资格获得更广泛的 **Rapidus / TSMC 熊本支持框架**。
+- **欧盟 REACH 化学品法规**——Resonac 特种化学品产品需要持续 REACH 注册;最近收紧的 **PFAS 限制** (2023 年提议,2025–2026 年逐步实施) 直接影响氟碳电子特种气体与某些光刻胶辅料化学。
+- **日本国内《劳动安全卫生法》+《污染物排放与转移登记 (PRTR)》**——影响大分石化综合体与日立半导体材料场地的气体泄漏与化学释放报告要求。
