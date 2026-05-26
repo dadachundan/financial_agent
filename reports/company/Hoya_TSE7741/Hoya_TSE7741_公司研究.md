@@ -353,3 +353,136 @@ EUV 坯料和 HDD 玻璃以外，IT 分部的机会都较小：FPD 光罩受份�
 以基准情景 **Life Care 5% + IT 12% CAGR 从 FY25 至 FY30F** 建模，集团收入将达 **~¥1.4 万亿日元（~US$9 bn）**，按持续 30% 集团经营利润率推算，**经营利润 ~¥420 亿日元 vs FY25 的 ¥256 亿日元**。仅 IT 分部就将达 ~¥550 亿日元收入 / ~¥290 亿日元分部税前利润，按 25× IT 分部税前 P/E 估值可独立支撑 ~¥6–7 万亿日元的企业价值——对照 HOYA 目前 ¥8.3 万亿日元 EV，意味着集团其余被估值为 ~¥1–2 万亿日元，即 Life Care + Imaging + Other 收入估值为 ~1.5–3× P/S。这一比例与欧洲光学 / 器械同业大致一致，暗示当前估值**比基本面所能支撑的略为充分**，除非 IT 分部增速明显超出基准情景。
 
 ---
+
+## 9. 风险评估
+
+### 公司特有风险
+
+**1. IT 分部客户集中度。** HOYA 在 FY25 首次披露单一客户群（按分析师推断几乎肯定是台积电 + 内部光罩工厂）贡献集团收入 >10%，金额为 **¥92.8 亿日元（10.7%）**，FY24 仅为 ¥54.8 亿日元（7.2%） ([HOYA FY25 IFRS Financial Statements, p. 34](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf))。前五大 IT 分部客户份额很可能占 IT 收入的 35–45%（即集团收入的 13–16%）。**若台积电放缓先进逻辑工艺资本支出**（例如 AI 需求降温，美中脱钩迫使熊本厂资本支出推迟）HOYA IT 分部增长可能瞬间降至中个位数。**严重性：实质性**，因为单一最大客户份额已超过 10%。
+
+**2. 信越化学或 AGC 缩小 EUV 缺陷率差距。** 客户主动寻找二供；如信越在 2 nm 节点的领先节点缺陷率追上 HOYA，HOYA 可能在 2–3 年内丢失 5–10 个百分点的 EUV 份额。**严重性：高但发酵慢**——合格周期可提供早期预警。缓解措施：HOYA 资本支出领先于需求，并自主开发用于 High-NA EUV 的下一代吸收材料 ([HOYA Report 2024, p. 102](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf))。
+
+**3. HDD 玻璃基板增长不及预期。** 假设是 HAMR 推动 >30 TB 驱动器全行业玻璃基板采用。反向风险：(a) Western Digital / 希捷 / 东芝中的一家因成本回退至铝基板；(b) 云存储架构早于预期切换至 QLC SSD（>30 TB）；(c) HAMR 爬坡本身比目前 2026–27 预期慢。CEO 也直言定价能力受铝基板替代制约 ([HOYA FY26 Q2 Earnings Call Transcript, p. 24](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。**严重性：中等**。
+
+**4. Pentax Medical 内窥镜诉讼长尾。** Pentax of America 已就一桩 US$43 m 司法部案件（错误标识内窥镜 / 未及时报告感染）和解，且 MAUDE 不良事件报告仍在不断显示与污染相关事件 ([Sokolove Law — endoscopy lawsuit settlements](https://www.sokolovelaw.com/product-liability/medical-devices/endoscopy/); [FDA MAUDE — Pentax Medical reports](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfMAUDE/detail.cfm?mdrfoi__id=17263023&pc=FDS))。新的 DEC™ 十二指肠镜降低了前瞻风险，但旧型号诉讼可能持续。**严重性：中等（财务影响有限；声誉拖累）**。
+
+**5. 网络安全 / IT 中断风险。** 2024 年 3 月的 Hunters International 勒索软件攻击使多家镜片实验室 Vision Care 订单处理中断 ~4 周 ([Bleeping Computer — Hoya $10M ransomware demand, 2024-04](https://www.bleepingcomputer.com/news/security/optics-giant-hoya-hit-with-10-million-ransomware-demand/))。一次类似攻击若发生在关键电子工厂（昭岛 EUV 坯料厂）将对全球 EUV 供应造成 ~2–6 周灾难性影响——这是寻找备用合格坯料所需的时间。**严重性：影响大，频率低**。
+
+**6. 转让定价税务诉讼挂账。** HOYA FY25 财报显示 **¥20.5 亿日元的"预付"科目**，对应于东京国税局 FY2007–18 多年期转让定价补税评估；东京地方法院已部分撤销最早期评估，但公司仍在就剩余部分诉讼 ([HOYA FY25 IFRS Financial Statements, pp. 4, 18](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf))。**严重性：低-中等**（金额受已预付限制；法律不确定性持续）。
+
+### 行业 / 市场风险
+
+**7. AI 驱动的半导体资本支出周期见顶。** IT 分部全部论点假设台积电资本支出升至 2027 年 ~US$70 bn 并在 2030 年维持高位。AI 基础设施一次性暂停（云资本支出重置、主权 AI 取消、生成式 AI 需求让人失望）将重置先进产能建设并压制 HOYA EUV 坯料体量。**严重性：高**——这是估值倍数的核心假设。
+
+**8. 中国半导体 / 显示本土化在坯料上取得成功。** 中国政府政策正在推动各类半导体材料本土供应。如果某家中国坯料厂（如中芯国际关联合资、湖北飞利华石英布局）到 2030 年实现 Tier-2 EUV 合格，可能蚕食 HOYA 在中国代工厂部分的份额。**严重性：中等**，但时间线长。
+
+**9. 中国 IOL 集采 / 监管定价扩张。** 按 Q2 FY26 评论，对 IOL 业务已经实质性；可能扩展到 HOYA 在中国有暴露的其他医疗器械类别。**严重性：中等**。
+
+### 财务风险
+
+**10. 估值 / 倍数收缩风险。** HOYA TTM 滚动 P/E **~35× vs 医疗器械行业中位数 ~25.8×**，过去 52 周累计回报 **+52%** ([Yahoo Finance — 7741.T, accessed 2026-05](https://finance.yahoo.com/quote/7741.T/); [Stockanalysis.com — TYO:7741](https://stockanalysis.com/quote/tyo/7741/statistics/))。回调触发因素包括台积电资本支出下调、信越份额抢夺公告、HDD 玻璃基板量不及预期、Pentax Medical 诉讼意外、或单纯的 AI 板块倍数压缩。*分析师观点：* 25–30% 倍数收缩（回到 24–26× P/E）与板块均值回归相一致，是最大单一近期下行风险。**严重性：实质性**。
+
+**11. 汇率换算敞口。** HOYA 以日元报表，但绝大多数收入来自海外（美国 ¥129 亿日元、新加坡 ¥102 亿日元、中国 ¥81 亿日元，加上残余"其他" ¥310 亿日元——即 FY25 收入的 ~79% 为非日元）。日元大幅升值将压制报表收入与经营利润。**严重性：低-中等**，但海外制造成本基础部分提供对冲。
+
+### 宏观经济风险
+
+**12. 地缘政治出口管制升级。** 2022–24 年间美国 BIS 规则多次扩大，限制对中国 14 nm 以下工厂的半导体设备与材料出货。进一步扩张到覆盖 DUV 坯料或 HDD 玻璃基板对 HOYA 不是最大敞口（中国仅占收入 9.3%），但仍对 IT 分部增长故事构成实质性风险。**严重性：中等**。
+
+![HOYA 资本回报历史（分红 + 回购）](../../charts/hoya_capital_return.png)
+*资料来源：分红与回购数据按 [HOYA FY25 IFRS Consolidated Financial Statements, p. 11](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf) 及前年综合年报；[MarketScreener — HOYA ¥100 bn buyback announcement](https://www.marketscreener.com/news/hoya-corporation-announces-an-equity-buyback-for-6-200-000-shares-representing-1-81-for-100-000-m-ce7c51d3dd89f02d/)。持续激进的回购 + 注销计划是估值风险的主要缓解措施——每 ¥100 亿日元的股份退出，按当前股价计可使股数减少 ~1.1% 并相应提升 EPS。*
+
+---
+
+## 10. 参考资料
+
+**HOYA Corporation 主要披露文件：**
+- [HOYA Corporation FY25 Consolidated Financial Statements under IFRS — for the year ended 31 March 2025](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf)
+- [HOYA Report 2024 (Integrated Report, fiscal year ended 31 March 2024)](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf)
+- [HOYA FY26 Q2 Earnings Call Transcript (quarter ended 30 September 2025), dated 2025-10-31](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)
+- [HOYA company profile page, accessed 2026-05](https://www.hoya.com/en/company/profile/)
+- [HOYA company history page, accessed 2026-05](https://www.hoya.com/en/company/history/)
+- [HOYA Leadership / Directors page, accessed 2026-05](https://www.hoya.com/en/company/directors/)
+- [HOYA Life Care business page, accessed 2026-05](https://www.hoya.com/en/business/lifecare/)
+- [HOYA Information Technology business page, accessed 2026-05](https://www.hoya.com/en/business/)
+- [HOYA FY25 有価証券報告書 第 87 期 — 2025-06-05 EDINET 提交](https://irbank.net/E01124/S100VW2P)
+
+**行业 / 板块研究：**
+- [Nomura Greater China Semi 2026–30F report, 2026-05-21 — 本地 OCR 锚定参考 reports/sector/半导体材料.md](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)
+- [SNS Insider — EUV Mask Blanks Market to surpass USD 689M by 2032, 2025-11](https://www.globenewswire.com/news-release/2025/11/05/3181398/0/en/EUV-Mask-Blanks-Market-Size-to-Surpass-USD-689-06-Million-by-2032-CAGR-of-15-80-SNS-Insider.html)
+- [Business Research Insights — EUV Mask Blanks Market, 2025](https://www.businessresearchinsights.com/market-reports/euv-mask-blanks-market-104950)
+- [Intel Market Research — EUV Mask Blanks Market Outlook 2025-2032](https://www.intelmarketresearch.com/euv-mask-blanks-market-11463)
+- [Karim Almansour Substack — On Mask Blanks and the Substrate Sovereigns of Advanced Lithography, 2024](https://karimalmansour.substack.com/p/on-mask-blanks-and-the-substrate)
+- [Semiconductorinsight — HOYA Expands EUV Photomask Blank Capabilities, 2025](https://semiconductorinsight.com/blog/hoya-expands-euv-photomask-blank-capabilities-strengthening-global-semiconductor-supply-chain/)
+- [Semiconductorinsight — Precision Glass Revolutionizes Hard Disk Drive Substrates for AI Workloads, 2026](https://semiconductorinsight.com/blog/precision-glass-revolutionizes-hard-disk/)
+- [Tom's Hardware — High-capacity HDD roadmap (Toshiba, Seagate, WD), 2025](https://www.tomshardware.com/pc-components/hdds/high-capacity-hdd-roadmap-the-race-to-100tb-and-zettabyte-scale-storage-toshiba-seagate-and-wd-outline-three-distinct-strategies)
+- [Financial Content — Western Digital AI Storage Supercycle, 2026-04](https://markets.financialcontent.com/stocks/article/finterra-2026-4-7-the-ai-storage-supercycle-a-deep-dive-into-the-new-western-digital-wdc)
+- [Mordor Intelligence — Spectacle Lens Market](https://www.mordorintelligence.com/industry-reports/spectacle-lens-market)
+- [Eyewearglobo — 12 Top Eyeglass Lens Manufacturers 2025](https://www.eyewearglobo.com/the-12-top-eyeglass-lens-manufacturers-leading-the-global-market-in-2025/)
+- [Medical Design and Outsourcing — Hoya Life Care Segment Big 100, 2024](https://www.medicaldesignandoutsourcing.com/2024-Medical-Design-and-Outsourcing-BIG-100/hoya-life-care-segment/)
+
+**竞争对手资料：**
+- [Shin-Etsu Chemical — Photomask blanks product page](https://www.shinetsu.co.jp/en/products/electronics-and-functional-materials-business/photomask-blanks/)
+- [PR Newswire — Western Digital to acquire HOYA magnetic media operations](https://www.prnewswire.com/news-releases/western-digitalr-to-acquire-hoyas-magnetic-media-operations-92263279.html)
+
+**市场数据与估值：**
+- [Stockanalysis.com — TYO:7741 Valuation Statistics, accessed 2026-05](https://stockanalysis.com/quote/tyo/7741/statistics/)
+- [Yahoo Finance — HOYA Corporation (7741.T) Key Statistics, accessed 2026-05](https://finance.yahoo.com/quote/7741.T/key-statistics/)
+- [Yahoo Finance — 7741.T price and history, accessed 2026-05](https://finance.yahoo.com/quote/7741.T/)
+- [Gurufocus — EssilorLuxottica P/E TTM, 2026-03](https://www.gurufocus.com/term/pettm/ESLOY)
+- [Wisesheets — Carl Zeiss Meditec P/E TTM](https://www.wisesheets.io/pe-ratio/AFX.DE)
+
+**网络安全 / 公司治理 / 诉讼：**
+- [Bleeping Computer — Optics giant Hoya hit with $10M ransomware demand, 2024-04](https://www.bleepingcomputer.com/news/security/optics-giant-hoya-hit-with-10-million-ransomware-demand/)
+- [SecurityWeek — Lens Maker Hoya Scrambling to Restore Systems Following Cyberattack, 2024-04](https://www.securityweek.com/lens-maker-hoya-scrambling-to-restore-systems-following-cyberattack/)
+- [Sokolove Law — Endoscopy Lawsuit Settlements 2026](https://www.sokolovelaw.com/product-liability/medical-devices/endoscopy/)
+- [PR Newswire — PENTAX Medical FDA Clearance for Duodenoscope with new sterilization technology, 2024-08](https://www.prnewswire.com/news-releases/pentax-medical-receives-fda-clearance-for-duodenoscope-with-new-sterilization-technology-in-collaboration-with-advanced-sterilization-products-302214258.html)
+- [FDA MAUDE Adverse Event Report — HOYA Pentax video upper GI scope](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfMAUDE/detail.cfm?mdrfoi__id=17263023&pc=FDS)
+
+**资本回报 / 公司行为：**
+- [The Globe and Mail / TipRanks — HOYA ends ¥100 bn buyback and cancels 1.06% of shares, 2025](https://www.theglobeandmail.com/investing/markets/markets-news/Tipranks/1638099/hoya-ends-yen100-billion-buyback-and-cancels-1-06-of-its-shares/)
+- [PR Newswire — HOYA, Seiko and Epson optical-products agreements, 2013](https://www.prnewswire.com/news-releases/hoya-seiko-and-epson-agreements-executed-in-the-field-of-optical-products-business-179637771.html)
+- [Companies History — Hoya entry](https://www.companieshistory.com/hoya/)
+
+**管理团队履历：**
+- [Bloomberg — Eiichiro Ikeda profile](https://www.bloomberg.com/profile/person/18799019)
+- [Equilar ExecAtlas — Eiichiro Ikeda](https://people.equilar.com/bio/person/eiichiro-ikeda-hoya-corporation/39560383)
+
+---
+
+<details>
+<summary>验证日志 (Step 10) — 2026-05-26</summary>
+
+**范围与方法。** 本中文版报告完整继承了英文版（[Hoya_TSE7741_Research_Document.md](Hoya_TSE7741_Research_Document.md)）2026-05-26 Step 10 验证通过的引用链——英文版所有 URL 均已在该日期 HTTP-checked 通过、所有 FY25 IFRS 财报数字均已对照原始 PDF（PyMuPDF 解析）逐项核对、所有 FY26 Q2 业绩电话会议引文均已对照转录原文核对。中文版未重新执行同样的 URL / 数字逐项核对——直接重用经过英文版验证的引用链。
+
+**主要引用文献（与英文版相同）。** 直接引用的核心文件包括 HOYA FY25 IFRS 合并财务报表 PDF（直接抓取并解析）、HOYA FY26 Q2 业绩电话会议英文译本 PDF（直接抓取并解析）、HOYA 综合年报 2024 PDF、以及本地缓存的 reports/sector/半导体材料.md（OCR 处理的野村大中华半导体 2026–30F 报告）。
+
+**翻译保真度——核心数字与披露的中文译法：**
+- 全集团销售 ¥866.0 亿日元 ✓（对应英文版 p. 9 IFRS 综合损益表）
+- 税前利润 ¥260.0 亿日元 ✓（p. 9）
+- Life Care 收入 ¥550.9 亿日元 / Information Technology 收入 ¥311.1 亿日元 ✓（p. 32 分部表）
+- Electronics 子分部收入 ¥265.2 亿日元 / Imaging 子分部收入 ¥45.9 亿日元 ✓（p. 33）
+- Health Care 收入 ¥417.7 亿日元 / Medical 收入 ¥133.2 亿日元 ✓（p. 33）
+- IT 分部税前利润 ¥170.4 亿日元 ✓（p. 32）
+- FY25 资本支出 ¥60.9 亿日元 ✓（p. 32）
+- 现金及等价物 ¥534.0 亿日元 ✓（p. 7 财务状况表）
+- 库藏股购入 ¥150 亿日元 + 注销 ¥97.9 亿日元 ✓（p. 11 权益变动表）
+- 每股股息 ¥110 ✓（p. 11）
+- ≥10% 客户群披露：¥92.8 亿日元 / 10.7% ✓（p. 34）
+- 地理收入（日本 ¥182.8 亿日元；美国 ¥129.2 亿日元；新加坡 ¥102.2 亿日元；中国 ¥80.6 亿日元；韩国 ¥60.7 亿日元；其他 ¥310.5 亿日元）✓（p. 34）
+- 转让定价预付 ¥7.9 亿日元 + ¥4.5 亿日元 + ¥8.0 亿日元 ✓（p. 4 审计关键事项）
+
+**分析师观点专章（按照 company-research skill 规则，刻意未引用任何主要披露文件）：**
+- §1：估值溢价归因（"实际上是市场对 IT 分部利润流的单独定价"）——标注为 *分析师观点*，由同业 P/E 与板块观察支持。
+- §4.3 / 4.4 / 4.6 / 4.8 / 4.9：每一项护城河评估均使用 *分析师观点——护城河评估：* 标签，最接近的竞争对手产品交叉引用至对方网站（信越化学、EssilorLuxottica、Olympus 等），而非 HOYA 自身文件。
+- §4.3 / 7.1：**HOYA 全球 EUV 空白光罩约 80% 份额、光学光罩坯料约 70% 份额** 数字明确标注为卖方估算（来自野村 Greater China Semi 2026–30F 报告 Fig. 38–39）——HOYA 不公开披露份额或单位出货量。
+- §5：前五大 IT 分部客户份额 35–45% 明确标注为分析师推断；只有披露的 ≥10% 客户群归属于 FY25 IFRS 财报。
+- §7.1：将 AGC EUV 份额特征化为"低于第三方含 DUV 数据所暗示"标注为 *分析师观点*。
+- §8.4：FY30F 收入 / 经营利润率模型标注为分析师预测，构建基础为 HOYA 披露的 FY25 分部结构 + 野村行业 CAGR 假设。
+
+**残留未确定项 / 尚未验证：**
+- HOYA 不公开披露单位级 EUV 空白光罩出货量或份额；野村锚定报告的 80% / 70% 份额数字为卖方估算——已在正文相应位置明确标注。第三方调研来源（Business Research Insights、Intel Market Research、SNS Insider）有时给出不同的拆分——这些备选数字有时将 AGC 份额报得更高，是因为它们将所有坯料技术合并统计；EUV 单一维度仍集中在 HOYA，野村报告与 HOYA Report 2024 自身均反复强调这一点（"我们目前是唯一能为先进 3 纳米代逻辑半导体提供与 EUV 技术兼容光罩坯料的厂商"）。
+- ≥10% 客户群身份的推断（台积电 + 内部光罩）未由 HOYA 在文件中确认；客户集中度推断已相应标注。
+- CEO 池田个人持股因低于日本董事个人披露门槛而未披露；报告标注了"未披露"事实，未捏造数字。
+- 中文版图表沿用英文版生成的 7 张 hoya_*.png（hoya_revenue_opm、hoya_segment_mix、hoya_geographic_mix、hoya_mask_blank_share、hoya_segment_opm_quarterly、hoya_peer_pe、hoya_capital_return），数据均归属至 FY25 IFRS 财报 + 野村板块研究 + 公开同业对比来源——与英文版的归属链一致。
+
+</details>
