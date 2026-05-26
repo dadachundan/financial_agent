@@ -291,4 +291,54 @@ pie title 三井铜箔 —— 基板客户份额估算（按 ABF 市场结构推
 
 **行业 2 结构。** 全球非铁冶炼行业碎片化，地区性主导明显 —— 西方主要玩家有 Glencore（瑞士）、Korea Zinc、Boliden（瑞典）、Nyrstar（Trafigura）、Teck Resources（加拿大），中国冶炼厂（中国五矿、铜陵有色、云南铜业）与日本同行（三井金属矿业、Mitsubishi Materials、Sumitomo Metal Mining、DOWA Holdings、Toho Zinc）占据各自区域。冶炼 / 精炼加工费 (TC/RC) —— 将精矿转化为精炼金属的单位价格 —— 2024–2025 年因中国冶炼厂产能过剩压至历史低位，全球同业利润均受拖累。三井金属矿业 FY2026 锌 TC 假设为 **USD 80/t**，约为 FY2024 USD 165/t 的一半 —— 是 FY2026 营业利润指引的直接逆风 ([FY2025 Results presentation, p.16 — Metals sensitivity table](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))。
 
+## 7. 竞争格局
+
+竞争格局与上一节两个行业池对应 —— 三井金属矿业在第一个池中的定位显著强于第二个。
+
+**铜箔 / 工程材料对手。** 在高端档（HVLP3+ / MicroThin 等价 / FC-BGA 基板铜箔）品类中最直接的 5 家对手如下：
+
+| 对手 | 上市信息 | 与三井的核心重叠 | 估算的竞争地位 |
+|---|---|---|---|
+| **JX Advanced Metals** | TSE:5016（IPO 2025-03） | HVLP 铜箔（JX-EFL）；溅射靶；PVD；稀有金属 —— 直接重叠 | HVLP 日本 #2；半导体溅射靶全球 #1 |
+| **Furukawa Electric** | TSE:5801 | LIB 铜箔；标准 ED-Cu 箔；部分 HVLP | PCB 铜箔综合 #2；HVLP 中档可加工 |
+| **Nippon Denkai** | TSE:5871 | ED-Cu 箔纯标的（LIB 和 PCB） | 中档；LIB 铜箔价格战受伤者 |
+| **Iljin Materials / Lotte Energy Materials** | KOSDAQ:020150 | LIB 铜箔 + 部分 PCB 铜箔 | 韩国 LIB 铜箔 #1；PCB 铜箔中档 |
+| **SK Nexilis / KCFT** | 未上市（SK 集团） | LIB 铜箔 + HVLP / 封装铜箔 | 韩国 #2；HVLP capex 激进 |
+| **Wason / Jiujiang Defu / Nuode** | 多家中国 A 股 | 标准 + 新兴 HVLP | 中国新进者；当前 HVLP3 以下档次，但追赶迅速 |
+
+*来源：[JX Advanced Metals electronic materials product page](https://www.jx-nmm.com/english/); [Furukawa Electric Annual Report 2024](https://www.furukawaelectric.com/en/ir/library/annual/); [Nippon Denkai IR](https://www.morningstar.com/stocks/xtks/5871/quote); [Lotte Energy Materials IR](https://www.lotteenergymaterials.com/en/); [Market Research Future Copper Foil Market 2035](https://www.marketresearchfuture.com/reports/copper-foil-market-7381); [Verified Market Research — Top 8 Copper Foil Manufacturers](https://www.verifiedmarketresearch.com/blog/best-copper-foil-companies/)。*
+
+*分析师观点：* 在 **MicroThin（含载体铜箔）** 品类中 —— 三井金属矿业 **结构性独霸** 于 ~95% 份额；竞争对手产品在规模和工艺成熟度方面均无能比拟。这是整个日本电子材料组合中最具防御性的单一产品定位，是合并实体能够重估的根源。在 **HVLP3+ VSP™** 品类中，三井 ~40% 份额面对 JX Advanced Metals（最直接的技术对手）、Furukawa Electric（PCB 铜箔综合 #2，中档 HVLP 能做）以及韩系（Lotte Energy Materials、SK Nexilis —— 两家 HVLP capex 项目都很激进）的实质性挑战。2026–2028 年的份额转移风险来自韩系 / 中国系在 HVLP3 / HVLP4 档的扩张，而三井防守 HVLP5+；2028–2030 年的风险则是中国新进入者在 HVLP3+ 实现规模化认证、引发价格战。**催化剂** 对手为 **Johnson Matthey ([Johnson Matthey Clean Air Catalysts](https://matthey.com/en/products-and-markets/other-markets/clean-air-solutions))、BASF ([BASF Mobile Emissions Catalysts](https://basf-catalystsmetals.com/industries/automotive-transportation/mobile-emissions-control-catalysts/mobile-emissions-motorcycle-and-general-engine-catalysts))、Umicore ([Umicore Catalysis](https://eom.umicore.com/en/businesses/automotive-catalysts/))** —— 西方三巨头 —— 加上日本 **N.E. Chemcat** 和 **Cataler**；三井在摩托车催化剂和 tier-2 日本汽车催化剂位置强势，但在更大的乘用车汽车催化剂市场则非。**溅射靶 / PVD** 对手为 JX Advanced Metals（全球 #1）、Tosoh Corporation、Materion (NYSE:MTRN)、Heraeus、Honeywell、ULVAC、Praxair S.T. Technology —— 三井在此为细分玩家而非前三争夺者。**电池材料（储氢合金、EMD、氧化铈）** 对手为 Toda Industries、Nippon Yttrium、Treibacher Industrie、AMG Advanced Metallurgical 及中国稀土处理商。
+
+**金属板块对手。** 三井金属矿业在国内分别与 **Mitsubishi Materials (TSE:5711)** 在铜与高级材料、**Sumitomo Metal Mining (TSE:5713)** 在镍-钴-铜-金与电池正极材料、**DOWA Holdings (TSE:5714)** 在锌-铅-贵金属与高级材料、**Toho Zinc (TSE:5707)** 在锌业务上正面竞争。全球对照组包括 Glencore（瑞士）、Korea Zinc、Boliden（瑞典）、Hindustan Zinc（印度）和中国国有冶炼厂。三井金属矿业强调的差异化定位 —— 七厂回收网络、再生原料高占比、复杂 E-scrap 处理能力 —— 在日本同行中确实属于具备防御性的差异化定位，但"擅长回收"的绝对经济价值取决于公司无法控制的金属价格和 TC/RC 水平。
+
+**竞争优势总结。** 三井金属矿业的可防御护城河有：(1) MicroThin™ 准垄断（工艺 IP + 客户锁定 + 规模）；(2) HVLP 档 VSP™ 的市场份额领先地位 + 公告 capex 超过需求增长；(3) 七厂日本回收网络（监管 + 取证 + 客户关系护城河，现代日本几乎无法复制）；(4) 与下游日本 OEM（汽车、电子、电池、钢铁）数十年的三井 keiretsu 系列关系；(5) PGM 回收 + 汽车催化剂整合闭环 —— 纯粹催化剂对手都无法匹配的垂直整合成本结构；(6) 财务位置稳健（净 D/E 0.14×、自有资本比率 59.1%），允许在周期中激进 capex。
+
+**竞争脆弱性。** (1) 铜箔事业部内基板厂客户层面的集中度 —— 5 家客户控制 75% 的终端市场；(2) 金属板块的周期敞口掩盖了底层盈利能力；(3) 在独立铜溅射靶市场对比 JX Advanced Metals 的存在感有限；(4) 汽车催化剂业务的 BEV 替代长周期逆风；(5) 中国 ED 铜箔新进入者在 HVLP3+ 档的能力提升快于预期；(6) VSP™ 840 → 1,200 吨/月扩产的执行风险 —— 若需求在新产能到位前先降温，三井将承担更高的固定成本。
+
+![三井金属矿业 TTM 市盈率 vs 日本非铁与电子材料同业](../../charts/mitsuikinzoku_peer_pe.png)
+
+*来源：三井金属矿业 P/E 来自 [Google Finance 5706:TYO](https://www.google.com/finance/beta/quote/5706:TYO)；同业 P/E 取自上文链接的最新业绩发布（[JX Advanced Metals IR](https://www.jx-nmm.com/english/ir/), [Tosoh Corporation IR](https://www.tosoh.com/our-company/ir), [Resonac Holdings IR](https://www.resonac.com/ir/), [Furukawa Electric IR](https://www.furukawaelectric.com/en/ir/), [Mitsubishi Materials IR](https://www.mmc.co.jp/corporate/en/ir/), [Sumitomo Metal Mining IR](https://www.smm.co.jp/en/ir/), [DOWA Holdings IR](https://www.dowa.co.jp/en/ir/)）。三井金属矿业相对日本非铁同业中位数（~13×）溢价交易，但低于 AI 材料纯标的 Resonac（~42×）；这一差距正反映市场对工程材料重估的进度。*
+
+## 8. 市场机会 (TAM)
+
+三个 TAM 桶按最新独立估算分别测算，并明确标注分析师整合处。
+
+**TAM 1 —— 高端（HVLP3+ + MicroThin 等价）铜箔（AI 周期电子材料）。** 全球 HVLP3+ 铜箔需求预计 2030 年超过 **~2,400 吨/月**（综合 Dataintelo 与野村板块综述）([Dataintelo HVLP Copper Foil Market Research Report 2034](https://dataintelo.com/report/global-hvlp-hyper-very-low-profile-copper-foil-market); [Nomura "Greater China Semi 2026~30F" sector overview at reports/sector/半导体材料.md](../../sector/半导体材料.md))。假设 HVLP4-5 平均 ASP ~USD 80/kg、HVLP3 与 HVLP5 之间 90% 混合档次，意味着 **2030 年 HVLP3+ TAM 约 USD 20–23 亿元**（2,400 t × 12 × USD 70–80 k/t）。再加上 MicroThin™ 半导体封装基板铜箔市场（三井 ~95% 份额产品）的 **USD 7–9 亿元 2030 年 TAM**（按 FY2025 ¥135 亿铜箔营收中约一半为 MicroThin、15%+ CAGR 推算），合计高端铜箔 TAM 至 2030 年达 **USD 27–32 亿元**。三井金属矿业在 2030 年公告的 1,200 吨/月 VSP™ + ~3,000 吨/月 MicroThin 运转水平意味着公司可能拿到整合后高端 TAM 的 **50%+ 份额** —— 实现 USD 15–20 亿元（~¥230–300 亿元）的 2030 年铜箔事业部营收，约为 FY2025 ¥135 亿元基础的 2 倍。
+
+**TAM 2 —— ABF FC-BGA 封装基板终端市场。** ABF 基板 TAM 2025 年约 **USD 52.6 亿元**，按 Market Growth Reports / Verified Market Research 预测以 5.6–9.9% CAGR 至 2030–2035 年达 **USD 90–102 亿元** ([Market Growth Reports ABF Substrate (FC-BGA) Market 2035](https://www.marketgrowthreports.com/market-reports/abf-substrate-fc-bga-market-107527); [Verified Market Research ABF Substrate](https://www.verifiedmarketresearch.com/product/abf-substrate-fc-bga-market/))。其中服务器 / HPC 子 TAM 2025 年 **~USD 3.12 亿元**，按 7.71% CAGR 至 2032 年 USD 5.25 亿元 ([360iResearch — ABF Substrates for Server & HPC Market](https://www.360iresearch.com/library/intelligence/abf-substrates-for-server-hpc))。三井金属矿业是这一 TAM 几乎每一美元的关键投入供应商（凭借 MicroThin 准垄断地位）—— 公司实际 TAM 内的营收捕获是基板 BOM 中铜箔的部分，约为基板营收的 8–15%。
+
+**TAM 3 —— 全球 PCB 铜箔合计。** 完整的全球 PCB 铜箔市场 —— 含标准 Cu 箔、LIB 电池铜箔、高端 PCB 铜箔 —— 2024 年 **USD 80 亿元**，预测 2035 年达 **USD 186 亿元**，CAGR 7.9% ([Market Research Future Copper Foil Market 2035](https://www.marketresearchfuture.com/reports/copper-foil-market-7381))。三井金属矿业主要切入高端 PCB 铜箔档次（TAM 1），不参与 LIB 电池铜箔（由 Lotte Energy Materials / SK Nexilis / Wason / Doosan 主导）。
+
+**SAM 与 SOM 分析。** 三井金属矿业在高端 PCB 铜箔 + ABF 铜箔投入领域的 **可服务可用市场 (SAM)** 2030 年约 **USD 27–32 亿元**（按 TAM 1 估算）。**可服务可得市场 (SOM)** —— 三井实际可拿份额 —— 2030 年约 **USD 15–20 亿元**，前提是 1,200 吨/月 VSP 产能全部投产 + MicroThin 维持 95% 份额、+15% 量年复合。渗透轨迹 **已经在执行良好** —— 铜箔事业部 FY2025 营收同比 +45% 至 ¥135 亿元（USD 9 亿元）—— 公司 capex 计划（FY2025 ¥56 亿元 → FY2026E ¥45 亿元，偏向工程材料）与铜箔营收 5 年翻倍（从 ¥135 亿至 FY2030 ~¥270 亿）的路径一致。
+
+**催化剂 TAM。** 全球汽车催化剂市场 2025 年规模约 **USD 220 亿元**，至 2035 年因 BEV 替代以约 1–2% CAGR 衰退。三井金属矿业的摩托车催化剂子 SOM（~USD 15–20 亿元）更具防御性 —— 全球摩托车销量稳定到温和增长，排放法规收紧持续推升每车催化剂含量。公司 USD 10 亿元+ 催化剂营收基础因此在低增长、利润率稳定的稳态阶段，而非增长轨道。
+
+**金属板块 TAM。** 全球锌冶炼 + 铅冶炼 + 铜冶炼 + PGM 回收的 TAM 数百亿美元，但三井金属矿业定位为 **份额保护者而非份额扩张者**。公司 FY2030 金属板块 ¥20 亿元利润目标（实际 P&L 基础、常态化）与"在稳定终端市场中保持稳定份额"的轨迹一致。
+
+![三井金属矿业 FY2025 板块结构 —— 营收 vs 营业利润](../../charts/mitsuikinzoku_segment_mix.png)
+
+*来源：[Mitsui Kinzoku FY2025 Results & FY2026 Forecast presentation, pp.8–10 — Segment Information by Business Unit](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027)。金属板块仍是合并营收主力（毛基约 42%）但工程材料板块在营业利润口径已接近持平 —— 这是 2025–2027 计划期内加速的结构性转移。*
+
+
 
