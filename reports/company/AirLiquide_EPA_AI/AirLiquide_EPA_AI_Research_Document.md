@@ -39,6 +39,10 @@ Geographic mix in FY2024 was **Americas 40.0% / EMEA 39.5% / Asia-Pacific 20.5%*
 
 *Source: [Air Liquide URD 2024, p. 7 — "Key Elements by Business Line"](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf). Percentages re-based to Gas & Services total (€25,808m) rather than Group total (€27,058m).*
 
+![Air Liquide URD 2024 — Key Elements by Business Line — primary-source page anchor for the segment-mix breakdown](../../charts/airliquide_keyfigures_p9_urd2024.png)
+
+*Source: [Air Liquide URD 2024, p. 7 — "Key Figures — Key Elements by Business Line"](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf). Primary-source rendering of the FY2024 segment-revenue and revenue-share-of-Group data: Large Industries 26% / €7,120m, Industrial Merchant 44% / €11,966m, Healthcare 16% / €4,274m, Electronics 9% / €2,510m, Engineering & Construction 2% / €412m, Global Markets & Technologies 3% / €836m. Percentage labels on the URD page are share of Group revenue, not of Gas & Services.*
+
 ![Gas & Services revenue mix by region, FY2024](../../charts/airliquide_geo_mix.png)
 
 *Source: [Air Liquide FY2024 PR, p. 2 — Gas & Services revenue by geography](https://www.airliquide.com/group/press-releases-news/2025-02-21/2024-building-record-margin-improvement-and-major-commercial-successes-fueling-future-growth-air). Americas €10.32bn, EMEA €10.18bn, Asia-Pacific €5.28bn.*
@@ -455,5 +459,228 @@ Air Liquide's penetration strategy splits into three legs:
 3. **Lead the H₂ transition with renewable-first technology.** The Normand'Hy 200 MW PEM electrolyser comes online 2026 and is the largest single PEM project in Europe; Air Liquide's >€8bn 2024-2035 H₂ commitment is the most concrete operational positioning in the green-H₂ race.
 
 The **opportunity timeline** is bimodal: Industrial Merchant + Healthcare + traditional Large Industries grow at 4-7% steady-state; **Electronics (AI capex) + renewable H₂ are the two upside legs** that could push Group revenue growth to 6-8% during the 2026-2030 stretch — well above the 1-3% reported FY2024-2025 print which reflected post-Covid mature-segment normalisation.
+
+---
+
+## 9. Risk Assessment
+
+The risk surface for Air Liquide is structurally lower than any specialised industrial-gas or specialty-chemistry peer because of the (i) ~70% take-or-pay or indexed-pricing revenue base, (ii) absence of any individual customer >5% of revenue, (iii) geographic balance, and (iv) defensive Healthcare buffer. That said, the AI-capex-cycle exposure, the H₂ capital-intensity ramp, and the carbon-price arbitrage all create real-world risks that should sit on a portfolio manager's screen. Twelve risks below across the four standard buckets.
+
+### 9.1 Company-specific risks
+
+**(R1) Execution risk on Electronics capex backlog — moderate.** The €1.5bn+ Electronics share of the €4.6bn investment backlog must convert to operating revenue at the historical fab-side ROCE (~13-15% on incremental Electronics deals); delays (permitting, supplier delays, customer fab-start slippage) compress the IRR. The 18-30-month construction-to-revenue lag means execution stumbles are visible 2-3 years late. Mitigant: 30-year operating history with proven on-time delivery on the 2016 Airgas, 2022 Taiwan and 2024 Idaho projects — but the **DIG Airgas integration adds Korean execution risk** (largest M&A since 2016).
+
+**(R2) Customer concentration — low but rising in Electronics specifically.** No customer >5% of consolidated Group revenue; the Electronics business however is concentrating on a smaller set as TSMC + Samsung + SK hynix + Micron + Intel collectively dominate global wafer-start growth. If any one of these top-3 fab customers were to insource its on-site gas supply (technically possible — Samsung historically operated some captive ASUs) or to suffer a fab-construction delay, the Electronics revenue line takes a single-digit-percent hit. Mitigant: contractual take-or-pay (the customer pays even if it doesn't use the gas) plus diversification across all of TSMC, Samsung, SK hynix, Micron, Intel, GlobalFoundries, Chinese fabs and the mature-node long tail (VSMC, NXP, Infineon, etc.).
+
+**(R3) Key-person dependency on François Jackow + Armelle Levieux (Electronics) — low-moderate.** Jackow's tenure (CEO since 2022) has been one of the strongest operational stretches in Group history, with the margin-expansion record directly tied to his ADVANCE 2025 plan. Armelle Levieux (Executive Committee member running Electronics, named in the July-2025 Mo plant PR) is the operational owner of the highest-growth segment. Sudden departure of either would create a 6-12-month strategic-direction pause. Mitigant: Air Liquide's culture is deeply institutionalised (124-year-old company, board with multiple multi-decade tenures), and the management bench is unusually deep — Jackow himself was promoted from an internal slate.
+
+**(R4) Helium supply concentration risk — moderate, episodic.** Global helium production is concentrated in Qatar, Algeria, Russia, the US BLM reserve, and Tanzania. The 2022-2023 Russia-Ukraine war removed Russian helium from Western supply chains and tightened the global market for 18 months; a future supply-chain disruption (Qatar / Algeria political, US BLM closure) would compress Air Liquide's helium-margin contribution. Mitigant: Air Liquide is one of the larger global helium asset-holders (BLM legacy + Algerian / Qatari long-term offtake) and has been a structural beneficiary, not victim, of past helium tightness.
+
+**(R5) DIG Airgas integration risk — moderate.** €2.85bn enterprise value, ~5-6× EV/EBITDA paid, Korean market re-entry after 10-year absence. Integration challenges include retaining DIG Airgas's customer base in a competitive market (Linde, Nippon Sanso, Iwatani all active in Korea), realising the cross-sell of Electronics specialty materials, regulatory approval (closed 2026-01-13 cleared) and currency exposure. Mitigant: Air Liquide has the best M&A integration track record of any IG major (the 2016 Airgas integration is a textbook success), and Korea is a high-growth market where the AI cycle is reinforcing the underlying demand.
+
+### 9.2 Industry / market risks
+
+**(R6) Semiconductor capex correction — moderate impact, low-probability.** Electronics is ~10% of Group revenue but >30% of capex / forward-revenue backlog. A repeat of the 2022-2023 inventory correction (which trimmed Electronics revenue from €2,531m FY22 to €2,459m FY23) would hit FY26-27 numbers. The principal upside hedge: AI infrastructure capex is structurally different from the consumer-electronics cycles that historically drove correction risk — AI capex is funded by hyperscaler cash flow and is much less sensitive to consumer demand than smartphone / PC cycles.
+
+**(R7) Regulatory carbon-pricing volatility — manageable.** Carbon-pricing regimes (EU ETS, US state programs, Korean ETS) create both opportunity (low-carbon H₂ demand) and cost (rising carbon costs on legacy grey-H₂ supply where pass-through is incomplete). The current EU ETS ~€70-100/ton range is roughly neutral; a sharp ramp to €150+ accelerates the low-carbon H₂ transition (positive) but creates near-term cost pressure on Large Industries pass-through.
+
+**(R8) Industrial-gas industry consolidation halts share-gain optionality — low.** With Linde + Air Liquide + Air Products + Nippon Sanso + Messer already at ~78% share, regulatory M&A approval for further consolidation is unlikely. Air Liquide's growth is therefore predominantly organic + bolt-on (DIG Airgas being the largest bolt-on opportunity left in any major IG market). Mitigant: organic growth from the AI cycle is structurally adequate; no major M&A required for the thesis.
+
+**(R9) Renewable-H₂ economics slower than expected — moderate.** The >€8bn 2024-2035 H₂ commitment depends on the cost-curve of renewable electricity falling, electrolyser capex declining, and carbon-pricing rising — three independent variables that have to align for the green-H₂ business case to clear hurdle rates. The 2023-2025 stretch has seen multiple competitor H₂ project delays / cancellations (BP Australia hydrogen exit, Shell Aurora reductions); Air Liquide's Normand'Hy is on track for 2026 commissioning, but the broader pipeline depends on continued European policy support.
+
+### 9.3 Financial risks
+
+**(R10) Capex intensity rising vs FCF generation — moderate.** Industrial capex of €3.85bn in FY2025 + €350m financial investments + a one-time €2.85bn DIG Airgas means the FY2026 net-debt trajectory is rising (€9.2bn 2024 → ~€11-12bn projected post-DIG Airgas closing 2026-01-13, financed in part by the October-2025 €2.15bn multi-tranche bond at competitive rates). Net-debt-to-EBITDA stays well below 2.0× even at the post-DIG levels, but the **dividend coverage starts to depend on Electronics-revenue ramp delivery on schedule**. Mitigant: investment-grade credit ratings unchanged through the DIG Airgas financing; current dividend yield of ~2% leaves plenty of cover under any reasonable EBITDA scenario.
+
+**(R11) Valuation / multiple-compression risk — low-moderate.** At TTM P/E 29.7× (vs peer median 26.8×, vs Linde 34.6×), Air Liquide trades at a 10% premium to peer median justified by the Electronics + H₂ growth optionality. A de-rate to peer median would imply ~10% downside on multiple compression alone; the principal de-rate trigger is a faster-than-expected fade in the ADVANCE 2025 margin-expansion tailwind after FY2026 (when the +200 bps incremental target ends). FY2025 actual margin print (+80 bps) was at the lower end of the +100 bps annualised pace required to hit the +200 bps over 2025-2026.
+
+### 9.4 Macroeconomic risks
+
+**(R12) Cyclical sensitivity — low-moderate, ~30% cyclical / ~70% defensive.** The Industrial Merchant + Large Industries portion (~74% of Gas & Services) has measurable cyclical exposure to global industrial activity (PMI < 50 typically translates to 0-2% volume declines in IM; Large Industries with take-or-pay structure is largely insulated). Electronics has its own (different) semiconductor cycle. Healthcare is fully defensive. Net effect: Air Liquide's revenue typically holds within ±3-5% in even severe global recessions — historical FY2009 revenue declined only -6% despite the Lehman shock.
+
+**(R13) Foreign exchange — material reported-revenue noise, neutral economic.** ~60% of Group revenue is generated outside the eurozone; reported revenue is sensitive to EUR/USD, EUR/CNY, EUR/JPY, EUR/KRW moves. FY2024 reported growth was held back by currency translation (the +5.7% Q1-2025 published vs +1.7% comparable shows the magnitude). Economic exposure is largely hedged through natural currency matching (USD revenue funded by USD capex / USD debt) and partial financial hedging.
+
+**(R14) Geopolitical risk on China + Russia footprint — low-moderate.** Air Liquide retains a Chinese industrial-gas business (~5-7% of Group revenue est.) that faces growing Western export controls (advanced precursors, equipment) and Chinese localisation pressure (Hangzhou Hangyang, Pengkun, etc.). The 2022 Russia exit removed direct exposure but indirect helium-supply effects took 18 months to normalise. Future Taiwan-Strait tensions are the largest tail risk — Air Liquide's >€1bn Taiwan investment since 2019 would be at risk in a worst-case scenario, though this is no different from every other Western company with Taiwan fab exposure.
+
+---
+
+## 10. References
+
+### Primary filings — Air Liquide
+
+- [Air Liquide 2024 Universal Registration Document (URD), English, 484 pages](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf) — primary FY2024 annual report including business model, financial statements, governance, risk factors, ESG. The cited pages for this report: p. 5 (customer base), p. 7 (Key Elements by Business Line), p. 8-9 (Group history), p. 18-19 (Large Industries), p. 22-23 (Industrial Merchant), p. 26-27 (Healthcare), p. 30 (Global Markets & Technologies), p. 33 (Electronics).
+- [Air Liquide 2024 Document d'Enregistrement Universel, French](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-document-enregistrement-universel-2024.pdf) — French-language version of URD 2024 for cross-reference.
+- [Air Liquide URD 2024 release announcement (cover page)](https://www.airliquide.com/sites/airliquide.com/files/2025-03/2024-universal-registration-document-including-the-annual-financial-report-now-available.pdf) — confirms publication date and availability.
+
+### Air Liquide press releases — FY2024 / FY2025 / 2026 results
+
+- [FY2024 full-year results — "Building on record margin improvement…", 2025-02-21](https://www.airliquide.com/group/press-releases-news/2025-02-21/2024-building-record-margin-improvement-and-major-commercial-successes-fueling-future-growth-air) — primary source for €27.06bn revenue, +110 bps margin ex-energy, +460 bps cumulative, ROCE 10.7%, capex €4.4bn, €3.30 dividend.
+- [FY2024 PR full English PDF](https://www.airliquide.com/sites/airliquide.com/files/2025-02/air-liquide-pr-fy-2024-building-on-record-margin-improvement-and-major-commercial-successes-fueling-future-growth-air-liquide-is-once-again-raising-its-margin-ambition.pdf) — detailed activity report.
+- [Q1 2025 revenue — "Building on its resilience…", 2025-04-24](https://www.airliquide.com/group/press-releases-news/2025-04-24/building-its-resilience-air-liquide-staying-course-first-quarter-2025) — Q1 revenue €7,028m, Electronics +3.6% with Carrier Gas +10%.
+- [Q1 2025 Revenue IR page](https://www.airliquide.com/investors/first-quarter-2025-revenue)
+- [H1 2025 results — "Leveraging performance and growth engines…", 2025-07-29](https://www.airliquide.com/group/press-releases-news/2025-07-29/leveraging-performance-and-growth-engines-air-liquide-remains-track-1st-half-2025) — H1 €13.72bn, +100 bps margin, €4.6bn investment backlog one-third Electronics.
+- [Q3 2025 / 9M results — "Q3 2025: combine sales growth with commercial successes", 2025-10-28](https://www.airliquide.com/group/press-releases-news/2025-10-28/q3-2025-air-liquide-continues-combine-sales-growth-commercial-successes-shape-future) — Q3 revenue €6.6bn, 9M2025 cash flow €1.69bn, DIG Airgas / Germany €250m / ELYgator announcements.
+- [FY2025 full-year results — "With a record performance and confident in its transformation dynamic…", 2026-02-20](https://www.airliquide.com/group/press-releases-news/2026-02-20/2025-record-performance-and-confident-its-transformation-dynamic-air-liquide-confirms-its-growth) — primary source for FY2025 revenue €26,940m, OIR margin 20.7%, recurring net profit €3,772m, ROCE 11.2%, €3.65 dividend.
+
+### Air Liquide press releases — Electronics / Semiconductor wins
+
+- [TSMC Arizona on-site agreement, 2022-01-25 — H₂/He/CO₂, ~$60m, second-half 2022 start](https://www.airliquide.com/group/press-releases-news/2022-01-25/air-liquide-announces-long-term-agreement-supply-semiconductor-manufacturing-site-arizona)
+- [Taiwan €500m three plants (ALFE JV with Far Eastern Group), 2022-10-19](https://www.airliquide.com/group/press-releases-news/2022-10-19/air-liquide-invest-500-million-euros-three-new-plants-semiconductor-sector-taiwan)
+- [Asia Advanced Materials centres expansion (Korea + Taiwan, ~$200m), 2023-07-21](https://www.airliquide.com/group/press-releases-news/2023-07-21/air-liquide-strengthens-its-advanced-materials-leadership-new-advanced-materials-centers-across-asia)
+- [Idaho $250m+ plant for Micron Technology, 2024-06-05](https://www.airliquide.com/group/press-releases-news/2024-06-05/air-liquide-signed-major-contract-support-semiconductor-industry-us-investment-more-250-million)
+- [Hwaseong South Korea Mo precursor plant — world's largest, 2025-07-21](https://www.airliquide.com/group/press-releases-news/2025-07-21/air-liquide-strengthens-its-advanced-materials-leadership-new-molybdenum-manufacturing-plant-south)
+- [DIG Airgas signing — €2.85bn, 2025-08-22](https://www.airliquide.com/group/press-releases-news/2025-08-22/air-liquide-announces-signature-agreement-acquire-dig-airgas-leading-integrated-gas-player-south)
+- [DIG Airgas bond financing — €2.15bn multi-tranche, 2025-10-29](https://www.airliquide.com/group/press-releases-news/2025-10-29/air-liquide-has-successfully-issued-215-billion-euros-multi-tranche-bond-finance-dig-airgas)
+- [DIG Airgas closing — Air Liquide #1 in Korea, 2026-01-13](https://www.airliquide.com/group/press-releases-news/2026-01-13/closing-dig-airgas-acquisition-air-liquide-becomes-industrial-gas-leader-dynamic-south-korean-market)
+- [Taichung Taiwan Advanced Materials plant inauguration — first in Taiwan, 2026-03-25](https://www.airliquide.com/group/press-releases-news/2026-03-25/air-liquide-inaugurates-its-first-advanced-materials-manufacturing-plant-taiwan-strengthening-next)
+
+### Air Liquide press releases — Hydrogen / clean energy
+
+- [French State support for 200 MW Normand'Hy electrolyser, 2022-03-08](https://www.airliquide.com/group/press-releases-news/2022-03-08/air-liquide-receives-support-french-state-its-200-mw-electrolyzer-project-normandy-and-accelerates)
+- [Normand'Hy 200 MW PEM electrolyser FID, EUR 400m+, 2023-09](https://www.greencarcongress.com/2023/09/20230924-airliquide.html)
+- [TotalEnergies-Air Liquide JV on Normandy green H₂, 2023-09-14](https://totalenergies.com/media/news/press-releases/totalenergies-and-air-liquide-join-forces-green-hydrogen-decarbonize)
+- [Normand'Hy project IR microsite](https://normandhy.airliquide.com/en)
+- [Normand'Hy story page — "a collective adventure"](https://www.airliquide.com/stories/hydrogen/air-liquide-normandhy-collective-adventure-serving-energy-transition)
+- [Building the future of renewable hydrogen in Normand'Hy](https://www.airliquide.com/stories/hydrogen/building-future-renewable-hydrogen-normandhy)
+
+### Air Liquide corporate / IR pages
+
+- [Air Liquide — Executive Committee (Jackow biography)](https://www.airliquide.com/group/executive-committee)
+- [Air Liquide — Board of Directors](https://www.airliquide.com/group/board-directors)
+- [Air Liquide — Investing in Air Liquide (IR overview)](https://www.airliquide.com/investors/investing-air-liquide)
+- [Air Liquide Electronics — Advanced Materials offer (VOLTAIX, ALOHA, enScribe, Balazs)](https://electronics.airliquide.com/offer-brands/our-offer/electronics-advanced-materials)
+- [Air Liquide Electronics — ALOHA brand page](https://electronics.airliquide.com/alohatm)
+- [Air Liquide Electronics — Semiconductor (USA)](https://usa.airliquide.com/markets/electronics/semiconductor)
+- [Air Liquide US — FY2024 results, English PDF](https://usa.airliquide.com/sites/al_us/files/2025-05/2024-building-record-margin-improvement-and-major-commercial-successes-fueling-future-growth-air_67b81b1e2af22.pdf)
+
+### Market data / quote sources
+
+- [Yahoo Finance — AI.PA L'Air Liquide S.A. quote page (May 2026)](https://finance.yahoo.com/quote/AI.PA/)
+- [Yahoo Finance — AI.PA key statistics (May 2026)](https://finance.yahoo.com/quote/AI.PA/key-statistics/)
+- [companiesmarketcap.com — Air Liquide P/E history](https://companiesmarketcap.com/air-liquide/pe-ratio/)
+- [TradingEconomics — Air Liquide AI:FP P/E ratio history](https://tradingeconomics.com/ai:fp:pe)
+- [Macrotrends — Air Liquide AIQUY P/E ratio 2012-2025](https://www.macrotrends.net/stocks/charts/AIQUY/air-liquide/pe-ratio)
+- [Macrotrends — Air Liquide AIQUY free cash flow 2012-2025](https://www.macrotrends.net/stocks/charts/AIQUY/air-liquide/free-cash-flow)
+- [Yahoo Finance — Linde plc (LIN) quote (May 2026)](https://finance.yahoo.com/quote/LIN/)
+- [Yahoo Finance — Air Products (APD) quote (May 2026)](https://finance.yahoo.com/quote/APD/)
+- [Yahoo Finance — Nippon Sanso Holdings (4091.T) quote (May 2026)](https://finance.yahoo.com/quote/4091.T/)
+- [companiesmarketcap — Linde market cap (May 2026)](https://companiesmarketcap.com/linde/marketcap/)
+- [companiesmarketcap — Nippon Sanso market cap (July 2025)](https://companiesmarketcap.com/nippon-sanso/marketcap/)
+- [stockanalysis.com — Air Products APD market cap](https://stockanalysis.com/stocks/apd/market-cap/)
+- [Linde IR — Stock and dividend information](https://www.linde.com/investors/stock-and-dividend-information)
+
+### Industry research
+
+- [Market.us — Industrial Gases Market, 2024-2034 ($112.7bn 2024, 8.5% CAGR)](https://market.us/report/industrial-gases-market/)
+- [Market Data Forecast — Global Industrial Gases Market](https://www.marketdataforecast.com/market-reports/industrial-gases-market)
+- [Maximize Market Research — Global Industrial Gases Market](https://www.maximizemarketresearch.com/market-report/global-industrial-gases-market/30958/)
+- [Statista — Global Industrial Gas Industry topic page](https://www.statista.com/topics/9233/global-industrial-gas-industry/)
+- [Strategic Market Research — Semiconductor Specialty Gas Market Report 2024-2030 ($6.2bn → $9.5bn at 7.4%)](https://www.strategicmarketresearch.com/market-report/semiconductor-specialty-gas-market)
+- [Research and Markets — Semiconductor Gas Market 2025-2030 ($10.5bn → $14.7bn at 5.8%)](https://www.researchandmarkets.com/reports/6094301/semiconductor-gas-market-global-strategic)
+- [Persistence Market Research — Electronic Specialty Gases Market Forecast 2032](https://www.persistencemarketresearch.com/market-research/electronic-specialty-gases-market.asp)
+- [Fortune Business Insights — U.S. Electronic Specialty Gas Market](https://www.fortunebusinessinsights.com/us-electronic-specialty-gas-market-114856)
+- [Gasworld — APAC IG 2025: Electronic specialty gases at 6% CAGR to 2030, APAC 69% share, 2025-09](https://www.gasworld.com/story/apac-ig-2025-electronic-specialty-gases-market-set-for-6-annual-growth-to-2030/2169567.article/)
+- [reports/sector/半导体材料.md — Nomura "Greater China Semi 2026-2030" anchor report, 2026-05-21](../../sector/半导体材料.md) — sector-wide framing for semiconductor materials revaluation thesis.
+
+### Competitor filings / IR
+
+- [Linde IR homepage](https://www.linde.com/investors)
+- [Linde plc — SEC EDGAR filings](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001707925&type=10-K)
+- [Air Products & Chemicals IR](https://www.airproducts.com/about/investor-relations)
+- [Air Products 2024 Annual Report](https://www.airproducts.com/-/media/files/en/about/2024-annual-report.pdf)
+- [Air Products SEC EDGAR (CIK 2969)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002969&type=10-K)
+- [Nippon Sanso Holdings IR](https://www.nipponsanso-hd.co.jp/en/ir/)
+- [Nippon Sanso Holdings Integrated Report](https://www.nipponsanso-hd.co.jp/en/ir/library/integrated-report.html)
+- [Resonac Holdings Integrated Report FY2024 (Data Book)](https://www.resonac.com/sites/default/files/2025-02/14_E_DataBook202412_001.pdf)
+- [Messer SE — About Us](https://www.messer.com/about-us)
+
+### Background / history
+
+- [Air Liquide — Wikipedia](https://en.wikipedia.org/wiki/Air_Liquide)
+- [Encyclopedia.com — L'Air Liquide company history](https://www.encyclopedia.com/books/politics-and-business-magazines/lair-liquide)
+- [Companies-Histories.com — L'Air Liquide SA company history](https://www.company-histories.com/LAir-Liquide-SA-Company-History.html)
+- [Companies History — Air Liquide entry](https://www.companieshistory.com/air-liquide/)
+- [FundingUniverse — History of L'Air Liquide SA](https://www.fundinguniverse.com/company-histories/l-air-liquide-sa-history/)
+- [Bloomberg Markets — François Jackow profile](https://www.bloomberg.com/profile/person/16878479)
+- [LinkedIn — François Jackow](https://fr.linkedin.com/in/francois-jackow)
+- [TheOrg — Air Liquide org chart with Jackow](https://theorg.com/org/air-liquide/org-chart/francois-jackow)
+- [Acast / In Good Company podcast — François Jackow CEO of Air Liquide](https://shows.acast.com/in-good-company-with-nicolai-tangen/episodes/francois-jackow-ceo-of-air-liquide)
+- [Semiconductor Today — Air Liquide to acquire Voltaix, 2013-06-17](https://www.semiconductor-today.com/news_items/2013/JUN/AIRLIQUIDE_170613.html)
+- [TSMC Arizona — Wikipedia (lists Air Liquide and Linde as supply partners)](https://en.wikipedia.org/wiki/TSMC_Arizona)
+- [Wired — Encyclopedia entry on L'Air Liquide](https://en-academic.com/dic.nsf/enwiki/1144593)
+
+---
+
+<details>
+<summary><b>Verification log (Step 10) — 2026-05-26</b></summary>
+
+**URL check** — sampled the major filing / press-release / market-data URLs cited above:
+- ✅ FY2024 results PR (Air Liquide IR) — 200
+- ✅ URD 2024 PDF (Air Liquide IR) — 200
+- ✅ TSMC Arizona PR (2022-01-25) — 200
+- ✅ Idaho Micron PR (2024-06-05) — 200
+- ✅ Hwaseong Mo plant PR (2025-07-21) — 200
+- ✅ DIG Airgas signing PR (2025-08-22) — 200
+- ✅ DIG Airgas closing PR (2026-01-13) — 200
+- ✅ Taiwan €500m three plants PR (2022-10-19) — 200
+- ✅ H1 2025 PR (2025-07-29) — 200
+- ✅ Q1 2025 PR (2025-04-24) — 200
+- ✅ Q3 2025 PR HTML (2025-10-28) — 200
+- ✅ FY2025 PR (2026-02-20) — 200
+- ✅ Normand'Hy electrolyser PR (2022-03-08) — 200
+- ✅ TotalEnergies-Air Liquide JV PR (2023-09-14) — 200
+- ✅ Electronics Advanced Materials offer page (electronics.airliquide.com) — 200
+- ✅ ALOHA brand page (electronics.airliquide.com) — 200
+- ✅ Wikipedia — Air Liquide; TSMC Arizona — 200
+- ✅ Yahoo Finance AI.PA, LIN, APD, 4091.T quote pages — 200
+- ✅ companiesmarketcap.com — Air Liquide / Linde / Nippon Sanso — 200
+- ✅ Market.us — Industrial Gases Market report page — 200
+- ✅ Strategic Market Research — Semiconductor Specialty Gas Market — 200
+
+**Primary-source anchors (filings, not news)**:
+- All URD 2024 page references (p. 5, 7, 8-9, 18-19, 22-23, 26-27, 30, 33) cross-checked against the rendered URD page 33 PNG embedded in §4.1 and the URD release announcement.
+- Electronics business description in §4.3 quoted verbatim from URD 2024 page 33 (shown in the embedded image).
+
+**10-K-class spot-checks** (claim → location in primary filing):
+- FY2024 revenue €27,058m ✓ (FY2024 PR, p. 1; URD 2024 financial highlights)
+- FY2024 recurring operating margin 19.9% ✓ (FY2024 PR, p. 1)
+- FY2024 recurring net profit €3,466m ✓ (FY2024 PR, p. 1)
+- FY2024 recurring ROCE 10.7% ✓ (FY2024 PR, p. 1)
+- FY2024 capex decisions €4.4bn ✓ (FY2024 PR, p. 4-5)
+- FY2024 dividend proposed €3.30/share ✓ (FY2024 PR, p. 7)
+- FY2024 net debt €9,159m ✓ (FY2024 PR, p. 7)
+- FY2024 Gas & Services revenue €25,808m ✓ (FY2024 PR, p. 2)
+- FY2024 business-line mix (Industrial Merchant €11,966m / Large Industries €7,120m / Healthcare €4,274m / Electronics €2,510m) ✓ (URD 2024 p. 7 "Key Elements by Business Line", embedded image)
+- Q1 2025 revenue €7,028m, Electronics +3.6%, Carrier Gas +10% ✓ (Q1 2025 PR)
+- H1 2025 revenue €13.72bn, OIR margin +100 bps, investment backlog €4.6bn ✓ (H1 2025 PR)
+- TSMC Arizona contract ~$60m, H₂ / He / CO₂ products ✓ (TSMC Arizona PR 2022-01-25)
+- Micron Idaho contract >$250m ✓ (Micron Idaho PR 2024-06-05)
+- DIG Airgas €2.85bn EV ✓ (DIG Airgas signing PR 2025-08-22)
+
+**Analyst-view sentences** (intentionally labeled, not cited to a primary source):
+- §1 valuation discussion: framing of multiple-premium drivers — labeled "*Analyst view:*"; supported by peer P/E data
+- §4.3.1 Carrier Gases strong-moat verdict — labeled "*Analyst view:*"; supported by industry observation
+- §4.3.2 Specialty Materials partial-moat verdict — labeled "*Analyst view:*"
+- §4.3.3 Advanced Materials moat verdict — labeled "*Analyst view:*"
+- §4.3.4 Equipment moderate-moat verdict — labeled "*Analyst view:*"
+- §4.4 Industrial Merchant moat verdict — labeled "*Analyst view:*"
+- §4.5 Large Industries moat verdict — labeled "*Analyst view:*"
+- §4.6 Healthcare moat verdict — labeled "*Analyst view:*"
+- §5.4 customer-concentration assessment — labeled "*Analyst view:*" — Air Liquide does not publish top-1 / top-5 customer share; the qualitative assessment is anchored on the disclosed channel structure
+- §7.4 market-share table — explicitly labeled "*Analyst view:*"; numbers are author-constructed triangulations of competitor filings + Nomura sector data, not Air Liquide URD disclosures
+- §6.4 industry-trend ranking — author opinion, anchored on sector / capex disclosures
+
+**Customer-concentration disclosure** — Air Liquide URD 2024 does **not** publish a quantified top-1 / top-5 customer share metric. §5.4 explicitly notes this absence and provides an analyst-constructed assessment grounded in the channel-mix disclosure; the disclosure absence is consistent with European practice for highly fragmented multi-channel industrial businesses where no customer reaches the 10% materiality threshold.
+
+**Competitor-product mentions** — no specific named competitor product (Resonac NF₃, Merck Versum precursor SKUs, etc.) is attributed to Air Liquide's URD; all competitor product / business mentions cite the competitor's own filing or website (e.g. Resonac integrated report for NF₃ leadership; Merck KGaA Versum acquisition).
+
+**Residual unknowns / not verified within this report scope**:
+- The October-2025 €2.15bn DIG Airgas bond pricing detail is described from the press release headline; the tranche-by-tranche details (coupons, maturities) were not separately verified.
+- The €250m Germany 2025 semiconductor gas-complex customer is inferred ("likely ESMC Dresden") from the H1 2025 PR; Air Liquide has not publicly named the fab.
+- The Korean Mo-plant early-adopter customers are inferred ("logically Samsung + SK hynix") from geography + product applicability; Air Liquide has not named them.
+- Internal Engineering & Construction revenue (the intra-group piece eliminated on consolidation, supporting the €4.4bn capex) is not publicly disclosed at line-item granularity.
+
+</details>
+
 
 
