@@ -92,3 +92,123 @@ timeline
 池田个人持股数量在 EDINET 上的有价证券报告书与 HOYA 英文 IR 资料中均未单独披露——日本披露规则仅要求单个董事持股超过 0.1% 才需提示，根据未披露这一事实可推断池田持股低于该阈值。其薪酬结构包含中长期激励组件（绩效股票单位 / PSU），其支付与 ESG 指标部分挂钩——这是首席战略官 (CSO) 中川友子在 FY26 Q2 业绩会议中的说明 ([HOYA FY26 Q2 Earnings Call Transcript, pp. 15, 18](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
 
 ---
+
+## 4. 产品与服务 ——"瓶颈"之章
+
+### 4.1 HOYA 自报的产品矩阵
+
+FY25 财报中经过审计的分部附注是产品表的权威来源——其他来源（维基百科、卖方初次覆盖报告、第三方行业调研）都是它的衍生品。该附注将集团划分为两个运营分部和四大产品族（加上一个"Other"残余项），并按 FY25 收入逐行分配。
+
+| 可报告分部 | 子分部 | FY25 收入（¥ 亿日元） | 主要产品与服务（HOYA 自身表述） |
+|---|---|---:|---|
+| **Life Care 生命健康** | Health Care 健康护理产品 | 417.7 | "眼镜镜片与隐形眼镜" |
+| | Medical 医疗相关产品 | 133.2 | "医疗内窥镜、医疗附件、自动内窥镜清洗机 (AERs)、人工晶状体、眼科医疗设备、人工骨、骨科金属植入体、色谱填料" |
+| **Information Technology 信息技术** | Electronics 电子相关产品 | 265.2 | "**半导体光罩与光罩坯料、FPD 光罩、硬盘玻璃磁盘**" |
+| | Imaging 成像相关产品 | 45.9 | "光学镜头、光学玻璃材料、激光设备、光源" |
+| Other | — | 4.0 | "语音合成软件" |
+| **合计** | | **866.0** | |
+
+*资料来源：[HOYA FY25 IFRS Consolidated Financial Statements, pp. 31, 33](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf)——逐字摘录分部定义和按产品族的 FY25 收入。*
+
+```mermaid
+graph TD
+    H[HOYA Corporation FY25 ¥866 亿日元] --> L[Life Care ¥550.9 亿日元]
+    H --> I[Information Technology ¥311.1 亿日元]
+    H --> O[Other ¥4.0 亿日元]
+    L --> HC[Health Care ¥417.7 亿日元]
+    L --> MED[Medical ¥133.2 亿日元]
+    HC --> EL[眼镜镜片<br/>HOYA / Seiko / Pentax 品牌]
+    HC --> CL[隐形眼镜<br/>+ EyeCity 零售]
+    MED --> PEN[Pentax Medical 内窥镜]
+    MED --> IOL[Surgical Optics 人工晶状体]
+    MED --> ORT[人工骨 / 金属植入体<br/>APACERAM + HOYA Technosurgical]
+    MED --> AER[Wassenburg AERs + Microline MiFusion]
+    I --> EE[Electronics ¥265.2 亿日元]
+    I --> IM[Imaging ¥45.9 亿日元]
+    EE --> EUV[**EUV 空白光罩**<br/>昭岛 + 三岛工厂]
+    EE --> DUV[光学 / DUV 光罩坯料]
+    EE --> FPD[FPD 光罩<br/>+ 重庆 MasTek 工厂]
+    EE --> HDD[HDD 玻璃磁盘<br/>+ 老挝 + 越南工厂]
+    IM --> OL[光学镜头 + 玻璃]
+    IM --> LE[激光 / 光源单元]
+```
+
+### 4.2 综合——四大产品族如何构成股票故事
+
+读者读完第 4 章如果只能记住**一件事**，那应该是：HOYA 是一组**底层基板 / 关键瓶颈业务的组合**——公司制造的是未完成的材料，由别人在其上完成增值的精加工，且在每条业务线上 HOYA 都用几十年时间做到了唯一或主导的合格供应商。EUV 空白光罩流向 Photronics 新竹的"坯料转光罩"工厂、台积电与三星的内部光罩工厂、以及凸版印刷 / 大日本印刷——没有 HOYA 的坯料先到位，这些客户都无法在客户图形上完成光罩写入 ([HOYA Report 2024, pp. 101–102](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf))。HDD 玻璃磁盘流向 Western Digital 和希捷的介质镀膜线；两家公司在近线 (3.5 寸) 驱动器需要它，目前在 HAMR 上需求愈发明显 ([HOYA Report 2024, p. 103](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf); [Semiconductorinsight — Precision glass HDD substrates for AI workloads, 2026](https://semiconductorinsight.com/blog/precision-glass-revolutionizes-hard-disk/))。眼镜镜片柸料流向零售连锁的精加工实验室，经过研磨成处方镜片。IOL 流向眼科外科医生进行植入。每一种情形下，HOYA 都拥有上游的 **玻璃 + 镀膜 + 缺陷控制** 环节——物理难度高、产出率低、客户合格周期 12–24 个月——而由别人去拥有客户关系。
+
+### 4.3 EUV 空白光罩——EUV 生态的核心瓶颈
+
+> **HOYA 综合年报原话：** "我们目前是唯一能为先进 3 纳米代逻辑半导体提供与 EUV 技术兼容光罩坯料的厂商。长期以来这一业绩使本公司得以在光罩坯料市场中保持极大份额。EUV 光罩坯料的竞争预计在中长期内会加剧。HOYA 将依托其低缺陷产品和下一代研发的领先地位，继续引领这一领域。" ([HOYA Report 2024, pp. 101–102](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf))
+
+**通俗解读 / 中文释义：** 一片 EUV 空白光罩是一块 **152 mm × 152 mm × 6.35 mm 厚、由超低热膨胀玻璃（LiTaO₃ 掺杂石英）制成的厚柸**，表面涂覆 **40–50 层钼和硅交替叠加的多层膜（即布拉格反射多层膜 / Bragg reflector）**，上面覆盖一层薄薄的钌保护膜，再加一层吸收层（目前仍为 TaBN；下一代正在转向高密度钌 / 镍系低 n 材料）。每一层只有几纳米。一片 **22 cm² 面积上只要有一个大于 30 nm 的颗粒** 就会被废掉——这颗颗粒会被印刻成永久缺陷，出现在该光罩日后图案的每一片晶圆上。在 EUV 生态系统中，空白光罩是**最上游的合格组件**——ASML 提供扫描机、ZEISS 提供光学、Inpria/JSR/TOK 提供光刻胶、HOYA 提供空白光罩，然后由 Photronics / 台积电内部光罩厂 / 三星内部光罩厂 / DNP / 凸版印刷将其转化为可用光罩。光罩坯料环节是"靠每片缺陷率决生死"的关键节点，HOYA 据称是自 2019 年左右起唯一能在 3 nm 节点规格下持续稳定供应 <30 nm 缺陷坯料的厂家。
+
+*分析师观点：* 野村《大中华半导体 2026–30F》报告引用 HOYA 全球 EUV 坯料份额 **~80%**、DUV / 光学坯料份额 **~70%**，信越化学是唯一另一具备规模的供应商（EUV ~20% 份额）；AGC 有商业 EUV 坯料能力但出货量较低，HOYA 的领先在 **低缺陷 / 高端** 部分——这正是 3 nm 和 2 nm 逻辑工艺所需要的 ([reports/sector/半导体材料.md, Fig. 35–44](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md); [Semiconductor Engineering — EUV Mask Blank Battle Brewing](https://semiengineering.com/euv-mask-blank-biz-heats-up/))。HOYA 自身在 FY26 Q2 业绩会议上的说法间接印证了定价结构："EUV 和 DUV 都表现出色，两类产品都实现双位数增长。对 EUV 来说，我们正稳固地占领市场，包括在高端产品的客户数量上的增加"，以及"不论应用或所用代工厂，我们的坯料都是首选" ([HOYA FY26 Q2 Earnings Call Transcript, pp. 10, 22](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
+
+![HOYA 估计光罩坯料市场份额](../../charts/hoya_mask_blank_share.png)
+*资料来源：按 [Nomura Greater China Semi 2026–30F report, 2026-05-21, Figs 38–39](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) 估算并与 [HOYA Report 2024, p. 102](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf) 交叉印证。HOYA 不公开披露单位出货量或份额；此处所示为卖方估算。*
+
+**战略意义。** 3 nm 逻辑工艺使用 EUV 的大规模量产在 2024 年起步，节点节奏将依次缩减至 2 nm（2026–27）与 1.4 nm（2028–29）。预计 **2029–30 年 HVM 量产的 High-NA EUV（NA 0.55）** 将把光罩坯料的质量门槛提高一个数量级——光刻胶厚度从 ~25 nm 降至 <16 nm，**金属氧化物光刻胶 (MOR, metal-oxide-resist)** 成为必选项，意味着吸收层和覆盖层材料都将改变。HOYA 自己的报告明确指出"与未来 High-NA EUV 等先进光刻技术兼容的光罩坯料正在需求扩张" ([HOYA Report 2024, p. 102](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf))。**2020–24 年间在昭岛（研发中心）及其他工厂宣布的 EUV 空白光罩产能扩张**，加上 FY26 Q2 财报所提示的将 60–70% 的资本支出回投到电子业务，正是 HOYA 在 2 nm 节点之前抢先布局产能的明确押注 ([HOYA FY26 Q2 Earnings Call Transcript, p. 23](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf); [Semiconductorinsight — HOYA Expands EUV Photomask Blank Capabilities, 2025](https://semiconductorinsight.com/blog/hoya-expands-euv-photomask-blank-capabilities-strengthening-global-semiconductor-supply-chain/))。
+
+*分析师观点——护城河评估：* **强护城河。** 类型 = **技术 / 知识产权 + 规模 + 15 年合格周期**。第三方进入的门槛不是资本支出（一座坯料厂 ~US$200–300 m 是可承担的），而是**多年缺陷率学习曲线与代工厂合格窗口**——后者每 1–2 个节点才打开一次。最接近的可信竞争产品：信越化学的 EUV 空白光罩，已在多家代工厂获得合格，但历史上更多定位在节点较老、缺陷容忍度略宽的产品上 ([Shin-Etsu Chemical — Photomask blanks product page](https://www.shinetsu.co.jp/en/products/electronics-and-functional-materials-business/photomask-blanks/))。
+
+### 4.4 光学 (DUV / i-line) 光罩坯料
+
+> **HOYA 原话：** "HOYA 在传统光学深紫外 (DUV) 光刻——这一传统光刻技术上——持续保持强势地位。" ([HOYA Report 2024, p. 102](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf))
+
+**通俗解读：** 光学 / DUV 光罩坯料使用**合成熔融石英基板**，配以**铬 / 氧化铬 (Cr/CrOx) 吸收层堆栈**——与 EUV 坯料思路相同，但针对 248 nm (KrF)、193 nm (ArF 干式) 和 193i (ArF 浸没) 波长进行调优。DUV 坯料出货数量远超 EUV 坯料（每一颗逻辑 / DRAM / NAND 芯片的每一层都至少需要一张光罩，但只有少数关键层需要 EUV），因此每片晶圆的金额贡献相近，即使单片售价较低。HOYA ~70% 的 DUV 坯料份额非常稳固——因为全球每一家代工厂都在 2000 年代初的 0.13-µm 与 90-nm 节点斜坡上完成了对 HOYA 坯料的合格；切换到二供需要 ~9 个月的再合格周期，且没有任何经济收益 ([reports/sector/半导体材料.md, Fig. 35–44](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md))。
+
+*分析师观点——护城河评估：* **中等护城河。** 类型 = **切换成本 + 客户合格存量优势**。比 EUV 略弱，因为该技术已停止前进，竞争对手（信越、AGC）能够交付相当规格的产品——但既有份额仍然黏性极高。
+
+### 4.5 FPD 光罩——面板用光罩
+
+> **HOYA 原话：** HOYA "计划于 2024 年下半年在重庆启动新的 FPD 光罩工厂运营" ([HOYA Report 2024, p. 103](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf))，运营主体为 **重庆 MasTek 电子（HOYA 子公司）**。
+
+**通俗解读：** FPD 光罩是用于印刻 LCD 或 OLED 面板 **TFT (薄膜晶体管) 底板** 的图案掩模——物理上是比半导体光罩大得多的玻璃板（最大可达 G10.5 = 2,940 × 3,370 mm），但特征尺寸较粗（通常 1–3 µm 而非纳米级）。它销售给面板厂（京东方、LGD、三星显示、友达）用于 LCD 和 OLED 生产。重庆工厂明确将 HOYA 嵌入中国面板产业集群——这一点重要，因为中国 G8.6 与 G10.5 LCD 工厂如今是全球主流量产产能。FY26 Q2 业绩会议确认了爬坡进展："大尺寸面板用 FPD 光罩销售增长 5%……我们正在恢复产能，并已回到增长轨道。利用率仍有提升空间。" ([HOYA FY26 Q2 Earnings Call Transcript, p. 11](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))
+
+*分析师观点——护城河评估：* **部分护城河。** 类型 = **规模 + 中国本地化合格资质**。FPD 光罩面临 LG Innotek、凸版印刷、SK 海力士关联供应商的直接竞争——HOYA 在该领域的份额约 25–30%，远低于其在半导体坯料中的主导地位。
+
+### 4.6 HDD 玻璃基板 (HDD glass substrate)——蓄势待发的"睡美人"
+
+> **HOYA 原话：** "HOYA 是全球唯一的玻璃 HDD 基板厂商，市场占有率 100%。消费产品 (2.5 寸) 基板市场上同时存在铝和玻璃产品。我们估计 HOYA 在该市场的份额约为 40%。" ([HOYA Report 2024, p. 103](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf))
+
+**通俗解读：** HDD 玻璃基板是 **盘状、镜面抛光的玻璃盘片**——经过镀膜伙伴（此前是 HOYA，2022 年溅射业务出售之后改为 Western Digital，外加昭和电工）溅射磁记录层之后即成为录入介质。**玻璃基板在两项 AI 时代近线驱动器关键指标上优于铝基板**：(a) **厚度极薄**——一块玻璃基板能在 95 mm 的盘片上保持 ~50 µm 平整度，使每个驱动器可装入 11+ 张盘片，而铝盘片只能装 ~9 张——这意味着 50 TB 驱动器变得可行；(b) **热稳定性**——这是 **HAMR (Heat-Assisted Magnetic Recording，热辅助磁记录)** 所需要的，在写入时记录磁头会瞬间将盘片表面加热至 ~400°C。HOYA CEO 在 FY26 Q2 会议上对此十分直接：HDD 基板销售"增长 4%……2.5 寸销量大幅下滑，3.5 寸近线产品需求强劲，实现双位数增长……最近有一家 HDD 厂商宣布采用玻璃基板" ([HOYA FY26 Q2 Earnings Call Transcript, p. 12](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
+
+**战略拐点。** 在 2024 年之前，HDD 玻璃基板业务一直被视为永续衰退资产（SSD 蚕食所有消费 / 2.5 寸 HDD 需求）。2025 年的拐点是 **Western Digital 与希捷都将其最高容量的 HAMR 时代近线产品切换至玻璃基板**，这 (a) 将 HOYA 在 3.5 寸玻璃基板的销量从缓慢下降重新拉回中个位数增长；(b) 为玻璃基板成为 >30 TB 驱动器的标准打开大门。在 AI 数据中心近线存储需求 2025–26 年 30%+ 同比增长的背景下 ([Tom's Hardware — High-capacity HDD roadmap, 2025](https://www.tomshardware.com/pc-components/hdds/high-capacity-hdd-roadmap-the-race-to-100tb-and-zettabyte-scale-storage-toshiba-seagate-and-wd-outline-three-distinct-strategies); [Western Digital AI storage supercycle analysis, 2026-04](https://markets.financialcontent.com/stocks/article/finterra-2026-4-7-the-ai-storage-supercycle-a-deep-dive-into-the-new-western-digital-wdc))，HOYA 是唯一在该上游捕获**技术结构变化**而非仅捕获量周期的供应商。CEO 池田："2026 年展望非常积极。2027 年之后较难预测，但至少现在看不到任何需求下降的迹象或趋势。" ([HOYA FY26 Q2 Earnings Call Transcript, p. 21](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))
+
+*分析师观点——护城河评估：* 3.5 寸 **结构性垄断**；2.5 寸玻璃 vs 铝 **中等**。类型 = **单一供应商合格 + 几十年的薄玻璃抛光知识积累**。最接近的竞争对手产品：日本小原 Inc. 有小规模玻璃基板尝试，但在 HAMR 规格上不构成 Tier-1 可信供应商。
+
+![HOYA 分部经营利润率（季度）](../../charts/hoya_segment_opm_quarterly.png)
+*资料来源：根据 [HOYA Corporation quarterly earnings briefings, FY24 Q1 – FY26 Q2](https://www.hoya.com/en/investor/kessan/) 整理——Information Technology 分部经营利润率连续四个季度维持在 50% 以上，FY26 Q2 达 53.1%，Life Care 为 17.6%。注意 HOYA 按 IFRS 报表，故经营利润率为分部税前利润对分部收入之比。*
+
+### 4.7 Imaging——光学镜头、光学玻璃材料、激光设备、光源
+
+Imaging 子分部（FY25 收入 ¥45.9 亿日元，同比 +17.6%）是 Information Technology 内较小、较低曝光的部分。供应包括 (a) 给工业自动化、半导体检测、机器视觉、投影显示客户的**光学镜片元件**；(b) 卖给镜头组装客户的**散装光学玻璃材料**（著名的 "BSC7"、"BaF10"、E-FDS 等 Schott 对应玻璃型号）；(c) **激光设备**，包括用于半导体检测、面板修复、工业激光处理的 UV / DPSS 激光；(d) **光源单元**，用于投影（LCD/DLP 投影 LED 阵列、光纤耦合照明器）。FY26 Q2 该子分部同比 **+30%**，依靠广泛的非相机应用需求增长——但管理层明确警告："我们预计未来不会持续保持 30% 增长。请注意本季表现略显特殊。" ([HOYA FY26 Q2 Earnings Call Transcript, p. 13](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))
+
+*分析师观点——护城河评估：* **部分。** 光学玻璃市场竞争激烈（Schott、Ohara、CDGM 成都光明），但 HOYA 在主要投影 / 半导体检测客户（KLA、Lasertec、Camtek）那里取得的合格非常稳定。
+
+### 4.8 Life Care 业务——Health Care（眼镜 + 隐形眼镜）
+
+> **HOYA 原话——眼镜镜片：** FY25 分部附注将 Health Care 产品族简单描述为"眼镜镜片与隐形眼镜" ([HOYA FY25 IFRS Financial Statements, p. 31](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf))。FY24 综合年报补充：该分部经营 "**HOYA Vision Care**" 业务，覆盖 52 个国家市场，包括儿童近视管理用 **MiYOSMART** 镜片 ([HOYA Report 2024, pp. 92–94](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf))。
+
+**通俗解读。** HOYA 的眼镜镜片业务是全球第二或第三大（仅次于 EssilorLuxottica，与 Carl Zeiss Vision 平起平坐）。自有品牌覆盖 **HOYA**（高端渐进）、**Seiko**（日本市场高端，2013–14 年收购）、**Pentax**（2007–08 年并入）、**KONISHI** 与 **Tokai**。分销路径为**独立视光师实验室 + EyeCity 式自有零售**。旗舰技术专利为 **MiYOSMART**——一种为儿童近视进展控制设计的镜片，采用 D.I.M.S.（Defocus Incorporated Multiple Segments，多区域离焦）光学技术——目前在法国已获得医保报销并在欧洲扩张，部分抵消了中国端的弱化："此前推动产品增长的中国权重正在下降。" ([HOYA FY26 Q2 Earnings Call Transcript, p. 4](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)) 隐形眼镜零售（日本 **EyeCity** 连锁，FY26 Q2 销售增长 5%，1H FY26 内新开 7 家门店）是稳定但贡献较小的复利型业务 ([HOYA FY26 Q2 Earnings Call Transcript, p. 5](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
+
+*分析师观点——护城河评估：* **眼镜镜片中等护城河；隐形眼镜较弱。** 类型 = **品牌 + 视光师渠道关系 + 制造规模 + IP（MiYOSMART D.I.M.S. 专利）**。竞争方：EssilorLuxottica（全球 #1，~50%+ 份额）、Carl Zeiss Vision (~10%)、Nikon、Rodenstock ([Mordor Intelligence — Spectacle Lens Market](https://www.mordorintelligence.com/industry-reports/spectacle-lens-market))。
+
+### 4.9 Life Care 业务——Medical（Pentax 内窥镜 + Surgical Optics 人工晶状体 + 骨植入体 + AERs）
+
+> **HOYA 原话：** Medical 子分部包括"医疗内窥镜、医疗附件、自动内窥镜清洗机 (AERs)、人工晶状体、眼科医疗设备、人工骨、骨科金属植入体、色谱填料" ([HOYA FY25 IFRS Financial Statements, p. 31](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf))。
+
+**通俗解读。** 这是 HOYA 的受监管医疗器械组合，主要围绕四个运营子公司：**Pentax Medical**（软性视频消化道内窥镜——胃镜、结肠镜、十二指肠镜，主要竞争对手 Olympus 奥林巴斯、Fujifilm 富士胶片）；**HOYA Surgical Optics**（用于白内障手术的可折叠疏水性人工晶状体——竞争对手 Alcon、J&J Vision、Bausch + Lomb）；**HOYA Technosurgical**（APACERAM 羟基磷灰石合成骨 + 钛骨科植入体）；**Wassenburg Medical**（自动内窥镜清洗机）；**Microline**（MiFusion 热熔合腹腔镜器械）。近期产品亮点为 **DEC™ 十二指肠镜 (ED34-i10T2s)**——这是全球首款获得 FDA 许可、可使用过氧化氢气体等离子体 (STERRAD) 灭菌的 GI 内窥镜 ([PR Newswire — PENTAX Medical FDA clearance, 2024-08](https://www.prnewswire.com/news-releases/pentax-medical-receives-fda-clearance-for-duodenoscope-with-new-sterilization-technology-in-collaboration-with-advanced-sterilization-products-302214258.html))——是对 2015 年后十二指肠镜污染危机的直接回应（该事件对奥林巴斯打击最重）。IOL 业务是目前最弱的一环：中国集采 (VBP) 压缩了价格并重塑了需求结构——"我们当前能在中国市场提供的产品需求疲软，导致收入下降" ([HOYA FY26 Q2 Earnings Call Transcript, p. 7](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
+
+*分析师观点——护城河评估：* **内窥镜部分护城河（位居奥林巴斯、富士胶片之后的 #3 玩家）；IOL 中等；骨科 / AER 较弱。** 类型 = **监管（FDA / PMDA 审批） + 安装基础服务关系**。Pentax of America 过去的标签错配诉讼（以 US$43 m 和解）仍带有遗留声誉拖累 ([Sokolove Law — endoscopy lawsuit settlements](https://www.sokolovelaw.com/product-liability/medical-devices/endoscopy/))。
+
+### 4.10 最近 12 个月的战略行动 / 资本支出 / 产品转换
+
+- **HDD 玻璃基板拿下新客户**——2025 年第二家 HDD 厂商宣布采用玻璃基板；按 CEO 说法，量贡献的时点定在 FY26 Q4（即 1Q 2027 公历年） ([HOYA FY26 Q2 Earnings Call Transcript, pp. 12, 20](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
+- **重庆 FPD 光罩工厂爬坡**——2H 2024 启动运营；利用率仍在提升，支撑 HOYA 中国本地化定位 ([HOYA Report 2024, p. 103](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf))。
+- **Kioxia 持股变现**——HOYA 在 1H FY26 内出售全部 Kioxia 持股，所得款项约 ¥40 亿日元；CFO 广冈确认资金用于持续回购 ([HOYA FY26 Q2 Earnings Call Transcript, p. 20](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
+- **FY26 资本支出预算 ¥55 亿日元**，60–70% 定向投放于电子业务（LSI 光罩坯料 + HDD 基板） ([HOYA FY26 Q2 Earnings Call Transcript, p. 23](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
+- **内窥镜重组**——70–80% 决策已完成；工厂整合进行中，预期 FY27 Q4 见到实质利润率改善 ([HOYA FY26 Q2 Earnings Call Transcript, p. 21](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
+
+---
