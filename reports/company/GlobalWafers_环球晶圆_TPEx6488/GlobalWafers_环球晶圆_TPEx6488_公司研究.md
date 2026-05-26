@@ -415,3 +415,63 @@ Sherman 厂是 GWC 未来 5 年最重要的份额来源——也是估值最大�
 **Bear case (概率 25%)**：BPD 推迟到 2028 后 + AI capex 退潮 + 中国国产 12 寸良率 2027 前突破。GWC 2028F 营收 USD 2.3-2.5 bn、净利 USD 400-450 mn、BVPS NT$240、P/B 2.0× → TP **TWD 480** (回到野村原 TP)。Bear 概率不低，因为 BPD 工艺历史上 (3D NAND / EUV / GAA) 都比 fab 路线图推迟 6-12 个月。
 
 *分析师观点：* 当前股价 TWD 822 已经把 base case 的 90%+ 走完，留给「BPD 商业化兑现」的 upside 仅 +3-5%。所以现在买 GWC 实质上是押 bull case (BPD 加速 + 涨幅 ~30%) 对赌 bear case (回落 ~40%)——是 「3:4」赔率的非对称下注。野村 Buy 评级的合理性建立在 BPD 在 2027 之前确定商业化、且其它三条增量 (HBM / WoW / SOI) 也按时释放的多元前提之上。投资人需要自己判断这个前提的可信度。
+
+## 9. 风险评估
+
+本节按 4 个 bucket 列出 11 个具体风险，每个 50-100 字描述 + 量化 + 缓解措施。
+
+### 公司特定风险 (5 项)
+
+#### 9.1 关键人风险——徐秀蘭接班悬而未决
+
+徐秀蘭 1962 年生，今年 63 岁；2011 年起任董事长兼 CEO 超过 14 年，公司 7 次大并购 + Siltronic 失败转型 + Sherman USD 7.5 bn 投资 + CHIPS Act 谈判 + 14 年欧美客户网络全部出自她个人——这是行业内罕见的「单一人将整公司战略人格化」案例。公司至今未公开宣告 COO / 副董事长 / 接班委员会方案 ([HBR Taiwan 徐秀蘭专访, 2022-12](https://www.hbrtaiwan.com/article/20819/globalwafers-doris-hsu))。**量化**：徐秀蘭一旦因健康 / 退休 / 不可抗力突然离任，市场对 GWC 估值打 15-20% discount 是历史合理预期 (参考 2024 Intel CEO 突然下台后股价反应)。**缓解**：母公司 SAS 中美晶 (徐秀蘭 + 盧明光家族控股 51%) 通过股权结构保留更换 CEO 的话语权；公司董事会含 1/3 独董按 TPEx 规定运作 ([环球晶 2024 年报 § 股权与董事会结构, p. 12-25](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/))。
+
+#### 9.2 Sherman 厂 ramp 风险——美国本土 12 寸 fab 历史良率难题
+
+Sherman 一期 2025-05 开幕、2026 量产 ramp。但美国本土 12 寸厂 ramp 难题历史悠久：TSMC Arizona Fab 21 从 2020 announce → 2025 量产 ramp + 良率达标，用了 5 年；Intel Ohio 一期从 2022 → 计划 2027 ramp 也推迟过两次。GWC Sherman 是台资硅片厂在美第一座大规模 12 寸新厂，没有 cleanroom 操作员沉淀 + 美国劳动法约束 + 工会风险——历史上德国 Wacker / 美国 SunEdison Singapore 12 寸厂 ramp 都用了 24-30 个月才达 commercial 良率 ([Tom's Hardware GWC Sherman 投资分析, 2022-06](https://www.tomshardware.com/news/wafer-maker-to-invest-dollar5-billion-in-the-us-to-serve-intel-samsung-tsmc))。**量化**：Sherman 一期年营收测算 USD 0.78 bn (满产)，若 ramp 推迟 12 个月 → 2027 营收少 ~USD 400 mn → 公司 2028F 净利可能下修 USD 80-100 mn → 股价回落 8-12%。**缓解**：徐秀蘭在 2024 Capital Markets Day 提及「Sherman 团队 60%+ 是从 GWC 美国 Sherman 旁边的 SunEdison 老厂 (前 MEMC) 转过来的资深工程师」 ([Digitimes, 2025-08-11 Sherman CHIPS 报导](https://www.digitimes.com/news/a20250811VL204/globalwafers-texas-silicon-wafer-fab-chips-act.html))。
+
+#### 9.3 Siltronic 收购后遗——治理与心理影响
+
+2022-02 Siltronic 收购破局是 GWC 14 年并购史上唯一失败案例。EUR 50 mn (NT$1.56 bn) 分手费 + EUR 4.35 bn 资金占用 12 个月机会成本 + 徐秀蘭个人精力消耗的尾巴还在拖。**当前残留影响**：(a) GWC 仍持有 Siltronic ~13.67% 流通股 (2020 收购前买入)，市值随 Siltronic 股价波动——2022 后 Siltronic 跌幅 70%+ 让 GWC FY2024 财报因「持股公允价值损失」一次性 EPS 减少 ~NT$7 ([环球晶 2024 年报 § 金融资产/Siltronic 持股, p. 87](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/))；(b) 德国 BMWK 否决前例让 GWC 未来若再有跨国硅片并购 (Siltronic 或其它欧美厂)，监管审批门槛会显著高于 2020-21；(c) Siltronic 仍在独立运营 → 2027-28 LTA 谈判 GWC 仍要面对 Siltronic 竞争。**量化**：13.67% Siltronic 持股市值 ~EUR 175 mn (2026-Q1)，再跌 30% = 公司账面价值损失 EUR ~50 mn (NT$1.5 bn)，EPS 影响 ~NT$3.4/股。**缓解**：财务上 Siltronic 持股已分类为 FVTPL (可供出售)，公司可在 Siltronic 股价反弹时出售实现收益。
+
+#### 9.4 SAS 母公司股权——51% 控股双面性
+
+中美晶 SAS (TPEx:5483) 持有环球晶 51%——这是 GWC 治理的「双面剑」：(a) 正面：SAS / 徐秀蘭 + 盧明光家族不需面对散户投票否决 Sherman USD 7.5 bn / BPD 等长周期资本决策；(b) 负面：少数股东 (剩余 49%) 缺乏话语权——如果 SAS 因自身财务困境 (SAS 主业是太阳能硅片，2023-25 太阳能严重通缩亏损) 决定提高 GWC 分红、抽取现金，少数股东无力抵抗。**量化**：SAS 2024 营收 ~NT$60 bn 其中 ~NT$57 bn 来自 GWC 合并、SAS 自有太阳能业务亏损 ~NT$2 bn；若 SAS 太阳能亏损进一步扩大需要 GWC 多分红 (从 50% → 70% payout) 抽血，GWC 长期资本支出会受限 ([中美晶 SAS 2024 年报, 第 21-23 页 太阳能事业部](https://www.saswafer.com/wp-content/uploads/2024/06/%E4%B8%AD%E7%BE%8E%E7%9F%BD%E6%99%B6_113%E5%B9%B4%E5%BA%A6%E5%B9%B4%E5%A0%B1_EN.pdf))。**缓解**：SAS 太阳能 2024 已分拆为子公司，与环球晶财务隔离；徐秀蘭与盧明光家族个人持股 SAS + GWC 双向激励，长期利益基本对齐。
+
+#### 9.5 客户集中度——TSMC 单一最大客户 ~17-19%
+
+GWC 单一最大客户 (极大概率为 TSMC) 占合并营收 ~17-19%，前五大客户合计 ~40-45% ([GlobalWafers 2024 Annual Report § Major Customers, p. 55-60](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/))。TSMC 同时是 SUMCO / Shin-Etsu / Siltronic / SK Siltron 的最大客户——硅片行业的「TSMC 风险」是系统性的。**TSMC 风险情景**：(a) TSMC 在 2027-28 LTA 续约谈判中以 Arizona Fab 21 产能为筹码压价 10-15%；(b) TSMC 因台海风险 / 产能转移 reshore 美国后对 Sherman 厂的需求超预期 (这是 upside)；(c) TSMC 与 Sherman 厂的认证周期推迟 12 个月。**量化**：若 TSMC 占 GWC 营收从 17-19% 下降 5pp (~USD 100 mn 营收)，GWC 净利下修 USD 25-30 mn，EPS 影响 ~NT$1.5/股 ([Tom's Hardware GlobalWafers 客户分析](https://www.tomshardware.com/news/wafer-maker-to-invest-dollar5-billion-in-the-us-to-serve-intel-samsung-tsmc))。**缓解**：GWC LTA 已签到 2027-28，TSMC 在此期间难以临时切换 wafer 供应商 (硅片 spec 验证周期 18-24 个月)。
+
+### 行业 / 市场风险 (3 项)
+
+#### 9.6 300mm 周期下行延续——BPD 商业化推迟
+
+野村 base case 假设 BPD 工艺 2026-27 顺利商业化，Q2 2026 起价格回升。但 BPD 工艺历史上 (3D NAND / EUV / GAA / FinFET) 都比 fab 路线图推迟 6-18 个月——如果 BPD 推迟到 2028 后量产，GWC 当前 44× P/E 的估值锚就站不住。**量化**：bear case 测算 GWC FY2028F 净利 USD 400-450 mn (vs base case USD 700-800 mn)，对应 BVPS NT$240、P/B 2.0× → TP TWD 480 (vs 当前 TWD 822) → 跌幅 ~40%。**缓解**：(a) 即便 BPD 推迟，HBM4 + WoW NAND 增量仍能撑起 ~3-4% 全球 wafer 需求 / 年；(b) GWC 通过 LTA floor 锁定下行幅度 ([野村 2026-05-21, p. 18-20](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。
+
+#### 9.7 中国国产 12 寸硅片突破——结构性威胁
+
+沪硅产业 / TCL 中环 / 上海新昇 / 国大硅产 当前 12 寸良率 60-75%，距 commercial-grade 95%+ 还有 5-7 年差距，但中国国家集成电路基金 2025-30 年规划在硅片国产化上投入 RMB 200-300 bn。一旦中国国产 12 寸 2027 前突破，对 GWC 影响有两个维度：(a) 中国市场 (GWC 当前对中国合并营收 ~10%) 直接被国产替代；(b) Shin-Etsu / SUMCO 的中国市场份额转给国产，反过来要从亚洲其它市场夺 GWC 份额 ([沪硅产业 2024 年报 § 业务进展](http://static.cninfo.com.cn/finalpage/2025-04-30/1223247293.PDF))，([TCL 中环 2024 年报 § 半导体硅片业务](http://static.cninfo.com.cn/finalpage/2025-04-29/1223218728.PDF))。**量化**：bear case 假设中国 12 寸 2027 突破 + GWC 失去 8-10% 全球份额 → 2028F 营收下修 USD 600-800 mn → EPS 影响 ~NT$15-20/股，股价跌幅 30-40%。**缓解**：(a) GWC 通过 Sherman 厂 + 意大利 / 韩国扩产把营收重心向美 / 欧倾斜；(b) BPD / HBM 高端 wafer 至少 5-7 年内国产难突破。
+
+#### 9.8 Shin-Etsu / SUMCO 价格战——日本厂 JPY 贬值红利
+
+JPY 兑 USD 从 2021 ~110 跌到 2026 ~155 (-30%)，Shin-Etsu / SUMCO 的 USD 计价营收按 JPY 计相当于自动涨价 30%——这给两家提供了「在 LTA 谈判中放弃 ASP 涨幅、保 / 抢份额」的空间。一旦 Shin-Etsu / SUMCO 在 2027-28 LTA 续约时主动让价 10-15%，GWC 没有汇率红利，毛利率会被快速压缩 ([SUMCO Q4 FY2024 法说会, JPY 汇率影响, 2025-02](https://www.sumcosi.com/english/ir/library/result/))。**量化**：若 GWC 12 寸 LTA ASP 在 2027-28 续约时被迫让 5%，公司 2028F 毛利率从 base case ~30% 降到 25%、净利下修 USD 100 mn → 股价跌幅 ~10%。**缓解**：(a) GWC 的 Sherman 厂在 USD 计价营收 + 美国本土成本结构上规避了 JPY 贬值竞争；(b) BPD / Annealed / SOI 这些差异化产品的 ASP 弹性比 standard polished 大，GWC 可以在 high-end 加大力度。
+
+### 财务风险 (2 项)
+
+#### 9.9 估值倒挂 / multiple compression 风险——P/E 44× 难以维持
+
+GWC TTM P/E 44× + P/B 3.0× 与同业明显倒挂 (Shin-Etsu P/E 30×、SUMCO 亏损、Siltronic 亏损)；野村 TP 3.2× FY2028F P/B 假设 ROE 长期回到 15-18% (vs FY2025 ~7%)。如果 ROE 修复速度低于野村假设、或如果 BPD / HBM 不达预期，市场会从 3.2× P/B 修正回 2.0-2.5× P/B → TP 下修到 TWD 520-660，跌幅 20-37%。**触发因素**：(a) Q3-Q4 2026 ASP 不如徐秀蘭 Q1 法说会指引；(b) Sherman 厂 ramp 延迟季报披露；(c) 中国硅片厂 2026-27 任何商业突破 (如沪硅产业拿到 TSMC / Intel 大单)；(d) 美联储意外加息让长端 rate 反弹。**当前 P/B 倍数 3.0× 已经接近野村 TP 隐含的 3.2× 上限**，留给上行的余地 < 7% ([Stockanalysis.com 6488 估值历史区间](https://stockanalysis.com/quote/tpex/6488/))。**缓解**：(a) FY2026 配息 NT$7.7 (yield ~0.9%) 提供少量缓冲；(b) GWC 资产负债表稳健 + 净现金状态 → 不存在 forced sell 风险。
+
+#### 9.10 Capex / 现金流压力——三年 USD 7.5 bn Sherman 投资
+
+GWC 三年扩产 capex 累计 NT$100 bn (2022-25)，目前剩余 Sherman 二期 + 意大利 + 韩国合计还要 USD 5-6 bn (NT$155-185 bn) 在 2026-29 期间投出去。这个金额超过公司 FY2025 营业现金流 NT$15-20 bn 的 8-10 倍——必然需要 (a) 经营性现金流 + (b) 长期借款 + (c) 政府补贴 (CHIPS Act / EU Chips / METI) 三个来源同时支撑 ([环球晶 2024 年报 § 现金流量表 + Capex 计划, p. 80-90](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/))。**量化**：若 2027 周期回升不如预期 + 2028 经营现金流低于 NT$25 bn，公司将需要新增 ~NT$50 bn 长期借款 → 净负债 / EBITDA 从当前 ~0× 升至 ~2.5×，仍属投资级但 BBB 评级压力上升。**缓解**：(a) 已锁定 USD 406 mn CHIPS Act 直接补贴 + USD 350-450 mn ITC；(b) 50% payout 政策若需暂停可保留 NT$15-20 bn/年现金流；(c) Siltronic 13.67% 持股可变现 EUR 175 mn 应急。
+
+### 宏观风险 (3 项)
+
+#### 9.11 中美芯片战 + 台海地缘——出口管制传导 + 关税
+
+美国 BIS 2022-10 + 2023-10 + 2024-12 三轮出口管制聚焦芯片成品 + EUV，硅片本身未列入清单——但 Trump 政府 2025 起对台 / 韩 / 日 / 中四国半导体进口推动 10-25% 关税。GWC 的 Sherman 厂在关税框架下是「美国本土」可豁免，是结构性 hedge；但 GWC 的台 / 日 / 韩 / 欧产能销往美国仍要承担关税成本 ([Reuters Trump 半导体关税框架, 2025-Q3](https://www.reuters.com/world/us/))。**量化**：如果 GWC 非美国本土产能销美国比例 ~40% 被加 25% 关税 (USD ~250 mn 营收承担 USD 60 mn 关税)，公司净利下修 USD 50 mn → EPS 影响 ~NT$3/股。**台海风险**：GWC 总部 + 台湾新竹 / 台南厂占公司产能 ~35%——台海冲突情景下 GWC 35% 产能瞬时不可用，公司估值会被市场打 30%+ discount。**缓解**：Sherman + 意大利 + 韩国 + 日本产能合计占公司 ~50%，是「台海非战时」结构性 hedge。
+
+#### 9.12 汇率风险——TWD / USD / JPY / EUR / KRW 五币种敞口
+
+GWC 是少数 5 个币种营收 + 7 个币种成本同时存在的硅片厂：(a) TWD 本币 (台湾财报)；(b) USD (北美营收 + Sherman 成本)；(c) JPY (日本厂区成本 + JPY 计价资本物资)；(d) EUR (Italy Novara 营收 + 成本)；(e) KRW (Cheonan 营收 + 成本)。**主要风险敞口**：(1) JPY 兑 USD 进一步贬值让 Shin-Etsu / SUMCO 价格竞争力上升 (详见 §9.8)；(2) TWD 兑 USD 升值让台湾总部财报 (TWD 计) 营收被汇兑损失抹掉 — 2024 财报已记录汇兑损失 NT$3.5 bn ([环球晶 2024 年报 § 汇兑损益, p. 88](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/))；(3) EUR 持仓 (Siltronic 13.67% 股) 跟随 EUR 汇率波动。**量化**：若 TWD/USD 从 31.0 升到 28.0 (TWD 升值 10%)，GWC 财报营收 (TWD 计) 减少 ~NT$3-4 bn，EPS 影响 ~NT$3-4/股。**缓解**：50%+ 营收已是 USD 计价 (北美 + LTA 美元定价)，相当于天然汇率 hedge。
