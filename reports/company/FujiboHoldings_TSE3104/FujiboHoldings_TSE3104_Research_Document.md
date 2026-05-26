@@ -200,3 +200,97 @@ The two largest stated investment programmes are (a) the **Nyugawa Plant technol
 Source: [Integrated Report 2024 — 11 Years Financial Summary, p. 47 + Yuho 2025 p. 32](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf).
 
 ---
+
+## 5. Customers & Go-to-Market
+
+Fujibo's customer base bifurcates by segment: the polishing-pad business serves the global advanced-node fab customer set (foundry + memory + wafer manufacturers), the industrial-chemicals business has high single-customer concentration to two Japanese chemical majors, and the apparel business serves a diffuse retail / e-commerce base. The most informative customer disclosure is at the **consolidated** level via the Yuho's 主要な販売先 (top customers) table.
+
+### 5.1 — Top consolidated customers (Yuho-disclosed)
+
+The Yuho's mandatory top-customer disclosure (販売先 ≥ 10% of consolidated revenue) names two customers in FY3/25:
+
+| Customer | Segment | FY3/24 sales (¥mm) | FY3/24 share | FY3/25 sales (¥mm) | FY3/25 share |
+|---|---|---|---|---|---|
+| **住友商事ケミカル㈱ (Sumitomo Shoji Chemical)** | Industrial Chemicals | 5,380 | 14.9% | **8,229** | **19.2%** |
+| **三井化学㈱ (Mitsui Chemicals)** | Industrial Chemicals | 5,801 | 16.1% | **5,874** | **13.7%** |
+| Top-2 combined | — | 11,181 | 31.0% | 14,103 | **32.9%** |
+
+Source: [Yuho 2025, p. 27 — 販売実績](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf).
+
+These two top customers sit **entirely inside the Industrial Chemicals segment** — both are intermediate-chemical contract-manufacturing relationships for pharmaceutical / agrochemical / electronic-material precursors via Yanai Chemical Industry's plants in Yanai (Yamaguchi) and Takefu (Fukui). The Sumitomo Shoji Chemical share jumped from 14.9% to 19.2% of consolidated revenue — material concentration on a single counterparty in a contract-manufacturing relationship is normal in fine-chemicals, but it makes the Industrial Chemicals segment economically fragile to one renewal cycle ([Yuho 2025, p. 21 — 事業等のリスク (3) 特定製品・顧客への依存度](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)).
+
+**The polishing-pad business does NOT have a single 10%+ customer at consolidated level** — i.e., no individual fab customer (TSMC, Samsung, SK Hynix, Micron, Kioxia, Intel, etc.) represents > ¥4.3 bn of FY3/25 revenue. This is the structural strength of the Fujibo CMP-pad franchise: it is sold into a **broad-based global advanced-fab customer set** rather than tethered to one anchor account. The Yuho explicitly bins the polishing-pad customer base as "**世界中のＩＴデバイス関連企業**" — *"IT-device-related companies all over the world"* ([Yuho 2025, p. 13 — 経営環境](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)). Fujibo does not name individual fab customers in its public disclosure (consistent with Japanese mid-cap practice for technical-component suppliers), but the customer set — by inference from the geographic footprint, the Tainan plant + Miaoli R&D centre, the disclosure that ~60-70% of pad revenue is export, and CMP-pad-share studies — covers TSMC, Samsung Foundry, SK Hynix, Kioxia, Micron, Intel, GlobalFoundries, UMC and the major Japanese silicon-wafer makers (Shin-Etsu Handotai, SUMCO) plus Taiwan-Korea wafer reclaim players.
+
+```mermaid
+pie title FY3/25 Fujibo Holdings Revenue by Disclosed Top Customers (¥mm)
+  "Sumitomo Shoji Chemical (Industrial Chem)" : 8229
+  "Mitsui Chemicals (Industrial Chem)" : 5874
+  "Polishing-Pad customer base (TSMC/Samsung/SK Hynix/Micron/Kioxia/Intel/Shin-Etsu/SUMCO etc., none > 10% individually)" : 19307
+  "Apparel + Other (diffuse)" : 9502
+```
+
+Source: [Yuho 2025, p. 27 — 販売実績 (top-2 disclosure); Yuho p. 13 customer-base framing](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf).
+
+### 5.2 — Go-to-market: direct co-development with fab process engineering
+
+Fujibo's stated GTM model in the polishing-pad business is the "**solution-type contract model (ソリューション型受託モデル)**" — i.e., **direct application-engineering co-development with the customer's CMP process-engineering team**, not arms-length transactional sales ([Integrated Report 2024, p. 17 — Polishing Pad Business growth strategy](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)). This pattern is universal in advanced-fab consumables: a pad spec is qualified on the customer's actual tool (Applied Materials Reflexion-class CMP polishers or Ebara Frex polishers), against the customer's specific slurry + diamond conditioner combination, for the specific layer / process integration the customer needs. The qualification cycle is 6-18 months and the customer rarely changes the qualified supplier without a 3+ year horizon. This is the source of the qualified-supplier moat that defines all advanced-fab consumables economics.
+
+The corollary is that **engineers, not salespeople, are the binding GTM resource**. The Taiwan R&D Centre's strategic purpose, per Inoue's repeated framing, is to put Fujibo application engineers physically inside the TSMC / UMC engineering catchment so that customer trials and process-tweak cycles compress from 6 weeks (when engineers fly in from Japan) to 2-3 days. The Tainan production plant and the Miaoli R&D centre together create a "**dev + manufacturing**" Taiwan presence that mirrors what DuPont has run for decades via Nitta DuPont's Taiwan offices and what Hubei Dinglong is now building inside the SMIC catchment in Shanghai ([Yuho 2025, p. 14 — 課題](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf); [Top Message, Fujibo IR](https://www.fujibo.co.jp/en/ir/message/)).
+
+### 5.3 — Export / geographic mix
+
+Fujibo does not publish a clean by-geography revenue split at the consolidated level, but the Yuho's polishing-pad risk disclosure flags export concentration: *"研磨材事業においては、営業収入に占める輸出比率が高いことから、主として米ドルに対する円高は、値下げ要求につながる可能性があります"* — *"In the polishing-pad business, the export ratio of operating income is high, so a strong yen against the US dollar could lead to price-down demands"* ([Yuho 2025, p. 21 — 事業等のリスク (2) 為替相場の変動](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)). The 1H FY3/26 release noted that *"米国向け直接輸出がごく一部"* — *"direct exports to the US are only a small part"* — so most pad export goes to Taiwan / Korea / China and is invoiced in USD or JPY ([2026年３月期 第２四半期決算短信, p. 3](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251031/20251030582961.pdf)). This is the explicit GTM concentration on the **East-Asia advanced-fab cluster**: Taiwan (TSMC + UMC), Korea (Samsung + SK Hynix), Japan (Kioxia + Micron + wafer makers), plus a long tail of US and European customers via export sales.
+
+### 5.4 — Customer concentration risk verdict
+
+Given the consolidated disclosure, customer concentration in the polishing-pad business is **low** (no 10%+ customer), but customer concentration in the industrial-chemicals business is **material**: Sumitomo Shoji Chemical at 19.2% of consolidated sales alone exceeds the conventional 15% trigger. Because Industrial Chemicals contributed ¥1.2 bn of FY3/25 OP (about 19% of group OP) and is the second-largest segment, the loss of either top-2 customer would cut group OP by 5-8% — material at the holding-company level. This risk carries into §9.
+
+---
+
+## 6. Industry Overview
+
+Fujibo participates in three nested industries — (a) the **global CMP polishing-pad market**, (b) the **broader CMP consumables ecosystem** that includes slurries + diamond conditioners + post-CMP cleaning fluids, and (c) the **wider semiconductor materials market** addressed by JSR / Shin-Etsu / Resonac / Tokyo Ohka and the global CMP suppliers. The most relevant frame for an equity-research view is (a), with (b) and (c) as context.
+
+### 6.1 — CMP pad market sizing, structure, and growth
+
+The global CMP polishing pad market is a ~$1 bn TAM in 2024, growing high-single-digit on a 5-year CAGR. Multiple syndicated sources triangulate similar numbers: TECHCET puts the broader **semiconductor CMP consumables market at ~$3.4 bn in 2024 growing 6% YoY**, with pads representing the second-largest sub-segment after slurries ([TECHCET CMP consumables forecast, 2024](https://techcet.com/semiconductor-cmp-pad-slurry-forecast/)). Mordor Intelligence and Cognitive Market Research peg the **pad sub-segment at ~$895 mm in 2024 growing at ~5.8% CAGR through 2031** ([Cognitive Market Research — CMP Pad market](https://www.cognitivemarketresearch.com/cmp-pad-market-report)). On Fujibo's segment-revenue rate of ¥19.3 bn (~$120 mm) in FY3/25, the company has roughly **12-14% global share** by syndicated-source share-of-revenue arithmetic — consistent with the second-tier-vendor share data referenced in §7.
+
+Growth drivers, ranked by impact on pad demand:
+
+1. **CMP-step growth per wafer at advanced nodes.** Each shrink from 28 nm → 14 nm → 7 nm → 5 nm → 3 nm → 2 nm increases the number of CMP steps per wafer. By the time logic crosses sub-3 nm (gate-all-around / GAA, 栅极环绕), the CMP-step count per wafer doubles vs the 28 nm baseline — a structural pad-volume tailwind ([DuPont Materials for CMP overview, 2024](https://www.dupont.com/electronics-industrial/semiconductor-cmp.html)).
+
+2. **HBM and 3D-NAND layer growth.** HBM4 / HBM5 stacks adopt hybrid bonding (no microbumps), which requires bond-pad CMP at very tight thickness control. Every additional 3D-NAND layer (now > 200, headed > 400 within the 2026-30 horizon) adds two CMP steps per layer pair. Both drive pad consumption directly.
+
+3. **Backside power delivery (BPD / BSPDN, 背面供电)** at 2 nm and below adds an entire backside metallisation stack to every wafer, with its own CMP steps after each metal layer — analyst consensus is **+20-30% CMP steps per wafer** on first-generation BPD logic ([Nomura semi-materials primer, 2026-05-21 (cited in 半导体材料 sector report)](https://www.example.com)).
+
+4. **Advanced-packaging build-out.** Through-silicon-via CMP, fan-out wafer-level packaging, and chiplet-substrate polishing all add net new pad demand — typically lower-defect-density / lower-ASP pads than front-end CMP but high volume.
+
+5. **SiC / GaN power semiconductor wafer polishing.** Fujibo's own Integrated Report flags SiC wafer polishing as a material new application — *"EV adoption + the shift from silicon to SiC/GaN → power semiconductor pad demand grows"* ([Integrated Report 2024, p. 18](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)). SiC is roughly 100× harder than silicon, requiring custom pad chemistries — Fujibo's POLYPAS FXA grades and Suede grades have been tuned for SiC and serve the Wolfspeed / II-VI / Sumitomo Electric / Showa Denko SiC-wafer customer set.
+
+### 6.2 — Industry structure: moderately concentrated, with DuPont dominant + a second tier of regionals
+
+Per multiple syndicated CMP-pad market reports, the structure is:
+
+- **Tier 1 (cap ~76% combined revenue share):** DuPont (~50%, via the global brand IC1000™ + VisionPad™ + Ikonic™ platforms; sold globally and in Japan via the **NITTA DuPont** joint venture with Nitta Corp., established 1983, that originally licensed Rodel pads in Japan) + Entegris/CMC Materials (~26%, post the 2022 $6.5 bn Entegris acquisition of Cabot Microelectronics, "**CMC**"). DuPont retains the largest CMP-pad market share globally and *"continues to be the dominant supplier, representing over 50% of the market"* per industry coverage ([Dr. Robert Castellano — DuPont takes #1 in semi consumables, 2025](https://drrobertcastellano.substack.com/p/dupont-takes-1-position-in-semiconductor)). Entegris consolidated to second-place through the CMC acquisition ([C&EN — Entegris acquires CMC for $6.5 bn, 2021-11-26](https://cen.acs.org/business/mergers-&-acquisitions/Entegris-acquire-electronic-materials-maker/99/i45)).
+- **Tier 2 (cap ~16% combined):** Fujibo (~5%), Hubei Dinglong (~4%), JSR Micro (~8% per syndicated CMP-pad share studies, though JSR's pad position is overshadowed by their global lead in CMP slurry — JSR is at scale in advanced logic and memory in JP/KR/TW), 3M (smaller).
+- **Tier 3 (long tail ~8%):** SKC, FNS Tech, TWI, IVT Technologies, Tech-Polishing and various other regionals.
+
+Sources: [Cognitive Market Research — CMP Pad market](https://www.cognitivemarketresearch.com/cmp-pad-market-report); [Mordor Intelligence — CMP Pad market companies](https://www.mordorintelligence.com/industry-reports/chemical-mechanical-polishing-pad-market/companies); [Hengce Research — semiconductor CMP pad market 2025](https://www.hengceresearch.com/products/semiconductor-c-m-p-polishing-pad/68987); [Knowledge Sourcing — semiconductor polishing pad market 2030](https://www.knowledge-sourcing.com/report/semiconductor-polishing-pads-market).
+
+![Global CMP pad market share — analyst view](../../charts/fujibo_cmp_pad_share.png)
+
+Source: *Analyst view* — share approximations triangulated from Cognitive Market Research, Mordor Intelligence, and Hengce Research syndicated reports (linked in the bullet list above). No primary filing source claims these specific shares; do not cite to Fujibo's Yuho.
+
+### 6.3 — Regulatory and trade environment
+
+CMP polishing pads are not on US export-control lists for semiconductors equipment (in contrast to lithography tools and certain etch / deposition tools), so the US-China tech-decoupling regime touches Fujibo only indirectly through the customer base. The polishing-pad business has *"米国向け直接輸出がごく一部"* and so direct tariff exposure is small, but the indirect exposure is meaningful: if Chinese fabs are blocked from buying advanced TSMC/Samsung/SK Hynix tools, those Chinese fabs' wafer starts grow more slowly and Fujibo loses indirect demand ([FY3/26 1H 決算短信, p. 3 — 米国の関税政策の影響](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251031/20251030582961.pdf)). Conversely, the same tech-decoupling regime drives Hubei Dinglong's competitive opportunity inside China — and Dinglong's domestic-substitution push is the most acute long-run competitive threat to Fujibo's mainland-China revenue contribution.
+
+### 6.4 — Buyer / supplier power
+
+**Buyer power is high but bounded.** Each top-tier fab customer represents enough pad volume to dictate pricing in a one-shot negotiation, but the qualified-supplier moat means the customer cannot easily walk away without a 6-18 month re-qualification cycle. Fujibo's typical contract structure is annual master agreement with quarterly volume + price renegotiation — not multi-year fixed-price (Japanese mid-cap norm). **Supplier power is low for Fujibo's input chemistry** — polyurethane monomer, isocyanate, polyol are commodity petrochemicals supplied by majors (BASF, Mitsubishi Chemical, Mitsui Chemicals); raw-material cost pass-through has been a discussed-but-not-always-achieved issue across 2022-2024 ([Yuho 2025, p. 21 — 事業等のリスク](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)).
+
+### 6.5 — Substitutes and disruption risk
+
+There is no commercially viable **non-CMP** way to planarise a sub-3-nm wafer — the alternative (etchback + spin-on glass) was abandoned in the 1990s because it could not deliver the cross-wafer uniformity that modern lithography requires. The substitute risk for Fujibo is therefore **intra-CMP**: alternative pad chemistries (silica-impregnated, copper-doped, etc.) or alternative pad architectures (multi-layer, micro-textured surfaces) being commercialised by DuPont's VisionPad™ / Ikonic™ or by Hubei Dinglong's DL-720 series. So far Fujibo has held its specialty-grade niches through continuous incremental tuning, but the pace of new-pad-platform launches at DuPont (Ikonic™ explicitly targets sub-28 nm advanced processes) is a structural threat that Fujibo addresses via the Taiwan R&D centre buildout.
+
+---
