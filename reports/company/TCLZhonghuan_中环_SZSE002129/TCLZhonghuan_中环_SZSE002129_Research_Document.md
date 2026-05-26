@@ -271,3 +271,83 @@ The shared foundation between the two chains: **monocrystalline-silicon pulling 
 ![TCL Zhonghuan gross margin by segment: 2023-2025](../../charts/tclzhonghuan_gm_trend.png)
 
 *Source: [TCL 中环 2025 年年度报告, p. 16](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF) · [2024 年年度报告, p. 19](https://static.cninfo.com.cn/finalpage/2025-04-26/1223330188.PDF) · [2023 年年度报告, p. 17](https://static.cninfo.com.cn/finalpage/2024-04-26/1219863251.PDF)*
+
+## 5. Customers & Go-to-Market
+
+The company's top-5 customer aggregate sales in 2025 reached ¥6.704 bn, or **23.08%** of annual sales; related-party sales accounted for 6.88% of annual sales (primarily the TCL Group internal channel and Maxeon-related transactions). The top-5 break down as: Customer #1 ¥2.443 bn (8.41%), Customer #2 ¥1.998 bn (6.88%), Customer #3 ¥0.896 bn (3.08%), Customer #4 ¥0.720 bn (2.48%), Customer #5 ¥0.648 bn (2.23%) ([TCL 中环 2025 年年度报告, p. 17](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)).
+
+**Versus 2024**: top-5 concentration was 27.61%, the single largest customer 9.91% and second-largest 7.84% (related party). Top-5 concentration thus dropped 4.5 percentage points YoY; the largest customer's share dropped 1.5 percentage points ([TCL 中环 2024 年年度报告, p. 21](https://static.cninfo.com.cn/finalpage/2025-04-26/1223330188.PDF)).
+
+The company does not name its top-5 customers in the annual report (the disclosure is anonymized as "Customer #1" through "Customer #5"). Based on public-channel triangulation, however, the customer structure is roughly:
+
+- **PV wafer customers**: large cell / module makers — JinkoSolar, Tongwei, RisenEnergy, Aiko, plus TCL Group internal (Maxeon, Yidao New Energy), etc.
+- **PV module customers**: domestic power-plant EPC contractors (Power China, China Energy Construction Group, Datang, Huaneng — all central / SOE utilities); international channels (via the SunPower brand, into North America, Europe, and APAC).
+- **Semiconductor wafer customers (Zhonghuan Advanced)**: **SMIC (中芯国际, `SSE:688981`, `HKEX:981`), Hua Hong (华虹, `HKEX:1347` / `SSE:688347`), CR Micro (华润微, `SSE:688396`), YMTC (长江存储 / Yangtze Memory Technologies Corp.), CXMT (长鑫存储 / ChangXin Memory Technologies), Active Semi (积塔半导体), Silan Microelectronics (`SSE:600460`), Yangjie Tech (`SZSE:300373`)** — Zhonghuan Advanced now covers essentially all domestic mainstream wafer fabs, with international shipments to TSMC, SK hynix, and Infineon among others ([12 英寸大硅片企业分析, 新浪新闻](https://www.sina.cn/news/detail/5294428182282695.html) · [中环领先与鑫芯半导体战略重组, 网易订阅 2023-01-19](https://www.163.com/dy/article/HRG7M05J0550C0ON.html)).
+
+```mermaid
+pie title TCL Zhonghuan 2025 top-5 customer concentration (¥29.05bn total)
+    "Customer 1 8.41%" : 24.43
+    "Customer 2 6.88% (related)" : 19.98
+    "Customer 3 3.08%" : 8.96
+    "Customer 4 2.48%" : 7.20
+    "Customer 5 2.23%" : 6.48
+    "Other 76.92%" : 223.46
+```
+
+*Source: [TCL 中环 2025 年年度报告, p. 17](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)*
+
+**Contract structure**: The annual report discloses that the company has "no major sales contract or major purchase contract" — i.e. no single contract exceeding 10% of consolidated revenue ([Ibid., p. 16](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)). The sales model is primarily direct sales (98.41%), with distribution at only 1.59%. This implies sales relationships are mostly "annual master framework + monthly / quarterly purchase orders" on a rolling basis, with no especially long-duration price-locked contracts — the industry-standard practice in PV, but it also means customer-switching costs are relatively low.
+
+**Geographic distribution**: Domestic ¥25.53 bn (87.88%); export ¥3.52 bn (12.12%) ([Ibid., p. 14](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)). International sales run primarily through Maxeon / SunPower (US), the planned Saudi RELC JV plant, and the TCL Solar direct-overseas channel. International share is essentially flat versus 2024 (12.35%), with the slight absolute increase tracking total-revenue recovery.
+
+**Key strategic customer cases**:
+- **Saudi Public Investment Fund (PIF) / RELC + Vision Industries**: Signed in 2024, the partnership will jointly build "the largest overseas crystal-and-wafer facility to date" in the Middle East — a flagship case for the company's international PV footprint ([TCL 中环 2024 年年度报告, p. 16](https://static.cninfo.com.cn/finalpage/2025-04-26/1223330188.PDF)).
+- **SMIC + Hua Hong**: Zhonghuan Advanced's 12-inch polished + epitaxial wafers occupy an "important supply position" at China's two largest wafer fabs. The annual report does not name the customers directly, but industry public channels confirm this repeatedly ([12 英寸大硅片企业分析, 新浪新闻](https://www.sina.cn/news/detail/5294428182282695.html)).
+
+*Analyst view:* The top-5 concentration decline from 27.61% → 23.08% is a benign signal — reflecting diversification of semiconductor-customer mix + international-module-customer additions + reduced reliance on any single PV anchor. The **6.88% related-party share** warrants ongoing attention: it covers transactions with TCL Group internal, Maxeon, and (going forward) Yidao New Energy. Whether these are market-priced and structurally sustainable is a governance question that warrants persistent tracking. The customer-anonymization is standard A-share practice, but for industry-research investors it reduces transparency — we recommend probing the top-5 customer names and revenue mix at Zhonghuan Advanced during 1H 2026 IR meetings.
+
+## 6. Industry Overview
+
+The company sits simultaneously within **PV manufacturing** and **semiconductor silicon materials** — two industries with entirely different cycles. This section walks the "semiconductor silicon materials → PV" order, since the report's anchor (Nomura's Figure 35) is the semi-wafer thesis.
+
+### 6.1 Semiconductor silicon-wafer industry
+
+**Industry definition**: Semiconductor silicon wafers (semiconductor silicon wafer / 半导体硅片), also called "electronic-grade silicon wafers," span diameters from 50.8mm (2") to 300mm (12") and process variants including CZ pulling, FZ float-zone, EPI epitaxy, SOI, and Smart-Cut. They are the foundational substrate for nearly all integrated circuits (ICs) and most power / RF / optoelectronic devices. Typical industry scale: **global USD ~13.3 bn for 12-inch in 2025**, plus 8-inch-and-below at another USD ~5-7 bn, for a total of **USD ~18-20 bn** — about 22-25% of the broader semiconductor-materials market (~USD 80 bn) ([12 Inch Semiconductor Silicon Wafer Market 2025, Market Growth Reports](https://www.marketgrowthreports.com/market-reports/12-inch-semiconductor-silicon-wafer-market-123690) · [Nomura GC Semi 2026-30F, p. 18, 2026-05-21 (local summary)](../../sector/半导体材料.md)).
+
+**Global structure — international top-5 oligopoly + rising Chinese challengers**:
+
+| Maker | Country | 12-inch Global Share | Highlights |
+|-------|---------|---------------------|------------|
+| Shin-Etsu Chemical | Japan | ~31% | 14% capacity expansion in 2025 for AI-semi demand |
+| SUMCO | Japan | ~27% | High-purity technology leadership |
+| GlobalWafers (GWC) | Taiwan | ~14% | Entering new upcycle 2027-28 (Nomura Buy, TP TWD 850) |
+| Siltronic AG | Germany | ~9% | Europe's only player |
+| SK Siltron | Korea | ~9% | SK Group subsidiary |
+| **TCL Zhonghuan + Zhonghuan Advanced** | China | ~3-4% | #1 by revenue in China; 2025 revenue ¥5.71 bn |
+| NSIG (沪硅产业) | China | ~2-3% | Shanghai Simgo + Okmetic + Simgui (SOI) |
+| Lion Microelectronics + GRINM-Semi + Others | China | ~1-2% | 8-inch / power-device specialised |
+| **Top-5 Aggregate** | | **>85%** | Tight oligopoly |
+
+*Source: [Nomura GC Semi 2026-30F, pp. 34-44, 2026-05-21 (local summary)](../../sector/半导体材料.md) · [12 Inch Semiconductor Silicon Wafer Market 2025, Market Growth Reports](https://www.marketgrowthreports.com/market-reports/12-inch-semiconductor-silicon-wafer-market-123690) · [集微咨询《2025 中国半导体硅片行业上市公司研究报告》, 新浪财经 2025-12-24](https://finance.sina.com.cn/stock/relnews/cn/2025-12-24/doc-inhcwxmi4307989.shtml)*
+
+**Demand drivers (2026-30F)**:
+- **AI compute**: HBM (High Bandwidth Memory) requires 12-inch DRAM wafers + advanced packaging; GPU / ASIC use leading-edge logic (3nm / 2nm / A16) wafers. Per Nomura's anchor, TSMC 2027F capex could reach ~USD 70 bn (capex intensity ~50%), driving sharp 12-inch wafer demand growth ([Nomura GC Semi 2026-30F, pp. 13-14, 2026-05-21 (local summary)](../../sector/半导体材料.md)).
+- **Backside Power Delivery (BPD / 背面供电)**: Mass production from 2028-29 — requires "two-wafer + multi-bond + thinning" workflows, directly benefitting GWC, Zhonghuan Advanced, and NSIG (Nomura calls out "wafer-per-die-unit consumption increases") ([Nomura GC Semi 2026-30F, pp. 6-9, 2026-05-21 (local summary)](../../sector/半导体材料.md)).
+- **Wafer-bonded NAND (YMTC Xtacking) + DRAM-on-Logic Wafer-on-Wafer**: Ramping in 2026-28 — logic + DRAM joined via hybrid bonding for dramatically higher SoC memory bandwidth, requiring more silicon and additional CMP steps ([Nomura GC Semi 2026-30F, p. 9 (local summary)](../../sector/半导体材料.md)).
+- **Optical communications / photonic SOI**: 1.6T optical modules and co-packaged optics (CPO) are ramping; photonic-SOI substrates are needed for SiPh PICs, providing structural demand uplift for Soitec, NSIG (via Simgui Technology), and TCL Zhonghuan SOI if capacity is built ([Nomura GC Semi 2026-30F, pp. 11-12, 60-65 (local summary)](../../sector/半导体材料.md)).
+
+**Domestic-substitution pace**: 8-inch localization rate is ~55%; 12-inch is only ~10% — the 12-inch is the least localized and highest-headroom sub-segment. In 2024-25, NSIG and Zhonghuan Advanced both posted >70% YoY growth in 12-inch shipments ([硅片洗牌进行时, OFweek 太阳能光伏网 2025-12](https://solar.ofweek.com/2025-12/ART-8420-2600-30675837.html)). China's 12-inch wafer capacity expanded from under 1 million wafers/month in 2022 to nearly 3 million wafers/month by 1H 2025 — a 3× expansion in three years ([硅片洗牌进行时, 同上](https://solar.ofweek.com/2025-12/ART-8420-2600-30675837.html)).
+
+**Regulatory / policy**: China's "National IC Industry Investment Fund" Phases II and III continue to fund semiconductor-materials capex; the Ministry of Finance grants a 15% IC-enterprise VAT super-deduction (effective 2024-2027); the western-region preferential corporate-income-tax rate of 15% applies to encouraged-industry enterprises (Zhonghuan Advanced's Hohhot project is a continuing beneficiary) ([TCL 中环 2025 年年度报告, p. 128](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)). On the geopolitical front, the US has not yet directly restricted Chinese semiconductor-materials suppliers, but Chinese 12-inch wafers have not yet entered the 5nm-and-below leading-edge logic supply chain (TSMC's supplier-qualification process runs 3-5 years).
+
+### 6.2 PV manufacturing industry
+
+**Industry definition**: PV manufacturing covers the full value chain: polysilicon feedstock → silicon ingots / wafers → cells → modules → power-station EPC. The wafer link is TCL Zhonghuan's strong suit.
+
+**2025 global new PV installations were 580 GW** ([TCL 中环 2025 年年度报告, p. 15 citing CPIA](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)), with 2026 expected to grow further, though at slowing rates. The wafer link entered a severe "involution-style" competitive cycle in 2024-25 — capacity expanded from ~500 GW at end-2022 to >1,000 GW by end-2025, far exceeding downstream demand. The entire industry — polysilicon + wafer + cell + module across all four links — went into losses ([TCL 中环 2025 年年度报告, p. 4 Chairman's Letter](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)).
+
+**Structure and concentration**: The global PV-wafer top-5 (TCL Zhonghuan, LONGi Green Energy, JA Solar, JinkoSolar, Shuangliang Energy-Saving) hold combined market share of roughly 70-75% — "highly concentrated yet still in oversupply." LONGi Green Energy (M10 / 182mm roadmap) and TCL Zhonghuan (G12 / 210mm roadmap) lead the two-size camp. In 2025 G12-series shipments grew +40.8% YoY; G12R has become the new mainstream — market forecasts call for the 210-series to hit 60% market share by 2025 and 91% by 2029 ([210 硅片颠覆: TCL 中环的尺寸跨越, 新浪财经 2025-03-31](https://finance.sina.com.cn/roll/2025-03-31/doc-inerqfen1026795.shtml)).
+
+**"Anti-involution" + policy drivers**: In 2025 China's Ministry of Industry and Information Technology (MIIT) issued anti-involution policy guidance, urging the PV industry to improve supply / demand balance via M&A consolidation and price discipline. Polysilicon / wafer prices recovered in Q3 2025, but Q4 demand softened and prices came back under pressure. With BC-cell differentiation and overseas market opening in 2026, the industry may begin a slow recovery ([TCL 中环 2025 年年度报告, p. 10](https://static.cninfo.com.cn/finalpage/2026-03-25/1225029362.PDF)).
+
+**International trade barriers**: US Section 201 / 301 / AD/CVD tariffs on Chinese PV, the *One Big Beautiful Bill Act* (BBBA) restricting Chinese-background modules in the US market, and EU Carbon Border Adjustment Mechanism (CBAM) tariffs on Chinese PV products are all critical headwinds to TCL Zhonghuan's globalization — Maxeon's transformation difficulties are a direct example.
