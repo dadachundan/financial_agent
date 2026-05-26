@@ -425,6 +425,163 @@ Sizing Materion's market opportunity requires building it bottom-up across the t
 
 ---
 
+## 9. Risk Assessment
+
+Risks are organized across four buckets per the project's standard risk-taxonomy framework: company-specific, industry/market, financial, and macroeconomic. Each risk is sized in terms of likelihood and revenue/earnings impact, with disclosed mitigants where they exist.
+
+### Company-Specific Risks
+
+**(1) Beryllium occupational-health and product-liability exposure (high impact, moderate likelihood).** Beryllium dust inhalation can cause **chronic beryllium disease (CBD), berylliosis, and lung cancer**; Materion has been the defendant in hundreds of CBD personal-injury cases over the past four decades. The current disclosure is the best the company has reported in many years: *"As of December 31, 2025 there were no pending beryllium cases"* ([Materion FY2025 10-K, Item 3 Legal Proceedings — Beryllium Claims, p. 18](https://www.sec.gov/Archives/edgar/data/1104657/000110465726000011/mtrn-20251231.htm)). But the historical base rate is non-zero, OSHA's 2017 PEL tightening continues to drive multi-year capex obligations, and any single industrial-hygiene event at Elmore, Delta, Reading, or Tucson could resurface case-filing activity. **Mitigant:** Materion maintains $20-30M of insurance against beryllium claims (subject to annual deductible) and has invested ~$100M+ cumulatively in ventilation and PPE since 2017.
+
+**(2) Customer concentration in Performance Materials (high impact, demonstrated 4Q-2025).** The Q4-2025 quality event at "a large precision clad strip customer" took ~30% of Performance Materials' consumer-electronics volume offline for one quarter and cost $27.3M in scrap, claim, and plant-idling expense ([Materion FY2025 10-K, MD&A — Performance Materials Segment, p. 23](https://www.sec.gov/Archives/edgar/data/1104657/000110465726000011/mtrn-20251231.htm)). The same customer accounted for ~10% of consolidated FY2023 and FY2024 revenue. While 10% is not extreme on the consolidated level, it represents ~25-30% of Performance Materials segment revenue — a concentration that creates segment-level cyclicality and reputational risk. **Mitigant:** management has implemented process and quality-control modifications and resumed shipping; the customer relationship appears intact per Q1-2026 commentary.
+
+**(3) Goodwill-impairment recurrence in Precision Optics or Electronic Materials (moderate impact, low-to-moderate likelihood).** Materion took a **$73M goodwill and long-lived-asset impairment against Precision Optics Malaysia in FY2024**; the Electronic Materials and Performance Materials carrying values include ~$200-300M of acquisition-related goodwill (H.C. Starck primarily) that would be exposed to impairment if Electronic Materials growth disappoints over a sustained period ([Materion FY2025 10-K, MD&A — Goodwill impairment, p. 22](https://www.sec.gov/Archives/edgar/data/1104657/000110465726000011/mtrn-20251231.htm)). **Mitigant:** annual goodwill testing under ASC 350 with multi-scenario sensitivity; current Electronic Materials run-rate is well above the original H.C. Starck deal assumptions.
+
+**(4) Defense-program timing and budget-cycle risk (moderate impact, moderate likelihood).** The $65M customer-funded Elmore expansion announced February 12, 2026 is a strong positive signal, but defense-program funding is subject to annual DoD appropriation cycles, periodic continuing-resolution gaps, and presidential-administration priority shifts. A multi-quarter pause in DoD orders or budget sequester would directly impact Performance Materials/Performance Solutions revenue. **Mitigant:** Materion's beryllium content sits across multiple DoD program lines (missile guidance, space optics, ISR) reducing single-program risk.
+
+**(5) Beryllium ore reserve depletion risk (low near-term, moderate long-term).** The Spor Mountain bertrandite mine has been in production since 1968 and has known reserve life; Materion files a Technical Report Summary (most recently 2021) under SEC mining-disclosure rules but did not file an updated TRS in 2025 because reserves did not change materially ([Materion FY2025 10-K, Item 2 Properties — Mine Exploration Status, p. 18](https://www.sec.gov/Archives/edgar/data/1104657/000110465726000011/mtrn-20251231.htm)). Long-term mine planning, supplemental beryl ore purchases (Madagascar, Brazil), and ongoing mine-development capex investments are managed via dedicated capital programs.
+
+### Industry/Market Risks
+
+**(6) AI-capex cycle reversal (high impact, moderate likelihood at current sector valuation).** Approximately 48% of FY2025 net sales sit in the semiconductor end market, the bulk of which is Electronic Materials precious-metal sputter targets used in advanced-node logic and HBM memory manufacturing. The Nomura 2026 report sees 2026-2030 as the materials super-cycle window, but acknowledges valuation downside if AI-compute capex pauses ([Nomura "Greater China Semi", 2026-05-21](https://www.nomuraconnects.com/)). **Mitigant:** value-added sales mix is more diversified than headline revenue (pass-through metal masks the underlying mix); Performance Materials defense exposure provides counter-cyclical offset.
+
+**(7) Substitution risk for non-precious-metal sputter targets (moderate impact, low-to-moderate likelihood).** Process substitution risks include (a) ALD/CVD replacing PVD for some metallization layers at advanced nodes, particularly for high-aspect-ratio fills; (b) electroplating replacing PVD seed in some interconnect schemes; (c) JX Advanced Metals or Honeywell capturing share with co-developed alloys at new nodes. **Mitigant:** Materion's precious-metal target franchise is the part of the portfolio least exposed to ALD/CVD substitution, because precious-metal CVD precursors remain immature and economically unattractive at production scale.
+
+**(8) Defense reshoring policy reversal (low likelihood, high impact).** US DoD funding for domestic beryllium under Defense Production Act Title III has been bipartisan-supported since the 1990s; a policy reversal would require sustained budget-priority change rather than a single administration's action. The recent $65M customer co-investment is a strong forward-looking signal of continued reshoring momentum.
+
+**(9) Optical-coatings market fragmentation accelerating (moderate impact, demonstrated FY2024 in Malaysia).** Precision Optics sits in a fragmented industry where smaller specialty competitors (Iridian Spectral, Alluxa, Semrock/IDEX) can win share through agile customer-coatings work. The FY2024 Malaysia impairment was partly a fragmentation-symptom. **Mitigant:** Optics Balzers integration consolidated Materion's European share; defense-aerospace coatings demand growing rapidly (+35% YoY in FY2025 aerospace/defense for Precision Optics).
+
+### Financial Risks
+
+**(10) Precious-metal price volatility (medium impact, low-to-moderate likelihood).** Although Materion passes metal cost through to customers in principle, inventory carrying value can swing when metal prices move sharply between purchase and consignment. The 10-K notes: *"The cost of gold, silver, platinum, palladium, copper, ruthenium, iridium, rhodium, rhenium, and osmium can be quite volatile. Our pricing policy is to directly pass the market cost of these metals on to the customer in order to mitigate the impact of metal price volatility on our results from operations"* ([Materion FY2025 10-K, MD&A — pass-through metal cost commentary, p. 26](https://www.sec.gov/Archives/edgar/data/1104657/000110465726000011/mtrn-20251231.htm)). **Mitigant:** consignment arrangements for the largest precious-metal inventories; customer-supplied-metal arrangements for some accounts; tolling rather than purchase-and-sell structures where feasible.
+
+**(11) Net debt and integration-cost burden (low-to-moderate impact, moderate likelihood).** Net debt of ~$390M ($400M total debt less $13.7M cash) at year-end 2025 against $217M of adjusted EBITDA puts net leverage at ~1.8× — manageable but with limited headroom for further large M&A absent debt paydown. Interest expense was $30.7M in 2025; a 100bp rise in floating-rate debt could add $2-4M to annual interest. **Mitigant:** $103M of operating cash flow plus $50M repurchase authorization gives flexibility; dividend payout ratio is low (~15% of net income).
+
+**(12) Valuation / multiple-compression risk (moderate impact, moderate likelihood at current 58x TTM-P/E).** MTRN's TTM P/E sits well above the 31x peer median and well above MTRN's own historical 20-30x range. A return to mid-cycle multiples on flat earnings would imply 25-40% downside from the May 2026 share price. The mitigant is **earnings growth into the multiple**: if FY2026 adj-EPS hits the high end of $6.50 and FY2027 grows another 15% to ~$7.50, the implied forward P/E at $215 drops to ~29x — back in the historical band.
+
+### Macroeconomic Risks
+
+**(13) Tariff and trade-policy disruption (high impact, moderate likelihood at current geopolitical baseline).** The 10-K's Forward Looking Statements explicitly call out "*the impact of tariffs and trade agreements*" as a risk factor ([Materion FY2025 10-K, Forward-looking Statements, p. 1](https://www.sec.gov/Archives/edgar/data/1104657/000110465726000011/mtrn-20251231.htm)). Materion exports beryllium-bearing finished components to allied-country defense customers and imports raw inputs (precious metals, refractory metals, advanced ceramics) from Japan, Germany, Korea — a meaningful tariff cycle could compress segment margins by 1-3 points until pass-through pricing catches up.
+
+**(14) Energy and labor cost inflation (low-moderate impact, low-moderate likelihood).** Multiple Materion facilities depend on single-source electric power and natural gas; Spor Mountain, Delta, and Elmore are energy-intensive. Union labor agreements at Reading and Lorain are subject to multi-year renegotiation cycles. **Mitigant:** long-term gas hedges; multi-year union agreements with productivity-linked terms.
+
+**(15) Geopolitical conflict risk in Asia (low likelihood, very high impact).** A meaningful escalation involving Taiwan or Korea would materially disrupt the leading-edge semiconductor manufacturing footprint and, by extension, the entire global sputter-target demand. The 10-K's risk-factor language already references "geopolitical conflicts such as the conflict between Russia and Ukraine" as an analogue. **Mitigant:** Korean (Konasol/Dangjin) and US-domestic manufacturing footprint provides geographic diversification, but the customer demand center (Taiwan/Korea fabs) cannot be hedged.
+
+---
+
+## References
+
+### Primary filings — Materion Corporation
+
+- [Materion FY2025 10-K (filed 2026-02-12)](https://www.sec.gov/Archives/edgar/data/1104657/000110465726000011/mtrn-20251231.htm) — primary anchor source
+- [Materion FY2024 10-K (filed 2025-02-19)](https://www.sec.gov/Archives/edgar/data/1104657/000110465725000024/mtrn-20241231.htm)
+- [Materion 2026 DEF 14A (filed 2026-03-26)](https://www.sec.gov/Archives/edgar/data/1104657/000110465726000022/mtrn-20260326.htm)
+- [Materion Q1-2026 earnings press release, 2026-04-29 (8-K)](https://www.sec.gov/Archives/edgar/data/1104657/000110465726000026/q12026pressrelease.htm)
+- [Materion Q4-2025 earnings press release, 2026-02-12 (8-K)](https://www.sec.gov/Archives/edgar/data/1104657/000110465726000006/q42025pressrelease.htm)
+- [Materion Q3-2025 earnings press release, 2025-10-29 (8-K)](https://www.sec.gov/Archives/edgar/data/1104657/000110465725000186/q32025pressrelease.htm)
+- [Materion 8-K — Asset Purchase Agreement (H.C. Starck), 2021-09-19](https://www.sec.gov/Archives/edgar/data/0001104657/000110465721000094/mtrn-20210919.htm)
+- [HCS-EM acquisition press release exhibit, 2021-09-20](https://www.sec.gov/Archives/edgar/data/0001104657/000110465721000094/hcselectronicmaterialsre.htm)
+- [Brush Engineered Materials 8-K announcing name change to Materion, 2011](https://www.sec.gov/Archives/edgar/data/0001104657/000129993311000170/exhibit1.htm)
+
+### Materion corporate / IR pages
+
+- [Materion leadership page — Jugal Vijayvargiya](https://www.materion.com/en/about-materion/company-leadership/jugal-vijayvargiya)
+- [Materion investor news — Materion Corporation to Acquire Optics Balzers, 2020](https://investor.materion.com/news/news-details/2020/Materion-Corporation-to-Acquire-Optics-Balzers/default.aspx)
+- [Materion Expands Capabilities For Aluminum-Beryllium Products](https://www.materion.com/en/about-materion/news/beryllium-and-composites/materion-beryllium-and-composites-expands-capabilities-for-proprietary-albecast-aluminum-beryllium-products)
+
+### Industry / market research
+
+- [Nomura "Greater China Semi: A guide to Semi renaissance in 2026~30F", 2026-05-21](https://www.nomuraconnects.com/) — subscription required; internal summary in `reports/sector/半导体材料.md`
+- [Sputtering Target Material For Semiconductor Market, Verified Market Research, 2025](https://www.verifiedmarketresearch.com/product/sputtering-target-material-for-semiconductor-market/)
+- [Sputtering Targets Market Size & Forecast 2025-2035, Future Market Insights, 2025](https://www.futuremarketinsights.com/reports/sputtering-targets-market)
+- [Sputtering Target Material Market Analysis, GlobalGrowthInsights, 2025](https://www.globalgrowthinsights.com/market-reports/sputtering-target-material-market-107112)
+- [Sputtering Target Material Market Outlook 2025-2032, Intel Market Research, 2025](https://www.intelmarketresearch.com/sputtering-target-material-market-15151)
+- [Top 10 Sputtering Targets Manufacturers in the USA 2025, XINKANG, 2025](https://www.xk-sputteringtarget.com/top-sputtering-targets-manufacturers-in-the-usa/)
+- [Top 10 Sputtering Target Suppliers in 2025, Sputtering-targets.net, 2025](http://www.sputtering-targets.net/blog/top-10-sputtering-target-suppliers-in-2025-an-overview/)
+- [Precious Metal Sputtering Targets for Semiconductor Market analysis, LinkedIn, 2025](https://www.linkedin.com/pulse/precious-metal-sputtering-targets-semiconductor-market-size-mdjhe?trk=article-ssr-frontend-pulse_more-articles_related-content-card)
+- [Beryllium Market Size to Worth USD 263.26 Million by 2033, Straits Research, 2025-02-19](https://www.globenewswire.com/news-release/2025/02/19/3028724/0/en/Beryllium-Market-Size-to-Worth-USD-263-26-Million-by-2033-Straits-Research.html)
+- [Beryllium | 2022 Minerals Yearbook, USGS](https://pubs.usgs.gov/myb/vol1/2022/myb1-2022-beryllium.pdf)
+
+### Trade press and news
+
+- [Materion to acquire Optics Balzers, Electro Optics, 2020](https://www.electrooptics.com/news/materion-acquire-optics-balzers-combining-thin-film-coatings-expertise)
+- [Materion to Acquire H.C. Starck's Electronic Materials Portfolio, BusinessWire, 2021-09-20](https://www.businesswire.com/news/home/20210920005444/en/Materion-to-Acquire-H.C.-Starck%E2%80%99s-Electronic-Materials-Portfolio-Creating-a-Global-Leader-in-Premium-Thin-Film-Materials-for-the-Semiconductor-Market)
+- [Materion Corp. names Delphi Automotive exec as CEO, Crain's Cleveland Business, 2017-03-03](https://www.crainscleveland.com/article/20170303/NEWS/170309932/materion-corp-names-delphi-automotive-exec-as-ceo)
+- [Materion (NYSE:MTRN) hits new 1-year high, Daily Political, 2026-05-22](https://www.dailypolitical.com/2026/05/22/materion-nysemtrn-hits-new-1-year-high-heres-why.html)
+- [Materion Corporation and the Strategic Upside from Defense and Beryllium Demand, ainvest, 2025-08](https://www.ainvest.com/news/materion-corporation-strategic-upside-defense-beryllium-demand-2508/)
+
+### Government / regulatory
+
+- [USAF Wright-Patterson AFB — Defense Production Act Title III project establishes domestic source for beryllium, 2016](https://www.wpafb.af.mil/News/Article-Display/Article/819343/defense-production-act-title-iii-project-establishes-domestic-source-for-beryll/)
+- [Robinhood — MTRN quote (market data, May 2026)](https://robinhood.com/us/en/stocks/MTRN/)
+
+### Internal cross-references
+
+- `reports/sector/半导体材料.md` — Nomura 2026-05-21 sector summary (Fig. 44 supplier league table referenced multiple times)
+
+---
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL check** — every URL in the document was reviewed for hand-construction risk. SEC EDGAR URLs were resolved against the EDGAR submissions JSON at `https://data.sec.gov/submissions/CIK0001104657.json` and verified against the on-disk copies under `/Users/x/projects/financial_agent/financial_reports/MTRN/`. Specifically verified primary documents:
+
+- FY2025 10-K: `mtrn-20251231.htm`, accession `0001104657-26-000011`, filed 2026-02-12 ✓ (matches on-disk file)
+- FY2024 10-K: `mtrn-20241231.htm`, accession `0001104657-25-000024`, filed 2025-02-19 ✓
+- 2026 DEF 14A: `mtrn-20260326.htm`, accession `0001104657-26-000022`, filed 2026-03-26 ✓
+- Q1-2026 8-K exhibit: `q12026pressrelease.htm`, accession `0001104657-26-000026`, filed 2026-04-29 ✓
+- Q4-2025 8-K exhibit: `q42025pressrelease.htm`, accession `0001104657-26-000006`, filed 2026-02-12 ✓
+- Q3-2025 8-K exhibit: `q32025pressrelease.htm`, accession `0001104657-25-000186`, filed 2025-10-29 ✓
+- H.C. Starck acquisition exhibit: accession `0001104657-21-000094`, filed 2021-09-19/20 ✓ (verified via search results)
+- Brush → Materion name change 8-K (2011) — confirmed via search results
+
+**10-K spot-checks** (claim → location in 10-K):
+- "$1.8 billion in net sales in 2025" ✓ (Item 1 Business, p. 2, verbatim: "with $1.8 billion in net sales in 2025")
+- "Net sales $1,786,550 thousand FY2025" ✓ (MD&A Results of Operations, p. 22)
+- "Performance Materials net sales $675,871K FY2025" ✓ (MD&A Segment Disclosures, p. 23)
+- "Electronic Materials net sales $1,009,965K FY2025" ✓ (MD&A Segment Disclosures, p. 24)
+- "Precision Optics net sales $100,714K FY2025" ✓ (MD&A Segment Disclosures, p. 24)
+- "Semiconductor end-market $867,647K total FY2025" ✓ (Note C Segment Reporting, p. 53)
+- "Electronic Materials semiconductor end-market $852,790K FY2025" ✓ (Note C, p. 53)
+- "Pass-through metal Electronic Materials $682,338K FY2025" ✓ (MD&A Value-Added Sales reconciliation, p. 25)
+- "Approximately 2,880 employees globally as of December 31, 2025" ✓ (Human Capital Management, p. 4)
+- "Approximately 800 customers" ✓ (Item 1 Business, p. 4)
+- "No customers accounted for more than 10% of net sales in fiscal 2025" ✓ (Item 1 Business, p. 4; reconfirmed in Risk Factors, p. 8)
+- "$73M Precision Optics Malaysia impairment FY2024" ✓ (MD&A, $56,067 goodwill + $17,134 long-lived = $73.2M)
+- "Konasol acquisition $19.5M July 9, 2025" ✓ (Note B Acquisition, p. 50)
+- "No pending beryllium cases as of December 31, 2025" ✓ (Item 3 Legal Proceedings, p. 18)
+- CEO Jugal Vijayvargiya appointment "March 2017-Present" ✓ (Executive Officers list)
+- 290,495 shares (1.4%) beneficial ownership ✓ (DEF 14A Security Ownership table, p. 14)
+- Total CEO comp $4,794,902 FY2025 ✓ (DEF 14A Summary Compensation Table, p. 47)
+
+**8-K / press-release spot-checks:**
+- Q1-2026 net sales $549.8M ✓ (Q1-2026 press release)
+- Q1-2026 reaffirmed adj-EPS guidance $6.00-6.50 ✓
+- Q4-2025 disclosure of $65M customer-funded beryllium expansion ✓ (Q4-2025 press release headline)
+- FY2025 full-year adj-EPS $5.44 ✓ (Q4-2025 press release)
+
+**Analyst-view sentences** (intentionally not cited to a primary source):
+- Section 1 Valuation snapshot — three-driver framing (AI-beneficiary premium / defense-option value / margin-expansion runway) labeled "*Analyst view:*"
+- Section 4.3.1 sputter-target competitive ranking ("global #2-3 in precious-metal targets behind JX Advanced Metals") labeled "*Analyst view:*"
+- Section 4.3.2 microelectronics-packaging moat ("specification lock-in + low-volume / high-mix") labeled "*Analyst view:*"
+- Section 4.3.4 refining moat ("structural cost moat") labeled "*Analyst view:*"
+- Section 4.4.1 beryllium primary moat ("sole US producer; about as durable a moat as exists in industrials") labeled "*Analyst view:*"
+- Sections 4.4.2, 4.4.3, 4.5 — all moat/competitive verdicts labeled "*Analyst view:*"
+- Section 5 — Apple customer-name inference explicitly labeled "*Analyst view:*" and flagged as unconfirmed by 10-K
+- Section 7 segment-by-segment competitive verdicts all labeled "*Analyst view:*" in the comparison table
+- Section 8 SOM share-ceiling thesis labeled "*Analyst view:*"
+
+**Residual unknowns / not yet verified:**
+- The specific identity of the "large precision clad strip customer" (Q4-2025 quality event); 10-K does not name; widely inferred as Apple but not in any cited filing.
+- The specific identity of the "major defense prime" funding the $65M beryllium expansion (Q4-2025 8-K); not named in any filing.
+- Precise Materion sub-segment revenue allocations within Electronic Materials (sputter targets vs. packaging vs. precursors vs. refining) — not disclosed by management; estimated portions in Section 8 are explicitly labeled as such.
+- Apple, Lockheed, Raytheon, TSMC, Samsung, Intel etc. named as likely customers in Section 5 are inferred from end-market profile and channel commentary, not from Materion-filed disclosure.
+- The Nomura 2026-05-21 source (subscription-only) — content references are based on the internal summary `reports/sector/半导体材料.md`; original PDF page numbers (Fig. 44 sputter-target supplier league table, p. 29) carried over from the internal summary, not independently re-verified for this report.
+- Peer P/E and P/S values in the May 2026 valuation chart are spot-snapshot estimates from public market-data sources; not independently audited for this report.
+
+</details>
+
+
 
 
 

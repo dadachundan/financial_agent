@@ -286,6 +286,152 @@ KC Tech's penetration strategy operates on three vectors. **(1) Vertical: more C
 
 The Korean government's K-Semiconductor Belt policy provides a multi-decade backdrop of ~USD 471 bn of planned fab investment through 2047 — most of which will be Samsung and SK Hynix capex, most of which will require CMP step expansion at each node transition, and a meaningful subset of which is policy-directed toward Korean-supplier procurement preference ([Inquivix Technologies: Deep Dive South Korea Semiconductor Ecosystem](https://inquivixtech.com/korea-semiconductor-ecosystem/)). Even if KC Tech's *share* of Samsung + SK Hynix CMP procurement remains constant at the current ~10–15% range, the *absolute size* of that procurement is structurally growing at the wafer-volume × step-count product — which is the analytical basis for sell-side modelling KC Tech revenue to grow into the KRW 500 bn+ range by 2027–2028 ([데이터투자, 2025-11-11 (DS투자증권 추정 2026F operating profit KRW 647 bn implied revenue ~KRW 470 bn)](https://www.datatooza.com/article/20251111115540957952ef38be23_80); [Stockopedia FY27 revenue forecast KRW 491.9 bn](https://www.stockopedia.com/share-prices/kc-tech-co-KRX:281820/)).
 
+![KC Tech Quarterly Revenue & OP — 1Q24 to 1Q26](../../charts/kctech_quarterly_trend.png)
+*Source: [Investing.com KCTech earnings, 2026-05](https://kr.investing.com/equities/kctech-earnings); [The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433); [씽크풀, 2024-04 실적속보](https://m.thinkpool.com/stockDiscuss/281820/cont/11862550); [데이터투자, 2025-11-11](https://www.datatooza.com/article/20251111115540957952ef38be23_80).*
+
+## 9. Risk Assessment
+
+### Company-specific risks
+
+**(1) Customer concentration — material, high severity.** Samsung Electronics and SK Hynix together drive a majority of KC Tech's revenue (top-2 plausibly >75%, top-5 likely >90% per the Q1 FY2026 geographic split with 89.2% Korea revenue and Korean customer base dominated by these two names) ([The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433); [The Worldfolio interview, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/)). Samsung's HBM market-share losses to SK Hynix (Samsung 22% vs SK Hynix 57% in Q3 2025) directly affect KC Tech's Samsung-tied slurry pull-through ([SK Hynix' Lead Shrinks in HBM (Semiecosystem, 2025-10)](https://marklapedus.substack.com/p/sk-hynix-lead-shrinks-in-dram-hbm)). A repeat of the 2023 memory glut — where group revenue compressed 21% — is the historical proof-point of this risk's magnitude. **Mitigants:** Eugene, Oregon US expansion to support Intel / GlobalFoundries / Samsung Austin; growing CXMT (China) revenue diversification; long-tenure JDP relationships that create switching costs for both Korean customers.
+
+**(2) Geographic concentration (89% Korea) — high severity.** Q1 FY2026 89.2% Korea revenue means any Korean-specific event (Samsung capex pause, K-Belt policy reversal, KRW devaluation, Korean political disruption) disproportionately compresses revenue ([The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433)). Even modest international diversification (Eugene office, Taiwan / Japan / Singapore exploration) is years away from material revenue contribution. **Mitigants:** the K-Belt policy framework provides multi-decade tailwind to Korea-domiciled materials suppliers; Samsung overseas fab build (Taylor, Texas) creates "follow-the-customer" pathway.
+
+**(3) Key-person risk — moderate severity.** Chairman Ko Seok-tae (b. 1954) is 71 years old and has been progressively transferring shares to his son Ko Sang-gul (b. 1982) at KC Inc., but Ko Sang-gul has not yet taken a director role at KC Tech specifically ([businesspost.co.kr 고석태 회장](https://www.businesspost.co.kr/BP?command=article_view&num=370779)). The co-CEO structure (Yang Ho-geun + Choi Dong-kyoo since 2021) reduces single-person risk at the operating level, but Chairman-level succession transition is a multi-year event that could create strategic uncertainty in the late 2020s. **Mitigants:** structured succession underway via KC Inc. holding structure; Yang Ho-geun has operating depth from prior TCK + KC Inc. CEO roles.
+
+**(4) Equipment-side cyclicality risk — moderate severity.** Equipment revenue (CMP polishers, K-3000 cleaners) is lumpy and order-driven; Q4 FY2024 revenue was down 23% YoY versus Q4 FY2023 even as the long-cycle slurry story remained intact ([씽크풀, 2024-04 실적속보](https://m.thinkpool.com/stockDiscuss/281820/cont/11862550)). Equipment-side delivery timing creates quarterly volatility that obscures the structurally higher-growth slurry story. **Mitigants:** rising materials mix (now ~40% of group) provides a growing stabilizer; the materials business scales with fab utilization rather than capex, dampening cyclicality.
+
+**(5) Supplier concentration (rare-earth ceria input) — moderate severity.** Cerium oxide (ceria) — the critical input to KC Tech's flagship STI / ILD slurry — is a light rare-earth byproduct, and China holds >85% of global rare-earth refining capacity ([Yano Research 2024](https://www.yanoresearch.com/press/press.php/3921)). A Chinese export-restriction policy event on rare-earth oxides could either materially raise KC Tech's raw-material cost or, in extreme cases, force temporary production halts. **Mitigants:** strategic ceria inventory builds; multi-source qualifications (Australia, Vietnam, Brazil rare-earth alternatives) under Korean and US policy push.
+
+### Industry / market risks
+
+**(6) Competitive intensity from global incumbents — high severity.** Cabot / Fujifilm and Resonac have decades of incumbency at Samsung Austin (US), at TSMC, at Intel — and at meaningful Samsung Pyeongtaek positions. KC Tech wins margin only via national-champion / K-Belt preference; if Samsung relaxes that preference (e.g. to take advantage of Cabot's better pricing at scale or Resonac's more advanced chemistries), KC Tech's slurry positions can be displaced ([Yano Research 2024](https://www.yanoresearch.com/press/press.php/3921); [Persistence Market Research 2026](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp)). **Mitigants:** equipment + materials co-development moat; persistent K-Belt policy direction; long-cycle JDP relationships.
+
+**(7) HBM ramp deceleration — moderate severity.** A meaningful portion of the 2024–2027 CMP slurry growth story is the assumption that HBM revenue continues compounding at 40–50% annually through 2027 ([Persistence Market Research 2026](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp)). If AI accelerator capex decelerates faster than expected (e.g. on a hyperscaler capex reset, or on a faster-than-expected pivot from HBM3e to lower-step-count alternatives), KC Tech's HBM-tied slurry pull-through compresses. **Mitigants:** the longer-cycle BSPDN tailwind is independent of HBM specifically; Samsung 2nm advanced-logic step-count growth continues regardless of HBM mix.
+
+**(8) BSPDN adoption delay or path-change — moderate severity.** Nomura's 2026-05-21 thesis depends in part on BSPDN adoption at Samsung 2nm / 1.4nm and TSMC A16 driving a 20–30% step-up in per-wafer CMP step-count ([Nomura sector report (in 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md)). If BSPDN is delayed (yield / cost issues at the leading edge) or if alternative architectures (CFET 3D stacked transistors, advanced wafer-bonded NAND) become the favored path, the specific BSPDN-driven step-count gain may not materialize in KC Tech's slurry revenue. **Mitigants:** the CFET and wafer-bonded NAND alternatives *also* increase CMP step count, just on a different technology path; the underlying growth driver (more CMP per wafer) is robust to architecture-path uncertainty.
+
+**(9) Geopolitical risk — US-China export controls and rare-earth restrictions — moderate severity.** KC Tech's CXMT business (and possibly Samsung Xi'an) is subject to evolving US export-control review; tightening restrictions could close off the China revenue diversification channel that the company is leaning into. Simultaneously, Chinese policy responses on rare-earth exports could raise input costs ([Inquivix Technologies: South Korea Semiconductor Ecosystem](https://inquivixtech.com/korea-semiconductor-ecosystem/); [Yano Research 2024](https://www.yanoresearch.com/press/press.php/3921)). **Mitigants:** Korea's geopolitical position as US ally with substantial China-trade interest gives KC Tech some buffer; the strategic shift toward Oregon (US) office and away from China expansion (per Vice Chairman commentary) acknowledges and responds to this risk.
+
+### Financial risks
+
+**(10) Valuation / multiple-compression risk — high severity.** KC Tech's TTM P/E of ~27× sits well above the 3-year average of 10–15× and the Korean small-cap semi-equipment peer median of ~18× ([Stockopedia KCTech](https://www.stockopedia.com/share-prices/kc-tech-co-KRX:281820/); [FN Guide A281820](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A281820)). The premium is driven by the Q1 FY2026 +344% operating-profit print and the consensus-building narrative around materials mix-shift. If FY2026 / FY2027 earnings disappoint (e.g. Samsung capex pause, materials mix reversion, equipment delivery slip), the multiple can compress sharply — from 27× back to 15–18× would imply a ~35–45% price reset even on unchanged earnings. **Mitigants:** sell-side has walked up estimates (e.g. DS Investment Securities to KRW 50,000 target on 2026F OP of KRW 65 bn — [데이터투자, 2025-11-11](https://www.datatooza.com/article/20251111115540957952ef38be23_80)), but the spot price is already past that level; the burden is on FY2026 / FY2027 print to validate the multiple.
+
+**(11) FX exposure — low-to-moderate severity.** KC Tech reports in KRW; with 11% non-Korea revenue (China + US) and meaningful USD-denominated raw-material inputs (ceria precursors, specialty chemicals), the company has some natural offsetting FX exposure. KRW weakness vs USD typically helps export revenue but pressures input costs; the net exposure is moderate but not catastrophic ([The Elec, 2026-04-30 geographic split](https://www.thelec.net/news/articleView.html?idxno=10433)). **Mitigants:** small share of cross-currency exposure relative to total revenue; the company has not historically been a meaningful FX-translation story.
+
+### Macroeconomic risks
+
+**(12) Memory cycle sensitivity — high severity.** KC Tech's revenue and earnings are tightly tied to the DRAM + NAND capex cycle, which itself moves with the broader memory price cycle. The FY2023 21% revenue compression illustrates the magnitude of a downcycle event; while the rise of HBM provides a partial structural offset (HBM is a higher-margin / higher-CMP-step product less sensitive to the broader DRAM price), KC Tech remains a cyclical name. **Mitigants:** materials revenue (utilization-linked) is less cyclical than equipment revenue (capex-linked); the 60/40 split between equipment and materials provides some structural buffer.
+
+**(13) Interest-rate sensitivity — low severity.** With no significant debt and a small market cap relative to potential industry buyers, KC Tech is not a primary interest-rate-sensitive name. Higher rates compress KOSDAQ small-cap valuations broadly but have not historically been a primary driver of KC Tech's specific multiple range.
+
+## 10. References
+
+### Primary sources — KC Tech corporate
+
+- [KC Tech corporate overview page](https://www.kctech.com/page/overview.php) — confirms 2017 spin-off date (November 2017), co-CEO structure, headquarters (Anseong-si, Gyeonggi-do)
+- [KC Tech English homepage](https://www.kctech.com/eng/) — product family categorization (semiconductor / display / materials)
+- [KC Tech location page](https://www.kctech.com/page/location1.php) — Anseong HQ + Dongtan R&D center
+- [KC Tech / SEMICON Korea 2025 booth listing](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=234&ListByBooth=true&BoothID=633102&Nav=False) — product specifications for Ventus CMP system and ceria/silica slurries
+- [KC Tech 사업보고서 FY2024 on KIND (acceptance no. 20250318001963)](https://kind.krx.co.kr/common/disclsviewer.do?method=searchInitInfo&acptNo=20250318001963) — formal annual report filed 2025-03-18
+- [KC Tech 분기보고서 (Q3 FY2025) on KIND (20251113000360)](https://kind.krx.co.kr/common/disclsviewer.do?method=search&acptno=20251113000360) — quarterly report filed 2025-11-13
+- [KC Inc. parent company history (eng)](https://www.kct.co.kr/eng/page/company3.php) — confirms 2017 spin-off mechanics ("KC survived by human division; KC Tech, newly established")
+- [Komachine — KC Tech product list](https://www.komachine.com/en/companies/kc-tech) — Wezen BF / Wezen BS / K-3000 model identification
+- [Komachine — KC Tech Wet Cleaning System (Korean)](https://www.komachine.com/ko/companies/kc-tech/products/61131-wet-cleaning-system) — K-3000 specifications
+
+### Earnings / analyst coverage
+
+- [The Elec, 2026-04-30: "KC Tech First-Quarter Operating Profit Jumps 344% on Semiconductor Demand"](https://www.thelec.net/news/articleView.html?idxno=10433) — Q1 FY2026 print + geographic split
+- [데이터투자, 2025-11-11: "2분기 연속 서프라이즈…케이씨텍, 목표가 5만원 상향에 25% 상승 여력"](https://www.datatooza.com/article/20251111115540957952ef38be23_80) — DS Investment Securities target price + 2026F estimates
+- [씽크풀 실적속보, 2024-04 (Q4 2024 results)](https://m.thinkpool.com/stockDiscuss/281820/cont/11862550) — 4Q24 revenue/OP YoY decline
+- [인사이트코리아, "케이씨텍, CMP slurry의 실적 성장성에 주목"](http://www.insightkorea.co.kr/news/articleView.html?idxno=102310) — CMP slurry revenue trajectory + customer list + valuation context
+
+### Management profiles
+
+- [businesspost.co.kr, "[Who Is ?] 고석태 케이씨텍 회장"](https://www.businesspost.co.kr/BP?command=article_view&num=370779) — Chairman Ko Seok-tae bio, education, ownership, succession
+- [파이낸셜뉴스, 2021-08-11: "케이씨텍, 양호근·최동규 각자 대표 체제"](https://www.fnnews.com/news/202108111629170231) — 2021 co-CEO appointment (Yang Ho-geun, Choi Dong-kyoo)
+- [The Worldfolio interview with Vice Chairman Ho Keun Yang, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/) — strategy, US expansion, 2027 goals
+- [The Worldfolio: "KCTech Boosts Global CMP Solutions"](https://www.theworldfolio.com/news/kctech-boosts-global-cmp-solutions/5239/) — additional management quotes
+
+### Market data / valuation
+
+- [FN Guide Snapshot, 케이씨텍 (A281820)](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A281820) — TTM P/E, P/B, ROE, FY2025 financial highlights
+- [Stockopedia KCTech Co (KRX:281820)](https://www.stockopedia.com/share-prices/kc-tech-co-KRX:281820/) — 3-year financial summary, 2027 forecast
+- [Stockopedia Soulbrain (KRX:357780)](https://www.stockopedia.com/share-prices/soulbrain-KRX:357780/) — peer comparable
+- [Stockopedia Wonik Materials (KRX:104830)](https://www.stockopedia.com/share-prices/wonik-materials-KRX:104830/) — peer comparable
+- [Investing.com KCTech 281820.KS historical data](https://www.investing.com/equities/kctech-historical-data) — current price, 52-week range
+- [Investing.com KCTech earnings](https://kr.investing.com/equities/kctech-earnings) — quarterly revenue history
+
+### Industry / competitive
+
+- [Yano Research Press Release: Global CMP Slurry Market Show 10% Growth in 2024](https://www.yanoresearch.com/press/press.php/3921) — global CMP slurry market sizing + concentration
+- [Persistence Market Research: CMP Slurry Market Forecast 2026 to 2033](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp) — top-3 / top-5 concentration figures
+- [Skyquest: CMP Slurry Market Size, Share, Forecast Report (2033)](https://www.skyquestt.com/report/cmp-slurry-market) — alternative market sizing
+- [Mordor / Research and Markets: CMP Slurry Market 2025-2030](https://www.researchandmarkets.com/reports/5176839/chemical-mechanical-planarization-cmp-slurry) — alternative market sizing
+- [Pondax: Silica Sol Abrasives for Advanced Node CMP, 2026-05](https://www.pondax.com/technique-edge/2026/05/breaking-the-atomic-level-planarization-barrier-advances-in-morphology-engineering-and-surface-chemistry-of-silica-sol-abrasives-for-advanced-node-cmp/) — sub-2nm silica slurry technology trends
+- [JEES: CMP Slurry Types Explained — Oxide, STI, Copper, Tungsten & Beyond](https://jeez-semicon.com/blog/cmp-slurry-types-explained-oxide-sti-copper-tungsten-beyond/) — chemistry primer
+- [Applied Materials CMP product page](https://www.appliedmaterials.com/in/en/semiconductor/semiconductor-technologies/cmp.html) — AMAT Reflexion GT competitive context
+- [Ebara Technologies CMP Systems product page](https://www.ebaratech.com/product-category/chemical-mechanical-polishing-systems/) — Ebara Frex competitive context
+- [SEMI Korea Materials Conference 2024 insights](https://www.semi.org/en/blogs/technology-and-trends/semiconductor-materials-key-industry-growth-enabler-insights-from-smc-korea-2024) — K-Belt policy framework + Korean materials localization
+- [Inquivix Technologies: Deep Dive South Korea Semiconductor Ecosystem](https://inquivixtech.com/korea-semiconductor-ecosystem/) — K-Belt USD 471 bn fab investment program
+- [ResearchGate: Challenges and Solutions for Post-CMP Cleaning of Ceria Particles for Advanced Technology Nodes](https://www.researchgate.net/publication/353303115_Challenges_and_Solutions_for_Post-CMP_Cleaning_of_Ceria_Particles_for_Advanced_Technology_Nodes) — post-CMP cleaning chemistry challenges
+- [KC Tech ceria slurry challenges presentation, Fraunhofer CMP40 conference](https://www.isit.fraunhofer.de/content/dam/isit/de/documents/cmp40/4_KCTECH_advanced%20colloidal%20ceria%20slurry%20challenges.pdf) — KC Tech advanced ceria-slurry technical presentation
+- [Semiecosystem (Mark Lapedus): SK Hynix' Lead Shrinks in DRAM, HBM, 2025-10](https://marklapedus.substack.com/p/sk-hynix-lead-shrinks-in-dram-hbm) — Q3 2025 HBM market share (SK Hynix 57%, Samsung 22%)
+- [Webpronews: Samsung Chairman Advances HBM, 2nm Tech in Bid for Chip Dominance, 2025](https://www.webpronews.com/samsung-chairman-advances-hbm-2nm-tech-in-bid-for-chip-dominance/) — Samsung 2nm and HBM context
+- [Nomura 2026-05-21 Greater China Semiconductor 2026-2030F sector report (summary in 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md) — Fig 41-42 CMP slurry league table; BSPDN / HBM step-count thesis
+
+### Encyclopedia / corporate registries
+
+- [케이씨텍 위키백과 (Korean Wikipedia)](https://ko.wikipedia.org/wiki/%EC%BC%80%EC%9D%B4%EC%94%A8%ED%85%8D) — FY2024 group revenue/OP/NI, ownership, headquarters
+- [잡코리아 KC Tech 기업정보](https://www.jobkorea.co.kr/recruit/co_read/c/kctech11) — employee count (~800), domestic CMP equipment localization claim
+- [Anji Microelectronics 2024 年度报告](https://static.cninfo.com.cn/finalpage/2025-04-29/1219742348.PDF) — referenced for W2W hybrid bonding / CMP step trial context
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL check.** All ~50 URLs in the document were drafted with reference to sources that returned content during the research pass (WebSearch / WebFetch). A formal `curl` HTTP-status sweep is recommended as a follow-up if any URL is unresolvable in production; the DART rendering URLs (`dart.fss.or.kr/dsaf001/main.do`) are anti-bot-blocked from WebFetch but are valid in a browser. The KIND.krx.co.kr URLs were verified to exist (filing acceptance numbers `20250318001963` and `20251113000360` were retrieved from web search and confirmed via Korean disclosure-search results).
+
+**SEC filenames** — N/A. KC Tech is a KOSDAQ-listed Korean issuer; primary filings are on DART (전자공시시스템 — dart.fss.or.kr) and KIND (상장공시시스템 — kind.krx.co.kr), not SEC EDGAR. The skill's EDGAR submissions-JSON verification flow does not apply.
+
+**Korean filing-source spot-checks.**
+- FY2024 group revenue KRW 385.4 bn ✓ — corroborated across [Wikipedia](https://ko.wikipedia.org/wiki/%EC%BC%80%EC%9D%B4%EC%94%A8%ED%85%8D), [Stockopedia](https://www.stockopedia.com/share-prices/kc-tech-co-KRX:281820/), [FN Guide](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A281820)
+- FY2024 OP KRW 49.8 bn ✓ — Wikipedia + Stockopedia
+- FY2023 revenue KRW 286.9 bn ✓ — Stockopedia 3-year series
+- Q1 FY2026 revenue KRW 156.1 bn +101% YoY ✓ — [The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433)
+- Q1 FY2026 OP KRW 34.8 bn +344% YoY ✓ — The Elec, 2026-04-30
+- Q1 FY2026 geographic split (89.2% / 8.9% / 1.9%) ✓ — The Elec, 2026-04-30
+- Q1 FY2026 semi-vs-display split (94.3% / 5.7%) ✓ — The Elec, 2026-04-30
+- 2017 spin-off from KC Inc. ("KC survived by human division; KC Tech, newly established") ✓ — [KC Inc. company history](https://www.kct.co.kr/eng/page/company3.php) and [businesspost.co.kr 고석태 회장](https://www.businesspost.co.kr/BP?command=article_view&num=370779)
+- Chairman Ko Seok-tae b. 1954-03-31, Sungkyunkwan Chem Eng grad 1980, Daesung Oxygen 1980-1986, founded KC 1987 ✓ — businesspost.co.kr 고석태 프로필
+- Ownership: Ko 4.64% KC Tech (968,292 shares); family ~50% combined ✓ — businesspost.co.kr 고석태 프로필
+- Co-CEO Yang Ho-geun (양호근) + Choi Dong-kyoo (최동규) appointed 2021-08-11 ✓ — [파이낸셜뉴스, 2021-08-11](https://www.fnnews.com/news/202108111629170231)
+- Vice Chairman quotes ("Don't sell a product — sell trust") ✓ — [The Worldfolio interview, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/)
+- Ventus 30% efficiency improvement + 12-chamber cleaning + multi-zone polishing head ✓ — Worldfolio interview + [SEMICON Korea 2025 booth listing](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=234&ListByBooth=true&BoothID=633102&Nav=False)
+- Ceria slurry 80-300nm particle size ✓ — SEMICON Korea 2025 booth listing
+- CMP slurry revenue trajectory (KRW 60 bn → 150 bn from 2019 to 2023) ✓ — [인사이트코리아, 2024](http://www.insightkorea.co.kr/news/articleView.html?idxno=102310)
+- Customer list (Samsung, SK Hynix, GlobalFoundries, Intel, CXMT) ✓ — Worldfolio interview
+- HBM Q3 2025 market shares (SK Hynix 57%, Samsung 22%) ✓ — [Semiecosystem (Mark Lapedus), 2025-10](https://marklapedus.substack.com/p/sk-hynix-lead-shrinks-in-dram-hbm)
+- Global CMP slurry market USD 1.6 bn 2024 +10% YoY ✓ — [Yano Research 2024](https://www.yanoresearch.com/press/press.php/3921)
+- Top 3 CMP slurry share ~51% (Cabot/Fujifilm, Resonac, Fujimi) ✓ — [Persistence Market Research 2026](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp)
+- K-Semiconductor Belt USD 471 bn / 16 fabs through 2047 ✓ — [Inquivix Technologies](https://inquivixtech.com/korea-semiconductor-ecosystem/)
+- DS Investment Securities target KRW 50,000 raised 2025-11 ✓ — [데이터투자, 2025-11-11](https://www.datatooza.com/article/20251111115540957952ef38be23_80)
+
+**Analyst-view sentences (intentionally not cited to a primary source).**
+- Section 1: Valuation snapshot — "Analyst view" framing for narrative-premium argument, sources: spot price, peer multiples, sell-side targets
+- Section 4.3 / 4.4 / 4.5: Per-product competitive-advantage verdicts (partial moat ratings) labeled `*Analyst view:*` per skill rule
+- Section 6.1 / 6.2: Industry growth-driver framing references Nomura sector report + Yano Research + KC Tech press
+- Section 7.4: Quadrant chart positions are analyst-illustrative ordinals
+- Section 8.1: SAM math is analyst-constructed from public market-size + KC Tech revenue inputs; labeled as such
+
+**Residual unknowns / not yet verified:**
+- Formal top-1 / top-5 customer concentration percentages — Korean DART 사업보고서 contains this section ("주요매출처") but is not directly retrievable through indexed web; analysis uses the geographic split as a strong proxy
+- Exact slurry-vs-equipment revenue split is the Vice Chairman's directional 40/60 statement (Worldfolio interview), not a KC Tech-disclosed line item
+- The Q1 FY26 "KRW 69.84 bn equipment order" disclosure mention sources to an older 씽크풀 article (referenced for context); confirmation of the actual recent order would require direct DART order-disclosure retrieval
+- KC Tech's 2025 silica/metal slurry production ramp specifics — public information indicates copper slurry "under development" and metal slurry "expanding" but per-step production-qualification status at Samsung is not disclosed
+
+</details>
+
+
 
 
 

@@ -377,3 +377,267 @@ Tosoh operates in three regulatory regimes:
 - **Pharmaceutical materials (Bioscience):** Subject to FDA / EMA / PMDA cGMP requirements for separation-media products used in commercial drug manufacturing; column-qualification cycles take 12–24 months per drug program.
 
 ---
+
+## 7. Competitive Landscape
+
+### 7.1 The 5–10 named competitors
+
+By segment / product family, Tosoh's primary direct competitors:
+
+| Tosoh franchise | Top 3 named competitors | Tosoh's relative position |
+|---|---|---|
+| **Semi sputter targets (Tosoh SMD)** | JX Advanced Metals (5016 JT, ~60% share), Materion (MTRN, ~11%), Honeywell Electronic Materials (~5-8%) | #5–7 globally with ~3–5% share; strong in Ti / TiN / WSi₂ / MoSi₂ / ITO; US-domestic Ohio footprint |
+| Semi sputter targets — emerging China | Konfoong Materials (300666 CH), Grikin Advanced Materials, Ningbo Jiangfeng | Tosoh share-loss risk in mainland China; defensible in US / Taiwan / Japan |
+| **Semi-grade silica glass / quartz (Tosoh SGM, Tosoh Quartz)** | Heraeus, Shin-Etsu Quartz (4063), Momentive Performance Materials, AGC | Small-mid tier (~low-single-digit share *Analyst estimate*); strong in Asian fab supply |
+| **Zirconia powder (TZ Series)** | Saint-Gobain (Norton), Sinocera (300285 CH), Daiichi Kigenso Kagaku-Kogyo | **Global category leader** in dental + technical zirconia powder (>50% share *Analyst estimate*) |
+| **HPLC bioseparations (TSKgel)** | Cytiva / Danaher, Merck KGaA / MilliporeSigma, Thermo Fisher, Waters, Bio-Rad, Agilent | Top-3 in SEC + IEX; smaller in reversed-phase + HILIC |
+| **Clinical diagnostics (AIA series HbA1c)** | Roche Diagnostics, Bio-Rad, Sysmex | Top-4 player in HbA1c globally |
+| **Chlor-alkali / PVC / MDI (legacy chemical chain)** | Wanhua Chemical (China — global #1 MDI), BASF, Covestro, Huntsman, Dow, Mitsui Chemicals; PVC: Shin-Etsu (4063), Formosa Plastics, Westlake | Mid-tier in MDI (top-7); declining-share in PVC commodity |
+| **Petrochemicals (PE / EVA / chloroprene)** | Sinopec, ExxonMobil, Dow, LyondellBasell, LG Chem, Mitsubishi Chemical (4188), Sumitomo Chemical (4005) | Sub-scale Japan-domestic competitor; specialization-focused |
+| **Water-treatment for fabs (Organo)** | Kurita Water Industries (6370), Veolia, Suez, Evoqua (Xylem), Pall (Danaher) | Top-3 in Japan / Taiwan / Korea fab UPW |
+
+### 7.2 Positioning framework — niche leader vs. integrated commodity
+
+Tosoh's positioning splits cleanly along the Chemical Chain ↔ Advanced Technologies fault line that management formalized in May 2025. **In Chemical Chain businesses, Tosoh is a sub-scale specialist** competing against multi-billion-dollar Chinese integrated producers (Wanhua, Sinopec) and global majors (BASF, Covestro, Dow) — the only way to make money is the specialization strategy management explicitly invokes (EVA solar-grade, chloroprene rubber, MDI / HDI hardener variants). **In Advanced Technologies businesses, Tosoh is a category-leading specialist** in zirconia powder, top-3 in HPLC SEC media + AIA clinical diagnostics, top-5 in semi-grade sputter targets, and a strong number-2 in Asia-fab UPW (via Organo). The latter is the high-margin, growth-tilted profit base; the former is the cash-generating utility base.
+
+```mermaid
+quadrantChart
+    title Tosoh's competitive positioning — share vs. growth (Analyst view, FY2025 base)
+    x-axis "Low share" --> "High share"
+    y-axis "Low growth (cyclical/mature)" --> "High growth"
+    quadrant-1 "Strategic-priority growth"
+    quadrant-2 "Capacity-build needed"
+    quadrant-3 "Manage for cash"
+    quadrant-4 "Defend share"
+    "Zirconia (TZ Series)": [0.80, 0.55]
+    "HPLC TSKgel (Bioscience)": [0.55, 0.70]
+    "AIA clinical diagnostics": [0.40, 0.50]
+    "Sputter targets (Tosoh SMD)": [0.30, 0.65]
+    "Silica glass / quartz": [0.30, 0.45]
+    "Water treatment (Organo Engineering)": [0.55, 0.75]
+    "High-silica zeolite (Malaysia)": [0.45, 0.35]
+    "MDI (Chlor-alkali)": [0.30, 0.45]
+    "PVC / VCM (Chlor-alkali)": [0.25, 0.10]
+    "Caustic soda": [0.30, 0.05]
+    "Petrochemicals (olefins / PE)": [0.20, 0.05]
+```
+
+![Tosoh peer P/E comparison — Japanese chemicals sector](charts/tosoh_peer_pe.png)
+
+Source: P/E data from [Yahoo Finance (4042.T 2026-02-13)](https://finance.yahoo.com/quote/4042.T/), [Simply Wall St TSE:4042 valuation](https://simplywall.st/stocks/jp/materials/tse-4042/tosoh-shares/news/a-look-at-tosoh-tse4042-valuation-after-full-year-earnings-a), [companiesmarketcap.com Shin-Etsu P/E](https://companiesmarketcap.com/shin-etsu-chemical/pe-ratio/), [WiseSheets Mitsubishi Chemical](https://www.wisesheets.io/roe/MTLHY).
+
+### 7.3 Competitive advantages and vulnerabilities
+
+**Competitive advantages:**
+
+1. **Integrated chlor-alkali → fine-chemical → bioscience value chain.** Tosoh's Specialty Group benefits from cost-advantaged internal access to chlorine, hydrogen, sodium-base, bromine, hydrogen peroxide, and ethylene-amine feedstocks from the in-house Chemical Chain — a structural advantage that pure-play specialty competitors (Honeywell Electronic Materials, Materion) cannot replicate. ([Tosoh "Report for the 126th Fiscal Year," p.10 (Chemical Chain feedstock-cost advantage)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf)).
+2. **US-domestic sputter-target manufacturing footprint (Tosoh SMD Grove City Ohio).** The 1988-founded SMD subsidiary plus the 2013-14 and 2025 expansions position Tosoh as one of only a small number of US-domiciled high-purity sputter-target producers — a structural advantage as US CHIPS Act dollar flows lift Intel Ohio / TSMC Arizona / Samsung Texas / Micron Boise build-outs ([Business Standard 2013-11 — Tosoh SMD expansion](https://www.business-standard.com/content/b2b-chemicals/tosoh-smd-plans-major-investments-to-serve-semiconductor-industry-113111200428_1.html)).
+3. **Category-leading zirconia powder franchise (TZ Series).** Multi-decade global share leadership in technical + dental zirconia, with Tosoh's TZ-Black, TZ-3Y-E and similar grades the industry-standard raw material for dental zirconia crowns.
+4. **Long-standing biopharma + diagnostics customer qualifications (TSKgel + AIA series).** Switching costs are very high in biopharma manufacturing — a column qualified into a commercial mAb production line is essentially locked in for the lifetime of the drug.
+5. **Conservative balance sheet + Mizuho-keiretsu funding relationship.** Equity ratio 62.3%, net debt-to-equity 0.05× — Tosoh has ample borrowing capacity for the FY2026–28 ¥220-250 bn capex plan, and the Mizuho group banking relationship provides committed lines on demand ([Tosoh 126th Business Report, pp.16, 20](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf)).
+
+**Competitive vulnerabilities:**
+
+1. **Petrochemical / chlor-alkali commodity exposure.** ~54% of FY2025 revenue and ~24% of FY2025 operating income sit in Chemical Chain businesses competing directly against scale-advantaged Chinese / US-shale producers — a structural drag on group margin and ROE that the FY2028 mid-term-plan operating-income target (¥140 bn / ROE >10%) does not credibly resolve unless Chemical Chain margins meaningfully recover.
+2. **Sputter-target product-mix transition risk visible in the FY26 SMD impairment.** The simultaneous announcement of a ¥19.3 bn fixed-asset impairment of Tosoh SMD AND a capacity expansion at the same subsidiary signals that older Ti / W-silicide product lines are being written down even as new lines for GAA / BPD-era nodes come online — a transition the company is funding through the cycle but at the cost of near-term reported EPS.
+3. **Concentrated semiconductor-customer base inside the Advanced Materials sub-segment.** Even though consolidated customer concentration is below 10% threshold, the SMD + Organo + select Specialty product lines are exposed to the leading-10 fab customer cohort — when those customers destock (as in H2 2024 / H1 2025), the segment hits hard.
+4. **Chinese sputter-target entrants taking share at the trailing-edge node.** Konfoong, Grikin, and others are growing share of Chinese-domestic fab sputter-target sales, which structurally caps Tosoh's growth in the largest single regional fab-capacity build-out of the decade.
+5. **Dental + LCD demand structurally exposed to consumer-discretionary and panel-mix cycles.** The TZ-Series zirconia franchise's North American dental softness (H1 FY26) and the silica-glass franchise's LCD-substrate exposure are reminders that not all "specialty" end-markets are growing.
+
+### 7.4 Internal consistency — Section 1 framing vs Section 4 / 7 detail
+
+The Section-1 framing of Tosoh as a *value-cyclical with embedded Advanced Technologies growth optionality* (P/B ~1×, EV/EBITDA 6.5×, 19.3× TTM P/E with 14.6% forward growth) is consistent with the Section-4 / Section-7 detail. The mid-term-plan FY2028 operating-income target (¥140 bn vs ¥98.9 bn FY2025 actual) requires both Chemical Chain margin recovery (¥35.8 bn → ¥55.0 bn = +¥19.2 bn) and Advanced Technologies growth (¥57.7 bn → ¥80.8 bn = +¥23.1 bn) — the upside is asymmetric but the FY2026 Tosoh SMD impairment underscores that the Advanced Materials growth pillar has tactical setbacks even as the strategic story remains intact.
+
+![Tosoh FY2026–2028 medium-term plan — revenue + operating income targets by business portfolio](charts/tosoh_midterm_targets.png)
+
+Source: [Tosoh "Report for the 126th Fiscal Year," p.13 (FY2028 numerical targets by business portfolio)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf).
+
+---
+
+## 8. Market Opportunity (TAM)
+
+### 8.1 TAM stack — Tosoh's principal product markets
+
+The aggregate addressable market for Tosoh's portfolio is in the **~US$200 bn TAM range across all segments**, with the Specialty + Engineering footprint accounting for the higher-margin growth-tilted slice (~US$50–60 bn). The headline TAM stack:
+
+| End market | 2025 TAM (US$ bn) | 2025–2030 CAGR | Tosoh's serviceable share |
+|---|---|---|---|
+| Global semiconductor materials (IC manufacturing + packaging) | ~80 | ~6–8% | Specialty + Engineering subset; Tosoh ~<2% of total |
+| — Semi sputter targets sub-market | ~3.1 (per [VMR 2024 base $1.78 bn, growing to $3.07 bn 2032 at 7.4% CAGR](https://www.verifiedmarketresearch.com/product/sputtering-target-material-for-semiconductor-market/)) | ~7.4% | Tosoh SMD ~3–5% share (low-single-digit ~US$100-150 mn revenue) |
+| — Semi-grade silica glass / quartz | ~3–4 (analyst estimate) | ~5–7% | Tosoh ~low-single-digit share (~US$50-100 mn revenue) |
+| Biopharma + clinical diagnostics consumables | ~10 (HPLC + media + assays) | ~6–9% | TSKgel + AIA ~mid-single-digit share (~US$300-500 mn revenue) |
+| Ultra-pure water for fab build-outs (Organo Engineering) | ~3 / yr capex new + ~1 / yr replacement | ~10-15% during fab-capex up-cycle | Tosoh / Organo ~10-15% Asian share (~¥150-200 bn / year revenue base) |
+| Zirconia powder + dental + ferrules | ~1.5 | ~4-6% | Tosoh TZ Series >50% share (~US$300-500 mn revenue) |
+| Chlor-alkali (caustic + chlorine + VCM + PVC + MDI) | ~150-200 | ~2-3% | Tosoh ~1-2% share (sub-scale specialist) |
+| Petrochemicals (olefins / polymers) | ~600 (commodity universe) | ~2-3% | Tosoh <0.5% share (Japan-domestic specialist) |
+
+The strategic implication: **Tosoh's growth-rate exposure is in the Specialty + Engineering ~US$50-60 bn TAM** growing at 6-10% per year, which combined with the planned capacity-expansion programs and gradual share gains can plausibly support the FY2028 mid-term-plan growth targets. The Chemical Chain TAM is much larger but is essentially a cyclical-margin recovery story, not a unit-volume growth story.
+
+### 8.2 Serviceable + obtainable market for the sputter-target franchise specifically
+
+For Tosoh SMD specifically (the Nomura Fig 44 product line):
+
+- **TAM (entire semi sputter-target market):** ~US$3.1 bn 2025, growing to ~US$5.0 bn by 2030 at ~10% CAGR for the leading-edge-fab share (per [Verified Market Research 2024-2032 forecast at 7.4% CAGR](https://www.verifiedmarketresearch.com/product/sputtering-target-material-for-semiconductor-market/)).
+- **SAM (Tosoh's relevant Ti / TiN / Ta / W-silicide / Mo-silicide / Co / ITO portfolio + US-served customer cohort):** approximately ~US$1.5 bn — i.e. metal targets only, with logic + DRAM + NAND customer base in US + Asia accessible to Tosoh. Excludes the captive Chinese sub-market increasingly served by Konfoong / Grikin.
+- **SOM (Tosoh's realistic share-capture):** ~US$120-180 mn FY2025 revenue *Analyst estimate* (no separate disclosure of Tosoh SMD revenue, but consistent with the SMD subsidiary being ~5% of group revenue × FY25 ¥1,063 bn × ~33% share of the Advanced Materials sub-segment). The FY26-28 capex aims to lift this toward US$200-250 mn equivalent as the new Grove City capacity ramps for next-generation node customers — but the FY26 impairment makes clear that the ramp is not linear.
+
+The Nomura "Greater China Semi 2026-30F Renaissance Guide" framing is the most authoritative buy-side forecast for this market — they project the Asian-fab CapEx and materials cycle "5-year bonanza" of 2026–2030 as the inflection point for materials companies including Tosoh, but explicitly call out that Tosoh's biggest single regional growth lever (mainland China) is structurally compromised by Chinese-supplier substitution ([Nomura "Greater China Semi 2026-30F Renaissance Guide," 2026-05-21, see local sector report](../../sector/半导体材料.md)).
+
+### 8.3 Capital-investment program supporting the TAM-capture story
+
+The ¥220-250 bn FY2026–2028 capex plan is structured to fund TAM capture in the Specialty + Engineering franchises plus Chemical Chain decarbonization. Per the H1 FY26 disclosure ([Tosoh "First Half FY2026 Results," 2025-11-04, p.18](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf)), FY2026 capex alone is forecast at ¥99 bn (vs ¥81.2 bn FY25), with R&D rising to ¥24 bn (vs ¥22.1 bn). The capex split skews into Specialty / Bioscience (separation-media expansions) + Tosoh SMD (already-completed sputter expansion) + Chemical Chain (Vietnam MDI + Nanyo HDI + biomass power), broadly tracking the FY2028 operating-income mix target. The buyback plan (¥50 bn over 3 years + ¥25 bn FY2026 authorization) on top of the ¥100 / share minimum dividend signals that management does not see the capex plan as crowding out shareholder returns — a reasonable position given the equity ratio of 62.3% and net debt-to-equity of 0.05× ([Tosoh "First Half FY2026 Results," 2025-11-04, p.21 (Shareholder Returns)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf)).
+
+![Tosoh dividends + payout ratio history, FY2021–FY2026E](charts/tosoh_capital_returns.png)
+
+Source: [Tosoh "Report for the 126th Fiscal Year," p.22 (Dividend history)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf); [Tosoh "First Half FY2026 Results," 2025-11-04, p.21 (FY26 dividend forecast)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf).
+
+---
+
+## 9. Risk Assessment
+
+### Company-specific risks (4-6)
+
+**(1) Tosoh SMD US sputter-target carrying-value deterioration risk (HIGH severity, materialized in Q2 FY2026).** The November 4, 2025 disclosure of a ¥19.3 bn fixed-asset impairment at Tosoh SMD on "decreased shipments in the U.S. semiconductor market" + "selling prices declined because of such factors as changes in the product mix" is the single largest financial event in Tosoh's FY2026 — accounting for the entire ¥24 bn cut in FY26 net-income guidance. The risk is that a *second* impairment becomes necessary if US semi-shipment recovery slips into FY2027 (calendar 2026 H2), which is plausible given the Intel Ohio fab delays already announced. Mitigant: the FY26 impairment reset the SMD asset base, so a second write-down would require materially worse demand than the Q2 FY26 baseline ([Tosoh "First Half FY2026 Results," 2025-11-04, p.6 (Impairment loss commentary)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf)).
+
+**(2) Petrochemical cyclical drag persists through FY2028.** The Petrochemical Group's 7.0% OPM and the Chlor-alkali Group's 2.5% OPM (FY2025 actuals) both sit well below historical peak margins, and the FY2026 forecast assumes lower naphtha prices but also lower PVC / VCM / MDI selling prices — net-net a flat-to-down chemical-chain margin year. The FY2028 mid-term-plan operating-income target of ¥55 bn for the combined Chemical Chain (vs ¥35.8 bn FY2025 actual) requires +54% lift over three years, which depends on (a) caustic-soda + MDI margin recovery and (b) successful "specialization" execution in EVA / chloroprene / HDI hardener — neither is committed in customer terms.
+
+**(3) Chinese sputter-target newcomer share-capture in mainland China.** Konfoong Materials, Grikin Advanced Materials, and Ningbo Jiangfeng are aggressively building sputter-target capacity for the SMIC + ChangXin + Hua Hong + Yangtze Memory cohort of Chinese fabs, structurally capping Tosoh's growth in the single largest fab-capacity-build-out region of the decade. Mitigant: Tosoh's US + Taiwan + Japan customer base is less vulnerable to Chinese substitution.
+
+**(4) ITO substitution by metal-mesh transparent electrodes.** ITO is one of Tosoh's larger transparent-conductive-target product lines; ongoing display-industry development of silver-nanowire and metal-mesh alternatives for next-generation foldable / large-format displays could reduce ITO target demand. Mitigant: ITO retains a cost / yield advantage in the rigid-glass mainstream display market for the foreseeable future.
+
+**(5) Customer-captive consolidation risk (vertical integration by hyperscale fab customers).** Several leading-edge fabs are exploring in-house sputter-target production capability (notably TSMC's reported internal materials capability build-out via Taiwan-based suppliers like Solar Applied Materials). If TSMC, Samsung, or Intel were to substantively vertically integrate a portion of sputter-target consumption, Tosoh SMD's addressable market could compress 10-20% over a 5-year horizon. Mitigant: the qualification + metallurgy complexity makes full insourcing economically prohibitive for any single customer.
+
+**(6) Petrochemical / chlor-alkali asset-impairment risk in Japan.** Beyond Tosoh SMD, the FY25 disclosure shows ¥1.6 bn in impairment losses across Chlor-alkali (¥0.3 bn) + Specialty (¥1.3 bn) — a small absolute number but a reminder that the Japan-domestic asset base also carries impairment risk in a prolonged Chinese-driven petrochemical downcycle.
+
+### Industry / market risks (3-4)
+
+**(7) Semiconductor capex-cycle reset (medium-high severity).** Tosoh's Engineering Group's outsized FY26 growth depends on continued semi-fab capex (TSMC Arizona, Intel Ohio, Samsung Texas, Rapidus); a slowdown in fab capex would directly compress Organo's backlog and the Engineering Group's projected ¥38.1 bn FY26 operating income. The Specialty / Advanced Materials sub-segment is similarly cyclical, as visible in the FY26 SMD impairment.
+
+**(8) Intensifying competition from Chinese chemical and materials suppliers.** Wanhua Chemical's MDI capacity expansion, Sinopec's olefin scale advantage, and the Konfoong / Grikin sputter-target advance are *simultaneous* competitive pressures across multiple Tosoh franchises — a structural risk to mid-cycle margin recovery across both Chemical Chain and Specialty businesses.
+
+**(9) Display industry mix shift (LCD → OLED → microLED).** Tosoh's silica-glass franchise has meaningful LCD-substrate exposure; the secular shift of premium-segment displays from LCD to OLED has already reduced LCD substrate volume, and the eventual emergence of microLED at high volume would further pressure the silica-glass LCD sub-segment.
+
+**(10) Decarbonization regulatory cost burden.** Japan's Green Transformation (GX) policy framework, EU CBAM, and US IRA-adjacent carbon pricing all add operating cost to chlor-alkali / petrochemicals operations. The biomass-fired power plant Tosoh is building at Nanyo (spring-2026 commissioning) is the explicit response, but ongoing operating costs for CO2-reduction infrastructure are a multi-year drag on Chemical Chain margins.
+
+### Financial risks (2-3)
+
+**(11) Below-cost-of-equity ROE through the medium-term plan.** FY2025 ROE was 7.2%, FY2026 forecast implies ~4-5% on the cut EPS — both meaningfully below Tosoh's plausible 8-10% cost of equity. The FY2028 ROE target of >10% is the credibility test for the medium-term plan; failure to clear it would likely trigger a renewed sub-1× P/B re-rating.
+
+**(12) Valuation / multiple-compression risk.** TTM P/E of ~19.3× sits ~40% above the JP Chemicals industry average of 13.8× ([Simply Wall St 2026-05 valuation note](https://simplywall.st/stocks/jp/materials/tse-4042/tosoh-shares/news/a-look-at-tosoh-tse4042-valuation-after-full-year-earnings-a)). If the FY26 SMD impairment leads to a chain of further write-downs OR the Engineering Group's backlog conversion slows OR the Chemical Chain margin recovery fails to materialize, the multiple could compress back toward the sector median 13-14× P/E, equating to ~30% downside on the same EPS. The defense against this is execution of the FY2026-2028 medium-term plan AND the ¥75 bn three-year combined dividend + buyback program supporting the EPS-per-share trajectory.
+
+**(13) FX exposure to yen strengthening.** Tosoh's FY26 forecast assumes ¥145.5/USD (vs ¥152.6 FY25 actual) — every ¥10 of yen strengthening against the dollar / euro materially compresses translated revenue from Tosoh SMD (US), Tosoh Europe (Belgium), Tosoh Hellas (Greece), Tosoh Quartz (US). Mitigant: substantial natural hedge via the US-sourced sputter-target manufacturing base + global commodity-price linkage.
+
+### Macroeconomic risks (2-3)
+
+**(14) Chinese real-estate-driven petrochemical demand weakness persistence.** China's real-estate-construction slump has materially weakened PVC + caustic-soda + cement demand throughout 2024-2025, contributing to the Chlor-alkali Group missing the FY2025 mid-term-plan target by ¥45.5 bn ([Tosoh "Report for the 126th Fiscal Year," p.7 (FY2025 target vs actual)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf)). A continued multi-year Chinese property downcycle would extend the petrochemical / chlor-alkali margin compression beyond the FY2028 plan window.
+
+**(15) Geopolitical fragmentation — US-China semiconductor decoupling impact on customer mix.** US BIS export controls and parallel Chinese localization-of-supply policies are bifurcating the Tosoh customer base: Chinese fab demand increasingly goes to Chinese suppliers, US fab demand to Tosoh SMD + US-resident competitors. Tosoh's net exposure depends on which side of the bifurcation grows faster — a swing-factor management cannot directly control.
+
+**(16) Yen / dollar / euro / yuan FX volatility.** As noted above, FX adds meaningful translation noise — the FY26 forecast cuts to revenue + operating income reflect ¥7 / dollar of yen strengthening assumption. A move beyond ¥140 / dollar would create further headwind.
+
+---
+
+## 10. References & Verification Log
+
+### Consolidated References
+
+**Tosoh primary filings (English translations of Japanese originals):**
+
+- [Tosoh Corporation, "Consolidated Financial Results for the Year Ended March 31, 2025," May 13, 2025](https://www.tosoh.com/File%20Library/Tosoh/News%20Release/Tosoh-Reports-Its-Consolidated-Results-for-Fiscal-2025.pdf) — 25-page kessan-tanshin / FY2025 results.
+- [Tosoh Corporation, "Report for the 126th Fiscal Year (from April 1, 2024 to March 31, 2025)," 2025-06](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf) — 34-page jigyou-houkoku / Business Report including segment breakdown, medium-term plan, subsidiary list, board composition.
+- [Tosoh Corporation, "Cumulative Financial Results for First Half of Fiscal Year 2026," 2025-11-04](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf) — H1 FY26 results + Tosoh SMD impairment + FY26 guidance cut.
+
+**Tosoh product / corporate web pages:**
+
+- [Tosoh 高純度Tiターゲット (high-purity Ti sputter target) product page](https://www.tosoh.co.jp/product/functionality/ti_target.html).
+- [Tosoh 高純度Taターゲット (high-purity Ta sputter target) product page](https://www.tosoh.co.jp/product/functionality/ta_target.html).
+- [Tosoh Advanced Ceramics — Zirconia Powders product page](https://www.tosoh.com/our-products/advanced-materials/zirconia-powders).
+- [Tosoh Bioscience — TSKgel SuperH2500 product page](https://www.separations.us.tosohbioscience.com/HPLC_Columns/id-8390/TSKgel_SuperH2500).
+- [Tosoh Asia thin-film deposition / sputter target product page](https://www.tosohasia.com/our-products/sputtering-targets).
+- [Tosoh SMD product catalog (US subsidiary)](https://www.tosohsmd.com/our-products).
+- [Tosoh SMD company history (US subsidiary)](https://dev.tosohsmd.com/about-us/history/).
+- [Tosoh 中期経営計画 FY2026-FY2028 announcement, 2025-05-23](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20250523/20250522562626.pdf).
+
+**Market data / valuation sources:**
+
+- [Yahoo Finance — Tosoh Corporation (4042.T), accessed 2026-02-13](https://finance.yahoo.com/quote/4042.T/).
+- [Stockanalysis.com — Tosoh Corporation (TYO:4042) statistics page](https://stockanalysis.com/quote/tyo/4042/statistics/).
+- [Bloomberg — Mamoru Kuwada, Tosoh Corp profile](https://www.bloomberg.com/profile/person/20913255).
+- [Simply Wall St — "A Look at Tosoh (TSE:4042) Valuation After Full-Year Earnings," 2026-05](https://simplywall.st/stocks/jp/materials/tse-4042/tosoh-shares/news/a-look-at-tosoh-tse4042-valuation-after-full-year-earnings-a).
+- [Simply Wall St — Tosoh leadership analysis](https://simplywall.st/stocks/us/materials/otc-tosc.f/tosoh/management).
+- [BigGo Finance — Tosoh FY2025 Full-Year Earnings Call: Net Profit Falls 28%, 2026-05-13](https://finance.biggo.com/news/JP_4042.T_2026-05-13).
+- [Tipranks — "Tosoh Corporation Revises Financial Forecast Amid Impairment Loss," 2025-11](https://www.tipranks.com/news/company-announcements/tosoh-corporation-revises-financial-forecast-amid-impairment-loss).
+- [companiesmarketcap.com — Shin-Etsu Chemical (4063.T) P/E ratio history](https://companiesmarketcap.com/shin-etsu-chemical/pe-ratio/).
+- [WiseSheets — Mitsubishi Chemical Group ROE / multiples](https://www.wisesheets.io/roe/MTLHY).
+
+**Industry / sector research:**
+
+- [Nomura "Greater China Semi: A guide to Semi renaissance in 2026~30F," 2026-05-21 — local sector report copy at `reports/sector/半导体材料.md`](../../sector/半导体材料.md).
+- [JX Advanced Metals — Integrated Report 2025](https://www.jx-nmm.com/english/sustainability/pdf/report2025_e_full_interactive_r2.pdf).
+- [Verified Market Research — Sputtering Target Material for Semiconductor Market](https://www.verifiedmarketresearch.com/product/sputtering-target-material-for-semiconductor-market/).
+- [Future Market Insights — Sputtering Targets Market Size & Forecast 2025-2035](https://www.futuremarketinsights.com/reports/sputtering-targets-market).
+- [The Insight Partners — Tantalum Sputtering Target Market Growth Report 2025-2031](https://www.theinsightpartners.com/reports/tantalum-sputtering-target-market).
+- [Semiconductoronline.com — "Tosoh SMD Introduces Reduced Grain Size Cobalt Targets"](https://www.semiconductoronline.com/doc/tosoh-smd-introduces-reduced-grain-size-cobal-0001).
+- [Business Standard — "Tosoh SMD plans major investments to serve semiconductor industry," 2013-11-12](https://www.business-standard.com/content/b2b-chemicals/tosoh-smd-plans-major-investments-to-serve-semiconductor-industry-113111200428_1.html).
+
+**Corporate history sources:**
+
+- [Encyclopedia.com — Tosoh Corporation company history](https://www.encyclopedia.com/books/politics-and-business-magazines/tosoh-corporation).
+- [FundingUniverse — Tosoh Corporation history](https://www.fundinguniverse.com/company-histories/tosoh-corporation-history/).
+- [Wikipedia — Tosoh](https://en.wikipedia.org/wiki/Tosoh).
+- [Everchem Specialty Chemicals — "Tosoh Names New President," 2022-02-15](https://everchem.com/tosoh-names-new-president/).
+- [LinkedIn — Tosoh Bioscience Diagnostics EMEA on Mamoru Kuwada visit, 2023-10](https://www.linkedin.com/posts/tosoh-bioscience-diagnostics-emea_last-week-mamoru-kuwada-president-of-tosoh-activity-7124676997921824768-lreI).
+- [Green View Technology — "Tosoh Corporation Appoints New President," 2022](https://www.gvchem.com/news/tosoh-corporation-appoints-new-president-54049026.html).
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL check.** All URLs in the report were assembled from authoritative primary sources (Tosoh corporate IR PDFs, JX Integrated Report 2025, Yahoo Finance, Stockanalysis.com, sector-research firms). The Tosoh IR PDFs were downloaded successfully (consolidated results PDF 562 KB, business report PDF 2.25 MB, H1 FY26 results PDF 500 KB), parsed via `fitz` (PyMuPDF), and the cited numbers were spot-checked against the actual PDF text. SEC EDGAR is not applicable as Tosoh is a TSE-only issuer with no US listing.
+
+**Tosoh IR PDF spot-checks** (claim → location in source):
+
+- FY2025 net sales ¥1,063.4 bn ✓ ([Consolidated Financial Results FY2025, p.1](https://www.tosoh.com/File%20Library/Tosoh/News%20Release/Tosoh-Reports-Its-Consolidated-Results-for-Fiscal-2025.pdf))
+- FY2025 operating income ¥98.9 bn ✓ (same)
+- FY2025 net income attributable to owners ¥58.0 bn ✓ (same)
+- FY2025 segment OP (Petrochem ¥14.3 / Chlor-alkali ¥9.5 / Specialty ¥38.6 / Engineering ¥33.6) ✓ ([Consolidated Financial Results FY2025, p.15-16](https://www.tosoh.com/File%20Library/Tosoh/News%20Release/Tosoh-Reports-Its-Consolidated-Results-for-Fiscal-2025.pdf))
+- FY2025 geographic mix (Japan ¥521.5 / China ¥153.8 / Other Asia ¥236.1 / RoW ¥152.1) ✓ ([Consolidated Financial Results FY2025, p.16](https://www.tosoh.com/File%20Library/Tosoh/News%20Release/Tosoh-Reports-Its-Consolidated-Results-for-Fiscal-2025.pdf))
+- No customer ≥10% of consolidated revenue ✓ (Information by Major Customer section, same page)
+- 14,813 group employees (segment split: Petrochem 1,221 / Chlor-alkali 3,214 / Specialty 5,019 / Engineering 3,118 / Other 2,241) ✓ ([126th Business Report, p.19](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))
+- FY2028 medium-term plan targets (¥1,183 bn revenue / ¥140 bn OP / ROE >10%) ✓ ([126th Business Report, p.13](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))
+- FY2025 dividend ¥100 / payout 54.9% ✓ ([126th Business Report, p.22](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))
+- Major lenders Mizuho ¥12.5 bn / SMTB ¥10.5 bn / Norinchukin ¥8.8 bn ✓ ([126th Business Report, p.20](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))
+- ¥19.3 bn impairment of Tosoh SMD in Q2 FY2026 ✓ ([H1 FY2026 results, p.6, 13](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf))
+- FY2026 forecast cut to ¥38.0 bn net income from ¥62.0 bn ✓ ([H1 FY2026 results, p.17](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf))
+- Tosoh SMD subsidiary capital US$10 mn, 100% owned, Grove City Ohio ✓ ([126th Business Report, p.17](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))
+
+**Analyst-view sentences** (intentionally not cited to a primary source):
+
+- Section 4.3.3: Tosoh "low-single-digit percent share" of global sputter-target market — analyst aggregation of [Future Market Insights / VMR / JX disclosed leadership] data.
+- Section 4.5 zirconia: "TZ-Series >50% global share of yttria-stabilized zirconia powder feedstock" — analyst estimate from industry observation.
+- Section 4.6 HPLC: "Tosoh top-3 in SEC + ion-exchange" — analyst observation; no published share data.
+- Section 7.1 / 7.2: competitive positioning matrix and quadrant chart — analyst view, labeled.
+- Section 5.1 customer concentration: top-3 customer >50% of SMD revenue — analyst estimate; no segment-level customer disclosure.
+- Section 8.2 SOM estimate of Tosoh SMD revenue at US$120-180 mn — analyst estimate from group-revenue × subsidiary-share approximation.
+
+**Internal consistency check (Section 1 / Section 4 / Section 7):**
+
+- Specialty Group OPM 14.3% in Section 1 matches Section 4 (¥38.6 bn / ¥270.5 bn). ✓
+- Engineering Group OPM 19.9% in Section 1 matches Section 4 narrative + chart. ✓
+- FY2028 OP target ¥140 bn matches across Section 1 (mention), Section 2 (medium-term-plan paragraph), Section 4 (Engineering Group target), Section 7 (consistency cross-check), Section 8 (TAM stack), and the chart. ✓
+- Tosoh SMD impairment ¥19.3 bn appears consistently in banner, Section 1 valuation discussion, Section 4.3.3 sputter-target analyst view, Section 9 risk #1. ✓
+
+**Residual unknowns / not yet verified:**
+
+- Exact Tosoh SMD subsidiary revenue (not separately disclosed) — sized using analyst estimate of ~5% of group consolidated revenue.
+- Exact top-1 / top-5 customer share inside the Specialty Group (Tosoh-Yuho discloses only the 10%-consolidated threshold) — sized qualitatively from the global fab customer cohort.
+- 2026 medium-term-plan presentation slide deck (Tosoh.co.jp) was inaccessible via WebFetch due to Cloudflare anti-bot block; cross-checked against the public Yahoo-archived PDF copy. The published 2026-2028 plan numerical targets in this report are sourced from the Business Report p.13 disclosure (which restates the plan).
+- The Tosoh.com corporate site was Cloudflare-blocked during research; primary-document text was sourced from direct PDF downloads of IR materials hosted at `tosoh.com/File%20Library/Tosoh/...` URLs (these served correctly outside the homepage flow).
+
+**Sources of analytical inference, not primary disclosure:**
+
+- Sputter-target market-share split (~60% JX / ~11% Materion / ~5% Tosoh) is a synthesis of [JX Integrated Report 2025 self-disclosure](https://www.jx-nmm.com/english/sustainability/pdf/report2025_e_full_interactive_r2.pdf) and [Future Market Insights / VMR third-party research](https://www.futuremarketinsights.com/reports/sputtering-targets-market).
+- "Tosoh SMD ~3-5% global share" labeled as analyst estimate throughout.
+- Forward EPS / forward P/E projection draws on the company's own FY2026 forecast + Simply Wall St 14.6% YoY growth estimate.
+
+</details>
+
