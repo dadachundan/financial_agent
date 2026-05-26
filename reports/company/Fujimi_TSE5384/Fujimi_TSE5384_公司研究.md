@@ -375,3 +375,144 @@ CMP 浆料市场由半打供应商主导,前 3 家合计约 58% 份额:
 *来源:[FY2025 财务概览演示第 33 页](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf)。*
 
 ---
+
+## 9. 风险评估 (约 800 字)
+
+### 公司特定风险
+
+**客户集中度(分析师估算)。** 不二见不公布客户级营收明细,但 FY2025 目的地结构偏亚洲(占营收 65%,主要为台湾 / 韩国存储与代工)加上销售给 5 家披露的晶圆厂 84-92% 份额,意味着前 5 大客户份额 **40-50%**,前 1 大客户可能在高个位数(台积电)。公司脚注断言无任何单一客户超过 10% 日本披露阈值,但失去或被压缩台积电、三星或信越的份额都会使 FY26F 营收受到 5-15% 的冲击 — 相当于 1-2 个财政年度的盈利水位 [FY2025 決算短信第 20 页分部信息](https://www.ircms.jp/irexport/fujimiinc/file/a80046653802235.pdf)。缓解因素:不二见服务所有主要客户,失去其中一家会部分回填。**严重程度:中高;可能性:低-中。**
+
+**中国厂商的浆料商品化,特别是成熟节点的 Cu 和 W 浆料。** 安集科技 (688019.SH) 据报已在 10 纳米以下逻辑合格化,并有铜 / 阻挡层浆料在客户测试 [野村《Greater China Semi》 2026-05-21 第 130 页(分析师锚定参考)](https://www.nomuraconnects.com/)。鼎龙股份 (300054.SZ) 类似在其主导的 CMP 垫地位旁边扩张 CMP 浆料。先进节点 FEOL 浆料(不二见最强位置)仍未被中国厂商合格化,但 28 纳米及以上以及成熟节点存储的份额侵蚀风险在 3-5 年时间窗口中真实存在。缓解因素:先进节点 FEOL 领导地位难以撼动,代表不二见最可防御的位置。**严重程度:5 年内中高;可能性:中。**
+
+**硅晶圆客户内部化或份额迁移。** 如果 NSIG (国大硅产) 或另一家中国晶圆厂从信越 / SUMCO / 环球晶圆抢走 300 毫米优质晶圆份额(目前消耗不二见浆料),同时切换到中国本地浆料供应商,不二见的硅晶圆营收(¥204 亿 / FY25 营收 33%)将结构性暴露。晶圆份额迁移迄今缓慢,但属于 5-10 年尾部风险。缓解因素:300 毫米优质晶圆的高品质门槛;不二见 30+ 年客户专属配方的护城河。**严重程度:10 年内高;可能性:低-中。**
+
+**镜山 / 第二研发中心建设的执行风险。** FY2024-26 累计资本开支 462 亿日元**比原 FY2024-29 中期计划高 162 亿日元**,引起于建材与人工费用上涨,加上长交付期项目的提前订购 [FY2025 财务概览第 33 页](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf)。镜山新工厂目标 2025 年底完工、2026 年样品出货、2027 年量产。延迟 6-12 个月或良率爬坡问题会有意义地推后 FY2029 ¥1,000 亿营收目标。**严重程度:中;可能性:中。**
+
+**对社长关圭志的关键人物依赖。** 关圭志自 2008 年 4 月任 CEO(18 年),是 2008 年后品质转身的设计师,也是个人最大股东之一。FY2024 治理对话中外部董事明确标注"继任计划"是治理面最大的未解问题 [《整合报告 2024》 "Dialogue with Outside Directors" 第 40 页](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf)。尚无公开披露的内部 CEO 继任人选。**严重程度:中;可能性:突然离任低,5 年内有序过渡近确定。**
+
+### 行业 / 市场风险
+
+**AI 资本开支回撤。** 2026-30 整个先进节点 CMP 浆料需求增长故事都建立在 AI 基础设施资本开支持续上。WSTS 预测 2024 / 2025 半导体营收增速 19% / 11%,2027F 之前类似量级 [WSTS 2024-12 预测,FY2025 财务概览第 8 页](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf)。AI 基础设施资本开支回撤(例如超大规模训练集群 ROI 不及预期)将打击不二见 CMP 事业部增长,可能把 FY2029 ¥1,000 亿营收目标推后 2-3 年。**严重程度:高;可能性:中。**
+
+**10 纳米以下 CMP 工序数不如预期增长。** 野村预测 N2 + BPD 节点先进晶圆 CMP 工序数增加 20-30%。如果 Lam 的原子层蚀刻 / 选择性沉积工艺替代 CMP 步骤的速度超过预期,浆料市场增速可能比 7% CAGR 基线低 2-3 个百分点。*分析师观点:* 短期内不太可能(CMP 在规模上太具成本效益,难以快速被替代),但 10 年内是真实考虑。**严重程度:中;可能性:低-中。**
+
+**HDD 长期下行。** SSD 在客户端和企业端(非近线)存储继续从 HDD 抢份额。当前 FY2025 近线 HDD 需求复苏是真实的,但 HDD 基板浆料业务 10 年视角是向下。不二见在 FY2026 HDD 指引(同比持平 ¥25.5 亿)中明确承认这一点。**严重程度:低(仅营收 4%);可能性:10 年内高。**
+
+### 财务风险
+
+**资本开支 / FCF 在 FY2027 前被挤压。** FY2026 资本开支 ¥296 亿对经营现金流约 ¥140 亿意味着 FY2026(且很可能 FY2027) **明显的 FCF 赤字**。公司净现金头寸(¥279 亿现金 + 证券、零债务)轻易覆盖,但股东权益比率将从 83.7% (FY2025) 滑向 FY2027 高 60% 区间 [FY2025 決算短信资产负债表第 5-6 页](https://www.ircms.jp/irexport/fujimiinc/file/a80046653802235.pdf)。缓解因素:资产负债表全程仍等同投资级。**严重程度:低;可能性:确定。**
+
+**估值倍数压缩风险。** TTM 市盈率 26.6× 高于不二见 3 年中位数(穿越 FY2024 谷底约 17×),隐含 AI / 资本开支周期乐观。FY2027 半导体周期顶峰后 FY2028 营收回撤 10-15%(与历史周期一致)可能使倍数在较低盈利上压缩到 18-20× — 30-40% 回撤情境。缓解因素:2% 股息率 + 55% 分红率政策提供一些支撑;资产负债表无懈可击。**严重程度:中高;可能性:3 年内中。**
+
+### 宏观风险
+
+**JPY/USD 汇率暴露。** FY2025 实际汇率 JPY 152/USD;FY2026 假设 JPY 140/USD。FY2025-FY2026 的 ¥(374) 万营业利润汇率逆风在绝对值上很小,但意味着日元显著走强会压缩报表盈利。约 78% 营收来自海外;通过海外子公司经营成本部分自然对冲 [FY2025 财务概览第 38 页](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf)。**严重程度:低-中;可能性:中。**
+
+**地缘 / 出口管制叠加。** 美国 BIS 对运往实体清单中国晶圆厂(中芯、长鑫)的先进节点材料的规则可能限制不二见某些先进节点浆料销售。迄今为止尚无针对不二见的具体出口限制通报。美中半导体技术管制进一步升级是尾部风险。**严重程度:中;可能性:低-中。**
+
+![不二见股息历史](../../charts/fujimi_dividends.png)
+*来源:[FY2025 财务概览演示第 41 页](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf)。*
+
+---
+
+## 10. 参考资料
+
+**发行方一手资料(不二见股份有限公司,TSE:5384):**
+
+- [FY2025 決算短信(年度财务结果速报),2025-05-13](https://www.ircms.jp/irexport/fujimiinc/file/a80046653802235.pdf) — 合并损益表、资产负债表、现金流量、分部信息
+- [FY2025 Financial Overview presentation, 2025-05-20](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf) — 分析师日演示,应用收入拆分、资本开支计划、OI 桥
+- [FY2025 Q3 決算短信, 2025-02-04](https://www.ircms.jp/irexport/fujimiinc/file/a79199895985530.pdf) — 3Q 快照
+- [FY2025 Q2 Financial Overview presentation, 2024-11-15](https://www.ircms.jp/irexport/fujimiinc/file/a78561166008292.pdf) — 1H FY25 业绩 + 资本开支更新
+- [《整合报告 2024》(2025 年 2 月发布)](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf) — 60 页战略 / 历史 / 治理 + 11 年财务摘要
+- [股东沟通杂志 "Fujimi Today"](https://www.ircms.jp/irexport/fujimiinc/file/a41823722757506.pdf) — 补充股东简报
+- [Fujimi 公司 IR — 资料库页面](https://www.fujimiinc.co.jp/ir/library/) — 一级访问门户
+- [Fujimi 英文公司页](https://www.fujimiinc.co.jp/english/) — 公司概览
+- [Fujimi CMP 浆料产品页(英文)](https://www.fujimiinc.co.jp/english/service/cmp/lineup.html) — PLANERLITE 产品系列原文
+
+**市场数据:**
+
+- [Kabutan 5384 股票数据,2026-05-26](https://en.kabutan.com/jp/stocks/5384/) — 当前价格、市盈率、市净率、市值
+- [Yahoo Finance 5384.T](https://finance.yahoo.co.jp/quote/5384.T) — 价格历史
+- [MarketScreener Fujimi 简介](https://www.marketscreener.com/quote/stock/FUJIMI-INCORPORATED-6491479/company/) — 补充财务和股权
+
+**第 7 章引用的同行公司文件:**
+
+- [Entegris SEC EDGAR 申报(CIK 1101302)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1101302&type=10-K) — Entegris 2024 10-K (CMC Materials 收购披露)
+- [Resonac IR — 半导体材料产品页](https://www.resonac.com/products/semi-frontend-process/75) — CMP 浆料产品定位
+- [默克 KGaA Versum 收购完成新闻稿,2019-10-07](https://www.emdgroup.com/en/news/versum-completion-07-10-2019.html) — Versum / EMD Electronics 历史
+- [Cabot Corporation NYSE:CBT 财务数据来自 Kabutan / Yahoo Finance](https://finance.yahoo.com/quote/CBT) — 同行估值
+- 安集科技 (SSE:688019)、鼎龙股份 (SZSE:300054) — TTM 市盈率通过引用野村研究
+
+**行业 / 市场调研:**
+
+- [QYResearch / Valuates 《2025-2030 全球 CMP 浆料市场预测》](https://reports.valuates.com/market-reports/QYRE-Auto-32B8990/global-cmp-slurry) — CMP 浆料 TAM 与 CAGR
+- [SkyQuest《CMP 浆料市场规模预测至 2033》](https://www.skyquestt.com/report/cmp-slurry-market) — 印证 CMP TAM
+- [QYResearch《2025 Cu CMP 浆料市场预测》](https://reports.valuates.com/market-reports/QYRE-Auto-34T18778/global-cu-cmp-slurry) — Cu 子板块份额
+- [QYResearch《胶体二氧化硅 CMP 浆料市场》](https://reports.valuates.com/market-reports/QYRE-Auto-34L18699/global-colloidal-silica-cmp-slurry) — 胶体二氧化硅子板块
+- WSTS 2024 年 12 月半导体预测 — 转载于 Fujimi FY2025 财务概览第 8 页
+- SEMI 2024 年 10 月硅晶圆面积出货预测 — 转载于 Fujimi FY2025 财务概览第 9-10 页
+
+**行业背景(关键份额和 CMP 工序数叙事的锚定研究):**
+
+- 野村亚洲科技《大中华半导体: 2026~30F 半导体复兴指南》,2026-05-21,首席分析师 Donnie Teng 等 — 通过项目内摘要引用 [reports/sector/半导体材料.md](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/半导体材料.md)。本野村报告(139 页,提供 CMP 浆料份额 Fig 41、CMP 工序数叙事、中国供应商排名、台积电资本开支展望的来源)是订阅限定;项目内 `reports/sector/` 摘要是本文引用该报告所用图表的可引用参考。
+
+**二级独立研究:**
+
+- [Wasabi-info 关于不二见 (TSE:5384) 的股票研究报告](https://wasabi-info.com/fujimi-incorporated-tse-5384-equity-research-report/) — 第三方分析师对分部定位的交叉检验
+- [DCFmodeling Fujimi 简介](https://dcfmodeling.com/blogs/history/5384t-history-mission-ownership) — 补充历史叙事
+- [Bitget 关于不二见 5384 的股票摘要](https://www.bitget.com/stock/tse-5384/what-is) — 补充交叉检验
+- [Datainsightsmarket Fujimi 页面](https://www.datainsightsmarket.com/companies/5384.T) — 补充(注:营收数据有误;一手发行方文件为权威)
+
+---
+
+## 11. 验证日志
+
+<details>
+<summary>验证日志 (Step 10) — 2026-05-26</summary>
+
+**URL 检查** — 本报告所有内联 URL 在研究过程中要么在线获取,要么基于公司的 IR-CMS (ircms.jp) 文档库。Fujimi 的 IR-CMS 文档 URL (a80046653802235.pdf、a80176453635234.pdf、a79408181419746.pdf、a79199895985530.pdf、a78561166008292.pdf、a81627205629086.pdf、a41823722757506.pdf) 在研究过程中均通过 `curl` 直接下载 — 全部返回 HTTP 200 与有效 PDF 内容(通过 `file` 命令输出与解析成功验证)。Fujimi 英文站点 URL (`fujimiinc.co.jp/english/`、`fujimiinc.co.jp/english/service/cmp/lineup.html`、`fujimiinc.co.jp/english/ir/`) 通过 WebFetch 获取并返回内容。Kabutan 英文页 (`en.kabutan.com/jp/stocks/5384/`) 获取并返回有效数据。同行公司 URL (SEC EDGAR、Yahoo Finance、MarketScreener、QYResearch / Valuates / SkyQuest 市场调研页面) 都是真实可公开访问的着陆页 URL。
+
+**关键论断的来源锚定**:
+- 营收 ¥625.03 亿 (FY25) ✓ 经 [FY2025 決算短信第 1 页,2025-05-13](https://www.ircms.jp/irexport/fujimiinc/file/a80046653802235.pdf) 验证
+- 营业利润 ¥117.80 亿 (FY25),利润率 18.8% ✓ 同源第 1 页
+- 归母净利润 ¥94.28 亿 (FY25),同比 +45.1% ✓ 同源第 1 页
+- 4 个分部 (日本 ¥354.64 亿 / 北美 ¥82.01 亿 / 亚洲 ¥167.52 亿 / 欧洲 ¥20.84 亿) ✓ FY2025 決算短信第 20 页 セグメント情報
+- 应用收入拆分 (硅 ¥204.37 亿 / CMP ¥306.58 亿 / HDD ¥25.47 亿 / 特种 ¥87.29 亿) ✓ [FY2025 财务概览第 18 页](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf)
+- 资本开支 ¥128.44 亿 (FY25)、¥296.00 亿 (FY26F) ✓ 同源第 33 页
+- R&D ¥54.82 亿 (FY25,占销售额 8.8%) ✓ 同源第 35 页 + FY2025 決算短信第 15 页
+- 股东权益比率 83.7%、零债务、FY25 末现金 ¥237.87 亿 ✓ FY2025 決算短信第 3-5 页
+- 创立日期 1950 年(合伙) / 1953 年 3 月 20 日(法人化) ✓ 《整合报告 2024》"Corporate Profile" 第 57 页
+- 创始人腰山照二 ✓ 《整合报告 2024》"Message from the President" 第 4 页(直接署名:"our founder, Teruji Koshiyama")
+- 社长关圭志自 2008 年 4 月 ✓ 《整合报告 2024》"Directors and Auditors" 第 47-48 页(职业生涯年表)
+- 截至 2024 年 3 月 1,309 项专利 ✓ 《整合报告 2024》第 10 页
+- 硅晶圆研磨材料份额 84-92%、FEOL 浆料份额 56%、CMP 浆料总份额 13% ✓ 《整合报告 2024》第 10 页 "Fujimi's Unique Qualities"
+- 截至 2024 年 3 月合并员工 1,110 人 ✓ 《整合报告 2024》"Corporate Profile" 第 57 页
+- Nanko 研磨工业 2024 年 10 月并表、75% 股权 ✓ 《整合报告 2024》"Message from the President" 第 4 页 + FY2025 決算短信第 11 页现金流量项 "子会社株式の取得 ¥1,085 mn"
+- 镜山新工厂 28,000 m² + 第二研发中心 16,000 m² ✓ FY2025 财务概览第 31 页
+- 6 家合并子公司 (FUJIMI CORPORATION US、FUJIMI-MICRO MALAYSIA、FUJIMI EUROPE GmbH、FUJIMI TAIWAN、FUJIMI SHENZHEN、南興セラミックス) ✓ FY2025 決算短信第 12 页 連結の範囲
+- 最大股东 Koma Co., Ltd. 17.7%、Koshiyama Foundation 2.3%、关圭志 1.7% ✓ 《整合报告 2024》"Stock Information" 第 57 页
+
+**分析师观点句**(刻意不引用一手来源 — 按 SKILL 规则标注):
+- 第 1 章估值快照 — 同行倍数定位、FY2027 资本开支周期空头案例
+- 第 5 章客户集中度估算 — 前 5 大客户份额带 40-50%
+- 第 5 章客户集中度饼图 — 明确为分析师建构,按此标注
+- 第 6 章中国供应商份额数据 — 通过引用的野村行业报告综合多源行业数据
+- 第 7 章按子板块的竞争结论表 — 分析师建构;每行份额数据来自 Fujimi 自身披露(适用时),否则为分析师综合
+- 第 8 章 FY2030 SAM/SOM 推算 — 建立在市场调研 TAM + Fujimi 公开的 FY2030 ¥1,000 亿营收目标 + Fujimi FY25 应用拆分上;估算方法已披露
+
+**使用但无法逐数字直接验证的来源:**
+- 野村《Greater China Semi》 2026-05-21 行业报告为订阅限定。具体的页码-图引用(Fig 41 CMP 浆料份额、第 130 页安集 FY27F 市盈率、第 6-9 页 CMP 工序数叙事)通过项目内 `reports/sector/半导体材料.md` 摘要引用,后者本身为本报告引用该报告的权威来源。
+- CMP 供应商份额数据(Entegris 28%、Resonac 18%、Versum 12%、Fujimi 11%、安集 8%、鼎龙 6%)是分析师综合多源行业资料(QYResearch、Valuates、野村行业报告、供应商披露) 的估算。Fujimi 自身披露份额(CMP 总 13%、FEOL 56%)是唯一直接引用的一手数据。
+
+**残余未知 / 尚未验证:**
+- Fujimi 具体的客户级营收集中度:Fujimi 不公布。所述数据(前 5 大 40-50%、前 1 大高个位数)为分析师推论。
+- Fujimi FY2025 有価証券報告書 (Yuho) 的精确 EDINET URL:Yuho 通常 6 月末申报;FY2025 Yuho 按 FY2025 決算短信时间线日期为 2025-06-24。EDINET 门户需互动会话导航,Yuho 的标准 URL 未提取,但等效数据完全保留在引用的公开決算短信 + 整合报告组合中。
+- Nanko 研磨工业的营收贡献:公司仅披露了 10.85 亿日元收购成本;分部营收贡献尚未拆分(将出现在 FY2026 披露)。
+- 具体的台积电 / 三星 / 英特尔在 Fujimi 营收中的份额:未公开披露。
+
+</details>
+
+
+
+
+
