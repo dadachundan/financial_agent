@@ -394,3 +394,141 @@ EHWA 的**可服务可寻址市场 (SAM, Serviceable Addressable Market)** — �
 IMM PE 在交易后的公开策略是**继续 R&D 投资 + 全球客户扩张 + 供应链杠杆**，**经营上转化为：** (a) 招募更多半导体工程人才 (三星 / SK 海力士工艺工程师转会可以加速韩国 fab 认证)，(b) **扩展美国布局** (Irvine 办公室规模偏小；一个实际的美国半导体 fab 服务中心可帮助台积电亚利桑那 / 三星 Taylor / Micron Boise 渗透)，(c) **深化印度布局** — 随印度 fab (Tata Electronics、Micron Sanand) 上线，(d) 潜在**M&A** 收购小型竞争对手以补能力或份额。建筑与精密工具业务预计是**稳定贡献而非增长论点**。
 
 ---
+
+## 9. 风险评估
+
+下方 8-12 个风险跨四个标准桶 — **公司层、行业 / 市场、财务、宏观** — 按可能性与严重性排序。2026 年 IMM PE 收购是一个**特别重要的新风险向量**，需要在多个维度上评估。
+
+### 公司层风险
+
+**1. 客户集中度 — 未披露。** 作为非上市主体，EHWA 不披露 top-1 或 top-5 客户份额。基于公开客户名单 (三星电子、SK 海力士、台积电为半导体顶级客户；现代汽车为精密工具顶级客户) 和分析师估算的半导体线占营收 ~25%，**前 3 半导体客户可能占该事业部 ~60-80% 营收** — 意味着公司整体 top-3 可能达 ~20-25% 集中度，属中等。**披露缺失本身就是风险**：分析师构建半导体耗材增长论点时**无法量化**增长有多少依赖单一 fab 的认证周期。IMM PE 交易后此情况不太可能改善 — 韩国 PE 拥有的工业企业通常维持或降低披露颗粒度。[媒体证据](https://www.forbeskorea.co.kr/news/articleView.html?idxno=337331); [DART 51 期审计报告](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331002816)。
+
+**2. 建筑周期拖累。** 建筑与石材工具占营收 ~50% (分析师估算)，EHWA 盈利暴露于**建筑周期波动**。FY2023 营业利润崩塌 (₩145 亿 vs. 上一年 ₩260 亿) 主要由韩国建筑疲软驱动；另一轮多年韩国 / 中国建筑下行将把合并毛利率压到中个位数。这是**结构性盈利波动**风险，IMM PE 交易并不消除；5 年持有期的 PE 拥有者评估退出时机时会**明确考虑建筑周期相关性**。
+
+**3. IMM PE 交易后整合风险。** 新 PE 所有权通常带来变化：**成本削减、剥离、管理层更替、股息再融资以提取资本**。虽然 IMM PE 公开的逻辑是"稳定建筑基础 + 半导体增长 + R&D 投资延续" ([fn마켓워치, 2026-05-13](https://www.fnnews.com/news/202605130830353811))，执行风险是真实的 — 김家族 50 年经营文化与创始人持续介入对 PE 控制的稀释性是真实的。**新所有权下首 12-18 个月是最高执行风险窗口**；对客户关系 (尤其三星 / SK 海力士联合开发延续性) 的影响是最重要的担忧。
+
+**4. 创始人家族 / 关键人物依赖。** 交易前：김수광 (董事长，44.84%) 与김재희 (CEO，2010 年至今) 是**公司的制度记忆**。如果 IMM PE 收购后任何一方退出经营，客户关系与工艺 IP 都可能弱化。PE 收购者通常保留创始人家族管理 1-3 年的过渡期，但**这是合同性、非自动性**。
+
+**5. 在领先节点上相对 Kinik 的规模劣势。** Kinik (TWSE:1560) 是 CMP 修整器全球 #1，份额 ~60%，且是唯一**在台积电 N2 / A16 节点上完全认证**的修整器专门厂商。**EHWA 在领先节点上难以缩小这一差距**，除非投入重大台积电认证努力，而历史上这种投入进展缓慢 ([Nomura 2026-05-21, 第 15-17 页](../sector/半导体材料.md))。结构性风险：**随着更多 fab 产能转向 N2 / A16 + BPD，EHWA 可达市场缩小，除非它也能在那里通过认证**。
+
+### 行业 / 市场风险
+
+**6. 中国大陆修整器进入者。** 中国大陆钻石工具专门厂商 (Goodfor、河南 Funik 专门子部门) 在 28/40/65nm 传统节点 (增长最慢但仍有意义的需求切片) 上**逐步缩小价格 / 性能差距**。中国 fab (SMIC、YMTC、CXMT、华虹) 也受到北京"国产化"政策的推动，可能时**主动国产化采购** — 这恰恰**压缩 EHWA 增长最快的客户集**的价格 / 销量。可能性：高；严重性：中等 (主要为毛利压缩，短期内不是销量损失)。
+
+**7. Disco / Asahi / Sumitomo Electric 的竞争强度。** 在 BG / 切割 / 精密工具子细分，**日本在位者 (Disco、Asahi Diamond Industrial、Sumitomo Electric Hardmetal) 维持在日本与台湾 fab / 一级供应商的主导位置**，可能用定价或技术特性竞争**理性反击 EHWA 在韩国和中国的份额扩张**。
+
+**8. 中国子公司关税 / 制裁风险。** EHWA 在中国运营三个基地 (威海、福建、上海)；进一步升级的美中贸易紧张 (Section 301 关税、实体清单添加、更广的半导体出口管制) 可能扰乱**中国采购→韩国 / 美国 fab 流入**或**中国销售→fab 流出**。直接严重性可能中等 (中国基地主要服务中国国内客户，不出口至美国)，但**通过台积电 (正在退出部分中国敞口) 等客户的间接风险**更难量化。
+
+### 财务风险
+
+**9. 外汇敞口 (KRW vs. USD/EUR/CNY)。** ~60% 营收来自出口，并拥有 ~10 个外币子公司，EHWA 的报告盈利**对外汇敏感**。FY2024 净利润飙升至 ₩498 亿很大程度上由 ₩117 亿未实现外汇收益驱动；FY2025 回归 ₩278 亿主要反映**外汇变动未重演** ([DART 51 期审计报告, 손익계산서](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331002816))。FY2025 年末挂账应收 1,520 万美元 + 45.8 万欧元。**韩元持续走强会压缩报告毛利率**。
+
+**10. 商誉 / IMM PE 交易后的杠杆。** PE 支持的收购通常部署**债务支撑的结构**，可能让被收购实体携带大量商誉与交易后杠杆。IMM PE 交易新闻稿明确提到"并购融资"+ RGS 共同投资 ([fn마켓워치, 2026-05-13](https://www.fnnews.com/news/202605130830353811))，**暗示杠杆结构**。EHWA 交易前的资产负债表异常干净 (₩3,295 亿股东权益、~71.5% 股东权益比率)；**交易后的资本结构尚未披露**，但将削减 EHWA 历史上享有的财务灵活性。
+
+### 宏观风险
+
+**11. 韩国建筑 / 中国建筑周期。** EHWA 最大营收事业部的**宏观驱动周期性**。2027-28 年的韩国建筑下行 (由住房 / 房地产疲软、利率环境、政府支出紧缩驱动) 会**显著降低 EHWA 营业利润**，类似 FY2023 那一轮。
+
+**12. AI 资本开支 / 半导体周期反转。** EHWA 半导体耗材增长的看涨情景**锚定于多年 AI 驱动的半导体资本开支扩张** — 台积电 2027F ~700 亿美元资本开支、三星 Taylor / 华城 / 平泽建设、SK 海力士 HBM 扩张。**AI 资本开支急剧反转** (由超大规模云厂商支出回撤、GPU 供过于求、模型训练效率提升降低计算需求驱动) 会把**半导体耗材 TAM 增长从 ~7% CAGR 压缩到平稳 / 下行**，这会**显著打击 IMM PE 交易投资逻辑**。可能性中等 (行业共识仍在扩张)，严重性高 (**整个 IMM PE 控股溢价逻辑都依赖持续的半导体资本开支**)。
+
+---
+
+## 10. 参考资料
+
+### 一手披露 (DART 备案)
+- [DART — EHWA Diamond Industrial 공시 search (corp_code 00145677)](https://dart.fss.or.kr/dsab007/main.do)
+- [연결감사보고서 51 期 (FY2025, 2026-03-31 提交), 审计 KPMG 삼정회계법인](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331002816)
+- [감사보고서 (단독) 51 期 (FY2025, 2026-03-31 提交)](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331002809)
+- [연결감사보고서 50 期 (FY2024, 2025-03-31 提交)](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250331003506)
+- [연결감사보고서 49 期 (FY2023, 2024-03-29 提交)](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240329002705)
+- [연결감사보고서 48 期 (FY2022, 2023-03-29 提交)](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230329001458)
+- [연결감사보고서 47 期 (FY2021, 2022-03-31 提交)](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20220331000447)
+
+### 专利与学术论文
+- [US9314901B2 — CMP 抛光垫修整器 (三星电子 + EHWA Diamond, 2016 授权)](https://patents.google.com/patent/US9314901B2/en)
+- [ScienceDirect — Novel CVD diamond-coated conditioner for improved performance in CMP processes (EHWA + KIST 合作, 2011)](https://www.sciencedirect.com/science/article/abs/pii/S0890695511000393)
+- [Patents Assigned to Ehwa Diamond Industrial — Justia 搜索](https://patents.justia.com/assignee/ehwa-diamond-industrial-co-ltd)
+
+### 媒体报道 (≤24 个月，除非创业事实)
+- [Seoul Economic Daily — IMM PE 收购 EHWA Diamond ₩4,000 亿 (2026-05-12)](https://en.sedaily.com/news/2026/05/12/imm-pe-to-acquire-koreas-top-tool-maker-ehwa-diamond-for)
+- [파이낸셜뉴스 fn마켓워치 — IMM PE 50 年钻石工具业押注 (2026-05-13)](https://www.fnnews.com/news/202605130830353811)
+- [Forbes Korea — Kim Jae-Hee EHWA Diamond CEO 画像 (2024-04-10)](https://www.forbeskorea.co.kr/news/articleView.html?idxno=337331)
+- [중견기업연합회 FOMEK — Kim Jae-Hee 대표이사 인터뷰 (2024-09)](https://www.fomek.or.kr/main/newsroom/news/vpg_view.php?wr_id=58)
+- [한국경제 — 이화다이아몬드 钻石工具世界第一目标 (2022-02-27)](https://www.hankyung.com/article/2022022724411)
+- [한국경제 — 김수광 사장 SME Person of the Month (创业事实, 1995-09-26)](https://www.hankyung.com/article/1995092601661)
+- [Sammy Fans — 三星 / SK 海力士可再利用 CMP 抛光垫 (2023-12-26)](https://www.sammyfans.com/2023/12/26/following-samsung-sk-hynix-develops-reusable-cmp-pad/)
+- [SK Hynix Newsroom — CMP 抛光垫回收 (2024)](https://news.skhynix.com/the-journey-of-recycling-cmp-pads/)
+- [Digitimes — 三星 & SK 海力士在 SEMICON Taiwan 的供应链推进 (2025-09-08)](https://apps.digitimes.com/news/a20250908PD218/2025-samsung-semicon-2025-sk-hynix-supply-chain-taiwan.html)
+- [KED Global — ASML K-Semiconductor Belt 背景 (2021-05-13)](https://www.kedglobal.com/k-semiconductor-belt/newsView/ked202105130009)
+- [MarketScreener — EHWA Diamond 收购 Meerecompany 3.54% 股权 (2015-03-24)](https://www.marketscreener.com/quote/stock/MEERECOMPANY-INCORPORATED-12898436/news/Ehwa-Diamond-Industrial-Co-Ltd-acquired-3-54-stake-in-Meerecompany-Inc-from-Joon-Koo-Kim-and-Jo-38434409/)
+
+### 公司网站 / IR 页面
+- [EHWA Diamond Industrial — 企业网站 (ehwadia.co.kr)](http://www.ehwadia.co.kr/compliance/)
+- [EHWA Cutting Tools — 产品目录](https://www.ehwacuttingtool.com)
+- [EHWA Diamond Insa — 招聘 / 关联企业地图](https://ehwadia-insa.co.kr/?page_id=1388)
+- [SEMI member directory — EHWA Diamond Industrial](https://www.semi.org/en/resources/member-directory/ehwa-diamond-industrial-co-ltd)
+- [SEMICON Korea 2025 — EHWA Diamond 展商画像](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=320&FromPage=Exhibitors.aspx&ParentBoothID=&ListByBooth=true&BoothID=595140)
+
+### 竞争对手与行业资料
+- [Nomura — Greater China Semi: A guide to Semi renaissance in 2026~30F (锚行业报告, 2026-05-21, Fig 43 第 70 页)](../sector/半导体材料.md)
+- [Valuates Reports — CMP Pad Conditioners Market (QYRE-Auto-14R9251, 2026 版)](https://reports.valuates.com/market-reports/QYRE-Auto-14R9251/global-cmp-pad-conditioners)
+- [Verified Market Reports — CMP Diamond Pad Conditioner Market 2034](https://www.verifiedmarketreports.com/product/cmp-diamond-pad-conditioner-market-size-and-forecast/)
+- [Business Research Insights — CMP Pad Conditioners Market 2032](https://www.businessresearchinsights.com/market-reports/cmp-pad-conditioners-market-108568)
+- [openPR — CMP Pad Conditioners Market 顶级公司 (2022)](https://www.openpr.com/news/2865451/cmp-pad-conditioners-market-2022-growing-rapidly-with-latest)
+- [Saesol Diamond Co. — SEMI member directory](https://www.semi.org/en/resources/member-directory/saesol-diamond-co-ltd)
+- [SAESOL — SPS International 品牌产品页](https://www.sps-international.com/brands/saesol/)
+- [3M — CMP Pad Conditioners 半导体类别](https://www.3m.com/3M/en_US/p/c/electronics-components/cmp-materials/cmp-pad-conditioners/i/electronics/semiconductor/)
+- [3M — Diamond Pad Conditioner C Series 产品页](https://www.3m.com/3M/en_US/p/d/b5005469001/)
+- [Novacam — CMP pad and groove measurement 技术简报 (2020-06-16)](https://www.novacam.com/2020/06/16/cmp-pad-and-groove-3d-measurements/)
+- [SP3 — CMP Pads 产品页 (行业背景)](https://sp3-cvd.com/cmp-pads)
+
+### 市场数据 / 企业数据库
+- [Bloomberg — Ehwa Diamond Industrial 公司画像 (1210Z:KS, 私营)](https://www.bloomberg.com/profile/company/1210Z:KS)
+- [DnB — EHWA Diamond Industrial 公司目录](https://www.dnb.com/business-directory/company-profiles.ehwa_diamond_indcoltd.e2d0f0e073fb88beaf3fafc05f6bf6da.html)
+- [saramin — EHWA Diamond Industrial 财务卡片 (2026-Q1 更新)](https://www.saramin.co.kr/zf_user/company-info/view-inner-finance/csn/SUZ4bHJmRk1CNFBBMVkzSmpmSHdqZz09/company_nm/%EC%9D%B4%ED%99%94%EB%8B%A4%EC%9D%B4%EC%95%84%EB%AA%AC%EB%93%9C%EA%B3%B5%EC%97%85(%EC%A3%BC))
+- [Catch — EHWA Diamond Industrial 2026 公司画像](https://www.catch.co.kr/Comp/CompSummary/380288)
+- [investkorea — 半导体门户 (K-Belt 背景)](https://www.investkorea.org/ik-en/cntnts/i-312/web.do)
+- [Yahoo Finance — Wooyang Co (KOSDAQ:103840 — 实际持有 103840 代码的公司；非 EHWA)](https://finance.yahoo.com/quote/103840.KQ/)
+
+---
+
+<details>
+<summary>核查日志 (Step 10) — 2026-05-26</summary>
+
+**代码 / 状态核查 (Ticker correction)** — 通过 Bloomberg + Yahoo Finance 确认 KOSDAQ:103840 实际为 **Wooyang Co., Ltd. (우양; 冷冻水果加工)，而非 EHWA Diamond Industrial**。EHWA Diamond 系**非上市公司**；Bloomberg ID `1210Z:KS`。EHWA 在 DART 中的 corp_code 为 `00145677`，备案分类为 "기타법인 (其他法人)"。本报告顶部公告对此进行了明确更正，纠正了任务输入中的代码假设，让读者能够追溯到真实主体。
+
+**URL 检查** — 所有内联 URL 来自联网搜索结果或经验证的 DART URL。对 11 条最重要的 URL 与原始搜索片段进行点对点核查，全部对应真实页面。DART 备案 URL 直接从 DART 检索结果表格 (rcpNo 数字从 HTML 中提取) 推导而来，非构造。因 DART 速率限制，未对所有 URL 做 HTTP 批检；手动点检确认结构正确。
+
+**DART 数据点检** — 拉取合并审计报告 (rcp 20260331002816, dcmNo 11207965)，直接文本搜索验证：
+- FY2025 合并营收 ₩370,099,350,775 ✓ (vs. FY2024 ₩375,458,518,364)
+- FY2025 营业成本 ₩282,293,597,572 ✓
+- FY2025 营业利润 ₩32,977,276,927 ✓ (= 8.9% 营业利润率)
+- FY2025 净利润 ₩27,831,311,726 ✓
+- FY2025 股东权益 ₩329,453,981,714 ✓
+- FY2025 总资产 ₩460,909,257,838 ✓
+- 股东表：김수광 627,773 / 44.84%, 김신경 287,809 / 20.56%, 其他 484,418 / 34.60%, 合计 1,400,000 ✓
+- 子公司清单：이화다이아몬드공구(주), 평택산업, 위해상광 (Weihai), 푸젠 EHWA, 상하이 EHWA, EHWA Japan, EHWA Europe GmbH, Siam EHWA, PT EHWA Indonesia, PT EHWA Trade, EHWA India, EHWA Mexico, ZENESIS Solutions (意大利, 权益法, 价值已减值) ✓
+- 审计：KPMG 삼정회계법인 ✓
+- HQ 地址：경기도 오산시 남부대로 374 (원동) ✓
+- 当前会计年度：51 期 (FY2025 = Jan 1 - Dec 31, 2025) — 与 1975 年成立日一致 ✓
+- 登记 CEO：대표이사 김재희 ✓
+
+**专利点检** — US9314901B2 通过 Google Patents 直接拉取确认。发明人：Seh Kwang Lee、Youn Chul Kim、Joo Han Lee、Jae Kwang Choi、Jae Phil Boo。受让人：Samsung Electronics Co Ltd；Ehwa Diamond Industrial Co Ltd。申请日：2012 年 5 月 15 日。✓
+
+**分析师观点句 (intentionally not cited to a primary source):**
+- 第 1 节估值快照 — 与 Kinik 40 倍 2028F 倍数的对比被定位为分析师推论，行文中标注。
+- 第 4 节产品营收结构 (50/25/25) — 显式标注"(分析师估算)"并引用区间的原始媒体。
+- 第 4.3 / 4.4 / 4.5 节竞争优势裁定 — 标注 `*分析师观点：*`。
+- 第 5 节客户集中度饼图 — 显式标注"指示性、分析师构建的拆分 (未披露)"。
+- 第 7 节份额百分比表 — 显式标注"(分析师估算, 2024)"并引用底层行业研究源。
+- 第 8 节 SAM / SOM 估算 — 基于点名的 TAM 源构建，算术过程清晰展示。
+
+**残留未知 / 未核实事项：**
+- IMM PE 交易后**精确结构** (控股价值对价拆分、债务 vs. 股权、创始人家族转持) — 截至 2026-05-26 媒体未披露。
+- **精确客户集中度百分比** — 任何公开备案均未披露。
+- **精确事业部结构百分比** — 全文标注为分析师估算；DART 审计报告不分部。
+- **CEO 精确持股** — DART 表列김수광 44.84%, 김신경 20.56%, "其他" 34.60%，无第三个超过 5% 披露阈值的姓名，因此 김재희 直接持股位于"其他"块中。
+- **Saesol Diamond 精确份额** — "~7%"为基于"前 5 = 90%"框架的分析师估算；Saesol 不公开营收。
+
+</details>
+
