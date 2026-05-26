@@ -198,7 +198,7 @@ CMP (**chemical mechanical planarization / 化学机械抛光**) is the wafer-fa
 
 3M's pad conditioner business sits inside Electronics Materials Solutions — historical position is one of the two original leaders in the category alongside Kinik (Taiwan TWSE:1560). Per Nomura's supplier league table for CMP pad conditioner (Fig 43 in the [2026-05-21 Greater China Semi report](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)), the share map is **Kinik 60-70% + 3M + Saesol + Entegris** — i.e. Kinik is dominant and 3M is the largest non-Asian challenger but with shrinking share, particularly at sub-7nm advanced nodes where Kinik's 80% share at N2 has become the de facto standard. *Analyst view:* **3M's CMP pad conditioner is a clearly partial competitive advantage** with moat type = brand recognition + 30-year customer relationships, but **structurally losing share** to Kinik at the leading edge. The CMP pad conditioner business inside 3M is estimated by sell-side at USD 200–300M of annual revenue (i.e. ~10% of the Electronics line), which makes it material to 3M's Electronics Materials Solutions division but not material to 3M overall — and the Kinik share-take trajectory is the dominant risk.
 
-*Analyst view:* **Closest named competitor products** — Kinik's "Diagrid" CMP pad conditioner line ([Kinik corporate website](https://www.kinik.com.tw/en/)) is the direct comp. Korean competitor Saesol Diamond markets the "PDC" series; US/Japan competitor Entegris markets a smaller pad-conditioner book inside its broader CMP Consumables group ([Entegris 10-K FY2024, Item 1 Business](https://www.sec.gov/Archives/edgar/data/1101302/000110130225000015/entg-20241231.htm)). 3M's own product name remains undisclosed in the FY2025 10-K.
+*Analyst view:* **Closest named competitor products** — Kinik's "Diagrid" CMP pad conditioner line ([Kinik corporate website](https://www.kinik.com.tw)) is the direct comp. Korean competitor Saesol Diamond markets the "PDC" series; US/Japan competitor Entegris markets a smaller pad-conditioner book inside its broader CMP Consumables group ([Entegris 10-K FY2024, Item 1 Business](https://www.sec.gov/Archives/edgar/data/1101302/000110130225000015/entg-20241231.htm)). 3M's own product name remains undisclosed in the FY2025 10-K.
 
 ### 4.4 Electronics Materials Solutions — CMP polishing pad
 
@@ -468,7 +468,7 @@ Below: 10 risks across the four standard buckets. Each is described with quantif
 **Competitor filings (referenced in Section 7 verification)**
 - [Entegris 10-K FY2024 (CIK 0001101302)](https://www.sec.gov/Archives/edgar/data/1101302/000110130225000015/entg-20241231.htm)
 - [Honeywell 10-K FY2024 (CIK 0000773840)](https://www.sec.gov/Archives/edgar/data/773840/000077384025000010/hon-20241231.htm)
-- [Kinik (TWSE 1560) corporate website](https://www.kinik.com.tw/en/)
+- [Kinik (TWSE 1560) corporate website](https://www.kinik.com.tw)
 
 <details>
 <summary>Verification log (Step 10) — 2026-05-26</summary>
