@@ -208,4 +208,73 @@ Unlike a semiconductor capital-equipment firm whose revenue depends on customer 
 
 ---
 
+## 5. Customers & Go-to-Market (≈700 words)
+
+Fujimi sells to four distinct customer types, in descending revenue order: (a) **silicon-wafer makers** (Shin-Etsu Chemical, SUMCO, GlobalWafers Taiwan, Siltronic AG, SK Siltron, plus the Chinese national champions 国大硅产 / NSIG and Zhonghuan / TCL), (b) **logic and memory IDMs / foundries** (TSMC, Samsung Electronics, Intel, Micron, SK Hynix, GlobalFoundries, plus China's SMIC, Hua Hong and YMTC for the more commodity slurry grades), (c) **hard-disk media makers** (Western Digital, Showa Denko Hard Disk), and (d) **general-industry / specialty-materials buyers** (Lam / AMAT / TEL for thermal-spray chamber liners, automotive OEMs for paint polishing compounds, eyeglass and optics makers for lens polishing, the steel-mill caster-roller market).
+
+**Customer concentration disclosure is weak**, and that is a flag in itself. Fujimi's 決算短信 and Integrated Report do not publish a 主要な販売先 (major customer) breakdown — Japan Yuho disclosure rules require naming customers ≥10 % of consolidated net sales only when applicable, and Fujimi's footnotes assert no single customer crosses that line. *Analyst view:* given the FY2025 destination split (Asia & Oceania ¥40.7 bn / 65 % of revenue), the top three Asian semiconductor and silicon-wafer customers — **almost certainly TSMC, Samsung Electronics (memory + foundry), and Shin-Etsu Chemical** — likely each contribute high-single-digit-% to mid-teens-% of consolidated revenue, with the top-5 collectively at **30-40 %** based on industry-published wafer-start shares and the silicon-wafer-abrasive disclosed 84-92 % share figures. This is high concentration in absolute terms but per the issuer no individual customer breaches the 10 % disclosure threshold — characteristic of a slurry supplier serving every major fab. The mitigating factor is that Fujimi's primary customers (TSMC, Samsung, Shin-Etsu) compete with each other; loss of one would partially backfill via the others. The aggravating factor is **silicon-wafer customer concentration is structurally even tighter than CMP** because there are only ~5 prime-grade 300-mm wafer makers globally.
+
+Disclosed customer relationships:
+- **Intel — formally awarded Preferred Quality Supplier (PQS) in 2002 and the Supplier Continuous Quality Improvement Award (Intel's highest supplier honour) in 2004.** These awards are public and constitute primary-source evidence of CMP-slurry relationship at Intel [Integrated Report 2024 "Growth Trajectory" p.7](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf). Intel's CY24 share of WSTS logic revenue places it ~ #2 logic-IDM globally.
+- **TSMC, Samsung, SK Hynix, Micron, GlobalFoundries** — Fujimi's CMP slurry has been qualified at all the leading-edge foundries and memory IDMs for various process steps. Fujimi does not publish specific customer-by-customer share figures but the **Taiwan affiliate (Fujimi Taiwan Limited, Miaoli) was set up in 2011 specifically to put R&D and production within driving distance of TSMC** [Integrated Report 2024 "Growth Trajectory" p.7](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf), and the FY2025 Asia segment growth (+23.5 % YoY to ¥16.75 bn) was explicitly attributed to "advanced logic device CMP products and HDD substrate products" [FY2025 決算短信 p.2 segment commentary](https://www.ircms.jp/irexport/fujimiinc/file/a80046653802235.pdf).
+- **Shin-Etsu Chemical, SUMCO, GlobalWafers, Siltronic, SK Siltron** — silicon wafer makers. Disclosed share figures (92 % lapping, 84 % final polish) imply Fujimi supplies essentially all of them; SUMCO and Shin-Etsu specifically use Fujimi's PWA polishing slurry for prime-grade 300-mm output [Integrated Report 2024 p.10](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf).
+
+```mermaid
+pie
+    title Fujimi FY2025 revenue concentration (analyst estimate)
+    "TSMC + Taiwan affiliates" : 18
+    "Samsung Electronics" : 13
+    "Shin-Etsu + SUMCO" : 17
+    "Other named wafer / fab" : 22
+    "HDD media + Specialty + GI" : 18
+    "All other" : 12
+```
+*Note: chart is an analyst estimate; Fujimi does not publish customer-level revenue concentration. The pie is constructed from (a) the destination revenue split (FY25 Asia 65 %, Japan 22 %), (b) Fujimi's own disclosed 84-92 % share in silicon-wafer abrasives sold to the 5 prime-grade wafer makers, (c) the FY2025 CMP +11.9 % YoY commentary, and (d) public WFE / fab-start share by foundry & memory IDM.*
+
+**Go-to-market mechanics.** Fujimi sells direct (no distributor channel for fab-grade slurry) through the parent's Japan sales team and the geographically-placed affiliates: **Fujimi Corporation (Tualatin, OR) for North America** (Intel, Micron, GlobalFoundries), **Fujimi Taiwan Limited (Miaoli) for Taiwan-foundry accounts** (TSMC, UMC, Vanguard, Powerchip), **Fujimi-Micro Technology SDN. BHD. (Kulim, Malaysia) for HDD and SiC slurry**, **Fujimi Europe GmbH (Ingelfingen, Germany) for European accounts** (Bosch, Infineon, STMicroelectronics, X-FAB), **Fujimi Shenzhen Technology for China**, plus the **Shanghai representative office** for China supply-chain coordination. Sales cycles are long — typically 6-18 months for a new CMP slurry recipe to clear customer qualification, 12-36 months for silicon-wafer polishing — but once qualified the contract is effectively multi-year because re-qualification is costly. Pricing is set per-fab, per-recipe; ASP movements are modest (FY2025 reported a small positive selling-price contribution of ¥300 mn against ¥11.78 bn op-profit) [FY2025 Financial Overview p.37 "Operating Income Analysis"](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf).
+
+**Concentration risks — explicit verdict.** Since the company does not publish concentration figures, this analyst's framing relies on inference. The likeliest **top-5 customer share is 40-50 %**, with TSMC + Samsung + Shin-Etsu + SUMCO + Intel collectively making up that band; this is a material concentration but below the threshold where a single customer can collapse the franchise. The aggregating factor that should worry investors is that **silicon-wafer abrasive customers are even more concentrated than CMP customers** — the global prime-grade 300-mm wafer market has only 5 players, so Fujimi's 84-92 % share leaves only ~10 % to JSR-Versum-internal-alternative competition. If two wafer makers simultaneously decided to dual-source aggressively, Fujimi could lose 20 points of share over 3 years. This has not happened historically but the precedent (Fujimi losing share around 2009-11 during the 200→300 mm transition and earning it back through the Monozukuri Promotion Office) shows the risk is real.
+
+---
+
+## 6. Industry Overview (≈1,100 words)
+
+### 6.1 The global semiconductor materials market
+
+The **global semiconductor materials market reached approximately US$ 80 bn in 2024**, split roughly 60 % manufacturing materials (wafers, slurries, photoresist, specialty gases, sputter targets) and 40 % packaging materials (substrates, bonding wire, mold compounds, leadframes) [Nomura "Greater China Semi" 2026-05-21 p.18 (Fig 24-25), summarised in /Users/x/projects/financial_agent/reports/sector/半导体材料.md](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/半导体材料.md). Within manufacturing materials, **CMP slurries make up ~7 %** (so ~US$ 3.4 bn) and **silicon wafers ~31 %** (so ~US$ 15 bn at the wafer-maker output stage). The CMP slurry sub-market is the directly addressable space for PLANERLITE; the silicon-wafer abrasive (lapping + polishing slurry) market that Fujimi dominates is upstream of the wafer market in the value chain (Fujimi sells *to* the wafer makers who sell to fabs).
+
+The semiconductor cycle is driving the volume side: WSTS forecasts the global semiconductor market at **US$ 627 bn in CY2024 (+19.0 %) and US$ 697 bn in CY2025 (+11.2 %), driven by AI demand** for high-performance logic and HBM memory [WSTS forecast December 2024, reproduced in FY2025 Financial Overview p.8](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf). On the wafer-volume side, **SEMI's silicon-wafer area shipments forecast** shows 2024 declined -2.7 % YoY (2nd consecutive down year) to 12,266 million square inches, with recovery to **13,328 MSI (+8.7 %) in 2025F, 14,507 MSI (+8.8 %) in 2026F, 15,413 MSI (+6.2 %) in 2027F** [SEMI silicon-wafer area shipment forecast, October 2024, reproduced in FY2025 Financial Overview p.9](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf). The wafer-volume recovery is the single biggest revenue lever for Fujimi.
+
+The CMP-slurry market growth rate is **mid-to-high single digits per annum** in normal conditions, accelerating to low-double-digits during heavy advanced-node transitions. Multiple third-party market sizers converge on **US$ 2.9-3.1 bn for 2024-2025 with a CAGR of ~7 %** to roughly **US$ 4.3 bn by 2030** [QYResearch / Valuates "CMP Slurry Market Report 2025", 2025-01](https://reports.valuates.com/market-reports/QYRE-Auto-32B8990/global-cmp-slurry). The growth driver is not so much wafer-area as **CMP-step-count per wafer**: every 3D-NAND layer adds CMP steps, every advanced-logic node adds back-end metal layers that require CMP, every 2.5D/3D advanced-packaging build-out (CoWoS, SoIC, hybrid bonding) adds extra wafer-thinning + bonding-pad CMP. Nomura's May 2026 sector view projects **20-30 % more CMP steps per wafer at GAA-N2 nodes with BPD and additional steps for wafer-to-wafer bonding** — a meaningful tailwind for the entire slurry industry over 2026-30 [Nomura "Greater China Semi" 2026-05-21 p.6-9](https://www.nomuraconnects.com/research/).
+
+### 6.2 Regional structure and the China challenge
+
+By **regional consumption**, the CMP slurry market mirrors fab-capacity geography: **Taiwan 30 %, China 20 %, Korea 18 %, Japan 10 %, North America 10 %, Europe 8 %** (figures from Nomura 2026-05 Fig 29-30, sourced in the reports/sector/半导体材料.md summary). Demand for slurry tracks logic + memory fab utilisation by region. Korea (Samsung Foundry + SK Hynix) and Taiwan (TSMC + UMC) are the largest blocs; the surge in Chinese fab capacity (SMIC, Hua Hong, YMTC, CXMT) is the fastest-growing block.
+
+This is where the competitive geometry gets interesting. **Chinese fabs are increasingly mandated to dual-source onto local Chinese slurry suppliers** — Anji Microelectronics (688019.SH, the front-end leader) and Dinglong (300054.SZ, CMP pad + slurry diversified) are gaining mature-node share in SMIC and YMTC. For sub-10 nm logic and HBM, the entrenched Japanese / US incumbents (Fujimi, Resonac, Entegris/CMC, Versum/Merck) retain qualification status because the customer simply cannot afford a slurry-induced defect at that node — qualification still takes 12-24 months and yield risk is too high. **Fujimi's defensible position is therefore the leading-edge FEOL slurry (poly-Si, STI, gate stack)** where customer willingness to pay for ultra-low-defect chemistry is highest; commodity Cu and W slurries are more exposed to Chinese share erosion at mature nodes.
+
+### 6.3 Wafer-volume trajectory and demand drivers
+
+Three structural demand drivers under-pin the 2026-30 outlook for Fujimi:
+
+(1) **AI-driven advanced-node wafer demand.** TSMC's CY24 revenue grew +30 % YoY led by AI HPC; the 2025 capex plan of US$ 38-42 bn is up 30 % from 2024 [TSMC public disclosure, reproduced in FY2025 Financial Overview p.4](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf). Every additional 300-mm wafer through TSMC's 5 nm, 3 nm, 2 nm production lines burns Fujimi-grade FEOL slurry, and the step-count is higher at advanced nodes.
+
+(2) **HBM / 3D NAND** wafer-bonding ramp. Wafer-to-wafer bonding (used by YMTC's Xtacking NAND, increasingly by HBM4-and-beyond DRAM-on-logic) adds 2-4 extra CMP steps per stacked wafer pair. Samsung memory's CY24 +56 % YoY memory revenue growth highlights the magnitude of HBM-led demand expansion [Samsung public disclosure, reproduced in FY2025 Financial Overview p.3](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf).
+
+(3) **Data-centre HDD recovery.** AI training datasets and cloud cold-storage tiers have re-accelerated nearline HDD demand for the first time since 2020; Fujimi's HDD segment +84 % YoY in FY2025 is the leading indicator [FY2025 Financial Overview p.24](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf).
+
+### 6.4 Supplier-buyer dynamics and competitive structure
+
+The slurry supplier-buyer relationship is structurally **2-3 qualified suppliers per process step per fab** — the customer wants supply security against natural disasters (the 2011 Tohoku earthquake disrupted multiple Japanese chemical suppliers and changed customer dual-sourcing norms permanently) and against the leverage of a sole-source vendor. Even Fujimi's near-monopoly in silicon-wafer lapping has a secondary qualified supplier behind it; CMP slurry is dual-sourced by default. The upshot: a Fujimi qualification typically delivers **40-60 % share-of-wallet at a given customer for a given process step**, not 100 %.
+
+The **substitute risk** is partial — Lam Research's pipeline of "selective etch" tools (e.g. its `ALTUS Halo` ALD-paired etch flow and the recent Lam atomic-layer-etch tools) can in theory replace CMP at certain advanced steps — but cost and throughput economics keep CMP dominant for now. Glass core substrates (Broadcom + Intel EMIB-T programs) add a *new* CMP requirement (glass surface planarisation) which Fujimi can target.
+
+**Regulatory environment** is benign: slurry formulations are subject to standard chemical regulation (REACH in Europe, TSCA in the US, the Chinese chemical-substance inventory) and to customer chemical-substance management policies (RoHS, IEC); Fujimi explicitly cites chemical-substance management as a material ESG topic [Integrated Report 2024 p.27 Materiality Matrix](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf). Export-control overlay: US BIS rules on advanced-node-related materials shipped to entity-listed Chinese fabs (SMIC, CXMT) could theoretically restrict Fujimi from selling certain slurry grades to those customers, but as of mid-2026 no specific Fujimi-product export restriction has been notified.
+
+![Fujimi geographic destination mix](../../charts/fujimi_geo_mix.png)
+*Source: [Fujimi FY2025 Financial Overview presentation p.27](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf).*
+
+---
+
+
 
