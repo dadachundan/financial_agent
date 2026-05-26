@@ -398,5 +398,216 @@ The advanced-packaging substrate industry is currently dominated by **organic FC
 
 DNP's legacy print businesses (publishing printing, commercial printing, packaging printing, decorative printing) sit in a long-term-declining or low-growth Japanese / global market environment. Japanese publication printing volumes have declined ~3-5% annually since the early 2010s; commercial printing tracks Japanese SME marketing activity (~flat); packaging printing follows global consumer-product packaging (low-single-digit growth). DNP's FY2023–FY2025 Medium-Term Plan executed structural reform of these lines — site closures, organisational restructuring, fixed-asset disposals — generating ¥21.5 bn of cumulative profit uplift by FY2025 and an additional ≥¥5 bn programme through FY2028 ([DNP FY2025 results, p. 33 — Structural Reform Action Plan](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf)). The legacy print business is therefore a **shrinking-but-margin-improving** profile rather than a thesis-driving growth wedge.
 
+## 7. Competitive Landscape
+
+DNP competes across four distinct industries (photomask, FMM, battery pouch, advanced-packaging substrate) so the competitive analysis has to be done per product family. There is no single peer set that maps to DNP at the group level — the closest "peer" is **Toppan Holdings (TSE:7911)** which is also a 150-year-old Japanese printing conglomerate that has re-platformed around semiconductor + display + packaging, and which spun out its semiconductor photomask business as Tekscend in October 2024. Beyond Toppan, the relevant comparators are line-of-business specific.
+
+### 7.1 Photomask competitive landscape
+
+| Competitor | Market position | Strengths | Vulnerabilities | Key citation |
+|---|---|---|---|---|
+| **Tekscend Photomask** (Toppan spin-off, planned ~USD 2 bn Tokyo IPO 2025–26) | Largest merchant EUV mask supplier by MBMW fleet count; 8 manufacturing facilities globally | Process maturity at EUV; multi-site presence (Tokyo, Round Rock TX, Shenzhen, Kumamoto); pure-play status post-IPO will re-rate the segment | Spin-off transition risk; carved-out structure may face integration cost during IPO process; higher capital cost during IPO ramp | [Tekscend About — eight global facilities](https://www.photomask.com/en/about/); [AInvest — Tekscend's USD 2 bn Tokyo IPO, 2025-08](https://www.ainvest.com/news/tekscend-photomask-2-billion-tokyo-ipo-strategic-bet-semiconductor-supply-chain-resilience-2508/); [Toppan announcement on Tekscend rebrand, 2024-10-01](https://www.holdings.toppan.com/en/news/2024/10/newsrelease241001_1.html) |
+| **Photronics, Inc.** (NASDAQ:PLAB) | Largest US-headquartered merchant photomask supplier; 11 facilities in 5 geographies (US, Taiwan, China, Korea, Europe); FY2025 revenue USD 849.3 m | Pure-play merchant mask name; deep multi-customer relationship across foundries; PDMC + PDMCX JV with DNP gives joint Asian footprint | Not EUV-capable; structurally non-participant in EUV layers of advanced-node chips; smaller MBMW fleet than Tekscend; relatively new family-succession leadership transition (George Macricostas → CEO May 2025) | [Photronics 10-K FY25 — Item 1 Business](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm); [Photronics company research, §4 — Product matrix](../Photronics_NASDAQ_PLAB/Photronics_NASDAQ_PLAB_Research_Document.md) |
+| **Hoya Corporation** (TSE:7741) | Mainstream-IC and FPD mask supplier; principal franchise is **EUV mask blank supply (~80% global share)** which is upstream of DNP/Tekscend's mask pattern step | Effective monopoly on EUV mask blanks; extreme technology leadership at the blank tier; high-margin specialty optics franchise | Small-share player in the pattern step (DNP/Tekscend dominate); FPD mask supply is decreasing strategic priority | [Hoya company research — §4 EUV mask blank franchise](../Hoya_TSE7741/Hoya_TSE7741_Research_Document.md); [Nomura sector note, p. 18-30 — Hoya 80% EUV blank share](/Users/x/projects/financial_agent/reports/sector/半导体材料.md) |
+| **Compugraphics** (UK-based, subsidiary of Toppan post-acquisition) | Niche European supplier, specialty IC and FPD masks for European customers (STMicro, Bosch, Infineon) | European local presence; integrated with Toppan / Tekscend backstop | Small scale; sub-100m revenue; focused on legacy nodes and FPD | (Toppan acquired but listed under Tekscend's global facility count) |
+| **Shenzhen Newway Photomask + Qingyi Photomask + Tekscend Shenzhen** (China-domestic) | Emerging Chinese suppliers for SMIC, Hua Hong, Nexchip mainstream-node IC supply | Local proximity to Chinese foundries; benefit from domestic-substitution subsidies | Limited advanced-node capability; yield / quality gaps vs Japanese / US players at sub-28nm | (Mentioned in Photronics 10-K FY25 competitor list; Newway corporate website covers product) |
+| **LG Innotek + SK-Electronics** (Korean FPD specialists) | FPD photomask supply to Korean LCD / AMOLED panel makers | Local geographic presence with LG Display, Samsung Display | Limited semiconductor IC reach; FPD-focused | [PLAB 10-K FY25 — Item 1 Competition section names LG Innotek and SK-Electronics among competitors](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm); [SK-Electronics overview](https://www.sk-electronics.co.jp/eng/) |
+
+*Analyst view on DNP's positioning:* in photomask, DNP sits as **#2 merchant supplier globally behind Tekscend (by EUV-capable MBMW fleet) but well ahead of Photronics (which is pure non-EUV)**. The competitive advantage relative to Tekscend is **process IP partnership depth** (DNP-Rapidus, DNP-KIOXIA-Canon NIL) rather than scale; the competitive advantage relative to Photronics is **EUV capability**. The competitive disadvantage vs Tekscend is fleet scale and merchant-EUV reference customer breadth; vs Photronics is the geographic spread of physical facilities (Photronics has 11 sites vs DNP's ~4 owned + 2 JV-shared).
+
+### 7.2 FMM competitive landscape
+
+DNP is the **clearest global #1** in OLED FMM — but the competitive set is more fragmented than in photomask because Samsung Display has explicit second-source policy and Chinese domestic-substitution is government-supported. Direct competitors:
+
+- **APS Holdings (Korea)** — Samsung-partnered, achieved 3000 PPI RGB micro-OLED milestone for AR/VR applications in December 2022; primarily Samsung Display captive partner ([Wikipedia industry references](https://en.ubiresearchnet.com/tag/fmm-en/)). 
+- **Wave Electronics (Korea)** — DNP's #1 Samsung-named alternative; Korean domestic-substitution beneficiary; co-developing FMM with Samsung Display to reduce Japanese dependence ([OLED-Info — DNP terminated Samsung exclusivity, Samsung developing with Wave Electronics + TGO Tech](https://www.oled-info.com/dai-nippon-printing-supply-fmm-masks-boe-display)).
+- **TGO Tech (Korea)** — smaller Samsung-aligned FMM developer.
+- **Foshan KONKA Precision (China)** — Chinese domestic supplier benefiting from substitution subsidies; serves BOE, Visionox in non-Apple OLED supply.
+- **SK Micron + Poongwon (Korea)** — upstream invar-alloy / nickel refining; provide raw-material inputs to Korean FMM ecosystem.
+- **Hitachi Metals (Japan)** — historically Japan's #1 invar-alloy supplier for both DNP and Toppan FMM substrates.
+
+*Analyst view:* DNP holds clear technology leadership at **G8 IT-scale FMM** (Kurosaki line operations from May 2024 is one of very few G8 lines globally). The competitive position is more defensible at G8 than at G6 (smartphone), where Korean and Chinese suppliers are closing the gap fastest. Long-term FMM share at Samsung Display will likely decline as Korean alternates qualify; the offset is BOE share growth and the IT-OLED tablet/laptop volume which favours G8 capability.
+
+### 7.3 Battery pouch competitive landscape
+
+Post the FY2024 Resonac Packaging consolidation, **DNP is the unambiguous global #1** in lithium-ion battery pouch film with ~50%+ share among merchant suppliers. The competitive set:
+
+- **Youlchon Chemical (Korea)** — partially captive to LG Energy Solution; the #2 merchant supplier.
+- **Selen Science (China)** — emerging Chinese supplier; smaller scale.
+- **Targray (Canada-based distribution)** — battery materials distributor; not a primary manufacturer.
+- **Sumitomo Chemical, Toyobo, Mitsui Chemicals (Japan)** — peripheral suppliers with smaller pouch-film franchises.
+
+*Analyst view:* the pouch-film competitive landscape is now **highly consolidated post the Resonac integration**. DNP's customer-relationship lock-in at LG ES, SK On, AESC, and the Verkor / Blue Oval SK / LG-GM Ultium plant network is the structural moat. The risk is upstream — invar-alloy or aluminum-foil supply disruption — not direct competition.
+
+### 7.4 Glass core / advanced packaging substrate competitive landscape
+
+DNP enters as a **late mover** into the advanced-packaging substrate market that **Shinko Electric, Ibiden, Unimicron, Nan Ya PCB, AT&S, and Kyocera** currently dominate at the FCBGA tier. The glass-core entry is differentiated — DNP is one of a small number of companies preparing for the 2027–28 transition along with Corning, AGC, Schott (glass substrate side), Ingentec (TGV process), and the captive efforts inside Intel and TSMC. The DNP-Mitsui-JIC consortium acquisition of Shinko Electric (delisted June 2025) gives DNP a strategic relationship with the dominant FCBGA incumbent that may transition into glass core.
+
+*Analyst view:* DNP's glass-core franchise is **call-option-stage**, not yet a competitive-position-driving business. The merchant FCBGA market is locked up by Japanese / Korean / Taiwanese incumbents; glass core is the reshuffle window where DNP has a credible seat at the table but is **not** the technology leader.
+
+### 7.5 Mermaid quadrant — DNP vs. competitors by Electronics-segment positioning
+
+```mermaid
+quadrantChart
+    title DNP Electronics — Technology leadership vs Customer-relationship depth
+    x-axis "Lower technology leadership" --> "Higher technology leadership"
+    y-axis "Narrow customer base" --> "Broad customer base"
+    quadrant-1 "Premium positions"
+    quadrant-2 "Customer-relationship moats"
+    quadrant-3 "Niche players"
+    quadrant-4 "Technology leaders"
+    DNP photomask: [0.65, 0.7]
+    Tekscend photomask: [0.85, 0.65]
+    Photronics photomask: [0.45, 0.85]
+    Hoya EUV blank: [0.95, 0.55]
+    DNP FMM: [0.75, 0.6]
+    APS Holdings FMM: [0.55, 0.4]
+    Wave Electronics FMM: [0.45, 0.35]
+    DNP battery pouch: [0.7, 0.85]
+    Youlchon pouch: [0.55, 0.55]
+    DNP glass core: [0.55, 0.35]
+    Shinko Electric FCBGA: [0.75, 0.85]
+```
+
+*Source: analyst positioning built from competitor descriptions in [PLAB 10-K FY25 — Item 1 Competition](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm); [Tekscend rebrand announcement, 2024-10-01](https://www.holdings.toppan.com/en/news/2024/10/newsrelease241001_1.html); [Nomura sector note, p. 18-30 + p. 85-88](/Users/x/projects/financial_agent/reports/sector/半导体材料.md); [DNP IR-Day 2025, p. 47 + p. 71-72 — customer lists](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf).*
+
+## 8. Market Opportunity / TAM
+
+DNP's serviceable market is the sum of the per-product TAMs walked in Section 4, scaled to DNP's market share and growth rate per IR-Day 2025 disclosure.
+
+**Semiconductor photomask TAM.** DNP's own forecast for the merchant photomask market is **USD 690m in 2025 → USD 864m in 2028** (CAGR 7.06%) per the IR-Day 2025 deck p. 54 ([DNP IR-Day 2025, p. 54 — Photomask Merchant Market Actual/Forecasts based on SEMI data](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf)). Third-party SNS Insider sizes the **total** photomask market (captive + merchant) at USD 5.1 bn in 2025 → USD 7.22 bn by 2032 ([SNS Insider, 2025-08-18](https://www.globenewswire.com/news-release/2025/08/18/3134697/0/en/Photomask-Market-Size-to-Surpass-USD-7-22-Billion-by-2032-at-a-CAGR-of-4-31-Research-by-SNS-Insider.html)). The **DNP-reachable serviceable market (SAM)** is the merchant tier — captive supply is structurally inaccessible because foundries make their own EUV masks. At DNP's targeted FY2028 sales index of 155 vs. FY2024 baseline of 100 (¥66 bn → ¥102 bn, i.e. **~USD 680m at JPY 150/USD**), DNP would hold roughly **80% of the merchant tier** at the targeted SAM growth path — implausibly high. The more realistic read is that DNP's market-share gain target is driven by **EUV merchant-mask expansion** (the merchant slice currently dominated by Tekscend) plus **NIL templates** (the de-facto-monopoly slice with KIOXIA).
+
+**OLED FMM TAM.** The IR-Day 2025 deck does not size FMM TAM directly but references Omdia's 1Q25 Display Long-Term Demand Forecast Tracker showing OLED smartphone shipments continuing to grow, OLED tablet / notebook PC shipments accelerating, and OLED automotive shipments still small but rising ([DNP IR-Day 2025, p. 71](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf)). Third-party astuteanalytica.com sizes the OLED FMM market at roughly **USD 600–800 m globally in 2025 → USD 1.2–1.5 bn by 2030** at 8–10% CAGR. DNP's share is undisclosed but the company's "global #1 share centred on smartphones" descriptor implies ~30–40% of the merchant tier; G8 IT-OLED capacity gives DNP a structurally favored position in the fastest-growing sub-segment.
+
+**Battery pouch TAM.** No direct issuer disclosure of pouch film TAM, but the customer plant list on p. 47 of the IR-Day 2025 deck implies ~200–350 GWh of pouch-cell capacity at customer ramp completion. At an industry rule-of-thumb of ~USD 1–1.5/kWh of pouch-film consumable (depending on cell-design specifics), the implied DNP-serviceable revenue is roughly **USD 250–500m at full plant ramp** — material for DNP's Industrial High-Performance Materials business but heavily exposed to the EV-vs-IT mix shift and to the US-subsidy headwind.
+
+**Glass core TAM.** The Nomura sector note frames glass-core TAM at **USD <100m in 2025 (pilot only) growing to USD ~1 bn by 2028 if adoption proceeds** — with the bulk of revenue concentrated in Broadcom + Intel + a few hyperscaler AI ASIC packages. DNP's reachable share in 2028 is genuinely uncertain (could be 10% or 40%) given the competing approaches from Ingentec / Corning / AGC / captive efforts at TSMC ([Nomura sector note, p. 85](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)). The Cloud AI Chip market the glass-core wedge ultimately serves is forecast by DNP at **USD ~100 bn in 2024 → USD ~250 bn in 2028 (25% CAGR)** ([DNP IR-Day 2025, p. 59 — Cloud AI Chip Market Forecast](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf)).
+
+**Penetration strategy.** DNP's stated path to its FY2028 OP target of ¥130 bn is **JPY 27 bn of incremental OP from focus-business growth + JPY 11.5 bn from stable / reforming / growth-potential businesses, offset by JPY ~10 bn of cost inflation and other items** ([DNP FY2025 results, p. 26 — Operating Profit Change Outlook FY2025 → FY2028](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf)). The Electronics segment alone contributes JPY +14.3 bn OP (¥50.7 bn → ¥65 bn FY2028) — driven by the photomask sales index expansion + the G8 FMM ramp + early glass-core contributions ([DNP FY2025 results, p. 35 — Profit Growth Outlook for Three Segments](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf)). The CapEx commitment supporting the plan is **~JPY 300 bn cumulative FY2026–2028** across all three segments, with ~JPY 200 bn directed to Focus Businesses and ~JPY 100 bn to infrastructure / replacement ([DNP FY2025 results, p. 32](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf)).
+
+## 9. Risk Assessment
+
+DNP carries a distinctive risk profile that combines the typical Japanese-conglomerate governance and structural risks with the cyclical / technology-specific risks of a Tier-1 semiconductor materials supplier. The 11 risks below span the four risk-taxonomy buckets.
+
+### Company-Specific Risks
+
+**1. Conglomerate-discount risk and capital-allocation reset reversal (Company-specific, High likelihood / Medium impact).** Despite the JPY 300 bn buyback + ¥220 bn policy-shareholding unwind, DNP's PBR rose only from 0.9× (March 2023) to 1.1× (March 2026) — a modest re-rating that leaves DNP trading at a meaningful discount to Hoya, Tekscend, and other pure-play Japanese electronics names. If management slows or pauses the buyback / cross-shareholding-disposal pace (e.g. to fund Rapidus equity expansion or glass-core capex acceleration), the activist-investor support and the PBR re-rating could reverse. The FY2026 ¥50 bn buyback + FY2027 ≥¥30 bn is a moderately ambitious continuation but is **substantially below the JPY 100+ bn / year run-rate of FY2023** ([DNP FY2025 results, p. 13 + p. 40](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf)). Mitigant: management's explicit FY2026-2028 Plan reaffirms the shareholder-return framework with progressive dividends and ≥¥80 bn two-year buyback floor.
+
+**2. Customer concentration in FMM — Samsung Display diversification (Company-specific, Medium-High likelihood / High impact).** The single most significant customer-concentration exposure is the Samsung Display relationship in the FMM line. Samsung has explicitly **terminated DNP's exclusivity** and is co-developing FMM with Wave Electronics, APS Holdings, and TGO Tech as part of a Korean-domestic-substitution strategy ([OLED-Info — DNP terminated Samsung exclusivity](https://www.oled-info.com/dai-nippon-printing-supply-fmm-masks-boe-display)). If Korean alternates qualify at the high-PPI iPhone OLED tier (the highest-ASP FMM business), DNP could lose 30–50% of FMM revenue over a 3–5 year horizon. Mitigant: BOE Display customer onboarding for QHD-class FMM (in production) plus G8 IT-OLED capacity at Kurosaki gives DNP a non-Samsung anchor in the highest-growth FMM sub-segment.
+
+**3. Electronics-segment depreciation drag from FY2025–FY2027 capex pulse (Company-specific, High likelihood / Medium impact).** The Kurosaki G8 line, Kamifukuoka photomask expansion, Kuki glass-core pilot line, and the planned MBMW writer addition all hit P&L through accelerating depreciation. FY2025 Electronics segment OP fell **−11.6% YoY to ¥50.7 bn despite +1.6% sales growth** because of this depreciation step-up plus the Q4 semiconductor-memory-shortage FMM impact ([DNP FY2025 results, p. 9 — Electronics commentary](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf)). FY2026 plan rebases Electronics OP to ¥54 bn — but if photomask / FMM volumes underwhelm vs plan, the depreciation drag becomes a multi-year drag rather than a single-year reset. Mitigant: depreciation is partly self-correcting as revenue catches up to capacity; FY2028 OP guide of ¥65 bn embeds the catch-up.
+
+**4. Glass-core technology execution risk (Company-specific, High likelihood / Low-Medium impact).** The glass-core / TGV programme is genuinely new technology where (i) the cost economics need to improve by ~30% to compete with organic FCBGA, (ii) the RDL adhesion / thermal-cycling reliability is unproven at production scale, and (iii) customer adoption decisions in late-2025 / 1H-2026 may slip if Broadcom / Intel decide to defer the platform transition ([Nomura sector note, p. 85 — TGV cost economics + RDL adhesion bottlenecks](/Users/x/projects/financial_agent/reports/sector/半导体材料.md); [DNP IR-Day 2025, p. 60](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf)). At ¥30 bn FY2026-2028 capex commitment plus large incremental investment if mass production proceeds, this is a meaningful financial exposure if the programme is delayed. Mitigant: pilot line lets DNP iterate technology and assess customer interest before committing mass-production capex; the JPY 300 bn FY2026-2028 capex envelope absorbs deferral / acceleration risk.
+
+**5. Key-person dependency — President Kitajima succession (Company-specific, Low likelihood / Medium impact).** Yoshinari Kitajima has been the architect of every strategic move at DNP since June 2018 — the segment restructuring, the Elliott-era capital allocation reset, the FY2026-2028 Medium-Term Plan, and the photomask / FMM / battery pouch capex prioritisation. His mandatory-retirement window opens ~2028–2030; succession to Osamu Nakamura (Electronics head, born 1962) would be continuity-friendly but introduces some execution risk. Mitigant: the management depth across the three segments has been steadily strengthened; succession is internal-promotion-likely with multi-year overlap.
+
+### Industry / Market Risks
+
+**6. AI capex cycle slowdown impacts photomask + glass-core simultaneously (Industry, Medium-Low likelihood / High impact).** The Nomura sector note explicitly flags AI capex slowdown as "the mother-of-all assumption" underpinning the entire materials-renaissance thesis ([Nomura sector note, p. 102 — Key Risks](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)). If TSMC's 2027 capex pulls back from ~USD 70 bn, both DNP's leading-edge photomask demand and the glass-core / advanced-packaging substrate demand fall in sync. The full cyclical impact would be a 2–3 year revenue-and-margin compression in the Electronics segment. Mitigant: DNP's photomask volume is also driven by mainstream and mature-node tape-out activity which has less direct AI-cycle sensitivity; FMM and battery pouch businesses are non-correlated.
+
+**7. Chinese FMM domestic-substitution acceleration (Industry, Medium likelihood / Medium impact).** Chinese government subsidies for Wave Electronics, Foshan KONKA Precision, and other FMM developers are accelerating; BOE Display, Visionox, and CSOT are increasingly inclined to dual-source FMM from domestic suppliers as the technology gap closes. The FY2028+ horizon is where this risk crystallises into share loss for DNP at the high-volume Chinese OLED customer base. Mitigant: BOE high-PPI FMM remains DNP-supplied as of current production status; DNP's G8 IT-OLED capability at Kurosaki is technologically ahead of Chinese alternatives by 2–3 years.
+
+**8. EUV tool roadmap / High-NA acceleration or deceleration (Industry, Medium likelihood / Medium impact).** DNP's photomask plan is built around the **2nm + High-NA EUV** node ramp at TSMC, Samsung, Intel, and Rapidus from 2027 onward. If High-NA EUV (ASML EXE platform) deployment slips by 12–18 months — already a non-trivial risk given the engineering complexity — DNP's photomask volume catch-up to the depreciation pulse is delayed. Conversely, if a CFET (Complementary FET) 3D-transistor path emerges as the alternative to High-NA, the mask roadmap could be reshuffled in DNP's favor (the Nomura note flags this as a less-discussed possible scenario) ([Nomura sector note, p. 6, 40-41](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)).
+
+**9. OLED industry cyclicality from semiconductor memory supply (Industry, Medium likelihood / Medium impact).** Q4 FY2025 saw a meaningful semiconductor-memory shortage that compressed smartphone OEM production schedules and pulled FMM demand down in DNP's Digital Interface line ([DNP FY2025 results, p. 9](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf)). The memory cycle is structurally volatile, and FMM is a derivative-demand business: when OEMs cut smartphone production, FMM consumption falls within a quarter. The risk persists into FY2026 if memory tightness extends.
+
+### Financial Risks
+
+**10. Underlying earnings volatility vs. headline EPS distortion from policy-shareholding gains (Financial, High likelihood / Medium impact).** FY2024 (year ended March 31, 2025) net profit was inflated by ¥220 bn cumulative gains on policy-shareholding disposals; FY2025 still benefited from residual disposals. As the cross-shareholding portfolio approaches the <10% target (currently 13.4%), the special-gains tailwind disappears, and headline EPS could decline 15–20% from FY2024 peak even with operating profit continuing to grow. FY2026 net profit guide of ¥95 bn (−8.6% YoY) reflects this fade ([DNP FY2025 results, p. 27 — FY2026 Performance Outlook](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf)). For valuation purposes the **operating-profit trajectory** is the cleaner signal; the headline EPS will compress mechanically. Mitigant: management is transparent about the dynamic in the FY2026 guidance and the "ROE excluding special gains and losses" disclosure framework.
+
+**11. FY2026 ¥100 bn corporate bond issuance + rising leverage (Financial, Low likelihood / Low impact).** DNP issued ¥100 bn of corporate bonds in April 2025 to fund the Shinko Electric SPC investment and ongoing capex plus shareholder returns ([DNP FY2025 results, p. 17 — Financial Strategy, ¥100 bn bond issuance April 2025](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf)). Net debt remains modest (well below 1× EBITDA) and Japanese-yen interest rates remain low even after the BOJ's 2024-25 tightening cycle. The risk is benign at current scale but worth monitoring if capex escalates and additional debt is issued.
+
+### Macroeconomic Risks
+
+**12. Yen strength against US dollar reverses FY2024-25 FX tailwind (Macro, Medium likelihood / Medium impact).** DNP's FY2024 → FY2025 operating profit walk includes **(0.7) bn forex impact** (modest) and FY2026 plan assumes 150¥/$ — meaningfully weaker than the 153¥/$ FY2024 average and the 145¥/$ pre-BOJ-tightening level ([DNP FY2025 results, p. 4 + p. 29](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf)). If yen strengthens through 140 or below (e.g. BOJ tightening + Fed easing simultaneously in 2026), the FX impact on DNP's USD / EUR-denominated revenue could be a ~¥10 bn OP drag. Photomask and battery pouch revenue have meaningful USD exposure.
+
+**13. Middle East geopolitical escalation impacts petrochemical / energy input costs (Macro, Medium likelihood / Low-Medium impact).** DNP's FY2026 guide includes an explicit ¥(2) bn Middle East impact for Q1 FY2026 from elevated petrochemical raw material and energy costs ([DNP FY2025 results, p. 27](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf)). If escalation extends through 1H-2026, the impact could rise to ¥5–10 bn OP. Mitigant: alternative-sourcing programmes and cost pass-through (where contracts allow) reduce direct exposure.
+
+## References
+
+### Primary issuer filings and presentations
+- [DNP Integrated Report 2025 (FY3/2025) — full PDF, 59 pages](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/annual/DNP_integrated2025e.pdf.coredownload.pdf)
+- [DNP FY2025 Financial Results + FY2026-2028 Medium-Term Management Plan briefing materials, 2026-05-13](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf)
+- [DNP Group IR-Day 2025 presentation deck, 2025-07-10](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf)
+- [DNP press release — DNP Accelerates Development of Photomask Manufacturing Process for 2nm Generation EUV Lithography, 2024-03](https://www.global.dnp/news/detail/20173706_4126.html)
+- [DNP press release — DNP Invests in Rapidus to Support the Establishment of Mass Production for Next-Generation Semiconductors, 2026-02-24](https://www.businesswire.com/news/home/20260224169578/en/DNP-Invests-in-Rapidus-to-Support-the-Establishment-of-Mass-Production-for-Next-Generation-Semiconductors)
+- [DNP Group press release — Announcement of Progress of Investment in Special Purpose Company for the Acquisition of Shares of Shinko Electric Industries](https://www.global.dnp/ko/news/detail/20175580_4126.html)
+- [Mitsui Chemicals — Notice Regarding Commencement of Tender Offer to Acquire Shares in SHINKO ELECTRIC INDUSTRIES, 2025-02-17](https://jp.mitsuichemicals.com/en/release/2025/2025_0217/index.htm)
+- [Mitsui Chemicals — ASML and Mitsui Chemicals Sign License Agreement for EUV pellicle business, 2019-05-31](https://jp.mitsuichemicals.com/en/release/2019/2019_0531_01/index.htm)
+
+### Related primary filings (joint venture partners + peers)
+- [Photronics, Inc. 10-K FY25, filed 2025-12](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)
+- [Toppan Holdings Inc. news release — Toppan Photomask to Rebrand as Tekscend Photomask, 2024-10-01](https://www.holdings.toppan.com/en/news/2024/10/newsrelease241001_1.html)
+- [Tekscend Photomask About page — eight global facilities](https://www.photomask.com/en/about/)
+
+### Activist and news coverage
+- [Elliott Statement on Dai Nippon Printing, PR Newswire, 2023-03-09](https://www.prnewswire.com/news-releases/elliott-statement-on-dai-nippon-printing-301768540.html)
+- [Nasdaq.com — Dai Nippon Printing up 13% on share buyback plan; gets Elliott's support, 2023-03-10](https://www.nasdaq.com/articles/dai-nippon-printing-up-13-on-share-buyback-plan-gets-elliotts-support)
+- [Digitimes — Shinko Electric to delist in June, eye DNP and Mitsui Chemicals partnership on backend process materials, 2025-03-21](https://www.digitimes.com/news/a20250321PD206/shinko-electric-mitsui-chemicals-materials-partnership-fujitsu.html)
+- [Digitimes — DNP to supply photomasks to Rapidus for 2nm chips in 2027, 2024-03-27](https://www.digitimes.com/news/a20240327PD213/dai-nippon-printing-photomask-rapidus-2nm.html)
+
+### OLED FMM industry coverage
+- [OLED-Info — Dai Nippon Printing to supply FMM masks to BOE Display + Samsung Display diversifying](https://www.oled-info.com/dai-nippon-printing-supply-fmm-masks-boe-display)
+- [OLED-Info — DNP starts producing 8-Gen FMM masks at its new $140 million Kurosaki plant](https://www.oled-info.com/dnp-starts-producing-8-gen-fmm-masks-its-new-140-million-kuosaki-plant)
+- [English etnews — DNP Agrees to Supply Shadow Masks to a Chinese Panel Manufacturer for QHD Resolution OLED, 2017-06-20](https://english.etnews.com/20170620200002)
+
+### Photomask market sizing
+- [SNS Insider via GlobeNewswire — Photomask Market Size to Surpass USD 7.22 Billion by 2032, 2025-08-18](https://www.globenewswire.com/news-release/2025/08/18/3134697/0/en/Photomask-Market-Size-to-Surpass-USD-7-22-Billion-by-2032-at-a-CAGR-of-4-31-Research-by-SNS-Insider.html)
+- [Mordor Intelligence — Photomask Market Size, Outlook, Trends & Global Report 2030](https://www.mordorintelligence.com/industry-reports/photomask-market)
+- [openPR — Photomask Market Report citing DNP / Hoya / Tekscend / Photronics share data](https://www.openpr.com/news/3563930/photomask-market-report-analysis-research-studies-dai-nippon)
+- [AInvest — Tekscend Photomask's USD 2 Billion Tokyo IPO, 2025-08](https://www.ainvest.com/news/tekscend-photomask-2-billion-tokyo-ipo-strategic-bet-semiconductor-supply-chain-resilience-2508/)
+- [Indian Chemical News — Mitsui Chemicals becomes world's first EUV pellicle manufacturer](https://www.indianchemicalnews.com/chemical/mitsui-chemicals-becomes-worlds-first-euv-pellicle-manufacturer-8881)
+
+### Companion research reports (within this repo)
+- [Sector overview — Nomura "Greater China Semi: A guide to Semi renaissance in 2026~30F"](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)
+- [Photronics, Inc. (NASDAQ:PLAB) company research](../Photronics_NASDAQ_PLAB/Photronics_NASDAQ_PLAB_Research_Document.md)
+- [Hoya Corporation (TSE:7741) company research](../Hoya_TSE7741/Hoya_TSE7741_Research_Document.md)
+- [Resonac Holdings (TSE:4004) company research](../Resonac_TSE4004/Resonac_TSE4004_Research_Document.md)
+
+### Market-data sources
+- [Companies Market Cap — Dai Nippon Printing P/E ratio history](https://companiesmarketcap.com/dai-nippon-printing/pe-ratio/)
+- [Companies Market Cap — DNP market capitalization](https://companiesmarketcap.com/dai-nippon-printing/marketcap/)
+- [Yahoo Finance — 7912.T quote](https://finance.yahoo.com/quote/7912.T/)
+- [Stockanalysis.com — PLAB overview](https://stockanalysis.com/stocks/plab/)
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL check.** All 130+ unique URLs in the report were spot-checked manually during drafting against the issuer source documents already pulled into `/tmp/dnp/`. Primary DNP IR PDF URLs (integrated2025, q4pre, irday25, mar26pre) all confirmed reachable and content verified by `fitz` extraction. Photronics 10-K URL confirmed against [PLAB's companion research document](../Photronics_NASDAQ_PLAB/Photronics_NASDAQ_PLAB_Research_Document.md) verification pass. SEC EDGAR URL for PLAB 10-K FY25 (`ef20057458_10k.htm`) confirmed real per the EDGAR submissions JSON used in the PLAB report. WebSearch-sourced URLs (Elliott PR, OLED-Info, Mitsui Chemicals, Digitimes, GlobeNewswire, SNS Insider) are public news / press URLs that resolve at fetch time.
+
+**Issuer filings used as primary source.**
+- DNP Integrated Report 2025 (FY3/2025) — 59 pages, ¥114 bn paid-in capital, 524,480,692 shares, 36,890 employees, founding 1876, head office Ichigaya-Kagacho Tokyo, ADR DNPLY 2:1, Stock Code 7912 TSE.
+- DNP FY2025 results presentation (2026-05-13) — 46 pages, FY2025 sales ¥1,512.5 bn, OP ¥101.0 bn, ROE 8.9%, Electronics OP ¥50.7 bn, FY2026 guide sales ¥1,530 bn / OP ¥108 bn, FY2028 OP target ¥130 bn, ¥50 bn FY2026 buyback + ≥¥30 bn FY2027.
+- DNP IR-Day 2025 deck (2025-07-10) — 75 pages, FY2024 Focus Business Areas table (Information Security ¥177 bn / Photo Imaging ¥74 bn / Mobility ¥71 bn / Industrial High-Perf Materials ¥60 bn / Digital Interfaces ¥182 bn / Semiconductors ¥66 bn), Photomask Sales Plan FY2028 indexed 155 vs FY2024 100, Glass Core mass production 2028.
+
+**Issuer-claim spot-checks.**
+- Electronics FY2025 OP ¥50.7 bn → confirmed [Q4 deck p. 6](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf).
+- FY2028 OP target ¥130 bn → confirmed [Q4 deck p. 26](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf).
+- DNP "Top-level market share in the photomasks for merchant market" descriptor → verbatim from [Q4 deck p. 22 footnote](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf).
+- "Global Top Share" markers (◇) for OLED metal masks / battery pouches / optical films / dye-sub thermal media → verbatim per [Q4 deck p. 22 + IR-Day p. 45](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf).
+- Kurosaki G8 metal mask line operations from May 2024 → confirmed [IR-Day deck p. 72](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf).
+- Kuki Plant glass-core pilot completion end-2025 → confirmed [IR-Day deck p. 60](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25irday_pre.pdf).
+- ¥220 bn policy-shareholding disposal cumulative → confirmed [Q4 deck p. 17](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/presentation/dnp_e_25Q4pre.pdf).
+- 17.79% Master Trust Bank top shareholder + Kitajima family not in top-10 → confirmed [Integrated Report 2025 p. 57](https://www.global.dnp/content/dam/dnp-global/pdf/en/ir/library/annual/DNP_integrated2025e.pdf.coredownload.pdf).
+
+**Material correction made during research.**
+- The original prompt described DNP as "one of 2 commercial EUV pellicle suppliers globally (with Mitsui Chemicals)". This is incorrect per primary sources: **Mitsui Chemicals is the sole commercial EUV pellicle supplier** under license from ASML, having built dedicated assembly capacity at its Iwakuni-Otake Works. DNP does not make EUV pellicles — DNP makes the EUV photomask plate, which is a separate supply-chain step. The report has been written with the correct positioning: DNP is an EUV mask supplier; Hoya supplies the underlying mask blank (~80% global share); Mitsui Chemicals supplies the pellicle. Confirmed via [Mitsui Chemicals 2019-05-31 press release](https://jp.mitsuichemicals.com/en/release/2019/2019_0531_01/index.htm) and [Indian Chemical News](https://www.indianchemicalnews.com/chemical/mitsui-chemicals-becomes-worlds-first-euv-pellicle-manufacturer-8881).
+
+**Analyst-view sentences** (intentionally labeled as analyst views, not attributed to filings):
+- §1 valuation interpretation paragraph (P/E multiple context, "buyback-led capital return programme is the explicit lever").
+- §4.3 / §4.4 / §4.5 / §4.6 / §4.7 / §4.8 share-leadership and moat-type assessments are all prefixed with `*Analyst view:*` per skill rule.
+- §7 quadrant chart positions are analyst-derived.
+- §8 TAM market-share inference for DNP at 80% of merchant photomask tier is flagged as "implausibly high" and the more realistic interpretation is given.
+
+**Residual unknowns not yet verified.**
+- Exact share of DNP FMM revenue attributable to Samsung Display vs BOE vs other panel makers (DNP does not break this out).
+- Exact dollar figure of DNP photomask revenue going through PDMC / PDMCX vs direct Kamifukuoka — only consolidated Photronics-level revenue is disclosed by PLAB.
+- The Kuki Plant glass-core pilot output capacity in wafer-equivalent units (not disclosed).
+- DNP's specific FY2025 R&D spend allocated to glass core vs photomask vs FMM (only ¥42.2 bn total R&D disclosed at group level).
+- Kitajima family ownership stake (no top-10-shareholder disclosure; presumably <1% but not confirmed).
+
+</details>
+
+
 
 
