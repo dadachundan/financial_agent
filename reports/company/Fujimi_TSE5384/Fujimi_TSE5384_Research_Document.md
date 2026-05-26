@@ -376,6 +376,143 @@ Combining the three legs, Fujimi's **directly addressable Serviceable Available 
 
 ---
 
+## 9. Risk Assessment (≈800 words)
+
+### Company-Specific Risks
+
+**Customer concentration (analyst-estimated).** Fujimi does not publish customer-level revenue breakdowns, but the geographic destination skew (Asia & Oceania 65 % of FY2025 revenue, mostly Taiwan-Korea memory and foundry) combined with the 84-92 % share in silicon-wafer abrasives sold to five named wafer makers implies top-5 customer share of **40-50 %** and top-1 likely high-single-digits (TSMC). The company's footnotes assert no single customer breaches the 10 % Japan disclosure threshold, but loss or share-cut at TSMC, Samsung, or Shin-Etsu would each hit FY26F revenue by 5-15 % — material at the level of 1-2 fiscal years' earnings [FY2025 決算短信 p.20 segment information](https://www.ircms.jp/irexport/fujimiinc/file/a80046653802235.pdf). Mitigant: Fujimi serves all major customers, so loss of one is partially backfilled. **Severity: Medium-High; likelihood: Low-Medium.**
+
+**Slurry commoditisation by Chinese players, particularly in mature-node Cu and W slurries.** Anji Microelectronics (688019.SH) is reportedly qualifying at sub-10 nm logic and has copper / barrier slurries in customer test [Nomura "Greater China Semi" 2026-05-21 p.130 (analyst-anchor reference)](https://www.nomuraconnects.com/research/). Dinglong (300054.SZ) similarly ramping CMP slurry alongside its dominant CMP pad position. The advance-node FEOL slurry (Fujimi's strongest position) remains unqualified by Chinese players, but the share-erosion risk at mature nodes (28 nm and above, plus mature-node memory) is real over a 3-5 year horizon. Mitigant: FEOL leadership at advanced nodes is hard to dislodge and represents Fujimi's most defensible position. **Severity: Medium-High over 5-year horizon; likelihood: Medium.**
+
+**Silicon-wafer-customer in-sourcing or share migration.** If NSIG (国大硅产) or another Chinese wafer maker takes prime-grade 300-mm wafer share from Shin-Etsu / SUMCO / GlobalWafers — currently consuming Fujimi slurry — and concurrently switches to a local Chinese slurry supplier, Fujimi's silicon-wafer revenue (¥20.4 bn / 33 % of FY25 revenue) is structurally exposed. The wafer-share migration has been gradual to date but is a 5-10 year tail risk. Mitigant: high quality bar at prime-grade 300-mm wafer; Fujimi's 30+ year customer-recipe specificity is the moat. **Severity: High over 10-year horizon; likelihood: Low-Medium.**
+
+**Execution risk on Kagamiyama / 2nd R&D Center build.** Cumulative FY2024-26 capex at ¥46.2 bn is **¥16.2 bn above the original FY2024-29 mid-term plan**, citing inflated construction-material and labour costs plus advance ordering of long-lead-time items [FY2025 Financial Overview p.33](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf). Kagamiyama New Plant targets construction completion end-2025, sample shipment 2026, full production 2027. A delay of 6-12 months or a yield ramp problem would meaningfully push out the FY2029 ¥100 bn revenue target. **Severity: Medium; likelihood: Medium.**
+
+**Key-person dependency on President Keishi Seki.** Seki has been CEO since April 2008 (18 years), is the architect of the post-2008 quality turnaround, and is one of the largest individual shareholders. Outside-director dialogue in the FY2024 governance section explicitly flags "succession plan" as the top open governance question [Integrated Report 2024 "Dialogue with Outside Directors" p.40](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf). No publicly identified internal CEO successor has been disclosed. **Severity: Medium; likelihood: Low for sudden departure, near-certainty for orderly transition over 5 years.**
+
+### Industry / Market Risks
+
+**AI capex retrenchment.** The entire 2026-30 demand growth story for advanced-node CMP slurry rests on continued AI infrastructure capex. WSTS forecast a 19 % / 11 % YoY growth for 2024 / 2025 semiconductor revenue, with similar magnitude expected through 2027F [WSTS 2024-12 forecast, FY2025 Financial Overview p.8](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf). A pull-back in AI infrastructure capex (e.g. if hyperscaler training-cluster ROI proves disappointing) would hit Fujimi's CMP segment growth and could push the FY2029 ¥100 bn revenue target out by 2-3 years. **Severity: High; likelihood: Medium.**
+
+**Sub-10nm CMP step-count not expanding as projected.** Nomura projects 20-30 % more CMP steps per advanced wafer at N2 with BPD. If Lam's atomic-layer-etch / selective-deposition pipeline replaces CMP steps faster than expected, the slurry market growth rate could be 2-3 pp slower than the 7 % CAGR baseline. *Analyst view:* near-term unlikely (CMP is too cost-effective at scale to displace quickly), but a real consideration over 10 years. **Severity: Medium; likelihood: Low-Medium.**
+
+**HDD secular decline.** SSDs continue to gain share against HDDs in client and enterprise (non-nearline) storage. The current FY2025 nearline-HDD demand surge is real but the 10-year arc for the HDD substrate slurry business is down. Fujimi explicitly acknowledges this in the FY2026 HDD guidance (flat YoY at ¥2.55 bn). **Severity: Low (only 4 % of revenue); likelihood: High over 10 years.**
+
+### Financial Risks
+
+**Capex / FCF compression through FY2027.** FY2026 capex of ¥29.6 bn vs operating-cash-flow of ~¥14 bn implies a **significant FCF deficit** for FY2026 (and likely FY2027). The company's net cash position (¥27.9 bn cash + securities, zero debt) easily covers this, but the equity ratio will drop from 83.7 % (FY2025) toward the high-60s by FY2027 [FY2025 決算短信 balance sheet p.5-6](https://www.ircms.jp/irexport/fujimiinc/file/a80046653802235.pdf). Mitigant: balance sheet still investment-grade-equivalent throughout. **Severity: Low; likelihood: Certain.**
+
+**Valuation multiple compression risk.** TTM P/E of 26.6× is above Fujimi's 3-year median (~17× through the FY2024 trough) and embeds AI / capex-cycle optimism. A 2027F semi-cycle peak followed by a 10-15 % revenue contraction in FY2028 (consistent with prior cycles) could see the multiple compress to 18-20× on lower earnings — a 30-40 % drawdown scenario. Mitigant: 2 % dividend yield + 55 % payout ratio policy provides some support; balance sheet bullet-proof. **Severity: Medium-High; likelihood: Medium over 3 years.**
+
+### Macroeconomic Risks
+
+**JPY/USD foreign-exchange exposure.** FY2025 actual rate was JPY 152/USD; FY2026 assumption is JPY 140/USD. The FY2025-FY2026 +¥(374) mn forex headwind to operating income (per FY2026 OI bridge) is small in absolute terms but signals that meaningful yen strengthening would compress reported earnings. ~78 % of revenue is overseas; partial natural hedge via overseas-affiliate operating costs [FY2025 Financial Overview p.38](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf). **Severity: Low-Medium; likelihood: Medium.**
+
+**Geopolitical / export-control overlay.** US BIS rules on advanced-node materials shipped to entity-listed Chinese fabs (SMIC, CXMT) could restrict Fujimi's sales of certain advanced-node slurry grades. To date no Fujimi-specific export restriction has been notified. A further escalation of US-China semi technology controls is a tail risk. **Severity: Medium; likelihood: Low-Medium.**
+
+![Fujimi dividend history](../../charts/fujimi_dividends.png)
+*Source: [Fujimi FY2025 Financial Overview presentation p.41](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf).*
+
+---
+
+## 10. References
+
+**Primary issuer filings (Fujimi Incorporated, TSE:5384):**
+
+- [FY2025 決算短信 (Annual financial results brief), 2025-05-13](https://www.ircms.jp/irexport/fujimiinc/file/a80046653802235.pdf) — consolidated P&L, balance sheet, cash flow, segment information
+- [FY2025 Financial Overview presentation, 2025-05-20](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf) — analyst day deck, application revenue breakdown, capex plan, OI bridge
+- [FY2025 Q3 決算短信, 2025-02-04](https://www.ircms.jp/irexport/fujimiinc/file/a79199895985530.pdf) — 3Q snapshot
+- [FY2025 Q2 Financial Overview presentation, 2024-11-15](https://www.ircms.jp/irexport/fujimiinc/file/a78561166008292.pdf) — 1H FY25 results + capex update
+- [Integrated Report 2024 (issued Feb 2025)](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf) — 60-page strategic / historical / governance + 11-year financial summary
+- [Shareholder Communications "Fujimi Today" magazine](https://www.ircms.jp/irexport/fujimiinc/file/a41823722757506.pdf) — supplementary shareholder briefing
+- [Fujimi Corporate IR — Library page](https://www.fujimiinc.co.jp/ir/library/) — primary access portal
+- [Fujimi English Corporate page](https://www.fujimiinc.co.jp/english/) — company overview
+- [Fujimi CMP slurry product page (English)](https://www.fujimiinc.co.jp/english/service/cmp/lineup.html) — PLANERLITE product family verbatim
+
+**Market data:**
+
+- [Kabutan 5384 stock data, 2026-05-26](https://en.kabutan.com/jp/stocks/5384/) — current price, P/E, P/B, market cap
+- [Yahoo Finance 5384.T](https://finance.yahoo.com/quote/5384.T/) — price history
+- [MarketScreener Fujimi profile](https://www.marketscreener.com/quote/stock/FUJIMI-INCORPORATED-6491479/company/) — supplementary financials & ownership
+
+**Peer-company filings cited in Section 7:**
+
+- [Entegris SEC EDGAR filings (CIK 1101302)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1101302&type=10-K) — Entegris 2024 10-K (CMC Materials acquisition disclosure)
+- [Resonac IR — Semiconductor materials product page](https://www.resonac.com/products/semicon-process-mat.html) — CMP slurry product positioning
+- [Merck KGaA press release on Versum acquisition completion, 2019-10-07](https://www.emdgroup.com/en/news/versum-completion-07-10-2019.html) — Versum / EMD Electronics history
+- [Cabot Corporation NYSE:CBT financial data via Kabutan / Yahoo Finance](https://finance.yahoo.com/quote/CBT) — peer valuation
+- Anji Microelectronics (SSE:688019), Dinglong (SZSE:300054) — TTM P/E referenced via cited Nomura research note
+
+**Industry / market research:**
+
+- [QYResearch / Valuates "Global CMP Slurry Market Forecast 2025-2030"](https://reports.valuates.com/market-reports/QYRE-Auto-32B8990/global-cmp-slurry) — CMP slurry TAM and CAGR
+- [SkyQuest "CMP Slurry Market Size Forecast to 2033"](https://www.skyquestt.com/report/cmp-slurry-market) — corroborating CMP TAM
+- [QYResearch "Cu CMP Slurry Market Forecast 2025"](https://reports.valuates.com/market-reports/QYRE-Auto-34T18778/global-cu-cmp-slurry) — Cu sub-segment share
+- [QYResearch "Colloidal Silica CMP Slurry Market"](https://reports.valuates.com/market-reports/QYRE-Auto-34L18699/global-colloidal-silica-cmp-slurry) — colloidal-silica sub-segment
+- WSTS December 2024 semiconductor forecast — reproduced in Fujimi FY2025 Financial Overview p.8
+- SEMI October 2024 silicon wafer area shipment forecast — reproduced in Fujimi FY2025 Financial Overview p.9-10
+
+**Sector context (anchor research note for share figures and CMP-step-count narrative):**
+
+- Nomura Asia Tech "Greater China Semi: A guide to Semi renaissance in 2026~30F", 2026-05-21, lead analyst Donnie Teng et al. — referenced via the project-internal summary at [reports/sector/半导体材料.md](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/半导体材料.md). This Nomura note (139 pages, source for CMP slurry share Fig 41, CMP step-count narrative, China supplier ranking, TSMC capex outlook) is subscription-only; the in-project summary at `reports/sector/` is the citable reference for figures used herein.
+
+**Secondary independent research:**
+
+- [Wasabi-info equity research note on Fujimi (TSE:5384)](https://wasabi-info.com/fujimi-incorporated-tse-5384-equity-research-report/) — third-party analyst view referenced for cross-check on segment positioning
+- [DCFmodeling Fujimi profile](https://dcfmodeling.com/blogs/history/5384t-history-mission-ownership) — supplementary historical narrative
+- [Bitget stock summary on Fujimi 5384](https://www.bitget.com/stock/tse-5384/what-is) — supplementary cross-check
+- [Datainsightsmarket Fujimi page](https://www.datainsightsmarket.com/companies/5384.T) — supplementary (note: shows incorrect revenue figures; primary issuer filings used as authority)
+
+---
+
+## 11. Verification Log
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL check** — all inline URLs in this report were either fetched live during research or are based on the company's IR-CMS (ircms.jp) document repository. The Fujimi IR-CMS document URLs (a80046653802235.pdf, a80176453635234.pdf, a79408181419746.pdf, a79199895985530.pdf, a78561166008292.pdf, a81627205629086.pdf, a41823722757506.pdf) were all directly downloaded via `curl` during the research session — all returned HTTP 200 with valid PDF content (verified by `file` command output and successful parsing). The Fujimi English-site URLs (`fujimiinc.co.jp/english/`, `fujimiinc.co.jp/english/service/cmp/lineup.html`, `fujimiinc.co.jp/english/ir/`) were fetched via WebFetch and returned content. The Kabutan English page (`en.kabutan.com/jp/stocks/5384/`) was fetched and returned valid data. Peer-company URLs (SEC EDGAR, Yahoo Finance, MarketScreener, QYResearch / Valuates / SkyQuest market-research pages) are all genuine landing-page URLs to publicly accessible portals.
+
+**Source-anchor verification** for key claims:
+- Revenue ¥62,503 mn (FY25) ✓ verified via [FY2025 決算短信 p.1, 2025-05-13](https://www.ircms.jp/irexport/fujimiinc/file/a80046653802235.pdf)
+- Operating profit ¥11,780 mn (FY25), margin 18.8 % ✓ same source p.1
+- Net profit attributable to owners ¥9,428 mn (FY25), +45.1 % YoY ✓ same source p.1
+- 4 reporting segments (Japan ¥35,464 / NA ¥8,201 / Asia ¥16,752 / Europe ¥2,084 mn) ✓ FY2025 決算短信 p.20 セグメント情報
+- Application revenue split (Silicon ¥20,437 / CMP ¥30,658 / HDD ¥2,547 / Specialty ¥8,729 mn) ✓ [FY2025 Financial Overview presentation p.18](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf)
+- Capex ¥12,844 mn (FY25), ¥29,600 mn (FY26F) ✓ same source p.33
+- R&D ¥5,482 mn (FY25, 8.8 % of sales) ✓ same source p.35 + FY2025 決算短信 p.15
+- Equity ratio 83.7 %, zero debt, cash ¥23,787 mn end-FY25 ✓ FY2025 決算短信 p.3-5
+- Founding date 1950 (partnership) / incorporated 20 March 1953 ✓ Integrated Report 2024 "Corporate Profile" p.57
+- Founder Teruji Koshiyama ✓ Integrated Report 2024 "Message from the President" p.4 (named directly: "our founder, Teruji Koshiyama")
+- President Keishi Seki since April 2008 ✓ Integrated Report 2024 "Directors and Auditors" p.47-48 (career chronology)
+- 1,309 patents as of March 2024 ✓ Integrated Report 2024 p.10
+- 84-92 % silicon-wafer abrasive share, 56 % FEOL slurry share, 13 % total CMP slurry share ✓ Integrated Report 2024 p.10 "Fujimi's Unique Qualities"
+- 1,110 consolidated employees as of March 2024 ✓ Integrated Report 2024 "Corporate Profile" p.57
+- Nanko Abrasives consolidation October 2024, 75 % stake ✓ Integrated Report 2024 "Message from the President" p.4 + FY2025 決算短信 p.11 cash flow item "子会社株式の取得 ¥1,085 mn"
+- Kagamiyama New Plant 28,000 m² + 2nd R&D Center 16,000 m² ✓ FY2025 Financial Overview p.31
+- 6 consolidated subsidiaries (FUJIMI CORPORATION US, FUJIMI-MICRO MALAYSIA, FUJIMI EUROPE GmbH, FUJIMI TAIWAN, FUJIMI SHENZHEN, 南興セラミックス) ✓ FY2025 決算短信 p.12 連結の範囲
+- Largest shareholder Koma Co., Ltd. 17.7 %, Koshiyama Foundation 2.3 %, Keishi Seki 1.7 % ✓ Integrated Report 2024 "Stock Information" p.57
+
+**Analyst-view sentences** (intentionally not cited to a primary source — labelled per skill rule):
+- Section 1 Valuation snapshot — peer-multiple positioning, FY2027 capex-cycle bear case
+- Section 5 Customer concentration estimate — top-5 customer share band 40-50 %
+- Section 5 Customer concentration pie chart — explicit analyst-construct, labelled as such
+- Section 6 China supplier-share figures — composite of multiple industry sources via cited Nomura sector report
+- Section 7 Competitive verdict by sub-segment — analyst-constructed table; per-row source for share is Fujimi's own disclosure where applicable, otherwise analyst composite
+- Section 8 FY2030 SAM/SOM math — built on market-research TAM + Fujimi's stated FY2030 ¥100 bn revenue target + Fujimi's FY25 application split; estimation methodology disclosed
+
+**Sources used but not directly verifiable for absolute number-by-number citation:**
+- The Nomura "Greater China Semi" 2026-05-21 sector note is subscription-only. Specific page-and-figure references (Fig 41 CMP slurry share, page 130 Anji FY27F P/E target, page 6-9 CMP step-count narrative) are cited via the project-internal summary at `reports/sector/半导体材料.md` which is itself the authoritative source for this report's citations to that note.
+- CMP supplier share figures (Entegris 28 %, Resonac 18 %, Versum 12 %, Fujimi 11 %, Anji 8 %, Dinglong 6 %) are analyst-composite estimates from multiple industry sources (QYResearch, Valuates, the Nomura sector note, supplier disclosure). Fujimi's own disclosed share (13 % total CMP, 56 % FEOL) is the only directly-cited primary figure for Fujimi.
+
+**Residual unknowns / not yet verified:**
+- Exact Fujimi-specific customer revenue concentration: Fujimi does not publish this. Asserted figures (top-5 40-50 %, top-1 high single digits) are analyst inferences.
+- Exact EDINET 有価証券報告書 URL for Fujimi FY2025 Yuho: the Yuho is filed annually around late June; the FY2025 Yuho is dated 2025-06-24 per the FY2025 決算短信 timeline. The EDINET portal requires interactive session navigation; the canonical Yuho URL was not extracted but the equivalent data set is fully captured in the public 決算短信 + Integrated Report combo cited.
+- Nanko Abrasives revenue contribution: the company has disclosed only the ¥1,085 mn acquisition cost; segment revenue contribution is not yet broken out (will appear in FY2026 disclosures).
+- Specific TSMC / Samsung / Intel revenue-share-of-Fujimi: not publicly disclosed.
+
+</details>
+
+
 
 
 

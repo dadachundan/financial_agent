@@ -294,3 +294,120 @@ The **substitution risk profile** by sub-segment varies: HF / BOE is the hardest
 
 A specifically Korean lens on the industry: the 2019 Japan trade dispute permanently changed Korea's industrial-policy stance on chemical-materials sourcing. MOTIE designated **65 "strategic items"** (소재·부품·장비 핵심 품목) for accelerated localization with public-private co-investment, of which Soulbrain's HF / BOE / CMP slurry / precursor portfolio is the headline beneficiary ([NBR, "Bolstering and Securing Semiconductor Supply Chains"](https://nbr.org/publication/bolstering-and-securing-semiconductor-supply-chains/), [THE ELEC, 2024](https://www.thelec.net/news/articleView.html?idxno=4432)). The implicit deal: Samsung and SK hynix qualify Korean-domestic suppliers preferentially, MOTIE subsidizes R&D and capacity additions, and the supplier achieves national-strategic-asset status — analogous to how Japan treats its own Stella Chemifa / Shin-Etsu / Hoya cluster, or how Taiwan treats TSMC's local equipment-and-materials supply chain. The result is that Soulbrain (and SK Materials / Foosung / Dongjin Semichem) sit inside a quasi-protected market segment where 100% pure price competition does not operate. *Analyst view:* this is the structural reason Soulbrain trades at 40× TTM PE — the market is paying for the optionality on this protected status holding through the HBM4 / GAA cycle.
 
+![Soulbrain FY2024 revenue segment mix](../../charts/soulbrain_segment_mix.png)
+
+*Source: [Economy6 Korean broker compilation, 2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html); semiconductor materials ~75–76%, secondary battery ~13–16%, display ~9–11%. Soulbrain DART 사업보고서 publishes the three-segment split but not customer-by-customer disclosure; mid-points of the broker-consensus ranges shown.*
+
+## 7. Competitive Landscape
+
+### 7.1 Competitor map by chemistry
+
+The right way to assess Soulbrain competitively is **chemistry-by-chemistry**, not as a single monolith — because the company faces a different competitive set for each of its sub-segments.
+
+| Chemistry | Soulbrain rough Korean share | Global Tier-1 incumbents | Korean / Chinese challengers |
+|---|---|---|---|
+| **HF / BOE** | 35–45% (KR domestic) | Stella Chemifa (JP, ~30% global), Morita (JP), Resonac (JP) | SK Materials (KR, ~25% KR), Foosung (KR, ~15% KR), Do-Fluoride / Juhua (CN) |
+| **H₃PO₄ SiN strip** | 30–40% (KR domestic) | Stella Chemifa, Solvay (BE), Resonac | Dongjin Semichem (KR), DNF (KR) |
+| **CMP slurry — Cu/Cu-barrier (HBM)** | 50–65% (was ~95% pre-2024) | Fujimi (JP), Entegris/Cabot (US), Resonac/Hitachi (JP), Versum/Merck (DE) | Dongjin Semichem (KR), Anji Micro (CN), Dinglong (CN), UBmaterials (KR) |
+| **CMP slurry — ceria STI / Wet Nano** | 30–40% (KR domestic) | Entegris, Versum, Resonac, Fujimi, KC Tech (KR) | Anji Micro, Dinglong, UBmaterials |
+| **CMP slurry — silica ILD/IMD** | 25–35% (KR domestic) | Entegris, Versum, Cabot, Fujimi | KC Tech (KR, ~25% KR), Dinglong, Anji |
+| **CVD/ALD precursors (HfO₂/ZrO₂)** | 20–30% (KR domestic) | Merck (Versum), Air Liquide / EMG | DNF, Hansol Chemical, Mecaro, UP Chemical (all KR) |
+| **LIB electrolyte** | 15–25% (global merchant) | Mitsubishi Chem (JP), MGL/UBE (JP) | Enchem (KR), Chunbo (KR), Tinci (CN), Capchem (CN), Soulbrain MI (US) |
+
+*Estimates synthesized from [reports/sector/半导体材料.md](../../sector/半导体材料.md) (Nomura Fig 35-44); [Yano Research, 2024](https://www.yanoresearch.com/press/press.php/3921); [Korean broker compilation — Economy6, 2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html); [Businesskorea, 2023-10-30](https://www.businesskorea.co.kr/news/articleView.html?idxno=203197); [Fujifilm Electronic Materials lead, 2024-09](https://www.webnewswire.com/2024/09/03/fujifilm-electronic-material-takes-lead-in-cmp-slurry-market-for-hbm-says-the-information-network/). *Analyst view:* numbers are point estimates from triangulating multiple sell-side notes; published precise market-share data does not exist for most of these sub-segments.*
+
+### 7.2 Direct head-to-head: Soulbrain vs. KC Tech
+
+The closest single-name comp is **KC Tech (KOSDAQ:281820)**. Both are Korean-domestic specialty-chemical houses with primary exposure to Samsung + SK hynix; both compete on CMP slurry (KC Tech historically stronger in silica ILD/IMD, Soulbrain dominant in HBM Cu); both have HF / wet-etch businesses. The Nomura 2026 anchor report aggregates them in Fig 41 as "KC Tech / Soulbrain (KR)" for CMP slurry — explicitly noting they are two separate companies grouped together because their combined Korean-domestic share is informationally meaningful even when their individual splits are not separately published ([reports/sector/半导体材料.md](../../sector/半导体材料.md) — Fig 41 reference).
+
+Operationally KC Tech is broader (it also manufactures CMP equipment and wafer-handling robots, generating ~₩1.2 trillion of FY24 revenue), but Soulbrain is more profitable per dollar of revenue and more focused on the high-margin advanced-node consumables. *Analyst view:* on equity-narrative terms Soulbrain trades at a premium to KC Tech (~40× vs. ~14× TTM PE) because (a) the HBM Cu CMP socket carries higher margin than commodity slurry, (b) Soulbrain has the cleaner pure-play story post-spin-off, and (c) Soulbrain's HF / BOE / phosphoric-acid breadth gives it more localization-tailwind exposure. The two companies do not directly cannibalize each other on most sockets — Samsung and SK hynix run multi-source policies that ensure both have a seat at the table.
+
+### 7.3 Direct head-to-head: Soulbrain vs. Fujimi (TSE:5384)
+
+Fujimi is the **Japanese global Tier-1 in CMP slurry** that took over the lead from Soulbrain on Korean HBM Cu slurry sales in mid-2024 ([Fujifilm Electronic Materials lead, 2024-09](https://www.webnewswire.com/2024/09/03/fujifilm-electronic-material-takes-lead-in-cmp-slurry-market-for-hbm-says-the-information-network/)). Fujimi has ~70 years of slurry-formulation history and a strong silica + ceria portfolio; its competitive advantage on HBM Cu was reportedly a finer abrasive-particle distribution that gave lower wafer-defect counts at SK hynix's stricter HBM3E qualification gates. Soulbrain's response has been to (a) accelerate its own particle-engineering R&D at the Pangyo R&D Center, (b) push for HBM4 / HBM4E qualification at both Samsung and SK hynix with new formulations, and (c) lean on Korean strategic-asset support to ensure at least dual-source status. *Analyst view:* the Fujimi-Soulbrain dynamic on HBM Cu slurry is now a **rotating-share competition** rather than a static dominance — both ship volume to both customers, with quarter-to-quarter rotation based on price and yield performance.
+
+### 7.4 Indirect / emerging competitors
+
+- **Dongjin Semichem (KOSDAQ:005290).** Korean-domestic merchant chemistry house, broke into SK hynix HBM CMP supply in 2025 ([THE ELEC, 2024](https://www.thelec.net/news/articleView.html?idxno=4751)). Threatens Soulbrain's "exclusive Korean-domestic HBM slurry" narrative. Also overlaps in H₃PO₄, precursors, and PR developers. Dongjin trades ~12× TTM PE — at a discount to Soulbrain reflecting smaller scale and less HBM exposure.
+- **Anji Microelectronics (SSE:688019).** Chinese leader in sub-10nm CMP slurry, growing rapidly with SMIC + YMTC + Hua Hong. Less direct overlap with Samsung / SK hynix today but is a long-term threat as China's domestic memory build-out scales. Nomura rates Anji a Buy with TP CNY 360 (42× 2027F PE), reflecting an even more aggressive multiple than Soulbrain ([reports/sector/半导体材料.md](../../sector/半导体材料.md) — Anji recommendation block).
+- **Dinglong (SZSE:300054).** Chinese diversified materials house — CMP pad + slurry + photoresist + ArF auxiliaries. Strategic threat is the breadth: like Soulbrain, Dinglong plays across multiple sub-chemistries. Trades 96× 2027F PE per Nomura — an extreme valuation reflecting near-zero current share but optionality on the China-domestic memory build-out ([reports/sector/半导体材料.md](../../sector/半导体材料.md) — Dinglong block).
+- **Hansol Chemical (KOSPI:014680).** Korean H₂O₂ + precursor + battery-binder house with overlap on precursors and battery materials. Trades ~13× TTM PE — a discount to Soulbrain because of less HBM exposure.
+- **DNF (KOSDAQ:092070), Mecaro (KOSDAQ:241770), UP Chemical (private).** Korean precursor specialists, narrower but deeper. Compete with Soulbrain on the HfO₂ / ZrO₂ precursor socket; together they keep the Korean precursor market structurally fragmented and prevent Soulbrain from monopolizing it.
+- **Stella Chemifa (TSE:4109), Morita Chemical (Japan, private), Resonac (TSE:4004).** Japanese global Tier-1 incumbents on HF / BOE; the 2019 trade dispute drove their Korean share down sharply but they retain >50% global ex-Korea share and continue to compete on premium grades that Korean houses have not yet matched.
+
+### 7.5 Soulbrain's competitive advantages and vulnerabilities
+
+**Advantages (moat checklist):**
+- **Korean strategic-materials franchise** — quasi-protected position on HF / BOE / wet-etch chemistry that competitors outside the Korean ecosystem cannot easily replicate (regulatory + customer-political moat).
+- **Co-developed qualification depth at Samsung + SK hynix** — every grade is co-formulated with the customer over multi-year R&D cycles; switching costs measured in tens of millions of dollars per socket (switching-cost moat).
+- **Breadth across wet-chemistry stack** — etchants + CMP + precursors + plating in one supplier reduces customer SKU management overhead and creates cross-sell leverage (scale / scope moat).
+- **HBM Cu CMP incumbent share** — even with Fujimi / Dongjin sharing, Soulbrain remains a Tier-1 supplier on the highest-margin / highest-visibility product socket of the AI-memory cycle (product-mix moat).
+- **US localization optionality** — Taylor TX phosphoric-acid plant + Kokomo IN electrolyte plant give it a non-Korean revenue base that none of the Korean-only peers (Dongjin, KC Tech, Hansol) yet has (geographic moat in progress).
+
+**Vulnerabilities:**
+- **>70% customer concentration on Samsung + SK hynix** — a top-1 cut in NAND/DRAM capex (as happened 2022–23) directly cuts Soulbrain revenue 15–25%. The 2023 ₩844 bn revenue trough is the cycle-low evidence.
+- **HBM Cu CMP exclusivity erosion** — Fujimi taking lead in 2024 and Dongjin breaking in 2025 mean the premium narrative is structurally more fragile than the 2023 story suggested.
+- **Ceria feedstock concentration in China** — >85% of global cerium-oxide processing in China; any escalation of US-China trade frictions hits Soulbrain's ceria-slurry business through upstream feedstock.
+- **Geographic concentration in Korea** — until Taylor TX ramps in 2026–29, the production footprint is overwhelmingly Korean — exposed to Korean wage inflation, electricity-price hikes, and KRW volatility.
+- **HfO₂/ZrO₂ precursors compete in a more fragmented Korean market** — share gains here are harder.
+
+![Soulbrain vs. peer TTM P/E](../../charts/soulbrain_peer_pe.png)
+
+*Source: TTM P/E values from [Stockanalysis, KOSDAQ:357780](https://stockanalysis.com/quote/kosdaq/357780/); Anji & Dinglong from [Nomura Greater China Semi 2026-2030 anchor report](https://www.cninfo.com.cn/) summarised in [reports/sector/半导体材料.md](../../sector/半导体材料.md); Resonac from [Yahoo Finance — 4004.T](https://finance.yahoo.com/quote/4004.T/); Entegris from [Yahoo Finance — ENTG](https://finance.yahoo.com/quote/ENTG/); Fujimi from [Yahoo Finance — 5384.T](https://finance.yahoo.com/quote/5384.T/); Korean small caps from FnGuide compilations. The dashed line marks the un-weighted peer median (~19×).*
+
+## 8. Market Opportunity (TAM)
+
+The **bottom-up TAM** for Soulbrain's primary product set is the sum of (a) Korean-fab-served semiconductor wet-chemistry TAM, (b) US / China overseas-fab wet-chemistry TAM that Soulbrain's localization investments unlock, and (c) battery-electrolyte TAM at the Soulbrain MI footprint. Using the Nomura 2025 industry tracker as the anchor:
+
+- **2025 global semiconductor materials TAM: ~USD 80 bn** ([reports/sector/半导体材料.md](../../sector/半导体材料.md) — Nomura Fig 24-25). Manufacturing-materials slice: ~USD 48 bn (60%).
+- **Wet-chemistry sub-segments Soulbrain serves** (HF/BOE/H₃PO₄ ~7%, CMP slurry ~7%, precursors ~5%, plating + auxiliaries ~3%): ~22% of manufacturing-materials, or ~**USD 10.5 bn TAM** in 2025.
+- **Korea-fab-served subset** of the above (Korea is 18% of global wafer starts): ~USD 1.9 bn.
+- **HBM-driven incremental wet-chemistry TAM** through FY28 (Samsung +50% HBM capacity 2026, HBM4/4E ramp through 2028): incremental ~USD 0.8–1.2 bn per year on CMP slurry alone.
+
+Translating to Soulbrain's serviceable / share-attainable market:
+- **Serviceable Available Market (SAM)** for Soulbrain's semiconductor portfolio: ~USD 2.5 bn / year in 2025 (Korea + China + nascent US footprint), growing to ~USD 4–5 bn by 2028 on HBM4 + Taylor + Samsung Xi'an.
+- **Share of Market (SOM)** today: Soulbrain's FY24 semiconductor segment ≈ ₩650 bn ≈ USD 475 mn, implying ~19% of SAM — consistent with the chemistry-by-chemistry share estimates in §7.1.
+- **SOM target FY28**: if Soulbrain maintains ~20% SAM share, semiconductor revenue grows to **~USD 0.9–1.0 bn (₩1.2–1.4 trillion)** by 2028. Adding battery electrolyte + display, consolidated FY28 revenue path of **₩1.4–1.5 trillion** is the sell-side bull case — versus FY25 actual ₩923 bn that's roughly a 50%+ 3-year revenue expansion ([Economy6, 2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html), [reports/sector/半导体材料.md](../../sector/半导体材料.md)).
+
+The **growth rate** decomposition: ~10% from underlying semiconductor materials TAM growth (Nomura's "long-term re-rating" thesis), ~5–8% from HBM intensity uplift (more slurry per wafer), ~3–5% from US localization revenue layered on top, and ~−2% from display segment shrinkage. The net ~17–20% revenue CAGR through FY28 is achievable but assumes (a) no HBM4 spec-in loss to Fujimi / Dongjin, (b) on-time Taylor TX ramp, and (c) no major Samsung memory capex cut.
+
+The **penetration strategy** is straightforward and already executing: (a) **defend** existing Samsung / SK hynix sockets through deep co-development on next-node qualification (this is the HBM4 ceria-slurry play); (b) **expand geographically** into Samsung Taylor + TSMC Arizona via the Texas plant; (c) **expand vertically** into adjacent battery / display chemistries within the Korean champion footprint; (d) **rebuild HF / BOE pricing power** as Samsung / SK hynix consolidate multi-source policies post-2019 (a Korean champion is structurally favored). The single biggest TAM-unlocking move would be **TSMC qualification on CMP slurry or HF / BOE in Arizona** — TSMC has historically sourced Korean / Chinese chemistries only sparingly, but the Texas plant brings Soulbrain physically into TSMC's qualification radar for the first time.
+
+## 9. Risk Assessment
+
+### Company-specific risks
+
+**1. Customer concentration (HIGH severity).** Samsung + SK hynix together represent >70% of revenue and the broader Samsung group (memory + foundry + Display + SDI) likely represents ~50–55% of revenue alone. A material capex cut at either anchor — comparable to the 2022–23 NAND downturn that took revenue from ₩1.09 trillion (FY22) to ₩844 bn (FY23), a 23% trough — directly hits Soulbrain in a single cycle. Mitigants: (i) the chemistry is consumable not capex (utilization rates matter more than greenfield capex); (ii) the HBM ramp partially offsets DRAM/NAND cyclicality; (iii) the Taylor TX expansion diversifies into US foundry buyers ([Stockanalysis revenue history](https://stockanalysis.com/quote/kosdaq/357780/revenue/), [Economy6, 2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html)).
+
+**2. HBM Cu CMP slurry share loss (MEDIUM-HIGH).** The 2024 Fujimi lead-taking and 2025 Dongjin SK hynix entry have already eroded what was a 2023-disclosed "exclusive" position; further erosion at HBM4 / HBM4E qualification — or loss of the high-margin Cu-barrier sub-socket to Versum / Anji — would compress segment margins and invalidate the premium-multiple thesis. Mitigants: Korean strategic-materials policy keeps at least one domestic supplier in every chemistry; Soulbrain's R&D investment in particle-engineering at Pangyo aims to re-take share ([Fujifilm Electronic Materials lead, 2024-09](https://www.webnewswire.com/2024/09/03/fujifilm-electronic-material-takes-lead-in-cmp-slurry-market-for-hbm-says-the-information-network/), [THE ELEC, 2024](https://www.thelec.net/news/articleView.html?idxno=4751)).
+
+**3. Geographic concentration in Korea (MEDIUM).** Until Taylor TX ramps in 2026–29, production is overwhelmingly Korean. Exposed to Korean wage inflation, electricity-price hikes (KEPCO industrial-tariff increases), KRW volatility, and a potential strike at the Gongju / Paju / Pyeongtaek plants. Mitigants: high automation lowers labor leverage; the Taylor and Kokomo plants gradually de-risk this through the second half of the decade ([Soulbrain "About Us" page](https://www.soulbrain.co.kr/en/m16.php)).
+
+**4. Founder-family succession (LOW-MEDIUM).** Chairman Jeong Ji-wan is in his late 60s; family succession was complicated by the death of his son Jeong Seok-ho in the early 2020s. Daughter Jeong Mun-joo and the next generation are the long-term inheritors but governance arrangements at Soulbrain Holdings (the controlling 036830 entity) remain in transition. Mitigants: professional CEO at the listed 357780 entity (Park Young-soo); founding family controls via Holdings rather than directly ([THE ELEC, "Soulbrain owner 2nd-generation succession"](https://www.thelec.kr/news/articleView.html?idxno=6616)).
+
+**5. Execution risk on Taylor TX phosphoric-acid plant (MEDIUM).** USD 175 mn phase-1 (USD 575 mn potential total) is the largest single-asset capex in Soulbrain's history, with construction 2025–29. Phosphoric-acid plants are technically demanding (corrosion control, 12-nines purity) and Texas is a new operating geography for the company. Cost overruns, permitting delays, or Samsung Taylor capacity scheduling slippage could each undermine the IRR ([Evertiq, 2024-07-30](https://evertiq.com/news/56124), [Hoodline, 2024-07](https://hoodline.com/2024/07/south-korean-company-soulbrain-to-launch-175m-plant-in-taylor-bolstering-local-tech-industry-and-job-market/)).
+
+### Industry / market risks
+
+**6. AI-capex slowdown (MEDIUM-HIGH).** Nomura's anchor 2026-2030 thesis explicitly identifies AI capex deceleration as the master risk for the entire materials cycle — if hyperscaler GPU buying weakens, HBM capacity additions delay and the consumable consumption uplift evaporates. Soulbrain is a high-beta name in this scenario given the HBM share story. Mitigants: a slowdown still leaves baseline DRAM / NAND / foundry consumption intact ([reports/sector/半导体材料.md](../../sector/半导体材料.md) — top-of-report risks).
+
+**7. Chinese domestic substitution (MEDIUM).** China is rapidly building its own materials ecosystem (Anji, Dinglong, Crystalwise, UP Chemical-CN). For Soulbrain's Wuxi operations serving SK hynix Wuxi, gradual Chinese-domestic substitution will compress China revenue over 3–5 years. Mitigants: SK hynix's Korean-fab loyalty to Soulbrain is sticky; Chinese substitution mostly hits the lower-purity grades.
+
+**8. Substitution / disruption risk on individual chemistries (MEDIUM).** Each chemistry has its own substitution dynamic — HF resistant, CMP medium, precursors more open. The cumulative effect of 5–10% annual share losses across sub-segments would compress margin even if revenue holds.
+
+**9. Korean strategic-materials policy reversal (LOW).** A change in MOTIE leadership or a US-Korea trade deal that mandates non-Korean sourcing could weaken the protected-supplier dynamic. Low-probability but high-impact.
+
+### Financial risks
+
+**10. Valuation / multiple-compression risk (HIGH).** TTM P/E of 41.8× sits ~2.2× the peer median (~19×) and ~1.9× Soulbrain's own 3-year median (~22×) — and the stock has nearly tripled off the 2025 low to ₩452,000. **A miss on FY26 revenue (consensus ₩1.1 trillion) or HBM4 qualification slip** would plausibly compress the multiple to 25–30× and re-price the equity 25–40% lower, even with no earnings cut. Mitigants: forward P/E of 18.9× implies analysts already model EPS doubling; if delivered, the multiple discount versus actual growth is reasonable ([Stockanalysis, KOSDAQ:357780](https://stockanalysis.com/quote/kosdaq/357780/), [Stockopedia](https://www.stockopedia.com/share-prices/soulbrain-co-KOSDAQ:357780/)).
+
+**11. Capex funding for Taylor TX phase-2 (LOW-MEDIUM).** Phase-2 of up to USD 400 mn (₩550 bn) would be the largest single financing event in Soulbrain's history. Operating cash flow at ₩923 bn revenue and ~17% OPM generates ~₩100 bn of free cash flow per year, so phase-2 likely requires either ₩200–300 bn of corporate-bond issuance or a phased ramp. Mitigants: balance sheet is near-net-cash; KOSDAQ bond market is open to A-rated Korean industrials ([Evertiq, 2024-07-30](https://evertiq.com/news/56124)).
+
+### Macroeconomic risks
+
+**12. KRW / USD volatility (MEDIUM).** Soulbrain's revenue is primarily KRW with a growing USD slice (Wuxi China revenue is USD-equivalent through SK hynix billing; Taylor will be pure USD). Cost base is primarily KRW with USD feedstock (AHF, cerium oxide). A strong KRW versus USD compresses export margins; the 2023–24 KRW weakness was a tailwind. Hedging is partial.
+
+**13. Geopolitical — Korea-China, Korea-Japan, US-China (MEDIUM-HIGH).** The supply chain runs through all three relationships: Chinese fluorspar / cerium-oxide feedstock; Japanese benchmarking competitors for HF / slurry; US customer base growing via Taylor. Any of these relationships breaking down disrupts Soulbrain's chemistry or customer base. Mitigants: diversification across feedstock sources (Korean-domestic + Chinese + others) and customer geographies (Korea + US + China).
+
+
+

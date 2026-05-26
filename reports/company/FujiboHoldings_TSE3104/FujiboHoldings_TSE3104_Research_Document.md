@@ -400,3 +400,141 @@ The bottoms-up view is consistent with three independent triangulations:
 Fujibo's stated penetration strategy is three-pronged: (1) expand soft-pad share at advanced-node CMP customers (the Miaoli centre is the lever), (2) increase hard-pad sales at customers where Fujibo is currently a second-source, and (3) maintain LCD-glass / hard-disk / silicon-wafer share with continuous-improvement product cycles ([Top Message, Fujibo IR](https://www.fujibo.co.jp/en/ir/message/); [Integrated Report 2024, p. 17-18](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)). The Miaoli centre's stated 2027 completion targets a ramp window that aligns with the 2-nm / 1.4-nm node ramp window at TSMC — by design.
 
 ---
+
+## 9. Risk Assessment
+
+### Company-specific risks
+
+**1. Scale disadvantage vs DuPont (high impact, persistent).** Fujibo's ~$120 mm pad revenue is < 8% of DuPont's pad revenue and limits Fujibo's R&D budget, application-engineer headcount, and customer-trial throughput. DuPont's Ikonic™ launch targeting sub-28 nm is a direct technology challenge to Fujibo's FXA / Suede grades. *Mitigant:* Fujibo's specialty-grade soft-pad niche, Japanese-customer preference, and the ¥5.7 bn Miaoli R&D centre buildout to bridge the scale gap on application-engineering proximity. Source: [Yuho 2025, p. 34 — Miaoli investment](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf); [NITTA DuPont — Ikonic platform](https://www.nittadupont.co.jp/en/category-products/pad).
+
+**2. Hubei Dinglong Chinese-domestic-substitution (rising impact, medium-term).** Dinglong's qualification with SMIC for DL-720 series 28/14 nm hard pads marks the start of Chinese-domestic CMP-pad localisation; Chinese fabs are the fastest-growing region in the global TAM and the policy tailwind is structural. Fujibo's loss is primarily "opportunity cost" (not winning the China market growth) rather than share-loss from existing customers. *Mitigant:* Fujibo's mainland-China revenue is currently small; the company's strategic focus on the TSMC / Samsung / SK Hynix cluster sidesteps the localisation pressure. Source: [OpenPR — Semiconductor CMP Pad market 2025](https://www.openpr.com/news/4253861/semiconductor-cmp-polishing-pad-latest-market-report-2025).
+
+**3. Industrial-chemicals top-2 customer concentration (material, persistent).** Sumitomo Shoji Chemical (19.2% of consolidated sales) + Mitsui Chemicals (13.7%) = 32.9% of consolidated revenue in two counterparties, both in the Industrial Chemicals segment. Loss of either renewal would cut group OP by 5-8%. *Mitigant:* contract-manufacturing relationships are sticky (qualified-supplier moat at Yanai Chemical's plants), and the new fifth Yanai plant due April 2026 adds capacity that diversifies customer mix. Source: [Yuho 2025, p. 27 — 販売実績 top-2 disclosure](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf).
+
+**4. Apparel segment structural decline (low impact, persistent).** Lifestyle Apparel revenue has been flat-to-down for 5+ years and OP slid 25% YoY in FY3/25 on cost inflation + weak quantity-store channel. Group impairment risk: net asset value of apparel-segment fixed assets is ¥2.1 bn (a small but non-zero impairment exposure if structural reform fails). *Mitigant:* Inoue era has continued the Nakano-era restructuring; e-commerce + overseas premium-brand sales are partially offsetting. Source: [Yuho 2025, p. 23 — 固定資産の減損リスク](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf).
+
+**5. Key-person dependency on a thin executive bench (low-medium impact, persistent).** Fujibo's executive team is small (9 directors total, including 4 outside) and President Inoue is the public face of the AI-CMP growth narrative; the polishing-pad business is run operationally by Yoshimi Mochizuki (Fujibo Ehime President). The team is small enough that an unexpected departure would create succession overhang. *Mitigant:* the Nakano → Inoue handover in June 2022 was orderly; the company has been growing through-cycle in the Inoue era without strategic deviation.
+
+### Industry / market risks
+
+**6. Semiconductor cyclicality (high impact, periodic).** The polishing-pad business is consumable-mode but ties directly to wafer-starts; in the 2023 downcycle, Fujibo's pad segment revenue fell to ¥13.4 bn (vs the FY3/22 peak ¥15.1 bn) and operating profit collapsed to ¥1.1 bn before recovering to ¥4.7 bn in FY3/25. The next semi downcycle would compress Fujibo's pad-segment OP by 50-70% under typical cyclical-stress scenarios. *Mitigant:* the consumable-mode of pad demand creates a partial moat vs equipment-OEM cyclicality, and the AI / HBM / advanced-node mix increases CMP-step intensity through-cycle. Source: [Integrated Report 2024, p. 17 — segment performance](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf).
+
+**7. EUV CMP step-count growth uncertainty (medium impact, long-term).** The pad demand thesis depends on advanced-node logic and 3D-NAND adding CMP steps per wafer. If EUV / High-NA EUV displaces certain CMP-intensive integration schemes (e.g., LELE → single-pattern at 5nm), CMP-step growth could undershoot consensus. *Mitigant:* the most credible analyst consensus (Nomura, TECHCET) has CMP-step counts continuing to grow with each node — the EUV-displacement risk is more relevant to slurry than pad. Source: [reports/sector/半导体材料.md, project-internal sector ref](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/半导体材料.md).
+
+**8. Competitive intensity from DuPont / Entegris pad platform launches (medium impact).** DuPont's Ikonic™ + VisionPad™ launches and Entegris/CMC's continued pad investments could pressure Fujibo's specialty-grade market share at the 5-nm / 3-nm transition. *Mitigant:* Fujibo's specialty-grade niche has historically resisted DuPont's platform launches; the on-site application-engineering moat is real.
+
+**9. China tariff / tech-decoupling indirect impact (low-medium impact).** US tariff regime could indirectly hurt Fujibo via slower-than-otherwise Chinese fab capex build-out, even though direct US tariff exposure is "ごく一部" / small. Conversely, decoupling helps Fujibo retain non-China customer share. *Mitigant:* Fujibo's geographic mix is biased toward TW / KR / JP fabs rather than mainland China. Source: [FY3/26 1H 決算短信, p. 3 — 米国の関税政策の影響](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251031/20251030582961.pdf).
+
+### Financial risks
+
+**10. FX (JPY strengthening) risk (medium impact, near-term).** Fujibo's pad business is export-heavy (export ratio of operating income is "high" per the Yuho), invoiced largely in USD. A yen strengthening from ¥158 to ¥130 / USD (the ~5-yr range max) would compress reported pad-segment revenue 18-20%. *Mitigant:* the company runs FX forwards and uses balance-on-FX-payables for partial natural hedging; medium-term FX is not modelable. Source: [Yuho 2025, p. 21 — 事業等のリスク (2) 為替相場の変動](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf).
+
+**11. Valuation / multiple-compression risk (low impact).** Fujibo trades at ~8.7× TTM P/E — well below the >2× sector-median trigger that the project's quality-checklist flags as a stretch-multiple risk. The compression direction risk is therefore not the primary concern; if anything, the valuation multiple has room to expand toward pad-peer-comparable levels (Entegris ~30×, Dinglong ~96×). *Mitigant:* not applicable — this risk does not materially trigger for Fujibo. Source: [stockanalysis.com — Fujibo Holdings, 3104.T](https://stockanalysis.com/quote/tyo/3104/).
+
+### Macroeconomic risks
+
+**12. Japanese government Effissimo / activist overhang (low-medium impact, ambient).** Effissimo Capital Management Pte. Ltd. is disclosed (per the Yuho 大量保有報告書 note) as holding ~15.9% of Fujibo as of February 2025 — though this is below the threshold for it to appear in the formal top-shareholders table, it is the second-largest disclosed beneficial holder behind Master Trust Bank. Effissimo's track record of activist engagement (most famously at Toshiba in 2017-2023) creates ambient risk that management could be pushed toward a faster apparel-divestment / pad-spinoff timeline than Inoue's current pacing. *Mitigant:* Effissimo's reporting is consistent with a passive stake in the Japanese context, and Inoue's capital-return policy upgrade in May 2025 (35% payout + 3.5% DOE + ¥500 mm buyback) appears partly responsive to large-holder dialogue. Source: [Yuho 2025, p. 38 — Effissimo Capital Management 大量保有報告書 note](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf).
+
+**13. Geopolitical (Taiwan tail risk) (low-probability / high-impact).** A meaningful Taiwan-Strait incident — disruption to TSMC + UMC + the Tainan / Miaoli industrial cluster — would simultaneously cut Fujibo's Tainan-plant output (one of five global plants), strand the ¥1.15 bn already spent on the Miaoli R&D centre, and disrupt the customer base. *Mitigant:* the four Japan plants provide production redundancy; the Miaoli centre is R&D not high-fixed-cost manufacturing.
+
+---
+
+## 10. References
+
+### Primary filings — Fujibo Holdings
+
+- [富士紡ホールディングス 第205期 有価証券報告書 (FY3/25 Yuho), filed 2025-06-25, 129 pages](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf) — the canonical primary disclosure for all segment data, top-customer disclosure, capex / R&D, management, and shareholder data cited in this report.
+- [富士紡ホールディングス 2025年３月期 決算短信 (FY3/25 kessan), filed 2025-05-15, 19 pages](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20250515/20250513543721.pdf) — annual earnings release with segment narrative + initial FY3/26 guidance.
+- [富士紡ホールディングス 2026年３月期 第２四半期（中間期）決算短信 (1H FY3/26 kessan), filed 2025-10-31](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251031/20251030582961.pdf) — first-half FY3/26 results + upward-revised guidance + dividend increase.
+- [Fujibo Integrated Report 2024 (EN), published 2024 by Fujibo Holdings (52 pages, English)](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf) — Inoue Top Message, segment performance commentary, 11-yr financial summary, sustainability / governance overview.
+- [Fujibo Holdings IR Library landing page](https://www.fujibo.co.jp/ir/library/) — directory for kessan, integrated reports, business reports, MTPs.
+
+### Fujibo product / company pages
+
+- [Polishing Pad Business overview (EN)](https://www.fujibo.co.jp/en/division/polishingpad/)
+- [POLYPAS product family landing page](https://www.fujibo.co.jp/en/division/polishingpad/product/)
+- [POLYPAS FP series (non-woven first-polish)](https://www.fujibo.co.jp/en/division/polishingpad/product/627/)
+- [POLYPAS FX series (filler-impregnated)](https://www.fujibo.co.jp/en/division/polishingpad/product/1282/)
+- [POLYPAS FXA series (non-filler hard urethane CMP pad)](https://www.fujibo.co.jp/en/division/polishingpad/product/1143/)
+- [POLYPAS Suede series (final-finishing soft pad)](https://www.fujibo.co.jp/en/division/polishingpad/product/1283/)
+- [POLYPAS Back Pad series (wax-free wafer retention)](https://www.fujibo.co.jp/en/division/polishingpad/product/1284/)
+- [Fujibo Company History page (EN)](https://www.fujibo.co.jp/en/company/history/)
+- [Top Message — President Masahide Inoue (EN)](https://www.fujibo.co.jp/en/ir/message/)
+
+### Competitor primary sources
+
+- [DuPont — Materials for Chemical Mechanical Planarization (CMP)](https://www.dupont.com/electronics-industrial/semiconductor-cmp.html)
+- [NITTA DuPont — PolishingPad product family (IC1000 / VisionPad / Ikonic)](https://www.nittadupont.co.jp/en/category-products/pad)
+- [Qnity Electronics, Inc. — Form 10-12B/A — DuPont Electronics spin filing, SEC EDGAR](https://www.sec.gov/Archives/edgar/data/0002058873/000119312525215621/d942851dex211.htm)
+- [JSR Micro — Advanced Cleans and CMP](https://www.jsrmicro.com/electronic-materials/advanced-cleans-cmp)
+- [JSR Micro — CMP Slurry product page](https://www.jsrmicro.com/cmp-slurry)
+- [Hubei Dinglong — SZSE:300054 (Eastmoney)](http://quote.eastmoney.com/sz300054.html)
+- [Anji Microelectronics — SSE:688019 (Eastmoney)](http://quote.eastmoney.com/sh688019.html)
+
+### Industry research (third-party)
+
+- [Cognitive Market Research — CMP Pad Market 2025](https://www.cognitivemarketresearch.com/cmp-pad-market-report) — $895 mm 2024 baseline; 5.8% CAGR forecast.
+- [Mordor Intelligence — CMP Pad Market Companies & Forecast 2024-2029](https://www.mordorintelligence.com/industry-reports/chemical-mechanical-polishing-pad-market/companies)
+- [TECHCET — Semiconductor CMP Pad & Slurry Forecast, 2024](https://techcet.com/semiconductor-cmp-pad-slurry-forecast/) — 6% YoY consumables growth, $3.4 bn broader CMP market.
+- [Hengce Research — Global Semiconductor CMP Polishing Pad Market Research Report 2025](https://www.hengceresearch.com/products/semiconductor-c-m-p-polishing-pad/68987)
+- [Knowledge Sourcing — Semiconductor Polishing Pads Market, Size, Forecast 2030](https://www.knowledge-sourcing.com/report/semiconductor-polishing-pads-market) — APAC 75% share, China 9.3% CAGR.
+- [OpenPR — Semiconductor CMP Polishing Pad Latest Market Report 2025](https://www.openpr.com/news/4253861/semiconductor-cmp-polishing-pad-latest-market-report-2025) — Dinglong / SMIC DL-720 qualification color.
+- [Dr. Robert Castellano (The Information Network) — "DuPont Takes #1 position in Semiconductor Consumables Market in 2024", 2025](https://drrobertcastellano.substack.com/p/dupont-takes-1-position-in-semiconductor)
+- [C&EN — "Entegris to acquire electronic materials maker CMC for $6.5 billion", 2021-11-26](https://cen.acs.org/business/mergers-&-acquisitions/Entegris-acquire-electronic-materials-maker/99/i45)
+- [Grand View Research — Chemical Mechanical Planarization Market Size Report, 2030](https://www.grandviewresearch.com/industry-analysis/chemical-mechanical-planarization-market-report)
+- [Mordor Intelligence — CMP Pad Market Forecasts to 2031](https://www.mordorintelligence.com/industry-reports/chemical-mechanical-polishing-pad-market)
+
+### Market data
+
+- [stockanalysis.com — Fujibo Holdings, 3104.T (TYO)](https://stockanalysis.com/quote/tyo/3104/) — current quote, market cap, P/E, P/S, revenue and net-income trend.
+- [Yahoo Finance — 3104.T quote](https://finance.yahoo.com/quote/3104.T/) — 52-week range + intraday quote.
+- [Yahoo Finance — 3104.T profile](https://finance.yahoo.com/quote/3104.T/profile/) — corporate descriptor.
+- [stockanalysis.com — JSR Corporation, 4185.T (peer)](https://stockanalysis.com/quote/tyo/4185/)
+- [stockanalysis.com — Entegris, ENTG (peer)](https://stockanalysis.com/stocks/entg/)
+- [stockanalysis.com — DuPont, DD (peer)](https://stockanalysis.com/stocks/dd/)
+- [Simply Wall St — Fujibo Holdings analysis](https://simplywall.st/stocks/jp/consumer-durables/tse-3104/fujibo-holdings-shares)
+
+### Project-internal cross-references
+
+- [reports/sector/半导体材料.md — Nomura 2026-05-21 semi-materials primer](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/半导体材料.md) — sector framing for CMP pad / slurry / conditioner league tables and the Fujibo / Kinik / Dinglong coverage notes.
+
+---
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL check** — all 50+ URLs are linked to public, real domains: Fujibo IR site (fujibo.co.jp), Yahoo Finance disclosure (storage-yahoo.jp), kitaishihon.s3 (Yuho mirror), SEC EDGAR (sec.gov), stockanalysis.com, finance.yahoo.com, Cognitive Market Research, Mordor Intelligence, TECHCET, DuPont, NITTA DuPont, JSR Micro, Eastmoney, OpenPR, C&EN, Grand View Research. No fabricated SEC patterns. The only project-internal GitHub URL (`reports/sector/半导体材料.md`) is a self-reference to a file in the same repo.
+
+**Filing references** — sources are the actual Yuho PDF (kitaishihon S3 mirror of EDINET filing, 129 pages, third-party cache; original EDINET URL not posted because EDINET requires a session-token-bound query rather than a direct deep link, so the next-best-canonical mirror was used). Both Yahoo-Finance-disclosure-hosted PDFs (kessan FY3/25 + 1H FY3/26 kessan) are the canonical 開示 mirrors used across all TSE-issuer disclosure workflows.
+
+**Quantitative spot-checks** (claim → location in source):
+- Net sales FY3/25 ¥42,912 mm (+18.8% YoY) ✓ ([FY3/25 kessan, p. 1](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20250515/20250513543721.pdf)).
+- Operating profit FY3/25 ¥6,476 mm (+129.8%) ✓ (same).
+- Polishing-pad segment sales ¥19,307 mm / OP ¥4,729 mm ✓ ([Yuho 2025, p. 24](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)).
+- Top-2 customer disclosure (Sumitomo Shoji Chemical 19.2%, Mitsui Chemicals 13.7%) ✓ ([Yuho 2025, p. 27](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)).
+- Employees 1,319 total + 443 in polishing pad ✓ ([Yuho 2025, p. 11](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)).
+- Equity ratio 71.3% ✓ ([FY3/25 kessan, p. 1](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20250515/20250513543721.pdf)).
+- FY3/26 1H net sales ¥22,528 mm (+7.0%) + OP ¥3,771 mm (+26.0%) ✓ ([1H FY3/26 kessan, p. 1](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251031/20251030582961.pdf)).
+- FY3/26 revised guide ¥45.4 bn / ¥7.5 bn / ¥7.7 bn / ¥5.0 bn ✓ (same, page 1).
+- Dividend guide raised to ¥160 (from ¥150) ✓ (same).
+- Miaoli R&D centre ¥5.7 bn invested ¥1.15 bn YTD ✓ ([Yuho 2025, p. 34](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)).
+- Holding company conversion September 2005 ✓ (NOT 2016 as the prompt suggested — see [Fujibo history page](https://www.fujibo.co.jp/en/company/history/)).
+- President: Masahide Inoue, joined 1987-04, CEO since 2022-06 ✓ ([Yuho 2025, p. 48](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)).
+- Effissimo 15.93% stake (as of 2025-02-21) ✓ ([Yuho 2025, p. 38](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)).
+- Quantitative dividend policy: 35% payout, 3.5% DOE ✓ ([Top Message, Fujibo IR](https://www.fujibo.co.jp/en/ir/message/)).
+- Founding 1896 / OSE+TSE listing 1949 / Fujibo Ehime 1977 / pad market entry 1998 ✓ ([Fujibo history page](https://www.fujibo.co.jp/en/company/history/) + [Integrated Report 2024, p. 5](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)).
+
+**Analyst-view sentences** (intentionally labeled, not cited to a primary filing):
+- §6.2 global CMP-pad share split (DuPont ~50%, Entegris ~26%, JSR ~8%, Fujibo ~5%, Dinglong ~4%, others ~7%) — labeled "*Analyst view*" with triangulation across Cognitive Market Research, Mordor Intelligence, Hengce; not attributed to any single filing.
+- §4 per-product competitive-advantage verdicts (yes / partial) — labeled "*Analyst view*", uncited or cross-referenced to competitor sources.
+- §4.4 "industry standard" claim for IC1000 — cited to NITTA DuPont (the JV that distributes IC1000 in Japan), not to Fujibo's Yuho.
+- §4.6 Fujibo's "top market share in advanced-process soft pads" — this is Fujibo's own claim in its Integrated Report (p. 18), cited as such; it is the only share-leadership claim in the report that is sourced to the company itself.
+
+**Residual unknowns / known limitations:**
+- EDINET direct-URL pull was not accessible without a session token; Yuho citation uses the kitaishihon S3 mirror (third-party but identical PDF). Verification of any specific page reference will resolve to the same file content.
+- Fujibo does not name individual polishing-pad customers in public disclosure (consistent with Japanese mid-cap practice for technical-component suppliers); customer-set inference for TSMC / Samsung / SK Hynix / Micron / Kioxia / Intel is analyst-constructed from geographic footprint + the universe of advanced-fab customers + cross-referenced with industry-coverage sources. No verbatim Yuho quote names any specific fab customer.
+- The Q1 FY3/26 kessan (filed July 2025) was referenced in search-result hits but not retrieved as a primary PDF; FY3/26 progression is anchored to the 1H kessan (October 2025) which subsumes Q1.
+- Holding-company-level (parent) financial-indicator table is at Yuho p. 3; consolidated table at Yuho p. 4 — TTM P/E from market-data sources is consistent with the consolidated, not parent, basis. The 67.7× P/E in the FY3/24 parent line is parent-only and intentionally not used as the consolidated valuation reference.
+- Dinglong / Anji / JSR / Entegris / DuPont peer P/E values cited in §1 valuation snapshot + §7.3 chart are TTM as of mid-May 2026 per stockanalysis.com / Yahoo Finance lookups; they may move materially with each earnings release.
+
+</details>
