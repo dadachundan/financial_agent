@@ -377,3 +377,118 @@ FY2025 按地区销售净额:日本 ¥521.5 bn (49%)、中国 ¥153.8 bn (14%)�
 - **制药材料 (Bioscience):** 用于商业药物生产的分离介质须符合 FDA / EMA / PMDA cGMP 要求;每个药物管线的柱认证周期 12–24 个月。
 
 ---
+
+## 7. 竞争格局
+
+### 7.1 5–10 家具名竞争对手
+
+按分部 / 产品族区分,东曹的主要直接竞争对手:
+
+| 东曹产品线 | 前 3 名具名竞争对手 | 东曹的相对地位 |
+|---|---|---|
+| **半导体溅射靶 (Tosoh SMD)** | JX Advanced Metals (5016 JT,约 60% 份额)、Materion (MTRN,约 11%)、霍尼韦尔电子材料 (约 5-8%) | 全球第 5–7,份额约 3–5%;Ti / TiN / WSi₂ / MoSi₂ / ITO 强势;美国本土俄亥俄布局 |
+| 半导体溅射靶 — 中国新晋者 | 江丰电子 Konfoong (300666 CH)、有研新材 Grikin Advanced Materials、宁波江丰 | 东曹在中国大陆面临份额流失风险;在美国 / 中国台湾 / 日本市场可防御 |
+| **半导体级石英玻璃 / 石英 (Tosoh SGM、Tosoh Quartz)** | Heraeus、信越石英 (4063)、Momentive Performance Materials、AGC | 中小型梯队 (约低个位数份额,*Analyst estimate*);在亚洲晶圆厂供给上较强 |
+| **氧化锆粉 (TZ-Series)** | 圣戈班 (Norton)、国瓷材料 (300285 CH)、第一稀元素化学工业 | **全球品类龙头**,牙科 + 技术氧化锆粉,份额 >50% (*Analyst estimate*) |
+| **HPLC 生物分离 (TSKgel)** | Cytiva / 丹纳赫、Merck KGaA / MilliporeSigma、赛默飞、沃特世、Bio-Rad、安捷伦 | SEC + IEX 前 3;反相 + HILIC 较小 |
+| **临床诊断 (AIA series HbA1c)** | 罗氏诊断、Bio-Rad、希森美康 (Sysmex) | 全球 HbA1c 前 4 玩家 |
+| **氯碱 / PVC / MDI (传统化学链)** | 万华化学 (全球 MDI 龙头)、巴斯夫、科思创、亨斯曼、陶氏、三井化学;PVC:信越 (4063)、台塑、Westlake | MDI 中梯队 (前 7);PVC 大宗品份额下降 |
+| **石化 (PE / EVA / 氯丁橡胶)** | 中石化、埃克森美孚、陶氏、利安德巴塞尔、LG 化学、三菱化学 (4188)、住友化学 (4005) | 日本本土小规模竞争者;专业化导向 |
+| **晶圆厂水处理 (Organo)** | 栗田工业 (6370)、Veolia、Suez、Evoqua (Xylem)、Pall (丹纳赫) | 日本 / 中国台湾 / 韩国晶圆厂超纯水前 3 |
+
+### 7.2 定位框架 —— 细分赛道龙头 vs 一体化大宗
+
+东曹定位沿着 2025 年 5 月管理层正式画出的"化学链 ↔ 先进技术"分界线干净拆分。**在化学链业务中,东曹是次级规模的细分玩家**,直面数十亿美元规模的中国一体化生产商 (万华、中石化) 与全球大厂 (巴斯夫、科思创、陶氏) —— 唯一能挣钱的方式正是管理层明确宣示的专业化策略 (EVA 光伏胶膜级、氯丁橡胶、MDI / HDI 硬化剂特化变种)。**在先进技术业务中,东曹是品类领先的细分玩家**:氧化锆粉品类龙头,HPLC SEC 介质 + AIA 临床诊断前 3,半导体级溅射靶前 5,通过 Organo 在亚洲晶圆厂超纯水中是稳健第二。后者是高毛利、增长导向的利润基底;前者是产生现金的"公用事业"基底。
+
+```mermaid
+quadrantChart
+    title 东曹竞争定位 — 份额 vs 增长 (Analyst view,FY2025 基期)
+    x-axis "低份额" --> "高份额"
+    y-axis "低增长 (周期 / 成熟)" --> "高增长"
+    quadrant-1 "战略优先增长"
+    quadrant-2 "需要产能扩建"
+    quadrant-3 "现金管理"
+    quadrant-4 "守份额"
+    "氧化锆 (TZ-Series)": [0.80, 0.55]
+    "HPLC TSKgel (Bioscience)": [0.55, 0.70]
+    "AIA 临床诊断": [0.40, 0.50]
+    "溅射靶 (Tosoh SMD)": [0.30, 0.65]
+    "石英玻璃 / 石英": [0.30, 0.45]
+    "水处理 (Organo Engineering)": [0.55, 0.75]
+    "高硅沸石 (马来西亚)": [0.45, 0.35]
+    "MDI (氯碱)": [0.30, 0.45]
+    "PVC / VCM (氯碱)": [0.25, 0.10]
+    "烧碱": [0.30, 0.05]
+    "石化 (烯烃 / PE)": [0.20, 0.05]
+```
+
+![东曹同业 P/E 比较 — 日本化学行业](charts/tosoh_peer_pe.png)
+
+资料来源:P/E 数据取自 [Yahoo Finance (4042.T 2026-02-13)](https://finance.yahoo.com/quote/4042.T/);[Simply Wall St TSE:4042 估值](https://simplywall.st/stocks/jp/materials/tse-4042/tosoh-shares/news/a-look-at-tosoh-tse4042-valuation-after-full-year-earnings-a);[companiesmarketcap.com 信越化学 P/E](https://companiesmarketcap.com/shin-etsu-chemical/pe-ratio/);[WiseSheets 三菱化学](https://www.wisesheets.io/roe/MTLHY)。
+
+### 7.3 竞争优势与漏洞
+
+**竞争优势:**
+
+1. **一体化氯碱 → 精细化学 → 生命科学价值链。** 东曹 Specialty 集团受益于来自内部化学链的成本优势内部供应 —— 氯、氢、钠基、溴、过氧化氢与乙烯胺等原料 —— 这是纯特化品对手 (霍尼韦尔电子材料、Materion) 无法复制的结构优势 ([Tosoh"第 126 期事業報告書",p.10 (化学链原料成本优势)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))。
+2. **美国本土溅射靶制造布局 (Tosoh SMD Grove City 俄亥俄)。** 1988 年设立的 SMD 子公司,加上 2013-14 与 2025 两轮扩产,东曹由此成为少数美国本土高纯度溅射靶生产商之一 —— 在美国 CHIPS 法案推动 Intel Ohio / TSMC Arizona / Samsung Texas / Micron Boise 建厂潮中位列有结构性优势的供应商行列 ([Business Standard 2013-11 — Tosoh SMD 扩张](https://www.business-standard.com/content/b2b-chemicals/tosoh-smd-plans-major-investments-to-serve-semiconductor-industry-113111200428_1.html))。
+3. **氧化锆粉品类龙头地位 (TZ-Series)。** 在技术 + 牙科氧化锆全球份额领先约 25 年,TZ-Black、TZ-3Y-E 等牌号是牙科氧化锆牙冠的行业标准原料。
+4. **生物制药 + 诊断长期客户认证 (TSKgel + AIA series)。** 生物制药生产中切换成本极高 —— 一根柱一旦认证进入商业化 mAb 生产产线,基本锁定到该药的生命周期结束。
+5. **保守的资产负债表 + 瑞穗系融资关系。** 资本率 62.3%,净负债-权益比 0.05× —— 东曹有充裕的借款能力支撑 FY2026–28 ¥220-250 bn 资本开支计划,瑞穗系银行关系提供按需的承诺信贷额度 ([Tosoh 第 126 期事業報告書,pp.16, 20](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf))。
+
+**竞争漏洞:**
+
+1. **石化 / 氯碱大宗暴露。** FY2025 约 54% 营收和约 24% 经营利润位于化学链,直面规模优势的中国 / 美国页岩气基生产商 —— 是集团毛利和 ROE 的结构性拖累;FY2028 中长期经营计划经营利润目标 (¥140 bn / ROE >10%) 若化学链毛利不能有显著恢复,则可信度成问题。
+2. **溅射靶产品结构过渡风险,FY26 SMD 减值已显现。** 同时宣布 Tosoh SMD ¥19.3 bn 固定资产减值与同一子公司扩产,意味着老款 Ti / W-silicide 产品线在被减值的同时,GAA / BPD 节点新线也在并行投产 —— 这一过渡公司是在按周期资助,但代价是短期 EPS 减计。
+3. **Advanced Materials 子板块客户基础集中于半导体。** 即便合并客户集中度低于 10% 阈值,SMD + Organo + 部分 Specialty 产品线仍对前 10 大晶圆厂客户群暴露 —— 当这些客户去库 (如 2024 H2 / 2025 H1) 时,子板块冲击明显。
+4. **中国溅射靶新进入者在尾节点抢份额。** 江丰、有研等正快速抢占中国大陆晶圆厂溅射靶销售份额 —— 这结构性约束了东曹在十年内最大单一区域晶圆厂建设潮中的成长。
+5. **牙科 + LCD 暴露于消费可支配与面板组合周期。** TZ-Series 氧化锆北美牙科疲弱 (H1 FY26) 与石英玻璃 LCD 衬底暴露提醒,并非所有"特化"终端都在增长。
+
+### 7.4 内部一致性 —— 第 1 节框架 vs 第 4 / 7 节细节
+
+第 1 节把东曹定位为 *带嵌入式 Advanced Technologies 增长可选性的价值-周期股* (P/B ~1×、EV/EBITDA 6.5×、19.3× TTM P/E + 14.6% 远期增长预测),与第 4 / 第 7 节细节内部一致。中长期经营计划 FY2028 经营利润目标 (¥140 bn vs FY2025 实际 ¥98.9 bn) 同时需要化学链毛利恢复 (¥35.8 bn → ¥55.0 bn = +¥19.2 bn) + 先进技术增长 (¥57.7 bn → ¥80.8 bn = +¥23.1 bn) —— 上行空间不对称,但 FY2026 Tosoh SMD 减值再次印证 Advanced Materials 增长支柱存在战术挫折,而结构性故事仍完整。
+
+![东曹 FY2026–2028 中长期经营计划 — 按业务组合的营收 + 经营利润目标](charts/tosoh_midterm_targets.png)
+
+资料来源:[Tosoh"第 126 期事業報告書",p.13 (按业务组合的 FY2028 数值目标)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf)。
+
+---
+
+## 8. 市场机会 (TAM)
+
+### 8.1 TAM 栈 —— 东曹主要产品市场
+
+东曹组合的合计可寻址市场范围为 **全分部约 2,000 亿美元 TAM**,其中 Specialty + Engineering 占据更高毛利 + 增长倾向的切片 (约 500–600 亿美元)。TAM 栈头条:
+
+| 终端 | 2025 TAM (亿美元) | 2025–2030 CAGR | 东曹可服务份额 |
+|---|---|---|---|
+| 全球半导体材料 (IC 制造 + 封装) | 约 800 | 约 6–8% | Specialty + Engineering 子集;东曹 < 全部 2% |
+| — 半导体溅射靶子市场 | 约 31 (据 [VMR 2024 基期 17.8 亿美元,2032 30.7 亿美元,7.4% CAGR](https://www.verifiedmarketresearch.com/product/sputtering-target-material-for-semiconductor-market/)) | 约 7.4% | Tosoh SMD 约 3–5% (低个位数 — 约 1–1.5 亿美元营收) |
+| — 半导体级石英玻璃 / 石英 | 约 30–40 (分析师估计) | 约 5–7% | 东曹低个位数份额 (约 0.5–1 亿美元营收) |
+| 生物制药 + 临床诊断耗材 | 约 100 (HPLC + 介质 + 检测) | 约 6–9% | TSKgel + AIA 约中个位数 (约 3–5 亿美元营收) |
+| 晶圆厂超纯水 (Organo Engineering) | 约 30 / 年新建 + 约 10 / 年改造 | 资本上行周期约 10-15% | 东曹 / Organo 亚洲份额约 10-15% (¥150-200 bn / 年营收基底) |
+| 氧化锆粉 + 牙科 + 套管 | 约 15 | 约 4-6% | 东曹 TZ-Series >50% 份额 (约 3-5 亿美元营收) |
+| 氯碱 (烧碱 + 氯 + VCM + PVC + MDI) | 约 1,500–2,000 | 约 2-3% | 东曹约 1-2% (次级规模专门玩家) |
+| 石化 (烯烃 / 聚合物) | 约 6,000 (大宗) | 约 2-3% | 东曹 <0.5% (日本本土专门玩家) |
+
+战略含义:**东曹增长率暴露主要在 Specialty + Engineering 约 500-600 亿美元 TAM 内**,年增长 6-10%,叠加产能扩张计划与渐进的份额获取,可合理支撑 FY2028 中长期经营计划增长目标。化学链 TAM 虽然规模大得多,但本质是周期性毛利恢复故事,而非单位增长故事。
+
+### 8.2 溅射靶业务的 SAM + SOM 估算
+
+针对 Tosoh SMD (野村 Fig 44 主产品线):
+
+- **TAM (整个半导体溅射靶市场):** 2025 年约 31 亿美元,到 2030 年约 50 亿美元,先进节点份额按约 10% CAGR (据 [Verified Market Research 2024-2032 预测 7.4% CAGR](https://www.verifiedmarketresearch.com/product/sputtering-target-material-for-semiconductor-market/))。
+- **SAM (东曹相关 Ti / TiN / Ta / W-silicide / Mo-silicide / Co / ITO 组合 + 美国服务的客户群):** 约 15 亿美元,即仅金属靶,北美 + 亚洲的逻辑 + DRAM + NAND 客户群属东曹可寻址,但不包含日益由江丰 / 有研服务的中国本土自给市场。
+- **SOM (东曹现实可获份额):** FY2025 营收约 1.2–1.8 亿美元 (*Analyst estimate*,无单独披露的 Tosoh SMD 营收;按 SMD 占集团营收约 5% × FY25 ¥1,063 bn × Advanced Materials 子板块的约 1/3 推算)。FY26-28 资本开支计划目标把这一规模拉至约 2-2.5 亿美元 —— 但 FY26 减值清楚显示,产能爬升并非线性。
+
+野村"大中华半导体 2026-30F 复兴指南"是这一市场最权威的买方预测 —— 把 2026–2030 年亚洲晶圆厂资本开支和材料周期"5 年盛宴"作为包括东曹在内的材料商的拐点,同时明确指出东曹最大单一区域增长杠杆 (中国大陆) 因中国国产化替代而结构上受损 ([Nomura"Greater China Semi 2026-30F Renaissance Guide",2026-05-21 — 本地副本于行业报告](../../sector/半导体材料.md))。
+
+### 8.3 支撑 TAM 获取故事的资本投资计划
+
+¥220-250 bn 的 FY2026–FY2028 资本开支计划布局明确支撑 Specialty + Engineering 业务的 TAM 获取,以及化学链低碳化。据 H1 FY26 披露 ([Tosoh"FY2026 上半期累计经营业绩",2025-11-04,p.18](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf)),FY2026 单年资本支出预测 ¥99 bn (vs FY25 ¥81.2 bn),R&D 提升至 ¥24 bn (vs ¥22.1 bn)。资本支出结构向 Specialty / Bioscience (分离介质扩产) + Tosoh SMD (已完成的溅射靶扩产) + 化学链 (越南 MDI + 南阳 HDI + 生物质发电) 倾斜,与 FY2028 经营利润结构目标基本一致。在 ¥100 / 股最低股息基础上的回购计划 (¥50 bn 三年 + FY2026 授权 ¥25 bn) 表明管理层认为资本开支计划并未挤出股东回报 —— 在资本率 62.3% 与净负债-权益比 0.05× 的背景下属合理判断 ([Tosoh"FY2026 上半期累计经营业绩",2025-11-04,p.21 (股东回报)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf))。
+
+![东曹股息 + 派息率历史,FY2021–FY2026E](charts/tosoh_capital_returns.png)
+
+资料来源:[Tosoh"第 126 期事業報告書",p.22 (股息历史)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Shareholders%20Meetings/FY%2025/Business-Report-for-the-126th-Fiscal-Year.pdf);[Tosoh"FY2026 上半期累计经营业绩",2025-11-04,p.21 (FY26 股息预测)](https://www.tosoh.com/File%20Library/Tosoh/Investors/Earnings%20Releases/FY2025/Financial-Results-for-First-Half-FY2026.pdf)。
+
+---
