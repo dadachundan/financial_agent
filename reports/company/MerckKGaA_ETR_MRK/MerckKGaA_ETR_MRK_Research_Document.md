@@ -357,3 +357,148 @@ Semiconductor materials sit at the intersection of three regulatory frameworks:
 
 ---
 
+## 7. Competitive Landscape
+
+### 7.1 Direct competitors — by Electronics product line
+
+Merck KGaA's competitive position differs sharply by product line because no single competitor matches its breadth across CMP slurry + ALD precursors + photoresist + photoresist ancillaries + specialty gases + OLED materials. The closest "broad" competitor is **Fujifilm Electronic Materials**, which after the November 2023 acquisition of Entegris's electronic chemicals business now spans CMP slurry + cleaning chemistries + photoresist + ALD precursors. Below is the per-product competitive map:
+
+| Sub-product | Merck KGaA position | #1 competitor | #2-#3 competitors |
+|---|---|---|---|
+| **CMP slurry** | #2 (Versum, ~18% share) | Fujifilm (incl. Entegris elec-chem, ~31%) | Fujimi/CMC, Resonac, Anji, DuPont |
+| **ALD/CVD precursors** | Top 3 (Versum + Mecaro) | Air Liquide (Voltaix, enScribe) | ADEKA, DNF/SK Specialty, Hansol Chem, Nata, Versum=MRK |
+| **Photoresist (DUV + EUV)** | ~Top 7-8 (AZ, ~5-8%) | JSR (~22%) | TOK, Sumitomo, Shin-Etsu, Fujifilm, Dongjin |
+| **Photoresist ancillaries (BARC, hardmasks)** | Top 2-3 (AZ) | JSR | Brewer Science, TOK, Sumitomo |
+| **Specialty gases (electronics)** | Top 5 (Versum) | Linde (incl. industrial gas) | Air Liquide, Air Products, Resonac, Taiyo Nippon Sanso |
+| **Liquid crystals (LC) for LCD** | #1 (Merck KGaA, ~50-60%) | JNC (formerly Chisso) | DIC, NIDEC |
+| **OLED emissive materials** | Top 5 | UDC (NASDAQ:OLED) | Idemitsu, Sumitomo, Samsung SDI, LG Chem, DS Neolux |
+| **DS&S equipment** | Top 2-3 (Versum + organic) | Linde + Air Liquide hybrid | Edwards (Atlas Copco), MKS Instruments |
+| **3D optical metrology** | Sub-scale (Unity-SC, post 2024) | KLA | Camtek, Onto Innovation, Hitachi High-Tech, Park Systems |
+
+*Source: Analyst compilation from [Mordor Intelligence photoresist analysis](https://www.mordorintelligence.com/industry-reports/photoresist-market); [Valuates CMP Materials report](https://reports.valuates.com/market-reports/QYRE-Auto-14V14904/global-cmp-materials-for-semiconductor); [Fortune Business Insights specialty gas](https://www.fortunebusinessinsights.com/us-electronic-specialty-gas-market-114856); [OLED Materials companies, Market Research Future](https://www.marketresearchfuture.com/reports/oled-materials-market/companies); [Nomura sector overview](../../sector/半导体材料.md).*
+
+### 7.2 Five key direct competitors — deep dive
+
+**1. Fujifilm Electronic Materials (TSE:4901).** Post-2023 acquisition of Entegris's electronic chemicals business, Fujifilm is **the most directly comparable broad-portfolio competitor** to Merck KGaA Electronics — spans CMP slurry (now #1 globally at ~31%), specialty gas, photoresist (KrF + ArF + ArFi), formulated cleans, and ALD precursors. Fujifilm has structurally higher exposure to Japanese fab customers (Sony, Renesas, Kioxia) but is gaining share in Taiwan and Korea. **Vulnerability**: Fujifilm's parent company (Fujifilm Holdings) is more diversified than just electronic materials (digital imaging, healthcare, document) — similar conglomerate-discount dynamic to Merck KGaA. See [Fujifilm research document](../Fujifilm_TSE4901/Fujifilm_TSE4901_Research_Document.md) for deeper coverage.
+
+**2. Resonac Holdings (TSE:4004).** The merged Showa Denko + Hitachi Chemical entity (rebranded Resonac in 2023). Strong in CMP slurry (~14% share), photoresist ancillaries (Hitachi legacy), photomask blanks (legacy SDK), and specialty gases. Has been actively investing in semi materials capacity in Silicon Valley (the "US-JOINT" consortium launched July 2024) and globally ([Resonac US-JOINT consortium announcement](https://www.businesswire.com/news/home/20240725537728/en/)). **Strength**: deep Japanese OEM customer relationships, photomask blanks near-monopoly. **Vulnerability**: smaller global scale than Merck KGaA Electronics on a combined basis; integration complexity from Showa Denko + Hitachi Chemical merger ongoing.
+
+**3. Linde plc (NYSE:LIN) + Air Liquide (EPA:AI) + Air Products (NYSE:APD).** These three industrial-gas majors dominate the specialty gas slice via their dedicated electronics subsidiaries (Linde Electronics, Air Liquide Electronics, Air Products Electronics). They combine: (a) bulk-gas infrastructure at-the-fab (the air-separation units that produce N₂, O₂, Ar), (b) high-purity specialty gas, (c) increasingly, precursor chemistry (especially Air Liquide via Voltaix 2013 acquisition). Merck KGaA cannot match their bulk-gas + on-site-fab infrastructure model — but conversely, the industrial-gas majors do not have Merck KGaA's CMP slurry + photoresist + OLED breadth. See [Air Liquide research document](../AirLiquide_EPA_AI/AirLiquide_EPA_AI_Research_Document.md) and [Air Products research document](../AirProducts_NYSE_APD/AirProducts_NYSE_APD_Research_Document.md) for deeper coverage.
+
+**4. Entegris (NASDAQ:ENTG).** After divesting electronic chemicals to Fujifilm in November 2023 for $700 m, Entegris is now more focused on **purification + filtration + chemistry-handling + advanced precursors**. Direct competitor to Merck KGaA in advanced precursors (CMC Materials slurry IP retained partially, Sinmat slurry, gas purifiers, ESD-safe wafer carriers). **Strength**: pure-play semi exposure (zero conglomerate discount), strong incumbency in filtration. **Vulnerability**: smaller than Merck KGaA Electronics post-divestiture; valuation premium (32× P/E) leaves less room for multiple expansion.
+
+**5. JSR Corporation (formerly TSE:4185, taken private by JIC March 2024).** Dominant in EUV photoresist (~22% combined share including Inpria), one of the largest single competitors for any photoresist line — but a Japanese state investment fund (JIC, Japan Investment Corporation) took JSR private in 2024 with the express purpose of consolidating Japanese semi materials supply, raising the prospect of JSR + TOK + Inpria + others combined into a single national champion ([JSR JIC tender offer coverage](https://www.bloomberg.com/news/articles/2023-06-25/jsr-soars-after-state-backed-jic-said-to-mull-buyout-of-chipmaker)). For Merck KGaA, JSR's privatization is a **structural negative** in EUV resist (gives JSR more patience to fund long-cycle R&D + acquisitions without quarterly EPS pressure) but a **positive** in that Japanese national consolidation reduces the number of independent competitors globally.
+
+### 7.3 Indirect / adjacent competitors
+
+- **DuPont (NYSE:DD).** Smaller scale in semi materials (CMP pad, polyimide, photoresist) but a credible #3-#5 in select sub-categories. Recent focus on Interconnect Solutions (advanced packaging dielectrics) overlaps with Merck KGaA's Thin Films. See [DuPont research document](../DuPont_NYSE_DD/DuPont_NYSE_DD_Research_Document.md) for deeper coverage.
+
+- **Tokyo Ohka Kogyo (TOK) — TSE:4186.** ~$1.5 bn revenue, EUV resist + KrF/ArF resist focus. Direct competitor to Merck KGaA AZ in DUV resists.
+
+- **Shin-Etsu Chemical (TSE:4063) / SUMCO (TSE:3436) / GlobalWafers (TWSE:6488).** Silicon wafer suppliers. Not direct material competitors but adjacent in the same fab supply chain — Merck KGaA does not produce silicon wafers.
+
+- **Dongjin Semichem (KOSDAQ:005290).** Korean specialty chemicals — competitive with Merck KGaA in select photoresists + CMP slurry for Samsung / SK Hynix. See [Dongjin research document](../DongjinSemichem_KOSDAQ005290/) for coverage.
+
+- **Hoya Corporation (TSE:7741).** Photomask blanks near-monopoly (~80% share in EUV blanks) — adjacent to Merck KGaA's resist business but in a structurally different value chain step.
+
+- **Anji Microelectronics (SSE:688019).** Chinese CMP slurry challenger — leading domestic player, growing fast on Chinese semi self-sufficiency drive. Direct head-to-head with Merck KGaA Versum in Chinese fabs.
+
+### 7.4 Competitive positioning framework
+
+Plotting the major Electronics-materials competitors on the two dimensions of **product breadth (single-product specialist vs broad portfolio)** vs **scale (revenue + customer share)**:
+
+```mermaid
+quadrantChart
+    title Electronics-materials competitive positioning
+    x-axis Single-product specialist --> Broad portfolio
+    y-axis Smaller scale --> Larger scale
+    quadrant-1 Broad + Large (scale leaders)
+    quadrant-2 Single-product + Large (focused giants)
+    quadrant-3 Single-product + Small (niche)
+    quadrant-4 Broad + Small (diversified subscale)
+    Merck KGaA Electronics: [0.85, 0.78]
+    Fujifilm El. Materials: [0.80, 0.85]
+    Linde Electronics: [0.55, 0.85]
+    Air Liquide Elec.: [0.55, 0.80]
+    Entegris: [0.65, 0.55]
+    Resonac: [0.70, 0.65]
+    JSR (pre-PE): [0.40, 0.55]
+    TOK: [0.30, 0.40]
+    DuPont Semi: [0.60, 0.50]
+    Dongjin Semichem: [0.45, 0.35]
+    UDC OLED: [0.10, 0.40]
+    Anji Micro: [0.25, 0.25]
+```
+
+The framework illustrates Merck KGaA Electronics's central positioning: **broad portfolio + large scale (top-right quadrant)** alongside Fujifilm Electronic Materials. This positioning is harder to replicate than either of: pure-play specialists (UDC, TOK, JSR) who would need decades of M&A to match the breadth; or industrial-gas giants (Linde, Air Liquide) who would need to acquire multiple chemistry platforms (CMP, resist, OLED). The closest near-term competitive convergence threat is Fujifilm continuing to scale via further M&A — and any Japanese national champion that emerges from a JSR + TOK + Showa Denko / Resonac consolidation.
+
+### 7.5 Competitive advantages and vulnerabilities
+
+**Advantages.**
+
+1. **Wafer-cycle coverage breadth** — Merck KGaA materials touch deposition, lithography, etch, CMP, packaging, and now metrology. No single product hides the cycle; weakness in one is compensated by strength elsewhere.
+2. **Versum + Mecaro integration** — five years of integration work means CMP slurry + ALD precursor cross-selling at the customer level is now well-established.
+3. **Asia capacity footprint** — €500 m Kaohsiung + Mecaro Korea + Singapore expansions place Merck KGaA closer to the customer than most US-headquartered competitors.
+4. **Family-controlled, patient capital** — willingness to spend €3 bn+ on Electronics during a Healthcare patent cliff is the type of cross-cycle capex decision few quarterly-EPS-driven competitors would make.
+5. **REACH / chemistry-IP heritage** — 350+ years of formulation chemistry expertise translates into faster customer qualification and broader IP defenses than smaller competitors can match.
+
+**Vulnerabilities.**
+
+1. **Conglomerate discount** — Electronics is only 18% of Group sales; the equity is priced as a Healthcare + Life Science name, so positive Electronics inflections are diluted.
+2. **No bulk industrial gas** — cannot bundle bulk N₂ / O₂ / Ar with specialty gas at the fab the way Linde, Air Liquide, Air Products can.
+3. **Sub-scale in EUV resist** — AZ brand is strong in DUV but the EUV photoresist franchise is small vs JSR / Shin-Etsu / TOK.
+4. **DS&S cyclicality** — Q1 2025 DS&S decline highlighted that ~15% of the Semiconductor Solutions revenue base is exposed to fab-equipment capex cycles, not just wafer-start volumes.
+5. **China geopolitics** — ~10–15% of Electronics revenue exposed to Chinese fab customers, vulnerable to either US-China export-control tightening or to Chinese domestic-supplier (Anji, Hansol, NATA) share gains.
+
+---
+
+## 8. Market Opportunity (TAM)
+
+### 8.1 Top-down TAM sizing for Merck KGaA Electronics
+
+**Total Addressable Market (TAM).** Per the Nomura anchor report and the SEMI Materials Group data, the global semiconductor materials TAM (the union of all sub-categories Merck KGaA participates in) was **~$48 bn in 2024 (wafer-fabrication materials) + $32 bn (packaging materials) = ~$80 bn total** ([sector overview, p. 18–30](../../sector/半导体材料.md)). Of this, Merck KGaA today participates in approximately ~$45–50 bn of total TAM coverage (excluding silicon wafers, photomask blanks, sputtering targets, packaging substrates — categories where Merck KGaA is not present). Adding in the OLED materials TAM (~$2 bn 2024 → ~$8 bn 2030F at 18% CAGR per [IMARC Group OLED materials report](https://www.imarcgroup.com/oled-materials-market)) and the 3D optical metrology TAM (~$1 bn, fragmented) gives a total **addressable TAM of ~$50–55 bn in 2025**.
+
+![Electronics segment net sales — FY2020 to FY2024](../../charts/merckkgaa_electronics_revenue.png)
+*Source: [Merck KGaA Annual Reports 2020–2024](https://www.emdgroup.com/en/investors/reports-and-financials.html); historical Statista cross-check; organic growth from quarterly press releases. FY2020 baseline as Performance Materials (pre-rename).*
+
+### 8.2 Serviceable Addressable Market (SAM)
+
+Within the $50–55 bn TAM, the **SAM** — sub-categories where Merck KGaA has an active product line currently qualified at fab customers — is approximately **~$25–30 bn (2025)**, comprising:
+
+- CMP slurry: ~$3 bn TAM, Merck KGaA full participation
+- Photoresist + ancillaries: ~$9 bn TAM, Merck KGaA participates in DUV resist + full ancillaries portfolio (~$4 bn effective SAM)
+- Specialty gases: ~$6 bn TAM, Merck KGaA participates as #5 (~$2 bn effective SAM)
+- ALD/CVD precursors: ~$3 bn TAM, Merck KGaA top-3 (~$2 bn effective SAM)
+- Wet chemicals + formulated cleans: ~$3 bn TAM, partial participation (~$1 bn)
+- OLED + display: ~$2 bn TAM, partial (Merck KGaA top-5, ~$0.5 bn)
+- LCD liquid crystal: ~$0.5 bn TAM, Merck KGaA dominant (~$0.3 bn)
+- DS&S equipment: ~$1 bn TAM, ~$0.4 bn
+- 3D metrology: ~$1 bn TAM, ~$0.1 bn (Unity-SC nascent)
+
+Sum of effective SAM today: **~$13–15 bn**, vs FY2024 Electronics revenue of ~$4.1 bn (€3.8 bn at $1.08 = $4.1 bn). This implies an effective **share-of-SAM of ~28–32% today** — a healthy share but with meaningful upside if Merck KGaA can take share in EUV resist, specialty gas, and OLED.
+
+### 8.3 SOM and 2030 growth path
+
+**SOM (Serviceable Obtainable Market)** is the SAM share Merck KGaA can realistically capture within a 5-year planning horizon, given customer qualification cycles + competitive dynamics. Bull-case scenario: SOM grows from ~$4 bn (2024) to **~$7 bn (2030F)** at ~10% CAGR — consistent with Nomura's broader 10% CAGR forecast for semi materials, and modestly above Merck KGaA's own Capital Markets Day 2024 mid-term organic growth corridor of **5-9% (raised from 3-6%)** ([Capital Markets Day 2024](https://www.emdgroup.com/en/news/capital-markets-day-17-10-2024.html)). Bear-case scenario: 5% CAGR → ~$5.5 bn in 2030F. The corridor brackets ~30% of expected Group EBITDA growth over the next 5 years coming from Electronics — a meaningful inflection given the segment's recent ~15% EBITDA contribution.
+
+***Analyst view:*** The most likely 2030F Electronics revenue is **€5.5–7.0 bn (~$6.0–7.5 bn)** at the 7-9% mid-point CAGR, with Semiconductor Solutions doing the heavy lifting (low double-digit organic) and Optronics + DS&S contributing modestly. Margin upside is plausible if mix continues to shift toward higher-value advanced precursors (gross margins on EUV-relevant precursors are reportedly 60%+) and away from commodity-like Display Solutions.
+
+### 8.4 Penetration strategy
+
+Merck KGaA's 5-year penetration strategy is centered on **four growth vectors** that align with the Nomura anchor report's semi-materials supercycle thesis:
+
+1. **AI / advanced-node logic.** ALD precursors for GAA gate dielectric, CMP slurry for additional planarization steps, specialty gases for advanced etch — all benefit from the TSMC N2 + Samsung 2nm + Intel 18A ramps starting 2026-2027 ([sector overview, p. 6-9](../../sector/半导体材料.md)). Q1 2026 organic growth was already 7.5% in Semiconductor Solutions, with low double-digit growth in semi materials specifically ([Q1 2026 press release](https://www.emdgroup.com/en/news/q1-2026-13-05-2026.html)).
+
+2. **HBM / DRAM scaling.** Materials demand from HBM4 ramps at SK Hynix and Samsung, plus DRAM 1c node transitions, drives advanced precursors + CMP slurry incremental volume. Merck KGaA's Mecaro / Korea capacity directly serves this demand.
+
+3. **3D-NAND scaling.** Material intensity per bit rises with layer count; the projected 400+ layer NAND (2026-2027) requires roughly 3x the deposition + etch material per bit vs current 200-layer.
+
+4. **Advanced packaging.** Hybrid bonding, TSV fill, RDL, glass core substrate — each opens incremental TAM, with Unity-SC metrology playing into the same advanced-packaging value chain.
+
+Capital allocation supporting these vectors: the **"Level Up Next"** program announced at the October 2025 Capital Markets Day extends the 2021–2025 €3 bn+ Electronics investment with a similar-sized capex envelope through 2030, focused predominantly on Asian semi materials capacity ([Capital Markets Day 2025, 2025-10-16](https://www.emdgroup.com/en/news/capital-markets-day-16-10-2025.html)).
+
+![Group segment + Electronics business-unit mix — FY2024](../../charts/merckkgaa_segment_mix.png)
+*Source: [FY2024 Q4 press release, 2025-03-06](https://www.emdgroup.com/en/news/q4-2024-06-03-2025.html); [AR 2024 Electronics Course of Business](https://www.emdgroup.com/en/annualreport/2024/management-report/report-on-economic-position/course-of-business-and-economic-position/electronics.html).*
+
+---
+

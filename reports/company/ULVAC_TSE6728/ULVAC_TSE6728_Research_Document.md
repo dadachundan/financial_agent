@@ -315,3 +315,111 @@ ULVAC operates at the intersection of three distinct industries — **semiconduc
 
 ---
 
+## 7. Competitive Landscape
+
+ULVAC competes on **two distinct competitive axes** that should be analysed separately because the competitor sets barely overlap: (i) the **semiconductor capital-equipment axis** dominated by the global top 5 (AMAT, ASML, TEL, LRCX, KLA) plus a long tail of specialists, where ULVAC sits in the long tail; and (ii) the **vacuum-technology / sputter-target / FPD-equipment axis** where competitors are Canon Tokki, Edwards/Atlas Copco, Pfeiffer Vacuum, JX Advanced Metals, Tosoh, Materion, KFMI, and Sunic / Avaco. The first axis has higher revenue stakes but ULVAC has lower share; the second has lower stakes but ULVAC has structurally higher share.
+
+**Direct competitors — semi capital equipment (sputter / etch / ashing).** The named primary competitors are **Applied Materials** (NASDAQ:AMAT — the global #1 PVD/sputter supplier via the Endura platform, see [Applied Materials FY2024 10-K Business section](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000006951&type=10-K)), **Tokyo Electron** (TSE:8035 — TEL's Trias and Telius PVD platforms, see [TEL Annual Report 2024](https://www.tel.com/ir/library/annual_report/)), **Lam Research** (NASDAQ:LRCX — primarily etch and deposition, see [Lam Research FY2025 10-K](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000707549&type=10-K)), **Hitachi High-Tech** (private subsidiary of Hitachi — primary plasma ashing competitor), and **Canon Anelva** (private — Canon's semiconductor sputter unit, distinct from Canon Tokki for OLED). ULVAC's edge versus these is **process-application-specific share** (MHM, descum) rather than horizontal breadth — AMAT's Endura installed base is ~10× ULVAC's sputter installed base globally, but ULVAC's MHM POR adoption is the de-facto-standard at mature-node logic and memory per management's own language ([Q3 FY26 Q&A, item 5](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)).
+
+**Direct competitors — FPD / OLED equipment.** The OLED deposition tool set is dominated by **Canon Tokki (private Canon subsidiary — 70%+ share in linear-source organic-evaporation, the most strategically valuable OLED tool)**, with **Sunic System (KOSDAQ:171090)**, **Avaco (KOSDAQ:083930)**, **YAS (private Korean)**, and **Applied Materials** rounding out the OLED equipment competitive set ([OLED Deposition Equipment Market report, DixieGrimes mirror](https://github.com/DixieGrimes/Market-Research-Report-List-1/blob/main/oled-deposition-equipment-market.md)). ULVAC's OLED play is in the **sputter, encapsulation, and mask-blank periphery** of the OLED line — it does not own the linear-source emissive step. For broader sputter-coating (LCD, touch, optics), the top three players AMAT, ULVAC, and TEL collectively control ~45% of the global sputter-coating market per Sputter Coating Market Forecast 2026 ([IndexBox / Sputter Coating Market 2035 forecast](https://www.indexbox.io/blog/sputter-coating-market-growth-to-accelerate-by-2035-driven-by-semiconductor-and-display-demand/)) — meaning ULVAC is plausibly the #2 or #3 sputter-coating player worldwide, even though it is a niche player in PVD-for-semi.
+
+**Direct competitors — vacuum pumps & components.** **Edwards (subsidiary of Atlas Copco AB, STO:ATCO-A)** is the global #1 in dry pumps for fabs; **Pfeiffer Vacuum (FR:PFV, now majority-owned by Busch SE following the 2024 take-private)** is #2; **Ebara Corporation (TSE:6361)** is a strong #3 in dry pumps via its acquisition of the Boc Edwards business and parallel R&D; **ULVAC** is #3-4 with bundled-pull advantage; **Busch** (private German) and **Leybold** (Atlas Copco subsidiary) round out the top 6. The market structure is more oligopolistic than the equipment or target markets, with the top 4 controlling ~70% of dry-pump revenue.
+
+**Direct competitors — sputter targets.** Per the Nomura Fig. 44 sputter-target league table and confirmed in Coherent Market Insights ([Copper Sputter Target Market report](https://www.coherentmarketinsights.com/market-insight/copper-sputtering-target-market-6221)): **JX Advanced Metals (TSE:5016 — newly spun out 2025 from JX Nippon Mining; the largest pure-play semi-target supplier)**, **Tosoh (TSE:4042 — strong in oxide and exotic-metal targets via Tosoh SMD)**, **Materion (NYSE:MTRN — US-based specialty)**, **Mitsui Mining & Smelting (TSE:5706 — copper, indium, tin, lead specialist)**, **Honeywell Electronic Materials**, **Plansee SE (private — refractory metals)**, **KFMI (SHE:300666 — the Chinese share-gainer)**, and **ULVAC**. *Analyst view:* ULVAC's relative share is **mid-pack** — below JX, Tosoh, Mitsui Kinzoku in pure-target revenue but above many smaller specialty suppliers. Its true competitive edge in this segment is the bundle pull from its own sputter chambers — a vertical-integration advantage that pure-target suppliers cannot replicate.
+
+```mermaid
+quadrantChart
+    title Vacuum-technology competitive map — ULVAC's position
+    x-axis "Mid-range / Mature node" --> "Leading edge"
+    y-axis "Single product" --> "Bundled (equip + materials + components)"
+    quadrant-1 Leading bundle
+    quadrant-2 Niche-leader bundle
+    quadrant-3 Single niche players
+    quadrant-4 Leading-edge pure-play
+    ULVAC: [0.32, 0.85]
+    Applied Materials: [0.85, 0.62]
+    Tokyo Electron: [0.78, 0.48]
+    Lam Research: [0.82, 0.42]
+    ASML: [0.95, 0.18]
+    Canon Tokki: [0.42, 0.32]
+    Edwards (Atlas Copco): [0.55, 0.15]
+    Pfeiffer Vacuum: [0.45, 0.20]
+    JX Advanced Metals: [0.62, 0.25]
+    Tosoh: [0.50, 0.30]
+    Materion: [0.45, 0.35]
+    KFMI: [0.30, 0.35]
+```
+
+**Positioning framework — three competitive dimensions.** On the **breadth dimension** (how many fab process steps does the company touch?), ULVAC is on the narrow end vs AMAT / TEL / LRCX but on the broad end vs JX / Tosoh / Materion / KFMI. On the **integration dimension** (equipment + materials + components in one franchise?), ULVAC is on the most-integrated end of the entire competitor map — no other player simultaneously sells the sputter chamber, the sputter target, and the vacuum pump that feeds it. On the **leading-edge dimension** (does the company compete at the N3 / N2 / A16 logic node?), ULVAC is firmly on the mid-range / mature-node end (the MHM franchise is mature-node logic, not GAA / High-NA EUV). This three-dimensional positioning is what investors should mentally substitute for the "WFE top 5" framing that doesn't include ULVAC: the company is a **narrow + integrated + mid-range vacuum specialist** with a defensible niche and no leading-edge ambition.
+
+**Competitive advantages.** ULVAC's defensible advantages are: (i) **bundle pull** — only player selling equipment + materials + components from one shop, which gives it a co-sell advantage at FPD makers and at fabs that prefer fewer suppliers; (ii) **MHM process IP** — multi-decade stress-controlled-film expertise that is hard to replicate; (iii) **descum process IP** for advanced packaging — de-facto-standard share with TSMC OSAT customers; (iv) **rare-earth magnet equipment + geopolitical preference** — non-Chinese supply alternative to ALD Vacuum Technologies for Western-onshoring projects; (v) **PHI surface-analysis brand** — global reference brand for XPS / Auger / SIMS. None of these are billion-dollar moats individually but they aggregate into a defensible specialty franchise.
+
+**Competitive vulnerabilities.** Three structural weaknesses to flag: (a) **scale gap vs AMAT / LRCX / TEL** — ULVAC's ~¥260bn (~USD 1.7bn) revenue is ~6% of AMAT's (~USD 27bn) and ~7% of TEL's (~USD 18bn JPY 2.8tn), which constrains R&D budget per process technology; (b) **leading-edge absence** — ULVAC will not participate in the High-NA EUV / GAA capex wave that drives the largest AI-logic capex dollars at TSMC / Intel / Samsung, leaving the company to harvest the second-derivative (mature-node, packaging) opportunities; (c) **FPD oversupply exposure** — the Chinese FPD makers' capex cycle is the single largest external driver of ULVAC's order book volatility and is structurally lumpy; (d) **China-customer concentration** — 34% of revenue, with elevated geopolitical risk of customer-side capex cuts or export-control disruption.
+
+**Market share — calibration.** Pure-play global market shares in ULVAC's served segments are not publicly disclosed at granular level. *Analyst view:* in semiconductor MHM sputter, ULVAC's share at mature-node logic and DRAM applications is likely **>50%** based on management's "de facto standard" language; in WLP/PLP descum / ashing, **>40%** for the served process step; in OLED sputter for IT-OLED panels, **~25–35%**; in dry vacuum pumps, **~10–15%** behind Edwards (~40%) and Pfeiffer (~25%); in sputter targets, **mid-single-digit %** of the broad market, **~10–15%** in FPD targets pre-JV (now consolidating into the KFMI JV). These are analyst estimates derived from company commentary and trade-press triangulation — not publicly disclosed by ULVAC or independently audited.
+
+---
+
+## 8. Market Opportunity (TAM)
+
+ULVAC's **TAM** (Total Addressable Market) is the sum of its six product-line addressable markets, each independently sized and each with different growth profiles. The figures below are best-public-data 2025-26 estimates triangulated from SEMI, Nomura, Cognitive Market Research, Maximize Market Research, and Future Market Insights.
+
+| ULVAC product line | TAM 2025E (USD bn) | 5-yr CAGR | Source |
+|---|---:|---:|---|
+| Semiconductor sputter / PVD equipment | 4–5 | 5–7% | [reports/sector/半导体材料.md, Nomura 2026-05-21 WFE breakdown](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md) |
+| Semiconductor plasma strip / ashing | 1.5–2 | 6–10% (AI-packaging) | Inferred from WLP/PLP packaging capex trajectory |
+| OLED deposition equipment | 1.5 → 3 (2027) | ~15% | [OLED Deposition Equipment Market FY24 report (DixieGrimes mirror)](https://github.com/DixieGrimes/Market-Research-Report-List-1/blob/main/oled-deposition-equipment-market.md) |
+| Vacuum pumps & components | 8 | 4–6% | Trade press triangulation; Atlas Copco / Pfeiffer financial filings |
+| Sputter target materials (semi + FPD) | 4–5 | 5–6% | [Cognitive Market Research 2024](https://www.cognitivemarketresearch.com/semiconductor-sputtering-targets-market-report); [Maximize Market Research 2025](https://www.maximizemarketresearch.com/market-report/global-sputtering-target-market/102381/) |
+| Rare-earth magnet / industrial vacuum equipment | 1–2 | 10–15% (onshoring) | Inferred from US/EU onshoring project pipeline ([Q3 FY26 Q&A item 8](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)) |
+| Surface analysis instruments (PHI niche) | 0.5–1 | 3–5% | Thermo Fisher / Bruker filings + trade press |
+| **Aggregate ULVAC TAM** | **~20–25 USD bn** | **~6–8%** | Sum |
+
+**SAM (Serviceable Addressable Market).** ULVAC participates in roughly **40–50% of its TAM** — it does not compete in some sub-categories (leading-edge logic PVD where AMAT Endura dominates; linear-source OLED organic-evaporation where Canon Tokki dominates; some specialty pump categories). SAM is therefore ~**USD 9–12bn**.
+
+**SOM (Serviceable Obtainable Market) / current share.** Group revenue of ~USD 1.7bn (¥260bn FY26E at ¥150/USD) implies **~14–19% share of SAM**, weighted-average. The figure varies dramatically by line — >50% in MHM sputter, ~10–15% in dry pumps, mid-single-digit in pure semi-targets — so the weighted-average obscures real strength in the defensible niches and real weakness in the open-market lines.
+
+**Penetration strategy.** The Value-Up Plan's growth thesis is **NOT primarily TAM-expansion** (the served markets grow at 6–8%, not 15%); it is **margin-expansion** through cost-discipline (modular-design equipment, design-lead-time reduction, fixed-cost rationalisation post FPD-target JV close, workforce optimisation reaching ~40% of plan). The penetration play is selectively layered: (a) **gain share in MHM / descum** by extending the "de facto standard" position to next-generation customer ramps (additional Chinese mature-node fab phases, additional TSMC OSAT packaging lines); (b) **win Western rare-earth-magnet capex** by being the non-Chinese equipment alternative; (c) **monetise the captive sputter-target installed base** through OLED IGZO and high-purity copper targets bundled with the equipment co-sell.
+
+**Growth drivers — 2026-30 window.** The three structural drivers most aligned with ULVAC's portfolio are: (i) **AI-server packaging capex** (advanced packaging + HBM + GPU server build-out — drives ashing, sputter, leak-detector demand from 2026 through 2030); (ii) **Chinese mature-node fab build-out** (the 28nm / 14nm / 7nm semi-mature-node localisation that bypasses US export controls, drives MHM sputter and components demand); (iii) **Western rare-earth-magnet onshoring** (the ¥35-45bn/yr Industrial Equipment run-rate); (iv) **IT-OLED retrofit and G8.6 expansion** at BOE / CSOT / Visionox / Tianma. The first three are 3-5 year tailwinds; the fourth is a 2-3 year window. *Analyst view:* the four-driver combination supports the company's ¥300bn revenue target by FY26-FY27 although the OPM target of 16% looks aggressive given the FY26 actual is ~7.3% (¥19bn / ¥260bn) — the gap is what the Value-Up Plan margin discipline is meant to close by FY27-FY28, and management explicitly said in Q3 FY26 that "accelerated profit improvement from FY ending June 2028 onward" is the new framing ([Q3 FY26 Q&A, item 9](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)).
+
+---
+
+## 9. Risk Assessment
+
+### Company-Specific Risks
+
+**1. Margin-recovery execution risk.** The Value-Up Plan targets 16% OPM by FY26.6 but the FY26 actual is tracking ~7.3% (¥19bn OP / ¥260bn sales). Even excluding the ¥5.8bn one-time charges, the underlying OPM is ~9.5% — well below target. Management's response is to push the "accelerated profit improvement" framing to **FY28 onward** ([Q3 FY26 Q&A, item 9](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)) — a tacit acknowledgement that the original FY26 target was not achievable. Likelihood: **high**; severity: **medium** (the cost-out is real but the timing slips). Mitigants: modular-design equipment savings already delivering ~¥1bn variable-cost reduction; FPD-target JV closes a structurally low-margin business.
+
+**2. Customer end-market concentration — China + FPD.** China customer-location revenue is 34% of the group; FPD-related customers (BOE, CSOT, Tianma, Visionox, Samsung Display, LG Display, AUO) absorb 30%+ across Display/Energy equipment, the FPD slice of Materials, and the FPD slice of Components. No single customer hits 10% ([FY25 Financial Results, Major customer note, p. 23](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf)), but the combination of China-geographic + FPD-customer concentration is the largest structural exposure. The recent G8.6 OLED retrofit cycle has buffered this but any future Chinese FPD capex cut would directly compress 30%+ of ULVAC's revenue. Severity: **high**; likelihood: **medium** (Chinese capex cycles are intrinsically lumpy).
+
+**3. FPD-target JV execution risk (KFMI / Fengke transaction).** The 2026-05-12 board resolution transfers 100% of ULVAC Materials (Suzhou) into a Beijing JV majority-owned by Fengke (PE fund), with KFMI and ULVAC as minority partners. Execution risk includes regulatory approval delays, governance disputes between PE majority owner and operating partners, integration risk between ULVAC and KFMI technologies, and reputational risk if the deconsolidation is poorly perceived. Booking the ¥7.8bn one-time gain in FY26 also raises the optical bar for FY27 organic profit growth ([Q3 FY26 Financial Results, Important Subsequent Events, pp. 12–14](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf)). Likelihood: **medium**; severity: **medium**.
+
+**4. Equipment-cycle volatility — order book "feast or famine".** Q3 FY26 9M orders of ¥236bn are +44% YoY; FY25 orders of ¥226bn were –13% YoY; the swing magnitude is structural to the equipment business. Backlog of ¥144bn (equipment segment, 9M FY26) gives 9–12 months of revenue visibility, but customer-driven push-outs (one was disclosed in Q3 FY26 — ¥1.4bn semi project deferred from Q4 to FY27 "due to customer-side factors" per [Q3 FY26 Q&A item 4](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)) are recurring. Severity: **medium**; likelihood: **high** (this is structural, not avoidable).
+
+**5. Product / technology obsolescence — leading-edge absence.** ULVAC does not participate in High-NA EUV / GAA / Backside Power Delivery capex flows that drive the largest AI-logic capex dollars. The MHM franchise is mature-node-anchored; if leading-edge demand cannibalises mature-node share in the long run (which is the implicit Intel 18A / Samsung 2nm bet), ULVAC's MHM TAM compresses. Mitigants: management is investing in modular-design platforms to extend addressable applications; rare-earth and packaging tailwinds are the diversification hedge. Severity: **medium** (slow-moving); likelihood: **medium-low** (mature-node demand is sticky for 10+ years).
+
+### Industry / Market Risks
+
+**6. WFE / FPD capex-cycle macro.** The entire ULVAC franchise rides the global semiconductor + FPD capex cycle. The 2026-30 Nomura outlook is bullish (TSMC capex rising to ~USD 70bn at ~50% intensity, structural HBM/packaging growth) but a global AI-capex pause — which Nomura itself flags as the single mother-risk to its bullish thesis — would compress ULVAC's order book by 20–40% in a downcycle year ([reports/sector/半导体材料.md, "key risks"](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md)). Severity: **high**; likelihood: **medium**.
+
+**7. Competitive intensity — Chinese local-supplier rise.** KFMI, Beijing Naura, AMEC, Konfoong, and other Chinese vacuum-equipment and target-material suppliers are gaining share in the China market — exactly where ULVAC has 34% revenue exposure. The KFMI/Fengke JV is partly a defensive response to this. Severity: **medium-high**; likelihood: **high** (this is the secular Chinese-localisation trend that affects every non-Chinese supplier into China).
+
+**8. US / Japan export controls escalation.** US BIS / Japan METI controls on advanced-node fab equipment exports to China have been progressively tightening since 2022. ULVAC's mid-range-node positioning is *less* directly exposed than AMAT / LRCX / TEL / KLA / ASML, but any escalation to mature-node or to vacuum-component categories would directly hit the 34% China revenue base. Severity: **medium**; likelihood: **medium** (the regulatory trajectory is one-way tightening).
+
+**9. Rare-earth supply / China export restrictions.** Q3 FY26 management explicitly flagged "uncertainty is increasing regarding the smooth procurement of rare earths and other materials from China" ([Q3 FY26 Q&A, item 10](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf)). This is a double-edged risk: (a) ULVAC's own input supply for sputter-target manufacturing depends on Chinese rare-earth materials; (b) ULVAC's customers for rare-earth-magnet equipment depend on rare-earth supply, so a Chinese export restriction would simultaneously raise ULVAC's costs AND accelerate the Western onshoring demand for ULVAC's equipment. Net effect is **mixed** but the operating-cost side is the larger near-term risk.
+
+### Financial Risks
+
+**10. Valuation / multiple-compression risk.** Trading at TTM P/E ~38× and forward P/E ~24× on guided FY26 EPS, ULVAC sits at the upper end of Japan-semicap mid-caps. The 12-month price return of +97% reflects the AI-capex re-rating, but the underlying earnings deceleration (FY25 OP –10.9%, FY26 OP guide –28%) creates a P/E expansion that depends on FY27-28 recovery materialising. A 20–30% multiple compression to 16–18× forward would imply a ~¥7,000–7,700 share price (vs current ~¥9,587). Likelihood: **medium**; severity: **medium-high**. Mitigants: record FY26 order book, structural rare-earth tailwind, FPD-target JV one-time gain.
+
+**11. Foreign exchange (yen) exposure.** ULVAC reports in JPY but earns ~69% of revenue overseas (FY25). A 10% JPY strengthening vs USD (e.g. ¥150 → ¥135) compresses reported revenue by ~7% mechanically. Conversely, JPY weakness inflates reported numbers without underlying volume growth — Japanese investors should mentally discount some of the FY24–FY25 yen-weakness boost. Severity: **medium**; likelihood: **medium** (JPY direction is hard to forecast; current weakness has helped, future strengthening would hurt).
+
+### Macroeconomic Risks
+
+**12. AI-capex pause / spending discipline.** The entire bull case (HBM / packaging / AI logic) is contingent on hyperscaler + foundry capex continuing at current run-rates. A Microsoft / Meta / Amazon capex deceleration — for any reason (compute-efficiency breakthrough, regulatory action, recessionary cash-preservation) — would compress TSMC, Samsung, SK hynix capex within 2–3 quarters and ULVAC's order book within 4–6 quarters. Severity: **very high**; likelihood: **low-to-medium** (the AI infra cycle still has tailwinds but downside scenarios are non-trivial).
+
+**13. Geopolitical — China / Taiwan strait, Korean tensions.** A China-Taiwan kinetic event would simultaneously freeze ULVAC's TSMC / mainland-China revenue (~45% of group). A Korea-related supply-chain disruption (NK provocation, Korean labour action at Samsung/SK hynix) would hit the 13% Korea exposure. Severity: **high to extreme**; likelihood: **low**. Mitigants: geographic diversification (Japan + US + EU + SEA ~42% of revenue); no concentration on any single fab.
+
+---
+

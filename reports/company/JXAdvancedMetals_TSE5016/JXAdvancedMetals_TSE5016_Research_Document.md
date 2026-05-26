@@ -368,6 +368,155 @@ JX's penetration strategy is to use **geographic proximity to anchor customer wi
 
 ---
 
+## 9. Risk assessment (600–900 words)
+
+### Company-specific risks
+
+**1. Loss of competitive advantage in Focus segments.** The Yuho's first-listed risk is the loss of competitive edge in Functional Materials and ICT Materials. Although JX is the #1 sputter-target maker by share, the company explicitly warns that *"if the company cannot continue to meet customer requirements, the situation may continue to lead to share loss, margin compression, or — through the emergence of substitute products or shifts in customer needs — the loss of competitive advantage entirely"* ([JX Advanced Metals 有価証券報告書 第23期, p.34 (1. フォーカス事業における競争優位性の喪失リスク, verbatim)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)). Mitigants: 20-year customer specifications, qualification lock-in, the Mesa AZ + Hitachinaka capacity expansion. *Severity: high*.
+
+**2. Fab-tier customer concentration.** The IFRS 10% disclosure only names PPC (28.6% — intra-group), but the *true* fab-tier concentration is much higher — the top 5 customers (TSMC, Samsung, Intel, SK hynix, Micron) likely consume **70-80% of Functional Materials revenue combined** (*analyst estimate*; not disclosed). Loss of qualified-supplier status at any one of these in a leading-edge node would be material — but each individual relationship is multi-year master-supply-agreement-anchored and the qualification switching cost (12–18 months on the fab side) is a structural mitigant. *Severity: high* given the qualitative concentration; *moderated* by mitigants. **Per the company-research risk-taxonomy threshold (top-5 > 50% = material), this is a Material risk**.
+
+**3. Mid-to-long-term business-target shortfall.** The May 2024 mid-term plan (publicly disclosed at IPO) was built on assumptions about semiconductor-market growth, FX, interest rates, and copper price. The Yuho explicitly cites *"slowdown in advanced-materials market growth or rapid yen appreciation could cause forex-denominated transaction profits to fall short, and the foundation of the medium-term plan could be disrupted"* ([JX Advanced Metals 有価証券報告書 第23期, p.34 (2. 中長期事業目標の未達リスク)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)). Mitigant: the FY25 117% achievement against operating-profit target ([Yuho p.81](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)) demonstrates execution capability so far. *Severity: medium*.
+
+**4. M&A integration risk.** JX has been a serial acquirer (TANIOBIS 2018, Toho Titanium 2018, eCycle 2022, Tatsuta Electric Wire 2024, Mibra mine 2023, JX Circular Solutions JV 2024) and the Yuho warns about the risk of inadequate pre-acquisition due diligence or post-acquisition under-performance ([JX Advanced Metals 有価証券報告書 第23期, p.35 (4. M&Aや事業提携に関するリスク)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)). The Tatsuta integration is the largest live integration project. *Severity: medium*.
+
+**5. Key-person / execution risk under post-IPO governance.** CEO Hayashi took over April 2023 and managed the IPO through to listing; the management team is heavily ENEOS-legacy and tested only in a parent-company-protected environment. Mitigant: the 5-of-11 independent-outside-director board is more independent than the pre-IPO structure ([JX Advanced Metals 有価証券報告書 第23期, p.37](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)). *Severity: low-medium*.
+
+**6. ENEOS overhang (residual 42.4% stake).** The parent retains nearly half the equity, with the residual stake's lock-up already expired since June 2025. Future secondary offerings — to fund ENEOS' own decarbonisation capex — could pressure the share price even if business fundamentals are intact ([JX Advanced Metals 有価証券報告書 第23期, p.16 + 37 (その他の関係会社・大株主)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf); [ENEOS Holdings — Notice Concerning Sale of Shares of Subsidiary, 2025-02-14](https://www.eneos.co.jp/english/newsrelease/business/20250214_03.html)). *Severity: medium-high* as a recurring overhang.
+
+### Industry / market risks
+
+**7. China sputter-target entry — the dominant overhang.** Konfoong (Ningbo Konfoong Materials, SSE: 300666) is the most credible Chinese sputter-target challenger and is gaining at SMIC / CXMT / YMTC. The Nomura sector report identifies "China indigenous semiconductor materials capacity coming on-line 2026-30" as a top-3 sector risk ([reports/sector/半导体材料.md — Nomura 2026-05-21 risk section, p.105+](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)). Mitigant: JX's leading-edge share at TSMC / Samsung / Intel is mostly insulated from the Chinese entry — the cross-strait political backdrop pushes Taiwan and Korea away from Chinese-supplied materials. *Severity: medium-high*.
+
+**8. InP supply tightness reversibility.** The current ~50% wafer-yield + Chinese indium export-control regime is precisely the supply-shock that supports JX's InP pricing power. If Beijing relaxes indium export controls (post-political-thaw scenario), or if Fraunhofer's 150 mm InP-on-GaAs commercialises faster than expected, InP price-elasticity normalises and JX's InP pricing power evaporates. *Severity: medium*.
+
+**9. AI-investment moderation.** Every Focus-segment thesis rests on the same assumption: hyperscale-AI capex stays elevated through 2027–30. Any cyclical pause (Microsoft / Meta / Google guiding capex down, Nvidia GPU demand decelerating) would compress the multiple and revenue growth simultaneously — the "double-hit" risk for a high-multiple growth story. *Severity: high*.
+
+**10. High-NA EUV deployment slipping.** TSMC's 1.6 nm roadmap depends on High-NA EUV availability — if ASML / TSMC reschedules High-NA HVM out beyond 2029-30, the BPD / 1.6nm sputter-target uplift slips on the same calendar and JX's FY28 1.6× capacity-expansion plan becomes mis-timed. ([reports/sector/半导体材料.md — Nomura 2026-05-21, p.4-6 (technology timeline)](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)). *Severity: medium*.
+
+### Financial risks
+
+**11. Valuation / multiple-compression risk.** This is the highest-impact financial risk. The 35× TTM P/E is ~2-3× the Japanese non-ferrous peer median (Tosoh 12×, Mitsui Kinzoku 11×, Sumitomo Metal Mining 18×) and roughly 1.5× the closest US comparator Materion (~22×). Triggers for a sharp de-rate would include: AI-server capex deceleration (cyclical), one of the China-entry / InP-reversibility risks above materialising (structural), a sustained miss vs FY28 capacity-expansion guidance (execution), a Sumitomo Metal Mining / Mitsui Kinzoku peer-set re-rate that pulls JX with it (sector-rotation), or any unexpected ENEOS-driven secondary offering (overhang). A de-rate to 22× (Materion-comparable) implies roughly 37% downside from current levels at constant earnings. *Severity: high* — flagged in Section 1 valuation snapshot as required by the report-structure spec.
+
+**12. Copper-price exposure / metal-price + FX volatility.** The Yuho explicitly cites copper price + USD/JPY as the major exogenous P&L drivers ([JX Advanced Metals 有価証券報告書 第23期, p.35 (2. 金属価格・為替等の変動)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)). The LME copper moved from 405 c/lb to a 492 c/lb FY25 high to a 439 c/lb close, with the JPY USD rate averaging ¥153 (vs ¥145 prior year). Forward-hedging mitigates short-term swings, but multi-year structural moves cannot be fully hedged. *Severity: medium*.
+
+### Macroeconomic risks
+
+**13. Geopolitical risk — copper supply chain.** JX's residual Caserones / Los Pelambres / Escondida stakes are concentrated in Chile, exposing the equity-method portfolio to Chilean royalty / windfall-tax / mining-code politics. The Mibra tantalum mine in Brazil and TANIOBIS Goslar in Germany add Brazilian + EU mineral-policy exposure. The Yuho's risk discussion explicitly lists *"resource nationalism — royalty taxation, value-added-policy mandates, conflict-minerals issues, and demand-country recycled-feedstock enclosure movements"* as factors ([JX Advanced Metals 有価証券報告書 第23期, p.35 (5. 地政学リスク, verbatim translated)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)). *Severity: medium*.
+
+**14. Environmental remediation legacy.** The Yuho discloses ongoing US Superfund / CERCLA potential responsible-party (PRP) obligations at Gould Electronics (US subsidiary, inherited from the 1989 transaction), plus dormant-mine wastewater management obligations across Japan. Provisioned for, but the Yuho explicitly warns the actual liability could exceed provisions ([JX Advanced Metals 有価証券報告書 第23期, p.37 (14. 環境問題に関するリスク)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)). *Severity: low-medium*.
+
+---
+
+## 10. References
+
+### Primary filings (JX Advanced Metals)
+
+- [JX Advanced Metals 有価証券報告書 第23期 (Annual Securities Report, fiscal year ending March 2025), filed 2025-06-25, 180 pages](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)
+- [JX Advanced Metals 有価証券届出書 (Securities Registration Statement, IPO prospectus), filed 2025-02-14, 289 pages](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100V8VP.pdf)
+- [JX Advanced Metals 新規上場申請のための有価証券報告書 (TSE Listing Application Annual Securities Report I-bu), 2025-02-11, 275 pages](https://www.jpx.co.jp/listing/stocks/new/um3qrc000000oodc-att/03JXAdvancedMetals-1s.pdf)
+- [JX Advanced Metals — Trade Name Change press release, 2024-05-08 (changed English name from JX Nippon Mining & Metals to JX Advanced Metals)](https://www.jx-nmm.com/english/newsrelease/upload_files/2024/04/01/6018119_01_20240401_01.pdf)
+- [JX Advanced Metals — Notice Concerning Completion of Tender Offer for Tatsuta Electric Wire, 2024-09-03](https://www.jx-nmm.com/english/newsrelease/upload_files/2024/09/03/6019045_01_20240903.pdf)
+- [JX Advanced Metals — Executives page (Murayama / Hayashi / Sugawara / Ohuchi / outside directors)](https://www.jx-nmm.com/english/ir/executive.html)
+- [JX Advanced Metals — Organization and Executive Officers (officer roster, accessed 2026-05)](https://www.jx-nmm.com/english/company/chart.html)
+- [JX Advanced Metals — InP Substrates product page](https://www.jx-nmm.com/english/products/compound_semiconductors_and_crystal_materials/inp/)
+- [JX Advanced Metals — CdZnTe Substrates product page](https://www.jx-nmm.com/english/products/compound_semiconductors_and_crystal_materials/czt/)
+
+### Parent and related-party filings
+
+- [ENEOS Holdings — Notice Concerning Sale of Shares of Subsidiary (JX Advanced Metals IPO sale), 2025-02-14](https://www.eneos.co.jp/english/newsrelease/business/20250214_03.html)
+- [Mitsubishi Materials — Execution of MOU Concerning Integration of Recycling Businesses with JX Advanced Metals, 2025-11-11](https://www.mmc.co.jp/corporate/en/news/2025/news20251111.html)
+- [Lundin Mining — Completes Acquisition of Additional 19% Interest in Caserones, 2024-07-29](https://lundinmining.com/news/lundin-mining-completes-acquisition-of-an-additional-19-int-123-tjbjxn1g/)
+- [H.C. Starck — Tantalum / Niobium Business Sold to JX Nippon (now TANIOBIS), 2018-07](https://www.hcstarcksolutions.com/about-us/news/h-c-starck-sells-tantalum-niobium-business-to-jx-nippon/)
+
+### IPO + market data
+
+- [Renaissance Capital — Going for gold: JX Advanced Metals raises $2.6 bn in Japan's largest IPO since 2018, 2025-03-19](https://www.renaissancecapital.com/IPO-Center/News/109883/Going-for-gold-JX-Advanced-Metals-raises-$2.6-billion-in-Japan%E2%80%99s-largest-IP)
+- [MarketScreener — Eneos plans $3 bn IPO of metals subsidiary — Update, 2025-03-10](https://www.marketscreener.com/quote/stock/ENEOS-HOLDINGS-INC-6500951/news/Eneos-Plans-3-Billion-IPO-of-Metals-Subsidiary-Update-49283362/)
+- [Investing.com — Eneos Holdings to list metals subsidiary, aims to raise $3 bn, 2025-03](https://www.investing.com/news/stock-market-news/eneos-holdings-to-list-metals-subsidiary-aims-to-raise-3-billion-93CH-3869772)
+- [Stockanalysis.com — TYO:5016 company profile, accessed 2026-05](https://stockanalysis.com/quote/tyo/5016/company/)
+- [TradingView — TSE:5016 chart, accessed 2026-05](https://www.tradingview.com/symbols/TSE-5016/)
+- [Yahoo Finance — 5016.T quote, accessed 2026-05](https://finance.yahoo.com/quote/5016.T/)
+- [Kabutan — 5016 stock page](https://kabutan.jp/stock/?code=5016)
+
+### News and industry reports
+
+- [Semiconductor Today — JX to boost InP substrate production capacity by 20%, 2025-07-24](https://www.semiconductor-today.com/news_items/2025/jul/jx-240725.shtml)
+- [Semiconductor Today — JX making further investment to increase InP substrate production, 2025-10-09](https://www.semiconductor-today.com/news_items/2025/oct/jx-091025.shtml)
+- [TrendForce — JX Advanced Metals plans ¥5bn investment in Rapidus + critical materials supply, 2026-01-21](https://www.trendforce.com/news/2026/01/21/news-jx-advanced-metals-reportedly-plans-%C2%A55b-investment-in-rapidus-along-with-critical-materials-supply/)
+- [AInvest — JX Advanced Metals' 3.3 Bn Yen InP Substrate Expansion, 2025-10](https://www.ainvest.com/news/jx-advanced-metals-3-3-billion-yen-inp-substrate-expansion-strategic-catalyst-semiconductor-supply-chain-dominance-2510/)
+- [Semiconductorinsight — InP Substrate Industry Surges: JX, AXT, Fraunhofer, 2025](https://semiconductorinsight.com/blog/inp-substrate-industry-surges-jx-advanced-metals-expands-capacity-axt-restores-exports-fraunhofer-unveils-150-mm-inp-on-gaas-wafers/)
+- [Mining Weekly — JX Nippon takes stake in Mibra tantalum and lithium mine, 2023-03](https://www.miningweekly.com/article/jx-nippon-takes-stake-in-mibras-tantalum-and-lithium-output-2023-03-21)
+
+### Competitor and peer pages
+
+- [Tosoh — Thin-Film Deposition Materials catalogue](https://www.tosoh.com/our-products/advanced-materials/thin-film-deposition-materials)
+- [Mitsui Kinzoku — Insulectro distributor page (sputtering target materials)](https://insulectro.com/mitsui-kinzoku/)
+- [Materion — Semiconductor Markets / Semiconductor Materials business](https://www.materion.com/en/markets/semiconductor)
+- [Plansee — Composite Materials product page](https://www.plansee.com/en/products/composite-materials.html)
+- [Sumitomo Electric — Compound Semiconductor Wafer product line](https://www.sumitomoelectric.com/products/compound_semiconductor/)
+- [Tatsuta Electric Wire — Electronic Materials Business](https://www.tatsuta.com/en/products/electronic.html)
+
+### Industry / TAM data sources
+
+- [International Copper Study Group — World Copper Factbook 2024](https://icsg.org/copper-factbook/)
+- [TechInsights — Silicon Demand Forecast database](https://www.techinsights.com/services/silicon-demand-forecast-database)
+- [Prismark Partners — Printed Circuit Reports product page](https://www.prismarkpartners.com/products/)
+- [UNITAR — Global E-waste Monitor 2024](https://ewastemonitor.info/)
+
+### Internal cross-references
+
+- [reports/sector/半导体材料.md — Nomura "Greater China Semi 2026-30F" anchor report, 2026-05-21 (lead analysts Donnie Teng / Frank Fan / Manabu Akizuki / Shigeki Okazaki)](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)
+
+---
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL check** — Most cited URLs were resolved during research (Yuho disclosure2dl.edinet-fsa.go.jp PDF downloaded and parsed locally; jx-nmm.com IR site fetched live). Stockanalysis.com / Yahoo Finance / TradingView / Kabutan price pages confirmed accessible May 2026; Semiconductor Today, TrendForce, Renaissance Capital, MarketScreener news pages confirmed accessible during research. Two anti-bot 403s (MarketScreener biography page for Hayashi; AInvest cookie-walled in some configurations) — replaced with Yuho-direct biographical data where possible.
+
+**EDINET filenames** — The 第23期 有価証券報告書 (Annual Securities Report, FY ending March 2025, filed 2025-06-25) is at the EDINET document ID `S100W549` (URL form `https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf`). The IPO 有価証券届出書 (Securities Registration Statement, filed 2025-02-14) is at EDINET document ID `S100V8VP` (URL form `https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100V8VP.pdf`). Both were directly downloaded and parsed in `/tmp/jx_yuho.pdf` and `/tmp/jx_ipo_prospectus.pdf` respectively for the spot-checks below.
+
+**Yuho spot-checks** (claim → location):
+
+- FY25 IFRS revenue ¥714.9 bn / op profit ¥112.5 bn / net to parent ¥68.3 bn ✓ ([Yuho p.2 主要な経営指標等の推移](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- 64% world share in semi sputter targets (ex-Al), ¥146.2 bn market, Fuji-Keizai 2023 source ✓ ([Yuho p.8-10 verbatim](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- 78% world share in RA Cu foil (FPC-only), ¥40.5 bn market, Fuji Chimera 2023 source ✓ ([Yuho p.11 verbatim](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- IPC bend-life: HA 530k cycles vs special ED 170k cycles ✓ ([Yuho p.11 注２ IPC-TM650 2.4.3E](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- Sputter target FY25 geography: TW 36% / KR 17% / US 11% / JP 11% / CN 12% / other 13% ✓ ([Yuho p.9](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- Intel EPIC Distinguished Supplier Award 4-years-running (2021-2024); TSMC Excellent Performance Award 2024 ✓ ([Yuho p.9 verbatim](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- FY25 segment revenue/profit (Functional Materials ¥147.4bn/¥26.7bn; ICT Materials ¥260.9bn/¥25.1bn; Basic Metals ¥304.1bn/¥74.5bn) ✓ ([Yuho p.105 注7](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- PPC 28.6% IFRS top customer disclosure ✓ ([Yuho p.106 注7(5)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- ENEOS 42.38% post-IPO stake ✓ ([Yuho p.16 その他の関係会社 / p.37 リスク 15.](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- 10,413 consolidated employees end-FY25; segment breakdown ✓ ([Yuho p.17](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- FY25 capex ¥63.8 bn / segment split ✓ ([Yuho p.44](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- FY28 1.6× sputter-target capacity expansion plan ✓ ([Yuho p.21](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- LME Cu price FY25 405→492→439, avg 425 c/lb ✓ ([Yuho p.38](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- FY25 op-profit target ¥95.4 bn vs actual ¥112.5 bn = 117% ✓ ([Yuho p.81](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- CEO Hayashi Yoichi DOB 1965-02-05 / career start at Nippon Mining 1988-04 / CEO appointment 2023-04-01 / 19,000 share holding ✓ ([Yuho p.64](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- Caserones divestment to Lundin Mining: 51% July 2023 + 19% July 2024 → 30% retained ✓ ([Yuho p.6 沿革 + p.16; Lundin Mining press release 2024-07-29](https://lundinmining.com/news/lundin-mining-completes-acquisition-of-an-additional-19-int-123-tjbjxn1g/))
+- Tatsuta Electric Wire TOB August 2024 / wholly-owned November 2024 ✓ ([Yuho p.6 沿革](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- IPO 2025-03-19 / pricing ¥820 / underwriters Daiwa + JPMorgan + Morgan Stanley + Mizuho ✓ ([Renaissance Capital 2025-03-19](https://www.renaissancecapital.com/IPO-Center/News/109883/Going-for-gold-JX-Advanced-Metals-raises-$2.6-billion-in-Japan%E2%80%99s-largest-IP))
+
+**Analyst-view sentences** (intentionally not cited to a primary source):
+
+- Section 1: Implied multiple decomposition (Functional Materials at ~45-55× / Basic Metals at ~7-8×) — labelled *Analyst view:* per skill rule.
+- Section 4.3: Closest-competitor identification for sputter-target categories — cites competitor websites / product pages, not JX's own Yuho.
+- Section 5: "70-80% combined top-5 fab concentration" is explicitly an analyst estimate; not Yuho-disclosed.
+- Section 7.1: Chinese-entry threat severity, Konfoong product trajectory — analyst position, references Nomura sector report.
+- Section 8 TAM table: each line with size estimate not directly disclosed in Yuho is labelled "*Analyst estimate*"; Sources column shows verbatim.
+
+**Residual unknowns / not yet verified:**
+
+- Exact Functional Materials customer concentration (no per-fab disclosure under IFRS for Functional/ICT segments — only intra-group PPC at 28.6%).
+- Sumitomo Electric InP merchant-market share (no public disclosure of merchant vs captive split).
+- Konfoong leading-edge share at Korean / Taiwanese fabs (no public data; analyst position from sector commentary only).
+- Mibra mine tantalum production volumes (acquired stake size disclosed; production volumes not in Yuho).
+- True peer P/E points for Konfoong (300666 CH), AXT (AXTI US), Sumitomo Electric (5802 JT) — would round out the peer chart but excluded since Konfoong is not in the JX peer-set for the 64%-share franchise.
+
+</details>
+
+
 
 
 
