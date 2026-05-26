@@ -99,3 +99,131 @@ timeline
 
 关于传承问题，郑有两个子女——儿子 정석호 (Jeong Seok-ho) 与女儿 정문주 (Jeong Mun-joo)——但家族继承过程因儿子 정석호在 2020 年代初去世（韩国财经媒体以"솔브레인 오너 2세 사망"为标题报道）而变得复杂，使 Jeong Mun-joo 及下一代成为 Holdings 持股最可能的长期继承人 ([THE ELEC — "Soulbrain 第二代继承"](https://www.thelec.kr/news/articleView.html?idxno=6616))。郑的孙辈已经出现在韩国"最年轻大股东"榜单上，持有数十亿韩元规模的 Soulbrain 集团股权 ([The Asia Business Daily，2024-09-17](https://www.asiae.co.kr/en/article/2024091711322781831))。在经营控制层面，家族在上市 357780 主体安排非家族成员的职业 CEO——分立初为 Kang Byeong-chang，2021 至 2025 年为 Roh Hwan-chul (三星 SDI 老将)，现为 Park Young-soo——这一安排与韩国财阀普遍的"家族当所有者 / 职业经理人当经营者"剧本一致 ([thebell.co.kr — Soulbrain CEO 分析，2021-03-29](https://m.thebell.co.kr/m/newsview.asp?svccode=00&newskey=202103292236163680106472))。郑志完个人在 Soulbrain Holdings (036830) 中的持股——2016 年 Q3 最后披露为约 31%，经回购后今日很可能略高于此水平——经由 Holdings 对 357780 的所有权，最终转化为对经营性化学品业务的多数经济控制权 ([Businesspost — Who Is? Jeong Ji-wan](https://m.businesspost.co.kr/BP?command=mobile_view&num=41846))。
 
+## 4. 产品与服务
+
+### 4.1 产品矩阵——锚定 Soulbrain 半导体材料产品组合
+
+Soulbrain Co. 按照晶圆厂耗材的规范化工艺栈来组织其半导体产品组合——**沉积前驱体 → 图形化辅料 → 刻蚀 → 清洗 → CMP → 电镀**——并将显示功能化学品与电池电解液作为单独披露的业务段。最权威的公开产品矩阵发布在公司英文半导体材料页面上 ([Soulbrain 半导体材料产品组合](https://www.soulbrain.co.kr/en/m21.php))，下面以 markdown 表格再现；带有等级标识的完整版本则在 DART 上的韩文 사업보고서分业务产品矩阵中 ([DART 检索门户](https://dart.fss.or.kr/dsab007/main.do?textCrpNm=%EC%86%94%EB%B8%8C%EB%A0%88%EC%9D%B8))。
+
+| 工艺环节 | 产品族 | Soulbrain 产品名 / 等级 | 客户用途 |
+|---|---|---|---|
+| **CVD / ALD 沉积** | 前驱体 | TEOS、TEB、TEPO、TMOP、POCl₃、TiCl₄、**HfO₂ / ZrO₂ 前驱体** | 高 k 栅极堆叠，逻辑与存储用 SiO₂ / SiON 膜沉积 |
+| **刻蚀与清洗** | 湿法刻蚀液 (etchants) | **HSN / H₃PO₄ 多晶硅刻蚀液**、Poly/PAN 刻蚀液、S-2、HNPA-1317、FMA-2P、HCl | SiN 剥离、多晶硅刻蚀、金属刻蚀、CMP 后残留清洗 |
+| **刻蚀与清洗** | 剥离液 (strippers) | JQS-8920、TSO-500H、TSO-800H | 图形转移后的光刻胶剥离 |
+| **刻蚀与清洗** | HF / BOE | **高纯氢氟酸 (HF)**、缓冲氧化物刻蚀液 (LAL 系列) | 原生氧化层去除、栅极氧化层刻蚀、BEOL 介质修整 |
+| **CMP** | 抛光液 (slurry) | **高平面度抛光液 CST-S22 (ILD / IMD)**、STI/SOD 抛光液 (铈基)、W 抛光液 (两步法)、**Cu / Cu 阻挡层抛光液**、用于 DRAM / NAND 的 **Wet Nano Ceria** (纳米铈基)、**TSV 封装抛光液**、氮化物 / 多晶硅抛光液 | 每一互连层的介质 / 金属线平面化；**HBM TSV 铜过量去除** |
+| **电镀** | 铜电镀 | **TCE-C 电镀剂** + 添加剂 | 镶嵌铜互连、TSV 铜填充 |
+| **工艺气体 (经 Hubvision 子公司)** | 无机酸 | 高纯 H₂SO₄、HNO₃、**电子级 H₃PO₄** | SC-1 / SPM 清洗、批量酸槽 |
+| **显示功能化学品** | LCD / OLED | 彩色滤光片刻蚀液、**cell scribing**、薄玻璃加工、封装化学品 | LG Display、三星 Display 面板制造 |
+| **二次电池 (Soulbrain MI)** | LIB 电解液 | **高纯电解液溶剂** (EC、DEC、DMC) + 锂盐配方 + **极耳铅带** | 三星 SDI、SK On (SK Innovation)、LG Energy Solution 方形与软包电芯 |
+
+*资料来源：[Soulbrain "Semiconductor Materials" 页面](https://www.soulbrain.co.kr/en/m21.php)；[Soulbrain "CMP" 详情页](https://www.soulbrain.co.kr/en/m33.php)；[Greater Kokomo 电池电解液公告](https://greaterkokomo.com/soulbrain-mi-investing-in-kokomo-creating-75-jobs/)；与 [Soulbrain Holdings "Semiconductor Materials" 页面](https://www.soulbrainholdings.co.kr/en/m21.php) 的历史产品分类相对照。*
+
+### 4.2 综合——各品类如何在客户工艺流中相互配合
+
+一片现代存储或逻辑晶圆在单次器件循环中要 **几十次** 经过 Soulbrain 的产品组合。以 SK 海力士利川 (Icheon) 的 DRAM 单元为示例：起始晶圆先用 POCl₃ (Soulbrain CVD 前驱体) 进行掺杂，然后沉积 TEOS 基 SiO₂ (Soulbrain 前驱体) → JSR / TOK / Dongjin 涂覆光刻胶 → 曝光 → 显影 → 用 Soulbrain HF / BOE 进行 **湿法刻蚀** → 用 Soulbrain TSO-800H 剥离光刻胶 → 用 Soulbrain CST-S22 (氧化物抛光液) 进行 **CMP 平面化** → 用 Soulbrain HNPA-1317 清洗 → 下一层 TEOS 沉积开始。每个互连层都要重复这个循环；先进 1z 纳米 DRAM 有 50+ 层；256 层 3D NAND 有数百层。对于 **HBM**，同一片晶圆还要经过 TSV 铜填充 (Soulbrain TCE-C 电镀) 与 **使用 Soulbrain Cu 阻挡层抛光液的体相铜 CMP**——这正是公司 2023 年在三星 + SK 海力士排他性进入的具体节点，至今仍是其利润最高、能见度最高的产品线 ([Businesskorea，2023-10-30](https://www.businesskorea.co.kr/news/articleView.html?idxno=203197))。综合洞察：Soulbrain 对客户的价值并不来自任何单一产品，而是来自 **跨整条湿化学栈的逐等级共同开发与验证 (co-developed qualification)**——70%+ 的收入集中于三星 + SK 海力士也就成为这一商业模式的自然数学结果。
+
+```mermaid
+graph LR
+    A[起始晶圆] -->|POCl3 / TEOS<br/>Soulbrain CVD 前驱体| B[沉积]
+    B -->|光刻胶 + 辅料<br/>Soulbrain 剥离液 / 显影液| C[图形化]
+    C -->|HF / BOE 湿法刻蚀<br/>Soulbrain HF, LAL| D[刻蚀 / 清洗]
+    D -->|TCE-C 电镀<br/>Soulbrain 铜电镀| E[金属填充]
+    E -->|Cu / W / 氧化物抛光液<br/>Soulbrain CST-S22, Wet Nano Ceria| F[CMP 平面化]
+    F -->|HBM TSV 步骤<br/>Soulbrain Cu 阻挡层抛光液独占| G[HBM 堆叠]
+    F --> B
+```
+
+*同一款 Soulbrain 产品在同一片晶圆上跨越 10–50 次——某一等级的资质极少会外溢给竞争对手。资料来源：[Soulbrain "Semiconductor Materials" 页面](https://www.soulbrain.co.kr/en/m21.php) 与 [Soulbrain "CMP" 详情页](https://www.soulbrain.co.kr/en/m33.php) 的工艺流推断。*
+
+### 4.3 刻蚀液——HF、BOE 与韩国氟链特许经营
+
+这就是 2019 年把 Soulbrain 推上地缘政治版图的特许经营业务。产品页列出三个紧密相关的子族：
+
+- **高纯氢氟酸 (HF, hydrofluoric acid) / 缓冲氧化物刻蚀 (BOE, buffered oxide etch) LAL 系列**：用于原生氧化层去除与栅极氧化层刻蚀
+- **热磷酸 (H₃PO₄ / HSN) 多晶硅刻蚀液**：用于 SiN 剥离与多晶硅去除
+- **HCl、HNPA、FMA 混合液**：用于残留物清洗与金属剥离
+
+2019 年事件的同期媒体报道值得逐字引用，以便还原历史现场：
+
+> "SoulBrain 供应刻蚀气体 (氢氟酸)。三星电子已经投资了 SoulBrain 等半导体材料公司并与其开展技术联合开发。SK 海力士正在测试的氢氟酸由 SoulBrain 提供，这家韩国公司是通过从中国进口原材料来生产该化学品的。SoulBrain 力争在 9 月底前完工，运行测试以判断其能否量产高纯氢氟酸。" ([Businesskorea，2019-08 / 韩企减少进口](https://www.businesskorea.co.kr/news/articleView.html?idxno=34523)，[Businesskorea，2020-04 — 韩国企业量产 HPHF](https://www.businesskorea.co.kr/news/articleView.html?idxno=39795))
+
+**中文释义 / 通俗解读：** 半导体湿法刻蚀使用两种物理上不同的化学体系——**氢氟酸 (HF, 氟化氢)** 用于溶解 SiO₂ (二氧化硅, silicon dioxide)，**热磷酸 (H₃PO₄, 磷酸)** 用于溶解 SiN (氮化硅, silicon nitride，用于侧墙与硬掩模)。对于先进存储与逻辑节点，纯度门槛是"12 个 9" (99.9999999999%)——哪怕亚 ppt 量级的金属污染都会造成晶圆缺陷，废掉数万美元在制品。日本 Stella Chemifa 2019 年之前几乎垄断 12-nines HF；Soulbrain (与 SK Materials) 通过 (a) 从中国萤石带进口无水 HF (AHF)、(b) 韩国本土提纯 + 离子交换技术、(c) 与三星 / SK 海力士的联合验证项目相结合，在 18 个月内打破了这一垄断。2024 年伊朗-霍尔木兹海峡封锁担忧引发的韩国 HF 价格冲击 ([Tom's Hardware，2025-06](https://www.tomshardware.com/tech-industry/memory-makers-brace-for-hydrogen-fluoride-pricing-shock-as-hormuz-blockade-impacts-supply-chain-key-etching-and-cleaning-material-faces-sharp-cost-increase-amid-trade-disruption)) 提醒人们：即便供应链已经"本地化"，仍然受制于上游原料 (萤石、无水 HF、硫磺)。
+
+*分析师观点：* Soulbrain 与 **SK Materials (SK siltron 子公司)**、**Foosung (KOSDAQ:093370——历史上韩国最大 HF 厂家，但更多偏重工业 / 制冷剂级而非电子级)**、**Dongjin Semichem (KOSDAQ:005290——多元化但高纯 HF 能力提升中)** 共同分享韩国 HF / BOE 市场。防御性护城河在于验证深度而非单位成本：晶圆厂不能在没有 6–12 个月再验证周期的情况下更换 HF 等级，因此每个 socket 的实际价值远高于其大宗品价格。韩国 HF / BOE TAM 按 2025–26 行业估算约为每年 5–8 亿美元；Soulbrain 国内份额可能在 35–45% 之间，其余由 SK Materials (~25%)、Foosung (~15%) 与日中长尾进口商瓜分。
+
+### 4.4 CMP 抛光液——AI 存储成长杠杆
+
+CMP 抛光液是 FY26–FY28 投资逻辑中 Soulbrain 战略意义最重要的产品线。公司 CMP 产品页列出九个不同子族 ([Soulbrain "CMP" 详情页](https://www.soulbrain.co.kr/en/m33.php))：
+
+1. **高平面度抛光液 CST-S22**——ILD (层间介质) / IMD (金属间介质)——*二氧化硅 (silica) 磨料*
+2. **STI / SOD 抛光液**——浅沟槽隔离 (shallow-trench-isolation) 氧化物，**氧化铈 (ceria) 磨料** (高 SiO₂:SiN 选择比)
+3. **Wet Nano Ceria 纳米铈基抛光液**——DRAM / NAND 氧化物平面化，先进节点级
+4. **W 抛光液 (两步 + 抛光)**——钨接触 / 通孔平面化
+5. **Cu 阻挡层抛光液 (碱性 + 酸性)**——铜互连平面化
+6. **Cu CMP 抛光液**——体相铜过量去除
+7. **TSV 抛光液**——硅通孔 (through-silicon-via) 平面化，用于先进封装
+8. **氮化物 / 多晶硅抛光液**——小众但只用于先进节点
+9. **抛光化学品**——用于下游晶圆边缘 / 斜面处理
+
+**HBM TSV 铜过量抛光液** 是单一最具能见度的产品。Businesskorea 在 2023 年 10 月的报道：
+
+> "Soulbrain 独家供应专为 HBM 设计的化学机械抛光 (CMP) 抛光液给三星电子与 SK 海力士。该公司的专用产品去除 TSV (硅通孔) 布线工艺中产生的多余铜层——该工艺涉及在 DRAM 芯片中钻 1,000 多个孔并用铜填充…在该公司进入市场之前，铜平面化抛光液领域由国际竞争者主导——美国的 Cabot Microelectronics (Entegris 子公司) 与日本的 Hitachi。" ([Businesskorea，2023-10-30](https://www.businesskorea.co.kr/news/articleView.html?idxno=203197))
+
+**中文释义 / 通俗解读：** CMP (**化学机械抛光, chemical-mechanical planarization**) 使用一种抛光液——纳米磨料颗粒 (氧化物 / 铜用二氧化硅、STI 用氧化铈) 在化学氧化剂 / pH 缓冲液中的胶体悬浮液——以物理 + 化学方式将晶圆表面抛光至亚纳米级平整度。磨料选择由被抛光材料决定：**二氧化硅 (SiO₂) 磨料** 是 ILD/IMD 与金属的主力；**氧化铈 (CeO₂) 磨料** 对 STI 必不可少，因为它对 SiO₂:SiN 的选择比独特地高 (~30:1 vs. 二氧化硅的 ~1:1)——二氧化硅根本无法像氧化铈那样在 SiN 硬掩模处自动停止。对于 HBM，在 **TSV (硅通孔, through-silicon via)** 钻孔与铜电镀填充之后，晶圆表面会留下数百微米的过量铜；需要专用 Cu 抛光液去除铜过量，同时不能损伤晶圆 (dishing) 也不能侵蚀下层阻挡层。Soulbrain 的 HBM Cu 抛光液正是这种产品，历史上由 Cabot Microelectronics (现 Entegris) 与 Hitachi Chemical (现 Resonac) 供应，直到 Soulbrain 在 2023 年实现 spec-in。
+
+不过，这种竞争独占在 **2024–25 年明显被稀释**：
+
+- **Fujimi (TSE:5384)**——日本 Fujimi Inc. 据报"在 HBM 用 CMP 铜抛光液销售给韩国三星电子与 SK 海力士方面，到 2024 年 9 月已经从 Soulbrain 手中夺回领先地位" ([Fujifilm Electronic Materials 领先，2024-09](https://www.webnewswire.com/2024/09/03/fujifilm-electronic-material-takes-lead-in-cmp-slurry-market-for-hbm-says-the-information-network/))。注意通讯社标题把 Fujifilm 与 Fujimi 混在一起——真正夺回领先的是 Fujimi。
+- **Dongjin Semichem (KOSDAQ:005290)**——2025 年突破进入 SK 海力士的 HBM CMP 抛光液供应，打破了原先 Soulbrain 独家的韩国本土地位 ([THE ELEC，2024 — SK 海力士 CMP 多源化](https://www.thelec.net/news/articleView.html?idxno=4751))。
+
+*分析师观点：* Soulbrain 的 HBM CMP "独占"现已变成 **强势在位者份额** 而非 100%——大致估计为三星 + SK 海力士合并 HBM Cu 抛光液采购量的 50–65%。前瞻关键问题是 **HBM4 / HBM4E 铈基抛光液**：随着 HBM 堆叠从 12-Hi 走向 16-Hi、TSV 数量超过每 cube 2,000 个，STI / SOD 铈基抛光液的每片晶圆消耗呈非线性增长，Soulbrain 的 Wet Nano Ceria 产品正在三星平泽 (P3 / P4) 与 SK 海力士 M16 同时进行验证。韩、日、美、中铈基抛光液之争——Soulbrain、KC Tech (KR)、Fujimi、Versum (Merck/MEMC)、Entegris、Resonac、安集微 (SSE:688019)、鼎龙股份 (SZSE:300054)、UBmaterials——正在塑造为 AI 存储周期最具决定意义的 CMP 战役 ([Soulbrain "CMP" 详情页](https://www.soulbrain.co.kr/en/m33.php)，[Yano Research，2024](https://www.yanoresearch.com/press/press.php/3921))。*中国供应链风险提醒：* 全球 >85% 的氧化铈加工集中在中国，因此任何铈基抛光液厂商——无论韩、日、美——都面临同样的上游原料脆弱性。
+
+### 4.5 工艺化学品 (process chemicals) 与高纯无机酸——Taylor TX 扩张
+
+Soulbrain 生产 12-nines 纯度的 **电子级磷酸 (H₃PO₄)**、硫酸 (H₂SO₄)、硝酸 (HNO₃) 与盐酸 (HCl)，用于 SiN 剥离、批量酸槽清洗，以及 SC-1 / SPM 清洗。这一产品族此前相对低调，直到 2024 年 7 月宣布 **Taylor 得州工厂**：
+
+> "Soulbrain 将在得州 Taylor 投资 1.75 亿美元建设新生产基地，加工电子级磷酸用作半导体制造的刻蚀剂。6 万平方英尺的一期厂房计划 2025 年 1 月动工、2029 年 1 月完工；可选的二期最多 4 亿美元，将延至 2033 年…技术副总裁 Jon Park 表示：'我们很高兴扩大在 Taylor 的业务。'" ([Evertiq，2024-07-30](https://evertiq.com/news/56124)，[Hoodline，2024-07](https://hoodline.com/2024/07/south-korean-company-soulbrain-to-launch-175m-plant-in-taylor-bolstering-local-tech-industry-and-job-market/))
+
+**中文释义 / 通俗解读：** 电子级磷酸是 **SiN 剥离 (氮化硅去除)** 的主导化学品——该步骤在图形转移后去除氮化硅硬掩模，在先进节点晶圆上重复几十次。该工艺在 150–165 °C 的深槽批量工艺中进行，单步消耗量很大 (每片晶圆每步 5–15 升)——比 HF 或 BOE 重得多——所以物流经济性主导决策。从韩国跨太平洋向得州运输大宗酸液在规模上不经济；**Taylor 工厂本质上是一个绑定三星 170–440 亿美元 Taylor 代工厂建设的物流加质量决策**，而不是新技术押注。同样的逻辑也解释了 Soulbrain MI 在 Kokomo 印第安纳州的电解液厂选址（紧邻 Stellantis-三星 SDI 的 25 亿美元电动车电池合资工厂）。韩、日、中材料厂家都在执行同样的"跟着客户的海外厂走"剧本——Hoya 跟 EUV 掩模坯 (三重 / 栃木)、Resonac 跟 CMP 抛光液 (台湾 / 新加坡)、Shin-Etsu 跟光刻胶 (新竹)。*分析师观点：* Taylor 建设是一笔低 IRR / 高战略价值的动作——磷酸利润率偏薄，资产很可能需要 5–7 年才能赚到资本成本——但它锁定了三星 Taylor 这一在代工厂寿命周期内的"俘虏客户 (captive customer)"，是本地化时代成为三星 Tier-1 供应商必须支付的入场费。
+
+### 4.6 CVD / ALD 前驱体
+
+前驱体产品集 (TEOS、TEB、TEPO、TMOP、POCl₃、TiCl₄、**HfO₂ / ZrO₂** 前驱体) 是 1990 年代 Yamanake 合资项目以来的老 Techno Semichem 业务。**HfO₂ (二氧化铪, hafnium dioxide)** 与 **ZrO₂ (二氧化锆, zirconium dioxide)** 前驱体是 45 纳米及以下逻辑与 DRAM 中替代 SiO₂ 作为栅极氧化层的高 k 介质化学品——Soulbrain 是少数获得三星认证的韩国厂家之一，与之并列的还有 DNF (KOSDAQ:092070)、Hansol Chemical (KOSPI:014680)、Mecaro (KOSDAQ:241770)，以及 Soulbrain 自身的关联公司 UP Chemical。*分析师观点：* 前驱体业务是稳定的中等利润贡献者 (HfO₂ / ZrO₂ 价值高但量小；TEOS 量大但已大宗化)；GAA / 背面供电过渡将到 2027 年把每片晶圆的 ALD 前驱体消耗量提升 1.5–2 倍 (每个器件更多 ALD 层)，因此该业务段应能在没有剧烈份额变动的前提下实现中高个位数增长。韩国前驱体竞争比 CMP 抛光液更分散——三星刻意为前驱体维持多源采购以确保供应安全。
+
+### 4.7 显示功能化学品
+
+显示化学品业务段 (彩色滤光片刻蚀液、cell scribing、薄玻璃加工、OLED 封装化学品) 约占营收 9–11%，是产品组合中增速最低的部分 ([Economy6 券商汇编，2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html))。Soulbrain 同时服务 LG Display 与三星 Display，但底层 TAM 正在收缩，因为 (a) 韩国 LCD 产能正向中国 (BOE、华星光电、HKC) 转移；(b) OLED 产能扩张集中在 LG Display 坡州与三星 Display 牙山，但节奏较慢；(c) 中国 OLED 厂商从本土化学品供应商采购。*分析师观点：* 这是一个"管理型衰退 (managed decline)"业务段——Soulbrain 不会退出，因为资产已折旧、现金毛利为正，但资本支出分配极少，业务段到 FY2028 可能萎缩至中个位数营收占比。
+
+### 4.8 二次电池材料——Soulbrain MI 的美国布局
+
+锂离子电池 (LIB) 电解液业务集中在 **Soulbrain MI**——Soulbrain 集团北美电池材料业务的美国子公司。Kokomo 印第安纳州工厂——2022 年 12 月宣布，投资 7,500 万美元，约 75 个就业岗位——生产 **高纯 LIB 电解液 (EC / DEC / DMC 溶剂混合 + 锂盐与添加剂配方)**，供货给隔壁的 **Stellantis–三星 SDI 合资电池厂**，后者本身就是一个 25 亿美元 / 1,400 名员工的电动车电池设施 ([Greater Kokomo，2022](https://greaterkokomo.com/soulbrain-mi-investing-in-kokomo-creating-75-jobs/)，[Indianapolis Business Journal，2022](https://www.ibj.com/articles/michigan-companys-75m-plant-in-kokomo-will-be-supplier-for-new-ev-battery-plant)，[Area Development，2022-12-15](https://www.areadevelopment.com/newsitems/12-15-2022/soulbrain-mi-kokomo-indiana.shtml))。
+
+**中文释义 / 通俗解读：** 锂电池电解液 (LIB electrolyte) 是位于正极 (NCM / NCA / LFP) 与负极 (石墨 / 硅) 之间的液态离子传输介质——化学上是 LiPF₆ (六氟磷酸锂, lithium hexafluorophosphate) 溶于环状 + 链状碳酸酯溶剂 (EC、DEC、DMC) 加上一长串功能性添加剂 (FEC、VC、用于快充的 LiFSI、用于高压稳定性的 BBE) 的溶液。电解液 ASP 约 4–7 美元 / 公斤，典型电动车电池每组使用 80–150 公斤电解液；电芯厂商 (三星 SDI、LG ES、SK On、宁德时代) 从一个紧凑的亚洲化学品厂家寡头 (**Soulbrain、Enchem、Chunbo、三菱化学、MGL Chemical / 미국**) 加上中国巨头 (天赐高新、新宙邦) 采购。美国产能扩张主要由 IRA 推动的正极活性物质 / 电芯建设周期主导，并要求电芯内容物来源国必须是与美国签有自由贸易协定的国家；韩国符合条件，Soulbrain MI 是少数在美国具有产能的韩国电解液厂之一。*分析师观点：* 该业务段在 3 年视角下增长会比半导体慢 (电动车销售减速；Stellantis-三星 SDI 在 2024–25 年的爬坡有延迟)，但在战略上有价值，可以分散半导体业务对三星 + SK 海力士 70%+ 的集中度。
+
+### 4.9 旗舰产品与最近 12 个月的新动向
+
+驱动 FY25–FY27 投资逻辑的 1–3 条旗舰产品线是：**(1) HBM Cu / Cu 阻挡层 CMP 抛光液**（利润率最高的产品 socket 和主要叙事驱动力，即便已经被 Fujimi / Dongjin 分掉一部分）；**(2) 高纯 HF / BOE**（稳定的防御性特许经营，韩国战略资产级别）；**(3) 用于 HBM4 / HBM4E 验证的铈基 STI / Wet Nano Ceria 抛光液**（公司正在争夺的下一项重大胜利）。最近 12 个月的产品动向主要集中在客户端的产能公告而非 Soulbrain 自身的新品发布——三星 **2026 年 HBM 晶圆产能 +50%** 的计划 ([Trendforce，2025-12-30](https://www.trendforce.com/news/2025/12/30/news-samsung-reportedly-plans-50-hbm-capacity-surge-in-2026-spotlight-on-hbm4/))、向 NVIDIA 交付的 **HBM4 验证样品 (1Q26)** ([Trendforce，2025-12-16](https://www.trendforce.com/news/2025/12/16/news-sk-hynix-samsung-reportedly-deliver-paid-hbm4-samples-to-nvidia-ahead-of-1q26-contract-finalization/))、以及 SK 海力士宣布 **全球首家完成 HBM4 开发** ([SK 海力士 newsroom — HBM4 开发完成](https://news.skhynix.com/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/))——这些宏观数据点都会经由订单簿传导到 Soulbrain。
+
+```mermaid
+graph TD
+    A[Soulbrain Co. KOSDAQ:357780] --> B[半导体材料 ~75-76%]
+    A --> C[显示材料 ~9-11%]
+    A --> D[二次电池 ~13-16% 经 Soulbrain MI]
+    B --> B1[刻蚀液: HF / BOE / H3PO4]
+    B --> B2[CMP 抛光液: 二氧化硅 + 氧化铈]
+    B --> B3[CVD/ALD 前驱体: HfO2 ZrO2 TEOS]
+    B --> B4[剥离液 / 显影液 / 辅料]
+    B --> B5[铜电镀: TCE-C]
+    B2 --> B2a[HBM Cu/Cu 阻挡层 旗舰]
+    B2 --> B2b[Wet Nano Ceria HBM4 之争]
+    B2 --> B2c[CST-S22 ILD/IMD 二氧化硅]
+    C --> C1[LCD 彩色滤光片刻蚀液]
+    C --> C2[OLED 封装化学品]
+    C --> C3[Cell scribing 薄玻璃]
+    D --> D1[高纯 LIB 电解液 EC/DEC/DMC]
+    D --> D2[极耳铅带]
+```
+
+*资料来源：[Soulbrain "Semiconductor Materials" 页面](https://www.soulbrain.co.kr/en/m21.php)；[Soulbrain Holdings Semi Materials 页面](https://www.soulbrainholdings.co.kr/en/m21.php)；[Greater Kokomo MI 公告，2022](https://greaterkokomo.com/soulbrain-mi-investing-in-kokomo-creating-75-jobs/)。业务段占比：[Economy6，2025-12](https://www.economy6.com/2025/12/soulbrain-stock.html)。*
+
