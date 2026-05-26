@@ -101,3 +101,111 @@ Seki's signature accomplishment is the **recovery from the 2008-2011 silicon-waf
 
 ---
 
+## 4. Products & Services (≈1,500 words)
+
+> Section 4 is the analytical backbone of this report. Fujimi's product matrix is the lens through which Sections 5 (customers — who buys what), 6 (industry — which wafer steps demand which slurry), 7 (competition — who else offers an equivalent grade), 8 (TAM — how much of each market Fujimi can serve), and 9 (risks — which products are most exposed to commoditisation) all become legible.
+
+### 4.1 The Fujimi product matrix (anchored to the Integrated Report)
+
+The cleanest published product taxonomy comes from the **"Our Fields of Activity" page (Integrated Report 2024 p.13-14)** plus the customer-facing **CMP slurry lineup page (fujimiinc.co.jp/english/service/cmp/lineup.html)**. The matrix maps each Fujimi family to a customer-process step:
+
+| Family | Application step | Sub-products / SKUs | End-market | Disclosed share |
+|---|---|---|---|---|
+| **Silicon wafer — Lapping** | Bulk silicon removal after slicing | `GC`, `FO`, `PWA`, alumina/SiC-based lapping abrasives | Silicon-wafer makers (Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron) | **92 % global** |
+| **Silicon wafer — Polishing** | Mirror finish (stock removal + final polish) | `GLANZOX` colloidal silica, low-defect chemistry | Same wafer makers | **84 % global** (final polish), **59 %** (stock removal) |
+| **Silicon wafer — Cutting (slurry)** | Slicing the ingot with wire saws | SiC-based wire-saw slurries | Same wafer makers; SiC wafer makers | Significant; small absolute revenue line (¥175 mn FY25) |
+| **CMP — Oxide slurry** | Inter-layer dielectric (ILD) planarisation | `PLANERLITE 4000` series | Logic + memory IDMs and foundries | Co-leader in oxide CMP; **56 % global share in FEOL slurry** overall |
+| **CMP — Tungsten slurry** | W-plug / contact planarisation | `PLANERLITE 5000` series | Same customers | #2-#4 globally |
+| **CMP — Polysilicon (FEOL) slurry** | Poly-Si gate / shallow-trench isolation | `PLANERLITE 6000` series + `PLANERLITE 6500` post-CMP rinse | Logic foundries (TSMC, Samsung-Foundry, Intel, GF) | **>50 % global** in front-end poly-Si slurry |
+| **CMP — Copper slurry** | Cu interconnect (BEOL) bulk + final | `PLANERLITE 7000` series | Logic IDMs / foundries | #4-#5; commoditised |
+| **CMP — Cu/Ta barrier slurry** | Barrier-layer planarisation | `PLANERLITE 8000` series | Same | #3-#4 |
+| **HDD — Disk-substrate polishing** | Polishing aluminium / glass disk blanks | `DISKLITE` family | HDD media makers (WD, Showa Denko HD, etc.) | Substantial — single-digit billions of yen |
+| **Specialty — Thermal-spray powders** | Plasma-spray coatings for SPE chambers, aero parts, steel rollers | Cermets, ceramic composites, spherical/plate/rod ceramic powders | Lam, AMAT, TEL (SPE chambers); aero, steel | Niche premium player |
+| **General industry — Abrasives** | Hard-disk-substrate adjacent + automotive paint, optics, plastics | `COMPOL`, `POLIPLA`, `SURPREX`, `MIRAFLEX` | Auto OEMs, eyeglass, sapphire-substrate | Diversified |
+| **Advanced Technology & Specialty Materials** | Ceramic powders for thermal management, 3D-printer ultra-hard cermet powders, novel filler materials | Pre-commercial / early-stage | Power electronics, additive manufacturing | Pre-revenue / new business |
+
+Sources for matrix: [Fujimi CMP slurry lineup page](https://www.fujimiinc.co.jp/english/service/cmp/lineup.html); [Integrated Report 2024 p.13-14 "Our Fields of Activity"](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf); [Integrated Report 2024 p.10 "Fujimi's Unique Qualities"](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf); [FY2025 決算短信 p.2 application-level revenue split](https://www.ircms.jp/irexport/fujimiinc/file/a80046653802235.pdf).
+
+```mermaid
+graph TD
+    F[Fujimi Incorporated] --> A[Silicon wafer<br/>32% of FY26F revenue]
+    F --> B[CMP slurry<br/>48% of FY26F revenue]
+    F --> C[Hard disk substrate<br/>4%]
+    F --> D[Specialty / Thermal-spray<br/>+ General Industry<br/>15%]
+    A --> A1[Lapping abrasives<br/>'GC', 'FO', 'PWA']
+    A --> A2[Polishing slurry<br/>'GLANZOX' colloidal silica]
+    A --> A3[Cutting slurry<br/>SiC wire-saw]
+    B --> B1[Oxide<br/>PLANERLITE 4000]
+    B --> B2[Tungsten<br/>PLANERLITE 5000]
+    B --> B3[Polysilicon<br/>PLANERLITE 6000]
+    B --> B4[Post-CMP rinse<br/>PLANERLITE 6500]
+    B --> B5[Copper<br/>PLANERLITE 7000]
+    B --> B6[Cu/Ta barrier<br/>PLANERLITE 8000]
+    D --> D1[Cermet/ceramic thermal-spray<br/>SURPREX]
+    D --> D2[Auto polish, optics<br/>COMPOL, POLIPLA, MIRAFLEX]
+    D --> D3[Ceramic powders<br/>heat-dissipation, 3D printing]
+```
+
+### 4.2 Synthesis — how the categories interact in the customer workflow
+
+Fujimi's products knit together a **single silicon-wafer-to-device manufacturing loop**, with the company touching at least three distinct customer types (ingot-to-wafer makers, fab device-makers, HDD-media makers). For a silicon wafer turning into a logic chip: an ingot from Shin-Etsu / SUMCO / GlobalWafers is first **sliced with wire-saw slurry**, then **lapped with `GC` / `FO`** for parallelism, then **polished with `GLANZOX` colloidal silica** for atomic-scale flatness — every wafer in the world that meets logic-grade flatness has been touched by a Fujimi-or-equivalent abrasive at this stage. The wafer arrives at TSMC / Samsung / Intel where it goes through ~10-15 CMP steps in the FEOL (poly-Si, STI, contact, gate) and another ~10 in the BEOL (oxide ILD, W-plug, Cu damascene, barrier removal). At each step a `PLANERLITE` slurry physically planarises the wafer surface — silica or ceria abrasive grains rub against the wafer in a chemical bath whose pH, oxidiser concentration and surfactant load are tuned to selectively remove the target material (oxide, poly-Si, W, Cu) without scratching neighbours. **Post-CMP rinse (`PLANERLITE 6500`) then strips residual particles** before the wafer moves to the next deposition or lithography step. The HDD disk substrate uses a separate `DISKLITE` polishing slurry. The non-semi `COMPOL` / `SURPREX` / thermal-spray families re-use Fujimi's powder-classification, granulation and chemistry IP for industrial polishing and high-performance coating.
+
+### 4.3 Silicon-wafer abrasives — Lapping, Polishing, Cutting
+
+> "In this business, Fujimi researches, develops, manufactures and sells abrasives that are used in the high-precision polishing process. In this process, silicon wafers are flattened and mirror polished, one step along the path to becoming semiconductor substrates. To meet increasingly sophisticated customer requirements, we offer high-quality products and services providing a total solution for every step of the process from cutting to polish finishing." [Integrated Report 2024 "Silicon Business" p.22](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf)
+
+**中文释义 / Plain-language gloss:** A semiconductor silicon wafer starts life as a 300-mm-diameter cylindrical **ingot / 单晶硅锭** grown by the Czochralski (CZ, 直拉法) process at Shin-Etsu, SUMCO or GlobalWafers. It is sliced into wafers with a wire saw whose blade is fed with **slicing slurry / 切割液** (containing SiC grains). Each wafer's surfaces are then **lapped / 研磨** with `GC` (green silicon carbide, 绿色碳化硅) or `FO` (fused alumina, 熔融氧化铝) loose abrasive grit to remove the saw-cut damage and bring the two faces parallel to within sub-µm. Finally the wafer is **polished / 抛光** to a mirror finish — first stock-removal polishing, then **final polish with `GLANZOX` colloidal silica / 胶体二氧化硅** for atomic-scale flatness (root-mean-square roughness < 0.1 nm). Fujimi's value-add is grain-size distribution control (extremely narrow PSD with no oversize particles that would scratch), chemistry (oxidiser, dispersant, pH stabiliser), and process know-how from on-site fab placements. The strategic inflection: every transition from 200 mm to 300 mm to (eventually) 450 mm wafer raised the difficulty bar for slurry suppliers, and the 2025-onward push into **SiC wafers for EV power devices** is opening a *separate* slurry market — Fujimi has set up SiC slurry production in its US (Tualatin) and Malaysia (Kulim) plants for this purpose [Integrated Report 2024 "Silicon Business" p.22](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf) and [FY2025 Financial Overview p.30 "FUJIMI CORPORATION US"](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf).
+
+*Analyst view:* Fujimi's own disclosed share — **92 % global in silicon-wafer lapping abrasives, 84 % in final polishing slurry, 59 % in stock-removal slurry** ([Integrated Report 2024 p.10](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf)) — makes this segment effectively a global near-monopoly in lapping and a clear #1 in polish-finishing. The moat is dual: technology (40+ years of recipe tuning per customer-grade) plus switching cost (a wafer maker who re-qualifies a slurry supplier risks yield collapse — Shin-Etsu's wafer customers do not accept "we changed slurry suppliers" as a routine note). Closest credible competitor is JSR Corporation in colloidal-silica polishing slurry, plus internal alternatives at the larger wafer makers; no Chinese player has yet qualified at production scale for 300-mm prime-grade wafers as of mid-2026.
+
+![Fujimi disclosed share by sub-category](../../charts/fujimi_disclosed_share.png)
+*Source: [Fujimi Integrated Report 2024 "Fujimi's Unique Qualities" p.10](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf), Fujimi internal estimates as of March 2024.*
+
+### 4.4 CMP slurry — PLANERLITE 4000 / 5000 / 6000 / 6500 / 7000 / 8000 series
+
+> "In this business, Fujimi researches, develops, manufactures and sells abrasives that are used in the manufacturing process of semiconductor devices. With the increasing performance, density, and integration of semiconductor devices, the types of films to be polished and the processes in which CMP is used are increasing. In addition, technologies for three-dimensional mounting of semiconductor devices have emerged to improve system performance in recent years, and the use of CMP is being considered in this field as well. To respond quickly and accurately to these changing market needs, we have established manufacturing and development bases in Japan, the U.S., and Taiwan, which are located near the manufacturing and development bases of our customers. … Going forward, we will seek to become the world's top FEOL slurry manufacturer." [Integrated Report 2024 "CMP Business" p.22](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf)
+
+The Fujimi CMP slurry product lineup, verbatim from the company's customer-facing site:
+
+> - **PLANERLITE 4000 Series** — "Slurries for oxide films"
+> - **PLANERLITE 5000 Series** — "Slurries for W" (tungsten)
+> - **PLANERLITE 6000 Series** — "CMP slurries for Poly-Si" (polysilicon)
+> - **PLANERLITE 6500 Series** — "Rinse slurries for particle removal on Poly-Si film"
+> - **PLANERLITE 7000 Series** — "Slurries for Cu" (copper)
+> - **PLANERLITE 8000 Series** — "Polishing slurries for Cu/Ta and other barrier films"
+>
+> Source: [Fujimi CMP slurry lineup page](https://www.fujimiinc.co.jp/english/service/cmp/lineup.html). The product family is described as "high-purity, high dispersion, scratch-free" with development support for FinFET, TSV, HKMG and emerging materials (III-V compounds, cobalt, SiC, SiGe).
+
+**中文释义 / Plain-language gloss:** **化学机械抛光 (CMP, chemical-mechanical planarization)** is the only practical way to keep the surface of a 300-mm wafer flat to within angstroms as 10-20 layers of metal interconnects and inter-layer dielectrics stack up. The process clamps a rotating wafer face-down against a rotating polyurethane **pad / 抛光垫** and floods the contact zone with **slurry / 抛光液**: colloidal abrasive grains in an aqueous chemistry that selectively reacts with the target film. Two physical mechanisms run in parallel: mechanical wear from the grains plus chemical etching of the surface; the *selectivity* — i.e. how much faster the slurry removes the target film than the underlying stop layer — is the key recipe parameter and the chief intellectual property. PLANERLITE-4000 uses ceria abrasive optimized for STI (shallow-trench isolation) oxide with very high selectivity to silicon nitride underneath. PLANERLITE-5000 uses fumed silica + hydrogen peroxide chemistry to attack tungsten plug surfaces aggressively while protecting oxide field. PLANERLITE-6000 is colloidal silica + amine-based chemistry tuned for poly-Si planarisation in the gate-stack flow. PLANERLITE-6500 isn't a slurry strictly — it's a **post-CMP cleaning chemistry** that strips residual particles, slurry by-products and metal ions before the next process step. PLANERLITE-7000 series tackles Cu interconnect using benzotriazole-based corrosion inhibitors plus very low-defect colloidal silica or alumina. PLANERLITE-8000 is for the Cu/Ta barrier-removal step after Cu polish — different selectivity requirements because the barrier metal (Ta, TaN, Ti, TiN) does not respond to the same chemistry. Strategic inflection: **GAA (Gate-All-Around) logic at N2 / 2nm**, **backside power delivery (BPD)** which requires multiple additional wafer-bonding + thinning steps and therefore extra CMP, and **HBM4 / DRAM-on-logic** wafer-to-wafer bonding — Nomura's May 2026 Greater-China Semi note projects **20-30 % more CMP steps per advanced wafer** as a result [Nomura "Greater China Semi" 2026-05-21 p.6-9 (analyst-anchor reference)](https://www.nomuraconnects.com/research/).
+
+*Analyst view:* Fujimi's stated ambition is to be the **#1 in FEOL slurry globally** (Integrated Report 2024 p.22) — i.e. the front-end-of-line where poly-Si, STI and contact slurries dominate. Fujimi already discloses **56 % global share in FEOL slurry, 13 % share across the total CMP slurry market** (Integrated Report 2024 p.10). The total CMP slurry market is fragmented between the leader **Entegris / CMC Materials** (~28 % share post the 2022 CMC acquisition), **Resonac / Showa Denko Materials** (~18 %), **Versum Materials (Merck KGaA)** (~12 %), **Fujimi** (~11 %), and rising Chinese challengers **Anji Microelectronics (688019.SH, ~8 %)** and **Dinglong Holdings (300054.SZ, ~6 %)**, plus **KC Tech (Korea)** and **Soulbrain** in localised Korean memory accounts (composite of multiple industry sources cited under [Nomura "Greater China Semi" 2026-05-21 Fig 41](https://www.nomuraconnects.com/research/) and supplier disclosures). Specifically for **copper slurry (PLANERLITE 7000)** Fujimi is the #4-#5 player and has limited differentiation versus Cabot Microelectronics' Cu products and Versum's PASA series. Fujimi's strongest defensible position is in **ceria-based STI / oxide slurry and poly-Si slurry where the customer is willing to pay for ultra-low-defect, low-particle-add chemistry** — exactly the FEOL-leadership position management is staking the company on. Capacity expansion at Kagamiyama (¥22 bn production-related domestic capex through FY2026) is explicitly to add capacity for "products for silicon wafers and CMP products" [FY2025 Financial Overview p.31](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf).
+
+![Fujimi CMP slurry global share](../../charts/fujimi_cmp_share.png)
+*Sources: [Fujimi Integrated Report 2024 p.10](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf) for Fujimi's own 13 % total-CMP share figure; analyst composite (Nomura "Greater China Semi" 2026-05-21 Fig 41) and industry estimates for peer shares.*
+
+### 4.5 Hard-disk substrate polishing — DISKLITE family
+
+> "In this business, Fujimi manufactures, researches, develops and sells abrasives that are used in the manufacturing process of disk substrates for hard disk drives, which are storage media for digital data. We have established a manufacturing base in Malaysia, an area where we have a large concentration of customers' production bases, and we have built relationships of trust with our customers by allocating technical staff and providing technical support in the region. Although hard disk drives have been increasingly replaced with solid state drives (SSDs) recently, demand for hard disks for data centers is expected to continue to grow due to anticipated increase in data capacity that is transmitted and received via cloud services and 5G." [Integrated Report 2024 "Hard Disk Substrate Business" p.22](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf)
+
+**中文释义 / Plain-language gloss:** A 3.5" HDD platter is either an aluminium alloy or a glass disc that must be polished to mirror flatness (Ra < 0.5 nm) so the read-write head can fly ~1 nm above the surface without crashing. Fujimi's `DISKLITE` family supplies the polishing slurries used at the disk substrate stage by media makers (Western Digital, Showa Denko HD). The single most important demand variable: **data-centre HDD capacity-per-platter** is still rising (current top SKU = 32 TB HAMR drives from Seagate, 30 TB CMR from WD-Toshiba), and the industry has been adding manufacturing capacity for the first time in a decade as AI training datasets and cloud-storage tiers push nearline-HDD shipments back up. Fujimi's Hard-Disk segment revenue jumped **+84 % YoY in FY2025 to ¥2.5 bn** (¥1.38 bn FY2024 → ¥2.55 bn FY2025) on this dynamic [FY2025 Financial Overview p.24](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf). Strategic inflection: AI data-centre rebuild driving nearline HDD demand for the first time since 2020. Risk: SSDs (especially QLC NAND from YMTC, Micron and Samsung) compete for the same use-case and the long-run secular trend for HDDs remains down.
+
+*Analyst view:* HDD is structurally a declining unit market but a temporarily strong dollar market — Western Digital's 4QFY24 (CY24) HDD shipments hit ~30 EB, double the 2023 trough, and Fujimi explicitly cites "data-centre HDD demand" as the FY2025 driver. The segment will not return to FY2017's ¥3.6 bn revenue level absent another structural change; FY2026 management guidance is **¥2.55 bn (flat YoY)** acknowledging the level may have peaked [FY2025 Financial Overview p.24](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf).
+
+### 4.6 Specialty Materials, Thermal-Spray, Advanced Technology, and the Nanko M&A
+
+The **Thermal-Spray Materials Business**, launched 2000, sells cermet and ceramic powders for **plasma-spray coatings** applied to (a) plasma-etch and CVD chamber liners at Lam, AMAT, TEL (the SPE — semiconductor production equipment — sub-market), (b) aerospace turbine blades, (c) steel-mill caster rollers. This segment is the entry point for Fujimi into non-abrasive powder applications — same powder-handling, granulation, and sintering core competence is repurposed [Integrated Report 2024 "Thermal Spray Materials Business" p.23](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf).
+
+The **Polishing Solutions Business** group sells `COMPOL`, `POLIPLA`, `SURPREX`, `MIRAFLEX` industrial polishing compounds for automotive paint, eyeglass lenses, sapphire substrates and other general-industry surfaces. The October 2024 acquisition of **Nanko Abrasives Industry Co., Ltd. (75 % stake, consolidated as a subsidiary)** added a Tokyo-based general-industrial abrasives book to this group — explicit rationale was "to improve the profitability and competitiveness of the abrasive materials business" [Message from the President, Integrated Report 2024 p.4](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf), and the deal closed for an undisclosed amount funded by the ¥1.085 bn "purchase of subsidiary shares" line in the FY2025 cash-flow statement [FY2025 決算短信 p.11](https://www.ircms.jp/irexport/fujimiinc/file/a80046653802235.pdf).
+
+The **Advanced Technology & Specialty Materials Division** is the diversification frontier — ceramic powders with high heat dissipation (power-electronics packaging), spherical/plate/rod ceramic shape control, and ultra-hard cermet powders for metal-3D-printer feedstock [Integrated Report 2024 "Advanced Technology & Specialty Materials" p.23](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf). FY2025 revenue contribution is small but the **2nd R&D Center under construction at Gifu Techno Plaza (¥4.7 bn capex budgeted FY2026)** is explicitly dedicated to non-semiconductor research [FY2025 Financial Overview p.31](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf).
+
+### 4.7 The recurring-revenue character and unit-mix-share verdict
+
+Unlike a semiconductor capital-equipment firm whose revenue depends on customer capex cycles, Fujimi's consumable-slurry sales scale with **wafer-start volume**, which is far less cyclical than equipment-shipment volume. The 11-year financial summary shows revenue compressed by no more than 12 % even in the worst FY2024 trough; equipment vendors like Lam and AMAT compressed 30-40 % in the same window [Integrated Report 2024 p.49-50](https://www.ircms.jp/irexport/fujimiinc/file/a79408181419746.pdf). Within Fujimi, the **FY2026 revenue mix is roughly CMP 48 % / Silicon 32 % / Specialty 15 % / HDD 4 %**; flagship franchises are PLANERLITE oxide+poly-Si (CMP) and GLANZOX (silicon-wafer polishing). Roadmap launches in the past 12 months centre on SiC slurry capacity (FY2026 in US + Malaysia) and on Nanko-integrated general-industrial abrasive lines.
+
+![Fujimi application mix FY17-FY26F](../../charts/fujimi_application_mix.png)
+*Source: [Fujimi FY2025 Financial Overview presentation p.26](https://www.ircms.jp/irexport/fujimiinc/file/a80176453635234.pdf).*
+
+---
+
+
