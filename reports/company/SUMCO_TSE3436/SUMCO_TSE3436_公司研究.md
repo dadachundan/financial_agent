@@ -108,3 +108,124 @@ timeline
 **龍田二郎 (Jiro Ryuta) — 现任社长 (President) 兼 CEO / 代表董事 (约 200–250 字)。** 根据 SUMCO 管理团队最新披露, **龍田二郎**身兼董事会主席及社长 (President) 兼 CEO, 并具备**代表董事 (Representative Director)** 身份 ([SUMCO 管理团队页面, sumcosi.com](https://www.sumcosi.com/english/corporate/officer.html))。龍田出任 CEO 反映了桥本时代的代际交接, 代表的是延续而非战略断裂: 已公布的轨迹——完成米泽/伊万里二期资本开支、退出宫崎 200mm、把 (下调后) METI 支持的投资重新配置于 AI 级先进硅片设备升级, 并在 2025–26 年周期底部坚守 LTA 出货承诺——正是桥本所设的剧本。管理层的运营深度可见于 2025 财年 Q3 与 2026 财年 Q1 的业绩说明会, 其对 HBM 市场份额、5nm 以下逻辑硅片定价、200mm 市场正常化时点的评论非常细致 ([SUMCO 2025 财年 Q3 业绩说明会, Alpha Spread](https://www.alphaspread.com/security/tse/3436/investor-relations/earnings-call/q3-2025)、[SUMCO 2026 财年 Q1 纪要, Investing.com](https://www.investing.com/news/transcripts/earnings-call-transcript-sumco-misses-q1-2026-expectations-stock-dips-93CH-4698631))。执行副社长 (Executive Vice President) 久保染慎一 (Shinichi Kubozoe) 与广田成也 (Naruya Hirota) 同样身为代表董事, 共同组成最高运营委员会 ([SUMCO 管理团队](https://www.sumcosi.com/english/corporate/officer.html))。龍田现任职位以外的生平资料在 SUMCO 英文 IR 中未有详细披露——跟踪该公司的分析师通常通过 EDINET 日文版的有価証券報告書 获取高管完整背景 ([SUMCO 有価証券報告書 — IRBANK](https://irbank.net/E02103/edinet))。SUMCO 高管的薪酬结构遵循日本公司治理常规——以固定现金加多年期限制性股票为主, 持股规模较小; 因此, 利益对齐机制以任期与声誉为主, 而非通过股权财富积累。
 
 ---
+
+## 4. 产品与服务
+
+### 4.1 SUMCO 产品矩阵——逐字摘自公司披露
+
+SUMCO 是**单一产品公司**: 集团全部营业收入来自半导体行业用硅片的制造与销售, 按硅片表面工艺与目标终端用途, 划分为**六大产品系列** ([SUMCO 产品矩阵 — sumcosi.com](https://www.sumcosi.com/english/products/lineup.html)、[SUMCO 公司简介 — 业务描述](https://www.sumcosi.com/english/corporate/profile.html))。硅片本身是从用**直拉法 (CZ, Czochralski method)** 拉制的单晶硅锭 (旋转的高纯度硅熔体, 用单晶种棒缓慢上提, 形成长度最长可达 2 米的单晶锭) 或——某些专用直径下——**浮区法 (FZ, floating-zone method)** 切割而成的圆片。硅锭经切片、抛光、磨削后形成硅片; 视客户应用不同, 可再经退火、磊晶沉积、连接隔离或氧化键合等加工。下表逐字呈现 SUMCO 产品矩阵披露中的六大产品系列。
+
+**SUMCO 产品系列矩阵 (摘录自 SUMCO 产品矩阵, 原文照录):**
+
+| 产品系列 | SUMCO 原文描述 | 可用直径 |
+|---|---|---|
+| **Polished Wafer (PW, 抛光片)** | "A monocrystalline ingot is sliced to thicknesses of around 1mm and the surfaces are polished to a mirror finish." | 100mm, 125mm, 150mm, 200mm, 300mm |
+| **Annealed Wafer (AW, 退火片)** | "A polished wafer undergoes high-temperature annealing in an atmosphere of hydrogen or argon, removing oxygen near the wafer surface." | 150mm, 200mm, 300mm |
+| **Epitaxial Wafer (EW, 磊晶片)** | "The surface layer of the polished wafer is formed from monocrystalline silicon using vapor phase growth, or epitaxy." | 100mm, 125mm, 150mm, 200mm, 300mm |
+| **Junction Isolated Wafer (JIW, 连接晶片)** | 在硅片表面先形成集成电路所需的埋层, 再进行磊晶层生长。 | 125mm, 150mm, 200mm |
+| **Silicon-On-Insulator (SOI, 绝缘体上硅) Wafer** | "An oxide layer with high electric insulation is sandwiched between two polished wafers, which are then bonded together." | 150mm, 200mm |
+| **Reclaimed Polished Wafer (RPW, 回收片)** | "Used wafers can be taken back and recycled for reuse." | (按客户规格) |
+
+*来源: [SUMCO 产品矩阵 — sumcosi.com](https://www.sumcosi.com/english/products/lineup.html); 原文照录。*
+
+该矩阵是讨论 SUMCO 一切下游问题的脊梁——每一日元营业收入、每一笔客户关系、每一项产能决策, 都可映射到这六大产品系列之一。关键点是: **300mm 列与抛光片、退火片、磊晶片三行的交叉点**贡献了合并营业收入的绝大多数, 也是 SUMCO 利润率最高的产品组合——300mm 是所有先进逻辑制程节点 (7nm 以下到当前 2nm)、自 DDR3 以来的所有 DRAM 世代、每一颗 HBM 堆栈, 以及约 96 层以上 NAND 所使用的衬底。**200mm 列 (PW、AW、EW、JIW)** 则是传统成熟制程业务, 自 2023 年起一直在中国新建产能压力下承压, 也是 SUMCO 现阶段营业亏损的成因 ([Intel Market Research — Silicon Wafer Market Outlook 2025-2032](https://www.intelmarketresearch.com/silicon-wafer-market-85)、[SemiVision via X — 2025 财年 Q3 评论](https://x.com/semivision_tw/status/1993466357208563725))。**150mm 及以下列 (PW、EW、JIW、SOI)** 是小批量特种业务 (功率、MEMS、传感器、RF), 服务分立器件厂, 单片营业收入结构性偏低, 但定价更稳定。
+
+### 4.2 综合视角——产品类别在客户工厂中如何相互衔接
+
+先进逻辑或存储工厂并非笼统购买"硅片"。它会根据各芯片产品线, 精确指定每片硅片所需的表面工艺、氧浓度剖面 (oxygen profile)、磊晶层厚度与电阻率, 并按多年期 LTA 配合季度交付计划向 SUMCO (或竞争对手) 下达该指定 SKU 订单。**下文各产品系列彼此并非替代关系**——它们是顺序或并行的加工选项, 各自针对一类特定的客户技术需求。简化的思维模型: **抛光片 (PW) 是"基础衬底"; 退火片 (AW) 是经过退火去除表面缺陷的 PW; 磊晶片 (EW) 是在 PW 或 AW 表面新生长一层新鲜硅以提升器件性能; 连接晶片 (JIW) 是在 EW 之下加入埋层扩散区, 用于纵向电流器件; SOI 是用氧化绝缘层将两片 PW 键合, 用于抗辐射或低功耗 RF/CMOS 应用; 回收片 (RPW) 是工厂归还监测片与等效片的回收流。**
+
+```mermaid
+graph LR
+    Ingot["单晶硅锭<br/>(直拉法 CZ)"]
+    PW["抛光片 (PW)<br/>100-300mm — 基础衬底"]
+    AW["退火片 (AW)<br/>150-300mm — 表面无缺陷"]
+    EW["磊晶片 (EW)<br/>100-300mm — 增加磊晶层"]
+    JIW["连接晶片 (JIW)<br/>125-200mm — 功率/分立器件"]
+    SOI["绝缘体上硅 (SOI)<br/>150-200mm — RF/抗辐射"]
+    RPW["回收片 (RPW)<br/>回收循环"]
+
+    Ingot --> PW
+    PW --> AW
+    PW --> EW
+    AW --> EW
+    EW --> JIW
+    PW --> SOI
+    PW -.->|"客户归还"| RPW
+    RPW -.->|"在工厂复用"| PW
+```
+
+*来源: 分析师基于 [SUMCO 产品矩阵 — sumcosi.com](https://www.sumcosi.com/english/products/lineup.html) 与 [SUMCO 生产流程页](https://www.sumcosi.com/english/products/about.html) 构建的流程图。*
+
+实际上, **先进逻辑/存储工厂的供应链**运作如下: TSMC (或 Samsung、Micron、SK Hynix、Intel) 与 SUMCO 签订多年期 LTA, 订购例如**300mm P 型磊晶片, 厚度 300 μm, 电阻率 <10 Ω·cm, 表面外延层 4 μm, 表面层为 n 型硅, 电阻率 <0.1 Ω·cm**。SUMCO 在伊万里或米泽按上述电气规格拉制 CZ 单晶, 在同一工厂切片、抛光至亚埃级 (sub-angstrom) 平整度, 出货至客户的磊晶沉积区 (或内部完成磊晶层) , 经品质检验后送达晶圆厂——硅片在此成为 600 至 1,200 道工艺步骤、为期 8 至 12 周的光刻、刻蚀、沉积、CMP 与离子注入工艺所依托的字面衬底, 表面上承载着数以万亿计的晶体管。硅片在每片芯片制造中被消耗, 客户不能复用 (除非作为监测片, 进入 RPW 回收流)。SUMCO 的经济护城河在于**最先进制程下的良率与电学规格一致性**——亚规模供应商的硅片可能因工艺窗口波动给客户带来良率损失, 而每片成品晶圆价值高达 5,000–20,000 美元, 因此差等硅片的边际成本是非对称惩罚式的。
+
+### 4.3 抛光片 (Polished Wafer, PW)——主力基础衬底
+
+> "A monocrystalline ingot is sliced to thicknesses of around 1mm and the surfaces are polished to a mirror finish." — [SUMCO 产品矩阵](https://www.sumcosi.com/english/products/lineup.html)
+
+**中文释义 / Plain-language gloss:** 抛光片是几乎每一颗硅集成电路所依托的**基底片 (base substrate)**。其制造流程为: 用直拉法 (CZ, 直拉法) 从纯度 99.9999999% 的硅熔体中拉制单晶硅锭, 切片为约 1 mm 厚的硅圆片 (300mm 成品厚度约 775 μm, 留出研磨/抛光余量), 通过**化学机械抛光 (CMP, chemical-mechanical polishing)** 对正反面镜面抛光至以埃 (10⁻¹⁰ 米) 计的表面粗糙度, 清洁后出货。抛光片是工艺最简单的成品——除非客户需要更昂贵的 AW、EW、JIW 或 SOI 变种, 所有晶圆厂使用的均为 PW。单片成本随直径上升 (300mm PW 的单价通常为 150mm PW 的 5–10 倍), 因为硅成本更高、抛光时间更长, 而且大直径下平整度公差更严。
+
+*分析师观点:* PW 是 SUMCO 产品组合的**商品化端**——在 100–200mm 较小直径下的商品化属性较强, 在 300mm 下则是**战略业务**。在 200mm 及以下, 该产品越来越受到中国新建产能 (例如**国大硅产 National Silicon Industry Group**) 的压力, 该等产能自 2022 年起为成熟制程晶圆厂提供配套。在 300mm 维度, 进入门槛仍极高——只有信越、SUMCO、环球晶圆 (GlobalWafers)、Siltronic、SK Siltron 能为先进制程提供完整 300mm 量产能力——SUMCO 在此的业务是真正可防御的。此处的护城河类型是**规模 + 知识产权/工艺 Know-How** (最严苛的 300mm CZ 拉晶良率是一项超过十年的研发成果), 而非网络效应或客户转换成本本身。最接近的对位竞争产品: **信越半导体 300mm 抛光片** ([信越硅片产品页](https://www.shinetsu.co.jp/en/products/electronics-materials/silicon-wafers/))。
+
+### 4.4 退火片 (Annealed Wafer, AW)——存储用表面缺陷修复
+
+> "A polished wafer undergoes high-temperature annealing in an atmosphere of hydrogen or argon, removing oxygen near the wafer surface." — [SUMCO 产品矩阵](https://www.sumcosi.com/english/products/lineup.html)
+
+**中文释义 / Plain-language gloss:** 退火片是把成品 PW 在氢气或氩气气氛下进行**约 1,150–1,250°C 的高温热处理 (high-temperature annealing)** 而得。其用途是**驱赶氧 (drive out oxygen)**——CZ 单晶生长时夹带的间隙氧原子 (interstitial oxygen, 间隙氧原子) 如果残留在晶圆近表面, 在后续工艺热循环中会聚集成氧析出物缺陷, 摧毁建在其上的晶体管。通过在非氧化性气氛下退火, 表面附近的氧原子以蒸汽形式扩散逸出, 留下深度约 5–25 μm 的**无缺陷净化区 (denuded zone, DZ, 清净区)** 用于器件制造; 同时硅片体内深部的氧被有意保留为**体内微缺陷 (bulk micro-defect, BMD)** 位点, 在后续热循环中充当金属污染的"吸杂" (gettering) 中心。结果是物理形态与 PW 相同, 但在存储器应用 (尤其 DRAM 单元阵列) 与部分逻辑节点下良率显著更好的硅片。
+
+*分析师观点:* AW 属于 SUMCO 的**中高价值产品**, 是其存储客户业务的核心——DRAM 尤其受益于干净的净化区, 因为单元阵列的比特错误率对单缺陷事件极为敏感。SUMCO 的退火配方是数十年精细工艺积累, 是其全球第二位置可以转化为定价能力的产品之一。护城河类型为**工艺 IP + 客户认证**: 已为某特定 DRAM 节点与比特密度通过 SUMCO AW 认证的存储客户, 将不愿在同一节点上重新认证竞争对手的 AW, 因为再认证可能需 9–18 个月。最接近的对位竞争产品: **信越半导体 SHE-O (Surface Hydrogen Etching) 退火片** ([信越硅片产品页](https://www.shinetsu.co.jp/en/products/electronics-materials/silicon-wafers/))。
+
+### 4.5 磊晶片 (Epitaxial Wafer, EW)——先进逻辑与 HBM 的主力品
+
+> "The surface layer of the polished wafer is formed from monocrystalline silicon using vapor phase growth, or epitaxy." — [SUMCO 产品矩阵](https://www.sumcosi.com/english/products/lineup.html)
+
+**中文释义 / Plain-language gloss:** 磊晶片是把成品 PW (或 AW) 在磊晶反应器中, 通过**化学气相沉积 (CVD, chemical vapor deposition, 化学气相沉积)** 在其表面外延生长一层**新鲜单晶硅 (epi layer, 外延层)**——通常以**三氯硅烷 (SiHCl₃) 或硅烷 (SiH₄) 作为硅源**, 氢气为载气, 配合**掺杂前驱体 (phosphine, 磷烷 PH₃ 用于 n 型; diborane, 乙硼烷 B₂H₆ 用于 p 型)** 设定新层的电导性。磊晶层在 1,000–1,150°C 下生长, 以下方单晶硅为模板, 因此新硅层本身为单晶, 其电阻率可独立于硅片本体进行任意调节; 典型磊晶层厚度为 2–10 μm。结果是具备**两个电学上不同层**的硅片——重掺杂或轻掺杂的体硅提供机械强度并作为电荷沉降, 上方精确掺杂的磊晶层用于器件制造。这是先进逻辑 CMOS (所有先进制程节点都使用 EW) 与 HBM 级 DRAM (因 latch-up 与软错误优势) 的**金标准衬底**。
+
+*分析师观点:* EW 是 SUMCO 产品组合中**最重要的单一产品**, 也是 AI 驱动 300mm 需求浪潮的主要受益者。SUMCO 在 2025 财年 Q3 电话会上指出**AI 相关 HBM 占据整个行业约 20–25 万片/月**的硅片需求, SUMCO 的先进逻辑 + HBM 硅片组合目前合计占 **300mm 营业收入的约 20%**——五年前这一类别并不存在 ([SemiVision via X — 2025 财年 Q3 评论](https://x.com/semivision_tw/status/1993466357208563725)、[SUMCO 2025 财年 Q3 纪要, Alpha Spread](https://www.alphaspread.com/security/tse/3436/investor-relations/earnings-call/q3-2025))。护城河类型为**规模 + 工艺 IP + 客户认证 + 产能**: SUMCO 是仅有的三家 (与信越半导体及 SEH 授权制造商一起) 能通过 TSMC 最严苛 3nm 以下 EW 认证的供应商之一。最接近的对位竞争产品: **信越半导体磊晶片** ([信越硅片产品页](https://www.shinetsu.co.jp/en/products/electronics-materials/silicon-wafers/)) 与 **Siltronic 300mm 磊晶片** ([Siltronic 产品页](https://www.siltronic.com/en/products.html))。
+
+### 4.6 连接晶片 (Junction Isolated Wafer, JIW)——功率分立器件与 BCD 专用
+
+> "Forms an embedding layer for integrated circuits on the wafer surface, followed by epitaxial layer formation." — 释义自 [SUMCO 产品矩阵](https://www.sumcosi.com/english/products/lineup.html)
+
+**中文释义 / Plain-language gloss:** JIW 是面向**功率半导体与 BCD (BiCMOS-DMOS, 高压集成) 应用**的专用衬底。其制造流程在体硅与磊晶层之间插入一层重掺杂**埋层 (buried layer, 埋层)**——最常见的是用锑或砷离子注入形成重掺杂 n⁺ 埋层, 随后在其上生长轻掺杂 p- 或 n- 磊晶区。埋层作为纵向电流器件 (例如纵向 n-p-n 双极晶体管、DMOS 功率 FET 或 LDMOS) 的**低阻抗电流收集器**, 使器件电流可向下通过磊晶层、然后横向流过埋层到达接触点, 而不必穿越高阻抗的体硅。JIW 用于模拟/电源管理 IC 工厂 (Texas Instruments、Infineon、STMicroelectronics、ON Semiconductor) 和分立器件工厂 (Renesas、Toshiba、Diodes), 这也是其直径上限止于 200mm 的原因——功率分立与模拟产业大多尚未迁移到 300mm。
+
+*分析师观点:* JIW 是**量小但定价稳定的产品**, 出货至专用模拟与功率器件工厂。SUMCO 在此的业务受益于与日本分立器件客户 (Renesas、Toshiba、Rohm) 的长期关系, 结构性受 300mm 周期影响较小。护城河类型为**客户认证 + 工艺 IP**, 围绕客户所需的特定埋层配方。最接近的对位竞争产品: **环球晶圆 (GlobalWafers) 连接晶片** ([环球晶圆产品页](https://www.gwafers.com.tw/eng/products.html))。
+
+### 4.7 SOI 片 (Silicon-On-Insulator)——RF、MEMS、抗辐射应用
+
+> "An oxide layer with high electric insulation is sandwiched between two polished wafers, which are then bonded together." — [SUMCO 产品矩阵](https://www.sumcosi.com/english/products/lineup.html)
+
+**中文释义 / Plain-language gloss:** SOI 片通过**两片 PW 键合 (bond)** (或通过 SmartCut/智能剥离离子注入工艺从单片硅片上分离出薄层) 制成, 中间夹有厚 0.05–0.4 μm 的**埋氧层 (buried oxide, BOX, 通常为 SiO₂)**。结果是器件层 (上层硅) 与体衬底通过 BOX 实现**电学隔离**。优势在于: 显著降低**寄生电容 (parasitic capacitance)** (改善 RF 与高速性能); 来自宇宙射线的**软错误率 (soft-error rate)** 显著降低 (用于航天与航空电子); 在小器件尺寸下减少**结漏电流 (junction leakage)** (因此 SOI 在落后节点为部分低功耗逻辑所采用); 以及**3D MEMS 制造**更便利 (BOX 充当微机械结构释放工艺的内置刻蚀停止层)。主要应用领域包括: 智能手机 RF 前端 IC (FD-SOI 工艺)、汽车雷达、卫星电子、MEMS 传感器 (加速度计、陀螺仪、压力传感器), 以及硅光子集成光路。全球 SOI 衬底市场领导者为**Soitec (Euronext:SOI)**——一家法国专用硅片厂; SUMCO 与信越半导体在低量市场参与, 主要通过授权 Soitec 的 SmartCut 工艺进行 SOI 制造。
+
+*分析师观点:* SOI 是 SUMCO 的**利基产品**——对公司有经济意义但份额较小。该产品在结构上小于抛光/退火/磊晶系列, 服务于针对特定应用的客户 (RF、汽车、航天、MEMS), 而非主流逻辑/DRAM 业务。护城河类型为**技术合作 + 客户认证**——Soitec 拥有 SmartCut IP, SUMCO 的角色更多是为特定客户做授权代工。最接近的对位竞争产品: **Soitec FD-SOI 硅片** ([Soitec 产品页](https://www.soitec.com/en/products))。
+
+### 4.8 回收抛光片 (Reclaimed Polished Wafer, RPW)——循环经济产品
+
+> "Used wafers can be taken back and recycled for reuse." — [SUMCO 产品矩阵](https://www.sumcosi.com/english/products/lineup.html)
+
+**中文释义 / Plain-language gloss:** 回收抛光片是硅片行业的**回收流 (recycling stream)**。晶圆厂客户使用大量"监测片 (monitor wafer)"、"测试片 (test wafer)"或"哑光片 (dummy wafer)"——用于在工艺设备 (光刻、刻蚀、沉积、离子注入) 上认证工艺窗口、校准在线计量, 或调节新装腔体, 但表面并未制造实际产品。这些硅片使用后会带有各种沉积膜、掺杂剖面以及轻微热变形, 但体硅仍纯度 99.9999%+ 且结构完好。SUMCO (以及竞争对手的硅片再生公司) 将这些硅片收回, **化学或机械方式剥除沉积膜**, 再抛光表面恢复原始镜面, 然后以**低于新 PW 的价格 (通常为新片价的 30–60%)** 重新出货给该客户 (或另一客户)。其经济与环境价值不容忽视: 一座 300mm 晶圆厂每月可能使用 1 万至 5 万片监测片, 即使按 40–80 美元/片计算, 回收营业收入也具规模, 同时避免了硅矿+抛光的碳足迹。SUMCO 的 RPW 业务运营覆盖全球, PT. SUMCO Indonesia (印度尼西亚 Cikarang/Bekasi) 为其专用回收基地之一。
+
+*分析师观点:* RPW 是**营业收入小但战略意义独特**的产品——它将 SUMCO 锁定在循环供应关系中, 为新晶圆厂提供低价入门产品, 也对公司的 ESG/可持续叙事有贡献。护城河类型在于**物流 + 服务关系 + 成本管理**, 而非根本性技术。最接近的对位竞争产品: **RS Technologies (TSE:3445)**——一家纯硅片再生专家 ([RS Technologies — 回收硅片业务](https://www.rs-tec.jp/eng/business/reclaim/))。
+
+### 4.9 300mm AI 级硅片业务——下一周期的核心驱动
+
+SUMCO 未来 3–5 年的结构故事是**300mm AI 级硅片业务**, 位于产品矩阵中抛光、退火、磊晶 300mm 行的交叉。三大需求向量正在汇聚: (i) **高带宽内存 (HBM, 高带宽内存)** 的硅片消耗与 AI 训练计算基建建设同步上升——HBM 每芯片消耗的硅片数量约为常规 DDR DRAM 的 3–4 倍, 因为每颗 HBM 堆栈使用 8–16 颗 DRAM die 加一颗基础逻辑 die, 全部在 300mm 硅片上制造; (ii) **3nm 与 2nm 先进逻辑** (TSMC N3、N2; Samsung 3GAE、2GAA; Intel 18A、14A) 要求历史最严苛规格的 EW 级 300mm 衬底——亚埃级表面粗糙度、亚 2nm 金属污染, 以及整片晶圆 1.5% 以内的电阻率均匀性; (iii) **先进封装 (advanced packaging)** (CoWoS、FOWLP、SoIC)——用于将 HBM 与逻辑 die 集成——额外消耗 300mm interposer 与 carrier 晶圆。
+
+![SUMCO 300mm AI 硅片需求剖面](../../charts/sumco_ai_wafer_demand.png)
+*来源: 综合自 [SUMCO 2025 财年 Q3 纪要——AI 相关 HBM 占 20-25 万片/月, Alpha Spread](https://www.alphaspread.com/security/tse/3436/investor-relations/earnings-call/q3-2025) 及 [SemiVision via X — 2025 财年 Q3 300mm 市场点评](https://x.com/semivision_tw/status/1993466357208563725); 行业层面综合的硅片面积预测来自 TSMC、Samsung、Micron 公开资本开支披露。*
+
+SUMCO 管理层在多次业绩说明会上明确表示, 先进逻辑 + HBM 硅片组合目前贡献了 **300mm 营业收入约 20%**, 且为该业务增长最快的部分 ([SemiVision 2025 财年 Q3 评论](https://x.com/semivision_tw/status/1993466357208563725)、[SUMCO 2025 财年 Q3 纪要, Alpha Spread](https://www.alphaspread.com/security/tse/3436/investor-relations/earnings-call/q3-2025))。周期风险在于时机: 客户运行的产能接近满载, 因此持续拉货, 但更广义的 300mm 市场仍包括大量 DDR DRAM、NAND 及成熟制程逻辑等仍在缓慢复苏的需求。2026 财年 Q1 不及预期表明: AI 驱动的复苏尚未将整体 300mm 需求拉至能消化伊万里/米泽二期折旧上升的水平; 管理层的定位是这属于"时机问题"而非"终端需求问题" ([SUMCO 2026 财年 Q1 纪要, Investing.com, 2026-05-12](https://www.investing.com/news/transcripts/earnings-call-transcript-sumco-misses-q1-2026-expectations-stock-dips-93CH-4698631))。
+
+### 4.10 制造布局与资本开支计划
+
+SUMCO 在日本运营**六大制造基地**, 海外另有**五家工厂**——已在公司概览章节描述——其中 300mm AI 级业务的战略支柱是**伊万里 (佐贺) 与米泽 (山形) 两大基地**, 二者均为 2021–22 年宣布的约 4,000 亿日元二期资本开支的核心 ([SUMCO 全球网络——制造基地](https://www.sumcosi.com/english/corporate/offices/)、[Business Wire — "SUMCO 宣布 300mm 扩产", 2005](https://www.businesswire.com/news/home/20050317005005/en/SUMCO-Announces-300-mm-Expansion-Wafer-Production-Capacity-to-Increase-to-600000-Wafers-Per-Month))。九州地区的伊万里工厂为 SUMCO 主要的 300mm 拉晶与抛光基地; 米泽为辅助基地, 在磊晶加工方面具优势。2026 年 METI 补贴下调 (从最高 750 亿日元到 193 亿日元) 与 SUMCO 从绿地新建转向现有设施升级的战略转向, 意味着**约 4,000 亿日元计划的大部分支出已转化为利润表上的折旧入账, 而非资产负债表上的在建工程** ([Evertiq, 2026-04-07](https://evertiq.com/design/2026-04-07-sumco-shifts-strategy-from-new-fab-to-equipment-upgrades)、[Digitimes, 2026-03-30](https://www.digitimes.com/news/a20260330VL210/sumco-equipment-plant-wafer-demand.html))。宫崎 200mm 工厂关闭 (2026 年下半年生效) 释放了额外的工程与运营资源, 可重定向至 300mm AI 级生产, 但其本身并不增加 300mm 产能。
+
+![SUMCO 资本开支与折旧轨迹](../../charts/sumco_capex_depreciation.png)
+*来源: 综合自 SUMCO 季度披露及 [Evertiq, 2026-04-07](https://evertiq.com/design/2026-04-07-sumco-shifts-strategy-from-new-fab-to-equipment-upgrades) 对 METI 修订补贴及绿地至升级再分配的评论。*
+
+该布局的竞争意义在于: **SUMCO 是全球仅有三家公司之一——与信越 (日本)、环球晶圆 (台湾, 配合美国/欧盟扩产) 一起——具备 300mm AI 级硅片的批量供应能力**。新进入者门槛极高: 绿地 300mm 硅片工厂需要约 2,000–4,000 亿日元 (13–27 亿美元) 的前期资本开支、4–6 年的建设加认证周期、数十项需授权或独立开发的工艺专利, 以及每家先进晶圆厂数年的客户认证过程。2021–24 年的 LTA 配合预付款机制——客户提前向 SUMCO 支付承诺多年期出货量的资金——本质上是客户对产能的补贴, 而客户 (TSMC、Samsung、Micron、SK Hynix) 之所以愿意如此, 是因为不补贴的替代选择是冒着自身资本开支高峰期 300mm 硅片供应短缺的风险。
+
+### 4.11 硅片业务的营业收入与营业利润率特征
+
+从内部建模的角度看, 硅片业务损益表呈现可识别的特征: **营业收入约为 70% 数量 × 平均售价 (ASP)** (ASP 取决于 LTA + 现货组合) **+ 30% 产品组合** (300mm AI 级 vs 300mm DDR DRAM vs 200mm vs 150mm 及以下); **毛利率**主要由工厂折旧 + 拉晶设备 + 磊晶反应器折旧 (资本密集度异常高——占营业收入的 25–35%) 加上多晶硅原料成本 (内部由 SUMCO High-Purity Silicon America/HPSA 工厂供应时, 约占营业收入 10–15%; 外采自 Wacker/Tokuyama/OCI/Hemlock 时更高) 决定; **营业利润率**之后叠加 R&D (约 3–4% 营业收入) 与 SG&A (约 6–8%)。在周期顶部 (2022 财年) 营业利润率曾达 ~22%; 在周期底部 (2025–2026E) 目前为负, 如 2026 财年 Q1 营业亏损 52 亿日元对应营业收入 1,014 亿日元所示 ([SUMCO 2026 财年 Q1 纪要, Investing.com, 2026-05-12](https://www.investing.com/news/transcripts/earnings-call-transcript-sumco-misses-q1-2026-expectations-stock-dips-93CH-4698631))。本轮周期的特殊之处在于**折旧不会随产能利用率而弹性下调**——伊万里/米泽二期设备无论使用率高低均同等折旧——这是营业亏损在远高于过往周期底部的营业收入水平上发生的机械原因。
+
+---
