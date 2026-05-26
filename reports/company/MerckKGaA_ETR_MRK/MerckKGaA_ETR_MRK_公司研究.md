@@ -243,3 +243,118 @@ graph LR
 *资料来源：分析师基于累计 >€30 亿投资承诺 ([Electronics invests in growth, 2021-09-20](https://www.emdgroup.com/en/news/electronics-invests-in-growth-20-09-2021.html)) 与各项目单独披露（高雄 €5 亿、Arizona $3,900 万、Mecaro 未披露、Unity-SC €1.44 亿）的估算。*
 
 ---
+
+## 5. 客户与上市策略 —— 电子业务
+
+### 5.1 客户集中度披露 —— 默克 KGaA 实际披露的内容
+
+**默克 KGaA 在年报中并未披露电子业务的具体客户集中度百分比**。与必须按 ASC 280-10-50-42 披露占合并收入 ≥10% 任何客户的美国 10-K 申报方，或必须按中国 GAAP 报告标准披露前 5 大客户的中国 A 股 / 港股发行人不同，默克 KGaA 的德国 GAAP / IFRS 报告标准并不要求按项披露客户集中度 ([AR 2024 Segment Reporting](https://www.emdgroup.com/en/annualreport/2024/notes/operating-activities/segment-reporting.html))。AR 2024 仅声明电子业务服务 *"全球半导体和显示行业"*，未点名客户 ([AR 2024 Electronics Company Profile](https://www.reports.emdgroup.com/en/annualreport/2024/management-report/fundamental-information-about-the-group/company-profile-and-structure/electronics.html))。这对试图精确风险建模的分析师而言是真实的披露缺口。
+
+***分析师观点：*** 根据先进节点晶圆产能的地理集中度，半导体解决方案的客户集中度实质上较高 —— 估计 **前 5 大客户占板块销售 ~60–70%，前 10 大占 ~80%+**，单一最大客户（几乎可肯定为 TSMC）可能在 15–25% 区间。该估算通过以下三角验证：(a) 电子业务披露的亚太收入权重；(b) 先进节点晶圆产能的地理分布（TSMC、三星半导体、SK 海力士、Intel、美光控制 ≥90% 的领先位元）；(c) 默克 KGaA 自己的投资场地选择（高雄直接服务 TSMC；韩国 Cheonan 服务三星 / SK 海力士；Arizona DS&S 服务 TSMC / Intel / 三星 Austin / 三星 Texas）。该估算 **不是** 来自默克 KGaA 申报，而是分析师推断。
+
+### 5.2 来自公开资料可见的具名客户
+
+以下客户 / 客户情境通过默克 KGaA 一手披露、客户 SEC 申报或行业媒体得到佐证；这 *不是* 完整客户清单，但代表可见的部分：
+
+- **TSMC (TWSE:2330 / NYSE:TSM)**。高雄 €5 亿超级工厂 —— 默克 KGaA 全球最大半导体材料园区 —— 选址专门服务 TSMC 南部台湾 fab 集群（台南、高雄）。Kai Beckmann 在启用仪式上的发言：*"我们的战略是紧贴客户及其技术路线图"* ([Kaohsiung inauguration release, 2025-12-01](https://www.merckgroup.com/en/news/inauguration-kaohsiung-megasite.html))。台北时报 2024 年 9 月报道默克计划 *"引入更多关键材料以推动本土化"* 以服务 TSMC 供应 ([Taipei Times, 2024-09-06](https://www.taipeitimes.com/News/biz/archives/2024/09/06/2003823328))。
+
+- **三星半导体 (KRX:005930)**。2022 年 Mecaro 收购（约 100 名员工，韩国基地）明确定位为扩张 ALD 前驱体产能 *"以紧邻韩国存储客户"* ([Mecaro closing release, 2023](https://www.emdgroup.com/en/news/chemical-closing.html))。默克 KGaA / 三星关系涵盖三星 Display LCD 面板用 LC 混合物、三星 Display OLED 面板（高端智能手机、可折叠）用 OLED 发光材料，以及三星半导体逻辑 + 存储 fab 用先进前驱体 / CMP 抛光液。
+
+- **SK 海力士 (KRX:000660)**。从韩国 Mecaro 收购和 SK 海力士 Icheon、Cheongju 存储 fab 的 Versum legacy CMP 抛光液在位推断。SK 海力士的 HBM4 放量（2026-2027 周期最重要的 AI 存储产品）是最受关注的先进 ALD 前驱体和 CMP 抛光液单一需求驱动力 ([SK Hynix 62% HBM share, Astute Group, 2026](https://www.astutegroup.com/news/general/sk-hynix-holds-62-of-hbm-micron-overtakes-samsung-2026-battle-pivots-to-hbm4/))。
+
+- **Intel (NASDAQ:INTC)**。Arizona DS&S 工厂（Chandler，$3,900 万，2022 年开业）选址在 Intel Ocotillo 园区和 TSMC Arizona 大型 fab 旁。Intel 18A（2025-2026 量产）加 Foundry 外部客户放量是 Intel 侧需求催化剂 ([EMD Electronics Arizona opening, 2022](https://www.chandleraz.gov/news-center/emd-electronics-celebrates-opening-new-arizona-factory-contributing-states-growing))。
+
+- **美光 (NASDAQ:MU)**。从美光对先进节点 1c DRAM 和 HBM4 的采用推断 —— Versum legacy CMP 抛光液在美光的 Boise 和台湾 fab 中具备较强在位地位。
+
+- **三星 Display + LG Display + 京东方**。OLED 发光材料客户群。三星 Display 主导高端智能手机 OLED；LG Display 主导大尺寸 OLED 电视；京东方是中国领先的 OLED 面板厂商。默克 KGaA 作为主体 / 掺杂材料供应商，与 UDC、出光和 DS Neolux 并列 ([OLED Materials Companies analysis, Market Research Future](https://www.marketresearchfuture.com/reports/oled-materials-market/companies))。
+
+### 5.3 客户集中度可视化
+
+```mermaid
+pie title 电子业务客户（分析师估算，FY2024）
+    "TSMC (~20%)" : 20
+    "三星半导体 + 三星 Display (~20%)" : 20
+    "SK 海力士 + 美光 (~15%)" : 15
+    "Intel (~10%)" : 10
+    "其他代工 / 存储 / 显示 (~25%)" : 25
+    "长尾客户 (~10%)" : 10
+```
+
+*资料来源：分析师根据披露的亚太收入集中度、先进节点 fab 产能份额 ([TrendForce foundry share 2024](https://www.trendforce.com/)) 以及默克 KGaA 的场地投资模式三角验证估算。**非公司披露**。*
+
+### 5.4 合同结构与上市策略
+
+半导体材料销售通常由 **3–5 年期多年主供协议** 管理，每年定价费率表 + 季度量预测，在公司层面与每家主要 fab 客户签订。在主协议内，**单个采购订单随晶圆 fab 在卡匣批次基础上消耗材料而流转** —— 典型再订货周期为按周到按月，取决于材料类别（CMP 抛光液批量消耗、按周再订；特种前驱体按腔室按配方微量、按月再订）。**将新供应商加入 fab 配方的认证周期为 12–24 个月**（在位替代），新建工艺集成更长 —— 这是保护在位供应商免受价格竞争的主要护城河 ([SEMICON Europa industry coverage](https://www.semiconeuropa.org/Kai_Beckmann))。
+
+**上市模式**：直接销售给 fab 客户，技术销售 / 现场应用工程师 (FAE) 嵌入到主要 fab 站点（新竹、台南、高雄、平泽、华城、无锡、西安、Boise、Hillsboro、Chandler、Albuquerque、Dresden）。约 90%+ 收入为直接销售；少量分销渠道服务于学术 / R&D / 试产线客户的不太关键化学品。定价 **按认证 + 按年度费率表更新协商**，晶圆数 + 配方组合是量驱动因素。每步 CMP 抛光液定价历史上约为每片晶圆每 CMP 步 $3–15，取决于抛光液等级；每步 ALD 前驱体约每片晶圆每 ALD 步 $5–30，取决于前驱体特异性；特种气体约为每片晶圆每气体步 $0.5–5。因此前沿 fab 一片 300mm 晶圆上的默克 KGaA 材料含量可达 **每片晶圆 ~$50–200 默克 KGaA 供应材料**（分析师估算；未披露）。
+
+### 5.5 近期亚洲产能投资紧跟客户
+
+默克 KGaA 近期电子业务资本支出的地理集中直接映射客户在哪建设新 fab 产能：
+
+- **高雄（中国台湾）** —— €5 亿超级工厂，2025 年 12 月 1 日启用。特种气体 + 薄膜 + 配方。服务 TSMC 南部台湾集群 ([Kaohsiung release](https://www.merckgroup.com/en/news/inauguration-kaohsiung-megasite.html))。
+- **Cheonan（韩国）** —— Mecaro 收购场地 + 内生扩产。ALD 前驱体。服务三星平泽 / 华城 + SK 海力士 Icheon / Cheongju ([Mecaro closing](https://www.emdgroup.com/en/news/chemical-closing.html))。
+- **Chandler（亚利桑那）** —— $3,900 万 DS&S 工厂，2022 年开业。MEGASYS 气柜 + 输送设备。服务 Intel Ocotillo + TSMC Arizona ([Arizona opening, 2022](https://www.chandleraz.gov/news-center/emd-electronics-celebrates-opening-new-arizona-factory-contributing-states-growing))。
+- **Tres Cantos（马德里）、达姆施塔特（德国）** —— AZ 光刻胶和 Optronics LC/OLED 的 legacy R&D + 试产线。服务欧洲客户（Globalfoundries Dresden、英飞凌、ST 微电子）。
+- **新加坡 + 上海** —— 亚太 HQ + 区域生产 legacy LC + 部分配方。
+
+电子业务 2021–2025 年累计资本支出 **>€30 亿（Level Up 计划）**，地理分布大致为 **中国台湾 ~25%，韩国 ~20%，美国 ~20%，德国 ~15%，中国大陆 ~10%，其他 ~10%**，基于披露的项目价值 ([Electronics invests in growth, 2021-09-20](https://www.emdgroup.com/en/news/electronics-invests-in-growth-20-09-2021.html); [EMD Electronics $1bn US investment announcement, 2021-12-07](https://www.emdgroup.com/en/news/emd-electronics-investment-07-12-2021.html))。
+
+### 5.6 合作伙伴与生态系统定位
+
+默克 KGaA 是 **SEMI 年度 SEMICON 会议（West、Europa、Japan、Taiwan、Korea、China）的创始赞助商和常驻主题演讲者** —— 行业首要的供应链生态系统活动。Kai Beckmann 本人在 SEMICON Europa 2024 和 SEMICON West 多年都做了主题演讲 ([SEMICON Europa speaker page](https://www.semiconeuropa.org/Kai_Beckmann); [SEMICON West speaker page](https://www.semiconwest.org/programs/speaker-bio/kai-beckman))。公司是 **SEMI 材料组**（半导体材料规范标准化机构）成员，并与 **比利时 IMEC** 和 **法国 CEA-Leti** 参与早期节点材料认证的合作 R&D 项目 —— 两者都是新材料抵达商业 fab 前的关键预生产验证步骤。
+
+---
+
+## 6. 行业概览 —— 全球半导体材料市场
+
+### 6.1 市场定义与结构
+
+**全球半导体材料市场**（IC 晶圆制造和封装所消耗的上游化学品、气体、抛光液、光刻胶、晶圆、光罩和电子基板输入）2024 年约 **$800 亿**，按野村行业总览分布大致为 **~60% 晶圆制造材料 / ~40% 封装材料** ([Nomura "Greater China Semi" report, 2026-05-21, p. 18-30, summarized in sector overview](../../sector/半导体材料.md))。在晶圆制造材料（~$480 亿）中，主要子类别为：
+
+| 材料类别 | 2024 市场规模（估算） | 主要供应商 |
+|---|---|---|
+| 硅晶圆（300mm + 200mm）| ~$150 亿（占 fab 材料 31%） | 信越、SUMCO、GlobalWafers、Siltronic、SK Siltron |
+| 光刻胶（i-line / KrF / ArF / EUV）| ~$60 亿（13%）| JSR、TOK、住友、富士胶片、信越、东进、**默克 KGaA (AZ®)** |
+| 光刻辅材（BARC、显影液、清除剂）| ~$35 亿（7%）| **默克 KGaA (AZ®)**、JSR、Brewer Science、TOK |
+| 特种气体 | ~$60 亿（13%）| 林德、法液空、Air Products、Resonac、大阳日酸、**默克 KGaA (Versum)** |
+| CMP 抛光液 + 抛光垫 | ~$30 亿（7%）| 富士胶片（含 Entegris）、**默克 KGaA (Versum)**、Fujimi/CMC、Resonac、杜邦、安集 |
+| 溅射靶材 | ~$15 亿（3%）| JX 日矿、霍尼韦尔、Plansee、Tosoh |
+| 湿化学品 + 清洗 | ~$30 亿（6%）| 巴斯夫、Stella Chemifa、三菱化学、**默克 KGaA** |
+| 其他（前驱体、光罩坯料等）| ~$100 亿（20%）| 各家 |
+
+*资料来源：野村 2026-05-21 锚定报告 Fig. 26，总结于 [半导体材料行业总览](../../sector/半导体材料.md)；[Mordor Intelligence specialty gas market](https://www.mordorintelligence.com/industry-reports/specialty-gas-market)；[Fortune Business Insights specialty gas report](https://www.fortunebusinessinsights.com/us-electronic-specialty-gas-market-114856)；[Valuates CMP Materials report](https://reports.valuates.com/market-reports/QYRE-Auto-14V14904/global-cmp-materials-for-semiconductor)；[Mordor Intelligence photoresist market](https://www.mordorintelligence.com/industry-reports/photoresist-market)。*
+
+### 6.2 需求地理分布
+
+根据野村锚定报告 Fig. 29-30 ([行业总览](../../sector/半导体材料.md))，半导体材料 *需求* 的地理分布跟随晶圆 fab 产能的地理集中：**中国台湾占全球 30%，中国大陆 20%，韩国 18%，日本 10%，北美 10%，欧洲 8%**。这是所有主要半导体材料供应商 —— 包括默克 KGaA —— 都将产能向亚洲迁移的结构性原因：客户在那里、就地生产时认证流程更快、供应链风险（海运延误、关税）更低，且许多 fab 客户明确偏好（或要求）本地亚洲制造布点。默克 KGaA 的高雄 €5 亿超级工厂是对这一动力学的直接响应，韩国 Cheonan + 新加坡扩张也是如此。
+
+### 6.3 历史增长与预测增长率
+
+半导体材料 *用量* 历史上跟随晶圆开工（10 年周期内 ~5-7% CAGR，以 200/300mm 等量单元计），但 **收入增长持续滞后于晶圆开工增长，因供应商被迫吸收大 fab 客户的价格压缩** —— 野村报告的核心洞见是这一动力学在 2026-2030F *逆转*，因为每片晶圆的材料用量上升快于每片晶圆的价格压缩 ([行业总览，第 18-30 页](../../sector/半导体材料.md))。具体而言：
+
+- **GAA（环绕栅极）转换** 2027 年起步（TSMC N2、三星 2nm、Intel 18A）：每片晶圆新增 ~15–20% 的 ALD 步骤，因为每个 GAA 纳米片堆叠都需要在沟道之间精确隔离介质层 ([行业总览，第 6-9 页](../../sector/半导体材料.md))。
+- **背面供电网络 (BPD)** 2028-29 起步（TSMC A16、Intel 18A）：要求将两片晶圆键合并将其中一片薄化至 ~1µm，新增 5-10 道 CMP 步骤 + 多种新前驱体需求 ([行业总览，第 6-9 页](../../sector/半导体材料.md))。
+- **High-NA EUV + 金属氧化物光刻胶 (MOR)** 2029-30 起步：要求从化学放大的有机光刻胶切换至干法沉积的金属氧化物光刻胶，每片晶圆光刻胶价值翻倍 ([行业总览，第 10-12 页](../../sector/半导体材料.md))。
+- **3D-NAND 缩放至 400+ 层** 2026-27 起步：每对层需要一次沉积 + 刻蚀 + 清洗循环，因此 400 层 = 当前 200 层 NAND 的 ~3 倍每位元材料用量 ([行业总览，第 9 页](../../sector/半导体材料.md))。
+- **HBM4 + HBM4e + 先进封装**（SoIC、CoWoS、EMIB-T、玻璃核心基板）：每种新封装模式开放增量材料需求。HBM4 堆叠层数从 HBM3e 的 12 层升至潜在 16 层，每堆叠相应增加更多混合键合化学 ([SK Hynix HBM4 ramp coverage, Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/samsung-and-sk-hynix-warn-ai-driven-memory-shortages-could-last-until-2027-and-beyond-as-hbm-demand-explodes-customers-already-reserving-supply-years-ahead-while-the-wider-dram-market-begins-to-tighten))。
+
+累计效应：野村预测半导体材料市场从 **~$800 亿（2025 年）增至 ~$1,300 亿（2030 年）**，~10% CAGR，最激进的增长来自先进 ALD/CVD 前驱体（~15% CAGR）、CMP 抛光液（~12% CAGR）和 EUV / MOR 光刻胶（~20% CAGR）([行业总览，第 18-30 页](../../sector/半导体材料.md))。
+
+### 6.4 监管环境
+
+半导体材料位于三个监管框架的交叉点：
+
+- **出口管制**。美国工业与安全局 (BIS) 对先进芯片制造设备和材料的出口管制（2022 年 10 月 + 2023 年 10 月 + 2024 年更新）限制向中国 fab 销售特定 ALD 前驱体、光刻胶和气体，针对生产逻辑 ≤14nm 或 DRAM ≤18nm 或 NAND ≥128 层。默克 KGaA 作为非美国公司，部分受美国外国直接产品规则扩展约束，但与美国基础竞争对手（如 Entegris、杜邦）相比在更宽松框架下运营。这是欧洲和日本材料供应商在销售至中国时的结构性优势 ([Reuters BIS coverage 2024](https://www.reuters.com/) —— 注：此点为竞争影响的 *分析师观点*，非默克 KGaA 披露)。
+
+- **化学品 / 环境监管**。欧盟 REACH（化学品的注册、评估、授权和限制）管理氟化化学品（全氟化合物 PFAS）的使用 —— 这是 CMP 抛光液稳定剂和特种气体混合物的主要组分。限制在 2024-2025 年收紧并持续演化，可能给行业带来材料重新配方成本。默克 KGaA 的德国化学血统使其在 REACH 合规上相对优于经验较浅的新进入者。
+
+- **贸易与关税**。各种美国 301 条款关税对中国半导体进口间接影响材料流动；CHIPS 法案（美国，2022）资助促进了国内半导体材料产能（如 Versum / 默克 KGaA 的亚利桑那扩张）。德国政府自身的关键原材料法案 (KrW) 和欧盟 Chips 法案为欧洲材料供应商提供支持性框架。
+
+### 6.5 行业动力学 —— 集中度、供应商 / 买家议价权、替代品
+
+**行业集中度高且持续上升**。根据野村分析，半导体材料每个主要子类别的前 5 大供应商合计占 50–80% 市场份额，整合正在加速（富士胶片 + Entegris 电子化学品、JSR 由 JIC 私有化、默克 KGaA 的 Versum + Mecaro 交易全部在 2019-2024 年）。**买家议价权也高** —— 客户群高度集中（TSMC、三星、SK 海力士、Intel、美光合计占前沿晶圆需求 ~70%+），允许客户激进议价。**在已认证配方内替代品有限** —— 一旦 fab 为某个节点认证特定抛光液 / 前驱体 / 光刻胶，切换成本和良率风险使替换在该节点持续期内（通常 4–6 年）极为禁忌。
+
+**先进节点材料的供应商议价权正在上升**，因为 (a) 化学品更稀有、开发更难、(b) 认证周期更长、(c) 每个关键产品的可行供应商数量已经压缩（如 EUV 光刻胶在 JSR 2021 年收购 Inpria 后，已实质成为 4 供应商寡头 —— JSR/Inpria、TOK、信越、富士胶片）。这是野村"材料重估"论：随着材料变得更关键、更难以认证，供应商定价权和利润率应当结构性上升。
+
+---
