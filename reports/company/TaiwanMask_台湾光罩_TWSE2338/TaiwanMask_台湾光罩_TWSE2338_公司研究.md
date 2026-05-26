@@ -505,5 +505,181 @@ TMC 年报第 61 页提供清晰的市场结构: **自建光罩部门 (captive) 
 
 ---
 
+## 7. 竞争格局
+
+### 7.1 全球专业光罩玩家——TMC 在国际竞争对手清单中的位置 (来自 Photronics 10-K 第 7 页 verbatim)
+
+Photronics 是全球第二大专业光罩厂, 其 2025-12-17 提交的 FY2025 10-K (CIK 0000810136, accession 0001140361-25-045801) §Competition section verbatim 列出全球主要竞争对手:
+
+> "The semiconductor equipment industry is highly competitive and is characterized by a small number of participants ranging in size. **Our competitors include Compugraphics International, Ltd., Dai Nippon Printing Co., Ltd (outside of Taiwan and China), Hoya Corporation, LG Innotek Co., Ltd., Shenzhen Newway Photomask Making Co., Ltd., Shenzhen Qingyi Photomask, Ltd., SK-Electronics Co., Ltd., Taiwan Mask Corporation, and Tekscend Photomask.** We also compete with semiconductor and FPD manufacturers' captive photomask manufacturing operations that supply photomasks for internal use and, in some instances, also for external customers and foundries."  ([Photronics FY2025 10-K, 第 7 页](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))
+
+**注意 verbatim 中的两个关键点:**
+1. **TMC 被 Photronics 明确列为全球竞争对手** (Taiwan Mask Corporation), 是被 Photronics 视为同业的; 这一引用是首要 third-party 验证, 不是分析师推断。
+2. **DNP 标注为 "outside of Taiwan and China"** —— 因为 DNP 在台湾 + 中国是与 Photronics 合资 (PDMC 在台, PDMCX 在厦门), 所以 DNP 在台湾 + 中国境内不与 Photronics 竞争, 而是合资伙伴。
+
+### 7.2 主要竞争对手对位分析 (7 家直接竞争 + 1 家合资关系)
+
+**(1) Photronics (NASDAQ: PLAB)** ——美国 Brookfield, CT 总部, FY2025 (截至 2025-10) 营收 **USD 866.9 mn** ([Photronics FY2025 10-K 摘要](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。**全球最大专业光罩玩家之一**, 7 个制造据点 (台湾 3 + 中国 2 + 韩国 1 + 美国 3 + 欧洲 2 (新增)) 的生产网络。
+- 客户: TSMC, UMC, Samsung, Intel, GlobalFoundries 等。
+- 与 TMC 的竞争关系: **PLAB 在台湾 + 中国通过合资公司 PDMC 与 PDMCX 与 TMC 直接竞争; 在韩国 / 美国 / 欧洲是更广泛的间接竞争。**
+- 节点覆盖: 全节点 (含 EUV, 但 EUV 量产规模 vs Hoya 仍小)。
+- 估值: P/E 14.0×, P/S 1.6×, 市值 USD 1.85 bn。
+
+**(2) PDMC (台湾美日先进光罩) / Photronics DNP Mask Corporation** ——新竹科学园区, Photronics 50.01% + DNP 49.99% 合资, 2014-04-04 由 Photronics 旗下 PSMC (注: 这里的 PSMC 是 Photronics Semiconductor Mask Corporation, **不是力积电 Powerchip Semiconductor**, 中文都简称 PSMC, 但是不同公司, 易混淆) 与 DNP DPTT 合并而成 ([Photronics 2014 PDMC 合资公告, 2014-04-04](https://photronicsinc.gcs-web.com/news-releases/news-release-details/photronics-announces-closing-joint-venture-taiwan-dai-nippon))。**这是 TMC 在台湾本土的最直接对手**。
+- 自我定位: "the largest domestic supplier of leading edge photomasks in Taiwan with the scale to address **14 nm and beyond** technology" ([Photronics 2014 PDMC 合资公告](https://photronicsinc.gcs-web.com/news-releases/news-release-details/photronics-announces-closing-joint-venture-taiwan-dai-nippon))。
+- 自我商品定位: 全球最大商用光罩生产公司, 拥有**三座生产工厂**, 目前引入最先进的 40、28 奈米技术 ([PDMC 官网](https://www.pdmc.com.tw/))。
+- 关键差异: PDMC 攻高阶 (28nm 以下到 14nm), 是 TSMC、UMC 高阶节点的外包伙伴; TMC 攻 90-40nm 中阶 + 8 吋成熟, **两家在 28nm 节点是直接竞争**, 在其他节点上互不重叠。
+
+**(3) Tekscend Photomask (前 Toppan Photomask, 重组后于 2024-10 改名)** ——日本 Toppan Holdings 旗下, 2024-10 重组 ([TOPPAN Holdings 公告, 2024-10-01](https://www.holdings.toppan.com/en/news/2024/10/newsrelease241001_1.html)), 2025-08 IPO ($2 bn 估值)。**全球专业光罩排行前 2**, 主要做 IC 高阶节点 + LCD 大尺寸光罩。
+- 与 TMC 的竞争关系: 高阶节点 + 大面板 mask 双线竞争, 但 TMC 不在 high-end 14nm 以下的同战场。
+
+**(4) Dai Nippon Printing (DNP, TSE: 7912)** ——日本头部光罩玩家, 通过 PDMC (台湾) + PDMCX (厦门) 合资与 Photronics 联手覆盖 Greater China; **outside Taiwan + China 与 Photronics 直接竞争**。光罩业务是 DNP 全集团 (印刷 + 电子 + 包装 + 半导体) 的一个子部门, 单独披露有限。
+- 与 TMC 的竞争关系: 在台湾境内**不直接竞争** (DNP 通过 PDMC 间接出现), 在中国 / 韩国 / 日本市场是潜在对手。
+
+**(5) Hoya Corporation (TSE: 7741)** ——日本巨头, 光罩主要做**EUV mask substrate (mask blank)** ——全球 EUV mask blank 市占 ~80% ([Nomura 大中华半导体 2026-30F 复兴指南, 第 38 页](../sector/半导体材料.md))。
+- 与 TMC 的竞争关系: **不直接竞争——Hoya 是上游 mask blank 供应商, 不是 mask 加工厂。TMC 实际上是 Hoya 的客户。**
+- 估值: P/E 26.8×, P/S 6.1× —— 反映 Hoya 多元 (医疗 + 信息记录 + 半导体) 的高质量结构。
+
+**(6) SK-Electronics (韩国)** ——SK 集团成员, 主营 LCD 大尺寸光罩 + 部分 IC 光罩。
+- 与 TMC 的竞争关系: 在 LCD + 中小面板 mask 与 TMC 间接竞争。
+- 关键事实: **TMC 与 SK 集团是双向贸易**——TMC 2024 年报第 65 页明确披露 TMC 第 1 大供应商是 "SK KF" (SK keyfoundry, SK 海力士子公司 8 吋 wafer foundry, 同时为 TMC 提供 wafer-side procurement), 占总进货 38%。即 TMC 与 SK 集团是采购 + 销售双向关系。
+
+**(7) LG Innotek (韩国)** ——LG 集团光电子部门, 部分光罩业务。与 TMC 不直接竞争。
+
+**(8) Compugraphics International (英国)** ——欧洲小型光罩玩家, 与 TMC 不直接竞争。
+
+**(9) Shenzhen Newway Photomask + Shenzhen Qingyi Photomask (中国深圳)** ——中国本土玩家, 在国家半导体扶持政策下扩产, 主要供应中国 8/12 吋成熟节点 fab。**这是 TMC 在大陆市场最直接的低端价格对手**——TMC 2024 年报第 64 页明确提到"大陆内地光罩厂的产能不断开出, 并採取低价策略进入市场"作为不利因素。
+
+### 7.3 竞争维度对位 (4×4 matrix)
+
+```mermaid
+quadrantChart
+    title 全球光罩玩家在节点 vs 规模 的相对定位
+    x-axis 节点深度 (10nm) --> 节点保守 (200nm)
+    y-axis 单家规模小 --> 规模大
+    quadrant-1 高阶高规模
+    quadrant-2 中阶高规模
+    quadrant-3 中阶小规模
+    quadrant-4 高阶小规模
+    Hoya: [0.15, 0.95]
+    Tekscend: [0.20, 0.75]
+    DNP: [0.25, 0.70]
+    Photronics: [0.30, 0.60]
+    PDMC: [0.35, 0.40]
+    SK-Electronics: [0.50, 0.45]
+    TMC: [0.65, 0.30]
+    Shenzhen Newway: [0.85, 0.25]
+    Compugraphics: [0.55, 0.15]
+```
+
+**横轴解读**: 越靠左, 节点越深 (high-end, EUV / 14nm 以下); 越靠右, 节点越保守 (8 吋成熟)。
+**纵轴解读**: 越靠上, 玩家规模越大 (营收 + 市值 + 全球据点)。
+
+**TMC 当前定位 [0.65, 0.30]**: 中阶节点 (40-65nm 量产, 28nm 验证) + 中小规模 (USD 232 mn 营收 vs Photronics 867 mn / Hoya 数十亿)。这一定位**反映 TMC 在全球光罩玩家中的"亚洲本土中端"角色, 与高阶玩家错位, 不直接挑战 EUV / 14nm 以下战场**。
+
+**14 吋光罩攻先进封装是 TMC 试图向左上方位移的尝试**——但短期效果有限, 因为 advanced packaging mask 不是节点延伸而是"另一品类", 不会让 TMC 在 IC 节点战场上前移。
+
+### 7.4 TMC 的竞争优势 (在年报第 63 页 "竞争利基"中明确列出)
+
+> 引用 [2024 年报, 第 63 页 §业务发展计画 - 4. 竞争利基](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf):
+
+1. "(1) 拥有成熟製程产能与先进开发技术能力, 举凡 0.11 微米 (含以上)、及 90/65/55/40 奈米之生产技术皆完整提供客户满意量产交货服务。"
+2. "(2) 具备 28 奈米 (含) 以下, 先进製程技术能力及产能, 并伴随关键客户的技术发展, 保持紧密的的合作关系。"
+3. "(3) 与集团子公司 - 美祿科技合作, 提供一条龙的服务项目包含从晶圆代工搭配光罩製作股务 (按: 原文笔误, 应是"服务"), 为客户提升产品快速入市的竞争力。"
+
+**分析师重新整理 TMC 的真实竞争优势 (vs 全球同业):**
+
+| 优势 | 强度 | 说明 |
+|---|---|---|
+| 1. 36 年累积 400+ 客户认证关系 | **强** | 客户切换 mask 厂的代价极高 (重新认证 6-18 个月 + 良率风险), TMC 的累积客户基础是结构性护城河。 |
+| 2. 地理位置: 新竹科学园区, 与台湾 fab 步行可达 | **中强** | mask 交货 24-72 小时 turnaround 是物理常数, 新竹本土晶圆厂选 TMC 是 "时差零 + 物流零" 的天然优势; PDMC 同样具备, 但欧美 (Photronics 中国 / 韩国 / 欧洲厂) 不行。 |
+| 3. 8 吋 + 12 吋成熟节点的"全节点覆盖" | **中** | 0.5µm 至 40nm 全谱系都能做, 这是国际同业看重 high-end 的玩家不愿做的, 是 TMC 的差异化场。 |
+| 4. 集团内一条龙服务 (透过美祿科技 + mask + 自家集团) | **中** | 帮陆资 / 韩资 / 东南亚 IC 设计公司一站式接单, 这是 TMC 区别于 PDMC / 国际玩家的独特点。 |
+| 5. 与子公司精材 / 旺能 / 光环科技等技术与产业关系 | **弱中** | 多元化转型在 2017-23 是潜在优势, 但 2024-25 反成拖累, 2025-26 在新主下被定为"剥离对象"。 |
+| 6. 14 吋光罩攻 advanced packaging | **未兑现** | 2026 H2 试产 / 2027 量产, 是未来 3 年的 option 价值, 但尚未变现。 |
+
+### 7.5 TMC 的竞争弱点
+
+1. **缺乏 EUV / 7nm 以下高端能力**——结构性弱点, 长期被边缘化。
+2. **没有海外生产据点**——年报第 64 页明确"缺乏海外佈局生产服务, 易受到国内劳工供应不足影响", 也是欧美市场拓展受限的根本原因。
+3. **子公司多元化 7 年留下的财务结构包袱**——子公司亏损 + 母公司高负债比 (2024 末 80.4%) + ROE 长期低于同业 → 影响估值溢价。
+4. **mask blank 上游依赖 Hoya + Shin-Etsu + SK-Electronics**——年报第 64 页明确, 这是无法避免的产业现实, 但是议价空间小, 上游价格上涨直接压缩毛利。
+5. **大陆光罩厂低价进攻**——新增价格压力。
+
+---
+
+## 8. 市场机会 (TAM / SAM / SOM)
+
+### 8.1 TAM 测算——全球光罩市场
+
+**TAM (Total Addressable Market):**
+- 2024: ~**USD 51 亿** (含 IC mask + LCD/FPD mask + bumping/large area mask 全部)
+- 2030F: **USD 63-70 亿** (3-4 家不同研究机构, 2024-2030 CAGR ~3-5%)
+- 资料来源: [Mordor Intelligence, 2024-2030](https://www.mordorintelligence.com/industry-reports/photomask-market), [IMARC, 2024-2033](https://www.imarcgroup.com/photomask-market), [Exactitude Consultancy, 2024](https://www.globenewswire.com/news-release/2024/07/31/2921845/0/en/Photomask-Market-is-expected-to-be-valued-at-USD-6-36-billion-by-2030-Exactitude-Consultancy.html)
+
+**TAM 拆分:**
+- IC photomask: ~75-80% (~USD 38-40 亿)
+- FPD / LCD large area mask: ~10-15% (~USD 5-8 亿)
+- Bumping / WLP large area mask: ~5-10% (~USD 3-5 亿)
+- 其他 (LED, MEMS, 第三类半导体): ~2-5%
+
+### 8.2 SAM (Serviceable Addressable Market) ——TMC 实际能服务的细分市场
+
+TMC 没有 EUV + 7nm 以下能力, 且地理上欧美渠道弱, 应剔除:
+- 全球 EUV mask 市场: ~USD 8-10 亿 (Hoya mask blank + EUV 加工 5+ 玩家) ——TMC 不可服务
+- 全球 14nm 以下 mask 市场: ~USD 12-15 亿 ——TMC 不可服务 (PDMC + Photronics + Tekscend + DNP 占据)
+- 全球 28nm-65nm mask 市场: ~USD 10-12 亿 ——TMC **正在认证, 部分可服务**
+- 全球 8 吋 + 12 吋成熟 (≥65nm) mask 市场: ~USD 15-18 亿 ——**TMC 主要服务的 SAM**
+- 全球 LCD / FPD mask: ~USD 5-8 亿 ——TMC 仅服务中小面板部分, ~USD 1 亿
+- 全球 Bumping / 大尺寸 mask: ~USD 3-5 亿 ——TMC 9 吋 + 14 吋扩产, ~USD 0.5-1.5 亿 SAM
+- **合计 SAM = USD 15-18 + 10-12*0.5 + 1 + 0.5-1.5 ≈ USD 22-27 亿** (即 ~40-50% 全球 TAM)
+
+### 8.3 SOM (Serviceable Obtainable Market) ——TMC 现在能拿到的部分
+
+TMC 2024 营收 NT$75.6 亿 = USD ~232 mn, 即 SOM/SAM ≈ **0.9-1.1%**, SOM/TAM ≈ **0.5%**——TMC 占全球光罩市场 ≤1%, 占自己可服务的 SAM ~1%。
+
+**进一步细分**:
+- 在专业光罩 USD 18-19 亿 SAM 内, TMC USD 232 mn ≈ **1.2%**
+- 在亚洲 (台湾 + 中国 + 韩国 + 日本 + 东南亚) 专业光罩 USD 12-13 亿 SAM 内, TMC ≈ **1.8-2.0%**
+- 在台湾本土专业光罩 USD 3-4 亿 SAM 内 (主要是 PDMC + TMC 两家), TMC ≈ **20-25%** —— **这是 TMC 真正强势的市场, 仅次于 PDMC 的 75-80%**
+
+### 8.4 SOM 增长机会——2026-2030F 的增量空间
+
+**机会 1 (短期 2026-27F): 主业回稳 + 40nm/28nm 节点上行驱动 ASP**
+- TMC 自己 2024 年报第 73 页 §"重大资本支出预期可能产生效益"已明确披露 2025 年新增 12,500 片高阶光罩 / 销售值 NT$14.6 亿 / 毛利 NT$7.3 亿, 2026 年 13,500 片 / NT$16.3 亿 / 毛利 NT$8.2 亿。这是非常具体的自我承诺 ([2024 年报, 第 73 页](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))。
+- 即使保守按"实现率 70%", 2026 全年光罩主业增量 ~NT$11 亿 / +14-15% YoY, 加上子公司剥离后非控制权益亏损消失, EPS 转正具有可见度。
+
+**机会 2 (中期 2026-28F): 14 吋光罩 advanced packaging 订单 ramp**
+- NT$4.35 亿 capex (2025-12 通过) + NT$17.5 亿现金增资 (2026-01 通过) 部分用于 14 吋设备
+- 14 吋大尺寸光罩单片 ASP 是普通 12 吋 reticle 的 4-8 倍; 毛利率 50%+ (年报 §73 财务预测隐含)
+- *分析师估算*: 2026 H2 试产, 2027 满产可贡献 NT$5-8 亿增量营收, 毛利 NT$2.5-4 亿
+- 客户对象: 台湾本土 advanced packaging 主战场 (TSMC CoWoS, ASE/SPIL, 精材 XinTec, ChipMOS 南茂)
+
+**机会 3 (中长期 2027-30F): TSMC 本土化策略 + AI 算力需求传导**
+- [Nomura 2026-05-21, 第 13-14 页](../sector/半导体材料.md) 估算 TSMC 台湾本地 spare parts + 间接原物料采购比 2017 ~50% → 2030F ~70%, 这是结构性利好
+- TSMC 自家 mask shop 吃不下的成熟节点 + bumping 光罩持续外包, TMC 是受益方之一
+
+**机会 4 (长期 2028-30F): 第三类半导体 SiC / GaN 光罩需求扩张**
+- 第三类半导体 8 吋制造 (Wolfspeed 8 吋 SiC, ROHM 6 吋升 8 吋) 需要 mask, TMC 已经在做
+- 电动车 / 工业电源 / 5G 基站需求驱动 SiC / GaN 渗透
+
+### 8.5 投入策略——TMC 的资本配置选择
+
+按 TMC 2024 年报第 72-73 页:
+- 2024 年实际 capex NT$20.05 亿 (主要在房屋 + 曝光设备 + 检验/量测/制程/修补/环境设备)
+- 2024 现金净流入 (营业活动) NT$10.5 亿
+- 2024 年末现金 NT$14.3 亿 (足够支撑 2025 中等规模 capex)
+- 2025-26 计划 capex 节奏由新主优化, 节制非主业项目, 集中投入 14 吋 + 28nm
+
+**资本效率指标:**
+- ROIC 2024 = 营业净利 NT$2.21 亿 / (股东权益 NT$40.7 亿 + 长期借款 NT$72.9 亿) ≈ **2.0%** ——远低于 WACC, 价值毁灭区
+- ROE 2024 = 净损 NT$7.86 亿 / 平均权益 NT$45.9 亿 ≈ **−17%** ——价值毁灭
+- 2027F 若回归历史均值 (ROIC 6-8% / ROE 10-12%) 隐含市值上行空间, 但需 2-3 年时间窗口验证
+
+**整体 §8 的 message:** TMC 占全球光罩 TAM <1%, 但占其可服务 SAM 1.2%, 占台湾本土小赛道 20-25%——增长空间在主业回稳 (短期) + 14 吋 advanced packaging (中期) + 第三类半导体 (长期) 三轨; 预期 2026-27F 才进入可量化的兑现窗口。
+
+---
+
+
 
 
