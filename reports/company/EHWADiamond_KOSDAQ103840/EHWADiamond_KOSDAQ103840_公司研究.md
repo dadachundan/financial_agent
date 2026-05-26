@@ -206,3 +206,78 @@ EHWA 的旗舰业务是**销售给三星 / SK 海力士 / 台积电的半导体�
 过去 12 个月的产品端动作主要集中在**台积电与 SK 海力士新建超大规模 fab 的渐进式晶圆工具认证**，而不是单一旗舰产品发布；EHWA 没有公开股权披露义务，也未就单一 SKU 发布正式产品发布稿。过去 12 个月最显眼的战略事件是 **IMM PE 收购本身** — 这是公司控制权变更，而非产品发布。
 
 ---
+
+## 5. 客户与上市策略 (Go-to-Market)
+
+EHWA 的客户基础沿着三个事业部清晰划分，每个事业部的**集中度动态完全不同**。**建筑与石材**最分散 — 90+ 国家上千家小型建筑设备 OEM、分销商和石材加工车间，没有任何单一客户超过本事业部 5%。**工业 / 精密**为中等集中 — **现代汽车 / 现代摩比斯**是汽车 PCD / PCBN 工具的最大韩国客户，博世、丰田、宝马、通用汽车是名义上的国际一级供应商客户。**电子 / 半导体**最集中 — **三星电子、SK 海力士、台积电**三大客户合计可能占到本事业部多数营收，Intel、Micron、GlobalFoundries 及快速增长的中国大陆 fab (YMTC、SMIC、CXMT) 构成第二梯队 ([포브스코리아, 2024-04-10](https://www.forbeskorea.co.kr/news/articleView.html?idxno=337331); [FOMEK, 2024-09](https://www.fomek.or.kr/main/newsroom/news/vpg_view.php?wr_id=58); [한국경제, 2022-02-27](https://www.hankyung.com/article/2022022724411))。
+
+**客户集中度披露异常薄弱。** 作为非上市主体，EHWA **不适用韩国上市公司的"10% 客户披露"规则** (该规则要求在 사업보고서 中点名超过 10% 阈值的最大客户)，且其备案的 감사보고서并不拆分客户集中度。51 期 (FY2025) 合并审计报告**没有"주요 매출처 / 主要销售对象"章节**，只有合并营收线 ([DART 연결감사보고서 51기, 손익계산서](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331002816))。媒体报道点名了主要客户关系，但**未量化份额**；IMM PE 交易新闻稿同样泛泛点名"现代汽车、三星电子、台积电"，未披露具体销量 ([fn마켓워치, 2026-05-13](https://www.fnnews.com/news/202605130830353811))。对分析师而言，**这是一个真实的披露缺口** — *半导体线的客户集中度风险完全可能是 top-3 > 70%*，但这无法从任何公开文件中量化。
+
+```mermaid
+pie title FY2025 客户集中度 — 分析师构建的指示性拆分 (未披露)
+  "建筑 OEM 与石材加工 (分散, ~数千家)" : 50
+  "现代汽车 + 汽车一级供应商 (博世、宝马、通用)" : 12
+  "其他精密 (模具、轴承、航空)" : 13
+  "三星电子 (CMP / BG / 切割)" : 9
+  "SK 海力士 (CMP / BG / 切割)" : 8
+  "台积电 + 海外晶圆代工 (CMP / BG)" : 5
+  "其他半导体 (Intel、Micron、GF、中国 fab)" : 3
+```
+
+资料来源：指示性拆分根据媒体点名的客户关系 ([한국경제, 2022-02-27](https://www.hankyung.com/article/2022022724411); [포브스코리아, 2024](https://www.forbeskorea.co.kr/news/articleView.html?idxno=337331); [fn마켓워치, 2026-05-13](https://www.fnnews.com/news/202605130830353811))，叠加 FY2025 合并营收 ₩3,701 亿和分析师估算的 50/25/25 事业部结构构建而成。**EHWA 不正式披露客户集中度百分比**。
+
+**合同结构**为行业标准做法：主要半导体与汽车客户采用**长期主供应协议** (通常 1-3 年框架，价格每年重新议定)，通过滚动采购订单交付。具体到半导体耗材，EHWA 在重大 fab 上的产品认证周期为 12-18 个月；一旦被纳入工艺配方，**供应商切换成本** (工艺控制损失、新供应商再认证耗时数月) 让客户流失率较低 — 但**定价能力中等**，因为每个 CMP 抛光垫修整器步骤通常都会并行认证"第二货源"供应商。
+
+**地理分布**为全球化：约 60% 合并营收出口到约 90 个国家，最大单一出口市场为**中国大陆** (EHWA 在中国大陆运营 11 个法人实体中的 3 个 — 威海、福建、上海 — 既供应中国建筑 OEM，也供应日益扩张的 YMTC、SMIC、CXMT 半导体 fab 基础)，其次是**日本、东南亚 (泰国、印度尼西亚、越南)、美国 (通过 Irvine 办公室)、欧洲 (通过总部位于法兰克福的 EHWA Europe GmbH)、以及作为成长地区的印度 / 墨西哥** ([DART 연결감사보고서 51기, 종속기업 및 관계기업 명단](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331002816); [Ehwa Diamond Insa, 관계사 page](https://ehwadia-insa.co.kr/?page_id=1388))。14 个产能基地的全球分布如下图所示。
+
+![EHWA Diamond — 全球制造与销售网络](../../charts/ehwadiamond_global_footprint.png)
+
+资料来源：[DART 연결감사보고서 51기, 종속기업 명단](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331002816)。
+
+**上市策略 (Go-to-Market)** 以直接销售队伍主导大客户 (三星、SK 海力士、台积电、现代、博世) — 这些客户拥有**专门的 EHWA 技术销售工程师**，常驻客户工艺工程团队附近。规模较小的工业客户则通过**分销商网络**触达，最大分销商布局集中在**意大利与德国 (石材切割工具)、美国 (工业精密)、印度与东南亚 (建筑工具)**。公司自 2010 年代初即成为 SEMI 会员，每年参展 SEMICON Korea / Taiwan / Japan / West — **这是一个清晰的品牌与渠道信号 — 半导体耗材业务正在被作为严肃的长期业务来构建，而非机会主义副业** ([SEMICON Korea 2025 EHWA 展商画像](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=320&FromPage=Exhibitors.aspx&ParentBoothID=&ListByBooth=true&BoothID=595140))。
+
+一个值得特别点名的上市策略动态：**韩国 fab 客户 (三星、SK 海力士) 在"K-Semiconductor Belt"政策框架下明确优先选择本土供应商** — 这是 MOTIE 推动的公私合作国产化项目，目的是把过去主要来自日本、美国或台湾的晶圆工具耗材**国产化**。EHWA 在 CMP 修整器对三星供应上的本土在位优势 (三星-EHWA 联合的 US9314901B2 专利是这一关系深度的公开证据) 是一项**可量化的结构性优势**，3M、Kinik、Saesol 在韩国 fab 市场无法复制 — 但在台湾和美国 fab 市场，这一优势不延伸 ([investkorea 半导体门户, K-Belt 背景](https://www.investkorea.org/ik-en/cntnts/i-312/web.do); [KED Global — ASML K-Semi-Belt 背景, 2021](https://www.kedglobal.com/k-semiconductor-belt/newsView/ked202105130009))。
+
+---
+
+## 6. 行业概览
+
+EHWA Diamond 经营在**三个相互重叠的行业**中 — 它们共享一个上游投入 (工业 / 合成钻石)，但终端市场、增长曲线、监管制度与竞争动态截然不同。投资者评估 EHWA 时需要**在产品线层面理解行业结构** — 建筑工具行业与半导体耗材行业的结构性差异巨大，公司整体的合理风险调整后估值倍数取决于业务结构。
+
+### 6.1 钻石工具行业，自上而下
+
+全球**钻石工具行业**在长尾端高度分散 (中国、印度、意大利、西班牙、土耳其、美国的数千家小型供应商)，**在高精密端则寡占** (EHWA、3M、Kinik、Saesol、Disco、Entegris、Sumitomo Electric Hardmetal 等竞争对手)。行业研究机构给出的**全球总规模约 150-200 亿美元**，整体年复合增长率 (CAGR) 为个位数，其中高精密子细分 (半导体、先进精密加工) 增长 7-10%，建筑则大体跟随全球基建支出在 3-4% 增长。FY2025 EHWA 约 2.70 亿美元营收对应**全球市场约 1.5-2% 份额** — 是有意义的份额，但远未占主导。
+
+**上游投入** (合成工业钻石砂粒) 由全球约 20 家生产商供应，主要包括 **De Beers Element Six (英 / 南非)、Sandvik Hyperion (瑞典)、Sumitomo Electric (日)、Saint-Gobain (法)、ILJIN Diamond (韩) 以及一长串中国生产商 (河南 Funik、中南、Sinotec)**。EHWA 据报道**全球多源采购砂粒以维持议价能力** — IMM PE 交易公开提及"加强供应链杠杆"为收购后经营优先事项之一，行业观察人士将其解读为**继续多源采购钻石原料** ([fn마켓워치, 2026-05-13](https://www.fnnews.com/news/202605130830353811))。
+
+### 6.2 建筑与石材工具 — 结构性周期
+
+建筑工具子行业**成熟且结构性周期性**，营收与**全球基建支出、住宅 / 非住宅建筑开工、采石场活动**紧密关联。过去十年低个位数 CAGR 增长，预计 2030 年前继续保持 3-4% CAGR — 驱动因素是新兴市场基建建设 (印度、印度尼西亚、越南)，部分被发达市场饱和与韩国 / 日本基建老化抵消。中国仍是单一最大地理子市场 (按销量)，但定价结构性低于发达市场。子行业全球高度分散 — 全球前 5 大厂商合计市占率 <30% — 结构性护城河是**结合层冶金 IP** (十余年累计、覆盖数百种石材 / 混凝土等级的配方库) 与**区域建筑市场的分销 / 品牌** ([SEMI Korea 展商画像, EHWA 业务描述](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=320&FromPage=Exhibitors.aspx&ParentBoothID=&ListByBooth=true&BoothID=595140))。主要竞争对手包括 **Husqvarna (瑞典)、Hilti (列支敦士登)、Diamond Vantage (美)、Tyrolit (奥地利)** 以及区域专门厂商。
+
+韩国建筑是 EHWA 2023 财年业绩中尤为显眼的拖累 — 国内建筑开工因房地产疲软与政府支出紧缩而下滑，EHWA 建筑事业部份额收缩到足以把整体营业利润拖至 ₩145 亿 (前一年为 ₩260 亿)。2024-25 年的恢复 (营业利润 ₩353 亿 → ₩330 亿) 反映了韩国建筑的部分正常化加上半导体耗材的持续扩张 ([saramin 财务卡片, 2026-Q1 更新](https://www.saramin.co.kr/zf_user/company-info/view-inner-finance/csn/SUZ4bHJmRk1CNFBBMVkzSmpmSHdqZz09/company_nm/%EC%9D%B4%ED%99%94%EB%8B%A4%EC%9D%B4%EC%95%84%EB%AA%AC%EB%93%9C%EA%B3%B5%EC%97%85(%EC%A3%BC)))。
+
+### 6.3 工业 / 精密工具 — 汽车一级供应链
+
+PCD / PCBN / CVD 精密工具子行业更集中 — 前 5 大厂商 (**Sumitomo Electric Hardmetal (日)、Sandvik Coromant (瑞)、Element Six / De Beers (英 / 南)、Kennametal (美)、EHWA (韩)**) 合计市占率约 60%，其余分散于区域专门厂商。增长**滞后于汽车制造商资本开支** (当一级供应商建新发动机 / 变速箱产线时，会认证新一代 PCD / PCBN 工具 — 用于 EV 电机壳体与电池托盘加工等较硬材料)。近期行业增长 ~5-7% — 比半导体慢、比建筑快。结构性护城河在于**工艺 IP (PCD 压力烧结配方、CVD 涂层化学) + 汽车一级供应商的认证周期 (每个新工具族 12-18 个月) + 全球服务网络** ([Sumitomo Electric Hardmetal 公司主页](https://www.sumitool.com/en/))。
+
+EHWA 在这一子行业的竞争位置**在韩国与东南亚最强** (现代汽车 / 摩比斯生态)，在中国大陆增长；在日本 (Sumitomo Electric 在位)、欧洲 (Sandvik)、美国 (Kennametal) 较弱。**地域客户绑定**是真正的有效护城河 — 前 5 大厂商之间的技术领先大致可比，但客户-供应商关系极为黏性。
+
+### 6.4 半导体耗材 — 结构性增长池
+
+半导体耗材子行业 — 具体来说 EHWA 参与的细分 (CMP 抛光垫修整器、BG 砂轮、切割刀片) — 是**结构性增长池**，也是 IMM PE 交易倍数显著超过纯建筑工业的根本原因。行业研究机构将 **CMP 抛光垫修整器子市场估算为 2024 年 2.60 亿美元，2032 年增长至 4.46 亿美元、CAGR 7.3%** ([Valuates Reports — CMP Pad Conditioners Market 2026 版](https://reports.valuates.com/market-reports/QYRE-Auto-14R9251/global-cmp-pad-conditioners); [Business Research Insights — CMP Pad Conditioners 2032 预测](https://www.businessresearchinsights.com/market-reports/cmp-pad-conditioners-market-108568))；切割刀片与 BG 砂轮子市场大致为修整器的 2-3 倍 (合计 ~7-10 亿美元)，以类似的个位数到低双位数 CAGR 增长。高 CAGR 由以下因素驱动：
+
+- **每个先进逻辑节点的 CMP 步骤更多。** Nomura 测算 **A16 + 背面供电 (BPD) 比 N3 多约 20-30% 的 CMP 步骤**，原因是背面电网络需要额外平坦化 ([Nomura 2026-05-21, 第 4-6, 70 页](../sector/半导体材料.md))。
+- **每个 HBM 堆叠的 BG / 切割更多。** HBM3E / HBM4 每个堆叠使用 8-12 片减薄 DRAM 芯片，每片都要背磨 + 切割 — 相对单片 2D 芯片**拉动 8-12 倍**耗材使用量。
+- **产能扩张。** 台积电 1.6 nm 资本开支节奏 (Nomura 预计 2027 年达 ~700 亿美元)、三星华城 / 平泽 / Taylor (得州) 新厂、SK 海力士龙仁超大规模 fab，以及中国 fab 建设，**机械性地拉动**耗材销量。
+
+![全球 CMP 抛光垫修整器 TAM, 2024-2032](../../charts/ehwadiamond_cmp_tam.png)
+
+资料来源：[Valuates Reports — CMP Pad Conditioners Market (QYRE-Auto-14R9251, 2026 版)](https://reports.valuates.com/market-reports/QYRE-Auto-14R9251/global-cmp-pad-conditioners)，锚点为 2024 = 2.60 亿美元、2032 = 4.46 亿美元、CAGR 7.3%；中间年份插值。
+
+子行业的结构性特征是**前 5 集中 ~90% 份额**。Valuates 表述："前 5 大厂商合计市占率约 90%" — 这 5 家是 3M、Kinik、Saesol、Entegris、EHWA ([Valuates Reports](https://reports.valuates.com/market-reports/QYRE-Auto-14R9251/global-cmp-pad-conditioners); [openPR 2022 — CMP Pad Conditioners Market Top Companies](https://www.openpr.com/news/2865451/cmp-pad-conditioners-market-2022-growing-rapidly-with-latest))。**韩国是最大的地理消费市场** — 2022 年占全球需求约 24%，反映三星 + SK 海力士的本土 CMP 工具产能 (按面积计算约占全球前道晶圆产能 25% 为韩国) — 而亚太整体占 84% ([CMP Pad Conditioners Market, Valuates 2026](https://reports.valuates.com/market-reports/QYRE-Auto-14R9251/global-cmp-pad-conditioners); [Verified Market Reports — Saesol 行业画像](https://www.verifiedmarketreports.com/product/cmp-diamond-pad-conditioner-market-size-and-forecast/))。
+
+### 6.5 监管环境
+
+钻石工具行业**没有专门的监管制度** — 没有类似医疗的 MDR / FDA 审批、金融的 CFTC 清算、或核的 NRC 许可。半导体耗材线受制于**fab 工艺配方认证** (12-18 个月周期，fab 特定) 加上一般工业设备合规 (RoHS、REACH 适用于结合层化学品，ISO 9001 / 汽车的 IATF 16949)。**地缘政治出口管制** — 美国 BIS 对中国出口先进工具的限制 — 适用于上游先进晶圆 fab 设备 (ASML EUV、AMAT 蚀刻、Lam 蚀刻)，**当前不限制 CMP 修整器级耗材** ([investkorea 半导体门户](https://www.investkorea.org/ik-en/cntnts/i-312/web.do))。但若美中关系进一步恶化，EHWA 的中国子公司 (威海、福建、上海) 有可能成为关税 / 制裁向量。
+
+---
