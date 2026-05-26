@@ -228,4 +228,78 @@ FOUP 与 EUV 光罩盒是 Entegris 全组合中护城河最深的业务——FOU
 
 化学品输送（含 IntelliGen® 与超纯阀件 / 接头 / 管路 / 传感器）是 APS 的稳定基底——属于晶圆厂 capex 中 "化学品分配系统 (CDS)" 的供应类别，随 fab 数量增长而扩张，但增速温和。测试耗材是最小但利润率最高的子类——探针卡 / 测试座清洁耗材是耗损件，随测试机台年代际推进而稳步消耗。
 
+## 5. 客户与上市策略
+
+### 客户集中度 —— TSMC 占 16%、top-10 占 50%
+
+Entegris 在 FY25 10-K 风险因素章节直接披露客户集中度：**"我们最大客户台积电 (TSMC) 在 2025、2024、2023 年分别占净销售的 16%、16%、11%。其余 top-10 客户分别占 34%、32%、32%。我们的 top-10 客户分别占 2025、2024、2023 年净销售的 50%、48%、43%"** ([Entegris 2025 10-K, Risk Factors — Customer Concentration](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。这个趋势讲了一个内部一致的故事：随着 TSMC 在全球代工营收中的份额从 2024 年的约 64% 提升到 2025 年的约 70%——TrendForce 2025 Q4 季报把 TSMC 在 2025 年的全年代工营收份额定在 **69.9%**（vs. 2024 年的 64.4%）([TrendForce 4Q25 Foundry, 2026-03-12](https://www.trendforce.com/presscenter/news/20260312-12965.html))——Entegris 对 TSMC 的暴露同步扩大，两年间 top-10 集中度收紧了 700bp，从 43% 升至 50%。剩下名单里的隐含名字是 Entegris 在 10-K 中明确列为核心客户的全球先进逻辑与存储 IDM：三星电子、SK 海力士、美光、英特尔，以及代工厂 GlobalFoundries 与中芯国际 (SMIC)。
+
+```mermaid
+pie title FY25 净销售集中度 ($3.20B 总额)
+    "TSMC (单独披露, 16%)" : 16
+    "其它 top-10 客户 (34%)" : 34
+    "所有其它客户 (~50%)" : 50
+```
+
+资料：[Entegris 2025 10-K, Customer Concentration](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)。除 TSMC 以外的具体名字未单独披露——因为没有其它单一客户跨越 10% 的披露门槛；top-10 的成员构成历年基本保持一致。
+
+### 合同结构与客户关系节奏
+
+Entegris 不公开披露单一客户的长期供货协议条款，但 FY25 10-K 与历年 10-K 描述了客户关系结构的整体框架：多数大客户在 **滚动预测主供货协议加单笔订单** 的组合下运作，对耗材类（抛光液、抛光垫、过滤器、光阻辅料）有可预测的每片晶圆消耗量，因此包含最低数量与价格阶梯下降条款；高 mix 类（FOUP、腔体涂层）则采用项目制定价 ([Entegris 2025 10-K, MD&A — Customer Agreements](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。公司明确表述 *"我们可以与客户签订供货协议"*，并指出 *"任何单一主要客户的流失可能对公司产生重大不利影响"*——这种措辞表明关系结构稳定但非合约性独占 ([Entegris 2025 10-K, Risk Factors](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。
+
+### 地理分布
+
+营收的地理集中度比客户集中度还要陡峭，反映出晶圆厂物理上在哪里运作。FY25 净销售按地区拆分为 **美国 18% / 海外（即非美）82%**，对比 FY24 的 21%/79% 与 FY23 的 25%/75% ([Entegris 2025 10-K, Geographic Information](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。两年中美国份额持续下降，反映先进节点晶圆制造加速向台湾（TSMC 新竹与台南厂区）、韩国（三星平泽、SK 海力士 M16）以及东南亚 / 中国大陆转移（后者主要为成熟节点 IDM 扩产）。Entegris 的制造布局与客户基地高度对齐：液体过滤在 **马萨诸塞 Billerica 与日本米泽**；沉积材料在 **加拿大多伦多**；材料搬运 (FOUP) 在 **明尼苏达 Chaska 与韩国长安**；CMP 过滤器与 CMP 抛光液在 **台湾**；SiC 抛光液在 **伊利诺伊 Aurora**；固态前驱体在 **得州 Burnet** ([Entegris 2025 10-K, Item 2 Properties](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。
+
+![Entegris geographic mix](../../charts/entegris_geo_mix.png)
+
+*资料：[Entegris 2025 10-K, Human Capital + Geographic Information](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm)。员工 51% 在北美 vs. 客户营收只有 18% 来自美国——这种 "员工 / 营收" 的错配是波士顿 / 湾区总部美系材料供应商的典型特征：产品在美国研发、配方、IP 端制造，但最终在海外晶圆厂消耗。*
+
+### 上市策略 —— 直销，应用工程师驻客户现场
+
+Entegris 销售模式绝大多数为 **直销至晶圆厂**，而非通过分销商——一方面是因为每个 recipe 的产品认证周期为 12–24 个月，另一方面是因为应用工程团队需要与客户同地办公以支持认证与良率爬坡。第 4.10 节列出的台湾、韩国、日本、中国、新加坡、马来西亚 ER&D 中心同时也是销售支持与客户工程站点 ([Entegris 2025 10-K, Item 1 — ER&D](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。对低 mix 耗材类（测试座清洁耗材、腔体涂层），公司确实使用间接渠道——但这部分仅占小份额营收。10-K 还指出公司 *"可以与客户就定制产品与工艺开发签订协议"*——早期联合开发是大客户关系的结构性优势 ([Entegris 2025 10-K, Item 1](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。
+
+### 合作生态
+
+10-K 列出公司在材料路线图开发中的行业联盟与大学合作伙伴：**imec**（比利时鲁汶）、**CEA-LETI**（法国格勒诺布尔）、**Fraunhofer Institute**（德国），以及美国高校 **斯坦福、耶鲁、MIT、伊利诺伊大学厄巴纳-香槟分校、SUNY Albany** ([Entegris 2025 10-K, Item 1 — ER&D](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。这些关系是材料供应商能在量产前 5–7 年获得路线图能见度的方式——公司目前正在变现的 "Mo 替代 W" 转型，约从 2018 年起就已在 imec 系统性研究。
+
+## 6. 行业概览
+
+### 行业定义与范围 —— 半导体材料
+
+半导体材料行业由 (i) 每片晶圆制造工艺中消耗的耗材（抛光液、光阻、气体、化学品、硅片、光罩、空白光罩基板），和 (ii) 污染控制 / 搬运硬件（过滤器、FOUP、包装、分配系统）组成。SEMI 把它分为两个子类：**晶圆制造材料 (Wafer Fab Materials, WFM)** 与 **封装材料 (Packaging Materials)**——前者为晶圆厂内消耗的耗材，后者为后端封装组装中的基板、引线框、键合丝。Entegris 的组合几乎全部落在 WFM——公司在封装材料端几乎没有直接暴露，那是 Resonac、Sumitomo Bakelite 等公司的主场。
+
+按 SEMI 材料市场数据订阅 (Materials Market Data Subscription)，**全球半导体材料 2025 年营收达到创纪录的 $732 亿（同比 +6.8%）**，其中 WFM $458 亿（同比 +5.4%）、封装材料 $274 亿 ([SEMI press release, 2026-05-12](https://www.semi.org/en/semi-press-release/global-semiconductor-materials-market-revenue-reaches-record-73.2-billion-dollars-in-2025-semi-reports))。WFM 内，**光刻相关材料（光罩、光阻、辅料）与湿化学品录得双位数增长**——这与制程工艺强度提高、光刻要求收紧推升每片晶圆消耗量的方向一致 ([SEMI press release, 2026-05-12](https://www.semi.org/en/semi-press-release/global-semiconductor-materials-market-revenue-reaches-record-73.2-billion-dollars-in-2025-semi-reports))。
+
+### 需求的地理结构
+
+按 SEMI 数据，台湾连续 16 年仍是全球最大半导体材料消费地，FY25 营收 **$217 亿**（约占全球 30%），其次为 **中国大陆 $156 亿（约 21%）** 与 **韩国 $112 亿（约 15%）** ([SEMI press release, 2026-05-12](https://www.semi.org/en/semi-press-release/global-semiconductor-materials-market-revenue-reaches-record-73.2-billion-dollars-in-2025-semi-reports))。日本、北美、欧洲合计占余下约 33%。地理结构与野村行业报告的框架一致：2025 年全球半导体材料销售 ~$800 亿，区域排名相同（台湾 30%、中国大陆 20%、韩国 18%、日本 10%、北美 10%、欧洲 8%）([行业笔记，引用野村《Greater China Semi》2026-05-21](../../sector/半导体材料.md))。
+
+### 增长动力 —— AI、先进节点、以及每片晶圆材料消耗强度提升
+
+半导体材料 2026-2030 的结构性增长论点建立在三条相互正交、彼此叠加的驱动力上：
+
+1. **AI 驱动的先进节点量产。** 10-K 直接表述：*"AI workloads are fueling demand for advanced logic chips with higher transistor density and specialized architectures, as well as High Bandwidth Memory (HBM) to support the enormous data throughput required for training and inference in large-scale models"* ([Entegris 2025 10-K, Item 1 — Industry Trends](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。TSMC、三星、Intel 的先进节点量产——N3 满产、N2/A16 在 2026-27 启动——非线性推升每片晶圆材料消耗，因为 mask 层数、沉积步数、蚀刻步数、CMP 步数、清洗步数都比晶圆面积更快地扩张。
+
+2. **工艺复杂度 / 器件架构转型。** 10-K 还指出：*"semiconductor architectures are changing and dimensions are shrinking, with increasing transistor complexity, extreme ultraviolet lithography, multilayered patterning, and vertical structures such as FinFET, 3D NAND and GAA devices. These advanced technologies and architectures require more process steps, new and innovative materials and sophisticated contamination control solutions"* ([Entegris 2025 10-K, Item 1](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。野村报告把这条量化：A16+BPD (Backside Power Delivery) 下 CMP 步数比 N3 增加 **20–30%** ([行业笔记](../../sector/半导体材料.md)，引用野村 Fig. 8)。3D NAND 到 2027F 将堆叠至 400 层以上，每层需要独立的蚀刻 + CMP 循环。
+
+3. **先进节点产能扩张。** SEMI 统计 **2025 年单年内有 18 座新晶圆厂开工建设**，TSMC 资本开支按野村建模在 2027F 达到 ~$700 亿（资本开支强度约 50%）支撑 1.6nm 量产 ([行业笔记](../../sector/半导体材料.md)，引用野村 p. 13）。每一个新的晶圆开始量都加进到耗材的循环消耗基底。
+
+这三股力量叠加，使半导体材料行业从 "跟着 GDP 走" 的增长画像，切换为对头部供应商而言中到高单位数营收 CAGR 的可持续轨迹。
+
+### 行业结构 —— 中度集中、高切换成本
+
+WFM 内的主要类别是：硅片（按野村 2025 估计占 WFM 约 31%）、光阻与辅料（13% + 7%）、特种气体（~13%）、CMP 耗材（~7%）、靶材（~3%），余下为清洗、介质、次要类别 ([行业笔记](../../sector/半导体材料.md)，引用野村 Fig. 26)。每个子段有各自的竞争结构，但共同特征是 *基于每个 recipe 重新认证* 的高切换成本——即便在同一个 CMP 抛光液类别内，客户通常从同一家供应商买 3–5 种不同的抛光液化学（钨 + 铜 + 介质 + 阻障层 + 清洗），所以单一化学品被替换几乎只在质量出现明显下滑时才发生。
+
+WFM 行业整体属于中度集中而非寡占——在任何一个化学品类别内，前 3 家供应商通常占全球营收 60–75%，其余被区域专家长尾分摊。结构性例外是 CMP 抛光垫——杜邦凭 IC1000 垫族在历史上占据全球 70% 以上份额；Entegris 凭 CMC 资产是可信的 #2 挑战者，鼎龙、富士纺、JSR 争夺剩余份额 ([行业笔记](../../sector/半导体材料.md))。
+
+### 监管环境 —— PFAS、对华出口管制、化学品安全堆栈
+
+10-K 点出三个监管压力点。**第一，PFAS 监管**：Entegris 许多过滤膜与超纯聚合物产品是基于全氟烷烃 (perfluoroalkyl)——PFA 氟聚合物因其化学惰性和无可萃取物而是高纯度过滤膜的行业标准。公司在风险因素中说明 *"PFAS-containing products incorporated into our products may negatively impact our supply chain due to the potentially decreased availability, or non-availability, of PFAS-containing products"* ([Entegris 2025 10-K, Risk Factors — PFAS](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。EPA 与欧盟均在 2024-25 推进广泛 PFAS 限制，半导体工艺的 PFAS 应用通常被处理为豁免的必要用途。中期风险是配方迁移而非短期禁用。
+
+**第二，美中出口管制**：美国商务部 BIS 2022-10 的规则（以及 2023 年补丁）限制向被列名中国晶圆厂销售先进节点半导体制造设备与某些技术，间接影响美国注册材料供应商对中国先进节点晶圆厂的销售。10-K 直接引用：*"The impact of export controls, economic sanctions and other similar restrictions"* 被列为顶层风险因素 ([Entegris 2025 10-K, Risk Factors](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。
+
+**第三，关税暴露**：10-K 提到 *"The impact of tariffs and a volatile trade environment"*——美国 2025 年关税堆栈给全球供应链带来层叠的成本压力 ([Entegris 2025 10-K, Risk Factors](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。Entegris 的缓冲方式是区域生产：CMP 抛光液在台湾、FOUP 在韩国与明尼苏达、过滤器在日本与马萨诸塞——可以从区域工厂为区域客户供货。
+
+
 
