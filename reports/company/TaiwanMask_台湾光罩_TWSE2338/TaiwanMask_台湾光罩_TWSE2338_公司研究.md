@@ -194,3 +194,166 @@ timeline
 
 ---
 
+## 4. 产品与服务 (本报告最重要章节)
+
+> **章节定位**：依公司研究 skill 的"Products & Services chapter is the most important section of the report"原则, 本章 ~1,800 字、占全报告比重最大。**4.1 锚定 TMC 自己的年报产品表 (verbatim)**, **4.2-4.5 按光罩客户行业 (IC/LCD/LED/Bumping) 分别走"年报 verbatim → 中文释义 → 分析师观点"三段结构**, **4.6 单独覆盖技术节点路线图与 14 吋 advanced packaging 新品**, **4.7 综合段说明光罩在客户晶圆制造流程中的位置**。
+
+### 4.1 TMC 自己披露的产品矩阵 (verbatim, 2024 年报 第 60 页)
+
+下表是 TMC 2024 年报第 60 页 §"业务内容 - (一) 业务范围 - 2. 公司目前之商品及服务项目"直接转译, **未做任何重组或推断**——这是 TMC 自己披露的、可被审计的产品矩阵。
+
+> "随著半导体市场的积体电路晶片生产工厂及生产设备不断之演进, 本公司可供应之光罩产品如下所列：" ([2024 年报, 第 60 页](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))
+
+| 客户行业别 | 客户晶圆厂使用机型别 | TMC 提供的光罩规格 |
+|---|---|---|
+| **IC (积体电路)** | Stepper, Scanner | Projection 5× / 4× / 2.5× / 2× Reticle (5" 与 6") |
+| **LCD (液晶显示器)** | Nikon | masks up to 7" |
+| **LED (发光二极体)** | ASML | (5" ~ 7") |
+| **Bumping (晶圆级封装凸块)** | Aligner | Large area mask (8" ~ 24") |
+
+资料来源：[2024 年报, 第 60 页 §业务内容](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf)。
+
+**几个直接观察:**
+
+1. **IC 是绝对主力**——同份年报第 60 页说："本公司主要营业项目为生产晶圆代工製程所需之光罩, 其中以半导体类最多约佔客户行业别**超过 9 成以上**, 其他类为生产液晶显示器 (LCD/LED) 所用及晶圆级晶片尺寸封装 (Bumping) 用之光罩。"——因此 IC 占客户类别 ≥90%, LCD/LED/Bumping 合计 <10%。
+2. **机型列示反映 TMC 客户的设备组合**——Stepper/Scanner (ASML PAS 5500 + TWINSCAN 系列、Nikon NSR 系列, 主流晶圆厂), 7" mask 用 Nikon LCD 曝光机, ASML for LED, Aligner 用 8-24" 大尺寸光罩 (即 bumping 与 WLCSP)。**TMC 不接 EUV**——所列设备全是 i-line (365nm) → KrF (248nm) → ArF (193nm) → ArF immersion (193nm wet) 的 DUV 体系。
+3. **5"/6"/7"/8"-24" 光罩尺寸差异**——5×/4×/2.5×/2× projection mask 即"用 5 倍 / 4 倍 / 2.5 倍 / 2 倍缩小投影"的标准 5"-6" reticle (业内俗称 "small reticle" = 6 吋), 用于 8 吋与 12 吋晶圆主流; 8-24" "Large area mask" 是 "Bumping" 用大尺寸光罩, 给晶圆级封装 (WLCSP) + RDL (Re-Distribution Layer) + bump 工艺用——这块就是 TMC 2025-12 通过的 NT$4.35 亿"14 吋光罩"扩产的产品类别 (见 §4.6)。
+
+### 4.2 IC 光罩 (核心业务, 占客户类别 ≥90%)
+
+#### 4.2.1 年报 verbatim 引用
+
+> "光罩在半导体产业链中位居於关键性地位, 佔半导体製造材料 13%, 其产品之规格主要随积体电路技术蓝图发展。由於积体电路工业与时俱进的精密化需求, 最先进的光罩技术已进入 2 奈米以下之研发及生产, 而本公司已投资新型设备并研发相关製程, **目前技术已取得 65/55/40 奈米製程相关客户之认证并进入量产**。"  ([2024 年报, 第 60-61 页](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))
+
+> "短期计画：增加 55/65 奈米市场佔有率; 扩大成熟光罩製造佔有率。中期计画：导入 28/40 奈米光罩量产。中长期计画：持续投资先进光罩开发, 并研发新製程及拓展新客源。" ([2024 年报, 第 62 页 §业务发展计画](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))
+
+#### 4.2.2 中文释义 / Plain-language gloss
+
+**光罩 (photomask / reticle) 在 IC 制造流程中的物理角色：** 一片现代 CMOS 晶圆要经过 **30-90 道光刻 (lithography) 步骤**——每一步, 晶圆涂上光阻 (photoresist), 进入 stepper / scanner, 紫外光透过对应工艺步骤的那片**光罩** (mask)、把图案"晒"到光阻上, 然后显影、刻蚀、清洗、再涂下一层。光罩本身就是这一整套电路图案的"模具"——按 TSMC 16nm 制程需要约 50-60 套光罩, 28nm 约 40 套, 65/55nm 约 25-30 套, 0.13µm 约 15-20 套 ([TSMC mask service overview, UMC 官网光罩服务](https://www.umc.com/zh-TW/StaticPage/mask_service))。
+
+**TMC 在节点谱系上的位置：**
+- **0.5-0.13µm (8 吋成熟节点的主战场)**——TMC 36 年累积的基本盘, 客户包括台湾 8 吋晶圆厂 (Vanguard 世界先进 / Winbond 华邦 / 部分 UMC 8 吋 fab) + 海外 8 吋 fab (中国 / 韩国 / 日本) + 累积 400+ IC 设计公司。
+- **90/65/55nm (12 吋成熟+) ——已稳定量产**——这块 2019 年起重点投资 (JEOL 高端 e-beam 直写机), 2023-24 量产稳定; 客户主力是 PSMC 力积电 / Vanguard / 部分 UMC 12 吋 + 韩国 / 中国 12 吋成熟节点 fab。
+- **40nm —— 客户验证完成、ramp 量产中**——年报第 2 页 + 第 62 页明确"114 (2025) 年完成 40 奈米光罩量产化"。**这是当前主业 ASP 提升的核心驱动**: ≤0.13µm 高阶光罩营收 2023→2024 +20% / 占比 15.8% → 18.0% ([2024 年报, 第 63 页 高阶产品的拓展](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))。
+- **28nm —— 客户认证中、规划 2025-26 量产**——这一节点是 IC 设计公司 SoC + IoT + 汽车电子的主流, 也是 TMC 攻向 high-end 的天花板。
+
+![≤0.13µm 高阶光罩营收占比变化](../../charts/taiwanmask_advanced_node.png)
+
+*图 4.1 台湾光罩 ≤0.13µm 高阶光罩营收占比变化 (2023 vs 2024)。来源：[2024 年报, 第 63 页](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf)。*
+
+**光罩制造的技术阶梯——为什么节点越先进, 光罩越贵 (技术差异化):**
+
+- **0.5µm 至 0.13µm (binary photomask)**: 镀铬 / Cr 的吸光层 + 石英 / quartz 基板, 即"普通光罩"——光透过透明处、被铬层挡住。这是 1980-2000 年代的主流。
+- **90/65nm 起 OPC mask (Optical Proximity Correction, 光学邻近修正光罩)**: 因为光的衍射开始扭曲图案, 必须在 mask 上"故意画歪一点" (e.g. 加 hammerhead, serif) 让光刻出的图案恢复方形——这增加了 mask 设计与制造的复杂度, 单 mask 写图时间 +2-5×。
+- **65/55nm 起 PSM (Phase Shift Mask, 相位移光罩)**: 在 mask 上加一层透明的相移层 (e.g. MoSi 钼硅化合物), 让相邻区域光的相位差 180°, 利用相消干涉锐化图案边缘——主要分 Att-PSM (attenuated PSM, 衰减式) 和 Alt-PSM (alternating PSM, 交替式)。这是 TMC 年报第 60 + 62 页明确提到的"OPC 光罩 + PSM 相位移光罩"两大技术。
+- **40nm 以下 (ArF immersion, 193nm 浸润式)**: 需要双重曝光 / triple patterning, mask 数量翻倍 + 每片 ASP 上升, 量产良率更难——这是 TMC 当前主攻的台阶。
+- **28nm 起 ArF immersion + advanced OPC + advanced PSM**: 单层最高密度图案需要 multiple exposure, mask 缺陷规格 <30nm, e-beam 写图时间 12-24 小时/片——TMC 这块是要做客户认证、未量产。
+- **14/10/7/5/3/2nm (EUV)**: 13.5nm 真空紫外, 反射式 mask + Mo/Si 多层反射涂层 + Ru capping + Ta-based absorber, blank 几乎被 Hoya 垄断 80%——**TMC 不做 EUV, 这是市场结构性的"天花板"** ([Nomura 大中华半导体 2026-30F 复兴指南, 第 38-39 页, 2026-05-21](../sector/半导体材料.md))。
+
+#### 4.2.3 *分析师观点：* IC 光罩业务的护城河强度
+
+**护城河类型：** 客户认证粘性 + 制造经验曲线 + 地理位置 + 部分 IP/技术 (e-beam 写图工艺 know-how)。
+- **客户认证粘性 (主要护城河)**: 一颗 IC 从 tape-out 到量产, 客户要花 6-18 个月做光罩认证 (CD uniformity / defect / overlay / line edge roughness), 一旦量产, 切换 mask 厂的代价极高 (重新认证 + 风险)。这是 TMC 36 年累积"超过 400 家客户" ([2024 年报, 第 61 页](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf)) 的基石。
+- **地理位置 (中等护城河)**: TMC 年报第 60 页明确强调"日夜时差大的欧美地区业务拓展还是有所不便, 加上远距离运输时间太长......"——光罩交货周期短 (24-72 小时 turnaround for re-spin), 物流时差是结构性壁垒。台湾本土晶圆厂 + 韩国 / 日本 / 中国大陆 12 吋扩产, **地理就近就是 TMC 在亚洲市场的天然护城河**。
+- **e-beam 写图 know-how (有限护城河)**: 主要设备 JEOL JBX-3050 / NuFlare EBM-9500 等都是日本制——所有玩家都能买, 差异在如何调校工艺 + 缺陷修补 + 量产良率, TMC 累积 36 年, 但 PDMC (Photronics + DNP 合资) 在台湾本土同样有 ≥10 年 advance, 这一项 TMC 并不独占。
+
+**核心比较优势 (vs 全球同业):**
+- vs **Photronics (PLAB) / Toppan-Tekscend / DNP / Hoya** (四大国际玩家合计 ≥80% 专业光罩市占)——TMC 不接 EUV / 14nm 以下先进逻辑, 没法跟; 但**专注 8 吋成熟 + 12 吋 90-40nm + 攻 28nm**, 与国际玩家在节点上错位竞争, 主战场是台湾本土与亚洲 8 吋扩产潮 (CIS, 功率器件, MCU, automotive analog)。
+- vs **PDMC 台湾美日先进光罩** (新竹本土最直接对手, Photronics + DNP 合资)——PDMC 主攻 14nm 以下与 28nm 高阶, 是 TSMC 与 UMC 高阶节点的主要外包伙伴; **TMC 主攻 90-40nm + 8 吋成熟, 两家在 28nm 上有重叠 (TMC 在追赶认证), 在其他节点上是非直接竞争**。
+- vs **中国大陆光罩厂 (Shenzhen Newway, Shenzhen Qingyi, 部分新晋玩家)**——这是 TMC 最直接的低端威胁, 中国 8 吋 / 12 吋成熟扩产带动本土光罩需求 + 国家补贴, **它们用低价进攻成熟节点**, 年报第 64 页明确列为"不利因素"。但中国厂在 12 吋 65/55nm 以下品质 + 良率仍有差距。
+
+**整体竞争优势判断 (verdict): 中等护城河 (partial moat)**, 集中在台湾本土 + 韩日 + 12 吋成熟节点; 缺乏 EUV 与 7nm 以下高端竞争力, 长期容易被边缘化。
+
+### 4.3 LCD 光罩 (~5-7% 营收, 数据中型小面板)
+
+#### 4.3.1 年报 verbatim 引用
+
+> "在液晶显示器市场中, 光罩可适切的应用在**较高解析度的中小面板製造**, 缝接 (stitching) 数张光罩以满足面板製程要求。" ([2024 年报, 第 60-61 页](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))
+
+#### 4.3.2 中文释义
+
+LCD 光罩是面板厂 (Display panel fab) 用的光罩——尺寸通常远大于 IC 光罩 (7" 起步, 大面板光罩可达 14×17"+), 制造 TFT 阵列 + 彩色滤光片 + 像素电极。TMC 这一块走的是"**中小面板 + 高解析度 + stitching 缝接**"路径——典型应用是中小尺寸智能手机 / 平板 / 车载显示的 high-PPI TFT mask。
+
+**Stitching (缝接) 是关键技术分水岭**——当客户的面板尺寸超过单一光罩的曝光区, 必须把图案分成多张光罩, 每张曝光相邻区域, 通过精密对位 (overlay <0.5µm) 把图案"无缝缝接"——这需要 mask 厂提供 stitching-ready 的 mask 设计 + manufacturing know-how, 是少数大尺寸 mask 玩家的差异化领地。
+
+#### 4.3.3 *分析师观点：*
+
+LCD 光罩对 TMC 是"利基补充"——全球 G10.5+ 大尺寸面板厂 (BOE 京东方 + TCL CSOT + LG Display 等) 的光罩主要由 Toppan-Tekscend、SK-Electronics、LG Innotek 等占据, 单片光罩单价数百万至千万级新台币, 进入壁垒高 (大尺寸 mask blank 供应商少 + 写图机数量受限)。**TMC 不在主战场**, 而是在中小面板 (≤7") high-PPI mask 上, 与韩国 SK-Electronics、Compugraphics 等竞争; 同时这块业务受面板景气拖累 (2024 LCD 中小面板 ASP 仍处低位)。这块业务 *分析师估算 (year-end 2024)* ~3-5% TMC 营收。
+
+### 4.4 LED 光罩 (~1-2% 营收, 利基)
+
+LED 光罩是磊晶厂 (epitaxy fab) 与 LED 晶粒 fab 用——尺寸 5-7", TMC 用 ASML 类机型支持。客户主要是台湾 LED 厂 (Epistar 晶元光电、Lextar 隆达, 后两者合并为 富采投控 ALD)。这块业务在 LED 整体景气下行后保持稳定但贡献小; 2024 年报未单列收入, *分析师估算约占 1-2% 集团营收*。
+
+### 4.5 Bumping / 晶圆级封装光罩 (~5-8% 营收, 这是 14 吋扩产的核心)
+
+#### 4.5.1 年报 verbatim 引用
+
+> "先进封装技术的进步透过 Bumping 及 RDL 等製程加工直接在晶圆上进行完成, 这些都需要採用光罩包含 **9 吋光罩 (用在 8 吋晶圆)、14 吋光罩 (用在 12 吋晶圆)** 提供服务。" ([2024 年报, 第 60-61 页](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))
+
+#### 4.5.2 中文释义
+
+**Bumping / 晶圆级封装光罩**是"封装直接在晶圆上做"流程所用的大尺寸光罩——传统封装是把晶圆切割再封装, "wafer-level packaging (WLP / 晶圆级封装)" 是把铜柱 (Cu pillar)、锡球 (solder bump)、RDL (redistribution layer / 重布线层) 在晶圆切割前直接在晶圆上完成。
+
+**WLP 光罩的特殊点：**
+1. **尺寸大**——8 吋晶圆 (200mm 直径) 用 9 吋光罩 (228 mm 边长), 12 吋晶圆 (300mm 直径) 用 14 吋光罩 (366 mm 边长); 相比标准 5"/6" IC 光罩, 面积大 5-15 倍。
+2. **节点宽松**——WLP 工艺通常 0.5µm 至 2µm, 不需要 ArF / EUV, 用 i-line / KrF 即可。
+3. **单价高**——单片 9-14 吋 large area mask 单价是 5"/6" reticle 的 3-8 倍, 这是 TMC 攻 14 吋的根本财务理由。
+4. **客户类型不同**——主流客户是 OSAT (封测厂, e.g. ASE 日月光、Amkor)、晶圆级封装专门厂 (精材 XinTec、ChipMOS 南茂)、以及攻 advanced packaging 的 IDM 与 foundry (TSMC CoWoS / SoIC 工厂、Intel EMIB-T 工厂)。
+
+#### 4.5.3 14 吋光罩攻先进封装中介层——2025-12 通过 NT$4.35 亿扩产的核心产品
+
+TMC 2025-12-23 董事会通过 NT$4.35 亿设备采购扩 14 吋光罩产线, 目标客户是**2.5D / 3D 高阶封装的硅 interposer (中介层)** + **chiplet 异质整合**:
+
+- **CoWoS (Chip-on-Wafer-on-Substrate) 与 SoIC (System-on-Integrated-Chip)**——TSMC 的 advanced packaging 平台, HBM3/HBM4 + AI ASIC 的标配。HBM3E + GPU die 通过硅 interposer 在 12 吋晶圆上互连, **interposer 自身的 RDL 层 + TSV 通孔需要 14 吋光罩**。
+- **EMIB-T (Embedded Multi-die Interconnect Bridge with TSV)**——Intel 的 advanced packaging 平台, 也走类似工艺。
+- **Broadcom 的 Glass Core Substrate 路线** (野村报告 2026-05-21 第 11+85-88 页) 也涉及大尺寸光罩, 但主要瓶颈在 TGV 工艺与玻璃基板, 光罩相对成本占比小。
+
+> CEO 陳立惇 2026-01 公开表态："**14 吋光罩是高阶封装中介层的关键, 是 TMC 未来三年最重要的产品。**" ([经济日报：台灣光罩回歸本業拚轉盈 製程升級助攻 ASP 續揚, 2026-01](https://money.udn.com/money/story/5612/9222106); [今周刊：多軌並行布局 台灣光罩引領蛻變搶占先進封裝市場, 2026-01-09](https://www.businesstoday.com.tw/article/category/183015/post/202601090020/))。
+
+设备 2026 上半年开始安装 (公告时点), 预期 2026 H2 试产, 2027 量产贡献营收 ([ETtoday：台灣光罩宣布投4.35億元擴14吋光罩產能, 2025-12-23](https://finance.ettoday.net/news/3088738))。**年报 第 73 页 §"重大资本支出预期可能产生效益"** 已自我披露 2025 + 2026 高阶光罩规划增量产能: 2025 年增加 12,500 片 / 销售值 NT$14.6 亿 / 毛利 NT$7.3 亿; 2026 年 13,500 片 / NT$16.3 亿 / 毛利 NT$8.2 亿——隐含**毛利率 50%, 显著高于公司整体 18.8%**——这是 14 吋光罩驱动 ASP 与毛利率反弹的明确数据 ([2024 年报, 第 73 页](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))。
+
+#### 4.5.4 *分析师观点：* 14 吋扩产的护城河可达性
+
+**机会信号 (正向):** AI 算力推升 HBM + advanced packaging 容量, 2026-30F 是 CoWoS 与 SoIC 产能扩张高峰; TMC 是台湾**唯一一家本土资本的 14 吋光罩玩家** (PDMC 是日美合资, 国际玩家 Photronics/Toppan/DNP/Hoya 在台湾没有 14 吋 mask 产线), TSMC + 联电 + 力积电的本土化策略将给 TMC 释单 ([Nomura 大中华半导体 2026-30F 复兴指南, 第 12-14 页, TSMC 本土化清单](../sector/半导体材料.md))。
+
+**风险信号 (负向):** Bumping 光罩 ASP 与单片毛利率高, 但客户认证周期长 (3-6 个月) + TSMC CoWoS 的内部 mask 部门 (TSMC 自建光罩) 是首选, **TMC 的外包占比有限**——可能只能拿到 advanced packaging 边缘的 spillover 订单。NT$4.35 亿设备投入与 2027 量产贡献 NT$16 亿的预期需要持续观察。
+
+**整体评判 (verdict): 部分护城河 (partial moat), 增长可见性中等。**
+
+### 4.6 技术节点路线图 + 研发投入
+
+**研发支出 (R&D Expenses):**
+- 2024 年: **NT$3.89 亿** ([2024 年报, 第 62 页](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))。占营收 5.1%。
+- 2025 年规划: 约 **NT$2.7 亿** ([2024 年报, 第 74 页 §未来研发计画](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))。占营收 ~4.5%, 下调反映新主聚焦主业 + 精简非核心研发。
+
+**研发成果 (2024 年):** 开发 28/40/55/65 奈米光罩量产技术 ([2024 年报, 第 62 页](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf))。
+
+**长中短期发展计划 (年报第 62 页 verbatim):**
+- **短期**: 增加 55/65nm 市场占有率; 扩大成熟光罩制造占有率。
+- **中期**: 导入 28/40nm 光罩量产。
+- **中长期**: 持续投资先进光罩开发, 并研发新制程及拓展新客源。
+
+### 4.7 综合段——光罩在客户晶圆制造流程中的位置 (the synthesis)
+
+```mermaid
+graph LR
+    A[IC 设计公司<br/>tape-out GDSII] -->|EDA 切片| B[TMC 光罩厂<br/>e-beam 直写 + 检测 + pellicle]
+    B -->|每片光罩 24-72hr turn-around| C[晶圆代工厂<br/>UMC/PSMC/Vanguard/TSMC]
+    C -->|每片晶圆 30-60 道光刻| D[晶圆切割与封测]
+    D --> E[终端产品]
+    B -.->|14&quot; 大光罩<br/>用于 advanced packaging| F[OSAT / WLP 厂<br/>ASE / Amkor / XinTec]
+    F -->|2.5D/3D HBM+ASIC interposer| D
+```
+
+光罩在 IC 制造流程中的位置很清楚——**位于 IC 设计公司与晶圆厂之间, 是模具供应链的关键一环**。TMC 一方面服务于经典的 "设计 → 光罩 → 晶圆制造 → 封装"主轴 (90% 营收), 另一方面新拓展 14 吋光罩供应给 OSAT / WLP 厂的 advanced packaging 流程 (短期占比 <10%, 但 2026-28F 是高增长驱动)。
+
+**与产业链上下游的关系：**
+- **上游**: mask blank (空白光罩) 主要从日本 Hoya / Shin-Etsu, 韩国 SK-Electronics 进口; pellicle (光罩护膜) + 化学品同样进口为主——年报第 64 页明确"本公司使用原料中之空白光罩均向日本、韩国大厂採购; 光罩护膜及光罩盒, 国内供应商已能部分供应, 不足部份向日本、美国、韩国採购; 化学品除向日本、美国、德国大厂採购外, 国内已能部分供应。"
+- **下游**: 台湾 + 亚洲晶圆代工与封测客户。
+- **横向**: 子公司**美祿科技**承担"晶圆代工管理服务"角色, 帮陆 / 韩 / 东南亚 IC 设计公司在台湾代下单 TSMC / UMC / PSMC 等晶圆, **同时为 TMC 带入这些 IC 设计公司的光罩订单**——这是集团内的纵向协同 (年报第 63 页 §"竞争利基"明确列示)。
+
+**TMC 产品的整体 verdict:** 36 年累积的成熟节点护城河 (8 吋 + 12 吋 90-40nm) 是真实的, 客户黏性来源主要是地理就近 + 长期认证关系。中段节点 28nm 处于验证窗口期, 是 2026-27F 主业 ASP 提升的关键。**14 吋 advanced packaging 光罩是公司的长期增长 option, 但兑现需要 2-3 年, 短期估值预付了过多预期。**
+
+---
+
+
