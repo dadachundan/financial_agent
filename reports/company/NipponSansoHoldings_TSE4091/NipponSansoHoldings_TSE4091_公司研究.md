@@ -178,3 +178,48 @@ Thermos K.K.（FYE2025 营收 ¥32.5 亿日元 / 集团 2%、分部利润 ¥6.2 
 ### 4.10 旗舰与长尾及近期新品
 
 按营收集中度排序，前三大产品业务为：(a) 横跨五大分部的 **散装氧气 / 氮气 / 氩气向大型工业客户销售**——结构性 ¥/Nm³ 现金流基础；(b) **向钢铁、化工、炼油以及 300mm 半导体客户的驻厂空分装置 + 管道交付**——最高估值复利部分；(c) 以全球半导体行业为中心的 **SSG 钢瓶 + 钢瓶柜 + 设备业务**——最高毛利增长向量。长尾包括乙炔（Matheson 美国批发领导）、笑气（Matheson 美国 #2 供应商）、干冰（Matheson 美国 #2）、食品饮料液态 CO₂、炼油和可再生柴油用氢气 / HyCO（带项目风险）、LP 气（澳大利亚 / 新西兰 Coregas 后）、家庭氧气（欧洲）、工业工艺气体（氪、氙、氖——空分副产稀有气体，用于照明、激光和深紫外光刻）、稳定同位素（水 -18O——按 IR2025 第 25 页"世界最大供应商"——用于 PET 诊断）以及 Thermos 消费品牌。Q3 FYE2026 路演材料标注的近期产品发布：Thermos 扩大便携真空保温杯和便当盒系列（2025 年 8-12 月）；Polaris 相关 HyCO 项目取消（FY25 ¥260 亿减值）；1PointFive DAC 氧气合同推进（德州）；2025 年 8 月宣布拉斯维加斯空分装置 2027 年完工；2025 年 12 月宣布筑波先进电子材料研发大楼 2027 年完工；2025 年 9 月宣布挪威空分装置 2027 年开工 ([Q3 FYE2026 业绩, 2026-02-04, 第 17-20 页 分部 Topics](https://www.nipponsanso-hd.co.jp/en/LinkClick.aspx?fileticket=fHIwDu2e7lc%3D&tabid=210&mid=797))。
+
+## 5. 客户与上市策略
+
+NSHD 的客户基础在结构上 **广而浅** 而非集中——形态更接近区域性公用事业而非特种供应商——所以客户集中度披露较为有限。美国分部单独披露 >100,000 个客户账户，欧洲分部约 150,000 家企业客户加 390,000 名家庭医疗患者，日本分部除了直接管理的账户外还通过 200 多家合作 / 分销商服务 ([Integrated Report 2025, 第 74-78 页 分部概览](https://us.nipponsanso.com/wp-content/uploads/2025/10/nippon-sanso-holdings-integrated-report_en-viewing_2025.pdf))。NSHD 的有价証券報告書 (Yuho) 以及基于 IFRS 的合并财务结果未披露任何单一头部客户百分比——日本备案中没有类似中国 A 股披露制度中的"前五大客户"明确表格，而集团层面头部客户份额几乎可以确定是个位数低位，鉴于客户数量级。
+
+按 **终端市场** 划分（不含 Thermos）的 FYE2026 9 个月客户结构为化工与能源 20%、**电子 17%**、食品饮料 10%、医疗 10%、钢铁与有色金属 8%、汽车与其他运输 5%、其他 31%——这个组合在结构上比 Linde 或 Air Products 的客户组合更"流程 / 重工业"，后两者的电子 / 医疗权重更高 ([Q3 FYE2026 业绩, 2026-02-04, 第 34 页 Revenue composition](https://www.nipponsanso-hd.co.jp/en/LinkClick.aspx?fileticket=fHIwDu2e7lc%3D&tabid=210&mid=797))。资本开支结构也讲同样的故事：NSHD 的 FYE2026 资本开支管线（约 ¥1,500 亿日元已批准但尚未投运）按 32% 化工与能源、26% 其他（混合客户空分扩张）、23% 电子、10% 食品饮料、6% 医疗、3% 钢铁与有色金属、1% 汽车分配——即资本开支正向电子方向轮换的速度比运行率结构所暗示的更快，与 Total Electronics 优先一致 ([Q3 FYE2026 业绩, 2026-02-04, 第 7 页 "Key CAPEX for our sustainable growth"](https://www.nipponsanso-hd.co.jp/en/LinkClick.aspx?fileticket=fHIwDu2e7lc%3D&tabid=210&mid=797))。
+
+**电子业务中的具名客户关系。** 虽然 NSHD 不发布客户清单，但根据区域分部评论和公开行业知识可以推断三类关系。**日本 (TNSC)**：索尼半导体解决方案（熊本 / TSMC JASM-1）、铠侠（四日市、岩手以及西部数据四日市合资）、瑞萨电子、东芝、美光内存日本（广岛）、TSMC JASM 熊本，以及北海道千岁正在建设的新 Rapidus 2-nm 代工厂 ([Integrated Report 2025, 第 74-75 页 日本分部 "domestic production of next-generation semiconductors"](https://us.nipponsanso.com/wp-content/uploads/2025/10/nippon-sanso-holdings-integrated-report_en-viewing_2025.pdf))。**美国 (Matheson)**：通过跨海岸空分网络与钢瓶充装厂服务的最大美国晶圆厂运营商——Intel（亚利桑那 / 俄亥俄 / 俄勒冈）、GlobalFoundries（纽约）、德州仪器（德州）、三星奥斯汀半导体（德州）、Micron（爱达荷 / 纽约）、TSMC 亚利桑那，以及 Matheson 分部评论中特别提到的南部地带晶圆厂集群（"southern U.S. sunbelt 上唯一的东西海岸连通网络"）([Integrated Report 2025, 第 77 页 Segment Top Message U.S.](https://us.nipponsanso.com/wp-content/uploads/2025/10/nippon-sanso-holdings-integrated-report_en-viewing_2025.pdf))。**欧洲 (Nippon Gases)**：意法半导体、英飞凌（菲拉赫 / 德累斯顿）、罗伯特·博世半导体制造、ASML 费尔德霍芬及其光刻供应链、ESMC Dresden（TSMC / 英飞凌 / 博世 / NXP 合资）、Intel Magdeburg（暂缓但供应合同到位），以及 Oevel SSG 产能扩张所瞄准的欧洲半导体行业 ([Integrated Report 2025, 第 23 页 "Expansion of Specialty Gas Production Capacity at the Oevel Plant"](https://us.nipponsanso.com/wp-content/uploads/2025/10/nippon-sanso-holdings-integrated-report_en-viewing_2025.pdf))。**亚洲与大洋洲 (NSTW + 新加坡 + 韩国 + 中国子分部)**：TSMC（新竹、台南、高雄——通过 NSTW 综合合同供应）、UMC、ASE、Micron 新加坡 / 台中、SK 海力士 / 三星特定 SSG 项目，以及 GlobalFoundries 新加坡晶圆厂和世界先进 ([Integrated Report 2025, 第 28 页 "Value Creation Example: Advancing Total Electronics in Taiwan"](https://us.nipponsanso.com/wp-content/uploads/2025/10/nippon-sanso-holdings-integrated-report_en-viewing_2025.pdf))。
+
+**上市策略——三种合同结构。** 工业气体业务依靠三种截然不同的商业模式运行。**驻厂合同** 是 15-20 年与单一锚定客户签订的 take-or-pay 协议，客户通常承诺每月最低 N₂ / O₂ / Ar 体积，由 NSHD 承担在客户场区或临近场区空分装置的建设 + 运营风险。这些合同有电力 / 能源传导条款（即 9M FYE2026 营收增长中减少 90-100 bps 的"Pass-through & Surcharge"线），属于 LTV 最高 / 流失率最低的客户关系。**散装合同** 通常是 3-5 年框架协议，按月配送计划；定价每年谈判，并包含燃油附加费 / 电力附加费条款。**包装（钢瓶）合同** 基本是交易性的、按月开票、有钢瓶租赁费、按路线密度驱动毛利率——Matheson 的 >2,000 辆运输车队 + >100,000 个账户使其拥有美国行业最深的钢瓶配送密度。客户切换倾向非常低（一旦客户签了 5 年主协议且气体供应商安装了钢瓶柜、空分驻厂、尾气处理设备，切换到另一供应商的成本要按月计的工厂中断衡量）；按 FYE2025 管理层评论："核心空分气体（氧气、氮气、氩气）的发货量年度同比保持稳定"，即便合并口径下出现 1.5%-1.8% 的体积 / 结构下降 ([FYE2025 合并财务结果, 2025-05-12, 第 5 页](https://www.nipponsanso-hd.co.jp/en/LinkClick.aspx?fileticket=6/hKTpzKYqc%3D&tabid=210&mid=797))。
+
+```mermaid
+pie title NSHD FYE2026 9M 营收结构（不含 Thermos）按终端市场
+    "化工与能源" : 20
+    "电子" : 17
+    "食品饮料" : 10
+    "医疗" : 10
+    "钢铁与有色金属" : 8
+    "汽车" : 5
+    "其他" : 31
+```
+
+**定价管理纪律** 是当前业绩中除体量以外最重要的杠杆。在 9 个月 FYE2026 口径下，营收增长 +2.7% 可分解为 +0.4% FX、+1.9% 定价、-0.9% 传导 / 附加费回吐、-1.5% 体量 / 结构、+2.9% 其他（并购——Coregas，以及 Nippon Gases 欧洲的意大利工程并购）。即 **仅定价就贡献了所有有机增长**，而体量略有下降——在宏观走软中展现了行业定价权护城河的非凡力量 ([Q3 FYE2026 业绩, 2026-02-04, 第 16 页 9-month Revenue Analysis](https://www.nipponsanso-hd.co.jp/en/LinkClick.aspx?fileticket=fHIwDu2e7lc%3D&tabid=210&mid=797))。具体到三菱化学锚定的日本客户簿，*分析师观点：* 这一关系是相互嵌套的——NSHD 在多年驻厂合同下向三菱化学的石化工厂（水岛、鹿岛等）供气，而三菱化学集团的 50.6% 持股意味着某些跨方供应定价至少部分是关联方的，金额在 NSHD 有价証券報告書的关联方注释中披露。
+
+![NSHD 按区域分部的员工分布 (FYE2025)](../../charts/nipponsanso_geo_employee.png)
+*Source: [Q3 FYE2026 Earnings Materials, 2026-02-04, 第 26 页 NSHD Group Summary employee distribution](https://www.nipponsanso-hd.co.jp/en/LinkClick.aspx?fileticket=fHIwDu2e7lc%3D&tabid=210&mid=797).*
+
+## 6. 行业概览
+
+全球工业气体行业是一个 **约 USD 1,200 亿** 的成熟寡头垄断，体量需求呈结构性上升，驻厂 / 管道经济性占主导地位，按第三方行业测算，前四名（Linde、Air Liquide、Air Products、Nippon Sanso）控制 80% 以上的市场份额 ([Statista — Topic: Global industrial gas industry, 访问于 2026-05](https://www.statista.com/topics/9233/global-industrial-gas-industry/); [Market Data Forecast — Global Industrial Gases Market, 2024 / size USD 118.9 bn](https://www.marketdataforecast.com/market-reports/industrial-gases-market))。NAICS 325120（工业气体制造）涵盖美国部分；可比的欧盟 NACE 20.11 覆盖欧洲。在供给或需求层面有交集的邻近行业包括半导体材料（Resonac、Merck KGaA Performance Materials、SK Materials）、通过气体供应进入医疗服务（Lincare Holdings、Apria Healthcare——两家都纵向整合到氧疗）、工业气体设备（Cryostar、Atlas Copco、Praxair Surface Technologies——现为 Linde Engineering），以及低温罐 / 钢瓶制造供应链（Chart Industries、Worthington Industries）。
+
+![NSHD 按终端市场行业的营收结构 (FYE2026 9M, ex-Thermos)](../../charts/nipponsanso_industry_mix.png)
+*Source: [Q3 FYE2026 Earnings Materials, 2026-02-04, 第 34 页 Revenue composition by Industry](https://www.nipponsanso-hd.co.jp/en/LinkClick.aspx?fileticket=fHIwDu2e7lc%3D&tabid=210&mid=797).*
+
+**行业规模与结构。** 2024 年自上而下测算收敛到 USD 1,180-1,200 亿全球气体当量收入，到 2030 年以约 6-8% 复合增长率扩张，超出标题 GDP 的增长由以下因素驱动：(a) 电子——全球半导体资本开支超级周期所需的高纯度气体；(b) 脱碳——用于高炉效率的氧气、低碳炼油与钢铁用氢气、用于碳捕集与封存的 CO₂；(c) 医疗——欧洲与日本老龄化驱动家庭氧疗增长；(d) 食品链——冷冻冷链中的液氮、改良大气包装、用于疫苗冷链物流的干冰 ([Market Data Forecast — Global Industrial Gases Market, 2025-2033](https://www.marketdataforecast.com/market-reports/industrial-gases-market); [Straits Research — Industrial Gases Market Size, Share & Trends Analysis](https://straitsresearch.com/report/industrial-gases-market))。NSHD 的"Total Electronics"重塑——以及 Linde / Air Liquide / Air Products 同样反映出来的格局（Linde 工程分部、Air Liquide 电子营收、Air Products 电子与其他工业）——都体现了同一根本分析视角：电子是本十年余下时间内相对标题 GDP 增长率最高的向量。
+
+**行业结构与集中度。** 前四（Linde 全球份额 27-30%、Air Liquide 22-24%、Air Products 12-15%、Nippon Sanso ~USD 86 亿营收 / ~USD 1,200 亿 TAM 中的 ~8% 全球份额）共同控制全球工业气体收入的 >80%，按共识测算 ([Statista — Global industrial gas industry, 2024](https://www.statista.com/topics/9233/global-industrial-gas-industry/))。前四以下是一层区域 / 次规模专业玩家：**Messer Group**（德国，约 €35 亿营收，私人家族控股）、**Air Water Inc. (TSE: 4088)**（日本）、**Iwatani Corporation (TSE: 8088)**（日本）、**Linc Energy / SOL Group**（意大利），以及一长串国家冠军气体公司（意大利 SIAD、中国杭氧、中国石化 / 中化合资）。2018 年 Linde-Praxair 合并把当时的 #2（Linde）与 #4（Praxair）合并为现在的 #1 Linde plc，由此引发的反垄断救济创造了现代 Nippon Gases 欧洲——这是行业历史上单笔规模最大的资产剥离。*分析师观点：* 进一步顶层整合不太可能（前四现在按地理而非产品在结构上分隔，任何跨头部并购都将面对 Hart-Scott-Rodino、欧盟委员会、商务部审查的 Linde-Praxair 流程级别），但下面那一层——Messer、Air Water、Iwatani、区域专业玩家——则是前四自然的并购原料，2024-2025 年的 Coregas-from-Wesfarmers、Linde-Goyer-Brazil、Air Liquide-Sanmar-India 交易都符合这一规律。
+
+**增长驱动。** 四股结构性浪潮正在重新定价这个行业：(1) **AI 驱动的半导体资本开支**——TSMC 亚利桑那 / JASM 熊本 / ESMC 德累斯顿、三星泰勒、Intel 俄亥俄、Rapidus 北海道、Micron 爱达荷 / 纽约的晶圆厂建设都需要超高纯度散装 + SSG 在晶圆厂投产时供应。Q3 FYE2026 路演材料明确把电子分部复苏归因于"AI 与数据中心应用驱动的半导体需求增长" ([Q3 FYE2026 业绩, 2026-02-04, 第 6 页](https://www.nipponsanso-hd.co.jp/en/LinkClick.aspx?fileticket=fHIwDu2e7lc%3D&tabid=210&mid=797))；(2) **脱碳**——吹氧高炉燃烧可减少每吨钢的 CO₂ 排放 5-10%；绿色钢铁的氢气直接还原 (H-DRI) 需要巨量低碳氢气供应；CO₂ 捕集、运输与封存需要液态 CO₂ 海运（Nippon Gases 运营 3 艘 CO₂ 船）；(3) **医疗老龄化**——欧洲 65+ 人口到 2030 年预计增加约 2,200 万，驱动家庭氧疗患者持续增长；(4) **食品与冷链**——食品保鲜、改良大气包装以及新冠后疫苗级冷链物流推动液 N₂ / CO₂ / 干冰增长。
+
+**监管与结构性摩擦。** 三大监管向量具有实质性影响。(a) **能源 / 电力价格**——工业气体分离（空分装置）是最电力密集的制造工艺之一（典型为分离每 Nm³ O₂ 消耗 0.3-0.5 kWh），所以欧洲电力价格（乌克兰前的 2-4 倍）与亚洲电力成本飙升直接传导到分部利润率压力与客户传导谈判；(b) **反垄断**——欧美竞争监管机构对区域管道 / 驻厂合同的监管力度正在加强，Coregas / Wesfarmers ACCC 审查（2025 年 6 月）是最近的行业数据点；(c) **氢能 / 清洁能源政策**——美国通胀削减法案 (IRA)、欧盟 REPowerEU 和可再生氢气生产税收抵免框架、日本绿色转型 (GX) 债券计划都补贴新建低碳氢气产能，既创造机会（前四获得 HyCO 项目）又带来项目风险（FYE2025 Polaris 破产 ¥260 亿减值就是这种风险的警示故事）。
+
+**行业经济学。** 行业经济学由 **配送密度与资本密集度** 主导。空分装置建造成本 USD 8,000-20,000 万，在 75-85% 产能下运行 30 年以上；钢瓶充装厂每个 USD 500-2,000 万；钢瓶配送需要区域卡车车队和路线密度。前四的营业利润率目前在 22-28% 范围内（Linde 28%、Air Liquide 23%、Air Products 22%、NSHD 14.5% COI 但 EBITDA 23.3%），反映：(a) 差异化产品（氦气、SSG、驻厂）的高毛利率，对冲 (b) 服务大量客户的商品大气气体的适中毛利率。客户切换倾向结构性极低（切换大气气体供应商的内在成本包括重新设计钢瓶柜 / 尾气处理系统 / 晶圆厂管道接口，全都需要数月）——这就是为什么行业在化工领域有"定价权寡头"的声誉。
+
+**替代品与供应商力量。** 核心大气气体的替代品基本为零（在氧燃料燃烧中不能用任何物质替代 O₂；在半导体工艺氛围中不能用任何物质替代高纯度 N₂）。氢气的替代品正在演变——绿氨、甲醇和直接电气化原则上可以在某些炼油 / 钢铁应用中取代 H₂，但替代是十年级而非年级。进入行业的供应商力量主要是 **电力公司**（空分主要成本投入）和 **稀有气体来源**（氦气来自美国 / 俄罗斯 / 卡塔尔 / 阿尔及利亚的天然气生产商，有结构性周期过剩与短缺）。买方力量对 **大型驻厂客户偏中高**（一家 TSMC 或 Intel 可以在任何特定晶圆厂上可信地在 Linde / Air Liquide / Air Products / NSHD 之间多源采购），但对 **中小型散装与包装客户极低**（路线密度锁定）。
