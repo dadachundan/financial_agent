@@ -279,3 +279,77 @@ HOYA 四大行业各自面对不同的监管体制。**半导体材料**主要�
 - **医疗内窥镜**——监管壁垒高，中度替代品风险来自单次使用内窥镜（Ambu、Boston Scientific），长尾威胁是胶囊内窥镜（Medtronic PillCam）。
 
 ---
+
+## 7. 竞争格局
+
+HOYA 的竞争位置最好理解为**四个不同行业的四个独立竞争位置**——股市将它们重新打包成单一 P/E 倍数。集团整体竞争力的基石是 EUV 空白光罩份额；其余每个位置都是其衍生或对冲。
+
+### 7.1 EUV 空白光罩——HOYA vs 信越化学 vs AGC
+
+EUV 坯料的商用市场实际上只有 **HOYA + 信越化学 + AGC** 三家。野村锚定的份额拆分为 **HOYA ~80% / 信越 ~20% / AGC 少量商业出货** ([reports/sector/半导体材料.md, Fig. 38–39](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md))。第三方行业调研有时会把 AGC 显示得更大（~30–40%）——这些较高的 AGC 数字通常将 DUV 坯料与 EUV 一并统计；EUV 单独看，HOYA 集中度更高 ([Business Research Insights — EUV Mask Blanks Market, 2025](https://www.businessresearchinsights.com/market-reports/euv-mask-blanks-market-104950))。
+
+**信越化学**是 HOYA 在 EUV 坯料上唯一可信的 Tier-1 竞争对手。信越电子材料事业销售光罩坯料的同时也销售光刻胶（与 JSR / TOK / Fujifilm 竞争），且其 Shin-Etsu Quartz 子公司向包括 HOYA 在内的所有坯料厂供应合成熔融石英基板——意味着信越同时是（在坯料业务上的）竞争者和（在上游基板上的）供应商 ([Shin-Etsu Chemical — Photomask blanks product page](https://www.shinetsu.co.jp/en/products/electronics-and-functional-materials-business/photomask-blanks/))。这种动态约束了信越发动价格战的动力：坯料价格战会危及更高利润的石英基板业务。历史模式是 **信越占据较老节点 / 二供位置**（缺陷容忍度略宽），**HOYA 占据先进节点 / 单一供应商位置**（缺陷容忍度临界）。客户多元化压力真实存在——代工厂不愿被单一供应——但合格周期和缺陷率学习曲线慢且真实 ([Semiconductor Engineering — EUV Mask Blank Battle Brewing](https://semiengineering.com/euv-mask-blank-biz-heats-up/))。
+
+**AGC Inc.（旭硝子）** 通过其电子分部追逐 EUV 坯料市场已逾十年，但商业出货量较少；第三方数据将 AGC 整体坯料份额报为 ~40% ([Intel Market Research — EUV Mask Blanks Market 2025-2032](https://www.intelmarketresearch.com/euv-mask-blanks-market-11463))。*分析师观点：* 较高的 AGC 数字反映了所有坯料的聚合体量和较老节点的二供合格；AGC 在先进节点 EUV 坯料份额要小得多，HOYA 在 3 nm 与 2 nm 上的缺陷率优势仍是竞争对手未攻克的瓶颈。
+
+### 7.2 光学 / DUV 光罩坯料——HOYA vs 信越 vs AGC vs LG Innotek
+
+DUV 坯料是更高量产、更商品化的业务；HOYA ~70% 份额反映的是 30+ 年的存量优势，而非当前技术领先。切换成本真实存在（~9 个月再合格），但定价压力比 EUV 大。*分析师观点：* DUV 业务最好建模为高现金流年金，而非增长引擎。
+
+### 7.3 HDD 玻璃基板——HOYA vs Ohara
+
+在 3.5 寸（数据中心用）玻璃基板上 HOYA 大约持有 100% 份额；日本小原 Inc. 是唯一另一家有规模的替代供应商，主要在较老世代基板上有一定足迹。竞争风险并非替代供应商，而是 **玻璃 vs 铝** 之间的选择——昭和电工（现 Resonac）供应铝基板，主要以成本竞争。FY26 Q2 业绩会议明确表示 HOYA 不能大幅提价，因为铝基板替代品限制了上行空间 ([HOYA FY26 Q2 Earnings Call Transcript, pp. 23–24](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
+
+### 7.4 眼镜镜片——HOYA vs EssilorLuxottica vs Carl Zeiss Vision
+
+全球眼镜镜片格局：**EssilorLuxottica #1 (~50% 份额，依靠 Essilor 镜片 + 零售控制)**、**Carl Zeiss Vision #2 (~10%)**、**HOYA #3 (~10%)**，之后是 Nikon-Essilor、Rodenstock、Shamir、其他区域品牌 ([Mordor Intelligence — Spectacle Lens Market](https://www.mordorintelligence.com/industry-reports/spectacle-lens-market); [Eyewearglobo — Top eyeglass lens manufacturers 2025](https://www.eyewearglobo.com/the-12-top-eyeglass-lens-manufacturers-leading-the-global-market-in-2025/))。HOYA 的差异化在于 **MiYOSMART 近视管理**（D.I.M.S. 离焦光学技术、儿科适应症）以及在日本影响地区的 Pentax / Seiko 品牌溢价。*分析师观点：* HOYA 无法挑战 Essilor 的纵向整合护城河（Essilor 控制零售），但能让 MiYOSMART 和高端变色 / 防蓝光产品增长快于市场。
+
+### 7.5 医疗内窥镜——HOYA 旗下 Pentax vs Olympus vs Fujifilm
+
+奥林巴斯主导全球软性消化道内窥镜（~70% 份额）。富士医疗系统第 #2 (~20%)，Pentax Medical 第 #3 (~10%)。2015 年后的十二指肠镜污染诉讼周期对奥林巴斯打击最重（US 司法部 US$85 m 和解 + 持续集体诉讼敞口），Pentax Medical 次之（US 司法部 US$43 m）。HOYA 的战略差异化在于 **DEC™ 十二指肠镜** 灭菌兼容设计——全球首款获得 FDA 许可、可使用过氧化氢气体等离子体（STERRAD）灭菌的 GI 内窥镜 ([PR Newswire — PENTAX Medical FDA clearance, 2024-08](https://www.prnewswire.com/news-releases/pentax-medical-receives-fda-clearance-for-duodenoscope-with-new-sterilization-technology-in-collaboration-with-advanced-sterilization-products-302214258.html))。
+
+### 7.6 人工晶状体——HOYA Surgical Optics vs Alcon vs J&J Vision vs Bausch + Lomb
+
+全球 IOL 市场由 **Alcon（诺华分拆，~40% 份额）**、**J&J Vision (~15%)**、**Bausch + Lomb (~10%)**、**HOYA Surgical Optics (~10%)** 加上区域玩家主导。HOYA 的疏水性 IOL 产品族（Vivinex、iSert）以易用注射器为差异化点，在日本是市场领导者。中国 VBP 已经实质性压缩了该细分市场的价格，是近期最主导的逆风 ([HOYA FY26 Q2 Earnings Call Transcript, p. 7](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
+
+### 7.7 同业估值对照
+
+HOYA TTM 滚动 P/E ~35× 位于 EssilorLuxottica 的 ~38.8× 与 Carl Zeiss Meditec 的 ~26.2× 之间——这两家都是眼科 / 健康护理同业——并明显高于医疗器械行业中位数 ~25.8× ([Gurufocus — EssilorLuxottica P/E TTM, 2026-03](https://www.gurufocus.com/term/pettm/ESLOY); [Wisesheets — Carl Zeiss Meditec P/E TTM](https://www.wisesheets.io/pe-ratio/AFX.DE))。按 P/S 计，HOYA 的 9.3× 大幅高于 EssilorLuxottica 的 ~3.5× 与 Carl Zeiss Meditec 的 ~3.0×——差距最好的解释是 HOYA 分部组合的溢价（Information Technology 贡献 ~65% 利润、利润率 50%+），而非 Life Care 基本面。
+
+![HOYA 同业 P/E 对比](../../charts/hoya_peer_pe.png)
+*资料来源：P/E 数据按 [Stockanalysis.com — TYO:7741](https://stockanalysis.com/quote/tyo/7741/statistics/)、[Gurufocus — EssilorLuxottica](https://www.gurufocus.com/term/pettm/ESLOY)、[Wisesheets — Carl Zeiss Meditec](https://www.wisesheets.io/pe-ratio/AFX.DE)，截至 2026 年 5 月。奥林巴斯与尼康同业 P/E 按 Yahoo Finance Japan，截至 2026 年 5 月。*
+
+---
+
+## 8. 市场机会 / TAM
+
+### 8.1 按产品族细分的 SAM——HOYA 实际可寻址的美元市场
+
+| 产品族 | 2025 SAM (US$ bn) | 2025 HOYA 份额 | 增长 CAGR 2025–30F | HOYA 2030F 收入捕获（US$ bn，估算） |
+|---|---:|---:|---:|---:|
+| EUV 空白光罩 | ~0.37 | ~80% | ~16% | ~0.6–0.7 |
+| 光学 / DUV 光罩坯料 | ~0.9 | ~70% | ~5–7% | ~0.9 |
+| FPD 光罩 | ~0.5 | ~25–30% | ~3–5% | ~0.2 |
+| HDD 玻璃基板（含 HAMR 结构变化） | ~0.6 | 3.5 寸 ~100%；2.5 寸 ~40% | ~8–10%（HAMR 爬坡） | ~0.9 |
+| 眼镜镜片（全球批发） | ~45 | ~10% | ~4–5% | ~5.5 |
+| 人工晶状体 | ~5 | ~10% | ~4–6% | ~0.65 |
+| 医疗软性内窥镜 | ~6 | ~10% | ~5–7% | ~0.85 |
+| 光学镜头 + 玻璃材料（工业 / 检测） | ~3 | n.m. | ~6–8% | ~0.4 |
+
+*资料来源：EUV 坯料市场——[SNS Insider — EUV Mask Blanks to surpass USD 689M by 2032, 2025-11](https://www.globenewswire.com/news-release/2025/11/05/3181398/0/en/EUV-Mask-Blanks-Market-Size-to-Surpass-USD-689-06-Million-by-2032-CAGR-of-15-80-SNS-Insider.html); DUV 光罩坯料市场——[reports/sector/半导体材料.md](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md); HDD 玻璃基板——基于 [HOYA Report 2024, p. 103](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf) + [Tom's Hardware — HDD roadmap, 2025](https://www.tomshardware.com/pc-components/hdds/high-capacity-hdd-roadmap-the-race-to-100tb-and-zettabyte-scale-storage-toshiba-seagate-and-wd-outline-three-distinct-strategies) 的分析师估算；眼镜镜片 TAM——[Mordor Intelligence — Spectacle Lens Market](https://www.mordorintelligence.com/industry-reports/spectacle-lens-market); IOL + 内窥镜 TAM——根据行业调研 + HOYA 份额推断；FPD 光罩——分析师估算。*
+
+### 8.2 Information Technology 分部的增长故事
+
+HOYA 拥有的最强 TAM × 份额 × 利润率方程是 **EUV 空白光罩 + HDD 玻璃基板**。EUV 坯料按野村预测到 2030 年增速 15%+，HOYA 80% 份额几乎将全部增长转化为 HOYA 收入，而 50%+ 的分部经营利润率（按 FY26 Q2）将这些收入转化为极高的边际利润。HDD 玻璃基板正从缓慢永续衰退转为增长，因为 HAMR 推动玻璃基板被采用，HOYA 同时捕获 **量的顺风**（更多驱动器出货）和 **结构变化顺风**（每驱动器更多盘片 + 每盘片更高 ASP）。两者叠加是 FY25 IT 分部收入增长 36% 的根本原因，也是市场对分部收益按隐含 50× P/E 定价的根本原因。
+
+EUV 坯料和 HDD 玻璃以外，IT 分部的机会都较小：FPD 光罩受份额制约（HOYA ~25–30%）、DUV 坯料受增速制约（~5–7%）、Imaging 波动较大、重庆 FPD 工厂是防御性中国本地化布局而非增长驱动。
+
+### 8.3 Life Care 分部的增长故事
+
+眼镜镜片是 HOYA 最大的收入来源，年增长 ~4–5%，与底层眼镜镜片市场同步，**MiYOSMART 提供高端产品增长加速器**——在确保儿科报销的市场（2025 年的法国；分析师预期 2026–27 将有更多欧洲市场跟进）。IOL 面临中国 VBP 价格压力，但随着该子领域正常化，应能恢复中个位数增长。内窥镜收入结构性挑战，但按 CEO 指引 FY27 Q4 重组将恢复利润率 ([HOYA FY26 Q2 Earnings Call Transcript, p. 21](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
+
+### 8.4 投资者实际在买什么
+
+以基准情景 **Life Care 5% + IT 12% CAGR 从 FY25 至 FY30F** 建模，集团收入将达 **~¥1.4 万亿日元（~US$9 bn）**，按持续 30% 集团经营利润率推算，**经营利润 ~¥420 亿日元 vs FY25 的 ¥256 亿日元**。仅 IT 分部就将达 ~¥550 亿日元收入 / ~¥290 亿日元分部税前利润，按 25× IT 分部税前 P/E 估值可独立支撑 ~¥6–7 万亿日元的企业价值——对照 HOYA 目前 ¥8.3 万亿日元 EV，意味着集团其余被估值为 ~¥1–2 万亿日元，即 Life Care + Imaging + Other 收入估值为 ~1.5–3× P/S。这一比例与欧洲光学 / 器械同业大致一致，暗示当前估值**比基本面所能支撑的略为充分**，除非 IT 分部增速明显超出基准情景。
+
+---
