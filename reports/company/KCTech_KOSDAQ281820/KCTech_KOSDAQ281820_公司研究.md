@@ -34,3 +34,40 @@ KC Tech 的赚钱方式分裂成两条市场常常混为一谈的现金流轮廓
 
 ![KC Tech FY2021-FY2026E 营业收入与营业利润趋势](../../charts/kctech_revenue_opm.png)
 *资料来源：[Stockopedia KCTech (KRX:281820)](https://www.stockopedia.com/share-prices/kc-tech-co-KRX:281820/); [The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433); [데이터투자, 2025-11-11 (DS투자증권 추정)](https://www.datatooza.com/article/20251111115540957952ef38be23_80).*
+
+## 2. 公司沿革
+
+KC Tech 现今的公司法人形态只有 **八年**—2017 年 11 月 1 日作为「분할 신설법인 / 分割新设法人」从 KC 控股 (KC Inc.，前身为 KCT Corporation) 拆出而成；KCT Corporation 是 1987 年成立的韩国老牌特种化学品 + 半导体设备贸易商 ([KC Inc. 公司沿革, KC Co., Ltd.](https://www.kct.co.kr/eng/page/company3.php); [businesspost.co.kr,「[Who Is ?] 고석태 케이씨텍 회장」](https://www.businesspost.co.kr/BP?command=article_view&num=370779))。但其经营 DNA 可以追溯至 1987 年由会长高锡泰 (고석태 / Ko Seok-tae) 创办之初：KC 起家于韩国大成氧气 (Daesung Oxygen) 的分支贸易公司，从美国和日本进口半导体设备到韩国销售，1997 年亚洲金融危机最低谷时期在 KOSPI 上市，1999 年随韩国 LCD 投资周期切入显示器设备，2003 年开始 CMP 浆料 R&D 项目—距离 2009 年量产开始整整六年 ([The Worldfolio 专访，2025 年 3 月](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/); [businesspost.co.kr 고석태 회장 프로필](https://www.businesspost.co.kr/BP?command=article_view&num=370779))。
+
+R&D 启动 (2003) 到量产 (2009) 之间这十年是 KC Tech 在韩国材料厂商中最不典型的地方：那段时期三星和 SK 海力士几乎完全依赖 Cabot Microelectronics (后来的 CMC Materials、再到 Entegris)、日立化学 (后来的 Resonac)、以及 Versum (后并入默克 Merck) 提供先进 CMP 浆料输入，而 KC Tech 选择对氧化铈浆料工艺研发做多年资本承诺 ([Yano Research CMP Slurry Market 2024](https://www.yanoresearch.com/press/press.php/3921))。2009 年的拐点—KC Tech 氧化铈浆料首次量产—与同年收购斗山机电 (Doosan Mechatronics) CMP 设备技术同步发生，将未来「设备 + 材料」混合架构编织起来，这就是今天 KC Tech 的核心特征 ([The Worldfolio, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。2011 年 KC Tech 已在三星运行自己的专有 CMP 产品；到 2017 年材料业务已壮大到足以让高锡泰会长决定把公司法人一分为二—把化学品 + 气体供应系统留在「KC Inc.」(仍为母公司股东)，把半导体 + 显示器前道设备 + 材料剥离到新设 KOSDAQ 上市的「KC Tech」([KC Inc. 公司沿革, KC Co., Ltd.](https://www.kct.co.kr/eng/page/company3.php); [잡코리아 KC Tech 기업정보](https://www.jobkorea.co.kr/recruit/co_read/c/kctech11))。
+
+2017 年的拆分形式是「인적분할 / 人的分割」—韩国公司法下，把一家上市公司分立时让现有股东按比例同时持有两个继承法人的机制。当时业内媒体报道的拆分逻辑是：化学工程业务（已成为稳定但成熟的分销业务）与半导体 / 显示器设备和材料业务（凭借三星 V-NAND 与 OLED 资本支出快速扩张）的资本配置画像、估值水平、客户面孔差异巨大—两者捆在一支股票中令市场难以定价 ([businesspost.co.kr 고석태 회장 프로필](https://www.businesspost.co.kr/BP?command=article_view&num=370779))。从经营层面看，拆分是成功的：2017 年以后 KC Tech 营收以中低双位数 CAGR 复合增长，仅在 FY2023 经历一次周期性重置，并在过程中扩大材料业务比重、启动国际化布局。
+
+拆分后最重要的一次事件是 **2021 年 8 月的管理层重组**—高锡泰会长把当时的 CEO 林冠宅 (임관택 / Lim Gwan-taek) 替换为 **梁好根 (양호근 / Yang Ho-geun)** 与 **崔东圭 (최동규 / Choi Dong-kyoo)** 的双 CEO 架构；梁好根此前是 TCK（KC 集团旗下另一公司）副会长 + KC Inc. CEO，崔东圭一直管理设备业务 ([파이낸셜뉴스, 2021-08-11:「케이씨텍, 양호근·최동규 각자 대표 체제」](https://www.fnnews.com/news/202108111629170231))。拆分的逻辑被定义为「经营效率 + 专业能力强化」—梁负责材料和公司事务，崔负责设备—这种分工至撰稿之时仍在维持，两位的名字依然作为联席代表董事出现在公司概览页面 ([KC Tech 公司概览页](https://www.kctech.com/page/overview.php))。
+
+近期运营里程碑集中在 2024–2026 年的先进节点与 HBM 爬坡周期。**Ventus 300mm CMP 系统**—KC Tech 的「下一代」平台，配备多区域抛光头、最多 12 个可配置清洗腔—在 2024–2025 年被专门定位用于三星 HBM 产线，因为 HBM 堆叠层数提升后，每片晶圆的 CMP 步骤数量急剧增加 ([The Worldfolio, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。同时公司开始研发 **增层薄膜 (BuF, buildup-film) CMP**—用于先进封装基板的工艺步骤，过去由日本厂商主导，但随着先进封装产量扩张，韩国和中国台湾 OSAT 客户需求大幅上升 ([The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433))。预计 2025 年末开业的美国俄勒冈州尤金办公室是 KC Tech 在亚洲以外的首个实体据点，主要支持英特尔、GlobalFoundries 与三星奥斯汀 / 泰勒厂区的爬坡 ([The Worldfolio, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。
+
+```mermaid
+timeline
+    title KC Tech 时间线 — 从贸易商到韩国 CMP 国产化龙头
+    1987 : 高锡泰创立 KC, 半导体设备贸易商 (KCT Corporation)
+    1997 : KOSPI 上市 (亚洲金融危机时期)
+    1999 : 切入显示器设备市场
+    2003 : CMP 浆料 R&D 项目启动
+    2006 : 首批氧化铈浆料样品生产
+    2009 : CMP 浆料量产; 收购斗山机电 CMP 设备技术
+    2011 : 推出首款 KC Tech 自有品牌 CMP 设备平台
+    2017 : 以人的分割方式拆出 KC Tech (KOSDAQ:281820); KC Inc. 保留化学品/气体业务
+    2021 : 8月任命梁好根 + 崔东圭为联席代表董事
+    2023 : CMP 浆料营收约 1,500 亿韩元 (~2.5x 2019); 内存周期低谷压低集团营收 21%
+    2024 : 集团营收回升至 3,854 亿韩元 (+34% YoY); 80% 半导体 / 20% 显示器
+    2025 : Ventus 300mm CMP 平台定位三星 HBM 产线; 俄勒冈办公室筹建 2025 末开业
+    2026 : Q1 FY26 营收 +101% / OP +344% — 设备交付 + 浆料顺风共振
+```
+*资料来源：[The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/); [businesspost.co.kr 고석태 회장 프로필](https://www.businesspost.co.kr/BP?command=article_view&num=370779); [KC Inc. 公司沿革](https://www.kct.co.kr/eng/page/company3.php); [The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433).*
+
+## 3. 管理团队
+
+**创始人 / 会长：高锡泰 (고석태 / Ko Seok-tae, 1954 年 3 月 31 日生)。** 高锡泰是 KC Inc. (1987 年成立) 的创始人，目前仍兼任 KC Inc. 与 KC Tech 两家公司的会长—不过自 2021 年起，日常经营责任已转交给双 CEO 架构 ([businesspost.co.kr「[Who Is ?] 고석태 케이씨텍 회장」](https://www.businesspost.co.kr/BP?command=article_view&num=370779))。高锡泰毕业于成均馆大学化学工程系 (1980 年获学位)，毕业后 (1980–1986 年) 在大成氧气公司 (Daesung Oxygen) 担任销售—大成氧气是一家代理进口美日半导体设备的韩国工业气体经销商—1987 年离开大成自立门户，创办 KC Inc.，专门把半导体设备进口卖给韩国晶圆代工与内存厂商 ([businesspost.co.kr 고석태 프로필](https://www.businesspost.co.kr/BP?command=article_view&num=370779))。1987 年的创业时点极有眼光：三星首次大规模量产 DRAM 是 1983 年，到 1987 年韩国内存产业刚进入首次资本支出超级周期。高锡泰曾在 2005–2007 年担任韩国显示器设备与材料行业协会会长，2016 年获韩国工程院化学与生物工程分会成员资格，目前仍是韩国设备与材料产业政策圈内的行业级声音。根据 2024 年 6 月 30 日披露，高锡泰个人持有 KC Tech 约 **4.64%**（968,292 股）和 KC Inc. 约 **7.48%**（1,013,444 股）；加上家族关联方，高家族合计控制 KC Tech 约 50%、KC Inc. 约 40.9%—意味着 KC 集团虽然是上市架构，但本质上是家族控制公司 ([businesspost.co.kr 고석태 프로필](https://www.businesspost.co.kr/BP?command=article_view&num=370779))。高锡泰会长正逐步把股份转给儿子高尚杰 (고상걸 / Ko Sang-gul, 1982 年生)，后者目前担任 KC Inc. 副会长兼代表董事；同一篇报道指出，传承架构已相当完善，但高尚杰尚未在 KC Tech 自身担任董事职务 ([businesspost.co.kr 고석태 프로필](https://www.businesspost.co.kr/BP?command=article_view&num=370779))。
+
+**联席 CEO：梁好根 (양호근 / Yang Ho-geun)。** 梁好根于 **2021 年 8 月 11 日** 与崔东圭一同被任命为 KC Tech 联席代表董事 / CEO，取代了之前由崔东圭与林冠宅 (Lim Gwan-taek) 组成的双人组 ([파이낸셜뉴스, 2021-08-11](https://www.fnnews.com/news/202108111629170231))。根据同一篇任命公告，梁好根此前在 KC 集团内部的职务是 TCK（一家 KC 集团旗下生产硅晶圆与石墨基半导体耗材的兄弟公司）副会长，以及 KC Inc. CEO—意味着他既有材料业务运营深度，也有母公司控股视角，而这正是材料密度上升的 KC Tech 战略所需 ([파이낸셜뉴스, 2021-08-11](https://www.fnnews.com/news/202108111629170231))。2021 年的重组在管理学语境下被表述为「경영 효율성 강화 및 전문성 강화」(经营效率强化 + 专业能力强化)，梁主管材料和公司事务、崔主管设备 ([파이낸셜뉴스, 2021-08-11](https://www.fnnews.com/news/202108111629170231))。梁好根也是 KC Tech 国际化叙事的公开代表人物—公司概览页与崔东圭 (Choi Dong-gyu / 최동규) 并列为联席代表董事 ([KC Tech 公司概览页](https://www.kctech.com/page/overview.php))。近期 KC Tech 管理层最重要的一次公开访谈是 2025 年 3 月《The Worldfolio》专访—由副会长 Ho Keun Yang（注：此人即梁好根 / 양호근，《Worldfolio》使用副会长头衔，该头衔与 KC Tech 联席 CEO 头衔并存）—文章中他清晰阐述了长期论点：「不要卖产品 —— 要卖信任。卖自己。」以及「真正的协同不是来自打包方案，而是来自我们深度整合」—把「设备 + 材料协同研发」模式定义为公司的战略护城河 ([The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。Worldfolio 这篇专访也清楚地表述了 2027 年（40 周年）目标：KC Tech 希望拿下先进 HBM 与 BSPDN 产线的设备关键认证、在全球顶级客户实现 CMP 系统量产、成为「全球规模玩家」—这是管理层自己设定的衡量未来两年执行力的尺子 ([The Worldfolio, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。
