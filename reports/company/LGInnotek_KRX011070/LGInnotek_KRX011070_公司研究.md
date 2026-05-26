@@ -326,3 +326,111 @@ LG Innotek 运营于四个迥异的行业交汇处 —— 移动相机模组、�
 - **进入门槛** — 相机模组高 (Apple 级认证需 3–5 年 + 工装投资 + 洁净厂房建造); FC-BGA 极高 (10 年认证 + 单一晶圆厂 USD 10 亿 capex); 光罩中等 (日 / 美老牌牢固, 但成熟玩家可守); 车载低 (许多小 Tier-1 候选)。
 
 ---
+
+## 7. 竞争格局
+
+LG Innotek 在每个分部面对不同的竞争对手集合, 几乎没有重叠。因此竞争分析必须按分部逐一展开。
+
+**光学解决方案竞争者 (移动相机模组):**
+- **舜宇光学科技 (Sunny Optical Technology, HKEX:2382)** — 中国移动相机模组龙头; 服务小米、Oppo、Vivo、华为, 同时在 iPhone 上加大份额 (自 iPhone 17 起从 LGIT 获得折叠变焦 OIS 份额)。FY2024 营收 RMB 约 310 亿。是 LGIT 最直接的竞争者。
+- **Samsung Electro-Mechanics (KRX:009150)** — 韩国三星集团关联公司; 三星 Galaxy S 系列的主供; Apple 敞口较少, 但制造能力相近。
+- **Foxconn / Sharp** — Apple 在 iPhone Pro 非旗舰机型上的备选供应商。
+- **欧菲光 / 丘钛科技 (Q-Tech, HKEX:1478) / Cowell e Holdings (HKEX:1415) / 信利光电 (Truly Opto-electronics, HKEX:732) / 立讯 (Luxshare, SZSE:002475)** — 中国中端相机模组厂商; 正在 iPhone 非旗舰机型上扩大份额。
+- **MC NEX (KOSDAQ:097520) / Partron (KOSDAQ:091700)** — 韩国中端; 主攻较低端智能手机相机模组。
+
+![移动相机模组市占率](../../charts/lginnotek_camera_share.png)
+*资料来源: LGIT 份额取自 [DART 사업보고서 50 期, II §1 (1) ㄹ](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270) (公司估算, FY2025 为 33.4%); 同行份额来自行业研究 —— 舜宇光学份额取自 [Mordor Intelligence 相机模组报告, 访问于 2026-05](https://www.mordorintelligence.com/industry-reports/camera-module-market) 等。*
+
+**封装解决方案 / FC-BGA 竞争者 (半导体封装基板):**
+- **Ibiden 株式会社 (TSE:4062)** — 日本全球 FC-BGA #2; 主导 Intel 与高端 AI 基板; 市值约 USD 100 亿; FY2024 营收约 JPY 4,400 亿 ([Ibiden — Wikipedia, 访问于 2026-05](https://en.wikipedia.org/wiki/Ibiden))。
+- **Shinko Electric Industries (TSE:6967)** — 日本全球 #3; 服务器 CPU 专用 HDI; 市值约 USD 50 亿。备注: Fujitsu 已于 2024 年将 Shinko 出售予私募。
+- **Unimicron Technology (TWSE:3037)** — 台湾全球 FC-BGA 份额 #1 (约 25%+); 服务 TSMC 高端封装客户; FY2024 营收约 TWD 850 亿。
+- **Nan Ya PCB (TWSE:8046)** — 台湾主要厂商; 与 Unimicron 并列第一梯队。
+- **AT&S (VIE:ATS)** — 奥地利全球 #4; FC-BGA + ABF 专业; 供应 Intel。
+- **Kinsus Interconnect (TWSE:3189)** — 台湾中端厂商。
+- **Samsung Electro-Mechanics (KRX:009150)** — 韩国 FC-BGA 直接竞争者; 正在激进扩产。
+
+**光罩竞争者 (显示器 + 半导体):**
+- **Toppan Photomask (TSE:7911)** — 日本全球光罩龙头; SEMI 级与 FPD 级。
+- **Photronics (NASDAQ:PLAB)** — 美国全球半导体光罩 #2; 显示器光罩规模较小。
+- **Hoya Corporation (TSE:7741)** — 日本; 专攻 EUV 掩模坯料与显示器光罩。
+- **DNP — Dai Nippon Printing (TSE:7912)** — 日本; 显示器 + 半导体光罩。
+
+**车载解决方案竞争者 (车用电子):**
+- **Samsung Electro-Mechanics** — 车用 MLCC、功率模组。
+- **Continental AG (XETRA:CON)** — 车载照明、车联网、传感器。
+- **Bosch (非上市)** — 车用电子全品类。
+- **Denso (TSE:6902)** — 日本; 马达、传感器。
+- **Magna International (NYSE:MGA)** — 车用电子、照明。
+- **HL Mando (KRX:204320)** — 韩国 Tier-1; 制动 / 电子。
+
+```mermaid
+quadrantChart
+    title FC-BGA 竞争定位 (FY2025)
+    x-axis 低份额 --> 高份额
+    y-axis 低毛利 --> 高毛利
+    quadrant-1 高端龙头
+    quadrant-2 专业玩家
+    quadrant-3 后来者
+    quadrant-4 量产玩家
+    "Unimicron (TWSE:3037)": [0.85, 0.6]
+    "Ibiden (TSE:4062)": [0.75, 0.75]
+    "Shinko (TSE:6967)": [0.65, 0.7]
+    "Nan Ya PCB (TWSE:8046)": [0.6, 0.5]
+    "AT&S (VIE:ATS)": [0.45, 0.55]
+    "LG Innotek (KRX:011070)": [0.15, 0.6]
+    "Samsung Electro-Mech (KRX:009150)": [0.2, 0.5]
+```
+
+![LG Innotek vs FC-BGA 同行 — 2026E 远期 P/E](../../charts/lginnotek_peer_valuation.png)
+*资料来源: KB Securities 报告 (转引自 [Asia Business Daily, 2026-05-22](https://www.asiae.co.kr/en/article/stock-disclosure/2026052209222934028)) 关于同行平均远期 P/E 约 59×; 各公司远期 P/E 取自 [Investing.com 分析师一致预期估值页, 访问于 2026-05](https://www.investing.com/equities/lg-innotek-co-ltd-consensus-estimates) 及 Ibiden、Shinko、Unimicron、AT&S 的同类页面。*
+
+**竞争定位综合评估。**
+
+*光学解决方案:* LG Innotek 是移动相机模组全球 #1 (33.4% 份额), 但份额结构性下降 (2023–2025 年公司披露依次为 36.2% → 35.1% → 33.4%)。下滑由 Apple 供应商多元化驱动, 而非技术过时。优势 = **规模 + Apple 认证深度**; 软肋 = **单一客户依赖**。
+
+*封装解决方案:* LG Innotek 是全球 FC-BGA 小玩家 (份额可能 < 3%), 但是 Samsung Electro-Mechanics 之外韩国唯一的 ABF 基板备选。优势 = **后来者产能稀缺性** + **韩国产业政策 + 芯片厂商寻找非日本 / 非台湾货源的偏好**。软肋 = **日本 / 台湾老牌已积累 30 + 年认证深度**。
+
+*光罩:* LG Innotek 在显示器光罩为区域性小玩家, 专注 OLED。在任何光罩子品类均非全球 #1。*分析师观点:* 光罩条线之所以出现在野村 Figure 36 ([Nomura Greater China Semi p. 30 (分析师手稿 — 见项目内行业概览)](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)) 是为了榜单完整性, 而非 LGIT 是 Toppan 或 Photronics 的全球威胁。
+
+*车载:* LG Innotek 是中端 Tier-2 车用电子供应商, 专攻 LED 照明。KRW 19.2 万亿订单存量稳健, 但分部要在面对维持 50 年客户关系的 Tier-1 老牌中竞争。
+
+**LG Innotek 整体竞争优势。** 真正具有护城河的有:
+1. **Apple 相机模组关系 + 制造规模。** 没有竞争对手能复制 LGIT 在龟尾建成的 3,500 万颗以上 / 年的折叠变焦产能。
+2. **LG 集团品牌 + 资本支持。** 无需股权稀释即可获得约 KRW 7,000 亿 / 年 capex 投入。
+3. **韩国产业政策定位。** 美中脱钩在结构上有利于韩国零部件商对接美国芯片企业 / 超大规模数据中心客户 (尤其在 FC-BGA 上)。
+4. **研发深度。** 6,410 件韩国 + 8,029 件海外专利, KRW 7,710 亿研发支出 (营收占比 3.5%), 在光子学、AI 视觉、车用感测上提供可选项。
+
+**竞争软肋。**
+1. **单一客户依赖 (Apple 占 81%)。** 见第 9 章风险 #1。
+2. **FC-BGA 后来者地位。** 即便产能翻倍, LGIT 至 2028 年全球 FC-BGA 份额也难突破 5% —— 同行不会轻易让出份额。
+3. **没有垂直整合的传感器 / 镜头 / 驱动器。** Sony、Largan、Alps 控制 LGIT 无法控制的 BOM 成本线。光学营业利润压缩风险是结构性的。
+4. **光罩、COF、车载分部太小, 难以撬动集团 P&L。** 多元化叙事依赖于 FC-BGA 放量, 而非这些传统条线。
+
+---
+
+## 8. 市场机会 (TAM)
+
+LG Innotek 的可服务机会位于 **四个重叠市场**, 合计 2030F TAM 约 USD 2,000–2,500 亿。对 LGIT 命题最相关的切片是 **相机模组可服务市场 (成熟期约 USD 500 亿)** 与 **FC-BGA 基板市场 (至 2030 年约 USD 120–150 亿)** —— 这两个合计占公司经济敞口 70% 以上。
+
+**相机模组 TAM。** 行业研究把全球相机模组市场置于 **2025 年 USD 410 亿、2030 年约 USD 510 亿**, CAGR 4.2% ([Mordor Intelligence 相机模组报告, 访问于 2026-05](https://www.mordorintelligence.com/industry-reports/camera-module-market))。LG Innotek 的可服务子集 (仅移动、仅 Apple) 在成熟期约 **USD 130–170 亿** —— 即 Apple iPhone 相机模组预算结合单机内容增长 (3D ToF、潜望、可变光圈、Vision Pro / AR 邻域)。LGIT FY2025 来自 Apple 的营收约 USD 129 亿 (KRW 17.75 万亿按 1,380 KRW/USD 折算) —— 意味着 **LGIT 已处于其移动相机模组峰值可服务机会的 75–85%**。进一步上行来自非 Apple 移动 (LGIT 历史上微不足道)、车用相机以及 AR / VR / 机器人。*分析师观点:* 相机模组 TAM 对 LGIT 是慢增长、饱和的市场; 这是为什么股价命题需要 FC-BGA 的结构性原因。
+
+**FC-BGA / ABF 基板 TAM。** 市场研究共识把 **2025 年 FC-BGA 市场置于约 USD 53 亿, 至 2030 年增至 USD 120–150 亿**, CAGR 14–18%, 由 AI 加速器出货量与服务器 CPU 复杂度驱动 ([Market Growth Reports ABF 基板市场, 访问于 2026-05](https://www.marketgrowthreports.com/market-reports/abf-substrate-fc-bga-market-107527); [Archive Market Research ABF 基板报告, 访问于 2026-05](https://www.archivemarketresearch.com/reports/abf-substrate-fc-bga-831394))。LG Innotek 既定的 **USD 7 亿 FC-BGA 2030 目标** 隐含全球市占率 5–6%, 较当前 < 1% 的份额翻五倍, 但仍约为 Unimicron 市场地位的三分之一 ([PR Newswire, 2025-04-30](https://www.prnewswire.com/apac/news-releases/lg-innotek-to-build-fc-bga-into-700-million-usd-business-by-2030-with-its-state-of-the-art-dream-factory-302450934.html); [Tech Times, 2026-05-15](https://www.techtimes.com/articles/316690/20260515/lg-innotek-targets-us-ai-chip-clients-substrate-revenue-climbs-16.htm))。KB Securities 激进情境预测基板营收从 2025 年 KRW 4,000 亿跃升至 **2028 年 KRW 4 万亿** —— 10 倍扩张, 若实现意味着 LGIT 捕获了 Ibiden / Shinko / Unimicron 无法供应的后来者份额 ([Seoul Economic Daily, 2026-04-28](https://en.sedaily.com/markets/2026/04/28/lg-innotek-shares-jump-70-percent-in-month-brokerages-still))。
+
+**其他可服务市场:** 显示器光罩 **TAM 约 USD 10–20 亿**, 个位数 % 增长 —— 小且慢。LGIT 范围内车用电子 **TAM 约 USD 1,000 + 亿**, 高度碎片化; LGIT 可服务子集 (车用相机、车载 LED、BLDC 马达、V2X 车联网) 约 **USD 200–300 亿**, 中个位数 % CAGR。2025 年末 KRW 19.2 万亿车载订单存量意味着 LGIT 在 2028–30 年每年从该市场获得 KRW 4,000–5,000 亿 —— 即维持中个位数 % 营收贡献。
+
+**LGIT 可服务市场与份额机会:**
+
+| 市场 | 2025 TAM | 2030 TAM | LGIT 2025 份额 | LGIT 2030 合理份额 |
+|---|---|---|---|---|
+| 移动相机模组 | USD 约 410 亿 | USD 约 510 亿 | 33% (下降中) | 28-30% |
+| Apple 相机模组采购 | USD 约 140 亿 | USD 约 180-200 亿 | 约 92% | 80-85% |
+| FC-BGA 基板 | USD 约 53 亿 | USD 约 120-150 亿 | < 1% | 4-6% |
+| 显示器光罩 (韩国相关) | USD 约 5 亿 | USD 约 6 亿 | 15-20% | 15-20% |
+| 车用电子 (LGIT 范围) | USD 约 250 亿 | USD 约 350 亿 | < 2% | 2-3% |
+
+*资料来源: LGIT 相机模组份额取自 [DART 사업보고서 50 期, II §1 (1) ㄹ](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001270); TAM 数据取自前述具名行业研究报告。FC-BGA 份额预测以既定 USD 7 亿 2030 目标对共识 2030 市场规模外推。分析师构建表格。*
+
+**渗透策略** —— 跨四个市场, 策略一致: 加深 LG 集团对美国超大规模数据中心 / 芯片厂商的认证足迹 (用于 FC-BGA); 凭借技术领先守住 Apple 份额 (现在折叠变焦, 接下来可变光圈与 Vision Pro 模组); 累积汽车 Tier-1 平台中标, 2026–30 年把 KRW 19.2 万亿订单存量释放为营收。策略关键依赖于 **龟尾 4 厂梦工厂的执行** —— 产能必须按计划在 2026 年底翻倍, Intel / Amazon / Boston Dynamics / Figure AI 的客户认证必须收官。
+
+---
