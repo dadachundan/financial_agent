@@ -340,3 +340,124 @@ Air Liquide 运营于**两个增长与结构属性截然不同的行业**，市�
 NAICS 分类：**325120 (工业气体制造)** 适用于大宗气体与服务业务；**325199 (其他基础有机化学品制造)** 适用于电子先进前驱体业务；**621610 (居家保健服务)** 适用于医疗保健居家护理；**541330 (工程服务)** 适用于工程与建设。集团整体对应欧盟 NACE Rev 2 分类 20.11 (工业气体)、26.11 (半导体电子元件 ——用于电子特种材料)、86.10 / 86.90 (医疗)。与 Air Liquide 产品有交集的相邻行业包括特种化学品 (Merck KGaA、DuPont Electronic Materials、Resonac)、工业自动化 / 泵 (Atlas Copco / Edwards Vacuum)、可再生能源设备 (西门子能源、McPhy、Nel Hydrogen 等电解槽)。
 
 ---
+
+## 7. 竞争格局
+
+工业气体行业是**典型的四大寡头加一个区域专家** (亚洲的日本酸素) 集中格局。Air Liquide 的竞争位置为**营收第二、地理覆盖第一** (60 个国家，少于林德的约 100 个但非美国分散度更高)、**毛利率扩张表现行业最佳** (FY24 不含能源效应 +110 bps，连续两年)，但在绝对规模和美国份额上落后于林德。当聚焦电子业务时，竞争集合范围扩大，纳入了亚洲特种化学品公司 (Resonac、Merck、DNF、Wonik) ——他们在大宗工业气体中并无地位，但在先进前驱体与特种气体上具有可观的竞争力。
+
+### 7.1 直接竞争对手 ——四大全球工业气体寡头
+
+**(1) 林德 (Linde plc, NYSE:LIN / FRA:LIN) ——全球第一。** FY2024 营收约 USD 33bn (全球份额约 27%)，2026 年 5 月市值约 $230bn，TTM P/E 34.6×。由 2018 年 Praxair-Linde 合并组成；美国注册地，但根植于德国及全球。竞争定位：营业利润率行业最优 (大宗气体与服务层面经常性 ~28-29%)、美国权重最高、美洲清洁 H₂ 龙头 (沙特阿美蓝氢合资、多个美国湾岸氢气网络)。Air Liquide 在结构上**类似但规模较小**；正面竞争最激烈的领域是晶圆厂驻厂电子合同 (台积电亚利桑那由两家分供)、中国 ASUs 与美国工业气体零售 ——林德继承 Praxair 美国分销规模优势，而 Airgas 收购大幅缩小 Air Liquide 的差距 ([Linde Investor Relations homepage](https://www.linde.com/investors); [Linde plc — Market Cap, Bloomberg, May 2026](https://companiesmarketcap.com/linde/marketcap/))。
+
+**(2) 空气化工产品公司 (Air Products & Chemicals Inc., NYSE:APD) ——全球第三、氢能聚焦。** FY2024 营收约 USD 12.1bn (全球份额约 11%)，2026 年 5 月市值约 $70bn，TTM P/E 23.9×。美国注册地，总部宾州 Allentown。规模小于 Air Liquide 与林德，但**在 H₂ 经济上下注最为集中** ——APD 大举投入沙特 NEOM (8.6 GW 可再生 + 绿氨)、路易斯安那蓝氢 (含碳捕集)、艾伯塔蓝氢。Air Liquide 的竞争应对是 Normand'Hy / ELYgator PEM 电解槽路线 (从一开始就是可再生路线，而非蓝氢转型路径)。APD 已在 2020 年初剥离居家护理业务，比 Air Liquide 更集中于大宗工业气体 ([Air Products IR homepage](https://www.airproducts.com/about/investor-relations); [APD market cap, May 2026](https://stockanalysis.com/stocks/apd/market-cap/))。
+
+**(3) 日本酸素控股公司 (Nippon Sanso Holdings, TSE:4091) ——亚洲区域领导者。** FY2024 营收约 USD 8.0bn (全球份额约 7%，但在日本份额约 25%+、在韩国、台湾、新加坡也占可观份额)，2025 年 7 月市值约 $16.7bn，TTM P/E 20.0×。由 2014 年 Taiyo Nippon Sanso (日本) + Matheson Tri-Gas (美国，Praxair-Linde 合并强制剥离后) 合并而成；亦在 Praxair-Linde 合并中收购了 Praxair 的欧洲工业气体业务。**亚洲关系最深** ——胜高 SUMCO / 信越化学 / 瑞萨 / 东芝 / 索尼客户群深厚。与 Air Liquide 的竞争重叠最激烈的是日本 (Air Liquide 历史份额较低) 与韩国 (DIG Airgas 收购是战略反击) ([Nippon Sanso Holdings IR](https://www.nipponsanso-hd.co.jp/en/ir/); [Nippon Sanso market cap, 2025-07](https://companiesmarketcap.com/nippon-sanso/marketcap/))。
+
+**(4) Messer SE & Co. KGaA (私营，德国) ——全球第五。** FY2024 营收约 USD 4.0bn (全球份额约 4%)。Messer 家族私有 (在某些地区与 CVC Capital Partners 合资)。德国注册地，主要欧洲 + 亚洲分布。2019 年作为 Praxair-Linde 合并的反垄断剥离条件收购了林德的北美 + 南美气体业务。规模较小且电子业务投入低于头部四家，但在欧洲特种气体市场是可信的本地竞争者 ([Messer Group corporate website](https://www.messer.com/about-us))。
+
+### 7.2 电子业务专注型竞争者
+
+在电子业务尤其是先进材料与特种材料层面，竞争集合扩展到工业气体寡头之外，包括不参与大宗工业气体但在半导体材料上具备强大竞争力的特种化学品公司：
+
+- **Resonac Holdings (TSE:4004, 由昭和电工 + 日立化学合并而成)** ——NF₃ 与高纯干刻特种气体全球领导者，亦在 CMP 浆料、抛光垫、BT 层压板 (先进封装基板) 上占有强势。FY24 特种气体业务营收约 JPY 80bn (约 $540m) ([Resonac integrated report FY2024](https://www.resonac.com/sites/default/files/2025-02/14_E_DataBook202412_001.pdf))。在 NF₃、WF₆、B₂H₆、GeH₄ 合同上与 Air Liquide 竞争。
+- **Merck KGaA Electronics / Versum Materials** ——2019 年以 $6.5bn 收购 Versum 后成为先进前驱体 (CVD/ALD 化学品) 全球领导者。在台积电、三星、英特尔层面与 ALOHA / Voltaix 直接对峙。
+- **Entegris (NASDAQ:ENTG)** ——气体纯化、气柜硬件、先进晶圆处理领域龙头。与 Air Liquide 气体分子供应业务互补而非竞争；ENTG 通常是 Air Liquide 集成设备线的首选供应商。
+- **DuPont Electronic Materials** ——在 CMP 浆料 (Dow 遗产)、光刻胶辅助剂上具备优势；与 Voltaix 在前驱体化学品上存在部分重叠。
+- **东京应化 (Tokyo Ohka Kogyo, TOK, TSE:4186)** ——日本特种化学品龙头，主营光刻胶与光刻胶相邻材料；在显影液化学品上有部分重叠。
+- **DNF (KRX:092070)、Wonik QnC (KRX:074600)** ——韩国特种化学品公司，借三星 / SK 海力士先进前驱体份额上升而成长；规模较小但本地化优势明显。
+- **鼎龙股份 (SHE:300054)、安集科技 (SSE:688019)** ——中国特种化学品公司，借中芯国际 / 长鑫存储 / 长江存储本地化趋势成长；主要在 CMP 浆料 / 光刻胶辅助剂上，部分相邻特种气体。
+
+```mermaid
+quadrantChart
+    title 工业气体竞争定位 ——规模 vs 电子特种深度
+    x-axis "电子特种深度有限" --> "电子特种深度深"
+    y-axis "规模较小" --> "规模较大 (工业气体营收)"
+    quadrant-1 "规模领导者, 电子深度深"
+    quadrant-2 "规模领导者, 电子深度浅"
+    quadrant-3 "细分专家"
+    quadrant-4 "电子专家, 规模较小"
+    Linde: [0.70, 0.95]
+    Air Liquide: [0.78, 0.85]
+    Air Products: [0.45, 0.55]
+    Nippon Sanso: [0.65, 0.40]
+    Messer: [0.30, 0.20]
+    Resonac (特种气体): [0.92, 0.18]
+    Merck Electronics: [0.92, 0.25]
+    Entegris: [0.85, 0.15]
+```
+
+*数据来源：作者基于 FY2024 营收排名与各公司年报披露的分部数据构建。右上「规模领导者 + 电子深度深」象限的两家——林德与 Air Liquide ——是唯一两家在 AI 周期半导体扩张中同时具有 >$25bn 工业气体营收 + 可信先进前驱体和特种材料组合的企业。*
+
+### 7.3 竞争优势与劣势
+
+**Air Liquide 的竞争优势：**
+
+1. **垂直整合深度** ——分子研发 (创新园区) → 工程 (E&C) → 资产运营 (ASU 装置群) → 多渠道分销 (4 条 GS 业务线) → 服务包覆。少有竞争者能匹配全部五个环节；只有林德与 APD 接近。
+2. **地理均衡** ——40% 美洲 / 39.5% EMEA / 20.5% 亚太是头部企业中最均衡的结构。林德更偏美国，APD 更偏美国 + 中东，日本酸素几乎完全在亚太。
+3. **电子特种深度** ——ALOHA / Voltaix / Subleem / enScribe / Balazs 平台在覆盖广度上与 Merck Electronics、Resonac 相当，且**规模大于二者** (€2.5bn 电子营收对比 Resonac ~$540m 特种气体业务或 Merck Electronics ~$2bn 前驱体业务)。
+4. **ADVANCE 2025 下的毛利率复利** ——2022-2025 +460 bps 不含能源效应的扩张是同业 4 年期最佳运营记录。
+5. **欧洲氢能领导力** ——Normand'Hy 200 MW 是全球最大 PEM 电解槽项目之一；可再生从首日开始的策略相比 APD 的蓝氢优先策略有差异化。
+
+**Air Liquide 的竞争劣势：**
+
+1. **DIG Airgas 之前在韩国规模较小** ——2015 年退出大成是战略失误，花了 10 年时间扭转；€2.85bn DIG Airgas 价格即是再进入成本。
+2. **规模小于林德** ——24% 全球份额 vs 林德 27%，Air Liquide 无法主导行业层面定价；只能跟随或匹配林德的年度调价决定。
+3. **没有美国主要上市** ——仅有 OTC 二级 ADR (AIQUY)；泛欧巴黎主上市意味着美国机构持有率较低，相比林德或 APD (均为 S&P 500 / S&P 100 指数成分股) 缺乏指数被动买入支撑。
+4. **欧盟监管负担** ——CSRD、欧盟分类、欧盟 ETS 使 Air Liquide 的报告与合规成本结构性高于美国注册同业；低碳 H₂ 监管利好是部分抵消。
+5. **工程与建设是结构上波动较大的营收线** ——并已从 2013-17 周期峰值大幅缩水，因为集团选择把更多价值内部消化。
+
+### 7.4 市场份额 ——按分部与区域 (分析师构建)
+
+***分析师观点：***URD 2024 **不**发布按分部和区域的市场份额表，下表数字由作者基于竞争对手财报、野村行业研究和全球工业气体行业贸易媒体数据三角验证而成。读者应视为估算。
+
+| 子市场 | Air Liquide 估算份额 | 备注 / 最接近竞争者 |
+|---|---|---|
+| 全球工业气体合计 | **约 24%** | 第二，落后于林德 ~27%；数据来源：公司 FY2024 年报，与 [Market.us 2024 $112.7bn 市场规模](https://market.us/report/industrial-gases-market/) 交叉验证 |
+| 半导体大宗驻厂载气 (美洲) | 约 30-35% | 与林德共同领导；APD 远第三 |
+| 半导体大宗驻厂载气 (亚洲除日本) | 约 25-30% | 与林德、日本酸素共同领导 |
+| 电子特种气体 (NF₃、WF₆ 等) | 约 15-20% | Resonac 在 NF₃ 上领先；Merck/Versum、Linde Electronics、日本酸素在其他分子上竞争 |
+| 先进前驱体材料 (ALD/CVD) | 约 10-15% | Merck Electronics (Versum) 营收第一；Air Liquide 凭 ALOHA/Voltaix 第二-三 |
+| 医疗保健医用 O₂ + 居家护理 (欧洲) | 约 25-30% | 与林德医疗保健及区域企业共同领导 |
+| 工业气体零售 (北美) | 约 30% (Airgas 遗产) | 林德 / Praxair 遗产为共同领导者；Messer、岩谷、区域企业较小 |
+
+模式一致 ——Air Liquide 在几乎所有子市场中都是**共同领导者或紧随其后** ——从不单独主导，但也始终在头部。这与紧密寡头格局相符，前 2-3 家头部企业按主要合同分割市场。
+
+---
+
+## 8. 市场机会 (TAM)
+
+Air Liquide 的相关可寻址市场最佳分解方式为**四条业务线 TAM** + 叠加在其上的**两个周期驱动增长市场** (半导体资本开支超级周期、可再生 H₂ 扩张)。
+
+### 8.1 基础 TAM 按分部分解
+
+| 分部 | 2024 全球 TAM | 2030E TAM | CAGR | Air Liquide FY24 份额 | 来源 |
+|---|---|---|---|---|---|
+| 工业气体合计 | $112bn | $185bn | 8.5% | 约 24% | [Market.us — Industrial Gases Market, 2024-2034](https://market.us/report/industrial-gases-market/) |
+| ……大宗工业气体 | 约 $45bn | 约 $70bn | 7-8% | 约 16% | 作者基于行业分拆估算 |
+| ……工业气体零售 | 约 $45bn | 约 $65bn | 6-7% | 约 27% | 作者估算 |
+| ……医疗保健 (医用气体 + 居家护理) | 约 $15bn | 约 $25bn | 7-9% | 约 28% | [Statista — Global Industrial Gas Topic Page](https://www.statista.com/topics/9233/global-industrial-gas-industry/) |
+| 电子 ——特种气体 | $6.2bn (2024) | $9.5bn | 7.4% | 约 15-20% | [Strategic Market Research — Semicon Specialty Gas 2024-2030](https://www.strategicmarketresearch.com/market-report/semiconductor-specialty-gas-market) |
+| 电子 ——先进材料 (ALD/CVD 前驱体) | 约 $4bn | 约 $8bn | 12-14% | 约 10-15% | 作者基于野村半导体材料数据估算 |
+| 可再生 H₂ (2035 目标终值) | 约 $5bn | 约 $30-50bn | >25% | 约 10-15% 目标 | [Air Liquide >€8bn H₂ commitment](https://www.airliquide.com/group/press-releases-news/2022-03-08/air-liquide-receives-support-french-state-its-200-mw-electrolyzer-project-normandy-and-accelerates) |
+
+聚合 Air Liquide 服务的 **2024 年基础 TAM**：约 $112bn 工业气体 + $10bn 特种 / 先进电子 + $5bn 雏形可再生 H₂ = **约 $127bn**。Air Liquide 营收 $29.4bn 对应服务市场份额约 23%。**2030E TAM** 约为 $185bn 工业气体 + $17bn 电子 + $15-25bn 可再生 H₂ = **约 $220-230bn** ——TAM 在 6 年内约翻倍，由 AI 半导体周期与 H₂ 经济驱动。
+
+### 8.2 SAM 与 SOM ——Air Liquide 实际可获取的市场
+
+Air Liquide 的**可服务可寻址市场 (SAM)** 受制于：(i) 集团地理足迹 (60 个国家，但实质布局约 25-30 个)；(ii) 集团产品线覆盖；(iii) 合同客户关系基础。应用这些过滤后，$220bn 2030E TAM 缩减至 SAM 约 **$130-150bn** (例如 Air Liquide 在印度工业气体零售业务的实质性布局较弱，在非洲工业气体除南非和埃及外覆盖也有限)。
+
+集团**可服务可获取市场 (SOM)** ——即未来 5 年实际可竞争的份额——可以近似为目前 24% 份额应用于 SAM，加上 €4.6bn 投资储备暗含的份额获取雄心。在以 24% 份额覆盖 $135bn SAM (CAGR 7-8%) 的情况下，基础 SOM 2030E 营收路径约为 **$32-35bn** (vs 2024 年 $29.4bn)，对应 CAGR 约 2-3% ——温和但具有若干上行催化剂：(i) 韩国 (DIG Airgas) 与台湾 (€500m + €1bn+ 台中) 电子份额获取；(ii) 欧洲 H₂ 份额获取 (Normand'Hy 投运)；(iii) 美国回流份额 (爱达荷、亚利桑那、CHIPS 法案后续晶圆厂)。
+
+### 8.3 渗透策略
+
+Air Liquide 的渗透策略分为三条腿：
+
+1. **赢得新晶圆厂驻厂合同 ——下游电子营收锚点。** 每座新建台积电 / 三星 / SK 海力士 / 美光 / 英特尔 / 格芯晶圆厂都是一次驻厂招标；赢得载气驻厂合同锁定 15-20 年营收 AND 打开增量特种 / 先进材料销售门。2022-2026 年中标列表 (台积电亚利桑那、三座台湾工厂、爱达荷美光、新加坡 VSMC、德国 €250m、台中先进材料) 已展示节奏。
+
+2. **在薄弱地区收购 ——DIG Airgas 填补韩国缺口。** €2.85bn DIG Airgas EV 对应约 5-6× EV/EBITDA (DIG Airgas 据报道贡献约 €500m 营收和 €100m EBITDA)，按协同价值 (向 DIG Airgas 客户基础交叉销售电子特种材料、韩国 H₂ 网络份额) 而言是合理倍数。
+
+3. **以可再生优先技术引领 H₂ 转型。** Normand'Hy 200 MW PEM 电解槽 2026 年投运，是欧洲单项最大的 PEM 项目；Air Liquide 2024-2035 年 >€8bn H₂ 承诺是绿氢竞争中最具体的运营定位。
+
+**机会时序双峰：** 工业气体零售 + 医疗保健 + 传统大宗工业气体以 4-7% 稳态增长；**电子 (AI 资本周期) + 可再生 H₂ 是两条上行腿**，可能在 2026-2030 年间将集团营收增长推至 6-8% ——明显高于 FY2024-2025 年的 1-3% 报告增长 (反映了新冠后成熟分部正常化)。
+
+---
