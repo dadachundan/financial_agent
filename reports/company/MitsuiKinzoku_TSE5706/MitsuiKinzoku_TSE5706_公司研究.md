@@ -340,5 +340,150 @@ pie title 三井铜箔 —— 基板客户份额估算（按 ABF 市场结构推
 
 *来源：[Mitsui Kinzoku FY2025 Results & FY2026 Forecast presentation, pp.8–10 — Segment Information by Business Unit](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027)。金属板块仍是合并营收主力（毛基约 42%）但工程材料板块在营业利润口径已接近持平 —— 这是 2025–2027 计划期内加速的结构性转移。*
 
+## 9. 风险评估
+
+### 公司专属风险 (5)
+
+**1. 铜箔事业部基板厂客户层面的集中度。** 三井金属矿业 MicroThin™ 与 VSP™ 营收通过 5 家客户 —— Ibiden、Unimicron、Nan Ya PCB、Shinko Electric、AT&S —— 汇聚，它们合计控制全球 ABF 基板市场约 75%。虽然无单一客户披露占合并营收 >10%，*分析师观点：* 前三大基板厂很可能占铜箔事业部营收 >50% ([Yole — Advanced IC substrates, 2024](https://www.yolegroup.com/press-release/advanced-ic-substrate-reach-the-stars/))。如果其中任一基板客户 (a) 积极追认证韩国或中国二供，或 (b) 在感受到 AI 周期顶点前去库，铜箔事业部 P&L 会显著移动。**严重度：高**；**对冲**：MicroThin™ ~95% 份额 + 12–24 个月认证周期 + 多年合约可见度延至 2027 —— 三井仍有缓冲。
+
+**2. 中国 ED 铜箔新进入者加速进入 HVLP3+ 档次。** 中国厂商（Wason Copper Foil、Jiujiang Defu、Nuode Investment）正可信地放量 HVLP2 / HVLP3 档次，目前落后三井金属矿业和 JX Advanced Metals 18–30 个月在 HVLP4/5 档 —— 但差距正在缩小。即便一家中国新进入者成功实现 HVLP3+ 规模化认证，也将压制 VSP™ 价格，尤其在非前沿应用（5G 基站、交换芯片）。**严重度：中等-高**（2027–2030 视野）；**对冲**：三井 HVLP5 领先 + 公司明确在 VSP™ 内部 **将更多产品组合向高端档倾斜** 的策略 ([FY2025 Q2 Telephone Conference Q&A, p.13 — "increase the proportion of higher value-added products within the VSP™ category"](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=rXEqWGnOMII%3D&tabid=204&mid=1027&TabModule903=0))。
+
+**3. AI 周期 1,200 吨/月 VSP™ 扩产的执行风险。** 三井金属矿业承诺将 VSP™ 产能从 2025 年 8 月的 620 吨/月扩至 2026 年 9 月的 840 吨/月，并以核心客户长期需求预测为前提，长期目标 1,200 吨/月。若 AI 服务器需求快于预期常态化（NVIDIA 增长降速、超大规模云商 capex 暂停），三井将承担低利用率下的更高固定折旧。**严重度：中等**；**对冲**：管理层明确扩产采用"既有设施改造"以降低边际 capex，缓和增量固定成本敞口 ([VSP™ Production Capacity Enhancement release, 2025-08-20, p.1](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=ImEZB60e3oE%3D&tabid=278&mid=824&TabModule1277=0))。
+
+**4. 汽车催化剂受 BEV 替代的长周期衰退。** 全球乘用车催化剂市场因 BEV 替代 ICE / 混动而进入长期衰退 —— 至 2035 年年度市场 1–2% 衰退是基础情景共识。三井金属矿业在摩托车催化剂的强势定位（摩托车 BEV 替代慢于乘用车）形成防御，但汽车催化剂敞口仍可观。**严重度：低-中**（缓慢消耗）；**对冲**：50% 全球摩托车催化剂份额 + 混动需求 + 新兴市场摩托车排放法规收紧。
+
+**5. Caserones 等矿业资产减值再次发生。** 三井金属矿业历史上曾对 Caserones 铜矿权益持股计提减值（FY2020–FY2022），账面利润显著受压。虽然主要减值已计提，权益法残余敞口仍存，新的智利特许权费政策变化、安第斯水源危机或铜价崩跌可能触发新减值。**严重度：低**；**对冲**：Caserones 残余仅为权益法核算，主要运营风险已转移。
+
+### 行业 / 市场风险 (3)
+
+**6. 铜价波动 —— 既是机会也是风险。** 铜箔按"成本加成"销售，铜金属成本基本传导，但合约与发货之间铜价快速变化会产生库存损益，在板块营业利润中体现。FY2025 录得合并 ¥24.5 亿元库存效应顺风将在 FY2026 反转 ([FY2025 Results presentation, pp.4–6 — operating income difference analysis](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))。**严重度：中等**（周期性、可预测）；**对冲**：成本传导覆盖底层利润，仅暴露库存时点。
+
+**7. 锌 TC / RC 因中国冶炼厂产能过剩压缩。** 锌冶炼 / 精炼加工费从 FY2024 的 USD 165/t 压缩到 FY2026 的 USD 80/t，受中国冶炼产能新增驱动 —— 直接拖累金属板块利润，FY2024 → FY2025 影响 ¥2.7 亿元、FY2025 → FY2026 预测影响 ¥11.9 亿元负向波动 ([FY2025 Results presentation, p.15 — Metals difference analysis, T/C column](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))。**严重度：中等**；**对冲**：冶炼网络生产率 + 回收原料组合 + 副产品贡献部分对冲。
+
+**8. 地缘政治 / 出口管制中断。** 两项具体敞口：(a) 美国对先进节点半导体制造设备的出口管制影响终端 NVIDIA / AMD / Broadcom 对中国市场出货（其中一部分使用 MicroThin™ + VSP™）；(b) 中国可能对铟（ITO 靶关键投入）或稀土（PVD / 工程粉体事业部用）出口管控会扰乱投入供应。**严重度：中等**；**对冲**：多元化生产布点（日本、台湾、马来西亚、美国、印度）降低单一辖区敞口；再生铟 ITO 靶产品组合缓解铟供应风险。
+
+### 财务风险 (2)
+
+**9. 估值 / 倍数压缩风险。** 在 ~35 倍 TTM PE 与 ~42 倍 FY2026 远期 PE 下，三井金属矿业相对日本非铁同业中位（~13×）显著溢价，并锚定于 AI 周期 / 先进封装增长故事。如果 AI 服务器 PCB 需求或 HVLP 铜箔需求的市场预期降温（NVIDIA 减速、超大规模云商 capex 暂停、中国 ED 铜箔过剩），倍数会显著压缩。从 35× 到 20× 在固定收益下意味着约 43% 的下行 ([Google Finance 5706:TYO](https://www.google.com/finance/beta/quote/5706:TYO); [Stockanalysis TYO:5706](https://stockanalysis.com/quote/tyo/5706/statistics/))。**严重度：高**；**对冲**：底层铜箔业务的结构性重估真实可信，即便部分压缩也至少能保住 25× PE 防御位。
+
+**10. FY2026 营业利润指引相对 FY2025 创纪录的台阶式下降。** 管理层 FY2026 营业利润指引 ¥91 亿元 **低于 FY2025 创纪录的 ¥130.9 亿元 ¥39.9 亿元** —— 30.5% 同比下降，全部由 FY2025 金属库存顺风消失驱动。这一下降透明且结构性，但市场对"信号 vs 一次性"的解读会全年影响估值倍数。**严重度：中等**（充分披露）；**对冲**：完整透明的下降构成分解 —— ¥21.9 亿元库存效应、¥12.3 亿元 PGM 价差对催化剂的影响、¥4.6 亿元定检 ([FY2025 Results presentation, p.5 — FY2026 Operating Income Forecast breakdown](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))。
+
+### 宏观风险 (2)
+
+**11. JPY/USD 汇率升值对账面收益的影响。** 三井金属矿业在 FY2024–FY2025 显著受益于日元疲软（JPY 150–160/USD）—— 既通过 USD 计价收入折算，也通过库存重估效应。FY2026 指引假设 JPY 150/USD，但若日元升至 JPY 130/USD（2026 末 / 2027 共识基础情景），账面收益会压缩。每 ¥1/USD 变动对 FY2026 数据影响仅金属板块经常利润约 ¥0.6 亿元（按公司敏感性表）([FY2025 Results presentation, p.15 — Metals Sensitivity table, "US$ ±1yen/$ : 0.6 / 0.5"](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))。**严重度：中等**；**对冲**：海外生产布点（台湾、马来西亚、美国）的自然对冲限制净敞口。
+
+**12. 全球衰退 / 工业需求放缓。** 三井金属矿业的工程材料、金属、汽配业务都直接暴露于全球工业生产趋势 —— 镀锌钢量（汽车 + 建筑）、铜消费（电气基础设施 + EV + 建筑）、摩托车 / 通用引擎 OEM 销量（耐用消费品）、电子设备出货（智能手机、PC、服务器）。全球衰退或工业放缓会同时压缩所有四个板块的 P&L。**严重度：中等**；**对冲**：铜箔事业部的 AI 周期反周期性 + 金属板块防御性回收定位部分对冲。
+
+## 10. 参考资料
+
+### 三井金属矿业一手文件与 IR 资料
+- [Mitsui Kinzoku Integrated Report 2025 (English, 69 pp.)](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf) —— 公司历史、板块战略、Top-Share 产品披露、中期经营计划财务目标、董事会构成的主要来源。
+- [Mitsui Kinzoku FY2025 Results & FY2026 Forecast presentation, 2026-05-13 (30 pp.)](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027) —— FY2025 实绩 + FY2026 指引 + 板块级营收 / OP 明细 + 差异分析。
+- [Mitsui Kinzoku FY2025 Q2 (H1) Results presentation, 2025-11 (使用 Q3 deck via tabid 204)](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=Se2570dHYUo%3D&tabid=204&mid=1027) —— Q3 九个月结果。
+- [Record of Telephone Conference Concerning FY2025 Q2 Results, 2025-11 (15 pp.)](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=rXEqWGnOMII%3D&tabid=204&mid=1027&TabModule903=0) —— 上半年管理层评论；铜箔、MicroThin、VSP、ACT 剥离、产能扩张的 Q&A。
+- [Mitsui Kinzoku Integrated Report 2021 (English)](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2021/EN/integrated_report2021.pdf) —— 历史董事简介（能登武 CEO 任前履历）。
+- [Mitsui Kinzoku — Financial Results Reports library](https://www.mitsui-kinzoku.com/en/toushi/lib/tanshin/) —— 历史 Tanshin（決算短信）与业绩 deck 库。
+- [Mitsui Kinzoku — Board of Directors](https://www.mitsui-kinzoku.com/en/company/c_yakuin/) —— 当前董事会构成。
+- [Mitsui Kinzoku Stock Information](https://www.mitsui-kinzoku.com/en/toushi/stock_info/) —— 拆股历史、分红历史。
+- [Mitsui Kinzoku — VSP™ Capacity Enhancement release, 2025-08-20](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=ImEZB60e3oE%3D&tabid=278&mid=824&TabModule1277=0) —— 2025 年 8 月扩产至 2026 年 9 月 840 吨/月。
+- [Mitsui Kinzoku — News page](https://www.mitsui-kinzoku.com/en/) —— 2025 年新闻档案，含商号变更和 11 月 VSP 扩产。
+- [MicroThin™ technology page](https://em.mitsui-kinzoku.com/douhaku/en/technology/microthin) —— MicroThin™ 产品描述和 95% 全球份额声明。
+
+### 可比日韩材料同业（估值与竞争背景）
+- [JX Advanced Metals IR](https://www.jx-nmm.com/english/ir/); [JX Advanced Metals Electronic Materials product page](https://www.jx-nmm.com/english/) —— HVLP 铜箔与溅射靶主要对手。
+- [Tosoh Corporation IR](https://www.tosoh.com/our-company/ir) —— 非铁 + 电子材料同业。
+- [Resonac Holdings IR](https://www.resonac.com/ir/) —— AI 电子材料同业（日本综合体）。
+- [Resonac FY2025 Tanshin, 2026-02-13](https://www.resonac.com/sites/default/files/2026-02/e_tanshin2025q4.pdf) —— Resonac FY2025 业绩。
+- [Furukawa Electric IR](https://www.furukawaelectric.com/en/ir/) —— LIB 铜箔 + 标准 PCB 铜箔同业。
+- [Mitsubishi Materials IR](https://www.mmc.co.jp/corporate/en/ir/) —— 铜冶炼 + 高级材料同业。
+- [Sumitomo Metal Mining IR](https://www.smm.co.jp/en/ir/) —— 镍-铜-金 + 电池材料同业。
+- [DOWA Holdings IR](https://www.dowa.co.jp/en/ir/) —— 锌-铅-PGM + 高级材料同业。
+- [Nippon Denkai IR](https://www.morningstar.com/stocks/xtks/5871/quote) —— 独立 ED-Cu 铜箔同业（亏损）。
+- [Lotte Energy Materials (formerly Iljin Materials) IR](https://www.lotteenergymaterials.com/en/) —— 韩国 LIB 铜箔 #1。
+
+### 客户 / 基板厂参考
+- [Yole Group — "Advanced IC substrates reach the stars", 2024](https://www.yolegroup.com/press-release/advanced-ic-substrate-reach-the-stars/) —— ABF 基板市场结构。
+- [Wonderful PCB — "Top ABF substrate manufacturers and market leaders"](https://www.wonderfulpcb.com/blog/top-abf-substrate-manufacturers-and-market-leaders/) —— 前 5 大 ABF 基板厂份额。
+- [HQ ICSubstrate — Top 10 IC Substrate Manufacturers 2024](https://www.hqicsubstrate.com/ic-substrates-blog/industry-news/top-10-ic-substrate-manufacturers-2024/) —— IC 基板厂排名。
+
+### 行业 / TAM 第三方报告
+- [Market Growth Reports — ABF Substrate (FC-BGA) Market 2035](https://www.marketgrowthreports.com/market-reports/abf-substrate-fc-bga-market-107527) —— ABF 基板 TAM USD 5.26 bn → USD 9.0 bn 2035，CAGR 5.6%。
+- [Verified Market Research — ABF Substrate (FC-BGA) Market](https://www.verifiedmarketresearch.com/product/abf-substrate-fc-bga-market/) —— ABF TAM 备选预测。
+- [360iResearch — ABF Substrates for Server & HPC Market](https://www.360iresearch.com/library/intelligence/abf-substrates-for-server-hpc) —— 服务器 / HPC ABF 子 TAM USD 312 mn → USD 525 mn 2032，CAGR 7.71%。
+- [Market Research Future — Copper Foil Market 2035](https://www.marketresearchfuture.com/reports/copper-foil-market-7381) —— 铜箔 TAM USD 8.0 bn → USD 18.6 bn，CAGR 7.9%。
+- [Dataintelo — HVLP Copper Foil Market Research Report 2034](https://dataintelo.com/report/global-hvlp-hyper-very-low-profile-copper-foil-market) —— HVLP TAM 与三井份额。
+- [Mordor Intelligence — High-End Copper Foil Market](https://www.mordorintelligence.com/industry-reports/high-end-copper-foil-market) —— 高端铜箔 TAM 背景。
+- [Verified Market Research — Top 8 Copper Foil Manufacturers](https://www.verifiedmarketresearch.com/blog/best-copper-foil-companies/) —— 铜箔市场份额排名。
+- [Nomura Greater China Semi: A Guide to Semi Renaissance in 2026~30F, 2026-05-21](https://www.nomuraconnects.com/) —— 锚点板块报告，将三井金属矿业作为溅射材料供应商点名（Fig. 44）；HVLP3+ 铜箔需求 2030 年 2,400 吨/月预测；配套板块综述见 [`reports/sector/半导体材料.md`](../../sector/半导体材料.md)。
+- [Altium / Zach Peterson — "Types of PCB Copper Foil for High-Frequency Design"](https://resources.altium.com/p/types-pcb-copper-foil-high-frequency-design) —— HVLP / VLP / 标准 ED 铜箔定义。
+- [SemiconSAM — "Copper Foil: Mitsui's near-monopoly is creating a supply shortage"](https://www.semiconsam.com/p/copper-foil-mitsuis-near-monopoly) —— MicroThin™ 市场定位的独立评论。
+- [SMM — Mitsui Kinzoku VSP capacity expansion commentary](https://news.metal.com/newscontent/103558198) —— 2025 年 8 月扩产的第三方报道。
+
+### 对手催化剂 / PVD 靶产品参考
+- [Johnson Matthey Clean Air Catalysts](https://matthey.com/en/products-and-markets/other-markets/clean-air-solutions) —— TWC + SCR 催化剂对手。
+- [BASF Mobile Emissions Catalysts](https://basf-catalystsmetals.com/industries/automotive-transportation/mobile-emissions-control-catalysts/mobile-emissions-motorcycle-and-general-engine-catalysts) —— PremAir®、FourFlex® 催化剂对手。
+- [Umicore Catalysis](https://eom.umicore.com/en/businesses/automotive-catalysts/) —— 汽车催化剂对手。
+
+### 高管 / 治理参考
+- [Bloomberg — Seiji Ikenobu profile](https://www.bloomberg.com/profile/person/22507256) —— 现任 CEO 简介。
+- [Bloomberg — Takeshi Nou profile](https://www.bloomberg.com/profile/person/18854501) —— 前任 CEO 简介。
+- [Simply Wall St — Mitsui Kinzoku management analysis (5706.T)](https://simplywall.st/stocks/jp/materials/tse-5706/mitsui-kinzoku-shares/management) —— 高管薪酬与持股分析。
+- [Globe and Mail — "Mitsui Kinzoku Taps Seiji Ikenobu as New President", 2026-02-13](https://www.theglobeandmail.com/investing/markets/stocks/XZJCF/pressreleases/221742/mitsui-kinzoku-taps-seiji-ikenobu-as-new-president-in-management-reshuffle/) —— 接班公告。
+- [TheOrg — NOU Takeshi profile](https://theorg.com/org/mitsui-mining-and-smelting-co-ltd/org-chart/nou-takeshi) —— 前任 CEO 履历。
+- [MarketScreener — Takeshi Nou insider profile](https://www.marketscreener.com/insider/TAKESHI-NOU-A1YGET/) —— 前任 CEO 内部人持股 / 交易记录。
+
+### 历史 / 公司谱系参考
+- [Encyclopedia.com — Mitsui Mining & Smelting Co., Ltd.](https://www.encyclopedia.com/books/politics-and-business-magazines/mitsui-mining-smelting-co-ltd) —— 1874 年成立背景、神冈矿历史、1950 年战后法人化。
+- [Britannica — Mitsui Group](https://www.britannica.com/money/Mitsui-Group) —— 三井财阀 / 系列结构史。
+- [Reference for Business — Mitsui Mining & Smelting Co., Ltd. history](https://www.referenceforbusiness.com/history2/70/MITSUI-MINING-SMELTING-CO-LTD.html) —— 企业历史档案库。
+- [Mitsui Kinzoku Catalysts America — Lane Report announcement, 2013](https://www.lanereport.com/23557/2013/08/mitsui-kinzoku-catalysts-america-to-open-plant-in-frankfort-create-50-jobs/) —— 肯塔基州催化剂工厂。
+
+### 市场数据参考
+- [Google Finance 5706:TYO](https://www.google.com/finance/beta/quote/5706:TYO) —— 当前报价、P/E、市值。
+- [Yahoo Finance JP 5706.T](https://finance.yahoo.co.jp/quote/5706.T) —— 历史股价图。
+- [Stockanalysis TYO:5706](https://stockanalysis.com/quote/tyo/5706/) —— TTM 财务数据。
+- [Trading Economics — Mitsui Mining & Smelting 5706](https://tradingeconomics.com/5706:jp) —— 历史股价图。
+- [Smartkarma — Mitsui Mining & Smelting Q3 Earnings Alert](https://www.smartkarma.com/home/newswire/earnings-alerts/mitsui-mining-smelting-co-5706-earnings-fy-operating-income-surges-with-revised-forecasts-and-strong-q3-results/) —— 2026 年 2 月 Q3 评论。
+- [TipRanks — Mitsui Kinzoku lifts FY2025 outlook](https://www.tipranks.com/news/company-announcements/mitsui-kinzoku-lifts-fy2025-outlook-on-copper-foil-and-metal-price-tailwinds-2) —— 2026 年 2 月指引上调。
+- [Oak-Mitsui Inc. company page](https://www.oakmitsui.com/) —— 美国铜箔合资公司。
+
+<details>
+<summary>Step 10 验证日志 —— 2026-05-26</summary>
+
+**URL 检查** —— 全部 45+ 条 inline URL 在生成过程中已通过 WebFetch / WebSearch 工具确认有效；HTTP 状态码批量检查待办（finance.yahoo.com、simplywall.st、theglobeandmail.com 等已知有 anti-bot 屏蔽 —— 这些 URL 来自本会话内成功的 WebFetch / WebSearch 调用，在浏览器中可正常访问）。
+
+**主要一手文件本地缓存** —— `reports/company/MitsuiKinzoku_TSE5706/_research_cache/mk_fy2025_results.pdf` 是 FY2025 Results & FY2026 Forecast presentation，承载所有 FY2025 / FY2026 财务声明的锚点；Integrated Report 2025 PDF 与 Q2 Telephone Conference PDF 已在研究过程中用 fitz 提取读取但未保存进仓库以控制目录大小。
+
+**关键财务数字抽查**（声明 → 出处）：
+- FY2025 销售额 ¥758.5 亿、OP ¥130.9 亿、经常利润 ¥136.7 亿、净利润 ¥91.3 亿 ✓ ([FY2025 Results presentation, p.2 — Results of FY2025 and Forecast of FY2026 table](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))
+- FY2026 指引销售额 ¥830 亿、OP ¥91 亿、经常利润 ¥93 亿、净利润 ¥75 亿 ✓ ([FY2025 Results presentation, p.2](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))
+- 铜箔事业部 FY2025 营收 ¥135.0 亿（同比 +44.8%，从 ¥93.2 亿）✓ ([FY2025 Results presentation, p.25 — Engineered Materials Sales by Division](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))
+- 工程材料板块 FY2025 销售 ¥328.4 亿、OP ¥67.5 亿 ✓ ([FY2025 Results presentation, pp.8–10](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))
+- 金属板块 FY2025 销售 ¥376.7 亿、OP ¥70.8 亿 ✓ ([FY2025 Results presentation, pp.8–10](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))
+- MicroThin™ ~95% 全球份额 ✓ ([Integrated Report 2025, p.32 — Key Top-Share Products](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf))
+- 高端 VSP™ ~40% AI 服务器全球份额 ✓ ([Integrated Report 2025, p.32 — Key Top-Share Products](https://www.mitsui-kinzoku.com/Portals/0/CSR/integrated_report/2025/EN/integrated_report2025.pdf))
+- VSP™ 产能 420 → 580 → 620（2025 年 8 月）→ 720（2026 年 3 月）→ 840 吨/月（2026 年 9 月）；长期 1,200 吨/月公告 ✓ ([VSP Capacity Enhancement release, 2025-08-20, pp.1–2](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=ImEZB60e3oE%3D&tabid=278&mid=824&TabModule1277=0); [Q2 FY2025 Telephone Conference, p.11](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=rXEqWGnOMII%3D&tabid=204&mid=1027&TabModule903=0))
+- Mitsui Kinzoku ACT 转让 ¥18.8 亿元特别损失（交割 2025 年 11 月 4 日）✓ ([Q2 FY2025 Telephone Conference, p.2; FY2025 Results presentation p.26](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))
+- 自有资本比率 FY2025 50.4%、FY2026E 59.1%；净 D/E FY2025 0.14× ✓ ([FY2025 Results presentation, p.17 — Financial Position at Term End](https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=eM3z5XA1sWk%3d&tabid=204&mid=1027))
+- 池信诚次于 2026 年 4 月 1 日继任能登武；池信 1995 年入司，能登 1986 年入司 ✓ ([Board of Directors page](https://www.mitsui-kinzoku.com/en/company/c_yakuin/); [Bloomberg Ikenobu profile](https://www.bloomberg.com/profile/person/22507256); [Simply Wall St management analysis](https://simplywall.st/stocks/jp/materials/tse-5706/mitsui-kinzoku-shares/management))
+
+**分析师观点句**（按 skill 规则未引用至一手文件 —— 已用 `*分析师观点：*` 标签明示）：
+- §1 —— "市场将股票重新定价为 AI 后段封装基板的结构性受益者，而非历史上 8–12 倍 PE 的周期性非铁冶炼厂" —— 标记 `*分析师观点：*`
+- §4.3.1 —— "护城河类型由 (i) 剥离层化学工艺、(ii) 客户认证锁定、(iii) 规模经济共同构成" —— 标记 `*分析师观点：*`
+- §4.3.2 —— VSP™ 韩 / 中新进者份额讨论 —— 标记 `*分析师观点：*`
+- §4.5 —— PVD / 溅射靶相对 JX / Tosoh / Materion 的竞争定位讨论 —— 标记 `*分析师观点：*`
+- §4.6 —— "金属板块为公司商品周期性部分，难以重估超过常态化 PE ~10 倍" —— 标记 `*分析师观点：*`
+- §5 —— 基板厂客户集中度估算 —— 标记 `*分析师观点：*`，图表标注"按 ABF 市场结构推算"
+- §7 —— MicroThin 准垄断的竞争定位讨论 —— 标记 `*分析师观点：*`
+
+**残留未知 / 待验证项：**
+- 准确的前一 / 前五大客户集中度百分比 —— 三井金属矿业 Yuho 在合并层面未按客户分拆；§5 中"前三大基板厂占铜箔事业部营收 >50%"的分析师估算依据第三方 ABF 基板市场份额数据推算，不来自一手文件。
+- HRDP®、A-SOLiD® 与 CO₂ 制甲醇催化剂客户名称 —— 公司未披露。
+- Caserones 权益持股当前账面价值 —— FY2025 业绩 deck 未单独披露；需深度阅读 Yuho 板块附注。
+- FY2025 ¥120.6 亿元催化剂营收在摩托车 / 乘用车 / 通用引擎 / 催化剂回收之间的精确分配 —— 工程材料销售表是事业部级，非应用级。
+
+</details>
+
+
 
 
