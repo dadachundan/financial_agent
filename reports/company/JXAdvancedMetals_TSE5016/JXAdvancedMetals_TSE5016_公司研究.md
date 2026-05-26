@@ -369,3 +369,153 @@ SAM 本质上是可寻址市场减去 JX 难以进入的类别——主要是 Al
 JX 的渗透策略是通过 **地理邻近性锚定客户胜出**：**Mesa AZ 工厂**（2024 年 11 月投产）将溅射靶后段设施置于距 TSMC 凤凰城 50 公里、距英特尔 Ocotillo 驾车距离内；**常陆那珂新工厂**（在建，FY26 启动）为日本 / 韩国 / 台湾客户基础新增前段靶坯锭产能；**Rapidus 的 ¥50 亿股权投资 + 材料供应合同**（[TrendForce — 2026-01-21](https://www.trendforce.com/news/2026/01/21/news-jx-advanced-metals-reportedly-plans-%C2%A55b-investment-in-rapidus-along-with-critical-materials-supply/)）将 JX 与日本 2nm 主权晶圆厂倡议绑定。Yuho 还提到 "**TSMC 海外子公司间接原材料本地采购（亚利桑那 / 日本 / 德国）从 0% 升至 2030F ~60%**"，依据是同一野村 sector report——JX 是被点名的直接受益方之一（[reports/sector/半导体材料.md — 野村 2026-05-21, p.13-14 (TSMC 本土化清单)](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)）。
 
 ---
+
+## 9. 风险评估
+
+### 公司特定风险
+
+**1. 重点业务竞争优势丧失。** Yuho 列出的第一项风险即 Functional Materials 与 ICT Materials 的竞争优势丧失。尽管 JX 按份额是全球第一溅射靶厂家，公司明确警告 *"若未来无法持续满足客户需求，可能导致份额损失、利润率压缩——或通过替代产品出现 / 客户需求转变——彻底丧失竞争优势"*（[JX Advanced Metals 有価証券報告書 第23期, p.34 (1. フォーカス事業における競争優位性の喪失リスク, verbatim)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。缓解因素：20 年客户规格、认证锁定、Mesa AZ + 常陆那珂产能扩张。*严重程度：高*。
+
+**2. 晶圆厂层级客户集中。** IFRS 10% 披露只指向 PPC（28.6%——集团内），但 *真实* 晶圆厂层级集中度高得多——前五大客户（TSMC、三星、英特尔、SK 海力士、美光）合计大概消耗 **Functional Materials 营收的 70-80%**（*分析师估算*；未披露）。失去任何一家在领先节点的合格供应商身份将很重要——但每个关系都基于多年主供货协议锚定、且认证切换成本（晶圆厂端 12–18 个月）是结构性缓解。*严重程度：高* 鉴于定性集中；通过缓解因素 *缓和*。**按本研究风险分类阈值（前五大客户 > 50% 即重大），此为重大风险**。
+
+**3. 中长期业绩目标未达。** 2024 年 5 月在 IPO 时公开披露的中期计划基于半导体市场增长、汇率、利率和铜价假设。Yuho 明确引用 *"先进材料市场增长放缓或日元快速升值会使汇率挂钩交易利润不达预期，中期计划基础可能被动摇"*（[JX Advanced Metals 有価証券報告書 第23期, p.34 (2. 中長期事業目標の未達リスク)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。缓解因素：FY25 营业利润目标达成率 117%（[Yuho p.81](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）显示执行能力。*严重程度：中*。
+
+**4. 并购整合风险。** JX 是连续收购方（TANIOBIS 2018、东邦钛 2018、eCycle 2022、Tatsuta 电线 2024、Mibra 矿 2023、JX Circular Solutions 合资 2024），Yuho 警告并购前尽职调查不充分或并购后表现不达预期的风险（[JX Advanced Metals 有価証券報告書 第23期, p.35 (4. M&Aや事業提携に関するリスク)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。Tatsuta 整合是最大的活跃整合项目。*严重程度：中*。
+
+**5. 上市后治理下的关键人 / 执行风险。** CEO 林陽一 2023 年 4 月接任并主导 IPO 上市；管理层主要为 ENEOS 时期遗留团队，过去仅在母公司保护环境下经过验证。缓解因素：11 名董事中 5 名独立外部董事的板比 IPO 前更独立（[JX Advanced Metals 有価証券報告書 第23期, p.37](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。*严重程度：低-中*。
+
+**6. ENEOS 悬挂（剩余 42.4% 股份）。** 母公司保留将近半数股权，剩余股份锁定期已于 2025 年 6 月到期。未来的二次发行——为 ENEOS 自身脱碳资本开支提供资金——即使业务基本面完好，也可能压低股价（[JX Advanced Metals 有価証券報告書 第23期, p.16 + 37 (その他の関係会社・大株主)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)；[ENEOS Holdings — Notice Concerning Sale of Shares of Subsidiary (JX Advanced Metals), via IR Bank EDINET archive, 2025-02-14](https://irbank.net/E01081/edinet)）。*严重程度：中-高*，作为持续性悬挂。
+
+### 行业 / 市场风险
+
+**7. 中国溅射靶进入 — 主导悬挂。** 江丰电子（宁波江丰，SSE: 300666）是最有可信度的中国溅射靶挑战者，在 SMIC / CXMT / YMTC 抢占份额。野村 sector report 将 "2026-30 年中国本土半导体材料产能上线" 列为前三大行业风险（[reports/sector/半导体材料.md — 野村 2026-05-21 风险章节, p.105+](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)）。缓解因素：JX 在 TSMC / 三星 / 英特尔的领先制程份额大体免受中国进入影响——两岸政治背景促使台湾和韩国远离中国供应材料。*严重程度：中-高*。
+
+**8. InP 供应紧张状态可逆性。** 当前 ~50% 晶圆良率 + 中国铟出口管制制度正是支撑 JX InP 定价能力的供应冲击。如果北京放松铟出口管制（政治缓和情景），或 Fraunhofer 150 mm InP-on-GaAs 商业化快于预期，InP 价格弹性正常化，JX 的 InP 定价能力将蒸发。*严重程度：中*。
+
+**9. AI 投资放缓。** 所有重点业务的论点都建立在同一个假设之上：超大规模 AI 资本开支保持 2027–30 年的高位。任何周期性暂停（微软 / Meta / 谷歌下调资本开支指引、英伟达 GPU 需求减速）都会同时压缩估值倍数和营收增长——高估值增长股的 "双重打击" 风险。*严重程度：高*。
+
+**10. High-NA EUV 部署延迟。** TSMC 1.6 nm 路线图依赖 High-NA EUV 可用性——如果 ASML / TSMC 将 High-NA HVM 重新计划至 2029-30 之后，BPD / 1.6nm 溅射靶用量提升按相同时间表延迟，JX 的 FY28 1.6 倍产能扩张计划会错时（[reports/sector/半导体材料.md — 野村 2026-05-21, p.4-6 (技术时间表)](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)）。*严重程度：中*。
+
+### 财务风险
+
+**11. 估值 / 倍数压缩风险。** 这是影响最大的财务风险。35 倍 TTM P/E 约为日本有色金属同业中位数（东曹 12 倍、三井金属 11 倍、住友金属矿山 18 倍）的 2-3 倍，约为最贴近的美国可比公司 Materion (~22 倍) 的 1.5 倍。引发剧烈估值回落的触发因素：AI 服务器资本开支减速（周期性）、上述中国进入 / InP 可逆性风险中的任何一个具体化（结构性）、相对 FY28 产能扩张指引持续不达（执行）、住友金属矿山 / 三井金属同业重估牵引 JX 同步（行业轮动），或任何 ENEOS 出乎意料触发的二次发行（悬挂）。回到 22 倍（Materion 可比）将隐含约 37% 下行空间（保持利润不变）。*严重程度：高*——按报告结构规范要求在 §1 估值快照中标注。
+
+**12. 铜价敞口 / 金属价 + 汇率波动。** Yuho 明确将铜价 + USD/JPY 列为主要外生 P&L 驱动因素（[JX Advanced Metals 有価証券報告書 第23期, p.35 (2. 金属価格・為替等の変動)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。FY25 LME 铜从 405 美分/磅升至高点 492 美分/磅、最后报收 439 美分/磅；JPY/USD 平均 ¥153（对比上年 ¥145）。远期对冲缓解短期波动，但多年结构性走势无法完全对冲。*严重程度：中*。
+
+### 宏观风险
+
+**13. 地缘政治风险——铜供应链。** JX 保留的 Caserones / Los Pelambres / Escondida 权益集中在智利，使权益法投资组合暴露于智利特许使用费 / 暴利税 / 矿业法规政治。Mibra 钽矿（巴西）和 TANIOBIS Goslar（德国）增加巴西 + 欧盟矿业政策敞口。Yuho 风险讨论明确将 *"资源民族主义——特许使用费税收、本地附加值政策强制、冲突矿产问题、需求国回收料封锁运动"* 列为因素（[JX Advanced Metals 有価証券報告書 第23期, p.35 (5. 地政学リスク, verbatim 翻译)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。*严重程度：中*。
+
+**14. 环境补救历史遗留。** Yuho 披露 Gould Electronics（美国子公司，继承自 1989 年交易）持续的美国 Superfund / CERCLA 潜在责任方 (PRP) 义务，加上日本各地停产矿山的废水处理义务。已计提，但 Yuho 明确警告实际负债可能超过计提（[JX Advanced Metals 有価証券報告書 第23期, p.37 (14. 環境問題に関するリスク)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)）。*严重程度：低-中*。
+
+---
+
+## 10. 参考资料
+
+### 主要披露文件 (JX Advanced Metals)
+
+- [JX Advanced Metals 有価証券報告書 第23期 (Annual Securities Report, fiscal year ending March 2025), 提交日 2025-06-25, 180 页](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf)
+- [JX Advanced Metals 有価証券届出書 (Securities Registration Statement, IPO 招股说明书), 提交日 2025-02-14, 289 页](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100V8VP.pdf)
+- [JX Advanced Metals 新規上場申請のための有価証券報告書 (TSE Listing Application Annual Securities Report I-bu), 2025-02-11, 275 页](https://www.jpx.co.jp/listing/stocks/new/um3qrc000000oodc-att/03JXAdvancedMetals-1s.pdf)
+- [JX Advanced Metals — Change in English-Language Trade Name press release, 2024-05-14](https://www.jx-nmm.com/english/newsrelease/fy2024/20240514_02.html)
+- [JX Advanced Metals — Notice Regarding Results of Tender Offer for Shares of TATSUTA Electric Wire, 2024-08-20](https://www.jx-nmm.com/english/newsrelease/fy2024/20240820_02.html)
+- [JX Advanced Metals — News release archive (FY2024 / FY2025)](https://www.jx-nmm.com/english/newsrelease/)
+- [JX Advanced Metals — Executives page (Murayama / Hayashi / Sugawara / Ohuchi / outside directors)](https://www.jx-nmm.com/english/ir/executive.html)
+- [JX Advanced Metals — Organization and Executive Officers (officer roster, accessed 2026-05)](https://www.jx-nmm.com/english/company/chart.html)
+- [JX Advanced Metals — InP Substrates product page](https://www.jx-nmm.com/english/products/compound_semiconductors_and_crystal_materials/inp/)
+- [JX Advanced Metals — CdZnTe Substrates product page](https://www.jx-nmm.com/english/products/compound_semiconductors_and_crystal_materials/czt/)
+
+### 母公司与关联方披露
+
+- [ENEOS Holdings — 企业 / IR 主页 (English)](https://www.eneos.co.jp/english/)
+- [Mitsubishi Materials — Execution of MOU Concerning Integration of Recycling Businesses with JX Advanced Metals, 2025-11-11](https://www.mmc.co.jp/corporate/en/news/2025/news20251111.html)
+- [Lundin Mining — Completes Acquisition of Additional 19% Interest in Caserones, 2024-07-29](https://lundinmining.com/news/lundin-mining-completes-acquisition-of-an-additional-19-int-123-tjbjxn1g/)
+- [H.C. Starck Solutions — 企业新闻档案 (2018 年钽 / 铌业务剥离起源，即 TANIOBIS)](https://www.hcstarcksolutions.com/)
+
+### IPO + 市场数据
+
+- [Renaissance Capital — Going for gold: JX Advanced Metals raises $2.6 bn in Japan's largest IPO since 2018, 2025-03-19](https://www.renaissancecapital.com/IPO-Center/News/109883/Going-for-gold-JX-Advanced-Metals-raises-$2.6-billion-in-Japan%E2%80%99s-largest-IP)
+- [MarketScreener — Eneos plans $3 bn IPO of metals subsidiary — Update, 2025-03-10](https://www.marketscreener.com/quote/stock/ENEOS-HOLDINGS-INC-6500951/news/Eneos-Plans-3-Billion-IPO-of-Metals-Subsidiary-Update-49283362/)
+- [Investing.com — Eneos Holdings to list metals subsidiary, aims to raise $3 bn, 2025-03](https://www.investing.com/news/stock-market-news/eneos-holdings-to-list-metals-subsidiary-aims-to-raise-3-billion-93CH-3869772)
+- [Stockanalysis.com — TYO:5016 公司概况, 2026-05](https://stockanalysis.com/quote/tyo/5016/company/)
+- [TradingView — TSE:5016 行情, 2026-05](https://www.tradingview.com/symbols/TSE-5016/)
+- [Yahoo Finance — 5016.T 报价, 2026-05](https://finance.yahoo.com/quote/5016.T/)
+- [Kabutan — 5016 股票页面](https://kabutan.jp/stock/?code=5016)
+
+### 新闻与行业报告
+
+- [Semiconductor Today — JX to boost InP substrate production capacity by 20%, 2025-07-24](https://www.semiconductor-today.com/news_items/2025/jul/jx-240725.shtml)
+- [Semiconductor Today — JX making further investment to increase InP substrate production, 2025-10-09](https://www.semiconductor-today.com/news_items/2025/oct/jx-091025.shtml)
+- [TrendForce — JX Advanced Metals plans ¥5bn investment in Rapidus + critical materials supply, 2026-01-21](https://www.trendforce.com/news/2026/01/21/news-jx-advanced-metals-reportedly-plans-%C2%A55b-investment-in-rapidus-along-with-critical-materials-supply/)
+- [AInvest — JX Advanced Metals' 3.3 Bn Yen InP Substrate Expansion, 2025-10](https://www.ainvest.com/news/jx-advanced-metals-3-3-billion-yen-inp-substrate-expansion-strategic-catalyst-semiconductor-supply-chain-dominance-2510/)
+- [Semiconductorinsight — InP Substrate Industry Surges: JX, AXT, Fraunhofer, 2025](https://semiconductorinsight.com/blog/inp-substrate-industry-surges-jx-advanced-metals-expands-capacity-axt-restores-exports-fraunhofer-unveils-150-mm-inp-on-gaas-wafers/)
+- [Mining Weekly — JX Nippon Mibra 钽矿搜索结果](https://www.miningweekly.com/searchgcse.php?q=jx+nippon+mibra)
+
+### 竞争对手与同业页面
+
+- [东曹 — 薄膜沉积材料目录](https://www.tosoh.com/our-products/advanced-materials/thin-film-deposition-materials)
+- [三井金属 — Insulectro 分销商页 (溅射靶材)](https://insulectro.com/mitsui-kinzoku/)
+- [Materion — 半导体市场 / 半导体材料业务](https://www.materion.com/en/markets/semiconductor)
+- [Plansee — 溅射靶产品页](https://www.plansee.com/en/products/components/sputtering-targets.html)
+- [住友电气 — 化合物半导体 / InP 晶圆产品线](https://global-sei.com/products/csc/csc_a.html)
+- [Tatsuta 电线 — 企业主页 (English)](https://www.tatsuta.com/)
+
+### 行业 / TAM 数据来源
+
+- [国际铜研究小组 — World Copper Factbook 2024](https://icsg.org/copper-factbook/)
+- [TechInsights — 企业主页 / Silicon Demand Forecast 服务线](https://www.techinsights.com/)
+- [Prismark Partners — Printed Circuit Reports 发行人 (引用见 JX Yuho p.20)](https://www.linkedin.com/company/prismark-partners/)
+- [UNITAR — Global E-waste Monitor 2024](https://ewastemonitor.info/)
+
+### 内部交叉引用
+
+- [reports/sector/半导体材料.md — 野村 "Greater China Semi 2026-30F" 锚定报告, 2026-05-21 (主分析师 Donnie Teng / Frank Fan / Manabu Akizuki / Shigeki Okazaki)](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)
+
+---
+
+<details>
+<summary>核查日志 (Step 10) — 2026-05-26</summary>
+
+**URL 检查**——大部分被引用 URL 在研究期间已验证（Yuho disclosure2dl.edinet-fsa.go.jp PDF 已离线下载并本地解析；jx-nmm.com IR 网站已实时抓取）。Stockanalysis.com / Yahoo Finance / TradingView / Kabutan 行情页面 2026 年 5 月确认可访问；Semiconductor Today、TrendForce、Renaissance Capital、MarketScreener 新闻页面研究期间确认可访问。两条反爬 403（MarketScreener 林陽一传记页；AInvest 在某些配置下被 Cookie 墙拦）——在可能处用 Yuho 直接传记数据替代。
+
+**EDINET 文件名**——第 23 期 有価証券報告書（Annual Securities Report，FY 截至 2025 年 3 月，提交于 2025-06-25）位于 EDINET 文档 ID `S100W549`（URL 形式 `https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf`）。IPO 有価証券届出書（Securities Registration Statement，提交于 2025-02-14）位于 EDINET 文档 ID `S100V8VP`（URL 形式 `https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100V8VP.pdf`）。两者均已分别下载到 `/tmp/jx_yuho.pdf` 和 `/tmp/jx_ipo_prospectus.pdf` 进行下方各项点检。
+
+**Yuho 点检**（声明 → 出处）：
+
+- FY25 IFRS 营收 ¥7,149 亿 / 营业利润 ¥1,125 亿 / 归母净利润 ¥683 亿 ✓ ([Yuho p.2 主要な経営指標等の推移](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- 半导体溅射靶（剔除 Al）全球 64% 份额、¥1,462 亿市场、富士经济 2023 年来源 ✓ ([Yuho p.8-10 verbatim](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- RA Cu 铜箔（仅 FPC）全球 78% 份额、¥405 亿市场、富士奇美拉 2023 年来源 ✓ ([Yuho p.11 verbatim](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- IPC 弯折寿命：HA 53 万次 vs 特殊 ED 17 万次 ✓ ([Yuho p.11 注 2 IPC-TM650 2.4.3E](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- 溅射靶 FY25 地理分布：台湾 36% / 韩国 17% / 美国 11% / 日本 11% / 中国 12% / 其他 13% ✓ ([Yuho p.9](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- 英特尔 EPIC Distinguished Supplier Award 连续 4 年 (2021-2024)、TSMC Excellent Performance Award 2024 ✓ ([Yuho p.9 verbatim](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- FY25 分部营收 / 利润（Functional Materials ¥1,474亿/¥267亿；ICT Materials ¥2,609亿/¥251亿；Basic Metals ¥3,041亿/¥745亿）✓ ([Yuho p.105 注 7](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- PPC 28.6% IFRS 顶级客户披露 ✓ ([Yuho p.106 注 7 (5)](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- ENEOS IPO 后 42.38% 持股 ✓ ([Yuho p.16 その他の関係会社 / p.37 リスク 15.](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- FY25 末合并员工 10,413 人，分部分解 ✓ ([Yuho p.17](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- FY25 资本开支 ¥638 亿 / 分部拆分 ✓ ([Yuho p.44](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- FY28 1.6 倍溅射靶产能扩张计划 ✓ ([Yuho p.21](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- FY25 LME 铜价 405→492→439、平均 425 美分/磅 ✓ ([Yuho p.38](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- FY25 营业利润目标 ¥954 亿 vs 实际 ¥1,125 亿 = 117% ✓ ([Yuho p.81](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- CEO 林陽一 出生日 1965-02-05 / 1988-04 入职日本鉱業 / 2023-04-01 出任 CEO / 19,000 股持股 ✓ ([Yuho p.64](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- Caserones 剥离至 Lundin Mining：2023 年 7 月 51% + 2024 年 7 月 19% → 保留 30% ✓ ([Yuho p.6 沿革 + p.16；Lundin Mining 新闻稿 2024-07-29](https://lundinmining.com/news/lundin-mining-completes-acquisition-of-an-additional-19-int-123-tjbjxn1g/))
+- Tatsuta 电线 TOB 2024 年 8 月 / 全资合并 2024 年 11 月 ✓ ([Yuho p.6 沿革](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100W549.pdf))
+- IPO 2025-03-19 / 定价 ¥820 / 承销商大和 + JP Morgan + Morgan Stanley + 瑞穗 ✓ ([Renaissance Capital 2025-03-19](https://www.renaissancecapital.com/IPO-Center/News/109883/Going-for-gold-JX-Advanced-Metals-raises-$2.6-billion-in-Japan%E2%80%99s-largest-IP))
+
+**分析师观点句**（有意未引用主要来源）：
+
+- §1：隐含估值倍数拆分（Functional Materials ~45-55× / Basic Metals ~7-8×）——按本研究规则标为 *分析师观点：*。
+- §4.3：溅射靶类别最贴近竞争对手的识别——引用竞争对手网站 / 产品页，而非 JX 自身 Yuho。
+- §5："70-80% 合计前五大晶圆厂集中度" 明确为分析师估算；非 Yuho 披露。
+- §7.1：中国进入威胁严重程度、江丰产品轨迹——分析师立场，参考野村 sector report。
+- §8 TAM 表：每条非 Yuho 直接披露的规模估算均标 "*分析师估算*"；来源列显示原始引用。
+
+**遗留未核实事项：**
+
+- Functional Materials 准确客户集中度（Functional/ICT 分部下无 IFRS 单一晶圆厂披露——仅集团内 PPC 28.6%）。
+- 住友电气 InP 商用市场份额（商用 vs 自用拆分未公开披露）。
+- 江丰在韩国 / 台湾晶圆厂的领先制程份额（无公开数据；分析师立场仅来自 sector commentary）。
+- Mibra 矿钽产量（入股规模披露；产量未在 Yuho 中披露）。
+- 江丰 (300666 CH)、AXT (AXTI US)、住友电气 (5802 JT) 准确同业 P/E 点位——会扩展同业图表但因江丰不属于 JX 64% 份额特许经营的同业集合而排除。
+
+</details>
+
