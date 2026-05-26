@@ -53,3 +53,53 @@ TTM P/E 偏高有三个可识别的结构性原因，没有一个是基本面价
 *资料：ENTG TTM P/E 来自 [Stockanalysis.com, 2026-05](https://stockanalysis.com/stocks/entg/statistics/)；LIN/APD/AI.PA 来自 2026 年 5 月 Yahoo Finance / Reuters；安集 688019 与鼎龙 300054 倍数来自野村《Greater China Semi》报告（[行业笔记](../../sector/半导体材料.md)第 130、132 页）。Merck KGaA 为欧洲上市。*
 
 *分析师观点：* 估值张力一目了然——投资者用 35× 远期倍数买入一家 Q1 2026 同比仅 +5%、调整后 EBITDA 利润率约 25% 上下、净债务 $33 亿待去杠杆的企业。多头逻辑依赖于：(i) 2nm 逻辑与 400 层 NAND 量产推动先进节点 CMP 工序步数扩张、(ii) CMC 抛光液已并入 Entegris 过滤平台后的 "过滤 + 抛光液" 交叉销售协同、(iii) 钼 (Mo) 替代钨 (W) 作为先进互连金属的趋势——Entegris 同时拥有 Mo 前驱体化学品与 Mo CMP 抛光液 ([Entegris 2025 10-K, Item 1 Semiconductor Ecosystem](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。空头逻辑则是股价已跑在近端盈余前面，2027 年若出现需求停顿叠加关税升级，倍数压缩到行业中位数 20–25× 将意味着明显下行空间。
+
+## 2. 公司历史
+
+如今的 Entegris 是三次公司合并、四笔大型收购，以及跨越二十年的若干机会型并购拼出的整体。其运营根基可追溯至两家美国明尼苏达州的塑料制品专家——Fluoroware（创立于 1966）与 Empak——他们开拓的 PFA 氟聚合物晶圆载具后来演化为行业标准的 FOUP 设计。公司在当前法律形态上 **"于 2005 年 3 月 17 日在 Delaware 注册，由明尼苏达州的 Entegris, Inc. 与 Delaware 州的 Mykrolis Corporation 合并形成"**，其中 Mykrolis 是 2001 年从 Millipore 微电子过滤业务剥离出来的独立公司 ([Entegris 2025 10-K, Item 1 Business](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。2005 年的合并把 Fluoroware-Empak 的晶圆搬运业务与 Mykrolis 的制程过滤业务整合到同一家公司——这是今天 APS 分部的结构性种子。
+
+下一个变革性时刻发生在 2014 年的 **ATMI 收购**（康涅狄格州 Danbury）——约 $11.5 亿美元的交易把 `特种气体 (specialty gas)`、离子注入前驱体以及 SDS (Safe Delivery Source) 气瓶技术带进了组合。ATMI 后来成为 "Specialty Chemicals & Engineered Materials" (SCEM) 分部的核心——今天则在 MS 分部内 ([Entegris 2025 10-K, Item 1 — Acquisitions and Divestitures background](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。2010 年代后期还有一批规模较小的螺栓收购，例如 2018 年收购 SAES Pure Gas（气体纯化系统）、2019 年收购 QED Technologies（精密光学抛光液——已于 2023 年剥离）。
+
+但塑造今日资本结构的最具决定性 M&A 是 **2021 年 12 月签署、2022 年 7 月 6 日交割的 CMC Materials 收购**（曾用代码 NASDAQ:CCMP，前身是 Cabot Microelectronics），企业价值约 $65 亿美元 ([Entegris CMC Materials acquisition press release, 2022-07-06](https://investor.entegris.com/news/news-details/2022/Entegris-Completes-Acquisition-of-CMC-Materials-Solidifying-Position-as-the-Global-Leader-in-Electronic-Materials-07-06-2022/default.aspx))。CMC 当时是全球 CMP 抛光液的龙头；将 CMC 的抛光液产品线与 Entegris 下游的 `先进材料处理 (advanced material handling)`、抛光液过滤器与高纯度包装结合，造就了公司自我描述的——业内唯一能从单一供应商提供 "CMP 抛光液 + 抛光垫 + CMP 后清洗 + 抛光液过滤器 + 流体处理系统" 完整堆栈的平台 ([Entegris 2025 10-K, Item 1 — Semiconductor Ecosystem](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。
+
+```mermaid
+timeline
+    title Entegris —— 关键里程碑
+    1966 : Fluoroware 创立 (明尼苏达州) —— 晶圆载具业务的前身
+    2001 : Mykrolis 从 Millipore 剥离上市 (制程过滤)
+    2005 : Fluoroware/Empak 与 Mykrolis 合并 —— 形成当前 Delaware 注册的 Entegris 实体
+    2014 : 收购 ATMI ($11.5 亿) —— 特种气体 + 离子注入材料
+    2018 : 收购 SAES Pure Gas —— 气体纯化系统
+    2019 : 收购 QED Technologies —— 光学抛光液
+    2020 : 收购 Sinmat ($7500 万) —— SiC/GaN CMP 抛光液
+    2022 : 收购 CMC Materials (2022-07, EV $65 亿) —— CMP 抛光液全球 #1
+    2023 : 出售 QED ($1.34 亿) + EC 业务给富士胶片 ($6.75 亿) + 终止 MacDermid Enthone 联盟协议
+    2024 : 出售 PIM 业务给 SCF Partners (毛额 $2.63 亿)
+    2025 : 重组为 2 个分部 (MS + APS); David Reeder 于 8 月接任 CEO
+    2026 : Q1 营收 $812M, +5% YoY; 启动 Q2 指引 $815-845M
+```
+
+2023–2024 年的组合调整收尾了整个重整过程。公司 **(i)** 于 2023-03 出售 QED（$1.343 亿现金）、**(ii)** 于 2023-10 将 Electronic Chemicals 业务出售给 FUJIFILM 控股（$6.753 亿现金）、**(iii)** 于 2023-06 终止与 MacDermid Enthone 的联盟协议（净收益 $1.912 亿）、**(iv)** 于 2024-03 把 Pipeline & Industrial Materials 业务出售给 SCF Partners（毛额 $2.632 亿、净额 $2.562 亿，加最多 $2500 万的 earn-out）([Entegris 2025 10-K, Acquisitions and Divestitures](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。合计约 $14 亿的剥离收益悉数用于还债——截至 2025 年末，长期债务从 2022 年 CMC 交割后约 **$49.3 亿** 的峰值下降到约 **$38.8 亿**，调整后 EBITDA 口径杠杆率回落至 4.0× 以下 ([Entegris 2025 10-K, Liquidity and Capital Resources](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。
+
+![Entegris leverage trajectory](../../charts/entegris_leverage.png)
+
+*资料：ENTG FY21–FY25 10-K。CMC 收购后约 4.5–5.0× 的毛杠杆率与公司宣布交易时管理层给出的 "交割时约 4.0×，逐步降至低于 3.0×" 指引一致——参见 [Entegris CMC announcement, 2021-12-15](https://investor.entegris.com/news/news-details/2021/Entegris-to-Acquire-CMC-Materials-to-Create-a-Leader-in-Electronic-Materials-12-15-2021/default.aspx)。截至 2025 年的去杠杆轨迹符合预期。*
+
+最近一项战略动作是 **2025 年 8 月的 CEO 换届**：在位 12 年的老 CEO Bertrand Loy（自 2012-11 担任）将职位交给 David Reeder——后者此前在 Chewy, Inc. 担任 CFO，更早曾担任 GlobalFoundries Inc. CFO 并主导其 2021 年 IPO。Loy 则留任公司执行董事长 (Executive Chair) ([Entegris 2025 10-K, Information about our Executive Officers](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。换届方式值得注意——董事会选择一位 "半导体 CFO 背景的外部人选" 而不是内部材料科学出身的高管，其含义将在第 3 节展开。
+
+## 3. 管理团队
+
+### David Reeder —— 总裁兼首席执行官 (2025-08 起)
+
+David Reeder 于 2025-08 出任 Entegris 总裁兼 CEO，自 2024-03 起担任董事 ([Entegris 2025 10-K, Executive Officers](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。他的上任标志着 Bertrand Loy 近 13 年 CEO 任期的结束，Loy 转任执行董事长 (Executive Chair)。Reeder 年龄 51 岁（按 10-K 披露）。从 **2024-02 至 2025-06**，Reeder 担任宠物用品与服务零售商 **Chewy, Inc. 的首席财务官 (CFO)**，主管全公司财务职能 ([Entegris 2025 10-K, Executive Officers](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。在 Chewy 之前，他于 **2020-08 至 2024-02** 担任全球半导体代工厂 **GlobalFoundries Inc. 的 CFO**，并直接主导了 **2021-10 GlobalFoundries 的 IPO** ([Entegris 2025 10-K, Executive Officers](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))——这笔交易估值约 $260 亿美元，是过去十年公开市场上规模最大的半导体 IPO 之一。
+
+Reeder 在 GlobalFoundries 之前的履历则横跨 CEO 级运营职位与多家大型上市科技公司的 CFO 职位。**2017–2020** 年担任 Tower Hill Insurance Group 的 CEO；**2015–2017** 年在 **Lexmark International Inc.** 历任总裁兼 CEO 以及 CFO；他还曾担任 Electronics for Imaging, Inc. 的 CFO ([Entegris 2025 10-K, Executive Officers](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。更早些时候，他在美国半导体行业最相关的三家公司任职过：**Cisco Systems**（企业网络业务 CFO）、**Broadcom Corporation**（亚太副总裁）、以及 **Texas Instruments Incorporated**（财务与运营双线职责）。2023-09 至 2025-12 期间任 Alphawave IP Group plc 董事 ([Entegris 2025 10-K, Executive Officers](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。
+
+*分析师观点：* 选择 Reeder 反映了董事会的一个特定论点：CMC 整合已大体完成、去杠杆轨迹也已建立，下一阶段的核心是资本配置纪律、通过精细化投资者沟通获得估值重估，以及可能的下一笔大型收购或战略性再分部。一位同时拥有代工厂经验 (GlobalFoundries) 与成功 IPO 执行记录的 CFO，恰好是这些优先级下的最佳画像。Reeder 上任首个完整季度即宣布的 2 个分部重组，是结构性精简意图的早期可见信号。
+
+### Bertrand Loy —— 执行董事长 (CEO 任期 2012-11 至 2025-08)
+
+虽然 Loy 已不再担任运营职位，FY25 10-K 仍将他列为执行董事长——一个董事会层面的实权角色，自 2023 年起担任董事长 ([Entegris 2025 10-K, Executive Officers](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。Loy 年龄 60 岁（按同一份披露）。Loy 于 2005 年——Mykrolis 合并那一年——加入现今的 Entegris 实体，并在财务与运营序列上一路升任：负责 IT、全球供应链与制造运营的执行副总裁（2005–2008）、执行副总裁兼首席运营官（2008–2012）、自 2012-11 起担任 CEO、总裁兼董事，并自 2023 年起兼任董事长。加入 Entegris 之前，他在 2001-01 至 2005 年合并间担任 Mykrolis 副总裁兼 CFO，更早还曾任 Millipore Corporation 的首席信息官（1999–2000）([Entegris 2025 10-K, Executive Officers](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。
+
+Loy 任期内两笔决定性 M&A——**2014 年的 ATMI 收购**（约 $11.5 亿）与 **2022 年的 CMC Materials 收购**（EV $65 亿）——合在一起，把 Entegris 从一家不到 $10 亿规模的过滤与搬运专家，转型为一家 $30 亿规模、多元化的电子材料平台。Loy 同时自 2013-07 起任 SEMI（全球电子制造供应链行业协会）董事，并曾任主席直至 2022-12 ([Entegris 2025 10-K, Executive Officers](https://www.sec.gov/Archives/edgar/data/1101302/000110130226000012/entg-20251231.htm))。执行董事长身份让 Loy 持续介入行业层面的协调与长期 M&A 管道——他不是一位象征性的离任 CEO，而是公司在战略层面的实质性锚定。
+
