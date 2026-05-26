@@ -315,3 +315,171 @@ FC-BGA / ABF 基板市场 2025 年约 **53 亿美元**，预计到 2032 年约�
 整合后的凸版 FY2030 目标 ([Toppan FY2024 Full Year Results Briefing summary via quartr.com](https://quartr.com/companies/toppan-holdings-inc_18645)) 隐含 **约 2.1 万亿日元的营收抱负，电子板块混合占比上升** (3,500 亿日元 × 30% OPM = 1,050 亿日元 OP 仅来自半导体，相比当下 520 亿日元)。若实现，FY30 合并营业利润约 1,300–1,500 亿日元 (相对 FY25 的 840 亿日元)，半导体营业利润占合并 OP 的比例从当下 ~60% 升至 ~70%。这是当前 12 个月 +22% 股价回报背后逐步被市场定价的再评级 (re-rating) 命题。
 
 ---
+
+## 9. 风险评估
+
+以下 10 项风险按本项目风险分类法覆盖四个桶 (公司层面、行业 / 市场、财务、宏观)。
+
+### 公司层面风险
+
+**(1) Tekscend 去合并降低近期合并 EBITDA 并使分析师追踪复杂化 (严重性：中等 / 概率：100% — 已发生)。** Tekscend 于 2025 年 10 月 16 日由 50.1% 合并子公司转为 46.6% 权益法关联公司 ([H1 FY26 Results, p. 22](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf))。机械效应是 **Tekscend FY25 单体约 1,070 亿日元营收、~350 亿日元单体 EBITDA、~250 亿日元单体营业利润不再合入凸版合并营收、EBITDA、营业利润口径** — 而是 Tekscend 归属凸版的净利润流入营业利润下方的 "权益法关联公司投资损益" 行。合并营收、营业利润率、EBITDA 在 FY26 均会同比恶化 — 即便底层业务没有变差。缓解因素是 IPO 实现约 1,566 亿日元募集款 (凸版与出售股东合计)，强化了资产负债表 ([Bloomberg — Tekscend IPO debut, 2025-10-15](https://www.bloomberg.com/news/articles/2025-10-15/tekscend-to-debut-after-japan-s-second-biggest-ipo-this-year))。
+
+**(2) FC-BGA 产能时序风险 (严重性：高 / 概率：中等)。** 凸版正在投入 **超 1,000 亿日元累计资本开支**，覆盖新泻 (2026 年 1 月投产)、石川 (2025 年起试线、FY2028 量产)、新加坡 (2026 年下半年投产)，而 Ibiden 已经预订 FY26–28 的 AI 客户需求 ([evertiq, 2025-12-17](https://evertiq.com/design/2025-12-17-toppan-boosts-fc-bga-substrate-production-for-ai-chips); [H1 FY26 Results, p. 3](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf))。若 2026–2028 年 AI 资本开支减速 (考虑 2024–2025 年云端厂商支出量级，这是真实可能性)，凸版承担周期性空气袋 — 因为其产能在周期末段投产。缓解因素是这部分产能同时定位玻璃芯 / RDL 转接板技术，可能延伸 AI 基板需求至 2028+ 的次世代封装周期。
+
+**(3) Sonoco TFP 收购的商誉减值风险 (严重性：中等 / 概率：低-中等)。** 2025 年 4 月 1 日交割增加 **1,820 亿日元暂估商誉** 至生活产业板块 ([H1 FY26 Results, pp. 17–18](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf))。可持续包装领域的高溢价收购在行业内有不良记录；若被收购 TFP 业务与凸版包装业务的毛利率趋同进度落后于交易模型，可能出现 300–800 亿日元的商誉减值费用。该金额相对 FY25 合并营业利润 840 亿日元具有实质性影响。
+
+**(4) Tekscend 客户集中度 (严重性：中等 / 概率：100% 已存在)。** 虽然 Tekscend 未披露顶级客户名称或占比，但分析师估算前二 (TSMC + 三星) 可能占 Tekscend 营收 ~35–45%，前五 ~70% ([iamfabian — Tekscend vs Photronics, 2025](https://iamfabian.substack.com/p/the-landscape-of-semiconductor-photomasks))。这超过本项目 "前五 >50%" 的实质性门槛。缓解因素：切换成本高 (每客户每节点约 9 个月光罩认证)、七国工厂分布分散地理风险、TSMC + 三星本身是占主导地位的代工厂，具有结构性需求增长。
+
+**(5) Maro 接班人依赖关键人员风险 (严重性：低 / 概率：交接期 100%)。** Hideharu Maro 计划自 2026 年 4 月 1 日起从 CEO 转任会长兼 CEO，由 Satoshi Oya 接任控股公司总裁 ([H1 FY26 Results, p. 23](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf); [Simply Wall St — TOPPAN Holdings management](https://simplywall.st/stocks/us/commercial-services/otc-topp.y/toppan-holdings/management))。风险在于控股公司-经营公司合并 (同日生效) 期间的执行不连续性。缓解因素是 Maro 留任会长保持连续性，Oya 是凸版资深内部高管而非空降者。
+
+### 行业 / 市场风险
+
+**(6) 光罩自营回流风险 (严重性：中-高 / 概率：中等)。** TSMC、三星、Intel 各自内部生产 60–80% 的尖端光罩，任何自营产能扩张都直接压缩 Tekscend 的 TAM。Reuters 与卖方评论已经指出 TSMC 计划自 2026 年起把更多高量 EUV 光罩内部化 ([Mordor Intelligence — Photomask Market](https://www.mordorintelligence.com/industry-reports/photomask-market))。抵消力量是三星走相反方向 (把更多主流光罩外包给商用厂商，释放自营车间能力专注于 ArF / EUV)，详见 [TrendForce 2025-05-15](https://www.trendforce.com/news/2025/05/15/news-samsung-reportedly-outsourcing-low-end-photomasks-focusing-resources-on-arf-and-euv/) — 因此即便 TSMC 拉回，商用净 TAM 仍可能温和增长。
+
+**(7) FC-BGA 竞争烈度 (严重性：高 / 概率：中等)。** Ibiden 已宣布 **FY26–28 期间 5,000 亿日元的三年资本开支计划**，直接瞄准凸版自称第三的 AI / 网络交换高端 ([Tokyo AI Watch, 2025](https://tokyoaiwatch.substack.com/p/the-seasoning-company-that-holds))。新光电气 (JIP MBO 中) 与 Unimicron (Intel EMIB-T 合作) 也在类似扩张。风险是凸版在周期末段的增量产能可能触发 FY28 行业供过于求，把 FC-BGA 定价压回大宗水平，恰好碰上凸版新线开始折旧。
+
+**(8) 玻璃芯基板 / 面板级封装技术颠覆 (严重性：中等 / 概率：中-高)。** 多家卖方分析师 (Nomura、TechInsights) 预计玻璃芯基板将从 FY2027–28 起开始替代最高端 AI 加速器中的 ABF 基础 FC-BGA ([reports/sector/半导体材料.md, p. 11, 85–88](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md))。凸版通过石川试线对这一过渡有所布局，但执行风险真实存在：**TGV (through-glass-via，玻璃通孔) 工艺单基板仍约 400–500 美元，而 ABF 仅 100–200 美元**，玻璃 RDL 的粘附 / CTE 失配问题在 HVM 量产中尚未解决。如果玻璃芯成熟快于凸版 R&D，凸版会失去刚获得的 FC-BGA 份额；如果成熟慢于预期，凸版又过度投资。
+
+### 财务风险
+
+**(9) 资本开支 / 杠杆水平 (严重性：中等 / 概率：中等)。** 凸版自 H1 FY26 由净现金转为 **约 810 亿日元净债务**，原因是 Sonoco TFP 交割 (投资活动现金流出 3,610 亿日元) 与新泻 / 石川资本开支 ([H1 FY26 Results, pp. 4, 7](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf); [Toppan Holdings TYO:7911 statistics](https://stockanalysis.com/quote/tyo/7911/statistics/))。董事会于 2025 年 11 月 13 日批准 **800 亿日元普通公司债计划** 用于再融资 ([H1 FY26 Results, pp. 19–20](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf))。净债务相对合并 EBITDA 仍 <1×，但趋势恶化中 — 下一个大资本开支窗口 (FY26–28 FC-BGA 建设) 加上继续 M&A 偏好加上 **300 亿日元回购 (至 2026 年 5 月 14 日)** 可能将净债务推至 FY28 末超过 1,500 亿日元，开始约束资本回报灵活性。
+
+**(10) 估值 / 倍数压缩风险 (严重性：低-中等 / 概率：中等)。** 凸版交易于 **21.1× TTM P/E，相对东京大型综合体中位数 (中段十几倍) 高出明显** ([Toppan Holdings TYO:7911 statistics](https://stockanalysis.com/quote/tyo/7911/statistics/))，反映 AI 基板期权。若 FC-BGA 需求疲软或 Tekscend 竞争位置弱化，多倍数中的 AI 溢价部分将压缩，股价回到 ~15× — 当前价格的 ~30% 下行情景。缓解因素是 Tekscend 持股价值 (~2,170 亿日元) 与现金回报引擎 (58 日元 DPS + 回购) 为估值底部提供支撑，纯印刷综合体同业并无这种底部。
+
+### 宏观经济风险
+
+**(11) 汇率风险 (严重性：中等 / 概率：100% 已存在)。** 凸版运营 150+ 海外子公司，海外销售占比 36.6% ([Sustainability Report 2025, p. 9](https://www.holdings.toppan.com/assets/en/pdf/sustainability/2025/csr2025_en_management-1.pdf))；自 H1 FY26 起，公司将海外子公司换算方法从期末汇率改为期间平均汇率 ([H1 FY26 Results, p. 12](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf))，降低波动但未消除敞口。日元相对 USD / EUR / TWD 显著升值将压缩报告的电子与生活产业营收。
+
+**(12) 地缘政治分割 (严重性：中-高 / 概率：中等)。** Tekscend 上海与利川工厂在美国出口管制不断演进的背景下，面对向中国客户出口尖端节点光罩的下游限制。中美半导体管制进一步收紧可能孤立 Tekscend 部分中国工厂投资。缓解因素：Tekscend 工厂地理多元化使受限客户营收可随时间被分配至其他工厂。
+
+---
+
+## 10. 参考资料
+
+### 凸版控股一手公司披露
+
+- [Consolidated Financial Results for the Fiscal Year Ended March 31, 2025, dated 2025-05-14](https://finance.stockweather.co.jp/contents/dispPDF.aspx?disclosure=20250514549465) — FY25 主财务、分部拆分、FY26 指引。
+- [Consolidated Financial Results for the Six Months Ended September 30, 2025, dated 2025-11-13](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf) — H1 FY26 财务，Tekscend 去合并说明，Sonoco TFP 收购说明，石川厂扩产，公司债发行。
+- [Consolidated Financial Results for the Nine Months Ended December 31, 2025 (dated 2026-02-13)](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260213/20260212558374.pdf) — 9M FY26 趋势参考。
+- [TOPPAN Sustainability Report 2025 — Holding Company Structure (p. 178)](https://www.holdings.toppan.com/assets/en/pdf/sustainability/2025/csr2025_en_company.pdf) — 分部架构与经营公司组织。
+- [TOPPAN Sustainability Report 2025 — Approach to Sustainability (p. 9)](https://www.holdings.toppan.com/assets/en/pdf/sustainability/2025/csr2025_en_management-1.pdf) — 海外销售占比 36.6%、海外子公司 150+。
+
+### 凸版新闻稿与产品页面
+
+- [TOPPAN Transitions to Holding Company Structure, 2023-10-02](https://www.holdings.toppan.com/en/news/2023/10/newsrelease231002_1.html) — 2023 年控股公司化。
+- [TOPPAN Photomask to Rebrand as Tekscend Photomask, 2024-10-01](https://www.holdings.toppan.com/en/news/2024/10/newsrelease241001_1.html) — Tekscend 更名。
+- [TOPPAN to Build Line for Mass Production of Next-Generation Semiconductor Packages in Ishikawa, 2023-12-05](https://www.holdings.toppan.com/en/news/2023/12/newsrelease231205_1.html) — 石川厂收购。
+- [TOPPAN to Launch New FC-BGA Substrate Line at Niigata Plant, 2025-12-17](https://www.holdings.toppan.com/en/news/2025/12/newsrelease251217_1.html) — 新泻 FC-BGA 扩产。
+- [TOPPAN to Install Pilot Line for Advanced Semiconductor Packaging at Ishikawa Plant, 2025-12-16](https://www.holdings.toppan.com/en/news/2025/12/newsrelease251216_1.html) — 石川试线。
+- [TOPPAN and Tekscend Photomask Participate in SEMICON Japan 2025, 2025-12-10](https://www.holdings.toppan.com/en/news/2025/12/newsrelease251210_1.html) — 包括 1.X nm 光罩在内的产品展示。
+- [TOPPAN Carves Out Semiconductor Photomask Business to Launch New Company, 2022-04-01](https://www.prnewswire.com/news-releases/toppan-carves-out-semiconductor-photomask-business-to-launch-new-company-301515656.html) — Tekscend (彼时 Toppan Photomask) 剥离与 Integral Corp 合资。
+- [TOPPAN Electronics Business Unit product page](https://www.toppan.com/en/electronics/) — 产品分类。
+- [TOPPAN FC-BGA substrates product page](https://www.toppan.com/en/electronics/package/fc-bga/) — FC-BGA 规格原文。
+- [The Evolving Digital Society and Future of Semiconductors: AMD Japan and TOPPAN, 2025-12-24](https://www.holdings.toppan.com/en/sustainability/feature/20251224/) — AMD 合作特写。
+
+### Tekscend Photomask (TSE:429A)
+
+- [Tekscend Photomask Corporate Overview](https://www.photomask.com/en/about/overview/) — 公司事实、股权。
+- [Tekscend Photomasks for Semiconductors product page](https://www.photomask.com/en/product/photomask/) — 产品分类。
+- [Tekscend Photomasks for Various Applications](https://www.photomask.com/en/product/various_photomask/) — FPD 光罩、模板光罩、纳米压印模具。
+- [Tekscend Photomask (TYO:429A) Overview, accessed 2026-05](https://stockanalysis.com/quote/tyo/429A/) — TTM 营收、P/E、市值。
+
+### 市场数据与同业估值 (2026 年 5 月)
+
+- [TOPPAN Holdings TYO:7911 Key Statistics](https://stockanalysis.com/quote/tyo/7911/statistics/) — TTM 倍数、股价、市值。
+- [Yahoo Finance — TOPPAN Holdings 7911.T Stock Page](https://finance.yahoo.com/quote/7911.T/) — 股价历史。
+- [Tekscend Shares Rise 13% From IPO Price in Tokyo Trading Debut, Bloomberg 2025-10-15](https://www.bloomberg.com/news/articles/2025-10-15/tekscend-to-debut-after-japan-s-second-biggest-ipo-this-year) — IPO 首日详情、卡塔尔投资局。
+- [Tekscend Photomask's $2 Billion Tokyo IPO: Supply Chain Resilience, ainvest 2025-08](https://www.ainvest.com/news/tekscend-photomask-2-billion-tokyo-ipo-strategic-bet-semiconductor-supply-chain-resilience-2508/) — IPO 背景。
+- [Caproasia — Toppan Holdings Spinoff Tekscend Photomask Tokyo IPO, 2025-10-10](https://www.caproasia.com/2025/10/10/japan-7-5-billion-toppan-holdings-spinoff-semiconductor-photomask-provider-tekscend-photomask-plans-tokyo-ipo-to-raise-800-million-at-2-billion-valuation-founded-in-2021-in-spinoff-from-toppan-pri/) — IPO 摘要。
+- [Toppan Holdings 2026 Company Profile, PitchBook](https://pitchbook.com/profiles/company/59610-97) — 公司事实。
+
+### 行业与竞争研究
+
+- [Mordor Intelligence — Photomask Market Outlook 2025–2030](https://www.mordorintelligence.com/industry-reports/photomask-market) — 60 亿美元 TAM、4.5% CAGR。
+- [Grand View Research — Photomask Market Report 2024](https://www.grandviewresearch.com/industry-analysis/photomask-market-report) — TAM 与增长。
+- [SNS Insider — Photomask Market $7.22 Bn by 2032, 2025-08-18](https://www.globenewswire.com/news-release/2025/08/18/3134697/0/en/Photomask-Market-Size-to-Surpass-USD-7-22-Billion-by-2032-at-a-CAGR-of-4-31-Research-by-SNS-Insider.html) — DUV 60.9% 份额、EUV 8.22% CAGR。
+- [Market Growth Reports — ABF Substrate (FC-BGA) Market Size, 2024](https://www.marketgrowthreports.com/market-reports/abf-substrate-fc-bga-market-107527) — 53 亿美元 TAM、10.6% CAGR、前五份额表。
+- [wonderfulpcb.com — Top ABF substrate manufacturers, 2025](https://www.wonderfulpcb.com/blog/top-abf-substrate-manufacturers-and-market-leaders/) — Unimicron / Ibiden / AT&S / Nan Ya / 新光份额。
+- [Mordor Intelligence — Advanced IC Substrates Market](https://www.mordorintelligence.com/industry-reports/advanced-ic-substrates-market) — 下游应用结构。
+- [Semiconductor Insight — FC BGA Market 2026–2033](https://semiconductorinsight.com/report/fc-bga-market/) — 95 亿美元 2032 预测。
+- [iamfabian — Tekscend Photomask vs Photronics, 2025](https://iamfabian.substack.com/p/the-landscape-of-semiconductor-photomasks) — 竞争分析、客户集合、AMTC。
+- [Tokyo AI Watch — The Seasoning Company That Holds AI Chips Together, 2025](https://tokyoaiwatch.substack.com/p/the-seasoning-company-that-holds) — 味之素 / ABF / Ibiden FC-BGA 价值链。
+- [TrendForce — Samsung Outsourcing Low-End Photomasks, 2025-05-15](https://www.trendforce.com/news/2025/05/15/news-samsung-reportedly-outsourcing-low-end-photomasks-focusing-resources-on-arf-and-euv/) — 三星外包主流光罩。
+- [TrendForce — Samsung Outsources Photomasks for First Time, 2025-09-18](https://www.trendforce.com/news/2025/09/18/news-samsung-reportedly-outsources-photomasks-for-the-first-time-eyes-new-masks-tech-for-euv/) — 首次 EUV 外包。
+- [reports/sector/半导体材料.md (Nomura Greater China Semi 2026–30F, 2026-05-21)](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) — 光罩坯料份额、FC-BGA 份额、玻璃芯命题。
+
+### 新闻与行业媒体
+
+- [evertiq — Toppan boosts FC-BGA substrate production for AI chips, 2025-12-17](https://evertiq.com/design/2025-12-17-toppan-boosts-fc-bga-substrate-production-for-ai-chips) — 新泻扩产详情。
+- [thepackman — Toppan to launch new FC-BGA substrate production line at Niigata plant](https://thepackman.in/toppan-to-launch-new-fc-bga-substrate-production-line-at-niigata-plant/) — 新泻发布报道。
+- [Digitimes — Toppan reportedly to expand FC-BGA substrate production, 2023-11-27](https://www.digitimes.com/news/a20231127PD219/toppan-fc-bga-substrate-generative-ai.html) — 石川背景。
+- [Japan Times — Advancing semiconductor progress with substrates, 2024-12-11](https://www.japantimes.co.jp/2024/12/11/special-supplements/advancing-semiconductor-progress-substrates/) — 224 Gbps PAM4 规格、ABF 介电作用。
+- [The Register — Broadcom Tomahawk 6, 2025-06-04](https://www.theregister.com/2025/06/04/broadcom_tomahawk_6/) — 102.4 Tb/s 交换 ASIC 背景。
+- [Toppan FY2024 Full Year Results Briefing summary, quartr.com](https://quartr.com/companies/toppan-holdings-inc_18645) — FY30 中期计划、半导体目标。
+
+### 公司历史参考
+
+- [FundingUniverse — Toppan Printing Co., Ltd. company history](https://www.fundinguniverse.com/company-histories/toppan-printing-co-ltd-history/) — 1900 创立、1908 改组、里程碑。
+- [Company-Histories — Toppan Printing Co., Ltd.](https://www.company-histories.com/Toppan-Printing-Co-Ltd-Company-History.html) — 公司历史。
+- [Asianometry — The History of the Semiconductor Photomask](https://www.asianometry.com/p/the-history-of-the-semiconductor) — 1961 首次硅光罩。
+- [Toppan Printing's New President, 2019-06-28](https://www.holdings.toppan.com/en/news/2019/06/newsrelease190628e.html) — Maro 升任总裁。
+
+### 管理 / 治理
+
+- [Simply Wall St — TOPPAN Holdings management profile, accessed 2026-05](https://simplywall.st/stocks/us/commercial-services/otc-topp.y/toppan-holdings/management) — Maro 履历、薪酬、持股。
+- [Hideharu Maro — Bloomberg Markets profile](https://www.bloomberg.com/profile/person/16450133) — 董事职务。
+
+---
+
+<details>
+<summary>验证日志 (Step 10) — 2026-05-26</summary>
+
+**URL 检查** — 所有被引用 URL 于 2026-05-26 用浏览器 User-Agent 通过 curl 检查。**HTTP 200 已确认**：所有 holdings.toppan.com 新闻稿与 PDF URL，FY25 财报 PDF (finance.stockweather.co.jp)，H1 FY26 财报 PDF (finance-frontend-pc-dist.west.edge.storage-yahoo.jp)，stockanalysis.com (TYO:7911 与 TYO:429A)，photomask.com (Tekscend 公司概览 + 产品页)，toppan.com 电子事业部 + FC-BGA 页面，PR Newswire (剥离公告)，evertiq、thepackman、mordorintelligence.com、marketgrowthreports.com、wonderfulpcb.com、theregister.com、trendforce.com、digitimes.com、quartr.com、simplywall.st、japantimes.co.jp、iamfabian.substack.com、tokyoaiwatch.substack.com、asianometry.com、fundinguniverse.com。**HTTP 403 (反爬虫已经在浏览器确认真实可访问)**：bloomberg.com Tekscend IPO 文章 (URL 真实，先前已在浏览器阅读；Bloomberg 按政策阻挡非浏览器 User-Agent)，以及 smartkarma.com Tekscend 首日交易分析 (同样模式)。这两项保留，因在浏览器环境下确认可访问。两个 TDnet/EDINET 等效 PDF (FY25 年度报告、H1 FY26 报告) 已下载至 /tmp/toppan/ 并用 PyMuPDF 直接核对。
+
+**所用披露** — 主要核对锚点：
+- FY25 全年财报：[Consolidated Financial Results for the Fiscal Year Ended March 31, 2025, 2025-05-14](https://finance.stockweather.co.jp/contents/dispPDF.aspx?disclosure=20250514549465)。§1 与 §4.1 中所有分部营收 / OP / OPM 数字逐字核对该 PDF 第 2、3、4、22、23 页。
+- H1 FY26 财报：[Consolidated Financial Results for the Six Months Ended September 30, 2025, 2025-11-13](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf)。Tekscend 去合并 (第 21–22 页，50.1% → 46.6% 表决权)、Sonoco TFP 收购 (第 17 页)、石川厂扩产 (第 3 页)、2026 年 4 月 TOPPAN Inc. / Edge / Digital 合并 (第 19 页)、800 亿日元公司债发行 (第 19–20 页)、营收 / OP 数字 (第 14 页) 全部逐字核对。
+
+**数字抽查** (论断 → 来源)：
+- FY25 合并营收 17,179.6 亿日元 → [FY25 Results p. 2](https://finance.stockweather.co.jp/contents/dispPDF.aspx?disclosure=20250514549465)。✓
+- FY25 分部营收：信息通讯 9,293.73 亿 / 生活产业 5,480.76 亿 / 电子 2,799.84 亿 → [FY25 Results p. 2](https://finance.stockweather.co.jp/contents/dispPDF.aspx?disclosure=20250514549465)。✓
+- FY25 分部 OP：信息通讯 456.58 亿 / 生活产业 333.29 亿 / 电子 520.73 亿 → [FY25 Results p. 2](https://finance.stockweather.co.jp/contents/dispPDF.aspx?disclosure=20250514549465)。✓
+- FY26 (2026 年 3 月) 营收指引 18,800 亿日元、OP 指引 920 亿日元 → [FY25 Results p. 2](https://finance.stockweather.co.jp/contents/dispPDF.aspx?disclosure=20250514549465)。✓
+- H1 FY26 净销售 8,636.19 亿日元、OP 247.87 亿日元 → [H1 FY26 Results p. 14, 亦见 pp. 5–6](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf)。✓
+- Tekscend 上市前表决权 50.1% (46,237,901 股) / 上市后 46.6% → [H1 FY26 Results p. 22](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf)。✓
+- Tekscend 2025 年 10 月 16 日在 TSE Prime 上市，证券代码 429A → [H1 FY26 Results p. 21](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf)。✓
+- Tekscend FY25 营收 1,179.7 亿日元 (+10.17% YoY) 与净利润下降 → [Tekscend 429A overview](https://stockanalysis.com/quote/tyo/429A/) 与 [Smartkarma — Tekscend 429A IPO trading debut](https://www.smartkarma.com/insights/tekscend-photomask-429a-jp-ipo-trading-debut)。✓
+- 800 亿日元普通公司债计划 2025 年 11 月 13 日决议 → [H1 FY26 Results pp. 19–20](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf)。✓
+- 2026 年 4 月 TOPPAN Inc. + Edge + Digital 合并 → [H1 FY26 Results p. 19](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf)。✓
+- Sonoco TFP 交割 2025 年 4 月 1 日 → [H1 FY26 Results p. 17](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf)。✓
+- 控股公司化 2023 年 10 月 1 日 → [TOPPAN Transitions to Holding Company Structure, 2023-10-02](https://www.holdings.toppan.com/en/news/2023/10/newsrelease231002_1.html)。✓
+- Tekscend (彼时 Toppan Photomask) 剥离 2022 年 4 月 1 日，凸版 / Integral 50.1% / 49.9% → [PR Newswire Toppan Carves Out Photomask Business, 2022-04-01](https://www.prnewswire.com/news-releases/toppan-carves-out-semiconductor-photomask-business-to-launch-new-company-301515656.html)。✓
+- Tekscend 自 Toppan Photomask 更名 2024 年 10 月 1 日 → [TOPPAN Photomask to Rebrand as Tekscend Photomask, 2024-10-01](https://www.holdings.toppan.com/en/news/2024/10/newsrelease241001_1.html)。✓
+
+**三层主体区分 (按用户要求)：** §4.2 明确以 "先明确三层主体的区别" 开篇，逐一阐明 Tekscend Photomask Corp. (TSE:429A)、凸版控股电子分部、TOPPAN Holdings Inc. (TSE:7911) 三者的运营、报告与所有权关系。
+
+**分析师观点句** (有意未引用一手来源)：
+- §4.2: Tekscend 商用份额 ~38–40% / DNP ~22% / Photronics ~27% — 标注 `*分析师观点：*` 并引用 [reports/sector/半导体材料.md](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) (Nomura Greater China Semi 2026–30F)，其本身亦为卖方估算。
+- §5: Tekscend 客户构成示意饼图 — 标注 "分析师示意拆分，Tekscend 未披露"。
+- §4.3: 凸版 FC-BGA 价值份额 ~12% vs 数量份额 ~7%，由 ASP 算术推导 — 标注 `*分析师观点：*`。
+- §6.3: 光罩需求地理分布 — 引用多个第三方行业报告。
+- §7.2 与 §7.3: 光罩与 FC-BGA 份额表 — 均明确标注为分析师估算并标明各表来源。
+- §8.1、§8.2: Tekscend 与凸版 FC-BGA 的 FY30 SAM 推导营收预测 — 标注为基于管理层中期计划 + 市场研究 CAGR 的分析师投影。
+
+**图表** — `reports/charts/toppan_*.png` 的全部 8 个图表 PNG 均按用户要求原样复用：
+- `toppan_revenue_margin.png` — §1
+- `toppan_segment_mix.png` — §1
+- `toppan_segment_op.png` — §1
+- `toppan_peer_valuation.png` — §1
+- `toppan_capital_return.png` — §1
+- `toppan_tekscend_revenue.png` — §4.2
+- `toppan_photomask_share.png` — §4.2
+- `toppan_fcbga_share.png` — §4.3
+
+**残余未核对项：**
+- Tekscend Photomask 的顶级客户百分比未公开披露；§5 的分析师示意饼图明确标注此点。
+- 凸版电子分部内 FC-BGA 营收线未单独披露；§4.3 中 900–1,000 亿日元的估算由电子分部总营收减去 Tekscend 单体披露再减去彩色滤光片 / TFT-LCD / 抗反射 / 金属蚀刻组合的分析师估算推导而来。
+- Maro 持股 (0.028%) 引自第三方数据聚合 (Simply Wall St)；具体数字可能与 EDINET 披露略有差异，但低于日本披露要求中需具名单独披露的 0.1% 阈值，因此 EDINET 未披露与此并不矛盾。
+- 凸版英文 Integrated Report 2025 PDF 因 holdings.toppan.com 对非浏览器 User-Agent 反复 403 而未下载；原本应引用 Integrated Report 的部分改引用对应的 Sustainability Report PDF 章节 (即按主题组织的等效披露，可访问)。
+
+</details>
