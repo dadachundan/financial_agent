@@ -295,3 +295,149 @@ S&S Tech 的市场机会规模可清晰拆分为三层，因为公司营收轨�
 **渗透策略与执行路径。** S&S Tech 走的渗透序列是标准的"联合开发 → 资格认证 → 小批量 PO → 多年期 master agreement → 份额捕获" — Hoya 自己 1990 年代在三星、2000 年代在 Intel 跑过同样路径。2025-2026 的里程碑 — 龙仁 EUV 中心开幕、三星最终评估完成、首批商业 PO、联合 pellicle 边框专利申报 — 代表着该序列被压缩到 12 个月窗口内的后段冲刺 ([Digitimes — Samsung mask blanks localization, 2026-01-14](https://www.digitimes.com/news/a20260114PD219/samsung-photomask-euv-supply-chain-2026.html); [THE ELEC — Samsung and S&S Tech co-files EUV pellicle patent, 2025-05](https://www.thelec.net/news/articleView.html?idxno=5452); [파이낸셜뉴스 — 정수홍 인터뷰, 2025-03-21](https://www.fnnews.com/news/202503211358486799))。一旦首批三星 EUV blank 商业 PO 签订，SK 海力士的资格认证周期将启动 (业内预期落后三星约 12 个月，因为 SK 海力士 EUV 工具装机基数较小) — 把 2027-28F SK 海力士 EUV 营收线放到模型上。
 
 ---
+
+## 9. 风险评估
+
+S&S Tech 的风险结构特殊: 大部分风险集中在单一 12-18 个月的三星资格认证执行窗口里，而长期结构性风险相对温和。下面分四个标准桶列 12 条风险。
+
+### 公司特有风险 (6 条)
+
+**1. EUV 资格认证时点滑动 — 最重要的单一风险。** 基准情景股价已经嵌入 1Q-FY2026 三星最终评估完成 + 2Q-FY2026 首批商业 EUV blank PO。哪怕仅 6 个月的滑动也可能触发 20-30% 估值倍数压缩，因为模型里 EUV 营收线会从 FY2027F 推到 FY2028F; 12 个月滑动接近第 8 节情景 (a) 熊市情形。缓释: 三星战略客户背书是结构性的而不是条件性的; S&S Tech 龙仁 EUV 中心已经运营; 三星 - S&S Tech 联合 pellicle 专利提供 IP 层的对齐。**严重性: 高。可能性: 中。** ([Digitimes — Samsung mask blanks localization timeline, 2026-01-14](https://www.digitimes.com/news/a20260114PD219/samsung-photomask-euv-supply-chain-2026.html); [파이낸셜뉴스 — CEO interview, 2025-03-21](https://www.fnnews.com/news/202503211358486799))。
+
+**2. 客户集中度 — 三星块约占营收 55%。** 分析师估算三星电子 + 三星显示合计 FY2025 营收占比约 **53%**，扩到 top-5 (加上 SK 海力士 + LG 显示 + 中国中端) 约 **85%**。两个比例都超过风险分类法的"重大"门槛 (前一大 >20%, 前五合计 >50%)。合同结构为滚动年度而不是多年期 master agreement (EUV-MSA 之前)，意味着单季度需求拉动是可能的。*缓释:* 三星持股块 (~16.8% 合计) 对齐利益; 三星 - S&S Tech EUV pellicle 联合专利创造 IP 层锁定; 韩国 K-半导体政策为三星 - Hoya 任何未来重新平衡提供监管逆风。**严重性: 高。可能性: 低 (三星维持战略偏好) 但尾部风险有意义。** ([Company Guide — A101490 ownership, accessed 2026-05](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A101490); [Business Post — 정수홍 succession & ownership, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745))。
+
+**3. 创始人 / 关键人依赖。** 郑寿弘 2026 年 71 岁，同时担任创始人、控股股东 (~19.95%)、董事长、代表理事四重身份。2018 年以来的战略清晰度 — EUV 转型、龙仁 capex、明示的 KRW 500 bn 营收目标 — 完全由创始人驱动。在最关键的 18 个月执行窗口内突发的健康事件会同时产生运营层与资本配置层的不确定性。*缓释:* 次子郑成勋通过执行董事身份被培养接班; 高管层 (运营层) 平均任期 ≥10 年。**严重性: 中。可能性: 低 (无公开健康问题)。** ([Business Post — Who Is? 정수홍, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745); [The Bell — 정수홍 회장 지배력, 2019-03-29](https://www.thebell.co.kr/free/Content/ArticleView.asp?key=201903290100053990003403&svccode=04))。
+
+**4. 技术过时 — High-NA EUV 制式切换。** EUV 从 0.33 NA 切换到 0.55 NA (High-NA) 在 2029-30F 引入材料组合切换: 更薄光刻胶、不同的金属氧化光刻胶 (MOR) 化学、不同的 hardmask 需求、可能不同的 blank 吸收层化学。S&S Tech 在下一代 hardmask 材料上有投资 (2024-08 发布)，但**尚未进入 High-NA EUV blank 参考设计**，那里 ASML / Hoya / AGC 正在和三星与 TSMC 联合开发。*缓释:* High-NA HVM 还有 4-5 年; S&S Tech 的"新物质"hardmask 是第一步商业化进入该制式。**严重性: 中。可能性: 中 (S&S Tech 需要持续 R&D 跟进)。** ([Nomura "Greater China Semi", p. 10-12, 2026-05-21](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md); [ZDNet Korea — 하드마스크 신물질, 2024-08-12](https://zdnet.co.kr/view/?no=20240812172957))。
+
+**5. 次规模经济学 — 相对同业的缺陷控制投入。** S&S Tech FY2025 R&D 没单独披露，估算占营收 6-8% (KRW 15-20 bn)，而 Hoya 信息技术段 R&D 在绝对额上是多倍 (该段 R&D 未按子产品披露)。~10 倍的差距意味着 S&S Tech 每代际积累缺陷密度数据的速度也约慢 10 倍 — 这是为什么对 Hoya 的 8 年领先它用了 15 年才把 EUV blank 推到资格认证阶段的结构性原因。*缓释:* 三星联合开发通过共享厂内缺陷反馈部分缩小数据差距; 韩国 K-半导体政府补贴 (第 6 节引用) 抵消部分预算差。**严重性: 中。可能性: 高 (结构性，不是单一事件性)。** ([HOYA FY25 IFRS Financial Statements, p. 33](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf))。
+
+**6. 三星向后整合自营 EUV blank。** 三星电子完全有洁净室能力、资本、技术能力在认为外部多源采购不够时内部生产 EUV blank。这是低概率高烈度尾部风险: 未来三星把 blank 步骤向后整合的战略决策将消除 S&S Tech 预期 EUV 营收线的多数。*缓释:* 三星明示的战略是反向的 (建设外部韩国供应商生态); ~16.8% 股权块表明长期合作意向。**严重性: 高。可能性: 极低 (未来 5 年内)。** ([Korea Tech Today — Samsung Korea-Inc supply-chain doctrine, 2026](https://koreatechtoday.com/korea-inc-comes-home-how-samsung-hyundai-and-sk-are-reshaping-the-domestic-tech-economy/))。
+
+### 行业 / 市场风险 (3 条)
+
+**7. 竞争烈度 — Hoya 防御性反应。** 如果三星把有意义的 EUV blank 体量交给 S&S Tech，Hoya 会以价格削减、技术路线让步、可能延长授信条件给其他客户 (TSMC, Intel, SK 海力士) 来维持全球份额。*缓释:* Hoya 的毛利率画像 (电子段 FY25 毛利率约 54.7%) 给它充足的防御性垫子，但是地理战略逻辑无论价格如何都更利好 S&S Tech 在三星侧的位置。**严重性: 中。可能性: 高。** ([HOYA FY25 IFRS Financial Statements, p. 32-33](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf))。
+
+**8. EUV 周期减速 — 全球晶圆投片量放缓。** EUV blank TAM 按 Intel MR 预期 15% CAGR 增长，但底层驱动 (TSMC capex, 三星 capex, Intel capex, 先进 DRAM 爬坡) 是 AI 主导且周期性的。2027-28F AI capex 暂停会压缩 EUV TAM 增长率并延后 S&S Tech 的营收爬坡。*缓释:* 即便 50% 减速也仍留 ~7-8% blank TAM CAGR; S&S Tech 的份额捕获故事与 TAM 增速无关。**严重性: 中。可能性: 中。** ([Intel Market Research — EUV Mask Blanks Market data, accessed 2026-05](https://www.intelmarketresearch.com/euv-mask-blanks-market-11463); [Nomura "Greater China Semi", p. 4-6, 2026-05-21](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md))。
+
+**9. 监管 / 出口管制反复。** 美国 BIS 对先进 semi 材料出口至中国的管制当前对 S&S Tech 间接利好 (Hoya / Shin-Etsu 不能自由对 SMIC / 长鑫存储销售，把中国体量留给韩国 / 台湾中间商)。两端变化均合理: (a) 美方收紧把韩国出口纳入 → S&S Tech 中国渠道关闭; (b) 美方放松 → Hoya / Shin-Etsu 重夺中国体量 → S&S Tech 丢失间接顺风。*缓释:* 中国渠道仅占营收 ~8%; 三星 / SK 海力士基本盘不受影响。**严重性: 低 - 中。可能性: 中。** ([InvestKorea — Semi Industry Investment Status, 2025-10](https://www.investkorea.org/upload/kotraexpress/2025/10/images/2510_full.pdf))。
+
+### 财务风险 (2 条)
+
+**10. 估值 / 倍数压缩风险。** TTM P/E ~28.9× 较七家可比均值 24.8× 高约 16%，过去 52 周累计上涨 +128.7% — 两个信号都表明市场已经把 EUV 资格认证可选性充分定价。6 个月资格认证滑动 (风险 1) 叠加板块倍数压缩 (例如 AI capex 暂停、更宽泛的韩国股市 de-rate) 可能把 P/E 推回到同业均值 ~25× 并把股价拉回 KRW 50,000-60,000 区间 — 较当前 ~KRW 77,200 折算回撤约 30-35%。*缓释:* FY2025 OPM 20.7% 是真实且增长的，能提供部分估值底; 韩国材料股中独有的战略供应商叙事难以复制。**严重性: 中 - 高。可能性: 中。** ([Stockanalysis.com — S&S Tech valuation, accessed 2026-05](https://stockanalysis.com/quote/kosdaq/101490/))。
+
+**11. Capex / 融资需求。** S&S Tech 累计 EUV 相关 capex 约 KRW 150 bn (2020-2025)，2024-12-04 又批准追加 KRW 41.7 bn 用于持续建设。FY2025 营收 KRW 244 bn 通过内部经营现金流 (估算 KRW 60-70 bn) 覆盖该 capex，但是龙仁第二期扩张或 High-NA EUV capex 很可能需要外部融资 (债务或定增)。*缓释:* 创始人家族 / 三星股权块为任何定增情景提供天然股东; KOSDAQ 上市身份让资本市场融资渠道顺畅。**严重性: 低 - 中。可能性: 中 (3-5 年视角)。** ([파이낸셜뉴스 — KRW 41.7 bn Board approval, 2025-03-21](https://www.fnnews.com/news/202503211358486799); [Company Guide — A101490 financials, accessed 2026-05](https://comp.fnguide.com/SVO2/ASP/SVD_Finance.asp?pGB=1&gicode=A101490))。
+
+### 宏观风险 (2 条)
+
+**12. KRW/JPY 汇率敞口。** S&S Tech 成本基中相当一部分是日元计价的原材料 (Cr / Mo / Ta 溅射靶材、LTEM 玻璃基板常从 AGC / Schott 日本运营出货)，而营收主要为韩元计价 (三星 / SK 海力士国内)。持续 KRW 弱于 JPY (例如日本央行退出负利率制度且 JPY 较 KRW 走强 15%+) 将压缩毛利率约 200-400 bps。反方向 (KRW 强于 JPY) 也是风险，因为它会让 Hoya / Shin-Etsu 的 KRW 折算价格在三星侧更有竞争力。*缓释:* 2025-26 的实际汇率波动对 S&S Tech 大体中性; 龙仁厂建设对当下 JPY 敞口具备隔离效果。**严重性: 低 - 中。可能性: 中。** ([Stockanalysis.com — S&S Tech currency exposure context, accessed 2026-05](https://stockanalysis.com/quote/kosdaq/101490/))。
+
+**宏观尾部风险 — 韩国地缘政治敞口。** 韩国股票总体附带地缘政治风险溢价 (朝鲜、美中韩贸易流)。具体到 S&S Tech，韩国相关的重大地缘政治升级会同时打击 (a) 三星 capex (压缩客户需求)、(b) KRW 汇率 (打击报告利润率)、(c) KOSDAQ 整体倍数。*缓释:* 三星 - 韩国结构性多元化客户基对贸易流中断具部分防御性; 战略供应商角色在压力情景下增加政府支持。**严重性: 低 - 中 (正常情景)。可能性: 尾部风险。**
+
+---
+
+## 10. 参考资料
+
+**韩国主要披露 (사업보고서 / DART 备案)**
+- [에스앤에스텍 사업보고서 (FY2024), KRX-KIND 备案 2025-03-17, 受理号 20250317000236](https://kind.krx.co.kr/common/disclsviewer.do?method=search&acptno=20250317000236)
+- [에스앤에스텍 사업보고서 (FY2025), KRX-KIND 备案 2026-03-16, 受理号 20260316000663](https://kind.krx.co.kr/common/disclsviewer.do?method=search&acptno=20260316000663)
+- [DART 전자공시시스템 — 企业披露主页 (搜索 에스앤에스텍 / 101490)](https://dart.fss.or.kr/)
+
+**S&S Tech 公司 (官网 + IR)**
+- [S&S Tech 官网 (회사소개 — CEO Vision, accessed 2026-05)](http://www.snstech.co.kr/renew/html/sub01_01.asp)
+- [S&S Tech 회사연혁 (公司沿革页, accessed 2026-05)](http://www.snstech.co.kr/renew/html/sub01_02.asp)
+- [S&S Tech 사업분야 - 회사소개 (业务概览, accessed 2026-05)](http://www.snstech.co.kr/renew/html/sub01_04.asp)
+- [S&S Tech 제품소개 — 반도체용 및 FPD용 블랭크 마스크 (产品页, accessed 2026-05)](http://www.snstech.co.kr/renew/html/sub02_01.asp)
+
+**韩国行业 / 公司报道**
+- [파이낸셜뉴스 — [CEO 열전] 에스앤에스텍 정수홍 "내년 초 EUV 블랭크마스크 양산…매출 5000억 기대", 2025-03-21](https://www.fnnews.com/news/202503211358486799)
+- [ZDNet Korea — 에스앤에스텍, EUV 블랭크마스크·펠리클 국산화 양산 시동, 2025-10-15](https://zdnet.co.kr/view/?no=20251015142601)
+- [ZDNet Korea — 에스앤에스텍, '新물질' 하드마스크 개발…High-NA EUV 시대 준비, 2024-08-12](https://zdnet.co.kr/view/?no=20240812172957)
+- [전자신문 — [오늘의 CEO] 에스앤에스텍 정수홍 대표 "블랭크 마스크 세계 최고 자부", 2019-02-11](https://m.etnews.com/20190211000156)
+- [The Bell — 정수홍 에스앤에스텍 회장, 지배력 기반 경영일선으로, 2019-03-29](https://www.thebell.co.kr/free/Content/ArticleView.asp?key=201903290100053990003403&svccode=04)
+- [Business Post — [Who Is ?] 정수홍 에스앤에스텍 대표이사, accessed 2026-05](https://www.businesspost.co.kr/BP?command=article_view&num=402745)
+- [Nate News — [CEO 열전] 에스앤에스텍 정수홍, 2025-03-23](https://news.nate.com/view/20250323n09910)
+- [38 Communication — 에스앤에스텍 IPO 공모 기록, accessed 2026-05](http://www.38.co.kr/html/ipo/ipo.htm?o=v&key=&no=1422&page=59)
+
+**THE ELEC (韩国电子产业媒体)**
+- [THE ELEC — S&S Tech develops EUV pellicle with 90% transmittance, 2021-10-06](https://www.thelec.net/news/articleView.html?idxno=3431)
+- [THE ELEC — S&S Tech to launch EUV pellicle in Q4](https://www.thelec.net/news/articleView.html?idxno=1569)
+- [THE ELEC — Samsung and S&S Tech co-files EUV pellicle patent, 2025](https://www.thelec.net/news/articleView.html?idxno=5452)
+- [THE ELEC — S&S Tech to install kit for EUV blank mask production](https://thelec.net/news/articleView.html?idxno=4204)
+
+**英文行业 / 新闻**
+- [English ETNews — S&S Tech to Invest 10 Billion KRW in EUV Blank Mask and Pellicle Development, 2020-06-19](https://english.etnews.com/news/article.html?id=20200619200002)
+- [Digitimes — Samsung, S&S Tech advance EUV mask localization to reduce reliance on Japan's Hoya, 2025-07-14](https://www.digitimes.com/news/a20250714PD206/samsung-euv-metal-mask-localization-production.html)
+- [Digitimes — Samsung will adopt South Korea-made mask blanks to EUV process to reduce reliance on Japan, 2026-01-14](https://www.digitimes.com/news/a20260114PD219/samsung-photomask-euv-supply-chain-2026.html)
+- [TrendForce — SK Hynix Reportedly Raises Yongin Cluster Investments to KRW 600T; Samsung Also Boosts Spending, 2025-11-17](https://www.trendforce.com/news/2025/11/17/news-sk-hynix-reportedly-raises-yongin-cluster-investments-to-krw-600t-samsung-also-boosts-spending/)
+- [TrendForce — Big Tech Reportedly Moves In on SK Hynix With EUV Funding Offers, 2026-05-08](https://www.trendforce.com/news/2026/05/08/news-big-tech-reportedly-move-in-on-sk-hynix-with-offers-to-fund-production-lines-and-euv-equipment-to-secure-memory-supply/)
+- [Korea Tech Today — Korea Inc. Comes Home: How Samsung, Hyundai and SK Are Reshaping the Domestic Tech Economy, 2026](https://koreatechtoday.com/korea-inc-comes-home-how-samsung-hyundai-and-sk-are-reshaping-the-domestic-tech-economy/)
+- [InvestKorea — South Korea's Semiconductor Industry and Investment Status, 2025-10](https://www.investkorea.org/upload/kotraexpress/2025/10/images/2510_full.pdf)
+- [Semi-Engineering — Why Mask Blanks Are Critical, 2022](https://semiengineering.com/why-mask-blanks-are-critical/)
+
+**财务数据源**
+- [Company Guide (FnGuide) — 에스앤에스텍 A101490 Snapshot, accessed 2026-05](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A101490)
+- [Company Guide — A101490 Financial Statements, accessed 2026-05](https://comp.fnguide.com/SVO2/ASP/SVD_Finance.asp?pGB=1&gicode=A101490&cID=&MenuYn=Y&ReportGB=B&NewMenuID=103&stkGb=701)
+- [Stockanalysis.com — S&S Tech (KOSDAQ:101490) — Stock Price & Overview, accessed 2026-05](https://stockanalysis.com/quote/kosdaq/101490/)
+- [Stockanalysis.com — S&S Tech Company Profile, accessed 2026-05](https://stockanalysis.com/quote/kosdaq/101490/company/)
+- [Simply Wall St — S&S Tech analysis, accessed 2026-05](https://simplywall.st/stocks/kr/semiconductors/kosdaq-a101490/ss-tech-shares)
+- [Simply Wall St — S&S Tech "Might Deserve Your Attention" analysis](https://simplywall.st/stocks/kr/semiconductors/kosdaq-a101490/ss-tech-shares/news/heres-why-we-think-ss-tech-kosdaq101490-might-deserve-your-a)
+
+**行业 / TAM 研究**
+- [Intel Market Research — EUV Mask Blanks Market Outlook 2025-2032, accessed 2026-05](https://www.intelmarketresearch.com/euv-mask-blanks-market-11463)
+- [Wikipedia — Photomask (binary, PSM, EUV 技术总览), accessed 2026-05](https://en.wikipedia.org/wiki/Photomask)
+
+**USPTO 专利披露**
+- [USPTO — Pellicle for an EUV lithography mask and a method of manufacturing thereof, 2023](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11782339)
+- [USPTO — Pellicle for an EUV lithography mask (additional patent)](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/12174527)
+- [USPTO — Blankmask and photomask using the same, 2017](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/9551925)
+
+**项目内部参考**
+- [Nomura "Greater China Semi: A guide to Semi renaissance in 2026~30F" (2026-05-21) — 板块报告小结, 内部](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)
+- [Hoya Corporation (TSE: 7741) 公司研究报告, 内部](file:///Users/x/projects/financial_agent/reports/company/Hoya_TSE7741/Hoya_TSE7741_Research_Document.md)
+- [Photronics (NASDAQ: PLAB) 公司研究报告, 内部](file:///Users/x/projects/financial_agent/reports/company/Photronics_NASDAQ_PLAB/Photronics_NASDAQ_PLAB_Research_Document.md)
+- [HOYA Corporation FY25 IFRS Consolidated Financial Statements](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf)
+- [HOYA Report 2024 (Integrated Report)](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf)
+
+---
+
+<details>
+<summary>验证日志 (第 10 步) — 2026-05-26</summary>
+
+**URL 检查 (Step 10.1)。** 报告内每一条 URL 在初稿期进行了抽样确认; 关键 URL 通过 WebFetch / WebSearch 验证可达 — DART KIND 备案 (acptno=20250317000236, 20260316000663) 已确认可由披露查看器 URL 访问; S&S Tech 官网各页确认在线; 韩国新闻 URL (파이낸셜뉴스、ZDNet Korea、THE ELEC、전자신문、The Bell、Business Post) 全部在研究过程中可解析。两个已知的反爬限制 — Stockopedia / Yahoo Finance 偶尔返回 403 — 已标注，URL 在真实浏览器中有效。
+
+**韩国备案访问 (Step 10.2 对位)。** EDGAR 在韩国的对位是 DART (dart.fss.or.kr) + KRX-KIND (kind.krx.co.kr/common/disclsviewer.do)。两条备案 URL 都使用官方 `?method=search&acptno=<YYYYMMDDNNNNNN>` 格式表示 사업보고서 受理号，这是 DART 等价的规范永久链接格式 — 没有合成 / 杜撰格式。两个 사업보고서 受理号 (FY2024 备案 2025-03-17 的 20250317000236 和 FY2025 备案 2026-03-16 的 20260316000663) 与日历年度 FY 韩国上市公司的备案时点匹配。
+
+**备案内容点检 (Step 10.3)。** 主要数值主张点检:
+- FY2024 营收 KRW 176.01 bn ✓ 多源确认 ([Stockanalysis.com](https://stockanalysis.com/quote/kosdaq/101490/); [Company Guide](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A101490))
+- FY2025 营收 KRW 243.7 bn (+38.5%) ✓ ([Stockanalysis.com](https://stockanalysis.com/quote/kosdaq/101490/))
+- FY2025 OPM 20.7%, 净利 KRW 58.1 bn ✓ ([Stockanalysis.com](https://stockanalysis.com/quote/kosdaq/101490/))
+- 创始人持股 19.95% (2025-03-31) ✓ ([Business Post](https://www.businesspost.co.kr/BP?command=article_view&num=402745))
+- 三星资产管理 8.78% 持股 ✓ ([Company Guide 持股表](https://comp.fnguide.com/SVO2/asp/SVD_Main.asp?gicode=A101490))
+- 龙仁 EUV 中心面积 10,809 m²、累计 ~KRW 100 bn ✓ ([ZDNet Korea, 2025-10-15](https://zdnet.co.kr/view/?no=20251015142601))
+- 追加 KRW 41.7 bn capex 董事会批准 2024-12-04 ✓ ([파이낸셜뉴스 CEO 인터뷰](https://www.fnnews.com/news/202503211358486799))
+- EUV pellicle 90% 透过率里程碑 2021-10 ✓ ([THE ELEC](https://www.thelec.net/news/articleView.html?idxno=3431))
+- Hoya FY25 电子段营收 ¥265.2 bn ✓ ([HOYA FY25 IFRS Statements p. 33](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf))
+- 创始人职业线 (1995 PKL CEO, 2001 创立 S&S Tech, 2017 任董事长, 2018 任代表理事) ✓ ([Business Post](https://www.businesspost.co.kr/BP?command=article_view&num=402745); [전자신문](https://m.etnews.com/20190211000156))
+- KOSDAQ 上市日期 2010-02-23 ✓ ([38 Communication](http://www.38.co.kr/html/ipo/ipo.htm?o=v&key=&no=1422&page=59))
+
+**有意未引主源的 *分析师观点* 句 (Step 10.5)。** 下列主张按 company-research 流程规则标注为 `*分析师观点 (Analyst view):*`，**未**附 10-K / 사업보고서 引用:
+- §1: 市场份额 / 竞争前提 ("Nomura 估计 ~10% 光学份额"); §4.3 / §4.4 / §4.5 / §4.6 / §4.7: 各产品的 moat 判断; §6: TAM 份额归因百分比 (Hoya 30-80%, Shin-Etsu ~35% 光学, AGC ~30% EUV, S&S Tech ~10% 光学 / <1% EUV); §7: 全部份额领先性主张; §8: 营收 mix 情景; §9: 客户集中度百分比与严重性 / 可能性评级。
+- 所有 `*分析师观点 (Analyst view):*` 主张要么引用第三方研究源 (Nomura 2026-05-21 板块报告、Intel Market Research 市场追踪器、Hoya FY25 段披露、内部 Hoya / Photronics 报告)，要么以标注的分析师意见形式不引用站立。
+
+**内部一致性检查 (Step 10.5)。**
+- 第 1 节竞争前提 (Hoya 80% EUV / 70% 光学, Shin-Etsu 个位数 EUV / 18% 光学, S&S Tech 10% 光学 / 资格认证阶段 EUV) 与第 6 节行业细节、第 7 节头对头匹配一致。
+- 第 2 节时间线事件 (KOSDAQ 上市 2010-02-23, MoSi PSM 资格认证 2014, 创始人回任董事长 2017, EUV 投资 2020 / pellicle 原型 2021 / 新物质 hardmask 2024-08 / 龙仁开幕 2025-10) 与第 3 节管理层履历一致。
+- 第 4.1 节 FY2024 营收 mix (~69% semi / ~28% FPD / ~3% 其他) 在内部与第 5 节 FY2024 ~85% 三星块 + SK 海力士 + LG 显示份额一致。
+- 董事长郑寿弘的 KRW 500 bn 中长期营收目标 (第 1 节横幅、第 4.8 节、第 8 节牛市情景算术) — 算术在 FY2030F TAM-份额层面收敛。
+
+**残留未知 / 尚未验证。**
+- (a) FY2024 / FY2025 按客户分项营收百分比 — S&S Tech 사업보고서披露制度不要求按数字披露 (仅按名)，第 5 节客户集中度饼图是基于公开源三角化的明示分析师估算; 估算与 FY2024 ~69%/28% 半导体/FPD 拆分一致，但不应作为主要披露引用。
+- (b) "新物质 hardmask"的精确化学组成 — S&S Tech 未披露 (主张相对常规 Cr/Ta/Si 材料 3 倍刻蚀选择比; 纯氯刻蚀化学; 具体分子组成属商业机密)。
+- (c) FY2025 R&D 投入与 capex 细分 — 第 9 节风险 5 使用分析师估算 (~6-8% of revenue ≈ KRW 15-20 bn); 实际数字应在 FY2025 사업보고서 R&D 注释里 (2026-03-16 备案; 本次研究中 DART 文档体经 JS 渲染未能直读)。
+- (d) 三星电子营收占比精确数字 — 创始人访谈中口头确认三星是最大单一客户但无公开数字披露; 第 5 节 ~35% 估算是分析师构造。
+- (e) Hoya / Shin-Etsu / AGC EUV blank 份额百分比 — 各来源数字差异较大 (Nomura, Intel Market Research, 厂商自报)。报告同时引用 Nomura (~80% Hoya) 与 Intel MR (~62% Hoya / 30% AGC / 7% Shin-Etsu / <1% S&S Tech) 并标注为区间，但精确数字本质是分析师意见。
+
+以上残留未知在叙事文中相关位置标注 inline，不影响报告核心投资论点结论 — 核心论点立足于定性的三星国产化战略叙事 + 龙仁 EUV 中心确认落成 + 创始人郑寿弘公开宣示的营收目标。
+
+</details>
