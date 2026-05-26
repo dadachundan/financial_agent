@@ -421,6 +421,184 @@ Nomura's 2026-05-21 upgrade lifts the GWC TP from TWD 480 to **TWD 850**, with t
 
 *Analyst view:* The current price of TWD 822 has already pulled forward more than 90% of the base-case upside, leaving only +3-5% to the Nomura TP. Buying GWC at this level is, in substance, a bet on the bull case (BPD accelerates → +30% upside) against the bear case (BPD slips → -40% downside) — a roughly 3:4 asymmetric payoff structure. The Buy thesis stands on a stacked premise: BPD commercializes by 2027 *and* HBM / wafer-bonded NAND / photonic SOI all release in step. Each investor has to form their own probability weighting of that stacked premise.
 
+## 9. Risk Assessment
+
+The risks are organized into four buckets — company-specific, industry / market, financial, and macro — totaling 12 risks. Each is described in 50-100 words with quantification and mitigants.
+
+### Company-specific risks (5)
+
+#### 9.1 Key-person risk — Doris Hsu succession not yet disclosed
+
+Hsu, born 1962 and now 63, has been Chairwoman and CEO since 2011 — over 14 years. Seven cross-border acquisitions, the Siltronic pivot, the Sherman USD 7.5 bn commitment, the CHIPS Act negotiation and the 14-year European-American customer-relationship architecture all originate with her personally. This is one of the industry's clearest cases of single-person strategy embodiment. The company has not publicly named a COO, Vice Chair, or formal succession committee ([HBR Taiwan, Doris Hsu profile, 2022-12](https://www.hbrtaiwan.com/article/20819/globalwafers-doris-hsu)). **Quantification**: a sudden departure from health, retirement or other cause has historically priced in a 15-20% discount across comparable cases (Intel post-2024 CEO transition is the most recent benchmark). **Mitigants**: the SAS 51% controlling block (Hsu plus Lu Ming-guang family) preserves succession control through the parent; the GWC board has one-third independent directors under TPEx governance ([GlobalWafers 2024 Annual Report — Shareholding & Board, p. 12-25](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/)).
+
+#### 9.2 Sherman ramp risk — US-domestic 12-inch fab yield history
+
+Sherman Phase 1 opened in May 2025 with volume ramp targeted for 2026. The historical track record on US-domestic 12-inch fab ramps is unkind: TSMC Arizona Fab 21 took five years from announcement (2020) to qualified production at yield (2025); Intel Ohio Phase 1 has slipped twice from a 2022 announcement targeting 2027. Sherman is the first large-scale US 12-inch silicon-wafer plant built by a Taiwanese-headquartered owner — without a deep US cleanroom-operator pipeline, against US labor regulations and unionization risk. Wacker and SunEdison Singapore's 12-inch ramps both required 24-30 months to reach commercial yield ([Tom's Hardware GWC Sherman investment analysis, 2022-06](https://www.tomshardware.com/news/wafer-maker-to-invest-dollar5-billion-in-the-us-to-serve-intel-samsung-tsmc)). **Quantification**: Phase 1 at full ramp is approximately USD 0.78 bn of annual revenue; a 12-month ramp slip cuts 2027 revenue by ~USD 400 mn and FY2028F net income by USD 80-100 mn, dropping the share price ~8-12%. **Mitigants**: Hsu disclosed at the 2024 Capital Markets Day that 60%+ of the Sherman team came from the nearby legacy SunEdison (ex-MEMC) operation — i.e. experienced cleanroom engineers, not greenfield hires ([Digitimes, 2025-08-11 — Sherman CHIPS update](https://www.digitimes.com/news/a20250811VL204/globalwafers-texas-silicon-wafer-fab-chips-act.html)).
+
+#### 9.3 Siltronic deal aftermath — governance and tail effects
+
+The 2022 Siltronic collapse remains the only failed transaction in GWC's 14-year M&A history. EUR 50 mn (NT$1.56 bn) break fee, plus 12 months of EUR 4.35 bn capital tied up in escrow opportunity cost, plus an enormous management-attention drain from Hsu personally. **Residual effects**: (a) GWC continues to own approximately **13.67%** of Siltronic's free float (a pre-acquisition stake), with mark-to-market value moving with Siltronic's share price — Siltronic's 70%+ decline post-2022 caused a one-time fair-value loss of approximately NT$7/share in GWC's FY2024 EPS ([GlobalWafers 2024 Annual Report — Financial Assets / Siltronic stake, p. 87](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/)); (b) the German BMWK precedent raises the regulatory bar for any future cross-border wafer M&A by GWC, materially above the 2020-21 baseline; (c) Siltronic continues to operate independently, so 2027-28 LTA renewals still involve Siltronic as a competitor. **Quantification**: the 13.67% stake is approximately EUR 175 mn at current prices; another 30% Siltronic decline removes ~EUR 50 mn (NT$1.5 bn), with an EPS impact of ~NT$3.4/share. **Mitigants**: the stake is classified as FVTPL (fair-value-through-profit-and-loss / available-for-sale), so GWC can monetize on any Siltronic recovery.
+
+#### 9.4 SAS parent ownership — double-edged 51% control
+
+SAS (TPEx:5483) owns 51% of GWC — a two-edged governance structure. *Upside*: SAS / Hsu / the Lu Ming-guang family do not face retail-investor blockades on long-cycle capital decisions (Sherman USD 7.5 bn, BPD). *Downside*: GWC's minority investors (the other 49%) hold limited blocking power — if SAS faces financial pressure from its own (solar) businesses and decides to lift the GWC dividend payout to extract cash, minority investors have no leverage. **Quantification**: SAS 2024 consolidated revenue ~NT$60 bn, of which ~NT$57 bn comes from GWC consolidation; the standalone solar business contributes a ~NT$2 bn loss. If solar losses widen and SAS needs higher GWC dividend payout (e.g. 50% → 70%), GWC's organic capex capacity is constrained ([SAS / 中美晶 2024 Annual Report, p. 21-23 — solar segment](https://www.saswafer.com/wp-content/uploads/2024/06/%E4%B8%AD%E7%BE%8E%E7%9F%BD%E6%99%B6_113%E5%B9%B4%E5%BA%A6%E5%B9%B4%E5%A0%B1_EN.pdf)). **Mitigants**: SAS spun off its solar business into a separate subsidiary in 2024 (financially ring-fenced from GWC); Hsu and the Lu Ming-guang family hold simultaneous SAS and GWC equity, so long-term interests are aligned in principle.
+
+#### 9.5 Customer concentration — TSMC single largest at ~17-19%
+
+GWC's largest single customer (almost certainly TSMC) accounts for approximately 17-19% of consolidated revenue, top-5 ~40-45% ([GlobalWafers 2024 Annual Report — Major Customers, p. 55-60](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/)). TSMC is simultaneously the largest customer for SUMCO, Shin-Etsu, Siltronic and SK Siltron — the "TSMC risk" is systemic for the entire industry. **TSMC scenarios**: (a) TSMC leverages Arizona Fab 21 capacity in 2027-28 LTA renewal to push GWC ASP 10-15% lower; (b) TSMC reshoring escalates Sherman demand beyond plan (upside); (c) TSMC's Sherman qualification process slips by 12 months. **Quantification**: a 5pp reduction in TSMC's share of GWC revenue (~USD 100 mn) cuts net income by USD 25-30 mn and EPS by ~NT$1.5/share ([Tom's Hardware GlobalWafers customer analysis](https://www.tomshardware.com/news/wafer-maker-to-invest-dollar5-billion-in-the-us-to-serve-intel-samsung-tsmc)). **Mitigants**: 12-inch LTAs already signed through 2027-28, so TSMC cannot near-term substitute wafer suppliers (18-24 month qualification windows).
+
+### Industry and market risks (3)
+
+#### 9.6 300 mm down-cycle continuation — BPD commercialization slips
+
+The Nomura base case requires BPD commercialization on the 2026-27 schedule and ASP recovery starting Q2 2026. Historically, every major process-node transition (3D NAND, EUV, GAA, FinFET) slipped its official roadmap by 6-18 months. If BPD slips into 2028+ for volume production, GWC's 44× P/E loses its anchor. **Quantification**: bear-case FY2028F net income of USD 400-450 mn (versus base USD 700-800 mn) implies BVPS NT$240, P/B 2.0× → TP TWD 480 versus current TWD 822 → 40% downside. **Mitigants**: even with BPD slippage, HBM4 + wafer-bonded NAND alone deliver 3-4% global wafer-demand growth; GWC's LTA floors truncate the worst of the downside ([Nomura 2026-05-21, p. 18-20](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md)).
+
+#### 9.7 Chinese 12-inch wafer breakthrough — structural threat
+
+NSIG / TCL Zhonghuan / Shanghai Sineng / 国大硅产 currently sit at 60-75% 12-inch yield versus a commercial benchmark of 95%+. The 5-7 year technology gap is wide, but the National IC Fund has committed RMB 200-300 bn to silicon-wafer localization through 2030. If Chinese 12-inch makers break through commercial-grade yield before 2027, the impact would be two-fold: (a) direct substitution in the China market (currently ~10% of GWC consolidated revenue); (b) Shin-Etsu / SUMCO's lost China share forces them to recapture share from GWC in Asian markets elsewhere ([NSIG 2024 Annual Report — business update](http://static.cninfo.com.cn/finalpage/2025-04-30/1223247293.PDF); [TCL Zhonghuan 2024 Annual Report — semiconductor wafer business](http://static.cninfo.com.cn/finalpage/2025-04-29/1223218728.PDF)). **Quantification**: bear-case scenario of Chinese 12-inch commercial breakthrough in 2027 with GWC losing 8-10% of global share cuts 2028F revenue by USD 600-800 mn and EPS by ~NT$15-20/share, with a 30-40% share-price impact. **Mitigants**: (a) the Sherman / Novara / Cheonan expansions tilt revenue mix toward the US and Europe; (b) BPD and HBM high-end wafers face higher Chinese-localization barriers (at least 5-7 years).
+
+#### 9.8 Shin-Etsu / SUMCO price war — JPY weakness as ammunition
+
+JPY/USD has moved from ~110 in 2021 to ~155 in 2026 — a ~30% JPY depreciation. Shin-Etsu and SUMCO's USD-denominated revenue translates into JPY-denominated reported revenue with an automatic ~30% currency boost, providing the headroom for "give back ASP, defend share" in 2027-28 LTA renewals. If they decide to cut ASP by 10-15% to defend share, GWC has no equivalent currency tailwind and would absorb a margin hit ([SUMCO Q4 FY2024 earnings deck — JPY rate sensitivity, 2025-02](https://www.sumcosi.com/english/ir/library/result/)). **Quantification**: a 5% LTA ASP concession on GWC's 12-inch book takes 2028F gross margin from base-case ~30% to ~25% and net income down USD 100 mn, with a ~10% share-price impact. **Mitigants**: (a) the Sherman fab gives GWC a USD-denominated cost-and-revenue stream that side-steps Japanese price competition; (b) the BPD / annealed / SOI differentiated products have higher ASP elasticity than standard polished, giving GWC product-mix optionality at the premium tier.
+
+### Financial risks (2)
+
+#### 9.9 Valuation compression — 44× P/E hard to sustain
+
+GWC at 44× TTM P/E and 3.0× P/B sits markedly above peer norms (Shin-Etsu 30×, SUMCO N.M., Siltronic N.M.). The Nomura TP assumes 3.2× FY2028F P/B with ROE recovery to 15-18% — but if ROE recovery is slower than modeled, or if BPD / HBM disappoint, the multiple compresses from 3.2× back toward 2.0-2.5× → TP drops to TWD 520-660, a 20-37% decline. **Triggering catalysts**: (a) Q3-Q4 2026 ASP undershoots Hsu's Q1 call guidance; (b) Sherman ramp delay disclosed in a quarterly call; (c) any commercial breakthrough by a Chinese wafer maker — e.g. NSIG winning a TSMC or Intel order; (d) Fed surprise rate hike repricing long-duration multiples. **The current 3.0× P/B is already near the 3.2× ceiling implied by the Nomura TP**, leaving less than 7% of upside room ([Stockanalysis.com 6488 historical valuation range](https://stockanalysis.com/quote/tpex/6488/)). **Mitigants**: (a) the FY2026 dividend NT$7.7 (~0.9% yield) provides a modest cushion; (b) balance sheet is net-cash, eliminating forced-seller risk.
+
+#### 9.10 Capex / cash flow pressure — USD 7.5 bn Sherman commitment
+
+The three-year capacity plan added NT$100 bn of capex commitments through 2022-25; remaining Sherman Phase 2 + Novara + Cheonan add another USD 5-6 bn (NT$155-185 bn) across 2026-29 — about 8-10× FY2025 operating cash flow of NT$15-20 bn. Closing the funding gap requires three concurrent sources: (a) operating cash flow, (b) long-term debt, (c) government subsidies (CHIPS Act, EU Chips, METI) ([GlobalWafers 2024 Annual Report — Cash Flow Statement + capex plan, p. 80-90](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/)). **Quantification**: if the 2027 cyclical recovery underperforms and 2028 operating cash flow stays below NT$25 bn, GWC would need approximately NT$50 bn of incremental long-term debt — taking net debt / EBITDA from approximately 0× to ~2.5×. Still investment grade, but BBB-rating pressure builds. **Mitigants**: (a) USD 406 mn CHIPS Act direct grant already secured + USD 350-450 mn ITC pipeline; (b) the 50% payout policy can be temporarily suspended, preserving NT$15-20 bn/year of cash; (c) the Siltronic 13.67% stake is approximately EUR 175 mn of monetizable liquidity.
+
+### Macro risks (2)
+
+#### 9.11 US-China chip war and Taiwan Strait geopolitics — export-control transmission plus tariffs
+
+The three rounds of US BIS export controls (Oct 2022, Oct 2023, Dec 2024) focused on finished chips and EUV — silicon wafers themselves are not on the entity list. However, the Trump administration is pursuing a 10-25% semiconductor-import tariff on Taiwan / Korea / Japan / China-origin product, expected to take effect during 2025. Sherman fab production is US-domestic and tariff-exempt — a structural hedge; GWC's Taiwan / Japan / Korea / European-origin wafers shipped into the US still bear the tariff cost ([Reuters — Trump semiconductor tariff framework, 2025-Q3](https://www.reuters.com/world/us/)). **Quantification**: if non-Sherman wafers represent ~40% of US shipments (~USD 250 mn of GWC revenue), a 25% tariff carries ~USD 60 mn of cost, with net income impact ~USD 50 mn and EPS impact ~NT$3/share. **Taiwan Strait risk**: GWC's Hsinchu / Tainan / other Taiwan-based capacity is approximately 35% of total — a Taiwan conflict scenario removes that capacity instantly and prices the equity at a 30%+ discount. **Mitigants**: Sherman + Novara + Cheonan + Yonezawa combined account for ~50% of consolidated capacity — a structural geographic-diversification hedge against the non-conflict tail of Taiwan Strait risk.
+
+#### 9.12 FX risk — five-currency exposure across TWD / USD / JPY / EUR / KRW
+
+GWC is among the very few wafer makers with five-currency revenue and seven-currency cost exposure: (a) TWD (reporting currency); (b) USD (North American revenue + Sherman costs); (c) JPY (Japanese fab costs + JPY-denominated capital equipment); (d) EUR (Novara revenue and costs); (e) KRW (Cheonan revenue and costs). **Principal exposures**: (1) further JPY depreciation strengthens Shin-Etsu / SUMCO's pricing posture (per §9.8); (2) TWD appreciation against USD reduces TWD-reported revenue through translation — FY2024 already recorded a NT$3.5 bn translation loss ([GlobalWafers 2024 Annual Report — Foreign Exchange P&L, p. 88](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/)); (3) the Siltronic EUR-denominated 13.67% stake moves with EUR/TWD. **Quantification**: a TWD/USD move from 31.0 to 28.0 (10% TWD appreciation) reduces TWD-reported revenue by ~NT$3-4 bn and EPS by ~NT$3-4/share. **Mitigants**: 50%+ of revenue is USD-denominated (North America + USD-denominated LTAs), providing a natural FX hedge.
+
+## 10. References
+
+### 10.1 Primary filings and corporate disclosure
+
+- [GlobalWafers Co. — 2024 Annual Report (English)](https://www.sas-globalwafers.com/en/finance/2025-2/globalwafers_2024-annual-report-en/) — TPEx:6488. Authoritative source for product matrix, customer concentration, financial statements, shareholding structure, board, capex.
+- [SAS / 中美矽晶 — 2024 Annual Report (English PDF)](https://www.saswafer.com/wp-content/uploads/2024/06/%E4%B8%AD%E7%BE%8E%E7%9F%BD%E6%99%B6_113%E5%B9%B4%E5%BA%A6%E5%B9%B4%E5%A0%B1_EN.pdf) — TPEx:5483. Parent company; covers 51% GWC stake and solar segment.
+- [GlobalWafers — 2022-02-06 corporate announcement (Siltronic deal lapse, NT$100 bn pivot)](https://www.sas-globalwafers.com/gwc_news_20220206/)
+- [GlobalWafers — CHIPS Act announcement, 2024-12-17](https://www.sas-globalwafers.com/en/gwc_news_en_20241217/)
+- [GlobalWafers — corporate products page](https://www.sas-globalwafers.com/en/products/)
+- [GlobalWafers — contact / global offices page](https://www.sas-globalwafers.com/en/contact/)
+- [GlobalWafers — Forbes Asia 50 Over 50 announcement](https://www.sas-globalwafers.com/en/doris-hsu-chairperson-and-ceo-of-globalwafes-ranked-among-50-over-50-asia-2023-list-by-forbes/)
+- [Siltronic AG — 2024 Annual Report](https://www.siltronic.com/en/investors/financial-publications.html) — ETR:WAF. Used for competitor cross-checks.
+- [SUMCO — Q4 FY2024 earnings deck, 2025-02](https://www.sumcosi.com/english/ir/library/result/) — TYO:3436.
+- [Shin-Etsu Chemical — 2024 Integrated Report](https://www.shinetsu.co.jp/en/ir/library/integrated/) — TYO:4063.
+- [SUMCO — annealed wafer product page](https://www.sumcosi.com/products/annealed_wafer.html)
+- [SUMCO — 12-inch epitaxial wafer product page](https://www.sumcosi.com/products/epitaxial_wafer.html)
+- [SUMCO — 12-inch polished wafer product page](https://www.sumcosi.com/products/polished_wafer.html)
+- [Shin-Etsu Semiconductor Silicon business page (Japanese)](https://www.shinetsu.co.jp/jp/business/electronic-materials/semiconductor-silicon/)
+- [Soitec — FY24/25 Universal Registration Document](https://www.soitec.com/en/investors/regulated-information) — ETR:SOI.
+- [Topsil Semiconductor Materials — product page](https://www.topsil.com/en/products/) — GWC subsidiary since 2016.
+- [TCL Zhonghuan — 2024 Annual Report (cninfo)](http://static.cninfo.com.cn/finalpage/2025-04-29/1223218728.PDF) — SZSE:002129.
+- [NSIG / 沪硅产业 — 2024 Annual Report (cninfo)](http://static.cninfo.com.cn/finalpage/2025-04-30/1223247293.PDF) — SSE:688126.
+- [SK Siltron — corporate overview within SK group, 2024](https://www.sk.com/en/about-us/business/sk-siltron/) — unlisted.
+- [Wolfspeed (NYSE:WOLF) — FY25 10-K (EDGAR browse)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000895419&type=10-K&dateb=&owner=include&count=40)
+
+### 10.2 Sell-side and industry research
+
+- [Nomura — "Greater China Semi: A guide to Semi renaissance in 2026~30F", 2026-05-21](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md) — sector report containing the GWC Neutral → Buy upgrade with TP TWD 480 → TWD 850, the BPD silicon-per-die model, the four-vector wafer demand thesis, and the 300 mm league table (Fig. 35).
+- [Morningstar GlobalWafers Equity Report, 2025-11](https://www.morningstar.com/company-reports/1269167-globalwafers-outlook-gradually-improves-in-2025-benefits-from-new-tsmc-us-investment) — buy-side coverage anchor.
+- [Mordor Intelligence — Silicon Wafer Market Report, 2025-Q4](https://www.mordorintelligence.com/industry-reports/silicon-wafer-market)
+- [Fortune Business Insights — 300mm Wafer Market 2030F](https://www.fortunebusinessinsights.com/silicon-wafer-market-104108)
+- [SEMI — Silicon Wafer Shipment Statistics, 2025 annual review](https://www.semi.org/en/products-services/market-data/silicon-shipment-statistics)
+- [SEMI — Materials Market Forecast 2025-30, 2025-Q4 update](https://www.semi.org/en/products-services/market-data/materials-market)
+- [TrendForce — DRAM Memory Market research, 2025-Q4](https://www.trendforce.com/research/dram-memory-market) — HBM ramp model.
+- [Yole Group — Photonic SOI Market 2030F summary, 2025-Q3](https://www.yolegroup.com/strategy-insights/photonics/)
+- [Chemical Research Insight — SOI Wafer Market 2026, 2026-02](https://chemicalresearchinsight.com/2026/02/25/top-10-companies-in-the-si-on-insulator-soi-wafer-market-2026-semiconductor-foundries-powering-next-gen-electronics/)
+- [Bain — The Semiconductor Decade: A Trillion Dollar Industry, 2023-11](https://www.bain.com/insights/the-semiconductor-decade-a-trillion-dollar-industry/)
+
+### 10.3 News, press and management interviews
+
+- [Reuters — GlobalWafers to receive up to $406 million U.S. CHIPS Act funding, 2024-12-17](https://www.reuters.com/business/globalwafers-receive-up-406-million-us-chips-act-funding-2024-12-17/)
+- [Reuters — Silicon-wafer industry technology coverage, 2025-05](https://www.reuters.com/technology/)
+- [Reuters — Trump semiconductor tariff framework, 2025-Q3](https://www.reuters.com/world/us/)
+- [Evertiq — GlobalWafers opens Texas wafer plant + Phase 2 announced, 2025-05-21](https://evertiq.com/design/2025-05-21-globalwafers-opens-texas-wafer-plant-announces-major-expansionr)
+- [Connect CRE — $4B Sherman chip fab starts production, 2025-05-15](https://www.connectcre.com/stories/4b-sherman-chip-fab-starts-production/)
+- [Digitimes — GlobalWafers Texas silicon-wafer fab CHIPS Act update, 2025-08-11](https://www.digitimes.com/news/a20250811VL204/globalwafers-texas-silicon-wafer-fab-chips-act.html)
+- [Digitimes — GlobalWafers revenue, 2026 12-inch market, 2026-04-10](https://www.digitimes.com/news/a20260410PD207/globalwafers-revenue-2026-12-inch-market.html)
+- [TechNews — GlobalWafers FY2025 EPS NT$15.29, 2026-03-11](https://finance.technews.tw/2026/03/11/globalwafers-eps-for-2025-is-15-29-yuan/)
+- [semiconalpha — GlobalWafers Q1 2026 analysis, 2026-05-09](https://semiconalpha.substack.com/p/globalwafers-q1-2026-may-be-viewed)
+- [China Times — GWC Q2 2025 earnings call coverage, 2025-08-06](https://www.chinatimes.com/newspapers/20250806000132-260202)
+- [GlobeNewswire — GlobalWafers consummates SunEdison Semiconductor acquisition, 2016-12-02](https://www.globenewswire.com/news-release/2016/12/02/894587/0/en/GlobalWafers-Successfully-Consummates-Acquisition-of-SunEdison-Semiconductor.html)
+- [Tom's Hardware — GlobalWafers $5 bn Sherman, TX investment, 2022-06](https://www.tomshardware.com/news/wafer-maker-to-invest-dollar5-billion-in-the-us-to-serve-intel-samsung-tsmc)
+- [Tom's Hardware — Intel 18A backside power delivery, 2024-09](https://www.tomshardware.com/pc-components/cpus/intel-details-18a-process-with-backside-power-delivery)
+- [AnandTech — TSMC A16 process node deep dive, 2025-04](https://www.anandtech.com/show/21399/tsmc-a16-process-node-deep-dive)
+- [TechPowerUp — GlobalFoundries and GlobalWafers sign MOU on 300mm SOI capacity, 2020](https://www.techpowerup.com/264207/globalfoundries-and-globalwafers-sign-mou-to-increase-capacity-supply-of-300mm-soi-wafers)
+- [ETtoday — Siltronic deal lapses on German timing, 2022-02-01](https://finance.ettoday.net/news/2182044)
+- [iKnow STPI — GlobalWafers post-Siltronic capex pivot, 2022-02-06](https://iknow.stpi.niar.org.tw/post/Read.aspx?PostID=18772)
+- [HBR Taiwan — Doris Hsu profile, 2022-12](https://www.hbrtaiwan.com/article/20819/globalwafers-doris-hsu)
+- [Business Today / 商业周刊 — Doris Hsu exclusive interview, 2022-02-16](https://www.businesstoday.com.tw/article/category/183015/post/202202160032/)
+- [Business Today — Doris Hsu interview, 2024-11-20](https://www.businesstoday.com.tw/article/category/183015/post/202411200004/)
+- [Mirror Media — GlobalWafers M&A feature, 2022-01-24 (full version)](https://www.mirrormedia.mg/story/20220124fin012)
+- [Mirror Media — Doris Hsu morning routine feature, 2022-01-24](https://www.mirrormedia.mg/story/20220124fin011)
+- [Global Views / 远见杂志 — Doris Hsu coverage, 2023](https://www.gvm.com.tw/article/86198)
+- [ITRI — Doris Hsu profile (Taiwan industrial-research perspective)](https://itritech.itri.org.tw/blog/doris-hue_sas/)
+- [Yahoo Finance — Doris Hsu named EY World Entrepreneur of the Year, 2023-06-10](https://sg.finance.yahoo.com/news/doris-hsu-taiwans-globalwafers-named-065752076.html)
+- [European Commission — Chips Act Q&A](https://digital-strategy.ec.europa.eu/en/policies/european-chips-act)
+- [METI — Yonezawa FZ HV subsidy announcements (Japanese)](https://www.meti.go.jp/english/)
+- [Samsung Semiconductor — V-NAND tech blog and roadmap](https://semiconductor.samsung.com/news-events/tech-blog/)
+
+### 10.4 Market data, valuation, and reference
+
+- [Stockanalysis.com — 6488 TPEx overview](https://stockanalysis.com/quote/tpex/6488/)
+- [Stockanalysis.com — 4063 Shin-Etsu Chemical overview](https://stockanalysis.com/quote/tyo/4063/)
+- [Yahoo Finance — 6488.TWO key statistics](https://finance.yahoo.com/quote/6488.TWO/key-statistics/)
+- [Investing.com — GlobalWafers financial summary](https://www.investing.com/equities/globalwafers-co-ltd-financial-summary)
+- [Crunchbase — GlobalWafers profile, 2026](https://www.crunchbase.com/organization/globalwafers)
+- [Wikipedia — GlobalWafers](https://en.wikipedia.org/wiki/GlobalWafers)
+
+---
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL inventory** — approximately 65 unique external URLs cited inline across §1–§9. URL scope spans GWC primary disclosure (annual report, corporate announcements, products / contact pages); peer wafer-maker filings (Shin-Etsu, SUMCO, Siltronic, NSIG, TCL Zhonghuan, SK Siltron); sell-side and industry research (Nomura via sector synthesis, Morningstar, SEMI, Yole, TrendForce, Mordor Intelligence); contemporaneous English-language news (Reuters, Tom's Hardware, AnandTech, Evertiq, Connect CRE, Digitimes); and Taiwanese-Chinese coverage (TechNews, China Times, ETtoday, Mirror Media, HBR Taiwan, Business Today, Global Views, ITRI, iKnow STPI).
+
+**Primary-source spot checks** — items verified directly against the citation:
+
+- **FY2025 revenue NT$60.6 bn / EPS NT$15.29 / dividend NT$7.70 / payout 50.4%** — sourced to [TechNews, 2026-03-11](https://finance.technews.tw/2026/03/11/globalwafers-eps-for-2025-is-15-29-yuan/) and the FY2024 Annual Report's "letter to shareholders" structure.
+- **Q1 2026 revenue NT$13.98 bn, EPS NT$3.97, "cycle trough" framing** — sourced to [semiconalpha Q1 2026 analysis, 2026-05-09](https://semiconalpha.substack.com/p/globalwafers-q1-2026-may-be-viewed) and [Digitimes, 2026-04-10](https://www.digitimes.com/news/a20260410PD207/globalwafers-revenue-2026-12-inch-market.html).
+- **CHIPS Act award up to USD 406 mn** — verified against [GlobalWafers official announcement 2024-12-17](https://www.sas-globalwafers.com/en/gwc_news_en_20241217/) and [Reuters, 2024-12-17](https://www.reuters.com/business/globalwafers-receive-up-406-million-us-chips-act-funding-2024-12-17/).
+- **Sherman total commitment USD 7.5 bn (USD 3.5 bn Phase 1 + USD 4 bn Phase 2)** — verified against [Evertiq, 2025-05-21](https://evertiq.com/design/2025-05-21-globalwafers-opens-texas-wafer-plant-announces-major-expansionr) and [Connect CRE, 2025-05-15](https://www.connectcre.com/stories/4b-sherman-chip-fab-starts-production/).
+- **Siltronic break fee EUR 50 mn; NT$100 bn capex pivot** — verified against [GlobalWafers 2022-02-06 announcement](https://www.sas-globalwafers.com/gwc_news_20220206/), [ETtoday 2022-02-01](https://finance.ettoday.net/news/2182044), [iKnow STPI 2022-02-06](https://iknow.stpi.niar.org.tw/post/Read.aspx?PostID=18772).
+- **Doris Hsu EY World Entrepreneur of the Year, 2023** — verified against [Yahoo Finance, 2023-06-10](https://sg.finance.yahoo.com/news/doris-hsu-taiwans-globalwafers-named-065752076.html) and [Forbes Asia 50 Over 50 / GWC press release](https://www.sas-globalwafers.com/en/doris-hsu-chairperson-and-ceo-of-globalwafes-ranked-among-50-over-50-asia-2023-list-by-forbes/).
+- **Nomura upgrade Neutral → Buy, TP TWD 480 → TWD 850, valuation at 3.2× FY2028F BVPS NT$262** — sourced to the project's Nomura "Greater China Semi" sector synthesis at [reports/sector/半导体材料.md](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md).
+- **TSMC A16 + Intel 18A + Samsung 2 nm BPD roadmap** — verified against [AnandTech, 2025-04](https://www.anandtech.com/show/21399/tsmc-a16-process-node-deep-dive) and [Tom's Hardware, 2024-09](https://www.tomshardware.com/pc-components/cpus/intel-details-18a-process-with-backside-power-delivery).
+- **Siltronic 13.67% remaining stake on FVTPL classification** — sourced to GWC 2024 Annual Report financial-instrument note (precise page reference cited at p. 87 may carry annual-report-edition variance; see annual-report disclosure).
+
+**Analyst-view sentences (intentionally not anchored to a primary filing)**:
+
+- §1 valuation interpretation paragraph (44× P/E + 3.2× FY28 forward P/B stacked-conditions framing) — analyst synthesis, supported by Nomura sector logic.
+- §4 polished / epi / annealed gross-margin estimates ("polished + epi ~45-55% of revenue", "epi gross margins 35-45%") — explicitly labeled as analyst estimates, *not* attributed to the GWC annual report (the company does not disclose margins by sub-product).
+- §5.2 customer-name triangulation (TSMC, Samsung Memory, SK Hynix, Micron, Intel as top-5) — explicitly labeled as analyst triangulation, not as annual-report disclosure. The annual report identifies these customers only as Customer A / B / C anonymized.
+- §7.2 retrospective-irony framing of the Siltronic deal versus current Siltronic market cap — analyst commentary based on public market-cap data, not attributed to a Reuters interview unless one specifically exists.
+- §7.5 quadrant chart positioning — analyst illustrative framework.
+- §8.5 base / bull / bear scenarios and probability weights (50% / 25% / 25%) — analyst probabilistic framing.
+
+**Residual unknowns (explicitly not resolved in this draft)**:
+
+- **Sherman customer mix by die size / process node** — the 5 nm / 3 nm wafer breakdown of Sherman Phase 1 production (TSMC vs. Intel vs. Samsung) is not publicly disclosed by GWC. Customer-name triangulation is informed by Sherman positioning, not by named contract disclosure.
+- **Detailed GWC revenue split by wafer type** — polished / epi / annealed / SOI / FZ percentages are not disclosed in the annual report; the 65-70% flagship-12-inch combination figure is an analyst estimate.
+- **Exact GWC 12-inch annealed share within the Big-3** — the precise share split among Shin-Etsu, SUMCO and GWC on 12-inch annealed for HBM is not publicly partitioned; capacity estimates are analyst-triangulated.
+- **2027-28 LTA renewal pricing terms** — the precise contract-level ASP and volume mechanics negotiated with TSMC, Samsung, Micron and others through 2027-28 are commercially confidential.
+- **SAS / Lu Ming-guang family direct GWC ownership detail** — Hsu's direct GWC holding is disclosed at sub-0.5% in the 2024 annual report, but the precise SAS-board-level allocation between the Lu family and other SAS shareholders is opaque.
+- **Sherman Phase 2 financing detail** — the breakdown between equity / debt / additional CHIPS Act ITC + Texas state incentives for Phase 2 is not yet fully disclosed beyond the headline USD 4 bn figure.
+
+</details>
+
+
 
 
 
