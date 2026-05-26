@@ -348,3 +348,128 @@ The global industrial-gases industry generated approximately **USD 110–120 bil
 
 **Industry dynamics — Porter's five forces (one-paragraph summary).** *Buyer power is split:* large on-site customers (refineries, fabs) have substantial buyer power but exercise it through multi-bidder RFPs at contract renewal — Linde wins most of these through scale and relationship rather than price. *Supplier power is moderate:* energy (electricity, natural gas) is the dominant cost and is sourced from many competitive suppliers; specialty input chemicals come from a more concentrated supplier base (e.g. Solvay for fluorinated precursors), but pass-through clauses neutralise the risk. *Threat of new entrants is low:* the capex intensity of building an ASU + pipeline complex is prohibitive, and incumbents have 30+ year accumulated operating-experience advantages. *Substitute threat is low for atmospheric gases* (you cannot substitute for high-purity nitrogen in fab purging) *but is meaningful for hydrogen* (green H₂ can substitute for grey H₂ where economics work). *Internal rivalry between the four majors is intense but disciplined* — capacity additions are made against contractual backlog rather than speculatively, which is why returns-on-capital remain in the mid-20%s industry-wide.
 
+---
+
+## 7. Competitive Landscape
+
+The 10-K names Linde's primary competitors with unusual directness for a 10-K:
+
+> "Linde participates in highly competitive markets in industrial gases and engineering, which are characterized by a mixture of local, regional and global players, all of which exert competitive pressure on the parties. In locations where Linde has pipeline networks, which enable the company to provide reliable and economic supply of products to larger customers, Linde derives a competitive advantage. Competitors in the industrial gases industry include global and regional companies such as L'Air Liquide S.A., Air Products and Chemicals, Inc., Messer Group GmbH, Mitsubishi Chemical Holdings Corporation (through Taiyo Nippon Sanso Corporation) as well as an extensive number of small to medium size independent industrial gas companies which compete locally as producers or distributors."
+> — [Linde 2025 10-K, Item 1 — Competition](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)
+
+This list is the **anchor** for the competitive analysis below. Any competitor I add beyond it — Yingde Gases, SK Specialty, Iwatani, etc. — is a regional / specialty competitor not named in the 10-K, sourced separately and labeled as analyst commentary.
+
+### 7.1 Direct global competitors
+
+**L'Air Liquide S.A. (EPA:AI, market cap ~EUR 100 bn) — the #2 in industrial gases globally.** Air Liquide is the closest peer by product mix, geographic footprint and EPC capability — both companies serve refineries, fabs, healthcare, with similar on-site contract structures and similar Engineering arms (Air Liquide Engineering & Construction is privately reported but operates EPC for ASUs and H₂ plants). Air Liquide's revenue mix tilts more European (~38% EMEA in its 2024 disclosure) and more healthcare-heavy than Linde's; its electronics franchise — anchored by **Voltaix** (acquired 2013) for specialty silicon and germanium precursors — is competitive with Linde's at advanced nodes but smaller in absolute scale ([Air Liquide 2024 Universal Registration Document](https://www.airliquide.com/sites/airliquide.com/files/2025/03/14/airliquide-2024-universal-registration-document-en.pdf)). Operating margin sits in the mid-19%s — below Linde's 29.8% adjusted — reflecting both genuine business-mix differences (more European exposure with structurally higher energy costs) and a less-disciplined contract / cost programme. The TTM P/E is **30.3×** vs LIN 34.4× ([Yahoo Finance — AI.PA](https://finance.yahoo.com/quote/AI.PA/key-statistics/)). *Analyst view:* Linde and Air Liquide are the only two players in the world with a fully integrated gas + EPC + global pipeline footprint; together they form an effective Western duopoly with ~50% combined merchant-and-tonnage share globally.
+
+**Air Products and Chemicals, Inc. (NYSE:APD, market cap ~USD 64 bn) — the #3 global player.** APD competes head-to-head with Linde across all distribution channels, with a particular strength in hydrogen (NEOM green-H₂, Louisiana blue-H₂ exporter) and in helium (where APD is one of the two Western leaders alongside Linde). Recent management turnover (Seifi Ghasemi retired in 2024–25 after a 12-year tenure; new CEO took over) has accompanied a partial walk-back of APD's previous aggressive green-H₂ project strategy, with the Texas / Louisiana blue-NH₃ project delayed and capex priorities being reconsidered ([Air Products 2025 10-K, Item 7 — Outlook](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm)). APD's revenue base of ~USD 12 bn is roughly one-third of Linde's, and its TTM operating margin sits in the low-to-mid 20%s — meaningfully below Linde. The valuation is **TTM P/E 30.5×, P/S 5.2×, EV/EBITDA 21.8×** ([Yahoo Finance — APD](https://finance.yahoo.com/quote/APD/key-statistics/)) — closer to Linde on P/E but with higher EV/EBITDA reflecting more leveraged hydrogen capex.
+
+**Mitsubishi Chemical Group / Taiyo Nippon Sanso Corporation (Japan, parent TSE:4188, gas unit ~JPY 1.2 tn revenue) — the #4 global player and largest in Asia.** Now consolidated under Mitsubishi Chemical Group, Taiyo Nippon Sanso (TNSC, brand Nippon Sanso Holdings) is the Asian-anchored industrial-gas major with strong positions in Japan, Korea and Southeast Asia, augmented by the Praxair-divested European assets it acquired during the 2018 merger antitrust review. Specialty-gases exposure is strong — TNSC is a leading Japanese supplier of NF₃, WF₆ and CDA (compressed dry air) to Japanese / Korean fabs. The standalone listing **Nippon Sanso Holdings (TSE:4091)** trades at a discount to Western peers — TTM P/E **22.0×, P/S 2.0×** ([Yahoo Finance — 4091.T](https://finance.yahoo.com/quote/4091.T/key-statistics/)) — partly because of the Mitsubishi Chemical conglomerate discount, partly because TNSC's geographic mix concentrates the lower-margin Asian merchant business.
+
+**Messer Group GmbH (Germany, private; ~EUR 4 bn revenue) — the largest privately-held industrial-gas company globally.** Messer was a major beneficiary of the 2018 Linde / Praxair merger's antitrust-driven divestiture programme, acquiring Praxair's legacy US and South American assets via a JV with CVC Capital Partners (the JV was subsequently unwound and Messer took full ownership in 2024). Messer is a regional powerhouse in Europe, the US Northeast and parts of South America, and competes principally in the merchant and packaged-gas channels where its denser regional logistics give it cost-position advantages against the global majors. Because Messer is private, financial disclosures are minimal; the [Messer corporate website](https://www.messer-group.com) and [Messer Group 2024 Annual Report](https://www.messer-group.com/-/media/annualreport2024_en.pdf) provide the most-current public datapoints.
+
+### 7.2 Asian / regional players
+
+**Iwatani Corporation (TSE:8088, ~JPY 1.3 tn revenue) — Japan's #2 industrial-gas player and the largest pure-play in helium.** Iwatani has a dominant share of Japanese MRI and LCD-fab helium consumption and operates a global helium distribution business that competes with Linde and APD. Its hydrogen-station network in Japan is the largest in the world (~150+ stations) — a niche but strategically interesting position given Japan's hydrogen-society policy.
+
+**Yingde Gases (private after 2017 take-private; ~CNY 12–15 bn revenue) — China's #1 domestic on-site supplier.** Founded in 2001, Yingde became the largest Chinese-domiciled on-site industrial-gas company through its strategy of building dedicated ASUs adjacent to Chinese steel mills and refineries. Yingde is the direct competitor to Linde in mainland China for the kind of large on-site contract that anchors the Yangtze River and Bohai industrial clusters; its growth has accelerated under Chinese supply-chain-localisation policy.
+
+**SK Specialty (Korea, subsidiary of SK Inc., KOSPI:KS101120 parent) — the dominant Korean NF₃ / WF₆ specialist.** SK Specialty is the global #1 in NF₃ (used for chamber cleaning in deposition tools) and a top-3 in WF₆ (tungsten metallisation). Its primary customers are Samsung Foundry and SK Hynix (sister company) but it is also a key supplier to TSMC and Western fabs. The competitive overlap with Linde is in the **specialty electronic-gas sub-segment**, where Linde's broader product portfolio competes with SK Specialty's higher purity / lower-cost positioning on specific molecules.
+
+**Showa Denko / Resonac (TSE:4004) — Japanese specialty-gas leader, particularly in NF₃ and ultra-pure ammonia.** Resonac is a more diversified materials company (graphite electrodes, hard disks, semi materials) but its industrial-gas / specialty-gas segment competes directly with Linde's specialty business in Japan and the Asian fab cluster.
+
+**Hangzhou Hangyang Co. (SHA:002430) and CIG Industrial (601020.SS) — Chinese A-share-listed on-site industrial-gas operators.** Both compete with Linde on Chinese mainland on-site contracts. Hangyang in particular is a domestic ASU / cryogenic-equipment maker with a growing industrial-gas operating business.
+
+### 7.3 Competitive positioning framework
+
+```mermaid
+quadrantChart
+    title Industrial gas competitive positioning — Scale (x) vs Specialty Electronics depth (y)
+    x-axis "Smaller scale" --> "Larger scale"
+    y-axis "Lower specialty / electronics depth" --> "Higher specialty / electronics depth"
+    quadrant-1 "Scale + Specialty (premium)"
+    quadrant-2 "Specialty niche"
+    quadrant-3 "Regional generalist"
+    quadrant-4 "Scale generalist"
+    "Linde": [0.95, 0.80]
+    "Air Liquide": [0.82, 0.78]
+    "Air Products": [0.55, 0.65]
+    "Nippon Sanso": [0.42, 0.72]
+    "Messer": [0.30, 0.20]
+    "SK Specialty": [0.18, 0.95]
+    "Resonac": [0.25, 0.80]
+    "Iwatani": [0.20, 0.55]
+    "Yingde Gases": [0.15, 0.30]
+```
+
+Linde anchors the **top-right quadrant — scale leader with full specialty-electronics depth and full Engineering EPC capability.** Air Liquide is the immediate peer in the same quadrant but somewhat below on both axes. Air Products is mid-scale with strong but narrower electronics focus. Nippon Sanso has deep Asian specialty exposure but smaller absolute scale. The specialist competitors (SK Specialty, Resonac) sit in the upper-left — narrower scale but very deep on specific molecules. Yingde, Messer and the regional Chinese operators sit in the lower bands — scale generalists without the specialty depth.
+
+### 7.4 Linde's competitive advantages
+
+1. **Scale of installed asset base.** Linde's pipeline complexes, owned merchant fleet and on-site ASU footprint are the largest in the industry. New entrants cannot replicate this footprint in less than a decade of capex; existing peers can compete contract-by-contract but cannot match the breadth.
+2. **Contract structure discipline (Praxair legacy).** The Praxair contract templates — adopted as company standard after the 2018 merger — embed (i) energy / feedstock pass-throughs, (ii) minimum take-or-pay floors, (iii) facility-fee structures decoupled from volume, (iv) inflation escalators tied to industry-specific indices, and (v) penalty clauses for customer-initiated termination. The legal-and-commercial sophistication of these contracts is the single most underappreciated component of Linde's margin advantage.
+3. **Engineering EPC arm (Linde AG legacy).** Few peers have an in-house EPC arm at Linde Engineering's scale. Air Liquide is the only direct competitor with a comparable capability; APD outsources more of its EPC work, with consequences for project-cost discipline and IRR.
+4. **Productivity-program culture.** Linde discloses annual productivity savings as a contributor to operating-profit growth (FY25 management commentary explicitly cites "savings from productivity initiatives" — see [Linde 2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)). The cost-reduction discipline is run-rate, embedded in operating cadence rather than periodic restructuring.
+5. **Capital allocation track record.** **$7.4 bn returned to shareholders in FY25** via $2.8 bn dividends + $4.6 bn net buybacks ([Linde 2025 10-K, MD&A — Liquidity](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)); 30+ consecutive years of dividend increases at Praxair and successor Linde. The combination of growth capex ($5.3 bn) + buyback + dividend is unique among industrial-cyclical peers.
+
+![Linde plc — annual capital returns to shareholders, FY2021–FY2025](../../charts/linde_capital_returns.png)
+*Source: [Linde 2025 10-K, Consolidated Statements of Cash Flows](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm).*
+
+### 7.5 Competitive vulnerabilities
+
+1. **EMEA mix exposure to European energy-cost dispersion.** EMEA generates 25% of revenue but 35.7% operating margin — the highest of any segment. This is partly structural (specialty mix) but partly a residual benefit of European energy cost dislocation that may normalise.
+2. **Engineering segment cyclicality.** The Engineering segment's $2.25 bn FY25 revenue is exposed to large-lump EPC project award timing — FY25 saw a 3% decline year-over-year as some FIDs were delayed.
+3. **China mainland share loss to Yingde and the localised regional Chinese gas companies** under the supply-chain-localisation policy. This is a slow-burning negative rather than an acute risk.
+4. **CEO / Chair concentration in Lamba** — with combined chair+CEO roles, governance risk is higher than at peers with separated structures (mitigated by the LID role).
+5. **Helium cyclicality** — see Section 4.5; this is intrinsic to the business and is not unique to Linde, but its severity is asymmetric (downside surprise larger than upside).
+
+### 7.6 Market share
+
+*Analyst view:* by 2024 revenue (industrial gases ex-engineering ex-healthcare), the approximate global share rank is:
+
+1. **Linde — ~25–28%** (analyst estimate; the company does not publish a global share figure)
+2. **Air Liquide — ~21–24%**
+3. **Air Products — ~10–12%**
+4. **Taiyo Nippon Sanso / Mitsubishi Chemical Group gas unit — ~7–9%**
+5. **Messer — ~3–4%**
+6. Combined Chinese regional players — ~6–8%
+7. Iwatani — ~2%
+8. SK Specialty — ~1–2% (specialty-gas only)
+9. Others — long tail
+
+These figures are *not from the 10-K* — they are analyst-constructed estimates based on revenue disclosures from the listed peers and triangulation on the privately-held Messer + regional Chinese players. The 10-K text states only that "Linde is the largest industrial gas company worldwide" and does not provide a percentage.
+
+---
+
+## 8. Market Opportunity (TAM)
+
+The global industrial-gas TAM in 2025 is approximately **USD 110–120 billion** by revenue, growing at **GDP + 2–3 ppt** in normal cycles; the addressable subset relevant to Linde (excluding the very-small-scale regional Chinese and the niche specialty-only competitors) is approximately **USD 90–100 billion**, of which Linde captures the ~$34 bn of FY25 revenue, implying **SOM (current served share) of ~35%**. This is the highest market share of any single company in any of the eight industrial sub-segments tracked above, and it is the structural reason Linde commands a 34× P/E vs. the broader chemicals peer group at ~15×.
+
+**TAM segmentation and growth trajectory (2025E → 2030E):**
+
+| Sub-segment | 2025 TAM ($ bn) | 2030E TAM ($ bn) | Implied 2025–30 CAGR | Linde 2025 share | Linde 2030 share opportunity |
+|---|---|---|---|---|---|
+| Atmospheric on-site tonnage | ~25 | ~35 | ~7% | ~38% | ~40% (gain from clean-H₂ co-location) |
+| Atmospheric merchant | ~30 | ~35 | ~3% | ~33% | ~33–34% (stable) |
+| Packaged / cylinders | ~35 | ~38 | ~2% | ~30% | ~29% (modest US share loss to Messer regional) |
+| Specialty / electronic gases | ~10 | ~16 | ~10% | ~25% | ~28% (TSMC AZ, Samsung TX ramp) |
+| Helium | ~6 | ~7 | ~3% (cyclical) | ~30% | ~30% |
+| Clean H₂ (commercial) | ~5 | ~35 | ~30%+ | ~20% (early innings) | ~22–25% (depends on FID conversion) |
+| Healthcare gases | ~10 | ~13 | ~5% | ~25% (US heavy) | ~25% |
+| **Total addressable** | **~120** | **~180** | **~8%** | **~28% (group)** | **~28–30%** |
+
+*Source: analyst-constructed table. Methodology: 2025 baseline sized from sum of disclosed peer revenues + estimated private / regional residuals; 2030E projection applies sub-segment CAGRs from the Nomura "Greater China Semi 2026–30F" report ([reports/sector/半导体材料.md](../../sector/半导体材料.md)) for specialty / electronics, IRA-implied curves for clean H₂, and historic regression-based GDP + spread for atmospheric / merchant / packaged.*
+
+**The single biggest TAM expansion lever is clean hydrogen.** Industry estimates for the global clean-hydrogen market by 2030 range from $30 bn (conservative — slow IRA / EU Hydrogen Bank rollout) to $80+ bn (Hydrogen Council aggressive case). The Hydrogen Council itself — of which Sanjiv Lamba was Co-Chair — has published cumulative clean-H₂ capex announcements of **USD 320+ bn globally** through 2030 ([Hydrogen Council — Hydrogen Insights 2024](https://hydrogencouncil.com/en/hydrogen-insights-2024-2/)). The fraction that converts to commissioned, revenue-generating projects depends heavily on (a) IRA 45V Treasury implementation guidance (resolved 2025), (b) European Hydrogen Bank auction outcomes, (c) customer offtake price acceptance, and (d) electrolyser / SMR cost trajectories. Linde's positioning — anchored by Beaumont, with EPC / supply leadership and the Engineering segment's design IP — captures a disproportionate share of FID conversions when they happen.
+
+**The second biggest lever is electronics.** TSMC alone is expected to invest **~USD 70 bn in 2027F capex** at the 1.6 nm node per Nomura ([reports/sector/半导体材料.md](../../sector/半导体材料.md)), with peer Korean (Samsung, SK Hynix) and US (Intel, Micron, GF, TI) capex flowing through to bulk-gas and specialty-gas demand. The fab-build-out cycle is a **multi-year capacity expansion** (Arizona, Taylor TX, Ohio, Dresden, Japan); each new fab anchors a 15-year on-site gas contract for Linde.
+
+**Penetration strategy.** Linde's playbook for share gain has three repeatable plays:
+
+1. **Anchor-customer wins that bring pipeline density** — winning the TSMC Arizona or Samsung Taylor contract not only delivers that customer's tonnage but also creates a regional ASU + cylinder-filling base that lets Linde compete more economically for surrounding merchant / packaged business.
+2. **Engineering-led integrated proposals** — combining Linde Engineering's EPC capability with Linde's gas-supply business lets the company offer "design + build + operate" deals competitors without an EPC arm cannot match.
+3. **Clean-energy first-mover positioning** — winning the early blue-H₂ projects (Beaumont, OCI / Woodside, Dow Path-2-Zero) establishes operating reference plants that improve odds of winning Stage 2 / Stage 3 expansion contracts.
+
+The combination is why Linde's revenue is forecast to grow at **GDP + 4–5 ppt** through 2030 rather than the industry's underlying GDP + 2–3 ppt — disproportionate share gain at the higher-growth electronics and clean-H₂ ends of the spectrum offsets modest share loss at the slower-growth packaged / regional Chinese ends.
+
