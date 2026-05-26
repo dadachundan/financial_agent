@@ -375,3 +375,43 @@ quadrantChart
 *图 8：300mm 硅片五巨头估值对比 (2026-05-25)。GWC TTM P/E 44.3× 显著高于 Shin-Etsu (30×)、SUMCO 与 Siltronic 处于亏损 N.M.。SK Siltron 未上市无市场估值。Sources: [Yahoo Finance 6488.TWO](https://finance.yahoo.com/quote/6488.TWO/key-statistics/)，[Stockanalysis.com 4063 信越化学](https://stockanalysis.com/quote/tyo/4063/)，[SUMCO 2025-02 法说会演示](https://www.sumcosi.com/english/ir/library/result/)，[Siltronic 2024 年报投资人简报](https://www.siltronic.com/en/investors/financial-publications.html)。*
 
 *分析师观点：* GWC TTM P/E 44× 远高于 Shin-Etsu 30×，这种「估值倒挂」反映三件事：(a) 市场已经把 GWC 定价为「最具弹性的周期复苏标的」(轻仓 Shin-Etsu / 重仓 GWC 在 2026 进入周期上行更有 leverage)；(b) Shin-Etsu 多元业务 (光阻 + 硅料) 平滑了周期 P/E，反观 GWC 是纯硅片厂、底部估值会反映周期 trough；(c) BPD / HBM 单 die 用硅量翻倍的 ASP 弹性如果释放，GWC 这种 12 寸高占比厂会被首先受益。**风险**：如果 BPD 推迟到 2028 后或中国国产化突破，GWC 这种「估值倒挂」会先于 Shin-Etsu 被市场修正——这是野村 TP TWD 850 估值的关键脆弱点 (详见 §9.6)。
+
+## 8. 市场机会
+
+### 8.1 TAM / SAM / SOM 拆解 (2025-30F)
+
+**TAM (Total Addressable Market) — 半导体硅晶圆整体市场：** 2025 全球硅片销售约 USD 13-14 bn (覆盖 75-300mm 全尺寸 + epi / annealed / SOI / FZ / 化合物代工)；按 wafer area 计约 12,500-13,000 MSI ([SEMI Silicon Wafer 出货统计 2025](https://www.semi.org/en/products-services/market-data/silicon-shipment-statistics))。野村模型预测 2030F 硅片整体市场达 **USD 22-24 bn**，CAGR 2025-30F ~10% ([野村 2026-05-21, p. 18-20 半导体材料市场拆分](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))；SEMI 自己的口径偏保守，预测 2030F USD 18-20 bn (CAGR ~7%)，差异主要来自 BPD 推进时点的不同假设 ([SEMI Materials Market Forecast 2025-30, 2025-Q4 update](https://www.semi.org/en/products-services/market-data/materials-market))。
+
+**SAM (Serviceable Addressable Market) — 环球晶能服务的 300mm 子市场：** 2025 全球 300mm 销售约 USD 9-10 bn；2030F ~USD 16-18 bn (CAGR ~10-12%)。300mm 占整体硅片销售比例预计从 2025 ~70% 升至 2030 ~80%——300mm 增长快于 200mm / 150mm。这个 SAM 是 GWC 的主战场，也是 BPD / HBM / WoW / SOI 四个增量需求叠加的承载 ([Mordor Intelligence 300mm Silicon Wafer Market Report 2025-30F](https://www.mordorintelligence.com/industry-reports/silicon-wafer-market))，([Fortune Business Insights 300mm Wafer Market 2030F](https://www.fortunebusinessinsights.com/silicon-wafer-market-104108))。
+
+**SOM (Serviceable Obtainable Market) — 环球晶可获得份额：** GWC 当前 ~17% 300mm 份额；野村测算 2028F 份额可达 **20-22%** (Sherman 厂一期 + 二期合计贡献 ~3-4pp，意大利 Novara + 韩国 Cheonan 扩产贡献 ~1-2pp)；2030F 假设份额维持在 22%——对应 SOM 营收 **~USD 3.6-4.0 bn** (vs FY2025 营收 USD 1.94 bn)，潜在营收倍数 ~2× ([野村 2026-05-21, p. 16-17 GWC 份额假设](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。但 SOM 实现的前提：(a) 客户验证 Sherman 厂良率达 commercial-grade；(b) 中国国产 12 寸良率 2027 前不达 commercial；(c) BPD / HBM ASP 弹性按野村假设释放。
+
+### 8.2 Sherman, Texas 新厂——SOM 最大单一增量
+
+Sherman 厂是 GWC 未来 5 年最重要的份额来源——也是估值最大的「期权价值」。**项目结构**：USD 7.5 bn 总投资 (一期 USD 3.5 bn + 二期 USD 4 bn)，6 期完成后月产 1.2 mn 片 12 寸 polished + epi；占地 1,300 亩 ([Evertiq, 2025-05-21 Sherman 启用 + 二期公告](https://evertiq.com/design/2025-05-21-globalwafers-opens-texas-wafer-plant-announces-major-expansionr))。**补贴堆叠**：USD 406 mn CHIPS Act 直接补贴 + estimated USD 350-450 mn ITC + Texas 州本级税收减免 + 地方电力 / 水务 / 道路补贴 ~USD 100 mn——综合补贴比例 ~13-15% 总 capex，是台资硅片厂在美最高补贴率 ([CHIPS Act 公告, 2024-12-17](https://www.sas-globalwafers.com/en/gwc_news_en_20241217/))，([Reuters Sherman CHIPS Act 详情, 2024-12-17](https://www.reuters.com/business/globalwafers-receive-up-406-million-us-chips-act-funding-2024-12-17/))。**客户**：Sherman 一期 2026 量产 ramp，初期供 Intel Ohio Fab + Samsung Taylor Fab + TSMC Arizona Fab 21 三家美国本土 12 寸 fab；徐秀蘭 2025-05 Sherman 开幕仪式公开表态「Sherman 是 GWC 在 Trump 关税框架下最关键的 hedge」 ([Connect CRE Sherman 启用专访, 2025-05-15](https://www.connectcre.com/stories/4b-sherman-chip-fab-starts-production/))。
+
+**Sherman 营收贡献预测**：一期满产后年产能 ~6 mn 片 12 寸；按 ASP USD 130/片 + 1.0 个客户 mix (premium epi 比重高) 测算，年营收 ~USD 0.78 bn；6 期全部完成后年产能 ~14.4 mn 片，对应年营收 ~USD 1.9-2.2 bn——单 Sherman 一处就接近 GWC FY2025 全公司营收水平 ([Tom's Hardware GWC Sherman 投资分析, 2022-06](https://www.tomshardware.com/news/wafer-maker-to-invest-dollar5-billion-in-the-us-to-serve-intel-samsung-tsmc))。Sherman 增量是 GWC SOM 实现 USD 3.6-4.0 bn 的最大单一驱动。
+
+### 8.3 BPD + wafer-bonded NAND + photonic SOI 三条独立增量
+
+野村 Buy 论点的核心是「BPD + wafer-bonded NAND + photonic SOI 三个 incremental wafer demand 是独立的、非传统的、不被市场充分定价」 ([野村 2026-05-21, p. 6-12 关键技术深入](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。三条增量的硅片需求拉动测算：
+
+1. **BPD (Backside Power Delivery)**：每个 die 用硅量从 1 片增至 2 片 (前面 + 背面)，加上 ~0.5 片 reclaim 用于 thinning 工艺过程的损耗。野村测算 BPD 在 2027F 贡献 ~5% 全球 300mm 需求增量、2028F ~10%、2030F ~18% ([野村 2026-05-21, p. 6-9 BPD 用硅量测算](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。TSMC A16 / Intel 18A / Samsung 2nm 都已确认 BPD 路线图 ([Anandtech TSMC A16 + BPD 解析, 2025-04](https://www.anandtech.com/show/21399/tsmc-a16-process-node-deep-dive))，([Tom's Hardware Intel 18A BPD 解析, 2024-09](https://www.tomshardware.com/pc-components/cpus/intel-details-18a-process-with-backside-power-delivery))。
+2. **Wafer-bonded NAND (Xtacking)**：YMTC Xtacking 3.0 + Samsung V-NAND 2.0 + Micron 4th-gen NAND 全部走 wafer-bond 路线——存储 cell + 外设逻辑分两片 wafer，单 die 用硅量 2×。野村测算 2028F wafer-bonded NAND 贡献 ~3-4% 全球 NAND wafer 需求 ([Samsung Semiconductor V-NAND 演变路线图](https://semiconductor.samsung.com/news-events/tech-blog/))，([TrendForce NAND wafer-bonded 报告, 2025-Q4](https://www.trendforce.com/research/dram-memory-market))。
+3. **Photonic SOI**：1.6T / 3.2T 光模块 + CPO (Co-Packaged Optics) 用 photonic SOI；2025 市场 ~USD 0.5 bn，2030F ~USD 1.5 bn (CAGR ~25%) ([Yole Group Photonic SOI Market 2030F 报告概要, 2025-Q3](https://www.yolegroup.com/strategy-insights/photonics/))。Soitec 占其中 ~80%，GWC 仅 ~10% 份额；但 photonic SOI 技术下沉到 BESOI 工艺后 GWC 有产能可扩——2027-30 增量空间 ~USD 100 mn。
+
+### 8.4 估值锚——野村 TP TWD 850 推导
+
+野村 2026-05-21 升级报告把 GWC TP 从 TWD 480 翻倍至 **TWD 850**，估值方法切换：从「P/E 25× × FY2025E EPS NT$20」(原方法) 改为「**P/B 3.2× × FY2028F BVPS NT$262**」(新方法) ([野村 2026-05-21, p. 15-17 估值推导](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。BVPS NT$262 推导：FY2025 BVPS NT$272 → FY2026E 配息 NT$7.7 + ROE ~8% 增加 NT$22 = NT$286；FY2027F 配息 NT$10 + ROE ~12% 增加 NT$34 = NT$310；FY2028F 配息 NT$12 + ROE ~15% 增加 NT$47 = NT$345——但野村对 BPD 商业化时点假设保守，对 BVPS 增长打了 ~15% discount，最终落到 NT$262。
+
+**P/B 3.2× 的对标**：2017-18 上一轮硅片周期峰值，GWC P/B 高点 2.2-2.4×、Shin-Etsu 2.5-2.8×、SUMCO 1.8-2.0×。野村给 3.2× 的论据是「BPD 工艺让单 die 用硅量翻倍，整个硅片行业进入 structural rerating，不是简单周期顶」——这是估值翻倍的核心理论支柱。
+
+### 8.5 三档情景测算
+
+**Base case (野村基准、概率 50%)**：BPD 工艺 2026-27 顺利商业化 + AI capex 持续 + 中国国产化 2028 后才达 commercial。GWC 2028F 营收 USD 3.2-3.5 bn、净利 USD 700-800 mn、BVPS NT$262、P/B 3.2× → TP **TWD 850**，对应 1 年 forward upside ~3%（当前已接近 TP）。
+
+**Bull case (概率 25%)**：BPD + HBM4 + WoW + photonic SOI 全部加速；TSMC A14 + Intel 14A 也用 BPD；GWC 2028F 营收 USD 4 bn+、净利 USD 1 bn+、BVPS NT$320+、P/B 3.5× → TP **TWD 1,100+**。
+
+**Bear case (概率 25%)**：BPD 推迟到 2028 后 + AI capex 退潮 + 中国国产 12 寸良率 2027 前突破。GWC 2028F 营收 USD 2.3-2.5 bn、净利 USD 400-450 mn、BVPS NT$240、P/B 2.0× → TP **TWD 480** (回到野村原 TP)。Bear 概率不低，因为 BPD 工艺历史上 (3D NAND / EUV / GAA) 都比 fab 路线图推迟 6-12 个月。
+
+*分析师观点：* 当前股价 TWD 822 已经把 base case 的 90%+ 走完，留给「BPD 商业化兑现」的 upside 仅 +3-5%。所以现在买 GWC 实质上是押 bull case (BPD 加速 + 涨幅 ~30%) 对赌 bear case (回落 ~40%)——是 「3:4」赔率的非对称下注。野村 Buy 评级的合理性建立在 BPD 在 2027 之前确定商业化、且其它三条增量 (HBM / WoW / SOI) 也按时释放的多元前提之上。投资人需要自己判断这个前提的可信度。
