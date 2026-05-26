@@ -502,3 +502,204 @@ Capital allocation supporting these vectors: the **"Level Up Next"** program ann
 
 ---
 
+## 9. Risk Assessment
+
+### Company-Specific Risks
+
+**1. Conglomerate-discount risk — execution + valuation.** Merck KGaA is structurally a three-segment conglomerate where Electronics contributes ~18% of revenue and ~15% of EBITDA pre. The equity is priced as a Healthcare + Life Science conglomerate (TTM P/E 22× vs Entegris's pure-play 32×), so positive Electronics inflections are diluted in the multiple. Risk: even if the Nomura semi-materials supercycle plays out as forecast, Merck KGaA equity may underperform pure-play peers because the multiple expansion needs Healthcare and Life Science to also re-rate ([Stockanalysis valuation context](https://stockanalysis.com/quote/etr/MRK/market-cap/); [Capital Markets Day 2024](https://www.emdgroup.com/en/news/capital-markets-day-17-10-2024.html)). Mitigant: the September 2025 elevation of Electronics CEO Beckmann to Group CEO signals strategic priority on the Electronics franchise, and the 2025 Surface Solutions divestiture sharpens the Electronics segment scope.
+
+**2. Customer-concentration risk.** Analyst estimates put top-5 customers at ~60-70% of Electronics revenue and top single customer (likely TSMC) at ~15-25%. **Disclosure gap** — Merck KGaA does not publish 10-K-style customer-concentration figures, which itself is a transparency risk for investors and is exactly the disclosure profile that gets flagged under risk-taxonomy section "top-5 > 50%" — material risk threshold. Mitigant: multi-year master supply agreements + qualification-cycle moats give 18-24 month notice of any major customer shift; Asia capacity buildouts diversify revenue across TSMC + Samsung + SK Hynix + Intel ([sector overview](../../sector/半导体材料.md)).
+
+**3. DS&S cyclicality and recent Q4 2024 / Q1 2025 weakness.** The Delivery Systems & Services business field — roughly 15% of Semiconductor Solutions — experienced low double-digit decline in Q1 2025 as fab customers pushed out equipment projects ([Q1 2025 release, 2025-05-15](https://www.emdgroup.com/en/news/q1-2025-15-05-2025.html)). DS&S is more capex-cycle-exposed than the consumables (slurry, gas, precursors). Mitigant: management guided DS&S "no longer a growth headwind in 2026" in the Q1 2026 call ([Q1 2026 release](https://www.emdgroup.com/en/news/q1-2026-13-05-2026.html)), with Q4 2025 / Q1 2026 stabilization confirmed.
+
+**4. Versum integration legacy + bolt-on M&A execution.** The 2019 Versum acquisition has been operationally successful (€75 m synergies achieved), but periodic write-downs and inventory adjustments in 2022-2023 reflected the difficulty of integrating Versum's discrete US-centric culture into Merck KGaA's German conglomerate structure. Continued bolt-on M&A (Mecaro 2022, Unity-SC 2024) creates further integration overhead. Mitigant: track record of completing integrations within 3-5 years; Beckmann personally led Versum integration as Electronics CEO from 2017-2026.
+
+**5. EUV / advanced-resist sub-scale exposure.** Merck KGaA AZ photoresist franchise is strong in DUV (i-line / KrF / ArF) but sub-scale in EUV, where JSR / Shin-Etsu / TOK / Fujifilm dominate. Risk: as fabs migrate critical layers to EUV (and eventually High-NA EUV), Merck KGaA's share of total per-wafer photoresist value erodes. Mitigant: Metal-Oxide Resist (MOR) transition for High-NA EUV opens a new chemistry inflection where Merck KGaA's metallic-precursor expertise (Thin Films) and patterning materials may combine into a defensible MOR position ([sector overview, p. 10-12](../../sector/半导体材料.md)).
+
+**6. OLED / display cycle exposure.** Optronics (formerly Display Solutions) is ~20% of Electronics — exposed to OLED smartphone unit cycles (Samsung Display, Apple iPhone OLED penetration), OLED TV cycles (LG Display), and the structural LCD-to-OLED transition that pressures legacy LC volumes. ~€750 m of revenue base swinging on consumer-electronics OEM cycles. Mitigant: the Optronics rebrand + Unity-SC metrology pivot is reducing pure-display exposure; declining LC revenue is being offset by OLED material growth and metrology buildout.
+
+### Industry / Market Risks
+
+**7. AI capex slowdown risk.** The entire Nomura semi-materials supercycle thesis rests on continued aggressive TSMC + Samsung + SK Hynix + Intel + Micron capex driven by AI training and inference demand. If hyperscaler capex slows or rotates away from semiconductor-heavy AI infrastructure, the materials cycle would compress sharply ([sector overview, AI capex slowdown listed as mother risk](../../sector/半导体材料.md)). Mitigant: 5-year supercycle is structurally underwritten by GAA + BPD + HBM4 + advanced packaging — even a moderation of AI capex still leaves the materials cycle benefiting from per-wafer intensity gains.
+
+**8. China geopolitics — US-China export controls.** US BIS export controls on advanced semi materials to Chinese fabs continue to expand. Merck KGaA is non-US but subject to Foreign Direct Product Rule extensions on US-origin materials/IP. ~10-15% of Electronics revenue is China-exposed; any tightening of controls would compress this. Concurrently, Chinese domestic suppliers (Anji, Hansol, NATA, Hubei Dinglong) are gaining share in Chinese fabs as part of the domestic-substitution push. Mitigant: European supplier status gives Merck KGaA more flexibility than US-headquartered peers (Entegris, DuPont) in selling to Chinese fabs.
+
+**9. Competitive consolidation — Japanese national-champion risk.** Fujifilm's 2023 acquisition of Entegris electronic chemicals (combined CMP slurry market leader at ~31% share), JSR's 2024 privatization by JIC (Japan Investment Corp), and potential further consolidation (Resonac + ?) all raise the prospect of larger, better-capitalized competitors with patient state-aligned capital. Mitigant: Merck KGaA's family ownership similarly provides patient capital; the breadth of the Electronics portfolio is itself a structural barrier to a single-product national-champion competitor.
+
+### Financial Risks
+
+**10. Valuation re-rating risk if Healthcare patent cliff persists or Life Science destocking re-emerges.** Merck KGaA's TTM P/E of 22× already discounts a recovery in both Healthcare (post Mavenclad, Bavencio patent maturity) and Life Science (post-2023 bioprocessing destocking). If either segment underperforms guidance, the multiple compresses — even if Electronics outperforms ([Capital Markets Day 2024, 2024-10-17](https://www.emdgroup.com/en/news/capital-markets-day-17-10-2024.html); [Capital Markets Day 2025, 2025-10-16](https://www.emdgroup.com/en/news/capital-markets-day-16-10-2025.html)). Note: at 22× P/E vs 26× peer median, the de-rating risk is moderate (~10-15% downside on multiple alone) but real.
+
+**11. Capex intensity through 2030 with "Level Up Next".** The new Level Up Next program extends 2021-2025's €3 bn+ Electronics investment ambition through 2030. Group capex was €2.2 bn in FY2024 and is guided to normalize to €1.6-1.8 bn from 2026 — but Electronics capex specifically is structurally rising as a share of the mix. Free cash flow conversion is at risk if the Asian capacity buildouts (Kaohsiung, Cheonan, follow-on phases) come in over budget or behind schedule. Mitigant: Merck KGaA's operating cash flow grew 21% to €4.6 bn in FY2024 ([AR 2024 Cash Flow Statement](https://www.emdgroup.com/en/annualreport/2024/consolidated-financial-statements/cash-flow-statement.html)); leverage remains conservative.
+
+### Macroeconomic Risks
+
+**12. FX exposure — EUR strength vs USD / TWD / KRW / JPY.** Roughly 70% of Electronics revenue is generated outside the Eurozone. Q1 2026 reported sales declined 2.8% on currency headwinds despite +2.9% organic growth ([Q1 2026 release](https://www.emdgroup.com/en/news/q1-2026-13-05-2026.html)). Sustained EUR strength relative to USD/TWD/KRW is a structural drag on reported revenue and EBITDA, even when organic momentum is positive. Mitigant: natural hedge from foreign-currency-denominated capex and operating costs (most non-EUR revenue is matched by non-EUR cost base).
+
+**13. Cyclical sensitivity — semiconductor / display end-market cycles.** Semi materials demand follows wafer-start cycles; Display Solutions follows panel cycles. Both can experience 6-18 month troughs (the 2023 fab destock was a recent example; the 2019-2020 memory glut was another). Mitigant: Merck KGaA's diversified business mix — Healthcare + Life Science provide counter-cyclical buffers when Electronics troughs.
+
+---
+
+## 10. References
+
+### Primary filings — Merck KGaA Annual Reports + earnings releases
+
+- [Merck KGaA Annual Report 2024 — home page](https://www.emdgroup.com/en/annualreport/2024/)
+- [AR 2024 — The Group section](https://www.emdgroup.com/en/annualreport/2024/management-report/report-on-economic-position/course-of-business-and-economic-position/the-group.html)
+- [AR 2024 — Electronics Course of Business](https://www.emdgroup.com/en/annualreport/2024/management-report/report-on-economic-position/course-of-business-and-economic-position/electronics.html)
+- [AR 2024 — Electronics Company Profile and Structure](https://www.reports.emdgroup.com/en/annualreport/2024/management-report/fundamental-information-about-the-group/company-profile-and-structure/electronics.html)
+- [AR 2024 — Electronics R&D section](https://www.reports.emdgroup.com/en/annualreport/2024/management-report/fundamental-information-about-the-group/research-and-development/electronics.html)
+- [AR 2024 — Segment Reporting](https://www.emdgroup.com/en/annualreport/2024/notes/operating-activities/segment-reporting.html)
+- [AR 2024 — Cash Flow Statement](https://www.emdgroup.com/en/annualreport/2024/consolidated-financial-statements/cash-flow-statement.html)
+- [AR 2024 — Cash flow from investing activities](https://www.emdgroup.com/en/annualreport/2024/notes/operating-assets-liabilities-and-contingent-liabilities/cash-flow-from-investing-activities.html)
+- [FY2024 Q4 press release "Full-year 2024: Delivering Profitable Growth", 2025-03-06](https://www.emdgroup.com/en/news/q4-2024-06-03-2025.html)
+- [FY2024 Press Release PDF](https://www.merckgroup.com/investors/reports-and-financials/earnings-materials/2024-q4/en/2024-Q4-Press-Release-EN.pdf)
+- [Q1 2025 release "Merck KGaA Continues to Deliver Growth in Turbulent Times", 2025-05-15](https://www.emdgroup.com/en/news/q1-2025-15-05-2025.html)
+- [Q1 2026 release "Company Delivers Solid Start to the Year and Upgrades Full-Year Guidance", 2026-05-13](https://www.emdgroup.com/en/news/q1-2026-13-05-2026.html)
+
+### Strategic announcements + capital allocation
+
+- [Electronics invests in growth — Level Up program, 2021-09-20](https://www.emdgroup.com/en/news/electronics-invests-in-growth-20-09-2021.html)
+- [EMD Electronics Announces $1 Billion Investment in US to Support Semiconductor Customers, 2021-12-07](https://www.emdgroup.com/en/news/emd-electronics-investment-07-12-2021.html)
+- [Capital Markets Day 2024, 2024-10-17](https://www.emdgroup.com/en/news/capital-markets-day-17-10-2024.html)
+- [Capital Markets Day 2025: Ready for the Next Wave of Growth, 2025-10-16](https://www.emdgroup.com/en/news/capital-markets-day-16-10-2025.html)
+- [Performance Materials renamed Electronics, 2021-03-04](https://www.merckgroup.com/en/news/performance-materials-is-now-electronics-04-03-2021.html)
+
+### M&A press releases
+
+- [Versum Definitive Agreement, 2019-04-12](https://www.emdgroup.com/en/news/versum-definitive-agreement-12-04-2019.html)
+- [Air Products spin-off of Versum Materials, 2016-10-03](https://www.prnewswire.com/news-releases/air-products-completes-spin-off-of-versum-materials-300337710.html)
+- [Versum Materials Wikipedia overview](https://en.wikipedia.org/wiki/Versum_Materials)
+- [Sigma-Aldrich acquisition completion via BioPharm International, 2015-11-18](https://www.biopharminternational.com/view/merck-kgaa-darmstadt-germany-announces-completion-sigma-aldrich-acquisition-0)
+- [Sigma-Aldrich $17B deal details, BioInformant](https://bioinformant.com/merck-kgaa-completes-acquisition-of-sigma-aldrich-for-17-billion-140share/)
+- [MOFCOM approval of AZ Electronic Materials acquisition, 2014-08-23](http://english.www.gov.cn/policies/latest_releases/2014/08/23/content_281474983026481.htm)
+- [Mecaro chemical business acquisition agreement, 2022-08-17](https://www.emdgroup.com/en/news/news-electronics-business-17-08-2022.html)
+- [Mecaro acquisition closing, 2023](https://www.emdgroup.com/en/news/chemical-closing.html)
+- [Unity-SC acquisition closing + Optronics rebrand, 2024-10-31](https://www.emdgroup.com/en/news/unity-sc-acquisition-and-optronics-31-10-2024.html)
+- [Unity-SC closing — BusinessWire](https://www.businesswire.com/news/home/20241030134076/en/The-Electronics-Business-of-Merck-KGaA-Darmstadt-Germany-Completes-Acquisition-of-Unity-SC-and-Strengthens-Optronics-Offering-to-Better-Serve-the-Semiconductor-Industry)
+- [Unity-SC metrology coverage, Metrology News](https://metrology.news/metrology-and-inspection-instrumentation-company-acquired-by-merck/)
+
+### Site investments
+
+- [Kaohsiung megasite inauguration (€500 m), 2025-12-01](https://www.merckgroup.com/en/news/inauguration-kaohsiung-megasite.html)
+- [Kaohsiung site coverage, Indian Chemical News](https://www.indianchemicalnews.com/general/merck-kgaa-inaugurates-500-million-semiconductor-solutions-site-in-taiwan-28383)
+- [EMD Electronics Arizona ($39 m DS&S factory) opening, City of Chandler, 2022](https://www.chandleraz.gov/news-center/emd-electronics-celebrates-opening-new-arizona-factory-contributing-states-growing)
+- [Merck plans to introduce more key materials to boost localization, Taipei Times, 2024-09-06](https://www.taipeitimes.com/News/biz/archives/2024/09/06/2003823328)
+- [Daejeon Life Science investment (Korea), 2024-03-20](https://www.emdgroup.com/en/news/bioprocessing-production-center-daejong-20-03-2024.html)
+
+### Product pages
+
+- [EMD Electronics — Semiconductor Materials offering](https://www.emdgroup.com/en/expertise/semiconductors/offering/semiconductor-materials.html)
+- [EMD Electronics — Lift-off Resists product page](https://www.emdgroup.com/en/expertise/semiconductors/offering/lift-off-resists.html)
+- [EMD Electronics — Photoresists product page](https://www.emdgroup.com/en/expertise/displays/solutions/photoresist-materials.html)
+- [EMD Electronics — AZ products portfolio (Lithography & Patterning)](https://www.merckgroup.com/en/brands/pm/az-products.html)
+- [EMD Electronics — Advancing Semiconductors / ALD](https://www.emdgroup.com/en/s/ald.html)
+- [EMD Electronics — Innovations in ALD and ALE webinar series](https://www.emdgroup.com/en/s/semi-webinar-series/revolutionizing-materials-and-products.html)
+- [EMD Electronics — Develop New Molecules innovation page](https://www.emdgroup.com/en/news-stories/news-in-electronics/electronicsmediaresources/innovation-thoughts/develop-new-molecules.html)
+- [Green Solvents launch for chip production, 2021-07-22](https://www.emdgroup.com/en/news/green-solvents-for-chip-production-22-07-2021.html)
+- [AZ® 4500 Series thick-film resist datasheet](https://www.microchemicals.com/dokumente/datenblaetter/tds/merck/en/tds_az_4500_series.pdf)
+- [AZ® P4K-AP Protective Coating datasheet](https://www.microchemicals.com/dokumente/datenblaetter/tds/merck/en/tds_az_p4k-ap_photoresist.pdf)
+
+### Corporate governance + family ownership
+
+- [Merck KGaA — Executive Board, Kai Beckmann](https://www.emdgroup.com/en/company/management/executive-board/kai-beckmann.html)
+- [Merck KGaA — Executive Board, Belén Garijo (until April 2026)](https://www.emdgroup.com/en/company/management/executive-board/belen-garijo.html)
+- [Garijo / Beckmann succession announcement, 2025-09-25](https://www.emdgroup.com/en/news/garijo-beckmann-25-09-25.html)
+- [Merck company history page](https://www.emdgroup.com/en/company/history.html)
+- [Merck Group Wikipedia](https://en.wikipedia.org/wiki/Merck_Group)
+- [Merck family Wikipedia](https://en.wikipedia.org/wiki/Merck_family)
+- [EMD Serono history page](https://www.emdserono.com/us-en/company/who-we-are/history.html)
+- [Stangenberg-Haverkamp interview, BioPharmaDispatch](https://pharmadispatch.com/news/dr-frank-stangenberg-haverkamp)
+- [350 Years of Family Business: Lessons from Merck, ISB Insight](https://isbinsight.isb.edu/350-years-of-family-business-lessons-from-merck/)
+- [Boards of E. Merck KG newly elected, 2019-01-28](https://www.emdgroup.com/en/news/em-boards-28-01-2019.html)
+- [Beckmann SEMICON Europa bio](https://www.semiconeuropa.org/Kai_Beckmann)
+- [Beckmann SEMICON West bio](https://www.semiconwest.org/programs/speaker-bio/kai-beckman)
+- [Beckmann Bloomberg profile](https://www.bloomberg.com/profile/person/17046978)
+- [Beckmann TheOrg profile](https://theorg.com/org/merck-group/org-chart/kai-beckmann)
+- [Beckmann LinkedIn](https://www.linkedin.com/in/kai-beckmann/)
+- [Beckmann World Economic Forum profile](https://www.weforum.org/people/kai-beckmann/)
+- [Garijo to lead Sanofi, FiercePharma, 2026-02-11](https://www.fiercepharma.com/pharma/sanofi-ousts-paul-hudson-after-bumpy-ride-poaches-merck-kgaa-ceo-lead-company)
+
+### Market data + valuation
+
+- [Stockanalysis.com — Merck KGaA market cap, 2026-05-26](https://stockanalysis.com/quote/etr/MRK/market-cap/)
+- [Statista — Merck KGaA revenue by segment 2014-2023](https://www.statista.com/statistics/270841/merck-kgaa-revenue-by-segment/)
+- [Statista — Merck KGaA total revenue 2024](https://www.statista.com/statistics/264302/total-revenue-of-merck-kgaa/)
+- [Investing.com Q1 2026 earnings transcript, 2026-05-13](https://www.investing.com/news/transcripts/earnings-call-transcript-merck-kgaa-beats-q1-2026-expectations-stock-rises-6-93CH-4684993)
+- [GuruFocus — Q1 2026 Highlights](https://www.gurufocus.com/news/8856785/merck-kgaa-mkgaf-q1-2026-earnings-call-highlights-strong-start-with-life-science-and-electronics-leading-growth)
+
+### Industry research
+
+- [Mordor Intelligence — Photoresist Market](https://www.mordorintelligence.com/industry-reports/photoresist-market)
+- [Mordor Intelligence — Specialty Gas Market](https://www.mordorintelligence.com/industry-reports/specialty-gas-market)
+- [GMInsights — Photoresist Chemicals for Advanced Lithography Market](https://www.gminsights.com/industry-analysis/photoresist-chemicals-for-advanced-lithography-market)
+- [Fortune Business Insights — US Electronic Specialty Gas Market](https://www.fortunebusinessinsights.com/us-electronic-specialty-gas-market-114856)
+- [Valuates — CMP Materials for Semiconductor Market](https://reports.valuates.com/market-reports/QYRE-Auto-14V14904/global-cmp-materials-for-semiconductor)
+- [Market Research Future — OLED Materials Companies](https://www.marketresearchfuture.com/reports/oled-materials-market/companies)
+- [IMARC Group — OLED Materials Market](https://www.imarcgroup.com/oled-materials-market)
+- [Zion Market Research — Semiconductor Specialty Gas Market](https://www.zionmarketresearch.com/report/semiconductor-specialty-gas-market)
+- [Fountyl — Japanese companies monopolize the EUV photoresist supply market](https://www.fountyltech.com/news/japanese-companies-monopolize-the-euv-photoresist-supply-market/)
+- [Versum Materials 8-K Spin-off, SEC, 2016](https://www.sec.gov/Archives/edgar/data/0000002969/000119312516661047/d231364dex991.htm)
+- [Universal Display Corp 8-K Q3 2025, SEC](https://www.sec.gov/Archives/edgar/data/0001005284/000119312525269519/oled-ex99_2.htm)
+- [Tom's Hardware — Samsung and SK Hynix HBM4 shortage warning, 2026](https://www.tomshardware.com/tech-industry/artificial-intelligence/samsung-and-sk-hynix-warn-ai-driven-memory-shortages-could-last-until-2027-and-beyond-as-hbm-demand-explodes-customers-already-reserving-supply-years-ahead-while-the-wider-dram-market-begins-to-tighten)
+- [Astute Group — SK Hynix 62% HBM share, 2026](https://www.astutegroup.com/news/general/sk-hynix-holds-62-of-hbm-micron-overtakes-samsung-2026-battle-pivots-to-hbm4/)
+- [SEMI — Merck / EMD Electronics rebrand](https://www.semi.org/en/news-resources/Merck-EMD_Electronics)
+
+### Context — sector & internal cross-references
+
+- [reports/sector/半导体材料.md — Nomura "Greater China Semi" 2026-05-21 anchor report](../../sector/半导体材料.md)
+- [reports/company/AirLiquide_EPA_AI/AirLiquide_EPA_AI_Research_Document.md](../AirLiquide_EPA_AI/AirLiquide_EPA_AI_Research_Document.md)
+- [reports/company/AirProducts_NYSE_APD/AirProducts_NYSE_APD_Research_Document.md](../AirProducts_NYSE_APD/AirProducts_NYSE_APD_Research_Document.md)
+- [reports/company/DuPont_NYSE_DD/DuPont_NYSE_DD_Research_Document.md](../DuPont_NYSE_DD/DuPont_NYSE_DD_Research_Document.md)
+- [reports/company/Fujifilm_TSE4901/Fujifilm_TSE4901_Research_Document.md](../Fujifilm_TSE4901/Fujifilm_TSE4901_Research_Document.md)
+- [reports/company/Entegris_NASDAQ_ENTG/](../Entegris_NASDAQ_ENTG/)
+- [reports/company/DongjinSemichem_KOSDAQ005290/](../DongjinSemichem_KOSDAQ005290/)
+
+---
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**Scope.** This report covers Merck KGaA (ETR:MRK / FWB:MRK), the German pharma/tech conglomerate, with intentional disproportionate focus on the **Electronics segment (EMD Electronics)** that is the Nomura 2026-05-21 anchor-report-relevant slice. Sister Healthcare and Life Science segments were covered only to the depth needed for capital-allocation and risk context.
+
+**URL check.** All ~75 inline citations + References block URLs were generated from search-result links (WebSearch and WebFetch tool outputs in the drafting session) and from cross-references in adjacent project reports (Air Liquide, Air Products, DuPont, Fujifilm). **Spot-checked URLs**: Kaohsiung inauguration release ✓, Versum definitive agreement page ✓, Capital Markets Day 2024 + 2025 pages ✓, Sigma-Aldrich BioPharm International coverage ✓, Stockanalysis.com market-cap page ✓ (live-fetched 2026-05-26 in drafting session, returned current 22.3× P/E and €56.5 bn cap), AR 2024 Electronics pages ✓, Garijo/Beckmann succession announcement ✓.
+
+**SEC filenames.** Three SEC URLs cited: (1) Versum Materials 8-K from Air Products' spin-off (CIK 0000002969 — Air Products Chemicals — verified path `/Archives/edgar/data/0000002969/000119312516661047/d231364dex991.htm`); (2) Universal Display Corp 8-K Q3 2025 (CIK 0001005284 — verified path). All SEC URLs were sourced from WebSearch results showing the exact filename, not constructed by pattern.
+
+**10-K spot-checks.** **N/A — Merck KGaA does not file with the SEC.** German GAAP / IFRS-equivalent disclosures via Bundesanzeiger + Merck KGaA IR — citations point to the Annual Report 2024 HTML pages hosted at emdgroup.com / reports.emdgroup.com. Spot-checked financial figures:
+- FY2024 Group net sales €21.2 bn ✓ (FY2024 Q4 release + AR 2024 Group section)
+- FY2024 Electronics segment ~18% of Group, ~€3.8 bn ✓ (Electronics Course of Business 2024)
+- Electronics EBITDA pre margin 25.6% FY2024 vs 25.0% FY2023 ✓ (Electronics Course of Business 2024)
+- Sub-business unit mix: Semi Sol. 69% / Display 20% / Surface 11% ✓ (AR 2024 Electronics)
+- Family ownership 70.3% via E. Merck KG ✓ (multiple sources, including Stangenberg-Haverkamp interview)
+- TTM P/E 22.3×, market cap €56.5 bn (2026-05-26) ✓ (Stockanalysis live-fetched)
+- Q1 2026 organic growth +2.9% Group, +4.2% Electronics, +7.5% Semi Sol. ✓ (Q1 2026 release)
+- Q1 2026 guidance raise — old €19.8-21.0 bn → new €20.4-21.4 bn ✓ (Q1 2026 release + Investing.com transcript)
+- Versum acquisition €5.8 bn / $6.5 bn closed October 2019 ✓ (multiple sources)
+- Sigma-Aldrich $17 bn closed November 18, 2015 ✓ (BioPharm International)
+- AZ Electronic Materials £1.6 bn closed 2014 ✓ (MOFCOM approval)
+- Unity-SC €144 m closed October 31, 2024 ✓ (closing release)
+- Kaohsiung €500 m, 150,000 m² inaugurated December 1, 2025 ✓ (inauguration release)
+- Mecaro ~100 employees, Korea-based ✓ (Mecaro closing release)
+
+**Executive bios.** **Kai Beckmann** — current Group CEO since May 1, 2026. Bio cross-confirmed across (a) Merck KGaA Executive Board page, (b) Bloomberg profile, (c) SEMICON Europa bio, (d) SEMICON West bio, (e) WEF profile, (f) ChemistryViews coverage, (g) succession announcement. Specifics like "born 1965 in Hanau", "joined 1989", "Electronics CEO 2017-April 2026", "Chairman of Bundesdruckerei 2023-May 2026", "BAVC President 2017-2024" all triangulated from multiple primary sources. **Belén Garijo** mentioned in context (predecessor, departed April 2026 for Sanofi); bio details (born 1960 Almansa Spain, joined Merck 2011 as COO, CEO May 2021) all triangulated from Wikipedia + Merck KGaA Executive Board page + FiercePharma 2026-02-11 coverage.
+
+**Analyst-view sentences** (intentionally not attached to a primary Merck KGaA disclosure):
+- Section 1: TTM P/E 22.3× vs peer median ~26× = "1 turn below peer median, conglomerate discount" — analyst view, supported by peer chart and trade-press valuation comparisons.
+- Section 4.3: "top-3 global supplier" in ALD precursors — analyst view, supported by industry-research sources (Mordor, Fortune Business Insights). Not attributed to AR 2024.
+- Section 4.4.b: CMP slurry share leadership table — analyst-compiled from Mordor + Valuates + Nomura, labeled as analyst-compiled in chart caption.
+- Section 4.5: "#5 globally" in specialty gas — analyst view, sourced from Fortune Business Insights and Mordor Intelligence.
+- Section 4.7: OLED competitive ranking — analyst view, sourced from Market Research Future.
+- Section 5.1: Customer concentration estimates (top-5 ~60-70%, top-1 ~15-25%, TSMC likely largest) — **explicitly labeled as analyst-estimated triangulation, not company-disclosed**.
+- Section 5.3 Mermaid pie: **explicitly labeled "Not company-disclosed; analyst estimate"**.
+- Section 8.3: 2030F revenue estimate €5.5-7.0 bn — explicitly labeled as analyst projection built on Capital Markets Day 2024 segment growth corridor + Nomura 10% CAGR semi materials forecast.
+
+**Residual unknowns / not yet verified:**
+- Exact FY2024 Electronics EBITDA pre figure (€ value). The 25.6% margin × €3.78 bn segment sales implies ~€968 m, but the AR 2024 sub-page I cited gives the margin but not the absolute EBITDA pre figure for the Electronics segment in isolation. The Group EBITDA pre is €6.07 bn (verified).
+- Exact 2024 R&D allocation to Electronics. Estimated at ~€330 m based on Group €2.7 bn × ~12% Electronics R&D share; not separately disclosed.
+- Specific TSMC, Samsung, SK Hynix revenue contributions to Merck KGaA Electronics — Merck KGaA does not disclose customer concentration; estimates are analyst-triangulated and so labeled.
+- The Q4 2024 press release (`merckgroup.com` PDF) timed out on WebFetch during drafting; specific financial details were cross-checked from the [emdgroup.com Q4 2024 release page](https://www.emdgroup.com/en/news/q4-2024-06-03-2025.html) and search-result summaries instead.
+- Capital Markets Day 2025 detailed agenda — the [emdgroup.com page](https://www.emdgroup.com/en/news/capital-markets-day-16-10-2025.html) confirms the event and Level Up Next branding; specific 2030 target metrics may be in the recorded webcast / slide deck that was not separately fetched. Estimated capex envelope (~€3 bn through 2030) based on 2021-2025 program continuation rhetoric, not a verified specific guidance.
+
+</details>
+
