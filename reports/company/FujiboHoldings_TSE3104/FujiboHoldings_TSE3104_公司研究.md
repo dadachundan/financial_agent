@@ -102,3 +102,103 @@ timeline
 现任董事会有 9 名董事，其中 4 名为独立社外取締役（44%，明显高于 TSE Prime 市场标准）；露丝・玛丽・贾曼 (Ms. Ruth Marie Jarman) 任社外取締役最久（2019 年 6 月）—— 在一家有 130 年历史的日本中型公司董事会中出现非日籍声音，本身就极不寻常（[Yuho 2025, p. 41 — コーポレート・ガバナンスの状況等](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。其他内部董事信息 —— CFO 佐々木辰也（2023 年起，原 MUFG Research & Consulting）、望月喜美（抛光垫事业部部长，兼富士紡爱媛社长）—— 按技能指引"创始人 + 现任 CEO only"的原则被刻意省略，仅当业务线主管在其本身分部章节中被明确引用时方提及。
 
 ---
+
+## 4. 产品与服务
+
+这是整份报告权重最高的章节。富士紡对一个投资组合的价值集中在一个产品族 —— **POLYPAS®** —— 分为五个材质上有实质差异的子系列，销售于 CMP 抛光垫、硅晶圆、硬盘、液晶玻璃抛光场景。其余业务（工业化学品、服装、模具）要么是为抛光垫再投资提供资金的辅助业务，要么是缓慢消融的遗产。读完 §4，读者应能清晰陈述：哪个 POLYPAS 子系列对应客户晶圆厂流程中的哪一步、为什么 DuPont IC1000 至今未能把富士紡挤出日 / 台 / 韩客户席位，以及"软垫 vs 硬垫"组合对 AI-CMP 周期深化中增量利润率意味着什么。
+
+### 4.1 — 富士紡的分部级披露 (Yuho 原文)
+
+第205期 Yuho（截至 2025 年 3 月的会计年度）将抛光垫业务归入"研磨材事業 (Abrasives Business)"分部，主要产品披露文本为：
+
+> "区分: 研磨材事業 — 主要製品等: 超精密加工用研磨材, 不織布, 合皮 — 製造: フジボウ愛媛㈱, 台湾富士紡精密材料股份有限公司"
+
+即 *"分部：研磨材事业。主要产品：超精密加工用研磨材、不織布、合皮。制造：富士紡爱媛株式会社 与 台湾富士紡精密材料股份有限公司。"* 其中"不織布"与"合皮"两项主要是配套销售给同一客户群的缓冲 / 衬垫材料。资料来源：[Yuho 2025, p. 7 — 事業の内容](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)。
+
+Yuho 中关于 FY3/25 分部业绩的叙述（§4 的权威原始文本）写到：
+
+> "ア．研磨材事業: 2023年前半に底を打った世界の半導体市場は、2024年に入り緩やかな回復が続いています。このような中、超精密加工用研磨材の半導体デバイス用途(ＣＭＰ)は、生成ＡＩの普及によるＨＢＭなどのメモリや最先端ロジック向け半導体の需要の増加とそれに伴う一部ユーザーの在庫水準の引き上げにより受注が増加しました。シリコンウエハー用途は、汎用品用途の需要は弱いものの、先端品用途の需要は堅調で一定水準の売上を確保しました。ハードディスク用途はデータセンター向けの需要が戻り、液晶ガラス用途では期後半からＴＶ需要の増加によってパネルの消費も加速しており、受注も回復しました。"
+
+即 *"抛光垫业务在半导体器件 CMP 应用上看到订单上扬，由 HBM 与先进逻辑半导体需求以及部分客户的库存补充驱动；硅晶圆通用品需求疲软但先进等级稳健；硬盘需求由于数据中心订单回流而复苏；液晶玻璃订单从下半年开始受 TV 面板补库存推动复苏。"* 业绩结果：**分部销售 ¥19,307 百万日元（同比 +43.9%）、营业利润 ¥4,729 百万（+334.8%）**（[Yuho 2025, p. 24 — 経営成績](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。FY3/25 分部 24.5% 的营业利润率是公司在抛光垫业务上有史以来最高的，反映 (a) 在固定产能下把开工率推向成本曲线上方所带来的经营杠杆，以及 (b) 向先进节点 CMP 高价软垫迁移的结构性产品组合提升。
+
+### 4.2 — 综合：各产品类别在客户工作流程中如何交互
+
+每一家先进逻辑 / 内存 / 晶圆基板客户都在每一片晶圆上跑同样的 **六步超精密抛光循环**：**研磨 (lapping) → 初抛 → CMP 第一层（氧化物 / 介质）→ CMP 第二层（金属 / Cu / W）→ 精抛 → 清洗 + 背垫安装**。富士紡通过 POLYPAS 系列触达其中第 2-6 步：
+
+```mermaid
+graph LR
+  A[研磨 lapping<br/>NEXTILE T/U] --> B[初抛<br/>POLYPAS FP / FXA]
+  B --> C[CMP 氧化物 / 介质<br/>POLYPAS FXA 硬垫]
+  C --> D[CMP 金属 / Cu / W<br/>POLYPAS FXA + Suede]
+  D --> E[精抛<br/>POLYPAS Suede 软垫]
+  E --> F[安装 / 背垫<br/>POLYPAS Back Pad]
+  F -.循环.-> B
+```
+
+一条典型的 300 mm 先进逻辑产线会在这个循环中使用 4-5 种不同的 POLYPAS 抛光垫，按每 8-24 小时的垫寿命（视层而定）更换；富士紡能否赢得 / 失去某个工序卡位，取决于 (a) 缺陷密度（每片晶圆的划痕数）、(b) 晶圆间均匀性、(c) 抛光垫随老化的去除速率衰减斜率。这就是为什么"解决方案型契约模式"（见 §5）以及在台湾 / 韩国的驻场应用工程能力比头条产品规格更重要 —— 规格是在 6-12 个月的客户试用过程中，针对客户具体使用的研磨液 / 修整盘组合而被认证的。
+
+### 4.3 — POLYPAS® FP 系列：不织布初抛垫
+
+> "Non-woven fabric type polishing pad developed for stock removal (first polishing). … Applications: Initial and final polishing of silicon and compound semiconductor wafers; optical-lens and glass-component finishing; processing of plastic lenses, stainless steel, and copper plates. Key properties: 'High flatness' and 'Low scratch' characteristics. Available in soft to hard variants for different material requirements."（[POLYPAS FP series product page](https://www.fujibo.co.jp/en/division/polishingpad/product/627/)）
+
+**中文释义 / Plain-language gloss：** FP 系列是抛光流程的"粗切"。不织布 (non-woven) 意味着聚氨酯树脂被浸渍到毡状纤维布中，而不是浇铸成闭孔泡沫 —— 这让抛光垫表面更柔软、贴形性更好，可以去除晶圆上最高的"山峰"（即去料 stock removal 步骤、粗研磨），且不会留下深划痕。每一档 FP 等级通过调节纤维布的纤维密度、聚氨酯浸渍量与毡的发泡控制来差异化 —— 富士紡能针对同一产品代码交付数十种微变型。FP 在客户工作流程中的角色是把刚下研磨工序的晶圆（10 µm 切割变异是常态）平坦化到约 1 µm 平度，让后续的 CMP 步骤接力。战略意义：FP 是 POLYPAS 系列中销量高 / 平均售价 (ASP) 较低的产品层 —— 其增量增长跟随 200/300 mm 晶圆开工量，而不是先进节点强度。
+
+*分析师观点：* FP 类抛光垫是 POLYPAS 组合中最容易被替代的产品族 —— 湖北鼎龙 (Dinglong) 销售的近乎一致的毡基初抛垫以更低价格切入大陆晶圆厂，富士紡的合格供应商护城河在此层级较浅。差异化溢价集中在 FXA / Suede 子系列，而非 FP。FP 的护城河类型 = 规模 + 合格供应商惯性；竞争优势判断 = 部分。
+
+### 4.4 — POLYPAS® FXA 系列：无填料硬聚氨酯垫 —— CMP 主力
+
+> "A non-filler type hard urethane pad designed for diverse polishing applications. This pad demonstrates superior performance characteristics, including resistance to temperature-related hardness variations and uniform foam structure. … Constructed from hard urethane without fillers. Notable properties include: 'High flatness' and minimal scratch production, temperature-stable hardness performance, independent uniform foam composition. Applications: semiconductor wafer polishing (first and final stages), LCD glass substrate finishing, optical lens and material polishing."（[POLYPAS FXA series product page](https://www.fujibo.co.jp/en/division/polishingpad/product/1143/)）
+
+**中文释义 / Plain-language gloss：** FXA 是与 DuPont IC1000 正面对决的产品 —— 二者都是闭孔、硬质聚氨酯 (hard polyurethane) 浇铸抛光垫，配以工程化孔隙结构，用于器件前段的 **化学机械抛光 (CMP, chemical-mechanical planarisation)**。"Non-filler" (无填料) 意味着聚氨酯泡沫本身就是活性抛光介质 —— 研磨颗粒由研磨液 (slurry) 而非垫体内嵌带入 —— 这是先进节点 CMP 的现代标准，因为垫内嵌颗粒会引发 GAA / 3 nm 以下逻辑无法容忍的缺陷密度。"温度稳定硬度" (temperature-stable hardness) 对应 IC1000 所声称的"垫寿命首尾去除率一致"：在 CMP 中摩擦把垫面温度推到 50-80°C，过软的垫会塌陷，导致晶圆边缘过抛。"均匀泡沫成分" 指向富士紡通过其专有浇铸工艺所控制的孔径分布 —— 这是在 5-nm / 3-nm 节点抛光 **层间介质 (IMD, inter-metal dielectric)** 或 **浅沟槽隔离 (STI, shallow-trench isolation)** 时，与 IC1000 在 **晶圆内不均匀性 (WIWNU, within-wafer non-uniformity)** 上的差异化抓手。
+
+战略意义至关重要。"半导体小型化与层数化的趋势" —— 富士紡的原话（[Top Message, Fujibo IR](https://www.fujibo.co.jp/en/ir/message/)）—— 意味着 **每片晶圆在每次节点过渡时所需的 CMP 步骤数都在上升**：28 nm 逻辑约 10 步 CMP，5 nm 逻辑约 15-18 步，3 nm 及以后则 20 步以上。每一步都是硬垫耗材。HBM（High Bandwidth Memory，高带宽内存）用于 AI 加速器，再增添一类 CMP 密集型消费 —— 因为每个 HBM 叠层都使用 **硅通孔 (TSV, through-silicon via)**，每层需要额外的 Cu CMP。富士紡 FXA 系列正是吸纳这种步骤增长的产品 —— 公司已明确表示产能扩张（入泽 + 大分 + 新台湾产线）针对的是硬垫销售（[Yuho 2025, p. 14 — 優先的に対処すべき事業上及び財務上の課題](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。
+
+*分析师观点：* FXA 类硬垫是富士紡与 DuPont IC1000™ 和湖北鼎龙 DL-720 系列正面竞争的产品。DuPont 仍保有 IC1000 作为事实标准的标签 —— *"the IC1000™ Series is a CMP industry standard that is now being used in a wide range of CMP applications"*（[NITTA DuPont — IC1000 product page](https://www.nittadupont.co.jp/en/category-products/pad)）；鼎龙直到 2024 年末才以 DL-720 系列在中芯国际拿下 28/14 nm 认证（[Hubei Dinglong CMP localisation report, 2025](https://www.openpr.com/news/4253861/semiconductor-cmp-polishing-pad-latest-market-report-2025)）。富士紡 FXA 在日 / 台 / 韩客户群中赢得特殊等级订单 —— 客户希望有一个非 IC1000 的二供 (second-source) 来保障产线良率或在合同议价中取得杠杆。FXA 的护城河类型 = 工艺 IP + 合格供应商惯性 + 日本客户偏好；判断 = 部分竞争优势（对鼎龙 / 3M / SKC 是 yes，对 IC1000 是 partial）。
+
+### 4.5 — POLYPAS® FX 系列：填料浸渍的玻璃 / 非 CMP 垫
+
+> "Engineered with built-in filler technology. It combines characteristics from the FXA series while adding self-abrasive properties unique to the built-in filler type. This product line offers extensive customization in hardness, density, abrasive grain types, and grain size distribution. … Applications: glass substrate polishing for displays and photomasks; optical lens and glass component finishing; plastic lenses, stainless steel, and copper plate polishing; panel cleaning operations."（[POLYPAS FX series product page](https://www.fujibo.co.jp/en/division/polishingpad/product/1282/)）
+
+**中文释义 / Plain-language gloss：** FX 与 FXA 同为硬聚氨酯泡沫，但在垫体内嵌了研磨颗粒 —— "built-in filler" (内置填料)。这让 FX 成为"自带磨料"的垫：不需要研磨液本身含磨料，仅需化学反应类研磨液或水即可工作。代价是 FX 需更快更换（垫内的磨料库存会先一步耗尽），但客户节省研磨液成本。主要目标用例多为**非半导体**：LCD 玻璃基板抛光、光刻掩膜基板抛光、光学透镜精加工 —— 这些应用中晶圆 / 基板价值高，但抛光步骤对缺陷密度的要求不如前段 CMP 严苛。FX 也是 Yuho 评论中"液晶玻璃用途由于中国补贴政策面板需求强劲" (*"液晶ガラス用途では中国の補助金政策によりパネル需求が好調に推移"*) 这一描述的核心摆动产品（[FY3/26 1H 決算短信, p. 2](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251031/20251030582961.pdf)）。
+
+*分析师观点：* FX 在销量层面是 POLYPAS 子系列中防御性最强的，因为 LCD 玻璃与光刻掩膜供应链由日本 (AGC、日本电气硝子、Hoya) 与韩国 (Corning Korea) 客户主导，他们与富士紡的关系可上溯几十年。护城河 = 客户关系 + 合格供应商惯性；判断 = yes。
+
+### 4.6 — POLYPAS® Suede 系列：精抛 / 终抛垫
+
+> "A polishing pad engineered for final finishing of semiconductor wafers and hard disks. The product addresses growing industry demands for 'high precision and flatness of the finished surface' while emphasizing the importance of the pad's own uniformity. … 'Scratch-free' performance, 'Chemical-resistant and abrasion-resistant' properties."（[POLYPAS Suede series product page](https://www.fujibo.co.jp/en/division/polishingpad/product/1283/)）
+
+**中文释义 / Plain-language gloss：** Suede（麂皮 / 仿麂皮，Suede 软垫）指的是一种带有多孔、仿麂皮微观结构的软聚氨酯表层 —— 这构成了 CMP 配方中的 **软垫 (soft pad)** 半边。在典型 CMP 模组里，硬垫 (FXA) 在每个抛光步骤开始时承担主要的材质去除，而软垫 (Suede) 负责最后几百埃 (Å) 的 **精抛** —— 这一步决定缺陷计数与表面粗糙度。富士紡明确声称已"**在先进工艺软垫这一主力领域取得最高市场份额**" —— *"we have captured the top market share in the mainstay field of advanced process soft pads based on our high reputation among customers earned through our high-performance, high-quality products and provision of flexible solutions that meet the different performance requirements of each customer"*（[Integrated Report 2024, p. 18](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)）。这是整份 Integrated Report 中最关键的一句话 —— 它是公司对自己在 **先进节点 CMP 软垫** 中拥有可防御利基龙头地位的明确宣示，而这是随节点缩小增长最快的细分。
+
+Suede 系列也用于 **硅晶圆精抛**（裸硅晶圆出货给晶圆厂前的最终抛光）—— 以及 **硬盘基板精抛**，正是这一应用驱动了富士紡 FY3/25 中数据中心带动的硬盘分部复苏。
+
+*分析师观点：* Suede 是 POLYPAS 组合中竞争优势最强的产品 —— 富士紡声称的"先进工艺软垫领先地位"是全球任何抛光垫供应商公开文件中极少见的份额宣示，并且它对中国国产替代风险防御性最强（因为它正是缺陷密度容忍度最紧的工序层）。护城河 = 工艺 IP + 驻场应用工程 + 合格供应商惯性；判断 = yes（POLYPAS 家族中最强）。
+
+### 4.7 — POLYPAS® Back Pad 系列：晶圆固持垫
+
+> "Developed to retain semiconductor silicon wafers and LCD glass substrates without wax. Users can choose mounting pads tailored to their polishing needs for optimal flatness. The product line includes insert types (frameless) and template types (framed)."（[POLYPAS Back Pad series product page](https://www.fujibo.co.jp/en/division/polishingpad/product/1284/)）
+
+**中文释义 / Plain-language gloss：** 背垫是 CMP 过程中**无蜡固定**晶圆 / 玻璃基板的承载装置，使晶圆面朝下贴在抛光机头上。背垫出现前的设计使用蜡把晶圆粘在载具上，抛光后清洗繁复且会引入蜡残留缺陷模式。无蜡背垫如今已是全球标准 —— 富士紡在此扮演的角色是供应高平度、不擦伤晶圆的背垫，客户的更换频率比上方抛光垫低得多。
+
+*分析师观点：* 背垫是较为安静的业务 —— 高毛利、低增长、客户黏性强 —— 在 POLYPAS 整体捆绑销售中扮演"尾部"年金角色。它在任何份额分析中很少出现，因为相比上方抛光垫销售额较小，但它是富士紡赢得多产品 CMP 耗材交易、相比单一产品竞争对手胜出的因素之一。护城河 = 捆绑销售 + 合格供应商惯性；判断 = 部分。
+
+### 4.8 — NEXTILE® 研磨垫（毗邻产品）
+
+NEXTILE T 与 U 系列属于 **研磨垫 (lapping pad)** 而非 CMP 抛光垫 —— 它们位于晶圆 / 玻璃精加工流程的最初、最粗一步（[NEXTILE product page, Fujibo](https://www.fujibo.co.jp/en/division/polishingpad/product/)）。技术上与 POLYPAS 系列相邻（同一聚氨酯化学体系、不同的纤维结构），服务同样的客户，但毛利更低、营收占比更小。列入此处仅为完整性 —— 它并非主营业务。
+
+### 4.9 — 其他三大经营分部 (工业化学品 / 服装 / 其他) (简述)
+
+- **工业化学品 (化学工業品事業, industrial chemicals)** —— 柳井化学工业的合同制造业务：为日本大型化工企业供应医药、农药、电子材料的精细化工中间体与功能性化学品。FY3/25 销售 ¥135 亿日元（+7.6%）、营业利润 ¥12 亿（+37.0%）。柳井本厂 + 武生工厂高开工率运行；第五家工厂将于 2026 年 4 月投产（投资 ¥62 亿，已支出 ¥12 亿）。客户高度集中 —— **前两大客户（住友商事ケミカル 19.2% 合并营收、三井化学 13.7%）** 都来自这一业务（[Yuho 2025, p. 27 — 販売実績](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。
+
+- **生活服装 (生活衣料事業, apparel / textile)** —— Body Wild（男士内衣品牌）+ Angle 女士内衣 + Asamerry / Airmerry 高端线。FY3/25 销售 ¥70 亿日元（持平）、营业利润 ¥6 亿（-25.0%）。这是公司纺织遗产业务；井上的前任把它从 FY3/06 占销售的 60% 砍至 FY3/25 的约 16%。国内销售结构性下滑，但海外因日本品牌溢价仍维持稳定（[Yuho 2025, p. 25 — 生活衣料事業](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。
+
+- **其他 (化学品 / 汽车零部件 / 模具)** —— FY3/25 销售 ¥32 亿日元（-1.8%）、营业亏损 ¥57 百万（前年为利润 ¥59 百万）。井上把"化学品"那一块（医疗器械 + 数码相机精密塑料注塑）定位为继抛光垫 / 化学品 / 服装之后的**第四支柱**，但 2022 年并购的 GFI / IPM 仍处于投资阶段（[Yuho 2025, p. 25 — その他](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。
+
+### 4.10 — 路线图与近 12 个月新进展
+
+公司公开的两项最大投资项目是 (a) 2024 年完工的**入泽工厂技术开发附属设施**，现正驱动 FY3/25 的抛光垫产品组合升级，以及 (b) ¥57 亿日元的**台湾苗栗 R&D 中心** —— 富士紡历史上第一家海外 R&D 中心，明确定位为 TSMC 集群先进节点 CMP 认证的台湾客户协同开发枢纽（[Yuho 2025, p. 34 — 重要な設備の新設等](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)；[Top Message, Fujibo IR](https://www.fujibo.co.jp/en/ir/message/)）。没有 SKU 级别的新品发布稿 —— POLYPAS 是连续改进型产品族，而非离散发布业务。
+
+![Fujibo 资本支出与 R&D 投资](../../charts/fujibo_capex_rd.png)
+
+资料来源：[Integrated Report 2024 — 11 Years Financial Summary, p. 47 + Yuho 2025 p. 32](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)。
+
+---
