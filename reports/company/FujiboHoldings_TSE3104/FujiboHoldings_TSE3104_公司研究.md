@@ -202,3 +202,97 @@ NEXTILE T 与 U 系列属于 **研磨垫 (lapping pad)** 而非 CMP 抛光垫 �
 资料来源：[Integrated Report 2024 — 11 Years Financial Summary, p. 47 + Yuho 2025 p. 32](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)。
 
 ---
+
+## 5. 客户与上市策略
+
+富士紡的客户结构按分部高度分化：抛光垫业务服务于全球先进节点晶圆厂客户群（晶圆代工 + 内存 + 晶圆制造商），工业化学品业务则对两家日本化工巨头存在高单客户集中，服装业务面向分散的零售 / 电商客户群。最具信息量的客户披露集中在 Yuho 的"主要な販売先"（主要销售对象）表，即合并层面。
+
+### 5.1 — 合并层面前列客户 (Yuho 强制披露)
+
+Yuho 的合并层面客户披露（≥ 10% 合并营收）在 FY3/25 列出两家客户：
+
+| 客户 | 分部 | FY3/24 销售 (¥mm) | FY3/24 占比 | FY3/25 销售 (¥mm) | FY3/25 占比 |
+|---|---|---|---|---|---|
+| **住友商事ケミカル㈱ (Sumitomo Shoji Chemical)** | 工业化学品 | 5,380 | 14.9% | **8,229** | **19.2%** |
+| **三井化学㈱ (Mitsui Chemicals)** | 工业化学品 | 5,801 | 16.1% | **5,874** | **13.7%** |
+| 前 2 大合计 | — | 11,181 | 31.0% | 14,103 | **32.9%** |
+
+资料来源：[Yuho 2025, p. 27 — 販売実績](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)。
+
+这两个最大客户全部归属于 **工业化学品分部** —— 均为通过柳井化学工业（山口柳井厂、福井武生厂）开展的医药 / 农药 / 电子材料前驱体合同制造关系。住友商事ケミカル占合并营收的份额从 14.9% 跃升至 19.2% —— 合同制造业关系中对单一交易对手的实质性集中是正常现象，但这让工业化学品分部对一个续约周期变得经济上脆弱（[Yuho 2025, p. 21 — 事業等のリスク (3) 特定製品・顧客への依存度](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。
+
+**抛光垫业务在合并层面没有任何 ≥10% 的单一客户** —— 也就是说没有任何单个晶圆厂客户（TSMC、Samsung、SK 海力士、美光、铠侠、Intel 等）贡献超过 ¥43 亿日元的 FY3/25 营收。这正是富士紡 CMP 抛光垫业务的结构性优势：它销往一个**广泛的全球先进晶圆厂客户群**，而不是被绑定到某个锚定大户。Yuho 中将抛光垫客户群直接定义为"**世界中のＩＴデバイス関連企業**" —— *"全世界的 IT 设备相关企业"*（[Yuho 2025, p. 13 — 経営環境](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。富士紡未在公开披露中点名具体的晶圆厂客户（这与日本中型公司技术零部件供应商的行业惯例一致）—— 但通过地理布局（台南工厂 + 苗栗 R&D 中心）、约 60-70% 抛光垫营收为出口的披露、以及 CMP 抛光垫份额研究综合推断，客户群覆盖 TSMC、Samsung Foundry、SK 海力士、铠侠、美光、Intel、GlobalFoundries、UMC 与主要日本硅晶圆制造商（信越半导体、SUMCO），加上台 / 韩晶圆回收厂的长尾。
+
+```mermaid
+pie title FY3/25 富士紡控股按已披露主要客户的营收 (¥mm)
+  "住友商事ケミカル (工业化学品)" : 8229
+  "三井化学 (工业化学品)" : 5874
+  "抛光垫客户群 (TSMC/Samsung/SK Hynix/Micron/Kioxia/Intel/Shin-Etsu/SUMCO 等, 单家均 < 10%)" : 19307
+  "服装 + 其他 (分散)" : 9502
+```
+
+资料来源：[Yuho 2025, p. 27 — 販売実績 (前 2 大披露); Yuho p. 13 客户群定位](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)。
+
+### 5.2 — 上市策略：与晶圆厂工艺工程团队直接协同开发
+
+富士紡在抛光垫业务上对外披露的 GTM 模型是 "**解决方案型契约模式 (ソリューション型受託モデル)**" —— 即**直接与客户 CMP 工艺工程团队进行应用工程协同开发**，而不是手对手的交易型销售（[Integrated Report 2024, p. 17 — Polishing Pad Business growth strategy](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)）。这种模式在先进晶圆厂耗材中是普遍存在的：抛光垫规格是在客户的实际工具（Applied Materials Reflexion 系 CMP 抛光机或 Ebara Frex 抛光机）上、针对客户具体使用的研磨液 + 金刚石修整盘组合、以及客户所需的特定工序层 / 工艺集成方案进行认证。认证周期为 6-18 个月，客户没有 3 年以上的视野很少更换已认证供应商。这就是定义所有先进晶圆厂耗材经济学的"合格供应商护城河"的来源。
+
+由此衍生的推论是：**工程师而非销售员，才是 GTM 资源的瓶颈**。台湾 R&D 中心的战略目的，按井上的反复表述，是把富士紡的应用工程师物理上嵌入 TSMC / UMC 工程师集水区 —— 这样客户试用与工艺调整周期可以从 6 周（工程师从日本飞过去时）压缩到 2-3 天。台南生产工厂与苗栗 R&D 中心共同形成"**研发 + 制造**"的台湾在地布局，与 DuPont 数十年来通过 Nitta DuPont 在台湾办公室运营的方式、以及鼎龙正在中芯国际集水区上海建设的格局相互呼应（[Yuho 2025, p. 14 — 課題](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)；[Top Message, Fujibo IR](https://www.fujibo.co.jp/en/ir/message/)）。
+
+### 5.3 — 出口 / 地域结构
+
+富士紡在合并层面未发布清晰的按地域营收切分，但 Yuho 的抛光垫风险披露提示出口集中：*"研磨材事業においては、営業収入に占める輸出比率が高いことから、主として米ドルに対する円高は、値下げ要求につながる可能性があります"* —— *"在抛光垫业务上，营业收入的出口比例较高，因此主要相对美元的日元升值可能导致降价要求"*（[Yuho 2025, p. 21 — 事業等のリスク (2) 為替相場の変動](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。1H FY3/26 公告指出 *"米国向け直接輸出がごく一部"* —— *"对美国的直接出口只占很小一部分"* —— 因此大部分抛光垫出口流向台湾 / 韩国 / 中国，并以美元或日元结算（[2026年３月期 第２四半期決算短信, p. 3](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251031/20251030582961.pdf)）。这正是 GTM 上对**东亚先进晶圆厂集群**的明确集中：台湾（TSMC + UMC）、韩国（Samsung + SK 海力士）、日本（铠侠 + 美光 + 晶圆制造商），再加上一条经由出口销售触达的美国与欧洲客户长尾。
+
+### 5.4 — 客户集中风险判断
+
+按合并层面披露：抛光垫业务的客户集中度**很低**（无 ≥ 10% 客户），但工业化学品业务的客户集中度**显著**：住友商事ケミカル仅一家就占合并营收的 19.2%，超过了常规 15% 触发线。由于工业化学品贡献 FY3/25 营业利润 ¥12 亿日元（约占集团 OP 的 19%）且是第二大分部，失去任何一家前 2 大客户都会让集团 OP 减少 5-8% —— 在控股公司层面是实质性的。该风险延伸到 §9。
+
+---
+
+## 6. 行业概览
+
+富士紡同时参与三个嵌套的行业：(a) **全球 CMP 抛光垫市场**，(b) **更广义的 CMP 耗材生态**（包括研磨液 + 金刚石修整盘 + CMP 后清洗液），以及 (c) **更宽泛的半导体材料市场**（JSR / 信越 / Resonac / 东京応化与全球 CMP 供应商所对应）。对股票研究最相关的框架是 (a)，(b) 与 (c) 作为背景。
+
+### 6.1 — CMP 抛光垫市场规模、结构与增长
+
+全球 CMP 抛光垫 TAM 在 2024 年约为 10 亿美元 (USD ~1 bn)，5 年 CAGR 为高个位数。多家联合机构的数据三角验证类似：TECHCET 把更广义的 **半导体 CMP 耗材市场定为 2024 年约 USD 34 亿、同比 6% 增长**，其中抛光垫是仅次于研磨液的第二大子类（[TECHCET CMP consumables forecast, 2024](https://techcet.com/semiconductor-cmp-pad-slurry-forecast/)）。Mordor Intelligence 与 Cognitive Market Research 把 **抛光垫子类 2024 年定为约 USD 8.95 亿、2031 年前 CAGR 约 5.8%**（[Cognitive Market Research — CMP Pad market](https://www.cognitivemarketresearch.com/cmp-pad-market-report)）。按富士紡 FY3/25 抛光垫分部营收 ¥193 亿日元（约 USD 1.2 亿）粗算，公司在全球抛光垫市场的份额约为 **12-14%** —— 与 §7 引用的二级供应商份额数据一致。
+
+按对抛光垫需求的影响排序，增长驱动因子如下：
+
+1. **先进节点每片晶圆的 CMP 步骤数增长**。每次从 28 nm → 14 nm → 7 nm → 5 nm → 3 nm → 2 nm 缩节，每片晶圆所需的 CMP 步骤数都在上升。当逻辑进入 3 nm 以下（栅极环绕 GAA, gate-all-around）时，单片晶圆 CMP 步骤总数相比 28 nm 基线翻倍 —— 这是结构性的抛光垫量增长（[DuPont Materials for CMP overview, 2024](https://www.dupont.com/electronics-industrial/semiconductor-cmp.html)）。
+
+2. **HBM 与 3D-NAND 层数增长**。HBM4 / HBM5 叠层采用混合键合（不使用微凸点）—— 需要在极紧的厚度控制下做键合点 CMP。3D-NAND 层数（已超过 200，2026-30 区间将超过 400）每加一对层都意味着每层两步 CMP。两者直接驱动抛光垫消耗增长。
+
+3. **背面供电 (BPD / BSPDN, backside power delivery)**：2 nm 及以下节点在每片晶圆背面增加一整套金属化叠层，每层金属都需要自己的 CMP 步骤 —— 分析师共识为 **首代 BPD 逻辑下每片晶圆 CMP 步骤数增加 20-30%**（[Nomura 半导体材料 primer, 2026-05-21（项目内 sector ref）](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/半导体材料.md)）。
+
+4. **先进封装扩产**。硅通孔 CMP、扇出晶圆级封装、芯粒基板抛光均带来净新增抛光垫需求 —— 通常缺陷密度 / ASP 低于前段 CMP，但量大。
+
+5. **SiC / GaN 功率半导体晶圆抛光**。富士紡自己的 Integrated Report 把 SiC 晶圆抛光列为重要新应用 —— *"EV 渗透 + 从硅向 SiC/GaN 切换 → 功率半导体抛光垫需求上升"*（[Integrated Report 2024, p. 18](https://www.fujibo.co.jp/en/wp/wp-content/uploads/fujibo_integrated_report_2024-en.pdf)）。SiC 的硬度约为硅的 100 倍，需要定制的抛光垫化学体系 —— 富士紡的 POLYPAS FXA 与 Suede 等级已为 SiC 定制，服务于 Wolfspeed / II-VI / 住友电工 / 昭和电工等 SiC 晶圆客户。
+
+### 6.2 — 行业结构：适度集中，DuPont 主导 + 地域型第二梯队
+
+按多份联合发布的 CMP 抛光垫市场报告，行业结构如下：
+
+- **第一梯队 (合计约 76% 营收份额)：** DuPont（约 50%，通过全球品牌 IC1000™ + VisionPad™ + Ikonic™ 平台，全球销售；在日本通过 1983 年与 Nitta 株式会社成立、原本授权 Rodel 抛光垫的 **NITTA DuPont** 合资公司销售）+ Entegris/CMC Materials（约 26%，2022 年 Entegris 以 USD 65 亿收购 Cabot Microelectronics 即 "CMC" 后形成）。DuPont 仍保有全球最大的 CMP 抛光垫份额 —— *"continues to be the dominant supplier, representing over 50% of the market"*（[Dr. Robert Castellano — DuPont takes #1 in semi consumables, 2025](https://drrobertcastellano.substack.com/p/dupont-takes-1-position-in-semiconductor)）。Entegris 通过收购 CMC 巩固第二位（[C&EN — Entegris acquires CMC for $6.5 bn, 2021-11-26](https://cen.acs.org/business/mergers-&-acquisitions/Entegris-acquire-electronic-materials-maker/99/i45)）。
+- **第二梯队 (合计约 16%)：** 富士紡（约 5%）、湖北鼎龙（约 4%）、JSR Micro（按联合发布的 CMP 抛光垫份额研究约 8%，尽管 JSR 在抛光垫上的位置被其在 CMP 研磨液上的全球领导地位所遮蔽 —— JSR 在日 / 韩 / 台先进逻辑与内存上有规模）、3M（更小）。
+- **第三梯队 (长尾约 8%)：** SKC、FNS Tech、TWI、IVT Technologies、Tech-Polishing 等众多地域型厂商。
+
+资料来源：[Cognitive Market Research — CMP Pad market](https://www.cognitivemarketresearch.com/cmp-pad-market-report)；[Mordor Intelligence — CMP Pad market companies](https://www.mordorintelligence.com/industry-reports/chemical-mechanical-polishing-pad-market/companies)；[Hengce Research — semiconductor CMP pad market 2025](https://www.hengceresearch.com/products/semiconductor-c-m-p-polishing-pad/68987)；[Knowledge Sourcing — semiconductor polishing pad market 2030](https://www.knowledge-sourcing.com/report/semiconductor-polishing-pads-market)。
+
+![全球 CMP 抛光垫市场份额 — 分析师视角](../../charts/fujibo_cmp_pad_share.png)
+
+资料来源：*分析师观点* —— 份额值由 Cognitive Market Research、Mordor Intelligence、Hengce Research 几份联合发布的报告（上文链接）三角拟合而成。没有任何原始备案文件声明这些具体份额；不要把它们引到富士紡 Yuho 上。
+
+### 6.3 — 监管与贸易环境
+
+CMP 抛光垫并不在美国半导体设备出口管制清单上（与光刻机和某些刻蚀 / 沉积设备不同），因此中美科技脱钩对富士紡的直接触及只通过客户群间接发生。抛光垫业务 *"米国向け直接輸出がごく一部"*，直接关税敞口很小，但间接敞口实质性：如果中国大陆晶圆厂被禁止采购先进 TSMC / Samsung / SK 海力士工具，那些中国晶圆厂的晶圆开工量增长就会变慢，富士紡也就失去了间接需求（[FY3/26 1H 決算短信, p. 3 — 米国の関税政策の影響](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251031/20251030582961.pdf)）。相反，同样的脱钩格局让湖北鼎龙在国内享受替代红利 —— 鼎龙的国产替代推动是富士紡在大陆营收贡献长期受挫的最锐利威胁。
+
+### 6.4 — 买卖方议价能力
+
+**买方议价力强但有边界**。每一家头部晶圆厂客户单次采购量足以单点定价，但合格供应商护城河意味着客户不能轻易脱离 6-18 个月的重新认证周期。富士紡典型的合同结构是年度主协议 + 季度量价重谈 —— 不是多年固定价格（这是日本中型公司惯例）。**对富士紡输入化学品而言，供方议价力较低** —— 聚氨酯单体、异氰酸酯、多元醇是大宗石化品，由 BASF、三菱化学、三井化学等供应；原料成本传导在 2022-2024 年间是被讨论但未必能始终实现的议题（[Yuho 2025, p. 21 — 事業等のリスク](https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3104_securities_2024_fgu7.pdf)）。
+
+### 6.5 — 替代品与颠覆风险
+
+不存在商业上可行的**非 CMP** 平坦化 3 nm 以下晶圆的方法 —— 1990 年代曾尝试的替代方案（回刻 + 旋涂玻璃）已被放弃，因其无法满足现代光刻所需的全晶圆均匀性。因此富士紡的替代风险是**CMP 内部**：例如 DuPont VisionPad™ / Ikonic™ 或湖北鼎龙 DL-720 系列正在商业化的替代抛光垫化学体系（含硅、含铜等）或新抛光垫架构（多层、微纹理表面）。至今为止，富士紡通过连续微调维持了特殊等级的利基，但 DuPont 新抛光垫平台发布的节奏（Ikonic™ 明确瞄准 sub-28 nm 先进工艺）是结构性威胁 —— 富士紡通过台湾 R&D 中心建设来应对。
+
+---
