@@ -43,3 +43,57 @@ EHWA 钻石工业株式会社 (이화다이아몬드공업주식회사，**Ehwa 
 资料来源：分段区间引自 CEO 김재희 访谈 ([한국경제, 2022-02-27](https://www.hankyung.com/article/2022022724411)) 及 FOMEK 中坚企业联合会的 CEO 画像 ([FOMEK, 2024-09](https://www.fomek.or.kr/main/newsroom/news/vpg_view.php?wr_id=58)) — EHWA 在 감사보고서 中并未正式披露分产品 / 分客户营收拆分。
 
 ---
+
+## 2. 公司历史
+
+**1975 年 2 月 1 日由김수광 (Kim Soo-Kwang) 在首尔创立。** 김수광毕业于首尔大学冶金工程系，是韩国最早接受合成钻石砂轮 (synthetic-diamond grinding-wheel) 技术训练的工程师之一，敏锐看到当时韩国国内 100% 依赖进口的工业钻石工具品类存在国产化空间 ([포브스코리아, 2024-04-10](https://www.forbeskorea.co.kr/news/articleView.html?idxno=337331); [한국경제, 1995-09-26](https://www.hankyung.com/article/1995092601661))。"이화 (Ehwa)"一名取的是 "두 가지 꽃이 어울리다 — 两花相和"的辞典本义，与同名汉字的梨花女子大学并无任何企业关联；命名由创始人本人决定。第一座工厂专攻切割石材用的金刚石锯片 — 1970 年代后期韩国采石 / 建筑热潮立刻带来订单。
+
+```mermaid
+timeline
+    title EHWA Diamond — 50 年里程碑 (1975-2026)
+    1975 : 首尔注册成立이화다이아몬드공업 (2 月)
+         : 创始人김수광 (首尔大学冶金)
+    1977 : 设立工业工具部门 — 首条非建筑产品线
+    1982 : 海外业务部门成立, 出口启动
+    1985 : 总部与主工厂迁往京畿道乌山
+    1988 : 技术研究所 (R&D 中心) 成立
+    1995 : 创始人获 "中小企业月度人物" (通商产业部 + 기협중앙회)
+    2007 : 半导体业务部门正式成立
+         : 乌山 CMP 专用工厂投产
+    2009 : 入选 "10 大世界一流材料" (10대 세계 일류 소재) 联合体
+    2010 : 女儿김재희 (Kim Jae-hee, Stanford MBA) 任 CEO
+    2011 : 入选 MOTIE "世界级 300" 成长企业项目
+    2014 : 收购 Meerecompany (手术机器人关联企业) 3.54% 股权, ₩15 亿
+    2015 : 获 "银塔产业勋章" (산업포장)
+    2020 : 入选 "名门长寿企业" (명문장수기업, 第 5 批)
+    2022 : 创纪录营收 ₩3,360 亿, 营业利润 ₩267 亿 (后疫情复苏)
+    2024 : 创纪录营收 ₩3,755 亿, 营业利润 ₩353 亿
+         : 获 MOTIE "最佳中坚供应商" 奖
+    2026 : IMM PE 签订收购 65% 控股权 SPA, 对价 ~₩4,000 亿 (5 月 12 日)
+```
+
+资料来源：时间线综合自 [포브스코리아, 2024-04-10](https://www.forbeskorea.co.kr/news/articleView.html?idxno=337331)、[한국경제, 1995](https://www.hankyung.com/article/1995092601661)、[FOMEK, 2024](https://www.fomek.or.kr/main/newsroom/news/vpg_view.php?wr_id=58)、[Seoul Economic Daily, 2026-05-12](https://en.sedaily.com/news/2026/05/12/imm-pe-to-acquire-koreas-top-tool-maker-ehwa-diamond-for) 及 [DART 연결감사보고서 51기, 2026-03-31](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331002816)。
+
+公司 50 年历史中有**三次战略转型值得单独点名**。**第一是 1977-82 年从单一锯片厂转型为多元化钻石工具房**：1977 年设立工业工具部门，1982 年成立海外业务部门 — 让 EHWA 真正成为一家出口企业。到 1980 年代中期，EHWA 已在日本本土市场切入，并从日本同业手中抢份额 — 这一海外姿态塑造了之后所有的扩张选择 ([Ehwa-Insa 招聘页面 (관계사 안내)](https://ehwadia-insa.co.kr/?page_id=1388))。**第二是 2007 年的半导体业务启动** — 乌山 CMP 专用工厂建成，这是一次对 2000 年代后期三星电子华城 / 平泽 fab 与 SK 海力士利川 / 清州产线扩张的**有备而来的押注**。在此之前，EHWA 已以小批量供应硅晶圆背磨砂轮；2007 年的工厂建设是公司**首次为 CMP 耗材专门划拨产能、专属研发预算和专项销售覆盖**。到 2013 年，该技术投入开始收获回报 — 三星-EHWA 联合的 CMP 抛光垫修整器专利 (US9314901B2) 通过申请，其 "统一刀尖 (uniform-tip)"几何设计可在使用全程内将刀尖表面积稳定在 ±10% 区间内，使氧化物 / 钨 / 铜浆料工艺下的抛光垫损耗保持稳定 ([US9314901B2, 2016 授权](https://patents.google.com/patent/US9314901B2/en))。**第三是 2010 年的代际交接** — 将经营权交给김재희，一位斯坦福历史学本科 + MBA、并非工程师出身的女儿，是创始人的一次有意识选择。Forbes Korea 转述的创始人逻辑是：**"未来十年钻石工具的竞争不再靠工程师手艺，而是靠职业管理纪律 (采购、外汇套保、销售渠道架构、多工厂物流、并购)"** — 因此选了**懂管理而不是懂冶金**的继任者。2021-22、2024 年连续刷新的营收纪录证明了这一选择目前为止是成立的 ([포브스코리아, 2024-04-10](https://www.forbeskorea.co.kr/news/articleView.html?idxno=337331))。
+
+**并购与外延动作有限但具针对性。** 2014 年 12 月，EHWA 以 ₩15 亿韩元从김준구 / 김준홍处收购了 **Meerecompany Inc. (코스닥 上市；韩国领先的手术机器人公司，腹腔镜手术机器人 Revo-i 的开发商)** 3.54% 股权 — 财务 / 战略投资，非经营控制 ([MarketScreener, 2015-03-24](https://www.marketscreener.com/quote/stock/MEERECOMPANY-INCORPORATED-12898436/news/Ehwa-Diamond-Industrial-Co-Ltd-acquired-3-54-stake-in-Meerecompany-Inc-from-Joon-Koo-Kim-and-Jo-38434409/))。EHWA 还持有意大利 **ZENESIS Solutions S.r.l.** 作为权益法关联企业 — 因累计亏损已减值至 0 — 以及 100% 持股的国内子公司 **평택산업 (Pyeongtaek Industrial Co.)**，两者自 2024 财年起纳入合并 ([DART 연결감사보고서 51기, 종속기업 및 관계기업 명단](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331002816))。即将到来的 IMM PE 控股交易 (2026 年 5 月) 将是公司历史上**最大规模的单一控股权变更事件**。
+
+**近期发展 (2024-2026)。** 除 IMM PE 交易外，主要经营主线包括 (i) **半导体耗材客户基础的渐进式扩展** — 通过三星与 SK 海力士的"K-Semi-Belt"国产供应商计划，以及为台积电亚利桑那 / 熊本新厂提供配套服务 (EHWA 的海外法人布局为 fab 邻近服务提供了天然优势) ([digitimes — Samsung / SK Hynix 供应链覆盖, 2025-09-08](https://apps.digitimes.com/news/a20250908PD218/2025-samsung-semicon-2025-sk-hynix-supply-chain-taiwan.html))；(ii) **2025 财年营收的小幅同比下滑 (-1.4%)**，主因韩国与中国建筑需求疲软；(iii) **韩国产业通商资源部 (MOTIE) 在 2024 年授予 EHWA "最佳中坚供应商" 称号** ([FOMEK, 2024-09](https://www.fomek.or.kr/main/newsroom/news/vpg_view.php?wr_id=58))。
+
+---
+
+## 3. 管理团队
+
+EHWA 的领导班子是一对**父女组合**：创始人继续担任董事长 (持股 44.84%)；女儿自 2010 年起担任 CEO (대표이사) 主理日常经营。IMM PE 收购交割后这些角色可能重新洗牌，但本节反映**截至 2025 年的结构**。
+
+### 김수광 (Kim Soo-Kwang) — 创始人兼董事长
+
+김수광 1975 年 2 月在首尔创立 EHWA Diamond，时年 35 岁，毕业于首尔大学冶金工程系。创业初期他亲自钻研钻石复合材料锯片配方 — 当时韩国建筑业要么使用进口工具 (主要来自日本 / 德国)，要么靠工地临时拼凑的代用品，**本土生产的工业级钻石几乎是个空白领域** ([포브스코리아, 2024-04-10](https://www.forbeskorea.co.kr/news/articleView.html?idxno=337331); [한국경제, 1995-09-26](https://www.hankyung.com/article/1995092601661))。整个 1980-90 年代他都担任 President / 사장，1995 年 9 月由通商产业部 (MOTIE 前身) 与 기협중앙회 (韩国中小企业联合会) 共同授予**"中小企业月度人物"**称号，并率领公司穿越 1997 年亚洲金融危机和 2008 年全球衰退 — 截至 2022 年实现**连续 47 年盈利**这一极少见的工业制造纪录 ([한국경제, 1995-09-26](https://www.hankyung.com/article/1995092601661); [한국경제, 2022-02-27](https://www.hankyung.com/article/2022022724411))。2010 年女儿接任 CEO，他从经营管理角色转为董事长，但仍是大股东 — 在资本配置上被广泛视为战略锚定者。IMM PE 收购前他个人持有 627,773 股 = **登记股本的 44.84%** ([DART 연결감사보고서 51기, 주요 주주현황](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331002816))。他的股权 (与女儿김신경 20.56% 及家族管理层 34.60% 合计) 即为本次 ~₩4,000 亿出售给 IMM PE 的标的 ([fn마켓워치, 2026-05-13](https://www.fnnews.com/news/202605130830353811))。媒体一贯描述他的创业初衷是一个**多十年视角**："**钻石是一种横跨基建、汽车与电子的生产力工具 — 在三者之间分散，一个坏周期就永远打不垮公司**" — 而这恰恰是女儿在全球扩张中规模化执行的哲学 ([FOMEK, 2024-09](https://www.fomek.or.kr/main/newsroom/news/vpg_view.php?wr_id=58))。
+
+### 김재희 (Kim Jae-Hee) — 自 2010 年起任代表理事 / CEO
+
+김재희本科与 MBA 均毕业于**斯坦福大学** (Stanford University) — 本科主修历史与工商管理，MBA 毕业于斯坦福商学院 (Stanford GSB)；MBA 毕业后曾在**美国一家管理咨询公司**任职，2002 年加入 EHWA Diamond ([포브스코리아, 2024-04-10](https://www.forbeskorea.co.kr/news/articleView.html?idxno=337331))。她在公司内部经过**八年的不同经营岗位历练**后，于 2010 年 6 月被任命为代表理事 (대표이사)，正式接替创始人执掌 CEO 一职。父亲对此次代际交接的对外阐述是 — EHWA 下一个十年的核心竞争力在于**职业化的管理纪律**：全球工厂网络管理、跨币种现金管理与外汇套保、多语言销售覆盖、并购整合 — **而仅靠工程师背景的继任者无法在这些维度上交出成绩**。面对"不是工程师出身的 CEO 怎么领导一家冶金公司"的外部质疑，김재희的回应是 — **她的工作是 "在每个领域培养顶尖专家"，而不是亲自做最深的技术专家** ([FOMEK, 2024-09](https://www.fomek.or.kr/main/newsroom/news/vpg_view.php?wr_id=58))。DART 股东表中她的持股**未单独披露**：表中列김수광 44.84%、김신경 20.56%、其他 34.60%，无第三个超过 5% 披露阈值的姓名 — 这意味着她的直接经济权益要么在 34.60% "其他"块内，要么通过家族投资工具持有 ([DART 연결감사보고서 51기](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331002816))。
+
+她**自 2010 年以来的经营成绩**具体且可量化：合并营收从 (2010 年前) ₩2,000 多亿区间增长至 **2024 财年峰值 ₩3,755 亿**；营业利润率从低个位数扩张至高个位数 / 低双位数区间 (2024 财年 9.4%) ([saramin 财务卡片](https://www.saramin.co.kr/zf_user/company-info/view-inner-finance/csn/SUZ4bHJmRk1CNFBBMVkzSmpmSHdqZz09/company_nm/%EC%9D%B4%ED%99%94%EB%8B%A4%EC%9D%B4%EC%95%84%EB%AA%AC%EB%93%9C%EA%B3%B5%EC%97%85(%EC%A3%BC)))。半导体耗材线从 2010 年前**精密事业部内的"小赌注"**变成 2007 年后**拥有专属工厂与研发预算的独立业务单元**，并配套以活跃的专利组合 (三星-EHWA 2016 年联合的 US9314901B2 + 韩国科学技术研究院 KIST + EHWA 的 CVD 涂层早期合作研究) ([US9314901B2 patent](https://patents.google.com/patent/US9314901B2/en); [ScienceDirect — KIST-EHWA CVD 抛光垫修整器研究, 2011](https://www.sciencedirect.com/science/article/abs/pii/S0890695511000393))。在她任内，EHWA 于 2011 年入选 MOTIE "世界级 300" 成长企业项目，2015 年获得银塔产业勋章，2020 年入选"名门长寿企业 (명문장수기업)"，2024 年获 MOTIE "最佳中坚供应商"奖 ([FOMEK, 2024-09](https://www.fomek.or.kr/main/newsroom/news/vpg_view.php?wr_id=58))。按韩国创始人主导工业 PE 收购的典型先例，**她大概率会在 IMM PE 交割后留任经营层** — 但目前没有正式留任公告。
+
+---
