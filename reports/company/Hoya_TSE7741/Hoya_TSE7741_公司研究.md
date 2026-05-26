@@ -212,3 +212,70 @@ Imaging 子分部（FY25 收入 ¥45.9 亿日元，同比 +17.6%）是 Informati
 - **内窥镜重组**——70–80% 决策已完成；工厂整合进行中，预期 FY27 Q4 见到实质利润率改善 ([HOYA FY26 Q2 Earnings Call Transcript, p. 21](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
 
 ---
+
+## 5. 客户与上市策略
+
+HOYA 的客户群正好沿分部界线分开。**Information Technology 客户全球约 20 家**——每一家先进逻辑代工厂、每一家面板厂、以及两家 HDD OEM——在多年期合格框架下采购高 ASP / 低批量的基板。**Life Care 客户全球约 50 万家**——独立视光师实验室、零售眼镜连锁、医院采购集团、眼科外科医生、消化道内窥镜科室——在区域分销协议下采购高批量 / 较低 ASP 的耗材与设备。
+
+**客户集中度——披露给出了什么。** HOYA FY25 IFRS 分部附注披露："**Information Technology 分部在截至 2025 年 3 月 31 日的财年内，存在一个对合并收入贡献达到 10% 或以上的客户群。截至 2024 年 3 月 31 日财年，该客户群确认收入为 ¥54,751 m 日元；截至 2025 年 3 月 31 日财年，确认收入为 ¥92,776 m 日元（折合 US$620,489 千）**" ([HOYA FY25 IFRS Financial Statements, p. 34](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf))。该 ¥92.8 亿日元 = FY25 合并收入的 **10.7%**，且披露用语（"客户群"）暗示是审计师将一家母公司及其附属子公司合并统计。最可能的身份是 **台积电及其内部光罩工厂分支机构**，理由是 (a) 台积电是全球最大的 EUV 光罩消费方；(b) HOYA Information Technology 分部 FY25 收入同比增长 ¥82.8 亿日元（¥311.1 亿 vs ¥228.3 亿），而该客户群同比增长 ¥38.0 亿日元——即 **FY25 IT 分部增长中约一半来自这一家客户关系**。HOYA 在财报中未确认身份，因此这一推断是卖方分析师的解读，并非 HOYA 的披露。
+
+集中度数字从 **FY24 的 7.2% 提升至 FY25 的 10.7%**——明显的攀升，使 HOYA 首次跨过 IFRS 披露门槛。IFRS 8 仅要求披露单个 ≥10% 客户，并未强制披露前五大客户，HOYA 也未主动披露前五大；FY25 的数字是审计财报中唯一量化的客户集中度数据点。*分析师观点：* 鉴于 EUV 空白光罩供应链结构，**前五大可能占 IT 分部收入的 35–45%（即集团收入的 ~13–16%）**，分别由台积电 + Photronics + 凸版 / Tekscend + 三星内部光罩 + DNP 构成——但这是卖方估算，并非披露数据。
+
+```mermaid
+pie title HOYA FY25 IT 分部前客户估计集中度（卖方估算）
+    "台积电 + 内部光罩（披露 >10%）" : 30
+    "Photronics 坯料转光罩" : 12
+    "凸版印刷 / Tekscend（日本 + 新加坡）" : 10
+    "三星内部光罩" : 10
+    "DNP + 其他（面板 + HDD OEM）" : 38
+```
+*资料来源：根据 [HOYA FY25 IFRS Financial Statements, p. 34](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf) 披露的 ≥10% 客户群，结合公开光罩工厂产能分配做卖方估算。**非** HOYA 披露。*
+
+**分销渠道。** Information Technology 直接从 HOYA 各工厂（昭岛 R&D 中心 + 三岛 EUV 坯料厂 + 熊本 / 重庆 FPD 光罩厂 + 老挝 / 越南 HDD 玻璃基板厂）发货至客户光罩工厂和 HDD OEM 镀膜线。中间没有分销商——这些是定制化工程出货，规格与客户共同开发，且通常由 HOYA 工程师驻扎客户光罩工厂进行合格。
+
+Life Care 分销层级更复杂。**眼镜镜片**销售给独立视光师实验室（实验室在 HOYA 提供的半成品柸料上研磨处方）和整合零售网络；HOYA 在日本拥有 **EyeCity** 零售连锁（规模小，~270 家门店），其余主要通过第三方零售触达终端消费者。**医疗**通过直销团队（Pentax Medical 在 50+ 国家有直接销售存在）和部分较小区域市场的分销混合销售；IOL 通过眼科手术中心和医院采购集团销售。
+
+**销售周期与合同结构。** Information Technology 客户基于**多年期主供应协议**运作，每年由客户提交订购量预报、每季度调整定价；新一代坯料的合格需要 12–24 个月，客户切换成本相应非常高。**MiYOSMART 眼镜业务** 正在按国家逐一推进监管 + 报销注册，目前已在法国取得医保报销 ([HOYA FY26 Q2 Earnings Call Transcript, p. 4](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))——CEO 明确表示最初推动 MiYOSMART 增长的中国贡献正在下降，欧洲与日本接棒。
+
+**最近披露的客户进展。** HOYA 不常具名披露客户，但近期两条信息有用：(a) FY26 Q2 业绩会议中提到的 **新 HDD 基板客户**——隐含为 Western Digital、希捷、东芝中的一家——已签约采购 HAMR 时代玻璃基板，量贡献起于 FY26 Q4 ([HOYA FY26 Q2 Earnings Call Transcript, p. 12](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))；(b) **Pentax Medical DEC™ 十二指肠镜** 与 Advanced Sterilization Products（强生分拆，现为 Fortive 旗下的 Advanced Sterilization Products 业务）合作完成 STERRAD 兼容灭菌流程 ([PR Newswire — PENTAX Medical FDA clearance, 2024-08](https://www.prnewswire.com/news-releases/pentax-medical-receives-fda-clearance-for-duodenoscope-with-new-sterilization-technology-in-collaboration-with-advanced-sterilization-products-302214258.html))。Western Digital 自身也是 HOYA 客户——2022 年磁介质业务出售时，WD 收购 HOYA 的溅射工厂并签订了多年期增量玻璃基板供应协议，将原先的市场化采购关系正式化 ([PR Newswire — Western Digital to acquire HOYA magnetic media operations](https://www.prnewswire.com/news-releases/western-digitalr-to-acquire-hoyas-magnetic-media-operations-92263279.html); [Financial Content — AI storage supercycle: Western Digital, 2026-04](https://markets.financialcontent.com/stocks/article/finterra-2026-4-7-the-ai-storage-supercycle-a-deep-dive-into-the-new-western-digital-wdc))。
+
+---
+
+## 6. 行业概览
+
+HOYA 并不在一个行业里竞争——它在四个松散相关的特种光学 / 特种材料行业中各自竞争，每个行业都有自己的结构动力学。因为对阅读本报告的投资者来说，EUV 空白光罩地位是分析重心，行业分析也相应倾向半导体材料，对其余三个则提供较短的描述。
+
+### 6.1 全球半导体材料——AI 算力供应链的最上游
+
+按野村数据，2025 年全球半导体材料销售额达 **~US$80 亿**，大约按 **60% 晶圆制造材料 / 40% 封装材料** 划分 ([reports/sector/半导体材料.md, Fig. 24–25](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md))。晶圆制造材料内部产品份额为 **硅片 ~31%、光刻胶 ~13%、光刻胶辅料 ~7%、特种气体 ~13%、CMP 浆料 + 抛光垫 ~7%、溅射靶材 ~3%**，光罩坯料归入"特种光学材料"大类（占 ~5–7%）。地理分布上，半导体材料需求构成为 **台湾 30%、中国大陆 20%、韩国 18%、日本 10%、北美 10%、欧洲 8%**——台湾份额反映了台积电在先进逻辑工艺产能中的支配地位 ([reports/sector/半导体材料.md, Fig. 29–30](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md))。
+
+在这片市场里，**光罩坯料子领域的金额虽小，但战略重要性远远超出金额比例**——因为这是**单点故障的瓶颈**——没有合格的 EUV 坯料供应，先进逻辑工艺工厂就无法运转。EUV 坯料 TAM 预计 **2024 年 ~US$370 m，到 2032 年升至 ~US$700–900 m**，按 SNS Insider 预测 CAGR 为 15–16% 之间——绝对数字虽小但按野村数据 HOYA 拿走其中 ~80% ([GlobeNewswire / SNS Insider — EUV Mask Blanks Market to surpass USD 689M by 2032, 2025-11](https://www.globenewswire.com/news-release/2025/11/05/3181398/0/en/EUV-Mask-Blanks-Market-Size-to-Surpass-USD-689-06-Million-by-2032-CAGR-of-15-80-SNS-Insider.html))。DUV / 光学坯料 TAM 大约 2–3× 于 EUV，但增速较慢（5–7% CAGR），HOYA 在此 70% 份额产生的稳定年金平滑了 IT 分部的季度波动 ([reports/sector/半导体材料.md, Fig. 35–44](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md))。
+
+2026–30 年间最关键的行业拐点——由野村锚定报告勾勒——是 **GAA + High-NA EUV + 背面供电 (BPD) + 2.5D/3D 先进封装 + 新基板材料 同时在 2027–30 落地**，造成每片晶圆耗用材料量的一次性阶梯上升 ([reports/sector/半导体材料.md, p. 4](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md))。对 EUV 坯料的具体影响为：(a) **High-NA EUV（2029–30 HVM）** 缺陷规格比 NA 0.33 严格 2–3×；(b) **MOR（金属氧化物光刻胶）** 改变了吸收层与覆盖层材料，触发新一轮再合格周期——HOYA 处于最佳引领位置；(c) **每颗芯片 EUV 层数从 5 nm 的 ~7 层升至 2 nm 的 ~15+ 层**，单晶圆坯料消耗成倍提升。野村路线图将材料厂"重估窗口"定在 2026–30 年——正是 HOYA 资本支出计划瞄准的窗口 ([reports/sector/半导体材料.md, p. 4–6, 18](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md))。
+
+台积电资本支出是最大的单一催化剂——野村模型预测台积电资本支出从 **2024 年 ~US$38 bn 升至 2027F ~US$70 bn（资本支出强度 ~50%）**，对应 2 nm 与 1.6 nm HVM 量产爬坡 ([reports/sector/半导体材料.md, p. 13](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md))。台积电同时推动**供应链本土化**，将台湾本地备品比例从 2017 年的 ~50% 提升至 2030F 的 ~70%，海外工厂（亚利桑那、熊本、德累斯顿）本地内容从 0 提升到 ~60%。日本注册的 HOYA 在熊本工厂直接受益，台湾本地供应商（中砂、Ingentec、AEMC 等）在新竹集群直接受益——HOYA 全球坯料份额支配地位意味着它捕获三个区域产能的所有上升 ([reports/sector/半导体材料.md, p. 12–14](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md))。
+
+### 6.2 HDD 存储——AI 数据中心近线超级周期
+
+HDD 行业在 2012 年整合为 **Western Digital、希捷、东芝三家寡头格局**，此后稳定在全球 ~250 m 单位 / 年，收入结构从消费 PC 驱动器向数据中心存储用近线（3.5 寸高容量）驱动器转移。截至 2026 年 4 月，Western Digital 在近线市场的份额约 **52%** ([Financial Content — AI storage supercycle: Western Digital, 2026-04](https://markets.financialcontent.com/stocks/article/finterra-2026-4-7-the-ai-storage-supercycle-a-deep-dive-into-the-new-western-digital-wdc))，希捷紧随其后，东芝排第三。技术路线图正向 **HAMR（热辅助磁记录）2025–27 年量产 30–50 TB / 驱动器** 迈进，且 **玻璃基板将成为 HAMR 时代近线驱动器标准**——因为在更高盘片数下，热稳定性和厚度成为限制性指标 ([Tom's Hardware — HDD roadmap: 100TB and zettabyte-scale, 2025](https://www.tomshardware.com/pc-components/hdds/high-capacity-hdd-roadmap-the-race-to-100tb-and-zettabyte-scale-storage-toshiba-seagate-and-wd-outline-three-distinct-strategies); [Semiconductorinsight — Precision glass HDD substrates for AI workloads](https://semiconductorinsight.com/blog/precision-glass-revolutionizes-hard-disk/))。HOYA 是 3.5 寸玻璃基板唯一可信供应商，使 HAMR 转换成为 HOYA 专属的重估事件而非行业普惠事件。投资者解读是 HOYA 同时捕获 **结构变化溢价**（每盘片玻璃基板美元含量从今日 ~$1 升至 HAMR 时代 ~$2 / 盘片，每驱动器盘片数从 9 升至 11+）。
+
+### 6.3 眼镜镜片——慢复利年金
+
+2024 年全球眼镜镜片市场规模约 **US$45 bn**，CAGR ~4–5% ([Mordor Intelligence — Spectacle Lens Market](https://www.mordorintelligence.com/industry-reports/spectacle-lens-market))。增长驱动：(a) 全球近视疫情——估计 2050 年全球近视人口将达 50 亿，相比目前 ~30 亿，由近距用眼 / 屏幕时间增加和户外暴露减少推动 ([HOYA Report 2024, p. 93](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf))；(b) 老龄化推动老花眼与渐进镜片转换；(c) 新兴亚洲可支配收入提升。行业格局上 **EssilorLuxottica 一家独大（通过 Essilor 镜片 + Luxottica 零售合计占全球 ~50% 份额）**、**Carl Zeiss Vision (~10%)**、**HOYA (~10%)**，其余为区域玩家（Nikon、Rodenstock、Shamir）——参见第 7 章 ([Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/spectacle-lens-market))。结构性魅力来自需求复利（镜片每 1–3 年更换）和高端产品（近视控制、防蓝光、变色片）的定价能力。
+
+### 6.4 医疗内窥镜——一个被污染诉讼压力笼罩的日本三巨头格局
+
+全球软性内窥镜市场：**2024 年 ~US$5.5–6 bn，奥林巴斯 ~70%、富士胶片 ~20%、Pentax (HOYA) ~10%**——这是世界其他地方无法攻破的日本三巨头格局 ([Medical Design and Outsourcing — Hoya life care segment Big 100](https://www.medicaldesignandoutsourcing.com/2024-Medical-Design-and-Outsourcing-BIG-100/hoya-life-care-segment/))。结构性问题在于 **2015 年后十二指肠镜感染相关诉讼**——奥林巴斯受打击最严重（2018 年 US$85 m 司法部和解），Pentax of America 次之（US$43 m 司法部和解）——但同时间接加速了单次使用内窥镜（Boston Scientific EXALT）和可灭菌内窥镜（HOYA DEC™ 十二指肠镜）的 R&D 投入 ([PR Newswire — PENTAX Medical FDA clearance, 2024-08](https://www.prnewswire.com/news-releases/pentax-medical-receives-fda-clearance-for-duodenoscope-with-new-sterilization-technology-in-collaboration-with-advanced-sterilization-products-302214258.html); [Sokolove Law — endoscopy lawsuit settlements](https://www.sokolovelaw.com/product-liability/medical-devices/endoscopy/))。Pentax 的 #3 份额给了它两种选择：(a) 从奥林巴斯受损品牌处抢份额，或 (b) 通过缓慢流失放弃业务；目前的策略（工厂整合 + DEC™ 高端定位）暗示管理层目标是利润率纪律而非份额增长。
+
+### 6.5 监管环境
+
+HOYA 四大行业各自面对不同的监管体制。**半导体材料**主要受出口管控制约——美国 BIS 规则限制了 HOYA 可向中国 14 纳米以下工厂出货先进 EUV 坯料的对象，尽管目前中国大部分需求集中在较老节点（28 nm 及以上）的 DUV 坯料，不受限制。**HDD 玻璃基板**不受出口管控。**眼镜镜片 + IOL + 内窥镜**均受 FDA / PMDA / NMPA / CE-Mark 等医疗器械监管；HOYA Pentax Medical 内窥镜曾多次被 FDA 召回（最近一次为 II 类 Pentax 视频结肠镜召回），MAUDE 不良事件报告仍在不断出现 ([FDA MAUDE — Pentax Medical adverse event reports](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfMAUDE/detail.cfm?mdrfoi__id=17263023&pc=FDS))。**中国 VBP（医疗器械集采）** 是 IOL 业务最尖锐的监管风险——根据 CEO 在 FY26 Q2 业绩会议的发言，集采已经实质性下调了中国 IOL 价格 ([HOYA FY26 Q2 Earnings Call Transcript, p. 7](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf))。
+
+### 6.6 行业动力学：进入壁垒 / 供应商议价能力 / 替代品
+
+- **光罩坯料**——进入壁垒极高（15 年缺陷率学习曲线、多年客户合格周期），HOYA 上游供应商议价能力低（合成石英来自 Shin-Etsu Quartz / AGC；Mo 和 Si 来自商品化来源），替代品风险极低（亚 5 nm 逻辑工艺短期内没有 EUV 光刻的替代方案）。
+- **HDD 玻璃基板**——壁垒高，3.5 寸近线替代品风险低；但云存储架构向 QLC SSD（>30 TB）演化可能带来一定威胁。
+- **眼镜镜片**——壁垒中等（制造规模 + 品牌 + 视光师渠道），部分替代品风险来自屈光手术（LASIK）和隐形眼镜，但近视长期增长仍是更大力量。
+- **医疗内窥镜**——监管壁垒高，中度替代品风险来自单次使用内窥镜（Ambu、Boston Scientific），长尾威胁是胶囊内窥镜（Medtronic PillCam）。
+
+---
