@@ -51,7 +51,7 @@ The trailing P/E of ~35× is roughly **35% above the medical-devices-and-instrum
 
 HOYA was founded on **1 November 1941** by the brothers **Shoichi and Shigeru Yamanaka**, who set up an optical-glass production plant in the city of Hoya (now Nishi-Tokyo) on the western edge of Tokyo — the site name later became the corporate name ([HOYA Corporation company history page, accessed 2026-05](https://www.hoya.com/en/company/history/); [Companies History — Hoya](https://www.companieshistory.com/hoya/)). The company incorporated formally in 1944 and pivoted into crystal-glass tableware in 1945 as wartime demand for optical glass collapsed; the crystal-products business was the first cash-flow generator that funded HOYA's later move into spectacle lenses ([HOYA Corporation company history page](https://www.hoya.com/en/company/history/)).
 
-The company listed on the **Tokyo Stock Exchange Second Section in October 1961** and graduated to the First Section in February 1973, by which point the product range had widened to **progressive multifocal spectacle lenses (1967), soft contact lenses (1972), intraocular lenses (1987) and glass disks for hard disk drives (1991)** ([HOYA Corporation company history page, accessed 2026-05](https://www.hoya.com/en/company/history/)). The corporate identity was simplified from "Hoya Glass Works" to "Hoya Corporation" in 1984. The strategic genius of the 1980s–2000s leadership was an obsessive focus on owning the **substrate** rather than the finished module — once you make the glass disk that becomes a hard-drive platter, the optical blank that becomes a photomask, or the polymer puck that becomes a contact lens, you sit at a high-margin chokepoint that the more-visible downstream assemblers cannot bypass.
+The company listed on the **Tokyo Stock Exchange Second Section in October 1961** and graduated to the First Section in February 1973, by which point the product range had widened to **progressive multifocal spectacle lenses (1967), soft contact lenses (1972), intraocular lenses (1987) and glass disks for hard disk drives (1991)** ([HOYA Corporation company history page, accessed 2026-05](https://www.hoya.com/en/company/history/); [Companies History — Hoya entry](https://www.companieshistory.com/hoya/)). The corporate identity was simplified from "Hoya Glass Works" to "Hoya Corporation" in 1984. The strategic genius of the 1980s–2000s leadership was an obsessive focus on owning the **substrate** rather than the finished module — once you make the glass disk that becomes a hard-drive platter, the optical blank that becomes a photomask, or the polymer puck that becomes a contact lens, you sit at a high-margin chokepoint that the more-visible downstream assemblers cannot bypass.
 
 ```mermaid
 timeline
@@ -85,9 +85,9 @@ The Yamanaka brothers (Shoichi and Shigeru) are long gone and HOYA has been a no
 
 **Eiichiro Ikeda — Representative Executive Officer, President & CEO (since March 2022).** Ikeda is a 33-year HOYA insider who joined the company in 1992 and was promoted through every major operating division before getting the top job. He holds a Bachelor of Engineering from Chuo University and has been based out of HOYA's Singapore regional office since taking the CEO role — a deliberate signal that HOYA's centre of gravity is Asia-Pacific operations rather than Tokyo headquarters ([HOYA Corporation Leadership page, accessed 2026-05](https://www.hoya.com/en/company/directors/); [Bloomberg — Eiichiro Ikeda profile](https://www.bloomberg.com/profile/person/18799019); [Equilar ExecAtlas — Eiichiro Ikeda](https://people.equilar.com/bio/person/eiichiro-ikeda-hoya-corporation/39560383)).
 
-His three formative operating tours map exactly onto the three product franchises that drive the current equity story. **(1) From early 2010 he was Co-CEO of the Memory Disk Division and General Manager of Media** — the unit that makes glass substrates for HDDs and that he later restructured by selling the magnetic-media sputtering operations to Western Digital while keeping HOYA's monopoly on the substrate itself; the deal closed in 2022 for ¥22 bn ([The Official Board — Eiichiro Ikeda bio, accessed 2026-05](https://www.theofficialboard.com/biography/eiichiro-ikeda-94d76); [PR Newswire — Western Digital to acquire HOYA magnetic media](https://www.prnewswire.com/news-releases/western-digitalr-to-acquire-hoyas-magnetic-media-operations-92263279.html)). **(2) From late 2010 he ran the Optical Lens business**, learning the global spectacle-lens cost structure and the Seiko-integration playbook from inside; that experience underpins his current restructuring of the Pentax Medical / IOL footprint where he is consolidating factories despite ~6–9 months of short-term margin drag ([HOYA FY26 Q2 Earnings Call Transcript, 2025-10-31, p. 21](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)). **(3) From 2013 he was Executive Officer / COO of Information Technology, then Group CTO from 2015 and President of the Eyecare Division from 2019**, giving him direct technical familiarity with mask-blank manufacturing physics and EUV process control ([The Official Board — Eiichiro Ikeda bio](https://www.theofficialboard.com/biography/eiichiro-ikeda-94d76); [Hennessy Funds — Japan Fund Spotlight on HOYA](https://www.hennessyfunds.com/insights/company-spotlight-japan-hoya)).
+His three formative operating tours map exactly onto the three product franchises that drive the current equity story. **(1) From early 2010 he was Co-CEO of the Memory Disk Division and General Manager of Media** — the unit that makes glass substrates for HDDs and that he later restructured by selling the magnetic-media sputtering operations to Western Digital while keeping HOYA's monopoly on the substrate itself; the deal closed in 2022 for ¥22 bn ([Equilar ExecAtlas — Eiichiro Ikeda](https://people.equilar.com/bio/person/eiichiro-ikeda-hoya-corporation/39560383); [PR Newswire — Western Digital to acquire HOYA magnetic media](https://www.prnewswire.com/news-releases/western-digitalr-to-acquire-hoyas-magnetic-media-operations-92263279.html)). **(2) From late 2010 he ran the Optical Lens business**, learning the global spectacle-lens cost structure and the Seiko-integration playbook from inside; that experience underpins his current restructuring of the Pentax Medical / IOL footprint where he is consolidating factories despite ~6–9 months of short-term margin drag ([HOYA FY26 Q2 Earnings Call Transcript, 2025-10-31, p. 21](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)). **(3) From 2013 he was Executive Officer / COO of Information Technology, then Group CTO from 2015 and President of the Eyecare Division from 2019**, giving him direct technical familiarity with mask-blank manufacturing physics and EUV process control ([Equilar ExecAtlas — Eiichiro Ikeda](https://people.equilar.com/bio/person/eiichiro-ikeda-hoya-corporation/39560383); [Bloomberg — Eiichiro Ikeda profile](https://www.bloomberg.com/profile/person/18799019)).
 
-The signature of his ~3-year CEO tenure has been **(a)** aggressive capital return — ¥150 bn of treasury-share buybacks in FY25, with 97.9 bn yen of those shares cancelled the same year, and an additional ¥100 bn programme running into 2026 — funded partly by monetising the company's Kioxia stake; the proceeds from the Kioxia disposal "are being used to fund the ongoing share buyback program" per CFO Hirooka ([HOYA FY25 IFRS Financial Statements, p. 11](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf); [HOYA FY26 Q2 Earnings Call Transcript, p. 20](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf); [MarketScreener — HOYA ¥100 bn buyback announcement](https://www.marketscreener.com/news/hoya-corporation-announces-an-equity-buyback-for-6-200-000-shares-representing-1-81-for-100-000-m-ce7c51d3dd89f02d/)); **(b)** disciplined-but-meaningful capacity capex in EUV blanks and HDD substrates (60–70% of the FY26 ¥55 bn capex envelope is going to those two lines per the Q2 call); and **(c)** a calculated refusal to chase share in commoditising markets — the Q2 FY26 commentary on HDD glass-substrate pricing is candid that aluminium-substrate competition will cap price increases ([HOYA FY26 Q2 Earnings Call Transcript, pp. 23–24](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)).
+The signature of his ~3-year CEO tenure has been **(a)** aggressive capital return — ¥150 bn of treasury-share buybacks in FY25, with 97.9 bn yen of those shares cancelled the same year, and an additional ¥100 bn programme running into 2026 — funded partly by monetising the company's Kioxia stake; the proceeds from the Kioxia disposal "are being used to fund the ongoing share buyback program" per CFO Hirooka ([HOYA FY25 IFRS Financial Statements, p. 11](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf); [HOYA FY26 Q2 Earnings Call Transcript, p. 20](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf); [The Globe and Mail / TipRanks — HOYA ends ¥100 bn buyback and cancels 1.06% of shares, 2025](https://www.theglobeandmail.com/investing/markets/markets-news/Tipranks/1638099/hoya-ends-yen100-billion-buyback-and-cancels-1-06-of-its-shares/)); **(b)** disciplined-but-meaningful capacity capex in EUV blanks and HDD substrates (60–70% of the FY26 ¥55 bn capex envelope is going to those two lines per the Q2 call); and **(c)** a calculated refusal to chase share in commoditising markets — the Q2 FY26 commentary on HDD glass-substrate pricing is candid that aluminium-substrate competition will cap price increases ([HOYA FY26 Q2 Earnings Call Transcript, pp. 23–24](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)).
 
 Ikeda's ownership is not separately disclosed in either the EDINET securities report or HOYA's English IR materials — Japanese disclosure requires only that individual director shareholdings >0.1% be flagged, and Ikeda's holdings are believed to be below that threshold based on the absence of disclosure. Compensation is structured with a mid-to-long-term incentive component (performance share units / PSUs) whose payout is partly tied to ESG metrics, per CSO Tomoko Nakagawa's commentary in the Q2 FY26 call ([HOYA FY26 Q2 Earnings Call Transcript, pp. 15, 18](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)).
 
@@ -143,7 +143,7 @@ The reader who walks away from Section 4 understanding **one** thing about HOYA 
 
 **Plain-language gloss / 中文释义:** an EUV photomask blank is a **152 mm × 152 mm × 6.35 mm-thick puck of ultra-low-thermal-expansion glass (LiTaO₃-doped quartz)** coated with **40–50 alternating layers of molybdenum and silicon (the Bragg reflector / 布拉格反射多层膜)**, capped with a thin ruthenium protective film, and topped with an absorber layer (today still TaBN; next generation is moving to high-density ruthenium / nickel-based low-n materials). Each layer is a few nanometres thick. A blank that has **even one particle larger than 30 nm anywhere on a ~22 cm² area** is unusable — that particle would print as a permanent defect into every wafer the mask later patterns. Inside the EUV ecosystem the blank is the **furthest-upstream qualified component** — ASML supplies the scanner, ZEISS supplies the optics, Inpria/JSR/TOK supplies the photoresist, and HOYA supplies the blank that gets patterned by Photronics / TSMC's captive shop / Samsung's captive shop / DNP / Toppan into the working photomask. The mask-blank step is where you choose to live or die on **defect-per-blank yield**, and HOYA has reportedly been the only company able to consistently ship sub-30 nm-defect blanks at 3 nm-node specifications since around 2019.
 
-*Analyst view:* Nomura's Greater China Semi 2026–30F report cites HOYA at **~80% global EUV-blank share** and ~70% of DUV/optical-blank share, with Shin-Etsu Chemical as the only other meaningful supplier at ~20% EUV share; AGC has commercial EUV blank capability but at lower volumes, and Hoya's lead is in the **low-defect / high-end** segment that 3 nm and 2 nm logic require ([reports/sector/半导体材料.md, Fig. 35–44](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md); [Karim Almansour — On Mask Blanks and the Substrate Sovereigns, 2024](https://karimalmansour.substack.com/p/on-mask-blanks-and-the-substrate)). HOYA's own Q2 FY26 commentary corroborates the pricing structure indirectly: "Both EUV and DUV performed exceptionally well, with both products achieving double-digit growth. For EUV, we are firmly capturing the market, including an increase in the number of customers for high-end products," and "regardless of application or foundry used, our blanks are the preferred choice" ([HOYA FY26 Q2 Earnings Call Transcript, pp. 10, 22](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)).
+*Analyst view:* Nomura's Greater China Semi 2026–30F report cites HOYA at **~80% global EUV-blank share** and ~70% of DUV/optical-blank share, with Shin-Etsu Chemical as the only other meaningful supplier at ~20% EUV share; AGC has commercial EUV blank capability but at lower volumes, and Hoya's lead is in the **low-defect / high-end** segment that 3 nm and 2 nm logic require ([reports/sector/半导体材料.md, Fig. 35–44](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md); [Semiconductor Engineering — EUV Mask Blank Battle Brewing](https://semiengineering.com/euv-mask-blank-biz-heats-up/)). HOYA's own Q2 FY26 commentary corroborates the pricing structure indirectly: "Both EUV and DUV performed exceptionally well, with both products achieving double-digit growth. For EUV, we are firmly capturing the market, including an increase in the number of customers for high-end products," and "regardless of application or foundry used, our blanks are the preferred choice" ([HOYA FY26 Q2 Earnings Call Transcript, pp. 10, 22](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)).
 
 ![HOYA estimated mask-blank market share](../../charts/hoya_mask_blank_share.png)
 *Source: market-share estimates per [Nomura Greater China Semi 2026–30F report, 2026-05-21, Figs 38–39](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md) cross-referenced to [HOYA Report 2024, p. 102](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf). HOYA does not publicly disclose unit volumes or share; figures shown are sell-side estimates.*
@@ -238,4 +238,269 @@ Life Care distribution is layered. **Eyeglass lenses** sell into independent opt
 **Sales cycle and contract structure.** Information Technology customers operate on **multi-year master supply agreements** with annual volume nominations and quarterly pricing windows; qualification of a new blank generation takes 12–24 months and customer switching costs are accordingly very high. The **MiYOSMART eyeglass franchise** is being commercialised via a country-by-country regulatory + reimbursement process that has so far secured insurance reimbursement in France ([HOYA FY26 Q2 Earnings Call Transcript, p. 4](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)) — the CEO is explicit that the China contribution that initially powered MiYOSMART growth is now decreasing, with European and Japanese growth taking over.
 
 **Named customer wins (recent).** HOYA does not routinely name customers, but two recent disclosures are useful: (a) the **new HDD-substrate customer** referenced on the Q2 FY26 call — implied to be one of Western Digital, Seagate, or Toshiba — has signed for HAMR-era glass-substrate volume starting Q4 FY26 ([HOYA FY26 Q2 Earnings Call Transcript, p. 12](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)); (b) the **Pentax Medical DEC™ Duodenoscope** is partnered with Advanced Sterilization Products (a J&J spin-out, now Fortive's Advanced Sterilization Products business) for the STERRAD-compatible sterilisation flow ([PR Newswire — PENTAX Medical FDA clearance, 2024-08](https://www.prnewswire.com/news-releases/pentax-medical-receives-fda-clearance-for-duodenoscope-with-new-sterilization-technology-in-collaboration-with-advanced-sterilization-products-302214258.html)). Western Digital itself is also a HOYA customer through the 2022 magnetic-media-operations sale: WD acquired HOYA's sputtering plants and signed a multi-year incremental-glass-substrate supply agreement, formalising what was previously an arm's-length sourcing relationship ([PR Newswire — Western Digital to acquire HOYA magnetic media operations](https://www.prnewswire.com/news-releases/western-digitalr-to-acquire-hoyas-magnetic-media-operations-92263279.html); [Financial Content — AI storage supercycle: Western Digital, 2026-04](https://markets.financialcontent.com/stocks/article/finterra-2026-4-7-the-ai-storage-supercycle-a-deep-dive-into-the-new-western-digital-wdc)).
+
+---
+
+## 6. Industry overview (800–1,200 words)
+
+HOYA does not compete in a single industry — it competes in four loosely-related specialty-optics / specialty-materials industries, each with its own structural dynamics. Because the EUV mask-blank position is the analytical centre of gravity for an investor reading this report, the industry analysis is weighted toward semiconductor materials, with shorter passages on the other three.
+
+### 6.1 Global semiconductor materials — the upstream of the AI-compute supply chain
+
+Global semiconductor materials sales reached **~US$80 bn in 2025**, split roughly **60% wafer-fab materials / 40% packaging materials** per Nomura ([reports/sector/半导体材料.md, Fig. 24–25](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)). Within wafer-fab materials, the share by product category is **silicon wafers ~31%, photoresist ~13%, photoresist auxiliaries ~7%, specialty gases ~13%, CMP slurries+pads ~7%, sputtering targets ~3%**, with mask-blanks falling into a "specialty optical materials" bucket of ~5–7%. Geographically, semiconductor-materials demand splits **Taiwan 30%, China 20%, Korea 18%, Japan 10%, North America 10%, Europe 8%** — Taiwan's share reflects TSMC's dominance of leading-edge logic capacity ([reports/sector/半导体材料.md, Fig. 29–30](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)).
+
+Within this universe the **photomask-blank sub-segment is small in dollars but disproportionately large in strategic importance** because it is a **single-point-of-failure chokepoint** — there is no functioning leading-edge fab without qualified EUV blanks. Total addressable market for EUV blanks is forecast at **~US$370 m in 2024 rising to ~US$700–900 m by 2032** at a 15–16% CAGR per SNS Insider — a small absolute number but ~80% of that flows to HOYA per Nomura ([GlobeNewswire / SNS Insider — EUV Mask Blanks Market to surpass USD 689M by 2032, 2025-11](https://www.globenewswire.com/news-release/2025/11/05/3181398/0/en/EUV-Mask-Blanks-Market-Size-to-Surpass-USD-689-06-Million-by-2032-CAGR-of-15-80-SNS-Insider.html)). DUV/optical blank TAM is roughly 2–3× larger but growing at a slower 5–7% CAGR, and HOYA's 70% share there generates the steady annuity that smooths IT-segment quarterly volatility ([reports/sector/半导体材料.md, Fig. 35–44](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)).
+
+The key industry inflection over 2026–30 — laid out by Nomura's anchor report — is that **GAA + High-NA EUV + BPD + 2.5D/3D advanced packaging + new substrate materials all roll out concurrently in 2027–30**, generating a one-time step-up in materials per wafer ([reports/sector/半导体材料.md, p. 4](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)). For EUV blanks specifically the implications are: (a) **High-NA EUV (2029–30 HVM)** requires defect specs ~2–3× tighter than NA 0.33; (b) **MOR (metal-oxide resist)** changes the absorber-layer and capping-layer materials, forcing a re-qualification cycle that HOYA is best positioned to lead; (c) **EUV layer count rises from ~7 per chip at 5 nm to ~15+ at 2 nm**, increasing per-wafer blank consumption disproportionately. Nomura's roadmap puts the materials-vendor "re-rating window" at 2026–30, exactly the window HOYA's capex programme is targeting ([reports/sector/半导体材料.md, p. 4–6, 18](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)).
+
+TSMC capex is the single largest catalyst — Nomura models TSMC capex rising from **~US$38 bn in 2024 to ~US$70 bn in 2027F (capex intensity ~50%)** as it ramps 2 nm and 1.6 nm HVM ([reports/sector/半导体材料.md, p. 13](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)). TSMC is also pushing **localisation of its supply chain**, raising Taiwan-local spare-parts sourcing from ~50% in 2017 to ~70% by 2030F and lifting overseas-fab (Arizona, Kumamoto, Dresden) local content from 0 to ~60%. That benefits Japan-domiciled HOYA at the Kumamoto fab directly and Taiwan-supplier names (AEMC, Kinik, Ingentec) at the Hsinchu cluster, but HOYA's global blank-share dominance means it captures all three regional ramps ([reports/sector/半导体材料.md, p. 12–14](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)).
+
+### 6.2 HDD storage — the AI-data-centre nearline supercycle
+
+The HDD industry consolidated into a **three-way oligopoly (Western Digital, Seagate, Toshiba)** in 2012 and has since stabilised at ~250 m units / year globally with revenue mix-shifting from consumer-PC drives to nearline (3.5-inch high-capacity) drives for data-centre storage. Western Digital holds **~52% nearline share** as of April 2026 ([Financial Content — AI storage supercycle: Western Digital, 2026-04](https://markets.financialcontent.com/stocks/article/finterra-2026-4-7-the-ai-storage-supercycle-a-deep-dive-into-the-new-western-digital-wdc)), with Seagate close behind and Toshiba a distant third. The technology roadmap is racing toward **HAMR (heat-assisted magnetic recording) at 30–50 TB per drive in 2025–27**, with **glass substrates becoming the standard for HAMR-era nearline drives** because thermal stability and thinness become limiting at higher platter counts ([Tom's Hardware — HDD roadmap: 100TB and zettabyte-scale, 2025](https://www.tomshardware.com/pc-components/hdds/high-capacity-hdd-roadmap-the-race-to-100tb-and-zettabyte-scale-storage-toshiba-seagate-and-wd-outline-three-distinct-strategies); [Semiconductorinsight — Precision glass HDD substrates for AI workloads](https://semiconductorinsight.com/blog/precision-glass-revolutionizes-hard-disk/)). HOYA is the only credible supplier of 3.5-inch glass substrates, making the HAMR transition a HOYA-specific re-rating event rather than a sector-wide one. The investor framing is that HOYA captures the **mix-shift premium** (per-drive glass-substrate dollar content rises from ~$1 per platter today to ~$2 per HAMR-era platter, and platter count per drive rises from 9 to 11+).
+
+### 6.3 Eyeglass lenses — the slow-compounding annuity
+
+The global spectacle-lens market reached **~US$45 bn in 2024**, growing at ~4–5% CAGR ([Mordor Intelligence — Spectacle Lens Market](https://www.mordorintelligence.com/industry-reports/spectacle-lens-market)). Growth drivers: (a) the global myopia epidemic — an estimated 5 billion people will be myopic by 2050 versus ~3 billion today, driven by increased near-work / screen time and reduced outdoor exposure ([HOYA Report 2024, p. 93](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf)); (b) ageing populations driving presbyopia and progressive-lens conversion; (c) rising disposable income in emerging Asia. The industry is dominated by **EssilorLuxottica (~50% global share via Essilor lenses + Luxottica retail)**, **Carl Zeiss Vision (~10%)**, **HOYA (~10%)**, with regional players (Nikon, Rodenstock, Shamir) below — see Section 7 ([Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/spectacle-lens-market)). The structural attraction is recurring demand (lenses replaced every 1–3 years) and pricing power on premium products (myopia-control, blue-light, photochromic).
+
+### 6.4 Medical endoscopes — a Japanese-incumbent duopoly under contamination-litigation pressure
+
+Global flexible-endoscope market: **~US$5.5–6 bn in 2024**, with **Olympus ~70% share, Fujifilm ~20%, Pentax (HOYA) ~10%** — the Japanese-incumbent triopoly that the rest of the world has been unable to crack ([Medical Design and Outsourcing — Hoya life care segment Big 100](https://www.medicaldesignandoutsourcing.com/2024-Medical-Design-and-Outsourcing-BIG-100/hoya-life-care-segment/)). The structural issue is **duodenoscope-related infection litigation post-2015** that has hit Olympus hardest (US$85 m DOJ settlement 2018) and Pentax of America ($43 m DOJ settlement) — but has indirectly accelerated R&D into single-use scopes (Boston Scientific's EXALT) and sterilisable scopes (HOYA's DEC™ duodenoscope) ([PR Newswire — PENTAX Medical FDA clearance, 2024-08](https://www.prnewswire.com/news-releases/pentax-medical-receives-fda-clearance-for-duodenoscope-with-new-sterilization-technology-in-collaboration-with-advanced-sterilization-products-302214258.html); [Sokolove Law — endoscopy lawsuit settlements](https://www.sokolovelaw.com/product-liability/medical-devices/endoscopy/)). Pentax's #3 share gives it the option to either (a) take share from Olympus's contamination-damaged brand, or (b) cede the franchise via slow attrition; the current strategy (factory consolidation + DEC™ premium positioning) suggests management is targeting margin discipline rather than share gain.
+
+### 6.5 Regulatory environment
+
+Each of HOYA's four industries faces a different regulatory regime. **Semiconductor materials** is largely export-controlled — US BIS rules on Chinese 14-nm-and-below fabs constrain which Chinese customers HOYA can ship leading-edge EUV blanks to, though most current Chinese demand is at older nodes (28 nm and above) where DUV blanks are unrestricted. **HDD glass substrates** are not export-controlled. **Eyeglass lenses + IOLs + endoscopes** are all FDA / PMDA / NMPA / CE-Mark-regulated medical devices; HOYA's Pentax Medical scopes have been the subject of multiple FDA recall actions (most recent: a Class 2 Pentax video colonoscope recall) and ongoing MAUDE adverse-event reports ([FDA MAUDE — Pentax Medical adverse event reports](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfMAUDE/detail.cfm?mdrfoi__id=17263023&pc=FDS)). **Chinese VBP (volume-based procurement)** is the most acute regulatory risk to the IOL business, having materially reset Chinese IOL pricing per the CEO ([HOYA FY26 Q2 Earnings Call Transcript, p. 7](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)).
+
+### 6.6 Industry dynamics: barriers / supplier power / substitutes
+
+- **Mask blanks** — extreme barriers to entry (15-year defect-rate learning curve, multi-year customer qualification), low supplier power for HOYA's inputs (synthetic quartz from Shin-Etsu Quartz / AGC; Mo and Si from commodity sources), very low substitute risk (no near-term alternative to EUV lithography for sub-5 nm logic).
+- **HDD glass substrates** — high barriers, low substitute risk for 3.5-inch nearline; some risk from cloud-storage architecture shifts (object storage on QLC SSDs at >30 TB).
+- **Eyeglass lenses** — moderate barriers (manufacturing scale + brand + optometrist channel), some substitute risk from refractive surgery (LASIK) and contact lenses, but secular myopia growth is the larger force.
+- **Medical endoscopes** — high regulatory barriers, moderate substitute risk from single-use scopes (Ambu, Boston Scientific) and the longer-tail capsule-endoscopy threat (Medtronic PillCam).
+
+---
+
+## 7. Competitive landscape (700–1,000 words)
+
+HOYA's competitive position is best understood as **four separate competitive positions**, each in a different industry, that the equity market re-bundles into a single P/E multiple. The strength of the company's overall position is anchored by the EUV mask-blank share — every other position is a derivative or a hedge.
+
+### 7.1 EUV mask blanks — HOYA vs Shin-Etsu Chemical vs AGC
+
+The merchant EUV-blank market today is effectively **HOYA + Shin-Etsu Chemical + AGC**. Nomura's anchor share split is **HOYA ~80% / Shin-Etsu ~20% / AGC small commercial volumes** ([reports/sector/半导体材料.md, Fig. 38–39](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)). Third-party industry-survey sources sometimes show AGC as larger (~30–40%) — these higher AGC numbers usually count DUV blanks alongside EUV; the EUV-only split is more concentrated on HOYA than the all-blanks split ([Business Research Insights — EUV Mask Blanks Market, 2025](https://www.businessresearchinsights.com/market-reports/euv-mask-blanks-market-104950)).
+
+**Shin-Etsu Chemical** is HOYA's only credible Tier-1 competitor in EUV blanks. Shin-Etsu's Electronics Materials business sells photomask blanks alongside its photoresist franchise (where it competes with JSR / TOK / Fujifilm) and its Shin-Etsu Quartz subsidiary supplies the synthetic-fused-silica substrates used by every blank maker including HOYA — meaning Shin-Etsu is simultaneously a competitor (in blanks) and a supplier (of the upstream substrate) ([Shin-Etsu Chemical — Photomask blanks product page](https://www.shinetsu.co.jp/en/products/electronics-and-functional-materials-business/photomask-blanks/)). This dynamic constrains Shin-Etsu's appetite to aggressively undercut HOYA: a price war in blanks would jeopardise the higher-margin quartz substrate business. The historical pattern has been that Shin-Etsu holds the **lower-node and second-source** position (where defect tolerance is slightly looser) and HOYA holds the **leading-node, single-source** position (where defect tolerance is at the limit). Customer diversification pressure is real — fabs would prefer not to be single-sourced — but the qualification cycle and the defect-rate learning curve are real and slow ([Semiconductor Engineering — EUV Mask Blank Battle Brewing](https://semiengineering.com/euv-mask-blank-biz-heats-up/)).
+
+**AGC Inc. (Asahi Glass)** has been pursuing the EUV blank market for over a decade through its Electronics segment, but at smaller commercial volumes; third-party data attributes ~40% blanks share to AGC ([Intel Market Research — EUV Mask Blanks Market 2025-2032](https://www.intelmarketresearch.com/euv-mask-blanks-market-11463)). *Analyst view:* the higher AGC numbers reflect aggregate all-blank volumes and second-source qualifications at slightly older nodes; AGC's leading-node EUV blank share is much smaller, and HOYA's defect-rate advantage at 3 nm and 2 nm remains the bottleneck the competitor has not closed.
+
+### 7.2 Optical / DUV photomask blanks — HOYA vs Shin-Etsu vs AGC vs LG Innotek
+
+DUV blanks are a higher-volume, more-commoditised business; HOYA's ~70% share reflects 30+ years of incumbency rather than current technology lead. Switching costs are real (~9-month re-qualification) but pricing pressure is more meaningful than in EUV. *Analyst view:* the DUV business is best modelled as a high-cash-generating annuity, not a growth engine.
+
+### 7.3 HDD glass substrates — HOYA vs Ohara
+
+In 3.5-inch (data-centre) glass substrates HOYA holds ~100% share; Ohara Inc. (Japan) is the only meaningful alternative supplier with a small footprint in older-generation substrates. The competitive risk is not a substitute supplier but the **glass-vs-aluminium** decision made by each HDD OEM — Showa Denko (now Resonac) supplies aluminium substrates that compete on cost. The Q2 FY26 commentary makes clear HOYA cannot price-raise aggressively because aluminium-substrate alternatives bound the upside ([HOYA FY26 Q2 Earnings Call Transcript, pp. 23–24](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)).
+
+### 7.4 Eyeglass lenses — HOYA vs EssilorLuxottica vs Carl Zeiss Vision
+
+The global spectacle-lens league: **EssilorLuxottica #1 (~50% share via Essilor lenses + retail control)**, **Carl Zeiss Vision #2 (~10%)**, **HOYA #3 (~10%)**, then Nikon-Essilor, Rodenstock, Shamir, regional brands ([Mordor Intelligence — Spectacle Lens Market](https://www.mordorintelligence.com/industry-reports/spectacle-lens-market); [Eyewearglobo — Top eyeglass lens manufacturers 2025](https://www.eyewearglobo.com/the-12-top-eyeglass-lens-manufacturers-leading-the-global-market-in-2025/)). HOYA differentiates on **MiYOSMART myopia management** (D.I.M.S. defocus optics, paediatric indication) and on the Pentax / Seiko brand premium in Japan-influenced markets. *Analyst view:* HOYA cannot challenge Essilor's vertical-integration moat (Essilor controls retail) but can grow MiYOSMART and premium photochromic / blue-light segments faster than the underlying market.
+
+### 7.5 Medical endoscopes — HOYA's Pentax vs Olympus vs Fujifilm
+
+Olympus dominates flexible gastrointestinal endoscopes globally (~70% share). Fujifilm Medical Systems is #2 (~20%) and Pentax Medical is #3 (~10%). The post-2015 duodenoscope contamination litigation cycle hit Olympus hardest (US DOJ settlement $85 m + ongoing class-action exposure) and Pentax Medical second (US DOJ $43 m). HOYA's strategic differentiator is the **DEC™ Duodenoscope** sterilisation-compatible design — the first GI endoscope cleared by FDA for hydrogen-peroxide-gas-plasma sterilisation via STERRAD ([PR Newswire — PENTAX Medical FDA clearance, 2024-08](https://www.prnewswire.com/news-releases/pentax-medical-receives-fda-clearance-for-duodenoscope-with-new-sterilization-technology-in-collaboration-with-advanced-sterilization-products-302214258.html)).
+
+### 7.6 Intraocular lenses — HOYA Surgical Optics vs Alcon vs J&J Vision vs Bausch + Lomb
+
+The global IOL market is dominated by **Alcon (Novartis spin-off, ~40% share)**, **J&J Vision (~15%)**, **Bausch + Lomb (~10%)**, **HOYA Surgical Optics (~10%)** plus regional players. HOYA's hydrophobic IOL product family (Vivinex, iSert) competes on injector ease-of-use and is the share-leader in Japan. Chinese VBP has materially compressed pricing across the segment and is the dominant near-term headwind ([HOYA FY26 Q2 Earnings Call Transcript, p. 7](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)).
+
+### 7.7 Peer valuation context
+
+HOYA's trailing P/E of ~35× sits between EssilorLuxottica's ~38.8× and Carl Zeiss Meditec's ~26.2× — both ophthalmic / health-care peers — and well above the medical-devices industry median of ~25.8× ([Gurufocus — EssilorLuxottica P/E TTM, 2026-03](https://www.gurufocus.com/term/pettm/ESLOY); [Wisesheets — Carl Zeiss Meditec P/E TTM](https://www.wisesheets.io/pe-ratio/AFX.DE)). On a P/S basis HOYA's 9.3× is well above EssilorLuxottica's ~3.5× and Carl Zeiss Meditec's ~3.0× — the gap is best explained by HOYA's segment-mix premium (Information Technology contributes ~65% of profit at 50%+ margins) rather than Life Care fundamentals.
+
+![HOYA peer P/E comparison](../../charts/hoya_peer_pe.png)
+*Source: P/E data per [Stockanalysis.com — TYO:7741](https://stockanalysis.com/quote/tyo/7741/statistics/), [Gurufocus — EssilorLuxottica](https://www.gurufocus.com/term/pettm/ESLOY), [Wisesheets — Carl Zeiss Meditec](https://www.wisesheets.io/pe-ratio/AFX.DE), accessed 2026-05. Olympus and Nikon peer P/Es per Yahoo Finance Japan, accessed 2026-05.*
+
+---
+
+## 8. Market opportunity / TAM (500–700 words)
+
+### 8.1 SAM by product family — HOYA's actual addressable dollars
+
+| Product family | 2025 SAM (US$ bn) | 2025 HOYA share | Growth CAGR 2025–30F | HOYA's 2030F revenue capture (US$ bn, est.) |
+|---|---:|---:|---:|---:|
+| EUV mask blanks | ~0.37 | ~80% | ~16% | ~0.6–0.7 |
+| Optical / DUV photomask blanks | ~0.9 | ~70% | ~5–7% | ~0.9 |
+| FPD photomasks | ~0.5 | ~25–30% | ~3–5% | ~0.2 |
+| HDD glass substrates (incl. HAMR mix) | ~0.6 | ~100% in 3.5"; ~40% in 2.5" | ~8–10% (HAMR ramp) | ~0.9 |
+| Eyeglass lenses (global wholesale) | ~45 | ~10% | ~4–5% | ~5.5 |
+| Intraocular lenses | ~5 | ~10% | ~4–6% | ~0.65 |
+| Medical flexible endoscopes | ~6 | ~10% | ~5–7% | ~0.85 |
+| Optical lenses + glass material (industrial / inspection) | ~3 | n.m. | ~6–8% | ~0.4 |
+
+*Sources: EUV blank market — [SNS Insider — EUV Mask Blanks to surpass USD 689M by 2032, 2025-11](https://www.globenewswire.com/news-release/2025/11/05/3181398/0/en/EUV-Mask-Blanks-Market-Size-to-Surpass-USD-689-06-Million-by-2032-CAGR-of-15-80-SNS-Insider.html); DUV mask blank market — [reports/sector/半导体材料.md](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md); HDD glass substrate — analyst estimate from [HOYA Report 2024, p. 103](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf) + [Tom's Hardware — HDD roadmap, 2025](https://www.tomshardware.com/pc-components/hdds/high-capacity-hdd-roadmap-the-race-to-100tb-and-zettabyte-scale-storage-toshiba-seagate-and-wd-outline-three-distinct-strategies); spectacle lens TAM — [Mordor Intelligence — Spectacle Lens Market](https://www.mordorintelligence.com/industry-reports/spectacle-lens-market); IOL + endoscope TAMs — analyst estimate from industry survey data + HOYA share inference; FPD photomasks — analyst estimate.*
+
+### 8.2 The Information Technology segment growth story
+
+The strongest TAM-times-share-times-margin equation HOYA owns is **EUV mask blanks plus HDD glass substrates**. EUV blanks are growing 15%+ on Nomura's projection through 2030; HOYA's 80% share converts almost the entire growth into HOYA revenue, and HOYA's 50%+ segment-OPM (per Q2 FY26) converts that revenue into very high incremental profit. HDD glass substrates are inflecting from a slow secular decline back to growth as HAMR drives glass-substrate adoption, and HOYA captures both the **volume tailwind** (more drives shipped) and the **mix tailwind** (more platters per drive + higher ASP per platter). The combination is the reason the IT segment delivered 36% revenue growth in FY25 and the reason the market is paying a 50× implied P/E on segment earnings.
+
+Outside EUV blanks and HDD glass, the IT-segment opportunities are smaller: FPD photomasks are share-constrained (HOYA at ~25–30%), DUV blanks are growth-constrained (~5–7%), Imaging is volatile, and the Chongqing FPD plant is a defensive China-local-content play more than a growth driver.
+
+### 8.3 The Life Care segment growth story
+
+Eyeglass lenses are HOYA's largest revenue line and grow ~4–5% per year in line with the underlying spectacle-lens market, with **MiYOSMART providing a premium-product growth kicker** in markets that secure paediatric reimbursement (France in 2025; analyst expectations for additional European markets through 2026–27). IOLs face Chinese VBP price pressure but should resume mid-single-digit growth as the segment normalises. Endoscope revenue is structurally challenged but management's restructuring should restore margin by FY27 Q4 per CEO guidance ([HOYA FY26 Q2 Earnings Call Transcript, p. 21](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)).
+
+### 8.4 What an investor is actually buying
+
+Modelling FY30F at a base-case **5% Life Care + 12% IT CAGR from FY25** gives **Group revenue of ~¥1.4 trn (~US$9 bn)** and — at sustained 30% Group operating margin — **operating profit of ~¥420 bn vs FY25 ¥256 bn**. The IT segment alone would be ~¥550 bn revenue / ~¥290 bn segment-pre-tax profit, justifying a stand-alone enterprise value of ~¥6–7 trn (at 25× IT-segment pre-tax) — which against HOYA's current ¥8.3 trn EV implies the rest of the Group is being valued at ~¥1–2 trn, i.e. ~1.5–3× sales for the Life Care + Imaging + Other revenue. That ratio is broadly consistent with where European optical / device peers trade, suggesting the current multiple is **richer than fundamentals justify** unless the IT-segment growth materially exceeds the base case.
+
+---
+
+## 9. Risk assessment (600–900 words)
+
+### Company-specific risks
+
+**1. Customer concentration in the IT segment.** HOYA disclosed for the first time in FY25 that a single customer group (almost certainly TSMC + captive mask shop, per analyst inference) contributed >10% of consolidated revenue at **¥92.8 bn (10.7%)**, up from ¥54.8 bn (7.2%) in FY24 ([HOYA FY25 IFRS Financial Statements, p. 34](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf)). The top-5 IT-segment customer share is plausibly 35–45% of IT revenue (13–16% of Group). **If TSMC slows leading-edge capex** (e.g. AI demand cools, US-China decoupling forces a Kumamoto-fab capex deferral) HOYA's IT-segment growth could decelerate to mid-single-digit overnight. **Severity: material**, given top-1 share is now over 10%.
+
+**2. Shin-Etsu Chemical or AGC closes the EUV defect-rate gap.** Customers actively seek a second source; if Shin-Etsu's leading-node defect rate converges with HOYA's at 2 nm, HOYA could lose 5–10 percentage points of EUV share over 2–3 years. **Severity: high but slow-moving** — the qualification cycle gives early warning. Mitigant: HOYA's capex ahead of demand and its own next-generation absorber-material development for high-NA EUV ([HOYA Report 2024, p. 102](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf)).
+
+**3. HDD glass-substrate growth disappoints.** The thesis is that HAMR drives universal glass-substrate adoption across all OEMs at >30 TB drive capacities. Counter-risks: (a) one of WD/Seagate/Toshiba reverts to aluminium for cost reasons; (b) cloud-storage architecture shifts to QLC SSD at >30 TB earlier than expected; (c) HAMR ramp itself is slower than the current 2026–27 expectation. The CEO has been candid that pricing power is capped by aluminium-substrate competition ([HOYA FY26 Q2 Earnings Call Transcript, p. 24](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)). **Severity: moderate**.
+
+**4. Pentax Medical endoscope litigation tail.** Pentax of America has already settled a $43 m DOJ matter for misbranded endoscopes / failure to timely report infections, and ongoing MAUDE adverse-event reports continue to surface contamination-related incidents ([Sokolove Law — endoscopy lawsuit settlements](https://www.sokolovelaw.com/product-liability/medical-devices/endoscopy/); [FDA MAUDE — Pentax Medical reports](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfMAUDE/detail.cfm?mdrfoi__id=17263023&pc=FDS)). The new DEC™ duodenoscope reduces forward risk but legacy-scope litigation could continue. **Severity: moderate (financial impact bounded; reputational drag).**
+
+**5. Cybersecurity / IT-disruption risk.** The Hunters International ransomware attack of March 2024 disrupted Vision Care order processing for ~4 weeks at multiple lens labs ([Bleeping Computer — Hoya $10M ransomware demand, 2024-04](https://www.bleepingcomputer.com/news/security/optics-giant-hoya-hit-with-10-million-ransomware-demand/)). A recurrence at a critical Electronics fab (Akishima EUV blank fab) would be catastrophic for global EUV supply for ~2–6 weeks before a back-up qualified blank could be sourced. **Severity: high impact, low frequency.**
+
+**6. Transfer-pricing tax litigation overhang.** HOYA carries **¥20.5 bn of paid-in-advance amounts** classified as suspense payments related to multi-year Tokyo Regional Taxation Bureau transfer-pricing reassessments for FY2007–18; the Tokyo District Court has partly cancelled the earliest assessments but the company is still litigating the remainder ([HOYA FY25 IFRS Financial Statements, pp. 4, 18](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf)). **Severity: low-moderate** (capped at the already-paid amounts; ongoing legal uncertainty).
+
+### Industry / market risks
+
+**7. AI-driven semiconductor capex cycle peaks.** The entire IT-segment thesis assumes TSMC capex rises to ~US$70 bn by 2027 and stays elevated through 2030. A material AI infrastructure pause (cloud capex reset, sovereign-AI cancellation, generative-AI demand disappointment) would reset leading-edge capacity buildout and pressure HOYA's EUV blank volumes. **Severity: high**, since this is the master assumption underlying the multiple.
+
+**8. Chinese semiconductor / display localisation succeeds in blanks.** Chinese government policy is pushing local supply of every semiconductor-materials category. If a Chinese blank maker (e.g. an SMIC-affiliated venture, a Hubei Feilihua Quartz play) achieves Tier-2 EUV qualification by 2030, it could erode HOYA's share in the China-foundry slice of the market. **Severity: moderate**, but the timeline is long.
+
+**9. Chinese IOL Volume-Based Procurement / regulatory pricing expansion.** Already material for IOLs per Q2 FY26 commentary; could extend to other medical-device categories where HOYA has Chinese exposure. **Severity: moderate**.
+
+### Financial risks
+
+**10. Valuation / multiple-compression risk.** HOYA's trailing P/E is **~35× vs medical-devices industry median ~25.8×** and the stock is up **+52% over the trailing 52 weeks** ([Yahoo Finance — 7741.T, accessed 2026-05](https://finance.yahoo.com/quote/7741.T/); [Stockanalysis.com — TYO:7741](https://stockanalysis.com/quote/tyo/7741/statistics/)). De-rate triggers include a TSMC capex cut, a Shin-Etsu share-grab announcement, an HDD glass-substrate volume disappointment, a Pentax Medical litigation surprise, or simple AI-sector multiple compression. *Analyst view:* a 25–30% multiple compression to a 24–26× P/E would be consistent with sector mean-reversion and is the largest single near-term downside. **Severity: material**.
+
+**11. FX translation exposure.** HOYA reports in JPY but generates the majority of revenue overseas (USA ¥129 bn, Singapore ¥102 bn, China ¥81 bn, plus residual "Other" of ¥310 bn — i.e. ~79% of FY25 revenue is non-JPY). A material JPY strengthening would compress reported revenue and operating profit. **Severity: low-moderate**, partly offset by overseas manufacturing cost base.
+
+### Macroeconomic risks
+
+**12. Geopolitical export-control escalation.** US BIS rules expanded several times in 2022–24 to restrict semiconductor-equipment and materials shipments to Chinese sub-14nm fabs. A further expansion to cover DUV blanks or HDD glass substrates would not be HOYA's largest exposure (China is only 9.3% of revenue) but would still be material for the IT-segment growth story. **Severity: moderate**.
+
+![HOYA capital return history (dividends + buybacks)](../../charts/hoya_capital_return.png)
+*Source: dividend and buyback data per [HOYA FY25 IFRS Consolidated Financial Statements, p. 11](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf) and FY24 / FY23 / FY22 prior reports; [MarketScreener — HOYA ¥100 bn buyback announcement](https://www.marketscreener.com/news/hoya-corporation-announces-an-equity-buyback-for-6-200-000-shares-representing-1-81-for-100-000-m-ce7c51d3dd89f02d/). The persistently aggressive buyback-and-cancel programme is the principal mitigant against valuation risk — every ¥100 bn of share retirement at current price reduces share count by ~1.1% and lifts EPS commensurately.*
+
+---
+
+## 10. References
+
+**Primary filings (HOYA Corporation):**
+- [HOYA Corporation FY25 Consolidated Financial Statements under IFRS — for the year ended 31 March 2025](https://www.hoya.com/wp-content/uploads/2025/07/Annual-Report-Final-2.pdf)
+- [HOYA Report 2024 (Integrated Report, fiscal year ended 31 March 2024)](https://www.hoya.com/ir/2024/en/common/files/review2024.pdf)
+- [HOYA FY26 Q2 Earnings Call Transcript (quarter ended 30 September 2025), dated 2025-10-31](https://www.hoya.com/wp-content/uploads/2025/11/FY25-Q2-Earnings-Call-Transcript_E.pdf)
+- [HOYA company profile page, accessed 2026-05](https://www.hoya.com/en/company/profile/)
+- [HOYA company history page, accessed 2026-05](https://www.hoya.com/en/company/history/)
+- [HOYA Leadership / Directors page, accessed 2026-05](https://www.hoya.com/en/company/directors/)
+- [HOYA Life Care business page, accessed 2026-05](https://www.hoya.com/en/business/lifecare/)
+- [HOYA Information Technology business page, accessed 2026-05](https://www.hoya.com/en/business/)
+- [HOYA FY25 Yuho (有価証券報告書) 第87期 — 2025-06-05 EDINET filing](https://irbank.net/E01124/S100VW2P)
+
+**Sector / industry research:**
+- [Nomura Greater China Semi 2026–30F report, 2026-05-21 — locally OCR'd anchor reference at reports/sector/半导体材料.md](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)
+- [SNS Insider — EUV Mask Blanks Market to surpass USD 689M by 2032, 2025-11](https://www.globenewswire.com/news-release/2025/11/05/3181398/0/en/EUV-Mask-Blanks-Market-Size-to-Surpass-USD-689-06-Million-by-2032-CAGR-of-15-80-SNS-Insider.html)
+- [Business Research Insights — EUV Mask Blanks Market, 2025](https://www.businessresearchinsights.com/market-reports/euv-mask-blanks-market-104950)
+- [Intel Market Research — EUV Mask Blanks Market Outlook 2025-2032](https://www.intelmarketresearch.com/euv-mask-blanks-market-11463)
+- [Karim Almansour Substack — On Mask Blanks and the Substrate Sovereigns of Advanced Lithography, 2024](https://karimalmansour.substack.com/p/on-mask-blanks-and-the-substrate)
+- [Semiconductorinsight — HOYA Expands EUV Photomask Blank Capabilities, 2025](https://semiconductorinsight.com/blog/hoya-expands-euv-photomask-blank-capabilities-strengthening-global-semiconductor-supply-chain/)
+- [Semiconductorinsight — Precision Glass Revolutionizes Hard Disk Drive Substrates for AI Workloads, 2026](https://semiconductorinsight.com/blog/precision-glass-revolutionizes-hard-disk/)
+- [Tom's Hardware — High-capacity HDD roadmap (Toshiba, Seagate, WD), 2025](https://www.tomshardware.com/pc-components/hdds/high-capacity-hdd-roadmap-the-race-to-100tb-and-zettabyte-scale-storage-toshiba-seagate-and-wd-outline-three-distinct-strategies)
+- [Financial Content — Western Digital AI Storage Supercycle, 2026-04](https://markets.financialcontent.com/stocks/article/finterra-2026-4-7-the-ai-storage-supercycle-a-deep-dive-into-the-new-western-digital-wdc)
+- [Mordor Intelligence — Spectacle Lens Market](https://www.mordorintelligence.com/industry-reports/spectacle-lens-market)
+- [Eyewearglobo — 12 Top Eyeglass Lens Manufacturers 2025](https://www.eyewearglobo.com/the-12-top-eyeglass-lens-manufacturers-leading-the-global-market-in-2025/)
+- [Medical Design and Outsourcing — Hoya Life Care Segment Big 100, 2024](https://www.medicaldesignandoutsourcing.com/2024-Medical-Design-and-Outsourcing-BIG-100/hoya-life-care-segment/)
+
+**Competitor sources:**
+- [Shin-Etsu Chemical — Photomask blanks product page](https://www.shinetsu.co.jp/en/products/electronics-and-functional-materials-business/photomask-blanks/)
+- [PR Newswire — Western Digital to acquire HOYA magnetic media operations](https://www.prnewswire.com/news-releases/western-digitalr-to-acquire-hoyas-magnetic-media-operations-92263279.html)
+
+**Market data and valuation:**
+- [Stockanalysis.com — TYO:7741 Valuation Statistics, accessed 2026-05](https://stockanalysis.com/quote/tyo/7741/statistics/)
+- [Yahoo Finance — HOYA Corporation (7741.T) Key Statistics, accessed 2026-05](https://finance.yahoo.com/quote/7741.T/key-statistics/)
+- [Yahoo Finance — 7741.T price and history, accessed 2026-05](https://finance.yahoo.com/quote/7741.T/)
+- [Gurufocus — EssilorLuxottica P/E TTM, 2026-03](https://www.gurufocus.com/term/pettm/ESLOY)
+- [Wisesheets — Carl Zeiss Meditec P/E TTM](https://www.wisesheets.io/pe-ratio/AFX.DE)
+
+**Cybersecurity / governance / litigation:**
+- [Bleeping Computer — Optics giant Hoya hit with $10M ransomware demand, 2024-04](https://www.bleepingcomputer.com/news/security/optics-giant-hoya-hit-with-10-million-ransomware-demand/)
+- [SecurityWeek — Lens Maker Hoya Scrambling to Restore Systems Following Cyberattack, 2024-04](https://www.securityweek.com/lens-maker-hoya-scrambling-to-restore-systems-following-cyberattack/)
+- [Sokolove Law — Endoscopy Lawsuit Settlements 2026](https://www.sokolovelaw.com/product-liability/medical-devices/endoscopy/)
+- [PR Newswire — PENTAX Medical FDA Clearance for Duodenoscope with new sterilization technology, 2024-08](https://www.prnewswire.com/news-releases/pentax-medical-receives-fda-clearance-for-duodenoscope-with-new-sterilization-technology-in-collaboration-with-advanced-sterilization-products-302214258.html)
+- [FDA MAUDE Adverse Event Report — HOYA Pentax video upper GI scope](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfMAUDE/detail.cfm?mdrfoi__id=17263023&pc=FDS)
+
+**Capital return / corporate actions:**
+- [The Globe and Mail / TipRanks — HOYA ends ¥100 bn buyback and cancels 1.06% of shares, 2025](https://www.theglobeandmail.com/investing/markets/markets-news/Tipranks/1638099/hoya-ends-yen100-billion-buyback-and-cancels-1-06-of-its-shares/)
+- [PR Newswire — HOYA, Seiko and Epson optical-products agreements, 2013](https://www.prnewswire.com/news-releases/hoya-seiko-and-epson-agreements-executed-in-the-field-of-optical-products-business-179637771.html)
+- [Companies History — Hoya entry](https://www.companieshistory.com/hoya/)
+
+**Management bios:**
+- [Bloomberg — Eiichiro Ikeda profile](https://www.bloomberg.com/profile/person/18799019)
+- [Equilar ExecAtlas — Eiichiro Ikeda](https://people.equilar.com/bio/person/eiichiro-ikeda-hoya-corporation/39560383)
+
+---
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**Scope and method.** All URLs cited inline above were either (a) directly fetched and parsed in this session via WebFetch (annual report PDF, Q2 FY26 transcript PDF), (b) returned by WebSearch from the original publisher domain, or (c) sourced from the locally cached anchor report at `reports/sector/半导体材料.md` (Nomura Greater China Semi 2026-30F, OCR'd locally). Filing-level claims (revenue, segment splits, customer-concentration disclosure, audit-opinion language) are all anchored to the FY25 IFRS Consolidated Financial Statements PDF directly fetched and parsed via PyMuPDF.
+
+**Filing spot-checks (FY25 IFRS Consolidated Financial Statements, accessed 2026-05-26):**
+- Group sales ¥866,032 m ✓ (p. 9 Consolidated Statement of Comprehensive Income)
+- Profit before tax ¥259,965 m ✓ (p. 9)
+- Life Care revenue ¥550,912 m ✓ (p. 32 segment table)
+- Information Technology revenue ¥311,097 m ✓ (p. 32)
+- Electronics-related revenue ¥265,171 m ✓ (p. 33 sub-product breakdown)
+- Imaging-related revenue ¥45,927 m ✓ (p. 33)
+- Health Care revenue ¥417,735 m ✓ (p. 33)
+- Medical revenue ¥133,177 m ✓ (p. 33)
+- IT-segment pre-tax profit ¥170,373 m ✓ (p. 32)
+- Capex ¥60,918 m ✓ (p. 32)
+- Cash & equivalents ¥533,967 m ✓ (p. 7 Statement of Financial Position)
+- Treasury share acquisitions ¥150,007 m + cancellations ¥97,934 m in FY25 ✓ (p. 11 Statement of Changes in Equity)
+- Dividends ¥110 / share ✓ (p. 11)
+- Top customer-group disclosure: ¥92,776 m / 10.7% of revenue ✓ (p. 34)
+- Geographic mix (Japan ¥182,787 m; USA ¥129,175 m; Singapore ¥102,197 m; China ¥80,644 m; Korea ¥60,748 m; Others ¥310,481 m) ✓ (p. 34)
+- Transfer-pricing suspense payments ¥7,916 m + ¥4,544 m + ¥8,000 m ✓ (p. 4 audit Key Audit Matter)
+- Employee benefits expense ¥211,595 m ✓ (p. 9)
+
+**Q2 FY26 earnings call transcript spot-checks (HOYA FY26 Q2 transcript, dated 2025-10-31):**
+- Group Q2 revenue ¥234.5 bn (+9%) ✓ (p. 2)
+- Group Q2 operating profit ¥70.2 bn (+7%) ✓ (p. 2)
+- Life Care Q2 revenue ¥146.9 bn / OPM 17.6% ✓ (p. 3)
+- IT Q2 revenue ¥86.5 bn / OPM 53.1% ✓ (p. 9)
+- "Both EUV and DUV performed exceptionally well, with both products achieving double-digit growth" — EUV / DUV quote ✓ (p. 10)
+- HDD substrate +4% Q2 / nearline 3.5" double-digit ✓ (p. 12)
+- Q2 FY26 interim dividend ¥125 (40% of 1H profit) ✓ (p. 14)
+- Kioxia stake fully sold; proceeds funding buyback ✓ (p. 20)
+- Endoscope restructuring 70–80% decisions complete; tangible impact by Q4 FY27 ✓ (p. 21)
+- FY26 capex ¥55 bn; 60–70% to IT segment ✓ (p. 23)
+- HDD price-passing limited by aluminium-substrate competition ✓ (pp. 23–24)
+
+**Analyst-view sentences (intentionally not cited to a primary filing — sell-side framings):**
+- Section 1: "the premium is best understood not as Life Care commanding it" valuation framing — labeled *Analyst view*, supported by industry observation + comparable peer P/Es.
+- Section 4.3 / 4.4 / 4.6 / 4.8 / 4.9: every moat assessment uses the `*Analyst view:* — moat assessment:*` label, with closest-competitor product cross-referenced to the competitor's own page (Shin-Etsu Chemical, EssilorLuxottica, Olympus etc.) rather than to HOYA's filing.
+- Section 5: top-5 IT-segment customer estimate of 35–45% explicitly flagged as analyst inference; only the disclosed ≥10% customer group is attributed to the FY25 IFRS statement.
+- Section 7.1: characterisation of AGC's EUV share as "lower than third-party DUV-blank-inclusive figures suggest" labeled *Analyst view*.
+- Section 8.4: FY30F revenue / OPM model labeled as analyst projection, built on HOYA's disclosed FY25 segment split + Nomura's industry-CAGR assumptions.
+
+**URLs checked:** filings (HOYA wp-content PDFs + Yahoo finance disclosure portal) confirmed live. WebFetch retrieved annual-report PDF (1.2 MB) and Q2 transcript PDF (2.5 MB) successfully on 2026-05-26. EDINET-listed Yuho via irbank.net resolves to the 87期 disclosure dated 2025-06-05. Third-party industry-research URLs (SNS Insider, Karim Almansour Substack, Tom's Hardware, Mordor Intelligence) returned content on 2026-05-26 search.
+
+**Residual unknowns / not yet verified:**
+- HOYA does not publicly disclose unit-level EUV blank volumes or share; the 80% / 70% share figures from Nomura's anchor report are sell-side estimates, labeled as such throughout the body. Third-party survey sources (Business Research Insights, Intel Market Research, SNS Insider) sometimes cite different splits — these alternative shares are sometimes higher for AGC because they bundle all blank technologies; the EUV-specific concentrate on HOYA is repeatedly emphasised by Nomura and by the HOYA Report 2024 itself ("the only company that can supply mask blanks compatible with EUV technology for cutting-edge logic semiconductors of the 3 nm generation").
+- The identity of the ≥10% customer group is inferred (TSMC + captive mask shop) but not disclosed in the filing; the customer-concentration inference is labeled accordingly.
+- CEO Ikeda's individual shareholding is not disclosed because it is below the Japanese individual-director-disclosure threshold; the report notes the absence rather than fabricating a number.
+- HOYA's chart-data scripts that produced the seven `hoya_*.png` PNGs were generated by a prior agent during the same task; the underlying data has been re-attributed in this revision to the FY25 IFRS statements + Nomura sector report + public peer-comparison sources.
+
+</details>
+
 
