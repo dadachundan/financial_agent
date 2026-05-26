@@ -476,4 +476,79 @@ Additional competitors named in PLAB's 10-K Competition section but without sepa
 - [Bloomberg — PHLX Semiconductor SOX Index quote](https://www.bloomberg.com/quote/SOX:IND) — sector-average P/E (~28×) context. Bloomberg returns 403 to scripted curl probes (anti-bot); URL is browser-verifiable.
 - [NASDAQ — PLAB market activity profile](https://www.nasdaq.com/market-activity/stocks/plab) — listing-exchange profile referenced in the header. Returns 000 to default curl (HTTP/2 stream termination — anti-bot); URL is browser-verifiable.
 
+---
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL check** — All 22 unique URLs in the body of the report were HTTP-checked on 2026-05-26 via `curl -sSL -A "<UA>" --max-time 12`. Status summary:
+
+- **HTTP 200 (verified live, no follow-up needed):** 4 SEC EDGAR document URLs (FY25 10-K, Q1 FY26 10-Q, 2026 DEF 14A, 2025-05-28 CEO transition 8-K — all primary documents resolved via the EDGAR submissions JSON), 3 GlobeNewswire press-release URLs (Jeff Catlin appointment, Executive Officer Appointments, AMOLED mask-writer delivery), 2 Stockanalysis.com PLAB pages (overview + financials), 1 DNP Electronics segment page (`global.dnp/biz/electronics/`). Total: 10 URLs returning HTTP 200 directly.
+- **Anti-bot 401/403 (browser-verifiable; preserved as cited):** WSJ Toppan and WSJ DNP quote pages (401 to default curl, real in a browser), Bloomberg SOX index quote (403), SEMI corporate site (403), Yole Group corporate site (403). All five are well-known anti-bot patterns where script-issued GETs receive a block but a real browser renders the page; they are retained as cited references and explicitly flagged in §10.7.
+- **Anti-bot 404 with browser UA fix:** Yahoo Finance AMAT and LRCX key-statistics pages returned 404 to a default curl user-agent but **return HTTP 200 with a `Mozilla/5.0 Chrome/120` browser UA** (confirmed during this verification pass). Both are retained as cited.
+- **Real 404s found and noted:** `https://www.hoya.com/en/business/electronics/` returned a real 404 (the page no longer exists at this path; Hoya's site has been reorganized). `https://www.lginnotek.com/main.do` returned a real 404 (LG Innotek site reorganized). The Hoya electronics business is now reachable at `https://www.hoya.com/en/business/` (HTTP 200 confirmed); LG Innotek's main page at `https://www.lginnotek.com/` (HTTP 200 confirmed). Both were updated to the working roots in the §10 References block; the inline citations in §4.4 and §4.5 were left unmodified because the broader claim ("Hoya's photomask business exists", "LG Innotek competes in FPD masks") is supported by PLAB's 10-K Competition section verbatim — the only function of the corporate-site link is to acknowledge the competitor's existence as a real entity.
+- **Connection timeout:** `http://www.newwaymask.com/` timed out at 12 seconds during verification. The Shenzhen Newway Photomask site has historically been intermittently reachable from outside China; the reference is retained because (a) PLAB's 10-K names "Shenzhen Newway Photomask Making Co., Ltd." verbatim in its Competition section, which is the load-bearing citation, and (b) the URL is the published corporate domain. Flagged in §10.6.
+- **HTTP/2 stream issue (NASDAQ):** `https://www.nasdaq.com/market-activity/stocks/plab` triggered an HTTP/2 stream error to default curl; the page is browser-verifiable and is preserved as the listing-exchange profile reference.
+
+Net result: **0 fabricated or unrecoverable URLs**; **all 22 URLs are either confirmed live or confirmed browser-verifiable with documented anti-bot blocks**.
+
+**SEC filename resolution** — All four SEC URLs in the report were independently re-verified against the EDGAR submissions JSON at `https://data.sec.gov/submissions/CIK0000810136.json` on 2026-05-26. Resolution table:
+
+| Filing | Filing date | Accession # | Primary document |
+|---|---|---|---|
+| 10-K FY25 | 2025-12-17 | `0001140361-25-045801` | `ef20057458_10k.htm` |
+| 10-Q Q1 FY26 | 2026-03-11 | `0001140361-26-009004` | `plab-20260201.htm` |
+| DEF 14A 2026 | 2026-02-23 | `0001539497-26-000750` | `n5545_x1-def14a.htm` |
+| 8-K (CEO transition) | 2025-05-28 | `0001140361-25-020569` | `ef20049681_8k.htm` |
+
+All four URLs constructed as `https://www.sec.gov/Archives/edgar/data/810136/<accession-no-dashes>/<primaryDoc>` and confirmed to return HTTP 200. No synthetic filename patterns appear in the report.
+
+**10-K spot-checks (claim → location in 10-K, confirmed via grep against cached `/tmp/plab_10k.htm`):**
+
+- **Revenue split, IC vs FPD (Section 4.1 product matrix):** FY25 IC high-end $238.9M, IC mainstream $376.2M, FPD high-end $195.5M, FPD mainstream $38.7M, Total $849.3M — all four sub-segment numbers and the total appear verbatim in the cached 10-K HTML. Source: Note 10 Revenue (Revenue by Product Type) in Item 8 Financial Statements. ✓
+- **Geographic mix (Section 1, Section 5):** Taiwan $283.8M, China $221.0M, South Korea $158.5M, United States $148.9M — all four numbers appear verbatim. Source: Note 10 Revenue (Revenue by Geographic Origin). ✓
+- **Customer concentration disclosure (Section 5, Section 9 risk 2):** "we sold our products to approximately 636 customers" and "Customer A, B and C accounted for approximately 16%, 13% and 8%, of consolidated revenue, respectively" appear verbatim. Three-year FY25 / FY24 / FY23 percentages of 16/13/8, 15/12/9, 14/10/13 all confirmed; top-5 aggregate of 50%/50%/51% also confirmed. Source: Item 1 Business, Markets subsection. ✓
+- **JV ownership % (Section 2, Section 9 risk 3):** PDMCX 50.01% Photronics / 49.99% DNP both confirmed verbatim. PDMCX net investments of ~$160.4M each side as of October 31, 2025 confirmed verbatim. DNP put/call right and three-business-day closing terms confirmed verbatim. Source: Note 6 PDMCX + Item 7 Liquidity discussion. ✓
+- **Buyback authorization size (Section 1, Section 7 competitive advantage 5):** $100 million expansion (August 2024) and additional $25 million (June 2025) authorizations both confirmed verbatim. $97.4 million deployed in FY25 (5.0 million shares repurchased) confirmed verbatim. Source: Item 5 Issuer Purchases. ✓
+- **Cash position (Section 1, Section 7, Section 9 risk 5):** Photronics holds a meaningful "Cash and cash equivalents" position and the 10-K describes the balance sheet as net-cash; the exact figure is in Item 7 Liquidity (not numerically embedded inline in this report's prose). Net-cash characterization is consistent with the 10-K's Item 7 discussion of "ample liquidity from cash flows from operations and existing cash and cash equivalents." ✓
+- **Employee count (Section 1):** 1,908 employees — confirmed verbatim. Source: Item 1 Business, Human Capital. ✓
+- **FY26 capex guidance (Section 1 banner, Section 8 capex profile, Section 9 risk 5):** "capital expenditures for fiscal year 2026 will be approximately $330 million" appears verbatim. Stated drivers (high-end and mainstream "point" tools, end-of-life mask-writer replacement, AMOLED FPD capacity) also confirmed. Source: Item 7 Liquidity and Capital Resources + Item 1A. ✓
+- **FY25 capex actual + FY23/FY24 baseline:** capex of "$188.1 million, $130.9 million and $131.3 million in 2025, 2024 and 2023, respectively" appears verbatim. Source: Item 7. ✓
+- **Competitor list (Section 7):** the verbatim string "Compugraphics International, Ltd., Dai Nippon Printing Co., Ltd (outside of Taiwan and China), Hoya Corporation, LG Innotek Co., Ltd., Shenzhen Newway Photomask Making Co., Ltd., Shenzhen Qingyi Photomask, Ltd., SK-Electronics Co., Ltd., Taiwan Mask Corporation, and Tekscend Photomask" appears in the 10-K Item 1 Competition section. Toppan is **not** in the 10-K list — Section 7 correctly flags this omission and labels Toppan's inclusion as analyst-added per third-party industry sources. ✓
+- **Photomask delivery cycle time disclosure (Section 1):** "first several layers of photomasks are sometimes required to be delivered to customers within twenty-four hours from the time we receive customer design data" appears verbatim. Source: Item 1 Business. ✓
+- **Single-segment reporting (Section 1):** "operate as a single reporting segment as a manufacturer of photomasks" — confirmed. Source: Note 1 / Note 5 segment reporting. ✓
+- **High-end vs mainstream definition (Section 4):** verbatim quote on "28 nanometer and smaller design nodes for ICs and Generation 10.5+, AMOLED, and LTPS… 32 nanometer and above… 'mainstream' photomasks, constitute the majority of designs currently being fabricated in volume" appears verbatim. Source: Item 1 Industry. ✓
+- **Recurring-revenue posture (Section 4.8):** "we will receive a specified percentage of that customer's photomask orders" appears verbatim. Note 10's "over time" vs "at a point in time" recognition split (~96% over time) also verifiable in the 10-K Note 10 disaggregation table. ✓
+- **Foreign currency loss (Section 9 risk 9):** "$8.3 million" foreign-currency loss in FY25 verbatim. Source: Item 7 + Item 1A Risk Factors. ✓
+- **Trade-restrictions / tariff language (Section 6, Section 9 risk 11):** the verbatim quote starting "Based on the complex relationships between the United States and certain foreign countries…" appears in Item 1A Risk Factors. ✓
+- **Joint Venture Operating Agreement date (Section 2, Section 9 risk 3):** "November 20, 2013" Joint Venture Operating Agreement with DNP referenced in the 10-K Exhibit Index. ✓
+
+**Analyst-view sentences (intentionally not cited to a primary source):**
+
+The skill rule requires that share-leadership claims, "dominant", "leader", "monopoly", "co-leader", future-TAM scenarios, and multiple-compression-context discussion not be attached to a 10-K citation unless the 10-K verbatim says so. The following sentences in the report are intentionally labeled `*Analyst view:*` per this rule:
+
+- **Section 1**, paragraph 2: "photomask is one of the few semi-supply niches where logistics, not just technology, is a moat." — analyst observation, uncited.
+- **Section 4.3 IC high-end (≤28nm), paragraph 4:** "in high-end IC masks Photronics is a credible partner *adjacent to* the EUV oligopoly rather than a member of it. Moat type is **scale + global proximity + multi-beam-writer ownership** — not technology leadership." — labeled analyst view; supported by EUV-supplier dynamics in the Nomura sector note (p. 38-39) but the competitive-positioning judgment itself is analyst.
+- **Section 4.4 IC mainstream (≥32nm), paragraph 3:** "Photronics is positioned as a leading non-captive supplier outside Japan… (Note: directional positioning here is analyst-derived, not directly disclosed in PLAB's 10-K)" — explicitly labeled.
+- **Section 4.5 FPD high-end, paragraph 4:** "Photronics' Cheonan facility is structurally well-positioned…" — labeled analyst view.
+- **Section 4.6 FPD mainstream, paragraph 2:** "mainstream FPD is a tactical growth lever, not a strategic moat" — labeled analyst view.
+- **Section 7 Competitive advantages 1:** "this is Photronics' single largest structural moat" — labeled analyst view.
+- **Section 7 Competitive advantages 2:** "Photronics is widely regarded as one of the leading non-captive suppliers outside Japan" — labeled analyst view, with Nomura cross-reference.
+- **Section 7 Competitive vulnerabilities 1:** "as long as Toppan, DNP, and Hoya continue to dominate EUV mask supply, Photronics is locked out of the value-pool at the highest ASP tier" — labeled analyst view.
+- **Section 8 SOM 1:** "this is the single most defensible growth lever — high-single-digit to low-double-digit CAGR through 2028 is achievable" — labeled analyst view.
+- **Section 8 closing paragraph:** the "asymmetric upside / downside" framing and the implied $1.1B–$1.5B 2030 revenue scenarios are analyst-constructed projections built on (a) the FY25 disclosed revenue, (b) the global photomask TAM growth rate from Yole / SEMI via the Nomura anchor note, and (c) directional share-gain assumptions. The two anchor inputs (FY25 revenue and TAM growth) are cited; the projection is the analyst's composition.
+- **Section 1 valuation paragraph:** the "not stretched but not screamingly cheap" verdict and the cross-peer P/E premium justification (3 reasons re Toppan/DNP being diversified printing conglomerates, higher PLAB gross margin, clean balance sheet) is analyst opinion built on cited inputs (Stockanalysis P/E, WSJ Toppan/DNP P/E, 10-K Item 5 buyback). The opinion paragraph is uncited; supporting facts upstream are cited.
+
+No claim of "dominant" / "leader" / "monopoly" / "co-leader" / "near-monopoly share" is attached to a 10-K citation anywhere in the report. The 10-K is cited for (a) Photronics' own description of its product lines, (b) the verbatim competitor list, (c) the explicit "no significant technology employed by our competitors that is not available to us" quote, and (d) the disclosed financial figures — never for share-leadership or relative-positioning judgments. ✓
+
+**Residual unknowns / not yet verified:**
+
+- **Exact named identity of Customer A / B / C in FY25 disclosure.** Photronics names these only as "Customer A, B, C" per Item 1 Business. The report makes the inference (in Section 5 "Customer concentration" and Section 9 risk 2) that "the geographic and JV structure suggests TSMC, Samsung, BOE / China display, and one or two China foundries dominate" — explicitly labeled as analyst inference, not 10-K disclosure. The 10-K itself does not name them.
+- **FY26 Q1 (10-Q) segment + customer-concentration detail.** The Q1 FY26 10-Q discusses the +6.1% YoY revenue and the high-end IC +19% / mainstream FPD +51% mix, but the quarterly does not re-disaggregate customer-concentration percentages (those are annual-only disclosures). The Section 1 banner uses Q1 FY26 directional commentary; the customer-concentration discussion in Section 5 / Section 9 strictly relies on FY25 10-K figures.
+- **Founder Constantine S. Macricostas ownership stake percentage as of 2026.** The DEF 14A discloses director beneficial-ownership tables but the specific stake percentage for the founder was not quoted in the report — the report instead describes governance influence qualitatively. A future revision could pull the exact beneficial-ownership row from the DEF 14A's Security Ownership of Certain Beneficial Owners and Management table.
+- **George C. Macricostas FY25/FY26 compensation package.** The CEO-transition 8-K notes that the Compensation Committee would amend the existing Employment Agreement to reflect the CEO role; the 2026 DEF 14A's Executive Compensation discussion contains the formal terms. This report references the existence of the comp package but does not enumerate base / target bonus / equity grant amounts.
+- **Specific Toppan / DNP / Hoya market-share-by-revenue figures.** Section 7 competitive map cites Toppan as "Largest global merchant photomask supplier by revenue (~30% of merchant market — analyst est.)". The ~30% figure is labeled "analyst est." inline and is built on the broader Nomura sector note + Yole industry estimates; no third-party source publishes a verifiable issuer-by-issuer photomask revenue ranking that this report cites directly. Future revisions could substitute a sourced TechInsights or SEMI annual report figure if one becomes accessible.
+
+</details>
+
 
