@@ -216,3 +216,75 @@ CMP 材料产业位于三个重叠的地缘政治压力点中心。**(1) 美中�
 
 ![KC Tech vs 韩国 CMP 浆料国产化框架](../../charts/kctech_korea_localization.png)
 *资料来源：分析师构造框架；份额数字基于 [Yano Research 2024](https://www.yanoresearch.com/press/press.php/3921)、[Nomura sector report (in 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md) 以及 [The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/) 估算，非公司披露。*
+
+## 7. 竞争格局
+
+### 7.1 直接竞争对手 —— 浆料
+
+在 CMP 浆料赛道，KC Tech 面对三个竞争梯队。**第一梯队（全球老牌）** 是合计占全球约一半市场份额的三家：**Cabot Microelectronics / Entegris / Fujifilm**（2022 年 Entegris 以约 65 亿美元收购 Cabot 的 CMC 部门，2024 年再把电子化学品业务剥离给 Fujifilm—Fujifilm 现已是全球最大单一 CMP 浆料制造商）；**Resonac**（2023 年由昭和电工 + 日立化学合并而成；钨与氧化物浆料的日本龙头）；**Fujimi 富士美**（日本 sub-10nm 胶体硅溶胶专业户）([Yano Research CMP Slurry Market 2024](https://www.yanoresearch.com/press/press.php/3921))。这三家合计持全球约 51% 份额，在三星奥斯汀 (美国)、TSMC、Intel、Micron 与日本内存与逻辑客户处有几十年的老客户关系 ([Persistence Market Research 2026](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp))。
+
+**第二梯队（先进节点专业户）** 是 **Versum Materials / Merck KGaA**（Versum 于 2019 年由默克 Merck KGaA 以约 65 亿美元收购；合并实体现属默克 Performance Materials 部门，是三星奥斯汀先进节点 STI 浆料关键供应商）、**JSR Corporation**（日本特种化学品公司，CMP 浆料有选择性敞口）以及 **杜邦 DuPont**（唯一在 CMP 浆料中有意义业务的美国第二梯队厂商—以二氧化硅基与 CMP 后清洗化学品为主）([Persistence Market Research 2026](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp); [Yano Research 2024](https://www.yanoresearch.com/press/press.php/3921))。这五家合计持全球约 64% 的市场营收。**第三梯队（国家国产化龙头）** 是 KC Tech 最直接的竞争对手：**Soulbrain (KOSDAQ:357780)**—更广义的韩国特种化学品厂商，CMP 浆料只是它的多产品线之一；**安集科技 (688019.SS)**—中国 sub-10nm CMP 浆料龙头，地区专业厂商中增速最快；**鼎龙股份 (300054.SZ)**—中国 CMP 垫与浆料业务，「三引擎」战略；**AGC**—日本玻璃 / 化学品大集团，CMP 上有小众敞口 ([Persistence Market Research 2026](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp); [Nomura sector report (in 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。
+
+对论点形成最有用的对比是 **KC Tech vs Soulbrain**—野村 Fig 41 单元「KC Tech / Soulbrain (KR)」把这两家并排归类，因为他们都是 Samsung 与 SK 海力士浆料国产化的韩国国家级冠军 ([Nomura sector report (in 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。差异化在于：KC Tech 以氧化铈为主、深度布局 STI / ILD 浆料 + 设备 + 材料独特组合；Soulbrain 更广（蚀刻剂、清洗、前体、多种 CMP 浆料化学品），氧化铈深度较弱但化学品宽度较广，整体规模相近 ([Soulbrain Stockopedia 摘要](https://www.stockopedia.com/share-prices/soulbrain-co-KOSDAQ:357780/); [Soulbrain 公司页](https://www.soulbrain.co.kr/en/m21.php))。两者并非在三星每一道工艺步骤上正面竞争—更常见的情况是被并行认证在不同工艺步骤上，由三星双源策略驱动的认证奖项进行决定。
+
+### 7.2 直接竞争对手 —— CMP 设备
+
+在 CMP 设备（KC Tech 业务的设备侧），竞争群体更小、更集中。**应用材料 (AMAT)** 是全球 CMP 抛光机龙头，凭借 Reflexion® GT 系列—AMAT CMP 产品页将该平台描述为业内「领先 CMP 系统」，在三星、TSMC、Intel 都占据主导地位 ([Applied Materials CMP 产品页](https://www.appliedmaterials.com/in/en/semiconductor/semiconductor-technologies/cmp.html))。**Ebara (TSE:6361)** 是日本第二，凭借 Frex 系列—在日本与中国台湾较强，韩国有选择性布局 ([Ebara Technologies CMP 产品页](https://www.ebaratech.com/product-category/chemical-mechanical-polishing-systems/))。**Lam Research (NASDAQ:LRCX)** 拥有 Striker® 产品线—历来在 CMP 板块小于其在蚀刻 / 沉积上的份额，但在先进节点上仍是可信全球竞争对手。**KC Tech** 是韩国唯一拥有 300mm 全国产化能力的本土 CMP 设备供应商；在韩国市场，KC Tech 在三星内存产线 CMP 时段上与 AMAT、Ebara 直接竞争，国家级冠军 / K-Belt 政策杠杆把三星的采购倾向边缘性地推向 KC Tech ([케이씨텍 위키백과](https://ko.wikipedia.org/wiki/%EC%BC%80%EC%9D%B4%EC%94%A8%ED%85%8D); [잡코리아 KC Tech 기업정보](https://www.jobkorea.co.kr/recruit/co_read/c/kctech11))。全球范围内，KC Tech 是利基玩家、在韩国境外份额极小，所谓海外扩张策略（俄勒冈办公室；中国台湾 / 日本 / 新加坡探索）刻意限定为「跟随三星海外」而非与 AMAT 全球正面对决 ([The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。
+
+### 7.3 竞争优势与弱点
+
+KC Tech 的竞争优势最好理解为 **三层互相强化的护城河**—每层单独看都不算宽，但在韩国生态系统内组合在一起异常持久：
+
+**(1) 设备 + 材料协同研发。** 全球第一梯队浆料厂商没人卖 CMP 抛光机，主要 CMP 抛光机 OEM 也没人卖浆料—这种「设备 + 材料一体化」业务模型基本是 KC Tech 独有（韩国同业 Soulbrain 在设备故事上明显较弱）。副会长反复强调的好处是「产品研发与 R&D 的深度整合」—三星工艺工程师可以在单次认证周期内同时在 KC Tech 抛光机上验证 KC Tech 浆料，相对双供应商方案可缩短认证时间 6–12 个月 ([The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。这是真实但狭窄的护城河：在新节点 / 新工艺步骤的「绿地」认证中 KC Tech 受益，但在三星已运行 Cabot 浆料 + AMAT 抛光机的老牌位置上则不起作用。
+
+**(2) 韩国国家级冠军定位。** K-Belt 政策框架明确指示韩国生态降低对日美材料厂商的依赖，CMP 浆料是被定向类别之一 ([SEMI Korea Materials Conference 2024](https://www.semi.org/en/blogs/technology-and-trends/semiconductor-materials-key-industry-growth-enabler-insights-from-smc-korea-2024))。2019 年日韩贸易争端（针对 HF、光刻胶前体、氟化聚酰亚胺的出口限制）催化了政策和政治意愿。在 CMP 材料具体赛道上，KC Tech 与 Soulbrain 是这项杠杆的主要直接受益者 ([Inquivix Technologies: South Korea Semiconductor Ecosystem](https://inquivixtech.com/korea-semiconductor-ecosystem/))。
+
+**(3) 与三星的长周期 JDP 关系。** 至少从 2009 年（KC Tech 首批氧化铈浆料量产）起，KC Tech 就是三星 CMP 浆料协同研发伙伴；按公司表述的哲学（「不要卖产品 —— 要卖信任」），关系驱动的模式是对全球更大美 / 日老牌厂商的战略差异化 ([The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。
+
+**弱点** 是这些护城河的反面。设备 + 材料一体化在三星把抛光机与浆料采购脱钩时（即强制「best of breed」而非整合认证）就会变成弱点。韩国国家级冠军定位在 K-Belt 政策弱化时（如韩国政治领导层变化降低材料国产化优先级）或在三星海外建厂（泰勒得州；平泽下一期）创造对全球供应商而非韩国跟随供应商的压力时就会成为弱点。三星 JDP 关系是弱点是因为它按定义就是单客户依赖—如果三星把 CMP 资本支出从 HBM 或 2nm 上撤离，KC Tech 营收会显著压缩（就像 2023 那次内存疲弱让 FY 营收从 FY22 峰值下降 21%—见 [Stockopedia FY23 数字 286.9 亿韩元](https://www.stockopedia.com/share-prices/kc-tech-co-KRX:281820/))。
+
+### 7.4 定位框架
+
+```mermaid
+quadrantChart
+    title CMP 浆料市场定位 — 地理覆盖 vs 产品宽度
+    x-axis "化学品窄" --> "化学品广"
+    y-axis "仅本地" --> "全球"
+    quadrant-1 "全球广线老牌厂"
+    quadrant-2 "全球窄线专业户"
+    quadrant-3 "本地窄线专业户"
+    quadrant-4 "本地广线冠军"
+    "Fujimi (JP)": [0.20, 0.85]
+    "Cabot/Fujifilm (US/JP)": [0.85, 0.90]
+    "Resonac (JP)": [0.75, 0.85]
+    "Versum/Merck (DE)": [0.65, 0.78]
+    "JSR (JP)": [0.55, 0.65]
+    "DuPont (US)": [0.50, 0.70]
+    "KC Tech (KR)": [0.30, 0.30]
+    "Soulbrain (KR)": [0.65, 0.32]
+    "Anji (CN)": [0.25, 0.18]
+    "Dinglong (CN)": [0.55, 0.22]
+```
+*分析师按公开产品披露 + Yano Research 2024 行业分类 + 野村 2026-05-21 行业报告构造的定位框架；数值位置为示意序数。*
+
+![KC Tech 与韩国 / 亚洲 CMP 材料同业 TTM 市盈率对比](../../charts/kctech_peer_pe.png)
+*资料来源：[Stockopedia KCTech](https://www.stockopedia.com/share-prices/kc-tech-co-KRX:281820/); [Stockopedia Soulbrain](https://www.stockopedia.com/share-prices/soulbrain-co-KOSDAQ:357780/); [Yahoo Finance Wonik Materials](https://finance.yahoo.com/quote/104830.KQ/); 鼎龙 / 安集 TTM 市盈率参考 [Nomura sector report (in 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md)。*注：SK 材料并入合并后的 SK Specialty Group，倍数为估算。
+
+## 8. 市场机会 (TAM)
+
+### 8.1 TAM、SAM、SOM
+
+仅 CMP 浆料的可寻址市场约为 **2024 年 16 亿美元**，年增长率约 10% 升至 **2025 年 17.6 亿美元** 并按同样低双位数 CAGR 升至 **2030 年约 23–25 亿美元** ([Yano Research 新闻稿: 全球 CMP 浆料市场 2024](https://www.yanoresearch.com/press/press.php/3921); [Persistence Market Research 2026](https://www.persistencemarketresearch.com/market-research/cmp-slurry-market.asp))。更广义的 **CMP 耗材** 市场（浆料 + 垫 + CMP 后清洗化学品 + 调理器）按定义差异在 2024 年约 40–60 亿美元，增速类似中等单位数至低双位数 ([Skyquest CMP Slurry Forecast 2033](https://www.skyquestt.com/report/cmp-slurry-market); [Mordor Intelligence CMP Slurry Market 2025-2030](https://www.researchandmarkets.com/reports/5176839/chemical-mechanical-planarization-cmp-slurry))。**全球 CMP 设备** 市场（抛光机 + 清洗系统）2024 年约 20 亿美元，AMAT 与 Ebara 持有多数份额 ([Applied Materials CMP 产品页](https://www.appliedmaterials.com/in/en/semiconductor/semiconductor-technologies/cmp.html))。KC Tech 三类合计 TAM 因此约 **2024 年 70–80 亿美元**，按基准假设到 **2030 年约 100–130 亿美元**，HBM / BSPDN 顺风偏向高位。
+
+KC Tech 的 **服务可寻址市场 (SAM)** 较窄。(a) 浆料：三星 + SK 海力士合计浆料采购约占全球 16 亿美元中的 3.5–4.5 亿美元（粗算量级—韩国内存占全球先进节点 DRAM + NAND CMP 需求约 25–30%；数学是「韩国内存厂晶圆开工 × CMP 步骤强度 × 单步浆料成本 ≈ 韩国浆料消耗约 4 亿美元」，其中支持韩国国产化的子集约 2–2.5 亿美元，KC Tech 的竞争集合约 1–1.5 亿美元）。(b) 设备：三星 + SK 海力士年 CMP 设备支出约 2–3 亿美元，其中 KC Tech 可竞争的「韩国本土倾向」部分约 5,000 万–1 亿美元。(c) 显示器：在韩 + 中显示器资本支出框架下 KC Tech 湿法工作站 + APP + CO₂ 清洗机可寻址市场约 5,000 万–1 亿美元。合计 SAM **约 2 亿–3.5 亿美元**，且 BSPDN 步骤数乘数因子上行有显著空间。
+
+**服务可获得市场 (SOM)** 是 KC Tech 在 FY2024 的实际营收 3,854 亿韩元 ≈ 按典型汇率约 2.8–2.9 亿美元—也就是说，公司已经在收获大部分近期现实 SAM。增长论点因此不是「KC Tech 在现 SAM 内获取更多份额」，而是「SAM 因 HBM / BSPDN / 先进节点步骤增长而扩张」+「国际 SAM (Intel、GlobalFoundries) 通过俄勒冈办公室开放」。这是与典型成长股完全不同的增长画像—是「水涨船高」而非「份额抢占」的故事，水涨的持久性是论点形成的核心问题。
+
+### 8.2 渗透策略与 SAM 扩张可能驱动器
+
+KC Tech 的渗透策略在三个向量上运作。**(1) 垂直：每片晶圆更多 CMP 步骤。** 三星从 7nm 推进至 5nm 至 3nm 至 2nm 至 A16、HBM 堆叠从 8-Hi 升至 12-Hi 升至 16-Hi 时，每片晶圆浆料需求倍增—只要 KC Tech 在相关工艺步骤上有认证，营收就会自然扩张，无需份额抢占 ([Nomura sector report (in 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。副会长把 2027 年（40 周年）目标定义为「拿下重要设备认证、开始 CMP 系统量产、在 HBM 和 BSPDN 等下一代半导体技术上把 KC Tech 建成『全球规模玩家』」—这是明确的垂直渗透路线图 ([The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。**(2) 水平：新化学品族。** 从当前氧化铈 + 二氧化硅领导地位进入金属（W、Cu）与 CMP 后清洗化学品，开辟今天由 Cabot / Versum 占据的增量 SAM；Worldfolio 专访指出铜浆料是近期开发重点、金属浆料是多年 R&D 推动 ([The Worldfolio, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。**(3) 地理：跟随三星奥斯汀 / 泰勒。** 预计 2025 年末开业的尤金（俄勒冈）办公室是为支持韩国客户海外工艺转移而布局的多年扩张第一步 ([The Worldfolio, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。
+
+韩国政府的 K-半导体战略提供了多十年背景：到 2047 年约 4,710 亿美元的规划晶圆厂投资—大部分将是三星与 SK 海力士的资本支出、大部分将在每个节点切换中要求 CMP 步骤扩张、相当一部分政策向韩国供应商采购倾斜 ([Inquivix Technologies: Deep Dive South Korea Semiconductor Ecosystem](https://inquivixtech.com/korea-semiconductor-ecosystem/))。即使 KC Tech 在三星 + SK 海力士 CMP 采购中的*份额*保持当前 ~10–15% 区间不变，该采购的*绝对规模*也在按「晶圆产量 × 步骤数」的乘积结构性扩张—这就是卖方建模 KC Tech 营收在 2027–2028 年增长至 5,000 亿韩元 + 区间的分析基础 ([데이터투자, 2025-11-11 (DS투자증권 추정 2026F 营业利润 KRW 647 bn 对应营收 ~KRW 470 bn)](https://www.datatooza.com/article/20251111115540957952ef38be23_80); [Stockopedia FY27 营收预测 KRW 491.9 bn](https://www.stockopedia.com/share-prices/kc-tech-co-KRX:281820/))。
+
+![KC Tech 季度营收与营业利润 — 1Q24 至 1Q26](../../charts/kctech_quarterly_trend.png)
+*资料来源：[Investing.com KCTech 财报, 2026-05](https://kr.investing.com/equities/kctech-earnings); [The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433); [씽크풀, 2024-04 실적속보](https://m.thinkpool.com/stockDiscuss/281820/cont/11862550); [데이터투자, 2025-11-11](https://www.datatooza.com/article/20251111115540957952ef38be23_80).*
