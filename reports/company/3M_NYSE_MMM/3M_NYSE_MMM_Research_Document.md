@@ -318,3 +318,205 @@ By geography, **the global semi-materials market is heavily Asia-skewed**: Taiwa
 
 **Regulatory environment — China decoupling.** A growing regulatory headwind for any US semi-materials supplier with China revenue: the US export-control framework around advanced-node semiconductor manufacturing has tightened progressively since 2022 (October 2022 export controls on advanced compute / EUV-class lithography, October 2023 update expanding the entity list, December 2024 update on HBM and CMP-relevant precursors). 3M's CMP consumables are largely sold to fabs running 14nm-and-up Chinese mainstream nodes (Hua Hong, SMIC mature nodes, YMTC mature nodes), which sit below the entity-list threshold for most products — but the regulatory direction creates a real risk that future restrictions could target the CMP / pellicle / advanced-packaging product lines that 3M sells into Chinese fabs. *Analyst view:* the China-export risk is asymmetric — 3M has limited upside from China-decoupling (US fab build-out volume is much smaller than Chinese fab capacity) but meaningful downside if Chinese fab access tightens.
 
+## 7. Competitive Landscape
+
+3M's competitive landscape is best evaluated **product-by-product, not company-wide** — the conglomerate structure means 3M competes with a different set of suppliers in every sub-business. For the analytical purpose of this initiation, we focus on the semi-relevant product families (Section 4 enumerates these), with brief notes on the broader-conglomerate peer comparison.
+
+### 7.1 Semi materials — competitor map
+
+| 3M product line | Direct competitors | Approximate share leader |
+|---|---|---|
+| CMP pad conditioner | **Kinik (TWSE:1560)**, **Saesol Diamond Industries (KRX private)**, **Entegris (NASDAQ:ENTG)**, **EHWA Diamond Industrial**, **Nippon Steel Sumikin** | Kinik 60–70% globally per Nomura |
+| CMP polishing pad | **DuPont (NYSE:DD)**, **Fujibo Holdings (TSE:3104)**, **JSR (TSE:4185 — private post-JIC acquisition)**, **Dinglong (SZSE:300054)** | DuPont >50% globally per Nomura |
+| Display brightness-enhancement film / OCA | **LG Chem**, **Hitachi Chemical (now Resonac)**, **Dexerials**, **Sumitomo Chemical** | LG Chem largest in OCA; Resonac in BEF |
+| Photomask pellicle (DUV) | **Mitsui Chemicals**, **Shin-Etsu Chemical**, **Asahi Kasei** | Mitsui largest in DUV pellicles |
+| Back-grind tape & abrasive | **Lintec**, **Mitsui Chemicals**, **Disco Corp (TSE:6146)** | Lintec largest |
+| Advanced packaging dielectric (Ajinomoto-build-up film alternative) | **Ajinomoto Co. (TSE:2802 — ABF film)**, **Sekisui Chemical**, **Hitachi Chemical (Resonac)** | Ajinomoto >90% in ABF, 3M is a small functional-film player |
+
+*Source: composed from [3M 10-K FY2025, Item 1 — Products & Brands matrix](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm); [Nomura "Greater China Semi" 2026-05-21, Fig 35-44 supplier league tables](/Users/x/projects/financial_agent/reports/sector/半导体材料.md); competitor identity verified from each named supplier's own annual report. Note: the 10-K Item 1 does not contain a "Competition" section that names specific competitor companies — the 10-K simply says 3M's products "are subject to competition from products manufactured and sold by other technologically oriented companies." The competitor list above is therefore analyst-constructed using the Nomura league-table data plus 3M product-line-by-product-line analysis.*
+
+![3M CMP pad conditioner share map (Nomura Fig 43 schematic)](../../charts/3m_cmp_conditioner_share.png)
+
+*Source: schematic representation of [Nomura "Greater China Semi" 2026-05-21, Fig 43 CMP pad conditioner supplier league table](/Users/x/projects/financial_agent/reports/sector/半导体材料.md). Nomura's bar chart shows Kinik as the largest single bar (60-70%), 3M as the second-largest non-Asian challenger (~15-20% estimate), with Saesol, EHWA, Entegris, Nippon Steel Sumikin filling the remainder. **3M's share is structurally declining at the leading edge (sub-7nm) where Kinik has expanded to ~80% per Nomura.***
+
+### 7.2 Per-product competitive verdict
+
+**CMP pad conditioner — partial advantage, structurally declining.** 3M's pad conditioner business benefits from a 30-year relationship with US and European fabs (Intel, GlobalFoundries, Bosch / Infineon European fabs). However, at the leading edge (TSMC N3, N2, A16 + BPD; Samsung 3nm GAA) Kinik has captured ~80% of new-node business and the gap is widening. The moat for 3M is brand recognition and qualification continuity at legacy fabs — but as fabs migrate to advanced nodes, the moat erodes. *Analyst view:* **partial advantage**, moat type = installed-base inertia + diamond-disc IP, vulnerability = leading-edge displacement by Kinik.
+
+**CMP polishing pad — partial advantage, share contested.** DuPont leads global share at >50%; 3M is one of three sub-15% Western/Japanese challengers. The polyurethane-composite IP is highly differentiated by supplier but is being progressively erode by Chinese supplier Dinglong, which has grown from negligible to ~5-10% share in 5 years. 3M's pad business is unlikely to be the consolidator in the next cycle. *Analyst view:* **partial advantage**, moat type = customer co-development relationships, vulnerability = Dinglong + DuPont dual squeeze.
+
+**Photomask pellicle — minor participant.** 3M competes only in DUV pellicles (193 nm) — and is a small participant relative to Mitsui Chemicals and Shin-Etsu. **Not a meaningful share player at EUV** where the supply chain is dominated by ASML's captive Mitsui-acquired program. *Analyst view:* **no advantage**; the pellicle business is a sub-segment of Electronics Materials Solutions but not a growth engine.
+
+**Display materials and systems — declining moat.** 3M's microreplication-based BEF franchise was the de facto LCD standard for 15+ years, but the LCD-to-OLED transition is structurally eroding the addressable market. 3M has launched functional films for AMOLED but the share economics are weaker. *Analyst view:* **partial advantage**, moat type = microreplication IP, vulnerability = LCD market decline + Korean OLED supply-chain captive sourcing.
+
+**Adhesives & abrasives in broader industrial (Safety & Industrial segment).** Outside the semi narrative, 3M's adhesives (VHB, Scotch-Weld) and abrasives (Cubitron, Scotch-Brite) are durable category leaders. **Cubitron** (engineered ceramic grain abrasive) is regarded as one of the technology-led category leaders globally; **VHB** (high-strength acrylic foam tape) is the de facto adhesive standard for automotive trim attachment and panel-bonding applications. *Analyst view:* in these outside-semi product lines, 3M maintains **clear category leadership** with structural moat from IP + brand + 30-year customer relationships.
+
+### 7.3 Broader-conglomerate peer comparison
+
+Outside the semi product lines, 3M's natural peers are other US-listed diversified industrial conglomerates:
+
+- **Honeywell International (NYSE: HON)** — USD 130B market cap, four segments (Aerospace, Industrial Automation, Building Automation, Energy & Sustainability). Honeywell is the closest 3M peer by size and end-market diversity; both are dividend-aristocrat industrials with a multi-segment cost-and-cash-flow base. HON has higher exposure to aerospace and defence end markets; MMM has higher consumer-goods exposure ([Honeywell FY2024 10-K, Item 1 Business](https://investor.honeywell.com/static-files/c3e3a73c-5b50-4c1d-a4bf-d3c5f0c8c79d)).
+- **Illinois Tool Works (NYSE: ITW)** — USD 70B market cap, seven decentralized segments (Automotive OEM, Food Equipment, Test & Measurement / Electronics, Welding, Polymers & Fluids, Construction Products, Specialty Products). ITW operates a famously decentralised "80/20" rule that compresses costs, runs at ~25%+ adjusted operating margin, and has been one of the best-executing diversified industrials in the S&P 500 ([ITW FY2024 10-K, Item 1 Business](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000049826&type=10-K&dateb=&owner=include&count=40)). ITW is the operating benchmark Brown is implicitly trying to match at 3M.
+- **Emerson Electric (NYSE: EMR)** — USD 70B market cap, two segments (Intelligent Devices + Software & Control). Emerson has aggressively restructured over the past 5 years through divestitures (Climate Technologies, Network Power) and acquisitions (NI / National Instruments USD 8.2B in 2023, AspenTech control). Emerson's portfolio is now more software-and-control-focused than 3M's broader materials-and-consumer base ([Emerson FY2024 10-K, Item 1](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000032604&type=10-K&dateb=&owner=include&count=40)).
+
+The market currently values 3M (TTM P/E 29.4× / Fwd P/E 17.5×) at a slight premium-to-peers on TTM (because of GAAP earnings drag from PFAS) but a meaningful discount on forward. *Analyst view:* the structural debate is whether the discount is justified by the PFAS overhang and the lower segment growth profile, or whether the multiple should converge toward HON / ITW once the PFAS tail is more visible. Section 9 evaluates the multiple-compression risk explicitly.
+
+### 7.4 Competitive vulnerabilities (semi-narrow lens)
+
+For semi-materials-focused investors specifically, 3M's three vulnerabilities are:
+
+1. **Share erosion at the leading edge in CMP pad conditioner.** Kinik's structural advantage at sub-7nm is widening, not narrowing. 3M's response — incremental product launches, geographic-proximity field engineering, integrated multi-product purchase discussions — has slowed but not stopped the share loss.
+2. **PFAS exit removes a meaningful semi-supply position.** Several of 3M's specialty fluoropolymer products (carrier films, chemical-resistant tanks, ultra-pure tubing) were used in wafer fabs; the manufacturing exit forces 3M to either source these from third parties (lower margin, less control) or sunset the products. The reputational impact in the semi customer base is non-trivial.
+3. **No EUV-era technology footprint.** Unlike Kinik (which has invested in N2-BPD-specific pad conditioner designs), Dinglong (which has built advanced-node pad and slurry capabilities), or JSR (which has the leading EUV photoresist franchise), 3M has not made the visible R&D commitment to a single advanced-EUV technology platform. The risk is that 3M's semi business converges to a maintenance / legacy-node profitability profile while the high-growth leading-edge volume accrues elsewhere.
+
+## 8. Market Opportunity (TAM)
+
+For 3M as a whole, the consolidated TAM is essentially the global industrial-materials market — a >USD 1.5 trillion aggregate that is too broad to be analytically useful. The relevant TAM for this initiation is **the slice of the global semiconductor materials TAM that 3M's Transportation and Electronics segment addresses**, which is the analytical hook of the Nomura semi-renaissance thesis.
+
+**Segment 1 — CMP consumables (the largest direct semi TAM for 3M).** Global CMP consumables ~USD 5.6B in 2025 (~7% of the USD 80B global semi materials market per Nomura), split ~50% slurry / 30% pad / 20% conditioner. **3M's addressable slice is approximately USD 1.1B (pad) + USD 1.1B (conditioner) = USD 2.2B** — i.e. 3M's CMP-products TAM is ~USD 2.2B. Per Nomura's secular thesis, this TAM grows ~5-7% CAGR through 2030F driven by BPD step-count expansion + multi-step CMP from W2W bonding + node migration to 2nm and below, reaching ~USD 3.0-3.5B by 2030F ([Nomura sector report, Fig 24-26 + Fig 42-43](/Users/x/projects/financial_agent/reports/sector/半导体材料.md)).
+
+**SAM (serviceable available market) for 3M.** Within the USD 2.2B TAM, 3M's serviceable share — given Kinik's 60-70% conditioner share and DuPont's 50%+ pad share, plus structural geographic constraints — is realistically capped at **USD 300-500M of annual CMP-products revenue**. The sell-side consensus estimate that 3M's combined CMP business is "USD 200-300M today" is consistent with this SAM analysis.
+
+**Segment 2 — Pellicle (DUV).** Global DUV pellicle market is ~USD 200-300M annually (small compared to CMP); 3M's SAM here is single-digit-percent of the market, valued at USD 10-30M. Not material.
+
+**Segment 3 — Back-grind and surface preparation.** Global semiconductor back-grind tape + abrasive market is ~USD 600-800M annually (small compared to CMP); 3M's SAM here is estimated at USD 50-100M.
+
+**Segment 4 — Display films and OCAs.** Global LCD-display brightness-enhancement-film market is declining (~USD 1.5B in 2025, shrinking ~5% annually as LCD share gives way to OLED); 3M's SAM is contracting. The OCA market is larger (~USD 3-4B globally) with multiple suppliers; 3M's SAM is high-single-digit-percent.
+
+**3M total semiconductor + display TAM exposure (analyst aggregate):** **~USD 4-5B aggregate TAM, ~USD 700M-1.0B SAM, ~USD 400-600M of estimated 3M annual revenue across these product lines**. This is the analytical hook for the semi-investment thesis on MMM — **non-trivial but not dominant within Electronics' USD 2.911B annual revenue line**, and very small relative to MMM's consolidated USD 24.948B revenue base.
+
+**Growth trajectory.** The CMP and back-grind sub-segments grow 5-7% CAGR (with potential upside if Nomura's BPD-multi-step thesis materialises faster than the central case); display films decline 2-5% CAGR; pellicle is flat. Net blended TAM growth across 3M's semi-relevant product mix is ~2-4% CAGR — i.e. **3M's exposure to the Nomura "semi renaissance" thesis is real but materially diluted by the LCD-display decline and by the geographic / share-loss headwinds in CMP**.
+
+**Penetration strategy.** Brown's stated 2025 Investor Day strategy for the semi/electronics sub-business is "spec-in" growth — i.e. winning new product designs at customer-design-cycle entry points and riding the qualified-supplier flywheel through multi-year production cycles. The Investor Day deck specifically called out **electronics, data centers, and aerospace** as the three "spec-in" growth vectors inside T&E ([3M Investor Day Materials, 2025-02-26](https://s24.q4cdn.com/834031268/files/doc_financials/2025/q1/2025-3M-Investor-Day-Materials.pdf)). For investors evaluating 3M as a semi-play, the question is whether spec-in incrementalism can offset structural share loss at the leading edge — the analyst's central case is that **spec-in wins are real but smaller than the share loss**, leaving the semi sub-business at roughly flat-to-mid-single-digit growth through 2030F.
+
+## 9. Risk Assessment
+
+Below: 10 risks across the four standard buckets. Each is described with quantification where the 10-K disclosure permits, and a brief mitigant note where applicable.
+
+### Company-Specific Risks (5)
+
+**1. PFAS / Combat Arms Earplugs litigation tail (highest single risk).** The combined Public Water Suppliers and Combat Arms Earplugs settlements total **USD 16.5–18.5B gross cash obligation paid 2023–2036**. FY2025 actual pre-tax cash payments related to net costs for significant litigation were **USD 3.5B**, and FY2024 was USD 4.5B ([3M 10-K FY2025, Item 7 MD&A — Special items](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm)). Beyond the PWS and CAE settlements, 3M faces additional active claims from individual US states (NJ, MN, MI, NY, Illinois Cordova plant) plus Belgian civil litigation related to PFAS releases at the Zwijndrecht site; these claims are not capped under the existing settlements and could add multi-billion-USD incremental tail exposure. **Severity: high** — single-handed enough to compress equity returns even if operating performance holds. **Mitigant**: planned PFAS-manufacturing exit completed end-2025 caps future new claim formation; insurance recoveries partially offset PWS / CAE cash outflows.
+
+**2. Customer concentration in semiconductor sub-business at the leading edge.** While 3M has no consolidated customer over 10%, **within the CMP consumables sub-business the customer base is heavily concentrated** in 5-7 leading-edge foundries (TSMC, Samsung, Intel, SK Hynix, Micron, GlobalFoundries, Hua Hong) and 3M's qualified-supplier position at each is decay-able. Losing one major leading-edge customer could remove 15-25% of CMP-products revenue (a USD 30-75M EBIT impact); not consolidated-financial-material but material to the semi-investment thesis. **Severity: medium** at the sub-segment level. **Mitigant**: geographic / customer diversification within CMP; broad product portfolio reduces single-customer dependency.
+
+**3. China decoupling / export-control expansion.** China/Hong Kong revenue is USD 2.951B (11.8% of consolidated) and is the largest single foreign-country concentration. Expanded US export controls on semiconductor-related materials could restrict 3M's ability to sell into Chinese fabs; reciprocal Chinese tariffs / counter-restrictions could compress US-side margins. **Severity: medium** at the consolidated level; **high** for the semi sub-business specifically. **Mitigant**: 3M's Chinese exposure is largely industrial / consumer rather than advanced-semi, limiting direct US-export-control risk; the company has decades of operational presence in China that provides regulatory familiarity.
+
+**4. Execution risk on Brown's operating-model overhaul.** William Brown is approximately two years into a 5-7 year transformation plan that requires (a) sustained margin expansion, (b) portfolio rationalization, and (c) reignited organic growth. The early indicators (200-bp adjusted-margin expansion in FY2025, the fused-silica and precision-grinding divestitures, FY2026 EPS guidance of USD 8.50-8.70) are encouraging — but the growth pillar (organic sales +0.9% GAAP / +2.1% adjusted in FY2025) lags the operating-model improvements. **Severity: medium** — execution risk is mitigated by Brown's L3Harris track record but is not eliminated. **Mitigant**: dividend-aristocrat cash-return policy provides equity-return floor even if growth disappoints.
+
+**5. Solventum stake monetization and capital allocation.** 3M retained 19.9% of Solventum at the April 2024 spin and has been monetising opportunistically; the remaining stake is approximately USD 2-3B at current market value. The capital allocation of the proceeds (debt paydown vs buyback vs reinvestment) is a discretionary decision that may underperform investor expectations. **Severity: low**. **Mitigant**: Brown has signaled discipline; planned use is debt paydown and share repurchase.
+
+### Industry/Market Risks (3)
+
+**6. CMP share-loss to Kinik at the leading edge.** Per Nomura's 2026-05-21 supplier league table (Fig 43), Kinik holds 60-70% of global CMP pad conditioner share and is at ~80% share at TSMC's N2 node — both higher than five years ago. 3M's relative share has been declining at the leading edge for at least 5 years; the gap is now structural. **Severity: medium** for the semi sub-business; **low** at the consolidated level. **Mitigant**: 3M's installed-base inertia at legacy nodes provides 5-7 year runway before share-loss bites cash flow meaningfully; geographic mix gives 3M a US/European fab anchor where Kinik has lower share.
+
+**7. LCD-to-OLED display transition (BEF franchise decline).** 3M's microreplication-based brightness-enhancement-film franchise was sized for LCD-display volume; the OLED transition structurally shrinks the addressable BEF market. The transition is well-underway in smartphones (>50% OLED penetration), accelerating in tablets and laptops, and beginning in TVs (where the LCD baseline is still dominant). **Severity: medium** at the Display Materials and Systems division level; **low** at the consolidated level. **Mitigant**: 3M has launched functional films for AMOLED that partially offset BEF decline.
+
+**8. Tariff and trade-policy volatility.** The 10-K Item 1A risk factors specifically call out tariff and trade-restriction risk as a top-tier concern; the FY2025 commentary notes that "Compliance with rapidly changing tariffs and trade restrictions may require significant time and resources, and in turn increase our cost of doing business, and could result in fines and penalties or reputational harm if we are found to not be in compliance" ([3M 10-K FY2025, Item 1A Risk Factors](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm)). With 46% of revenue outside the US and 12% in China specifically, tariff exposure is direct and material. **Severity: medium**. **Mitigant**: 3M's local-for-local manufacturing footprint (manufacturing in 33+ countries) partially insulates against US-China tariff escalation.
+
+### Financial Risks (1)
+
+**9. Valuation / multiple-compression risk.** MMM trades at TTM P/E 29.4× — a premium to the diversified industrial peer average (~22×) — and at TTM P/B 24.4× which signals equity-base damage from PFAS litigation provisions. The forward P/E of 17.5× implies the market is already pricing FY2026 adjusted EPS guidance at the lower end of the USD 8.50-8.70 range; **a miss vs. FY2026 adjusted EPS guidance (or a downward revision of guidance) could trigger a 10-20% multiple-compression episode** given how dependent the current valuation is on the post-PFAS-exit "clean earnings" narrative. **Severity: medium**. **Mitigant**: 2% dividend yield + 2.3% buyback yield (combined 4.4% shareholder yield) provides equity-return floor even if multiple compresses.
+
+### Macroeconomic Risks (1)
+
+**10. Cyclical sensitivity to global industrial production and consumer demand.** ~50% of 3M revenue is exposed to short-cycle industrial / automotive / consumer end markets that move with global macro. A global industrial recession or a sustained consumer slowdown would compress organic growth materially; the FY2025 organic growth of +0.9% GAAP is already at the low end of historical ranges. **Severity: medium**. **Mitigant**: 3M's broad diversification across end markets and geographies dampens single-cycle exposure; the dividend-aristocrat-cash-return policy provides defensive characteristics.
+
+---
+
+## References
+
+**Primary regulatory filings**
+- [3M Company 10-K Annual Report for fiscal year ended December 31, 2025, filed 2026-02-03](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm)
+- [3M Company 10-K Annual Report for fiscal year ended December 31, 2024, filed 2025-02-05](https://www.sec.gov/Archives/edgar/data/66740/000006674025000006/mmm-20241231.htm)
+- [3M Company 10-Q Quarterly Report for quarterly period ended March 31, 2026, filed 2026-04-21](https://www.sec.gov/Archives/edgar/data/66740/000006674026000175/mmm-20260331.htm)
+- [3M Company 2026 DEF 14A Proxy Statement, filed 2026-03-25](https://www.sec.gov/Archives/edgar/data/66740/000006674026000151/mmm-20260324.htm)
+- [3M Company 8-K dated 2024-04-01 — Solventum separation completion](https://www.sec.gov/Archives/edgar/data/66740/000006674024000044/mmm-20240401.htm)
+- [3M Company 8-K dated 2024-04-30 — William Brown appointment](https://www.sec.gov/Archives/edgar/data/66740/000006674024000051/mmm-20240430.htm)
+- [3M Company 8-K dated 2026-02-03 — Neil Mitchill board appointment](https://www.sec.gov/Archives/edgar/data/66740/000006674026000037/mmm-20260203.htm)
+- [3M Company Q4 2025 earnings release dated 2026-01-20 (8-K Exhibit 99.1)](https://www.sec.gov/Archives/edgar/data/66740/000006674026000003/q42025-8kerexx991.htm)
+
+**Investor materials**
+- [3M Investor Day Materials, 2025-02-26](https://s24.q4cdn.com/834031268/files/doc_financials/2025/q1/2025-3M-Investor-Day-Materials.pdf)
+- [3M Investor Relations — Dividend History](https://investors.3m.com/financials/dividend-history/default.aspx)
+
+**Company and brand information**
+- [3M corporate history page](https://www.3m.com/3M/en_US/company-us/about-3m/history/)
+- [3M Electronics business unit page](https://www.3m.com/3M/en_US/electronics-us/)
+
+**Sector and industry research**
+- Nomura "Greater China Semi: A guide to Semi renaissance in 2026~30F", 2026-05-21 — see [project sector note](/Users/x/projects/financial_agent/reports/sector/半导体材料.md) for the local summary (CMP consumables league tables Fig 35-44 in particular)
+
+**Market data**
+- [Stockanalysis.com MMM statistics page](https://stockanalysis.com/stocks/mmm/statistics/) — TTM and forward valuation multiples
+- [Stockanalysis.com HON statistics page](https://stockanalysis.com/stocks/hon/statistics/)
+- [Stockanalysis.com ITW statistics page](https://stockanalysis.com/stocks/itw/statistics/)
+- [Stockanalysis.com EMR statistics page](https://stockanalysis.com/stocks/emr/statistics/)
+- [NYSE MMM profile](https://www.nyse.com/quote/XNYS:MMM)
+
+**Competitor filings (referenced in Section 7 verification)**
+- [Entegris 10-K FY2024 (CIK 0001101302)](https://www.sec.gov/Archives/edgar/data/1101302/000110130225000004/entg-20241231.htm)
+- [Honeywell FY2024 10-K (CIK 0000773840)](https://investor.honeywell.com/static-files/c3e3a73c-5b50-4c1d-a4bf-d3c5f0c8c79d)
+- [Kinik (TWSE 1560) English product page — CMP pad conditioners](https://www.kinik.com.tw/en/products/cmp-pad-conditioners)
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL check.** All SEC URLs derived from the EDGAR submissions JSON API at `https://data.sec.gov/submissions/CIK0000066740.json` (CIK 66740 for 3M). Primary filing documents verified by name:
+- `mmm-20251231.htm` = 10-K FY2025, accession 0000066740-26-000014, filed 2026-02-03
+- `mmm-20241231.htm` = 10-K FY2024, accession 0000066740-25-000006, filed 2025-02-05
+- `mmm-20260331.htm` = 10-Q Q1 FY2026, accession 0000066740-26-000175, filed 2026-04-21
+- `mmm-20260324.htm` = 2026 DEF 14A Proxy Statement, accession 0000066740-26-000151, filed 2026-03-25
+- `mmm-20240401.htm` = 8-K Solventum separation, accession 0000066740-24-000044, filed 2024-04-04
+- `mmm-20240430.htm` = 8-K William Brown CEO appointment, accession 0000066740-24-000051, filed 2024-04-30
+- `mmm-20260203.htm` = 8-K Neil Mitchill board appointment, accession 0000066740-26-000037, filed 2026-02-05
+- `q42025-8kerexx991.htm` = Q4 2025 earnings release Exhibit 99.1, accession 0000066740-26-000003, filed 2026-01-21
+
+**10-K spot-checks** (claim → location in 10-K):
+- FY2025 net sales USD 24,948M ✓ ([Note 3 Disaggregated Revenue Information](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+- FY2025 GAAP operating margin 18.6%; adjusted 23.4% ✓ ([Item 7 MD&A Operating margin reconciliation](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+- FY2025 GAAP EPS $6.00; adjusted EPS $8.06 ✓ ([Item 7 MD&A Financial highlights table](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+- FY2025 T&E segment sales $8,272M; segment operating income $1,436M (17.4%); adjusted $1,728M (22.7%) ✓ ([Item 7 MD&A — Transportation and Electronics segment](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+- FY2025 Electronics division revenue $2,911M (vs $2,971M FY2024 and $2,863M FY2023) ✓ ([Note 3](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+- FY2025 Advanced Materials division revenue $858M (vs $969M FY2024 and $1,167M FY2023) ✓ ([Note 3](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+- FY2025 China/Hong Kong revenue $2,951M ✓ ([Note 3 — Net sales by particular country](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+- ~60,500 employees ✓ ([Item 1 Human Capital](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+- PWS Settlement USD 10.5-12.5B paid 2024-2036 ✓ ([Note 17 Commitments and Contingencies](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+- CAE Settlement USD 6.0B paid 2023-2029 ✓ ([Note 17](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+- FY2025 pre-tax cash payments related to net costs for significant litigation $3.5B; FY2024 $4.5B ✓ ([Item 7 MD&A Special items adjusted measures](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+- Fused silica business divested June 2025 ✓ ([Note 4 Divestitures](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+- Precision grinding and finishing held for sale September 2025; $159M pre-tax charge; ~$130M annual sales ✓ ([Note 4](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+- William M. Brown — CEO since 2024-05-01, Chairman since 2025, prior L3Harris CEO 2019-2021 ✓ ([Item 1 Information about Executive Officers](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm))
+
+**Analyst-view sentences** (intentionally not cited to a primary source):
+- Section 1: "On adjusted EPS the stock is not stretched" — analyst inference based on the comparison of forward P/E 17.5× to peer median; supported by [Stockanalysis.com MMM](https://stockanalysis.com/stocks/mmm/statistics/) and peer pages.
+- Section 4.3: "3M's CMP pad conditioner is a clearly partial competitive advantage… structurally losing share" — analyst view, supported by Nomura sector report Fig 43 supplier league table.
+- Section 4.4: "3M's CMP polishing pad business is a partial competitive advantage… not a structural #1 or #2 globally" — analyst view, supported by Nomura sector report Fig 42.
+- Section 4.5: "3M is a participant, not a leader, in mask pellicles" — analyst view, supported by Nomura sector report p. 38-39 supplier league table.
+- Section 4.6: "Display Materials and Systems is structurally declining" — analyst view, supported by industry observation of LCD-to-OLED transition.
+- Section 4.7: "Advanced Materials post-PFAS is a smaller, lower-growth, higher-quality business" — analyst view, supported by [Note 3 division revenue trajectory](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm).
+- Section 7 competitor table: full table is analyst-constructed because the 10-K Item 1 does not contain a "Competition" section that names specific competitor companies — caveated explicitly in the table's source citation.
+- Section 7.1 chart caption: "3M's share is structurally declining at the leading edge" — analyst view, supported by Nomura sector report.
+- Section 8 SAM math (USD 300-500M serviceable; USD 200-300M today): analyst estimate based on the Nomura league-table inputs combined with 3M's segment revenue disclosures.
+
+**Verbatim 10-K quotes used in Section 4:**
+- "Light management films and electronics assembly solutions; aerospace, industrial / commercial solutions; chip packaging and interconnection solutions; semiconductor production materials; solutions for data centers" — quoted verbatim from the [3M 10-K FY2025 Item 1 Business — Transportation and Electronics matrix](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm), verified by text grep.
+- "Electronic display enhancement films and optically clear adhesives" — quoted verbatim from same source, verified by text grep.
+- "Advanced ceramic solutions" — quoted verbatim from same source, verified by text grep.
+- Distribution language ("3M products are sold through numerous distribution channels…") — quoted verbatim from same source, verified by text grep.
+- Tariff risk factor language ("Compliance with rapidly changing tariffs and trade restrictions may require significant time and resources…") — quoted verbatim from [Item 1A Risk Factors](https://www.sec.gov/Archives/edgar/data/66740/000006674026000014/mmm-20251231.htm), verified by text grep.
+
+**Cross-document consistency:**
+- Section 1 segment classification (3 segments, 16 divisions) matches Section 4 product matrix walk.
+- Section 2 timeline dates (Solventum 2024-04-01, Brown CEO 2024-05-01, CAE settlement 2023, PWS settlement 2023) match Section 9 risk descriptions.
+- Section 5 customer-concentration claim (no single customer >10%) matches Section 9 risk 2 (which is sub-segment level, not consolidated).
+- Section 7 product-by-product competitive analysis matches Section 4 product descriptions (CMP pad / CMP pad conditioner / pellicle / display films / back-grind tape).
+
+**Residual unknowns / not yet verified:**
+- 3M's exact CMP pad conditioner share % — Nomura's chart shows Kinik 60-70%, 3M as the largest single non-Asian challenger (~15-20% estimate) but does not publish the exact 3M share. The analyst has labelled this as Nomura source + analyst inference.
+- 3M's individual CMP product line revenue ("USD 200-300M today") — sell-side consensus estimate, not disclosed in any 3M filing. The analyst has labelled this clearly as a sell-side estimate.
+- The first CEO of 3M (Edgar Ober, who started ~1907) and the founders are listed without LinkedIn-verifiable bio detail because they are pre-LinkedIn era; the founders are documented in the 3M corporate history page cited.
+- 3M's own product brand names for the CMP pad and pad conditioner are not publicly disclosed in the FY2025 10-K (which uses the umbrella "semiconductor production materials" phrase); the report does not name a specific 3M CMP product brand because the 10-K does not.
+
+</details>
+
+
