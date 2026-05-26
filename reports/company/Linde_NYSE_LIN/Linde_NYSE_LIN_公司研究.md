@@ -352,3 +352,128 @@ pie title FY2025 Linde 销售按可报告分部（剔除 Other，单位 $ mn）
 **行业动态 —— 波特五力（一段总结）。** *买方议价权分化*：大型驻厂客户（炼厂、晶圆厂）议价能力强，但通过合同到期时的多方招标行使——Linde 凭规模与关系赢得大部分。*供方议价权中等*：能源（电、天然气）是主要成本，由多家竞争性供应商提供；特种投入化学品来自更集中的供应基础（如 Solvay 的氟化前驱体），但传导条款中和风险。*新进入威胁低*：ASU + 管网的资本密集度高得令人却步，在位者享受 30+ 年累积运营经验优势。*大气气体的替代威胁低*（无法替代高纯氮气用于晶圆厂吹扫）*但氢气替代威胁显著*（绿氢可在经济性允许处替代灰氢）。*四大之间内部对抗激烈但有纪律* —— 产能扩张基于合同积压而非投机性，这正是为何行业平均 ROC 维持在 20% 中区。
 
 ---
+
+## 7. 竞争格局
+
+10-K 罕见直接点名 Linde 的主要竞争对手：
+
+> "Linde participates in highly competitive markets in industrial gases and engineering, which are characterized by a mixture of local, regional and global players, all of which exert competitive pressure on the parties. In locations where Linde has pipeline networks, which enable the company to provide reliable and economic supply of products to larger customers, Linde derives a competitive advantage. Competitors in the industrial gases industry include global and regional companies such as L'Air Liquide S.A., Air Products and Chemicals, Inc., Messer Group GmbH, Mitsubishi Chemical Holdings Corporation (through Taiyo Nippon Sanso Corporation) as well as an extensive number of small to medium size independent industrial gas companies which compete locally as producers or distributors."
+> — [Linde 2025 10-K, Item 1 — Competition](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)
+
+此清单是下文竞争分析的 **锚**。我加入的任何 10-K 未点名的对手（盈德气体、SK Specialty、岩谷等）都是 10-K 未提及的区域 / 特种竞争对手，单独引用且标注为分析师评论。
+
+### 7.1 直接全球竞争对手
+
+**L'Air Liquide S.A. (EPA:AI，市值约 EUR 100 bn) — 工业气体全球第 2。** 液空是产品结构、地理足迹与 EPC 能力上最近的同业 —— 两家公司都服务炼厂、晶圆厂、医疗，合同结构与 Engineering 板块类似（Air Liquide Engineering & Construction 不单独披露，但运营 ASU 与 H₂ 装置 EPC）。液空收入结构更欧洲化（其 2024 披露 EMEA 约 38%），且医疗权重高于 Linde；其电子业务——以 **Voltaix**（2013 收购，专注硅与锗特种前驱体）锚定 —— 在先进节点与 Linde 有竞争力，但绝对规模较小 ([Air Liquide Electronics — Semiconductors page](https://electronics.airliquide.com/who-we-are/our-markets/semiconductors-0)；[Air Liquide 2024 Universal Registration Document](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf))。营业利润率在 19% 中区——低于 Linde 调整后 29.8% —— 反映既有的业务结构差异（更多欧洲暴露，结构性能源成本更高）与不那么严格的合同 / 成本管理。TTM P/E **30.3×**，对比 LIN 34.4× ([Yahoo Finance — AI.PA](https://finance.yahoo.com/quote/AI.PA/key-statistics/))。*分析师观点：* Linde 与液空是全球唯二同时拥有气体 + EPC + 全球管网足迹的玩家；二者形成有效的西方双寡头，合计全球 merchant + 吨级份额约 50%。
+
+**Air Products and Chemicals, Inc. (NYSE:APD，市值约 USD 64 bn) — 全球第 3。** APD 在所有分销渠道与 Linde 正面竞争，特别强势在氢气（NEOM 绿氢、路易斯安那蓝氢出口）与氦（与 Linde 并列西方两大领跑者）。近期管理层调整（Seifi Ghasemi 2024–25 年退休，新 CEO 接任）伴随对前期激进绿氢项目战略的部分回撤，德州 / 路易斯安那蓝氨项目延期、资本开支优先级重排 ([Air Products 2025 10-K, Item 7 — Outlook](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm))。APD 约 USD 12 bn 营收基础约为 Linde 的三分之一，TTM 营业利润率在 20% 低中区——明显低于 Linde。估值 **TTM P/E 30.5×, P/S 5.2×, EV/EBITDA 21.8×** ([Yahoo Finance — APD](https://finance.yahoo.com/quote/APD/key-statistics/)) —— P/E 接近 Linde 但 EV/EBITDA 较高，反映氢项目资本开支更高的杠杆。
+
+**三菱化学集团 / 太阳日酸 (Mitsubishi Chemical / Taiyo Nippon Sanso, Japan, 母公司 TSE:4188，气体业务约 JPY 1.2 tn 营收) — 全球第 4、亚洲第 1。** 现属三菱化学集团，太阳日酸 (TNSC, 品牌 Nippon Sanso Holdings) 是亚洲锚定的工业气体巨头，强势在日本、韩国、东南亚，并通过 2018 年合并反垄断剥离收购的前 Praxair 欧洲资产得到补强。特种气体暴露强 —— TNSC 是日本主要的 NF₃、WF₆ 和 CDA（压缩干燥空气）对日 / 韩晶圆厂供应商。独立上市的 **Nippon Sanso Holdings (TSE:4091)** 相对西方同业折价交易 —— TTM P/E **22.0×, P/S 2.0×** ([Yahoo Finance — 4091.T](https://finance.yahoo.com/quote/4091.T/key-statistics/)) —— 部分因为三菱化学集团折价、部分因为 TNSC 地理结构集中在毛利率较低的亚洲 merchant 业务。
+
+**Messer Group GmbH (德国，私人持有；营收约 EUR 4 bn) — 全球最大私人持有的工业气体公司。** 2018 年 Linde / Praxair 合并反垄断剥离的主要受益方，通过与 CVC Capital Partners 的合资收购了 Praxair 的原美国及南美资产（合资此后解除，Messer 2024 年取得全部所有权）。Messer 在欧洲、美国东北及南美部分地区是区域强者，主要在 merchant 与包装气体渠道竞争，密集的区域物流给予其相对全球巨头的成本位置优势。因 Messer 是私人公司披露有限；[Messer Group corporate annual-reports portal](https://corporate.messergroup.com/en/web/guest/annual-reports) 与 [Messer SE & Co. KGaA 2024 Annual Report PDF](https://www.messergroup.com/documents/20127/3575944/Annual+report+Messer+SE+&+Co.+KGaA+2024.pdf/7f9c2405-33eb-959b-bd5e-f39474612da0?t=1750834034633) 提供最新公开数据点（FY24 集团销售约 EUR 4.5 bn）。
+
+### 7.2 亚洲 / 区域玩家
+
+**岩谷产业 Iwatani Corporation (TSE:8088, 约 JPY 1.3 tn 营收) — 日本工业气体第 2，全球最大氦气纯粹型玩家。** 岩谷在日本 MRI 与 LCD 晶圆厂氦消费上占主导，并经营与 Linde、APD 竞争的全球氦分销业务。其在日本的氢气加注网络是全球最大（约 150+ 站）—— 鉴于日本氢能社会政策，是利基但战略上有趣的位置。
+
+**盈德气体 Yingde Gases（2017 年私有化后私人持有；约 CNY 12–15 bn 营收） — 中国本土第 1 驻厂供应商。** 2001 年成立，通过为中国钢厂与炼厂建设邻厂专用 ASU 的策略，成为最大中国本土工业气体公司。盈德是 Linde 在中国大陆为锚定长江与渤海工业集群的大额驻厂合同时的直接竞争对手；中国供应链本土化政策加速了其增长。
+
+**SK Specialty（韩国，SK Inc. 子公司，母公司 KOSPI:KS101120） — 韩国 NF₃ / WF₆ 专家主导者。** SK Specialty 是全球 NF₃（用于沉积工具的腔体清洗）第 1，WF₆（钨金属化）前三。主要客户是三星代工与 SK 海力士（同一集团），但也是台积电与西方晶圆厂的关键供应商。与 Linde 的竞争重叠在 **电子特种气子板块**，Linde 更广的产品组合与 SK Specialty 在特定分子上更高纯度 / 更低成本的定位对峙。
+
+**Showa Denko / Resonac (TSE:4004) — 日本特种气体领跑者，尤其在 NF₃ 与超纯氨。** Resonac 是更多元化的材料公司（石墨电极、硬盘、半导体材料），但其工业气体 / 特种气体板块在日本与亚洲晶圆厂集群与 Linde 的特种业务直接竞争。
+
+**杭氧股份 (SHA:002430) 与中国工业气体 (601020.SS) — 中国 A 股上市的驻厂工业气体运营商。** 二者均与 Linde 在中国大陆驻厂合同上竞争。杭氧尤其是本土 ASU / 深冷设备制造商，正在快速扩张工业气体运营业务。
+
+### 7.3 竞争格局框架
+
+```mermaid
+quadrantChart
+    title 工业气体竞争格局 — 规模(x) vs 特种电子深度(y)
+    x-axis "规模较小" --> "规模较大"
+    y-axis "特种 / 电子深度较低" --> "特种 / 电子深度较高"
+    quadrant-1 "规模 + 特种 (溢价)"
+    quadrant-2 "特种利基"
+    quadrant-3 "区域通用"
+    quadrant-4 "规模通用"
+    "Linde": [0.95, 0.80]
+    "Air Liquide": [0.82, 0.78]
+    "Air Products": [0.55, 0.65]
+    "Nippon Sanso": [0.42, 0.72]
+    "Messer": [0.30, 0.20]
+    "SK Specialty": [0.18, 0.95]
+    "Resonac": [0.25, 0.80]
+    "Iwatani": [0.20, 0.55]
+    "Yingde Gases": [0.15, 0.30]
+```
+
+Linde 锚定 **右上象限——规模领跑者 + 完整特种电子深度 + 完整 Engineering EPC 能力**。液空是同一象限的直接同业，但两轴均略低于 Linde。Air Products 中等规模，电子聚焦强但较窄。Nippon Sanso 亚洲特种暴露深但绝对规模较小。专家对手（SK Specialty、Resonac）位于左上 —— 规模较窄但在特定分子上极深。盈德、Messer 与中国区域玩家位于下方带 —— 规模通用而缺乏特种深度。
+
+### 7.4 Linde 的竞争优势
+
+1. **装机资产规模。** Linde 的管网复合、自有 merchant 车队与驻厂 ASU 足迹在行业中最大。新进入者无法在十年资本开支内复制；现有同业可逐合同竞争但无法匹配广度。
+2. **合同结构纪律（Praxair 遗产）。** Praxair 合同模板——2018 合并后成为公司标准——嵌入 (i) 能源 / 原料传导、(ii) 最低照单照付下限、(iii) 与销量解耦的设施费结构、(iv) 与行业特定指数挂钩的通胀调整、(v) 客户主动终止的罚款条款。这套合同的法律与商业精巧度是 Linde 利润率优势中**最被低估**的组件。
+3. **Engineering EPC 板块（Linde AG 遗产）。** 少有同业拥有 Linde Engineering 规模的内部 EPC 板块。液空是唯一拥有可比能力的直接对手；APD 把更多 EPC 工作外包，对项目成本纪律与 IRR 产生影响。
+4. **生产效率改善方案文化 (productivity-program culture)。** Linde 每年披露生产效率节约对营业利润增长的贡献（FY25 管理层评论明确提到"savings from productivity initiatives" —— 见 [Linde 2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)）。成本削减纪律是跑率级的、嵌入运营节奏而非周期性重组。
+5. **资本配置记录。** **FY25 向股东返还 $7.4 bn**，其中 $2.8 bn 分红 + $4.6 bn 净回购 ([Linde 2025 10-K, MD&A — Liquidity](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))；Praxair 与继承的 Linde 连续 30+ 年提高分红。增长资本开支 ($5.3 bn) + 回购 + 分红 的组合在工业周期同业中独一无二。
+
+![Linde plc — annual capital returns to shareholders, FY2021–FY2025](../../charts/linde_capital_returns.png)
+*资料：[Linde 2025 10-K, Consolidated Statements of Cash Flows](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)。*
+
+### 7.5 竞争脆弱点
+
+1. **EMEA 业务结构对欧洲能源成本离散度的暴露。** EMEA 占 25% 营收但贡献 35.7% 营业利润率——所有分部中最高。这部分是结构性（特种产品占比高），部分是欧洲能源价格错位的残余利益，可能正常化。
+2. **Engineering 分部周期性。** Engineering FY25 营收 $2.25 bn 暴露于大单 EPC 项目时间错位 —— FY25 同比下滑 3%，部分 FID 推迟。
+3. **盈德与本土化中国气体公司在中国大陆的份额侵蚀**，新国资晶圆厂与钢厂项目按供应链本土化政策优先采购本土供应商。这是缓慢的负面趋势而非急性风险。
+4. **CEO / 董事长集中在 Lamba** —— 合并董事长 + CEO 角色后，治理风险高于结构分离的同业（由 LID 缓解）。
+5. **氦周期性** —— 详 §4.5；这是业务固有的、非 Linde 独有，但严重性不对称（下行意外大于上行）。
+
+### 7.6 市场份额
+
+*分析师观点：* 按 2024 营收（工业气体，剔除 Engineering 与医疗），全球份额近似排名为：
+
+1. **Linde — 约 25–28%**（分析师估算；公司不发布全球份额数字）
+2. **Air Liquide — 约 21–24%**
+3. **Air Products — 约 10–12%**
+4. **太阳日酸 / 三菱化学集团气体业务 — 约 7–9%**
+5. **Messer — 约 3–4%**
+6. 中国区域玩家合计 — 约 6–8%
+7. Iwatani — 约 2%
+8. SK Specialty — 约 1–2%（仅特种气）
+9. 其他 — 长尾
+
+这些数字 *并非来自 10-K* —— 是基于上市同业营收披露 + 对私人持有 Messer + 中国区域玩家三角化得到的分析师估算。10-K 仅表述 "Linde 是全球最大的工业气体公司"，未给出百分比。
+
+---
+
+## 8. 市场机会 (TAM)
+
+全球工业气体 TAM 2025 年按营收约 **USD 110–120 bn**，正常周期下增速 **GDP + 2–3 ppt**；Linde 相关的可达子集（剔除极小规模的中国区域玩家与利基特种竞争对手）约 **USD 90–100 bn**，Linde 取得 FY25 的约 $34 bn 营收，隐含 **SOM（当前服务份额）约 35%**。这是上述八个工业子板块中任意单一公司的最高市场份额，也是 Linde 相对更广化工同业（约 15×）能保持 34× P/E 的结构性原因。
+
+**TAM 细分与增长轨迹 (2025E → 2030E)：**
+
+| 子板块 | 2025 TAM ($ bn) | 2030E TAM ($ bn) | 隐含 2025–30 CAGR | Linde 2025 份额 | Linde 2030 份额机会 |
+|---|---|---|---|---|---|
+| 大气驻厂吨级 | ~25 | ~35 | ~7% | ~38% | ~40%（清洁氢同址扩张获取） |
+| 大气 merchant | ~30 | ~35 | ~3% | ~33% | ~33–34%（稳定） |
+| 包装 / 钢瓶 | ~35 | ~38 | ~2% | ~30% | ~29%（区域 Messer 适度蚕食美国） |
+| 特种 / 电子气 | ~10 | ~16 | ~10% | ~25% | ~28%（台积电亚利桑那、三星 Taylor 上量） |
+| 氦 | ~6 | ~7 | ~3%（周期） | ~30% | ~30% |
+| 清洁 H₂（商业） | ~5 | ~35 | ~30%+ | ~20%（早期） | ~22–25%（取决于 FID 转化） |
+| 医疗气体 | ~10 | ~13 | ~5% | ~25%（美国为重） | ~25% |
+| **可达合计** | **~120** | **~180** | **~8%** | **~28%（集团）** | **~28–30%** |
+
+*资料：分析师构造表。方法：2025 基线按上市同业披露营收之和 + 私人 / 区域残差估算；2030E 投影对特种 / 电子使用野村《大中华半导体 2026–30F》[reports/sector/半导体材料.md](../../sector/半导体材料.md) 的子板块 CAGR，对清洁氢使用 IRA 隐含曲线，对大气 / merchant / 包装使用历史回归 + GDP 价差。*
+
+**最大的 TAM 扩张杠杆是清洁氢。** 2030 年全球清洁氢市场估算从 $30 bn（保守 —— IRA / 欧盟氢能银行慢速展开）到 $80+ bn（氢能委员会激进情景）不等。氢能委员会（Sanjiv Lamba 曾任联合主席）发布到 2030 年的累计清洁氢资本开支宣布总额超过 **USD 320 bn** ([Hydrogen Council — Hydrogen Insights 2024](https://hydrogencouncil.com/en/hydrogen-insights-2024/))。转化为已投产、有营收的项目比例严重依赖 (a) IRA 45V 财政部实施指南（2025 已解决）、(b) 欧盟氢能银行拍卖结果、(c) 客户长协价格接受度、(d) 电解槽 / SMR 成本轨迹。Linde 的定位——以 Beaumont 锚定，加上 EPC / 供气领跑与 Engineering 的设计 IP —— 在 FID 转化时不成比例捕捉份额。
+
+**第二大杠杆是电子。** 仅台积电按野村估算 2027F 资本开支约 **USD 70 bn**（1.6 nm 节点） ([reports/sector/半导体材料.md](../../sector/半导体材料.md))，同业韩国（三星、SK 海力士）与美国（Intel、Micron、GF、TI）资本开支流入到大宗气与特种气需求。晶圆厂建设周期是 **多年期产能扩张**（亚利桑那、Taylor TX、俄亥俄、德累斯顿、日本）；每座新晶圆厂为 Linde 锚定 15 年驻厂气体合同。
+
+**渗透策略。** Linde 取得份额的剧本有三个可重复套路：
+
+1. **带管网密度的锚定客户中标** —— 拿下台积电亚利桑那或三星 Taylor 合同，不仅交付该客户的吨级业务，也建立区域 ASU + 钢瓶灌装基地，让 Linde 在周围 merchant / 包装业务上经济性更优。
+2. **以 Engineering 为先的一体化方案** —— 把 Linde Engineering 的 EPC 能力与气体供应业务结合，让公司能提供"设计 + 建设 + 运营"的整合提案——这是没有 EPC 板块的对手无法匹配的。
+3. **清洁能源先发定位** —— 拿下早期蓝氢项目（Beaumont、OCI / Woodside、Dow Path-2-Zero）建立运营参考装置，提升赢得第二阶段 / 第三阶段扩建合同的几率。
+
+这一组合解释了为什么 Linde 营收预测在 2030 年前以 **GDP + 4–5 ppt** 增长，而不是行业潜在的 GDP + 2–3 ppt —— 在更高增长的电子与清洁氢端不成比例的份额获取，抵消在更慢增长的包装 / 区域中国端的小幅份额流失。
+
+---
