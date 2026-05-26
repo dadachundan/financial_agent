@@ -250,3 +250,67 @@ ULVAC 三大旗舰产品族为：
 *来源：ULVAC FY2025.6 分部产品表与按地区净销售表 ([FY25 财报, pp. 6, 23](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf))。*
 
 ---
+
+## 5. 客户与上市策略
+
+ULVAC 的客户基础反映了它服务的四个终端市场：**半导体晶圆厂、FPD / OLED 面板厂、真空零部件买家（工业 / 消费电子 OEM）以及稀土永磁 / EV 电池研发客户**。Yuho 明确写道「特定客户的销售在 FY24 与 FY25 综合损益表上均未达到净销售的 10% 或以上」——意味着在日本会计准则 (Japan GAAP) 的分部报告规则下**无单一客户达到 10% 披露阈值** ([FY25 财报, 主要客户注释, pp. 23–24](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf))。公司因此不被强制要求在财报中命名个别客户；以下内容借助管理层评论、行业媒体报道，以及构成公开记录一部分的捆绑联合销售关系进行重构。
+
+**按产品线 — 命名客户清单（最佳公开重构）：**
+
+| 子产品线 | 锚定客户 | 来源 |
+|---|---|---|
+| 半导体溅射 / MHM / 灰化 | TSMC 台积电（台湾代工）、Samsung Foundry 三星代工、SK hynix、Micron（DRAM, MHM POR）、YMTC、CXMT（中国 DRAM/NAND）、SMIC + 中国成熟制程代工 | 推论自 [Q3 FY26 Q&A, 第 5 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf) 提及的「台湾代工厂」「中国大客户」；DRAM「北美客户」= Micron |
+| 显示器与能源 | BOE 京东方、China Star 华星 (TCL)、Tianma 天马、Visionox 维信诺（OLED, 中国）；Samsung Display 三星显示 + LG Display（OLED, 韩国）；AUO 友达（台湾）；EV 电池厂商（CATL 宁德时代、BYD 比亚迪、Panasonic 松下、GS Yuasa 研发用途） | [Yicai Global 2025-08-14](https://www.yicaiglobal.com/news/kfmi-ulvac-to-integrate-their-flat-panel-display-target-materials-businesses) 提到 BOE；[Q3 FY26 Q&A 第 7 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf) G8 OLED 项目提到「中国厂商」 |
+| 零部件（真空泵 / 检漏仪） | 所有主要晶圆厂运营商（装机基础售后市场）；AI 服务器冷却买家（NVIDIA 合作伙伴、超大规模数据中心冷板集成商） | 推论自 AI 服务器冷却回路检漏的分部叙述 ([FY25 财报, p. 2](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf)) |
+| 工业 / 稀土永磁 | MP Materials（美国）、Proterial / Hitachi Metals（日本 / 美国）、Vacuumschmelze（德国）、Toshiba Materials、GM-VAC 合资 | [Q3 FY26 Q&A 第 8 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf) 提及「订单以美国为中心」；IRA 驱动的在岸化项目 |
+| 材料（溅射靶） | BOE、CSOT、Tianma（FPD, 经待 close 的中国合资）；全球半导体晶圆厂客户 | [Yicai Global](https://www.yicaiglobal.com/news/kfmi-ulvac-to-integrate-their-flat-panel-display-target-materials-businesses)；ULVAC 自身 FPD 靶材数量主要被 BOE 主导的中国需求所锁定 |
+| 表面分析 (PHI) | 大学、研究院所、全球半导体晶圆厂失效分析实验室 | 标准 PHI 装机基础；无单一锚定客户 |
+
+```mermaid
+pie title ULVAC FY2025.6 按地区净销售（合计 ¥2,512 亿）
+    "中国 ¥865 亿" : 34.4
+    "日本 ¥781 亿" : 31.1
+    "韩国 ¥315 亿" : 12.5
+    "台湾 ¥281 亿" : 11.2
+    "其他 ¥270 亿" : 10.8
+```
+
+*来源：[FY25 财报, 按地区分部表, p. 23](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf)。*
+
+**集中度评估。** 在无单一客户超过 10% 的情况下，按日本会计准则定义的客户集中度低于披露阈值。但**终端市场集中度**真实存在，且是更具意义的集中度指标：**中国单独占收入 34%，FPD 相关客户（BOE、CSOT、Tianma、Visionox、三星显示、LG Display、AUO）合计可能吸纳 30% 以上的集团收入**——将显示器与能源产品线、材料中 FPD 切片、零部件中 FPD 切片相加得出。提议的中国 FPD 溅射靶 KFMI 合资公司正是通过将 BOE 面向的靶材业务移入 ULVAC 作为少数股东的合资结构来明确缓解材料侧的这一集中度 ([Q3 FY26 重要事后事项, pp. 12–14](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf))。在半导体侧，最大单一终端客户几乎肯定是 **TSMC 台积电**（通过代工 MHM 溅射与光刻胶灰化），但 TSMC 的采购分布在多条 ULVAC 设备线、多个全球 TSMC 厂区，使任何单一收货地址都低于 10% 红线。
+
+**上市策略 (Go-to-market)。** ULVAC 通过 17+ 个地区销售子公司中的**自有销售工程师直接销售**——没有显著的渠道合作伙伴 / 经销商层级，这对于高接触晶圆厂设备而言是标准做法，但相对于更依赖渠道的模式抬高了 SG&A 负担。设备销售周期长（通常从规格到订单 6–12 个月；从订单到收入确认 9–18 个月，针对按时段确认的项目——FY25 期末 ¥980 亿设备订单余额给出未来一到两个季度的时段收入可见性）。定价按项目定制，鲜少公开披露。售后市场（耗材、备件、靶材补充）则更具交易性——按时点确认——为产品线带来一定的经常性收入特征（见 §4.9）。维护合同通常为一年期或多年期，并与每次大型设备安装捆绑。
+
+**销售策略评论。** 两项结构性举措值得标记。首先，Value-Up Plan 对**模块化设计设备**的承诺部分是客户获取成本下降策略——模块化工具缩短了从定制到出货的时间线，并允许同一 ULVAC 销售工程师覆盖更多客户机会，无须每次都进行定制工程 ([Q3 FY26 Q&A, 第 9 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf))。其次，Q3 FY26 描述的**AR/VR 项目利润纪律**——「为优先盈利能力，我们决定只选择性地接受高毛利项目」，AR/VR 中国溅射项目由 ¥160 亿削减至 ¥60 亿——明确显示销售组织不再以「不顾代价的销售规模」为衡量标准，这是 FY26 管理姿态的重大增量变化 ([Q3 FY26 Q&A, 第 6 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf))。
+
+**合作伙伴与渠道关系。** 当前最重要的合作伙伴是 2026-05-12 宣布的 **KFMI / Fengke FPD 溅射靶合资公司**（计划于 2026 年 5–6 月完成交割）；历史上 ULVAC 还运营 **ULVAC AUTOMATION TAIWAN** 权益法合资（晶圆厂工具的工厂自动化）、**SHOWA SHINKU Co. Ltd.** 权益法合资（真空设备）、以及 **ULVAC (NINGBO) Co. Ltd.** 权益法关联公司 ([FY25 财报, 权益法适用, p. 17](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf))。PHI 表面分析业务——从美国 Physical Electronics 收购——为 ULVAC 提供了一个具西方资质的分析仪器品牌，能够拉动母公司单凭自身无法赢得的学术与美国晶圆厂订单。
+
+**客户案例 — 精选。** 公开讨论的最重要客户中标包括：（i）**多家中国代工厂与 TSMC 对成熟制程 MHM POR 的采纳**，使 ULVAC 在财报电话会议中能够援引「事实标准」地位（未公开具体客户名）；（ii）面向 AI-GPU 封装的**台湾 OSAT 与日本基板厂 Descum / 灰化工艺 POR** ([Q3 FY26 Q&A, 第 5 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf))；（iii）驱动 FY26 显示器接单 +¥300 亿上调的**中国厂商 G8.6 OLED 改造项目（BOE 主导的 IT-OLED 扩产）** ([Q3 FY26 Q&A, 第 7 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf))；（iv）驱动工业设备线结构性级跨的**美国主导 NdFeB 在岸化项目所需的稀土永磁真空熔炼 / 烧结设备订单**。
+
+---
+
+## 6. 行业概览
+
+ULVAC 处于三个不同行业的交集——**半导体资本设备**、**FPD 资本设备 + 材料**、以及**真空技术（真空泵、零部件、分析仪器）**——并在**稀土永磁设备**与 **EV 电池生产设备**领域有较小的邻接业务。每个行业有各自的周期、结构与增长驱动，故本节分别展开。
+
+**半导体资本设备市场** ——按野村 Greater China Semi 锚定报告与 SEMI 行业追踪器，2025 年全球晶圆厂设备 (WFE, Wafer Fab Equipment) 市场估计约 1,100–1,200 亿美元，预计到 2027 年在 TSMC、Samsung、SK hynix、Micron 及中国成熟制程与存储扩产的 AI / HBM / 先进封装资本开支推动下达到 1,300–1,500 亿美元 ([reports/sector/半导体材料.md, 引用野村 2026-05-21](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。前五大玩家——Applied Materials、ASML、Tokyo Electron、Lam Research、KLA——合计控制约 75% 的 WFE；ULVAC 在剩余的 25% 中以专业溅射 / 灰化 / 真空泵供应商身份运营，其可寻址服务市场约为 50–80 亿美元（晶圆厂内匹配 ULVAC 产品组合的 PVD + 等离子剥离 + 真空零部件子部分）。野村将 2026-30 窗口的**结构性驱动**列为：AI 逻辑资本开支（TSMC 资本开支到 2027F 升至约 700 亿美元，1.6nm HVM 资本强度 50%）、HBM / DRAM-on-logic 扩产（CXMT、SK hynix、Micron）、先进封装资本开支（2026-28 年的 SoIC、CoWoS、EMIB-T），以及中国成熟制程扩产——所有这些都在抬升 ULVAC 的订单簿，即便公司不在领先制程竞争 ([reports/sector/半导体材料.md](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。
+
+**FPD 设备市场** —— 全球 FPD 资本设备市场在 2017 年中国 BOE / CSOT G10.5 LCD 资本开支高峰时达约 200 亿美元，目前结构性收缩至约 80–100 亿美元，且由 **OLED 资本开支周期**而非 LCD 主导。2024–2027 催化剂是 **IT-OLED** ——笔记本、平板、车载显示器——苹果 iPad Pro OLED 发布及中国 BOE / Visionox / CSOT 的 OLED 扩产正在驱动 G8.6 / G8.7 代 OLED 建厂周期，需要 ULVAC 的溅射 / 掩膜基板 / 靶材内容。OLED 沉积设备子市场据 WiseGuy Reports 估算 2023 年约 42 亿美元，预计到 2032 年以 ~12.6% 年化增长率扩张至约 125 亿美元 ([Oled Deposition Equipment Market Research Report 2032](https://www.wiseguyreports.com/reports/oled-deposition-equipment-market))。OLED 内部，**有机蒸发工具**（沉积发光有机层的线性源）由 **Canon Tokki（私营）**以 70–80%+ 份额主导；ULVAC 在 OLED 产线的**溅射 / 无机封装 / 掩膜基板 / 靶材外围**竞争。*分析师观点：* OLED 资本开支周期本质上比半导体 WFE 更具块状性——单一 G8.6 厂决策可使全球 TAM 波动 10–20%；ULVAC 的 FPD 相关收入波动是结构性嵌入行业的，并非 ULVAC 特定问题。
+
+**溅射靶材料市场** —— 野村 Fig. 26 将溅射靶置于约 800 亿美元全球半导体材料市场的约 3%（即约 24 亿美元半导体靶切片），IDC / Yano / Coherent Market Insights 将更广义的溅射靶市场（半导体 + FPD + 太阳能 + 玻璃镀膜 + 装饰）分拆为 2023 年约 45 亿美元，年化复合增长率 5–6% ([Cognitive Market Research, Semiconductor Sputtering Targets](https://www.cognitivemarketresearch.com/semiconductor-sputtering-targets-market-report)；[reports/sector/半导体材料.md](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。结构性背景是 GAA / High-NA EUV / 背面供电 / 先进封装——均增加薄膜堆栈复杂性，从而抬升单片晶圆的靶材消耗。**竞争格局**自 2020 年起持续整合：三菱化学 2020 年将其轻金属溅射靶业务出售给 Konfoong/KFMI ([WebSearch 摘要：KFMI / 三菱化学转让](https://www.coherentmarketinsights.com/market-insight/copper-sputtering-target-market-6221))，JX Nippon Mining 2025 年将 JX Advanced Metals 分拆为 TSE:5016（如今是最大纯玩家），ULVAC 现正于 2026 年将中国 FPD 溅射靶业务合资剥离至 KFMI。**ULVAC 的竞争单元是 FPD 靶（现与 KFMI 合资）+ OLED/IGZO 靶（自主保留）+ 与自家溅射腔体捆绑的小众半导体靶** ——它并非半导体靶纯玩家与 JX、Tosoh、Materion 正面对决的玩家。
+
+**真空零部件市场** —— 全球真空泵市场约 80 亿美元（Atlas Copco / Edwards、Pfeiffer Vacuum、Busch、Ebara、ULVAC 为主要玩家）。市场由 **Edwards (Atlas Copco)** 主导，拥有最大的面向晶圆厂的干式真空泵业务；**Pfeiffer Vacuum (FR:PFV)** 是有力的第二；ULVAC 是可信的第三，其优势来自自家设备装机基础的捆绑拉动。增长率约 4–6%/年，由相同的晶圆厂资本开支周期加上新兴的 AI 服务器冷却回路检漏需求驱动。*分析师观点：* 这是 ULVAC 最具防御性、波动最小的产品线，也是赋予集团「真空纯玩家」投资者身份的产品线。
+
+**稀土永磁设备市场** —— 一个小而快速增长的利基，由西方在岸化 NdFeB 永磁生产驱动。全球 NdFeB 总产量约 200,000 吨 / 年，历史上 >85% 在中国；由 IRA / EU 关键原材料法案驱动的美国 / 欧洲在岸化项目（MP Materials、Vacuumschmelze、Proterial、GM-VAC 合资）代表 2025–2030 年窗口内约 30–50 亿美元的永磁产能建设。设备切片——真空熔炼 / 烧结 / 镀膜炉——累计约 5–10 亿美元，由 ULVAC、ALD Vacuum Technologies、Consarc 与中国国有供应商瓜分。西方永磁项目明确偏好非中国设备供应——这一地缘政治偏好将 ULVAC 框定在该利基的优势竞争集合内。
+
+**EV 电池生产设备市场** —— 真空干燥、电解质箔涂层用真空沉积、干房公用工程是 ULVAC 较小的邻接业务，竞争对手包括 **Hitachi High-Tech**、**特种东海制纸 (Tokushu Tokai Paper)**、**三菱重工 (Mitsubishi Heavy Industries)** 与中国专用设备厂商。FY26 叙事温和（FY25 披露「EV 需求慢于预期」），但结构性增长完好——ULVAC 选择放缓产能扩张以避免次规模亏损。
+
+**行业结构与监管背景。** ULVAC 的所有终端市场都受制于**美国出口管制 (BIS) 对中国先进制程晶圆厂设备的限制**、**日本经济产业省 (METI) 与美国一致的管制**、以及**欧盟两用品出口管制**。Yuho 明确将此列为风险因子；ULVAC 的中端制程 / FPD / 真空零部件定位相对 AMAT / LRCX / TEL / ASMI / KLA 的领先制程出口管制风险敞口**较低**，但对 FPD 供给过剩**风险敞口更高**（任何中国 LCD/OLED 产能纪律 / 整合都会收紧 FPD 资本开支窗口），且对可能扰动中国稀土供应的美国 232 / 301 条款关税升级**风险敞口更高** ([Q3 FY26 Q&A, 第 10 项](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf))。管理层公开的关税姿态是**「买方承担成本」**，限制直接关税影响，但不绝缘于间接终端需求放缓。
+
+**供应商与买方议价力。** ULVAC 的投入供应商包括特种合金厂（钛、钼、钨、ITO 靶用铟）、日本精密机加工厂供应商以及电气 / 控制系统 OEM——供应集中度中等但不极端。对大型晶圆厂客户（TSMC、Samsung、SK hynix、Intel 可提取定价让步）买方议价力**高**，对 FPD 厂商与稀土永磁客户**中等**。溅射靶的替代风险**低**（大多数晶圆厂工序步骤的 PVD 沉积薄膜没有经济上有意义的替代品）；ULVAC 溅射设备的替代风险**中等**（AMAT Endura、TEL Trias、Canon Tokki 线性源平台在邻接工序步骤上展开竞争）。
+
+![ULVAC 接单与净销售对比 — FY24, FY25, 9M FY26](../../charts/ulvac_orders_sales.png)
+
+*来源：ULVAC FY2025.6 ([财报, p. 1](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf)) 与 Q3 FY2026.6 ([财报, p. 2](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf))。*
+
+---
