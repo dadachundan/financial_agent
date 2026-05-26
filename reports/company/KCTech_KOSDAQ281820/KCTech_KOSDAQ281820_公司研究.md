@@ -71,3 +71,91 @@ timeline
 **创始人 / 会长：高锡泰 (고석태 / Ko Seok-tae, 1954 年 3 月 31 日生)。** 高锡泰是 KC Inc. (1987 年成立) 的创始人，目前仍兼任 KC Inc. 与 KC Tech 两家公司的会长—不过自 2021 年起，日常经营责任已转交给双 CEO 架构 ([businesspost.co.kr「[Who Is ?] 고석태 케이씨텍 회장」](https://www.businesspost.co.kr/BP?command=article_view&num=370779))。高锡泰毕业于成均馆大学化学工程系 (1980 年获学位)，毕业后 (1980–1986 年) 在大成氧气公司 (Daesung Oxygen) 担任销售—大成氧气是一家代理进口美日半导体设备的韩国工业气体经销商—1987 年离开大成自立门户，创办 KC Inc.，专门把半导体设备进口卖给韩国晶圆代工与内存厂商 ([businesspost.co.kr 고석태 프로필](https://www.businesspost.co.kr/BP?command=article_view&num=370779))。1987 年的创业时点极有眼光：三星首次大规模量产 DRAM 是 1983 年，到 1987 年韩国内存产业刚进入首次资本支出超级周期。高锡泰曾在 2005–2007 年担任韩国显示器设备与材料行业协会会长，2016 年获韩国工程院化学与生物工程分会成员资格，目前仍是韩国设备与材料产业政策圈内的行业级声音。根据 2024 年 6 月 30 日披露，高锡泰个人持有 KC Tech 约 **4.64%**（968,292 股）和 KC Inc. 约 **7.48%**（1,013,444 股）；加上家族关联方，高家族合计控制 KC Tech 约 50%、KC Inc. 约 40.9%—意味着 KC 集团虽然是上市架构，但本质上是家族控制公司 ([businesspost.co.kr 고석태 프로필](https://www.businesspost.co.kr/BP?command=article_view&num=370779))。高锡泰会长正逐步把股份转给儿子高尚杰 (고상걸 / Ko Sang-gul, 1982 年生)，后者目前担任 KC Inc. 副会长兼代表董事；同一篇报道指出，传承架构已相当完善，但高尚杰尚未在 KC Tech 自身担任董事职务 ([businesspost.co.kr 고석태 프로필](https://www.businesspost.co.kr/BP?command=article_view&num=370779))。
 
 **联席 CEO：梁好根 (양호근 / Yang Ho-geun)。** 梁好根于 **2021 年 8 月 11 日** 与崔东圭一同被任命为 KC Tech 联席代表董事 / CEO，取代了之前由崔东圭与林冠宅 (Lim Gwan-taek) 组成的双人组 ([파이낸셜뉴스, 2021-08-11](https://www.fnnews.com/news/202108111629170231))。根据同一篇任命公告，梁好根此前在 KC 集团内部的职务是 TCK（一家 KC 集团旗下生产硅晶圆与石墨基半导体耗材的兄弟公司）副会长，以及 KC Inc. CEO—意味着他既有材料业务运营深度，也有母公司控股视角，而这正是材料密度上升的 KC Tech 战略所需 ([파이낸셜뉴스, 2021-08-11](https://www.fnnews.com/news/202108111629170231))。2021 年的重组在管理学语境下被表述为「경영 효율성 강화 및 전문성 강화」(经营效率强化 + 专业能力强化)，梁主管材料和公司事务、崔主管设备 ([파이낸셜뉴스, 2021-08-11](https://www.fnnews.com/news/202108111629170231))。梁好根也是 KC Tech 国际化叙事的公开代表人物—公司概览页与崔东圭 (Choi Dong-gyu / 최동규) 并列为联席代表董事 ([KC Tech 公司概览页](https://www.kctech.com/page/overview.php))。近期 KC Tech 管理层最重要的一次公开访谈是 2025 年 3 月《The Worldfolio》专访—由副会长 Ho Keun Yang（注：此人即梁好根 / 양호근，《Worldfolio》使用副会长头衔，该头衔与 KC Tech 联席 CEO 头衔并存）—文章中他清晰阐述了长期论点：「不要卖产品 —— 要卖信任。卖自己。」以及「真正的协同不是来自打包方案，而是来自我们深度整合」—把「设备 + 材料协同研发」模式定义为公司的战略护城河 ([The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。Worldfolio 这篇专访也清楚地表述了 2027 年（40 周年）目标：KC Tech 希望拿下先进 HBM 与 BSPDN 产线的设备关键认证、在全球顶级客户实现 CMP 系统量产、成为「全球规模玩家」—这是管理层自己设定的衡量未来两年执行力的尺子 ([The Worldfolio, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。
+
+## 4. 产品与服务
+
+### 4.1 产品矩阵 —— 三大产品族共享一组客户
+
+KC Tech 不是单一产品公司。公司向大致相同的客户群—三星电子、SK 海力士、以及一小撮跟随这两家韩国客户工艺出海的境外账户 (CXMT 长鑫存储、GlobalFoundries、Intel)—销售 **三大产品族**，而 KC Tech 同时卖设备和耗材这一不寻常事实，是大多数非韩国分析师在建模时严重低估的最重要单一变量 ([KC Tech「About / Overview」页](https://www.kctech.com/page/overview.php); [The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。下表是分析师按 KC Tech 自身的产品导航树重新构造的版本（因为公司没有发布等同于 10-K 的统一披露表—韩国 KOSDAQ 同规模公司的 DART 사업보고서 / 业务报告对产品的披露通常是叙事性而非表格化）。
+
+| 类别 | 子类 | 产品 / 平台 | 主要客户 / 应用 |
+|---|---|---|---|
+| **半导体设备** | CMP 抛光机 (300mm) | **Ventus**®（下一代平台），**Wezen BF** (Front Type)，**Wezen BS** (I Type) | 三星 / SK 海力士 HBM、DRAM、先进逻辑 |
+|  | 湿法清洗系统 | **K-3000** 单晶圆 Spin Processor（8 或 12 腔配置） | 后 CMP / 后蚀刻晶圆清洗，300mm 双面 |
+|  | 辅助设备（小） | 气体供应、真空泵、气体净化设备 | 子厂房支持 |
+| **显示器设备** | 湿法工作站与清洗机 | Wet Station、大气压等离子清洗机 (APP)、CO₂ 清洗机、Coater & Track 系统 | LG Display、京东方 BOE、华星光电 CSOT、三星 Display OLED / 下一代 FPD |
+| **材料（CMP 浆料 + 化学品 + 分散液）** | 氧化物浆料 | **氧化铈浆料 (Ceria Slurry)**（80–300 nm 颗粒 + 超纯水 + 化学品） | 先进节点 STI、ILD 平坦化 |
+|  | 二氧化硅浆料 | **二氧化硅浆料 (Silica Slurry)**（胶体硅） | 金属接触 / 钨塞 / 多晶硅 CMP、介质抛光 |
+|  | 金属浆料 | **金属浆料 (Metal Slurry)**（钨、铜在研） | 钨塞、铜互连、阻挡金属 |
+|  | CMP 后清洗 | **CMP 后清洗化学品 (Post-CMP Cleaning Chemical)** | 去除 CMP 后残留磨料颗粒与金属污染 |
+|  | 纳米分散液 | 纳米颗粒分散液 | 显示器与半导体专用应用 |
+
+*资料来源：[KC Tech 产品页 (eng)](https://www.kctech.com/eng/); [KC Tech 产品 — Komachine listing](https://www.komachine.com/en/companies/kc-tech); [SEMICON Korea 2025 KC Tech 展位](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=234&ListByBooth=true&BoothID=633102&Nav=False); [Wet Cleaning System by 케이씨텍 (Komachine 韩文)](https://www.komachine.com/ko/companies/kc-tech/products/61131-wet-cleaning-system).*
+
+### 4.2 综合分析 —— 各类产品在客户工艺流程中的相互作用
+
+三星平泽厂 CMP 工艺的经济性，在物理流程上是这样的：每一层金属化之后，晶圆从沉积工艺出来时表面（含图案金属上覆的氧化物）不平整；**CMP 抛光机**（KC Tech Ventus、应用材料 AMAT Reflexion、Ebara Frex）把晶圆压在旋转研磨垫上，**浆料**（KC Tech 氧化铈用于氧化物、KC Tech 钨浆料用于钨塞、或第三方 Cabot/Versum 铜浆料）化学软化表面，研磨垫机械平坦化；晶圆再进入 **CMP 后湿法清洗**（KC Tech K-3000、Lam Research、东京电子 TEL、SCREEN 单晶圆清洗机），由另一道 KC Tech 化学品去除残留磨料；然后回到沉积工艺进入下一层 ([JEES: CMP 浆料种类详解](https://jeez-semicon.com/blog/cmp-slurry-types-explained-oxide-sti-copper-tungsten-beyond/); [Applied Materials CMP 页](https://www.appliedmaterials.com/in/en/semiconductor/semiconductor-technologies/cmp.html))。在现代逻辑节点 (3nm / 2nm) 上，这个循环每片晶圆要跑 **20–30 次**；在 HBM 上，硅通孔 (TSV) 与键合垫 CMP 每个 die 层再加约 4–6 步；在 BSPDN 工艺（Intel 18A、TSMC A16、未来三星 2nm）上，全新一套背面 CMP + 晶圆键合 + 减薄序列还会出现 ([Nomura,《Greater China Semiconductor 2026–2030F》, 2026-05-21, p. 6-9](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。每一道额外的 CMP 步骤，**如果** 客户在该步骤认证了 KC Tech 的浆料，就是一次额外的浆料消耗；同时是 KC Tech 已安装抛光机的一小时额外稼动。所以经济飞轮是：先装一台 Ventus，再俘获后续浆料带动消耗；或者先以浆料切入由竞争对手抛光机所在的客户线，再向上销售下一台 CMP 设备。这就是副会长反复强调的「设备 + 材料协同开发」护城河 ([The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。
+
+```mermaid
+graph LR
+    A[沉积<br/>氧化物/金属/钨] --> B[Ventus / Wezen<br/>CMP 抛光机]
+    B --> C[氧化铈 / 二氧化硅 / 金属<br/>浆料消耗]
+    B --> D[K-3000 单晶圆<br/>湿法清洗]
+    D --> E[CMP 后清洗<br/>化学品]
+    E --> F[下一层<br/>沉积]
+    F --> A
+    style B fill:#c0504d,color:#fff
+    style C fill:#70ad47,color:#fff
+    style D fill:#c0504d,color:#fff
+    style E fill:#70ad47,color:#fff
+```
+*KC Tech 在每层 CMP 循环中所占的步骤。红色 = 设备；绿色 = 材料。现代逻辑节点每片晶圆运行 20–30 次；HBM 多出 4–6 次 TSV + 键合垫 CMP 步骤。资料来源：[JEES CMP 浆料种类](https://jeez-semicon.com/blog/cmp-slurry-types-explained-oxide-sti-copper-tungsten-beyond/); [Nomura sector report (in 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md).*
+
+### 4.3 CMP 抛光液 —— 核心赛道
+
+浆料业务是结构性增长引擎。产品线覆盖三大化学族，每族针对现代晶圆的不同层：
+
+**KC Tech 自我描述（取自公司产品页）：**
+
+> 「半导体 CMP 工艺所用氧化铈浆料 (Ceria Slurry) 是由 80nm–300nm 颗粒、超纯水与化学品混合而成的悬浮液，用于对晶圆表面薄膜进行化学 + 机械抛光。」
+> — [KC Tech / SEMICON Korea 2025 展位](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=234&ListByBooth=true&BoothID=633102&Nav=False)
+
+> 「[二氧化硅浆料] 用于先进节点工艺的金属接触/钨塞与多晶硅 CMP 阶段……解决传统产品在顶级客户处的局限。」
+> — [KC Tech / SEMICON Korea 2025 展位](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=234&ListByBooth=true&BoothID=633102&Nav=False)
+
+**中文释义。** CMP 抛光液是 CMP 工艺的耗材，每抛一层晶圆膜（无论氧化硅、钨、铜还是其他金属）都要消耗一定量。**氧化铈浆料 (Ceria slurry)**—KC Tech 的核心产品—主要用于 STI（浅沟槽隔离 / shallow-trench isolation）和 ILD（层间介质 / inter-layer dielectric）CMP，因为只有铈基磨料对 SiO₂:Si₃N₄ 表现出极高的选择性 (selectivity)，能精准地「停」在氮化硅停止层上不再继续抛—这是先进节点 (3nm / 2nm / A16) STI 工艺无法替代的化学特征 ([JEES: CMP 浆料种类详解](https://jeez-semicon.com/blog/cmp-slurry-types-explained-oxide-sti-copper-tungsten-beyond/))。**二氧化硅浆料 (Silica slurry / 胶体硅磨料 colloidal silica)** 颗粒更小、更均匀，主要用于金属接触/钨塞 (W-plug) 与多晶硅 (poly) CMP 步骤，是 sub-10nm 节点的主力配方 ([Pondax: 先进节点 CMP 的硅溶胶磨料](https://www.pondax.com/technique-edge/2026/05/breaking-the-atomic-level-planarization-barrier-advances-in-morphology-engineering-and-surface-chemistry-of-silica-sol-abrasives-for-advanced-node-cmp/))。**金属浆料 (Metal slurry)** 则专门针对钨塞 (W contact) 和铜互连 (Cu interconnect)—这两个步骤目前 Samsung 90%+ 仍依赖 Cabot/Entegris 与 Versum/Merck 进口，是 KC Tech 国产化进度最慢的赛道，但也是市场空间最大的赛道（铜浆料正在客户验证中—引用 insightkorea 分析师注：公司「过去以中低价 ceria 销售为主，metal 系列高规格 slurry 销售比重将大幅增加」）([인사이트코리아, 2024](http://www.insightkorea.co.kr/news/articleView.html?idxno=102310))。**CMP 后清洗化学品 (Post-CMP cleaning chemical)** 是与 K-3000 / Wezen 设备配套使用的酸 / 碱性清洗液，专门去除残留磨料颗粒与金属污染—在 HBM 工艺中，由于 TSV CMP 颗粒污染对堆叠良率影响极大，CMP 后清洗化学品的工艺窗口比单层逻辑严苛得多 ([ResearchGate: 先进节点氧化铈颗粒 CMP 后清洗的挑战与解决方案](https://www.researchgate.net/publication/353303115_Challenges_and_Solutions_for_Post-CMP_Cleaning_of_Ceria_Particles_for_Advanced_Technology_Nodes))。
+
+当前推动需求的战略拐点是三股顺风同时叠加。**(1) HBM 爬坡：** SK 海力士在 2025 年 Q3 仍以 57% 份额领先全球 HBM，三星已从上季的 15% 快速追到 22% ([SK Hynix' Lead Shrinks In DRAM, HBM (Semiecosystem, 2025-10)](https://marklapedus.substack.com/p/sk-hynix-lead-shrinks-in-dram-hbm))。每块 HBM 堆叠 die 都需要多出若干 TSV + 键合垫 CMP 步骤，所以 HBM 营收 2024–2026 年的增长会直接乘以浆料带动消耗。**(2) 三星先进节点逻辑：** 三星 2nm 节点 (GAA 架构) + 最终的 BSPDN 集成，相对 5/4nm 都会显著增加 CMP 步骤数；而三星「在技术等效情况下优先选用韩国供应商」的战略指令，把 KC Tech 氧化铈浆料拉进了过去由 Cabot / Versum 占据的多个步骤的认证流程 ([Webpronews: Samsung Chairman Advances HBM, 2nm Tech (2025)](https://www.webpronews.com/samsung-chairman-advances-hbm-2nm-tech-in-bid-for-chip-dominance/); [The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。**(3) BSPDN：** 背面供电要求在器件晶圆背面键合一片第二晶圆，然后减薄至约 1 µm，背面金属化序列中包含多道 CMP 步骤；一旦三星在 2nm 或 1.4nm 采用 BSPDN，每片晶圆 CMP 步骤数与浆料消耗相对前 BSPDN 等效节点可上升 20–30% ([Nomura 2026-05-21 sector report (in 半导体材料.md)](../../sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md))。
+
+*分析师观点*：单看浆料业务，KC Tech 的竞争地位属 **部分护城河（技术 + 客户协同研发）**—在氧化铈方面强（十多年来一直是三星本土对 Cabot / 日立化学的主要替代选择）；在二氧化硅方面部分（与韩国同业 Soulbrain 同步推进）；在金属 / 铜方面弱 (Cabot / Entegris 与 Versum / Merck 仍持有全球 >90% 份额)。竞品图谱有据可查：Cabot 主力铜浆料系列与 Entegris 电子材料 (2022 年 Entegris 收购 Cabot CMC 部门，2024 年再剥离给 Fujifilm) 仍主导金属 CMP ([Yano Research CMP Slurry Market 2024](https://www.yanoresearch.com/press/press.php/3921))；Versum 化学品（2019 年默克 Merck KGaA 完成收购后并入其 Performance Materials 部门）锚定三星奥斯汀和 TSMC 的先进节点 STI；富士美 (Fujimi) PLANERLITE 硅溶胶在日本工艺客户 (瑞萨 Renesas、铠侠 Kioxia) 根深蒂固；鼎龙股份 (300054.SZ) 与安集科技 (688019.SS) 是中国国产化的同类厂商—两者都尚未对三星形成有意义出货 ([CMP Slurry Market — Yano Research, 2024](https://www.yanoresearch.com/press/press.php/3921); 安集 2024 年度报告 — [Anji Microelectronics 2024 年度报告 (上交所科创板)](https://star.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-04-16/688019_20250416_8014.pdf))。
+
+### 4.4 CMP 设备 —— Ventus 与 Wezen
+
+KC Tech 的 CMP 抛光机产品分为两大型号系列。**Ventus** 是「下一代」平台—公司旗舰 300mm CMP 系统，2024–2025 年一直被针对性地定位至三星 HBM 产线。根据 SEMICON Korea 2025 披露并由副会长在《Worldfolio》专访中佐证：Ventus 相对上一代平台效率提升 30%、支持 W / Cu / 氧化物 CMP 应用、配备双抛光与清洗站、4-FOUP 自动化运输系统外加 1 个量测站，以及最具差异性的—模块化清洗架构 **最多支持 12 个可配置腔体** + 多区域抛光头（带原位 in-situ 分区控制）([The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/); [SEMICON Korea 2025 KC Tech 展位](https://expo.semi.org/korea2025/Public/eBooth.aspx?IndexInList=234&ListByBooth=true&BoothID=633102&Nav=False))。**Wezen** 是上一代 300mm 平台，分 Wezen BF (Front Type) 与 Wezen BS (I Type) 两种型号，在要求较低的工艺步骤与湿法清洗配置上仍处于活跃量产 ([Komachine KC Tech CMP 产品列表](https://www.komachine.com/en/companies/kc-tech))。
+
+**KC Tech 自我描述（取自《Worldfolio》专访）：**
+
+> 「[Ventus] 相对上一代效率提升 30%，模块化清洗系统最多 12 个可配置腔体，多区域抛光头带原位分区控制。CMP 系统中没有别家公司提供 12 腔配置。」
+> — 副会长 Ho Keun Yang，[《The Worldfolio》专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/)
+
+**中文释义。** CMP 抛光机是半导体后段 BEOL (back-end-of-line) 与前段 FEOL (front-end-of-line) 多个步骤都需要的关键设备。KC Tech 的 Ventus 平台—300mm 单平台—与 Applied Materials Reflexion® GT (全球主导)、Ebara Frex 系列 (日本)、Lam Research Striker® (在 CMP 领域市占率较小) 直接竞争 ([Applied Materials CMP 页](https://www.appliedmaterials.com/in/en/semiconductor/semiconductor-technologies/cmp.html); [Ebara Technologies CMP 产品页](https://www.ebaratech.com/product-category/chemical-mechanical-polishing-systems/))。Ventus 的差异化在于 **12 腔模块化清洗**—在 HBM 制程中，TSV 蚀刻后 CMP 颗粒污染对堆叠良率影响极大，一台 CMP 抛光机后端清洗腔体数量直接决定通过率 (throughput) 与缺陷率。AMAT 的 Reflexion GT 标配 6-8 腔，Ventus 主打 12 腔正是面向 HBM 大批量量产的差异化卖点。**Wezen BF/BS** 则是 Ventus 推出之前 KC Tech 在三星内存主力线上的台数主力—经济寿命周期较长，仍在增量资本支出 (维修 + 扩产) 中持续出货。**K-3000 单晶圆 Spin Processor** 是独立的湿法清洗设备，可选 8 或 12 腔，专门用于 CMP 后清洗 + 化学处理 + 漂洗 + 干燥，特点是「连续处理、防自然氧化层增长」—这是先进节点单晶圆清洗的标准格式，竞争对手是 Lam Research VS、TEL ACTRIX、SCREEN SU-3300 ([Komachine 湿法清洗系统，KC Tech 韩文](https://www.komachine.com/ko/companies/kc-tech/products/61131-wet-cleaning-system))。
+
+设备侧的战略拐点是 **三星 HBM 产线爬坡**。据《The Elec》报道，KC Tech FY2026 Q1 营收 +101% 印迹具体由「CMP 设备、CMP 浆料、清洗设备出货扩张」驱动，半导体营收占总比 94.3%—也就是说本季印迹由设备侧爬坡主导，尽管材料端的结构性增长才是长期更高毛利的引擎 ([The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433))。DS 投资证券 2025 年 11 月卖方研究指出，2026 年设备营收预期同比增长 10%+，驱动力是「2026 年起内存芯片厂商设备交付提速」—对应的是三星 HBM4 投建时间表的可见拐点 ([데이터투자, 2025-11-11](https://www.datatooza.com/article/20251111115540957952ef38be23_80))。
+
+*分析师观点*：在设备方面，KC Tech 的竞争地位属 **部分护城河（地域 / 客户关系）**—仅在韩国境内强，三星的国产化指令 + 15 年共同研发的历史让 KC Tech 在内存产线 CMP 认证中拥有先看权；全球层面则弱，应用材料 (AMAT Reflexion GT 系列) 占据主导。副会长已明确表示，设备业务海外扩张策略是「跟随韩国客户」(三星奥斯汀 / 泰勒)，而不是去全球新客户处与应用材料正面竞争—也就是说，设备的全球化由三星的海外建厂决定，而不是 KC Tech 自主对 AMAT 的直接替代 ([The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。
+
+### 4.5 显示器设备 —— 20% 的传统业务
+
+显示器板块—Wet Station、大气压等离子清洗机 (APP)、CO₂ 清洗机、Coater & Track—是 KC Tech 较小、低增长但稳健的业务：FY2026 Q1 仅占营收 **5.7%**（从 FY2024 半导体爆发前的约 20% 下降），主要面向韩国面板厂 (三星 Display、LG Display) 以及中国面板厂 (BOE、CSOT) 的 OLED + 下一代显示器设备周期 ([The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433); [인사이트코리아, 2024](http://www.insightkorea.co.kr/news/articleView.html?idxno=102310))。近期评论显示「Wet Station 与 Coater 设备需求由于 OLED 与下一代显示投资转型而增加」—即该板块随韩 / 中面板资本支出而循环，而非与半导体周期同步，且在半导体疲弱时提供反周期收入 ([데이터투자, 2025-11-11](https://www.datatooza.com/article/20251111115540957952ef38be23_80))。显示器板块从 2024 年的小幅净亏损（季度净亏损 13 亿韩元的运行率）改善至 FY2026 Q1 接近盈亏平衡（净亏损收窄至 1.3 亿韩元），表明随着 2026 年中国 OLED 产能扩张回暖，板块出现适度的经营杠杆 ([The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433))。显示器业务的结构性增速低于半导体、利润率也较低，但绝对值上 *并未* 下降—KC Tech 已经在三星 Display 与 LG Display 经历多个 OLED 资本支出周期都维持住份额，业务存在部分原因是客户关系与精密湿法工艺的技术基础与半导体 CMP / 清洗业务有外溢效应。
+
+*分析师观点*：显示器是「无新闻板块」—当前规模下既不构成投资主题驱动因子，也不构成主题风险。有意思的问题是：这板块自身规模能否大到独立估值？FY2026 Q1 占营收 5.7% 的答案显然是「不能」，最有用的理解方式是把它视作 KC Tech 合并损益表内吸收的一小块经常性收入 / 客户关系资产。
+
+### 4.6 旗舰产品族与近期发布
+
+毫无疑问的旗舰 1–3 产品是：**(1) 氧化铈 CMP 浆料**（核心赛道；占材料营收 >40%），**(2) Ventus 300mm CMP 抛光机**（HBM 上对 AMAT Reflexion 的差异化设备护城河），以及 **(3) 设备 + 浆料协同研发模式本身**—这正是副会长反复定义为护城河的战略资产 ([The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))。过去 12 个月有据可查的商业里程碑包括：(a) Q1 FY2026 期间披露的 **698 亿韩元半导体设备订单**—KC Tech 拆分后历史上最大的单笔设备订单，约占一季营收 18% ([씽크풀 실적속보, 2024-04](https://m.thinkpool.com/stockDiscuss/281820/cont/11862550) — 注：此为旧文，用于订单格式背景；具体订单本身在 The Elec 2026-04-30 最新一季报道中提及)；(b) 预计 2025 年末开业的美国办公室（俄勒冈州尤金），主要支持三星奥斯汀 / 泰勒 + Intel + GlobalFoundries 韩源工艺转移 ([The Worldfolio, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/))；(c) **增层薄膜 (BuF) CMP** 的早期研发，用于先进封装基板—过去由日本厂商主导，但随着韩国和中国台湾 OSAT / 板级封装客户需求扩张被需要 ([The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433))；(d) 持续中的超临界 CO₂ 清洗设备研发—被卖方研报标记为未来重估因子 ([데이터투자, 2025-11-11](https://www.datatooza.com/article/20251111115540957952ef38be23_80))。这四项目前都还处于早期或认证阶段而非全收入贡献，但合起来构成 FY2025–2027 损益表所对标的叙事爬坡。
+
+![KC Tech 营收结构：分部 (FY24) + 设备 vs 材料](../../charts/kctech_segment_mix.png)
+*资料来源：[The Elec, 2026-04-30](https://www.thelec.net/news/articleView.html?idxno=10433); [The Worldfolio 专访, 2025](https://www.theworldfolio.com/interviews/Next-Gen_CMP_Ventus_System_and_Ceria_Slurry_for_Advanced_2nm_Node_Chips/6973/); [인사이트코리아, 2024](http://www.insightkorea.co.kr/news/articleView.html?idxno=102310)。设备-材料拆分基于副会长口径，非 KC Tech 披露行项目。*
+
+![KC Tech CMP 浆料营收轨迹 2019-2025E](../../charts/kctech_slurry_trajectory.png)
+*资料来源：[인사이트코리아,「케이씨텍, CMP slurry의 실적 성장성에 주목」](http://www.insightkorea.co.kr/news/articleView.html?idxno=102310); 2024E / 2025E 为基于卖方研报运行率推算（例如 [데이터투자 2025-11-11 DS투자증권 추정](https://www.datatooza.com/article/20251111115540957952ef38be23_80)）—标 "E" 表示估算。*
