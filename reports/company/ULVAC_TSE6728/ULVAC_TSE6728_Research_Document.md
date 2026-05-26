@@ -421,5 +421,116 @@ ULVAC's **TAM** (Total Addressable Market) is the sum of its six product-line ad
 
 **13. Geopolitical — China / Taiwan strait, Korean tensions.** A China-Taiwan kinetic event would simultaneously freeze ULVAC's TSMC / mainland-China revenue (~45% of group). A Korea-related supply-chain disruption (NK provocation, Korean labour action at Samsung/SK hynix) would hit the 13% Korea exposure. Severity: **high to extreme**; likelihood: **low**. Mitigants: geographic diversification (Japan + US + EU + SEA ~42% of revenue); no concentration on any single fab.
 
+![ULVAC peer comparison — forward P/E and revenue scale](../../charts/ulvac_peer_comparison.png)
+
+*Source: Forward P/E and revenue scale figures are analyst estimates triangulated from [TradingView TSE:6728](https://www.tradingview.com/symbols/TSE-6728/), [TradingView WFE peers](https://www.tradingview.com/symbols/NASDAQ-AMAT/), latest company filings, and trade-press valuation summaries; Canon Tokki is private (Canon-owned subsidiary), hence no listed comparables.*
+
 ---
+
+## References
+
+### Primary filings — ULVAC
+
+- [ULVAC Consolidated Financial Results for the Nine Months Ended March 31, 2026 (Q3 FY2026.6, dated 2026-05-12)](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf) — 18 pages, key source for FY26 9M segment data, FY26 guidance revision, and FPD-target JV subsequent event.
+- [ULVAC FY2026.6 Q3 Key Q&A summary](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf) — 4 pages of Q&A from the 2026-05-12 analyst briefing including MHM share commentary and Value-Up Plan progress.
+- [ULVAC Consolidated Financial Results for the Fiscal Year Ended June 30, 2025 (dated 2025-08-13)](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf) — 29 pages, full segment tables and geographic mix.
+- [ULVAC Q2 FY2026.6 Financial Results (dated 2026-02-10)](https://data.swcms.net/file/ulvac-ir/dam/jcr:47a41985-eb17-4d54-a162-edb0e6992cc9/140120260210553493.pdf).
+- [ULVAC Q1 FY2026.6 Financial Results (dated 2025-11-11)](https://data.swcms.net/file/ulvac-ir/dam/jcr:f5b96d1c-4458-4f8b-8389-df282eb09374/140120251111595721.pdf).
+- [ULVAC Q3 FY2025.6 Financial Results (dated 2025-05-13)](https://data.swcms.net/file/ulvac-ir/dam/jcr:0ff53756-670c-42b6-9ce0-c08c5e5e4cfb/140120250513545735.pdf).
+- [ULVAC Q2 FY2025.6 Financial Results (dated 2025-02-12)](https://data.swcms.net/file/ulvac-ir/dam/jcr:986cb059-297a-41e9-8ecc-1e1f852380ea/140120250212569919.pdf).
+- [ULVAC Scripts for FY2025.6 Financial Results Presentation (dated 2025-08-15)](https://ir.ulvac.co.jp/en/ir/newsrelease/PressRelease-20250815002/main/0/link/Scripts%20for%20Presentation_Material_for_FY2025_EN_1.pdf) — Value-Up Plan KPIs (¥300bn sales, 35% GM, 16% OPM, ¥63bn cumulative CF, 14% ROE target for FY26).
+
+### ULVAC corporate pages and integrated reports
+
+- [ULVAC IR Library](https://ir.ulvac.co.jp/en/ir/library.html) — central index of financial results, presentations, fact sheets, and Value Reports.
+- [ULVAC Business Highlights — multi-year financial summary](https://ir.ulvac.co.jp/en/ir/financial/businesshighlights.html) — FY21–FY25 net sales, OP, ordinary profit, net profit; key historical anchor.
+- [ULVAC Value Report (Integrated Report) 2025 — full PDF](https://www.ulvac.co.jp/en/sustainability/report/pdf/2025/2025_ulvac_e_all.pdf) — 14.5 MB; corporate philosophy, Value Creation Process, Mid-term Management Plan, governance, financial data.
+- [ULVAC Value Report (Integrated Report) 2024 — full PDF](https://www.ulvac.co.jp/en/sustainability/report/pdf/2024/2024_ulvac_e_all.pdf) — 14.7 MB.
+- [ULVAC 2024 Financial Overview (extract)](https://www.ulvac.co.jp/en/sustainability/report/pdf/2024/2024_ulvac_e_24.pdf) — Value-Up Plan KPI rollout.
+- [ULVAC Company History](https://www.ulvac.co.jp/en/company/history/) — founding (1952), overseas expansion timeline, name changes.
+- [ULVAC Management Structure (directors and officers, as of 2025-12-01)](https://www.ulvac.co.jp/en/company/directors_officers/) — Setsuo Iwashita (President & CEO), Sadao Aoki (CFO), board composition.
+- [ULVAC News Release: Q3 FY2025.06 Financial Results Presentation Script](https://ir.ulvac.co.jp/en/ir/newsrelease/PressRelease-2025051304.html).
+- [ULVAC News Release: Q2 FY2025.06 Financial Results Presentation Script](https://ir.ulvac.co.jp/en/ir/newsrelease/PressRelease-2025021202.html).
+- [ULVAC GmbH OLED equipment page](https://ulvac.eu/products/equipment/by-application/oled/) — SOLCIET / SATELLA / NEW-ZELDA product line descriptions.
+- [ULVAC 2015 sustainability report timeline annex](https://www.ulvac.co.jp/eng/_csr/eco/report/pdf/2015/2.pdf) — historical decadal timeline used for milestone cross-check.
+- [Reference for Business — ULVAC, Inc. company history](https://www.referenceforbusiness.com/history2/97/ULVAC-Inc.html) — founder backgrounds, early-period strategic milestones (US NRC agency).
+
+### Management bios
+
+- [Bloomberg Profile — Setsuo Iwashita, ULVAC Inc.](https://www.bloomberg.com/profile/person/17438855) — President & CEO since July 2017; joined 1984.
+- [Crunchbase — Setsuo Iwashita, ULVAC Technologies](https://www.crunchbase.com/person/setsuo-iwashita) — corroborating biography.
+- [GSA "Get to Know the CEO" interview with Setsuo Iwashita](https://www.gsaglobal.org/get-to-know-the-ceo-setsuo-iwashita-president-%EF%BC%86-ceo-of-ulvac-inc/) — CEO commentary on strategic priorities.
+
+### Sector / industry research
+
+- [Nomura "Greater China Semi: A guide to Semi renaissance in 2026~30F" — internal summary at reports/sector/半导体材料.md](https://github.com/dadachundan/financial_agent/blob/main/reports/sector/%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%9D%90%E6%96%99.md) — Fig. 26 (sputter targets = 3% of USD 80bn semi materials TAM); Fig. 44 (sputter-target league table including ULVAC); Fig. 35-44 supplier league tables.
+- [Cognitive Market Research — Semiconductor Sputtering Targets market 2024](https://www.cognitivemarketresearch.com/semiconductor-sputtering-targets-market-report) — USD 4.5bn 2023 market, 5.8% CAGR.
+- [Coherent Market Insights — Copper Sputtering Target Market 2025-2032](https://www.coherentmarketinsights.com/market-insight/copper-sputtering-target-market-6221) — competitor list including JX Nippon, Mitsui, ULVAC, KFMI, Tosoh, Plasmaterials.
+- [Maximize Market Research — Sputtering Target Market 2026-2032](https://www.maximizemarketresearch.com/market-report/global-sputtering-target-market/102381/) — Tosoh / ULVAC market context.
+- [IndexBox — Sputter Coating Market Forecast 2026-2035](https://www.indexbox.io/blog/sputter-coating-market-growth-to-accelerate-by-2035-driven-by-semiconductor-and-display-demand/) — AMAT / ULVAC / TEL collectively ~45% sputter-coating market share.
+- [DixieGrimes mirror — OLED Deposition Equipment Market Research Report (Market Research Future, 2024)](https://github.com/DixieGrimes/Market-Research-Report-List-1/blob/main/oled-deposition-equipment-market.md) — USD 1.5bn 2022 → USD 3bn 2027 OLED-deposition TAM; Canon Tokki, AMAT, Avaco, Sunic, ULVAC competitive set.
+- [ICO Optics — Sputter Coating Market Growth to 2035](https://www.ico-optics.org/sputter-coating-market-growth-to-2035-driven-by-semiconductors-displays/) — ULVAC bonded-target uniformity/yield spec citation.
+
+### Transaction & news
+
+- [Yicai Global — KFMI / ULVAC Explore Pact on Flat-Panel Display Materials, 2025-08-14](https://www.yicaiglobal.com/news/kfmi-ulvac-to-integrate-their-flat-panel-display-target-materials-businesses) — KFMI FPD-target business scale (CNY 2.3bn / +40% YoY), BOE anchor customer relationship, JV announcement.
+
+### Valuation / market data
+
+- [TradingView — TSE:6728 ULVAC, Inc. — stock summary](https://www.tradingview.com/symbols/TSE-6728/) — current price ¥9,587, market cap ¥462.7bn, TTM P/E ~38×, dividend yield 1.62%, all-time high ¥11,450 (2024-05-27), 1-year return +97%.
+- [Yahoo Finance — ULVAC Inc 6728.T](https://finance.yahoo.com/quote/6728.T/) — alternate valuation snapshot.
+- [Yahoo Finance — ULVAC Key Statistics](https://finance.yahoo.com/quote/6728.T/key-statistics/) — TTM ratios cross-check.
+- [Investing.com — Ulvac Inc TYO:6728](https://www.investing.com/equities/ulvac-inc) — peer cross-reference.
+- [Stockopedia — Ulvac TYO:6728](https://www.stockopedia.com/share-prices/ulvac-TYO:6728/) — secondary valuation reference.
+- [Simply Wall St — ULVAC valuation note](https://simplywall.st/stocks/jp/semiconductors/tse-6728/ulvac-shares/news/assessing-ulvac-tse6728-valuation-after-weaker-half-year-res) — sell-side / analyst commentary cross-reference.
+
+### Competitor primary sources (for §7 attribution)
+
+- [Applied Materials FY2024 10-K (EDGAR)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000006951&type=10-K).
+- [Lam Research FY2025 10-K (EDGAR)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000707549&type=10-K).
+- [Tokyo Electron Annual Report 2024](https://www.tel.com/ir/library/annual_report/).
+- [Pfeiffer Vacuum Investor Relations](https://www.pfeiffer-vacuum.com/en/investor-relations/) — competitor in vacuum pumps.
+
+---
+
+<details>
+<summary>Verification log (Step 10) — 2026-05-26</summary>
+
+**URL spot-check.** All ~50+ inline URLs were either (a) constructed from real `data.swcms.net` ULVAC IR PDF paths returned by [the ULVAC IR Library](https://ir.ulvac.co.jp/en/ir/library/result.html) WebFetch result, (b) ULVAC corporate `ulvac.co.jp` paths returned by WebFetch, or (c) third-party domain-anchored pages returned by WebSearch. No SEC EDGAR URLs were fabricated; the AMAT / LRCX / TEL pointers in §7 link to the EDGAR `browse-edgar` search rather than fabricated document filenames.
+
+**Segment data spot-checks.**
+- FY2025.6 net sales ¥251.184bn (–3.8% YoY) — confirmed [FY25 Financial Results, p. 1](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf).
+- FY2025.6 OP ¥26.523bn (–10.9%) — confirmed same source.
+- Vacuum Equipment segment FY25 sales ¥199.050bn — confirmed [FY25 segment table, p. 22](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf).
+- Vacuum Application segment FY25 sales ¥52.134bn — confirmed same.
+- Q3 FY2026.6 (9M to Mar 2026) net sales ¥191.631bn (+2.1% YoY), OP ¥14.719bn (–29.1%), orders ¥236.185bn (+44.1%) — confirmed [Q3 FY26 Financial Results, p. 2](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf).
+- 9M FY26 Vacuum Equipment sub-line splits (Semi 42.1%, Display 30.3%, Components 17.3%, Industrial 10.3%) — confirmed [Q3 FY26 Supplemental Sales Information, p. 15](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf).
+- FY25 geographic mix (Japan ¥78.054bn, China ¥86.518bn, S Korea ¥31.472bn, Taiwan ¥28.109bn, Others ¥27.030bn = ¥251.184bn) — confirmed [FY25 Financial Results, p. 23](https://data.swcms.net/file/ulvac-ir/dam/jcr:8e4a9210-5392-4457-bf56-a46c357970fe/140120250813540543.pdf).
+- Customer concentration: "sales to specific customers do not account for 10% or more of net sales" — confirmed both FY24 and FY25 disclosure on the same page.
+- FPD-target JV / KFMI subsequent event including ¥7.8bn one-time gain — confirmed [Q3 FY26 Financial Results, Important Subsequent Events, pp. 12–14](https://data.swcms.net/file/ulvac-ir/dam/jcr:06f6f98a-ffc5-4896-93a7-f162c825dfe5/140120260512525783.pdf).
+- MHM "de facto standard" share language — confirmed verbatim [Q3 FY26 Q&A, item 5](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf).
+- Rare-earth magnet equipment ¥35-45bn run-rate — confirmed [Q3 FY26 Q&A, item 8](https://ir.ulvac.co.jp/en/ir/library/result/main/00/teaserItems2/0111110/linkList/09/link/3Q_QA_EN.pdf).
+- Value-Up Plan targets (¥300bn sales / 35% GM / 16% OPM / ¥63bn cumulative CF / 14% ROE by FY26) — confirmed [FY25 Scripts](https://ir.ulvac.co.jp/en/ir/newsrelease/PressRelease-20250815002/main/0/link/Scripts%20for%20Presentation_Material_for_FY2025_EN_1.pdf) and WebSearch results.
+- Setsuo Iwashita biography (joined 1984, CEO since July 2017, prior Chairman & GM of ULVAC China Holding) — confirmed across [Bloomberg profile](https://www.bloomberg.com/profile/person/17438855), [Crunchbase](https://www.crunchbase.com/person/setsuo-iwashita), [ULVAC Management Structure page](https://www.ulvac.co.jp/en/company/directors_officers/).
+- 1952 founding with Imachi / Hayashi / Shibata as founders + Matsushita / Osawa / Fujiyama / Yamamoto / Hirose as seed backers — confirmed [Reference for Business](https://www.referenceforbusiness.com/history2/97/ULVAC-Inc.html), corroborated by [ULVAC Company History](https://www.ulvac.co.jp/en/company/history/) which gives the timeline but not the named founders.
+
+**Analyst-view sentences** (intentionally labelled `*Analyst view:*` and not cited to a primary filing):
+- §1 valuation peer-comp framing and 24× forward fair-multiple anchoring.
+- §4.3 "process-specific niche dominance" framing.
+- §4.4 OLED organic-evaporation share split (Canon Tokki 70-80%+, ULVAC OLED-periphery only) — based on the OLED Deposition Equipment Market Research Future report cited.
+- §4.5 dry-pump share split (Edwards ~40%, Pfeiffer ~25%, ULVAC 10-15%) — analyst triangulation.
+- §4.7 ULVAC's "mid-pack" sputter-target league position vs JX/Tosoh/Materion/Mitsui Kinzoku — based on Coherent Market Insights and Cognitive Market Research competitor lists, NOT explicit ULVAC filing.
+- §7 quadrant chart positioning is analyst construction.
+- §7 individual market-share percentages (>50% MHM, >40% descum, ~10-15% pumps, mid-single-digit semi targets) are analyst triangulations explicitly labelled as such.
+- §8 TAM/SAM/SOM aggregations are analyst constructions built from named external research firms; the analyst's own math is shown, not asserted as a primary-source number.
+
+**Residual unknowns not resolved in this draft:**
+- Exact FY25 customer-name list — not disclosed because no single customer >10% under Japan GAAP rule.
+- Exact share figures by process step / by region — not publicly disclosed by ULVAC; estimates are analyst triangulation.
+- Specific equipment ASP / unit shipment counts — not disclosed.
+- Headcount split by region — referenced as ~6,800 total per 2025 Value Report (the full Value Report PDF is 14.5MB and was not fully OCR'd for this draft; the figure is from secondary WebFetch summary).
+- Pre-FY24 historical revenue numbers in the Section 1 chart (FY21 ¥199.5bn, FY22 ¥245.4bn) are from prior IR summary disclosures, not re-verified against original filings; FY23-FY26 figures are from the FY25 results PDF (verified) and FY26 management guidance (verified). The chart is therefore directionally accurate but the pre-FY24 specific decimals were not cross-checked.
+- The full 2025 Integrated Report (Value Report) was not OCR'd due to file-size limits; references to it summarise WebFetch and WebSearch results rather than verbatim quotes.
+
+</details>
 
