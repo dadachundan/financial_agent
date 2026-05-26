@@ -223,3 +223,71 @@ pie title NSHD FYE2026 9M 营收结构（不含 Thermos）按终端市场
 **行业经济学。** 行业经济学由 **配送密度与资本密集度** 主导。空分装置建造成本 USD 8,000-20,000 万，在 75-85% 产能下运行 30 年以上；钢瓶充装厂每个 USD 500-2,000 万；钢瓶配送需要区域卡车车队和路线密度。前四的营业利润率目前在 22-28% 范围内（Linde 28%、Air Liquide 23%、Air Products 22%、NSHD 14.5% COI 但 EBITDA 23.3%），反映：(a) 差异化产品（氦气、SSG、驻厂）的高毛利率，对冲 (b) 服务大量客户的商品大气气体的适中毛利率。客户切换倾向结构性极低（切换大气气体供应商的内在成本包括重新设计钢瓶柜 / 尾气处理系统 / 晶圆厂管道接口，全都需要数月）——这就是为什么行业在化工领域有"定价权寡头"的声誉。
 
 **替代品与供应商力量。** 核心大气气体的替代品基本为零（在氧燃料燃烧中不能用任何物质替代 O₂；在半导体工艺氛围中不能用任何物质替代高纯度 N₂）。氢气的替代品正在演变——绿氨、甲醇和直接电气化原则上可以在某些炼油 / 钢铁应用中取代 H₂，但替代是十年级而非年级。进入行业的供应商力量主要是 **电力公司**（空分主要成本投入）和 **稀有气体来源**（氦气来自美国 / 俄罗斯 / 卡塔尔 / 阿尔及利亚的天然气生产商，有结构性周期过剩与短缺）。买方力量对 **大型驻厂客户偏中高**（一家 TSMC 或 Intel 可以在任何特定晶圆厂上可信地在 Linde / Air Liquide / Air Products / NSHD 之间多源采购），但对 **中小型散装与包装客户极低**（路线密度锁定）。
+
+## 7. 竞争格局
+
+前四工业气体寡头垄断是更广泛化学品行业中最集中的行业板块，对标范围划得很清晰。NSHD IR 材料与竞争定位把讨论锚定到四家直接全球大佬以及下层的区域 / 特种竞争者。
+
+**直接全球大佬。**
+
+(1) **Linde plc (NYSE: LIN, FWB: LIN.DE)**——全球 #1，爱尔兰总部，FY2024 营收约 USD 330 亿，分部综合营业利润率约 26-28%，市值约 USD 2,200 亿。Linde 是 2018 年 10 月由 Linde AG（德国）与 Praxair Inc.（美国）合并形成的，造就了全球最大的工业气体公司，并触发欧盟要求的资产剥离——最终衍生出 Nippon Gases 欧洲。Linde 相对 NSHD 的结构性优势：(a) 在美国墨西哥湾沿岸石化与欧洲工业走廊有更大且更分散的驻厂 / 管道客户簿；(b) 整合的 Linde Engineering 分部（用于 LNG、合成气、空分装置出口的气体加工工厂工程业务）；(c) 税后 ROCE 约 12-14% vs. NSHD 的 7.2%；(d) 在 H2 Mobility 和 HyCO 业务下有更深的氢气 / 清洁能源客户簿 ([Linde plc 10-K FY2024 via EDGAR](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001707925&type=10-K))。Linde 的结构性劣势：通过爱尔兰的美国税务居住身份和美元披露引入 EUR / GBP / JPY 计价分部业绩的 FX 波动；2022 年因制裁退出俄罗斯业务引发的俄罗斯剥离史给欧洲市场份额带来了阶梯式的下降，被 Nippon Gases 部分捕获。
+
+(2) **L'Air Liquide S.A. (EPA: AI)**——全球 #2，法国总部，FY2024 营收约 €270 亿，分部营业利润率约 23%，市值约 €950 亿。Air Liquide 的结构性优势：(a) **最大的纯氢气全球业务**，在低碳氢气炼油与氨 / 化肥客户供应方面客户簿最宽广；(b) 欧洲市场地位最强（约 30% 欧洲份额），在法国 / 德国 / 意大利 / 比荷卢驻厂密度深；(c) **Air Liquide Advanced Materials** 特种气体业务直接对垒 NSHD 的 SSG 业务，尤其在 TSMC / 三星 / Intel 全球账户层面；(d) 是前四中唯一在医疗分部体量比 NSHD 的 Nippon Gases 家庭医疗显著更大的玩家 ([Air Liquide URD 2024](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf))。Air Liquide 是欧洲 Nippon Gases 业务最直接的正面竞争对手。
+
+(3) **Air Products and Chemicals, Inc. (NYSE: APD)**——全球 #3，美国总部，FY2024 营收约 USD 121 亿，分部营业利润率约 22%，市值约 USD 600 亿。Air Products 在历史上是前四中对 **氢气 / 清洁能源大型项目** 最激进的——沙特阿拉伯 NEOM 绿氢项目（资本支出约 USD 84 亿，2026-27 年爬坡）、加拿大埃德蒙顿零排放氢气综合体、路易斯安那清洁氢气综合体——若这些大型项目错过商业运营日期或无法吸引足够承诺的承购，所暴露的风险也最大 ([Air Products 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0000002969/000130817924000793/apdpro012708-ars.pdf))。2024-2025 年的行动派股东压力（Mantle Ridge 运动）促成 CEO 过渡和更严格的资本配置框架，目前体现在 FY2026 指引和 8-K 文件中 ([Air Products 8-K FY2026 — Q2-FY26 results, 2026-03](https://www.sec.gov/Archives/edgar/data/0000002969/000000296926000018/exhibit99131mar26.htm))。相对 NSHD：Air Products 是规模更大但更集中的竞争对手——客户更少，项目更大，项目风险更高——是未来 24 个月内最有可能面对执行不及预期的前四公司。
+
+(4) **Air Water Inc. (TSE: 4088)** 与 **Iwatani Corporation (TSE: 8088)**——日本其他两家上市工业气体公司，相对 NSHD 单独日本分部已属次规模。Air Water（约 ¥1.0 万亿日元营收，跨气体 + 化学 + 医疗 + 农业生物分部）在邻近工业化学和食品 / 农业业务上更多元；Iwatani（约 ¥0.9 万亿日元营收）是日本最大的氦气与 LPG 国内分销商，在工业氢气方面也有增长。*分析师观点：* 在日本，NSHD（Taiyo Nippon Sanso）在大气气体上与 Air Water 竞争，在氦气 / LPG 上与 Iwatani 竞争；日本三方市场结构（TNSC 约 40% / Air Water 约 30% / Iwatani 约 15-20% / 较小玩家）按全球标准非常集中，是 NSHD 40%+ 日本份额声明的结构性锚 ([Integrated Report 2025, 第 74 页 Japan segment "Over 40% market share in Japan"](https://us.nipponsanso.com/wp-content/uploads/2025/10/nippon-sanso-holdings-integrated-report_en-viewing_2025.pdf))。
+
+**特种气体竞争者 (SSG 层)。**
+
+(5) **Resonac Holdings (TSE: 4004)**——日本，2023 年由昭和电工 + 日立化成整合而成，在 NF₃ 刻蚀气（向某些逻辑晶圆厂独家供应 NF₃）、SiH₄ 沉积、高纯度氨气方面占领先全球特种气体地位。Resonac 与 NSHD 的 SSG 业务（而非更广义的工业气体业务）是更直接竞争对手；两家在多个日本晶圆厂客户（索尼半导体、铠侠、瑞萨）以及台湾、韩国的亚洲晶圆厂客户上正面交锋。*分析师观点：* 两家公司客户清单大体重叠，但产品线在某种程度上互补——NSHD 范围更广（SSG + 大气 + 设备），Resonac 在特定气体化学（特别是 NF₃）上深度更深。
+
+(6) **Merck KGaA Performance Materials / Versum Materials、SK Materials、OCI Materials、FOOSUNG**——以全球半导体客户为目标的西方与韩国特种气体 / 半导体材料竞争者，瞄准同一份 SSG / 电子材料钱包。Merck 在 2019 年收购 Versum Materials，从而获得美国半导体材料强势地位；SK Materials（SK Inc. 子公司）是韩国最大的 SSG 供应商；OCI Materials 是第二；FOOSUNG 是特种 NF₃ / SF₆ 供应商。NSHD 的 Total Electronics 战略正是为了把分散的区域 SSG 供应关系整合到单一全球账户结构，正面对垒这些特种玩家。
+
+(7) **Messer Group**（私有，德国家族控股）——全球最大私人工业气体公司，约 €40 亿营收，在德国、意大利和巴西有强势地位。Messer 是上一轮 Praxair-Linde 合并北美救济（2018 年 Linde Engineering NorthAm 剥离）的接盘方，目前是全球有意义的 #5。*分析师观点：* Messer 是欧洲与拉美的可信中级竞争者，但在日本 / 亚洲 / 大洋洲不与 NSHD 直接竞争。
+
+```mermaid
+quadrantChart
+    title 全球工业气体竞争定位 — 规模 vs. 特种深度
+    x-axis 较小营收规模 --> 较大营收规模
+    y-axis 较低特种 / 电子深度 --> 较高特种 / 电子深度
+    quadrant-1 "特种领导者"
+    quadrant-2 "规模 + 特种"
+    quadrant-3 "区域 / 利基"
+    quadrant-4 "规模领导者"
+    Linde: [0.95, 0.55]
+    Air Liquide: [0.85, 0.7]
+    Air Products: [0.65, 0.4]
+    Nippon Sanso: [0.5, 0.75]
+    Resonac: [0.3, 0.85]
+    Messer: [0.4, 0.3]
+    Air Water: [0.25, 0.4]
+    Iwatani: [0.2, 0.45]
+    SK Materials: [0.2, 0.75]
+    Merck Performance: [0.4, 0.8]
+```
+
+![NSHD 与工业气体同业 TTM P/E 及 EV/EBITDA 对比](../../charts/nipponsanso_peer_valuation.png)
+*Source: [Yahoo Finance — TSE:4091 / NYSE:LIN / EPA:AI / NYSE:APD, 访问于 2026-05-26](https://finance.yahoo.com/quote/4091.T/key-statistics/); [Linde 10-K FY2024](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001707925&type=10-K); [Air Liquide URD 2024](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf); [Air Products 10-K FY2024](https://www.sec.gov/Archives/edgar/data/0000002969/000130817924000793/apdpro012708-ars.pdf).*
+
+**NSHD 的竞争优势。** 三大结构性护城河显得突出。**第一**，**日本本土市场密度**（40%+ 大气气体市场份额、17 家 Total Gas Centers、200+ 合作伙伴公司）使日本对任何非本土进入者来说都几乎不可攻破——竞争形态类似 Air Liquide 在法国享有的结构性护城河。**第二**，**Total Electronics 全球供应足迹**——NSHD 独一无二地能向单一全球晶圆厂运营商（TSMC、三星、Intel）在东亚、美国南部地带和欧洲所有主要晶圆厂集群同时交付一致的 SSG 规格和设备集成——这是特种气体供应商在没有 5-10 年资本开支前提下无法复制的网络。**第三**，Matheson 美国和 TNSC 日本的 **纵向一体化钢瓶 + 设备 + 服务套装**——NSHD 设计并安装整个晶圆厂气体供应基础设施（纯化器、柜子、尾气处理、管道）——Linde / Air Liquide / Air Products 也提供这些能力，但不如 Matheson + TNSC 组合全面。
+
+**NSHD 的竞争脆弱性。** 三点实质性脆弱。**第一**，**400-700 bps 税后 ROCE 差距** 对 Linde / Air Liquide（7.2% vs. 12-14%）反映结构上更低回报率的资本基础——NSHD 日本空分装置队伍较老，部分建于资本密集度更高的年代，而后续收购的欧洲与美国资本在比西方大佬更高 WACC 的公司基础上折旧。**第二**，**三菱化学 50.6% 多数股权压制** 限制股权故事的流通市值，并抑制相对公司指数权重而言的机构持股；未来三菱化学的重新定价可能影响 NSHD 的股权成本。**第三**，**全球规模下电子特种气体市场份额相对较低**——相比 Air Liquide Advanced Materials 和 Merck-Versum——NSHD 凭借钢瓶 + 设备 + 服务集成获胜，但在全球任何单一 SSG 分子上都不是明确的特种领导者，这暴露了如果全球晶圆厂客户更倾向某种气体选择单一特种玩家（例如 WF₆ 选 Versum、NF₃ 选 Resonac），会面临份额损失风险。
+
+## 8. 市场机会 (TAM)
+
+**TAM、SAM、SOM。** 2024 年全球工业气体 TAM 约为 USD 1,200 亿，到 2030 年共识 6-8% 复合增长率 ([Market Data Forecast — Global Industrial Gases Market, 2024 / size USD 118.9 bn, 7-9% CAGR](https://www.marketdataforecast.com/market-reports/industrial-gases-market); [Statista — Global industrial gas industry, 访问于 2026-05](https://www.statista.com/topics/9233/global-industrial-gas-industry/))。SAM——NSHD 有业务存在的地理与产品线——覆盖全球 TAM 的约 95%（日本、北美、俄罗斯以西的欧洲、中国本土垄断之外的亚太），即 2024 年约 USD 1,100 亿。SOM——NSHD 当前已服务并已捕获的市场——是 FYE2025 营收约 USD 86 亿，全球份额约 7-8%。按 6-8% TAM CAGR 计算，意味着全球气体收入到 2030 年达到约 USD 1,700-1,800 亿；如 NSHD 保持 7-8% 全球份额，那相当于 USD 120-140 亿（按 ¥150/USD 折算 ¥1.8-2.1 万亿日元）——比 FYE2025 基数提升约 40-50%，与公司 NS Vision 2026 超额完成以及即将到来的新中期计划隐含的轨迹大致一致 ([Integrated Report 2025, 第 13 页 CEO Message — "Ranking Among the Global Majors"](https://us.nipponsanso.com/wp-content/uploads/2025/10/nippon-sanso-holdings-integrated-report_en-viewing_2025.pdf))。
+
+**按分部细分的子 TAM。**
+
+(a) **电子 SSG 子市场**——最有吸引力的增长向量。2024 年全球电子材料气体 TAM 约 USD 60-80 亿，到 2030 年以 10-12% 复合增长率扩张，由 AI 驱动的晶圆厂资本开支（Intel 俄亥俄、TSMC 亚利桑那 / JASM、三星泰勒、Rapidus 北海道、ESMC 德累斯顿）、HBM4 / HBM5 过渡所需的更深 TSV 刻蚀 + ALD 沉积、GAA / CFET 过渡所提升的单晶圆特种气体强度，以及 3nm 及以下逻辑 / 200-300 层 3D NAND 所需的更复杂工艺气体所驱动。*分析师观点，基于：* [Q3 FYE2026 业绩, 2026-02-04, 第 6 页 + 第 27 页 Total Electronics 战略](https://www.nipponsanso-hd.co.jp/en/LinkClick.aspx?fileticket=fHIwDu2e7lc%3D&tabid=210&mid=797); [Resonac FY2025 Q3 financial results, 2025-11-13](https://www.resonac.com/sites/default/files/2025-11/e_shiryo2025q3.pdf)（与行业共识测算交叉参考——Resonac 的半导体分部是 SSG 特定子 TAM 增长最清晰的单一公司数据点）。
+
+(b) **驻厂空分装置 + 工业散装客户**——遗留核心。2024 年全球工业大气气体 TAM 约 USD 600-700 亿，以 4-6% 复合增长率扩张，对中国 + 印度 + 东南亚的钢铁 / 化工资本开支敞口高于标题 GDP，对日本 / 欧盟成熟工业市场敞口低于标题 GDP。
+
+(c) **氢气 / 清洁能源**——方差最高的增长押注。低碳氢气 TAM 目前规模小（2024 年 <USD 100 亿），但在乐观的 IEA / BloombergNEF 情景中到 2030 年预计达到 USD 800-2,000 亿——前提条件是美国 IRA、欧盟 REPowerEU、日本 GX、韩国氢气经济以及中东 / 澳大利亚出口氨计划都按预计步伐交付。NSHD 的敞口适中（美国 HyCO + 印度 + DAC 氧气供应）；FYE2025 ¥260 亿减值证明这个子 TAM 是高方差 / 项目风险密集的。
+
+(d) **医疗 / 家庭医疗**——欧洲 65+ 人口到 2030 年增长约 2,200 万人，驱动 Nippon Gases 服务的家庭氧疗患者池持续 4-6% 增长；日本结构上更大、更老，但因为成熟市场饱和增长率较低。
+
+**NSHD 的可服务市场与捕获策略。** FYE2026 9 个月业绩显示 NSHD 正好在 TAM 最热的地方捕获增长：亚洲与大洋洲分部营收 +17%、欧洲分部营收 +4%（定价驱动，ex-Coregas 有机 +3%）、日本在 11-13% 利润率区间稳定运行（顶线持平）、美国 -2%（体量疲软被定价部分抵消）。战略资本开支管线强化了优先级：约 ¥1,500 亿日元已批准但未投运资本开支中 23% 配置电子，主要项目包括 (i) 挪威空分装置（2027 年开工）向挪威半导体 + 化工供应、(ii) 拉斯维加斯空分装置（2027 年开工）扩展 Matheson 南部地带密度、(iii) 筑波先进电子材料研发大楼（2027 年开工）扩展下一代 SSG R&D 产能、(iv) 比利时 Oevel 特种气体产能扩张 ([Q3 FYE2026 业绩, 2026-02-04, 第 7 页 + 第 17-20 页 分部 Topics](https://www.nipponsanso-hd.co.jp/en/LinkClick.aspx?fileticket=fHIwDu2e7lc%3D&tabid=210&mid=797))。
+
+**渗透策略与白色空间。** 两大区域白色空间机会突出。**第一，印度**——IR2025 亚洲与大洋洲评论提到"东南亚和印度需求持续坚挺"，但公司印度足迹仍然次规模（HyCO 项目在建，印度 SSG 制造有限）。印度半导体使命（Vedanta-Foxconn / Tata Electronics / Micron Sanand / CG Power-Stars 之下的约 USD 100 亿联邦补贴计划）正在创造可信的 2026-2030 晶圆厂建设浪潮，NSHD 可以瞄准。**第二，美国 CHIPS 法案建设**——Matheson 有望通过南部地带晶圆厂集群（TSMC 亚利桑那、三星泰勒、Intel 俄亥俄、Micron 爱达荷）增长，但 Linde 和 Air Products 在这些客户中根基稳固，钱包份额竞争是真实的 ([Integrated Report 2025, 第 76 页 U.S. Opportunities — "Electronics gases demand growth supported by the U.S. CHIPS Act"](https://us.nipponsanso.com/wp-content/uploads/2025/10/nippon-sanso-holdings-integrated-report_en-viewing_2025.pdf))。*分析师观点：* SOM 到 SAM 的扩展数学假设 NSHD 在未来 5 年捕获亚洲 / 印度 + 欧洲电子白色空间约 10-15% 的增量份额，加上美国 + 日本核心中高个位数有机增长；在此情景下，FYE2030 营收基数可能以约 6-8% 复合增长率（相对 FYE2025 基数）扩张，与行业 TAM 增长大致一致。
