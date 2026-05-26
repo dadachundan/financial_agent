@@ -208,3 +208,99 @@ graph TD
 ### 4.8 售后/服务与经常性收入定位
 
 与 Lam Research（CSBG 客户支持业务集团）或 Applied Materials（AGS 应用全球服务）不同，Photronics **不** 拆分售后/装机基础/服务收入线——没有可比的经常性收入分部。原因在于光罩业务模式本身：每张光罩都是为一个给定设计一次性交付的母版，没有持续的客户服务费。业务的经常性来自 **客户关系**（一旦 Photronics 通过客户资格认证，"将获得该客户光罩订单的某一固定比例" — [PLAB 10-K FY25, Item 1](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)）和 **收入确认**（Note 10 显示 FY25 营收中 USD 818M（96%）按"随时间"确认，仅 $31M 按"时点"确认，反映光罩组通常随设计放量节奏渐次交付）。这种"随时间"的确认是与经常性收入护城河最接近的类比 ([PLAB 10-K FY25, Note 10 Revenue](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。
+
+## 5. 客户与上市策略
+
+### 客户分群与具名买家
+
+Photronics 的客户集合可分为四个主要桶，全部服务于下游芯片或面板制造：
+
+1. **纯代工厂 (Pure-play foundries)** — TSMC、Samsung Foundry、GlobalFoundries、UMC、SMIC、华虹半导体 (Hua Hong)、世界先进 (Vanguard / VIS)、力积电 (Powerchip / PSMC)、晶合 (Nexchip)、ICRD；
+2. **集成器件制造商 (IDM) 与存储厂** — Intel、Micron、SK Hynix、Samsung（存储）、TI、ST、Infineon、NXP、ON Semiconductor；
+3. **无晶圆厂半导体设计公司** — 通过上述任一代工厂释出新流片的设计公司长尾；
+4. **FPD 厂** — Samsung Display、LG Display、BOE 京东方、TCL 华星 (China Star)、天马 (Tianma)、群创 (Innolux)、友达 (AUO)、Japan Display。
+
+Photronics 在 10-K 中 **没有点名具体客户** ([PLAB 10-K FY25, Item 1](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)) — 仅"客户 A、B、C"。但客户名单可从合资结构倒推（TSMC 是 PDMC 台湾合资的历史锚定客户；Samsung 是韩国工厂的历史锚定客户，FPD 研发所在地；BOE / TCL 华星 / 天马 / SMIC / 华虹是厦门 PDMCX 合资的主要锚定客户）以及 10-K 自述的"集成器件制造商、无晶圆厂半导体公司及'纯代工厂'"客户类型 ([PLAB 10-K FY25, Item 1 Markets](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。
+
+### 客户集中度（10-K 必披露）
+
+Photronics 在集中度指标上透明，虽不点名：
+
+> "During 2025, we sold our products to approximately **636 customers**. For fiscal year 2025, **Customer A, B and C accounted for approximately 16%, 13% and 8%, of consolidated revenue, respectively**. For fiscal year 2024, Customer A, B and C accounted for approximately 15%, 12% and 9% of consolidated revenue, respectively. For fiscal year 2023, Customer A, B and C accounted for approximately 14%, 10% and 13% of consolidated revenue, respectively. **No other customer represented 10% or more of consolidated revenue in any of the three fiscal years**. **Our five largest customers, in the aggregate, accounted for approximately 50%, 50% and 51% of our revenue in 2025, 2024 and 2023**, respectively." — [PLAB 10-K FY25, Item 1 Markets](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)
+
+这是 **重大集中度水平**：top-1 客户连续三年 ≥14%；top-2 合计 FY25 达 29%（FY24 27%、FY23 24% — 趋势是 *上* 行，而非下降）；top-3 FY25 = 37%；top-5 稳定在约 50%。按 §9 风险分类阈值（top-1 > 10% / top-5 > 30% 触发风险披露；top-1 > 20% 或 top-5 > 50% 为"重大"），Photronics 在三年中有两年达到"重大"门槛 (top-5 = 50%)，FY25 恰好在线上。该风险被列入 §9。
+
+```mermaid
+pie showData title FY25 营收按客户集中度（10-K 匿名披露）
+    "客户 A" : 16
+    "客户 B" : 13
+    "客户 C" : 8
+    "客户 4-5（合并）" : 13
+    "其他（631 客户）" : 50
+```
+
+*数据来源：百分比来自 [PLAB 10-K FY25, Item 1 Markets](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)。客户 4-5 通过差额推断：top-5 累计 (50%) 减 top-3 累计 (37%)。*
+
+**三年趋势。** Top-5 份额 50% / 50% / 51%（FY25 / FY24 / FY23）——基本走平。Top-1 份额 16% / 15% / 14% 每年略有抬升。Top-2 + Top-3 合计从 24%+13%=37% (FY23，当时客户 C 短暂超过客户 B) → 27%+9%=36% (FY24) → 29%+8%=37% (FY25)。**头条故事是头部客户内的组合切换**，而非总体集中度漂移。按本项目风险分类，集中度严重程度为 **重大**（top-5 > 50% 在三年中有两年）。
+
+### 合同结构与转换成本
+
+Photronics 将供应商资格认证流程描述为高门槛的关卡，制造了转换成本：
+
+> "Generally, Photronics and each of its customers engage in a **qualification and correlation process** before we become an approved supplier. Thereafter, based on the customer's specifications, we typically negotiate pricing parameters for the customer's order. **In many instances, we enter into sales arrangements with an understanding that, as long as our performance is competitive, we will receive a specified percentage of that customer's photomask orders**." — [PLAB 10-K FY25, Item 1 Industry](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)
+
+通俗理解：一旦 Photronics 一家工厂通过某客户某工艺的资格认证，客户通常承诺固定份额的光罩订单（例如在两到三家合格光罩供应商间 30% / 40% / 50% 分配），而不是逐单重投。这就是运营护城河 — 光罩资格认证在时间成本（为某客户某新晶圆工艺认证新光罩供应商需数月）与客户侧风险（写得不优的光罩会毁掉 $20M 一批晶圆）上都很贵。所以即便单一订单无约束力，客户的年度光罩支出份额却是粘性的。
+
+### 上市策略——具备本地语言团队的直销
+
+Photronics 通过 **直销** 销售——没有渠道商/分销商层。来自 10-K：
+
+> "We conduct our sales and marketing activities primarily through a staff of **full-time sales personnel and customer service representatives who work closely with the Company's management and technical personnel**. We support non-U.S. customers through both our domestic and foreign facilities and consider our presence in non-U.S. markets to be an important factor in attracting new customers, as it provides global solutions to our customers, minimizes delivery time, and allows us to serve customers that utilize manufacturing foundries outside of the United States, principally in Asia." — [PLAB 10-K FY25, Item 1 Sales and Marketing](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)
+
+2026-01 Jeff Catlin 出任 SVP Global Sales 时 ([Photronics press release 2026-01-08](https://www.globenewswire.com/news-release/2026/01/08/3215308/0/en/Photronics-Appoints-Jeff-Catlin-Senior-Vice-President-Global-Sales.html)) 被定位为创立"统一的"全球销售组织——暗示此前是按区域分割的结构（与 11 厂布局一致）。整合能否产出实质性跨区联合销售（如韩国 AMOLED 客户跨用 Photronics 韩国 + 中国工厂），是近期值得观察的运营要点。
+
+### 营收地理足迹
+
+![Photronics 按起源地理营收（FY23–FY25）](../../charts/photronics_geo_mix.png)
+
+*数据来源：[PLAB 10-K FY25, Note 10 Revenue by Geographic Origin](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm) — 该表按收入产生地（即制造站点起源，非客户开票地址）拆分。*
+
+台湾是最大起源地（FY25 $284M，33%），反映 PDMC 台湾合资服务 TSMC / UMC 的核心地位。中国第二大，$221M (26%) — 主要是 PDMCX 厦门与合肥工厂服务 SMIC、华虹、晶合、BOE、天马、TCL 华星。韩国 $158M (19%) 是 FPD Cheonan 工厂服务 Samsung Display / LG Display。美国 $149M (18%) 主要由 Boise（以 Micron 为锚）、Brookfield、Allen 构成——Intel 与 TI / ST / Infineon 是附加锚客户。欧洲 $34M (4%) 是 Dresden 与 Manchester / Bridgend 工厂服务欧洲 IDM（Infineon、ST、NXP、Bosch）——规模小但可防御。**跨境注脚**：PDMCX"按起源地理营收"在中国列示，但客户本身是全球的，所以这一拆分低估了真实的跨境营收暴露。
+
+## 6. 行业概览
+
+### 行业定义与范畴
+
+**全球光罩工业**是用于半导体 (IC) 光刻与平板显示 (FPD) 光刻的高精度光学母版的供给。2024 年行业总收入约 **USD 98 亿**，拆分为 IC 光罩（约 $62 亿，约 63%）与 FPD 光罩（约 $36 亿，约 37%）([SEMI 2024 Photomask Equipment & Materials Report — 经野村大中华半导体报告 p. 18-25 引用](/Users/x/projects/financial_agent/reports/sector/半导体材料.md); [Yole Group Photomask Industry 2024](https://www.yolegroup.com/) — 同野村报告引用)。本行业在两点上不寻常：(a) **IDM 自营制造**（Intel、Samsung、TSMC 内部光罩车间）仍占行业产量相当份额（约 35%）— 这是过去年代芯片厂自建光罩车间的遗产；(b) **商用** 供应商（如 Photronics、Toppan、DNP）服务剩下约 65%，过去十年趋势是随前沿光罩写入设备资本成本上升，逐步向商用外供倾斜。
+
+![全球光罩市场——IC vs FPD、商用 vs 自营 (2024)](../../charts/photronics_market_split.png)
+
+*数据来源：行业规模综合自 [SEMI Photomask Materials & Equipment Reports (annual)](https://www.semi.org/en) 经 [野村大中华半导体报告 p. 18-30](/Users/x/projects/financial_agent/reports/sector/半导体材料.md) 引用；商用 vs 自营拆分与 [PLAB 10-K FY25 Item 1 Markets 叙述](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm) 关于向独立商用供给回归的历史趋势一致。*
+
+### 增速与驱动因素
+
+光罩市场历史上以 **中个位数 CAGR** 增长——分析师共识 4% 至 7% — 显著慢于更广泛的半导体材料市场（野村锚定行业报告预测 2024-2030 材料整体 CAGR 约 6-8%) ([野村大中华半导体报告 p. 18-30](/Users/x/projects/financial_agent/reports/sector/半导体材料.md))。结构性驱动因素：
+
+1. **设计流片量。** 光罩需求由发往生产的不同设计数量驱动，而非晶圆量。设计刷新周期加快（如 NVIDIA 年度架构刷新、无晶圆厂月级 ASIC 流片）直接推升光罩需求。
+2. **每个先进设计的层数。** 28nm 逻辑芯片约 40 层光罩；5nm 约 60 层；3nm 可超过 65 层 — 加上 backside power delivery (BPD, 2028+ 预计)，再增加约 5 层。**每个设计层数越多 = 每次流片光罩越多。**
+3. **EUV 在最前沿的过渡。** EUV 光罩比同节点 DUV 光罩贵 5-10 倍 — 但 Photronics 不参与，故 EUV 增长不在 PLAB 的 TAM 内。
+4. **AMOLED IT 面板放量。** 2024-2028 笔电、平板、显示器从 LCD 转向 AMOLED 的趋势，正在 LG Display、Samsung Display、BOE 创造新的设计浪潮——可由 Photronics 韩国工厂直接寻址 ([Photronics 新闻稿 2026-03-31](https://www.globenewswire.com/news-release/2026/03/31/3265409/0/en/Photronics-Receives-Advanced-Mask-Writer-Expanding-AMOLED-Leadership.html); 与 [野村大中华半导体报告](/Users/x/projects/financial_agent/reports/sector/半导体材料.md) 的行业预测交叉验证)。
+5. **中国本土代工厂扩建。** SMIC、华虹、晶合、广州粤芯 (GTA Semiconductor) 以及不断成长的中国特色工艺厂群（BCD 功率、MCU、模拟），需要难以经由受美制裁渠道供应的光罩——Photronics 厦门与合肥合资为此结构性定位 ([野村大中华半导体报告 p. 12-14 关于 TSMC 本土供应链再平衡 — 同样动态适用于中国本土厂](/Users/x/projects/financial_agent/reports/sector/半导体材料.md))。
+
+### 行业结构——寡头加长尾
+
+商用光罩工业在最前沿 **高度集中**：仅 **Toppan、DNP、Hoya、Photronics** 四家能在 ≤28nm IC 光罩上规模化供给，且仅 Toppan、DNP、Hoya 通过 EUV 光罩认证 ([Yole Group photomask reports — 经野村大中华半导体报告 p. 38-39 引用](/Users/x/projects/financial_agent/reports/sector/半导体材料.md))。在主流节点，参与方扩展至 **Compugraphics (英国)**、**LG Innotek (韩国)**、**SK-Electronics (日本)**、**Taiwan Mask Corporation 台湾光罩**、**深圳 Newway 光罩**、**深圳 Qingyi 光罩**、**Tekscend Photomask** — 这些都在 Photronics 10-K Competition 部分逐字列出 ([PLAB 10-K FY25, Item 1 Competition](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm); 同名单也出现于 [Item 1A 风险因素](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。
+
+**供应商议价权。** 光罩商本身依赖窄基底供应：合成石英光罩基板来自小型日韩供应商集合（Shin-Etsu、Hoya、AGC、Asahi），防尘膜来自少数特殊化学供应商，光罩写入设备来自近寡占（日本 NuFlare 提供可变形束；奥地利 IMS Nanofabrication 提供多束）。10-K 指出："Photronics 使用的原材料一般包括：高精度石英基板（含 FPD 用大面积基板），用作光罩起始坯，主要来自 **日本和韩国供应商**" ([PLAB 10-K FY25, Item 1 Resources](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。设备供应商风险也被点名："We rely on a **limited number of equipment suppliers** to develop and provide the equipment used in the photomask manufacturing process" ([同](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm))。
+
+**买方议价权。** 光罩买家高度集中——TSMC 一家约占全球代工营收 60% 及对先进节点光罩需求不成比例的份额；Samsung Foundry 约再加 12%；中国代工厂（SMIC、华虹、晶合）合计另约 10%。这使前 3-5 大客户对商用光罩供应商有可观议价权，尤其在先进节点上，买方选择仅限全球 3-4 家合格供应商。
+
+**替代品。** 直接电子束光刻（无需光罩）自 1990 年代起即是潜在威胁，但从未达到商用晶圆生产的经济性吞吐量——仍是研究与原型工具。多重图案化（每个关键层用 2 或 3 张光罩推进设计规则）反而 *增加* 光罩需求。**5 年视角内行业替代风险基本为零**；行业 *内部* 替代风险是 EUV-DUV 组合切换（利好 EUV 可生产玩家，对 DUV-only 玩家如 Photronics 不利）。
+
+### 监管环境
+
+光罩行业处于 **两条监管断层** 之上：(a) **出口管制** — 美国 BIS 实体清单限制与 EAR 外国直接产品规则 (FDPR) 限制先进半导体制造技术对中国及某些终端用户的出口；(b) **关税** — 含 PLAB 在 FY25 10-K 中新加入的 **Section 232 调查 (US 半导体国安调查)** 风险因素。两者都直接影响 Photronics 的中国营运：
+
+> "Based on the complex relationships between the United States and certain foreign countries including, but not limited to China, there is inherent risk that political, diplomatic and national security influences might lead to trade disputes, impacts and/or disruptions to our operations or our ability to sell our photomasks. **The United States and other countries have imposed and may continue to impose trade restrictions and have also levied tariffs and taxes on certain semiconductor and FPD products.**" — [PLAB 10-K FY25, Item 1A Risk Factors](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)
+
+**OBBB Act (美国税法 2025)** ("One Big Beautiful Bill Act"，2025-07-04 生效) 也在 FY25 10-K 中被列为对 FY26 税务规划具重大影响的事项 ([PLAB FY25 多年度 SEC 叙述](/Users/x/projects/financial_agent/reports/earnings/PLAB_20260525.md))。
