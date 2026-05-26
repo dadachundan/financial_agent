@@ -239,3 +239,79 @@ pie title Tekscend Photomask — 分析师估算客户构成 (FY25 示意)
 半导体行业的监管环境对凸版有不寻常的重要性，因为 **中美出口管制** 理论上可能限制 Tekscend 从哪些工厂向哪些客户销售 — 不过在实践中光罩这一子细分迄今被视为商品属性较强、管制较松，但 Tekscend 上海与利川工厂确实面临一些尖端节点限制。**日本国内半导体产业政策** 是顺风：METI (经产省) 对 FC-BGA 产能扩张的补贴可承担部分新泻 / 石川资本开支；US-JOINT 美日联盟把凸版置于 2022 年 CHIPS Act 之后浮现的双边产业政策框架内 ([H1 FY26 Results, p. 3 — US-JOINT participation](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf))。半导体之外，**欧盟包装与包装废弃物条例 (Packaging and Packaging Waste Regulation, PPWR)** 自 2025 年 2 月生效，对凸版生活产业板块是正面 — 它强制要求可回收单一材料包装的过渡，正是凸版十年来重金投资的 GL BARRIER 产品 ([H1 FY26 Results, p. 3](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf))。
 
 ---
+
+## 7. 竞争格局
+
+### 7.1 两个独立的竞争场域 — 光罩与 FC-BGA
+
+凸版在两个结构独立的竞争场域中作战，每个都有自己的同业集、动态、优势分析。信息通讯与生活产业板块分别面对日本国内印刷厂 (Dai Nippon Printing、Toppan Forms) 与全球包装综合体 (Amcor、Sealed Air、Berry Global、Sonoco 自身在 TFP 出售之前) 的竞争，但对 AI 半导体聚焦的权益分析而言，这两个场域属于次要。
+
+### 7.2 光罩竞争格局 — Tekscend vs DNP、Photronics、Hoya (坯料)
+
+Tekscend Photomask 面对 **三个全球级商用同业** 加上 TSMC、三星、Intel 与中韩内存厂的自营光罩车间。商用同业集合如下：
+
+| 竞品 | 代码 | TTM 营收 (最新) | TTM P/E | 评价与定位 |
+|---|---|---:|---:|---|
+| **Tekscend Photomask** | TSE:429A | 1,296 亿日元 | 18.3× | 商用份额第一 (~38–40%)；唯一七国工厂分布；≤28 nm 节点营收占比 >55%；与 IBM/imec 2 nm 联合开发 |
+| **Dai Nippon Printing (DNP)** | TSE:7912 | 14,470 亿日元 (合并) — 仅光罩子集 | 17.0× | 商用份额第三 (~22%)；凸版的日本光罩同胞；同时拥有彩色滤光片、包装、IC 卡业务；近期交付 "2 nm 后 EUV 光罩" |
+| **Photronics** | NASDAQ:PLAB | 8.7 亿美元 (IC 6.15 亿 + FPD 2.34 亿) | 12.4× | 商用份额第二 (~27%)；FPD 业务占比高；尖端 EUV 业务比 Tekscend 弱 |
+| **Hoya** | TSE:7741 | 8,660 亿日元 (合并) — 电子部门 2,650 亿日元 | 35.4× | 光罩 **坯料 (blank)** 垄断商 (EUV blank 份额 ~80%) — 是上游供应商而非直接竞争；Tekscend / DNP / Photronics 均从 Hoya 采购 |
+| **信越化学 (Shin-Etsu Chemical)** | TSE:4063 | 28,000 亿日元 (合并) | 18.9× | 光罩坯料第二 (EUV ~15–20%)；同时垄断 300 mm 硅晶圆；上游而非直接竞争 |
+
+*数据来源：营收引自 [Tekscend 429A overview](https://stockanalysis.com/quote/tyo/429A/)、[Photronics PLAB earnings via iamfabian, 2025](https://iamfabian.substack.com/p/the-landscape-of-semiconductor-photomasks)、[Hoya 7741 statistics](https://stockanalysis.com/quote/tyo/7741/statistics/)、[DNP 7912 statistics](https://stockanalysis.com/quote/tyo/7912/statistics/)、[Shin-Etsu 4063 statistics](https://stockanalysis.com/quote/tyo/4063/statistics/)。市场份额引自 [reports/sector/半导体材料.md, Fig. 35–44](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md)。*
+
+对 Tekscend 最重要的竞争动态来自 **DNP**。两家公司都是日本前印刷厂，1960–1980 年代多元化进入光罩；都拥有 70 年与日本晶圆厂客户的认证沉淀；都拥有 AMTC 德累斯顿式的与欧洲代工厂的合资 R&D (DNP 对等的是 IBM Albany 联合开发)；以及 **二者是仅有的两家在多家代工厂获得亚 3 nm EUV 资格认证的玩家**。*分析师观点：* Tekscend (商用份额 ~39%) 与 DNP (~22%) 的技术与份额差距正在缩小而非扩大 — DNP 近期宣布交付 "2 nm 后 EUV 光罩" ([Mordor Intelligence — Photomask Market](https://www.mordorintelligence.com/industry-reports/photomask-market)) — Tekscend IPO 可能迫使 DNP 同样剥离 / 分拆其光罩业务，为权益投资者提供清晰的尖端节点代理标的。对 **Photronics**，Tekscend 在尖端节点更有杠杆 (Photronics 营收偏 14 / 28 / 65 nm 主流节点与 FPD 光罩，定价较低)；Photronics 的优势在于较大的美国 / 韩国工厂布局与长期 TSMC 合作关系 (后者仍为 Photronics 贡献较大份额营收) ([iamfabian — Tekscend vs Photronics, 2025](https://iamfabian.substack.com/p/the-landscape-of-semiconductor-photomasks))。对 **Hoya** 与 **信越化学**，关系是上游供应而非直接竞争 — Tekscend 同时购买光罩坯料与底层玻璃基板，运营在二者下游。
+
+Tekscend 的竞争 *优势* 是 **多地区认证产能**：七国工厂布局意味着 Tekscend 可以在地球上任何主要代工厂的快递可达距离内供光罩，2022 年后出口管制分割的环境下比 "一切发往台湾" 是全球默认的时代更具价值。Tekscend 的竞争 *弱点* 与每个商用光罩玩家一致 — **自营内化**：TSMC、三星、Intel 各自内部生产其尖端光罩的 60–80%，商用市场是残余的 ~37%。任何代工厂扩大自营产能都直接压缩 Tekscend 的 TAM。*分析师观点：* 抵消力量是商用 37% 对代工厂市场的其余部分 (内存、主流逻辑、模拟、车载、MEMS) 加上 TSMC / 三星 / Intel 尖端节点的溢出来说结构性不足 — 因此只要代工厂光罩总需求增长，商用市场就会同步增长。
+
+### 7.3 FC-BGA 竞争格局 — 凸版 vs Ibiden、新光、Unimicron
+
+凸版的 FC-BGA 业务面对 **更分散的基板供应商集合**，无单一主导玩家：
+
+| 竞品 | 代码 | 市场份额 (2024 估算) | 总部 | 评价 |
+|---|---|---:|---|---|
+| **Unimicron** | TWSE:3037 | ~22% | 台湾桃园 | FC-BGA 第一；Intel EMIB-T 合作方；2024–25 年激进资本开支 |
+| **Ibiden** | TSE:4062 | ~18% | 日本大垣 | FC-BGA 第二，NVIDIA / AMD / Intel CPU 基板领先地位；FY26–28 期间 5,000 亿日元资本开支计划 |
+| **Nan Ya PCB** | TWSE:8046 | ~12% | 台湾桃园 | 客户端计算 / 智能手机基板强项 |
+| **新光电气 (Shinko Electric)** | TSE:6967 (待退市) | ~11% | 日本长野 | 处于 JIP / 三井 / DIC MBO 阶段；Apple Silicon 与 NVIDIA / AMD 基板供应商；2024 年新建大阪厂 |
+| **景硕科技 (Kinsus Interconnect)** | TWSE:3189 | ~9% | 台湾新竹 | 台湾中端玩家；ASMedia / 联发科基板 |
+| **凸版** | TSE:7911 (母公司) | **~7%** | 日本东京 | **总体第六、自称高端交换 / AI 子细分前三**；新泻 + 石川 + 新加坡资本开支中 |
+| **AT&S** | VIE:ATS | ~3–5% | 奥地利 Leoben | 欧洲 HDI 基板专家；Intel EMIB 合作方 |
+
+*数据来源：[wonderfulpcb.com — Top ABF substrate manufacturers, 2025](https://www.wonderfulpcb.com/blog/top-abf-substrate-manufacturers-and-market-leaders/); [Market Growth Reports — ABF Substrate (FC-BGA) Market Size, 2024](https://www.marketgrowthreports.com/market-reports/abf-substrate-fc-bga-market-107527); [Tokyo AI Watch — The Seasoning Company That Holds AI Chips Together, 2025](https://tokyoaiwatch.substack.com/p/the-seasoning-company-that-holds) 提供 Ibiden 资本开支计划；凸版自称引自 [FY2024 Full Year Results Briefing summary via quartr.com](https://quartr.com/companies/toppan-holdings-inc_18645)。*
+
+对凸版最重要的两个竞品是 **Ibiden 与新光电气** — 均为日本企业，在 NVIDIA / AMD / Broadcom / Intel 同样的客户账户上获得认证，并具备凸版新泻 / 石川项目正在建设的同一套大尺寸低 Df 材料能力。**Ibiden** 的竞争优势是 **规模加 30+ 年的 CPU 基板沉淀** — Intel 自奔腾 III 以来每代 CPU 都把 Ibiden 作为主基板供应商，正是这一客户关系支撑 Ibiden 5,000 亿日元三年资本开支承诺 ([Tokyo AI Watch — The Seasoning Company, 2025](https://tokyoaiwatch.substack.com/p/the-seasoning-company-that-holds))。Ibiden 的弱点是这种 *相关性* — 若 Intel CPU 需求疲软，Ibiden 的销量会受到不成比例的拖累。**新光电气** 与 Ibiden 类似但规模较小，对 AMD 与 Apple Silicon 敞口更大；2023–24 年 **日本产业伙伴 (Japan Industrial Partners) + 三井 + DIC 联合管理层收购** 将新光电气私有化，明确目的就是在公开市场审视之外管理 FC-BGA 资本开支周期 ([Reuters — Shinko Electric MBO, 2024](https://www.reuters.com/markets/deals/japan-industrial-partners-led-group-buy-shinko-electric-2024-09/))。
+
+*分析师观点 — 凸版 FC-BGA 护城河评估：* **当下部分；若新泻 / 石川 / 新加坡资本开支按规格落地，FY2028 形成硬护城河。** 类型 = **规模 + AI 客户认证 + 玻璃芯 / 面板级封装期权**。凸版相对 Ibiden / 新光的结构性优势是 **下游应用多元化** (更宽广的凸版控股提供 Ibiden / 新光不具备的交叉补贴) 与 **石川试线的玻璃芯 + RDL 转接板期权** — 如果次世代封装如 Nomura 行业报告预测自 FY2027 起向玻璃芯基板迁移，凸版位于一个独特位置：可以乘上这一过渡而无需牺牲已规模化的 ABF 基板业务 ([reports/sector/半导体材料.md, p. 11, 85-88 — glass core substrate thesis](file:///Users/x/projects/financial_agent/reports/sector/半导体材料.md))。凸版的弱点是时序 — 产能落地时市场中 Ibiden 已经预定了 FY26–28 的 AI 客户需求；如果 AI 资本开支在凸版增量产能投产之前减速，凸版承担的将是周期性空气袋 (air pocket)。
+
+### 7.4 生活产业与信息通讯竞争对手
+
+为完整起见 — 尽管这些板块不是权益驱动 — 生活产业主要竞品为 **Amcor (NYSE:AMCR)、Berry Global (NYSE:BERY)、Sealed Air (NYSE:SEE)** 在全球软包装；**Dai Nippon Printing (TSE:7912)** 在日本国内装饰建材与包装；区域包装综合体在各主要下游市场。信息通讯板块在几乎每条产品线都与 **DNP (TSE:7912)** 竞争 (证券印刷、IC 卡、BPO)、**Toppan Forms** (已并入控股公司) 在商业票据，以及全球 ID / 支付卡专家 (Thales、IDEMIA、Giesecke+Devrient) 在政府 ID。**2026 年 4 月 TOPPAN Edge 与 TOPPAN Digital 重新合并入 TOPPAN Inc.** 是对 2023 年拆分造成客户关系碎片化问题的结构性回应 ([H1 FY26 Results, p. 19](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20251113/20251113599575.pdf))。
+
+### 7.5 竞争优势综合
+
+总结：**Tekscend 在商用光罩具有结构性护城河** (规模、多地区分布、客户认证沉淀)；**凸版的 FC-BGA 业务具有部分但渐强的护城河** 在高端 AI 基板，取决于 FY2025–FY2028 资本开支按计划完成；**凸版其他电子业务 (彩色滤光片、抗反射、金属蚀刻) 不具备有意义的竞争护城河**，本质上是亚洲专业利润率商品业务；**生活产业具有包装规模护城河** — Sonoco TFP 交易大幅强化了这一点；**信息通讯的护城河是日本国内监管沉淀** 在证券与 IC 卡 — 结构上稳固但增长缓慢。
+
+---
+
+## 8. 市场机会 / TAM
+
+### 8.1 Tekscend 可触达的光罩 TAM
+
+光罩总市场 2025 年约 **60 亿美元**，预计到 2030 年达约 **76 亿美元，CAGR 4.5%** ([Mordor Intelligence — Photomask Market Outlook 2025–2030](https://www.mordorintelligence.com/industry-reports/photomask-market); [Grand View Research — Photomask Market 2024](https://www.grandviewresearch.com/industry-analysis/photomask-market-report))。其中商用可触达份额 ~37%，即 2025 年约 22 亿美元，至 2030 年约 30 亿美元，CAGR 略快 ~6% (因为 EUV 混合升级在商用比自营更快)。Tekscend **FY25 单体营收 1,179.7 亿日元 (约 7.6 亿美元) 暗示其商用份额 ~35%** ([Tekscend 429A overview](https://stockanalysis.com/quote/tyo/429A/); [iamfabian — Tekscend vs Photronics, 2025](https://iamfabian.substack.com/p/the-landscape-of-semiconductor-photomasks))。若 Tekscend 维持份额、商用 TAM 按预测增长，**FY30 SAM 推导营收约 10.5 亿美元 (约 1,600 亿日元)** — FY25 至 FY30 年化 ~7% — 与 Tekscend FY25 实绩同比 +10% 大体一致。
+
+Tekscend 营收增长的上行情景在两点：(a) **借三星主流光罩外包获取份额** 可贡献商用份额 2–4 个百分点 ([TrendForce, 2025-09](https://www.trendforce.com/news/2025/09/18/news-samsung-reportedly-outsources-photomasks-for-the-first-time-eyes-new-masks-tech-for-euv/))；(b) **EUV 混合升级** — EUV 光罩 ASP 是 DUV 的 3–5×，EUV 在营收中占比可能从今天 ~12% 升至 2030 年 ~25%，即便单位量不增长也提升整体单位营收。*分析师观点：* 在这些驱动下 Tekscend FY30 前可信的 8–10% 营收 CAGR 是合理的，对应 **FY30 营收 ~1,800 亿日元、中 30% EBITDA 利润率** (~600 亿 EBITDA / ~450 亿营业利润) — 大致是 FY25 单体利润规模的 1.8 倍。在凸版 46.6% 持股下，**FY30 可归属凸版控股的权益法损益约 210 亿日元**，此后 Tekscend 进一步稀释不在内。
+
+### 8.2 凸版可触达的 FC-BGA 基板 TAM
+
+FC-BGA / ABF 基板市场 2025 年约 **53 亿美元**，预计到 2032 年约翻番至 **95 亿美元，CAGR ~10.6%** ([Market Growth Reports — ABF Substrate (FC-BGA), 2024](https://www.marketgrowthreports.com/market-reports/abf-substrate-fc-bga-market-107527); [Semiconductor Insight — FC BGA Market 2026–2033](https://semiconductorinsight.com/report/fc-bga-market/))。其中 **高端 AI / 网络交换子细分** (凸版自称第三、定价显著高于行业平均) 2025 年约占总市场价值 ~40%，2030 年预计升至 ~55%，伴随 AI 基础设施支出继续扩张。凸版 **FY25 FC-BGA 营收按 "电子分部减 Tekscend" 残值推导** (~1,730 亿日元 = 电子总 2,800 亿日元 − Tekscend 1,070 亿日元，再减 700–800 亿日元用于彩色滤光片 / TFT-LCD / 抗反射 / 金属蚀刻) 约为 **900–1,000 亿日元 (~6–6.5 亿美元)** — 暗示凸版的单体 FC-BGA 价值份额约 12%，明显高于 §7 同业表中按单量计的 ~7%，因为凸版超配高 ASP 的 AI 子细分。*分析师观点：这一份额算术意味着凸版 FC-BGA 单位 ASP 约为行业平均的 1.7×，与管理层 "业务集中在高端 AI / 网络交换应用" 的口径一致。*
+
+凸版的 **FY2030 中期计划目标 3,500 亿日元的半导体相关销售** (按 1 USD = 155 JPY 折算约 23 亿美元)，其中 **FC-BGA + 先进封装 ~80%、光罩权益法损益 ~20%** ([Toppan FY2024 Full Year Results Briefing summary via quartr.com](https://quartr.com/companies/toppan-holdings-inc_18645))。隐含 **FY2030 FC-BGA + 先进封装营收 2,800 亿日元，相对当下 ~1,000 亿日元** — FY25 至 FY30 年化 ~22% — 以及 **30% 非 GAAP 营业利润率**，即 ~850 亿日元 FY30 营业利润。验证：凸版预期的 CAGR 与底层市场增长 (10–11% TAM × 在 AI 子细分上的 2× 份额提升) 一致，而新泻 / 石川 / 新加坡累计约 1,000 亿日元资本开支的规模与该目标匹配。**执行风险显著** — 石川 FY28 量产、新加坡 2026 年下半年投产、需求-产能时序都必须落在 18 个月窗口内 — 但计划在内部自洽。
+
+### 8.3 生活产业与信息通讯 TAM
+
+**全球软包装市场** 2024 年约 2,800 亿美元，CAGR ~5%，而 **全球可持续 / 单一材料包装** CAGR ~15% — Sonoco TFP 收购后凸版包装业务合并约 8,000–9,000 亿日元营收，可触达全球市场 ~3–4%，伴随可持续混合升级有增长空间。凸版竞争的 **信息通讯市场** 难以精确测算 — 日本政府印刷、IC 卡、BPO、出版印刷组合成数万亿日元规模国内市场，但名义上结构性平到下降，营销 DX 与政府 ID 是板块仅有的增长口袋。
+
+整合后的凸版 FY2030 目标 ([Toppan FY2024 Full Year Results Briefing summary via quartr.com](https://quartr.com/companies/toppan-holdings-inc_18645)) 隐含 **约 2.1 万亿日元的营收抱负，电子板块混合占比上升** (3,500 亿日元 × 30% OPM = 1,050 亿日元 OP 仅来自半导体，相比当下 520 亿日元)。若实现，FY30 合并营业利润约 1,300–1,500 亿日元 (相对 FY25 的 840 亿日元)，半导体营业利润占合并 OP 的比例从当下 ~60% 升至 ~70%。这是当前 12 个月 +22% 股价回报背后逐步被市场定价的再评级 (re-rating) 命题。
+
+---
