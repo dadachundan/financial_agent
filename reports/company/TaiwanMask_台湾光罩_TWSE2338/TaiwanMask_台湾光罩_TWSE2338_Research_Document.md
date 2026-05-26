@@ -359,3 +359,153 @@ The photomask's position in the IC manufacturing flow is crisp — **between the
 **Overall verdict on TMC's products:** 36 years of accumulated mature-node moat (8-inch + 12-inch 90–40nm) is genuine — customer stickiness driven primarily by physical proximity and long-running qualification relationships. The mid-node 28nm position is in a qualification window and is the central ASP-uplift driver for 2026-27F. **14-inch advanced-packaging masks are the long-term option value, but realization needs 2–3 years, and the share price has paid up for it in advance.**
 
 ---
+
+## 5. Customers & Go-to-Market
+
+### 5.1 Customer concentration — what the annual report discloses
+
+Per Taiwan listing-disclosure convention (TWSE-listed companies must disclose any customer accounting for ≥10% of sales), TMC's 2024 annual report (p. 65) discloses:
+
+| Rank | Customer | 2023 sales (NT$ thousand) | 2023 share | 2024 sales (NT$ thousand) | 2024 share |
+|---|---|---|---|---|---|
+| 1 | **Customer A (not named in filing)** | 845,000 | **12%** | 888,632 | **12%** |
+| Others | Multiple, fragmented | 6,354,935 | 88% | 6,673,117 | 88% |
+| **Total** | | **7,199,935** | **100%** | **7,561,749** | **100%** |
+
+Source: [2024 年報, p. 65, "最近二年度主要銷貨客戶資料"](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf).
+
+Note: page 65 of the report also states: "The Company's customer base is relatively fragmented; **only one customer over the past two years has exceeded the 10%-of-net-sales threshold**." So the customer structure is already structurally diversified, with no customer above the 12% concentration line — an unusually low-concentration financial profile.
+
+### 5.2 Who is Customer A?
+
+The annual report withholds the name. *Analyst inference (based on public reporting):* Customer A is most likely **TSMC (台积电, TWSE:2330)** or **UMC (联电, TWSE:2303)**:
+
+- Multiple media reports since 2021 indicate TSMC has expanded its mature-node mask outsourcing to TMC ([Economic Daily, related coverage relayed through other media, 2021-2024](https://money.udn.com/industry/company/%E5%85%89%E7%BD%A9)). TSMC's in-house mask shop cannot absorb mature-node overflow (40nm-and-above and 12-inch 65/55nm spillover); outsourcing to TMC under a long-term contract structure is the working hypothesis.
+- The report consistently withholds the name, so the actual identity is only known internally — caution against assuming a specific customer.
+
+### 5.3 Customer industry distribution
+
+TMC primarily serves IC customers (annual report p. 60: **>90%** of customer industry is semiconductor); the remainder is LCD / LED / Bumping customers.
+
+Per p. 61 and cross-industry information, *analyst synthesis:* TMC's customer base falls into five categories:
+
+1. **Taiwan domestic wafer foundries.** TSMC, UMC, PSMC (Powerchip), VIS / Vanguard, Macronix, Winbond, Mosel, plus specialist wafer fabs (Episil, Episilon for compound semiconductors). This is the core revenue bedrock (domestic Taiwan sales were 36.2% of FY2024 revenue, but a substantial share of international design houses ultimately routes their wafers through Taiwan fabs, so real exposure is higher).
+2. **Korean wafer fabs.** SK Hynix's subsidiary SK Key Foundry (8-inch power / MCU), Samsung (limited collaborative), DB HiTek, and others. Annual report p. 65 cites the largest mask-blank supplier as "SK KF" at 38% (note: "SK KF" refers to SK Key Foundry, SK Hynix's subsidiary 8-inch wafer foundry; TMC both buys mask blanks from and sells finished masks to SK Key Foundry — a two-way trading relationship).
+3. **Mainland Chinese wafer fabs and IC design houses** — routed through subsidiary **Mirle Automation**. The 2024 annual report (p. 60-61) explicitly states: "The US-China trade war has changed the global economic landscape — in particular, US restrictions on China-related semiconductor supply chains... Mainland China has stood up IC design houses like bamboo shoots and has continued to expand its 12-inch wafer-fab capacity. These are new markets we can develop."
+4. **Southeast Asia / Japan / US markets.** Detail in §5.4 regional distribution.
+5. **400+ accumulated long-tail customers.** Annual report p. 61: "Taiwan Mask was founded in calendar 1988 and has 36 years of manufacturing service experience, with **more than 400 accumulated customers**. Its mature-mask capacity, manufacturing quality, and cost structure all carry advantages."
+
+### 5.4 Regional distribution — domestic vs. Asia export vs. other
+
+![Revenue geographic mix](../../charts/taiwanmask_geographic_mix.png)
+
+*Exhibit 5.1 Taiwan Mask — revenue geographic mix (2023 vs. 2024). Source: [2024 年報, p. 62, 市場分析](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf).*
+
+| Region | 2023 sales (NT$ thousand) | 2023 share | 2024 sales (NT$ thousand) | 2024 share |
+|---|---|---|---|---|
+| Domestic (Taiwan) | 2,839,639 | 39.4% | 2,737,426 | **36.2%** |
+| Export — Asia | 4,267,501 | 59.3% | 4,674,529 | **61.8%** |
+| Export — Other | 92,795 | 1.3% | 149,794 | 2.0% |
+| **Total** | **7,199,935** | **100%** | **7,561,749** | **100%** |
+
+Source: [2024 年報, p. 62, 市場分析](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf).
+
+**Observations:**
+- Domestic share fell from 39.4% to 36.2% (−3 pp), reflecting weakness in Taiwan domestic 8-inch and 12-inch mature-node utilization (VIS, Powerchip, and UMC's 8-inch utilization was depressed across 2024).
+- Asia export share rose from 59.3% to 61.8% (+2.5 pp), driven primarily by China, Korea, and Southeast Asia — some routed via Mirle Automation.
+- "Other" (Europe / US) remains <2%, reflecting annual-report p. 62's acknowledgment: "Business expansion in the time-zone-distant Europe / US geography remains inconvenient." **TMC's lack of overseas production sites is a structural weakness** — its international reach is constrained.
+
+### 5.5 Sales mode and go-to-market
+
+TMC's sales channels run on four routes:
+
+1. **Direct sales** — large wafer foundries (TSMC, UMC, PSMC, VIS, Winbond) and large international customers. These customers have dedicated mask engineering teams; TMC interfaces with their mask engineering and supply-chain teams on long-term contracts plus rolling POs.
+2. **Routing through Mirle Automation subsidiary** — Mirle Automation, a 100%-owned TMC subsidiary, is a "wafer-fab procurement services" company that books wafer orders at TSMC / UMC / PSMC and other Taiwan foundries on behalf of mainland-Chinese, Korean, and Southeast-Asian IC design houses, while bringing those customers' mask orders to TMC. This is the central group-internal synergy ([2024 年報, p. 63, 競爭利基 (3) — collaboration with Mirle Automation for one-stop service combining wafer foundry and mask manufacturing](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf)).
+3. **400+ accumulated long-tail IC design customers** — smaller IC design houses, PO-by-PO, with individual mask orders typically NT$50k–500k.
+4. **Cross-border (China / Korea)** — local sales agents or overseas subsidiaries (e.g., Shanghai Mei-Kuo Trading and Sichuan Mei-Kuo Electronics — part of the Mirle Automation network).
+
+### 5.6 Customer-concentration risk assessment (carries into §9)
+
+Per §5.1, the largest single customer is at 12%. Top-5 customers are estimated under 40–50% (the filing does not disclose the explicit top-5 figure, but the "only one customer over 10%" language implies limited top-5 concentration).
+
+**Quality checklist:**
+- Single largest customer 12% < 20% threshold — **mild risk**, not "material."
+- Estimated top-5 <50% < 50% threshold — **mild risk**.
+- Customer industry distribution: semiconductor >90%, heavily concentrated in IC — **medium risk** (cyclical synchrony).
+- Geography: Taiwan + Asia combined 98%, virtually no Europe / US — **high geographic-concentration risk** (industry policy, tariffs, export controls).
+
+**Overall customer-structure verdict:** customer fragmentation is good (the cumulative outcome of 36 years × 400+ customers), but industry and geographic concentration are high — the full Asia semiconductor cycle plus US export controls toward China both transmit into TMC indirectly.
+
+---
+
+## 6. Industry Overview
+
+### 6.1 Industry definition and size
+
+**Photomask industry definition:** manufacture of the pattern templates used in semiconductor lithography, plus large-area display and FPD masks and advanced-packaging large-area masks — a high-ASP niche within the broader semiconductor-materials sub-industry. NAICS 334413 (semiconductor and related device manufacturing); SIC 3674.
+
+**Global market size (photomask manufacturing value):**
+- **2023:** ~USD 5.44 bn (TMC 2024 annual report p. 61 directly discloses "2023 global photomask annual production value approximately USD 5.44 bn").
+- **2024:** ~USD 5.1 bn ([IMARC, Photomask Market Size 2024-2033](https://www.imarcgroup.com/photomask-market)).
+- **2025 estimate:** USD 4.8–5.0 bn (modest decline, weighed down by mature-node weakness).
+- **2030F:** USD 6.36 bn ([Exactitude Consultancy, 2024](https://www.globenewswire.com/news-release/2024/07/31/2921845/0/en/Photomask-Market-is-expected-to-be-valued-at-USD-6-36-billion-by-2030-Exactitude-Consultancy.html)) or USD 6.5–7.0 bn (other third-party estimates, 2025-2031 CAGR ~4.7–5%); estimates fluctuate around USD 6–7 bn at 2030.
+
+Photomasks are **the highest-ASP and second-most-technical (after EUV photoresist) sub-segment within semiconductor materials**. TMC's annual report p. 60 is explicit: "photomasks occupy a pivotal position in the semiconductor value chain, accounting for 13% of semiconductor manufacturing materials." This aligns with [Nomura, 2026-05-21, p. 26](../sector/半导体材料.md), which sizes 2025 global semiconductor materials at ~USD 80 bn with photoresist ~13% and photoresist ancillaries ~7% (the photoresist bucket in this taxonomy includes mask + PR blanks).
+
+### 6.2 Market structure: IDM captive vs. merchant photomask shop
+
+![Global photomask market structure](../../charts/taiwanmask_market_split.png)
+
+*Exhibit 6.1 Global photomask market structure (2023, ~USD 5.4 bn total). Source: [2024 年報, p. 61](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf).*
+
+TMC's annual report p. 61 provides a crisp market structure: **captive mask shops (IDM + foundry in-house) account for ~63% of the global mask market; merchant photomask shops ~37%.** Reading the structure:
+
+**Captive (63%): IDM + foundry in-house mask shops — why so large?**
+- TSMC, Intel, Samsung Foundry, SK Hynix, Micron, and other leading IDMs / foundries operate in-house mask shops within their fabs. These primarily serve highly confidential advanced-node masks (EUV, 7nm and below); customer-qualification workflow, internal supply-chain dynamics, and data sensitivity all drive captive as the preferred model.
+- TSMC's mask shop is the world's largest and most advanced captive mask operation — virtually all N7 / N5 / N3 / N2 EUV masks are produced in-house ([TSMC Mask Services](https://www.tsmc.com/english/dedicatedFoundry/services/mask_services)).
+- IDMs such as Intel, Samsung, and Micron are also captive.
+
+**Merchant (37%): merchant photomask shops — this is where TMC, Photronics, Toppan, DNP, Hoya, and others compete.**
+- Primary markets: small-to-mid-size IC design houses + 8-inch mature nodes + 12-inch mature+ + partial advanced nodes + LCD / LED / Bumping large-area masks + compound semiconductors (SiC / GaN).
+- Global concentration: Nomura's May 2026 anchor report shows the merchant-photomask league table led by **Photronics + Toppan-Tekscend + DNP** with combined share >26%, and **Photronics + Toppan-Tekscend alone >30%** ([Datamintelligence Photomask Market Report 2024-2031](https://www.datamintelligence.com/research-report/photomask-market)).
+- *Analyst estimate (based on public revenue + peer revenue inference):* TMC ranks **No. 4–5** in the merchant photomask league table, with USD ~232 mn revenue versus Photronics' USD 866.9 mn (FY2025), Toppan-Tekscend in the USD 800–900 mn range, DNP's mask segment in the USD 500–700 mn range, and Hoya's mask segment (including mask blanks) in the multi-billion-USD range ([Photronics FY2025 10-K, FY2025 revenue USD 866.9 mn](https://www.sec.gov/Archives/edgar/data/810136/000114036125045801/ef20057458_10k.htm)).
+
+### 6.3 Industry growth drivers
+
+**Short-to-medium term (2025-2027F) drivers:**
+1. **AI compute + advanced-packaging take-off.** HBM3/HBM4 + CoWoS + SoIC drive 14-inch large-mask demand — the central driver of TMC's 14-inch expansion.
+2. **Wafer-fab capacity expansion continues.** Annual report p. 63: "Over a dozen new wafer fabs will commence construction in calendar 2025, with most expected to begin operating production in 2026 or 2027." Every new fab needs first-cut mask orders.
+3. **Automotive / industrial / IoT / compound semiconductors (SiC, GaN) expansion** — primary 8-inch mature-node demand sources, directly benefiting TMC's mature-node moat.
+4. **TSMC localization strategy.** Per [Nomura, 2026-05-21, p. 13-14](../sector/半导体材料.md), TSMC's Taiwan-local spare parts and indirect materials sourcing is estimated to rise from ~50% in 2017 to **~70% by 2030F** — a structural tailwind for Taiwan-domestic photomask (TMC, PDMC) supported by policy and industrial-policy direction.
+
+**Long-term (2026-30F) drivers (node extension):**
+1. **GAA (Gate-All-Around) + BPD (Backside Power Delivery)** — 2027-29 high-density logic nodes adding mask layers → benefits Hoya + Photronics + Toppan-Tekscend EUV mask shops. **TMC is not on this line.**
+2. **YMTC Xtacking + 3D NAND vertical scaling** — multiple wafer-to-wafer bonding adds mask layers → benefits EUV mask plays.
+3. **High-NA EUV + MOR (Metal Oxide Resist)** — benefits EUV mask plays and Hoya (mask blank).
+
+**Long-term incremental drivers TMC can capture:**
+- 14-inch advanced-packaging interposer masks (TMC's 14-inch expansion) → can capture a portion of the advanced-packaging incremental TAM.
+- SiC / GaN compound-semiconductor masks → primarily 8-inch, and TMC is already serving these (annual report p. 60: "The company's primary business is producing photomasks for wafer foundry processes" + media reporting on TMC's compound-semi mask exposure [Economic Daily, related coverage, 2020](https://money.udn.com/industry/company/%E5%85%89%E7%BD%A9)).
+- Mainland-China 12-inch mature-node capacity additions (TMC routes orders via Mirle Automation).
+
+### 6.4 Industry structure: high concentration, high barriers to entry
+
+**Porter's Five Forces (simplified):**
+
+| Dimension | Intensity | Note |
+|---|---|---|
+| Industry rivalry | **Medium-high** | 4–5 global players (Photronics, Toppan-Tekscend, DNP, Hoya, SK-Electronics) plus TMC and regional players (PDMC, LG Innotek, Shenzhen Newway/Qingyi, Compugraphics). Competition is across technology nodes, yield, price, and service speed. |
+| Barriers to entry | **Very high** | A single e-beam writer costs USD 10–50 mn; a complete mask fab requires USD 100–300 mn of investment. Customer-qualification cycles run 6–18 months; yield and defect-management experience curves take 5–10 years. Upstream mask-blank supply is oligopolistic (Hoya 80%). All of this discourages IDM entry and forces new entrants to rely on national subsidies — exactly the route Shenzhen's new entrants are taking. |
+| Supplier power (upstream) | **High** | Mask blanks are dominated globally by Hoya (~80%) and Shin-Etsu; pellicles by Mitsui Chemical, Asahi, and a few others. TMC's annual report p. 64 confirms: "All blank photomasks used by the company are purchased from major Japanese and Korean suppliers" ([2024 年報, p. 64](https://www.tmcnet.com.tw/Uploads/13/%E5%85%89%E7%BD%A9113%E5%B9%B4%E5%B9%B4%E5%A0%B1-114.08.13%E4%BF%AE%E8%A8%82(%E4%B8%AD%E6%96%87%E5%AE%9A%E7%A8%BF)_909000.pdf)). Upstream is a strong-power regime. |
+| Buyer power (downstream) | **Medium** | Large customers (TSMC, Intel, Samsung) operate captive mask shops and can pick between in-house and outsourcing — pricing power is strong. But small-and-mid-size IC design houses cannot operate captive shops, so they must use merchant photomask shops; TMC's 400+ long-tail customers are fragmented and buyer power is contained. |
+| Substitutes | **Low** | No short-term substitute — every IC needs a mask. Medium-term (2030+), electron-beam direct write (EBL maskless lithography, no mask) may substitute for some low-volume / specialty applications, but it is not the mainstream and does not threaten TMC's primary market. |
+
+### 6.5 Regulatory environment and policy
+
+- **Taiwan domestic.** The Ministry of Economic Affairs' Industrial Development Bureau plus the Hsinchu Science Park administration provide infrastructure, tax incentives, and talent — TMC's natural policy umbrella.
+- **US export controls toward China.** BIS Entity List + restrictions on sub-14nm / 16nm advanced equipment to China — TMC's main business at 65–40nm is not directly restricted, but **Chinese customers using TMC masks for sub-14nm advanced nodes would trigger controls**, so TMC's China-bound mask business is limited to ≥28nm.
+- **Environmental.** Annual report p. 67: 2024 environmental-spending of NT$12.33 mn covers wastewater treatment, exhaust treatment, and energy-conservation projects (1.82 mn kWh saved, 902 tons of CO2e reduction in 2024).
+- **ESG (sustainability reporting).** TMC has integrated TCFD reporting and sustainability disclosures progressively from 2025 — a standard requirement for TWSE-mainboard issuers.
+- **Tax.** Taiwan corporate tax rate 20%; TMC applies this rate. Investment Tax Credit on R&D spending plus park-zone tax incentives are tools for managing historical loss carryforwards.
+
+---
