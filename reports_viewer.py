@@ -487,6 +487,15 @@ __URLPATCH__
           </optgroup>
         {% endfor %}
       </select>
+      <select id="ratingFilter" title="Minimum rating">
+        <option value="0">Any rating</option>
+        <option value="1">★ 1+</option>
+        <option value="2">★ 2+</option>
+        <option value="3">★ 3+</option>
+        <option value="4">★ 4+</option>
+        <option value="5">★ 5</option>
+      </select>
+      <label title="Include reports with no rating set"><input type="checkbox" id="showUnrated" checked> Show unrated</label>
       <label><input type="checkbox" id="showMoreCols"> Show more columns</label>
       <div class="spacer"></div>
       <button id="resetBtn" class="reset">Reset</button>
@@ -587,6 +596,8 @@ __URLPATCH__
       const filter = document.getElementById("filter");
       const sectorFilter = document.getElementById("sectorFilter");
       const bucketFilter = document.getElementById("bucketFilter");
+      const ratingFilter = document.getElementById("ratingFilter");
+      const showUnrated  = document.getElementById("showUnrated");
       const resetBtn = document.getElementById("resetBtn");
       const count = document.getElementById("count");
 
@@ -598,15 +609,21 @@ __URLPATCH__
         // Type filter — single axis. Value is "type:<kind>" matching data-kind,
         // which is the exact label shown in the TYPE column.
         const tkVal = tk.startsWith("type:") ? tk.slice(5) : "";
+        const minRating = parseInt(ratingFilter.value) || 0;
+        const includeUnrated = showUnrated.checked;
 
         let visible = 0;
         for (const r of rows) {
           const hay = r.dataset.display + " " + r.dataset.ticker + " " + r.dataset.filename;
           const rowSector = r.dataset.sector || "";
+          const rowRating = parseInt(r.dataset.rating) || 0;
           const matchQ  = !q || hay.includes(q);
           const matchS  = !s || (s === "__none__" ? rowSector === "" : rowSector === s);
           const matchT  = !tkVal || r.dataset.kind === tkVal;
-          const show = matchQ && matchS && matchT;
+          const matchR  = minRating === 0
+            ? true
+            : (rowRating >= minRating || (rowRating === 0 && includeUnrated));
+          const show = matchQ && matchS && matchT && matchR;
           r.style.display = show ? "" : "none";
           if (show) visible++;
         }
@@ -615,10 +632,14 @@ __URLPATCH__
       filter.addEventListener("input", applyFilter);
       sectorFilter.addEventListener("change", applyFilter);
       bucketFilter.addEventListener("change", applyFilter);
+      ratingFilter.addEventListener("change", applyFilter);
+      showUnrated.addEventListener("change", applyFilter);
       resetBtn.addEventListener("click", () => {
         filter.value = "";
         sectorFilter.value = "";
         bucketFilter.value = "";
+        ratingFilter.value = "0";
+        showUnrated.checked = true;
         applyFilter();
       });
       applyFilter();
