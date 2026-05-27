@@ -4,6 +4,8 @@ The final report has a TL;DR section + 10 numbered sections + a References block
 
 Embed **4–8 visuals** (Mermaid blocks + 1–2 matplotlib PNGs for quantitative trends). Every chart gets a citation directly below.
 
+**Bilingual reminder.** By default, the skill produces both English (`<A>_vs_<B>.md`) and Simplified Chinese (`<A>_vs_<B>_zh.md`) editions. This structure spec applies to **both** files — same 10-section skeleton, same word-count target, same chart count. The structural skeleton stays identical; only the prose language differs. Section headers translate (e.g. `## §5 The moat anatomy` ↔ `## §5 护城河剖析`); citation URLs are identical between files; link titles preserve original language (`10-K` stays `10-K` in both, `年度报告` stays `年度报告` in both). See the SKILL.md "Report language" section for the bilingual workflow rules.
+
 ## Per-section spec
 
 ### §0 — TL;DR — At-a-glance advantages and disadvantages (~250 words) — REQUIRED FIRST SECTION

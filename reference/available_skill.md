@@ -4,7 +4,7 @@ Snapshot of every skill registered for this project, grouped by role and depende
 
 > **Keep this file in sync.** Whenever a skill is added, removed, or its `## Prerequisites` block changes under `.claude/skills/`, update this file in the same commit and bump the "Last updated" date below. See the [Maintenance](#maintenance) section at the bottom for the checklist.
 
-Last updated: 2026-05-27 (`company-research`: now produces both English AND Chinese reports by default; user can override to single-language with explicit flag)
+Last updated: 2026-05-27 (`company-research` and `compare-companies`: now produce both English AND Chinese reports by default; user can override to single-language with explicit flag)
 
 ---
 
@@ -97,7 +97,7 @@ idea-generation → initiating-coverage → earnings-preview → earnings-analys
 - [earnings-preview](../.claude/skills/earnings-preview/SKILL.md) → [earnings-analysis](../.claude/skills/earnings-analysis/SKILL.md) → [model-update](../.claude/skills/model-update/SKILL.md) is the quarterly cycle for a name already under coverage.
 - [thesis-tracker](../.claude/skills/thesis-tracker/SKILL.md) is the long-running journal that consumes results from the others.
 - [idea-generation](../.claude/skills/idea-generation/SKILL.md) seeds the funnel.
-- [compare-companies](../.claude/skills/compare-companies/SKILL.md) takes two `company-research` outputs and produces a head-to-head comparison focused on the delta — product overlap matrix, moat anatomy, customer overlap, dimension-by-dimension scorecard. Output to `reports/compare/<A>_vs_<B>.md`. If a research doc is missing or stale, it invokes `company-research` on the missing side first.
+- [compare-companies](../.claude/skills/compare-companies/SKILL.md) takes two `company-research` outputs and produces a head-to-head comparison focused on the delta — product overlap matrix, moat anatomy, customer overlap, dimension-by-dimension scorecard. **Default behavior: two files per pair — English at `reports/compare/<A>_vs_<B>.md` and Simplified Chinese at `reports/compare/<A>_vs_<B>_zh.md`** (5,000–9,000 words each, natively authored). Users can override to single-language with `--en-only` / `--zh-only`. If a research doc is missing or stale, it invokes `company-research` on the missing side first.
 
 ## 4. Standalone, no dependencies
 

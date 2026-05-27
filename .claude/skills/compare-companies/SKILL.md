@@ -1,6 +1,6 @@
 ---
 name: compare-companies
-description: Produce a 5,000–9,000 word head-to-head comparison of two public (or private) companies — focused on whether their products directly compete, who wins which moat dimension, how their customer bases overlap, and what advantage each holds over the other. Output saved as markdown to `reports/compare/<A>_vs_<B>.md`. Use when the user asks to "compare X and Y", "X vs Y", "head-to-head", "side-by-side", or "do these two compete" — e.g. "compare SNPS and CDNS", "AMD vs NVDA", "LRCX vs AMAT side-by-side".
+description: Produce 5,000–9,000 word head-to-head comparisons of two public (or private) companies in both English AND Chinese — focused on whether their products directly compete, who wins which moat dimension, how their customer bases overlap, and what advantage each holds over the other. Two separate markdown files are saved to `reports/compare/` — one in English (`<A>_vs_<B>.md`) and one in Simplified Chinese (`<A>_vs_<B>_zh.md`). Use when the user asks to "compare X and Y", "X vs Y", "head-to-head", "side-by-side", or "do these two compete" — e.g. "compare SNPS and CDNS", "AMD vs NVDA", "LRCX vs AMAT side-by-side".
 ---
 
 # Compare Companies
@@ -28,6 +28,43 @@ The accuracy rules from [[company-research]] apply verbatim — read its **Core 
 - **Share-leadership claims need a third-party source.** "CDNS leads in PCB" needs an IPnest / Gartner / TechInsights cite, not a 10-K cite. The 10-K never says "we lead". Same rule as company-research §"do NOT misattribute sell-side opinions to filings".
 - **When two sources disagree on a head-to-head number** (e.g. SemiAnalysis says one thing, an IPnest secondary citation says another), name both and prefer the primary / more-recent.
 - **The analyst's own model is NOT a source.** Never write "(Source: our model)" or "(estimate, our analysis)" for a comparison fact.
+
+## Report language
+
+**Default behavior: ALWAYS produce both English AND Simplified Chinese (zh-CN).** Never Traditional Chinese, Japanese, or Korean for the prose. Same rule as [[company-research]] — read its "Report language" section before drafting.
+
+Each company pair gets **two separate, complete comparison reports** — one in English, one in Simplified Chinese. Both are produced in a single workflow run and saved to `reports/compare/`. Generate the English version first, then the Chinese version. Both files independently meet the 5,000–9,000 word target (Chinese counted in characters).
+
+**Explicit user override (highest priority).** The user can request a single language only with any of these phrasings; honor it without asking:
+
+| User says | Override to single language |
+|---|---|
+| `"... in English only"`, `"English report only"`, `"just English"`, `"--lang en"`, `"--en-only"` | English only (skip Chinese) |
+| `"... in Chinese only"`, `"用中文即可"`, `"只要中文"`, `"--lang zh"`, `"--zh-only"` | Simplified Chinese only (skip English) |
+| No override | **Both languages** (default — produce two separate report files) |
+
+Examples:
+- `compare SNPS and CDNS` → two files: `SNPS_vs_CDNS.md` + `SNPS_vs_CDNS_zh.md`
+- `AMD vs NVDA` → two files: `AMD_vs_NVDA.md` + `AMD_vs_NVDA_zh.md`
+- `compare SNPS and CDNS in English only` → English file only; skip Chinese
+- `比亚迪 vs 蔚来 用中文即可` → Chinese file only; skip English
+- `安培龙 vs 汇川技术` (no override) → two files: English + Chinese
+
+**Bilingual mode (default) produces two complete, separate files**, not one interleaved document. Both files share the same underlying research — citations, charts, data, TL;DR claims, scorecard verdicts — but write the prose natively in each language; do not literal-translate one from the other. Each is a fully independent, high-quality report suitable for publication.
+
+**Filename convention for the Chinese edition:** append `_zh` immediately before `.md`. Examples:
+- `reports/compare/SNPS_vs_CDNS.md` (English) + `reports/compare/SNPS_vs_CDNS_zh.md` (Chinese)
+- `reports/compare/LRCX_vs_AMAT.md` + `reports/compare/LRCX_vs_AMAT_zh.md`
+- `reports/compare/安集科技_SSE688019_vs_鼎龙股份_SZSE300054.md` already in Chinese — when generating the English companion, name it `Anjizhike_SSE688019_vs_Dinglong_SZSE300054.md` per the English/pinyin-in-filename rule.
+
+**Language-specific instructions when drafting:**
+
+- **English report** — full prose per the structure in `references/report_structure.md`. Standard business English, accessible to global equity investors. Preserve original-language titles for non-English citations (e.g., `比亚迪 BYD 2024 年度报告`, `Sumitomo 統合報告書`). Bilingual technical terms in parentheses where helpful (`advanced packaging (先进封装)`), but bilingualism is optional in English prose — what matters is clarity for English readers. Section headers in English (TL;DR, Moat anatomy, Bottom line, etc.).
+- **Chinese report** — full prose in Simplified Chinese (zh-CN). Write as if for Chinese investors. Use **bilingual technical terms** per [[company-research]]'s rule (English / Chinese gloss on first mention, e.g. `毛利率 (gross margin)`, `RPO (剩余履约义务)`, `Tier-1 供应商`). Section headers in Chinese (TL;DR — 优劣势速览, 护城河剖析, 底线判断, etc.). Bilingual terms are MANDATORY in Chinese, not optional. Keep ticker codes, acronyms, and product code-names in their original form: `SNPS`, `CDNS`, `H200`, `RMB`, `bp`, `YoY`.
+
+A Chinese reader should find the Chinese report as natural and fluent as an English reader finds the English report. Neither version is the canonical "source"; they share data, not prose.
+
+**Chinese names in English reports / English names in Chinese reports:** Chinese companies may appear in their original Chinese form alongside an English / pinyin gloss on first mention, e.g. `安培龙 (Anpeilong, SZSE:002050)`, `比亚迪 (BYD)`, `宁德时代 (CATL)`. After first mention, either form is fine. Symmetrically, US/EU company names appear in their native English form in the Chinese report alongside a Chinese gloss on first mention if a commonly-used translation exists (`Synopsys (新思科技)`, `NVIDIA (英伟达)`, `AMD (超威半导体)`).
 
 ## The seven required deliverables
 
@@ -289,11 +326,26 @@ A flat 3-column table; 15–25 rows. Every row needs an "Edge" verdict (one side
 
 Two paragraphs per the spec above + the closing "what to watch" paragraph. Avoid both-sidesism — name the specific catalyst.
 
-### Step 7 — Verification pass
+### Step 6.5 — Write the English report, then the Chinese companion (default workflow)
 
-Apply the same Step 10 verification flow from [[company-research]] — URL check, SEC filename resolution, 10-K claim spot-checks, executive-name verification, self-audit checklist. Append a `<details>` verification log at the end of the report.
+**Default: produce two complete, independent comparison reports — one in English, one in Simplified Chinese.** Generate the English version first (Steps 2–6 build a single English draft), then produce the Chinese companion as a second pass over the same underlying research.
 
-**Compare-specific additional checks:**
+**English draft first** — save as `reports/compare/<A>_vs_<B>.md`. Run all of Step 7 (verification) on the English draft before starting the Chinese companion. A defective English draft will propagate its defects into Chinese — fix it once, in English, before translating the analytical work.
+
+**Chinese companion second** — save as `reports/compare/<A>_vs_<B>_zh.md`. Re-author the prose natively in Simplified Chinese — do NOT machine-translate the English file. Both files share:
+- The same TL;DR claims, scorecard verdicts, product-overlap matrix rows, moat-anatomy numbers, customer-overlap lists, "other big players" classifications, and bottom-line catalysts.
+- The same citations (URLs identical; link titles preserve original language — `10-K` stays `10-K` in the Chinese report, `年度报告` stays `年度报告` in the English report).
+- The same charts (mermaid blocks identical other than axis labels translated where appropriate).
+
+But each file has natively-authored prose in its own language. Section headers translate (`## TL;DR — At-a-glance advantages and disadvantages` ↔ `## TL;DR — 优劣势速览`; `## §5 The moat anatomy` ↔ `## §5 护城河剖析`; `## Bottom line — two different bets` ↔ `## 底线判断 — 两种不同押注`). Bilingual technical terms are MANDATORY in the Chinese edition (`毛利率 (gross margin)`, `RPO (剩余履约义务)`, `Tier-1 供应商`) — see the "Report language" section earlier in this skill for the canonical gloss list.
+
+**If the user overrode to a single language** (`--en-only` / `--zh-only` / `English only` / `用中文即可` / etc.), skip the other-language step entirely and produce only the requested file.
+
+### Step 7 — Verification pass (run for BOTH languages)
+
+Apply the same Step 10 verification flow from [[company-research]] — URL check, SEC filename resolution, 10-K claim spot-checks, executive-name verification, self-audit checklist. Append a `<details>` verification log at the end of **each** report (English log in the English file, Chinese log in the Chinese file — both follow the same structure; minor differences are fine if e.g. different translated source citations were spot-checked).
+
+**Compare-specific additional checks (apply to BOTH the English and Chinese reports unless the user overrode to a single language):**
 
 - [ ] **TL;DR is present, placed before §1, and contains 5–8 bullets per cell.** Every bullet leads with a specific number/noun (not an adjective) and ends with a `(§N)` section reference. The Disadvantages column for each side has at least (Advantages count − 2) bullets — no whitewash.
 - [ ] **TL;DR "Who is each one for?" paragraph** names three options sharply (pick A for X, pick B for Y, or both because Z) — no both-sidesism.
@@ -308,19 +360,36 @@ Apply the same Step 10 verification flow from [[company-research]] — URL check
 - [ ] **§5.3, §5.4, §5.5 tables extended** with columns for each Primary competitor that materially affects the share picture (e.g. Siemens EDA in EDA tables; Arm in IP tables). Tables that show only A and B in a multi-player industry are misleading and must be expanded.
 - [ ] **Every "other big player" named came from a verifiable source** — 10-K competitor list, IPnest / Gartner / IDC / IBISWorld / TrendForce / IQVIA leaderboard, or recent industry-research note. No inventions.
 
+**Bilingual-specific checks (skip when the user overrode to a single language):**
+
+- [ ] **Both files exist** — `reports/compare/<A>_vs_<B>.md` AND `reports/compare/<A>_vs_<B>_zh.md` are present at the canonical paths and each independently hits 5,000–9,000 words (Chinese counted in characters).
+- [ ] **Data parity between the two files** — TL;DR claims, scorecard verdicts, product-overlap rows, moat-anatomy numbers, named-customer overlaps, "other big players" classifications, and bottom-line catalysts are the same in both. Use `diff` on the table cells if needed.
+- [ ] **Prose is natively authored, not machine-translated** — the Chinese report flows naturally; section headers are translated; bilingual technical terms appear on first mention (`毛利率 (gross margin)`, `RPO (剩余履约义务)`).
+- [ ] **Citation URLs are identical between the two files**; only link titles preserve original language (a US `10-K` stays `10-K` in both files; a `年度报告` stays `年度报告` in both files).
+- [ ] **Both files have their own Step-10 verification log.**
+
 ## Output location
 
-Save to `reports/compare/<A>_vs_<B>.md` under the project root. Preserve the user's left-right ordering — do not alphabetize. The viewer (http://localhost:5001/reports) surfaces files under `reports/compare/`.
+Save both reports under `reports/compare/` at the project root. Preserve the user's left-right ordering in both filenames — do not alphabetize. The viewer (http://localhost:5001/reports) surfaces files under `reports/compare/`.
 
-**Filename convention — no date suffix:**
+**Filename convention — no date suffix; `_zh` suffix marks the Chinese edition:**
 
-- US tickers: `SNPS_vs_CDNS.md`, `LRCX_vs_AMAT.md`, `AMD_vs_NVDA.md`
-- Mixed-domicile or non-US: include the exchange prefix when the bare ticker is ambiguous — `BYD_HKEX1211_vs_TSLA_NASDAQ.md`, `安培龙_SZSE002050_vs_汇川技术_SZSE300124.md`
+| Language | Filename |
+|---|---|
+| English (default) | `<A>_vs_<B>.md` |
+| Simplified Chinese (default) | `<A>_vs_<B>_zh.md` |
+
+Examples:
+
+- US pair: `SNPS_vs_CDNS.md` + `SNPS_vs_CDNS_zh.md`; `LRCX_vs_AMAT.md` + `LRCX_vs_AMAT_zh.md`; `AMD_vs_NVDA.md` + `AMD_vs_NVDA_zh.md`
+- China A-share pair: `Anjizhike_SSE688019_vs_Dinglong_SZSE300054.md` (English) + `安集科技_SSE688019_vs_鼎龙股份_SZSE300054_zh.md` (Chinese)
+- Mixed-domicile: `BYD_HKEX1211_vs_TSLA_NASDAQ.md` + `BYD_HKEX1211_vs_TSLA_NASDAQ_zh.md`
+- Per global rule (`/Users/x/projects/financial_agent/CLAUDE.md` → "Research Report Filenames"), **the English filename must lead with each side's English or pinyin name** even when the underlying company is Chinese — pure-Chinese filenames are unsearchable. The Chinese edition may use Chinese characters in the slug as long as the English-stem version also exists in the same folder.
 - Multi-company batched comparison (3+): not supported by this skill — split into pairwise comparisons.
 
-**Update-in-place rule** — at most one comparison file per ordered pair. If `<A>_vs_<B>.md` exists, update it in place. If `<B>_vs_<A>.md` exists with the same pair in the other order, ask the user which canonical order to keep before writing.
+**Update-in-place rule** — at most one English file and one Chinese file per ordered pair. If `<A>_vs_<B>.md` (or `<A>_vs_<B>_zh.md`) exists, update it in place. If `<B>_vs_<A>.md` exists with the same pair in the other order, ask the user which canonical order to keep before writing. When a Chinese edition exists at a legacy path (e.g. an all-Chinese-slug filename from before this rule), consolidate it into the `<EnglishStem>_zh.md` canonical name and list the legacy file so the user can confirm deletion. Do not auto-delete.
 
-Filename language follows the report language per the company-research language rule. Comparisons of US companies → English. Comparisons of two China A-share companies → Simplified Chinese. Mixed (one US, one A-share) → ask the user; default to English with the Chinese company's name in original form on first mention.
+**Single-language override** — if the user requested `--en-only`, only `<A>_vs_<B>.md` is written; if `--zh-only`, only `<A>_vs_<B>_zh.md` is written. The default (no override) always produces both.
 
 ## Reference docs (read on demand)
 
