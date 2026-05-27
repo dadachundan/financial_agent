@@ -225,16 +225,18 @@ pie title FY2024 营收按业务分部(来源:Samsung 2024 Business Report 第 2
 ```
 *来源:[Samsung Electronics 2024 Business Report — 4Q Interim, 第 22 页 "A. Revenue"](https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_4Q_Interim_Report.pdf)。DX KRW 174.9 万亿(58.1%)、DS KRW 111.1 万亿(36.9%)、SDC KRW 29.2 万亿(9.7%)、Harman KRW 14.3 万亿(4.8%)、内部抵销 KRW -28.5 万亿(-9.5%)。*
 
-**按业务分部的客户结构。**
+**按业务分部的客户结构。** 以下为各部门内部的关键客户名单;**这些是部门级口径,不能简单加总成集团级 Top-5**(集团合并层面的客户集中度披露见上文,口径来自 Samsung 2024 Business Report 第 30 页)。
 
-- **DS Memory & HBM。** 头部客户:NVIDIA(HBM、GDDR)、Google(TPU HBM —— 三星供应 60%+)、Apple(NAND、DRAM、eUFS)、Microsoft 与 AWS(服务器 DDR5、企业级 SSD)、Meta(服务器 DRAM)、以及三星自家 MX 部门(用于 Galaxy 的 LPDDR)。**风险:NVIDIA Blackwell 平台 HBM 采购仍不成比例地倾向 SK 海力士**,三星的 Rubin 时代翻盘虽已启动,但份额仍小于 SK 海力士。
-- **DS Foundry。** 最大外部客户:Qualcomm(传统 / 汽车节点)、Tesla(早期 7-nm/4-nm Dojo 训练芯片)、Google(部分早期 Tensor SKU,现多在台积电)、AMD(选定传统节点)、以及自家 System LSI(Exynos 2600 在 2-nm)。**结构性弱点:** 没有任何头部 fabless 在 3-nm 或 2-nm 选三星;所有先进节点订单基本来自集团内部。
-- **DS System LSI。** 高度内供 —— 大部分 Exynos 与 ISOCELL 传感器流向三星自家 MX 或消费产品。
-- **DX MX (Mobile)。** 200+ 国家覆盖,通过运营商直接合作 + 零售直营。最大的批发客户是美国一级运营商(Verizon、T-Mobile、AT&T)以及全球开放渠道零售 / 电商生态。单一客户均 <10%。
-- **DX VD/DA (电视 + 家电)。** 多渠道零售。Walmart、Best Buy、Amazon、Costco 体量大,但单一客户均 <5%。
-- **DX Networks。** Verizon、T-Mobile、US Cellular(美国);Reliance Jio(印度,历史上规模大)以及几家欧洲电信运营商。Verizon 是 2024 年 Networks 业务的单一最大客户;在这个体量较小的业务里,集中度是真实存在的。
-- **SDC (三星显示)。** Apple 是单一最大客户(基于 1.25 亿片 iPhone 面板,约占 SDC 营收 50%+)。第二大是集团内部的 Samsung MX;Sony、Dell、HP 是 QD-OLED 显示器客户。
-- **Harman。** 主要客户:丰田、现代起亚、GM、福特、宝马、奔驰、大众、Stellantis 等汽车 OEM。单一 OEM 占 Harman 营收均 <15%。
+- **DS Memory & HBM(部门级客户,不在集团 Top-5)。** 头部客户:NVIDIA(HBM、GDDR)、Google(TPU HBM —— 三星通过 Broadcom 向 Google 供应 **超过 60% 的 HBM**,并在 2026 年保持主要供应商地位 ([TrendForce, 2025-12-01](https://www.trendforce.com/news/2025/12/01/news-samsung-reportedly-supplies-60-of-google-tpu-hbm3e-set-to-remain-primary-supplier-in-2026/)))、Apple(NAND、DRAM、eUFS)、Microsoft 与 AWS(服务器 DDR5、企业级 SSD)、Meta(服务器 DRAM)、以及三星自家 MX 部门(用于 Galaxy 的 LPDDR)。**风险:NVIDIA Blackwell 平台 HBM 采购仍不成比例地倾向 SK 海力士**,三星的 Rubin 时代翻盘虽已启动,但份额仍小于 SK 海力士。
+- **DS Foundry(部门级客户)。** 最大外部客户:Qualcomm(传统 / 汽车节点)、Tesla(早期 7-nm/4-nm Dojo 训练芯片)、Google(部分早期 Tensor SKU,现多在台积电)、AMD(选定传统节点)、以及自家 System LSI(Exynos 2600 在 2-nm)。**结构性弱点:** 没有任何头部 fabless 在 3-nm 或 2-nm 选三星;所有先进节点订单基本来自集团内部。
+- **DS System LSI(部门级客户)。** 高度内供 —— 大部分 Exynos 与 ISOCELL 传感器流向三星自家 MX 或消费产品。
+- **DX MX (Mobile,部门级客户)。** 200+ 国家覆盖,通过运营商直接合作 + 零售直营。最大的批发客户是美国一级运营商(Verizon、T-Mobile、AT&T)以及全球开放渠道零售 / 电商生态。单一客户均 <10%。
+- **DX VD/DA (电视 + 家电,部门级客户)。** 多渠道零售。Walmart、Best Buy、Amazon、Costco 体量大,但单一客户均 <5%。
+- **DX Networks(部门级客户)。** Verizon、T-Mobile、US Cellular(美国);Reliance Jio(印度,历史上规模大)以及几家欧洲电信运营商。Verizon 是 2024 年 Networks 业务的单一最大客户;在这个体量较小的业务里,集中度是真实存在的。
+- **SDC (三星显示,部门级客户)。** Apple 是单一最大客户(基于 1.25 亿片 iPhone 面板,约占 SDC 营收 50%+;[OLED-Info / UBI Research](https://www.oled-info.com/ubi-details-samsung-lg-and-boes-market-share-apples-smartphone-oled-supply))。第二大是集团内部的 Samsung MX;Sony、Dell、HP 是 QD-OLED 显示器客户。
+- **Harman(部门级客户)。** 主要客户:丰田、现代起亚、GM、福特、宝马、奔驰、大众、Stellantis 等汽车 OEM。单一 OEM 占 Harman 营收均 <15%。
+
+**口径提醒。** 上述部门级头部客户只能用作"该部门内"集中度的描述,**不能等同于、也不能加总成集团级合并营收中的客户集中度**。例如:三星向 Google 供应 TPU HBM 超过 60% —— 但这是 Google 在 DS Memory & HBM **部门** HBM3E 出货量中的份额,不等于"Google 占三星集团合并营收的 60%"。集团合并层面五大客户合计仅约 14%(见上文 Samsung 2024 Business Report 第 30 页披露)。
 
 **销售模式。** 混合渠道:对超大规模云厂商的存储 / 代工交易与汽车 OEM 走直接 B2B;MX 主要走运营商批发渠道;VD/DA 走零售 + 电商 + Samsung.com 直营;长尾 EMS / ODM / 合约制造商(富士康、纬创、和硕、广达)的存储元件销售走专业工业分销渠道。
 

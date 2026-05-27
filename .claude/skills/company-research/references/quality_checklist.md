@@ -70,6 +70,11 @@ IR materials are first-class primary sources — see SKILL.md § "Investor prese
 - 3-year concentration trend captured when the disclosure history allows.
 - Top customers named when disclosed; contract structure (multi-year vs. PO-by-PO) noted.
 - If top-1 > 20% or top-5 > 50%, the report flags it in Section 5 **and** carries it into Section 9 as a material risk.
+- **Every customer-share number is labelled with its denominator** ("X% of consolidated revenue" vs "X% of <Segment> segment revenue"); no unqualified "X% of revenue" when more than one denominator could apply.
+- **Segment-level customer lists carry the "(segment-level; not aggregated to group-level)" qualifier inline.** A segment-level customer (e.g. NVIDIA in DS Memory) is never silently presented as if it were a consolidated top-5 customer.
+- **Customer pie charts use one denominator only.** No single chart mixes consolidated and segment-level shares — if both are needed, draw two separate charts each with its denominator stated in the title.
+- **The filing's named top-5 (alphabetical list, ranked list, or aggregate %) is the answer.** When the consolidated top-5 disclosure exists (Samsung 사업보고서, A-share 年报 `前五名客户`, etc.), the report does not append a sell-side / supply-chain composite that disagrees, and does not silently substitute a segment-level customer list for the group-level disclosure.
+- **Every customer figure in Section 5 carries an inline citation in the paragraph that contains it** — citing the source once in a Section 4 table or in the References block does NOT cover a Section 5 paragraph that re-states the number.
 
 ## Risk Assessment
 - 8–12 distinct risks across all four categories (see `risk_taxonomy.md`).
