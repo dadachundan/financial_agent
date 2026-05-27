@@ -208,6 +208,21 @@ When backfilling citations on existing reports, reuse the established pattern:
 
 When generating NEW research / valuation / sector / earnings notes from scratch, the citation rules apply from the first draft — don't defer sourcing to a later backfill.
 
+# Numerical Accuracy (MANDATORY — every number traces to a URL that literally contains it)
+
+Past failure mode: a paragraph reads "+185% QoQ, FY25 KRW 43.6 trn, DRAM contract prices +90–95% QoQ" and ends with **one** "Source: A; B" footer — and one of those numbers (e.g. the 90–95%) doesn't appear in *either* A or B. The number was real (it came from a TrendForce article cited 200 lines later), but the paragraph as written is unsourced for that figure. This is hallucination as far as the reader is concerned — they click the cited URL, the number isn't there, and the report's credibility collapses.
+
+The rule, no exceptions:
+
+1. **Every numerical claim in a paragraph must trace to a URL cited in that same paragraph where the number literally appears as a string.** Not "elsewhere in the report" — *in the same paragraph*. If a paragraph blends numbers from three sources (e.g. company release + third-party data + industry forecaster), the paragraph must cite all three inline, and each number must string-match the URL it's attached to.
+2. **Derived numbers must be labelled or have both inputs sourced in the paragraph.** "48-fold YoY" is a calc on `53.7 / 1.1`. Either write it as `~48× (= 53.7 / 1.1 trn, both from [press release](...))` so a reader can re-derive, or cite a source that states the multiple verbatim. Never quote a derived number as if it came from a source that only contains the raw inputs.
+3. **Year-over-year / quarter-over-quarter prints need a source that contains the YoY or QoQ figure itself, not just the latest period.** Citing the Q1 2026 press release for a "+69% YoY revenue" claim only works if the press release contains "+69% YoY"; otherwise cite the third party that did the math, or write it as an inline calc against the Q1 2025 source.
+4. **Spot-check before commit.** Before saving any new/edited report, pick 3–5 numbers at random and string-match them against the cited URLs (`curl -s URL | grep -F "133.9"`). If a number doesn't string-match in *any* URL cited in that paragraph, fix the paragraph — don't ship.
+5. **No "Source:" bundles that bury the mapping.** "Source: A; B; C" at the end of a paragraph means "everything here came from A, B, or C." If a number didn't come from any of them, that footer is a lie. Either inline-cite each claim or restructure the paragraph so each cited URL contains the numbers attributed to it.
+6. **When verifying an existing report, audit the number→URL mapping, not just URL-reachability.** A 200-OK URL that doesn't contain the claimed number is *worse* than a 404 — the reader trusts it. Step-10 verification logs must list spot-checks of the form `"X = N from <URL>": ✓ string-matches | ✗ NOT in source — fix`.
+
+If a number can't be sourced inline, two options: (a) remove it, or (b) replace it with a phrasing the sources actually support ("up sharply QoQ" instead of "+90–95% QoQ" if you can't find the precise figure). Never leave an unsourced number in a report.
+
 # Report Verification Workflow (URLs + hallucinations)
 
 When the user asks to **verify, audit, or fix URLs / hallucinations in a report** under `reports/` (any phrasing — "verify all links are accurate", "check for hallucinations", "audit citations", "the content is not made up", etc.):

@@ -5,7 +5,7 @@
 **总部:** 大韩民国京畿道水原市灵通区三星路 129 号
 **报告语言:** 简体中文(英文版本同路径下另存 `Samsung_KRX005930_Research_Document.md`)
 
-> **更新提示 — 2026 年 Q1 创纪录业绩 (2026-04-30):** 三星电子 Q1 2026 合并营收 **KRW 133.9 万亿** (+69% YoY, +43% QoQ),营业利润 **KRW 57.2 万亿** (+185% QoQ) —— 均为单季历史最高,且 **单季营业利润已超过 FY2025 全年的 KRW 43.6 万亿**。半导体 (DS) 部门营业利润同比 **暴增约 48 倍** (从 Q1'25 的 KRW 1.1 万亿 跃升至 Q1'26 的 KRW 53.7 万亿),核心推动力是 HBM4 首批量产出货至 NVIDIA Vera Rubin 平台、传统 DRAM 合约价 Q1 环比上涨 90–95%,以及 SOCAMM2 量产启动。管理层指引 2026 年 HBM 营收 "将至少翻三倍"。来源:[三星电子 2026 年第一季度业绩公告 — Samsung Global Newsroom, 2026-04-30](https://news.samsung.com/global/samsung-electronics-announces-first-quarter-2026-results);[Samsung Q1 '26 营业利润超过 FY25 全年 — DCD, 2026-04-30](https://www.datacenterdynamics.com/en/news/samsung-electronics-q1-26-operating-profit-exceeds-companys-fy25-full-year-total/)。
+> **更新提示 — 2026 年 Q1 创纪录业绩 (2026-04-30):** 三星电子 Q1 2026 合并营收 **KRW 133.9 万亿** (+43% QoQ),营业利润 **KRW 57.2 万亿** —— 均为单季历史最高;半导体 (DS) 部门 Q1 营收 KRW 81.7 万亿,营业利润 KRW 53.7 万亿;HBM4 与 SOCAMM2 已开始为 NVIDIA Vera Rubin 平台量产首批出货([三星电子 2026 年第一季度业绩公告 — Samsung Global Newsroom, 2026-04-30](https://news.samsung.com/global/samsung-electronics-announces-first-quarter-2026-results))。同期 **YoY +69% / OP QoQ +185%、单季营业利润超过 FY2025 全年的 KRW 43.6 万亿、DS 营业利润同比暴增约 48 倍 (Q1'25 KRW 1.1 万亿 → Q1'26 KRW 53.7 万亿)、管理层指引 2026 年 HBM 营收 "至少翻三倍"** 等同比比较与全年比对来自[Samsung Q1 '26 营业利润超过 FY25 全年 — DCD, 2026-04-30](https://www.datacenterdynamics.com/en/news/samsung-electronics-q1-26-operating-profit-exceeds-companys-fy25-full-year-total/);传统 DRAM 合约价 **Q1 2026 环比上涨 90–95%** 的产业数据来自 [TrendForce, 2026-02-02](https://www.trendforce.com/presscenter/news/20260202-12911.html)(服务器 DRAM +90%、PC DRAM +100%、LPDDR4X/5X +90%,均为历史最高季度涨幅)。
 
 ## 目录
 
