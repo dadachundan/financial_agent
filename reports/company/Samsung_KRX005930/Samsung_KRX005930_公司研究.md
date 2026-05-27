@@ -209,16 +209,21 @@ graph TD
 
 三星电子的客户群是同等规模半导体 / 电子公司中分散度最高的之一,但这并不掩盖某些子业务中的客户高度集中。
 
-**客户集中度披露。** 三星电子在韩国 DART 平台提交的 **사업보고서**(年度报告)按规定披露单一大客户阈值 —— FY2024 사업보고서(2025 年 3 月提交)显示:公司单一最大客户的销售额占合并营收 **超过 10%**。媒体报道与供应链分析普遍认为该客户为 **Apple Inc.**,主要途径为:(a) Samsung Display 向 Apple 的 OLED 面板出货;(b) 向 Apple 的 iPhone / iPad / Mac 装配线供应 NAND 与 DRAM;(c) Samsung Foundry 为 Apple 各类外围 IC 代工。公司 **不像中国 A 股 年度报告** 那样发布前五大客户合计占比;卖方覆盖的最可靠估算把 **前五大客户**(Apple + 主要美国超大规模云厂商 —— NVIDIA、Google、Microsoft、AWS 等)合计占合并营收的比例置于 **约 35–45%** 区间,2025–2026 年由 Apple 与 NVIDIA 主导。*按 company-research 技能指引,该估算基于供应链披露与卖方研究的拼接,并未在 사업보고서 中直接披露,请谨慎对待。*
+**客户集中度披露(来自一手 사업보고서)。** 三星电子 2024 年 Business Report(4Q Interim,第 30 页)在 "E. Major customers" 一项明确披露:**2024 年五大客户(按字母顺序)为 Apple、Deutsche Telekom、Hong Kong Techtronics、Supreme Electronics、Verizon;五大客户合计销售额约占总销售额 14%** ([Samsung Electronics 2024 Business Report — 4Q Interim](https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_4Q_Interim_Report.pdf), 第 30 页)。该披露的几个要点对建模与思路都很重要:
+
+- **五大客户按字母顺序列出,合计 ~14% —— 三星没有披露任何单一客户的具体占比。** 即使 Apple 在媒体与供应链分析中被普遍认为是其中规模最大的一家(主要通过 Samsung Display 的 iPhone OLED 出货、向 Apple 装配线供应 NAND/DRAM、以及若干 SDC 物料),Apple 在合并营收中的具体占比 **未在 사업보고서 中量化** —— 任何"Apple 占三星集团 X%"的说法都是供应链推断,不是一手披露。
+- **三星电子合并层面的客户集中度极低。** 按"五大合计 ~14%"反推,即便 Apple 是最大客户,其占合并营收的份额大概率不超过单位数百分点;这与 Samsung 业务的极致分散(DX 终端零售长尾 + DS 上百家半导体客户 + Harman 数十家汽车 OEM)逻辑一致。
+- **HBM 客户(NVIDIA、Google、Microsoft、AWS 等)不在合并层面的五大名单中。** 它们是 DS 半导体业务的关键客户(详见下文 "按业务分部的客户结构"),但因 DS 占集团营收约 37%(2024 年),即便 DS 内部高度集中,在合并层面也很难进入与 Verizon、Deutsche Telekom、Hong Kong Techtronics 这些 DX 大客户并列的合并 Top-5。
 
 ```mermaid
-pie title FY2025 营收按客户(示意;参见上文注释)
-    "Apple" : 18
-    "其他头部美国超大规模云厂商 (NVIDIA, GOOG, MSFT, AMZN)" : 22
-    "三星 Mobile 内部需求(集团内)" : 12
-    "其他(运营商、零售、EMS、车厂等)" : 48
+pie title FY2024 营收按业务分部(来源:Samsung 2024 Business Report 第 22 页)
+    "DX(电视、家电、手机、Networks)" : 58
+    "DS(存储、Foundry、System LSI)" : 37
+    "SDC(三星显示)" : 10
+    "Harman" : 5
+    "内部抵销" : -10
 ```
-*来源:基于 [Reuters via OLED-Info](https://www.oled-info.com/ubi-details-samsung-lg-and-boes-market-share-apples-smartphone-oled-supply)、TrendForce HBM 份额数据,以及三星自身分部披露的估算;未在 사업보고서 直接披露。*
+*来源:[Samsung Electronics 2024 Business Report — 4Q Interim, 第 22 页 "A. Revenue"](https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_4Q_Interim_Report.pdf)。DX KRW 174.9 万亿(58.1%)、DS KRW 111.1 万亿(36.9%)、SDC KRW 29.2 万亿(9.7%)、Harman KRW 14.3 万亿(4.8%)、内部抵销 KRW -28.5 万亿(-9.5%)。*
 
 **按业务分部的客户结构。**
 
@@ -525,7 +530,7 @@ quadrantChart
 
 - 一手披露:三星电子的韩国 사업보고서 (年度报告) 与 분기보고서 (季度报告) 通过 [DART 韩文 / 英文披露门户](https://englishdart.fss.or.kr/) 提交。本报告引用的英文 IR 材料是上述披露的衍生版本,加上三星 news.samsung.com 上的季度业绩公告。本代码库的 fetch 助手不覆盖韩国上市公司 —— 一手披露通过 Samsung IR 与 DART 门户直接获取。
 - 所有 KRW–USD 换算按 2025–2026 区间内 KRW 1,360–1,460/USD 的近似汇率。建模时请将报告中的 USD 数值视为近似换算。
-- 第 5 节中 "前五大客户合计约 35–45%" 是基于供应链披露与卖方研究的拼接估算,**不是 사업보고서 直接披露**。请按技能的准确性原则视为估算而非事实。
+- 第 5 节客户集中度披露以 Samsung Electronics 2024 Business Report(4Q Interim,第 30 页 "E. Major customers")原文披露为准:**2024 年五大客户(按字母顺序)为 Apple、Deutsche Telekom、Hong Kong Techtronics、Supreme Electronics、Verizon;五大合计约占总销售额 14%。** 该 사업보고서 **不披露任何单一客户的具体百分比**。先前版本中"五大客户 35–45%、Apple + NVIDIA + GOOG + MSFT + AWS"等说法与该一手披露不一致,已于 2026-05-27 修订;请勿采纳。
 - 本中文报告与同目录下的英文报告 `Samsung_KRX005930_Research_Document.md` 共享同一套引用与图表,但中文版的行文为原生中文写作,非英文版翻译。
 
 ---

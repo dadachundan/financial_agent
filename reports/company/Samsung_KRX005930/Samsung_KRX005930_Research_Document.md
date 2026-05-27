@@ -207,16 +207,21 @@ The 1–3 products driving the business today are: **(1)** DRAM/NAND/HBM in DS M
 
 Samsung's customer base is among the most diversified of any large-cap semiconductor/electronics name, but this hides material concentration in specific sub-businesses.
 
-**Customer concentration disclosure.** Samsung Electronics' DART **사업보고서** (annual report) discloses a single major-customer threshold: the FY2024 사업보고서 (filed March 2025) reports that the company's largest single customer accounts for revenue above 10% of consolidated sales. Press reporting and supply-chain analyses identify that customer as **Apple Inc.**, primarily through (a) OLED panels from Samsung Display, (b) NAND and DRAM into Apple's iPhone/iPad/Mac assembly, and (c) Samsung Foundry's legacy chips for various Apple peripherals. The Company does not publish a top-5 customer share in the same form as Chinese 年度报告; the most credible estimate from sell-side coverage puts the **top-5 customers** (Apple + the major US hyperscalers — NVIDIA, Google, Microsoft, Amazon Web Services — depending on the year) at **roughly 35–45% of consolidated revenue**, dominated by Apple and NVIDIA in 2025–2026. *Per the company-research skill guidance, this is an estimate based on supply-chain disclosures and is not directly disclosed in the 사업보고서; treat with appropriate caution.*
+**Customer concentration disclosure (from the primary 사업보고서).** Samsung Electronics' 2024 Business Report (4Q Interim, p. 30, "E. Major customers") states verbatim: **"In 2024, major customers (listed alphabetically) included Apple, Deutsche Telekom, Hong Kong Techtronics, Supreme Electronics, and Verizon. Sales to the five major customers accounted for approximately 14% of total sales."** ([Samsung Electronics 2024 Business Report — 4Q Interim](https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_4Q_Interim_Report.pdf), p. 30). Three implications matter for modelling and narrative:
+
+- **The five names are listed alphabetically, totalling ~14% in aggregate; no individual customer's percentage is broken out.** Press reporting and supply-chain analysis widely identify Apple as the largest of the five (via Samsung Display's iPhone OLED shipments, NAND/DRAM into Apple's assembly lines, and several SDC inputs), but Apple's specific share of consolidated revenue is **not quantified in the 사업보고서** — any "Apple is X% of Samsung group" figure is supply-chain inference, not primary disclosure.
+- **Group-level customer concentration is extremely low.** With top-5 at ~14%, even if Apple is the largest of the five, its share of consolidated revenue is most likely in the low single digits — consistent with Samsung's extreme business diversification (DX retail long-tail + DS's hundreds of semiconductor customers + Harman's dozens of automotive OEMs).
+- **HBM customers (NVIDIA, Google, Microsoft, AWS) do not appear in the consolidated top-5.** They are critical customers of the DS Division (see "Segment-by-segment customer pattern" below), but since DS was ~37% of group revenue in 2024, even high concentration inside DS doesn't put any one DS customer alongside the DX-scale customers (Verizon, Deutsche Telekom, Hong Kong Techtronics) on a consolidated basis.
 
 ```mermaid
-pie title FY2025 Revenue by Customer (illustrative; see caveat above)
-    "Apple" : 18
-    "Other top US hyperscalers (NVIDIA, GOOG, MSFT, AMZN)" : 22
-    "Samsung Mobile internal demand (intra-group)" : 12
-    "All other (carriers, retail, EMS, automotive)" : 48
+pie title FY2024 Revenue by Division (Source: Samsung 2024 Business Report, p. 22)
+    "DX (TV, appliances, smartphones, Networks)" : 58
+    "DS (memory, foundry, System LSI)" : 37
+    "SDC (Samsung Display)" : 10
+    "Harman" : 5
+    "Internal eliminations" : -10
 ```
-*Source: estimated mix per supply-chain analysis from [Reuters via OLED-Info](https://www.oled-info.com/ubi-details-samsung-lg-and-boes-market-share-apples-smartphone-oled-supply), TrendForce HBM share data, and Samsung's own segment disclosures; not directly disclosed in 사업보고서.*
+*Source: [Samsung Electronics 2024 Business Report — 4Q Interim, p. 22 "A. Revenue"](https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_4Q_Interim_Report.pdf). DX KRW 174.9 trn (58.1%); DS KRW 111.1 trn (36.9%); SDC KRW 29.2 trn (9.7%); Harman KRW 14.3 trn (4.8%); inter-divisional eliminations KRW -28.5 trn (-9.5%).*
 
 **Segment-by-segment customer pattern.**
 
@@ -518,7 +523,7 @@ Source: Samsung Electronics Q4 FY2021–FY2025 press releases (cited above); FY2
 
 - Filings: Samsung Electronics' Korean 사업보고서 (annual report) and 분기보고서 (quarterly reports) are filed via [DART (Korean) / DART English portal](https://englishdart.fss.or.kr/). The English-language IR materials cited here are derived versions of those filings, plus the company's quarterly earnings press releases hosted on news.samsung.com. The fetch helper in this codebase does not cover Korea-domiciled issuers — primary disclosures were retrieved via Samsung IR and the DART portal directly.
 - All KRW–USD conversions in this report use approximate FX of KRW 1,360–1,460/USD (2025–2026 range). For modelling, treat all USD figures as approximate translations.
-- The "estimated top-5 customer concentration of 35–45%" in Section 5 is a sell-side composite estimate, not a directly disclosed 사업보고서 figure. Per the skill's accuracy principle, treat it as estimate rather than fact.
+- Section 5 customer-concentration disclosure follows Samsung Electronics' 2024 Business Report (4Q Interim, p. 30, "E. Major customers") verbatim: **the 2024 top-5 customers (alphabetically) are Apple, Deutsche Telekom, Hong Kong Techtronics, Supreme Electronics, and Verizon, with the five accounting for ~14% of total sales in aggregate.** The 사업보고서 **does not break out any individual customer's percentage**. Earlier drafts of this report stated a "top-5 = 35–45%" / "Apple + NVIDIA + GOOG + MSFT + AWS" composition that conflicts with this primary disclosure; that wording was retracted on 2026-05-27 — do not rely on it.
 
 ---
 
