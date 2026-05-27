@@ -230,6 +230,24 @@ Same standard as [[company-research]]. Read its `references/citations.md` before
 - **Freshness:** discard web sources older than ~12 months for industry data; include the publication date in the link title (`[Reuters, 2025-08-12](https://...)`).
 - **Density target: ≥40 inline citations** across the body of a 5,000–9,000 word comparison.
 
+## Numerical Accuracy (MANDATORY — every number traces to the original source, not a research doc)
+
+The project-wide **Numerical Accuracy** rule in `/Users/x/projects/financial_agent/CLAUDE.md` ("every numerical claim must trace to a URL cited in that same paragraph where the number literally appears as a string") applies verbatim to comparison reports. Re-read that section before drafting. Compare-specific failure modes on top of the base rule:
+
+1. **Never cite `reports/company/<X>/...md` as the source of a number.** The Prerequisites step has you read each side's prior research doc as structured *input* — but those research docs are themselves derived work. Citing one of them in a comparison shifts the verification chain instead of completing it ("the number is in the research doc, which got it from… ?"). When a number originated in the research doc you just read, follow its inline citation to the primary source (the 10-K page, the IPnest report URL, the vendor product page, the press release) and cite **that** in the comparison. If the research doc has no inline citation for the number, treat the number as unverified — re-derive it from a primary source or drop the claim.
+
+2. **Cross-company comparisons require both sides' originals to contain the comparable figure.** A row that says "A: 47% gross margin vs B: 32% gross margin" needs **two** primary citations — A's 10-K (or 年度报告 / Yuho) for the 47% and B's filing for the 32%. A bundled "[Stratechery](...)" cite isn't enough unless that article actually quotes both numbers verbatim. Mismatched period-ends (A's FY24 vs B's FY25) must be disclosed in the cell.
+
+3. **Third-party share numbers must cite the third party, not the company that quoted it.** "SNPS has 50% interface-IP share (10-K)" is wrong — the 10-K never says "we lead". Cite IPnest, Gartner, IDC, etc. directly, with the specific report URL and date. Use the source-chain label only when the third-party report is paywalled and the primary filing quotes it verbatim (`[Hesai FY25 6-K 引用 Yole](https://www.sec.gov/...)`).
+
+4. **Derived deltas must be labelled.** "A grew 3× faster than B" is a comparison of two reported growth rates — write it as `~3× (A's 28% YoY vs B's 9% YoY — both from each company's Q4 release)` so a reader can re-derive, and cite both releases in the same paragraph. Never quote the multiple as if it came from a single source that only contains one of the inputs.
+
+5. **Scorecard "Edge" verdicts need underlying-paragraph citations.** A scorecard row like "Operating margin | A | 28% vs 19%" is a summary of a §4 paragraph claim. The body paragraph must already have both numbers cited inline; the scorecard cell inherits those citations and does not need its own. But if the scorecard names a number that's *not* in the body, that's an unsourced claim — add the citation to the body, or drop the number from the scorecard.
+
+6. **Spot-check before commit.** Before saving either language file, pick 5 random numbers across the TL;DR / moat anatomy / scorecard and string-match each against the URLs in its paragraph (`curl -s URL | grep -F "47%"`). If a number doesn't string-match in any URL cited in that paragraph, fix the paragraph — don't ship. Compare-specific extension: the spot-check must include at least one number that came from each side's prior research doc, to confirm you traced it back to the original rather than just copy-pasting the research-doc paragraph.
+
+If a number can't be sourced to a primary original (only to the research doc, only to a paywalled secondary, only to an analyst's tweet), either remove it or replace it with a phrasing that the available primary sources actually support ("materially higher" instead of "47% higher" if you only have the qualitative trend). Never leave a derived-from-research-doc number in a comparison report without re-citing the primary.
+
 ## Prerequisites
 
 This skill builds on [[company-research]]. **Before drafting any new content, always check the local `reports/company/` folder for prior research** — this is the most-asked question about this skill and the most common source of duplicated work if skipped.
