@@ -7,6 +7,8 @@ description: Produce deep 6,000–10,000 word company research reports in both E
 
 Deep research deliverable: a 6,000–10,000 word markdown report covering business, management, products, customers, industry, competitive landscape, TAM, and risks. Input is just a company name or ticker.
 
+**Methodology: website-first.** This skill prioritizes the company's official sources (website, investor relations, press releases, filings) over third-party research. The company's own website is the starting point and ground truth for what it actually sells; regulatory filings provide audited financials and legal risk details; analyst research comes third. This approach yields reports grounded in primary sources rather than analyst consensus or journalistic interpretation.
+
 ## Core principle: accuracy over completeness — never hallucinate
 
 This is the **single most important rule** and overrides every other instruction in this skill. The report is read by investors making real decisions; a single fabricated number, executive name, customer name, page reference, market-share figure, or URL destroys the credibility of the entire document.
@@ -21,6 +23,22 @@ This is the **single most important rule** and overrides every other instruction
 - **No fabricated URLs** (this echoes the citation rule). For SEC filings, always look up the real filename via the EDGAR submissions JSON API (`https://data.sec.gov/submissions/CIK<10-digit-padded>.json` — see `references/citations.md`); never invent synthetic filename patterns like `2025_10K_<accession>.htm` — those are 404s.
 - **Direct quotations must be verbatim.** If you can't quote exactly, paraphrase and drop the quote marks.
 - **Distinguish primary (filings, transcripts) from secondary (news, third-party) sources.** When two sources disagree, prefer the primary and note the discrepancy briefly.
+
+## Source hierarchy: official company data first
+
+**Prioritize the company's own official sources over third-party research.** The company's website, SEC filings, investor materials, and press releases are the ground truth; analyst reports, news articles, and third-party research are supporting evidence.
+
+**Source priority (highest to lowest):**
+
+1. **Company official website** — product pages (specifications, use cases, pricing if disclosed), About / Company pages, leadership bios, customer case studies, blog/newsroom (last 12 months for launches and announcements)
+2. **Regulatory filings** — 10-K / 10-Q / 8-K (US), 年度报告 / 季度报告 (China), Yuho / Shihanki (Japan), etc. These are legally binding and audited (filings, not soft estimates).
+3. **Investor relations materials** — earnings call transcripts, earnings decks, investor-day presentations, annual integrated reports, capital-markets-day decks. These are prepared by the company's own IR team and often contain the most direct business context.
+4. **Press releases and announcements** — official channel for product launches, customer wins, partnerships, guidance changes.
+5. **Conference presentations** — when the company's own executives present at industry conferences (JPM, SEMICON, etc.), these are quasi-official sources.
+6. **Sell-side research** (Yole, Gartner, IDC, TechInsights, Bernstein, JPMorgan, Goldman, etc.) — used for market-sizing, competitive positioning, and industry trends when the company's filings don't provide the detail.
+7. **News and web sources** — news articles, blog posts, third-party analysis. Use only for recent developments and confirmation, not as a primary claim source.
+
+**When the company's website lacks detail**, fall back to regulatory filings (which are more complete and audited); only then reach for third-party research. A product feature list from the company's website beats an analyst's product description; a management quote from an earnings transcript beats a paraphrased interpretation from a news article.
 
 ### Specific failure mode: do NOT misattribute sell-side opinions to filings
 
@@ -204,21 +222,39 @@ See [`references/citations.md`](references/citations.md) for the full rules, per
 
 ---
 
-## Data sources — route filings by domicile
+## Data sources — website-first, then filings, then research
+
+**Always start with the company's own website.** Then route filings by domicile. Research firms come third.
+
+### Official company website (START HERE)
+
+- **Product pages** — product specs, use cases, pricing, customer names, case studies, comparison matrices.
+- **About / Company page** — company history, mission, strategy, key statistics disclosed.
+- **Leadership / Team page** — founder and CEO bios (names, titles, prior roles).
+- **IR site** (if exists) — earnings decks, investor-day presentations, integrated reports, annual reports, press releases.
+- **Blog / Newsroom** — last 12 months for launches, customer wins, guidance, announcements.
+- **Native-language version** (for non-US/English-primary companies) — e.g. `company.com.cn`, `company.co.jp`, `company.kr` is often richer than the English version.
+
+### Regulatory filings (SECOND, to fill gaps and verify financials)
 
 **SEC EDGAR only covers US issuers. Do not look for non-US filings there.**
 
-- **US** → SEC EDGAR: latest 10-K, recent 10-Qs, DEF 14A, recent 8-Ks. Helper: `fetch_financial_report.py` (DB: `db/financial_reports.db`). **IR portal (mandatory pull):** `investors.<company>.com` or `ir.<company>.com` → Events & Presentations (earnings decks, investor days, conference presentations), Quarterly Results (transcripts), SEC Filings → 8-K Exhibit 99.2 attachments.
-- **China A-share / HK** → cninfo (巨潮资讯, https://www.cninfo.com.cn/): 年度报告, 季度报告 / 半年度报告, 重大事项公告. Ticker format `SZSE:002050`, `SSE:688802`, `HKEX:2513`. Helper: `fetch_cninfo_report.py` — run from `/Users/x/projects/financial_agent` so files land in `cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/`. Chinese-language disclosures are authoritative; English IR pages are secondary. **IR portal (mandatory pull):** company IR page (`<company>.com/investors` / 投资者关系) for 业绩说明会 PPT + 投资者交流活动记录; cninfo also files `投资者关系活动记录表` quarterly with formal Q&A logs.
-- **Taiwan (TWSE / TPEx)** → MOPS (公開資訊觀測站, https://mops.twse.com.tw/): 年報, Q1–Q3 reports, 重大訊息. **IR portal (mandatory pull):** MOPS 法人說明會 (analyst meeting decks) section + company IR page.
-- **Japan** → EDINET (https://disclosure2.edinet-fsa.go.jp/) for Yuho (有価証券報告書) + Shihanki (四半期報告書); TDnet (https://www.release.tdnet.info/) for 決算短信. **IR portal (mandatory pull):** company IR site → 「決算説明会資料」 (earnings deck per quarter), 「統合報告書」 (Integrated Report — annual; often the single richest source for narrative, TAM, segment economics), 「中期経営計画」 (Mid-term Plan — every 3–5 years; multi-year revenue / margin / capex / ROIC targets).
-- **Korea** → DART (https://dart.fss.or.kr/, English: https://englishdart.fss.or.kr/): 사업보고서, 반기보고서, 분기보고서, 주요사항보고서. **IR portal (mandatory pull):** company IR site → Earnings Release PDFs (quarterly), Investor Presentations archive, Annual Report PDF (often distinct from the DART 사업보고서 — the IR-site annual is glossier and more narrative).
-- **Other** → country's official portal (SEDAR+ Canada, ASX Australia, LSE RNS UK, BSE/NSE India). Do NOT fall back to SEC EDGAR unless the issuer is a 20-F / 6-K filer. **IR portal (mandatory pull):** every major issuer has a public IR site — collect quarterly decks + annual report + any capital-markets-day deck.
+- **US** → SEC EDGAR: latest 10-K, recent 10-Qs, DEF 14A, recent 8-Ks. Helper: `fetch_financial_report.py` (DB: `db/financial_reports.db`). **Company IR site (mandatory pull):** `investors.<company>.com` or `ir.<company>.com` → Events & Presentations (earnings decks, investor days, conference presentations), Quarterly Results (transcripts), SEC Filings → 8-K Exhibit 99.2 attachments.
+- **China A-share / HK** → cninfo (巨潮资讯, https://www.cninfo.com.cn/): 年度报告, 季度报告 / 半年度报告, 重大事项公告. Ticker format `SZSE:002050`, `SSE:688802`, `HKEX:2513`. Helper: `fetch_cninfo_report.py` — run from `/Users/x/projects/financial_agent` so files land in `cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/`. Chinese-language disclosures are authoritative; English IR pages are secondary. **Company IR site (mandatory pull):** company IR page (`<company>.com/investors` / `<company>.cn/investors` / 投资者关系) for 业绩说明会 PPT + 投资者交流活动记录; cninfo also files `投资者关系活动记录表` quarterly with formal Q&A logs.
+- **Taiwan (TWSE / TPEx)** → MOPS (公開資訊觀測站, https://mops.twse.com.tw/): 年報, Q1–Q3 reports, 重大訊息. **Company IR site (mandatory pull):** MOPS 法人說明會 (analyst meeting decks) section + company IR page.
+- **Japan** → EDINET (https://disclosure2.edinet-fsa.go.jp/) for Yuho (有価証券報告書) + Shihanki (四半期報告書); TDnet (https://www.release.tdnet.info/) for 決算短信. **Company IR site (mandatory pull):** company IR site → 「決算説明会資料」 (earnings deck per quarter), 「統合報告書」 (Integrated Report — annual; often the single richest source for narrative, TAM, segment economics), 「中期経営計画」 (Mid-term Plan — every 3–5 years; multi-year revenue / margin / capex / ROIC targets).
+- **Korea** → DART (https://dart.fss.or.kr/, English: https://englishdart.fss.or.kr/): 사업보고서, 반기보고서, 분기보고서, 주요사항보고서. **Company IR site (mandatory pull):** company IR site → Earnings Release PDFs (quarterly), Investor Presentations archive, Annual Report PDF (often distinct from the DART 사업보고서 — the IR-site annual is glossier and more narrative).
+- **Other** → country's official portal (SEDAR+ Canada, ASX Australia, LSE RNS UK, BSE/NSE India). Do NOT fall back to SEC EDGAR unless the issuer is a 20-F / 6-K filer. **Company IR site (mandatory pull):** every major issuer has a public IR site — collect quarterly decks + annual report + any capital-markets-day deck.
 - **Private companies** → company website + blog, press coverage, LinkedIn for bios, Crunchbase/PitchBook for funding history. For IPO-stage names, the S-1 / F-1 / 招股说明书 prospectus on the local exchange portal is the deepest single source.
 
-Secondary sources (any domicile): competitor websites and filings, Gartner/Forrester/IDC industry reports, trade press, LinkedIn for executive bios.
+### Third-party research (THIRD, for market context and trends)
 
-**See § "Investor presentations are first-class primary sources" above for the full IR-collection bar — every IR portal listed above carries materials that should yield 8–12+ citations in the finished report.**
+- **Industry research firms** (Gartner, IDC, Yole, TrendForce, TechInsights, Forrester) — used for market-sizing, competitive positioning, and industry benchmarks the company's filings don't provide.
+- **Sell-side analyst reports** (JPMorgan, Goldman, Bernstein, Needham, TechInsights) — for forward-looking commentary, peer comparisons, and thesis validation. **Note:** these are sell-side opinions, not primary facts.
+- **Trade press and news** — for recent developments, confirmation, and context. Only as supporting evidence, not as primary claim sources.
+- **Competitor websites and filings** — when explaining competitive positioning; cite the competitor's own source, never the subject company's characterization.
+
+**See § "Investor presentations are first-class primary sources" above for the full IR-collection bar — every IR site listed above carries materials that should yield 8–12+ citations in the finished report.**
 
 ---
 
@@ -280,17 +316,26 @@ Use that narrative as the **structured input** for:
 
 **Skip this step entirely for non-US issuers** — sec-report-summary depends on the `/sec/` Flask service + `db/financial_reports.db`, which only cover SEC filings. For China A-share / HK / Taiwan / Japan / Korea, build the historical-evolution threads directly from the domicile-portal filings synced in Step 0.
 
-### Step 1 — Initial data collection
+### Step 1 — Initial data collection (website-first approach)
 
-1. **Thoroughly analyze the company website** (do not skim — this is the primary source of ground truth on what the company actually sells).
-   - Read every About / Company / Mission page; note founders' framing.
-   - **Walk the entire product / solutions navigation tree.** Enumerate every distinct product, SKU family, or service line — even 10–30+ items. Do not collapse them.
-   - For each product page, capture: official name + variants/tiers, one-sentence description, target customer, pricing model if disclosed, key specs/differentiators the company highlights, any "new"/"flagship" badges.
-   - Identify named customers, homepage logos, partner/integration lists, customer case studies.
-   - From the leadership / Team page, capture **only the founder and current CEO** (name, title, prior employers) — feed into Step 4. Skip the rest of the team.
-   - Read blog / newsroom for the **last 12 months** to detect launches, sunsets, repositioning.
-   - For non-English companies, read the **native-language site** (e.g. `company.com.cn`) — English IR pages are often a stripped subset and miss SKUs.
-2. **Regulatory filings** — start from the local cache pulled in Step 0; only fetch fresh if the cache is stale (see freshness rules above). Route by domicile per the data-sources table. Note filing dates and the portal used.
+**Start with the company's own official website; move to filings and third-party research only when the website doesn't provide sufficient depth.**
+
+1. **Thoroughly analyze the company website** (do not skim — this is the primary source of ground truth on what the company actually sells). Spend 30–60 minutes on this; it is the foundation of Section 4 (Products) and Section 5 (Customers).
+   - Read every About / Company / Mission / Vision page; note founders' framing, company history, stated strategy.
+   - **Walk the entire product / solutions navigation tree exhaustively.** Enumerate every distinct product, SKU family, or service line — even 10–30+ items. Do not collapse them; the website's own categorization is the authoritative structure.
+   - For each product page, capture: official name (exactly as the company spells it) + variants/tiers, one-sentence description, target customer segment, pricing model if disclosed, key specifications/technical details, differentiators the company highlights, any "new"/"flagship"/"market-leading" badges, product-launch date if shown.
+   - **Identify and name every customer shown on the site** — homepage logos, case-study names, testimonials, customer list page. Quote case-study excerpts that explain the customer's use case.
+   - Capture partner / integration lists and ecosystem details.
+   - From the leadership / Team page, capture **only the founder and current CEO** (name, title, prior employers, years in role) — feed into Step 4. Skip the rest of the team.
+   - Read blog / newsroom for the **last 12 months** (scroll back month-by-month) to detect product launches, customer wins, partnerships, sunsets, repositioning, guidance changes, and restructuring.
+   - For non-English companies, **read the native-language site first** (e.g. `company.com.cn`, `company.co.jp`, `company.kr`) — English IR pages are often a stripped subset and miss SKUs, regional details, and business-model nuance. After native-language sweep, check the English version for any differences.
+   - **Verify product definitions match the company's own language.** If the company calls it "AI-accelerated inference appliance," do not paraphrase it as "AI inference server" or "ML hardware." Use their exact terminology in the report.
+   
+2. **Regulatory filings** — use filings to fill gaps not covered by the website. Start from the local cache pulled in Step 0; only fetch fresh if the cache is stale (see freshness rules above). Route by domicile per the data-sources table. Note filing dates and the portal used.
+   - For product details: filings go deeper on customer concentration, segment-revenue splits, product-line transitions, and legal disclosures the marketing site omits.
+   - For financials: filings are the definitive source (10-K GAAP financials are audited; website summary numbers are sometimes rounded or simplified).
+   - For risk: 10-K risk-factor sections are required reading; they detail legal, competitive, supply-chain, and macro risks the website downplays.
+   
 3. **Earnings materials and investor presentations** — see the dedicated section above § "Investor presentations are first-class primary sources" for the full collection bar. **At minimum, pull every one of the following that exists; if any is missing, note it in the verification log:**
    - **Latest 2 quarterly earnings call transcripts** (most-recent first).
    - **Latest 2 quarterly earnings decks** (PDF slides accompanying each earnings call — 8-K Exhibit 99.2 for US issuers, IR site for others).
