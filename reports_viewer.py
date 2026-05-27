@@ -491,7 +491,7 @@ __URLPATCH__
         <option value="0">Any rating</option>
         <option value="1">★ 1+</option>
         <option value="2">★ 2+</option>
-        <option value="3">★ 3+</option>
+        <option value="3" selected>★ 3+</option>
         <option value="4">★ 4+</option>
         <option value="5">★ 5</option>
       </select>
@@ -638,7 +638,7 @@ __URLPATCH__
         filter.value = "";
         sectorFilter.value = "";
         bucketFilter.value = "";
-        ratingFilter.value = "0";
+        ratingFilter.value = "3";
         showUnrated.checked = true;
         applyFilter();
       });
