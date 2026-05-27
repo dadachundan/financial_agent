@@ -21,7 +21,7 @@ This is the **single most important rule** and overrides every other instruction
 - **Cross-check every quantitative claim against its citation.** Before pasting "revenue grew 34% YoY" with a 10-K link, confirm the 10-K actually shows 34%. The citation must support the claim — not vaguely cover the topic.
 - **Page numbers and dates must be exact.** If you cite `2024 年度报告, 第 28 页`, page 28 must be where the figure actually lives. If unsure, drop the page reference and cite the document only.
 - **No fabricated URLs** (this echoes the citation rule). For SEC filings, always look up the real filename via the EDGAR submissions JSON API (`https://data.sec.gov/submissions/CIK<10-digit-padded>.json` — see `references/citations.md`); never invent synthetic filename patterns like `2025_10K_<accession>.htm` — those are 404s.
-- **Direct quotations must be verbatim.** If you can't quote exactly, paraphrase and drop the quote marks.
+- **Direct quotations must be verbatim.** If you can't quote exactly, paraphrase and drop the quote marks. When writing about official company website data or regulatory filings, **default to quoting the original text rather than paraphrasing.** This ensures readers can verify every claim against the source.
 - **Distinguish primary (filings, transcripts) from secondary (news, third-party) sources.** When two sources disagree, prefer the primary and note the discrepancy briefly.
 
 ## Source hierarchy: official company data first
@@ -30,15 +30,17 @@ This is the **single most important rule** and overrides every other instruction
 
 **Source priority (highest to lowest):**
 
-1. **Company official website** — product pages (specifications, use cases, pricing if disclosed), About / Company pages, leadership bios, customer case studies, blog/newsroom (last 12 months for launches and announcements)
-2. **Regulatory filings** — 10-K / 10-Q / 8-K (US), 年度报告 / 季度报告 (China), Yuho / Shihanki (Japan), etc. These are legally binding and audited (filings, not soft estimates).
-3. **Investor relations materials** — earnings call transcripts, earnings decks, investor-day presentations, annual integrated reports, capital-markets-day decks. These are prepared by the company's own IR team and often contain the most direct business context.
-4. **Press releases and announcements** — official channel for product launches, customer wins, partnerships, guidance changes.
-5. **Conference presentations** — when the company's own executives present at industry conferences (JPM, SEMICON, etc.), these are quasi-official sources.
-6. **Sell-side research** (Yole, Gartner, IDC, TechInsights, Bernstein, JPMorgan, Goldman, etc.) — used for market-sizing, competitive positioning, and industry trends when the company's filings don't provide the detail.
+1. **Company official website** — product pages (specifications, use cases, pricing if disclosed), About / Company pages, leadership bios, customer case studies, blog/newsroom (last 12 months for launches and announcements). **When citing website content, quote or closely paraphrase the exact text** so readers can verify against the live source.
+2. **Regulatory filings** — 10-K / 10-Q / 8-K (US), 年度报告 / 季度报告 (China), Yuho / Shihanki (Japan), etc. These are legally binding and audited (filings, not soft estimates). **Quote verbatim from the filing** whenever possible, especially for product definitions, customer names, risk factors, and segment breakdowns. Block-quote long passages with the citation directly above.
+3. **Investor relations materials** — earnings call transcripts, earnings decks, investor-day presentations, annual integrated reports, capital-markets-day decks. These are prepared by the company's own IR team and often contain the most direct business context. **Quote management's own words from transcripts and decks** rather than summarizing or interpreting what they said.
+4. **Press releases and announcements** — official channel for product launches, customer wins, partnerships, guidance changes. **Quote press releases verbatim** for specific announcements and dates.
+5. **Conference presentations** — when the company's own executives present at industry conferences (JPM, SEMICON, etc.), these are quasi-official sources. **Quote or screenshot the actual slides** rather than paraphrasing the executive's point.
+6. **Sell-side research** (Yole, Gartner, IDC, TechInsights, Bernstein, JPMorgan, Goldman, etc.) — used for market-sizing, competitive positioning, and industry trends when the company's filings don't provide the detail. Can paraphrase with citation, but prefer direct quotes when a number or claim is novel or contested.
 7. **News and web sources** — news articles, blog posts, third-party analysis. Use only for recent developments and confirmation, not as a primary claim source.
 
 **When the company's website lacks detail**, fall back to regulatory filings (which are more complete and audited); only then reach for third-party research. A product feature list from the company's website beats an analyst's product description; a management quote from an earnings transcript beats a paraphrased interpretation from a news article.
+
+**Default: quote the original text.** When writing from official sources (website product pages, 10-K product descriptions, earnings transcripts, press releases), the default move is to quote or closely preserve the original language, not to synthesize or paraphrase. This is what distinguishes primary-source research from derivative commentary.
 
 ### Specific failure mode: do NOT misattribute sell-side opinions to filings
 
@@ -228,12 +230,12 @@ See [`references/citations.md`](references/citations.md) for the full rules, per
 
 ### Official company website (START HERE)
 
-- **Product pages** — product specs, use cases, pricing, customer names, case studies, comparison matrices.
-- **About / Company page** — company history, mission, strategy, key statistics disclosed.
-- **Leadership / Team page** — founder and CEO bios (names, titles, prior roles).
-- **IR site** (if exists) — earnings decks, investor-day presentations, integrated reports, annual reports, press releases.
-- **Blog / Newsroom** — last 12 months for launches, customer wins, guidance, announcements.
-- **Native-language version** (for non-US/English-primary companies) — e.g. `company.com.cn`, `company.co.jp`, `company.kr` is often richer than the English version.
+- **Product pages** — product specs, use cases, pricing, customer names, case studies, comparison matrices. **Quote the company's own product descriptions and specifications verbatim.**
+- **About / Company page** — company history, mission, strategy, key statistics disclosed. **Use exact language from the company's "About" section.**
+- **Leadership / Team page** — founder and CEO bios (names, titles, prior roles). **Quote bio text directly if it contains relevant background.**
+- **IR site** (if exists) — earnings decks, investor-day presentations, integrated reports, annual reports, press releases. **Quote management statements from decks and transcripts; reference specific slide numbers.**
+- **Blog / Newsroom** — last 12 months for launches, customer wins, guidance, announcements. **Quote press releases for product announcements, customer wins, and timeline facts.**
+- **Native-language version** (for non-US/English-primary companies) — e.g. `company.com.cn`, `company.co.jp`, `company.kr` is often richer than the English version. **Read and quote from the native version; preserve original language in citations.**
 
 ### Regulatory filings (SECOND, to fill gaps and verify financials)
 
@@ -323,18 +325,18 @@ Use that narrative as the **structured input** for:
 1. **Thoroughly analyze the company website** (do not skim — this is the primary source of ground truth on what the company actually sells). Spend 30–60 minutes on this; it is the foundation of Section 4 (Products) and Section 5 (Customers).
    - Read every About / Company / Mission / Vision page; note founders' framing, company history, stated strategy.
    - **Walk the entire product / solutions navigation tree exhaustively.** Enumerate every distinct product, SKU family, or service line — even 10–30+ items. Do not collapse them; the website's own categorization is the authoritative structure.
-   - For each product page, capture: official name (exactly as the company spells it) + variants/tiers, one-sentence description, target customer segment, pricing model if disclosed, key specifications/technical details, differentiators the company highlights, any "new"/"flagship"/"market-leading" badges, product-launch date if shown.
-   - **Identify and name every customer shown on the site** — homepage logos, case-study names, testimonials, customer list page. Quote case-study excerpts that explain the customer's use case.
+   - For each product page, capture: official name (exactly as the company spells it) + variants/tiers, one-sentence description (quote verbatim from the site), target customer segment, pricing model if disclosed, key specifications/technical details (quote or closely paraphrase the company's own language), differentiators the company highlights, any "new"/"flagship"/"market-leading" badges, product-launch date if shown. **Do not paraphrase product definitions; use the company's own words.**
+   - **Identify and name every customer shown on the site** — homepage logos, case-study names, testimonials, customer list page. **Quote case-study excerpts that explain the customer's use case** — the customer's own words (not the company's gloss on the customer benefit) are the most credible form of evidence.
    - Capture partner / integration lists and ecosystem details.
    - From the leadership / Team page, capture **only the founder and current CEO** (name, title, prior employers, years in role) — feed into Step 4. Skip the rest of the team.
    - Read blog / newsroom for the **last 12 months** (scroll back month-by-month) to detect product launches, customer wins, partnerships, sunsets, repositioning, guidance changes, and restructuring.
    - For non-English companies, **read the native-language site first** (e.g. `company.com.cn`, `company.co.jp`, `company.kr`) — English IR pages are often a stripped subset and miss SKUs, regional details, and business-model nuance. After native-language sweep, check the English version for any differences.
    - **Verify product definitions match the company's own language.** If the company calls it "AI-accelerated inference appliance," do not paraphrase it as "AI inference server" or "ML hardware." Use their exact terminology in the report.
    
-2. **Regulatory filings** — use filings to fill gaps not covered by the website. Start from the local cache pulled in Step 0; only fetch fresh if the cache is stale (see freshness rules above). Route by domicile per the data-sources table. Note filing dates and the portal used.
-   - For product details: filings go deeper on customer concentration, segment-revenue splits, product-line transitions, and legal disclosures the marketing site omits.
-   - For financials: filings are the definitive source (10-K GAAP financials are audited; website summary numbers are sometimes rounded or simplified).
-   - For risk: 10-K risk-factor sections are required reading; they detail legal, competitive, supply-chain, and macro risks the website downplays.
+2. **Regulatory filings** — use filings to fill gaps not covered by the website and to verify/deepen website claims. Start from the local cache pulled in Step 0; only fetch fresh if the cache is stale (see freshness rules above). Route by domicile per the data-sources table. Note filing dates and the portal used. **When citing filing content, quote the original text verbatim** rather than synthesizing or paraphrasing.
+   - For product details: 10-K / 年度报告 / Yuho Business sections go deeper on customer concentration, segment-revenue splits, product-line transitions, and legal disclosures the marketing site omits. **Quote the company's own product descriptions from the filing** (these are the official legal definitions).
+   - For financials: filings are the definitive source (10-K GAAP financials are audited; website summary numbers are sometimes rounded or simplified). Pull revenue, margin, EPS, customer concentration figures **directly from the MD&A or financial statements**, not from the website's summary.
+   - For risk: 10-K / 年度报告 / Yuho risk-factor sections are required reading; they detail legal, competitive, supply-chain, and macro risks the website downplays. **Quote risk factors verbatim** from the filing.
    
 3. **Earnings materials and investor presentations** — see the dedicated section above § "Investor presentations are first-class primary sources" for the full collection bar. **At minimum, pull every one of the following that exists; if any is missing, note it in the verification log:**
    - **Latest 2 quarterly earnings call transcripts** (most-recent first).
