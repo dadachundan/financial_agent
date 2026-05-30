@@ -37,6 +37,11 @@ except (ImportError, AttributeError):
     _FLOMO_WEBHOOK_URL = ""
 
 zsxq_bp = Blueprint("zsxq", __name__)
+# Top-level Comments feed — unified notes across all four PDF sources
+# (zsxq / sec / cn / manual) plus markdown report inline-comments.
+# Mounted at /comments in main.py; the actual handler is defined further
+# down (see `feed()`).
+comments_bp = Blueprint("comments", __name__)
 
 app = Flask(__name__)
 app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
@@ -1429,23 +1434,22 @@ def set_comment(file_id: int):
     return "", 204
 
 
-# ── Feed (blog/timeline view of all notes) ────────────────────────────────────
+# ── Comments feed (unified, top-level /comments) ──────────────────────────────
 
-@zsxq_bp.route("/feed")
+@comments_bp.route("/")
 def feed():
-    """Unified research-notes feed across all four PDF sources.
+    """Unified comments feed — all PDF sources + markdown reports.
 
-    For every PDF (zsxq / sec / cn / manual) that has *either* a legacy
-    whole-PDF comment (`<table>.comment` — set via the index-page comment
-    box or, pre-multi-source rollout, via the 📌 sync button) *or* one
-    or more rows in the shared `pdf_inline_comments` table (in-browser
-    selection-anchored comments OR synced PDF annotations mirrored
-    in via `pdf_inline_comments.replace_synced`), we render one card
-    per (source, file_id) with all annotations concatenated by page.
+    Surfaces every note/highlight in the project on one timeline:
 
-    Source resolution order per (source, file_id):
-      1. If the shared `pdf_inline_comments` table has rows → render those.
-      2. Otherwise fall back to the source table's legacy `comment` column.
+      • PDFs (zsxq / sec / cn / manual): rows from `pdf_inline_comments`
+        plus legacy whole-PDF `<table>.comment` fallback.
+      • Markdown reports under `reports/`: rows from
+        `report_inline_comments` (keyed by report_path, not file_id).
+
+    Source-pill filters (zsxq / sec / cn / manual / report) on the page
+    let the user narrow the timeline. Mounted at /comments via
+    `comments_bp` (registered in main.py).
     """
     from flask import render_template_string
     from pathlib import Path as _Path
@@ -1476,6 +1480,7 @@ def feed():
         "sec":    {"label": "SEC",    "css": "bg-success text-white"},
         "cn":     {"label": "CN",     "css": "bg-danger text-white"},
         "manual": {"label": "MANUAL", "css": "bg-secondary text-white"},
+        "report": {"label": "REPORT", "css": "bg-warning text-dark"},
     }
 
     def _load_zsxq() -> dict[int, dict]:
@@ -1647,6 +1652,87 @@ def feed():
         "manual": _load_manual(),
     }
 
+    # ── 2b. Markdown report inline-comments (5th source) ────────────────
+    # Reports under reports/ live in a sibling table keyed by report_path
+    # (TEXT, not int file_id), so we build cards directly rather than
+    # going through the (source, file_id) grouping above.
+    def _load_report_cards() -> list[dict]:
+        from urllib.parse import quote as _urlquote
+        try:
+            import report_inline_comments as _ric
+        except Exception as e:
+            print(f"[feed] report_inline_comments skipped: {e}")
+            return []
+        _ric.init_db()
+        rconn = sqlite3.connect(_ric.DB_PATH)
+        rconn.row_factory = sqlite3.Row
+        try:
+            rrows = rconn.execute("""
+                SELECT id, report_path, quote, body, heading_anchor,
+                       COALESCE(updated_at, created_at) AS date
+                FROM   report_inline_comments
+                ORDER BY id ASC
+            """).fetchall()
+        finally:
+            rconn.close()
+
+        by_path: dict[str, list[dict]] = {}
+        for r in rrows:
+            by_path.setdefault(r["report_path"], []).append(dict(r))
+
+        out: list[dict] = []
+        for path, anns in by_path.items():
+            blocks: list[str] = []
+            for a in anns:
+                quote_full = (a.get("quote") or "").strip().replace("\n", " ")
+                body = (a.get("body") or "").strip()
+                anchor = (a.get("heading_anchor") or "").strip()
+                label = (quote_full[:40].rstrip() + "…") if len(quote_full) > 40 else quote_full
+                head_label = anchor or "§"
+                heading = f'## {head_label} — "{label}"' if label else f"## {head_label}"
+                parts = [heading]
+                if quote_full:
+                    parts.append(f"> {quote_full}")
+                if body:
+                    parts.append(_demote_headings(body))
+                if not quote_full and not body:
+                    parts.append("🖍 *(highlight)*")
+                blocks.append("\n\n".join(parts))
+            comment_md = "\n\n".join(blocks)
+            if not comment_md.strip():
+                continue
+
+            # Display name = filename minus .md
+            fname = path.rsplit("/", 1)[-1]
+            if fname.endswith(".md"):
+                fname = fname[:-3]
+            # Badge: for company/<Co>_<EXCH>_<TICKER>/... use the last
+            # underscore-segment of the folder (ticker); else use the kind.
+            segs = path.split("/")
+            kind = (segs[0] if segs else "").upper() or "REPORT"
+            badge = kind
+            if len(segs) >= 2 and kind == "COMPANY":
+                folder = segs[-2]
+                tail = folder.rsplit("_", 1)[-1]
+                if tail:
+                    badge = tail
+            latest_date = max((a.get("date") or "" for a in anns), default="")
+
+            out.append({
+                "id":           path,
+                "source":       "report",
+                "source_label": "REPORT",
+                "source_css":   SOURCE_PILLS["report"]["css"],
+                "name":         fname,
+                "comment":      comment_md,
+                "date":         latest_date,
+                "badge":        badge,
+                "pinned":       0,
+                "open_url":     "",
+                "viewer_url":   f"/claude-reports/view/{_urlquote(path, safe='/')}",
+            })
+        return out
+
     # ── 3. Render helpers (per-annotation markdown blocks) ───────────────
     import re as _re_h
     _HEADING_RE = _re_h.compile(r'^(#{1,5})(\s)', _re_h.MULTILINE)
@@ -1713,15 +1799,30 @@ def feed():
             "viewer_url":   meta["viewer_url"],
         })
 
+    # Merge in markdown-report cards from report_inline_comments.
+    rows.extend(_load_report_cards())
+
     rows.sort(key=lambda r: r["date"] or "", reverse=True)
+
+    # Per-source counts for filter pills (only include sources that have ≥1 card).
+    from collections import Counter as _Counter
+    _counts = _Counter(r["source"] for r in rows)
+    source_counts = {
+        src: {"label": SOURCE_PILLS[src]["label"],
+              "css":   SOURCE_PILLS[src]["css"],
+              "count": _counts[src]}
+        for src in ("zsxq", "sec", "cn", "manual", "report")
+        if _counts.get(src, 0) > 0
+    }
 
     tmpl = (_Path(__file__).parent / "templates" / "shared_feed.html").read_text(encoding="utf-8")
     tmpl = tmpl.replace("__NAV__",      nw2.NAV_HTML)
     tmpl = tmpl.replace("__URLPATCH__", nw2.URL_PATCH_JS)
     return render_template_string(tmpl, rows=rows, total=len(rows),
-                                  feed_title="Research Notes",
-                                  feed_heading="📓 Research Notes",
-                                  toc_icon="📓")
+                                  feed_title="Comments",
+                                  feed_heading="💬 Comments",
+                                  toc_icon="💬",
+                                  source_counts=source_counts)
 
 
 

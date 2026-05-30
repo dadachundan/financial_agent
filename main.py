@@ -31,7 +31,8 @@ UPLOADS_DIR = SCRIPT_DIR / "uploads"
 
 from zep_app import zep_bp
 import zsxq_viewer as _zsxq_viewer_mod
-zsxq_bp = _zsxq_viewer_mod.zsxq_bp
+zsxq_bp     = _zsxq_viewer_mod.zsxq_bp
+comments_bp = _zsxq_viewer_mod.comments_bp
 from fetch_financial_report import sec_bp, init_db as _sec_init
 from fetch_cninfo_report    import cn_bp,  init_db as _cn_init
 from indicators.app         import indicators_bp, init_db as _ind_init
@@ -54,6 +55,7 @@ app.register_blueprint(mcw.create_blueprint(UPLOADS_DIR))
 # Sub-app blueprints
 app.register_blueprint(zep_bp,        url_prefix="/zep")
 app.register_blueprint(zsxq_bp,       url_prefix="/zsxq")
+app.register_blueprint(comments_bp,   url_prefix="/comments")
 app.register_blueprint(sec_bp,        url_prefix="/sec")
 app.register_blueprint(cn_bp,         url_prefix="/cn")
 app.register_blueprint(indicators_bp,   url_prefix="/indicators")
@@ -103,6 +105,7 @@ def too_large(_e):
 _BP_PREFIXES = {
     "zep":        "/zep",
     "zsxq":       "/zsxq",
+    "comments":   "/comments",
     "sec":        "/sec",
     "cn":         "/cn",
     "indicators":   "/indicators",
