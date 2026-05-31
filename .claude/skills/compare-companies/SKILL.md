@@ -1,19 +1,23 @@
 ---
 name: compare-companies
-description: Produce 5,000–9,000 word head-to-head comparisons of two public (or private) companies in both English AND Chinese — focused on whether their products directly compete, who wins which moat dimension, how their customer bases overlap, and what advantage each holds over the other. Two separate markdown files are saved to `reports/compare/` — one in English (`<A>_vs_<B>.md`) and one in Simplified Chinese (`<A>_vs_<B>_zh.md`). Use when the user asks to "compare X and Y", "X vs Y", "head-to-head", "side-by-side", or "do these two compete" — e.g. "compare SNPS and CDNS", "AMD vs NVDA", "LRCX vs AMAT side-by-side".
+description: Produce 5,000–15,000 word head-to-head comparisons of **2 to 4 public (or private) companies** in both English AND Chinese — focused on whether their products directly compete, who wins which moat dimension, how their customer bases overlap, and what advantage each holds over the others. Two separate markdown files are saved to `reports/compare/` — one in English (`<A>_vs_<B>.md` or `<A>_vs_<B>_vs_<C>.md`) and one in Simplified Chinese (`..._zh.md`). Use when the user asks to "compare X and Y", "X vs Y vs Z", "head-to-head", "side-by-side", or "do these N compete" — e.g. "compare SNPS and CDNS", "AMD vs NVDA", "Databricks vs Snowflake vs Oracle", "LRCX vs AMAT vs ASML side-by-side".
 ---
 
 # Compare Companies
 
-Head-to-head deliverable: a 5,000–9,000 word markdown report that does NOT re-tell each company's story — it interrogates the **delta**. The report's job is to answer seven specific questions the reader will have:
+Head-to-head deliverable: a **5,000–15,000 word** markdown report that does NOT re-tell each company's story — it interrogates the **delta**. The report's job is to answer seven specific questions the reader will have.
+
+**Supports 2 to 4 companies (N=2, 3, or 4).** The binary (N=2) case is the canonical reference — `reports/compare/SNPS_vs_CDNS.md`. For N=3 (three-way) and N=4 (four-way), the same skeleton scales: tables grow to N columns, the TL;DR table to N rows, the bottom-line section to N strategic-posture paragraphs. Word-count target scales by N: **5,000–9,000 words for N=2; 7,000–12,000 for N=3; 10,000–15,000 for N=4.** Beyond N=4 the head-to-head sharpness collapses entirely — split into pairwise reports or use `/sector-overview` instead.
+
+Throughout this spec, "A vs B" is the canonical 2-way framing; whenever you see it, mentally generalize to "A vs B vs C (vs D)". Where N-way (3+) requires a structurally different table or phrasing, the spec calls it out explicitly with an "**N-way:**" tag.
 
 0. **In 60 seconds, what are each side's advantages and disadvantages?** (TL;DR table right after the title — see §0.)
 1. **Do their products directly compete, or are they more complementary?** (Per-product overlap matrix — see §5.1.)
 2. **What is each company's actual moat — quantified, not asserted?** (Seven-subsection moat anatomy — see §5.2–5.7.)
 3. **Who are their customers, and where do those customer bases overlap?** (Customer concentration + named-win comparison — see §6.)
-4. **What advantage does each have over the other?** (Dimension-by-dimension scorecard — see §7.)
-5. **Which one should the reader bet on, and why?** (Synthesis — see §8.)
-6. **Who else matters in this space?** (3–7 other big players surveyed alongside, with their position vs. the focal pair quantified — see §5.8.)
+4. **What advantage does each have over the others?** (Dimension-by-dimension scorecard — see §7. For N≥3, rows record per-pair edges or a 1st/2nd/3rd ranking.)
+5. **Which one should the reader bet on, and why?** (Synthesis — see §8. For N≥3, N strategic-posture paragraphs.)
+6. **Who else matters in this space?** (3–7 other big players surveyed alongside, with their position vs. the focal set quantified — see §5.8. For N=2 the focal "set" is the pair; for N=3 or 4, §5.8 covers companies *beyond* the focal N.)
 
 A comparison report that only restates each company's pitch is a failure. The reader has already read both companies' marketing material; they came to you for the delta.
 
@@ -74,7 +78,7 @@ A compare-companies report MUST contain all seven. Missing any one of them is a 
 
 **Placement: directly after the source-filings block, before the first `---` separator and before §1.** This is the first thing the reader sees, and for most readers it's the only thing they'll read end-to-end. Treat it as the headline of the report.
 
-**Format: a 3-column markdown table with a row per company:**
+**Format: a 3-column markdown table with one row per company (N rows total for an N-way comparison):**
 
 ```markdown
 ## TL;DR — At-a-glance advantages and disadvantages
@@ -83,8 +87,10 @@ A compare-companies report MUST contain all seven. Missing any one of them is a 
 |---|---|---|
 | **Company A** | • <punchy bullet with number + §-ref> <br>• ... (5–8 bullets) | • <punchy bullet with number + §-ref> <br>• ... (5–8 bullets) |
 | **Company B** | • ... (5–8 bullets) | • ... (5–8 bullets) |
+| **Company C** (N≥3 only) | • ... (5–8 bullets) | • ... (5–8 bullets) |
+| **Company D** (N=4 only) | • ... (5–8 bullets) | • ... (5–8 bullets) |
 
-**Who is each one for?** <one-paragraph distillation — pick A for X, pick B for Y, or run both because Z>. The detailed evidence for every TL;DR claim follows in §1–§10 below.
+**Who is each one for?** <one-paragraph distillation — for N=2 frame as "pick A for X, pick B for Y, or run both because Z"; for N=3+ frame as "pick A for X, pick B for Y, pick C for Z, or run a hybrid because W". Always name the role each one wins; avoid both-sidesism even with N companies.> The detailed evidence for every TL;DR claim follows in §1–§10 below.
 ```
 
 **Bullet discipline (applies to every cell):**
@@ -102,15 +108,23 @@ See [`reports/compare/SNPS_vs_CDNS.md`](../../../reports/compare/SNPS_vs_CDNS.md
 
 ### Required deliverable 1 — Product overlap matrix (§5.1)
 
-A three-column matrix mapping every meaningfully-shipping product on each side to one of three buckets:
+An **(N+1)-column** matrix mapping every meaningfully-shipping product across all N sides to a status bucket. For N=2 the binary classification is enough (DIRECTLY COMPETE / DIRECTLY COMPETE w/ dominant / COMPLEMENTARY / NON-OVERLAPPING). **For N=3+, the Status column gains a row-pattern grammar** because direct-compete-ness varies by pair:
 
-| Product category | Company A's product | Company B's product | Status |
-|---|---|---|---|
-| Static-timing signoff | Synopsys PrimeTime | Cadence Tempus | **DIRECTLY COMPETE** |
-| Custom analog layout | Synopsys Custom Compiler | Cadence Virtuoso | DIRECTLY COMPETE (CDNS dominant) |
-| Multi-physics structural FEA | Ansys Mechanical | MSC Nastran (Hexagon D&E, in close) | DIRECTLY COMPETE |
-| TCAD (process simulation) | Synopsys Sentaurus | — | NON-OVERLAPPING (SNPS only) |
-| Enterprise PCB | Synopsys (light footprint) | Cadence Allegro X (deep) | COMPLEMENTARY (CDNS leads) |
+| Product category | A | B | C | Status |
+|---|---|---|---|---|
+| Cloud data warehouse | Databricks SQL | Snowflake | Oracle ADW + HeatWave | ALL THREE COMPETE (SNOW dominant — Gartner CDW MQ leader) |
+| Lakehouse / open-format engine | Databricks Lakehouse | Snowflake Iceberg Tables | — | **A vs B compete; C absent** |
+| Traditional RDBMS / OLTP | — | — | Oracle Database 23ai | NON-OVERLAPPING (ORCL only — incumbent OLTP) |
+| AI / ML platform | Mosaic AI | Cortex | Oracle AI (OCI Gen AI) | ALL THREE COMPETE (A dominant for fine-tuning per Forrester Wave 2025) |
+| Enterprise applications (ERP/HCM/CX) | — | — | Oracle Fusion Apps | NON-OVERLAPPING (ORCL only) |
+
+**Status-cell grammar (use these phrasings verbatim — they're scannable):**
+
+- `ALL THREE COMPETE` / `ALL FOUR COMPETE` — every side ships in the category.
+- `ALL THREE COMPETE (X dominant)` — clear leader per a third-party source.
+- `A vs B compete; C absent` / `A and C compete; B absent` — only some sides ship; spell out which by letter.
+- `COMPLEMENTARY (X leads)` — multiple sides ship but only one is the real choice.
+- `NON-OVERLAPPING (X only)` — exactly one side ships; the strategic asymmetry.
 
 See `references/product_overlap_matrix.md` for the full template, exhaustive examples, and how to source each row.
 
@@ -118,9 +132,9 @@ The matrix is the single most-cited section of the final report — readers past
 
 ### Required deliverable 2 — Moat anatomy (§5.2–5.8)
 
-Seven subsections, each anchored to specific disclosed numbers, not adjectives. Proven structure from the SNPS-vs-CDNS rewrite (May 2026):
+Seven subsections, each anchored to specific disclosed numbers, not adjectives. Proven structure from the SNPS-vs-CDNS rewrite (May 2026). **For N≥3, every subsection's tables grow to N columns; the analytical questions stay the same.** When a side doesn't disclose a number that others do, write `not disclosed` in that side's cell — don't estimate or omit the column.
 
-1. **Customer concentration** — top-1 / top-5 / >10% disclosures from both 10-Ks; geographic mix table side-by-side; multi-year trend; **call out who is *more* exposed** and whether diversification is genuine or driven by losing a major customer.
+1. **Customer concentration** — top-1 / top-5 / >10% disclosures from each 10-K (or 年度报告 / Yuho); geographic mix table side-by-side across all N companies; multi-year trend; **call out who is *most* exposed** (for N=3+, name the rank) and whether each side's diversification is genuine or driven by losing a major customer.
 2. **Backlog & recurring mix** — RPO / non-cancellable backlog $; backlog ÷ revenue ratio; duration ladder (<12mo / 13–36mo / >36mo); % recurring / ratable; typical contract length; multi-year trend.
 3. **Channel / foundry / distribution lock-in** — for semis: per-foundry, per-node certification matrix. For consumer/SaaS: distribution partners, hyperscaler marketplace presence, OEM design-ins. For pharma: payer formulary coverage. For industrial: Tier-1 OEM relationships.
 4. **Tool-level / sub-segment market share** — every published share number from a credible third-party source (Gartner, IDC, IPnest, IQVIA, IBISWorld, etc.) — never invented. Each row of the table is "segment → leader → estimated share → source".
@@ -132,38 +146,45 @@ See `references/moat_anatomy.md` for the per-subsection content spec, what to gr
 
 ### Required deliverable 3 — Customer comparison (§6)
 
-Not just "do they have the same customers" — quantify and overlap:
+Not just "do they have the same customers" — quantify and overlap across all N sides:
 
-- Top-1 / top-5 / >10% customer disclosures from both companies, side-by-side
-- Geographic mix table
-- Multi-year concentration trend (3 years if available)
-- **Named-win comparison** — which named customers each side has disclosed in the last 12 months
-- **Overlap analysis** — for the top 5–10 customers visible at either side, which use both vendors and which are single-vendor (cite a third-party source for any single-vendor claim; do not assume)
-- Hyperscaler ASIC insourcing / customer-becoming-competitor watchlist if relevant to either side
+- Top-1 / top-5 / >10% customer disclosures from each company, side-by-side (N columns)
+- Geographic mix table (N columns)
+- Multi-year concentration trend (3 years if available, per company)
+- **Named-win comparison** — which named customers each side has disclosed in the last 12 months; for N≥3 use a 3-or-4-column table where each row is a customer and each cell is "named win at this side / not named / known not a customer".
+- **Overlap analysis** — for the top 5–10 customers visible at any side, identify the **multi-vendor reality**: which customers use 2 of the N (and which pair), which use all N, and which are single-vendor (cite a third-party source for any single-vendor claim; do not assume). For N=3+ a small Venn or a "customer × vendor" grid is more legible than prose.
+- Hyperscaler ASIC insourcing / customer-becoming-competitor watchlist if relevant to any side
 - Channel partners (resellers, system integrators, distributors) if material
 
 ### Required deliverable 4 — Dimension-by-dimension scorecard (§7)
 
-A flat 3-column markdown table with 15–25 rows: **Dimension | Edge | Why**. Each row must:
+**N=2 (binary):** A flat 3-column markdown table — **Dimension | Edge | Why** — with 15–25 rows. Edge picks one side, "Tied", or "Neither". No hedge words.
 
-- Name a specific dimension (Top-line scale, Operating margin, Backlog visibility, Foundry coverage, Interface IP share, Custom-analog leader, …)
-- Pick one side or "Tied" or "Neither" — no hedge words
-- Justify in one short clause with a number where available
+**N=3 or N=4:** Switch to a flat (N+2)-column table: **Dimension | A | B | C [| D] | Why**. Each company cell holds either a **rank** (`1`, `2`, `3` with `=` for ties) **or** a checkmark grid (`✓` for winner, blank for not-winner). The "Why" column carries the one-clause justification with a number. Example for N=3:
 
-Cover at minimum: scale, growth quality, margin, recurring mix, backlog, customer diversification, key moat dimensions (1–4 product/IP segments), channel coverage, balance sheet, capital flexibility, legal/regulatory overhang, integration risk, AI narrative clarity.
+| Dimension | DBX | SNOW | ORCL | Why |
+|---|---|---|---|---|
+| Operating margin (FY25) | 3 | 2 | **1** | ORCL 31% non-GAAP op-margin vs SNOW 9% vs DBX cash-flow positive but operating loss [10-K refs] |
+| AI/ML platform breadth | **1** | 2 | 3 | DBX Mosaic AI = end-to-end fine-tuning; SNOW Cortex narrower; ORCL bundled with OCI infra |
+| Open-format lock-out cost | **1** | 2 | 3 | DBX Delta+Iceberg = portable; SNOW now Iceberg-friendly but native is proprietary; ORCL native is most locked-in |
+
+Cover at minimum: scale, growth quality, margin, recurring mix, backlog, customer diversification, the **3–5 key moat dimensions** for the industry (product/IP/distribution sub-segments), channel coverage, balance sheet, capital flexibility, legal/regulatory overhang, integration/M&A risk, AI narrative clarity. For N=3+, add 2–4 rows that surface **pair-specific** verdicts where a global rank obscures the picture (e.g. "DBX vs SNOW only — open-format lock-out", "ORCL vs hyperscalers — enterprise app moat"). Mark these rows by appending the pair name in the Dimension column. **Hedge words banned in every cell** — "arguably", "slightly", "depends" disqualify the row.
 
 ### Required deliverable 5 — Bottom-line synthesis (§8)
 
-Two paragraphs:
+**N paragraphs (one per company)**, each shaped the same way:
 
 1. "Company A is betting that __ matters more than __" — one-paragraph distillation of A's strategic posture, with the specific downside scenario named.
-2. "Company B is betting that __ matters more than __" — same shape, opposite framing.
+2. "Company B is betting that __ matters more than __" — same shape, different framing.
+3. (N≥3) "Company C is betting that __ matters more than __" — same shape, third framing. For N-way the bets must be *distinct* — if A's and C's "bets" are paraphrases of each other, collapse them or rewrite so each side's bet is genuinely orthogonal.
 
-Then one closing paragraph that names **what the reader should watch in the next 4–8 quarters** to know which bet is winning. Avoid both-sidesism ("both could win"); name the specific catalyst that will move the verdict.
+Then one closing paragraph that names **what the reader should watch in the next 4–8 quarters** to know which bet is winning. For N≥3 this paragraph should explicitly name **which side wins under which observable condition** (e.g. "If hyperscaler customers continue pulling fine-tuning workloads onto open-format lakes, A wins; if enterprise IT continues consolidating into SQL-first cloud DW, B wins; if existing OLTP customers reject moving to a separate analytics stack, C wins."). Avoid both-sidesism ("all three could win"); name the specific catalysts that move each verdict.
 
 ### Required deliverable 6 — Other big players in the space (§5.8 + table columns)
 
-A two-player view of a multi-player industry is misleading. Every report must identify **3–7 other meaningful players** in the focal pair's competitive space and surface them in two places: as additional columns in the moat-anatomy tables where they materially affect the picture, and as a dedicated subsection §5.8 with 100–300 words per Primary competitor.
+A focal-N view of a multi-player industry is misleading by itself. Every report must identify **3–7 other meaningful players** in the focal set's competitive space (i.e. players *beyond* the N being compared) and surface them in two places: as additional columns in the moat-anatomy tables where they materially affect the picture, and as a dedicated subsection §5.8 with 100–300 words per Primary competitor.
+
+**For N=2 the "other big players" are everyone outside the pair.** For N=3 or N=4 the bar is higher: the focal set already covers more of the industry, so the "other big players" are the *next-tier* relevant names — the hyperscalers in a Databricks-vs-Snowflake-vs-Oracle report, Siemens EDA in a 3-way EDA report, ASML/KLA/TEL in a 3-way semicap report. If the focal set already includes the obvious 3–4 leaders, §5.8 may shrink to 2–3 paragraphs covering specialists, regional alternatives, and adjacent-paradigm threats. Do not list the same company as both a focal-N member and a §5.8 entry.
 
 **Discovery — three sources, in this order:**
 
@@ -204,20 +225,20 @@ A two-player view of a multi-player industry is misleading. Every report must id
 
 See `references/report_structure.md` for the full section-by-section spec, word-count targets, required tables and charts, and an example outline from SNPS_vs_CDNS.
 
-Quick summary:
+Quick summary (every section's tables grow to N columns when N≥3):
 
-0. **TL;DR — At-a-glance advantages and disadvantages** (Required deliverable 0; 3-column table + "Who is each one for?" paragraph; ~250 words; placed before §1)
-1. One-line self-description side-by-side
-2. Strategic pillars side-by-side (timeline / pillar table)
-3. AI narrative — tool vs. tailwind
-4. Segment structure & financial scoreboard (revenue, margin, growth, segment mix)
-5. **The moat anatomy** (8 subsections — Required deliverables 2 + 6; the longest section by word count). Subsections: 5.1 customer concentration · 5.2 backlog & recurring mix · 5.3 channel/foundry/distribution lock-in · 5.4 tool-level segment share · 5.5 IP/patent/data franchise share · 5.6 why a customer picks one over the other · 5.7 cracks worth naming · **5.8 other big players in this space**
-6. The big bet (M&A, R&D, capital deployment — what each side is doing right now to expand TAM)
-7. Capital allocation (debt, buyback, dividend, M&A optionality)
-8. Distinctive risks (front-of-risk-factors comparison; what each 10-K leads with)
-9. Side-by-side scorecard (Required deliverable 4)
-10. Bottom line — two different bets (Required deliverable 5)
-11. References block (every URL deduplicated, grouped: primary filings A / primary filings B / industry research / press / regulatory)
+0. **TL;DR — At-a-glance advantages and disadvantages** (Required deliverable 0; 3-column table with N rows + "Who is each one for?" paragraph; ~250 words for N=2, ~350 for N=3, ~450 for N=4; placed before §1)
+1. One-line self-description side-by-side (N-column table — verbatim 10-K Item 1 / 年度报告 framing)
+2. Strategic pillars side-by-side (timeline or pillar table; N tracks)
+3. AI narrative — tool vs. tailwind (N-column table)
+4. Segment structure & financial scoreboard (N-column scoreboard; mermaid xychart bar chart with N grouped bars per metric)
+5. **The moat anatomy** (8 subsections — Required deliverables 2 + 6; the longest section by word count). Subsections: 5.1 customer concentration · 5.2 backlog & recurring mix · 5.3 channel/foundry/distribution lock-in · 5.4 tool-level segment share · 5.5 IP/patent/data franchise share · 5.6 why a customer picks one over the other · 5.7 cracks worth naming · **5.8 other big players in this space** (players *beyond* the focal N)
+6. The big bet (M&A, R&D, capital deployment — what each side is doing right now to expand TAM; N-column table)
+7. Capital allocation (debt, buyback, dividend, M&A optionality; N-column table)
+8. Distinctive risks (front-of-risk-factors comparison; what each 10-K leads with; N-column table)
+9. Side-by-side scorecard (Required deliverable 4) — for N=2 a 3-col Edge table; for N≥3 a (N+2)-col rank-or-checkmark table
+10. Bottom line — **N different bets** (Required deliverable 5) — N strategic-posture paragraphs + 1 catalyst paragraph
+11. References block (every URL deduplicated, grouped: primary filings A / primary filings B / [primary filings C] / [primary filings D] / industry research / press / regulatory)
 
 ## Citations
 
@@ -253,22 +274,31 @@ If a number can't be sourced to a primary original (only to the research doc, on
 This skill builds on [[company-research]]. **Before drafting any new content, always check the local `reports/company/` folder for prior research** — this is the most-asked question about this skill and the most common source of duplicated work if skipped.
 
 ```bash
-# Step 1 — Resolve each side to a slug and check for existing research
-ls "reports/company/" | grep -iE "(<Name_A>|<Ticker_A>)"
-ls "reports/company/" | grep -iE "(<Name_B>|<Ticker_B>)"
+# Step 1 — Resolve each side to a slug and check for existing research.
+# ALWAYS case-insensitive (-i) and match on the TICKER, not just the name:
+# folder casing is inconsistent in this repo (e.g. the XPeng report lives at
+# `Xpeng_NYSE_XPEV/`, NOT `XPeng_…`), so a case-sensitive `*XPeng*` glob misses it.
+ls reports/company/ | grep -iE "<Ticker_A>|<Name_A>"
+ls reports/company/ | grep -iE "<Ticker_B>|<Name_B>"
 
-# Step 2 — For each match, list what's inside the slug folder
-ls "reports/company/<Slug_A>/" 2>/dev/null
-ls "reports/company/<Slug_B>/" 2>/dev/null
+# Step 2 — For each match, list what's inside the slug folder.
+# Use the EXACT folder name printed by Step 1 — don't retype it from memory,
+# the casing must match on a case-sensitive filesystem.
+ls "reports/company/<exact-folder-from-step-1>/" 2>/dev/null
 ```
+
+**Two gotchas that have caused a wasted full research run** (claiming a report was "missing" when it existed):
+- **Casing varies** — match case-insensitively on the ticker (`grep -iE XPEV`), never a case-sensitive name glob.
+- **Both filename conventions exist** — a Chinese report may be `<Slug>_公司研究.md` (skill default) **or** `<Slug>_Research_Document_zh.md` (English-template name + `_zh`). Match on the ticker, not the convention.
+- **Never `ls A B C` in one command** — in zsh a single non-matching glob aborts the whole command (`nomatch`), so a real match on another path is never printed. Check each side in its own command (as above).
 
 The relevant files inside each slug folder, by language:
 
 | Language | Filename pattern |
 |---|---|
 | English | `<Slug>_Research_Document.md` |
-| Simplified Chinese | `<Slug>_公司研究.md` or `<Slug>_研究报告.md` |
-| Bilingual | both of the above coexist; pick the language matching the comparison report's language |
+| Simplified Chinese | `<Slug>_公司研究.md`, `<Slug>_研究报告.md`, **or** `<Slug>_Research_Document_zh.md` |
+| Bilingual | both an EN and a ZH file coexist; pick the language matching the comparison report's language |
 
 **Decision rules after the ls:**
 
@@ -287,22 +317,33 @@ For US issuers, the skill also benefits from [[sec-report-summary]] output at `r
 
 ### Step 0 — Parse inputs and check existing research
 
-User input forms accepted:
-- `compare-companies SNPS CDNS`
-- `compare SNPS and CDNS`
-- `SNPS vs CDNS`
-- `Synopsys vs Cadence` (then resolve to tickers)
+User input forms accepted (2 to 4 companies):
+- `compare-companies SNPS CDNS` (N=2)
+- `compare SNPS and CDNS` (N=2)
+- `SNPS vs CDNS` (N=2)
+- `Synopsys vs Cadence` (N=2; resolve to tickers)
+- `compare Databricks vs Snowflake vs Oracle` (N=3)
+- `AWS vs Azure vs GCP vs OCI` (N=4)
+- `compare X Y Z` (N=3 with implicit conjunction)
+
+**Determine N from the input.** Count the comma- / "vs" / "and"-separated entities. **Reject N=1 (use [[company-research]] instead) and N≥5 (use `/sector-overview`, or split into pairwise reports).** For N between 2 and 4, proceed.
 
 For each side, resolve to a canonical `<Slug>` (matching the company-research slug convention: `<Name>_<EXCHANGE><CODE>` or `<Name>_<EXCHANGE>_<CODE>`). Preserve the user's left-right order — that becomes the file naming and the column ordering throughout the report.
 
-Then check:
+Then check each side **independently and case-insensitively**, matching on the ticker or name. Do NOT combine into one `ls A B C` — in zsh a single non-matching glob aborts the whole command (`nomatch`), so a real match on another side is silently never printed. Casing also varies (e.g. `Xpeng_NYSE_XPEV/`), so always use `grep -i`:
 ```bash
-ls reports/company/<Slug_A>/ reports/company/<Slug_B>/ 2>/dev/null
+for q in "<Ticker_A>|<Name_A>" "<Ticker_B>|<Name_B>" "<Ticker_C>|<Name_C>"; do   # extend to N
+  echo "== $q =="
+  ls reports/company/ | grep -iE "$q" || echo "  (no existing research — run company-research for this side)"
+done
 ```
 
-- Both research docs present and <12 months old → proceed to Step 1.
-- Either is missing → invoke [[company-research]] on the missing side, then proceed.
-- Either is stale (>12 months) → invoke [[company-research]] to refresh (it auto-updates in place).
+For **each** of the N companies:
+- Research doc present and <12 months old → proceed to Step 1.
+- Missing → invoke [[company-research]] on that side, then proceed.
+- Stale (>12 months) → invoke [[company-research]] to refresh (it auto-updates in place).
+
+When N=3 or N=4, the prerequisite-checking phase is the most likely point at which the workflow stalls — surface the result for the user up-front ("Found research for A (May 28), B (May 29), C (May 27); missing for D — will run company-research on D first") so they can choose whether to wait or split the work over multiple sessions.
 
 ### Step 1 — Sync latest filings (always run)
 
@@ -365,18 +406,19 @@ Apply the same Step 10 verification flow from [[company-research]] — URL check
 
 **Compare-specific additional checks (apply to BOTH the English and Chinese reports unless the user overrode to a single language):**
 
-- [ ] **TL;DR is present, placed before §1, and contains 5–8 bullets per cell.** Every bullet leads with a specific number/noun (not an adjective) and ends with a `(§N)` section reference. The Disadvantages column for each side has at least (Advantages count − 2) bullets — no whitewash.
-- [ ] **TL;DR "Who is each one for?" paragraph** names three options sharply (pick A for X, pick B for Y, or both because Z) — no both-sidesism.
+- [ ] **TL;DR is present, placed before §1, has N rows, and contains 5–8 bullets per cell.** Every bullet leads with a specific number/noun (not an adjective) and ends with a `(§N)` section reference. Each Disadvantages column has at least (Advantages count − 2) bullets — no whitewash.
+- [ ] **TL;DR "Who is each one for?" paragraph** names N+1 sharp options (pick A for X, pick B for Y, pick C for Z, or run a hybrid because W) — no both-sidesism / no all-N-sidesism.
 - [ ] **Prior research consulted before drafting.** Ran `ls reports/company/` for each side; if a doc existed, read it before writing anything new. Did not duplicate work.
-- [ ] The product overlap matrix has at least one row in each of the four buckets (DIRECTLY COMPETE, DIRECTLY COMPETE w/ dominant, COMPLEMENTARY, NON-OVERLAPPING) — if all rows are "DIRECTLY COMPETE", you've under-explored the matrix.
+- [ ] The product overlap matrix uses the N-way status grammar (`ALL N COMPETE` / `A vs B compete, C absent` / `NON-OVERLAPPING (X only)` / etc.). Every row has been classified — no `unclear` or `mixed` rows. At least one row each is `ALL N COMPETE`, `NON-OVERLAPPING`, and at least one mid-state status (a side absent or a side dominant).
 - [ ] Every "share leader" claim in the moat anatomy has a third-party citation; none use a 10-K cite.
-- [ ] The customer-comparison section names ≥3 customers visible at *both* sides (the dual-vendor reality), backed by either each vendor's customer-page listing or a third-party article.
-- [ ] The scorecard has no row that says "depends" / "complex" / "mixed" — every row picks a side, "Tied", or "Neither".
-- [ ] The bottom line names a concrete catalyst with a date or quarter, not "the next several years".
+- [ ] The customer-comparison section names ≥3 customers visible at *multiple* sides (the multi-vendor reality), backed by either each vendor's customer-page listing or a third-party article.
+- [ ] The scorecard has no row that says "depends" / "complex" / "mixed" — every row picks a side / a rank / "Tied" / "Neither". For N≥3, ranks are explicit (1/2/3 with `=` allowed for ties) — no row leaves any company unranked.
+- [ ] The bottom line has **N strategic-posture paragraphs** (not 2), and the closing catalyst paragraph names which side wins under which observable condition. No "all N could win" hedging.
 - [ ] Every TL;DR claim is supported by an inline citation somewhere in the body (the TL;DR cells themselves are exempt from per-bullet citations since they're a scannable summary, but the underlying fact must be cited in §N).
-- [ ] **§5.8 names 3–7 other big players** in the focal pair's space, classified as Primary competitor / Adjacent / Acquisition target / Domestic-market alternative. At least 3 Primary competitors get 100–300 word paragraphs.
-- [ ] **§5.3, §5.4, §5.5 tables extended** with columns for each Primary competitor that materially affects the share picture (e.g. Siemens EDA in EDA tables; Arm in IP tables). Tables that show only A and B in a multi-player industry are misleading and must be expanded.
+- [ ] **§5.8 names 3–7 other big players** (players *beyond* the focal N) in the focal set's space, classified as Primary competitor / Adjacent / Acquisition target / Domestic-market alternative. At least 3 Primary competitors get 100–300 word paragraphs. **No double-listing** — a company is either in the focal N or in §5.8, never both.
+- [ ] **§5.3, §5.4, §5.5 tables extended** with columns for each Primary competitor (§5.8 names) that materially affects the share picture. For an N=3 report that already covers most of the industry, this may mean only 1–2 additional columns; for an N=2 report it may mean 2–4.
 - [ ] **Every "other big player" named came from a verifiable source** — 10-K competitor list, IPnest / Gartner / IDC / IBISWorld / TrendForce / IQVIA leaderboard, or recent industry-research note. No inventions.
+- [ ] **(N≥3) Word count meets the scaled target** — 7,000–12,000 for N=3; 10,000–15,000 for N=4. Run `wc -w <file>` before declaring done.
 
 **Bilingual-specific checks (skip when the user overrode to a single language):**
 
@@ -390,24 +432,32 @@ Apply the same Step 10 verification flow from [[company-research]] — URL check
 
 Save both reports under `reports/compare/` at the project root. Preserve the user's left-right ordering in both filenames — do not alphabetize. The viewer (http://localhost:5001/reports) surfaces files under `reports/compare/`.
 
-**Filename convention — no date suffix; `_zh` suffix marks the Chinese edition:**
+**Filename convention — no date suffix; `_zh` suffix marks the Chinese edition; N-way uses `_vs_` between each side:**
 
-| Language | Filename |
-|---|---|
-| English (default) | `<A>_vs_<B>.md` |
-| Simplified Chinese (default) | `<A>_vs_<B>_zh.md` |
+| N | Language | Filename pattern |
+|---|---|---|
+| 2 | English | `<A>_vs_<B>.md` |
+| 2 | Chinese | `<A>_vs_<B>_zh.md` |
+| 3 | English | `<A>_vs_<B>_vs_<C>.md` |
+| 3 | Chinese | `<A>_vs_<B>_vs_<C>_zh.md` |
+| 4 | English | `<A>_vs_<B>_vs_<C>_vs_<D>.md` |
+| 4 | Chinese | `<A>_vs_<B>_vs_<C>_vs_<D>_zh.md` |
 
-Examples:
+**Slug discipline (applies to every position):** prefer the shortest unambiguous handle — ticker for US public (`SNOW`, `ORCL`), name for private (`Databricks`), `<Pinyin>_<EXCHANGE><CODE>` for China A-share / HK, and Romaji + exchange code for Japan / Korea / Taiwan. The English filename must lead with each side's English or pinyin name even when the underlying company is Chinese (per the global rule in `/Users/x/projects/financial_agent/CLAUDE.md` → "Research Report Filenames") — pure-Chinese filenames are unsearchable.
 
-- US pair: `SNPS_vs_CDNS.md` + `SNPS_vs_CDNS_zh.md`; `LRCX_vs_AMAT.md` + `LRCX_vs_AMAT_zh.md`; `AMD_vs_NVDA.md` + `AMD_vs_NVDA_zh.md`
-- China A-share pair: `Anjizhike_SSE688019_vs_Dinglong_SZSE300054.md` (English) + `安集科技_SSE688019_vs_鼎龙股份_SZSE300054_zh.md` (Chinese)
-- Mixed-domicile: `BYD_HKEX1211_vs_TSLA_NASDAQ.md` + `BYD_HKEX1211_vs_TSLA_NASDAQ_zh.md`
-- Per global rule (`/Users/x/projects/financial_agent/CLAUDE.md` → "Research Report Filenames"), **the English filename must lead with each side's English or pinyin name** even when the underlying company is Chinese — pure-Chinese filenames are unsearchable. The Chinese edition may use Chinese characters in the slug as long as the English-stem version also exists in the same folder.
-- Multi-company batched comparison (3+): not supported by this skill — split into pairwise comparisons.
+**Examples:**
 
-**Update-in-place rule** — at most one English file and one Chinese file per ordered pair. If `<A>_vs_<B>.md` (or `<A>_vs_<B>_zh.md`) exists, update it in place. If `<B>_vs_<A>.md` exists with the same pair in the other order, ask the user which canonical order to keep before writing. When a Chinese edition exists at a legacy path (e.g. an all-Chinese-slug filename from before this rule), consolidate it into the `<EnglishStem>_zh.md` canonical name and list the legacy file so the user can confirm deletion. Do not auto-delete.
+- N=2 US pair: `SNPS_vs_CDNS.md` + `SNPS_vs_CDNS_zh.md`; `LRCX_vs_AMAT.md` + `LRCX_vs_AMAT_zh.md`; `AMD_vs_NVDA.md` + `AMD_vs_NVDA_zh.md`
+- N=2 China A-share pair: `Anjizhike_SSE688019_vs_Dinglong_SZSE300054.md` (English) + `安集科技_SSE688019_vs_鼎龙股份_SZSE300054_zh.md` (Chinese)
+- N=2 mixed-domicile: `BYD_HKEX1211_vs_TSLA_NASDAQ.md` + `BYD_HKEX1211_vs_TSLA_NASDAQ_zh.md`
+- N=3 mixed: `Databricks_vs_SNOW_vs_ORCL.md` + `Databricks_vs_SNOW_vs_ORCL_zh.md`
+- N=3 semicap: `LRCX_vs_AMAT_vs_ASML.md` + `LRCX_vs_AMAT_vs_ASML_zh.md`
+- N=4 hyperscaler infra: `AWS_vs_Azure_vs_GCP_vs_OCI.md` + ..._zh.md
+- N=5 or more: NOT SUPPORTED by this skill — split into multiple pairwise reports (or use `/sector-overview` for a survey).
 
-**Single-language override** — if the user requested `--en-only`, only `<A>_vs_<B>.md` is written; if `--zh-only`, only `<A>_vs_<B>_zh.md` is written. The default (no override) always produces both.
+**Update-in-place rule** — at most one English file and one Chinese file per ordered tuple. If `<A>_vs_<B>_vs_<C>.md` (or `_zh.md`) exists, update it in place. If a file exists with the same tuple in a different order (e.g. `<C>_vs_<A>_vs_<B>.md`), ask the user which canonical order to keep before writing — preserving the user's left-right ordering from their request takes precedence. When a Chinese edition exists at a legacy path (e.g. an all-Chinese-slug filename from before this rule), consolidate it into the `<EnglishStem>_zh.md` canonical name and list the legacy file so the user can confirm deletion. Do not auto-delete.
+
+**Single-language override** — if the user requested `--en-only`, only the `<...>.md` file is written; if `--zh-only`, only `<...>_zh.md`. The default (no override) always produces both.
 
 ## Reference docs (read on demand)
 
@@ -424,5 +474,5 @@ Also read on demand from the parent skill:
 
 - It does **not** re-tell each company's story from scratch — the per-company deep dives live in [[company-research]] outputs. Reference them; don't duplicate them.
 - It does **not** produce a recommendation in the trading sense (Buy/Hold/Sell with price targets) — that's [[trading-analysis]] and [[portfolio-decision]]. The bottom-line section identifies which bet is winning, not which stock to buy at today's price.
-- It does **not** cover three or more companies in one file — split into pairwise comparisons. A 3-way compare loses the head-to-head sharpness that makes pairwise comparisons useful.
+- It does **not** cover 5 or more companies in one file — at N=5+ the head-to-head sharpness collapses entirely and the report becomes a survey. For 5+, either split into multiple pairwise / 3-way reports or use [[sector-overview]] for a wide-lens treatment.
 - It does **not** repeat content from the per-company research docs verbatim — if you find yourself copy-pasting from one of the source research docs, you're missing the comparison angle. Rewrite to highlight the delta.

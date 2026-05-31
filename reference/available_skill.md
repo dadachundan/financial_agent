@@ -4,7 +4,7 @@ Snapshot of every skill registered for this project, grouped by role and depende
 
 > **Keep this file in sync.** Whenever a skill is added, removed, or its `## Prerequisites` block changes under `.claude/skills/`, update this file in the same commit and bump the "Last updated" date below. See the [Maintenance](#maintenance) section at the bottom for the checklist.
 
-Last updated: 2026-05-27 (`company-research` and `compare-companies`: now produce both English AND Chinese reports by default; user can override to single-language with explicit flag)
+Last updated: 2026-05-31 (`compare-companies`: now supports N-way comparisons of 2 to 4 companies — TL;DR table scales to N rows, scorecard switches to rank/checkmark for N≥3, bottom-line gets N strategic-posture paragraphs, §5.8 covers players *beyond* the focal N. Word target: 5–9k for N=2, 7–12k for N=3, 10–15k for N=4. Also: hardened the prior-research existence check in both `compare-companies` and `company-research` — now case-insensitive + ticker-matched + per-side, since folder casing varies (`Xpeng_NYSE_XPEV`) and a Chinese report may be named `_公司研究.md` or `_Research_Document_zh.md`)
 
 ---
 
@@ -97,7 +97,7 @@ idea-generation → initiating-coverage → earnings-preview → earnings-analys
 - [earnings-preview](../.claude/skills/earnings-preview/SKILL.md) → [earnings-analysis](../.claude/skills/earnings-analysis/SKILL.md) → [model-update](../.claude/skills/model-update/SKILL.md) is the quarterly cycle for a name already under coverage.
 - [thesis-tracker](../.claude/skills/thesis-tracker/SKILL.md) is the long-running journal that consumes results from the others.
 - [idea-generation](../.claude/skills/idea-generation/SKILL.md) seeds the funnel.
-- [compare-companies](../.claude/skills/compare-companies/SKILL.md) takes two `company-research` outputs and produces a head-to-head comparison focused on the delta — product overlap matrix, moat anatomy, customer overlap, dimension-by-dimension scorecard. **Default behavior: two files per pair — English at `reports/compare/<A>_vs_<B>.md` and Simplified Chinese at `reports/compare/<A>_vs_<B>_zh.md`** (5,000–9,000 words each, natively authored). Users can override to single-language with `--en-only` / `--zh-only`. If a research doc is missing or stale, it invokes `company-research` on the missing side first.
+- [compare-companies](../.claude/skills/compare-companies/SKILL.md) takes **2 to 4** `company-research` outputs and produces an N-way head-to-head comparison focused on the delta — product overlap matrix (N+1 columns), moat anatomy (N-column tables), customer overlap, dimension-by-dimension scorecard (rank-based for N≥3). **Default behavior: two files per tuple — English at `reports/compare/<A>_vs_<B>[_vs_<C>...].md` and Simplified Chinese at `reports/compare/<...>_zh.md`** (5–9k words for N=2; 7–12k for N=3; 10–15k for N=4; natively authored in each language). Users can override to single-language with `--en-only` / `--zh-only`. If a research doc is missing or stale, it invokes `company-research` on the missing side first. N≥5 not supported — split into multiple pairwise reports or use `sector-overview`.
 
 ## 4. Standalone, no dependencies
 
@@ -114,7 +114,7 @@ idea-generation → initiating-coverage → earnings-preview → earnings-analys
 ## Key observations
 
 - **Only the trading-analysis chain has machine-enforced deps** (the `## Prerequisites` blocks with `[[…]]` wikilinks). Everything else is independent — run them in any order.
-- **`company-research` is the most reused artifact** — the trading pipeline, `initiating-coverage` (Task 1), and `compare-companies` (one per side) all build on it.
+- **`company-research` is the most reused artifact** — the trading pipeline, `initiating-coverage` (Task 1), and `compare-companies` (N per N-way comparison, where N ∈ {2, 3, 4}) all build on it.
 - **`sec-report-summary` is conditional**: it's a Step-0.5 sub-skill of `company-research` for US issuers only; for non-US issuers (China A-share / HK / Taiwan / Japan / Korea), `company-research` skips it and builds the historical-evolution threads directly from domicile-portal filings. It can also be invoked standalone if the user just wants the SEC narrative without the full deep dive.
 - **`trading-analysis` is the only true orchestrator**; `initiating-coverage` is 5 sequential tasks the user runs explicitly, not a one-shot pipeline.
 - **Two data-source skills feed everything else indirectly**: `earnings-upload-to-db` → `db/notes.db`, and `zsxq-recommend` / `zsxq-analyze` → `db/zsxq.db`. They're not called by other skills, but the artifacts they produce are read by analysts.

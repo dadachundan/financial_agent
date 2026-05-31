@@ -640,11 +640,16 @@ Always write under the main project's `reports/` directory — never to a worktr
 
 Reports under `reports/` are checked into git and are meant to be living documents. **Before writing, check whether research docs for this company already exist** in `reports/company/<Slug>/`, and update them in place rather than creating parallel copies.
 
-**Default behavior: produce both English and Chinese files.** Before starting, check for existing files:
+**Default behavior: produce both English and Chinese files.** Before starting, check for existing files — **case-insensitively, matched on the ticker**, because folder casing is inconsistent in this repo (e.g. the XPeng report lives at `Xpeng_NYSE_XPEV/`, not `XPeng_…`) and a case-sensitive `<Slug>` path will miss a real hit and trigger a wasteful regeneration:
 
 ```bash
-ls "reports/company/<Slug>/" 2>/dev/null | grep -E "_Research_Document(_zh|_CN)?\.md|_公司研究(_zh|_CN)?\.md"
+# First find the slug folder by ticker (case-insensitive), then list inside it.
+ls reports/company/ | grep -iE "<Ticker>"                       # e.g. grep -iE "XPEV"
+ls "reports/company/<exact-folder-printed-above>/" 2>/dev/null \
+  | grep -iE "_Research_Document(_zh|_CN)?\.md|_公司研究(_zh|_CN)?\.md"
 ```
+
+Note the Chinese edition may be named `<Slug>_公司研究.md` (this skill's default) **or** `<Slug>_Research_Document_zh.md` (English-template name + `_zh`); the `grep -iE` above matches both. Match on the ticker, not the naming convention.
 
 For **each language you're generating** (English + Chinese by default, or just one if the user overrides):
 
