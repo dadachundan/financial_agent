@@ -282,27 +282,43 @@ which themes to build** (1–7) and the ticker scope — per `theme-research`'s
 create-mode rule, baskets are most useful when the user has agreed to the
 scope. Also confirm language (English default; Chinese opt-in).
 
-### TB2. Build the evidence bundle (per chosen theme)
+### TB2. Extract the ORIGINAL PDF content (per chosen theme)
 
-For each theme the user picked, dump its cluster's 翻译精华 summaries — the
-guaranteed source floor — into one bundle:
+**The primary source is the original PDF text, not the summary column.**
+The `summary` (zsxq's 翻译精华) is a curated, often re-translated highlight
+blurb — a secondary source that paraphrases and can drop or distort numbers.
+Use it only as a last resort (a pure-chart page where even OCR fails), and
+label it as such. Every broker number you cite must string-match the
+*extracted original text*.
+
+First build the extraction manifest — it reports, per report, whether the
+original text is text-ready / OCR-cached / needs-OCR, and emits the extract
+command:
 
 ```bash
 python3 .claude/skills/zsxq-ideas/scripts/evidence_bundle.py \
     --file-ids <comma-sep cluster file_ids> \
-    --slug <theme-slug> \
-    --out /tmp/zsxq_evidence/<theme-slug>.md
+    --slug <theme-slug> --out /tmp/zsxq_evidence/<theme-slug>.md
 ```
 
-The summary column already carries the headline broker numbers (target
-prices, deal sizes, % moves, TAM figures). For the **2–3 flagship reports
-per theme** (highest page count / most central), go deeper to pull more
-specific numbers:
+Most bank PDFs in this library are **image-only** (fitz returns nothing) —
+the manifest flags these. OCR them first (one sequential pass to avoid
+SQLite write-contention; the `ocr_text` cache write is the sanctioned path
+per [CLAUDE.md § PDF extraction](../../../CLAUDE.md)):
+
+```bash
+for f in <image-only file_ids from the manifest>; do
+    python3 .claude/skills/zsxq-analyze/scripts/ocr_pdf.py --file-id $f
+done
+```
+
+Then extract the original text per report (now OCR-backed for image-only):
 
 ```bash
 python3 .claude/skills/zsxq-analyze/scripts/extract_pdf.py \
-    --file-id <flagship id> --header --max-chars 40000
-# image-only pages? OCR first: ocr_pdf.py --file-id <id>, then re-extract
+    --file-id <id> --header --max-chars 40000
+# still empty (pure charts)? render_pdf_pages.py + Read the PNG visually.
+# only if THAT fails too: fall back to the 翻译精华 summary, labelled as such.
 ```
 
 ### TB3. Build / refresh the basket via theme-research (parallel)
@@ -311,13 +327,14 @@ Spawn **one Agent per theme in a single message** (parallel — per the
 [parallel-multi-report feedback](../../../.claude/projects/-Users-x-projects-financial-agent/memory/feedback_parallel_multi_report.md)).
 Each agent runs the [[theme-research]] create-or-refresh workflow on its
 slug and is handed: (a) the theme slug + confirmed ticker scope, (b) the
-evidence-bundle path from TB2, (c) the flagship file_ids to `extract_pdf`
-for deeper numbers, and (d) the [zsxq citation
-convention](#zsxq-citation-convention) below. `theme-research` owns the
-file format and the verified Performance/return data; this mode's whole
-value-add is feeding it the **real zsxq broker content**, woven into the
-Thesis, per-ticker Justification cells, Recent events, and Data Used
-manifest.
+extraction-manifest path from TB2, (c) the instruction to `extract_pdf`
+**every** report it cites (not just flagships) and read the original text —
+OCR'd first where the manifest says so, summary fallback-only, and (d) the
+[zsxq citation convention](#zsxq-citation-convention) below. `theme-research`
+owns the file format and the verified Performance/return data; this mode's
+whole value-add is feeding it the **real zsxq broker content** read from the
+original PDFs, woven into the Thesis, per-ticker Justification cells, Recent
+events, and Data Used manifest.
 
 If the basket already exists, this is a *refresh + enrichment* pass — edit
 in place, append a `## History` line noting the zsxq enrichment, and do
@@ -359,9 +376,11 @@ content* to the source `file_id`, never the report title alone:
   doubling by 2030" with no link is a non-citation. The same sentence with
   `([MS — 能源遇见算力, zsxq #184152244582842](http://localhost:5001/zsxq-pdf/184152244582842))`
   attached to the figure is a citation.
-- **Only state numbers that literally appear** in the evidence-bundle
-  summary or the extracted PDF text. No extrapolation (don't compute upside
-  off a target price the report didn't state). Numerical Accuracy rule.
+- **Only state numbers that literally appear** in the *extracted/OCR'd
+  original PDF text* — not the 翻译精华 summary (a curated secondary source).
+  String-match every number against the extracted text before citing it. No
+  extrapolation (don't compute upside off a target price the report didn't
+  state). Numerical Accuracy rule.
 - **Preserve original-language report titles** in the link text (年度报告,
   有価証券報告書, 创新黎明 2.0) per the project citation standard.
 
@@ -491,6 +510,8 @@ already-installed sibling skills, not upstream artifacts):
 
 Own scripts:
 
-- `scripts/evidence_bundle.py` — dumps the 翻译精华 summaries for a cluster
-  of file_ids into one markdown bundle (the theme-build source floor).
-  Read-only on `db/zsxq.db`.
+- `scripts/evidence_bundle.py` — builds the theme-build *extraction
+  manifest*: per file_id, the metadata + whether the original text is
+  text-ready / OCR-cached / needs-OCR + the extract command. Original PDF
+  text is the source; the 翻译精华 summary is included only as labelled
+  fallback. Read-only on `db/zsxq.db`.
