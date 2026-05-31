@@ -369,18 +369,31 @@ Whenever zsxq content lands in **any** downstream report — a `reports/ideas/`
 idea note or a `reports/themes/` basket — cite the broker's *specific
 content* to the source `file_id`, never the report title alone:
 
-- **Inline format:** `[Bank — short topic, zsxq #<file_id>](http://localhost:5001/zsxq-pdf/<file_id>)`.
-  The viewer link (`localhost:5001/zsxq-pdf/<file_id>`) is the project's
-  convention for pointing at a zsxq PDF.
-- **Cite the number, not the headline.** "MS sees Asia energy capex
-  doubling by 2030" with no link is a non-citation. The same sentence with
-  `([MS — 能源遇见算力, zsxq #184152244582842](http://localhost:5001/zsxq-pdf/184152244582842))`
-  attached to the figure is a citation.
+- **Inline format — file_id AND page:**
+  `[Bank — short topic, zsxq #<file_id> p.<N>](http://localhost:5001/zsxq-pdf/<file_id>#page=<N>)`.
+  The page number is mandatory: `extract_pdf.py` marks pages as
+  `===== Page N =====`, so every number you cite has a known page. Put `p.N`
+  in the link text and `#page=N` in the URL (the viewer honors the PDF
+  `#page=` fragment; if it ever doesn't, `p.N` in the text still tells the
+  reader where to look). If a figure recurs on several pages, cite the page
+  with the fullest context (usually the exhibit/section page, not the p.1
+  teaser).
+- **Quote the source text.** Alongside the number, give a short quote of the
+  *original* sentence/phrase it came from, in the PDF's original language —
+  e.g. ...claim
+  `([MS — Energy Meets Compute, zsxq #184152244582842 p.6](http://localhost:5001/zsxq-pdf/184152244582842#page=6) — “US$5trn+ in investments across the region… unlocking US$9trn in value”)`.
+  The quote is the original English/Chinese/Japanese text from the PDF, NOT
+  the 翻译精华 summary's paraphrase. Keep quotes short (the clause carrying
+  the number); use `…` for elisions. Match the quote verbatim to the
+  extracted text.
+- **Cite the number, not the headline.** "MS sees Asia energy capex doubling
+  by 2030" with no link is a non-citation; the figure needs the page-anchored
+  link + the source quote above.
 - **Only state numbers that literally appear** in the *extracted/OCR'd
-  original PDF text* — not the 翻译精华 summary (a curated secondary source).
-  String-match every number against the extracted text before citing it. No
-  extrapolation (don't compute upside off a target price the report didn't
-  state). Numerical Accuracy rule.
+  original PDF text* — not the 翻译精华 summary (a curated secondary source
+  that paraphrases and re-translates; e.g. its "超5万亿美元" rounds the
+  original's precise "US$5,454bn" on p.8). String-match every number against
+  the extracted text before citing it. No extrapolation. Numerical Accuracy rule.
 - **Preserve original-language report titles** in the link text (年度报告,
   有価証券報告書, 创新黎明 2.0) per the project citation standard.
 
@@ -408,12 +421,21 @@ explanation) matching this shape:
     "TICKER1": "long" | "short" | "neutral",
     ...
   },
-  "key_numbers": ["3-5 hard numbers from the PDF, each with units + the metric"],
+  "key_numbers": [
+    {"metric": "what it measures", "value": "the number with units",
+     "page": 12, "quote": "verbatim original-language source text containing the number"}
+  ],
   "catalysts": ["2-3 catalysts the PDF flags"],
   "risks": ["2-3 risks the PDF flags"],
-  "page_citations": {"TICKER1": "p.12", ...},
   "theme_fit": "1 sentence on how this PDF fits the requested theme"
 }
+
+For every entry in `key_numbers` the `page` is the `===== Page N =====`
+marker from extract_pdf where the number appears, and `quote` is the
+ORIGINAL text (English / Chinese / Japanese as printed in the PDF) — never
+the 翻译精华 summary's paraphrase. String-match the quote to the extracted
+text. Downstream this becomes the page-anchored citation + source quote per
+the [zsxq citation convention](#zsxq-citation-convention).
 
 Tickers must use the same convention as the row's `tickers` column
 when present (e.g. AAPL, NVDA, SZSE:002050, HKEX:1211). If the PDF
