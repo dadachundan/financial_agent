@@ -1,8 +1,10 @@
-# Moat Anatomy — Seven-Subsection Template
+# Moat Anatomy — Eight-Subsection Template
 
 This is the analytical centerpiece of every compare-companies report. The user's recurring complaint about prior comparison reports has been that they assert "moat" without quantifying it. This template forces the analyst to pull the disclosed numbers, build the matrices, and name the specific franchises — not write adjectives.
 
-**Total moat-section length target: 1,500–2,500 words.** If your draft has the moat section shorter than any other section in the report, the priority is wrong.
+**Total moat-section length target scales by N:** 1,500–2,500 words for N=2; 2,200–3,500 for N=3; 3,000–5,000 for N=4. If your draft has the moat section shorter than any other section in the report, the priority is wrong.
+
+**N-way reminder.** Every table in this section is "side-by-side" — that means **N-column** when N≥3. Every "both" / "neither" / "one side or the other" phrasing in the prose generalizes to "all three" / "two of the three" / "only A and C" — name the specific subset, do not pretend N=2 when N=3+.
 
 ## Common discipline (applies to all seven subsections)
 
@@ -151,7 +153,9 @@ Failure modes:
 
 ## §5.8 — Other big players in this space (REQUIRED — Deliverable 6)
 
-A two-player view of a multi-player industry is misleading. Every moat anatomy must close with a survey of **3–7 other meaningful players** in the focal pair's competitive space. The focal pair (A vs B) remains the protagonist; the other players are the context that prevents readers from treating the report as a complete map.
+A focal-N view of a multi-player industry is misleading by itself. Every moat anatomy must close with a survey of **3–7 other meaningful players** in the focal set's competitive space — that is, companies *beyond* the N being compared in the report. The focal set (A vs B [vs C [vs D]]) remains the protagonist; the other players are the context that prevents readers from treating the report as a complete map.
+
+**For N=2** the "other big players" are everyone outside the pair. **For N=3 or N=4**, the focal set already covers a larger fraction of the industry, so the bar shifts: §5.8 covers the *next-tier* relevant names — for an N=3 Databricks-vs-Snowflake-vs-Oracle report, that's typically the three hyperscalers' native data+AI stacks (AWS Redshift+SageMaker, Google BigQuery+Vertex, Microsoft Fabric); for an N=3 EDA report, it's Siemens EDA + Arm + open-source / RISC-V; for an N=3 semicap report, it's TEL + KLA + ASML (whichever aren't already in the focal set). **A company is either in the focal N or in §5.8 — never both.** When the focal set already includes the obvious 3–4 leaders, §5.8 may shrink to 2–3 paragraphs covering specialists, regional alternatives, and adjacent-paradigm threats.
 
 ### Discovery — three sources, in this order
 

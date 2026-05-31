@@ -1,18 +1,30 @@
 # Compare-companies — Report Structure
 
-The final report has a TL;DR section + 10 numbered sections + a References block. Word counts are loose targets — verify with `wc -w` before declaring done. Total target: **5,000–9,000 words**. The moat anatomy (§5) is the longest section and the analytical centerpiece; if it ends up shorter than any other section, the priority is wrong.
+The final report has a TL;DR section + 10 numbered sections + a References block. Word counts are loose targets — verify with `wc -w` before declaring done.
 
-Embed **4–8 visuals** (Mermaid blocks + 1–2 matplotlib PNGs for quantitative trends). Every chart gets a citation directly below.
+**Total word-count target scales by N:**
 
-**Bilingual reminder.** By default, the skill produces both English (`<A>_vs_<B>.md`) and Simplified Chinese (`<A>_vs_<B>_zh.md`) editions. This structure spec applies to **both** files — same 10-section skeleton, same word-count target, same chart count. The structural skeleton stays identical; only the prose language differs. Section headers translate (e.g. `## §5 The moat anatomy` ↔ `## §5 护城河剖析`); citation URLs are identical between files; link titles preserve original language (`10-K` stays `10-K` in both, `年度报告` stays `年度报告` in both). See the SKILL.md "Report language" section for the bilingual workflow rules.
+| N | Word target | Visuals | TL;DR rows | Moat §5 length |
+|---|---|---|---|---|
+| 2 | 5,000–9,000 | 4–8 | 2 | 1,500–2,500 |
+| 3 | 7,000–12,000 | 6–10 | 3 | 2,200–3,500 |
+| 4 | 10,000–15,000 | 8–14 | 4 | 3,000–5,000 |
+
+The moat anatomy (§5) is the longest section and the analytical centerpiece; if it ends up shorter than any other section, the priority is wrong.
+
+Embed Mermaid blocks + 1–2 matplotlib PNGs for quantitative trends. Every chart gets a citation directly below.
+
+**Bilingual reminder.** By default, the skill produces both English and Simplified Chinese editions (`<...>.md` + `<...>_zh.md`). This structure spec applies to **both** files — same skeleton, same word-count target, same chart count. The structural skeleton stays identical; only the prose language differs. Section headers translate (e.g. `## §5 The moat anatomy` ↔ `## §5 护城河剖析`); citation URLs are identical between files; link titles preserve original language (`10-K` stays `10-K` in both, `年度报告` stays `年度报告` in both). See the SKILL.md "Report language" section for the bilingual workflow rules.
+
+**N-way reminder.** Every "side-by-side" table in this spec generalizes to N columns when N≥3. Every "two paragraphs" generalizes to N paragraphs. Where the structure changes meaningfully at N≥3 (e.g. the scorecard switches from `Edge` to `rank`), the spec calls it out explicitly with an **N-way:** tag.
 
 ## Per-section spec
 
-### §0 — TL;DR — At-a-glance advantages and disadvantages (~250 words) — REQUIRED FIRST SECTION
+### §0 — TL;DR — At-a-glance advantages and disadvantages (~250 words for N=2; ~350 for N=3; ~450 for N=4) — REQUIRED FIRST SECTION
 
 **Placement: directly after the source-filings block, before the first `---` separator and before §1.** This is the first thing the reader sees, and for most readers it's the only thing they'll read end-to-end. Treat it as the headline of the report.
 
-**Format — a 3-column markdown table:**
+**Format — a 3-column markdown table with one row per company:**
 
 ```markdown
 ## TL;DR — At-a-glance advantages and disadvantages
@@ -21,8 +33,10 @@ Embed **4–8 visuals** (Mermaid blocks + 1–2 matplotlib PNGs for quantitative
 |---|---|---|
 | **Company A (TICKER)** | • <bullet> (§N)<br>• <bullet> (§N)<br>• ... (5–8 bullets) | • <bullet> (§N)<br>• <bullet> (§N)<br>• ... (5–8 bullets) |
 | **Company B (TICKER)** | • <bullet> (§N)<br>• ... (5–8 bullets) | • <bullet> (§N)<br>• ... (5–8 bullets) |
+| **Company C (TICKER)** (N≥3 only) | • <bullet> (§N)<br>• ... (5–8 bullets) | • <bullet> (§N)<br>• ... (5–8 bullets) |
+| **Company D (TICKER)** (N=4 only) | • <bullet> (§N)<br>• ... (5–8 bullets) | • <bullet> (§N)<br>• ... (5–8 bullets) |
 
-**Who is each one for?** <one-paragraph distillation framing the choice as: pick A for X, pick B for Y, or run both because Z>. The detailed evidence for every TL;DR claim follows in §1–§10 below.
+**Who is each one for?** <one-paragraph distillation — frame as "pick A for X, pick B for Y, [pick C for Z,] or run a hybrid because W". Always assign each side a role it wins; avoid both-sidesism and all-N-sidesism.> The detailed evidence for every TL;DR claim follows in §1–§10 below.
 ```
 
 **Per-bullet rules:**
@@ -110,30 +124,36 @@ Side-by-side table of debt level, buyback authorization remaining, dividend, rec
 
 A side-by-side risk table covering the dimensions where the two sides materially diverge: customer concentration, integration risk, debt overhang, regulatory exposure (US export-control, EU AI Act, FDA, antitrust), domestic competitor density, currency mix, etc. Avoid the standard 10-K risk-factor catalogue — focus only on differences.
 
-### §9 — Side-by-side scorecard (Required deliverable 4) (200–400 words; mostly a table)
+### §9 — Side-by-side scorecard (Required deliverable 4) (200–400 words for N=2; 300–500 for N=3; 400–600 for N=4; mostly a table)
 
-A flat 3-column markdown table with 15–25 rows. Every row has Dimension | Edge | Why. Banned in the Edge column: "arguably", "slightly", "potentially", "depends". Allowed: one side's name, "Tied", or "Neither".
+**N=2:** A flat 3-column markdown table with 15–25 rows. Every row has Dimension | Edge | Why. Banned in the Edge column: "arguably", "slightly", "potentially", "depends". Allowed: one side's name, "Tied", or "Neither".
 
-The scorecard's job is to give a senior reader a 60-second overview. Lead with the strongest moat dimensions; cover financial, product, channel, balance-sheet, and overhang dimensions.
+**N=3 or N=4:** A flat (N+2)-column markdown table with 18–30 rows. Every row has Dimension | A | B | C [| D] | Why. Each company cell holds either a **rank** (`1`, `2`, `3` with `=` for ties — use bold for `1`) **or** a checkmark grid (`✓` for winner, blank for not-winner). The "Why" column carries the one-clause justification with a number. Add 2–4 **pair-specific** rows where a global rank obscures the picture — append `(X vs Y only)` in the Dimension column for these.
 
-### §10 — Bottom line — two different bets (Required deliverable 5) (300–500 words)
+The scorecard's job is to give a senior reader a 60-second overview. Lead with the strongest moat dimensions; cover financial, product, channel, balance-sheet, and overhang dimensions. Banned everywhere: hedge words and unranked cells.
 
-Two strategic paragraphs:
+### §10 — Bottom line — **N different bets** (Required deliverable 5) (300–500 words for N=2; 450–700 for N=3; 600–900 for N=4)
+
+**N strategic paragraphs** (one per company), each shaped the same way:
 
 1. "Company A is betting that **X** matters more than **Y**" — distill A's posture, name the downside scenario.
-2. "Company B is betting that **X** matters more than **Y**" — same shape, opposite framing.
+2. "Company B is betting that **X** matters more than **Y**" — same shape, different framing.
+3. (N≥3) "Company C is betting that **X** matters more than **Y**" — same shape, distinct framing. The N bets must be **orthogonal** — if any two paragraphs paraphrase the same bet, collapse or rewrite.
+4. (N=4) "Company D is betting…" — same shape.
 
-Then a closing paragraph that names **the specific catalyst** (event, date, KPI) that will move the verdict in the next 4–8 quarters. Avoid both-sidesism ("both can win", "depends on execution"). Name the catalyst.
+Then a closing paragraph that names **the specific catalyst** (event, date, KPI) that will move each verdict in the next 4–8 quarters. For N≥3, name which side wins under which observable condition (e.g. "If hyperscaler customers continue pulling fine-tuning workloads onto open-format lakes, A wins; if enterprise IT continues consolidating into SQL-first cloud DW, B wins; if existing OLTP customers reject moving to a separate analytics stack, C wins."). Avoid both-sidesism and all-N-sidesism — name the catalyst per side.
 
 ### References (no word count)
 
 Deduplicated, grouped:
 
 - Primary filings — Company A (CIK / stock-code)
-- Primary filings — Company B
-- Industry research (third-party share data — IPnest, Gartner, IDC, IBISWorld, TrendForce, etc.)
+- Primary filings — Company B (CIK / stock-code)
+- Primary filings — Company C (N≥3 only)
+- Primary filings — Company D (N=4 only)
+- Industry research (third-party share data — IPnest, Gartner, IDC, IBISWorld, TrendForce, Forrester, etc.)
 - Press / regulatory (press releases, DOJ / SEC / EU actions, court filings)
-- Other commentary (SemiAnalysis, SemiWiki, In Practise, Wing VC, etc.)
+- Other commentary (SemiAnalysis, SemiWiki, In Practise, Wing VC, Stratechery, The Information, etc.)
 
 Every entry is a markdown link with a date in the title where the source has a publication date.
 

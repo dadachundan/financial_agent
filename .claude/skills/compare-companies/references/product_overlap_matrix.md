@@ -2,9 +2,9 @@
 
 The product overlap matrix is the single most-cited table in the final report. Readers paste it into competitive-positioning decks. Build it carefully and exhaustively. The matrix's job is to answer the reader's first question — **do their products actually compete, or are they more complementary?** — at a glance.
 
-## The four-bucket classification
+## The bucket classification (N=2)
 
-Every paired product row resolves to exactly one of four buckets:
+For binary comparisons, every paired product row resolves to exactly one of four buckets:
 
 | Bucket | Definition | When to use |
 |---|---|---|
@@ -14,6 +14,24 @@ Every paired product row resolves to exactly one of four buckets:
 | **NON-OVERLAPPING** | One side does not meaningfully ship in this category. | TCAD (SNPS Sentaurus) has no CDNS counterpart. PCB (CDNS Allegro X) has no SNPS counterpart of any substance. |
 
 Avoid an "unclear" or "mixed" bucket — every row picks one. If you can't classify it, you haven't done the research.
+
+## The status grammar (N=3 or N=4)
+
+For three- or four-way comparisons, the binary buckets aren't expressive enough — direct-compete-ness varies by pair. Use this grammar in the Status column:
+
+| Status phrasing | Meaning | When to use |
+|---|---|---|
+| **ALL THREE COMPETE** / **ALL FOUR COMPETE** | Every side in the focal set ships in this category and customers treat them as substitutes. | Cloud data warehouse: Databricks SQL vs Snowflake vs Oracle ADW — all three present, all three pitched at the same buyer. |
+| **ALL N COMPETE (X dominant)** | Every side ships; one is clearly #1 per a third-party source. | "ALL THREE COMPETE (SNOW dominant — Gartner CDW MQ leader)" — every side ships data-warehouse SQL, SNOW is the clear leader. |
+| **A vs B compete; C absent** / **A and C compete; B absent** | Some sides ship, others don't — spell out which by letter. | Lakehouse / open-format engine: Databricks vs Snowflake compete (both ship Iceberg); Oracle has no meaningful equivalent. |
+| **COMPLEMENTARY (X leads)** | Multiple sides ship but only one is the real choice. | "COMPLEMENTARY (ORCL leads)" — for enterprise apps, ORCL Fusion vs Databricks/Snowflake (both have light app offerings but the choice is ORCL). |
+| **NON-OVERLAPPING (X only)** | Exactly one side ships; structural asymmetry. | Traditional RDBMS / OLTP: only Oracle ships (DBX and SNOW don't compete here). |
+
+**Critical N-way discipline:**
+
+- **Spell out which sides are absent** by letter (A, B, C, D) so the row is self-explanatory; never just "some compete, others don't".
+- **The status cell should fit on one line in a wide table.** If it runs to two lines, you've added editorial that belongs in the prose paragraphs after the matrix.
+- **At least one row per status type.** A 3-way matrix where every row says `ALL THREE COMPETE` is under-explored — every multi-segment industry has at least one row that is `A vs B compete; C absent` (the strategic asymmetry).
 
 ## Sourcing rules
 
@@ -36,7 +54,30 @@ Then pair across sides. The pairing is the analyst's judgement; bias toward over
 
 ## Format
 
-A single markdown table per major product axis. For multi-axis companies (e.g. EDA + IP + SD&A), one table per axis:
+A single markdown table per major product axis. For multi-axis companies (e.g. EDA + IP + SD&A; or Lakehouse + AI/ML + Apps), one table per axis. **N=2 uses 4 columns (Category / A's product / B's product / Status); N=3 uses 5; N=4 uses 6.**
+
+**N=3 worked example — Databricks vs Snowflake vs Oracle (data + AI platforms):**
+
+```markdown
+### Product overlap — analytics & AI platforms
+
+| Function | Databricks | Snowflake | Oracle | Status |
+|---|---|---|---|---|
+| Cloud data warehouse (SQL-first) | Databricks SQL | Snowflake Data Cloud | Autonomous Data Warehouse + HeatWave | ALL THREE COMPETE (SNOW dominant per Gartner CDW MQ 2025) |
+| Lakehouse on open formats | Lakehouse Platform + Delta + Iceberg | Snowflake Iceberg Tables (GA) | — | DBX vs SNOW compete; ORCL absent |
+| Streaming ingestion | Delta Live Tables / DLT | Snowpipe / Dynamic Tables | OCI GoldenGate + Streaming | ALL THREE COMPETE |
+| AI/ML lifecycle | Mosaic AI (training, fine-tune, serve) | Cortex (LLM + ML) | OCI AI Services / OCI Gen AI | ALL THREE COMPETE (DBX dominant for fine-tuning per Forrester AI Wave) |
+| Traditional RDBMS / OLTP | — | — | Oracle Database 23ai | NON-OVERLAPPING (ORCL only) |
+| Enterprise apps (ERP/HCM/CX) | — | — | Oracle Fusion Applications | NON-OVERLAPPING (ORCL only) |
+| Native marketplace | Databricks Marketplace | Snowflake Marketplace | OCI Marketplace | ALL THREE COMPETE (SNOW dominant — first mover, deepest catalog) |
+| Notebook IDE | Databricks Notebooks | Snowflake Notebooks (GA 2024) | OCI Data Science Notebooks | ALL THREE COMPETE (DBX dominant — Jupyter-native incumbent) |
+| Catalog / governance | Unity Catalog | Horizon | OCI Data Catalog | ALL THREE COMPETE |
+| BYOC / on-prem | — | — | Cloud@Customer + Exadata | NON-OVERLAPPING (ORCL only — uniquely on-prem-friendly) |
+```
+
+The above is a 5-column matrix for N=3. The pattern shows DBX and SNOW converging while ORCL covers an adjacent surface area (OLTP, apps, on-prem) that the other two don't touch.
+
+**N=2 worked example — Synopsys vs Cadence (EDA core tools):**
 
 ```markdown
 ### Product overlap — EDA core tools
