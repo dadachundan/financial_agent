@@ -1,6 +1,6 @@
 ---
 name: theme-research
-description: Build and maintain thematic equity baskets (e.g. humanoid-robotics-sensors, GLP-1 supply chain, advanced packaging, EV battery) — each theme is a named set of tickers + keywords stored under `reports/themes/<slug>/registry.yaml`, with companion bilingual research notes (`<slug>_theme_research.md` + `<slug>_主题研究.md`). The skill creates new themes, refreshes existing ones with movers/laggards + recent news + valuation drift, and surfaces drift signals (tickers no longer fitting; new tickers worth adding). Distinct from `sector-overview` (one-shot landscape essay) — themes are *tracked baskets* that get refreshed. Use when the user says "build a theme on X", "track the X basket", "refresh my <theme> basket", "what's moving in my <theme>?", or "what themes do I have?"
+description: Build and maintain thematic equity baskets (e.g. humanoid-robotics-sensors, GLP-1 supply chain, advanced packaging, EV battery) — each theme is a named set of tickers + keywords stored under `reports/themes/<slug>/registry.yaml`, with a companion English research note `<slug>_theme_research.md` (Chinese companion `<slug>_主题研究.md` available on explicit request). The skill creates new themes, refreshes existing ones with movers/laggards + recent news + valuation drift, and surfaces drift signals (tickers no longer fitting; new tickers worth adding). Distinct from `sector-overview` (one-shot landscape essay) — themes are *tracked baskets* that get refreshed. Use when the user says "build a theme on X", "track the X basket", "refresh my <theme> basket", "what's moving in my <theme>?", or "what themes do I have?"
 ---
 
 # Theme Research
@@ -124,12 +124,20 @@ metadata:
 
 If a ticker doesn't cleanly fit, write a one-sentence justification and pick the closest role. Don't invent new roles per theme — discipline matters.
 
-## Bilingual research note
+## Research note (English default; Chinese opt-in)
 
-Alongside the registry, every theme has a companion research note in both languages:
+**Default behavior: write the English note only.** This is a monitoring / tracking skill, not a deep-research deliverable — most users want the English read and don't need a Chinese companion for every refresh.
 
-- English: `reports/themes/<slug>/<slug>_theme_research.md`
-- Chinese: `reports/themes/<slug>/<slug>_主题研究.md`
+- English (default): `reports/themes/<slug>/<slug>_theme_research.md`
+- Chinese (opt-in only): `reports/themes/<slug>/<slug>_主题研究.md`
+
+**Chinese opt-in (any of these triggers the Chinese companion alongside the English note):**
+- `also in Chinese` / `add Chinese` / `bilingual` / `both languages` / `--bilingual` / `--zh`
+- `用中文也输出一份` / `也输出中文版` / `中英双语`
+
+**Chinese-only (skip English):** `用中文即可` / `--zh-only` / `Chinese only`.
+
+Once a Chinese companion exists for a theme, subsequent refreshes update both files unless the user says otherwise. The registry.yaml `metadata.languages: [en, zh]` field records which languages this theme is currently tracked in.
 
 Target word count: **2,000–4,000 words per language** (less than [[sector-overview]]'s landscape essay — themes are focused, not exhaustive).
 

@@ -1,6 +1,6 @@
 ---
 name: etf-overlap
-description: Produce 3,000–6,000 word head-to-head ETF holdings-overlap reports for 2–4 ETFs in both English AND Simplified Chinese. Covers shared-holdings count, overlapping weight, top common positions, sector / country skew, top-10 concentration, expense-ratio + AUM comparison, and a verdict on whether the funds are duplicative / complementary / orthogonal. Reports saved to `reports/etf/<A>_vs_<B>[_vs_<C>].md` (and `..._zh.md`). Use when the user asks "do QQQ and SMH overlap?", "is SCHD doubling my SPY exposure?", "compare VTI vs ITOT vs SCHB", or "ETF overlap on these three."
+description: Produce 3,000–6,000 word head-to-head ETF holdings-overlap reports for 2–4 ETFs in English (Simplified Chinese also available on explicit request). Covers shared-holdings count, overlapping weight, top common positions, sector / country skew, top-10 concentration, expense-ratio + AUM comparison, and a verdict on whether the funds are duplicative / complementary / orthogonal. Reports saved to `reports/etf/<A>_vs_<B>[_vs_<C>].md` (Chinese companion at `..._zh.md` only when requested). Use when the user asks "do QQQ and SMH overlap?", "is SCHD doubling my SPY exposure?", "compare VTI vs ITOT vs SCHB", or "ETF overlap on these three."
 ---
 
 # ETF Overlap Report
@@ -40,14 +40,20 @@ The accuracy rules from [[company-research]] apply verbatim — read its **Core 
 
 ## Report language
 
-**Default behavior: ALWAYS produce both English AND Simplified Chinese (zh-CN).** Same rule as [[company-research]]. The user can override with `--en-only` / `--zh-only` / `English only` / `用中文即可` etc.
+**Default behavior: English only.** This is a monitoring / operational skill rather than a deep-research deliverable — most users want the English read and don't need the Chinese companion every time. (The substantive research skills `company-research` / `compare-companies` / `earnings-analysis` / `sector-overview` still default bilingual; this skill does not.)
+
+**Chinese opt-in (any of these triggers a Chinese companion file alongside the English):**
+- `also in Chinese` / `add Chinese` / `bilingual` / `both languages` / `--bilingual` / `--zh`
+- `用中文也输出一份` / `也输出中文版` / `中英双语`
+
+**Chinese-only (skip English):** `用中文即可` / `--zh-only` / `Chinese only`.
 
 Examples:
-- `compare QQQ and SMH overlap` → two files: `QQQ_vs_SMH.md` + `QQQ_vs_SMH_zh.md`
-- `VTI vs ITOT vs SCHB overlap in English only` → English file only
-- `比较沪深300ETF和上证50ETF的重叠 用中文即可` → Chinese file only
+- `compare QQQ and SMH overlap` → English only: `QQQ_vs_SMH.md`
+- `compare QQQ and SMH overlap, also in Chinese` → both: `QQQ_vs_SMH.md` + `QQQ_vs_SMH_zh.md`
+- `比较沪深300ETF和上证50ETF的重叠 用中文即可` → Chinese only: `..._zh.md`
 
-Bilingual technical terms in Chinese reports: `ETF / 交易所交易基金`, `expense ratio / 费率`, `AUM / 管理规模`, `N-PORT / N-PORT 持仓披露`, `CUSIP / CUSIP 证券代码`, `top-10 concentration / 前十大集中度`, `sector skew / 行业偏离`. Keep ticker codes in original form.
+When a Chinese companion is produced, use bilingual technical terms: `ETF / 交易所交易基金`, `expense ratio / 费率`, `AUM / 管理规模`, `N-PORT / N-PORT 持仓披露`, `CUSIP / CUSIP 证券代码`, `top-10 concentration / 前十大集中度`, `sector skew / 行业偏离`. Keep ticker codes in original form.
 
 ## Data sources
 

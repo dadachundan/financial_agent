@@ -1,6 +1,6 @@
 ---
 name: ma-event-tracker
-description: Track an active or proposed M&A deal — target / acquirer / consideration / spread / milestones / break-risk / probability — producing a 3,000–6,000 word markdown report in both English AND Simplified Chinese. Pulls from SEC EDGAR (S-4, DEFM14A, 425, 8-K Item 1.01 / 2.01), recent news, and antitrust / regulatory filings. Reports saved to `reports/ma/<Target>_<Acquirer>_<YYYY-MM-DD>.md` (and `..._zh.md`). Use when the user asks "track the X-Y merger", "what's the spread on the Z deal?", "M&A status on <ticker>", "is the SNPS-ANSS deal closing?", or anything in the merger-arb / deal-status family.
+description: Track an active or proposed M&A deal — target / acquirer / consideration / spread / milestones / break-risk / probability — producing a 3,000–6,000 word English markdown report (Simplified Chinese companion available on explicit request). Pulls from SEC EDGAR (S-4, DEFM14A, 425, 8-K Item 1.01 / 2.01), recent news, and antitrust / regulatory filings. Reports saved to `reports/ma/<Target>_<Acquirer>_<YYYY-MM-DD>.md` (Chinese companion at `..._zh.md` only when requested). Use when the user asks "track the X-Y merger", "what's the spread on the Z deal?", "M&A status on <ticker>", "is the SNPS-ANSS deal closing?", or anything in the merger-arb / deal-status family.
 ---
 
 # M&A Event Tracker
@@ -52,9 +52,15 @@ The accuracy rules from [[company-research]] apply verbatim. M&A-specific failur
 
 ## Report language
 
-**Default: produce both English AND Simplified Chinese.** Same rule as [[company-research]]. Single-language overrides via `--en-only` / `--zh-only` / `English only` / `用中文即可`.
+**Default behavior: English only.** This is a monitoring / tracking skill, not a deep-research deliverable — most users want the English read and don't need the Chinese companion every time. (The substantive research skills `company-research` / `compare-companies` / `earnings-analysis` / `sector-overview` still default bilingual; this skill does not.)
 
-Bilingual technical terms in Chinese reports: `M&A / 并购`, `target / 标的`, `acquirer / 收购方`, `consideration / 对价`, `implied value / 隐含估值`, `spread / 套利价差`, `expected close / 预计交割`, `termination fee / 终止费`, `antitrust / 反垄断`, `shareholder vote / 股东投票`, `definitive proxy / 最终代理征集书`. Keep ticker codes, regulator names (FTC, DOJ, SAMR, MOFCOM, CMA, EU), and case numbers in original form.
+**Chinese opt-in (any of these triggers a Chinese companion file alongside the English):**
+- `also in Chinese` / `add Chinese` / `bilingual` / `both languages` / `--bilingual` / `--zh`
+- `用中文也输出一份` / `也输出中文版` / `中英双语`
+
+**Chinese-only (skip English):** `用中文即可` / `--zh-only` / `Chinese only`.
+
+When a Chinese companion is produced, use bilingual technical terms: `M&A / 并购`, `target / 标的`, `acquirer / 收购方`, `consideration / 对价`, `implied value / 隐含估值`, `spread / 套利价差`, `expected close / 预计交割`, `termination fee / 终止费`, `antitrust / 反垄断`, `shareholder vote / 股东投票`, `definitive proxy / 最终代理征集书`. Keep ticker codes, regulator names (FTC, DOJ, SAMR, MOFCOM, CMA, EU), and case numbers in original form.
 
 **Filenames (no date in filename body, but `<YYYY-MM-DD>` of the tracking pass at the end):**
 - English: `reports/ma/<Target>_<Acquirer>_<YYYY-MM-DD>.md` (e.g. `ANSS_SNPS_2026-05-31.md`)

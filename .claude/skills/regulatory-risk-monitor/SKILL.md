@@ -1,6 +1,6 @@
 ---
 name: regulatory-risk-monitor
-description: Track a specific regulatory / legal / antitrust / FDA / policy risk affecting a single ticker — producing a 3,000–6,000 word bilingual markdown report with risk summary, exposure map (revenue / costs / valuation impact), evidence timeline, market pricing reaction, and dated scenario triggers. Distinct from `company-research` Section 9 (point-in-time risk inventory): this skill is *ongoing monitoring* of a named regulatory file (a court case, FDA AdComm window, FTC/DOJ investigation, MIIT/CSRC inquiry, EU DG-COMP case, etc.). Reports saved to `reports/regulatory/<TICKER>_<topic-slug>_<YYYY-MM-DD>.md` (and `..._zh.md`). Use when the user asks "track the X case on <ticker>", "FDA AdComm risk for <ticker>", "antitrust monitor on <ticker>-<topic>", or "regulatory tracking on <ticker>".
+description: Track a specific regulatory / legal / antitrust / FDA / policy risk affecting a single ticker — producing a 3,000–6,000 word English markdown report (Simplified Chinese companion available on explicit request) with risk summary, exposure map (revenue / costs / valuation impact), evidence timeline, market pricing reaction, and dated scenario triggers. Distinct from `company-research` Section 9 (point-in-time risk inventory): this skill is *ongoing monitoring* of a named regulatory file (a court case, FDA AdComm window, FTC/DOJ investigation, MIIT/CSRC inquiry, EU DG-COMP case, etc.). Reports saved to `reports/regulatory/<TICKER>_<topic-slug>_<YYYY-MM-DD>.md` (Chinese companion at `..._zh.md` only when requested). Use when the user asks "track the X case on <ticker>", "FDA AdComm risk for <ticker>", "antitrust monitor on <ticker>-<topic>", or "regulatory tracking on <ticker>".
 ---
 
 # Regulatory Risk Monitor
@@ -52,9 +52,15 @@ The accuracy rules from [[company-research]] apply verbatim. Regulatory-specific
 
 ## Report language
 
-**Default: produce both English AND Simplified Chinese.** Same rule as [[company-research]]. Single-language overrides via `--en-only` / `--zh-only` / `English only` / `用中文即可`.
+**Default behavior: English only.** This is a monitoring / tracking skill, not a deep-research deliverable — most users want the English read and don't need the Chinese companion every time. (The substantive research skills `company-research` / `compare-companies` / `earnings-analysis` / `sector-overview` still default bilingual; this skill does not.)
 
-Bilingual technical terms in Chinese reports: `regulator / 监管机构`, `docket / 案件档案`, `consent decree / 同意令`, `injunction / 禁令`, `cease and desist / 停止令`, `Advisory Committee / 顾问委员会 (AdComm)`, `New Drug Application / 新药申请 (NDA)`, `Investigational New Drug / 临床试验申请 (IND)`, `Premarket Notification / 上市前通知 (510(k))`, `Section 2 / 反垄断法第二条 (谢尔曼法案)`, `Section 7 / 克莱顿法案第七条`. Keep regulator acronyms (FDA, FTC, DOJ, EU, SAMR, MOFCOM, CSRC, MIIT, CMA, BaFin, JFTC, etc.) and case numbers in original form.
+**Chinese opt-in (any of these triggers a Chinese companion file alongside the English):**
+- `also in Chinese` / `add Chinese` / `bilingual` / `both languages` / `--bilingual` / `--zh`
+- `用中文也输出一份` / `也输出中文版` / `中英双语`
+
+**Chinese-only (skip English):** `用中文即可` / `--zh-only` / `Chinese only`.
+
+When a Chinese companion is produced, use bilingual technical terms: `regulator / 监管机构`, `docket / 案件档案`, `consent decree / 同意令`, `injunction / 禁令`, `cease and desist / 停止令`, `Advisory Committee / 顾问委员会 (AdComm)`, `New Drug Application / 新药申请 (NDA)`, `Investigational New Drug / 临床试验申请 (IND)`, `Premarket Notification / 上市前通知 (510(k))`, `Section 2 / 反垄断法第二条 (谢尔曼法案)`, `Section 7 / 克莱顿法案第七条`. Keep regulator acronyms (FDA, FTC, DOJ, EU, SAMR, MOFCOM, CSRC, MIIT, CMA, BaFin, JFTC, etc.) and case numbers in original form.
 
 **Filenames (English / pinyin first per the project rule):**
 - English: `reports/regulatory/<TICKER>_<topic-slug>_<YYYY-MM-DD>.md`
