@@ -222,6 +222,46 @@ The pattern (issuer's own table → verbatim quote → analyst-labeled pedagogic
 - 50–100 words per risk: describe, quantify impact if possible, note mitigants
 - Cover all four categories
 
+### 10. Investor-lens scorecards (optional — 600–1,000 words total)
+- Skip only when the user has explicitly said "no lens scorecards" / "skip Section 10".
+- Open with a one-paragraph cycle snapshot from `indicators.db` (VIX, 10Y Treasury, HY OAS) — state the as-of date; this snapshot feeds all four lenses.
+- Four subsections, ~150–250 words each: **10.1 Buffett scorecard**, **10.2 Munger scorecard**, **10.3 Damodaran scorecard**, **10.4 Howard Marks cycle posture**.
+- Each subsection: bolded verdict line → 3–5 row scorecard table → 2–3 sentence evidence chain (re-using citations from Sections 1–9) → one-sentence failure mode that names what would flip the verdict.
+- Verdicts use the `*Lens view:*` / `*视角观点:*` label. Never `Buffett would buy`, `巴菲特会买`, `Damodaran's fair value is`.
+- See `investor_lenses.md` for the four rubrics, verdict bands, and the required-assumption block for the Damodaran lens.
+
+### Data Used / 数据来源清单 (mandatory at the end of the body, before References)
+A short structured manifest of what data this report stands on — separate from the inline citations, which prove *where* each claim came from. The manifest answers *what categories of evidence the analyst pulled at all*, which periods they cover, and what's missing. 8–15 bullets. Format:
+
+```markdown
+## Data Used / 数据来源清单
+
+**Primary filings**
+- 10-K FY2024 (filed YYYY-MM-DD), 10-Q Q3 FY2024 (filed YYYY-MM-DD), DEF 14A 2024 (filed YYYY-MM-DD); recent 8-Ks YYYY-MM-DD to YYYY-MM-DD. Source: SEC EDGAR.
+- [or for non-US:] 年度报告 2024 (filed YYYY-MM-DD), 半年度报告 (filed YYYY-MM-DD), 業績說明會 PPT YYYY-MM-DD. Source: cninfo (巨潮).
+
+**Investor-relations materials**
+- Q3 FY2024 earnings deck (released YYYY-MM-DD); Investor Day YYYY deck; Q3 transcript YYYY-MM-DD. Source: company IR site.
+- (Japan / Korea only) Integrated Report YYYY (統合報告書, released YYYY-MM-DD); Mid-term Plan YYYY-YYYY (中期経営計画).
+
+**Market data**
+- TTM P/E, P/S, P/B, EV/EBITDA as of YYYY-MM-DD. Source: Yahoo Finance / Eastmoney / Kabutan / Naver Finance.
+- Peer multiples (N=3–5 names) as of YYYY-MM-DD. Source: same.
+
+**Third-party research**
+- Gartner CDW Magic Quadrant YYYY (published YYYY-MM-DD); Yole Wafer Equipment Forecast YYYY (published YYYY-MM-DD); IPnest Design IP YYYY (published YYYY-MM-DD); etc.
+
+**Macro / cycle inputs (Section 10 only)**
+- 10Y Treasury yield (`^TNX`) snapshot as of YYYY-MM-DD; HY OAS (FRED BAMLH0A0HYM2) snapshot as of YYYY-MM-DD; VIX snapshot as of YYYY-MM-DD. Source: `indicators.db` (FRED + yfinance).
+
+**Stale notices / coverage gaps**
+- <bulleted list of inputs the analyst tried to pull but couldn't, or that returned data older than 12 months; or "none" if all inputs are fresh>.
+- E.g.: "Top-1 customer % not separately broken out in Q3 10-Q; relied on FY2023 10-K disclosure (>12 months old)."
+- E.g.: "Industry TAM source (Yole 2026 forecast) paywalled; cited management's TAM build from Investor Day deck instead."
+```
+
+The manifest sits between Section 10 (or Section 9 if Section 10 is skipped) and the References block. It is **not** a substitute for the References block — References list every URL cited inline; Data Used summarizes the *categories* of evidence and their freshness.
+
 ## Output Template
 
 ```
@@ -238,6 +278,7 @@ TABLE OF CONTENTS
 7. Competitive Landscape
 8. Market Opportunity (TAM)
 9. Risk Assessment
+10. Investor-lens scorecards (optional)
 
 ======================================
 
@@ -288,6 +329,19 @@ Financial Risks:
 [2–3 risks with descriptions]
 Macroeconomic Risks:
 [2–3 risks with descriptions]
+
+10. INVESTOR-LENS SCORECARDS (optional — 600–1,000 words total)
+[One-paragraph cycle snapshot from `indicators.db` (VIX, 10Y, HY OAS) as of YYYY-MM-DD.]
+10.1 Buffett scorecard (verdict / table / evidence / failure mode)
+10.2 Munger scorecard (verdict / table / inversion check / evidence / failure mode)
+10.3 Damodaran scorecard (verdict / assumption block / table / evidence / failure mode)
+10.4 Howard Marks cycle posture (verdict / component table / contrary evidence / failure mode)
+
+======================================
+
+DATA USED / 数据来源清单
+[Structured manifest per the spec above — primary filings, IR materials,
+ market data, third-party research, macro inputs, stale notices / gaps.]
 
 ======================================
 

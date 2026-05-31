@@ -30,6 +30,19 @@ Use when the user requests:
 - User requests "flash note" or "quick take" → Different format
 - Company is not already covered → Need initiation first
 
+## Guardrails (at-a-glance — the rules with the worst failure modes)
+
+Compact index of the load-bearing don't-dos enforced throughout this skill.
+
+- **Do not use earnings dates / numbers from training data.** Always search for the latest release and verify it's within 3 months of today. See Phase 1 "🚨 TRAINING DATA IS OUTDATED 🚨".
+- **Do not write a beat/miss number without citing the consensus source by name + date.** "Beat consensus" is meaningless without "Bloomberg consensus as of YYYY-MM-DD" or "FactSet, accessed YYYY-MM-DD". See § "Citations & Source Attribution".
+- **Do not invent 10-Q line items.** Every metric in the report traces to a specific page of the 10-Q, the earnings release, or the call transcript. If the company doesn't break out a metric (e.g. segment-by-region revenue), say so explicitly.
+- **Do not write a guidance change ("raised", "cut", "color-bearing reaffirmation") without citing both the old guide and the new guide.** Both must be linked to their respective primary sources, not paraphrased.
+- **Do not let a forward estimate update be ungrounded.** Every Old → New estimate line in the report must name the specific result that drove the change ("Q3 services margin came in 280 bp ahead; raised FY services margin estimate by 50 bp").
+- **Do not omit URLs.** Every source in the Sources block is a clickable hyperlink (SEC EDGAR for filings, IR site for the earnings release/deck/transcript). Plain text references are a defect.
+- **Do not skip the Data Used manifest** at the end of the report (Phase 4 output spec). The DOCX format already enforces the Sources block; the markdown handoff also gets a structured manifest so the data inventory is legible at a glance.
+- **Do not run destructive SQL against `db/*.db`.** Read-only only. See [`CLAUDE.md`](../../../CLAUDE.md) § "Database Safety".
+
 ## Critical Requirements
 
 ### 1. Speed & Timeliness
@@ -192,6 +205,34 @@ Verify content, formatting, accuracy, and timeliness before delivery.
 - Complete sources section with clickable hyperlinks
 
 **Optional Deliverable**: XLS model update (optional for earnings updates)
+
+### Data Used / 数据来源清单 (mandatory at the end of every report)
+
+A structured manifest of evidence categories + dates + freshness. Goes at the end of the report (DOCX appendix or markdown footer), separate from but complementing the existing "SOURCES & REFERENCES" hyperlinked block. Format:
+
+```markdown
+## Data Used / 数据来源清单
+
+**Quarterly results (the quarter under analysis)**
+- Q<N> FY<YY> earnings release (released YYYY-MM-DD); 10-Q filed YYYY-MM-DD; earnings call transcript YYYY-MM-DD; earnings deck YYYY-MM-DD; investor presentation if separate.
+
+**Prior-period anchors (for QoQ / YoY comparison)**
+- Q<N-1> FY<YY> release YYYY-MM-DD; Q<N> FY<YY-1> release YYYY-MM-DD; latest 10-K (FY filed YYYY-MM-DD).
+
+**Consensus + guidance**
+- Bloomberg / FactSet consensus snapshot as of YYYY-MM-DD (one trading day before release). Prior FY guide from Q<N-1> release / call (issued YYYY-MM-DD); new FY guide from Q<N> release / call (issued YYYY-MM-DD).
+
+**Market data**
+- Closing price YYYY-MM-DD (before release); next-day reaction YYYY-MM-DD. TTM multiples as of YYYY-MM-DD. Source: Yahoo Finance / Bloomberg.
+
+**Cross-coverage context**
+- Latest [reports/company/<Slug>/<filename>.md](../../../reports/company/<Slug>/<filename>.md) (last updated YYYY-MM-DD) — read as structured input for thesis-impact section, not cited inline.
+
+**Stale notices / coverage gaps**
+- <bulleted list — sell-side estimate not available, transcript not yet published, segment break-out withheld, or "none">.
+```
+
+Place this block immediately above the SOURCES & REFERENCES section. The manifest summarizes categories + freshness; SOURCES & REFERENCES lists every URL cited inline.
 
 ## Key Differences from Initiation Report
 

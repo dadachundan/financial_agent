@@ -4,7 +4,9 @@ Snapshot of every skill registered for this project, grouped by role and depende
 
 > **Keep this file in sync.** Whenever a skill is added, removed, or its `## Prerequisites` block changes under `.claude/skills/`, update this file in the same commit and bump the "Last updated" date below. See the [Maintenance](#maintenance) section at the bottom for the checklist.
 
-Last updated: 2026-05-31 (`compare-companies`: now supports N-way comparisons of 2 to 4 companies — TL;DR table scales to N rows, scorecard switches to rank/checkmark for N≥3, bottom-line gets N strategic-posture paragraphs, §5.8 covers players *beyond* the focal N. Word target: 5–9k for N=2, 7–12k for N=3, 10–15k for N=4. Also: hardened the prior-research existence check in both `compare-companies` and `company-research` — now case-insensitive + ticker-matched + per-side, since folder casing varies (`Xpeng_NYSE_XPEV`) and a Chinese report may be named `_公司研究.md` or `_Research_Document_zh.md`)
+Last updated: 2026-05-31 (LLMQuant/skills cross-pollination: (1) **`company-research`** gains an optional Section 10 — "Investor-lens scorecards" — with Buffett / Munger / Damodaran / Howard Marks cycle rubrics adapted from the [LLMQuant investor-lens collection](https://github.com/LLMQuant/skills/tree/master/skills/llmquant-investor-lenses); rubrics live in `references/investor_lenses.md`, plumbed to existing data (Sections 1–9 + `indicators.db` for VIX/10Y/HY OAS). (2) **NEW skill `take-profit-lab`** — exit-discipline backtest (hold / tier-out / strict-exit / trailing stop / vol-aware) on yfinance-adjusted prices; complements [[trader-plan]] (entry) and [[portfolio-decision]] (final rating); reports go to `reports/take-profit/<TICKER>_<YYYY-MM-DD>.md`. (3) **All four research skills** (`company-research`, `compare-companies`, `earnings-analysis`, `sector-overview`) now carry an at-a-glance `## Guardrails` block summarizing the load-bearing don't-dos + a mandatory `## Data Used / 数据来源清单` manifest at the end of every report (categories + dates + freshness, complementing the existing inline citations).
+
+Earlier: 2026-05-31 (`compare-companies` N-way support 2-4 companies; prior-research existence check hardened across `compare-companies` + `company-research`)
 
 ---
 
@@ -104,6 +106,7 @@ idea-generation → initiating-coverage → earnings-preview → earnings-analys
 | Skill | Purpose |
 |---|---|
 | [sector-overview](../.claude/skills/sector-overview/SKILL.md) | Industry-level landscape report |
+| [take-profit-lab](../.claude/skills/take-profit-lab/SKILL.md) | Exit-discipline backtest on a single ticker (hold / tier / trailing stop / vol-aware); complements `trader-plan` (entry) and `portfolio-decision` (final rating) — owns the *exit* question |
 | [canslim-screener](/Users/x/.claude/skills/canslim-screener/SKILL.md) | William O'Neil CANSLIM screen (lives in `~/.claude`, not project) |
 | [catalyst-calendar](../.claude/skills/catalyst-calendar/SKILL.md) | Upcoming earnings / events |
 | [morning-note](../.claude/skills/morning-note/SKILL.md) | 7 am desk note |

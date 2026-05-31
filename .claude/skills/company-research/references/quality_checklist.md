@@ -83,6 +83,29 @@ IR materials are first-class primary sources — see SKILL.md § "Investor prese
 - Mitigating factors noted.
 - Customer-concentration risk is evaluated in every report (not optional) — included with quantified top-1 / top-5 % whenever top-1 > 10% or top-5 > 30%.
 
+## Investor-lens scorecards (Section 10, when included)
+
+See `investor_lenses.md` for the four rubrics and verdict bands. Checks:
+
+- [ ] Cycle snapshot block opens Section 10 — VIX, 10Y Treasury (`^TNX`), HY OAS (FRED BAMLH0A0HYM2) values with as-of date, all sourced to `indicators.db`.
+- [ ] **10.4 (cycle posture) is computed first** and any disagreement with the company-specific verdicts in 10.1–10.3 is called out explicitly. No forced consensus.
+- [ ] Each lens subsection has the verdict-first shape: bolded verdict line → 3–5 row scorecard table → 2–3 sentence evidence chain → one-sentence failure mode.
+- [ ] **Every input in every scorecard table is already cited in Sections 1–9** (or comes from the `indicators.db` snapshot with as-of date). No new inline citations introduced inside Section 10.
+- [ ] Damodaran subsection (10.3) contains the explicit assumption block: revenue CAGR, terminal margin, reinvestment rate, WACC components (Rf + β × ERP), terminal growth (≤ Rf), intrinsic-value range, market cap, margin of safety. Terminal growth never above the risk-free rate.
+- [ ] Verdicts use `*Lens view:*` (English) / `*视角观点:*` (Chinese). No `Buffett would buy`, `巴菲特会买`, `Damodaran's fair value is`, or similar persona endorsements.
+- [ ] Munger subsection (10.2) contains the mandatory inversion sentence ("the single scenario that most plausibly destroys the thesis is ___").
+- [ ] Total Section 10 word count is 600–1,000 (~150–250 per subsection). Significantly shorter than Section 4 or Section 6 — this is a verdict summary, not new analysis.
+
+## Data Used / 数据来源清单 manifest (mandatory)
+
+See `report_structure.md` → "Data Used" block for the format. Checks:
+
+- [ ] Manifest block sits between the last body section (Section 10 or Section 9) and the References block, in **both** the English and Chinese reports.
+- [ ] All five categories present: Primary filings · Investor-relations materials · Market data · Third-party research · Macro / cycle inputs (when Section 10 is included).
+- [ ] Each entry carries a publication or filing date.
+- [ ] **Stale notices / coverage gaps** subsection lists what couldn't be pulled or was older than 12 months, or explicitly states "none". A missing-or-empty stale-notices block is a defect — the inventory must acknowledge what isn't there.
+- [ ] The manifest does **not** duplicate the References block — References list every URL cited inline; Data Used summarizes evidence categories and freshness.
+
 ## Writing Quality
 - Professional, analytical tone.
 - Lead with key insights.

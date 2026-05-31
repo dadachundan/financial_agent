@@ -2,6 +2,15 @@
 
 description: Create comprehensive industry and sector landscape reports covering market dynamics, competitive positioning, key players, and thematic trends. Use for client requests, sector initiations, thematic research pieces, or internal knowledge building. Triggers on "sector overview", "industry report", "market landscape", "sector analysis", "industry deep dive", or "thematic research".
 
+## Guardrails (at-a-glance — the rules with the worst failure modes)
+
+- **Do not invent TAM numbers or growth rates.** Every market-size figure traces to a specific named source — research firm + report title + publication date — with the URL. "TAM ~$X B" with no source is a defect. See § "Important Notes".
+- **Do not paraphrase a sell-side opinion as a primary-source fact.** "X is the share leader" is an analyst view unless a cited third-party leaderboard (IPnest, Gartner Magic Quadrant, IDC tracker, IBISWorld, IQVIA, TrendForce) says so at a specific URL. Label `*Analyst view:*` otherwise.
+- **Do not let "TAM" hide the difference between addressable, served, and obtainable.** Distinguish TAM / SAM / SOM in the market-size section; mixing them is the single most common failure of sector overviews.
+- **Do not skip the Data Used manifest** at the end of the report (see block below).
+- **Do not ignore freshness.** Sector reports age fast — discard web sources older than 12 months unless they're landmark research. Include publication dates in link titles.
+- **Do not run destructive SQL against `db/*.db`.** Read-only only. See [`CLAUDE.md`](../../../CLAUDE.md) § "Database Safety".
+
 ## Workflow
 
 ### Step 1: Define Scope
@@ -79,6 +88,31 @@ Deliverables:
   - Valuation summary
   - Key charts: market growth, share trends, valuation history
 - Optional: Excel appendix with detailed company data
+
+### Data Used / 数据来源清单 (mandatory at the end of every report)
+
+A structured manifest of evidence categories + dates + freshness. Goes immediately before the References block (or, if the report has no separate References block, at the end). Format:
+
+```markdown
+## Data Used / 数据来源清单
+
+**Market sizing**
+- Gartner / IDC / IBISWorld / IQVIA / Yole / TrendForce report titles + publication dates + URLs. Note the TAM / SAM / SOM scope of each.
+
+**Growth & forecasts**
+- Each forward growth rate cited to a named research firm or company-disclosed projection with publication date. Recent industry-research notes (last 12 months) preferred.
+
+**Competitive landscape**
+- Top 5–10 players covered — each anchored to their latest 10-K / 年度报告 / Yuho (filing date) and IR materials (deck dates). Recent M&A transactions cited to press releases.
+
+**Valuation context**
+- Sector trading multiples as of YYYY-MM-DD; recent comparable M&A transaction multiples; sources (Yahoo Finance / Capital IQ / Bloomberg / mergermarket).
+
+**Stale notices / coverage gaps**
+- <bulleted list — TAM source paywalled, private-company financials not disclosed, regulatory data delayed, or "none">.
+```
+
+The manifest distinguishes evidence categories from the consolidated References list. References list every URL cited inline; Data Used summarizes the source categories + freshness.
 
 ### Update-in-place rule — at most one report per topic
 

@@ -143,6 +143,49 @@ The scorecard's job is to give a senior reader a 60-second overview. Lead with t
 
 Then a closing paragraph that names **the specific catalyst** (event, date, KPI) that will move each verdict in the next 4–8 quarters. For N≥3, name which side wins under which observable condition (e.g. "If hyperscaler customers continue pulling fine-tuning workloads onto open-format lakes, A wins; if enterprise IT continues consolidating into SQL-first cloud DW, B wins; if existing OLTP customers reject moving to a separate analytics stack, C wins."). Avoid both-sidesism and all-N-sidesism — name the catalyst per side.
 
+### Data Used / 数据来源清单 (mandatory — between §10 and References)
+
+A structured manifest of what evidence the comparison stands on — separate from the inline citations, which prove *where* each claim came from. For an N-way comparison the manifest must enumerate **both** sides' (or all N sides') filings, plus the third-party sources that anchor §5.4 (tool-level share) and §5.5 (IP / patent franchise). Format:
+
+```markdown
+## Data Used / 数据来源清单
+
+**Primary filings — Company A**
+- 10-K FY2024 (filed YYYY-MM-DD), 10-Q Q3 FY2024 (filed YYYY-MM-DD), DEF 14A 2024 (filed YYYY-MM-DD); recent 8-Ks YYYY-MM-DD to YYYY-MM-DD. Source: SEC EDGAR (CIK <padded>).
+
+**Primary filings — Company B**
+- 10-K FY2024 (filed YYYY-MM-DD), 10-Q Q3 FY2024 (filed YYYY-MM-DD), DEF 14A 2024 (filed YYYY-MM-DD); recent 8-Ks YYYY-MM-DD to YYYY-MM-DD. Source: SEC EDGAR (CIK <padded>).
+
+**Primary filings — Company C (N≥3 only)**
+- ... same shape ...
+
+**Primary filings — Company D (N=4 only)**
+- ... same shape ...
+
+**Investor-relations materials (per side)**
+- Latest 2 earnings decks per side; latest Investor Day deck per side; capital-markets-day decks; conference appearances last 12 months. Source: each company's IR site + SEC 8-K Exhibit 99.2 (US issuers).
+
+**Market data**
+- TTM multiples + 3-yr range + peer median as of YYYY-MM-DD. Source: Yahoo Finance / Eastmoney / Kabutan / Naver Finance.
+
+**Third-party industry research (anchors §5.4 and §5.5)**
+- IPnest Design IP YYYY (published YYYY-MM-DD); Gartner Magic Quadrant for <segment> YYYY (published YYYY-MM-DD); IDC Worldwide <segment> Tracker YYYY-Q<n>; TrendForce <segment> Forecast YYYY-MM; IBISWorld report N<NNNNN>; IQVIA / EvaluatePharma; Forrester Wave; SemiAnalysis notes; etc.
+
+**Press / regulatory**
+- Recent DOJ / SEC / EU competition actions; court filings; press release dates for named customer wins / capacity announcements / M&A.
+
+**Per-company research docs consumed as structured input (not cited inline)**
+- [reports/company/<A>/<filename>.md](../../../reports/company/<A>/<filename>.md) (last updated YYYY-MM-DD)
+- [reports/company/<B>/<filename>.md](../../../reports/company/<B>/<filename>.md) (last updated YYYY-MM-DD)
+- (etc. for N≥3)
+
+**Stale notices / coverage gaps**
+- <bulleted list — third-party reports paywalled, customer concentration not separately broken out, etc., or "none">.
+- E.g.: "Siemens EDA share figures from a third-party source older than 12 months — relied on management's framing in CDNS earnings call instead."
+```
+
+The manifest sits between §10 (Bottom line) and References. It is **not** a substitute for References — References list every URL cited inline; Data Used summarizes evidence categories, freshness, and the prior research docs consumed as structured input (those research docs are NOT cited inline per the Numerical Accuracy rule, so the manifest is the only place they appear).
+
 ### References (no word count)
 
 Deduplicated, grouped:

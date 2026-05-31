@@ -23,6 +23,19 @@ A comparison report that only restates each company's pitch is a failure. The re
 
 **Discoverability discipline.** Most readers will scan the TL;DR + scorecard + bottom line and stop. The detailed sections (§1–§10) are evidence for the scannable layer — write them assuming the reader will skim. Tables beat paragraphs; numbers beat adjectives; explicit section cross-references (§5.5, §6) help a skimmer drill into the one section they care about.
 
+## Guardrails (at-a-glance — the rules with the worst failure modes)
+
+Compact index of the load-bearing don't-dos enforced throughout this skill. Each rule has been the cause of a real defect in past compare-companies reports.
+
+- **Do not invent a head-to-head fact.** Share numbers, product overlap claims, customer-overlap counts must each come from a checkable source. See § "Core principle".
+- **Do not cite the subject's 10-K for a share-leadership claim.** 10-Ks never say "we lead"; relabel as `*Analyst view:*` and cite IPnest / Gartner / IDC at a specific URL. See § "Specific failure mode: do NOT misattribute sell-side opinions to filings" in [[company-research]].
+- **Do not cite `reports/company/<X>/...md` as the source of a number.** That's a derived work; follow its inline citation to the primary source and cite that instead. See § "Numerical Accuracy".
+- **Do not let a scorecard cell say `depends`, `arguably`, `slightly`, `mixed`, `potentially`, or `could`.** Pick a side / a rank / "Tied" / "Neither". See Required deliverable 4.
+- **Do not skip §5.8 ("Other big players").** Listing only the focal N misrepresents the industry; surface 3–7 other players classified into Primary / Adjacent / Acquisition target / Domestic-market alternative, with the moat-anatomy tables extended for Primary competitors. See Required deliverable 6.
+- **Do not write a side's bet that paraphrases another side's bet.** Bottom-line bets must be orthogonal; if they aren't, you haven't found the delta. See Required deliverable 5.
+- **Do not skip the Data Used manifest** at the end of each report. The compare-specific manifest must list both sides' primary filings + the third-party share sources that anchor §5.4. See `references/report_structure.md` → "Data Used".
+- **Do not run destructive SQL against `db/*.db`.** Read-only only. See [`CLAUDE.md`](../../../CLAUDE.md) § "Database Safety".
+
 ## Core principle: accuracy over completeness — never hallucinate
 
 The accuracy rules from [[company-research]] apply verbatim — read its **Core principle** section before drafting. Summary of the comparison-specific failure modes:

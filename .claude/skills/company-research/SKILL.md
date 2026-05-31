@@ -24,6 +24,21 @@ This is the **single most important rule** and overrides every other instruction
 - **Direct quotations must be verbatim.** If you can't quote exactly, paraphrase and drop the quote marks. When writing about official company website data or regulatory filings, **default to quoting the original text rather than paraphrasing.** This ensures readers can verify every claim against the source.
 - **Distinguish primary (filings, transcripts) from secondary (news, third-party) sources.** When two sources disagree, prefer the primary and note the discrepancy briefly.
 
+## Guardrails (at-a-glance — the rules with the worst failure modes)
+
+Compact index of the load-bearing don't-dos enforced throughout this skill. Each links to the detailed section that owns it; **none of these are new rules** — they are the project-history failure modes worth seeing on one page.
+
+- **Do not invent numbers, executives, customers, product names, page references, or URLs.** Write `disclosure not found` instead. See **Core principle** above and `references/quality_checklist.md`.
+- **Do not attach a 10-K citation to a sell-side opinion.** "Lam is the global #1 in etch" is an analyst view, not 10-K language; label `*Analyst view:*` and either cite a real third-party source (Yole / Gartner / IDC at a specific report URL) or leave uncited. See § "Specific failure mode: do NOT misattribute sell-side opinions to filings".
+- **Do not invent SEC URLs.** Resolve every filename via the EDGAR submissions JSON (`https://data.sec.gov/submissions/CIK<padded>.json`); never construct `2025_10K_<accession>.htm`-style patterns — those are 404s. See Step 10.2.
+- **Do not write a customer-share number without its denominator.** "X% of revenue" is wrong when more than one denominator could apply — always "X% of consolidated revenue" or "X% of <Segment> segment revenue". A segment-level customer (e.g. NVIDIA in DS Memory) is never silently presented as a consolidated top-5 customer. See Step 3.
+- **Do not paraphrase 10-K / 年度报告 / Yuho product descriptions.** Block-quote verbatim with the citation directly above. Paraphrase is where fabrication enters. See § "The Products & Services chapter is the most important section…".
+- **Do not present analyst-constructed verdicts as `Buffett would buy`, `巴菲特会买`, or `Damodaran's fair value is`.** Investor-lens scorecards (Section 10) use the lens *as a rubric*, not as an endorsement. See `references/investor_lenses.md`.
+- **Do not skip the Step 10 verification pass.** Every URL HTTP-checked, every SEC filename resolved, ≥5 10-K-cited numbers spot-checked, executive names confirmed against 8-K / DEF 14A. The verification log is the deliverable's contract with the reader. See Step 10.
+- **Do not write "(Source: our model)" / "(estimate, our analysis)" / "(本模型)" anywhere in the report.** Cite the external inputs the model is built on, not the model. See the project-wide Numerical Accuracy rule in [`CLAUDE.md`](../../../CLAUDE.md).
+- **Do not skip the Data Used manifest** (see `references/report_structure.md` → "Data Used" block). A report that lists ≥40 inline citations but no data manifest is harder for the reader to triage — the manifest is one block, not duplication.
+- **Do not run destructive SQL against `db/*.db`.** Read-only — `SELECT`, `.schema`, `PRAGMA`. Test-writes go via `FINAGENT_DB_DIR=/tmp/...`. See [`CLAUDE.md`](../../../CLAUDE.md) § "Database Safety".
+
 ## Source hierarchy: official company data first
 
 **Prioritize the company's own official sources over third-party research.** The company's website, SEC filings, investor materials, and press releases are the ground truth; analyst reports, news articles, and third-party research are supporting evidence.
@@ -157,6 +172,20 @@ After 10-Ks / 年度报告 / Yuho, **investor-relations materials are the next-m
 
 If the company has effectively no IR program (small-cap, pre-IPO private, or genuinely doesn't host any deck publicly), note that fact explicitly in the verification log and lean harder on filings + third-party research instead. **Do not skip IR collection just because it's annoying — the absence is itself a data point worth flagging.**
 
+## Investor-lens scorecards (optional Section 10 of the report)
+
+After Sections 1–9 establish the facts, four named scoring rubrics give the reader a structured second opinion on the same evidence — **Buffett** (quality at a sensible price, 0–100), **Munger** (weighted quality + inversion, 0–10), **Damodaran** (story-plus-numbers DCF margin of safety, ±%), and **Howard Marks cycle** (market regime offense↔defense, 0–100). All four are analytical overlays on data already cited in earlier sections; none are persona role-play. Adapted from the [LLMQuant investor-lens skill collection](https://github.com/LLMQuant/skills/tree/master/skills/llmquant-investor-lenses) (MIT).
+
+**When to include:** any initiation-style report where the audience is a buy/sell decision-maker. Skip only when the user explicitly says "no lens scorecards" / "skip Section 10". The section is short (600–1,000 words total) and worth the small cost.
+
+**Placement:** new Section 10 between Section 9 Risk Assessment and the References block, in both the English and Chinese reports. Verdicts are labelled `*Lens view:*` / `*视角观点:*` per the existing analyst-view discipline — never `Buffett would buy`, `巴菲特会买`, or `Damodaran's fair value is`.
+
+**Key inputs already in your tree:**
+- Sections 1–9 facts (re-use, do not introduce new inline citations inside Section 10).
+- `indicators.db` snapshot (VIX, 10Y Treasury via `^TNX`, HY OAS via FRED BAMLH0A0HYM2, IG OAS) for the cycle posture and Damodaran's risk-free rate. State the as-of date inline.
+
+**See [`references/investor_lenses.md`](references/investor_lenses.md) for the four rubrics in detail — scoring components, verdict bands, required-assumption blocks, failure modes, and the guardrails that apply to all four lenses.**
+
 ## Report language
 
 **Default behavior: ALWAYS produce both English AND Simplified Chinese (zh-CN).** Never Traditional Chinese, Japanese, or Korean for the prose.
@@ -220,6 +249,7 @@ See [`references/citations.md`](references/citations.md) for the full rules, per
 - `references/report_structure.md` — section-by-section word counts, per-section content spec, and the full output template. **Read before writing.**
 - `references/citations.md` — inline-citation rules and example.
 - `references/risk_taxonomy.md` — the 8–12 risks across 4 buckets used in Section 9.
+- `references/investor_lenses.md` — the four optional Section 10 scorecards (Buffett, Munger, Damodaran, Howard Marks cycle).
 - `references/quality_checklist.md` — quality standards and the pre-submit success checklist.
 
 ---
@@ -470,6 +500,18 @@ Read `references/report_structure.md` for the 9-section spec and full output tem
 Both reports share the same underlying data, charts, citations — but each is written natively in its own language and grammar, not a literal translation of the other. A Chinese reader should find the Chinese report as natural and fluent as an English reader finds the English report.
 
 **If the user overrides to a single language**, produce only that one report and skip the other language entirely.
+
+### Step 9.5 — Apply investor-lens scorecards (optional Section 10)
+
+After Sections 1–9 are drafted but before Step 10 verification, compute the four scorecards described in [`references/investor_lenses.md`](references/investor_lenses.md). Workflow:
+
+1. **Pull the cycle snapshot once.** Query `indicators.db` (or call `indicators/data_fetcher.fetch_all()`) for VIX, 10Y Treasury (`^TNX`), HY OAS (FRED `BAMLH0A0HYM2`), IG OAS (FRED `BAMLC0A0CM`). State the as-of date and use this snapshot across all four lenses.
+2. **Compute 10.4 (Howard Marks cycle) first.** It gates the verdicts above — a defensive regime should mute "Bullish" verdicts in 10.1–10.3; call out the disagreement explicitly rather than forcing consensus.
+3. **Compute 10.1, 10.2, 10.3** from the data already cited in Sections 1–9 — re-use existing inline citations rather than introducing new ones. If a required input is missing from earlier sections, the fix is to go back and gather it there, not one-shot-cite it inside Section 10.
+4. **Write each subsection in the lens's verdict-first shape:** bolded verdict line → 3–5 row scorecard table → 2–3 sentence evidence chain reusing earlier citations → one-sentence failure mode that names what would flip the verdict.
+5. **Re-use the same Section 10 in both languages.** Same scorecards, same numbers, natively-written prose in each language; the verdict labels translate (`*Lens view:*` ↔ `*视角观点:*`).
+
+Skip this step if the user said `no lens scorecards` / `skip Section 10` / similar. Total time: ~15 minutes for the four scorecards combined once the cycle snapshot is pulled.
 
 ### Step 10 — Verification pass (mandatory for BOTH languages before declaring done)
 
