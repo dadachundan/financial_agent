@@ -1,6 +1,6 @@
 # Ambarella, Inc. (NASDAQ:AMBA) — 公司研究报告
 
-**截至日期: 2026-05-24 (已应用第 10 步核验流程——参见文末核验日志)**
+**截至日期: 2026-05-29 (已更新 2027 财年第一季度业绩及韩华战略合作)**
 **代码: NASDAQ:AMBA**
 **上市地: 纳斯达克全球精选市场 (Nasdaq Global Select Market)**
 **注册地: 开曼群岛 (运营总部: 美国加州圣克拉拉)**
@@ -30,13 +30,15 @@ Ambarella, Inc. 是一家边缘 AI (edge-AI) 半导体公司, 专为计算机视
 
 公司在 2026 财年 (截至 **2026 年 1 月 31 日**) 录得营业收入 **3.907 亿美元**, 较 2025 财年的 2.849 亿美元同比增长 **37.2%**, GAAP 毛利率为 **59.2%** (2025 财年为 60.5%), GAAP 净亏损 **7,590 万美元**, 即摊薄每股亏损 1.78 美元, 较上年同期 1.171 亿美元 / 每股亏损 2.84 美元有所收窄 ([Q4 & 2026 财年全年 8-K 业绩公告, 2026-02-26](https://www.sec.gov/Archives/edgar/data/1280263/000119312526076823/d108529dex991.htm))。在非 GAAP 基础上, Ambarella 重新转入小幅年度盈利 (非 GAAP 净利润 2,690 万美元 / 每股 0.62 美元, 较 2025 财年非 GAAP 亏损 680 万美元转正) ——这正是市场在两年库存调整期内一直等待的拐点。截至财年末, Ambarella 持有现金及等价物 1.910 亿美元, 加上 1.216 亿美元可销售债务证券 (合计 3.126 亿美元, 无有息负债), 全球员工 **959 人, 其中约 75% 从事研发**, 重点分布: 台湾 372 人、美国 252 人、中国 225 人、欧洲 95 人 ([Ambarella FY2026 10-K, Item 1, "Human Capital Resources"](https://www.sec.gov/Archives/edgar/data/1280263/000119312526119321/0001193125-26-119321-index.htm))。
 
+在 2027 财年第一季度 (截至 **2026 年 4 月 30 日**; 于 **2026 年 5 月 28 日**发布), Ambarella 录得营业收入 **1.004 亿美元** (同比增长 16.9%, 上一财年同期为 8,590 万美元), 略高于市场一致预期的 1.002 亿美元 ([Q1 FY2027 8-K 业绩公告, 2026-05-28](https://www.sec.gov/Archives/edgar/data/0001280263/000119312526245234/d130687dex991.htm))。GAAP 毛利率为 **58.4%** (上一财年同期为 60.0%), 非 GAAP 毛利率为 **59.9%** (上一财年同期为 62.0%)。GAAP 净亏损为 **1,810 万美元** (较上年同期的 2,430 万美元亏损收窄); 非 GAAP 净利润为 **500 万美元**, 即摊薄每股收益 **0.11 美元** (超出市场一致预期的 0.10 美元, 且高于上一财年同期的 300 万美元)。截至第一季度末, 公司持有的现金、现金等价物及可销售债务证券总额为 **2.778 亿美元** (较 2026 财年末的 3.126 亿美元减少 3,480 万美元, 主要由于公司为支持新产品周期及应对供应链动态而主动增加库存; 但较上一财年同期的 2.594 亿美元增长 1,840 万美元)。
+
 Ambarella 的商业模式是典型的无晶圆厂 (fabless) 半导体打法: 在客户硬件 (安防摄像头、ADAS 模块、AD 域控制器、消费相机、机器人) 内拿下多年期设计中标 (design win), 然后在 3–7 年的产品生命周期内分享每一项设计的出货量。公司销售面向全球, 但终端客户压倒性集中在亚洲——**2026 财年 88% 的营业收入流向亚洲** (2025 财年 85%、2024 财年 79%), 反映了为全球品牌制造安防摄像头、行车记录仪与 Tier-1 车载模块的中国大陆/台湾 ODM 生态 ([Ambarella FY2026 10-K, "Sales by Geographic Region"](https://www.sec.gov/Archives/edgar/data/1280263/000119312526119321/0001193125-26-119321-index.htm))。分销通过一家非独家销售代表 **WT Microelectronics (文晔科技, 前身为 Wintech)** 进行, 该公司在 2026 财年承接了 **70% 的营业收入**, 较 2025 财年的 63% 与 2024 财年的 53% 持续提升; WT 协议有效期延伸至 2029 年 1 月。
 
 ![营业收入与毛利率走势](charts/amba_revenue_gm_trend.png)
 
 *来源: [Ambarella 10-K 文件 FY2022–FY2026, 合并经营报表](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001280263&type=10-K&dateb=&owner=include&count=40)。*
 
-**估值快照 (截至 2026-05-20)。** Ambarella 收盘价 **84.28 美元**, 对应 4,386 万股流通普通股, 市值 **37.0 亿美元** ([Yahoo Finance, AMBA 报价, 2026-05-20](https://finance.yahoo.com/quote/AMBA/))。过去十二个月 (TTM) 主要指标: **TTM P/E 不具备意义** (2026 财年 GAAP 净亏损 7,590 万美元); **远期市盈率 (forward P/E) 约 77.6 倍**一致预期, **TTM 市销率 (P/S) 为 9.46 倍** (37.0 亿美元市值 ÷ 3.907 亿美元 TTM 营业收入), **市净率 (P/B) 为 6.1 倍**, **EV/Revenue 为 8.5 倍**, **EV/EBITDA 为负 (–48×)**, 公司在 GAAP 基础上仍处于 EBITDA 亏损状态 ([Yahoo Finance Key Statistics, AMBA, 2026-05-20](https://finance.yahoo.com/quote/AMBA/key-statistics))。
+**估值快照 (截至 2026-05-29)。** 经历第一季度业绩发布及 2026 年 5 月 29 日的后续市场调整后, Ambarella 收盘价跌至 **72.18 美元** (较 5 月 28 日业绩发布前的收盘价 91.84 美元重挫 **21.4%**), 对应 4,386 万股流通普通股, 市值缩水至 **31.7 亿美元** ([stockanalysis.com — AMBA, 2026-05-29 收盘价](https://stockanalysis.com/stocks/amba/))。过去十二个月 (TTM) 主要指标: **TTM P/E 不具备意义** (2026 财年 GAAP 净亏损 7,590 万美元); **远期市盈率 (forward P/E) 约 77.6 倍**一致预期, **TTM 市销率 (P/S) 压缩至 8.10 倍** (31.7 亿美元市值 ÷ 3.907 亿美元 TTM 营业收入) (此前为 9.46 倍), **市净率 (P/B) 为 5.2 倍**, **EV/Revenue 为 7.4 倍**, **EV/EBITDA 为负**, 公司在 GAAP 基础上仍处于 EBITDA 亏损状态 ([Yahoo Finance Key Statistics, AMBA, 2026-05-29](https://finance.yahoo.com/quote/AMBA/key-statistics))。这次剧烈的股价下行反映了市场在业绩发布后的重新定价, 主要受到对下半年供应链成本压力 (内存元件 DRAM/flash 涨价) 以及前瞻性需求风险的担忧驱动 ([Ambarella (AMBA) Sees Significant Drop in Stock Price, 2026-05-29](https://www.gurufocus.com/news/8891596/ambarella-amba-sees-significant-drop-in-stock-price))。
 
 9.5 倍的 TTM P/S 大致处于 Ambarella 三年区间的中位。该股票在 2026 年触及约 96.69 美元高点——对应 TTM 销售约 11 倍的隐含倍数——并在 2024 年末 IoT/安防摄像头库存底部期间一度探底至约 48.30 美元 (彼时按当时 TTM 销售口径约 6.7 倍 P/S)。回溯更早, AMBA 曾于 2021 年末在后疫情 AI/EV 视觉热潮中触及约 217 美元高点 (对应彼时 TTM 销售约 28 倍) ([yfinance 五年价格历史, 2026-05-20](https://finance.yahoo.com/quote/AMBA/history))。
 
@@ -73,7 +75,7 @@ timeline
     2023 : 宣布 CV3-AD685 进入 Continental ADAS 参考设计
     2024 : 库存调整; CFO 换届 — John Young 于 2024 年 2 月就任
     2025 : 推出 CV7 (8K 边缘 AI)、N1 系列 (边缘端生成式 AI)
-    2026 : 营业收入同比 +37% 至 3.907 亿美元; CES 上发布 CV7 4nm; 非 GAAP 重回盈利
+    2026 : 营业收入同比 +37% 至 3.907 亿美元; CES 发布 CV7 4nm; 第一季度业绩超预期; 与韩华签署 8 亿美元 AI 长期合作
 ```
 
 **战略转折。** Ambarella 有过三次实质性的重新定位。(1) **摆脱纯消费品依赖**——当 GoPro 在 2017 年 9 月为 Hero6 选择自研 GP1 SoC (由 Socionext 协助设计) 时, Ambarella 失去了旗舰消费客户, 在随后的两个产品周期中消费营业收入大幅下滑, 因为 Hero7/Hero8 继承了自研硅片路径; 管理层随即加速对安防与车载业务的投资 ([Engadget, "The Hero 6 and 'GP1' is GoPro's chance to grow again", 2017-09-28](https://www.engadget.com/2017-09-28-gopro-hero-6-and-gp1.html); [Motley Fool, "Ambarella Loses as GoPro, DJI, and Google Shop Around for New Chips", 2017-10-14](https://www.fool.com/investing/2017/10/14/ambarella-loses-as-gopro-dji-and-google-shop-aroun.aspx))。公司在 2026 财年 10-K 中明确写道, "直至 2023 年, 我们多数营业收入来自仅供人眼观看的应用", 而当前战略焦点已转向机器视觉与物理 AI 应用。(2) **借 VisLab 与 Oculii 完成车载布局**——2015 年收购 VisLab (从帕尔马大学剥离的意大利自动驾驶研究实验室) 为 Ambarella 奠定了 AD 软件栈基础, 2021 年 11 月收购 **Oculii** (4D 成像雷达感知软件) 则是公司在 ADAS/AD 领域可信地与 Mobileye 和 NVIDIA 竞争的关键枢纽 ([Ambarella FY2022 10-K, Item 1, "Acquisition of Oculii"](https://www.sec.gov/Archives/edgar/data/1280263/000156459022013224/0001564590-22-013224-index.htm))。(3) 2018 年推出的 **CVflow AI 加速器**是公司对视觉 SoC 将与 AI 推理融合的押注——这一论点随着边缘 AI 工作负载的扩散而显得相当先见, 一个硬件家族 (CV2 → CV2x → CV5/CV7 → CV3) 现已覆盖公司所有的终端市场。
@@ -190,7 +192,7 @@ pie title 2026 财年按渠道划分的营业收入 (Ambarella, 占总营业收�
 
 **已点名的客户中标。** 最公开引用的车载中标包括 **Continental (大陆集团)** 在其 ADAS 参考设计中采用 CV3-AD685, 在展会上点名欧洲与亚洲 OEM 的公开引用 (未披露具体量产项目), 以及业绩电话会议披露的更广泛 Tier-1 设计导入周期。在安防/消费领域, 部署存量覆盖几乎全部主要 IP cam OEM (西方品牌 + 中国 ODM), 以及 **Axon** 执法记录仪和 **Garmin** / **Nextbase** 行车记录仪。10-K 未将具体 OEM 列为客户 (与行业惯例一致; 具名客户披露通过 OEM 自身文件或行业刊物进行) ——Ambarella 自身的客户披露用语是通用的 ("直接出货的 OEM")。
 
-**合作伙伴。** 与 **Samsung** (主要, 包括美国得州奥斯汀及韩国的 5nm 与 4nm 部分) 和 **TSMC** (开发中的先进 4nm 与 2nm 部分) 的代工合作均已披露 ([FY2026 10-K, "Manufacturing"](https://www.sec.gov/Archives/edgar/data/1280263/000119312526119321/0001193125-26-119321-index.htm))。软件与生态合作覆盖 AD 栈与 AI 模型社区 (Cooper 平台支持 Caffe、TensorFlow、PyTorch 与 ONNX 导入)。
+**合作伙伴。** 与 **Samsung** (主要, 包括美国得州奥斯汀及韩国的 5nm 与 4nm 部分) 和 **TSMC** (开发中的先进 4nm 与 2nm 部分) 的代工合作均已披露 ([FY2026 10-K, "Manufacturing"](https://www.sec.gov/Archives/edgar/data/1280263/000119312526119321/0001193125-26-119321-index.htm))。战略合作伙伴关系包括 2026 年 5 月与韩国**韩华集团 (Hanwha Group)** 签署的长期供应与共同开发协议 (涵盖 Hanwha Vision、Hanwha Robotics 等), 预计未来十年的潜在营业收入规模超过 **8 亿美元**。该协议跟进自 2026 年 3 月签署的备忘录 (MOU), 聚焦于边缘 AI 芯片与软件的采购及联合开发, 在安防、机器人、工业自动化及生命科学领域集成 Ambarella 的 CVflow 平台; Hanwha Vision 仍保留其 Wisenet SoC 的工程、设计与采购控制权 ([Hanwha and Ambarella Enter Into Long-Term Edge AI Agreement, GlobeNewswire, 2026-05-28](https://www.globenewswire.com/news-release/2026/05/28/3303250/23306/en/Hanwha-and-Ambarella-Enter-Into-Long-Term-Edge-AI-Agreement.html))。软件与生态合作覆盖 AD 栈与 AI 模型社区 (Cooper 平台支持 Caffe、TensorFlow、PyTorch 与 ONNX 导入)。
 
 ---
 
