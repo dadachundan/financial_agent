@@ -1,6 +1,6 @@
 ---
 name: zsxq-ideas
-description: Generate investment ideas from the zsxq report library (db/zsxq.db) by combining zsxq-recommend (theme/PDF surfacing) + zsxq-analyze (parallel per-PDF deep reads) + idea-generation (Step-4 presentation). Supports two modes — **themed** ("ideas on AI infra from zsxq", "long humanoid plays from my reports") and **fishing** ("what should I buy", "scan my zsxq feed", "any ideas", "pitch me something from zsxq"). Use whenever the user wants stock ideas sourced from their zsxq library rather than generic quantitative screens. Triggers: "ideas from zsxq", "zsxq ideas", "what stocks does my zsxq feed suggest", "scan zsxq for ideas", "/zsxq-ideas".
+description: Generate investment ideas from the zsxq report library (db/zsxq.db) by combining zsxq-recommend (theme/PDF surfacing) + zsxq-analyze (parallel per-PDF deep reads) + idea-generation (Step-4 presentation). Supports three modes — **themed** ("ideas on AI infra from zsxq", "long humanoid plays from my reports"), **fishing** ("what should I buy", "scan my zsxq feed", "any ideas", "pitch me something from zsxq"), and **theme-build** ("build themes from my zsxq feed", "turn my feed into tracked baskets", "build a theme on X from zsxq") which clusters the feed and seeds/refreshes durable `theme-research` baskets from the actual broker content. Use whenever the user wants stock ideas or tracked thematic baskets sourced from their zsxq library rather than generic quantitative screens. Triggers: "ideas from zsxq", "zsxq ideas", "what stocks does my zsxq feed suggest", "scan zsxq for ideas", "build themes from zsxq", "turn my zsxq feed into baskets", "/zsxq-ideas".
 ---
 
 # Generate Investment Ideas from the zsxq Library
@@ -36,11 +36,21 @@ Parse the user's prompt:
 - **Fishing** — the user has no theme. Examples: "what should I buy",
   "any ideas", "scan my feed", "surprise me", "pitch me something",
   `/zsxq-ideas` with no args. → jump to [Fishing workflow](#fishing-workflow).
+- **Theme-build** — the user wants *tracked baskets* out of the feed, not
+  a one-shot idea note. Examples: "build themes from my zsxq feed", "turn
+  my feed into tracked baskets", "build a theme on X from zsxq", "make
+  baskets from the latest 200 reports". → jump to [Theme-build
+  workflow](#theme-build-workflow). This mode bridges into `theme-research`:
+  it clusters the feed, then seeds/refreshes durable
+  `reports/themes/<slug>_theme.md` baskets from the actual broker content.
 
 If genuinely ambiguous (e.g. "ideas from zsxq" — they may mean "any
 ideas" or "I'll tell you the theme next message"), ask one short
-question: *"Theme in mind, or fishing mode (I'll cluster your feed
-and surface candidate themes first)?"*
+question: *"Theme in mind, fishing mode (I'll cluster your feed and
+surface candidate themes first), or theme-build (turn the feed into
+tracked baskets)?"* The tell for theme-build is the words *theme*,
+*basket*, or *track* — fishing/themed produce a `reports/ideas/` note;
+theme-build produces durable `reports/themes/` baskets.
 
 Also pick up optional knobs if present:
 
@@ -245,6 +255,116 @@ this under its idea-generation bucket automatically (if `reports/ideas/`
 isn't yet a known bucket, the file still renders — flag it for a
 viewer update separately).
 
+## Theme-build workflow
+
+Goal: turn the zsxq feed into **durable tracked baskets** at
+`reports/themes/<slug>_theme.md`, not a one-shot idea note. This mode is
+the bridge from the feed into [[theme-research]]: it clusters the feed,
+then for each chosen theme hands `theme-research` an *evidence bundle of
+the cluster's actual broker content* so the basket is built (or refreshed)
+from specific, cited broker numbers — not generic web knowledge.
+
+> **Why this mode exists.** The failure it prevents: building a theme
+> basket that cites the zsxq report *titles* as evidence but never uses
+> the broker calls *inside* them (target prices, deal structures,
+> forecasts). That content is the new, non-public part of the feed and is
+> the entire reason to source from zsxq rather than a web search. If the
+> basket reads like it could have been written without the PDFs, this mode
+> was done wrong.
+
+### TB1. Cluster the feed
+
+Reuse Fishing steps **F1–F3** verbatim: pull the 200-row window
+(`list_recent.py --limit 200 --summary-chars 800`), cluster into 3–7
+themes, present theme cards (name + thesis + density + anchor file_ids +
+metadata tickers). **Surface the cluster list and get the user to confirm
+which themes to build** (1–7) and the ticker scope — per `theme-research`'s
+create-mode rule, baskets are most useful when the user has agreed to the
+scope. Also confirm language (English default; Chinese opt-in).
+
+### TB2. Build the evidence bundle (per chosen theme)
+
+For each theme the user picked, dump its cluster's 翻译精华 summaries — the
+guaranteed source floor — into one bundle:
+
+```bash
+python3 .claude/skills/zsxq-ideas/scripts/evidence_bundle.py \
+    --file-ids <comma-sep cluster file_ids> \
+    --slug <theme-slug> \
+    --out /tmp/zsxq_evidence/<theme-slug>.md
+```
+
+The summary column already carries the headline broker numbers (target
+prices, deal sizes, % moves, TAM figures). For the **2–3 flagship reports
+per theme** (highest page count / most central), go deeper to pull more
+specific numbers:
+
+```bash
+python3 .claude/skills/zsxq-analyze/scripts/extract_pdf.py \
+    --file-id <flagship id> --header --max-chars 40000
+# image-only pages? OCR first: ocr_pdf.py --file-id <id>, then re-extract
+```
+
+### TB3. Build / refresh the basket via theme-research (parallel)
+
+Spawn **one Agent per theme in a single message** (parallel — per the
+[parallel-multi-report feedback](../../../.claude/projects/-Users-x-projects-financial-agent/memory/feedback_parallel_multi_report.md)).
+Each agent runs the [[theme-research]] create-or-refresh workflow on its
+slug and is handed: (a) the theme slug + confirmed ticker scope, (b) the
+evidence-bundle path from TB2, (c) the flagship file_ids to `extract_pdf`
+for deeper numbers, and (d) the [zsxq citation
+convention](#zsxq-citation-convention) below. `theme-research` owns the
+file format and the verified Performance/return data; this mode's whole
+value-add is feeding it the **real zsxq broker content**, woven into the
+Thesis, per-ticker Justification cells, Recent events, and Data Used
+manifest.
+
+If the basket already exists, this is a *refresh + enrichment* pass — edit
+in place, append a `## History` line noting the zsxq enrichment, and do
+**not** recompute the Performance table unless the user asked for a data
+refresh.
+
+### TB4. Verify (the enrichment-specific checks)
+
+Beyond `theme-research`'s own Step-7 verify:
+
+- **Every zsxq-sourced number cites a file_id**, not just the report
+  title. Grep the file for the viewer-link pattern and confirm the count
+  is non-trivial (a 15-ticker basket sourced from ~10 reports should carry
+  10+ `zsxq #` citations).
+- **No fabricated broker numbers.** Spot-check 3–5 zsxq-attributed figures
+  against the evidence bundle / extracted text — the number must literally
+  appear in the cited report. This is the project's Numerical Accuracy
+  rule applied to broker content.
+- Structure intact (12 mandatory sections), ticker table parses, sample
+  URLs resolve.
+
+### TB5. Hand-off
+
+The durable artifact is the `theme-research` basket, refreshed over time by
+`theme-research` itself (`refresh my <slug> theme`). `zsxq-ideas` does not
+maintain the basket after this — it *seeds and re-enriches* it from the
+feed. Point the user at `refresh my <slug> theme` for the next cycle.
+
+## zsxq citation convention
+
+Whenever zsxq content lands in **any** downstream report — a `reports/ideas/`
+idea note or a `reports/themes/` basket — cite the broker's *specific
+content* to the source `file_id`, never the report title alone:
+
+- **Inline format:** `[Bank — short topic, zsxq #<file_id>](http://localhost:5001/zsxq-pdf/<file_id>)`.
+  The viewer link (`localhost:5001/zsxq-pdf/<file_id>`) is the project's
+  convention for pointing at a zsxq PDF.
+- **Cite the number, not the headline.** "MS sees Asia energy capex
+  doubling by 2030" with no link is a non-citation. The same sentence with
+  `([MS — 能源遇见算力, zsxq #184152244582842](http://localhost:5001/zsxq-pdf/184152244582842))`
+  attached to the figure is a citation.
+- **Only state numbers that literally appear** in the evidence-bundle
+  summary or the extracted PDF text. No extrapolation (don't compute upside
+  off a target price the report didn't state). Numerical Accuracy rule.
+- **Preserve original-language report titles** in the link text (年度报告,
+  有価証券報告書, 创新黎明 2.0) per the project citation standard.
+
 ## Extraction-agent prompt
 
 Use this verbatim for every parallel `/zsxq-analyze` fan-out, plugging
@@ -346,10 +466,15 @@ in-context, no script needed.
   or `canslim-screener`.
 - Not a fundamental validator — the shortlist is a starting funnel.
   Validation = `/company-research`, `/trading-analysis`.
-- Not a thematic basket tracker — for that, use `theme-research`
-  (which maintains tracked baskets over time at
-  `reports/themes/<slug>_theme.md`). `zsxq-ideas` is a one-shot
-  source-from-feed, `theme-research` is the durable basket.
+- Not the *owner* of thematic baskets — `theme-research` owns the durable
+  basket (`reports/themes/<slug>_theme.md`) and its refresh / mutate /
+  drift lifecycle. `zsxq-ideas` **Theme-build mode** *seeds and
+  re-enriches* those baskets from the feed (clustering → evidence bundles
+  → the citation discipline), then hands off. The themed/fishing modes
+  remain one-shot idea notes at `reports/ideas/`. If the user wants to
+  refresh an existing basket's *data* (returns / drift) rather than its
+  *zsxq sourcing*, send them straight to `theme-research` (`refresh my
+  <slug> theme`).
 - Not a deep read of a single PDF — that's `/zsxq-analyze` directly.
 
 ## Prerequisites
@@ -357,6 +482,15 @@ in-context, no script needed.
 This skill internally uses (no machine-enforced deps — these are
 already-installed sibling skills, not upstream artifacts):
 
-- [[zsxq-recommend]] — metadata pull
-- [[zsxq-analyze]] — per-PDF extraction (parallel fan-out)
-- [[idea-generation]] — Step-4 presentation format
+- [[zsxq-recommend]] — metadata pull + feed clustering
+- [[zsxq-analyze]] — per-PDF extraction (parallel fan-out); its
+  `scripts/extract_pdf.py` / `ocr_pdf.py` go deeper than the summary bundle
+- [[idea-generation]] — Step-4 presentation format (themed / fishing modes)
+- [[theme-research]] — durable basket format + create/refresh/drift
+  lifecycle (theme-build mode hands off to it)
+
+Own scripts:
+
+- `scripts/evidence_bundle.py` — dumps the 翻译精华 summaries for a cluster
+  of file_ids into one markdown bundle (the theme-build source floor).
+  Read-only on `db/zsxq.db`.

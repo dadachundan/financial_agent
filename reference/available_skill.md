@@ -4,7 +4,9 @@ Snapshot of every skill registered for this project, grouped by role and depende
 
 > **Keep this file in sync.** Whenever a skill is added, removed, or its `## Prerequisites` block changes under `.claude/skills/`, update this file in the same commit and bump the "Last updated" date below. See the [Maintenance](#maintenance) section at the bottom for the checklist.
 
-Last updated: 2026-05-31 (NEW skill **`zsxq-ideas`** — idea-generation funnel sourced from the zsxq report library. Two modes: themed (user names a theme → 8-12 parallel `/zsxq-analyze` fan-out → 5-10 ticker shortlist with idea-generation Step-4 presentation, saved to `reports/ideas/zsxq_<slug>_<date>.md`) and fishing (no theme → cluster the recent 200-row feed into 3-6 themes, then lite fan-out on top 2 themes for a triage shortlist). Promotes the zsxq area from "Pair" to "Trio" — `zsxq-recommend` + `zsxq-analyze` + `zsxq-ideas`. English filenames mandatory per the CLAUDE.md rule. Output is idea sourcing, not a buy rating — next step always points to `/company-research <ticker>`.
+Last updated: 2026-05-31 (round 4 — **`zsxq-ideas` gains a third mode: theme-build.** Clusters the feed (reuse fishing F1–F3), then seeds/refreshes durable `theme-research` baskets at `reports/themes/<slug>_theme.md` from the *actual broker content* — not generic web knowledge. New `scripts/evidence_bundle.py` dumps a cluster's 翻译精华 summaries into one source pack; flagships go deeper via `zsxq-analyze/extract_pdf.py`. New **zsxq citation convention** (applies to all 3 modes): cite each broker number to its `file_id` via `http://localhost:5001/zsxq-pdf/<file_id>`, never the report title alone — with a hard no-fabrication rule. Adds `[[theme-research]]` to the skill's Prerequisites. Triggers added: "build themes from zsxq", "turn my zsxq feed into baskets".)
+
+Earlier 2026-05-31 (round 3.5): NEW skill **`zsxq-ideas`** — idea-generation funnel sourced from the zsxq report library. Two modes: themed (user names a theme → 8-12 parallel `/zsxq-analyze` fan-out → 5-10 ticker shortlist with idea-generation Step-4 presentation, saved to `reports/ideas/zsxq_<slug>_<date>.md`) and fishing (no theme → cluster the recent 200-row feed into 3-6 themes, then lite fan-out on top 2 themes for a triage shortlist). Promotes the zsxq area from "Pair" to "Trio" — `zsxq-recommend` + `zsxq-analyze` + `zsxq-ideas`. English filenames mandatory per the CLAUDE.md rule. Output is idea sourcing, not a buy rating — next step always points to `/company-research <ticker>`.
 
 Earlier 2026-05-31: Language-default flip on the 4 monitoring/tracking skills — `etf-overlap`, `ma-event-tracker`, `theme-research`, `regulatory-risk-monitor` now default to **English only**; Chinese is opt-in via `also in Chinese` / `bilingual` / `--zh` / `用中文也输出一份`. The substantive research skills `company-research` / `compare-companies` / `earnings-analysis` / `sector-overview` keep their bilingual default. Same line applied to the earlier-added `take-profit-lab`. Recorded in [feedback_tracking_skills_english_default.md](../../.claude/projects/-Users-x-projects-financial-agent/memory/feedback_tracking_skills_english_default.md).
 
@@ -91,13 +93,13 @@ This is the only chain with **machine-enforced** upstream skills (declared via `
     └──────────────────┘
 ```
 
-All three read `db/zsxq.db`. `zsxq-recommend` reads metadata only; `zsxq-analyze` extracts the full PDF text (via `ocrmac` if needed); `zsxq-ideas` orchestrates both into a 5-10 ticker shortlist with `idea-generation`'s Step-4 presentation, saved to `reports/ideas/zsxq_<slug>_<date>.md`.
+All three read `db/zsxq.db`. `zsxq-recommend` reads metadata only; `zsxq-analyze` extracts the full PDF text (via `ocrmac` if needed); `zsxq-ideas` orchestrates both into either a 5-10 ticker shortlist with `idea-generation`'s Step-4 presentation (saved to `reports/ideas/zsxq_<slug>_<date>.md`), or — in **theme-build mode** — durable `theme-research` baskets seeded from the cluster's actual broker content (`reports/themes/<slug>_theme.md`). Theme-build is the one zsxq path that crosses into `theme-research`.
 
 | Skill | Purpose |
 |---|---|
 | [zsxq-recommend](../.claude/skills/zsxq-recommend/SKILL.md) | Surface candidate `file_id`s from the recent feed |
 | [zsxq-analyze](../.claude/skills/zsxq-analyze/SKILL.md) | Deep-read one PDF and answer a question about it |
-| [zsxq-ideas](../.claude/skills/zsxq-ideas/SKILL.md) | Generate 5-10 stock ideas from the zsxq feed — **themed** ("AI infra ideas from zsxq") or **fishing** ("what should I buy / pitch me something"). Clusters → parallel fan-out → ticker aggregation → Step-4 presentation. Saves to `reports/ideas/` |
+| [zsxq-ideas](../.claude/skills/zsxq-ideas/SKILL.md) | Generate ideas / baskets from the zsxq feed — **themed** ("AI infra ideas from zsxq"), **fishing** ("what should I buy / pitch me something"), or **theme-build** ("build themes from zsxq" → seeds/refreshes `theme-research` baskets from real broker content via `evidence_bundle.py` + the zsxq citation convention). Themed/fishing save to `reports/ideas/`; theme-build hands off to `theme-research` at `reports/themes/` |
 
 ## 3. Coverage-lifecycle workflows (no hard deps — logical order)
 
