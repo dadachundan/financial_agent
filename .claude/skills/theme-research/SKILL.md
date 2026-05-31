@@ -53,6 +53,23 @@ Every theme is one file: `reports/themes/<slug>_theme.md` (English default). Chi
 
 **Created:** 2026-05-31 · **Last refreshed:** 2026-05-31 · **Last mutated:** 2026-05-31 · **Refresh cadence:** monthly · **Languages tracked:** en
 
+## What's New
+
+*The delta since you last looked — newest refresh on top. Older entries collapse into the archive below so this stays short.*
+
+**2026-06-30 refresh (vs 2026-05-31):**
+- **Added** SZSE:300354 Donghua Testing (core) — 6-D force sensor entered mass production ([cninfo, 2026-06](https://...)).
+- **Dropped** HKEX:9863 Leapmotor — humanoid program shelved ([HKEX 2026-06](https://...)).
+- **Movers:** basket +8.2% since last refresh vs CSI 300 +2.1%; Anpeilong +19% on the Tesla order print.
+- **New broker call:** GS initiated Anpeilong Buy, PT ¥120 ([GS, zsxq #...](http://localhost:5001/zsxq-pdf/...)).
+- **Thesis drift:** none — basket still reflects the original BOM-expansion bet.
+
+<details><summary>Earlier refreshes</summary>
+
+**2026-05-31 — basket created** (2 tickers: Anpeilong core, Leapmotor adjacent).
+
+</details>
+
 ## Thesis
 
 Sensor suppliers for humanoid robots — force / torque sensors, IMUs, tactile sensors, vision-system components, and supporting MCUs. The bet is that humanoid build-out from Tesla Optimus, Figure, Unitree, Xpeng, and several Chinese OEMs creates a 5–10× per-unit sensor BOM vs incumbent industrial-robot designs, with the cost curve playing out fastest among A-share pure-play suppliers that already have force-sensor design wins.
@@ -109,6 +126,26 @@ humanoid robotics / 人形机器人 · force-torque sensor / 力矩传感器 · 
 - 2026-05-31 — created with initial 2-ticker basket (Anpeilong core, Leapmotor adjacent)
 - 2026-05-31 — first refresh pass
 ```
+
+Alongside the markdown file, each theme keeps a machine-readable **snapshot sidecar** `reports/themes/<slug>_theme.snapshots.jsonl` — one append-only JSON line per refresh. This is the *tracking backbone*: the next refresh diffs against the last line to author the `## What's New` block, and you can trace the basket's evolution programmatically without parsing prose or git. It is NOT a set of dated full-report copies — just a compact state vector per refresh.
+
+### What's New + snapshot sidecar (trackability)
+
+The whole point of a *tracked* basket is answering "what did I know before, what's new?" Two artifacts deliver that, both updated every refresh — and **never** by spawning dated copies of the report:
+
+1. **`## What's New` section** (top of the md, under the metadata line) — the human-facing delta. Each refresh **prepends** a dated block (tickers added / dropped / role-changed, biggest movers vs benchmark since last refresh, *new* broker calls & catalysts, thesis drift). The previous block rolls into a `<details>` archive so the section stays short. Keep ~5–8 bullets per refresh; link each claim.
+
+2. **`<slug>_theme.snapshots.jsonl`** — the machine record. Append exactly one line per refresh:
+
+   ```json
+   {"date":"2026-06-30","tickers":[{"t":"SZSE:301413","role":"core"},{"t":"NASDAQ:HSAI","role":"core"}],"perf":{"basket_1y":80.2,"bench":"CSI300","bench_1y":33.3,"since_last_refresh":8.2},"evidence_file_ids":[184152244582842,212485814114811],"n_events":6,"note":"added Donghua; dropped Leapmotor"}
+   ```
+
+   Field contract: `date` (ISO), `tickers` (the full current set with roles — so a diff vs the prior line yields added/dropped/role-changed for free), `perf` (basket vs a named benchmark + return since last refresh), `evidence_file_ids` (zsxq/source IDs this refresh leaned on), `n_events`, `note` (one line). The create-pass writes the first (baseline) line.
+
+**How "what's new" is computed:** on refresh, read the last JSONL line, set-diff its `tickers` against the current set, compare `perf`, and list `evidence_file_ids` not seen before → that *is* the `## What's New` block. Deterministic, no eyeballing two long reports.
+
+**Point-in-time recall** is git, not file sprawl: `git show <sha>:reports/themes/<slug>_theme.md` reconstructs any past state, and `git log --oneline -- reports/themes/<slug>_theme.snapshots.jsonl` lists every refresh commit. This is why one canonical file + the sidecar beats dated `_2026-06-30.md` copies (which duplicate the ticker table, drift apart, and clutter the viewer).
 
 ### Slug rules
 
@@ -235,8 +272,11 @@ Drift detection is the value-add of refresh. Surface:
 
 ### Step 4 (Refresh / Create) — Update the file's data-driven sections
 
+**First, compute the delta** so the refresh is trackable: read the last line of `<slug>_theme.snapshots.jsonl` (the prior state), set-diff its `tickers` against the current set, compare `perf`, and note `evidence_file_ids` not seen before. That delta drives the `## What's New` block. (On a create-pass there's no prior line — the delta is "basket created".)
+
 Rewrite the following sections of `<slug>_theme.md` in place:
 
+- **What's New** — **prepend** a dated block with the computed delta (tickers added/dropped/role-changed, biggest movers vs benchmark since last refresh, new broker calls/catalysts, thesis drift); roll the previous block into the `<details>` archive. Keep it to ~5–8 linked bullets.
 - **Performance** — movers / laggards / benchmark comparison for the refresh window.
 - **Recent events** — bulleted list of material press releases / filings since the previous refresh, each inline-cited.
 - **Drift signals** — output of Step 3.
@@ -244,7 +284,7 @@ Rewrite the following sections of `<slug>_theme.md` in place:
 - **Data Used / 数据来源清单** — refreshed manifest with new as-of dates.
 - **References** — append any new URLs cited above.
 
-Update the `**Last refreshed:** YYYY-MM-DD` field in the top-of-file metadata.
+**Then append one line to `<slug>_theme.snapshots.jsonl`** capturing the new state (date, full ticker set + roles, perf vs benchmark + since-last-refresh, evidence_file_ids, n_events, one-line note) — this is what the *next* refresh diffs against. Update the `**Last refreshed:** YYYY-MM-DD` field in the top-of-file metadata.
 
 Do **not** rewrite the Thesis, Scope rules, Tracked tickers, Exclusions, or Keywords sections during a refresh — those are stable across refreshes and only change via a mutation (Step 5) or a deliberate thesis re-grounding (which the user must explicitly request).
 
@@ -261,7 +301,8 @@ For add / drop / role-change / rename:
    - YYYY-MM-DD — renamed slug from <old> to <new>
    ```
 3. **Do NOT regenerate the file's data-driven sections** (Performance / Recent events / Drift signals / Catalysts) unless the user explicitly says "also refresh the data". Mutations are cheap; refreshes are expensive — they pull market data, scan filings, and rewrite multiple sections.
-4. Update `**Last mutated:** YYYY-MM-DD` in the top-of-file metadata. Do not bump `Last refreshed` — that's a different cadence and would be misleading.
+4. **Prepend a one-line bullet to `## What's New`** (e.g. `**2026-06-15 (mutation):** added SZSE:300354 Donghua (core).`) and **append a snapshot line** to `<slug>_theme.snapshots.jsonl` with the new ticker set, `perf` carried over from the last refresh, and `note` = the mutation. This keeps the change visible in the trackability trail without a full data refresh.
+5. Update `**Last mutated:** YYYY-MM-DD` in the top-of-file metadata. Do not bump `Last refreshed` — that's a different cadence and would be misleading.
 
 ### Step 6 — Write or update files
 
@@ -270,6 +311,7 @@ Per the language defaults: English file by default; Chinese companion only when 
 Save:
 - `reports/themes/<slug>_theme.md` (English default — always present)
 - `reports/themes/<slug>_主题研究.md` (Chinese — present only when opted in)
+- `reports/themes/<slug>_theme.snapshots.jsonl` (always — append one line per create / refresh / mutate; language-independent, shared across en/zh)
 
 Charts (optional): `reports/charts/theme_<slug>_*.png` per the existing project convention.
 
@@ -277,6 +319,8 @@ Charts (optional): `reports/charts/theme_<slug>_*.png` per the existing project 
 
 - Re-parse the top-of-file metadata line to confirm the format is intact (dates parse, languages-tracked field valid).
 - Re-parse the Tracked tickers table to confirm row count and column structure are intact.
+- Confirm the `## What's New` block has a new dated entry and the prior one rolled into the archive.
+- Confirm exactly one new line was appended to `<slug>_theme.snapshots.jsonl`, it is valid JSON, and its `tickers` set matches the current Tracked tickers table.
 - Spot-check ≥3 ticker performance numbers in the Performance section vs yfinance.
 - Confirm all inline URLs in the file return HTTP 200 (sample 5).
 - Stop any test servers used during chart rendering.
@@ -287,18 +331,21 @@ Every `<slug>_theme.md` must contain, in this order:
 
 1. **H1 title** with English name and (when relevant) Chinese name.
 2. **Top-of-file metadata line** (Created · Last refreshed · Last mutated · Refresh cadence · Languages tracked).
-3. **## Thesis** (200–400 words).
-4. **## Scope rules** (100–200 words).
-5. **## Tracked tickers** table (mandatory columns: Ticker | Name | Role | Justification | Added).
-6. **## Exclusions** table (optional but recommended — explicit "we considered this and rejected it").
-7. **## Keywords** — bilingual where natural.
-8. **## Performance** (refresh-driven).
-9. **## Recent events** (refresh-driven).
-10. **## Drift signals** (refresh-driven — the value-add).
-11. **## Catalysts** (next 3–6 months, refresh-driven).
-12. **## Data Used / 数据来源清单** (manifest — see block below).
-13. **## References** (every URL cited inline).
-14. **## History** (mutation log; append-only).
+3. **## What's New** (refresh/mutate-driven delta — newest block on top, older blocks in a `<details>` archive; the "what did I know before, what's new" surface).
+4. **## Thesis** (200–400 words).
+5. **## Scope rules** (100–200 words).
+6. **## Tracked tickers** table (mandatory columns: Ticker | Name | Role | Justification | Added).
+7. **## Exclusions** table (optional but recommended — explicit "we considered this and rejected it").
+8. **## Keywords** — bilingual where natural.
+9. **## Performance** (refresh-driven).
+10. **## Recent events** (refresh-driven).
+11. **## Drift signals** (refresh-driven — the value-add).
+12. **## Catalysts** (next 3–6 months, refresh-driven).
+13. **## Data Used / 数据来源清单** (manifest — see block below).
+14. **## References** (every URL cited inline).
+15. **## History** (mutation log; append-only).
+
+Plus the **`<slug>_theme.snapshots.jsonl`** sidecar (one JSON line per create/refresh/mutate) — not part of the md, but mandatory and committed alongside it.
 
 ### Data Used / 数据来源清单 (mandatory)
 
@@ -359,7 +406,12 @@ Charts live in the existing `reports/charts/theme_<slug>_*.png` location, **not*
 
 ### Update-in-place rule
 
-One English file and one Chinese file (when opted-in) per slug. Refresh and mutate both update them in place — never create dated parallel copies. Git history is the audit trail; the `## History` section is the narrative log of intentional changes.
+One English file and one Chinese file (when opted-in) per slug, plus one `<slug>_theme.snapshots.jsonl` sidecar. Refresh and mutate update them **in place** — never create dated parallel copies (`_2026-06-30.md`), which would duplicate the ticker table, drift apart, and clutter the viewer.
+
+Trackability ("what did I know before, what's new?") is delivered **without** dated copies, by three layers:
+- **`## What's New`** — the human-facing delta at the top of the live file (newest refresh on top, older in the archive).
+- **`<slug>_theme.snapshots.jsonl`** — the machine record (one state-vector line per refresh; the next refresh diffs against it).
+- **git** — full point-in-time recall: `git show <sha>:reports/themes/<slug>_theme.md` reconstructs any past state; `git log -- <slug>_theme.snapshots.jsonl` lists every refresh. The `## History` section remains the narrative log of intentional changes.
 
 If the same theme conceptually exists under multiple slugs (e.g. `humanoid-robotics_theme.md` and `humanoid-robotics-sensors_theme.md`), the **narrower** slug wins. Promote the broader slug's content into the narrower one and delete the broader file (ask the user first).
 
