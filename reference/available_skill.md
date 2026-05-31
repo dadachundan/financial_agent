@@ -4,7 +4,9 @@ Snapshot of every skill registered for this project, grouped by role and depende
 
 > **Keep this file in sync.** Whenever a skill is added, removed, or its `## Prerequisites` block changes under `.claude/skills/`, update this file in the same commit and bump the "Last updated" date below. See the [Maintenance](#maintenance) section at the bottom for the checklist.
 
-Last updated: 2026-05-31 (Language-default flip on the 4 monitoring/tracking skills — `etf-overlap`, `ma-event-tracker`, `theme-research`, `regulatory-risk-monitor` now default to **English only**; Chinese is opt-in via `also in Chinese` / `bilingual` / `--zh` / `用中文也输出一份`. The substantive research skills `company-research` / `compare-companies` / `earnings-analysis` / `sector-overview` keep their bilingual default. Same line applied to the earlier-added `take-profit-lab`. Recorded in [feedback_tracking_skills_english_default.md](../../.claude/projects/-Users-x-projects-financial-agent/memory/feedback_tracking_skills_english_default.md).
+Last updated: 2026-05-31 (NEW skill **`zsxq-ideas`** — idea-generation funnel sourced from the zsxq report library. Two modes: themed (user names a theme → 8-12 parallel `/zsxq-analyze` fan-out → 5-10 ticker shortlist with idea-generation Step-4 presentation, saved to `reports/ideas/zsxq_<slug>_<date>.md`) and fishing (no theme → cluster the recent 200-row feed into 3-6 themes, then lite fan-out on top 2 themes for a triage shortlist). Promotes the zsxq area from "Pair" to "Trio" — `zsxq-recommend` + `zsxq-analyze` + `zsxq-ideas`. English filenames mandatory per the CLAUDE.md rule. Output is idea sourcing, not a buy rating — next step always points to `/company-research <ticker>`.
+
+Earlier 2026-05-31: Language-default flip on the 4 monitoring/tracking skills — `etf-overlap`, `ma-event-tracker`, `theme-research`, `regulatory-risk-monitor` now default to **English only**; Chinese is opt-in via `also in Chinese` / `bilingual` / `--zh` / `用中文也输出一份`. The substantive research skills `company-research` / `compare-companies` / `earnings-analysis` / `sector-overview` keep their bilingual default. Same line applied to the earlier-added `take-profit-lab`. Recorded in [feedback_tracking_skills_english_default.md](../../.claude/projects/-Users-x-projects-financial-agent/memory/feedback_tracking_skills_english_default.md).
 
 Earlier 2026-05-31 round 3 — investor-lens pack expansion: `references/investor_lenses.md` now covers **9 lenses** (4 core + 5 optional). Core (default): 10.1 Buffett, 10.2 Munger, 10.3 Damodaran, 10.4 Howard Marks cycle. New optional packs: **10.5 Lynch GARP** (mid-cap growers / ten-bagger discipline / Lynch six-categories), **10.6 Fisher scuttlebutt** (15-point qualitative growth + mandatory non-filing evidence note), **10.7 Burry forensic deep value** (hated-sector + downside-first; sum-to-12 scoring), **10.8 Druckenmiller liquidity-regime** (macro context + 3:1 R/R + same-day-exit trigger), **10.9 Cathie Wood Wright's Law** (cost-curve + 5yr TAM re-pricing + convergence). Routing rules in `investor_lenses.md` § "Implementation tips" tell the analyst which optional lenses fit which company type. Quality checklist + report_structure.md updated with per-lens required-block specs.
 
@@ -73,21 +75,29 @@ This is the only chain with **machine-enforced** upstream skills (declared via `
 | [risk-debate](../.claude/skills/risk-debate/SKILL.md) | `trader-plan` + 3 analyst reports | 3-way risk transcript |
 | [portfolio-decision](../.claude/skills/portfolio-decision/SKILL.md) | `risk-debate`, `trader-plan`, `research-manager` | Final rating (terminal) |
 
-## 2. Pair: zsxq report library
+## 2. Trio: zsxq report library
 
 ```
 ┌──────────────────┐     file_id     ┌──────────────────┐
 │ zsxq-recommend   │ ─────────────▶  │   zsxq-analyze   │
 │ (find PDFs)      │                 │ (deep-read 1 PDF)│
-└──────────────────┘                 └──────────────────┘
+└────────┬─────────┘                 └─────────┬────────┘
+         │           orchestrates both         │
+         │     ┌───────────────────────────────┘
+         ▼     ▼
+    ┌──────────────────┐
+    │   zsxq-ideas     │  ← idea-generation funnel from zsxq feed
+    │ (themed/fishing) │     (fans out N parallel /zsxq-analyze)
+    └──────────────────┘
 ```
 
-Both read `db/zsxq.db`. Recommend reads metadata only; analyze extracts the full PDF text (via `ocrmac` if needed).
+All three read `db/zsxq.db`. `zsxq-recommend` reads metadata only; `zsxq-analyze` extracts the full PDF text (via `ocrmac` if needed); `zsxq-ideas` orchestrates both into a 5-10 ticker shortlist with `idea-generation`'s Step-4 presentation, saved to `reports/ideas/zsxq_<slug>_<date>.md`.
 
 | Skill | Purpose |
 |---|---|
 | [zsxq-recommend](../.claude/skills/zsxq-recommend/SKILL.md) | Surface candidate `file_id`s from the recent feed |
 | [zsxq-analyze](../.claude/skills/zsxq-analyze/SKILL.md) | Deep-read one PDF and answer a question about it |
+| [zsxq-ideas](../.claude/skills/zsxq-ideas/SKILL.md) | Generate 5-10 stock ideas from the zsxq feed — **themed** ("AI infra ideas from zsxq") or **fishing** ("what should I buy / pitch me something"). Clusters → parallel fan-out → ticker aggregation → Step-4 presentation. Saves to `reports/ideas/` |
 
 ## 3. Coverage-lifecycle workflows (no hard deps — logical order)
 
@@ -104,7 +114,7 @@ idea-generation → initiating-coverage → earnings-preview → earnings-analys
 - [initiating-coverage](../.claude/skills/initiating-coverage/SKILL.md) is a 5-task workflow whose Task-1 is essentially `company-research`.
 - [earnings-preview](../.claude/skills/earnings-preview/SKILL.md) → [earnings-analysis](../.claude/skills/earnings-analysis/SKILL.md) → [model-update](../.claude/skills/model-update/SKILL.md) is the quarterly cycle for a name already under coverage.
 - [thesis-tracker](../.claude/skills/thesis-tracker/SKILL.md) is the long-running journal that consumes results from the others.
-- [idea-generation](../.claude/skills/idea-generation/SKILL.md) seeds the funnel.
+- [idea-generation](../.claude/skills/idea-generation/SKILL.md) seeds the funnel via generic quantitative / thematic / special-situation screens. [zsxq-ideas](../.claude/skills/zsxq-ideas/SKILL.md) seeds the same funnel from the zsxq library instead (themed or fishing). Both feed downstream `company-research` → `initiating-coverage` / `trading-analysis`.
 - [compare-companies](../.claude/skills/compare-companies/SKILL.md) takes **2 to 4** `company-research` outputs and produces an N-way head-to-head comparison focused on the delta — product overlap matrix (N+1 columns), moat anatomy (N-column tables), customer overlap, dimension-by-dimension scorecard (rank-based for N≥3). **Default behavior: two files per tuple — English at `reports/compare/<A>_vs_<B>[_vs_<C>...].md` and Simplified Chinese at `reports/compare/<...>_zh.md`** (5–9k words for N=2; 7–12k for N=3; 10–15k for N=4; natively authored in each language). Users can override to single-language with `--en-only` / `--zh-only`. If a research doc is missing or stale, it invokes `company-research` on the missing side first. N≥5 not supported — split into multiple pairwise reports or use `sector-overview`.
 
 ## 4. Standalone, no dependencies
