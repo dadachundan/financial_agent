@@ -1,6 +1,6 @@
 ---
 name: ma-event-tracker
-description: Track an active or proposed M&A deal — target / acquirer / consideration / spread / milestones / break-risk / probability — producing a 3,000–6,000 word English markdown report (Simplified Chinese companion available on explicit request). Pulls from SEC EDGAR (S-4, DEFM14A, 425, 8-K Item 1.01 / 2.01), recent news, and antitrust / regulatory filings. Reports saved to `reports/ma/<Target>_<Acquirer>_<YYYY-MM-DD>.md` (Chinese companion at `..._zh.md` only when requested). Use when the user asks "track the X-Y merger", "what's the spread on the Z deal?", "M&A status on <ticker>", "is the SNPS-ANSS deal closing?", or anything in the merger-arb / deal-status family.
+description: Track an active or proposed M&A deal — target / acquirer / consideration / spread / milestones / break-risk / probability — producing a 3,000–6,000 word English markdown report (Simplified Chinese companion available on explicit request). Pulls from SEC EDGAR (S-4, DEFM14A, 425, 8-K Item 1.01 / 2.01), recent news, and antitrust / regulatory filings. Reports saved to `reports/ma/<Target>_<Acquirer>_<YYYY-MM-DD>.md` (Chinese companion at `..._zh.md` only when requested). **Always confirms target / acquirer direction before writing** — explicit user phrasing ("X is acquiring Y") proceeds directly; ambiguous two-ticker phrasing ("X-Y", "X vs Y") triggers a confirmation prompt; single-ticker phrasing ("track the X deal") auto-detects from EDGAR 8-K and surfaces the result for confirmation. Use when the user asks "track the X-Y merger", "what's the spread on the Z deal?", "M&A status on <ticker>", "is the SNPS-ANSS deal closing?", or anything in the merger-arb / deal-status family.
 ---
 
 # M&A Event Tracker
@@ -116,21 +116,48 @@ For the user's project: helper at `fetch_financial_report.py` (DB `db/financial_
 
 ## Workflow
 
-### Step 0 — Parse inputs
+### Step 0 — Parse inputs and CONFIRM target/acquirer direction
 
-User input forms accepted:
+**Critical: never silently assume which company is the target and which is the acquirer.** "SNPS-ANSS" reads either direction; getting it wrong corrupts the entire deal-snapshot block (the spread math swaps, milestones swap, break-risk attribution flips). The skill must resolve direction *explicitly* before writing anything.
 
-- `track the ANSS-SNPS merger` (target first, then acquirer)
-- `M&A status on AVGO-VMW`
-- `track <ticker>` (skill identifies the active M&A involving that ticker via recent 8-K Item 1.01 / 2.01)
-- `merger arb on Activision-Microsoft` (case-insensitive name matching)
+**Three acceptable input forms** (in preference order):
 
-Resolve target + acquirer to:
+| Form | Example | Direction signal |
+|---|---|---|
+| **Explicit direction (preferred)** | `"Microsoft is acquiring Activision"`, `"SNPS acquired ANSS"`, `"target=ANSS, acquirer=SNPS"`, `"track the merger where SNPS bought ANSS"` | Verb explicitly identifies who acquires whom |
+| **Direction known from context** | `"track the ANSS deal"` (single ticker — skill identifies the active M&A involving that ticker via recent 8-K Item 1.01 / 2.01) | EDGAR tells us which side filed which Items |
+| **Ambiguous two-ticker phrasing (REQUIRES confirmation)** | `"track the SNPS-ANSS merger"`, `"M&A status on AVGO-VMW"`, `"merger arb on Activision-Microsoft"` | **Ask the user which is target and which is acquirer before proceeding** |
+
+**Direction-resolution workflow:**
+
+1. **If the user's phrasing is explicit** ("X is acquiring Y" / "X acquired Y" / "target=A acquirer=B"), proceed directly.
+
+2. **If only one ticker is given** ("track the ANSS deal", "M&A status on AVGO"), use EDGAR to auto-detect:
+   - Pull the named ticker's last 12 months of 8-K Item 1.01 ("Entry into a Material Definitive Agreement") and Item 2.01 ("Completion of Acquisition or Disposition").
+   - The 8-K language explicitly states "Agreement and Plan of Merger" with the counterparty named, and identifies which side is being acquired.
+   - Resolve the counterparty's ticker via EDGAR's ticker→CIK map.
+   - **Surface the detected direction to the user before writing** ("Resolved: ANSS = target, SNPS = acquirer, per ANSS 8-K Item 1.01 filed 2024-01-16. Confirm before I proceed?").
+
+3. **If two tickers are given ambiguously** ("SNPS-ANSS", "AVGO-VMW"), do NOT assume order — **ask the user**:
+   - `"Which side is the target (being acquired) and which is the acquirer? E.g. for SNPS-ANSS: did SNPS acquire ANSS, or did ANSS acquire SNPS?"`
+   - Once the user confirms, proceed with the verified direction.
+
+4. **Optional safety check** even after explicit confirmation: pull the target's 8-K Item 1.01 and verify the counterparty named in the filing matches the acquirer the user stated. If they disagree, surface the conflict to the user before writing — the filing is authoritative.
+
+Resolve both sides to:
 - Ticker + exchange (or `Private` if unlisted).
 - CIK (via EDGAR ticker→CIK map at `https://www.sec.gov/files/company_tickers.json`).
 - Domicile (drives which portal to use as primary source).
 
-If the deal hasn't been announced yet ("rumored Microsoft-Sony deal"), explicitly label the report as "**Speculative — no definitive agreement disclosed**" and skip the spread math.
+**Filename convention is target-first** (`reports/ma/<Target>_<Acquirer>_<YYYY-MM-DD>.md`) — but this is now a *consequence* of the resolved direction, not a request-format assumption. The user does not need to put target first in the request; the skill does the resolving and writes the filename correctly.
+
+**If the deal hasn't been announced yet** ("rumored Microsoft-Sony deal"), explicitly label the report as "**Speculative — no definitive agreement disclosed**" and skip the spread math. Direction confirmation still applies — even a rumored deal has a presumed acquirer and target.
+
+**Failure modes:**
+
+- Silently assuming "first ticker named = target" → forbidden. Always confirm.
+- Picking direction from gut feel ("SNPS is bigger so it must be the acquirer") → forbidden. Use the 8-K filing or ask the user.
+- Continuing past Step 0 with the direction still ambiguous → the entire report will be wrong; stop and resolve first.
 
 ### Step 1 — Pull deal-defining filings
 
@@ -283,6 +310,7 @@ Every report must contain:
 
 ## Guardrails
 
+- **Never silently assume which side is target and which is acquirer.** "SNPS-ANSS" reads either direction; getting it wrong corrupts the entire deal-snapshot block. Use explicit user phrasing ("X is acquiring Y"), or EDGAR 8-K Item 1.01 auto-detection when only one ticker is given, or **ask the user** before proceeding when two tickers are given ambiguously. The filename convention `<Target>_<Acquirer>` is a *consequence* of the resolved direction, not an input-format assumption. See Step 0.
 - **Do not state a deal closing date the company hasn't stated.** "Expected by end of 2Q26" must trace to a specific filing or press release. Otherwise write "Expected close: per company disclosure, 'sometime in 2026'" and quote the exact language.
 - **Do not compute a spread without all three inputs disclosed.** Deal-implied value + target current price (with timestamp) + days to assumed close — show all three.
 - **Do not skip a break-risk category just because it's not currently visible.** "Antitrust: clear so far" is a valid score (1–2/10), but "not addressed" is not.
