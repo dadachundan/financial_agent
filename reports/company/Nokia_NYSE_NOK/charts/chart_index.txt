@@ -1,0 +1,53 @@
+Nokia (NYSE: NOK) — Initiation Report Chart Index
+Generated: 2026-05-29
+
+INVESTMENT SUMMARY
+  chart_01: 12-month stock price
+
+FINANCIAL PERFORMANCE
+  chart_02: Net sales trajectory FY21-FY30E
+  chart_03 ⭐: Revenue by segment (stacked area)
+  chart_04 ⭐: Revenue by geography (stacked bar)
+  chart_10: Gross margin trend
+  chart_11: Operating margin (reported vs comparable)
+  chart_12: FCF & FCF conversion
+  chart_14: Net sales YoY by scenario
+  chart_23: NI sub-segments revenue
+  chart_27: EPS trajectory
+
+COMPANY 101
+  chart_05: History timeline
+  chart_06: Strategic milestones Dec24-Apr26
+  chart_07: Org structure (group leadership)
+  chart_08: Product portfolio map (4 segments)
+  chart_09: Customer mix FY25 vs FY30E
+  chart_15: TAM by submarket
+  chart_19: AI & Cloud customer revenue
+  chart_26: Private wireless customer growth
+
+COMPETITIVE / MARKET
+  chart_16: Optical share pie
+  chart_17: RAN market trajectory
+  chart_18: Competitive quadrant
+  chart_21: 5G SEP families by licensor
+
+SCENARIO ANALYSIS
+  chart_13: Scenario Comp-OP
+  chart_25: Margin bridge FY25-FY28
+
+VALUATION
+  chart_28 ⭐: DCF sensitivity heatmap
+  chart_29: DCF components decomposition
+  chart_30: Peer EV/Sales scatter
+  chart_31: Peer P/E NTM bars
+  chart_32 ⭐: Valuation football field
+  chart_33: WACC build
+  chart_34: Historical EV/Sales multiple
+  chart_35: Bull/Base/Bear implied prices
+
+OTHER
+  chart_20: R&D intensity Nokia vs peers
+  chart_22: Order backlog
+  chart_24: Capital allocation outlook
+
+Total: 30 charts (above the 25-minimum, all 4 mandatory ⭐ included)
