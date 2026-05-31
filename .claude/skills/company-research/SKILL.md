@@ -174,7 +174,7 @@ If the company has effectively no IR program (small-cap, pre-IPO private, or gen
 
 ## Investor-lens scorecards (optional Section 10 of the report)
 
-After Sections 1–9 establish the facts, four named scoring rubrics give the reader a structured second opinion on the same evidence — **Buffett** (quality at a sensible price, 0–100), **Munger** (weighted quality + inversion, 0–10), **Damodaran** (story-plus-numbers DCF margin of safety, ±%), and **Howard Marks cycle** (market regime offense↔defense, 0–100). All four are analytical overlays on data already cited in earlier sections; none are persona role-play. Adapted from the [LLMQuant investor-lens skill collection](https://github.com/LLMQuant/skills/tree/master/skills/llmquant-investor-lenses) (MIT).
+After Sections 1–9 establish the facts, named scoring rubrics give the reader a structured second opinion on the same evidence. **Four core lenses (default)** — **Buffett** (quality at a sensible price, 0–100), **Munger** (weighted quality + inversion, 0–10), **Damodaran** (story-plus-numbers DCF margin of safety, ±%), and **Howard Marks cycle** (market regime offense↔defense, 0–100). **Five optional lenses (add by company fit or on request)** — **Lynch GARP** (10.5, PEG + category), **Fisher scuttlebutt** (10.6, qualitative 15-point growth), **Burry forensic deep value** (10.7, hated-sector + downside-first), **Druckenmiller liquidity-regime** (10.8, macro liquidity + asymmetric sizing), **Cathie Wood Wright's Law** (10.9, cost-curve + 5-year TAM re-pricing). All nine are analytical overlays on data already cited in earlier sections; none are persona role-play. Adapted from the [LLMQuant investor-lens skill collection](https://github.com/LLMQuant/skills/tree/master/skills/llmquant-investor-lenses) (MIT).
 
 **When to include:** any initiation-style report where the audience is a buy/sell decision-maker. Skip only when the user explicitly says "no lens scorecards" / "skip Section 10". The section is short (600–1,000 words total) and worth the small cost.
 
@@ -184,7 +184,7 @@ After Sections 1–9 establish the facts, four named scoring rubrics give the re
 - Sections 1–9 facts (re-use, do not introduce new inline citations inside Section 10).
 - `indicators.db` snapshot (VIX, 10Y Treasury via `^TNX`, HY OAS via FRED BAMLH0A0HYM2, IG OAS) for the cycle posture and Damodaran's risk-free rate. State the as-of date inline.
 
-**See [`references/investor_lenses.md`](references/investor_lenses.md) for the four rubrics in detail — scoring components, verdict bands, required-assumption blocks, failure modes, and the guardrails that apply to all four lenses.**
+**See [`references/investor_lenses.md`](references/investor_lenses.md) for the nine rubrics in detail — scoring components, verdict bands, required-assumption blocks, failure modes, the routing rules for picking optional lenses by company type, and the guardrails that apply to all nine.**
 
 ## Report language
 
@@ -503,15 +503,16 @@ Both reports share the same underlying data, charts, citations — but each is w
 
 ### Step 9.5 — Apply investor-lens scorecards (optional Section 10)
 
-After Sections 1–9 are drafted but before Step 10 verification, compute the four scorecards described in [`references/investor_lenses.md`](references/investor_lenses.md). Workflow:
+After Sections 1–9 are drafted but before Step 10 verification, compute the scorecards described in [`references/investor_lenses.md`](references/investor_lenses.md). Workflow:
 
-1. **Pull the cycle snapshot once.** Query `indicators.db` (or call `indicators/data_fetcher.fetch_all()`) for VIX, 10Y Treasury (`^TNX`), HY OAS (FRED `BAMLH0A0HYM2`), IG OAS (FRED `BAMLC0A0CM`). State the as-of date and use this snapshot across all four lenses.
-2. **Compute 10.4 (Howard Marks cycle) first.** It gates the verdicts above — a defensive regime should mute "Bullish" verdicts in 10.1–10.3; call out the disagreement explicitly rather than forcing consensus.
-3. **Compute 10.1, 10.2, 10.3** from the data already cited in Sections 1–9 — re-use existing inline citations rather than introducing new ones. If a required input is missing from earlier sections, the fix is to go back and gather it there, not one-shot-cite it inside Section 10.
-4. **Write each subsection in the lens's verdict-first shape:** bolded verdict line → 3–5 row scorecard table → 2–3 sentence evidence chain reusing earlier citations → one-sentence failure mode that names what would flip the verdict.
-5. **Re-use the same Section 10 in both languages.** Same scorecards, same numbers, natively-written prose in each language; the verdict labels translate (`*Lens view:*` ↔ `*视角观点:*`).
+1. **Pick the lens set.** Default = the four core lenses (10.1–10.4). Add optional lenses (10.5–10.9) when the company fits them per the routing table in `investor_lenses.md` § "Implementation tips" — Lynch for mid-cap GARP candidates; Fisher for compounders with scuttlebutt evidence; Burry for hated-sector contrarian setups; Druckenmiller for macro-liquidity-sensitive names; Cathie Wood for disruption stories. **When in doubt, stick with the core four.**
+2. **Pull the cycle snapshot once.** Query `indicators.db` (or call `indicators/data_fetcher.fetch_all()`) for VIX, 10Y Treasury (`^TNX`), HY OAS (FRED `BAMLH0A0HYM2`), IG OAS (FRED `BAMLC0A0CM`). State the as-of date and use this snapshot across every included lens.
+3. **Compute 10.4 (Howard Marks cycle) first.** It gates the verdicts above and 10.8 Druckenmiller — a defensive regime should mute "Bullish" verdicts in 10.1, 10.2, 10.3, 10.8; call out the disagreement explicitly rather than forcing consensus.
+4. **Compute the remaining included lenses** from the data already cited in Sections 1–9 — re-use existing inline citations rather than introducing new ones. If a required input is missing from earlier sections, the fix is to go back and gather it there, not one-shot-cite it inside Section 10.
+5. **Write each subsection in the lens's verdict-first shape:** bolded verdict line → 3–5 row scorecard table → 2–3 sentence evidence chain reusing earlier citations → required-block per-lens (Damodaran assumptions, Munger inversion, Lynch category, Fisher scuttlebutt note, Burry downside-first, Druckenmiller macro context + exit trigger, Cathie Wood Wright's Law math + convergence note) → one-sentence failure mode.
+6. **Re-use the same Section 10 in both languages.** Same scorecards, same numbers, natively-written prose in each language; the verdict labels translate (`*Lens view:*` ↔ `*视角观点:*`).
 
-Skip this step if the user said `no lens scorecards` / `skip Section 10` / similar. Total time: ~15 minutes for the four scorecards combined once the cycle snapshot is pulled.
+Skip this step if the user said `no lens scorecards` / `skip Section 10` / similar. Total time: ~15 minutes for the four core; +5 minutes per optional lens added.
 
 ### Step 10 — Verification pass (mandatory for BOTH languages before declaring done)
 

@@ -222,13 +222,14 @@ The pattern (issuer's own table → verbatim quote → analyst-labeled pedagogic
 - 50–100 words per risk: describe, quantify impact if possible, note mitigants
 - Cover all four categories
 
-### 10. Investor-lens scorecards (optional — 600–1,000 words total)
+### 10. Investor-lens scorecards (optional — 600–2,500 words depending on lens set)
 - Skip only when the user has explicitly said "no lens scorecards" / "skip Section 10".
-- Open with a one-paragraph cycle snapshot from `indicators.db` (VIX, 10Y Treasury, HY OAS) — state the as-of date; this snapshot feeds all four lenses.
-- Four subsections, ~150–250 words each: **10.1 Buffett scorecard**, **10.2 Munger scorecard**, **10.3 Damodaran scorecard**, **10.4 Howard Marks cycle posture**.
-- Each subsection: bolded verdict line → 3–5 row scorecard table → 2–3 sentence evidence chain (re-using citations from Sections 1–9) → one-sentence failure mode that names what would flip the verdict.
-- Verdicts use the `*Lens view:*` / `*视角观点:*` label. Never `Buffett would buy`, `巴菲特会买`, `Damodaran's fair value is`.
-- See `investor_lenses.md` for the four rubrics, verdict bands, and the required-assumption block for the Damodaran lens.
+- Open with a one-paragraph cycle snapshot from `indicators.db` (VIX, 10Y Treasury, HY OAS) — state the as-of date; this snapshot feeds the company-specific lenses.
+- **Default (core four, 600–1,000 words total):** ~150–250 words each — **10.1 Buffett scorecard**, **10.2 Munger scorecard**, **10.3 Damodaran scorecard**, **10.4 Howard Marks cycle posture**.
+- **Optional packs (10.5–10.9, +150–250 words each):** add when the company fits per `investor_lenses.md` § "Implementation tips" routing rules — **10.5 Lynch GARP** (mid-cap growers), **10.6 Fisher scuttlebutt** (compounders with qualitative evidence), **10.7 Burry forensic deep value** (hated sectors / suspected value traps), **10.8 Druckenmiller liquidity-regime** (macro-sensitive setups), **10.9 Cathie Wood Wright's Law** (disruption stories where DCF breaks).
+- Each subsection: bolded verdict line → 3–5 row scorecard table → 2–3 sentence evidence chain (re-using citations from Sections 1–9) → per-lens required block (Damodaran assumptions / Munger inversion / Lynch category / Fisher scuttlebutt note / Burry downside-first / Druckenmiller macro context + exit trigger / Cathie Wood Wright's Law math + convergence) → one-sentence failure mode.
+- Verdicts use the `*Lens view:*` / `*视角观点:*` label. Never `Buffett would buy`, `Lynch would chase`, `林奇会买`, `Burry would short`, `Damodaran's fair value is`, `Cathie Wood projects X`.
+- See `investor_lenses.md` for the nine rubrics, verdict bands, required-block specs per lens, and the picking-by-company-type table.
 
 ### Data Used / 数据来源清单 (mandatory at the end of the body, before References)
 A short structured manifest of what data this report stands on — separate from the inline citations, which prove *where* each claim came from. The manifest answers *what categories of evidence the analyst pulled at all*, which periods they cover, and what's missing. 8–15 bullets. Format:
