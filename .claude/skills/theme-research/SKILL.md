@@ -203,6 +203,8 @@ The table columns are fixed: **Ticker | Name | Role | Justification | Added**. T
 
 Once a Chinese companion exists for a theme, subsequent refreshes update both files unless the user says otherwise. The top-of-file **Languages tracked** metadata field records the current state (`en`, `en, zh`, or `zh`). The Tracked tickers table is **identical** across both files (same rows, same justifications — the citation URLs don't translate); only the prose sections (Thesis, Scope rules, Performance summary, Drift signals, Catalysts) are written natively in each language.
 
+**Adding a Chinese companion to an existing English theme** (`build a Chinese version of <slug>`, `<slug> 主题中文版`, etc.): write the new `<slug>_主题研究.md` natively, copy the Tracked-tickers / Exclusions / Performance tables + all citation URLs verbatim from the EN file, and **in the same commit flip the EN file's `Languages tracked: en` → `en, zh`** so future refreshes know to update both. Source quotes inside Justification cells stay in their original PDF language regardless of the language wrapping them (an English broker quote stays English even inside Chinese prose).
+
 Target word count: **2,000–4,000 words per language** (less than [[sector-overview]]'s landscape essay — themes are focused, not exhaustive).
 
 ## Data sources
@@ -286,7 +288,26 @@ Rewrite the following sections of `<slug>_theme.md` in place:
 
 **Then append one line to `<slug>_theme.snapshots.jsonl`** capturing the new state (date, full ticker set + roles, perf vs benchmark + since-last-refresh, evidence_file_ids, n_events, one-line note) — this is what the *next* refresh diffs against. Update the `**Last refreshed:** YYYY-MM-DD` field in the top-of-file metadata.
 
-Do **not** rewrite the Thesis, Scope rules, Tracked tickers, Exclusions, or Keywords sections during a refresh — those are stable across refreshes and only change via a mutation (Step 5) or a deliberate thesis re-grounding (which the user must explicitly request).
+**Retroactive baseline**: if the theme pre-dates the snapshots-sidecar convention and `<slug>_theme.snapshots.jsonl` doesn't exist yet, write **two** lines in the same commit — a synthetic baseline reconstructed from the prior `## History` line / git blame (`note: "baseline (..., superseded same day)"`) followed by the current refresh line. This gives the next refresh a real diff target instead of treating an old theme as freshly-created.
+
+**Citation audit** is part of every refresh, not optional: before writing the new content, walk each prior `zsxq #<file_id>` citation in the file and `head` the corresponding extracted PDF (`extract_pdf.py --file-id <id> --pages 1`) to confirm the file is what it's labelled as. This caught a real mis-attribution (`#812485545245152` had been tagged "MS Hua Hong AAI" but is in fact MS 同仁堂 / Tongrentang — a TCM company). Remove and re-ground anything that doesn't survive the audit; note the fix in `## History`.
+
+Do **not** rewrite the Thesis, Scope rules, Tracked tickers, Exclusions, or Keywords sections during a *plain* refresh — those are stable. Two exceptions where they DO get rewritten, each requiring user confirmation:
+
+### Step 4b — Expansion refresh (sourcing-widening + basket grow)
+
+Neither a plain refresh (data only) nor a plain mutate (tickers only). Triggered by phrasings like `widen sourcing on <slug>`, `expand the <slug> basket`, `rebuild <slug> from the original PDFs`, or when a refresh's Step 3 drift scan surfaces ≥1 ticker with conviction-grade broker coverage that wasn't in the basket. Workflow:
+
+1. **Re-mine the source library wider than the original cluster.** For zsxq-backed themes that means a *strict-keyword* search of the recent ~600–800 DB rows on (a) tracked-ticker names/codes AND (b) theme-specific terms (HBM / NOR / SST / cobot / GLP-1 …) — not the loose generic terms (AI / data center / 算力) that cluster-time keyword matches use. Loose keywords are the right tool for *clustering*; strict keywords are the right tool for *refresh-mining* an already-named theme, because they pick up reports that cover known tickers under terminology the original cluster missed.
+2. **Surface candidate adds (with conviction-grade evidence) to the user** before editing the Tracked tickers table. Each candidate gets a one-line justification quoting the broker call from the original PDF (e.g. *"MS upgrades Winbond and Nanya to OW"* → propose `TPE:2408` as core). The user confirms which to add — basket changes remain user-confirmed.
+3. **Rewrite the Thesis** to incorporate the new conviction (this IS the exception to the "stable across refresh" rule — but only because the user opted in). Re-anchor each Thesis claim with page-cited quotes from the original PDFs.
+4. **Recompute Performance for the new basket size** (Step 4 mechanics) and append a snapshot line whose `note` describes the expansion (e.g. `"expanded 14->16 (added 2408.TW core, 301308.SZ adjacent); 22 reports cited from OCR'd original PDF text"`).
+
+The output is *one* theme file (+ Chinese companion if tracked), not a new file — `update-in-place` still holds.
+
+### Single-theme vs multi-theme execution
+
+For a **single-theme** rebuild (one theme at a time), prefer **direct edits** by the main loop over an agent fan-out — the agent round-trip overhead and the post-agent reconciliation pass (verifying every quote, rebuilding the snapshot, fixing partial state) costs more wall-clock than just doing the edits. Reserve agent fan-out for genuinely parallel multi-theme work (`refresh all my themes`, `build 7 themes from this cluster`).
 
 ### Step 5 (Mutate) — Tracked-tickers-table edits
 

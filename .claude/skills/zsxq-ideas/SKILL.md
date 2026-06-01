@@ -272,15 +272,35 @@ from specific, cited broker numbers — not generic web knowledge.
 > basket reads like it could have been written without the PDFs, this mode
 > was done wrong.
 
-### TB1. Cluster the feed
+### TB1. Cluster the feed (create) — or strict-keyword re-mine (expansion refresh)
 
-Reuse Fishing steps **F1–F3** verbatim: pull the 200-row window
+**Create-mode:** reuse Fishing steps **F1–F3** verbatim: pull the 200-row window
 (`list_recent.py --limit 200 --summary-chars 800`), cluster into 3–7
 themes, present theme cards (name + thesis + density + anchor file_ids +
 metadata tickers). **Surface the cluster list and get the user to confirm
 which themes to build** (1–7) and the ticker scope — per `theme-research`'s
 create-mode rule, baskets are most useful when the user has agreed to the
 scope. Also confirm language (English default; Chinese opt-in).
+
+**Expansion-refresh mode** (rebuilding/widening an existing theme — see
+[[theme-research]] Step 4b): the loose-keyword clustering used in create-mode
+is the *wrong* tool — it over-matches generic AI / data-center / 算力 reports
+that aren't actually on-theme. Use a **strict-keyword** query against a wider
+DB window instead:
+
+- query the recent **~600–800** rows (not just 200) since the original cluster
+  may have used a narrower window;
+- filter strictly on **tracked-ticker names/codes** (e.g. `海力士`, `Hua Hong`,
+  `1347.HK`, `MU\b`) **OR theme-specific technical terms** (e.g. `HBM[34]`,
+  `NOR Flash`, `SST`, `cobot`, `GLP-1`) — never `AI`/`data center`/`算力`/
+  `存储` alone.
+- exclude file_ids already in the existing theme's evidence_file_ids set.
+
+Surface the candidate adds to the user before editing the Tracked tickers
+table: each candidate ticker needs a **conviction-grade broker call** in
+the original PDF text (a Buy / OW rating with target price, a deal mechanic,
+a guidance raise — not just a mention). Loose mentions go in the watch list,
+not the basket. User confirms which adds make it in.
 
 ### TB2. Extract the ORIGINAL PDF content (per chosen theme)
 
@@ -321,25 +341,39 @@ python3 .claude/skills/zsxq-analyze/scripts/extract_pdf.py \
 # only if THAT fails too: fall back to the 翻译精华 summary, labelled as such.
 ```
 
-### TB3. Build / refresh the basket via theme-research (parallel)
+### TB3. Build / refresh the basket via theme-research
 
-Spawn **one Agent per theme in a single message** (parallel — per the
-[parallel-multi-report feedback](../../../.claude/projects/-Users-x-projects-financial-agent/memory/feedback_parallel_multi_report.md)).
+**Multi-theme parallel** (`build all 7`, `refresh 5 themes`): spawn one Agent
+per theme in a single message — per the
+[parallel-multi-report feedback](../../../.claude/projects/-Users-x-projects-financial-agent/memory/feedback_parallel_multi_report.md).
 Each agent runs the [[theme-research]] create-or-refresh workflow on its
 slug and is handed: (a) the theme slug + confirmed ticker scope, (b) the
 extraction-manifest path from TB2, (c) the instruction to `extract_pdf`
 **every** report it cites (not just flagships) and read the original text —
 OCR'd first where the manifest says so, summary fallback-only, and (d) the
-[zsxq citation convention](#zsxq-citation-convention) below. `theme-research`
-owns the file format and the verified Performance/return data; this mode's
-whole value-add is feeding it the **real zsxq broker content** read from the
-original PDFs, woven into the Thesis, per-ticker Justification cells, Recent
-events, and Data Used manifest.
+[zsxq citation convention](#zsxq-citation-convention) below.
+
+**Single-theme (the user is doing them "1 by 1")**: do the edits **directly**
+in the main loop instead of delegating to an agent. The agent round-trip
+overhead, plus the post-agent reconciliation pass (verifying every quote,
+rebuilding the snapshot, sometimes patching partial state where the agent's
+edits landed incompletely) costs more wall-clock than just opening the file
+and editing. Pre-compute the things an agent would need anyway (basket
+returns, OCR cache for image-only PDFs, page+quote extraction for the
+flagship reports) — then write the file as one or two `Edit`/`Write` calls.
+Reserved-for-parallelism is genuinely-N-independent work, not careful
+single-theme refreshes.
+
+`theme-research` owns the file format and the verified Performance/return
+data; this mode's whole value-add is feeding it the **real zsxq broker
+content** read from the original PDFs, woven into the Thesis, per-ticker
+Justification cells, Recent events, and Data Used manifest.
 
 If the basket already exists, this is a *refresh + enrichment* pass — edit
 in place, append a `## History` line noting the zsxq enrichment, and do
 **not** recompute the Performance table unless the user asked for a data
-refresh.
+refresh. For expansion-refresh (Step 4b in `theme-research`), recompute is
+required.
 
 ### TB4. Verify (the enrichment-specific checks)
 
