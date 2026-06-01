@@ -61,7 +61,7 @@ Every theme is one file: `reports/themes/<slug>_theme.md` (English default). Chi
 - **Added** SZSE:300354 Donghua Testing (core) — 6-D force sensor entered mass production ([cninfo, 2026-06](https://...)).
 - **Dropped** HKEX:9863 Leapmotor — humanoid program shelved ([HKEX 2026-06](https://...)).
 - **Movers:** basket +8.2% since last refresh vs CSI 300 +2.1%; Anpeilong +19% on the Tesla order print.
-- **New broker call:** GS initiated Anpeilong Buy, PT ¥120 ([GS, zsxq #...](http://localhost:5001/zsxq-pdf/...)).
+- **New broker call:** GS initiated Anpeilong Buy, PT ¥120 ([GS, zsxq #...](http://xs-macbook-air.local:5001/zsxq-pdf/...)).
 - **Thesis drift:** none — basket still reflects the original BOM-expansion bet.
 
 <details><summary>Earlier refreshes</summary>
