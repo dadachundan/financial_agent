@@ -250,7 +250,7 @@ Path: `reports/ideas/zsxq_<theme-slug>_<YYYY-MM-DD>.md`
 - Then a final "Sources" section listing all cited file_ids with
   `name`, `bank`, `create_time`.
 
-The viewer at `http://localhost:5001/claude-reports/` will surface
+The viewer at `http://xs-macbook-air.local:5001/claude-reports/` will surface
 this under its idea-generation bucket automatically (if `reports/ideas/`
 isn't yet a known bucket, the file still renders — flag it for a
 viewer update separately).
@@ -404,7 +404,7 @@ idea note or a `reports/themes/` basket — cite the broker's *specific
 content* to the source `file_id`, never the report title alone:
 
 - **Inline format — file_id AND page:**
-  `[Bank — short topic, zsxq #<file_id> p.<N>](http://localhost:5001/zsxq-pdf/<file_id>#page=<N>)`.
+  `[Bank — short topic, zsxq #<file_id> p.<N>](http://xs-macbook-air.local:5001/zsxq-pdf/<file_id>#page=<N>)`.
   The page number is mandatory: `extract_pdf.py` marks pages as
   `===== Page N =====`, so every number you cite has a known page. Put `p.N`
   in the link text and `#page=N` in the URL (the viewer honors the PDF
@@ -415,7 +415,7 @@ content* to the source `file_id`, never the report title alone:
 - **Quote the source text.** Alongside the number, give a short quote of the
   *original* sentence/phrase it came from, in the PDF's original language —
   e.g. ...claim
-  `([MS — Energy Meets Compute, zsxq #184152244582842 p.6](http://localhost:5001/zsxq-pdf/184152244582842#page=6) — “US$5trn+ in investments across the region… unlocking US$9trn in value”)`.
+  `([MS — Energy Meets Compute, zsxq #184152244582842 p.6](http://xs-macbook-air.local:5001/zsxq-pdf/184152244582842#page=6) — “US$5trn+ in investments across the region… unlocking US$9trn in value”)`.
   The quote is the original English/Chinese/Japanese text from the PDF, NOT
   the 翻译精华 summary's paraphrase. Keep quotes short (the clause carrying
   the number); use `…` for elisions. Match the quote verbatim to the

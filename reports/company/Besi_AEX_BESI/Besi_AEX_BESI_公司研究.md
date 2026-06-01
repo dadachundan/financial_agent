@@ -54,7 +54,7 @@ Besi 于 1995 年 5 月依据荷兰法律注册成立, 同年 12 月在泛欧阿
 | 1 年期总回报率 | +156.9% | n/a | 由 HB / SoIC 重估驱动 ([TradingView EURONEXT:BESI](https://www.tradingview.com/symbols/EURONEXT-BESI/)) |
 | 净现金 | 3,600 万欧元 | n/a | 已计入 2025 年 2.548 亿欧元的分红派息 (占收入 43%) |
 
-**137 倍市盈率的解读。** 当前估值倍数无论从绝对水平还是历史标准都属偏高, 但在一家订单簿处于同比 +100% 上行通道的单一业务 AI 基础设施龙头企业语境下并非异常。三股力量交汇: (i) 市场正在为 2027 / 2028 财年盈利定价 (野村 2026 年 5 月 21 日《大中华区半导体》报告以 2027 财年预测每股收益 6.1 欧元 × 55 倍作为 340 欧元的目标价锚点, 等同于 2028 财年预测每股收益的约 24 倍——参见 [野村《大中华区半导体》报告节选, zsxq file_id 184121852855252](http://localhost:5001/zsxq) 中分析师的基础假设集); (ii) Besi 仅有约 7,900 万摊薄在外股本 ([Besi 2025 年报, 第 7 页](https://www.besi.com/fileadmin/data/Investor_Relations/_Semi__Annual_Reports/Annual_Report_2025.pdf)), 在应用材料 (Applied Materials) 2025 年 4 月收购 9% 股权后流通盘进一步缩小 ([应用材料新闻稿, 2025-04-14](https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-strategic-investment-be)), 因此需求脉冲跑赢了供给; 以及 (iii) Besi 在 2023-2025 下行周期中的毛利率韧性表明, 当前估值倍数锚定的是结构性更高的长期盈利能力, 而非低谷期 EPS 所暗示的水平。风险是对称的: 若 2026 财年订单不及预期或 AI 资本开支暂停, 137 倍市盈率将剧烈回吐。详见第九节估值倍数风险框架。
+**137 倍市盈率的解读。** 当前估值倍数无论从绝对水平还是历史标准都属偏高, 但在一家订单簿处于同比 +100% 上行通道的单一业务 AI 基础设施龙头企业语境下并非异常。三股力量交汇: (i) 市场正在为 2027 / 2028 财年盈利定价 (野村 2026 年 5 月 21 日《大中华区半导体》报告以 2027 财年预测每股收益 6.1 欧元 × 55 倍作为 340 欧元的目标价锚点, 等同于 2028 财年预测每股收益的约 24 倍——参见 [野村《大中华区半导体》报告节选, zsxq file_id 184121852855252](http://xs-macbook-air.local:5001/zsxq) 中分析师的基础假设集); (ii) Besi 仅有约 7,900 万摊薄在外股本 ([Besi 2025 年报, 第 7 页](https://www.besi.com/fileadmin/data/Investor_Relations/_Semi__Annual_Reports/Annual_Report_2025.pdf)), 在应用材料 (Applied Materials) 2025 年 4 月收购 9% 股权后流通盘进一步缩小 ([应用材料新闻稿, 2025-04-14](https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-strategic-investment-be)), 因此需求脉冲跑赢了供给; 以及 (iii) Besi 在 2023-2025 下行周期中的毛利率韧性表明, 当前估值倍数锚定的是结构性更高的长期盈利能力, 而非低谷期 EPS 所暗示的水平。风险是对称的: 若 2026 财年订单不及预期或 AI 资本开支暂停, 137 倍市盈率将剧烈回吐。详见第九节估值倍数风险框架。
 
 ---
 
@@ -230,7 +230,7 @@ Besi 2025 年报 (第 9 页图表) 展示了过去 5 年 IDM 与代工厂 / 分�
 
 *来源: [Besi 2025 年报——订单走势图, 第 9 页](https://www.besi.com/fileadmin/data/Investor_Relations/_Semi__Annual_Reports/Annual_Report_2025.pdf)。*
 
-2024-2025 年向代工厂 / OSAT 转移 (两年订单中均为 55%) 是台积电 SoIC / 亚洲 OSAT 先进封装建设的标志。正如野村 2026 年 5 月 21 日《大中华区半导体》报告独立预测的, 台积电 SoIC 产能从 2025 年末的约 10 千片晶圆 / 月迈向 2026 年的 15 千片晶圆 / 月与 2027 年的 30 千片晶圆 / 月——而 Besi 是该客户的混合键合机首选供应商 ([野村《大中华区半导体: 2026~30F 半导体复兴指南》, 2026-05-21, 第 44 页, 可通过本地 zsxq 库访问](http://localhost:5001/zsxq); 通过 [zsxq 摘要](http://localhost:8080/) 引用以备记录)。
+2024-2025 年向代工厂 / OSAT 转移 (两年订单中均为 55%) 是台积电 SoIC / 亚洲 OSAT 先进封装建设的标志。正如野村 2026 年 5 月 21 日《大中华区半导体》报告独立预测的, 台积电 SoIC 产能从 2025 年末的约 10 千片晶圆 / 月迈向 2026 年的 15 千片晶圆 / 月与 2027 年的 30 千片晶圆 / 月——而 Besi 是该客户的混合键合机首选供应商 ([野村《大中华区半导体: 2026~30F 半导体复兴指南》, 2026-05-21, 第 44 页, 可通过本地 zsxq 库访问](http://xs-macbook-air.local:5001/zsxq); 通过 [zsxq 摘要](http://localhost:8080/) 引用以备记录)。
 
 ![订单与营收对比及订单出货比](charts/02_orders_vs_revenue.png)
 
@@ -254,7 +254,7 @@ Besi 终端用户结构正在经历从移动主导 (2023 年移动占 51%) 向�
 
 *图 5: 2023-2025 终端用户收入结构。计算两年内从收入的 10% 增长至 30%——这是 Besi 收入基础围绕 AI 数据中心与 HBM 应用重新定位的最清晰单一信号。来源: [Besi 2025 年报, 第 25 页](https://www.besi.com/fileadmin/data/Investor_Relations/_Semi__Annual_Reports/Annual_Report_2025.pdf)。*
 
-按管理层估计, **2025 年总订单中约 50% 用于 AI 应用**——订单簿中最强的子结构驱动力 ([Besi 2025 年报, 第 13 页](https://www.besi.com/fileadmin/data/Investor_Relations/_Semi__Annual_Reports/Annual_Report_2025.pdf))。AI 范畴内, 野村平行分析所记录的拆分大致为 50% AMD、25% COUPE (台积电 COUPE 项目的硅光子 CPO)、15% HBM (三星 + SK 海力士初期小批量上线工具) 与 10% 其他 (英特尔、苹果) ([野村《大中华区半导体》报告, 第 45 页图 82——可通过本地 zsxq.db file_id 184121852855252 访问](http://localhost:5001/zsxq))。
+按管理层估计, **2025 年总订单中约 50% 用于 AI 应用**——订单簿中最强的子结构驱动力 ([Besi 2025 年报, 第 13 页](https://www.besi.com/fileadmin/data/Investor_Relations/_Semi__Annual_Reports/Annual_Report_2025.pdf))。AI 范畴内, 野村平行分析所记录的拆分大致为 50% AMD、25% COUPE (台积电 COUPE 项目的硅光子 CPO)、15% HBM (三星 + SK 海力士初期小批量上线工具) 与 10% 其他 (英特尔、苹果) ([野村《大中华区半导体》报告, 第 45 页图 82——可通过本地 zsxq.db file_id 184121852855252 访问](http://xs-macbook-air.local:5001/zsxq))。
 
 ### 5.4 上市策略结构
 
@@ -357,15 +357,15 @@ Besi 在结构性整合的半导体后段设备市场竞争, 其中四到六家�
 
 **Kulicke & Soffa (KLIC US, 纳斯达克)** — 美国上市的组装设备供应商。K&S 创立于 1951 年, 主导传统引线键合设备市场, 全球份额估计 ~60% ([CompaniesMarketCap, K&S 市盈率历史](https://companiesmarketcap.com/kulicke-and-soffa-industries/pe-ratio/))。K&S 正在投资扩展到混合键合与铜夹平台, 面向 AI 与功率器件互连, 计划平台 2025 年发布。*分析师观点:* K&S 从与 Besi 不同的起点进入混合键合——引线键合份额而非倒装芯片 / 先进晶粒贴装份额——在贴装精度规格上落后几个研发代次。
 
-**DISCO 株式会社 (6146 JP, 东京)** — 日本晶圆切割、研磨与抛光设备供应商, 在晶圆制备设备中占据全球 ~80% 份额。Disco 与 Besi *互补* 而非直接竞争: 每家 Besi 混合键合机客户在上游也运营 Disco 切割 / 研磨设备。Disco 的磨轮耗材业务 (~3.5-4 亿美元) 规模与中砂 (Kinik) 主导的整个 CMP 修整器市场相当 ([野村《大中华区半导体》报告, 第 115 页](http://localhost:5001/zsxq))。
+**DISCO 株式会社 (6146 JP, 东京)** — 日本晶圆切割、研磨与抛光设备供应商, 在晶圆制备设备中占据全球 ~80% 份额。Disco 与 Besi *互补* 而非直接竞争: 每家 Besi 混合键合机客户在上游也运营 Disco 切割 / 研磨设备。Disco 的磨轮耗材业务 (~3.5-4 亿美元) 规模与中砂 (Kinik) 主导的整个 CMP 修整器市场相当 ([野村《大中华区半导体》报告, 第 115 页](http://xs-macbook-air.local:5001/zsxq))。
 
 **SUSS MicroTec (SMHN GR)** — 德国晶圆键合与光刻设备专家。SUSS 是 W2W 混合键合的次级供应商, 仅次于 EVG。
 
-**芝浦机电 (Shibaura Mechatronics, 6590 JP)** — 日本各类半导体加工设备供应商。按行业研究公司评估, Shibaura "正在尝试扩大在混合键合市场的存在", 但在先进晶粒贴装的装机量有限 ([野村《大中华区半导体》报告, 第 46-47 页](http://localhost:5001/zsxq))。*分析师观点:* 芝浦是最可信的日本侧混合键合进入者, 但比 Besi 落后几个季度。
+**芝浦机电 (Shibaura Mechatronics, 6590 JP)** — 日本各类半导体加工设备供应商。按行业研究公司评估, Shibaura "正在尝试扩大在混合键合市场的存在", 但在先进晶粒贴装的装机量有限 ([野村《大中华区半导体》报告, 第 46-47 页](http://xs-macbook-air.local:5001/zsxq))。*分析师观点:* 芝浦是最可信的日本侧混合键合进入者, 但比 Besi 落后几个季度。
 
 **韩美半导体 (Hanmi Semiconductor, 042700 KS)** 与 **韩华半导体** — 韩国设备供应商, 在韩国内存客户 (SK 海力士) 处获得早期混合键合采用。韩美在某些韩国客户 HBM 堆叠部署中被描述为"领先" ([Mordor Intelligence, 晶粒键合机市场](https://www.mordorintelligence.com/industry-reports/die-bonder-equipment-market))。*分析师观点:* 韩国进入者得益于 SK 海力士的"本国"客户偏好, 但缺乏 Besi 在台积电与英特尔多年建立的客户关系。
 
-**东京电子 TEL (8035 JP) 与 ASML (ASML NA)** — 两家公司都被行业研究提及为芯片对晶圆混合键合的潜在进入者, 因为它们与台积电与英特尔有强大的前段设备关系 ([野村《大中华区半导体》报告, 第 46 页](http://localhost:5001/zsxq))。两家目前都不销售竞争性 C2W 混合键合机。*分析师观点:* 这是 Besi 混合键合护城河最大的长尾竞争风险。2025 年 4 月应用材料 9% 战略股权——以及由此产生的集成 AMAT-Besi 混合键合联合开发——隐性地是为了锁定前段 / 后段集成的领先合作伙伴关系, 抢先阻止 TEL 或 ASML 进入。
+**东京电子 TEL (8035 JP) 与 ASML (ASML NA)** — 两家公司都被行业研究提及为芯片对晶圆混合键合的潜在进入者, 因为它们与台积电与英特尔有强大的前段设备关系 ([野村《大中华区半导体》报告, 第 46 页](http://xs-macbook-air.local:5001/zsxq))。两家目前都不销售竞争性 C2W 混合键合机。*分析师观点:* 这是 Besi 混合键合护城河最大的长尾竞争风险。2025 年 4 月应用材料 9% 战略股权——以及由此产生的集成 AMAT-Besi 混合键合联合开发——隐性地是为了锁定前段 / 后段集成的领先合作伙伴关系, 抢先阻止 TEL 或 ASML 进入。
 
 ### 7.3 竞争定位框架
 
@@ -480,7 +480,7 @@ Besi 面对分层风险概况, 涵盖公司特有执行、行业 / 市场周期�
 
 **风险 4 — AI 资本开支周期性 (严重性: 高, 概率: 5 年期内高)**。撑持当前 Besi 订单簿的超大规模运营商资本开支 (摩根士丹利估计 2026 年 6,210 亿美元, 较 2024 年的 2,800 亿美元) 是前所未有的, 集中于一小群买家 (谷歌、微软、AWS、Meta、甲骨文、字节跳动、阿里巴巴、腾讯等) ([Besi 2025 年报, 第 26 页](https://www.besi.com/fileadmin/data/Investor_Relations/_Semi__Annual_Reports/Annual_Report_2025.pdf))。任何 (i) AI 需求增长放缓且变现滞后于基础设施建设、(ii) 监管行动限制 AI 资本开支, 或 (iii) 2026-2028 超大规模运营商资本开支消化期, 都将降低 Besi 订单增长。缓释: 多年期超大规模运营商承诺使突然停止不太可能; 缓和更为可能。
 
-**风险 5 — 前段半导体设备厂商竞争性进入 (严重性: 中-高, 概率: 低-中)**。TEL 与 ASML 已被行业研究提及为芯片对晶圆混合键合的潜在进入者 ([野村《大中华区半导体》2026, 第 46 页](http://localhost:5001/zsxq))。两家都有深度的台积电与英特尔关系。2025 年 4 月应用材料战略股权与联合开发协议隐性地是为了与三大美国半导体设备厂商之一锁定前段 / 后段集成, 但 TEL 或 ASML 仍可能构建或收购竞争平台。缓释: 5+ 年的先进研发领先; 亚微米贴装精度真的很难。
+**风险 5 — 前段半导体设备厂商竞争性进入 (严重性: 中-高, 概率: 低-中)**。TEL 与 ASML 已被行业研究提及为芯片对晶圆混合键合的潜在进入者 ([野村《大中华区半导体》2026, 第 46 页](http://xs-macbook-air.local:5001/zsxq))。两家都有深度的台积电与英特尔关系。2025 年 4 月应用材料战略股权与联合开发协议隐性地是为了与三大美国半导体设备厂商之一锁定前段 / 后段集成, 但 TEL 或 ASML 仍可能构建或收购竞争平台。缓释: 5+ 年的先进研发领先; 亚微米贴装精度真的很难。
 
 **风险 6 — ASMPT 规模优势 (严重性: 中, 概率: 中)**。ASMPT 是整体最大的后段设备供应商, 在先进封装中"位列新兴领导者" ([Insightace, 混合键合](https://www.insightaceanalytic.com/report/hybrid-bonding-market/3483))。其主流晶粒键合机收入基础让它能交叉补贴先进封装研发。风险: ASMPT 最终缩小贴装精度差距, 在台积电与三星有效竞争。缓释: Besi 在 <7µm 贴装的 82% 份额是结构性的; ASMPT 在主流与亚洲 OSAT 中端更具竞争力。
 
@@ -534,7 +534,7 @@ Besi 面对分层风险概况, 涵盖公司特有执行、行业 / 市场周期�
 - **[Mordor Intelligence — 晶粒键合机设备市场](https://www.mordorintelligence.com/industry-reports/die-bonder-equipment-market)**。
 - **[InsightAce Analytic — 混合键合市场 2026-2035](https://www.insightaceanalytic.com/report/hybrid-bonding-market/3483)**。
 - **[MarketsAndMarkets — 混合键合市场](https://www.marketsandmarkets.com/Market-Reports/hybrid-bonding-market-2641237.html)** — 引用用于混合键合 TAM 从 1.647 亿美元 (2025 年) 增长至 6.339 亿美元 (2032 年)。
-- **[野村 — 大中华区半导体: 2026~30F 半导体复兴指南](http://localhost:5001/zsxq)**, 锚定报告, 2026-05-21, 139 页。引用用于 Besi 具体推荐 (Buy 维持, 目标价 340 欧元)、台积电 SoIC 产能轨迹 (2025-2027 年 10k → 30k wpm)、2026F HB 订单预测 70+ 套、2026F 订单结构 (50% AMD / 25% COUPE / 15% HBM / 10% 其他) 与竞争格局 (芝浦进入、TEL/ASML 潜在进入)。可通过 [zsxq 库](http://localhost:5001/zsxq) 在 file_id 184121852855252 本地访问。
+- **[野村 — 大中华区半导体: 2026~30F 半导体复兴指南](http://xs-macbook-air.local:5001/zsxq)**, 锚定报告, 2026-05-21, 139 页。引用用于 Besi 具体推荐 (Buy 维持, 目标价 340 欧元)、台积电 SoIC 产能轨迹 (2025-2027 年 10k → 30k wpm)、2026F HB 订单预测 70+ 套、2026F 订单结构 (50% AMD / 25% COUPE / 15% HBM / 10% 其他) 与竞争格局 (芝浦进入、TEL/ASML 潜在进入)。可通过 [zsxq 库](http://xs-macbook-air.local:5001/zsxq) 在 file_id 184121852855252 本地访问。
 
 ### 股价与估值数据
 
@@ -563,7 +563,7 @@ Besi 面对分层风险概况, 涵盖公司特有执行、行业 / 市场周期�
 <details>
 <summary>验证日志 (第 10 步) — 2026-05-24</summary>
 
-**URL 检查** — 本报告中所有 URL 已于 2026-05-24 进行 HTTP 检查; 主要文件 URL (besi.com/fileadmin/...)、应用材料 IR 页面与 Yahoo Finance / Macrotrends / GuruFocus / CompaniesMarketCap 报价页面均解析为 200。所引用的野村大中华区半导体报告仅限本地 (zsxq.db file_id 184121852855252), 通过 `localhost:5001/zsxq` 访问——这是有意为之, 而非公开 URL。
+**URL 检查** — 本报告中所有 URL 已于 2026-05-24 进行 HTTP 检查; 主要文件 URL (besi.com/fileadmin/...)、应用材料 IR 页面与 Yahoo Finance / Macrotrends / GuruFocus / CompaniesMarketCap 报价页面均解析为 200。所引用的野村大中华区半导体报告仅限本地 (zsxq.db file_id 184121852855252), 通过 `xs-macbook-air.local:5001/zsxq` 访问——这是有意为之, 而非公开 URL。
 
 **主要文件锚点** — 每个财务表与产品矩阵引述均锚定到 [besi.com 上 Besi 2025 年报 PDF](https://www.besi.com/fileadmin/data/Investor_Relations/_Semi__Annual_Reports/Annual_Report_2025.pdf)。PDF 已下载到 `/tmp/besi_research/Besi_Annual_Report_2025.pdf` (11.4 MB, 266 页, MD5 可验证), 并在起草前通过 PyMuPDF 端到端阅读。
 

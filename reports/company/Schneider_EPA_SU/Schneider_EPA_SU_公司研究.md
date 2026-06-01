@@ -215,7 +215,7 @@ Schneider 主营 (Energy Management + Industrial Automation) 行业为 "**全球
 
 **(a) AI 数据中心电气化与冷却** — 是当前最高弹性的驱动力。NVIDIA Blackwell GB200 NVL72 一柜 120 kW、Rubin 2026 年路线图传出 250+ kW/rack，大型 hyperscaler (Microsoft / Meta / Oracle / Amazon) 的 AI capex 在 2024-2025 年合计已超 **$300 bn**，其中电气与冷却基础设施占建造成本约 30-35% — 直接对应 Schneider Energy Management 板块的可寻址市场。Schneider 自己的 Q1 2026 业绩演示中明确把 "**AI-ready energy and automation**" 列为头号战略主题 ([Schneider Electric Q1 2026 slides — Investing.com 2026-04-30](https://www.investing.com/news/company-news/schneider-electric-q1-2026-slides-11-organic-growth-ai-strategy-advances-93CH-4647883))。
 
-**(b) 电网现代化与可再生能源接入** — IEA 估计 2024-2050 年全球电网投资需求 $24 trn 累计，其中约 $9 trn 在 2024-2030 年集中。配电网升级、可再生能源接入、HVDC 远距离输电是核心需求 — Schneider 在中压开关柜、自动化保护、变电站数字化上是关键供应商之一 ([HSBC — Powering AI, zsxq #415241112255128 p.1](http://localhost:5001/zsxq-pdf/415241112255128#page=1))。
+**(b) 电网现代化与可再生能源接入** — IEA 估计 2024-2050 年全球电网投资需求 $24 trn 累计，其中约 $9 trn 在 2024-2030 年集中。配电网升级、可再生能源接入、HVDC 远距离输电是核心需求 — Schneider 在中压开关柜、自动化保护、变电站数字化上是关键供应商之一 ([HSBC — Powering AI, zsxq #415241112255128 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/415241112255128#page=1))。
 
 **(c) 工业脱碳化与能效升级** — EU CSRD (Corporate Sustainability Reporting Directive)、SEC 气候披露规则、中国 "双碳" 目标推动企业层级的能源管理与碳足迹追踪需求。Schneider 的 EcoStruxure Sustainability Suite 与 AVEVA 软件直接吃这波合规 + 能效优化需求 ([Construction Owners — Schneider Q1 2026 Revenue Boosted by AI](https://www.constructionowners.com/news/schneider-electric-sees-surge-in-revenue-as-energy-security-ai-drive-data-center-demand))。
 
@@ -227,11 +227,11 @@ Schneider 主营 (Energy Management + Industrial Automation) 行业为 "**全球
 
 ![Data Center Power TAM 2023-2030E](charts/schneider_dc_tam.png)
 
-*图表来源汇总: [HSBC — Powering AI, zsxq #415241112255128 p.1](http://localhost:5001/zsxq-pdf/415241112255128#page=1); [JPM zsxq #184152244582842 p.18](http://localhost:5001/zsxq-pdf/184152244582842#page=18); [MarketsandMarkets — Data Center Power Market](https://www.marketsandmarkets.com/ResearchInsight/data-center-power-market.asp)。*
+*图表来源汇总: [HSBC — Powering AI, zsxq #415241112255128 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/415241112255128#page=1); [JPM zsxq #184152244582842 p.18](http://xs-macbook-air.local:5001/zsxq-pdf/184152244582842#page=18); [MarketsandMarkets — Data Center Power Market](https://www.marketsandmarkets.com/ResearchInsight/data-center-power-market.asp)。*
 
 按 Dell'Oro 与 Yole 综合估算，全球数据中心电源 + 冷却设备 TAM 在 2024 年约 $45 bn，2028 年达 $102 bn (CAGR ~23%)，2030 年达 $130 bn。Schneider 在白空间 (white space) 电气设备 (UPS + PDU + 机柜 + 液冷) 的全球份额估计 25-30%，是最大单一供应商之一 — 与 Vertiv (NYSE:VRT) 几乎平分秋色，Eaton 居第三。
 
-*分析师观点 / Analyst view:* AI 数据中心订单的特点是 hyperscaler 客户极少数 — 头部 5 家 (AWS, Microsoft Azure, Google Cloud, Meta, Oracle) 占了行业 capex 70%+。这意味着 Schneider 数据中心业务集中度上升 — 既是机会 (hyperscaler 多年期框架协议带来确定性), 也是风险 (任何一家暂停 capex 都会冲击订单流)。Morgan Stanley Surprise 系列报告把 "Powering AI" 列为 2025-2030 最确定的供应链主题，Schneider 与 Hitachi Energy、Eaton、GE Vernova、Vertiv 并列为最直接受益者 ([MS — Powering AI, zsxq #184152244582842 p.24](http://localhost:5001/zsxq-pdf/184152244582842#page=24))。
+*分析师观点 / Analyst view:* AI 数据中心订单的特点是 hyperscaler 客户极少数 — 头部 5 家 (AWS, Microsoft Azure, Google Cloud, Meta, Oracle) 占了行业 capex 70%+。这意味着 Schneider 数据中心业务集中度上升 — 既是机会 (hyperscaler 多年期框架协议带来确定性), 也是风险 (任何一家暂停 capex 都会冲击订单流)。Morgan Stanley Surprise 系列报告把 "Powering AI" 列为 2025-2030 最确定的供应链主题，Schneider 与 Hitachi Energy、Eaton、GE Vernova、Vertiv 并列为最直接受益者 ([MS — Powering AI, zsxq #184152244582842 p.24](http://xs-macbook-air.local:5001/zsxq-pdf/184152244582842#page=24))。
 
 ### 6.4 监管环境
 
@@ -247,7 +247,7 @@ Schneider 是全球电气设备行业法规合规的主要标准参与方。关�
 
 **Eaton Corporation (NYSE:ETN)** — 爱尔兰登记的美国 Eaton 集团 2024 年营收约 $25 bn，电气化板块 (Electrical Americas + Electrical Global) 与 Schneider 直接竞争，特别是在 **数据中心电源** 业务上。Eaton 北美数据中心订单 Q1 2026 同比 +240% (theme-report 上有披露)；Eaton 的护城河是北美工业 / 商业楼宇市场的深度渠道与单一相 UPS 的份额 ([MarketsandMarkets — Top Companies in Data Center Power Market](https://www.marketsandmarkets.com/ResearchInsight/data-center-power-market.asp))。
 
-**Vertiv Holdings (NYSE:VRT)** — 美国 Vertiv 是数据中心电源 / 冷却 / 机架的纯粹玩家，FY2025 营收 $9.5+ bn (theme-report 报披露 backlog 已达 $15 bn)，是 Schneider 数据中心业务的最直接对手。Vertiv 与 Schneider 在 UPS / PDU / 液冷三个产品线上几乎全面重叠 ([MS — Powering AI, zsxq #184152244582842 p.24](http://localhost:5001/zsxq-pdf/184152244582842#page=24))。
+**Vertiv Holdings (NYSE:VRT)** — 美国 Vertiv 是数据中心电源 / 冷却 / 机架的纯粹玩家，FY2025 营收 $9.5+ bn (theme-report 报披露 backlog 已达 $15 bn)，是 Schneider 数据中心业务的最直接对手。Vertiv 与 Schneider 在 UPS / PDU / 液冷三个产品线上几乎全面重叠 ([MS — Powering AI, zsxq #184152244582842 p.24](http://xs-macbook-air.local:5001/zsxq-pdf/184152244582842#page=24))。
 
 **Emerson Electric (NYSE:EMR), Hitachi Energy (TYO:6501 子公司), Rockwell Automation (NYSE:ROK), Mitsubishi Electric (TYO:6503)** — 是次梯队竞争者。Emerson 在流程自动化与暖通空调 (HVAC) 竞争，Hitachi Energy 在中高压变压器 / HVDC / 电网，Rockwell 在北美工厂自动化，Mitsubishi 在亚洲工业控制。
 
@@ -300,7 +300,7 @@ Schneider 2024 URD 与最近一次投资者日 (Innovation Days 2024) 上披露�
 | EV 充电 (EV Charging) | 8 | 35 | ~28% |
 | **合计 (估算)** | **~557** | **~918** | **~9%** |
 
-来源汇总: [Schneider Electric 2024 URD — TAM 描述](https://www.se.com/ww/en/assets/564/document/510443/2024-universal-registration-document.pdf); [MarketsandMarkets — Switchgear Market](https://www.marketsandmarkets.com/ResearchInsight/switchgear-market.asp); [MS — Powering AI, zsxq #184152244582842 p.18](http://localhost:5001/zsxq-pdf/184152244582842#page=18) (US$1 trn grid investment requirement)。
+来源汇总: [Schneider Electric 2024 URD — TAM 描述](https://www.se.com/ww/en/assets/564/document/510443/2024-universal-registration-document.pdf); [MarketsandMarkets — Switchgear Market](https://www.marketsandmarkets.com/ResearchInsight/switchgear-market.asp); [MS — Powering AI, zsxq #184152244582842 p.18](http://xs-macbook-air.local:5001/zsxq-pdf/184152244582842#page=18) (US$1 trn grid investment requirement)。
 
 *分析师观点 / Analyst view:* Schneider 公司当前合并营收 **$43-44 bn** (FY2025 €40.2 bn 按 1.08 兑换率)，相对 ~$557 bn 当前 TAM, 公司份额约 **8%**。即便假设 TAM 增速放缓 (~9% CAGR) 与公司份额提升 (向 10%) — 2030 年 TAM 顶部 $918 bn × 10% = $92 bn 收入潜力，对当前 ~$43 bn 翻倍以上。这是 sell-side (JPM, MS, GS, UBS) 给出 FY2026-2030 年增长指引 +7-12% organic 的支撑。
 
@@ -344,11 +344,11 @@ Schneider FY2025 末净现金 / EBITDA 约 0.5×, 财务弹性极强 (即便加 
 
 **风险 11: 欧美利率高位与衰退 (中)** — 美国 10 年期国债收益率 (^TNX) 4.56% (2026-05-31)、ECB 主要利率 3.25%，限制企业 capex、基础设施投资与电网升级速度。如果 2026 H2 美国 / 欧洲进入衰退，工业自动化 + 楼宇自动化板块 (合计 ~45% 营收) 都会受冲击。
 
-**风险 12: 中美脱钩与中国市场风险 (中)** — 中国占公司 ~12% 营收。如果美国进一步收紧对华 AI 数据中心出口管制 (Schneider 在中国销售 APC UPS / 配电产品)，或中国本土同业 (中航光电、麦格米特、思源电气) 在国内市场进一步替代，Schneider 中国业务可能停滞或下滑 ([券商 — SST AIDC, zsxq #212485811815581 p.10](http://localhost:5001/zsxq-pdf/212485811815581#page=10))。
+**风险 12: 中美脱钩与中国市场风险 (中)** — 中国占公司 ~12% 营收。如果美国进一步收紧对华 AI 数据中心出口管制 (Schneider 在中国销售 APC UPS / 配电产品)，或中国本土同业 (中航光电、麦格米特、思源电气) 在国内市场进一步替代，Schneider 中国业务可能停滞或下滑 ([券商 — SST AIDC, zsxq #212485811815581 p.10](http://xs-macbook-air.local:5001/zsxq-pdf/212485811815581#page=10))。
 
 ## 10. 投资人视角评分卡
 
-**周期快照 (Macro Snapshot, 截至 2026-05-31):** VIX **16.68** (低位), 10Y Treasury 4.56%, HY OAS ~285 bps, IG OAS ~95 bps, DXY 98.99 — 当前为 "**轻度乐观，但通胀粘性 + 利率高位**" 的中性偏防御市场氛围 ([相关 indicators.db 快照与 theme-report 末尾 "Macro sensitivity" 引用](http://localhost:5001/zsxq-pdf/415241112255128#page=1))。
+**周期快照 (Macro Snapshot, 截至 2026-05-31):** VIX **16.68** (低位), 10Y Treasury 4.56%, HY OAS ~285 bps, IG OAS ~95 bps, DXY 98.99 — 当前为 "**轻度乐观，但通胀粘性 + 利率高位**" 的中性偏防御市场氛围 ([相关 indicators.db 快照与 theme-report 末尾 "Macro sensitivity" 引用](http://xs-macbook-air.local:5001/zsxq-pdf/415241112255128#page=1))。
 
 ### 10.1 巴菲特视角 (Buffett scorecard, 0-100)
 
@@ -469,9 +469,9 @@ Schneider FY2025 末净现金 / EBITDA 约 0.5×, 财务弹性极强 (即便加 
 - [MarketsandMarkets — Leading Players in Low-Voltage Circuit Breaker Market](https://www.marketsandmarkets.com/ResearchInsight/low-voltage-circuit-breaker-companies.asp)
 - [Future Market Insights — Low Voltage Components Market 2035](https://www.futuremarketinsights.com/reports/low-voltage-components-market)
 - [Market Report Analytics — Low Voltage Products 2025](https://www.marketreportanalytics.com/reports/low-voltage-products-83278)
-- [MS "Powering AI" — zsxq #184152244582842](http://localhost:5001/zsxq-pdf/184152244582842#page=24)
-- [HSBC "Powering AI" — zsxq #415241112255128](http://localhost:5001/zsxq-pdf/415241112255128#page=1)
-- [券商 SST AIDC — zsxq #212485811815581](http://localhost:5001/zsxq-pdf/212485811815581#page=10)
+- [MS "Powering AI" — zsxq #184152244582842](http://xs-macbook-air.local:5001/zsxq-pdf/184152244582842#page=24)
+- [HSBC "Powering AI" — zsxq #415241112255128](http://xs-macbook-air.local:5001/zsxq-pdf/415241112255128#page=1)
+- [券商 SST AIDC — zsxq #212485811815581](http://xs-macbook-air.local:5001/zsxq-pdf/212485811815581#page=10)
 - [Schneider Electric — Wikipedia](https://en.wikipedia.org/wiki/Schneider_Electric)
 - [APC by Schneider Electric — Wikipedia](https://en.wikipedia.org/wiki/APC_by_Schneider_Electric)
 - [AVEVA Group — Wikipedia](https://en.wikipedia.org/wiki/AVEVA)
