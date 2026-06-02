@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Price Target — FinAgent</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body { background:#1a1d20; color:#e9ecef; font-size:.875rem; }
+  table { font-size:.85rem; }
+  thead th { position:sticky; top:0; background:#0d6efd; color:#fff; cursor:pointer; user-select:none; white-space:nowrap; z-index:5; }
+  thead th .sort-ind { font-size:.7rem; color:#ffd; margin-left:4px; }
+  tbody tr:hover { background:rgba(13,110,253,.10) !important; }
+  td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .up   { color:#4ade80; font-weight:600; }
+  .down { color:#f87171; font-weight:600; }
+  .rating-buy        { background:#198754; color:#fff; }
+  .rating-outperform { background:#198754; color:#fff; }
+  .rating-overweight { background:#198754; color:#fff; }
+  .rating-toppick    { background:#157347; color:#fff; }
+  .rating-neutral    { background:#6c757d; color:#fff; }
+  .rating-mp         { background:#6c757d; color:#fff; }
+  .rating-equal      { background:#6c757d; color:#fff; }
+  .rating-uw         { background:#dc3545; color:#fff; }
+  .rating-sell       { background:#dc3545; color:#fff; }
+  .rating-up         { background:#dc3545; color:#fff; }
+  .rating-pill { padding:1px 7px; border-radius:8px; font-size:.7rem; white-space:nowrap; }
+  .filter-bar { background:#23272b; padding:8px 12px; border-radius:6px; margin-bottom:10px; position:sticky; top:0; z-index:6; }
+  .pill-counts { font-size:.75rem; opacity:.8; }
+  a.report-link { color:#7dd3fc; text-decoration:none; }
+  a.report-link:hover { text-decoration:underline; }
+  .catalyst { max-width:340px; font-size:.78rem; color:#cbd5e1; white-space:normal; }
+  .table-dark { --bs-table-bg:#1a1d20; }
+</style>
+</head>
+<body>
+{{ NAV_HTML | safe }}
+<div class="container-fluid px-3">
+  <div class="filter-bar d-flex flex-wrap gap-2 align-items-center">
+    <input id="filter" type="text" class="form-control form-control-sm" style="max-width:340px"
+           placeholder="🔍 filter by ticker / name / 中文名 / broker / rating">
+    <span class="pill-counts">
+      <span id="count">{{ total }}</span> rows
+      &nbsp;|&nbsp;
+      <span id="upBuy">0</span> Buy/OP/OW
+      &nbsp;|&nbsp;
+      <span id="upSell">0</span> Sell/UW
+    </span>
+    <span class="ms-auto small text-muted">click any column header to sort · default = report date desc</span>
+  </div>
+
+  <div class="table-responsive" style="max-height:calc(100vh - 140px);">
+    <table class="table table-dark table-hover table-sm align-middle" id="pt">
+      <thead>
+        <tr>
+          <th data-key="report_date" data-default-dir="desc">Report Date<span class="sort-ind"></span></th>
+          <th data-key="company_ticker">Ticker<span class="sort-ind"></span></th>
+          <th data-key="exchange">Exch<span class="sort-ind"></span></th>
+          <th data-key="company_name">Company<span class="sort-ind"></span></th>
+          <th data-key="chinese_name">中文名<span class="sort-ind"></span></th>
+          <th data-key="research_institute">Broker<span class="sort-ind"></span></th>
+          <th data-key="rating">Rating<span class="sort-ind"></span></th>
+          <th data-key="price_target" data-num="1">PT<span class="sort-ind"></span></th>
+          <th data-key="target_currency">PT Ccy<span class="sort-ind"></span></th>
+          <th data-key="report_date_price" data-num="1">Px @ Report<span class="sort-ind"></span></th>
+          <th data-key="upside_pct" data-num="1">Upside %<span class="sort-ind"></span></th>
+          <th data-key="report_date_market_cap" data-num="1">Mkt Cap (local)<span class="sort-ind"></span></th>
+          <th data-key="catalyst">Catalyst<span class="sort-ind"></span></th>
+          <th data-key="report_pdf_filename">Report PDF<span class="sort-ind"></span></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in rows %}
+        <tr>
+          <td>{{ r.report_date or '' }}</td>
+          <td><strong>{{ r.company_ticker }}</strong></td>
+          <td><span class="text-muted">{{ r.exchange }}</span></td>
+          <td>{{ r.company_name }}</td>
+          <td class="text-muted">{{ r.chinese_name or '' }}</td>
+          <td>{{ r.research_institute }}</td>
+          <td>
+            {% if r.rating %}
+              {% set rl = r.rating|lower %}
+              {% if 'buy' in rl %}<span class="rating-pill rating-buy">{{ r.rating }}</span>
+              {% elif 'outperform' in rl %}<span class="rating-pill rating-outperform">{{ r.rating }}</span>
+              {% elif 'overweight' in rl %}<span class="rating-pill rating-overweight">{{ r.rating }}</span>
+              {% elif 'top pick' in rl %}<span class="rating-pill rating-toppick">{{ r.rating }}</span>
+              {% elif 'neutral' in rl %}<span class="rating-pill rating-neutral">{{ r.rating }}</span>
+              {% elif 'market-perform' in rl %}<span class="rating-pill rating-mp">{{ r.rating }}</span>
+              {% elif 'equal' in rl %}<span class="rating-pill rating-equal">{{ r.rating }}</span>
+              {% elif 'underweight' in rl %}<span class="rating-pill rating-uw">{{ r.rating }}</span>
+              {% elif 'underperform' in rl %}<span class="rating-pill rating-up">{{ r.rating }}</span>
+              {% elif 'sell' in rl %}<span class="rating-pill rating-sell">{{ r.rating }}</span>
+              {% else %}<span class="rating-pill rating-neutral">{{ r.rating }}</span>{% endif %}
+            {% endif %}
+          </td>
+          <td class="num">{% if r.price_target is not none %}{{ '%.2f' % r.price_target }}{% endif %}</td>
+          <td class="text-muted">{{ r.target_currency or '' }}</td>
+          <td class="num">{% if r.report_date_price is not none %}{{ '%.2f' % r.report_date_price }}{% endif %}</td>
+          <td class="num {% if r.upside_pct and r.upside_pct > 0 %}up{% elif r.upside_pct and r.upside_pct < 0 %}down{% endif %}">
+            {% if r.upside_pct is not none %}{{ '%+.1f%%' % r.upside_pct }}{% endif %}
+          </td>
+          <td class="num text-muted">
+            {% if r.report_date_market_cap %}
+              {% if r.report_date_market_cap >= 1e12 %}{{ '%.1fT' % (r.report_date_market_cap / 1e12) }}
+              {% elif r.report_date_market_cap >= 1e9 %}{{ '%.1fB' % (r.report_date_market_cap / 1e9) }}
+              {% else %}{{ '%.0fM' % (r.report_date_market_cap / 1e6) }}{% endif %}
+              <span style="font-size:.7rem">{{ r.price_currency or '' }}</span>
+            {% endif %}
+          </td>
+          <td class="catalyst">{{ r.catalyst or '' }}</td>
+          <td>
+            {% if r.report_url %}
+              <a class="report-link" href="{{ r.report_url }}" target="_blank" title="{{ r.report_pdf_filename }}">
+                {{ (r.report_pdf_filename or ('file_id ' + r.report_file_id|string))[:48] }}{% if r.report_pdf_filename and r.report_pdf_filename|length > 48 %}…{% endif %}
+              </a>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+(function(){
+  var tbody = document.querySelector('#pt tbody');
+  var rows  = Array.from(tbody.querySelectorAll('tr'));
+  var filter = document.getElementById('filter');
+  var countEl = document.getElementById('count');
+  var upBuyEl = document.getElementById('upBuy');
+  var upSellEl= document.getElementById('upSell');
+
+  function updateCounts() {
+    var n=0, buy=0, sell=0;
+    rows.forEach(function(r){
+      if(r.style.display==='none') return;
+      n++;
+      var rating = r.cells[6].innerText.trim().toLowerCase();
+      if(rating.includes('buy')||rating.includes('outperform')||rating.includes('overweight')||rating.includes('top pick')) buy++;
+      else if(rating.includes('sell')||rating.includes('underweight')||rating.includes('underperform')) sell++;
+    });
+    countEl.textContent = n;
+    upBuyEl.textContent = buy;
+    upSellEl.textContent = sell;
+  }
+
+  // Live filter — split by whitespace, all tokens must match somewhere in the row text
+  filter.addEventListener('input', function(){
+    var q = filter.value.trim().toLowerCase();
+    var tokens = q ? q.split(/\s+/) : [];
+    rows.forEach(function(r){
+      if(!tokens.length){ r.style.display=''; return; }
+      var txt = r.innerText.toLowerCase();
+      var ok = tokens.every(function(t){ return txt.includes(t); });
+      r.style.display = ok ? '' : 'none';
+    });
+    updateCounts();
+  });
+
+  // Sort
+  var lastSort = { key: 'report_date', dir: 'desc' };
+  function sortBy(key, dir, isNum) {
+    var idx = Array.from(document.querySelectorAll('#pt thead th')).findIndex(function(th){ return th.dataset.key === key; });
+    if(idx < 0) return;
+    rows.sort(function(a, b){
+      var av = a.cells[idx].innerText.trim();
+      var bv = b.cells[idx].innerText.trim();
+      if(isNum){
+        var na = parseFloat(av.replace(/[^0-9.\-+]/g, ''));
+        var nb = parseFloat(bv.replace(/[^0-9.\-+]/g, ''));
+        if(isNaN(na)) na = dir==='asc' ? Infinity : -Infinity;
+        if(isNaN(nb)) nb = dir==='asc' ? Infinity : -Infinity;
+        return dir === 'asc' ? na - nb : nb - na;
+      }
+      return dir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av);
+    });
+    var frag = document.createDocumentFragment();
+    rows.forEach(function(r){ frag.appendChild(r); });
+    tbody.appendChild(frag);
+    // update indicators
+    document.querySelectorAll('#pt thead th').forEach(function(th){
+      var ind = th.querySelector('.sort-ind');
+      if(!ind) return;
+      ind.textContent = (th.dataset.key === key) ? (dir === 'asc' ? '▲' : '▼') : '';
+    });
+    lastSort = { key: key, dir: dir };
+  }
+
+  document.querySelectorAll('#pt thead th').forEach(function(th){
+    th.addEventListener('click', function(){
+      var key = th.dataset.key;
+      var isNum = th.dataset.num === '1';
+      var defaultDir = th.dataset.defaultDir || (isNum ? 'desc' : 'asc');
+      var dir = (lastSort.key === key) ? (lastSort.dir === 'asc' ? 'desc' : 'asc') : defaultDir;
+      sortBy(key, dir, isNum);
+    });
+  });
+
+  // Initial: server already sent report_date DESC — just paint the indicator
+  document.querySelectorAll('#pt thead th').forEach(function(th){
+    if(th.dataset.key === 'report_date') th.querySelector('.sort-ind').textContent = '▼';
+  });
+
+  updateCounts();
+})();
+</script>
+</body>
+</html>

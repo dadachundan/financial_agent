@@ -13,7 +13,7 @@ NAV_HTML = """\
     <li class="nav-item"><a class="nav-link py-1" href="/comments">&#128172; Comments</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/indicators">&#128200; Indicators</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/pe">&#128181; P/E</a></li>
-    <li class="nav-item"><a class="nav-link py-1" href="/price-shape">&#128200; Price Shape</a></li>
+    <li class="nav-item"><a class="nav-link py-1" href="/pt">&#127919; Price Target</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/obsidian">&#128204; Obsidian</a></li>
   </ul>
 </nav>

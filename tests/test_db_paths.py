@@ -247,6 +247,7 @@ class TestFinagentDbDirOverride:
         ("market_cap_cache.py",    "_DB_PATH"),
         ("graph_mirror.py",        "_DEFAULT_MIRROR"),
         ("zsxq_common.py",         "DEFAULT_DB"),
+        ("stock_price_target_db.py", "DB_PATH"),
     ])
     def test_module_honors_env(self, monkeypatch, tmp_path, module_path, attr):
         """Each DB-using module's path constant lands inside FINAGENT_DB_DIR."""

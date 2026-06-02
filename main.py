@@ -37,7 +37,7 @@ from fetch_financial_report import sec_bp, init_db as _sec_init
 from fetch_cninfo_report    import cn_bp,  init_db as _cn_init
 from indicators.app         import indicators_bp, init_db as _ind_init
 from pe.app                 import pe_bp
-from monitoring.app         import price_shape_bp
+from pt_app                import pt_bp
 from notes_app              import notes_bp, init_db as _notes_init
 from obsidian_app           import obsidian_bp, register_filters as _obsidian_filters
 from reports_viewer         import reports_bp
@@ -60,7 +60,7 @@ app.register_blueprint(sec_bp,        url_prefix="/sec")
 app.register_blueprint(cn_bp,         url_prefix="/cn")
 app.register_blueprint(indicators_bp,   url_prefix="/indicators")
 app.register_blueprint(pe_bp,           url_prefix="/pe")
-app.register_blueprint(price_shape_bp,  url_prefix="/price-shape")
+app.register_blueprint(pt_bp,           url_prefix="/pt")
 app.register_blueprint(notes_bp,        url_prefix="/manual-report")
 app.register_blueprint(obsidian_bp,     url_prefix="/obsidian")
 app.register_blueprint(reports_bp,      url_prefix="/claude-reports")
@@ -109,7 +109,7 @@ _BP_PREFIXES = {
     "sec":        "/sec",
     "cn":         "/cn",
     "indicators":   "/indicators",
-    "price_shape":  "/price-shape",
+    "pt":           "/pt",
     "notes":        "/manual-report",
     "obsidian":     "/obsidian",
     "reports":      "/claude-reports",
