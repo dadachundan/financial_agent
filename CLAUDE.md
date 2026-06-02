@@ -234,32 +234,60 @@ When the user asks to **verify, audit, or fix URLs / hallucinations in a report*
 
 The standard fix-list to look for, in priority order: fabricated SEC URLs (resolve real filenames via the EDGAR submissions JSON), fabricated numbers attributed to filings (grep the actual 10-K / 8-K / DEF 14A text), fabricated third-party stats (web-search the real source), wrong launch / acquisition / filing dates, mis-paired YoY comparisons, and analyst opinions misattributed to primary filings (relabel as `*Analyst view:*` per the company-research skill rule).
 
-# LLM API Usage
+# Knowledge graph — Claude (the agent) curates by hand
 
-- Use **Anthropic Claude** for all LLM calls — entity / relationship
-  extraction, summarisation, classification, prompt refinement. The previous
-  MiniMax client has been removed; there is no fallback.
-- Credentials are read from env (`ANTHROPIC_AUTH_TOKEN` + `ANTHROPIC_BASE_URL`
-  from `~/.zshrc`, with `ANTHROPIC_API_KEY` as fallback). You can also set
-  `ANTHROPIC_API_KEY` in `config.py` to override.
-- Default model is `claude-sonnet-4-6` (best extraction quality / cost
-  balance). Pass `model="claude-opus-4-8"` per call for deeper reasoning.
-- Import and call via `claude_llm.py`:
+The knowledge graph at `localhost:5001/zep/` is **not** populated by any
+automated LLM extraction pipeline. The previous MiniMax and Claude-API
+ingest paths (`minimax.py`, `minimax_llm_client.py`, `claude_llm_client.py`,
+`ingest/graphiti_ingest.py`) have all been removed. The user does not trust
+batch-LLM extraction quality and wants Claude (the agent) reading the
+sources and curating entities + edges directly.
 
-  ```python
-  from claude_llm import call_claude, CLAUDE_MODEL
-  text, elapsed, raw_json = call_claude(
-      messages=[
-          {"role": "system", "content": "..."},
-          {"role": "user",   "content": "..."},
-      ],
-      temperature=0.2,
-      max_completion_tokens=512,
-  )
-  ```
+**Workflow when the user asks to "update the knowledge graph" / "add X to
+the graph" / "ingest these reports":**
 
-- For graphiti-core knowledge-graph ingestion, the LLM client wrapper is
-  `claude_llm_client.ClaudeLLMClient` (see `ingest/graphiti_ingest.py`).
+1. Read the source document(s) yourself with `Read`.
+2. Curate a small batch of high-confidence entities and edges. Skip names
+   you're unsure about — quality over quantity.
+3. Use `manual_graph.py` to write directly to `db/graph_mirror.db` (the
+   SQLite mirror the viewer reads from):
+
+   ```python
+   from manual_graph import (
+       add_entity, add_edge, add_episode, add_entities, add_edges, stats,
+   )
+
+   add_episode("NVDA_FY25_10K",
+               name="NVIDIA FY25 10-K",
+               source_desc="financial_reports/NVDA/...")
+
+   add_entity("NVIDIA", labels=["Company"], ticker="NVDA",
+              summary="Fabless GPU vendor; dominant in AI training.")
+   add_entity("TSMC",   labels=["Company"], ticker="TSM",
+              summary="World's largest dedicated foundry.")
+
+   add_edge("TSMC", "NVIDIA",
+            relation="MANUFACTURES_FOR",
+            fact="TSMC fabricates NVIDIA's H100 and Blackwell GPUs at N4/N3.",
+            source="NVDA_FY25_10K")
+   ```
+
+   `add_entity` is **idempotent by name** (case-insensitive) — existing
+   entities are not duplicated and their curated fields are not clobbered.
+   `add_edge` raises `ValueError` if either endpoint is missing; always
+   add the entities first.
+
+4. Cite. Every edge should carry a `source=` slug pointing at the document
+   you read. The viewer surfaces this in the edge tooltip.
+
+**Never call any LLM API to extract graph relationships** — not Claude, not
+MiniMax, not anything else. The user has been explicit about this.
+
+`claude_llm.py` is kept for other one-off, user-requested LLM calls
+(summarisation, classification, etc.) but **must not** be used for graph
+ingestion. Default model in that helper is `claude-sonnet-4-6` and
+credentials come from env (`ANTHROPIC_AUTH_TOKEN` / `ANTHROPIC_BASE_URL` in
+`~/.zshrc`).
 
 # Skills
 

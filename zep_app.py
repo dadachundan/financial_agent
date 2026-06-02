@@ -1,29 +1,28 @@
 #!/usr/bin/env python3
 """
-zep_app.py — Flask blueprint for the graphiti-core knowledge graph UI.
+zep_app.py — Flask blueprint for the financial knowledge graph viewer.
 
-Backend: local graphiti-core (KuzuDB + bge-m3 + Claude).
-No cloud dependencies — the full graph lives in ./graphiti_db/.
+Backend: SQLite mirror at db/graph_mirror.db (legacy KuzuDB store at
+db/graphiti_db is read-through for browsing only — no new writes flow there).
+The previous LLM-driven graphiti ingest pipeline has been removed; entities
+and edges are curated manually via manual_graph.py.
 
 Routes (all under /zep prefix when registered in main.py):
     GET  /          — Search + entity browser
-    GET  /search    — JSON: {query} → {nodes, edges, episodes}
-    GET  /entities  — JSON: list all entity nodes (paginated via KuzuDB)
-    GET  /edges     — JSON: list all relationship edges (paginated via KuzuDB)
+    GET  /search    — JSON: {query} → {nodes, edges, episodes}   (mirror FTS)
+    GET  /entities  — JSON: list all entity nodes (paginated)
+    GET  /edges     — JSON: list all relationship edges (paginated)
     GET  /stats     — JSON: {node_count, edge_count, episode_count, community_count}
-    GET  /ingest        — SSE stream: run graphiti_ingest.py for newly-added PDFs
-    POST /upload-pdf    — SSE stream: accept PDF upload and index it directly
     GET  /communities         — JSON: paginated community list
     GET  /communities/<id>    — JSON: community detail + members
-    POST /build-communities   — SSE stream: run full label-propagation + LLM summaries
+    POST /build-communities   — SSE stream: label-propagation (no LLM)
+    GET  /ingest, POST /upload-pdf, /entities/isolate-persons — 410 Gone
 """
 
 import asyncio
 import json
 import os
-import subprocess
 import sys
-import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -60,7 +59,6 @@ import graph_mirror as _mirror
 # Thread-local storage — each Flask worker thread gets its own SQLite connection.
 # SQLite connections cannot be shared across threads (check_same_thread=True default).
 _mirror_local    = threading.local()
-_ingest_running  = False   # True while graphiti_ingest subprocess holds the Kuzu lock
 _mirror_backfill_done = False          # run backfill at most once per process
 
 
@@ -85,18 +83,8 @@ def _get_mirror():
                          (n_edges_with_ep == 0 and n_ent > 0))
         if need_backfill and GRAPH_DIR.exists():
             print("[mirror] incomplete — backfilling from KuzuDB …", flush=True)
-            # Reuse graphiti's existing kuzu.Database object to avoid exclusive-lock conflict
-            existing_kuzu_conn = None
-            try:
-                import kuzu as _kuzu
-                g = _get_graphiti()
-                if g is not None and hasattr(g, "driver") and \
-                        hasattr(g.driver, "db"):
-                    existing_kuzu_conn = _kuzu.Connection(g.driver.db)
-            except Exception:
-                pass
             ne, ned = _mirror.backfill_from_kuzu(
-                conn, GRAPH_DIR, GROUP_ID, kuzu_conn=existing_kuzu_conn
+                conn, GRAPH_DIR, GROUP_ID, kuzu_conn=None
             )
             print(f"[mirror] backfill done: {ne} entities, {ned} edges", flush=True)
     return conn
@@ -117,22 +105,16 @@ def _run(coro):
     return asyncio.run(coro)
 
 
-# ── Lazy graphiti singleton ────────────────────────────────────────────────────
-
-_graphiti = None
-
+# ── Graph backend ─────────────────────────────────────────────────────────────
+# The previous LLM-driven graphiti pipeline has been removed. All graph state
+# is curated manually via manual_graph.py and written directly into the
+# SQLite mirror at db/graph_mirror.db. The viewer reads from the mirror;
+# KuzuDB is left in place for compatibility but no new writes flow into it.
 
 def _get_graphiti():
-    global _graphiti
-    if _graphiti is None:
-        if not GRAPH_DIR.exists():
-            return None   # not yet indexed
-        try:
-            from claude_llm_client import get_graphiti
-            _graphiti = get_graphiti()
-        except Exception:
-            return None
-    return _graphiti
+    """Deprecated stub kept so legacy callers fail closed instead of importing
+    a non-existent module. Always returns None."""
+    return None
 
 
 def _graph_ready() -> bool:
@@ -269,36 +251,7 @@ def search():
         result["_source"] = "mirror-fts"
         return jsonify(result)
 
-    # FTS found nothing — try graphiti semantic search as fallback
-    g = _get_graphiti()
-    if g is not None:
-        try:
-            results  = _run(g.search_(query=query, group_ids=[GROUP_ID]))
-            nodes    = [_node_to_dict(n)  for n in (results.nodes    or [])[:limit]]
-            edges    = [_edge_to_dict(e)  for e in (results.edges    or [])[:limit]]
-            episodes = [_ep_to_dict(ep)   for ep in (results.episodes or [])[:limit]]
-            missing_uuids = set()
-            for e in edges:
-                if e["source_node_uuid"]: missing_uuids.add(e["source_node_uuid"])
-                if e["target_node_uuid"]: missing_uuids.add(e["target_node_uuid"])
-            uuid_to_name = {n["uuid"]: n["name"] for n in nodes}
-            missing_uuids -= set(uuid_to_name)
-            if missing_uuids:
-                uuid_to_name.update(_mirror.resolve_names(_get_mirror(), missing_uuids))
-            for e in edges:
-                e["source_node_name"] = uuid_to_name.get(e["source_node_uuid"], "")
-                e["target_node_name"] = uuid_to_name.get(e["target_node_uuid"], "")
-            mirror = _get_mirror()
-            for e in edges:
-                ep_uuids = e.pop("_episode_uuids", [])
-                e["sources"] = _mirror.resolve_edge_sources(
-                    mirror, json.dumps(ep_uuids)
-                ) if ep_uuids else []
-            return jsonify({"nodes": nodes, "edges": edges, "episodes": episodes,
-                            "_source": "graphiti"})
-        except Exception as _ge:
-            print(f"[search] graphiti fallback failed ({_ge})", file=sys.stderr)
-
+    # Mirror FTS is the only search backend; graphiti semantic fallback removed.
     result["_source"] = "mirror-fts"
     return jsonify(result)
 
@@ -328,19 +281,11 @@ def edges():
 @zep_bp.route("/edges/<uuid>/deprecate", methods=["POST"])
 def deprecate_edge(uuid):
     """Mark a relationship as deprecated in mirror + KuzuDB (set expired_at)."""
-    global _ingest_running
     body   = request.get_json(silent=True) or {}
     reason = (body.get("reason") or "RELATION_NONSENSE").strip()[:200]
     found  = _mirror.deprecate_edge(_get_mirror(), uuid, reason)
     if not found:
         return jsonify({"ok": False, "error": "edge not found"}), 404
-
-    # Mirror updated — UI reflects the change immediately.
-    # If ingest holds the Kuzu lock, queue the Kuzu write for later.
-    if _ingest_running:
-        _mirror.queue_deletion(_get_mirror(), uuid, "edge", reason)
-        print(f"[deprecate_edge] ingest running — queued Kuzu write for {uuid}", file=sys.stderr)
-        return jsonify({"ok": True, "uuid": uuid, "reason": reason, "kuzu": "queued"})
 
     try:
         kuzu_conn, _kdb = _kuzu_conn()
@@ -499,17 +444,9 @@ def create_edge_ep():
 @zep_bp.route("/entities/<uuid>/isolate", methods=["POST"])
 def isolate_entity(uuid):
     """Mark an entity as isolated in mirror + delete it from KuzuDB."""
-    global _ingest_running
     found = _mirror.isolate_entity(_get_mirror(), uuid)
     if not found:
         return jsonify({"ok": False, "error": "entity not found"}), 404
-
-    # Mirror updated — UI reflects the change immediately.
-    # If ingest holds the Kuzu lock, queue the Kuzu write for later.
-    if _ingest_running:
-        _mirror.queue_deletion(_get_mirror(), uuid, "entity")
-        print(f"[isolate_entity] ingest running — queued Kuzu delete for {uuid}", file=sys.stderr)
-        return jsonify({"ok": True, "uuid": uuid, "kuzu": "queued"})
 
     # Also hard-delete from KuzuDB (DETACH DELETE removes the node and all its edges).
     try:
@@ -536,140 +473,20 @@ def stats():
 
 @zep_bp.route("/ingest")
 def ingest_stream():
-    """SSE stream: run graphiti_ingest.py for any un-indexed PDFs and SEC filings."""
-    def _gen():
-        global _ingest_running, _graphiti
-        _ingest_running = True
-        try:
-            yield "data: Starting graphiti_ingest.py ...\n\n"
-            ingestor = SCRIPT_DIR / "ingest" / "graphiti_ingest.py"
-            proc = subprocess.Popen(
-                [sys.executable, "-u", str(ingestor),
-                 "--source", "all", "--form-type", "10-K", "10-Q"],
-                stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-                text=True, bufsize=1,
-                env={**os.environ, "PYTHONUNBUFFERED": "1"},
-            )
-            for line in proc.stdout:
-                yield f"data: {line.rstrip()}\n\n"
-            proc.wait()
-            # Reset the singleton so it reloads the updated graph
-            _graphiti = None
-        finally:
-            _ingest_running = False
-
-        # Drain any deletions that were queued while ingest held the Kuzu lock
-        pending = _mirror.drain_pending_deletions(_get_mirror())
-        if pending:
-            yield f"data: Applying {len(pending)} queued deletion(s)…\n\n"
-            kuzu_conn, _kdb = _kuzu_conn()
-            for row in pending:
-                p_uuid, p_type, p_reason = row["uuid"], row["type"], row["reason"]
-                try:
-                    if p_type == "edge":
-                        kuzu_conn.execute(
-                            "MATCH (:Entity)-[:RELATES_TO]->(e:RelatesToNode_ {uuid: $uuid})-[:RELATES_TO]->(:Entity) "
-                            "SET e.expired_at = $ts",
-                            {"uuid": p_uuid, "ts": datetime.now(timezone.utc)},
-                        )
-                    else:
-                        kuzu_conn.execute(
-                            "MATCH (n:Entity {uuid: $uuid}) "
-                            "OPTIONAL MATCH (:Entity)-[:RELATES_TO]->(r:RelatesToNode_)-[:RELATES_TO]->(n) "
-                            "OPTIONAL MATCH (n)-[:RELATES_TO]->(r2:RelatesToNode_)-[:RELATES_TO]->(:Entity) "
-                            "DETACH DELETE r, r2, n",
-                            {"uuid": p_uuid},
-                        )
-                    yield f"data: ✓ {p_type} {p_uuid[:8]}… applied\n\n"
-                except Exception as e:
-                    yield f"data: ✗ {p_type} {p_uuid[:8]}… failed: {e}\n\n"
-
-        yield "data: done: true\n\n"
-
-    return Response(_gen(), mimetype="text/event-stream")
+    """Removed — automatic ingest is gone. Curate the graph via manual_graph.py."""
+    return jsonify({
+        "error": "Automatic ingest has been removed. Add entities and edges "
+                 "manually via manual_graph.add_entity / add_edge."
+    }), 410
 
 
 @zep_bp.route("/upload-pdf", methods=["POST"])
 def upload_pdf():
-    """Accept a PDF or HTML upload and index it into graphiti (SSE stream response)."""
-    f = request.files.get("pdf")
-    if f is None or not f.filename:
-        return jsonify({"error": "No file provided"}), 400
-
-    orig_name = f.filename
-    ext = Path(orig_name).suffix.lower()
-    is_html = ext in (".html", ".htm")
-    is_pdf  = ext == ".pdf"
-    if not is_html and not is_pdf:
-        return jsonify({"error": "Only PDF and HTML files are supported"}), 400
-
-    # Save to temp file before entering the generator (request data is consumed here)
-    tmp = tempfile.NamedTemporaryFile(suffix=ext, delete=False)
-    f.save(tmp.name)
-    tmp.close()
-    tmp_path = Path(tmp.name)
-
-    def _gen():
-        yield f"data: Received: {orig_name}\n\n"
-        yield "data: Extracting text…\n\n"
-        try:
-            if is_html:
-                from ingest.graphiti_ingest import _clean_html_to_text
-                text = _clean_html_to_text(tmp_path)[:80_000]
-            else:
-                import pdfplumber
-                pages = []
-                with pdfplumber.open(tmp_path) as pdf:
-                    for page in pdf.pages:
-                        t = page.extract_text()
-                        if t:
-                            pages.append(t.strip())
-                text = "\n\n".join(pages)[:80_000]
-        except Exception as e:
-            yield f"data: ✗ Text extraction failed: {e}\n\n"
-            yield "data: done: true\n\n"
-            tmp_path.unlink(missing_ok=True)
-            return
-
-        if len(text) < 200:
-            kind = "HTML" if is_html else "PDF"
-            yield f"data: ⚠  No extractable text from {kind}\n\n"
-            yield "data: done: true\n\n"
-            tmp_path.unlink(missing_ok=True)
-            return
-
-        kind_label = "HTML" if is_html else "PDF"
-        yield f"data: {len(text):,} chars extracted. Indexing…\n\n"
-
-        try:
-            global _graphiti
-            g = _get_graphiti()
-            if g is None:
-                from claude_llm_client import get_graphiti as _gg
-                _graphiti = _gg()
-                g = _graphiti
-
-            from graphiti_core.nodes import EpisodeType
-            result = asyncio.run(g.add_episode(
-                name=f"upload_{Path(orig_name).stem}",
-                episode_body=text,
-                source_description=f"{kind_label}: {orig_name}",
-                reference_time=datetime.now(timezone.utc),
-                group_id=GROUP_ID,
-                source=EpisodeType.text,
-            ))
-            n_nodes = len(result.nodes)
-            n_edges = len(result.edges)
-            _graphiti = None  # reset so next read sees updated graph
-            yield f"data: ✓ Done — {n_nodes} entities, {n_edges} relationships extracted\n\n"
-        except Exception as e:
-            yield f"data: ✗ Indexing error: {e}\n\n"
-        finally:
-            tmp_path.unlink(missing_ok=True)
-
-        yield "data: done: true\n\n"
-
-    return Response(_gen(), mimetype="text/event-stream")
+    """Removed — PDF auto-extraction is gone. Read the source manually."""
+    return jsonify({
+        "error": "PDF auto-extraction has been removed. Read the document "
+                 "yourself and curate entities via manual_graph.py."
+    }), 410
 
 
 @zep_bp.route("/refresh-mirror", methods=["POST"])
@@ -687,103 +504,28 @@ def refresh_mirror():
 
 @zep_bp.route("/entities/isolate-persons", methods=["POST"])
 def isolate_persons():
-    """SSE stream: use Claude to classify all entities and isolate person names."""
-    from claude_llm import call_claude
+    """Removed — bulk LLM-based person isolation is gone.
 
-    BATCH = 80  # entity names per LLM call
-
-    def _gen():
-        conn = _get_mirror()
-        rows = conn.execute(
-            "SELECT uuid, name FROM entities WHERE (isolated=0 OR isolated IS NULL) ORDER BY name"
-        ).fetchall()
-
-        total = len(rows)
-        yield f"data: Found {total} entities to classify…\n\n"
-
-        isolated_count = 0
-        for i in range(0, total, BATCH):
-            batch = rows[i:i + BATCH]
-            names = [r[1] for r in batch]
-            name_list = "\n".join(f"- {n}" for n in names)
-
-            prompt = (
-                "From the following list of entity names extracted from financial research documents, "
-                "identify which ones are HUMAN PERSON NAMES (real individual people: executives, "
-                "analysts, authors, investors, politicians, etc.).\n\n"
-                "Do NOT flag: company names, brand names, product names, place names, "
-                "concepts, indices, acronyms, or generic terms — even if they sound like names.\n\n"
-                "Return ONLY the person names that should be removed, one per line, exactly as written. "
-                "If none are persons, return the single word NONE.\n\n"
-                f"Entity list:\n{name_list}"
-            )
-            try:
-                text, _, _ = call_claude(
-                    messages=[
-                        {"role": "system",
-                         "content": "You are a precise entity classifier for financial data."},
-                        {"role": "user", "content": prompt},
-                    ],
-                    temperature=0.1,
-                    max_completion_tokens=512,
-                )
-                person_names = set()
-                for line in text.splitlines():
-                    line = line.strip().lstrip("- ").strip()
-                    if line and line.upper() != "NONE":
-                        person_names.add(line)
-
-                # Isolate matching entities
-                name_to_uuid = {r[1]: r[0] for r in batch}
-                for pname in person_names:
-                    uuid = name_to_uuid.get(pname)
-                    if uuid:
-                        _mirror.isolate_entity(conn, uuid)
-                        isolated_count += 1
-                        yield f"data: 🗑 Isolated: {pname}\n\n"
-
-            except Exception as e:
-                yield f"data: ⚠ Batch {i//BATCH + 1} error: {e}\n\n"
-
-            done = min(i + BATCH, total)
-            yield f"data: Progress: {done}/{total} classified, {isolated_count} persons removed…\n\n"
-
-        yield f"data: ✓ Done — {isolated_count} person names isolated out of {total} entities\n\n"
-        yield "data: done: true\n\n"
-
-    return Response(_gen(), mimetype="text/event-stream")
+    Use the per-entity isolate button in the UI, or call
+    `_mirror.isolate_entity(conn, uuid)` from a curated script.
+    """
+    return jsonify({
+        "error": "Bulk auto-isolation has been removed. Isolate persons "
+                 "manually via the UI or graph_mirror.isolate_entity()."
+    }), 410
 
 
 @zep_bp.route("/clear", methods=["POST"])
 def clear_graph():
-    """Delete graphiti_db and reset graphiti_indexed_at in zsxq.db."""
-    import sqlite3
+    """Removed — bulk-clearing the graph is no longer supported.
 
-    global _graphiti
-    _graphiti = None  # drop the in-process singleton
-
-    errors = []
-
-    # 1. Delete the graph DB files (main + WAL)
-    try:
-        GRAPH_DIR.unlink(missing_ok=True)
-        Path(str(GRAPH_DIR) + ".wal").unlink(missing_ok=True)
-    except Exception as e:
-        errors.append(f"Could not delete graph DB: {e}")
-
-    # 2. Reset indexed timestamps so all PDFs queue for re-indexing
-    try:
-        if ZSXQ_DB.exists():
-            conn = sqlite3.connect(ZSXQ_DB)
-            conn.execute("UPDATE pdf_files SET graphiti_indexed_at = NULL")
-            conn.commit()
-            conn.close()
-    except Exception as e:
-        errors.append(f"Could not reset zsxq.db: {e}")
-
-    if errors:
-        return jsonify({"ok": False, "errors": errors}), 500
-    return jsonify({"ok": True})
+    The legacy KuzuDB store is left intact; delete files manually if needed.
+    The SQLite mirror is the source of truth — clear it with SQL.
+    """
+    return jsonify({
+        "error": "Bulk clear has been removed. Manage the graph directly via "
+                 "graph_mirror.* or by editing db/graph_mirror.db."
+    }), 410
 
 
 # LLM log routes removed — monitoring moved to Langfuse cloud.
