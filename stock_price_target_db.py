@@ -2,8 +2,8 @@
 
 Each row in ``price_targets`` represents one (company, broker, report) tuple:
 a price-target call, the date of the report it came from, the zsxq ``file_id``
-that lets you click through to the PDF at
-``http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>``, and the
+that lets you click through to the PDF viewer at
+``http://xs-macbook-air.local:5001/zsxq/pdf-viewer/<file_id>``, and the
 **point-in-time** stock price + market cap on the report date (so you can
 later compute realized PT-vs-actual returns without re-fetching history).
 
@@ -21,15 +21,36 @@ from db_paths import db_path
 
 DB_PATH: Path = db_path("stock_price_target.db")
 
+# Columns the table actually persists. Keys outside this set in a payload
+# dict passed to upsert_target() are silently dropped — that way callers
+# can carry extra context (exchange, chinese_name, …) for documentation
+# without breaking the INSERT.
+ALLOWED_COLS = {
+    "company_ticker",
+    "company_name",
+    "research_institute",
+    "rating",
+    "price_target",
+    "target_currency",
+    "catalyst",
+    "report_file_id",
+    "report_pdf_filename",
+    "report_url",
+    "report_date",
+    "report_date_price",
+    "report_date_market_cap",
+    "price_currency",
+    "upside_pct",
+    "created_at",
+}
+
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS price_targets (
     id                       INTEGER PRIMARY KEY AUTOINCREMENT,
 
-    -- Identity
+    -- Identity (exchange is implicit in the ticker suffix, e.g. ".HK", ".SS")
     company_ticker           TEXT NOT NULL,    -- e.g. "LLY", "1109.HK", "002847.SZ"
-    exchange                 TEXT NOT NULL,    -- "NASDAQ" / "NYSE" / "HKEX" / "SSE" / "SZSE" / "TWSE" / "TWO" / "TSE" / "KRX" / "INDEX"
     company_name             TEXT NOT NULL,    -- English / Pinyin
-    chinese_name             TEXT,             -- Simplified Chinese, NULLable
 
     -- Report metadata
     research_institute       TEXT NOT NULL,    -- "Bernstein" / "Morgan Stanley" / "Goldman Sachs" / ...
@@ -41,7 +62,7 @@ CREATE TABLE IF NOT EXISTS price_targets (
     -- Source provenance (the zsxq PDF this PT came from)
     report_file_id           INTEGER NOT NULL, -- zsxq.db pdf_files.file_id
     report_pdf_filename      TEXT,             -- original PDF filename
-    report_url               TEXT NOT NULL,    -- "http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>"
+    report_url               TEXT NOT NULL,    -- "http://xs-macbook-air.local:5001/zsxq/pdf-viewer/<file_id>"
     report_date              TEXT NOT NULL,    -- ISO date (YYYY-MM-DD) — from PDF name if present, else download date
 
     -- Point-in-time market data on report_date
@@ -83,13 +104,15 @@ def _conn():
 def upsert_target(row: dict) -> None:
     """Insert one price-target row; ignore duplicates on the unique key.
 
-    Required keys: company_ticker, exchange, company_name, research_institute,
-    report_file_id, report_date. Everything else is optional / nullable.
+    Required keys: ``company_ticker``, ``company_name``, ``research_institute``,
+    ``report_file_id``, ``report_date``. Any extra keys (e.g. ``exchange``,
+    ``chinese_name``) are silently dropped — keep them in the source-of-truth
+    record literal if useful for documentation, but they won't be persisted.
     """
     row = dict(row)  # don't mutate caller's dict
     row.setdefault("created_at", datetime.now(timezone.utc).isoformat(timespec="seconds"))
     if "report_url" not in row and "report_file_id" in row:
-        row["report_url"] = f"http://xs-macbook-air.local:5001/zsxq/pdf/{row['report_file_id']}"
+        row["report_url"] = f"http://xs-macbook-air.local:5001/zsxq/pdf-viewer/{row['report_file_id']}"
 
     # Compute upside if both sides present
     if row.get("price_target") and row.get("report_date_price"):
@@ -97,6 +120,9 @@ def upsert_target(row: dict) -> None:
             row["upside_pct"] = (row["price_target"] - row["report_date_price"]) / row["report_date_price"] * 100
         except Exception:
             pass
+
+    # Drop any keys not in the live schema
+    row = {k: v for k, v in row.items() if k in ALLOWED_COLS}
 
     cols = ", ".join(row.keys())
     qs = ", ".join("?" for _ in row)

@@ -10,7 +10,8 @@
   thead th { position:sticky; top:0; background:#0d6efd; color:#fff; cursor:pointer; user-select:none; white-space:nowrap; z-index:5; }
   thead th .sort-ind { font-size:.7rem; color:#ffd; margin-left:4px; }
   tbody tr:hover { background:rgba(13,110,253,.10) !important; }
-  td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  td.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .ccy { font-size:.7rem; color:#9ca3af; margin-left:4px; }
   .up   { color:#4ade80; font-weight:600; }
   .down { color:#f87171; font-weight:600; }
   .rating-buy        { background:#198754; color:#fff; }
@@ -54,16 +55,13 @@
         <tr>
           <th data-key="report_date" data-default-dir="desc">Report Date<span class="sort-ind"></span></th>
           <th data-key="company_ticker">Ticker<span class="sort-ind"></span></th>
-          <th data-key="exchange">Exch<span class="sort-ind"></span></th>
           <th data-key="company_name">Company<span class="sort-ind"></span></th>
-          <th data-key="chinese_name">中文名<span class="sort-ind"></span></th>
           <th data-key="research_institute">Broker<span class="sort-ind"></span></th>
           <th data-key="rating">Rating<span class="sort-ind"></span></th>
           <th data-key="price_target" data-num="1">PT<span class="sort-ind"></span></th>
-          <th data-key="target_currency">PT Ccy<span class="sort-ind"></span></th>
           <th data-key="report_date_price" data-num="1">Px @ Report<span class="sort-ind"></span></th>
           <th data-key="upside_pct" data-num="1">Upside %<span class="sort-ind"></span></th>
-          <th data-key="report_date_market_cap" data-num="1">Mkt Cap (local)<span class="sort-ind"></span></th>
+          <th data-key="report_date_market_cap" data-num="1">Mkt Cap<span class="sort-ind"></span></th>
           <th data-key="catalyst">Catalyst<span class="sort-ind"></span></th>
           <th data-key="report_pdf_filename">Report PDF<span class="sort-ind"></span></th>
         </tr>
@@ -73,9 +71,7 @@
         <tr>
           <td>{{ r.report_date or '' }}</td>
           <td><strong>{{ r.company_ticker }}</strong></td>
-          <td><span class="text-muted">{{ r.exchange }}</span></td>
           <td>{{ r.company_name }}</td>
-          <td class="text-muted">{{ r.chinese_name or '' }}</td>
           <td>{{ r.research_institute }}</td>
           <td>
             {% if r.rating %}
@@ -93,24 +89,26 @@
               {% else %}<span class="rating-pill rating-neutral">{{ r.rating }}</span>{% endif %}
             {% endif %}
           </td>
-          <td class="num">{% if r.price_target is not none %}{{ '%.2f' % r.price_target }}{% endif %}</td>
-          <td class="text-muted">{{ r.target_currency or '' }}</td>
-          <td class="num">{% if r.report_date_price is not none %}{{ '%.2f' % r.report_date_price }}{% endif %}</td>
+          <td class="num">
+            {% if r.price_target is not none %}{{ '%.2f' % r.price_target }}<span class="ccy">{{ r.target_currency or '' }}</span>{% endif %}
+          </td>
+          <td class="num">
+            {% if r.report_date_price is not none %}{{ '%.2f' % r.report_date_price }}<span class="ccy">{{ r.price_currency or r.target_currency or '' }}</span>{% endif %}
+          </td>
           <td class="num {% if r.upside_pct and r.upside_pct > 0 %}up{% elif r.upside_pct and r.upside_pct < 0 %}down{% endif %}">
             {% if r.upside_pct is not none %}{{ '%+.1f%%' % r.upside_pct }}{% endif %}
           </td>
-          <td class="num text-muted">
+          <td class="num">
             {% if r.report_date_market_cap %}
               {% if r.report_date_market_cap >= 1e12 %}{{ '%.1fT' % (r.report_date_market_cap / 1e12) }}
               {% elif r.report_date_market_cap >= 1e9 %}{{ '%.1fB' % (r.report_date_market_cap / 1e9) }}
-              {% else %}{{ '%.0fM' % (r.report_date_market_cap / 1e6) }}{% endif %}
-              <span style="font-size:.7rem">{{ r.price_currency or '' }}</span>
+              {% else %}{{ '%.0fM' % (r.report_date_market_cap / 1e6) }}{% endif %}<span class="ccy">{{ r.price_currency or '' }}</span>
             {% endif %}
           </td>
           <td class="catalyst">{{ r.catalyst or '' }}</td>
           <td>
-            {% if r.report_url %}
-              <a class="report-link" href="{{ r.report_url }}" target="_blank" title="{{ r.report_pdf_filename }}">
+            {% if r.report_file_id %}
+              <a class="report-link" href="/zsxq/pdf-viewer/{{ r.report_file_id }}" target="_blank" title="{{ r.report_pdf_filename }}">
                 {{ (r.report_pdf_filename or ('file_id ' + r.report_file_id|string))[:48] }}{% if r.report_pdf_filename and r.report_pdf_filename|length > 48 %}…{% endif %}
               </a>
             {% endif %}
@@ -136,7 +134,7 @@
     rows.forEach(function(r){
       if(r.style.display==='none') return;
       n++;
-      var rating = r.cells[6].innerText.trim().toLowerCase();
+      var rating = r.cells[4].innerText.trim().toLowerCase();
       if(rating.includes('buy')||rating.includes('outperform')||rating.includes('overweight')||rating.includes('top pick')) buy++;
       else if(rating.includes('sell')||rating.includes('underweight')||rating.includes('underperform')) sell++;
     });

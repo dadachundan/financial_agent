@@ -30,9 +30,7 @@ def _query_all_rows() -> list[dict]:
             SELECT
                 id,
                 company_ticker,
-                exchange,
                 company_name,
-                chinese_name,
                 research_institute,
                 rating,
                 price_target,
