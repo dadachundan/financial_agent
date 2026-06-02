@@ -2,15 +2,28 @@
 """
 unprocessed_reports.py — List markdown reports not yet in the knowledge graph.
 
-Compares ``reports/**/*.md`` against the citation slugs already present in
-``episodes.uuid`` of ``db/graph_mirror.db``. Prints the unprocessed paths
-sorted by mtime (newest first) so the user / agent can prioritise recent work.
+Compares ``reports/**/*.md`` against the episodes already present in
+``db/graph_mirror.db`` and prints the unprocessed paths sorted by mtime
+(newest first) so the user / agent can prioritise recent work.
 
-The slug-matching is **heuristic**, not precise. We don't store the absolute
-path in episodes — we store a short citation slug like ``NVDA_research_2026-06-02``
-or ``CSPC_research_2026-06-02``. To decide whether a report has been processed
-we look at the episode's ``source_desc`` field, which the skill convention is
-to populate with the relative path under ``reports/``.
+How "already ingested" is decided
+---------------------------------
+Filenames in `reports/company/` don't carry a date — they're stable
+(`CSPC_石药集团_HKEX1093_公司研究.md`, `NVIDIA_NASDAQ_NVDA_Research_Document.md`).
+A company also has *both* an EN and a ZH companion (`_公司研究.md` and
+`_Research_Document.md`); curating one covers both because the underlying
+research is the same.
+
+So the unit of ingestion is the **company folder name**
+(`CSPC_石药集团_HKEX1093`, `NVIDIA_NASDAQ_NVDA`, …), not the full path.
+The script extracts the company folder from each episode's
+``source_desc`` and treats every markdown inside that folder as already
+covered. Sector / compare / earnings / themes reports live as single
+files, so for those we match by file stem.
+
+That folder-as-slug convention is what the skill recommends — see SKILL.md.
+The 1 grandfathered episode (CSPC) used a dated slug; this script tolerates
+both forms by reading the ``source_desc`` path instead of the slug.
 
 Usage::
 
@@ -97,35 +110,57 @@ def collect_reports(subdir: str | None = None) -> list[Path]:
     return selected
 
 
-# ── Compare against episodes.source_desc ──────────────────────────────────────
-def already_ingested_paths() -> set[str]:
+# ── Compare against episodes ──────────────────────────────────────────────────
+def already_ingested() -> tuple[set[str], set[str]]:
+    """Return (ingested_company_folders, ingested_file_stems).
+
+    Reads every ``episodes.source_desc`` row from ``db/graph_mirror.db`` and
+    extracts:
+
+    - **Company folders** — the second path segment under ``reports/company/``
+      (e.g. ``CSPC_石药集团_HKEX1093``). All markdown files inside that
+      folder are considered covered (so the EN and ZH companions share one
+      episode).
+    - **File stems** — for non-company reports (sector / compare / earnings /
+      themes), each single file is its own ingestion unit.
+    """
     if not MIRROR_DB.exists():
-        return set()
+        return set(), set()
     conn = sqlite3.connect(str(MIRROR_DB))
     try:
         rows = conn.execute("SELECT source_desc FROM episodes").fetchall()
     finally:
         conn.close()
-    out: set[str] = set()
+
+    folders: set[str] = set()
+    stems:   set[str] = set()
     for (sd,) in rows:
         if not sd:
             continue
-        # Match by the report's relative path under reports/, which is the
-        # convention in CLAUDE.md's manual_graph.add_episode() example.
-        # `source_desc` is typically the full project-relative path
-        # ("reports/company/X/X_公司研究.md"); we extract the basename pair
-        # so we tolerate either form.
-        out.add(sd.strip())
-        out.add(Path(sd).name)
-    return out
+        p = Path(sd.strip())
+        parts = p.parts
+        if len(parts) >= 3 and parts[0] == "reports" and parts[1] == "company":
+            folders.add(parts[2])
+        elif len(parts) >= 2 and parts[0] == "reports":
+            stems.add(p.stem)
+        else:
+            # Defensive fallback: also accept a bare path / stem for any
+            # source_desc that doesn't match the canonical layout.
+            stems.add(p.stem)
+    return folders, stems
 
 
 def filter_unprocessed(reports: list[Path]) -> list[Path]:
-    ingested = already_ingested_paths()
+    folders, stems = already_ingested()
     out: list[Path] = []
     for p in reports:
-        rel = str(p.relative_to(ROOT))
-        if rel in ingested or p.name in ingested:
+        rel_parts = p.relative_to(ROOT).parts
+        # Company report: covered if its enclosing folder is ingested.
+        if len(rel_parts) >= 3 and rel_parts[0] == "reports" and rel_parts[1] == "company":
+            if rel_parts[2] in folders:
+                continue
+        # Single-file report: match by stem.
+        elif p.stem in stems:
             continue
         out.append(p)
     return out

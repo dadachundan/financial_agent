@@ -116,11 +116,16 @@ Default scope when ambiguous: **all unprocessed reports under
 
 ```bash
 python3 .claude/skills/build-knowledge-graph/scripts/unprocessed_reports.py
+python3 .claude/skills/build-knowledge-graph/scripts/unprocessed_reports.py --subdir company --limit 20
+python3 .claude/skills/build-knowledge-graph/scripts/unprocessed_reports.py --json    # machine-readable
 ```
 
-The script compares `reports/**/*.md` against the citation slugs already
-present in `episodes.uuid`, and prints the unprocessed paths sorted by
-mtime (newest first). It does not modify any DB.
+The script compares `reports/**/*.md` against the **company folder**
+(or single-file stem) of each `episodes.source_desc` row in the mirror,
+and prints what's not yet covered, sorted by mtime (newest first).
+Curating one canonical .md per company covers the EN + ZH companion
+files automatically — they share the same folder. The script never
+modifies any DB.
 
 ### Step 3 — For each report
 
@@ -175,16 +180,56 @@ the tooltip).
 
 ## Reference write pattern
 
+### Citation-slug convention
+
+Reports in `reports/company/<Folder>/...` always have one folder per
+company. Both the EN file (`<Folder>_Research_Document.md`) and the ZH
+file (`<Folder>_公司研究.md` or `<Folder>_Research_Document_zh.md`) live
+inside it; the underlying research is identical.
+
+**The slug IS the company folder name.** No dates, no abbreviations.
+
+| Report path | Slug |
+|---|---|
+| `reports/company/NVIDIA_NASDAQ_NVDA/NVIDIA_NASDAQ_NVDA_公司研究.md` | `NVIDIA_NASDAQ_NVDA` |
+| `reports/company/CSPC_石药集团_HKEX1093/...` | `CSPC_石药集团_HKEX1093` |
+| `reports/company/BYD_比亚迪_HKEX1211/...` | `BYD_比亚迪_HKEX1211` |
+| `reports/sector/半导体材料.md` | `sector_半导体材料` |
+| `reports/compare/SNPS_vs_CDNS.md` | `compare_SNPS_vs_CDNS` |
+| `reports/earnings/QCOM.md` | `earnings_QCOM` |
+
+For single-file reports (sector/compare/earnings/themes) prefix with the
+subdirectory so slugs don't collide with company names.
+
+Derive the slug deterministically from the path:
+
+```python
+from pathlib import Path
+
+def slug_for(rel_path: str) -> str:
+    parts = Path(rel_path).parts
+    if len(parts) >= 3 and parts[0] == "reports" and parts[1] == "company":
+        return parts[2]                       # company folder name
+    if len(parts) >= 2 and parts[0] == "reports":
+        return f"{parts[1]}_{Path(rel_path).stem}"
+    return Path(rel_path).stem
+```
+
+### Example: NVIDIA
+
 ```python
 from manual_graph import (
     add_entity, add_edge, add_episode, add_entities, add_edges, stats,
 )
 
-# 1. Register the report as the citation slug.
-SRC = "NVDA_research_2026-06-02"
-add_episode(SRC,
-            name="NVIDIA (NASDAQ:NVDA) 公司研究 — 2026-06-02",
-            source_desc="reports/company/Nvidia_NASDAQ_NVDA/Nvidia_NASDAQ_NVDA_公司研究.md")
+# 1. Register the report. SLUG = the company folder name. SOURCE_DESC = the
+#    project-relative path to the canonical .md (the one you actually read).
+SRC = "NVIDIA_NASDAQ_NVDA"
+add_episode(
+    SRC,
+    name="NVIDIA (NASDAQ:NVDA) — Research Document",
+    source_desc="reports/company/NVIDIA_NASDAQ_NVDA/NVIDIA_NASDAQ_NVDA_公司研究.md",
+)
 
 # 2. Idempotently add entities. Existing ones aren't clobbered.
 #    Every entity must carry labels=["Company"] — no other label is allowed.
@@ -212,10 +257,12 @@ add_edges([
 ```
 
 **Idempotency.** `add_entity` is case-insensitive by name and never
-clobbers a pre-existing summary. `add_episode` does
-`INSERT OR REPLACE` on its slug. `add_edge` always creates a new row, so
-**don't re-run the same batch** — the unprocessed-reports script exists
-to prevent that.
+clobbers a pre-existing summary. `add_episode` does `INSERT OR REPLACE`
+on its slug (so re-running with the same `SRC` is safe). `add_edge`
+always creates a new row, so **don't re-run the same edge batch** — the
+`unprocessed_reports.py` script exists to prevent that. If you discover
+a duplicate edge after the fact, soft-delete it with
+`graph_mirror.deprecate_edge(conn, edge_uuid, reason="DUPLICATE")`.
 
 ## Reference materials
 
