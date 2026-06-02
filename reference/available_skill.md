@@ -137,6 +137,7 @@ idea-generation → initiating-coverage → earnings-preview → earnings-analys
 | [catalyst-calendar](../.claude/skills/catalyst-calendar/SKILL.md) | Upcoming earnings / events |
 | [morning-note](../.claude/skills/morning-note/SKILL.md) | 7 am desk note |
 | [earnings-upload-to-db](../.claude/skills/earnings-upload-to-db/SKILL.md) | PDF ingest into `db/notes.db` (data-plumbing, not analysis) |
+| [build-knowledge-graph](../.claude/skills/build-knowledge-graph/SKILL.md) | Mine entities + `COMPETES_WITH` / `SUPPLIES` edges from `reports/**/*.md` into `db/graph_mirror.db` via `manual_graph.py`. Agent (Claude in conversation) does the reading; **no LLM API**. Cap ≤10 active edges per entity. |
 
 ---
 
