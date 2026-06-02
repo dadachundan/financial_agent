@@ -1,6 +1,6 @@
 ---
 name: zsxq-recommend
-description: Recommend zsxq reports to read by scanning the most-recent rows of db/zsxq.db (titles + summaries — no PDF parsing). Default: latest 50 reports, focus on AI / robotics. User may override with a count ("latest 100") and/or a subject ("focus on semiconductors", "anything on EVs"). When the user has no clue, group the recent feed into themes and surface a handful of standout reads. Pair: hand a returned `file_id` to `/zsxq-analyze` for a deep read.
+description: Recommend zsxq reports to read by scanning the most-recent rows of db/zsxq.db (titles + summaries — no PDF parsing). Default: latest 50 reports, focus on AI / robotics. User may override with a count ("latest 100") and/or a subject ("focus on semiconductors", "anything on EVs"). When the user has no clue, group the recent feed into themes and surface a handful of standout reads. **Also persists any sell-side price-target (PT) calls found in the same summaries into `db/stock_price_target.db`** (idempotent via UNIQUE(ticker, broker, file_id)), surfaced in the `/pt` viewer. Pair: hand a returned `file_id` to `/zsxq-analyze` for a deep read.
 ---
 
 # Recommend zsxq PDF
@@ -80,18 +80,66 @@ inference economics", "robotics + autonomy", "energy & power",
 "China consumer slowdown", "geopolitics", …) with a one-line gist
 each. Then pick 2-3 standout reads under each theme.
 
-### 4. Output format
+### 4. Persist any PT calls into `stock_price_target.db` (free side-effect)
 
-For each recommendation give:
+While reading the same summaries in step 3, the agent is already
+inspecting the broker-call language. Whenever a row's summary contains
+an explicit price-target call — patterns like `目标价 1300美元`,
+`TP $450`, `12个月目标价116港元`, `target price ¥7100`,
+`reiterate Buy/Outperform/Overweight/Neutral/Underweight/Sell` —
+extract one record per (ticker × broker) pair into a JSON list and
+pipe it to the persistence helper:
 
-- `file_id` (so the user can hand it to `/zsxq-analyze`)
-- Bank / publisher if known (`bank` column, or extract from name)
-- A ≤2-sentence "why read this" — anchored in the actual summary, not
-  generic.
-- Page count + create_time when useful for triage.
+```bash
+python3 .claude/skills/zsxq-recommend/scripts/persist_pts.py <<'JSON'
+[
+  {"ticker":"1109.HK","company_name":"China Resources Land",
+   "broker":"Goldman Sachs","rating":"Buy","pt":36.6,"ccy":"HKD",
+   "catalyst":"Tier-1 housing recovery; mall ops alpha",
+   "file_id":184152128158222},
+  {"ticker":"LLY","company_name":"Eli Lilly",
+   "broker":"Bernstein","rating":"Outperform","pt":1300,"ccy":"USD",
+   "catalyst":"LIBRETTO-432 Selpercatinib RET+ HR=0.17",
+   "file_id":184152151455852}
+]
+JSON
+```
 
-Markdown table when listing >3 picks. Keep the whole reply tight — the
-user is choosing what to read next, not consuming the reports here.
+Record schema (per row in the array):
+
+| field          | required | meaning                                            |
+|----------------|----------|----------------------------------------------------|
+| `ticker`       | yes      | yfinance form: `LLY`, `1109.HK`, `300750.SZ`, etc. |
+| `company_name` | yes      | English / Pinyin                                   |
+| `broker`       | yes      | `Goldman Sachs` / `Morgan Stanley` / `Bernstein` … |
+| `rating`       | no       | `Buy` / `Outperform` / `Neutral` / `Underweight` / `Sell` / `Top Pick` |
+| `pt`           | no       | numeric price target in `ccy`                      |
+| `ccy`          | no       | `USD` / `HKD` / `CNY` / `TWD` / `JPY` / `KRW` (required if `pt` is given) |
+| `catalyst`     | no       | one-line catalyst paraphrased from the summary     |
+| `file_id`      | yes      | zsxq.db `pdf_files.file_id` (links the call back to the source PDF) |
+
+Behaviour:
+
+- The script idempotents on `(ticker, broker, file_id)` — re-running on
+  the same window is a no-op via the table's `UNIQUE` constraint.
+- It auto-fills `report_date` from the PDF filename (`-260602.pdf` →
+  `2026-06-02`), then fetches close + market cap on that date via
+  yfinance, and computes `upside_pct`.
+- Stdout is a JSON summary: `{considered, inserted, duplicate, skipped,
+  errored, total_in_db}`. Surface the `inserted` and `total_in_db`
+  numbers in the final user-facing reply.
+- **Only emit records where a specific broker is calling on a specific
+  ticker with at least a rating OR a PT.** Skip generic macro mentions
+  ("we like the AI infra theme") and non-broker reports (`#代找` rows
+  where `bank` is null).
+- A single report often covers many tickers (sector notes / conviction
+  lists). Emit one record *per ticker*; share the same `file_id` and
+  `catalyst` across them.
+
+If the summary doesn't contain any PT calls (e.g. pure macro or strategy
+piece), skip step 4 entirely — no harm, no pipe.
+
+### 5. Output format
 
 ## Notes
 
