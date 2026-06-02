@@ -1528,7 +1528,10 @@ async function initGraph() {
       physics: {
         // Looser layout — wider repulsion + longer springs reduce crowding so
         // mega-cap clusters don't pile on top of each other.
-        stabilization: { iterations: 300, fit: true, updateInterval: 25 },
+        // stabilization.enabled=false runs the force simulation on the visible
+        // canvas (the user sees the bouncing), rather than pre-stabilizing
+        // off-screen and only painting the final result.
+        stabilization: { enabled: false },
         barnesHut: {
           gravitationalConstant: -18000,
           centralGravity: 0.15,
@@ -1544,11 +1547,14 @@ async function initGraph() {
 
     _network = new vis.Network(document.getElementById('graphNet'), { nodes: _visNodes, edges: _visEdges }, options);
 
-    // Once the initial layout has settled, freeze physics so a user drag
-    // places the node exactly where they dropped it (instead of springing
-    // back into the cluster).
-    _network.once('stabilizationIterationsDone', () => {
+    // Once the runtime simulation has settled (kinetic energy low enough),
+    // freeze physics so a user drag places the node exactly where they dropped
+    // it instead of springing back into the cluster. `stabilized` fires for
+    // runtime convergence; `stabilizationIterationsDone` would only fire if
+    // we used pre-stabilization (which we disabled above to make it visible).
+    _network.once('stabilized', () => {
       _network.setOptions({ physics: { enabled: false } });
+      _network.fit({ animation: { duration: 400, easingFunction: 'easeInOutQuad' } });
     });
 
     _network.on('click', params => {
