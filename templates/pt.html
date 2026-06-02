@@ -238,6 +238,8 @@
     return tokens.every(function(t){ return txt.includes(t); });
   }
 
+  var perTickerStats = {};   // {ticker: {sum, n, ccyCount}} — recomputed on date / text filter
+
   function applyFilters(){
     // Visibility: date filter AND text filter must both pass
     rows.forEach(function(r){
@@ -249,31 +251,21 @@
 
     // Compute avg PT per ticker using only date-filtered rows
     // (text filter is for narrowing the view, not the consensus calc).
-    var perTicker = {};
+    perTickerStats = {};
     rows.forEach(function(r){
       if(r.dataset.dateOk !== '1') return;
       var t   = r.dataset.ticker;
       var pt  = parseFloat(r.dataset.pt);
       var ccy = r.dataset.ccy || '';
       if(!t || isNaN(pt)) return;
-      if(!perTicker[t]) perTicker[t] = { sum:0, n:0, ccyCount:{} };
-      perTicker[t].sum += pt;
-      perTicker[t].n   += 1;
-      perTicker[t].ccyCount[ccy] = (perTicker[t].ccyCount[ccy] || 0) + 1;
+      if(!perTickerStats[t]) perTickerStats[t] = { sum:0, n:0, ccyCount:{} };
+      perTickerStats[t].sum += pt;
+      perTickerStats[t].n   += 1;
+      perTickerStats[t].ccyCount[ccy] = (perTickerStats[t].ccyCount[ccy] || 0) + 1;
     });
 
-    // Paint Avg PT cell on every row (same value for all rows of a ticker)
-    rows.forEach(function(r){
-      var cell = r.querySelector('.avg-pt');
-      if(!cell) return;
-      var s = perTicker[r.dataset.ticker];
-      if(!s || !s.n){ cell.innerHTML = ''; cell.dataset.value = ''; return; }
-      var avg = s.sum / s.n;
-      var majCcy = Object.keys(s.ccyCount).sort(function(a,b){ return s.ccyCount[b] - s.ccyCount[a]; })[0] || '';
-      cell.innerHTML = avg.toFixed(2) + '<span class="ccy">' + majCcy + '</span><span class="n">·' + s.n + '</span>';
-      cell.dataset.value = avg;
-    });
-
+    // Actual cell painting happens in regroupAndPaint() — the "k/n"
+    // numerator must be assigned in the final grouped+sorted order.
     regroupAndPaint();
     updateCounts();
   }
@@ -341,6 +333,10 @@
   // within each ticker bucket. Tickers are emitted in the order they
   // were first encountered in the sorted array — so if user sorted by
   // date DESC, the ticker whose latest report is most recent comes first.
+  //
+  // Also paints the Avg PT cell. The "k/n" suffix is assigned in this
+  // order — k = position of this row's PT within its group, n = total
+  // PT-contributing rows in the date window.
   function regroupAndPaint(){
     var groups = new Map();
     rows.forEach(function(r){
@@ -352,9 +348,37 @@
     var bandIdx = 0;
     groups.forEach(function(arr, ticker){
       var alt = (bandIdx % 2 === 1);
+      var s = perTickerStats[ticker];
+      var avg = s && s.n ? (s.sum / s.n) : null;
+      var majCcy = s && s.n
+        ? (Object.keys(s.ccyCount).sort(function(a,b){ return s.ccyCount[b] - s.ccyCount[a]; })[0] || '')
+        : '';
+      var ptIdx = 0;     // 1-based, increments only for rows that contributed to avg
       arr.forEach(function(r, i){
         r.classList.toggle('group-alt', alt);
         r.classList.toggle('group-first', i === 0);
+        var cell = r.querySelector('.avg-pt');
+        if(cell){
+          if(avg === null){
+            cell.innerHTML = '';
+            cell.dataset.value = '';
+          } else {
+            var pt = parseFloat(r.dataset.pt);
+            var contributes = !isNaN(pt) && r.dataset.dateOk === '1';
+            var suffix;
+            if(contributes){
+              ptIdx++;
+              suffix = ptIdx + '/' + s.n;
+            } else {
+              // No PT on this row, or row hidden by date filter
+              suffix = '·' + s.n;
+            }
+            cell.innerHTML = avg.toFixed(2)
+              + '<span class="ccy">' + majCcy + '</span>'
+              + '<span class="n">' + suffix + '</span>';
+            cell.dataset.value = avg;
+          }
+        }
         ordered.push(r);
       });
       bandIdx++;
