@@ -91,6 +91,9 @@
     .merge-btn { background:none; border:none; padding:2px 5px; color:#adb5bd;
                  cursor:pointer; border-radius:4px; font-size:.8rem; flex-shrink:0; line-height:1; }
     .merge-btn:hover { background:#fff3cd; color:#856404; }
+    .focus-btn { background:none; border:none; padding:2px 5px; color:#adb5bd;
+                 cursor:pointer; border-radius:4px; font-size:.8rem; flex-shrink:0; line-height:1; }
+    .focus-btn:hover { background:#e0f2fe; color:#0369a1; }
     /* Entity picker used in merge + add-edge modals */
     .entity-pick-results { max-height:160px; overflow-y:auto; border:1px solid #dee2e6;
                            border-radius:6px; margin-top:4px; }
@@ -384,6 +387,9 @@ function renderResults(data, query, forceAll) {
     card.innerHTML = `
       <button class="deprecate-btn" title="Isolate entity (hide permanently)"
               onclick="event.stopPropagation(); isolateEntity('${escHtml(n.uuid)}','${escHtml(n.name)}',this)">⊘</button>
+      <button class="focus-btn" title="Focus this entity in the graph"
+              style="position:absolute;top:6px;right:104px"
+              onclick="event.stopPropagation(); focusEntityInGraph('${escHtml(n.uuid)}','${escHtml(n.name)}')">🎯</button>
       <button class="edit-btn" style="position:absolute;top:6px;right:80px" title="Edit entity"
               onclick="event.stopPropagation(); editEntity('${escHtml(n.uuid)}','${escHtml(n.name)}','${escHtml(n.summary||'')}',this.closest('.result-card'))">✏</button>
       <button class="merge-btn" title="Merge into another entity"
@@ -392,7 +398,7 @@ function renderResults(data, query, forceAll) {
       <button class="assign-community-btn" title="Assign to community (BFS flood-fill)"
               style="position:absolute;top:6px;right:32px"
               onclick="event.stopPropagation(); openAssignCommunity('${escHtml(n.uuid)}','${escHtml(n.name)}')">⬡</button>
-      <span class="score-badge" style="right:80px">${n.score != null ? n.score.toFixed(2) : ''}</span>
+      <span class="score-badge" style="right:128px">${n.score != null ? n.score.toFixed(2) : ''}</span>
       <div class="fact">🏢 ${escHtml(n.name)}</div>
       <div class="meta">${labels} ${escHtml(n.summary || '').slice(0,120)}</div>`;
     card.appendChild(starWidget(n.uuid, n.rating || 0));
@@ -485,6 +491,61 @@ function openReports(name) {
   if (!name) return;
   const url = `/claude-reports/?q=${encodeURIComponent(name)}`;
   window.open(url, '_blank');
+}
+
+// Center the graph viewport on an entity without re-running the search.
+// If the node is currently hidden by the market-cap filter (or any other
+// filter), unhide it temporarily so the focus animation has something to
+// land on; the next filter change restores it.
+function focusEntityInGraph(uuid, name) {
+  if (!_network || !_visNodes) {
+    showFocusToast(`Graph not ready yet — try again in a moment.`);
+    return;
+  }
+  const n = _visNodes.get(uuid);
+  if (!n) {
+    showFocusToast(`"${name}" isn't in the loaded graph.`);
+    return;
+  }
+  if (n.hidden) {
+    _visNodes.update({ id: uuid, hidden: false });
+    // Also reveal incident edges so the focused node isn't an island.
+    if (_visEdges) {
+      const incident = _visEdges.get({ filter: e => e.from === uuid || e.to === uuid });
+      if (incident.length) {
+        _visEdges.update(incident.map(e => ({ id: e.id, hidden: false })));
+      }
+    }
+  }
+  try {
+    _network.selectNodes([uuid]);
+    _network.focus(uuid, {
+      scale: 1.6,
+      animation: { duration: 500, easingFunction: 'easeInOutQuad' },
+    });
+  } catch (_) {
+    showFocusToast(`Couldn't focus "${name}".`);
+  }
+}
+
+// Lightweight transient toast for focus-button feedback. Avoids the
+// modal-dialog spam of alert() and disappears after a couple of seconds.
+function showFocusToast(msg) {
+  let t = document.getElementById('focusToast');
+  if (!t) {
+    t = document.createElement('div');
+    t.id = 'focusToast';
+    t.style.cssText =
+      'position:fixed; bottom:24px; left:50%; transform:translateX(-50%);' +
+      'background:#0f172a; color:#fff; padding:8px 14px; border-radius:6px;' +
+      'font-size:.85rem; box-shadow:0 4px 12px rgba(0,0,0,.18); z-index:9999;' +
+      'opacity:0; transition:opacity .15s ease-in;';
+    document.body.appendChild(t);
+  }
+  t.textContent = msg;
+  t.style.opacity = '1';
+  clearTimeout(t._hideTimer);
+  t._hideTimer = setTimeout(() => { t.style.opacity = '0'; }, 2200);
 }
 
 // Fetches direct edges by UUID (exact match with graph) then merges with
