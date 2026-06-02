@@ -2,7 +2,8 @@
 langfuse_monitor.py — Langfuse LLM call monitoring integration (v4 / OTel-native).
 
 Provides a lightweight wrapper around the Langfuse Python SDK (v4+) so that every
-Claude LLM call is traced and visible in the Langfuse UI.
+LLM call is traced and visible in the Langfuse UI. Kept for legacy /
+ad-hoc tracing only — there is no automated LLM pipeline in this project.
 
 Setup (one-time):
   Option A — Langfuse Cloud (free):
@@ -193,7 +194,7 @@ def log_generation(
 ) -> None:
     """Log a single LLM generation to Langfuse as a child of the current document span.
 
-    Called from claude_llm_client._generate_response() after each LLM call.
+    No automated LLM client calls this anymore — kept for ad-hoc tracing.
     In Langfuse v4, OTel context propagation automatically nests this generation
     under whichever span was attach()ed by set_document() — no TraceContext needed.
     """

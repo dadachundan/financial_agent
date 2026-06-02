@@ -234,60 +234,91 @@ When the user asks to **verify, audit, or fix URLs / hallucinations in a report*
 
 The standard fix-list to look for, in priority order: fabricated SEC URLs (resolve real filenames via the EDGAR submissions JSON), fabricated numbers attributed to filings (grep the actual 10-K / 8-K / DEF 14A text), fabricated third-party stats (web-search the real source), wrong launch / acquisition / filing dates, mis-paired YoY comparisons, and analyst opinions misattributed to primary filings (relabel as `*Analyst view:*` per the company-research skill rule).
 
-# Knowledge graph — Claude (the agent) curates by hand
+# NEVER call the Claude API (or any LLM API) from this project
 
-The knowledge graph at `localhost:5001/zep/` is **not** populated by any
-automated LLM extraction pipeline. The previous MiniMax and Claude-API
-ingest paths (`minimax.py`, `minimax_llm_client.py`, `claude_llm_client.py`,
-`ingest/graphiti_ingest.py`) have all been removed. The user does not trust
-batch-LLM extraction quality and wants Claude (the agent) reading the
-sources and curating entities + edges directly.
+This is a hard, project-wide rule the user has restated multiple times:
 
-**Workflow when the user asks to "update the knowledge graph" / "add X to
-the graph" / "ingest these reports":**
+> **never use CLAUDE API, use the model itself!**
+> **never use call claude with API!!**
+> **delete claude_llm_client, never call claude with AP[I]!**
+> **delete all minimax code, don't trust the quality**
 
-1. Read the source document(s) yourself with `Read`.
-2. Curate a small batch of high-confidence entities and edges. Skip names
-   you're unsure about — quality over quantity.
-3. Use `manual_graph.py` to write directly to `db/graph_mirror.db` (the
-   SQLite mirror the viewer reads from):
+"Use the model itself" means: when the project needs a model — to read a
+report, extract entities, judge quality, summarise a document, classify a
+PDF — **Claude (the agent, in this conversation) does it directly**, using
+`Read` / `Edit` / `Bash` / `manual_graph` and the agent's own reasoning.
+There is no `anthropic.Anthropic()`, no `client.messages.create`, no
+`call_claude`, no `call_minimax`, no MiniMax-Anthropic proxy, no
+graphiti-core LLM client, no Langchain, no OpenAI fallback. None of it.
 
-   ```python
-   from manual_graph import (
-       add_entity, add_edge, add_episode, add_entities, add_edges, stats,
-   )
+Already deleted on 2026-06-02 to honour this rule:
 
-   add_episode("NVDA_FY25_10K",
-               name="NVIDIA FY25 10-K",
-               source_desc="financial_reports/NVDA/...")
+- `minimax.py`, `minimax_llm_client.py`
+- `claude_llm.py`, `claude_llm_client.py`
+- `ingest/graphiti_ingest.py`, `ingest/zsxq_index.py`,
+  `ingest/eval_entity_extraction.py`, `ingest/eval_ingest_prompt.py`
+- `isolate_nonsense_entities.py`, `merge_duplicate_entities.py`,
+  `restore_valid_entities.py`
+- `zsxq_classify.py`
+- `fetch_news.py`
+- `youtube/analysis_video.py`
 
-   add_entity("NVIDIA", labels=["Company"], ticker="NVDA",
-              summary="Fabless GPU vendor; dominant in AI training.")
-   add_entity("TSMC",   labels=["Company"], ticker="TSM",
-              summary="World's largest dedicated foundry.")
+`zep_app.py` routes that depended on the API (`/ingest`, `/upload-pdf`,
+`/entities/isolate-persons`, `/clear`) return **410 Gone**.
 
-   add_edge("TSMC", "NVIDIA",
-            relation="MANUFACTURES_FOR",
-            fact="TSMC fabricates NVIDIA's H100 and Blackwell GPUs at N4/N3.",
-            source="NVDA_FY25_10K")
-   ```
+`download/zsxq_downloader.py` lost its `--classify` flag — it now only
+downloads PDFs.
 
-   `add_entity` is **idempotent by name** (case-insensitive) — existing
-   entities are not duplicated and their curated fields are not clobbered.
-   `add_edge` raises `ValueError` if either endpoint is missing; always
-   add the entities first.
+`langfuse_monitor.py` is kept for ad-hoc tracing of any manual call the
+user makes themselves, but no project code calls it automatically anymore.
 
-4. Cite. Every edge should carry a `source=` slug pointing at the document
-   you read. The viewer surfaces this in the edge tooltip.
+## Rules for future work
 
-**Never call any LLM API to extract graph relationships** — not Claude, not
-MiniMax, not anything else. The user has been explicit about this.
+1. **Never** add `from anthropic import …`, `from claude_llm import …`,
+   `import openai`, or any LLM-API client to any file in this repo.
+2. **Never** re-create the deleted modules under a different name. If the
+   user asks for "auto-classification" or "auto-extraction", push back and
+   remind them of this rule — they probably forgot.
+3. When the user asks to "update the knowledge graph", "classify these
+   PDFs", "summarise this video", "tell me which entities are persons",
+   etc., **you (the agent) do the work yourself in conversation**:
+   - For graph work: `Read` the source report → use `manual_graph.py`
+     to write entities and edges into `db/graph_mirror.db`. The viewer
+     at `localhost:5001/zep/` picks them up immediately.
+   - For classification / summary / judgement: read the source, write
+     the answer in the conversation (or as a file, if asked). Don't
+     spawn a script that calls an external model.
+4. For large batches (e.g. dozens of reports), it's fine to fan out via
+   `Agent` subagents — but each subagent does the reading and writing
+   itself with `Read` + `manual_graph`. No subagent calls an LLM API.
 
-`claude_llm.py` is kept for other one-off, user-requested LLM calls
-(summarisation, classification, etc.) but **must not** be used for graph
-ingestion. Default model in that helper is `claude-sonnet-4-6` and
-credentials come from env (`ANTHROPIC_AUTH_TOKEN` / `ANTHROPIC_BASE_URL` in
-`~/.zshrc`).
+## Knowledge graph workflow (the only sanctioned write path)
+
+```python
+from manual_graph import (
+    add_entity, add_edge, add_episode, add_entities, add_edges, stats,
+)
+
+add_episode("NVDA_FY25_10K",
+            name="NVIDIA FY25 10-K",
+            source_desc="financial_reports/NVDA/...")
+
+add_entity("NVIDIA", labels=["Company"], ticker="NVDA",
+           summary="Fabless GPU vendor; dominant in AI training.")
+add_entity("TSMC",   labels=["Company"], ticker="TSM",
+           summary="World's largest dedicated foundry.")
+
+add_edge("TSMC", "NVIDIA",
+         relation="MANUFACTURES_FOR",
+         fact="TSMC fabricates NVIDIA's H100 and Blackwell GPUs at N4/N3.",
+         source="NVDA_FY25_10K")
+```
+
+`add_entity` is idempotent by name (case-insensitive); `add_edge` raises
+`ValueError` if either endpoint is missing — add the entities first.
+Every edge **must** carry a `source=` slug pointing at the document you
+actually read; the viewer surfaces it in the edge tooltip and that
+provenance is the entire point of curating by hand.
 
 # Skills
 

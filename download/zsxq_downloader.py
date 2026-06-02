@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-zsxq_downloader.py — Download PDFs from a 知识星球 group (classify with --classify).
+zsxq_downloader.py — Download PDFs from a 知识星球 group.
 
 Responsibilities
 ----------------
@@ -9,24 +9,21 @@ Responsibilities
   3. Download each PDF that has not been downloaded before (tracked via the
      SQLite database — local_path IS NOT NULL means already downloaded).
   4. Write download metadata into zsxq.db.
-  5. Classify each PDF via Claude immediately after download (unless
-     --classify is passed).  Already-classified rows are skipped.
 
-Run zsxq_index.py for bulk re-classification with a different prompt.
+Classification (AI/Robotics/Semi/Energy tags + ticker extraction) used to run
+inline via an LLM API — that pipeline has been removed. If you want a PDF
+classified, hand it to Claude (the agent) in conversation and ask explicitly.
 
 Usage
 -----
     python zsxq_downloader.py --count 10
     python zsxq_downloader.py --count 50 --out ~/Downloads/zsxq_reports
     python zsxq_downloader.py --group-id 51111812185184 --delay 1.5
-    python zsxq_downloader.py                        # download only (default)
-    python zsxq_downloader.py --classify             # download + Claude classification
     python zsxq_downloader.py --from-date 2025-01-01 --to-date 2025-03-31
     python zsxq_downloader.py --from-date 2025-06-01              # since a date, default --count 10
     python zsxq_downloader.py --from-date 2025-06-01 --count 0   # since a date, no limit
     python zsxq_downloader.py --query qcom                        # search all groups for "qcom"
     python zsxq_downloader.py --query qcom --count 50            # search, up to 50 results
-    python zsxq_downloader.py --query qcom --classify            # search + classify
 """
 import sys, pathlib as _pl; sys.path.insert(0, str(_pl.Path(__file__).parent.parent))
 
@@ -36,7 +33,6 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-from zsxq_classify import classify_one
 from zsxq_common import (
     DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
     clean_zsxq_text, do_download, extract_bank, fetch_all_files,
@@ -52,7 +48,7 @@ ALL_GROUP_IDS = list(GROUP_ALIASES.values())
 
 
 def _run_group(group_id: str, args, session, conn, out_dir: Path,
-               api_key, from_date, to_date) -> list[dict]:
+               from_date, to_date) -> list[dict]:
     """Fetch and download PDFs for a single group. Returns results list."""
     from collections import Counter
 
@@ -208,33 +204,6 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
                     time.sleep(args.delay)
                 continue
 
-        if not args.no_classify:
-            row = conn.execute(
-                "SELECT ai_related FROM pdf_files WHERE file_id = ?", (file_id,)
-            ).fetchone()
-            already_classified = row and row["ai_related"] is not None
-            if already_classified:
-                print("         → already classified, skipping LLM.")
-            else:
-                print("         → classifying via Claude…")
-                try:
-                    result = classify_one(
-                        conn, file_id, name, summary, api_key,
-                        local_path=local_path,
-                    )
-                    flags = [label for label, hit in [
-                        ("AI", result["ai"]), ("Robotics", result["robotics"]),
-                        ("Semi", result["semiconductor"]), ("Energy", result["energy"]),
-                    ] if hit]
-                    cat_str = ("✓ " + ", ".join(flags)) if flags else "✗ None"
-                    print(f"         → {cat_str}  [{result['elapsed']:.1f}s]")
-                    if result["tickers"]:
-                        print(f"         → Tickers: {result['tickers']}")
-                    if i < len(pdf_entries):
-                        time.sleep(args.classify_delay)
-                except Exception as exc:
-                    print(f"         ⚠ Classification failed: {exc}")
-
         print()
         if i < len(pdf_entries) and not already_downloaded:
             time.sleep(args.delay)
@@ -242,8 +211,7 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
     return results
 
 
-def _run_query(query: str, args, session, conn, out_dir: Path,
-               api_key) -> list[dict]:
+def _run_query(query: str, args, session, conn, out_dir: Path) -> list[dict]:
     """Search all groups for *query* and download matching PDFs.
 
     Files are saved into out_dir/<query>/ (flat, no date subfolder).
@@ -406,33 +374,6 @@ def _run_query(query: str, args, session, conn, out_dir: Path,
                     time.sleep(args.delay)
                 continue
 
-        if not args.no_classify:
-            row = conn.execute(
-                "SELECT ai_related FROM pdf_files WHERE file_id = ?", (file_id,)
-            ).fetchone()
-            already_classified = row and row["ai_related"] is not None
-            if already_classified:
-                print("         → already classified, skipping LLM.")
-            else:
-                print("         → classifying via Claude…")
-                try:
-                    result = classify_one(
-                        conn, file_id, name, summary, api_key,
-                        local_path=local_path,
-                    )
-                    flags = [label for label, hit in [
-                        ("AI", result["ai"]), ("Robotics", result["robotics"]),
-                        ("Semi", result["semiconductor"]), ("Energy", result["energy"]),
-                    ] if hit]
-                    cat_str = ("✓ " + ", ".join(flags)) if flags else "✗ None"
-                    print(f"         → {cat_str}  [{result['elapsed']:.1f}s]")
-                    if result["tickers"]:
-                        print(f"         → Tickers: {result['tickers']}")
-                    if i < len(pdf_entries):
-                        time.sleep(args.classify_delay)
-                except Exception as exc:
-                    print(f"         ⚠ Classification failed: {exc}")
-
         print()
         if i < len(pdf_entries) and not already_downloaded:
             time.sleep(args.delay)
@@ -442,8 +383,7 @@ def _run_query(query: str, args, session, conn, out_dir: Path,
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Download PDFs from a zsxq group and record them in zsxq.db. "
-                    "Pass --classify to also run Claude classification."
+        description="Download PDFs from a zsxq group and record them in zsxq.db."
     )
     parser.add_argument("--query",          default=None, metavar="KEYWORD",
                         help="Search all groups (全部星球) for files matching this term "
@@ -465,12 +405,7 @@ def main() -> None:
     parser.add_argument("--chrome-profile", default=str(DEFAULT_CHROME_PROFILE))
     parser.add_argument("--delay",          type=float, default=1.0,
                         help="Seconds between downloads")
-    parser.add_argument("--classify-delay", type=float, default=1.0,
-                        help="Seconds between Claude API calls (default: 1.0)")
-    parser.add_argument("--classify",       action="store_true",
-                        help="Run Claude classification after download (off by default)")
     args = parser.parse_args()
-    args.no_classify = not args.classify
 
     # Resolve which group(s) to run
     if args.group is not None:
@@ -483,19 +418,6 @@ def main() -> None:
         group_ids = [args.group_id]
     else:
         group_ids = ALL_GROUP_IDS  # default: both groups
-
-    # ── Check API key early if we'll need it ──────────────────────────────
-    api_key = None
-    if args.classify:
-        try:
-            from claude_llm import _resolve_key  # type: ignore
-            api_key = _resolve_key(None)
-        except ImportError:
-            pass
-        if not api_key:
-            print("WARNING: ANTHROPIC_AUTH_TOKEN / ANTHROPIC_API_KEY not set — "
-                  "classification will be skipped.")
-            args.no_classify = True
 
     chrome_profile = Path(args.chrome_profile).expanduser()
     if not chrome_profile.exists():
@@ -524,12 +446,12 @@ def main() -> None:
     all_results: list[dict] = []
 
     if args.query:
-        results = _run_query(args.query, args, session, conn, out_dir, api_key)
+        results = _run_query(args.query, args, session, conn, out_dir)
         all_results.extend(results)
     else:
         for group_id in group_ids:
             results = _run_group(group_id, args, session, conn, out_dir,
-                                 api_key, from_date, to_date)
+                                 from_date, to_date)
             all_results.extend(results)
 
     conn.close()
@@ -540,8 +462,6 @@ def main() -> None:
     print(f"\nTotal: {ok_count} downloaded, {skipped_count} skipped, {failed_count} failed.")
     print(f"Output : {out_dir}")
     print(f"DB     : {db_path}")
-    if args.no_classify:
-        print("\nRun zsxq_index.py to classify the downloaded PDFs.")
 
 
 if __name__ == "__main__":
