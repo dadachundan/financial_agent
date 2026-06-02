@@ -460,7 +460,7 @@ quadrantChart
 
 ## 10. 投资者视角评分 (Investor-Lens Scorecards)
 
-**周期快照 (as of 2026-06-02):** VIX = 15.74 (低波动)、10Y Treasury (TNX) = 4.46% (中性偏高)、HYG (HY 信用 ETF 价格) = 79.90 (相对稳定，反映 HY OAS 中性)、LQD (IG 信用) = 108.92 (温和)。整体市场处于 **温和 risk-on 阶段**，VIX 在历史中低位，长端美债 yield 在 4-5% 中枢，HY 信用利差未显著扩张——这一组合对中等久期、有 secular 增长叙事的资产 (创新生物科技) 偏中性偏积极 ([indicators.db: VIX/TNX/HYG/LQD 2026-06-02](https://localhost:5001/indicators))。
+**周期快照 (as of 2026-06-02):** VIX = 15.74 (低波动)、10Y Treasury (TNX) = 4.46% (中性偏高)、HYG (HY 信用 ETF 价格) = 79.90 (相对稳定，反映 HY OAS 中性)、LQD (IG 信用) = 108.92 (温和)。整体市场处于 **温和 risk-on 阶段**，VIX 在历史中低位，长端美债 yield 在 4-5% 中枢，HY 信用利差未显著扩张——这一组合对中等久期、有 secular 增长叙事的资产 (创新生物科技) 偏中性偏积极。来源: 项目本地 `db/indicators.db` snapshot (FRED + yfinance 同步), 数据可对照 [CBOE VIX 官方 (^VIX)](https://www.cboe.com/tradable_products/vix/) 与 [US 10Y Treasury Yield (^TNX) - CNBC](https://www.cnbc.com/quotes/US10Y) 实时核对。
 
 ### 10.1 Buffett 评分 — 高质量但管线不确定 (60/100)
 
