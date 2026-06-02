@@ -10,7 +10,7 @@ Sources:
 Uses:
   - KuzuDB    (embedded, file-based graph DB — no server required)
   - bge-m3    (local embeddings via SentenceTransformer)
-  - MiniMax   (entity / relationship extraction via LLM)
+  - Claude    (entity / relationship extraction via Anthropic API)
 
 No cloud graph service needed. The knowledge graph is stored in ./graphiti_db/.
 
@@ -50,7 +50,7 @@ except ImportError:
 
 # Suppress noisy but harmless graphiti-core warnings:
 #   "LLM did not return resolutions for IDs: [0, 1, ...]"
-#     → MiniMax returned empty NodeResolutions; all entities treated as new. Fine.
+#     → LLM returned empty NodeResolutions; all entities treated as new. Fine.
 #   "Source entity not found in nodes for edge relation: ..."
 #     → Handled by case-insensitive matching patch in edge_operations.py.
 #       Any remaining ones are genuinely unmatchable names (LLM hallucinations).
@@ -733,7 +733,7 @@ def _build_markdown_items(paths: list[Path],
 async def _build_graphiti():
     from graphiti_core import Graphiti
     from graphiti_core.driver.kuzu_driver import KuzuDriver
-    from minimax_llm_client import MiniMaxLLMClient, BGEEmbedder, PassthroughReranker, GRAPH_DIR
+    from claude_llm_client import ClaudeLLMClient, BGEEmbedder, PassthroughReranker, GRAPH_DIR
 
     print("Loading bge-m3 embedder …")
     embedder = BGEEmbedder()
@@ -773,7 +773,7 @@ async def _build_graphiti():
     _conn.close()
 
     return Graphiti(
-        llm_client=MiniMaxLLMClient(),
+        llm_client=ClaudeLLMClient(),
         embedder=embedder,
         cross_encoder=PassthroughReranker(),
         graph_driver=driver,
@@ -1052,11 +1052,11 @@ def main() -> None:
                         help="Print every LLM request and response to stdout.")
     args = parser.parse_args()
 
-    import minimax_llm_client
+    import claude_llm_client
     if args.debug_llm:
-        minimax_llm_client.PRINT_ALL_LLM_CALLS = True
+        claude_llm_client.PRINT_ALL_LLM_CALLS = True
     # Write LLM call log to log/ directory (debug only; monitoring via Langfuse)
-    minimax_llm_client.LLM_LOG_FILE = _get_project_root() / "log" / "llm_calls.jsonl"
+    claude_llm_client.LLM_LOG_FILE = _get_project_root() / "log" / "llm_calls.jsonl"
 
     # Langfuse monitoring (no-op if keys not configured in config.py)
     import langfuse_monitor

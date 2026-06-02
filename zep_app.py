@@ -2,7 +2,7 @@
 """
 zep_app.py — Flask blueprint for the graphiti-core knowledge graph UI.
 
-Backend: local graphiti-core (KuzuDB + bge-m3 + MiniMax).
+Backend: local graphiti-core (KuzuDB + bge-m3 + Claude).
 No cloud dependencies — the full graph lives in ./graphiti_db/.
 
 Routes (all under /zep prefix when registered in main.py):
@@ -128,7 +128,7 @@ def _get_graphiti():
         if not GRAPH_DIR.exists():
             return None   # not yet indexed
         try:
-            from minimax_llm_client import get_graphiti
+            from claude_llm_client import get_graphiti
             _graphiti = get_graphiti()
         except Exception:
             return None
@@ -645,7 +645,7 @@ def upload_pdf():
             global _graphiti
             g = _get_graphiti()
             if g is None:
-                from minimax_llm_client import get_graphiti as _gg
+                from claude_llm_client import get_graphiti as _gg
                 _graphiti = _gg()
                 g = _graphiti
 
@@ -687,8 +687,8 @@ def refresh_mirror():
 
 @zep_bp.route("/entities/isolate-persons", methods=["POST"])
 def isolate_persons():
-    """SSE stream: use MiniMax to classify all entities and isolate person names."""
-    from minimax import call_minimax
+    """SSE stream: use Claude to classify all entities and isolate person names."""
+    from claude_llm import call_claude
 
     BATCH = 80  # entity names per LLM call
 
@@ -718,11 +718,11 @@ def isolate_persons():
                 f"Entity list:\n{name_list}"
             )
             try:
-                text, _, _ = call_minimax(
+                text, _, _ = call_claude(
                     messages=[
-                        {"role": "system", "name": "MiniMax AI",
+                        {"role": "system",
                          "content": "You are a precise entity classifier for financial data."},
-                        {"role": "user", "name": "User", "content": prompt},
+                        {"role": "user", "content": prompt},
                     ],
                     temperature=0.1,
                     max_completion_tokens=512,

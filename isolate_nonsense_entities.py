@@ -41,7 +41,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from graph_mirror import get_conn, isolate_entity  # noqa: E402
-from minimax import call_minimax  # noqa: E402
+from claude_llm import call_claude  # noqa: E402
 
 # ── config ────────────────────────────────────────────────────────────────────
 BATCH_SIZE = 80          # entities per LLM call
@@ -79,7 +79,7 @@ No explanation, no markdown, just the JSON object.
 
 
 def classify_batch(entities: list[dict]) -> list[str]:
-    """Send a batch of entities to MiniMax and return UUIDs to isolate."""
+    """Send a batch of entities to Claude and return UUIDs to isolate."""
     items = [
         {"uuid": e["uuid"], "name": e["name"], "summary": (e["summary"] or "")[:200]}
         for e in entities
@@ -89,10 +89,10 @@ def classify_batch(entities: list[dict]) -> list[str]:
         "Identify which ones should be ISOLATED (not useful for financial analysis).\n\n"
         + json.dumps(items, ensure_ascii=False, indent=2)
     )
-    text, elapsed, _ = call_minimax(
+    text, elapsed, _ = call_claude(
         messages=[
-            {"role": "system", "name": "MiniMax AI", "content": SYSTEM_PROMPT},
-            {"role": "user",   "name": "User",       "content": user_content},
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user",   "content": user_content},
         ],
         temperature=0.1,
         max_completion_tokens=2048,

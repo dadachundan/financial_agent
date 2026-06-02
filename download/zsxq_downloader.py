@@ -9,7 +9,7 @@ Responsibilities
   3. Download each PDF that has not been downloaded before (tracked via the
      SQLite database — local_path IS NOT NULL means already downloaded).
   4. Write download metadata into zsxq.db.
-  5. Classify each PDF via MiniMax immediately after download (unless
+  5. Classify each PDF via Claude immediately after download (unless
      --classify is passed).  Already-classified rows are skipped.
 
 Run zsxq_index.py for bulk re-classification with a different prompt.
@@ -20,7 +20,7 @@ Usage
     python zsxq_downloader.py --count 50 --out ~/Downloads/zsxq_reports
     python zsxq_downloader.py --group-id 51111812185184 --delay 1.5
     python zsxq_downloader.py                        # download only (default)
-    python zsxq_downloader.py --classify             # download + MiniMax classification
+    python zsxq_downloader.py --classify             # download + Claude classification
     python zsxq_downloader.py --from-date 2025-01-01 --to-date 2025-03-31
     python zsxq_downloader.py --from-date 2025-06-01              # since a date, default --count 10
     python zsxq_downloader.py --from-date 2025-06-01 --count 0   # since a date, no limit
@@ -216,7 +216,7 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
             if already_classified:
                 print("         → already classified, skipping LLM.")
             else:
-                print("         → classifying via MiniMax…")
+                print("         → classifying via Claude…")
                 try:
                     result = classify_one(
                         conn, file_id, name, summary, api_key,
@@ -414,7 +414,7 @@ def _run_query(query: str, args, session, conn, out_dir: Path,
             if already_classified:
                 print("         → already classified, skipping LLM.")
             else:
-                print("         → classifying via MiniMax…")
+                print("         → classifying via Claude…")
                 try:
                     result = classify_one(
                         conn, file_id, name, summary, api_key,
@@ -443,7 +443,7 @@ def _run_query(query: str, args, session, conn, out_dir: Path,
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Download PDFs from a zsxq group and record them in zsxq.db. "
-                    "Pass --classify to also run MiniMax classification."
+                    "Pass --classify to also run Claude classification."
     )
     parser.add_argument("--query",          default=None, metavar="KEYWORD",
                         help="Search all groups (全部星球) for files matching this term "
@@ -466,9 +466,9 @@ def main() -> None:
     parser.add_argument("--delay",          type=float, default=1.0,
                         help="Seconds between downloads")
     parser.add_argument("--classify-delay", type=float, default=1.0,
-                        help="Seconds between MiniMax API calls (default: 1.0)")
+                        help="Seconds between Claude API calls (default: 1.0)")
     parser.add_argument("--classify",       action="store_true",
-                        help="Run MiniMax classification after download (off by default)")
+                        help="Run Claude classification after download (off by default)")
     args = parser.parse_args()
     args.no_classify = not args.classify
 
@@ -488,12 +488,12 @@ def main() -> None:
     api_key = None
     if args.classify:
         try:
-            from minimax import MINIMAX_API_KEY  # type: ignore
-            api_key = MINIMAX_API_KEY
+            from claude_llm import _resolve_key  # type: ignore
+            api_key = _resolve_key(None)
         except ImportError:
             pass
         if not api_key:
-            print("WARNING: MINIMAX_API_KEY not found in config.py — "
+            print("WARNING: ANTHROPIC_AUTH_TOKEN / ANTHROPIC_API_KEY not set — "
                   "classification will be skipped.")
             args.no_classify = True
 

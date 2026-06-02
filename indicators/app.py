@@ -23,7 +23,7 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
 # Ensure the project root (parent of indicators/) is on sys.path so that
-# nav_widget2, minimax, etc. are importable when running standalone.
+# nav_widget2, claude_llm, etc. are importable when running standalone.
 _PROJECT_ROOT = SCRIPT_DIR.parent
 if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))

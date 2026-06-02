@@ -1,13 +1,13 @@
 """
-YouTube Video Analysis - Transcript Chunker + MiniMax Summarizer
-Fetches transcript, splits into 3-minute chunks, summarizes each chunk via MiniMax,
+YouTube Video Analysis - Transcript Chunker + Claude Summarizer
+Fetches transcript, splits into 3-minute chunks, summarizes each chunk via Claude,
 then runs a second synthesis pass over all chunk summaries to produce a structured
 key_points_<video_id>.md document (overview, themes, insights, quotes, takeaways).
 
 Usage:
     python analysis_video.py                        # analyze default video
     python analysis_video.py <video_id>             # analyze specific video
-    python analysis_video.py <video_id> --no-api    # fetch transcript only, skip MiniMax
+    python analysis_video.py <video_id> --no-api    # fetch transcript only, skip Claude
     python analysis_video.py <video_id> --synthesize-only  # re-run synthesis on existing chunks
 """
 
@@ -19,13 +19,14 @@ from pathlib import Path
 
 from youtube_transcript_api import YouTubeTranscriptApi
 
-# Allow importing minimax.py from project root
+# Allow importing claude_llm.py from project root
 SCRIPT_DIR = Path(__file__).parent
-_root = next((p for p in [SCRIPT_DIR, *SCRIPT_DIR.parents] if (p / "minimax.py").exists()), None)
+_root = next((p for p in [SCRIPT_DIR, *SCRIPT_DIR.parents] if (p / "claude_llm.py").exists()), None)
 if _root and str(_root) not in sys.path:
     sys.path.insert(0, str(_root))
 
-from minimax import call_minimax, MINIMAX_API_KEY  # type: ignore
+from claude_llm import call_claude, _resolve_key  # type: ignore
+ANTHROPIC_API_KEY = _resolve_key(None)
 
 DEFAULT_VIDEO_ID = "YFjfBk8HI5o"
 CHUNK_SECONDS    = 3 * 60  # 3-minute chunks
@@ -189,10 +190,10 @@ def chunk_transcript(entries: list[dict], chunk_seconds: int = CHUNK_SECONDS) ->
 # ── Summarization ─────────────────────────────────────────────────────────────
 
 def summarize_chunk(chunk: dict, video_url: str) -> str:
-    text, elapsed, _ = call_minimax(
+    text, elapsed, _ = call_claude(
         messages=[
-            {"role": "system", "name": "MiniMax AI", "content": CHUNK_SUMMARY_SYSTEM},
-            {"role": "user",   "name": "User",
+            {"role": "system", "content": CHUNK_SUMMARY_SYSTEM},
+            {"role": "user",
              "content": (
                  f"Video: {video_url}\n"
                  f"Segment: {chunk['start_label']} – {chunk['end_label']}\n\n"
@@ -221,7 +222,7 @@ def load_chunk_summaries(conn: sqlite3.Connection, video_id: str) -> list[dict]:
 
 def synthesize_video(video_id: str, conn: sqlite3.Connection) -> Path | None:
     """
-    Run a second MiniMax pass over all chunk summaries to produce a structured
+    Run a second Claude pass over all chunk summaries to produce a structured
     key_points_<video_id>.md file. Returns the output path, or None if skipped.
     """
     chunks = load_chunk_summaries(conn, video_id)
@@ -229,7 +230,7 @@ def synthesize_video(video_id: str, conn: sqlite3.Connection) -> Path | None:
         print("\nSynthesis skipped: no chunk summaries available.")
         return None
 
-    print(f"\nSynthesis pass — combining {len(chunks)} chunk summaries via MiniMax...")
+    print(f"\nSynthesis pass — combining {len(chunks)} chunk summaries via Claude...")
 
     # Build a compact digest of all chunk summaries
     digest_lines = []
@@ -240,10 +241,10 @@ def synthesize_video(video_id: str, conn: sqlite3.Connection) -> Path | None:
     video_url = f"https://www.youtube.com/watch?v={video_id}"
     user_msg = f"Video: {video_url}\n\nChunk summaries:\n\n{digest}"
 
-    text, elapsed, _ = call_minimax(
+    text, elapsed, _ = call_claude(
         messages=[
-            {"role": "system", "name": "MiniMax AI", "content": SYNTHESIS_SYSTEM},
-            {"role": "user",   "name": "User",       "content": user_msg},
+            {"role": "system", "content": SYNTHESIS_SYSTEM},
+            {"role": "user",   "content": user_msg},
         ],
         temperature=0.3,
         max_completion_tokens=1500,
@@ -291,13 +292,13 @@ def analyze_video(video_id: str, use_api: bool = True) -> None:
         print(f"\n  Chunk {idx+1}/{len(chunks)}  [{label}]")
 
         summary = None
-        if use_api and MINIMAX_API_KEY:
-            print(f"    Summarizing via MiniMax...", end=" ", flush=True)
+        if use_api and ANTHROPIC_API_KEY:
+            print(f"    Summarizing via Claude...", end=" ", flush=True)
             summary = summarize_chunk(chunk, video_url)
-        elif not MINIMAX_API_KEY:
-            print("    Skipping MiniMax (MINIMAX_API_KEY not set)")
+        elif not ANTHROPIC_API_KEY:
+            print("    Skipping Claude (ANTHROPIC_AUTH_TOKEN / ANTHROPIC_API_KEY not set)")
         else:
-            print("    Skipping MiniMax (--no-api flag)")
+            print("    Skipping Claude (--no-api flag)")
 
         upsert_chunk(
             conn,
@@ -312,7 +313,7 @@ def analyze_video(video_id: str, use_api: bool = True) -> None:
         )
 
     # 5. Synthesis pass — roll up all chunk summaries into a key_points doc
-    if use_api and MINIMAX_API_KEY:
+    if use_api and ANTHROPIC_API_KEY:
         synthesize_video(video_id, conn)
     conn.close()
 
@@ -322,11 +323,11 @@ def analyze_video(video_id: str, use_api: bool = True) -> None:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="YouTube transcript chunker + MiniMax summarizer")
+    parser = argparse.ArgumentParser(description="YouTube transcript chunker + Claude summarizer")
     parser.add_argument("video_id", nargs="?", default=DEFAULT_VIDEO_ID,
                         help=f"YouTube video ID (default: {DEFAULT_VIDEO_ID})")
     parser.add_argument("--no-api", action="store_true",
-                        help="Fetch transcript only, skip MiniMax summarization")
+                        help="Fetch transcript only, skip Claude summarization")
     parser.add_argument("--synthesize-only", action="store_true",
                         help="Skip transcript fetch; re-run synthesis on existing chunk summaries")
     args = parser.parse_args()

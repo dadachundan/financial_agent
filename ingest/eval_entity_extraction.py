@@ -25,7 +25,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from bs4 import BeautifulSoup
-from minimax import call_minimax
+from claude_llm import call_claude
 
 # ── Eval corpus: real HTML filings ────────────────────────────────────────────
 REPORT_DIR = Path(__file__).parent.parent / "financial_reports"
@@ -184,16 +184,16 @@ def _classify_noise_type(name: str) -> str | None:
 # ── Core: run extraction with a given system prompt ───────────────────────────
 
 def extract_entities(text: str, system_prompt: str) -> list[str]:
-    """Call MiniMax with the given system prompt, return list of extracted entity names."""
+    """Call Claude with the given system prompt, return list of extracted entity names."""
     user_msg = (
         "Extract all named entities from the following financial document text.\n\n"
         f"TEXT:\n{text}"
     )
     try:
-        response, _, _ = call_minimax(
+        response, _, _ = call_claude(
             messages=[
-                {"role": "system", "name": "MiniMax AI", "content": system_prompt},
-                {"role": "user",   "name": "User",       "content": user_msg},
+                {"role": "system", "content": system_prompt},
+                {"role": "user",   "content": user_msg},
             ],
             temperature=0.1,
             max_completion_tokens=1024,
@@ -279,10 +279,10 @@ def run_eval(system_prompt: str, label: str = "current") -> dict:
     }
 
 
-# ── Prompt refinement via MiniMax ─────────────────────────────────────────────
+# ── Prompt refinement via Claude ──────────────────────────────────────────────
 
 def refine_prompt(current_prompt: str, failures: list[dict]) -> str:
-    """Ask MiniMax to strengthen the prompt based on observed failures."""
+    """Ask Claude to strengthen the prompt based on observed failures."""
     if not failures:
         return current_prompt
 
@@ -317,11 +317,11 @@ def refine_prompt(current_prompt: str, failures: list[dict]) -> str:
     """).strip()
 
     try:
-        refined, _, _ = call_minimax(
+        refined, _, _ = call_claude(
             messages=[
-                {"role": "system", "name": "MiniMax AI",
+                {"role": "system",
                  "content": "You are an expert prompt engineer. Output only the improved prompt."},
-                {"role": "user", "name": "User", "content": meta_prompt},
+                {"role": "user", "content": meta_prompt},
             ],
             temperature=0.2,
             max_completion_tokens=2048,
@@ -337,12 +337,12 @@ def refine_prompt(current_prompt: str, failures: list[dict]) -> str:
 PROMPT_FILE = Path(__file__).parent / "_entity_prompt.txt"
 
 def load_current_prompt() -> str:
-    """Load the prompt from the saved file, or extract from minimax_llm_client.py."""
+    """Load the prompt from the saved file, or extract from claude_llm_client.py."""
     if PROMPT_FILE.exists():
         return PROMPT_FILE.read_text()
 
     # Extract from source code as baseline
-    client_path = Path(__file__).parent.parent / "minimax_llm_client.py"
+    client_path = Path(__file__).parent.parent / "claude_llm_client.py"
     src = client_path.read_text()
 
     # Pull out the system message content + extra rules
@@ -412,10 +412,10 @@ def save_prompt(prompt: str, label: str = ""):
 def apply_prompt_to_source(new_prompt: str):
     """
     Print the new FORBIDDEN/person-name rule block so the developer can
-    paste it into minimax_llm_client.py.  (Full auto-patch is too fragile.)
+    paste it into claude_llm_client.py.  (Full auto-patch is too fragile.)
     """
     print("\n" + "="*65)
-    print("APPLY: paste the following into minimax_llm_client.py")
+    print("APPLY: paste the following into claude_llm_client.py")
     print("       replacing the current 'STRICT ENTITY EXTRACTION RULES' block")
     print("="*65)
     # Extract just the rules section

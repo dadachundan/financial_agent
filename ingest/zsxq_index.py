@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-zsxq_index.py — Batch-classify PDFs already stored in zsxq.db using MiniMax.
+zsxq_index.py — Batch-classify PDFs already stored in zsxq.db using Claude.
 
 Responsibilities
 ----------------
   Purely an OFFLINE classifier: reads rows from the local SQLite database
-  (written by zsxq_downloader.py) and calls MiniMax to classify each PDF
+  (written by zsxq_downloader.py) and calls Claude to classify each PDF
   across four categories:  AI | Robotics | Semiconductor | Energy
 
   Because classification is decoupled from downloading, you can:
@@ -27,7 +27,8 @@ Usage
 Requirements
 ------------
   • zsxq.db must already exist (run zsxq_downloader.py first).
-  • MINIMAX_API_KEY must be set in config.py.
+  • ANTHROPIC_AUTH_TOKEN (or ANTHROPIC_API_KEY) must be set in your env
+    (or ANTHROPIC_API_KEY in config.py).
   • Chrome profile is only needed for auto-downloading matched PDFs that are
     not yet on disk.  If you pass --no-autodownload the Chrome profile is
     never touched.
@@ -40,9 +41,9 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-from minimax import MINIMAX_API_KEY as _CONFIG_MINIMAX_KEY  # type: ignore
+from claude_llm import _resolve_key as _resolve_claude_key  # type: ignore
 
-from zsxq_classify import classify_with_minimax
+from zsxq_classify import classify_with_claude
 from zsxq_common import (
     DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
     date_subfolder, do_download, get_session_via_selenium, init_db,
@@ -54,7 +55,7 @@ from zsxq_common import (
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Classify PDFs in zsxq.db using MiniMax (offline — no scraping)."
+        description="Classify PDFs in zsxq.db using Claude (offline — no scraping)."
     )
     parser.add_argument("--db",              default=str(DEFAULT_DB),
                         help=f"SQLite database path (default: {DEFAULT_DB})")
@@ -70,11 +71,12 @@ def main() -> None:
                         help="Chrome profile for auto-downloading (only used when "
                              "--no-autodownload is NOT set and matched files are missing)")
     parser.add_argument("--classify-delay",  type=float, default=1.0,
-                        help="Seconds between MiniMax API calls (default: 1.0)")
+                        help="Seconds between Claude API calls (default: 1.0)")
     args = parser.parse_args()
 
-    if not _CONFIG_MINIMAX_KEY:
-        print("ERROR: MINIMAX_API_KEY not found in config.py")
+    _claude_key = _resolve_claude_key(None)
+    if not _claude_key:
+        print("ERROR: ANTHROPIC_AUTH_TOKEN / ANTHROPIC_API_KEY not set in env or config.py")
         sys.exit(1)
 
     db_path       = Path(args.db).expanduser()
@@ -134,7 +136,7 @@ def main() -> None:
         conn.close()
         sys.exit(0)
 
-    print(f"Classifying {total} row(s) via MiniMax…\n")
+    print(f"Classifying {total} row(s) via Claude…\n")
     counts = {"ai": 0, "robotics": 0, "semiconductor": 0, "energy": 0,
               "dl_ok": 0, "dl_fail": 0, "err": 0}
     elapsed_times: list[float] = []
@@ -156,8 +158,8 @@ def main() -> None:
         print(f"    File: {name}")
 
         (analysis, ai_rel, rob_rel, semi_rel, nrg_rel,
-         tickers, api_elapsed, prompt, raw_json) = classify_with_minimax(
-            name, summary, _CONFIG_MINIMAX_KEY
+         tickers, api_elapsed, prompt, raw_json) = classify_with_claude(
+            name, summary, _claude_key
         )
         elapsed_times.append(api_elapsed + args.classify_delay)
 

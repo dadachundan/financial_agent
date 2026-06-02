@@ -6,7 +6,7 @@ Workflow per filing:
   1. Extract core text (Item 1 Business + Item 7 MD&A) from the HTML
   2. Extract entities with the current prompt
   3. Heuristic quality check (pure Python — no extra LLM call)
-  4. If quality is poor → ask MiniMax to suggest prompt improvements → retry (up to 2×)
+  4. If quality is poor → ask Claude to suggest prompt improvements → retry (up to 2×)
   5. Extract relations with the best entity result
   6. Save everything (all attempts) to a tmp JSON file
 
@@ -340,9 +340,9 @@ def heuristic_check(entities: list[dict]) -> dict:
 
 # ── LLM helpers ───────────────────────────────────────────────────────────────
 
-def _minimax(messages: list[dict], label: str, show_prompts: bool,
-             max_tokens: int = 4096) -> str:
-    from minimax import call_minimax, MINIMAX_API_KEY  # noqa
+def _llm(messages: list[dict], label: str, show_prompts: bool,
+         max_tokens: int = 4096) -> str:
+    from claude_llm import call_claude  # noqa
 
     if show_prompts:
         print(f"\n{'='*60}\n[PROMPT] {label}")
@@ -352,9 +352,9 @@ def _minimax(messages: list[dict], label: str, show_prompts: bool,
         print(f"{'─'*60}")
 
     t0 = time.monotonic()
-    text, _, _ = call_minimax(
+    text, _, _ = call_claude(
         messages=messages, temperature=0.1,
-        max_completion_tokens=max_tokens, api_key=MINIMAX_API_KEY,
+        max_completion_tokens=max_tokens,
     )
     elapsed = time.monotonic() - t0
     print(f"    · {label}: done ({elapsed:.1f}s)", flush=True)
@@ -476,11 +476,11 @@ def _entity_system(ticker: str, company: str, extra_rules: str = "") -> str:
 
 def extract_entities(text: str, ticker: str, company: str,
                      extra_rules: str, show_prompts: bool) -> list[dict]:
-    raw = _minimax(
+    raw = _llm(
         messages=[
-            {"role": "system", "name": "MiniMax AI",
+            {"role": "system",
              "content": _entity_system(ticker, company, extra_rules)},
-            {"role": "user", "name": "User",
+            {"role": "user",
              "content": f"Extract all entities from this 10-K excerpt:\n\n{text}"},
         ],
         label="ExtractEntities",
@@ -499,22 +499,22 @@ def extract_entities(text: str, ticker: str, company: str,
 
 def refine_prompt(issues: list[str], bad_entities: dict[str, list[str]],
                   show_prompts: bool) -> str:
-    """Ask MiniMax to generate extra FORBIDDEN rules based on the detected issues."""
+    """Ask Claude to generate extra FORBIDDEN rules based on the detected issues."""
     bad_summary = "\n".join(
         f"- {cat}: {', '.join(names[:8])}"
         for cat, names in bad_entities.items()
         if names and cat != "good"
     )
-    raw = _minimax(
+    raw = _llm(
         messages=[
-            {"role": "system", "name": "MiniMax AI", "content": (
+            {"role": "system", "content": (
                 "You are a prompt engineer improving an entity extraction system for financial analysis.\n"
                 "You will be given a list of incorrectly extracted entities and their categories.\n"
                 "Write 3–6 concise additional FORBIDDEN rules to add to the extraction prompt "
                 "that would prevent these specific bad extractions.\n"
                 "Return ONLY the additional rules as plain text bullet points (no JSON, no explanation)."
             )},
-            {"role": "user", "name": "User", "content": (
+            {"role": "user", "content": (
                 f"Issues detected:\n{chr(10).join(issues)}\n\n"
                 f"Bad entities extracted:\n{bad_summary}\n\n"
                 "Write additional FORBIDDEN rules to prevent these."
@@ -533,15 +533,15 @@ def extract_edges(text: str, entities: list[dict], show_prompts: bool) -> list[d
     entity_list = "\n".join(
         f"- {e['name']} ({e.get('entity_type', '')})" for e in entities
     )
-    raw = _minimax(
+    raw = _llm(
         messages=[
-            {"role": "system", "name": "MiniMax AI", "content": (
+            {"role": "system", "content": (
                 f"You extract relationships from a 10-K SEC filing.\n\n"
                 f"{_EDGE_RULES}\n\n"
                 f"ENTITIES (use names EXACTLY as written):\n{entity_list}\n\n"
                 f"Reply with ONLY valid JSON:\n{_EDGE_SCHEMA}"
             )},
-            {"role": "user", "name": "User",
+            {"role": "user",
              "content": f"Extract all relationships from this 10-K excerpt:\n\n{text}"},
         ],
         label="ExtractEdges",
@@ -706,7 +706,7 @@ def main() -> None:
             if quality["quality_ok"] or args.no_iterate or attempt > MAX_RETRIES:
                 break
 
-            # 3. Prompt refinement: ask MiniMax to improve the rules
+            # 3. Prompt refinement: ask Claude to improve the rules
             bad_cats = {k: v for k, v in quality["classified"].items()
                         if k != "good" and v}
             # Accumulate for final summary

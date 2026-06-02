@@ -236,21 +236,30 @@ The standard fix-list to look for, in priority order: fabricated SEC URLs (resol
 
 # LLM API Usage
 
-- Use **MiniMax** for simple summarisation tasks and other straightforward LLM calls.
-- The MiniMax API key is stored in `config.py` (gitignored, not checked in — already present locally).
-- Import and call via `minimax.py`:
+- Use **Anthropic Claude** for all LLM calls — entity / relationship
+  extraction, summarisation, classification, prompt refinement. The previous
+  MiniMax client has been removed; there is no fallback.
+- Credentials are read from env (`ANTHROPIC_AUTH_TOKEN` + `ANTHROPIC_BASE_URL`
+  from `~/.zshrc`, with `ANTHROPIC_API_KEY` as fallback). You can also set
+  `ANTHROPIC_API_KEY` in `config.py` to override.
+- Default model is `claude-sonnet-4-6` (best extraction quality / cost
+  balance). Pass `model="claude-opus-4-8"` per call for deeper reasoning.
+- Import and call via `claude_llm.py`:
 
   ```python
-  from minimax import call_minimax, MINIMAX_API_KEY
-  text, elapsed, raw_json = call_minimax(
+  from claude_llm import call_claude, CLAUDE_MODEL
+  text, elapsed, raw_json = call_claude(
       messages=[
-          {"role": "system", "name": "MiniMax AI", "content": "..."},
-          {"role": "user",   "name": "User",       "content": "..."},
+          {"role": "system", "content": "..."},
+          {"role": "user",   "content": "..."},
       ],
       temperature=0.2,
       max_completion_tokens=512,
   )
   ```
+
+- For graphiti-core knowledge-graph ingestion, the LLM client wrapper is
+  `claude_llm_client.ClaudeLLMClient` (see `ingest/graphiti_ingest.py`).
 
 # Skills
 

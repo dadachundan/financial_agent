@@ -1,12 +1,12 @@
 """
-minimax_llm_client.py — MiniMax LLM client + bge-m3 embedder for graphiti-core.
+claude_llm_client.py — Claude LLM client + bge-m3 embedder for graphiti-core.
 
-Wires the project's existing MiniMax API and the local bge-m3 SentenceTransformer
-model into graphiti-core's abstract interfaces so the full knowledge-graph pipeline
-runs entirely locally, with no external cloud graph service.
+Graphiti-core's entity / edge extraction runs against Anthropic Claude (via
+:func:`claude_llm.call_claude`). The embedder (local ``bge-m3`` via
+SentenceTransformer) and the no-op reranker run fully offline.
 
-Usage (from other modules):
-    from minimax_llm_client import MiniMaxLLMClient, BGEEmbedder, get_graphiti
+Usage:
+    from claude_llm_client import ClaudeLLMClient, BGEEmbedder, get_graphiti
     graphiti = get_graphiti()          # lazy singleton
 """
 
@@ -31,6 +31,7 @@ GROUP_ID        = "financial-pdfs"
 # Readable via the /zep/llm-log page in the Flask app.
 LLM_LOG_FILE: Path | None = None   # set by graphiti_ingest.py or zep_app.py
 
+
 def _log_llm_call(model_name: str, messages: list, response_text: str, elapsed_s: float) -> None:
     """Append one JSONL record to LLM_LOG_FILE (no-op if not configured)."""
     if LLM_LOG_FILE is None:
@@ -54,18 +55,14 @@ def _log_llm_call(model_name: str, messages: list, response_text: str, elapsed_s
 
 
 def _find_project_root() -> Path:
-    """Return the main git repo root, even when running from a worktree.
-
-    Worktrees have a .git FILE; the main repo has a .git DIRECTORY.
-    Walking up until we find a .git directory gives us the canonical root.
-    """
+    """Return the main git repo root, even when running from a worktree."""
     p = SCRIPT_DIR.resolve()
     while p != p.parent:
         git = p / ".git"
         if git.exists() and git.is_dir():
             return p
         p = p.parent
-    return SCRIPT_DIR  # fallback (should not happen in normal use)
+    return SCRIPT_DIR
 
 
 _PROJECT_ROOT    = _find_project_root()
@@ -74,20 +71,6 @@ _LOCAL_MODEL_DIR = _PROJECT_ROOT / "models" / "bge-m3"
 
 # Set to True to print every LLM request and response to stdout (debug aid).
 PRINT_ALL_LLM_CALLS: bool = False
-
-
-# ── Config helpers ─────────────────────────────────────────────────────────────
-
-def _load_minimax_key() -> str:
-    for parent in [SCRIPT_DIR] + list(SCRIPT_DIR.parents):
-        cfg = parent / "config.py"
-        if cfg.exists():
-            ns: dict = {}
-            exec(cfg.read_text(), ns)
-            key = ns.get("MINIMAX_API_KEY", "")
-            if key:
-                return key
-    return ""
 
 
 # ── JSON extraction helper ─────────────────────────────────────────────────────
@@ -114,16 +97,10 @@ def _extract_json(text: str) -> str:
 # ── LLM response normaliser ────────────────────────────────────────────────────
 
 def _normalize_llm_json(parsed: Any, response_model: type) -> Any:
-    """Fix common MiniMax JSON inconsistencies before Pydantic validation.
+    """Fix common JSON inconsistencies before Pydantic validation.
 
-    Known issues:
-    1. ExtractedEntity items use ``entity_id`` instead of ``entity_type_id``.
-    2. The model sometimes echoes the JSON schema back (``$defs`` or top-level
-       ``properties`` key) instead of generating data — return an empty valid
-       envelope in that case.
-    3. NodeResolutions items sometimes omit ``duplicate_name`` (required field).
-    4. ExtractedEdges items use alternate field names
-       (source/target, description/fact, relation/relation_type).
+    Even with Claude's strong instruction-following, a few normalisations are
+    still useful when the model paraphrases field names.
     """
     name = response_model.__name__
 
@@ -144,7 +121,7 @@ def _normalize_llm_json(parsed: Any, response_model: type) -> Any:
             return {"edges": []}
         if name == "NodeResolutions":
             return {"entity_resolutions": []}
-        return parsed  # unknown model — let Pydantic report the error
+        return parsed
 
     # ── ExtractedEntities: entity_id → entity_type_id ────────────────────────
     if isinstance(parsed, dict) and "extracted_entities" in parsed:
@@ -158,7 +135,6 @@ def _normalize_llm_json(parsed: Any, response_model: type) -> Any:
         for item in parsed.get("entity_resolutions") or []:
             if not isinstance(item, dict):
                 continue
-            # Skip schema-echo objects that slipped into the list
             if "properties" in item and "id" not in item:
                 continue
             item.setdefault("duplicate_name", "")
@@ -201,11 +177,10 @@ def _normalize_llm_json(parsed: Any, response_model: type) -> Any:
     return parsed
 
 
-# ── MiniMax LLM client ─────────────────────────────────────────────────────────
+# ── Claude LLM client ──────────────────────────────────────────────────────────
 
-class MiniMaxLLMClient(LLMClient):
-    """
-    Graphiti LLMClient backed by MiniMax.
+class ClaudeLLMClient(LLMClient):
+    """Graphiti LLMClient backed by Anthropic Claude.
 
     Structured extraction works by injecting the Pydantic model's JSON schema
     into the system prompt and parsing the model's JSON response.
@@ -214,15 +189,16 @@ class MiniMaxLLMClient(LLMClient):
     MAX_RETRIES: int = 2
 
     def __init__(self, config: LLMConfig | None = None, cache: bool = False):
+        from claude_llm import CLAUDE_MODEL, _resolve_key
         if config is None:
             config = LLMConfig(
-                api_key=_load_minimax_key(),
-                model="MiniMax-Text-01",
-                small_model="MiniMax-Text-01",
+                api_key=_resolve_key(None),
+                model=CLAUDE_MODEL,
+                small_model=CLAUDE_MODEL,
                 max_tokens=8192,
             )
         super().__init__(config, cache)
-        self._api_key = config.api_key or _load_minimax_key()
+        self._api_key = config.api_key or _resolve_key(None)
 
     async def _generate_response(
         self,
@@ -231,11 +207,10 @@ class MiniMaxLLMClient(LLMClient):
         max_tokens: int = 8192,
         model_size=None,
     ) -> dict[str, Any]:
-        from minimax import call_minimax
+        from claude_llm import call_claude
 
-        mm_messages = []
+        chat_messages: list[dict] = []
         for m in messages:
-            # Accept both Message objects and plain dicts
             if hasattr(m, "role"):
                 role    = m.role
                 content = m.content or ""
@@ -383,23 +358,17 @@ class MiniMaxLLMClient(LLMClient):
                         "\nare ALL people — never extract them regardless of how often they appear."
                     )
                 content = content + extra
-                mm_messages.append({
-                    "role": "system", "name": "MiniMax AI", "content": content
-                })
+                chat_messages.append({"role": "system", "content": content})
             elif role == "system":
-                mm_messages.append({
-                    "role": "system", "name": "MiniMax AI", "content": content
-                })
+                chat_messages.append({"role": "system", "content": content})
             else:
-                mm_messages.append({
-                    "role": "user", "name": "User", "content": content
-                })
+                chat_messages.append({"role": "user", "content": content})
 
         model_name = response_model.__name__ if response_model else "plain-text"
         if PRINT_ALL_LLM_CALLS:
             print(f"\n{'='*70}")
             print(f"[LLM CALL] model={model_name}")
-            for i, msg in enumerate(mm_messages):
+            for i, msg in enumerate(chat_messages):
                 role = msg.get("role", "?")
                 body = msg.get("content", "")
                 print(f"  [{i}] {role.upper()}: {body[:2500]}{'…' if len(body) > 2500 else ''}")
@@ -409,15 +378,16 @@ class MiniMaxLLMClient(LLMClient):
             _t0 = _time.monotonic()
             print(f"    · LLM → {model_name} …", end=" ", flush=True)
 
-        # Run the synchronous call_minimax in a thread so the event loop stays alive
+        # Run the synchronous call_claude in a thread so the event loop stays alive
         loop = asyncio.get_event_loop()
         text, _elapsed, _raw = await loop.run_in_executor(
             None,
-            lambda: call_minimax(
-                messages=mm_messages,
+            lambda: call_claude(
+                messages=chat_messages,
                 temperature=max(self.temperature, 0.0),
                 max_completion_tokens=min(max_tokens, 8192),
                 api_key=self._api_key,
+                model=self.config.model or "",
             ),
         )
 
@@ -426,24 +396,33 @@ class MiniMaxLLMClient(LLMClient):
             _elapsed_s = _time.monotonic() - _t0
             print(f"done ({_elapsed_s:.1f}s)", flush=True)
         else:
-            _elapsed_s = 0.0  # already printed in debug mode
+            _elapsed_s = 0.0
 
-        # Extract token usage from raw API response
+        # Extract token usage from raw Anthropic response
         _usage: dict | None = None
         try:
-            _usage = json.loads(_raw).get("usage")
+            _payload = json.loads(_raw) if _raw else {}
+            u = _payload.get("usage") if isinstance(_payload, dict) else None
+            if isinstance(u, dict):
+                # Normalise usage keys for Langfuse
+                _usage = {
+                    "prompt_tokens":     u.get("input_tokens", 0),
+                    "completion_tokens": u.get("output_tokens", 0),
+                    "total_tokens": (u.get("input_tokens", 0)
+                                     + u.get("output_tokens", 0)),
+                }
         except Exception:
             pass
 
-        _log_llm_call(model_name, mm_messages, text, _elapsed_s)
+        _log_llm_call(model_name, chat_messages, text, _elapsed_s)
 
         # Langfuse tracing (no-op if not configured)
         try:
             import langfuse_monitor
             langfuse_monitor.log_generation(
                 call_type=model_name,
-                model=self.config.model or "MiniMax-Text-01",
-                messages=mm_messages,
+                model=self.config.model or "claude-sonnet-4-6",
+                messages=chat_messages,
                 response_text=text,
                 elapsed_s=_elapsed_s,
                 usage=_usage,
@@ -471,9 +450,6 @@ class MiniMaxLLMClient(LLMClient):
 
         # Plain-text path
         return {"content": text}
-
-    # graphiti calls `generate_response` (the public wrapper) which handles retries
-    # and multi-lingual instructions; it delegates to _generate_response above.
 
 
 # ── bge-m3 Embedder ────────────────────────────────────────────────────────────
@@ -536,13 +512,10 @@ class BGEEmbedder(EmbedderClient):
 # ── Passthrough cross-encoder (no OpenAI required) ─────────────────────────────
 
 class PassthroughReranker(CrossEncoderClient):
-    """
-    No-op reranker: preserves the original passage order produced by the
-    embedding-based retrieval step.  Avoids requiring an OpenAI API key.
-    """
+    """No-op reranker: preserves the original passage order produced by the
+    embedding-based retrieval step.  Avoids requiring an OpenAI API key."""
 
     async def rank(self, query: str, passages: list[str]) -> list[tuple[str, float]]:
-        # Return passages with descending dummy scores so graphiti's sort is stable
         return [(p, float(len(passages) - i)) for i, p in enumerate(passages)]
 
 
@@ -555,12 +528,9 @@ async def _build_graphiti():
     from graphiti_core import Graphiti
     from graphiti_core.driver.kuzu_driver import KuzuDriver
 
-    # Pass the path string — KuzuDriver creates its own kuzu.Database internally
     driver = KuzuDriver(str(GRAPH_DIR))
-    driver._database = GROUP_ID  # required by graphiti_core 0.28.2 (not set by KuzuDriver)
+    driver._database = GROUP_ID  # required by graphiti_core 0.28.2
 
-    # KuzuDriver.build_indices_and_constraints() is a no-op; create FTS indices manually.
-    # Use a raw kuzu.Connection (same as setup_schema) to avoid graphiti's error logging.
     import kuzu as _kuzu
     from graphiti_core.graph_queries import get_fulltext_indices
     from graphiti_core.driver.driver import GraphProvider
@@ -574,7 +544,7 @@ async def _build_graphiti():
     _conn.close()
 
     g = Graphiti(
-        llm_client=MiniMaxLLMClient(),
+        llm_client=ClaudeLLMClient(),
         embedder=BGEEmbedder(),
         cross_encoder=PassthroughReranker(),
         graph_driver=driver,

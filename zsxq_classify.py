@@ -3,12 +3,12 @@ zsxq_classify.py — Shared classification helpers for the zsxq PDF pipeline.
 
 Public API
 ----------
-  classify_with_minimax(name, summary, api_key, retries=3)
+  classify_with_claude(name, summary, api_key, retries=3)
       Raw LLM call → parses 4 category flags + tickers + analysis.
 
   classify_one(conn, file_id, name, summary, api_key,
                local_path=None, retries=3)
-      classify_with_minimax + persist UPDATE to pdf_files in one shot.
+      classify_with_claude + persist UPDATE to pdf_files in one shot.
       Returns a result dict (see docstring).
 
 Used by:
@@ -19,7 +19,7 @@ Used by:
 import sqlite3
 from datetime import datetime
 
-from minimax import call_minimax  # type: ignore
+from claude_llm import call_claude  # type: ignore
 
 # ── Prompt constants ───────────────────────────────────────────────────────────
 
@@ -73,13 +73,13 @@ def _parse_yes_no(text: str, label: str) -> bool | None:
 
 # ── Core classification call ───────────────────────────────────────────────────
 
-def classify_with_minimax(
+def classify_with_claude(
     name: str,
     summary: str,
     api_key: str,
     retries: int = 3,
 ) -> tuple[str, bool | None, bool | None, bool | None, bool | None, str, float, str, str]:
-    """Call MiniMax to classify a PDF across 4 categories and extract tickers.
+    """Call Claude to classify a PDF across 4 categories and extract tickers.
 
     Returns:
         (analysis, ai_rel, robotics_rel, semiconductor_rel, energy_rel,
@@ -89,10 +89,10 @@ def classify_with_minimax(
         name=name,
         summary=summary.strip() if summary else "(no summary available)",
     )
-    text, elapsed, raw_json = call_minimax(
+    text, elapsed, raw_json = call_claude(
         messages=[
-            {"role": "system", "name": "MiniMax AI", "content": CLASSIFY_SYSTEM},
-            {"role": "user",   "name": "User",       "content": user_msg},
+            {"role": "system", "content": CLASSIFY_SYSTEM},
+            {"role": "user",   "content": user_msg},
         ],
         temperature=0.1,
         max_completion_tokens=300,
@@ -147,7 +147,7 @@ def classify_one(
         file_id:    Primary key in pdf_files.
         name:       PDF filename (used in the prompt).
         summary:    Chinese summary text from the zsxq topic.
-        api_key:    MiniMax API key.
+        api_key:    Claude (Anthropic) API key.
         local_path: If provided, stored in pdf_files.local_path (COALESCE).
         retries:    API retries on transient failures.
 
@@ -159,7 +159,7 @@ def classify_one(
         parse_error                          — bool (True if any field unparseable)
     """
     (analysis, ai_rel, rob_rel, semi_rel, nrg_rel,
-     tickers, elapsed, prompt, raw_json) = classify_with_minimax(
+     tickers, elapsed, prompt, raw_json) = classify_with_claude(
         name, summary, api_key, retries=retries,
     )
 

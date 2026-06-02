@@ -13,7 +13,7 @@ Pass 2 — Semantic duplicates (LLM, candidate-pair confirmation):
        - SequenceMatcher ratio >= 0.75 on normalised names (sliding window)
        - Containment: normalised(A) is a substring of normalised(B) or vice versa
        - Shared first-word groups (first word >= 4 chars)
-    2. Send small batches of candidate pairs to MiniMax for confirmation.
+    2. Send small batches of candidate pairs to Claude for confirmation.
        The LLM only sees genuine lookalike pairs — no hallucination over
        unrelated alphabetical neighbours.
     3. Merge confirmed pairs.
@@ -47,7 +47,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from graph_mirror import get_conn, merge_entities  # noqa: E402
-from minimax import call_minimax                    # noqa: E402
+from claude_llm import call_claude                  # noqa: E402
 
 # ── config ────────────────────────────────────────────────────────────────────
 MIRROR_DB        = PROJECT_ROOT / "db" / "graph_mirror.db"
@@ -247,7 +247,7 @@ def _build_candidate_pairs(entities: list[dict]) -> list[tuple[dict, dict]]:
 
 
 def _confirm_batch(pairs: list[tuple[dict, dict]]) -> list[dict]:
-    """Send a batch of candidate pairs to MiniMax and return confirmed merge groups.
+    """Send a batch of candidate pairs to Claude and return confirmed merge groups.
 
     Each returned group is validated against the input pairs so the LLM cannot
     cross-contaminate UUIDs across unrelated pairs.
@@ -267,10 +267,10 @@ def _confirm_batch(pairs: list[tuple[dict, dict]]) -> list[dict]:
         "Identify which pairs should be MERGED into one canonical node.\n\n"
         + json.dumps(items, ensure_ascii=False, indent=2)
     )
-    text, elapsed, _ = call_minimax(
+    text, elapsed, _ = call_claude(
         messages=[
-            {"role": "system", "name": "MiniMax AI", "content": SYSTEM_PROMPT},
-            {"role": "user",   "name": "User",       "content": user_content},
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user",   "content": user_content},
         ],
         temperature=0.1,
         max_completion_tokens=2048,

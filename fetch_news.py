@@ -6,15 +6,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
-import os
 import anthropic
-from config import MINIMAX_API_KEY
 
-# Set up Minimax as Anthropic-compatible API
-os.environ["ANTHROPIC_BASE_URL"] = "https://api.minimax.io/anthropic"
-os.environ["ANTHROPIC_API_KEY"] = MINIMAX_API_KEY
-
-# Initialize Anthropic client
+# Reads ANTHROPIC_AUTH_TOKEN + ANTHROPIC_BASE_URL from env (see ~/.zshrc).
 client = anthropic.Anthropic()
 
 # Setup Chrome options
@@ -37,10 +31,10 @@ try:
     print("\n--- TopHub Content ---")
     print(page_content[:1000])  # Print first 1000 chars
 
-    # Send to Minimax for summarization using Anthropic-compatible API
+    # Summarize with Claude
     try:
         message = client.messages.create(
-            model="MiniMax-M2.5",
+            model="claude-sonnet-4-6",
             max_tokens=1024,
             system="You are a financial news analyst. Provide concise, actionable insights.",
             messages=[
@@ -51,13 +45,13 @@ try:
             ]
         )
 
-        print("\n--- Minimax Summary ---")
+        print("\n--- Claude Summary ---")
         for content_block in message.content:
             if content_block.type == "text":
                 print(content_block.text)
 
     except Exception as e:
-        print(f"Could not send to Minimax: {e}")
+        print(f"Could not send to Claude: {e}")
 
     # Keep browser open for inspection
     print("\nBrowser will stay open for 60 seconds...")
