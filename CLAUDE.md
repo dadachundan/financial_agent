@@ -23,6 +23,29 @@ After completing a task and verifying that it works (by running tests or the app
    Port 5001 is reserved for the user's own running server — never start a test server on 5001 and never kill 5001.
 6. If the architecture changes, update `architecture.md`.
 
+# Workflow Status Verification (MANDATORY)
+
+**Never claim a long-running Workflow is "still running" based on journal events alone.** The journal log of `started → result → started` patterns will look alive even after the Claude app has restarted and orphaned the workflow. This has bitten more than once: user asks "is the workflow really running?" — I say yes, look at journal "started" events with no matching "result", and confidently report it's alive — when in fact the sub-agent processes died ~30+ minutes ago and the empty folders are debris.
+
+**Before saying any workflow is "running" / "still going" / "in flight" / "alive", verify ALL of these:**
+
+1. **Agent JSONL files were modified in the last ~3 minutes.** Live agents append continuously. If the latest `agent-*.jsonl` mtime is >5 min ago, the agent is almost certainly dead.
+   ```bash
+   ls -lat /Users/x/.claude/projects/<SESSION>/subagents/workflows/<wf_id>/agent-*.jsonl | head -3
+   find /Users/x/.claude/projects/<SESSION>/subagents/workflows/<wf_id> -name '*.jsonl' -mmin -3
+   ```
+2. **`journal.jsonl` was touched recently** (within the last 1-2 min if the workflow is at a round boundary, longer if mid-round).
+3. **At least one sub-agent process is alive** for the current Claude session ID:
+   ```bash
+   ps aux | grep -F "<session-id-prefix>" | grep claude | grep -v grep
+   ```
+   The main loop's `claude` CLI doesn't count — there must be sub-process(es) with the workflow context. If only the main loop is alive, the workflow died.
+4. **Folder mtimes ≠ agent liveness.** Empty folders (`reports/company/<Slug>/` with no `.md`) are debris from dead agents; they are NOT proof an agent is still working. Always cross-check the JSONL mtime.
+
+If any of these checks fail, the workflow is dead. Tell the user honestly: "the workflow died at ~HH:MM (last JSONL write); X reports are debris, want me to re-launch a tiny resume workflow for just the unfinished tickers?"
+
+**Failure mode to avoid:** Looking only at the last few `journal.jsonl` lines, seeing two `started` events with no matching `result`, and reporting the workflow is "still running on 2 agents in the final round". The `started` events are persisted to disk the moment a round begins — they survive the Claude app dying.
+
 # Database Safety (MANDATORY — non-negotiable, zero exceptions)
 
 **Every `*.db` file inside this project is the user's real, irreplaceable data. Treat all of them as read-only from Claude's hands.**
