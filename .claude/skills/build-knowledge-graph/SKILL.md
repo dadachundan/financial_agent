@@ -10,6 +10,37 @@ and write them directly into the SQLite store at `db/graph_mirror.db`. The
 viewer at `localhost:5001/zep/` reads from that file, so additions show up
 on browser refresh.
 
+## Where things live (paths the agent will need)
+
+All paths are **relative to the project root**
+(`/Users/x/projects/financial_agent/`). When you run a Python snippet
+from `Bash`, run it from the project root so `import manual_graph`
+and `import graph_mirror` resolve.
+
+| Need to … | Path |
+|---|---|
+| Read this skill | [`.claude/skills/build-knowledge-graph/SKILL.md`](SKILL.md) |
+| Read the relation taxonomy | [`.claude/skills/build-knowledge-graph/references/allowed_relations.md`](references/allowed_relations.md) |
+| Read the entity-quality rules | [`.claude/skills/build-knowledge-graph/references/entity_quality.md`](references/entity_quality.md) |
+| List unprocessed reports | [`.claude/skills/build-knowledge-graph/scripts/unprocessed_reports.py`](scripts/unprocessed_reports.py) |
+| **Write entities/edges (the only sanctioned write path)** | [`manual_graph.py`](../../../manual_graph.py) — at the project root |
+| Read-only graph helpers (counts, search, deprecate, isolate) | [`graph_mirror.py`](../../../graph_mirror.py) — at the project root |
+| The live graph | [`db/graph_mirror.db`](../../../db/graph_mirror.db) |
+| Project-wide hard rule against LLM APIs | [`CLAUDE.md`](../../../CLAUDE.md) §"NEVER call the Claude API" |
+| Source markdown to curate from | [`reports/company/`](../../../reports/company/), [`reports/sector/`](../../../reports/sector/), [`reports/compare/`](../../../reports/compare/), [`reports/earnings/`](../../../reports/earnings/) |
+
+Imports to copy-paste:
+
+```python
+import sys; sys.path.insert(0, '.')        # if not already on sys.path
+from manual_graph import (
+    add_entity, add_edge, add_episode,     # single-row writes
+    add_entities, add_edges,               # bulk writes
+    find_entity, stats,                    # read helpers
+)
+import graph_mirror as gm                  # for deprecate_edge / isolate_entity / update_edge
+```
+
 ## Core principle: no LLM API, ever
 
 **This skill exists specifically because the user removed every automated
@@ -195,6 +226,12 @@ to prevent that.
   what's an entity, what's not, with examples.
 - [scripts/unprocessed_reports.py](scripts/unprocessed_reports.py) —
   finds reports not yet in `episodes`.
+- [manual_graph.py](../../../manual_graph.py) (project root) — the actual
+  write API. Open this file if you need to confirm a function signature
+  or see how idempotency / casing is handled.
+- [graph_mirror.py](../../../graph_mirror.py) (project root) — schema
+  + read helpers + `deprecate_edge` / `isolate_entity` / `update_edge`
+  for surgical fixes.
 
 ## What this skill is NOT for
 
