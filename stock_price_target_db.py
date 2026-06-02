@@ -84,6 +84,12 @@ CREATE INDEX IF NOT EXISTS idx_institute       ON price_targets(research_institu
 CREATE INDEX IF NOT EXISTS idx_report_date     ON price_targets(report_date);
 CREATE INDEX IF NOT EXISTS idx_file_id         ON price_targets(report_file_id);
 CREATE INDEX IF NOT EXISTS idx_rating          ON price_targets(rating);
+
+-- A broker re-rating the same ticker on the same date in two different
+-- PDFs (e.g. an ASCO mega-note + a single-company note from the same
+-- analyst) is one call, not two. INSERT OR IGNORE skips the dup.
+CREATE UNIQUE INDEX IF NOT EXISTS uq_ticker_broker_date
+    ON price_targets(company_ticker, research_institute, report_date);
 """
 
 

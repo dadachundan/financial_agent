@@ -155,6 +155,14 @@ def main() -> int:
                 "CREATE INDEX IF NOT EXISTS idx_report_date ON price_targets(report_date)",
                 "CREATE INDEX IF NOT EXISTS idx_file_id     ON price_targets(report_file_id)",
                 "CREATE INDEX IF NOT EXISTS idx_rating      ON price_targets(rating)",
+                # Second uniqueness layer: a broker re-rating the same ticker
+                # on the same date in two different PDFs is one call. The
+                # source-of-truth schema in stock_price_target_db.py also
+                # adds this index on first connect, but we set it here too
+                # so the post-migration DB matches the canonical schema in
+                # one transaction.
+                "CREATE UNIQUE INDEX IF NOT EXISTS uq_ticker_broker_date "
+                "    ON price_targets(company_ticker, research_institute, report_date)",
             ]:
                 c.execute(stmt)
             c.execute("COMMIT")

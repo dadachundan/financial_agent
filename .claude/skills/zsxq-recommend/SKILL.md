@@ -120,8 +120,12 @@ Record schema (per row in the array):
 
 Behaviour:
 
-- The script idempotents on `(ticker, broker, file_id)` — re-running on
-  the same window is a no-op via the table's `UNIQUE` constraint.
+- **Idempotent on two keys: `(ticker, broker, file_id)` AND `(ticker,
+  broker, report_date)`** — re-running on the same window is a no-op,
+  AND if the same broker covers the same ticker in two different PDFs
+  on the same day (e.g. an ASCO mega-note + a single-name follow-up)
+  only the first record survives. The second is silently ignored —
+  this is the "don't insert the same date twice" guarantee.
 - It auto-fills `report_date` from the PDF filename (`-260602.pdf` →
   `2026-06-02`), then fetches close + market cap on that date via
   yfinance, and computes `upside_pct`.
@@ -139,7 +143,61 @@ Behaviour:
 If the summary doesn't contain any PT calls (e.g. pure macro or strategy
 piece), skip step 4 entirely — no harm, no pipe.
 
-### 5. Output format
+### 5. Show research-coverage gap
+
+After step 4 finishes (even if it inserted nothing), run the
+missing-coverage helper and append its markdown table to the reply.
+This surfaces every PT-mentioned ticker that does **not** yet have a
+`reports/company/<…>/` folder — sorted by market cap descending — so
+the user can decide where to spend their next `/company-research` slot:
+
+```bash
+python3 .claude/skills/zsxq-recommend/scripts/missing_coverage.py \
+    --markdown --limit 25
+```
+
+Flags:
+
+- `--limit N` — cap to top N by market cap (default 0 = no cap; the
+  skill calls it with `--limit 25` to keep the chat tail readable).
+- `--markdown` — emit a github-markdown table (drop the flag for the
+  shell-friendly text table).
+- `--regions US,HK,CN` — comma list of regions to include. Default is
+  `US,HK,CN` which matches the user's typical
+  next-research priority; widen to `US,HK,CN,TW,JP,KR,IN,EU` when the
+  user explicitly says "all regions" / "include Japan" / etc.
+
+The script's matching rule (so the model doesn't second-guess its
+output): a ticker is considered **covered** if (a) any folder under
+`reports/company/` ends with `<EXCH><CODE>` or `<EXCH>_<CODE>` for
+the ticker's code (e.g. `Meituan_美团_HKEX3690` covers `3690.HK`),
+OR (b) any folder starts with the ticker's `company_name` first
+significant word (≥3 chars), followed by `_`/`-` — this catches
+cross-listings (folder `BYD_SZSE002594` for the A-share counts as
+coverage for a PT call on H-share `1211.HK`).
+
+If the helper prints "✓ Every PT-mentioned ticker … already has a
+report", just echo that line — no table to show.
+
+### 6. Output format
+
+For each recommendation give:
+
+- `file_id` (so the user can hand it to `/zsxq-analyze`)
+- Bank / publisher if known (`bank` column, or extract from name)
+- A ≤2-sentence "why read this" — anchored in the actual summary, not
+  generic.
+- Page count + create_time when useful for triage.
+
+Markdown table when listing >3 picks. Keep the whole reply tight — the
+user is choosing what to read next, not consuming the reports here.
+
+End the reply with two compact one-liners (only when non-empty):
+
+1. `📈 PT inserts: <inserted> new, <total_in_db> total in /pt` —
+   from step 4's stdout summary.
+2. `🟡 <N> PT-mentioned tickers without a reports/company/ entry` —
+   followed by the markdown table from step 5.
 
 ## Notes
 
