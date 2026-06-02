@@ -52,10 +52,13 @@ These four rules are non-negotiable. They are why this skill exists.
    ).fetchone()[0]
    ```
 
-3. **Companies > products.** Companies are first-class entities. Branded
-   products (chips, drugs, platforms) only get added when they're material
-   to the company's revenue / strategy and likely to recur across multiple
-   reports. A one-off SKU mentioned once is not an entity.
+3. **Companies only.** Every entity must carry `labels=["Company"]`. No
+   `Product`, no `Index`, no `Segment`, no `Person`, no anything else.
+   When a report describes a brand / chip / drug, encode the *relationship*
+   between the maker and the customer / partner / competitor — never add the
+   product itself as a node. (Old approach allowed products; the user
+   tightened the rule on 2026-06-02. The 6 products + 1 index already in
+   the graph are isolated.)
 
 4. **No humans, no $ amounts, no generic terms.** See
    [references/entity_quality.md](references/entity_quality.md) for the
@@ -100,14 +103,16 @@ For each markdown file:
    report; the path gives it away (`reports/company/<Slug>/...`). Add it
    as an entity if not already present.
 
-3. **Pull supporting entities** mentioned in:
+3. **Pull supporting companies** mentioned in:
    - "Competitive landscape" / "Competitors" section → `COMPETES_WITH`
      candidates
    - "Suppliers" / "Customers" / "Supply chain" / "Bill of materials" →
      `SUPPLIES` candidates (direction matters — see the decision tree)
    - Co-development partners, licensing partners → `SUPPLIES`
-   - Major branded products tied to the focal company → entity +
-     `SUPPLIES` edge from the focal company
+   - When the report frames a relationship through a branded product
+     (e.g. "TSMC fabricates NVIDIA's H100"), do **not** add the product
+     as a node — write the edge `TSMC SUPPLIES NVIDIA` and mention the
+     product in the `fact` string instead.
 
 4. **Cap at ~10 per entity.** If the focal company is a hub
    (Apple, NVIDIA, TSMC), you'll have more candidates than the budget
@@ -151,6 +156,7 @@ add_episode(SRC,
             source_desc="reports/company/Nvidia_NASDAQ_NVDA/Nvidia_NASDAQ_NVDA_公司研究.md")
 
 # 2. Idempotently add entities. Existing ones aren't clobbered.
+#    Every entity must carry labels=["Company"] — no other label is allowed.
 add_entities([
     {"name": "NVIDIA",  "labels": ["Company"], "ticker": "NVDA",
      "summary": "Fabless GPU vendor; dominant in AI training silicon."},

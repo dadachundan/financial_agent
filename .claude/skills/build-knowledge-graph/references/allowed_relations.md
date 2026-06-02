@@ -36,24 +36,24 @@ incorporator is `tgt_name`.
 - TSMC `SUPPLIES` NVIDIA (wafers)
 - ASML `SUPPLIES` TSMC (EUV scanners)
 - SK Hynix `SUPPLIES` NVIDIA (HBM3E for H100)
-- CSPC `SUPPLIES` AstraZeneca (out-licensed YS2302018 Lp(a) asset —
-  pharma out-licensing maps here)
+- CSPC `SUPPLIES` AstraZeneca (out-licensed Lp(a) drug asset to AZ;
+  fact text mentions YS2302018 — the asset itself is *not* a node)
 - Foxconn `SUPPLIES` Apple (iPhone assembly)
 - NVIDIA `SUPPLIES` Microsoft (H100 → Azure capacity)
 
-Branded products of the focal company also map to `SUPPLIES` (focal makes
-it, end-customer buys it):
+**Products are not nodes.** Per the entity-quality rule the graph holds
+only companies. When the report frames a supply relationship through a
+branded product, write the edge company-to-company and mention the
+product in the `fact` string. Example:
 
-- NVIDIA `SUPPLIES` H100 → no, write it the other direction: a brand /
-  product is *supplied by* its maker. So the canonical form is:
-  - `NVIDIA → SUPPLIES → AWS` (NVIDIA supplies H100 chips to AWS)
-  - or, if you want the product as a node:
-    `NVIDIA → SUPPLIES → H100` (NVIDIA produces/supplies the H100 product)
+```python
+add_edge("TSMC", "NVIDIA",
+         relation="SUPPLIES",
+         fact="TSMC fabricates NVIDIA's H100 and Blackwell GPUs at N4 / N3.",
+         source="NVDA_research_2026-06-02")
+```
 
-The point of including products as nodes is to enable graph queries like
-"who else makes hardware like H100." If a product is only mentioned in
-one report and no downstream entity buys it, skip the product node and
-add the company-to-company supply edge instead.
+Never add `H100` or `Blackwell` themselves as entities.
 
 ## Mapping the deprecated minority types
 
