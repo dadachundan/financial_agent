@@ -12,7 +12,7 @@ git fetch origin && git merge --ff-only origin/main
 
 After completing a task and verifying that it works (by running tests or the app):
 
-1. Create a concise Git commit using Conventional Commits (e.g., `fix:`, `feat:`).
+1. **Just commit. Never ask "want me to commit?" / "ready to commit these?" / "shall I push?"** When work that touches the repo (reports, code, docs, charts) lands successfully, immediately stage → commit → push to `main` without confirming. The user has stated repeatedly: *"alway commit, don't ask"*. Asking is friction; the commit is part of "completing the task", not a separate optional step. Use Conventional Commits (e.g., `fix:`, `feat:`).
 2. If working on a worktree branch, immediately merge it into `main` (`git checkout main && git merge <branch> --no-ff && git push origin main`).
 3. Ensure the local `main` is synced with the remote `HEAD`.
 4. Do not include the "Co-authored-by: Claude" footer in commits.
