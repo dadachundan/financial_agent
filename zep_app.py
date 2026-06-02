@@ -2,28 +2,26 @@
 """
 zep_app.py — Flask blueprint for the financial knowledge graph viewer.
 
-Backend: SQLite mirror at db/graph_mirror.db (legacy KuzuDB store at
-db/graphiti_db is read-through for browsing only — no new writes flow there).
-The previous LLM-driven graphiti ingest pipeline has been removed; entities
-and edges are curated manually via manual_graph.py.
+Backend: SQLite at db/graph_mirror.db (single source of truth).
+Entities and edges are curated by Claude (the agent) via manual_graph.py;
+there is no automated ingest pipeline and no graph DB beyond SQLite.
 
 Routes (all under /zep prefix when registered in main.py):
     GET  /          — Search + entity browser
-    GET  /search    — JSON: {query} → {nodes, edges, episodes}   (mirror FTS)
+    GET  /search    — JSON: {query} → {nodes, edges, episodes}   (FTS5)
     GET  /entities  — JSON: list all entity nodes (paginated)
     GET  /edges     — JSON: list all relationship edges (paginated)
     GET  /stats     — JSON: {node_count, edge_count, episode_count, community_count}
     GET  /communities         — JSON: paginated community list
     GET  /communities/<id>    — JSON: community detail + members
     POST /build-communities   — SSE stream: label-propagation (no LLM)
-    GET  /ingest, POST /upload-pdf, /entities/isolate-persons — 410 Gone
+    GET  /ingest, POST /upload-pdf, /entities/isolate-persons,
+    POST /refresh-mirror, POST /clear                            — 410 Gone
 """
 
-import asyncio
 import json
 import os
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 
 from flask import Blueprint, current_app, render_template, render_template_string, jsonify, request, Response
@@ -49,44 +47,23 @@ from db_paths import db_dir, db_path
 # _find_project_root() (above) walks up to .git so worktrees share data;
 # db_dir() lets tests redirect everything to /tmp/.
 _HONORED_ROOT = db_dir() if "FINAGENT_DB_DIR" in os.environ else (_find_project_root() / "db")
-GRAPH_DIR    = _HONORED_ROOT / "graphiti_db"
 ZSXQ_DB      = _HONORED_ROOT / "zsxq.db"
-GROUP_ID     = "financial-pdfs"
-# SQLite mirror — always readable, even while ingest holds the KuzuDB write lock
+
 import threading
 import graph_mirror as _mirror
 
 # Thread-local storage — each Flask worker thread gets its own SQLite connection.
 # SQLite connections cannot be shared across threads (check_same_thread=True default).
-_mirror_local    = threading.local()
-_mirror_backfill_done = False          # run backfill at most once per process
+_mirror_local = threading.local()
 
 
 def _get_mirror():
-    """Return a per-thread SQLite mirror connection, backfilling once on first use."""
-    global _mirror_backfill_done
+    """Return a per-thread SQLite mirror connection."""
     conn = getattr(_mirror_local, "conn", None)
     if conn is None:
         conn = _mirror.get_conn()
         _mirror.ensure_schema(conn)
         _mirror_local.conn = conn
-
-    # One-time backfill from KuzuDB if mirror looks empty OR episodes_json missing
-    if not _mirror_backfill_done:
-        _mirror_backfill_done = True   # set early to prevent re-entry on concurrent req
-        n_ent = conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
-        n_ep  = conn.execute("SELECT COUNT(*) FROM episodes").fetchone()[0]
-        n_edges_with_ep = conn.execute(
-            "SELECT COUNT(*) FROM edges WHERE episodes_json != '[]'"
-        ).fetchone()[0]
-        need_backfill = (n_ent == 0 or n_ep == 0 or
-                         (n_edges_with_ep == 0 and n_ent > 0))
-        if need_backfill and GRAPH_DIR.exists():
-            print("[mirror] incomplete — backfilling from KuzuDB …", flush=True)
-            ne, ned = _mirror.backfill_from_kuzu(
-                conn, GRAPH_DIR, GROUP_ID, kuzu_conn=None
-            )
-            print(f"[mirror] backfill done: {ne} entities, {ned} edges", flush=True)
     return conn
 
 
@@ -98,30 +75,10 @@ zep_bp = Blueprint(
 )
 
 
-# ── Async ↔ sync bridge ────────────────────────────────────────────────────────
-
-def _run(coro):
-    """Run an async coroutine from a synchronous Flask route."""
-    return asyncio.run(coro)
-
-
-# ── Graph backend ─────────────────────────────────────────────────────────────
-# The previous LLM-driven graphiti pipeline has been removed. All graph state
-# is curated manually via manual_graph.py and written directly into the
-# SQLite mirror at db/graph_mirror.db. The viewer reads from the mirror;
-# KuzuDB is left in place for compatibility but no new writes flow into it.
-
-def _get_graphiti():
-    """Deprecated stub kept so legacy callers fail closed instead of importing
-    a non-existent module. Always returns None."""
-    return None
-
+# ── Readiness ─────────────────────────────────────────────────────────────────
 
 def _graph_ready() -> bool:
-    # Either a populated KuzuDB on disk, or a populated SQLite mirror, is enough
-    # to render the UI. The mirror alone is sufficient for browsing / search.
-    if GRAPH_DIR.exists() and GRAPH_DIR.stat().st_size > 4096:
-        return True
+    """True iff the mirror has at least one active entity to display."""
     try:
         n = _get_mirror().execute(
             "SELECT 1 FROM entities WHERE (isolated=0 OR isolated IS NULL) LIMIT 1"
@@ -129,94 +86,6 @@ def _graph_ready() -> bool:
         return n is not None
     except Exception:
         return False
-
-
-# ── KuzuDB direct query helpers ────────────────────────────────────────────────
-# Used for /entities, /edges, /stats (browsing, not semantic search).
-
-def _kuzu_conn():
-    """Return a KuzuDB connection that shares the graphiti instance's Database object.
-
-    Opening a second kuzu.Database in read-only mode fails with a shadow-pages
-    error whenever the graphiti instance (write mode) is also open.  Reusing the
-    same kuzu.Database avoids that conflict entirely.
-    Returns (conn, kdb) — caller must hold kdb reference to prevent GC.
-    """
-    import kuzu
-    g = _get_graphiti()
-    if g is not None and hasattr(g, "driver") and hasattr(g.driver, "db"):
-        kdb  = g.driver.db
-        conn = kuzu.Connection(kdb)
-        return conn, kdb
-    # Fallback: graphiti not yet initialised — open our own read-write connection.
-    kdb  = kuzu.Database(str(GRAPH_DIR))
-    conn = kuzu.Connection(kdb)
-    return conn, kdb
-
-
-def _kuzu_rows(result) -> list[dict]:
-    """Convert a kuzu QueryResult into a list of plain dicts."""
-    rows = []
-    col_names = result.get_column_names()
-    while result.has_next():
-        row = result.get_next()
-        rows.append(dict(zip(col_names, row)))
-    return rows
-
-
-# ── Serialisers ────────────────────────────────────────────────────────────────
-
-def _node_to_dict(node) -> dict:
-    """Serialise a graphiti EntityNode."""
-    return {
-        "uuid":    node.uuid,
-        "name":    node.name or "",
-        "labels":  node.labels or [],
-        "summary": node.summary or "",
-        "score":   getattr(node, "score", None),
-    }
-
-
-def _edge_to_dict(edge) -> dict:
-    """Serialise a graphiti EntityEdge."""
-    ep_list = getattr(edge, "episodes", None) or []
-    return {
-        "uuid":             edge.uuid,
-        "name":             edge.name or "",
-        "fact":             edge.fact or "",
-        "source_node_uuid": edge.source_node_uuid or "",
-        "target_node_uuid": edge.target_node_uuid or "",
-        "valid_at":         str(edge.valid_at) if getattr(edge, "valid_at", None) else None,
-        "score":            getattr(edge, "score", None),
-        "_episode_uuids":   [str(u) for u in ep_list],  # resolved to sources below
-    }
-
-
-def _ep_to_dict(ep) -> dict:
-    """Serialise a graphiti EpisodicNode."""
-    name = getattr(ep, "name", "") or ""
-    # "pdf_{file_id}"  → ZSXQ PDF  (/zsxq/pdf/<file_id>)
-    # "report_{id}"    → SEC filing (/sec/file/<id>)
-    file_id   = None
-    report_id = None
-    if name.startswith("pdf_"):
-        try:
-            file_id = int(name[4:])
-        except ValueError:
-            pass
-    elif name.startswith("report_"):
-        try:
-            report_id = int(name[7:])
-        except ValueError:
-            pass
-    return {
-        "uuid":               ep.uuid,
-        "name":               name,
-        "file_id":            file_id,
-        "report_id":          report_id,
-        "source_description": getattr(ep, "source_description", "") or "",
-        "created_at":         str(ep.created_at) if getattr(ep, "created_at", None) else None,
-    }
 
 
 # ── Routes ─────────────────────────────────────────────────────────────────────
@@ -280,55 +149,29 @@ def edges():
 
 @zep_bp.route("/edges/<uuid>/deprecate", methods=["POST"])
 def deprecate_edge(uuid):
-    """Mark a relationship as deprecated in mirror + KuzuDB (set expired_at)."""
+    """Mark a relationship as deprecated in the mirror."""
     body   = request.get_json(silent=True) or {}
     reason = (body.get("reason") or "RELATION_NONSENSE").strip()[:200]
     found  = _mirror.deprecate_edge(_get_mirror(), uuid, reason)
     if not found:
         return jsonify({"ok": False, "error": "edge not found"}), 404
-
-    try:
-        kuzu_conn, _kdb = _kuzu_conn()
-        kuzu_conn.execute(
-            "MATCH (:Entity)-[:RELATES_TO]->(e:RelatesToNode_ {uuid: $uuid})-[:RELATES_TO]->(:Entity) "
-            "SET e.expired_at = $ts",
-            {"uuid": uuid, "ts": datetime.now(timezone.utc)},
-        )
-    except Exception as e:
-        print(f"[deprecate_edge] KuzuDB update failed: {e}", file=sys.stderr)
-
     return jsonify({"ok": True, "uuid": uuid, "reason": reason})
 
 
 @zep_bp.route("/entities/<uuid>/rate", methods=["POST"])
 def rate_entity(uuid):
-    """Set a star rating (0–5) on an entity in mirror + KuzuDB."""
+    """Set a star rating (0–5) on an entity in the mirror."""
     body   = request.get_json(silent=True) or {}
     rating = max(0, min(5, int(body.get("rating", 0))))
     found  = _mirror.rate_entity(_get_mirror(), uuid, rating)
     if not found:
         return jsonify({"ok": False, "error": "entity not found"}), 404
-
-    # Write through to KuzuDB (add rating column if it doesn't exist yet).
-    try:
-        kuzu_conn, _kdb = _kuzu_conn()
-        try:
-            kuzu_conn.execute("ALTER TABLE Entity ADD rating INT64 DEFAULT 0")
-        except Exception:
-            pass  # column already exists
-        kuzu_conn.execute(
-            "MATCH (n:Entity {uuid: $uuid}) SET n.rating = $rating",
-            {"uuid": uuid, "rating": rating},
-        )
-    except Exception as e:
-        print(f"[rate_entity] KuzuDB update failed: {e}", file=sys.stderr)
-
     return jsonify({"ok": True, "uuid": uuid, "rating": rating})
 
 
 @zep_bp.route("/entities/<uuid>", methods=["PATCH"])
 def edit_entity(uuid):
-    """Update entity name and summary in mirror + KuzuDB."""
+    """Update entity name and summary in the mirror."""
     body    = request.get_json(silent=True) or {}
     name    = body.get("name", "").strip()
     summary = body.get("summary", "").strip()
@@ -338,22 +181,12 @@ def edit_entity(uuid):
     found = _mirror.update_entity(_get_mirror(), uuid, name, summary)
     if not found:
         return jsonify({"ok": False, "error": "entity not found"}), 404
-
-    try:
-        kuzu_conn, _kdb = _kuzu_conn()
-        kuzu_conn.execute(
-            "MATCH (n:Entity {uuid: $uuid}) SET n.name = $name, n.summary = $summary",
-            {"uuid": uuid, "name": name, "summary": summary},
-        )
-    except Exception as e:
-        print(f"[edit_entity] KuzuDB update failed: {e}", file=sys.stderr)
-
     return jsonify({"ok": True, "uuid": uuid, "name": name, "summary": summary})
 
 
 @zep_bp.route("/edges/<uuid>", methods=["PATCH"])
 def edit_edge(uuid):
-    """Update edge relation name and fact in mirror + KuzuDB."""
+    """Update edge relation name and fact in the mirror."""
     body = request.get_json(silent=True) or {}
     name = body.get("name", "").strip()
     fact = body.get("fact", "").strip()
@@ -363,17 +196,6 @@ def edit_edge(uuid):
     found = _mirror.update_edge(_get_mirror(), uuid, name, fact)
     if not found:
         return jsonify({"ok": False, "error": "edge not found"}), 404
-
-    try:
-        kuzu_conn, _kdb = _kuzu_conn()
-        kuzu_conn.execute(
-            "MATCH (:Entity)-[:RELATES_TO]->(e:RelatesToNode_ {uuid: $uuid})-[:RELATES_TO]->(:Entity) "
-            "SET e.name = $name, e.fact = $fact",
-            {"uuid": uuid, "name": name, "fact": fact},
-        )
-    except Exception as e:
-        print(f"[edit_edge] KuzuDB update failed: {e}", file=sys.stderr)
-
     return jsonify({"ok": True, "uuid": uuid, "name": name, "fact": fact})
 
 
@@ -405,18 +227,6 @@ def merge_entities_ep():
         return jsonify({"ok": False, "error": "source and target must be different"}), 400
     try:
         result = _mirror.merge_entities(_get_mirror(), src, tgt)
-        # Best-effort: remove source node from KuzuDB too
-        try:
-            kuzu_conn, _kdb = _kuzu_conn()
-            kuzu_conn.execute(
-                "MATCH (n:Entity {uuid: $uuid}) "
-                "OPTIONAL MATCH (:Entity)-[:RELATES_TO]->(r:RelatesToNode_)-[:RELATES_TO]->(n) "
-                "OPTIONAL MATCH (n)-[:RELATES_TO]->(r2:RelatesToNode_)-[:RELATES_TO]->(:Entity) "
-                "DETACH DELETE r, r2, n",
-                {"uuid": src},
-            )
-        except Exception as e:
-            print(f"[merge] KuzuDB cleanup failed: {e}", file=sys.stderr)
         return jsonify({"ok": True, **result})
     except ValueError as e:
         return jsonify({"ok": False, "error": str(e)}), 404
@@ -443,24 +253,10 @@ def create_edge_ep():
 
 @zep_bp.route("/entities/<uuid>/isolate", methods=["POST"])
 def isolate_entity(uuid):
-    """Mark an entity as isolated in mirror + delete it from KuzuDB."""
+    """Mark an entity as isolated in the mirror."""
     found = _mirror.isolate_entity(_get_mirror(), uuid)
     if not found:
         return jsonify({"ok": False, "error": "entity not found"}), 404
-
-    # Also hard-delete from KuzuDB (DETACH DELETE removes the node and all its edges).
-    try:
-        kuzu_conn, _kdb = _kuzu_conn()
-        kuzu_conn.execute(
-            "MATCH (n:Entity {uuid: $uuid}) "
-            "OPTIONAL MATCH (:Entity)-[:RELATES_TO]->(r:RelatesToNode_)-[:RELATES_TO]->(n) "
-            "OPTIONAL MATCH (n)-[:RELATES_TO]->(r2:RelatesToNode_)-[:RELATES_TO]->(:Entity) "
-            "DETACH DELETE r, r2, n",
-            {"uuid": uuid},
-        )
-    except Exception as e:
-        print(f"[isolate_entity] KuzuDB delete failed: {e}", file=sys.stderr)
-
     return jsonify({"ok": True, "uuid": uuid})
 
 
@@ -491,15 +287,11 @@ def upload_pdf():
 
 @zep_bp.route("/refresh-mirror", methods=["POST"])
 def refresh_mirror():
-    """Force a full re-backfill from KuzuDB into the mirror (updates episodes_json etc.)."""
-    try:
-        kuzu_conn, _kdb = _kuzu_conn()
-        mirror_conn = _get_mirror()
-        ne, ned = _mirror.backfill_from_kuzu(mirror_conn, GRAPH_DIR, GROUP_ID,
-                                              kuzu_conn=kuzu_conn)
-        return jsonify({"ok": True, "entities": ne, "edges": ned})
-    except Exception as e:
-        return jsonify({"ok": False, "error": str(e)}), 500
+    """Removed — there is no upstream KuzuDB to backfill from anymore."""
+    return jsonify({
+        "error": "refresh-mirror has been removed. The SQLite mirror is the "
+                 "single source of truth."
+    }), 410
 
 
 @zep_bp.route("/entities/isolate-persons", methods=["POST"])

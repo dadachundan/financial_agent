@@ -20,7 +20,8 @@ Setup (one-time):
          LANGFUSE_SECRET_KEY = "..."
          LANGFUSE_HOST = "http://localhost:3000"
 
-After setup, run graphiti_ingest.py normally; traces appear in the UI automatically.
+After setup, any manual `call_claude`-style call you make will trace; no
+project code calls this module automatically anymore.
 
 Trace hierarchy produced per ingest run:
   Session: "ingest YYYY-MM-DD HH:MM <doc label>"  (one session per document)

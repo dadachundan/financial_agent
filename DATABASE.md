@@ -13,10 +13,8 @@ Every database lives under `db/` (with two exceptions: the YouTube subproject ke
 | [db/report_annotations.db](db/report_annotations.db) | `report_annotations.py` | User ratings/comments on the `/reports/` markdown index (this is the NEW one) | ~12 KB |
 | [db/market_cap_cache.db](db/market_cap_cache.db) | `market_cap_cache.py` | Daily market cap + FX rate cache for the `/reports/` market-cap column | ~28 KB |
 | [db/indicators.db](db/indicators.db) | `indicators/app.py` | Cross-asset market indicators (liquidity, credit, vol) — snapshots + time-series history | ~180 KB |
-| [db/graph_mirror.db](db/graph_mirror.db) | `graph_mirror.py` | SQLite mirror of the KuzuDB knowledge graph (entities, edges, episodes, communities) + FTS5 | ~400 KB |
-| [db/markdown_reports.db](db/markdown_reports.db) | `ingest/graphiti_ingest.py` | Tracks which `reports/*.md` files have been indexed into Graphiti | ~12 KB |
+| [db/graph_mirror.db](db/graph_mirror.db) | `graph_mirror.py` + `manual_graph.py` | Knowledge graph: entities, edges, episodes, communities + FTS5. Single source of truth — curated by Claude (the agent) in conversation. | ~400 KB |
 | [db/knowledge_graph.db](db/knowledge_graph.db) | — | **Empty placeholder.** Legacy path from before the Kuzu migration. Safe to delete. | 0 B |
-| [youtube/video_summaries.db](youtube/video_summaries.db) | `youtube/analysis_video.py` | YouTube transcript chunks + per-chunk summaries (separate subproject) | varies |
 | `zsxq.db`, `graph_mirror.db`, `knowledge_graph.db` (repo root) | — | **Empty placeholders** from old paths. Real files live under `db/`. Safe to delete. | 0 B |
 
 ---
@@ -51,7 +49,7 @@ Schema is in [zsxq_common.py](zsxq_common.py) (search `CREATE TABLE pdf_files`).
 | `group_id` | TEXT | zsxq group |
 | `query_term` | TEXT | Search term that surfaced the file |
 | `obsidian_path` | TEXT | Mirror path inside the Obsidian vault |
-| `graphiti_indexed_at` | TEXT | When this PDF was ingested into the knowledge graph |
+| `graphiti_indexed_at` | TEXT | **Dead column** — left in schema for backwards compat; no code writes to it since the auto-ingest pipeline was deleted 2026-06-02 |
 | `skipped` | INTEGER (0/1) | Marked as "don't process" |
 | `ocr_text`, `ocr_at` | TEXT, TEXT | Cached OCR output for image-only PDFs (from `.claude/skills/zsxq-analyze/scripts/ocr_pdf.py`) |
 
@@ -78,7 +76,7 @@ Owned by [fetch_financial_report.py](fetch_financial_report.py), served at `/sec
 | `file_size` | INTEGER | Bytes |
 | `created_at` | TEXT | When this row was inserted |
 | `comment`, `comment_updated_at` | TEXT | Per-filing user comment (markdown) |
-| `graphiti_indexed_at` | TEXT | When this filing was ingested into the knowledge graph |
+| `graphiti_indexed_at` | TEXT | **Dead column** — left in schema for backwards compat; no code writes to it since the auto-ingest pipeline was deleted 2026-06-02 |
 
 ---
 
@@ -195,34 +193,19 @@ Owned by [indicators/app.py](indicators/app.py), served at `/indicators/`.
 
 ---
 
-### `db/graph_mirror.db` — knowledge-graph SQLite mirror
+### `db/graph_mirror.db` — knowledge graph
 
-Read-only mirror of the live KuzuDB knowledge graph for fast SQL queries + FTS search. Owned by [graph_mirror.py](graph_mirror.py). Used by [isolate_nonsense_entities.py](isolate_nonsense_entities.py), [merge_duplicate_entities.py](merge_duplicate_entities.py), [restore_valid_entities.py](restore_valid_entities.py), and the Zep app at `/zep/`.
+The single source of truth for the knowledge graph rendered at `/zep/`. Schema is owned by [graph_mirror.py](graph_mirror.py); writes go through [manual_graph.py](manual_graph.py) (`add_entity`, `add_edge`, `add_episode`) when Claude (the agent) curates content from `reports/`. There is **no** automated ingest — see [CLAUDE.md](CLAUDE.md) "NEVER call the Claude API" for the why.
 
 | Table | Purpose |
 |---|---|
-| `entities` | One row per graph node — `uuid`, `name`, `labels_json`, `summary`, `isolated` (soft-delete flag), `rating`, `updated_at` |
-| `edges` | One row per relationship — `src_uuid` → `tgt_uuid`, `fact` (LLM-generated sentence), `episodes_json` (source episodes), `deprecated` flag |
-| `episodes` | Source episodes (chunks of text that produced graph data) — `uuid`, `name`, `source_desc`, `created_at` |
-| `communities` | LLM-clustered groups of entities — `id`, `name`, `summary`, `member_count` |
+| `entities` | One row per graph node — `uuid`, `name`, `labels_json`, `summary`, `isolated` (soft-delete), `rating`, `ticker`, `market_cap_usd`, `updated_at` |
+| `edges` | One row per relationship — `src_uuid` → `tgt_uuid`, `name` (verb phrase), `fact` (one-sentence justification), `episodes_json` (source slugs), `deprecated` flag |
+| `episodes` | Source documents — `uuid` (typically a slug like `CSPC_research_2026-06-02`), `name`, `source_desc`, `created_at` |
+| `communities` | Manually-built clusters of entities — `id`, `name`, `summary`, `member_count` |
 | `community_members` | M:N link between `community_members.entity_uuid` and `communities.id` |
-| `pending_deletions` | Soft-delete queue — `uuid`, `type`, `reason`, `queued_at` |
-| `*_fts*` | FTS5 virtual tables + their sidecars for full-text search over entities/edges/communities |
-
----
-
-### `db/markdown_reports.db` — Graphiti ingest tracker
-
-Bookkeeping for which markdown reports under `reports/` have been ingested into the knowledge graph. Owned by [ingest/graphiti_ingest.py](ingest/graphiti_ingest.py).
-
-**Table `markdown_reports`**:
-
-| Column | Type | Meaning |
-|---|---|---|
-| `path` | TEXT | Relative path under `reports/` |
-| `indexed_at` | TEXT | When the file was last sent to Graphiti |
-
-Currently empty in this checkout — populated on first ingest run.
+| `pending_deletions` | Soft-delete queue — `uuid`, `type`, `reason`, `queued_at` (legacy; no longer drained anywhere) |
+| `*_fts*` | FTS5 virtual tables + sidecars for full-text search over entities / edges / communities |
 
 ---
 

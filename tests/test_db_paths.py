@@ -90,26 +90,6 @@ class TestDbPaths:
         assert "db/" in str(za.ZSXQ_DB), f"Expected db/ subdir, got {za.ZSXQ_DB}"
         assert za.ZSXQ_DB.exists(), f"zsxq.db not found at {za.ZSXQ_DB}"
 
-    def test_graphiti_ingest_default_db_in_db_dir(self):
-        gi = _load("ingest/graphiti_ingest.py")
-        assert "db/" in str(gi.DEFAULT_DB), f"Expected db/ subdir, got {gi.DEFAULT_DB}"
-        assert gi.DEFAULT_DB.exists(), f"zsxq.db not found at {gi.DEFAULT_DB}"
-
-    def test_graphiti_ingest_reports_db_path(self):
-        gi = _load("ingest/graphiti_ingest.py")
-        root = gi._get_project_root()
-        reports_db = root / "db" / "financial_reports.db"
-        assert reports_db.exists(), f"financial_reports.db not found at {reports_db}"
-        n = _row_count(reports_db, "reports")
-        assert n > 0, "reports table is empty"
-
-    def test_eval_ingest_reports_db_in_db_dir(self):
-        ei = _load("ingest/eval_ingest_prompt.py")
-        assert "db/" in str(ei.REPORTS_DB_PATH), \
-            f"Expected db/ subdir, got {ei.REPORTS_DB_PATH}"
-        assert ei.REPORTS_DB_PATH.exists(), \
-            f"financial_reports.db not found at {ei.REPORTS_DB_PATH}"
-
 
 # ── Log path tests ─────────────────────────────────────────────────────────────
 
@@ -134,13 +114,6 @@ class TestLogPaths:
         assert "log/" in str(computed_log), f"Expected log/ subdir, got {computed_log}"
         assert computed_log.parent.is_dir(), f"log/ dir missing: {computed_log.parent}"
 
-    def test_llm_call_log_path_in_log_dir(self):
-        """graphiti_ingest.py sends LLM log to log/llm_calls.jsonl"""
-        gi = _load("ingest/graphiti_ingest.py")
-        root = gi._get_project_root()
-        llm_log = root / "log" / "llm_calls.jsonl"
-        assert "log/" in str(llm_log), f"Expected log/ subdir, got {llm_log}"
-        assert llm_log.parent.is_dir(), f"log/ dir missing: {llm_log.parent}"
 
     def test_existing_log_files_in_log_dir(self):
         """Previously-generated log files should be in log/, not project root."""
@@ -210,10 +183,11 @@ class TestGraphMirror:
 
     def test_search_phrase_exact_hit(self, conn):
         import graph_mirror as m
-        r = m.search(conn, "Synodex platform", limit=10)
+        # Search a two-word entity name we know is in the mirror.
+        r = m.search(conn, "CSPC Pharmaceutical", limit=10)
         names = [n["name"] for n in r["nodes"]]
-        assert any("Synodex" in name for name in names), \
-            f"'Synodex® platform' entity missing from phrase search: {names}"
+        assert any("CSPC" in name for name in names), \
+            f"'CSPC Pharmaceutical Group' missing from phrase search: {names}"
 
     def test_search_empty_returns_empty(self, conn):
         import graph_mirror as m
@@ -229,151 +203,6 @@ class TestGraphMirror:
         m.ensure_schema(conn)
         conn.close()
         assert new_db.exists(), "DB file not created"
-
-
-# ── HTML extraction tests ──────────────────────────────────────────────────────
-
-class TestHtmlExtraction:
-    """extract_html_text() must pull the right sections and block excluded ones."""
-
-    LOREM = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " * 12
-
-    @pytest.fixture(scope="class")
-    def gi(self):
-        return _load("ingest/graphiti_ingest.py")
-
-    def _write(self, html, tmp_path, name="test.htm"):
-        p = tmp_path / name
-        p.write_text(html)
-        return p
-
-    def test_10k_extracts_business_and_risk(self, gi, tmp_path):
-        f = self._write(f"""<html><body>
-<h2>Item 1. Business</h2><p>Widget Pro globally. {self.LOREM}</p>
-<h2>Item 1A. Risk Factors</h2><p>Competition risk. {self.LOREM}</p>
-<h2>Item 7. Management Discussion</h2><p>Revenue 15%. EXCLUDED_ITEM7.</p>
-<script>EXCLUDED_SCRIPT</script>
-</body></html>""", tmp_path)
-        text = gi.extract_html_text(f, form_type="10-K")
-        assert "Widget Pro" in text,          "Item 1 Business missing"
-        assert "Competition risk" in text,    "Item 1A Risk Factors missing"
-        assert "EXCLUDED_ITEM7" not in text,  "Item 7 must not appear in 10-K"
-        assert "EXCLUDED_SCRIPT" not in text, "script tag must be stripped"
-
-    def test_10q_extracts_mda_excludes_financials(self, gi, tmp_path):
-        f = self._write(f"""<html><body>
-<h2>Item 1. Financial Statements</h2><p>Balance sheet. {self.LOREM}</p>
-<h2>Item 2. Management's Discussion and Analysis</h2>
-<p>Net income $500M. Revenue +18%. {self.LOREM}</p>
-<h2>Item 3. Quantitative Disclosures</h2><p>Market risk.</p>
-</body></html>""", tmp_path)
-        text = gi.extract_html_text(f, form_type="10-Q")
-        assert "Net income" in text,       "Item 2 MD&A missing"
-        assert "Balance sheet" not in text, "Item 1 financials must not appear"
-
-    def test_8k_excludes_502_and_701(self, gi, tmp_path):
-        f = self._write(f"""<html><body>
-<h2>Item 1.01. Entry into a Material Definitive Agreement</h2>
-<p>Merger with BigCo $2.5B. Board approved. {self.LOREM}</p>
-<h2>Item 5.02. Departure of Directors</h2>
-<p>Jane Smith resigned. EXCLUDED_502.</p>
-<h2>Item 7.01 Regulation FD Disclosure</h2>
-<p>See Exhibit 99.1. EXCLUDED_701.</p>
-<h2>Item 9.01. Exhibits</h2><p>List.</p>
-</body></html>""", tmp_path)
-        text = gi.extract_html_text(f, form_type="8-K")
-        assert "BigCo" in text,             "Item 1.01 material agreement missing"
-        assert "EXCLUDED_502" not in text,  "Item 5.02 officer change must be excluded"
-        assert "EXCLUDED_701" not in text,  "Item 7.01 Reg FD must be excluded"
-
-    def test_8k_excludes_502_after_202(self, gi, tmp_path):
-        f = self._write(f"""<html><body>
-<h2>Item 2.02. Results of Operations</h2>
-<p>Q4 revenue $1.2B. EPS $2.45. {self.LOREM}</p>
-<h2>Item 5.02. Departure of Directors</h2>
-<p>John Doe resigned. EXCLUDED_502B.</p>
-<h2>Item 9.01. Exhibits</h2><p>See attached.</p>
-</body></html>""", tmp_path)
-        text = gi.extract_html_text(f, form_type="8-K")
-        assert "EPS" in text,                "Item 2.02 earnings missing"
-        assert "EXCLUDED_502B" not in text,  "Item 5.02 must not appear after 2.02"
-
-    def test_short_html_returns_empty(self, gi, tmp_path):
-        f = self._write("<html><p>Too short.</p></html>", tmp_path)
-        assert gi.extract_html_text(f, form_type="10-K") == ""
-
-
-# ── DB limit / filter tests ────────────────────────────────────────────────────
-
-class TestIngestQueries:
-    """get_pending_reports and get_pending_pdfs must apply SQL-level limits."""
-
-    @pytest.fixture(scope="class")
-    def gi(self):
-        return _load("ingest/graphiti_ingest.py")
-
-    @pytest.fixture(scope="class")
-    def reports_conn(self):
-        conn = sqlite3.connect(":memory:")
-        conn.execute("""CREATE TABLE reports (
-            id INTEGER PRIMARY KEY, ticker TEXT, company_name TEXT, period TEXT,
-            form_type TEXT, local_path TEXT, filed_date TEXT,
-            graphiti_indexed_at TEXT)""")
-        for i in range(12):
-            conn.execute("INSERT INTO reports VALUES (?,?,?,?,?,?,?,?)",
-                         (i, "AAPL" if i < 6 else "MSFT", "Co", "2025",
-                          "10-K", f"/f{i}.htm", "2025-01-01", None))
-        conn.commit()
-        return conn
-
-    @pytest.fixture(scope="class")
-    def pdfs_conn(self):
-        conn = sqlite3.connect(":memory:")
-        conn.execute("""CREATE TABLE pdf_files (
-            id INTEGER PRIMARY KEY, file_id INTEGER, name TEXT,
-            local_path TEXT, create_time TEXT, graphiti_indexed_at TEXT)""")
-        for i in range(8):
-            conn.execute("INSERT INTO pdf_files VALUES (?,?,?,?,?,?)",
-                         (i, i, f"doc_{i}", f"/f{i}.pdf", "2025-01-01", None))
-        conn.commit()
-        return conn
-
-    def test_reports_limit_applied_in_sql(self, gi, reports_conn):
-        rows = gi.get_pending_reports(reports_conn, reindex=False,
-                                      tickers=None, form_types=["10-K"], limit=3)
-        assert len(rows) == 3
-
-    def test_reports_limit_zero_means_all(self, gi, reports_conn):
-        rows = gi.get_pending_reports(reports_conn, reindex=False,
-                                      tickers=None, form_types=["10-K"], limit=0)
-        assert len(rows) == 12
-
-    def test_reports_ticker_filter(self, gi, reports_conn):
-        rows = gi.get_pending_reports(reports_conn, reindex=False,
-                                      tickers=["AAPL"], form_types=["10-K"], limit=0)
-        assert len(rows) == 6
-        assert all(r[1] == "AAPL" for r in rows)
-
-    def test_reports_reindex_false_skips_indexed(self, gi, reports_conn):
-        reports_conn.execute(
-            "UPDATE reports SET graphiti_indexed_at='2025-01-02' WHERE id < 4")
-        reports_conn.commit()
-        rows = gi.get_pending_reports(reports_conn, reindex=False,
-                                      tickers=None, form_types=["10-K"], limit=0)
-        assert len(rows) == 8   # 12 total - 4 indexed
-
-    def test_reports_reindex_true_returns_all(self, gi, reports_conn):
-        rows = gi.get_pending_reports(reports_conn, reindex=True,
-                                      tickers=None, form_types=["10-K"], limit=0)
-        assert len(rows) == 12
-
-    def test_pdfs_limit_applied(self, gi, pdfs_conn):
-        rows = gi.get_pending_pdfs(pdfs_conn, reindex=False, limit=3)
-        assert len(rows) == 3
-
-    def test_pdfs_limit_zero_means_all(self, gi, pdfs_conn):
-        rows = gi.get_pending_pdfs(pdfs_conn, reindex=False, limit=0)
-        assert len(rows) == 8
 
 
 # ── FINAGENT_DB_DIR override tests ─────────────────────────────────────────────

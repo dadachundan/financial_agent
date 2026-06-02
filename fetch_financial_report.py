@@ -1315,26 +1315,11 @@ def stream_batch_download_route():
 
 @sec_bp.route("/index-report/<int:report_id>", methods=["POST"])
 def index_report(report_id: int):
-    """SSE stream: index a single report into graphiti."""
-    import subprocess, sys as _sys, os as _os
-    from pathlib import Path as _Path
-    ingestor = _Path(__file__).parent / "ingest" / "graphiti_ingest.py"
-
-    def _gen():
-        proc = subprocess.Popen(
-            [_sys.executable, "-u", str(ingestor),
-             "--source", "financial_reports", "--report-id", str(report_id)],
-            stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-            text=True, bufsize=1,
-            env={**_os.environ, "PYTHONUNBUFFERED": "1"},
-        )
-        for line in proc.stdout:
-            yield f"data: {line.rstrip()}\n\n"
-        proc.wait()
-        yield f"data: __done__:{proc.returncode}\n\n"
-
-    return Response(_gen(), mimetype="text/event-stream",
-                    headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
+    """Removed — automated indexing called the (deleted) LLM ingest pipeline."""
+    return jsonify({
+        "error": "Automated indexing has been removed. Read the filing yourself "
+                 "and curate entities via manual_graph.py."
+    }), 410
 
 
 @sec_bp.route("/file/<int:report_id>")

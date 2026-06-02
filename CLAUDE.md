@@ -66,7 +66,7 @@ FINAGENT_DB_DIR=/tmp/finagent-test python main.py --port 5002
 #  → market_cap_cache._DB_PATH           = /tmp/finagent-test/market_cap_cache.db
 #  → graph_mirror._DEFAULT_MIRROR        = /tmp/finagent-test/graph_mirror.db
 #  → indicators/db._DB_PATH              = /tmp/finagent-test/indicators.db
-#  → zep_app.GRAPH_DIR / ZSXQ_DB         = /tmp/finagent-test/{graphiti_db,zsxq.db}
+#  → zep_app.ZSXQ_DB                    = /tmp/finagent-test/zsxq.db
 
 # 3. Test freely — DELETE / DROP / TRUNCATE are all fine against
 #    /tmp/finagent-test/*.db because the path passes the sandbox check

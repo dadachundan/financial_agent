@@ -1,18 +1,12 @@
-"""graph_mirror.py — SQLite mirror of the KuzuDB knowledge graph.
+"""graph_mirror.py — SQLite store backing the financial knowledge graph.
 
-Why this exists
----------------
-KuzuDB allows only one writer at a time.  While graphiti_ingest.py holds the
-write lock, the Flask web server cannot open its own KuzuDB connection, causing
-every web request to block (or error) until ingestion finishes.
+Originally a read-only mirror of a graphiti-core / KuzuDB graph store. After
+the LLM-driven ingest pipeline was removed (2026-06-02) this file became the
+*only* graph DB in the project. Entities and edges are curated by hand via
+`manual_graph.py`; the Flask viewer at `/zep/` reads from here directly.
 
-This module maintains a lightweight SQLite shadow copy that is:
-  • Written by graphiti_ingest.py after every add_episode() call
-  • Read by the Flask web server (zep_app.py) for all entity/edge browsing
-  • Opened in WAL mode → concurrent reads during writes, zero blocking
-
-The mirror is *eventually consistent*: it lags the live KuzuDB by at most one
-episode.  That is perfectly acceptable for a browsing/search UI.
+WAL mode is kept on so a long-running Flask process can read while
+`manual_graph` writes from another process or session.
 """
 
 import json
@@ -194,78 +188,10 @@ def drain_pending_deletions(conn: sqlite3.Connection) -> list:
     return rows
 
 
-# ── Write helpers (called from graphiti_ingest.py) ────────────────────────────
-
-def upsert_entities(conn: sqlite3.Connection, nodes: list) -> None:
-    """Write/update entity nodes from a graphiti add_episode() result."""
-    rows = []
-    for n in nodes:
-        rows.append((
-            str(n.uuid),
-            n.name or "",
-            json.dumps(list(n.labels or [])),
-            (n.summary or "")[:2000],
-        ))
-    if rows:
-        conn.executemany(
-            """INSERT INTO entities(uuid, name, labels_json, summary)
-               VALUES (?,?,?,?)
-               ON CONFLICT(uuid) DO UPDATE SET
-                 name        = excluded.name,
-                 labels_json = excluded.labels_json,
-                 summary     = excluded.summary,
-                 updated_at  = datetime('now')""",
-            rows,
-        )
-        conn.commit()
-
-
-def upsert_edges(conn: sqlite3.Connection, edges: list,
-                 name_map: Optional[dict] = None) -> None:
-    """Write/update relationship edges from a graphiti add_episode() result.
-
-    name_map: {uuid -> name} for resolving source/target entity names.
-    If not provided, src_name/tgt_name will be empty (filled later by
-    the periodic reconcile, or looked up via the entities table).
-    """
-    if name_map is None:
-        name_map = {}
-    rows = []
-    for e in edges:
-        src_uuid = str(e.source_node_uuid or "")
-        tgt_uuid = str(e.target_node_uuid or "")
-        ep_list  = getattr(e, "episodes", None) or []
-        ep_json  = json.dumps([str(u) for u in ep_list])
-        rows.append((
-            str(e.uuid),
-            e.name or "",
-            (e.fact or "")[:4000],
-            src_uuid,
-            name_map.get(src_uuid, ""),
-            tgt_uuid,
-            name_map.get(tgt_uuid, ""),
-            ep_json,
-        ))
-    if rows:
-        conn.executemany(
-            """INSERT INTO edges(uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name, episodes_json)
-               VALUES (?,?,?,?,?,?,?,?)
-               ON CONFLICT(uuid) DO UPDATE SET
-                 name          = excluded.name,
-                 fact          = excluded.fact,
-                 src_uuid      = excluded.src_uuid,
-                 src_name      = CASE WHEN excluded.src_name != '' THEN excluded.src_name ELSE src_name END,
-                 tgt_uuid      = excluded.tgt_uuid,
-                 tgt_name      = CASE WHEN excluded.tgt_name != '' THEN excluded.tgt_name ELSE tgt_name END,
-                 episodes_json = CASE WHEN excluded.episodes_json != '[]' THEN excluded.episodes_json ELSE episodes_json END,
-                 updated_at    = datetime('now')""",
-            rows,
-        )
-        conn.commit()
-
+# ── Edge name backfill (kept for legacy rows that have empty src/tgt names) ──
 
 def backfill_edge_names(conn: sqlite3.Connection) -> None:
-    """Fill in src_name/tgt_name for edges where name is still blank."""
+    """Fill in src_name/tgt_name for edges where the name field is blank."""
     conn.execute("""
         UPDATE edges SET src_name = (
             SELECT name FROM entities WHERE uuid = edges.src_uuid
@@ -276,19 +202,6 @@ def backfill_edge_names(conn: sqlite3.Connection) -> None:
             SELECT name FROM entities WHERE uuid = edges.tgt_uuid
         ) WHERE tgt_name = '' AND tgt_uuid != ''
     """)
-    conn.commit()
-
-
-# ── Read helpers (called from zep_app.py) ────────────────────────────────────
-
-def upsert_episode(conn: sqlite3.Connection, episode) -> None:
-    conn.execute(
-        """INSERT INTO episodes(uuid, name, source_desc)
-           VALUES (?,?,?)
-           ON CONFLICT(uuid) DO NOTHING""",
-        (str(episode.uuid), getattr(episode, "name", "") or "",
-         getattr(episode, "source_description", "") or ""),
-    )
     conn.commit()
 
 
@@ -365,6 +278,46 @@ def update_edge(conn: sqlite3.Connection, uuid: str,
     return cur.rowcount > 0
 
 
+# Reports root used to repair stale `mdreport_<rel>` paths whose on-disk
+# filename has since changed (e.g. when a `_<date>` suffix was dropped).
+_REPORTS_DIR = Path(__file__).parent / "reports"
+
+
+def _resolve_mdreport_rel(rel: str) -> str:
+    """Return a reports-relative path that exists on disk.
+
+    Episode rows were seeded with filenames like
+    `company/Unitree/Unitree_Research_Document_2026-05-16.md`; many of those
+    files have since been renamed to drop the date suffix
+    (`Unitree_Research_Document.md`). When the stored path is missing,
+    fall back to a sibling research markdown in the same directory so the
+    link in the UI still opens the right report without requiring a DB
+    rewrite.
+    """
+    if (_REPORTS_DIR / rel).is_file():
+        return rel
+    parent = (_REPORTS_DIR / rel).parent
+    if not parent.is_dir():
+        return rel
+
+    prefer_zh = rel.endswith("_zh.md")
+    candidates: list[Path] = []
+    if prefer_zh:
+        candidates += sorted(parent.glob("*_Research_Document*_zh.md"))
+        candidates += sorted(parent.glob("*_公司研究*.md"))
+        candidates += sorted(parent.glob("*_研究报告*.md"))
+    else:
+        candidates += sorted(
+            p for p in parent.glob("*_Research_Document*.md")
+            if not p.name.endswith("_zh.md")
+        )
+    if not candidates:
+        candidates = sorted(parent.glob("*.md"))
+    if not candidates:
+        return rel
+    return str(candidates[-1].relative_to(_REPORTS_DIR))
+
+
 def _episode_url(name: str) -> Optional[str]:
     """Convert episode name → viewer URL, or None if unknown format.
 
@@ -382,7 +335,8 @@ def _episode_url(name: str) -> Optional[str]:
         except ValueError:
             pass
     if name.startswith("mdreport_"):
-        return f"/claude-reports/view/{name[len('mdreport_'):]}"
+        rel = _resolve_mdreport_rel(name[len("mdreport_"):])
+        return f"/claude-reports/view/{rel}"
     return None
 
 
@@ -518,11 +472,7 @@ def resolve_names(conn: sqlite3.Connection,
 
 def search(conn: sqlite3.Connection, query: str,
            limit: int = 30) -> dict:
-    """FTS5 search across entity names/summaries and edge facts.
-
-    Returns {"nodes": [...], "edges": [...]} in the same shape as
-    zep_app's graphiti search response.
-    """
+    """FTS5 search across entity names/summaries and edge facts."""
     # Build FTS5 query:
     #   1. Exact phrase first (highest relevance)  e.g. "Synodex platform"
     #   2. All-words AND fallback                  e.g. Synodex* AND platform*
@@ -810,7 +760,7 @@ def assign_entity_community(conn: sqlite3.Connection, entity_uuid: str) -> None:
     """Incremental label propagation for a single new/updated entity (no LLM).
 
     Assigns the entity to the plurality community of its neighbours.
-    Safe to call after every upsert_entities() when communities already exist.
+    Safe to call after manual_graph.add_entity() when communities already exist.
     """
     # Get neighbours
     rows = conn.execute(
@@ -1106,154 +1056,6 @@ def remove_community_bfs(conn: sqlite3.Connection,
     )
     conn.commit()
     return len(visited)
-
-
-# ── One-time backfill from KuzuDB ─────────────────────────────────────────────
-
-def backfill_from_kuzu(mirror_conn: sqlite3.Connection,
-                       graph_dir: Path,
-                       group_id: str = "financial-pdfs",
-                       kuzu_conn=None) -> tuple[int, int]:
-    """Populate the mirror from KuzuDB.
-
-    If kuzu_conn is provided (an existing kuzu.Connection), it is reused — this
-    avoids the exclusive-lock conflict when the web server already holds a write
-    connection.  Otherwise a read-only Database is opened (safe when no writer
-    is active, e.g. from a standalone backfill script).
-
-    Returns (n_entities, n_edges) written.
-    """
-    import json as _json
-
-    if not graph_dir.exists():
-        return 0, 0
-
-    conn = kuzu_conn
-    if conn is None:
-        try:
-            import kuzu
-            kdb  = kuzu.Database(str(graph_dir), read_only=True)
-            conn = kuzu.Connection(kdb)
-        except Exception as e:
-            print(f"[mirror] backfill: could not open KuzuDB: {e}")
-            return 0, 0
-
-    def _rows(result):
-        cols = result.get_column_names()
-        out  = []
-        while result.has_next():
-            out.append(dict(zip(cols, result.get_next())))
-        return out
-
-    # ── entities ──────────────────────────────────────────────────────────────
-    n_ent = 0
-    try:
-        batch = []
-        # Try to fetch rating from KuzuDB; if the column doesn't exist yet, fall back.
-        try:
-            rows = _rows(conn.execute(
-                "MATCH (n:Entity) WHERE n.group_id = $gid "
-                "RETURN n.uuid, n.name, n.labels, n.summary, n.rating",
-                {"gid": group_id},
-            ))
-            has_rating = True
-        except Exception:
-            rows = _rows(conn.execute(
-                "MATCH (n:Entity) WHERE n.group_id = $gid "
-                "RETURN n.uuid, n.name, n.labels, n.summary",
-                {"gid": group_id},
-            ))
-            has_rating = False
-        for r in rows:
-            labels = r.get("n.labels") or []
-            if isinstance(labels, str):
-                try: labels = _json.loads(labels)
-                except Exception: labels = []
-            batch.append((
-                r["n.uuid"] or "",
-                r["n.name"] or "",
-                _json.dumps(list(labels)),
-                (r.get("n.summary") or "")[:2000],
-                int(r.get("n.rating") or 0) if has_rating else 0,
-            ))
-        if batch:
-            mirror_conn.executemany(
-                """INSERT INTO entities(uuid, name, labels_json, summary, rating)
-                   VALUES (?,?,?,?,?)
-                   ON CONFLICT(uuid) DO UPDATE SET
-                     name=excluded.name, labels_json=excluded.labels_json,
-                     summary=excluded.summary,
-                     rating=CASE WHEN excluded.rating > 0 THEN excluded.rating ELSE rating END""",
-                batch,
-            )
-            mirror_conn.commit()
-            n_ent = len(batch)
-    except Exception as e:
-        print(f"[mirror] backfill entities error: {e}")
-
-    # ── edges ──────────────────────────────────────────────────────────────────
-    n_edg = 0
-    try:
-        batch = []
-        rows = _rows(conn.execute(
-            "MATCH (s:Entity)-[:RELATES_TO]->(e:RelatesToNode_)-[:RELATES_TO]->(t:Entity) "
-            "WHERE e.group_id = $gid "
-            "RETURN e.uuid, e.name, e.fact, e.episodes, s.uuid AS src, s.name AS src_name, "
-            "       t.uuid AS tgt, t.name AS tgt_name",
-            {"gid": group_id},
-        ))
-        for r in rows:
-            ep_raw  = r.get("e.episodes") or []
-            ep_json = json.dumps([str(u) for u in ep_raw]) if ep_raw else "[]"
-            batch.append((
-                r["e.uuid"] or "",
-                r["e.name"] or "",
-                (r.get("e.fact") or "")[:4000],
-                r.get("src") or "",
-                r.get("src_name") or "",
-                r.get("tgt") or "",
-                r.get("tgt_name") or "",
-                ep_json,
-            ))
-        if batch:
-            mirror_conn.executemany(
-                """INSERT INTO edges(uuid, name, fact, src_uuid, src_name, tgt_uuid, tgt_name, episodes_json)
-                   VALUES (?,?,?,?,?,?,?,?)
-                   ON CONFLICT(uuid) DO UPDATE SET
-                     name=excluded.name, fact=excluded.fact,
-                     src_uuid=excluded.src_uuid, src_name=excluded.src_name,
-                     tgt_uuid=excluded.tgt_uuid, tgt_name=excluded.tgt_name,
-                     episodes_json=CASE WHEN excluded.episodes_json != '[]' THEN excluded.episodes_json ELSE episodes_json END""",
-                batch,
-            )
-            mirror_conn.commit()
-            n_edg = len(batch)
-    except Exception as e:
-        print(f"[mirror] backfill edges error: {e}")
-
-    # ── episodes ──────────────────────────────────────────────────────────────
-    try:
-        ep_rows = _rows(conn.execute(
-            "MATCH (e:Episodic) WHERE e.group_id = $gid "
-            "RETURN e.uuid, e.name, e.source_description",
-            {"gid": group_id},
-        ))
-        ep_batch = [
-            (r["e.uuid"] or "", r.get("e.name") or "",
-             r.get("e.source_description") or "")
-            for r in ep_rows
-        ]
-        if ep_batch:
-            mirror_conn.executemany(
-                "INSERT INTO episodes(uuid, name, source_desc) VALUES (?,?,?) "
-                "ON CONFLICT(uuid) DO NOTHING",
-                ep_batch,
-            )
-            mirror_conn.commit()
-    except Exception as e:
-        print(f"[mirror] backfill episodes error: {e}")
-
-    return n_ent, n_edg
 
 
 def merge_entities(conn: sqlite3.Connection,

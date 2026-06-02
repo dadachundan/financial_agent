@@ -1,6 +1,6 @@
 """Skill-local SEC filing extractor.
 
-We import only the *primitives* from ``ingest.graphiti_ingest``:
+We import only the *primitives* from ``ingest.sec_extract``:
 
   * ``_clean_html_to_text`` — generic HTML → clean text utility
   * ``_sec_offsets`` — regex offset finder
@@ -38,7 +38,7 @@ PROJECT_ROOT = Path("/Users/x/projects/financial_agent")
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from ingest.graphiti_ingest import (  # type: ignore  # noqa: E402
+from ingest.sec_extract import (  # type: ignore  # noqa: E402
     _clean_html_to_text,
     _sec_offsets,
     _last_offset,

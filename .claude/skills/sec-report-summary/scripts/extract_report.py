@@ -12,7 +12,7 @@ returns substantive items (1.01, 2.01, 2.02, 8.01).
 
 The extraction lives in ``sec_text.py`` next to this file — it imports
 only the genuinely shared HTML / regex primitives from
-``ingest.graphiti_ingest`` (the cleaner and the section patterns) and
+``ingest.sec_extract`` (the cleaner and the section patterns) and
 owns the assembly itself so per-section caps and which-items decisions
 are local to this skill.
 """
@@ -32,10 +32,9 @@ if str(SCRIPT_DIR) not in sys.path:
 
 from sec_text import extract, DEFAULT_MAX_SECTION  # noqa: E402
 
-# PDF extraction still uses graphiti's helper — paginated reports aren't
-# subject to the section-cap issue and there is no skill-local replacement.
+# PDF extraction reuses the deterministic helper extracted into ingest/sec_extract.py.
 sys.path.insert(0, str(PROJECT_ROOT))
-from ingest.graphiti_ingest import extract_text as _extract_pdf_text  # noqa: E402
+from ingest.sec_extract import extract_text as _extract_pdf_text  # noqa: E402
 
 
 def _lookup_by_id(report_id: int) -> tuple[Path, str, dict]:
