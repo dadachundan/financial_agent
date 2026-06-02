@@ -31,7 +31,7 @@ This has gone wrong more than once. Past failures include (at least): wiping `pd
 
 ## What's covered
 
-**ALL `*.db` files in the project**, no matter where they live. This includes — but is not limited to — files under `db/` (`db/notes.db`, `db/zsxq.db`, `db/financial_reports.db`, `db/cninfo_reports.db`, `db/report_annotations.db`, `db/market_cap_cache.db`, `db/indicators.db`, `db/markdown_reports.db`, `db/knowledge_graph.db`, `db/graph_mirror.db`), files at the project root (`zsxq.db`, `knowledge_graph.db`, `graph_mirror.db`), files in subdirectories (`youtube/video_summaries.db`, anywhere else), and any new database file that appears in the future without an explicit `.test.db` / `.sandbox.db` suffix.
+**ALL `*.db` files in the project**, no matter where they live. This includes — but is not limited to — files under `db/` (`db/notes.db`, `db/zsxq.db`, `db/financial_reports.db`, `db/cninfo_reports.db`, `db/report_annotations.db`, `db/market_cap_cache.db`, `db/indicators.db`, `db/markdown_reports.db`, `db/knowledge_graph.db`, `db/graph_mirror.db`, `db/stock_price_target.db`), files at the project root (`zsxq.db`, `knowledge_graph.db`, `graph_mirror.db`), files in subdirectories (`youtube/video_summaries.db`, anywhere else), and any new database file that appears in the future without an explicit `.test.db` / `.sandbox.db` suffix.
 
 If a path matches `*.db` and is not under `/tmp/` and doesn't end in `.test.db` / `.sandbox.db`, **it is real user data.**
 
@@ -66,6 +66,7 @@ FINAGENT_DB_DIR=/tmp/finagent-test python main.py --port 5002
 #  → market_cap_cache._DB_PATH           = /tmp/finagent-test/market_cap_cache.db
 #  → graph_mirror._DEFAULT_MIRROR        = /tmp/finagent-test/graph_mirror.db
 #  → indicators/db._DB_PATH              = /tmp/finagent-test/indicators.db
+#  → stock_price_target_db.DB_PATH       = /tmp/finagent-test/stock_price_target.db
 #  → zep_app.ZSXQ_DB                    = /tmp/finagent-test/zsxq.db
 
 # 3. Test freely — DELETE / DROP / TRUNCATE are all fine against
