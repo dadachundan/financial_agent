@@ -642,6 +642,15 @@ __URLPATCH__
         showUnrated.checked = true;
         applyFilter();
       });
+
+      // Pre-fill the search box from ?q=… so other apps (e.g. the KG entity
+      // badges) can deep-link to a filtered view. Drop the rating floor so an
+      // unrated report still surfaces.
+      const initialQ = new URLSearchParams(window.location.search).get("q");
+      if (initialQ) {
+        filter.value = initialQ;
+        ratingFilter.value = "0";
+      }
       applyFilter();
 
       // Click-to-sort on headers (toggle asc/desc).
