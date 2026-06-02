@@ -46,7 +46,7 @@ reports_bp = Blueprint("reports", __name__)
 # --- filename parsing --------------------------------------------------------
 
 ASIA_TICKER_RE = re.compile(r"(?<![A-Z0-9])(SSE|SZSE|HKEX|TWSE|BSE|TSE|HOSE|KRX)(\d+)")
-US_TICKER_RE   = re.compile(r"(?<![A-Z0-9])(NYSE|NASDAQ|AMEX)_([A-Z]+)(?![A-Z])")
+US_TICKER_RE   = re.compile(r"(?<![A-Z0-9])(NYSE|NASDAQ|AMEX)_([A-Z]+(?:\.[A-Z])?)(?![A-Z])")
 RESEARCH_MARKERS = ("_Research_Document", "_研究报告", "_公司研究")
 VALUATION_MARKERS = ("_Valuation_Analysis", "_Initiation_Report")
 ALL_KIND_MARKERS = RESEARCH_MARKERS + VALUATION_MARKERS
