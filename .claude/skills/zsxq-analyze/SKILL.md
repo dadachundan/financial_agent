@@ -1,6 +1,6 @@
 ---
 name: zsxq-analyze
-description: Analyze a PDF stored in db/zsxq.db (the zsxq report library) and answer the user's question about it. Use whenever the user references a zsxq PDF by file_id, filename, or topic keyword — e.g. "what stocks does file_id 184124282514242 recommend?", "summarize the Deloitte report from zsxq", "/zsxq-analyze what does <name> say about robotics". Pair: `/zsxq-recommend` finds candidate file_ids to feed into this skill.
+description: Analyze a PDF stored in db/zsxq.db (the zsxq report library) and answer the user's question about it. Use whenever the user references a zsxq PDF by file_id, filename, or topic keyword — e.g. "what stocks does file_id 184124282514242 recommend?", "summarize the Deloitte report from zsxq", "/zsxq-analyze what does <name> say about robotics". **Also persists any sell-side price-target (PT) calls found in the deep PDF read into `db/stock_price_target.db`** (with `--replace` semantics so the full-text extraction overwrites any prior summary-only row from `/zsxq-recommend`), surfaced in the `/pt` viewer. Pair: `/zsxq-recommend` finds candidate file_ids to feed into this skill.
 ---
 
 # Analyze zsxq PDF
@@ -188,6 +188,57 @@ When the user asked for stocks / tickers specifically:
 - Prefer the explicit list in the PDF.
 - Cross-check against the `tickers` column already stored on the row
   (when present, it's been pre-tagged) and reconcile any mismatch.
+
+### 5. Persist any PT calls (free side-effect)
+
+The deep read in step 3 has just given you full PDF text (and possibly
+OCR / visual reads of bank-style cover slides where PTs are most
+visible). This is a **higher-fidelity extraction** than the
+summary-only path used by `/zsxq-recommend` — page 1 / "ratings & PT"
+boxes / quote tables are visible here that the curator's 翻译精华
+typically only partially captures.
+
+Whenever the PDF contains explicit broker calls — page-1 "Reiterate
+Buy / TP $1,159" boxes, ratings tables, "我们维持X的Y评级，目标价Z元"
+phrasings inside the body, etc. — extract one record per
+(ticker × broker) pair and pipe to the **shared helper with
+`--replace`** so any prior summary-only row from `/zsxq-recommend`
+gets overwritten by this better data:
+
+```bash
+python3 scripts/persist_pts.py --replace <<'JSON'
+[
+  {"ticker":"COST","company_name":"Costco",
+   "broker":"Goldman Sachs","rating":"Buy","pt":1159,"ccy":"USD",
+   "catalyst":"CFO meeting — proactive cuts, 4000 SKUs, AI search",
+   "file_id":212485484288281}
+]
+JSON
+```
+
+**Full schema, rating/currency vocabulary, what to emit vs skip, and
+idempotency rules are documented in
+[`reference/pt_extraction.md`](../../../reference/pt_extraction.md).**
+
+Analyze-specific notes (the bits beyond the shared doc):
+
+- **Use `--replace`** — that's the whole point of doing this here.
+  The deep-PDF read is the authoritative source; the summary-only
+  row from `/zsxq-recommend` was a best-effort placeholder.
+- **One report, one analyze invocation, one persist call** — emit a
+  single JSON array with all the (ticker, broker) pairs you found in
+  this PDF, not one persist call per pair.
+- **The `file_id` is the same for every record** — it's the PDF you're
+  analyzing.
+- **Page-cited PTs are higher signal** — if you can see the PT in the
+  rendered first page or on a "ratings table" page, that's worth
+  emitting; PTs only mentioned in prose ("our target reflects our
+  view that…") without a number are not.
+- If the PDF has zero broker calls (a generic macro deck, a press
+  release, a TAM whitepaper), skip step 5 entirely.
+
+Surface the script's stdout `inserted` and `total_in_db` in the final
+reply, e.g. `📈 PT inserts: 3 new (1 replaced), 148 total in /pt`.
 
 ## Notes
 

@@ -1,46 +1,53 @@
-"""Persist PT calls extracted by the zsxq-recommend agent into
-``stock_price_target.db``.
+"""Persist sell-side PT calls into ``stock_price_target.db``.
 
-Designed to be called from inside the /zsxq-recommend skill loop after the
-agent has scanned the same summaries it's about to recommend on. The agent
-emits a JSON array of records on stdin; this script:
+Shared helper used by **both** `/zsxq-recommend` (light extraction from
+summary text) and `/zsxq-analyze` (high-fidelity extraction from full
+PDF text). The agent emits a JSON array of records on stdin; this
+script:
 
   1. Bulk-loads PDF metadata (filename, report_date) from db/zsxq.db
      for every file_id referenced.
   2. Looks up close price + market cap on report_date via yfinance once
-     per (yf_ticker, date) tuple (cached).
+     per (yf_ticker, date) tuple (cached in-process).
   3. Calls ``stock_price_target_db.upsert_target()`` per row.
-  4. Reports counts to stderr; emits a JSON summary on stdout.
+  4. Emits a JSON summary on stdout.
 
-Input record schema (one JSON object per PT call the agent surfaced):
+The full record schema, currency / rating vocabulary, and which kinds
+of PT mentions to skip are documented at
+``reference/pt_extraction.md`` — read that first if you're not sure
+what to emit.
+
+Minimal record shape::
 
     {
-      "ticker":          "1109.HK" | "LLY" | "300750.SZ"  (REQUIRED — used
-                          both for yfinance lookup and as company_ticker
-                          in the DB),
-      "company_name":    "China Resources Land",          (REQUIRED)
-      "broker":          "Goldman Sachs",                 (REQUIRED)
-      "rating":          "Buy" | "Outperform" | ...       (OPTIONAL)
-      "pt":              36.6,                            (OPTIONAL — number)
-      "ccy":             "HKD" | "USD" | ...              (OPTIONAL —
-                          required if pt is given),
-      "catalyst":        "Tier-1 housing recovery; …",    (OPTIONAL)
-      "file_id":         184152128158222                  (REQUIRED — links
-                          back to the source zsxq PDF)
+      "ticker":       "1109.HK",        # yfinance form, REQUIRED
+      "company_name": "CR Land",        # REQUIRED
+      "broker":       "Goldman Sachs",  # REQUIRED
+      "rating":       "Buy",            # optional
+      "pt":           36.6,             # optional (number)
+      "ccy":          "HKD",            # required if `pt` is set
+      "catalyst":     "Tier-1 housing", # optional
+      "file_id":      184152128158222   # REQUIRED — zsxq.db pdf_files.file_id
     }
 
-A record is idempotent on (ticker, broker, file_id); re-running on the
-same window does nothing if those rows already exist.
+Idempotency (no flags) → ``INSERT OR IGNORE``:
+- ``(ticker, broker, file_id)`` AND ``(ticker, broker, date)``. A row
+  already in either bucket is a no-op.
 
-Usage from the skill::
+With ``--replace`` → ``INSERT OR REPLACE``:
+- Same-conflict rows are overwritten. Use this from `/zsxq-analyze`
+  because the deep-read extraction is more reliable than the
+  summary-only path used by `/zsxq-recommend`; the analyze pass should
+  win.
 
-    python3 .claude/skills/zsxq-recommend/scripts/persist_pts.py <<'JSON'
-    [
-      {"ticker":"LLY","company_name":"Eli Lilly","broker":"Bernstein",
-       "rating":"Outperform","pt":1300,"ccy":"USD",
-       "catalyst":"LIBRETTO-432 Selpercatinib RET+ adjuvant HR=0.17",
-       "file_id":184152151455852}
-    ]
+Usage (from either skill, or by hand)::
+
+    python3 scripts/persist_pts.py <<'JSON'
+    [...]
+    JSON
+
+    python3 scripts/persist_pts.py --replace <<'JSON'
+    [...]
     JSON
 """
 from __future__ import annotations
@@ -52,8 +59,8 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-# Make project-root modules importable when this runs from the skill dir.
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent.parent
+# project root = parent of scripts/
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from db_paths import db_path                           # noqa: E402
@@ -149,6 +156,18 @@ def _close_and_cap(yf_ticker: str, report_date: str):
 # ---------------------------------------------------------------------------
 
 def main() -> int:
+    import argparse
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument(
+        "--replace", action="store_true",
+        help="Use INSERT OR REPLACE instead of INSERT OR IGNORE — overwrite "
+             "any row that conflicts on (ticker, broker, file_id) or (ticker, "
+             "broker, date). Use this from /zsxq-analyze where the deep-read "
+             "extraction is more reliable than the summary-only path used "
+             "by /zsxq-recommend.",
+    )
+    args = p.parse_args()
+
     try:
         records = json.loads(sys.stdin.read())
     except Exception as e:
@@ -165,7 +184,18 @@ def main() -> int:
     meta = _bulk_zsxq_meta(file_ids)
 
     before = count()
-    skipped = errored = 0
+    skipped = errored = replaced = 0
+    # Track unique-key tuples that already existed BEFORE this batch, so we
+    # can report how many of the considered records hit a conflict and were
+    # either ignored (default) or overwritten (with --replace).
+    from db_paths import db_path as _dbp
+    existing_keys: set[tuple[str, str, int]] = set()
+    existing_date_keys: set[tuple[str, str, str]] = set()
+    with sqlite3.connect(_dbp("stock_price_target.db")) as ro:
+        for row in ro.execute("SELECT company_ticker, research_institute, report_file_id, report_date FROM price_targets"):
+            existing_keys.add((row[0], row[1], int(row[2])))
+            existing_date_keys.add((row[0], row[1], row[3]))
+
     for rec in records:
         try:
             ticker = rec["ticker"]
@@ -194,19 +224,31 @@ def main() -> int:
             "report_date_market_cap": cap,
             "price_currency":         ccy,
         }
+        broker_norm = payload["research_institute"]
+        conflict_fid = (ticker, broker_norm, fid) in existing_keys
+        conflict_date = (ticker, broker_norm, report_date) in existing_date_keys
         try:
-            upsert_target(payload)
+            upsert_target(payload, replace=args.replace)
+            if args.replace and (conflict_fid or conflict_date):
+                replaced += 1
         except Exception as e:
             errored += 1
             print(f"  ! upsert failed for {ticker}/{rec.get('broker')}: {e}", file=sys.stderr)
 
     after = count()
+    inserted = after - before              # net new rows
+    # In default mode (INSERT OR IGNORE), anything that didn't insert and
+    # wasn't skipped/errored is a duplicate. In --replace mode the count
+    # tells us how many overwrote a prior row; the rest are still treated
+    # as "duplicates" only if the new row had nothing actually changing.
+    duplicate = max(0, len(records) - inserted - skipped - errored - replaced)
     summary = {
-        "considered": len(records),
-        "inserted":   after - before,    # net new rows (UNIQUE drops dups)
-        "duplicate":  len(records) - (after - before) - skipped - errored,
-        "skipped":    skipped,
-        "errored":    errored,
+        "considered":  len(records),
+        "inserted":    inserted,
+        "replaced":    replaced,
+        "duplicate":   duplicate,
+        "skipped":     skipped,
+        "errored":     errored,
         "total_in_db": after,
     }
     print(json.dumps(summary, indent=2))

@@ -365,17 +365,19 @@
           } else {
             var pt = parseFloat(r.dataset.pt);
             var contributes = !isNaN(pt) && r.dataset.dateOk === '1';
-            var suffix;
-            if(contributes){
-              ptIdx++;
-              suffix = ptIdx + '/' + s.n;
-            } else {
-              // No PT on this row, or row hidden by date filter
-              suffix = '·' + s.n;
+            var suffix = '';
+            if(s.n > 1){            // Only show k/n when there's actually consensus
+              if(contributes){
+                ptIdx++;
+                suffix = '<span class="n">' + ptIdx + '/' + s.n + '</span>';
+              } else {
+                // No PT on this row, or row hidden by date filter
+                suffix = '<span class="n">·' + s.n + '</span>';
+              }
             }
             cell.innerHTML = avg.toFixed(2)
               + '<span class="ccy">' + majCcy + '</span>'
-              + '<span class="n">' + suffix + '</span>';
+              + suffix;
             cell.dataset.value = avg;
           }
         }

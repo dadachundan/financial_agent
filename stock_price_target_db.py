@@ -107,13 +107,22 @@ def _conn():
         con.close()
 
 
-def upsert_target(row: dict) -> None:
-    """Insert one price-target row; ignore duplicates on the unique key.
+def upsert_target(row: dict, replace: bool = False) -> None:
+    """Insert one price-target row.
 
     Required keys: ``company_ticker``, ``company_name``, ``research_institute``,
     ``report_file_id``, ``report_date``. Any extra keys (e.g. ``exchange``,
     ``chinese_name``) are silently dropped — keep them in the source-of-truth
     record literal if useful for documentation, but they won't be persisted.
+
+    Args:
+        row: payload dict — fields outside ALLOWED_COLS are filtered.
+        replace: if True, use ``INSERT OR REPLACE`` so a conflict on either
+            uniqueness key (``ticker × broker × file_id`` or ``ticker × broker
+            × date``) overwrites the prior row instead of being ignored. The
+            zsxq-analyze skill uses this because its full-PDF extraction
+            should win over the summary-text extraction zsxq-recommend does.
+            Default (False) = ``INSERT OR IGNORE`` — earlier row wins.
     """
     row = dict(row)  # don't mutate caller's dict
     row.setdefault("created_at", datetime.now(timezone.utc).isoformat(timespec="seconds"))
@@ -132,7 +141,8 @@ def upsert_target(row: dict) -> None:
 
     cols = ", ".join(row.keys())
     qs = ", ".join("?" for _ in row)
-    sql = f"INSERT OR IGNORE INTO price_targets ({cols}) VALUES ({qs})"
+    verb = "INSERT OR REPLACE" if replace else "INSERT OR IGNORE"
+    sql = f"{verb} INTO price_targets ({cols}) VALUES ({qs})"
     with _conn() as c:
         c.execute(sql, list(row.values()))
 

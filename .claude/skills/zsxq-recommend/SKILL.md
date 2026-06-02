@@ -88,10 +88,11 @@ an explicit price-target call — patterns like `目标价 1300美元`,
 `TP $450`, `12个月目标价116港元`, `target price ¥7100`,
 `reiterate Buy/Outperform/Overweight/Neutral/Underweight/Sell` —
 extract one record per (ticker × broker) pair into a JSON list and
-pipe it to the persistence helper:
+pipe it to the **shared persistence helper** (this script is also
+used by `/zsxq-analyze`):
 
 ```bash
-python3 .claude/skills/zsxq-recommend/scripts/persist_pts.py <<'JSON'
+python3 scripts/persist_pts.py <<'JSON'
 [
   {"ticker":"1109.HK","company_name":"China Resources Land",
    "broker":"Goldman Sachs","rating":"Buy","pt":36.6,"ccy":"HKD",
@@ -105,43 +106,24 @@ python3 .claude/skills/zsxq-recommend/scripts/persist_pts.py <<'JSON'
 JSON
 ```
 
-Record schema (per row in the array):
+**Full schema, rating/currency vocabulary, what to emit vs skip, and
+idempotency rules are documented in
+[`reference/pt_extraction.md`](../../../reference/pt_extraction.md) —
+read it once if you're unsure what counts as a PT call.**
 
-| field          | required | meaning                                            |
-|----------------|----------|----------------------------------------------------|
-| `ticker`       | yes      | yfinance form: `LLY`, `1109.HK`, `300750.SZ`, etc. |
-| `company_name` | yes      | English / Pinyin                                   |
-| `broker`       | yes      | `Goldman Sachs` / `Morgan Stanley` / `Bernstein` … |
-| `rating`       | no       | `Buy` / `Outperform` / `Neutral` / `Underweight` / `Sell` / `Top Pick` |
-| `pt`           | no       | numeric price target in `ccy`                      |
-| `ccy`          | no       | `USD` / `HKD` / `CNY` / `TWD` / `JPY` / `KRW` (required if `pt` is given) |
-| `catalyst`     | no       | one-line catalyst paraphrased from the summary     |
-| `file_id`      | yes      | zsxq.db `pdf_files.file_id` (links the call back to the source PDF) |
+Recommend-specific notes (the bits that don't live in the shared doc):
 
-Behaviour:
-
-- **Idempotent on two keys: `(ticker, broker, file_id)` AND `(ticker,
-  broker, report_date)`** — re-running on the same window is a no-op,
-  AND if the same broker covers the same ticker in two different PDFs
-  on the same day (e.g. an ASCO mega-note + a single-name follow-up)
-  only the first record survives. The second is silently ignored —
-  this is the "don't insert the same date twice" guarantee.
-- It auto-fills `report_date` from the PDF filename (`-260602.pdf` →
-  `2026-06-02`), then fetches close + market cap on that date via
-  yfinance, and computes `upside_pct`.
-- Stdout is a JSON summary: `{considered, inserted, duplicate, skipped,
-  errored, total_in_db}`. Surface the `inserted` and `total_in_db`
-  numbers in the final user-facing reply.
-- **Only emit records where a specific broker is calling on a specific
-  ticker with at least a rating OR a PT.** Skip generic macro mentions
-  ("we like the AI infra theme") and non-broker reports (`#代找` rows
-  where `bank` is null).
-- A single report often covers many tickers (sector notes / conviction
-  lists). Emit one record *per ticker*; share the same `file_id` and
-  `catalyst` across them.
-
-If the summary doesn't contain any PT calls (e.g. pure macro or strategy
-piece), skip step 4 entirely — no harm, no pipe.
+- **No `--replace` flag here** — this skill works from the summary
+  text, which is less reliable than the full-PDF deep read. If
+  `/zsxq-analyze` later writes a higher-fidelity row for the same
+  (ticker, broker, file_id), it should win. Default `INSERT OR IGNORE`
+  means "first wins"; `/zsxq-analyze` passes `--replace` later to
+  overwrite the summary-derived row.
+- The script's stdout is a JSON summary `{considered, inserted,
+  duplicate, skipped, errored, total_in_db}` — surface `inserted` and
+  `total_in_db` in the final reply.
+- If the summary contains zero PT calls (pure macro, strategy notes,
+  data dashboards), skip step 4 entirely — no harm, no pipe.
 
 ### 5. Show research-coverage gap
 
@@ -152,8 +134,7 @@ This surfaces every PT-mentioned ticker that does **not** yet have a
 the user can decide where to spend their next `/company-research` slot:
 
 ```bash
-python3 .claude/skills/zsxq-recommend/scripts/missing_coverage.py \
-    --markdown --limit 25
+python3 scripts/missing_coverage.py --markdown --limit 25
 ```
 
 Flags:
