@@ -14,6 +14,7 @@ from flask import Blueprint, jsonify, render_template
 from markupsafe import Markup
 
 import nav_widget2 as nw2
+import sector_map
 from db_paths import db_path
 
 DB_PATH: Path = db_path("stock_price_target.db")
@@ -48,7 +49,15 @@ def _query_all_rows() -> list[dict]:
             FROM price_targets
             ORDER BY report_date DESC, id DESC
         """).fetchall()
-        return [dict(r) for r in rows]
+        # Enrich each row with the user-maintained sector at runtime (looked
+        # up via sector_map.py — change that file and the column updates on
+        # the next request, no DB migration needed).
+        out = []
+        for r in rows:
+            d = dict(r)
+            d["sector"] = sector_map.sector_for_yfinance(d["company_ticker"])
+            out.append(d)
+        return out
 
 
 @pt_bp.route("/")

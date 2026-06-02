@@ -12,6 +12,8 @@
   tbody tr:hover { background:rgba(13,110,253,.10) !important; }
   td.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
   .ccy { font-size:.7rem; color:#9ca3af; margin-left:4px; }
+  .sector-pill { font-size:.72rem; color:#cbd5e1; background:#374151; padding:1px 7px; border-radius:6px; white-space:nowrap; }
+  .sector-pill:empty { display:none; }
   .up   { color:#4ade80; font-weight:600; }
   .down { color:#f87171; font-weight:600; }
   .rating-buy        { background:#198754; color:#fff; }
@@ -56,6 +58,7 @@
           <th data-key="report_date" data-default-dir="desc">Report Date<span class="sort-ind"></span></th>
           <th data-key="company_ticker">Ticker<span class="sort-ind"></span></th>
           <th data-key="company_name">Company<span class="sort-ind"></span></th>
+          <th data-key="sector">Sector<span class="sort-ind"></span></th>
           <th data-key="research_institute">Broker<span class="sort-ind"></span></th>
           <th data-key="rating">Rating<span class="sort-ind"></span></th>
           <th data-key="price_target" data-num="1">PT<span class="sort-ind"></span></th>
@@ -72,6 +75,7 @@
           <td>{{ r.report_date or '' }}</td>
           <td><strong>{{ r.company_ticker }}</strong></td>
           <td>{{ r.company_name }}</td>
+          <td><span class="sector-pill">{{ r.sector or '' }}</span></td>
           <td>{{ r.research_institute }}</td>
           <td>
             {% if r.rating %}
@@ -134,7 +138,7 @@
     rows.forEach(function(r){
       if(r.style.display==='none') return;
       n++;
-      var rating = r.cells[4].innerText.trim().toLowerCase();
+      var rating = r.cells[5].innerText.trim().toLowerCase();
       if(rating.includes('buy')||rating.includes('outperform')||rating.includes('overweight')||rating.includes('top pick')) buy++;
       else if(rating.includes('sell')||rating.includes('underweight')||rating.includes('underperform')) sell++;
     });

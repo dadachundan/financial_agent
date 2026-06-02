@@ -137,6 +137,72 @@ _SUFFIX_BY_EXCHANGE = {
 }
 
 
+# Reverse of _SUFFIX_BY_EXCHANGE: dotted yfinance suffix → exchange code.
+# Only the non-US suffixes need a back-mapping; bare US tickers can be either
+# NYSE or NASDAQ so the lookup tries both.
+_EXCHANGE_BY_SUFFIX: dict[str, str] = {
+    ".HK":  "HKEX",
+    ".SS":  "SSE",
+    ".SZ":  "SZSE",
+    ".BO":  "BSE",
+    ".T":   "TSE",
+    ".JP":  "TSE",   # internal display alias for Japan listings
+    ".KS":  "KRX",
+    ".TW":  "TWSE",
+    ".TWO": "TWSE",   # GreTai over-the-counter folds into TWSE in our map
+    ".TO":  "TSX",
+    ".AX":  "ASX",
+    ".DE":  "XETR",
+    ".VN":  "HOSE",
+}
+
+
+def from_yfinance(yf_ticker: str) -> str | None:
+    """Convert a yfinance-style ticker to EXCHANGE:CODE form.
+
+    Examples:
+        "1109.HK"     -> "HKEX:1109"
+        "300750.SZ"   -> "SZSE:300750"
+        "6361.T"      -> "TSE:6361"
+        "LLY"         -> None  (US listings — ambiguous NYSE/NASDAQ, caller
+                                must try both)
+        "^GSPC"       -> None  (indices)
+
+    Returns None for tickers without a recognised suffix; callers handling US
+    listings should retry with "NYSE:<sym>" / "NASDAQ:<sym>" themselves.
+    """
+    if not yf_ticker:
+        return None
+    if "." not in yf_ticker:
+        return None  # bare ticker = US, caller resolves
+    code, _, suffix = yf_ticker.rpartition(".")
+    suffix = "." + suffix
+    exch = _EXCHANGE_BY_SUFFIX.get(suffix)
+    if not exch:
+        return None
+    return f"{exch}:{code}"
+
+
+def sector_for_yfinance(yf_ticker: str) -> str:
+    """Look up a sector for a yfinance-style ticker.
+
+    Tries the suffix-based mapping first, then for US listings retries
+    NASDAQ: and NYSE: prefixes. Returns "" when nothing matches.
+    """
+    if not yf_ticker:
+        return ""
+    ec = from_yfinance(yf_ticker)
+    if ec:
+        return sector_for(ec)
+    # Bare ticker → try both US venues
+    bare = yf_ticker.upper().replace("-", ".")  # BRK-B → BRK.B
+    for venue in ("NASDAQ", "NYSE", "AMEX"):
+        s = sector_for(f"{venue}:{bare}")
+        if s:
+            return s
+    return ""
+
+
 def to_yfinance(ticker: str) -> str | None:
     """Convert EXCHANGE:CODE → yfinance ticker (e.g. NASDAQ:NVDA → 'NVDA',
     HKEX:2513 → '2513.HK'). Returns None if the exchange isn't recognised."""
