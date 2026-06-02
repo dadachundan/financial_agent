@@ -686,8 +686,7 @@ def wipe_graph(conn: sqlite3.Connection) -> None:
     for tbl in ("community_members", "communities",
                 "edges_fts", "edges",
                 "entities_fts", "entities",
-                "episodes",
-                "pending_deletions"):
+                "episodes"):
         try:
             conn.execute(f"DELETE FROM {tbl}")
         except sqlite3.OperationalError:

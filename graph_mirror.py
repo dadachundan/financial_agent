@@ -11,6 +11,7 @@ WAL mode is kept on so a long-running Flask process can read while
 
 import json
 import random
+import re
 import sqlite3
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -157,35 +158,11 @@ def ensure_schema(conn: sqlite3.Connection) -> None:
         conn.execute("ALTER TABLE entities ADD COLUMN isolated INTEGER DEFAULT 0")
     if "rating" not in existing_ent:
         conn.execute("ALTER TABLE entities ADD COLUMN rating INTEGER DEFAULT 0")
-    # Pending-deletions queue (for ops attempted while ingest holds the Kuzu lock)
-    conn.execute("""
-        CREATE TABLE IF NOT EXISTS pending_deletions (
-            uuid       TEXT NOT NULL,
-            type       TEXT NOT NULL CHECK(type IN ('edge', 'entity')),
-            reason     TEXT NOT NULL DEFAULT '',
-            queued_at  TEXT NOT NULL DEFAULT (datetime('now'))
-        )
-    """)
+    # Drop the legacy pending_deletions queue if a previous schema created it.
+    # It was a holding area for KuzuDB writes blocked by the ingest write lock;
+    # now that KuzuDB is gone, the table has no producers or consumers.
+    conn.execute("DROP TABLE IF EXISTS pending_deletions")
     conn.commit()
-
-
-def queue_deletion(conn: sqlite3.Connection, uuid: str, type_: str, reason: str = "") -> None:
-    """Queue a Kuzu deletion to be applied once ingest releases the write lock."""
-    conn.execute(
-        "INSERT INTO pending_deletions (uuid, type, reason) VALUES (?, ?, ?)",
-        (uuid, type_, reason),
-    )
-    conn.commit()
-
-
-def drain_pending_deletions(conn: sqlite3.Connection) -> list:
-    """Return all queued deletions and clear the table."""
-    rows = conn.execute(
-        "SELECT uuid, type, reason FROM pending_deletions ORDER BY rowid"
-    ).fetchall()
-    conn.execute("DELETE FROM pending_deletions")
-    conn.commit()
-    return rows
 
 
 # ── Edge name backfill (kept for legacy rows that have empty src/tgt names) ──
@@ -283,24 +260,20 @@ def update_edge(conn: sqlite3.Connection, uuid: str,
 _REPORTS_DIR = Path(__file__).parent / "reports"
 
 
-def _resolve_mdreport_rel(rel: str) -> str:
-    """Return a reports-relative path that exists on disk.
+# Matches `EXCHANGE` + numeric/code suffix inside a company directory name,
+# e.g. `SSE688279`, `NASDAQ_AMD`, `HKEX2050`, `KRX005930`. Used to find a
+# sibling directory after a rename like
+# `SamsungElectronics_KRX005930 → Samsung_KRX005930`.
+_TICKER_TOKEN_RE = re.compile(
+    r"(SSE|SZSE|HKEX|NASDAQ|NYSE|AMEX|TSE|TWSE|KRX|XETR|EPA|AEX|ASX|LSE)_?([A-Z0-9.]+)",
+    re.IGNORECASE,
+)
 
-    Episode rows were seeded with filenames like
-    `company/Unitree/Unitree_Research_Document_2026-05-16.md`; many of those
-    files have since been renamed to drop the date suffix
-    (`Unitree_Research_Document.md`). When the stored path is missing,
-    fall back to a sibling research markdown in the same directory so the
-    link in the UI still opens the right report without requiring a DB
-    rewrite.
-    """
-    if (_REPORTS_DIR / rel).is_file():
-        return rel
-    parent = (_REPORTS_DIR / rel).parent
+
+def _pick_md(parent: Path, prefer_zh: bool) -> Optional[Path]:
+    """Pick the best research-doc markdown inside *parent*, or None."""
     if not parent.is_dir():
-        return rel
-
-    prefer_zh = rel.endswith("_zh.md")
+        return None
     candidates: list[Path] = []
     if prefer_zh:
         candidates += sorted(parent.glob("*_Research_Document*_zh.md"))
@@ -313,9 +286,48 @@ def _resolve_mdreport_rel(rel: str) -> str:
         )
     if not candidates:
         candidates = sorted(parent.glob("*.md"))
-    if not candidates:
+    return candidates[-1] if candidates else None
+
+
+def _resolve_mdreport_rel(rel: str) -> str:
+    """Return a reports-relative path that exists on disk.
+
+    Episode rows were seeded with filenames like
+    `company/Unitree/Unitree_Research_Document_2026-05-16.md`; many of those
+    files have since been renamed to drop the date suffix
+    (`Unitree_Research_Document.md`), and a few company directories were
+    themselves renamed (`SamsungElectronics_KRX005930 → Samsung_KRX005930`).
+    When the stored path is missing, fall back to a sibling research
+    markdown — first in the same directory, then in any sibling directory
+    that shares one of the original tickers — so the link in the UI still
+    opens the right report without requiring a DB rewrite.
+    """
+    if (_REPORTS_DIR / rel).is_file():
         return rel
-    return str(candidates[-1].relative_to(_REPORTS_DIR))
+
+    target = _REPORTS_DIR / rel
+    prefer_zh = rel.endswith("_zh.md")
+
+    same_dir_hit = _pick_md(target.parent, prefer_zh)
+    if same_dir_hit is not None:
+        return str(same_dir_hit.relative_to(_REPORTS_DIR))
+
+    # Directory itself was renamed — look for a sibling directory under the
+    # same parent (e.g. `reports/company/`) that contains any of the same
+    # ticker tokens (`KRX005930`, `SSE601238`, ...).
+    grandparent = target.parent.parent
+    if grandparent.is_dir():
+        tokens = {m.group(0).upper() for m in _TICKER_TOKEN_RE.finditer(target.parent.name)}
+        if tokens:
+            for sibling in sorted(grandparent.iterdir()):
+                if not sibling.is_dir() or sibling == target.parent:
+                    continue
+                sib_tokens = {m.group(0).upper() for m in _TICKER_TOKEN_RE.finditer(sibling.name)}
+                if tokens & sib_tokens:
+                    hit = _pick_md(sibling, prefer_zh)
+                    if hit is not None:
+                        return str(hit.relative_to(_REPORTS_DIR))
+    return rel
 
 
 def _episode_url(name: str) -> Optional[str]:

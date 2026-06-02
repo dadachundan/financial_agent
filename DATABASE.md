@@ -204,7 +204,6 @@ The single source of truth for the knowledge graph rendered at `/zep/`. Schema i
 | `episodes` | Source documents — `uuid` (typically a slug like `CSPC_research_2026-06-02`), `name`, `source_desc`, `created_at` |
 | `communities` | Manually-built clusters of entities — `id`, `name`, `summary`, `member_count` |
 | `community_members` | M:N link between `community_members.entity_uuid` and `communities.id` |
-| `pending_deletions` | Soft-delete queue — `uuid`, `type`, `reason`, `queued_at` (legacy; no longer drained anywhere) |
 | `*_fts*` | FTS5 virtual tables + sidecars for full-text search over entities / edges / communities |
 
 ---
