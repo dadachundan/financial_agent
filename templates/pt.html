@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Price Target — FinAgent</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css">
 <style>
   body { background:#1a1d20; color:#e9ecef; font-size:.875rem; }
   table { font-size:.85rem; }
@@ -27,31 +28,60 @@
   .rating-sell       { background:#dc3545; color:#fff; }
   .rating-up         { background:#dc3545; color:#fff; }
   .rating-pill { padding:1px 7px; border-radius:8px; font-size:.7rem; white-space:nowrap; }
-  .filter-bar { background:#23272b; padding:8px 12px; border-radius:6px; margin-bottom:10px; position:sticky; top:0; z-index:6; }
+  .filter-bar { background:#23272b; padding:10px 14px; border-radius:6px; margin-bottom:10px; position:sticky; top:0; z-index:6; }
   .pill-counts { font-size:.75rem; opacity:.8; }
   a.report-link { color:#7dd3fc; text-decoration:none; }
   a.report-link:hover { text-decoration:underline; }
   .catalyst { max-width:340px; font-size:.78rem; color:#cbd5e1; white-space:normal; }
   .table-dark { --bs-table-bg:#1a1d20; }
+
+  /* Date slider */
+  .date-slider-row { padding:4px 6px 8px 6px; }
+  .date-slider-row .date-label { color:#9ca3af; font-size:.72rem; }
+  .date-slider-row .date-val { color:#7dd3fc; font-weight:600; }
+  #date-slider { margin:14px 6px 4px 6px; }
+  .noUi-target { background:#3a3f44; border:none; box-shadow:none; height:4px; }
+  .noUi-connect { background:#0d6efd; }
+  .noUi-handle { background:#fff; border:none; box-shadow:0 0 0 2px #0d6efd, 0 1px 4px rgba(0,0,0,.4); border-radius:50%; width:16px !important; height:16px !important; top:-6px !important; right:-8px !important; cursor:pointer; }
+  .noUi-handle:before, .noUi-handle:after { display:none; }
+  .noUi-handle:focus { outline:none; box-shadow:0 0 0 3px #0d6efd, 0 1px 4px rgba(0,0,0,.4); }
+
+  /* Avg PT column + ticker-group banding */
+  .avg-pt { color:#fcd34d; font-weight:600; }
+  .avg-pt .n { color:#9ca3af; font-weight:400; font-size:.7rem; margin-left:3px; }
+  tbody tr.group-alt { background:rgba(255,255,255,.025); }
+  tbody tr.group-first td { border-top:1px solid rgba(125,211,252,.25); }
 </style>
 </head>
 <body>
 {{ NAV_HTML | safe }}
 <div class="container-fluid px-3">
-  <div class="filter-bar d-flex flex-wrap gap-2 align-items-center">
-    <input id="filter" type="text" class="form-control form-control-sm" style="max-width:340px"
-           placeholder="🔍 filter by ticker / name / 中文名 / broker / rating">
-    <span class="pill-counts">
-      <span id="count">{{ total }}</span> rows
-      &nbsp;|&nbsp;
-      <span id="upBuy">0</span> Buy/OP/OW
-      &nbsp;|&nbsp;
-      <span id="upSell">0</span> Sell/UW
-    </span>
-    <span class="ms-auto small text-muted">click any column header to sort · default = report date desc</span>
+  <div class="filter-bar">
+    <div class="date-slider-row">
+      <div class="d-flex justify-content-between align-items-center">
+        <span class="date-label">From <span id="date-min" class="date-val">--</span></span>
+        <span class="date-label">📅 Report-date range</span>
+        <span class="date-label">To <span id="date-max" class="date-val">--</span></span>
+      </div>
+      <div id="date-slider"></div>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center mt-2">
+      <input id="filter" type="text" class="form-control form-control-sm" style="max-width:340px"
+             placeholder="🔍 filter by ticker / name / 中文名 / broker / rating">
+      <span class="pill-counts">
+        <span id="count">{{ total }}</span> rows
+        &nbsp;|&nbsp;
+        <span id="upBuy">0</span> Buy/OP/OW
+        &nbsp;|&nbsp;
+        <span id="upSell">0</span> Sell/UW
+        &nbsp;|&nbsp;
+        <span id="tickerCount">0</span> tickers
+      </span>
+      <span class="ms-auto small text-muted">grouped by ticker · click any column header to sort</span>
+    </div>
   </div>
 
-  <div class="table-responsive" style="max-height:calc(100vh - 140px);">
+  <div class="table-responsive" style="max-height:calc(100vh - 200px);">
     <table class="table table-dark table-hover table-sm align-middle" id="pt">
       <thead>
         <tr>
@@ -62,6 +92,7 @@
           <th data-key="research_institute">Broker<span class="sort-ind"></span></th>
           <th data-key="rating">Rating<span class="sort-ind"></span></th>
           <th data-key="price_target" data-num="1">PT<span class="sort-ind"></span></th>
+          <th data-key="avg_pt" data-num="1" title="Average PT across all brokers covering this ticker in the selected date range">Avg PT<span class="sort-ind"></span></th>
           <th data-key="report_date_price" data-num="1">Px @ Report<span class="sort-ind"></span></th>
           <th data-key="upside_pct" data-num="1">Upside %<span class="sort-ind"></span></th>
           <th data-key="report_date_market_cap" data-num="1">Mkt Cap<span class="sort-ind"></span></th>
@@ -71,7 +102,10 @@
       </thead>
       <tbody>
         {% for r in rows %}
-        <tr>
+        <tr data-ticker="{{ r.company_ticker }}"
+            data-pt="{{ r.price_target if r.price_target is not none else '' }}"
+            data-ccy="{{ r.target_currency or '' }}"
+            data-date="{{ r.report_date or '' }}">
           <td>{{ r.report_date or '' }}</td>
           <td><strong>{{ r.company_ticker }}</strong></td>
           <td>{{ r.company_name }}</td>
@@ -96,6 +130,7 @@
           <td class="num">
             {% if r.price_target is not none %}{{ '%.2f' % r.price_target }}<span class="ccy">{{ r.target_currency or '' }}</span>{% endif %}
           </td>
+          <td class="num avg-pt"></td>
           <td class="num">
             {% if r.report_date_price is not none %}{{ '%.2f' % r.report_date_price }}<span class="ccy">{{ r.price_currency or r.target_currency or '' }}</span>{% endif %}
           </td>
@@ -124,20 +159,132 @@
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js"></script>
 <script>
 (function(){
-  var tbody = document.querySelector('#pt tbody');
-  var rows  = Array.from(tbody.querySelectorAll('tr'));
+  var tbody  = document.querySelector('#pt tbody');
+  var rows   = Array.from(tbody.querySelectorAll('tr'));
   var filter = document.getElementById('filter');
   var countEl = document.getElementById('count');
   var upBuyEl = document.getElementById('upBuy');
   var upSellEl= document.getElementById('upSell');
+  var tickerCountEl = document.getElementById('tickerCount');
+  var dateMinEl = document.getElementById('date-min');
+  var dateMaxEl = document.getElementById('date-max');
+  var sliderEl  = document.getElementById('date-slider');
 
-  function updateCounts() {
+  var ONE_DAY = 86400000;
+
+  function parseDate(s){
+    if(!s) return NaN;
+    // Date.parse on "YYYY-MM-DD" treats it as UTC midnight
+    var t = Date.parse(s);
+    return isNaN(t) ? NaN : t;
+  }
+  function fmtDate(t){
+    var d = new Date(t);
+    var y = d.getUTCFullYear();
+    var m = String(d.getUTCMonth()+1).padStart(2,'0');
+    var dd = String(d.getUTCDate()).padStart(2,'0');
+    return y + '-' + m + '-' + dd;
+  }
+
+  // ---- Date slider ----
+  var allDates = rows.map(function(r){ return parseDate(r.dataset.date); }).filter(function(t){ return !isNaN(t); });
+  var minTs, maxTs;
+  if(allDates.length === 0){
+    sliderEl.parentElement.style.display = 'none';
+    minTs = -Infinity; maxTs = Infinity;
+  } else {
+    minTs = Math.min.apply(null, allDates);
+    maxTs = Math.max.apply(null, allDates);
+    if(minTs === maxTs){ maxTs = minTs + ONE_DAY; }   // noUiSlider needs min<max
+  }
+
+  var currentMinTs = minTs;
+  var currentMaxTs = maxTs;
+
+  if(allDates.length){
+    noUiSlider.create(sliderEl, {
+      start: [minTs, maxTs],
+      connect: true,
+      range: { min: minTs, max: maxTs },
+      step: ONE_DAY,
+      format: {
+        to:   function(v){ return v; },
+        from: function(v){ return Number(v); }
+      }
+    });
+    sliderEl.noUiSlider.on('update', function(values){
+      currentMinTs = parseFloat(values[0]);
+      currentMaxTs = parseFloat(values[1]);
+      dateMinEl.textContent = fmtDate(currentMinTs);
+      dateMaxEl.textContent = fmtDate(currentMaxTs);
+      applyFilters();
+    });
+  }
+
+  // ---- Filter + Avg PT ----
+  function dateInRange(r){
+    var t = parseDate(r.dataset.date);
+    if(isNaN(t)) return true;
+    return t >= currentMinTs && t <= currentMaxTs;
+  }
+  function textOk(r){
+    var q = filter.value.trim().toLowerCase();
+    if(!q) return true;
+    var tokens = q.split(/\s+/);
+    var txt = r.innerText.toLowerCase();
+    return tokens.every(function(t){ return txt.includes(t); });
+  }
+
+  function applyFilters(){
+    // Visibility: date filter AND text filter must both pass
+    rows.forEach(function(r){
+      var dOk = dateInRange(r);
+      var tOk = textOk(r);
+      r.dataset.dateOk = dOk ? '1' : '0';
+      r.style.display = (dOk && tOk) ? '' : 'none';
+    });
+
+    // Compute avg PT per ticker using only date-filtered rows
+    // (text filter is for narrowing the view, not the consensus calc).
+    var perTicker = {};
+    rows.forEach(function(r){
+      if(r.dataset.dateOk !== '1') return;
+      var t   = r.dataset.ticker;
+      var pt  = parseFloat(r.dataset.pt);
+      var ccy = r.dataset.ccy || '';
+      if(!t || isNaN(pt)) return;
+      if(!perTicker[t]) perTicker[t] = { sum:0, n:0, ccyCount:{} };
+      perTicker[t].sum += pt;
+      perTicker[t].n   += 1;
+      perTicker[t].ccyCount[ccy] = (perTicker[t].ccyCount[ccy] || 0) + 1;
+    });
+
+    // Paint Avg PT cell on every row (same value for all rows of a ticker)
+    rows.forEach(function(r){
+      var cell = r.querySelector('.avg-pt');
+      if(!cell) return;
+      var s = perTicker[r.dataset.ticker];
+      if(!s || !s.n){ cell.innerHTML = ''; cell.dataset.value = ''; return; }
+      var avg = s.sum / s.n;
+      var majCcy = Object.keys(s.ccyCount).sort(function(a,b){ return s.ccyCount[b] - s.ccyCount[a]; })[0] || '';
+      cell.innerHTML = avg.toFixed(2) + '<span class="ccy">' + majCcy + '</span><span class="n">·' + s.n + '</span>';
+      cell.dataset.value = avg;
+    });
+
+    regroupAndPaint();
+    updateCounts();
+  }
+
+  function updateCounts(){
     var n=0, buy=0, sell=0;
+    var seenTickers = {};
     rows.forEach(function(r){
       if(r.style.display==='none') return;
       n++;
+      seenTickers[r.dataset.ticker] = true;
       var rating = r.cells[5].innerText.trim().toLowerCase();
       if(rating.includes('buy')||rating.includes('outperform')||rating.includes('overweight')||rating.includes('top pick')) buy++;
       else if(rating.includes('sell')||rating.includes('underweight')||rating.includes('underperform')) sell++;
@@ -145,50 +292,82 @@
     countEl.textContent = n;
     upBuyEl.textContent = buy;
     upSellEl.textContent = sell;
+    tickerCountEl.textContent = Object.keys(seenTickers).length;
   }
 
-  // Live filter — split by whitespace, all tokens must match somewhere in the row text
-  filter.addEventListener('input', function(){
-    var q = filter.value.trim().toLowerCase();
-    var tokens = q ? q.split(/\s+/) : [];
-    rows.forEach(function(r){
-      if(!tokens.length){ r.style.display=''; return; }
-      var txt = r.innerText.toLowerCase();
-      var ok = tokens.every(function(t){ return txt.includes(t); });
-      r.style.display = ok ? '' : 'none';
-    });
-    updateCounts();
-  });
+  filter.addEventListener('input', applyFilters);
 
-  // Sort
+  // ---- Sort, with ticker grouping always preserved ----
   var lastSort = { key: 'report_date', dir: 'desc' };
-  function sortBy(key, dir, isNum) {
-    var idx = Array.from(document.querySelectorAll('#pt thead th')).findIndex(function(th){ return th.dataset.key === key; });
+
+  function getColIndex(key){
+    return Array.from(document.querySelectorAll('#pt thead th')).findIndex(function(th){ return th.dataset.key === key; });
+  }
+
+  function sortBy(key, dir, isNum){
+    var idx = getColIndex(key);
     if(idx < 0) return;
     rows.sort(function(a, b){
-      var av = a.cells[idx].innerText.trim();
-      var bv = b.cells[idx].innerText.trim();
+      var av, bv;
+      if(key === 'avg_pt'){
+        av = a.cells[idx].dataset.value || '';
+        bv = b.cells[idx].dataset.value || '';
+      } else {
+        av = a.cells[idx].innerText.trim();
+        bv = b.cells[idx].innerText.trim();
+      }
       if(isNum){
-        var na = parseFloat(av.replace(/[^0-9.\-+]/g, ''));
-        var nb = parseFloat(bv.replace(/[^0-9.\-+]/g, ''));
+        var na = parseFloat(String(av).replace(/[^0-9.\-+]/g, ''));
+        var nb = parseFloat(String(bv).replace(/[^0-9.\-+]/g, ''));
         if(isNaN(na)) na = dir==='asc' ? Infinity : -Infinity;
         if(isNaN(nb)) nb = dir==='asc' ? Infinity : -Infinity;
         return dir === 'asc' ? na - nb : nb - na;
       }
       return dir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av);
     });
-    var frag = document.createDocumentFragment();
-    rows.forEach(function(r){ frag.appendChild(r); });
-    tbody.appendChild(frag);
-    // update indicators
+
+    // Update indicators
     document.querySelectorAll('#pt thead th').forEach(function(th){
       var ind = th.querySelector('.sort-ind');
       if(!ind) return;
       ind.textContent = (th.dataset.key === key) ? (dir === 'asc' ? '▲' : '▼') : '';
     });
     lastSort = { key: key, dir: dir };
+
+    regroupAndPaint();
   }
 
+  // Group same ticker together while preserving the current sort order
+  // within each ticker bucket. Tickers are emitted in the order they
+  // were first encountered in the sorted array — so if user sorted by
+  // date DESC, the ticker whose latest report is most recent comes first.
+  function regroupAndPaint(){
+    var groups = new Map();
+    rows.forEach(function(r){
+      var t = r.dataset.ticker || '';
+      if(!groups.has(t)) groups.set(t, []);
+      groups.get(t).push(r);
+    });
+    var ordered = [];
+    var bandIdx = 0;
+    groups.forEach(function(arr, ticker){
+      var alt = (bandIdx % 2 === 1);
+      arr.forEach(function(r, i){
+        r.classList.toggle('group-alt', alt);
+        r.classList.toggle('group-first', i === 0);
+        ordered.push(r);
+      });
+      bandIdx++;
+    });
+    rows.length = 0;
+    ordered.forEach(function(r){ rows.push(r); });
+
+    var frag = document.createDocumentFragment();
+    rows.forEach(function(r){ frag.appendChild(r); });
+    tbody.appendChild(frag);
+  }
+
+  // Column header click → sort
   document.querySelectorAll('#pt thead th').forEach(function(th){
     th.addEventListener('click', function(){
       var key = th.dataset.key;
@@ -199,12 +378,12 @@
     });
   });
 
-  // Initial: server already sent report_date DESC — just paint the indicator
+  // Initial state: server already sorted by report_date DESC.
+  // Paint sort indicator + apply Avg PT + group by ticker.
   document.querySelectorAll('#pt thead th').forEach(function(th){
     if(th.dataset.key === 'report_date') th.querySelector('.sort-ind').textContent = '▼';
   });
-
-  updateCounts();
+  applyFilters();
 })();
 </script>
 </body>
