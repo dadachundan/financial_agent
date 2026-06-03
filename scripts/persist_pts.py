@@ -71,29 +71,6 @@ from stock_price_target_db import upsert_target, count # noqa: E402
 # zsxq.db metadata lookup
 # ---------------------------------------------------------------------------
 
-def _derive_exchange(ticker: str) -> str:
-    """Map yfinance-form ticker → legacy exchange code.
-
-    The live ``price_targets`` schema (pre-migration) still has
-    ``exchange TEXT NOT NULL``. ``INSERT OR IGNORE`` silently swallows NOT
-    NULL violations, so omitting this field looks like a duplicate. Until
-    `scripts/migrate_pt_drop_exch_zh.py --apply` lands, we derive a
-    best-effort value here. For bare US tickers, default to NASDAQ — the
-    column is for display only; the ticker itself is the source of truth.
-    """
-    t = (ticker or "").upper()
-    if t.endswith(".HK"):  return "HKEX"
-    if t.endswith(".SS"):  return "SSE"
-    if t.endswith(".SH"):  return "SSE"
-    if t.endswith(".SZ"):  return "SZSE"
-    if t.endswith(".TWO"): return "TWO"
-    if t.endswith(".TW"):  return "TWSE"
-    if t.endswith(".T") or t.endswith(".JP"): return "TSE"
-    if t.endswith(".KS") or t.endswith(".KQ"): return "KRX"
-    if t.startswith("^") or t in {"SPX", "NDX", "DJI"}: return "INDEX"
-    return "NASDAQ"  # bare US default — caller can override if known otherwise
-
-
 def _report_date_from_pdf_name(name: str) -> str | None:
     """Parse YYMMDD from a PDF filename suffix like '-260602.pdf'."""
     m = re.search(r"-(\d{6})\.pdf$", name or "")
@@ -257,8 +234,6 @@ def main() -> int:
             "report_date_price":      close,
             "report_date_market_cap": cap,
             "price_currency":         ccy,
-            # Legacy NOT NULL column (until migrate_pt_drop_exch_zh runs).
-            "exchange":               _derive_exchange(ticker),
         }
         broker_norm = payload["research_institute"]
         conflict_fid = (ticker, broker_norm, fid) in existing_keys
