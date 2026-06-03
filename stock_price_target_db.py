@@ -42,6 +42,11 @@ ALLOWED_COLS = {
     "price_currency",
     "upside_pct",
     "created_at",
+    # Legacy columns still NOT NULL in production DBs that pre-date
+    # scripts/migrate_pt_drop_exch_zh.py. Once that migration is applied
+    # these become harmless extras and can be dropped from the set.
+    "exchange",
+    "chinese_name",
 }
 
 SCHEMA = """
