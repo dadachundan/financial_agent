@@ -7,8 +7,9 @@ goes through `manual_graph.py` (called by Claude the agent). The previous
 edit / rate / merge / isolate / community-create routes were removed
 2026-06-02 because the user does not curate from the UI.
 
-Backend: SQLite at `db/graph_mirror.db`. WAL mode lets the viewer keep
-serving reads while `manual_graph` writes from a separate process.
+Backend: SQLite at `db/graph_mirror.db` in rollback-journal mode (single
+file on disk). Writes from `manual_graph` briefly block reads — the user
+doesn't refresh the viewer during writes, so concurrency isn't needed.
 
 Routes (all under /zep prefix when registered in main.py, all GET):
     /                          — Search + entity browser SPA

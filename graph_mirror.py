@@ -1,12 +1,13 @@
 """graph_mirror.py — SQLite store backing the financial knowledge graph.
 
-Originally a read-only mirror of a graphiti-core / KuzuDB graph store. After
-the LLM-driven ingest pipeline was removed (2026-06-02) this file became the
-*only* graph DB in the project. Entities and edges are curated by hand via
-`manual_graph.py`; the Flask viewer at `/zep/` reads from here directly.
+The single graph DB in the project. Entities and edges are curated by hand
+via `manual_graph.py`; the Flask viewer at `/zep/` reads from here directly
+and is strictly read-only (no write routes — see zep_app.py).
 
-WAL mode is kept on so a long-running Flask process can read while
-`manual_graph` writes from another process or session.
+Rollback-journal mode (the SQLite default). The viewer is read-only and the
+user does not refresh during writes, so WAL's concurrent-read benefit isn't
+worth the persistent `-wal` + `-shm` companion files. A short writer-blocks-
+reader window during `manual_graph.add_*` is fine.
 """
 
 import json
@@ -26,12 +27,16 @@ _DEFAULT_MIRROR = db_path("graph_mirror.db")
 # ── Connection ────────────────────────────────────────────────────────────────
 
 def get_conn(mirror_path: Path = _DEFAULT_MIRROR) -> sqlite3.Connection:
-    """Return a WAL-mode SQLite connection to the mirror DB."""
+    """Return a SQLite connection to the mirror DB (rollback-journal mode)."""
     mirror_path.parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(str(mirror_path), timeout=5)
     conn.row_factory = sqlite3.Row
-    conn.execute("PRAGMA journal_mode=WAL")
-    conn.execute("PRAGMA synchronous=NORMAL")
+    # Rollback-journal mode (the SQLite default). PRAGMAs run once per
+    # connection; the journal_mode setting is sticky on the database file,
+    # so the first connection after this change converts the DB out of WAL
+    # mode and the -wal / -shm sidecars get cleaned up automatically.
+    conn.execute("PRAGMA journal_mode=DELETE")
+    conn.execute("PRAGMA synchronous=FULL")
     return conn
 
 
