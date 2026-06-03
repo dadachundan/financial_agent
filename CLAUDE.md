@@ -61,31 +61,50 @@ If a single agent is being spawned (e.g. one `/company-research X` call), the wa
 
 ## What "memory-heavy" means in practice
 
-Each `agent()` call in a Workflow spawns a full `claude --resume <session-id>` subprocess holding its own:
-- V8 base heap + 1M-token context reservation (~1-2 GB minimum)
+**Critical finding (verified empirically 2026-06-03):** Workflow `agent()` calls do NOT spawn separate OS processes — all N concurrent agents share the parent main-loop claude process's V8 heap. Verified by `pgrep -P <main-claude-pid>` returning no children during a 4-wide workflow, while the JSONL files showed all 4 agents actively writing.
+
+Implications:
+- **Per-process memory grows monotonically with `N × per-agent context size`** as PDFs, transcripts, and tool results accumulate.
+- **The OOM at 93 GB was a single process hitting macOS jetsam**, not a sum across N processes.
+- **You cannot kill an individual agent from outside** — there is no separate process. Killing the parent kills the user's entire interactive session.
+- The only legitimate mid-flight intervention is `TaskStop <workflow-id>` from the main-loop Claude itself.
+
+What each in-process agent accumulates in the shared heap:
+- V8 base heap + 1M-token context reservation (~1-2 GB per agent)
 - Every PDF read (10-K is 1-10 MB extracted text, stays in the message array — never freed)
-- Every WebFetch response, transcript, IR deck, web page → all retained until the subprocess exits
+- Every WebFetch response, transcript, IR deck, web page → all retained until the agent's task() completes and its conversation is garbage-collected
 - Tool result buffers
 
-A `/company-research` agent at Step 9 (writeup) routinely holds 10-20 GB resident. × 4 concurrent = 40-80 GB. × 6 concurrent = 60-120 GB → OOM.
+A `/company-research` agent at Step 9 (writeup) routinely holds 8-15 GB of context. × 3 concurrent in one process = 24-45 GB. × 4 = 32-60 GB. × 5 = 40-75 GB → OOM. × 6 = 48-90 GB → guaranteed OOM (this is what killed the 2026-06-03 run).
 
-V8 heap **does not return memory to the OS** until the subprocess exits — even after a PDF is "logically free", V8 keeps the pages reserved. This is not a leak; it is by design (avoiding GC thrash). The only way memory drops is process exit.
+V8 heap **does not return memory to the OS** until the agent finishes and its conversation is GC'd — even after a PDF is "logically free", V8 keeps the pages reserved. This is not a leak; it is by design (avoiding GC thrash).
 
-## The watcher
+## The watcher (alarm-only — workflow agents are in-process)
 
-A reusable watcher script lives at `/tmp/mem-watch.sh` (paste from the canonical template below if missing). It polls every 30s normally / 15s in `warn` / 10s in `danger`, logs to `/tmp/mem-watch.log`, and **auto-kills the heaviest workflow subagent processes** (preserving main-loop sessions via a hardcoded whitelist) once memory crosses an action threshold.
+A reusable watcher script lives at `/tmp/mem-watch.sh`. It polls every 30s normally / 15s in `warn` / 10s in `danger`, logs to `/tmp/mem-watch.log`, and **fires macOS osascript notifications at each threshold**. The watcher **cannot auto-kill the offending agents** because they share the parent process — killing the parent would kill the user's session. The watcher's job is to **alert the main-loop Claude (or the user) early enough that a `TaskStop <workflow-id>` can fire before the parent OOMs.**
 
-**Thresholds** (calibrated against the 93 GB OOM ceiling, leaving ≥38 GB headroom at the highest action level):
+**Thresholds** (calibrated against the 93 GB OOM ceiling):
 
-| Total claude+node RSS | Action | Poll cadence |
+| Total claude+node RSS | Notification | Poll cadence |
 |---|---|---|
 | < 35 GB | log `✓ ok` | 30s |
-| ≥ 35 GB | log `⚠️ warn` (climbing — no kill) | 15s |
-| ≥ 45 GB | kill **heaviest** subagent | 15s |
-| ≥ 50 GB | kill **top-2** subagents + osascript notification | 10s |
-| ≥ 55 GB | kill **ALL** subagents + emergency notification | 10s |
+| ≥ 35 GB | log `⚠️ warn` (climbing) | 15s |
+| ≥ 45 GB | osascript: "ALERT — workflow climbing, monitor" | 15s |
+| ≥ 55 GB | osascript: "DANGER — TaskStop the workflow" | 10s |
+| ≥ 65 GB | osascript: "EMERGENCY — TaskStop NOW, OOM in <2 ticks" | 10s |
 
-The OOM ceiling on this Mac is ~93 GB. The kill-all threshold at 55 GB leaves 38 GB headroom — enough to absorb a 5-12 GB in-flight surge between two consecutive ticks.
+The OOM ceiling on this Mac is ~93 GB. The emergency threshold at 65 GB leaves 28 GB headroom — enough for one in-flight surge before the next tick if `TaskStop` fires fast.
+
+**Sizing batches by memory budget** — at fleet scale, pick batch size so peak per-process never reaches the emergency threshold:
+
+| Concurrency | Per-process peak (≈8-15 GB/agent) | Safe? |
+|---|---|---|
+| 1 | 8-15 GB | ✓ trivial |
+| 2 | 16-30 GB | ✓ very safe |
+| 3 | 24-45 GB | ✓ safe — recommended for `/company-research` fleet |
+| 4 | 32-60 GB | ⚠️ marginal — risks `DANGER` threshold |
+| 5 | 40-75 GB | 🚨 will OOM on slow agents |
+| 6 | 48-90 GB | 🚨🚨 caused the 2026-06-03 OOM kill |
 
 ## How to launch the watcher
 
@@ -132,11 +151,13 @@ After the workflow completes:
 
 ## Hard rules
 
-1. **Never launch a ≥3-wide Workflow on this machine without the watcher running.** If `pgrep -lf 'mem-watch.sh'` returns nothing, start it first.
-2. **Never raise the kill thresholds above 55 GB** without re-doing the OOM-ceiling calibration on the actual machine. The 38 GB headroom is the minimum safety margin given observed in-flight growth.
-3. **Never add the user's interactive main-loop sessions to the kill targets.** The `MAIN_SESSIONS` whitelist is mechanical safety — confirm both current session IDs are listed before launching.
-4. **Never report a workflow as "running fine" without checking `/tmp/mem-watch.log`** — the watcher's status column is the source of truth for memory health during a run.
-5. **Stop the watcher when the workflow finishes** (`pkill -f mem-watch.sh`) — otherwise it lingers across sessions and pollutes the next launch.
+1. **Never launch a `/company-research` fleet workflow at concurrency >3 on this machine.** Batch 4 marginal; 5+ guaranteed-OOM territory. The 2026-06-03 OOM happened at concurrency 6.
+2. **Never launch a ≥3-wide Workflow without the watcher running.** If `pgrep -lf 'mem-watch.sh'` returns nothing, start it first.
+3. **Watcher is alarm-only — it cannot auto-kill agents.** Workflow agents share the parent process. The only mid-flight recovery is `TaskStop <workflow-id>` from the main-loop Claude.
+4. **When the watcher hits DANGER (≥55 GB), TaskStop the workflow immediately** — do not wait for "one more tick to see if it stabilizes". Memory does not return until agents complete.
+5. **Never raise the emergency threshold above 65 GB** without re-doing the OOM-ceiling calibration on the actual machine. The 28 GB headroom is the minimum given observed 5-12 GB in-flight growth per tick.
+6. **Never report a workflow as "running fine" without checking `/tmp/mem-watch.log` AND `pgrep -lf 'mem-watch.sh'`** — the watcher's status column is the source of truth.
+7. **Stop the watcher when the workflow finishes** (`pkill -f mem-watch.sh`) — otherwise it lingers across sessions and pollutes the next launch.
 
 # Database Safety (MANDATORY — non-negotiable, zero exceptions)
 
