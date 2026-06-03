@@ -458,31 +458,33 @@ Define the industry (NAICS/SIC, scope, adjacent industries). Size the market (TA
 
 Identify 8–12 risks across 4 buckets (company-specific, industry/market, financial, macro). See `references/risk_taxonomy.md` for the full taxonomy. 50–100 words per risk: describe, quantify, note mitigants.
 
-### Step 8 — Charts and diagrams (add 4–8 visuals)
+### Step 8 — Charts and diagrams (Mermaid only — 4–8 blocks)
 
-A report this length needs visual anchors. **Add 4–8 charts/diagrams** across the document. Two flavors — use both:
+A report this length needs visual anchors. **Add 4–8 Mermaid diagrams** across the document. Mermaid is markdown-native: the web viewer at `localhost:5001/claude-reports/` and GitHub render the diagrams inline at view time, so there is no PNG generation, no matplotlib subprocess, no committed binary assets, no per-chart bitmap buffer in the agent's V8 heap.
 
-**A. PNG charts via matplotlib (quantitative trends).** Generate with a Python script, save into `reports/charts/<company>_<chart>.png`, embed via `![alt](charts/<company>_<chart>.png)`. Pattern-match from existing scripts in `oneoff/` (`anpeilong_3yr_chart.py`, `cdns_5yr_chart.py`). End the script with `plt.savefig(path, dpi=150, bbox_inches="tight")`.
+**Do NOT generate matplotlib PNG charts.** This was disabled project-wide on 2026-06-03 to cut per-agent memory footprint — every `import matplotlib.pyplot` + `savefig` held ~150-300 MB resident, and with 4-6 concurrent `/company-research` agents the cumulative load pushed the system past 90 GB and triggered OOM kills. **Mermaid covers every chart type a research report needs** — line, bar, pie, quadrant, timeline, tree, and multi-axis via `xychart-beta`. No exceptions; do not regress to matplotlib.
 
-Suggested: 3–5 yr revenue + gross margin trend (dual-axis); segment revenue mix (stacked bar); TTM P/E vs. 3-yr range vs. sector median; peer comparison bars; latest 8–12 quarter trend if seasonality matters.
+(Legacy chart PNGs in `reports/charts/` from before 2026-06-03 remain on disk and may be reused in the report via `![](charts/<file>.png)` markdown — do not delete them or regenerate them as Mermaid for old reports. The rule applies only to NEW chart generation going forward.)
 
-**B. Mermaid diagrams (structural / qualitative).** Markdown-native; the web viewer and GitHub render them inline. Wrap in a ` ```mermaid ` fence. Use for:
+**Mermaid block types — pick the right one per use case:**
 
-- **Timeline** (Section 2 History): `timeline` block — founding → IPO → segment launches → recent milestones
-- **Product portfolio tree** (Section 4 Products): `graph TD` mapping company → segments → product families → SKUs
-- **Customer concentration** (Section 5): `pie title FY2024 revenue by top customers` with the top 3–5 customers + "All other"
-- **Competitive positioning** (Section 7): `quadrantChart` (2×2) on price vs. feature-breadth, or `graph LR` for value-chain position
-- **Org / governance** (Section 3): optional `graph TD` for board / management reporting lines
+- **Trend / time-series** (Section 1 revenue+margin, Section 2 valuation history, Section 8 TAM growth, latest 8–12 quarter print): `xychart-beta` — supports `line` and `bar`, multi-series, axis labels, customizable y-range. Wrap in ` ```mermaid` fence.
+- **Timeline** (Section 2 History): `timeline` block — founding → IPO → segment launches → recent milestones.
+- **Product portfolio tree** (Section 4 Products): `graph TD` mapping company → segments → product families → SKUs.
+- **Customer concentration** (Section 5): `pie title FY2024 revenue by top customers` with the top 3–5 customers + "All other". Use ONE denominator per pie (consolidated vs segment-level — never mix).
+- **Peer-comparison bars** (Section 7, Section 2 valuation): `xychart-beta` with peers on x-axis, multiple metrics (TTM P/E, P/S, EV/EBITDA) as bars.
+- **Competitive positioning** (Section 7): `quadrantChart` (2×2) on price vs. feature-breadth, or `graph LR` for value-chain position.
+- **Org / governance** (Section 3, optional): `graph TD` for board / management reporting lines.
 
-**Placement summary** (also in `references/report_structure.md`):
-| Section | Chart |
+**Placement summary** (echoed in `references/report_structure.md`):
+| Section | Mermaid block |
 |---|---|
-| 1 Overview | Revenue + margin trend (PNG) |
-| 2 History | Mermaid timeline |
-| 4 Products | Mermaid product tree |
-| 5 Customers | Mermaid customer-concentration pie |
-| 7 Competitive | Mermaid quadrant **or** peer-comparison bars (PNG) |
-| 8 TAM | Market-size growth chart (PNG) |
+| 1 Overview | `xychart-beta` revenue + gross margin trend (3–5 yr) |
+| 2 History | `timeline` block — founding → milestones |
+| 4 Products | `graph TD` product portfolio tree (the 10-K product *table* screenshot via `render_10k_section.py` is optional; markdown reproduction of the table is mandatory regardless) |
+| 5 Customers | `pie` — top-3-5 customer concentration (one denominator per chart) |
+| 7 Competitive | `quadrantChart` **or** `xychart-beta` peer-comp bars |
+| 8 TAM | `xychart-beta` market-size growth |
 
 **Every chart gets a citation right below it** — same markdown-link format as prose, e.g. `Source: [安培龙 2024 年度报告, 第 32 页](https://static.cninfo.com.cn/...)`. No chart without a source.
 

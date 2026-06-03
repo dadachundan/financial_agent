@@ -2,18 +2,18 @@
 
 The final report has 9 sections plus a References block. Word counts are loose targets — verify with `wc -w` before declaring done. Total target: **6,000–10,000 words** (sections may run longer than the per-section ranges below if there's genuine substance; do not pad to hit a number).
 
-Embed **4–8 charts** across the report (mix of matplotlib PNGs and Mermaid blocks). Suggested placement:
+Embed **4–8 Mermaid diagrams** across the report — **Mermaid only, no matplotlib PNGs.** (Disabled project-wide 2026-06-03 to cut per-agent memory footprint; see SKILL.md § Step 8 for the rationale. Mermaid covers every chart type the report needs, including quantitative trends via `xychart-beta`.) Suggested placement:
 
-| Section | Chart | IR-deck slide that often anchors it |
+| Section | Mermaid block | IR-deck slide that often anchors it |
 |---|---|---|
-| 1 Overview | Revenue + gross margin trend (PNG, 3–5 yr, dual-axis) | Latest earnings-deck "Revenue + Margin Bridge" slide |
-| 2 History | Mermaid `timeline` block | Investor day "Our journey" slide (when present) |
-| 4 Products | Mermaid `graph TD` product tree | Investor day product-portfolio slide |
-| 5 Customers | Mermaid `pie` — top 3–5 customer concentration | Investor day customer-logo / cohort slide |
-| 7 Competitive | Mermaid `quadrantChart` **or** peer-comparison bars (PNG) | Investor day "Why we win" / feature-matrix slide |
-| 8 TAM | Market-size growth chart (PNG) | Investor day TAM build slide (the single most useful IR slide) |
+| 1 Overview | `xychart-beta` revenue + gross margin trend (3–5 yr) | Latest earnings-deck "Revenue + Margin Bridge" slide |
+| 2 History | `timeline` block — founding → milestones | Investor day "Our journey" slide (when present) |
+| 4 Products | `graph TD` product portfolio tree | Investor day product-portfolio slide |
+| 5 Customers | `pie` — top 3–5 customer concentration (one denominator) | Investor day customer-logo / cohort slide |
+| 7 Competitive | `quadrantChart` **or** `xychart-beta` peer-comp bars | Investor day "Why we win" / feature-matrix slide |
+| 8 TAM | `xychart-beta` market-size growth | Investor day TAM build slide (the single most useful IR slide) |
 
-Every chart needs a citation directly underneath in the same markdown-link format used in prose. PNGs go in `reports/charts/<company>_<name>.png`. **When an IR deck has the data behind a chart, embed the rendered IR slide as a PNG (using `render_10k_section.py`-style page screenshot for PDFs) instead of rebuilding the chart from scratch** — the slide is the most authoritative form of the chart, the company endorses the numbers, and the reader can trace the source. Cite the slide directly underneath.
+Every chart needs a citation directly underneath in the same markdown-link format used in prose. **When an IR deck has the data behind a chart, embed the rendered IR slide as a PNG** (using `render_10k_section.py`-style page screenshot for PDFs, which is a one-shot playwright-chromium screenshot — not matplotlib chart-gen) **instead of rebuilding the chart from scratch** — the slide is the most authoritative form of the chart, the company endorses the numbers, and the reader can trace the source. Cite the slide directly underneath. Legacy per-chart PNGs in `reports/charts/` from before 2026-06-03 can be reused in their original reports; do not regenerate them as Mermaid.
 
 ## Top-of-report banner — guidance changes (REQUIRED when present)
 
