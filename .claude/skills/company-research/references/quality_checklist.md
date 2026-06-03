@@ -109,7 +109,7 @@ See `investor_lenses.md` for the nine rubrics and verdict bands (four core 10.1�
 
 See `report_structure.md` → "Data Used" block for the format. Checks:
 
-- [ ] Manifest block sits between the last body section (Section 10 or Section 9) and the References block, in **both** the English and Chinese reports.
+- [ ] Manifest block sits between the last body section (Section 10 or Section 9) and the References block, in **every** report produced (Chinese by default; both Chinese and English when bilingual mode is on).
 - [ ] All five categories present: Primary filings · Investor-relations materials · Market data · Third-party research · Macro / cycle inputs (when Section 10 is included).
 - [ ] Each entry carries a publication or filing date.
 - [ ] **Stale notices / coverage gaps** subsection lists what couldn't be pulled or was older than 12 months, or explicitly states "none". A missing-or-empty stale-notices block is a defect — the inventory must acknowledge what isn't there.

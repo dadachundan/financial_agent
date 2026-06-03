@@ -1,6 +1,6 @@
 ---
 name: company-research
-description: Produce deep 6,000–10,000 word company research reports in both English AND Chinese (business, management, products, customers, industry, competitive landscape, TAM, risks) for a public or private company. Two separate markdown files are saved to `reports/company/<Company_Ticker>/` under the project root — one in English, one in Simplified Chinese. Use when the user asks to "research", "deep-dive", "profile", or "initiate coverage on" a specific company or ticker — e.g. "research Tesla", "deep dive on PLTR", "company research for SZSE:002050".
+description: Produce deep 6,000–10,000 word company research reports in Simplified Chinese by default (business, management, products, customers, industry, competitive landscape, TAM, risks) for a public or private company. The Chinese report keeps technical / industry / financial terms in English alongside their Chinese gloss (e.g. `gross margin (毛利率)`, `gate-all-around (GAA)`). An English-language report is produced ONLY when the user explicitly asks (`in English`, `English only`, `--lang en`, `--en-only`, `bilingual`, `also in English`). Output saved to `reports/company/<Company_Ticker>/` under the project root. Use when the user asks to "research", "deep-dive", "profile", or "initiate coverage on" a specific company or ticker — e.g. "research Tesla", "deep dive on PLTR", "company research for SZSE:002050".
 ---
 
 # Company Research
@@ -188,38 +188,51 @@ After Sections 1–9 establish the facts, named scoring rubrics give the reader 
 
 ## Report language
 
-**Default behavior: ALWAYS produce both English AND Simplified Chinese (zh-CN).** Never Traditional Chinese, Japanese, or Korean for the prose.
+**Default behavior: produce ONLY a Simplified Chinese (zh-CN) report.** Never Traditional Chinese, Japanese, or Korean for the prose. An English-language report is produced only when the user explicitly opts in.
 
-Each company gets **two separate, complete research reports** — one in English, one in Simplified Chinese. Both are produced in a single workflow run and saved to the same `reports/company/<Slug>/` folder.
+**Explicit user override (highest priority).** Honor any of these phrasings without asking:
 
-**Explicit user override (highest priority).** The user can request a single language only with any of these phrasings; honor it without asking:
-
-| User says | Override to single language |
+| User says | Output |
 |---|---|
-| `"... in English only"`, `"English report only"`, `"just English"`, `"--lang en"`, `"--en-only"` | English only (skip Chinese) |
-| `"... in Chinese only"`, `"用中文即可"`, `"只要中文"`, `"--lang zh"`, `"--zh-only"` | Simplified Chinese only (skip English) |
-| No override | **Both languages** (default — produce two separate report files) |
+| No override | **Simplified Chinese only** (default — one file: `<Slug>_公司研究.md`) |
+| `"... in Chinese only"`, `"用中文即可"`, `"只要中文"`, `"--lang zh"`, `"--zh-only"` | Same as default — Simplified Chinese only |
+| `"... in English"`, `"English report"`, `"English only"`, `"just English"`, `"--lang en"`, `"--en-only"` | English only (skip Chinese; one file: `<Slug>_Research_Document.md`) |
+| `"... in English and Chinese"`, `"both languages"`, `"bilingual"`, `"also in English"`, `"也出一份英文"`, `"加一份英文"` | Both languages — two separate files in the same folder |
 
 Examples:
-- `research SZSE:002050` → two files: English + Chinese
-- `research NVDA` → two files: English + Chinese
-- `research Tesla in English only` → English report only; skip Chinese
-- `research 比亚迪 用中文即可` → Chinese report only; skip English
-- `research 比亚迪` (no override) → two files: Chinese + English
+- `research SZSE:002050` → **one file: Chinese only** (default)
+- `research NVDA` → **one file: Chinese only** (default)
+- `research Tesla in English only` → English report only
+- `research 比亚迪 用中文即可` → Chinese report only (= default)
+- `research NVDA bilingual` / `research NVDA also in English` → two files: Chinese + English
+- `research NVDA in English and Chinese` → two files: Chinese + English
 
-**Bilingual mode (default) produces two complete, separate files in the same output folder**, not one interleaved document. Each file independently meets the 6,000–10,000 word target (Chinese counted in characters). Filenames follow the per-language convention (no date suffix — see the "Filenames" section below; **English / pinyin component is mandatory in both files**):
+**Single-language mode (default) produces one complete report file**, written natively in Chinese and independently meeting the 6,000–10,000 word target (counted in characters). Filename (no date suffix — see the "Filenames" section below; **English / pinyin component is mandatory**):
 
-- `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Research_Document.md` (English)
+- `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_公司研究.md` (Chinese, default)
+
+**Bilingual mode (only when the user opts in)** produces two complete, separate files in the same output folder — not one interleaved document. Each meets the 6,000–10,000 word target independently. The pair:
+
 - `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_公司研究.md` (Chinese)
+- `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Research_Document.md` (English)
 
-Both files share the same underlying research — citations, charts, data — but write the prose natively in each language; do not literal-translate one from the other. Each is a fully independent, high-quality report suitable for publication.
+Both files share the same underlying research — citations, charts, data — but write the prose natively in each language; do not literal-translate one from the other.
 
-**Bilingual technical terms (all Chinese reports — now the default):** since most sources you cite will be Chinese, but many technical / industry / regulatory terms originate in English (or have established English equivalents), **use both** on first mention and either thereafter. Examples:
-- `EV / 电动车`, `半导体 (semiconductor)`, `先进封装 (advanced packaging)`, `数据中心 GPU (data-center GPU)`, `OEM / ODM`, `Tier-1 供应商`, `毛利率 (gross margin)`, `自由现金流 (free cash flow)`, `专精特新 ("specialized, refined, distinctive, novel" — MIIT designation)`.
-- Keep ticker codes and acronyms in their original form: `SZSE:002050`, `H200`, `RMB`, `USD`, `bp`, `YoY`, `QoQ`.
-- Products & Services section (Section 4): use both language terms freely; see the dedicated section above for the bilingual gloss requirement (`**中文释义 / Plain-language gloss:**`).
+**Technical terms in Chinese reports — keep the English term alongside the Chinese gloss (MANDATORY).** Since most technical / industry / financial / regulatory terms originate in English (or have established English equivalents), the Chinese report **uses both languages**: English term first with the Chinese gloss in parentheses on first mention, then either form is fine thereafter. For specific named entities (products, ratings, indices, regulations), keep the English form throughout. Categories where this rule applies:
 
-**Chinese names in English reports:** Chinese companies (subject, competitor, customer, partner) may appear in their original Chinese form alongside an English / pinyin gloss on first mention, e.g. `安培龙 (Anpeilong, SZSE:002050)`, `比亚迪 (BYD)`, `宁德时代 (CATL)`. After first mention, either form is fine.
+- **Financial metrics:** `gross margin (毛利率)`, `operating margin (经营利润率)`, `free cash flow / FCF (自由现金流)`, `EBITDA`, `ROIC (投资回报率)`, `ROE`, `EV/EBITDA`, `P/E`, `P/S`, `P/B`, `working capital (营运资本)`, `CapEx (资本开支)`, `R&D (研发费用)`, `SG&A`.
+- **Industry / technical concepts:** `semiconductor (半导体)`, `advanced packaging (先进封装)`, `gate-all-around / GAA (栅极环绕)`, `high-bandwidth memory / HBM (高带宽内存)`, `wafer (晶圆)`, `foundry (晶圆代工)`, `data-center GPU (数据中心 GPU)`, `EV (电动车)`, `LFP / NMC battery (磷酸铁锂 / 三元电池)`, `BMS (电池管理系统)`, `Tier-1 supplier (一级供应商)`.
+- **Pharma / biotech:** `GLP-1 agonist (GLP-1 激动剂)`, `IND filing (新药临床试验申请)`, `Phase III trial (三期临床)`, `mAb (单克隆抗体)`.
+- **Software / SaaS:** `ARR (年度经常性收入)`, `NRR / NDR (净收入留存率)`, `CAC (获客成本)`, `LTV (用户终身价值)`, `churn (流失率)`, `multi-tenant (多租户)`.
+- **Corporate / governance / regulatory:** `OEM / ODM`, `SOE (国有企业)`, `RMB / USD`, `MIIT (工信部)`, `CSRC (证监会)`, `NDRC (发改委)`, `SAMR (市场监管总局)`, `Specialized & Sophisticated SME / 专精特新`, `bp / bps (基点)`, `YoY (同比)`, `QoQ (环比)`.
+- **Product names / ratings / indices stay in English throughout:** `H200`, `Blackwell`, `Sense.i®`, `ALTUS®`, `Buy/Hold/Sell`, `S&P 500`, `MSCI A50`, `CSI 300`, `Nasdaq-100`. Do not translate these.
+- **Ticker codes and acronyms stay in their original form:** `SZSE:002050`, `NASDAQ:NVDA`, `HKEX:9988`.
+
+The reason for keeping English alongside Chinese: most of the cited sources (10-K, IR decks, sell-side research, industry reports from Yole / Gartner / IDC) use the English terms — preserving them in the Chinese prose makes citations cross-checkable and prevents lossy translation of terms-of-art (e.g. translating `gross margin` as `毛利` vs `毛利率` matters; keeping `gross margin` removes the ambiguity).
+
+**Products & Services section (Section 4):** the bilingual gloss is even denser here. See the dedicated section above for the `**中文释义 / Plain-language gloss:**` requirement.
+
+**Chinese names in English reports (when bilingual mode is on):** Chinese companies (subject, competitor, customer, partner) may appear in their original Chinese form alongside an English / pinyin gloss on first mention, e.g. `安培龙 (Anpeilong, SZSE:002050)`, `比亚迪 (BYD)`, `宁德时代 (CATL)`. After first mention, either form is fine.
 
 **Direct quotations** stay in their original language regardless of the report's main language — add a short translation in parentheses only if the quote is load-bearing.
 
@@ -488,20 +501,18 @@ A report this length needs visual anchors. **Add 4–8 Mermaid diagrams** across
 
 **Every chart gets a citation right below it** — same markdown-link format as prose, e.g. `Source: [安培龙 2024 年度报告, 第 32 页](https://static.cninfo.com.cn/...)`. No chart without a source.
 
-### Step 9 — Synthesis and writing (produce both English and Chinese)
+### Step 9 — Synthesis and writing (Chinese by default; English only on explicit request)
 
-**Default: write two complete, independent reports — one in English, one in Simplified Chinese.**
+**Default: write ONE complete Simplified Chinese (zh-CN) report.** Only produce an English report if the user explicitly opted in (`in English`, `English only`, `bilingual`, `also in English`, etc. — see the override table in the "Report language" section). When bilingual mode is on, write two complete independent reports — one Chinese, one English.
 
 Read `references/report_structure.md` for the 9-section spec and full output template. Read `references/citations.md` before drafting — inline citations are required in every section, not just at the end.
 
 **Language-specific instructions:**
 
-- **English report** — full prose per the spec in `report_structure.md`. Standard business English, accessible to global equity investors. Preserve original-language titles for non-English companies / citations (e.g., `华为 Huawei`, `2024 年度报告`, `統合報告書`). Bilingual technical terms where helpful (e.g., `advanced packaging (先进封装)`, `design-rule call (DRC, 规则检查)`), but bilingualism is optional in English prose — what matters is clarity for English readers.
-- **Chinese report** — full prose in Simplified Chinese (zh-CN). Write as if for Chinese investors. Use **bilingual technical terms** per the rule above (English / Chinese gloss on first mention). Section headers in Chinese (公司概览, 产品与服务, etc.). Bilingual terms are MANDATORY in Chinese, not optional.
+- **Chinese report (default and primary)** — full prose in Simplified Chinese (zh-CN). Write as if for Chinese investors. Section headers in Chinese (公司概览, 产品与服务, etc.). **Bilingual technical terms are MANDATORY** per the rule in the "Report language" section above: financial metrics, industry terms, regulatory bodies, product names, ratings, and indices keep the English form alongside the Chinese gloss on first mention (e.g. `gross margin (毛利率)`, `gate-all-around / GAA (栅极环绕)`, `MIIT (工信部)`), and product names / index names / rating labels stay in English throughout (e.g. `H200`, `S&P 500`, `Buy/Hold/Sell`).
+- **English report (opt-in only)** — full prose per the spec in `report_structure.md`. Standard business English, accessible to global equity investors. Preserve original-language titles for non-English companies / citations (e.g., `华为 Huawei`, `2024 年度报告`, `統合報告書`). Bilingual technical terms where helpful (e.g., `advanced packaging (先进封装)`, `design-rule check (DRC, 规则检查)`), but bilingualism is optional in English prose — what matters is clarity for English readers.
 
-Both reports share the same underlying data, charts, citations — but each is written natively in its own language and grammar, not a literal translation of the other. A Chinese reader should find the Chinese report as natural and fluent as an English reader finds the English report.
-
-**If the user overrides to a single language**, produce only that one report and skip the other language entirely.
+In bilingual mode, both reports share the same underlying data, charts, citations — but each is written natively in its own language and grammar, not a literal translation of the other. A Chinese reader should find the Chinese report as natural and fluent as an English reader finds the English report.
 
 ### Step 9.5 — Apply investor-lens scorecards (optional Section 10)
 
@@ -526,7 +537,7 @@ Skip this step if the user said `no lens scorecards` / `skip Section 10` / simil
 - Inventing specific market-share percentages and segment-revenue splits
 - Inventing executive names and management-transition details
 
-Step 10 catches these before the report ships. **Run verification for BOTH the English and Chinese reports** (or just the one language if the user overrode to a single language). **Skip Step 10 only if the user has explicitly waived it.**
+Step 10 catches these before the report ships. **Run verification on every report file produced** (default: the Chinese report; bilingual mode: both Chinese and English). **Skip Step 10 only if the user has explicitly waived it.**
 
 #### 10.1 — Verify every URL resolves
 
@@ -619,7 +630,7 @@ Before declaring done, confirm each line:
 
 #### 10.6 — Append a verification log to each report
 
-After the References section in **both the English and Chinese reports**, append a `<details>` block listing what was checked. This makes verification visible to the reader and forces honesty about residual unknowns. The logs may differ slightly (e.g., different filings checked per language) but follow the same structure:
+After the References section in **every report produced** (the Chinese report by default; both Chinese and English in bilingual mode), append a `<details>` block listing what was checked. This makes verification visible to the reader and forces honesty about residual unknowns. The logs may differ slightly between languages (e.g., different filings checked) but follow the same structure:
 
 ```markdown
 <details>
@@ -646,7 +657,7 @@ After the References section in **both the English and Chinese reports**, append
 </details>
 ```
 
-If the log shows residual unknowns the user cares about, fix them before declaring done. Both reports should be verified and signed off before final submission.
+If the log shows residual unknowns the user cares about, fix them before declaring done. Every report produced (Chinese always; English when bilingual) must be verified and signed off before final submission.
 
 ---
 
@@ -685,7 +696,7 @@ Always write under the main project's `reports/` directory — never to a worktr
 
 Reports under `reports/` are checked into git and are meant to be living documents. **Before writing, check whether research docs for this company already exist** in `reports/company/<Slug>/`, and update them in place rather than creating parallel copies.
 
-**Default behavior: produce both English and Chinese files.** Before starting, check for existing files — **case-insensitively, matched on the ticker**, because folder casing is inconsistent in this repo (e.g. the XPeng report lives at `Xpeng_NYSE_XPEV/`, not `XPeng_…`) and a case-sensitive `<Slug>` path will miss a real hit and trigger a wasteful regeneration:
+**Default behavior: produce ONE Chinese file** (`<Slug>_公司研究.md`). Produce an English file only when the user explicitly opted in (`in English`, `English only`, `bilingual`, `also in English`, etc.). Before starting, check for existing files — **case-insensitively, matched on the ticker**, because folder casing is inconsistent in this repo (e.g. the XPeng report lives at `Xpeng_NYSE_XPEV/`, not `XPeng_…`) and a case-sensitive `<Slug>` path will miss a real hit and trigger a wasteful regeneration:
 
 ```bash
 # First find the slug folder by ticker (case-insensitive), then list inside it.
@@ -696,10 +707,10 @@ ls "reports/company/<exact-folder-printed-above>/" 2>/dev/null \
 
 Note the Chinese edition may be named `<Slug>_公司研究.md` (this skill's default) **or** `<Slug>_Research_Document_zh.md` (English-template name + `_zh`); the `grep -iE` above matches both. Match on the ticker, not the naming convention.
 
-For **each language you're generating** (English + Chinese by default, or just one if the user overrides):
+For **each language you're generating** (Chinese by default; Chinese + English when bilingual mode is on):
 
 - **Exactly one existing match for this language** → overwrite it at the same path. Update the document's internal "as of" date header to today; git history records the actual revision dates.
-- **Multiple matches for the same language** (legacy state — old dated copies from before this rule) → consolidate into the canonical no-date filename (`<Slug>_Research_Document.md` for EN, `<Slug>_公司研究.md` for ZH), updating the most recent one and listing the older duplicates so the user can confirm deletion. Do not auto-delete.
+- **Multiple matches for the same language** (legacy state — old dated copies from before this rule) → consolidate into the canonical no-date filename (`<Slug>_公司研究.md` for ZH, `<Slug>_Research_Document.md` for EN), updating the most recent one and listing the older duplicates so the user can confirm deletion. Do not auto-delete.
 - **Zero matches** → create a new file at the canonical no-date path. Do **not** add a `_YYYY-MM-DD` suffix to the filename.
 
-EN and ZH editions are separate files — one of each per company is normal, sharing the same slug folder. After writing both, print the final paths so the user can confirm whether each was an update or a fresh create.
+**An existing English-language file from a prior run is NOT a trigger to refresh it.** If the user asks for "research X" today (no English opt-in), produce / refresh only the Chinese file — leave any pre-existing English file untouched, unless the user explicitly says `also refresh English` / `update bilingual` / `also in English`. Print the final path of every file produced so the user can confirm whether each was an update or a fresh create.

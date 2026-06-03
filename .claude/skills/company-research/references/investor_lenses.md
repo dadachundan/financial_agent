@@ -408,7 +408,7 @@ Each optional lens is ~150–250 words in the report and follows the same verdic
 
 - Pull the indicator snapshot once at the top of Section 10 and reference it across all included lenses (`indicators.db` snapshot as of YYYY-MM-DD: VIX = `__`, 10Y Treasury = `__`, HY OAS = `__`).
 - The cycle posture (10.4) should be **computed first** because it gates the verdicts in lenses 10.1–10.3 (and 10.8 Druckenmiller) — a defensive cycle should mute "Bullish" verdicts in the company-specific lenses (note the disagreement explicitly).
-- Place the section between Section 9 Risk Assessment and the References block in both the English and Chinese reports — same lenses, two natively-written prose passes (not a literal translation).
+- Place the section between Section 9 Risk Assessment and the References block in every report produced (the Chinese report by default; the English report too when bilingual mode is on) — same lenses, natively-written prose in each language (not a literal translation).
 - **Section 10 word count by lens count:**
   - **Core only (10.1–10.4)**: 600–1,000 words total (~150–250 per lens). Default.
   - **Core + 1 optional pack lens**: 750–1,250 words.
