@@ -374,6 +374,8 @@ _INDEX_TMPL = r"""<!doctype html>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css">
 __MCW_HEAD__
   <style>
 __MCW_CSS__
@@ -454,6 +456,24 @@ __MCW_CSS__
     body.show-extra-cols .col-extra{display:table-cell}
     /* With extras hidden, the table no longer needs the 1100px floor. */
     body:not(.show-extra-cols) .page table{min-width:auto}
+    /* Date range slider — light-theme styling that matches the toolbar. */
+    .date-slider-row{background:#fff;border:1px solid #e3e6eb;border-radius:8px;
+         padding:.5rem .9rem .65rem;margin:.6rem 0 .9rem;
+         box-shadow:0 1px 2px rgba(0,0,0,.03)}
+    .date-slider-row .ds-head{display:flex;justify-content:space-between;align-items:center;
+         font-size:.78rem;color:#5a5f66;margin-bottom:.55rem}
+    .date-slider-row .ds-label{font-weight:600;letter-spacing:.02em;text-transform:uppercase}
+    .date-slider-row .ds-val{color:#1f4e78;font-weight:600;font-variant-numeric:tabular-nums}
+    #dateSlider{margin:.4rem .35rem .15rem}
+    /* noUiSlider light-theme overrides */
+    .noUi-target{background:#e3e6eb;border:none;box-shadow:none;height:4px}
+    .noUi-connect{background:#0366d6}
+    .noUi-handle{background:#fff;border:none;
+         box-shadow:0 0 0 2px #0366d6, 0 1px 3px rgba(0,0,0,.18);
+         border-radius:50%;width:15px !important;height:15px !important;
+         top:-6px !important;right:-7px !important;cursor:pointer}
+    .noUi-handle:before,.noUi-handle:after{display:none}
+    .noUi-handle:focus{outline:none;box-shadow:0 0 0 3px #0366d6, 0 1px 3px rgba(0,0,0,.18)}
   </style>
 </head>
 <body>
@@ -468,6 +488,14 @@ __URLPATCH__
     </h1>
     <div class="subtitle">Filter by sector, search by company/ticker, or click any column to sort.</div>
     {% if rows %}
+    <div class="date-slider-row" id="dateSliderRow">
+      <div class="ds-head">
+        <span>From <span id="dateMin" class="ds-val">--</span></span>
+        <span class="ds-label">📅 Created-date range</span>
+        <span>To <span id="dateMax" class="ds-val">--</span></span>
+      </div>
+      <div id="dateSlider"></div>
+    </div>
     <div class="toolbar">
       <input id="filter" type="search" placeholder="Filter by company, ticker, or filename…" autofocus>
       <select id="sectorFilter" title="Filter by sector">
@@ -587,6 +615,7 @@ __URLPATCH__
     {% endif %}
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js"></script>
   <script>
     (function() {
       const grid = document.getElementById("grid");
@@ -600,6 +629,56 @@ __URLPATCH__
       const showUnrated  = document.getElementById("showUnrated");
       const resetBtn = document.getElementById("resetBtn");
       const count = document.getElementById("count");
+
+      // ── Date range slider (Created column) ─────────────────────────────
+      // Each row carries data-ts (Unix seconds, float). Build the slider
+      // bounds from the row population so it always matches the actual
+      // data on screen.
+      const ONE_DAY_SEC = 86400;
+      const dateSliderEl = document.getElementById("dateSlider");
+      const dateMinEl = document.getElementById("dateMin");
+      const dateMaxEl = document.getElementById("dateMax");
+      const allTs = rows
+        .map(r => parseFloat(r.dataset.ts))
+        .filter(t => !isNaN(t) && t > 0);
+      let minTs = 0, maxTs = 0;
+      let currentMinTs = 0, currentMaxTs = Number.POSITIVE_INFINITY;
+      function fmtDay(t) {
+        const d = new Date(t * 1000);
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, "0");
+        const dd = String(d.getDate()).padStart(2, "0");
+        return y + "-" + m + "-" + dd;
+      }
+      if (allTs.length > 0 && typeof noUiSlider !== "undefined") {
+        minTs = Math.floor(Math.min.apply(null, allTs));
+        maxTs = Math.ceil(Math.max.apply(null, allTs));
+        if (minTs === maxTs) { maxTs = minTs + ONE_DAY_SEC; }
+        currentMinTs = minTs;
+        currentMaxTs = maxTs;
+        noUiSlider.create(dateSliderEl, {
+          start: [minTs, maxTs],
+          connect: true,
+          range: { min: minTs, max: maxTs },
+          step: ONE_DAY_SEC,
+          format: {
+            to:   v => v,
+            from: v => Number(v),
+          },
+        });
+        dateSliderEl.noUiSlider.on("update", values => {
+          currentMinTs = parseFloat(values[0]);
+          currentMaxTs = parseFloat(values[1]);
+          dateMinEl.textContent = fmtDay(currentMinTs);
+          dateMaxEl.textContent = fmtDay(currentMaxTs);
+          applyFilter();
+        });
+      } else {
+        // Hide the slider row entirely if the rows have no usable timestamps
+        // or noUiSlider failed to load (e.g. offline).
+        const row = document.getElementById("dateSliderRow");
+        if (row) row.style.display = "none";
+      }
 
       function applyFilter() {
         const q  = (filter.value || "").trim().toLowerCase();
@@ -617,13 +696,19 @@ __URLPATCH__
           const hay = r.dataset.display + " " + r.dataset.ticker + " " + r.dataset.filename;
           const rowSector = r.dataset.sector || "";
           const rowRating = parseInt(r.dataset.rating) || 0;
+          const rowTs = parseFloat(r.dataset.ts);
           const matchQ  = !q || hay.includes(q);
           const matchS  = !s || (s === "__none__" ? rowSector === "" : rowSector === s);
           const matchT  = !tkVal || r.dataset.kind === tkVal;
           const matchR  = minRating === 0
             ? true
             : (rowRating >= minRating || (rowRating === 0 && includeUnrated));
-          const show = matchQ && matchS && matchT && matchR;
+          // Date filter: rows with no timestamp pass through (shouldn't
+          // happen — every row has one — but be defensive).
+          const matchD  = isNaN(rowTs)
+            ? true
+            : (rowTs >= currentMinTs && rowTs <= currentMaxTs + ONE_DAY_SEC);
+          const show = matchQ && matchS && matchT && matchR && matchD;
           r.style.display = show ? "" : "none";
           if (show) visible++;
         }
@@ -640,6 +725,9 @@ __URLPATCH__
         bucketFilter.value = "";
         ratingFilter.value = "3";
         showUnrated.checked = true;
+        if (dateSliderEl && dateSliderEl.noUiSlider) {
+          dateSliderEl.noUiSlider.set([minTs, maxTs]);
+        }
         applyFilter();
       });
 
