@@ -51,6 +51,16 @@
   .avg-pt .n { color:#9ca3af; font-weight:400; font-size:.7rem; margin-left:3px; }
   tbody tr.group-alt { background:rgba(255,255,255,.025); }
   tbody tr.group-first td { border-top:1px solid rgba(125,211,252,.25); }
+
+  /* Pager */
+  .pager { background:#23272b; padding:6px 12px; border-radius:6px; margin-bottom:8px; display:flex; gap:10px; align-items:center; font-size:.8rem; flex-wrap:wrap; }
+  .pager button { background:#0d6efd; color:#fff; border:none; padding:3px 12px; border-radius:4px; cursor:pointer; font-size:.8rem; }
+  .pager button:hover:not(:disabled) { background:#0b5ed7; }
+  .pager button:disabled { opacity:.35; cursor:not-allowed; }
+  .pager select { background:#1a1d20; color:#e9ecef; border:1px solid #3a3f44; padding:3px 8px; border-radius:4px; font-size:.8rem; }
+  .pager .info { color:#9ca3af; font-variant-numeric:tabular-nums; }
+  .pager .info strong { color:#e9ecef; }
+  .loading-cell { text-align:center; padding:30px; color:#9ca3af; }
 </style>
 </head>
 <body>
@@ -81,7 +91,23 @@
     </div>
   </div>
 
-  <div class="table-responsive" style="max-height:calc(100vh - 200px);">
+  <div class="pager">
+    <button id="page-prev" type="button">◀ Prev</button>
+    <button id="page-next" type="button">Next ▶</button>
+    <span class="info" id="page-info">—</span>
+    <span style="flex:1 1 auto"></span>
+    <label class="info">Page size:
+      <select id="page-size">
+        <option value="50">50</option>
+        <option value="100" selected>100</option>
+        <option value="200">200</option>
+        <option value="500">500</option>
+        <option value="1000">1000</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="table-responsive" style="max-height:calc(100vh - 240px);">
     <table class="table table-dark table-hover table-sm align-middle" id="pt">
       <thead>
         <tr>
@@ -101,59 +127,7 @@
         </tr>
       </thead>
       <tbody>
-        {% for r in rows %}
-        <tr data-ticker="{{ r.company_ticker }}"
-            data-pt="{{ r.price_target if r.price_target is not none else '' }}"
-            data-ccy="{{ r.target_currency or '' }}"
-            data-date="{{ r.report_date or '' }}">
-          <td>{{ r.report_date or '' }}</td>
-          <td><strong>{{ r.company_ticker }}</strong></td>
-          <td>{{ r.company_name }}</td>
-          <td><span class="sector-pill">{{ r.sector or '' }}</span></td>
-          <td>{{ r.research_institute }}</td>
-          <td>
-            {% if r.rating %}
-              {% set rl = r.rating|lower %}
-              {% if 'buy' in rl %}<span class="rating-pill rating-buy">{{ r.rating }}</span>
-              {% elif 'outperform' in rl %}<span class="rating-pill rating-outperform">{{ r.rating }}</span>
-              {% elif 'overweight' in rl %}<span class="rating-pill rating-overweight">{{ r.rating }}</span>
-              {% elif 'top pick' in rl %}<span class="rating-pill rating-toppick">{{ r.rating }}</span>
-              {% elif 'neutral' in rl %}<span class="rating-pill rating-neutral">{{ r.rating }}</span>
-              {% elif 'market-perform' in rl %}<span class="rating-pill rating-mp">{{ r.rating }}</span>
-              {% elif 'equal' in rl %}<span class="rating-pill rating-equal">{{ r.rating }}</span>
-              {% elif 'underweight' in rl %}<span class="rating-pill rating-uw">{{ r.rating }}</span>
-              {% elif 'underperform' in rl %}<span class="rating-pill rating-up">{{ r.rating }}</span>
-              {% elif 'sell' in rl %}<span class="rating-pill rating-sell">{{ r.rating }}</span>
-              {% else %}<span class="rating-pill rating-neutral">{{ r.rating }}</span>{% endif %}
-            {% endif %}
-          </td>
-          <td class="num">
-            {% if r.price_target is not none %}{{ '%.2f' % r.price_target }}<span class="ccy">{{ r.target_currency or '' }}</span>{% endif %}
-          </td>
-          <td class="num avg-pt"></td>
-          <td class="num">
-            {% if r.report_date_price is not none %}{{ '%.2f' % r.report_date_price }}<span class="ccy">{{ r.price_currency or r.target_currency or '' }}</span>{% endif %}
-          </td>
-          <td class="num {% if r.upside_pct and r.upside_pct > 0 %}up{% elif r.upside_pct and r.upside_pct < 0 %}down{% endif %}">
-            {% if r.upside_pct is not none %}{{ '%+.1f%%' % r.upside_pct }}{% endif %}
-          </td>
-          <td class="num">
-            {% if r.report_date_market_cap %}
-              {% if r.report_date_market_cap >= 1e12 %}{{ '%.1fT' % (r.report_date_market_cap / 1e12) }}
-              {% elif r.report_date_market_cap >= 1e9 %}{{ '%.1fB' % (r.report_date_market_cap / 1e9) }}
-              {% else %}{{ '%.0fM' % (r.report_date_market_cap / 1e6) }}{% endif %}<span class="ccy">{{ r.price_currency or '' }}</span>
-            {% endif %}
-          </td>
-          <td class="catalyst">{{ r.catalyst or '' }}</td>
-          <td>
-            {% if r.report_file_id %}
-              <a class="report-link" href="/zsxq/pdf-viewer/{{ r.report_file_id }}" target="_blank" title="{{ r.report_pdf_filename }}">
-                {{ (r.report_pdf_filename or ('file_id ' + r.report_file_id|string))[:48] }}{% if r.report_pdf_filename and r.report_pdf_filename|length > 48 %}…{% endif %}
-              </a>
-            {% endif %}
-          </td>
-        </tr>
-        {% endfor %}
+        <tr><td colspan="13" class="loading-cell">Loading…</td></tr>
       </tbody>
     </table>
   </div>
@@ -161,125 +135,287 @@
 
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js"></script>
 <script>
+// Client-side paginated viewer. We fetch the full row set once as JSON
+// (~3.8 MB for ~5k rows — half the HTML payload) and render only the
+// current page (default 100 rows). Filter / sort / slider only touch the
+// in-memory array, so even a 5k+ dataset stays interactive — the previous
+// server-rendered version detached/reattached 5k <tr>s on every filter
+// keystroke and that single op cost ~4.6s.
 (function(){
-  var tbody  = document.querySelector('#pt tbody');
-  var rows   = Array.from(tbody.querySelectorAll('tr'));
-  var filter = document.getElementById('filter');
-  var countEl = document.getElementById('count');
-  var upBuyEl = document.getElementById('upBuy');
-  var upSellEl= document.getElementById('upSell');
+  var tbody    = document.querySelector('#pt tbody');
+  var filter   = document.getElementById('filter');
+  var countEl  = document.getElementById('count');
+  var upBuyEl  = document.getElementById('upBuy');
+  var upSellEl = document.getElementById('upSell');
   var tickerCountEl = document.getElementById('tickerCount');
   var dateMinEl = document.getElementById('date-min');
   var dateMaxEl = document.getElementById('date-max');
   var sliderEl  = document.getElementById('date-slider');
+  var pagePrev  = document.getElementById('page-prev');
+  var pageNext  = document.getElementById('page-next');
+  var pageInfo  = document.getElementById('page-info');
+  var pageSizeSel = document.getElementById('page-size');
 
   var ONE_DAY = 86400000;
+  var NUM_KEYS = ['price_target','avg_pt','report_date_price','upside_pct','report_date_market_cap'];
 
-  function parseDate(s){
-    if(!s) return NaN;
-    // Date.parse on "YYYY-MM-DD" treats it as UTC midnight
-    var t = Date.parse(s);
-    return isNaN(t) ? NaN : t;
-  }
+  var STATE = {
+    all: [],            // every row from server, untouched
+    visible: [],        // after date+text filter, sorted, ticker-grouped
+    perTickerStats: {}, // ticker → {sum,n,ccyCount} (uses date-filtered only)
+    sortKey: 'report_date',
+    sortDir: 'desc',
+    minTs: 0, maxTs: 0,
+    curMinTs: 0, curMaxTs: 0,
+    page: 0,
+    pageSize: parseInt(pageSizeSel.value, 10) || 100,
+  };
+
+  function parseDate(s){ if(!s) return NaN; var t = Date.parse(s); return isNaN(t) ? NaN : t; }
   function fmtDate(t){
     var d = new Date(t);
-    var y = d.getUTCFullYear();
-    var m = String(d.getUTCMonth()+1).padStart(2,'0');
-    var dd = String(d.getUTCDate()).padStart(2,'0');
-    return y + '-' + m + '-' + dd;
+    return d.getUTCFullYear() + '-' +
+      String(d.getUTCMonth()+1).padStart(2,'0') + '-' +
+      String(d.getUTCDate()).padStart(2,'0');
+  }
+  function esc(s){
+    if (s == null) return '';
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  function fmtNum(n, prec){
+    if (n == null) return '';
+    var p = prec == null ? 2 : prec;
+    return Number(n).toFixed(p);
+  }
+  function fmtMktCap(n){
+    if (!n) return '';
+    if (n >= 1e12) return (n/1e12).toFixed(1) + 'T';
+    if (n >= 1e9)  return (n/1e9).toFixed(1) + 'B';
+    return (n/1e6).toFixed(0) + 'M';
+  }
+  function ratingClass(rating){
+    if (!rating) return '';
+    var rl = rating.toLowerCase();
+    if (rl.indexOf('buy') >= 0)         return 'rating-buy';
+    if (rl.indexOf('outperform') >= 0)  return 'rating-outperform';
+    if (rl.indexOf('overweight') >= 0)  return 'rating-overweight';
+    if (rl.indexOf('top pick') >= 0)    return 'rating-toppick';
+    if (rl.indexOf('market-perform')>=0)return 'rating-mp';
+    if (rl.indexOf('equal') >= 0)       return 'rating-equal';
+    if (rl.indexOf('underweight') >= 0) return 'rating-uw';
+    if (rl.indexOf('underperform') >= 0)return 'rating-up';
+    if (rl.indexOf('sell') >= 0)        return 'rating-sell';
+    if (rl.indexOf('neutral') >= 0)     return 'rating-neutral';
+    return 'rating-neutral';
+  }
+  function searchText(r){
+    // Cached on the row object; rebuilt on first access only.
+    if (r._search != null) return r._search;
+    r._search = [
+      r.company_ticker, r.company_name, r.research_institute,
+      r.rating, r.sector, r.report_pdf_filename, r.catalyst
+    ].filter(Boolean).join(' ').toLowerCase();
+    return r._search;
   }
 
-  // ---- Date slider ----
-  var allDates = rows.map(function(r){ return parseDate(r.dataset.date); }).filter(function(t){ return !isNaN(t); });
-  var minTs, maxTs;
-  if(allDates.length === 0){
-    sliderEl.parentElement.style.display = 'none';
-    minTs = -Infinity; maxTs = Infinity;
-  } else {
-    minTs = Math.min.apply(null, allDates);
-    maxTs = Math.max.apply(null, allDates);
-    if(minTs === maxTs){ maxTs = minTs + ONE_DAY; }   // noUiSlider needs min<max
+  function rowHtml(r){
+    var ratingPill = r.rating
+      ? '<span class="rating-pill ' + ratingClass(r.rating) + '">' + esc(r.rating) + '</span>'
+      : '';
+    var ptCell = r.price_target != null
+      ? fmtNum(r.price_target, 2) + '<span class="ccy">' + esc(r.target_currency || '') + '</span>'
+      : '';
+    var avgPtCell = '';
+    if (r._avgPt != null) {
+      avgPtCell = fmtNum(r._avgPt, 2)
+        + '<span class="ccy">' + esc(r._avgPtCcy || '') + '</span>'
+        + (r._avgPtSuffix || '');
+    }
+    var pxCell = r.report_date_price != null
+      ? fmtNum(r.report_date_price, 2) + '<span class="ccy">' + esc(r.price_currency || r.target_currency || '') + '</span>'
+      : '';
+    var upsideClass = '';
+    var upsideTxt = '';
+    if (r.upside_pct != null) {
+      upsideClass = r.upside_pct > 0 ? 'up' : (r.upside_pct < 0 ? 'down' : '');
+      upsideTxt = (r.upside_pct > 0 ? '+' : '') + Number(r.upside_pct).toFixed(1) + '%';
+    }
+    var mktCapCell = r.report_date_market_cap
+      ? fmtMktCap(r.report_date_market_cap) + '<span class="ccy">' + esc(r.price_currency || '') + '</span>'
+      : '';
+    var pdfCell = '';
+    if (r.report_file_id) {
+      var name = r.report_pdf_filename || ('file_id ' + r.report_file_id);
+      var short = name.length > 48 ? name.substring(0, 48) + '…' : name;
+      pdfCell = '<a class="report-link" href="/zsxq/pdf-viewer/' + esc(r.report_file_id) + '" target="_blank" title="' + esc(r.report_pdf_filename || '') + '">' + esc(short) + '</a>';
+    }
+    var rowClasses = [];
+    if (r._alt) rowClasses.push('group-alt');
+    if (r._isFirst) rowClasses.push('group-first');
+
+    return '<tr' + (rowClasses.length ? ' class="' + rowClasses.join(' ') + '"' : '') + '>'
+      + '<td>' + esc(r.report_date || '') + '</td>'
+      + '<td><strong>' + esc(r.company_ticker) + '</strong></td>'
+      + '<td>' + esc(r.company_name || '') + '</td>'
+      + '<td><span class="sector-pill">' + esc(r.sector || '') + '</span></td>'
+      + '<td>' + esc(r.research_institute || '') + '</td>'
+      + '<td>' + ratingPill + '</td>'
+      + '<td class="num">' + ptCell + '</td>'
+      + '<td class="num avg-pt">' + avgPtCell + '</td>'
+      + '<td class="num">' + pxCell + '</td>'
+      + '<td class="num ' + upsideClass + '">' + upsideTxt + '</td>'
+      + '<td class="num">' + mktCapCell + '</td>'
+      + '<td class="catalyst">' + esc(r.catalyst || '') + '</td>'
+      + '<td>' + pdfCell + '</td>'
+      + '</tr>';
   }
 
-  var currentMinTs = minTs;
-  var currentMaxTs = maxTs;
-
-  if(allDates.length){
-    noUiSlider.create(sliderEl, {
-      start: [minTs, maxTs],
-      connect: true,
-      range: { min: minTs, max: maxTs },
-      step: ONE_DAY,
-      format: {
-        to:   function(v){ return v; },
-        from: function(v){ return Number(v); }
+  function sortRows(arr){
+    var key = STATE.sortKey, dir = STATE.sortDir;
+    var isNum = NUM_KEYS.indexOf(key) >= 0;
+    arr.sort(function(a, b){
+      var av, bv;
+      if (key === 'avg_pt') {
+        var sa = STATE.perTickerStats[a.company_ticker];
+        var sb = STATE.perTickerStats[b.company_ticker];
+        av = sa && sa.n ? sa.sum / sa.n : null;
+        bv = sb && sb.n ? sb.sum / sb.n : null;
+      } else {
+        av = a[key]; bv = b[key];
       }
-    });
-    sliderEl.noUiSlider.on('update', function(values){
-      currentMinTs = parseFloat(values[0]);
-      currentMaxTs = parseFloat(values[1]);
-      dateMinEl.textContent = fmtDate(currentMinTs);
-      dateMaxEl.textContent = fmtDate(currentMaxTs);
-      applyFilters();
+      if (isNum) {
+        if (av == null || isNaN(av)) av = dir === 'asc' ? Infinity : -Infinity;
+        if (bv == null || isNaN(bv)) bv = dir === 'asc' ? Infinity : -Infinity;
+        return dir === 'asc' ? av - bv : bv - av;
+      }
+      av = av == null ? '' : String(av);
+      bv = bv == null ? '' : String(bv);
+      return dir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av);
     });
   }
 
-  // ---- Filter + Avg PT ----
-  function dateInRange(r){
-    var t = parseDate(r.dataset.date);
-    if(isNaN(t)) return true;
-    return t >= currentMinTs && t <= currentMaxTs;
-  }
-  function textOk(r){
+  function recompute(){
+    var minTs = STATE.curMinTs, maxTs = STATE.curMaxTs;
     var q = filter.value.trim().toLowerCase();
-    if(!q) return true;
-    var tokens = q.split(/\s+/);
-    var txt = r.innerText.toLowerCase();
-    return tokens.every(function(t){ return txt.includes(t); });
-  }
+    var tokens = q ? q.split(/\s+/) : [];
 
-  var perTickerStats = {};   // {ticker: {sum, n, ccyCount}} — recomputed on date / text filter
-
-  function applyFilters(){
-    // Visibility: date filter AND text filter must both pass
-    rows.forEach(function(r){
-      var dOk = dateInRange(r);
-      var tOk = textOk(r);
-      r.dataset.dateOk = dOk ? '1' : '0';
-      r.style.display = (dOk && tOk) ? '' : 'none';
+    // 1. Date filter — used both for visibility and stats.
+    var dateFiltered = STATE.all.filter(function(r){
+      var t = parseDate(r.report_date);
+      if (isNaN(t)) return true;
+      return t >= minTs && t <= maxTs;
     });
 
-    // Compute avg PT per ticker using only date-filtered rows
-    // (text filter is for narrowing the view, not the consensus calc).
-    perTickerStats = {};
-    rows.forEach(function(r){
-      if(r.dataset.dateOk !== '1') return;
-      var t   = r.dataset.ticker;
-      var pt  = parseFloat(r.dataset.pt);
-      var ccy = r.dataset.ccy || '';
-      if(!t || isNaN(pt)) return;
-      if(!perTickerStats[t]) perTickerStats[t] = { sum:0, n:0, ccyCount:{} };
-      perTickerStats[t].sum += pt;
-      perTickerStats[t].n   += 1;
-      perTickerStats[t].ccyCount[ccy] = (perTickerStats[t].ccyCount[ccy] || 0) + 1;
+    // 2. Stats from date-filtered rows ONLY (text filter narrows display,
+    //    not the consensus calc).
+    STATE.perTickerStats = {};
+    dateFiltered.forEach(function(r){
+      var pt = r.price_target;
+      var ticker = r.company_ticker;
+      if (!ticker || pt == null) return;
+      var s = STATE.perTickerStats[ticker];
+      if (!s) { s = { sum:0, n:0, ccyCount:{} }; STATE.perTickerStats[ticker] = s; }
+      s.sum += pt; s.n += 1;
+      var ccy = r.target_currency || '';
+      s.ccyCount[ccy] = (s.ccyCount[ccy] || 0) + 1;
     });
 
-    // Actual cell painting happens in regroupAndPaint() — the "k/n"
-    // numerator must be assigned in the final grouped+sorted order.
-    regroupAndPaint();
+    // 3. Text filter applied on top.
+    var shown = tokens.length === 0 ? dateFiltered.slice() : dateFiltered.filter(function(r){
+      var txt = searchText(r);
+      return tokens.every(function(t){ return txt.indexOf(t) >= 0; });
+    });
+
+    // 4. Sort.
+    sortRows(shown);
+
+    // 5. Group by ticker (preserve sort order; ticker order = first-seen).
+    var groups = new Map();
+    shown.forEach(function(r){
+      var t = r.company_ticker || '';
+      if (!groups.has(t)) groups.set(t, []);
+      groups.get(t).push(r);
+    });
+
+    STATE.visible = [];
+    var bandIdx = 0;
+    groups.forEach(function(arr, ticker){
+      var alt = (bandIdx % 2 === 1);
+      var s = STATE.perTickerStats[ticker];
+      var avg = s && s.n ? (s.sum / s.n) : null;
+      var majCcy = '';
+      if (s && s.n) {
+        var ccys = Object.keys(s.ccyCount);
+        ccys.sort(function(a, b){ return s.ccyCount[b] - s.ccyCount[a]; });
+        majCcy = ccys[0] || '';
+      }
+      var ptIdx = 0;
+      arr.forEach(function(r, i){
+        r._alt = alt;
+        r._isFirst = (i === 0);
+        r._avgPt = avg;
+        r._avgPtCcy = majCcy;
+        if (s && s.n > 1) {
+          if (r.price_target != null) {
+            ptIdx++;
+            r._avgPtSuffix = '<span class="n">' + ptIdx + '/' + s.n + '</span>';
+          } else {
+            r._avgPtSuffix = '<span class="n">·' + s.n + '</span>';
+          }
+        } else {
+          r._avgPtSuffix = '';
+        }
+        STATE.visible.push(r);
+      });
+      bandIdx++;
+    });
+
+    // Sort/filter changed → reset page.
+    STATE.page = 0;
+    renderPage();
     updateCounts();
   }
 
+  function renderPage(){
+    var total = STATE.visible.length;
+    var totalPages = Math.max(1, Math.ceil(total / STATE.pageSize));
+    if (STATE.page >= totalPages) STATE.page = totalPages - 1;
+    if (STATE.page < 0) STATE.page = 0;
+    var start = STATE.page * STATE.pageSize;
+    var slice = STATE.visible.slice(start, start + STATE.pageSize);
+
+    // Build the whole tbody as one HTML string then assign once. innerHTML
+    // is by far the cheapest way to mass-replace rows (browser parses it
+    // in C++, no per-node JS overhead).
+    tbody.innerHTML = slice.length
+      ? slice.map(rowHtml).join('')
+      : '<tr><td colspan="13" class="loading-cell">No rows match the current filter.</td></tr>';
+
+    pageInfo.innerHTML = total === 0
+      ? '<strong>0</strong> rows'
+      : 'Page <strong>' + (STATE.page + 1) + '</strong> / ' + totalPages
+        + ' · showing ' + (start + 1) + '–' + (start + slice.length)
+        + ' of <strong>' + total + '</strong>';
+    pagePrev.disabled = STATE.page === 0;
+    pageNext.disabled = STATE.page >= totalPages - 1;
+  }
+
   function updateCounts(){
-    var n=0, buy=0, sell=0;
     var seenTickers = {};
-    rows.forEach(function(r){
-      if(r.style.display==='none') return;
-      n++;
-      seenTickers[r.dataset.ticker] = true;
-      var rating = r.cells[5].innerText.trim().toLowerCase();
-      if(rating.includes('buy')||rating.includes('outperform')||rating.includes('overweight')||rating.includes('top pick')) buy++;
-      else if(rating.includes('sell')||rating.includes('underweight')||rating.includes('underperform')) sell++;
+    var n = STATE.visible.length;
+    var buy = 0, sell = 0;
+    STATE.visible.forEach(function(r){
+      seenTickers[r.company_ticker] = true;
+      var rl = (r.rating || '').toLowerCase();
+      if (rl.indexOf('buy')        >= 0 ||
+          rl.indexOf('outperform') >= 0 ||
+          rl.indexOf('overweight') >= 0 ||
+          rl.indexOf('top pick')   >= 0) buy++;
+      else if (rl.indexOf('sell')        >= 0 ||
+               rl.indexOf('underweight') >= 0 ||
+               rl.indexOf('underperform')>= 0) sell++;
     });
     countEl.textContent = n;
     upBuyEl.textContent = buy;
@@ -287,129 +423,97 @@
     tickerCountEl.textContent = Object.keys(seenTickers).length;
   }
 
-  filter.addEventListener('input', applyFilters);
-
-  // ---- Sort, with ticker grouping always preserved ----
-  var lastSort = { key: 'report_date', dir: 'desc' };
-
-  function getColIndex(key){
-    return Array.from(document.querySelectorAll('#pt thead th')).findIndex(function(th){ return th.dataset.key === key; });
-  }
-
-  function sortBy(key, dir, isNum){
-    var idx = getColIndex(key);
-    if(idx < 0) return;
-    rows.sort(function(a, b){
-      var av, bv;
-      if(key === 'avg_pt'){
-        av = a.cells[idx].dataset.value || '';
-        bv = b.cells[idx].dataset.value || '';
-      } else {
-        av = a.cells[idx].innerText.trim();
-        bv = b.cells[idx].innerText.trim();
-      }
-      if(isNum){
-        var na = parseFloat(String(av).replace(/[^0-9.\-+]/g, ''));
-        var nb = parseFloat(String(bv).replace(/[^0-9.\-+]/g, ''));
-        if(isNaN(na)) na = dir==='asc' ? Infinity : -Infinity;
-        if(isNaN(nb)) nb = dir==='asc' ? Infinity : -Infinity;
-        return dir === 'asc' ? na - nb : nb - na;
-      }
-      return dir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av);
-    });
-
-    // Update indicators
+  function updateSortIndicators(){
     document.querySelectorAll('#pt thead th').forEach(function(th){
       var ind = th.querySelector('.sort-ind');
-      if(!ind) return;
-      ind.textContent = (th.dataset.key === key) ? (dir === 'asc' ? '▲' : '▼') : '';
-    });
-    lastSort = { key: key, dir: dir };
-
-    regroupAndPaint();
-  }
-
-  // Group same ticker together while preserving the current sort order
-  // within each ticker bucket. Tickers are emitted in the order they
-  // were first encountered in the sorted array — so if user sorted by
-  // date DESC, the ticker whose latest report is most recent comes first.
-  //
-  // Also paints the Avg PT cell. The "k/n" suffix is assigned in this
-  // order — k = position of this row's PT within its group, n = total
-  // PT-contributing rows in the date window.
-  function regroupAndPaint(){
-    var groups = new Map();
-    rows.forEach(function(r){
-      var t = r.dataset.ticker || '';
-      if(!groups.has(t)) groups.set(t, []);
-      groups.get(t).push(r);
-    });
-    var ordered = [];
-    var bandIdx = 0;
-    groups.forEach(function(arr, ticker){
-      var alt = (bandIdx % 2 === 1);
-      var s = perTickerStats[ticker];
-      var avg = s && s.n ? (s.sum / s.n) : null;
-      var majCcy = s && s.n
-        ? (Object.keys(s.ccyCount).sort(function(a,b){ return s.ccyCount[b] - s.ccyCount[a]; })[0] || '')
+      if (!ind) return;
+      ind.textContent = (th.dataset.key === STATE.sortKey)
+        ? (STATE.sortDir === 'asc' ? '▲' : '▼')
         : '';
-      var ptIdx = 0;     // 1-based, increments only for rows that contributed to avg
-      arr.forEach(function(r, i){
-        r.classList.toggle('group-alt', alt);
-        r.classList.toggle('group-first', i === 0);
-        var cell = r.querySelector('.avg-pt');
-        if(cell){
-          if(avg === null){
-            cell.innerHTML = '';
-            cell.dataset.value = '';
-          } else {
-            var pt = parseFloat(r.dataset.pt);
-            var contributes = !isNaN(pt) && r.dataset.dateOk === '1';
-            var suffix = '';
-            if(s.n > 1){            // Only show k/n when there's actually consensus
-              if(contributes){
-                ptIdx++;
-                suffix = '<span class="n">' + ptIdx + '/' + s.n + '</span>';
-              } else {
-                // No PT on this row, or row hidden by date filter
-                suffix = '<span class="n">·' + s.n + '</span>';
-              }
-            }
-            cell.innerHTML = avg.toFixed(2)
-              + '<span class="ccy">' + majCcy + '</span>'
-              + suffix;
-            cell.dataset.value = avg;
-          }
-        }
-        ordered.push(r);
-      });
-      bandIdx++;
     });
-    rows.length = 0;
-    ordered.forEach(function(r){ rows.push(r); });
-
-    var frag = document.createDocumentFragment();
-    rows.forEach(function(r){ frag.appendChild(r); });
-    tbody.appendChild(frag);
   }
 
-  // Column header click → sort
-  document.querySelectorAll('#pt thead th').forEach(function(th){
-    th.addEventListener('click', function(){
-      var key = th.dataset.key;
-      var isNum = th.dataset.num === '1';
-      var defaultDir = th.dataset.defaultDir || (isNum ? 'desc' : 'asc');
-      var dir = (lastSort.key === key) ? (lastSort.dir === 'asc' ? 'desc' : 'asc') : defaultDir;
-      sortBy(key, dir, isNum);
-    });
-  });
+  function initSlider(){
+    var allDates = STATE.all
+      .map(function(r){ return parseDate(r.report_date); })
+      .filter(function(t){ return !isNaN(t); });
+    if (!allDates.length) {
+      sliderEl.parentElement.style.display = 'none';
+      STATE.minTs = -Infinity; STATE.maxTs = Infinity;
+      STATE.curMinTs = STATE.minTs; STATE.curMaxTs = STATE.maxTs;
+      return;
+    }
+    STATE.minTs = Math.min.apply(null, allDates);
+    STATE.maxTs = Math.max.apply(null, allDates);
+    if (STATE.minTs === STATE.maxTs) STATE.maxTs = STATE.minTs + ONE_DAY;
+    STATE.curMinTs = STATE.minTs;
+    STATE.curMaxTs = STATE.maxTs;
 
-  // Initial state: server already sorted by report_date DESC.
-  // Paint sort indicator + apply Avg PT + group by ticker.
-  document.querySelectorAll('#pt thead th').forEach(function(th){
-    if(th.dataset.key === 'report_date') th.querySelector('.sort-ind').textContent = '▼';
-  });
-  applyFilters();
+    noUiSlider.create(sliderEl, {
+      start: [STATE.minTs, STATE.maxTs],
+      connect: true,
+      range: { min: STATE.minTs, max: STATE.maxTs },
+      step: ONE_DAY,
+      format: { to: function(v){ return v; }, from: function(v){ return Number(v); } }
+    });
+    sliderEl.noUiSlider.on('update', function(values){
+      STATE.curMinTs = parseFloat(values[0]);
+      STATE.curMaxTs = parseFloat(values[1]);
+      dateMinEl.textContent = fmtDate(STATE.curMinTs);
+      dateMaxEl.textContent = fmtDate(STATE.curMaxTs);
+      recompute();
+    });
+  }
+
+  function bindEvents(){
+    var filterTimer = null;
+    filter.addEventListener('input', function(){
+      if (filterTimer) clearTimeout(filterTimer);
+      filterTimer = setTimeout(recompute, 80);
+    });
+
+    pagePrev.addEventListener('click', function(){
+      if (STATE.page > 0) { STATE.page--; renderPage(); }
+    });
+    pageNext.addEventListener('click', function(){
+      var totalPages = Math.max(1, Math.ceil(STATE.visible.length / STATE.pageSize));
+      if (STATE.page < totalPages - 1) { STATE.page++; renderPage(); }
+    });
+    pageSizeSel.addEventListener('change', function(){
+      STATE.pageSize = parseInt(pageSizeSel.value, 10) || 100;
+      STATE.page = 0;
+      renderPage();
+    });
+
+    document.querySelectorAll('#pt thead th').forEach(function(th){
+      th.addEventListener('click', function(){
+        var key = th.dataset.key;
+        if (!key) return;
+        var isNum = th.dataset.num === '1';
+        var defaultDir = th.dataset.defaultDir || (isNum ? 'desc' : 'asc');
+        var dir = (STATE.sortKey === key)
+          ? (STATE.sortDir === 'asc' ? 'desc' : 'asc')
+          : defaultDir;
+        STATE.sortKey = key; STATE.sortDir = dir;
+        updateSortIndicators();
+        recompute();
+      });
+    });
+  }
+
+  fetch('/pt/api/rows')
+    .then(function(r){ return r.json(); })
+    .then(function(rows){
+      STATE.all = rows;
+      initSlider();
+      bindEvents();
+      updateSortIndicators();
+      recompute();
+    })
+    .catch(function(err){
+      tbody.innerHTML = '<tr><td colspan="13" class="loading-cell" style="color:#f87171;">Failed to load: '
+        + esc(err && err.message ? err.message : String(err)) + '</td></tr>';
+    });
 })();
 </script>
 </body>

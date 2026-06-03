@@ -62,11 +62,17 @@ def _query_all_rows() -> list[dict]:
 
 @pt_bp.route("/")
 def index():
-    rows = _query_all_rows()
+    # The page is paginated client-side — the row data is fetched as JSON
+    # by /pt/api/rows after the page loads. The initial render only needs
+    # the total row count for the "<n> rows" pill (it gets overwritten by
+    # JS once the data arrives).
+    total = 0
+    if DB_PATH.exists():
+        with sqlite3.connect(DB_PATH) as c:
+            total = c.execute("SELECT COUNT(*) FROM price_targets").fetchone()[0]
     return render_template(
         "pt.html",
-        rows=rows,
-        total=len(rows),
+        total=total,
         NAV_HTML=Markup(nw2.NAV_HTML),
     )
 
