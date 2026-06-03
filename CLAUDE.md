@@ -46,6 +46,98 @@ If any of these checks fail, the workflow is dead. Tell the user honestly: "the 
 
 **Failure mode to avoid:** Looking only at the last few `journal.jsonl` lines, seeing two `started` events with no matching `result`, and reporting the workflow is "still running on 2 agents in the final round". The `started` events are persisted to disk the moment a round begins — they survive the Claude app dying.
 
+# Workflow Memory Monitoring (MANDATORY for heavy multi-agent fan-outs)
+
+**Before launching any multi-agent Workflow that spawns more than 2 concurrent `agent()` calls — especially `/company-research` fleets, batched `/sector-overview` runs, large `compare-companies` panels — start the memory watcher.** Past failures: a 6-wide `/company-research` workflow OOM-killed the entire Claude Code session at ~93 GB total RSS (the macOS jetsam ceiling on the user's 96 GB M-series Mac); 4 EN reports were partially saved as orphan debris and the remaining ~46 companies never started. The rule below makes that failure mode mechanically catchable, not just remembered.
+
+## When the rule applies
+
+Any of:
+- Launching a `Workflow` with `parallel(...)` of ≥3 `agent()` calls per phase
+- Chaining multiple batches sequentially (`for (const batch of BATCHES)`)
+- Running `/company-research`, `/sector-overview`, `/compare-companies`, `/etf-overlap`, `/theme-research`, `/initiating-coverage`, or any future report-generating skill at fleet scale (>5 tickers in one orchestration)
+
+If a single agent is being spawned (e.g. one `/company-research X` call), the watcher is optional — single agents rarely exceed 20 GB.
+
+## What "memory-heavy" means in practice
+
+Each `agent()` call in a Workflow spawns a full `claude --resume <session-id>` subprocess holding its own:
+- V8 base heap + 1M-token context reservation (~1-2 GB minimum)
+- Every PDF read (10-K is 1-10 MB extracted text, stays in the message array — never freed)
+- Every WebFetch response, transcript, IR deck, web page → all retained until the subprocess exits
+- Tool result buffers
+
+A `/company-research` agent at Step 9 (writeup) routinely holds 10-20 GB resident. × 4 concurrent = 40-80 GB. × 6 concurrent = 60-120 GB → OOM.
+
+V8 heap **does not return memory to the OS** until the subprocess exits — even after a PDF is "logically free", V8 keeps the pages reserved. This is not a leak; it is by design (avoiding GC thrash). The only way memory drops is process exit.
+
+## The watcher
+
+A reusable watcher script lives at `/tmp/mem-watch.sh` (paste from the canonical template below if missing). It polls every 30s normally / 15s in `warn` / 10s in `danger`, logs to `/tmp/mem-watch.log`, and **auto-kills the heaviest workflow subagent processes** (preserving main-loop sessions via a hardcoded whitelist) once memory crosses an action threshold.
+
+**Thresholds** (calibrated against the 93 GB OOM ceiling, leaving ≥38 GB headroom at the highest action level):
+
+| Total claude+node RSS | Action | Poll cadence |
+|---|---|---|
+| < 35 GB | log `✓ ok` | 30s |
+| ≥ 35 GB | log `⚠️ warn` (climbing — no kill) | 15s |
+| ≥ 45 GB | kill **heaviest** subagent | 15s |
+| ≥ 50 GB | kill **top-2** subagents + osascript notification | 10s |
+| ≥ 55 GB | kill **ALL** subagents + emergency notification | 10s |
+
+The OOM ceiling on this Mac is ~93 GB. The kill-all threshold at 55 GB leaves 38 GB headroom — enough to absorb a 5-12 GB in-flight surge between two consecutive ticks.
+
+## How to launch the watcher
+
+```bash
+# Write the script if not already present
+cat > /tmp/mem-watch.sh <<'WATCH'
+#!/bin/bash
+LOG=/tmp/mem-watch.log
+WARN_GB=35; KILL_ONE_GB=45; KILL_TWO_GB=50; KILL_ALL_GB=55
+# Hardcode main-loop session IDs here so they are NEVER killed.
+# (Find via `ps aux | grep 'claude --resume'` — they live across the run.)
+MAIN_SESSIONS='<main-session-uuid-1>|<main-session-uuid-2>'
+MY_PID=$$
+# … (full script: see prior runs at /tmp/mem-watch.sh)
+WATCH
+chmod +x /tmp/mem-watch.sh
+bash /tmp/mem-watch.sh &
+disown
+```
+
+Update `MAIN_SESSIONS` to match the current Claude Code session IDs before each fleet run — otherwise the watcher may target the main loop instead of subagents.
+
+**Verify before launching the workflow:**
+
+```bash
+pgrep -lf 'mem-watch.sh'           # confirm watcher PID running
+head -10 /tmp/mem-watch.log        # confirm thresholds + whitelist
+```
+
+## What to tell the user when launching a heavy workflow
+
+Before kicking off the Workflow call, send one short message that confirms (a) watcher is running, (b) thresholds, (c) live-tail command. Example:
+
+> Watcher live (PID 76304). Logging to `/tmp/mem-watch.log` every 30s (15s when ≥35 GB). Auto-kills the heaviest subagent at 45 GB; top-2 at 50 GB; everything at 55 GB. Live tail: `tail -f /tmp/mem-watch.log`.
+
+## Recovery when the watcher kills a subagent
+
+A killed subagent's `agent()` call returns `null` (per the Workflow tool contract: "A stage that throws drops that item to null and skips its remaining stages" — the `.filter(Boolean)` upstream catches it). The workflow continues with the remaining agents. Lost ticker → empty `reports/company/<slug>/` folder = the same "empty-folder debris" pattern from the prior OOM.
+
+After the workflow completes:
+1. Find empty `reports/company/<slug>/` folders that were in the target list (`find reports/company/<slug> -name "*.md" 2>/dev/null` returns nothing).
+2. Re-launch a tiny catch-up Workflow with just those tickers, at batch size 2 to be safe.
+3. Commit + push the catch-up's results separately.
+
+## Hard rules
+
+1. **Never launch a ≥3-wide Workflow on this machine without the watcher running.** If `pgrep -lf 'mem-watch.sh'` returns nothing, start it first.
+2. **Never raise the kill thresholds above 55 GB** without re-doing the OOM-ceiling calibration on the actual machine. The 38 GB headroom is the minimum safety margin given observed in-flight growth.
+3. **Never add the user's interactive main-loop sessions to the kill targets.** The `MAIN_SESSIONS` whitelist is mechanical safety — confirm both current session IDs are listed before launching.
+4. **Never report a workflow as "running fine" without checking `/tmp/mem-watch.log`** — the watcher's status column is the source of truth for memory health during a run.
+5. **Stop the watcher when the workflow finishes** (`pkill -f mem-watch.sh`) — otherwise it lingers across sessions and pollutes the next launch.
+
 # Database Safety (MANDATORY — non-negotiable, zero exceptions)
 
 **Every `*.db` file inside this project is the user's real, irreplaceable data. Treat all of them as read-only from Claude's hands.**
