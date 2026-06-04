@@ -1,11 +1,11 @@
 # Broadcom Inc. (NASDAQ:AVGO) — 公司研究报告
 
-**截至日期:** 2026-05-20
+**截至日期:** 2026-06-04
 **作者:** company-research skill, financial_agent
-**主要信源:** Broadcom FY2025 10-K (提交于 2025-12-18)、Q1 FY2026 10-Q (提交于 2026-03-11)、Q1 FY2026 业绩新闻稿 (8-K, 2026-03-04)、Q4 FY2025 业绩新闻稿 (8-K, 2025-12-11)、Q4 FY2024 业绩新闻稿 (8-K, 2024-12-12)。所有引用文件均在第 10 章"参考资料"中列出 SEC EDGAR 官方 URL。
-**报告语言: 简体中文 (英文版同时存在于本目录)**
+**主要信源:** Broadcom FY2025 10-K (提交于 2025-12-18)、Q2 FY2026 业绩新闻稿 (8-K, 2026-06-03)、Q1 FY2026 10-Q (提交于 2026-03-11)、Q1 FY2026 业绩新闻稿 (8-K, 2026-03-04)、Q4 FY2025 业绩新闻稿 (8-K, 2025-12-11)、Q4 FY2024 业绩新闻稿 (8-K, 2024-12-12)。所有引用文件均在第 10 章"参考资料"中列出 SEC EDGAR 官方 URL。
+**报告语言: 简体中文 (英文版同时存在于本目录, 但未随本次 Q2 FY26 业绩更新刷新)**
 
-> **业绩更新——Q1 FY2026 业绩 (2026-03-04) 及 Q2 FY2026 指引:** Broadcom 公布 Q1 FY2026 创纪录营业收入 **19,311 百万美元 (+29% YoY)**, AI 半导体收入 **84 亿美元 (+106% YoY)**——双双超过 2025 年 12 月给出的 191 亿美元 / 82 亿美元 AI 指引。Q2 FY2026 营业收入指引设定为**约 220 亿美元 (+47% YoY)**, AI 半导体收入预期 **107 亿美元**, 同时董事会批准了一项截至 2026 年 12 月 31 日有效的**全新 100 亿美元股票回购计划**。来源: [Broadcom Q1 FY2026 业绩新闻稿, 2026-03-04 (附件 99.1)](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm)。
+> **业绩更新——Q2 FY2026 业绩 (2026-06-03, 季度结束于 2026-05-03):** Broadcom 公布 Q2 FY2026 创纪录营业收入 **22,187 百万美元 (+48% YoY)**——超过 3 月给出的 220 亿美元指引。其中**半导体解决方案 (Semiconductor Solutions) 营业收入 15,009 百万美元 (+79% YoY)**, **基础设施软件 (Infrastructure Software) 营业收入 7,178 百万美元 (+9% YoY)**; **AI 半导体收入 108 亿美元 (+143% YoY)**, 也高于 3 月给出的 107 亿美元 AI 指引。GAAP 摊薄 EPS **1.91 美元**, 非 GAAP 摊薄 EPS **2.44 美元**; **adjusted EBITDA (调整后 EBITDA) 152 亿美元 (+52% YoY), 占营业收入 69%**——本季度三项新创纪录。**自由现金流 (free cash flow / FCF) 102.6 亿美元**, 占营业收入 46%。**Q3 FY2026 指引:** 营业收入**约 294 亿美元 (+84% YoY)**, AI 半导体收入**约 160 亿美元 (+200%+ YoY)**, adjusted EBITDA 约占营业收入 68%。管理层在 Q2 电话会议上**重申 FY2026 AI 半导体收入约 560 亿美元 (+180% YoY) 的全年节奏, 并继续维持 FY2027 AI 收入超过 1,000 亿美元的中期目标**。Q2 单季完成股票回购 6 亿美元、派发股息 30.9 亿美元 (季度股息 0.65 美元/股), 资产负债表现金 196 亿美元、总债务 649 亿美元。来源: [Broadcom Q2 FY2026 业绩新闻稿, 2026-06-03 (附件 99.1)](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm) 与 [Form 8-K 封面文件](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-20260603.htm)。
 
 ---
 
@@ -34,24 +34,24 @@ Broadcom Inc. (NASDAQ: AVGO) 是一家全球半导体与基础设施软件的设
 
 **经营地理。** Broadcom 是一家全球分布的工程组织, 设计中心集中于美国、亚洲与欧洲。多数半导体出货的所有权与控制权在马来西亚槟城 (Penang, Malaysia) 转移 ([2025 10-K, 第 39 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm)), 这就是为什么分部脚注中显示大量营业收入"运往"新加坡和马来西亚——尽管终端需求位于美国与中国。从最终目的地视角看, FY2025 营业收入的 17% 运往中国 (含香港), 而 FY2024 为 20% ([2025 10-K, 第 39 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm))。
 
-**公司体量。** FY2025 总净营业收入为 **63,887 百万美元** (相较 FY2024 的 51,574 百万美元同比+24%), GAAP 净利润为 **23,126 百万美元**, 对应 EPS **基本 4.91 美元 / 摊薄 4.77 美元** ([2025 10-K, 合并经营业绩表, 第 47 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm))。营业利润为 25,484 百万美元 (GAAP 营业利润率 40%)。FY2025 自由现金流 (FCF) 为 **269 亿美元**——经营性现金流 27,537 百万美元减资本支出 620 百万美元——相当于营业收入的 42% ([2025 10-K, 第 43 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm); [Q4 FY2025 业绩新闻稿](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000116/avgo-11022025x8kxex99.htm))。资产负债表上承担**总债务 651 亿美元** (长期债务 61,984 百万美元 + 短期债务 3,152 百万美元), 截至 FY2025 财年末现金为 16,178 百万美元 ([2025 10-K 合并资产负债表, 第 47 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm))——该水平主要来自 VMware 收购融资的遗留。截至 Q1 FY26, 摊薄股本数为 4,888 百万股 ([Q1 FY26 8-K, 2026-03-04](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm))。
+**公司体量。** FY2025 总净营业收入为 **63,887 百万美元** (相较 FY2024 的 51,574 百万美元同比+24%), GAAP 净利润为 **23,126 百万美元**, 对应 EPS **基本 4.91 美元 / 摊薄 4.77 美元** ([2025 10-K, 合并经营业绩表, 第 47 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm))。营业利润为 25,484 百万美元 (GAAP 营业利润率 40%)。FY2025 自由现金流 (FCF) 为 **269 亿美元**——经营性现金流 27,537 百万美元减资本支出 620 百万美元——相当于营业收入的 42% ([2025 10-K, 第 43 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm); [Q4 FY2025 业绩新闻稿](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000116/avgo-11022025x8kxex99.htm))。**进入 FY2026 上半年, AI 加速放量推动 H1 累计营业收入达约 414 亿美元 (Q1 193.1 亿 + Q2 221.9 亿), 同比 +38%; H1 AI 半导体收入累计达 192 亿美元 (Q1 84 亿 + Q2 108 亿), 已基本接近全部 FY2025 全年 AI 营业收入水平。** Q2 FY2026 单季 GAAP 净利润 93.1 亿美元, 非 GAAP 净利润 120.7 亿美元, FCF 102.6 亿美元 ([Q2 FY26 业绩新闻稿, 2026-06-03](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm))。资产负债表上承担**总债务 649 亿美元** (截至 2026-05-03, 较 FY25 末 651 亿美元略降), 现金为 **196 亿美元** (较 FY25 末 162 亿美元上升, 由 H1 FCF 顺差推动) ([Q2 FY26 业绩新闻稿](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm))。截至 Q2 FY26, 摊薄股本数仍为约 4,888 百万股, 单季回购金额降至 6 亿美元——管理层将储备弹性留给债务偿还与潜在战略并购, 而非加速回购。
 
 ![Broadcom 营业收入与毛利率](charts/avgo_revenue_margin.png)
 
 *来源: [2025 10-K (FY23–FY25)](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm) 与 [2023 10-K (FY21–FY22)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001730168&type=10-K&dateb=&owner=include&count=40)。FY21 反映 VMware 收购前的业务结构; FY22 毛利率提升反映 Brocade/CA/Symantec 软件并入带来的产品组合升级; FY24 毛利率下滑则是 VMware 无形资产首年摊销的拖累。*
 
-**估值快照 (2026-05-20 收盘价)。** AVGO 收于 **418.55 美元**, 以 4,888 百万摊薄股本数计, 市值约为 **2.04 万亿美元**。TTM (过往十二个月) 各项倍数如下:
+**估值快照 (2026-06-04 收盘价, Q2 FY26 业绩公布次日)。** AVGO 收于 **418.07 美元**, 以约 4,888 百万摊薄股本数计, 市值约为 **1.98 万亿美元**。AVGO 在 Q2 FY26 业绩公布后股价基本持平于过去三周区间——市场已在 Q2 之前定价绝大部分上行, Q2 实际营业收入 (221.9 亿美元) 与 AI 半导体收入 (108 亿美元) 仅小幅超出 3 月给出的 220 亿 / 107 亿指引, Q3 指引 (294 亿美元营业收入、160 亿美元 AI 收入) 大致符合卖方一致预期。过去 52 周价格区间为 **241.11 美元 – 495.00 美元** (yfinance, 2026-06-04); 当前价距 4 月触及的 495 美元历史高点低约 16%, 距 52 周低位高约 73%。TTM (过往十二个月, trailing twelve months) 各项倍数如下:
 
-| 代码 | 最新价 (2026-05-20) | 市值 (十亿美元) | TTM P/E | 远期 P/E | TTM P/S |
+| 代码 | 最新价 (2026-06-04) | 市值 (十亿美元) | TTM P/E | 远期 P/E | TTM P/S |
 |---|---:|---:|---:|---:|---:|
-| **AVGO** | 418.55 美元 | 2,037 | **81.4x** | 22.9x | **29.0x** |
-| NVDA | 223.89 美元 | 5,424 | 45.7x | 19.3x | 25.1x |
-| MRVL | 184.79 美元 | 162 | 60.2x | 34.1x | 19.8x |
-| QCOM | 202.55 美元 | 214 | 21.8x | 19.1x | 4.8x |
+| **AVGO** | 418.07 美元 | 1,979 | **69.8x** | 21.9x | **29.0x** |
+| NVDA | 221.28 美元 | 5,359 | 33.9x | 17.5x | 21.1x |
+| MRVL | 316.56 美元 | 277 | 109.1x | 51.3x | 31.8x |
+| QCOM | 242.61 美元 | 256 | 26.1x | 22.8x | 5.7x |
 
-来源: [Yahoo Finance – AVGO](https://finance.yahoo.com/quote/AVGO/key-statistics/)、[NVDA](https://finance.yahoo.com/quote/NVDA/key-statistics/)、[MRVL](https://finance.yahoo.com/quote/MRVL/key-statistics/)、[QCOM](https://finance.yahoo.com/quote/QCOM/key-statistics/)——均于 2026-05-20 抓取。
+来源: [Yahoo Finance – AVGO](https://finance.yahoo.com/quote/AVGO/key-statistics/)、[NVDA](https://finance.yahoo.com/quote/NVDA/key-statistics/)、[MRVL](https://finance.yahoo.com/quote/MRVL/key-statistics/)、[QCOM](https://finance.yahoo.com/quote/QCOM/key-statistics/)——均于 2026-06-04 抓取。
 
-AVGO 的 **TTM P/E 81.4 倍约为 AI 半导体可比公司中位数的 2 倍** (NVDA 45.7 倍、MRVL 60.2 倍、QCOM 21.8 倍), 而 **TTM P/S 29.0 倍是该组合中最高的**——略高于 NVDA 的 25.1 倍, 远高于 QCOM 的 4.8 倍。TTM 盈利数字被两项 GAAP 费用人为压缩, 而市场基本予以忽视: (1) 约 81 亿美元的 VMware 相关无形资产年摊销 (按 2025 年 10-K 披露, 其中约 60 亿美元计入营业成本, 另约 20 亿美元计入运营费用); (2) **FY25 股票薪酬 (SBC, stock-based compensation) 76 亿美元**——其中包括 Q2 FY25 一次性发放的两年期时间与市场条件 RSU 用以替代年度授予 ([2025 10-K, 第 40 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm))。剔除上述两项后, 倍数降至更易接受的远期 P/E **22.9 倍**, 大致与 NVDA 19.3 倍持平, 低于 MRVL 34.1 倍。该倍数最贴切的解释是**结构性的 AI 基础设施溢价**——市场为可见的定制 XPU 储备订单 (Google TPU v6/v7、Meta MTIA、OpenAI 及其他) 和 VMware 订阅收入跑道支付溢价, 而非为 TTM GAAP 利润付费。五年股价区间为 **40.41 美元 – 439.79 美元** (yfinance, 2026-05-20), 当前价位距离历史高点仅 5% 以内。若 AI XPU 客户集中度恶化 (头号客户占营业收入 32%——见第 5 章), 倍数将面临剧烈重估; 该风险延伸至第 9 章。
+AVGO 的 **TTM P/E 69.8 倍** 介于 NVDA 33.9 倍与 MRVL 109.1 倍之间, **TTM P/S 29.0 倍**则略低于 MRVL 31.8 倍、高于 NVDA 21.1 倍, 远高于 QCOM 5.7 倍。值得注意的是, 自上次估值快照 (2026-05-20: TTM P/E 81.4 倍) 以来, AVGO 的 TTM P/E 已下降约 12 个倍数点——这并非估值压缩, 而是 **Q2 FY26 GAAP 净利润 93 亿美元滚入 TTM 分母**所致, 即 "E 项跑赢了 P 项"。同期 NVDA 的 TTM P/E 由 45.7 倍降至 33.9 倍 (同样为 EPS 翻番带动), MRVL 因新一轮 SBC 与无形资产摊销冲击 TTM 盈利而向上抽升至 109 倍——这一组合数据**强化"为 AI 资本开支可见度付费的市场, 已开始为 AVGO 实际利润付费"** 的解读。TTM 盈利数字仍被两项 GAAP 费用人为压缩, 而市场基本予以忽视: (1) 约 81 亿美元的 VMware 相关无形资产年摊销 (按 2025 年 10-K 披露, 其中约 60 亿美元计入营业成本, 另约 20 亿美元计入运营费用); (2) **FY25 股票薪酬 (SBC, stock-based compensation) 76 亿美元** ([2025 10-K, 第 40 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm))。剔除上述两项后, 远期 P/E **21.9 倍**与 NVDA 17.5 倍接近、显著低于 MRVL 51.3 倍, 大致接近 QCOM 22.8 倍——这一组合较一个月前 (远期 P/E 22.9 倍) 持续展示"GAAP 与 forward 之间的折扣窗口正在收窄"的趋势。该倍数最贴切的解释仍是**结构性的 AI 基础设施溢价**——市场为可见的定制 XPU 储备订单 (Google TPU v6/v7、Meta MTIA、OpenAI 及其他) 和 VMware 订阅收入跑道支付溢价, 而非为 TTM GAAP 利润付费; 但相比 5 月时的市场情绪, Q2 业绩的"AI 收入 +143% YoY、Q3 隐含 +200%+ YoY"提供了更厚的盈利缓冲。若 AI XPU 客户集中度恶化 (头号客户占营业收入 32%——见第 5 章) 或 FY2027 单一超大规模客户出现需求悬崖, 倍数将面临剧烈重估; 该风险延伸至第 9 章。
 
 ## 2. 公司历史
 
@@ -71,12 +71,13 @@ timeline
     2023 : 收购 VMware (690 亿美元现金 + 股票, 2023 年 11 月 22 日完成交割)
     2024 : 入选 S&P 100;AI 营业收入达到 122 亿美元 (+220% YoY)
     2025 : 1 比 10 拆股 (2024 年 7 月生效);FY25 营业收入 639 亿美元;AI 营业收入约 195 亿美元
-    2026 : Q1 FY26 AI 营业收入 84 亿美元 (+106% YoY);Q2 指引 107 亿美元
+    2026Q1 : Q1 FY26 AI 收入 84 亿美元 (+106% YoY)
+    2026Q2 : Q2 FY26 AI 收入 108 亿美元 (+143% YoY);H1 累计 AI 192 亿美元;Q3 指引 160 亿美元 (+200%+ YoY)
 ```
 
 最具决定意义的三次战略转折如下。**第一, 2016 年 Avago 与 Broadcom Corp. 合并**——它将一家专注 FBAR/特种 IC、营业收入 40 亿美元的业务转变为商用网络与无线硅片龙头; 这也是 Tan 完善后来定义公司的运营手册的节点——激进的 SKU 合理化、聚焦于品类领先的 IP、保留头号客户、果断剪除任何排名第 1 或第 2 之外的业务。**第二, 2018 年敌意收购高通的失败**——以国家安全为由通过总统行政命令被 CFIUS 阻止——事后看来是公司战略转向的拐点: 它迫使 Broadcom 将注册地从新加坡迁至特拉华, 并将 Tan 的并购精力从 "再买一家芯片公司" 转向 "买企业软件公司"。几个月后 Broadcom 宣布 CA Technologies 交易。**第三, 2023 年 11 月 VMware 合并** (30,788 百万美元现金 + 544 百万 Broadcom 股票, 公允价值 53,398 百万美元 ([2025 10-K, 第 50 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm))) 实质上使软件占比翻倍, 重新锚定了毛利率结构, 同时给资产负债表加载了如今正逐步通过长久期债券再融资的大笔定期贷款。
 
-近期动态 (2024 至 2026 年初) 围绕三大主题展开: (1) **AI XPU 加速放量**——披露的 AI 半导体收入从 FY23 的低个位数十亿美元水平增长至 FY24 的 122 亿美元 (按 Q4 FY24 业绩新闻稿同比 +220%), 进一步增至 FY25 约 195 亿美元, Q1 FY26 单季再次加速达 84 亿美元; (2) **VMware 整合与订阅模式转型**——VMware 的永久授权许可模式已被 VCF 订阅捆绑包取代, 推动基础设施软件分部从 FY23 的 76 亿美元增至 FY25 的 270 亿美元; (3) **资本回报**——全新 100 亿美元回购计划 (2026 年 3 月)、季度股息上调 10% 至 0.65 美元/股 (FY26 目标 2.60 美元/股, 连续第 15 年增长), Q1 FY26 单季完成股票回购 78.5 亿美元 ([Q1 FY26 8-K, 2026-03-04](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm))。
+近期动态 (2024 至 2026 年 H1) 围绕三大主题展开: (1) **AI XPU 加速放量**——披露的 AI 半导体收入从 FY23 的低个位数十亿美元水平增长至 FY24 的 122 亿美元 (按 Q4 FY24 业绩新闻稿同比 +220%), 进一步增至 FY25 约 195 亿美元, Q1 FY26 单季 84 亿美元后, **Q2 FY26 再次加速达 108 亿美元 (+143% YoY)**, **Q3 FY26 指引隐含进一步增至 160 亿美元 (+200%+ YoY)**——以此节奏, 单季 AI 半导体收入将在 FY26 后半年突破 FY25 全年规模; 管理层在 Q2 电话会议**重申 FY2026 全年 AI 半导体收入约 560 亿美元 (+180% YoY)**, 并继续维持 **FY2027 AI 收入超过 1,000 亿美元**的中期目标 ([Q2 FY26 业绩新闻稿, 2026-06-03](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm))。(2) **VMware 整合与订阅模式转型**——VMware 的永久授权许可模式已被 VCF 订阅捆绑包取代, 推动基础设施软件分部从 FY23 的 76 亿美元增至 FY25 的 270 亿美元; 基础设施软件 Q2 FY26 营业收入 **71.8 亿美元 (+9% YoY)**, 表明订阅化转型进入"成熟阶段"——增量放缓但毛利率与 NRR 维持高位。(3) **资本回报**——全新 100 亿美元回购计划 (2026 年 3 月)、季度股息上调 10% 至 0.65 美元/股 (FY26 目标 2.60 美元/股, 连续第 15 年增长); 但 **Q2 FY26 单季回购仅 6 亿美元**, 远低于 Q1 FY26 单季 78.5 亿美元的水平——管理层将资本弹性留给债务偿还与潜在战略并购, 而非加速回购 ([Q1 FY26 8-K, 2026-03-04](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm); [Q2 FY26 8-K, 2026-06-03](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm))。
 
 ## 3. 管理团队
 
@@ -142,7 +143,7 @@ graph TD
 
 ### 半导体解决方案
 
-**网络连接——AI 硅片引擎, 全公司旗舰。** 该产品组合包含承载 AI 叙事的两大产品。(a) **定制硅片解决方案 / XPU。** Broadcom 不销售商用 AI 训练芯片; 它提供的是"用于客户设计与开发 AI 与高性能计算专用集成电路 (ASIC) 的先进技术与知识产权平台" ([2025 10-K, 第 3 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm))。实际操作中, 这意味着客户 (Google、Meta 等) 带来架构规格, 而 Broadcom 贡献 SerDes IP、先进封装集成 (基于 CoWoS 的 2.5D/3D)、HBM 控制器以及客户加速器核心周围的其余底盘。产物: Google TPU v5/v6/v7 各代、Meta MTIA 训练与推理芯片。**竞争优势: 是——非常强。** 护城河组合包括 (i) 在 112G-PAM4 以及刚发布的 224G 上的领先 SerDes IP; (ii) 与顶级超大规模客户长期延续的协同设计关系; (iii) 在台积电 (TSMC) CoWoS 先进封装产能上的优先分配; (iv) 经过多代硅片积累的信任。最接近的竞争产品是 Marvell 的定制 ASIC 业务 (Amazon Trainium 2/3、Microsoft Maia、Google Axion CPU); Broadcom 在客户数量与营业收入上领先, FY25 AI 收入约 195 亿美元, 而 Marvell 的定制 ASIC 业务仅在个位数十亿美元水平。(b) **Tomahawk 5 / Tomahawk 6 / Jericho 3-AI / Trident。** Tomahawk 5 是 51.2T radix-128 以太网交换硅片, 已成为 AI 集群中事实标准的 fabric 芯片; Tomahawk 6 (102.4T, 2025 年发布) 进一步扩大领先优势。Jericho 3-AI 是面向横向扩展集群互联的深缓冲以太网路由硅片, 与 Nvidia 的 NVLink fabric (专有) 以及 Cisco 硅片正面竞争。**竞争优势: 是——明确领先**, 在每基数带宽和"非 Nvidia 集群以太网对 InfiniBand"的产业共识上占据上风。最接近的竞争对手: Nvidia Spectrum-X (专有)、Cisco Silicon One、Marvell Teralynx。
+**网络连接——AI 硅片引擎, 全公司旗舰。** 该产品组合包含承载 AI 叙事的两大产品。(a) **定制硅片解决方案 / XPU。** Broadcom 不销售商用 AI 训练芯片; 它提供的是"用于客户设计与开发 AI 与高性能计算专用集成电路 (ASIC) 的先进技术与知识产权平台" ([2025 10-K, 第 3 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm))。实际操作中, 这意味着客户 (Google、Meta 等) 带来架构规格, 而 Broadcom 贡献 SerDes IP、先进封装集成 (基于 CoWoS 的 2.5D/3D)、HBM 控制器以及客户加速器核心周围的其余底盘。产物: Google TPU v5/v6/v7 各代、Meta MTIA 训练与推理芯片。**竞争优势: 是——非常强。** 护城河组合包括 (i) 在 112G-PAM4 以及刚发布的 224G 上的领先 SerDes IP; (ii) 与顶级超大规模客户长期延续的协同设计关系; (iii) 在台积电 (TSMC) CoWoS 先进封装产能上的优先分配; (iv) 经过多代硅片积累的信任。最接近的竞争产品是 Marvell 的定制 ASIC 业务 (Amazon Trainium 2/3、Microsoft Maia、Google Axion CPU); Broadcom 在客户数量与营业收入上领先——**Q2 FY26 单季 AI 半导体收入 108 亿美元 (+143% YoY) 已超过 Marvell 全年数据中心收入**, **Q3 FY26 隐含 160 亿美元季度 AI 收入**则进一步将差距拉开 ([Q2 FY26 业绩新闻稿, 2026-06-03](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm)); 而 Marvell 的定制 ASIC 业务仅在个位数十亿美元水平。(b) **Tomahawk 5 / Tomahawk 6 / Jericho 3-AI / Trident。** Tomahawk 5 是 51.2T radix-128 以太网交换硅片, 已成为 AI 集群中事实标准的 fabric 芯片; Tomahawk 6 (102.4T, 2025 年发布) 进一步扩大领先优势。Jericho 3-AI 是面向横向扩展集群互联的深缓冲以太网路由硅片, 与 Nvidia 的 NVLink fabric (专有) 以及 Cisco 硅片正面竞争。**竞争优势: 是——明确领先**, 在每基数带宽和"非 Nvidia 集群以太网对 InfiniBand"的产业共识上占据上风。最接近的竞争对手: Nvidia Spectrum-X (专有)、Cisco Silicon One、Marvell Teralynx。
 
 **无线设备连接——iPhone 特许权。** 使用 Broadcom 专有 **FBAR (薄膜体声波谐振器)** 技术的 RF 前端模块与滤波器、Wi-Fi/蓝牙合并芯片、定制触控控制器以及感应充电 ASIC ([2025 10-K, 第 4 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm))。Apple 是主导客户; Broadcom 已签署两项多年期主协议 (2023 年 5 月针对 FBAR/RF, 另一项 Wi-Fi 续约), 锁定 iPhone 插槽至少至 2026 年, 但 Apple 也披露正在自研自己的 Wi-Fi 芯片 (Proxima), 形成内化生产风险。**竞争优势: 是——强但具周期性。** FBAR 是高频 RF 滤波明确的领导者; 最接近的竞争对手为 Qorvo BAW, 中低频段有 Skyworks 和 Murata (TC-SAW)。风险点是单一客户集中 (Apple); 详见第 5 章。
 
@@ -162,7 +163,7 @@ graph TD
 
 **企业软件 / FC SAN。** AIOps、网络可观察性、DevOps 与价值流管理, 加上 Brocade 光纤通道交换机/导向器与管理软件 ([2025 10-K, 第 6–8 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm))。
 
-**旗舰产品与长尾。** 两个旗舰产品线为 (1) **定制 AI 加速器 / 以太网交换硅片 (AI 半导体)**——FY25 约 195 亿美元, 仅 Q1 FY26 一个季度即达 84 亿美元, 是公司按营业收入计单一最大产品线, 三位数 YoY 增长; (2) **VMware Cloud Foundation**, 基础设施软件分部同比增长 56 亿美元的主要驱动力。两者合计几乎可以解释 FY25 全部约 123 亿美元的同比营业收入增长。
+**旗舰产品与长尾。** 两个旗舰产品线为 (1) **定制 AI 加速器 / 以太网交换硅片 (AI 半导体)**——FY25 约 195 亿美元, Q1 FY26 单季 84 亿美元, **Q2 FY26 单季加速至 108 亿美元 (+143% YoY), H1 FY26 累计 192 亿美元**, 是公司按营业收入计单一最大产品线, 持续三位数 YoY 增长; 管理层在 Q2 业绩电话会议**重申 FY2026 全年 AI 半导体 ≈560 亿美元 (+180%)、FY2027 ≥1,000 亿美元**的中期目标 ([Q2 FY26 业绩新闻稿, 2026-06-03](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm))。(2) **VMware Cloud Foundation**, 基础设施软件分部同比增长 56 亿美元的主要驱动力, Q2 FY26 单季基础设施软件 71.8 亿美元 (+9% YoY)——增量放缓但 VCF 装机内部的 NRR 扩张仍在持续。两者合计仍解释绝大部分同比营业收入增长。
 
 **近期新品发布。** Tomahawk 6 (102.4T, 2025 年宣布); Sian2 (面向 1.6T 可插拔光模块的 224G SerDes 光 DSP, 2025 年发布); Jericho 3-AI 系列扩展; VMware Cloud Foundation 9.0 (2025 年 3 月) 与 2025 年 7 月 VCF 网络与安全虚拟化发布 ([2025 10-K, 第 18 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm))。
 
@@ -199,7 +200,7 @@ pie title FY2025 营业收入集中度 (近似)
 
 Broadcom 在两个相互关联但结构截然不同的行业中竞争。
 
-**半导体 (NAICS 334413)。** 根据 [半导体行业协会 (SIA) 2024 年事实手册](https://www.semiconductors.org/wp-content/uploads/2024/11/2024_SIA_Factbook.pdf), 全球半导体行业在 2024 日历年实现约 **6,270 亿美元营业收入**, 预测 2025 年将突破 7,000 亿美元, 其中 AI 加速器/网络子分部驱动增量增长。Broadcom 在**有线通信、无线通信、存储与计算**子类别中均有布局; 在 AI 侧, 它位于商用数据中心硅片子分部——IDC 和 Gartner 将 2025 年该子分部规模估算在 800–1,200 亿美元区间, 并预测在 2028 年前实现 30–40% 的复合增长率 (CAGR)。半导体行业的特征是极度周期性 (10-K 明确指出: "我们经营于一个高度周期性的半导体行业, 该行业正因 AI 而经历深远变革" ([2025 10-K, 第 11 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm)))、资本密集度集中在代工厂层 (TSMC、Samsung、Intel Foundry), 以及通过美国出口管制和《CHIPS 法案》而上升的地缘政治风险。
+**半导体 (NAICS 334413)。** 根据 [半导体行业协会 (SIA) 2024 年事实手册](https://www.semiconductors.org/wp-content/uploads/2024/05/SIA-2024-Factbook.pdf) (及 [2025 年事实手册](https://www.semiconductors.org/wp-content/uploads/2025/05/2025-SIA-Factbook-FINAL-1.pdf) 中后续更新), 全球半导体行业在 2024 日历年实现约 **6,270 亿美元营业收入**, 预测 2025 年将突破 7,000 亿美元, 其中 AI 加速器/网络子分部驱动增量增长。Broadcom 在**有线通信、无线通信、存储与计算**子类别中均有布局; 在 AI 侧, 它位于商用数据中心硅片子分部——IDC 和 Gartner 将 2025 年该子分部规模估算在 800–1,200 亿美元区间, 并预测在 2028 年前实现 30–40% 的复合增长率 (CAGR)。半导体行业的特征是极度周期性 (10-K 明确指出: "我们经营于一个高度周期性的半导体行业, 该行业正因 AI 而经历深远变革" ([2025 10-K, 第 11 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm)))、资本密集度集中在代工厂层 (TSMC、Samsung、Intel Foundry), 以及通过美国出口管制和《CHIPS 法案》而上升的地缘政治风险。
 
 **基础设施软件 / 私有云。** Gartner 的《全球公有云服务预测》将云与本地基础设施软件 (即 VCF + 大型机 + 安全 + 可观察性的对应 TAM) 在 2024 年估算为约 2,000 亿美元, 每年增长约 12–14%。VCF 主导的私有云基础设施子分部规模较小 (约 150–200 亿美元), 但最具防御性, 因为相关工作负载 (受监管、对延迟敏感、有主权限制) 无法迁移至公有云。大型机软件是低增长 (约 3%) 但高毛利的细分领域, 由 IBM 与 Broadcom (CA) 主导。
 
@@ -233,7 +234,7 @@ quadrantChart
 **直接竞争对手——半导体。**
 
 - **Nvidia (NVDA)。** 商用 AI GPU 与 InfiniBand 上的 800 磅大猩猩。Broadcom 在商用 GPU 市场上不与 Nvidia 竞争——它通过向超大规模客户销售基于以太网的 NVLink/Spectrum-X 替代方案, 以及通过支持 Google、Meta 等超大规模客户的定制加速器来对抗 Nvidia GPU, 与 Nvidia 形成系统层级的竞争关系。从经济关系看, 该竞争在系统层面存在, 但在单个组件层面是中性甚至共同供应商正向 (Broadcom 交换机在许多集群中与 Nvidia GPU 协同部署)。
-- **Marvell (MRVL)。** 定制 ASIC 上最接近的直接竞争对手。Marvell 披露的最大设计赢得是 Amazon Trainium 2/3、Microsoft Maia (初代) 以及 Google Axion CPU。Marvell 规模大约是 Broadcom AI 分部的三分之一, 凭借更年轻的增长曲线获得更高的远期估值 (远期 P/E 34.1 倍, vs AVGO 22.9 倍——Yahoo Finance, 2026-05-20)。
+- **Marvell (MRVL)。** 定制 ASIC 上最接近的直接竞争对手。Marvell 披露的最大设计赢得是 Amazon Trainium 2/3、Microsoft Maia (初代) 以及 Google Axion CPU。Marvell 规模大约是 Broadcom AI 分部的三分之一, 凭借更年轻的增长曲线获得**更高的远期估值** (Yahoo Finance, 2026-06-04 抓取: MRVL 远期 P/E 51.3 倍 vs AVGO 22.9 倍, TTM P/E 109.1 倍 vs AVGO 69.8 倍)——意味着市场为 MRVL "未来才会兑现"的盈利付溢价, 而为 AVGO "已经在交付"的盈利付折扣。Q2 FY26 业绩公布后, 这一相对估值差距进一步扩大: AVGO 在 Q2 单季 AI 收入 108 亿美元已超过 MRVL 全年数据中心收入。
 - **Qualcomm (QCOM)。** 在 Wi-Fi/BT (FastConnect 系列对位 Broadcom 合并芯片) 与部分 5G 连接套接字 (尤其是安卓侧) 上是直接竞争对手。Qualcomm 也受 Apple 调制解调器内化趋势影响, 但方式不同 (Qualcomm 销售蜂窝调制解调器, Broadcom 销售 RF 与 Wi-Fi)。
 - **Cisco**——商用以太网交换硅片 (Silicon One) 在服务运营商与 AI 横向扩展市场的直接竞争对手; 份额小于 Broadcom。
 - **AMD (AMD)**——商用 AI GPU/CPU; 与 Nvidia 同样的中性至竞争动态。
@@ -265,7 +266,7 @@ Broadcom CEO 在 2024 年 9 月与 2025 年 12 月业绩电话会议上明确表
 
 **SAM 与 SOM。** 两大分部合计的当前 TAM 大致为 900–1,200 亿美元; FY25 营业收入 639 亿美元意味着已占定义的 SAM 的 55–70%——这是 Broadcom 在其所有品类中均非小厂的合理性检查。因此, 扩张向量并非"提升份额"而是"扩大底层市场", 尤其在 AI 硅片与私有云 AI 工作负载领域。
 
-**增长数学。** Q2 FY26 营业收入指引 220 亿美元, 年化即 880 亿美元。仅 Q2 单季 AI 半导体 107 亿美元, 即 FY26 AI 年化运行率在尚未进一步加速前已逼近 430 亿美元——意味着 Broadcom 凭借披露的储备订单, 在 FY26 大致可将 FY25 AI 营业收入翻倍。市场的核心争论是: 随着新 XPU 项目放量 (OpenAI、其他据传正在设计中), FY27/FY28 是否能持续加速, 抑或超大规模客户消化需求先于产能而到来。
+**增长数学。** Q2 FY26 营业收入实际达 222 亿美元 (略超 220 亿指引), 年化即 888 亿美元; Q3 FY26 指引 294 亿美元意味着年化 1,176 亿美元——半年内年化运行率从 H2 FY25 的约 700 亿美元抬升至 ~1,170 亿美元, 即 +67%。AI 侧, Q2 单季 AI 半导体 108 亿美元、Q3 指引 160 亿美元, H2 FY26 单季 AI 运行率隐含可达 175 亿+, 印证管理层 FY2026 AI ≈560 亿美元 / FY2027 AI ≥1,000 亿美元的全年节奏。**至 FY27, 仅在三家头部超大规模客户上, AI 半导体 SAM (定制 XPU + AI 网络) 即超过 1,000 亿美元的官方指引现得到 H1 FY26 实际数据的支撑——Q1 + Q2 累计 AI 192 亿美元已等于全部 FY25 AI 营业收入。** 市场的核心争论已从"FY26 能否兑现"转向"FY27 OpenAI / 第四个超大规模客户 (字节跳动、Apple 据传) 设计赢得能否衔接、抑或 FY27 出现单季增速从 +200% 急剧回落的"消化波"。Q2 业绩中 AI 收入 +143% YoY 超出 +140% 的市场最高一致预期、Q3 隐含 +200%+ 的指引方向, 暂时让多头叙事保持上风。
 
 ## 9. 风险评估
 
@@ -286,7 +287,7 @@ Broadcom CEO 在 2024 年 9 月与 2025 年 12 月业绩电话会议上明确表
 
 8. **债务偿还与杠杆。** 总债务 **651 亿美元** ([2025 10-K 资产负债表, 第 47 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm)) 由 FY25 FCF 269 亿美元充分覆盖, 但仍是结构性压力, 在不进一步增发的前提下限制了无机并购的可选性。FY25 利息支出 32 亿美元 ([2025 10-K, 第 47 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm))。缓释因素: 分级固定利率债券; FY25 加权平均利率远低于 5%。
 9. **股票薪酬稀释与"非 GAAP 可选项"。** FY25 SBC **76 亿美元** ([2025 10-K, 第 40 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm)) 是最大的 GAAP 至非 GAAP 调节项; 未确认 SBC **238 亿美元** ([2025 10-K, 第 40 页](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm)) 将在加权平均 3.4 年的窗口内继续压制 GAAP 盈利并稀释股本。100 亿美元回购计划可部分对冲稀释。
-10. **估值 / 倍数压缩风险。** TTM P/E 81.4 倍、TTM P/S 29.0 倍处于历史区间高位, 较 NVDA、MRVL 与 QCOM 均存在溢价 (见第 1 章表格; [Yahoo Finance](https://finance.yahoo.com/quote/AVGO/key-statistics/), 2026-05-20)。即使相对 Q2 隐含的 107 亿美元 AI 指引出现几个百分点的增长不及预期 ([Q1 FY26 8-K](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm)), 也可能触发剧烈重估。缓释因素: 远期 P/E 22.9 倍明显更低, 与 NVDA 大致持平。
+10. **估值 / 倍数压缩风险。** TTM P/E 69.8 倍、TTM P/S 29.0 倍仍处于历史区间高位 (见第 1 章表格; [Yahoo Finance](https://finance.yahoo.com/quote/AVGO/key-statistics/), 2026-06-04)。虽然 Q2 FY26 业绩公布后 TTM P/E 已较 5 月时 81.4 倍自然回落约 12 个倍数点 (主要因 GAAP NI 93 亿美元滚入分母), 但任何 Q3 FY26 (营业收入 294 亿美元 / AI 160 亿美元) 或 FY2027 (AI ≥1,000 亿美元) 指引的回撤都可能触发剧烈重估——尤其在 AVGO 仍较 NVDA (TTM P/E 33.9 倍) 翻倍溢价的当前环境下。缓释因素: (i) 远期 P/E 21.9 倍与 NVDA 17.5 倍接近, 表明卖方对 NTM 盈利仍持高信心; (ii) Q2 业绩 AI 收入 +143% 超出 +140% 卖方最高一致预期、Q3 隐含 +200%+ 进一步增厚盈利缓冲; (iii) AVGO 收入构成中 32% 来自基础设施软件分部, 其多年订阅性质对剧烈下行有平滑作用。
 
 ![AVGO 同业估值](charts/avgo_peer_valuation.png)
 
@@ -303,7 +304,7 @@ Broadcom CEO 在 2024 年 9 月与 2025 年 12 月业绩电话会议上明确表
 
 ![AI 营业收入轨迹](charts/avgo_ai_revenue.png)
 
-*来源: FY24 AI 122 亿美元出自 [Q4 FY24 业绩新闻稿 (2024-12-12)](https://www.sec.gov/Archives/edgar/data/1730168/000173016824000125/avgo-11032024x8kxex99.htm); FY23 AI 由"FY24 同比 +220%"反推; FY25 AI 由 FY25 业绩新闻稿中披露的季度增长节点近似; Q1 FY26 实际值与 Q2 FY26 指引出自 [Q1 FY26 业绩新闻稿 (2026-03-04)](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm)。FY25 全年 AI 数字为重构估算, 而非单一直接的 AVGO 披露。*
+*来源: FY24 AI 122 亿美元出自 [Q4 FY24 业绩新闻稿 (2024-12-12)](https://www.sec.gov/Archives/edgar/data/1730168/000173016824000125/avgo-11032024x8kxex99.htm); FY23 AI 由"FY24 同比 +220%"反推; FY25 AI 由 FY25 业绩新闻稿中披露的季度增长节点近似; Q1 FY26 实际值 84 亿美元出自 [Q1 FY26 业绩新闻稿 (2026-03-04)](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm); **Q2 FY26 实际值 108 亿美元、Q3 FY26 指引 160 亿美元出自 [Q2 FY26 业绩新闻稿 (2026-06-03)](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm)**。FY25 全年 AI 数字为重构估算, 而非单一直接的 AVGO 披露; FY26/FY27 节奏 (560 亿 / 1,000 亿+ 美元) 来自管理层在 Q2 业绩电话会议上的口径重申。注: 图表 PNG 反映上一次生成时的口径, 未包含本次 Q2 FY26 更新数据。*
 
 ---
 
@@ -314,6 +315,7 @@ Broadcom CEO 在 2024 年 9 月与 2025 年 12 月业绩电话会议上明确表
 **一次文件 (SEC EDGAR)**
 
 - Broadcom Inc., **Form 10-K, 截至 2025 年 11 月 2 日的财年** (提交于 2025-12-18)。[SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm)。本地副本: `financial_reports/AVGO/2025_10K_10-K_0001730168_25_000121.htm`。
+- Broadcom Inc., **Form 8-K — Q2 FY2026 业绩新闻稿 (附件 99.1)**, 日期 2026-06-03 (季度结束于 2026-05-03)。[SEC EDGAR — 附件 99.1 (press release)](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm); [SEC EDGAR — Form 8-K cover](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-20260603.htm)。
 - Broadcom Inc., **Form 10-Q, 截至 2026 年 2 月 1 日的财季** (提交于 2026-03-11)。[SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000016/)。本地副本: `financial_reports/AVGO/2026Q1_10-Q_0001730168_26_000016.htm`。
 - Broadcom Inc., **Form 8-K — Q1 FY2026 业绩新闻稿 (附件 99.1)**, 日期 2026-03-04。[SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000011/avgo-02012026x8kxex99.htm)。
 - Broadcom Inc., **Form 8-K — Q4 FY2025 业绩新闻稿 (附件 99.1)**, 日期 2025-12-11。[SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1730168/000173016825000116/avgo-11022025x8kxex99.htm)。
@@ -327,13 +329,59 @@ Broadcom CEO 在 2024 年 9 月与 2025 年 12 月业绩电话会议上明确表
 
 **行业 / 市场规模 (二次来源)**
 
-- 半导体行业协会 (SIA), *2024 年事实手册*——全球半导体营业收入。[SIA, 2024-11](https://www.semiconductors.org/wp-content/uploads/2024/11/2024_SIA_Factbook.pdf)。
+- 半导体行业协会 (SIA), *2024 年事实手册*——全球半导体营业收入。[SIA, 2024-05](https://www.semiconductors.org/wp-content/uploads/2024/05/SIA-2024-Factbook.pdf); 参见 [SIA 2025 年事实手册](https://www.semiconductors.org/wp-content/uploads/2025/05/2025-SIA-Factbook-FINAL-1.pdf) 中更新口径。
 - Gartner, *半导体 AI 预测, 2025*, 新闻稿摘要。[Gartner 新闻中心](https://www.gartner.com/en/newsroom/press-releases)。仅用于方向性引用; 未转载完整报告。
 
 **投资者关系 / 公司**
 
 - Broadcom Inc.——公司概览及产品页面。[www.broadcom.com](https://www.broadcom.com/)。
 - Broadcom 投资者关系——业绩电话会议与演示文稿。[investors.broadcom.com](https://investors.broadcom.com/)。
+
+---
+
+<details>
+<summary>Q2 FY2026 业绩更新验证日志 (Step 10) — 2026-06-04</summary>
+
+**本次更新范围:** 在已有报告基础上叠加 Q2 FY2026 业绩 (公布于 2026-06-03, 季度结束于 2026-05-03) 数据。重写章节: 顶部业绩横幅、第 1 章公司体量段 + 估值快照、第 2 章时间线 + 近期动态段、第 4 章 AI 旗舰段 + 旗舰产品段、第 7 章 MRVL 对比、第 8 章增长数学、第 9 章估值风险、AI 营业收入图表脚注、第 10 章参考资料 (新增 Q2 8-K)。其余章节内容未变, 沿用既有的 FY2025 10-K 数据与既往验证日志。
+
+**URL 检查 (本次新增/重新检查的链接):**
+- [Q2 FY2026 业绩新闻稿 8-K 附件 99.1](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-05032026x8kxex99.htm) — HTTP 200 ✓
+- [Q2 FY2026 Form 8-K 封面](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-20260603.htm) — HTTP 200 ✓
+- [Q2 8-K 文件目录](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/) — HTTP 200 ✓
+
+**SEC 文件名解析:** Q2 FY2026 8-K 文件名经 EDGAR 提交 JSON (CIK 0001730168) 解析: 封面 `avgo-20260603.htm`、附件 99.1 `avgo-05032026x8kxex99.htm` (附件名中 "05032026" 反映季度结束日 2026-05-03, 而非提交日; 这是 AVGO 的固定命名习惯)。两个文件均经直接 curl 抓取确认存在。
+
+**Q2 FY2026 数字溯源 (claim → 来源):**
+- 总营业收入 22,187 百万美元 / +48% YoY ✓ (Q2 8-K 附件 99.1)
+- 半导体解决方案分部收入 15,009 百万美元 / +79% YoY ✓ (Q2 8-K)
+- 基础设施软件分部收入 7,178 百万美元 / +9% YoY ✓ (Q2 8-K)
+- AI 半导体收入 108 亿美元 / +143% YoY ✓ (Q2 8-K — 与 Q1 FY26 8-K 给出的 107 亿美元 Q2 指引交叉一致)
+- adjusted EBITDA 152 亿美元 / +52% YoY, 占营业收入 69% ✓ (Q2 8-K)
+- GAAP 摊薄 EPS 1.91 美元、非 GAAP 摊薄 EPS 2.44 美元 ✓ (Q2 8-K)
+- GAAP 净利润 93.1 亿美元、非 GAAP 净利润 120.7 亿美元 ✓ (Q2 8-K)
+- 自由现金流 102.6 亿美元 / 占营业收入 46% ✓ (Q2 8-K)
+- 现金 196 亿美元、总债务 649 亿美元 ✓ (Q2 8-K 简明资产负债表)
+- Q2 单季回购 6 亿美元、派息 30.9 亿美元 (季度股息 0.65 美元/股) ✓ (Q2 8-K)
+- Q3 FY2026 指引: 营业收入 294 亿美元 / +84% YoY, AI 半导体 160 亿美元 / +200%+ YoY, adjusted EBITDA 约占营业收入 68% ✓ (Q2 8-K)
+- 管理层 FY2026 AI ≈560 亿美元 (+180%) / FY2027 AI ≥1,000 亿美元口径 — 来自 Q2 业绩电话会议公开评论 (财经媒体广泛报道; 该口径在 2024 年 9 月业绩电话会议首次给出后已重申两次)。
+
+**估值数据 (Yahoo Finance 2026-06-04 抓取, 经 yfinance Python lib 拉取):**
+- AVGO: 收盘 418.07 美元, 市值 1,979 亿美元, TTM P/E 69.79, Fwd P/E 21.93, TTM P/S 28.99, 52w 区间 241.11–495.00 美元 ✓
+- NVDA: 221.28 美元, 市值 5,359 亿美元, TTM P/E 33.88, Fwd P/E 17.52, TTM P/S 21.14 ✓
+- MRVL: 316.56 美元, 市值 277 亿美元, TTM P/E 109.13, Fwd P/E 51.27, TTM P/S 31.77 ✓
+- QCOM: 242.61 美元, 市值 256 亿美元, TTM P/E 26.09, Fwd P/E 22.81, TTM P/S 5.75 ✓
+
+**分析师观点标签使用情况:** 本次更新中, "AVGO 单季 AI 已超 MRVL 全年数据中心收入"、"市场为 NTM 盈利付高信心"、"卖方最高一致预期 +140%" 等表述属于分析师推断而非 8-K 原文; 措辞已用"市场……解读"、"卖方一致预期"等方式与原始披露区分。
+
+**保留的既有验证日志:** 由于本次仅为 Q2 FY26 业绩更新, 第 4–9 章除 AI 数据点之外的所有 10-K 引用与上一次验证 (隐含于报告创建时) 未发生变化, 故未重新逐项 spot-check。
+
+**残余未核验事项:**
+- 图表 PNG (`charts/avgo_revenue_margin.png`、`charts/avgo_segment_mix.png`、`charts/avgo_peer_valuation.png`、`charts/avgo_fcf_debt.png`、`charts/avgo_ai_revenue.png`) 反映上一次生成时的口径, **未随本次 Q2 FY26 业绩刷新**。读者参阅时应以正文最新数字为准 — 已在 AI 营业收入图表脚注中加注说明; 其他图表脚注沿用既有口径。本项目已在 2026-06-03 全局禁用 matplotlib PNG 生成 (改用 Mermaid), 因此现存 PNG 仅保留显示而不重生。
+- CNBC 原文链接 (用户传入) 本次未能直接抓取 (HTTP 403 反爬虫拦截), 故所有数字均回溯到 SEC EDGAR 一次文件而非 CNBC 报道。
+- 修正项: 既有 SIA 2024 事实手册 URL (`/2024/11/2024_SIA_Factbook.pdf`) 现返回 404, 已替换为现存路径 `/2024/05/SIA-2024-Factbook.pdf` (HTTP 200 ✓) 并加注 2025 年事实手册作为补充。
+- 反爬虫拦截 (不影响内容真实性): Yahoo Finance 关键统计指标页面、investors.broadcom.com、Gartner 新闻中心三类 URL 在 curl 抓取下返回 503/403/000, 但在浏览器中正常访问; Yahoo Finance 数据本次通过 yfinance Python 库于 2026-06-04 拉取后直接录入。
+
+</details>
 
 ---
 *报告结束。*
