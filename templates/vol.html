@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Options Volatility Dashboard</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+<style>
+  :root { --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --bd:#2b3340; --fg:#e6edf3; --muted:#8b949e; --accent:#58a6ff; }
+  body { background:var(--bg); color:var(--fg); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .panel { background:var(--panel); border:1px solid var(--bd); border-radius:12px; }
+  .panel2 { background:var(--panel2); border:1px solid var(--bd); border-radius:10px; }
+  .muted { color:var(--muted); }
+  .metric-label { font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); }
+  .metric-val { font-size:1.55rem; font-weight:650; line-height:1.1; }
+  .metric-sub { font-size:.72rem; color:var(--muted); }
+  .pos { color:#3fb950; } .neg { color:#f85149; } .warn { color:#d29922; }
+  .form-control, .form-select { background:var(--panel2); border-color:var(--bd); color:var(--fg); }
+  .form-control:focus { background:var(--panel2); color:var(--fg); border-color:var(--accent); box-shadow:0 0 0 .2rem rgba(88,166,255,.15); }
+  .form-control::placeholder { color:#5b6470; }
+  .chip { display:inline-flex; align-items:center; gap:.3rem; padding:.15rem .55rem; border-radius:999px; font-size:.75rem; font-weight:600; }
+  .regime-num { font-size:1.15rem; font-weight:700; }
+  .badge-soft-danger{background:rgba(248,81,73,.15);color:#f85149;}
+  .badge-soft-warning{background:rgba(210,153,34,.18);color:#e3b341;}
+  .badge-soft-info{background:rgba(88,166,255,.15);color:#58a6ff;}
+  .badge-soft-success{background:rgba(63,185,80,.15);color:#3fb950;}
+  .badge-soft-secondary{background:rgba(139,148,158,.15);color:#8b949e;}
+  a { color:var(--accent); }
+  .chart-box { min-height:340px; }
+  .spinner-border-sm{width:1rem;height:1rem;}
+  .tick-quick{cursor:pointer;}
+  code.k{color:#79c0ff;background:rgba(88,166,255,.08);padding:.05rem .3rem;border-radius:4px;font-size:.78rem;}
+</style>
+</head>
+<body>
+<div class="container-fluid py-3" style="max-width:1280px;">
+
+  <!-- Header / search -->
+  <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+    <div>
+      <div class="h4 mb-0">📈 Options Volatility</div>
+      <div class="metric-sub">Implied vol, skew &amp; regime from free yfinance option chains · EOD-ish, not a live feed</div>
+    </div>
+    <form id="searchForm" class="ms-auto d-flex gap-2" style="min-width:320px;">
+      <input id="tickerInput" class="form-control form-control-lg" placeholder="Ticker — e.g. AAPL, SPY, NVDA" autocomplete="off" autofocus>
+      <button class="btn btn-primary btn-lg px-4" type="submit">Go</button>
+    </form>
+  </div>
+  <div class="mb-3 metric-sub">
+    Quick:
+    <span class="tick-quick text-info">SPY</span> ·
+    <span class="tick-quick text-info">QQQ</span> ·
+    <span class="tick-quick text-info">NVDA</span> ·
+    <span class="tick-quick text-info">TSLA</span> ·
+    <span class="tick-quick text-info">AAPL</span> ·
+    <span class="tick-quick text-info">AMD</span> ·
+    <span class="tick-quick text-info">SMH</span>
+  </div>
+
+  <!-- Market regime bar -->
+  <div class="panel p-3 mb-3" id="regimePanel">
+    <div class="d-flex flex-wrap align-items-center gap-4">
+      <div>
+        <div class="metric-label">Market regime</div>
+        <div><span id="regimeBadge" class="chip badge-soft-secondary">loading…</span></div>
+      </div>
+      <div class="vr d-none d-md-block"></div>
+      <div class="d-flex flex-wrap gap-4" id="vixRow">
+        <div><div class="metric-label">VIX9D</div><div class="regime-num" id="r-vix9d">—</div></div>
+        <div><div class="metric-label">VIX (30d)</div><div class="regime-num" id="r-vix">—</div></div>
+        <div><div class="metric-label">VIX3M</div><div class="regime-num" id="r-vix3m">—</div></div>
+        <div><div class="metric-label">VIX6M</div><div class="regime-num" id="r-vix6m">—</div></div>
+        <div><div class="metric-label">VVIX</div><div class="regime-num" id="r-vvix">—</div></div>
+        <div><div class="metric-label">VIX − VIX3M</div><div class="regime-num" id="r-slope">—</div></div>
+      </div>
+      <div class="ms-auto metric-sub" style="max-width:260px;" id="regimeNote"></div>
+    </div>
+  </div>
+
+  <!-- Empty / hint state -->
+  <div id="hint" class="panel p-5 text-center muted">
+    Enter a ticker above to load its implied-vol surface, skew and expected move.
+  </div>
+
+  <!-- Error -->
+  <div id="errBox" class="panel p-4 text-center d-none">
+    <div class="neg fw-semibold" id="errMsg"></div>
+  </div>
+
+  <!-- Results -->
+  <div id="results" class="d-none">
+
+    <!-- Ticker header -->
+    <div class="d-flex flex-wrap align-items-baseline gap-3 mb-2">
+      <div class="h3 mb-0" id="t-ticker">—</div>
+      <div class="h4 mb-0" id="t-spot">—</div>
+      <div id="t-chg" class="fw-semibold">—</div>
+      <div class="metric-sub ms-2" id="t-range">—</div>
+      <div class="metric-sub ms-auto" id="t-asof"></div>
+    </div>
+
+    <!-- Metric cards -->
+    <div class="row g-2 mb-3" id="cards"></div>
+
+    <!-- Charts -->
+    <div class="row g-3">
+      <div class="col-lg-6">
+        <div class="panel p-3">
+          <div class="d-flex align-items-center mb-1">
+            <div class="fw-semibold">IV term structure</div>
+            <div class="metric-sub ms-2">ATM implied vol by days-to-expiry</div>
+          </div>
+          <div id="chartTerm" class="chart-box"></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="panel p-3">
+          <div class="d-flex align-items-center mb-1 flex-wrap gap-2">
+            <div class="fw-semibold">Volatility skew / smile</div>
+            <select id="smileExpiry" class="form-select form-select-sm ms-auto" style="width:auto;"></select>
+          </div>
+          <div id="chartSmile" class="chart-box"></div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="panel p-3">
+          <div class="d-flex align-items-center mb-1">
+            <div class="fw-semibold">Realized vol (20d) — 1 year</div>
+            <div class="metric-sub ms-2">current 30d ATM IV drawn on top — gap above the line ≈ options richer than recent realized</div>
+          </div>
+          <div id="chartRV" class="chart-box"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="metric-sub mt-3">
+      <strong>Reading it:</strong>
+      <code class="k">VRP = IV − RV</code> positive ⇒ options pricing more vol than the stock has realized (premium-seller friendly).
+      <code class="k">25Δ skew</code> = IV(25-delta put) − IV(25-delta call); higher ⇒ market paying up for downside protection.
+      <code class="k">P/C</code> &gt; 1 ⇒ more put than call activity.
+      <code class="k">Expected move</code> = ATM straddle price ⇒ the ± the options market is pricing into the headline expiry.
+      The “IV percentile” is ranked vs the trailing-1Y <em>realized</em>-vol range (a proxy — a true IV rank needs stored IV history).
+    </div>
+  </div>
+
+  <div class="text-center my-4 d-none" id="loading">
+    <div class="spinner-border text-primary"></div>
+    <div class="metric-sub mt-2">Pulling option chains…</div>
+  </div>
+
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const PLOT_LAYOUT = {
+  paper_bgcolor:'rgba(0,0,0,0)', plot_bgcolor:'rgba(0,0,0,0)',
+  font:{color:'#c9d1d9', size:12}, margin:{l:50,r:18,t:14,b:40},
+  xaxis:{gridcolor:'#2b3340', zerolinecolor:'#2b3340'},
+  yaxis:{gridcolor:'#2b3340', zerolinecolor:'#2b3340'},
+  legend:{orientation:'h', y:1.12, x:0}, hovermode:'closest'
+};
+const CFG = {displayModeBar:false, responsive:true};
+const fmt = (v,d=2)=> (v===null||v===undefined||Number.isNaN(v)) ? '—' : Number(v).toLocaleString(undefined,{minimumFractionDigits:d,maximumFractionDigits:d});
+const pct = (v,d=1)=> (v===null||v===undefined) ? '—' : fmt(v,d)+'%';
+
+// ---- Market regime ----
+async function loadRegime(){
+  try{
+    const r = await fetch('api/regime').then(x=>x.json());
+    if(!r.ok) return;
+    const set=(id,v,suf='')=> $(id).textContent = (v===null||v===undefined)?'—':(fmt(v,2)+suf);
+    set('#r-vix9d', r.vix9d); set('#r-vix', r.vix); set('#r-vix3m', r.vix3m);
+    set('#r-vix6m', r.vix6m); set('#r-vvix', r.vvix);
+    const slopeEl=$('#r-slope');
+    slopeEl.textContent = r.slope===null?'—':fmt(r.slope,2);
+    slopeEl.className = 'regime-num ' + (r.slope>0?'neg':'pos');
+    const b=$('#regimeBadge');
+    b.textContent = r.regime || '—';
+    b.className = 'chip badge-soft-' + (r.regime_class||'secondary');
+    $('#regimeNote').innerHTML = r.backwardation
+      ? '⚠️ <span class="neg">Backwardation</span> (VIX &gt; VIX3M) — near-term fear bid; classic stress tell.'
+      : 'Contango (VIX &lt; VIX3M) — calm/normal term structure.';
+  }catch(e){ /* regime is best-effort */ }
+}
+
+// ---- Metric cards ----
+function card(label, val, sub, cls=''){
+  return `<div class="col-6 col-md-4 col-lg-2">
+    <div class="panel2 p-2 h-100">
+      <div class="metric-label">${label}</div>
+      <div class="metric-val ${cls}">${val}</div>
+      <div class="metric-sub">${sub||''}</div>
+    </div></div>`;
+}
+function renderCards(d){
+  const rv = d.rv||{};
+  const chgCls = d.changePct>0?'pos':(d.changePct<0?'neg':'');
+  const vrpCls = d.vrp>0?'pos':(d.vrp<0?'neg':'');
+  const em = d.expectedMove;
+  const cards = [
+    card('30d ATM IV', d.atmIV!=null?pct(d.atmIV):'—', d.atmDTE?`${d.atmDTE}d · exp ${d.headlineExpiry||''}`:'no options'),
+    card('Realized 20d', rv.rv20!=null?pct(rv.rv20):'—', `10d ${pct(rv.rv10)} · 60d ${pct(rv.rv60)}`),
+    card('VRP (IV−RV30)', d.vrp!=null?(d.vrp>0?'+':'')+fmt(d.vrp,1)+' pt':'—', d.vrp>0?'options rich':'options cheap', vrpCls),
+    card('IV pctile (1Y)', d.ivPercentile!=null?fmt(d.ivPercentile,0)+'%':'—', 'vs 1Y realized range'),
+    card('25Δ skew (RR)', d.skew25!=null?(d.skew25>0?'+':'')+fmt(d.skew25,1)+' pt':'—', d.skew25>0?'downside bid':'flat/upside', d.skew25>0?'warn':''),
+    card('Put/Call', d.pcr&&d.pcr.vol!=null?fmt(d.pcr.vol,2):'—', d.pcr&&d.pcr.oi!=null?`OI ${fmt(d.pcr.oi,2)}`:'volume'),
+  ];
+  // Expected move full-width-ish card row
+  let emRow = '';
+  if(em){
+    emRow = `<div class="col-12 col-lg-12">
+      <div class="panel2 p-2">
+        <span class="metric-label">Expected move — ${d.headlineExpiry||''} (${d.atmDTE}d straddle)</span>
+        <span class="metric-val ms-2">±$${fmt(em.abs,2)}</span>
+        <span class="metric-val ms-1 muted">(${pct(em.pct)})</span>
+        <span class="metric-sub ms-3">range <span class="neg">$${fmt(em.lo,2)}</span> → <span class="pos">$${fmt(em.hi,2)}</span></span>
+      </div></div>`;
+  }
+  $('#cards').innerHTML = cards.join('') + emRow;
+}
+
+// ---- Charts ----
+function drawTerm(d){
+  const t = (d.termStructure||[]).filter(x=>x.atmIV!=null);
+  if(!t.length){ $('#chartTerm').innerHTML='<div class="muted p-4 text-center">No expiries with usable IV.</div>'; return; }
+  Plotly.newPlot('chartTerm', [{
+    x:t.map(x=>x.dte), y:t.map(x=>x.atmIV), mode:'lines+markers',
+    line:{color:'#58a6ff',width:2}, marker:{size:7,color:'#58a6ff'},
+    text:t.map(x=>x.expiry), hovertemplate:'%{text}<br>%{x}d · IV %{y:.1f}%<extra></extra>'
+  }], {...PLOT_LAYOUT, xaxis:{...PLOT_LAYOUT.xaxis,title:'days to expiry'}, yaxis:{...PLOT_LAYOUT.yaxis,title:'ATM IV %'}}, CFG);
+}
+function drawSmile(s){
+  if(!s || (!s.call.strikes.length && !s.put.strikes.length)){ $('#chartSmile').innerHTML='<div class="muted p-4 text-center">No usable IV for this expiry.</div>'; return; }
+  const traces=[
+    {x:s.put.strikes,y:s.put.iv,name:'puts',mode:'lines+markers',line:{color:'#f85149',width:2},marker:{size:5}},
+    {x:s.call.strikes,y:s.call.iv,name:'calls',mode:'lines+markers',line:{color:'#3fb950',width:2},marker:{size:5}},
+  ];
+  const lay={...PLOT_LAYOUT, xaxis:{...PLOT_LAYOUT.xaxis,title:'strike'}, yaxis:{...PLOT_LAYOUT.yaxis,title:'IV %'},
+    shapes:[{type:'line',x0:s.spot,x1:s.spot,yref:'paper',y0:0,y1:1,line:{color:'#8b949e',width:1,dash:'dot'}}],
+    annotations:[{x:s.spot,yref:'paper',y:1.02,text:'spot '+s.spot,showarrow:false,font:{size:10,color:'#8b949e'}}]};
+  Plotly.newPlot('chartSmile', traces, lay, CFG);
+}
+function drawRV(d){
+  const h=d.rvHistory||{dates:[],rv20:[]};
+  if(!h.dates.length){ $('#chartRV').innerHTML='<div class="muted p-4 text-center">No history.</div>'; return; }
+  const traces=[{x:h.dates,y:h.rv20,name:'realized 20d',mode:'lines',line:{color:'#a371f7',width:2},fill:'tozeroy',fillcolor:'rgba(163,113,247,.08)'}];
+  const lay={...PLOT_LAYOUT, xaxis:{...PLOT_LAYOUT.xaxis,title:''}, yaxis:{...PLOT_LAYOUT.yaxis,title:'vol %'}};
+  if(d.atmIV!=null){
+    lay.shapes=[{type:'line',xref:'paper',x0:0,x1:1,y0:d.atmIV,y1:d.atmIV,line:{color:'#58a6ff',width:2,dash:'dash'}}];
+    lay.annotations=[{xref:'paper',x:0.01,y:d.atmIV,text:'30d ATM IV '+fmt(d.atmIV,1)+'%',showarrow:false,yshift:9,font:{size:11,color:'#58a6ff'}}];
+  }
+  Plotly.newPlot('chartRV', traces, lay, CFG);
+}
+
+// ---- Smile expiry dropdown ----
+let CURRENT_TICKER='';
+function fillExpiryDropdown(d){
+  const sel=$('#smileExpiry'); sel.innerHTML='';
+  (d.expiries||[]).forEach(e=>{
+    const o=document.createElement('option'); o.value=e; o.textContent=e;
+    if(e===d.headlineExpiry) o.selected=true; sel.appendChild(o);
+  });
+  sel.onchange = async ()=>{
+    const e=sel.value;
+    $('#chartSmile').innerHTML='<div class="text-center p-4"><div class="spinner-border spinner-border-sm text-primary"></div></div>';
+    try{
+      const s=await fetch(`api/smile/${CURRENT_TICKER}?expiry=${e}`).then(x=>x.json());
+      if(s.ok) drawSmile(s);
+    }catch(err){}
+  };
+}
+
+// ---- Load a ticker ----
+async function load(ticker){
+  ticker=ticker.trim().toUpperCase(); if(!ticker) return;
+  CURRENT_TICKER=ticker;
+  history.replaceState(null,'', '?t='+ticker);
+  $('#hint').classList.add('d-none');
+  $('#errBox').classList.add('d-none');
+  $('#results').classList.add('d-none');
+  $('#loading').classList.remove('d-none');
+  try{
+    const d=await fetch('api/vol/'+ticker).then(x=>x.json());
+    $('#loading').classList.add('d-none');
+    if(!d.ok){ $('#errMsg').textContent=d.error||'Failed to load.'; $('#errBox').classList.remove('d-none'); return; }
+    // header
+    $('#t-ticker').textContent=d.ticker;
+    $('#t-spot').textContent='$'+fmt(d.spot,2);
+    const chg=$('#t-chg');
+    chg.textContent=(d.changePct>0?'▲ +':d.changePct<0?'▼ ':'')+pct(d.changePct);
+    chg.className='fw-semibold '+(d.changePct>0?'pos':d.changePct<0?'neg':'');
+    $('#t-range').textContent=`52w  $${fmt(d.low52,2)} – $${fmt(d.high52,2)}`;
+    $('#t-asof').textContent='as of '+(d.asof||'').replace('T',' ').replace('+00:00','Z');
+    renderCards(d);
+    drawTerm(d); drawRV(d);
+    if(d.smile) drawSmile(d.smile); else $('#chartSmile').innerHTML='<div class="muted p-4 text-center">No option chain for this name.</div>';
+    fillExpiryDropdown(d);
+    $('#results').classList.remove('d-none');
+  }catch(err){
+    $('#loading').classList.add('d-none');
+    $('#errMsg').textContent='Network error: '+err.message;
+    $('#errBox').classList.remove('d-none');
+  }
+}
+
+$('#searchForm').addEventListener('submit', e=>{ e.preventDefault(); load($('#tickerInput').value); });
+document.querySelectorAll('.tick-quick').forEach(el=>el.addEventListener('click',()=>{ $('#tickerInput').value=el.textContent; load(el.textContent); }));
+
+// boot
+loadRegime();
+const qp=new URLSearchParams(location.search).get('t');
+if(qp){ $('#tickerInput').value=qp; load(qp); }
+</script>
+</body>
+</html>

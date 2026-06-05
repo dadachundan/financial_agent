@@ -63,5 +63,12 @@
       "runtimeArgs": ["/Users/x/projects/financial_agent/pe/app.py", "--port", "8004"],
       "port": 8004
     }
+  ,
+    {
+      "name": "vol-dashboard",
+      "runtimeExecutable": "/opt/anaconda3/bin/python3",
+      "runtimeArgs": ["/Users/x/projects/financial_agent/vol_app.py", "--port", "5002"],
+      "port": 5002
+    }
   ]
 }

@@ -11,6 +11,8 @@
 - `/cn/*` — A-share & HK reports
 - `/reports/*` — Research-report markdown viewer
 - `/indicators/*` — Market indicators dashboard
+- `/pt/*` — Sell-side price-target viewer
+- `/vol/*` — Options volatility dashboard (IV / skew / VIX regime)
 
 ---
 
