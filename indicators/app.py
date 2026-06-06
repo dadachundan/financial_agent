@@ -89,6 +89,7 @@ def _indicator_meta() -> list[dict]:
             unit=ind["unit"],
             description=ind["description"],
             thresholds=ind["thresholds"],
+            sources=ind.get("sources", []),
         )
         for ind in INDICATORS
     ]

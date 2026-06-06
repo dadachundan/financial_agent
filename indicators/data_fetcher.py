@@ -37,12 +37,19 @@ INDICATORS: list[dict] = [
         category="Liquidity", unit="%",
         description="Short-term funding cost. Rising = tighter liquidity.",
         thresholds=None,
+        sources=[
+            {"label": "FRED DTB3", "url": "https://fred.stlouisfed.org/series/DTB3"},
+            {"label": "U.S. Treasury", "url": "https://home.treasury.gov/policy-issues/financing-the-government/interest-rate-statistics"},
+        ],
     ),
     dict(
         id="yield_spread", symbol="_SPREAD_^TNX_^IRX", name="10Y – 3M Spread",
         category="Liquidity", unit="pp",
         description="Yield curve slope. Negative (inverted) = funding stress signal.",
         thresholds=dict(direction="down", caution=0.5, stress=0.0),
+        sources=[
+            {"label": "FRED T10Y3M", "url": "https://fred.stlouisfed.org/series/T10Y3M"},
+        ],
     ),
     # ── Credit ───────────────────────────────────────────────────────────────
     dict(
@@ -50,24 +57,38 @@ INDICATORS: list[dict] = [
         category="Credit", unit="%",
         description="ICE BofA HY Option-Adjusted Spread. Widening = credit stress.",
         thresholds=dict(direction="up", caution=4.5, stress=6.5),
+        sources=[
+            {"label": "FRED BAMLH0A0HYM2", "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"},
+        ],
     ),
     dict(
         id="ig_oas", symbol="_FRED_BAMLC0A0CM", name="IG Spread (OAS)",
         category="Credit", unit="%",
         description="ICE BofA IG Option-Adjusted Spread. Widening = credit stress.",
         thresholds=dict(direction="up", caution=1.3, stress=2.0),
+        sources=[
+            {"label": "FRED BAMLC0A0CM", "url": "https://fred.stlouisfed.org/series/BAMLC0A0CM"},
+        ],
     ),
     dict(
         id="hyg", symbol="HYG", name="HY Bond ETF (HYG)",
         category="Credit", unit="$",
         description="High-yield bond ETF price. Falling = credit market stress.",
         thresholds=None,
+        sources=[
+            {"label": "Yahoo HYG", "url": "https://finance.yahoo.com/quote/HYG/history"},
+            {"label": "iShares HYG", "url": "https://www.ishares.com/us/products/239565/ishares-iboxx-high-yield-corporate-bond-etf"},
+        ],
     ),
     dict(
         id="lqd", symbol="LQD", name="IG Bond ETF (LQD)",
         category="Credit", unit="$",
         description="Investment-grade bond ETF price.",
         thresholds=None,
+        sources=[
+            {"label": "Yahoo LQD", "url": "https://finance.yahoo.com/quote/LQD/history"},
+            {"label": "iShares LQD", "url": "https://www.ishares.com/us/products/239566/ishares-iboxx-investment-grade-corporate-bond-etf"},
+        ],
     ),
     # ── Volatility ───────────────────────────────────────────────────────────
     dict(
@@ -75,18 +96,30 @@ INDICATORS: list[dict] = [
         category="Volatility", unit="",
         description="S&P 500 30-day implied vol. >20 = elevated stress, >30 = high stress.",
         thresholds=dict(direction="up", caution=20, stress=30),
+        sources=[
+            {"label": "CBOE VIX", "url": "https://www.cboe.com/tradable_products/vix/vix_historical_data/"},
+            {"label": "FRED VIXCLS", "url": "https://fred.stlouisfed.org/series/VIXCLS"},
+        ],
     ),
     dict(
         id="vvix", symbol="^VVIX", name="VVIX",
         category="Volatility", unit="",
         description="Vol-of-vol index. High = uncertainty about vol itself.",
         thresholds=dict(direction="up", caution=100, stress=120),
+        sources=[
+            {"label": "CBOE VVIX", "url": "https://www.cboe.com/us/indices/dashboard/VVIX/"},
+            {"label": "Yahoo VVIX", "url": "https://finance.yahoo.com/quote/%5EVVIX/history"},
+        ],
     ),
     dict(
         id="vix_slope", symbol="_RATIO_^VIX9D_^VIX3M", name="VIX Term Slope",
         category="Volatility", unit="×",
         description="VIX9D ÷ VIX3M. <1 = contango (calm), >1 = backwardation (stress).",
         thresholds=dict(direction="up", caution=1.0, stress=1.15),
+        sources=[
+            {"label": "CBOE VIX9D", "url": "https://www.cboe.com/us/indices/dashboard/VIX9D/"},
+            {"label": "CBOE VIX3M", "url": "https://www.cboe.com/us/indices/dashboard/VIX3M/"},
+        ],
     ),
     # ── Cross-Asset ──────────────────────────────────────────────────────────
     dict(
@@ -94,30 +127,50 @@ INDICATORS: list[dict] = [
         category="Cross-Asset", unit="$",
         description="US large-cap equities — primary risk asset benchmark.",
         thresholds=None,
+        sources=[
+            {"label": "Yahoo SPY", "url": "https://finance.yahoo.com/quote/SPY/history"},
+            {"label": "SSGA SPY", "url": "https://www.ssga.com/us/en/individual/etfs/spy-spdr-sp-500-etf-trust"},
+        ],
     ),
     dict(
         id="tnx", symbol="^TNX", name="10Y Treasury Yield",
         category="Cross-Asset", unit="%",
         description="Long-term rates. Rising = tightening or growth optimism.",
         thresholds=None,
+        sources=[
+            {"label": "FRED DGS10", "url": "https://fred.stlouisfed.org/series/DGS10"},
+            {"label": "U.S. Treasury", "url": "https://home.treasury.gov/policy-issues/financing-the-government/interest-rate-statistics"},
+        ],
     ),
     dict(
         id="dxy", symbol="DX-Y.NYB", name="US Dollar (DXY)",
         category="Cross-Asset", unit="",
         description="USD index. Rising = risk-off or dollar funding stress.",
         thresholds=None,
+        sources=[
+            {"label": "Yahoo DXY", "url": "https://finance.yahoo.com/quote/DX-Y.NYB/history"},
+            {"label": "ICE DXY", "url": "https://www.theice.com/products/194/US-Dollar-Index-Futures"},
+        ],
     ),
     dict(
         id="gold", symbol="GLD", name="Gold (GLD)",
         category="Cross-Asset", unit="$",
         description="Safe-haven demand. Rising = risk-off or inflation concerns.",
         thresholds=None,
+        sources=[
+            {"label": "Yahoo GLD", "url": "https://finance.yahoo.com/quote/GLD/history"},
+            {"label": "SPDR Gold", "url": "https://www.spdrgoldshares.com/"},
+        ],
     ),
     dict(
         id="oil", symbol="CL=F", name="WTI Crude Oil",
         category="Cross-Asset", unit="$",
         description="Growth/demand proxy. Falling = demand contraction.",
         thresholds=None,
+        sources=[
+            {"label": "EIA WTI", "url": "https://www.eia.gov/dnav/pet/hist/RWTCD.htm"},
+            {"label": "FRED DCOILWTICO", "url": "https://fred.stlouisfed.org/series/DCOILWTICO"},
+        ],
     ),
 ]
 
