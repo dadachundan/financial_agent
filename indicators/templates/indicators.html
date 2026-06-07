@@ -62,6 +62,15 @@
 
     /* ── Sparkline ─────────────────────────────────── */
     .sparkline-wrap { position: relative; height: 56px; }
+    .sparkline-wrap.loading::after {
+      content: 'Loading…';
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .65rem; color: #9ca3af;
+      background: repeating-linear-gradient(
+        45deg, #f8f9fa, #f8f9fa 6px, #f1f3f5 6px, #f1f3f5 12px);
+      border-radius: .15rem;
+    }
 
     /* ── Loading overlay ───────────────────────────── */
     #loadingOverlay {
@@ -405,9 +414,21 @@
       delete _sparkCharts[ind.id];
     }
 
-    // Prefer the dashboard range cache; fall back to the snapshot's short history.
+    // While the active range is still being fetched, the cache for that range
+    // is empty. Don't fall back to the snapshot's ~30-day history — that
+    // would render under the wrong range label. Show a "Loading…" placeholder
+    // instead, so the user knows what they see matches the highlighted button.
+    const wrap = canvas.parentElement;
     const rangeCache = _RANGE_HISTORY[_dashRange];
-    let hist = (rangeCache && rangeCache[ind.id]) || (rec && rec.history) || [];
+    if (!rangeCache) {
+      if (wrap) wrap.classList.add('loading');
+      const ctx = canvas.getContext('2d');
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      return;
+    }
+    if (wrap) wrap.classList.remove('loading');
+
+    let hist = (rangeCache && rangeCache[ind.id]) || [];
     if (hist.length < 2) return;
     // Cap sparkline density so MAX / 5Y don't crush the tiny canvas
     if (hist.length > 250) {
@@ -530,16 +551,20 @@
   async function loadDashRange(rangeKey) {
     _dashRange = rangeKey;
     if (_RANGE_HISTORY[rangeKey]) {
-      // already cached; just re-draw
+      // already cached; just re-draw — instant
       _catalogue.forEach(ind => drawSparkline(ind));
       return;
     }
+    // Cache miss → blank every sparkline NOW so the user doesn't see the
+    // previous range's data sitting under the new highlighted button.
+    _catalogue.forEach(ind => drawSparkline(ind));
     const spinner = document.getElementById('dashRangeSpinner');
     spinner.classList.remove('d-none');
     try {
       const res  = await fetch('/api/range-snapshot?range=' + encodeURIComponent(rangeKey));
       const body = await res.json();
-      if (body && body.data) {
+      if (body && body.data && body.range === _dashRange) {
+        // only commit the result if the user hasn't clicked another range while waiting
         _RANGE_HISTORY[rangeKey] = body.data;
         _catalogue.forEach(ind => drawSparkline(ind));
       }
