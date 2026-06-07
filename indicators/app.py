@@ -219,19 +219,19 @@ def _bmc_compute_today() -> dict:
     pe, pe_date = _safe(lambda: _multpl_latest("s-p-500-pe-ratio"), (None, None))
     if pe is not None:
         flag = "red" if pe >= 28 else ("amber" if pe >= 18 else None)
-        out["trailing_pe"] = {"value": round(pe, 1), "flag": flag, "suffix": f"as of {pe_date}" if pe_date else None}
+        out["trailing_pe"] = {"value": round(pe, 1), "flag": flag, "suffix": None}
 
     # Dividend Yield: red if ≤ 1.3, amber if ≤ 2.1
     dy, dy_date = _safe(lambda: _multpl_latest("s-p-500-dividend-yield"), (None, None))
     if dy is not None:
         flag = "red" if dy <= 1.3 else ("amber" if dy <= 2.1 else None)
-        out["dy"] = {"value": round(dy, 2), "flag": flag, "suffix": f"as of {dy_date}" if dy_date else None}
+        out["dy"] = {"value": round(dy, 2), "flag": flag, "suffix": None}
 
     # Shiller CAPE: red if ≥ 30, amber if ≥ 25
     cape, cape_date = _safe(lambda: _multpl_latest("shiller-pe"), (None, None))
     if cape is not None:
         flag = "red" if cape >= 30 else ("amber" if cape >= 25 else None)
-        out["cape"] = {"value": round(cape, 1), "flag": flag, "suffix": f"as of {cape_date}" if cape_date else None}
+        out["cape"] = {"value": round(cape, 1), "flag": flag, "suffix": None}
 
     # ERP: derived from current PE - 10Y. Red if negative or near zero, amber if low
     tnx_val = _safe(lambda: _yf_latest("^TNX"))
@@ -240,8 +240,7 @@ def _bmc_compute_today() -> dict:
         ep = 100.0 / pe
         erp_val = ep - tnx_pct
         flag = "red" if erp_val <= 0.5 else ("amber" if erp_val <= 2.0 else None)
-        out["erp"] = {"value": round(erp_val, 2), "flag": flag,
-                      "suffix": f"E/P {ep:.2f}% − 10Y {tnx_pct:.2f}%"}
+        out["erp"] = {"value": round(erp_val, 2), "flag": flag, "suffix": None}
 
     # 10Y - 2Y curve (FRED T10Y2Y, bp)
     t10y2y = _safe(lambda: _fred_latest("T10Y2Y"))
