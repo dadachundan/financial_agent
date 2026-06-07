@@ -22,7 +22,7 @@ Today vs the start of past bear markets and recent peaks. **Red = full flag, �
 | [US M&A (last 12m % of Mkt cap)](https://www.bain.com/insights/topics/m-and-a-report/) | 🔴 11.4 | 🔴 8.1 | 4.4 | 🟠 5.0 | **3.7** |
 | [US IPO (last 12m % of DM Mkt cap)](https://www.renaissancecapital.com/IPO-Center/Stats) | 🔴 0.7 | 🟠 0.4 | 0.2 | 🟠 0.6 | **0.4** |
 | **Profitability** | | | | | |
-| [EPS dist from rolling-10y peak (%)](https://www.multpl.com/s-p-500-earnings) | 0 | −13 | −6 | 0 | 🟠 **0** |
+| [EPS dist from rolling-10y peak (%)](https://www.multpl.com/s-p-500-earnings) *(0 = at cycle high, negative = below recent peak)* | 0 | −13 | **−12** | 0 | 🟠 **0** |
 | **Balance sheets / credit markets** | | | | | |
 | [Moody's BAA − 10Y (pp)](https://fred.stlouisfed.org/series/BAA10Y) | 🟠 2.30 | 🟠 1.99 | 🟠 2.38 | 🟠 1.85 | 🔴 **1.54** |
 | [HY OAS (%)](https://fred.stlouisfed.org/series/BAMLH0A0HYM2) *(ICE BofA, 2023+; Citi pre-2023)* | 6.00 | 6.00 | 🟠 4.80 | 3.37 | 🔴 **2.74** |
