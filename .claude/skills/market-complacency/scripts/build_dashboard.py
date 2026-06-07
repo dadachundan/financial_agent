@@ -926,6 +926,22 @@ def build(as_of: str, window_years: int = 10) -> dict:
     composite_hist.to_frame().to_csv(ONEOFF / f"market_complacency_{as_of}_composite_history.csv")
     print(f"  Composite history: {len(composite_hist)} obs from {composite_hist.index[0].date()} to {composite_hist.index[-1].date()}")
 
+    # ── Historical flag count (Citi-BMC style) ────────────────────────────
+    # For each date, count indicators in red (>=80) and amber (60-80) buckets,
+    # flag_count = n_red × 1.0 + n_amber × 0.5
+    def _flag_count_row(row):
+        avail = row.dropna()
+        if avail.empty:
+            return np.nan
+        n_red = int((avail >= FLAG_RED_THR).sum())
+        n_amber = int(((avail >= FLAG_AMBER_THR) & (avail < FLAG_RED_THR)).sum())
+        return n_red * 1.0 + n_amber * 0.5
+
+    flag_count_hist = pct_history.apply(_flag_count_row, axis=1).dropna()
+    flag_count_hist.name = "flag_count"
+    flag_count_hist.to_frame().to_csv(ONEOFF / f"market_complacency_{as_of}_flag_count_history.csv")
+    print(f"  Flag-count history: {len(flag_count_hist)} obs, current {flag_count_hist.iloc[-1]:.1f}, all-time max {flag_count_hist.max():.1f} on {flag_count_hist.idxmax().date()}")
+
     # 4. Precedents within ±5
     print(f"\n  Finding precedents within ±5 of {composite:.1f}...")
     band_lo, band_hi = composite - 5, composite + 5
@@ -992,6 +1008,8 @@ def build(as_of: str, window_years: int = 10) -> dict:
     # 6. Charts
     print("\n  Generating charts...")
     _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df, window_years)
+    # Citi-style flag-count + SPY overlay chart
+    _make_flag_count_html(as_of, flag_count_hist)
 
     return {
         "as_of": as_of,
@@ -1011,6 +1029,131 @@ def build(as_of: str, window_years: int = 10) -> dict:
         "charts_dir": str(CHARTS),
         "report_path_hint": str(REPORT_DIR / f"market_complacency_{as_of}.md"),
     }
+
+
+def _make_flag_count_html(as_of: str, flag_count_hist: pd.Series) -> None:
+    """Citi BMC Figure 1 equivalent: flag count over time overlaid on SPY price.
+
+    Dual-axis: SPY price (left, blue), flag count (right, red). Annotated at
+    Mar 2000, Oct 2007, Feb 2020, Dec 2021, and Now. Rangeselector buttons
+    for 1Y / YTD / 5Y / 10Y / ALL.
+    """
+    try:
+        import plotly.graph_objects as go
+        from plotly.subplots import make_subplots
+    except ImportError:
+        print("  plotly not available — skipping flag count chart", file=sys.stderr)
+        return
+
+    # Pull SPY back to the start of the flag-count history
+    spy_start = (flag_count_hist.index[0] - pd.Timedelta(days=30)).strftime("%Y-%m-%d")
+    spy = fetch_yf("SPY", start=spy_start, end=(pd.Timestamp(as_of) + pd.Timedelta(days=1)).strftime("%Y-%m-%d"))
+    if spy.empty:
+        print("  SPY fetch empty — skipping flag count chart", file=sys.stderr)
+        return
+    # Align to flag-count dates via reindex + ffill
+    spy = spy.reindex(flag_count_hist.index, method="nearest")
+
+    fig = make_subplots(specs=[[{"secondary_y": True}]])
+
+    # Flag count (red) — right axis
+    fig.add_trace(go.Scatter(
+        x=flag_count_hist.index, y=flag_count_hist.values,
+        mode="lines", name="Dashboard flag count (right)",
+        line=dict(color="#c1272d", width=1.2),
+        hovertemplate="%{x|%Y-%m-%d}<br>Flags: %{y:.1f}<extra></extra>",
+    ), secondary_y=True)
+
+    # SPY (blue) — left axis
+    fig.add_trace(go.Scatter(
+        x=spy.index, y=spy.values,
+        mode="lines", name="SPY price (left)",
+        line=dict(color="#1f4e79", width=1.4),
+        hovertemplate="%{x|%Y-%m-%d}<br>SPY: $%{y:.2f}<extra></extra>",
+    ), secondary_y=False)
+
+    # Annotations at the key historical reference dates
+    today = flag_count_hist.index[-1]
+    today_flag = float(flag_count_hist.iloc[-1])
+    annotations = []
+    for label, dt_str in [("March 2000", "2000-03-31"), ("October 2007", "2007-10-31"),
+                           ("Feb 2020", "2020-02-19"), ("Dec 2021", "2021-12-31")]:
+        dt = pd.Timestamp(dt_str)
+        avail = flag_count_hist[flag_count_hist.index <= dt]
+        if avail.empty:
+            continue
+        v = float(avail.iloc[-1])
+        annotations.append(dict(
+            x=avail.index[-1], y=v, yref="y2",
+            text=label, showarrow=True, arrowhead=2, ax=0, ay=-30,
+            font=dict(size=10, color="#c1272d"),
+        ))
+    # "Now" marker
+    annotations.append(dict(
+        x=today, y=today_flag, yref="y2",
+        text=f"<b>Now: {today_flag:.1f}</b>", showarrow=True, arrowhead=2,
+        ax=-30, ay=-25,
+        font=dict(size=11, color="#c1272d"),
+    ))
+
+    last = flag_count_hist.index[-1]; first = flag_count_hist.index[0]
+    year_start = pd.Timestamp(f"{last.year}-01-01")
+    range_buttons = [
+        dict(label="1Y",  method="relayout",
+             args=[{"xaxis.range": [(last - pd.DateOffset(years=1)).strftime("%Y-%m-%d"), last.strftime("%Y-%m-%d")]}]),
+        dict(label="YTD", method="relayout",
+             args=[{"xaxis.range": [year_start.strftime("%Y-%m-%d"), last.strftime("%Y-%m-%d")]}]),
+        dict(label="5Y",  method="relayout",
+             args=[{"xaxis.range": [(last - pd.DateOffset(years=5)).strftime("%Y-%m-%d"), last.strftime("%Y-%m-%d")]}]),
+        dict(label="10Y", method="relayout",
+             args=[{"xaxis.range": [(last - pd.DateOffset(years=10)).strftime("%Y-%m-%d"), last.strftime("%Y-%m-%d")]}]),
+        dict(label="ALL", method="relayout",
+             args=[{"xaxis.range": [first.strftime("%Y-%m-%d"), last.strftime("%Y-%m-%d")]}]),
+    ]
+
+    # Reference lines for Citi's published references
+    fig.add_hline(y=10, line=dict(color="#c1272d", width=1, dash="dash"),
+                  annotation_text="Double-digits (Citi: acceleration zone)",
+                  annotation_position="top right",
+                  annotation_font=dict(size=10, color="#c1272d"),
+                  secondary_y=True)
+    fig.add_hline(y=17.5, line=dict(color="#c1272d", width=1, dash="dot"),
+                  annotation_text="Mar-00 Citi peak (17.5/18)",
+                  annotation_position="top right",
+                  annotation_font=dict(size=9, color="#c1272d"),
+                  secondary_y=True)
+
+    fig.update_layout(
+        title="Figure 1. Dashboard Flag Count and SPY — Citi BMC style",
+        yaxis=dict(title="SPY price ($)", side="left"),
+        yaxis2=dict(title="Flag count (0–21)", side="right",
+                    range=[0, max(21, flag_count_hist.max() * 1.05)], showgrid=False),
+        xaxis=dict(
+            title="",
+            range=[first.strftime("%Y-%m-%d"), last.strftime("%Y-%m-%d")],
+            rangeslider=dict(visible=True, thickness=0.05),
+            type="date",
+        ),
+        annotations=annotations,
+        updatemenus=[dict(
+            type="buttons", direction="right",
+            buttons=range_buttons,
+            x=0.0, y=1.12, xanchor="left", yanchor="top",
+            pad=dict(r=4, t=4),
+            font=dict(size=11),
+            bgcolor="#f4f4f4",
+        )],
+        margin=dict(l=50, r=50, t=80, b=40),
+        plot_bgcolor="white",
+        hovermode="x unified",
+        height=520,
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="center", x=0.5),
+    )
+
+    out = CHARTS / f"market_complacency_{as_of}_flag_count.html"
+    fig.write_html(str(out), include_plotlyjs="cdn", full_html=True,
+                   config={"displayModeBar": True, "displaylogo": False})
+    print(f"  ✓ flag count chart saved: {out.name}", flush=True)
 
 
 def _make_composite_html(as_of: str, composite: float, tier: str, composite_hist: pd.Series) -> None:

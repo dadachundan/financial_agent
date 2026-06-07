@@ -4,9 +4,18 @@
 
 > ⚠️ **The composite score (64.3 / 100, Elevated by tier band) is a weighted-average legacy readout — not a load-bearing signal.** Backtest precision at composite ≥ 80 is 22.3% vs base rate 20.3% (lift just 1.10×); at composite ≥ 60 it's *worse* than random. **Use the flag count and Figure 2 for the regime read; the composite is shown only for time-series continuity in Figure 1.** Full rationale in the Caveats section.
 
-<iframe src="../charts/market_complacency_2026-06-07_composite.html" width="100%" height="560" style="border:0;border-radius:6px;"></iframe>
+<iframe src="../charts/market_complacency_2026-06-07_flag_count.html" width="100%" height="560" style="border:0;border-radius:6px;"></iframe>
 
-*Figure 1. Composite (0–100) time series, 2001–2026 — useful for *visualizing the regime arc over time*, but the absolute level is noisy (see disclaimer above). **Interactive: use the 1Y / YTD / 5Y / 10Y / ALL buttons or the bottom range-slider to zoom.** Source: composite per `scripts/build_dashboard.py`. ([Static PNG fallback](../charts/market_complacency_2026-06-07_composite.png).)*
+*Figure 1. Flag count (red, right axis 0–21) and SPY price (blue, left), 2001–2026 — **Citi BMC Figure 1 equivalent**. The dashed line at 10 marks Citi's "double-digits = acceleration zone" reference. Annotated reference dates: March 2000, October 2007, Feb 2020, Dec 2021, Now. **Note: the dashboard's all-time max was 12.0 on 2024-12-06** — late 2024 was *more* flag-elevated than today, which underscores the regime-not-timing nature of the read. Interactive: 1Y / YTD / 5Y / 10Y / ALL buttons or bottom range-slider. Source: per-indicator complacency percentiles per `scripts/build_dashboard.py`.*
+
+<details>
+<summary>Legacy composite chart (for time-series continuity only — not load-bearing)</summary>
+
+<iframe src="../charts/market_complacency_2026-06-07_composite.html" width="100%" height="520" style="border:0;border-radius:6px;"></iframe>
+
+*Figure 1b. Composite (0–100) time series. Backtest precision at composite ≥ 80 is 22.3% vs base rate 20.3% (lift 1.10×) — *barely* above random. Use Figure 1 above and Figure 2 below for the regime read.*
+
+</details>
 
 ## Figure 2. Bear Market Checklist — Historical Calibration
 

@@ -269,13 +269,22 @@ Mandatory blocks, in this order:
    Immediately after the Dashboard's Take, a separate ⚠️ blockquote disclaims the composite score:
    > ⚠️ The composite score (X / 100, tier band) is a weighted-average legacy readout — not a load-bearing signal. Backtest precision at composite ≥ 80 is 22.3% vs base rate 20.3% (lift just 1.10×); at composite ≥ 60 it's *worse* than random. Use the flag count and Figure 2 for the regime read; the composite is shown only for time-series continuity in Figure 1.
 
-2. **Figure 1: Composite history** — the headline chart immediately under the Dashboard's Take. Embedded as an **interactive Plotly iframe** with rangeselector buttons (1Y / YTD / 5Y / 10Y / ALL) plus a bottom range-slider, so the reader can zoom into specific windows. Falls back to the static PNG (`*_composite.png`) for non-HTML renderers. Markdown embed pattern:
+2. **Figure 1: Flag count + SPY overlay** — the headline chart, mirroring [Citi BMC Figure 1](https://www.citivelocity.com) which shows the BMC red-flag count alongside MSCI ACWI price. This is the load-bearing visualization because the flag count is the empirically-validated metric (composite is mean-compressed noise per the Caveats). Required elements:
 
+   - **Dual y-axis**: SPY price (left, blue), flag count 0–21 (right, red)
+   - **Annotated reference dates**: March 2000, October 2007, Feb 2020, Dec 2021, and Now
+   - **Two reference lines** on the flag-count axis: dashed at 10 (Citi's "double-digits = acceleration zone"), dotted at 17.5 (Citi Mar-00 peak)
+   - **Rangeselector buttons**: 1Y / YTD / 5Y / 10Y / ALL with `method='relayout'` and hardcoded date ranges (Plotly's `stepmode='todate'` is buggy)
+   - **Bottom range-slider** for fine-grained zoom
+
+   Markdown embed:
    ```html
-   <iframe src="../charts/market_complacency_<DATE>_composite.html" width="100%" height="560" style="border:0;border-radius:6px;"></iframe>
+   <iframe src="../charts/market_complacency_<DATE>_flag_count.html" width="100%" height="560" style="border:0;border-radius:6px;"></iframe>
    ```
 
-   The viewer at `localhost:5001/claude-reports/` serves `.html` and `.htm` from `reports/` via the `_EMBED_EXTS` allowlist — added in v7. Static markdown renderers (GitHub, Obsidian) will show the iframe as empty; readers can click the "Static PNG fallback" link in the caption.
+   **The composite chart (`*_composite.html`) is demoted to "Figure 1b — Legacy" inside a collapsed `<details>` block.** It's retained for time-series continuity but explicitly labelled non-load-bearing.
+
+   The viewer at `localhost:5001/claude-reports/` serves `.html` and `.htm` from `reports/` via the `_EMBED_EXTS` allowlist. Static markdown renderers (GitHub, Obsidian) will show the iframe as empty.
 
 3. **`## Figure 2. Bear Market Checklist — Historical Calibration`** — a SINGLE comparison table mirroring Citi BMC Figure 2. Columns: Mar-00, Oct-07, Feb-20, Dec-21, **Now**. Rows: indicators grouped by category (Valuations / Yield Curve / Sentiment / Corp Behaviour / Profitability / Credit / Vol). Cells colored 🔴 red / 🟠 amber / off using standard thresholds. **A 🟢 marker is also valid** — use it for contra-signal off-flags (e.g., SKEW high, CCC spread wide, VIX backwardation) so the reader sees the cross-asset divergence at a glance. End with a 2-sentence "Today's calibration" paragraph: which historical references today matches, and what makes today distinctive (e.g., "no clean historical precedent — past bears started with one or the other, not both").
 
