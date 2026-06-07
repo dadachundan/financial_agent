@@ -1309,23 +1309,42 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
     plt.savefig(CHARTS / f"market_complacency_{as_of}_composite.png", dpi=150, bbox_inches="tight")
     plt.close()
 
-    # Chart 2: HY OAS
-    if not series["hy_oas"].empty:
-        hy = series["hy_oas"]
+    # Chart 2: Long-history credit spread — Moody's BAA-10Y (1986+) with key
+    # historical reference values annotated. Used in place of HY OAS because
+    # the FRED ICE BofA HY series was relicensed in mid-2023 and is no longer
+    # downloadable for free pre-2023. BAA10Y is the standard long-history credit
+    # proxy with 40 years of FRED data and covers every US bear market.
+    # Known HY OAS reference values (from Citi BMC + published research) are
+    # annotated as text alongside the BAA10Y line so the reader sees both.
+    if not series["baa10y"].empty:
+        baa = series["baa10y"]
         fig, ax = plt.subplots(figsize=(11, 4.5))
         _shade_bears(ax)
-        ax.plot(hy.index, hy.values, lw=1.0, color="#c1272d")
-        hy_win = hy[hy.index >= win_start]
+        ax.plot(baa.index, baa.values, lw=1.0, color="#c1272d", label="Moody's BAA − 10Y (1986+)")
+        baa_win = baa[baa.index >= win_start]
         for pct, lbl in [(5, "5th"), (50, "median"), (95, "95th")]:
-            v = np.percentile(hy_win.dropna(), pct)
+            v = np.percentile(baa_win.dropna(), pct)
             ax.axhline(v, ls="--", alpha=0.4, color="gray")
-            ax.text(hy.index[-1], v, f" {lbl} {v:.2f}", fontsize=8, va="center")
-        cur = float(hy_win.iloc[-1])
-        ax.scatter([hy.index[-1]], [cur], color="black", s=60, zorder=5,
-                   label=f"Today {cur:.2f}%")
+            ax.text(baa.index[-1], v, f" {lbl} {v:.2f}", fontsize=8, va="center")
+        cur = float(baa_win.iloc[-1])
+        ax.scatter([baa.index[-1]], [cur], color="black", s=60, zorder=5,
+                   label=f"Today {cur:.2f}pp")
+        # Annotate known HY OAS reference values from Citi BMC
+        hy_refs = [
+            ("2000-03-31", 6.00, "HY Mar-00 ≈ 600bp"),
+            ("2007-10-31", 6.00, "HY Oct-07 ≈ 600bp"),
+            ("2008-12-15", 21.82, "HY 2008 peak 2182bp"),
+            ("2020-02-28", 4.80, "HY Feb-20 ≈ 480bp"),
+            ("2021-12-31", 3.37, "HY Dec-21 ≈ 337bp"),
+        ]
+        for date_str, val, label in hy_refs:
+            dt = pd.Timestamp(date_str)
+            if dt >= baa.index.min() and dt <= baa.index.max():
+                ax.annotate(label, xy=(dt, val), xytext=(10, 0),
+                            textcoords="offset points", fontsize=7, color="#888")
         ax.legend(loc="upper right")
-        ax.set_ylabel("HY OAS (%)")
-        ax.set_title(f"ICE BofA US HY OAS, 2001–{as_of[:4]} (5/50/95 = last-{window_years}y percentiles)")
+        ax.set_ylabel("Spread (pp / %)")
+        ax.set_title(f"Long-history credit: Moody's BAA−10Y, 1986–{as_of[:4]} + HY OAS reference points (ICE BofA pre-2023 unavailable on FRED)")
         ax.grid(alpha=0.3)
         plt.tight_layout()
         plt.savefig(CHARTS / f"market_complacency_{as_of}_hy_oas.png", dpi=150, bbox_inches="tight")
