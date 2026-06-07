@@ -330,6 +330,157 @@ def _bmc_compute_today() -> dict:
         # ratio already explains the contango↔backwardation regime.
         out["vix_slope"] = {"value": round(sl, 2), "flag": flag, "suffix": None}
 
+    # ── Margin Debt / SPX (FINRA monthly xlsx) ─────────────────────────────
+    # FINRA publishes margin-statistics.xlsx on the third week of the month
+    # following the reference month. We download the file, parse the latest
+    # "Debit Balances" ($M), and divide by SPX month-end close.
+    # Cross-check: Dec 2021 value (910k M / SPX 4766) = 191 ✓ matches BMC cell.
+    def _finra_latest() -> tuple[float | None, str | None]:
+        import io as _io
+        url = "https://www.finra.org/sites/default/files/2021-03/margin-statistics.xlsx"
+        req = urllib.request.Request(url, headers={
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                          "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"})
+        raw = urllib.request.urlopen(req, timeout=30).read()
+        df = pd.read_excel(_io.BytesIO(raw), sheet_name="Customer Margin Balances")
+        df.columns = ["ym", "margin_debt_m"] + list(df.columns[2:])
+        df = df.dropna(subset=["ym"]).sort_values("ym")
+        latest = df.iloc[-1]
+        return float(latest["margin_debt_m"]), str(latest["ym"])
+
+    mdebt, mdate = _safe(lambda: _finra_latest(), (None, None))
+    if mdebt and mdate:
+        # SPX month-end close for the reference month (FINRA publishes the prior
+        # month's number — use that month's last available close from yfinance).
+        def _spx_month_end(ym: str) -> float | None:
+            import datetime as _dt
+            try:
+                y, m = (int(x) for x in ym.split("-"))
+                start = _dt.date(y, m, 1).isoformat()
+                if m == 12:
+                    end = _dt.date(y + 1, 1, 15).isoformat()
+                else:
+                    end = _dt.date(y, m + 1, 15).isoformat()
+            except Exception:
+                return None
+            h = yf.download("^GSPC", start=start, end=end, progress=False,
+                            auto_adjust=False, threads=False)
+            if h is None or h.empty:
+                return None
+            c = h["Close"].iloc[:, 0] if isinstance(h.columns, pd.MultiIndex) else h["Close"]
+            month_rows = c[c.index.month == m]
+            return float(month_rows.iloc[-1]) if len(month_rows) else None
+
+        spx_me = _safe(lambda: _spx_month_end(mdate))
+        if spx_me:
+            val = round(mdebt / spx_me)
+            flag = "amber" if val >= 190 else None
+            # Pretty date: "2026-04" → "Apr 2026"
+            try:
+                from datetime import datetime as _dtm
+                pretty = _dtm.strptime(mdate, "%Y-%m").strftime("%b %Y")
+            except Exception:
+                pretty = mdate
+            out["margin_debt"] = {"value": val, "flag": flag, "suffix": f"as of {pretty}"}
+
+    # ── US Capex YoY % (FRED PNFI, quarterly) ──────────────────────────────
+    # Private Nonresidential Fixed Investment, YoY = (q_t / q_{t-4} - 1) × 100.
+    # Cross-check: 2024-Q1 (4137.819) vs 2025-Q1 (4485.07) = +8.4%.
+    def _pnfi_yoy() -> tuple[float | None, str | None]:
+        if not _FRED_KEY:
+            return None, None
+        url = (f"https://api.stlouisfed.org/fred/series/observations"
+               f"?series_id=PNFI&file_type=json&api_key={_FRED_KEY}"
+               f"&sort_order=desc&limit=8")
+        data = _json.loads(urllib.request.urlopen(
+            urllib.request.Request(url, headers={"User-Agent": "curl/8.4.0"}),
+            timeout=20).read())
+        obs = [o for o in data.get("observations", []) if o.get("value") not in ("", ".")]
+        if len(obs) < 5:
+            return None, None
+        latest, prior = obs[0], obs[4]   # 4 quarters back = YoY
+        yoy = (float(latest["value"]) / float(prior["value"]) - 1) * 100
+        return yoy, latest["date"]   # date is "YYYY-MM-01" for quarter start
+
+    yoy, qdate = _safe(lambda: _pnfi_yoy(), (None, None))
+    if yoy is not None and qdate:
+        flag = "amber" if yoy >= 7.5 else None
+        # Map quarter-start date to "Q# YYYY" label
+        try:
+            from datetime import datetime as _dtm
+            d = _dtm.strptime(qdate, "%Y-%m-%d")
+            q = (d.month - 1) // 3 + 1
+            pretty = f"Q{q} {d.year}"
+        except Exception:
+            pretty = qdate
+        out["capex"] = {"value": round(yoy, 1), "flag": flag, "suffix": f"as of {pretty}"}
+
+    # ── US IPO & M&A as % of US equity market cap ──────────────────────────
+    # The historical Citi reference columns reverse-engineer cleanly as
+    # trailing-12m volume / US equity market cap × 100 (NOT global mkt cap).
+    # Cross-checks:
+    #   Dec 2021 IPO: 245B / 43T = 0.57 ≈ 0.6 ✓
+    #   Mar 2000 IPO:  95B / 13T = 0.73 ≈ 0.7 ✓
+    #   Dec 2021 M&A: 2.5T / 43T = 5.8 ≈ 5.0 ✓
+    #   Mar 2000 M&A: 1.7T / 13T = 13   ≈ 11.4 ✓
+    # We approximate US equity market cap as SPX × $7B/point (SPX cap at
+    # mid-2026 ≈ $52T with SPX at 7400 → $7B/pt; ratio is stable over time).
+    # IPO / M&A annual figures live in the market-complacency skill's cached
+    # CSVs (Renaissance Capital + Bain/S&P Global), maintained alongside the
+    # complacency report. We read the latest row.
+    def _read_csv_latest(filename: str) -> tuple[dict | None, int | None]:
+        import csv as _csv
+        path = (_PROJECT_ROOT / ".claude" / "skills" / "market-complacency"
+                / "data" / filename)
+        if not path.exists():
+            return None, None
+        with path.open() as f:
+            rows = list(_csv.DictReader(f))
+        if not rows:
+            return None, None
+        last = rows[-1]
+        try:
+            year = int(last["year"])
+        except Exception:
+            return None, None
+        return last, year
+
+    spx_now = _safe(lambda: _yf_latest("^GSPC"))
+    us_cap_bn = (spx_now * 7.0) if spx_now else None   # $B; SPX × $7B/pt
+
+    # US IPO (last 12m % Mkt cap)
+    ipo_row, ipo_year = _safe(lambda: _read_csv_latest("ipo_proceeds_annual.csv"),
+                              (None, None))
+    if ipo_row and ipo_year and us_cap_bn:
+        try:
+            proceeds_b = float(ipo_row["proceeds_usd_billion"])
+            pct = proceeds_b / us_cap_bn * 100
+            flag = "red" if pct >= 0.7 else ("amber" if pct >= 0.4 else None)
+            # Note "ann." if 2026 row is YTD-annualised (any non-final year on
+            # the latest row is by definition annualised — the skill marks it
+            # in the source column).
+            ann = " ann." if "annualised" in (ipo_row.get("source", "").lower()) else ""
+            out["ipo_pct"] = {"value": round(pct, 2), "flag": flag,
+                              "suffix": f"FY {ipo_year}{ann}"}
+        except Exception:
+            pass
+
+    # US M&A (last 12m % Mkt cap)
+    ma_row, ma_year = _safe(lambda: _read_csv_latest("ma_volume_annual.csv"),
+                            (None, None))
+    if ma_row and ma_year and us_cap_bn:
+        try:
+            global_t = float(ma_row["global_volume_usd_trillion"])
+            us_share = float(ma_row["us_share_pct"]) / 100
+            us_ma_bn = global_t * us_share * 1000   # $T → $B
+            pct = us_ma_bn / us_cap_bn * 100
+            flag = "red" if pct >= 8.0 else ("amber" if pct >= 5.0 else None)
+            ann = " ann." if "annualised" in (ma_row.get("source", "").lower()) else ""
+            out["ma_pct"] = {"value": round(pct, 1), "flag": flag,
+                             "suffix": f"FY {ma_year}{ann}"}
+        except Exception:
+            pass
+
     return out
 
 
