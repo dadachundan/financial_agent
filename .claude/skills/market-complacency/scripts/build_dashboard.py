@@ -1059,22 +1059,48 @@ def _make_composite_html(as_of: str, composite: float, tier: str, composite_hist
         hovertemplate=f"Today {as_of}<br>Composite: {composite:.1f}<br>Tier: {tier}<extra></extra>",
     ))
 
+    # Explicit-range buttons (relayout). Plotly's rangeselector stepmode='todate'
+    # is buggy in v6.x — sometimes computes YTD as a tiny future window. Using
+    # method='relayout' with hardcoded date ranges bypasses the bug entirely.
+    last = composite_hist.index[-1]
+    first = composite_hist.index[0]
+    year_start = pd.Timestamp(f"{last.year}-01-01")
+    range_buttons = [
+        dict(label="1Y",  method="relayout",
+             args=[{"xaxis.range": [(last - pd.DateOffset(years=1)).strftime("%Y-%m-%d"),
+                                    last.strftime("%Y-%m-%d")]}]),
+        dict(label="YTD", method="relayout",
+             args=[{"xaxis.range": [year_start.strftime("%Y-%m-%d"),
+                                    last.strftime("%Y-%m-%d")]}]),
+        dict(label="5Y",  method="relayout",
+             args=[{"xaxis.range": [(last - pd.DateOffset(years=5)).strftime("%Y-%m-%d"),
+                                    last.strftime("%Y-%m-%d")]}]),
+        dict(label="10Y", method="relayout",
+             args=[{"xaxis.range": [(last - pd.DateOffset(years=10)).strftime("%Y-%m-%d"),
+                                    last.strftime("%Y-%m-%d")]}]),
+        dict(label="ALL", method="relayout",
+             args=[{"xaxis.range": [first.strftime("%Y-%m-%d"),
+                                    last.strftime("%Y-%m-%d")]}]),
+    ]
+
     fig.update_layout(
         title=f"Market Complacency Composite, 2001–{as_of[:4]}",
         yaxis=dict(title="Composite (0–100)", range=[0, 100]),
         xaxis=dict(
             title="",
-            rangeselector=dict(buttons=[
-                dict(count=1, label="1Y", step="year", stepmode="backward"),
-                dict(count=1, label="YTD", step="year", stepmode="todate"),
-                dict(count=5, label="5Y", step="year", stepmode="backward"),
-                dict(count=10, label="10Y", step="year", stepmode="backward"),
-                dict(step="all", label="ALL"),
-            ]),
+            range=[first.strftime("%Y-%m-%d"), last.strftime("%Y-%m-%d")],
             rangeslider=dict(visible=True, thickness=0.05),
             type="date",
         ),
-        margin=dict(l=50, r=20, t=50, b=40),
+        updatemenus=[dict(
+            type="buttons", direction="right",
+            buttons=range_buttons,
+            x=0.0, y=1.12, xanchor="left", yanchor="top",
+            pad=dict(r=4, t=4),
+            font=dict(size=11),
+            bgcolor="#f4f4f4",
+        )],
+        margin=dict(l=50, r=20, t=80, b=40),
         plot_bgcolor="white",
         hovermode="x unified",
         height=520,
