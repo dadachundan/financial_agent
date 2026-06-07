@@ -62,11 +62,11 @@ Indicator histories with bear-market shading and last-10y percentile reference l
 ![Figure 7: VIX & VVIX](../charts/market_complacency_2026-06-07_vix_vvix.png)
 *Sources: [CBOE VIX (1990+) via Yahoo Finance](https://finance.yahoo.com/quote/%5EVIX/) · [CBOE VVIX (2007+) via Yahoo Finance](https://finance.yahoo.com/quote/%5EVVIX/) · canonical reference: [CBOE VIX page](https://www.cboe.com/tradable_products/vix/).*
 
-![Figure 8: VIX Term Slope (VIX9D / VIX3M)](../charts/market_complacency_2026-06-07_vix_slope.png)
-*Sources: [CBOE VIX9D (2011+)](https://finance.yahoo.com/quote/%5EVIX9D/) · [CBOE VIX3M (2008+)](https://finance.yahoo.com/quote/%5EVIX3M/). Ratio < 1 = contango (calm); ≥ 1 = backwardation (front-month fear).*
+![Figure 8: VIX Term Slope (VIX9D/VIX3M + VIX/VIX3M long-history proxy)](../charts/market_complacency_2026-06-07_vix_slope.png)
+*Sources: [CBOE VIX9D (2011+)](https://finance.yahoo.com/quote/%5EVIX9D/) — canonical short-term metric · [CBOE VIX3M (2008+)](https://finance.yahoo.com/quote/%5EVIX3M/) · [CBOE VIX (1990+)](https://finance.yahoo.com/quote/%5EVIX/). Grey overlay = VIX/VIX3M (30d÷90d) ratio extending back to 2006 — same front-month-vs-longer-month signal, captures GFC peak (~1.4) and the 2008 backwardation episode. VIX9D-based ratio (dark line) is the canonical metric for current readings.*
 
 ![Figure 9: MOVE Index](../charts/market_complacency_2026-06-07_move.png)
-*Source: [ICE BofAML MOVE Index via Yahoo Finance (2002+)](https://finance.yahoo.com/quote/%5EMOVE/) — the rate-vol analog of VIX, measuring 1-month implied vol on US Treasuries.*
+*Source: [ICE BofAML MOVE Index via Yahoo Finance (2002+)](https://finance.yahoo.com/quote/%5EMOVE/) — the rate-vol analog of VIX, measuring 1-month implied vol on US Treasuries. **The MOVE index was created in 1988 by Merrill Lynch but free pre-2002 history is not available** — Yahoo's 2002 start is the earliest free data; pre-2002 exists only on Bloomberg/ICE direct (paywalled). GFC peak (~265 in Oct 2008) and 2022 Fed tightening (~180) are the two visible regime extremes.*
 
 ![Figure 10: Per-Indicator Complacency Bars](../charts/market_complacency_2026-06-07_indicators_bar.png)
 *Source: per-indicator 10-year rolling complacency percentile from `scripts/build_dashboard.py`. Inputs documented in the Data Used manifest below.*

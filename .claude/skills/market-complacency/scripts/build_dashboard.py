@@ -1407,18 +1407,40 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
         plt.savefig(CHARTS / f"market_complacency_{as_of}_vix_vvix.png", dpi=150, bbox_inches="tight")
         plt.close()
 
-    # Chart 5: VIX term slope — full history from when VIX9D started (2011).
-    # Pre-2011 doesn't exist because CBOE didn't publish a 9-day VIX before then.
+    # Chart 5: VIX term slope — extended back via VIX/VIX3M (2006+) overlaid
+    # with VIX9D/VIX3M (2011+). The VIX9D-based ratio is the canonical short-
+    # term-fear gauge but VIX9D didn't exist before 2011. VIX/VIX3M (30-day ÷
+    # 90-day) is the same kind of signal — front-month vs longer-month implied
+    # vol — and extends back to 2006-07-17 when CBOE started publishing VIX3M
+    # (originally VXV). Plotting both gives long history + the canonical
+    # short-term metric on the same axes.
     if not series["vix_slope"].empty:
-        slope_full = series["vix_slope"]
+        slope_short = series["vix_slope"]   # VIX9D / VIX3M (2011+)
+        vix_full = series["vix"]
+        vix3m_full = fetch_yf("^VIX3M", "2005-01-01", pd.Timestamp(as_of).strftime("%Y-%m-%d"))
+        # Compute VIX / VIX3M ratio (2006+) for long history
+        slope_long = None
+        if not vix_full.empty and not vix3m_full.empty:
+            df = pd.concat([vix_full.rename("v"), vix3m_full.rename("v3")], axis=1).dropna()
+            slope_long = (df["v"] / df["v3"]).rename("vix_over_vix3m")
+
         fig, ax = plt.subplots(figsize=(11, 4.5))
         _shade_bears(ax)
-        ax.plot(slope_full.index, slope_full.values, lw=0.6, color="#264653", label="VIX9D / VIX3M")
-        ax.axhline(1.0, ls="--", color="black", alpha=0.5, label="Contango/Backwardation")
+        # Bands first so the lines plot on top
+        max_y = max(2.5, slope_short.max() * 1.05 if not slope_short.empty else 2.5)
         ax.axhspan(0, 0.85, alpha=0.10, color="#7eb541", label="Deep contango (calm)")
-        ax.axhspan(1.0, max(2.5, slope_full.max() * 1.05), alpha=0.10, color="#e63946", label="Backwardation (stress)")
-        ax.set_ylabel("VIX9D / VIX3M")
-        ax.set_title(f"VIX Term Slope (VIX9D ÷ VIX3M), 2011+ — Today: {slope_full.iloc[-1]:.2f} (pre-2011 unavailable; VIX9D launched 2011)")
+        ax.axhspan(1.0, max_y, alpha=0.10, color="#e63946", label="Backwardation (stress)")
+        ax.axhline(1.0, ls="--", color="black", alpha=0.5, label="Contango/Backwardation")
+        if slope_long is not None and not slope_long.empty:
+            ax.plot(slope_long.index, slope_long.values, lw=0.5, color="#a8a8a8",
+                    alpha=0.7, label="VIX / VIX3M (30d÷90d, 2006+)")
+        ax.plot(slope_short.index, slope_short.values, lw=0.6, color="#264653",
+                label="VIX9D / VIX3M (9d÷90d, 2011+)")
+        ax.set_ylabel("Front-month ÷ longer-month VIX")
+        cur = float(slope_short.iloc[-1]) if not slope_short.empty else None
+        ax.set_title(
+            f"VIX Term Slope — Today VIX9D/VIX3M {cur:.2f}; long-history proxy VIX/VIX3M (2006+) overlaid"
+        )
         ax.grid(alpha=0.3); ax.legend(loc="upper right", fontsize=8)
         plt.tight_layout()
         plt.savefig(CHARTS / f"market_complacency_{as_of}_vix_slope.png", dpi=150, bbox_inches="tight")
