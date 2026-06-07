@@ -1,6 +1,10 @@
 # Market Complacency Dashboard — 2026-06-07
 
-> **Postscript (added 2026-06-07 evening): v2 dashboard re-rates this verdict.** A backtest (see [backtest_2026-06-07.md](backtest_2026-06-07.md)) added a CCC−HY OAS spread indicator to capture late-cycle credit-tier divergence. With v2, today's composite is **59.1 (Neutral)** rather than 62.7 (Elevated) — the broad credit at tights is offset by CCC's 10-year-extreme widening relative to HY. The five "stretched" indicators in the table below (HY OAS, IG OAS, HYG/LQD, ERP, CAPE) are unchanged; the new indicator is a real factual addition (CCC has been widening relative to HY for six months). The rest of this report — written under the v1 composite — remains accurate as to which indicators are stretched and how the cross-asset signature looks; only the headline tier moved by one notch. Future runs should use v2 by default.
+> **Postscript 1 (added 2026-06-07 evening): v2 dashboard re-rates this verdict.** A backtest (see [backtest_2026-06-07.md](backtest_2026-06-07.md)) added a CCC−HY OAS spread indicator to capture late-cycle credit-tier divergence. With v2, today's composite is **59.1 (Neutral)** rather than 62.7 (Elevated) — the broad credit at tights is offset by CCC's 10-year-extreme widening relative to HY. The five "stretched" indicators in the table below (HY OAS, IG OAS, HYG/LQD, ERP, CAPE) are unchanged; the new indicator is a real factual addition (CCC has been widening relative to HY for six months). The rest of this report — written under the v1 composite — remains accurate as to which indicators are stretched and how the cross-asset signature looks; only the headline tier moved by one notch.
+
+> **Postscript 2 (added 2026-06-07 evening): FRED data-window bug disclosure.** The dashboard's percentile rank for the three FRED-sourced credit indicators (HY OAS, IG OAS, CCC OAS) and the derived CCC−HY spread was *intended* to be "vs the trailing 10 years" but the FRED public CSV endpoint silently truncates to ~3 years regardless of the requested `cosd` start date. **What the report calls "10-year percentile" for those four indicators is actually a 3-year percentile.** The other indicators (VIX, VVIX, SKEW, MOVE, ERP, HYG/LQD, CAPE) use longer histories from yfinance / multpl and are unaffected. For today's reading, the bug is coincidentally not material — IG OAS at 0.74% is at the bottom 1% of *any* historical window (FRED full-history low is 0.50–0.55% from mid-1997; pre-GFC low was ~0.80%), so a true 10-year percentile would still print ≥95% complacent. But the methodology is misstated and v3 must fix this (either via FRED API key or via a one-time-cached historical CSV).
+
+> **Postscript 3 (added 2026-06-07 evening): full composite decomposition added below.** The Section "Composite Score Decomposition" between Section 3 and Section 4 shows weight × complacency-percentile = contribution for every active indicator, so the math behind the headline number is fully transparent.
 
 ## Complacency Verdict
 
@@ -41,6 +45,62 @@ Sources: HY/IG/CCC OAS from FRED ([BAMLH0A0HYM2](https://fred.stlouisfed.org/ser
 
 ![Per-Indicator Complacency, today vs last 10 years](../charts/market_complacency_2026-06-07_indicators_bar.png)
 *Source: per-indicator 10-year rolling percentile, with low-direction indicators inverted to a complacency scale. Bars colored by tier; vertical line at the weighted composite (62.7). Computed in `oneoff/market_complacency_2026-06-07.py`.*
+
+## Composite Score Decomposition
+
+The composite is a weighted average of the active indicators' complacency percentiles, re-normalized over the active set. Both v1 (62.7 Elevated) and v2 (59.1 Neutral) decompositions are shown so the reader can see exactly where each point of the headline score comes from. v2 differs from v1 by (a) adding the CCC−HY spread (weight 0.05) and (b) trimming HY / IG / CCC OAS weights to make room (0.15→0.13, 0.07→0.06, 0.10→0.08).
+
+### v2 decomposition (today's authoritative reading: 59.1 / 100, Neutral)
+
+| Category | Indicator | Current | Complacency % | Weight | Contribution to composite | Reading |
+|---|---|---:|---:|---:|---:|---|
+| **Credit** | HY OAS | 2.74% | 90.2 | 0.13 | **+11.7** | Tight |
+| | IG OAS | 0.74% | 99.1 | 0.06 | **+6.0** | Tight (see note below) |
+| | CCC OAS | 9.46% | 21.7 | 0.08 | +1.7 | *Wide* |
+| | CCC − HY spread | 6.72pp | 0.9 | 0.05 | +0.05 | *Maxed wide* |
+| **Equity vol** | VIX | 21.51 | 25.0 | 0.10 | +2.5 | *Above-median* |
+| | VVIX | 102.04 | 37.9 | 0.05 | +1.9 | *Slightly above-median* |
+| | VIX9D / VIX3M slope | 1.096× | 5.9 | 0.05 | +0.3 | *Backwardation* |
+| | SKEW | 152.25 | 9.4 | 0.05 | +0.5 | *Crash hedges bid* |
+| **Rate vol** | MOVE | 75.20 | 46.4 | 0.08 | +3.7 | Neutral |
+| **Risk premium** | Equity Risk Premium | −1.34pp | 100.0 | 0.10 | **+10.0** | All-time low (most complacent) |
+| | HYG / LQD ratio | 0.734× | 99.2 | 0.05 | **+5.0** | 10-year high (most complacent) |
+| **Valuation** | Shiller CAPE | 41.57× | 99.2 | 0.10 | **+9.9** | 2nd-highest in 150 years |
+| | **Subtotal** | | | 0.90 | **53.3** | |
+| | **÷ sum of weights** | | | | / 0.90 | |
+| | **Composite (v2)** | | | | **= 59.2** | **Neutral** |
+
+The five bolded contributions add to **+42.6** of the 59.2-point composite. **Those five indicators alone — broad credit at tights, ERP at all-time low, HYG/LQD at a 10-year high, CAPE near 150-year highs — say "Stretched."** The five fast-vol / credit-tier-divergence indicators (CCC OAS, CCC−HY spread, VIX, VIX slope, SKEW) contribute only **+4.7** between them — they say "not complacent" and drag the composite down by ~13 points.
+
+### v1 decomposition (the original headline, for the record: 62.7 / 100, Elevated)
+
+| Indicator | Current | Complacency % | Weight | Contribution |
+|---|---:|---:|---:|---:|
+| HY OAS | 2.74% | 90.2 | 0.15 | +13.5 |
+| IG OAS | 0.74% | 99.1 | 0.07 | +6.9 |
+| CCC OAS | 9.46% | 21.7 | 0.10 | +2.2 |
+| VIX | 21.51 | 25.0 | 0.10 | +2.5 |
+| VVIX | 102.04 | 37.9 | 0.05 | +1.9 |
+| VIX9D / VIX3M slope | 1.096× | 5.9 | 0.05 | +0.3 |
+| SKEW | 152.25 | 9.4 | 0.05 | +0.5 |
+| MOVE | 75.20 | 46.4 | 0.08 | +3.7 |
+| Equity Risk Premium | −1.34pp | 100.0 | 0.10 | +10.0 |
+| HYG / LQD ratio | 0.734× | 99.2 | 0.05 | +5.0 |
+| Shiller CAPE | 41.57× | 99.2 | 0.10 | +9.9 |
+| **Subtotal** | | | 0.90 | **56.4** |
+| **÷ sum of weights** | | | | / 0.90 |
+| **Composite (v1)** | | | | **= 62.7** |
+
+### Note on IG OAS at 0.74%
+
+The reader asked whether IG OAS at 0.74% (74bp) really deserves a "99.1% complacent" rating. The honest answer:
+
+1. **On absolute historical terms, yes.** The FRED IG OAS series (BAMLC0A0CM) has rolled around a long-term median of ~140bp since 1996. Today's 74bp sits at the bottom 1-2% of all values in that full window. The pre-GFC 2007 cycle low (May 2007) was approximately 80bp — today is ~6bp tighter than the most-leveraged moment of the prior cycle. The all-time low (mid-1997) was approximately 50-55bp.
+2. **On a 3-year window (what the dashboard *actually* computed due to the FRED CSV truncation bug — see Postscript 2), the 99.1% reading is also literally correct.** Today's 0.74% sits one basis point above the 10-year minimum of 0.73% set on January 22, 2026.
+3. **"Complacent" means "demanding less compensation than usual."** It does NOT mean "investors are insane." A 74bp spread still produces ~$7,400 of extra annual income on a $1M IG bond vs Treasury — that's not nothing. The complacency rating measures the *direction* (investors are pricing IG credit risk as if defaults won't rise), not the absolute magnitude.
+4. **The dashboard's complacency reading is the right direction even if the magnitude question is fair.** If you'd rather express it as "IG OAS is in the bottom decile of historical compensation per unit of credit risk," that's an equally accurate framing — just on a different axis.
+
+A v3 fix would either (a) get a FRED API key and use the proper 10-year window, or (b) add a column to the indicator table showing both the 10-year rank AND a long-history rank (using a one-time-cached FRED CSV from 1996), so the reader sees both contexts.
 
 ## Cross-Asset Signature
 

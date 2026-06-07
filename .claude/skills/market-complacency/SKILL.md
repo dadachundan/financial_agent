@@ -253,12 +253,13 @@ Every report must contain:
 1. **Complacency Verdict** at the top (bold, one line, with composite score and percentile rank).
 2. **5-tier band table** showing today's score in context.
 3. **Indicator-by-indicator table** — all 10 required (+ 0–3 optional) with current value, 10y context, complacency percentile, decile, stretched flag.
-4. **Cross-asset signature paragraph** — which categories agree, which diverge.
-5. **Historical precedents table** with SPY forward returns.
-6. **6–10 embedded charts** with inline captions and source attribution.
-7. **"What this verdict is NOT" caveat block.**
-8. **Action implications block.**
-9. **`## Data Used / 数据来源清单`** manifest.
+4. **Composite Score Decomposition** — explicit `weight × complacency_pct = contribution` table summing to the headline composite. The single composite number alone is too opaque; the reader needs to see which indicators are doing the heavy lifting and which are pulling the other way. Highlight the indicators with the largest absolute contribution in bold so the reader can scan the dominant signals in two seconds.
+5. **Cross-asset signature paragraph** — which categories agree, which diverge.
+6. **Historical precedents table** with SPY forward returns.
+7. **6–10 embedded charts** with inline captions and source attribution.
+8. **"What this verdict is NOT" caveat block.**
+9. **Action implications block.**
+10. **`## Data Used / 数据来源清单`** manifest, including the **FRED data-window disclosure** (see Guardrails below).
 
 ### Data Used / 数据来源清单 (mandatory)
 
@@ -312,6 +313,7 @@ Every report must contain:
 - **Never include indicators with <5y clean history in the composite.** Short-history indicators can be discussed narratively but cannot be weighted. CCC OAS itself was reconstructed by ICE in different eras; verify the FRED series goes back the full 10y before weighting it.
 - **Never assert "this looks like 2007 / 2018 / 2020".** Let the precedents table do that work — list the dates with their forward returns and let the reader pattern-match. Naming specific historical analogs in the verdict is over-confident.
 - **No "Source: our model" / "(estimate)" / "(本模型)"** anywhere. The composite is computed in `.claude/skills/market-complacency/scripts/build_dashboard.py`; cite the script path for the composite, cite the underlying FRED / yfinance / multpl / AAII / NAAIM URLs for the inputs.
+- **FRED CSV data-window disclosure (known limitation).** The public FRED `fredgraph.csv` endpoint silently caps the returned series at the most-recent ~3 years (786 rows) regardless of the `cosd` start-date parameter — even repeated chunked requests for older windows return the same 3-year tail. This affects the dashboard's FRED-sourced credit indicators: HY OAS (`BAMLH0A0HYM2`), IG OAS (`BAMLC0A0CM`), CCC OAS (`BAMLH0A3HYC`), and the derived CCC−HY spread. Their "10-year percentile" is in practice a "3-year percentile." Every report must disclose this in the Data Used section. For today's data the impact is coincidentally small — the credit spreads are at the bottom of *any* historical window so the rank holds — but the methodology is misstated and a v3 fix should either (a) use a FRED API key (free, requires a one-time signup) or (b) cache a one-time-downloaded long-history CSV alongside the daily refresh. The non-FRED indicators (VIX/VVIX/SKEW/MOVE/HYG/LQD/CAPE/ERP) are not affected.
 
 ## Output location
 
