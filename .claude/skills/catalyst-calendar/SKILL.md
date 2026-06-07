@@ -569,13 +569,15 @@ For every binary event (macro print, earnings, FOMC, vote outcome), ask in order
 | **CMEGroup FedWatch** | Implied probability of each FOMC outcome at each meeting through year-end | [cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html](https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html) | What's already priced into the rate path. If hike-odds-by-year-end are already 40%, a hot CPI only adds 5–10pp. |
 | **2y Treasury yield** | The cleanest mirror of FedWatch (front-end is fully Fed-driven) | [FRED — DGS2](https://fred.stlouisfed.org/series/DGS2) | If 2y is at 4.05% before CPI, hawkish positioning is in; bearish surprise gets a small move. If 2y is at 3.85%, dovish positioning is in; hot CPI gets a 10–15bp jump. |
 | **SPX 1DTE / 0DTE straddle** | The option market's literal $-value bet on the move in the next 24 hours | Bloomberg OMON, optionsalpha, spotgamma. Or compute: ATM call + ATM put expiring next session. | If SPX 5800 and the 5800 straddle expiring tomorrow is $50, implied move is ±0.86%. Compare to historical reactions at the indicator's bull/bear levels. |
-| **VIX (1-mo)** | 30-day implied SPX vol — the overall risk premium | [^VIX](https://www.cboe.com/tradable_products/vix/) — tracked in `db/indicators.db` as `vix` | Cheap vol entering CPI (VIX <14 when 3-yr CPI-day average is ~16) = lean long gamma. Rich vol (>20) = lean short gamma. |
-| **VIX1D / VIX9D / VIX3M term structure** | Front-month vs back-month — is risk seen as event-driven or regime change? | CBOE: VIX1D, VIX9D, VIX3M. The `db/indicators.db` `vix_slope` may already encode the VIX/VIX3M ratio. | **Backwardation (VIX1D > VIX > VIX3M) = event fear priced.** **Contango = complacency.** For CPI specifically, VIX1D usually trades 3–5 points above VIX the morning of the print, then collapses by EOD. |
-| **VVIX** | Vol-of-vol — how much VIX itself could move | [^VVIX](https://www.cboe.com/tradable_products/vix/vvix/) — tracked in `db/indicators.db` as `vvix` | VVIX >100 = VIX could spike hard on surprise. VVIX <85 = vol itself is well-anchored; second-order reaction limited. |
-| **SKEW (CBOE)** | 25-delta-put IV vs 25-delta-call IV — is downside paid for? | [^SKEW](https://www.cboe.com/us/indices/dashboard/skew/) | Steep skew (>140) = downside is priced fat, asymmetric upside on a bull print. Flat skew (<120) = balanced bets. |
-| **MOVE index** | Treasury vol — rates-vol equivalent of VIX | [ICE BofA MOVE](https://www.ice.com/iba/move-index) | CPI weeks usually run 10–20% above 3-mo average. Decile-10 entering print = rates vol rich, hot CPI partially priced. Decile-30 = vol cheap, outsized curve move on surprise. |
-| **HY OAS / IG OAS** | Credit risk premium — cross-asset complacency check | FRED `BAMLH0A0HYM2` (HY), `BAMLC0A0CM` (IG). `db/indicators.db` has both as `hy_oas` / `ig_oas`. | If HY <300bp entering a hot CPI, the credit market is under-pricing recession risk and equity vol is the cleaner expression. If HY >400bp, credit already has growth fear in. |
-| **5y5y forward inflation breakeven** | Forward inflation expectations from TIPS | [FRED — T5YIFR](https://fred.stlouisfed.org/series/T5YIFR) | If 5y5y >2.55% entering CPI, "expectations un-anchoring" is already priced — relief print delivers outsized rally. <2.30% = expectations well-anchored, hot print delivers larger shock. |
+| **VIX (1-mo)** | 30-day implied SPX vol — the overall risk premium | `db/indicators.db` symbol `vix` (Tier-2 helper-ingested; backup [^VIX](https://www.cboe.com/tradable_products/vix/)) | Cheap vol entering CPI (VIX <14 when 3-yr CPI-day average is ~16) = lean long gamma. Rich vol (>20) = lean short gamma. |
+| **VIX1D** (true event-day vol) | 1-day SPX implied vol — spikes on CPI / NFP / FOMC days, crushes intraday post-event | `db/indicators.db` symbol `vix1d` (backup [CBOE VIX1D](https://www.cboe.com/us/indices/dashboard/VIX1D/)) | VIX1D > VIX = event fear priced today; if also VIX1D ≥ 25, downside tail is fat — sell premium with a tail hedge. |
+| **VIX term structure** | VIX9D ÷ VIX3M — is risk event-driven or regime change? | `db/indicators.db` symbol `vix_slope` | <1 = contango (calm); >1 = backwardation (event-driven fear). On CPI weeks typical pre-print is ~0.85; backwardation entering means the move is already priced. |
+| **VVIX** | Vol-of-vol — how much VIX itself could move | `db/indicators.db` symbol `vvix` | VVIX >100 = VIX could spike hard on surprise. VVIX <85 = vol itself is well-anchored; second-order reaction limited. |
+| **SKEW (CBOE)** | Tail-risk premium — 25-delta-put IV vs 25-delta-call IV | `db/indicators.db` symbol `skew` | Steep skew (>140) = downside is priced fat, asymmetric upside on a bull print. Flat skew (<120) = balanced bets. SKEW >145 + VIX <14 = "calm with a fat tail" — buy puts cheaply. |
+| **MOVE index** | Treasury vol — rates-vol equivalent of VIX | `db/indicators.db` symbol `move` | CPI weeks usually run 10–20% above 3-mo average. >120 = rates vol elevated; <80 = rates vol cheap. **Cross-check vs equity vol** — if VIX spikes but MOVE doesn't, the rates market hasn't confirmed the move (equity vol may mean-revert). |
+| **HY OAS / IG OAS** | Credit risk premium — cross-asset complacency check | `db/indicators.db` symbols `hy_oas` / `ig_oas` | If HY <300bp entering a hot CPI, the credit market is under-pricing recession risk and equity vol is the cleaner expression. If HY >400bp, credit already has growth fear in. |
+| **2y Treasury yield** | Front-end rates — cleanest mirror of FedWatch positioning | `db/indicators.db` symbol `dgs2` | If 2y at 4.05% before CPI, hawkish positioning is in; bearish surprise gets a small move. If 2y at 3.85%, dovish positioning in; hot CPI gets a 10–15bp jump. |
+| **5y5y forward inflation breakeven** | Forward inflation expectations from TIPS | `db/indicators.db` symbol `t5yifr` | If 5y5y >2.55% entering CPI, "expectations un-anchoring" is already priced — relief print delivers outsized rally. <2.30% = expectations well-anchored (the Fed's preferred read), hot print delivers larger shock. |
 | **Single-name ATM straddle** | Implied move on earnings | Bloomberg OMON; [marketchameleon.com](https://marketchameleon.com/Overview/<TICKER>/Earnings/Earnings-Dates/) — quotes consensus implied move | The ATM straddle expiring the Friday after earnings = expected gap magnitude. ORCL typical 5–7%; ADBE 6–9%; mega-cap (NVDA / META / AMZN) 6–10%. |
 
 ### Per-indicator playbook
@@ -625,20 +627,51 @@ Concrete example for the Wed CPI:
 
 ### Data sources in this project
 
-The `db/indicators.db` table tracks (read-only):
-- `vix`, `vvix`, `vix_slope` — equity vol surface (core of the framework)
-- `hy_oas`, `ig_oas`, `hyg`, `lqd` — credit spreads / spread proxies
-- `tnx`, `yield_spread`, `tbill_3m` — rates structure
-- `dxy`, `gold`, `oil` — cross-asset risk-on/off
+The `db/indicators.db` table holds the **entire positioning toolkit** locally (Tier-2 helper-ingested per CLAUDE.md § "Database Safety"):
 
-Add via the `/market-complacency` skill or as a separate engineering task (do NOT write to indicators.db from a calendar invocation — read-only only per CLAUDE.md § "Database Safety"):
-- `^MOVE` (Treasury vol)
-- `^SKEW` (CBOE SKEW)
-- `VIX1D`, `VIX9D`, `VIX3M` (term-structure components — verify whether `vix_slope` already encodes this before duplicating)
-- 5y5y forward inflation breakeven (`T5YIFR` from FRED)
-- 2y nominal yield (`DGS2` from FRED)
+| Symbol | What it is | When to use |
+|---|---|---|
+| `vix` | 30-day SPX implied vol | Overall risk premium; "is vol cheap or rich entering the print?" |
+| `vix1d` | 1-day SPX implied vol | True event-day vol — spikes above VIX on CPI/NFP/FOMC days |
+| `vvix` | Vol-of-vol | >100 = VIX itself could spike further on surprise; <85 = vol anchored |
+| `vix_slope` | VIX9D ÷ VIX3M | <1 = contango (calm); >1 = backwardation (event-driven fear) |
+| `skew` | CBOE SKEW — 25Δ put vs call IV proxy | >145 = downside paid fat (asymmetric upside on bull); <120 = balanced |
+| `move` | ICE BofA MOVE (Treasury vol) | Rates-vol cross-check; "VIX of bonds" |
+| `hy_oas` / `ig_oas` | Credit spreads | Cross-asset disagreement signal — if equity vol freaks out but credit stays tight, equity vol is the dissenter |
+| `hyg` / `lqd` | HY / IG ETF prices | Spread proxies (intraday-faster than OAS series) |
+| `tnx` / `dgs2` | 10y / 2y Treasury yields | 2y mirrors FedWatch positioning; 10y carries growth + term premium |
+| `yield_spread` | 10y − 3m spread | Curve regime (recession warning if inverted) |
+| `tbill_3m` | 3-month T-bill yield | Front-end funding cost |
+| `t5yifr` | 5y5y forward inflation breakeven (TIPS) | Inflation expectations anchor; >2.5% = un-anchoring; the Fed-watched signal |
+| `dxy` | USD index | Risk-on/off tell; rising = dollar funding stress |
+| `spy` | S&P 500 ETF | Spot reference |
+| `gold` / `oil` | Safe-haven / growth proxies | Cross-asset risk-on/off |
 
-For event-specific pricing context (FedWatch probabilities, SPX 1DTE straddle pricing, single-name implied moves), web-search at the time the brief is written — these update intraday and are not worth caching in indicators.db.
+**Query pattern (read-only):**
+
+```bash
+# Latest values for the positioning toolkit
+sqlite3 db/indicators.db "SELECT symbol, date, value FROM history WHERE date = (SELECT MAX(date) FROM history) AND symbol IN ('vix','vix1d','vvix','vix_slope','skew','move','hy_oas','dgs2','tnx','t5yifr','dxy') ORDER BY symbol;"
+
+# 4-week trend for a single indicator
+sqlite3 db/indicators.db "SELECT date, value FROM history WHERE symbol = 'skew' AND date >= date('now', '-28 days') ORDER BY date;"
+```
+
+**Refreshing the data** (Tier-2 helper invocation — sanctioned write path):
+
+```bash
+python -c "from indicators import db as idb; from indicators.data_fetcher import fetch_all; idb.init_db(); idb.save_snapshot(fetch_all())"
+```
+
+The `save_snapshot()` helper uses `INSERT OR REPLACE` on `(symbol, date)` — re-running is idempotent.
+
+**What still requires web-search at brief-write time:**
+- **FedWatch probabilities** ([CMEGroup FedWatch](https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html)) — implied probability of each FOMC outcome; updates intraday.
+- **SPX 1DTE straddle pricing** — Bloomberg OMON, spotgamma, optionsalpha. Updates every minute.
+- **Single-name ATM straddle pricing** — [marketchameleon](https://marketchameleon.com/) per ticker; same.
+- **Sub-component splits** (core CPI vs headline, services-PPI-ex-trade, specific U-Mich inflation-expectation sub-readings) — fetched from BLS / U-Mich at release.
+
+These four are not worth caching because they update faster than a daily snapshot.
 
 ### Guardrails — positioning lens
 

@@ -121,6 +121,37 @@ INDICATORS: list[dict] = [
             {"label": "CBOE VIX3M", "url": "https://www.cboe.com/us/indices/dashboard/VIX3M/"},
         ],
     ),
+    dict(
+        id="vix1d", symbol="^VIX1D", name="VIX 1-Day",
+        category="Volatility", unit="",
+        description="1-day SPX implied vol. Spikes above VIX = single-event fear priced (CPI / NFP / FOMC days). Crushes intraday post-event.",
+        thresholds=dict(direction="up", caution=20, stress=30),
+        sources=[
+            {"label": "CBOE VIX1D", "url": "https://www.cboe.com/us/indices/dashboard/VIX1D/"},
+            {"label": "Yahoo ^VIX1D", "url": "https://finance.yahoo.com/quote/%5EVIX1D/"},
+        ],
+    ),
+    dict(
+        id="move", symbol="^MOVE", name="MOVE (Rates Vol)",
+        category="Volatility", unit="",
+        description="ICE BofA MOVE Index — Treasury vol (the 'VIX of bonds'). Spikes during rates stress, FOMC weeks, hot CPI prints.",
+        thresholds=dict(direction="up", caution=120, stress=160),
+        sources=[
+            {"label": "ICE BofA MOVE", "url": "https://www.ice.com/iba/move-index"},
+            {"label": "Yahoo ^MOVE", "url": "https://finance.yahoo.com/quote/%5EMOVE/"},
+            {"label": "MacroMicro MOVE", "url": "https://en.macromicro.me/charts/35584/us-treasury-move-index"},
+        ],
+    ),
+    dict(
+        id="skew", symbol="^SKEW", name="CBOE SKEW",
+        category="Volatility", unit="",
+        description="Tail-risk premium — 25-delta-put IV vs 25-delta-call IV. >140 = downside paid for fat (asymmetric upside); <120 = balanced bets.",
+        thresholds=dict(direction="up", caution=145, stress=160),
+        sources=[
+            {"label": "CBOE SKEW", "url": "https://www.cboe.com/us/indices/dashboard/skew/"},
+            {"label": "Yahoo ^SKEW", "url": "https://finance.yahoo.com/quote/%5ESKEW/"},
+        ],
+    ),
     # ── Cross-Asset ──────────────────────────────────────────────────────────
     dict(
         id="spy", symbol="SPY", name="S&P 500 (SPY)",
@@ -140,6 +171,25 @@ INDICATORS: list[dict] = [
         sources=[
             {"label": "FRED DGS10", "url": "https://fred.stlouisfed.org/series/DGS10"},
             {"label": "U.S. Treasury", "url": "https://home.treasury.gov/policy-issues/financing-the-government/interest-rate-statistics"},
+        ],
+    ),
+    dict(
+        id="dgs2", symbol="_FRED_DGS2", name="2Y Treasury Yield",
+        category="Cross-Asset", unit="%",
+        description="Front-end rates. Cleanest mirror of Fed-funds-implied path; the FedWatch / SOFR-options reflection in the cash market.",
+        thresholds=None,
+        sources=[
+            {"label": "FRED DGS2", "url": "https://fred.stlouisfed.org/series/DGS2"},
+            {"label": "U.S. Treasury", "url": "https://home.treasury.gov/policy-issues/financing-the-government/interest-rate-statistics"},
+        ],
+    ),
+    dict(
+        id="t5yifr", symbol="_FRED_T5YIFR", name="5y5y Forward Inflation Breakeven",
+        category="Cross-Asset", unit="%",
+        description="5-year, 5-year forward inflation expectation from TIPS. Rising above 2.5% = expectations un-anchoring; the Fed's preferred 'are expectations stable?' signal.",
+        thresholds=dict(direction="up", caution=2.5, stress=2.8),
+        sources=[
+            {"label": "FRED T5YIFR", "url": "https://fred.stlouisfed.org/series/T5YIFR"},
         ],
     ),
     dict(
