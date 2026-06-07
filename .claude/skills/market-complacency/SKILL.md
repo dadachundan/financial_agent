@@ -312,7 +312,9 @@ The following blocks from prior iterations are explicitly *forbidden* in the new
 - ❌ Step-by-step verification logs as `<details>` blocks — moved to commit messages.
 - ❌ **Leading any section with the composite score as the headline metric.** The composite is mean-compressed, hand-weighted, and has no empirical lift over the base rate (backtest verified). Anywhere a single-number summary is needed, use the flag count. The composite appears only (a) in Figure 1's time-series, and (b) in the Caveats disclaimer explaining its limitations. **Do not** write "composite 59 / Neutral" as a verdict; write "flag count 8/21" instead.
 
-### Why flag count beats composite
+### Why flag count beats composite — confirmed by backtest
+
+Backtest on SPY 2001-2026 (`oneoff/backtest_flag_vs_composite.py`):
 
 | Property | Composite | Flag count |
 |---|---|---|
@@ -321,9 +323,13 @@ The following blocks from prior iterations are explicitly *forbidden* in the new
 | Indicator correlation | Triple-counts correlated signals | Same — but the discrete count makes it visible |
 | Time-scale issue | Averages CAPE (decadal) and VIX (seconds) | Each tier is independent — no averaging |
 | Mean compression | Always lands near 50 with 19 inputs | Bimodal — many indicators clustered red/amber or all off |
-| Empirical lift | 1.10× base rate at ≥80 (barely above random) | Citi's "double-digits = acceleration" is a published empirical anchor |
+| **Empirical lift (90d, -10% dd)** | **Max 0.68×** at T=40 — *worse than random at every threshold* | **1.32× at T=10, 1.90× at T=11** |
+| **Empirical lift (180d, -15% dd)** | **Max 0.98×** at T=70 | **1.78× at T=10, 2.41× at T=11** |
 | Cross-asset divergence | Hidden by the average | Visible as `7 red + 2 amber + 12 off` |
 | Interpretability | "What does 59.5 mean?" | "8 indicators flagging vs Mar-00's 17.5" — direct historical anchor |
+| Citi's published anchor | None | "Double-digits = acceleration zone" — independently confirmed by this backtest |
+
+The composite is statistically uninformative. The flag count at ≥10 has roughly 2× the base-rate probability of preceding a meaningful drawdown.
 
 ### Rationale for the Citi-style rewrite (v7)
 

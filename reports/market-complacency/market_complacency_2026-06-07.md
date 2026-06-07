@@ -110,9 +110,32 @@ Daily composite scores within ±5 of today's 59.5:
 
 **Median 12m forward SPY: +14.2%. 6 of 7 (86%) positive. Median max DD within 24m: −18.8%. Two precedents had >20% DD (2018-10 / 2021-08).**
 
+## Backtest validation — flag count beats composite by ~3× lift
+
+Side-by-side backtest of the two scores against SPY drawdowns since 2001 (90d / -10% drawdown event):
+
+| Score | Best threshold | Precision | Recall | Lift vs base rate (20.3%) |
+|---|---:|---:|---:|---:|
+| Composite | T = 40 (max signal) | 13.7% | 50.4% | **0.68×** (worse than random) |
+| Composite | T = 70 | 13.7% | 4.2% | 0.67× |
+| **Flag count** | **T = 10** (Citi double-digits) | **26.8%** | **5.4%** | **1.32×** |
+| **Flag count** | **T = 11** | **38.5%** | **1.9%** | **1.90×** |
+
+Deeper-bear test (180d / -15% drawdown):
+
+| Score | Best threshold | Precision | Lift |
+|---|---:|---:|---:|
+| Composite | T = 70 | 19.4% | 0.98× |
+| **Flag count** | **T = 10** | **35.2%** | **1.78×** |
+| **Flag count** | **T = 11** | **47.7%** | **2.41×** |
+
+**Conclusions**: (1) the composite has **no empirical edge at any threshold** — its max lift is 0.68× on the 90-day test and 0.98× on the 180-day test, both at or below random. (2) The flag count at Citi's published "double-digits = acceleration zone" threshold (≥10) has **lift 1.32-1.78× the base rate** — almost half of all signals at T=11 over 180 days were followed by ≥15% drawdowns. (3) Citi's empirical anchor is independently validated by this dashboard's data. Full sweep: [`oneoff/backtest_flag_vs_composite.py`](../../oneoff/backtest_flag_vs_composite.py).
+
+**The dashboard's flag count today (8.5) sits below the Citi acceleration threshold (10) but above the regime's median (~5).** Today is "Elevated but not yet in the empirically-validated drawdown zone."
+
 ## Caveats
 
-- **The composite score is largely useless as a stand-alone signal.** It's an arbitrary weighted average of 19 indicators on different time-scales. Weights were never empirically validated. Backtest precision at composite ≥ 80 = 22.3% vs 20.3% base rate (lift 1.10×); at composite ≥ 60 it's *worse* than random. Five specific failures: (1) weights are hand-tuned, not optimized; (2) indicators are correlated — HY/IG/BAA10Y/HYG-LQD all measure broad-credit tightness, so the score triple-counts that signal; (3) different time-scales averaged (CAPE moves over decades, VIX in seconds); (4) mean-compression — averaging 19 indicators always lands in the middle; (5) information loss — "all at 60th percentile" and "half at 99th + half at 20th" produce the same composite but mean very different things. **Use the flag count + Figure 2 + individual indicator levels instead.** The composite is retained for time-series continuity (Figure 1) and tier-band labeling, not as the load-bearing signal.
+- **The composite score is largely useless as a stand-alone signal.** Backtest precision at every threshold is at or below the 20.3% base rate (max lift 0.68× on 90d, 0.98× on 180d). Five specific failures: (1) weights are hand-tuned, never optimized; (2) indicators are correlated — HY/IG/BAA10Y/HYG-LQD all measure broad-credit tightness, so the score triple-counts that signal; (3) different time-scales averaged (CAPE moves over decades, VIX in seconds); (4) mean-compression — averaging 19 indicators always lands in the middle; (5) information loss — "all at 60th percentile" and "half at 99th + half at 20th" produce the same composite but mean very different things. **The flag count is the empirically-validated readout** — see the Backtest validation section above.
 - **Low PE doesn't protect against a bear** — GFC (PE ~17) and COVID (PE ~19) both blew through low-PE markets. CAPE near dot-com levels says *"the eventual drawdown is likely deeper,"* not *"a drawdown is imminent."* Of the 7 bear markets since 1980 visible in Citi's chart, only 2 (2000, 2022) started from high PE.
 - **Dashboard is a regime descriptor, not a drawdown predictor.** Even the flag count is best used to *calibrate the regime against history* via Figure 2, not as a timing trigger.
 - **Not a forecast / not a timing model / not a sector call.** The Elevated/Neutral-top zone can persist for quarters.
