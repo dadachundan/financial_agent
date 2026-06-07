@@ -267,7 +267,17 @@ Mandatory blocks, in this order:
    - **No prose outside this block until after Figure 2.**
    - **Both the composite score and the flag-count chart are forbidden.** The composite is hand-weighted noise (backtest verified: max lift 0.68× at 90d / 0.98× at 180d). The flag-count chart was the proposed replacement (Figure 1 in v8) but the user rejected it in v9 as "inaccurate" — Plotly annotation positions drifted from the data, the "Now" arrow pointed off the actual data point, and the reference-line labels collided at the bottom of the chart. **Neither chart appears in the report.** The build script's `_make_composite_html` and `_make_flag_count_html` are no longer called.
 
-2. **`## Figure 2. Bear Market Checklist — Historical Calibration`** — a SINGLE comparison table mirroring Citi BMC Figure 2. Columns: Mar-00, Oct-07, Feb-20, Dec-21, **Now**. Rows: indicators grouped by category (Valuations / Yield Curve / Sentiment / Corp Behaviour / Profitability / Credit / Vol). Cells colored 🔴 red / 🟠 amber / off using standard thresholds. **A 🟢 marker is also valid** — use it for contra-signal off-flags (e.g., SKEW high, CCC spread wide, VIX backwardation) so the reader sees the cross-asset divergence at a glance.
+2. **`## Figure 2. Bear Market Checklist — Historical Calibration`** — a SINGLE comparison table mirroring Citi BMC Figure 2. Columns: Mar-00, Oct-07, Feb-20, Dec-21, **Now**. Rows: indicators grouped by category (Valuations / Yield Curve / Sentiment / Corp Behaviour / Profitability / Credit / Vol).
+
+   **The table MUST be raw HTML with inline-style cell backgrounds** — not markdown with emoji dots in front of values. Citi's BMC table is the visual model: full-cell fill for each flag, not "🔴 33" floating next to the value. The viewer's marked.js passes raw HTML through, so a `<table>` with CSS classes works. Required class palette (defined in a `<style>` block at the top of the table):
+   - `.bmc-red` — `background: #f4a8a8; color: #5a0000` (full flag — stretched / complacent)
+   - `.bmc-amber` — `background: #ffd17a; color: #5a3300` (half flag — caution)
+   - `.bmc-green` — `background: #b6e3b6; color: #1a4d1a` (contra-signal — e.g., SKEW high, CCC spread wide, VIX backwardation — divergence side of the regime)
+   - `.bmc-stress` — `background: #c44; color: #fff` (vol-spike stress; e.g., VIX 40 during COVID)
+   - `.bmc-na` — `color: #999` (n/a — data not available)
+   - `.now` — `border-left: 2px solid #888` (column separator on the Now column)
+
+   Cells without a flag get no class (plain white). Markdown emoji dots (🔴 🟠 🟢) are FORBIDDEN in Figure 2 — they don't fill the cell, they crowd the value, and they render inconsistently across viewers.
 
    **Every indicator row must have a markdown link to the public source** for that indicator's historical chart: `[Indicator name](url)`. Reader should be able to click any row to verify the cited values against the canonical free chart (multpl, FRED, FINRA, Yahoo, Bain, Renaissance Capital, etc.).
 

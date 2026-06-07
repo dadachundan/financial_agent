@@ -6,35 +6,82 @@
 
 Today vs the start of past bear markets and recent peaks. **Red = full flag, 🟠 = half flag, blank = off.** Adapted from [Citi BMC Figure 2](https://www.citivelocity.com).
 
-| Indicator (click for source / historical chart) | **Mar-00** | **Oct-07** | **Feb-20** | **Dec-21** | **Now** |
-|---|:---:|:---:|:---:|:---:|:---:|
-| **Global Equity Valuations** | | | | | |
-| [Trailing PE (SPX)](https://www.multpl.com/s-p-500-pe-ratio) | 🔴 33 | 17 | 🟠 19 | 🟠 21 | 🔴 **32** |
-| [S&P 500 Dividend Yield](https://www.multpl.com/s-p-500-dividend-yield) | 🔴 1.16 | 1.77 | 1.79 | 🔴 1.29 | 🔴 **1.06** |
-| [Shiller CAPE](https://www.multpl.com/shiller-pe) | 🔴 43 | 🟠 27 | 31 | 🔴 38 | 🔴 **42** |
-| Equity Risk Premium (pp) — [S&P 500 E/P](https://www.multpl.com/s-p-500-earnings-yield) − [10Y](https://fred.stlouisfed.org/series/DGS10) | n/a | +0.5 | +1.7 | +2.0 | 🔴 **−1.34** |
-| **Yield Curve** | | | | | |
-| [10Y − 2Y (bp)](https://fred.stlouisfed.org/series/T10Y2Y) | 🔴 −47 | 🟠 +54 | +27 | +79 | +38 |
-| **Sentiment** | | | | | |
-| [Margin Debt / SPX](https://www.finra.org/investors/insights/margin-statistics) | 200 | 243 | 184 | 🟠 191 | **181** (mid) |
-| **Corporate Behaviour** | | | | | |
-| [US Capex YoY (%)](https://fred.stlouisfed.org/series/PNFI) | 🟠 9.7 | 🟠 8.0 | +1.1 | 🟠 7.9 | 🟠 **8.4** |
-| [US M&A (last 12m % of Mkt cap)](https://www.bain.com/insights/topics/m-and-a-report/) | 🔴 11.4 | 🔴 8.1 | 4.4 | 🟠 5.0 | **3.7** |
-| [US IPO (last 12m % of DM Mkt cap)](https://www.renaissancecapital.com/IPO-Center/Stats) | 🔴 0.7 | 🟠 0.4 | 0.2 | 🟠 0.6 | **0.4** |
-| **Profitability** *(EPS-from-peak row removed v10 — [multpl S&P 500 Earnings page](https://www.multpl.com/s-p-500-earnings) is 8 months stale; per user directive we don't use stale data. The CAPE row above already captures the cycle-peak signal.)* | | | | | |
-| **Balance sheets / credit markets** | | | | | |
-| [Moody's BAA − 10Y (pp)](https://fred.stlouisfed.org/series/BAA10Y) | 🟠 2.30 | 🟠 1.99 | 🟠 2.38 | 🟠 1.85 | 🔴 **1.54** |
-| [HY OAS (%)](https://fred.stlouisfed.org/series/BAMLH0A0HYM2) *(ICE BofA, 2023+; Citi pre-2023)* | 6.00 | 6.00 | 🟠 4.80 | 3.37 | 🔴 **2.74** |
-| [IG OAS (%)](https://fred.stlouisfed.org/series/BAMLC0A0CM) *(same caveat)* | 1.75 | 1.75 | 🟠 1.21 | 0.90 | 🔴 **0.74** |
-| [CCC OAS](https://fred.stlouisfed.org/series/BAMLH0A3HYC) − HY spread (pp) *(derived; ICE BofA only 2023+)* | n/a | n/a | n/a | n/a | 🟢 **6.72** (10y max — contra) |
-| [HYG](https://finance.yahoo.com/quote/HYG/) / [LQD](https://finance.yahoo.com/quote/LQD/) ratio *(HYG launched Apr 2007)* | n/a | 0.635 | 0.582 | 0.611 | 🔴 **0.734** (19y high) |
-| **Equity / Rate Vol** | | | | | |
-| [VIX](https://finance.yahoo.com/quote/%5EVIX/) | 24.1 | 18.5 | 🚨 40.1 | 17.2 | 21.5 |
-| [SKEW](https://finance.yahoo.com/quote/%5ESKEW/) | 113 | 117 | 131 | 154 | 🟢 **152** (contra) |
-| [MOVE](https://finance.yahoo.com/quote/%5EMOVE/) | n/a | 90 | 110 | 77 | 75 |
-| [VIX9D](https://finance.yahoo.com/quote/%5EVIX9D/) / [VIX3M](https://finance.yahoo.com/quote/%5EVIX3M/) *(VIX9D launched 2011)* | n/a | n/a | 🚨 1.77 (COVID panic) | 0.61 | 🟢 **1.10 backwardated** (contra) |
-| **# Flags (this dashboard / 19)** | n/a* | n/a* | n/a* | n/a* | **7.5** |
-| **# Flags (Citi BMC / 18)** | 17.5 | 13.0 | 5.5 | 8.5 | 10.0 (Global), 11.5 (US) |
+<style>
+.bmc-table { border-collapse: collapse; width: 100%; font-size: 0.92rem; margin: 0.5rem 0 1rem; }
+.bmc-table th, .bmc-table td { padding: 6px 10px; border: 1px solid #d7dadc; text-align: center; vertical-align: middle; }
+.bmc-table th { background: #f4f4f4; }
+.bmc-table td.label, .bmc-table th.label { text-align: left; }
+.bmc-table tr.section td { background: #fafafa; font-weight: 700; }
+.bmc-red    { background: #f4a8a8 !important; color: #5a0000; font-weight: 700; }
+.bmc-amber  { background: #ffd17a !important; color: #5a3300; font-weight: 700; }
+.bmc-green  { background: #b6e3b6 !important; color: #1a4d1a; font-weight: 700; }
+.bmc-stress { background: #c44; color: #fff; font-weight: 700; }
+.bmc-na     { color: #999; }
+.bmc-table td.now { border-left: 2px solid #888; }
+</style>
+
+<table class="bmc-table">
+<thead>
+<tr><th class="label">Indicator (click for source / historical chart)</th>
+<th>Mar-00</th><th>Oct-07</th><th>Feb-20</th><th>Dec-21</th><th>Now</th></tr>
+</thead>
+<tbody>
+
+<tr class="section"><td class="label" colspan="6">Global Equity Valuations</td></tr>
+<tr><td class="label"><a href="https://www.multpl.com/s-p-500-pe-ratio">Trailing PE (SPX)</a></td>
+<td class="bmc-red">33</td><td>17</td><td class="bmc-amber">19</td><td class="bmc-amber">21</td><td class="bmc-red now">32</td></tr>
+<tr><td class="label"><a href="https://www.multpl.com/s-p-500-dividend-yield">S&amp;P 500 Dividend Yield</a></td>
+<td class="bmc-red">1.16</td><td>1.77</td><td>1.79</td><td class="bmc-red">1.29</td><td class="bmc-red now">1.06</td></tr>
+<tr><td class="label"><a href="https://www.multpl.com/shiller-pe">Shiller CAPE</a></td>
+<td class="bmc-red">43</td><td class="bmc-amber">27</td><td>31</td><td class="bmc-red">38</td><td class="bmc-red now">42</td></tr>
+<tr><td class="label">Equity Risk Premium (pp) — <a href="https://www.multpl.com/s-p-500-earnings-yield">S&amp;P 500 E/P</a> − <a href="https://fred.stlouisfed.org/series/DGS10">10Y</a></td>
+<td class="bmc-na">n/a</td><td>+0.5</td><td>+1.7</td><td>+2.0</td><td class="bmc-red now">−1.34</td></tr>
+
+<tr class="section"><td class="label" colspan="6">Yield Curve</td></tr>
+<tr><td class="label"><a href="https://fred.stlouisfed.org/series/T10Y2Y">10Y − 2Y (bp)</a></td>
+<td class="bmc-red">−47</td><td class="bmc-amber">+54</td><td>+27</td><td>+79</td><td class="now">+38</td></tr>
+
+<tr class="section"><td class="label" colspan="6">Sentiment</td></tr>
+<tr><td class="label"><a href="https://www.finra.org/investors/insights/margin-statistics">Margin Debt / SPX</a></td>
+<td>200</td><td>243</td><td>184</td><td class="bmc-amber">191</td><td class="now">181 <span style="color:#999">(mid)</span></td></tr>
+
+<tr class="section"><td class="label" colspan="6">Corporate Behaviour</td></tr>
+<tr><td class="label"><a href="https://fred.stlouisfed.org/series/PNFI">US Capex YoY (%)</a></td>
+<td class="bmc-amber">9.7</td><td class="bmc-amber">8.0</td><td>+1.1</td><td class="bmc-amber">7.9</td><td class="bmc-amber now">8.4</td></tr>
+<tr><td class="label"><a href="https://www.bain.com/insights/topics/m-and-a-report/">US M&amp;A (last 12m % of Mkt cap)</a></td>
+<td class="bmc-red">11.4</td><td class="bmc-red">8.1</td><td>4.4</td><td class="bmc-amber">5.0</td><td class="now">3.7</td></tr>
+<tr><td class="label"><a href="https://www.renaissancecapital.com/IPO-Center/Stats">US IPO (last 12m % of DM Mkt cap)</a></td>
+<td class="bmc-red">0.7</td><td class="bmc-amber">0.4</td><td>0.2</td><td class="bmc-amber">0.6</td><td class="now">0.4</td></tr>
+
+<tr class="section"><td class="label" colspan="6">Profitability <span style="font-weight:normal;font-style:italic;color:#888">(EPS-from-peak row removed v10 — <a href="https://www.multpl.com/s-p-500-earnings">multpl earnings page</a> is 8mo stale; CAPE row above already captures the cycle-peak signal.)</span></td></tr>
+
+<tr class="section"><td class="label" colspan="6">Balance sheets / credit markets</td></tr>
+<tr><td class="label"><a href="https://fred.stlouisfed.org/series/BAA10Y">Moody's BAA − 10Y (pp)</a></td>
+<td class="bmc-amber">2.30</td><td class="bmc-amber">1.99</td><td class="bmc-amber">2.38</td><td class="bmc-amber">1.85</td><td class="bmc-red now">1.54</td></tr>
+<tr><td class="label"><a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2">HY OAS (%)</a> <span style="font-style:italic;color:#888;font-size:.85em">(ICE BofA 2023+; Citi pre-2023)</span></td>
+<td>6.00</td><td>6.00</td><td class="bmc-amber">4.80</td><td>3.37</td><td class="bmc-red now">2.74</td></tr>
+<tr><td class="label"><a href="https://fred.stlouisfed.org/series/BAMLC0A0CM">IG OAS (%)</a> <span style="font-style:italic;color:#888;font-size:.85em">(same caveat)</span></td>
+<td>1.75</td><td>1.75</td><td class="bmc-amber">1.21</td><td>0.90</td><td class="bmc-red now">0.74</td></tr>
+<tr><td class="label"><a href="https://fred.stlouisfed.org/series/BAMLH0A3HYC">CCC OAS</a> − HY spread (pp) <span style="font-style:italic;color:#888;font-size:.85em">(derived; ICE BofA 2023+)</span></td>
+<td class="bmc-na">n/a</td><td class="bmc-na">n/a</td><td class="bmc-na">n/a</td><td class="bmc-na">n/a</td><td class="bmc-green now">6.72 <span style="color:#1a4d1a;font-weight:normal;font-size:.85em">(10y max — contra)</span></td></tr>
+<tr><td class="label"><a href="https://finance.yahoo.com/quote/HYG/">HYG</a> / <a href="https://finance.yahoo.com/quote/LQD/">LQD</a> ratio <span style="font-style:italic;color:#888;font-size:.85em">(HYG launched Apr 2007)</span></td>
+<td class="bmc-na">n/a</td><td>0.635</td><td>0.582</td><td>0.611</td><td class="bmc-red now">0.734 <span style="color:#5a0000;font-weight:normal;font-size:.85em">(19y high)</span></td></tr>
+
+<tr class="section"><td class="label" colspan="6">Equity / Rate Vol</td></tr>
+<tr><td class="label"><a href="https://finance.yahoo.com/quote/%5EVIX/">VIX</a></td>
+<td>24.1</td><td>18.5</td><td class="bmc-stress">40.1</td><td>17.2</td><td class="now">21.5</td></tr>
+<tr><td class="label"><a href="https://finance.yahoo.com/quote/%5ESKEW/">SKEW</a></td>
+<td>113</td><td>117</td><td>131</td><td>154</td><td class="bmc-green now">152 <span style="color:#1a4d1a;font-weight:normal;font-size:.85em">(contra)</span></td></tr>
+<tr><td class="label"><a href="https://finance.yahoo.com/quote/%5EMOVE/">MOVE</a></td>
+<td class="bmc-na">n/a</td><td>90</td><td>110</td><td>77</td><td class="now">75</td></tr>
+<tr><td class="label"><a href="https://finance.yahoo.com/quote/%5EVIX9D/">VIX9D</a> / <a href="https://finance.yahoo.com/quote/%5EVIX3M/">VIX3M</a> <span style="font-style:italic;color:#888;font-size:.85em">(VIX9D launched 2011)</span></td>
+<td class="bmc-na">n/a</td><td class="bmc-na">n/a</td><td class="bmc-stress">1.77 <span style="font-weight:normal;font-size:.85em">(COVID panic)</span></td><td>0.61</td><td class="bmc-green now">1.10 <span style="color:#1a4d1a;font-weight:normal;font-size:.85em">backwardated (contra)</span></td></tr>
+
+<tr class="section"><td class="label"># Flags (this dashboard / 19)</td>
+<td class="bmc-na">n/a*</td><td class="bmc-na">n/a*</td><td class="bmc-na">n/a*</td><td class="bmc-na">n/a*</td><td class="now"><strong>7.5</strong></td></tr>
+<tr class="section"><td class="label"># Flags (Citi BMC / 18)</td>
+<td>17.5</td><td>13.0</td><td>5.5</td><td>8.5</td><td class="now">10.0 Global, 11.5 US</td></tr>
+</tbody></table>
 
 *Pre-2007 totals incomplete — VVIX, SKEW, MOVE histories shorter than the dashboard's lookback.
 
