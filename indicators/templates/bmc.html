@@ -94,15 +94,17 @@
 <div class="row g-3">
   {% set base = "/claude-reports/view/charts/market_complacency_" ~ chart_date %}
   {% for slug, title in [
-    ("credit_baa",  "Long-history credit — Moody's BAA−10Y (1986+)"),
-    ("ig_credit",   "IG credit tiers — Moody's AAA−10Y vs BAA−10Y + dispersion"),
-    ("cape",        "Shiller CAPE (1871+)"),
-    ("erp",         "Equity Risk Premium = E/P − 10Y"),
-    ("vix_vvix",    "VIX (1990+) & VVIX (2007+)"),
-    ("vix_slope",   "VIX Term Slope — VIX9D/VIX3M + VIX/VIX3M long-history proxy"),
-    ("move",        "MOVE Index (2002+)"),
+    ("credit_baa",     "Long-history credit — Moody's BAA−10Y (1986+)"),
+    ("ig_credit",      "IG credit tiers — Moody's AAA−10Y vs BAA−10Y + dispersion"),
+    ("ccc_hy_spread",  "CCC − HY OAS spread (credit-tier divergence)"),
+    ("hyg_lqd",        "HYG / LQD ratio (risk-on credit flow proxy)"),
+    ("cape",           "Shiller CAPE (1871+)"),
+    ("erp",            "Equity Risk Premium = E/P − 10Y"),
+    ("vix_vvix",       "VIX (1990+) & VVIX (2007+)"),
+    ("vix_slope",      "VIX Term Slope — VIX9D/VIX3M + VIX/VIX3M long-history proxy"),
+    ("move",           "MOVE Index (2002+)"),
   ] %}
-  <div class="col-12">
+  <div class="col-12" id="fig-{{ slug }}">
     <div class="card" style="border:1px solid #d7dadc;">
       <div class="card-header py-2" style="background:#f4f4f4; font-size:.85rem; font-weight:600;">
         Figure {{ loop.index + 2 }}. {{ title }}
@@ -141,7 +143,7 @@ const SECTIONS = [
       cells: { mar00:[1.16,"red"], oct07:[1.77,null], feb20:[1.79,null], dec21:[1.29,"red"] } },
     { id: "cape", label: "Shiller CAPE", url: "https://www.multpl.com/shiller-pe",
       cells: { mar00:[43,"red"], oct07:[27,"amber"], feb20:[31,null], dec21:[38,"red"] } },
-    { id: "erp", label: 'Equity Risk Premium (pp) — <a href="https://www.multpl.com/s-p-500-earnings-yield" target="_blank" rel="noopener">S&amp;P 500 E/P</a> minus <a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener">10Y</a>', url: null,
+    { id: "erp", label: 'Equity Risk Premium (pp) — <a href="https://www.multpl.com/s-p-500-earnings-yield" target="_blank" rel="noopener">S&amp;P 500 E/P</a> minus <a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener">10Y</a> · <a href="#fig-erp">chart</a>', url: null,
       cells: { mar00:[null,null], oct07:["+0.5",null], feb20:["+1.7",null], dec21:["+2.0",null] } },
   ]},
   { name: "Yield Curve", rows: [
@@ -169,9 +171,9 @@ const SECTIONS = [
       cells: { mar00:[1.75,null], oct07:[1.75,null], feb20:[1.21,"amber"], dec21:[0.90,null] } },
     { id: "ccc_oas", label: 'CCC OAS (%) <span class="source-caveat">(weakest-tier HY)</span>', url: "https://fred.stlouisfed.org/series/BAMLH0A3HYC",
       cells: { mar00:[null,null], oct07:[null,null], feb20:[null,null], dec21:[null,null] } },
-    { id: "ccc_hy_spread", label: '<a href="https://fred.stlouisfed.org/series/BAMLH0A3HYC" target="_blank" rel="noopener">CCC OAS</a> minus <a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" target="_blank" rel="noopener">HY OAS</a> <span class="source-caveat">(derived; tier divergence)</span>', url: null,
+    { id: "ccc_hy_spread", label: '<a href="https://fred.stlouisfed.org/series/BAMLH0A3HYC" target="_blank" rel="noopener">CCC OAS</a> minus <a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" target="_blank" rel="noopener">HY OAS</a> · <a href="#fig-ccc_hy_spread">chart</a> <span class="source-caveat">(derived; tier divergence)</span>', url: null,
       cells: { mar00:[null,null], oct07:[null,null], feb20:[null,null], dec21:[null,null] } },
-    { id: "hyg_lqd", label: '<a href="https://finance.yahoo.com/quote/HYG/" target="_blank" rel="noopener">HYG</a> / <a href="https://finance.yahoo.com/quote/LQD/" target="_blank" rel="noopener">LQD</a> ratio <span class="source-caveat">(HYG launched Apr 2007)</span>', url: null,
+    { id: "hyg_lqd", label: '<a href="https://finance.yahoo.com/quote/HYG/" target="_blank" rel="noopener">HYG</a> / <a href="https://finance.yahoo.com/quote/LQD/" target="_blank" rel="noopener">LQD</a> ratio · <a href="#fig-hyg_lqd">chart</a> <span class="source-caveat">(HYG launched Apr 2007)</span>', url: null,
       cells: { mar00:[null,null], oct07:[0.635,null], feb20:[0.582,null], dec21:[0.611,null] } },
   ]},
   { name: "Equity / Rate Vol", rows: [
@@ -181,7 +183,7 @@ const SECTIONS = [
       cells: { mar00:[113,null], oct07:[117,null], feb20:[131,null], dec21:[154,null] } },
     { id: "move", label: "MOVE", url: "https://finance.yahoo.com/quote/%5EMOVE/",
       cells: { mar00:[null,null], oct07:[90,null], feb20:[110,null], dec21:[77,null] } },
-    { id: "vix_slope", label: '<a href="https://finance.yahoo.com/quote/%5EVIX9D/" target="_blank" rel="noopener">VIX9D</a> / <a href="https://finance.yahoo.com/quote/%5EVIX3M/" target="_blank" rel="noopener">VIX3M</a> <span class="source-caveat">(2011+)</span>', url: null,
+    { id: "vix_slope", label: '<a href="https://finance.yahoo.com/quote/%5EVIX9D/" target="_blank" rel="noopener">VIX9D</a> / <a href="https://finance.yahoo.com/quote/%5EVIX3M/" target="_blank" rel="noopener">VIX3M</a> · <a href="#fig-vix_slope">chart</a> <span class="source-caveat">(2011+)</span>', url: null,
       cells: { mar00:[null,null], oct07:[null,null], feb20:[1.77,"stress"], dec21:[0.61,null] } },
   ]},
 ];

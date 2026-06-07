@@ -1784,6 +1784,41 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
             ],
         )
 
+    # Dedicated chart for HYG / LQD ratio (derived; HYG from Apr 2007, LQD from
+    # Jul 2002). No canonical page exists for this ratio, so the BMC table's
+    # derived-row label points readers here.
+    if not series["hyg_lqd"].empty:
+        _make_interactive_chart(
+            as_of, "hyg_lqd",
+            title="HYG / LQD ratio (HY ETF ÷ IG ETF, 2007+) — risk-on credit flow proxy",
+            yaxis="HYG / LQD",
+            lines=[dict(name="HYG / LQD", series=series["hyg_lqd"], color="#c44", width=1.0)],
+            thresholds=[
+                dict(y=0.72, label="0.72 (recent richness)", color="#c1272d", dash="dash"),
+            ],
+        )
+
+    # Dedicated chart for CCC − HY spread (derived; ICE BofA series only 2023+).
+    # Same reasoning: no canonical "spread" page on FRED — we compute it from
+    # the two component series. Link the BMC row label here.
+    if not series["ccc_oas"].empty and not series["hy_oas"].empty:
+        df_ch = pd.concat([series["ccc_oas"].rename("ccc"),
+                           series["hy_oas"].rename("hy")], axis=1).dropna()
+        spread_series = (df_ch["ccc"] - df_ch["hy"]).rename("CCC − HY spread")
+        _make_interactive_chart(
+            as_of, "ccc_hy_spread",
+            title="CCC − HY OAS spread (credit-tier divergence; ICE BofA 2023+)",
+            yaxis="Spread (pp)",
+            lines=[
+                dict(name="CCC OAS", series=series["ccc_oas"], color="#e76f51", width=0.9, dash="dot"),
+                dict(name="HY OAS",  series=series["hy_oas"],  color="#1d3557", width=0.9, dash="dot"),
+                dict(name="CCC − HY spread", series=spread_series, color="#000",  width=1.4),
+            ],
+            thresholds=[
+                dict(y=6.0, label="6.0 (10y high — contra signal)", color="#2a9d8f", dash="dash"),
+            ],
+        )
+
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
