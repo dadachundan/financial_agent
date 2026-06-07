@@ -2121,11 +2121,17 @@ def index():
 
 
 _IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"}
+# Interactive Plotly charts written by skills (e.g. market-complacency
+# composite). Self-contained HTML files in reports/charts/ — trusted because
+# they're produced by our own build scripts. Path-traversal protection above
+# ensures the request can't escape REPORTS_DIR.
+_EMBED_EXTS = {".html", ".htm"}
 
 
 @reports_bp.route("/view/<path:rel>")
 def view(rel: str):
-    """Serve .md as rendered HTML; serve images directly. Path-traversal-safe."""
+    """Serve .md as rendered HTML; serve images and embeddable HTML charts
+    directly. Path-traversal-safe."""
     if ".." in rel.split("/"):
         abort(404)
     target = (REPORTS_DIR / rel).resolve()
@@ -2142,7 +2148,10 @@ def view(rel: str):
             _VIEW_TMPL, name=target.name, md=md, rel=rel, _nav=_nw.NAV_HTML
         )
 
-    if target.suffix.lower() not in _IMAGE_EXTS or not target.is_file():
+    ext = target.suffix.lower()
+    if ext not in _IMAGE_EXTS and ext not in _EMBED_EXTS:
+        abort(404)
+    if not target.is_file():
         abort(404)
     return send_from_directory(target.parent, target.name)
 

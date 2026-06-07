@@ -1013,6 +1013,79 @@ def build(as_of: str, window_years: int = 10) -> dict:
     }
 
 
+def _make_composite_html(as_of: str, composite: float, tier: str, composite_hist: pd.Series) -> None:
+    """Save an interactive Plotly composite chart with rangeselector buttons.
+
+    Embeddable in markdown via <iframe>. The Plotly toolbar's rangeselector
+    gives 1Y / YTD / 5Y / 10Y / ALL with one click — replacing the static
+    matplotlib PNG for users who want to zoom into specific windows.
+    """
+    try:
+        import plotly.graph_objects as go
+    except ImportError:
+        print("  plotly not available — skipping interactive composite", file=sys.stderr)
+        return
+
+    cutoff = pd.Timestamp(as_of)
+    fig = go.Figure()
+    # Tier bands as background shapes
+    bands = [
+        (0, 20, "rgba(126, 181, 65, 0.15)", "Panicked"),
+        (20, 40, "rgba(185, 221, 131, 0.10)", "Cautious"),
+        (40, 60, "rgba(255, 255, 255, 0.0)", "Neutral"),
+        (60, 80, "rgba(244, 162, 97, 0.15)", "Elevated"),
+        (80, 100, "rgba(230, 57, 70, 0.20)", "Stretched"),
+    ]
+    shapes = []
+    for lo, hi, color, _ in bands:
+        shapes.append(dict(type="rect", xref="paper", yref="y",
+                           x0=0, x1=1, y0=lo, y1=hi, fillcolor=color, line_width=0, layer="below"))
+    fig.update_layout(shapes=shapes)
+
+    # Composite line
+    fig.add_trace(go.Scatter(
+        x=composite_hist.index, y=composite_hist.values,
+        mode="lines", name="Composite",
+        line=dict(color="#1f4e79", width=1.2),
+        hovertemplate="%{x|%Y-%m-%d}<br>Composite: %{y:.1f}<extra></extra>",
+    ))
+    # Today marker
+    fig.add_trace(go.Scatter(
+        x=[composite_hist.index[-1]], y=[composite],
+        mode="markers+text", marker=dict(color="black", size=10),
+        text=[f" Today: {composite:.1f} ({tier})"], textposition="middle right",
+        textfont=dict(size=11, color="black"),
+        showlegend=False,
+        hovertemplate=f"Today {as_of}<br>Composite: {composite:.1f}<br>Tier: {tier}<extra></extra>",
+    ))
+
+    fig.update_layout(
+        title=f"Market Complacency Composite, 2001–{as_of[:4]}",
+        yaxis=dict(title="Composite (0–100)", range=[0, 100]),
+        xaxis=dict(
+            title="",
+            rangeselector=dict(buttons=[
+                dict(count=1, label="1Y", step="year", stepmode="backward"),
+                dict(count=1, label="YTD", step="year", stepmode="todate"),
+                dict(count=5, label="5Y", step="year", stepmode="backward"),
+                dict(count=10, label="10Y", step="year", stepmode="backward"),
+                dict(step="all", label="ALL"),
+            ]),
+            rangeslider=dict(visible=True, thickness=0.05),
+            type="date",
+        ),
+        margin=dict(l=50, r=20, t=50, b=40),
+        plot_bgcolor="white",
+        hovermode="x unified",
+        height=520,
+    )
+
+    out = CHARTS / f"market_complacency_{as_of}_composite.html"
+    fig.write_html(str(out), include_plotlyjs="cdn", full_html=True,
+                   config={"displayModeBar": True, "displaylogo": False})
+    print(f"  ✓ interactive composite saved: {out.name}", flush=True)
+
+
 def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df, window_years):
     import matplotlib
     matplotlib.use("Agg")
@@ -1020,6 +1093,9 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
     import matplotlib.dates as mdates
 
     win_start = pd.Timestamp(as_of) - pd.DateOffset(years=window_years)
+
+    # Interactive Plotly composite chart (with rangeselector: 1Y, YTD, 5Y, 10Y, ALL)
+    _make_composite_html(as_of, composite, tier, composite_hist)
 
     # Chart 1: Composite
     fig, ax = plt.subplots(figsize=(11, 5))

@@ -2,8 +2,9 @@
 
 > **Dashboard's Take.** US equities are at near-term highs with clearer signs of valuation exuberance. The dashboard composite stands at **59.5 / 100, top edge of Neutral**, with flag count **8.0 / 21** (Citi-BMC style: 7 red + 2 amber + 12 off). On three slow-moving indicators (CAPE, dividend yield, Moody's BAA−10Y) we are at or past the levels that triggered the worst US bear markets of the post-1995 era — yet the yield curve is positive, equity vol is mid-range and SKEW is already in the contra zone. **The signature is "dot-com-extreme valuation + already-bid hedges"** — not a uniform sell signal. Action: trim peaks, tighten stops, prefer put-spreads over naked puts, exit CCC credit, skip outright shorts. Empirical base rate at this composite range: median 12m forward SPY +14%, ~30% probability of a >20% drawdown within 24 months.
 
-![Figure 1: Composite vs SPY Drawdown](../charts/market_complacency_2026-06-07_composite.png)
-*Figure 1. Composite (0–100) overlaid on SPY drawdown depth, 2001–2026. Source: composite per `.claude/skills/market-complacency/scripts/build_dashboard.py`; SPY adjusted close from [Yahoo SPY](https://finance.yahoo.com/quote/SPY/history).*
+<iframe src="../charts/market_complacency_2026-06-07_composite.html" width="100%" height="560" style="border:0;border-radius:6px;"></iframe>
+
+*Figure 1. Composite (0–100), 2001–2026 — **interactive: use the 1Y / YTD / 5Y / 10Y / ALL buttons or the bottom range-slider to zoom**. Tier bands shaded; today's value marked. Source: composite per `scripts/build_dashboard.py`. ([Static PNG fallback](../charts/market_complacency_2026-06-07_composite.png).)*
 
 ## Figure 2. Bear Market Checklist — Historical Calibration
 
