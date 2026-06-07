@@ -77,7 +77,37 @@
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
 
     /* ── Modal chart ───────────────────────────────── */
-    #detailChartWrap { height: 300px; }
+    #detailChartWrap { height: 320px; position: relative; }
+    #detailChartWrap.is-img { height: auto; min-height: 200px; }
+    #detailFredImg { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+    #detailChartSpinner {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,.65);
+      font-size: .8rem; color: #6b7280;
+    }
+
+    /* ── Range buttons ─────────────────────────────── */
+    .range-bar {
+      display: inline-flex; gap: .15rem; flex-wrap: wrap;
+    }
+    .range-bar .btn {
+      padding: .15rem .55rem;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      border-radius: .25rem;
+    }
+    .range-bar .btn.active {
+      background: #1f2937; color: #fff; border-color: #1f2937;
+    }
+    .fred-badge {
+      display: inline-block;
+      padding: .1rem .4rem;
+      font-size: .65rem; font-weight: 600;
+      background: #eef2ff; color: #4338ca; border-radius: .2rem;
+      letter-spacing: .04em;
+    }
 
     /* ── Source links ──────────────────────────────── */
     .source-link {
@@ -162,7 +192,23 @@
         <p id="detailDesc" class="text-muted small mb-2"></p>
         <div id="detailSources" class="mb-3 d-none" style="font-size:.72rem"></div>
         <div class="d-flex gap-3 mb-3 flex-wrap" id="detailStats"></div>
-        <div id="detailChartWrap"><canvas id="detailChart"></canvas></div>
+        <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+          <div id="detailRange" class="range-bar btn-group" role="group" aria-label="Time range">
+            <button type="button" class="btn btn-outline-secondary btn-sm" data-range="1m">1M</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" data-range="3m">3M</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" data-range="6m">6M</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" data-range="ytd">YTD</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm active" data-range="1y">1Y</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" data-range="5y">5Y</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" data-range="max">MAX</button>
+          </div>
+          <div id="detailSourceBadge" class="text-muted small"></div>
+        </div>
+        <div id="detailChartWrap">
+          <canvas id="detailChart"></canvas>
+          <img id="detailFredImg" alt="" class="d-none"/>
+          <div id="detailChartSpinner" class="d-none">Loading…</div>
+        </div>
       </div>
     </div>
   </div>
@@ -177,6 +223,13 @@
   let _catalogue = [];   // [{id, name, category, unit, description, thresholds}]
   let _snapshot  = {};   // {id: {value, change_1d, change_1w, change_type, signal, history}}
   let _detailChart = null;
+  let _detailInd = null;     // currently-open indicator object
+  let _detailRange = '1y';   // currently-selected range key
+
+  const _FRED_SERIES = {     // indicator-id → FRED series id (for embed)
+    hy_oas: 'BAMLH0A0HYM2',
+    ig_oas: 'BAMLC0A0CM',
+  };
 
   // ── Boot ───────────────────────────────────────────────────────────────────
   async function boot() {
@@ -372,6 +425,9 @@
 
   // ── Detail modal ────────────────────────────────────────────────────────────
   function openDetail(ind) {
+    _detailInd = ind;
+    _detailRange = '1y';
+
     const rec = _snapshot[ind.id];
 
     document.getElementById('detailTitle').textContent = ind.name;
@@ -404,15 +460,91 @@
       statsEl.innerHTML = '<span class="text-muted small">No data available</span>';
     }
 
-    // Full history from DB
-    fetch('/api/history/' + ind.id)
-      .then(r => r.json())
-      .then(hist => {
-        if (_detailChart) { _detailChart.destroy(); _detailChart = null; }
-        const canvas = document.getElementById('detailChart');
-        if (!hist.length) return;
+    // Highlight 1Y as the default range
+    document.querySelectorAll('#detailRange [data-range]').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.range === _detailRange);
+    });
 
-        const colour = rec ? signalColour(rec.signal) : '#6b7280';
+    // Source badge — tells the user whether they're looking at a FRED-native
+    // chart (full series history) or a yfinance-backed Chart.js render.
+    const badgeEl = document.getElementById('detailSourceBadge');
+    if (_FRED_SERIES[ind.id]) {
+      badgeEl.innerHTML = `<span class="fred-badge">FRED</span> native chart with recession bars`;
+    } else {
+      badgeEl.textContent = 'Source: Yahoo Finance (yfinance)';
+    }
+
+    loadDetailChart(ind, _detailRange);
+
+    const modal = new bootstrap.Modal(document.getElementById('detailModal'));
+    modal.show();
+  }
+
+  // ── Range button handler ────────────────────────────────────────────────────
+  function bindRangeButtons() {
+    document.querySelectorAll('#detailRange [data-range]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (!_detailInd) return;
+        _detailRange = btn.dataset.range;
+        document.querySelectorAll('#detailRange [data-range]').forEach(b => {
+          b.classList.toggle('active', b === btn);
+        });
+        loadDetailChart(_detailInd, _detailRange);
+      });
+    });
+  }
+
+  // ── Chart loader ────────────────────────────────────────────────────────────
+  function loadDetailChart(ind, rangeKey) {
+    const canvas    = document.getElementById('detailChart');
+    const img       = document.getElementById('detailFredImg');
+    const spinner   = document.getElementById('detailChartSpinner');
+    const wrap      = document.getElementById('detailChartWrap');
+    const rec       = _snapshot[ind.id];
+    const colour    = rec ? signalColour(rec.signal) : '#6b7280';
+    const fredSeries = _FRED_SERIES[ind.id];
+
+    if (fredSeries) {
+      // FRED native PNG embed — full history, recession bars, no API key.
+      if (_detailChart) { _detailChart.destroy(); _detailChart = null; }
+      canvas.classList.add('d-none');
+      img.classList.remove('d-none');
+      wrap.classList.add('is-img');
+      spinner.classList.remove('d-none');
+
+      const start = fredRangeStart(rangeKey);
+      const end   = new Date().toISOString().slice(0, 10);
+      const url = `https://fred.stlouisfed.org/graph/fredgraph.png`
+        + `?id=${encodeURIComponent(fredSeries)}`
+        + `&cosd=${start}&coed=${end}`
+        + `&width=720&height=360&recession_bars=on&drp=0&fq=Daily`
+        + `&fam=avg&fgst=lin&fgsnd=&line_color=%234572a7&line_style=solid&mark_type=none`;
+
+      img.onload  = () => spinner.classList.add('d-none');
+      img.onerror = () => {
+        spinner.textContent = 'FRED image failed to load.';
+      };
+      img.src = url + '&_=' + Date.now();   // bust browser cache between ranges
+      return;
+    }
+
+    // yfinance-backed Chart.js render
+    img.classList.add('d-none');
+    canvas.classList.remove('d-none');
+    wrap.classList.remove('is-img');
+    spinner.classList.remove('d-none');
+    if (_detailChart) { _detailChart.destroy(); _detailChart = null; }
+
+    fetch(`/api/history-range/${ind.id}?range=${rangeKey}`)
+      .then(r => r.json())
+      .then(body => {
+        spinner.classList.add('d-none');
+        const hist = (body && body.history) || [];
+        if (!hist.length) {
+          spinner.textContent = 'No data for this range.';
+          spinner.classList.remove('d-none');
+          return;
+        }
         _detailChart = new Chart(canvas.getContext('2d'), {
           type: 'line',
           data: {
@@ -426,7 +558,7 @@
               pointHoverRadius: 4,
               fill: true,
               backgroundColor: colour + '18',
-              tension: 0.3,
+              tension: 0.25,
             }],
           },
           options: {
@@ -437,14 +569,26 @@
               tooltip: {
                 mode: 'index',
                 intersect: false,
-                callbacks: {
-                  label: ctx => fmtVal(ctx.raw, ind.unit),
-                },
+                callbacks: { label: ctx => fmtVal(ctx.raw, ind.unit) },
               },
             },
             scales: {
               x: {
-                ticks: { maxTicksLimit: 8, font: { size: 10 } },
+                ticks: {
+                  maxTicksLimit: 8,
+                  font: { size: 10 },
+                  autoSkip: true,
+                  maxRotation: 0,
+                  minRotation: 0,
+                  callback: (val, idx) => {
+                    // val is the tick index for category scales
+                    const lbl = hist[val] ? hist[val].date : '';
+                    if (!lbl) return '';
+                    if (rangeKey === 'max' || rangeKey === '5y') return lbl.slice(0, 4);
+                    if (rangeKey === '1y' || rangeKey === '6m')  return lbl.slice(0, 7);
+                    return lbl;
+                  },
+                },
                 grid: { display: false },
               },
               y: {
@@ -456,10 +600,25 @@
             },
           },
         });
+      })
+      .catch(e => {
+        console.error('history-range fetch failed', e);
+        spinner.textContent = 'Fetch failed.';
+        spinner.classList.remove('d-none');
       });
+  }
 
-    const modal = new bootstrap.Modal(document.getElementById('detailModal'));
-    modal.show();
+  // ── Range key → ISO start date (for FRED PNG embed) ─────────────────────────
+  function fredRangeStart(rangeKey) {
+    const today = new Date();
+    const iso = d => d.toISOString().slice(0, 10);
+    if (rangeKey === '1m')  { const d = new Date(today); d.setMonth(d.getMonth() - 1);  return iso(d); }
+    if (rangeKey === '3m')  { const d = new Date(today); d.setMonth(d.getMonth() - 3);  return iso(d); }
+    if (rangeKey === '6m')  { const d = new Date(today); d.setMonth(d.getMonth() - 6);  return iso(d); }
+    if (rangeKey === 'ytd') return `${today.getFullYear()}-01-01`;
+    if (rangeKey === '1y')  { const d = new Date(today); d.setFullYear(d.getFullYear() - 1); return iso(d); }
+    if (rangeKey === '5y')  { const d = new Date(today); d.setFullYear(d.getFullYear() - 5); return iso(d); }
+    return '1900-01-01';   // max — FRED clips to series start
   }
 
   // ── Poll for refreshing state ───────────────────────────────────────────────
@@ -480,6 +639,7 @@
   }
 
   // ── Init ───────────────────────────────────────────────────────────────────
+  bindRangeButtons();
   boot().then(pollIfRefreshing);
 })();
 </script>

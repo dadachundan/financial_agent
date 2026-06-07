@@ -28,11 +28,13 @@ _PROJECT_ROOT = SCRIPT_DIR.parent
 if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 
-from flask import Blueprint, Flask, abort, jsonify, render_template, redirect
+from flask import Blueprint, Flask, abort, jsonify, render_template, redirect, request
 
 import nav_widget2 as nw2  # noqa: F401  (NAV_HTML used in template)
 import indicators.db as _db
-from indicators.data_fetcher import CATEGORIES, INDICATORS, fetch_all
+from indicators.data_fetcher import (
+    CATEGORIES, INDICATORS, fetch_all, fetch_history_range,
+)
 
 log = logging.getLogger(__name__)
 
@@ -150,6 +152,22 @@ def api_history(ind_id: str):
     if ind_id not in known_ids:
         abort(404)
     return jsonify(_db.get_history(ind_id))
+
+
+@indicators_bp.route("/api/history-range/<ind_id>")
+def api_history_range(ind_id: str):
+    """On-demand fetch for the modal's range selector (1m..max).
+
+    yfinance for ticker symbols, FRED CSV for FRED series (capped at ~3 years
+    by FRED's CSV endpoint — the modal renders FRED's native PNG for the
+    full-history view), components downloaded + combined for _SPREAD_ / _RATIO_.
+    """
+    known_ids = {ind["id"] for ind in INDICATORS}
+    if ind_id not in known_ids:
+        abort(404)
+    range_key = (request.args.get("range") or "1y").lower()
+    rows = fetch_history_range(ind_id, range_key)
+    return jsonify({"range": range_key, "history": rows})
 
 
 # ── DB initialisation (called by main.py) ─────────────────────────────────────

@@ -184,42 +184,54 @@ _YF_EXTRA = ["^VIX9D", "^VIX3M"]
 
 
 # ── FRED helper ───────────────────────────────────────────────────────────────
-
-def _load_fred_key() -> str | None:
-    """Walk up from this file to find config.py containing FRED_API_KEY."""
-    for p in [Path(__file__).parent.parent, Path(__file__).parent.parent.parent]:
-        cfg = p / "config.py"
-        if cfg.exists():
-            ns: dict = {}
-            exec(cfg.read_text(), ns)  # noqa: S102
-            key = ns.get("FRED_API_KEY")
-            if key:
-                return key
-    return None
+#
+# We use FRED's public `fredgraph.csv` endpoint, which serves the same data the
+# /series/<id> web page renders — no API key required. Format:
+#   observation_date,SERIES_ID
+#   2020-01-02,3.43
+#   ...
+# Missing observations are rendered as ".".
 
 
-def _fetch_fred(series_id: str, api_key: str, days: int = 60) -> list[dict]:
+def _fetch_fred(series_id: str, days: int = 60) -> list[dict]:
     """Return [{date, value}, ...] from FRED for the last *days* calendar days."""
     import datetime
     end = datetime.date.today()
     start = end - datetime.timedelta(days=days)
-    url = (
-        "https://api.stlouisfed.org/fred/series/observations"
-        f"?series_id={series_id}&api_key={api_key}&file_type=json"
-        f"&observation_start={start}&sort_order=asc"
-    )
+    return _fetch_fred_range(series_id, start.isoformat(), end.isoformat())
+
+
+def _fetch_fred_range(series_id: str, start: str, end: str | None = None) -> list[dict]:
+    """Return [{date, value}, ...] from FRED between *start* and *end* (ISO dates).
+
+    Uses urllib.request rather than `requests` — Akamai's bot manager in front
+    of fred.stlouisfed.org blocks `requests`'s TLS fingerprint but lets urllib
+    through cleanly.
+    """
+    import urllib.request
+    url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}&cosd={start}"
+    if end:
+        url += f"&coed={end}"
     try:
-        r = requests.get(url, timeout=12)
-        r.raise_for_status()
+        req = urllib.request.Request(url, headers={"User-Agent": "curl/8.4.0"})
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            text = resp.read().decode("utf-8", errors="replace")
         rows = []
-        for obs in r.json().get("observations", []):
+        # First line is the header: observation_date,SERIES_ID
+        for line in text.strip().splitlines()[1:]:
+            parts = line.split(",")
+            if len(parts) < 2:
+                continue
+            date, raw = parts[0].strip(), parts[1].strip()
+            if raw in ("", "."):
+                continue
             try:
-                rows.append({"date": obs["date"], "value": float(obs["value"])})
-            except (ValueError, KeyError):
-                pass
+                rows.append({"date": date, "value": float(raw)})
+            except ValueError:
+                continue
         return rows
     except Exception as exc:
-        log.warning("FRED fetch failed for %s: %s", series_id, exc)
+        log.warning("FRED CSV fetch failed for %s: %s", series_id, exc)
         return []
 
 
@@ -269,7 +281,6 @@ def fetch_all() -> dict:
         log.error("yfinance / pandas not installed")
         return {}
 
-    fred_key = _load_fred_key()
     results: dict = {}
 
     # ── Download all yfinance symbols in one call ─────────────────────────
@@ -330,24 +341,22 @@ def fetch_all() -> dict:
         try:
             if sym.startswith("_FRED_"):
                 series_id = sym[len("_FRED_"):]
-                if fred_key:
-                    rows = _fetch_fred(series_id, fred_key)
-                    if rows:
-                        vals = [r["value"] for r in rows]
-                        dates = [r["date"] for r in rows]
-                        value = vals[-1]
-                        prev_1d = vals[-2] if len(vals) >= 2 else value
-                        prev_1w = vals[-6] if len(vals) >= 6 else prev_1d
-                        results[iid] = dict(
-                            value=value,
-                            change_1d=round(value - prev_1d, 4),
-                            change_1w=round(value - prev_1w, 4),
-                            change_type="abs",
-                            signal=compute_signal(value, ind["thresholds"]),
-                            history=[{"date": d, "value": v}
-                                     for d, v in zip(dates, vals)],
-                        )
-                # If no FRED key: leave indicator absent (UI shows N/A)
+                rows = _fetch_fred(series_id)
+                if rows:
+                    vals = [r["value"] for r in rows]
+                    dates = [r["date"] for r in rows]
+                    value = vals[-1]
+                    prev_1d = vals[-2] if len(vals) >= 2 else value
+                    prev_1w = vals[-6] if len(vals) >= 6 else prev_1d
+                    results[iid] = dict(
+                        value=value,
+                        change_1d=round(value - prev_1d, 4),
+                        change_1w=round(value - prev_1w, 4),
+                        change_type="abs",
+                        signal=compute_signal(value, ind["thresholds"]),
+                        history=[{"date": d, "value": v}
+                                 for d, v in zip(dates, vals)],
+                    )
 
             elif sym.startswith("_SPREAD_"):
                 # _SPREAD_^TNX_^IRX  →  TNX - IRX
@@ -388,3 +397,116 @@ def fetch_all() -> dict:
             log.warning("Error processing indicator %s: %s", iid, exc)
 
     return results
+
+
+# ── On-demand history range fetch (modal range selector) ──────────────────────
+
+_RANGE_TO_YF_PERIOD = {
+    "1m":  "1mo",
+    "3m":  "3mo",
+    "6m":  "6mo",
+    "ytd": "ytd",
+    "1y":  "1y",
+    "5y":  "5y",
+    "max": "max",
+}
+
+
+def _range_to_fred_start(range_key: str) -> str:
+    """Translate a UI range key into an ISO start date for FRED's CSV API."""
+    import datetime
+    today = datetime.date.today()
+    if range_key == "1m":
+        return (today - datetime.timedelta(days=31)).isoformat()
+    if range_key == "3m":
+        return (today - datetime.timedelta(days=93)).isoformat()
+    if range_key == "6m":
+        return (today - datetime.timedelta(days=186)).isoformat()
+    if range_key == "ytd":
+        return datetime.date(today.year, 1, 1).isoformat()
+    if range_key == "1y":
+        return (today - datetime.timedelta(days=366)).isoformat()
+    if range_key == "5y":
+        return (today - datetime.timedelta(days=5 * 366)).isoformat()
+    # "max": FRED honours an arbitrarily-early start; series cap themselves.
+    return "1900-01-01"
+
+
+def _yf_history(symbols: list[str], period: str) -> dict[str, list]:
+    """Return {symbol: [(date_iso, close), ...]} for the requested period."""
+    import yfinance as yf
+    import pandas as pd
+
+    try:
+        raw = yf.download(
+            symbols, period=period, interval="1d",
+            progress=False, auto_adjust=True,
+        )
+    except Exception as exc:
+        log.warning("yfinance period=%s download failed: %s", period, exc)
+        return {}
+
+    out: dict[str, list] = {}
+    try:
+        if isinstance(raw.columns, pd.MultiIndex):
+            price_df = raw["Close"]
+            for sym in symbols:
+                if sym in price_df.columns:
+                    s = price_df[sym].dropna()
+                    out[sym] = [(str(idx.date()), float(v)) for idx, v in s.items()]
+        else:
+            s = raw["Close"].dropna()
+            if symbols:
+                out[symbols[0]] = [(str(idx.date()), float(v)) for idx, v in s.items()]
+    except Exception as exc:
+        log.warning("yfinance parse failed: %s", exc)
+    return out
+
+
+def fetch_history_range(ind_id: str, range_key: str) -> list[dict]:
+    """Fetch a single indicator's history over *range_key* (1m..max).
+
+    Returns [{date, value}, ...]. yfinance for tickers, FRED CSV for FRED series,
+    component-wise download + combine for _SPREAD_ / _RATIO_.
+    Returns [] on unknown id / fetch failure.
+    """
+    ind = next((i for i in INDICATORS if i["id"] == ind_id), None)
+    if ind is None:
+        return []
+
+    sym = ind["symbol"]
+    range_key = range_key.lower() if range_key else "1y"
+    if range_key not in _RANGE_TO_YF_PERIOD:
+        range_key = "1y"
+    period = _RANGE_TO_YF_PERIOD[range_key]
+
+    if sym.startswith("_FRED_"):
+        series_id = sym[len("_FRED_"):]
+        rows = _fetch_fred_range(series_id, _range_to_fred_start(range_key))
+        return [{"date": r["date"], "value": round(r["value"], 4)} for r in rows]
+
+    if sym.startswith("_SPREAD_"):
+        parts = sym[len("_SPREAD_"):].split("_", 1)
+        if len(parts) != 2:
+            return []
+        a_key, b_key = parts
+        data = _yf_history([a_key, b_key], period)
+        a, b = dict(data.get(a_key, [])), dict(data.get(b_key, []))
+        common = sorted(set(a) & set(b))
+        return [{"date": d, "value": round(a[d] - b[d], 4)} for d in common]
+
+    if sym.startswith("_RATIO_"):
+        parts = sym[len("_RATIO_"):].split("_", 1)
+        if len(parts) != 2:
+            return []
+        a_key, b_key = parts
+        data = _yf_history([a_key, b_key], period)
+        a, b = dict(data.get(a_key, [])), dict(data.get(b_key, []))
+        common = sorted(set(a) & set(b))
+        return [{"date": d, "value": round(a[d] / b[d], 4)}
+                for d in common if b[d] != 0]
+
+    # Direct yfinance ticker
+    data = _yf_history([sym], period)
+    series = data.get(sym, [])
+    return [{"date": d, "value": round(v, 4)} for d, v in series]
