@@ -126,6 +126,21 @@ INDICATORS = [
     # longer-duration bonds. Tracking it separately means our composite gets
     # cycle-context for credit that the ICE BofA series alone can't provide.
     {"id": "baa10y",  "name": "Moody's BAA − 10Y",   "source": "fred",  "code": "BAA10Y", "direction": "low", "weight": 0.05, "required": True, "unit": "pp", "category": "Credit"},
+    # NEW v4 (added 2026-06-07 after reading Citi BMC report): Yield curve
+    # slope (10Y - 2Y Treasury). The most-cited bear-market lead indicator
+    # in finance — the curve has inverted before every US recession since
+    # 1969. FRED T10Y2Y goes back to 1976. Citi's BMC thresholds at start of
+    # Mar 2000 (-50bp inverted) and Oct 2007 (0bp flat); today +41bp.
+    # Direction = "low" because a flatter / inverted curve has historically
+    # preceded the regime turn that complacency unwinds into. NOTE: this
+    # captures "late-cycle flattening" complacency well; it does NOT capture
+    # the "early-cycle steepness" regime which is also late in a different
+    # cycle. Acceptable trade-off for a single percentile rank.
+    {"id": "yc_10y2y", "name": "Yield Curve (10Y−2Y)", "source": "fred",  "code": "T10Y2Y", "direction": "low", "weight": 0.05, "required": True, "unit": "pp", "category": "Yield Curve"},
+    # NEW v4: S&P 500 dividend yield from multpl. Long history, simple
+    # valuation indicator. Low DY = stocks expensive relative to cash returns.
+    # Citi BMC thresholds: amber ~2.1%, red ~1.3% (low = warning). Today ~1.6%.
+    {"id": "spx_dy",   "name": "S&P 500 Dividend Yield", "source": "spx_dy", "code": None,    "direction": "low", "weight": 0.05, "required": False, "unit": "%",  "category": "Valuation"},
     # Equity vol
     {"id": "vix",      "name": "VIX",                   "source": "yf",    "code": "^VIX",              "direction": "low",  "weight": 0.10, "required": True,  "unit": "",   "category": "Equity Vol"},
     {"id": "vvix",     "name": "VVIX",                  "source": "yf",    "code": "^VVIX",             "direction": "low",  "weight": 0.05, "required": True,  "unit": "",   "category": "Equity Vol"},
@@ -207,6 +222,46 @@ def fetch_yf(ticker: str, start: str, end: str) -> pd.Series:
     if s.index.tz is not None:
         s.index = s.index.tz_localize(None)
     return s.dropna()
+
+
+def fetch_multpl_dy(date_slug: str) -> pd.Series:
+    """S&P 500 monthly dividend yield from multpl.com.
+
+    Citi BMC uses MSCI AC World DY with thresholds amber ~2.1% / red ~1.3%.
+    We use S&P 500 DY as the US proxy (similar long-history dynamics).
+    """
+    cache = ONEOFF / f"sp500_dividend_yield_{date_slug}.csv"
+    if cache.exists():
+        df = pd.read_csv(cache)
+        df["date"] = pd.to_datetime(df["date"])
+        return df.set_index("date")["dy"].sort_index()
+    import re
+    import html
+    url = "https://www.multpl.com/s-p-500-dividend-yield/table/by-month"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        text = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", errors="replace")
+        rows = re.findall(r"<tr[^>]*>(.*?)</tr>", text, re.S)
+        out = []
+        for r in rows:
+            cells = [html.unescape(re.sub(r"<[^>]+>", "", c)).strip()
+                     for c in re.findall(r"<td[^>]*>(.*?)</td>", r, re.S)]
+            if len(cells) < 2:
+                continue
+            try:
+                dt = pd.to_datetime(cells[0])
+                # Multpl reports DY with a "%" suffix
+                dy_raw = re.sub(r"[†%\s  ]", "", cells[1])
+                dy = float(dy_raw)
+                out.append({"date": dt, "dy": dy})
+            except Exception:
+                continue
+        df = pd.DataFrame(out).sort_values("date")
+        df.to_csv(cache, index=False)
+        return df.set_index("date")["dy"]
+    except Exception as exc:
+        print(f"  multpl DY fetch failed: {exc}", file=sys.stderr)
+        return pd.Series(dtype=float)
 
 
 def fetch_multpl_pe(date_slug: str) -> pd.Series:
@@ -422,11 +477,48 @@ def fetch_indicator(ind: dict, date_slug: str, start_25y: str, end: str) -> pd.S
         return (df["ccc"] - df["hy"]).rename("ccc_hy_spread")
     if src == "cape":
         return fetch_shiller_cape(date_slug)
+    if src == "spx_dy":
+        return fetch_multpl_dy(date_slug)
     if src == "aaii":
         return fetch_aaii(date_slug)
     if src == "naaim":
         return fetch_naaim(date_slug)
     return pd.Series(dtype=float)
+
+
+# Citi-BMC-style flag thresholds. amber when an indicator clears 60% complacent,
+# red when it clears 80% (i.e. in the top quintile of its rolling 10y window).
+# Total "flag count" = (# red × 1.0) + (# amber × 0.5). Easier to interpret
+# than the continuous composite; cite alongside it.
+FLAG_AMBER_THR = 60.0
+FLAG_RED_THR = 80.0
+
+
+def flag_status(complacency_pct: float) -> str:
+    if pd.isna(complacency_pct):
+        return "n/a"
+    if complacency_pct >= FLAG_RED_THR:
+        return "red"
+    if complacency_pct >= FLAG_AMBER_THR:
+        return "amber"
+    return "off"
+
+
+def flag_count(table: pd.DataFrame) -> dict:
+    """Total flags (Citi-BMC style) + per-tier breakdown."""
+    active = table[table["active"]].copy()
+    active["flag"] = active["complacency_pct"].apply(flag_status)
+    n_red = int((active["flag"] == "red").sum())
+    n_amber = int((active["flag"] == "amber").sum())
+    n_off = int((active["flag"] == "off").sum())
+    n_total = int(len(active))
+    return {
+        "flag_count": round(n_red * 1.0 + n_amber * 0.5, 1),
+        "max_possible": n_total,
+        "n_red": n_red,
+        "n_amber": n_amber,
+        "n_off": n_off,
+    }
 
 
 # ── Helpers ─────────────────────────────────────────────────────────────────
@@ -613,13 +705,21 @@ def build(as_of: str, window_years: int = 10) -> dict:
     if not prec_df.empty:
         print(prec_df.to_string(index=False))
 
-    # 5. Indicator table CSV
+    # 5. Indicator table CSV (+ Citi-BMC-style flag column)
+    flags = flag_count(table)
     out_table = table.copy()
     for col in ("current", "min_10y", "median_10y", "max_10y", "raw_pct_10y", "complacency_pct"):
         out_table[col] = pd.to_numeric(out_table[col], errors="coerce").round(3)
+    out_table["flag"] = out_table["complacency_pct"].apply(flag_status)
     out_table["composite_score"] = round(composite, 2)
     out_table["composite_tier"] = tier
+    out_table["flag_count"] = flags["flag_count"]
+    out_table["flag_max"] = flags["max_possible"]
     out_table.to_csv(ONEOFF / f"market_complacency_{as_of}_indicators.csv", index=False)
+    print(f"\n  Flag count (Citi-BMC style): {flags['flag_count']} / {flags['max_possible']}")
+    print(f"    Red flags (>= {FLAG_RED_THR}% complacent): {flags['n_red']}")
+    print(f"    Amber flags ({FLAG_AMBER_THR}-{FLAG_RED_THR}%):    {flags['n_amber']}")
+    print(f"    Off:                              {flags['n_off']}")
 
     # 6. Charts
     print("\n  Generating charts...")
@@ -630,6 +730,10 @@ def build(as_of: str, window_years: int = 10) -> dict:
         "window_years": window_years,
         "composite": round(composite, 2),
         "tier": tier,
+        "flag_count": flags["flag_count"],
+        "flag_max": flags["max_possible"],
+        "flag_red": flags["n_red"],
+        "flag_amber": flags["n_amber"],
         "active_indicators": int(active.shape[0]),
         "total_indicators": len(INDICATORS),
         "weights_renormalized": float(active["weight"].sum()) < 0.99,

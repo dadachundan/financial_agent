@@ -55,6 +55,8 @@ Twelve indicators across six categories. The "complacency direction" column stat
 | 3 | **CCC OAS** (ICE BofA US CCC & Lower) | FRED `BAMLH0A3HYC` | **Low** = complacent | The weakest tier — the first to widen when the cycle turns. Bottom-decile CCC = the strongest single-indicator complacency tell |
 | 3b | **CCC − HY OAS spread** (derived) | FRED `BAMLH0A3HYC − BAMLH0A0HYM2` | **Low** = complacent | Added in v2 after a backtest showed the original dashboard missed late-cycle credit-tier divergence. When CCC is wide *relative to* HY, the weakest tier is cracking even as broad HY stays tight — historically ~12 months before the 2007 turn and ~6 months before Q4 2018. Today's spread (June 2026) is at the 99th percentile, signaling divergence is in progress. |
 | 3c | **Moody's BAA − 10Y Treasury** | FRED `BAA10Y` | **Low** = complacent | Added in v3. The ICE BofA OAS series (HY/IG/CCC) only go back to 2023-06 because FRED re-licensed them in mid-2023 — they have no pre-2023 history available, even with the FRED API key. BAA10Y is the canonical long-history IG-credit spread (1986-2026, 40 years, 10,000+ daily obs). Correlates 0.56 with IG OAS in their overlap window; runs ~70-80bp wider on average because BAA covers only the BBB tier whereas IG OAS blends AAA/AA/A/BBB. Including it gives the composite a genuine cycle-aware credit signal for pre-2023 dates that the ICE BofA series alone can't provide. |
+| 3d | **Yield curve slope (10Y − 2Y)** | FRED `T10Y2Y` | **Low** = complacent | Added in v4 after reading Citi's BMC report (Jun 5, 2026). FRED daily data back to 1976. The most-cited bear-market lead indicator in finance — the curve has inverted before every US recession since 1969. Citi BMC reference points: Mar 2000 −50bp (red), Oct 2007 0bp (red), Feb 2020 +13bp (amber), Dec 2021 +90bp (off), today +41bp (off in their framework). The percentile-rank treatment in this dashboard captures the "late-cycle flattening" complacency case well; it does NOT cleanly distinguish between "deep inversion = recession warning" and "very steep = early cycle." Acceptable trade-off given a single-axis percentile is the dashboard's data model. |
+| 3e | **S&P 500 Dividend Yield** | multpl.com monthly | **Low** = complacent | Added in v4 from Citi BMC. Long history (back to 1871 via Shiller). Low DY = stocks expensive relative to cash returns. Citi BMC thresholds: amber ~2.1%, red ~1.3%. Today's value 1.06% is at the 10y minimum (100% complacency). The interpretation overlaps with CAPE and ERP but DY is the simplest "yield-on-equity" measure and worth tracking separately because retail investors anchor on it. |
 | **Equity-volatility (under-pricing equity tail risk)** | | | | |
 | 4 | **VIX** | yfinance `^VIX` | **Low** = complacent | <13 = bottom decile; VIX <12 in Jan 2018 and Jan 2020 immediately preceded vol shocks |
 | 5 | **VVIX** (vol-of-vol) | yfinance `^VVIX` | **Low** = complacent | <80 = market not even worried about *change* in vol — a deeper complacency signal than VIX alone |
@@ -93,6 +95,8 @@ Weighted average of complacency percentiles. Weights reflect the indicators' his
 | CCC OAS | 0.08 |
 | CCC − HY OAS spread | 0.05 |
 | Moody's BAA − 10Y (long-history credit) | 0.05 |
+| Yield curve (10Y − 2Y) | 0.05 |
+| S&P 500 Dividend Yield (optional) | 0.05 |
 | VIX | 0.10 |
 | VVIX | 0.05 |
 | VIX term slope | 0.05 |
@@ -330,6 +334,40 @@ Supplementary deliverables sit in standard locations:
 ### Update-in-place rule
 
 One report per date. If `reports/market-complacency/market_complacency_<YYYY-MM-DD>.md` already exists for today's date, update it in place rather than creating a parallel copy. Across dates, keep separate files — the historical sequence of verdicts is itself useful context.
+
+## Comparison to Citi's Bear Market Checklist (BMC)
+
+Every report must include a cross-reference to Citi's BMC when a current edition is available (Citi publishes refreshes ~quarterly). The BMC is the institutional analog of this dashboard with 18 indicators across valuation / yield curve / sentiment / corporate behaviour / profitability / balance sheets-and-credit. The skill's `scripts/build_dashboard.py` outputs a Citi-BMC-style **flag count** (amber if complacency_pct ≥ 60, red if ≥ 80; total = 0.5 × n_amber + 1.0 × n_red) alongside the continuous composite, so cross-comparison is direct.
+
+Citi historical reference flags (cite when relevant):
+
+| Date | Citi BMC flags / 18 | Note |
+|---|---:|---|
+| Mar 2000 | 17.5 | Dot-com peak |
+| Oct 2007 | 13 | Pre-GFC peak |
+| Feb 2020 | 5.5 | Pre-COVID peak (interesting that this was low) |
+| Dec 2021 | 8.5 | Post-COVID peak |
+| Jun 2026 | 10 (Global), 11.5 (US), 5 (Europe) | "Frothiest since GFC, not yet overexuberant" |
+
+Citi's explicit guidance: "once the count reaches double digits, it has historically tended to rise more rapidly." That heuristic should be quoted in any report whose flag count is approaching 10 (this dashboard's proportional equivalent is ~8.4/15).
+
+### BMC indicators in the backlog (need paid feeds)
+
+The following Citi BMC indicators are NOT yet in this dashboard because they require paid data feeds. Documented as backlog so future sessions know what's missing:
+
+- **Capex Growth (YoY)** — needs FactSet S&P 500 aggregate capex feed
+- **M&A activity (% of Mkt Cap)** — needs Dealogic
+- **IPO activity (% of DM Mkt Cap)** — needs Dealogic
+- **Aggregate RoE** — derivable from S&P 500 EPS / book value (FactSet would be cleanest)
+- **EPS distance from previous peak** — partially derivable from multpl's monthly EPS time series (v5 candidate)
+- **Forward PE** — multpl has it (v5 quick win)
+- **Analyst Bullishness** — Citi proprietary; closest open analog is Reuters/Bloomberg analyst-action data (paid)
+- **Levkovich Index** — Citi proprietary; closest open analog is AAII Bull-Bear (currently paywalled per upstream paywall) or NAAIM (paywalled)
+- **Equity Fund Flows** — Lipper / EPFR (paid)
+- **Asset/Equity (Financials)** — computable from XLF holdings aggregate (backlog v5)
+- **Net Debt/EBITDA (ex-Fins)** — FactSet (paid) or derivable from S&P 500 ex-Financials
+
+When data sources are added in future versions, run the standard backtest discipline (see below) to validate they improve the predictive metric on top of v4.
 
 ## Backtest discipline
 

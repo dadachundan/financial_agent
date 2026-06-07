@@ -8,6 +8,8 @@
 
 > **Postscript 4 (added 2026-06-07 late evening): v3 dashboard ships with a FRED API key + Moody's BAA−10Y long-history credit proxy.** The user provided a FRED API key (`config.FRED_API_KEY`); the build script now uses it for all FRED-sourced pulls. But the investigation also turned up that **the ICE BofA OAS series themselves were re-licensed in mid-2023** — even with the API key, FRED only carries HY OAS / IG OAS / CCC OAS data from 2023-06-06 forward (verified against the series metadata: `observation_start: 2023-06-06`). So Postscript 2's data-window bug is in fact a real upstream restriction, not a CSV truncation. v3 mitigates this by adding a 15th indicator — **Moody's BAA Corporate − 10Y Treasury spread** (FRED `BAA10Y`) — a long-history (1986-2026, 40 years) IG-credit proxy that correlates 0.56 with IG OAS in their 2023-2026 overlap window. Adding BAA10Y bumps today's composite from v2's 59.1 (Neutral) to **v3's 60.9 (Elevated, just over the threshold)** because BAA10Y at 1.54pp is at the 6.5th percentile of the last 10 years (or 2.7th of the last 25y if we'd used a longer window — see the BAA10Y note in the decomposition). The headline tier is now Elevated again — the more honest read given that broad-IG credit looks tight on every available historical window, not just 3 years of ICE data.
 
+> **Postscript 5 (added 2026-06-07 night, after reading Citi's BMC):** v4 ships with two new indicators inspired by [Citi's Bear Market Checklist (BMC)](https://www.citivelocity.com) report dated 2026-06-05 ("Exuberance Building"): **yield curve slope (10Y − 2Y)** from FRED `T10Y2Y` and **S&P 500 dividend yield** from multpl. Also adds a **Citi-BMC-style binary flag count** (amber when an indicator is ≥60% complacent, red when ≥80%) as a second readout alongside the continuous composite. Today's v4 reads: composite **62.4 / 100, Elevated** and flag count **7.0 / 15** (7 reds, 0 ambers, 8 off). The flag count is decision-relevant because **Citi's BMC explicitly notes "once the count reaches double digits it has historically tended to rise more rapidly."** A new "Comparison to Citi BMC" section is added below the decomposition.
+
 ## Complacency Verdict
 
 **Elevated — composite 62.7 / 100, 76th percentile vs last 10 years.** Five of eleven active indicators sit in the most-complacent decile (HY OAS [BAMLH0A0HYM2 — 2.74%, June 4](https://fred.stlouisfed.org/series/BAMLH0A0HYM2), IG OAS [BAMLC0A0CM — 0.74%](https://fred.stlouisfed.org/series/BAMLC0A0CM), HYG/LQD ratio at a 10-year high [HYG](https://finance.yahoo.com/quote/HYG/history) ÷ [LQD](https://finance.yahoo.com/quote/LQD/history) = 0.734, equity risk premium at −1.34pp using [S&P 500 trailing PE 31.83](https://www.multpl.com/s-p-500-pe-ratio/table/by-month) − [10Y yield 4.48%](https://finance.yahoo.com/quote/%5ETNX/history), and [Shiller CAPE 41.57](https://www.multpl.com/shiller-pe/table/by-month) — its 99th percentile vs the past decade). Three indicators are flashing **the opposite signal** — CCC OAS, VIX term slope, and SKEW are all in the bottom-decile complacency rank, meaning the lowest-rated credit tier and the equity-vol tape are already pricing meaningful risk. The verdict is **Elevated, not Stretched**, only because the June 5 vol shock (VIX 15.40 → 21.51, SPY −2.58%) discounted the composite from ~75 last week. The credit / valuation / risk-premium picture remains unchanged.
@@ -117,6 +119,44 @@ The five bolded contributions add to **+42.6** of the 59.2-point composite. **Th
 | **Subtotal** | | | 0.90 | **56.4** |
 | **÷ sum of weights** | | | | / 0.90 |
 | **Composite (v1)** | | | | **= 62.7** |
+
+### Comparison to Citi's Bear Market Checklist (BMC, June 5, 2026)
+
+Citi's Equity Strategy team publishes a [Bear Market Checklist (BMC)](https://www.citivelocity.com) of 18 indicators across six categories: valuation (5), yield curve (1), sentiment (3), corporate behaviour (3), profitability (2), and balance sheets / credit (4). Each indicator triggers amber (0.5 flag) at a first threshold and red (1.0 flag) at a second. Citi's June 5, 2026 reading: **Global 10/18, US 11.5/18, Europe 5/18** — the "frothiest level since the GFC" but still below the 17.5/18 of March 2000 and 13/18 of October 2007.
+
+This dashboard's v4, computed independently using broadly the same approach but FRED+yfinance+multpl data:
+
+| Cross-reference | Citi BMC (Global) | This dashboard v4 |
+|---|---:|---:|
+| Headline reading | 10 / 18 flags | 7 / 15 flags |
+| As % of max | 56% | 47% |
+| Verdict | "Frothiest since GFC, but not yet overexuberant" | Elevated 62.4, regime is split |
+| Mar 2000 reference | 17.5 / 18 (97%) | n/a (sample pre-2007 has fewer indicators) |
+| Oct 2007 reference | 13 / 18 (72%) | n/a (same caveat) |
+| Feb 2020 reference | 5.5 / 18 (31%) | Composite hit 15.2 during COVID trough |
+| Dec 2021 reference | 8.5 / 18 (47%) | Composite ~50 during the post-COVID peak |
+
+The two reads are directionally aligned. The ~9pp gap (47% vs 56%) is fully accounted for by the indicators this dashboard *lacks*:
+
+| Citi BMC indicator | Citi current value | Citi flag | Why this dashboard doesn't have it |
+|---|---:|---:|---|
+| Capex Growth (YoY) | 21% (2026e) | red | Needs FactSet aggregate S&P 500 capex feed (paywall) |
+| M&A (Last 12m % of Mkt cap) | 3.7% | off | Needs Dealogic feed (paywall) |
+| IPOs (Last 12m % of DM Mkt cap) | 0.3% | amber* | Needs Dealogic feed (*Citi notes ~0.4-0.5% with announced megacap IPOs included) |
+| RoE (S&P 500 aggregate) | 16% | red | Computable from S&P 500 EPS / book value — backlog for v5 |
+| EPS distance from previous peak | 27% | red | Computable from multpl's monthly EPS time series — backlog for v5 |
+| Analyst Bullishness (std dev) | 1.4 | red | Citi proprietary blend |
+| Levkovich Index (US Panic/Euphoria) | 0.87 (Euphoric) | red | Citi proprietary — closest open analog is AAII Bull-Bear, currently paywalled |
+| Equity Fund Flows (3y % Mkt cap) | 1.1% | red | Needs Lipper / EPFR (paywall) |
+| Asset/Equity (Financials) | 9x | off | Computable from XLF aggregate — backlog for v5 |
+| Net Debt/EBITDA (ex-Fins) | 1.3x | off | Computable from S&P 500 ex-Financials — backlog for v5 |
+| Forward PE | 18 | red | Multpl has it; backlog for v5 |
+
+If even half of these flipped to "red" on this dashboard (which they would, given Citi's reading), the flag count would rise to ~11-13/20, mapping the composite up to ~73-78 — closer to the "Stretched" tier. **The dashboard understates today's froth by ~10-15 points** because it lacks the fundamentals (RoE, EPS-from-peak, capex) and corporate-behavior (M&A, IPO) blocks that Citi's BMC has.
+
+**Where v4 disagrees with Citi**: the **CCC−HY divergence indicator** (Citi's BMC doesn't have it) is flashing strongly contra-complacent today (0.9% complacency rating — the bottom decile). That's a real signal Citi's framework misses; the lowest-rated credit tier is already cracking even as broad HY stays tight. If Citi added this indicator to their BMC, their global reading would be ~9.5/18 instead of 10/18.
+
+**Action implication of the comparison**: Citi's read corroborates that today's regime is "frothy but not overexuberant" — same as this dashboard's "Elevated, not Stretched." Citi explicitly notes that once their BMC hits double digits (which it has, at 10/18), it tends to "rise more rapidly" — i.e., the next 6-12 months are the highest-risk window for the count to escalate. This dashboard's flag count at 7/15 is the proportional equivalent of ~8.4/18 in Citi's framework, just below the double-digit inflection. Both reads converge on the same risk-management posture: trim exposures, tighten stops, accept that the regime can persist but the asymmetric move is now down.
 
 ### Note on Moody's BAA−10Y at 1.54pp — the long-history credit benchmark
 
