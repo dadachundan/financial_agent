@@ -403,9 +403,15 @@
       if (s && s.n > 1) {
         if (r.price_target != null) {
           ptIdxByTicker[ticker] = (ptIdxByTicker[ticker] || 0) + 1;
-          r._avgPtSuffix = '<span class="n">' + ptIdxByTicker[ticker] + '/' + s.n + '</span>';
+          r._avgPtSuffix = '<span class="n" title="' + ptIdxByTicker[ticker]
+            + ' of ' + s.n + ' broker PT calls feeding this consensus">'
+            + ptIdxByTicker[ticker] + '/' + s.n + '</span>';
         } else {
-          r._avgPtSuffix = '<span class="n">·' + s.n + '</span>';
+          // Rating-only row (no numeric PT). The em-dash makes clear this
+          // row is NOT in the N/n count; the consensus is over the other n
+          // PT-bearing rows.
+          r._avgPtSuffix = '<span class="n" title="this row has no numeric PT — consensus is over '
+            + s.n + ' other broker rows that do">—/' + s.n + '</span>';
         }
       } else {
         r._avgPtSuffix = '';
