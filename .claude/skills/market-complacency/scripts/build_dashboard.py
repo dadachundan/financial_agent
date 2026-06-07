@@ -1195,15 +1195,31 @@ def _make_interactive_chart(
     else:
         fig = go.Figure()
 
-    # Determine date span across all lines
+    # Determine date span across all lines.
+    #
+    # X-axis range = INTERSECTION of all plotted series' valid data, NOT the
+    # union. Rationale: extending the axis back to 1871 just because E/P has
+    # that history while the actual ERP line only starts at ~2000 confuses the
+    # reader and makes bear-market shading look misaligned. Show only where
+    # every plotted series has data — that is the period the chart actually
+    # reasons about.
+    #
+    # Implementation: first = MAX of each series' first valid index, last =
+    # MIN of each series' last valid index. For single-series charts this
+    # degenerates to the natural [first, last] of that series.
     all_dates = []
     for ln in lines + (secondary_lines or []):
         if not ln["series"].empty:
             all_dates.append(ln["series"].index)
     if not all_dates:
         return
-    first = min(d.min() for d in all_dates)
-    last = max(d.max() for d in all_dates)
+    first = max(d.min() for d in all_dates)  # intersection start
+    last = min(d.max() for d in all_dates)   # intersection end
+    if first >= last:
+        # Degenerate overlap — fall back to the full union so the chart at
+        # least renders something rather than collapsing to zero width.
+        first = min(d.min() for d in all_dates)
+        last = max(d.max() for d in all_dates)
 
     # Bear-market shading via shapes
     shapes = []
