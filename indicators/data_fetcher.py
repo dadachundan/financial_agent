@@ -55,8 +55,12 @@ INDICATORS: list[dict] = [
     dict(
         id="hy_oas", symbol="_FRED_BAMLH0A0HYM2", name="HY Spread (OAS)",
         category="Credit", unit="%",
-        description="ICE BofA HY Option-Adjusted Spread. Widening = credit stress.",
-        thresholds=dict(direction="up", caution=4.5, stress=6.5),
+        description="ICE BofA HY OAS. **Bilateral signal**: HIGH = credit stress (default risk re-pricing); LOW = complacency (investors under-pricing default risk, late-cycle signature). Both ends are warning.",
+        thresholds=dict(
+            direction="bilateral",
+            caution=4.5, stress=6.5,                    # High end — stress
+            complacency_amber=3.0, complacency_red=2.8,  # Low end — complacent
+        ),
         sources=[
             {"label": "FRED BAMLH0A0HYM2", "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"},
         ],
@@ -64,8 +68,12 @@ INDICATORS: list[dict] = [
     dict(
         id="ig_oas", symbol="_FRED_BAMLC0A0CM", name="IG Spread (OAS)",
         category="Credit", unit="%",
-        description="ICE BofA IG Option-Adjusted Spread. Widening = credit stress.",
-        thresholds=dict(direction="up", caution=1.3, stress=2.0),
+        description="ICE BofA IG OAS. **Bilateral signal**: HIGH = credit stress; LOW = complacency (investors under-pricing investment-grade credit risk). At 10y tights = red.",
+        thresholds=dict(
+            direction="bilateral",
+            caution=1.3, stress=2.0,                    # High end — stress
+            complacency_amber=0.95, complacency_red=0.85,  # Low end — complacent
+        ),
         sources=[
             {"label": "FRED BAMLC0A0CM", "url": "https://fred.stlouisfed.org/series/BAMLC0A0CM"},
         ],
@@ -288,10 +296,38 @@ def _fetch_fred_range(series_id: str, start: str, end: str | None = None) -> lis
 # ── Signal computation ────────────────────────────────────────────────────────
 
 def compute_signal(value: float | None, thresholds: dict | None) -> str:
-    """Return 'green', 'yellow', 'red', or 'neutral'."""
+    """Return 'green', 'yellow', 'red', or 'neutral'.
+
+    Supports three threshold semantics:
+    - direction == 'up':   higher value = stress (e.g., VIX, HY OAS legacy)
+    - direction == 'down': lower value = stress (e.g., yield curve inverted)
+    - direction == 'bilateral': BOTH ends are warning — high = credit stress,
+      low = complacency / under-priced risk. Used for credit spreads where
+      both blow-outs (e.g., GFC) and tights (e.g., 2026 dot-com level)
+      signal risk. Thresholds keys: stress, caution (HIGH side, stress) +
+      complacency_red, complacency_amber (LOW side, complacency).
+    """
     if thresholds is None or value is None:
         return "neutral"
     direction = thresholds.get("direction", "up")
+
+    if direction == "bilateral":
+        # High end (classical credit stress)
+        stress = thresholds.get("stress")
+        caution = thresholds.get("caution")
+        # Low end (complacency / under-priced risk)
+        comp_red = thresholds.get("complacency_red")
+        comp_amber = thresholds.get("complacency_amber")
+        if stress is not None and value >= stress:
+            return "red"
+        if comp_red is not None and value <= comp_red:
+            return "red"
+        if caution is not None and value >= caution:
+            return "yellow"
+        if comp_amber is not None and value <= comp_amber:
+            return "yellow"
+        return "green"
+
     caution = thresholds["caution"]
     stress = thresholds["stress"]
     if direction == "up":        # higher = worse
@@ -300,12 +336,12 @@ def compute_signal(value: float | None, thresholds: dict | None) -> str:
         if value >= caution:
             return "yellow"
         return "green"
-    else:                        # direction == "down": lower = worse
-        if value <= stress:
-            return "red"
-        if value <= caution:
-            return "yellow"
-        return "green"
+    # direction == "down": lower = worse
+    if value <= stress:
+        return "red"
+    if value <= caution:
+        return "yellow"
+    return "green"
 
 
 # ── Main fetch ────────────────────────────────────────────────────────────────
