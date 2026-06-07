@@ -1261,11 +1261,28 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
 
     win_start = pd.Timestamp(as_of) - pd.DateOffset(years=window_years)
 
+    # Citi-style bear-market shading helper. Re-applied to every chart so the
+    # reader gets visual context for "what was happening in 2000-02 / 2007-09 /
+    # 2020 / 2022" without reading a legend. Dates from NBER + S&P 500 bear-
+    # market chronology.
+    BEAR_PERIODS = [
+        ("1990-07-16", "1990-10-11", "Iraq/Recession"),
+        ("2000-03-24", "2002-10-09", "Dot-com"),
+        ("2007-10-09", "2009-03-09", "GFC"),
+        ("2020-02-19", "2020-03-23", "COVID"),
+        ("2022-01-03", "2022-10-12", "Fed pivot"),
+    ]
+    def _shade_bears(ax):
+        for start, end, _ in BEAR_PERIODS:
+            ax.axvspan(pd.Timestamp(start), pd.Timestamp(end),
+                       alpha=0.20, color="#888888", zorder=0)
+
     # Interactive Plotly composite chart (with rangeselector: 1Y, YTD, 5Y, 10Y, ALL)
     _make_composite_html(as_of, composite, tier, composite_hist)
 
     # Chart 1: Composite
     fig, ax = plt.subplots(figsize=(11, 5))
+    _shade_bears(ax)
     ax.plot(composite_hist.index, composite_hist.values, lw=1.0, color="#1f4e79")
     ax.axhspan(0, 20, alpha=0.15, color="#7eb541", label="Panicked")
     ax.axhspan(20, 40, alpha=0.10, color="#b9dd83")
@@ -1293,6 +1310,7 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
     if not series["hy_oas"].empty:
         hy = series["hy_oas"]
         fig, ax = plt.subplots(figsize=(11, 4.5))
+        _shade_bears(ax)
         ax.plot(hy.index, hy.values, lw=1.0, color="#c1272d")
         hy_win = hy[hy.index >= win_start]
         for pct, lbl in [(5, "5th"), (50, "median"), (95, "95th")]:
@@ -1313,6 +1331,7 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
     # Chart 3: IG + CCC
     if not series["ig_oas"].empty and not series["ccc_oas"].empty:
         fig, ax = plt.subplots(figsize=(11, 4.5))
+        _shade_bears(ax)
         ax.plot(series["ig_oas"].index, series["ig_oas"].values, lw=1.0, color="#2a9d8f", label="IG OAS")
         ax2 = ax.twinx()
         ax2.plot(series["ccc_oas"].index, series["ccc_oas"].values, lw=1.0, color="#e76f51", label="CCC OAS")
@@ -1330,6 +1349,7 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
         vix_win = series["vix"][series["vix"].index >= win_start]
         vvix_win = series["vvix"][series["vvix"].index >= win_start]
         fig, ax = plt.subplots(figsize=(11, 4.5))
+        _shade_bears(ax)
         ax.plot(vix_win.index, vix_win.values, lw=0.9, color="#1d3557", label="VIX")
         ax2 = ax.twinx()
         ax2.plot(vvix_win.index, vvix_win.values, lw=0.9, color="#e63946", label="VVIX", alpha=0.7)
@@ -1346,6 +1366,7 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
     if not series["vix_slope"].empty:
         slope_win = series["vix_slope"][series["vix_slope"].index >= win_start]
         fig, ax = plt.subplots(figsize=(11, 4.5))
+        _shade_bears(ax)
         ax.plot(slope_win.index, slope_win.values, lw=0.7, color="#264653")
         ax.axhline(1.0, ls="--", color="black", alpha=0.5, label="Contango/Backwardation")
         ax.axhspan(0, 0.85, alpha=0.10, color="#7eb541", label="Deep contango (calm)")
@@ -1361,6 +1382,7 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
     if not series["move"].empty:
         move_win = series["move"][series["move"].index >= win_start]
         fig, ax = plt.subplots(figsize=(11, 4.5))
+        _shade_bears(ax)
         ax.plot(move_win.index, move_win.values, lw=0.9, color="#6a4c93")
         ax.axhline(80, ls="--", color="green", alpha=0.5, label="80 (calm)")
         ax.axhline(120, ls="--", color="red", alpha=0.5, label="120 (stress)")
@@ -1375,6 +1397,7 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
     if not series["erp"].empty:
         erp_25y = series["erp"]
         fig, ax = plt.subplots(figsize=(11, 4.5))
+        _shade_bears(ax)
         ax.plot(erp_25y.index, erp_25y.values, lw=1.0, color="#003049")
         ax.axhline(0, color="black", alpha=0.3)
         ax.fill_between(erp_25y.index, 0, erp_25y.values,
@@ -1433,6 +1456,7 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
     if not series["cape"].empty:
         cape_25y = series["cape"]
         fig, ax = plt.subplots(figsize=(11, 4.5))
+        _shade_bears(ax)
         ax.plot(cape_25y.index, cape_25y.values, lw=1.0, color="#6d597a")
         ax.axhline(30, ls="--", color="red", alpha=0.5, label="CAPE 30 (historically rich)")
         ax.set_ylabel("Shiller CAPE")
