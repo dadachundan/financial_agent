@@ -41,6 +41,7 @@ For each release: time (ET), consensus (Bloomberg/Reuters), prior, our view (if 
 
 **Fed / central bank speakers (priority 2)**
 - Time, speaker, topic if known, whether voter on current FOMC. Skip non-voting regional Fed presidents giving routine remarks unless they're on a tape that traders watch.
+- **Tag the stance**: hawk / watchful / dove + expected emphasis (inflation / labor / financial-conditions). See [Broker-style methodology § B Fed speaker hawk/dove map](#b-fed-speaker-hawk--dove-map-every-mode-a-brief).
 
 **M&A milestones (priority 3 — situational)**
 - Any deal-specific milestone hitting that day: shareholder vote, HSR expiry, EU phase-I deadline, expected close, regulator decision date.
@@ -141,6 +142,8 @@ For each company / sector / macro lane:
 - US: FOMC, NFP, CPI, PCE, ISM, retail sales, jobless claims — week-ahead view.
 - Non-US: ECB, BOJ, BOE, PBOC, SAMR; CPI, PMI, GDP releases for major economies.
 - Geopolitical: G7/G20, elections, summit deadlines.
+- **For each macro print, pull the sub-component watch list** from [Broker-style methodology § A](#a-sub-component-watch-lists-for-major-macro-prints) — track core MoM / supercore / shelter for CPI; trade services / final-demand-energy for PPI; wage growth / revisions / 3M MA for NFP; etc. Map each sub-print to a causal mechanism, not just "hot vs cold."
+- **Tariff / regulatory schedule** — list discrete dated events ticking inside the window (Section 301 expiries, FDA AdComm dates, EU Phase II deadlines, M&A vote dates). See [§ G](#g-tariff--regulatory-schedule-tracking).
 
 **Market-pricing context (priority 2 — pair with every H-impact event)**
 
@@ -191,7 +194,22 @@ Markdown narrative companion to the table:
 
 ## Macro
 
-- <Release> on <day>: cons X vs prior Y. Why it matters this week.
+For each H-impact release, structure the entry as:
+- **Release / time / consensus / prior** — the basics.
+- **Sub-component forecast with directional bias** — broker-grade: e.g. "core CPI MoM 0.18% (vs 0.30% prior); shelter softening, IT hardware tariff pass-through offsetting." Reference the [sub-component watch list](#a-sub-component-watch-lists-for-major-macro-prints).
+- **What would surprise** — the specific level + direction that moves the tape.
+- **Cross-asset confirmation** — does rates vol / credit / FX / inflation expectations agree? [§ C cross-asset framework](#c-cross-asset-confirmation-framework).
+- **Curve trade or central-bank meeting probability** if relevant — per [§ D](#d-curve-trades--central-bank-meeting-probabilities).
+
+## "Forward data" calendar with directional bias
+
+Day-by-day list per [§ E](#e-forward-data-calendar-with-directional-bias) — every entry has a directional bias + mechanism, not just a date and consensus.
+
+## Fund flows + earnings revisions (if available)
+
+- Fund flows: regional + sector skew; cross-check on positioning.
+- Earnings revisions: FY EPS revised YTD by sector; "revisions leading vs lagging the index" tells you cycle stage.
+- See [§ H](#h-fund-flows--earnings-revisions-trackers).
 
 ## Positioning implications
 
@@ -682,6 +700,122 @@ These four are not worth caching because they update faster than a daily snapsho
 - **Never recommend selling vol into a binary event without flagging the tail risk.** Short-straddle / iron-condor positioning into FOMC / NFP / CPI loses 5–10× the typical winner when it loses. Make the tail explicit.
 - **Cross-asset disagreement is information, not a bug.** If credit is sanguine and equity vol is elevated, write that as a *finding* in the brief — don't smooth it into a single number.
 - **For new indicators, calibrate from historical-realized moves before committing to a bull/bear gap estimate.** "CPI bull = +1.2% SPX move" should be backed by a sample of comparable prior bull-surprise CPI days.
+
+## Broker-style methodology reference (Modes A & B)
+
+Patterns absorbed from the Goldman / Nomura / Morgan Stanley / Citi week-ahead notes the user reads (`/zsxq-ideas` library). When writing a Mode A brief or Mode B preview, structure the analysis the way sell-side weeklies do — they are vastly more granular than a list of dates with consensus numbers. This section codifies the patterns that matter.
+
+### A. Sub-component watch lists for major macro prints
+
+A "CPI 3.5% YoY consensus" preview is uninformative. Brokers always break each print into the sub-components that drive the Fed reaction function. The table below lists the canonical sub-pieces for each major US release — pull at least 3 of these per print and forecast direction.
+
+| Release | Sub-components to track | What the move means |
+|---|---|---|
+| **CPI** | Core MoM, headline MoM, **core services ex-housing ("supercore")**, **shelter (OER + rent of primary residence)**, services ex-rent, used cars, apparel, energy contribution, IT hardware / electronics (tariff pass-through proxy) | Supercore is the Fed's preferred sticky-inflation gauge. Shelter is the lagging item — disinflation here is the cleanest cut signal. Tariff pass-through shows up first in IT hardware + apparel. |
+| **PCE (core)** | Core MoM, **services-PPI-ex-trade-services contribution** (the PPI input to PCE), portfolio mgmt services, healthcare services, airline fares, financial services | PCE diverges from CPI mainly via the PPI-driven services components — the bridge from Thursday's PPI to next-week-after's PCE runs through these sub-prints. |
+| **PPI** | Headline MoM, **trade services** (tariff pass-through tell), final-demand energy, services-PPI-ex-trade, core PPI | Trade services is the Fed-relevant sub-component because it persists post-energy-shock. Services-PPI-ex-trade-services is the PCE bridge. |
+| **NFP** | Headline (+/-k), unemployment rate (steady / Δ0.1%), **average hourly earnings MoM/YoY**, prior-month revisions (cumulative), 3-month moving average, sector breakdown (leisure & hospitality, gov't, construction, manufacturing), labor force participation, U-6 underemployment | Wage growth is the dominant sub-print (drives services inflation). Prior-month revisions can reverse the entire signal — track cumulative direction. 3-month MA filters single-month noise. |
+| **U-Mich** | Headline sentiment, **1-yr inflation expectations**, **5-yr inflation expectations** (Fed-watched), current conditions, expectations sub-index, % citing high prices, % citing tariffs / energy / jobs | 1y + 5y inflation expectations are the only sub-prints that move rates. Headline sentiment is consumer-spend signal not rates signal. |
+| **ISM (Mfg / Services)** | Headline, **prices paid sub-index**, **new orders sub-index**, **employment sub-index**, backlog, supplier deliveries | Prices paid is the leading inflation indicator (3-month lead vs PPI). New orders is the recession indicator (sub-48 sustained = recession). Employment is the JOLTS / NFP cross-check. |
+| **Retail sales** | Headline, **control group (ex-autos/gas/food/building)**, restaurants & bars, motor vehicles, e-commerce, gasoline | Control group feeds directly into GDP nowcasting. Restaurants/bars is the consumer-confidence-realised proxy. |
+| **GDP** | Headline (annualized), **personal consumption**, **business investment (non-residential)**, residential investment, government, net exports, inventories | PCE is 70% of GDP — the cons split tells you whether growth is consumer-led or inventory-driven. Inventories are the noise. |
+
+For each print, the brief should answer: **"if sub-component X comes in at level Y, what does it imply about [mechanism]?"** That's the Nomura framing — every sub-print is mapped to a specific causal mechanism (tariff pass-through, energy fade, services stickiness, wage transmission, etc.), not just labeled "hot" or "cold."
+
+### B. Fed speaker hawk / dove map (every Mode A brief)
+
+Every day brief covering a Fed-speaker calendar must include the speaker's stance + voting status + likely emphasis. Recurring pattern from broker notes:
+
+| Position | Speakers (recent stance) | Voting on current FOMC |
+|---|---|---|
+| **Hawks** | Dallas Fed (Logan-style) — "year-end hike is on the table"; Cleveland Fed — neutral-hawk | Voting members rotate annually — check the latest FOMC calendar for current voters |
+| **Watchful** | Cleveland Fed — wait-and-see; San Francisco Fed — data-dependent | Same |
+| **Doves** | New York Fed — limited concern about persistent inflation; Chicago Fed — labor-market emphasis | Same |
+| **Chair** | Powell — neutral by mandate; tone shifts at pressers reveal direction | Permanent voter |
+
+For each speaker on the day's calendar, capture:
+- **Stance** (hawk / watchful / dove) — most recent public read
+- **Topic** (what they're speaking about — community banking ≠ policy)
+- **Voting status** (voter / non-voter on current FOMC)
+- **Expected emphasis** — what they'd likely lean into based on incoming data
+
+Skip non-voting regional presidents giving routine community-banking remarks. Surface voters or non-voters discussing inflation, labor, or policy path.
+
+### C. Cross-asset confirmation framework
+
+Brokers ALWAYS cross-check a single-asset signal against 2–3 other asset classes. The framework:
+
+| If equity vol says X | Cross-check on rates vol (MOVE) | Cross-check on credit (HY OAS) | Cross-check on FX (DXY) | Cross-check on inflation expectations (T5YIFR) | Verdict |
+|---|---|---|---|---|---|
+| Spike (risk-off) | Spike | Widen | Up | Up | **Confirmed risk-off — regime change** |
+| Spike (risk-off) | Flat | Flat | Up modestly | Flat (anchored) | **Equity vol is the dissenter — mean-reverts** |
+| Spike (risk-off) | Up modestly | Flat | Up | Up | **Mixed — rates not fully confirmed; partial mean-revert** |
+
+The "equity vol freaked out alone" pattern is the mean-reversion setup. The "all 5 agree" pattern is the regime change. The "split" pattern is the most actionable — the dissenter mean-reverts toward the consensus of the other 3-4.
+
+### D. Curve trades + central bank meeting probabilities
+
+Spot-level forecasts ("10y target 4.4%") are necessary but not sufficient. Brokers always layer curve trades and central bank meeting probabilities:
+
+- **Per-jurisdiction central-bank meeting probability** — at least one line per meeting in the calendar window. "ECB Jul 25bp likely; BoJ Jun 95% hike priced; BoC year-end 35bp implied; PBOC RRR cut probability."
+- **Curve trades** — for each rates view, propose at least one curve structure. "Long Canada 2/5 steepener"; "UK 2/10 steepener"; "US 5/30 flattener if NFP confirms hawkish."
+- **Cross-jurisdiction relative value** — "Buy US 5y vs Bund"; "Receive EUR 2y vs USD 2y."
+
+This is the difference between "I think 10y goes higher" and "long a specific curve structure with named risk." The latter is the broker-grade output.
+
+### E. "Forward data" calendar with directional bias
+
+Every Nomura weekly explicitly lists the upcoming data with directional bias — not just dates, but "we expect Y direction because of [mechanism]". Pattern:
+
+```
+This week's key data:
+- Mon: ISM Services — likely above 50, supported by [services PMI from regional Feds]
+- Tue: NFIB small biz — flat; consistent with the K-shaped consumer signal
+- Wed 08:30: May CPI — core MoM 0.18% (vs 0.30% prior); shelter softening, energy fade post-ceasefire
+- Wed AMC: ORCL Q4 FY26 — bull/bear OCI sub-metrics
+- Thu 08:30: May PPI — headline 0.4% (vs 1.4% prior); trade services cooling; jobless claims 220k
+- Thu AMC: ADBE Q2 FY26
+- Fri 10:00: U-Mich June prelim — 1y inflation expectations 4.3% (eased from 4.5%)
+```
+
+The directional bias forces commitment. "Cons 0.2%" without direction is a calendar entry; "we expect 0.18% with the mechanism being shelter softening" is an analyst view.
+
+### F. Exuberance / regime check (Mode B only, occasional)
+
+When the macro setup is at extremes (post-rally / post-selloff), include Goldman's 4-dim exuberance check:
+
+| Dimension | Sub-metrics | Current decile |
+|---|---|---|
+| **Price & breadth** | EPS revisions YTD, % of names making new highs, sector concentration index | |
+| **Speculative trading** | Proprietary "speculation heat" indicator, % volume in high-multiple names, % volume in loss-making names, put-call ratio, margin debt | |
+| **Sentiment** | AAII bull-bear, Yale CIDE, institutional year-end SPX target dispersion, NAAIM exposure | |
+| **Corporate financing** | IPO volume YTD, IPO % of market cap, buybacks net of new issuance | |
+
+Three historical "bull market termination" triggers to flag if active:
+1. Economic fundamentals weakening (NFP < 100k 3M MA, ISM Services < 50)
+2. IPO supply wave (IPO volume > 90th percentile, hot deal calendar)
+3. Fed tightening (FedWatch hike-by-year-end > 25%, 2y above term-premium-implied)
+
+None active + sentiment 80-90th percentile = "elevated but not toppy" (the typical broker framing).
+
+### G. Tariff / regulatory schedule tracking
+
+When tariff or regulatory dates are ticking within the window, list them explicitly as discrete events:
+- "Section 301 tariffs on 60 trade partners (10–12.5%) — already in effect post-Jul 22 expiry. Effective tariff rate now 7% → 8.5% per Nomura."
+- "FDA AdComm date Jun 23 — [ticker]"
+- "EU Commission Phase II decision deadline Jun 30 — [deal]"
+
+Brokers track these as the macro-political event calendar; they often dominate the tape on quiet macro weeks.
+
+### H. Fund flows + earnings revisions trackers
+
+Cross-asset positioning context most briefs miss:
+- **Fund flows** — Goldman / EPFR weekly flow tables: equity vs bond inflows by region, sector skew, EM inflow/outflow. "$23B global equity inflows last week, US drove, KR/TW outflows $14.5B" is the standard read.
+- **Earnings revisions** — "FY EPS revised +X% YTD, leading sectors [list], lagging [list]." When revisions are leading the index, it's a healthy rally; when the index is leading revisions, it's late-cycle.
+
+These two trackers should appear in any Mode B preview if the data is fresh.
+
+---
 
 ## Cross-cutting guardrails (all modes)
 
