@@ -351,21 +351,30 @@ Citi historical reference flags (cite when relevant):
 
 Citi's explicit guidance: "once the count reaches double digits, it has historically tended to rise more rapidly." That heuristic should be quoted in any report whose flag count is approaching 10 (this dashboard's proportional equivalent is ~8.4/15).
 
-### BMC indicators in the backlog (need paid feeds)
+### BMC indicators — what we have and what's still missing
 
-The following Citi BMC indicators are NOT yet in this dashboard because they require paid data feeds. Documented as backlog so future sessions know what's missing:
+**Shipped in v5 from free public sources:**
 
-- **Capex Growth (YoY)** — needs FactSet S&P 500 aggregate capex feed
-- **M&A activity (% of Mkt Cap)** — needs Dealogic
-- **IPO activity (% of DM Mkt Cap)** — needs Dealogic
-- **Aggregate RoE** — derivable from S&P 500 EPS / book value (FactSet would be cleanest)
-- **EPS distance from previous peak** — partially derivable from multpl's monthly EPS time series (v5 candidate)
-- **Forward PE** — multpl has it (v5 quick win)
-- **Analyst Bullishness** — Citi proprietary; closest open analog is Reuters/Bloomberg analyst-action data (paid)
-- **Levkovich Index** — Citi proprietary; closest open analog is AAII Bull-Bear (currently paywalled per upstream paywall) or NAAIM (paywalled)
-- **Equity Fund Flows** — Lipper / EPFR (paid)
-- **Asset/Equity (Financials)** — computable from XLF holdings aggregate (backlog v5)
-- **Net Debt/EBITDA (ex-Fins)** — FactSet (paid) or derivable from S&P 500 ex-Financials
+| Citi BMC factor | This dashboard equivalent | Data source |
+|---|---|---|
+| EPS from previous peak | `eps_peak`: EPS distance from rolling 10y max | [multpl monthly trailing EPS](https://www.multpl.com/s-p-500-earnings/table/by-month) |
+| Capex Growth (YoY) | `capex_yoy`: US PNFI YoY | FRED `PNFI` (quarterly back to 1947) |
+| (Levkovich component) Margin debt | `margin_debt_pct`: FINRA margin debt / S&P 500 level | [FINRA margin-statistics.xlsx](https://www.finra.org/sites/default/files/2021-03/margin-statistics.xlsx) |
+| (Levkovich component) Put/Call | `put_call`: CBOE equity put/call 21d MA | [cdn.cboe.com equitypc.csv](https://cdn.cboe.com/resources/options/volume_and_call_put_ratios/equitypc.csv) (stale Oct 2019; useful for backtest only) |
+
+**Still in the backlog — need paid feeds or are hard to source:**
+
+| Citi BMC factor | Open alternative tried | Why not shipped |
+|---|---|---|
+| Forward PE | multpl, gurufocus, stockmarketperatio | multpl 404; gurufocus 403 paywall; others show only current value |
+| M&A (% of Mkt Cap) | IMAA stats, Fed Z.1, FactSet | Best free sources are annual aggregates only; no monthly granularity |
+| IPO activity (% of DM Mkt Cap) | Renaissance Capital, stockanalysis.com IPO calendar | Renaissance has free stats page but no easy CSV; would need a custom scrape that's brittle |
+| Aggregate RoE | yfinance per-constituent rollup | 500 ticker fetches per refresh — expensive; need a cached pipeline |
+| Analyst Bullishness | Refinitiv I/B/E/S | Paywall |
+| Levkovich Index | Citi proprietary | Components partly approximated by margin debt + put/call; full reconstruction needs ETF flows + IPO + analyst data |
+| Equity Fund Flows | Lipper, EPFR, ICI | ICI has free monthly mutual-fund flow data but not equity-specific in a tractable format |
+| Asset/Equity (Financials) | XLF holdings, FactSet | Computable from XLF underlyings but requires per-constituent balance-sheet data |
+| Net Debt/EBITDA (ex-Fins) | FactSet | Paywall
 
 When data sources are added in future versions, run the standard backtest discipline (see below) to validate they improve the predictive metric on top of v4.
 

@@ -141,6 +141,32 @@ INDICATORS = [
     # valuation indicator. Low DY = stocks expensive relative to cash returns.
     # Citi BMC thresholds: amber ~2.1%, red ~1.3% (low = warning). Today ~1.6%.
     {"id": "spx_dy",   "name": "S&P 500 Dividend Yield", "source": "spx_dy", "code": None,    "direction": "low", "weight": 0.05, "required": False, "unit": "%",  "category": "Valuation"},
+    # NEW v5 (added after Citi BMC review of missing factors):
+    # EPS distance from rolling 10y peak — proxies Citi's "EPS from previous
+    # peak" indicator. Computed from multpl monthly trailing S&P 500 EPS
+    # (1871-present). When current EPS is at the rolling-10y high, value = 0;
+    # otherwise negative. Citi treats high-from-peak as complacent (cycle high).
+    # Direction "high" because closer to 0 = at the peak = complacent.
+    {"id": "eps_peak", "name": "EPS dist from 10y peak", "source": "eps_peak", "code": None, "direction": "high", "weight": 0.05, "required": False, "unit": "%",  "category": "Profitability"},
+    # FINRA Investor Margin Debt — proxies Levkovich-style leverage exuberance.
+    # Monthly back to 1997 from FINRA's published xlsx. The level grows with the
+    # market; what matters is **margin debt as % of S&P 500 market cap**, which
+    # the script derives from SPY market cap proxy. Persistently high % = late-
+    # cycle leverage-driven exuberance.
+    {"id": "margin_debt_pct", "name": "Margin Debt / Mkt Cap", "source": "margin_debt", "code": None, "direction": "high", "weight": 0.04, "required": False, "unit": "%", "category": "Sentiment"},
+    # Capex Growth (YoY) — Citi's BMC has this as a direct factor with red flag
+    # at ~11% YoY. Source: FRED PNFI (Private Nonresidential Fixed Investment),
+    # quarterly back to 1947 — broader than S&P 500-only but captures the
+    # aggregate US capex cycle. Direction "high" — strong capex growth at this
+    # point in the cycle is typically late-stage exuberance.
+    {"id": "capex_yoy", "name": "US Capex YoY (PNFI)", "source": "capex_yoy", "code": None, "direction": "high", "weight": 0.04, "required": False, "unit": "%", "category": "Corporate Behaviour"},
+    # CBOE Equity Put/Call Ratio — proxies Levkovich sentiment. Daily back to
+    # Nov 2006, but the public CSV stops at Oct 2019 (CBOE moved newer data
+    # behind a portal). Included anyway because it's useful for the backtest's
+    # pre-2019 history; reports for 2026 will show "n/a — source stale" and
+    # the indicator drops from the composite via the standard re-norm. Low
+    # put/call = complacent (calls dominate).
+    {"id": "put_call", "name": "CBOE Equity Put/Call Ratio", "source": "put_call", "code": None, "direction": "low", "weight": 0.03, "required": False, "unit": "×", "category": "Sentiment"},
     # Equity vol
     {"id": "vix",      "name": "VIX",                   "source": "yf",    "code": "^VIX",              "direction": "low",  "weight": 0.10, "required": True,  "unit": "",   "category": "Equity Vol"},
     {"id": "vvix",     "name": "VVIX",                  "source": "yf",    "code": "^VVIX",             "direction": "low",  "weight": 0.05, "required": True,  "unit": "",   "category": "Equity Vol"},
@@ -222,6 +248,162 @@ def fetch_yf(ticker: str, start: str, end: str) -> pd.Series:
     if s.index.tz is not None:
         s.index = s.index.tz_localize(None)
     return s.dropna()
+
+
+def fetch_multpl_eps_peak(date_slug: str) -> pd.Series:
+    """S&P 500 trailing EPS distance from rolling 10-year peak.
+
+    Multpl trailing EPS series (1871-present, monthly), then for each date
+    compute (EPS_t / max(EPS over trailing 120 months) - 1) × 100. Result
+    is ≤ 0 always; closer to 0 = nearer the cycle peak = more complacent.
+    """
+    cache = ONEOFF / f"sp500_eps_peak_{date_slug}.csv"
+    if cache.exists():
+        df = pd.read_csv(cache)
+        df["date"] = pd.to_datetime(df["date"])
+        return df.set_index("date")["eps_peak_pct"].sort_index()
+    import re
+    import html
+    url = "https://www.multpl.com/s-p-500-earnings/table/by-month"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        text = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", errors="replace")
+        rows = re.findall(r"<tr[^>]*>(.*?)</tr>", text, re.S)
+        out = []
+        for r in rows:
+            cells = [html.unescape(re.sub(r"<[^>]+>", "", c)).strip()
+                     for c in re.findall(r"<td[^>]*>(.*?)</td>", r, re.S)]
+            if len(cells) < 2:
+                continue
+            try:
+                dt = pd.to_datetime(cells[0])
+                eps = float(re.sub(r"[†$  \s]", "", cells[1]))
+                out.append({"date": dt, "eps": eps})
+            except Exception:
+                continue
+        df = pd.DataFrame(out).sort_values("date").set_index("date")
+        # Rolling 10-year max (120 months); peak distance
+        df["peak"] = df["eps"].rolling(120, min_periods=12).max()
+        df["eps_peak_pct"] = (df["eps"] / df["peak"] - 1) * 100
+        df[["eps_peak_pct"]].dropna().to_csv(cache)
+        return df["eps_peak_pct"].dropna()
+    except Exception as exc:
+        print(f"  EPS-peak fetch failed: {exc}", file=sys.stderr)
+        return pd.Series(dtype=float)
+
+
+def fetch_finra_margin(date_slug: str) -> pd.Series:
+    """FINRA margin debt as % of S&P 500 market cap.
+
+    Margin debt grows with the market mechanically; the relevant signal is
+    leverage *intensity* = margin debt ÷ S&P 500 market cap. SPY market cap
+    proxy: use yfinance S&P 500 level × an assumed shares outstanding (constant)
+    for the percentile — equivalently, use SPY price as the denominator and the
+    rank captures relative leverage.
+    """
+    cache = ONEOFF / f"finra_margin_pct_{date_slug}.csv"
+    if cache.exists():
+        df = pd.read_csv(cache)
+        df["date"] = pd.to_datetime(df["date"])
+        return df.set_index("date")["margin_pct"].sort_index()
+    url = "https://www.finra.org/sites/default/files/2021-03/margin-statistics.xlsx"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        xlb = urllib.request.urlopen(req, timeout=60).read()
+        xl = pd.read_excel(io.BytesIO(xlb), sheet_name="Customer Margin Balances")
+        # Columns: Year-Month, Debit Balances in Customers' Securities Margin Accounts,
+        #          Free Credit Balances ... (various)
+        debit_col = next((c for c in xl.columns if "Debit" in str(c)), None)
+        if debit_col is None:
+            debit_col = xl.columns[1]
+        df = xl[[xl.columns[0], debit_col]].copy()
+        df.columns = ["date", "margin_debt"]
+        df["date"] = pd.to_datetime(df["date"].astype(str), format="%Y-%m", errors="coerce")
+        df["margin_debt"] = pd.to_numeric(df["margin_debt"], errors="coerce")
+        df = df.dropna().sort_values("date")
+        # Normalize by S&P 500 level (proxy for market cap)
+        spx = fetch_yf("^GSPC", start="1996-01-01", end="2026-06-08")
+        if spx.empty:
+            print("  ! S&P 500 fetch failed; using raw margin debt", file=sys.stderr)
+            df["margin_pct"] = df["margin_debt"]
+        else:
+            spx_monthly = spx.resample("MS").last()
+            merged = pd.merge_asof(df.sort_values("date"),
+                                   spx_monthly.rename("spx").reset_index().rename(columns={"Date":"date"}),
+                                   on="date", direction="nearest")
+            # margin_pct = margin_debt ($M) / SPX level (a scale-free proxy ratio)
+            merged["margin_pct"] = merged["margin_debt"] / merged["spx"]
+            df = merged.dropna(subset=["margin_pct"])[["date","margin_pct"]]
+        df.to_csv(cache, index=False)
+        return df.set_index("date")["margin_pct"]
+    except Exception as exc:
+        print(f"  FINRA margin fetch failed: {exc}", file=sys.stderr)
+        return pd.Series(dtype=float)
+
+
+def fetch_capex_yoy(date_slug: str, start: str) -> pd.Series:
+    """US capex YoY growth from FRED PNFI (Private Nonresidential Fixed
+    Investment), quarterly back to 1947. Resampled to monthly via forward-fill;
+    YoY = (PNFI_t / PNFI_{t-12} - 1) × 100. Direction "high" → fast capex
+    growth at this point in the cycle is late-stage exuberance.
+    """
+    cache = ONEOFF / f"capex_yoy_{date_slug}.csv"
+    if cache.exists():
+        df = pd.read_csv(cache)
+        df["date"] = pd.to_datetime(df["date"])
+        return df.set_index("date")["capex_yoy"].sort_index()
+    rows = _fetch_fred_via_api("PNFI", start) or _fetch_fred_range("PNFI", start)
+    if not rows:
+        return pd.Series(dtype=float)
+    df = pd.DataFrame(rows)
+    df["date"] = pd.to_datetime(df["date"])
+    df = df.set_index("date").sort_index()["value"]
+    df = df.resample("MS").ffill()
+    yoy = (df / df.shift(12) - 1) * 100
+    yoy = yoy.rename("capex_yoy").dropna()
+    yoy.to_frame().to_csv(cache)
+    return yoy
+
+
+def fetch_cboe_putcall(date_slug: str) -> pd.Series:
+    """CBOE equity put/call ratio from cdn.cboe.com. Daily Nov 2006 → Oct 2019
+    (public CSV is stale post-2019). Returned as 21-day rolling mean to smooth
+    daily noise.
+    """
+    cache = ONEOFF / f"cboe_putcall_{date_slug}.csv"
+    if cache.exists():
+        df = pd.read_csv(cache)
+        df["date"] = pd.to_datetime(df["date"])
+        return df.set_index("date")["pc_ratio"].sort_index()
+    url = "https://cdn.cboe.com/resources/options/volume_and_call_put_ratios/equitypc.csv"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        text = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", errors="replace")
+        # First 2 lines are header notice + product line; line 3 is the column header
+        lines = text.strip().splitlines()
+        # Find the header row (starts with "DATE,")
+        hdr_idx = next((i for i, line in enumerate(lines) if line.upper().startswith("DATE,")), None)
+        if hdr_idx is None:
+            raise ValueError("CBOE CSV header not found")
+        rows = []
+        for line in lines[hdr_idx + 1:]:
+            parts = [p.strip() for p in line.split(",")]
+            if len(parts) < 5:
+                continue
+            try:
+                dt = pd.to_datetime(parts[0])
+                pc = float(parts[4])
+                rows.append({"date": dt, "pc_ratio": pc})
+            except Exception:
+                continue
+        df = pd.DataFrame(rows).sort_values("date").set_index("date")
+        df["pc_ratio"] = df["pc_ratio"].rolling(21, min_periods=5).mean()
+        df = df.dropna()
+        df.to_csv(cache)
+        return df["pc_ratio"]
+    except Exception as exc:
+        print(f"  CBOE put/call fetch failed: {exc}", file=sys.stderr)
+        return pd.Series(dtype=float)
 
 
 def fetch_multpl_dy(date_slug: str) -> pd.Series:
@@ -479,6 +661,14 @@ def fetch_indicator(ind: dict, date_slug: str, start_25y: str, end: str) -> pd.S
         return fetch_shiller_cape(date_slug)
     if src == "spx_dy":
         return fetch_multpl_dy(date_slug)
+    if src == "eps_peak":
+        return fetch_multpl_eps_peak(date_slug)
+    if src == "margin_debt":
+        return fetch_finra_margin(date_slug)
+    if src == "capex_yoy":
+        return fetch_capex_yoy(date_slug, start_25y)
+    if src == "put_call":
+        return fetch_cboe_putcall(date_slug)
     if src == "aaii":
         return fetch_aaii(date_slug)
     if src == "naaim":
