@@ -265,26 +265,9 @@ Mandatory blocks, in this order:
    - 1 line on action (3-5 verbs)
    - 1 line on empirical base rate at this flag-count range (median fwd SPY, drawdown probability)
    - **No prose outside this block until after Figure 2.**
-   - **The composite score is forbidden.** It was a hand-weighted average that the backtest proved is statistically uninformative (max lift 0.68× at 90d / 0.98× at 180d — at or below the base rate). Never mention it in Dashboard's Take or any headline. The composite chart is also forbidden from Figure 1; use the flag-count chart.
+   - **Both the composite score and the flag-count chart are forbidden.** The composite is hand-weighted noise (backtest verified: max lift 0.68× at 90d / 0.98× at 180d). The flag-count chart was the proposed replacement (Figure 1 in v8) but the user rejected it in v9 as "inaccurate" — Plotly annotation positions drifted from the data, the "Now" arrow pointed off the actual data point, and the reference-line labels collided at the bottom of the chart. **Neither chart appears in the report.** The build script's `_make_composite_html` and `_make_flag_count_html` are no longer called.
 
-2. **Figure 1: Flag count + SPY overlay** — the headline chart, mirroring [Citi BMC Figure 1](https://www.citivelocity.com) which shows the BMC red-flag count alongside MSCI ACWI price. Required elements:
-
-   - **Dual y-axis**: SPY price (left, blue), flag count 0–21 (right, red)
-   - **Annotated reference dates**: March 2000, October 2007, Feb 2020, Dec 2021, and Now
-   - **Two reference lines** on the flag-count axis: dashed at 10 (Citi's "double-digits = acceleration zone" — independently validated by this dashboard's backtest), dotted at 17.5 (Citi Mar-00 peak)
-   - **Rangeselector buttons**: 1Y / YTD / 5Y / 10Y / ALL with `method='relayout'` and hardcoded date ranges (Plotly's `stepmode='todate'` is buggy)
-   - **Bottom range-slider** for fine-grained zoom
-
-   Markdown embed:
-   ```html
-   <iframe src="../charts/market_complacency_<DATE>_flag_count.html" width="100%" height="560" style="border:0;border-radius:6px;"></iframe>
-   ```
-
-   **The composite chart is forbidden** — do not embed `*_composite.html` or `*_composite.png` in any new report. The build script still generates them for legacy callers and time-series continuity in `oneoff/`, but they must not appear in the user-facing report.
-
-   The viewer at `localhost:5001/claude-reports/` serves `.html` and `.htm` from `reports/` via the `_EMBED_EXTS` allowlist. Static markdown renderers (GitHub, Obsidian) will show the iframe as empty.
-
-3. **`## Figure 2. Bear Market Checklist — Historical Calibration`** — a SINGLE comparison table mirroring Citi BMC Figure 2. Columns: Mar-00, Oct-07, Feb-20, Dec-21, **Now**. Rows: indicators grouped by category (Valuations / Yield Curve / Sentiment / Corp Behaviour / Profitability / Credit / Vol). Cells colored 🔴 red / 🟠 amber / off using standard thresholds. **A 🟢 marker is also valid** — use it for contra-signal off-flags (e.g., SKEW high, CCC spread wide, VIX backwardation) so the reader sees the cross-asset divergence at a glance.
+2. **`## Figure 2. Bear Market Checklist — Historical Calibration`** — a SINGLE comparison table mirroring Citi BMC Figure 2. Columns: Mar-00, Oct-07, Feb-20, Dec-21, **Now**. Rows: indicators grouped by category (Valuations / Yield Curve / Sentiment / Corp Behaviour / Profitability / Credit / Vol). Cells colored 🔴 red / 🟠 amber / off using standard thresholds. **A 🟢 marker is also valid** — use it for contra-signal off-flags (e.g., SKEW high, CCC spread wide, VIX backwardation) so the reader sees the cross-asset divergence at a glance.
 
    **Every indicator row must have a markdown link to the public source** for that indicator's historical chart: `[Indicator name](url)`. Reader should be able to click any row to verify the cited values against the canonical free chart (multpl, FRED, FINRA, Yahoo, Bain, Renaissance Capital, etc.).
 
@@ -292,11 +275,11 @@ Mandatory blocks, in this order:
 
    End with a 2-sentence "Today's calibration" paragraph: which historical references today matches, and what makes today distinctive (e.g., "no clean historical precedent — past bears started with one or the other, not both").
 
-4. **`## Under the Hood`** — sequence of 8-12 small charts with one-line captions only. NO narrative paragraphs between charts. Charts in order: HY OAS, IG vs CCC overlay, CAPE, ERP, VIX/VVIX, VIX term slope, MOVE, per-indicator bars, precedents scatter. Each rendered by `scripts/build_dashboard.py` into `reports/charts/`.
+3. **`## Under the Hood`** — sequence of 8-12 small charts with one-line captions only. NO narrative paragraphs between charts. Charts in order: HY OAS, IG vs CCC overlay, CAPE, ERP, VIX/VVIX, VIX term slope, MOVE, per-indicator bars. Each rendered by `scripts/build_dashboard.py` into `reports/charts/`.
 
    **Mandatory chart styling — bear-market shading** (Citi BMC Figure 3+ style). Every time-series chart must have light-grey vertical bars (`axvspan(alpha=0.20, color="#888888")`) over the major US bear-market windows so the reader has visual context for "what was happening in those periods." The build script defines `BEAR_PERIODS` and `_shade_bears(ax)` helper that applies five reference windows: 1990-07/10 (Iraq/recession), 2000-03/2002-10 (dot-com), 2007-10/2009-03 (GFC), 2020-02/2020-03 (COVID), 2022-01/2022-10 (Fed pivot). Charts that are NOT time-series (per-indicator bars, precedents scatter, etc.) skip the shading.
 
-5. **`## Data Used / 数据来源清单`** — single source table grouping every indicator by category with its source URL. NO per-indicator paragraphs.
+4. **`## Data Used / 数据来源清单`** — single source table grouping every indicator by category with its source URL. NO per-indicator paragraphs.
 
 The user has explicitly rejected (v9 user feedback) the following blocks as not useful:
 - ❌ Action Implications (the 5-row posture table) — the reader can derive postures from the flag count + Citi anchor; restating them in prose adds noise

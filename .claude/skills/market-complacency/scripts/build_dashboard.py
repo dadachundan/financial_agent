@@ -1006,8 +1006,11 @@ def build(as_of: str, window_years: int = 10) -> dict:
     # 6. Charts
     print("\n  Generating charts...")
     _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df, window_years)
-    # Citi-style flag-count + SPY overlay chart
-    _make_flag_count_html(as_of, flag_count_hist)
+    # Flag-count + SPY overlay (Figure 1) REMOVED in v9 — user rejected as
+    # "inaccurate" (annotation positions drifted from data; "Now" arrow off
+    # the actual data point; reference-line labels collided at the bottom).
+    # Function definition kept further down for archival; the call is gone.
+    # _make_flag_count_html(as_of, flag_count_hist)
 
     return {
         "as_of": as_of,

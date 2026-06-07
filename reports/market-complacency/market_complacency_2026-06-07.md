@@ -2,10 +2,6 @@
 
 > **Dashboard's Take.** **Flag count 8 / 20 — Citi-BMC style: 7 red + 2 amber + 11 off.** US equities are at near-term highs with clear valuation exuberance. **Three slow-moving indicators (CAPE 41.6, S&P 500 DY 1.06%, Moody's BAA−10Y 1.54pp) are at or past the levels that triggered the worst US bear markets of the post-1995 era** — yet the yield curve is positive at +38bp, equity vol is mid-range, and SKEW at 152 is in the contra zone (hedges already bid). The signature is **"dot-com-extreme valuation + already-bid hedges"** — not a uniform sell signal. Action: trim peaks, tighten stops, prefer put-spreads over naked puts, exit CCC credit, skip outright shorts. Empirical base rate at flag-count 6-10: median 12m forward SPY +14%, ~30% probability of a >20% drawdown within 24 months.
 
-<iframe src="../charts/market_complacency_2026-06-07_flag_count.html" width="100%" height="560" style="border:0;border-radius:6px;"></iframe>
-
-*Figure 1. Flag count (red, right axis 0–21) and SPY price (blue, left), 2001–2026 — **Citi BMC Figure 1 equivalent**. Dashed line at 10 marks Citi's "double-digits = acceleration zone" — backtest-validated lift 1.32× at 90d / 1.78× at 180d. Annotated dates: March 2000, October 2007, Feb 2020, Dec 2021, Now. **The dashboard's all-time max was 12.0 on 2024-12-06** — late 2024 was *more* flag-elevated than today, which underscores the regime-not-timing nature of the read. Interactive: 1Y / YTD / 5Y / 10Y / ALL buttons or bottom range-slider. Source: per-indicator binary flag thresholds (red ≥ 80% complacency, amber 60-80%, weighted 1.0 / 0.5) per `scripts/build_dashboard.py`.*
-
 ## Figure 2. Bear Market Checklist — Historical Calibration
 
 Today vs the start of past bear markets and recent peaks. **Red = full flag, 🟠 = half flag, blank = off.** Adapted from [Citi BMC Figure 2](https://www.citivelocity.com).
@@ -16,7 +12,7 @@ Today vs the start of past bear markets and recent peaks. **Red = full flag, �
 | [Trailing PE (SPX)](https://www.multpl.com/s-p-500-pe-ratio) | 🔴 33 | 17 | 🟠 19 | 🟠 21 | 🔴 **32** |
 | [S&P 500 Dividend Yield](https://www.multpl.com/s-p-500-dividend-yield) | 🔴 1.16 | 1.77 | 1.79 | 🔴 1.29 | 🔴 **1.06** |
 | [Shiller CAPE](https://www.multpl.com/shiller-pe) | 🔴 43 | 🟠 27 | 31 | 🔴 38 | 🔴 **42** |
-| Equity Risk Premium (pp) *(derived: E/P − 10Y)* | n/a | +0.5 | +1.7 | +2.0 | 🔴 **−1.34** |
+| Equity Risk Premium (pp) — [S&P 500 E/P](https://www.multpl.com/s-p-500-earnings-yield) − [10Y](https://fred.stlouisfed.org/series/DGS10) | n/a | +0.5 | +1.7 | +2.0 | 🔴 **−1.34** |
 | **Yield Curve** | | | | | |
 | [10Y − 2Y (bp)](https://fred.stlouisfed.org/series/T10Y2Y) | 🔴 −47 | 🟠 +54 | +27 | +79 | +38 |
 | **Sentiment** | | | | | |
