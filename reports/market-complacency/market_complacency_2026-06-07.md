@@ -2,15 +2,15 @@
 
 ## Complacency Verdict
 
-**Elevated — composite 61.7 / 100, flag count 8.0 / 19 (Citi-BMC-style).** Seven indicators print red (HY / IG / BAA10Y credit at tights, S&P 500 dividend yield at its 10-year low, equity risk premium at an all-time low of −1.34pp, HYG/LQD ratio at a 10-year high, Shiller CAPE at the 2nd-highest reading in 150 years), and two more print amber (S&P 500 trailing EPS just hit a new 10-year peak; US aggregate capex YoY at +8.4%, the late-cycle exuberance signature). Ten indicators remain off — most importantly the cross-asset divergence flags: CCC OAS is *wider* than its 10-year median while broad HY is at tights (the "weakest tier is cracking" signal), VIX term slope is in backwardation, SKEW is in the top decile of crash-hedge demand, and the yield curve is slightly positive at +38bp. **The picture is "frothy valuation + late-cycle fundamentals + already-bid hedges"** — not a uniform sell signal, but a regime where the next external shock is likely to hit a market with no remaining cushion.
+**Neutral (top edge) — composite 59.5 / 100, flag count 8.0 / 21 (Citi-BMC-style).** Seven indicators print red (HY / IG / BAA10Y credit at tights, S&P 500 dividend yield at its 10-year low, equity risk premium at an all-time low of −1.34pp, HYG/LQD ratio at a 10-year high, Shiller CAPE at the 2nd-highest reading in 150 years), and two more print amber (S&P 500 trailing EPS just hit a new 10-year peak; US aggregate capex YoY at +8.4%, the late-cycle exuberance signature). **Two new v6 indicators surprised to the downside** — US M&A volume / mkt cap is in the 8th decile (NOT complacent, today's $3.4T global annualized run-rate is well below 2021's $5.9T peak), and US IPO proceeds / mkt cap is in the 7th decile (today's $58B annualized vs 2021's $142B). Together with the existing contra-signals (CCC OAS wider than 10y median, VIX term slope backwardated, SKEW 152 in top decile of crash demand, yield curve +38bp), the dashboard reads: **"valuation and risk-premium screaming complacent, but deal-making and equity-vol already past their cycle highs."**
 
 ## Composite Score & Tier
 
 | Composite | Tier | Bands |
 |---|---|---|
-| **61.7 / 100** | **Elevated** | 0–20 Panicked · 20–40 Cautious · 40–60 Neutral · 60–80 Elevated · 80–100 Stretched |
+| **59.5 / 100** | **Neutral (top edge)** | 0–20 Panicked · 20–40 Cautious · 40–60 Neutral · 60–80 Elevated · 80–100 Stretched |
 
-**Citi-BMC-style flag count: 8.0 / 19** (7 red + 2 amber + 10 off). For comparison: Citi's [June 5, 2026 Global BMC](https://www.citivelocity.com) reads 10/18 (Global), 11.5/18 (US). The 8-point reading sits **just below the "double digit" inflection** that Citi notes is the historical accelerator zone.
+**Citi-BMC-style flag count: 8.0 / 21** (7 red + 2 amber + 12 off). For comparison: Citi's [June 5, 2026 Global BMC](https://www.citivelocity.com) reads 10/18 (Global), 11.5/18 (US) — partly because Citi's IPO indicator reads amber on *announced/expected* megacap pipeline (e.g., Klarna, Stripe), while this dashboard counts only realized issuance.
 
 ![Market Complacency Composite, 2001–2026](../charts/market_complacency_2026-06-07_composite.png)
 *Source: composite of 19 indicators per `.claude/skills/market-complacency/scripts/build_dashboard.py`; percentile rank vs trailing 10-year window for each input. Today's value (61.7) marked.*
@@ -33,6 +33,8 @@ All percentile ranks are against the trailing 10-year window. *Complacency %* in
 | 8 | EPS dist from 10y peak | Profitability | 0.0% | −33.4 | — | 0.0 | 75.9 | 3rd | 🟠 amber | 0.05 |
 | 9 | Margin Debt / SPX | Sentiment | 180.9× | 141.1 | — | — | 39.8 | 7th | off | 0.04 |
 | 10 | US Capex YoY (PNFI) | Corp Behaviour | +8.4% | −8.8 | — | — | 75.7 | 3rd | 🟠 amber | 0.04 |
+| 10b | **IPO Proceeds / Mkt Cap** *(v6 add)* | Corp Behaviour | 0.006× | 0.002 | — | 0.024 | 35.0 | 7th | off | 0.04 |
+| 10c | **M&A Volume / Mkt Cap** *(v6 add)* | Corp Behaviour | 0.343× | 0.176 | — | 0.575 | 20.0 | 8th | off | 0.04 |
 | 11 | CBOE Put/Call (21d, stale) | Sentiment | 0.66 | 0.54 | — | — | 23.4 | 8th | off | 0.03 |
 | 12 | VIX | Equity Vol | 21.51 | 9.14 | 16.89 | 82.69 | 25.0 | 8th | off | 0.10 |
 | 13 | VVIX | Equity Vol | 102.04 | 73.26 | 97.09 | 207.59 | 37.9 | 7th | off | 0.05 |
@@ -75,11 +77,22 @@ The composite is a weighted average of the active indicators' complacency percen
 | **Rate Vol** | MOVE | 75.20 | 46.4 | 0.08 | +3.7 | Mid |
 | **Risk Premium** | ERP | −1.34pp | 100.0 | 0.10 | **+10.0** | All-time low |
 | | HYG / LQD | 0.734× | 99.2 | 0.05 | **+5.0** | 10y maximum |
-| | **Subtotal** | | | 1.07 | **65.6** | |
-| | **÷ sum of weights** | | | | / 1.07 | |
-| | **Composite** | | | | **= 61.7** | **Elevated** |
+| **Corp Behaviour** *(v6)* | IPO Proceeds / Mkt Cap | 0.006 | 35.0 | 0.04 | +1.4 | Below median ($58B annualized vs $142B 2021 peak) |
+| **Corp Behaviour** *(v6)* | M&A Volume / Mkt Cap | 0.343 | 20.0 | 0.04 | +0.8 | *Below median* ($3.4T global vs $5.9T 2021 peak) |
+| | **Subtotal** | | | 1.15 | **68.4** | |
+| | **÷ sum of weights** | | | | / 1.15 | |
+| | **Composite** | | | | **= 59.5** | **Neutral (top edge)** |
 
-**Six bolded "red" contributions add to +52.3** — over 80% of the composite. Today's reading is driven almost entirely by the slow-moving valuation, risk-premium, and broad-credit indicators. The fast-moving vol and credit-tier-divergence indicators (CCC OAS, CCC−HY, VIX, slope, SKEW) contribute only +5.0 between them — they say "the market is already worried" and drag the composite down by ~13 points from where it would otherwise sit.
+**Six bolded "red" contributions add to +52.3** — over 75% of the composite. Today's reading is driven almost entirely by the slow-moving valuation, risk-premium, and broad-credit indicators. The fast-moving vol and credit-tier-divergence indicators (CCC OAS, CCC−HY, VIX, slope, SKEW) contribute only +5.0 between them — they say "the market is already worried" and drag the composite down by ~13 points from where it would otherwise sit. The v6 corporate-behaviour additions (IPO + M&A) add another small drag (~2 points) because deal-making *realized* activity is below its post-2017 median, even though the Citi-tracked *announced* pipeline (megacap IPO filings) is heating up.
+
+### Note on the v6 IPO and M&A additions
+
+After the user challenged "can't you use WebSearch?" the dashboard now includes US IPO activity and US M&A volume as new indicators, sourced from web search:
+
+- **IPO proceeds (annual)** — Renaissance Capital's [IPO Proceeds page](https://www.renaissancecapital.com/IPO-Center/Stats/Proceeds): 2017 $35.5B, 2018 $46.9B, 2019 $46.3B, 2020 $78.2B, **2021 $142.4B (peak)**, 2022 $7.7B (trough), 2023 $19.5B, 2024 $29.6B, 2025 $44.0B, **2026 $58B annualized from $25.2B YTD per [Renaissance Capital 2026 stats](https://www.renaissancecapital.com/IPO-Center/Stats) (as of Jun 7, 2026, 68 IPOs)**. Cached in `oneoff/ipo_proceeds_annual.csv`; refresh from Renaissance via WebSearch each report run.
+- **M&A volume (annual)** — Bain/PitchBook annual reports: 2007 $4.6T peak, 2009 $1.8T trough, **2021 $5.9T peak**, 2022 $3.6T, 2024 $3.3T, 2025 $4.7T (final per [Bain 2025 M&A report](https://www.bain.com/about/media-center/press-releases/20252/global-ma-stages-great-rebound-in-2025-with-$4.8-trillion-deal-value-to-mark-second-highest-total-on-record)). 2026 Q1 = $861B (+9.7% YoY) per [S&P Global Market Intelligence Q1 2026](https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/04/global-m-and-a-by-the-numbers-q1-2026); annualizes to $3.4T globally. US share assumed at 50% historically. Cached in `oneoff/ma_volume_annual.csv`.
+
+Both are annual data forward-filled to monthly. Today's readings: IPO 0.006 (35.0% complacency, 7th decile) and M&A 0.343 (20.0% complacency, 8th decile). Both are **below their post-2017 medians** — deal-making activity in 2026 is meaningfully cooler than the 2021 bubble, despite the megacap IPO pipeline Citi flags as "announced/expected." If the announced pipeline (Klarna, Stripe, others) prints in H2 2026, these indicators would shift toward amber.
 
 ## Cross-Asset Signature
 
@@ -165,29 +178,31 @@ This is **not "sell"** — it is **"trim peaks, tighten stops, accept asymmetric
 
 Citi's [Global Equity Strategy team](https://www.citivelocity.com) published "Bear Market Checklist: Exuberance Building" on 2026-06-05. Their BMC measures the same complacency-axis using 18 indicators across valuation / yield curve / sentiment / corporate behaviour / profitability / balance sheets-and-credit. Citi's reading: **Global 10/18, US 11.5/18, Europe 5/18** — the "frothiest level since the GFC."
 
-| Cross-reference | Citi BMC (Global) | This dashboard v5 |
+| Cross-reference | Citi BMC (Global) | This dashboard v6 |
 |---|---:|---:|
-| Headline | 10 / 18 flags | 8.0 / 19 flags |
-| As % of max | 56% | 42% |
+| Headline | 10 / 18 flags | 8.0 / 21 flags |
+| As % of max | 56% | 38% |
 | Mar 2000 reference | 17.5 / 18 (97%) | n/a — sample has fewer pre-2007 indicators |
 | Oct 2007 reference | 13 / 18 (72%) | n/a — same |
 | Feb 2020 reference | 5.5 / 18 (31%) | composite 15.2 at trough |
 | Dec 2021 reference | 8.5 / 18 (47%) | composite ~50 at peak |
-| Verdict | "Frothiest since GFC, not yet overexuberant" | Elevated 61.7, late-cycle pattern |
+| Verdict | "Frothiest since GFC, not yet overexuberant" | Neutral 59.5 (top edge), late-cycle split |
 
-The two readings are directionally aligned. The ~14pp gap (42% vs 56%) is fully accounted for by the indicators this dashboard *still lacks*:
+The two readings agree directionally but disagree by ~18pp (38% vs 56%). The gap is now explained almost entirely by three things:
 
-| Citi BMC indicator | Citi today | Citi flag | This dashboard |
+1. **Citi's IPO read counts announced/expected megacap filings** (Klarna, Stripe, etc.) and prints amber, while this dashboard counts only realized $25.2B YTD and prints off.
+2. **Citi's capex factor is S&P-500-specific** (AI hyperscaler-concentrated, +21% YoY) and prints red, while this dashboard's PNFI proxy at +8.4% prints amber.
+3. **Six Citi indicators still missing here**: aggregate RoE (Citi: 16% red), Analyst Bullishness (Citi: 1.4σ red), Levkovich Index (Citi: 0.87 Euphoric red), Equity Fund Flows (Citi: 1.1% red), Forward PE (Citi: 18 red), and the two balance-sheet indicators (Citi: both off). If even half of those were added at Citi's readings, this dashboard would print 11-12/24 ≈ 48% — much closer to Citi's 56%.
+
+| Still-missing Citi BMC indicator | Citi today | Citi flag | This dashboard status |
 |---|---:|---:|---|
-| M&A (Last 12m % of Mkt cap) | 3.7% | off | Backlog — Dealogic paid |
-| IPOs (Last 12m % of DM Mkt cap) | 0.3% | amber | Backlog — Renaissance no easy CSV |
-| Aggregate S&P 500 RoE | 16% | red | Backlog — 500-ticker rollup expensive |
-| Analyst Bullishness | 1.4 σ | red | Citi proprietary |
+| Forward PE | 18 | red | WebSearch found values (22.66 macromicro / 21.2 stockmarketperatio / 25.6 gurufocus) but no clean free historical CSV |
+| Aggregate S&P 500 RoE | 16% | red | Backlog — 500-ticker yfinance rollup |
+| Analyst Bullishness | 1.4 σ | red | Citi proprietary (Refinitiv I/B/E/S) |
 | Levkovich Index (US Panic/Euphoria) | 0.87 (Euphoric) | red | Citi proprietary (partial via margin debt + put/call) |
-| Equity Fund Flows (3y % Mkt cap) | 1.1% | red | Backlog — Lipper/EPFR paid |
-| Forward PE | 18 | red | Backlog — no clean free historical source |
+| Equity Fund Flows (3y % Mkt cap) | 1.1% | red | Lipper/EPFR paywall; ICI free flows aren't equity-specific |
 | Asset/Equity (Financials) | 9× | off | Backlog — XLF constituent rollup |
-| Net Debt/EBITDA (ex-Fins) | 1.3× | off | Backlog — FactSet paid |
+| Net Debt/EBITDA (ex-Fins) | 1.3× | off | Backlog — FactSet paywall |
 
 **If even half of those flipped to red here (which they would, matching Citi)** the flag count would rise to ~11.5-13 / 22 — proportionally 52-59%, right in line with Citi's 56%. The dashboard understates today's froth by ~10-15 points because of the fundamentals + corporate-behavior blocks that need paid feeds.
 
@@ -232,6 +247,10 @@ The two readings are directionally aligned. The ~14pp gap (42% vs 56%) is fully 
 - CBOE Equity Put/Call (21d MA) — [cdn.cboe.com equitypc.csv](https://cdn.cboe.com/resources/options/volume_and_call_put_ratios/equitypc.csv). Public CSV is stale Oct 2019 — useful for backtest, NOT current.
 - AAII Bull-Bear Spread — inactive (HTTP 403 since late 2025).
 - NAAIM Exposure Index — inactive (HTTP 404 since late 2025).
+
+**Corporate Behaviour (v6 — sourced via WebSearch)**
+- IPO Proceeds / SPX level — annual data from [Renaissance Capital IPO Stats](https://www.renaissancecapital.com/IPO-Center/Stats) cached in `oneoff/ipo_proceeds_annual.csv`. Today: $58B annualized from $25.2B YTD (68 IPOs as of Jun 7, 2026), 7th decile complacency.
+- M&A Volume / SPX level — annual data from [Bain 2025 M&A report](https://www.bain.com/about/media-center/press-releases/20252/global-ma-stages-great-rebound-in-2025-with-$4.8-trillion-deal-value-to-mark-second-highest-total-on-record) and [S&P Global Q1 2026 M&A by the Numbers](https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/04/global-m-and-a-by-the-numbers-q1-2026), cached in `oneoff/ma_volume_annual.csv`. Today: $3.4T global annualized (US ~50%), 8th decile complacency.
 
 **Composite methodology**
 - 10-year rolling percentile per indicator; low-direction inverted to complacency scale.

@@ -167,6 +167,20 @@ INDICATORS = [
     # the indicator drops from the composite via the standard re-norm. Low
     # put/call = complacent (calls dominate).
     {"id": "put_call", "name": "CBOE Equity Put/Call Ratio", "source": "put_call", "code": None, "direction": "low", "weight": 0.03, "required": False, "unit": "×", "category": "Sentiment"},
+    # NEW v6 (added 2026-06-07, after user asked "can't you use WebSearch?"):
+    # IPO activity — annual US IPO proceeds from Renaissance Capital,
+    # 2017-present. Cached as oneoff/ipo_proceeds_annual.csv (manually
+    # updated when Renaissance refreshes). Normalized by S&P 500 cap-weighted
+    # mkt cap proxy. Citi BMC thresholds: amber ~0.4%, red ~0.7%.
+    # 2021 peak ($142B) was the bubble-era extreme; 2022 ($7.7B) the trough.
+    # Direction "high" — strong IPO issuance = late-cycle exuberance.
+    {"id": "ipo_pct", "name": "IPO Proceeds / Mkt Cap", "source": "ipo_pct", "code": None, "direction": "high", "weight": 0.04, "required": False, "unit": "%", "category": "Corporate Behaviour"},
+    # M&A activity — annual global M&A volume from Bain/PitchBook reports
+    # 2000-present. US ~50% of global. Normalized by S&P 500 cap-weighted
+    # mkt cap proxy. Citi BMC thresholds: amber ~8%, red ~11%.
+    # 2021 peak ($5.9T global, ~$3T US) was the extreme; 2022-23 was suppressed.
+    # Direction "high" — high M&A = late-cycle deal exuberance.
+    {"id": "ma_pct", "name": "M&A Volume / Mkt Cap", "source": "ma_pct", "code": None, "direction": "high", "weight": 0.04, "required": False, "unit": "%", "category": "Corporate Behaviour"},
     # Equity vol
     {"id": "vix",      "name": "VIX",                   "source": "yf",    "code": "^VIX",              "direction": "low",  "weight": 0.10, "required": True,  "unit": "",   "category": "Equity Vol"},
     {"id": "vvix",     "name": "VVIX",                  "source": "yf",    "code": "^VVIX",             "direction": "low",  "weight": 0.05, "required": True,  "unit": "",   "category": "Equity Vol"},
@@ -363,6 +377,66 @@ def fetch_capex_yoy(date_slug: str, start: str) -> pd.Series:
     yoy = yoy.rename("capex_yoy").dropna()
     yoy.to_frame().to_csv(cache)
     return yoy
+
+
+def fetch_ipo_pct(date_slug: str) -> pd.Series:
+    """Annual US IPO proceeds as % of S&P 500 market cap proxy.
+
+    Reads oneoff/ipo_proceeds_annual.csv (manually-maintained, refreshed
+    from Renaissance Capital periodically via WebSearch). Normalises by
+    the S&P 500 year-end level — since shares outstanding is roughly stable
+    over the medium term, level is a workable mkt-cap proxy for percentile
+    ranking.
+    """
+    cache = Path(__file__).resolve().parent.parent / "data" / "ipo_proceeds_annual.csv"
+    if not cache.exists():
+        return pd.Series(dtype=float)
+    df = pd.read_csv(cache)
+    # Use Dec 31 of each year as the date
+    df["date"] = pd.to_datetime(df["year"].astype(str) + "-12-31")
+    spx = fetch_yf("^GSPC", start="2000-01-01", end="2026-06-08")
+    if spx.empty:
+        return pd.Series(dtype=float)
+    spx_yearend = spx.resample("YE").last()
+    spx_yearend.index = spx_yearend.index.normalize()
+    merged = pd.merge_asof(df.sort_values("date"),
+                            spx_yearend.rename("spx").reset_index().rename(columns={"Date":"date"}),
+                            on="date", direction="nearest")
+    # ipo_pct = proceeds ($B) / SPX level — scale-free percentile rank
+    merged["ipo_pct"] = merged["proceeds_usd_billion"] / merged["spx"]
+    annual = merged.dropna(subset=["ipo_pct"]).set_index("date")["ipo_pct"]
+    # Upsample to monthly via forward-fill — the percentile rank logic needs
+    # ≥30 obs in the trailing 10y window; annual data alone has only ~10.
+    monthly = annual.resample("MS").ffill()
+    return monthly
+
+
+def fetch_ma_pct(date_slug: str) -> pd.Series:
+    """Annual US M&A volume as % of S&P 500 market cap proxy.
+
+    Reads oneoff/ma_volume_annual.csv (manually-maintained). US share
+    is ~45-50% of global volume historically. Normalises by S&P 500 level.
+    """
+    cache = Path(__file__).resolve().parent.parent / "data" / "ma_volume_annual.csv"
+    if not cache.exists():
+        return pd.Series(dtype=float)
+    df = pd.read_csv(cache)
+    df["date"] = pd.to_datetime(df["year"].astype(str) + "-12-31")
+    # US M&A in $T = global volume × US share %
+    df["us_ma_trn"] = df["global_volume_usd_trillion"] * df["us_share_pct"] / 100
+    spx = fetch_yf("^GSPC", start="2000-01-01", end="2026-06-08")
+    if spx.empty:
+        return pd.Series(dtype=float)
+    spx_yearend = spx.resample("YE").last()
+    spx_yearend.index = spx_yearend.index.normalize()
+    merged = pd.merge_asof(df.sort_values("date"),
+                            spx_yearend.rename("spx").reset_index().rename(columns={"Date":"date"}),
+                            on="date", direction="nearest")
+    # ma_pct = US M&A ($T × 1000 → $B) / SPX level — scale-free percentile rank
+    merged["ma_pct"] = (merged["us_ma_trn"] * 1000) / merged["spx"]
+    annual = merged.dropna(subset=["ma_pct"]).set_index("date")["ma_pct"]
+    monthly = annual.resample("MS").ffill()
+    return monthly
 
 
 def fetch_cboe_putcall(date_slug: str) -> pd.Series:
@@ -669,6 +743,10 @@ def fetch_indicator(ind: dict, date_slug: str, start_25y: str, end: str) -> pd.S
         return fetch_capex_yoy(date_slug, start_25y)
     if src == "put_call":
         return fetch_cboe_putcall(date_slug)
+    if src == "ipo_pct":
+        return fetch_ipo_pct(date_slug)
+    if src == "ma_pct":
+        return fetch_ma_pct(date_slug)
     if src == "aaii":
         return fetch_aaii(date_slug)
     if src == "naaim":

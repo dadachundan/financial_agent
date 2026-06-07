@@ -362,19 +362,30 @@ Citi's explicit guidance: "once the count reaches double digits, it has historic
 | (Levkovich component) Margin debt | `margin_debt_pct`: FINRA margin debt / S&P 500 level | [FINRA margin-statistics.xlsx](https://www.finra.org/sites/default/files/2021-03/margin-statistics.xlsx) |
 | (Levkovich component) Put/Call | `put_call`: CBOE equity put/call 21d MA | [cdn.cboe.com equitypc.csv](https://cdn.cboe.com/resources/options/volume_and_call_put_ratios/equitypc.csv) (stale Oct 2019; useful for backtest only) |
 
-**Still in the backlog — need paid feeds or are hard to source:**
+**Shipped in v6 via WebSearch-sourced annual data (cached in `oneoff/`):**
 
-| Citi BMC factor | Open alternative tried | Why not shipped |
+| Citi BMC factor | This dashboard equivalent | Data source |
 |---|---|---|
-| Forward PE | multpl, gurufocus, stockmarketperatio | multpl 404; gurufocus 403 paywall; others show only current value |
-| M&A (% of Mkt Cap) | IMAA stats, Fed Z.1, FactSet | Best free sources are annual aggregates only; no monthly granularity |
-| IPO activity (% of DM Mkt Cap) | Renaissance Capital, stockanalysis.com IPO calendar | Renaissance has free stats page but no easy CSV; would need a custom scrape that's brittle |
-| Aggregate RoE | yfinance per-constituent rollup | 500 ticker fetches per refresh — expensive; need a cached pipeline |
+| IPO Activity (% of Mkt cap) | `ipo_pct`: annual US IPO proceeds / SPX level | [Renaissance Capital IPO Stats page](https://www.renaissancecapital.com/IPO-Center/Stats) → manually cached `oneoff/ipo_proceeds_annual.csv` |
+| M&A Activity (% of Mkt cap) | `ma_pct`: annual US M&A volume / SPX level | [Bain 2025 M&A report](https://www.bain.com/about/media-center/press-releases/20252/global-ma-stages-great-rebound-in-2025-with-$4.8-trillion-deal-value-to-mark-second-highest-total-on-record) + [S&P Global Q1 2026](https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/04/global-m-and-a-by-the-numbers-q1-2026) → manually cached `oneoff/ma_volume_annual.csv` |
+
+**Refresh workflow for v6 indicators**: each report run, the agent uses WebSearch to find:
+- "Renaissance Capital 2026 YTD IPO count proceeds" — update last row of `ipo_proceeds_annual.csv`
+- "Bain global M&A 2026 Q1 announced volume" — update last row of `ma_volume_annual.csv`
+
+The annual data is forward-filled to monthly in the build script (`scripts/build_dashboard.py` `fetch_ipo_pct` / `fetch_ma_pct`). The percentile rank is computed against the trailing 10y monthly window so the indicator behaves like every other one in the composite. **Note that today's readings (IPO 7th decile, M&A 8th decile) are NOT complacent** — deal-making activity in 2026 is well below 2021 peaks despite valuation extremes.
+
+**Still in the backlog (need paid feeds or non-trivial engineering):**
+
+| Citi BMC factor | Tried | Status |
+|---|---|---|
+| Forward PE | multpl 404; gurufocus 403; Yardeni PDF binary extraction failed; macromicro current value via WebSearch | WebSearch returns a current snapshot (22-26 range across sources) but no clean free historical CSV. v7 candidate: hardcode current value with confidence interval, compute proxy historical via SPX/multpl-trailing-EPS × consensus-EPS-growth-forecast |
+| Aggregate RoE | yfinance per-constituent rollup; SPDR S&P 500 fundamentals page | 500-ticker rollup expensive; need a cached pipeline. Backlog. |
 | Analyst Bullishness | Refinitiv I/B/E/S | Paywall |
-| Levkovich Index | Citi proprietary | Components partly approximated by margin debt + put/call; full reconstruction needs ETF flows + IPO + analyst data |
-| Equity Fund Flows | Lipper, EPFR, ICI | ICI has free monthly mutual-fund flow data but not equity-specific in a tractable format |
-| Asset/Equity (Financials) | XLF holdings, FactSet | Computable from XLF underlyings but requires per-constituent balance-sheet data |
-| Net Debt/EBITDA (ex-Fins) | FactSet | Paywall
+| Levkovich Index | Citi proprietary | Components partly approximated by margin debt + put/call; full reconstruction needs ETF flows + analyst data |
+| Equity Fund Flows | Lipper, EPFR, ICI | ICI has monthly mutual-fund flow data free but not equity-specific in tractable format |
+| Asset/Equity (Financials) | XLF holdings, FactSet | XLF rollup computable but per-constituent balance-sheet data needed |
+| Net Debt/EBITDA (ex-Fins) | FactSet | Paywall |
 
 When data sources are added in future versions, run the standard backtest discipline (see below) to validate they improve the predictive metric on top of v4.
 
