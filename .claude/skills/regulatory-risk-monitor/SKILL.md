@@ -34,7 +34,7 @@ The skill is **case-specific**, not company-wide. The user must name *which* reg
 ## When NOT to use
 
 - The user wants a Section-9-style inventory of all regulatory risks for a company — use [[company-research]] (or read its existing Section 9 if a report exists).
-- The user wants M&A deal-specific regulatory tracking (antitrust on a specific deal) — use [[ma-event-tracker]]; that skill covers M&A-antitrust within its standard workflow.
+- The user wants M&A deal-specific regulatory tracking (antitrust on a specific deal) — use [[catalyst-calendar]] mode C (single-deal M&A monitor); that mode covers M&A-antitrust within its standard workflow.
 - The user wants legal advice — decline. The skill summarizes filings and surfaces dated events; it does not opine on legal outcomes.
 - The risk has no specific docket / file / case number — there's nothing concrete to track; the skill becomes speculation. Ask the user to name the file.
 - The "regulatory risk" is actually a tax / accounting / FX issue without a regulator file — wrong skill; use [[company-research]] risk section or a one-off note.
@@ -305,7 +305,7 @@ One report per (ticker, topic-slug) tuple per tracking pass. Each pass updates t
 ## What this skill does NOT do
 
 - It does not produce a company-wide risk inventory — that's [[company-research]] Section 9 / `references/risk_taxonomy.md`. This skill is one named case, deeply tracked.
-- It does not produce M&A deal-specific regulatory tracking — that's [[ma-event-tracker]], which has its own antitrust section.
+- It does not produce M&A deal-specific regulatory tracking — that's [[catalyst-calendar]] mode C (single-deal M&A monitor), which has its own antitrust section.
 - It does not give legal advice.
 - It does not predict regulator outcomes from partisan reasoning.
 - It does not maintain alerts on the case — periodic monitoring is the user's responsibility (or use [[loop]] for scheduled re-runs).
