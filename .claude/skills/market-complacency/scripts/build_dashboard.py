@@ -92,9 +92,17 @@ except Exception:
 #            "high" = high value means complacent (use pct as-is).
 INDICATORS = [
     # Credit
-    {"id": "hy_oas",   "name": "HY OAS",                "source": "fred",  "code": "BAMLH0A0HYM2",     "direction": "low",  "weight": 0.15, "required": True,  "unit": "%",  "category": "Credit"},
-    {"id": "ig_oas",   "name": "IG OAS",                "source": "fred",  "code": "BAMLC0A0CM",       "direction": "low",  "weight": 0.07, "required": True,  "unit": "%",  "category": "Credit"},
-    {"id": "ccc_oas",  "name": "CCC OAS",               "source": "fred",  "code": "BAMLH0A3HYC",      "direction": "low",  "weight": 0.10, "required": True,  "unit": "%",  "category": "Credit"},
+    {"id": "hy_oas",   "name": "HY OAS",                "source": "fred",  "code": "BAMLH0A0HYM2",     "direction": "low",  "weight": 0.13, "required": True,  "unit": "%",  "category": "Credit"},
+    {"id": "ig_oas",   "name": "IG OAS",                "source": "fred",  "code": "BAMLC0A0CM",       "direction": "low",  "weight": 0.06, "required": True,  "unit": "%",  "category": "Credit"},
+    {"id": "ccc_oas",  "name": "CCC OAS",               "source": "fred",  "code": "BAMLH0A3HYC",      "direction": "low",  "weight": 0.08, "required": True,  "unit": "%",  "category": "Credit"},
+    # NEW v2: CCC - HY spread (credit-tier divergence). Higher = CCC widening
+    # relative to HY = late-cycle stress already showing in the weakest tier.
+    # When this spread is LOW (tight relative to HY), credit is uniformly tight
+    # → that's the "uniform complacency" regime. When HIGH, CCC is already
+    # cracking → the dashboard should already be warning even if broad HY is OK.
+    # Backtest motivation: this spread widened ~12 months before GFC, ~6 months
+    # before Q4 2018. The original dashboard missed both.
+    {"id": "ccc_hy_spread", "name": "CCC − HY OAS spread", "source": "derived_ccc_hy", "code": None, "direction": "low", "weight": 0.05, "required": True, "unit": "pp", "category": "Credit"},
     # Equity vol
     {"id": "vix",      "name": "VIX",                   "source": "yf",    "code": "^VIX",              "direction": "low",  "weight": 0.10, "required": True,  "unit": "",   "category": "Equity Vol"},
     {"id": "vvix",     "name": "VVIX",                  "source": "yf",    "code": "^VVIX",             "direction": "low",  "weight": 0.05, "required": True,  "unit": "",   "category": "Equity Vol"},
@@ -347,6 +355,14 @@ def fetch_indicator(ind: dict, date_slug: str, start_25y: str, end: str) -> pd.S
         return (df["a"] / df["b"]).rename(ind["id"])
     if src == "derived_erp":
         return compute_erp(date_slug, start_25y, end)
+    if src == "derived_ccc_hy":
+        # CCC OAS - HY OAS spread; computed from the two FRED series.
+        ccc = fetch_fred("BAMLH0A3HYC", start_25y)
+        hy = fetch_fred("BAMLH0A0HYM2", start_25y)
+        if ccc.empty or hy.empty:
+            return pd.Series(dtype=float)
+        df = pd.concat([ccc.rename("ccc"), hy.rename("hy")], axis=1).dropna()
+        return (df["ccc"] - df["hy"]).rename("ccc_hy_spread")
     if src == "cape":
         return fetch_shiller_cape(date_slug)
     if src == "aaii":

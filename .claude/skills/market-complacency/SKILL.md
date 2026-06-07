@@ -53,6 +53,7 @@ Twelve indicators across six categories. The "complacency direction" column stat
 | 1 | **HY OAS** (ICE BofA US High Yield) | FRED `BAMLH0A0HYM2` | **Low** = complacent | Bottom-decile HY spreads have historically preceded credit-cycle turns (Q2 2007 at 2.4%, Jan 2020 at 3.4%) |
 | 2 | **IG OAS** (ICE BofA US Corporate) | FRED `BAMLC0A0CM` | **Low** = complacent | Same logic, investment-grade tier |
 | 3 | **CCC OAS** (ICE BofA US CCC & Lower) | FRED `BAMLH0A3HYC` | **Low** = complacent | The weakest tier — the first to widen when the cycle turns. Bottom-decile CCC = the strongest single-indicator complacency tell |
+| 3b | **CCC − HY OAS spread** (derived) | FRED `BAMLH0A3HYC − BAMLH0A0HYM2` | **Low** = complacent | Added in v2 after a backtest showed the original dashboard missed late-cycle credit-tier divergence. When CCC is wide *relative to* HY, the weakest tier is cracking even as broad HY stays tight — historically ~12 months before the 2007 turn and ~6 months before Q4 2018. Today's spread (June 2026) is at the 99th percentile, signaling divergence is in progress. |
 | **Equity-volatility (under-pricing equity tail risk)** | | | | |
 | 4 | **VIX** | yfinance `^VIX` | **Low** = complacent | <13 = bottom decile; VIX <12 in Jan 2018 and Jan 2020 immediately preceded vol shocks |
 | 5 | **VVIX** (vol-of-vol) | yfinance `^VVIX` | **Low** = complacent | <80 = market not even worried about *change* in vol — a deeper complacency signal than VIX alone |
@@ -86,9 +87,10 @@ Weighted average of complacency percentiles. Weights reflect the indicators' his
 
 | Indicator | Weight |
 |---|---|
-| HY OAS | 0.15 |
-| IG OAS | 0.07 |
-| CCC OAS | 0.10 |
+| HY OAS | 0.13 |
+| IG OAS | 0.06 |
+| CCC OAS | 0.08 |
+| CCC − HY OAS spread | 0.05 |
 | VIX | 0.10 |
 | VVIX | 0.05 |
 | VIX term slope | 0.05 |
@@ -324,6 +326,25 @@ Supplementary deliverables sit in standard locations:
 ### Update-in-place rule
 
 One report per date. If `reports/market-complacency/market_complacency_<YYYY-MM-DD>.md` already exists for today's date, update it in place rather than creating a parallel copy. Across dates, keep separate files — the historical sequence of verdicts is itself useful context.
+
+## Backtest discipline
+
+A backtest script lives at `.claude/skills/market-complacency/scripts/backtest_dashboard.py`. Run it against any composite history CSV to validate or invalidate dashboard changes:
+
+```bash
+python3 .claude/skills/market-complacency/scripts/backtest_dashboard.py \
+  --composite-history oneoff/market_complacency_<DATE>_composite_history.csv \
+  --benchmark SPY \
+  --as-of <DATE>
+```
+
+The June 2026 backtest (see [`reports/market-complacency/backtest_2026-06-07.md`](../../../reports/market-complacency/backtest_2026-06-07.md)) found:
+
+- **The Stretched tier (80+) is the only tier with predictive lift** — precision 22% vs 20% base rate (lift 1.10) on the 90-day -10% drawdown event. The 60-80 Elevated tier is empirically indistinguishable from Neutral.
+- **The dashboard hit 4 of 7 major SPY drawdowns at the peak; 8 of 11 on QQQ.** The structural misses (GFC, 2022 bear, COVID) were exogenous-shock events the dashboard cannot see by construction.
+- **The dashboard is a *regime descriptor*, not a *drawdown predictor*.** Report writeups must calibrate expectations accordingly — quote the empirical drawdown probabilities at today's tier from the backtest, not anecdotal "this looks like 2007" comparisons.
+
+Any change to the indicator set or weights must be validated by re-running the backtest BEFORE shipping. The v2 dashboard (adding CCC − HY OAS spread) was kept after the backtest showed it modestly improved the Stretched-tier lift (1.01 → 1.10) and produced a more accurate read on the 2026-06-07 regime (Neutral, not Elevated). Future indicator additions (% S&P above 200dma, composite rate-of-change, sentiment proxies) must clear the same bar.
 
 ## What this skill does NOT do
 
