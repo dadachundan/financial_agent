@@ -159,27 +159,73 @@ After the workflow completes:
 6. **Never report a workflow as "running fine" without checking `/tmp/mem-watch.log` AND `pgrep -lf 'mem-watch.sh'`** — the watcher's status column is the source of truth.
 7. **Stop the watcher when the workflow finishes** (`pkill -f mem-watch.sh`) — otherwise it lingers across sessions and pollutes the next launch.
 
-# Database Safety (MANDATORY — non-negotiable, zero exceptions)
+# Database Safety (MANDATORY)
 
-**Every `*.db` file inside this project is the user's real, irreplaceable data. Treat all of them as read-only from Claude's hands.**
+Project DBs fall into **three tiers**. The classification governs what Claude may write:
 
-This has gone wrong more than once. Past failures include (at least): wiping `pdf_inline_comments` to clear "test data" and taking real comments along with it; clearing `notes.db` rows during another session. The rule below exists to make the failure mode mechanically impossible, not to remind future-Claude to be careful.
+1. **Tier 1 — User-generated (READ-ONLY, zero exceptions).** The user's manual work product: typed annotations, inline comments. Claude must never write, even with explicit user authorization on a single turn — past failures wiped real comments and the lock exists *to make the failure mode mechanically impossible*.
+2. **Tier 2 — Web-fetched ingestion / cache (writable via project helpers ONLY).** Market prices, SEC filings, FRED time series, downloaded PDFs, OCR caches. Claude MAY trigger writes — but ONLY by running the project's existing Python ingestion helpers, which handle dedup, idempotency, and schema. **Never raw SQL.**
+3. **Tier 3 — Agent-curated knowledge graph (sanctioned path via `manual_graph.py`).** Existing pattern; unchanged.
 
-## What's covered
+Past failures: wiping `pdf_inline_comments` to clear "test data" and taking real comments along with it; clearing `notes.db` rows during another session. The Tier-1 lock is load-bearing because of those incidents. The Tier-2 carve-out below ADDS a permitted path; it does not loosen the Tier-1 lock.
 
-**ALL `*.db` files in the project**, no matter where they live. This includes — but is not limited to — files under `db/` (`db/notes.db`, `db/zsxq.db`, `db/financial_reports.db`, `db/cninfo_reports.db`, `db/report_annotations.db`, `db/market_cap_cache.db`, `db/indicators.db`, `db/markdown_reports.db`, `db/knowledge_graph.db`, `db/graph_mirror.db`, `db/stock_price_target.db`), files at the project root (`zsxq.db`, `knowledge_graph.db`, `graph_mirror.db`), files in subdirectories (`youtube/video_summaries.db`, anywhere else), and any new database file that appears in the future without an explicit `.test.db` / `.sandbox.db` suffix.
+## Tier 1 — User-generated (read-only, no exceptions)
 
-If a path matches `*.db` and is not under `/tmp/` and doesn't end in `.test.db` / `.sandbox.db`, **it is real user data.**
+The user's manual annotations and comments. **Forbidden** to write under any circumstance. Even if the user says "go ahead and write" on a single turn, the lock holds — the rule is precisely to survive a moment of inattention.
 
-## The rule
+| DB | Table(s) | Holds |
+|---|---|---|
+| `db/notes.db` | `pdf_inline_comments`, `report_inline_comments` | User's typed annotations on PDFs / reports |
+| `db/report_annotations.db` | (all tables) | Annotations on report markdown files |
 
-Against any of those files:
+Other tables in `db/notes.db` (`notes`, `pdf_page_ocr`) are **Tier 2** (file ingestion + OCR cache) — see below. The DB is mixed; only the `*_inline_comments` tables are Tier 1.
 
-- `DELETE`, `DROP`, `TRUNCATE`, `UPDATE`, `INSERT`, `ALTER`, `REPLACE`, `VACUUM` — **forbidden**, full stop. No "but I just inserted that row" carve-out. No "but it's clearly test data" carve-out. No `WHERE id = N` carve-out. No.
-- `cp <db> …` overwriting another real db, `mv <db> …`, `rm <db>`, `> <db>` redirecting any process output onto a real db — **forbidden**.
-- Schema migrations (`ALTER TABLE`, `CREATE TABLE`) are forbidden too. If a new column is needed, write a one-shot migration script, have the user run it themselves, and `git status` afterwards to confirm exactly one file changed.
+## Tier 2 — Web-fetched ingestion / cache (writable via helpers only)
 
-The only thing Claude is allowed to do against a real `*.db` is read: `SELECT`, `.schema`, `.tables`, `PRAGMA table_info(...)`, `sqlite3 path.db ".dump table | head"`, copying TO `/tmp/` (`cp db/notes.db /tmp/notes.test.db` is fine — the source is read-only-ish, the destination is a sandbox path).
+Data mechanically fetched from external sources and cached locally. Claude MAY trigger writes via the project's existing ingestion helpers. **NEVER raw SQL.** The helper IS the contract — it handles dedup (UNIQUE constraints), idempotency (INSERT OR IGNORE / OR REPLACE semantics), schema init, and audit columns.
+
+| DB | Helper | Fetched from |
+|---|---|---|
+| `db/indicators.db` | `indicators/data_fetcher.py` | FRED + yfinance time series |
+| `db/financial_reports.db` | `fetch_financial_report.py` | SEC EDGAR 10-K/10-Q/8-K |
+| `db/cninfo_reports.db` | `fetch_cninfo_report.py` | cninfo Chinese filings |
+| `db/market_cap_cache.db` | `market_cap_cache.py` | yfinance market caps |
+| `db/zsxq.db` | `download/zsxq_downloader.py` + `zsxq_common.py` | zsxq PDF downloads + curated summaries |
+| `db/stock_price_target.db` | `scripts/persist_pts.py` | PT calls extracted from zsxq summaries |
+| `db/notes.db` (tables `notes`, `pdf_page_ocr`) | `earnings-upload-to-db` skill + `ocr_pdf.py` | File ingestion + OCR cache (NOT inline comments — those are Tier 1) |
+| `db/markdown_reports.db` | (currently no formal helper) | Generated report cache |
+
+### Sanctioned write pattern (Tier 2)
+
+```bash
+# OK — runs the existing helper; idempotent, schema-aware
+python -c "from indicators.data_fetcher import fetch_all; fetch_all()"
+python -c "from market_cap_cache import refresh; refresh(['NVDA','TSM'])"
+
+# NOT OK — raw SQL against a Tier-2 DB, bypasses the helper's guarantees
+sqlite3 db/indicators.db "INSERT INTO history VALUES ('vix','2026-06-07',21.5);"
+```
+
+If a new series / column / table is needed for a Tier-2 DB:
+1. Extend the helper module's schema-init code in a commit.
+2. Run the helper. Helpers are designed to be idempotent — re-running on an existing DB is a no-op except for fresh fetches.
+3. `git status` afterwards to confirm only the expected files changed.
+
+Never use `sqlite3 ... ALTER TABLE` to migrate schema. Always go through the helper.
+
+## Tier 3 — Agent-curated knowledge graph (existing sanctioned path)
+
+- `db/knowledge_graph.db` and `db/graph_mirror.db`
+
+Write only via `manual_graph.py` functions (`add_entity`, `add_edge`, `add_episode`, `add_entities`, `add_edges`). See the existing "Knowledge graph workflow" section at the bottom of this file. **No raw SQL.** Pattern unchanged from before this revision.
+
+## Always forbidden (all tiers)
+
+- **Raw SQL `DELETE / DROP / TRUNCATE / UPDATE / INSERT / REPLACE / ALTER / VACUUM`** against any project DB from shell, Bash, or an ad-hoc `python -c "import sqlite3; ..."` one-liner. Tier-2 writes go through the helper, Tier-3 through `manual_graph.py`, Tier-1 not at all.
+- `rm db/X.db`, `mv db/X.db ...`, `cp ... db/X.db` (overwriting), `> db/X.db` (redirecting any process output onto a project DB).
+- Schema migrations on the fly. New columns / tables = extend the helper module's init code in a commit.
+- Writing to ANY DB from a Python module that hardcodes its path. All DB-opening modules MUST resolve through `db_paths.db_path()` so `FINAGENT_DB_DIR` redirection works for tests. See [db_paths.py](db_paths.py).
+- Any write to a DB whose helper you have not located. If you can't find the helper module, ask — don't improvise raw SQL.
 
 ## How to actually test code that writes to a DB
 
@@ -217,13 +263,14 @@ If you add a NEW Python module that opens a `.db` file, **you MUST resolve its p
 
 ## Sanity check before any DB-touching command
 
-Before running any `sqlite3` / `psql` / Python script that opens a DB, the literal path string in the command must satisfy:
+Before running any `sqlite3` / `psql` / Python script / Bash one-liner that opens a project DB, the command must satisfy **one** of the four allowed shapes:
 
-```
-path.startswith("/tmp/")  or  path.endswith(".test.db")  or  path.endswith(".sandbox.db")
-```
+1. **Sandbox path** — the literal path string satisfies `path.startswith("/tmp/") or path.endswith(".test.db") or path.endswith(".sandbox.db")`. Anything goes against sandbox DBs.
+2. **Read-only against any tier** — the command is obviously read-only at a glance: `SELECT …`, `.schema`, `.tables`, `PRAGMA table_info(...)`, `.dump | head`. SELECTs against Tier-1 DBs are fine; nothing else against Tier-1 ever is.
+3. **Tier-2 helper invocation** — runs an existing ingestion helper function (e.g. `python -c "from indicators.data_fetcher import fetch_all; fetch_all()"`). NOT raw SQL, even one that "should be" idempotent.
+4. **Tier-3 `manual_graph.py` invocation** — runs `add_entity` / `add_edge` / `add_episode` / etc. against `db/knowledge_graph.db` or `db/graph_mirror.db`.
 
-If it doesn't, the command is permitted ONLY if its read-only nature is obvious at a glance — `SELECT …`, `.schema`, `PRAGMA …`, `.tables`, or piping `.dump` to `head`. Anything else — even something that "should be" a SELECT — stop and ask. The path check is the gate; it's stricter than "is this destructive?" because intent doesn't survive a typo.
+If a command doesn't fit one of those four, stop and ask. The shape check is stricter than "is this destructive?" because intent doesn't survive a typo.
 
 # UI Verification (MANDATORY)
 
