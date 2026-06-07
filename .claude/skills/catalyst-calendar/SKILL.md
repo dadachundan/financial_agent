@@ -127,6 +127,8 @@ For each company / sector / macro lane:
 - Quarterly earnings date + time (pre / after market); consensus + buyside whisper if known.
 - Annual shareholder meeting, investor day, capital markets day.
 - Debt maturity / refinancing dates large enough to be a story.
+- **Earnings-preview brief structure** per [§ M](#m-earnings-preview-methodology-broker-style-beyond-consensus): consensus + sub-segment forecast + capacity/delivery proxies + contract-structure changes + delivery-timing trends + platform partnerships + read-across implications. Populate ≥4 signal types per name beyond the rev/EPS line.
+- **Alt-data leading indicators** per [§ J](#j-alt-data-leading-indicators-sector--single-name) — when an alt-data series breaks a multi-quarter trend, surface it with the segment-level forecast (AWS web traffic → cloud, OpenTable → restaurants, TSMC monthly → foundry customers, etc.).
 
 **Corporate events**
 - Product launches, FDA AdComm / PDUFA dates, regulatory decisions, contract expirations, lockup expirations, management transitions, dividend ex-dates (for income-portfolio context).
@@ -143,6 +145,8 @@ For each company / sector / macro lane:
 - Non-US: ECB, BOJ, BOE, PBOC, SAMR; CPI, PMI, GDP releases for major economies.
 - Geopolitical: G7/G20, elections, summit deadlines.
 - **For each macro print, pull the sub-component watch list** from [Broker-style methodology § A](#a-sub-component-watch-lists-for-major-macro-prints) — track core MoM / supercore / shelter for CPI; trade services / final-demand-energy for PPI; wage growth / revisions / 3M MA for NFP; etc. Map each sub-print to a causal mechanism, not just "hot vs cold."
+- **Apply threshold-based historical rules** from [§ K](#k-threshold-based-historical-rules-library) — if a level crosses a rule's threshold (CPI > 4% YoY, NFP > 125k 3M MA, etc.), flag the historical pattern explicitly in the preview.
+- **Score qualitative Fed publications** when in the window (Beige Book, minutes, Powell pressers) using the [§ L LLM-as-tool framework](#l-llm-as-tool-scoring-of-qualitative-fed-publications) — track Δ vs prior release on inflation / labor / growth / recession-concern / FCI dimensions.
 - **Tariff / regulatory schedule** — list discrete dated events ticking inside the window (Section 301 expiries, FDA AdComm dates, EU Phase II deadlines, M&A vote dates). See [§ G](#g-tariff--regulatory-schedule-tracking).
 
 **Market-pricing context (priority 2 — pair with every H-impact event)**
@@ -780,23 +784,147 @@ This week's key data:
 
 The directional bias forces commitment. "Cons 0.2%" without direction is a calendar entry; "we expect 0.18% with the mechanism being shelter softening" is an analyst view.
 
-### F. Exuberance / regime check (Mode B only, occasional)
+### F. Exuberance / regime check (two complementary frameworks)
 
-When the macro setup is at extremes (post-rally / post-selloff), include Goldman's 4-dim exuberance check:
+When the macro setup is at extremes (post-rally / post-selloff), use BOTH frameworks below — they answer different questions.
 
-| Dimension | Sub-metrics | Current decile |
-|---|---|---|
-| **Price & breadth** | EPS revisions YTD, % of names making new highs, sector concentration index | |
-| **Speculative trading** | Proprietary "speculation heat" indicator, % volume in high-multiple names, % volume in loss-making names, put-call ratio, margin debt | |
-| **Sentiment** | AAII bull-bear, Yale CIDE, institutional year-end SPX target dispersion, NAAIM exposure | |
-| **Corporate financing** | IPO volume YTD, IPO % of market cap, buybacks net of new issuance | |
+**F.1 — Goldman 4-dim "are we toppy?" framework.** Use for "is the current rally a bubble?" qualitative read.
 
-Three historical "bull market termination" triggers to flag if active:
+| Dimension | Sub-metrics |
+|---|---|
+| **Price & breadth** | EPS revisions YTD, % of names making new highs, sector concentration index |
+| **Speculative trading** | Proprietary "speculation heat" indicator, % volume in high-multiple names, % volume in loss-making names, put-call ratio, margin debt |
+| **Sentiment** | AAII bull-bear, Yale CIDE, institutional year-end SPX target dispersion, NAAIM exposure |
+| **Corporate financing** | IPO volume YTD, IPO % of market cap, buybacks net of new issuance |
+
+Three historical bull-termination triggers to flag if active:
 1. Economic fundamentals weakening (NFP < 100k 3M MA, ISM Services < 50)
 2. IPO supply wave (IPO volume > 90th percentile, hot deal calendar)
 3. Fed tightening (FedWatch hike-by-year-end > 25%, 2y above term-premium-implied)
 
-None active + sentiment 80-90th percentile = "elevated but not toppy" (the typical broker framing).
+None active + sentiment 80–90th percentile = "elevated but not toppy" framing.
+
+**F.2 — Citi BMC (Bear Market Checklist).** 18 specific monitored indicators with half-yellow / full-red scoring, calibrated against 2000 dot-com peak and 2007 GFC peak. Use for "where are we vs history's actual tops" quantitative read.
+
+Indicator categories the BMC tracks (with current readings as of the most recent Citi update for reference):
+- Yield curve (inversion / re-steepening)
+- Margin debt + retail leverage
+- Buyback / IPO net supply
+- Sector / momentum concentration
+- AAII / NAAIM / II sentiment
+- VIX term structure
+- Capex / R&D / FCF allocation
+- Tax / regulatory cycle indicators
+- M&A volume (peak signals)
+- Commodity / FX hawkishness
+
+**Calibration:** Citi's BMC at ≈10 / 18 currently (US 11.5, Europe 5; post-2008 high). Historical peaks: 2000 dot-com ≈ 17.5; 2007 GFC ≈ 16. **Rule of thumb**: ≥10 = exuberance accumulating; ≥12 = dip-buying stops working; ≥14 = pre-top.
+
+**When to use which.** Goldman's 4-dim is the qualitative narrative (used to explain "we're 86th-percentile exuberant but not at a top"). Citi BMC is the calibrated score (used to put a number on it vs known historical tops). Both can appear in the same Mode B preview when the question is "is the rally getting late?"
+
+### I. Valuation-metric regime switch (Barclays "capex supercycle" pattern)
+
+In capex-supercycle regimes, the right multiple isn't PE — it's an EV-based multiple, because depreciation + tax + leverage distort earnings.
+
+**Regime detector**: when S&P 500 capex/CFO > ~40% and capex YoY > +25%, you're in a capex-supercycle. Historical episodes:
+- 1990s internet build-out
+- 2000s housing + energy
+- 2018+ cloud capacity build
+- 2024–26 AI compute (current)
+
+**Multiple switch table:**
+
+| Regime | Primary multiple | Why |
+|---|---|---|
+| Normal (capex/CFO < 30%) | PE forward | Earnings reflect economic value |
+| Capex supercycle (capex/CFO > 40%) | **EV/EBITDA, EV/EBIT** | Earnings depressed by D&A + interest expense; EV-based metrics neutralize capital structure + tax |
+| Late-cycle low-growth | EV/sales + FCF yield | Earnings inflated by buybacks / non-cash gains |
+
+The Barclays finding: in supercycle regimes, EV/EBIT decile and forward 3y stock returns have a much higher rank correlation than PE decile and returns. Use EV-based metrics for relative-value calls when AI capex is the dominant equity-market narrative.
+
+### J. Alt-data leading indicators (sector / single-name)
+
+When a forward print or earnings release is too noisy or stale to be the primary signal, sell-side analysts substitute alternative-data leading indicators. The pattern:
+
+| Alt-data series | Used to forecast | Lead time | Source / vendor |
+|---|---|---|---|
+| **AWS single-sign-on web traffic** | AWS revenue growth (Bernstein) | ~1 quarter | Bernstein's proprietary scrape |
+| **OpenTable seated diners** | Restaurant comp sales (DRI, CMG) | Same-month | OpenTable State of Industry |
+| **Card-spend aggregator data** (Bank of America, JPM Chase) | Consumer comp sales, retail traffic | ~2 weeks | BAC / JPM card-tracking decks |
+| **Cellphone geo-data** (Placer.ai) | Retail traffic, mall reads | Same-week | Placer.ai |
+| **App-store download / DAU trackers** (Sensor Tower, Appfigures) | Mobile-game revenue, social-media engagement | Same-week | Sensor Tower decks |
+| **Box-office tracker** (BoxOfficeMojo, ComScore) | Studio quarter revenue, theater chains | Same-week | Industry trackers |
+| **Crude inventory** (EIA weekly) | E&P quarterly comp + refinery margin | Same-week | EIA STEO |
+| **TSMC monthly sales** | Foundry-customer quarterly revenue (NVDA, AMD, AVGO) | ~1 month | TSMC press release |
+| **Trucking-volume index** (Cass) | Industrial / trucker (J.B. Hunt, ODFL, XPO) | ~1 month | Cass Information Systems |
+| **Hotel RevPAR / STR** (Smith Travel) | Hotel REIT + lodging comp | ~2 weeks | STR |
+| **Mortgage application volume** (MBA) | Homebuilder volume + REIT comp | Same-week | MBA |
+
+**Pattern rule.** When the indicator breaks a multi-quarter trend (e.g. AWS web traffic 4-week growth falls below seasonal pattern), it's a 1-quarter-leading signal for the segment's reported number. Sell-siders track 3-cause-of-weakness frameworks:
+1. Demand shift (customer mix changing)
+2. Supply constraint (capacity / regulation)
+3. Pricing / cost change (operational)
+
+For each alt-data deviation, the brief should map to one of these three.
+
+### K. Threshold-based historical rules library
+
+BofA / Bernstein / DB style: specific "if X then Y" rules from historical data, used as decision shortcuts in week-ahead notes. The skill should compile + reference these for major prints.
+
+| Rule | Threshold | Historical pattern (avg) |
+|---|---|---|
+| **CPI YoY > 4%** | (was 3.8% in April) | SPX −4% over next 3 months, −7% over 6 months |
+| **Unemployment ≤ CPI YoY** | inflation-adjusted misery > 0 | Hike cycle imminent; equity returns negative for 12 months |
+| **NFP > 125k 3M MA** | (was 172k May) | 30y UST tests 5%; rates path stays hawkish |
+| **HY OAS < 300bp + VIX > 20** | "cross-asset disagreement" | Equity vol mean-reverts in 5 of 6 historical cases |
+| **VIX term backwardation + VVIX > 100** | event-driven fear priced | Vol crushes within 5 sessions in 7 of 8 historical cases when credit doesn't follow |
+| **AAII bull-bear > 30** | extreme retail bullish | SPX −2% / 4 weeks following (historical avg) |
+| **AAII bull-bear < −15** | extreme retail bearish | SPX +5% / 8 weeks following |
+| **% S&P names making 1Y high > 35%** | breadth-confirmed rally | Continuation high (median +6% / 6m); rare to top within 3m |
+| **ISM Services < 50** sustained | recession trigger | NBER recession follows in 9 of last 11 cycles |
+| **5y5y inflation expectations > 2.7%** | un-anchored regime | Fed will not cut; hikes possible in 4 of 5 prior episodes |
+| **DXY > 105 + EM FX selling** | dollar-funding stress | EM equity drawdown 8–15% over 8 weeks |
+| **Goldman Financial Conditions Index (FCI) tightening 2 std dev** | financial-conditions shock | SPX vol +30%; downturn risk 18 months out |
+
+This is the "Bloomberg terminal tag" equivalent — when an indicator hits a calibrated threshold, the rule fires. Use these to flag setups in Mode A briefs without needing fresh historical analysis.
+
+### L. LLM-as-tool scoring of qualitative Fed publications
+
+For Fed publications that don't have structured sub-prints (Beige Book, FOMC minutes, Powell pressers, Speech text), score each release on calibrated 0–10 dimensions:
+
+| Dimension | What 0 / 5 / 10 means | Track vs prior |
+|---|---|---|
+| **Inflation tone** | 0 = disinflation everywhere, 5 = balanced, 10 = "inflation accelerating, broad-based" | Δ vs prior reading |
+| **Labor tone** | 0 = labor weak / softening, 5 = balanced, 10 = "labor too tight, wage pressures" | Δ vs prior reading |
+| **Growth tone** | 0 = contraction, 5 = balanced, 10 = "growth strong, accelerating" | Δ vs prior reading |
+| **Recession concern (Fed perceived)** | 0 = no concern, 5 = balanced, 10 = "Fed flagging recession risk" | Δ vs prior reading |
+| **Financial-conditions tone** | 0 = easing supportive, 5 = balanced, 10 = "credit / financing conditions tightening" | Δ vs prior reading |
+
+**Process** (per CLAUDE.md project rule against API calls): Claude-in-conversation reads the Fed publication directly and scores it; **no LLM API calls in project scripts**. The scoring is qualitative-from-reading, not algorithmic-from-text-pipeline.
+
+**Example tracking** (DB Beige Book May 2026 → Jun 2026, for reference):
+- Inflation 7 → 8 (highest since mid-2022; "modest" → "modest to strong")
+- Labor 5 → 5 (steady; manufacturing strong, hiring frequency up)
+- Growth 5 → 4.5 (mfg strong but consumer split; low-income squeezed)
+- Recession concern 4 → 6 (still in low-historical band but rising)
+
+This is the structured way to track the Fed's qualitative tone across releases — much more actionable than "the Fed sounded a bit more hawkish."
+
+### M. Earnings-preview methodology (broker-style, beyond consensus)
+
+DB's ORCL preview pattern is the template for an earnings-preview brief that goes beyond consensus rev/EPS:
+
+| Signal type | What to extract | Example (ORCL F4Q26) |
+|---|---|---|
+| **Top-line forecast + sub-segment split** | Total revenue, FX impact, by-segment forecast vs consensus | $19.09B total; OCI ~$5.5B (+89% YoY vs cons 92%); SaaS +X%; legacy software +Y% |
+| **Capacity / delivery proxies** | Physical capacity additions, throughput metrics, customer-count deltas | 400 MW compute delivered last Q, similar this Q; new Abilene DC racks online |
+| **Contract structure changes** | Renewal multiples, framework-vs-spot mix, minimum commits | Renewal revenue at 2-4x prior; multi-year frameworks now standard; minimum-commit clauses inserted |
+| **Delivery timing trends** | Time-from-order-to-deploy, project backlog turnover | 60-90 days → 90-120 days (capacity-constrained = bullish demand signal) |
+| **Platform / partnership news** | Multi-cloud, multi-vendor, ecosystem extensions | AWS / GCP / Azure database partnerships; Azure data-center co-location |
+| **Pricing / mix shift** | ARR per customer, ASP movement, mix of newer vs legacy | (varies by company) |
+| **Read-across implications** | Which other names benefit / suffer based on the segment-level reads | NVDA / AVGO / TSM lift on AI-infra confirmation; competitive read for AMD / IBM |
+
+For each catalyst, the brief should populate at least 4 of these signal types. The consensus is the floor; the broker-grade preview adds the operational-detail signals that drive the actual stock reaction.
 
 ### G. Tariff / regulatory schedule tracking
 
