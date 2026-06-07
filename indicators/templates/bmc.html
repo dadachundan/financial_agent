@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bear Market Checklist — Live</title>
+<link rel="stylesheet" href="/static/bootstrap.min.css">
+<style>
+  body { background:#f7f7f9; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+  .bmc-wrap { max-width: 1400px; margin: 1rem auto; padding: 0 1rem; }
+  .bmc-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:.75rem; flex-wrap:wrap; gap:.5rem; }
+  .bmc-header h5 { margin:0; font-weight:700; }
+  .bmc-meta { font-size:.75rem; color:#666; }
+  .bmc-meta .badge { font-size:.7rem; }
+  .bmc-table { border-collapse:collapse; width:100%; font-size:.92rem; background:#fff; }
+  .bmc-table th, .bmc-table td { padding:6px 10px; border:1px solid #d7dadc; text-align:center; vertical-align:middle; }
+  .bmc-table th { background:#f4f4f4; }
+  .bmc-table td.label, .bmc-table th.label { text-align:left; }
+  .bmc-table tr.section td { background:#fafafa; font-weight:700; }
+  .bmc-red    { background:#f4a8a8 !important; color:#5a0000; font-weight:700; }
+  .bmc-amber  { background:#ffd17a !important; color:#5a3300; font-weight:700; }
+  .bmc-green  { background:#b6e3b6 !important; color:#1a4d1a; font-weight:700; }
+  .bmc-stress { background:#c44 !important; color:#fff; font-weight:700; }
+  .bmc-na     { color:#999; }
+  .bmc-table td.now { border-left:2px solid #888; }
+  .now-loading { color:#999; font-style:italic; }
+  .footer-note { font-size:.72rem; color:#666; margin-top:.75rem; }
+  .source-caveat { font-size:.78em; color:#888; font-style:italic; }
+  a { text-decoration:none; }
+  a:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+
+{{ nav|safe }}
+
+<div class="bmc-wrap">
+
+<div class="bmc-header">
+  <div>
+    <h5>📋 Bear Market Checklist — Historical Calibration</h5>
+    <div class="bmc-meta">
+      Today vs the start of past bear markets and recent peaks. Adapted from
+      <a href="https://www.citivelocity.com" target="_blank" rel="noopener">Citi BMC Figure 2</a>.
+      Click any indicator name to see its source / historical chart.
+    </div>
+  </div>
+  <div class="d-flex gap-2 align-items-center">
+    <span class="bmc-meta" id="bmcLastUpdated">—</span>
+    <button id="bmcRefresh" class="btn btn-sm btn-outline-secondary">↻ Refresh</button>
+  </div>
+</div>
+
+<div class="table-responsive">
+<table class="bmc-table" id="bmcTable">
+<thead>
+<tr>
+  <th class="label">Indicator</th>
+  <th>Mar-00</th><th>Oct-07</th><th>Feb-20</th><th>Dec-21</th><th>Now</th>
+</tr>
+</thead>
+<tbody id="bmcBody">
+<!-- Rows injected by JS — historical values hardcoded, Now fetched live -->
+</tbody>
+</table>
+</div>
+
+<div class="footer-note">
+  <strong>Legend</strong>:
+  <span class="bmc-red" style="padding:2px 8px;border-radius:3px;">red</span> = full flag (complacent/stretched) ·
+  <span class="bmc-amber" style="padding:2px 8px;border-radius:3px;">amber</span> = half flag (caution) ·
+  <span class="bmc-green" style="padding:2px 8px;border-radius:3px;">green</span> = contra-signal (divergence — hedges already bid) ·
+  <span class="bmc-stress" style="padding:2px 8px;border-radius:3px;">stress</span> = acute vol spike ·
+  blank = off.
+  &nbsp;·&nbsp; Historical columns from Citi BMC (2026-06-05) + FRED + yfinance.
+  Now column fetched live (5-min cache).
+</div>
+
+<div class="footer-note" style="margin-top:.5rem;">
+  Other views:
+  <a href="/indicators/grid">Live indicator grid (cards)</a> &nbsp;·&nbsp;
+  <a href="/claude-reports/view/market-complacency/market_complacency_2026-06-07.md">Full complacency report</a>
+</div>
+
+</div>
+
+<script>
+'use strict';
+
+// ── Hardcoded BMC matrix ──────────────────────────────────────────────────
+// Historical values from Citi BMC June 5 2026 report (Figure 2) + FRED API
+// cross-checks (BAA10Y, T10Y2Y, MOVE, VIX, SKEW computed at the
+// reference dates). Each cell: [value or null for n/a, "red"|"amber"|"green"|"stress"|null].
+// The "now" column is filled by /api/bmc-today.
+const SECTIONS = [
+  { name: "Global Equity Valuations", rows: [
+    { id: "trailing_pe", label: "Trailing PE (SPX)", url: "https://www.multpl.com/s-p-500-pe-ratio",
+      cells: { mar00:[33,"red"], oct07:[17,null], feb20:[19,"amber"], dec21:[21,"amber"] } },
+    { id: "dy", label: "S&P 500 Dividend Yield", url: "https://www.multpl.com/s-p-500-dividend-yield",
+      cells: { mar00:[1.16,"red"], oct07:[1.77,null], feb20:[1.79,null], dec21:[1.29,"red"] } },
+    { id: "cape", label: "Shiller CAPE", url: "https://www.multpl.com/shiller-pe",
+      cells: { mar00:[43,"red"], oct07:[27,"amber"], feb20:[31,null], dec21:[38,"red"] } },
+    { id: "erp", label: "Equity Risk Premium (pp)", url: "https://www.multpl.com/s-p-500-earnings-yield",
+      cells: { mar00:[null,null], oct07:["+0.5",null], feb20:["+1.7",null], dec21:["+2.0",null] } },
+  ]},
+  { name: "Yield Curve", rows: [
+    { id: "t10y2y", label: "10Y − 2Y (bp)", url: "https://fred.stlouisfed.org/series/T10Y2Y",
+      cells: { mar00:[-47,"red"], oct07:["+54","amber"], feb20:["+27",null], dec21:["+79",null] } },
+  ]},
+  { name: "Sentiment", rows: [
+    { id: "margin_debt", label: "Margin Debt / SPX", url: "https://www.finra.org/investors/insights/margin-statistics",
+      cells: { mar00:[200,null], oct07:[243,null], feb20:[184,null], dec21:[191,"amber"] } },
+  ]},
+  { name: "Corporate Behaviour", rows: [
+    { id: "capex", label: "US Capex YoY (%)", url: "https://fred.stlouisfed.org/series/PNFI",
+      cells: { mar00:[9.7,"amber"], oct07:[8.0,"amber"], feb20:["+1.1",null], dec21:[7.9,"amber"] } },
+    { id: "ma_pct", label: "US M&A (last 12m % Mkt cap)", url: "https://www.bain.com/insights/topics/m-and-a-report/",
+      cells: { mar00:[11.4,"red"], oct07:[8.1,"red"], feb20:[4.4,null], dec21:[5.0,"amber"] } },
+    { id: "ipo_pct", label: "US IPO (last 12m % DM Mkt cap)", url: "https://www.renaissancecapital.com/IPO-Center/Stats",
+      cells: { mar00:[0.7,"red"], oct07:[0.4,"amber"], feb20:[0.2,null], dec21:[0.6,"amber"] } },
+  ]},
+  { name: "Balance sheets / credit markets", rows: [
+    { id: "baa10y", label: "Moody's BAA − 10Y (pp)", url: "https://fred.stlouisfed.org/series/BAA10Y",
+      cells: { mar00:[2.30,"amber"], oct07:[1.99,"amber"], feb20:[2.38,"amber"], dec21:[1.85,"amber"] } },
+    { id: "hy_oas", label: 'HY OAS (%) <span class="source-caveat">(ICE BofA 2023+; Citi pre-2023)</span>', url: "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
+      cells: { mar00:[6.00,null], oct07:[6.00,null], feb20:[4.80,"amber"], dec21:[3.37,null] } },
+    { id: "ig_oas", label: 'IG OAS (%) <span class="source-caveat">(ICE BofA 2023+)</span>', url: "https://fred.stlouisfed.org/series/BAMLC0A0CM",
+      cells: { mar00:[1.75,null], oct07:[1.75,null], feb20:[1.21,"amber"], dec21:[0.90,null] } },
+    { id: "ccc_hy_spread", label: "CCC − HY spread (pp)", url: "https://fred.stlouisfed.org/series/BAMLH0A3HYC",
+      cells: { mar00:[null,null], oct07:[null,null], feb20:[null,null], dec21:[null,null] } },
+    { id: "hyg_lqd", label: 'HYG / LQD ratio <span class="source-caveat">(HYG launched Apr 2007)</span>', url: "https://finance.yahoo.com/quote/HYG/",
+      cells: { mar00:[null,null], oct07:[0.635,null], feb20:[0.582,null], dec21:[0.611,null] } },
+  ]},
+  { name: "Equity / Rate Vol", rows: [
+    { id: "vix", label: "VIX", url: "https://finance.yahoo.com/quote/%5EVIX/",
+      cells: { mar00:[24.1,null], oct07:[18.5,null], feb20:[40.1,"stress"], dec21:[17.2,null] } },
+    { id: "skew", label: "SKEW", url: "https://finance.yahoo.com/quote/%5ESKEW/",
+      cells: { mar00:[113,null], oct07:[117,null], feb20:[131,null], dec21:[154,null] } },
+    { id: "move", label: "MOVE", url: "https://finance.yahoo.com/quote/%5EMOVE/",
+      cells: { mar00:[null,null], oct07:[90,null], feb20:[110,null], dec21:[77,null] } },
+    { id: "vix_slope", label: 'VIX9D / VIX3M <span class="source-caveat">(2011+)</span>', url: "https://finance.yahoo.com/quote/%5EVIX9D/",
+      cells: { mar00:[null,null], oct07:[null,null], feb20:[1.77,"stress"], dec21:[0.61,null] } },
+  ]},
+];
+
+const CACHE_KEY = 'bmc_today_v1';
+const CACHE_TTL_MS = 5 * 60 * 1000;  // 5 minutes — short enough for current values, long enough to avoid hammering API
+
+function fmt(v) {
+  if (v === null || v === undefined) return '<span class="bmc-na">n/a</span>';
+  if (typeof v === 'string') return v;
+  if (Math.abs(v) >= 100) return v.toFixed(0);
+  if (Math.abs(v) >= 10)  return v.toFixed(1);
+  if (Math.abs(v) >= 1)   return v.toFixed(2);
+  return v.toFixed(3);
+}
+
+function renderTable() {
+  const body = document.getElementById('bmcBody');
+  let html = '';
+  for (const sec of SECTIONS) {
+    html += `<tr class="section"><td class="label" colspan="6">${sec.name}</td></tr>`;
+    for (const row of sec.rows) {
+      html += `<tr><td class="label"><a href="${row.url}" target="_blank" rel="noopener">${row.label}</a></td>`;
+      for (const col of ['mar00','oct07','feb20','dec21']) {
+        const [v, flag] = row.cells[col] || [null, null];
+        const cls = flag ? `bmc-${flag}` : '';
+        html += `<td class="${cls}">${fmt(v)}</td>`;
+      }
+      // Now column — placeholder until /api/bmc-today returns
+      html += `<td class="now now-loading" id="now-${row.id}">loading…</td>`;
+      html += `</tr>`;
+    }
+  }
+  body.innerHTML = html;
+}
+
+async function loadToday() {
+  // Try localStorage cache first
+  try {
+    const raw = localStorage.getItem(CACHE_KEY);
+    if (raw) {
+      const obj = JSON.parse(raw);
+      if (obj && obj.t && Date.now() - obj.t < CACHE_TTL_MS) {
+        applyToday(obj.data);
+        document.getElementById('bmcLastUpdated').innerHTML =
+          `<span class="badge bg-secondary">cached</span> as of ${new Date(obj.t).toLocaleTimeString()}`;
+        // Still fetch in background to refresh cache for next view
+        fetchToday(true);
+        return;
+      }
+    }
+  } catch (e) {}
+
+  fetchToday(false);
+}
+
+async function fetchToday(silent) {
+  if (!silent) {
+    document.getElementById('bmcRefresh').disabled = true;
+  }
+  try {
+    const res = await fetch('/indicators/api/bmc-today');
+    const body = await res.json();
+    if (body && body.ok) {
+      applyToday(body.data);
+      try { localStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), data: body.data })); } catch (e) {}
+      document.getElementById('bmcLastUpdated').innerHTML =
+        `<span class="badge bg-success">fresh</span> ${new Date().toLocaleString()}`;
+    } else {
+      document.getElementById('bmcLastUpdated').innerHTML =
+        `<span class="badge bg-warning text-dark">error</span> ${(body && body.error) || 'unknown'}`;
+    }
+  } catch (e) {
+    console.error('BMC today fetch failed', e);
+    document.getElementById('bmcLastUpdated').innerHTML =
+      `<span class="badge bg-danger">offline</span>`;
+  } finally {
+    document.getElementById('bmcRefresh').disabled = false;
+  }
+}
+
+function applyToday(data) {
+  // data: { indicator_id: {value, flag, suffix} }
+  for (const sec of SECTIONS) {
+    for (const row of sec.rows) {
+      const cell = document.getElementById('now-' + row.id);
+      if (!cell) continue;
+      const rec = data[row.id];
+      if (!rec) {
+        cell.innerHTML = '<span class="bmc-na">n/a</span>';
+        cell.className = 'now bmc-na';
+        continue;
+      }
+      const flag = rec.flag || '';
+      const suffix = rec.suffix ? ` <span style="font-weight:normal;font-size:.85em;color:inherit;opacity:.7">${rec.suffix}</span>` : '';
+      cell.innerHTML = `<strong>${fmt(rec.value)}</strong>${suffix}`;
+      cell.className = 'now ' + (flag ? `bmc-${flag}` : '');
+    }
+  }
+}
+
+document.getElementById('bmcRefresh').addEventListener('click', () => {
+  localStorage.removeItem(CACHE_KEY);
+  fetchToday(false);
+});
+
+renderTable();
+loadToday();
+</script>
+
+</body>
+</html>
