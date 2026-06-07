@@ -235,10 +235,14 @@
   }
   function searchText(r){
     // Cached on the row object; rebuilt on first access only.
+    // Only the fields advertised in the search-box placeholder are indexed —
+    // catalyst and pdf-filename used to leak in here, which caused "catl"
+    // to match Lead Intelligent (catalyst says "CATL sodium battery"). Keep
+    // this list aligned with the placeholder text.
     if (r._search != null) return r._search;
     r._search = [
       r.company_ticker, r.company_name, r.research_institute,
-      r.rating, r.sector, r.report_pdf_filename, r.catalyst
+      r.rating, r.sector
     ].filter(Boolean).join(' ').toLowerCase();
     return r._search;
   }
