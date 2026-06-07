@@ -42,7 +42,7 @@ Today vs the start of past bear markets and recent peaks. **Red = full flag, ðŸŸ
 <td class="bmc-red">âˆ’47</td><td class="bmc-amber">+54</td><td>+27</td><td>+79</td><td class="now">+38</td></tr>
 
 <tr class="section"><td class="label" colspan="6">Sentiment</td></tr>
-<tr><td class="label"><a href="https://www.finra.org/investors/insights/margin-statistics">Margin Debt / SPX</a></td>
+<tr><td class="label"><a href="https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics">Margin Debt / SPX</a></td>
 <td>200</td><td>243</td><td>184</td><td class="bmc-amber">191</td><td class="now">181 <span style="color:#999">(mid)</span></td></tr>
 
 <tr class="section"><td class="label" colspan="6">Corporate Behaviour</td></tr>
