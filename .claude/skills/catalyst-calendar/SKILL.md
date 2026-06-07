@@ -49,6 +49,10 @@ For each release: time (ET), consensus (Bloomberg/Reuters), prior, our view (if 
 **Other**
 - Index rebalances (S&P, Nasdaq-100, MSCI), options expiry (monthly OPEX = 3rd Friday; quadruple witching), Treasury auctions if mega-size, government shutdown / debt-ceiling deadlines, geopolitical (election results, summits with potential market impact).
 
+**Market-pricing context (lighter than Mode B — pick 1–2 signals)**
+- For the day's main event: SPX 1DTE straddle implied move (as-of timestamp) + VIX entering AM + FedWatch probabilities if relevant. One line per signal.
+- See the [Event positioning lens](#event-positioning-lens--option--vix--spread-context-modes-a--b) section for the full toolkit. Day-of briefs use a tight subset; the Mode B preview is where the full per-indicator playbook lives.
+
 ### Output format
 
 Keep it scannable. A morning desk read is one screen, not three.
@@ -138,6 +142,16 @@ For each company / sector / macro lane:
 - Non-US: ECB, BOJ, BOE, PBOC, SAMR; CPI, PMI, GDP releases for major economies.
 - Geopolitical: G7/G20, elections, summit deadlines.
 
+**Market-pricing context (priority 2 — pair with every H-impact event)**
+
+For each high-impact macro print or earnings name, capture the option / VIX / spread context so the bull/bear thresholds are actionable, not abstract. Use the [Event positioning lens](#event-positioning-lens--option--vix--spread-context-modes-a--b) section below as the toolkit reference. Concretely, per H-impact event:
+
+- **Macro**: SPX 1DTE straddle implied move (as-of), VIX + VIX1D entering the week, FedWatch path probabilities, 2y yield level, MOVE percentile if rates vol is the relevant axis.
+- **Earnings**: ATM straddle implied move (Friday-expiry post-print), 3-yr historical-realized vs implied (long-gamma-cheap or rich?), single-name IV vs sector mean.
+- **Cross-asset cross-check**: HY OAS + 5y5y breakeven — do credit and inflation expectations agree with the equity-vol read?
+
+If the data is not pullable at write time (e.g. cron run on a closed market), say "implied move pending market open" rather than fabricating.
+
 ### Step 3: Calendar view
 
 Render as a sortable table:
@@ -181,8 +195,14 @@ Markdown narrative companion to the table:
 
 ## Positioning implications
 
-- <Stock/sector> ahead of <event> — should we lean in / hedge / stay flat?
-- Macro-binary events to size around (FOMC, NFP, CPI).
+For each H-impact event:
+- **What's priced** — FedWatch / 2y yield / consensus path. One line.
+- **Implied move** — SPX 1DTE straddle or single-name straddle (with as-of timestamp).
+- **Vol-surface tell** — VIX vs historical event-day average; VIX1D backwardation vs contango; SKEW; VVIX. Flag if cheap or rich relative to setup.
+- **Cross-asset check** — HY OAS + MOVE + 5y5y breakeven agree or disagree with equity vol?
+- **Decision** — long gamma / short gamma / directional / flat. One sentence with the trigger that would flip the call.
+
+Apply the [Event positioning lens](#event-positioning-lens--option--vix--spread-context-modes-a--b) per-indicator playbook table — each indicator type has a different primary tool.
 
 ## Next week heads-up
 
@@ -526,6 +546,109 @@ Every mode-C report must contain:
 One English file and one Chinese file per ordered (target, acquirer) tuple. Each tracking pass updates the date suffix in the filename to the new pass date. Older dated copies may exist if this is a multi-month tracking effort; treat them as a snapshot history.
 
 ---
+
+## Event positioning lens — option / VIX / spread context (Modes A & B)
+
+Bull/bear thresholds on a macro print or earnings release are only half the picture. The other half is **what's already priced** — if the market enters the print already short, a hot CPI delivers a smaller move than the same print into a long-positioned tape. This section codifies how to use option pricing, vol-surface signals, and credit spreads to translate the indicator-level bull/bear thresholds into actionable trade context.
+
+Apply this lens to Mode A briefs (day-of) and Mode B previews (week-ahead). Skip it for Mode C (single-deal M&A) — the spread math there is direct, not vol-based.
+
+### The 4-layer framework
+
+For every binary event (macro print, earnings, FOMC, vote outcome), ask in order:
+
+1. **What's priced?** — what does the consensus position imply? Tells you the size of the surprise needed to move the tape.
+2. **What's the implied move?** — what does the option market literally pay for movement on the print day?
+3. **What's the directional bias?** — skew + put-call ratio + 25-delta-put-vs-call IV; is downside already paid for, or is it fresh?
+4. **Cross-check** — do credit spreads, MOVE, and equity vol agree on the risk premium? If one disagrees, the dissenter is usually wrong by 1–2 standard deviations.
+
+### Toolkit
+
+| Tool | Measures | Where to find | What it tells you |
+|---|---|---|---|
+| **CMEGroup FedWatch** | Implied probability of each FOMC outcome at each meeting through year-end | [cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html](https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html) | What's already priced into the rate path. If hike-odds-by-year-end are already 40%, a hot CPI only adds 5–10pp. |
+| **2y Treasury yield** | The cleanest mirror of FedWatch (front-end is fully Fed-driven) | [FRED — DGS2](https://fred.stlouisfed.org/series/DGS2) | If 2y is at 4.05% before CPI, hawkish positioning is in; bearish surprise gets a small move. If 2y is at 3.85%, dovish positioning is in; hot CPI gets a 10–15bp jump. |
+| **SPX 1DTE / 0DTE straddle** | The option market's literal $-value bet on the move in the next 24 hours | Bloomberg OMON, optionsalpha, spotgamma. Or compute: ATM call + ATM put expiring next session. | If SPX 5800 and the 5800 straddle expiring tomorrow is $50, implied move is ±0.86%. Compare to historical reactions at the indicator's bull/bear levels. |
+| **VIX (1-mo)** | 30-day implied SPX vol — the overall risk premium | [^VIX](https://www.cboe.com/tradable_products/vix/) — tracked in `db/indicators.db` as `vix` | Cheap vol entering CPI (VIX <14 when 3-yr CPI-day average is ~16) = lean long gamma. Rich vol (>20) = lean short gamma. |
+| **VIX1D / VIX9D / VIX3M term structure** | Front-month vs back-month — is risk seen as event-driven or regime change? | CBOE: VIX1D, VIX9D, VIX3M. The `db/indicators.db` `vix_slope` may already encode the VIX/VIX3M ratio. | **Backwardation (VIX1D > VIX > VIX3M) = event fear priced.** **Contango = complacency.** For CPI specifically, VIX1D usually trades 3–5 points above VIX the morning of the print, then collapses by EOD. |
+| **VVIX** | Vol-of-vol — how much VIX itself could move | [^VVIX](https://www.cboe.com/tradable_products/vix/vvix/) — tracked in `db/indicators.db` as `vvix` | VVIX >100 = VIX could spike hard on surprise. VVIX <85 = vol itself is well-anchored; second-order reaction limited. |
+| **SKEW (CBOE)** | 25-delta-put IV vs 25-delta-call IV — is downside paid for? | [^SKEW](https://www.cboe.com/us/indices/dashboard/skew/) | Steep skew (>140) = downside is priced fat, asymmetric upside on a bull print. Flat skew (<120) = balanced bets. |
+| **MOVE index** | Treasury vol — rates-vol equivalent of VIX | [ICE BofA MOVE](https://www.ice.com/iba/move-index) | CPI weeks usually run 10–20% above 3-mo average. Decile-10 entering print = rates vol rich, hot CPI partially priced. Decile-30 = vol cheap, outsized curve move on surprise. |
+| **HY OAS / IG OAS** | Credit risk premium — cross-asset complacency check | FRED `BAMLH0A0HYM2` (HY), `BAMLC0A0CM` (IG). `db/indicators.db` has both as `hy_oas` / `ig_oas`. | If HY <300bp entering a hot CPI, the credit market is under-pricing recession risk and equity vol is the cleaner expression. If HY >400bp, credit already has growth fear in. |
+| **5y5y forward inflation breakeven** | Forward inflation expectations from TIPS | [FRED — T5YIFR](https://fred.stlouisfed.org/series/T5YIFR) | If 5y5y >2.55% entering CPI, "expectations un-anchoring" is already priced — relief print delivers outsized rally. <2.30% = expectations well-anchored, hot print delivers larger shock. |
+| **Single-name ATM straddle** | Implied move on earnings | Bloomberg OMON; [marketchameleon.com](https://marketchameleon.com/Overview/<TICKER>/Earnings/Earnings-Dates/) — quotes consensus implied move | The ATM straddle expiring the Friday after earnings = expected gap magnitude. ORCL typical 5–7%; ADBE 6–9%; mega-cap (NVDA / META / AMZN) 6–10%. |
+
+### Per-indicator playbook
+
+Each macro indicator has a *primary* pricing signal and a *"too high" tell*. Use the primary tool to gauge the size of the surprise needed; the "too high" tell flags when the market has over-positioned for one outcome.
+
+| Indicator | Primary tool | "Too high" tell (one side priced) | Decision rule |
+|---|---|---|---|
+| **CPI** | SPX 1DTE straddle + 2y yield + FedWatch | 1DTE straddle prices ±0.7%+ AND 2y at 4.05%+ AND hike-odds-by-year-end >35% → bear partially priced; upside outsized on a soft print | Bull print → upside ~150% of implied; bear print → downside ~110% of implied. **Buy 1DTE straddles if VIX <14 entering print AM**; sell if VIX >18. |
+| **PPI** | MOVE + 5y5y breakeven | 5y5y >2.55% = inflation expectations un-anchor priced; hot PPI delivers smaller move | Lower-impact than CPI; vol crush is the main trade. Sell-the-straddle the morning before (~75% win rate when MOVE >decile-7). |
+| **Jobless claims** | VIX + 2y yield | Pre-print VIX >16 AND 2y <3.85% → recession-bear partially priced | Single print rarely moves SPX >30bp unless >250k. Stay flat unless 4-week MA breaking 230k is plausible from a single print. |
+| **U-Mich sentiment** | 5y5y breakeven + DXY | 5y5y >2.55% AND DXY >107 = expectations un-anchoring priced | Trade rates vol (MOVE puts) not equity vol — U-Mich moves the curve more than SPX. |
+| **FOMC decision** | FedWatch + SOFR options + SPX 0DTE straddle | If FedWatch shows >85% probability for one outcome, the binary is collapsed and only the dots / Powell tone trades | Buy 0DTE straddles only when FedWatch is split 50–80% — the most asymmetric setup. SEP day amplifies move by 1.5–2x vs no-SEP meetings. |
+| **NFP** | VIX1D + 2y yield + SPX gamma | Pre-print VIX1D >5 above VIX = event priced; <2 above = complacent | Asymmetric to the **upside**-on-payrolls (huge beat) and **downside**-on-claims-driven (huge miss). Sub-component beats (wage growth, U6) often dominate the headline. |
+| **PCE (core)** | Already-released CPI + PPI services-ex-trade | Markets have ~70% of the PCE print priced after CPI / PPI; PCE-specific surprise is smaller | Trade PCE only on the residual surprise vs CPI/PPI predicted; standalone PCE move is rarely large. |
+| **ISM Manuf / Services** | VIX1D + HY OAS | If HY tight + VIX low, recession-bear is not priced; sub-48 ISM delivers outsized risk-off | Sub-50 ISM Services is the recession trigger most-watched in 2024–26. |
+
+### Earnings: implied-move framework
+
+For each single-name earnings print, the deliverable should include:
+
+1. **Implied move** (ATM straddle expiring the Friday after print) — quote from marketchameleon or Bloomberg.
+2. **3-year historical-realized move on earnings** — compare to implied. If realized > implied historically by >20%, the straddle is structurally cheap; long gamma into the print wins on average.
+3. **Bull / Bear gap estimate** under the bull/bear scenarios from the calendar — i.e. "If guide ≥ X, expect +8% gap; if guide ≤ Y, expect −10% gap."
+4. **IV crush expectation** — single-name IV always collapses 30–40% post-print regardless of direction. Selling premium into earnings *and* holding through the print wins ~60% of the time on names without binary catalysts; loses on names with binary catalysts (ADBE-style GenAI-disruption print, NVDA-style AI-spend referendum).
+
+### "Is the price too high?" decision rule
+
+The synthesis: compare what the option market is paying for movement to the gap-magnitude implied by the bull/bear thresholds.
+
+```
+implied_move = ATM straddle price / spot price
+expected_move_on_bull = avg(historical realized moves on similar-quality bull surprises)
+expected_move_on_bear = avg(historical realized moves on similar-quality bear surprises)
+
+if implied_move < min(|expected_move_on_bull|, |expected_move_on_bear|):
+    vol is cheap → BUY gamma (long straddle)
+elif implied_move > max(|expected_move_on_bull|, |expected_move_on_bear|) × 1.2:
+    vol is rich → SELL gamma (short straddle / iron condor)
+else:
+    fairly priced → directional bet if you have a view; flat if you don't
+```
+
+Concrete example for the Wed CPI:
+- If SPX 1DTE straddle is pricing ±0.85% and the bull print historically delivers +1.2%, +1.4%, +1.0% (avg 1.2%) and bear delivers −1.5%, −1.1%, −1.3% (avg −1.3%) — then implied (0.85%) < both expected moves. **Long gamma is cheap; buy the straddle.**
+- If implied is ±1.4% but the bull/bear distribution is ±1.0% — implied is rich. **Sell the straddle; expected IV crush + small realized move beats the gamma.**
+
+### Data sources in this project
+
+The `db/indicators.db` table tracks (read-only):
+- `vix`, `vvix`, `vix_slope` — equity vol surface (core of the framework)
+- `hy_oas`, `ig_oas`, `hyg`, `lqd` — credit spreads / spread proxies
+- `tnx`, `yield_spread`, `tbill_3m` — rates structure
+- `dxy`, `gold`, `oil` — cross-asset risk-on/off
+
+Add via the `/market-complacency` skill or as a separate engineering task (do NOT write to indicators.db from a calendar invocation — read-only only per CLAUDE.md § "Database Safety"):
+- `^MOVE` (Treasury vol)
+- `^SKEW` (CBOE SKEW)
+- `VIX1D`, `VIX9D`, `VIX3M` (term-structure components — verify whether `vix_slope` already encodes this before duplicating)
+- 5y5y forward inflation breakeven (`T5YIFR` from FRED)
+- 2y nominal yield (`DGS2` from FRED)
+
+For event-specific pricing context (FedWatch probabilities, SPX 1DTE straddle pricing, single-name implied moves), web-search at the time the brief is written — these update intraday and are not worth caching in indicators.db.
+
+### Guardrails — positioning lens
+
+- **Never quote an implied move without an as-of timestamp.** "Implied move is ±2.1%" requires "as of Tue 15:30 ET, straddle expiring Friday." Straddles re-price every minute.
+- **Never fabricate FedWatch probabilities.** Pull from CMEGroup live; if you can't, say "FedWatch pending" and don't make up a number.
+- **Never treat one tool's signal as the whole picture.** VIX cheap + HY tight + MOVE rich is a *split signal* — flag it as such; don't average across them.
+- **Never claim the option market is "wrong."** It's a price; it's right by definition. The trade is "is it too cheap or too rich for *my* expected move distribution?" That's a judgment call, not a fact statement.
+- **Never recommend selling vol into a binary event without flagging the tail risk.** Short-straddle / iron-condor positioning into FOMC / NFP / CPI loses 5–10× the typical winner when it loses. Make the tail explicit.
+- **Cross-asset disagreement is information, not a bug.** If credit is sanguine and equity vol is elevated, write that as a *finding* in the brief — don't smooth it into a single number.
+- **For new indicators, calibrate from historical-realized moves before committing to a bull/bear gap estimate.** "CPI bull = +1.2% SPX move" should be backed by a sample of comparable prior bull-surprise CPI days.
 
 ## Cross-cutting guardrails (all modes)
 
