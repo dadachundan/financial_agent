@@ -52,6 +52,21 @@
   tbody tr.group-alt { background:rgba(255,255,255,.025); }
   tbody tr.group-first td { border-top:1px solid rgba(125,211,252,.25); }
 
+  /* Market filter chips */
+  .market-chips { display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+  .market-chips .label { color:#9ca3af; font-size:.72rem; margin-right:2px; }
+  .market-chip {
+    background:#1f2226; color:#d1d5db; border:1px solid #3a3f44;
+    padding:2px 9px; border-radius:11px; cursor:pointer; font-size:.74rem;
+    font-weight:500; user-select:none; transition:background .12s, color .12s, border-color .12s;
+  }
+  .market-chip:hover { border-color:#0d6efd; }
+  .market-chip.active { background:#0d6efd; color:#fff; border-color:#0d6efd; }
+  .market-chip .n { color:rgba(255,255,255,.55); font-weight:400; margin-left:4px; font-size:.68rem; }
+  .market-chip:not(.active) .n { color:#7c818a; }
+  .market-chip.allbtn { background:#23272b; color:#9ca3af; font-style:italic; }
+  .market-chip.allbtn:hover { color:#fff; }
+
   /* Pager */
   .pager { background:#23272b; padding:6px 12px; border-radius:6px; margin-bottom:8px; display:flex; gap:10px; align-items:center; font-size:.8rem; flex-wrap:wrap; }
   .pager button { background:#0d6efd; color:#fff; border:none; padding:3px 12px; border-radius:4px; cursor:pointer; font-size:.8rem; }
@@ -74,6 +89,10 @@
         <span class="date-label">To <span id="date-max" class="date-val">--</span></span>
       </div>
       <div id="date-slider"></div>
+    </div>
+    <div id="market-chips" class="market-chips mt-2">
+      <span class="label">🌐 Markets:</span>
+      <span class="small text-muted">loading…</span>
     </div>
     <div class="d-flex flex-wrap gap-2 align-items-center mt-2">
       <input id="filter" type="text" class="form-control form-control-sm" style="max-width:340px"
@@ -169,7 +188,11 @@
     curMinTs: 0, curMaxTs: 0,
     page: 0,
     pageSize: parseInt(pageSizeSel.value, 10) || 100,
+    activeMarkets: null,  // null = all markets selected; otherwise Set of market codes to KEEP
+    allMarkets: [],       // sorted list of distinct market codes seen in data
+    marketCounts: {},     // market -> ticker count (for chip "n" badge)
   };
+  var marketChipsEl = document.getElementById('market-chips');
 
   function parseDate(s){ if(!s) return NaN; var t = Date.parse(s); return isNaN(t) ? NaN : t; }
   function fmtDate(t){
@@ -296,6 +319,11 @@
     });
   }
 
+  function rowInActiveMarkets(r){
+    if (!STATE.activeMarkets) return true;     // null = all markets shown
+    return STATE.activeMarkets.has(r.market || '?');
+  }
+
   function recompute(){
     var minTs = STATE.curMinTs, maxTs = STATE.curMaxTs;
     var q = filter.value.trim().toLowerCase();
@@ -309,9 +337,12 @@
     });
 
     // 2. Stats from date-filtered rows ONLY (text filter narrows display,
-    //    not the consensus calc).
+    //    not the consensus calc). Market filter also narrows stats — if you
+    //    untick HK, the per-ticker average shown should be the average across
+    //    the remaining selected markets only.
+    var statsBase = dateFiltered.filter(rowInActiveMarkets);
     STATE.perTickerStats = {};
-    dateFiltered.forEach(function(r){
+    statsBase.forEach(function(r){
       var pt = r.price_target;
       var ticker = r.company_ticker;
       if (!ticker || pt == null) return;
@@ -322,11 +353,16 @@
       s.ccyCount[ccy] = (s.ccyCount[ccy] || 0) + 1;
     });
 
-    // 3. Text filter applied on top.
-    var shown = tokens.length === 0 ? dateFiltered.slice() : dateFiltered.filter(function(r){
-      var txt = searchText(r);
-      return tokens.every(function(t){ return txt.indexOf(t) >= 0; });
-    });
+    // 3. Market + text filter applied on top.
+    var shown = statsBase;
+    if (tokens.length > 0) {
+      shown = shown.filter(function(r){
+        var txt = searchText(r);
+        return tokens.every(function(t){ return txt.indexOf(t) >= 0; });
+      });
+    } else {
+      shown = shown.slice();
+    }
 
     // 4. Sort.
     sortRows(shown);
@@ -502,10 +538,69 @@
     });
   }
 
+  function scanMarkets(){
+    // Count distinct TICKERS per market (not rows) — so the chip badge
+    // tracks how many companies live in that market, not how many PT calls.
+    var seen = {};   // market -> Set of tickers
+    STATE.all.forEach(function(r){
+      var m = r.market || '?';
+      if (!seen[m]) seen[m] = {};
+      if (r.company_ticker) seen[m][r.company_ticker] = true;
+    });
+    var counts = {};
+    Object.keys(seen).forEach(function(m){ counts[m] = Object.keys(seen[m]).length; });
+    // Stable order: known markets first in a sensible priority, then anything
+    // else alphabetically.
+    var PRIORITY = ['US','HK','CN','TW','JP','KR','EU','AU','IN','CA','INDEX','?'];
+    var ordered = [];
+    PRIORITY.forEach(function(m){ if (counts[m] != null) ordered.push(m); });
+    Object.keys(counts).forEach(function(m){
+      if (PRIORITY.indexOf(m) < 0) ordered.push(m);
+    });
+    STATE.allMarkets = ordered;
+    STATE.marketCounts = counts;
+  }
+
+  function renderMarketChips(){
+    var html = '<span class="label">🌐 Markets:</span>';
+    html += '<span class="market-chip allbtn" data-market="__all">all</span>';
+    html += '<span class="market-chip allbtn" data-market="__none">none</span>';
+    STATE.allMarkets.forEach(function(m){
+      var active = !STATE.activeMarkets || STATE.activeMarkets.has(m);
+      html += '<span class="market-chip ' + (active ? 'active' : '') + '" data-market="' + esc(m) + '">'
+        + esc(m) + '<span class="n">' + STATE.marketCounts[m] + '</span></span>';
+    });
+    marketChipsEl.innerHTML = html;
+    marketChipsEl.querySelectorAll('.market-chip').forEach(function(el){
+      el.addEventListener('click', function(){
+        var m = el.dataset.market;
+        if (m === '__all') {
+          STATE.activeMarkets = null;     // null = all selected
+        } else if (m === '__none') {
+          STATE.activeMarkets = new Set(); // empty = none
+        } else {
+          // Toggle a single market. If activeMarkets is null (all), turning
+          // one OFF means start from "all-except-this".
+          if (!STATE.activeMarkets) STATE.activeMarkets = new Set(STATE.allMarkets);
+          if (STATE.activeMarkets.has(m)) STATE.activeMarkets.delete(m);
+          else STATE.activeMarkets.add(m);
+          // If all markets are now in the set, collapse back to null
+          // (semantically equivalent + lets the "all" chip read as active).
+          if (STATE.activeMarkets.size === STATE.allMarkets.length) STATE.activeMarkets = null;
+        }
+        renderMarketChips();
+        STATE.page = 0;
+        recompute();
+      });
+    });
+  }
+
   fetch('/pt/api/rows')
     .then(function(r){ return r.json(); })
     .then(function(rows){
       STATE.all = rows;
+      scanMarkets();
+      renderMarketChips();
       initSlider();
       bindEvents();
       updateSortIndicators();

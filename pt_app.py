@@ -22,6 +22,34 @@ DB_PATH: Path = db_path("stock_price_target.db")
 pt_bp = Blueprint("pt", __name__, template_folder="templates")
 
 
+# yfinance-suffix -> market label. Mirrors scripts/missing_coverage.py so
+# the /pt/ market filter, the missing-coverage CLI, and any future region
+# tooling agree on the same canonical regions.
+_MARKET_BY_SUFFIX = {
+    ".HK":  "HK",
+    ".SS":  "CN", ".SZ": "CN",
+    ".TW":  "TW", ".TWO": "TW",
+    ".T":   "JP", ".JP":  "JP",
+    ".KS":  "KR",
+    ".NS":  "IN", ".BO":  "IN",
+    ".DE":  "EU", ".PA":  "EU", ".AS": "EU", ".SW": "EU",
+    ".L":   "EU", ".MI":  "EU", ".MC": "EU",
+    ".TO":  "CA", ".V":   "CA",
+    ".AX":  "AU",
+}
+
+
+def _market_for(ticker: str) -> str:
+    if not ticker:
+        return "?"
+    if ticker.startswith("^"):
+        return "INDEX"
+    if "." in ticker:
+        suffix = "." + ticker.rsplit(".", 1)[1]
+        return _MARKET_BY_SUFFIX.get(suffix, "?")
+    return "US"  # bare ticker = US (NYSE/NASDAQ/AMEX)
+
+
 def _query_all_rows() -> list[dict]:
     if not DB_PATH.exists():
         return []
@@ -56,6 +84,7 @@ def _query_all_rows() -> list[dict]:
         for r in rows:
             d = dict(r)
             d["sector"] = sector_map.sector_for_yfinance(d["company_ticker"])
+            d["market"] = _market_for(d["company_ticker"])
             out.append(d)
         return out
 
