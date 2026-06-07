@@ -214,7 +214,7 @@ The build script in Step 1 already wrote all 10 charts to `reports/charts/market
 6. `*_move.png` — MOVE Index, last 10 years.
 7. `*_erp.png` — ERP (S&P 500 E/P − 10Y), 2001–present, negative regions shaded.
 8. `*_indicators_bar.png` — per-indicator complacency percentile bar chart, with composite line.
-9. `*_precedents.png` — scatter of precedent composite vs SPY 12m forward return.
+9. ~~`*_precedents.png`~~ — REMOVED in v9 (was keyed to the dropped composite metric; 7 scattered points showed no pattern).
 10. `*_cape.png` — Shiller CAPE, 2001–present, with reference line at CAPE 30.
 
 Each chart caption in the report should end with:
@@ -296,13 +296,15 @@ Mandatory blocks, in this order:
 
    **Mandatory chart styling — bear-market shading** (Citi BMC Figure 3+ style). Every time-series chart must have light-grey vertical bars (`axvspan(alpha=0.20, color="#888888")`) over the major US bear-market windows so the reader has visual context for "what was happening in those periods." The build script defines `BEAR_PERIODS` and `_shade_bears(ax)` helper that applies five reference windows: 1990-07/10 (Iraq/recession), 2000-03/2002-10 (dot-com), 2007-10/2009-03 (GFC), 2020-02/2020-03 (COVID), 2022-01/2022-10 (Fed pivot). Charts that are NOT time-series (per-indicator bars, precedents scatter, etc.) skip the shading.
 
-5. **`## Action Implications`** — single 5-row table covering all 5 tier postures (Stretched / Elevated / Neutral / Cautious / Panicked) with today's row bolded, plus a 3-bullet "Specific notes for today" block. Total ≤150 words.
+5. **`## Data Used / 数据来源清单`** — single source table grouping every indicator by category with its source URL. NO per-indicator paragraphs.
 
-6. **`## Historical Precedents`** — 8-row table of precedents within ±5 of today's composite, with 6m/12m/24m SPY forward + 24m max DD. One closing sentence stating median 12m forward return + max DD context.
+The user has explicitly rejected (v9 user feedback) the following blocks as not useful:
+- ❌ Action Implications (the 5-row posture table) — the reader can derive postures from the flag count + Citi anchor; restating them in prose adds noise
+- ❌ Historical Precedents (the date-by-date forward-return table) — small sample, noisy, no clean takeaway
+- ❌ Backtest validation — precision numbers (~22% at T=10) are too low to motivate action; the report shouldn't read like a justification
+- ❌ Caveats list — the bear-market shading on charts + the data-limitation italics in Figure 2 carry the necessary disclaimers; a separate prose section is redundant
 
-7. **`## Caveats`** — bulleted list of 4-6 caveats. Each ≤2 sentences. Must include: "low PE doesn't protect against a bear" (GFC and COVID counter-example); dashboard is a regime descriptor not a drawdown predictor (with empirical lift number from the backtest); ICE BofA / FRED window disclosure; any indicators currently dark.
-
-8. **`## Data Used / 数据来源清单`** — single source table grouping every indicator by category with its source URL. NO per-indicator paragraphs.
+Do NOT add these sections back unless the user explicitly asks. The report must end at Data Used.
 
 ### What NOT to include in Citi-style mode
 

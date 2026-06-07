@@ -1434,25 +1434,12 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
     plt.savefig(CHARTS / f"market_complacency_{as_of}_indicators_bar.png", dpi=150, bbox_inches="tight")
     plt.close()
 
-    # Chart 9: Precedents scatter
-    if not prec_df.empty and "ret_12m" in prec_df.columns and prec_df["ret_12m"].notna().any():
-        fig, ax = plt.subplots(figsize=(11, 5))
-        sub = prec_df.dropna(subset=["ret_12m"])
-        ax.scatter(sub["composite"], sub["ret_12m"], s=80, alpha=0.7, color="#1d3557")
-        for _, r in sub.iterrows():
-            ax.annotate(r["date"][:7],
-                        xy=(r["composite"], r["ret_12m"]),
-                        xytext=(5, 5), textcoords="offset points", fontsize=8)
-        ax.axhline(0, color="black", alpha=0.3)
-        ax.set_xlabel("Composite at precedent date")
-        ax.set_ylabel("SPY 12-month forward return (%)")
-        ax.set_title(f"Precedents within ±5 of today's composite ({composite:.1f}) — 12m forward SPY")
-        ax.grid(alpha=0.3)
-        plt.tight_layout()
-        plt.savefig(CHARTS / f"market_complacency_{as_of}_precedents.png", dpi=150, bbox_inches="tight")
-        plt.close()
+    # Precedents scatter chart REMOVED in v9 — keyed to the composite metric
+    # (since dropped as statistically uninformative), 7 scattered points showed
+    # no pattern, added no signal beyond the precedents table (which was also
+    # removed in v9 along with Action Implications / Backtest / Caveats).
 
-    # Chart 10: CAPE
+    # Chart 9: CAPE
     if not series["cape"].empty:
         cape_25y = series["cape"]
         fig, ax = plt.subplots(figsize=(11, 4.5))
