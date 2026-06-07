@@ -194,9 +194,9 @@
         <button type="button" class="btn btn-outline-secondary btn-sm" data-range="3m">3M</button>
         <button type="button" class="btn btn-outline-secondary btn-sm" data-range="6m">6M</button>
         <button type="button" class="btn btn-outline-secondary btn-sm" data-range="ytd">YTD</button>
-        <button type="button" class="btn btn-outline-secondary btn-sm active" data-range="1y">1Y</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-range="1y">1Y</button>
         <button type="button" class="btn btn-outline-secondary btn-sm" data-range="5y">5Y</button>
-        <button type="button" class="btn btn-outline-secondary btn-sm" data-range="max">MAX</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm active" data-range="max">MAX</button>
       </div>
       <span id="dashRangeSpinner" class="text-muted small d-none">Loading…</span>
       <span id="refreshBadge" class="badge bg-warning text-dark refreshing-badge d-none">
@@ -230,9 +230,9 @@
             <button type="button" class="btn btn-outline-secondary btn-sm" data-range="3m">3M</button>
             <button type="button" class="btn btn-outline-secondary btn-sm" data-range="6m">6M</button>
             <button type="button" class="btn btn-outline-secondary btn-sm" data-range="ytd">YTD</button>
-            <button type="button" class="btn btn-outline-secondary btn-sm active" data-range="1y">1Y</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" data-range="1y">1Y</button>
             <button type="button" class="btn btn-outline-secondary btn-sm" data-range="5y">5Y</button>
-            <button type="button" class="btn btn-outline-secondary btn-sm" data-range="max">MAX</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm active" data-range="max">MAX</button>
           </div>
           <div id="detailSourceBadge" class="text-muted small"></div>
         </div>
@@ -256,9 +256,32 @@
   let _snapshot  = {};   // {id: {value, change_1d, change_1w, change_type, signal, history}}
   let _detailChart = null;
   let _detailInd = null;       // currently-open indicator object
-  let _detailRange = '1y';     // currently-selected range key in modal
-  let _dashRange   = '1y';     // currently-selected range key on dashboard
-  const _RANGE_HISTORY = {};   // {rangeKey: {id: [{date, value}, ...]}} — sparkline cache
+  let _detailRange = 'max';    // currently-selected range key in modal
+  let _dashRange   = 'max';    // currently-selected range key on dashboard
+  const _RANGE_HISTORY = {};   // {rangeKey: {id: [{date, value}, ...]}} — sparkline cache (persisted to localStorage on load)
+
+  // ── localStorage cache for range histories (so default MAX isn't slow) ─
+  const _CACHE_KEY = 'indicators_range_cache_v1';
+  const _CACHE_TTL_MS = 6 * 60 * 60 * 1000;  // 6h
+  function _loadCache() {
+    try {
+      const raw = localStorage.getItem(_CACHE_KEY);
+      if (!raw) return;
+      const obj = JSON.parse(raw);
+      if (!obj || !obj.t || Date.now() - obj.t > _CACHE_TTL_MS) return;
+      for (const k of Object.keys(obj.r || {})) {
+        _RANGE_HISTORY[k] = obj.r[k];
+      }
+    } catch (e) {}
+  }
+  function _saveCache() {
+    try {
+      localStorage.setItem(_CACHE_KEY, JSON.stringify({
+        t: Date.now(), r: _RANGE_HISTORY,
+      }));
+    } catch (e) {}
+  }
+  _loadCache();
 
   const _FRED_SERIES = {       // indicator-id → FRED series id (for embed)
     hy_oas: 'BAMLH0A0HYM2',
@@ -283,10 +306,10 @@
       }
 
       renderGrid();
-      // Kick off the 1Y dashboard fetch in the background — sparklines update
-      // as soon as it arrives. No await: the short-history snapshot already
-      // gave us something to render immediately.
-      loadDashRange('1y');
+      // Default = MAX. If the cache already has MAX, sparklines render
+      // instantly from cache. If not, the snapshot's 45-day history shows
+      // first; MAX kicks in once the API call returns.
+      loadDashRange('max');
     } catch (e) {
       console.error('Boot error', e);
     } finally {
@@ -427,21 +450,23 @@
       delete _sparkCharts[ind.id];
     }
 
-    // While the active range is still being fetched, the cache for that range
-    // is empty. Don't fall back to the snapshot's ~30-day history — that
-    // would render under the wrong range label. Show a "Loading…" placeholder
-    // instead, so the user knows what they see matches the highlighted button.
+    // While the active range is still being fetched, fall back to the
+    // snapshot's ~45-day history so the user sees SOMETHING instead of an
+    // empty box. When the range API returns, drawSparkline re-runs and the
+    // correct full-range data replaces the fallback.
     const wrap = canvas.parentElement;
     const rangeCache = _RANGE_HISTORY[_dashRange];
-    if (!rangeCache) {
+    let hist = [];
+    let isFallback = false;
+    if (rangeCache && rangeCache[ind.id]) {
+      hist = rangeCache[ind.id];
+      if (wrap) wrap.classList.remove('loading');
+    } else {
+      // Fallback to snapshot history (45 days from /api/snapshot)
+      hist = (rec && rec.history) || [];
+      isFallback = true;
       if (wrap) wrap.classList.add('loading');
-      const ctx = canvas.getContext('2d');
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      return;
     }
-    if (wrap) wrap.classList.remove('loading');
-
-    let hist = (rangeCache && rangeCache[ind.id]) || [];
     if (hist.length < 2) return;
     // Cap sparkline density so MAX / 5Y don't crush the tiny canvas
     if (hist.length > 250) {
@@ -568,9 +593,10 @@
       _catalogue.forEach(ind => drawSparkline(ind));
       return;
     }
-    // Cache miss → blank every sparkline NOW so the user doesn't see the
-    // previous range's data sitting under the new highlighted button.
-    _catalogue.forEach(ind => drawSparkline(ind));
+    // Cache miss → show whatever short-history we have from the snapshot
+    // (45 days from /api/snapshot) AS A FALLBACK so the user sees something
+    // instead of an empty area while the range API call completes.
+    _catalogue.forEach(ind => drawSparkline(ind));   // renders from snapshot history
     const spinner = document.getElementById('dashRangeSpinner');
     spinner.classList.remove('d-none');
     try {
@@ -580,6 +606,7 @@
         // only commit the result if the user hasn't clicked another range while waiting
         _RANGE_HISTORY[rangeKey] = body.data;
         _catalogue.forEach(ind => drawSparkline(ind));
+        _saveCache();   // persist to localStorage so next page-load is instant
       }
     } catch (e) {
       console.error('range-snapshot fetch failed', e);
