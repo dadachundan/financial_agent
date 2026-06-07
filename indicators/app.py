@@ -99,15 +99,32 @@ def _indicator_meta() -> list[dict]:
 
 # ── Routes ────────────────────────────────────────────────────────────────────
 
+def _latest_chart_date() -> str | None:
+    """Find the most recent build_dashboard chart-set date (YYYY-MM-DD)
+    by scanning reports/charts/market_complacency_<DATE>_credit_baa.html.
+    Returns None if no chart sets have been generated yet."""
+    import pathlib, re
+    charts = pathlib.Path(__file__).resolve().parent.parent / "reports" / "charts"
+    pat = re.compile(r"market_complacency_(\d{4}-\d{2}-\d{2})_credit_baa\.html$")
+    dates = sorted({
+        m.group(1)
+        for p in charts.glob("market_complacency_*_credit_baa.html")
+        if (m := pat.search(p.name))
+    })
+    return dates[-1] if dates else None
+
+
 @indicators_bp.route("/")
 def dashboard():
-    """Default view: Bear Market Checklist (BMC) calibration table.
+    """Default view: Bear Market Checklist (BMC) calibration table +
+    interactive Under-the-Hood Plotly charts.
     Mirrors Figure 2 of the market-complacency report — historical reference
     columns hardcoded, Now column fetched live from /api/bmc-today (5-min cache).
     """
     return render_template(
         "bmc.html",
         nav=nw2.NAV_HTML,
+        chart_date=_latest_chart_date(),
     )
 
 

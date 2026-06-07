@@ -81,6 +81,47 @@
   <a href="/claude-reports/view/market-complacency/market_complacency_2026-06-07.md">Full complacency report</a>
 </div>
 
+{% if chart_date %}
+<h5 class="mt-4 mb-2">📈 Under the Hood</h5>
+<div class="bmc-meta mb-3">
+  Each chart is <strong>interactive</strong> — use the 1Y / YTD / 5Y / 10Y / ALL buttons
+  (top-left) or the bottom range-slider to adjust the time span. Bear-market shading
+  in grey. Generated <code>{{ chart_date }}</code> via
+  <code>.claude/skills/market-complacency/scripts/build_dashboard.py</code>.
+</div>
+
+<div class="row g-3">
+  {% set base = "/claude-reports/view/charts/market_complacency_" ~ chart_date %}
+  {% for slug, title in [
+    ("credit_baa",  "Long-history credit — Moody's BAA−10Y (1986+)"),
+    ("ig_credit",   "IG credit tiers — Moody's AAA−10Y vs BAA−10Y + dispersion"),
+    ("cape",        "Shiller CAPE (1871+)"),
+    ("erp",         "Equity Risk Premium = E/P − 10Y"),
+    ("vix_vvix",    "VIX (1990+) & VVIX (2007+)"),
+    ("vix_slope",   "VIX Term Slope — VIX9D/VIX3M + VIX/VIX3M long-history proxy"),
+    ("move",        "MOVE Index (2002+)"),
+  ] %}
+  <div class="col-12">
+    <div class="card" style="border:1px solid #d7dadc;">
+      <div class="card-header py-2" style="background:#f4f4f4; font-size:.85rem; font-weight:600;">
+        Figure {{ loop.index + 2 }}. {{ title }}
+      </div>
+      <iframe src="{{ base }}_{{ slug }}.html"
+              width="100%" height="480"
+              style="border:0; display:block;"
+              loading="lazy"></iframe>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<div class="alert alert-warning mt-4" role="alert">
+  No interactive charts available yet. Run
+  <code>python .claude/skills/market-complacency/scripts/build_dashboard.py --date YYYY-MM-DD</code>
+  to generate them.
+</div>
+{% endif %}
+
 </div>
 
 <script>
