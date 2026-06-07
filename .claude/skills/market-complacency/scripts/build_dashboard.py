@@ -1366,50 +1366,55 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
         plt.savefig(CHARTS / f"market_complacency_{as_of}_ig_ccc.png", dpi=150, bbox_inches="tight")
         plt.close()
 
-    # Chart 4: VIX + VVIX overlay (window)
+    # Chart 4: VIX + VVIX overlay — FULL history.
+    # VIX goes back to 1990 (Yahoo), VVIX back to 2007. Use full series, not
+    # last-10y window, so reader sees dot-com / GFC / COVID spikes.
     if not series["vix"].empty and not series["vvix"].empty:
-        vix_win = series["vix"][series["vix"].index >= win_start]
-        vvix_win = series["vvix"][series["vvix"].index >= win_start]
+        vix_full = series["vix"]
+        vvix_full = series["vvix"]
         fig, ax = plt.subplots(figsize=(11, 4.5))
         _shade_bears(ax)
-        ax.plot(vix_win.index, vix_win.values, lw=0.9, color="#1d3557", label="VIX")
+        ax.plot(vix_full.index, vix_full.values, lw=0.7, color="#1d3557", label="VIX (1990+)")
         ax2 = ax.twinx()
-        ax2.plot(vvix_win.index, vvix_win.values, lw=0.9, color="#e63946", label="VVIX", alpha=0.7)
+        ax2.plot(vvix_full.index, vvix_full.values, lw=0.7, color="#e63946", label="VVIX (2007+)", alpha=0.6)
         ax.set_ylabel("VIX", color="#1d3557")
         ax2.set_ylabel("VVIX", color="#e63946")
-        ax.set_title(f"VIX & VVIX, last {window_years} years")
+        ax.set_title(f"VIX (1990+) & VVIX (2007+) — Today: VIX {vix_full.iloc[-1]:.1f}, VVIX {vvix_full.iloc[-1]:.0f}")
         ax.grid(alpha=0.3)
         ax.legend(loc="upper left"); ax2.legend(loc="upper right")
         plt.tight_layout()
         plt.savefig(CHARTS / f"market_complacency_{as_of}_vix_vvix.png", dpi=150, bbox_inches="tight")
         plt.close()
 
-    # Chart 5: VIX term slope (window)
+    # Chart 5: VIX term slope — full history from when VIX9D started (2011).
+    # Pre-2011 doesn't exist because CBOE didn't publish a 9-day VIX before then.
     if not series["vix_slope"].empty:
-        slope_win = series["vix_slope"][series["vix_slope"].index >= win_start]
+        slope_full = series["vix_slope"]
         fig, ax = plt.subplots(figsize=(11, 4.5))
         _shade_bears(ax)
-        ax.plot(slope_win.index, slope_win.values, lw=0.7, color="#264653")
+        ax.plot(slope_full.index, slope_full.values, lw=0.6, color="#264653", label="VIX9D / VIX3M")
         ax.axhline(1.0, ls="--", color="black", alpha=0.5, label="Contango/Backwardation")
         ax.axhspan(0, 0.85, alpha=0.10, color="#7eb541", label="Deep contango (calm)")
-        ax.axhspan(1.0, max(2.0, slope_win.max() * 1.05), alpha=0.10, color="#e63946", label="Backwardation (stress)")
+        ax.axhspan(1.0, max(2.5, slope_full.max() * 1.05), alpha=0.10, color="#e63946", label="Backwardation (stress)")
         ax.set_ylabel("VIX9D / VIX3M")
-        ax.set_title(f"VIX Term Slope (VIX9D ÷ VIX3M), last {window_years} years")
-        ax.grid(alpha=0.3); ax.legend(loc="upper right")
+        ax.set_title(f"VIX Term Slope (VIX9D ÷ VIX3M), 2011+ — Today: {slope_full.iloc[-1]:.2f} (pre-2011 unavailable; VIX9D launched 2011)")
+        ax.grid(alpha=0.3); ax.legend(loc="upper right", fontsize=8)
         plt.tight_layout()
         plt.savefig(CHARTS / f"market_complacency_{as_of}_vix_slope.png", dpi=150, bbox_inches="tight")
         plt.close()
 
-    # Chart 6: MOVE (window)
+    # Chart 6: MOVE — full history from 2002 (Yahoo's earliest).
+    # Note: pre-2002 doesn't exist on Yahoo; the MOVE index was created in
+    # 1988 but Yahoo's data starts in 2002.
     if not series["move"].empty:
-        move_win = series["move"][series["move"].index >= win_start]
+        move_full = series["move"]
         fig, ax = plt.subplots(figsize=(11, 4.5))
         _shade_bears(ax)
-        ax.plot(move_win.index, move_win.values, lw=0.9, color="#6a4c93")
+        ax.plot(move_full.index, move_full.values, lw=0.7, color="#6a4c93", label="MOVE Index")
         ax.axhline(80, ls="--", color="green", alpha=0.5, label="80 (calm)")
         ax.axhline(120, ls="--", color="red", alpha=0.5, label="120 (stress)")
         ax.set_ylabel("MOVE Index")
-        ax.set_title(f"MOVE Index, last {window_years} years")
+        ax.set_title(f"MOVE Index (rate vol), 2002+ — Today: {move_full.iloc[-1]:.0f} (Yahoo's earliest; index created 1988)")
         ax.grid(alpha=0.3); ax.legend(loc="upper right")
         plt.tight_layout()
         plt.savefig(CHARTS / f"market_complacency_{as_of}_move.png", dpi=150, bbox_inches="tight")

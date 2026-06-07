@@ -33,7 +33,7 @@ Today vs the start of past bear markets and recent peaks. **Red = full flag, �
 | [VIX](https://finance.yahoo.com/quote/%5EVIX/) | 24.1 | 18.5 | 🚨 40.1 | 17.2 | 21.5 |
 | [SKEW](https://finance.yahoo.com/quote/%5ESKEW/) | 113 | 117 | 131 | 154 | 🟢 **152** (contra) |
 | [MOVE](https://finance.yahoo.com/quote/%5EMOVE/) | n/a | 90 | 110 | 77 | 75 |
-| [VIX9D](https://finance.yahoo.com/quote/%5EVIX9D/) / [VIX3M](https://finance.yahoo.com/quote/%5EVIX3M/) | n/a | n/a | n/a | n/a | 🟢 **1.10 backwardated** (contra) |
+| [VIX9D](https://finance.yahoo.com/quote/%5EVIX9D/) / [VIX3M](https://finance.yahoo.com/quote/%5EVIX3M/) *(VIX9D launched 2011)* | n/a | n/a | 🚨 1.77 (COVID panic) | 0.61 | 🟢 **1.10 backwardated** (contra) |
 | **# Flags (this dashboard / 20)** | n/a* | n/a* | n/a* | n/a* | **8.0** |
 | **# Flags (Citi BMC / 18)** | 17.5 | 13.0 | 5.5 | 8.5 | 10.0 (Global), 11.5 (US) |
 
