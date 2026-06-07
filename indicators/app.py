@@ -290,8 +290,7 @@ def _bmc_compute_today() -> dict:
     if ccc is not None and hy is not None:
         spread = ccc - hy
         flag = "green" if spread >= 6.0 else None
-        suffix = "(10y max — contra)" if flag == "green" else None
-        out["ccc_hy_spread"] = {"value": round(spread, 2), "flag": flag, "suffix": suffix}
+        out["ccc_hy_spread"] = {"value": round(spread, 2), "flag": flag, "suffix": None}
 
     # HYG / LQD ratio
     hyg = _safe(lambda: _yf_latest("HYG"))
@@ -299,7 +298,8 @@ def _bmc_compute_today() -> dict:
     if hyg is not None and lqd is not None:
         r = hyg / lqd
         flag = "red" if r >= 0.72 else ("amber" if r >= 0.69 else None)
-        out["hyg_lqd"] = {"value": round(r, 3), "flag": flag, "suffix": "(19y high)" if r >= 0.72 else None}
+        # No suffix — cell color already conveys the signal direction.
+        out["hyg_lqd"] = {"value": round(r, 3), "flag": flag, "suffix": None}
 
     # VIX (Yahoo ^VIX)
     vix = _safe(lambda: _yf_latest("^VIX"))
@@ -307,11 +307,12 @@ def _bmc_compute_today() -> dict:
         flag = "stress" if vix >= 30 else ("amber" if vix >= 20 else None)
         out["vix"] = {"value": round(vix, 1), "flag": flag, "suffix": None}
 
-    # SKEW (Yahoo ^SKEW). High = contra (hedges bid)
+    # SKEW (Yahoo ^SKEW). High = contra (hedges bid).
+    # The "green" cell color already encodes contra-signal; no suffix needed.
     skew = _safe(lambda: _yf_latest("^SKEW"))
     if skew is not None:
         flag = "green" if skew >= 145 else None
-        out["skew"] = {"value": round(skew, 0), "flag": flag, "suffix": "(contra)" if flag == "green" else None}
+        out["skew"] = {"value": round(skew, 0), "flag": flag, "suffix": None}
 
     # MOVE (Yahoo ^MOVE)
     move = _safe(lambda: _yf_latest("^MOVE"))
@@ -325,8 +326,9 @@ def _bmc_compute_today() -> dict:
     if vix9d is not None and vix3m is not None:
         sl = vix9d / vix3m
         flag = "stress" if sl >= 1.5 else ("green" if sl >= 1.05 else None)
-        suffix = "backwardated (contra)" if flag == "green" else ("backwardated" if sl >= 1.0 else "contango")
-        out["vix_slope"] = {"value": round(sl, 2), "flag": flag, "suffix": suffix}
+        # No suffix — color encodes the signal. The threshold row below the
+        # ratio already explains the contango↔backwardation regime.
+        out["vix_slope"] = {"value": round(sl, 2), "flag": flag, "suffix": None}
 
     return out
 
