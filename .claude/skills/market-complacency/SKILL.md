@@ -252,44 +252,50 @@ Save to `reports/market-complacency/market_complacency_<YYYY-MM-DD>.md` under th
 - Stop any test servers used during chart rendering.
 - Commit and push per the project's standard workflow.
 
-## Output Format (mandatory blocks)
+## Output Format (mandatory blocks — Citi BMC style)
 
-Every report must contain — **in this order**:
+The report must mirror the structure of [Citi's Bear Market Checklist report](https://www.citivelocity.com) — punchy summary box up top, single historical-calibration table, "Under the Hood" charts grid, brief action box, data manifest. **Target length: ~800-1,500 words of prose plus 10-12 charts plus 2-3 tables. Previous iterations ran 4,000-5,500 words and readers complained "too noisy, too long."**
 
-1. **`## Key takeaways`** (NEW v6 — front-load the verdict). This is the first section after the title. Replaces the old single-paragraph "Complacency Verdict." Structure:
-   - **TL;DR** — one bold line stating composite score / tier / flag count + action verb. Reader knows the punchline in 5 seconds.
-   - **Headline read** — 4-row table: composite score, flag count, verdict tier, vs Citi BMC.
-   - **What's flashing 🔴 red** — bulleted list naming each red indicator with the one-phrase reason. Group by category if helpful (valuation / risk-premium / credit).
-   - **What's flashing 🟠 amber** — same structure for ambers.
-   - **Off but contra-signal** — only the 2-3 most-decision-relevant off-flag indicators (the ones already saying "regime turning") with their numbers and one-phrase explanation. NOT a full list of every off-flag indicator.
-   - **Action implications** — numbered list of 4-6 concrete actions. Each starts with a verb.
-   - **Empirical base rate one-liner** — "median 12m forward SPY at this composite range: X%, ~Y% probability of >20% drawdown within 24 months."
+Mandatory blocks, in this order:
 
-   Rationale: the prior "Complacency Verdict" paragraph was ~250 words of dense prose; readers complained it took 90 seconds to extract the punchline. Key-takeaways is scannable in 15 seconds while preserving every number.
+1. **Dashboard's Take** — single bold blockquote at the top, ≤200 words. Mirrors Citi's "CITI'S TAKE" box. Structure: composite score + flag count + verdict tier on the first line; 1-2 sentences on what's flashing and what's contra; 1 line on action; 1 line on empirical base rate. **No prose outside this block until after Figure 2.**
 
-2. **`## Historical Calibration (Citi-BMC style)`** (NEW v7 — adapted from [Citi's BMC Figure 2](https://www.citivelocity.com)). A table that anchors today's reading against past bear-market starts and recent market peaks. Columns: Mar 2000, Oct 2007, Feb 2020, Dec 2021, **Today**. Rows: each indicator we have historical data for, grouped by category. Cells colored 🔴 red (full flag), 🟠 amber (half flag), or off (no flag) using the dashboard's standard thresholds. End with a 2-sentence "today's calibration" paragraph that explicitly compares today's level to the historical reference points (e.g., "CAPE is within X points of the March 2000 peak" or "Yield curve is positive unlike pre-2000"). This forces the report to *calibrate vs history* instead of just reporting the percentile rank — Citi's framework consistently does this and it's the single biggest reason institutional readers trust their BMC over abstract scores.
+2. **Figure 1: Composite vs SPY Drawdown** chart — the headline image immediately under the Dashboard's Take.
 
-3. **Composite Score & Tier** table showing today's score in context (just the score + tier + 5-tier band, no narrative).
-4. **Indicator-by-indicator table** — all required (+ optional) with current value, 10y context, complacency percentile, decile, flag.
-5. **Composite Score Decomposition** — explicit `weight × complacency_pct = contribution` table summing to the headline composite. The single composite number alone is too opaque; the reader needs to see which indicators are doing the heavy lifting and which are pulling the other way. Highlight the indicators with the largest absolute contribution in bold so the reader can scan the dominant signals in two seconds.
-6. **Cross-asset signature paragraph** — which categories agree, which diverge.
-7. **Historical precedents table** with SPY forward returns.
-8. **6–10 embedded charts** with inline captions and source attribution.
-9. **"What this verdict is NOT" caveat block.**
-10. **Action implications block** — expand on the key-takeaways action list with the *why* and concrete sizing/instrument detail.
-11. **What Would Invalidate This Read** — the specific signal flips that would change the verdict.
-12. **Comparison to Citi BMC** — when a current BMC reading is available (Citi refreshes ~quarterly).
-13. **`## Data Used / 数据来源清单`** manifest, including the **ICE BofA window disclosure** (see Guardrails below).
+3. **`## Figure 2. Bear Market Checklist — Historical Calibration`** — a SINGLE comparison table mirroring Citi BMC Figure 2. Columns: Mar-00, Oct-07, Feb-20, Dec-21, **Now**. Rows: indicators grouped by category (Valuations / Yield Curve / Sentiment / Corp Behaviour / Profitability / Credit / Vol). Cells colored 🔴 red / 🟠 amber / off using standard thresholds. **A 🟢 marker is also valid** — use it for contra-signal off-flags (e.g., SKEW high, CCC spread wide, VIX backwardation) so the reader sees the cross-asset divergence at a glance. End with a 2-sentence "Today's calibration" paragraph: which historical references today matches, and what makes today distinctive (e.g., "no clean historical precedent — past bears started with one or the other, not both").
 
-### Why key-takeaways is the load-bearing change
+4. **`## Under the Hood`** — sequence of 8-12 small charts with one-line captions only. NO narrative paragraphs between charts. Charts in order: HY OAS, IG vs CCC overlay, CAPE, ERP, VIX/VVIX, VIX term slope, MOVE, per-indicator bars, precedents scatter. Each rendered by `scripts/build_dashboard.py` into `reports/charts/`.
 
-The old "single dense paragraph verdict" pattern was the most-complained-about block in earlier report iterations. Reformatting it as **TL;DR + table + bullets + actions** does three things:
+5. **`## Action Implications`** — single 5-row table covering all 5 tier postures (Stretched / Elevated / Neutral / Cautious / Panicked) with today's row bolded, plus a 3-bullet "Specific notes for today" block. Total ≤150 words.
 
-1. **Front-loads the conclusion** — a reader who only has 30 seconds gets the right read.
-2. **Makes each piece findable** — clicking through to a specific flag or precedent reference takes ~3 seconds instead of paragraph-scanning.
-3. **Forces honesty about contra-signals** — separating "red / amber / contra-off" buckets surfaces the cross-asset divergence that a single paragraph can hide.
+6. **`## Historical Precedents`** — 8-row table of precedents within ±5 of today's composite, with 6m/12m/24m SPY forward + 24m max DD. One closing sentence stating median 12m forward return + max DD context.
 
-The deeper Cross-Asset Signature paragraph (block 5) keeps the long-form narrative for readers who want it; the Key Takeaways section is the *daily-scan* version.
+7. **`## Caveats`** — bulleted list of 4-6 caveats. Each ≤2 sentences. Must include: "low PE doesn't protect against a bear" (GFC and COVID counter-example); dashboard is a regime descriptor not a drawdown predictor (with empirical lift number from the backtest); ICE BofA / FRED window disclosure; any indicators currently dark.
+
+8. **`## Data Used / 数据来源清单`** — single source table grouping every indicator by category with its source URL. NO per-indicator paragraphs.
+
+### What NOT to include in Citi-style mode
+
+The following blocks from prior iterations are explicitly *forbidden* in the new format unless the user asks for them:
+
+- ❌ Long "Composite Score Decomposition" tables — implicit in Figure 2 calibration. If the reader wants the weighted math, they can run the script.
+- ❌ Long "Cross-Asset Signature" narrative paragraphs — collapsed into the Dashboard's Take + Figure 2.
+- ❌ "What This Verdict Is NOT" multi-paragraph block — collapsed into the Caveats list.
+- ❌ "What Would Invalidate This Read" multi-paragraph block — collapsed into Caveats.
+- ❌ Separate "Comparison to Citi BMC" section — Citi reference is implicit in Figure 2's column structure and one line in Caveats.
+- ❌ Multiple postscript blocks documenting version-history — those belong in git commit messages and CHANGELOG, not in the live report.
+- ❌ Per-chart narrative paragraphs interspersed between Under-the-Hood charts.
+- ❌ Step-by-step verification logs as `<details>` blocks — moved to commit messages.
+
+### Rationale for the Citi-style rewrite (v7)
+
+User feedback over multiple iterations: "too noisy, format messy, and too long; use exact Citi report style; after Figure 2 BMC table, then have under the hood table, it is much easier to visualize." The new format does three things:
+
+1. **Front-loads the conclusion** — Dashboard's Take + Figure 2 give the reader the entire verdict in the first scroll. Total time-to-decision under 1 minute.
+2. **Maximizes information density per scroll** — single big calibration table + visual grid of charts replaces 3,000 words of cross-asset narrative.
+3. **Mirrors a format institutional readers already trust** — Citi's BMC layout is decades-old and well-tested. Aligning the visual structure makes the dashboard's reading directly cross-referenceable with the most-cited sell-side framework.
+
+The deeper analytical detail (per-indicator percentile context, composite weights, backtest stats) lives in `scripts/build_dashboard.py` and `oneoff/*.csv` for readers who want to dig in. The *report* is the daily-scan artifact.
 
 ### Data Used / 数据来源清单 (mandatory)
 
