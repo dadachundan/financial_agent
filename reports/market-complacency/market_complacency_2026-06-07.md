@@ -45,31 +45,38 @@ Today vs the start of past bear markets and recent peaks. **Red = full flag, �
 
 ## Under the Hood
 
-Indicator histories with bear-market shading and last-10y percentile reference lines. **Click any source link below the chart** to view the canonical free historical chart for that indicator.
+Each chart is **interactive** — use the 1Y / YTD / 5Y / 10Y / ALL buttons (top-left) or the bottom range-slider to adjust the time span. Bear-market shading marked in grey. Static PNG fallback links provided in each caption.
 
-![Figure 3: Long-history credit (Moody's BAA−10Y + HY OAS reference points)](../charts/market_complacency_2026-06-07_hy_oas.png)
-*Sources: [FRED Moody's BAA−10Y (BAA10Y, 1986+)](https://fred.stlouisfed.org/series/BAA10Y) · [FRED ICE BofA HY OAS (BAMLH0A0HYM2, 2023+)](https://fred.stlouisfed.org/series/BAMLH0A0HYM2) · [TradingEconomics HY OAS long-history chart](https://tradingeconomics.com/united-states/bofa-merrill-lynch-us-high-yield-option-adjusted-spread-fed-data.html)*
+<iframe src="../charts/market_complacency_2026-06-07_credit_baa.html" width="100%" height="500" style="border:0;border-radius:6px;"></iframe>
 
-![Figure 4: Long-history IG credit — Moody's AAA−10Y vs BAA−10Y + dispersion](../charts/market_complacency_2026-06-07_ig_ccc.png)
-*Sources: [FRED Moody's AAA−10Y (AAA10Y, 1983+)](https://fred.stlouisfed.org/series/AAA10Y) · [FRED Moody's BAA−10Y (BAA10Y, 1986+)](https://fred.stlouisfed.org/series/BAA10Y) — Replaces the FRED-restricted ICE BofA IG/CCC overlay (both 2023+ only). The BAA − AAA dispersion (grey) is the long-history analog of "CCC − HY spread": widens before credit-cycle turns. GFC peak (>6pp BAA, ~3.5pp dispersion) and COVID spike (BAA to 4.3pp) clearly visible.*
+*Figure 3. Long-history credit — Moody's BAA−10Y, 1986+. Sources: [FRED BAA10Y](https://fred.stlouisfed.org/series/BAA10Y) · [TradingEconomics HY OAS long-history](https://tradingeconomics.com/united-states/bofa-merrill-lynch-us-high-yield-option-adjusted-spread-fed-data.html). [Static PNG](../charts/market_complacency_2026-06-07_hy_oas.png) (with HY OAS reference points annotated).*
 
-![Figure 5: Shiller CAPE](../charts/market_complacency_2026-06-07_cape.png)
-*Source: [multpl.com Shiller PE Ratio (monthly, 1871+)](https://www.multpl.com/shiller-pe) · derived from [Robert Shiller's Yale dataset](http://www.econ.yale.edu/~shiller/data.htm).*
+<iframe src="../charts/market_complacency_2026-06-07_ig_credit.html" width="100%" height="500" style="border:0;border-radius:6px;"></iframe>
 
-![Figure 6: Equity Risk Premium](../charts/market_complacency_2026-06-07_erp.png)
-*Sources: [multpl S&P 500 Earnings Yield](https://www.multpl.com/s-p-500-earnings-yield) (E/P component) · [FRED 10Y Treasury (DGS10, 1962+)](https://fred.stlouisfed.org/series/DGS10) (bond yield component). ERP = E/P − 10Y, derived monthly in the build script.*
+*Figure 4. IG credit tiers — Moody's AAA−10Y (1983+) vs BAA−10Y (1986+) with BAA−AAA dispersion on the right axis. Sources: [FRED AAA10Y](https://fred.stlouisfed.org/series/AAA10Y) · [FRED BAA10Y](https://fred.stlouisfed.org/series/BAA10Y). [Static PNG](../charts/market_complacency_2026-06-07_ig_ccc.png).*
 
-![Figure 7: VIX & VVIX](../charts/market_complacency_2026-06-07_vix_vvix.png)
-*Sources: [CBOE VIX (1990+) via Yahoo Finance](https://finance.yahoo.com/quote/%5EVIX/) · [CBOE VVIX (2007+) via Yahoo Finance](https://finance.yahoo.com/quote/%5EVVIX/) · canonical reference: [CBOE VIX page](https://www.cboe.com/tradable_products/vix/).*
+<iframe src="../charts/market_complacency_2026-06-07_cape.html" width="100%" height="500" style="border:0;border-radius:6px;"></iframe>
 
-![Figure 8: VIX Term Slope (VIX9D/VIX3M + VIX/VIX3M long-history proxy)](../charts/market_complacency_2026-06-07_vix_slope.png)
-*Sources: [CBOE VIX9D (2011+)](https://finance.yahoo.com/quote/%5EVIX9D/) — canonical short-term metric · [CBOE VIX3M (2008+)](https://finance.yahoo.com/quote/%5EVIX3M/) · [CBOE VIX (1990+)](https://finance.yahoo.com/quote/%5EVIX/). Grey overlay = VIX/VIX3M (30d÷90d) ratio extending back to 2006 — same front-month-vs-longer-month signal, captures GFC peak (~1.4) and the 2008 backwardation episode. VIX9D-based ratio (dark line) is the canonical metric for current readings.*
+*Figure 5. Shiller CAPE, 1871+. Source: [multpl.com Shiller PE](https://www.multpl.com/shiller-pe) · derived from [Robert Shiller's Yale dataset](http://www.econ.yale.edu/~shiller/data.htm). [Static PNG](../charts/market_complacency_2026-06-07_cape.png).*
 
-![Figure 9: MOVE Index](../charts/market_complacency_2026-06-07_move.png)
-*Source: [ICE BofAML MOVE Index via Yahoo Finance (2002+)](https://finance.yahoo.com/quote/%5EMOVE/) — the rate-vol analog of VIX, measuring 1-month implied vol on US Treasuries. **The MOVE index was created in 1988 by Merrill Lynch but free pre-2002 history is not available** — Yahoo's 2002 start is the earliest free data; pre-2002 exists only on Bloomberg/ICE direct (paywalled). GFC peak (~265 in Oct 2008) and 2022 Fed tightening (~180) are the two visible regime extremes.*
+<iframe src="../charts/market_complacency_2026-06-07_erp.html" width="100%" height="500" style="border:0;border-radius:6px;"></iframe>
+
+*Figure 6. Equity Risk Premium = S&P 500 E/P − 10Y Treasury. Sources: [multpl S&P 500 Earnings Yield](https://www.multpl.com/s-p-500-earnings-yield) · [FRED DGS10](https://fred.stlouisfed.org/series/DGS10). [Static PNG](../charts/market_complacency_2026-06-07_erp.png).*
+
+<iframe src="../charts/market_complacency_2026-06-07_vix_vvix.html" width="100%" height="500" style="border:0;border-radius:6px;"></iframe>
+
+*Figure 7. VIX (1990+) & VVIX (2007+). Sources: [Yahoo ^VIX](https://finance.yahoo.com/quote/%5EVIX/) · [Yahoo ^VVIX](https://finance.yahoo.com/quote/%5EVVIX/) · [CBOE VIX page](https://www.cboe.com/tradable_products/vix/). [Static PNG](../charts/market_complacency_2026-06-07_vix_vvix.png).*
+
+<iframe src="../charts/market_complacency_2026-06-07_vix_slope.html" width="100%" height="500" style="border:0;border-radius:6px;"></iframe>
+
+*Figure 8. VIX Term Slope — VIX9D÷VIX3M (canonical, 2011+) + VIX÷VIX3M long-history proxy (2006+). Sources: [Yahoo ^VIX9D](https://finance.yahoo.com/quote/%5EVIX9D/) · [Yahoo ^VIX3M](https://finance.yahoo.com/quote/%5EVIX3M/) · [Yahoo ^VIX](https://finance.yahoo.com/quote/%5EVIX/). Ratio < 1 = contango (calm); ≥ 1 = backwardation (front-month fear). [Static PNG](../charts/market_complacency_2026-06-07_vix_slope.png).*
+
+<iframe src="../charts/market_complacency_2026-06-07_move.html" width="100%" height="500" style="border:0;border-radius:6px;"></iframe>
+
+*Figure 9. MOVE Index (rate vol), 2002+ — Yahoo's earliest free data. Source: [Yahoo ^MOVE](https://finance.yahoo.com/quote/%5EMOVE/). MOVE was created in 1988 by Merrill Lynch but free pre-2002 history is not available. [Static PNG](../charts/market_complacency_2026-06-07_move.png).*
 
 ![Figure 10: Per-Indicator Complacency Bars](../charts/market_complacency_2026-06-07_indicators_bar.png)
-*Source: per-indicator 10-year rolling complacency percentile from `scripts/build_dashboard.py`. Inputs documented in the Data Used manifest below.*
+*Source: per-indicator 10-year rolling complacency percentile from `scripts/build_dashboard.py`. Bar chart (no time axis — interactive version not applicable).*
 
 ## Data Used / 数据来源清单
 

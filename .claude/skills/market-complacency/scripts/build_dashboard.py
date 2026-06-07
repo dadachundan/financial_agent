@@ -1157,6 +1157,151 @@ def _make_flag_count_html(as_of: str, flag_count_hist: pd.Series) -> None:
     print(f"  ✓ flag count chart saved: {out.name}", flush=True)
 
 
+def _make_interactive_chart(
+    as_of: str, slug: str, title: str, yaxis: str,
+    lines: list,           # list of dict(name=..., series=..., color=..., dash=None)
+    thresholds: list = None,  # list of dict(y=..., label=..., color=..., dash="dash")
+    secondary_lines: list = None,  # right-axis series, same shape as lines
+    secondary_yaxis: str = "",
+    bear_periods: list = None,
+    height: int = 460,
+) -> None:
+    """Generic interactive Plotly chart factory.
+
+    - Plots one or more lines on a date x-axis
+    - Optional secondary y-axis for differently-scaled overlays
+    - Bear-market grey vertical shading
+    - Threshold horizontal lines
+    - Rangeselector buttons: 1Y / YTD / 5Y / 10Y / ALL (relayout — bypasses
+      Plotly's buggy stepmode='todate')
+    - Bottom range-slider for fine zoom
+    """
+    try:
+        import plotly.graph_objects as go
+        from plotly.subplots import make_subplots
+    except ImportError:
+        return
+
+    if secondary_lines:
+        fig = make_subplots(specs=[[{"secondary_y": True}]])
+    else:
+        fig = go.Figure()
+
+    # Determine date span across all lines
+    all_dates = []
+    for ln in lines + (secondary_lines or []):
+        if not ln["series"].empty:
+            all_dates.append(ln["series"].index)
+    if not all_dates:
+        return
+    first = min(d.min() for d in all_dates)
+    last = max(d.max() for d in all_dates)
+
+    # Bear-market shading via shapes
+    shapes = []
+    bp = bear_periods or [
+        ("1990-07-16", "1990-10-11"),
+        ("2000-03-24", "2002-10-09"),
+        ("2007-10-09", "2009-03-09"),
+        ("2020-02-19", "2020-03-23"),
+        ("2022-01-03", "2022-10-12"),
+    ]
+    for start, end in bp:
+        s = pd.Timestamp(start); e = pd.Timestamp(end)
+        if e < first or s > last:
+            continue
+        shapes.append(dict(type="rect", xref="x", yref="paper",
+                           x0=s, x1=e, y0=0, y1=1,
+                           fillcolor="#888888", opacity=0.18,
+                           line=dict(width=0), layer="below"))
+
+    # Plot primary axis lines
+    for ln in lines:
+        if ln["series"].empty:
+            continue
+        s = ln["series"]
+        kwargs = dict(
+            x=s.index, y=s.values, mode="lines",
+            name=ln["name"],
+            line=dict(color=ln.get("color", "#1f4e79"),
+                      width=ln.get("width", 1.2),
+                      dash=ln.get("dash") or "solid"),
+            hovertemplate=f"{ln['name']}: %{{y:.2f}}<br>%{{x|%Y-%m-%d}}<extra></extra>",
+        )
+        if secondary_lines:
+            fig.add_trace(go.Scatter(**kwargs), secondary_y=False)
+        else:
+            fig.add_trace(go.Scatter(**kwargs))
+
+    # Secondary axis lines
+    for ln in (secondary_lines or []):
+        if ln["series"].empty:
+            continue
+        s = ln["series"]
+        fig.add_trace(go.Scatter(
+            x=s.index, y=s.values, mode="lines",
+            name=ln["name"],
+            line=dict(color=ln.get("color", "#888"),
+                      width=ln.get("width", 1.0),
+                      dash=ln.get("dash") or "solid"),
+            hovertemplate=f"{ln['name']}: %{{y:.2f}}<br>%{{x|%Y-%m-%d}}<extra></extra>",
+        ), secondary_y=True)
+
+    # Threshold lines via hlines + annotations
+    for thr in (thresholds or []):
+        fig.add_hline(y=thr["y"], line=dict(color=thr.get("color", "#888"),
+                                            width=1, dash=thr.get("dash", "dash")),
+                      annotation_text=thr.get("label", ""),
+                      annotation_position="top right",
+                      annotation_font=dict(size=10, color=thr.get("color", "#888")))
+
+    year_start = pd.Timestamp(f"{last.year}-01-01")
+    range_buttons = [
+        dict(label="1Y",  method="relayout",
+             args=[{"xaxis.range": [(last - pd.DateOffset(years=1)).strftime("%Y-%m-%d"), last.strftime("%Y-%m-%d")]}]),
+        dict(label="YTD", method="relayout",
+             args=[{"xaxis.range": [year_start.strftime("%Y-%m-%d"), last.strftime("%Y-%m-%d")]}]),
+        dict(label="5Y",  method="relayout",
+             args=[{"xaxis.range": [(last - pd.DateOffset(years=5)).strftime("%Y-%m-%d"), last.strftime("%Y-%m-%d")]}]),
+        dict(label="10Y", method="relayout",
+             args=[{"xaxis.range": [(last - pd.DateOffset(years=10)).strftime("%Y-%m-%d"), last.strftime("%Y-%m-%d")]}]),
+        dict(label="ALL", method="relayout",
+             args=[{"xaxis.range": [first.strftime("%Y-%m-%d"), last.strftime("%Y-%m-%d")]}]),
+    ]
+
+    layout_kwargs = dict(
+        title=title,
+        xaxis=dict(
+            range=[first.strftime("%Y-%m-%d"), last.strftime("%Y-%m-%d")],
+            rangeslider=dict(visible=True, thickness=0.04),
+            type="date",
+        ),
+        shapes=shapes,
+        updatemenus=[dict(
+            type="buttons", direction="right", buttons=range_buttons,
+            x=0.0, y=1.12, xanchor="left", yanchor="top",
+            pad=dict(r=4, t=4), font=dict(size=11), bgcolor="#f4f4f4",
+        )],
+        margin=dict(l=50, r=50, t=80, b=40),
+        plot_bgcolor="white",
+        hovermode="x unified",
+        height=height,
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="center", x=0.5,
+                    font=dict(size=10)),
+    )
+    if secondary_lines:
+        fig.update_layout(**layout_kwargs)
+        fig.update_yaxes(title_text=yaxis, secondary_y=False)
+        fig.update_yaxes(title_text=secondary_yaxis, secondary_y=True)
+    else:
+        layout_kwargs["yaxis"] = dict(title=yaxis)
+        fig.update_layout(**layout_kwargs)
+
+    out = CHARTS / f"market_complacency_{as_of}_{slug}.html"
+    fig.write_html(str(out), include_plotlyjs="cdn", full_html=True,
+                   config={"displayModeBar": True, "displaylogo": False})
+
+
 def _make_composite_html(as_of: str, composite: float, tier: str, composite_hist: pd.Series) -> None:
     """Save an interactive Plotly composite chart with rangeselector buttons.
 
@@ -1522,6 +1667,118 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
         plt.tight_layout()
         plt.savefig(CHARTS / f"market_complacency_{as_of}_cape.png", dpi=150, bbox_inches="tight")
         plt.close()
+
+    # ──────────────────────────────────────────────────────────────────────
+    # Interactive Plotly versions of every Under-the-Hood chart.
+    # Reader can use the 1Y / YTD / 5Y / 10Y / ALL buttons to zoom.
+    # ──────────────────────────────────────────────────────────────────────
+    # Re-fetch AAA10Y (already used above for the IG chart)
+    try:
+        aaa_series = fetch_fred("AAA10Y", "1983-01-01")
+    except Exception:
+        aaa_series = pd.Series(dtype=float)
+
+    if not series["baa10y"].empty:
+        _make_interactive_chart(
+            as_of, "credit_baa",
+            title="Long-history credit: Moody's BAA−10Y (1986+)",
+            yaxis="Spread (pp)",
+            lines=[dict(name="Moody's BAA − 10Y", series=series["baa10y"], color="#c1272d", width=1.2)],
+            thresholds=[
+                dict(y=float(np.percentile(series["baa10y"][series["baa10y"].index >= win_start].dropna(), 50)),
+                     label=f"10y median", color="#888", dash="dash"),
+            ],
+        )
+
+    if not aaa_series.empty and not series["baa10y"].empty:
+        df = pd.concat([aaa_series.rename("aaa"), series["baa10y"].rename("baa")], axis=1).dropna()
+        dispersion = (df["baa"] - df["aaa"]).rename("dispersion")
+        _make_interactive_chart(
+            as_of, "ig_credit",
+            title="IG credit tiers: Moody's AAA−10Y vs BAA−10Y (1983+) + dispersion",
+            yaxis="Spread (pp)",
+            lines=[
+                dict(name="AAA − 10Y (top-tier IG)", series=df["aaa"], color="#2a9d8f", width=1.1),
+                dict(name="BAA − 10Y (BBB-tier)",     series=df["baa"], color="#e76f51", width=1.1),
+            ],
+            secondary_lines=[
+                dict(name="BAA − AAA dispersion",     series=dispersion, color="#444444", width=0.8),
+            ],
+            secondary_yaxis="Dispersion (pp)",
+        )
+
+    if not series["cape"].empty:
+        _make_interactive_chart(
+            as_of, "cape",
+            title="Shiller CAPE (cyclically-adjusted P/E), 1871+",
+            yaxis="Shiller CAPE",
+            lines=[dict(name="Shiller CAPE", series=series["cape"], color="#6d597a", width=1.2)],
+            thresholds=[
+                dict(y=30, label="CAPE 30 (historically rich)", color="#c1272d", dash="dash"),
+                dict(y=44, label="Dec-1999 dot-com peak", color="#888", dash="dot"),
+            ],
+        )
+
+    if not series["erp"].empty:
+        _make_interactive_chart(
+            as_of, "erp",
+            title="Equity Risk Premium = S&P 500 E/P − 10Y Treasury",
+            yaxis="ERP (pp)",
+            lines=[dict(name="ERP", series=series["erp"], color="#003049", width=1.2)],
+            thresholds=[
+                dict(y=0, label="zero — stocks priced equal to bonds", color="#c1272d", dash="dash"),
+            ],
+        )
+
+    if not series["vix"].empty:
+        _make_interactive_chart(
+            as_of, "vix_vvix",
+            title="VIX (1990+) & VVIX (2007+)",
+            yaxis="VIX",
+            lines=[dict(name="VIX", series=series["vix"], color="#1d3557", width=0.8)],
+            secondary_lines=[dict(name="VVIX", series=series["vvix"], color="#e63946", width=0.7)] if not series["vvix"].empty else None,
+            secondary_yaxis="VVIX",
+            thresholds=[
+                dict(y=20, label="VIX 20 (caution)", color="#f4a261", dash="dash"),
+                dict(y=30, label="VIX 30 (stress)",  color="#e63946", dash="dash"),
+            ],
+        )
+
+    if not series["vix_slope"].empty:
+        # Also compute long-history VIX/VIX3M overlay
+        try:
+            vix3m_for_slope = fetch_yf("^VIX3M", "2005-01-01", (pd.Timestamp(as_of) + pd.Timedelta(days=1)).strftime("%Y-%m-%d"))
+        except Exception:
+            vix3m_for_slope = pd.Series(dtype=float)
+        secondary = None
+        if not series["vix"].empty and not vix3m_for_slope.empty:
+            sl_df = pd.concat([series["vix"].rename("v"), vix3m_for_slope.rename("v3")], axis=1).dropna()
+            long_slope = (sl_df["v"] / sl_df["v3"]).rename("VIX/VIX3M")
+            # Plot long-history proxy on same axis as VIX9D/VIX3M
+        _make_interactive_chart(
+            as_of, "vix_slope",
+            title="VIX Term Slope — VIX9D÷VIX3M (2011+) + VIX÷VIX3M long-history proxy (2006+)",
+            yaxis="Front-month ÷ longer-month VIX",
+            lines=[
+                dict(name="VIX/VIX3M (30d÷90d, 2006+)", series=long_slope if not series["vix"].empty and not vix3m_for_slope.empty else pd.Series(dtype=float), color="#a8a8a8", width=0.6),
+                dict(name="VIX9D/VIX3M (9d÷90d, 2011+)", series=series["vix_slope"], color="#264653", width=0.8),
+            ],
+            thresholds=[
+                dict(y=1.0, label="Contango ↔ Backwardation", color="#000", dash="dash"),
+            ],
+        )
+
+    if not series["move"].empty:
+        _make_interactive_chart(
+            as_of, "move",
+            title="MOVE Index (rate vol, 2002+) — Yahoo's earliest; index created 1988",
+            yaxis="MOVE Index",
+            lines=[dict(name="MOVE", series=series["move"], color="#6a4c93", width=0.8)],
+            thresholds=[
+                dict(y=80,  label="80 (calm)",   color="#2a9d8f", dash="dash"),
+                dict(y=120, label="120 (stress)", color="#e63946", dash="dash"),
+            ],
+        )
 
 
 def main():

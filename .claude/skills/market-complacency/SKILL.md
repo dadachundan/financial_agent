@@ -275,9 +275,15 @@ Mandatory blocks, in this order:
 
    End with a 2-sentence "Today's calibration" paragraph: which historical references today matches, and what makes today distinctive (e.g., "no clean historical precedent — past bears started with one or the other, not both").
 
-3. **`## Under the Hood`** — sequence of 8-12 small charts with one-line captions only. NO narrative paragraphs between charts. Charts in order: long-history credit (BAA−10Y + HY OAS refs), IG vs CCC overlay, CAPE, ERP, VIX/VVIX, VIX term slope, MOVE, per-indicator bars. Each rendered by `scripts/build_dashboard.py` into `reports/charts/`.
+3. **`## Under the Hood`** — sequence of 8-12 small charts with one-line captions only. NO narrative paragraphs between charts. Charts in order: long-history credit (BAA−10Y), IG credit tiers (AAA + BAA + dispersion), CAPE, ERP, VIX/VVIX, VIX term slope, MOVE, per-indicator bars. Each rendered by `scripts/build_dashboard.py` into `reports/charts/`.
 
-   **Every chart must have a source-link caption immediately below it** in italics, listing the canonical public data source(s) as markdown links. Example: `*Sources: [FRED Moody's BAA−10Y (1986+)](https://fred.stlouisfed.org/series/BAA10Y) · [TradingEconomics HY OAS](https://tradingeconomics.com/...)*`. The reader should be able to click any source to verify the chart against the canonical free historical chart. When a chart uses a series with a data limitation (e.g., ICE BofA OAS only from 2023+), the caption must note the limitation in italics and point to the long-history proxy used as substitute.
+   **Time-series charts must be embedded as interactive Plotly iframes** with rangeselector buttons (1Y / YTD / 5Y / 10Y / ALL) so the reader can adjust the timespan without leaving the page. Use `_make_interactive_chart()` in the build script — it produces a `<chart-slug>.html` file with rangeselector + range-slider + bear-market shading + threshold lines. Markdown embed pattern:
+   ```html
+   <iframe src="../charts/market_complacency_<DATE>_<slug>.html" width="100%" height="500" style="border:0;border-radius:6px;"></iframe>
+   ```
+   The per-indicator bar chart (Figure 10) stays as a static PNG since it has no time axis.
+
+   **Every chart must have a source-link caption immediately below it** in italics, listing the canonical public data source(s) as markdown links + a "[Static PNG](url)" fallback link for non-HTML renderers. Example: `*Figure N. <title>. Sources: [FRED BAA10Y](https://fred.stlouisfed.org/series/BAA10Y) · [TradingEconomics HY OAS](...). [Static PNG](../charts/<slug>.png).*`. When a chart uses a series with a data limitation (e.g., ICE BofA OAS only from 2023+), the caption must note the limitation and point to the long-history proxy used.
 
    **Mandatory chart styling — bear-market shading** (Citi BMC Figure 3+ style). Every time-series chart must have light-grey vertical bars (`axvspan(alpha=0.20, color="#888888")`) over the major US bear-market windows so the reader has visual context for "what was happening in those periods." The build script defines `BEAR_PERIODS` and `_shade_bears(ax)` helper that applies five reference windows: 1990-07/10 (Iraq/recession), 2000-03/2002-10 (dot-com), 2007-10/2009-03 (GFC), 2020-02/2020-03 (COVID), 2022-01/2022-10 (Fed pivot). Charts that are NOT time-series (per-indicator bars, precedents scatter, etc.) skip the shading.
 
