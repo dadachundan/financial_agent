@@ -122,18 +122,18 @@ The following are already pulled by the project's `indicators` module — reuse 
 
 ### Add to the skill (not yet in the indicators module)
 
-These are pulled inside the skill's own `oneoff/market_complacency_<DATE>.py` script. **Do not** modify the indicators module from this skill — keep the addition scoped to the report run. If the user later asks to promote one of these to the live dashboard, that is a separate task.
+These are pulled by the skill's reusable build script `scripts/build_dashboard.py` (see § Workflow Step 1). **Do not** modify the indicators module from this skill — keep the addition scoped to the report run. If the user later asks to promote one of these to the live dashboard, that is a separate task.
 
 - **CCC OAS** — FRED series `BAMLH0A3HYC` (ICE BofA US CCC & Lower OAS). Pull via the existing `_fetch_fred_range()` helper.
 - **SKEW** — yfinance `^SKEW`. Yahoo carries CBOE's daily SKEW back to 1990.
 - **MOVE** — yfinance `^MOVE` (ICE BofAML US Bond Market OAS, the rate-vol analog of VIX). Yahoo data starts 2002.
-- **Shiller CAPE** — Robert Shiller's monthly CSV at `http://www.econ.yale.edu/~shiller/data/ie_data.xls` (Excel). Cache locally as `oneoff/shiller_cape.csv` and refresh monthly.
-- **AAII Bull-Bear** (optional) — weekly CSV at `https://www.aaii.com/files/surveys/sentiment.xls`. Cache locally; refresh weekly.
-- **NAAIM Exposure** (optional) — weekly CSV at `https://www.naaim.org/programs/naaim-exposure-index/`. Often gated; skip if not reachable.
+- **Shiller CAPE** — Robert Shiller's Yale spreadsheet at `http://www.econ.yale.edu/~shiller/data/ie_data.xls` stopped refreshing in September 2023. The build script uses [`multpl.com/shiller-pe/table/by-month`](https://www.multpl.com/shiller-pe/table/by-month) as the primary live source (computationally equivalent) and falls back to the Yale spreadsheet only if multpl is unreachable.
+- **AAII Bull-Bear** (optional) — weekly CSV at `https://www.aaii.com/files/surveys/sentiment.xls`. Cache locally; refresh weekly. As of late 2025 the public URL returns HTTP 403 — the build script logs the failure and re-normalizes weights over the active indicators.
+- **NAAIM Exposure** (optional) — weekly XLSX at `https://www.naaim.org/wp-content/uploads/2014/04/NAAIM-Exposure-Index-Data.xlsx`. The legacy public URL currently returns HTTP 404; NAAIM moved distribution behind a member portal. Same graceful-degrade behavior as AAII.
 
 ### Derived indicators
 
-- **Equity Risk Premium** — SPY trailing earnings yield minus 10Y Treasury yield. Pull SPY trailing EPS from yfinance (`yf.Ticker("SPY").info["trailingEps"]` divided by current price), then subtract `^TNX/100`. If the SPY EPS lookup is flaky, fall back to S&P 500 trailing EPS from `https://www.multpl.com/s-p-500-earnings/table/by-month` (CSV scrape).
+- **Equity Risk Premium** — S&P 500 trailing earnings yield minus 10Y Treasury yield. The build script computes E/P as `100 / trailing PE` using the monthly trailing PE series from [`multpl.com/s-p-500-pe-ratio/table/by-month`](https://www.multpl.com/s-p-500-pe-ratio/table/by-month) (GAAP, fresh through the current month), then subtracts the monthly average of `^TNX` from yfinance. `yf.Ticker("SPY").info["trailingEps"]` is not reliable (returns `None` in many sessions) — do not depend on it. multpl is the canonical source.
 - **HYG/LQD ratio** — `HYG.Close / LQD.Close` over 10 years; complacency percentile = rank vs trailing 10y.
 
 ### Database write rule (no exceptions)
@@ -148,47 +148,69 @@ Confirm the user wants a *macro / regime* read, not a single-ticker call. If the
 
 If the user is asking specifically about *credit* complacency only (no equity/vol context), still run the full dashboard — the credit-only read is in the per-indicator table, and the cross-asset context is the report's edge over reading a single FRED chart.
 
-### Step 1 — Pull required indicators
+### Step 1 — Run the build script
 
-Write a one-off Python script at `oneoff/market_complacency_<YYYY-MM-DD>.py` that:
+Steps 1-3 (pull required indicators, pull optional enrichment, find historical precedents) and Step 4 (chart generation) are all handled by the **reusable** build script at `.claude/skills/market-complacency/scripts/build_dashboard.py`.
 
-1. Calls `indicators.data_fetcher.fetch_all()` for the live dashboard subset (HY OAS, IG OAS, VIX, VVIX, VIX term slope, HYG, LQD, SPY, ^TNX). 45 days of context is enough for the *current value*; for the 10-year percentile, fetch the longer FRED / yfinance ranges directly.
-2. For each required indicator, fetch 10 years of daily history via `_fetch_fred_range()` (FRED indicators) or `yf.Ticker(...).history(period="10y", auto_adjust=True)` (yfinance indicators).
-3. Compute the current value, 10-year percentile, complacency percentile (per the direction column), decile label, and stretched flag.
-4. Save the per-indicator table as `oneoff/market_complacency_<DATE>_indicators.csv`.
-5. Compute the composite score and verdict tier.
+Run it from the project root:
 
-### Step 2 — Pull optional enrichment
+```bash
+# As-of today (default)
+python3 .claude/skills/market-complacency/scripts/build_dashboard.py
 
-In the same script, attempt to fetch AAII, NAAIM, and Shiller CAPE. For each:
+# Specific date
+python3 .claude/skills/market-complacency/scripts/build_dashboard.py --date 2026-06-07
 
-- On success, add to the dashboard with full percentile context.
-- On failure (CSV unreachable, format change, paywall), log a warning, exclude from the composite, and re-normalize weights.
+# Different lookback window (default 10 years)
+python3 .claude/skills/market-complacency/scripts/build_dashboard.py --date 2026-06-07 --window-years 15
+```
 
-The script must exit cleanly even if every optional indicator fails — the required 10 are sufficient for a complete report.
+What it does:
+1. Pulls 10 required + 3 optional indicators (HY/IG/CCC OAS via FRED; VIX/VVIX/VIX9D/VIX3M/SKEW/MOVE/HYG/LQD/SPY/^TNX via yfinance; S&P 500 trailing PE + CAPE via multpl; AAII/NAAIM via XLSX scrape).
+2. Computes per-indicator 10-year complacency percentile (inverted for "low = complacent" indicators).
+3. Builds the weighted composite (re-normalizing weights over the active indicators when optional ones are missing).
+4. Computes the full daily historical composite back to ~December 2000 (saved to a CSV for charting and precedent matching).
+5. Finds up to 8 spread-out precedents within ±5 of today's composite, computes SPY 6 / 12 / 24-month forward returns + max drawdown for each.
+6. Renders 6–10 PNG charts to `reports/charts/market_complacency_<DATE>_*.png`.
+7. Prints a structured JSON summary (composite, tier, active indicator count, output paths) to stdout.
 
-### Step 3 — Find historical precedents
+Outputs (idempotent — same date input → same outputs):
+- `oneoff/market_complacency_<DATE>_indicators.csv` — full per-indicator table.
+- `oneoff/market_complacency_<DATE>_precedents.csv` — precedents with SPY forward returns.
+- `oneoff/market_complacency_<DATE>_composite_history.csv` — daily composite back to ~2001.
+- `oneoff/{sp500_trailing_pe,shiller_cape,aaii_sentiment,naaim_exposure}_<DATE>.csv` — per-source raw caches (date-stamped so reruns on different dates don't collide).
+- `reports/charts/market_complacency_<DATE>_*.png` — 10 charts (composite, hy_oas, ig_ccc, vix_vvix, vix_slope, move, erp, indicators_bar, precedents, cape).
 
-Compute the daily composite score across the last 25 years (back-fill: where a constituent indicator has shorter history, use only the available subset and re-normalize weights for that date). Find all dates where the historical composite was within ±5 points of today's composite. Bin by year, keep the 8 dates spread furthest apart.
+The script never writes to `db/*.db` and never calls an LLM API. All path resolution is via `Path(__file__).resolve().parents[4]` — runs unmodified from any working directory.
 
-For each precedent date, compute SPY total return + max drawdown over the next 6 / 12 / 24 months. Save as `oneoff/market_complacency_<DATE>_precedents.csv`.
+### Step 2 — Read the outputs
 
-### Step 4 — Generate charts (6–10 visuals)
+The agent (Claude in conversation) reads the three CSVs and the printed JSON summary, then writes the narrative report in Step 5. The build script does NOT write the report — that stays the agent's responsibility so the qualitative analysis (cross-asset signature paragraph, action implications, what-would-invalidate) gets fresh judgement each run.
 
-Save under `reports/charts/market_complacency_<DATE>_*.png` (DPI 150, `bbox_inches="tight"`). Suggested chart inventory:
+### Step 3 — Inspect for surprises
 
-1. **Composite score, last 25 years** — line chart with the 5-tier bands shaded; today marked. The headline chart.
-2. **HY OAS, last 25 years** — line with current value and the 5th / 50th / 95th percentile of last 10y marked.
-3. **IG + CCC OAS overlay, last 25 years** — credit-tier divergence visible.
-4. **VIX + VVIX overlay, last 10 years** — equity vol regime.
-5. **VIX term slope (VIX9D/VIX3M), last 10 years** — with contango/backwardation bands.
-6. **MOVE Index, last 10 years** — rate-vol regime alongside the equity-vol charts above.
-7. **ERP (SPY earnings yield − 10Y), last 25 years** — risk-premium compression.
-8. **Indicator deciles bar chart** — one bar per indicator showing today's complacency percentile, colored by the 5-tier band.
-9. *(Optional)* **Precedent-month SPY forward returns scatter** — x = composite at precedent date, y = SPY 12m forward return.
-10. *(Optional)* **AAII + NAAIM overlay** — sentiment crowding.
+Before writing the report, scan the indicator table for unexpected divergences. Two things to flag in the narrative:
 
-Each chart caption ends with: `Source: <FRED series ID / yfinance ticker>, as of <YYYY-MM-DD>; composite computed in oneoff/market_complacency_<DATE>.py.`
+1. **A material day-over-day move in any single indicator** — e.g. VIX jumping >25% on a single session. Compare the last 2-3 days of the composite history; a single bad day can drop the composite 10+ points entirely from the equity-vol axis.
+2. **Cross-category divergence** — e.g. credit at tights but CCC widening, or equity vol at lows but SKEW elevated. The cross-asset signature paragraph (§ Step 5.4) lives or dies on identifying these.
+
+### Step 4 — Chart inventory (already generated by the build script)
+
+The build script in Step 1 already wrote all 10 charts to `reports/charts/market_complacency_<DATE>_*.png` at DPI 150 with `bbox_inches="tight"`. The full inventory the report should embed:
+
+1. `*_composite.png` — composite, 2001–present, 5-tier bands shaded, today marked. **Headline chart.**
+2. `*_hy_oas.png` — HY OAS, 25-year history with 5th / 50th / 95th 10y percentile reference lines.
+3. `*_ig_ccc.png` — IG vs CCC overlay (dual-axis). Credit-tier divergence is visible here when present.
+4. `*_vix_vvix.png` — VIX + VVIX overlay, last 10 years.
+5. `*_vix_slope.png` — VIX term slope (VIX9D / VIX3M), last 10 years, with contango / backwardation bands.
+6. `*_move.png` — MOVE Index, last 10 years.
+7. `*_erp.png` — ERP (S&P 500 E/P − 10Y), 2001–present, negative regions shaded.
+8. `*_indicators_bar.png` — per-indicator complacency percentile bar chart, with composite line.
+9. `*_precedents.png` — scatter of precedent composite vs SPY 12m forward return.
+10. `*_cape.png` — Shiller CAPE, 2001–present, with reference line at CAPE 30.
+
+Each chart caption in the report should end with:
+`Source: <FRED series ID / yfinance ticker / multpl URL>, as of <YYYY-MM-DD>; composite computed in .claude/skills/market-complacency/scripts/build_dashboard.py.`
 
 ### Step 5 — Write the report
 
@@ -268,7 +290,7 @@ Every report must contain:
 - Weighted composite per the SKILL.md weight table; re-normalized to the active indicator set when optional indicators are missing.
 
 **Historical precedents**
-- Daily composite score 2000-01-01 → today, computed in `oneoff/market_complacency_<DATE>.py`.
+- Daily composite score 2000-01-01 → today, computed by `.claude/skills/market-complacency/scripts/build_dashboard.py`.
 - Forward returns: SPY adjusted close (`auto_adjust=True`), 6 / 12 / 24 month windows.
 
 **Stale notices / coverage gaps**
@@ -287,7 +309,7 @@ Every report must contain:
 - **Never use absolute thresholds without percentile context.** "VIX is 12" means nothing without "which is the 7th percentile of the last 10 years". The indicator table must show both. Absolute levels rot as the regime evolves; percentiles are self-calibrating.
 - **Never include indicators with <5y clean history in the composite.** Short-history indicators can be discussed narratively but cannot be weighted. CCC OAS itself was reconstructed by ICE in different eras; verify the FRED series goes back the full 10y before weighting it.
 - **Never assert "this looks like 2007 / 2018 / 2020".** Let the precedents table do that work — list the dates with their forward returns and let the reader pattern-match. Naming specific historical analogs in the verdict is over-confident.
-- **No "Source: our model" / "(estimate)" / "(本模型)"** anywhere. The composite is computed in `oneoff/market_complacency_<DATE>.py`; cite the script path for the composite, cite the underlying FRED / yfinance / AAII / NAAIM / Shiller URLs for the inputs.
+- **No "Source: our model" / "(estimate)" / "(本模型)"** anywhere. The composite is computed in `.claude/skills/market-complacency/scripts/build_dashboard.py`; cite the script path for the composite, cite the underlying FRED / yfinance / multpl / AAII / NAAIM URLs for the inputs.
 
 ## Output location
 
@@ -296,8 +318,8 @@ Save to `reports/market-complacency/market_complacency_<YYYY-MM-DD>.md` under th
 Supplementary deliverables sit in standard locations:
 
 - Charts: `reports/charts/market_complacency_<DATE>_*.png`.
-- Composite script + CSVs: `oneoff/market_complacency_<DATE>.py`, `oneoff/market_complacency_<DATE>_indicators.csv`, `oneoff/market_complacency_<DATE>_precedents.csv`. The script must be self-contained and re-runnable.
-- Optional CSV caches: `oneoff/shiller_cape.csv`, `oneoff/aaii_sentiment.csv`, `oneoff/naaim_exposure.csv` — refreshable independently of the report.
+- Composite build script: `.claude/skills/market-complacency/scripts/build_dashboard.py` (reusable across dates via `--date YYYY-MM-DD`). Generated CSVs: `oneoff/market_complacency_<DATE>_indicators.csv`, `oneoff/market_complacency_<DATE>_precedents.csv`, `oneoff/market_complacency_<DATE>_composite_history.csv`. The script is self-contained and idempotent.
+- Date-stamped CSV caches written by the build script: `oneoff/sp500_trailing_pe_<DATE>.csv`, `oneoff/shiller_cape_<DATE>.csv`, `oneoff/aaii_sentiment_<DATE>.csv`, `oneoff/naaim_exposure_<DATE>.csv`. Reruns on the same date are free; reruns on a different date re-fetch from source.
 
 ### Update-in-place rule
 
