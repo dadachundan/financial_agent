@@ -141,13 +141,17 @@ INDICATORS = [
     # valuation indicator. Low DY = stocks expensive relative to cash returns.
     # Citi BMC thresholds: amber ~2.1%, red ~1.3% (low = warning). Today ~1.6%.
     {"id": "spx_dy",   "name": "S&P 500 Dividend Yield", "source": "spx_dy", "code": None,    "direction": "low", "weight": 0.05, "required": False, "unit": "%",  "category": "Valuation"},
-    # NEW v5 (added after Citi BMC review of missing factors):
-    # EPS distance from rolling 10y peak — proxies Citi's "EPS from previous
-    # peak" indicator. Computed from multpl monthly trailing S&P 500 EPS
-    # (1871-present). When current EPS is at the rolling-10y high, value = 0;
-    # otherwise negative. Citi treats high-from-peak as complacent (cycle high).
-    # Direction "high" because closer to 0 = at the peak = complacent.
-    {"id": "eps_peak", "name": "EPS dist from 10y peak", "source": "eps_peak", "code": None, "direction": "high", "weight": 0.05, "required": False, "unit": "%",  "category": "Profitability"},
+    # eps_peak REMOVED in v10 — multpl S&P 500 trailing EPS page lags GAAP
+    # finalization by 6-12 months. As of June 2026 their latest data point is
+    # Sep 30, 2025 ($239.98) — 8 months stale. Other multpl pages (Trailing PE,
+    # CAPE, DY) update within 2 days because they only need current price ÷
+    # trailing-finalized-earnings, but the raw Earnings page waits for the
+    # GAAP-finalized number which lags. Per user directive "if the data is
+    # stale, you shouldn't use it" — indicator dropped. The Figure 2 row is
+    # also removed. CAPE / ERP / DY all cover the valuation regime well; the
+    # EPS-from-peak signal was largely redundant with CAPE at the cycle-peak
+    # detection anyway. Re-add only when a free monthly current TTM EPS feed
+    # is identified.
     # FINRA Investor Margin Debt — proxies Levkovich-style leverage exuberance.
     # Monthly back to 1997 from FINRA's published xlsx. The level grows with the
     # market; what matters is **margin debt as % of S&P 500 market cap**, which

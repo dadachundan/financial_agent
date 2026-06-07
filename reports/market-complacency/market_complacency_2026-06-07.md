@@ -1,6 +1,6 @@
 # Market Complacency Dashboard — 2026-06-07
 
-> **Dashboard's Take.** **Flag count 8 / 20 — Citi-BMC style: 7 red + 2 amber + 11 off.** US equities are at near-term highs with clear valuation exuberance. **Three slow-moving indicators (CAPE 41.6, S&P 500 DY 1.06%, Moody's BAA−10Y 1.54pp) are at or past the levels that triggered the worst US bear markets of the post-1995 era** — yet the yield curve is positive at +38bp, equity vol is mid-range, and SKEW at 152 is in the contra zone (hedges already bid). The signature is **"dot-com-extreme valuation + already-bid hedges"** — not a uniform sell signal. Action: trim peaks, tighten stops, prefer put-spreads over naked puts, exit CCC credit, skip outright shorts. Empirical base rate at flag-count 6-10: median 12m forward SPY +14%, ~30% probability of a >20% drawdown within 24 months.
+> **Dashboard's Take.** **Flag count 7.5 / 19 — Citi-BMC style: 7 red + 1 amber + 11 off.** US equities are at near-term highs with clear valuation exuberance. **Three slow-moving indicators (CAPE 41.6, S&P 500 DY 1.06%, Moody's BAA−10Y 1.54pp) are at or past the levels that triggered the worst US bear markets of the post-1995 era** — yet the yield curve is positive at +38bp, equity vol is mid-range, and SKEW at 152 is in the contra zone (hedges already bid). The signature is **"dot-com-extreme valuation + already-bid hedges"** — not a uniform sell signal. Action: trim peaks, tighten stops, prefer put-spreads over naked puts, exit CCC credit, skip outright shorts. Empirical base rate at flag-count 6-10: median 12m forward SPY +14%, ~30% probability of a >20% drawdown within 24 months.
 
 ## Figure 2. Bear Market Checklist — Historical Calibration
 
@@ -21,8 +21,7 @@ Today vs the start of past bear markets and recent peaks. **Red = full flag, �
 | [US Capex YoY (%)](https://fred.stlouisfed.org/series/PNFI) | 🟠 9.7 | 🟠 8.0 | +1.1 | 🟠 7.9 | 🟠 **8.4** |
 | [US M&A (last 12m % of Mkt cap)](https://www.bain.com/insights/topics/m-and-a-report/) | 🔴 11.4 | 🔴 8.1 | 4.4 | 🟠 5.0 | **3.7** |
 | [US IPO (last 12m % of DM Mkt cap)](https://www.renaissancecapital.com/IPO-Center/Stats) | 🔴 0.7 | 🟠 0.4 | 0.2 | 🟠 0.6 | **0.4** |
-| **Profitability** | | | | | |
-| [EPS dist from rolling-10y peak (%)](https://www.multpl.com/s-p-500-earnings) *(0 = at cycle high; multpl latest data = Sep 2025 $239.98, ~8mo stale; current TTM EPS ~$245-250 implied by SPY trailing PE 26.66)* | 0 | −13 | **−12** | 0 | 🟠 **0** |
+| **Profitability** *(EPS-from-peak row removed v10 — [multpl S&P 500 Earnings page](https://www.multpl.com/s-p-500-earnings) is 8 months stale; per user directive we don't use stale data. The CAPE row above already captures the cycle-peak signal.)* | | | | | |
 | **Balance sheets / credit markets** | | | | | |
 | [Moody's BAA − 10Y (pp)](https://fred.stlouisfed.org/series/BAA10Y) | 🟠 2.30 | 🟠 1.99 | 🟠 2.38 | 🟠 1.85 | 🔴 **1.54** |
 | [HY OAS (%)](https://fred.stlouisfed.org/series/BAMLH0A0HYM2) *(ICE BofA, 2023+; Citi pre-2023)* | 6.00 | 6.00 | 🟠 4.80 | 3.37 | 🔴 **2.74** |
@@ -34,7 +33,7 @@ Today vs the start of past bear markets and recent peaks. **Red = full flag, �
 | [SKEW](https://finance.yahoo.com/quote/%5ESKEW/) | 113 | 117 | 131 | 154 | 🟢 **152** (contra) |
 | [MOVE](https://finance.yahoo.com/quote/%5EMOVE/) | n/a | 90 | 110 | 77 | 75 |
 | [VIX9D](https://finance.yahoo.com/quote/%5EVIX9D/) / [VIX3M](https://finance.yahoo.com/quote/%5EVIX3M/) *(VIX9D launched 2011)* | n/a | n/a | 🚨 1.77 (COVID panic) | 0.61 | 🟢 **1.10 backwardated** (contra) |
-| **# Flags (this dashboard / 20)** | n/a* | n/a* | n/a* | n/a* | **8.0** |
+| **# Flags (this dashboard / 19)** | n/a* | n/a* | n/a* | n/a* | **7.5** |
 | **# Flags (Citi BMC / 18)** | 17.5 | 13.0 | 5.5 | 8.5 | 10.0 (Global), 11.5 (US) |
 
 *Pre-2007 totals incomplete — VVIX, SKEW, MOVE histories shorter than the dashboard's lookback.
