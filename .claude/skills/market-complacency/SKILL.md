@@ -254,18 +254,40 @@ Save to `reports/market-complacency/market_complacency_<YYYY-MM-DD>.md` under th
 
 ## Output Format (mandatory blocks)
 
-Every report must contain:
+Every report must contain — **in this order**:
 
-1. **Complacency Verdict** at the top (bold, one line, with composite score and percentile rank).
-2. **5-tier band table** showing today's score in context.
-3. **Indicator-by-indicator table** — all 10 required (+ 0–3 optional) with current value, 10y context, complacency percentile, decile, stretched flag.
+1. **`## Key takeaways`** (NEW v6 — front-load the verdict). This is the first section after the title. Replaces the old single-paragraph "Complacency Verdict." Structure:
+   - **TL;DR** — one bold line stating composite score / tier / flag count + action verb. Reader knows the punchline in 5 seconds.
+   - **Headline read** — 4-row table: composite score, flag count, verdict tier, vs Citi BMC.
+   - **What's flashing 🔴 red** — bulleted list naming each red indicator with the one-phrase reason. Group by category if helpful (valuation / risk-premium / credit).
+   - **What's flashing 🟠 amber** — same structure for ambers.
+   - **Off but contra-signal** — only the 2-3 most-decision-relevant off-flag indicators (the ones already saying "regime turning") with their numbers and one-phrase explanation. NOT a full list of every off-flag indicator.
+   - **Action implications** — numbered list of 4-6 concrete actions. Each starts with a verb.
+   - **Empirical base rate one-liner** — "median 12m forward SPY at this composite range: X%, ~Y% probability of >20% drawdown within 24 months."
+
+   Rationale: the prior "Complacency Verdict" paragraph was ~250 words of dense prose; readers complained it took 90 seconds to extract the punchline. Key-takeaways is scannable in 15 seconds while preserving every number.
+
+2. **Composite Score & Tier** table showing today's score in context (just the score + tier + 5-tier band, no narrative).
+3. **Indicator-by-indicator table** — all required (+ optional) with current value, 10y context, complacency percentile, decile, flag.
 4. **Composite Score Decomposition** — explicit `weight × complacency_pct = contribution` table summing to the headline composite. The single composite number alone is too opaque; the reader needs to see which indicators are doing the heavy lifting and which are pulling the other way. Highlight the indicators with the largest absolute contribution in bold so the reader can scan the dominant signals in two seconds.
 5. **Cross-asset signature paragraph** — which categories agree, which diverge.
 6. **Historical precedents table** with SPY forward returns.
 7. **6–10 embedded charts** with inline captions and source attribution.
 8. **"What this verdict is NOT" caveat block.**
-9. **Action implications block.**
-10. **`## Data Used / 数据来源清单`** manifest, including the **FRED data-window disclosure** (see Guardrails below).
+9. **Action implications block** — expand on the key-takeaways action list with the *why* and concrete sizing/instrument detail.
+10. **What Would Invalidate This Read** — the specific signal flips that would change the verdict.
+11. **Comparison to Citi BMC** — when a current BMC reading is available (Citi refreshes ~quarterly).
+12. **`## Data Used / 数据来源清单`** manifest, including the **ICE BofA window disclosure** (see Guardrails below).
+
+### Why key-takeaways is the load-bearing change
+
+The old "single dense paragraph verdict" pattern was the most-complained-about block in earlier report iterations. Reformatting it as **TL;DR + table + bullets + actions** does three things:
+
+1. **Front-loads the conclusion** — a reader who only has 30 seconds gets the right read.
+2. **Makes each piece findable** — clicking through to a specific flag or precedent reference takes ~3 seconds instead of paragraph-scanning.
+3. **Forces honesty about contra-signals** — separating "red / amber / contra-off" buckets surfaces the cross-asset divergence that a single paragraph can hide.
+
+The deeper Cross-Asset Signature paragraph (block 5) keeps the long-form narrative for readers who want it; the Key Takeaways section is the *daily-scan* version.
 
 ### Data Used / 数据来源清单 (mandatory)
 

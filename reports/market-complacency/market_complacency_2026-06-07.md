@@ -1,16 +1,52 @@
 # Market Complacency Dashboard — 2026-06-07
 
-## Complacency Verdict
+## Key takeaways
 
-**Neutral (top edge) — composite 59.5 / 100, flag count 8.0 / 21 (Citi-BMC-style).** Seven indicators print red (HY / IG / BAA10Y credit at tights, S&P 500 dividend yield at its 10-year low, equity risk premium at an all-time low of −1.34pp, HYG/LQD ratio at a 10-year high, Shiller CAPE at the 2nd-highest reading in 150 years), and two more print amber (S&P 500 trailing EPS just hit a new 10-year peak; US aggregate capex YoY at +8.4%, the late-cycle exuberance signature). **Two new v6 indicators surprised to the downside** — US M&A volume / mkt cap is in the 8th decile (NOT complacent, today's $3.4T global annualized run-rate is well below 2021's $5.9T peak), and US IPO proceeds / mkt cap is in the 7th decile (today's $58B annualized vs 2021's $142B). Together with the existing contra-signals (CCC OAS wider than 10y median, VIX term slope backwardated, SKEW 152 in top decile of crash demand, yield curve +38bp), the dashboard reads: **"valuation and risk-premium screaming complacent, but deal-making and equity-vol already past their cycle highs."**
+**TL;DR**: Composite **59.5 / 100, top edge of Neutral**, flag count **8 / 21**. Valuation and risk-premium are screaming complacent, but deal-making and equity-vol are already past their cycle highs. **Trim peaks, tighten stops, put-spreads over naked puts, exit CCC credit if you can, skip outright shorts.**
+
+### Headline read
+
+| Metric | Value | Context |
+|---|---|---|
+| Composite score | **59.5 / 100** | Top edge of Neutral (60 = Elevated threshold) |
+| Flag count | **8.0 / 21** (7 red + 2 amber + 12 off) | Citi-BMC-style binary; Citi Global BMC reads 10/18 |
+| Verdict | **Neutral (top edge)** | Late-cycle split — slow money complacent, fast money already worried |
+| vs Citi BMC | 38% vs Citi's 56% (Global) | Gap accounted for by 7 paid-feed indicators still missing |
+
+### What's flashing 🔴 red (7 — all valuation / risk-premium / broad credit)
+
+- **HY OAS 2.74%**, IG OAS 0.74%, Moody's BAA−10Y 1.54pp — broad credit at 10y / 25y tights
+- **S&P 500 Dividend Yield 1.06%** — 10y minimum
+- **Equity Risk Premium −1.34pp** — all-time low (stocks priced below bonds in yield)
+- **HYG/LQD ratio 0.734×** — 10y maximum
+- **Shiller CAPE 41.57×** — 2nd-highest in 150 years
+
+### What's flashing 🟠 amber (2 — fundamentals at cycle high)
+
+- **S&P 500 trailing EPS at rolling 10y peak** (Sep 2025: $239.98)
+- **US Capex YoY +8.4%** — late-cycle aggregate investment pace
+
+### Off but contra-signal (the 3 that matter)
+
+- **CCC − HY spread 6.72pp** — 10y maximum; weakest credit tier is already cracking even as broad HY stays tight
+- **VIX term slope 1.10 backwardated** — equity vol already paying for hedges (opposite of Jan 2018)
+- **SKEW 152** — top-decile crash-protection demand
+
+### Action implications
+
+1. **Trim peaks** — concentration risk lives in the CAPE-sensitive cohort (AI mega-caps)
+2. **Tighten stops** on longest-duration / highest-multiple positions
+3. **Hedge with put-spreads, not naked puts** — SKEW 152 makes OTM puts expensive
+4. **Exit CCC credit** if you can without realizing losses — BDC equity, levered loan ETFs, private credit closed-ends
+5. **Avoid outright shorts** — Elevated/Neutral-top can persist for years; precedents at this composite range had median 12m forward SPY of +14%, 86% positive
+
+→ Empirical base rate at this composite range: **median 12m forward SPY +14%**, **~30% probability of a >20% drawdown within 24 months**. Not a sell signal — a risk-management signal.
 
 ## Composite Score & Tier
 
 | Composite | Tier | Bands |
 |---|---|---|
 | **59.5 / 100** | **Neutral (top edge)** | 0–20 Panicked · 20–40 Cautious · 40–60 Neutral · 60–80 Elevated · 80–100 Stretched |
-
-**Citi-BMC-style flag count: 8.0 / 21** (7 red + 2 amber + 12 off). For comparison: Citi's [June 5, 2026 Global BMC](https://www.citivelocity.com) reads 10/18 (Global), 11.5/18 (US) — partly because Citi's IPO indicator reads amber on *announced/expected* megacap pipeline (e.g., Klarna, Stripe), while this dashboard counts only realized issuance.
 
 ![Market Complacency Composite, 2001–2026](../charts/market_complacency_2026-06-07_composite.png)
 *Source: composite of 19 indicators per `.claude/skills/market-complacency/scripts/build_dashboard.py`; percentile rank vs trailing 10-year window for each input. Today's value (61.7) marked.*
