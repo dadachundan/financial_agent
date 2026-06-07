@@ -160,13 +160,11 @@ INDICATORS = [
     # aggregate US capex cycle. Direction "high" — strong capex growth at this
     # point in the cycle is typically late-stage exuberance.
     {"id": "capex_yoy", "name": "US Capex YoY (PNFI)", "source": "capex_yoy", "code": None, "direction": "high", "weight": 0.04, "required": False, "unit": "%", "category": "Corporate Behaviour"},
-    # CBOE Equity Put/Call Ratio — proxies Levkovich sentiment. Daily back to
-    # Nov 2006, but the public CSV stops at Oct 2019 (CBOE moved newer data
-    # behind a portal). Included anyway because it's useful for the backtest's
-    # pre-2019 history; reports for 2026 will show "n/a — source stale" and
-    # the indicator drops from the composite via the standard re-norm. Low
-    # put/call = complacent (calls dominate).
-    {"id": "put_call", "name": "CBOE Equity Put/Call Ratio", "source": "put_call", "code": None, "direction": "low", "weight": 0.03, "required": False, "unit": "×", "category": "Sentiment"},
+    # CBOE Equity Put/Call Ratio REMOVED in v8 — the public CSV stopped
+    # updating Oct 2019, so it cannot inform current readings. Keeping it in
+    # the catalog only polluted the flag-count denominator with a row that
+    # was permanently "off" (stale value < 60th percentile by construction).
+    # Restore only when a non-paywalled live feed is identified.
     # NEW v6 (added 2026-06-07, after user asked "can't you use WebSearch?"):
     # IPO activity — annual US IPO proceeds from Renaissance Capital,
     # 2017-present. Cached as oneoff/ipo_proceeds_annual.csv (manually
