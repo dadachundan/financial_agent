@@ -93,16 +93,40 @@
 
 <div class="row g-3">
   {% set base = "/claude-reports/view/charts/market_complacency_" ~ chart_date %}
-  {% for slug, title in [
-    ("credit_baa",     "Long-history credit — Moody's BAA−10Y (1986+)"),
-    ("ig_credit",      "IG credit tiers — Moody's AAA−10Y vs BAA−10Y + dispersion"),
-    ("ccc_hy_spread",  "CCC − HY OAS spread (credit-tier divergence)"),
-    ("hyg_lqd",        "HYG / LQD ratio (risk-on credit flow proxy)"),
-    ("cape",           "Shiller CAPE (1871+)"),
-    ("erp",            "Equity Risk Premium = E/P − 10Y"),
-    ("vix_vvix",       "VIX (1990+) & VVIX (2007+)"),
-    ("vix_slope",      "VIX Term Slope — VIX9D/VIX3M + VIX/VIX3M long-history proxy"),
-    ("move",           "MOVE Index (2002+)"),
+  {#
+    Each row = (slug, title, sources_html). The sources block is the same
+    plain-text "Source: …" line that the report's iframe caption carries
+    — duplicated here so the BMC page is self-explaining without having
+    to jump to the markdown report.
+  #}
+  {% for slug, title, sources in [
+    ("credit_baa",
+     "Long-history credit — Moody's BAA−10Y (1986+)",
+     'Sources: <a href="https://fred.stlouisfed.org/series/BAA10Y" target="_blank" rel="noopener">FRED BAA10Y</a> · <a href="https://tradingeconomics.com/united-states/bofa-merrill-lynch-us-high-yield-option-adjusted-spread-fed-data.html" target="_blank" rel="noopener">TradingEconomics HY OAS long-history</a>'),
+    ("ig_credit",
+     "IG credit tiers — Moody's AAA−10Y vs BAA−10Y + dispersion",
+     'Sources: <a href="https://fred.stlouisfed.org/series/AAA10Y" target="_blank" rel="noopener">FRED AAA10Y</a> · <a href="https://fred.stlouisfed.org/series/BAA10Y" target="_blank" rel="noopener">FRED BAA10Y</a>'),
+    ("ccc_hy_spread",
+     "CCC − HY OAS spread (credit-tier divergence)",
+     'Derived = CCC OAS minus HY OAS. Sources: <a href="https://fred.stlouisfed.org/series/BAMLH0A3HYC" target="_blank" rel="noopener">FRED BAMLH0A3HYC</a> (CCC) · <a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" target="_blank" rel="noopener">FRED BAMLH0A0HYM2</a> (HY).'),
+    ("hyg_lqd",
+     "HYG / LQD ratio (risk-on credit flow proxy)",
+     'Derived = HYG ÷ LQD ETF prices. Sources: <a href="https://finance.yahoo.com/quote/HYG/" target="_blank" rel="noopener">Yahoo HYG</a> · <a href="https://finance.yahoo.com/quote/LQD/" target="_blank" rel="noopener">Yahoo LQD</a>. HYG launched Apr 2007.'),
+    ("cape",
+     "Shiller CAPE (1871+)",
+     'Source: <a href="https://www.multpl.com/shiller-pe" target="_blank" rel="noopener">multpl.com Shiller PE</a> · derived from <a href="http://www.econ.yale.edu/~shiller/data.htm" target="_blank" rel="noopener">Robert Shiller&#39;s Yale dataset</a>.'),
+    ("erp",
+     "Equity Risk Premium = E/P − 10Y",
+     'Sources: <a href="https://www.multpl.com/s-p-500-earnings-yield" target="_blank" rel="noopener">multpl S&amp;P 500 Earnings Yield</a> · <a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener">FRED DGS10</a> (10Y Treasury).'),
+    ("vix_vvix",
+     "VIX (1990+) & VVIX (2007+)",
+     'Sources: <a href="https://finance.yahoo.com/quote/%5EVIX/" target="_blank" rel="noopener">Yahoo ^VIX</a> · <a href="https://finance.yahoo.com/quote/%5EVVIX/" target="_blank" rel="noopener">Yahoo ^VVIX</a> · <a href="https://www.cboe.com/tradable_products/vix/" target="_blank" rel="noopener">CBOE VIX page</a>.'),
+    ("vix_slope",
+     "VIX Term Slope — VIX9D/VIX3M + VIX/VIX3M long-history proxy",
+     'Sources: <a href="https://finance.yahoo.com/quote/%5EVIX9D/" target="_blank" rel="noopener">Yahoo ^VIX9D</a> · <a href="https://finance.yahoo.com/quote/%5EVIX3M/" target="_blank" rel="noopener">Yahoo ^VIX3M</a> · <a href="https://finance.yahoo.com/quote/%5EVIX/" target="_blank" rel="noopener">Yahoo ^VIX</a>. Ratio &lt; 1 = contango (calm); ≥ 1 = backwardation (front-month fear).'),
+    ("move",
+     "MOVE Index (2002+)",
+     'Source: <a href="https://finance.yahoo.com/quote/%5EMOVE/" target="_blank" rel="noopener">Yahoo ^MOVE</a>. MOVE was created in 1988 by Merrill Lynch but free pre-2002 history is not available.'),
   ] %}
   <div class="col-12" id="fig-{{ slug }}">
     <div class="card" style="border:1px solid #d7dadc;">
@@ -113,6 +137,9 @@
               width="100%" height="480"
               style="border:0; display:block;"
               loading="lazy"></iframe>
+      <div class="card-footer py-2" style="background:#fafafa; font-size:.78rem; color:#666; border-top:1px solid #eee;">
+        {{ sources|safe }}
+      </div>
     </div>
   </div>
   {% endfor %}
