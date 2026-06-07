@@ -166,7 +166,17 @@
       <h5 class="mb-0 fw-bold">&#128200; Market Indicators</h5>
       <div id="lastUpdated" class="mt-1">—</div>
     </div>
-    <div class="d-flex gap-2 align-items-center">
+    <div class="d-flex gap-2 align-items-center flex-wrap">
+      <div id="dashRange" class="range-bar btn-group" role="group" aria-label="Dashboard time range">
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-range="1m">1M</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-range="3m">3M</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-range="6m">6M</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-range="ytd">YTD</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm active" data-range="1y">1Y</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-range="5y">5Y</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-range="max">MAX</button>
+      </div>
+      <span id="dashRangeSpinner" class="text-muted small d-none">Loading…</span>
       <span id="refreshBadge" class="badge bg-warning text-dark refreshing-badge d-none">
         Refreshing…
       </span>
@@ -223,10 +233,12 @@
   let _catalogue = [];   // [{id, name, category, unit, description, thresholds}]
   let _snapshot  = {};   // {id: {value, change_1d, change_1w, change_type, signal, history}}
   let _detailChart = null;
-  let _detailInd = null;     // currently-open indicator object
-  let _detailRange = '1y';   // currently-selected range key
+  let _detailInd = null;       // currently-open indicator object
+  let _detailRange = '1y';     // currently-selected range key in modal
+  let _dashRange   = '1y';     // currently-selected range key on dashboard
+  const _RANGE_HISTORY = {};   // {rangeKey: {id: [{date, value}, ...]}} — sparkline cache
 
-  const _FRED_SERIES = {     // indicator-id → FRED series id (for embed)
+  const _FRED_SERIES = {       // indicator-id → FRED series id (for embed)
     hy_oas: 'BAMLH0A0HYM2',
     ig_oas: 'BAMLC0A0CM',
   };
@@ -249,6 +261,10 @@
       }
 
       renderGrid();
+      // Kick off the 1Y dashboard fetch in the background — sparklines update
+      // as soon as it arrives. No await: the short-history snapshot already
+      // gave us something to render immediately.
+      loadDashRange('1y');
     } catch (e) {
       console.error('Boot error', e);
     } finally {
@@ -389,12 +405,18 @@
       delete _sparkCharts[ind.id];
     }
 
-    if (!rec || !rec.history || rec.history.length < 2) return;
-
-    const hist  = rec.history.slice(-30);
+    // Prefer the dashboard range cache; fall back to the snapshot's short history.
+    const rangeCache = _RANGE_HISTORY[_dashRange];
+    let hist = (rangeCache && rangeCache[ind.id]) || (rec && rec.history) || [];
+    if (hist.length < 2) return;
+    // Cap sparkline density so MAX / 5Y don't crush the tiny canvas
+    if (hist.length > 250) {
+      const step = Math.ceil(hist.length / 250);
+      hist = hist.filter((_, i) => i % step === 0 || i === hist.length - 1);
+    }
     const vals  = hist.map(h => h.value);
     const dates = hist.map(h => h.date);
-    const colour = signalColour(rec.signal);
+    const colour = signalColour(rec ? rec.signal : 'neutral');
 
     _sparkCharts[ind.id] = new Chart(canvas.getContext('2d'), {
       type: 'line',
@@ -426,7 +448,7 @@
   // ── Detail modal ────────────────────────────────────────────────────────────
   function openDetail(ind) {
     _detailInd = ind;
-    _detailRange = '1y';
+    _detailRange = _dashRange;
 
     const rec = _snapshot[ind.id];
 
@@ -492,6 +514,40 @@
         loadDetailChart(_detailInd, _detailRange);
       });
     });
+    document.querySelectorAll('#dashRange [data-range]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const r = btn.dataset.range;
+        if (r === _dashRange) return;
+        document.querySelectorAll('#dashRange [data-range]').forEach(b => {
+          b.classList.toggle('active', b === btn);
+        });
+        loadDashRange(r);
+      });
+    });
+  }
+
+  // ── Dashboard-level range fetch ─────────────────────────────────────────────
+  async function loadDashRange(rangeKey) {
+    _dashRange = rangeKey;
+    if (_RANGE_HISTORY[rangeKey]) {
+      // already cached; just re-draw
+      _catalogue.forEach(ind => drawSparkline(ind));
+      return;
+    }
+    const spinner = document.getElementById('dashRangeSpinner');
+    spinner.classList.remove('d-none');
+    try {
+      const res  = await fetch('/api/range-snapshot?range=' + encodeURIComponent(rangeKey));
+      const body = await res.json();
+      if (body && body.data) {
+        _RANGE_HISTORY[rangeKey] = body.data;
+        _catalogue.forEach(ind => drawSparkline(ind));
+      }
+    } catch (e) {
+      console.error('range-snapshot fetch failed', e);
+    } finally {
+      spinner.classList.add('d-none');
+    }
   }
 
   // ── Chart loader ────────────────────────────────────────────────────────────

@@ -510,3 +510,77 @@ def fetch_history_range(ind_id: str, range_key: str) -> list[dict]:
     data = _yf_history([sym], period)
     series = data.get(sym, [])
     return [{"date": d, "value": round(v, 4)} for d, v in series]
+
+
+_RANGE_CACHE: dict[tuple[str, str], dict[str, list[dict]]] = {}
+
+
+def fetch_range_snapshot(range_key: str) -> dict[str, list[dict]]:
+    """Batch fetch history for every indicator at the requested range.
+
+    Returns {indicator_id: [{date, value}, ...]}. One yfinance batch call
+    covers all ticker / spread / ratio symbols; FRED series are pulled
+    one-by-one (only two of them, fast). Used by the dashboard's top-level
+    range bar to re-render all sparklines without N individual round-trips.
+
+    Results cache for the day under (range_key, YYYY-MM-DD) — the dashboard
+    range bar can switch 5Y → MAX → 1Y in <50 ms after the first warm-up.
+    """
+    import datetime
+    range_key = (range_key or "1y").lower()
+    if range_key not in _RANGE_TO_YF_PERIOD:
+        range_key = "1y"
+    period = _RANGE_TO_YF_PERIOD[range_key]
+
+    cache_key = (range_key, datetime.date.today().isoformat())
+    cached = _RANGE_CACHE.get(cache_key)
+    if cached is not None:
+        return cached
+
+    # Single batched yfinance download for every direct/component symbol
+    yf_syms = list(set(_YF_DIRECT) | set(_YF_EXTRA))
+    yf_data = _yf_history(yf_syms, period) if yf_syms else {}
+
+    out: dict[str, list[dict]] = {}
+    fred_start = _range_to_fred_start(range_key)
+
+    for ind in INDICATORS:
+        iid = ind["id"]
+        sym = ind["symbol"]
+        try:
+            if sym.startswith("_FRED_"):
+                series_id = sym[len("_FRED_"):]
+                rows = _fetch_fred_range(series_id, fred_start)
+                out[iid] = [{"date": r["date"], "value": round(r["value"], 4)}
+                            for r in rows]
+
+            elif sym.startswith("_SPREAD_"):
+                parts = sym[len("_SPREAD_"):].split("_", 1)
+                if len(parts) != 2:
+                    out[iid] = []
+                    continue
+                a_key, b_key = parts
+                a, b = dict(yf_data.get(a_key, [])), dict(yf_data.get(b_key, []))
+                common = sorted(set(a) & set(b))
+                out[iid] = [{"date": d, "value": round(a[d] - b[d], 4)} for d in common]
+
+            elif sym.startswith("_RATIO_"):
+                parts = sym[len("_RATIO_"):].split("_", 1)
+                if len(parts) != 2:
+                    out[iid] = []
+                    continue
+                a_key, b_key = parts
+                a, b = dict(yf_data.get(a_key, [])), dict(yf_data.get(b_key, []))
+                common = sorted(set(a) & set(b))
+                out[iid] = [{"date": d, "value": round(a[d] / b[d], 4)}
+                            for d in common if b[d] != 0]
+
+            else:
+                series = yf_data.get(sym, [])
+                out[iid] = [{"date": d, "value": round(v, 4)} for d, v in series]
+        except Exception as exc:
+            log.warning("range-snapshot %s/%s failed: %s", iid, range_key, exc)
+            out[iid] = []
+
+    _RANGE_CACHE[cache_key] = out
+    return out

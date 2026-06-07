@@ -33,7 +33,7 @@ from flask import Blueprint, Flask, abort, jsonify, render_template, redirect, r
 import nav_widget2 as nw2  # noqa: F401  (NAV_HTML used in template)
 import indicators.db as _db
 from indicators.data_fetcher import (
-    CATEGORIES, INDICATORS, fetch_all, fetch_history_range,
+    CATEGORIES, INDICATORS, fetch_all, fetch_history_range, fetch_range_snapshot,
 )
 
 log = logging.getLogger(__name__)
@@ -152,6 +152,18 @@ def api_history(ind_id: str):
     if ind_id not in known_ids:
         abort(404)
     return jsonify(_db.get_history(ind_id))
+
+
+@indicators_bp.route("/api/range-snapshot")
+def api_range_snapshot():
+    """Batch range-history fetch for ALL indicators at the same time range.
+
+    Used by the dashboard-level range bar so switching 1Y → 5Y → MAX rerenders
+    every sparkline from one round-trip rather than N parallel requests.
+    """
+    range_key = (request.args.get("range") or "1y").lower()
+    data = fetch_range_snapshot(range_key)
+    return jsonify({"range": range_key, "data": data})
 
 
 @indicators_bp.route("/api/history-range/<ind_id>")
