@@ -275,11 +275,20 @@ def _bmc_compute_today() -> dict:
         else: flag = None
         out["ig_oas"] = {"value": round(ig, 2), "flag": flag, "suffix": None}
 
-    # CCC - HY spread (derived from FRED BAMLH0A3HYC - BAMLH0A0HYM2)
+    # Raw CCC OAS (FRED BAMLH0A3HYC) — weakest-tier high-yield spread.
+    # Direction is interpretation-dependent: high CCC at the absolute level
+    # is "stress" (default risk priced), but compared to broad HY it's
+    # "tier divergence" signal. Show absolute reading neutrally.
     ccc = _safe(lambda: _fred_latest("BAMLH0A3HYC"))
+    if ccc is not None:
+        # Mid-range during 2023-26: ~7-12pp. Stress > 12, off-flag elsewhere.
+        flag = "stress" if ccc >= 12 else None
+        out["ccc_oas"] = {"value": round(ccc, 2), "flag": flag, "suffix": None}
+
+    # CCC - HY spread (derived from BAMLH0A3HYC - BAMLH0A0HYM2). High spread =
+    # weakest tier already cracking even when broad HY is calm = contra signal.
     if ccc is not None and hy is not None:
         spread = ccc - hy
-        # High spread = credit-tier divergence (green / contra-signal)
         flag = "green" if spread >= 6.0 else None
         suffix = "(10y max — contra)" if flag == "green" else None
         out["ccc_hy_spread"] = {"value": round(spread, 2), "flag": flag, "suffix": suffix}
