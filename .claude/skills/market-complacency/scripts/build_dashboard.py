@@ -41,6 +41,19 @@ import yfinance as yf
 
 warnings.filterwarnings("ignore")
 
+# ── FRED API key (optional) ──────────────────────────────────────────────────
+# When available, the API gives more reliable pulls than the public CSV
+# endpoint and lets us query specific series the CSV doesn't expose. The
+# project's config.py holds the key under FRED_API_KEY.
+_FRED_API_KEY: str | None = None
+try:
+    import sys as _sys
+    _sys.path.insert(0, "/Users/x/projects/financial_agent")
+    import config as _cfg  # type: ignore
+    _FRED_API_KEY = getattr(_cfg, "FRED_API_KEY", None) or None
+except Exception:
+    _FRED_API_KEY = None
+
 # ── Path resolution ──────────────────────────────────────────────────────────
 # .claude/skills/market-complacency/scripts/build_dashboard.py
 #   parents[0] = scripts
@@ -103,6 +116,16 @@ INDICATORS = [
     # Backtest motivation: this spread widened ~12 months before GFC, ~6 months
     # before Q4 2018. The original dashboard missed both.
     {"id": "ccc_hy_spread", "name": "CCC − HY OAS spread", "source": "derived_ccc_hy", "code": None, "direction": "low", "weight": 0.05, "required": True, "unit": "pp", "category": "Credit"},
+    # NEW v3: Moody's BAA - 10Y Treasury (BAA10Y) is the long-history IG-credit
+    # proxy. Goes back to January 1986 (40 years, ~10,000 daily obs) so percentile
+    # ranks can be computed against a true 25-year window — unlike the ICE BofA
+    # OAS series which FRED only carries back to 2023-06 (post-relicensing).
+    # The two indicators are correlated 0.56 in their overlap window (mid-2023
+    # to today), with BAA10Y running ~70-80bp wider on average because BAA
+    # captures only the BBB tier (vs IG OAS's AAA/AA/A/BBB blend) and includes
+    # longer-duration bonds. Tracking it separately means our composite gets
+    # cycle-context for credit that the ICE BofA series alone can't provide.
+    {"id": "baa10y",  "name": "Moody's BAA − 10Y",   "source": "fred",  "code": "BAA10Y", "direction": "low", "weight": 0.05, "required": True, "unit": "pp", "category": "Credit"},
     # Equity vol
     {"id": "vix",      "name": "VIX",                   "source": "yf",    "code": "^VIX",              "direction": "low",  "weight": 0.10, "required": True,  "unit": "",   "category": "Equity Vol"},
     {"id": "vvix",     "name": "VVIX",                  "source": "yf",    "code": "^VVIX",             "direction": "low",  "weight": 0.05, "required": True,  "unit": "",   "category": "Equity Vol"},
@@ -123,8 +146,42 @@ INDICATORS = [
 
 # ── Fetchers ────────────────────────────────────────────────────────────────
 
+def _fetch_fred_via_api(series_id: str, start: str) -> list[dict]:
+    """Use the FRED JSON API when an API key is present. Returns the full
+    available history of the series — works for both the new ICE BofA series
+    (data only starts 2023-06) and the long-history Moody's series (back to
+    1986+) that the public CSV endpoint can't reach.
+    """
+    if not _FRED_API_KEY:
+        return []
+    import json
+    url = (
+        f"https://api.stlouisfed.org/fred/series/observations"
+        f"?series_id={series_id}&observation_start={start}"
+        f"&file_type=json&api_key={_FRED_API_KEY}&limit=100000"
+    )
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "curl/8.4.0"})
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read().decode("utf-8", errors="replace"))
+        rows = []
+        for o in data.get("observations", []):
+            if o.get("value") in ("", "."):
+                continue
+            try:
+                rows.append({"date": o["date"], "value": float(o["value"])})
+            except (TypeError, ValueError):
+                continue
+        return rows
+    except Exception as exc:
+        print(f"  FRED API fetch failed for {series_id}: {exc}", file=sys.stderr)
+        return []
+
+
 def fetch_fred(series_id: str, start: str) -> pd.Series:
-    rows = _fetch_fred_range(series_id, start)
+    # Prefer the API when a key is available — it returns the full series
+    # history without the public CSV's silent 3-year truncation.
+    rows = _fetch_fred_via_api(series_id, start) or _fetch_fred_range(series_id, start)
     if not rows:
         return pd.Series(dtype=float)
     df = pd.DataFrame(rows)

@@ -6,6 +6,8 @@
 
 > **Postscript 3 (added 2026-06-07 evening): full composite decomposition added below.** The Section "Composite Score Decomposition" between Section 3 and Section 4 shows weight × complacency-percentile = contribution for every active indicator, so the math behind the headline number is fully transparent.
 
+> **Postscript 4 (added 2026-06-07 late evening): v3 dashboard ships with a FRED API key + Moody's BAA−10Y long-history credit proxy.** The user provided a FRED API key (`config.FRED_API_KEY`); the build script now uses it for all FRED-sourced pulls. But the investigation also turned up that **the ICE BofA OAS series themselves were re-licensed in mid-2023** — even with the API key, FRED only carries HY OAS / IG OAS / CCC OAS data from 2023-06-06 forward (verified against the series metadata: `observation_start: 2023-06-06`). So Postscript 2's data-window bug is in fact a real upstream restriction, not a CSV truncation. v3 mitigates this by adding a 15th indicator — **Moody's BAA Corporate − 10Y Treasury spread** (FRED `BAA10Y`) — a long-history (1986-2026, 40 years) IG-credit proxy that correlates 0.56 with IG OAS in their 2023-2026 overlap window. Adding BAA10Y bumps today's composite from v2's 59.1 (Neutral) to **v3's 60.9 (Elevated, just over the threshold)** because BAA10Y at 1.54pp is at the 6.5th percentile of the last 10 years (or 2.7th of the last 25y if we'd used a longer window — see the BAA10Y note in the decomposition). The headline tier is now Elevated again — the more honest read given that broad-IG credit looks tight on every available historical window, not just 3 years of ICE data.
+
 ## Complacency Verdict
 
 **Elevated — composite 62.7 / 100, 76th percentile vs last 10 years.** Five of eleven active indicators sit in the most-complacent decile (HY OAS [BAMLH0A0HYM2 — 2.74%, June 4](https://fred.stlouisfed.org/series/BAMLH0A0HYM2), IG OAS [BAMLC0A0CM — 0.74%](https://fred.stlouisfed.org/series/BAMLC0A0CM), HYG/LQD ratio at a 10-year high [HYG](https://finance.yahoo.com/quote/HYG/history) ÷ [LQD](https://finance.yahoo.com/quote/LQD/history) = 0.734, equity risk premium at −1.34pp using [S&P 500 trailing PE 31.83](https://www.multpl.com/s-p-500-pe-ratio/table/by-month) − [10Y yield 4.48%](https://finance.yahoo.com/quote/%5ETNX/history), and [Shiller CAPE 41.57](https://www.multpl.com/shiller-pe/table/by-month) — its 99th percentile vs the past decade). Three indicators are flashing **the opposite signal** — CCC OAS, VIX term slope, and SKEW are all in the bottom-decile complacency rank, meaning the lowest-rated credit tier and the equity-vol tape are already pricing meaningful risk. The verdict is **Elevated, not Stretched**, only because the June 5 vol shock (VIX 15.40 → 21.51, SPY −2.58%) discounted the composite from ~75 last week. The credit / valuation / risk-premium picture remains unchanged.
@@ -50,7 +52,32 @@ Sources: HY/IG/CCC OAS from FRED ([BAMLH0A0HYM2](https://fred.stlouisfed.org/ser
 
 The composite is a weighted average of the active indicators' complacency percentiles, re-normalized over the active set. Both v1 (62.7 Elevated) and v2 (59.1 Neutral) decompositions are shown so the reader can see exactly where each point of the headline score comes from. v2 differs from v1 by (a) adding the CCC−HY spread (weight 0.05) and (b) trimming HY / IG / CCC OAS weights to make room (0.15→0.13, 0.07→0.06, 0.10→0.08).
 
-### v2 decomposition (today's authoritative reading: 59.1 / 100, Neutral)
+### v3 decomposition (today's authoritative reading: 60.9 / 100, Elevated)
+
+v3 adds the Moody's BAA−10Y indicator (40 years of history, fixes the ICE BofA 2023-06 cutoff problem). The new indicator at 93.5% complacency contributes ~+4.7 points, pushing the composite from v2's 59.1 (Neutral) back over the 60 threshold to 60.9 (Elevated). All other indicators are unchanged from v2.
+
+| Category | Indicator | Current | 10y rank | Complacency % | Weight | Contribution | Reading |
+|---|---|---:|---:|---:|---:|---:|---|
+| **Credit** | HY OAS (ICE BofA) | 2.74% | bottom 10% (3y) | 90.2 | 0.13 | **+11.7** | Tight |
+| | IG OAS (ICE BofA) | 0.74% | bottom 1% (3y) | 99.1 | 0.06 | **+6.0** | Tight |
+| | **Moody's BAA−10Y (NEW)** | 1.54pp | bottom 6.5% (10y) | 93.5 | 0.05 | **+4.7** | Tight (40y history) |
+| | CCC OAS (ICE BofA) | 9.46% | top 22% (3y) | 21.7 | 0.08 | +1.7 | *Wide* |
+| | CCC − HY spread | 6.72pp | 10y max (3y) | 0.9 | 0.05 | +0.05 | *Maxed wide* |
+| **Equity vol** | VIX | 21.51 | 75th raw (10y) | 25.0 | 0.10 | +2.5 | *Above-median* |
+| | VVIX | 102.04 | 62nd raw (10y) | 37.9 | 0.05 | +1.9 | *Slightly above-median* |
+| | VIX9D / VIX3M slope | 1.096× | 94th raw (10y) | 5.9 | 0.05 | +0.3 | *Backwardation* |
+| | SKEW | 152.25 | 91st raw (10y) | 9.4 | 0.05 | +0.5 | *Crash hedges bid* |
+| **Rate vol** | MOVE | 75.20 | 54th raw (10y) | 46.4 | 0.08 | +3.7 | Neutral |
+| **Risk premium** | Equity Risk Premium | −1.34pp | 10y min | 100.0 | 0.10 | **+10.0** | All-time low |
+| | HYG / LQD ratio | 0.734× | 10y max | 99.2 | 0.05 | **+5.0** | 10y high |
+| **Valuation** | Shiller CAPE | 41.57× | 10y max | 99.2 | 0.10 | **+9.9** | 2nd-highest in 150y |
+| | **Subtotal** | | | | 0.95 | **57.9** | |
+| | **÷ sum of weights** | | | | | / 0.95 | |
+| | **Composite (v3)** | | | | | **= 60.9** | **Elevated** |
+
+**Six bolded contributions total +47.3**, accounting for over 75% of the composite. The credit/valuation/risk-premium picture is what's pushing it; the equity-vol and CCC-divergence indicators are still cutting against it but the credit signal now has an extra long-history corroboration.
+
+### v2 decomposition (kept for reference: 59.1 / 100, Neutral)
 
 | Category | Indicator | Current | Complacency % | Weight | Contribution to composite | Reading |
 |---|---|---:|---:|---:|---:|---|
@@ -90,6 +117,21 @@ The five bolded contributions add to **+42.6** of the 59.2-point composite. **Th
 | **Subtotal** | | | 0.90 | **56.4** |
 | **÷ sum of weights** | | | | / 0.90 |
 | **Composite (v1)** | | | | **= 62.7** |
+
+### Note on Moody's BAA−10Y at 1.54pp — the long-history credit benchmark
+
+The Moody's BAA−10Y spread (FRED [`BAA10Y`](https://fred.stlouisfed.org/series/BAA10Y)) is the long-history credit-spread benchmark in this dashboard. It measures the yield on Moody's seasoned Baa corporate bonds (≈BBB tier) minus the 10-year Treasury yield. Today's value (1.54pp) sits in different percentiles depending on the lookback window:
+
+| Window | Obs | Today's percentile | Reading |
+|---|---:|---:|---|
+| Full 40y (1986-2026) | 10,106 | 7.5th | Bottom-decile tight |
+| Last 25y (2001-2026) | 6,247 | **2.7th** | **Among the tightest in a generation** |
+| Last 10y (2016-2026, *used in composite*) | 2,495 | 6.5th | Bottom-decile tight |
+| Last 3y (2023-2026) | 749 | 21.5th | Tight by recent standards |
+
+Today is 38bp tighter than the pre-GFC May 2007 low (1.67pp), 31bp tighter than the December 2021 cycle local low (1.85pp), and within 38bp of the all-time low of 1.16pp set in March 1989. The all-time high is 6.16pp (December 2008 GFC peak). The 25-year window is the most interpretation-relevant; on that basis today's reading is genuinely extreme — tighter than every print of the last 25 years except for brief late-2007 and mid-2021 windows. The 40-year window includes the 1986-1990 era which had a sustained tight regime (running 1.2-1.8pp for several years), so 1.54pp is less extreme on that basis.
+
+For the composite, BAA10Y is ranked over the same 10-year window as every other indicator (6.5th percentile → 93.5% complacency rating, weight 0.05, contribution +4.7 points). Treating one indicator with a different window size would break the methodology's interpretability. But the 25y percentile (2.7th) is the more honest answer to the question "how tight is credit historically?"
 
 ### Note on IG OAS at 0.74%
 
