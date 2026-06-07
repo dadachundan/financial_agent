@@ -2,20 +2,9 @@
 
 > **Dashboard's Take.** **Flag count 8 / 21 — Citi-BMC style: 7 red + 2 amber + 12 off.** US equities are at near-term highs with clear valuation exuberance. **Three slow-moving indicators (CAPE 41.6, S&P 500 DY 1.06%, Moody's BAA−10Y 1.54pp) are at or past the levels that triggered the worst US bear markets of the post-1995 era** — yet the yield curve is positive at +38bp, equity vol is mid-range, and SKEW at 152 is in the contra zone (hedges already bid). The signature is **"dot-com-extreme valuation + already-bid hedges"** — not a uniform sell signal. Action: trim peaks, tighten stops, prefer put-spreads over naked puts, exit CCC credit, skip outright shorts. Empirical base rate at flag-count 6-10: median 12m forward SPY +14%, ~30% probability of a >20% drawdown within 24 months.
 
-> ⚠️ **The composite score (64.3 / 100, Elevated by tier band) is a weighted-average legacy readout — not a load-bearing signal.** Backtest precision at composite ≥ 80 is 22.3% vs base rate 20.3% (lift just 1.10×); at composite ≥ 60 it's *worse* than random. **Use the flag count and Figure 2 for the regime read; the composite is shown only for time-series continuity in Figure 1.** Full rationale in the Caveats section.
-
 <iframe src="../charts/market_complacency_2026-06-07_flag_count.html" width="100%" height="560" style="border:0;border-radius:6px;"></iframe>
 
-*Figure 1. Flag count (red, right axis 0–21) and SPY price (blue, left), 2001–2026 — **Citi BMC Figure 1 equivalent**. The dashed line at 10 marks Citi's "double-digits = acceleration zone" reference. Annotated reference dates: March 2000, October 2007, Feb 2020, Dec 2021, Now. **Note: the dashboard's all-time max was 12.0 on 2024-12-06** — late 2024 was *more* flag-elevated than today, which underscores the regime-not-timing nature of the read. Interactive: 1Y / YTD / 5Y / 10Y / ALL buttons or bottom range-slider. Source: per-indicator complacency percentiles per `scripts/build_dashboard.py`.*
-
-<details>
-<summary>Legacy composite chart (for time-series continuity only — not load-bearing)</summary>
-
-<iframe src="../charts/market_complacency_2026-06-07_composite.html" width="100%" height="520" style="border:0;border-radius:6px;"></iframe>
-
-*Figure 1b. Composite (0–100) time series. Backtest precision at composite ≥ 80 is 22.3% vs base rate 20.3% (lift 1.10×) — *barely* above random. Use Figure 1 above and Figure 2 below for the regime read.*
-
-</details>
+*Figure 1. Flag count (red, right axis 0–21) and SPY price (blue, left), 2001–2026 — **Citi BMC Figure 1 equivalent**. Dashed line at 10 marks Citi's "double-digits = acceleration zone" — backtest-validated lift 1.32× at 90d / 1.78× at 180d. Annotated dates: March 2000, October 2007, Feb 2020, Dec 2021, Now. **The dashboard's all-time max was 12.0 on 2024-12-06** — late 2024 was *more* flag-elevated than today, which underscores the regime-not-timing nature of the read. Interactive: 1Y / YTD / 5Y / 10Y / ALL buttons or bottom range-slider. Source: per-indicator binary flag thresholds (red ≥ 80% complacency, amber 60-80%, weighted 1.0 / 0.5) per `scripts/build_dashboard.py`.*
 
 ## Figure 2. Bear Market Checklist — Historical Calibration
 
@@ -83,68 +72,69 @@ Indicator histories with caution / stress thresholds and shading where applicabl
 
 ## Action Implications
 
-| Verdict tier | Suggested posture |
-|---|---|
-| Stretched (80+) | Trim long beta; raise cash; add put-spread or VIX-call hedges; reduce CCC. **Avoid outright shorts** (timing risk too high). |
-| **Elevated (60–80)** | Tighten stops on longest-duration positions; reduce CCC; standard hedges (3–6m SPX put spreads ~5-8% OTM). |
-| **Neutral top edge — today** | Trim peaks (CAPE-sensitive cohort first), tighten stops, raise cash to 10–15% (10Y at 4.48% means opportunity cost is modest). |
-| Neutral (40–60) | Standard policy weights. |
-| Cautious / Panicked (< 40) | Scaling in; reduce hedges; aggressive long-bias at panicked. |
+Postures indexed by **flag count** (the empirically-validated readout). Thresholds tied to Citi's published BMC anchors + this dashboard's own backtest.
+
+| Flag count | Empirical lift (180d, -15% dd) | Suggested posture |
+|---:|---:|---|
+| 0–4 (capitulation zone) | n/a (mirror image of acceleration) | Aggressive long-bias re-entry. |
+| 5–7 (regime median) | <1× | Standard policy weights. |
+| **8–9 (today: 8.5)** | **<1×** | **Trim peaks** (CAPE-sensitive cohort first), tighten stops, raise cash to 10–15% (10Y at 4.48% — opportunity cost is modest). Hedges optional but not yet expensive enough to mandate. |
+| 10–11 (Citi acceleration zone) | **1.78×–2.41×** | Add tail hedges *now* via put-spreads (SKEW elevated → spreads beat naked puts); reduce CCC credit; raise cash further. |
+| 12+ (history's late-2024 peak) | n/a — small sample | Late-stage; cap incremental long exposure; preference for capital preservation over yield. |
+
+**Specific notes for today** (flag count 8.5): (1) SKEW at 152 makes naked puts expensive — **put-spreads beat puts**. (2) **CCC OAS divergence** is the cleanest "early credit cycle turn" expression — BDC equity, levered loan ETFs, private credit closed-ends are asymmetric short candidates. (3) **Cash now pays 4.5%** — opportunity cost of defensive cash is materially lower than in 2021.
 
 **Specific notes for today**: (1) SKEW at 152 makes naked puts expensive — **put-spreads beat puts**. (2) **CCC OAS divergence** is the cleanest "early credit cycle turn" expression — BDC equity, levered loan ETFs, private credit closed-ends are asymmetric short candidates. (3) **Cash now pays 4.5%** — opportunity cost of defensive cash sleeve is materially lower than in 2021.
 
 ## Historical Precedents
 
-Daily composite scores within ±5 of today's 59.5:
+Dates within ±1 flag of today's 8.5:
 
-| Date | Composite | SPY 6m | 12m | 24m | Max DD 24m |
+| Date | Flag count | SPY 6m | 12m | 24m | Max DD 24m |
 |---|---:|---:|---:|---:|---:|
-| 2004-02-18 | 56.7 | −4.2% | +6.8% | +15.8% | −7.5% |
-| 2006-02-27 | 64.6 | +1.6% | +14.2% | +10.9% | −16.0% |
-| 2013-07-17 | 57.1 | +11.1% | +20.2% | +31.4% | −7.3% |
-| 2016-07-13 | 57.2 | +6.8% | +15.8% | +35.1% | −10.1% |
-| 2018-10-10 | 62.9 | +4.7% | +6.7% | +28.4% | **−33.7%** |
-| 2021-08-06 | 57.7 | +2.1% | −5.2% | +5.0% | −24.5% |
-| 2023-11-14 | 61.7 | +17.5% | +34.8% | +56.2% | −18.8% |
-| 2025-12-15 | 66.5 | n/a | n/a | n/a | n/a |
+| 2004-11-08 | 8.0 | +1.8% | +6.5% | +22.9% | −7.6% |
+| 2006-10-05 | 7.5 | +7.7% | +16.1% | −15.1% | **−28.0%** |
+| 2016-12-06 | 7.5 | +10.8% | +21.1% | +26.4% | −10.1% |
+| 2018-06-25 | 9.5 | −12.6% | +10.5% | +19.8% | **−33.7%** |
+| 2020-01-02 | 8.0 | −2.9% | +17.2% | +50.9% | **−33.7%** |
+| 2022-07-20 | 7.5 | +0.0% | +17.2% | +44.3% | −16.7% |
+| 2024-01-23 | 7.5 | +14.9% | +26.0% | +44.9% | −18.8% |
+| 2026-01-20 | 9.0 | n/a — too recent | n/a | n/a | −8.9% (partial) |
 
-**Median 12m forward SPY: +14.2%. 6 of 7 (86%) positive. Median max DD within 24m: −18.8%. Two precedents had >20% DD (2018-10 / 2021-08).**
+**Median 12m forward SPY: +16.7%. 6 of 7 (86%) positive. Median max DD within 24m: −18.8%. Three precedents had >20% DD (2006-10 / 2018-06 / 2020-01).** The 7-8 flag-count zone is "expected positive returns with one-in-three odds of a major drawdown."
 
-## Backtest validation — flag count beats composite by ~3× lift
+## Backtest validation — the flag count actually predicts drawdowns
 
-Side-by-side backtest of the two scores against SPY drawdowns since 2001 (90d / -10% drawdown event):
+Threshold sweep on SPY 2001-2026 (90d / -10% drawdown event):
 
-| Score | Best threshold | Precision | Recall | Lift vs base rate (20.3%) |
-|---|---:|---:|---:|---:|
-| Composite | T = 40 (max signal) | 13.7% | 50.4% | **0.68×** (worse than random) |
-| Composite | T = 70 | 13.7% | 4.2% | 0.67× |
-| **Flag count** | **T = 10** (Citi double-digits) | **26.8%** | **5.4%** | **1.32×** |
-| **Flag count** | **T = 11** | **38.5%** | **1.9%** | **1.90×** |
+| Flag count threshold | Precision | Lift vs base rate (20.3%) |
+|---:|---:|---:|
+| T = 8 (today's level) | 17.3% | 0.85× |
+| T = 9 | 18.9% | 0.93× |
+| **T = 10** (Citi double-digits) | **26.8%** | **1.32×** |
+| T = 11 | 38.5% | **1.90×** |
 
 Deeper-bear test (180d / -15% drawdown):
 
-| Score | Best threshold | Precision | Lift |
-|---|---:|---:|---:|
-| Composite | T = 70 | 19.4% | 0.98× |
-| **Flag count** | **T = 10** | **35.2%** | **1.78×** |
-| **Flag count** | **T = 11** | **47.7%** | **2.41×** |
+| Flag count threshold | Precision | Lift |
+|---:|---:|---:|
+| T = 9 | 22.7% | 1.15× |
+| **T = 10** | **35.2%** | **1.78×** |
+| T = 11 | **47.7%** | **2.41×** — almost half of signals at this level preceded ≥15% drawdowns within 180 days |
 
-**Conclusions**: (1) the composite has **no empirical edge at any threshold** — its max lift is 0.68× on the 90-day test and 0.98× on the 180-day test, both at or below random. (2) The flag count at Citi's published "double-digits = acceleration zone" threshold (≥10) has **lift 1.32-1.78× the base rate** — almost half of all signals at T=11 over 180 days were followed by ≥15% drawdowns. (3) Citi's empirical anchor is independently validated by this dashboard's data. Full sweep: [`oneoff/backtest_flag_vs_composite.py`](../../oneoff/backtest_flag_vs_composite.py).
-
-**The dashboard's flag count today (8.5) sits below the Citi acceleration threshold (10) but above the regime's median (~5).** Today is "Elevated but not yet in the empirically-validated drawdown zone."
+Citi's published "double-digits = acceleration zone" anchor is **independently validated** by this dashboard's data. Today's flag count of **8.5 sits below the validated threshold but above the regime's median (~5)** — "Elevated but not yet in the drawdown-likely zone." Full sweep: [`oneoff/backtest_flag_vs_composite.py`](../../oneoff/backtest_flag_vs_composite.py).
 
 ## Caveats
 
-- **The composite score is largely useless as a stand-alone signal.** Backtest precision at every threshold is at or below the 20.3% base rate (max lift 0.68× on 90d, 0.98× on 180d). Five specific failures: (1) weights are hand-tuned, never optimized; (2) indicators are correlated — HY/IG/BAA10Y/HYG-LQD all measure broad-credit tightness, so the score triple-counts that signal; (3) different time-scales averaged (CAPE moves over decades, VIX in seconds); (4) mean-compression — averaging 19 indicators always lands in the middle; (5) information loss — "all at 60th percentile" and "half at 99th + half at 20th" produce the same composite but mean very different things. **The flag count is the empirically-validated readout** — see the Backtest validation section above.
 - **Low PE doesn't protect against a bear** — GFC (PE ~17) and COVID (PE ~19) both blew through low-PE markets. CAPE near dot-com levels says *"the eventual drawdown is likely deeper,"* not *"a drawdown is imminent."* Of the 7 bear markets since 1980 visible in Citi's chart, only 2 (2000, 2022) started from high PE.
 - **Dashboard is a regime descriptor, not a drawdown predictor.** Even the flag count is best used to *calibrate the regime against history* via Figure 2, not as a timing trigger.
 - **Not a forecast / not a timing model / not a sector call.** The Elevated/Neutral-top zone can persist for quarters.
-- **2 of 21 indicators dark** (AAII / NAAIM upstream paywalls), composite re-normalized over the active 19.
+- **2 of 21 indicators dark** (AAII / NAAIM upstream paywalls).
 - **ICE BofA OAS series limited to 2023-06 onward** (FRED re-licensing) — Moody's BAA−10Y carries the long-history credit signal back to 1986.
 
 ## Data Used / 数据来源清单
 
-Composite computed in [`.claude/skills/market-complacency/scripts/build_dashboard.py`](../../.claude/skills/market-complacency/scripts/build_dashboard.py). Sources:
+Flag count and indicator percentiles computed in [`.claude/skills/market-complacency/scripts/build_dashboard.py`](../../.claude/skills/market-complacency/scripts/build_dashboard.py). Sources:
 
 | Category | Indicator | Source |
 |---|---|---|

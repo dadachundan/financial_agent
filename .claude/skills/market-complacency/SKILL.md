@@ -259,21 +259,19 @@ The report must mirror the structure of [Citi's Bear Market Checklist report](ht
 Mandatory blocks, in this order:
 
 1. **Dashboard's Take** — single bold blockquote at the top, ≤200 words. Mirrors Citi's "CITI'S TAKE" box. Structure:
-   - **First line must lead with FLAG COUNT, not composite score.** Example: `**Flag count 8 / 21 — Citi-BMC style: 7 red + 2 amber + 12 off.**` The composite is mean-compressed and arbitrarily weighted; the flag count is binary, interpretable, and has Citi's empirical "double-digits = acceleration" anchor.
+   - **First line must be the flag count.** Example: `**Flag count 8 / 21 — Citi-BMC style: 7 red + 2 amber + 12 off.**` Backtest-validated metric (lift 1.32× at T=10, 1.90× at T=11).
    - 1-2 sentences naming the most-stretched indicators with absolute levels (e.g., "CAPE 41.6, S&P 500 DY 1.06%, Moody's BAA−10Y 1.54pp at or past pre-bear levels"), not percentile ranks.
    - 1-2 sentences on what's contra (yield curve positive, SKEW already bid, etc.)
    - 1 line on action (3-5 verbs)
    - 1 line on empirical base rate at this flag-count range (median fwd SPY, drawdown probability)
    - **No prose outside this block until after Figure 2.**
+   - **The composite score is forbidden.** It was a hand-weighted average that the backtest proved is statistically uninformative (max lift 0.68× at 90d / 0.98× at 180d — at or below the base rate). Never mention it in Dashboard's Take or any headline. The composite chart is also forbidden from Figure 1; use the flag-count chart.
 
-   Immediately after the Dashboard's Take, a separate ⚠️ blockquote disclaims the composite score:
-   > ⚠️ The composite score (X / 100, tier band) is a weighted-average legacy readout — not a load-bearing signal. Backtest precision at composite ≥ 80 is 22.3% vs base rate 20.3% (lift just 1.10×); at composite ≥ 60 it's *worse* than random. Use the flag count and Figure 2 for the regime read; the composite is shown only for time-series continuity in Figure 1.
-
-2. **Figure 1: Flag count + SPY overlay** — the headline chart, mirroring [Citi BMC Figure 1](https://www.citivelocity.com) which shows the BMC red-flag count alongside MSCI ACWI price. This is the load-bearing visualization because the flag count is the empirically-validated metric (composite is mean-compressed noise per the Caveats). Required elements:
+2. **Figure 1: Flag count + SPY overlay** — the headline chart, mirroring [Citi BMC Figure 1](https://www.citivelocity.com) which shows the BMC red-flag count alongside MSCI ACWI price. Required elements:
 
    - **Dual y-axis**: SPY price (left, blue), flag count 0–21 (right, red)
    - **Annotated reference dates**: March 2000, October 2007, Feb 2020, Dec 2021, and Now
-   - **Two reference lines** on the flag-count axis: dashed at 10 (Citi's "double-digits = acceleration zone"), dotted at 17.5 (Citi Mar-00 peak)
+   - **Two reference lines** on the flag-count axis: dashed at 10 (Citi's "double-digits = acceleration zone" — independently validated by this dashboard's backtest), dotted at 17.5 (Citi Mar-00 peak)
    - **Rangeselector buttons**: 1Y / YTD / 5Y / 10Y / ALL with `method='relayout'` and hardcoded date ranges (Plotly's `stepmode='todate'` is buggy)
    - **Bottom range-slider** for fine-grained zoom
 
@@ -282,7 +280,7 @@ Mandatory blocks, in this order:
    <iframe src="../charts/market_complacency_<DATE>_flag_count.html" width="100%" height="560" style="border:0;border-radius:6px;"></iframe>
    ```
 
-   **The composite chart (`*_composite.html`) is demoted to "Figure 1b — Legacy" inside a collapsed `<details>` block.** It's retained for time-series continuity but explicitly labelled non-load-bearing.
+   **The composite chart is forbidden** — do not embed `*_composite.html` or `*_composite.png` in any new report. The build script still generates them for legacy callers and time-series continuity in `oneoff/`, but they must not appear in the user-facing report.
 
    The viewer at `localhost:5001/claude-reports/` serves `.html` and `.htm` from `reports/` via the `_EMBED_EXTS` allowlist. Static markdown renderers (GitHub, Obsidian) will show the iframe as empty.
 
@@ -310,7 +308,7 @@ The following blocks from prior iterations are explicitly *forbidden* in the new
 - ❌ Multiple postscript blocks documenting version-history — those belong in git commit messages and CHANGELOG, not in the live report.
 - ❌ Per-chart narrative paragraphs interspersed between Under-the-Hood charts.
 - ❌ Step-by-step verification logs as `<details>` blocks — moved to commit messages.
-- ❌ **Leading any section with the composite score as the headline metric.** The composite is mean-compressed, hand-weighted, and has no empirical lift over the base rate (backtest verified). Anywhere a single-number summary is needed, use the flag count. The composite appears only (a) in Figure 1's time-series, and (b) in the Caveats disclaimer explaining its limitations. **Do not** write "composite 59 / Neutral" as a verdict; write "flag count 8/21" instead.
+- ❌ **The composite score, anywhere.** The backtest proved it's statistically uninformative (max lift 0.68× at 90d / 0.98× at 180d — at or below base rate). Anywhere a single-number summary is needed, use the **flag count** (lift 1.32–2.41× at T=10-11). Do NOT write "composite 59 / Neutral" or "composite at top edge of Elevated." Do NOT embed the composite chart. Do NOT include tier-band tables keyed to composite ranges (0-20 Panicked / 20-40 Cautious / etc) — those bands have no empirical anchor. Use flag-count thresholds (0-4 / 5-7 / 8-9 / 10-11 / 12+) which DO have empirical anchors.
 
 ### Why flag count beats composite — confirmed by backtest
 
