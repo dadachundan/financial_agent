@@ -87,7 +87,7 @@
         &nbsp;|&nbsp;
         <span id="tickerCount">0</span> tickers
       </span>
-      <span class="ms-auto small text-muted">grouped by ticker · click any column header to sort</span>
+      <span class="ms-auto small text-muted">click any column header to sort · rows band when consecutive rows share a ticker</span>
     </div>
   </div>
 
@@ -331,18 +331,25 @@
     // 4. Sort.
     sortRows(shown);
 
-    // 5. Group by ticker (preserve sort order; ticker order = first-seen).
-    var groups = new Map();
-    shown.forEach(function(r){
-      var t = r.company_ticker || '';
-      if (!groups.has(t)) groups.set(t, []);
-      groups.get(t).push(r);
-    });
-
+    // 5. Walk rows in sorted order; attach per-ticker metadata (band stripe,
+    //    avg-PT pill, position-in-ticker counter). Banding flips whenever the
+    //    ticker changes vs. the prior row, so when sorted by ticker the rows
+    //    band as before, but when sorted by date / upside / etc. the sort
+    //    order is preserved (no forced ticker grouping).
     STATE.visible = [];
     var bandIdx = 0;
-    groups.forEach(function(arr, ticker){
-      var alt = (bandIdx % 2 === 1);
+    var prevTicker = null;
+    var firstSeen = {};       // ticker -> true once first row placed
+    var ptIdxByTicker = {};   // ticker -> running count of PT-having rows seen
+    shown.forEach(function(r){
+      var ticker = r.company_ticker || '';
+      if (ticker !== prevTicker) {
+        if (prevTicker !== null) bandIdx++;
+        prevTicker = ticker;
+      }
+      r._alt = (bandIdx % 2 === 1);
+      r._isFirst = !firstSeen[ticker];
+      firstSeen[ticker] = true;
       var s = STATE.perTickerStats[ticker];
       var avg = s && s.n ? (s.sum / s.n) : null;
       var majCcy = '';
@@ -351,25 +358,19 @@
         ccys.sort(function(a, b){ return s.ccyCount[b] - s.ccyCount[a]; });
         majCcy = ccys[0] || '';
       }
-      var ptIdx = 0;
-      arr.forEach(function(r, i){
-        r._alt = alt;
-        r._isFirst = (i === 0);
-        r._avgPt = avg;
-        r._avgPtCcy = majCcy;
-        if (s && s.n > 1) {
-          if (r.price_target != null) {
-            ptIdx++;
-            r._avgPtSuffix = '<span class="n">' + ptIdx + '/' + s.n + '</span>';
-          } else {
-            r._avgPtSuffix = '<span class="n">·' + s.n + '</span>';
-          }
+      r._avgPt = avg;
+      r._avgPtCcy = majCcy;
+      if (s && s.n > 1) {
+        if (r.price_target != null) {
+          ptIdxByTicker[ticker] = (ptIdxByTicker[ticker] || 0) + 1;
+          r._avgPtSuffix = '<span class="n">' + ptIdxByTicker[ticker] + '/' + s.n + '</span>';
         } else {
-          r._avgPtSuffix = '';
+          r._avgPtSuffix = '<span class="n">·' + s.n + '</span>';
         }
-        STATE.visible.push(r);
-      });
-      bandIdx++;
+      } else {
+        r._avgPtSuffix = '';
+      }
+      STATE.visible.push(r);
     });
 
     // Sort/filter changed → reset page.
