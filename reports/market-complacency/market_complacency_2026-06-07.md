@@ -42,6 +42,34 @@
 
 → Empirical base rate at this composite range: **median 12m forward SPY +14%**, **~30% probability of a >20% drawdown within 24 months**. Not a sell signal — a risk-management signal.
 
+## Historical Calibration (Citi-BMC style)
+
+Today's indicator readings vs the start of past bear markets and recent market peaks. **Adapted from [Citi's Bear Market Checklist](https://www.citivelocity.com) format** — red cells mean the indicator was at full-flag complacency at that date; amber = half-flag; off = no flag. Reading the columns left-to-right shows you which indicators were stretched at each historical regime turn, and the rightmost column is the calibration anchor for today.
+
+| Indicator | Mar 2000 (dot-com peak) | Oct 2007 (GFC eve) | Feb 2020 (pre-COVID) | Dec 2021 (post-COVID peak) | **Today (Jun 5 2026)** |
+|---|---:|---:|---:|---:|---:|
+| **Valuation** | | | | | |
+| Shiller CAPE | 🔴 43.2 | 🟠 27.3 | 30.7 | 🔴 38.3 | 🔴 **41.6** |
+| S&P 500 DY (%) | 🔴 1.16 | 1.77 | 1.79 | 🔴 1.29 | 🔴 **1.06** |
+| **Risk Premium** | | | | | |
+| Equity Risk Premium (pp) | n/a (positive) | +0.5 | +1.7 | +2.0 | 🔴 **−1.34** |
+| **Credit** | | | | | |
+| Moody's BAA − 10Y (pp) | 🟠 2.30 | 🟠 1.99 | 🟠 2.38 | 🟠 1.85 | 🔴 **1.54** |
+| HY OAS (%) | n/a (ICE 2023+) | n/a | n/a | n/a | 🔴 **2.74** |
+| **Yield Curve** | | | | | |
+| 10Y − 2Y (pp) | 🔴 −0.47 (inverted) | 🟠 +0.54 | +0.27 | +0.79 | +0.38 |
+| **Equity Vol** | | | | | |
+| VIX | 24.1 | 18.5 | 🚨 40.1 (panic) | 17.2 | 21.5 |
+| SKEW | 113.4 | 116.9 | 130.8 | 154.4 | 152.3 (contra) |
+| **Rate Vol** | | | | | |
+| MOVE | n/a (2002+) | 90.2 | 109.7 | 77.1 | 75.2 |
+| **Corp Behaviour** | | | | | |
+| US Capex YoY (%) | 🟠 9.7 | 🟠 8.0 | +1.1 | 🟠 7.9 | 🟠 **8.4** |
+
+Today's calibration: **CAPE is within 1.6 points of the March 2000 dot-com peak** (41.6 vs 43.2), **dividend yield is BELOW the dot-com low** (1.06% vs 1.16%), and **Moody's BAA−10Y spread is the tightest of any of these reference dates** (1.54pp vs 1.85-2.38pp prior). On those three indicators we're at OR PAST the levels that triggered the worst US bear markets of the post-1995 era.
+
+But yield curve is +38bp positive (not inverted as in 2000), VIX is mid-range (not panicked as in 2020), and SKEW is in the contra zone (already bid for hedges, unlike the complacent-vol regimes that preceded actual bear markets). The dashboard is reading **"dot-com-extreme valuation + already-bid-hedges"** — a setup that has no clean historical match.
+
 ## Composite Score & Tier
 
 | Composite | Tier | Bands |

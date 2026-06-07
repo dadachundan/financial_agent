@@ -267,17 +267,19 @@ Every report must contain — **in this order**:
 
    Rationale: the prior "Complacency Verdict" paragraph was ~250 words of dense prose; readers complained it took 90 seconds to extract the punchline. Key-takeaways is scannable in 15 seconds while preserving every number.
 
-2. **Composite Score & Tier** table showing today's score in context (just the score + tier + 5-tier band, no narrative).
-3. **Indicator-by-indicator table** — all required (+ optional) with current value, 10y context, complacency percentile, decile, flag.
-4. **Composite Score Decomposition** — explicit `weight × complacency_pct = contribution` table summing to the headline composite. The single composite number alone is too opaque; the reader needs to see which indicators are doing the heavy lifting and which are pulling the other way. Highlight the indicators with the largest absolute contribution in bold so the reader can scan the dominant signals in two seconds.
-5. **Cross-asset signature paragraph** — which categories agree, which diverge.
-6. **Historical precedents table** with SPY forward returns.
-7. **6–10 embedded charts** with inline captions and source attribution.
-8. **"What this verdict is NOT" caveat block.**
-9. **Action implications block** — expand on the key-takeaways action list with the *why* and concrete sizing/instrument detail.
-10. **What Would Invalidate This Read** — the specific signal flips that would change the verdict.
-11. **Comparison to Citi BMC** — when a current BMC reading is available (Citi refreshes ~quarterly).
-12. **`## Data Used / 数据来源清单`** manifest, including the **ICE BofA window disclosure** (see Guardrails below).
+2. **`## Historical Calibration (Citi-BMC style)`** (NEW v7 — adapted from [Citi's BMC Figure 2](https://www.citivelocity.com)). A table that anchors today's reading against past bear-market starts and recent market peaks. Columns: Mar 2000, Oct 2007, Feb 2020, Dec 2021, **Today**. Rows: each indicator we have historical data for, grouped by category. Cells colored 🔴 red (full flag), 🟠 amber (half flag), or off (no flag) using the dashboard's standard thresholds. End with a 2-sentence "today's calibration" paragraph that explicitly compares today's level to the historical reference points (e.g., "CAPE is within X points of the March 2000 peak" or "Yield curve is positive unlike pre-2000"). This forces the report to *calibrate vs history* instead of just reporting the percentile rank — Citi's framework consistently does this and it's the single biggest reason institutional readers trust their BMC over abstract scores.
+
+3. **Composite Score & Tier** table showing today's score in context (just the score + tier + 5-tier band, no narrative).
+4. **Indicator-by-indicator table** — all required (+ optional) with current value, 10y context, complacency percentile, decile, flag.
+5. **Composite Score Decomposition** — explicit `weight × complacency_pct = contribution` table summing to the headline composite. The single composite number alone is too opaque; the reader needs to see which indicators are doing the heavy lifting and which are pulling the other way. Highlight the indicators with the largest absolute contribution in bold so the reader can scan the dominant signals in two seconds.
+6. **Cross-asset signature paragraph** — which categories agree, which diverge.
+7. **Historical precedents table** with SPY forward returns.
+8. **6–10 embedded charts** with inline captions and source attribution.
+9. **"What this verdict is NOT" caveat block.**
+10. **Action implications block** — expand on the key-takeaways action list with the *why* and concrete sizing/instrument detail.
+11. **What Would Invalidate This Read** — the specific signal flips that would change the verdict.
+12. **Comparison to Citi BMC** — when a current BMC reading is available (Citi refreshes ~quarterly).
+13. **`## Data Used / 数据来源清单`** manifest, including the **ICE BofA window disclosure** (see Guardrails below).
 
 ### Why key-takeaways is the load-bearing change
 
