@@ -1350,18 +1350,39 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
         plt.savefig(CHARTS / f"market_complacency_{as_of}_hy_oas.png", dpi=150, bbox_inches="tight")
         plt.close()
 
-    # Chart 3: IG + CCC
-    if not series["ig_oas"].empty and not series["ccc_oas"].empty:
+    # Chart 3: Long-history IG credit-tier overlay — Moody's AAA-10Y vs BAA-10Y.
+    # Replaces the IG vs CCC OAS chart because ICE BofA IG and CCC are both
+    # FRED-restricted to mid-2023 forward (relicensing). Moody's AAA-10Y has
+    # FRED daily data back to 1983; BAA-10Y back to 1986. Together they show
+    # the IG credit-quality cycle: the SPREAD between the two (BAA − AAA)
+    # is the long-history analog of "CCC − HY spread" — credit-quality
+    # dispersion within IG widens before turns.
+    aaa_rows = fetch_fred("AAA10Y", "1983-01-01")
+    if not aaa_rows.empty and not series["baa10y"].empty:
+        aaa = aaa_rows
+        baa = series["baa10y"]
+        # Align on common dates
+        df = pd.concat([aaa.rename("aaa"), baa.rename("baa")], axis=1).dropna()
+        df["dispersion"] = df["baa"] - df["aaa"]
         fig, ax = plt.subplots(figsize=(11, 4.5))
         _shade_bears(ax)
-        ax.plot(series["ig_oas"].index, series["ig_oas"].values, lw=1.0, color="#2a9d8f", label="IG OAS")
+        ax.plot(df.index, df["aaa"], lw=0.8, color="#2a9d8f", label="Moody's AAA − 10Y (top-tier IG, 1983+)")
+        ax.plot(df.index, df["baa"], lw=0.8, color="#e76f51", label="Moody's BAA − 10Y (BBB-tier, 1986+)")
         ax2 = ax.twinx()
-        ax2.plot(series["ccc_oas"].index, series["ccc_oas"].values, lw=1.0, color="#e76f51", label="CCC OAS")
-        ax.set_ylabel("IG OAS (%)", color="#2a9d8f")
-        ax2.set_ylabel("CCC OAS (%)", color="#e76f51")
-        ax.set_title(f"IG vs CCC OAS, 2001–{as_of[:4]} (credit-tier divergence)")
+        ax2.plot(df.index, df["dispersion"], lw=0.6, color="#444444", alpha=0.6,
+                 label="BAA − AAA dispersion (right)")
+        ax.set_ylabel("Spread (pp)")
+        ax2.set_ylabel("BAA − AAA dispersion (pp)", color="#444444")
+        cur_aaa = float(df["aaa"].iloc[-1])
+        cur_baa = float(df["baa"].iloc[-1])
+        cur_disp = float(df["dispersion"].iloc[-1])
+        ax.set_title(
+            f"Long-history IG credit: AAA−10Y vs BAA−10Y (1983+) — Today AAA {cur_aaa:.2f}pp, "
+            f"BAA {cur_baa:.2f}pp, dispersion {cur_disp:.2f}pp"
+        )
         ax.grid(alpha=0.3)
-        ax.legend(loc="upper left"); ax2.legend(loc="upper right")
+        ax.legend(loc="upper left", fontsize=8)
+        ax2.legend(loc="upper right", fontsize=8)
         plt.tight_layout()
         plt.savefig(CHARTS / f"market_complacency_{as_of}_ig_ccc.png", dpi=150, bbox_inches="tight")
         plt.close()

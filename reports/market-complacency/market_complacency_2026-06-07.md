@@ -50,8 +50,8 @@ Indicator histories with bear-market shading and last-10y percentile reference l
 ![Figure 3: Long-history credit (Moody's BAA−10Y + HY OAS reference points)](../charts/market_complacency_2026-06-07_hy_oas.png)
 *Sources: [FRED Moody's BAA−10Y (BAA10Y, 1986+)](https://fred.stlouisfed.org/series/BAA10Y) · [FRED ICE BofA HY OAS (BAMLH0A0HYM2, 2023+)](https://fred.stlouisfed.org/series/BAMLH0A0HYM2) · [TradingEconomics HY OAS long-history chart](https://tradingeconomics.com/united-states/bofa-merrill-lynch-us-high-yield-option-adjusted-spread-fed-data.html)*
 
-![Figure 4: IG vs CCC OAS](../charts/market_complacency_2026-06-07_ig_ccc.png)
-*Sources: [FRED IG OAS (BAMLC0A0CM, 2023+)](https://fred.stlouisfed.org/series/BAMLC0A0CM) · [FRED CCC OAS (BAMLH0A3HYC, 2023+)](https://fred.stlouisfed.org/series/BAMLH0A3HYC). Both ICE BofA series are FRED-restricted to mid-2023 forward — for pre-2023 IG-credit cycle context see Figure 3's BAA−10Y line which goes back to 1986.*
+![Figure 4: Long-history IG credit — Moody's AAA−10Y vs BAA−10Y + dispersion](../charts/market_complacency_2026-06-07_ig_ccc.png)
+*Sources: [FRED Moody's AAA−10Y (AAA10Y, 1983+)](https://fred.stlouisfed.org/series/AAA10Y) · [FRED Moody's BAA−10Y (BAA10Y, 1986+)](https://fred.stlouisfed.org/series/BAA10Y) — Replaces the FRED-restricted ICE BofA IG/CCC overlay (both 2023+ only). The BAA − AAA dispersion (grey) is the long-history analog of "CCC − HY spread": widens before credit-cycle turns. GFC peak (>6pp BAA, ~3.5pp dispersion) and COVID spike (BAA to 4.3pp) clearly visible.*
 
 ![Figure 5: Shiller CAPE](../charts/market_complacency_2026-06-07_cape.png)
 *Source: [multpl.com Shiller PE Ratio (monthly, 1871+)](https://www.multpl.com/shiller-pe) · derived from [Robert Shiller's Yale dataset](http://www.econ.yale.edu/~shiller/data.htm).*
