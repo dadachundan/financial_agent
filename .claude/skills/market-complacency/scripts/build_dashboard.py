@@ -1148,7 +1148,7 @@ def _make_flag_count_html(as_of: str, flag_count_hist: pd.Series) -> None:
             font=dict(size=11),
             bgcolor="#f4f4f4",
         )],
-        margin=dict(l=50, r=50, t=80, b=40),
+        margin=dict(l=50, r=50, t=80, b=80),
         plot_bgcolor="white",
         hovermode="x unified",
         height=520,
@@ -1169,6 +1169,10 @@ def _make_interactive_chart(
     secondary_yaxis: str = "",
     bear_periods: list = None,
     height: int = 460,
+    sources: list = None,  # REQUIRED per CLAUDE.md: list of (label, url) tuples
+                            # rendered as footer annotation INSIDE the chart so it
+                            # travels with iframe embeds. Pass empty list only for
+                            # internal debugging charts.
 ) -> None:
     """Generic interactive Plotly chart factory.
 
@@ -1273,6 +1277,35 @@ def _make_interactive_chart(
              args=[{"xaxis.range": [first.strftime("%Y-%m-%d"), last.strftime("%Y-%m-%d")]}]),
     ]
 
+    # Source annotation — rendered as small text in the bottom-right of the
+    # plot area. Survives iframe embeds, screenshots, PNG fallback exports.
+    src_html = ""
+    if sources:
+        bits = []
+        for label, url in sources:
+            if url:
+                bits.append(f'<a href="{url}" target="_blank" style="color:#888;text-decoration:none;">{label}</a>')
+            else:
+                bits.append(label)
+        src_html = "Source: " + " · ".join(bits)
+
+    # Add footer annotations directly to the figure so they survive any
+    # update_layout(annotations=...) call (which replaces, not appends).
+    if src_html:
+        fig.add_annotation(
+            xref="paper", yref="paper", x=1.0, y=-0.18,
+            xanchor="right", yanchor="top",
+            text=src_html, showarrow=False,
+            font=dict(size=10, color="#888"),
+        )
+    fig.add_annotation(
+        xref="paper", yref="paper", x=0.0, y=-0.18,
+        xanchor="left", yanchor="top",
+        text=f"As of {last.strftime('%Y-%m-%d')}",
+        showarrow=False,
+        font=dict(size=10, color="#888"),
+    )
+
     layout_kwargs = dict(
         title=title,
         xaxis=dict(
@@ -1286,7 +1319,7 @@ def _make_interactive_chart(
             x=0.0, y=1.12, xanchor="left", yanchor="top",
             pad=dict(r=4, t=4), font=dict(size=11), bgcolor="#f4f4f4",
         )],
-        margin=dict(l=50, r=50, t=80, b=40),
+        margin=dict(l=50, r=50, t=80, b=80),
         plot_bgcolor="white",
         hovermode="x unified",
         height=height,
@@ -1692,6 +1725,7 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
                 dict(y=float(np.percentile(series["baa10y"][series["baa10y"].index >= win_start].dropna(), 50)),
                      label=f"10y median", color="#888", dash="dash"),
             ],
+            sources=[("FRED BAA10Y", "https://fred.stlouisfed.org/series/BAA10Y")],
         )
 
     if not aaa_series.empty and not series["baa10y"].empty:
@@ -1709,6 +1743,7 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
                 dict(name="BAA − AAA dispersion",     series=dispersion, color="#444444", width=0.8),
             ],
             secondary_yaxis="Dispersion (pp)",
+            sources=[("FRED AAA10Y", "https://fred.stlouisfed.org/series/AAA10Y"), ("FRED BAA10Y", "https://fred.stlouisfed.org/series/BAA10Y")],
         )
 
     if not series["cape"].empty:
@@ -1721,17 +1756,41 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
                 dict(y=30, label="CAPE 30 (historically rich)", color="#c1272d", dash="dash"),
                 dict(y=44, label="Dec-1999 dot-com peak", color="#888", dash="dot"),
             ],
+            sources=[("multpl Shiller PE", "https://www.multpl.com/shiller-pe")],
         )
 
     if not series["erp"].empty:
+        # Derived chart — also show component series (E/P and 10Y) per
+        # CLAUDE.md chart rule #4.
+        ep_series = pd.Series(dtype=float)
+        try:
+            pe_for_erp = fetch_multpl_pe(as_of)
+            if not pe_for_erp.empty:
+                ep_series = (100.0 / pe_for_erp).rename("E/P")
+        except Exception:
+            pass
+        tnx_for_erp = pd.Series(dtype=float)
+        try:
+            tnx_raw = fetch_yf("^TNX", "1998-01-01", (pd.Timestamp(as_of) + pd.Timedelta(days=1)).strftime("%Y-%m-%d"))
+            if not tnx_raw.empty:
+                if tnx_raw.median() > 10:
+                    tnx_raw = tnx_raw / 10.0
+                tnx_for_erp = tnx_raw.resample("MS").mean().rename("10Y")
+        except Exception:
+            pass
         _make_interactive_chart(
             as_of, "erp",
             title="Equity Risk Premium = S&P 500 E/P − 10Y Treasury",
-            yaxis="ERP (pp)",
-            lines=[dict(name="ERP", series=series["erp"], color="#003049", width=1.2)],
+            yaxis="Yield / ERP (%)",
+            lines=[
+                dict(name="S&P 500 E/P (%)", series=ep_series, color="#2a9d8f", width=0.9, dash="dot"),
+                dict(name="10Y Treasury (%)", series=tnx_for_erp, color="#e76f51", width=0.9, dash="dot"),
+                dict(name="ERP = E/P − 10Y (pp)", series=series["erp"], color="#003049", width=1.4),
+            ],
             thresholds=[
                 dict(y=0, label="zero — stocks priced equal to bonds", color="#c1272d", dash="dash"),
             ],
+            sources=[("multpl S&P 500 E/P", "https://www.multpl.com/s-p-500-earnings-yield"), ("Yahoo ^TNX", "https://finance.yahoo.com/quote/%5ETNX/")],
         )
 
     if not series["vix"].empty:
@@ -1746,6 +1805,7 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
                 dict(y=20, label="VIX 20 (caution)", color="#f4a261", dash="dash"),
                 dict(y=30, label="VIX 30 (stress)",  color="#e63946", dash="dash"),
             ],
+            sources=[("Yahoo ^VIX", "https://finance.yahoo.com/quote/%5EVIX/"), ("Yahoo ^VVIX", "https://finance.yahoo.com/quote/%5EVVIX/")],
         )
 
     if not series["vix_slope"].empty:
@@ -1770,6 +1830,7 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
             thresholds=[
                 dict(y=1.0, label="Contango ↔ Backwardation", color="#000", dash="dash"),
             ],
+            sources=[("Yahoo ^VIX9D", "https://finance.yahoo.com/quote/%5EVIX9D/"), ("Yahoo ^VIX3M", "https://finance.yahoo.com/quote/%5EVIX3M/"), ("Yahoo ^VIX", "https://finance.yahoo.com/quote/%5EVIX/")],
         )
 
     if not series["move"].empty:
@@ -1782,20 +1843,31 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
                 dict(y=80,  label="80 (calm)",   color="#2a9d8f", dash="dash"),
                 dict(y=120, label="120 (stress)", color="#e63946", dash="dash"),
             ],
+            sources=[("Yahoo ^MOVE", "https://finance.yahoo.com/quote/%5EMOVE/")],
         )
 
     # Dedicated chart for HYG / LQD ratio (derived; HYG from Apr 2007, LQD from
     # Jul 2002). No canonical page exists for this ratio, so the BMC table's
     # derived-row label points readers here.
     if not series["hyg_lqd"].empty:
+        # Derived chart — also show HYG and LQD price components per CLAUDE.md
+        # chart rule #4. Components on secondary axis (different price scale).
+        hyg_px = fetch_yf("HYG", "2007-01-01", (pd.Timestamp(as_of) + pd.Timedelta(days=1)).strftime("%Y-%m-%d"))
+        lqd_px = fetch_yf("LQD", "2002-01-01", (pd.Timestamp(as_of) + pd.Timedelta(days=1)).strftime("%Y-%m-%d"))
         _make_interactive_chart(
             as_of, "hyg_lqd",
             title="HYG / LQD ratio (HY ETF ÷ IG ETF, 2007+) — risk-on credit flow proxy",
-            yaxis="HYG / LQD",
-            lines=[dict(name="HYG / LQD", series=series["hyg_lqd"], color="#c44", width=1.0)],
+            yaxis="HYG / LQD ratio",
+            lines=[dict(name="HYG / LQD ratio", series=series["hyg_lqd"], color="#c44", width=1.4)],
+            secondary_lines=[
+                dict(name="HYG price ($)", series=hyg_px, color="#2a9d8f", width=0.7, dash="dot"),
+                dict(name="LQD price ($)", series=lqd_px, color="#e76f51", width=0.7, dash="dot"),
+            ],
+            secondary_yaxis="ETF price ($)",
             thresholds=[
                 dict(y=0.72, label="0.72 (recent richness)", color="#c1272d", dash="dash"),
             ],
+            sources=[("Yahoo HYG", "https://finance.yahoo.com/quote/HYG/"), ("Yahoo LQD", "https://finance.yahoo.com/quote/LQD/")],
         )
 
     # Dedicated chart for CCC − HY spread (derived; ICE BofA series only 2023+).
@@ -1817,6 +1889,7 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
             thresholds=[
                 dict(y=6.0, label="6.0 (10y high — contra signal)", color="#2a9d8f", dash="dash"),
             ],
+            sources=[("FRED BAMLH0A3HYC (CCC)", "https://fred.stlouisfed.org/series/BAMLH0A3HYC"), ("FRED BAMLH0A0HYM2 (HY)", "https://fred.stlouisfed.org/series/BAMLH0A0HYM2")],
         )
 
 
