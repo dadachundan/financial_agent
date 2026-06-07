@@ -147,6 +147,9 @@ _TEMPLATE = """\
 <title>Obsidian – FinAgent</title>
 <link rel="stylesheet" href="/static/bootstrap.min.css">
 <link rel="stylesheet" href="/static/vendor/easymde.min.css">
+<link rel="stylesheet" href="/static/vendor/katex.min.css">
+<script defer src="/static/vendor/katex.min.js"></script>
+<script defer src="/static/vendor/katex-auto-render.min.js"></script>
 <style>
   body { background:#fff; color:#222; font-family:'Segoe UI',sans-serif; }
   /* sidebar */
@@ -355,6 +358,37 @@ function obsidianPreprocess(text) {
   });
 }
 
+// Shield $$...$$ and $...$ from marked so backslashes and underscores aren't mangled.
+// We swap each math span for a placeholder, run marked, then restore the original.
+function protectMath(text) {
+  const blocks = [];
+  const stash = (m) => {
+    blocks.push(m);
+    return '\\u0000MATH' + (blocks.length - 1) + '\\u0000';
+  };
+  // Display math first (greedy across newlines, non-greedy on $$ pair)
+  text = text.replace(/\\$\\$([\\s\\S]+?)\\$\\$/g, stash);
+  // Inline math: single $...$ on the same line, no nested $, must not start/end with whitespace
+  text = text.replace(/(?<![\\\\$])\\$(?!\\s)([^\\$\\n]+?)(?<!\\s)\\$(?!\\d)/g, stash);
+  return { text, blocks };
+}
+function restoreMath(html, blocks) {
+  return html.replace(/\\u0000MATH(\\d+)\\u0000/g, (_, i) => blocks[+i]);
+}
+function typesetMath(root) {
+  if (!window.renderMathInElement) return;
+  renderMathInElement(root, {
+    delimiters: [
+      { left: '$$', right: '$$', display: true  },
+      { left: '$',  right: '$',  display: false },
+      { left: '\\\\(', right: '\\\\)', display: false },
+      { left: '\\\\[', right: '\\\\]', display: true  },
+    ],
+    throwOnError: false,
+    ignoredTags: ['script','noscript','style','textarea','pre','code'],
+  });
+}
+
 function buildOutline() {
   const headings = document.querySelectorAll('#note-body h1, #note-body h2, #note-body h3');
   const list = document.getElementById('outline-list');
@@ -416,12 +450,16 @@ function openNote(path, el) {
         if (parts[i].startsWith('<img ') || parts[i].startsWith('<span class="text-muted">')) {
           html += parts[i];
         } else {
-          html += marked.parse(obsidianPreprocess(parts[i]));
+          const shielded = protectMath(parts[i]);
+          const rendered = marked.parse(obsidianPreprocess(shielded.text));
+          html += restoreMath(rendered, shielded.blocks);
         }
       }
-      document.getElementById('note-body').innerHTML = html;
+      const body = document.getElementById('note-body');
+      body.innerHTML = html;
       const folder = path.includes('/') ? path.split('/').slice(0, -1).join(' / ') : '';
       document.getElementById('note-meta').textContent = folder || 'Root';
+      typesetMath(body);
       buildOutline();
     })
     .catch(err => {
