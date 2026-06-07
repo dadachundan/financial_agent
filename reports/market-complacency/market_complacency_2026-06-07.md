@@ -1,10 +1,12 @@
 # Market Complacency Dashboard — 2026-06-07
 
-> **Dashboard's Take.** US equities are at near-term highs with clearer signs of valuation exuberance. The dashboard composite stands at **59.5 / 100, top edge of Neutral**, with flag count **8.0 / 21** (Citi-BMC style: 7 red + 2 amber + 12 off). On three slow-moving indicators (CAPE, dividend yield, Moody's BAA−10Y) we are at or past the levels that triggered the worst US bear markets of the post-1995 era — yet the yield curve is positive, equity vol is mid-range and SKEW is already in the contra zone. **The signature is "dot-com-extreme valuation + already-bid hedges"** — not a uniform sell signal. Action: trim peaks, tighten stops, prefer put-spreads over naked puts, exit CCC credit, skip outright shorts. Empirical base rate at this composite range: median 12m forward SPY +14%, ~30% probability of a >20% drawdown within 24 months.
+> **Dashboard's Take.** **Flag count 8 / 21 — Citi-BMC style: 7 red + 2 amber + 12 off.** US equities are at near-term highs with clear valuation exuberance. **Three slow-moving indicators (CAPE 41.6, S&P 500 DY 1.06%, Moody's BAA−10Y 1.54pp) are at or past the levels that triggered the worst US bear markets of the post-1995 era** — yet the yield curve is positive at +38bp, equity vol is mid-range, and SKEW at 152 is in the contra zone (hedges already bid). The signature is **"dot-com-extreme valuation + already-bid hedges"** — not a uniform sell signal. Action: trim peaks, tighten stops, prefer put-spreads over naked puts, exit CCC credit, skip outright shorts. Empirical base rate at flag-count 6-10: median 12m forward SPY +14%, ~30% probability of a >20% drawdown within 24 months.
+
+> ⚠️ **The composite score (64.3 / 100, Elevated by tier band) is a weighted-average legacy readout — not a load-bearing signal.** Backtest precision at composite ≥ 80 is 22.3% vs base rate 20.3% (lift just 1.10×); at composite ≥ 60 it's *worse* than random. **Use the flag count and Figure 2 for the regime read; the composite is shown only for time-series continuity in Figure 1.** Full rationale in the Caveats section.
 
 <iframe src="../charts/market_complacency_2026-06-07_composite.html" width="100%" height="560" style="border:0;border-radius:6px;"></iframe>
 
-*Figure 1. Composite (0–100), 2001–2026 — **interactive: use the 1Y / YTD / 5Y / 10Y / ALL buttons or the bottom range-slider to zoom**. Tier bands shaded; today's value marked. Source: composite per `scripts/build_dashboard.py`. ([Static PNG fallback](../charts/market_complacency_2026-06-07_composite.png).)*
+*Figure 1. Composite (0–100) time series, 2001–2026 — useful for *visualizing the regime arc over time*, but the absolute level is noisy (see disclaimer above). **Interactive: use the 1Y / YTD / 5Y / 10Y / ALL buttons or the bottom range-slider to zoom.** Source: composite per `scripts/build_dashboard.py`. ([Static PNG fallback](../charts/market_complacency_2026-06-07_composite.png).)*
 
 ## Figure 2. Bear Market Checklist — Historical Calibration
 
@@ -101,8 +103,9 @@ Daily composite scores within ±5 of today's 59.5:
 
 ## Caveats
 
-- **Low PE doesn't protect against a bear** — GFC and COVID both blew through low-PE markets. CAPE near dot-com levels says *"the eventual drawdown is likely deeper,"* not *"a drawdown is imminent."*
-- **Dashboard is a regime descriptor, not a drawdown predictor.** Backtest precision at composite ≥ 80 = 22% vs 20.3% base rate, lift just 1.1×.
+- **The composite score is largely useless as a stand-alone signal.** It's an arbitrary weighted average of 19 indicators on different time-scales. Weights were never empirically validated. Backtest precision at composite ≥ 80 = 22.3% vs 20.3% base rate (lift 1.10×); at composite ≥ 60 it's *worse* than random. Five specific failures: (1) weights are hand-tuned, not optimized; (2) indicators are correlated — HY/IG/BAA10Y/HYG-LQD all measure broad-credit tightness, so the score triple-counts that signal; (3) different time-scales averaged (CAPE moves over decades, VIX in seconds); (4) mean-compression — averaging 19 indicators always lands in the middle; (5) information loss — "all at 60th percentile" and "half at 99th + half at 20th" produce the same composite but mean very different things. **Use the flag count + Figure 2 + individual indicator levels instead.** The composite is retained for time-series continuity (Figure 1) and tier-band labeling, not as the load-bearing signal.
+- **Low PE doesn't protect against a bear** — GFC (PE ~17) and COVID (PE ~19) both blew through low-PE markets. CAPE near dot-com levels says *"the eventual drawdown is likely deeper,"* not *"a drawdown is imminent."* Of the 7 bear markets since 1980 visible in Citi's chart, only 2 (2000, 2022) started from high PE.
+- **Dashboard is a regime descriptor, not a drawdown predictor.** Even the flag count is best used to *calibrate the regime against history* via Figure 2, not as a timing trigger.
 - **Not a forecast / not a timing model / not a sector call.** The Elevated/Neutral-top zone can persist for quarters.
 - **2 of 21 indicators dark** (AAII / NAAIM upstream paywalls), composite re-normalized over the active 19.
 - **ICE BofA OAS series limited to 2023-06 onward** (FRED re-licensing) — Moody's BAA−10Y carries the long-history credit signal back to 1986.

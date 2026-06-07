@@ -258,7 +258,16 @@ The report must mirror the structure of [Citi's Bear Market Checklist report](ht
 
 Mandatory blocks, in this order:
 
-1. **Dashboard's Take** — single bold blockquote at the top, ≤200 words. Mirrors Citi's "CITI'S TAKE" box. Structure: composite score + flag count + verdict tier on the first line; 1-2 sentences on what's flashing and what's contra; 1 line on action; 1 line on empirical base rate. **No prose outside this block until after Figure 2.**
+1. **Dashboard's Take** — single bold blockquote at the top, ≤200 words. Mirrors Citi's "CITI'S TAKE" box. Structure:
+   - **First line must lead with FLAG COUNT, not composite score.** Example: `**Flag count 8 / 21 — Citi-BMC style: 7 red + 2 amber + 12 off.**` The composite is mean-compressed and arbitrarily weighted; the flag count is binary, interpretable, and has Citi's empirical "double-digits = acceleration" anchor.
+   - 1-2 sentences naming the most-stretched indicators with absolute levels (e.g., "CAPE 41.6, S&P 500 DY 1.06%, Moody's BAA−10Y 1.54pp at or past pre-bear levels"), not percentile ranks.
+   - 1-2 sentences on what's contra (yield curve positive, SKEW already bid, etc.)
+   - 1 line on action (3-5 verbs)
+   - 1 line on empirical base rate at this flag-count range (median fwd SPY, drawdown probability)
+   - **No prose outside this block until after Figure 2.**
+
+   Immediately after the Dashboard's Take, a separate ⚠️ blockquote disclaims the composite score:
+   > ⚠️ The composite score (X / 100, tier band) is a weighted-average legacy readout — not a load-bearing signal. Backtest precision at composite ≥ 80 is 22.3% vs base rate 20.3% (lift just 1.10×); at composite ≥ 60 it's *worse* than random. Use the flag count and Figure 2 for the regime read; the composite is shown only for time-series continuity in Figure 1.
 
 2. **Figure 1: Composite history** — the headline chart immediately under the Dashboard's Take. Embedded as an **interactive Plotly iframe** with rangeselector buttons (1Y / YTD / 5Y / 10Y / ALL) plus a bottom range-slider, so the reader can zoom into specific windows. Falls back to the static PNG (`*_composite.png`) for non-HTML renderers. Markdown embed pattern:
 
@@ -292,6 +301,20 @@ The following blocks from prior iterations are explicitly *forbidden* in the new
 - ❌ Multiple postscript blocks documenting version-history — those belong in git commit messages and CHANGELOG, not in the live report.
 - ❌ Per-chart narrative paragraphs interspersed between Under-the-Hood charts.
 - ❌ Step-by-step verification logs as `<details>` blocks — moved to commit messages.
+- ❌ **Leading any section with the composite score as the headline metric.** The composite is mean-compressed, hand-weighted, and has no empirical lift over the base rate (backtest verified). Anywhere a single-number summary is needed, use the flag count. The composite appears only (a) in Figure 1's time-series, and (b) in the Caveats disclaimer explaining its limitations. **Do not** write "composite 59 / Neutral" as a verdict; write "flag count 8/21" instead.
+
+### Why flag count beats composite
+
+| Property | Composite | Flag count |
+|---|---|---|
+| Computation | Weighted avg of 19 percentile ranks | Sum of binary thresholds |
+| Weight sensitivity | Doubling any weight shifts score 5-10 points | Doubling weights changes nothing |
+| Indicator correlation | Triple-counts correlated signals | Same — but the discrete count makes it visible |
+| Time-scale issue | Averages CAPE (decadal) and VIX (seconds) | Each tier is independent — no averaging |
+| Mean compression | Always lands near 50 with 19 inputs | Bimodal — many indicators clustered red/amber or all off |
+| Empirical lift | 1.10× base rate at ≥80 (barely above random) | Citi's "double-digits = acceleration" is a published empirical anchor |
+| Cross-asset divergence | Hidden by the average | Visible as `7 red + 2 amber + 12 off` |
+| Interpretability | "What does 59.5 mean?" | "8 indicators flagging vs Mar-00's 17.5" — direct historical anchor |
 
 ### Rationale for the Citi-style rewrite (v7)
 
