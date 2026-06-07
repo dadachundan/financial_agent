@@ -1214,14 +1214,19 @@ def _make_interactive_chart(
         ("2020-02-19", "2020-03-23"),
         ("2022-01-03", "2022-10-12"),
     ]
+    # NOTE: don't accumulate the bear shapes into the `shapes` list and pass
+    # via update_layout(shapes=...) — that interaction with add_hline +
+    # secondary_y subplots silently drops some shapes (verified: 4 bears
+    # built, only 2 survive in the rendered HTML). Instead add each shape
+    # via fig.add_shape() AFTER add_hline, which appends to the existing
+    # layout.shapes array without replacement. Keep the local `shapes` list
+    # empty so update_layout doesn't touch shapes at all.
+    pending_bears = []
     for start, end in bp:
         s = pd.Timestamp(start); e = pd.Timestamp(end)
         if e < first or s > last:
             continue
-        shapes.append(dict(type="rect", xref="x", yref="paper",
-                           x0=s, x1=e, y0=0, y1=1,
-                           fillcolor="#888888", opacity=0.18,
-                           line=dict(width=0), layer="below"))
+        pending_bears.append((s, e))
 
     # Plot primary axis lines
     for ln in lines:
@@ -1262,6 +1267,18 @@ def _make_interactive_chart(
                       annotation_text=thr.get("label", ""),
                       annotation_position="top right",
                       annotation_font=dict(size=10, color=thr.get("color", "#888")))
+
+    # Add each bear-market band via fig.add_shape() so they APPEND to
+    # fig.layout.shapes (the threshold hlines are already there). Don't pass
+    # shapes via update_layout — that interaction with subplots silently
+    # drops some shapes (verified bug as of Plotly 6.2).
+    for s, e in pending_bears:
+        fig.add_shape(
+            type="rect", xref="x", yref="paper",
+            x0=s, x1=e, y0=0, y1=1,
+            fillcolor="#888888", opacity=0.18,
+            line=dict(width=0), layer="below",
+        )
 
     year_start = pd.Timestamp(f"{last.year}-01-01")
     range_buttons = [
@@ -1313,7 +1330,8 @@ def _make_interactive_chart(
             rangeslider=dict(visible=True, thickness=0.04),
             type="date",
         ),
-        shapes=shapes,
+        # shapes NOT passed here — added via fig.add_shape() above to avoid
+        # the subplot-shape-replacement bug. See pending_bears block.
         updatemenus=[dict(
             type="buttons", direction="right", buttons=range_buttons,
             x=0.0, y=1.12, xanchor="left", yanchor="top",
