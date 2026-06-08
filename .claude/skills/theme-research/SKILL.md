@@ -164,6 +164,8 @@ A thesis that asserts growth without a number is a vibe, not a forecast — it c
 
 **Decompose the anchor into 2–5 sub-buckets**, each with its own dated path and source, plus a **geographic cut where natural** (e.g. ex-China vs China) — rendered as a compact inline list or 3-column table, not a second essay. **Name the swing factor**: the one sub-bucket whose revision moves the headline most (for a WFE basket that is DRAM; for a GLP-1 theme it may be oral formulations; for rare earths, magnet-grade oxide). Map each `core`/`enabler` ticker to the sub-bucket it rides, so the reader sees which names are levered to the swing factor — this reuses the role taxonomy rather than adding a parallel structure.
 
+Also add a one-line **value-chain / process-step map** — which layer of the supply chain each tracked name occupies, as a compact inline list, *not* buried in the per-ticker Justification cells (e.g. for WFE: litho ASML · etch LRCX/AMEC/NAURA · deposition Kokusai/Piotech/TEL · metrology KLAC/Lasertec · test Advantest · dicing DISCO; for a GLP-1 theme: API · fill-finish · device · distribution; for EV battery: cathode · anode · electrolyte · cell · pack). A process step / value-chain layer that **no** tracked name occupies is a coverage gap and a candidate-add signal the sub-bucket cut alone misses.
+
 **Track the anchor over time.** When a refresh's forecaster republishes and the anchor moves, the `## What's New` block carries a **TAM-revision** bullet — old→new for each affected out-year, the delta attributed to a named driver (e.g. `2027E pool lifted to $175bn from $158bn — +$3.4bn from <driver sub-bucket>, [Forecaster, date](url)`); if the forecaster didn't republish, carry the number forward and say so. The optional `tam` field in the snapshot sidecar (above) makes this revision diff the same deterministic way the ticker set already does.
 
 ### Slug rules
@@ -206,6 +208,19 @@ Beyond the categorical role tag, capture any **ordered preference** a named exte
 3. **Price targets show their derivation.** If a tracked name carries a sell-side PT, capture it as `PT = <multiple>× applied to <EPS / metric base> ([analyst, date](url))` — a bare PT with no method is not acceptable, mirroring the "cite the inputs, not the model" rule.
 
 Keep the ranking in `## Thesis` (a closing preference sentence) or as a one-line lead-in to the Tracked tickers table — **not a new table column** (preserve the 5-column parse contract). A new broker re-rank IS `## What's New` material; record the source in `## References`. (This generalizes: a humanoid basket ranks its sensor suppliers, a GLP-1 basket its CDMOs — the rank is the cited analyst's, not invented.)
+
+### Valuation snapshot (surface the PT store inside the file)
+
+The skill persists sell-side PT / rating calls to `stock_price_target_db` — but the theme *file* (the thing the user actually reads) must also **show** them, or it is valuation-blind for every name. When ≥1 tracked name carries sell-side coverage, include a mandatory **`## Valuation snapshot`** table — **one row per tracked name**, rendered *separately* from the 5-column Tracked-tickers table (which stays a clean parse target — do NOT add valuation columns there). Columns:
+
+`Ticker · Rating · Price · PT · Upside% · fwd multiple (P/E or sector-appropriate) · own ~10yr-avg multiple · FY1 / FY2 EPS (or the forward metric)`
+
+Rules:
+- **Populate from the helper, don't hand-transcribe** — read the rows back from `stock_price_target_db` so the table and the `/pt` viewer agree.
+- **Capture both forward years** (FY1 *and* FY2 multiple) where the note supplies them — the compression from FY1→FY2 shows whether growth is outrunning the multiple, which is the actual bull/bear pivot for rich-multiple baskets.
+- **Show PT derivation** where the source gives it (`PT = <multiple>× applied to <EPS / metric base>`), per the Conviction-ranking rule — at least for the names where the note states it.
+- **On revision, show old→new in the cell** (`PT $340 (was $325)`); a revised PT/EPS is `## What's New` material.
+- Pre-profit names use P/S or EV/Sales and say so. Every rating / PT cites its originating note (deep-URL or zsxq `file_id`). If no tracked name has sell-side coverage, omit the section and note "no sell-side coverage" in Data Used.
 
 ### Tracked tickers table — the source of truth
 
@@ -376,7 +391,7 @@ Save:
 - `reports/themes/<slug>_主题研究.md` (Chinese — present only when opted in)
 - `reports/themes/<slug>_theme.snapshots.jsonl` (always — append one line per create / refresh / mutate; language-independent, shared across en/zh)
 
-Charts (optional): `reports/charts/theme_<slug>_*.png` per the existing project convention.
+Charts (**required minimum set of ≥3** — see the **## Charts** section): rendered to `reports/charts/theme_<slug>_*.png` per the project Chart rules, then embedded in the file.
 
 ### Step 7 — Verify
 
@@ -398,16 +413,19 @@ Every `<slug>_theme.md` must contain, in this order:
 4. **## Thesis** (200–400 words) — **opens with the quantified TAM / spend anchor** (dated multi-year trajectory + sub-bucket decomposition + swing factor; see *Thesis — lead with a quantified anchor*).
 5. **## Scope rules** (100–200 words).
 6. **## Tracked tickers** table (mandatory columns: Ticker | Name | Role | Justification | Added).
-7. **## Exclusions** table (optional but recommended — explicit "we considered this and rejected it").
-8. **## Keywords** — bilingual where natural.
-9. **## Performance** (refresh-driven).
-10. **## Recent events** (refresh-driven).
-11. **## Drift signals** (refresh-driven — the value-add).
-12. **## Leading indicators** (refresh-driven — the early-warning layer; 2–4 upstream signals that lead the members, incl. side-by-side member guidance on the shared forward metric).
-13. **## Catalysts** (next 3–6 months, refresh-driven — event + mechanism + timing + which sub-bucket).
-14. **## Data Used / 数据来源清单** (manifest — see block below).
-15. **## References** (every URL cited inline).
-16. **## History** (mutation log; append-only).
+7. **## Valuation snapshot** table (mandatory when ≥1 tracked name has sell-side coverage — per-name Rating / PT / Upside% / fwd multiple vs own ~10yr avg / FY1·FY2 EPS; a *separate* table, never new columns on Tracked tickers; the in-file mirror of `stock_price_target_db`).
+8. **## Exclusions** table (optional but recommended — explicit "we considered this and rejected it").
+9. **## Keywords** — bilingual where natural.
+10. **## Performance** (refresh-driven).
+11. **## Recent events** (refresh-driven).
+12. **## Drift signals** (refresh-driven — the value-add).
+13. **## Leading indicators** (refresh-driven — the early-warning layer; 2–4 upstream signals that lead the members, incl. side-by-side member guidance on the shared forward metric).
+14. **## Catalysts** (next 3–6 months, refresh-driven — event + mechanism + timing + which sub-bucket).
+15. **## Data Used / 数据来源清单** (manifest — see block below).
+16. **## References** (every URL cited inline).
+17. **## History** (mutation log; append-only).
+
+Plus a **required minimum set of ≥3 charts** (see the **## Charts** section) embedded in the file and listed in Data Used.
 
 Plus the **`<slug>_theme.snapshots.jsonl`** sidecar (one JSON line per create/refresh/mutate) — not part of the md, but mandatory and committed alongside it.
 
@@ -444,9 +462,20 @@ Plus the **`<slug>_theme.snapshots.jsonl`** sidecar (one JSON line per create/re
 - <bulleted list — ticker without recent IR refresh, missing third-party source for a candidate, or "none">.
 ```
 
+## Charts (required minimum set)
+
+A theme that ships zero charts under-delivers versus the professional notes it competes with, and the project's global Chart rules apply to *every* chart-producing skill. Every theme renders **at least three** PNGs to `reports/charts/theme_<slug>_*.png`, embedded in the file (or linked) and listed in the Data Used manifest:
+
+1. **Anchor trajectory + sub-bucket decomposition** — the TAM / spend path as a (stacked) bar with the swing-factor sub-bucket broken out (WFE → DRAM / NAND / Logic / WLP; a GLP-1 theme → script volume by formulation; rare earths → magnet tonnage by grade). On a refresh that revised the anchor, overlay old vs new.
+2. **Basket performance vs benchmark** — equal-weight (and median) basket return vs the stated benchmark over the refresh window.
+3. **Valuation vs own history** — each `core` name's forward multiple as a bar against its own ~10yr average (the visual of the priced-for-perfection flag).
+
+Apply the global Chart rules **verbatim**: an in-image source-footer annotation (required, not optional), x-axis clipped to the data range, the latest point covering "now", and for any derived series the component series plotted too. Render headless (matplotlib `Agg`) — static PNGs need no server; only stop a server if you started one. Add every chart path to the Data Used manifest. (More than three is fine; three is the floor — anchor, performance, valuation.)
+
 ## Guardrails
 
 - **Themes drift.** A 6-month-old basket may no longer reflect the original thesis. Always run the refresh workflow before quoting performance — never cite stale tickers as "the current theme".
+- **Ships ≥3 charts and a valuation snapshot.** A theme with sell-side coverage but no `## Valuation snapshot` table, or with zero charts, is incomplete — the structured data (PTs in the DB, the anchor trajectory) must have a surfacing object in the file, not just live in a database or in prose.
 - **Pure-plays beat conglomerates for theme tracking.** Tesla in a humanoid theme is mostly noise; an SOC supplier with 80% humanoid exposure is signal. The `role: core` tag should be rare; `adjacent` and `enabler` are the more common labels.
 - **Every ticker has a written justification.** No "obvious" additions. If you can't articulate the role in one sentence with a citation, the ticker doesn't belong yet.
 - **The Thesis leads with a quantified, sourced anchor.** A theme whose thesis states no dated, third-party-sourced TAM / spend / volume trajectory is not ready to ship — the anchor is what makes the bet falsifiable and the drift-check meaningful. The analyst's own model is never the anchor's source.
@@ -478,7 +507,7 @@ reports/themes/
 └── ...
 ```
 
-Charts live in the existing `reports/charts/theme_<slug>_*.png` location, **not** alongside the theme file.
+Charts live in the existing `reports/charts/theme_<slug>_*.png` location, **not** alongside the theme file. They are a **required minimum set** (≥3 per theme — see the **## Charts** section), not optional.
 
 ### Update-in-place rule
 
