@@ -277,6 +277,54 @@ When the N names are genuine substitutes, add one paragraph framing the preferre
 - **Rank quality against NAMED peers, not in isolation (DB Huayan ranks adj-NPM vs Dobot −10%, UBTECH −35%, Geekplus 1%, Estun 0%):** extend the §5 scoreboard quality rows to the §5.8 peer set so "best-in-class" is visible against real names, not asserted.
 - **Carry a "priced in?" line in the bottom line (Morgan Stanley "TCL valuation already reflects the panel up-cycle"; Barclays "current price hugs target"):** each name's §10 verdict should state whether its edge is already reflected in the relative multiple — cross-reference the §4.5 scoreboard. Keeps the skill honest about whether a "winner" is also a better investment at today's relative price, without crossing into a sized trading call.
 
+## Local institute-research library (`db/zsxq.db`) — search it FIRST for the relative-value layer
+
+A head-to-head note lives or dies on its **relative-value evidence**: who the Street ranks #1, the borrowed price targets that anchor §4.5, the conviction order (`GS favours MedBot > EdgeMed > TINAVI`), the channel checks, and the per-name bear cases. That evidence is overwhelmingly **sell-side**, and the project carries a large local library of it — `db/zsxq.db` (table `pdf_files`, ~6,900 broker PDFs from Morgan Stanley, Goldman Sachs, J.P. Morgan, Bernstein, UBS, Citi, Deutsche Bank, HSBC, Nomura, and Chinese houses). **Search it FIRST — for every one of the N names AND for head-to-head / sector notes that rank them against each other — before web-searching for any analyst opinion, consensus estimate, price target, or conviction ranking.** This is **Step 0.7** of the workflow and it is non-optional whenever any compared name has meaningful local coverage.
+
+Do **not** assume the upstream `company-research` doc already captured this. A comparison asks a *different* question than a single-name deep dive — it needs the **cross-name** notes (a GS "China Surgical Robots — initiate MedBot/EdgeMed at Buy" note, a sector initiation that ranks the set, an expert call that says two names are "operationally similar") that a per-company research run may never have pulled. Run the searches fresh for the comparison.
+
+**This material is SELL-SIDE — the strictest citation discipline in this skill applies.** Everything from `db/zsxq.db` is an analyst opinion, not a primary fact. Label it `*Analyst view:*` / `*分析师观点：*` and **never blend it into a filing citation** (same rule as company-research §"do NOT misattribute sell-side opinions to filings"). A GS Buy / TP HK$45 or a "16% of China national bidding" share estimate is a GS view; cite it to the GS note, not to the company's annual report.
+
+**The lookup helper is `find_pdf.py` from the `zsxq-analyze` skill.** Run a separate `--query` per alias for **each** name — ticker, English name, AND native-language name — plus head-to-head / sector / theme terms that surface notes ranking the set:
+
+```bash
+# Per-name (run for every one of the N sides)
+python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "MedBot"   --limit 40
+python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "微创机器人" --limit 40
+python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "2252"     --limit 40
+# Cross-name / sector — the notes that RANK the set against each other (unique to compare)
+python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "surgical robot" --limit 60
+python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "China Medtech going global" --limit 30
+```
+
+Then, exactly as in company-research:
+
+1. **Triage on `topic_title` + `summary` (the curated 翻译精华), cite the original extracted text.** The summary already states broker / rating / PT / valuation basis / 2–4 thesis points — enough to pick the notes that matter and grab a headline PT/rating fast. But it is a curated secondary translation; for anything that goes in the report, quote the **original extracted text**, not the digest.
+2. **Open and READ the PDF for any note that matters — image-only is NOT a blocker.** Use the three-tier flow (`ocr_pdf.py` ocrmac → Marker → `render_pdf_pages.py` + vision-LM; never Tesseract). `extract_pdf.py --file-id <id> --header` dumps page-marked text.
+3. **Persist every PT call you find** (the deep read overwrites any summary-only row) — the borrowed-PT discipline in Required deliverable 7 reads the report-date price + upside back from `stock_price_target_db` (`report_date_price` / `upside_pct`, shown at `/pt`). A borrowed PT with no report-date anchor is uninterpretable.
+
+**Where the zsxq layer feeds the comparison deliverables:**
+
+| Deliverable | What a zsxq broker / sector note supplies (label all `*Analyst view:*`) |
+|---|---|
+| **§0 Order-of-preference line** (Req. 8) | The Street's own conviction ranking across the set — e.g. a GS sector note that orders `MedBot (Buy) > EdgeMed (Buy) > TINAVI (Neutral)`. Mirror it or argue against it, but cite it. |
+| **§4.5 Relative-valuation scoreboard** (Req. 7) | Borrowed PTs + the valuation basis (P/S, DCF, target multiple), consensus estimates, the "premium justified?" peer-median framing (the DB Huayan benchmark line). |
+| **§5.4 / §5.5 share & franchise** | Sell-side share estimates (bid-win share, installed-base counts, overseas-order tallies) that company filings never state ("we lead"). Cite the broker, never the 10-K / 年度报告. |
+| **§5.6 why-a-customer-picks** | Expert-call colour on system integration, training, switching behaviour (the JPM "operationally similar" read). |
+| **§9 / §10 Catalyst differential** (Req. 9) | Dated catalysts the desk is watching (results, profitability-breakeven quarter, index inclusion, registration milestones). |
+| **Channel checks** | Proprietary shipment trackers / tender-win data / utilization surveys as a first-class evidence class — cite via the broker note and flag as channel-check-derived. |
+
+**Citation format (identical to company-research).** Cite the **local direct-download route** so the user can tap straight to the PDF they own, broker + date + page in the link text — paste the `pdf_url` field `find_pdf.py` emits verbatim, do not hand-build it:
+
+```
+*Analyst view:* 高盛对 MicroPort MedBot（2252.HK）首次覆盖给予买入（Buy）、目标价 HK$45（[Goldman Sachs — China Surgical Robots initiation, 2026-04-21, p.5](http://xs-macbook-air.local:5001/zsxq/pdf/212215118214521/Goldman%20Sachs-CHINA%20SURGICAL%20ROBOTS%20Going~global%20%EF%BC%88ex~US%EF%BC%89%20as%20core%20growth%20drivers%EF%BC%9B%20Initiate%20Medbot%EF%BC%8C%20EdgeMed%20at%20Buy-260421.pdf#page=5)）。
+```
+
+- Use `http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>` (raw `application/pdf`, downloads on iPad) — **never** `/zsxq/pdf-viewer/<id>` (HTML viewer) or the dead `/zsxq-pdf/<id>`. Page number in the link **text** (`p.N`).
+- These local URLs are user-machine-only (they 404 for anyone else), so anchor the report's **hard facts** to public primary sources (HKEX / cninfo / SEC filings, IR decks) and use zsxq specifically for the analyst-opinion / estimate / conviction-ranking / channel-check layer it uniquely provides.
+
+**Density bar:** at least **3–6 distinct `db/zsxq.db` citations per side** when a name has meaningful local coverage, plus **at least one cross-name / sector note** that ranks the set — every one labeled `*Analyst view:*` and cited to the `/zsxq/pdf/<file_id>/<filename>` route, never blended into a filing citation. **Top-up rule:** if `find_pdf.py` returns few or stale rows for a name (common for small / newly-listed / non-US issuers), top up from the web first — `python3 download/zsxq_downloader.py --count 100 --query "<name>"` (idempotent, dedups on `file_id`) — then re-run the searches. Note in the verification log how many zsxq notes you found vs fetched per side.
+
 ## Report structure (TL;DR + 10 sections)
 
 See `references/report_structure.md` for the full section-by-section spec, word-count targets, required tables and charts, and an example outline from SNPS_vs_CDNS.
@@ -366,6 +414,8 @@ The relevant files inside each slug folder, by language:
 
 In all four paths, **also pull the latest 10-K / 年度报告 / Yuho for each side**, and the most recent 10-Q / 季度报告 / quarterly update — see `fetch_financial_report.py` (US) / `fetch_cninfo_report.py` (China A-share / HK). The comparison often needs raw numbers (RPO duration ladder, segment-by-region cuts, customer concentration footnotes) that the prior research doc summarized.
 
+In all four paths, **also search the local institute-research library `db/zsxq.db` fresh for the comparison** (Workflow Step 0.7) — do not rely on the upstream company-research doc having captured the cross-name notes. A comparison needs the broker conviction ranking across the set, the borrowed PTs for §4.5, the head-to-head expert calls, and the per-name bear cases — sell-side material that a single-name research run may never have pulled. See § "Local institute-research library (`db/zsxq.db`)" for the workflow; label everything `*Analyst view:*`.
+
 For US issuers, the skill also benefits from [[sec-report-summary]] output at `reports/earnings/<TICKER>_*.md` — it's a sub-step of company-research, so if research was run recently the SEC narrative is already on disk. For non-US issuers (China A-share / HK / Taiwan / Japan / Korea), build the multi-year evolution threads directly from domicile-portal filings.
 
 **Verification before writing:** the first thing the analyst should report back to the user is the result of the existence check above — "Found research for A (<date>), missing for B, will run company-research on B first" — so the user can interject if they have a preference (skip stale-check, defer the missing side, etc.).
@@ -401,6 +451,10 @@ For **each** of the N companies:
 - Stale (>12 months) → invoke [[company-research]] to refresh (it auto-updates in place).
 
 When N=3 or N=4, the prerequisite-checking phase is the most likely point at which the workflow stalls — surface the result for the user up-front ("Found research for A (May 28), B (May 29), C (May 27); missing for D — will run company-research on D first") so they can choose whether to wait or split the work over multiple sessions.
+
+### Step 0.7 — Search the local institute-research library for ALL N names (always run)
+
+Before touching websites, **search `db/zsxq.db` for broker notes on every compared name AND for the cross-name / sector notes that rank them against each other** — this is the project's local sell-side library and the fastest way to learn the Street's conviction order, borrowed PTs, and channel checks. Run one `find_pdf.py --query` per alias (ticker, English name, native-language name) for each side, plus head-to-head / sector / theme terms. See § "Local institute-research library (`db/zsxq.db`)" above for the full search-triage-cite workflow, the deliverable-by-deliverable feed table, and the citation format. Label everything `*Analyst view:*`; if a side returns few/stale rows, top up via `download/zsxq_downloader.py --query "<name>"` then re-search. This step is what populates the §0 order-of-preference line, the §4.5 borrowed PTs, and the §10 catalyst differential with real Street evidence instead of invented rankings.
 
 ### Step 1 — Sync latest filings (always run)
 
@@ -471,6 +525,7 @@ Apply the same Step 10 verification flow from [[company-research]] — URL check
 - [ ] **"Priced in?" line in each §10 posture paragraph** — states whether the name's edge is already in its relative multiple, cross-referencing §4.5.
 - [ ] **Comparability caveat** flagged wherever two juxtaposed numbers aren't apples-to-apples (fiscal-end / GAAP-vs-non-GAAP / single-arm / organic-vs-M&A / segment-definition).
 - [ ] **Prior research consulted before drafting.** Ran `ls reports/company/` for each side; if a doc existed, read it before writing anything new. Did not duplicate work.
+- [ ] **Local zsxq library searched fresh for the comparison (Step 0.7).** Ran `find_pdf.py` per-name (all aliases) AND for cross-name / sector notes; pulled the Street's conviction ranking + borrowed PTs from `db/zsxq.db`. Body carries ≥3–6 `*Analyst view:*` zsxq citations per side (where coverage exists) plus ≥1 cross-name/sector note, each cited to the `/zsxq/pdf/<file_id>/<filename>` direct-download route and never blended into a filing citation. Verification log notes zsxq notes found vs fetched per side.
 - [ ] The product overlap matrix uses the N-way status grammar (`ALL N COMPETE` / `A vs B compete, C absent` / `NON-OVERLAPPING (X only)` / etc.). Every row has been classified — no `unclear` or `mixed` rows. At least one row each is `ALL N COMPETE`, `NON-OVERLAPPING`, and at least one mid-state status (a side absent or a side dominant).
 - [ ] Every "share leader" claim in the moat anatomy has a third-party citation; none use a 10-K cite.
 - [ ] The customer-comparison section names ≥3 customers visible at *multiple* sides (the multi-vendor reality), backed by either each vendor's customer-page listing or a third-party article.
