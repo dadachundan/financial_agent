@@ -1,6 +1,6 @@
 ---
 name: theme-research
-description: Build and maintain thematic equity baskets (e.g. humanoid-robotics-sensors, GLP-1 supply chain, advanced packaging, EV battery) — each theme is a single English markdown file at `reports/themes/<slug>_theme.md` containing the tracked-tickers table (ticker, role, justification, added-date), thesis, performance, drift signals, and Data Used manifest (Chinese companion `<slug>_主题研究.md` available on explicit request). The skill creates new themes, refreshes existing ones with movers/laggards + recent news + valuation drift, and surfaces drift signals (tickers no longer fitting; new tickers worth adding). Distinct from `sector-overview` (one-shot landscape essay) — themes are *tracked baskets* that get refreshed. Use when the user says "build a theme on X", "track the X basket", "refresh my <theme> basket", "what's moving in my <theme>?", or "what themes do I have?"
+description: Build and maintain thematic equity baskets (e.g. humanoid-robotics-sensors, GLP-1 supply chain, advanced packaging, EV battery) — each theme is a single English markdown file at `reports/themes/<slug>_theme.md` containing the tracked-tickers table (ticker, role, justification, added-date), thesis, performance, drift signals, and Data Used manifest (Chinese companion `<slug>_主题研究.md` available on explicit request). The skill creates new themes, refreshes existing ones with movers/laggards + recent news + valuation drift, and surfaces drift signals (tickers no longer fitting; new tickers worth adding). It mines the user's local zsxq broker-report library (`db/zsxq.db`) as a first-class source — candidate names, the TAM anchor, conviction ranks, and broker price targets — at both create and refresh, reading the original PDF text via the read-only zsxq helper scripts. Distinct from `sector-overview` (one-shot landscape essay) — themes are *tracked baskets* that get refreshed. Use when the user says "build a theme on X", "track the X basket", "refresh my <theme> basket", "what's moving in my <theme>?", or "what themes do I have?"
 ---
 
 # Theme Research
@@ -278,9 +278,61 @@ Target word count: **2,000–4,000 words per language** (less than [[sector-over
 Broker thematic notes (Bernstein, MS, GS, UBS, and the user's zsxq library) are often the single richest seed for a theme — they supply the candidate ticker list, the conviction ranking, the multi-year TAM anchor, and the per-name moat/threat reads. Use them at **create** (seed selection) and **refresh** (re-mine for re-rankings and TAM revisions). Cite them two ways, never as a bare homepage:
 
 1. **Source-chain the underlying number.** When the basket leans on a broker's TAM, forecast, or ranking, cite the chain so the reader sees primary-data → broker-model — e.g. `[Broker theme note 引用 Gartner/SEMI/trade-body data](deep-URL)`, not the broker's site root. (Same shape for any theme: a GLP-1 TAM chains through the epidemiology source the broker built on; a rare-earth volume through the trade-body data.) A broker number whose primary input is invisible is a half-citation.
-2. **zsxq-backed notes cite via the file_id convention** already used by What's-New and snapshot `evidence_file_ids`: `[<broker> <title>, zsxq #<file_id>](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/<file_id>)`, and record the file_id in the refresh's snapshot line.
+2. **zsxq-backed notes cite via the file_id + page convention** already used by What's-New and snapshot `evidence_file_ids`: `[<broker> <title>, zsxq #<file_id> p.<N>](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/<file_id>#page=<N>)` (page in the link text is load-bearing — see *Local zsxq report library* § citation convention), and record the file_id in the refresh's snapshot line.
 
 Project freshness still applies: discard broker notes older than ~12 months for selection (except founding facts). A revised TAM or re-ranking from a fresh note is itself `## What's New` material.
+
+### Local zsxq report library (`db/zsxq.db`) — a first-class local source, mined at create AND refresh
+
+The user's zsxq library is a **local cache of broker / sell-side PDFs** (`db/zsxq.db`, table `pdf_files`) — the single richest non-public seed for a basket. **Mine it directly from this skill** at both *create* (candidate names, conviction ranking, the TAM anchor, per-name moat/threat reads) and *refresh* (new broker calls, PT / rating revisions, re-rankings, TAM revisions) — do not lean on web search alone, and do not require the user to route through [[zsxq-ideas]] first. The same scripts the zsxq skills use are the data layer here; this skill only *reads* them (the DB is read-only — see Guardrails).
+
+**Three mechanical steps** (all read-only on `db/zsxq.db`):
+
+1. **Surface candidate reports — metadata only, no PDF open.** Two complementary lookups:
+
+   ```bash
+   # PRIMARY for a named theme — targeted query across the WHOLE library.
+   # Run one --query per alias: each tracked-ticker code, English name, native
+   # name, AND each theme-specific term (HBM3 / NOR Flash / cobot / GLP-1 …).
+   # (Same tool company-research uses in its Step 0.7 — see that skill's
+   #  § "Local institute-research library".)
+   python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "<ticker-name-or-tech-term>" --limit 40
+
+   # RECENCY window — recent feed for clustering (create) or "since last refresh".
+   python3 .claude/skills/zsxq-recommend/scripts/list_recent.py --limit 300 --summary-chars 600
+   python3 .claude/skills/zsxq-recommend/scripts/list_recent.py --since <Last-refreshed-date>   # refresh: only newer rows
+   ```
+
+   `find_pdf.py --query` and `list_recent.py --subject` are both a single case-insensitive LIKE across name/topic_title/summary/tags/comment. Use **`find_pdf.py` per alias** to seed a named theme (it searches the full library, not just the recent window); use **`list_recent.py`** for the recency-windowed jobs — clustering the recent feed at create, and pulling only rows newer than `Last refreshed` at refresh. Each row carries `file_id, bank, topic_title, summary, tickers, page_count, create_time, claude_rating`. Strict per-alias keywords are the right tool for an already-named theme; loose generic terms (AI / 算力 / data center) over-match off-theme reports and belong to *cluster-time* discovery ([[zsxq-ideas]]'s job).
+
+2. **Build the extraction manifest** for the chosen cluster — it reports, per report, whether the original text is text-ready / OCR-cached / needs-OCR, and emits the exact extract command:
+
+   ```bash
+   python3 .claude/skills/zsxq-ideas/scripts/evidence_bundle.py \
+       --file-ids <comma-sep file_ids> --slug <theme-slug> \
+       --out /tmp/zsxq_evidence/<theme-slug>.md
+   ```
+
+3. **Read the ORIGINAL PDF text for anything you cite** (the `summary` is triage-only — see below). Most bank PDFs here are image-only (fitz returns nothing); OCR them first (sequential, to avoid SQLite write-contention on the sanctioned `ocr_text` cache), then extract:
+
+   ```bash
+   for f in <needs-ocr file_ids from the manifest>; do
+       python3 .claude/skills/zsxq-analyze/scripts/ocr_pdf.py --file-id $f
+   done
+   python3 .claude/skills/zsxq-analyze/scripts/extract_pdf.py --file-id <id> --header --max-chars 40000
+   # still empty (pure charts)? render_pdf_pages.py + Read the PNG visually.
+   # only if THAT fails too: fall back to the 翻译精华 summary, labelled as such.
+   ```
+
+**The curated `summary` (翻译精华) is the triage layer; the extracted original text is the citation source.** Read the `summary` first — for most rows it already carries the broker + rating + price target + valuation basis + 2–4 thesis points, enough to decide which PDFs are worth opening (same first-read company-research relies on in its Step 0.7). But the summary is re-translated and can drop or round numbers (e.g. "超5万亿美元" for a precise "US$5,454bn"), so **open the original text for any verbatim quote and for the load-bearing numbers** — the TAM anchor, PT derivations, and any figure woven into the Thesis / Justification cells / Recent events / Valuation snapshot. Every cited number must **string-match its source** (the OCR'd original text for body numbers; the summary only when the figure literally appears there and precision isn't at stake). Then cite it with the zsxq convention below, and record each mined `file_id` in the refresh's snapshot `evidence_file_ids`.
+
+**zsxq citation convention (mandatory for every zsxq-sourced claim):**
+
+- **file_id AND page:** `[<Bank> — <short topic>, zsxq #<file_id> p.<N>](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/<file_id>#page=<N>)`. `extract_pdf.py` marks pages as `===== Page N =====`, so every number has a known page. The **page in the link text (`p.N`) is the load-bearing part** — the viewer does *not* auto-scroll on the `#page=N` URL fragment (verified by company-research), so `p.N` is what tells the reader where to look; appending `#page=N` to the URL is harmless and fine to keep. **Route must be `/zsxq/pdf-viewer/<file_id>`** — the old `/zsxq-pdf/<file_id>` form is a dead 404.
+- **Quote the original-language source clause** carrying the number alongside the link (the printed English / Chinese / Japanese, NOT the summary's paraphrase). Match it verbatim to the extracted text; use `…` for elisions.
+- **Cite the number, not the headline.** "MS sees Asia energy capex doubling by 2030" with no link is a non-citation; the figure needs the page-anchored link + the source quote.
+
+This is the same convention [[zsxq-ideas]] uses (see its § *zsxq citation convention*). The boundary between the two skills: `zsxq-ideas` **theme-build mode** clusters the *whole feed* to discover and seed several baskets at once; **this skill mines the library for a single named theme** it is already building or refreshing. Either path produces the same basket file with the same citation discipline — so a user can say "build a theme on X" (this skill mines zsxq for X directly) or "build themes from my zsxq feed" (zsxq-ideas clusters, then hands each slug here).
 
 ## Workflow
 
@@ -300,12 +352,13 @@ For **list**: scan `reports/themes/*_theme.md`, parse the top-of-file metadata l
 
 For a new theme:
 
-1. Web-search for the theme keywords + "pure play" / "leader" / "supplier" / industry-research notes from the last 12 months.
-2. Pull the latest 3 industry-research items naming participants in the space — and the multi-year TAM / spend forecast that anchors the Thesis (see *Thesis — lead with a quantified anchor*); a sell-side thematic note often supplies both the names and the anchor.
-3. Cross-reference with [[sector-overview]] outputs if one exists for the broader sector.
-4. Propose 5–10 candidate tickers, each with: ticker / name / role / one-sentence justification / one inline citation to a source naming them as a participant.
-5. **Surface the proposed list to the user before writing the file.** Themes are most valuable when the user has agreed to the scope; pre-committing to a 10-ticker basket without confirmation creates drift the user didn't sign up for.
-6. On confirmation, write `<slug>_theme.md` with the full structure described above. Run Step 4 (refresh data pass) immediately so the new file has live numbers.
+1. **Mine the local zsxq library first** (see *Local zsxq report library*). Run `list_recent.py` with a strict-keyword cut on the theme terms (pull 300–800 rows), rank the hits by relevance × bank quality × recency, build an `evidence_bundle.py` manifest for the strongest 5–15 broker PDFs, then OCR + `extract_pdf.py` their original text. The user's broker notes are the richest, freshest seed — they typically supply the candidate ticker list, the conviction ranking, the multi-year TAM anchor, and the per-name moat/threat reads in one place. Always check this *local* source before reaching for web search; if the library has nothing on-theme, say so and fall through to web research.
+2. Web-search for the theme keywords + "pure play" / "leader" / "supplier" / industry-research notes from the last 12 months — to fill gaps the zsxq library didn't cover and to corroborate its broker calls.
+3. Pull the latest 3 industry-research items naming participants in the space — and the multi-year TAM / spend forecast that anchors the Thesis (see *Thesis — lead with a quantified anchor*); a sell-side thematic note (often one of the mined zsxq PDFs) frequently supplies both the names and the anchor.
+4. Cross-reference with [[sector-overview]] outputs if one exists for the broader sector.
+5. Propose 5–10 candidate tickers, each with: ticker / name / role / one-sentence justification / one inline citation to a source naming them as a participant (prefer a page-anchored zsxq `file_id` citation where a mined broker PDF names the ticker).
+6. **Surface the proposed list to the user before writing the file.** Themes are most valuable when the user has agreed to the scope; pre-committing to a 10-ticker basket without confirmation creates drift the user didn't sign up for.
+7. On confirmation, write `<slug>_theme.md` with the full structure described above. Run Step 4 (refresh data pass) immediately so the new file has live numbers. Seed the snapshot sidecar's `evidence_file_ids` with the zsxq `file_id`s mined in step 1.
 
 ### Step 2 (Refresh) — Pull updated data
 
@@ -314,9 +367,10 @@ For every ticker in the **Tracked tickers** table:
 1. Pull latest price + return since `Last refreshed` from yfinance.
 2. Pull current market cap + sector + valuation multiples.
 3. Scan for material 8-K / 公告 / press-release events since `Last refreshed`.
-4. Compute theme-aggregate performance (cap-weighted basket return; equal-weighted basket return; vs benchmark).
-5. Pull `indicators.db` snapshot (VIX, 10Y, HY OAS) for the regime backdrop.
-6. Pull the theme's 2–4 **leading indicators** — the upstream volume / price / capacity / guidance series that lead the members (and each member's own most-recent guidance on the shared forward metric) — with latest readings + as-of dates. These populate the `## Leading indicators` block and are the first place the thesis cracks.
+4. **Re-mine the local zsxq library** (see *Local zsxq report library*) for broker notes published since `Last refreshed`: `list_recent.py --limit 800 --subject "<tracked-ticker-name-or-theme-term>"` (strict keywords, NOT loose generic terms), exclude `file_id`s already in the prior snapshot's `evidence_file_ids`, then OCR + `extract_pdf.py` the new on-theme reports. These drive new PT / rating calls (→ `## Valuation snapshot` + a `stock_price_target_db` upsert), conviction re-ranks, TAM revisions, and `## Recent events` entries. String-match every number to the extracted original text; cite with the page-anchored zsxq convention.
+5. Compute theme-aggregate performance (cap-weighted basket return; equal-weighted basket return; vs benchmark).
+6. Pull `indicators.db` snapshot (VIX, 10Y, HY OAS) for the regime backdrop.
+7. Pull the theme's 2–4 **leading indicators** — the upstream volume / price / capacity / guidance series that lead the members (and each member's own most-recent guidance on the shared forward metric) — with latest readings + as-of dates. These populate the `## Leading indicators` block and are the first place the thesis cracks.
 
 ### Step 3 (Refresh) — Surface drift signals
 
@@ -355,7 +409,7 @@ Do **not** rewrite the Thesis, Scope rules, Tracked tickers, Exclusions, or Keyw
 
 Neither a plain refresh (data only) nor a plain mutate (tickers only). Triggered by phrasings like `widen sourcing on <slug>`, `expand the <slug> basket`, `rebuild <slug> from the original PDFs`, or when a refresh's Step 3 drift scan surfaces ≥1 ticker with conviction-grade broker coverage that wasn't in the basket. Workflow:
 
-1. **Re-mine the source library wider than the original cluster.** For zsxq-backed themes that means a *strict-keyword* search of the recent ~600–800 DB rows on (a) tracked-ticker names/codes AND (b) theme-specific terms (HBM / NOR / SST / cobot / GLP-1 …) — not the loose generic terms (AI / data center / 算力) that cluster-time keyword matches use. Loose keywords are the right tool for *clustering*; strict keywords are the right tool for *refresh-mining* an already-named theme, because they pick up reports that cover known tickers under terminology the original cluster missed.
+1. **Re-mine the source library wider than the original cluster.** For zsxq-backed themes that means a *strict-keyword* search of the recent ~600–800 DB rows on (a) tracked-ticker names/codes AND (b) theme-specific terms (HBM / NOR / SST / cobot / GLP-1 …) — not the loose generic terms (AI / data center / 算力) that cluster-time keyword matches use. Loose keywords are the right tool for *clustering*; strict keywords are the right tool for *refresh-mining* an already-named theme, because they pick up reports that cover known tickers under terminology the original cluster missed. Concretely (per *Local zsxq report library*): `python3 .claude/skills/zsxq-recommend/scripts/list_recent.py --limit 800 --subject "<term>"` per strict term, union the hits, drop `file_id`s already in the theme's `evidence_file_ids`, then `evidence_bundle.py` → OCR → `extract_pdf.py` the survivors and read their original text.
 2. **Surface candidate adds (with conviction-grade evidence) to the user** before editing the Tracked tickers table. Each candidate gets a one-line justification quoting the broker call from the original PDF (e.g. *"MS upgrades Winbond and Nanya to OW"* → propose `TPE:2408` as core). The user confirms which to add — basket changes remain user-confirmed.
 3. **Rewrite the Thesis** to incorporate the new conviction (this IS the exception to the "stable across refresh" rule — but only because the user opted in). Re-anchor each Thesis claim with page-cited quotes from the original PDFs.
 4. **Recompute Performance for the new basket size** (Step 4 mechanics) and append a snapshot line whose `note` describes the expansion (e.g. `"expanded 14->16 (added 2408.TW core, 301308.SZ adjacent); 22 reports cited from OCR'd original PDF text"`).
@@ -445,6 +499,9 @@ Plus the **`<slug>_theme.snapshots.jsonl`** sidecar (one JSON line per create/re
 **Industry research / sell-side thematic notes (theme-level)**
 - <research-firm + report title + publication date + URL> — used for ticker selection, the TAM anchor, conviction ranking, and drift detection. Source-chain the broker's TAM/forecast to its primary data (Gartner / SEMI / trade body / gov stats); zsxq notes cite via `file_id`.
 
+**Local zsxq library (`db/zsxq.db` — read-only)**
+- <N> broker PDFs mined for this theme (file_ids: …) via `find_pdf.py` / `list_recent.py` → `evidence_bundle.py` → `extract_pdf.py` (image-only ones OCR'd first). The 翻译精华 summary was the triage read; load-bearing numbers were cited from the extracted original text. "none — library had no on-theme reports this pass" if nothing matched.
+
 **TAM anchor + leading indicators (theme-level)**
 - <forecaster + pool + dated multi-year trajectory + URL> — the Thesis anchor and its sub-bucket decomposition.
 - <2–4 upstream leading indicators, each + latest reading + as-of date + primary issuer> — populate `## Leading indicators`.
@@ -491,6 +548,7 @@ Apply the global Chart rules **verbatim**: an in-image source-footer annotation 
 - **Do not rewrite the Thesis or Scope rules during a refresh.** Those are stable across refreshes; changing them is a deliberate thesis re-grounding that requires user confirmation.
 - **Do not invent industry-research citations.** Every named research firm + report needs a real, verifiable URL.
 - **Do not run destructive SQL against `db/*.db`.** Read-only only. See [`CLAUDE.md`](../../../CLAUDE.md) § "Database Safety".
+- **The local zsxq library is read-only.** Mine `db/zsxq.db` via the existing read-only helper scripts (`find_pdf.py` / `list_recent.py` / `evidence_bundle.py` / `extract_pdf.py` / `ocr_pdf.py`) — never write to it, never raw SQL (the `ocr_text` cache write inside `ocr_pdf.py` is the sole sanctioned exception, and only that script does it). Read the 翻译精华 `summary` for triage, but cite the **load-bearing numbers (TAM anchor, PTs, any figure in the Thesis/Valuation snapshot) from the extracted original text**, string-matched to the source before committing. A theme that cites zsxq report *titles* but never the broker calls *inside* them defeats the point of sourcing from the local library.
 
 ## Output location
 
@@ -530,3 +588,13 @@ If the same theme conceptually exists under multiple slugs (e.g. `humanoid-robot
 - It does not predict the theme's outperformance vs benchmark. Performance is *reported*, not forecast.
 - It does not maintain alerts or notifications. The "Refresh cadence" in the top-of-file metadata is informational only; the user runs the refresh manually (or via [[loop]] for periodic automation).
 - It does not introduce YAML, TOML, or any non-markdown file format. Everything is markdown that renders natively at `localhost:5001/reports`.
+
+## Prerequisites
+
+No machine-enforced upstream skills — these are already-installed sibling skills whose **read-only** scripts are the local zsxq data layer this skill mines at create and refresh (see *Local zsxq report library*):
+
+- [[zsxq-recommend]] — `scripts/list_recent.py`: recent-feed metadata pull + strict-keyword cut over `db/zsxq.db` (surfaces candidate `file_id`s; no PDF open).
+- [[zsxq-analyze]] — `scripts/find_pdf.py` (per-alias targeted query across the whole library — the primary surfacing tool for a named theme) + `scripts/extract_pdf.py` (original page-marked PDF text) + `scripts/ocr_pdf.py` (OCR image-only bank PDFs into the sanctioned `ocr_text` cache) + `scripts/render_pdf_pages.py` (visual fallback for pure-chart pages).
+- [[zsxq-ideas]] — `scripts/evidence_bundle.py` (per-cluster extraction manifest: text-ready / OCR-cached / needs-OCR status + the extract command per report) and its **theme-build mode**, the feed-clustering front-door that seeds *several* baskets at once; this skill instead mines the library for a *single named* theme. Both write the same basket format with the same citation discipline.
+
+The DB itself is read-only from this skill — the only sanctioned write anywhere in the chain is `ocr_pdf.py` populating its own `ocr_text` cache. See [`CLAUDE.md`](../../../CLAUDE.md) § "Database Safety".
