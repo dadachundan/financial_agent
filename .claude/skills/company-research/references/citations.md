@@ -78,6 +78,7 @@ The `directory.item[*].name` array lists every file in the filing.
 - Company website / IR page: `the flagship product is the X1 module ([Anpeilong product page](https://www.anpeilong.com/products/x1))`
 - News article: `Reuters reported a 2025 capacity expansion ([Reuters, 2025-02-14](https://www.reuters.com/...))`
 - Industry report: `global market reached $42B in 2024 ([Gartner, "Industrial Robotics Market Forecast, 2025–2030", 2025-01](https://www.gartner.com/...))`
+- **Institute research (local zsxq library):** `*Analyst view:* 摩根士丹利维持 Overweight、目标价 $288，估值基于 2027E EPS $13.08 × 22× PE ([Morgan Stanley — NVIDIA Computex keynote & analyst Q&A, 2026-06-03, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812488522252442))` — sell-side, so labeled `*Analyst view:*`, routed via `/zsxq/pdf-viewer/<file_id>` (the old `/zsxq-pdf/` form is a dead 404), broker + date + page in the link text, never attached to a filing.
 - LinkedIn (management bio): `previously SVP of Engineering at Foxconn ([LinkedIn](https://www.linkedin.com/in/...))`
 
 ## Rules
@@ -91,6 +92,7 @@ The `directory.item[*].name` array lists every file in the filing.
 - Management bios cite the DEF 14A / proxy, LinkedIn, or interview source per claim. Competitor analysis cites each competitor's own filing or website. TAM/industry numbers cite the specific research firm and report year with a real URL.
 - Direct quotations are quoted in the original language; add a short translation in parentheses only if load-bearing for the reader.
 - Distinguish primary sources (company filings, transcripts) from secondary (news, third-party research). Prefer primary.
+- **Local zsxq broker notes are sell-side — the strictest discipline in the skill.** Label `*Analyst view:*` / `*分析师观点：*`; cite to `http://xs-macbook-air.local:5001/zsxq/pdf-viewer/<file_id>` (NOT the dead `/zsxq-pdf/` route); put broker + date + page (`p.N`) in the link text (the viewer does not auto-scroll on `#page=`); quote the *extracted original PDF text* via OCR / vision read, not the curated 翻译精华 `summary`; and **never attach a zsxq note to a filing citation**. Full workflow in SKILL.md § "Local institute-research library".
 - If a fact has no verifiable URL (e.g. private interview, ephemeral snapshot), state that inline rather than inventing a link.
 
 ## Investor-relations materials — slide-level citation discipline
@@ -136,6 +138,7 @@ When citing **web sources other than filings** (news articles, industry reports,
   - Long-cycle industry structural data where annual fluctuation is small (sub-industry definitions, regulatory framework histories).
 - **For TAM / market-size citations**, use the most recent forecast you can find. Gartner/IDC/Forrester refresh quarterly to annually; a 2020 forecast cited in 2026 is not credible.
 - Filings themselves are exempt from the 12-month rule — the most recent annual is the most recent annual, even if filed 11 months ago. Apply the freshness rule to *web sources around* filings: news, commentary, analyst takes, etc.
+- **Local zsxq broker notes follow the same 12-month rule** — keep recent notes, drop stale ones except for founding / structural facts. Each note's vintage is in its `create_time` / filename date; prefer the freshest note when several cover the same call.
 - Always include the **publication date** in the link title so a reader can immediately see vintage: `[Reuters, 2025-08-12](https://...)`, not `[Reuters article](https://...)`.
 
 ## Final References Section

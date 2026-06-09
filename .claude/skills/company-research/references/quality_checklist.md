@@ -20,6 +20,16 @@ IR materials are first-class primary sources — see SKILL.md § "Investor prese
 - [ ] **TAM citations sourced from IR decks use chain labels** (`citing Yole/Gartner/IDC`) — the click lands on the company's own slide, not the research firm's homepage.
 - [ ] If the company has no public IR materials, the verification log explicitly states "no public IR program; relied on filings + third-party research" — absence is logged, not hidden.
 
+## Institute-research (local zsxq) coverage
+
+Local sell-side notes from `db/zsxq.db` are the project's first stop for the analyst view — see SKILL.md § "Local institute-research library" and § "Source hierarchy". This bar is separate from the IR bar above (IR = company's own materials, primary; zsxq = broker notes, sell-side).
+
+- [ ] **At least 3–6 distinct `db/zsxq.db` citations** across the body when the name has local coverage (a US large-cap like NVDA will have dozens of candidate notes — zero is not acceptable). Count via `grep -oE '\[[^]]+\]\(http://[^)]*zsxq/pdf-viewer/[0-9]+[^)]*\)' <report>.md | wc -l`.
+- [ ] **At least 1 zsxq citation in Section 2** (the PT / consensus / valuation-basis line) and **1 in Section 9** (the bear case in the analyst's own words).
+- [ ] **Every zsxq citation is labeled `*Analyst view:*` / `*分析师观点：*`**, uses the `/zsxq/pdf-viewer/<file_id>` route (not the dead `/zsxq-pdf/` form), carries broker + date + page in the link text, and is never attached to a filing. Format check: `grep -nE '/zsxq-pdf/' <report>.md` should return no lines.
+- [ ] **Every number quoted from a zsxq note string-matches** the OCR'd / extracted original PDF text (not just the 翻译精华 summary).
+- [ ] If the library genuinely has nothing on the name even after a `--query` top-up, the verification log says so explicitly — absence is logged, not hidden.
+
 ## Management Bios
 - **Cover the founder and the current CEO only — nothing else.** No CFO, no other executives, no governance footer, no track-record synthesis.
 - Founder bio: 200–300 words. Current CEO bio: 200–300 words. If founder is still CEO, write one combined bio (300–450 words).
@@ -110,7 +120,7 @@ See `investor_lenses.md` for the nine rubrics and verdict bands (four core 10.1�
 See `report_structure.md` → "Data Used" block for the format. Checks:
 
 - [ ] Manifest block sits between the last body section (Section 10 or Section 9) and the References block, in **every** report produced (Chinese by default; both Chinese and English when bilingual mode is on).
-- [ ] All five categories present: Primary filings · Investor-relations materials · Market data · Third-party research · Macro / cycle inputs (when Section 10 is included).
+- [ ] All categories present: Primary filings · Investor-relations materials · Market data · Third-party research · Institute research (local `db/zsxq.db` — list found-vs-fetched, or state "no local coverage") · Macro / cycle inputs (when Section 10 is included).
 - [ ] Each entry carries a publication or filing date.
 - [ ] **Stale notices / coverage gaps** subsection lists what couldn't be pulled or was older than 12 months, or explicitly states "none". A missing-or-empty stale-notices block is a defect — the inventory must acknowledge what isn't there.
 - [ ] The manifest does **not** duplicate the References block — References list every URL cited inline; Data Used summarizes evidence categories and freshness.
