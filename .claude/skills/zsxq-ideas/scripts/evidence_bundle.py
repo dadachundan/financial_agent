@@ -111,7 +111,7 @@ def build(file_ids: list[int], slug: str | None) -> str:
         f"{len(file_ids)} reports. **Primary source = original PDF text via "
         f"extract_pdf.py** (OCR image-only ones first). The 翻译精华 summary is "
         f"fallback-only. Cite each broker number inline to its file_id via "
-        f"`http://xs-macbook-air.local:5001/zsxq/pdf-viewer/<file_id>#page=<N>` "
+        f"`http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>#page=<N>` "
         f"(put the page as `p.N` in the link text — `extract_pdf.py` marks pages "
         f"as `===== Page N =====`), and string-match every "
         f"number against the EXTRACTED text — never the title or the summary.\n"

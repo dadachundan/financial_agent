@@ -230,7 +230,7 @@ Cite the **local viewer URL** so the user can click straight to the PDF they own
 *Analyst view:* 摩根士丹利维持 NVDA 增持（Overweight）评级、目标价 $288，估值基于 2027E EPS $13.08 × 22× PE（[Morgan Stanley — NVIDIA Computex keynote & analyst Q&A, 2026-06-03, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812488522252442/Morgan%20Stanley-NVIDIA%20Corp.%EF%BC%88NVDA.US%EF%BC%89Computex%20NVDA%20keynote%20%26%20financial%20analyst%20Q%26A-260603.pdf)）。
 ```
 
-- **Canonical route (verified 200): `http://xs-macbook-air.local:5001/zsxq/pdf-viewer/<file_id>`.** Do **NOT** use the old `/zsxq-pdf/<file_id>` form — that route is dead (404). The viewer does not auto-scroll on `#page=`, so put the page number in the link **text** (`p.N`), not as a URL fragment.
+- **Canonical route (verified 200, direct download): `http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>`** — the `<filename>` is `pdf_files.name` URL-encoded. **Paste the `pdf_url` field that `find_pdf.py` now emits verbatim** — don't hand-build it. This route serves raw `application/pdf`, so tapping it on iPad opens/downloads the PDF natively. Do **NOT** use `/zsxq/pdf-viewer/<file_id>` (the PDF.js viewer page — it returns `text/html` and does **not** download on iPad), and do **NOT** use the oldest `/zsxq-pdf/<file_id>` form (dead 404). Put the page number in the link **text** (`p.N`); appending `#page=N` to the URL is harmless and is honored by native PDF viewers.
 - **Always include the broker and the note date in the link title** — `[Morgan Stanley — <title>, YYYY-MM-DD, p.N](…)` — never the bare title or a naked URL.
 - **Pair every borrowed broker PT with the stock's price on the note's date (mandatory).** A `目标价 $288` lifted from a 2026-06-03 MS note is uninterpretable without the price NVDA traded at *on 2026-06-03* — that report-date price is what fixes the upside MS actually called, and it is NOT the same as the report header's current spot. Write it as `目标价 $288（较 2026-06-03 收盘 $232 上行 +24%）`. The report-date close + upside are already stored in `stock_price_target_db` (`report_date_price` / `upside_pct`, looked up by `scripts/persist_pts.py`) and shown at `/pt` — read them back, or look up the yfinance close on the note's date. If the report-date price is unavailable, write `report-date price n/a` rather than substituting today's spot. (The report's own 12-month PT in the header keeps showing today's current price, as already specified — this rule is specifically for *borrowed* sell-side PTs.)
 - **Quote the original-language source text alongside the number.** The summary digests are Chinese; the underlying PDFs may be English — preserve whichever language the source uses.
@@ -254,7 +254,7 @@ The downloader is idempotent (records `query_term`, dedups on `file_id`), saves 
 
 - **At least 3–6 distinct `db/zsxq.db` citations** in the body when the subject has any meaningful local coverage (a US large-cap like NVDA will have dozens of candidate notes — there is no excuse for zero).
 - **At least one in Section 2 (the PT/consensus line) and one in Section 9 (the bear case)** whenever the notes support it.
-- **Every one labeled `*Analyst view:*` / `*分析师观点：*`** and cited to the `/zsxq/pdf-viewer/` route — never blended into a filing citation.
+- **Every one labeled `*Analyst view:*` / `*分析师观点：*`** and cited to the `/zsxq/pdf/<file_id>/<filename>` direct-download route — never blended into a filing citation.
 - If the library genuinely has nothing on the subject even after a `--query` top-up, say so in the verification log; don't pad with web-searched analyst blogs in its place.
 
 ## Investor-lens scorecards (optional Section 10 of the report)
@@ -401,7 +401,7 @@ See [`references/citations.md`](references/citations.md) for the full rules, per
 
 ### Third-party research (THIRD, for market context and trends)
 
-- **Local institute-research library `db/zsxq.db` (START HERE among third-party sources).** ~6,900 broker PDFs (Morgan Stanley, Goldman, J.P. Morgan, Bernstein, UBS, Citi, Deutsche Bank, HSBC, Nomura, …). Search it BEFORE web-searching for analyst views: `python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "<ticker / name / 中文名>"`. The curated `summary` column often already carries broker + rating + price target + thesis (no PDF parsing needed); OCR + extract the body when you need verbatim quotes. **Sell-side — label `*Analyst view:*` and cite to `http://xs-macbook-air.local:5001/zsxq/pdf-viewer/<file_id>`.** Full workflow in § "Local institute-research library" above; it is **Step 0.7** of the workflow.
+- **Local institute-research library `db/zsxq.db` (START HERE among third-party sources).** ~6,900 broker PDFs (Morgan Stanley, Goldman, J.P. Morgan, Bernstein, UBS, Citi, Deutsche Bank, HSBC, Nomura, …). Search it BEFORE web-searching for analyst views: `python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "<ticker / name / 中文名>"`. The curated `summary` column often already carries broker + rating + price target + thesis (no PDF parsing needed); OCR + extract the body when you need verbatim quotes. **Sell-side — label `*Analyst view:*` and cite to `http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>`.** Full workflow in § "Local institute-research library" above; it is **Step 0.7** of the workflow.
 - **Industry research firms** (Gartner, IDC, Yole, TrendForce, TechInsights, Forrester) — used for market-sizing, competitive positioning, and industry benchmarks the company's filings don't provide.
 - **Sell-side analyst reports** (JPMorgan, Goldman, Bernstein, Needham, TechInsights) — for forward-looking commentary, peer comparisons, and thesis validation. **Note:** these are sell-side opinions, not primary facts. Check `db/zsxq.db` first (above); web-search only fills gaps the local library doesn't cover.
 - **Trade press and news** — for recent developments, confirmation, and context. Only as supporting evidence, not as primary claim sources.
@@ -490,7 +490,7 @@ python3 download/zsxq_downloader.py --count 100 --query NVDA   # targeted by tic
 python3 download/zsxq_downloader.py --count 100 --query lite   # general recent-feed top-up
 ```
 
-Everything from this step is **sell-side opinion** — carry the `file_id`s forward and cite them as `*Analyst view:*` / `*分析师观点：*` to `http://xs-macbook-air.local:5001/zsxq/pdf-viewer/<file_id>` (never blended into a filing citation). Full search-and-cite rules: § "Local institute-research library" above. Record found-vs-fetched counts in the Step 10 verification log.
+Everything from this step is **sell-side opinion** — carry the `file_id`s forward and cite them as `*Analyst view:*` / `*分析师观点：*` to `http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>` (never blended into a filing citation). Full search-and-cite rules: § "Local institute-research library" above. Record found-vs-fetched counts in the Step 10 verification log.
 
 ### Step 1 — Initial data collection (website-first approach)
 
@@ -522,7 +522,7 @@ Everything from this step is **sell-side opinion** — carry the `file_id`s forw
    - **IPO prospectus / S-1 / 招股说明书** if IPO was within the last ~5–10 years.
    - **Last 12 months of press releases** — scan for new product launches, customer wins, capacity announcements, M&A.
    - **Specifically look for any change to full-year guidance** (raised / cut / reaffirmed-with-color / initiated) — capture old range, new range, disclosure date, and stated driver. If a change exists, it goes in the top-of-report banner described in `references/report_structure.md` (before the TOC), not buried in Section 1. For Chinese issuers, also check 业绩预告 / 业绩快报 — these often pre-announce a guidance change before the formal 半年度 / 年度报告.
-   - **Pull in the institute-research notes surfaced in Step 0.7** (`db/zsxq.db`) — the broker view of guidance, estimates, channel checks, and the bear case. Keep them clearly separate from the company's own IR materials above: IR decks/transcripts are primary (cite as fact); zsxq broker notes are sell-side (`*Analyst view:*`, cite to `/zsxq/pdf-viewer/<file_id>`). See § "Local institute-research library".
+   - **Pull in the institute-research notes surfaced in Step 0.7** (`db/zsxq.db`) — the broker view of guidance, estimates, channel checks, and the bear case. Keep them clearly separate from the company's own IR materials above: IR decks/transcripts are primary (cite as fact); zsxq broker notes are sell-side (`*Analyst view:*`, cite to `/zsxq/pdf/<file_id>/<filename>`). See § "Local institute-research library".
 4. **Document basic facts** — founding date, HQ, employees, products/services, key customers.
 
 ### Step 2 — Valuation, forward estimates & price target
@@ -562,7 +562,7 @@ This is what turns a profile into a decision note — see § "Learning from sell
    - **SOTP** (multi-segment / conglomerates): value each segment on its own multiple, then sum.
    - **rNPV** (biotech / binary pipelines): risk-adjust each asset's peak-sales by an explicit probability-of-success; state the PTS.
 3. **Bull / base / bear price targets**, each tied to its swing assumption (base = central estimates; bull = faster attach / penetration or higher multiple; bear = price war / margin compression), with upside / downside % on each. All three `*Analyst view:*`.
-4. **Consensus benchmark.** Where the zsxq library (or another sourced note) carries Street estimates / a consensus PT, state where the report's forward numbers sit vs consensus (above / below, by how much) — the UBS / Nomura "+16% vs Street" move. Source the consensus figure to the zsxq note (`*Analyst view:*`, `/zsxq/pdf-viewer/<file_id>`) or a dated public source; **never invent a consensus number.**
+4. **Consensus benchmark.** Where the zsxq library (or another sourced note) carries Street estimates / a consensus PT, state where the report's forward numbers sit vs consensus (above / below, by how much) — the UBS / Nomura "+16% vs Street" move. Source the consensus figure to the zsxq note (`*Analyst view:*`, `/zsxq/pdf/<file_id>/<filename>`) or a dated public source; **never invent a consensus number.**
 5. **Name the 1–2 swing variables** the call hinges on, so the reader knows which assumption to pressure-test.
 
 These five outputs populate the new **Section 2 "Valuation & Price Target" chapter** and the **top-of-report investment-summary header** (rating + PT + upside%). See `references/report_structure.md` § "Investment summary header" and the Section-2 spec for the table template and scenario block.
@@ -705,7 +705,7 @@ done | grep -v '^200 ' | grep -v '^301 ' | grep -v '^302 '
 
 Any 404 must be either fixed (find the real URL) or removed. 403 and 406 are usually anti-bot blocks (semi.org, Yahoo Finance, congress.gov, LinkedIn) — confirm those URLs work in a real browser before keeping them.
 
-**Local zsxq viewer URLs** (`http://xs-macbook-air.local:5001/zsxq/pdf-viewer/<file_id>`) only resolve on the user's machine, so the loop above may report a connection failure if the server isn't reachable from where you run it. Verify them against the live route instead — `python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --file-id <file_id>` must return the row with `local_exists: true`, and the path must be `/zsxq/pdf-viewer/` (the old `/zsxq-pdf/<id>` form is a dead 404 — if any citation uses it, fix it).
+**Local zsxq viewer URLs** (`http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>`) only resolve on the user's machine, so the loop above may report a connection failure if the server isn't reachable from where you run it. Verify them against the live route instead — `python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --file-id <file_id>` must return the row with `local_exists: true`, and its `pdf_url` is the citation URL to paste. The path must be `/zsxq/pdf/<file_id>/<filename>` (direct download); the `/zsxq/pdf-viewer/<id>` viewer page does not download on iPad and the old `/zsxq-pdf/<id>` form is a dead 404 — if any citation uses either, fix it.
 
 #### 10.2 — Verify SEC filenames came from the EDGAR submissions JSON
 
@@ -781,7 +781,7 @@ Before declaring done, confirm each line:
 - [ ] No specific competitor product name (e.g. "AMAT NOKOTA") is attached to the *subject's* 10-K — at minimum it should cite the competitor's own filing or website
 - [ ] No fabricated executive names — every named exec is confirmed in an 8-K or DEF 14A
 - [ ] No `(Source: our model)` / `(Source: our analysis)` / `(模型估算)` self-references
-- [ ] Every `db/zsxq.db` citation is labeled `*Analyst view:*` / `*分析师观点：*`, uses the `/zsxq/pdf-viewer/<file_id>` route (not the dead `/zsxq-pdf/` form), carries broker + date + page in the link text, and is never attached to a filing; every number quoted from a zsxq note string-matches the note's summary or OCR'd text
+- [ ] Every `db/zsxq.db` citation is labeled `*Analyst view:*` / `*分析师观点：*`, uses the `/zsxq/pdf/<file_id>/<filename>` route (not the dead `/zsxq-pdf/` form), carries broker + date + page in the link text, and is never attached to a filing; every number quoted from a zsxq note string-matches the note's summary or OCR'd text
 - [ ] Internal consistency: Section 1's competitive claim matches Section 7's; Section 2 timeline matches Section 1 prose; restructuring counts in narrative match the timeline
 - [ ] Numbers spot-checked against the 10-K (at least: revenue, gross margin, customer concentration, geographic mix, segment %, restructuring headcount)
 
@@ -808,7 +808,7 @@ After the References section in **every report produced** (the Chinese report by
 - Section 1: "<paragraph fragment>" — uncited; supported by industry observation.
 - Section 4.1 / 4.2 / 4.3: share-leadership claims labeled `*Analyst view:*` / `*分析师观点：*` per skill rule.
 
-**Institute research (`db/zsxq.db`)** — searched N aliases (ticker / English / 中文); found M relevant notes, fetched K via downloader. Cited file_ids: `<id>`, `<id>`, … — each labeled *Analyst view:*, routed via `/zsxq/pdf-viewer/`, numbers string-matched to summary/OCR (e.g. "MS NVDA PT $288 / 2027E EPS $13.08 × 22×" ✓ matches `file_id 812488522252442` summary).
+**Institute research (`db/zsxq.db`)** — searched N aliases (ticker / English / 中文); found M relevant notes, fetched K via downloader. Cited file_ids: `<id>`, `<id>`, … — each labeled *Analyst view:*, routed via `/zsxq/pdf/<file_id>/<filename>`, numbers string-matched to summary/OCR (e.g. "MS NVDA PT $288 / 2027E EPS $13.08 × 22×" ✓ matches `file_id 812488522252442` summary).
 
 **Residual unknowns / not yet verified:**
 - <bulleted list, or "none">

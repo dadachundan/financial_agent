@@ -52,7 +52,7 @@ xychart-beta
 ```
 Source: [Rocket Lab FY2021–FY2025 10-K filings, MD&A Results of Operations](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=RKLB&type=10-K)（毛利率为合并口径；FY2021/FY2022 为近似）。
 
-**估值快照（Valuation snapshot，截至 2026-06-09）。** 当前股价 $113.65，市值约 $71.0bn，流通股约 624.8M，52 周区间 $25.24–$151，beta 约 2.5 ([Yahoo Finance — RKLB Key Statistics](https://finance.yahoo.com/quote/RKLB/))。**TTM P/E 为负**（公司 GAAP 不盈利，trailing P/E 不适用）；**TTM P/S 约 104×**（市值 $71.0bn ÷ TTM 营收约 $680M）([Yahoo Finance — RKLB](https://finance.yahoo.com/quote/RKLB/))。负 P/E 的直接驱动是 operating loss $228.8M，其中最大单项是 R&D（研发费用）$270.7M，主要投向 Neutron 火箭、Electron 一级回收与航天器新品；换言之，公司的亏损是 deliberate growth investment（主动的成长性投入），而非业务恶化 ([Rocket Lab FY2025 10-K, Operating Expenses](https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm))。约 104× 的 TTM P/S 远超绝大多数硬件公司，属于典型的 narrative / theme premium（叙事 / 主题溢价）——市场把 Rocket Lab 当作"SpaceX 之外唯一可投资的纯太空标的"在定价。*分析师观点：* 摩根士丹利在 2026 年 4 月的"太空 60（The Space 60）"报告中，把 Rocket Lab 与 Boeing、Lockheed Martin、Northrop Grumman、Firefly 并列为"航天器与发射系统"类别的代表赋能者（enabler），反映其作为板块核心配置标的的地位 ([Morgan Stanley — *Space: The Space 60 — Picks & Shovels for the Final Frontier*, 2026-04-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415521254142458))。
+**估值快照（Valuation snapshot，截至 2026-06-09）。** 当前股价 $113.65，市值约 $71.0bn，流通股约 624.8M，52 周区间 $25.24–$151，beta 约 2.5 ([Yahoo Finance — RKLB Key Statistics](https://finance.yahoo.com/quote/RKLB/))。**TTM P/E 为负**（公司 GAAP 不盈利，trailing P/E 不适用）；**TTM P/S 约 104×**（市值 $71.0bn ÷ TTM 营收约 $680M）([Yahoo Finance — RKLB](https://finance.yahoo.com/quote/RKLB/))。负 P/E 的直接驱动是 operating loss $228.8M，其中最大单项是 R&D（研发费用）$270.7M，主要投向 Neutron 火箭、Electron 一级回收与航天器新品；换言之，公司的亏损是 deliberate growth investment（主动的成长性投入），而非业务恶化 ([Rocket Lab FY2025 10-K, Operating Expenses](https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm))。约 104× 的 TTM P/S 远超绝大多数硬件公司，属于典型的 narrative / theme premium（叙事 / 主题溢价）——市场把 Rocket Lab 当作"SpaceX 之外唯一可投资的纯太空标的"在定价。*分析师观点：* 摩根士丹利在 2026 年 4 月的"太空 60（The Space 60）"报告中，把 Rocket Lab 与 Boeing、Lockheed Martin、Northrop Grumman、Firefly 并列为"航天器与发射系统"类别的代表赋能者（enabler），反映其作为板块核心配置标的的地位 ([Morgan Stanley — *Space: The Space 60 — Picks & Shovels for the Final Frontier*, 2026-04-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/415521254142458/Morgan%20Stanley-Space%20-%20North%20America%EF%BC%9AThe%20Space%2060%EF%BC%9A%20Picks%20%26%20Shovels%20for%20the%20Final%20Frontier-260412.pdf))。
 
 **同业对比。** 与同为"太空新势力"的标的相比，RKLB 的 P/S 处于中高位：AST SpaceMobile（ASTS）约 420× P/S（接近 pre-revenue），Planet Labs（PL）约 35×，Intuitive Machines（LUNR）约 14×，Redwire（RDW）约 10×；空间主题 ETF Procure Space ETF（UFO）整体 P/E 约 25× ([Yahoo Finance — peer key statistics, 2026-06-09](https://finance.yahoo.com/quote/RKLB/))。RKLB 的溢价由其相对成熟的营收规模（约 $680M TTM，远高于上述多数同业）+ 高增长 + 唯一具备规模化入轨发射能力支撑，但仍属"为多年高增长买单"的区间，详见 1A 与第 9 节估值风险。
 
@@ -90,7 +90,7 @@ Source: [Rocket Lab FY2021–FY2025 10-K filings, MD&A Results of Operations](ht
 
 熊市情景的 P/S 25× 仍高于多数硬件公司，反映即便 de-rate，市场也难以把 RKLB 重定价到传统国防承包商的个位数 P/S——但若 Neutron 出现类似 SpaceX Starship 早期的反复失败，下行空间巨大 ([Rocket Lab FY2025 10-K, Risk Factors — Neutron](https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm))。
 
-**(d) 与市场一致预期（consensus）的关系。** *分析师观点：* 摩根大通零售雷达显示，在 2026 年太空板块大涨后，散户对 Rocket Lab 倾向 **获利了结（profit-taking）**——RKLB 在 5 月某周一度位列散户卖出前五 ([J.P. Morgan — Retail Radar (Software vs Semis Positioning), 2026-05-14, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812452441522582))；另一期雷达指出"航天相关股票与 ETF 关注度快速提升……股价大涨后零售资金倾向获利了结，火箭实验室、AST SpaceMobile 等遭减持" ([J.P. Morgan — Retail Radar (Theme Stack: AI, Memory, Space, Quantum), 2026-05-27, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415284455822148))。本报告 Hold 评级与"涨多后兑现、等待 Neutron de-risk"的资金行为一致；本报告 FY2027E 营收 $1,280M 略低于最乐观的卖方口径（受 Neutron 放量节奏拖累），属审慎中性。
+**(d) 与市场一致预期（consensus）的关系。** *分析师观点：* 摩根大通零售雷达显示，在 2026 年太空板块大涨后，散户对 Rocket Lab 倾向 **获利了结（profit-taking）**——RKLB 在 5 月某周一度位列散户卖出前五 ([J.P. Morgan — Retail Radar (Software vs Semis Positioning), 2026-05-14, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812452441522582/JPM-Retail%20Radar%20May%2013%20-%20Software%20vs%20Semis%20Positioning-260514.pdf))；另一期雷达指出"航天相关股票与 ETF 关注度快速提升……股价大涨后零售资金倾向获利了结，火箭实验室、AST SpaceMobile 等遭减持" ([J.P. Morgan — Retail Radar (Theme Stack: AI, Memory, Space, Quantum), 2026-05-27, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/415284455822148/JPM-Retail%20Radar%20May%2027%20-%20Theme%20Stack-AI%2C%20Memory%2C%20Space%2C%20Quantum-260527.pdf))。本报告 Hold 评级与"涨多后兑现、等待 Neutron de-risk"的资金行为一致；本报告 FY2027E 营收 $1,280M 略低于最乐观的卖方口径（受 Neutron 放量节奏拖累），属审慎中性。
 
 **(e) 决定评级的 1–2 个 swing variable（摆动变量）。** 第一是 **Neutron 首飞时间与成功率**——它既决定中型发射营收的拐点，也是估值能否守住高 P/S 的信心锚；第二是 **政府订单（尤其 SDA / Space Force）的持续性与预算环境**——单一 Government Customer 已占 FY2025 营收 28%，预算波动会直接冲击营收与 backlog 转化 ([Rocket Lab FY2025 10-K, Customer Concentration](https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm))。
 
@@ -261,7 +261,7 @@ Source: [Rocket Lab FY2025 10-K, Note — Concentration of Risk（口径：% of 
 
 **市场规模与增速。** 全球 space launch services 市场预计从 2024 年起以约 14.6% CAGR 增长，到 2030 年达约 **$41.31bn**，主要由 satellite-based applications（通信、对地观测、导航）与 small-satellite constellation（小卫星星座）部署驱动；北美 2023 年占该市场超 50% 份额 ([Grand View Research — Space Launch Services Market Report, 2030](https://www.grandviewresearch.com/industry-analysis/space-launch-services-market-report))。更宏观地，World Economic Forum 与 McKinsey 在 2024 年 4 月的报告中预计，全球 space economy 将从 2023 年的 **$630bn 增长到 2035 年的 $1.8 trillion**，年均约 9%，远超全球 GDP 增速；其中超 60% 的增量将来自供应链与运输、食品饮料、国家国防、零售、消费品与数字通信等"被太空技术赋能"的行业 ([World Economic Forum / McKinsey — *Space: The $1.8 Trillion Opportunity*, 2024-04](https://www.weforum.org/press/2024/04/space-economy-set-to-triple-to-1-8-trillion-by-2035-new-research-reveals/))。
 
-**关键趋势与驱动。** 公司自身在 10-K 中将增长归因于三股力量：航天器的 miniaturization（小型化）+ 成本与上市时间的大幅下降，叠加通信、遥感、对地观测、气象、导航等应用需求的爆发；以及"government expenditures and private enterprise investment into the space economy"（政府支出 + 私人投资）持续注入 ([Rocket Lab FY2025 10-K, Item 1 / Key Factors Affecting Our Performance](https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm))。*分析师观点：* 摩根士丹利"太空 60"报告指出，地缘政治、科学进步与经济因素正把投资者对太空主题的兴趣推至"近十年最高"，催化剂包括 Artemis II 任务、美国太空军预算大幅增加、太空发射活动快速增长 ([Morgan Stanley — *The Space 60*, 2026-04-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415521254142458))。
+**关键趋势与驱动。** 公司自身在 10-K 中将增长归因于三股力量：航天器的 miniaturization（小型化）+ 成本与上市时间的大幅下降，叠加通信、遥感、对地观测、气象、导航等应用需求的爆发；以及"government expenditures and private enterprise investment into the space economy"（政府支出 + 私人投资）持续注入 ([Rocket Lab FY2025 10-K, Item 1 / Key Factors Affecting Our Performance](https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm))。*分析师观点：* 摩根士丹利"太空 60"报告指出，地缘政治、科学进步与经济因素正把投资者对太空主题的兴趣推至"近十年最高"，催化剂包括 Artemis II 任务、美国太空军预算大幅增加、太空发射活动快速增长 ([Morgan Stanley — *The Space 60*, 2026-04-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/415521254142458/Morgan%20Stanley-Space%20-%20North%20America%EF%BC%9AThe%20Space%2060%EF%BC%9A%20Picks%20%26%20Shovels%20for%20the%20Final%20Frontier-260412.pdf))。
 
 **行业结构与壁垒。** 太空发射是高度 consolidated（集中）且壁垒极高的行业——资本密集、技术密集、且受 export control / ITAR、FAA / 各国航天局监管层层约束 ([Rocket Lab FY2025 10-K, Governmental Regulation](https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm))。SpaceX 在中大型发射占据绝对主导，Rocket Lab 则在小型发射建立了仅次于 SpaceX rideshare 的地位，并试图用 Neutron 进入中型赛道。Space Systems / 卫星零部件市场相对更分散，玩家众多。监管环境是双刃剑：一方面 LC-1 受美新双边条约保护，构成进入壁垒；另一方面 rare-earth minerals（稀土）供应限制、政府预算波动（如 government shutdown）会直接冲击业务 ([Rocket Lab FY2025 10-K, Risk Factors Summary](https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm))。
 
@@ -281,7 +281,7 @@ Source: [Rocket Lab FY2025 10-K, Note — Concentration of Risk（口径：% of 
 
 **竞争优势（公司自述）。** 10-K 列出的核心优势包括：Electron 的 flight heritage（截至 2026-02-26 已 77 次成功发射）与 first-mover advantage；独特技术（碳复合贮箱、电泵发动机、3D 打印、kick stage）；deep vertical integration（深度垂直整合）；自有测试与多发射场（LC-1 / LC-2 / LC-3）；以及完整的 end-to-end 解决方案 ([Rocket Lab FY2025 10-K, Item 1 — Our Competitive Strengths](https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm))。
 
-*分析师观点：* 在小型发射赛道，Rocket Lab 是除 SpaceX rideshare 之外**最成熟、最高频的玩家**——Electron 在 2025 年是全球第二高频入轨火箭，这是 Firefly、ABL 等新进入者短期难以复制的飞行履历优势；但在中大型发射，SpaceX 的 Falcon 9 / Starship 凭借规模化可复用建立了巨大的成本与频次领先，Neutron 必须证明自己能在 reusability 经济学上接近 SpaceX，才能真正打开中型市场。这一份额与领先判断属分析师观点 / 行业研究，非 Rocket Lab 10-K 表述 ([Morgan Stanley — *The Space 60*, 2026-04-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415521254142458))。
+*分析师观点：* 在小型发射赛道，Rocket Lab 是除 SpaceX rideshare 之外**最成熟、最高频的玩家**——Electron 在 2025 年是全球第二高频入轨火箭，这是 Firefly、ABL 等新进入者短期难以复制的飞行履历优势；但在中大型发射，SpaceX 的 Falcon 9 / Starship 凭借规模化可复用建立了巨大的成本与频次领先，Neutron 必须证明自己能在 reusability 经济学上接近 SpaceX，才能真正打开中型市场。这一份额与领先判断属分析师观点 / 行业研究，非 Rocket Lab 10-K 表述 ([Morgan Stanley — *The Space 60*, 2026-04-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/415521254142458/Morgan%20Stanley-Space%20-%20North%20America%EF%BC%9AThe%20Space%2060%EF%BC%9A%20Picks%20%26%20Shovels%20for%20the%20Final%20Frontier-260412.pdf))。
 
 ```mermaid
 quadrantChart
@@ -299,7 +299,7 @@ quadrantChart
     Blue Origin: [0.70, 0.55]
     Northrop Grumman: [0.65, 0.50]
 ```
-Source: 分析师定位框架，基于 [Rocket Lab FY2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm) 与 [Morgan Stanley — *The Space 60*, 2026-04-12](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415521254142458)（竞争对手相对位置为分析师估计，非 10-K 数据）。
+Source: 分析师定位框架，基于 [Rocket Lab FY2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm) 与 [Morgan Stanley — *The Space 60*, 2026-04-12](http://xs-macbook-air.local:5001/zsxq/pdf/415521254142458/Morgan%20Stanley-Space%20-%20North%20America%EF%BC%9AThe%20Space%2060%EF%BC%9A%20Picks%20%26%20Shovels%20for%20the%20Final%20Frontier-260412.pdf)（竞争对手相对位置为分析师估计，非 10-K 数据）。
 
 **竞争脆弱性（vulnerabilities）。** 一是 Neutron 尚未首飞，中型赛道仍是"承诺"而非"能力"；二是单一政府客户依赖度高，国防预算与采购政策变化会直接冲击；三是相对 SpaceX 的资本与发射频次仍有数量级差距 ([Rocket Lab FY2025 10-K, Risk Factors](https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm))。
 
@@ -351,7 +351,7 @@ Source: 发射服务规模 [Grand View Research, 2030](https://www.grandviewrese
 
 11. **融资需求与稀释 / 债务风险。** 公司可能需要额外资本支持增长，可能通过稀释股东或增加债务杠杆获得；同时已发行 convertible senior notes，存在 fundamental change 时无法回购的风险 ([Rocket Lab FY2025 10-K, Risk Factors Summary](https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm))。缓释因素：截至 Q1 2026 公司握有约 $1.2bn 现金 + $271.3M 证券 ([Rocket Lab Q1 2026 10-Q, Liquidity](https://www.sec.gov/Archives/edgar/data/1819994/000181999426000028/rklb-20260331.htm))。
 
-12. **估值 / multiple-compression 风险（material）。** TTM P/S 约 104×，远超硬件同业与板块中位（PL ~35×、LUNR ~14×、RDW ~10×）；这一倍数把 Neutron 成功与多年高增长全部计入价格。触发 de-rate 的可能事件：Neutron 进一步延期、政府订单不及预期、增长减速、板块 rotation 或利率上行。*分析师观点：* 摩根大通零售雷达已观察到散户在太空板块大涨后对 RKLB 获利了结，是情绪见顶的早期信号 ([J.P. Morgan — Retail Radar, 2026-05-27, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415284455822148))。
+12. **估值 / multiple-compression 风险（material）。** TTM P/S 约 104×，远超硬件同业与板块中位（PL ~35×、LUNR ~14×、RDW ~10×）；这一倍数把 Neutron 成功与多年高增长全部计入价格。触发 de-rate 的可能事件：Neutron 进一步延期、政府订单不及预期、增长减速、板块 rotation 或利率上行。*分析师观点：* 摩根大通零售雷达已观察到散户在太空板块大涨后对 RKLB 获利了结，是情绪见顶的早期信号 ([J.P. Morgan — Retail Radar, 2026-05-27, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/415284455822148/JPM-Retail%20Radar%20May%2027%20-%20Theme%20Stack-AI%2C%20Memory%2C%20Space%2C%20Quantum-260527.pdf))。
 
 **宏观风险（Macroeconomic）**
 
@@ -470,7 +470,7 @@ Margin of safety: 约 −25% 至 −35%
 - World Economic Forum / McKinsey — *Space: The $1.8 Trillion Opportunity*（$630bn 2023 → $1.8trn 2035, 2024-04）。
 
 **Institute research（local `db/zsxq.db`）**
-- 搜索 6 个别名（RKLB / Rocket Lab / 火箭实验室 / Neutron / Electron rocket / space launch），找到约 9 条相关 PDF，引用 file_ids：`415521254142458`（Morgan Stanley *The Space 60*, 2026-04-12）、`812452441522582`（J.P. Morgan Retail Radar, 2026-05-14）、`415284455822148`（J.P. Morgan Retail Radar, 2026-05-27）——均标注 *Analyst view:*，经 `/zsxq/pdf-viewer/` 路由。RKLB 专属财报分析 PDF（file_ids `212281488145551` 等）为 image-only，OCR 质量不足以提取可引用的精确数字，故仅作"卖方覆盖存在"的佐证，未引用其硬数字。
+- 搜索 6 个别名（RKLB / Rocket Lab / 火箭实验室 / Neutron / Electron rocket / space launch），找到约 9 条相关 PDF，引用 file_ids：`415521254142458`（Morgan Stanley *The Space 60*, 2026-04-12）、`812452441522582`（J.P. Morgan Retail Radar, 2026-05-14）、`415284455822148`（J.P. Morgan Retail Radar, 2026-05-27）——均标注 *Analyst view:*，经 `/zsxq/pdf/` 路由。RKLB 专属财报分析 PDF（file_ids `212281488145551` 等）为 image-only，OCR 质量不足以提取可引用的精确数字，故仅作"卖方覆盖存在"的佐证，未引用其硬数字。
 
 **Macro / cycle inputs（Section 10）**
 - 10Y Treasury（^TNX）4.536%、HY OAS 274bp、VIX 21.51、IG OAS 74bp、MOVE 75.2、SKEW 152.25，截至 2026-06-05。来源：`indicators.db`（FRED + yfinance）。
@@ -503,9 +503,9 @@ Margin of safety: 约 −25% 至 −35%
 - [McKinsey — Space: The $1.8 Trillion Opportunity (2024-04)](https://www.mckinsey.com/industries/aerospace-and-defense/our-insights/space-the-1-point-8-trillion-dollar-opportunity-for-global-economic-growth)
 
 **Institute research（local zsxq library，*Analyst view:* — user-machine only）**
-- [Morgan Stanley — *Space: The Space 60 — Picks & Shovels for the Final Frontier*, 2026-04-12](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415521254142458)
-- [J.P. Morgan — Retail Radar (Software vs Semis Positioning), 2026-05-14](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812452441522582)
-- [J.P. Morgan — Retail Radar (Theme Stack: AI, Memory, Space, Quantum), 2026-05-27](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415284455822148)
+- [Morgan Stanley — *Space: The Space 60 — Picks & Shovels for the Final Frontier*, 2026-04-12](http://xs-macbook-air.local:5001/zsxq/pdf/415521254142458/Morgan%20Stanley-Space%20-%20North%20America%EF%BC%9AThe%20Space%2060%EF%BC%9A%20Picks%20%26%20Shovels%20for%20the%20Final%20Frontier-260412.pdf)
+- [J.P. Morgan — Retail Radar (Software vs Semis Positioning), 2026-05-14](http://xs-macbook-air.local:5001/zsxq/pdf/812452441522582/JPM-Retail%20Radar%20May%2013%20-%20Software%20vs%20Semis%20Positioning-260514.pdf)
+- [J.P. Morgan — Retail Radar (Theme Stack: AI, Memory, Space, Quantum), 2026-05-27](http://xs-macbook-air.local:5001/zsxq/pdf/415284455822148/JPM-Retail%20Radar%20May%2027%20-%20Theme%20Stack-AI%2C%20Memory%2C%20Space%2C%20Quantum-260527.pdf)
 
 **Macro / cycle**
 - [FRED — HY OAS (BAMLH0A0HYM2)](https://fred.stlouisfed.org/series/BAMLH0A0HYM2) · [FRED — 10Y Treasury (DGS10)](https://fred.stlouisfed.org/series/DGS10)
@@ -513,7 +513,7 @@ Margin of safety: 约 −25% 至 −35%
 <details>
 <summary>Verification log (Step 10) — 2026-06-09</summary>
 
-**URL check** — 全部公网 URL 于 2026-06-09 经 HTTP 检查（curl）。所有 SEC EDGAR 文档 URL 返回 200——其中发现并修正了 4 个历史 10-K（FY2021–FY2024）错误的 CIK 路径前缀 `data/1628280/` → 改为正确的注册人 CIK `data/1819994/`，修正后全部 200。Yahoo `/key-statistics/` 路径已废弃（404），改用 200 的基础 quote URL `finance.yahoo.com/quote/RKLB/`。Grand View Research（403）、WEF（403）、McKinsey（000）为 anti-bot 网络层拦截——三者均直接来自 WebSearch 结果、为真实 canonical 页面（非 dead link，符合全局 link-validation 规则的 anti-bot 例外）；$1.8trn 一图双源（WEF + McKinsey），inline 主引用使用 WEF press release。zsxq 本地 viewer URL 仅在用户机可达，已用 `find_pdf.py --file-id` 确认全部 3 个 file_id `local_exists: true` 且路由为 `/zsxq/pdf-viewer/`（非已废弃的 `/zsxq-pdf/`）。
+**URL check** — 全部公网 URL 于 2026-06-09 经 HTTP 检查（curl）。所有 SEC EDGAR 文档 URL 返回 200——其中发现并修正了 4 个历史 10-K（FY2021–FY2024）错误的 CIK 路径前缀 `data/1628280/` → 改为正确的注册人 CIK `data/1819994/`，修正后全部 200。Yahoo `/key-statistics/` 路径已废弃（404），改用 200 的基础 quote URL `finance.yahoo.com/quote/RKLB/`。Grand View Research（403）、WEF（403）、McKinsey（000）为 anti-bot 网络层拦截——三者均直接来自 WebSearch 结果、为真实 canonical 页面（非 dead link，符合全局 link-validation 规则的 anti-bot 例外）；$1.8trn 一图双源（WEF + McKinsey），inline 主引用使用 WEF press release。zsxq 本地 viewer URL 仅在用户机可达，已用 `find_pdf.py --file-id` 确认全部 3 个 file_id `local_exists: true` 且路由为 `/zsxq/pdf/`（非已废弃的 `/zsxq-pdf/`）。
 
 **SEC filenames** — 全部从 EDGAR submissions JSON（CIK 0001819994）解析，未构造任何合成文件名：10-K FY2025 = `rklb-20251231.htm`（accession 0001819994-26-000013）；10-Q Q1'26 = `rklb-20260331.htm`（0001819994-26-000028）；DEF 14A 2026 = `rklb-20260406.htm`（0001628280-26-023922）；Q1'26 8-K = `rklb-20260507.htm`；Q4'25 8-K = `rklb-20260226.htm`；GEOST 8-K exhibit = `g084916_ex99-1.htm`。历史 10-K（FY2021–FY2024）文件名均经 submissions JSON 核对。
 
@@ -536,7 +536,7 @@ Margin of safety: 约 −25% 至 −35%
 - Section 7 SpaceX/Firefly 份额与领先判断：*分析师观点* + Morgan Stanley zsxq 引用，未附 RKLB 10-K。
 - Section 10 各 lens 评分：分析师评分框架，复用前文 citations。
 
-**Institute research（`db/zsxq.db`）** — 搜索 6 别名，找到约 9 条相关 PDF，引用 3 条结构化 broker 笔记（MS Space 60、JPM Retail Radar ×2）；每条标 *Analyst view:*、经 `/zsxq/pdf-viewer/` 路由、broker+date 在链接文本中。引用的定性结论（RKLB 列入"太空 60"、散户获利了结）均 string-match zsxq summary 原文。RKLB 专属财报分析 PDF 为 image-only、OCR 乱码，未引用其硬数字。
+**Institute research（`db/zsxq.db`）** — 搜索 6 别名，找到约 9 条相关 PDF，引用 3 条结构化 broker 笔记（MS Space 60、JPM Retail Radar ×2）；每条标 *Analyst view:*、经 `/zsxq/pdf/` 路由、broker+date 在链接文本中。引用的定性结论（RKLB 列入"太空 60"、散户获利了结）均 string-match zsxq summary 原文。RKLB 专属财报分析 PDF 为 image-only、OCR 乱码，未引用其硬数字。
 
 **Residual unknowns / not yet verified：**
 - 官网 rocketlabcorp.com 产品页 403，未直接核对官网措辞；以 10-K Item 1 verbatim 替代。

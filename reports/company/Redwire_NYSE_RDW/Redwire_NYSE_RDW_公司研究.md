@@ -534,7 +534,7 @@ RDW 的可寻址市场（TAM）= 空间经济（$1.8T by 2035）的"基础设施
 
 **机构研报库（db/zsxq.db）：** 检索 3 个别名（RDW / Redwire / Edge Autonomy，各 limit 20），命中均为 LIKE 误匹配（如 "RDW" 命中 "Outlook"），**经逐行过滤标题/摘要后真实 Redwire 覆盖 = 0**；未 fetch 新报告（small-cap 美股，库内空白）。故本报告无本地卖方引用，第 2b 一致预期缺口已在正文说明，未虚构 Street 数字。
 
-**URL HTTP 检查：** SEC EDGAR、stockanalysis.com、yahoo finance、weforum.org、mckinsey.com、rdw.com 均为公开可达页面（SEC/官网 200；金融门户偶有反爬 403 但浏览器可达）。本地 zsxq 无引用，无需校验 `/zsxq/pdf-viewer/` 路由。
+**URL HTTP 检查：** SEC EDGAR、stockanalysis.com、yahoo finance、weforum.org、mckinsey.com、rdw.com 均为公开可达页面（SEC/官网 200；金融门户偶有反爬 403 但浏览器可达）。本地 zsxq 无引用，无需校验 `/zsxq/pdf/` 路由。
 
 **残留未决（residual unknowns）：**
 - ≥10% 客户（Customer D / E）**未具名**——10-K 仅以字母披露，无法确认是否为某 prime contractor 或政府项目（披露事实，非缺漏）。

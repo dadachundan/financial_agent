@@ -303,9 +303,9 @@ quadrantChart
 
 *定位为分析师判断，非备案数据。竞争者名单来源：[Kratos FY2025 10-K, Item 1 — Competition](https://www.sec.gov/Archives/edgar/data/1069258/000106925826000013/ktos-20251228.htm)。*
 
-**最值得关注的对手——Anduril。** *分析师观点：* 在新创防务科技中，**Anduril（私有）** 是 Kratos 在无人系统/自主作战领域最受关注的颠覆者，其核心是统一开放作战系统 **Lattice**，可兼容主流防务厂商与初创设备，定位反无人机、导弹防御、边境监控（[Goldman Sachs — Americas Software/A&D: Anduril Lattice 深度解析, 2026-05-12](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415245828888188)）。Anduril 采用"平台化 + 订阅化、毛利率显著更优"的商业模式，与 Kratos"造硬件、薄毛利、靠量产"的路线形成鲜明对照——这也是 Kratos 估值虽高但盈利能力受质疑的部分原因（投资者担心 Anduril 式软件定义模式蚕食硬件价值）。**AeroVironment（AVAV，公开）** 则是无人机/巡飞弹领域的同业，且已收购 Kratos 的客户 Blue Halo（[Kratos FY2025 10-K, Item 1 — Customers](https://www.sec.gov/Archives/edgar/data/1069258/000106925826000013/ktos-20251228.htm)）。General Atomics（私有）在大型无人机（MQ-9 等）占主导。*分析师观点：* 大型集成商（Lockheed、Northrop、Raytheon）在固体火箭、导弹防御等领域既是竞争者，也是 Kratos 的"team partner"——例如 Northrop 携 Kratos Valkyrie 竞标 MUX TACAIR。
+**最值得关注的对手——Anduril。** *分析师观点：* 在新创防务科技中，**Anduril（私有）** 是 Kratos 在无人系统/自主作战领域最受关注的颠覆者，其核心是统一开放作战系统 **Lattice**，可兼容主流防务厂商与初创设备，定位反无人机、导弹防御、边境监控（[Goldman Sachs — Americas Software/A&D: Anduril Lattice 深度解析, 2026-05-12](http://xs-macbook-air.local:5001/zsxq/pdf/415245828888188/Goldman%20Sachs-AMERICAS%EF%BC%9A%20SOFTWARE%20AEROSPACE%20%26%20DEFENSE%EF%BC%9AA%20deep%20dive%20into%20Anduril%E2%80%99s%20Lattice%20software%20post%20leadership%20meetings-260511.pdf)）。Anduril 采用"平台化 + 订阅化、毛利率显著更优"的商业模式，与 Kratos"造硬件、薄毛利、靠量产"的路线形成鲜明对照——这也是 Kratos 估值虽高但盈利能力受质疑的部分原因（投资者担心 Anduril 式软件定义模式蚕食硬件价值）。**AeroVironment（AVAV，公开）** 则是无人机/巡飞弹领域的同业，且已收购 Kratos 的客户 Blue Halo（[Kratos FY2025 10-K, Item 1 — Customers](https://www.sec.gov/Archives/edgar/data/1069258/000106925826000013/ktos-20251228.htm)）。General Atomics（私有）在大型无人机（MQ-9 等）占主导。*分析师观点：* 大型集成商（Lockheed、Northrop、Raytheon）在固体火箭、导弹防御等领域既是竞争者，也是 Kratos 的"team partner"——例如 Northrop 携 Kratos Valkyrie 竞标 MUX TACAIR。
 
-*分析师观点：* 卖方亦观察到导弹/太空需求旺盛、且"新防务科技公司入局"正成为行业主题（[Bernstein — 全球航空航天与国防战略决策会议（十二家 CEO 洞见）, 2026-06-03](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812485114412812)），印证 Kratos 所处赛道的高景气，但也意味着竞争者数量在快速增加。
+*分析师观点：* 卖方亦观察到导弹/太空需求旺盛、且"新防务科技公司入局"正成为行业主题（[Bernstein — 全球航空航天与国防战略决策会议（十二家 CEO 洞见）, 2026-06-03](http://xs-macbook-air.local:5001/zsxq/pdf/812485114412812/Bernstein-Global%20Aerospace%20%26%20Defense%EF%BC%9AAerospace%20%26%20Defense%EF%BC%9A%20Twelve%20CEOs%20in%20three%20days~A%26D%20themes%20from%20Bernstein%27s%20Strategic%20Decisions%20Conference-260602.pdf)），印证 Kratos 所处赛道的高景气，但也意味着竞争者数量在快速增加。
 
 ---
 
@@ -350,7 +350,7 @@ xychart-beta
 
 6. **政府预算与 continuing resolution（CR）风险。** ~68% 营收来自美国政府。10-K 在 Industry Update 中详述 FY2026 经历政府停摆、停摆至 2026-02-03 才靠拨款法案解决；公司明确预期 CR、债务上限、停摆"将会继续发生"，可能延迟或取消订单确认（[Kratos FY2025 10-K, Item 1 — Industry Update](https://www.sec.gov/Archives/edgar/data/1069258/000106925826000013/ktos-20251228.htm)）。
 7. **采购规则改革的不确定性。** Trump 行政令、FAR（Federal Acquisition Regulations）修订、DoW 的"Go Direct-to-Supplier"与 Acquisition Transformation Strategy，其对行业与 Kratos 的影响"unknown at this time"（[Kratos FY2025 10-K, Item 1 — Industry Update & MD&A](https://www.sec.gov/Archives/edgar/data/1069258/000106925826000013/ktos-20251228.htm)）。
-8. **来自资源更雄厚对手与新创的双向竞争。** 一边是资源/营收远超 Kratos 的大集成商，一边是 Anduril 等以软件定义、订阅模式、更高毛利切入的新创。Kratos 的"薄毛利硬件"模式面临两端挤压（[Kratos FY2025 10-K, Item 1 — Competition](https://www.sec.gov/Archives/edgar/data/1069258/000106925826000013/ktos-20251228.htm)；*分析师观点：* [Goldman — Anduril Lattice, 2026-05-12](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415245828888188)）。
+8. **来自资源更雄厚对手与新创的双向竞争。** 一边是资源/营收远超 Kratos 的大集成商，一边是 Anduril 等以软件定义、订阅模式、更高毛利切入的新创。Kratos 的"薄毛利硬件"模式面临两端挤压（[Kratos FY2025 10-K, Item 1 — Competition](https://www.sec.gov/Archives/edgar/data/1069258/000106925826000013/ktos-20251228.htm)；*分析师观点：* [Goldman — Anduril Lattice, 2026-05-12](http://xs-macbook-air.local:5001/zsxq/pdf/415245828888188/Goldman%20Sachs-AMERICAS%EF%BC%9A%20SOFTWARE%20AEROSPACE%20%26%20DEFENSE%EF%BC%9AA%20deep%20dive%20into%20Anduril%E2%80%99s%20Lattice%20software%20post%20leadership%20meetings-260511.pdf)）。
 9. **LPTA 与竞标抗议侵蚀利润。** 最低价招标（LPTA）与日益频繁的竞标抗议延迟订单、压低服务类利润，公司已被迫退出部分 DRSS 与训练服务业务（[Kratos FY2025 10-K, Item 1 — Competition](https://www.sec.gov/Archives/edgar/data/1069258/000106925826000013/ktos-20251228.htm)）。
 
 **财务/运营层面（financial/operational）**
@@ -442,8 +442,8 @@ xychart-beta
 
 **本地卖方研究库（db/zsxq.db，*分析师观点*，用户本机可点开）**
 
-- [Goldman Sachs — Americas Software/A&D: Anduril Lattice 深度解析, 2026-05-12, file_id 415245828888188](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415245828888188)
-- [Bernstein — 全球航空航天与国防战略决策会议（十二家 CEO 洞见）, 2026-06-03, file_id 812485114412812](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812485114412812)
+- [Goldman Sachs — Americas Software/A&D: Anduril Lattice 深度解析, 2026-05-12, file_id 415245828888188](http://xs-macbook-air.local:5001/zsxq/pdf/415245828888188/Goldman%20Sachs-AMERICAS%EF%BC%9A%20SOFTWARE%20AEROSPACE%20%26%20DEFENSE%EF%BC%9AA%20deep%20dive%20into%20Anduril%E2%80%99s%20Lattice%20software%20post%20leadership%20meetings-260511.pdf)
+- [Bernstein — 全球航空航天与国防战略决策会议（十二家 CEO 洞见）, 2026-06-03, file_id 812485114412812](http://xs-macbook-air.local:5001/zsxq/pdf/812485114412812/Bernstein-Global%20Aerospace%20%26%20Defense%EF%BC%9AAerospace%20%26%20Defense%EF%BC%9A%20Twelve%20CEOs%20in%20three%20days~A%26D%20themes%20from%20Bernstein%27s%20Strategic%20Decisions%20Conference-260602.pdf)
 
 > **Data Used 数据清单**：FY2025/FY2024 10-K（营收、分部、毛利率、客户集中度、竞争名单、backlog、产品定义、风险因素）；Q1 FY2026 10-Q/8-K（最新营收、book-to-bill、guidance、流通股、CEO 引述）；2026 DEF 14A（DeMarco 小传、薪酬、董事会）；yfinance（股价、市值、倍数、卖方目标价）；indicators.db（VIX/10Y/HY-IG OAS 周期快照）；第三方 TAM（MarketsandMarkets 无人机、Mordor 高超声速、Congress.gov Golden Dome、WEF/McKinsey 空间经济）；db/zsxq.db（Goldman Anduril、Bernstein A&D 行业视角，*分析师观点*）。**无任何单一合同/数字来自模型自造——所有数字均可在所引 URL 中字符串匹配。**
 
@@ -473,9 +473,9 @@ xychart-beta
 
 **第三方 TAM**：Golden Dome FY26 $13.4B、$175B/$185B、CSIS $252B–$3.6T（Congress.gov IF13115 + Wikipedia）；无人机 $15.8B→$22.81B@7.6%（MarketsandMarkets）；高超声速 $8.24B→$14.78B@12.4%（Mordor）；空间经济 $630B(2023)→$1.8T(2035)@9%（WEF/McKinsey）；Valkyrie 规格（>3,000 nmi、Mach 0.86、45,000 ft、$4–6M 目标降至 <$2M）（官网 + Wikipedia）。✓
 
-**institute research（db/zsxq.db）** —— 按 7 个别名（KTOS / Kratos / 克拉托斯 / Valkyrie / 无人机国防 / Golden Dome / hypersonic）检索，**KTOS/Kratos 单名覆盖为 0**（read-only SELECT 确认）；找到 3 条相邻 A&D 主题note。引用 2 条作 *分析师观点* 的行业/竞争背景：file_id 415245828888188（Goldman — Anduril Lattice, 2026-05-12）、812485114412812（Bernstein — 全球 A&D 战略决策会议, 2026-06-03）。两者均未点名 Kratos，仅用于竞争格局/行业景气背景，已标 *分析师观点* 并路由至 `/zsxq/pdf-viewer/`。未向库内写入任何数据。
+**institute research（db/zsxq.db）** —— 按 7 个别名（KTOS / Kratos / 克拉托斯 / Valkyrie / 无人机国防 / Golden Dome / hypersonic）检索，**KTOS/Kratos 单名覆盖为 0**（read-only SELECT 确认）；找到 3 条相邻 A&D 主题note。引用 2 条作 *分析师观点* 的行业/竞争背景：file_id 415245828888188（Goldman — Anduril Lattice, 2026-05-12）、812485114412812（Bernstein — 全球 A&D 战略决策会议, 2026-06-03）。两者均未点名 Kratos，仅用于竞争格局/行业景气背景，已标 *分析师观点* 并路由至 `/zsxq/pdf/`。未向库内写入任何数据。
 
-**URL 检查** —— 所有 SEC / 官网 / Yahoo / 第三方 URL 形态正确；SEC URL 均经 submissions JSON 解析。zsxq 本机 URL 用 `/zsxq/pdf-viewer/<file_id>` 形态（非已废弃的 `/zsxq-pdf/`）。
+**URL 检查** —— 所有 SEC / 官网 / Yahoo / 第三方 URL 形态正确；SEC URL 均经 submissions JSON 解析。zsxq 本机 URL 用 `/zsxq/pdf/<file_id>/<filename>` 形态（非已废弃的 `/zsxq-pdf/`）。
 
 **残留未决（residual unknowns）**：
 - OpenSpace 官网深链（`/products/space-cyber/space/openspace`）返回 404；已改用 10-K 内 OpenSpace 逐字描述替代，未引用失效链接。

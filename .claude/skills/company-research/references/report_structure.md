@@ -99,7 +99,7 @@ If there is **no recent guidance change** to highlight, omit the banner entirely
 - **IR primary input:** Latest 1–2 quarterly earnings deck (revenue + margin bridge slide, segment-mix slide, capital-allocation slide). At least one citation in this section should be to a recent earnings-deck slide; cite the slide number explicitly.
 - **Valuation snapshot (REQUIRED).** Current price, market cap, **TTM P/E**, **TTM P/S** (plus P/B for capital-heavy businesses and EV/EBITDA for leveraged / cyclical names). Include the 3-year range of each multiple and the sector / peer median (3–5 named comps) so today's number has context. Cite the market-data source (Yahoo Finance / Eastmoney / Kabutan / DART, etc.) with a direct URL.
   - **If P/E is negative** → state why: cash-burning growth, one-off charge (impairment, litigation, write-down), cyclical trough, or structural decline. Name the specific income-statement line driving the loss and cite the filing.
-  - **If P/E > 50× TTM (or > 2× sector median) or P/S > 15× (or > 3× sector median)** → name the cause: high-growth sector premium (AI infra, GLP-1, EV battery, advanced packaging — say which), temporarily depressed earnings, narrative / sector-proxy premium, M&A speculation, or small-float distortion. **Cite evidence — start with the local zsxq broker note surfaced in Step 0.7** (the Street's own PT / valuation-basis line, labeled `*Analyst view:*` and cited to `/zsxq/pdf-viewer/<file_id>`), then earnings-call language, a peer that re-rated similarly, or sector ETF flows. This is the Section 2 zsxq citation the density bar calls for. Do not leave the multiple unexplained.
+  - **If P/E > 50× TTM (or > 2× sector median) or P/S > 15× (or > 3× sector median)** → name the cause: high-growth sector premium (AI infra, GLP-1, EV battery, advanced packaging — say which), temporarily depressed earnings, narrative / sector-proxy premium, M&A speculation, or small-float distortion. **Cite evidence — start with the local zsxq broker note surfaced in Step 0.7** (the Street's own PT / valuation-basis line, labeled `*Analyst view:*` and cited to `/zsxq/pdf/<file_id>/<filename>`), then earnings-call language, a peer that re-rated similarly, or sector ETF flows. This is the Section 2 zsxq citation the density bar calls for. Do not leave the multiple unexplained.
   - **If P/E < 8× or P/S is unusually low** → say whether it's a value trap, cyclical peak, governance concern, or genuine mispricing.
   - For private companies, substitute the latest funding-round post-money valuation and implied revenue multiple if disclosed; if not, state "private; no disclosed valuation."
 
@@ -140,7 +140,7 @@ A dedicated chapter, distinct from the Section 1 TTM snapshot (which is backward
 | Bear  | Price war compresses lidar GM to floor, de-rate to 12× | $11.5 | −43% |
 ```
 
-**(d) Consensus benchmark (when sourced material carries it).** State where the report's forward estimates sit vs the Street (above / below, by how much) — the UBS / Nomura "+16% vs Street" move. Source the consensus figure to the zsxq broker note (`*Analyst view:*`, `/zsxq/pdf-viewer/<file_id>`) or a dated public source; **never invent a consensus number.** When the company gives forward guidance, present this as a **Guide vs Consensus vs Own-estimate table** (the Bernstein Exhibit-1 format) — one row per guided metric:
+**(d) Consensus benchmark (when sourced material carries it).** State where the report's forward estimates sit vs the Street (above / below, by how much) — the UBS / Nomura "+16% vs Street" move. Source the consensus figure to the zsxq broker note (`*Analyst view:*`, `/zsxq/pdf/<file_id>/<filename>`) or a dated public source; **never invent a consensus number.** When the company gives forward guidance, present this as a **Guide vs Consensus vs Own-estimate table** (the Bernstein Exhibit-1 format) — one row per guided metric:
 
 ```
 | Metric (FY26E)   | Company guide | Consensus | This report (*Analyst view:*) |
@@ -310,13 +310,13 @@ The pattern (issuer's own table → verbatim quote → analyst-labeled pedagogic
 - 8–12 distinct risks across 4 buckets (see `risk_taxonomy.md`)
 - 50–100 words per risk: describe, quantify impact if possible, note mitigants
 - Cover all four categories
-- **Bear case from the local zsxq library.** Where the library has coverage (Step 0.7), ground at least one risk in the analyst's own framing — what the skeptics actually worry about (e.g. memory price cuts, China demand, ASIC encroachment) and the specific trigger — labeled `*Analyst view:*` and cited to `/zsxq/pdf-viewer/<file_id>`. This is the Section 9 zsxq citation the SKILL density bar calls for.
+- **Bear case from the local zsxq library.** Where the library has coverage (Step 0.7), ground at least one risk in the analyst's own framing — what the skeptics actually worry about (e.g. memory price cuts, China demand, ASIC encroachment) and the specific trigger — labeled `*Analyst view:*` and cited to `/zsxq/pdf/<file_id>/<filename>`. This is the Section 9 zsxq citation the SKILL density bar calls for.
 
 ### 9.5. Key debates & catalysts (300–600 words) — defend the thesis, then list the triggers
 
 Distinct from the Section 9 risk *inventory*: Section 9 catalogues the downside taxonomy; **9.5 defends the thesis against the specific arguments the bears make** (the Morgan Stanley 市场核心分歧 / Hesai three-debate pattern) and lists the dated forward triggers. See SKILL.md § "Learning from sell-side institutional research".
 
-- **Key debates (2–4).** For each: the bear's argument in one sentence, then the analyst's rebuttal with cited evidence. Format as `**Debate 1 — <one-line bear claim>.** *Analyst view:* <rebuttal + citation>.` Ground at least one in the local zsxq bear case where coverage exists (Step 0.7), labeled `*Analyst view:*` and cited to `/zsxq/pdf-viewer/<file_id>`.
+- **Key debates (2–4).** For each: the bear's argument in one sentence, then the analyst's rebuttal with cited evidence. Format as `**Debate 1 — <one-line bear claim>.** *Analyst view:* <rebuttal + citation>.` Ground at least one in the local zsxq bear case where coverage exists (Step 0.7), labeled `*Analyst view:*` and cited to `/zsxq/pdf/<file_id>/<filename>`.
 - **Catalyst calendar (next 12 months).** A dated list of forward triggers — earnings prints, product launches, trial readouts, capacity milestones, regulatory decisions, contract wins (the GS Hemab "Phase-3 start H2-26, FVIID data late-26" / Bernstein catalyst-calendar pattern). Each entry: `<approx date> — <event> — <why it moves the thesis>`. Point the reader to the `catalyst-calendar` skill for ongoing tracking.
 
 Keep the risk taxonomy itself in Section 9 — debates defend the thesis, the catalyst list is forward triggers, the risk inventory is the downside map. Do not duplicate; cross-reference where they touch.
@@ -352,7 +352,7 @@ A short structured manifest of what data this report stands on — separate from
 - Gartner CDW Magic Quadrant YYYY (published YYYY-MM-DD); Yole Wafer Equipment Forecast YYYY (published YYYY-MM-DD); IPnest Design IP YYYY (published YYYY-MM-DD); etc.
 
 **Institute research (local `db/zsxq.db`)**
-- Searched N aliases (ticker / English / 中文); used M broker notes (Morgan Stanley / Goldman / J.P. Morgan / Bernstein / …) dated YYYY-MM-DD to YYYY-MM-DD. file_ids: `<id>`, `<id>`, … Source: local zsxq library (`/zsxq/pdf-viewer/<file_id>`), labeled *Analyst view:* throughout. (Or: "no local coverage even after a `--query` top-up.")
+- Searched N aliases (ticker / English / 中文); used M broker notes (Morgan Stanley / Goldman / J.P. Morgan / Bernstein / …) dated YYYY-MM-DD to YYYY-MM-DD. file_ids: `<id>`, `<id>`, … Source: local zsxq library (`/zsxq/pdf/<file_id>/<filename>`), labeled *Analyst view:* throughout. (Or: "no local coverage even after a `--query` top-up.")
 
 **Macro / cycle inputs (Section 10 only)**
 - 10Y Treasury yield (`^TNX`) snapshot as of YYYY-MM-DD; HY OAS (FRED BAMLH0A0HYM2) snapshot as of YYYY-MM-DD; VIX snapshot as of YYYY-MM-DD. Source: `indicators.db` (FRED + yfinance).

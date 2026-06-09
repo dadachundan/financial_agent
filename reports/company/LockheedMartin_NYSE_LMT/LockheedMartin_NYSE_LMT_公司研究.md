@@ -267,7 +267,7 @@ MFC 是 2025 年最亮眼板块：营收 +14% 至 $14.5bn，经营利润从 2024
 
 LMT 四大板块在 **导弹防御 (missile defense)** 这一主线上形成完整闭环，这是理解为何 Golden Dome 对 LMT 是公司级（而非单一板块）催化剂的关键：Space 的 **Next-Gen OPIR / Transport & Tracking Layer** 卫星负责"探测"来袭威胁 → RMS 的 **Aegis / C2BMC** 负责"指挥控制与战斗管理" → MFC 的 **PAC-3 / THAAD** 与 Space 的 **NGI** 负责"分层拦截"。一套 kill chain（杀伤链）的探测、跟踪、指挥、拦截每一环 LMT 都能供货——这是单一新进入者（如 Anduril 偏软件、True Anomaly 偏小卫星）难以复制的全栈能力 ([LMT FY2025 10-K, Space / MFC / RMS Segments](https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm))。
 
-*分析师观点（Analyst view）：伯恩斯坦 2026 年战略决策会议纪要显示，LMT 近期签署了 PAC-3/THAAD/PrSM 框架合同（含"未达产补偿"条款），F-35 TR-3 硬件已完成、Block 4 软件推进中，C-130J 与 F-16 国际需求强劲，太空业务受 Golden Dome 带动；行业整体将战术导弹产能在 5–7 年内扩产 3–4 倍（[Bernstein — Global Aerospace & Defense: Twelve CEOs in three days, 2026-06-02, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812485114412812)）。*
+*分析师观点（Analyst view）：伯恩斯坦 2026 年战略决策会议纪要显示，LMT 近期签署了 PAC-3/THAAD/PrSM 框架合同（含"未达产补偿"条款），F-35 TR-3 硬件已完成、Block 4 软件推进中，C-130J 与 F-16 国际需求强劲，太空业务受 Golden Dome 带动；行业整体将战术导弹产能在 5–7 年内扩产 3–4 倍（[Bernstein — Global Aerospace & Defense: Twelve CEOs in three days, 2026-06-02, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812485114412812/Bernstein-Global%20Aerospace%20%26%20Defense%EF%BC%9AAerospace%20%26%20Defense%EF%BC%9A%20Twelve%20CEOs%20in%20three%20days~A%26D%20themes%20from%20Bernstein%27s%20Strategic%20Decisions%20Conference-260602.pdf)）。*
 
 ---
 
@@ -339,7 +339,7 @@ LMT 所处行业为 **Aerospace & Defense（航空航天与国防）**，核心�
 
 **结构性趋势二：军用太空与商业太空大爆发。** 据 WEF/McKinsey 2024 年研究，全球太空经济 (space economy) 将从 2023 年的 $6,300 亿美元增至 **2035 年的 $1.8 万亿美元**，约 9% 年复合增速，远超全球 GDP 增速，规模将堪比全球半导体产业 ([World Economic Forum, 2024-04](https://www.weforum.org/press/2024/04/space-economy-set-to-triple-to-1-8-trillion-by-2035-new-research-reveals/); [McKinsey, 2024](https://www.mckinsey.com/industries/aerospace-and-defense/our-insights/space-the-1-point-8-trillion-dollar-opportunity-for-global-economic-growth))。FY2026 美国太空军 (Space Force) 获拨约 $260 亿美元，其中相当部分用于支持 Golden Dome 的导弹预警卫星 ([SpaceNews, 2026](https://spacenews.com/defense-appropriations-bill-for-2026-funds-space-force-at-26-billion-presses-pentagon-on-golden-dome/))。
 
-*分析师观点（Analyst view）：巴克莱 2026 年全球基金经理纪要指出，在半导体板块回调过程中，航空航天与防御类板块成为资金避险选择；亚洲信用市场主线之一是"各国供应链自主、国防开支提升"（[Barclays — Global Portfolio Manager's Digest, 2026-06-07, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/584251188582254)）。*
+*分析师观点（Analyst view）：巴克莱 2026 年全球基金经理纪要指出，在半导体板块回调过程中，航空航天与防御类板块成为资金避险选择；亚洲信用市场主线之一是"各国供应链自主、国防开支提升"（[Barclays — Global Portfolio Manager's Digest, 2026-06-07, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/584251188582254/Barclays-Global%20Portfolio%20Manager%27s%20Digest%EF%BC%9AInflections%20Everywhere-260607.pdf)）。*
 
 ---
 
@@ -382,7 +382,7 @@ quadrantChart
 ```
 *分析师视角定位图，非 filing 数据。Source: [LMT FY2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm) + 分析师判断*
 
-**新进入者的威胁不可忽视。** *分析师观点（Analyst view）：* 高盛 Anduril 深度纪要指出，Anduril 的 Lattice 开放作战系统已被美军 JIATF-401 选为企业级战术指控平台，并参与 $1,850 亿美元 Golden Dome 计划，与 Palantir、传统军工合作；其"硬件+软件订阅"模式毛利率显著高于传统军工，对 LMT 等传统 prime 在软件/自主层构成长期挑战（[Goldman Sachs — A deep dive into Anduril's Lattice software, 2026-05-11, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415245828888188)）。不过传统 prime 通过 Lattice 集成获益、聚焦传感器与武器利润，LMT 的全栈 kill chain 能力短期内难以被单一新锐替代。
+**新进入者的威胁不可忽视。** *分析师观点（Analyst view）：* 高盛 Anduril 深度纪要指出，Anduril 的 Lattice 开放作战系统已被美军 JIATF-401 选为企业级战术指控平台，并参与 $1,850 亿美元 Golden Dome 计划，与 Palantir、传统军工合作；其"硬件+软件订阅"模式毛利率显著高于传统军工，对 LMT 等传统 prime 在软件/自主层构成长期挑战（[Goldman Sachs — A deep dive into Anduril's Lattice software, 2026-05-11, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/415245828888188/Goldman%20Sachs-AMERICAS%EF%BC%9A%20SOFTWARE%20AEROSPACE%20%26%20DEFENSE%EF%BC%9AA%20deep%20dive%20into%20Anduril%E2%80%99s%20Lattice%20software%20post%20leadership%20meetings-260511.pdf)）。不过传统 prime 通过 Lattice 集成获益、聚焦传感器与武器利润，LMT 的全栈 kill chain 能力短期内难以被单一新锐替代。
 
 ---
 
@@ -440,7 +440,7 @@ xychart-beta
 **核心分歧（bears vs 论点）：**
 - *Bear：F-35 已见顶，下一代平台将蚕食。* 反驳：F-35 sustainment（数十年保障收入）锁定 + 2,456 架采购目标 + 国际 72 架增购意向，量与保障双轮 ([LMT FY2025 10-K, Aeronautics](https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm))。
 - *Bear：固定价亏损会反复，盈利不可信。* 反驳：2025 大额亏损多为一次性 classified 项目，2026 指引 EPS $29.35–30.25 已反映正常化；MFC 利润率已从 2024 谷底（$413M）反弹至 $1,989M ([LMT Q1 2026 8-K, 2026 Outlook](https://www.sec.gov/Archives/edgar/data/936468/000162828026026683/ex991q12026.htm))。
-- *Bear：Anduril/SpaceX 等新锐将颠覆。* 反驳：传统 prime 在硬件拦截器、舰载导弹、载人飞船等"硬"系统仍不可替代；新锐偏软件/自主层，与 LMT 互补多于替代 ([Goldman Sachs — Anduril Lattice deep dive, 2026-05-11, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415245828888188))。
+- *Bear：Anduril/SpaceX 等新锐将颠覆。* 反驳：传统 prime 在硬件拦截器、舰载导弹、载人飞船等"硬"系统仍不可替代；新锐偏软件/自主层，与 LMT 互补多于替代 ([Goldman Sachs — Anduril Lattice deep dive, 2026-05-11, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/415245828888188/Goldman%20Sachs-AMERICAS%EF%BC%9A%20SOFTWARE%20AEROSPACE%20%26%20DEFENSE%EF%BC%9AA%20deep%20dive%20into%20Anduril%E2%80%99s%20Lattice%20software%20post%20leadership%20meetings-260511.pdf))。
 
 **未来 12 个月催化剂（dated）：**
 - 各季度 reach-forward losses 是否再现（每季 10-Q）；
@@ -523,9 +523,9 @@ xychart-beta
 - [James Taiclet — Wikipedia](https://en.wikipedia.org/wiki/James_Taiclet)
 
 **本地券商研究 (db/zsxq.db，sell-side，均为 `*分析师观点：*`)：**
-- [Bernstein — Global Aerospace & Defense: Twelve CEOs in three days, 2026-06-02](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812485114412812)
-- [Goldman Sachs — A deep dive into Anduril's Lattice software, 2026-05-11](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415245828888188)
-- [Barclays — Global Portfolio Manager's Digest: Inflections Everywhere, 2026-06-07](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/584251188582254)
+- [Bernstein — Global Aerospace & Defense: Twelve CEOs in three days, 2026-06-02](http://xs-macbook-air.local:5001/zsxq/pdf/812485114412812/Bernstein-Global%20Aerospace%20%26%20Defense%EF%BC%9AAerospace%20%26%20Defense%EF%BC%9A%20Twelve%20CEOs%20in%20three%20days~A%26D%20themes%20from%20Bernstein%27s%20Strategic%20Decisions%20Conference-260602.pdf)
+- [Goldman Sachs — A deep dive into Anduril's Lattice software, 2026-05-11](http://xs-macbook-air.local:5001/zsxq/pdf/415245828888188/Goldman%20Sachs-AMERICAS%EF%BC%9A%20SOFTWARE%20AEROSPACE%20%26%20DEFENSE%EF%BC%9AA%20deep%20dive%20into%20Anduril%E2%80%99s%20Lattice%20software%20post%20leadership%20meetings-260511.pdf)
+- [Barclays — Global Portfolio Manager's Digest: Inflections Everywhere, 2026-06-07](http://xs-macbook-air.local:5001/zsxq/pdf/584251188582254/Barclays-Global%20Portfolio%20Manager%27s%20Digest%EF%BC%9AInflections%20Everywhere-260607.pdf)
 
 **数据使用清单 (Data Used manifest)：**
 - LMT FY2025 10-K（营收、四大板块财务、F-35 27%、客户 72%/28%、backlog $193.6bn、FCF $6.9bn、reach-forward losses、Taiclet 任命、1995 合并、竞争对手清单、各板块产品 verbatim 描述）
@@ -560,7 +560,7 @@ xychart-beta
 
 **Analyst-view sentences**（刻意标注 `*分析师观点：*`，未挂 filing 引用）：
 - 第 8.2 节份额/领导地位判断、quadrant 定位图 — 分析师视角。
-- Bernstein / Goldman / Barclays zsxq 笔记 — 均 `*分析师观点：*`，路由 `/zsxq/pdf-viewer/`，数字字符串匹配 summary。
+- Bernstein / Goldman / Barclays zsxq 笔记 — 均 `*分析师观点：*`，路由 `/zsxq/pdf/`，数字字符串匹配 summary。
 - 价格目标 $595 / bull $665 / bear $428、forward 预测表 — 均 `*分析师观点（Analyst view）：*`，未挂 filing。
 
 **Institute research (`db/zsxq.db`)** — 搜索 13+ 别名（LMT / Lockheed / 洛克希德 / defense / 国防 / 军工 / F-35 / missile defense / Golden Dome / 金穹 / 航空航天等）。LMT 单名覆盖稀薄（库内无 LMT 专属深度报告），但找到 3 篇直接相关的 sell-side 宏观/行业笔记并引用：Bernstein A&D（file_id 812485114412812，含 LMT PAC-3/THAAD/F-35 TR-3 直接 callout）、Goldman Anduril/Golden Dome（415245828888188，确认 $185bn/$1850 亿 Golden Dome）、Barclays 宏观（584251188582254，航空航天避险）。未额外 fetch（已足够；LMT 是美国大盘但 zsxq 库以中国/亚洲及全球宏观为主）。

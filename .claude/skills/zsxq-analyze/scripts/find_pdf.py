@@ -9,7 +9,14 @@ Usage:
 Output: JSON {count, rows:[{file_id, name, topic_title, summary,
 local_path, file_size, page_count, create_time, tickers, tags, comment,
 ai_robotics_analysis, categories_analysis, bank, group_id, claude_rating,
-user_rating}, ...]}.
+user_rating, local_exists, pdf_path, pdf_url}, ...]}.
+
+`pdf_url` is the ready-to-paste citation URL — the DIRECT-DOWNLOAD route
+`http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<urlencoded-name>`,
+which serves raw application/pdf so it opens/downloads natively on iPad.
+Paste it verbatim into report citations; never hand-build the
+`/zsxq/pdf-viewer/<file_id>` PDF.js-page URL (it renders HTML, does not
+download on iPad). Append `#page=<N>` if you want a page anchor.
 
 The query mode does a case-insensitive substring match on `name` and
 `topic_title` (and falls back to `summary` / `tags` / `comment`). Rows are
@@ -22,9 +29,13 @@ import json
 import sqlite3
 import sys
 from pathlib import Path
+from urllib.parse import quote
 
 PROJECT_ROOT = Path("/Users/x/projects/financial_agent")
 DB_PATH      = PROJECT_ROOT / "db" / "zsxq.db"
+
+# Host serving the local zsxq viewer (see CLAUDE.md / memory).
+ZSXQ_HOST = "http://xs-macbook-air.local:5001"
 
 # Columns we surface to Claude. Order matters: most discriminating first.
 COLUMNS = [
@@ -101,6 +112,17 @@ def main() -> None:
     for r in rows:
         p = r.get("local_path")
         r["local_exists"] = bool(p) and Path(p).exists() if p else False
+        # Ready-to-paste citation URL: the DIRECT-DOWNLOAD route
+        # (/zsxq/pdf/<file_id>/<urlencoded-name>) serves raw application/pdf,
+        # so tapping it on iPad opens/downloads the PDF natively. Do NOT use
+        # the /zsxq/pdf-viewer/<file_id> PDF.js page — it renders HTML and
+        # does not trigger a download on iPad. The filename is cosmetic
+        # (lookup is by file_id) but makes the link end in `.pdf`.
+        fid, name = r.get("file_id"), r.get("name")
+        if fid is not None:
+            seg = f"/{quote(str(name), safe='')}" if name else ""
+            r["pdf_path"] = f"/zsxq/pdf/{fid}{seg}"
+            r["pdf_url"] = f"{ZSXQ_HOST}/zsxq/pdf/{fid}{seg}"
 
     out = {"count": len(rows), "rows": rows}
     json.dump(out, sys.stdout, indent=2, ensure_ascii=False, default=str)

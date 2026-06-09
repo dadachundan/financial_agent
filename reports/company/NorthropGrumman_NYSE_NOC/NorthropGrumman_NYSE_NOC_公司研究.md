@@ -105,7 +105,7 @@ xychart-beta
 
 Source: [yfinance, 2026-06-08](https://finance.yahoo.com/quote/NOC/)。
 
-NOC 处于同业中段——比 LMT、GD 略高，但显著低于 RTX、LHX，更远低于因 737 MAX/777X 拖累而 EPS 受抑的 Boeing。在防御类资产中，NOC 的 P/S ~1.81× 处于合理区间，反映其 ~11% 的 segment operating margin 与稳定的政府客户基础。**值得注意的是，NOC 当前股价 $540.81 距 52 周高点 $774 有约 30% 回撤**——市场对 Sentinel 重组的不确定性、B-21 固定价批次的执行风险、以及 FY26/FY27 预算与持续决议 (continuing resolution / CR) 的扰动给予了折价。*分析师观点 (Analyst view)：* 大摩在其国防深度报告中测算，美国国防巨头当前在 NTM P/FCF 口径下相对 S&P 500 仍有约 **16% 折价**，未充分反映预算上行与结构性重估潜力（[Morgan Stanley — Defense: Dollars, Disruptors, and De(Consolidation), 2026-03-06, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/184442822484282)）。
+NOC 处于同业中段——比 LMT、GD 略高，但显著低于 RTX、LHX，更远低于因 737 MAX/777X 拖累而 EPS 受抑的 Boeing。在防御类资产中，NOC 的 P/S ~1.81× 处于合理区间，反映其 ~11% 的 segment operating margin 与稳定的政府客户基础。**值得注意的是，NOC 当前股价 $540.81 距 52 周高点 $774 有约 30% 回撤**——市场对 Sentinel 重组的不确定性、B-21 固定价批次的执行风险、以及 FY26/FY27 预算与持续决议 (continuing resolution / CR) 的扰动给予了折价。*分析师观点 (Analyst view)：* 大摩在其国防深度报告中测算，美国国防巨头当前在 NTM P/FCF 口径下相对 S&P 500 仍有约 **16% 折价**，未充分反映预算上行与结构性重估潜力（[Morgan Stanley — Defense: Dollars, Disruptors, and De(Consolidation), 2026-03-06, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184442822484282/Morgan%20Stanley-Defense%EF%BC%9ADollars%EF%BC%8C%20Disruptors%EF%BC%8C%20and%20De%EF%BC%88Consolidation%EF%BC%89%EF%BC%9B%20Identifying%20Investment%20Opportunities-260306.pdf)）。
 
 ### 2b. 前瞻估值、目标价与情景
 
@@ -139,7 +139,7 @@ NOC 处于同业中段——比 LMT、GD 略高，但显著低于 RTX、LHX，�
 | **Base** | Sentinel 平稳重组、B-21 量产无新增重大亏损、预算温和上行 | ~$30 | 21.7× | **$650** | **+20%** |
 | **Bear** | Sentinel/B-21 再现重大成本超支 + CR 拖延 + 行政令限制回购/分红 | ~$27 | 16× | **$432** | **−20%** |
 
-*分析师观点 (Analyst view)：* 大摩在其国防报告中，为反映 $1.5trn FY27 预算情景，将国防巨头 bull-case 目标价平均上调约 **61%**，其中 **NOC 上调 62%**，使 bull-bear 区间扩大到约 4 倍（此前约 1.5 倍），并给予 NOC **Overweight** 评级（[Morgan Stanley — Defense, 2026-03-06, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/184442822484282)）。
+*分析师观点 (Analyst view)：* 大摩在其国防报告中，为反映 $1.5trn FY27 预算情景，将国防巨头 bull-case 目标价平均上调约 **61%**，其中 **NOC 上调 62%**，使 bull-bear 区间扩大到约 4 倍（此前约 1.5 倍），并给予 NOC **Overweight** 评级（[Morgan Stanley — Defense, 2026-03-06, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184442822484282/Morgan%20Stanley-Defense%EF%BC%9ADollars%EF%BC%8C%20Disruptors%EF%BC%8C%20and%20De%EF%BC%88Consolidation%EF%BC%89%EF%BC%9B%20Identifying%20Investment%20Opportunities-260306.pdf)）。
 
 **与共识对比 (consensus benchmark)：** 本报告 base case 目标价 $650 低于卖方共识平均目标价 **$696.95**（21 位分析师，区间 $603–$815，评级共识 *Buy*）（[yfinance analyst estimates, 2026-06-08](https://finance.yahoo.com/quote/NOC/)）——本报告相对共识偏保守约 7%，因我们对 Sentinel P&D 阶段定价与 B-21 固定价批次给予更高风险权重（[yfinance NOC analyst estimates, 2026-06-08](https://finance.yahoo.com/quote/NOC/)）。
 
@@ -237,7 +237,7 @@ Source: [NOC FY2025 10-K, Product and Service Analysis](https://www.sec.gov/Arch
 
 （[以上项目均来自 NOC FY2025 10-K, Item 1 — Space Systems Key Programs](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)）
 
-**为什么 Space Systems 是 NOC 锚定太空主题的根本：** 该段 25.7% 的收入占比已是美国大型主承包商中太空敞口最高者；更重要的是，其产品组合横跨"探测/跟踪（SDA 跟踪层、Next-Gen OPIR）→ 拦截（GPI、GMD 拦截器）→ 推进（GEM 助推器、SRM）→ 在轨服务（Cygnus、HALO）"完整链条，恰好覆盖 Golden Dome 导弹防御计划的天基与陆基全栈。*分析师观点 (Analyst view)：* 大摩"Space 60"产业链梳理将 NOC 列为"航天器与发射系统 (Spacecraft & Launch Systems)"类别的代表公司之一（与 Boeing、Lockheed Martin、Rocket Lab、Firefly 并列），认为太空经济正以"大规模"方式回归（[Morgan Stanley — The Space 60: Picks & Shovels for the Final Frontier, 2026-04-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415521254142458)）。
+**为什么 Space Systems 是 NOC 锚定太空主题的根本：** 该段 25.7% 的收入占比已是美国大型主承包商中太空敞口最高者；更重要的是，其产品组合横跨"探测/跟踪（SDA 跟踪层、Next-Gen OPIR）→ 拦截（GPI、GMD 拦截器）→ 推进（GEM 助推器、SRM）→ 在轨服务（Cygnus、HALO）"完整链条，恰好覆盖 Golden Dome 导弹防御计划的天基与陆基全栈。*分析师观点 (Analyst view)：* 大摩"Space 60"产业链梳理将 NOC 列为"航天器与发射系统 (Spacecraft & Launch Systems)"类别的代表公司之一（与 Boeing、Lockheed Martin、Rocket Lab、Firefly 并列），认为太空经济正以"大规模"方式回归（[Morgan Stanley — The Space 60: Picks & Shovels for the Final Frontier, 2026-04-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/415521254142458/Morgan%20Stanley-Space%20-%20North%20America%EF%BC%9AThe%20Space%2060%EF%BC%9A%20Picks%20%26%20Shovels%20for%20the%20Final%20Frontier-260412.pdf)）。
 
 ### 5.2 Defense Systems（防务系统）— Sentinel 的归属段
 
@@ -363,7 +363,7 @@ NOC 所处行业为**航空航天与国防 (Aerospace & Defense, A&D)**，其需
 
 **核三位一体现代化是 NOC 独有的结构性顺风。** Sentinel（陆基腿）由 NOC 独家承包，B-21（空基腿的轰炸机）亦由 NOC 独家承包，MS 段还为 Columbia 级（海基腿）提供发电推进系统——NOC 在核三位一体三条腿上均有不可替代的份额。这是一个长达数十年、几乎不受经济周期影响的现代化超级周期。
 
-*分析师观点 (Analyst view)：* 伯恩斯坦在其战略决策会议纪要中总结：FY2027 国防基数预算预期上调至约 **$1.15trn**，导弹、导弹防御、太空为最高优先级；战术导弹与固体火箭发动机 (SRM) 需求计划在 5–7 年内扩产 3–4 倍，而微电子与铸件 (castings) 仍是瓶颈——NOC 在 SRM 产能与 B-21 加速建造上均被点名（[Bernstein — Global Aerospace & Defense: Twelve CEOs in three days, 2026-06-02, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812485114412812)）。*分析师观点 (Analyst view)：* 大摩进一步指出，按购买力平价，2023 年以来俄、中、伊朗的国防总支出已超过美国，这增加了美国预算的持续上行压力（[Morgan Stanley — Defense, 2026-03-06, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/184442822484282)）。
+*分析师观点 (Analyst view)：* 伯恩斯坦在其战略决策会议纪要中总结：FY2027 国防基数预算预期上调至约 **$1.15trn**，导弹、导弹防御、太空为最高优先级；战术导弹与固体火箭发动机 (SRM) 需求计划在 5–7 年内扩产 3–4 倍，而微电子与铸件 (castings) 仍是瓶颈——NOC 在 SRM 产能与 B-21 加速建造上均被点名（[Bernstein — Global Aerospace & Defense: Twelve CEOs in three days, 2026-06-02, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812485114412812/Bernstein-Global%20Aerospace%20%26%20Defense%EF%BC%9AAerospace%20%26%20Defense%EF%BC%9A%20Twelve%20CEOs%20in%20three%20days~A%26D%20themes%20from%20Bernstein%27s%20Strategic%20Decisions%20Conference-260602.pdf)）。*分析师观点 (Analyst view)：* 大摩进一步指出，按购买力平价，2023 年以来俄、中、伊朗的国防总支出已超过美国，这增加了美国预算的持续上行压力（[Morgan Stanley — Defense, 2026-03-06, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184442822484282/Morgan%20Stanley-Defense%EF%BC%9ADollars%EF%BC%8C%20Disruptors%EF%BC%8C%20and%20De%EF%BC%88Consolidation%EF%BC%89%EF%BC%9B%20Identifying%20Investment%20Opportunities-260306.pdf)）。
 
 **行业结构：** A&D 主承包商市场高度集中（五大主承包商：NOC、LMT、RTX、GD、Boeing），进入壁垒极高——安全审查、机密项目准入 (restricted programs)、数十年技术积累、FAR/CAS 成本会计合规、以及客户（美国政府）的单一性，共同构成近乎不可逾越的护城河。10-K 描述行业特征为"long operating cycles and intense competition"，且"It is common in the defense industry for work on major programs to be shared among a number of companies"——大型项目常由多家公司分担，主承包商与分包商角色可互换（[NOC FY2025 10-K, Item 1 — Competitive Conditions](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)）。
 
@@ -384,7 +384,7 @@ NOC 所处行业为**航空航天与国防 (Aerospace & Defense, A&D)**，其需
 
 以下为本报告对各主承包商相对定位的分析框架——**份额领导/独家地位的具体判断属分析师观点，不引用 10-K**：
 
-*分析师观点 (Analyst view)：* NOC 的核心护城河在于若干项目级的**独家或近乎独家地位**：① **Sentinel (GBSD) ICBM**——美国陆基核威慑现代化的唯一主承包商；② **B-21 Raider**——唯一的隐身战略轰炸机承包商；③ **太空段约 45% 受限项目**——四段中最高，意味着大量机密能力不可被竞争对手复制；④ **固体火箭发动机 (SRM)**——经 Orbital ATK 收购后，NOC 与 L3Harris（Aerojet Rocketdyne）共同主导美国战术与战略 SRM 供应。这些独家地位是典型的"质量复利"护城河。*分析师观点 (Analyst view)：* 伯恩斯坦指出 L3Harris 与 NOC 正在推进 SRM 扩产以应对 3–4 倍需求增长（[Bernstein — Global A&D, 2026-06-02, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812485114412812)）。
+*分析师观点 (Analyst view)：* NOC 的核心护城河在于若干项目级的**独家或近乎独家地位**：① **Sentinel (GBSD) ICBM**——美国陆基核威慑现代化的唯一主承包商；② **B-21 Raider**——唯一的隐身战略轰炸机承包商；③ **太空段约 45% 受限项目**——四段中最高，意味着大量机密能力不可被竞争对手复制；④ **固体火箭发动机 (SRM)**——经 Orbital ATK 收购后，NOC 与 L3Harris（Aerojet Rocketdyne）共同主导美国战术与战略 SRM 供应。这些独家地位是典型的"质量复利"护城河。*分析师观点 (Analyst view)：* 伯恩斯坦指出 L3Harris 与 NOC 正在推进 SRM 扩产以应对 3–4 倍需求增长（[Bernstein — Global A&D, 2026-06-02, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812485114412812/Bernstein-Global%20Aerospace%20%26%20Defense%EF%BC%9AAerospace%20%26%20Defense%EF%BC%9A%20Twelve%20CEOs%20in%20three%20days~A%26D%20themes%20from%20Bernstein%27s%20Strategic%20Decisions%20Conference-260602.pdf)）。
 
 ```mermaid
 quadrantChart
@@ -407,7 +407,7 @@ Source: 定位为本报告分析框架（*分析师观点*），基于各公司�
 
 ### 8.3 新进入者的颠覆
 
-*分析师观点 (Analyst view)：* 软件优先的新进入者（Anduril、SpaceX、Palantir 等）正在改变行业。大摩认为"颠覆是技术赋能，而非行业取代"——在预算扩张环境下，传统巨头与新进入者均有增长机会（[Morgan Stanley — Defense, 2026-03-06, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/184442822484282)）。高盛对 Anduril 的 Lattice 软件深度分析显示，Anduril 已参与 $185bn 的 Golden Dome 项目，与 Palantir、传统军工合作，Lattice 作为战术互联骨干——而**传统军工（含 NOC）通过 Lattice 集成获益，聚焦传感器与武器利润**（[Goldman Sachs — Anduril's Lattice software deep dive, 2026-05-11, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415245828888188)）。这意味着新进入者对 NOC 既是竞争（在 C2/软件层）也是合作（在硬件/拦截器/推进层）——NOC 的硬件护城河（SRM、隐身平台、卫星）短期内难以被软件公司替代。
+*分析师观点 (Analyst view)：* 软件优先的新进入者（Anduril、SpaceX、Palantir 等）正在改变行业。大摩认为"颠覆是技术赋能，而非行业取代"——在预算扩张环境下，传统巨头与新进入者均有增长机会（[Morgan Stanley — Defense, 2026-03-06, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184442822484282/Morgan%20Stanley-Defense%EF%BC%9ADollars%EF%BC%8C%20Disruptors%EF%BC%8C%20and%20De%EF%BC%88Consolidation%EF%BC%89%EF%BC%9B%20Identifying%20Investment%20Opportunities-260306.pdf)）。高盛对 Anduril 的 Lattice 软件深度分析显示，Anduril 已参与 $185bn 的 Golden Dome 项目，与 Palantir、传统军工合作，Lattice 作为战术互联骨干——而**传统军工（含 NOC）通过 Lattice 集成获益，聚焦传感器与武器利润**（[Goldman Sachs — Anduril's Lattice software deep dive, 2026-05-11, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/415245828888188/Goldman%20Sachs-AMERICAS%EF%BC%9A%20SOFTWARE%20AEROSPACE%20%26%20DEFENSE%EF%BC%9AA%20deep%20dive%20into%20Anduril%E2%80%99s%20Lattice%20software%20post%20leadership%20meetings-260511.pdf)）。这意味着新进入者对 NOC 既是竞争（在 C2/软件层）也是合作（在硬件/拦截器/推进层）——NOC 的硬件护城河（SRM、隐身平台、卫星）短期内难以被软件公司替代。
 
 ---
 
@@ -455,13 +455,13 @@ Source: [World Economic Forum / McKinsey, 2024-04](https://www.weforum.org/press
 
 6. **美国国防预算 / 持续决议 (CR) 风险。** 预算延迟、CR、政府关门均可能扰乱拨款与项目时点。10-K 列举了预算水平、政府优先级、政治领导层变化对现有/后续/未来项目的潜在不利影响（[NOC FY2025 10-K, Risk Factors](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)）。
 
-7. **新进入者颠覆（C2/软件层）。** Anduril、SpaceX、Palantir 等软件优先公司在战场管理、自主系统、发射成本上构成竞争（[Goldman Sachs — Anduril Lattice, 2026-05-11, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415245828888188)）。*分析师观点*——大摩认为颠覆主要是技术赋能而非取代，传统巨头仍有增长机会（[Morgan Stanley — Defense, 2026-03-06, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/184442822484282)）。
+7. **新进入者颠覆（C2/软件层）。** Anduril、SpaceX、Palantir 等软件优先公司在战场管理、自主系统、发射成本上构成竞争（[Goldman Sachs — Anduril Lattice, 2026-05-11, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/415245828888188/Goldman%20Sachs-AMERICAS%EF%BC%9A%20SOFTWARE%20AEROSPACE%20%26%20DEFENSE%EF%BC%9AA%20deep%20dive%20into%20Anduril%E2%80%99s%20Lattice%20software%20post%20leadership%20meetings-260511.pdf)）。*分析师观点*——大摩认为颠覆主要是技术赋能而非取代，传统巨头仍有增长机会（[Morgan Stanley — Defense, 2026-03-06, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184442822484282/Morgan%20Stanley-Defense%EF%BC%9ADollars%EF%BC%8C%20Disruptors%EF%BC%8C%20and%20De%EF%BC%88Consolidation%EF%BC%89%EF%BC%9B%20Identifying%20Investment%20Opportunities-260306.pdf)）。
 
 8. **行政令限制回购/分红。** 10-K 披露：近期一项适用于国防承包商的行政令 (executive order) 旨在解决业绩不佳、对政府合同优先级不足、生产投资/速度不足等问题，并**寻求限制国防承包商的股份回购与分红**；若公司被判定触发相关情形，可能在一段时间内被禁止回购或分红（[NOC FY2025 10-K, Risk Factors — Government contract terms](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)）。这直接威胁本报告的"现金回报"论点支柱。
 
 **【财务】**
 
-9. **供应链 / 原材料与微电子短缺。** 10-K 披露公司在获取某些原材料上遇到挑战（通胀、地缘冲突、微电子短缺），显著增加成本与交付周期；伯恩斯坦亦点名微电子与铸件是 SRM 扩产瓶颈（[NOC FY2025 10-K, Item 1 — Raw Materials](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)；[Bernstein — Global A&D, 2026-06-02, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812485114412812)）。
+9. **供应链 / 原材料与微电子短缺。** 10-K 披露公司在获取某些原材料上遇到挑战（通胀、地缘冲突、微电子短缺），显著增加成本与交付周期；伯恩斯坦亦点名微电子与铸件是 SRM 扩产瓶颈（[NOC FY2025 10-K, Item 1 — Raw Materials](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)；[Bernstein — Global A&D, 2026-06-02, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812485114412812/Bernstein-Global%20Aerospace%20%26%20Defense%EF%BC%9AAerospace%20%26%20Defense%EF%BC%9A%20Twelve%20CEOs%20in%20three%20days~A%26D%20themes%20from%20Bernstein%27s%20Strategic%20Decisions%20Conference-260602.pdf)）。
 
 10. **通胀对固定价合同的侵蚀。** 部分固定价合同含 EPA 条款抗通胀，但 10-K 警告 EPA 可能无法完全抵消通胀的不利影响（[NOC FY2025 10-K, Risk Factors — Inflation](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)）。
 
@@ -483,7 +483,7 @@ Source: [World Economic Forum / McKinsey, 2024-04](https://www.weforum.org/press
 
 **未来 12 个月的 dated catalysts：**
 
-- **2026 年底：Sentinel 预计取得 Milestone B 批准**（[War.gov — FY2027 Budget, 2026-04-21](https://www.war.gov/News/News-Stories/Article/Article/4474675/war-departments-15-trillion-budget-proposal-includes-sizable-nuclear-triad-inve/)）；*分析师观点*——伯恩斯坦称 Sentinel 导弹 2027 年试飞（[Bernstein, 2026-06-02, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812485114412812)）。
+- **2026 年底：Sentinel 预计取得 Milestone B 批准**（[War.gov — FY2027 Budget, 2026-04-21](https://www.war.gov/News/News-Stories/Article/Article/4474675/war-departments-15-trillion-budget-proposal-includes-sizable-nuclear-triad-inve/)）；*分析师观点*——伯恩斯坦称 Sentinel 导弹 2027 年试飞（[Bernstein, 2026-06-02, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812485114412812/Bernstein-Global%20Aerospace%20%26%20Defense%EF%BC%9AAerospace%20%26%20Defense%EF%BC%9A%20Twelve%20CEOs%20in%20three%20days~A%26D%20themes%20from%20Bernstein%27s%20Strategic%20Decisions%20Conference-260602.pdf)）。
 - **Golden Dome 天基拦截器后续拨款与合同授予**（FY2026 已新增 $13.4bn；12 家公司 $3.2bn 合同已启动）。
 - **FY2027 国防预算的国会立法进程**（$1.5trn 请求 vs 实际拨款）。
 - **季度 B-21 LRIP / Sentinel EAC 复核**（每季 10-Q）。建议用 catalyst-calendar 技能持续跟踪。
@@ -545,12 +545,12 @@ Source: [World Economic Forum / McKinsey, 2024-04](https://www.weforum.org/press
 - [World Economic Forum — Space economy to $1.8 trillion by 2035, 2024-04](https://www.weforum.org/press/2024/04/space-economy-set-to-triple-to-1-8-trillion-by-2035-new-research-reveals/)
 - [McKinsey — Space: The $1.8 trillion opportunity, 2024-04](https://www.mckinsey.com/industries/aerospace-and-defense/our-insights/space-the-1-point-8-trillion-dollar-opportunity-for-global-economic-growth)
 
-**本地券商研究库 (`db/zsxq.db`) — 均为 *分析师观点*，路由至 `/zsxq/pdf-viewer/`：**
+**本地券商研究库 (`db/zsxq.db`) — 均为 *分析师观点*，路由至 `/zsxq/pdf/`：**
 
-- *分析师观点：* [Morgan Stanley — Defense: Dollars, Disruptors, and De(Consolidation), 2026-03-06](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/184442822484282)（NOC Overweight；bull-case +62%；16% NTM P/FCF 折价）
-- *分析师观点：* [Bernstein — Global Aerospace & Defense: Twelve CEOs in three days, 2026-06-02](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812485114412812)（B-21 加速、Sentinel 2027 试飞、SRM 扩产、Golden Dome 带动太空）
-- *分析师观点：* [Morgan Stanley — The Space 60: Picks & Shovels for the Final Frontier, 2026-04-12](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415521254142458)（NOC 列为航天器与发射系统代表）
-- *分析师观点：* [Goldman Sachs — Anduril's Lattice software deep dive, 2026-05-11](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415245828888188)（Golden Dome $185bn；传统军工通过 Lattice 集成获益）
+- *分析师观点：* [Morgan Stanley — Defense: Dollars, Disruptors, and De(Consolidation), 2026-03-06](http://xs-macbook-air.local:5001/zsxq/pdf/184442822484282/Morgan%20Stanley-Defense%EF%BC%9ADollars%EF%BC%8C%20Disruptors%EF%BC%8C%20and%20De%EF%BC%88Consolidation%EF%BC%89%EF%BC%9B%20Identifying%20Investment%20Opportunities-260306.pdf)（NOC Overweight；bull-case +62%；16% NTM P/FCF 折价）
+- *分析师观点：* [Bernstein — Global Aerospace & Defense: Twelve CEOs in three days, 2026-06-02](http://xs-macbook-air.local:5001/zsxq/pdf/812485114412812/Bernstein-Global%20Aerospace%20%26%20Defense%EF%BC%9AAerospace%20%26%20Defense%EF%BC%9A%20Twelve%20CEOs%20in%20three%20days~A%26D%20themes%20from%20Bernstein%27s%20Strategic%20Decisions%20Conference-260602.pdf)（B-21 加速、Sentinel 2027 试飞、SRM 扩产、Golden Dome 带动太空）
+- *分析师观点：* [Morgan Stanley — The Space 60: Picks & Shovels for the Final Frontier, 2026-04-12](http://xs-macbook-air.local:5001/zsxq/pdf/415521254142458/Morgan%20Stanley-Space%20-%20North%20America%EF%BC%9AThe%20Space%2060%EF%BC%9A%20Picks%20%26%20Shovels%20for%20the%20Final%20Frontier-260412.pdf)（NOC 列为航天器与发射系统代表）
+- *分析师观点：* [Goldman Sachs — Anduril's Lattice software deep dive, 2026-05-11](http://xs-macbook-air.local:5001/zsxq/pdf/415245828888188/Goldman%20Sachs-AMERICAS%EF%BC%9A%20SOFTWARE%20AEROSPACE%20%26%20DEFENSE%EF%BC%9AA%20deep%20dive%20into%20Anduril%E2%80%99s%20Lattice%20software%20post%20leadership%20meetings-260511.pdf)（Golden Dome $185bn；传统军工通过 Lattice 集成获益）
 
 ---
 
@@ -601,7 +601,7 @@ Source: [World Economic Forum / McKinsey, 2024-04](https://www.weforum.org/press
 
 **执行管理层确认：** Kathy J. Warden — "Chair, Chief Executive Officer and President"，CEO/President since Jan 2019、Chair since Aug 2019 ✓ 经 2026 DEF 14A bio 与 FY2025 10-K signature page 双重确认。无单一创始人（1994 合并）✓ 经 10-K History 确认。
 
-**Analyst-view 句子（有意不引用一手来源 / 标注 *分析师观点*）：** Section 2 PT 折价、Section 7/8 份额领导与 SRM 扩产、Section 8 定位 quadrant、Section 8.3 新进入者——均标 *分析师观点：* 并路由至 zsxq `/zsxq/pdf-viewer/` 或公开二手来源；无一附于 10-K 引用。
+**Analyst-view 句子（有意不引用一手来源 / 标注 *分析师观点*）：** Section 2 PT 折价、Section 7/8 份额领导与 SRM 扩产、Section 8 定位 quadrant、Section 8.3 新进入者——均标 *分析师观点：* 并路由至 zsxq `/zsxq/pdf/` 或公开二手来源；无一附于 10-K 引用。
 
 **Institute research (`db/zsxq.db`)** — 搜索别名 11 个（Northrop / 诺斯罗普 / 诺格 / Space 60 / 太空 / defense / 国防 / missile defense / 导弹防御 / Golden Dome / 金穹），找到相关 NOC 覆盖约 6 篇，引用 4 个 file_id（184442822484282 大摩国防、812485114412812 伯恩斯坦 A&D、415521254142458 大摩 Space 60、415245828888188 高盛 Anduril）；均 local_exists=true，标 *分析师观点*，数字与 summary 字符串匹配（如大摩 "NOC bull-case +62%"、"16% NTM P/FCF 折价" ✓；伯恩斯坦 "Sentinel 2027 试飞" ✓；高盛 "Golden Dome $185bn" ✓）。未额外下载（本地覆盖充足）。
 
@@ -610,7 +610,7 @@ Source: [World Economic Forum / McKinsey, 2024-04](https://www.weforum.org/press
 - yfinance：原 `/key-statistics` 与 `/analysis` 子页 **404，已修正**为 `finance.yahoo.com/quote/NOC/`（200）。
 - Golden Dome：原两个 usnews URL（超时/反爬）**已替换**为 [DefenseScoop](https://defensescoop.com/2026/04/24/golden-dome-space-based-interceptor-missile-defense-contractors/)（200，确认 NOC 在 12 家公司之列）与 [Air & Space Forces Magazine 的 $3.2B 与 CBO $1.2trn 两篇](https://www.airandspaceforces.com/golden-dome-could-cost-1-2-trillion-over-20-years-cbo-says/)（均 200）。
 - War.gov / WEF / The Hill / McKinsey：以浏览器 UA 仍返回 403/超时——经 WebSearch 交叉确认均为**真实在线页面的反爬拦截**，非死链，故保留。
-- zsxq 本地 URL 仅在用户机解析（`/zsxq/pdf-viewer/` 为规范路由，非已废弃的 `/zsxq-pdf/`）。
+- zsxq 本地 URL 仅在用户机解析（`/zsxq/pdf/` 为规范路由，非已废弃的 `/zsxq-pdf/`）。
 
 **残留未决 (Residual unknowns)：**
 - 未单独读取投资者日 (Investor Day) deck——NOC 近年无独立资本市场日，季度 earnings 8-K 已覆盖指引与分段；IR 一手 deck 引用以 earnings release 8-K 替代，已在日志说明。

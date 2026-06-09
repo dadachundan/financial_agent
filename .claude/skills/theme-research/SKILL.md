@@ -61,7 +61,7 @@ Every theme is one file: `reports/themes/<slug>_theme.md` (English default). Chi
 - **Added** SZSE:300354 Donghua Testing (core) — 6-D force sensor entered mass production ([cninfo, 2026-06](https://...)).
 - **Dropped** HKEX:9863 Leapmotor — humanoid program shelved ([HKEX 2026-06](https://...)).
 - **Movers:** basket +8.2% since last refresh vs CSI 300 +2.1%; Anpeilong +19% on the Tesla order print.
-- **New broker call:** GS initiated Anpeilong Buy, PT ¥120 vs ¥96 @ 2026-06-05 → +25% ([GS, zsxq #...](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/...)).
+- **New broker call:** GS initiated Anpeilong Buy, PT ¥120 vs ¥96 @ 2026-06-05 → +25% ([GS, zsxq #...](http://xs-macbook-air.local:5001/zsxq/pdf/.../<filename>)).
 - **TAM revision:** 2027E pool lifted to ≈$3.6bn from ≈$3.1bn (prior refresh) — +$0.5bn from the force-torque sub-bucket on faster dexterous-hand adoption ([forecaster, 2026-06](https://...)).
 - **Thesis drift:** none — basket still reflects the original BOM-expansion bet.
 
@@ -302,7 +302,7 @@ Target word count: **2,000–4,000 words per language** (less than [[sector-over
 Broker thematic notes (Bernstein, MS, GS, UBS, and the user's zsxq library) are often the single richest seed for a theme — they supply the candidate ticker list, the conviction ranking, the multi-year TAM anchor, and the per-name moat/threat reads. Use them at **create** (seed selection) and **refresh** (re-mine for re-rankings and TAM revisions). Cite them two ways, never as a bare homepage:
 
 1. **Source-chain the underlying number.** When the basket leans on a broker's TAM, forecast, or ranking, cite the chain so the reader sees primary-data → broker-model — e.g. `[Broker theme note 引用 Gartner/SEMI/trade-body data](deep-URL)`, not the broker's site root. (Same shape for any theme: a GLP-1 TAM chains through the epidemiology source the broker built on; a rare-earth volume through the trade-body data.) A broker number whose primary input is invisible is a half-citation.
-2. **zsxq-backed notes cite via the file_id + page convention** already used by What's-New and snapshot `evidence_file_ids`: `[<broker> <title>, zsxq #<file_id> p.<N>](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/<file_id>#page=<N>)` (page in the link text is load-bearing — see *Local zsxq report library* § citation convention), and record the file_id in the refresh's snapshot line.
+2. **zsxq-backed notes cite via the file_id + page convention** already used by What's-New and snapshot `evidence_file_ids`: `[<broker> <title>, zsxq #<file_id> p.<N>](http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>#page=<N>)` (page in the link text is load-bearing — see *Local zsxq report library* § citation convention), and record the file_id in the refresh's snapshot line.
 
 Project freshness still applies: discard broker notes older than ~12 months for selection (except founding facts). A revised TAM or re-ranking from a fresh note is itself `## What's New` material.
 
@@ -352,7 +352,7 @@ The user's zsxq library is a **local cache of broker / sell-side PDFs** (`db/zsx
 
 **zsxq citation convention (mandatory for every zsxq-sourced claim):**
 
-- **file_id AND page:** `[<Bank> — <short topic>, zsxq #<file_id> p.<N>](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/<file_id>#page=<N>)`. `extract_pdf.py` marks pages as `===== Page N =====`, so every number has a known page. The **page in the link text (`p.N`) is the load-bearing part** — the viewer does *not* auto-scroll on the `#page=N` URL fragment (verified by company-research), so `p.N` is what tells the reader where to look; appending `#page=N` to the URL is harmless and fine to keep. **Route must be `/zsxq/pdf-viewer/<file_id>`** — the old `/zsxq-pdf/<file_id>` form is a dead 404.
+- **file_id AND page:** `[<Bank> — <short topic>, zsxq #<file_id> p.<N>](http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>#page=<N>)`. `extract_pdf.py` marks pages as `===== Page N =====`, so every number has a known page. The **page in the link text (`p.N`) is the load-bearing part** — `p.N` is what reliably tells the reader where to look (a PDF downloaded to iPad may ignore the `#page=N` fragment); appending `#page=N` to the URL is harmless and is honored by native in-browser PDF viewers. **Route must be the direct-download `/zsxq/pdf/<file_id>/<filename>`** (paste `find_pdf.py`'s `pdf_url` field — it serves raw `application/pdf` so it opens/downloads natively on iPad) — **not** the `/zsxq/pdf-viewer/<file_id>` viewer page (returns HTML, won't download on iPad), and **not** the old `/zsxq-pdf/<file_id>` form (dead 404).
 - **Quote the original-language source clause** carrying the number alongside the link (the printed English / Chinese / Japanese, NOT the summary's paraphrase). Match it verbatim to the extracted text; use `…` for elisions.
 - **Cite the number, not the headline.** "MS sees Asia energy capex doubling by 2030" with no link is a non-citation; the figure needs the page-anchored link + the source quote.
 
