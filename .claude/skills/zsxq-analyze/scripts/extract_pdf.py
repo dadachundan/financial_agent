@@ -37,7 +37,7 @@ DB_PATH      = PROJECT_ROOT / "db" / "zsxq.db"
 def _lookup_meta(file_id: int) -> dict | None:
     if not DB_PATH.exists():
         return None
-    conn = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True)
+    conn = sqlite3.connect(f"file:{DB_PATH}?immutable=1", uri=True)
     conn.row_factory = sqlite3.Row
     cols = {row[1] for row in conn.execute("PRAGMA table_info(pdf_files)").fetchall()}
     extra = ", ocr_text" if "ocr_text" in cols else ""

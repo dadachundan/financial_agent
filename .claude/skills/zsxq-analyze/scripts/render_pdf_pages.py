@@ -36,7 +36,7 @@ DB_PATH      = PROJECT_ROOT / "db" / "zsxq.db"
 
 
 def _lookup_path(file_id: int) -> str | None:
-    conn = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True)
+    conn = sqlite3.connect(f"file:{DB_PATH}?immutable=1", uri=True)
     row = conn.execute(
         "SELECT local_path FROM pdf_files WHERE file_id = ?", (file_id,)
     ).fetchone()

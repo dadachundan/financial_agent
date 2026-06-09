@@ -44,7 +44,7 @@ OCR = ".claude/skills/zsxq-analyze/scripts/ocr_pdf.py"
 def _connect() -> sqlite3.Connection:
     if not DB_PATH.exists():
         sys.exit(f"DB not found: {DB_PATH}")
-    conn = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True)
+    conn = sqlite3.connect(f"file:{DB_PATH}?immutable=1", uri=True)
     conn.row_factory = sqlite3.Row
     return conn
 

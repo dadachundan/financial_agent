@@ -45,7 +45,7 @@ def _resolve_path(file_id: int | None, path: str | None) -> tuple[Path, str]:
     if path:
         p = Path(path)
         return p, p.name
-    conn = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True)
+    conn = sqlite3.connect(f"file:{DB_PATH}?immutable=1", uri=True)
     row = conn.execute(
         "SELECT local_path, name FROM pdf_files WHERE file_id = ?", (file_id,)
     ).fetchone()
