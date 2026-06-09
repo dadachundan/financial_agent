@@ -12,6 +12,7 @@
 - **Conviction (sourced, not ours):** GS Conviction-List Buys = **Nan Ya PCB (8046)** in substrate, **Victory Giant (300476) + WUS (002463)** in PCB; GS Buy on **EMC (2383) + TUC (6274) + Shengyi (600183)** in CCL, **ITEQ off the Buy list**. The headline disagreement is **Unimicron: GS Neutral NT$555 vs MS Overweight NT$1,225 vs BofA Buy NT$1,300** — a >2x fair-value split on one name ([GS, zsxq #812215118428812](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812215118428812); [MS, zsxq #415242818812258](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415242818812258)).
 - **Movers (1Y, context only):** equal-weight basket **+508%**, median **+442%**, vs **iShares SOXX +158% · TAIEX +105% · S&P 500 +23%**. Leaders SEMCO ~+1,404%, Unimicron +857%, Kinsus +784%; laggard Ajinomoto +30% (ABF is a small slice of the food group). Magnitudes are extreme but **spot-checked against independent quotes** (Ibiden +533%, Unimicron 52-wk NT$98→1,130, EMC NT$680→5,215) — a real melt-up, not an auto_adjust artifact.
 - **25 sell-side PTs persisted** to `stock_price_target_db` (surfaced at [`/pt`](http://xs-macbook-air.local:5001/pt)) — including the Unimicron 4-broker split and the Zhen Ding GS-Buy-vs-Citi-Sell split.
+- **Built to sell-side rigor:** the Thesis carries an **auditable bottom-up build** (ASIC units → ABF mm² demand), a **two-sided supply/demand balance** (ABF S/D ratio + e-cloth + HVLP4 foil, demand vs capacity), a **content-per-unit ladder** (H100 18L → Rubin Ultra 30-44L; PCB $/㎡ 1万→40万), a **bull/base/bear** scenario, a **pricing→margin→EPS bridge**, a **per-ticker Barometer**, a **basket scorecard** (100% positive / 95% beat SOXX), and **de-rate sizing** on the priced-for-perfection flag. 5 charts.
 - **Relationship to [[ai-passives-packaging]]:** 10 substrate/PCB names overlap; that basket is **passives-centric** (MLCC + glass), this one is the dedicated **board + substrate + CCL** cut riding the ABF-shortage + M6→M10 CCL grade-migration thesis. See Scope rules.
 
 <details><summary>Earlier refreshes</summary>
@@ -26,15 +27,62 @@
 
 ![Anchor — global ABF substrate market $7.05bn (2025) → $19.18bn (2030E), 22.2% CAGR, with the supply/demand ratio inverting to undersupply at CY27](../charts/theme_pcb-hdi-abf-substrate_anchor.png)
 
+**Bottom-up build (the anchor is a model, not a headline).** The $19.18bn 2030 pool is `AI-ASIC/GPU units × substrate area-per-chip`. MS's demand engine is the custom-silicon unit ramp that, multiplied by body-size × layer-count, generates the ABF mm² demand behind the S/D ratio:
+
+| AI-ASIC units (M, ex-merchant GPU) | 2026E | 2027E | 2028E | 2029E | 2030E |
+|---|---|---|---|---|---|
+| Amazon Trainium | 1.9 | 1.7 | 1.7 | 1.8 | 2.5 |
+| Google TPU | 4.0 | 6.3 | 6.5 | 7.6 | 7.9 |
+| Other / China ASIC | 2.5 | 4.6 | 6.2 | 7.6 | **9.2** |
+| **Total custom silicon** | **8.4** | **12.6** | **14.4** | **17.0** | **19.6** |
+
+The swing line is **Other/China ASIC (2.5M → 9.2M, ~4×)** — China AI chips alone go ~0.5M (2024) → ~7M (2030); revising it up is what drove MS's gap upgrade (15%→22%). Each generation also carries *more* ABF per unit (bigger bodies, more layers — see the content ladder), so mm² demand outruns unit growth ([MS Ex.7-9, zsxq #415242818812258](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415242818812258)).
+
+![Bottom-up demand build — AI-ASIC unit drivers behind the ABF anchor; Other/China ASIC is the swing line](../charts/theme_pcb-hdi-abf-substrate_demand_build.png)
+
 **Sub-bucket decomposition (each its own pool, dated, sourced):**
 - **ABF / FC-BGA substrate** — the headline above; AI/server/networking demand share rises **60% (2025) → 75%+ (2030)** as PC ABF fades from 70% (2015) to <15% (2030) ([MS, zsxq #415242818812258](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415242818812258)).
 - **High-speed CCL (copper-clad laminate)** — the M6→M10 grade-migration layer: AI CCL TAM **~US$3bn (2025) → US$39bn (2030), ~70% CAGR** (Jefferies); GS expects the **AI-server CCL market +142% YoY in 2026** (and AI-server PCB +113%) ([Jefferies, zsxq #585424552451414](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/585424552451414); [GS via Longbridge, 2024-11](https://longbridge.com/en/news/273234584)).
 - **AI-server PCB (HLC / HDI / mSAP-SLP)** — AI-PCB TAM **~US$7bn (2025) → US$75bn (2030), ~60% CAGR**; AI-server share of PCB demand **15% (2025) → 25%+ (2026)**, value-per-server **+30%+**, layer count **16-20L → 28-36L** ([Jefferies, zsxq #585424552451414](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/585424552451414); [TrendForce/UGPCB](https://www.ugpcb.com/news/trade-news/ai-server-pcb/)). HPC CCL+PCB combined: JPM US$3.89bn (2025) → US$9.98bn (2027), ~60% CAGR ([JPM, zsxq #585548152542554](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/585548152542554)).
 - **Upstream bottlenecks (geo cut):** the high-end is an **ex-China (Taiwan/Japan/Korea)** game today — 2024 top-3 rigid CCL = Kingboard 14.4% / Shengyi 13.7% / EMC 13.2%; the choke points are **ABF film (Ajinomoto ~95% share), HVLP4 copper foil (Mitsui ~40%), and quartz/Q-glass cloth (Japan oligopoly)** — China owns 37.3% of rigid-CCL volume but skews low/mid-end (2025H1 export ASP $7.56/kg vs import $34.00/kg), which is the import-substitution alpha overlay ([东莞证券 CCL 深度, zsxq #812451212818482](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812451212818482)).
 
+**Content-per-unit ladder (the mechanism behind the CAGR).** ABF/PCB content steps up every generation — this is why mm² (and $) demand outruns unit growth:
+
+| Spec ladder | layers / stack | power | material / copper |
+|---|---|---|---|
+| NVDA H100 (2023) | 18L (3+12+3), 3-stack | 700W | M6-M7 / HVLP2 |
+| NVDA GB200/GB300 (2024-25) | 22L (5+12+5), 5-stack | 1,000-1,200W | M8 / HVLP3 |
+| NVDA Vera Rubin (2026) | 26L (6+14+6), 6-stack | 2,850W | M8.5+ / HVLP3-4 |
+| NVDA Rubin Ultra (2027+) | 30-44L, 8-stack+ | 3,000W+ | M9 (Q-glass) / HVLP4-5 |
+| Optical module 400G → 1.6T | 10-12L → 14-18L; area 0.005 → 0.023 ㎡/unit (+2.3×) | — | M5-6 → M8; value density 2 → 15 万元/㎡ (+3×) |
+| PCB process tier ($/area) | 减成法 ~1万元/㎡ → HDI ~3万 → 1.6T SLP ~15万 → **CoWoP M9 SLP >40万元/㎡ (~10× HDI)** | | |
+
+([招商证券 mSAP Table 8/10/11, zsxq #415284451152288](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415284451152288)).
+
+**Supply/demand balance (two-sided, auditable).** The headline S/D ratio is the *quotient* of demand mm² over supply mm² — MS's series below, plus the two upstream bottlenecks (glass cloth, HVLP4 foil) that physically gate it:
+
+| ABF substrate S/D ratio (>100% = undersupply) | 2026E | 2027E | 2028E | 2029E | 2030E |
+|---|---|---|---|---|---|
+| New (MS, 2026-05) | 93.3% | 102.2% | 105.8% | 114.9% | **122.3%** |
+| Old (MS, prior) | 96.6% | 102.6% | 106.8% | 112.2% | 114.6% |
+
+Upstream is tighter: **electronic glass-cloth** demand 1,100 → 1,750 万米/月 vs capacity 575 → 1,000 (gap **−525 → −750, ~−48%**; 日东纺/旭化成 E-glass shutdowns + Q-glass weaving-machine 18-24-month lead times), and **HVLP4 copper foil** demand 1.4 → 3.9 kt/mo vs supply 1.4 → 3.8 (UBS sees a **35-40% HVLP4 deficit** 2026-27; Mitsui ~40% share adds only ~20%/yr vs ~60% demand) ([方正 e-cloth, zsxq #812451228522412](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812451228522412); [Jefferies, zsxq #585424552451414](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/585424552451414); [UBS, zsxq #415522222518258](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415522222518258)).
+
+![Upstream supply/demand balance — electronic glass-cloth + HVLP4 copper foil, demand vs capacity](../charts/theme_pcb-hdi-abf-substrate_sd_balance.png)
+
 **Swing factor — AI ASIC + GPU substrate demand.** MS attributes its entire 2030 gap upgrade (15%→22%) to "increased demand for GPUs, ASICs, and CPUs", not to supply. Because the value series is supply-constrained near-term, a downward revision to the GB300→Rubin→Rubin Ultra→Feynman ramp would collapse both the volume *and* the pricing legs simultaneously — it is the one variable that moves the headline through two channels at once. Secondary swing: **T-glass / Q-glass cloth availability** — if the cloth bottleneck eases, the supply curve shifts and the pricing leg deflates even with demand intact.
 
-**Value-chain map (who occupies which layer):** ABF film — **Ajinomoto** (~95%, no listed pure-play competitor = coverage gap) → IC substrate — **Unimicron · Nan Ya PCB · Kinsus · Ibiden · SEMCO · LG Innotek · AT&S** (+China Shennan) → high-speed CCL — **EMC · TUC · ITEQ · Shengyi · Doosan** (+Panasonic MEGTRON) → AI-server PCB fab — **Victory Giant · WUS · Shennan · GCE · Zhen Ding · Avary · TTM**. Layers with **no clean listed pure-play** (ABF film, HVLP4 foil, high-end quartz cloth) are coverage gaps — see Exclusions.
+**Scenario (bull / base / bear).** MS brackets the AI-silicon demand engine via the orchestration-CPU TAM (a proxy for the broader custom-silicon pool): 2030 **bear $77bn / base $125bn / bull $283bn**, the swing being the CPU:GPU ratio (1:2 → 2:1) and AI take-up (78% → 99%). Mapped to this basket — **base:** the 22.2% ABF CAGR + S/D inverting CY27 (today's PTs); **bull:** Other/China-ASIC units beating 9.2M (2030) + M9/M10 pricing holding → substrate primes re-rate further; **bear:** hyperscaler AI-capex guide-down + ASIC units missing → S/D ratio fails to clear 100% in 2027, the pricing leg deflates, and the basket de-rates toward its own-history multiples (sized in [Drift signals](#drift-signals)) ([MS Ex.10, zsxq #415242818812258](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415242818812258)).
+
+**Pricing → margin → EPS bridge.** The ABF/CCL price leg is not a free-floating industry stat — it drops to the swing names' P&L: **Nan Ya PCB** OPM breakeven (1H25) → 25% (2026E) → 35% (2027E) drives a **93% 2026-28E EPS CAGR**; **Kinsus** ~59%; **Unimicron** EPS ~triples to NT$14 (2026) → NT$36.6 (2028) on GM 14% → 33%; **Shengyi** AI-CCL GM 40%+ vs blended ~28% ([GS, zsxq #812215118428812](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812215118428812); [Bernstein, zsxq #212452185852841](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/212452185852841); [CITI, zsxq #212281428258821](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/212281428258821)).
+
+**Value-chain map (dollar-weighted, with the leading supplier's share).** Reading up the AI-server board cost stack — **CCL ≈ 40% of PCB cost**, and within CCL **copper foil ≈ 42% / resin ≈ 26% / glass cloth ≈ 19%** ([UBS, zsxq #415522222518258](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415522222518258); [方正, zsxq #812451228522412](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812451228522412)):
+
+- **ABF film** — Ajinomoto **~95% share** (the choke point) → *no listed pure-play 2nd source = coverage gap.*
+- **IC substrate** — Unimicron (27% ABF) · Nan Ya PCB · Kinsus (~10%) · Ibiden · SEMCO · LG Innotek · AT&S (+Shennan in China).
+- **High-speed CCL** — 台光/EMC **32.8%** · 台耀/TUC **17.1%** · 联茂/ITEQ **15.7%** · 松下/Panasonic 9.0% · 生益/Shengyi 6.5% · 斗山/Doosan 3.3% (Prismark 2024 high-speed share).
+- **AI-server PCB fab** — Victory Giant · WUS · Shennan · GCE · Zhen Ding · Avary · TTM.
+- **Upstream (sized coverage gaps, no clean pure-play):** HVLP3+ copper foil **$216M (2025) → $2.4bn (2028), 122% CAGR** (Mitsui ~40%); high-end quartz/Q-glass cloth (Japan Nittobo/Asahi >70%) — each a rich-dollar layer the basket can't yet hold; the convert-to-tracked trigger is a China HVLP4 qualification or a 2nd ABF-film source (see Drift signals).
 
 **Conviction ranking (sourced, never ours).** *Substrate:* MS prefers **Nan Ya PCB (+62% to PT) > Unimicron (+49%)**, both OW; GS is Conviction-List Buy on **Nan Ya PCB**, Buy on **Kinsus**, but only **Neutral on Unimicron** (>70% of its ABF is LTA-locked, capping spot-price capture) ([GS, zsxq #812215118428812](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812215118428812); [MS, zsxq #415242818812258](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415242818812258)). *PCB:* GS Conviction-List Buy on **Victory Giant + WUS**, Buy on Shennan/GCE/Zhen Ding — but Zhen Ding is also a **GS-Buy-vs-Citi-Sell** split (Citi flags record-capex overcapacity, PT NT$150) ([GS, zsxq #212452258455221](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/212452258455221); [Citi, zsxq #812228411484222](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812228411484222)). *CCL:* GS Buy on **EMC + TUC**, with **Shengyi** the only China maker NVDA-certified at M9; **ITEQ is off GS's Buy list** (the relative laggard) ([GS Taiwan CCL, zsxq #212228485514141](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/212228485514141)). *Analyst view (this note):* we treat the Taiwan substrate primes + CCL/film as `enabler` (they enable the AI build-out) and the AI-PCB pure-plays as `core` (the boards are the theme's product) — our role taxonomy, distinct from the brokers' ratings.
 
@@ -75,34 +123,32 @@
 
 ## Valuation snapshot
 
-Per-name sell-side coverage. Current price = yfinance 2026-06-09 (spot-checked against independent quotes). Rating / PT mirror `stock_price_target_db` ([`/pt`](http://xs-macbook-air.local:5001/pt)); forward P/E = current price ÷ broker FY2027E EPS. **The headline read: most names have run *to or past* their sell-side targets** — the priced-for-perfection signal that anchors the Drift section.
+Current price = yfinance 2026-06-09 (spot-checked vs independent quotes). Rating/PT mirror `stock_price_target_db` ([`/pt`](http://xs-macbook-air.local:5001/pt)). **P/E 26E→27E** = current price ÷ broker FY2026E / FY2027E EPS — the **compression is the bull pivot** (growth outrunning the multiple). Own-avg = the name's GS-disclosed upcycle-average P/E. **The headline read: most names have run *to or past* their sell-side targets** — the priced-for-perfection signal sized in [Drift signals](#drift-signals).
 
-| Ticker | Name | Rating (broker) | PT | Current | Upside | Current fwd P/E (2027E) vs own avg |
-|---|---|---|---|---|---|---|
-| TWSE:3037 | Unimicron | **split:** GS Neutral / MS OW / Bernstein OP / BofA Buy | 555 / **1,225** / 990 / 1,300 | NT$945 | **−41% to +38%** | ~29.6x vs **10.3x** upcycle avg (GS) |
-| TWSE:8046 | Nan Ya PCB | Buy-CL (GS) / OW (MS) / Buy (BofA) | 1,115 / 1,275 / 1,170 | NT$897 | +24% to +42% | ~16.9x vs **13.3x** upcycle avg (GS) |
-| TWSE:3189 | Kinsus | Buy (GS) / Buy (BofA) | 485 / 695 | NT$704 | −31% to −1% | ~23.1x vs **14.2x** upcycle avg (GS) |
-| TSE:4062 | Ibiden | Outperform (Bernstein) | 9,200 *(pre-runup, under review)* | ¥18,505 | n/m (PT stale) | ~56x 2027E (Bernstein) |
-| TSE:2802 | Ajinomoto | OW (JPM) / Buy (GS) | 6,500 / 5,150 | ¥4,724 | +9% to +38% | JPM 37x FY27 EPS |
-| KRX:009150 | Samsung Electro-Mech | Buy (GS) | 480,000 *(Mar-2026, stale)* | ₩1,938,000 | n/m (PT stale) | GS 2027E EPS ₩24,448 |
-| KRX:011070 | LG Innotek | — | — | ₩1,131,000 | — | substrate ramp, nascent |
-| WBAG:ATS | AT&S | — | — | €138.8 | — | glass-constrained |
-| SZSE:300476 | Victory Giant | Buy-CL (GS) | 550 | ¥334 | **+65%** | ~16.0x 2027E (GS 26.3x at PT) |
-| SZSE:002463 | WUS 沪电 | Buy (GS) | 142 | ¥137 | +4% | ~22.2x 2027E (GS 23x at PT) |
-| SZSE:002916 | Shennan | Buy (GS) / Buy (BofA) | 450 / 340 | ¥391 | −13% to +15% | ~32x 2027E (GS 36.9x at PT) |
-| TWSE:2368 | Gold Circuit (GCE) | Buy (GS) | 1,380 | NT$1,495 | −8% | ~23.8x 2027E (GS 22x at PT) |
-| TWSE:4958 | Zhen Ding | **split:** GS Buy / Citi Sell | 388 / 150 | NT$535 | −27% / −72% | GS SOTP; Citi 16x 2025E |
-| NASDAQ:TTMI | TTM | — | — | $178 | — | backlog $1.6bn, BtB 1.41 |
-| SZSE:002938 | Avary 鹏鼎 | — | — | ¥115 | — | emerging AI HDI |
-| TWSE:2383 | Elite Material (EMC) | Buy (BofA) / Buy (Nomura) | 4,600 / 2,330 | NT$5,030 | −9% / −54% | ~38.3x 2027E (BofA EPS NT$131) |
-| TWSE:6274 | TUC | Buy (GS) / Buy (BofA) | 1,888 / 1,180 | NT$1,600 | −26% to +18% | ~18.6x 2027E (GS EPS NT$85.8) |
-| SSE:600183 | Shengyi | Buy (GS) | 146.3 | ¥147 | ~0% | ~38.8x 2027E (GS 38.7x) |
-| KRX:000150 | Doosan | — | — | ₩1,628,000 | — | M9 holdco, dilute |
-| TWSE:6213 | ITEQ | off GS Buy list; CLSA Sell (stale) | (52, stale) | NT$255 | n/m | #3 CCL laggard |
+| Ticker | Name | Rating (broker · as-of) | PT | Px | Upside | P/E 26E→27E | own avg | PEG (CY27/28) |
+|---|---|---|---|---|---|---|---|---|
+| TWSE:3037 | Unimicron | **split:** GS Neutral · MS OW · Bern OP · BofA Buy (Apr-May 26) | 555 / **1,225** / 990 / 1,300 | NT$945 | **−41% to +38%** | 67x → **38x** | **10.3x** | **0.48 / 0.24** |
+| TWSE:8046 | Nan Ya PCB | Buy-CL (GS) · OW (MS) · Buy (BofA) (May 26) | 1,115 / 1,275 / 1,170 | NT$897 | +24% to +42% | 44x → **17x** | **13.3x** | **0.50 / 0.22** |
+| TWSE:3189 | Kinsus | Buy (GS Apr-22) · Buy (BofA May-25) | 485 / 695 | NT$704 | −31% to −1% | — → 23x | **14.2x** | — |
+| TSE:2802 | Ajinomoto | OW (JPM May-29) · Buy (GS May-18) | 6,500 / 5,150 | ¥4,724 | +9% to +38% | 37x FY27 (JPM) | n/a¹ | — |
+| SZSE:300476 | Victory Giant | Buy-CL (GS May-21) | 550 | ¥334 | **+65%** | — → 16x | n/a¹ | — |
+| SZSE:002463 | WUS 沪电 | Buy (GS May-23) | 142 | ¥137 | +4% | — → 22x | n/a¹ | — |
+| SZSE:002916 | Shennan | Buy (GS May-25) · Buy (BofA Apr-27) | 450 / 340 | ¥391 | −13% to +15% | — → 32x | n/a¹ | — |
+| TWSE:2368 | Gold Circuit (GCE) | Buy (GS Apr-22) | 1,380 | NT$1,495 | −8% | — → 24x | n/a¹ | — |
+| TWSE:4958 | Zhen Ding | **split:** GS Buy May-13 / Citi Sell Mar-12 | 388 / 150 | NT$535 | −27% / −72% | SOTP (GS) | n/a¹ | 0.42 / 0.51 |
+| TWSE:2383 | Elite Material (EMC) | Buy (BofA) · Buy (Nomura) (May 26) | 4,600 / 2,330 | NT$5,030 | −9% / −54% | 60x → **38x** | n/a¹ | — |
+| TWSE:6274 | TUC | Buy (GS May-7) · Buy (BofA May-25) | 1,888 / 1,180 | NT$1,600 | −26% to +18% | 43x → **19x** | n/a¹ | — |
+| SSE:600183 | Shengyi | Buy (GS May-30) | 146.3 | ¥147 | ~0% | 65x → **39x** | n/a¹ | — |
+
+¹ *No GS-disclosed upcycle/10yr-average multiple — most A-share/Taiwan/Korea names re-rated into the AI cycle without a clean prior-cycle comp; the 3 GS-covered ABF primes (Unimicron/NanYa/Kinsus) are the exception, and are the only names where the priced-for-perfection gap vs own history is directly measurable.*
+
+**No sell-side PT in the local library** (price-only): LG Innotek (₩1,131,000), AT&S (€138.8), Avary 鹏鼎 (¥115), TTM ($178, backlog $1.6bn / BtB 1.41), Doosan (₩1,628,000), ITEQ (NT$255 — off GS's Buy list; only a stale CLSA Sell exists).
+
+**Stale PTs — overtaken by price, pending refresh** (NOT blended into the live Upside column above): **Ibiden** Bernstein OP ¥9,200 (as-of 2026-05-14, EPS 238.9/330.7 → 77x/56x) vs price ¥18,505 — PT under review post-guidance; **SEMCO** GS Buy ₩480,000 (as-of 2026-03-06, EPS ₩17,455/24,448) vs price ₩1,938,000 — the stock ~4×'d past the target. Both are flagged for re-grounding in Drift signals.
 
 ![Priced for perfection — current 2027E forward P/E across the basket; ABF primes far above their own upcycle averages](../charts/theme_pcb-hdi-abf-substrate_valuation.png)
 
-**PT derivation (where the broker discloses it):** Unimicron MS NT$1,225 at 0.48x/0.24x CY27/28 PEG; GS Neutral NT$555 = 17.4x 2027E P/E (+2.7 s.d. over the 10.3x upcycle avg). Nan Ya PCB GS NT$1,115 = 21x 2027E. EMC BofA NT$4,600 = 30x 2H27-1H28E P/E. Shengyi GS ¥146.3 = 38.7x 2027E. WUS GS ¥142 = 23x 2027E. The **FY26→FY27 multiple compression** is the bull pivot (e.g. Shengyi 45% 2028E EPS growth supports the 38.7x) — but with current prices already at/above most PTs, the cushion is thin.
+**PT derivation (where the broker discloses it):** Unimicron MS NT$1,225 at 0.48x/0.24x CY27/28 PEG; GS Neutral NT$555 = 17.4x 2027E P/E (**+2.7 s.d.** over the 10.3x upcycle avg — the explicit over-valuation flag). Nan Ya PCB GS NT$1,115 = 21x 2027E (+1.2 s.d. vs 13.3x); Kinsus GS NT$485 = 15.9x (+1 s.d. vs 14.2x). EMC BofA NT$4,600 = 30x 2H27-1H28E. Shengyi GS ¥146.3 = 38.7x 2027E (45% 2028E EPS growth). WUS GS ¥142 = 23x 2027E. GCE GS NT$1,380 = 22x 4Q26-3Q27E.
 
 ## Exclusions
 
@@ -123,6 +169,8 @@ ABF substrate / ABF载板 (Ajinomoto Build-up Film) · FC-BGA · BT substrate ·
 
 Baseline pass (basket created 2026-06-09; trailing-1-year off yfinance auto-adjusted closes to 2026-06-08/09). **Equal-weight basket +508%, median +442%**, versus **iShares SOXX +158% · VanEck SMH +134% · TAIEX +105% · S&P 500 +23% · CSI 300 +22%** — the basket roughly **tripled the broad semis ETFs** and lapped the market many times over, the expected profile for a pure-play AI-substrate basket in a melt-up upcycle.
 
+**Basket scorecard (1Y, MS *Three Actionable Ideas* style):** **100% of names positive** (20/20) · **95% beat SOXX** (19/20, only Ajinomoto +30% lags) · **95% beat TAIEX** · **100% beat the S&P 500**. Best contributor **Samsung Electro-Mech +1,404%**; worst **Ajinomoto +30%**. (Cumulative-bps-since-inception is deferred until the snapshot sidecar has ≥2 lines — this is the day-0 baseline.)
+
 ![Basket 1-year returns vs benchmarks — equal-weight +508%, median +442%](../charts/theme_pcb-hdi-abf-substrate_performance.png)
 
 **Leaders:** Samsung Electro-Mech ~+1,404%, Unimicron +857%, Kinsus +784%, Nan Ya PCB +770% (the substrate primes — where the ABF S/D inversion is most direct). **Laggards:** Ajinomoto +30% (ABF is a small slice of the food group), Doosan +178% (holdco dilution), ITEQ +202% (CCL #3). ⚠️ *These prints are parabolic — but I spot-checked four against independent quotes and they corroborate: Ibiden +533% (52-wk ¥2,853→¥18,760), Unimicron (52-wk NT$98.10→1,130), EMC (52-wk NT$680→5,215), SEMCO (₩1.66-2.13M late-May/June). So treat them as a real melt-up, with median-vs-benchmark as the framing signal, not any single absolute number.*
@@ -142,7 +190,7 @@ Baseline pass (basket created 2026-06-09; trailing-1-year off yfinance auto-adju
 ## Drift signals
 
 Baseline pass — day-0 watch-items rather than realized drift:
-- **Priced-for-perfection is the dominant signal.** Most names sit at/above sell-side PTs and ~2-3x their own upcycle-average multiples. First place a thesis crack would show: the **ABF S/D ratio** failing to clear 100% in 2027, or a hyperscaler AI-capex guide-down at Q2-26 earnings.
+- **Priced-for-perfection is the dominant signal — and here is the sized downside.** Most names sit at/above sell-side PTs and ~2-3x their own upcycle-average multiples. **Sizing the de-rate** (reversion to own-history or to the bear PT, where disclosed): **Unimicron** ~38x 2027E vs the 10.3x upcycle avg — even reverting only to GS's +2.7-s.d. Neutral PT NT$555 is **−41%**; **Nan Ya PCB** ~17x vs 13.3x ≈ a **−20% to −25%** mean-reversion; **Zhen Ding** carries an explicit floor in Citi's Sell PT NT$150 = **−72%** from NT$535; **Shengyi/EMC** at ~38-39x 2027E have no disclosed own-avg but a reversion to the ~20x where high-speed CCL traded pre-AI implies **~−45%**. First place a thesis crack would show: the **ABF S/D ratio** failing to clear 100% in 2027, or a hyperscaler AI-capex guide-down at Q2-26 earnings ([GS s.d.-vs-upcycle framing, zsxq #812215118428812](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812215118428812); [Citi ZDT Sell, zsxq #812228411484222](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812228411484222)).
 - **Unimicron GS-vs-MS split (NT$555 vs NT$1,225)** is the single most important judgment call — it turns on how much of the ABF upcycle is spot vs LTA. Watch whether Unimicron's spot-ABF mix rises (bullish, MS) or stays LTA-locked (GS).
 - **Zhen Ding GS-Buy-vs-Citi-Sell** — record capex + high Apple/consumer drag is the overcapacity bear case; watch the AI-tray (server+optical) mix vs the FPC seasonal swings.
 - **M-grade qualification is the CCL re-rank lever.** EMC's reported GB300 stumble + Doosan's exclusive-Rubin flag, and NVDA widening M10 testing to Chinese makers (Shengyi/Victory Giant), mean the M9/M10 share map can shift quickly — a single qualification headline is `## What's New` material.
@@ -156,6 +204,26 @@ The first places the thesis cracks — upstream signals that lead the members (n
 2. **Electronic glass-cloth (7628) spot price:** RMB 6.5/m as of 2026-04-16 (+RMB 2.2/m cumulative across 4 YTD hikes); AI-grade Low-Dk Gen-2 cloth RMB 160/m (doubled YTD). The named cycle-leading raw material — high-end weaving-machine lead times of 18-24 months keep supply rigid. Issuer: 卓创资讯 via 方正证券, 2026-04-16 ([zsxq #812451228522412](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812451228522412)).
 3. **High-end (HVLP3+) copper-foil addressable market:** US$216M (2025) → US$2.4bn (2028), 122% CAGR — the steepest sub-component; signals the M8→M9 mix shift. Mitsui ~40% share / ~600-620t/mo (2025) expanding only ~20% CAGR vs ~60% demand → UBS sees a 10-15% HVLP / 35-40% HVLP4 deficit in 2026-27. Issuer: Goldman Sachs / UBS ([GS via Bitget](https://finance.biggo.com/news/J84_RZ4BX0tZvRTvZP2h); [UBS, zsxq #415522222518258](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/415522222518258)).
 4. **ABF-maker capex run-rate** (forward supply): majors average +33% YoY (2026E) / +36% (2027E) — Unimicron NT$34bn, GCE NT$17bn+ (+100%+); new capacity needs 2+ yrs so it relieves S/D only from CY29 (near-term it confirms tightness). Issuer: Goldman Sachs, 2026-04-22 ([zsxq #812215118428812](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812215118428812)).
+
+**Per-ticker operating-data Barometer** (the per-name spine below the macro signals — utilization / AI-mix / latest YoY / capex, each from the seed notes + Q1-26 prints cited in Recent events):
+
+| Name | AI / end-mix | latest quarter (YoY) | capacity / capex |
+|---|---|---|---|
+| Unimicron | ABF 54% of rev mix; ~full util | 1Q26 rev +24.4%, GM 18.0% | capex NT$34bn (+33%), +40% ABF cap YE26 |
+| Nan Ya PCB | high-end ABF <20% (1H25) → 40%+ (2027) | 1Q26 GM 15.8% (+10.8ppt YoY) | OPM breakeven→25%/35% 26/27E |
+| Kinsus | ~30% ABF non-LTA; near-full util | ~59% 26-28E EPS CAGR (GS) | capex NT$8/10bn; K6 +20-25% cap early-27 |
+| Ibiden | AI accelerator/EMIB-T lead | electronics OP +70% YoY | ¥500bn FY26-28; cap ~2.5× by FY28 |
+| Ajinomoto | ABF ~95% share | Mar-Q ABF rev +42%, BP +56% | 3rd film fab (MP 2032) |
+| SEMCO | FC-BGA +45% YoY | Q1 first-ever >₩3tr, OP +40% | close-to-full ABF util 2H26 |
+| Victory Giant | AI&HPC 5.5% (9M24) → **41.5%** (9M25) | FY25 rev +79.8%, NI +273.5% | 70L MP; 78L TLPS in R&D |
+| WUS 沪电 | switch PCB **43%** of rev | FY25 rev +42%, NI +47.7%; switch +110% | capex FY26E ¥6bn (vs ¥3bn) |
+| Shennan | data-center >25% of PCB; AI-PCB ~40-50% | FY25 rev +32.1%, NI +74.5% | 1Q26 capex +200% YoY; Wuxi MLPCB |
+| GCE | Nvidia OAM/UBB + switch | Q1 rev +60%, NI +99% | capex NT$17bn+ (+100%+); Thailand Ph-2 2H26 |
+| Zhen Ding | substrate+server/optical 11.7%(25)→25-30%(30) | 1Q26 core OPI +306% vs GSe | record NT$50bn+ capex; optical +10× 26E |
+| EMC | first Taiwan M9; AI-server | Q1 rev NT$33.07bn beat | 5.85→9.45m sheets/mo; 10%+ hikes Q2 |
+| TUC | ASIC CCL from Apr-26; HVDC | 1Q26 EPS NT$4.36 | +NT$10bn China+Thailand; M9 MP 26-27 |
+| Shengyi | AI-CCL 10%→>15% of cap; GM 40%+ | 1Q26 rev +45%, NI +105%, GM 28.1% | AI-CCL 0.7-0.8→1.5-1.6m sheets/mo |
+| TTM | Data Center 36% of sales (~+57%/yr) | Q1 sales +30%; EPS $0.75 | backlog $1.6bn, BtB 1.41 |
 
 ## Catalysts (next 3–6 months)
 
@@ -187,6 +255,9 @@ The first places the thesis cracks — upstream signals that lead the members (n
 
 **Cross-coverage**
 - Overlaps with [reports/themes/ai-passives-packaging_theme.md](ai-passives-packaging_theme.md) on 10 names — read as structured input for the substrate/PCB rows, not re-cited.
+
+**Charts (reports/charts/theme_pcb-hdi-abf-substrate_*.png)**
+- `_anchor` (ABF TAM + S/D-ratio line) · `_demand_build` (ASIC unit drivers) · `_sd_balance` (e-cloth + HVLP4 demand vs supply) · `_performance` (1Y vs benchmarks) · `_valuation` (fwd P/E vs own avg). Renderer: `reports/charts/_pcb_theme_charts.py` (headless matplotlib Agg).
 
 **Stores written (Tier-2 helpers)**
 - `stock_price_target_db` — **25 sell-side PT/rating calls** upserted (`persist_pts.py --replace`, idempotent on ticker × broker × file_id; 3 new, 22 upgraded), surfaced at [`/pt`](http://xs-macbook-air.local:5001/pt).
@@ -248,3 +319,4 @@ The first places the thesis cracks — upstream signals that lead the members (n
 
 - 2026-06-09 — created with initial 20-ticker basket (6 core AI-PCB, 10 enabler substrate/CCL/film, 4 adjacent); seeded from ~25 zsxq sell-side notes; anchored on the Prismark/MS ABF substrate TAM ($7.05bn→$19.18bn 2030E, 22.2% CAGR).
 - 2026-06-09 — first refresh/data pass; 25 sell-side PTs persisted to `stock_price_target_db`; 3 charts rendered (anchor, performance, valuation).
+- 2026-06-09 — **rebuilt to sell-side rigor** (dogfood gap-analysis vs the seed broker notes): added bottom-up TAM build (ASIC units), two-sided S/D balance (ABF/e-cloth/HVLP4) + chart, content-per-unit ladder, FY26→FY27 valuation with own-avg/PEG/as-of + stale-PT segregation, bull/base/bear scenario, pricing→EPS bridge, per-ticker Barometer, basket scorecard, de-rate sizing, dollar-weighted value-chain; +2 charts (demand_build, sd_balance). `theme-research` SKILL.md updated in the same commit with the generalizable rules.

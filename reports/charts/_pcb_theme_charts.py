@@ -123,9 +123,57 @@ def chart_valuation(val_json):
     print("wrote", OUT % (SLUG, "valuation"))
 
 
+# ---------------------------------------------------------------- demand build (bottom-up)
+def chart_demand_build(cfg):
+    """Stacked AI-ASIC unit drivers (M units) that build the ABF/substrate demand anchor."""
+    c = json.load(open(cfg)) if isinstance(cfg, str) else cfg
+    years = c["years"]; series = c["series"]
+    fig, ax = plt.subplots(figsize=(10, 6))
+    bottoms = np.zeros(len(years))
+    palette = ["#2c7fb8", "#41b6c4", "#fe9929"]
+    for i, (nm, vals) in enumerate(series.items()):
+        ax.bar(years, vals, bottom=bottoms, label=nm, color=palette[i % len(palette)])
+        bottoms += np.array(vals, float)
+    for x, tot in zip(years, bottoms):
+        ax.text(x, tot, f"{tot:.1f}", ha="center", va="bottom", fontsize=8, fontweight="bold")
+    ax.set_ylabel(c["unit"]); ax.set_title(esc(c["title"]), fontsize=11)
+    ax.legend(fontsize=8, loc="upper left")
+    fig.tight_layout(rect=[0, 0.03, 1, 1]); footer(fig, c["source"])
+    fig.savefig(OUT % (SLUG, "demand_build"), dpi=130); print("wrote", OUT % (SLUG, "demand_build"))
+
+
+# ---------------------------------------------------------------- supply/demand balance
+def chart_sd_balance(cfg):
+    """Two-panel upstream S/D balance: demand vs supply/capacity in physical units."""
+    c = json.load(open(cfg)) if isinstance(cfg, str) else cfg
+    panels = c["panels"]
+    fig, axes = plt.subplots(1, len(panels), figsize=(12, 5.5))
+    if len(panels) == 1:
+        axes = [axes]
+    for ax, p in zip(axes, panels):
+        x = np.arange(len(p["years"])); w = 0.38
+        ax.bar(x - w / 2, p["demand"], w, label="Demand", color="#08519c")
+        ax.bar(x + w / 2, p["supply"], w, label="Supply / capacity", color="#9ecae1")
+        for i, (d, s) in enumerate(zip(p["demand"], p["supply"])):
+            ax.text(i - w / 2, d, f"{d:g}", ha="center", va="bottom", fontsize=7)
+            ax.text(i + w / 2, s, f"{s:g}", ha="center", va="bottom", fontsize=7)
+        ax.set_xticks(x); ax.set_xticklabels(p["years"]); ax.set_ylabel(p["unit"])
+        ax.set_title(esc(p["title"]), fontsize=9.5); ax.legend(fontsize=8)
+        if p.get("gap_note"):
+            ax.text(0.5, 0.93, p["gap_note"], transform=ax.transAxes, ha="center",
+                    fontsize=8, color="#d62728", fontweight="bold")
+    fig.suptitle(esc(c["title"]), fontsize=11)
+    fig.tight_layout(rect=[0, 0.04, 1, 0.96]); footer(fig, c["source"])
+    fig.savefig(OUT % (SLUG, "sd_balance"), dpi=130); print("wrote", OUT % (SLUG, "sd_balance"))
+
+
 if __name__ == "__main__":
     import sys
-    if sys.argv[1] == "perf":
+    if sys.argv[1] == "demand":
+        chart_demand_build(sys.argv[2])
+    elif sys.argv[1] == "sd":
+        chart_sd_balance(sys.argv[2])
+    elif sys.argv[1] == "perf":
         members = json.load(open(sys.argv[2]))
         chart_performance("/tmp/pcb_perf.json", members, ["SOXX", "^TWII", "^GSPC"])
     elif sys.argv[1] == "anchor":
