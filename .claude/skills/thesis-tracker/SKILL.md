@@ -55,6 +55,26 @@ Thesis summary suitable for:
 
 Format: Concise markdown or Word doc with the scorecard, recent updates, and current conviction level.
 
+## Learning from sell-side institutional research
+
+The "thesis-revisit" note is a mature sell-side report type (MS *Risk Reward Update*, GS *Beyond the Cycle / View intact*, Bernstein *LT thesis intact*, JPM single-stock revisits, Citi *On Track to Reach [milestone]*, GS *Conviction List – Directors' Cut*). Fold these into the steps above:
+
+- **Lead with a top-line VERDICT, not a buried scorecard (Bernstein "thesis intact" / JPM "Stay Neutral" / GS "View intact").** Put a fixed-ladder call as the first line of Step 5 output and as a one-clause headline: **Thesis: INTACT / AT-RISK / BROKEN** (≈ Intact / Impaired / Invalidated), plus the unchanged-or-new rating, the price target with **upside/downside % to the current price**, and a one-clause reason. Use the fixed verdict ladder (intact / at-risk / broken; reiterate / upgrade / downgrade) — never free-form adjectives. Define the ladder once in Step 1.
+
+- **Open Step 3 with a "WHAT'S CHANGED" From→To delta table (MS *Risk Reward Update*).** Rows = Rating, Price Target, Bull / Base / Bear case value, key EPS years; columns = **Prior → Current (Δ)**. Tag which inputs are new ("Updated Components: EPS"). Follow it immediately with a one-line **Reason for change** naming the trigger event and magnitude — e.g. *"post-1Q26 results: cut FY26–28 EPS 2–4% on lower GPM; PT and scenario values fall 3–4%."* The scorecard sits below this block.
+
+- **Quantify every status — forbid bare "on track / behind / concerning" (sell-side rigor).** Each scorecard pillar must show *print + original expectation + delta*: e.g. *"Rev growth >20%: Q3 actual 22% vs >20% target = on track"*; *"Margin: flat YoY vs +150bps expected = behind by ~150bps"*. Mirror Citi's *"on track to 1TWh / Rmb100bn (2Q tracking ~260GWh, ~Rmb24.3bn NP)"*.
+
+- **Make Step 4 a TWO-SIDED trigger table (JPM/DiDi "triggers that change the rating").** Columns: Date | Event | KPI to watch | **Confirms thesis if** (numeric threshold) | **Breaks thesis if** (numeric threshold) | Action. Each catalyst carries the specific next-period number that flips conviction up vs down (e.g. *"2Q26 intl loss < Rmb29bn AND domestic mobility EBITA margin holds >4%"*). Every threshold numeric and falsifiable — this replaces the single stop-loss price as the only exit rule.
+
+- **Add a bull/base/bear SCENARIO VALUATION grid (MS scenario block) + a fixed KPI panel (Bernstein GLP-1 / GS Robotaxi trackers).** In Step 1 define the three scenarios as *target multiple × scenario-EPS = value (upside % to spot)* with a one-line driver each (show the multiple, the EPS, and the % so it's re-derivable); roll it forward each revisit and print it in Step 5. Also lock 3–6 recurring **KPI panel** metrics at thesis creation, name the single **core indicator** that defines the thesis, and re-print the identical panel with period-over-period deltas (QoQ/YoY + a rolling figure) on every check-in — consistency of the metric set is the whole value of a tracker.
+
+- **Split NEAR-TERM noise from the LONG-TERM thesis (Bernstein Costco "gas fuels near-term upside while LT thesis intact").** Tag each Step 2 datapoint and Step 3 pillar by **Horizon: near-term / structural**, and have the verdict state which bucket drove any change — so a delayed launch (near-term) doesn't whipsaw a structural-margin call. Reconcile each dated target the prior note set (FY revenue, units, profit, launch date) against the latest run-rate (ahead / on-track / behind + gap), Citi-style.
+
+- **Portfolio mode = run the tracked book as an equal-weight set (GS *Conviction List – Directors' Cut*).** When reviewing multiple positions, report cumulative return vs a stated benchmark since each call's inception, an Add/Remove log this period, and 2–3 codified lessons ("stick with winners that beat on the first print; cut losers fast"). Any return chart must carry the in-chart data-source footer and clip the x-axis to the data range per the project chart rules. Optionally add a **consensus-positioning** line (house PT/rating vs Street mean PT and % buy/hold/sell) to contextualize a reaffirmed thesis against crowding.
+
+- **Source every number in the delta table, KPI panel, scenario grid, and milestone reconciliation.** Each datapoint needs an inline deep-URL citation where the number literally appears (filing / press release / data provider); the analyst's own scenario model is **not** a source; every derived figure (YoY, % to spot, multiple × EPS) must show its inputs so it's re-derivable. Follows the project's paragraph-level citation and numerical-accuracy standards — see `.claude/skills/company-research/references/citations.md`.
+
 ## Important Notes
 
 - A thesis should be falsifiable — if nothing could disprove it, it's not a thesis

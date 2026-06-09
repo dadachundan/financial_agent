@@ -94,15 +94,31 @@ Plain (no class) — anything 30–60.
     </tr>
 
     <!-- Corporate sentiment -->
+    <!-- GS nuance: split COUNT vs PROCEEDS (IPO proceeds can hit records while
+         count is near average) and GROSS vs NET-of-buyback issuance (net stays
+         low when buybacks exceed new supply). The count/value divergence is
+         what GS uses to say supply pressure is still contained — encode both. -->
     <tr><td colspan="4" class="category">Corporate sentiment</td></tr>
     <tr>
-      <td class="indicator"><a href="https://www.renaissancecapital.com/IPO-Center/Stats">Number of US IPOs (YTD annualised, > $25M)</a></td>
+      <td class="indicator"><a href="https://www.renaissancecapital.com/IPO-Center/Stats">Number of US IPOs (YTD annualised, > $25M) — <em>count</em></a></td>
       <td class="ms-red">100</td>
       <td class="ms-red">87</td>
       <td class="ms-now">{{ ipo_count.exuberance_pct }}</td>
     </tr>
     <tr>
-      <td class="indicator"><a href="https://www.sifma.org/resources/research/us-equity-issuance-and-trading-volumes/">Net US equity issuance (12m rolling, % of market cap)</a></td>
+      <td class="indicator"><a href="https://www.renaissancecapital.com/IPO-Center/Stats">US IPO proceeds (YTD annualised, $bn) — <em>value</em></a></td>
+      <td class="ms-red">100</td>
+      <td class="ms-red">90</td>
+      <td class="ms-now">{{ ipo_proceeds.exuberance_pct }}</td>
+    </tr>
+    <tr>
+      <td class="indicator"><a href="https://www.sifma.org/resources/research/us-equity-issuance-and-trading-volumes/">Gross US equity issuance (12m rolling, % of market cap)</a></td>
+      <td class="ms-red">100</td>
+      <td class="ms-red">99</td>
+      <td class="ms-now ms-amber">{{ gross_issuance.exuberance_pct }}</td>
+    </tr>
+    <tr>
+      <td class="indicator"><a href="https://www.sifma.org/resources/research/us-equity-issuance-and-trading-volumes/">Net US equity issuance (gross − buybacks, 12m rolling, % of market cap)</a></td>
       <td class="ms-red">100</td>
       <td class="ms-red">99</td>
       <td class="ms-now ms-amber">{{ net_issuance.exuberance_pct }}</td>
@@ -123,6 +139,25 @@ After filling in values, swap the `ms-red` / `ms-amber` / `ms-green` /
 empty classes on the Current column based on the actual computed percentile
 (see thresholds above). The pre-set classes in the template above are a
 guide based on the 2026-06-07 reference run — re-evaluate each run.
+
+## Analog calibration sources
+
+The Dot-Com (100th) / Post-COVID (95th) anchor columns this Figure mirrors
+trace to two named sell-side scorecards — cite them rather than the
+hardcoded reference-run values:
+
+- **GS US Weekly Kickstart, "Evaluating exuberance"** — the 4-category /
+  9-indicator scorecard with a *median 100th percentile vs history in 2000
+  and 95th in 2021*; today ranks ~86th since 1995. This Figure reproduces
+  GS Exhibit 3 directly.
+- **Citi Global Equity Strategy, "Bear Market Checklist"** — an 18-factor
+  amber/red scorecard calibrated vs the 2000 and 2007 peaks, with a
+  region split (US vs Europe). Mirror its "what is NOT yet flagged" column
+  and its acceleration rule ("once the score breaks its band it tends to
+  accelerate") in the report's Verdict.
+
+Anchor the historical columns to this methodology, not to a prior run's
+numbers, so each refresh re-derives the calibration from a citable source.
 
 ## Verdict-line examples
 

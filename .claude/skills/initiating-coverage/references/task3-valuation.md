@@ -114,6 +114,20 @@ This workflow document focuses on execution steps. Reference the methodology fil
    - Base case revenue CAGR and terminal margin
    - Bear case revenue CAGR and terminal margin
 
+### Step 1b: Choose the PRIMARY valuation method by archetype
+
+**Before building the DCF, decide which method actually drives the price target.** The legacy DCF-50 / Comps-40 / Precedent-10 weighting is a *reconciliation* default; it is NOT how the sell-side library prices most initiations. A study of 24 real initiations (GS, MS, UBS, JPM, Bernstein, Nomura, Citi, BofA, DB, HSBC) shows ~80% anchor the PT on a **forward target multiple applied to an out-year (FY+2/FY+3) EPS or EBITDA** — not a blended DCF. Pick ONE primary method matched to the archetype and justify the choice in one sentence; keep the others as cross-checks.
+
+| Company archetype | PRIMARY method | Library exemplar |
+|---|---|---|
+| Profitable growth equity (industrials / semis / hardware / consumer) | **Forward target multiple on FY+2/FY+3 EPS or EBITDA**; DCF as cross-check only | JPM Yingliu 40x 2028E EPS; Nomura Victory Giant 27x 2027E; Citi Hon Precision 36x avg-2027/28E; GS Co-Tech 22x 2028E; UBS Tao 20x 2027E |
+| Clinical-stage / pre-revenue biotech | **rNPV (PTS-weighted)** or probability-weighted DCF blended with M&A value | GS Hemab 70% DCF / 30% M&A, 16% WACC; Bernstein US SMID Biotech PTS model |
+| Two-distinct-growth-curve business | **SOTP** — mature segment on P/S or P/E, emerging segment on out-year-TAM DCF | DB Huayan: mature cobot 12x 2026 P/S + humanoid-component DCF on 2030 1m-unit TAM |
+| Holding company / heavy cross-holdings | **NAV with an explicit discount** | Bernstein SoftBank NAV −25% |
+| Long-duration infra / utility / regulated cash flows | **Multi-year DCF** | UBS Zhongfu DCF WACC 7.3%; GS Tinavi 10-yr DCF 9% discount / 3% terminal |
+
+For the deep recipe on each method (forward-target-multiple, SOTP, NAV-discount, rNPV), see **[valuation-methodologies.md](valuation-methodologies.md)**. The DCF workflow below (Step 2) still runs for every name as the intrinsic-value cross-check — but for a profitable growth equity, the *headline* PT comes from Step 5b's forward target multiple, with the DCF reconciled against it rather than weighted 50%.
+
 ### Step 2: Build DCF Analysis
 
 #### A. Calculate WACC
@@ -407,6 +421,56 @@ Implied Price/Share        $71.40
 - Target market position → [Justify premium/discount]
 - **Conclusion**: Apply median multiple (no adjustment)
 
+### Step 3b: Forward Target Multiple & Multiple Justification (PRIMARY for growth-equity archetype)
+
+For the profitable-growth-equity archetype (the majority of names), this — not the DCF — produces the headline price target. The house pattern: apply a chosen multiple to an **out-year (FY+2/FY+3)** EPS or EBITDA, and justify the multiple three ways.
+
+**A. Apply the multiple to an out-year, not NTM.**
+```
+Target FY+3 (2028E) EPS = $4.10 (from financial model)
+Chosen target multiple   = 40x
+Implied 2028E value      = $164  → discount back to a 12-month (e.g. Dec-2027) target
+Target date / PT         = Dec-2027 PT $128 (40x 2028E EPS, discounted)
+```
+Date the target to the period when the out-year multiple is "earned" (JPM Yingliu: "Dec-2027 target, 40x 2028E EPS"; Citi: "36x avg 2027/28E EPS").
+
+**B. Target-multiple justification (MANDATORY — three anchors).** The chosen multiple must be defended against ALL THREE, each with an inline deep-URL citation:
+
+1. **The stock's own historical valuation band** — e.g. "+1 SD above the 10-yr up-cycle mean" / "within the historical 10-31x range" / "= the A-share's own historical median." Cite the data source for the band (the stock's price history on a dated data-provider page).
+2. **At least one named global peer's current multiple** — e.g. "vs Howmet 37x." Cite that peer's filing or a dated FactSet/Yahoo page, NOT the peer's homepage.
+3. **The EPS/earnings-CAGR-vs-peers gap** that earns the premium/discount — e.g. "justified by 55% EPS CAGR > peers' 23%."
+
+Library patterns to mirror verbatim:
+- JPM Yingliu: "40x 2028E vs Howmet 37x, justified by 55% EPS CAGR > peers' 23%"
+- GS Co-Tech: "22x 2028E = +1 SD above the 10-yr up-cycle mean"
+- Nomura Victory Giant: "27x 2027E = the A-share's own historical median P/E"
+
+Never apply a peer-median multiple without all three anchors. The analyst's own model is NOT one of the anchors and is never cited as a source (project "model is not a source" rule).
+
+### Step 3c: Estimates vs Consensus (MANDATORY thesis pillar)
+
+An initiation exists to assert a **differentiated out-year number**. Table the analyst's forecasts against sell-side consensus for FY+1..FY+3, state the %-delta, and explain why the Street is wrong — this is the analytical spine of the report, not an afterthought.
+
+```
+ESTIMATES VS CONSENSUS
+
+Metric            FY+1 (2026E)        FY+2 (2027E)        FY+3 (2028E)
+                  Ours  Cons  Δ%      Ours  Cons  Δ%      Ours  Cons  Δ%
+Revenue ($M)      1,180 1,120 +5%     1,510 1,380 +9%     1,940 1,690 +15%
+EPS ($)           2.10  2.00  +5%     3.05  2.70  +13%    4.10  2.95  +39%
+EBITDA margin     24%   23%   +1pt    27%   25%   +2pt    30%   27%   +3pt
+
+Why the Street is wrong: [1-2 sentences naming the specific driver consensus
+under-models — e.g. "consensus underestimates MRDIMM penetration / overseas
+order intake / margin from the 2027 capacity ramp."]
+
+Source (consensus): [FactSet consensus, 2026-05-19](https://...) (subscription required)
+                    OR [Yahoo Finance analyst estimates](https://finance.yahoo.com/quote/TICKER/analysis), 2026-05-19
+Our estimates = analyst model (label as estimate; NOT a citable source).
+```
+
+Library patterns: Bernstein Montage "2028E EPS Rmb6.25 vs consensus 4.49, +39%"; UBS Tao "+12-15% above consensus"; UBS Zhongfu per-year EPS-vs-consensus rows. Each **consensus** figure needs a dated data-provider citation. The analyst's own number is labelled an estimate and is never cited as a source. This table carries through to Task 5 as a named "Estimates vs Consensus" subsection in the Investment Thesis.
+
 ### Step 4: Precedent Transactions (Optional)
 
 **Note**: Only if M&A is relevant for this sector/company.
@@ -519,7 +583,33 @@ Bull Case   20%         32%      36%       $58      16.0x     $82
 Expected Value (probability-weighted): $59
 ```
 
+#### D2. PT Scenario Ladder (three datable price targets — house-facing output)
+
+Distinct from the internal DCF grid above, also produce bull/base/bear **as price targets**, each driven by a specific **multiple × out-year-EPS** combination so the football field is reproducible (Bernstein Arm "base $300 / bull $390"). Each row must state the assumption delta, the resulting out-year EPS/EBITDA, the multiple applied, and the implied share price:
+
+```
+PT SCENARIO LADDER
+
+Scenario  Prob.  Driving assumption delta            2028E EPS  Multiple  Implied PT
+Bull      20%    Overseas orders +X; margin +3pt     $5.10      44x       $190
+Base      60%    Order book as contracted            $4.10      40x       $128
+Bear      20%    Capacity ramp slips; ASP −Y%        $2.80      30x       $ 70
+
+Each PT is re-derivable: PT = multiple × out-year EPS (discounted to the target date).
+```
+
+This ladder feeds Task 4's football field and Task 5's scenario section. For a Neutral/Sell call the base PT sits at or below the current price — the ladder still works, the bear PT just becomes the headline.
+
 ### Step 6: Final Price Target & Recommendation
+
+**Write the PT line in the house form.** State the rating, the multiple, the out-year it is applied to, the target date, and the implied move against a dated close — all in one breath:
+
+```
+[Rating], 12-month PT [currency][X] = [multiple]× [FY+n]E [EPS/EBITDA],
+target date [Mon-YYYY], implying [Y]% [upside/downside] vs [price] ([date]).
+```
+
+Examples from the library: JPM "OW, Dec-2027 target 40x 2028E EPS"; Citi "Buy, TP NT$11,000 on 36x avg-2027/28E EPS"; Bernstein A+H dual-PT "44x A / 56.4x H on 2BF EPS." For a **Neutral/Sell** the same skeleton reads "implying −X% **downside**" and the rating is NEUTRAL / UNDERPERFORM / SELL (e.g. Bernstein Summit "UP, TP $7.7, −57%").
 
 ```
 ═══════════════════════════════════════════════════════════
@@ -527,44 +617,49 @@ INVESTMENT RECOMMENDATION
 ═══════════════════════════════════════════════════════════
 
 Current Price:          $42.00 (as of [Date])
-Price Target:           $59.00 (12-month)
-Upside/(Downside):      +40.5%
+Price Target:           $128.00 — 40x 2028E EPS, Dec-2027 target
+Implied Upside/(Downside): +40.5%
 
 Rating:                 BUY / OUTPERFORM
+                       (or NEUTRAL / UNDERPERFORM / SELL — downside PTs
+                        are first-class; the skeleton reads "implied downside %")
 
-Valuation Methodology:  Based on weighted average of DCF (50%),
-                       trading comparables (40%), and precedent
-                       transactions (10%).
+Primary Method:        Forward target multiple on FY+3 (2028E) EPS
+                       (per archetype table, Step 1b). DCF (above) reconciled
+                       as cross-check, NOT 50%-weighted, for a growth equity.
+Multiple Justification: 40x vs [peer] 37x [cite] · +1 SD above 10-yr mean [cite]
+                       · 55% EPS CAGR > peers' 23% (Step 3b's three anchors).
 
 Time Horizon:          12 months
 
 ───────────────────────────────────────────────────────────
-KEY INVESTMENT CATALYSTS
+12-MONTH CATALYST CALENDAR (each catalyst DATED)
 ───────────────────────────────────────────────────────────
 
-1. New Product Launch (Q2 2025)
-   - Expected to drive 15-20% revenue acceleration
-   - Already seeing strong pre-orders
+Every catalyst MUST carry a quarter/month and be a concrete event the reader
+can wait for — write "Cape-1 COD 4Q26", NOT "new product launch." Mirror
+Bernstein Fervo "Cape-1 COD 4Q26, 15MW single-well validation"; GS Hemab
+"sutacimig GT Ph3 start H2-2026; FVIID Ph2 readout late-2026/early-2027";
+GS surgical-robots "3Q26 overseas-order update." Cross-reference the
+catalyst-calendar skill for the dated-event format.
 
-2. Margin Expansion (FY2025-2026)
-   - Operating leverage from scale
-   - Path to 35% EBITDA margin (from current 28%)
+1. 3Q26 — Overseas order-book update (next print of contracted $ / GW)
+2. 4Q26 — Lead product / project COD or volume milestone
+3. 1H27 — Margin inflection from the capacity ramp (target XX% EBITDA)
+4. 2H27 — Regulatory / approval decision (NMPA/FDA/CE) or index inclusion
+5. FY27 — Out-year EPS print that confirms (or breaks) the est-vs-consensus gap
 
-3. Market Share Gains (Ongoing)
-   - Taking share from legacy competitors
-   - Net Promoter Score improvement
-
-4. International Expansion (H2 2025)
-   - Entry into European markets
-   - Potential $200M incremental revenue opportunity
-
-5. Potential M&A Target (12-18 months)
-   - Strategic fit for larger players
-   - Precedent transactions suggest 30-40% premium
+For a Sell/Neutral, reframe this list as "what breaks the thesis" — the dated
+events that would VALIDATE the downside case rather than the upside.
 
 ───────────────────────────────────────────────────────────
 KEY RISKS TO PRICE TARGET
 ───────────────────────────────────────────────────────────
+
+(For a SELL/UNDERPERFORM initiation, flip this section to "Upside risks to
+our Sell" — the symmetric mirror: the dated events / scenarios that would
+force a higher PT and invalidate the short thesis. Bernstein Summit / AEON
+downside initiations carry exactly this mirrored risk block.)
 
 Downside Risks:
 1. Competitive Pressure (High probability, -15% impact)

@@ -78,11 +78,22 @@ only the HTML-cleaning + section-regex primitives from
 by the skill — that's why this skill returns Item 7 even though
 graphiti's pipeline skips it.
 
+**When reading Item 7 (MD&A), specifically capture the "Outlook" / "Trends" /
+"Factors affecting future results" subsection** — it carries the filing's
+forward-looking language and is the raw material for step 3b's guidance deltas.
+8-K Item 2.02 exhibits, when present, often carry the most explicit guidance.
+
 **Performance:** read filings sequentially, not all at once. For a
 10×10-K run, that's ~10 separate `extract_report.py` calls. You may
 run them in parallel from a single tool-use block to save wall time.
 
 ### 3. Summarize, in this order
+
+**Open with a Thesis / What changed box (3–5 sentences) BEFORE any per-filing block.** Every sell-side note opens with a synthesized "so-what" stance, not raw per-period bullets — mirror the **GS results-review opener** and **Citi "China Internet Wrap & Outlook"**: state the single most important multi-year shift, its direction (improving / deteriorating / mixed), and the 2–3 deltas that drive it. Keep it filing-sourced only (no external news, per the guardrail below) and attach an inline SEC EDGAR citation to the filing that evidences the headline shift. See [references/house_style.md](references/house_style.md) for the durable patterns.
+
+```markdown
+> **Thesis (FY20→FY25): mix-shift improving, margin trajectory mixed.** Services crossed from 18% → 26% of revenue (first time >¼) as hardware unit growth flattened ([FY25 10-K](https://www.sec.gov/...)). Buyback cadence held but the new authorization stepped down. Item 1A added a net-new AI-regulation risk category in FY24. The thesis-relevant read is X.
+```
 
 For each filing (newest first), write a short block. The header **must** include a clickable SEC EDGAR link so the reader can verify against the canonical filing:
 
@@ -91,7 +102,11 @@ For each filing (newest first), write a short block. The header **must** include
 - **Business**: <2–3 sentence what-they-do snapshot, calling out new segments,
   product lines, or geographic shifts introduced this year.>
 - **Key risks**: <3–5 of the most consequential / distinctive risk factors —
-  skip generic ones like "general economic conditions" unless newly emphasized.>
+  skip generic ones like "general economic conditions" unless newly emphasized.
+  **Diff Item 1A against the prior 10-K and tag each material change
+  `ADDED` / `DROPPED` / `ESCALATED`, naming the category** (cyber, AI / AI-regulation,
+  tariffs, climate, supply concentration, litigation status). Call out any
+  NET-NEW risk category by name and the year it first appeared.>
 - **New this year**: <bullets only if something genuinely changed vs the prior
   filing — new disclosures, restructurings, segment renames, new litigation,
   AI/regulatory language, etc.>
@@ -99,8 +114,25 @@ For each filing (newest first), write a short block. The header **must** include
 
 URL construction: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=<TICKER>&type=<FORM>` returns the EDGAR listing of that form for that ticker (the user can sort by date to find the specific filing). The `local_path` and `accession_no` come from `list_reports.py`'s JSON output. If you cite a specific passage in prose (e.g. "the Item 1A risk factor on AI regulation"), repeat the SEC EDGAR link inline so the user can pivot to the source.
 
-Then a final **Changes over the years** section: 5–10 bullets identifying
-the *trajectory* across filings. Examples of what to look for:
+### 3b. Track forward guidance & capital-return deltas
+
+A backward results recap without the forward half is only half the deliverable — mirror the **UBS "AGM takeaways: 2030 strategy & 2026 outlook"** and **Citi "Wrap & Outlook"** framing. From each filing, extract and track `OLD → NEW`:
+
+- **Forward guidance / multi-year targets** — pull "Outlook" / "Trends" / "Factors affecting future results" language from the **Item 7 MD&A** (10-Ks carry less explicit guidance than earnings calls, so mine these subsections), and from **8-K Item 2.02** earnings exhibits when present.
+- **Capital-return policy** — buyback authorization size, dividend, payout ratio — tracked as a delta (e.g. `payout target 65% → >70%`).
+- **Capex / investment outlook** — direction and magnitude, with the stated driver.
+
+Frame the trajectory the way UBS pits a 2030 target against current-year guidance — a point estimate alone misses the trend.
+
+Then a final **Changes over the years** section. **Rank by thesis-impact: lead with the 2–3 changes that move the multi-year thesis** (a segment crossing a mix threshold, a net-new risk category, a capital-return policy shift) and explicitly de-prioritize boilerplate — the GS notes spend their words on the 2–3 things that matter. **Surface threshold-crossings first** as the headline signal, borrowing the **Nomura BIDU "AI revenue 52% of core, first time >half"** and **GS NC-results "first decline in six years"** framing — these inflection points are the most decision-useful read of a multi-year filing.
+
+**Every change bullet must pair the MAGNITUDE with the ATTRIBUTED DRIVER in one clause.** A bullet that states a direction without a number is incomplete unless the filing genuinely gives no number. Mirror the **GS NC-results** clause form — magnitude *and* cause, never one without the other:
+
+- ✅ "Auto segment revenue **−4% YoY in FY27, first decline in six years**, as OEMs cut IT capex ([FY27 10-K](https://www.sec.gov/...))."
+- ✅ "Services crossed **18% → 26% of revenue (first time >¼) over FY20–FY25**, driven by subscription attach ([FY25 10-K](https://www.sec.gov/...))."
+- ❌ "The auto segment declined and services grew." (no magnitude, no driver, no baseline)
+
+Examples of what to look for (each as a magnitude+driver bullet):
 - Segment reporting changes (new segments added, others merged)
 - Geographic mix shifts (e.g. China revenue going from highlight to risk)
 - Risk-factor evolution (new categories appearing — cyber, AI, climate, tariffs)
@@ -135,6 +167,17 @@ ls reports/earnings/ 2>/dev/null | grep -E "^<TICKER>_[0-9]+\.md$"
 To view rendered (with charts): start `main.py` and open
 `http://localhost:5001/reports/`. The viewer renders Markdown with
 Mermaid + GitHub styling.
+
+### Always include a cross-year segment delta table
+
+A compact structured delta table is the spine institutional notes render *before* the prose — mirror the **GS "results read-across"** segment block. Render it in Markdown (the source-of-truth), with the Mermaid charts hanging off it for visualization. Rows = reportable segments; columns = latest-FY revenue, prior-FY revenue, YoY %, and a one-line driver:
+
+| Segment | FY25 rev | FY24 rev | YoY % | Driver |
+|---|---|---|---|---|
+| Services | $96.2bn | $85.2bn | +13% | subscription attach, App Store |
+| iPhone | $201.2bn | $200.6bn | +0.3% | unit growth flat, ASP up ([FY25 10-K](https://www.sec.gov/...)) |
+
+Any chart derived from this table must carry the data-source footer annotation per the project chart rule (e.g. "Source: AAPL FY25 10-K, Item 8 segment note").
 
 ### Always include Mermaid diagrams
 
@@ -176,3 +219,14 @@ reference if you need an example.
 - Cite filing dates and periods explicitly so the user can cross-check.
 - The narrative comes from filings; don't add external news or current
   events the user didn't ask about.
+- **Numerical traceability** (reinforces the project Numerical-Accuracy rule):
+  every YoY / QoQ delta in a per-filing block or the Changes section must trace
+  to the **specific filing it is attributed to** — the filing whose SEC EDGAR
+  link sits in that block — where the number string-matches the extracted text,
+  *or* be labeled as a cross-year calc with both inputs sourced (e.g.
+  `26% = 96.2 / 370 (both FY25 10-K)`). **Spot-check 3–5 deltas against the
+  extracted filing text before writing the file.** Cross-link:
+  [.claude/skills/company-research/references/citations.md](../company-research/references/citations.md).
+- **Language default: English.** This skill digests US SEC filings, so it
+  defaults to English headers / EDGAR links and does NOT inherit
+  company-research's Chinese default. Produce Chinese only on explicit request.

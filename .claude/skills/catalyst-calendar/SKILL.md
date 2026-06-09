@@ -48,7 +48,8 @@ For each release: time (ET), consensus (Bloomberg/Reuters), prior, our view (if 
 - For each: deal name, milestone, expected market reaction (target spread tightens/widens; arbs unwind).
 
 **Other**
-- Index rebalances (S&P, Nasdaq-100, MSCI), options expiry (monthly OPEX = 3rd Friday; quadruple witching), Treasury auctions if mega-size, government shutdown / debt-ceiling deadlines, geopolitical (election results, summits with potential market impact).
+- **Index rebalances — carry the effective date + per-sector passive-flow impact, not a one-liner.** Model on GS's EM Flows Monitor: "FTSE China A50 rebalance effective 6/18; estimated passive inflow to hardware-semis / consumer, outflow from insurance / energy." List each rebalance (S&P, Nasdaq-100, MSCI, FTSE) with its EFFECTIVE DATE and the estimated in/outflow by sector. Any flow-impact figure cites the index provider's rebalance announcement (deep URL) per citation / numerical-accuracy rules.
+- Options expiry (monthly OPEX = 3rd Friday; quadruple witching), Treasury auctions if mega-size, government shutdown / debt-ceiling deadlines, geopolitical (election results, summits with potential market impact).
 
 **Market-pricing context (lighter than Mode B — pick 1–2 signals)**
 - For the day's main event: SPX 1DTE straddle implied move (as-of timestamp) + VIX entering AM + FedWatch probabilities if relevant. One line per signal.
@@ -135,10 +136,12 @@ For each company / sector / macro lane:
 
 **M&A milestones** (the calendar version of mode C — surface the *date*, not the deep analysis)
 - Shareholder votes, HSR expiry, EU phase-I/II deadlines, SAMR review windows, expected close dates.
+- **Optional market-level M&A-cycle read** (distinct from the single-deal milestone above) — fold GS "Deal Momentum Builds" as a Mode B macro input: the cycle call ("global M&A +18% next 12m") and an acquisition-probability target basket (">=15% probability names"). This is a market-cycle input, not a single-deal monitor — keep it separate from Mode C, which has no direct sell-side merger-arb-monitor analog.
 
 **Industry events**
 - Major conferences with company schedules (CES, JPM Healthcare, Money 20/20, MWC, Computex, GTC, Hot Chips, ISSCC, RSA, Dreamforce, re:Invent, etc.).
 - Trade shows, industry data releases (monthly auto sales, weekly box office, etc.).
+- **Index rebalances with effective date + per-sector passive-flow impact** — list each (S&P, Nasdaq-100, MSCI, FTSE) with its EFFECTIVE DATE and estimated per-sector in/outflow, GS EM-Flows-Monitor style (see the Mode A "Other" rebalance pattern). A recurring quantified catalyst, not a one-liner.
 
 **Macro events**
 - US: FOMC, NFP, CPI, PCE, ISM, retail sales, jobless claims — week-ahead view.
@@ -164,17 +167,22 @@ If the data is not pullable at write time (e.g. cron run on a closed market), sa
 Render as a sortable table:
 
 ```markdown
-| Date | Day | Time (ET) | Event | Company/Sector | Type | Impact | Notes |
-|------|-----|-----------|-------|----------------|------|--------|-------|
-| 2026-06-09 | Mon | 10:00 | ISM Services | Macro | Macro | M | Cons 53.0; below 50 = recession concern flare |
-| 2026-06-10 | Tue | AMC | Q2 earnings | ORCL | Earn | H | Cloud / OCI growth print; AI-revenue disclosure pressure |
-| 2026-06-11 | Wed | 14:00 | FOMC decision | Macro | Macro | H | Market pricing 25bp cut; dots in focus |
-| 2026-06-11 | Wed | 14:30 | Powell presser | Macro | Macro | H | Tone on cut path |
-| 2026-06-12 | Thu | 08:30 | CPI | Macro | Macro | H | Cons 0.2% MoM / 3.2% YoY core |
-| 2026-06-13 | Fri | — | Triple witching | Index | Other | M | $X notional |
+| Date | Day | Time (ET) | Event | Company/Sector | Type | Impact | Expectation | Notes |
+|------|-----|-----------|-------|----------------|------|--------|-------------|-------|
+| 2026-06-09 | Mon | 10:00 | ISM Services | Macro | Macro | M | downside-risk | Cons 53.0; our 51.5 — new-orders sub-index rolling; <50 = recession-concern flare |
+| 2026-06-10 | Tue | AMC | Q2 earnings | ORCL | Earn | H | meaningful beat possible | Cons rev $19.1B; our OCI ~$5.5B (+89% YoY) vs cons 92% — capacity-constrained = bullish demand |
+| 2026-06-11 | Wed | 14:00 | FOMC decision | Macro | Macro | H | binary | FedWatch 25bp cut ~70% priced; dots in focus |
+| 2026-06-11 | Wed | 14:30 | Powell presser | Macro | Macro | H | in-line | Tone on cut path |
+| 2026-06-12 | Thu | 08:30 | CPI | Macro | Macro | H | upside-surprise likely | Cons 0.2% MoM core; our 0.18% — shelter softening, IT-hardware tariff pass-through offsetting |
+| 2026-06-13 | Fri | — | Triple witching | Index | Other | M | n/a | $X notional |
 ```
 
-Impact column: **H** = market or major sector move likely; **M** = single-name move likely; **L** = routine, useful to know.
+**Three distinct dimensions — never conflate them** (the brokers always carry them separately; Morgan Stanley's "Catalyst Preview: What's Ahead?" tags every catalyst with importance *and* expectation):
+- **Impact column** — *does the index move?* **H** = market or major-sector move likely; **M** = single-name move likely; **L** = routine, useful to know.
+- **Importance** (optional desk-vocabulary tag inside Notes when distinct from Impact) — *does the thesis care?* "very important" / "high" — a name can be low-Impact but very-important to a specific coverage thesis.
+- **Expectation column** — *which way do WE lean?* One of `{in-line / upside-surprise likely / downside-risk / meaningful beat possible / binary / n/a}`. This is the analyst's surprise-direction view, NOT the index-impact rank.
+
+**Notes-cell convention for macro rows (high-priority broker pattern).** Mirror GS "US Week Ahead" and Nomura "US Economic Weekly": carry a committed **house forecast vs consensus PLUS the sub-component driver** inline, not just "Cons X." Wire in the [§ A sub-component watch list](#a-sub-component-watch-lists-for-major-macro-prints): e.g. `Cons 0.2% MoM core; our 0.18% — shelter softening, IT-hardware tariff pass-through offsetting`. The house number is the *analyst's own estimate* (label it "our …", not a citation); cite the **consensus** source it is compared against — never present an estimate as if a URL contained it. Any expectation tag quoting a number must cite a source containing that number, per CLAUDE.md § "Numerical Accuracy".
 
 ### Step 4: Weekly preview note
 
@@ -200,6 +208,7 @@ Markdown narrative companion to the table:
 
 For each H-impact release, structure the entry as:
 - **Release / time / consensus / prior** — the basics.
+- **House forecast vs consensus (committed to our own precision)** — the GS / Nomura product is the *house number next to Street*, never hidden behind "consensus 0.2%." Commit to the decimals the desk would: Nomura prints `core CPI MoM 0.183%`, GS prints `core CPI +0.31% / 2.67% YoY`. Write it as `our 0.18% vs cons 0.20%`. The house number is our estimate (not a citation); cite the **consensus** source it sits next to.
 - **Sub-component forecast with directional bias** — broker-grade: e.g. "core CPI MoM 0.18% (vs 0.30% prior); shelter softening, IT hardware tariff pass-through offsetting." Reference the [sub-component watch list](#a-sub-component-watch-lists-for-major-macro-prints).
 - **What would surprise** — the specific level + direction that moves the tape.
 - **Cross-asset confirmation** — does rates vol / credit / FX / inflation expectations agree? [§ C cross-asset framework](#c-cross-asset-confirmation-framework).
@@ -209,10 +218,11 @@ For each H-impact release, structure the entry as:
 
 Day-by-day list per [§ E](#e-forward-data-calendar-with-directional-bias) — every entry has a directional bias + mechanism, not just a date and consensus.
 
-## Fund flows + earnings revisions (if available)
+## Fund flows + earnings revisions (standard weekly block)
 
-- Fund flows: regional + sector skew; cross-check on positioning.
-- Earnings revisions: FY EPS revised YTD by sector; "revisions leading vs lagging the index" tells you cycle stage.
+GS runs Fund Flows as a *standalone weekly product* — this is a first-class block, not an afterthought. Dollarize and direct every figure (GS Weekly Fund Flows format), never "flows were positive":
+- **Fund flows** — equity-vs-bond inflows by region ($), sector skew, cross-border FX flows, retail margin / leverage, hedge-fund net-positioning deltas. Standard read: "$23bn global equity inflows, US drove; KR −$12.1bn." State the source (EPFR-style / GS flow tables) inline; if flows aren't pullable at write time, say "flows pending" rather than fabricate.
+- **Earnings revisions** — forward FY EPS revised YTD by sector; "revisions leading vs lagging the index" tells you cycle stage (revisions leading = healthy rally; index leading revisions = late-cycle).
 - See [§ H](#h-fund-flows--earnings-revisions-trackers).
 
 ## Positioning implications
@@ -226,10 +236,24 @@ For each H-impact event:
 
 Apply the [Event positioning lens](#event-positioning-lens--option--vix--spread-context-modes-a--b) per-indicator playbook table — each indicator type has a different primary tool.
 
-## Next week heads-up
+## Next week heads-up (forward-roll with our forecast vs consensus)
 
-- <One-line> on the biggest event already on the radar for the week after.
+Every GS "US Week Ahead" and Nomura weekly closes with an explicit forward-roll that states the bank's OWN forecast vs consensus on the headline upcoming print — not just "CPI is next week." Mirror it:
+- <One-line> on the biggest event already on the radar for the week after, with `our X vs cons Y` on the headline print.
 ```
+
+### Step 4b — Market/region preview (GS Kickstart template)
+
+When the universe is an **index or region** (e.g. "what's coming for the S&P / Taiwan / EM next week?") rather than a ticker list, the per-name calendar table doesn't fit — use the GS **Weekly Kickstart** skeleton instead. It is rigidly templated, which makes it diff-able week to week. The six blocks, in order:
+
+1. **Index move + sector winners / losers** — week's % move, the OW/UW sector dispersion.
+2. **Fund flows $ by region + sector skew** — dollarized per the [§ H](#h-fund-flows--earnings-revisions-trackers-standard-mode-b-block) format (`$23bn global equity inflows, US drove; KR −$12.1bn`).
+3. **Forward EPS-revision direction** — by sector; revisions leading vs lagging the index.
+4. **Valuation percentile vs own ~10y history** — "fwd P/E at the 88th percentile of its own 10y range," not an absolute multiple in a vacuum.
+5. **3 / 6 / 12-month index target** — with the **EPS + valuation bridge** (target = forward EPS × target multiple; show both inputs).
+6. **OW / MW / UW sector grid** — the desk's allocation tilts.
+
+Every percentile / flow / target number traces to a source per CLAUDE.md § "Numerical Accuracy." Any flows or valuation-percentile **chart** carries the in-chart source annotation per the global chart rule. This template complements (does not replace) the ticker-level Step 3 table — use whichever matches the universe.
 
 ### Week-ahead output location
 
@@ -252,6 +276,8 @@ Deliverable: a 3,000–6,000 word English markdown report on one active or recen
 5. **What's the probability range and what would change it?** Bear / base / bull paths with named triggers.
 
 Adapted from the LLMQuant M&A event tracker (MIT), re-pointed at SEC EDGAR + web search for U.S. deals and cninfo / HKEX / TDnet for cross-border deals.
+
+**On precedent:** the sell-side library this skill draws from has **no direct analog for a single-deal merger-arb monitor** — the bank M&A coverage there is single-name reaction notes and market-level M&A-cycle strategy (e.g. GS "Deal Momentum Builds"), not pending-deal spread / milestone / break-risk trackers. Mode C's EDGAR-anchored rigor stands on its own; do not imply broad sell-side precedent for the merger-arb format. (The market-level M&A-cycle read belongs in Mode B as a macro input, not here.)
 
 ### When to use mode C
 
@@ -912,7 +938,13 @@ This is the structured way to track the Fed's qualitative tone across releases �
 
 ### M. Earnings-preview methodology (broker-style, beyond consensus)
 
-DB's ORCL preview pattern is the template for an earnings-preview brief that goes beyond consensus rev/EPS:
+**Broker header convention (prepend before the signal table).** Every sell-side earnings preview — DB's ORCL F4Q, MS's AVGO, Bernstein's ADBE — opens with the rating + price-target frame BEFORE the operational signals, so the reader knows the recommendation context first. Lead each earnings-preview entry with:
+- **Rating + 12-month price target** — e.g. "Buy, 12m PT $XXX." Label it `*Analyst view:*` per the project rule and keep it OUT of any filing citation (a PT is never sourced to a 10-K).
+- **Bull / bear PT scenario** — the multiple bridge to each, e.g. "bull 28× → $619 / bear 20× → $298." Show the multiple so the reader can re-derive.
+- **EPS-estimate trajectory** — `FYxxA / FYxxE / FYxxE` (last-actual + the next two estimate years), so the print is read against the estimate path, not in isolation.
+- **The single re-rating catalyst** — name the one thing that re-rates the stock ("show-me" / "prove-it" framing, Bernstein ADBE-style): the guide-raise math, the segment inflection, the buyback accretion — whatever moves the multiple.
+
+Then the operational signals — DB's ORCL preview is the template for going beyond consensus rev/EPS:
 
 | Signal type | What to extract | Example (ORCL F4Q26) |
 |---|---|---|
@@ -935,13 +967,30 @@ When tariff or regulatory dates are ticking within the window, list them explici
 
 Brokers track these as the macro-political event calendar; they often dominate the tape on quiet macro weeks.
 
-### H. Fund flows + earnings revisions trackers
+### H. Fund flows + earnings revisions trackers (standard Mode B block)
 
-Cross-asset positioning context most briefs miss:
-- **Fund flows** — Goldman / EPFR weekly flow tables: equity vs bond inflows by region, sector skew, EM inflow/outflow. "$23B global equity inflows last week, US drove, KR/TW outflows $14.5B" is the standard read.
-- **Earnings revisions** — "FY EPS revised +X% YTD, leading sectors [list], lagging [list]." When revisions are leading the index, it's a healthy rally; when the index is leading revisions, it's late-cycle.
+Goldman runs a standalone **Weekly Fund Flows / EM Weekly Fund Flows Monitor** product — this is a first-class weekly input, not "if available." Promote it to a standard Mode B block. The GS dollarized-by-region format:
+- **Fund flows** — equity-vs-bond inflows **by region ($)**, **sector skew**, **cross-border FX flows**, **retail margin / leverage**, **hedge-fund net-positioning deltas**, and **passive index-rebalance impact** (see the rebalance method below). "$23B global equity inflows last week, US drove, KR/TW outflows $14.5B" is the standard read — always dollarized and directional, never "flows were positive."
+- **Earnings revisions** — forward "FY EPS revised +X% YTD, leading sectors [list], lagging [list]." When revisions are leading the index, it's a healthy rally; when the index is leading revisions, it's late-cycle. Carry the **forward EPS-revision direction by sector** as a row.
 
-These two trackers should appear in any Mode B preview if the data is fresh.
+State the source (EPFR-style / GS flow tables) inline. If flows aren't pullable at write time, write "flows pending" — do not fabricate, consistent with the no-fabrication guardrail.
+
+---
+
+## Learning from sell-side institutional research
+
+A methodology pass over how Goldman, Morgan Stanley, UBS, J.P. Morgan, Bernstein, Nomura, Citi, BofA, Deutsche Bank, and HSBC build the catalyst-calendar / week-ahead report type. Each lesson below is wired into a specific section above — this section is the index plus the named-house-style rationale.
+
+- **Three separate dimensions per catalyst (MS "Catalyst Preview: What's Ahead?").** Brokers never collapse importance, index-impact, and surprise-direction into one column. The Mode B table now carries **Impact** ("does the index move?") + an optional **Importance** tag ("does the thesis care?") + an **Expectation** column ("which way do WE lean?": in-line / upside-surprise likely / downside-risk / meaningful beat possible / binary). See [Step 3](#step-3-calendar-view).
+- **House forecast vs Street, committed to our own precision (GS "US Week Ahead", Nomura "US Economic Weekly").** The product is the house number next to consensus — Nomura prints `core CPI MoM 0.183%`, GS `+0.31% / 2.67% YoY` — never hidden behind "consensus 0.2%." Macro rows carry `our X vs cons Y` + the sub-component driver inline; the house number is the analyst's estimate (not a citation), the consensus is the cited source. See [Step 3 Notes convention](#step-3-calendar-view) and the [§ Macro block](#macro).
+- **Close every weekly with a forward-roll stating our forecast vs consensus (GS / Nomura).** The "next week to watch" line carries `our X vs cons Y` on the headline upcoming print, not just a date. See [Next week heads-up](#next-week-heads-up-forward-roll-with-our-forecast-vs-consensus).
+- **Market/region universe → GS "Weekly Kickstart" skeleton.** When the universe is an index/region not a ticker list, use the rigid six-block template (index move → flows → EPS-revision direction → valuation percentile vs own 10y → 3/6/12m target with EPS+valuation bridge → OW/MW/UW grid). See [Step 4b](#step-4b--marketregion-preview-gs-kickstart-template).
+- **Fund flows + EPS revisions are a standalone GS product, not an afterthought.** Dollarized by region, directional, with sector skew + cross-border FX + retail leverage + HF net-positioning deltas. Promoted from "if available" to a standard Mode B block. See [§ H](#h-fund-flows--earnings-revisions-trackers-standard-mode-b-block).
+- **Index rebalances = effective date + per-sector passive-flow impact (GS EM Flows Monitor).** "FTSE China rebalance effective 6/18; passive inflow to hardware-semis/consumer, outflow from insurance/energy" — a recurring quantified catalyst, not a one-liner. See the Mode A [Other](#what-to-cover) bullet and Mode B [Industry events](#step-2-gather-catalysts).
+- **Earnings previews open with rating + 12m PT + bull/bear PT scenario + EPS trajectory (DB ORCL, MS AVGO, Bernstein ADBE).** The recommendation frame comes BEFORE the operational signals, with a "show-me / prove-it" named re-rating catalyst. PT/rating are `*Analyst view:*`, never sourced to a filing. See [§ M header](#m-earnings-preview-methodology-broker-style-beyond-consensus).
+- **Bilingual technical acronyms preserved inline even in Chinese companions** (OCI, ARR, NRR, ULA, supercore, OER) — matches the project's existing bilingual-term convention; do not translate them away.
+
+All numbers added under these patterns obey CLAUDE.md § "Numerical Accuracy" (every figure traces to a URL that contains it; the house forecast is labelled an estimate, not a citation), and any chart added obeys the global in-chart source-annotation rule.
 
 ---
 

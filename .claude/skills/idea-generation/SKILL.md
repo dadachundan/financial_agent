@@ -72,7 +72,9 @@ For thematic ideas, research the theme and identify beneficiaries:
 
 For each idea that passes the screen, present:
 
-**[Company Name] — [Long/Short] — [One-Line Thesis]**
+**[Long/Short] · [Conviction: High / Watchlist] · [Company Name] ([Ticker]) — [One-Line Thesis]**
+
+Lead with the action, mirroring the **MS "Three Actionable Ideas"** header (the recommendation comes first, not buried under the metric table). One decision-first line.
 
 | Metric | Value | vs. Peers |
 |--------|-------|-----------|
@@ -82,17 +84,21 @@ For each idea that passes the screen, present:
 | Revenue growth | | |
 | EBITDA margin | | |
 | FCF yield | | |
+| 12-month price target | | implied upside/downside % vs last close |
+| Valuation basis | | e.g. "2027E 24× P/E" / "DCF WACC 9%" |
 
 **Thesis (3-5 bullets):**
-- Why this is mispriced
+- Why this is mispriced — frame as the **GS "free call option"** asymmetry: what the price *currently implies* and why that's wrong (GS on S-Oil: "price implies sub-mid-cycle diesel cracks → the duration of high cracks is a free option").
 - What the market is missing
-- Catalyst to realize value
+- The single **dated** catalyst that re-rates it (next print / investor day / data read-out — give the date), plus the priced-in test (how much of the bear case is already in the price)
+
+**Asymmetry:** upside (to bull-case PT) vs downside (to bear-case PT) — an explicit `+X% / −Y%` skew vs last close, not a one-sided target.
 
 **Key Risks:**
-- What would make this wrong
+- What would make this wrong (the falsifiable conditions)
 
 **Suggested Next Steps:**
-- Build full model? Deep-dive diligence? Expert call?
+- Build full model? Deep-dive diligence? Expert call? Hand the ticker to [[company-research]] / [[trader-plan]].
 
 ### Step 5: Output
 
@@ -100,6 +106,19 @@ For each idea that passes the screen, present:
 - Screening criteria and methodology documented
 - Comparison table across all ideas
 - Prioritized list: which ideas to research first
+
+## Learning from sell-side institutional research
+
+How GS / Morgan Stanley / Citi build the *idea-list* report type (mined from the local `db/zsxq.db` broker library — MS "Three Actionable Ideas", GS "Conviction List / Directors' Cut", GS "Connecting the Dots", Citi high-conviction calls). Each lesson sits ON TOP of the project's citation, numerical-accuracy, and chart-source rules — every price target / estimate quoted in actual output is labelled `*Analyst view:*` (never sourced to a filing) and every number string-matches a cited URL.
+
+- **Curate to a tight, action-first short list (MS "Three Actionable Ideas").** The flagship product is *three* genuinely actionable ideas, not a 30-name screen dump. Lead each with the recommendation; the screen is the funnel, the short list is the deliverable. Prefer 3–10 high-conviction names over a long unranked table.
+- **Run the short list as a tracked equal-weight basket with explicit ADD / REMOVE discipline (GS "Conviction List — Directors' Cut").** Each refresh names what was *added* and *removed that month, with the date and the reason* (GS removed Futu on 5/25 after a 3-week drawdown; added S-Oil on an FCF-inflection call). Carry the basket's **cumulative performance vs an equal-weight benchmark** since inception (GS: +87% since Jun-2023, ahead of S&P 500 EW). This turns "ideas" into an accountable, diff-able portfolio — pair with [[thesis-tracker]] for the scorecard.
+- **Bucket ideas under 3–6 macro themes, not a flat list (GS "Conviction List" five themes / "Connecting the Dots").** GS groups names under themes — *AI & power, productivity & margins, inflation & rates, consumer resilience, geopolitics & militarization*. Organize your short list the same way so the reader sees the bet, not just the tickers.
+- **Every idea carries a 12-month price target + rating + implied upside % + valuation basis (GS S-Oil: Buy, 147,000 KRW, +37%, FCF-yield-to-18%-by-2027).** A screen surfaces candidates; an *idea* states the target and the math. Put the valuation method in the line ("2027E 24× P/E", "DCF WACC 9%"). Label sell-side ratings/PTs `*Analyst view:*`.
+- **For a thematic idea, rank the value chain in preference order and pick the top name per tier (Citi battery-materials).** Citi's call wasn't "buy lithium" — it was `锂资源 (lithium resource) > 正极 (cathode) > 电池 (cell) > 电解液 (electrolyte) > 隔膜 (separator)`, with a top pick per tier and a quantified theme target (lithium carbonate to ¥250k/t by Aug–Sep). In Step 3, replace "map the value chain" with a *ranked* value chain + a quantified theme target.
+- **Frame the mispricing as a "free option" asymmetry (GS house signature).** State what the current price implies, why the market is wrong, and the upside-vs-downside skew — not a one-sided "it's cheap." The free-option device (you're paid to wait; the optionality is unpriced) is GS's most repeated idea-pitch move.
+- **Codify GS's published "lessons learned" into the maintenance loop.** GS's three rules: *ride the winners that beat on the first print* (they keep beating), *cut losers fast after a miss* (don't average down a broken thesis), *earnings drive price long-term*. Wire these into the idea-review cadence (the [[take-profit-lab]] / [[thesis-tracker]] handoff).
+- **Source candidates from the broker conviction lists themselves.** Before/alongside the quantitative screens, mine `db/zsxq.db` for the latest MS "Three Actionable Ideas" / GS "Conviction List" adds — exactly what [[zsxq-ideas]] automates. idea-generation is its Step-4 presentation layer, so match this house-style card format so the two compose cleanly.
 
 ## Important Notes
 

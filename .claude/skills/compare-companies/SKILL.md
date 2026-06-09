@@ -83,9 +83,9 @@ A Chinese reader should find the Chinese report as natural and fluent as an Engl
 
 **Chinese names in English reports / English names in Chinese reports:** Chinese companies may appear in their original Chinese form alongside an English / pinyin gloss on first mention, e.g. `安培龙 (Anpeilong, SZSE:002050)`, `比亚迪 (BYD)`, `宁德时代 (CATL)`. After first mention, either form is fine. Symmetrically, US/EU company names appear in their native English form in the Chinese report alongside a Chinese gloss on first mention if a commonly-used translation exists (`Synopsys (新思科技)`, `NVIDIA (英伟达)`, `AMD (超威半导体)`).
 
-## The seven required deliverables
+## The required deliverables
 
-A compare-companies report MUST contain all seven. Missing any one of them is a defect — the user has explicitly asked for each.
+A compare-companies report MUST contain deliverables 0–6 (the seven core deliverables below). Missing any one of them is a defect — the user has explicitly asked for each. Deliverables 7–9 (relative-valuation scoreboard, order-of-preference line, catalyst differential) are specified under "Learning from sell-side institutional research" further down and are also required; they were added to absorb sell-side relative-value rigor.
 
 ### Required deliverable 0 — TL;DR table at the top (§0)
 
@@ -234,6 +234,48 @@ A focal-N view of a multi-player industry is misleading by itself. Every report 
 - Inventing players not in any cited source → every named other player must come from a 10-K competitor list or a third-party industry source.
 - Forgetting to extend the §5.3 / §5.4 / §5.5 tables → the §5.8 paragraphs alone are not enough; the tables must visually show that the focal pair operates inside a larger ecosystem.
 
+## Learning from sell-side institutional research
+
+These are the disciplines a desk-grade relative-value note carries that the base skill above did not yet force. Each is grounded in a specific house pattern (Morgan Stanley, Deutsche Bank, J.P. Morgan, Goldman Sachs, Jefferies, Barclays, Citi). They sit on top of every existing rule — citation density, numerical accuracy, the no-sized-price-target boundary, the bilingual default — none of which is relaxed.
+
+### Required deliverable 7 — Relative-valuation scoreboard (§4.5)
+
+**The single biggest gap vs every institute analog: the skill scores moats but never tabulates what each name *costs*.** Add a first-class side-by-side multiples table, placed at the top of the report with the TL;DR (the multiples + the rating + the next catalyst are what a desk reads first), spec'd in `references/report_structure.md` §4.5.
+
+- **Mirror Deutsche Bank's Huayan Robotics benchmark line:** DB justifies a target P/S of 12× by naming it against Dobot 15×, the HK-listed robot-peer average 12×, and the global cobot median 50× *in one breath* — not in isolation. The table is one row per name × columns for **forward PE / P/S / EV/EBITDA / PEG / div yield / FCF yield**, PLUS a **peer-median column** and a **3-yr-range column** so cheap/expensive reads like-for-like.
+- **Pick the right yardstick for the regime and say which (Barclays "Pricing a capex supercycle"):** Barclays argues EV/EBITDA / EV-EBIT beats PE in capex-heavy windows and shows the cross-sectional return evidence. State which multiple is the fair yardstick for *this* pair and why — EV/Sales pre-profit, EV/EBITDA capex-heavy, PEG high-growth, PE for stable cash compounders.
+- **Close the loop the moat table opens:** don't just report that A trades at a premium to B — say **whether the premium/discount is justified** by the moat/growth differential (DB: Huayan's 12× P/S is a *discount* to Dobot's 15× and that is wrong, because Dobot builds humanoids but isn't profitable while Huayan is). Moats are quantified in §5 but never reconciled against the multiple spread; this section does the reconciliation.
+- **Citation discipline (unchanged):** every multiple cites a deep URL that literally contains the number (Yahoo Finance / Eastmoney / Kabutan / Naver quote page) as of a stated date; the analyst's own model is never the source (cite the filing for the inputs, the quote page for the price); mismatched fiscal-period ends are disclosed in-cell.
+
+### Required deliverable 8 — Order-of-preference line in the TL;DR (§0)
+
+After the "Who is each one for?" paragraph, add **one committed ordinal line** ranking the N names by conviction, with a one-clause why per name.
+
+- **Mirror Morgan Stanley's "Order of Preference" spine ("China and the Miners"):** MS writes a single ranked ladder — `BHP > DRR > RIO > FMG`, tagging the `#1 most preferred` and a one-clause rationale per name. The compare skill ranks advantages *per dimension* but never commits to an ordinal preference *across the set*; institutes always do, even in non-trading notes.
+- **Format:** `Preference order: A > C > B` (or `A and B co-equal > C`), each name followed by a one-clause "preferred because / least-preferred because" tag. Lead each name's body treatment with that same one-line clause before the evidence (DB's "top-five cobot maker, most profitable HK-listed robot name" one-sentence tag).
+- **Stays inside the boundary:** this is a relative ranking of conviction, not a trading call — the no-hedge-word rule and the no-sized-price-target rule both still hold. Banned: "arguably", "slightly", "could". You must commit to an order.
+
+### Required deliverable 9 — Catalyst differential (extends §10)
+
+Turn the prose-only "what to watch" into a **per-name dated catalyst table** so the reader sees which name has the nearer-term swing factor.
+
+- **Mirror JPM's "Positive Catalyst Watch" + DB Huayan's dated catalysts:** JPM names a dated catalyst per name (QCOM June 24 Investor Day); DB lists Huayan's "1H26 results Aug; Stock Connect inclusion early Sept". One column per name × rows for the next 2–3 dated catalysts: **next results date, investor/analyst day, index-inclusion window, product launch / data readout, regulatory decision**.
+- **Source each catalyst** to the company IR calendar or a dated filing (freshness + deep-URL rules apply). No undated "ongoing AI tailwind" entries — every row carries a date or a dated window.
+
+### Optional lens — Relative-positioning / pair-trade (extends §10)
+
+When the N names are genuine substitutes, add one paragraph framing the preferred name as the long and the least-preferred as the funding leg.
+
+- **Mirror GS Japan SMID (long shareholder-benefit + ≥3% div / short no-benefit low-div) and JPM China Quant (long +3% / short −4.2% / L/S +7.2%):** state the explicit thesis for why the spread should converge or diverge, cite the two names' trailing relative return to a deep URL, and name the observable that would invalidate the spread.
+- **Label it a relative-positioning observation, not a sized trade** — no notional, no leverage, no entry/stop. This is the natural actionable output of a "who wins" comparison and stays inside the no-sized-trading-call boundary.
+
+### Cross-cutting disciplines (fold into existing sections)
+
+- **Comparability caveat wherever two numbers are juxtaposed (Morgan Stanley ASCO takeaways):** MS names the single-arm-trial and chemo-resistant-enrollment bias *before* comparing AK112 ORR 61.7% vs BNT327 ORR 37.2%. The skill already flags mismatched fiscal-period ends; generalize to a standing caveat for **single-arm vs controlled, organic vs M&A-inflated, GAAP vs non-GAAP, different segment definitions** — flag the non-comparability in-cell before drawing the verdict. (See `references/moat_anatomy.md` "Common discipline" and Numerical Accuracy item 2.)
+- **Anchor every relative-value verdict on the FORWARD path, not just the last quarter (DB Huayan: 55% rev CAGR 2025-28E, NPM to ~10% by 2028E):** a "who's winning" call resting only on the last reported quarter is weaker than one resting on the 1–3yr forward CAGR / margin trajectory each name is on. Each forward figure cites the filing/guidance it came from — never the analyst's own model. The scorecard "Why" column and the bottom-line bets should both lean on the forward estimate.
+- **Rank quality against NAMED peers, not in isolation (DB Huayan ranks adj-NPM vs Dobot −10%, UBTECH −35%, Geekplus 1%, Estun 0%):** extend the §5 scoreboard quality rows to the §5.8 peer set so "best-in-class" is visible against real names, not asserted.
+- **Carry a "priced in?" line in the bottom line (Morgan Stanley "TCL valuation already reflects the panel up-cycle"; Barclays "current price hugs target"):** each name's §10 verdict should state whether its edge is already reflected in the relative multiple — cross-reference the §4.5 scoreboard. Keeps the skill honest about whether a "winner" is also a better investment at today's relative price, without crossing into a sized trading call.
+
 ## Report structure (TL;DR + 10 sections)
 
 See `references/report_structure.md` for the full section-by-section spec, word-count targets, required tables and charts, and an example outline from SNPS_vs_CDNS.
@@ -245,12 +287,13 @@ Quick summary (every section's tables grow to N columns when N≥3):
 2. Strategic pillars side-by-side (timeline or pillar table; N tracks)
 3. AI narrative — tool vs. tailwind (N-column table)
 4. Segment structure & financial scoreboard (N-column scoreboard; mermaid xychart bar chart with N grouped bars per metric)
+4.5. **Relative-valuation scoreboard** (Required deliverable 7) — N-row multiples table (fwd PE / P/S / EV/EBITDA / PEG / div yield / FCF yield) + peer-median + 3-yr-range columns; fair-yardstick paragraph; premium-justified-or-not verdict. Placed up top with the TL;DR.
 5. **The moat anatomy** (8 subsections — Required deliverables 2 + 6; the longest section by word count). Subsections: 5.1 customer concentration · 5.2 backlog & recurring mix · 5.3 channel/foundry/distribution lock-in · 5.4 tool-level segment share · 5.5 IP/patent/data franchise share · 5.6 why a customer picks one over the other · 5.7 cracks worth naming · **5.8 other big players in this space** (players *beyond* the focal N)
 6. The big bet (M&A, R&D, capital deployment — what each side is doing right now to expand TAM; N-column table)
 7. Capital allocation (debt, buyback, dividend, M&A optionality; N-column table)
 8. Distinctive risks (front-of-risk-factors comparison; what each 10-K leads with; N-column table)
 9. Side-by-side scorecard (Required deliverable 4) — for N=2 a 3-col Edge table; for N≥3 a (N+2)-col rank-or-checkmark table
-10. Bottom line — **N different bets** (Required deliverable 5) — N strategic-posture paragraphs + 1 catalyst paragraph
+10. Bottom line — **N different bets** (Required deliverable 5) — N strategic-posture paragraphs (each with a "priced in?" line) + 1 catalyst paragraph + the **catalyst-differential table** (Required deliverable 9) + optional relative-positioning / pair-trade lens
 11. References block (every URL deduplicated, grouped: primary filings A / primary filings B / [primary filings C] / [primary filings D] / industry research / press / regulatory)
 
 ## Citations
@@ -270,7 +313,7 @@ The project-wide **Numerical Accuracy** rule in `/Users/x/projects/financial_age
 
 1. **Never cite `reports/company/<X>/...md` as the source of a number.** The Prerequisites step has you read each side's prior research doc as structured *input* — but those research docs are themselves derived work. Citing one of them in a comparison shifts the verification chain instead of completing it ("the number is in the research doc, which got it from… ?"). When a number originated in the research doc you just read, follow its inline citation to the primary source (the 10-K page, the IPnest report URL, the vendor product page, the press release) and cite **that** in the comparison. If the research doc has no inline citation for the number, treat the number as unverified — re-derive it from a primary source or drop the claim.
 
-2. **Cross-company comparisons require both sides' originals to contain the comparable figure.** A row that says "A: 47% gross margin vs B: 32% gross margin" needs **two** primary citations — A's 10-K (or 年度报告 / Yuho) for the 47% and B's filing for the 32%. A bundled "[Stratechery](...)" cite isn't enough unless that article actually quotes both numbers verbatim. Mismatched period-ends (A's FY24 vs B's FY25) must be disclosed in the cell.
+2. **Cross-company comparisons require both sides' originals to contain the comparable figure — and a comparability caveat whenever the two numbers are not apples-to-apples.** A row that says "A: 47% gross margin vs B: 32% gross margin" needs **two** primary citations — A's 10-K (or 年度报告 / Yuho) for the 47% and B's filing for the 32%. A bundled "[Stratechery](...)" cite isn't enough unless that article actually quotes both numbers verbatim. Mismatched period-ends (A's FY24 vs B's FY25) must be disclosed in the cell — and more generally, **flag any non-comparability before drawing the verdict**: single-arm vs controlled trial, organic vs M&A-inflated growth, GAAP vs non-GAAP, different segment definitions, different revenue-recognition bases. Mirror Morgan Stanley's ASCO discipline — MS names the single-arm and chemo-resistant-enrollment bias *before* comparing AK112 ORR 61.7% vs BNT327 ORR 37.2%, rather than presenting the two ORRs as a clean head-to-head. A juxtaposed pair of numbers that the reader will read as like-for-like, when they aren't, is a hidden hallucination.
 
 3. **Third-party share numbers must cite the third party, not the company that quoted it.** "SNPS has 50% interface-IP share (10-K)" is wrong — the 10-K never says "we lead". Cite IPnest, Gartner, IDC, etc. directly, with the specific report URL and date. Use the source-chain label only when the third-party report is paywalled and the primary filing quotes it verbatim (`[Hesai FY25 6-K 引用 Yole](https://www.sec.gov/...)`).
 
@@ -421,6 +464,11 @@ Apply the same Step 10 verification flow from [[company-research]] — URL check
 
 - [ ] **TL;DR is present, placed before §1, has N rows, and contains 5–8 bullets per cell.** Every bullet leads with a specific number/noun (not an adjective) and ends with a `(§N)` section reference. Each Disadvantages column has at least (Advantages count − 2) bullets — no whitewash.
 - [ ] **TL;DR "Who is each one for?" paragraph** names N+1 sharp options (pick A for X, pick B for Y, pick C for Z, or run a hybrid because W) — no both-sidesism / no all-N-sidesism.
+- [ ] **Order-of-preference line present** immediately after "Who is each one for?" — a committed ordinal ranking (`A > C > B`) with a one-clause why per name, no hedge words (Required deliverable 8).
+- [ ] **§4.5 Relative-valuation scoreboard present** — multiples table (fwd PE / P/S / EV/EBITDA / PEG / div yield / FCF yield) with peer-median + 3-yr-range columns; a paragraph naming the fair yardstick for this pair; a verdict on whether the premium/discount is justified. Every multiple cites a deep quote-page URL containing the number as of a stated date; no "(our model)" source (Required deliverable 7).
+- [ ] **§10 Catalyst-differential table present** — per-name dated catalysts; every cell carries a date / dated window / `—`; each catalyst sourced to an IR calendar or dated filing (Required deliverable 9).
+- [ ] **"Priced in?" line in each §10 posture paragraph** — states whether the name's edge is already in its relative multiple, cross-referencing §4.5.
+- [ ] **Comparability caveat** flagged wherever two juxtaposed numbers aren't apples-to-apples (fiscal-end / GAAP-vs-non-GAAP / single-arm / organic-vs-M&A / segment-definition).
 - [ ] **Prior research consulted before drafting.** Ran `ls reports/company/` for each side; if a doc existed, read it before writing anything new. Did not duplicate work.
 - [ ] The product overlap matrix uses the N-way status grammar (`ALL N COMPETE` / `A vs B compete, C absent` / `NON-OVERLAPPING (X only)` / etc.). Every row has been classified — no `unclear` or `mixed` rows. At least one row each is `ALL N COMPETE`, `NON-OVERLAPPING`, and at least one mid-state status (a side absent or a side dominant).
 - [ ] Every "share leader" claim in the moat anatomy has a third-party citation; none use a 10-K cite.
@@ -486,6 +534,6 @@ Also read on demand from the parent skill:
 ## What this skill does NOT do
 
 - It does **not** re-tell each company's story from scratch — the per-company deep dives live in [[company-research]] outputs. Reference them; don't duplicate them.
-- It does **not** produce a recommendation in the trading sense (Buy/Hold/Sell with price targets) — that's [[trading-analysis]] and [[portfolio-decision]]. The bottom-line section identifies which bet is winning, not which stock to buy at today's price.
+- It does **not** produce a recommendation in the trading sense (Buy/Hold/Sell with **sized price targets**) — that's [[trading-analysis]] and [[portfolio-decision]]. The bottom-line section identifies which bet is winning, not which stock to buy at today's price. **It MAY, however, commit to a relative ranking of conviction** (an ordinal "order of preference" line — see "Learning from sell-side institutional research") and offer an optional **relative-positioning / pair-trade lens** (long the preferred / fund with the least-preferred), because those are relative verdicts, not sized trading calls. The boundary is: no dollar price targets, no position sizing, no Buy/Hold/Sell on a single name in isolation — a ranked preference across the compared set is in-scope.
 - It does **not** cover 5 or more companies in one file — at N=5+ the head-to-head sharpness collapses entirely and the report becomes a survey. For 5+, either split into multiple pairwise / 3-way reports or use [[sector-overview]] for a wide-lens treatment.
 - It does **not** repeat content from the per-company research docs verbatim — if you find yourself copy-pasting from one of the source research docs, you're missing the comparison angle. Rewrite to highlight the delta.

@@ -53,6 +53,28 @@ A markdown report providing **specific, actionable insights with supporting evid
 
 Bucket each ticker-news headline by inspecting its date in the fetcher output header (`### Title (source: Publisher, YYYY-MM-DD)`). If 30 days returned <5 articles total, say so and consolidate the two ticker subsections into one — don't pad either with overlap.
 
+## Learning from sell-side institutional research
+
+The macro/news-brief report type is built daily by JPM, GS, Morgan Stanley, Nomura, Bernstein, and others. The moves below are what separate an institutional brief from a headline dump — apply them on top of (never in place of) the rules above. All existing citation, numerical-accuracy, language, and section-numbering rules remain in force.
+
+- **Executive Take leads with the call, not the topic** (mirror JPM *Global Data Watch* / GS *Weekly Kickstart* thesis headlines): the first sentence of `1. Executive Take` must name the single dominant catalyst + a quantified directional read — e.g. `<TICKER>: MS Overweight upgrade (TP $190) + a 4-insider cluster buy is the dominant catalyst; near-term skew positive.` Lead with the number and the direction, then expand. Do not open with a neutral topic label.
+
+- **Frame every macro datapoint as actual vs consensus vs prior, and state the surprise** (mirror JPM *Global Data Watch*): in `Macro context`, write each print as `May CPI +2.2% YoY vs 2.0% consensus (hotter), prior +2.0%`. The surprise — hotter/cooler/in-line, hold-vs-pricing (e.g. `RBI held vs ~60% market pricing for a hike`) — is the point, not the level. The consensus/prior figure must trace to a cited URL that literally contains it (per the project numerical-accuracy rule). If no consensus source exists, print the actual alone and say the consensus is unsourced — never invent a consensus number.
+
+- **Carry every retained macro item through a cross-asset read-through chain to the ticker** (mirror Nomura *Economic Insights* / GS Kickstart macro block): `datapoint → rates/policy → FX/commodity → sector → <TICKER> P&L or multiple`. A macro item with no explicit "so what for `<TICKER>`" is dropped, not listed. Cite the chain's external inputs inline; the model's own inference is not a source.
+
+- **Quantify the impact of every company event** (mirror Morgan Stanley / Bernstein *Key Takeaways*): size each discrete item — revenue/demand %, $ impact, bp, or passive-flow $ for index events — e.g. `NVDA halving rack memory config ≈ >2% of global DRAM demand`; `FTSE Russell reconstitution ≈ $13.5bn two-way passive flow`. Derived magnitudes must show both inputs (`~X% of FY rev = $A / $B, both from <filing>`) per the numerical-accuracy rule. Replace qualitative event reporting with a sized one-liner wherever a figure is derivable from a cited source.
+
+- **Read positioning/insider as a signal, not a tally** (mirror JPM *EM Money Trail* / GS Kickstart flows block): in `Insider activity`, report (a) last-30-day net buy/sell with magnitude vs the prior period AND vs shares outstanding/float, (b) clusters and repeat insiders, and (c) the *read* — is the pattern contrarian or confirming toward the thesis? (extreme one-sided clusters and consensus-underweight setups are squeeze fuel; persistent insider selling into strength is a fade). Keep every number traced to its SEC Form 4 URL.
+
+- **Per-ticker analyst calls compress to a rated line** (mirror Morgan Stanley *Three Actionable Ideas*): when a broker action appears, render it as `ticker + rating + target price + one-line driver` (`maintain Buy, TP $190 on the GAA ramp`). Keep the company FACT separate from the house VIEW — label any analyst opinion `*Analyst view:*` per the project rule; never fold it into a filing citation.
+
+- **Catalysts on the calendar must be DATED and NAMED** (mirror Kickstart *后续重点关注* / FTSE-rebalance callouts): no vague "upcoming earnings/FOMC" — list specific events with dates (`Micron earnings 2026-06-25`, `Qualcomm investor day 2026-06-18`, `FTSE Russell reconstitution after close 2026-06-20`, `FOMC 2026-06-17`). Add **index rebalance / reconstitution** dates and their estimated passive-flow $ as a watched item type. Cite each dated event to a source URL.
+
+- **Close the body with an explicit Bull vs Bear forward-risk block** (mirror the analogs' 利好/利空 close): before the Summary table, end with two short lists — upside catalysts vs downside risks for `<TICKER>` over the next 1–4 weeks. This sharpens the `Cross-cutting interactions` bullet into the institutional balanced-risk format; keep the cross-cutting synthesis (macro × insider × news reinforcing or conflicting) inside it.
+
+- **Anchor the read to a named precedent when one is clearly apt** (optional, one line; mirror Nomura *Economic Insights* regime framing): calibrate the current setup against a named historical episode in the Executive Take or macro section — e.g. `energy-shock dynamics rhyme with 2022 but with weaker stimulus and no pent-up demand`. Keep it optional to avoid forced analogies; any precedent claim still needs a citation.
+
 ## Section numbering (required)
 
 Every `##` and `###` heading in the report **must carry a hierarchical numeric prefix** so readers and downstream skills can reference any subsection by number. No exceptions — Executive Take, Summary table, References all get a number too.
@@ -97,7 +119,7 @@ Every claim grounded in a fetched headline or filing **must carry a clickable ma
 
 End the report with two things, in this order:
 
-1. **Summary table** — `Theme | Direction | Source (link) | Supporting Evidence`. The `Source (link)` column must be a markdown link, not a bare publisher name.
+1. **Summary table** — `Theme | Direction | Surprise vs consensus / Magnitude | Source (link) | Supporting Evidence`. The `Source (link)` column must be a markdown link, not a bare publisher name. The third column makes the institutional disciplines above table-enforced: macro rows carry the surprise (`+2.2% vs 2.0% cons — hotter`); company rows carry the sized impact (`≈ >2% global DRAM demand`). Leave it `—` where neither applies (e.g. a pure narrative row).
 2. **References** — a bulleted list of every URL cited above, grouped into `### Ticker news`, `### Macro news`, `### Insider transactions`. Each bullet: `- [Publisher · YYYY-MM-DD — headline](url)`.
 
 If a claim has no underlying URL (e.g., the fetcher returned an unavailable placeholder), say so explicitly — do not pretend a source exists.

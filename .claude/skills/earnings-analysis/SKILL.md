@@ -17,6 +17,10 @@ Create professional **EARNINGS UPDATE REPORTS** analyzing quarterly results for 
 - **Focus**: What's NEW - beat/miss, updated estimates, thesis impact
 - **Font**: Times New Roman throughout (unless user specifies otherwise)
 
+**Two format variants** (pick by turnaround need):
+- **Deep update (default)** — the 8-12 page DOCX described above.
+- **Note** — a fast-turnaround ~2-4 page numbered note matching how GS / JPM / MS actually ship same-day reviews: **boxed tables, bulleted segment lines, numbered top-level sections (1 Results · 2 Forward visibility · 3 Guidance · 4 Valuation · 5 Risks)**, Action Header on line 1. Same rigor (every number triangulated, every claim cited) — just tighter. Use for same-day reactions; the deep variant for the full estimate/thesis re-cut.
+
 ## When to Use
 
 Use when the user requests:
@@ -30,6 +34,8 @@ Use when the user requests:
 - User requests "flash note" or "quick take" → Different format
 - Company is not already covered → Need initiation first
 
+**Matched-pair with earnings-preview.** This review is the back half of a JPM-style "As We Previewed → As [Co] Delivered" pair. If an `earnings-preview` note (or any prior estimate) exists for this quarter, **open the review by reconciling what was called vs what printed** (see references/workflow.md Step 3). Cross-link the preview in the Sources block.
+
 ## Guardrails (at-a-glance — the rules with the worst failure modes)
 
 Compact index of the load-bearing don't-dos enforced throughout this skill.
@@ -38,12 +44,26 @@ Compact index of the load-bearing don't-dos enforced throughout this skill.
 - **Do not write a beat/miss number without citing the consensus source by name + date.** "Beat consensus" is meaningless without "Bloomberg consensus as of YYYY-MM-DD" or "FactSet, accessed YYYY-MM-DD". See § "Citations & Source Attribution".
 - **Do not invent 10-Q line items.** Every metric in the report traces to a specific page of the 10-Q, the earnings release, or the call transcript. If the company doesn't break out a metric (e.g. segment-by-region revenue), say so explicitly.
 - **Do not write a guidance change ("raised", "cut", "color-bearing reaffirmation") without citing both the old guide and the new guide.** Both must be linked to their respective primary sources, not paraphrased.
-- **Do not let a forward estimate update be ungrounded.** Every Old → New estimate line in the report must name the specific result that drove the change ("Q3 services margin came in 280 bp ahead; raised FY services margin estimate by 50 bp").
+- **Do not let a forward estimate update be ungrounded.** Every Old → New estimate line in the report must name the specific result that drove the change ("Q3 services margin came in 280 bp ahead; raised FY services margin estimate by 50 bp"). **No estimate revision without a result-driven reason clause — "our model" / "our analysis" is never a valid reason** (CLAUDE.md "Numerical Accuracy"; the reason must name the specific result).
+- **Do not bury the stock reaction.** A beat that sold off (or a miss that rallied) must be reconciled explicitly. See § "6. Reaction Reconciliation".
 - **Do not omit URLs.** Every source in the Sources block is a clickable hyperlink (SEC EDGAR for filings, IR site for the earnings release/deck/transcript). Plain text references are a defect.
 - **Do not skip the Data Used manifest** at the end of the report (Phase 4 output spec). The DOCX format already enforces the Sources block; the markdown handoff also gets a structured manifest so the data inventory is legible at a glance.
 - **Do not run destructive SQL against `db/*.db`.** Read-only only. See [`CLAUDE.md`](../../../CLAUDE.md) § "Database Safety".
 
 ## Critical Requirements
+
+### 0. Action Header ⭐ (institutional first line)
+
+**The report's very first line is a one-line Action Header** encoding all five elements, modeled on JPM's `Price (date) / Prior PT` header and the UBS/GS implied-upside convention:
+
+1. **Rating action** (Maintain / Raise / Lower + the rating)
+2. **Prior PT → New PT** (always show the move, even if unchanged → "Maintain $XXX")
+3. **Implied upside %** vs a **dated current price** (e.g. "+48% vs HK$78.25 close 1-Jun-26")
+4. **Valuation basis** (the multiple or method that produces the PT — "17.3x FY27E EPS", "30x normalized EPS", "SOTP")
+
+> *Example:* **Maintain Buy; PT HK$112 → HK$116 (+48% vs HK$78.25 close 1-Jun-26); 17.3x FY27E EPS.**
+
+The title line itself should also encode the verdict + driver + action ("Broad-based beat and raise — Reit OW, PT to $502"), not just "Q3 Earnings Update". See best-practices.md headlines.
 
 ### 1. Speed & Timeliness
 - Publish within 24-48 hours of earnings release
@@ -118,10 +138,43 @@ Earnings Materials (Q3 2024):
 - [ ] ALL URLs are CLICKABLE HYPERLINKS (not plain text)
 - [ ] All SEC filings hyperlinked to EDGAR viewer
 
+**Project rules that also apply (markdown-output runs).** The hyperlink guidance above is DOCX-centric. When the output is markdown, the project-wide rules in [`CLAUDE.md`](../../../CLAUDE.md) and [.claude/skills/company-research/references/citations.md](../company-research/references/citations.md) govern — do not under-comply because this skill's examples are Word-shaped:
+- **Paragraph-level inline citations with deep URLs** — link the specific EDGAR document / IR release / deck / transcript, never a homepage.
+- **Every numerical beat/miss/guide figure string-matches a URL cited in the same paragraph** (CLAUDE.md "Numerical Accuracy"). A "+9% beat" must trace to a source that literally contains "9%".
+- **Every chart carries an in-image `Source:` footer annotation** (CLAUDE.md chart rules), in addition to the figure caption.
+- Defer to those files rather than restating them here, to avoid drift.
+
 ### 5. Updated Estimates
 - Update forward estimates based on results
 - Show old vs. new estimates clearly
 - Explain what changed and why
+- **Lead with the headline magnitude**: state the estimate revision as one line with direction + magnitude + a **result-driven reason clause** before the Old/New table (GS-style "FY27/28/29 EPS raised an avg +41% on stronger AI-server scale and pricing pass-through"). **The reason must name the specific result that drove it — never "our model".**
+
+### 6. Reaction Reconciliation ⭐ (why the stock moved)
+
+A required paragraph reconciling the **share-price reaction with the print** — the single most common real-world post-print question. Handle the counter-intuitive cases explicitly:
+
+- **A beat that sold off** — guide below the buy-side whisper (Broadcom-style: in-line guide vs an elevated whisper), or a smaller-than-usual beat after a big run-up (CrowdStrike-style: beat shrank after a ~70% 6-week run). State the run-up, the whisper, and which one the tape was trading.
+- **A miss that rallied** — bad print already discounted, or forward guide / backlog reset the narrative.
+
+Name the dated move ("stock −7% next day on the FQ3 guide despite the FQ2 beat") and attribute it to the specific line the market keyed on. Do not leave the reaction unexplained.
+
+## Learning from sell-side institutional research
+
+A methodology review of post-results reviews from Goldman Sachs, Morgan Stanley, J.P. Morgan, UBS, Citi, Deutsche Bank, and Bernstein. These banks' notes share a verdict-first, triangulated, reconcile-to-PT discipline. Adopt the high-signal patterns below; the per-section mechanics live in the reference files.
+
+- **Verdict-first, like a GS "F[n]Q review".** The title and first line state beat/miss + driver + rating/PT action together ("Broad-based beat and raise — Reit OW, PT to $502"). See § "0. Action Header" and best-practices.md.
+- **Triangulate every headline number three ways — GS/Bernstein/DB house trait.** Each metric shows **vs YoY, vs the bank's own estimate, AND vs the guidance midpoint** in one place. The skill already compares to estimate + YoY; the third anchor (**vs guide midpoint**) is what these banks lead with — add it. Two reference columns (own est + Street), not one.
+- **Estimate revision is a headline magnitude, then a boxed table — GS/JPM.** Lead with one line ("FY27/28/29 EPS raised avg +41% on AI-server scale + DRAM pass-through"), then a page-1 boxed **Key Changes** (Prev / Cur / %Chg per forward-year Adj EPS + Revenue). The reason clause must name the result, never "our model".
+- **The forward guide is often the real story — GS Dell / DB Oracle.** Treat **next-quarter + full-year guidance as a co-equal block**, separate from the print block, each shown vs prior guide / vs Street / vs your model with a one-line achievability take. See report-structure.md "GUIDANCE vs PRIOR vs STREET".
+- **Valuation visibly reconciles to the PT — UBS/Citi SOTP, MS single-multiple.** For multi-segment names, a SOTP build (segment EBIT × multiple → per-share lines summing to the headline PT); for single-line names, an explicit `multiple × out-year EPS` build (MS "28x FY27"). Don't just "mention DCF/comps". See report-structure.md PAGES 8-10.
+- **Explain the stock reaction — especially a beat that sold off (Broadcom / CrowdStrike pattern).** See § "6. Reaction Reconciliation".
+- **Decompose the beat — Bernstein UMC method.** Split the variance into **FX vs underlying** and **one-time / pull-forward vs sustainable** (Bernstein UMC: of ~3% beat, +1.2pt was FX; Hon Hai pull-forward vs real AI ramp). See workflow.md Step 5.
+- **Lead with forward-visibility metrics the banks lead with.** **Backlog / bookings / order-book** (Dell $51.3B AI backlog, +$24B new orders), **per-unit economics by quarter** for platform/turnaround names (Meituan per-order Rmb; DiDi per-order EBITA margin), and a **path-to-normalized-profit bridge** (UBS Meituan FY28 normalized Rmb42bn = delivery 27 + IHT 22 − new −7). The current Key Operating Metrics table omits these. See report-structure.md PAGES 4-5.
+- **Guidance-credibility framing — Marvell "conservative haircut", Oracle guide-vs-Street.** Beyond a checklist line: assess sandbag-vs-stretch against the company's track record, and for up-cycle raises name the **binding constraint (supply- vs demand-constrained — GS Dell "supply-constrained, not demand-constrained")**, a different bull case than a demand beat. See workflow.md Step 8 / Step 5.
+- **Peer read-across with stated transmission logic — UBS Credo→BizLink, GS Broadcom→Toppan.** "Compare to peers" is not enough; carry one company's print into another's estimates and state the mechanism (AEC trend, substrate demand). See workflow.md Step 6.
+- **Quantify competitive share where the call hinges on it — MS Broadcom ASIC ~80% long-run vs MediaTek+Google 15-20%; Marvell 60-65% in 1.6T DSP.** Replace qualitative thesis prose with a numbered share line + trajectory. See report-structure.md PAGES 6-7.
+- **Ship a tight note when speed matters.** The analogs are ~2-4 page numbered notes, not 8-12 page essays. See the "Note" variant in Key Characteristics.
 
 ## High-Level Workflow
 

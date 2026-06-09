@@ -872,6 +872,32 @@ Decision tree for forward-looking / projection paragraphs:
 
 ---
 
+## Learning from sell-side institutional research
+
+A methodology study of 24 real initiation reports (Goldman Sachs, Morgan Stanley, UBS, J.P. Morgan, Bernstein, Nomura, Citi, BofA, Deutsche Bank, HSBC) surfaced patterns the desk-standard initiation enforces but this skill under-specifies. Fold these into the relevant task; the deep "how" lives in `references/task3-valuation.md`, `references/valuation-methodologies.md`, and `assets/report-template.md`.
+
+**Pick the valuation method by company archetype — don't default to DCF-50/Comps-40/Precedent-10.** ~80% of the library prices the price target off a **forward target multiple on an out-year EPS/EBITDA** (JPM Yingliu 40x 2028E, Nomura Victory Giant 27x 2027E, Citi Hon Precision 36x avg-2027/28E, GS Co-Tech 22x 2028E, UBS Tao 20x 2027E); DCF leads only for biotech and regulated cash-flow names. Use the archetype decision table in task3: profitable growth equity → forward target multiple (DCF as cross-check); clinical/pre-revenue biotech → rNPV or DCF+M&A blend (GS Hemab 70/30, 16% WACC); two-growth-curve business → SOTP (DB Huayan: mature segment on P/S + emerging on out-year-TAM DCF); holdco → NAV with a stated discount (Bernstein SoftBank NAV −25%); long-duration infra/utility → multi-year DCF (UBS Zhongfu WACC 7.3%, Tinavi 10-yr DCF 9%/3%). State the chosen primary method and justify it in one sentence.
+
+**Justify the target multiple three ways, every time.** House reports anchor the chosen multiple to (a) the stock's **own historical valuation band**, (b) at least one **named global peer's** current multiple, and (c) the **EPS-CAGR-vs-peers gap** that earns the premium/discount. Patterns to mirror verbatim: JPM Yingliu "40x 2028E vs Howmet 37x, justified by 55% EPS CAGR > peers' 23%"; GS Co-Tech "22x 2028E = +1 SD above 10-yr mean"; Nomura Victory Giant "27x = the A-share's own historical median." Each anchor carries an inline deep-URL citation (peer multiple → that peer's filing or a dated data-provider page; historical band → its data source) per the project numerical-accuracy rule. Never apply a peer-median multiple with no anchor.
+
+**Tie the price target to a named out-year and a target date.** Replace the bare "12-month PT" with the house form: `[Rating], 12-month PT [currency][X] = [multiple]× [FY+n]E [EPS/EBITDA], target date [Mon-YYYY], implying [Y]% upside vs [price] ([date])`. Examples: JPM "Dec-2027 target, 40x 2028E EPS"; Citi "36x avg 2027/28E EPS"; Bernstein A+H dual-PT "44x A / 56.4x H on 2BF EPS." The multiple is applied to FY+2 or FY+3, not FY+1.
+
+**Add an "Estimates vs Consensus" pillar — the spine of an initiation.** Table the analyst's out-year revenue / EPS / margin against sell-side consensus (FactSet/Bloomberg/Yahoo) for FY+1..FY+3, state the %-delta, and explain **why the Street is wrong** — that differentiated view is the reason to initiate. Mirror Bernstein Montage "2028E EPS Rmb6.25 vs consensus 4.49, +39%"; UBS Tao "+12-15% above consensus"; UBS Zhongfu per-year EPS-vs-consensus rows. Each consensus figure needs a dated data-provider citation; the analyst's own number is labelled an estimate, **never cited as a source** (honours the "model is not a source" rule).
+
+**Page 1 is a fixed data block, not prose.** Add the desk identifier/header block (confirmed in the DB Huayan OCR): Rating | "Initiating Coverage" tag | report date | exchange:ticker (+ Reuters/Bloomberg codes) | current price (as-of date) | 12-month PT | implied upside/downside% | 52-week range | sector/industry | benchmark index level | analyst (+ CFA), plus a "Key indicators (FY1)" mini-table (ROE, net debt/equity, BVPS, P/B, operating margin) and a 1m/3m/12m absolute+relative performance row. Every figure carries an inline citation (price/52-wk/performance → dated Yahoo Finance link; ratios → the underlying filing). This extends — does not replace — the existing Page-1 rating box and investment bullets.
+
+**Make catalysts a dated 12-month calendar, not a generic 3-5 bullet list.** Each catalyst gets a quarter/month and is a concrete event the reader can wait for: Bernstein Fervo "Cape-1 COD 4Q26"; GS Hemab "sutacimig GT Ph3 start H2-2026; FVIID Ph2 readout late-2026/early-2027"; GS surgical-robots "3Q26 overseas-order update." Write "Cape-1 COD 4Q26" — not "new product launch." Cross-reference the `catalyst-calendar` skill for the dated-event format.
+
+**Output the scenario ladder as three datable price targets.** Distinct from the internal DCF scenario grid, give bull/base/bear **as PTs**, each driven by a specific multiple × out-year-EPS combination (ideally with a probability), so the football field is reproducible — Bernstein Arm "base $300 / bull $390." Each row states: the assumption delta, the resulting EPS/EBITDA, the multiple applied, and the implied share price.
+
+**Support short / Sell / Neutral initiations symmetrically.** The library ships downside calls (Bernstein Summit UP TP $7.7, −57%; AEON UP −22%; GS Athub Neutral, −8%). For a negative-upside rating the Page-1 block reads "implied downside%," catalysts become "what breaks the thesis," and the risk section flips to "**upside risks to our Sell**." Don't let the template assume upside.
+
+**Build the forward-revenue bridge from real evidence, and name TAM houses precisely.** Anchor out-year revenue on order backlog, contracted PPA/GW, capacity-expansion targets, and customer-win channel checks (DB Huayan "channel checks indicate Huayan supplies EngineAI, AGIBOT, Galbot") — not a top-down CAGR alone. Name the sizing house and attach its specific number (Frost & Sullivan, Yole, McKinsey "$4.4trn agentic-AI," Precedence Research, IDC), never "industry sources."
+
+**Optional: multi-name / sector initiation mode.** When initiating ≥2 names in one sector, lead with the industry thesis, then a rating-distribution summary table (Company | Ticker | Rating | TP | Upside% | one-line thesis), then per-name pillars — the recurring Bernstein layout (Japan Consumer 7 names 4 OP/2 MP/1 UP; MENA Energy 6 names) and GS (Range + Athub). Each name keeps the archetype-matched valuation method. Default language English-only (consistent with tracking-style multi-name notes) unless the user opts into bilingual.
+
+---
+
 ## Important Notes
 
 ### Task Independence

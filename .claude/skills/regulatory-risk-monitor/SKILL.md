@@ -49,6 +49,22 @@ The accuracy rules from [[company-research]] apply verbatim. Regulatory-specific
 - **Never source agency outcomes to news articles** when the regulator's own decision is public. Cite the docket / press release / court order at a specific URL.
 - **Never quantify exposure from sell-side memory.** "FDA non-approval would cost $X B" must come from the company's own risk-factor disclosure, an industry-research note, or be explicitly labeled an analyst-built scenario.
 - **Never confuse different regulators in adjacent jurisdictions.** A U.S. DOJ case is not an EU DG-COMP case is not a UK CMA case is not a China SAMR case. Each has its own docket, its own timeline, its own remedies.
+- **Classify the rule's true reach before quantifying it.** The single most over-priced error in a regulatory note is reading the headline as broader than the instrument. Before any number, sort the file into one of three buckets: **(i) cleanup of grey / illegal channels** (steers existing flow into a compliant pipe — bounded impact), **(ii) a genuine new restriction** (shrinks the addressable market on new business), or **(iii) an outright ban** (removes the business). J.P. Morgan's China cross-border-WM note bounds HSBC/STAN impact precisely because the State Council ODI rule targets *illegal* cross-border marketing and reroutes flow into Stock Connect / QDII — it is bucket (i), not a blanket ban — so the rev/EPS hit is small even though the headline reads severe. Bound the worst case with the regulator's **own documented remedy history** (e.g. mandatory price cut after the 3rd generic; divestiture in prior concentration cases) — never a guessed number.
+
+## Learning from sell-side institutional research
+
+Sell-side regulatory / policy notes (J.P. Morgan "Global Banks" single-file impact notes, Morgan Stanley pharma patent-cliff / FDA notes, Bernstein thematic policy notes, GS/MS "Three Actionable Ideas" / Weekly Kickstart) share a tighter structure than the generic monitor. The single best analog is **JPM's "China investment regulations triggering WM revenue uncertainty for HSBC/STAN/UBS/BAER"**, which tracks one named regulatory file (June-1 State Council ODI rule, effective July-1) and maps it to per-name rev% / EPS%. Fold these moves in; they sharpen, never replace, the rules above.
+
+- **Lead with the quantified per-name number, not prose.** Mirror JPM's headline — *"HSBC rev -1.9% / EPS -3.9%, STAN -1.6% / -4.9%"* is the first line, context second. The Risk Summary's opening sentence must state the single most important quantified exposure as a **base + extreme range** (`Base case: revenue -X%, EPS -Y%; extreme case -Z%`), each figure traceable to a source cited in that same sentence per the project's numerical-accuracy rule. Plain-language status follows the number.
+- **Surface a standalone "Scope & Status of the Rule" block.** Every strong analog states, as a scannable unit distinct from the timeline: **(a) effective date**, **(b) in-scope vs out-of-scope** ("new business only / existing accounts unaffected"), **(c) finalized vs pending implementing rules**, **(d) issuing body + instrument + deep URL**. JPM's most consistent structural element is this triplet stated inline on first mention — *"issued June-1, effective July-1, new business only."* Do not bury it in the evidence timeline.
+- **Show the EPS derivation through the disclosed-share chain.** JPM derives EPS impact = *(affected revenue share) × (segment margin / drop-through)*, each input from the bank's own disclosure (HK WM = 8% of HSBC group revenue; visitor-driven = 25% of HK WM). The exposure-map cell must show the arithmetic so a reader re-derives the EPS number — this is the literal application of the project's "derived numbers must have both inputs sourced in the paragraph" rule. A bare "-3.9% EPS" with no chain is a defect.
+- **Bound each exposure with a base AND an extreme column.** Two points per name, never a single estimate: JPM gives base-case and worst-case EPS for each bank. The extreme case is the regulator's documented-remedy ceiling (see "classify the rule's true reach" above), not a guess.
+- **Rank peers under the SAME file — even for a single-ticker monitor.** JPM ranks HSBC vs STAN vs UBS vs BAER by exposure (China <60% of net-new-money insulates the Swiss banks). A single-ticker report still benefits from "peers more / less exposed to the identical rule" to calibrate whether the market reaction is name-specific or sector-wide.
+- **Read cross-sectional stock moves as differentiated pricing.** UBS +2% / BAER +3% rose while HSBC -3% / STAN -6% fell on the *same* rule — JPM reads this as the market correctly pricing lower China dependence. Market Pricing must compare the affected name to same-file peers, not only vs SPY / sector. Print direction + magnitude together (`HSBC -3%, STAN -6%, UBS +2%`) so the cross-sectional spread is visible at a glance.
+- **Make the "rules-pending" state a first-class scenario.** JPM repeatedly flags that individual implementing rules are pending (multi-ministry) and says equity-risk-premium stays elevated until they land — clarification *timing*, not the ultimate outcome, is the dominant near-term driver. The scenario tree needs a `rules-pending` state where the verdict hinges on when detailed rules drop, not on bull/base/bear of the final outcome.
+- **Run the historical analog as a ranked precedent test.** JPM tests the HK-property thesis against the 2004-06 and 2016-18 hiking cycles (property still rose); MS uses Canada / India / Brazil generic-approval outcomes as live read-throughs for the US/China Ozempic outcome. When a documented precedent exists, the analog is a *core argument* (prior rule/case → outcome → market reaction), not optional garnish — keep the "use only when it clearly fits and is well-documented" guardrail.
+- **Name the resolving data series in the Watch List, not just the next date.** Analogs always identify *what evidence resolves the uncertainty* — "multi-ministry implementing ODI rules (no date set)", a specific economic print, inventory de-stocking data, a docket entry number. A Watch List entry that names a date but not the resolving document / series is half-done.
+- **Keep the sell-side rating + PT as a labeled overlay, never as fact.** Where a rating / price target (incl. the local zsxq library, `db/zsxq.db`, read-only) frames the valuation exposure, surface it as `*Analyst view:*` per the project's company-research labeling rule with a deep URL — never fold a PT into a filing citation. JPM's 2028E P/E-per-name cushion is an overlay on the disclosure, not a substitute for it.
 
 ## Report language
 
@@ -124,6 +140,7 @@ Resolve the case by:
 - WebSearch for the last 90 days on `<ticker> + <regulator> + <topic>` and `<docket-number>` and `<case-caption>`.
 - Sell-side commentary (Bloomberg, Reuters, WSJ, FT) for market-reaction interpretation — cite the article with a date in the link title.
 - Industry-specific trade press (RAPS for pharma, Mlex for antitrust, Politico for policy) for non-mainstream-press updates.
+- **Local zsxq broker-report library (`db/zsxq.db`, read-only)** — a permitted secondary source for the *sell-side framing* of a regulatory file (the exposed-vs-insulated peer split, the valuation-cushion read, broker price targets on the affected name). Surface any rating / PT pulled from it as `*Analyst view:*` with a deep URL per the company-research labeling rule — **never blended into a filing citation**. Read via the read-only zsxq helper scripts; never write to or run destructive SQL against the DB.
 
 ### Quantitative: market reaction
 
@@ -153,6 +170,18 @@ For the named case:
 4. Pull the latest 10-K Risk Factors + Legal Proceedings sections (often most comprehensive).
 5. Save under `oneoff/regulatory_<TICKER>_<topic-slug>/`.
 
+### Step 1.5 — Pin the scope & status of the rule
+
+Before building the timeline, classify the file and fix its scope on one scannable block (mirrors JPM's most consistent structural element). Capture:
+
+- **Issuing body + instrument** (regulation / docket / order) with a deep URL.
+- **Effective date** (and any phased dates).
+- **In-scope vs out-of-scope** — e.g. "new business only / existing accounts unaffected", which products / regions / customer cohorts the rule reaches and which it explicitly does not.
+- **Finalized vs pending** — which provisions are final and which await implementing rules (and from which body). Pending implementing rules are a *named source of policy uncertainty*, not a gap to paper over.
+- **True reach bucket** — (i) cleanup of grey/illegal channels, (ii) genuine new restriction, or (iii) outright ban (per the Core-principle step). This bucket bounds Step 3's worst case before any number is written.
+
+This block becomes the "Scope & Status of the Rule" report block. State the regulator-date-scope triplet inline on first mention wherever the rule is referenced (`issued June-1, effective July-1, new business only`).
+
 ### Step 2 — Build the evidence timeline
 
 Chronological table — every entry is a date + event + source:
@@ -171,17 +200,21 @@ Every row carries an inline citation. The table is read by skim; the URLs are th
 
 ### Step 3 — Build the exposure map
 
-For each exposure category, quantify the linkage where the disclosure allows:
+For each exposure category, quantify the linkage where the disclosure allows — and give **two points per row (base + extreme), not one**. The extreme case is the regulator's documented-remedy ceiling, never a guess.
 
-| Category | What to capture | Where to find it |
-|---|---|---|
-| **Revenue exposure** | % of revenue from products / regions / customers affected by the rule | 10-K Segment / Geographic notes; risk-factor disclosures |
-| **Cost exposure** | Cost-of-compliance estimates; R&D pivot costs; recall costs (for FDA) | Risk-factor disclosure, 10-K Legal Proceedings, sell-side notes |
-| **Valuation exposure** | Multiple-compression scenarios from analyst notes; comparable historical re-rating | Sell-side notes; precedent re-ratings |
-| **Capital structure exposure** | Fines, settlements, escrow / contingent liability accruals | 10-K Footnote (Contingent Liabilities); 10-Q updates |
-| **License-to-operate exposure** | Worst case (license revocation, divestiture, breakup, criminal referral) | Regulator's prior actions on analogous cases |
+| Category | What to capture | Base impact | Extreme / worst-case impact | Where to find it |
+|---|---|---|---|---|
+| **Revenue exposure** | % of revenue from products / regions / customers affected by the rule | base rev% hit | extreme rev% hit | 10-K Segment / Geographic notes; risk-factor disclosures |
+| **Cost exposure** | Cost-of-compliance estimates; R&D pivot costs; recall costs (for FDA) | base $ / % | extreme $ / % | Risk-factor disclosure, 10-K Legal Proceedings, sell-side notes |
+| **Valuation exposure** | Multiple-compression scenarios from analyst notes; comparable historical re-rating | base re-rating | extreme re-rating | Sell-side notes; precedent re-ratings |
+| **Capital structure exposure** | Fines, settlements, escrow / contingent liability accruals | base accrual | extreme accrual | 10-K Footnote (Contingent Liabilities); 10-Q updates |
+| **License-to-operate exposure** | Worst case (license revocation, divestiture, breakup, criminal referral) | likely remedy | documented-precedent ceiling | Regulator's prior actions on analogous cases |
+
+**Show the EPS / valuation derivation in the cell.** Translate the rule into EPS through the disclosed-share chain, JPM-style: `EPS impact = (affected revenue share) × (segment margin / drop-through)`, with **both inputs cited inline** so a reader re-derives the number (this is the project's "derived numbers must have both inputs sourced" rule). Example: *"HK WM = 8% of group revenue [10-K seg note]; ~25% visitor-driven, ~70% drop-through [risk factor] → ~-3.9% EPS base."* A bare "-3.9% EPS" with no chain is a defect. A worked end-to-end example lives in [`references/exposure_grid_example.md`](references/exposure_grid_example.md).
 
 Each cell is sourced inline. Where the company hasn't disclosed (e.g. revenue %), say `not disclosed` rather than estimating.
+
+**Peer ranking under the same file.** Even for a single-ticker monitor, add a short row/grid ranking peers exposed to the *identical* rule (most → least exposed, with the one disclosed metric that drives the ranking). This calibrates whether the market reaction is name-specific or sector-wide (JPM: HSBC/STAN exposed, UBS/BAER insulated because China <60% of net-new-money).
 
 ### Step 4 — Market pricing reaction
 
@@ -194,41 +227,48 @@ For each entry in the evidence timeline that the market could trade on:
 
 If a prediction market exists (Kalshi / Polymarket), cite the contract URL and the current price as a market-implied probability.
 
+**Cross-sectional peer reaction (required when peers share the file).** Beyond the primary ticker's grid vs SPY / sector, add a small peer-reaction table — the affected name *vs the same-file peers* on the key regulatory date, direction + magnitude together (`HSBC -3%, STAN -6%, UBS +2%, BAER +3%`). The cross-sectional spread is the market's differentiated pricing of exposure; a name falling while an insulated peer rises on the *identical* rule is the strongest single read of whether the move is name-specific or sector-wide. Keep the full 1d/5d/30d-vs-benchmark grid for the primary ticker.
+
 ### Step 5 — Scenarios and triggers
 
-Three named paths with explicit triggers:
+Named paths with explicit triggers. Include the standard bull / base / bear **plus a `rules-pending` state** whenever implementing rules are still outstanding:
 
 | Scenario | Outcome | Triggers | Estimated probability |
 |---|---|---|---|
 | **Bull** (for the company) | <e.g. case dismissed / FDA approval / consent decree light> | <observable conditions> | X% |
 | **Base** (consensus path) | <e.g. settlement with divestiture / FDA approval with REMS> | <observable conditions> | Y% |
 | **Bear** (for the company) | <e.g. injunction / FDA non-approval / criminal referral / forced breakup> | <observable conditions> | Z% |
+| **Rules-pending** (clarity overhang) | Outcome indeterminate; ERP / multiple stays elevated until detailed implementing rules land | <which body issues the rules; expected window if any> | W% |
 
-Probabilities should sum to 100% and represent a reasonable spread. Single-point estimates ("70% likely the case clears") are overconfident; ranges with named triggers ("30% bull / 50% base / 20% bear, triggers below") replace verdicts.
+The `rules-pending` state captures JPM's central point on the China ODI file — when implementing rules are outstanding, the dominant near-term driver is *clarification timing*, not the ultimate bull/bear outcome; the multiple stays de-rated until clarity lands. Probabilities should sum to 100% and represent a reasonable spread. Single-point estimates ("70% likely the case clears") are overconfident; ranges with named triggers ("30% bull / 50% base / 20% bear, triggers below") replace verdicts.
 
 ### Step 6 — Watch list (what to monitor next)
 
 1–3 specific dated events most likely to move the verdict. Each carries:
-- Date (or window).
+- Date (or window) — or **"no date set"** when the resolver is undated.
 - What's happening.
+- **The resolving data series / document by name** — not just "the next hearing", but the specific evidence that settles the uncertainty: "multi-ministry implementing ODI rules (no date set)", a named economic print, an inventory de-stocking series, a docket entry number, a complete-response-letter. The analogs always name *what resolves it*, not only *when*.
 - Which scenario the outcome supports.
-- Source / calendar URL for the date.
+- Source / calendar URL for the date or document.
 
 Example: "FDA AdComm meeting July 15-16 → bear if voting committee splits >5 votes against; base if 7-5 in favor; bull if 9+ in favor [FDA AdComm calendar URL]."
+
+Example (undated resolver): "Multi-ministry implementing rules for the ODI regulation — no date set; until they land, the `rules-pending` state dominates and the multiple stays de-rated [State Council notice URL]."
 
 ### Step 7 — Write the report
 
 Save to `reports/regulatory/<TICKER>_<topic-slug>_<YYYY-MM-DD>.md`. Suggested structure:
 
-1. **Risk Summary** (200–400 words) — the case in plain language; what's at stake; current status.
-2. **Exposure Map** — five-category table from Step 3.
-3. **Evidence Timeline** — table from Step 2.
-4. **Market Pricing** — reactions on key dates + prediction-market price if any.
-5. **Scenarios & Triggers** — three-path table from Step 5.
-6. **What to Watch Next** — Step 6's 1–3 events.
-7. **Historical Analogs** (optional) — similar cases against other companies + their resolution + market reaction. Use only when an analog clearly fits and is well-documented.
-8. **Data Used** manifest (mandatory).
-9. **References** — every URL.
+1. **Risk Summary** (200–400 words) — **lead with the single most important quantified per-name exposure number as a base + extreme range** (`Base case: revenue -X%, EPS -Y%; extreme case -Z%`), each figure traceable to a source cited in that same sentence (JPM "Global Banks" headlines with HSBC -1.9% rev / -3.9% EPS). Then the case in plain language; what's at stake; current status.
+2. **Scope & Status of the Rule** — Step 1.5's scannable block: effective date, in-scope vs out-of-scope, finalized vs pending implementing rules, issuing body + instrument + deep URL, true-reach bucket.
+3. **Exposure Map** — five-category base+extreme table from Step 3, with EPS derivations shown and the peer-ranking row.
+4. **Evidence Timeline** — table from Step 2.
+5. **Market Pricing** — primary-ticker reactions on key dates + the cross-sectional peer-reaction table + prediction-market price if any.
+6. **Scenarios & Triggers** — table from Step 5, including the `rules-pending` state where applicable.
+7. **What to Watch Next** — Step 6's 1–3 events, each naming the resolving data series / document.
+8. **Historical Analogs** (recommended when a documented precedent exists; optional otherwise) — run as a ranked precedent test: prior analogous rule/case → outcome → market reaction (JPM tests HK property vs the 2004-06 / 2016-18 hiking cycles; MS uses Canada/India/Brazil generics as live read-throughs). Keep the "use only when an analog clearly fits and is well-documented" guardrail.
+9. **Data Used** manifest (mandatory).
+10. **References** — every URL.
 
 ### Step 8 — Verify
 
@@ -241,13 +281,15 @@ Save to `reports/regulatory/<TICKER>_<topic-slug>_<YYYY-MM-DD>.md`. Suggested st
 
 Every report must contain:
 
-1. **Risk Summary** at the top (one bolded sentence + ~200-400 word context).
-2. **Exposure Map** as a five-category table.
-3. **Evidence Timeline** as a chronological table.
-4. **Scenarios** as a three-path table with triggers.
-5. **Watch List** with dated events.
-6. **`## Data Used / 数据来源清单`** manifest.
-7. **`## Guardrails for this monitor`** block.
+1. **Risk Summary** at the top — the bolded lead sentence **must open with the single most important quantified per-name exposure as a base + extreme range** (`revenue -X% / EPS -Y% base, -Z% extreme`), each figure sourced inline — then ~200-400 word context.
+2. **Scope & Status of the Rule** block — effective date, in-scope vs out-of-scope, finalized vs pending implementing rules, issuing body + instrument + deep URL, true-reach bucket.
+3. **Exposure Map** as a five-category table with **base + extreme columns** and the EPS derivation shown in-cell.
+4. **Evidence Timeline** as a chronological table.
+5. **Market Pricing** — primary-ticker grid **plus a cross-sectional peer-reaction table** when peers share the file.
+6. **Scenarios** as a table with triggers, including a **`rules-pending` state** when implementing rules are outstanding.
+7. **Watch List** with dated events, each naming the **resolving data series / document**.
+8. **`## Data Used / 数据来源清单`** manifest.
+9. **`## Guardrails for this monitor`** block.
 
 ### Data Used / 数据来源清单 (mandatory)
 
@@ -286,6 +328,8 @@ Every report must contain:
 - **Do not source agency outcomes to news articles when the actual filing is public.** Cite the docket / press release / court order URL.
 - **Do not confuse different regulators in adjacent jurisdictions.** Each has its own docket, timeline, and remedies.
 - **Do not quantify exposure from sell-side memory.** Revenue / cost / valuation exposure must come from company disclosure, third-party research with a real URL, or be labelled an analyst-built scenario.
+- **Do not blend a sell-side rating / price target into a filing citation.** Surface ratings / PTs (incl. anything from the read-only `db/zsxq.db` library) as `*Analyst view:*` with a deep URL — an overlay on the disclosure, never a substitute for it.
+- **Do not quote a derived EPS / valuation number without showing its inputs.** The exposure cell must carry the `(affected revenue share) × (margin / drop-through)` chain with both inputs cited, so a reader re-derives the figure.
 - **Do not call a probability with single-point confidence.** Three-path scenarios with named triggers replace "this is 80% likely to settle".
 - **Do not skip the prior-disclosure check.** The 10-K Risk Factors language on this category is the company's own framing; quoting it verbatim grounds the analysis.
 - **Do not run destructive SQL against `db/*.db`.** Read-only only. See [`CLAUDE.md`](../../../CLAUDE.md) § "Database Safety".

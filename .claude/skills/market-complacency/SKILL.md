@@ -54,6 +54,8 @@ Twelve indicators across six categories. The "complacency direction" column stat
 | 2 | **IG OAS** (ICE BofA US Corporate) | FRED `BAMLC0A0CM` | **Low** = complacent | Same logic, investment-grade tier |
 | 3 | **CCC OAS** (ICE BofA US CCC & Lower) | FRED `BAMLH0A3HYC` | **Low** = complacent | The weakest tier — the first to widen when the cycle turns. Bottom-decile CCC = the strongest single-indicator complacency tell |
 | 3b | **CCC − HY OAS spread** (derived) | FRED `BAMLH0A3HYC − BAMLH0A0HYM2` | **Low** = complacent | Added in v2 after a backtest showed the original dashboard missed late-cycle credit-tier divergence. When CCC is wide *relative to* HY, the weakest tier is cracking even as broad HY stays tight — historically ~12 months before the 2007 turn and ~6 months before Q4 2018. Today's spread (June 2026) is at the 99th percentile, signaling divergence is in progress. |
+| 3f | **BB − B OAS dispersion** (derived) | FRED `BAMLH0A1HYBB − BAMLH0A2HYB` | **Low** = complacent | Added in v11, mirroring **GS Global Credit Trader's** credit-tier dispersion framework (BB-vs-B differential near record = "quality-chasing within HY"). A *tight* BB−B differential means investors are reaching down the quality ladder for yield — the late-cycle quality-chasing tell that broad HY OAS hides. *Where FRED's post-2023 ICE BofA window blocks the BB/B sub-indices, document the limitation inline (same muscle as the BAA10Y workaround) and fall back to the CCC−HY tier where available.* |
+| 3g | **Rising-star / fallen-angel net $** (narrative) | Moody's / S&P public rating-migration releases (web-searched per run) | wide net-fallen-angel = complacent | Added in v11 as a *narrative cross-check*, not a weighted flag, per **GS Global Credit Trader**. When fallen-angel $ volume exceeds rising-star $ volume while HY OAS stays tight, the weakest credit is migrating *down* even as prices stay calm — the cross-asset divergence diagnostic the skill prizes. Quote the net $ figure with its source-chain link; do not weight it (no clean long-history series). |
 | 3c | **Moody's BAA − 10Y Treasury** | FRED `BAA10Y` | **Low** = complacent | Added in v3. The ICE BofA OAS series (HY/IG/CCC) only go back to 2023-06 because FRED re-licensed them in mid-2023 — they have no pre-2023 history available, even with the FRED API key. BAA10Y is the canonical long-history IG-credit spread (1986-2026, 40 years, 10,000+ daily obs). Correlates 0.56 with IG OAS in their overlap window; runs ~70-80bp wider on average because BAA covers only the BBB tier whereas IG OAS blends AAA/AA/A/BBB. Including it gives the composite a genuine cycle-aware credit signal for pre-2023 dates that the ICE BofA series alone can't provide. |
 | 3d | **Yield curve slope (10Y − 2Y)** | FRED `T10Y2Y` | **Low** = complacent | Added in v4 after reading Citi's BMC report (Jun 5, 2026). FRED daily data back to 1976. The most-cited bear-market lead indicator in finance — the curve has inverted before every US recession since 1969. Citi BMC reference points: Mar 2000 −50bp (red), Oct 2007 0bp (red), Feb 2020 +13bp (amber), Dec 2021 +90bp (off), today +41bp (off in their framework). The percentile-rank treatment in this dashboard captures the "late-cycle flattening" complacency case well; it does NOT cleanly distinguish between "deep inversion = recession warning" and "very steep = early cycle." Acceptable trade-off given a single-axis percentile is the dashboard's data model. |
 | 3e | **S&P 500 Dividend Yield** | multpl.com monthly | **Low** = complacent | Added in v4 from Citi BMC. Long history (back to 1871 via Shiller). Low DY = stocks expensive relative to cash returns. Citi BMC thresholds: amber ~2.1%, red ~1.3%. Today's value 1.06% is at the 10y minimum (100% complacency). The interpretation overlaps with CAPE and ERP but DY is the simplest "yield-on-equity" measure and worth tracking separately because retail investors anchor on it. |
@@ -72,8 +74,12 @@ Twelve indicators across six categories. The "complacency direction" column stat
 | 12 | **NAAIM Exposure Index** | NAAIM weekly (CSV) | **High** = complacent | Active managers' net long exposure; >90 = max-long crowding. Optional — same caveat as AAII |
 | **Valuation (under-pricing through-cycle drawdown)** | | | | |
 | 13 | **Shiller CAPE** (cyclically adjusted P/E) | Shiller's monthly CSV (Yale) | **High** = complacent | Long-cycle valuation; >30 historically associated with thin forward returns. Slow-moving — use as a "background" weight, not a trigger |
+| **Speculative & Leverage Positioning** (added v11 — see § "Learning from sell-side institutional research") | | | | |
+| 14 | **CFTC asset-manager / managed-money net S&P 500 e-mini futures** | CFTC Commitments-of-Traders (free weekly) | **High** net-long = complacent | The single biggest gap-fill. Mirrors **UBS's** "asset-manager S&P 500 futures net long near 10-yr record / 95th percentile" gauge. Percentile-rank the net-long position vs 10y. Restores the positioning axis that is currently dark because AAII + NAAIM both fail to fetch. Source via the free CFTC weekly Legacy / TFF report; cite the report URL and percentile per project rules. |
+| 15 | **FINRA margin debt ÷ S&P 500 level** | FINRA margin-statistics.xlsx (already cached for Figure 2) | **High** = complacent | Promote the already-cached margin-debt series from the Figure-2-only set into the active positioning flag. Mirrors **MS / GS-EM** "margin-financing balances at record" gauge. Margin-debt-to-index near 10y high = leveraged crowding. No new fetch needed — the data is already pulled. |
+| 16 | **CBOE equity put/call (21d MA)** | CBOE equitypc.csv (already cached) | **Low** ratio = complacent | Already cached; promote to the active positioning set. A low 21-day put/call MA = no hedging demand, the options-market positioning corollary of low VVIX. |
 
-**Required vs optional**. Indicators 1–10 are *required* — the composite score must include all ten. Indicators 11–13 are *optional* enrichment — if the upstream CSV is unreachable, drop them from the composite and disclose in the Data Used manifest. Never silently degrade the score without telling the reader.
+**Required vs optional**. Indicators 1–10 are *required* — the composite score must include all ten. Indicators 11–13 are *optional* enrichment — if the upstream CSV is unreachable, drop them from the composite and disclose in the Data Used manifest. Never silently degrade the score without telling the reader. Indicators 14–16 (Speculative & Leverage Positioning, added v11) are also *optional* enrichment: 15 (FINRA margin debt) and 16 (CBOE put/call) reuse data already cached for Figure 2, so they should populate whenever those caches do; 14 (CFTC net-long) requires a fresh weekly pull and degrades gracefully if the COT feed is unreachable. Before adding any of 14–16 to the *weighted* composite, run the standard backtest discipline (see § "Backtest discipline") — until validated, surface them as Figure 2 / narrative flags only, not weighted composite inputs, so the backtest-validated flag set is not diluted.
 
 ### Per-indicator percentile mapping
 
@@ -118,6 +124,36 @@ After computing today's composite, look up the dates in the last 25 years when t
 
 This is **not** a forecast — it's a base-rate reference. Calibration must be explicit: "the dashboard predicted the path *0 of 5 times*; it described the regime *5 of 5 times*."
 
+## Learning from sell-side institutional research
+
+The skill's direct analog is **Citi's Bear Market Checklist (BMC)** — already mirrored in Figure 2's column structure and the flag-count headline. A methodology pass across 38 sell-side complacency reports (Citi BMC, UBS Global Strategy, J.P. Morgan US High Grade Credit, GS Global Credit Trader / Mortgage & Structured Products Trader / Weekly Fund Flows, MS / Bernstein Asia positioning, Nomura macro-stress) surfaced concrete, transferable upgrades. Apply these — they sharpen *what the dashboard reads* and *how the Take is phrased*, without bloating the Citi-style report.
+
+**Add a Speculative & Leverage Positioning category (highest-value gap).** The skill's only positioning inputs (AAII, NAAIM) BOTH fail to fetch (403 / 404), so the entire positioning axis is currently dark — yet **UBS / JPM-Asia / MS** treat positioning percentiles as a *first-class, often leading* complacency signal. Fill it from feeds the skill can actually reach: CFTC Commitments-of-Traders asset-manager net S&P 500 e-mini (UBS's "95th percentile, near 10-yr record" gauge), FINRA margin-debt ÷ S&P 500 (already cached — promote it), and the cached CBOE put/call 21d MA. See INDICATORS rows 14–16.
+
+**Read credit-tier dispersion beyond CCC−HY (GS Global Credit Trader).** The sharpest "quality-chasing inside HY" tell is the BB−B OAS differential, plus a rising-star / fallen-angel net-$ narrative cross-check. A *tight* BB−B differential = investors reaching down the quality ladder; a wide one = the weakest tier cracking under a calm HY headline. See INDICATORS rows 3f–3g. Where the post-2023 ICE BofA FRED window blocks the BB/B sub-indices, document the limitation inline and fall back to CCC−HY.
+
+**Distinguish "tight and complacent" from "tight and earned" (JPM US High Grade core method).** Tight spreads alone don't prove complacency — JPM's whole argument is whether the tightness is *justified* by leverage / coverage / rating migration. In the Figure 2 "Today's calibration" paragraph, pair the credit flag with one free fundamental anchor (FRED nonfinancial-corporate-debt/GDP, or BBB-share-of-IG / Moody's downgrade-upgrade direction). Direction: tight spreads + deteriorating leverage = genuinely complacent; tight spreads + improving coverage = less alarming. Keep to the published-number standard (every figure string-matches its cited URL).
+
+**Always carry a forward, NAMED invalidation trigger (UBS convention).** UBS never ships a complacency read without a specific threshold that would flip the regime ("spreads widen non-linearly IF breakeven inflation breaks 2.65–2.75% or the supply-chain index +1.2σ"). The Citi-style rewrite deleted the old "what would invalidate" block — a real regression vs the analog. v11 re-adds it as ONE sentence at the end of the Dashboard's Take box (see § Output Format block 1). Name the level, the indicator, and where to verify it — not a paragraph.
+
+**Lead the Take with the gauge's own-history percentile, THEN the absolute level (UBS / JPM / Citi house phrasing).** Institutions state the percentile first — "US IG at the 2nd percentile, extremely tight (96bp)" — not "96bp, which is low." The skill already computes percentiles; sharpen the most-stretched-indicators sentence in the Dashboard's Take to name the 1–2 most-stretched indicators' OWN-history percentiles, not just absolute levels.
+
+**Promote index concentration / breadth into the active set (Bernstein Asia Quant, GS / MS strategy).** Every Asia-strategy and quant note leads with concentration (top-5 = 66% of cap; growth-vs-value dispersion at decade extreme). The skill lists "% above 200dma" as backlog but never ships it. Add a top-10 S&P 500 weight or %-above-200dma flag (both computable free) — narrow breadth under new highs is a textbook complacency divergence. See § "BMC indicators" backlog → shipped.
+
+**Add a weekly fund-flow direction read (GS Weekly Fund Flows / JPM EM Money Trail).** Persistent large inflows into risk = complacent; outflows = de-risking. Use a free proxy the skill can fetch (ICI weekly equity-fund flows, or a HYG/LQD/SPY AUM-flow proxy from yfinance), percentile-rank the 4-week trend. "Large weekly outflows historically precede index weakness" (GS). Narrative cross-check, not necessarily a weighted flag.
+
+**Carry the GSCPI macro-stress lead as a narrative cross-check (Nomura).** The NY Fed Global Supply Chain Pressure Index is free (FRED-mirrored) and gives a forward macro-stress read the price series can't see by construction. State Nomura's empirical lead rule with its horizon: "inflation peaks ~6 months after the supply-chain-pressure peak." Use it in the Figure 2 calibration narrative, not as a weighted flag, so it doesn't dilute the backtest-validated flag set.
+
+**Cross-check market calm against consumer-credit delinquencies (GS Mortgage & Structured Products Trader).** A calm-price / rising-delinquency divergence is a documented complacency tell the macro vol/credit series miss. Add a one-line cross-check from free FRED series (credit-card delinquency `DRCCLACBS`, auto delinquency `DRALACBS`); flag the UMich-confidence-vs-delinquency divergence GS highlights. Low weight / narrative only.
+
+**Structural / analytical conventions to mirror, from the analog set:**
+- **Surface cross-category divergence explicitly** (calm vol + cracking credit tier). Both Citi BMC and GS Credit Trader make tier/category divergence the *headline* diagnostic — the skill already prizes this; keep it load-bearing.
+- **Pair each price signal with its fundamental backdrop in the same block** (JPM: "tight spreads + 1.1x leverage") so the reader judges whether tightness is earned.
+- **State empirical lead/lag rules with their horizon** ("inflation peaks ~6mo after GSCPI peak"; "flag count tends to accelerate past 10") so the reader gets a base rate, not a forecast — consistent with the existing "let the calibration table do the analogizing" guardrail.
+- **Treat positioning percentiles and flows as LEADING, not lagging, signals** — UBS notes the largest spread-compression historically happens when CTAs were SHORT, i.e. positioning *context* changes the signal's meaning. Read positioning alongside price, not as confirmation of it.
+
+Implementation order: positioning category (rows 14–16) + credit-tier dispersion (rows 3f–3g) + the named invalidation trigger are the **high-priority** items already wired into the table and Output Format above. The credit-fundamental overlay, fund-flow, GSCPI, concentration, and consumer-credit items are **medium/low-priority narrative cross-checks** — add them in the Figure 2 calibration paragraph or as optional rows, keeping every value percentile-calibrated and source-cited per project rules, and *never* diluting the backtest-validated flag set with unvalidated weighted flags.
+
 ## Data sources (project-specific)
 
 ### Already in `indicators/data_fetcher.py`
@@ -138,6 +174,14 @@ These are pulled by the skill's reusable build script `scripts/build_dashboard.p
 - **Shiller CAPE** — Robert Shiller's Yale spreadsheet at `http://www.econ.yale.edu/~shiller/data/ie_data.xls` stopped refreshing in September 2023. The build script uses [`multpl.com/shiller-pe/table/by-month`](https://www.multpl.com/shiller-pe/table/by-month) as the primary live source (computationally equivalent) and falls back to the Yale spreadsheet only if multpl is unreachable.
 - **AAII Bull-Bear** (optional) — weekly CSV at `https://www.aaii.com/files/surveys/sentiment.xls`. Cache locally; refresh weekly. As of late 2025 the public URL returns HTTP 403 — the build script logs the failure and re-normalizes weights over the active indicators.
 - **NAAIM Exposure** (optional) — weekly XLSX at `https://www.naaim.org/wp-content/uploads/2014/04/NAAIM-Exposure-Index-Data.xlsx`. The legacy public URL currently returns HTTP 404; NAAIM moved distribution behind a member portal. Same graceful-degrade behavior as AAII.
+
+**Positioning, flows & breadth (added v11 — see § "Learning from sell-side institutional research"):**
+
+- **CFTC Commitments-of-Traders** (positioning) — free weekly Legacy / Traders-in-Financial-Futures report (`https://www.cftc.gov/dea/newcot/FinFutWk.txt` and the COT report pages). Pull asset-manager / managed-money net S&P 500 e-mini futures; percentile-rank the net-long vs 10y (UBS "95th percentile" gauge). Restores the positioning axis that AAII + NAAIM leave dark.
+- **Index concentration / breadth** — top-10 S&P 500 weight and/or `% of S&P 500 above its 200-day MA`, both computable free from yfinance constituents (move from the backlog table below into the active set; narrow breadth under new highs is a textbook complacency divergence — every Bernstein / GS / MS Asia note leads with it).
+- **Weekly fund-flow direction** — free proxy via ICI weekly equity-fund flows, or a HYG/LQD/SPY AUM-flow proxy from yfinance; percentile-rank the 4-week trend (GS Weekly Fund Flows / JPM EM Money Trail). Persistent risk-on inflows = complacent. Narrative cross-check.
+- **NY Fed Global Supply Chain Pressure Index (GSCPI)** — free, FRED-mirrored (`GSCPI`). Macro-stress lead with Nomura's "+6-month inflation lead" rule. Narrative cross-check in the Figure 2 calibration, not a weighted flag.
+- **Consumer-credit delinquencies** — FRED credit-card `DRCCLACBS` and auto `DRALACBS` delinquency rates. Calm market prices alongside rising delinquencies = a documented complacency divergence (GS Mortgage & Structured Products Trader). One-line cross-check, not a weighted flag.
 
 ### Derived indicators
 
@@ -264,6 +308,7 @@ Mandatory blocks, in this order:
    - 1-2 sentences on what's contra (yield curve positive, SKEW already bid, etc.)
    - 1 line on action (3-5 verbs)
    - 1 line on empirical base rate at this flag-count range (median fwd SPY, drawdown probability)
+   - **One final line — the named invalidation / non-linear-widening trigger** (re-added in v11; see § "Learning from sell-side institutional research"). Mirror UBS Global Strategy's convention of naming a *specific, sourced threshold* that would flip the regime, e.g. `*Trigger to watch:* HY OAS re-rates if BB−B dispersion breaks its 90th pct or 10s2s re-inverts.` One sentence only — not a return of the multi-paragraph "what would invalidate" block. State the level, the indicator, and where to verify it.
    - **No prose outside this block until after Figure 2.**
    - **Both the composite score and the flag-count chart are forbidden.** The composite is hand-weighted noise (backtest verified: max lift 0.68× at 90d / 0.98× at 180d). The flag-count chart was the proposed replacement (Figure 1 in v8) but the user rejected it in v9 as "inaccurate" — Plotly annotation positions drifted from the data, the "Now" arrow pointed off the actual data point, and the reference-line labels collided at the bottom of the chart. **Neither chart appears in the report.** The build script's `_make_composite_html` and `_make_flag_count_html` are no longer called.
 
@@ -283,7 +328,10 @@ Mandatory blocks, in this order:
 
    **Never use vague placeholders like "high" / "low" / "mid" when concrete numbers exist.** For each historical column, either (a) cite Citi BMC Figure 2's published number directly (Citi published the actual figures for valuation / M&A / IPO / RoE / capex / credit spreads — use them), (b) compute from the long-history source (Margin Debt from FINRA xlsx; HYG/LQD from yfinance for dates after HYG launched April 2007; BAA10Y from FRED back to 1986), or (c) explicitly cite the data limitation in italics next to the indicator name when no value is available (e.g., *"ICE BofA only 2023+"* or *"HYG launched April 2007"*).
 
-   End with a 2-sentence "Today's calibration" paragraph: which historical references today matches, and what makes today distinctive (e.g., "no clean historical precedent — past bears started with one or the other, not both").
+   End with a "Today's calibration" paragraph: which historical references today matches, and what makes today distinctive (e.g., "no clean historical precedent — past bears started with one or the other, not both"). v11 adds two required clauses, drawn from the sell-side analog set (see § "Learning from sell-side institutional research"):
+   - **State the 1–2 most-stretched indicators' OWN-history percentiles FIRST, then the absolute level** (UBS / JPM / Citi house phrasing: "US IG at the 2nd percentile, extremely tight (96bp)" — percentile before level).
+   - **Pair the credit flag with one free fundamental anchor** so the reader can judge whether tight spreads are *earned* or *complacent* (JPM US High Grade method): cite FRED nonfinancial-corporate-debt/GDP, or BBB-share-of-IG / Moody's downgrade-upgrade direction. Tight + deteriorating leverage = genuinely complacent; tight + improving coverage = less alarming. Keep to the published-number standard (every figure string-matches its cited URL).
+   - *Optional narrative cross-checks* (use when they sharpen the read, never as weighted flags): the NY Fed GSCPI macro-stress lead ("inflation peaks ~6mo after the supply-chain-pressure peak", Nomura) and the calm-price / rising-consumer-delinquency divergence (FRED `DRCCLACBS` / `DRALACBS`, GS Mortgage & Structured Products Trader).
 
 3. **`## Under the Hood`** — sequence of 8-12 small charts with one-line captions only. NO narrative paragraphs between charts. Charts in order: long-history credit (BAA−10Y), IG credit tiers (AAA + BAA + dispersion), CAPE, ERP, VIX/VVIX, VIX term slope, MOVE, per-indicator bars. Each rendered by `scripts/build_dashboard.py` into `reports/charts/`.
 
@@ -314,7 +362,7 @@ The following blocks from prior iterations are explicitly *forbidden* in the new
 - ❌ Long "Composite Score Decomposition" tables — implicit in Figure 2 calibration. If the reader wants the weighted math, they can run the script.
 - ❌ Long "Cross-Asset Signature" narrative paragraphs — collapsed into the Dashboard's Take + Figure 2.
 - ❌ "What This Verdict Is NOT" multi-paragraph block — collapsed into the Caveats list.
-- ❌ "What Would Invalidate This Read" multi-paragraph block — collapsed into Caveats.
+- ❌ "What Would Invalidate This Read" multi-paragraph block — collapsed into Caveats. **Exception (v11):** the single named invalidation / non-linear-widening trigger line at the *end of the Dashboard's Take box* IS permitted and required — that one sentence is the UBS-style forward trigger, not the old multi-paragraph block. The ban is on the prose section, not on the one-line threshold.
 - ❌ Separate "Comparison to Citi BMC" section — Citi reference is implicit in Figure 2's column structure and one line in Caveats.
 - ❌ Multiple postscript blocks documenting version-history — those belong in git commit messages and CHANGELOG, not in the live report.
 - ❌ Per-chart narrative paragraphs interspersed between Under-the-Hood charts.
@@ -460,6 +508,15 @@ Citi's explicit guidance: "once the count reaches double digits, it has historic
 
 The annual data is forward-filled to monthly in the build script (`scripts/build_dashboard.py` `fetch_ipo_pct` / `fetch_ma_pct`). The percentile rank is computed against the trailing 10y monthly window so the indicator behaves like every other one in the composite. **Note that today's readings (IPO 7th decile, M&A 8th decile) are NOT complacent** — deal-making activity in 2026 is well below 2021 peaks despite valuation extremes.
 
+**Promoted to active candidates in v11 (free feeds confirmed reachable — see § "Learning from sell-side institutional research"):**
+
+| Citi BMC factor | This dashboard equivalent | Data source |
+|---|---|---|
+| Speculative positioning | CFTC asset-manager net S&P 500 e-mini futures, percentile-ranked vs 10y (UBS "95th pct" gauge) | [CFTC Commitments-of-Traders weekly](https://www.cftc.gov/dea/newcot/FinFutWk.txt) |
+| (Levkovich component) Margin debt | Promote the already-cached FINRA margin-debt ÷ S&P 500 from Figure-2-only into the active positioning flag (MS / GS-EM "margin balances at record") | [FINRA margin-statistics.xlsx](https://www.finra.org/sites/default/files/2021-03/margin-statistics.xlsx) |
+| Index concentration / breadth | Top-10 S&P 500 weight and/or % above 200dma (Bernstein Asia Quant; narrow breadth under new highs) | yfinance constituents — computable free |
+| Equity Fund Flows | 4-week equity-fund flow trend, percentile-ranked (GS Weekly Fund Flows / JPM EM Money Trail) | ICI weekly equity-fund flows, or HYG/LQD/SPY AUM-flow proxy (yfinance) |
+
 **Still in the backlog (need paid feeds or non-trivial engineering):**
 
 | Citi BMC factor | Tried | Status |
@@ -468,7 +525,6 @@ The annual data is forward-filled to monthly in the build script (`scripts/build
 | Aggregate RoE | yfinance per-constituent rollup; SPDR S&P 500 fundamentals page | 500-ticker rollup expensive; need a cached pipeline. Backlog. |
 | Analyst Bullishness | Refinitiv I/B/E/S | Paywall |
 | Levkovich Index | Citi proprietary | Components partly approximated by margin debt + put/call; full reconstruction needs ETF flows + analyst data |
-| Equity Fund Flows | Lipper, EPFR, ICI | ICI has monthly mutual-fund flow data free but not equity-specific in tractable format |
 | Asset/Equity (Financials) | XLF holdings, FactSet | XLF rollup computable but per-constituent balance-sheet data needed |
 | Net Debt/EBITDA (ex-Fins) | FactSet | Paywall |
 

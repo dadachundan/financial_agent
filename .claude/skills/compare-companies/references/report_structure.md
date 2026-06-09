@@ -53,6 +53,16 @@ Embed Mermaid blocks + 1–2 matplotlib PNGs for quantitative trends. Every char
 
 Three sharp options: pick A for ___, pick B for ___, or *both* (the dual-vendor reality common in duopolies). Avoid both-sidesism ("both have merit") — the reader came for a recommendation framework, not equivocation.
 
+**Order-of-preference line — required, immediately after the "Who is each one for?" paragraph (Required deliverable 8):**
+
+A single committed ordinal line ranking the N names by conviction, modeled on Morgan Stanley's "Order of Preference" spine in "China and the Miners" (`BHP > DRR > RIO > FMG`, with a `#1 most preferred` tag and a one-clause why per name). Format:
+
+```markdown
+**Preference order:** A > C > B — **#1 A** (preferred because <one clause with a number>); **C** (<one clause>); **B** (least preferred because <one clause>).
+```
+
+Use `A and B co-equal > C` when two genuinely tie. This is a *relative ranking of conviction*, not a sized trading call — no dollar price target, no Buy/Hold/Sell on a single name. The no-hedge-word rule applies in full: you must commit to an order; "arguably", "slightly", "could" disqualify the line. Lead each name's body treatment (§1 onward) with the same one-line "preferred because / least-preferred because" clause before the evidence (mirror DB's one-sentence tag "top-five cobot maker, most profitable HK-listed robot name").
+
 **Worked example:** [`reports/compare/SNPS_vs_CDNS.md`](../../../../reports/compare/SNPS_vs_CDNS.md) — the canonical TL;DR for SNPS vs CDNS, with 7 advantages × 6 disadvantages per side, all referenced into §1–§10.
 
 ### §1 — One-line self-description (200–400 words)
@@ -96,6 +106,30 @@ A `mermaid xychart-beta` bar chart of FY revenue by segment for each side (so th
 | Other regionally material lines | ... | ... | ... |
 
 Then a paragraph per side walking the segment structure with citation to the segment-reporting note in the 10-K.
+
+### §4.5 — Relative-valuation scoreboard (300–500 words for N=2; 400–700 for N≥3) — Required deliverable 7
+
+The institute spine the base structure lacked: a side-by-side multiples table. **Place it at the top of the report with the TL;DR / scoreboard cluster** (the multiples + the rating + the next catalyst are what a desk reads first), with a back-reference here so the §4 financial scoreboard and this valuation scoreboard sit adjacent.
+
+**Format — one row per name × the standard multiple columns, plus a peer-median and a 3-yr-range column:**
+
+| Name | Fwd PE | P/S | EV/EBITDA | PEG | Div yield | FCF yield | Peer median (this row's primary multiple) | 3-yr range (this row's primary multiple) |
+|---|---|---|---|---|---|---|---|---|
+| **A (TICKER)** | ... | ... | ... | ... | ... | ... | ... | ... |
+| **B (TICKER)** | ... | ... | ... | ... | ... | ... | ... | ... |
+| **C (TICKER)** (N≥3) | ... | ... | ... | ... | ... | ... | ... | ... |
+
+Then a paragraph that does three things, mirroring Deutsche Bank's Huayan Robotics note:
+
+1. **States which multiple is the fair yardstick for THIS pair and why** — EV/Sales for pre-profit names, EV/EBITDA in capex-heavy regimes (Barclays "Pricing a capex supercycle" shows EV/EBITDA / EV-EBIT beats PE cross-sectionally there), PEG for high-growth, PE for stable cash compounders. Don't default to PE silently.
+2. **Benchmarks each name against the others and the peer median in one breath** — DB justifies Huayan's target P/S 12× *against* Dobot 15× / HK-peer-avg 12× / global-cobot-median 50×, not in isolation.
+3. **Concludes whether the premium/discount is justified** by the moat/growth differential surfaced in §5 — the reconciliation the moat section opens but never closes ("A trades 30% above B on EV/EBITDA; given A's 8pp-higher recurring mix and 2× backlog coverage from §5.2, that premium is *deserved* / *not deserved*").
+
+**Citation discipline (the existing rules, applied here):**
+- Every multiple cites a **deep URL that literally contains the number** as of a stated date — Yahoo Finance / Eastmoney / Kabutan / Naver quote page. Not a homepage.
+- **The analyst's own model is never the source.** Cite the filing for the inputs (revenue, EBITDA, share count) and the quote page for the price; never "(our model)".
+- **Mismatched fiscal-period ends disclosed in-cell** (A's FY24 forward vs B's FY25 forward).
+- **Anchor the verdict on the forward path, not just trailing** — tie the relative multiple to each name's 1–3yr forward CAGR / margin trajectory (DB: Huayan 55% rev CAGR 2025-28E, NPM to ~10% by 2028E), each forward figure cited to the filing/guidance it came from.
 
 ### §5 — The moat anatomy (1,800–3,000 words) — THE LONGEST SECTION
 
@@ -142,6 +176,22 @@ The scorecard's job is to give a senior reader a 60-second overview. Lead with t
 4. (N=4) "Company D is betting…" — same shape.
 
 Then a closing paragraph that names **the specific catalyst** (event, date, KPI) that will move each verdict in the next 4–8 quarters. For N≥3, name which side wins under which observable condition (e.g. "If hyperscaler customers continue pulling fine-tuning workloads onto open-format lakes, A wins; if enterprise IT continues consolidating into SQL-first cloud DW, B wins; if existing OLTP customers reject moving to a separate analytics stack, C wins."). Avoid both-sidesism and all-N-sidesism — name the catalyst per side.
+
+**Catalyst-differential table — required (Required deliverable 9):** turn the prose "what to watch" into a per-name dated table so the reader sees which name has the nearer-term swing factor, modeled on JPM's "Positive Catalyst Watch" (QCOM June 24 Investor Day) and DB Huayan's dated list ("1H26 results Aug; Stock Connect inclusion early Sept"):
+
+| Catalyst type | A (TICKER) | B (TICKER) | C (TICKER) (N≥3) |
+|---|---|---|---|
+| Next results date | 2026-08-12 (est.) | 2026-07-31 | ... |
+| Investor / analyst day | 2026-06-24 | none scheduled | ... |
+| Index-inclusion window | — | Stock Connect early Sept 2026 | ... |
+| Product launch / data readout | <named, dated> | <named, dated> | ... |
+| Regulatory decision | <named, dated> | — | ... |
+
+Source each catalyst to the company IR calendar or a dated filing (freshness + deep-URL rules apply). No undated entries — every cell carries a date, a dated window, or `—` (none in the horizon).
+
+**"Priced in?" line — required in each name's posture paragraph:** state whether that name's edge is already reflected in its relative multiple (cross-reference §4.5), mirroring Morgan Stanley ("TCL valuation already reflects the panel up-cycle") and Barclays ("current price hugs target"). A "winner" whose edge is fully priced is a different conclusion from one trading at a discount to its franchise — say which. This is a relative-price observation, not a sized trading call.
+
+**Optional — Relative-positioning / pair-trade lens:** when the N names are genuine substitutes, add one paragraph framing the preferred name as the long and the least-preferred as the funding leg, modeled on GS Japan SMID (long shareholder-benefit + ≥3% div / short no-benefit low-div) and JPM China Quant (long +3% / short −4.2% / L/S +7.2%). State the explicit thesis for why the spread should converge or diverge, cite the two names' trailing relative return to a deep URL, and name the single observable that would invalidate the spread. **Label it a relative-positioning observation, not a sized trade** — no notional, no leverage, no entry/stop. This stays inside the skill's no-sized-trading-call boundary while delivering the natural actionable output of a "who wins" comparison.
 
 ### Data Used / 数据来源清单 (mandatory — between §10 and References)
 
@@ -204,6 +254,8 @@ Every entry is a markdown link with a date in the title where the source has a p
 
 - [ ] **§0 TL;DR table** (3-col advantages/disadvantages) — placed before §1
 - [ ] **§0 "Who is each one for?" paragraph** — three sharp options, no both-sidesism
+- [ ] **§0 Order-of-preference line** — committed ordinal ranking (`A > C > B`), one-clause why per name, no hedge words (Required deliverable 8)
+- [ ] **§4.5 Relative-valuation scoreboard** — multiples table (fwd PE / P/S / EV/EBITDA / PEG / div yield / FCF yield) + peer-median + 3-yr-range columns, fair-yardstick paragraph, premium-justified-or-not verdict (Required deliverable 7)
 - [ ] §1 framing table (verbatim 10-K language)
 - [ ] §2 mermaid timeline of strategic pillars
 - [ ] §3 AI side-by-side (tool / tailwind)
@@ -219,6 +271,8 @@ Every entry is a markdown link with a date in the title where the source has a p
 - [ ] §7 debt / buyback / dividend table
 - [ ] §8 distinctive risks table
 - [ ] §9 scorecard table
+- [ ] **§10 Catalyst-differential table** — per-name dated catalysts (results / investor day / index inclusion / launch / regulatory), every cell dated or `—` (Required deliverable 9)
+- [ ] **§10 "Priced in?" line** in each name's posture paragraph — cross-references §4.5
 
 If a comparison runs in a non-semis domain (consumer brands, biotech, industrial), adapt §5.3 to channel partners / payer formularies / OEM design-ins instead of foundry certifications. The structural question — *what makes a customer's switch costly* — is the same.
 

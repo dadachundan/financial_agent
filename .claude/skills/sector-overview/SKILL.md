@@ -13,6 +13,19 @@ description: Create comprehensive industry and sector landscape reports covering
 
 ## Workflow
 
+> **House-style templates:** the durable sell-side schemas referenced throughout the workflow below (Industry-View rating scale, bolded executive lead-in layer, top-picks table, value-chain priced table, supply/demand-balance template, believe-X/show-Y debate template, "What's Changed" box) are collected in [`references/house_style.md`](references/house_style.md). Reuse them rather than re-deriving each run.
+
+### Step 0: Verdict & Industry View header (mandatory — write this first)
+
+Mirror the **Morgan Stanley / GS / Citi sector-note signature**: institutions open on a *stance*, not on scope. Before any prose, the report carries a header block:
+
+- **Sector Verdict** — one directional line carried in the report *title* where possible (Citi "Prefer Sungrow & Deye"; GS "Stronger, Broader Capex Boom"; HSBC "Our top pick in the China DC sector"). A neutral landscape essay still gets a one-line house take.
+- **Industry View** — a fixed 3-tier rating on the MS scale: **Attractive / In-Line / Cautious**. State it explicitly; do not bury it in prose.
+- **As-of date** — the report is a living document (see update-in-place rule); date the stance.
+- **4–6 bolded, verb-first executive lead-in bullets** that each map to a body section (MS pattern: "**Upgrading…**", "**Accelerating…**", "**Prefer X over Y…**", "**Key debate we resolve…**", "**Keep OW on…**"). This scannable executive layer is the single most consistent structural signature across the MS/GS/Citi/UBS library — make every bullet telegraphic and section-anchored.
+
+Keep ratings traceable: a sell-side firm's "Attractive" stays *Analyst view:* unless self-derived from the evidence in this report.
+
 ### Step 1: Define Scope
 
 - **Sector / subsector**: What industry and how narrowly defined?
@@ -24,14 +37,25 @@ description: Create comprehensive industry and sector landscape reports covering
 ### Step 2: Market Overview
 
 **Market Size & Growth**
-- Total addressable market (TAM) with source
+- Total addressable market (TAM) with source. Present TAM as a forward, sourced, *revisable BUILD* — not a static number (Nomura/DB style: "2030 China DC power 805 TWh, **+46% vs prior**, = 6% of national load"). State the % revision and the base; never a bare TAM. (Reinforces — does not loosen — the no-invented-TAM guardrail.)
 - Historical growth rate (5-year CAGR)
 - Forecast growth rate and key assumptions
-- Market segmentation (by product, geography, end market, customer type)
+- **Decompose any sector-health print into price vs volume** (Bernstein WSTS style: "revenue +106% YoY but units flat — driven by ASP, memory +364%"). Never quote a sector growth number without splitting price from volume.
+- **Benchmark every MoM/YoY against the typical seasonal pattern or 10-yr average** (SIA style: "−2.2% MoM vs −11.3% typical"). A growth print with no cycle/seasonality anchor is incomplete.
+- Market segmentation (by product, **geography/region as a first-class axis**, end market, customer type). Where the sector splits by region — capacity by country, export share by market, hub-by-hub demand — require a region-by-region breakdown (UBS China-vs-Indonesia-vs-Middle-East aluminum; ASEAN hub-by-hub IDC; autos export-share-by-market), not geography as one throwaway dimension.
+
+**Supply / Demand Balance** (distinct from the TAM section)
+
+Build the supply side *symmetrically* against demand drivers — UBS/Bernstein style:
+- Capacity adds in native units (kwpm / GW / Mt / MW pipeline), **by region and by year** (fab-by-fab kwpm roadmaps; national capacity ceilings like China aluminum 45.5/46Mt; ASEAN IDC 2–3GW/yr net adds).
+- State the resulting **gap** between supply build and demand growth.
+- Where relevant, spell out the **"new supply compresses returns / success cannibalizes IRR"** dynamic (Bernstein primer signature).
+- Quantify penetration-rate and share trajectories with explicit years (NEV penetration 60% 2026; L2+ ADAS 32% 2026; export share 15%→16.5% by 2030) — not vague "who is gaining share".
 
 **Industry Structure**
 - Fragmented vs. consolidated — top 5 market share
-- Value chain map — where does value accrue?
+- **Value chain — walk it node-by-node as a PRICED/TIERED table, not a single bullet.** Each node: who plays | where margin accrues | unit price / economics (Citi solar poly→wafer→cell→module ¥/W; IDC colocation vs neocloud $/MW capex + payback; 托管 vs Neocloud revenue 8–10×). The point is to show *where* margin pools, with numbers at each node.
+- **Sub-segment ranking (mandatory, explicit, ordered).** Rank the sub-segments by attractiveness with a one-line *why* each — GS "prefer DESS over modules"; "cloud semis > legacy memory > PC semis"; Citi "prefer Sungrow & Deye". An ordered preference is required; generic "segmentation" is not a ranking.
 - Business model types (subscription, transaction, licensing, services)
 - Barriers to entry (capital, regulatory, technical, network effects)
 
@@ -44,11 +68,17 @@ description: Create comprehensive industry and sector landscape reports covering
 
 ### Step 3: Competitive Landscape
 
-**Company Profiles** (for top 5-10 players):
+**Top-picks table** (for top 5–10 players) — every UBS/Citi/GS note ends here. Use the institutional column set, not a bare landscape grid:
 
-| Company | Revenue | Growth | EBITDA Margin | Market Share | Key Differentiator |
-|---------|---------|--------|--------------|-------------|-------------------|
-| | | | | | |
+| Ticker | Rating | 12m Target Price | Upside % | Valuation method | One-line rationale | Up-risk / Down-risk |
+|--------|--------|------------------|----------|------------------|--------------------|---------------------|
+| | | | | | | |
+
+- **Valuation method travels with the number, in the cell** (UBS/Citi style: "2027E 28x PE" / "DCF, WACC 9%, terminal 4%" / "EV/EBITDA discount to peer"). Tag the multiple year (2027E PE 28x).
+- **Pair up-risk AND down-risk per name** — never a one-sided risk list.
+- Keep every TP / multiple traceable to a cited source per the project's numerical-accuracy rule (the number must string-match the cited URL). **Label any sell-side rating / TP as `*Analyst view:*` unless self-derived** from this report's own evidence.
+
+A fuller business descriptor still follows below the table; the table is the scannable verdict layer.
 
 For each company, brief profile:
 - Business description (2-3 sentences)
@@ -67,12 +97,19 @@ For each company, brief profile:
 - Premium/discount drivers (growth, margins, market position)
 - Recent M&A transaction multiples
 - How does the sector compare to the broader market?
+- **Project-level unit economics alongside trading multiples** — where the sector is project/asset-based (energy, IDC, mining, capital equipment), don't stop at multiples. Require sourced **IRR** (BESS 8–12%), **ROIC** (ASEAN IDC 9–12%), **capex per unit** ($8–15M/MW colocation vs $45M neocloud), **payback** (~5yr), and the **build-cost path** ($7000→$3000/kW) — the Bernstein/UBS economics-first primer signature. Keep the multiples too; add the economics.
+- **Position house numbers against the street** (forecast-revision discipline): state prior estimate, new estimate, the driver, and the resulting EPS/OP delta vs consensus ("2027 OP +12% above Bloomberg consensus").
 
 ### Step 5: Investment Implications
 
 - Where are the best risk/reward opportunities?
 - What thematic bets can be expressed through this sector?
-- Key debates in the sector (bull vs. bear arguments)
+
+**Key Debates We Resolve** (its own numbered sub-section — the report's spine, not a thin bullet)
+
+Frame 2–4 named debates as **"the market believes X; the evidence shows Y"** (MS "Hefei Paradox": market believes X, we show Y; Nomura: "a 2–3 year transition before industrial AI scales"). Give each debate a stance and the *data that settles it*. This is the institutional analog of bull/bear — promote it above a generic bull-vs-bear list.
+
+- **Scenario / timeline framing for the cycle** — dated milestones, not vague "long-term": "transition 2–3 years then inflection"; "risk-off until shaft-sinking de-risks ~mid-2027".
 - Catalysts that could change the sector narrative
 
 ### Step 6: Output
@@ -98,9 +135,11 @@ A structured manifest of evidence categories + dates + freshness. Goes immediate
 
 **Market sizing**
 - Gartner / IDC / IBISWorld / IQVIA / Yole / TrendForce report titles + publication dates + URLs. Note the TAM / SAM / SOM scope of each.
+- **Prefer recurring industry-body datasets as the named spine** for sizing/health claims — institutions anchor every sector claim to one: WSTS / SIA monthly semis sales, SEMI WFE forecasts, TrendForce / TSR storage-production trackers, IPnest / Gartner / IDC share trackers, Riglogix offshore-rig day-rates & utilization, SCFI / Shanghai freight indices. Cite the tracker (with the print date), not the firm homepage.
 
 **Growth & forecasts**
 - Each forward growth rate cited to a named research firm or company-disclosed projection with publication date. Recent industry-research notes (last 12 months) preferred.
+- **Channel checks / expert calls / conference takeaways are cited as dated, attributed evidence — not unsourced "analyst view"** ("visited 8 listed solar firms + ~20 supply-chain experts at SNEC, June 3–5"; "industry checks indicate…"). Make the check a citation: date + venue + who. Conference reads (COMPUTEX, GTC, SNEC, AIC, EU Auto Conf) are a recurring, legitimate sector-read vehicle when sourced this way.
 
 **Competitive landscape**
 - Top 5–10 players covered — each anchored to their latest 10-K / 年度报告 / Yuho (filing date) and IR materials (deck dates). Recent M&A transactions cited to press releases.
@@ -128,10 +167,22 @@ ls reports/sector/ 2>/dev/null | grep -i "<topic-slug-or-keyword>"
 
 If the user asks for a clearly different angle on the same sector (e.g. "China robotics — *export* angle" vs. an existing "China robotics — *domestic adoption* angle"), use a distinct `<topic-slug>` so the reports stay separate. The "one per topic" rule applies per topic-slug, not per sector.
 
+**"What's Changed" revision box (required when refreshing an existing report).** Sector primers are living documents; the delta is the value. When updating in place, surface an old-vs-new box near the top — TAM / CAGR / top-pick ratings / target prices side by side, each with the driver (Nomura forecast-revision table style: "we raise 2026 WFE from $143bn to $149bn (+27% YoY)… **driver:** memory capex"). This operationalizes the update-in-place rule — don't silently overwrite the old numbers.
+
+```markdown
+## What's Changed (since <prior as-of date>)
+| Metric | Old | New | Driver |
+|--------|-----|-----|--------|
+| TAM (2030) | … | … | … |
+| Sector CAGR | … | … | … |
+| Top pick / rating | … | … | … |
+| 12m TP (<name>) | … | … | … |
+```
+
 ## Important Notes
 
 - Source all market size data — cite the research firm or methodology
 - Distinguish between TAM hype and realistic addressable market
 - Sector overviews age fast — note the date and flag data that may be stale
-- Charts are essential — market size waterfall, competitive positioning matrix, valuation scatter plot
+- Charts are essential — market size waterfall, competitive positioning matrix, valuation scatter plot, **region/hub capacity-vs-demand bars** (where the sector splits by geography). Every chart carries the project's mandatory in-chart data-source footer annotation and, for multi-series charts, an x-axis clipped to the intersection of all plotted series (see global chart rules in `CLAUDE.md`).
 - If for a client, tailor the "so what" to their specific situation (M&A target identification, competitive positioning, market entry)

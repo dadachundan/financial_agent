@@ -10,16 +10,21 @@ This document provides complete page-by-page templates and formatting requiremen
 
 ## PAGE 1: EARNINGS SUMMARY
 
-**Top Section - Header:**
+**Top Section - Header (JPM `Price (date) / Prior PT` convention):**
 ```
 [COMPANY NAME] ([TICKER])
-[QUARTER] [YEAR] EARNINGS UPDATE
+[QUARTER] [YEAR] EARNINGS UPDATE — [verdict + action, e.g. "Broad-based beat and raise; Reit OW, PT to $502"]
 
 [Current Date]
 
+ACTION HEADER (line 1 — all five elements):
+[Maintain/Raise/Lower] [Rating]; PT $XXX → $YYY (+ZZ% vs $WW.WW close [date]); [valuation basis, e.g. 17.3x FY27E EPS]
+
 Rating: [MAINTAIN/RAISE/LOWER] [RATING]
-Price (as of [date]): $XX.XX
-Price Target: [OLD → NEW if changed, or MAINTAIN $XXX]
+Price (as of [date]): $XX.XX          ← always date the price
+Prior PT: $XXX  →  New PT: $YYY        ← always show the move
+Implied upside: +ZZ% (vs dated close above)
+Valuation basis: [multiple × out-year EPS / SOTP / DCF]
 ```
 
 **Top Section - Quick Summary Box:**
@@ -65,22 +70,40 @@ view.
 [Investment conclusion paragraph...]
 ```
 
-**Bottom Section - Updated Estimates Table:**
+**Bottom Section - Key Changes / Updated Estimates Table (boxed, page-1 anchor — not an afterthought):**
+
+This is the **structural anchor** of the page, modeled on JPM's boxed "Key Changes" header table. Lead it with a **one-line headline magnitude statement** carrying a result-driven reason, then the boxed Prev / Cur / %Chg table.
 
 ```
-UPDATED FINANCIAL ESTIMATES
+HEADLINE: FY27/28/29 Adj EPS raised an avg +41% on stronger AI-server scale and DRAM pricing pass-through.
+          ← magnitude + direction + RESULT-driven reason (never "our model")
+
+KEY CHANGES (FYE [month]) — boxed
 ─────────────────────────────────────────────────────────────────
-                     FY2024E (OLD)  FY2024E (NEW)  Change  FY2025E (NEW)
+                     FY2024E (OLD)  FY2024E (NEW)  %Chg    FY2025E (NEW)
 Revenue ($M)         XX,XXX         XX,XXX         +X%     XX,XXX
 Revenue Growth (%)   X.X%           X.X%           +XXbps  X.X%
 Gross Margin (%)     XX.X%          XX.X%          +XXbps  XX.X%
 EBITDA ($M)          X,XXX          X,XXX          +X%     X,XXX
 EBITDA Margin (%)    XX.X%          XX.X%          +XXbps  XX.X%
-EPS (Adjusted) ($)   X.XX           X.XX           +X%     X.XX
+Adj EPS ($)          X.XX           X.XX           +X%     X.XX
 P/E (x)              XX.Xx          XX.Xx          -X%     XX.Xx
 
 Note: "E" = Estimate. Old estimates from [prior report date].
 Source: Company data, [Firm Name] estimates.
+```
+
+**Quarterly Forecasts grid (JPM standard) — EPS-by-quarter forward grid with A/E flags carried across years.** Distinct from the QoQ revenue-progression table on Pages 2-3; this one carries Adj EPS forward and flags the just-reported quarter "A":
+
+```
+QUARTERLY FORECASTS (Adj EPS)
+─────────────────────────────────────────────────────────────────
+              Q1        Q2        Q3        Q4        FY
+FY24          X.XX(A)   X.XX(A)   X.XX(A)   X.XX(A)   X.XX(A)
+FY25          X.XX(A)   X.XX(A)   X.XX(A)←  X.XX(E)   X.XX(E)   ← reported quarter flagged "A"
+FY26          X.XX(E)   X.XX(E)   X.XX(E)   X.XX(E)   X.XX(E)
+
+Source: [Firm Name] estimates.
 ```
 
 ---
@@ -152,23 +175,43 @@ Key Drivers:
 Source: Company reports
 ```
 
-### Guidance & Outlook (1 page)
-- What guidance was provided (if any)
-- Comparison to prior guidance
-- Comparison to Street estimates
-- Our assessment of achievability
-- Key assumptions
+**Forward-visibility metrics (the leading indicators the banks lead with — add where disclosed):**
 
-**If guidance provided:**
+- **Backlog / bookings / order-book** — a leading indicator distinct from revenue (Dell $51.3B AI backlog, +$24B new orders this quarter; Broadcom $60bn POs with a by-customer GW schedule). Show the level, the sequential add, and book-to-bill if derivable. If the company doesn't disclose it, say so.
+- **Per-unit economics by quarter** — for platform / turnaround names, the unit-economics trajectory IS the thesis (Meituan per-order profit Rmb/order by quarter; DiDi China-mobility per-order EBITA margin 4.6%). Add a unit-economics row trending the per-unit number toward breakeven.
+
 ```
-MANAGEMENT GUIDANCE vs. ESTIMATES
+FORWARD VISIBILITY
 ─────────────────────────────────────────────────────────────────
-                     New Guidance    Old Guidance    Change    Street
-FY2024E Revenue      $XX-XXB         $XX-XXB         Raised    $XX.XB
-FY2024E EPS          $X.XX-X.XX      $X.XX-X.XX      Raised    $X.XX
+                        Q[X-3]  Q[X-2]  Q[X-1]  Q[X]    QoQ add
+Backlog / bookings ($M) XXX     XXX     XXX     XXX     +XXX
+Per-order profit (Rmb)  X.X     X.X     X.X     X.X     —       ← path to breakeven
+Book-to-bill (x)        X.X     X.X     X.X     X.X
 
-Our Take: [Brief assessment of guidance]
+Source: Company reports / earnings call
 ```
+
+- **Path-to-normalized-profit bridge** — for loss-making / turnaround names, state the out-year normalized number with its build (UBS Meituan FY28 normalized Rmb42bn = delivery 27 + IHT 22 − new initiatives −7). See workflow.md Step 9.
+
+### Guidance & Outlook — a CO-EQUAL block, not a footnote (1 page)
+
+**The forward guide is frequently the real story while the print is table stakes** (GS Dell, DB Oracle, Broadcom FQ3). Treat the guidance block as **co-equal with the print block** — and split it into **next-quarter** and **full-year**, each shown **three ways: vs prior guide, vs Street, AND vs our model**, with a one-line achievability take. This is the GS/DB standard the skill previously folded into a single table.
+
+**If guidance provided — GUIDANCE vs PRIOR vs STREET vs OURS:**
+```
+GUIDANCE vs PRIOR vs STREET vs OURS
+─────────────────────────────────────────────────────────────────
+                     New Guide       Prior Guide   vs Street   vs Ours
+NEXT-QTR Revenue     $XX-XXB (mid $X) $XX-XXB       +X% vs $X   +X% vs $X
+NEXT-QTR EPS         $X.XX-X.XX       n/a           +X% vs $X   +X% vs $X
+FY Revenue           $XX-XXB (mid $X) $XX-XXB       +X% vs $X   +X% vs $X
+FY EPS               $X.XX-X.XX       $X.XX-X.XX    +X% vs $X   +X% vs $X
+
+Our Take (achievability): [one line — sandbag/stretch read vs track record;
+  and, for up-cycle raises, the binding constraint: supply- vs demand-constrained]
+```
+
+Note the explicit **guide-midpoint** column — beat/miss must be triangulated against YoY, our estimate, AND the guide midpoint (Bernstein/DB/GS lead with the midpoint). For the credibility / sandbag-vs-stretch and supply-vs-demand framing behind "Our Take", see workflow.md Step 8.
 
 **Embed 2-3 charts:**
 - Chart 4: Key metrics trends
@@ -183,6 +226,8 @@ Our Take: [Brief assessment of guidance]
 
 For each key thesis pillar, assess impact of results:
 
+**Where the call hinges on market share, state the number and trajectory — not qualitative prose** (MS: Broadcom ASIC ~80% long-run share vs MediaTek+Google 15-20%; Marvell 60-65% in 1.6T DSP). Replace "we believe [Co] is gaining share" with a quantified share line + direction.
+
 ```
 ■ **Thesis Pillar 1: [Original thesis statement]**
 
@@ -190,7 +235,8 @@ Status: [STRENGTHENED / UNCHANGED / WEAKENED]
 
 Q[X] results [supported / challenged] this thesis pillar because [specific
 evidence from results]. [Detailed analysis of 150-200 words explaining how
-results impact this specific thesis element.]
+results impact this specific thesis element. Where share-driven, quantify:
+"share ~XX% long-run vs peers at YY-ZZ%, trending up on [driver]".]
 
 ■ **Thesis Pillar 2: [Original thesis statement]**
 
@@ -233,15 +279,33 @@ Updated DCF fair value: $XXX (prior: $XXX)
 Given [rationale], we believe [premium/discount/inline] valuation is warranted.
 ```
 
-**Price Target Methodology:**
-```
-Our $XXX price target (prior: $XXX) is based on:
-- XX% DCF
-- XX% NTM P/E of XX.Xx (vs. peers at XX.Xx)
-- XX% EV/EBITDA
+**Price Target Methodology — the build must visibly sum to the headline PT (UBS/Citi SOTP, MS single-multiple):**
 
-Implied upside: +XX% from current price of $XXX
+Do not merely "mention DCF/comps". Show an explicit build that reconciles to the printed PT.
+
+For **multi-segment names**, a SOTP build where each line is `EBIT × multiple → per-share value`, summing to the PT (UBS Meituan / Citi DiDi standard):
 ```
+SOTP → PRICE TARGET
+─────────────────────────────────────────────────────────────────
+Segment            FY[n]E EBIT   Multiple   EV ($M)   Per share
+[Segment A]        X,XXX         XXx        XX,XXX    $XX
+[Segment B]        X,XXX         XXx        XX,XXX    $XX
+[Segment C / net cash]                      X,XXX     $X
+─────────────────────────────────────────────────────────────────
+Sum → Price Target                                    $XXX   ← must equal headline PT
+
+Source: [Firm Name] estimates.
+```
+
+For **single-line names**, an explicit `multiple × out-year EPS` build (MS "28x FY27"; GS "30x normalized EPS"):
+```
+Our $XXX PT (prior $XXX) = XX.Xx × FY[n]E Adj EPS of $X.XX.
+(or: weighted XX% DCF / XX% NTM P/E XX.Xx vs peers XX.Xx / XX% EV/EBITDA — each component shown and summing to $XXX.)
+
+Implied upside: +XX% from current price of $XXX (close [date]).
+```
+
+See workflow.md Step 10 for the build mechanics.
 
 ### Updated Estimates Detail
 

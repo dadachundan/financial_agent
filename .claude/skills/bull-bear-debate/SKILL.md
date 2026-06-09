@@ -36,6 +36,16 @@ For a clean full-pipeline run from scratch, prefer [[trading-analysis]] over inv
 - `--rounds N` — debate length (default 2).
 - `--asset-type` — `stock` or `crypto`.
 
+The company-research report searches `db/zsxq.db` for the sell-side view (price targets, FY+1/+2/+3 estimates, valuation multiples, bear case) and labels it `*Analyst view:*`. **This block is the primary source for the scenario forward estimates and multiples both sides will use below** — pull bull/base/bear EPS and the per-case multiple from it, and keep any company-guided or consensus number visually distinct from the analyst's own estimate (never blend them into one figure).
+
+## Swing variables (set before round 1)
+
+Before round 1, name the **2–4 variables that actually move the stock** — the shared levers both sides will argue at high vs low values, instead of raising disjoint topics. Borrow the GS commodity-relativity discipline (run the *same* swing variable — gold $3,500 vs $5,500 — across the case set) and the UBS Futu scenario block (paying-client CAGR 17.2% vs 15.2% vs MCC-exit per case). Typical levers: the key product/market share, an AI-capex or end-demand trajectory, a commodity/price input, and the valuation multiple itself.
+
+- Pick levers whose value the bull and bear genuinely disagree on, and that map cleanly onto the forward-year EPS used in the scorecard.
+- Cite each swing-variable value to a source that literally contains it (consensus, a third-party forecaster — CRU / Riglogix / Yole-style — or the `*Analyst view:*` block), per the project numerical-accuracy rule.
+- The bull case sets these high, the bear sets them low; the base case is the middle. Both sides must use the **same** lever set so the debate converges, not diverges.
+
 ## Per-turn instructions
 
 ### Bull turn
@@ -46,12 +56,14 @@ Focus on:
 - **Growth potential** — market opportunities, revenue projections, scalability.
 - **Competitive advantages** — unique products, branding, dominant positioning.
 - **Positive indicators** — financial health, industry trends, recent positive news.
+- **Scenario PT** — defend a **bull-case price target shown as (valuation multiple) × (forward-year EPS/metric)**, mirroring the MS "Risk Reward Update" bull line (e.g. AVGO bull 30× = $619) and the UBS scenario block. Pull the multiple and the FY+1/+2/+3 EPS from the company-research `*Analyst view:*` block; don't assert a round number with no math behind it. State the **2–3 falsifiable conditions that must ALL hold** for the bull case (the JPM Insta360 frame: DJI coexistence AND category break-out AND GPM recovery), not a generic "growth potential" bullet.
+- **Probability, priced-in & sensitivity** — assign and defend a rough probability to the bull case; run a **priced-in test** showing how much of the *bear* case is already embedded in the price (implied-growth / positioning evidence from the analyst reports); and stress **one swing variable at a time** with reported sensitivity (the JPM "+$20/bbl per month of Hormuz delay" form).
 - **Bear counterpoints** — critically analyze the most recent bear argument with specific data and sound reasoning; address concerns thoroughly and show why the bull perspective holds stronger merit.
 - **Engagement** — conversational style. Engage directly with the bear's points; debate rather than just list data.
 
 Resources to leverage explicitly: sentiment report, news report, company-research report, the prior debate history, and the most recent bear argument.
 
-**Citations:** when you cite a specific data point, headline, post, or filing passage, reproduce the underlying URL from the analyst report's References section as a clickable markdown link inline — e.g. "the [Q1 results press release](https://...) confirms 85% YoY revenue growth" or "as one user put it on [StockTwits](https://stocktwits.com/...) — 'easy $260 from here'". Never invent URLs; if the underlying analyst report has no link for a claim, paraphrase generally instead of citing a specific source.
+**Citations:** when you cite a specific data point, headline, post, or filing passage, reproduce the underlying URL from the analyst report's References section as a clickable markdown link inline — e.g. "the [Q1 results press release](https://...) confirms 85% YoY revenue growth" or "as one user put it on [StockTwits](https://stocktwits.com/...) — 'easy $260 from here'". Never invent URLs; if the underlying analyst report has no link for a claim, paraphrase generally instead of citing a specific source. **This extends to every number in the scenario scorecard** — each PT, multiple, forward-EPS, and swing-variable value must trace to a URL cited in the same paragraph/table cell where it appears, and derived numbers (EV-PT, upside %) must show their inputs.
 
 Prefix the turn with `Bull Analyst:` and append it to `debate_history`.
 
@@ -63,16 +75,37 @@ Focus on:
 - **Risks and challenges** — market saturation, financial instability, macro threats.
 - **Competitive weaknesses** — weaker positioning, declining innovation, competitor threats.
 - **Negative indicators** — adverse financial data, market trends, recent negative news.
+- **Scenario PT** — defend a **bear-case price target as (lower multiple) × (lower forward-year EPS)**, a real valuation — not a worry list (SanDisk bear 25× × $44; ASML bear ~20× × ~€20). Pull both inputs from the company-research `*Analyst view:*` block and set the shared swing variables to their low values.
+- **Probability, priced-in & sensitivity** — assign and defend a rough probability to the bear case; run the **priced-in test** — the strongest bear case shows the *bull* case is already the price (the YOFC "current price implies a 4–5× jump in quarterly profit — too hard" form); and stress one swing variable at a time with reported sensitivity.
 - **Bull counterpoints** — critically analyze the most recent bull argument; expose weaknesses or over-optimistic assumptions.
 - **Engagement** — conversational style. Engage with the bull's points directly.
 
-**Citations:** same rule as the Bull turn — reproduce URLs from the analyst reports as inline markdown links whenever you cite specific evidence; never invent URLs.
+**Citations:** same rule as the Bull turn — reproduce URLs from the analyst reports as inline markdown links whenever you cite specific evidence; never invent URLs. Every scorecard number (bear PT, multiple, forward-EPS, swing-variable value) must string-match a cited source.
 
 Prefix the turn with `Bear Analyst:` and append it to `debate_history`.
 
+## Scenario scorecard (required)
+
+After the debate rounds, both sides converge to a single **Risk-Reward-style scorecard** — the deliverable institutional desks lead with (MS "Risk Reward Update", UBS scenario-analysis block, Jefferies three-target initiation). Lead with the **verdict line**: rating + 12-month base-case PT + implied upside/downside % vs last close + valuation method. Then the table:
+
+| Case | Price target | Valuation multiple | Forward-year EPS / metric | Rough prob. | Swing-variable value | 1-line driver |
+|---|---|---|---|---|---|---|
+| Bull | … | e.g. 30× | FY+2 EPS … | …% | levers set high | … |
+| Base | **headline PT** | … | … | …% | levers mid | … |
+| Bear | … | e.g. 20× | lower FY EPS … | …% | levers set low | … |
+
+- **The base case IS the headline PT.** Every PT must decompose as `multiple × forward-EPS` so it is auditable; never ship a bare number.
+- Below the table, compute a **probability-weighted expected-value PT** (`Σ prob × PT`, show the inputs) and an explicit **upside : downside ratio** vs last close (the Bernstein Novo "+34% / −38%" asymmetry form). Probabilities should sum to 100%.
+- See [scenario PT framework](references/scenario_pt_framework.md) for the per-case valuation-method menu (P/E, DCF WACC/TGV, RIM, SOTP, FCF-yield), the upside-vs-downside two-list convention, and the named bank exemplars.
+- If you render a PT fan-chart or upside/downside bar (optional), annotate the source + "last close as of DATE" **inside the image** and clip the price axis to the actual data range (global chart rule).
+
+## Triggers to watch
+
+Close with a short list of **dated, falsifiable catalysts** that would flip the call, each mapped to the case it confirms — the JPM DiDi "turns positive if 2Q intl loss-rate keeps narrowing" trigger list, plus the HSBC/Citi high-priority (real worry) vs low-priority (not yet) split. Examples: next earnings date, investor day, lockup expiry, a named data read-out, a macro print. This gives [[research-manager]] a monitoring handle. Tie each trigger to an **upgrade** or **downgrade** condition.
+
 ## Output
 
-Return the complete `debate_history` markdown — alternating `Bull Analyst:` and `Bear Analyst:` paragraphs, in order, for `2 × rounds` turns total.
+Return the complete `debate_history` markdown — alternating `Bull Analyst:` and `Bear Analyst:` paragraphs, in order, for `2 × rounds` turns total — **followed by the Scenario scorecard and Triggers-to-watch blocks**.
 
 The orchestrator passes this transcript to the [[research-manager]] skill next.
 

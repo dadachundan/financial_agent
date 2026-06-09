@@ -81,6 +81,12 @@ When a Chinese companion is produced, use bilingual technical terms: `ETF / 交�
 
 3. **yfinance `get_funds_data()`** — fallback when both N-PORT and issuer CSV fail to parse. Returns top-10 holdings + sector breakdown + asset mix. Sufficient for a top-level overlap verdict but not for the full overlap analysis. **Label any output sourced from yfinance as "top-10 only" — never imply a full overlap was computed from yfinance data.**
 
+### Crowding / positioning context (new — see Step 4.5)
+
+- **Index-provider reconstitution announcements (FTSE Russell / S&P DJI)** — adds/deletes, effective dates, weight-change magnitude. Used to flag whether a shared top name sits in an index facing an *imminent* rebalance (a near-term concentration catalyst that passive ETFs mechanically trade). Cite the index-provider announcement with a deep URL; **never fabricate a passive-flow size** — if not published, state "reconstitution pending YYYY-MM-DD, flow size not estimated." Mirrors GS Index-Strategy "Rebalancing Review" framing.
+- **Index-weight rank / methodology fact sheets** — to establish that a shared name is top-ranked across the tracked indices (the crowded-shared-book signal). Deep URLs to the provider's fund/index page.
+- **Local zsxq broker library (`db/zsxq.db`, READ-ONLY)** — sell-side positioning language (`机构持仓拥挤`, record OW/UW, "consensus long") as a citable crowding-context source, with deep PDF URLs per the citation standard. Read-only Tier-1 safety rule — never write.
+
 ### Profile / context data
 
 - **AUM, expense ratio, inception, category** — yfinance `Ticker(etf).info` or the issuer's product page.
@@ -146,6 +152,7 @@ For each ETF independently:
 - **Top-10 concentration** = sum of top-10 weights.
 - **Top-1 concentration** = largest single weight.
 - **Herfindahl** = Σ wᵢ² (a 0–10000 scalar; SPY is ~50, QQQ ~700, SMH ~1500, single-stock fund 10000).
+- **Benchmarked concentration** — don't ship Herfindahl / top-10 weight as a bare scalar. Report each **as a percentile vs a peer set** (e.g. SPY / QQQ / a sector-ETF reference) or vs the fund's own trailing history, so "concentrated" carries a number (mirrors the GS/MS "vs history / vs positioning" convention). Every percentile must trace to the computed source data in the oneoff script.
 - **Sector breakdown** (GICS or N-PORT-provided) side-by-side across all N.
 - **Country breakdown** for international funds; for US-equity funds compare cash + foreign sleeve.
 
@@ -154,6 +161,8 @@ For each ETF independently:
 Pull 1Y / 3Y / 5Y total return for each ETF (yfinance, `auto_adjust=True`). Pull the stated benchmark from each prospectus and report tracking error vs benchmark. Pull expense ratio (yfinance `.info['annualReportExpenseRatio']` or issuer page). Compute net excess return after fees.
 
 Optional: average P/E and P/B of the underlying basket (weighted by holdings × per-name multiple from yfinance) — useful for valuation skew between funds.
+
+Optional — **historical co-movement** (operationalizes GS's "historical regularity / 历史走势规律" framing for an overlap context): report the trailing correlation and the **max common drawdown** of the N ETFs (yfinance `auto_adjust=True` adjusted prices) so the overlap % gets a *consequence* — "these two fell together X% in the last drawdown" rather than a bare overlap fact. This gives the reader the correlated-risk read the overlap number implies but never states.
 
 ### Step 6 — Verdict
 
@@ -168,6 +177,8 @@ Classify the comparison into one of four buckets:
 
 For N≥3, report the verdict pairwise (a 3-by-3 verdict matrix) and surface the "most duplicative pair" and "most orthogonal pair" as top-level findings.
 
+**Crowding flag (consume the Step 4.5 signal — not a new bucket).** Append a one-line crowding qualifier to the verdict so the reader distinguishes correlated-drawdown risk: **"Duplicative AND the shared book is the crowded consensus trade"** (highest co-drawdown risk — the shared min-weight is dominated by names that are top-ranked across the tracked indices and flagged crowded in the sources) vs **"Duplicative but the shared book is diversified / contrarian"** (lower co-drawdown risk). The flag is a sourced sentence, not a new verdict tier.
+
 ### Step 7 — Generate charts (4–6 visuals)
 
 Save under `reports/charts/etf_overlap_<A>_vs_<B>_*.png` (DPI 150, `bbox_inches="tight"`):
@@ -178,6 +189,7 @@ Save under `reports/charts/etf_overlap_<A>_vs_<B>_*.png` (DPI 150, `bbox_inches=
 4. **Performance comparison** — 1Y / 3Y / 5Y total return + benchmark return + expense ratio in a single table.
 5. *(Optional)* **Herfindahl + top-10 concentration scatter** — concentration risk visualized.
 6. *(Optional)* **Country breakdown** for international comparisons.
+7. *(Optional)* **Historical co-movement** — rolling correlation line and/or rebased price series of the N ETFs over the trailing window, annotating the max common drawdown (the Step 5 historical-co-movement metric). Carries the in-chart source annotation like every other chart.
 
 Each chart's caption: `Source: SEC N-PORT (<as-of>); issuer holdings CSV (<as-of>); yfinance (<as-of>). Computed in oneoff/etf_overlap_<A>_vs_<B>.py.`
 
@@ -193,8 +205,9 @@ Suggested 8-section structure:
 4. **Top Shared Positions** — table of top 10 common holdings with weights per ETF.
 5. **Disjoint Top-10** — for each ETF, what's in its top-10 that's not in the others.
 6. **Sector & Country Exposure** — N-column tables.
-7. **Concentration & Performance** — Herfindahl, top-10 weight, 1Y/3Y/5Y return, expense ratio.
-8. **Coverage caveats** — as-of dates per data source, any stale-snapshot warnings, missing-data flags.
+7. **Concentration & Performance** — Herfindahl, top-10 weight (each benchmarked to a percentile vs peer/own history), 1Y/3Y/5Y return, expense ratio, optional historical co-movement (trailing correlation + max common drawdown).
+7-bis. **Crowding & Positioning Context** — the Step 4.5 table: for each shared top-10 name, its index-weight rank, crowding verdict (sourced from index methodology + zsxq positioning language), and any pending FTSE/S&P reconstitution flag with effective date. Closes with the one-line crowding flag that feeds the verdict.
+8. **Coverage caveats** — as-of dates per data source, any stale-snapshot warnings, missing-data flags, and any pending index reconstitution ("shared name X faces FTSE reconstitution effective YYYY-MM-DD; passive flow size not estimated").
 9. **Data Used** manifest (see block below).
 10. **References** — deep URLs to N-PORT filings, issuer holdings pages, yfinance snapshots.
 
@@ -209,7 +222,7 @@ Suggested 8-section structure:
 
 Every report must contain:
 
-1. **Bottom-line verdict** at the top (bold, one line).
+1. **Bottom-line verdict** at the top (bold, one line) — carrying the single load-bearing number (pairwise overlapping weight) and the **crowding flag** when the shared book is the consensus crowded trade (mirrors GS/JPM flow-note headlines that put the verdict + load-bearing number in the title itself).
 2. **Profile table** with N rows (issuer, AUM, expense ratio).
 3. **Overlap table** with pairwise weight, shared count, top common positions.
 4. **4–6 embedded charts** with inline captions and source attribution.
@@ -243,6 +256,7 @@ Every report must contain:
 - **Do not imply N-PORT holdings are live.** They are quarterly snapshots with a 60-day filing lag — 60–150 days old by the time you read them. State the as-of date inline.
 - **Do not match securities by issuer name alone.** Use ticker → CUSIP → ISIN as the match key hierarchy. "Alphabet" appears in multiple share classes.
 - **Do not sum percentages across ETFs as combined exposure.** That depends on the reader's portfolio weights, which you don't know.
+- **Do not ship a crowding figure without a denominator, or a crowding adjective without a number.** Any crowding / positioning figure must be denominated in money AND as % of a stated base (AUM, free-float, index weight) — modeled on GS's `占自由流通市值1.3%` convention. Any crowding adjective ("crowded", "concentrated", "consensus long") must carry a sourced number. This extends the "never sum percentages across different denominators" rule to the positioning layer.
 - **Do not compute overlap on partial holdings without saying so.** If you only have top-10, label every overlap number as "top-10 only".
 - **Do not treat tracking error as a verdict.** A 50-bp tracking error vs benchmark may be acceptable for one fund and a defect for another — flag it, don't grade it.
 - **Do not silently drop unsupported asset types** (synthetic positions, repos, swaps, futures with cash settlement). Surface them in a "non-equity-sleeve" footer; the reader needs to know that "5% cash + futures" is part of the exposure, not just ignored.
@@ -272,6 +286,30 @@ Supplementary deliverables sit in standard locations:
 ### Update-in-place rule
 
 One English file and one Chinese file per ordered tuple. If `<A>_vs_<B>.md` already exists, update it in place (refresh as-of dates, re-pull holdings, regenerate charts). Do **not** create dated parallel copies — git history is the audit trail.
+
+## Learning from sell-side institutional research
+
+The bank analog here is **flow / positioning notes, not holdings-overlap notes** — banks rarely publish a 2-vs-4-fund holdings join, so the report skeleton above stays (it is already strong and N-PORT-native). What transfers is the **crowding and passive-flow framing** that converts a mechanical holdings join into a *correlated-drawdown* verdict. The single most transferable idea: **two ETFs sharing the single most crowded consensus name co-drawdown harder than their headline overlap % implies.**
+
+**Add a crowding & positioning layer (mirror MS "Collision of Themes" / "AI Still Taking Center Stage").** Morgan Stanley flags concentration as *"this exposure is the consensus crowded trade"* (e.g. `算力板块估值偏高、机构持仓拥挤`; AI names >80% of the Taiwan index weight) — the qualitative crowding verdict the overlap skill lacks. See **Step 4.5** below. For each shared top-10 name, annotate whether it is the consensus crowded trade and cite the evidence; a crowding adjective ("crowded", "concentrated") must always carry a sourced number, never ship bare.
+
+**Decompose, don't assert (mirror GS Index-Strategy rebalancing notes).** GS rebalancing notes cascade market-level flow → sector-level flow → named-stock winners/losers (`科技硬件与半导体板块遭遇全市场最大被动资金流出24亿美元`). The overlap report should never state a shared-weight number without immediately naming the **2–3 positions that dominate it** — pair every aggregate with its named drivers, the way GS pairs `韩国流出121亿美元` with the stocks that drove it.
+
+**Benchmark concentration, don't just scalar it (mirror GS/MS "vs history / vs positioning percentile").** A Herfindahl of 1500 means nothing to the reader in isolation. Report top-10 weight and Herfindahl **as a percentile vs a peer set (SPY/QQQ/sector-ETF references) or vs the fund's own history** so "concentrated" carries a number — folded into Step 4 below.
+
+**Denominate every crowding figure in money AND as % of a stated base (mirror GS `占自由流通市值1.3%`).** Never a bare percentage with no denominator. Any positioning / crowding figure carries both absolute money and % of a stated base (AUM, free-float, index weight) — this is the same discipline as the existing "never sum percentages across different denominators" guardrail, applied to the new positioning numbers.
+
+All new numbers obey the project citation + numerical-accuracy standard: every figure traces to a source that **literally contains it** (deep URL, the computed oneoff script, or a `db/zsxq.db` PDF read), and the `db/zsxq.db` library is **read-only** (Tier-1 safety rule).
+
+### Step 4.5 — Crowding & positioning context
+
+Sits between Step 4 (Concentration) and Step 6 (Verdict). For each shared top-10 name, annotate whether it is a **consensus crowded trade**, using:
+
+- **(a) Index-weight rank** — the name's weight rank across the major indices the N ETFs track (e.g. a name that is top-3 in both the Nasdaq-100 and the PHLX Semiconductor Index is a crowded shared book). Source: index-provider fact sheets / methodology pages with deep URLs.
+- **(b) Sell-side positioning language** — read the local zsxq library (`db/zsxq.db`, **read-only**) for crowding verdicts (`机构持仓拥挤`, record OW/UW, "consensus long"), cited with deep PDF URLs per the project citation standard. The zsxq library is itself a citable positioning-context source.
+- **(c) Index-reconstitution / passive-flow check** *(near-term catalyst)* — for each ETF, identify the tracked index and flag whether shared top names sit in an index facing an **imminent FTSE Russell / S&P DJI reconstitution**. Mirror GS Index-Strategy framing: name the **effective date** and that passive ETFs mechanically trade it. Source from index-provider announcements with deep URLs. **Do not fabricate flow-size numbers** — if the passive flow isn't published, write "reconstitution pending YYYY-MM-DD, flow size not estimated."
+
+Report this as a short table annotating the shared top-10 (name | shared min-weight | index-weight rank | crowding verdict + source | reconstitution flag). The output is **not a new verdict bucket** — it is a one-line crowding flag feeding the Step 6 verdict (see below).
 
 ## What this skill does NOT do
 

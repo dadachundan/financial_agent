@@ -10,6 +10,14 @@ This document provides examples, tips for success, common mistakes to avoid, and
 - "LVMH Q4'24: Fashion & Leather Resilient, Wines Weak - In-Line, Reiterating Buy"
 - "Apple Q1 FY24: Services Beat, iPhone Miss - Mixed Quarter, Lowering PT to $185"
 
+### Institutional verdict-headline patterns (the title IS the verdict):
+The house style across GS / JPM / MS / UBS encodes **beat/miss + driver + rating/PT action** in the title itself, and routinely appends the action ("Reit OW" / "Maintain Buy" / "PT to $502"):
+- GS — "Broad-based beat and raise on robust demand; Reit Buy, PT to $XXX"
+- UBS — "1Q26 beat; on the path to profit normalization — Maintain Buy, PT HK$112→HK$116"
+- MS — "Expectations miss amid very strong demand — Reit OW" (a mixed-print verdict, not just "miss")
+- JPM — "As We Previewed, [Co] Delivered Strong Results/Guide; Reit OW" (matched-pair with the preview)
+- The mixed-print nuance matters: GS's "Strong AI revenue momentum...despite modest near-term shortfall" frames a beat that sold off on a guide-vs-whisper gap — the title carries the *reason for the reaction*, not just the print direction.
+
 ### Bad Headlines (Avoid):
 - "Nike Quarterly Update" (too generic, no takeaway)
 - "Company Reports Earnings" (states obvious, no analysis)
@@ -31,11 +39,15 @@ This document provides examples, tips for success, common mistakes to avoid, and
 
 7. **Acknowledge the call**: Reference management commentary, don't just analyze the press release
 
-8. **Compare to peers**: If similar companies reported, note relative performance
+8. **Compare to peers**: If similar companies reported, note relative performance — and for read-across, state the transmission mechanism and move a number (Credo→BizLink AEC), don't just note "peers strong"
 
 9. **Be concise**: This is NOT a comprehensive report, stay focused on quarterly results
 
 10. **Chart the trends**: Quarterly progression charts are most valuable
+
+11. **Explain the reaction**: Reconcile the stock move with the print — especially a beat that sold off (guide below whisper, beat smaller after a run-up). See SKILL.md § 6.
+
+12. **Lead with the Action Header**: First line = rating action + Prior PT → New PT + implied upside % vs a dated price + valuation basis. See SKILL.md § 0.
 
 ## Common Mistakes to Avoid
 
@@ -56,6 +68,16 @@ This document provides examples, tips for success, common mistakes to avoid, and
 ❌ **Missing price target update**: If estimates changed materially, PT should too
 
 ❌ **No investment impact**: Must connect results to thesis and rating
+
+❌ **Unexplained stock reaction**: A beat that sold off (or miss that rallied) left unreconciled — the most common reader question (see SKILL.md § 6)
+
+❌ **Beat/miss not triangulated vs the guide midpoint**: comparing only to estimate + YoY and omitting the guidance midpoint (GS/DB/Bernstein lead with it)
+
+❌ **Guidance buried**: Folding the forward guide into a single line instead of a co-equal next-Q + FY block shown vs prior / vs Street / vs ours
+
+❌ **Estimate revision without a result-driven reason**: "raised on our model" is forbidden — name the specific result
+
+❌ **Valuation that doesn't sum to the PT**: "we use DCF/comps" with no SOTP or `multiple × EPS` build reconciling to the headline PT
 
 ❌ **Missing citations**: Every number needs a source with clickable hyperlinks
 
@@ -118,6 +140,12 @@ Before delivering earnings update, verify all items below:
 - [ ] Charts use professional styling
 
 ### Citations & Sources Checklist ⭐⭐⭐ MANDATORY
+
+**Project rules that also apply (esp. for markdown-output runs — the checklist below is DOCX-hyperlink-centric):**
+- [ ] Paragraph-level inline citations with **deep URLs** (specific EDGAR document / IR release / deck / transcript — never a homepage) per [.claude/skills/company-research/references/citations.md](../../company-research/references/citations.md)
+- [ ] **Every numerical beat/miss/guide figure string-matches a URL cited in the same paragraph** (CLAUDE.md "Numerical Accuracy" — a "+9% beat" traces to a source that literally contains "9%")
+- [ ] **Every chart carries an in-image `Source:` footer annotation** (CLAUDE.md chart rules), in addition to the figure caption
+- [ ] Estimate-revision reason clauses are **result-driven, never "our model"** (CLAUDE.md)
 
 **Figure & Table Citations:**
 - [ ] Every figure has specific source with document name and date

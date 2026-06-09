@@ -634,6 +634,12 @@ Use XLSX skill to extract these tables:
 - Metrics as row headers (Revenue, EBITDA, Margins, etc.)
 - Columns: Bull, Base, Bear
 
+**Estimates vs Consensus Table** (from Task 3 Step 3c, or build from the model + a consensus pull)
+- Extract the analyst's FY+1..FY+3 revenue / EPS / margin and the matching sell-side consensus (FactSet / Bloomberg / Yahoo Finance)
+- Render as a markdown table with explicit %-deltas per metric per year, plus a one-line "why the Street is wrong"
+- **Each consensus figure carries a dated data-provider citation; the analyst's own estimate is labelled as an estimate and is NEVER cited as a source** (project "model is not a source" rule)
+- This becomes a named **"Estimates vs Consensus"** subsection inside the Investment Thesis — it is the spine of an initiation, not an afterthought
+
 **Other supporting tables to extract:**
 - Cash flow statement
 - Balance sheet highlights
@@ -1035,8 +1041,10 @@ Use Write/Edit to append the appendix sections to the .md file:
 #### Phase F: Write the Investment Summary Section
 **NOW fill in the Investment Summary placeholder reserved in Phase A — after all analysis complete**
 - INITIATING COVERAGE label (e.g. `**INITIATING COVERAGE — BUY**` at the top)
-- Rating block (rating, price target, current price, upside %, market cap)
-- 3-4 detailed bullets synthesizing entire report (use `- ` bullets, each with a bolded header line and 3-5 sentences)
+- **Desk identifier / data block** (the standardized institutional Page-1 header — see `assets/report-template.md` § Layout Structure): Rating · "Initiating Coverage" · report date · EXCHANGE:TICKER (+ Reuters/Bloomberg) · current price (as-of date) · 12-month PT · implied upside/(downside)% · 52-week range · sector/industry · benchmark index level · analyst (+ CFA). For a NEUTRAL/SELL the upside field reads "Implied Downside %".
+- **Key indicators (FY1) mini-table** (ROE, net debt/equity, BVPS, P/B, operating margin) + a **1m/3m/12m absolute-and-relative performance row** — each figure inline-cited (price/52-wk/performance → dated Yahoo Finance link; ratios → the underlying filing)
+- The PT line in house form: `[Rating], 12-month PT [curr][X] = [multiple]× [FY+n]E [EPS/EBITDA], target date [Mon-YYYY], implying [Y]% upside/downside vs [price] ([date])`
+- 3-4 detailed bullets synthesizing entire report (use `- ` bullets, each with a bolded header line and 3-5 sentences) — one bullet is the Estimates-vs-Consensus differentiated view
 - Financial summary markdown table
 - Insert: `![图 1: 股价走势](charts/chart_01_stock_price.png)`
 

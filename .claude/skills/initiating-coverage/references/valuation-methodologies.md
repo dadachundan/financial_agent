@@ -7,7 +7,13 @@ This reference document provides comprehensive guidance on the three primary val
 1. [Discounted Cash Flow (DCF) Analysis](#discounted-cash-flow-dcf-analysis)
 2. [Trading Comparables Analysis](#trading-comparables-analysis)
 3. [Precedent Transactions Analysis](#precedent-transactions-analysis)
-4. [Valuation Reconciliation](#valuation-reconciliation)
+4. [Forward Target Multiple on Out-Year EPS/EBITDA](#forward-target-multiple-on-out-year-epsebitda) — **primary method for most initiations**
+5. [Sum-of-the-Parts (SOTP)](#sum-of-the-parts-sotp)
+6. [NAV with Discount (Holding Companies)](#nav-with-discount-holding-companies)
+7. [rNPV / PTS-Weighted Valuation (Clinical-Stage Biotech)](#rnpv--pts-weighted-valuation-clinical-stage-biotech)
+8. [Valuation Reconciliation](#valuation-reconciliation)
+
+> **Method selection note.** DCF and trading comps (Sections 1-2) are the workhorses, but a study of 24 real sell-side initiations shows ~80% headline the price target on a **forward target multiple on an out-year** (Section 4), with DCF as a cross-check — not a 50%-weighted blend. Biotech uses rNPV (Section 7); two-curve businesses use SOTP (Section 5); holdcos use NAV-discount (Section 6). Choose the primary method by archetype (see the table in `task3-valuation.md` Step 1b) rather than defaulting to a fixed weighting.
 
 ---
 
@@ -350,6 +356,96 @@ Implied Control Premium = $5,850M / $4,950M - 1 = 18%
 - **Synergies**: Transactions with high synergies command premiums
 - **Competitive dynamics**: Single vs. multiple bidders
 - **Time value**: Older transactions less relevant
+
+---
+
+## Forward Target Multiple on Out-Year EPS/EBITDA
+
+### Overview
+
+The most common way the sell-side sets an initiation price target: apply a chosen multiple to an **out-year (FY+2 or FY+3)** EPS or EBITDA and discount back to a 12-month target date. Examples from the library — JPM Yingliu 40x 2028E EPS; Nomura Victory Giant 27x 2027E; Citi Hon Precision 36x avg-2027/28E; GS Co-Tech 22x 2028E; UBS Tao 20x 2027E. This differs from trading comps (Section 2), which apply an NTM peer-median multiple; here the analyst applies their *own* target multiple to their *own* out-year estimate, and the justification of that multiple is the analytical core.
+
+### Step-by-Step
+
+1. **Pick the out-year and metric.** FY+2 or FY+3 EPS for earnings-driven equities; out-year EBITDA for capital-intensive names. Use the analyst's model estimate, not consensus.
+2. **Choose the target multiple, then justify it THREE ways (mandatory):**
+   - **(a) The stock's own historical valuation band** — "+1 SD above the 10-yr up-cycle mean" (GS Co-Tech), "within the historical 10-31x range" (UBS Accton), "= the A-share's own historical median" (Nomura Victory Giant). Cite the price-history data source.
+   - **(b) At least one named global peer's current multiple** — "vs Howmet 37x" (JPM Yingliu). Cite the peer's filing or a dated data-provider page, never a homepage.
+   - **(c) The EPS/earnings-CAGR-vs-peers gap** that earns the premium/discount — "55% EPS CAGR > peers' 23%" (JPM Yingliu).
+3. **Compute and date the PT.**
+   ```
+   PT (out-year) = target multiple × out-year EPS
+   12-month PT   = PT discounted to the target date (e.g. Dec-2027)
+   Implied move  = 12-month PT / current price − 1   (state vs a dated close)
+   ```
+4. **Cross-check against the DCF (Section 1).** If the DCF and the forward-multiple PT diverge >20%, reconcile in prose — usually the multiple wins for a growth equity and the DCF is the sanity floor.
+
+### Pitfalls
+
+- Applying the multiple to NTM instead of the out-year (defeats the point — the thesis is about the out-year earnings power).
+- Quoting a peer-median multiple with no historical-band or CAGR anchor (Section 2's job, not this method's).
+- Citing the analyst's own model as the source for the multiple — the multiple is an analyst judgement defended by (a)/(b)/(c), never "(Source: our model)".
+
+---
+
+## Sum-of-the-Parts (SOTP)
+
+### Overview
+
+For a business with **two distinct growth curves** valued on different bases — a mature cash-generating segment plus an emerging high-TAM segment. Exemplar: DB Huayan (Buy, TP HK$28.2) = mature cobot segment at **12x 2026 P/S** (at a discount) **+** humanoid-component segment via **DCF on a 2030 1m-unit TAM**.
+
+### Step-by-Step
+
+1. **Split the business into segments** that the market would value differently (mature vs. emerging; cash-flow vs. optionality).
+2. **Value each segment on its own appropriate basis** — mature segment on a forward multiple (P/S, P/E, EV/EBITDA) often at a discount; emerging segment on an out-year-TAM DCF or an option-value framing.
+3. **Sum the segment equity values**, subtract net debt and any holdco costs, divide by shares for the PT.
+4. **Show the bridge** (segment A value + segment B value − net debt = equity value) so the reader sees where the PT comes from — same transparency rule as the derived-number citation standard.
+
+### Pitfalls
+
+- Double-counting overhead/corporate costs across segments.
+- Valuing the emerging segment on revenue it doesn't yet have without an explicit TAM × share × ASP build and a named sizing source (Frost & Sullivan / Yole).
+
+---
+
+## NAV with Discount (Holding Companies)
+
+### Overview
+
+For holding companies and names with heavy cross-holdings, where the sum of stakes' market values overstates what minority holders can realize. Exemplar: Bernstein SoftBank — **NAV minus 25%**.
+
+### Step-by-Step
+
+1. **Mark each holding to market** (listed stakes at market price; unlisted at last round / comp-implied value).
+2. **Sum to gross NAV**, subtract net debt at the holdco → net NAV per share.
+3. **Apply a discount** reflecting governance, liquidity, tax-on-disposal, and the holdco's track record of monetization — state the discount explicitly (e.g. −25%) and justify it against the stock's own historical NAV-discount range and peer holdcos.
+4. **PT = net NAV per share × (1 − discount).**
+
+### Pitfalls
+
+- Using book value instead of market value for listed stakes.
+- Applying a discount with no anchor — justify it against the name's own historical discount band, exactly like the target-multiple anchor rule.
+
+---
+
+## rNPV / PTS-Weighted Valuation (Clinical-Stage Biotech)
+
+### Overview
+
+For pre-revenue / clinical-stage biotech, value each asset's risk-adjusted NPV by weighting peak-sales cash flows by the **probability of technical and regulatory success (PTS)** at its current phase, then sum across the pipeline. Often blended with an M&A/takeout value. Exemplars: GS Hemab (**70% DCF / 30% M&A, 16% WACC**); Bernstein US SMID Biotech PTS model (which also carries an Underperform short).
+
+### Step-by-Step
+
+1. **For each pipeline asset:** estimate peak sales, ramp, patent life, and the phase-appropriate PTS (e.g. Ph1→approval ~10%, Ph2 ~15-25%, Ph3 ~50-65%, filed ~85% — use published industry success rates and cite them).
+2. **Build the unadjusted NPV** of each asset's cash flows at a high biotech WACC (14-18%).
+3. **Multiply by PTS** → risk-adjusted NPV (rNPV) per asset.
+4. **Sum rNPVs + net cash − burn**, then optionally **blend with an M&A value** (e.g. 70% rNPV / 30% takeout) to reflect acquisition optionality.
+5. **Dated catalysts are the spine** — each Ph2/Ph3 readout and filing is a dated 12-month catalyst (GS Hemab "sutacimig GT Ph3 start H2-2026; FVIID Ph2 readout late-2026/early-2027").
+
+### Pitfalls
+
+- Using a PTS that isn't phase-appropriate or isn't sourced to a published success-rate study.
+- Ignoring cash runway — a name that runs out of cash before its readout needs a financing/dilution haircut.
 
 ---
 

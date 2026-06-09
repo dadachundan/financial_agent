@@ -32,6 +32,39 @@ This template provides the structure for creating a comprehensive equity researc
 
 ### Layout Structure
 
+**TOP LEFT - DESK IDENTIFIER / DATA BLOCK** (standardized header, confirmed in the DB Deutsche Bank "Huayan" front-page OCR — this is the canonical desk template). Include every field; each figure carries an inline citation:
+```
+[Company Name]                          Rating:  [BUY / OUTPERFORM / NEUTRAL / UNDERPERFORM / SELL]
+Initiating Coverage                     Report date: [YYYY-MM-DD]
+[EXCHANGE:TICKER]  ·  Reuters [xxxx]  ·  Bloomberg [xxxx]
+Price ([as-of date]):   [curr][XX.XX]   ([Yahoo Finance, dated link])
+12-month Price Target:  [curr][XX.XX]
+Implied Upside/(Downside): [+/-XX]%      ← reads "Downside" for a NEUTRAL/SELL
+52-Week Range:          [curr][XX.XX] - [curr][XX.XX]   ([Yahoo Finance, dated])
+Sector / Industry:      [GICS sector / industry]
+Benchmark Index:        [e.g. CSI 300 / S&P 500] at [level]
+Analyst:                [Name], [CFA / Ph.D. if applicable] · [email] · [phone]
+```
+
+**TOP LEFT - KEY INDICATORS (FY1) MINI-TABLE** (small ratio block beside the rating):
+```
+                FY1E
+ROE             XX%
+Net debt/equity XX%      (or "net cash")
+BVPS            [curr]X.XX
+P/B             X.Xx
+Operating margin XX%
+```
+Source ratios to the underlying filing (the financial model's source rows), not "Company data".
+
+**1m / 3m / 12m PERFORMANCE ROW** (absolute and relative-to-index):
+```
+              1m      3m      12m
+Absolute      +X%     +X%     +XX%
+Rel. to index +X%     +X%     +XX%
+```
+Source: [Yahoo Finance — historical price data, dated link]. This row + the price-relative mini-chart (Figure 1) are both Page-1 standard.
+
 **TOP LEFT - RATING BOX:**
 ```
 Rating:             [OUTPERFORM / NEUTRAL / UNDERWEIGHT / etc.]
@@ -41,6 +74,8 @@ Target Price:       $[XX.XX]
 Market Cap:         $[XX.X]B
 Enterprise Value:   $[XX.X]B
 ```
+
+> **Note:** the Desk Identifier / Data Block above is the institutional Page-1 header (it supersedes a bare prose "Investment Summary" — keep BOTH the identifier block and the 3-4 investment bullets). For a NEUTRAL/UNDERPERFORM/SELL initiation every field still applies; "Implied Upside" reads "Implied Downside" and the bullets carry the bear thesis.
 
 **TOP LEFT - RESEARCH ANALYSTS:**
 ```
@@ -214,7 +249,23 @@ Appendices & Disclosures...........................................31
 
 **[EMBED CHART: Margin Expansion Pathway]** - Waterfall or line chart showing path to margin improvement
 
+**[Thesis Pillar — Estimates vs Consensus]: Our numbers are above/below the Street**
+
+This is a structural pillar in its own right — an initiation exists to assert a differentiated out-year number. Table the analyst's FY+1..FY+3 revenue / EPS / margin against sell-side consensus with explicit %-deltas, then state in one or two sentences WHY the Street is wrong (the differentiated view that justifies the call). Mirror Bernstein Montage "2028E EPS Rmb6.25 vs consensus 4.49, +39%"; UBS Tao "+12-15% above consensus."
+
+```
+Metric            FY+1E         FY+2E         FY+3E
+                  Ours Cons Δ%  Ours Cons Δ%  Ours Cons Δ%
+Revenue ($M)      ...  ...  +X% ...  ...  +X% ...  ...  +X%
+EPS ($)           ...  ...  +X% ...  ...  +X% ...  ...  +X%
+EBITDA margin     ...  ...  +Xpt ... ...  +Xpt ... ...  +Xpt
+Source (consensus): [FactSet/Yahoo Finance, dated]. Our estimates = analyst model.
+```
+Each **consensus** figure carries a dated data-provider citation; the analyst's own estimate is labelled as such and is NEVER cited as a source.
+
 ### Investment Risks
+
+> **For a SELL / UNDERPERFORM initiation, flip this whole section to "Upside Risks to Our Sell"** — the symmetric mirror listing the dated events / scenarios that would force a HIGHER price target and invalidate the short thesis. Downside initiations in the library (Bernstein Summit UP −57%, AEON UP −22%, GS Athub Neutral −8%) carry exactly this mirrored risk block. The structure below (company-specific then industry/market risks) stays the same; only the polarity flips.
 
 **Company-Specific Risks**
 

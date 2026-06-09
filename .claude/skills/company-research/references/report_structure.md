@@ -15,6 +15,37 @@ Embed **4–8 Mermaid diagrams** across the report — **Mermaid only, no matplo
 
 Every chart needs a citation directly underneath in the same markdown-link format used in prose. **When an IR deck has the data behind a chart, embed the rendered IR slide as a PNG** (using `render_10k_section.py`-style page screenshot for PDFs, which is a one-shot playwright-chromium screenshot — not matplotlib chart-gen) **instead of rebuilding the chart from scratch** — the slide is the most authoritative form of the chart, the company endorses the numbers, and the reader can trace the source. Cite the slide directly underneath. Legacy per-chart PNGs in `reports/charts/` from before 2026-06-03 can be reused in their original reports; do not regenerate them as Mermaid.
 
+## Investment summary header (rating + price target) — REQUIRED, at the very top
+
+**Above the TOC (and above the guidance banner), open with a standardized header block** — the Deutsche Bank / GS / Citi cover-page pattern that opens every institutional single-name note. See SKILL.md § "Learning from sell-side institutional research" for the rationale. The whole block is **the analyst's own forward view — label it `*Analyst view:*` / `*分析师观点：*` and never attach a filing citation to the rating, the PT, or the implied upside%** (a 10-K contains no price target; attaching one is the misattribution failure the skill forbids).
+
+**Required fields:**
+- **Rating** — pick one scale and state it: `Buy / Hold / Sell` or `Overweight / Neutral / Underweight`. One rating, defined.
+- **12-month Price Target** + **current price** + **implied upside / downside %**.
+- **Valuation method, one line** (e.g. `2027E EPS $13.08 × 22× P/E`, or `DCF, WACC 9.5%, terminal g 2.5%`, or `SOTP across 6 segments`).
+- **Market cap**, **52-week range**, **ticker / exchange**.
+- **2–4 thesis pillars**, one sentence each — the call and why it works.
+
+**Example (English report):**
+
+```
+> *Analyst view:* **Rating: Buy · 12-mo PT: $36 (+47% vs $24.50 spot) · Method: 70% rNPV-DCF (16% WACC) + 30% M&A value**
+> Market cap $4.2B · 52-wk range $14–$31 · NASDAQ: COAG
+>
+> **Thesis pillars** — (1) Best-in-class bleeding-disorder pipeline with two Phase-3 assets; (2) under-appreciated FVIID optionality the Street hasn't modeled; (3) 16% WACC already prices in trial risk, leaving asymmetric upside; (4) takeout candidate at a 30% probability-weighted premium.
+```
+
+**Example (Chinese company, Chinese report):**
+
+```
+> *分析师观点：* **评级：Overweight（增持）· 12 个月目标价 HK$28.2（较现价 HK$19.2 上行 +47%）· 估值方法：2028E EPS × 40× P/E**
+> 市值 HK$15.8bn · 52 周区间 HK$12–HK$24 · HKEX:1021
+>
+> **核心论点（thesis pillars）**——（1）领先的 cobot 核心零部件技术；（2）市场低估的 humanoid robot 零部件期权价值（2028E 占集团营收约 30%）；（3）渠道调研显示已切入 EngineAI/AGIBOT/Galbot 供应链；（4）40× 目标 P/E 对标 Howmet 的 37×，由更高的 EPS CAGR 支撑。
+```
+
+Derive every number in this block from Step 2b. If the company is private or genuinely un-targetable (pre-revenue, no comparable basis), state `Rating / PT: not applicable — <reason>` rather than inventing a number.
+
 ## Top-of-report banner — guidance changes (REQUIRED when present)
 
 **Before the Table of Contents**, scan the latest earnings release / 业绩预告 / 业绩快报 / 季度报告 / 半年度报告 / 年度报告 / 8-K guidance update for any change to **full-year guidance** versus the prior outlook. If the company has:
@@ -57,6 +88,7 @@ If there is **no recent guidance change** to highlight, omit the banner entirely
 ## Section word counts and content
 
 ### 1. Company Overview (800–1,200 words)
+- **Investment thesis lead paragraph (REQUIRED, first paragraph — BLUF house style).** Before any "what the company does" prose, open with the call: restate the rating + 12-month PT + upside%, the why-now, and the 2–4 thesis pillars in flowing sentences (the header block above is the at-a-glance version; this is the narrative version). Mirrors the Deutsche Bank / J.P. Morgan note that opens with "Buy, TP HK$28.2" + three bolded sub-heads rather than a description. Labeled `*Analyst view:*` / `*分析师观点：*`; the descriptive overview follows it.
 - What does the company do? (plain English)
 - How do they make money? (business model)
 - Where do they operate? (geographic presence)
@@ -68,6 +100,45 @@ If there is **no recent guidance change** to highlight, omit the banner entirely
   - **If P/E > 50× TTM (or > 2× sector median) or P/S > 15× (or > 3× sector median)** → name the cause: high-growth sector premium (AI infra, GLP-1, EV battery, advanced packaging — say which), temporarily depressed earnings, narrative / sector-proxy premium, M&A speculation, or small-float distortion. **Cite evidence — start with the local zsxq broker note surfaced in Step 0.7** (the Street's own PT / valuation-basis line, labeled `*Analyst view:*` and cited to `/zsxq/pdf-viewer/<file_id>`), then earnings-call language, a peer that re-rated similarly, or sector ETF flows. This is the Section 2 zsxq citation the density bar calls for. Do not leave the multiple unexplained.
   - **If P/E < 8× or P/S is unusually low** → say whether it's a value trap, cyclical peak, governance concern, or genuine mispricing.
   - For private companies, substitute the latest funding-round post-money valuation and implied revenue multiple if disclosed; if not, state "private; no disclosed valuation."
+
+### 1A. Valuation & Price Target (500–900 words) — the decision layer
+
+A dedicated chapter, distinct from the Section 1 TTM snapshot (which is backward-looking). This is the forward, decision-grade analysis that mirrors every institutional analog. Built from Step 2b. **Everything in this chapter is the analyst's own forward view — every projected number, the PT, and the scenario PTs are labeled `*Analyst view:*` / `*分析师观点：*` and NEVER carry a filing citation.** Cite the *inputs* to each projection (filing segment data + management guidance + an industry forecast) inline; never write `(Source: our model)`.
+
+**(a) Forward financial-estimates table (REQUIRED) — 3 years out (5 if the model supports it).** Revenue, gross margin, operating-or-net margin, EPS, per year, with YoY growth. Model the **segment mix shift** — each business line its own revenue path + margin trajectory, then summed (the Tesla 6-way / Horizon licensing→hardware pattern) — not a single blended top-line. Tie each margin move to a driver (mix shift / operating leverage / pricing power). Template:
+
+```
+| Metric (*Analyst view:*) | FY24A | FY25E | FY26E | FY27E |
+|---|---|---|---|---|
+| Revenue (RMB mn)         | 2,900 | 4,100 | 6,800 | 11,300 |
+|   — YoY %                |       | +41%  | +66%  | +66%   |
+| Gross margin %           | 36%   | 38%   | 41%   | 43%    |
+| Net margin %             | 12%   | 14%   | 18%   | 22%    |
+| EPS                      | 0.35  | 0.62  | 1.40  | 2.90   |
+```
+(Each projected cell's basis cited inline: e.g. revenue ramp from the company's order-backlog disclosure + management's 2030 guidance + an industry-forecast number — all real, sourced inputs, with the projection labeled analyst view.)
+
+**(b) Price-target derivation (REQUIRED) — show the arithmetic.** State the method and walk estimate → PT:
+- **Forward-PE × target multiple:** `<FY27E> EPS × <target>x = <PT>`. **Justify the multiple against 3–5 named comps** (the J.P. Morgan Yingliu-40x-vs-Howmet-37x move, defended on a 55%-vs-23% EPS-CAGR gap). A multiple with no comp justification is not a derivation.
+- **DCF:** WACC = Rf + β × ERP; **Rf = the 10Y from `indicators.db`** (reuse the Section-10 wiring; state the as-of date), ERP stated, terminal growth ≤ Rf. Show the intrinsic-value range and margin of safety vs. market cap.
+- **SOTP:** value each segment on its own multiple, sum, reconcile to per-share.
+- **rNPV (biotech):** risk-adjust each asset's peak sales by an explicit probability-of-success; state the PTS and the weighting (e.g. GS Hemab: 70% rNPV-DCF + 30% M&A value).
+
+**(c) Bull / base / bear scenario table (REQUIRED) — three PTs, each tied to its swing assumption.** Base = central estimates; bull = faster attach / penetration or a higher multiple; bear = price war / margin compression. Report upside / downside % on each (the Morgan Stanley Hesai $53 / $30 / $11.5 and Citi Yunnan-Energy 3-scenario pattern). Template:
+
+```
+| Scenario (*Analyst view:*) | Key assumption | PT | vs spot |
+|---|---|---|---|
+| Bull  | Auto attach ramps to 80%, multiple holds 28× | $53 | +162% |
+| Base  | Central estimates, 22× on 2027E EPS         | $30 | +48%  |
+| Bear  | Price war compresses lidar GM to floor, de-rate to 12× | $11.5 | −43% |
+```
+
+**(d) Consensus benchmark (when sourced material carries it).** State where the report's forward estimates sit vs the Street (above / below, by how much) — the UBS / Nomura "+16% vs Street" move. Source the consensus figure to the zsxq broker note (`*Analyst view:*`, `/zsxq/pdf-viewer/<file_id>`) or a dated public source; **never invent a consensus number.**
+
+**(e) Swing variables.** Name the 1–2 assumptions the call hinges on (MS Hesai: lidar-GM floor + auto attach rate), so the reader knows what to pressure-test.
+
+**IR / zsxq input:** the broker notes from Step 0.7 supply the Street's PT, valuation basis, and bull/bear to benchmark against — cite them `*Analyst view:*`. This is the Section 2 zsxq citation the SKILL density bar calls for.
 
 ### 2. Company History (400–700 words)
 - Founding story (who, when, why, where) — 1 short paragraph
@@ -223,6 +294,15 @@ The pattern (issuer's own table → verbatim quote → analyst-labeled pedagogic
 - Cover all four categories
 - **Bear case from the local zsxq library.** Where the library has coverage (Step 0.7), ground at least one risk in the analyst's own framing — what the skeptics actually worry about (e.g. memory price cuts, China demand, ASIC encroachment) and the specific trigger — labeled `*Analyst view:*` and cited to `/zsxq/pdf-viewer/<file_id>`. This is the Section 9 zsxq citation the SKILL density bar calls for.
 
+### 9.5. Key debates & catalysts (300–600 words) — defend the thesis, then list the triggers
+
+Distinct from the Section 9 risk *inventory*: Section 9 catalogues the downside taxonomy; **9.5 defends the thesis against the specific arguments the bears make** (the Morgan Stanley 市场核心分歧 / Hesai three-debate pattern) and lists the dated forward triggers. See SKILL.md § "Learning from sell-side institutional research".
+
+- **Key debates (2–4).** For each: the bear's argument in one sentence, then the analyst's rebuttal with cited evidence. Format as `**Debate 1 — <one-line bear claim>.** *Analyst view:* <rebuttal + citation>.` Ground at least one in the local zsxq bear case where coverage exists (Step 0.7), labeled `*Analyst view:*` and cited to `/zsxq/pdf-viewer/<file_id>`.
+- **Catalyst calendar (next 12 months).** A dated list of forward triggers — earnings prints, product launches, trial readouts, capacity milestones, regulatory decisions, contract wins (the GS Hemab "Phase-3 start H2-26, FVIID data late-26" / Bernstein catalyst-calendar pattern). Each entry: `<approx date> — <event> — <why it moves the thesis>`. Point the reader to the `catalyst-calendar` skill for ongoing tracking.
+
+Keep the risk taxonomy itself in Section 9 — debates defend the thesis, the catalyst list is forward triggers, the risk inventory is the downside map. Do not duplicate; cross-reference where they touch.
+
 ### 10. Investor-lens scorecards (optional — 600–2,500 words depending on lens set)
 - Skip only when the user has explicitly said "no lens scorecards" / "skip Section 10".
 - Open with a one-paragraph cycle snapshot from `indicators.db` (VIX, 10Y Treasury, HY OAS) — state the as-of date; this snapshot feeds the company-specific lenses.
@@ -273,8 +353,15 @@ The manifest sits between Section 10 (or Section 9 if Section 10 is skipped) and
 COMPANY RESEARCH REPORT: [Company Name]
 Date: [YYYY-MM-DD]
 
+> *Analyst view:* INVESTMENT SUMMARY — Rating: [Buy/Hold/Sell or OW/N/UW] ·
+> 12-mo PT: [$X] ([+/−Y% vs spot]) · Method: [one-line] · Mkt cap [$] ·
+> 52-wk [range] · [TICKER:EXCH]
+> Thesis pillars — (1) … (2) … (3) … (4) …
+[Guidance-change banner here when applicable]
+
 TABLE OF CONTENTS
-1. Company Overview
+1. Company Overview (incl. investment-thesis lead)
+1A. Valuation & Price Target (forward estimates · PT derivation · bull/base/bear)
 2. Company History
 3. Management Team
 4. Products & Services
@@ -283,12 +370,22 @@ TABLE OF CONTENTS
 7. Competitive Landscape
 8. Market Opportunity (TAM)
 9. Risk Assessment
+9.5. Key debates & catalysts
 10. Investor-lens scorecards (optional)
 
 ======================================
 
 1. COMPANY OVERVIEW (800–1,200 words)
-[Content]
+[Investment-thesis lead paragraph first (*Analyst view:* — call + why-now + pillars),
+ then the descriptive overview + TTM valuation snapshot.]
+
+1A. VALUATION & PRICE TARGET (500–900 words)
+[*Analyst view:* throughout, no filing citation on any projection/PT.
+ (a) Forward financial-estimates table — revenue / GM / margin / EPS, 3 yrs out, with the inputs cited.
+ (b) PT derivation showing the arithmetic — forward-EPS × target-multiple (justified vs 3–5 comps) / DCF / SOTP / rNPV.
+ (c) Bull / base / bear PT table, each with its swing assumption + upside%.
+ (d) Consensus benchmark (vs Street, when sourced).
+ (e) The 1–2 swing variables the call hinges on.]
 
 2. COMPANY HISTORY (800–1,200 words)
 [Content]
@@ -334,6 +431,11 @@ Financial Risks:
 [2–3 risks with descriptions]
 Macroeconomic Risks:
 [2–3 risks with descriptions]
+
+9.5. KEY DEBATES & CATALYSTS (300–600 words)
+[2–4 bear arguments, each with an *Analyst view:* rebuttal + cited evidence;
+ then a dated 12-month catalyst list (event → date → why it moves the thesis).
+ Distinct from the Section 9 risk inventory — debates defend the thesis.]
 
 10. INVESTOR-LENS SCORECARDS (optional — 600–1,000 words total)
 [One-paragraph cycle snapshot from `indicators.db` (VIX, 10Y, HY OAS) as of YYYY-MM-DD.]

@@ -12,6 +12,8 @@ This is the analytical centerpiece of every compare-companies report. The user's
 - **When a number is not disclosed, write `not disclosed` — do not estimate to fill the cell.**
 - **Side-by-side tables, not stacked paragraphs.** The user is looking at the comparison; the table is the deliverable.
 - **Two-edged framing wherever real.** If diversification is driven by losing a major customer, say so. If margin expansion came from one-time mix, say so. Bull-only narratives are not credible.
+- **Comparability caveat wherever two numbers are juxtaposed.** Before drawing a verdict from "A: X vs B: Y", flag any way the two are *not* apples-to-apples — mismatched fiscal-period ends, single-arm vs controlled trial, organic vs M&A-inflated growth, GAAP vs non-GAAP, different segment definitions, different revenue-recognition bases. Mirror Morgan Stanley's ASCO discipline: MS names the single-arm and chemo-resistant-enrollment bias *before* comparing AK112 ORR 61.7% vs BNT327 ORR 37.2%, rather than presenting them as a clean head-to-head. A juxtaposed pair the reader reads as like-for-like, when it isn't, is a hidden hallucination.
+- **Anchor the "who's winning" read on the forward path, not just the last quarter.** A verdict resting only on the last reported period is weaker than one resting on the 1–3yr forward CAGR / margin trajectory each name is on (mirror DB Huayan: 55% rev CAGR 2025-28E, NPM to ~10% by 2028E). Each forward figure cites the filing/guidance it came from — never the analyst's own model.
 
 ## §5.1 — Customer concentration
 
@@ -172,6 +174,10 @@ A focal-N view of a multi-player industry is misleading by itself. Every moat an
 | **Acquisition target** | Has been or will be absorbed by A or B during the comparison's reporting period. | Described as "now part of A" rather than as an independent player — note the close date and post-close segment. |
 | **Domestic-market alternative** | Regional vendors limited by export controls, talent depth, or PDK access. | Call out as a §8 regional risk; no §5.8 paragraph. |
 
+### Rank quality against the NAMED peer set, not in isolation
+
+Once §5.8 has named the 3–7 other players, extend the §5 scoreboard's quality rows (profitability, margin, growth-quality) to those names so "best-in-class" is visible against real peers rather than asserted. Mirror Deutsche Bank's Huayan note, which ranks adjusted NPM against named peers in one line — Dobot −10%, UBTECH −35%, Geekplus 1%, Estun 0% — so the "most profitable HK-listed robot name" claim is checkable, not rhetorical. A focal name's "leading margin" means little until you've placed it on the same axis as the named competitors. Each peer number cites that peer's own filing (comparability caveat applies — flag GAAP vs non-GAAP, fiscal-end mismatches in-cell).
+
 ### Per-paragraph content for each Primary competitor
 
 | Field | Source |
@@ -212,6 +218,8 @@ Before declaring §5 done:
 - [ ] Every segment market-share row has a source URL.
 - [ ] No invented executive names, lawsuit titles, or product names.
 - [ ] §5.7 has at least 3 bullets *each* side — symmetric honesty.
+- [ ] **Every juxtaposed pair of numbers carries a comparability caveat where they aren't apples-to-apples** (fiscal-end mismatch, GAAP vs non-GAAP, single-arm vs controlled, organic vs M&A-inflated, segment-definition difference).
+- [ ] **Quality rows (margin / profitability / growth) are ranked against the §5.8 named-peer set**, not asserted in isolation — each peer number cites that peer's filing.
 - [ ] **§5.8 names 3–7 other big players** with the four-bucket classification labels visible. At least 3 are Primary competitors with 100–300 word paragraphs.
 - [ ] **§5.3 / §5.4 / §5.5 tables extended** with columns for each Primary competitor that materially affects the share picture.
 - [ ] The IP-roadmap inversion (or whatever structural shift in the period is most under-priced) is named explicitly in one of the eight subsections.

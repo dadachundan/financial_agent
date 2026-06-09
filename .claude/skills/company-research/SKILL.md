@@ -214,11 +214,12 @@ python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "AI server" --li
 
 | Section | What a broker note in `db/zsxq.db` typically supplies (label all as *Analyst view:*) |
 |---|---|
-| **2. Valuation** | Consensus / target price, the bull-base-bear PT scenarios, the valuation basis (forward EPS × multiple), where the analyst sits vs the Street. Pair with the actual multiples you pulled in Step 2. |
+| **2. Valuation & PT** | Consensus / target price, the bull-base-bear PT scenarios, the valuation basis (forward EPS × multiple), the **consensus estimate to benchmark your forward model against** (the UBS/Nomura "+16% vs Street" move), where the analyst sits vs the Street. Pair with the actual multiples + forward model from Step 2. |
 | **6. Industry** | Channel checks, unit/ASP/capex forecasts, end-market build-out timing, supply-chain reads (memory, substrate, CoWoS, lead-times) that filings never disclose. |
 | **7. Competitive** | Side-by-side share estimates, who's winning which socket, ASIC-vs-GPU framing, second-source dynamics. (Share numbers are estimates — never cite them to the subject's 10-K.) |
 | **8. TAM** | Sell-side TAM/SAM build-ups with their assumptions; chain-cite the underlying research firm when the note credits Yole/Gartner/TrendForce. |
-| **9. Risks** | The bear case in the analyst's own words — what the skeptics worry about (memory price cuts, China demand, ASIC encroachment), with the specific trigger. |
+| **9. Risks / 9.5 Debates** | The bear case in the analyst's own words — what the skeptics worry about (memory price cuts, China demand, ASIC encroachment), with the specific trigger — feeds both the Section 9 risk inventory and the Section 9.5 key-debates rebuttals. |
+| **Channel checks** | Proprietary channel-check data as a first-class evidence class — shipment trackers (NE Times monthly SoC shipments), Frost & Sullivan / Yole rankings, credit-card spend panels, App-download / Google-Trends momentum. Cite as *Analyst view:* via the broker note and **flag it as channel-check-derived** so the reader knows the provenance. Every sell-side analog leans on these. |
 | **Bull/Bear & lenses** | The note's own scenario tree feeds the optional Section 10 lenses and any bull-bear framing directly. |
 
 ### Citation format for `db/zsxq.db` sources
@@ -268,6 +269,21 @@ After Sections 1–9 establish the facts, named scoring rubrics give the reader 
 - `indicators.db` snapshot (VIX, 10Y Treasury via `^TNX`, HY OAS via FRED BAMLH0A0HYM2, IG OAS) for the cycle posture and Damodaran's risk-free rate. State the as-of date inline.
 
 **See [`references/investor_lenses.md`](references/investor_lenses.md) for the nine rubrics in detail — scoring components, verdict bands, required-assumption blocks, failure modes, the routing rules for picking optional lenses by company type, and the guardrails that apply to all nine.**
+
+## Learning from sell-side institutional research
+
+A methodology study of 22 initiation / deep-dive notes from Goldman Sachs, Morgan Stanley, UBS, J.P. Morgan, Bernstein, Nomura, Citi, BofA, Deutsche Bank, and HSBC found one structural gap: **every institutional single-name note is a decision note built around a rating and a price target, while this skill produces a descriptive profile that stops at a TTM-multiple snapshot.** The lessons below close that gap. They are additive — every existing rule (no fabricated numbers, paragraph-level citations, `*Analyst view:*` labeling, language defaults, file-naming) holds unchanged. The defining discipline that makes this safe: **the rating, the price target, every projected estimate, and the scenario PTs are all the analyst's own forward view — they MUST be labeled `*Analyst view:*` / `*分析师观点：*` and NEVER attached to a filing citation.** A 10-K does not contain a price target; attaching one to a 10-K is the same misattribution failure the skill already forbids.
+
+- **Open every report with a standardized header block — mirror the Deutsche Bank / GS / Citi cover page.** Before the TOC (after the optional guidance banner): **Rating** (Buy / Hold / Sell, or OW / Neutral / UW — pick one scale and state it), **12-month Price Target**, current price, implied upside / downside %, one-line valuation method, market cap, 52-week range, ticker / exchange, then the **2–4 thesis pillars** one sentence each. The whole block is labeled `*Analyst view:*` — it is a house view, not filing data. See `references/report_structure.md` § "Investment summary header".
+- **Lead Section 1 with the thesis, not the description — BLUF house style (every analog does this).** The first paragraph states the call, the why-now, and the 2–4 pillars before any "what the company does" prose. Deutsche Bank's Huayan note opens "Buy, TP HK$28.2" with three bolded sub-heads; J.P. Morgan's Yingliu note opens with the scarcity-positioning thesis. Keep all 9 descriptive sections — they feed the thesis — but add the synthesis layer on top.
+- **Build a forward financial model — a multi-year estimates table is non-negotiable.** Project **revenue / gross margin / operating-or-net margin / EPS 3 years forward** (the analogs run 3–5: Yingliu RMB2.9bn→11.3bn 2025–2030E ~30% CAGR; Horizon licensing-65%→hardware-47% mix shift by 2027). Each projected cell is `*Analyst view:*`; each driver's external basis is cited inline (filing segment data + management guidance + an industry forecast) per the existing "the analyst's own model is NOT a source" rule. Model the **segment mix shift** (each line gets its own revenue path + margin trajectory, then summed — Tesla's 6-way SOTP), not just a blended top-line.
+- **Derive the price target and SHOW the arithmetic — mirror J.P. Morgan's Yingliu (`2028E EPS × 40x PE = RMB95`).** State the method: forward-EPS × target multiple, or DCF (WACC built from `indicators.db` 10Y + a stated ERP, terminal growth ≤ risk-free), or SOTP, or rNPV for biotech. **Justify the multiple against 3–5 named comps** — JPM defended Yingliu's 40x against Howmet's 37x on a 55%-vs-23% EPS-CAGR gap. The justification of the multiple is as load-bearing as the number itself.
+- **Give three price targets — bull / base / bear — each tied to its swing assumption (Morgan Stanley Hesai $53 / $30 / $11.5; Citi Yunnan-Energy 3-scenario table).** Base = central estimates; bull = faster attach / penetration or a higher multiple; bear = price war / margin compression. Report upside / downside % on each so the reader sees risk-reward symmetry at a glance. All three labeled `*Analyst view:*`.
+- **Position the forward estimates against consensus — the UBS / Nomura "+16% vs Street" move.** When the local zsxq library or other sourced material carries Street estimates or a consensus PT, state where the report's own numbers sit (above / below, by how much). UBS framed Alphabet 2027E revenue "+16% vs Street"; Nomura framed peak sales "57% above market". Source the consensus number to the zsxq note (`*Analyst view:*`) or a dated public source — **never invent a consensus figure** (this reinforces, not loosens, the numerical-accuracy rule).
+- **Add a "Key debates & catalysts" block — distinct from the risk inventory (Morgan Stanley's 市场核心分歧 / Hesai three-debate pattern).** List the 2–4 arguments the bears make and rebut each; then a **dated forward-catalyst list** for the next 12 months (GS Hemab: Phase-3 start H2-26, FVIID data late-26) with a pointer to the catalyst-calendar skill for ongoing tracking. Keep the risk *taxonomy* itself in Section 9 — debates defend the thesis; risks inventory the downside.
+- **Name the 1–2 swing variables the call hinges on (MS Hesai: lidar-GM floor + auto attach rate; UBS Alphabet: TPU rev-rec timing + Vertex mix).** The reader should know which assumption to pressure-test. Tie every margin-trajectory claim to its driver (mix shift / operating leverage / pricing power) — never just "margins improve".
+- **Treat proprietary channel checks as a named, citeable evidence class.** When the local zsxq notes carry channel-check data (NE Times monthly shipment trackers, Frost & Sullivan rankings, credit-card spend panels, App-download / Google-Trends momentum), cite it as `*Analyst view:*` via the broker note and flag it as channel-check-derived so the reader knows its provenance. Every analog leans on channel checks; the skill has the zsxq plumbing but hadn't named this evidence type.
+- **Pair every number with a comparison anchor and conviction label.** Sell-side numbers rarely appear bare: `+33% YoY`, `vs consensus +16%`, `47% upside`, `GM 36%→43%`. Conviction language is calibrated and explicitly labeled (`preferred pick` / `top idea` / `under-appreciated` / `fully priced`) — and under this skill's rules it stays an `*Analyst view:*`, never attributed to a filing.
 
 ## Report language
 
@@ -342,7 +358,7 @@ See [`references/citations.md`](references/citations.md) for the full rules, per
 
 ## Reference docs (read on demand)
 
-- `references/report_structure.md` — section-by-section word counts, per-section content spec, and the full output template. **Read before writing.**
+- `references/report_structure.md` — section-by-section word counts, per-section content spec, the investment-summary header block, the Section 2 "Valuation & Price Target" chapter (forward-estimates table + PT derivation + bull/base/bear), the Section 9.5 "Key debates & catalysts" block, and the full output template. **Read before writing.**
 - `references/citations.md` — inline-citation rules and example.
 - `references/risk_taxonomy.md` — the 8–12 risks across 4 buckets used in Section 9.
 - `references/investor_lenses.md` — the four optional Section 10 scorecards (Buffett, Munger, Damodaran, Howard Marks cycle).
@@ -501,7 +517,11 @@ Everything from this step is **sell-side opinion** — carry the `file_id`s forw
    - **Pull in the institute-research notes surfaced in Step 0.7** (`db/zsxq.db`) — the broker view of guidance, estimates, channel checks, and the bear case. Keep them clearly separate from the company's own IR materials above: IR decks/transcripts are primary (cite as fact); zsxq broker notes are sell-side (`*Analyst view:*`, cite to `/zsxq/pdf-viewer/<file_id>`). See § "Local institute-research library".
 4. **Document basic facts** — founding date, HQ, employees, products/services, key customers.
 
-### Step 2 — Valuation snapshot (always pull P/E and P/S)
+### Step 2 — Valuation, forward estimates & price target
+
+Two parts: (2a) the backward-looking TTM snapshot — where the market prices the stock today; and (2b) the forward-looking decision layer — a multi-year estimates table, a derived 12-month price target, bull/base/bear scenarios, and a consensus benchmark. Part 2a feeds Section 1; part 2b feeds the new "Valuation & Price Target" chapter and the top-of-report investment-summary header. **The entire forward layer is the analyst's own view — every projected number, the PT, and the scenario PTs are labeled `*Analyst view:*` / `*分析师观点：*` and are NEVER attached to a filing citation** (a 10-K contains no price target; see § "Specific failure mode: do NOT misattribute sell-side opinions to filings").
+
+#### Step 2a — Valuation snapshot (always pull P/E and P/S)
 
 Before business-model analysis, capture where the market is pricing the stock today. **Required for every public company; for private companies, substitute the latest funding-round post-money valuation and revenue multiple if disclosed.**
 
@@ -522,6 +542,22 @@ Capture: current price, market cap, **TTM P/E**, **TTM P/S**, plus P/B for capit
 - **Very low P/E (< 8×) or low P/S** → also worth a sentence: value trap (declining business, dividend at risk), cyclical peak (earnings unsustainable), governance / accounting concern, or genuine mispricing.
 
 Feed the verdict into Section 1 (Company Overview → Valuation snapshot) and, if the multiple is stretched enough to be a risk (P/E > 50× with no clear earnings path, P/S > 20× outside top-quartile growth), into Section 9 as a valuation / multiple-compression risk.
+
+#### Step 2b — Forward estimates, price target & scenarios (the decision layer)
+
+This is what turns a profile into a decision note — see § "Learning from sell-side institutional research". Build it from the segment data in the filings (Step 0–1) + management guidance + an industry forecast; the zsxq broker notes from Step 0.7 give the Street's own estimates, PT, and bull/bear to benchmark against.
+
+1. **Forward financial-estimates table — project 3 years out** (5 if the model supports it): revenue, gross margin, operating-or-net margin, EPS, per year, with YoY growth. Each projected cell is labeled `*Analyst view:*`; cite each driver's external basis inline (filing segment data + guidance range + an industry-forecast number) — **never `(Source: our model)`**. Model the **segment mix shift** (each line its own path + margin trajectory, then summed) rather than a single blended top-line; tie each margin move to its driver (mix / operating leverage / pricing).
+2. **Derive the 12-month price target and show the arithmetic.** Pick the method that fits the business and state it explicitly:
+   - **Forward-PE × target multiple** (most names): e.g. `2027E EPS × <target>x = <PT>`. **Justify the multiple against 3–5 named comps** (the JPM Yingliu-40x-vs-Howmet-37x move) — a multiple with no comp justification is not a derivation.
+   - **DCF** (stable cash generators): WACC = Rf + β × ERP, where **Rf is the 10Y from `indicators.db`** (reuse the Section-10 wiring; state the as-of date) and ERP is stated; terminal growth ≤ Rf.
+   - **SOTP** (multi-segment / conglomerates): value each segment on its own multiple, then sum.
+   - **rNPV** (biotech / binary pipelines): risk-adjust each asset's peak-sales by an explicit probability-of-success; state the PTS.
+3. **Bull / base / bear price targets**, each tied to its swing assumption (base = central estimates; bull = faster attach / penetration or higher multiple; bear = price war / margin compression), with upside / downside % on each. All three `*Analyst view:*`.
+4. **Consensus benchmark.** Where the zsxq library (or another sourced note) carries Street estimates / a consensus PT, state where the report's forward numbers sit vs consensus (above / below, by how much) — the UBS / Nomura "+16% vs Street" move. Source the consensus figure to the zsxq note (`*Analyst view:*`, `/zsxq/pdf-viewer/<file_id>`) or a dated public source; **never invent a consensus number.**
+5. **Name the 1–2 swing variables** the call hinges on, so the reader knows which assumption to pressure-test.
+
+These five outputs populate the new **Section 2 "Valuation & Price Target" chapter** and the **top-of-report investment-summary header** (rating + PT + upside%). See `references/report_structure.md` § "Investment summary header" and the Section-2 spec for the table template and scenario block.
 
 ### Step 3 — Business model analysis
 
@@ -614,6 +650,8 @@ A report this length needs visual anchors. **Add 4–8 Mermaid diagrams** across
 **Default: write ONE complete Simplified Chinese (zh-CN) report.** Only produce an English report if the user explicitly opted in (`in English`, `English only`, `bilingual`, `also in English`, etc. — see the override table in the "Report language" section). When bilingual mode is on, write two complete independent reports — one Chinese, one English.
 
 Read `references/report_structure.md` for the 9-section spec and full output template. Read `references/citations.md` before drafting — inline citations are required in every section, not just at the end.
+
+**Open with the decision layer, then the descriptive sections (BLUF — see § "Learning from sell-side institutional research").** Lead with the **investment-summary header** (rating + 12-month PT + upside% + valuation one-liner + 2–4 thesis pillars, all `*Analyst view:*`), then a thesis-first lead paragraph in Section 1 (the call + why-now + pillars) before the "what the company does" prose. The forward-estimates table, the PT derivation, and the bull/base/bear scenarios from Step 2b go in the **Section 2 "Valuation & Price Target"** chapter; the bear-vs-thesis rebuttals and dated catalysts go in the **Section 9.5 "Key debates & catalysts"** block. Keep all 9 descriptive sections intact — they feed the thesis; the decision layer sits on top of them, it does not replace them.
 
 **Language-specific instructions:**
 

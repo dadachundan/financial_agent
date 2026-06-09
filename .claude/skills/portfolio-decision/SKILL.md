@@ -44,21 +44,50 @@ See [rating taxonomy](../../../references/rating_taxonomy.md).
 - **Underweight** — Reduce exposure; take partial profits.
 - **Sell** — Exit position or avoid entry.
 
-If `past_context` is non-empty, incorporate its lessons; otherwise rely solely on the current analysis.
+**Conviction intensity (a layer ABOVE the tier).** The 5 tiers state *direction*; a separate qualifier states *intensity* so a 51% Buy and a max-conviction Buy don't look identical. Tag every decision **Conviction: High / Moderate / Low**, and optionally flag a **Top Pick**. Reserve High conviction for calls where the evidence corroborates across the breadth of the analyst debate (bull, bear, and risk analysts converging). This mirrors how sell-side signals intensity outside the discrete rating — GS "Conviction List", Citi "Top Pick", Bernstein "Best Idea", Nomura's numeric "X/5" score.
+
+If `past_context` is non-empty, incorporate its lessons; otherwise rely solely on the current analysis. When `past_context` holds resolved entries for this ticker, surface a one-line **track record** (hit rate / realized-vs-benchmark across resolved calls) the way GS reports the Conviction List's cumulative return vs an equal-weight benchmark, and apply its three lessons: stay with winners that beat early, cut losers fast, earnings drive prices.
 
 ## Output schema (produce this markdown exactly)
 
 ```markdown
-**Rating**: <Buy | Overweight | Hold | Underweight | Sell>
+**Rating**: <Buy | Overweight | Hold | Underweight | Sell> · **Conviction**: <High | Moderate | Low> <· Top Pick (optional flag)>
 
-**Executive Summary**: <Concise action plan covering entry strategy, position sizing, key risk levels, and time horizon. Two to four sentences.>
+**Executive Summary**: <Concise action plan covering entry strategy, position sizing, and time horizon. Two to four sentences. MUST state the quantified upside/downside skew in one sentence — "~X% to the base-case target, ~Y% downside to the bear case; risk-reward ~Z:1" — and an explicit **invalidation level** (a stop/price that would falsify the thesis). Where the analysts supplied a dividend yield, decompose total expected return as "price appreciation X% + dividend yield D% = total return T%".>
 
-**Investment Thesis**: <Detailed reasoning anchored in specific evidence from the analysts' debate. Every specific data point, quote, or filing reference carries an inline markdown-link citation — `[Publisher · date](url)`, `[@user · StockTwits · date](url)`, `[10-K Item 7](url)`, etc. — reused from the upstream analyst reports' References sections. Never invent URLs. Incorporate prior lessons from past_context if any; otherwise rely solely on the current analysis.>
+**Investment Thesis**: <Detailed reasoning anchored in specific evidence from the analysts' debate. Every substantive paragraph leads with a bolded mini-section topic sentence (e.g. **Earnings revision:**, **Margin trajectory:**) so the argument is skimmable. Every figure is paired with its driver in the same sentence (never a bare number), and every specific data point, quote, or filing reference carries an inline markdown-link citation — `[Publisher · date](url)`, `[@user · StockTwits · date](url)`, `[10-K Item 7](url)`, etc. — reused from the upstream analyst reports' References sections. Never invent URLs. Incorporate prior lessons from past_context if any; otherwise rely solely on the current analysis.>
 
-**Price Target**: <optional — number in the instrument's quote currency, or omit the line>
+**Downside risks**: <bulleted list — each risk one clause carrying its own inline citation>
+**Upside catalysts**: <bulleted list — each catalyst one clause carrying its own inline citation>
 
-**Time Horizon**: <optional — e.g. "3-6 months", or omit the line>
+**Price Target** (base case): <number in the instrument's quote currency, written as `multiple × earnings base` with the multiple anchored to the name's own history — e.g. "Rmb127 = 22× 2026E EPS, ~0.5 SD above the 5-yr mean". Cite inline the upstream analyst report that contains both the multiple and the earnings figure. Never a bare number with no derivation (collides with the project numerical-accuracy rule). If upstream gave no PT, state the derivation explicitly rather than inventing one; omit only if no defensible basis exists.>
+
+**Scenario span** (carry all three; the base case equals the Price Target above):
+
+| Scenario | Price target | Multiple × earnings base | % vs current |
+|---|---|---|---|
+| Bull | <PT> | <e.g. 33× cycle-adjusted EPS> | +<X>% |
+| Base | <PT> | <multiple × base> | +<X>% |
+| Bear | <PT> | <e.g. 27× trough EPS> | −<Y>% |
+
+<Every cell traces inline to its upstream-analyst source. For cyclicals, use cycle-adjusted / mid-cycle EPS as the base so the span reflects earnings-cycle position, not just the multiple.>
+
+**Key estimate changes** (only when a prior memory-log entry exists for this ticker): <old → new rating/PT with the delta and a one-clause trigger — JPM "Key Changes" style. Pull prior values from past_context.>
+
+**Time Horizon**: <e.g. "12-month price target; 3-6 month holding horizon", with a target date — never open-ended>
 ```
+
+## Learning from sell-side institutional research
+
+A study of how GS, Morgan Stanley, UBS, J.P. Morgan, Citi, Bernstein, and Nomura construct portfolio-decision notes. Apply these to sharpen the output above — they reinforce, never relax, the project's numerical-accuracy and citation rules.
+
+- **Three things travel together, non-negotiably (every bank, every name): a rating, a price target *with its derivation*, and a bull/base/bear span.** A rating shipped alone reads as opinion. The schema above now requires all three — keep them together; a PT is `multiple × earnings base`, the multiple anchored to the name's *own* history in SD terms (Citi: "PB 3.09× 2026E, 0.4 SD below mean"), not an absolute number.
+- **Lead with one thesis-bearing headline.** Fuse `TICKER + the single strongest thesis clause + rating + PT` into a line that carries the call on its own — GS-style: "Shengyi Tech (600183): CCL pricing uptrend on AI demand; TP Rmb127; Buy, High conviction." Put it as the first line of the Executive Summary.
+- **Convert the point rating into a risk-reward skew.** The Citi/MS/UBS habit: never a bare rating — always "~X% to base target, ~Y% to bear, ~Z:1 reward-to-risk." That one sentence is what *justifies* the chosen tier and conviction.
+- **Split risks into two symmetric lists** — Downside risks vs Upside catalysts (UBS/MS) — each item one clause with its own citation. Do not bury risks in thesis prose.
+- **Decompose total expected return when a dividend exists** (UBS: "price appreciation 20.8% + dividend yield 1.1% = total return 21.9%"), and name an explicit invalidation level — make the Executive Summary's "key risk levels" a concrete number, not prose.
+- **"Free call option" framing** for convex optionality the market isn't paying for (GS S-Oil petrochem recovery) — a clean way to label asymmetric upside in the thesis.
+- **House voice:** decisive single-clause verdicts ("Maintain Buy", "Top Pick") never hedged (reinforces the existing *don't-default-to-Hold* rule); bolded mini-section topic sentences as the skeleton; every figure paired with its driver in the same sentence; time-bound everything (12-mo PT + horizon + target date).
 
 ## Persist output
 

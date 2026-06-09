@@ -213,20 +213,22 @@ After SEARCHING FOR and confirming the latest quarter, collect the following:
 - 🚨 Materials show different quarters (e.g., release says Q3 but transcript says Q2)
 - 🚨 Grabbed the first result without verifying the date
 
-### Step 3: Extract Key Metrics
+### Step 3: Extract Key Metrics (and reconcile against the prior preview)
 
-Create a structured summary:
+**Preview reconciliation (JPM "As We Previewed").** If an `earnings-preview` note or any prior estimate exists for this quarter, **open the review by reconciling what was called vs what printed** before anything else — "we previewed Rev $X / EPS $Y; reported $X' / $Y', so [in line / ahead on Z / short on W]". This frames the whole review and is the matched-pair convention these banks use. Cross-link the preview in Sources.
+
+Create a structured summary. **Triangulate each metric three ways — vs YoY, vs our estimate, AND vs the guidance midpoint** (the third column is what GS/DB/Bernstein lead with):
 
 ```
-REPORTED RESULTS vs. ESTIMATES:
-─────────────────────────────────────────────────
-                    Reported    Our Est    Consensus    Beat/(Miss)
-Revenue             $X,XXX      $X,XXX     $X,XXX       $XX (X%)
-Gross Margin        XX.X%       XX.X%      XX.X%        XXbps
-EBITDA              $XXX        $XXX       $XXX         $XX (X%)
-Operating Profit    $XXX        $XXX       $XXX         $XX (X%)
-EPS (Adjusted)      $X.XX       $X.XX      $X.XX        $X.XX
-EPS (GAAP)          $X.XX       $X.XX      $X.XX        $X.XX
+REPORTED RESULTS vs. ESTIMATES vs. GUIDE:
+─────────────────────────────────────────────────────────────────
+                    Reported   Our Est   Consensus   Guide Mid   Beat/(Miss)
+Revenue             $X,XXX     $X,XXX    $X,XXX      $X,XXX      $XX (X%)
+Gross Margin        XX.X%      XX.X%     XX.X%       XX.X%       XXbps
+EBITDA              $XXX       $XXX      $XXX        $XXX        $XX (X%)
+Operating Profit    $XXX       $XXX      $XXX        $XXX        $XX (X%)
+EPS (Adjusted)      $X.XX      $X.XX     $X.XX       $X.XX       $X.XX
+EPS (GAAP)          $X.XX      $X.XX     $X.XX       $X.XX       $X.XX
 
 KEY BUSINESS METRICS:
 ─────────────────────────────────────────────────
@@ -252,7 +254,10 @@ For EACH key metric that beat or missed, explain:
 
 **If BEAT:**
 - What drove the outperformance?
-- Was it one-time or sustainable?
+- **Decompose the beat (Bernstein UMC method)** — don't just ask "one-time or sustainable?", quantify it:
+  - **FX vs underlying** — how much of the variance is currency vs real volume/price? (Bernstein UMC: of a ~3% beat, +1.2pt was FX, so underlying was ~1.8pt.)
+  - **One-time / pull-forward vs sustainable** — was demand pulled forward into the quarter (tariff/launch/restock) or is it a durable ramp? (Hon Hai: separate pull-forward from the real AI-server ramp.)
+- **For up-cycle raises, name the binding constraint — supply- vs demand-constrained (GS Dell).** "Supply-constrained, not demand-constrained" (DRAM/NAND/CPU bottleneck) is a *different and often stronger* bull case than a demand beat — the upside is gated by supply, not orders. State which one the print implies.
 - Did management guide higher going forward?
 - How does this impact our thesis?
 
@@ -289,6 +294,12 @@ Identify:
 - Trends vs. prior quarters
 - Management commentary on outlook for each area
 
+**Forward-visibility pull (the leading indicators the banks lead with).** Where disclosed, extract and trend these — they sit *ahead* of revenue:
+- **Backlog / bookings / order-book** — level, sequential add, book-to-bill (Dell $51.3B AI backlog, +$24B new orders; Broadcom $60bn POs with a by-customer GW schedule, e.g. OpenAI 1.3GW in 2027, Meta 3GW). If not disclosed, say so.
+- **Per-unit economics by quarter** for platform / turnaround names — the unit-economics trajectory IS the thesis (Meituan per-order profit Rmb/order; DiDi China-mobility per-order EBITA margin 4.6%). Trend it toward breakeven. Feeds the normalization bridge in Step 9.
+
+**Peer read-across — state the transmission logic, don't just "compare to peers" (UBS Credo→BizLink, GS Broadcom→Toppan, JPM Broadcom→Asian Tech).** When a peer has just reported, carry its print into *this* name's estimates and **name the mechanism**: "Credo's strong AEC trend → raise BizLink AEC estimates"; "Broadcom's substrate demand → raise Toppan". A read-across that doesn't move a number or name a channel is just color.
+
 ### Step 7: Margin Analysis
 
 Analyze profitability:
@@ -297,12 +308,14 @@ Analyze profitability:
 - Key drivers (pricing, mix, costs, leverage)
 - Outlook going forward
 
-### Step 8: Guidance Analysis
+### Step 8: Guidance Analysis — co-equal with the print
+
+**Treat the forward guide as co-equal with the print block** (GS Dell, DB Oracle) — it is frequently the real story. Cover **next-quarter AND full-year** guidance, each **three ways: vs prior guide, vs Street, AND vs our model** (see report-structure.md "GUIDANCE vs PRIOR vs STREET").
 
 If company provided guidance:
-- Compare new guidance to prior guidance
+- Compare new guidance to prior guidance (quantify the raise/cut to the midpoint)
 - Compare to internal estimates and Street estimates
-- Assess credibility (does company have track record of sandbagging? beating?)
+- **Guidance-credibility framework — sandbag vs stretch, against the track record.** Not just a checklist line: does management have a history of low-balling then beating (sandbag — discount the guide upward), or of guiding aggressively and missing (stretch — haircut it)? Worked examples: Marvell guide framed as "conservative — haircut to the Microsoft forecast" (sandbag); Oracle FY27 OCI $35bn guide *below* Street $38bn (a guide-vs-Street gap that resets expectations down). State your sandbag/stretch read explicitly and adjust your model accordingly.
 - Identify key assumptions behind guidance
 
 If company did NOT provide guidance:
@@ -316,18 +329,33 @@ Update estimates for:
 - Next year
 - Potentially year after
 
+**Lead with the headline magnitude (GS/JPM).** Before the table, state the revision as one line with direction + magnitude + a **result-driven reason clause**: "FY27/28/29 Adj EPS raised an avg +41% on stronger AI-server scale + DRAM pricing pass-through." The reason MUST name the specific result — **"our model" / "our analysis" is forbidden** (CLAUDE.md "Numerical Accuracy").
+
 **Show clearly:**
 ```
 UPDATED ESTIMATES:
 ─────────────────────────────────────────────────
-                        Old Est     New Est     Change      Reason
-FY2024E Revenue         $XX.XB      $XX.XB      +X.X%      [Brief reason]
-FY2024E EBITDA          $X.XB       $X.XB       +X.X%      [Brief reason]
-FY2024E EPS             $X.XX       $X.XX       +X.X%      [Brief reason]
+                        Old Est     New Est     Change      Reason (result-driven)
+FY2024E Revenue         $XX.XB      $XX.XB      +X.X%      [specific result that drove it]
+FY2024E EBITDA          $X.XB       $X.XB       +X.X%      [specific result]
+FY2024E EPS             $X.XX       $X.XX       +X.X%      [specific result]
 
-FY2025E Revenue         $XX.XB      $XX.XB      +X.X%      [Brief reason]
-FY2025E EBITDA          $X.XB       $X.XB       +X.X%      [Brief reason]
-FY2025E EPS             $X.XX       $X.XX       +X.X%      [Brief reason]
+FY2025E Revenue         $XX.XB      $XX.XB      +X.X%      [specific result]
+FY2025E EBITDA          $X.XB       $X.XB       +X.X%      [specific result]
+FY2025E EPS             $X.XX       $X.XX       +X.X%      [specific result]
+```
+
+**Normalization / earnings-path bridge (for loss-making / turnaround names — UBS Meituan).** Where the thesis is a route to profit, project the quarter-by-quarter path and state the out-year normalized number with its build, so the reader can re-derive it:
+```
+PATH TO NORMALIZED PROFIT (FY[n]E)
+─────────────────────────────────────────────────
+[Core segment A normalized]              + Rmb 27bn
+[Core segment B normalized]              + Rmb 22bn
+[New-initiative drag]                    −  Rmb  7bn
+─────────────────────────────────────────────────
+FY[n]E normalized profit                 = Rmb 42bn
+
+Source: [Firm Name] estimates (segment inputs from [filing/release]).
 ```
 
 ### Step 10: Update Valuation & Price Target
@@ -337,6 +365,11 @@ Based on updated estimates:
 - Update comparable company multiples (if peer group has reported)
 - Determine new fair value
 - Decide if price target changes
+
+**The valuation build must visibly reconcile to the headline PT (UBS/Citi SOTP; MS/GS single-multiple).** Don't stop at "we use DCF/comps":
+- **Multi-segment names → SOTP build**: each segment line is `FY[n]E EBIT × multiple → EV → per-share`, and the per-share lines (plus net cash) **sum to the printed PT** (UBS Meituan, Citi DiDi). If the sum ≠ headline PT, the build is wrong — fix it.
+- **Single-line names → `multiple × out-year EPS`**: e.g. MS "28x FY27E EPS", GS "30x normalized EPS". State the multiple, the EPS, and that their product equals the PT.
+- Always print **implied upside % vs a dated current price** next to the PT (UBS HK$128 vs HK$78.25 close = +63.6%). See report-structure.md "Price Target Methodology" for the table templates.
 
 **Price Target Decision:**
 - If estimates changed significantly (>5%) → Usually change price target
@@ -354,6 +387,11 @@ Decide whether to change rating:
 - Stock reaction (up/down/flat?)
 - Valuation (expensive/cheap relative to new estimates?)
 - Risk/reward (asymmetry shifted?)
+
+**Reaction reconciliation — explain WHY the stock moved, especially a beat that sold off (required; see SKILL.md § 6).** The most common post-print question. Handle the counter-intuitive cases:
+- **Beat that sold off** — guide below the buy-side whisper (Broadcom: in-line FQ3 guide vs an elevated whisper), or a smaller-than-usual beat after a big run-up (CrowdStrike: beat shrank after a ~70% 6-week run). Name the run-up, the whisper, and the line the tape was actually trading.
+- **Miss that rallied** — bad print already discounted, or backlog / forward guide reset the narrative.
+- Name the dated move and the specific line the market keyed on ("−7% next day on the FQ3 guide despite the FQ2 beat").
 
 ## Phase 3: Chart Generation (1-2 hours)
 

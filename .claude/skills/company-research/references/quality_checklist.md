@@ -75,6 +75,30 @@ Local sell-side notes from `db/zsxq.db` are the project's first stop for the ana
 - Stretched multiples (P/E > 50× or > 2× sector median, P/S > 15× or > 3× sector median) are explained with a named cause (sector premium, depressed earnings, narrative, M&A, small float) and a citation — not left dangling.
 - If the multiple is extreme enough to be a risk (P/E > 50× without clear earnings path, P/S > 20× outside top-quartile growth), Section 9 includes a valuation / multiple-compression risk.
 
+## Valuation, price target & forward estimates (rating / PT / scenarios)
+
+The decision layer that mirrors institutional sell-side notes — see SKILL.md § "Learning from sell-side institutional research" and `report_structure.md` § "Investment summary header" + § 1A. **Guardrail running through every check below: the rating, the price target, the scenario PTs, and every projected estimate are the analyst's own forward view — labeled `*Analyst view:*` / `*分析师观点：*` and NEVER attached to a filing citation.** Checks:
+
+- [ ] **Investment-summary header present** at the very top (above TOC / banner): rating, 12-month PT, current price, implied upside / downside %, one-line valuation method, market cap, 52-week range, ticker/exchange, 2–4 thesis pillars — the whole block labeled `*Analyst view:*`.
+- [ ] **A defined rating** on one stated scale (`Buy/Hold/Sell` or `OW/N/UW`), not a vague verdict. (Private / un-targetable names: header states `Rating / PT: not applicable — <reason>`.)
+- [ ] **Section 1 opens with an investment-thesis lead paragraph** (call + why-now + pillars) before the descriptive overview.
+- [ ] **Forward financial-estimates table spans ≥3 years** (revenue / gross margin / operating-or-net margin / EPS, with YoY) — each projected cell `*Analyst view:*`; each driver's basis cited inline (filing segment data + guidance + an industry forecast). No `(Source: our model)` / `(模型估算)`.
+- [ ] **The price target's derivation is shown** — forward-EPS × target-multiple, or DCF, or SOTP, or rNPV — with the arithmetic from estimate to PT, not just a number.
+- [ ] **The target multiple is justified against 3–5 named comps** (the J.P. Morgan 40x-vs-Howmet-37x move). A multiple with no comp justification fails.
+- [ ] **DCF WACC's risk-free rate is sourced to `indicators.db`** (the 10Y), with the as-of date stated; terminal growth ≤ risk-free rate.
+- [ ] **Bull / base / bear PTs present**, each tied to its differentiating assumption, each with upside / downside %. All three `*Analyst view:*`.
+- [ ] **Consensus benchmark stated** when sourced material carries it (where the report's estimates sit vs the Street); the consensus figure sourced to a zsxq note or a dated public source — never invented.
+- [ ] **The 1–2 swing variables** the call hinges on are named.
+- [ ] **No filing citation is attached to the rating, the PT, or any projected number.** Format check: scan the header + Section 1A — every PT / estimate / scenario line carries `*Analyst view:*` / `*分析师观点：*`, none carries a 10-K / 年度报告 / Yuho link.
+
+## Key debates & catalysts (Section 9.5)
+
+Distinct from the Section 9 risk inventory — see `report_structure.md` § 9.5 and `risk_taxonomy.md`. Checks:
+
+- [ ] **2–4 key debates present**, each as a one-line bear argument + an `*Analyst view:*` rebuttal with cited evidence (at least one grounded in the local zsxq bear case where coverage exists).
+- [ ] **A dated 12-month catalyst list present** (event → approx date → why it moves the thesis), with a pointer to the `catalyst-calendar` skill.
+- [ ] Section 9.5 does **not** merely restate the Section 9 risk taxonomy — it argues the thesis against specific bear points; the comprehensive downside map stays in Section 9.
+
 ## Customers & Go-to-Market
 - Top-1 and top-5 customer share of revenue quantified from the latest annual filing (or explicitly noted as undisclosed).
 - 3-year concentration trend captured when the disclosure history allows.
@@ -157,6 +181,8 @@ Required before declaring done:
 4. Specific examples and quantitative data throughout.
 5. Sources cited **inline** at the point each fact appears, plus a consolidated References list at the end.
 6. Reader finishes able to understand:
+   - **The call** — the rating, the 12-month price target, the implied upside%, and the 2–4 thesis pillars behind it (the investment-summary header + Section 1 lead)
+   - **The forward model** — the 3-year revenue / margin / EPS trajectory, how the PT was derived, and the bull / base / bear scenarios (Section 1A)
    - What the company does and how it makes money
    - **Every product the company sells (from a thorough company-website walk) and which specific products have a competitive advantage — including moat type and closest named competitor product**
    - Background of the founder and current CEO

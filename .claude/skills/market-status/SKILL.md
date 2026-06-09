@@ -128,6 +128,8 @@ Equal-weighted mean of the 9 headline indicators' exuberance percentiles (each 0
 | 20–40 | **Neutral** | No edge either way. |
 | 0–20 | **Subdued** | Broad pessimism / capitulation — contrarian buy regime. |
 
+**Acceleration note (calibration observation, not a timing call).** Mirroring Citi BMC's "once the score breaks its band it tends to accelerate," crossing from **Stretched → Frothy** (≈ 80) historically precedes faster deterioration than a comparable move at lower bands. State it as a band-crossing observation, never as a forecast — see the [Learning from sell-side institutional research](#learning-from-sell-side-institutional-research) section and the "state read, not timing model" guardrail.
+
 ### Historical anchors
 
 The skill must explicitly anchor today's reading against three clean historical peaks plus today, mirroring GS Exhibit 3 columns:
@@ -137,6 +139,26 @@ The skill must explicitly anchor today's reading against three clean historical 
 - **Today**
 
 For each headline indicator, the calibration table shows the exuberance percentile at each anchor. **Historical anchors come from the GS PDF directly when the percentiles are unambiguous** — the script does not need to back-fill 1995 history for every indicator. When the script can compute the historical percentile from a long-history series (Momentum / VIX / put-call / 10Y), it does so; when only a current value is reliably fetchable (AAII / Yale / IPO count / net issuance), the script quotes the GS percentile for the historical columns and computes only the current column directly.
+
+## Learning from sell-side institutional research
+
+The GS Kickstart is the primary analog, but the broader sell-side exuberance literature (GS, Citi, Morgan Stanley, J.P. Morgan, Bernstein) sharpens several blocks. Apply these named moves on top of the 9-indicator core — they deepen the read without adding new data sources.
+
+- **Earnings-led vs multiple-led diagnostic (the call's spine).** Mirror the GS "Evaluating exuberance" core argument — its whole "not yet a systemic top" verdict rests on fwd-EPS being *up more than price* (e.g. fwd-EPS +16% YTD vs index +8% YTD → "rally is earnings-led, not theme-led"). Report fwd-EPS revision % YTD against index price return YTD as an explicit named diagnostic, and label the froth: **earnings-backed = more durable; multiple-driven = more fragile.** Compute it in Step 3 and let it color the verdict — this is the one diagnostic that changes what the composite *means*, not just its level.
+
+- **Flows decomposed by holder type (biggest structural gap).** Mirror the Morgan Stanley *China/HK Flows & Positioning Tracker* and the GS Kickstart flows page: replace the single ICI line with a holder-type table — domestic institutional, retail margin/leverage (FINRA margin debt + put/call as the retail-leverage read), ETF growth-vs-dividend rotation, and equity-futures net positioning where a public proxy exists (foreign-active-vs-passive too, where applicable). Each line carries a percentile-vs-history and a deep-URL source. Per J.P. Morgan *"Positioning Looks Stretched Only in Isolated Pockets,"* express positioning as a single history percentile and then decompose into **crowded pockets vs under-owned pockets** (e.g. mega-cap-AI / leveraged single-stock ETFs crowded vs broad-market underowned) — and frame stretched-but-not-extreme as "buy-the-dip until proven otherwise," not a sell signal.
+
+- **Breadth as cross-sectional DISPERSION, not just % above 200dma.** Mirror J.P. Morgan Quant *"Calm Surface, Violent Undercurrents"*: a quiet index can mask a 10-year-high in single-stock dispersion. Add a **median-stock-vs-index return** and **single-stock realized vol vs index realized vol** read (both derivable from the top-50 SPX members already pulled for the correlation calc). State the insight explicitly when the spread is wide — index flat while the median stock is down is a froth tell that % above 200dma misses.
+
+- **IPO COUNT vs PROCEEDS, and gross vs net-of-buyback issuance.** Mirror the GS nuance: IPO *proceeds* at records but IPO *count* near average, and *net* issuance low because buybacks exceed new supply. Encode both sub-metrics on the corporate-financing leg with their own percentiles so the "supply pressure" flag reflects the count/value divergence rather than a single read — this is what GS uses to say supply pressure is still contained.
+
+- **Region / segment split of the composite.** Mirror Citi's Bear Market Checklist region decomposition (US 11.5 vs Europe 5): add a "where is the froth concentrated" line splitting **mega-cap AI vs the broad market**, so the single US composite isn't read as uniform. Tie concentration to its 2000 benchmark explicitly — quote top-10 weight at *each* historical anchor (GS: today's concentration is high but still *below* 2000), not just today.
+
+- **Forward-path context — the level the Street is underwriting.** Every analog couples the exuberance read to an explicit forward index path. Report the published Street / GS **year-end + 12m SPX point target and the EPS-growth assumption behind it** (sourced via WebSearch with a date), framed as *"the level of exuberance the Street is currently underwriting"* — **explicitly NOT the skill's own forecast** (preserves the "no timing / price call" guardrail and the "analyst's model is not a source" rule; cite GS / consensus, never "our model").
+
+- **Behavioral acceleration rule (calibration observation, not a timing call).** Mirror Citi BMC's memorable one-liners ("once the checklist breaks its band it tends to accelerate"; "when more flags turn red, stop buying the dip"). For this skill's 0–100 composite, carry a one-line note that crossing from **Stretched → Frothy** historically precedes faster deterioration — clearly labeled as a calibration observation, consistent with the "state read, not timing model" guardrail.
+
+- **House idiom — valuation in standard-deviations, gauges with absolute levels.** Quote every valuation in standard-deviations-from-history (and PEG), never a bare multiple — "fwd 12m P/E 22.3x = +3.4 s.d. vs 10y" is the desk idiom and exactly the project's "no absolute threshold without percentile context" rule. Name proprietary gauges explicitly with an absolute level + percentile every time (GS Speculative Trading Indicator, Citi BMC score, MS MSASI); when proxying a proprietary series, say so and show the proxy's own percentile.
 
 ## Data sources
 
@@ -175,6 +197,8 @@ The build script flags these as `requires_websearch: true` in the JSON output. T
 | Fed-funds 2026 YE implied | `CME FedWatch year-end 2026 implied fed funds rate` | CME endpoint requires JS |
 | GS US FCI level | `Goldman Sachs Financial Conditions Index US 2026 latest` | proprietary |
 | Forward 12-month EPS growth (SPX) | `S&P 500 2027 consensus EPS growth FactSet` | sell-side aggregator |
+| Street SPX point target (year-end + 12m) | `Goldman Sachs S&P 500 year-end 2026 12-month price target` | forward-path context — "level the Street is underwriting"; cite GS / consensus, never "our model" |
+| fwd-EPS revision breadth vs YTD price | `S&P 500 forward EPS revision YTD vs index return 2026` | earnings-led-vs-multiple-led diagnostic |
 
 The build script writes a `_websearch_queue.json` alongside the data JSON. The agent picks it up in Step 2 and resolves each entry.
 
@@ -239,19 +263,25 @@ Before writing the report, scan the calibration table and the broader panel for:
 1. **Cross-category divergence** — e.g. share-price indicators all in the top decile but corporate-sentiment indicators (IPO count, net issuance) mid-decile. The narrative blocks must call this out.
 2. **A single indicator carrying the composite** — if the composite is 78 but 8 of 9 indicators are mid-50s and one is 100, the composite is misleading.
 3. **Stale data on a WebSearch indicator** — if the WebSearch result is older than 30 days, prefer a more recent secondary source.
+4. **Earnings-led vs multiple-led diagnostic** — compute fwd-EPS revision % YTD against index price return YTD (the GS "rally is earnings-led, not theme-led" check). Label the froth: earnings-backed (EPS ≥ price) = more durable; multiple-driven (price ≫ EPS) = more fragile. This colors the verdict's *meaning*, not just its level — see the [Learning from sell-side institutional research](#learning-from-sell-side-institutional-research) section.
 
 ### Step 4 — Write the report
 
 Save to `reports/market-status/market_status_<YYYY-MM-DD>.md`. Target 3,000–5,000 words plus 10–15 charts plus 3 tables. Structure mirrors the GS Kickstart:
 
 1. **Exuberance Verdict** — single bold blockquote (≤ 200 words). First line is the verdict ("**Stretched — exuberance score 68 / 100, 86th percentile vs history since 1995**"). Then 2-3 sentences naming the most-stretched and most-contra indicators with absolute levels. Then one line of action (3-5 verbs). Mirror Citi-BMC and GS-Kickstart "summary box" style.
+   - **Bull-market-ending triggers checklist** (mini-table, exempt from the ≤ 200-word prose limit — like Figure 1). Mirror the GS US Weekly Kickstart "Evaluating exuberance" lead-in and Citi's Bear Market Checklist: a 3-row table checking the three classic termination triggers, each marked **Not-yet / Marginal / Flagged** with its sourced metric: (a) **fundamentals/earnings weakening** (fwd-EPS revision breadth turning negative); (b) **surge in new equity supply** (IPO proceeds + net-of-buyback issuance); (c) **Fed / financial-conditions tightening** (NFCI + fed-funds path). GS's June-2026 read marks all three only "marginally elevated → not yet a systemic top" — the checklist makes the verdict a checklist, not just a score.
+   - **Counter-signal line** (mandatory, one sentence). Mirror Citi BMC's "what is NOT yet flagged" and GS's note that median short interest sits at a multi-decade *high* (lots of money still short = not full euphoria): name the headline indicators currently in the bottom / mid decile so the read is never one-sided. Reinforces the existing "never assert this looks like 2000 / 2021" guardrail.
 2. **Figure 1. Kickstart-style 9-indicator calibration table** — exactly the layout of GS Exhibit 3. Columns: Dot-Com Bubble / 2021 / Current. Rows grouped by Share-prices / Trading-activity / Investor-sentiment / Corporate-sentiment. Cells coloured: red if exuberance pct ≥ 80, amber 60–80, green ≤ 30, plain otherwise. Cite the public source URL inline per row.
 3. **§ Share-price action** — narrative paragraph + Momentum chart (`*_momentum.png`) + Breadth chart (`*_breadth.png`). 200-300 words.
 4. **§ Trading activity** — narrative paragraph + Speculative Trading proxy chart + Put/Call chart + Short-interest chart. 300-400 words.
 5. **§ Investor sentiment** — narrative paragraph + AAII chart + Yale chart + GS Sentiment Indicator chart. 300-400 words.
 6. **§ Corporate sentiment** — narrative paragraph + IPO chart + Net-issuance chart. 200-300 words.
-7. **§ Macro & cross-asset panel** — single block with sub-sections for: 10Y + fed-funds path / GDP / VIX & VVIX / breadth & top-10 concentration / S&P 500 P/E + ERP / sector returns + factor returns + top movers. 600-900 words.
+7. **§ Macro & cross-asset panel** — single block with sub-sections for: 10Y + fed-funds path / GDP / VIX & VVIX / **flows decomposed by holder type** (institutional / retail margin-leverage / ETF growth-vs-dividend / futures net positioning — mirror the MS *China/HK Flows & Positioning Tracker*, with crowded-vs-under-owned pockets per JPM *"Stretched Only in Isolated Pockets"*) / breadth incl. **cross-sectional dispersion** (median-stock-vs-index, single-stock vs index realized vol — JPM *"Calm Surface, Violent Undercurrents"*) & top-10 concentration **quoted at each historical anchor** / S&P 500 P/E + ERP **in standard-deviations-from-history** / sector returns + factor returns + top movers. 600-900 words. See the [Learning from sell-side institutional research](#learning-from-sell-side-institutional-research) section.
 8. **§ Historical anchor — "What does today look like?"** — a short close that names 2-3 historical analogs (with their forward 12-month SPX returns) and explicitly states the calibration limit ("the dashboard described the regime N of N historical times; it predicted the path 0 of N times").
+   - **Forward-path context line** — report the published Street / GS year-end + 12m SPX point target and the EPS-growth assumption behind it (WebSearch with a date), framed as *"the level of exuberance the Street is currently underwriting"* — **explicitly NOT the skill's own forecast**. Cite GS / consensus, never "our model".
+   - **One-line earnings-led note** — restate the Step-3 fwd-EPS-vs-price diagnostic ("earnings-backed froth is more durable than multiple-driven froth").
+   - **Paired 利好 / 利空 (catalysts vs downside-risks) bullet block** — mirror every GS regional Kickstart's closing pair: a compact, scannable two-column set of bullets, each **dated and carrying a deep-URL source** (satisfies paragraph-level citation). Replaces diffuse prose with the desk format.
 9. **`## Data Used / 数据来源清单`** — manifest of every source URL + the WebSearch citations.
 
 ### Step 5 — Verify and clean up
@@ -268,7 +298,7 @@ Mirror the GS Kickstart's structure precisely — the report is the daily-scan a
 
 Mandatory blocks, in order:
 
-1. **Exuberance Verdict** (blockquote, ≤ 200 words)
+1. **Exuberance Verdict** (blockquote, ≤ 200 words) + **bull-market-ending triggers mini-table** (fundamentals / new-supply / Fed, each Not-yet / Marginal / Flagged) + **counter-signal line** (≥ 1 indicator in the bottom / mid decile)
 2. **`## Figure 1. Exuberance — 9-indicator calibration` (HTML table, raw HTML — not markdown with emoji dots)**
 3. **`## Share-price action`** (narrative + 2 charts)
 4. **`## Trading activity`** (narrative + 3 charts)
@@ -316,6 +346,7 @@ Forbidden blocks (rejected in prior similar skill iterations):
 - **Never write to any `db/*.db` file.** Read-only against `db/indicators.db`. New indicator caches live in `oneoff/`.
 - **Never silently drop a headline-9 indicator from the composite without disclosure.** If GS Speculative Trading proxy fails AND WebSearch returns no result, the report must say "composite computed from 8 of 9 GS indicators" in the verdict and the Data Used block.
 - **Never assert "this looks like 2000 / 2021".** The calibration table does that work — let the reader pattern-match. Naming a specific historical analog in the verdict is over-confident.
+- **Always carry the counter-signal line.** The Verdict must include one sentence naming the headline indicators currently in the bottom / mid decile (the "not yet flagged" evidence — mirror Citi BMC and GS's multi-decade-high short-interest note). A one-sided read that lists only the stretched indicators is rejected.
 - **Never use absolute thresholds without percentile context.** "VIX is 18" means nothing without "which is the 32nd percentile of the last 10 years". The indicator tables must always carry both.
 - **Stale data — explicit removal rule.** Same as market-complacency: if any used multpl page is more than 60 days stale, the indicator is removed from the active set with re-normalization and a note. Every report run must spot-check the publication dates.
 - **No "Source: our model" anywhere.** Cite the script path for derived calcs, the underlying FRED / yfinance / multpl / Yale / AAII / Renaissance / SIFMA URLs for the inputs.
