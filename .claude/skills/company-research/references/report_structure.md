@@ -24,6 +24,8 @@ Every chart needs a citation directly underneath in the same markdown-link forma
 - **12-month Price Target** + **current price** + **implied upside / downside %**.
 - **Valuation method, one line** (e.g. `2027E EPS $13.08 × 22× P/E`, or `DCF, WACC 9.5%, terminal g 2.5%`, or `SOTP across 6 segments`).
 - **Market cap**, **52-week range**, **ticker / exchange**.
+- **Forward valuation matrix (institutional cover-page element — the Bernstein/GS/UBS block).** A compact one-row-per-metric mini-table of the key *forward* multiples across last-actual / FY1E / FY2E (and FY3E if modeled): at minimum **P/E**, plus the 2–3 that fit the business (`PEG`, `EV/EBITDA`, `EV/FCF`, `EV/Sales`; `P/B` for capital-heavy names). This shows the multiple *compressing as estimates grow* — information a single TTM number hides (Bernstein's ISRG cover showed Adj P/E 58.9× → 52.0× → 44.9× across F25A/F26E/F27E). The forward columns are `*Analyst view:*`; the last-actual column is sourced.
+- **Relative-performance line.** Absolute price return over **1M / 6M / YTD / 12M** *and the same windows for the benchmark* (S&P 500 / sector ETF / CSI 300 / Hang Seng as fits the listing), plus the relative (stock − benchmark). Institutional notes lead with this — it tells the reader instantly whether the name is a sector-relative winner or laggard (Bernstein: ISRG −13.9% 12M absolute vs SPX +13.6% → −27.5% relative). Source the price data (yfinance / Eastmoney / Kabutan / etc.).
 - **2–4 thesis pillars**, one sentence each — the call and why it works.
 
 **Example (English report):**
@@ -108,15 +110,19 @@ A dedicated chapter, distinct from the Section 1 TTM snapshot (which is backward
 **(a) Forward financial-estimates table (REQUIRED) — 3 years out (5 if the model supports it).** Revenue, gross margin, operating-or-net margin, EPS, per year, with YoY growth. Model the **segment mix shift** — each business line its own revenue path + margin trajectory, then summed (the Tesla 6-way / Horizon licensing→hardware pattern) — not a single blended top-line. Tie each margin move to a driver (mix shift / operating leverage / pricing power). Template:
 
 ```
-| Metric (*Analyst view:*) | FY24A | FY25E | FY26E | FY27E |
-|---|---|---|---|---|
-| Revenue (RMB mn)         | 2,900 | 4,100 | 6,800 | 11,300 |
-|   — YoY %                |       | +41%  | +66%  | +66%   |
-| Gross margin %           | 36%   | 38%   | 41%   | 43%    |
-| Net margin %             | 12%   | 14%   | 18%   | 22%    |
-| EPS                      | 0.35  | 0.62  | 1.40  | 2.90   |
+| Metric (*Analyst view:*) | FY24A | FY25E | FY26E | FY27E | CAGR |
+|---|---|---|---|---|---|
+| Revenue (RMB mn)         | 2,900 | 4,100 | 6,800 | 11,300 | +57% |
+|   — YoY %                |       | +41%  | +66%  | +66%   |      |
+| Gross margin %           | 36%   | 38%   | 41%   | 43%    |      |
+| Operating margin %       | 8%    | 11%   | 15%   | 19%    |      |
+| Net margin %             | 12%   | 14%   | 18%   | 22%    |      |
+| EPS                      | 0.35  | 0.62  | 1.40  | 2.90   | +102% |
+| ROIC %                   | 9%    | 11%   | 14%   | 17%    |      |
 ```
-(Each projected cell's basis cited inline: e.g. revenue ramp from the company's order-backlog disclosure + management's 2030 guidance + an industry-forecast number — all real, sourced inputs, with the projection labeled analyst view.)
+(Each projected cell's basis cited inline: e.g. revenue ramp from the company's order-backlog disclosure + management's 2030 guidance + an industry-forecast number — all real, sourced inputs, with the projection labeled analyst view.) **Include a CAGR column and an ROIC row** — institutional models always carry both (Bernstein's ISRG model headlined Revenue/Operating-Earnings/Net-Earnings CAGRs + ROIC right on the cover).
+
+**Granularity & the margin bridge (institutional depth — the Bernstein ISRG 4Q25 model).** Where the data supports it, carry the trailing **~4–8 quarters alongside the annual columns** (institutional models run quarterly *and* annual, line-itemized by revenue segment) — the quarterly cadence is what lets a reader see the inflection, not just the annual endpoints. And add a one-row-per-driver **margin bridge** that decomposes the YoY gross-margin / operating-margin change into named drivers with their **bps magnitudes** — e.g. `GM −110bps = tariffs −95bps · higher dV5/Ion mix −40bps · facility depreciation −30bps · product-cost reductions +55bps`. "Margins improve" without the bridge is not analysis. Each driver traces to a filing / earnings-call statement cited inline; the projected bps are `*Analyst view:*`.
 
 **(b) Price-target derivation (REQUIRED) — show the arithmetic.** State the method and walk estimate → PT:
 - **Forward-PE × target multiple:** `<FY27E> EPS × <target>x = <PT>`. **Justify the multiple against 3–5 named comps** (the J.P. Morgan Yingliu-40x-vs-Howmet-37x move, defended on a 55%-vs-23% EPS-CAGR gap). A multiple with no comp justification is not a derivation.
@@ -134,9 +140,21 @@ A dedicated chapter, distinct from the Section 1 TTM snapshot (which is backward
 | Bear  | Price war compresses lidar GM to floor, de-rate to 12× | $11.5 | −43% |
 ```
 
-**(d) Consensus benchmark (when sourced material carries it).** State where the report's forward estimates sit vs the Street (above / below, by how much) — the UBS / Nomura "+16% vs Street" move. Source the consensus figure to the zsxq broker note (`*Analyst view:*`, `/zsxq/pdf-viewer/<file_id>`) or a dated public source; **never invent a consensus number.**
+**(d) Consensus benchmark (when sourced material carries it).** State where the report's forward estimates sit vs the Street (above / below, by how much) — the UBS / Nomura "+16% vs Street" move. Source the consensus figure to the zsxq broker note (`*Analyst view:*`, `/zsxq/pdf-viewer/<file_id>`) or a dated public source; **never invent a consensus number.** When the company gives forward guidance, present this as a **Guide vs Consensus vs Own-estimate table** (the Bernstein Exhibit-1 format) — one row per guided metric:
+
+```
+| Metric (FY26E)   | Company guide | Consensus | This report (*Analyst view:*) |
+|---|---|---|---|
+| Procedure growth | 13%–15%       | 15.2%     | 15.1% |
+| Gross margin     | 67%–68%       | 67.2%     | 67.5% |
+| Opex growth YoY  | 11%–15%       | 14.1%     | 13.7% |
+| EPS              | —             | $10.02    | $10.11 |
+```
+The company-guide column cites the earnings release; the consensus column is `*Analyst view:*` sourced to the zsxq note / a dated public source; the "this report" column is the analyst's own forward view.
 
 **(e) Swing variables.** Name the 1–2 assumptions the call hinges on (MS Hesai: lidar-GM floor + auto attach rate), so the reader knows what to pressure-test.
+
+**(f) On a refresh, decompose what changed (estimate-revision transparency).** Institutional notes track their own revisions in the open — when updating an existing report, state the prior figure beside the new one (`PT $750 (was $740)`, `FY27E EPS $11.72 (was $11.61)`) and **attribute the PT move to its components: how much came from the estimate change vs. the multiple change.** Bernstein's $750 = 64× (unchanged) × a raised FY27E EPS — so the entire PT increase was the estimate, not a re-rating; saying so tells the reader the call is earnings-driven, not multiple-driven. All `*Analyst view:*`.
 
 **IR / zsxq input:** the broker notes from Step 0.7 supply the Street's PT, valuation basis, and bull/bear to benchmark against — cite them `*Analyst view:*`. This is the Section 2 zsxq citation the SKILL density bar calls for.
 
