@@ -227,7 +227,7 @@ python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "AI server" --li
 Cite the **local viewer URL** so the user can click straight to the PDF they own, and put broker + date + page in the link text:
 
 ```
-*Analyst view:* 摩根士丹利维持 NVDA 增持（Overweight）评级、目标价 $288，估值基于 2027E EPS $13.08 × 22× PE（[Morgan Stanley — NVIDIA Computex keynote & analyst Q&A, 2026-06-03, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/812488522252442)）。
+*Analyst view:* 摩根士丹利维持 NVDA 增持（Overweight）评级、目标价 $288，估值基于 2027E EPS $13.08 × 22× PE（[Morgan Stanley — NVIDIA Computex keynote & analyst Q&A, 2026-06-03, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812488522252442/Morgan%20Stanley-NVIDIA%20Corp.%EF%BC%88NVDA.US%EF%BC%89Computex%20NVDA%20keynote%20%26%20financial%20analyst%20Q%26A-260603.pdf)）。
 ```
 
 - **Canonical route (verified 200): `http://xs-macbook-air.local:5001/zsxq/pdf-viewer/<file_id>`.** Do **NOT** use the old `/zsxq-pdf/<file_id>` form — that route is dead (404). The viewer does not auto-scroll on `#page=`, so put the page number in the link **text** (`p.N`), not as a URL fragment.

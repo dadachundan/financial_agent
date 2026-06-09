@@ -197,7 +197,7 @@ The build script flags these as `requires_websearch: true` in the JSON output. T
 | Fed-funds 2026 YE implied | `CME FedWatch year-end 2026 implied fed funds rate` | CME endpoint requires JS |
 | GS US FCI level | `Goldman Sachs Financial Conditions Index US 2026 latest` | proprietary |
 | Forward 12-month EPS growth (SPX) | `S&P 500 2027 consensus EPS growth FactSet` | sell-side aggregator |
-| Street SPX point target (year-end + 12m) | `Goldman Sachs S&P 500 year-end 2026 12-month price target` | forward-path context — "level the Street is underwriting"; cite GS / consensus, never "our model" |
+| Street SPX point target (year-end + 12m) | `Goldman Sachs S&P 500 year-end 2026 12-month price target` | forward-path context — "level the Street is underwriting"; cite GS / consensus, never "our model"; **pair the target with the SPX level on the strategist note's date + the implied % move** (`GS 7,200 vs 6,150 @ 2026-05-30 → +17%`), not just vs today — a bare index target with no anchor isn't actionable |
 | fwd-EPS revision breadth vs YTD price | `S&P 500 forward EPS revision YTD vs index return 2026` | earnings-led-vs-multiple-led diagnostic |
 
 The build script writes a `_websearch_queue.json` alongside the data JSON. The agent picks it up in Step 2 and resolves each entry.

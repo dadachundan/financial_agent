@@ -236,9 +236,22 @@ Analyze-specific notes (the bits beyond the shared doc):
   view that…") without a number are not.
 - If the PDF has zero broker calls (a generic macro deck, a press
   release, a TAM whitepaper), skip step 5 entirely.
+- **Show the report-date price next to every PT in your answer
+  (mandatory).** A bare "GS Costco Buy, TP $1,159" tells the user
+  nothing about the upside the analyst saw. When you report a PT in the
+  deep-read answer, pair it with the stock's price *on the report's
+  date* and the implied upside: `GS Costco Buy, TP $1,159 vs $1,030 @
+  2026-05-28 → +12.5%`. The numbers come free in `persist_pts.py`'s
+  stdout `rows` array (`report_date_price`, `price_currency`,
+  `upside_pct`) — read them back and quote them. Never substitute
+  today's spot for the report-date price; write `report-date price n/a`
+  if it's null. See
+  [`reference/pt_extraction.md`](../../../reference/pt_extraction.md)
+  § "Surfacing rule".
 
 Surface the script's stdout `inserted` and `total_in_db` in the final
-reply, e.g. `📈 PT inserts: 3 new (1 replaced), 148 total in /pt`.
+reply, e.g. `📈 PT inserts: 3 new (1 replaced), 148 total in /pt` — and
+list each call with its report-date price + upside per the rule above.
 
 ## Notes
 

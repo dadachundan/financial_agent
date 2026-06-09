@@ -85,7 +85,7 @@ The bare Buy/Hold/Sell + flat entry/stop is a desk shorthand; sell-side tactical
 
 - **Grade conviction, never ship it bare** (GS "Conviction List", Citi "Top Pick", Bernstein "Best Idea", MS "Three Actionable Ideas"). One crisp actionable line — rating + the single catalyst + the target — before any deeper rationale, and a named conviction tag rather than a binary Buy/Hold/Sell.
 
-- **Anchor every number to a reference** (the desk standard): a target price is always shown with its `%up/downside` off a dated current price and against the 52-week range; consensus context (rating/PT distribution, the bank's estimate-vs-consensus delta) shows where the trade is differentiated vs crowded. A bare target with no spot anchor is a non-call.
+- **Anchor every number to a reference** (the desk standard): a target price is always shown with its `%up/downside` off a dated current price and against the 52-week range; consensus context (rating/PT distribution, the bank's estimate-vs-consensus delta) shows where the trade is differentiated vs crowded. A bare target with no spot anchor is a non-call. **For a *borrowed* `*Analyst view:*` scenario target or PT mined from `db/zsxq.db`, the anchoring price is the stock's price on *that note's date*, not just today's spot** (`Bull $288 vs $232 @ 2026-06-03 → +24%`) — the report-date price is what shows the upside the analyst actually called and how much has since played out; pull it from `stock_price_target_db` (`report_date_price` / `upside_pct`, at `/pt`). Your own plan's targets stay anchored to the dated current price.
 
 ### Basket mode (optional — future multi-ticker runs)
 

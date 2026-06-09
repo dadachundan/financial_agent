@@ -120,8 +120,19 @@ Recommend-specific notes (the bits that don't live in the shared doc):
   means "first wins"; `/zsxq-analyze` passes `--replace` later to
   overwrite the summary-derived row.
 - The script's stdout is a JSON summary `{considered, inserted,
-  duplicate, skipped, errored, total_in_db}` — surface `inserted` and
-  `total_in_db` in the final reply.
+  duplicate, skipped, errored, total_in_db, rows}` — surface `inserted`
+  and `total_in_db` in the final reply, and use `rows` to honour the
+  surfacing rule below.
+- **Show the report-date price next to every PT you mention (mandatory).**
+  A bare "GS Costco Buy, TP $1,159" is not actionable — the user needs
+  the price the stock traded at *on the report's date* and the implied
+  upside that price fixes. `persist_pts.py` returns these per row in its
+  `rows` array (`report_date_price`, `price_currency`, `upside_pct`), so
+  quote them: `GS Costco Buy, TP $1,159 vs $1,030 @ 2026-05-28 → +12.5%`.
+  Never substitute today's spot for the report-date price; if
+  `report_date_price` is null, write `report-date price n/a`. See
+  [`reference/pt_extraction.md`](../../../reference/pt_extraction.md)
+  § "Surfacing rule".
 - If the summary contains zero PT calls (pure macro, strategy notes,
   data dashboards), skip step 4 entirely — no harm, no pipe.
 
@@ -176,7 +187,11 @@ user is choosing what to read next, not consuming the reports here.
 End the reply with two compact one-liners (only when non-empty):
 
 1. `📈 PT inserts: <inserted> new, <total_in_db> total in /pt` —
-   from step 4's stdout summary.
+   from step 4's stdout summary. **When you list the actual PT calls
+   (not just the count), one line per row using the step-4 `rows`
+   data: `<broker> <ticker> <rating>, TP <ccy><pt> vs <ccy><report_date_price>
+   @ <report_date> → <±upside_pct>%`** — the report-date price is
+   mandatory (surfacing rule); `report-date price n/a` if it's null.
 2. `🟡 <N> PT-mentioned tickers without a reports/company/ entry` —
    followed by the markdown table from step 5.
 

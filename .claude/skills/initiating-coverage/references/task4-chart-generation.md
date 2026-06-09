@@ -575,6 +575,11 @@ create_valuation_football_field()
 # chart_26: Debt Maturity Schedule
 # chart_27: Ownership Structure
 # chart_35: Analyst Price Target Distribution
+#   → mark the current price AND each PT's report-date price as reference
+#     lines; a distribution of borrowed Street PTs is uninterpretable
+#     without the price level those analysts were targeting from. Label
+#     each PT with its broker + note date so a reader can read the upside
+#     each one implied at issuance, not just vs today's spot.
 ```
 
 These optional charts provide additional visual storytelling and help achieve the "1 chart per 200-300 words" density target in Task 5.

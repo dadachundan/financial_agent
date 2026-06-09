@@ -127,6 +127,32 @@ them to the DB:
 - `upside_pct` — `(pt − close) / close × 100`.
 - `created_at` — ISO timestamp.
 
+## Surfacing rule (mandatory) — a PT is useless without the price on the report's date
+
+Whenever either skill **mentions** a PT back to the user — the final-reply
+one-liners, a recommendation's "why read this", a deep-read answer, any
+table — it MUST carry the **stock's price as of the report's publication
+date** and the **implied upside that price fixes**. Never print the bare
+target. `GS Costco Buy, TP $1,159` is not actionable; the reader needs
+`GS Costco Buy, TP $1,159 vs $1,030 @ 2026-05-28 → +12.5%`.
+
+You do not have to recompute any of this — `persist_pts.py` already looks
+up the report-date close via yfinance, stores it, and **echoes it back per
+row** in its stdout `rows` array (`report_date_price`, `price_currency`,
+`upside_pct`) — the same numbers shown in `/pt` as **"Px @ Report"** /
+**"Upside %"**. Read them straight out of the script's output and surface
+them next to every PT you mention.
+
+- **The report-date price is the load-bearing number**, not today's spot.
+  It is what the analyst was looking at and what makes the call's upside
+  reconstructable. Do NOT silently substitute the current price for it.
+- **If you also show today's spot** (handy to convey how much of the move
+  already happened), label both: `TP $1,159 vs $1,030 @ 2026-05-28
+  (+12.5%); now $1,090`.
+- **If `report_date_price` is null** (yfinance had no close — delisted,
+  pre-IPO, wrong ticker), say `report-date price n/a` — never present a
+  PT with a blank or stale price as if it were the report-date price.
+
 ## Invocation cheatsheet
 
 ```bash
@@ -153,7 +179,13 @@ Stdout from `persist_pts.py` is a JSON summary:
   "duplicate":   4,
   "skipped":     0,
   "errored":     0,
-  "total_in_db": 145
+  "total_in_db": 145,
+  "rows": [
+    {"ticker": "COST", "broker": "Goldman Sachs", "rating": "Buy",
+     "pt": 1159, "ccy": "USD", "report_date": "2026-05-28",
+     "report_date_price": 1030.4, "price_currency": "USD",
+     "upside_pct": 12.5}
+  ]
 }
 ```
 
@@ -162,4 +194,11 @@ so the side-effect is visible:
 
 ```
 📈 PT inserts: 8 new, 145 total in /pt
+```
+
+And use the `rows` array to obey the **Surfacing rule** above — every PT
+you echo back carries its report-date price + upside straight from there:
+
+```
+📈 GS Costco Buy, TP $1,159 vs $1,030 @ 2026-05-28 → +12.5%
 ```

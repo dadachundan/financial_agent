@@ -193,6 +193,10 @@ def main() -> int:
 
     before = count()
     skipped = errored = replaced = 0
+    # Per-row echo so the calling skill can surface the report-date price +
+    # implied upside next to every PT it mentions (a bare PT is not
+    # actionable — see reference/pt_extraction.md § "Surfacing rule").
+    emitted_rows: list[dict] = []
     # Track unique-key tuples that already existed BEFORE this batch, so we
     # can report how many of the considered records hit a conflict and were
     # either ignored (default) or overwritten (with --replace).
@@ -242,6 +246,21 @@ def main() -> int:
             upsert_target(payload, replace=args.replace)
             if args.replace and (conflict_fid or conflict_date):
                 replaced += 1
+            up = None
+            if payload["price_target"] and payload["report_date_price"]:
+                up = round((payload["price_target"] - payload["report_date_price"])
+                           / payload["report_date_price"] * 100, 1)
+            emitted_rows.append({
+                "ticker":            ticker,
+                "broker":            broker_norm,
+                "rating":            payload["rating"],
+                "pt":                payload["price_target"],
+                "ccy":               payload["target_currency"],
+                "report_date":       report_date,
+                "report_date_price": payload["report_date_price"],
+                "price_currency":    payload["price_currency"],
+                "upside_pct":        up,
+            })
         except Exception as e:
             errored += 1
             print(f"  ! upsert failed for {ticker}/{rec.get('broker')}: {e}", file=sys.stderr)
@@ -261,6 +280,9 @@ def main() -> int:
         "skipped":     skipped,
         "errored":     errored,
         "total_in_db": after,
+        # Each persisted row's report-date price + implied upside, so the
+        # caller can surface "TP $X vs $Y @ <date> → +Z%" instead of a bare PT.
+        "rows":        emitted_rows,
     }
     print(json.dumps(summary, indent=2))
     return 0

@@ -63,6 +63,8 @@ Compact index of the load-bearing don't-dos enforced throughout this skill.
 
 > *Example:* **Maintain Buy; PT HK$112 → HK$116 (+48% vs HK$78.25 close 1-Jun-26); 17.3x FY27E EPS.**
 
+Your own PT here is dated to *this* report, so the dated current close already satisfies the report-date-price rule for it. **But if you cite a *borrowed* PT — a consensus mean target or a named broker's PT from a dated note — pair *that* one with the price on *its* date + the upside it implied** (`consensus mean $130 vs $96 @ 2026-05-20 → +35%`), never just vs today's close; a borrowed PT with no report-date anchor isn't actionable.
+
 The title line itself should also encode the verdict + driver + action ("Broad-based beat and raise — Reit OW, PT to $502"), not just "Q3 Earnings Update". See best-practices.md headlines.
 
 ### 1. Speed & Timeliness

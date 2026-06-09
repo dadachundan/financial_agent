@@ -61,7 +61,7 @@ Every theme is one file: `reports/themes/<slug>_theme.md` (English default). Chi
 - **Added** SZSE:300354 Donghua Testing (core) — 6-D force sensor entered mass production ([cninfo, 2026-06](https://...)).
 - **Dropped** HKEX:9863 Leapmotor — humanoid program shelved ([HKEX 2026-06](https://...)).
 - **Movers:** basket +8.2% since last refresh vs CSI 300 +2.1%; Anpeilong +19% on the Tesla order print.
-- **New broker call:** GS initiated Anpeilong Buy, PT ¥120 ([GS, zsxq #...](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/...)).
+- **New broker call:** GS initiated Anpeilong Buy, PT ¥120 vs ¥96 @ 2026-06-05 → +25% ([GS, zsxq #...](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/...)).
 - **TAM revision:** 2027E pool lifted to ≈$3.6bn from ≈$3.1bn (prior refresh) — +$0.5bn from the force-torque sub-bucket on faster dexterous-hand adoption ([forecaster, 2026-06](https://...)).
 - **Thesis drift:** none — basket still reflects the original BOM-expansion bet.
 
@@ -231,17 +231,18 @@ Keep the ranking in `## Thesis` (a closing preference sentence) or as a one-line
 
 The skill persists sell-side PT / rating calls to `stock_price_target_db` — but the theme *file* (the thing the user actually reads) must also **show** them, or it is valuation-blind for every name. When ≥1 tracked name carries sell-side coverage, include a mandatory **`## Valuation snapshot`** table — **one row per tracked name**, rendered *separately* from the 5-column Tracked-tickers table (which stays a clean parse target — do NOT add valuation columns there). Columns:
 
-`Ticker · Rating · Price · PT · Upside% · fwd multiple (P/E or sector-appropriate) · own ~10yr-avg multiple · FY1 / FY2 EPS (or the forward metric)`
+`Ticker · Rating · Px @ note date · PT · Upside% (vs note date) · current px · fwd multiple (P/E or sector-appropriate) · own ~10yr-avg multiple · FY1 / FY2 EPS (or the forward metric)`
 
 Rules:
 - **Populate from the helper, don't hand-transcribe** — read the rows back from `stock_price_target_db` so the table and the `/pt` viewer agree.
+- **The "Px @ note date" column is mandatory and is the load-bearing price, not today's spot.** It is `report_date_price` from `stock_price_target_db` (the **"Px @ Report"** column in `/pt`) — the stock's price on the day the note was published, which is what fixes the upside the analyst actually called. `Upside%` is `upside_pct` (PT vs that report-date price), matching `/pt` exactly. Keep a separate `current px` column for live context (how much of the move already happened); never collapse the two or let today's spot stand in for the report-date price. If `report_date_price` is null, write `n/a` in that cell — don't backfill it with the current price.
 - **Capture both forward years (FY1 AND FY2 multiple) — mandatory, not "where supplied".** The FY1→FY2 compression is the bull/bear pivot; if a note gives only one year, derive the other from its EPS estimate or state why the cell is blank. A single-forward-year snapshot is incomplete.
 - **Populate the own-history average multiple for EVERY covered name** (10yr or upcycle avg). A blank own-avg cell must say *why* (no coverage / pre-profit / pre-IPO), never be left empty for a subset of names — the priced-for-perfection read is only legible when the whole column is filled.
 - **Normalize the cross-section so the basket sorts cheap→dear like-for-like.** One stated forward year for the comparison column, **plus at least one growth-adjusted or cross-sectional metric (PEG, EPS-CAGR, or EV/EBITDA)** — a column of bare P/Es at mixed forward years (some FY1, some FY2, some SOTP) is not a peer-comp; flag SOTP-only names explicitly.
 - **Date every row and segregate stale PTs.** Each PT/rating row carries an **as-of date**; a PT older than the refresh window or visibly overtaken by price (current price through the target) is moved to a labelled *"stale — pending refresh"* sub-section, never blended into the live Upside% column where it implies a downside the analyst never called.
 - **Show PT derivation** where the source gives it (`PT = <multiple>× applied to <EPS / metric base>`), per the Conviction-ranking rule — at least for the names where the note states it.
 - **Capture the bull/base/bear PT triplet** where the note gives one (MS Hesai bull $53 / base $30 / bear $11.5; WULF $103 / $66.5 / $15) — render it in the PT cell, each leg citing the originating note. This is the per-name face of the theme's scenario architecture (see *Learning from sell-side institutional research*); a single base PT loses the downside floor the desk publishes.
-- **Render the rating line at desk density** (HSBC/MS style): rating, current price, PT, and computed upside% on one line (e.g. *Buy · TP 450k vs 349k = +29%*).
+- **Render the rating line at desk density** (HSBC/MS style): rating, the report-date price, PT, and computed upside% on one line (e.g. *Buy · TP 450k vs 349k @ 2026-05-20 = +29%*) — the `vs` price is the price on the note's date (`report_date_price`), so the +29% is the upside the analyst published; append `now NNNk` if you want to show the live spot too.
 - **On revision, show old→new in the cell** (`PT $340 (was $325)`); a revised PT/EPS is `## What's New` material.
 - Pre-profit names use P/S or EV/Sales and say so. Every rating / PT cites its originating note (deep-URL or zsxq `file_id`). If no tracked name has sell-side coverage, omit the section and note "no sell-side coverage" in Data Used.
 
