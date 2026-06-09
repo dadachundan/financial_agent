@@ -31,7 +31,7 @@
 | 12M | ~‑5%* | +24.8% | ‑18.8% | ~‑30 pts |
 | YTD | ~‑19%（earnings 前）→ 反弹后约 ‑13% | — | — | 大幅落后 |
 
-*MDT 12M 约 ‑5%、IHI 约 ‑18.8%、S&P 500 +24.8%、CSI 300 +26.9% 为 2026-06-09 口径（[medical-surgical-robotics 主题文件，2026-06-09](../../themes/medical-surgical-robotics_theme.md)）；YTD 约 ‑19% 为 earnings 前、6 月 3 日财报后单日 +6% 反弹（[StocksToTrade, 2026-06-04](https://stockstotrade.com/news/medtronic-plc-mdt-news-2026_06_04/)）。**结论：MDT 是一个 sector-relative 的"少跌者"（跑赢 IHI 约 14 pts），但相对宽基大幅落后——一个被 AI 行情冷落、估值压缩到位的防御性名字（[J.P. Morgan — Medical Devices: Valuation Compression Has Gone Too Far, 2026-03-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/212228411484221)）。***
+*MDT 12M 约 ‑5%、IHI 约 ‑18.8%、S&P 500 +24.8%、CSI 300 +26.9% 为 2026-06-09 口径（[medical-surgical-robotics 主题文件，2026-06-09](../../themes/medical-surgical-robotics_theme.md)）；YTD 约 ‑19% 为 earnings 前、6 月 3 日财报后单日 +6% 反弹（[StocksToTrade, 2026-06-04](https://stockstotrade.com/news/medtronic-plc-mdt-news-2026_06_04/)）。**结论：MDT 是一个 sector-relative 的"少跌者"（跑赢 IHI 约 14 pts），但相对宽基大幅落后——一个被 AI 行情冷落、估值压缩到位的防御性名字（[J.P. Morgan — Medical Devices: Valuation Compression Has Gone Too Far, 2026-03-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212228411484221/J.P.%20Morgan-Medical%20Devices%EF%BC%9AEnough%20Is%20Enough%EF%BC%9B%20Valuation%20Compression%20Appears%20to%20Have%20Gone%20Too%20Far-260312.pdf)）。***
 
 ---
 
@@ -76,7 +76,7 @@ xychart-beta
 
 **估值快照（valuation snapshot，REQUIRED）。** 截至 2026-06-09，MDT 收盘 **$81.98**、市值约 **$105.25bn**、**TTM P/E 21.63×**（基于 GAAP EPS $3.73）、**forward P/E 13.57×**、**股息率 3.46%**、52 周区间 **$73.31–$106.33**（[stockanalysis.com — MDT, 2026-06-09](https://stockanalysis.com/stocks/mdt/)）。**TTM P/S ≈ 2.9×**（市值 $105.25bn ÷ FY26 营收 $36.364bn = 2.89×，分析师测算）。同业对照（medtech 大盘）：Stryker（SYK）约 22× P/E、Boston Scientific（BSX）forward P/E ~14.2×、Abbott（ABT）与 BSX 接近，行业 ETF IHI 为板块 proxy（[Multiples.vc — Stryker valuation, 2026-05](https://multiples.vc/public-comps/stryker-valuation-multiples)；[TIKR — Boston Scientific, 2026-06-02](https://www.tikr.com/blog/boston-scientific-stock-prediction-where-analysts-see-the-stock-going-by-2027)）。
 
-**为什么倍数偏低（P/E < 8× 不适用，但 forward P/E ~13.6× 显著低于同业，需解释）。** MDT 的 forward P/E ~13.6× 不仅低于 50× 阈值，更显著低于 SYK（~22×）、BSX/ABT（~17.5–18×）。J.P. Morgan 的医疗器械估值压缩报告把这条对比说得最直白：*分析师观点：* BSX 交易于 ~17.5–18.0× 2027 EPS，"与 ABT 持平，仅比 MDT 高 4 倍（only 4x higher than MDT）"——即 **MDT 当时约 13.5–14× 2027 EPS**；原因是增长差：BSX 指引 FY26 organic +10–11%，ABT +6.5–7.5%，而 MDT FY27 指引（该报告写于 2026-03 时）仅 ">5.5% organic"（[J.P. Morgan — Medical Devices: Valuation Compression Has Gone Too Far, 2026-03-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/212228411484221)）。换言之，MDT 的低倍数是**结构性低增长 + 十余年增长低于同业留下的执行信任折价**的定价，而非"便宜的错杀"——这正是 Hold 而非 Buy 的核心理由。值得注意的是 FY27 真实指引（6.75–7.25% organic）已高于 JPM 引用的">5.5%"，是潜在的 re-rating 触发点。
+**为什么倍数偏低（P/E < 8× 不适用，但 forward P/E ~13.6× 显著低于同业，需解释）。** MDT 的 forward P/E ~13.6× 不仅低于 50× 阈值，更显著低于 SYK（~22×）、BSX/ABT（~17.5–18×）。J.P. Morgan 的医疗器械估值压缩报告把这条对比说得最直白：*分析师观点：* BSX 交易于 ~17.5–18.0× 2027 EPS，"与 ABT 持平，仅比 MDT 高 4 倍（only 4x higher than MDT）"——即 **MDT 当时约 13.5–14× 2027 EPS**；原因是增长差：BSX 指引 FY26 organic +10–11%，ABT +6.5–7.5%，而 MDT FY27 指引（该报告写于 2026-03 时）仅 ">5.5% organic"（[J.P. Morgan — Medical Devices: Valuation Compression Has Gone Too Far, 2026-03-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212228411484221/J.P.%20Morgan-Medical%20Devices%EF%BC%9AEnough%20Is%20Enough%EF%BC%9B%20Valuation%20Compression%20Appears%20to%20Have%20Gone%20Too%20Far-260312.pdf)）。换言之，MDT 的低倍数是**结构性低增长 + 十余年增长低于同业留下的执行信任折价**的定价，而非"便宜的错杀"——这正是 Hold 而非 Buy 的核心理由。值得注意的是 FY27 真实指引（6.75–7.25% organic）已高于 JPM 引用的">5.5%"，是潜在的 re-rating 触发点。
 
 ---
 
@@ -115,7 +115,7 @@ xychart-beta
 
 **方法：forward-P/E × 目标倍数。** FY27E 非 GAAP EPS $5.95 × **15.5× forward P/E = $92**。
 
-**倍数对标 3–5 家可比公司（multiple justification）。** 我们给 MDT 15.5× 的目标倍数——高于其当前 ~13.6× 但仍显著低于同业，理由是 FY27 organic 指引（6.75–7.25%）已使 MDT 从"低个位数增长者"向"中个位数增长者"靠拢，应享有较其历史折价更窄的倍数；但仍低于 BSX/ABT 的 ~17.5–18×（它们 organic 增长 +10–11% / +6.5–7.5%）和 SYK 的 ~22×，因为 MDT 增长仍是同业里最慢的（[J.P. Morgan — Medical Devices, 2026-03-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/212228411484221)；[Multiples.vc — Stryker, 2026-05](https://multiples.vc/public-comps/stryker-valuation-multiples)；[TIKR — Boston Scientific, 2026-06-02](https://www.tikr.com/blog/boston-scientific-stock-prediction-where-analysts-see-the-stock-going-by-2027)）。15.5× 即把 MDT 的折价从对 ABT 的 ~4 turns 收窄到 ~2.5 turns——增长趋同但执行尚待验证的折中。
+**倍数对标 3–5 家可比公司（multiple justification）。** 我们给 MDT 15.5× 的目标倍数——高于其当前 ~13.6× 但仍显著低于同业，理由是 FY27 organic 指引（6.75–7.25%）已使 MDT 从"低个位数增长者"向"中个位数增长者"靠拢，应享有较其历史折价更窄的倍数；但仍低于 BSX/ABT 的 ~17.5–18×（它们 organic 增长 +10–11% / +6.5–7.5%）和 SYK 的 ~22×，因为 MDT 增长仍是同业里最慢的（[J.P. Morgan — Medical Devices, 2026-03-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212228411484221/J.P.%20Morgan-Medical%20Devices%EF%BC%9AEnough%20Is%20Enough%EF%BC%9B%20Valuation%20Compression%20Appears%20to%20Have%20Gone%20Too%20Far-260312.pdf)；[Multiples.vc — Stryker, 2026-05](https://multiples.vc/public-comps/stryker-valuation-multiples)；[TIKR — Boston Scientific, 2026-06-02](https://www.tikr.com/blog/boston-scientific-stock-prediction-where-analysts-see-the-stock-going-by-2027)）。15.5× 即把 MDT 的折价从对 ABT 的 ~4 turns 收窄到 ~2.5 turns——增长趋同但执行尚待验证的折中。
 
 ### (c) 牛/基准/熊情景（bull / base / bear，*分析师观点*）
 
@@ -125,7 +125,7 @@ xychart-beta
 | Base（基准） | 指引中值兑现，15.5× × FY27E EPS $5.95 | $92 | **+12%** |
 | Bear（熊） | 增长拐点是 FX/并购的"伪拐点"、关税进一步侵蚀利润率、MiniMed 分拆稀释 EPS，de-rate 至 12× × FY27E EPS $5.80 | $70 | **‑15%** |
 
-*三个情景的输入：organic 指引区间 6.75–7.25% 与 EPS 区间 $5.90–6.00 来自 [FY26 earnings release 指引](https://news.medtronic.com/2026-06-03-Medtronic-reports-fourth-quarter-and-full-year-fiscal-2026-results-delivers-highest-annual-revenue-growth-in-10-years)；Cardiac Ablation +78% 来自同一发布；倍数区间对标 [J.P. Morgan — Medical Devices, 2026-03-12](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/212228411484221)。风险回报大致对称（+12% base，bull +24% / bear ‑15%）——这正是 Hold 的算术依据。*
+*三个情景的输入：organic 指引区间 6.75–7.25% 与 EPS 区间 $5.90–6.00 来自 [FY26 earnings release 指引](https://news.medtronic.com/2026-06-03-Medtronic-reports-fourth-quarter-and-full-year-fiscal-2026-results-delivers-highest-annual-revenue-growth-in-10-years)；Cardiac Ablation +78% 来自同一发布；倍数区间对标 [J.P. Morgan — Medical Devices, 2026-03-12](http://xs-macbook-air.local:5001/zsxq/pdf/212228411484221/J.P.%20Morgan-Medical%20Devices%EF%BC%9AEnough%20Is%20Enough%EF%BC%9B%20Valuation%20Compression%20Appears%20to%20Have%20Gone%20Too%20Far-260312.pdf)。风险回报大致对称（+12% base，bull +24% / bear ‑15%）——这正是 Hold 的算术依据。*
 
 ### (d) 与一致预期对标（consensus benchmark）+ Guide-vs-Consensus-vs-Own 表
 
@@ -258,7 +258,7 @@ Structural Heart & Aortic 的 10-K 原文描述：
 
 **(a) Hugo 物理上做什么。** Hugo RAS（robotic-assisted surgery / 机器人辅助手术）是一套**模块化、多端口（multi-port）软组织（soft-tissue）手术机器人系统**——由独立的机械臂推车（modular arm carts）、外科医生控制台（surgeon console）和系统塔（tower）组成。与 Intuitive Surgical 的 da Vinci 的"一体化大单元"不同，Hugo 的模块化设计意在降低占地、提高手术室排程灵活性、并降低单台资本门槛；Touch Surgery Enterprise 是配套的 **AI 手术视频与分析平台**，用于录制、分析与培训，构成数据/软件层。
 
-**(b) Hugo 与 da Vinci 的定位对比。** 这是整个 surgical-robotics 主题的核心问题。da Vinci 是绝对在位者——installed base（装机量）**11,395 台、FY25 全球 3.15M 台手术（+18%）、86% 经常性收入**，在软组织机器人手术近乎垄断（[medical-surgical-robotics 主题文件 — ISRG 数据, 2026-06-09](../../themes/medical-surgical-robotics_theme.md)；[Intuitive Surgical Q1-2026 results](https://www.stocktitan.net/news/ISRG/intuitive-surgical-announces-first-quarter-2026-results)）。Hugo 是首个拿到美国多端口软组织批准的**可信挑战者**——但落后 da Vinci 的装机量很多年，护城河（医师训练锁定 + 耗材年金）尚未建立。*分析师观点：* da Vinci 的真正护城河不是机器本身，而是**装机量 + 外科医生训练锁定 + 86% 经常性耗材年金**（switching cost），Hugo 要侵蚀的是"系统层"，最难撼动的是"耗材层"（[BofA — Intuitive Surgical, 2026-04-20, p.8](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/184482814241482)）。
+**(b) Hugo 与 da Vinci 的定位对比。** 这是整个 surgical-robotics 主题的核心问题。da Vinci 是绝对在位者——installed base（装机量）**11,395 台、FY25 全球 3.15M 台手术（+18%）、86% 经常性收入**，在软组织机器人手术近乎垄断（[medical-surgical-robotics 主题文件 — ISRG 数据, 2026-06-09](../../themes/medical-surgical-robotics_theme.md)；[Intuitive Surgical Q1-2026 results](https://www.stocktitan.net/news/ISRG/intuitive-surgical-announces-first-quarter-2026-results)）。Hugo 是首个拿到美国多端口软组织批准的**可信挑战者**——但落后 da Vinci 的装机量很多年，护城河（医师训练锁定 + 耗材年金）尚未建立。*分析师观点：* da Vinci 的真正护城河不是机器本身，而是**装机量 + 外科医生训练锁定 + 86% 经常性耗材年金**（switching cost），Hugo 要侵蚀的是"系统层"，最难撼动的是"耗材层"（[BofA — Intuitive Surgical, 2026-04-20, p.8](http://xs-macbook-air.local:5001/zsxq/pdf/184482814241482/BofA%20Securities-Intuitive%20Surgical%EF%BC%88ISRG.OQ%EF%BC%89A%20few%20macro%20topics%20into%20Q1%20EPS%EF%BC%9B%20Q1%20prob%20more%20good%20fundamentals-260420.pdf)）。
 
 **(c) Hugo 美国 urology 批准 + Expand URO IDE（关键催化剂）。** 2025-12-03，FDA 批准 Hugo RAS 用于 **urologic（泌尿外科）微创手术**——包括 prostatectomy（前列腺切除）、nephrectomy（肾切除）、cystectomy（膀胱切除），覆盖美国每年约 **230,000 例** 手术（[Medtronic Hugo FDA clearance PR, 2025-12-03](https://news.medtronic.com/2025-12-03-Medtronic-announces-FDA-clearance-of-Hugo-TM-robotic-assisted-surgery-system-for-urologic-surgical-procedures)）。支撑批准的 **Expand URO IDE 研究**是"美国有史以来最大的多端口机器人辅助泌尿外科研究"——纳入 **137 名患者、11 名外科医生、6 家医院**，三类手术分别为 prostatectomy（n=55）、nephrectomy（n=53）、cystectomy（n=29）；研究达成安全性与有效性主要终点，**98.5% 手术成功率**（远高于 85% 的 performance goal），Clavien-Dindo III 级以上并发症率分别为 **3.7%（前列腺）/ 1.9%（肾）/ 17.9%（膀胱）**，均低于各自 performance goal（20%/20%/45%），向其他 FDA 批准机器人系统的转换率仅 **1.5%**（[UroToday — AUA 2025: Expand URO primary results](https://www.urotoday.com/conference-highlights/aua-2025/aua-2025-prostate-cancer/159996-aua-2025-a-prospective-multi-center-study-assessing-effectiveness-safety-and-performance-of-the-hugo-robotic-assisted-surgery-system-in-the-us-urologic-population-primary-results-from-the-expand-uro-study.html)；[Urology Times — FDA clearance to Hugo](https://www.urologytimes.com/view/fda-grants-clearance-to-hugo-robotic-assisted-surgery-system-for-urologic-procedures)）。
 
@@ -326,7 +326,7 @@ pie title MDT FY26 营收按组合（consolidated revenue 口径）
 
 **市场规模与结构。** 全球医疗器械市场规模数千亿美元、低个位数到中个位数增长；MDT 横跨其中四个子赛道（心血管、神经/脊柱、外科、糖尿病）。MDT 聚光灯下的 **surgical-robotics（手术机器人）子行业**——全球收入池约 **$13.7bn（2025）→ ~$27bn（2030E）→ $42–50bn（2035E）**，低双位数 CAGR，是一个 razor-and-blade（剃刀+刀片）结构（耗材占池子约 55–60%）（[MarketsandMarkets — surgical robots market $13.69bn 2025→$27.14bn 2030](https://www.marketsandmarkets.com/Market-Reports/surgical-robots-market-256618532.html)；[Precedence Research — surgical robotics $12.49bn 2025→$50.29bn 2035](https://www.precedenceresearch.com/surgical-robotics-market)）。
 
-**增长驱动与趋势。** 整个 medtech 板块当前处于"触底回升"阶段。*分析师观点：* Goldman Sachs 的医疗科技行业报告指出，板块正经历"过去 15–20 年以来最艰难阶段"，但绝对与相对估值已跌至 2010–2012 年以来低位，具备周期反转基础，三大复苏驱动为"加大股份回购、下调并重锚远期预期、新产品/并购催化剂落地"；并明确把 **Medtronic FY26 Q4 财报及新财年指引列为板块短期关键催化剂**（[Goldman Sachs — Medical Technology: Digging out, 2026-05-27, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/585428884442144)）。
+**增长驱动与趋势。** 整个 medtech 板块当前处于"触底回升"阶段。*分析师观点：* Goldman Sachs 的医疗科技行业报告指出，板块正经历"过去 15–20 年以来最艰难阶段"，但绝对与相对估值已跌至 2010–2012 年以来低位，具备周期反转基础，三大复苏驱动为"加大股份回购、下调并重锚远期预期、新产品/并购催化剂落地"；并明确把 **Medtronic FY26 Q4 财报及新财年指引列为板块短期关键催化剂**（[Goldman Sachs — Medical Technology: Digging out, 2026-05-27, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585428884442144/Goldman%20Sachs-Healthcare%EF%BC%9A%20Medical%20Technology%EF%BC%9A%20Digging%20out%20%E2%80%94%20charting%20path%20to%20sector%20turnaround-260527.pdf)）。
 
 **监管环境。** 器械行业受 FDA（美国）、CE Mark（欧洲）、NMPA（中国）等多重监管，新产品需经临床试验（如 Hugo 的 Expand URO IDE）与 PMA/De Novo/510(k) 路径批准。报销政策（reimbursement / 医保）是另一关键变量——美国 Medicare/Medicaid 与商业保险、中国带量采购都直接影响器械定价（[Medtronic FY2025 10-K, Competition — 政府报销与定价管制](https://www.sec.gov/Archives/edgar/data/1613103/000161310325000091/mdt-20250425.htm)）。
 
@@ -339,7 +339,7 @@ xychart-beta
     y-axis "收入池 (US$ bn)" 0 --> 50
     bar [13.7, 27.1, 42.0]
 ```
-*来源：[MarketsandMarkets — surgical robots $13.69bn 2025→$27.14bn 2030](https://www.marketsandmarkets.com/Market-Reports/surgical-robots-market-256618532.html)；[Goldman Sachs — China Medtech Going Global $42bn 2035, 2026-04-21, p.7](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/585582881584284)。**结论：手术机器人是医疗科技里少数低双位数增长的子赛道——但对 MDT 而言只是 $36bn 营收里的一个期权，行业增长不会自动传导到 MDT 整体增速。***
+*来源：[MarketsandMarkets — surgical robots $13.69bn 2025→$27.14bn 2030](https://www.marketsandmarkets.com/Market-Reports/surgical-robots-market-256618532.html)；[Goldman Sachs — China Medtech Going Global $42bn 2035, 2026-04-21, p.7](http://xs-macbook-air.local:5001/zsxq/pdf/585582881584284/Goldman%20Sachs-CHINA%20MEDTECH%20GOING%20GLOBAL%EF%BC%9AAssessing%20the%20opportunity%20for%20surgical%20robots~global%20expansion%20beyond%20ISRG%E2%80%99s%20core%20markets-260421.pdf)。**结论：手术机器人是医疗科技里少数低双位数增长的子赛道——但对 MDT 而言只是 $36bn 营收里的一个期权，行业增长不会自动传导到 MDT 整体增速。***
 
 ---
 
@@ -379,7 +379,7 @@ quadrantChart
 
 **整体 TAM。** Medtronic 的可及市场是数千亿美元的全球医疗器械市场，覆盖 70 种健康状况、150+ 国家——这是一个低个位数到中个位数自然增长的成熟市场，MDT 的增长更多来自细分赛道份额获取（如 Cardiac Ablation +8pts 美国份额）而非整体市场扩容（[FY26 earnings release — Cardiac Ablation +8pts US share, 2026-06-03](https://news.medtronic.com/2026-06-03-Medtronic-reports-fourth-quarter-and-full-year-fiscal-2026-results-delivers-highest-annual-revenue-growth-in-10-years)）。
 
-**聚光灯 TAM：手术机器人。** 全球手术机器人收入池 ~$13.7bn（2025）→ ~$27bn（2030E）→ **$42bn（GS，2035E，其中 ex-US 占 $19bn）/ ~$50bn（Precedence，2035E）**，由 ~9M 例机器人手术（2025）增至 GS 预测的 **12M 例（2035E）** 驱动，是 razor-and-blade 结构（[Goldman Sachs — China Medtech Going Global, 2026-04-21, p.7](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/585582881584284)；[MarketsandMarkets — surgical robots market](https://www.marketsandmarkets.com/Market-Reports/surgical-robots-market-256618532.html)）。
+**聚光灯 TAM：手术机器人。** 全球手术机器人收入池 ~$13.7bn（2025）→ ~$27bn（2030E）→ **$42bn（GS，2035E，其中 ex-US 占 $19bn）/ ~$50bn（Precedence，2035E）**，由 ~9M 例机器人手术（2025）增至 GS 预测的 **12M 例（2035E）** 驱动，是 razor-and-blade 结构（[Goldman Sachs — China Medtech Going Global, 2026-04-21, p.7](http://xs-macbook-air.local:5001/zsxq/pdf/585582881584284/Goldman%20Sachs-CHINA%20MEDTECH%20GOING%20GLOBAL%EF%BC%9AAssessing%20the%20opportunity%20for%20surgical%20robots~global%20expansion%20beyond%20ISRG%E2%80%99s%20core%20markets-260421.pdf)；[MarketsandMarkets — surgical robots market](https://www.marketsandmarkets.com/Market-Reports/surgical-robots-market-256618532.html)）。
 
 **MDT 的 SAM / SOM（Hugo）。** Hugo 当前的 serviceable market 主要是 urology（美国约 230,000 例/年）+ ex-US 软组织手术；随 general surgery/gyn 适应症申请获批，SAM 将扩展到更大的普外/妇科软组织池（[Medtronic Hugo PR — 230,000 US urology surgeries/yr, 2025-12-03](https://news.medtronic.com/2025-12-03-Medtronic-announces-FDA-clearance-of-Hugo-TM-robotic-assisted-surgery-system-for-urologic-surgical-procedures)；[FY26 earnings release — general surgery/gyn submission, 2026-06-03](https://news.medtronic.com/2026-06-03-Medtronic-reports-fourth-quarter-and-full-year-fiscal-2026-results-delivers-highest-annual-revenue-growth-in-10-years)）。但 SOM（实际可获取份额）受制于 da Vinci 的装机量与耗材锁定——*分析师观点：* 即便 Hugo 在 ex-US + 美国 urology 取得可观份额，对 MDT $36bn 营收的贡献在可见的未来仍是个位数百分点级别（immaterial），机器人 TAM 的故事对 MDT 估值更多是期权而非主驱动。
 
@@ -429,7 +429,7 @@ quadrantChart
 
 **Debate 1 — "MDT 的 FY26 增长拐点是 FX/并购/多一周制造的伪拐点，不可持续。"** *分析师观点：* 部分真实——FY26 +8.4% reported 里确有 FX（+$819m）与并购贡献，但 +5.8% organic 已剔除 FX/重大并购/Other，且 Cardiac Ablation +78%（含美国 +124%、+8pts 份额）是无可争议的真实终端需求引擎；FY27 指引 organic 6.75–7.25% 进一步剔除多一周与 FX。拐点比怀疑者认为的更真实，但能否延续到 FY28+ 仍需验证（[FY26 earnings release — organic +5.8% / Cardiac Ablation +78%, 2026-06-03](https://news.medtronic.com/2026-06-03-Medtronic-reports-fourth-quarter-and-full-year-fiscal-2026-results-delivers-highest-annual-revenue-growth-in-10-years)）。
 
-**Debate 2 — "medtech 板块整体被错杀，MDT 估值压缩过度。"** *分析师观点：* J.P. Morgan 明确主张医疗科技板块"抛售已过度（Enough Is Enough），估值压缩已过头"，板块情绪指标处于 ‑0.85 标准差、接近 ‑1 标准差的强买信号；并把 medtech 比作投资里的"电工、水管工"——与 AI 行情绝缘但基本面健康、对地缘/成本冲击有韧性。这支持 MDT 的下行有限、估值修复有空间的判断（[J.P. Morgan — Medical Devices: Valuation Compression Has Gone Too Far, 2026-03-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf-viewer/212228411484221)）。
+**Debate 2 — "medtech 板块整体被错杀，MDT 估值压缩过度。"** *分析师观点：* J.P. Morgan 明确主张医疗科技板块"抛售已过度（Enough Is Enough），估值压缩已过头"，板块情绪指标处于 ‑0.85 标准差、接近 ‑1 标准差的强买信号；并把 medtech 比作投资里的"电工、水管工"——与 AI 行情绝缘但基本面健康、对地缘/成本冲击有韧性。这支持 MDT 的下行有限、估值修复有空间的判断（[J.P. Morgan — Medical Devices: Valuation Compression Has Gone Too Far, 2026-03-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212228411484221/J.P.%20Morgan-Medical%20Devices%EF%BC%9AEnough%20Is%20Enough%EF%BC%9B%20Valuation%20Compression%20Appears%20to%20Have%20Gone%20Too%20Far-260312.pdf)）。
 
 **Debate 3 — "Hugo 无足轻重，机器人故事不该影响 MDT 估值。"** *分析师观点：* 对当下营收，是的（immaterial）；但市场当前给 MDT 的 ~13.6× forward P/E 几乎零定价机器人期权——若 Hugo 拿下普外/妇科适应症并在 ex-US + 美国持续上量，这是一个免费的看涨期权。我们不把 Hugo 计入 base case 营收，但它支撑 bull case 的 re-rating 逻辑（[FY26 earnings release — Hugo submissions, 2026-06-03](https://news.medtronic.com/2026-06-03-Medtronic-reports-fourth-quarter-and-full-year-fiscal-2026-results-delivers-highest-annual-revenue-growth-in-10-years)）。
 
@@ -547,7 +547,7 @@ Margin of safety: 约 +5%（区间 ‑5% 到 +10%）
 - 手术机器人 TAM：MarketsandMarkets、Precedence Research、Goldman Sachs（$42bn 2035 / 12M 手术，zsxq）。
 
 **Institute research（local `db/zsxq.db`）**
-- 搜索 8 个别名（Medtronic / MDT / 美敦力 / Hugo / robotic surgery / 机器人手术 / surgical robot / 手术机器人）。MDT 直接相关并引用：**file_id 212228411484221**（J.P. Morgan — Medical Devices: Valuation Compression Has Gone Too Far, 2026-03-12，含 MDT vs BSX/ABT 2027 EPS 倍数对比 + MDT FY27 ">5.5% organic"）、**file_id 585428884442144**（Goldman Sachs — Medical Technology: Digging out, 2026-05-27，把 MDT FY26 Q4 列为板块催化剂）；主题层引用 **file_id 184482814241482**（BofA — Intuitive Surgical, 2026-04-20，含 Hugo/da Vinci 竞争框架）、**file_id 585582881584284**（GS — China Medtech Going Global TAM）。均标注 *分析师观点：*，路由 `/zsxq/pdf-viewer/<file_id>`。Source: local zsxq library。
+- 搜索 8 个别名（Medtronic / MDT / 美敦力 / Hugo / robotic surgery / 机器人手术 / surgical robot / 手术机器人）。MDT 直接相关并引用：**file_id 212228411484221**（J.P. Morgan — Medical Devices: Valuation Compression Has Gone Too Far, 2026-03-12，含 MDT vs BSX/ABT 2027 EPS 倍数对比 + MDT FY27 ">5.5% organic"）、**file_id 585428884442144**（Goldman Sachs — Medical Technology: Digging out, 2026-05-27，把 MDT FY26 Q4 列为板块催化剂）；主题层引用 **file_id 184482814241482**（BofA — Intuitive Surgical, 2026-04-20，含 Hugo/da Vinci 竞争框架）、**file_id 585582881584284**（GS — China Medtech Going Global TAM）。均标注 *分析师观点：*，路由 `/zsxq/pdf/<file_id>`。Source: local zsxq library。
 
 **Macro / cycle inputs（Section 10）**
 - 10Y Treasury（`tnx`）4.536%、VIX 21.51、MOVE 75.2（as of 2026-06-05）；HY OAS 2.74%、IG OAS 0.74%（as of 2026-06-04）。Source: `indicators.db`（FRED + yfinance）。
@@ -595,10 +595,10 @@ Margin of safety: 约 +5%（区间 ‑5% 到 +10%）
 - Stryker — Mako SmartRobotics（AAOS 2025）：https://www.stryker.com/us/en/about/news/2025/stryker-showcases-next-generation-of-mako-smartrobotics--at-aaos.html
 
 **Institute research（local zsxq library，*分析师观点*）**
-- J.P. Morgan — Medical Devices: Valuation Compression Has Gone Too Far（2026-03-12）：http://xs-macbook-air.local:5001/zsxq/pdf-viewer/212228411484221
-- Goldman Sachs — Medical Technology: Digging out（2026-05-27）：http://xs-macbook-air.local:5001/zsxq/pdf-viewer/585428884442144
-- BofA — Intuitive Surgical Q1 preview（2026-04-20）：http://xs-macbook-air.local:5001/zsxq/pdf-viewer/184482814241482
-- Goldman Sachs — China Medtech Going Global（2026-04-21）：http://xs-macbook-air.local:5001/zsxq/pdf-viewer/585582881584284
+- J.P. Morgan — Medical Devices: Valuation Compression Has Gone Too Far（2026-03-12）：http://xs-macbook-air.local:5001/zsxq/pdf/212228411484221/J.P.%20Morgan-Medical%20Devices%EF%BC%9AEnough%20Is%20Enough%EF%BC%9B%20Valuation%20Compression%20Appears%20to%20Have%20Gone%20Too%20Far-260312.pdf
+- Goldman Sachs — Medical Technology: Digging out（2026-05-27）：http://xs-macbook-air.local:5001/zsxq/pdf/585428884442144/Goldman%20Sachs-Healthcare%EF%BC%9A%20Medical%20Technology%EF%BC%9A%20Digging%20out%20%E2%80%94%20charting%20path%20to%20sector%20turnaround-260527.pdf
+- BofA — Intuitive Surgical Q1 preview（2026-04-20）：http://xs-macbook-air.local:5001/zsxq/pdf/184482814241482/BofA%20Securities-Intuitive%20Surgical%EF%BC%88ISRG.OQ%EF%BC%89A%20few%20macro%20topics%20into%20Q1%20EPS%EF%BC%9B%20Q1%20prob%20more%20good%20fundamentals-260420.pdf
+- Goldman Sachs — China Medtech Going Global（2026-04-21）：http://xs-macbook-air.local:5001/zsxq/pdf/585582881584284/Goldman%20Sachs-CHINA%20MEDTECH%20GOING%20GLOBAL%EF%BC%9AAssessing%20the%20opportunity%20for%20surgical%20robots~global%20expansion%20beyond%20ISRG%E2%80%99s%20core%20markets-260421.pdf
 
 **主题文件（cross-coverage）**
 - [reports/themes/medical-surgical-robotics_theme.md](../../themes/medical-surgical-robotics_theme.md)（2026-06-09，结构化输入，MDT 行 + 手术机器人 TAM）
@@ -606,7 +606,7 @@ Margin of safety: 约 +5%（区间 ‑5% 到 +10%）
 <details>
 <summary>Verification log (Step 10) — 2026-06-09</summary>
 
-**URL check** — 所有 SEC/IR/web URL 均经 HTTP 检查或来源确认。SEC 文件名经 EDGAR submissions JSON（CIK 0001613103）解析：FY2025 10-K = `mdt-20250425.htm`（accession 0001613103-25-000091）、DEF 14A = `mdt-20250825.htm`（0001613103-25-000151）、FY26 Q4 earnings 8-K = `mdt-20260603.htm`（0001628280-26-040034，Exhibit 99.1 = `exhibit991-fy26q4earningsr.htm`）。Medtronic plc 当前 CIK 为 **1613103**（旧 Medtronic, Inc. 的 CIK 64670 仅含 2015 inversion 前的历史文件，已避免误用）。zsxq 本地 URL（`/zsxq/pdf-viewer/<file_id>`）经 find_pdf.py 确认 `local_exists: true`，路由格式正确（非 dead `/zsxq-pdf/`）。
+**URL check** — 所有 SEC/IR/web URL 均经 HTTP 检查或来源确认。SEC 文件名经 EDGAR submissions JSON（CIK 0001613103）解析：FY2025 10-K = `mdt-20250425.htm`（accession 0001613103-25-000091）、DEF 14A = `mdt-20250825.htm`（0001613103-25-000151）、FY26 Q4 earnings 8-K = `mdt-20260603.htm`（0001628280-26-040034，Exhibit 99.1 = `exhibit991-fy26q4earningsr.htm`）。Medtronic plc 当前 CIK 为 **1613103**（旧 Medtronic, Inc. 的 CIK 64670 仅含 2015 inversion 前的历史文件，已避免误用）。zsxq 本地 URL（`/zsxq/pdf/<file_id>`）经 find_pdf.py 确认 `local_exists: true`，路由格式正确（非 dead `/zsxq-pdf/`）。
 
 **SEC filenames** — 全部来自 EDGAR submissions JSON，无合成文件名。
 
@@ -627,7 +627,7 @@ Margin of safety: 约 +5%（区间 ‑5% 到 +10%）
 
 **Analyst-view 句子（标注 *分析师观点*，未附 filing 引用）：** Hugo 竞争裁定、护城河类型、目标价/倍数/情景、Section 10 视角计分卡、JPM/GS/BofA 的 zsxq 引用——均标注 *分析师观点：* / *视角观点：*，未与 filing 引用混淆。
 
-**Institute research（`db/zsxq.db`）** — 搜索 8 个别名；MDT 单名深度报告缺失（库中 MDT 主要在板块/主题报告中出现），据实记录。引用 file_ids：212228411484221（JPM，MDT vs BSX 倍数 string-match "only 4x higher than MDT" / ">5.5% organic in FY27" ✓）、585428884442144（GS medtech turnaround，MDT FY26 Q4 为催化剂 ✓）、184482814241482（BofA ISRG/Hugo 竞争框架，主题层）、585582881584284（GS TAM）。均 *分析师观点：*，路由 `/zsxq/pdf-viewer/<id>`。
+**Institute research（`db/zsxq.db`）** — 搜索 8 个别名；MDT 单名深度报告缺失（库中 MDT 主要在板块/主题报告中出现），据实记录。引用 file_ids：212228411484221（JPM，MDT vs BSX 倍数 string-match "only 4x higher than MDT" / ">5.5% organic in FY27" ✓）、585428884442144（GS medtech turnaround，MDT FY26 Q4 为催化剂 ✓）、184482814241482（BofA ISRG/Hugo 竞争框架，主题层）、585582881584284（GS TAM）。均 *分析师观点：*，路由 `/zsxq/pdf/<id>`。
 
 **Residual unknowns / not yet verified：**
 - 现价/multiples 取自 stockanalysis.com（本环境无 live yfinance）；EV/EBITDA、EV/Sales、ROIC 为分析师 est.（已标注）。
