@@ -191,8 +191,23 @@ Equal-weight core (9 pure-plays) trailing-1Y **mean +135% / median +154%**; core
 **Stores written (Tier-2 helpers)**
 - `stock_price_target_db` — **none** this build. No single-broker sell-side note was mined (only yfinance *consensus*, which has no named research_institute/file_id to persist). When a refresh surfaces a named note (zsxq PDF or cited broker), it will be upserted via `stock_price_target_db.upsert_target(...)` and surfaced at `/pt`.
 
+**Cross-coverage — company deep-dives (Chinese-language `/company-research` reports, read as structured input; not cited inline)**
+
+All 13 tracked names now have a full deep-dive under `reports/company/`. The 9 new reports were generated 2026-06-09 (each 7.2k–10.5k CJK chars, 100–170 inline citations, full Step-10 verification):
+- RKLB — [Rocket Lab 公司研究](../company/RocketLab_NASDAQ_RKLB/RocketLab_NASDAQ_RKLB_公司研究.md) (Hold / $95 PT; Neutron first flight slipped to Q4'26)
+- LUNR — [Intuitive Machines 公司研究](../company/IntuitiveMachines_NASDAQ_LUNR/IntuitiveMachines_NASDAQ_LUNR_公司研究.md) (Hold / $32; transformed via KinetX + Lanteris/ex-Maxar acquisitions)
+- RDW — [Redwire 公司研究](../company/Redwire_NYSE_RDW/Redwire_NYSE_RDW_公司研究.md) (Hold / $18; Edge Autonomy $925M deal → space + defense-drones)
+- FLY — [Firefly Aerospace 公司研究](../company/Firefly_NASDAQ_FLY/Firefly_NASDAQ_FLY_公司研究.md) (Hold / $38; top-5 >86% of rev; SciTec/Golden-Dome acquisition)
+- VOYG — [Voyager Technologies 公司研究](../company/Voyager_NYSE_VOYG/Voyager_NYSE_VOYG_公司研究.md) (Hold / $44 SOTP; US-gov 86%; Dylan Taylor 61.8% voting control)
+- KRMN — [Karman Holdings 公司研究](../company/Karman_NYSE_KRMN/Karman_NYSE_KRMN_公司研究.md) (the one profitable name; CEO transition to Jon Rambeau 2026-03-23)
+- KTOS — [Kratos 公司研究](../company/Kratos_NASDAQ_KTOS/Kratos_NASDAQ_KTOS_公司研究.md) (Hold / $66; FY25 rev $1.35bn; FCF-net-use vs 54× P/E mismatch)
+- LMT — [Lockheed Martin 公司研究](../company/LockheedMartin_NYSE_LMT/LockheedMartin_NYSE_LMT_公司研究.md) (Hold / $595; Space ~17.4%; the basket's FCF/value ballast)
+- NOC — [Northrop Grumman 公司研究](../company/NorthropGrumman_NYSE_NOC/NorthropGrumman_NYSE_NOC_公司研究.md) (Buy / $650; Space Systems 25.7% — most space-levered prime)
+
+Pre-existing coverage (read as input): [ASTS](../company/ASTSpaceMobile_NASDAQ_ASTS/ASTSpaceMobile_NASDAQ_ASTS_公司研究.md) · [Planet/PL](../company/Planet_NYSE_PL/Planet_NYSE_PL_公司研究.md) · [BlackSky/BKSY](../company/BlackSky_NYSE_BKSY/BlackSky_NYSE_BKSY_公司研究.md) · [RTX](../company/RTX_NYSE_RTX/RTX_NYSE_RTX_公司研究.md).
+
 **Stale notices / coverage gaps**
-- No company 10-K/10-Q/IR deck was read directly for this baseline — justifications lean on dated secondary sources (Q1'26 recaps). First monthly refresh should pull each name's latest filing/IR deck to re-ground the metrics.
+- The Tracked-tickers justifications above still lean on dated secondary sources (Q1'26 recaps); the per-name 10-K/IR detail now lives in the cross-coverage deep-dives — a future refresh can re-ground each justification cell against its deep-dive.
 - Prime "own ~10yr-avg" P/E is an approximate multi-year norm (LMT≈15–16×, NOC≈15×, RTX≈18×), not a single sourced figure — tighten with a sourced history next refresh.
 
 ## References
