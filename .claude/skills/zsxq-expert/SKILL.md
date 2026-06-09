@@ -1,0 +1,334 @@
+---
+name: zsxq-expert
+description: Answer an in-depth question by grounding it in the local broker-PDF library (db/zsxq.db, ~7,000 institute reports) — the "PDF expert system". Resolves the focal company + its peers from the knowledge graph, retrieves the most relevant PDFs by ranked full-text search (zsxq_fts.py), deep-reads the top ones in parallel — pulling the actual comparison **tables** (extract_tables.py) and **figures/charts** (render_pdf_pages.py + vision) — and synthesizes a cited answer where every number traces to a specific PDF page. Each deep read is written back as a structured card (zsxq_cards.py) and as graph edges (manual_graph.py), so the library gets smarter with use. NO LLM API — Claude (the agent, in conversation) is the reader and synthesizer. Use when the user wants a deep, broker-grounded answer or comparison FROM THEIR OWN REPORTS rather than a web search — e.g. "how does ISRG compare with peers (using my reports)", "what do my broker reports say about HBM pricing", "compare Stryker vs Intuitive from zsxq", "deep dive X vs Y from my PDFs", "answer from my research library", "/zsxq-expert <question>". Distinct from /zsxq-ideas (idea shortlists) and /zsxq-analyze (one named PDF).
+---
+
+# Answer In-Depth Questions from the zsxq PDF Library (the PDF expert system)
+
+The user has ~7,000 sell-side / institute PDFs in `db/zsxq.db`. Web answers are
+shallow and messy; the depth lives in these reports — their comparison tables,
+TAM exhibits, channel checks, and price-target logic. This skill turns that pile
+into an **expert you can ask**: it finds the right PDFs, reads the real tables
+and charts inside them, and answers with page-anchored citations — then
+remembers what it read so the next question is faster.
+
+```
+question ──▶ (1) resolve focal + peers      [graph_mirror: COMPETES_WITH / SUPPLIES]
+          ──▶ (2) retrieve PDFs, ranked      [zsxq_fts.py  — BM25 over the corpus]
+          ──▶ (3) cards vs fresh             [zsxq_cards.py — reuse what's digested]
+          ──▶ (4) parallel deep reads        [extract_tables.py + render_pdf_pages.py + OCR]
+          ──▶ (5) synthesize cited answer    [tables + figures, every number → a page]
+          ──▶ (6) write back                 [cards + graph edges — the library learns]
+```
+
+**You — Claude — are the whole intelligence layer.** There is no embedding API,
+no vector DB, no LLM call (project rule). Retrieval is keyword + entity + graph;
+generation is your own reading and reasoning over the actual pages.
+
+## When to use vs the siblings
+
+- **`/zsxq-expert`** (this) — a *question* to answer in depth from the library:
+  "how does ISRG compare", "what's the bull case on HBM", "who leads China
+  surgical robots". Output is an *answer* (chat by default).
+- **`/zsxq-ideas`** — "what should I buy" / "scan my feed" → an idea *shortlist*.
+- **`/zsxq-analyze`** — one named PDF (by file_id / filename) → a single deep read.
+
+If the user names exactly one PDF, defer to `/zsxq-analyze`. If they want a
+buy-list, defer to `/zsxq-ideas`. Otherwise, this skill.
+
+## Step 1 — Parse the question
+
+Extract, in-context:
+
+- **Focal entity(ies)** — the company / theme the question is about (e.g. ISRG
+  / Intuitive Surgical). Normalize to a canonical name + ticker.
+- **Comparison set** — explicit peers the user named ("vs Stryker and
+  Medtronic"), OR *implicit* ("compare with other companies") — in which case
+  Step 2 derives the peers.
+- **Dimensions asked** — what the answer must cover (margins, procedure volume,
+  TAM, moat, valuation, install base…). If unspecified, default to: business
+  model, competitive position, growth, margins/economics, valuation, risks.
+- **Theme keywords** — for retrieval (e.g. "surgical robotics", "手术机器人",
+  "da Vinci", "Mako").
+
+State the parse back in one line before working, so the user can correct scope.
+
+## Step 2 — Resolve focal + peers from the knowledge graph
+
+The graph (`db/graph_mirror.db`) already encodes COMPETES_WITH / SUPPLIES edges
+for ~340 companies. Use it to (a) expand an implicit "other companies" into a
+concrete peer set and (b) see what the graph already asserts.
+
+```bash
+# focal entity + its competitive/supply neighborhood
+python3 - <<'PY'
+import graph_mirror as gm
+c = gm.get_conn()
+r = gm.search(c, "Intuitive Surgical", limit=10)
+print("FOCAL/NODES:", [(n["name"], n.get("labels")) for n in r["nodes"]][:5])
+print("EDGES:")
+for e in r["edges"][:20]:
+    print(f"  {e['source_node_name']} -[{e['name']}]-> {e['target_node_name']}  :: {e['fact']}")
+PY
+```
+
+From the returned edges, build the **peer set** = entities linked to the focal
+by `COMPETES_WITH` (direct competitors) plus notable `SUPPLIES` counterparties
+when the question is supply-chain-flavoured. If the graph is sparse on the focal
+(few/no edges — likely, since the graph was built from `reports/`, not the
+PDFs), don't stall: derive peers from the retrieval step (Step 3 surfaces the
+peers the broker reports themselves name in their comparison tables) and you'll
+*write those edges back* in Step 6.
+
+## Step 3 — Retrieve the right PDFs (ranked FTS)
+
+Use the trigram-FTS retrieval layer — BM25-ranked, bilingual (English + 中文),
+far better than the viewer's unranked LIKE scan. Run from the project root:
+
+```bash
+# focal + theme, ranked; --json for machine parsing, or omit for a readable list
+python3 zsxq_fts.py -q "Intuitive Surgical da Vinci surgical robotics" -n 25 --json
+
+# one query per named/derived peer, so each side of the comparison is covered
+python3 zsxq_fts.py -q "Stryker Mako orthopedic robotics" -n 10 --json
+python3 zsxq_fts.py -q "Medtronic Hugo surgical robot" -n 10 --json
+
+# cross-cutting comparison reports (often the richest — a single PDF that
+# tables several names) — search the theme itself:
+python3 zsxq_fts.py -q "surgical robots TAM competitive landscape 手术机器人" -n 15 --json
+
+# structured filters compose with the text match:
+python3 zsxq_fts.py -q "surgical robotics" --bank "Goldman Sachs" --since 2025-09-01 --json
+```
+
+Each result row carries: `file_id`, `name`, `bank`, `create_time`, `page_count`,
+`tickers`, a `summary` snippet, the BM25 `score`, a ready-to-cite `pdf_url`, and
+crucially **`has_card`** + `card_theme` + `card_primary_ticker` (whether this PDF
+was already digested — see Step 4).
+
+**Selection.** Union the result sets; dedupe by `file_id`. Prefer:
+1. **Cross-company comparison reports** (one PDF covering several peers — the
+   `summary`/title names ≥2 of your entities). These are gold for "compare".
+2. High BM25 score on the focal and on each peer (cover every side).
+3. Bank quality (GS/MS/JPM/UBS/Bernstein/Nomura > regional > unknown), recency,
+   sensible `page_count` (12–80 is the sweet spot).
+
+Keep a shortlist of **6–12 file_ids** that together cover the focal *and* every
+peer dimension. Note honestly if a peer has no coverage in the library.
+
+## Step 4 — Cards first, then fresh reads
+
+For each shortlisted file_id, check `has_card`:
+
+- **`has_card == true`** → pull the existing card instead of re-reading:
+  ```bash
+  python3 zsxq_cards.py --get <file_id>
+  ```
+  The card already holds covered tickers, theme, thesis, and *which comparison
+  tables live on which pages* (`key_tables`). If the card answers the dimension,
+  cite from it (and the page it points to) without a fresh extraction.
+- **`has_card` false / missing** → this PDF needs a deep read (Step 5).
+
+This is the compounding mechanism: the more you use the library, the fewer
+fresh reads each question needs.
+
+## Step 5 — Parallel deep reads (the tables + figures)
+
+Fan out **one Agent per fresh file_id, in a single message** (parallel). This is
+where the depth comes from — pull the *actual* tables and charts, not just prose.
+
+> **Memory note (16 GB machine).** Extraction agents are lighter than report
+> agents, but cap the fan-out at **~6 concurrent** here and, for a larger
+> shortlist, run in waves of 6. For any fan-out ≥2 start the watcher first
+> (`/tmp/mem-watch-16gb.sh`) per [CLAUDE.md § Workflow Memory Monitoring].
+> Prefer Agent-tool subagents (separate processes, reclaimed on exit).
+
+Each agent runs the [extraction-agent prompt](#extraction-agent-prompt). Its job
+per PDF:
+
+1. `find_pdf.py --file-id <id>` → confirm local path + the citable `pdf_url`.
+2. `extract_pdf.py --file-id <id> --header` → narrative text + page markers.
+   If `--header` reports image-only pages → `ocr_pdf.py --file-id <id>` first
+   (caches OCR back to the DB; the sanctioned write), then re-extract.
+3. **Tables:** `extract_tables.py --file-id <id> --json` → comparison tables as
+   markdown, page-labelled. This is the key step for "compare" questions — the
+   segment×player / metric×company grids come out structured.
+4. **Figures/charts:** for a chart whose meaning isn't in the text or a table
+   (install-base curve, margin bridge, share trend), `render_pdf_pages.py
+   --file-id <id> --pages <n>` → PNG, then **Read the PNG** (you are multimodal)
+   and transcribe the axis values / trend into the answer.
+5. Return structured JSON (the extraction-agent shape) with every number tagged
+   to a `page` and a verbatim original-language `quote`.
+
+## Step 6 — Synthesize the cited answer (and write back)
+
+**Synthesis.** Compose the answer around the *dimensions* (Step 1), not around
+the PDFs. For a comparison, lead with a **head-to-head table** (companies as
+columns, dimensions as rows) assembled from the extracted broker tables, then
+prose per dimension. Rules:
+
+- **Every number cites the PDF page it came from**, in the
+  [zsxq citation convention](../zsxq-ideas/SKILL.md#zsxq-citation-convention):
+  `[Bank — topic, zsxq #<file_id> p.<N>](http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>#page=<N>)`,
+  with a short verbatim original-language quote alongside the figure.
+- **Reproduce the actual comparison tables** you pulled (cite the source PDF +
+  page under each). Don't paraphrase a table into vague prose — show the grid.
+- **A broker's view is a broker's view**, not fact: attribute ("Goldman pegs the
+  ortho-robotics TAM at US$2–3bn…"). Never present a sell-side target as truth.
+- **Be honest about gaps.** If the library covers ISRG well but barely mentions
+  a named peer, say so — don't fill the hole from general knowledge and pass it
+  off as sourced. General-knowledge bridging is allowed but must be *labelled*
+  ("not in the cited reports; general context:").
+- **No LLM-API, no fabrication.** Numerical Accuracy rule: every figure must
+  string-match a cited PDF's extracted text.
+
+**Write-back (do this every run — it's what makes it an expert system).**
+
+1. **Cards** — for each PDF you deep-read, upsert a card so the next question
+   reuses it:
+   ```bash
+   python3 zsxq_cards.py <<'JSON'
+   [{"file_id": <id>, "primary_ticker": "ISRG",
+     "covered_tickers": ["ISRG","SYK","MDT"], "theme": "surgical-robotics",
+     "thesis": "<1-paragraph what-this-report-argues>",
+     "has_comparison_table": true,
+     "key_tables": "p.5 segment×player TAM grid; p.11 procedure-volume by company",
+     "key_figures": "p.4 da Vinci install-base CAGR",
+     "rating": "<broker call if any>"}]
+   JSON
+   ```
+2. **Graph edges** — for each competitive/supply fact the PDFs establish, write
+   it to the graph with the PDF as provenance (so `/zep/` shows the source and
+   the next graph query is richer). Companies only; relations `COMPETES_WITH` /
+   `SUPPLIES`; ≤10 edges/entity (per [[build-knowledge-graph]]):
+   ```python
+   from manual_graph import add_entity, add_edge, add_episode
+   add_episode("pdf_585582881584284", name="GS China Medtech Going Global",
+               source_desc="zsxq #585582881584284")
+   add_entity("Intuitive Surgical", labels=["Company"], ticker="ISRG")
+   add_entity("Stryker", labels=["Company"], ticker="SYK")
+   add_edge("Stryker", "Intuitive Surgical", relation="COMPETES_WITH",
+            fact="Both lead surgical robotics — Mako (ortho) vs da Vinci (soft-tissue); GS segments them as adjacent TAMs.",
+            source="pdf_585582881584284")
+   ```
+   The `pdf_<file_id>` episode slug renders as a clickable PDF link in `/zep/`
+   (graph_mirror `_episode_url` already handles the `pdf_` prefix). This is the
+   first time PDFs feed the graph — every run grows it.
+
+## Step 7 — Verify before delivering
+
+Spot-check 3–5 numbers from the answer against their cited PDFs' extracted text
+(`extract_pdf.py --file-id <id> --pages <n>` then grep the figure). Any number
+that doesn't string-match its cited page gets fixed or dropped (Numerical
+Accuracy rule). Confirm every `pdf_url` is well-formed.
+
+## Output mode
+
+- **Default: answer in chat.** A comparison/explanation answer is a one-off —
+  per [CLAUDE.md § One-off Explanations], do NOT save a file unless the user
+  asks ("save this", "write a report", "保存").
+- **If the user asks to save:** a 2–4 company comparison → `/compare-companies`
+  format under `reports/compare/`; a single-topic explainer →
+  `reports/explanation/<slug>.md`. Filename must start with English/pinyin per
+  the [filename rule](../../../CLAUDE.md#research-report-filenames-mandatory--must-include-english--pinyin-name).
+  Then commit per the standard workflow. The *cards and graph edges from
+  write-back are persisted regardless* of whether the prose answer is saved.
+
+## Extraction-agent prompt
+
+Use verbatim for each parallel deep-read agent (subagent_type `general-purpose`),
+plugging in the file_id and the question's dimensions:
+
+```
+Use the zsxq-analyze skill's scripts to deep-read file_id <N> from db/zsxq.db,
+to help answer this question: "<the user's question>".
+Focus on these dimensions: <dimensions from Step 1>.
+
+Steps:
+1. python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --file-id <N>
+   (note the pdf_url and local path)
+2. python3 .claude/skills/zsxq-analyze/scripts/extract_pdf.py --file-id <N> --header
+   If it reports image-only pages, first run
+   python3 .claude/skills/zsxq-analyze/scripts/ocr_pdf.py --file-id <N>
+   then re-run extract_pdf.
+3. python3 .claude/skills/zsxq-analyze/scripts/extract_tables.py --file-id <N> --json
+   (pull every comparison / metric table as markdown — this is the priority)
+4. For any chart that carries the answer and isn't in the text/tables:
+   python3 .claude/skills/zsxq-analyze/scripts/render_pdf_pages.py --file-id <N> --pages <p>
+   then Read the PNG and transcribe the axis values / trend.
+
+Return ONLY raw JSON (no prose, no fences):
+{
+  "file_id": <N>,
+  "name": "<PDF name>",
+  "bank": "<publisher/bank or null>",
+  "pdf_url": "<from find_pdf>",
+  "covered_entities": ["<company/ticker>", ...],
+  "theme": "<short theme slug, e.g. surgical-robotics>",
+  "thesis": "<1-paragraph: what THIS report argues>",
+  "comparison_tables": [
+    {"page": 5, "title": "segment x player TAM", "markdown": "<the table as markdown>"}
+  ],
+  "key_numbers": [
+    {"entity": "ISRG", "metric": "da Vinci systems placed", "value": "232",
+     "page": 7, "quote": "<verbatim original-language sentence with the number>"}
+  ],
+  "figures": [
+    {"page": 4, "describes": "da Vinci install-base CAGR", "readout": "<what the chart shows, transcribed>"}
+  ],
+  "broker_call": {"rating": "<or null>", "price_target": "<or null>", "page": <n>},
+  "gaps": "<dimensions the user asked about that this PDF does NOT cover>"
+}
+
+Every key_numbers/comparison_tables/figures entry must carry the page where it
+appears, and quotes must be the ORIGINAL printed text (EN/中文/日本語), never the
+翻译精华 summary paraphrase. String-match each number to the extracted text.
+```
+
+## Notes & guardrails
+
+- **No LLM API, ever.** You read and synthesize; subagents read and extract.
+  No embeddings, no vector store, no `call_claude`. (Project hard rule.)
+- **DB writes go through the helpers only.** Reads of `pdf_files` are free;
+  the only writes are: `ocr_pdf.py` (OCR cache), `zsxq_cards.py` (cards),
+  `manual_graph.py` (graph), `scripts/persist_pts.py` (price targets if the
+  PDFs carry broker calls). Never raw SQL against any DB. (Tier-2/Tier-3 rules.)
+- **Cover every side of a comparison.** Run a retrieval query per entity; a
+  one-sided answer (rich on the focal, thin on peers) is a failure mode — flag
+  thin coverage rather than papering over it.
+- **Tables are the point.** For "compare" questions, the head-to-head grid from
+  `extract_tables.py` (or a vision-read of the page) is the deliverable; prose
+  supports it. `find_tables` occasionally misreads a chart as a sparse table —
+  sanity-check before reproducing.
+- **Persist the learning.** Always write cards + graph edges in Step 6, even
+  when the prose answer stays in chat. That's the difference between a search
+  box and an expert system.
+- **Opportunistically persist PTs.** If a deep-read PDF states a price target,
+  pipe it to `scripts/persist_pts.py --replace` (surfaces in `/pt`).
+
+## Prerequisites
+
+Project-root modules (this skill's retrieval + memory layer):
+
+- `zsxq_fts.py` — ranked trigram-FTS retrieval over `db/zsxq.db`
+  (`pdf_files_fts`, built/backfilled by `zsxq_common.init_db`). Run
+  `python3 zsxq_fts.py --rebuild` once if the index is missing.
+- `zsxq_cards.py` — agent-curated card layer (`pdf_cards`); the
+  read-reuse + write-back memory.
+
+Sibling-skill scripts (the extraction layer; already installed):
+
+- [[zsxq-analyze]] — `scripts/find_pdf.py`, `scripts/extract_pdf.py`,
+  `scripts/ocr_pdf.py`, `scripts/render_pdf_pages.py`, and the new
+  `scripts/extract_tables.py` (structured tables via PyMuPDF `find_tables`).
+
+Cross-document layer:
+
+- [[build-knowledge-graph]] — `manual_graph.py` write API + the COMPETES_WITH /
+  SUPPLIES / companies-only / ≤10-edges discipline used in Step 6.
+- `graph_mirror.py` — `search()` for the focal-entity neighborhood (Step 2).
+
+Conventions reused:
+
+- [[zsxq-ideas]] — the [zsxq citation convention](../zsxq-ideas/SKILL.md#zsxq-citation-convention)
+  (page-anchored link + verbatim source quote) and the parallel-fan-out pattern.

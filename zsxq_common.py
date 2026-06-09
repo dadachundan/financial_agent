@@ -18,7 +18,6 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import unquote
 
-import browser_cookie3
 import requests
 
 # ── Constants ─────────────────────────────────────────────────────────────────
@@ -47,6 +46,8 @@ HEADERS = {
 
 def get_session_via_selenium(chrome_profile: Path) -> requests.Session:
     """Build a requests.Session with zsxq cookies read from a Chrome profile."""
+    import browser_cookie3  # lazy: only the Selenium downloader needs this
+
     cookie_file = chrome_profile / "Default" / "Cookies"
     if not cookie_file.exists():
         raise FileNotFoundError(f"Cookie file not found: {cookie_file}")
@@ -590,7 +591,95 @@ MIGRATIONS: list[tuple[str, str]] = [
     # v9 search query term
     ("ALTER TABLE pdf_files ADD COLUMN query_term TEXT", "duplicate column"),
     ("CREATE INDEX IF NOT EXISTS idx_query_term ON pdf_files(query_term)", "already exists"),
+    # v10 OCR cache columns (also created ad-hoc by the zsxq-analyze ocr_pdf.py;
+    # declared here so a fresh DB carries the full schema).
+    ("ALTER TABLE pdf_files ADD COLUMN ocr_text TEXT", "duplicate column"),
+    ("ALTER TABLE pdf_files ADD COLUMN ocr_at   TEXT", "duplicate column"),
 ]
+
+
+# ── Full-text search (FTS5) + agent-curated card layer ──────────────────────
+#
+# pdf_files_fts: a trigram-tokenised FTS5 index over the short, high-signal text
+# columns, so retrieval works across the bilingual (English + 中文) corpus. The
+# default unicode61 tokenizer treats a space-free CJK run as one token, so a
+# substring query like '手术机器人' fails to match '直觉外科手术机器人'; the
+# 'trigram' tokenizer indexes every 3-char window and matches CJK and Latin
+# substrings alike (minimum query length 3 chars). ocr_text (full PDF text) is
+# deliberately NOT indexed — it is large and only needed once a PDF is already
+# picked for a deep read; leaving it out bounds the trigram index size.
+_FTS_DDL = """
+CREATE VIRTUAL TABLE IF NOT EXISTS pdf_files_fts USING fts5(
+    name, topic_title, summary, tickers, bank, tags, comment,
+    content='pdf_files', content_rowid='file_id', tokenize='trigram'
+);
+
+CREATE TRIGGER IF NOT EXISTS pdf_files_fts_ai AFTER INSERT ON pdf_files BEGIN
+    INSERT INTO pdf_files_fts(rowid, name, topic_title, summary, tickers, bank, tags, comment)
+    VALUES (new.file_id, new.name, new.topic_title, new.summary, new.tickers, new.bank, new.tags, new.comment);
+END;
+
+CREATE TRIGGER IF NOT EXISTS pdf_files_fts_ad AFTER DELETE ON pdf_files BEGIN
+    INSERT INTO pdf_files_fts(pdf_files_fts, rowid, name, topic_title, summary, tickers, bank, tags, comment)
+    VALUES ('delete', old.file_id, old.name, old.topic_title, old.summary, old.tickers, old.bank, old.tags, old.comment);
+END;
+
+CREATE TRIGGER IF NOT EXISTS pdf_files_fts_au AFTER UPDATE ON pdf_files BEGIN
+    INSERT INTO pdf_files_fts(pdf_files_fts, rowid, name, topic_title, summary, tickers, bank, tags, comment)
+    VALUES ('delete', old.file_id, old.name, old.topic_title, old.summary, old.tickers, old.bank, old.tags, old.comment);
+    INSERT INTO pdf_files_fts(rowid, name, topic_title, summary, tickers, bank, tags, comment)
+    VALUES (new.file_id, new.name, new.topic_title, new.summary, new.tickers, new.bank, new.tags, new.comment);
+END;
+"""
+
+# pdf_cards: the agent-curated "card" written back each time Claude deep-reads a
+# PDF (see zsxq_cards.py). It turns the sparse native metadata (only ~5% of rows
+# carry tickers) into a structured index that grows over the PDFs actually used.
+# The embedding / embed_model columns are reserved for an optional future local
+# (no-API) semantic layer; they stay NULL until/unless that layer is built.
+_CARDS_DDL = """
+CREATE TABLE IF NOT EXISTS pdf_cards (
+    file_id              INTEGER PRIMARY KEY,
+    covered_tickers      TEXT,
+    primary_ticker       TEXT,
+    theme                TEXT,
+    thesis               TEXT,
+    has_comparison_table INTEGER DEFAULT 0,
+    key_tables           TEXT,
+    key_figures          TEXT,
+    rating               TEXT,
+    card_json            TEXT,
+    embedding            BLOB,
+    embed_model          TEXT,
+    updated_at           TEXT DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_cards_primary ON pdf_cards(primary_ticker);
+CREATE INDEX IF NOT EXISTS idx_cards_theme   ON pdf_cards(theme);
+"""
+
+
+def ensure_search_schema(conn: sqlite3.Connection) -> None:
+    """Create the FTS5 index + card table and backfill the FTS from existing
+    rows. Idempotent; safe to call on every init_db(). Wrapped in try/except so
+    a search-layer problem can never block the core downloader/upsert path.
+    """
+    try:
+        # An external-content FTS5 table reports count(*) from the *content*
+        # table even when its index is empty, so emptiness can't gate the
+        # backfill. Instead detect whether the table existed before this call:
+        # if we're creating it now, rebuild once to index all historical rows.
+        # On later calls the triggers keep it in sync, so we skip the rebuild.
+        fts_existed = conn.execute(
+            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='pdf_files_fts'"
+        ).fetchone() is not None
+        conn.executescript(_FTS_DDL)
+        conn.executescript(_CARDS_DDL)
+        if not fts_existed:
+            base_rows = conn.execute("SELECT count(*) FROM pdf_files").fetchone()[0]
+            if base_rows:
+                conn.execute("INSERT INTO pdf_files_fts(pdf_files_fts) VALUES('rebuild')")
+    except sqlite3.OperationalError as exc:
+        print(f"⚠ zsxq search schema init skipped: {exc}")
 
 
 def init_db(db_path: Path) -> sqlite3.Connection:
@@ -605,6 +694,7 @@ def init_db(db_path: Path) -> sqlite3.Connection:
         except sqlite3.OperationalError as exc:
             if ignore_fragment.lower() not in str(exc).lower():
                 raise
+    ensure_search_schema(conn)
     conn.commit()
     return conn
 

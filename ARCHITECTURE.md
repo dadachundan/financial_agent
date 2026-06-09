@@ -113,6 +113,13 @@ Browser for the 知识星球 research group PDF library.
 - **DB**: `db/zsxq.db`
 - Mounts `pdf_viewer.register(zsxq_bp, source="zsxq", path_provider=…)` for the in-browser PDF viewer. Sibling registrations exist in `fetch_financial_report.py` (sec), `fetch_cninfo_report.py` (cn), and `notes_app.py` (manual) so all four PDF libraries share the same viewer + comment store.
 
+### `zsxq_fts.py` / `zsxq_cards.py` — zsxq retrieval/memory layer (the "PDF expert system")
+The query-time layer beneath the [`zsxq-expert`](../.claude/skills/zsxq-expert/SKILL.md) skill.
+- `zsxq_fts.py` — ranked **full-text retrieval** over `db/zsxq.db` via the `pdf_files_fts` FTS5 index (trigram tokenizer → bilingual EN+中文 substring search; BM25 ranked; LIKE fallback for <3-char queries). `search(query, ...)` + CLI; structured filters (bank / ticker / since); surfaces `has_card` per hit. Read-only; the index is created/backfilled by `zsxq_common.init_db` (run `python3 zsxq_fts.py --rebuild` to force).
+- `zsxq_cards.py` — the agent-curated **card** store (`pdf_cards` table): each deep read writes back covered tickers / theme / thesis / which comparison tables live on which pages, so re-reads are skipped and the library compounds. `upsert_card` / `get_card` / `cards_for_ticker` + batch-JSON CLI. The `embedding`/`embed_model` columns are reserved for an optional future *local* (no-API) semantic layer.
+- Table extraction: `.claude/skills/zsxq-analyze/scripts/extract_tables.py` recovers structured comparison tables as markdown via PyMuPDF `find_tables` (no new dep); image-only pages fall back to `render_pdf_pages.py` + vision.
+- Both modules resolve `DB_PATH` via `db_paths.db_path` (FINAGENT_DB_DIR-redirectable; covered by `TestFinagentDbDirOverride`). No LLM API — Claude-the-agent is the reader/synthesizer.
+
 ### `pdf_viewer.py` — In-browser PDF viewer with selection-anchored markdown comments
 PDF.js-based reader for any PDF library on disk. Mirrors the UX of the `/claude-reports` markdown viewer (right-rail comment cards anchored to selected text via a TextQuoteSelector). Source-agnostic — each parent app registers it via `register(bp, *, source, path_provider)` where `path_provider(file_id) -> {local_path, name, title}` resolves the PDF for that source.
 - Key routes (mounted on the parent blueprint; e.g. `/zsxq`, `/sec`, `/cn`, `/manual-report`):
@@ -184,7 +191,7 @@ for ad-hoc tracing of one-off manual calls.
 | `db/indicators.db` | Indicator snapshots (last 20) + daily history per indicator |
 | `db/financial_reports.db` | SEC report metadata: ticker, form_type, period, filed_date, local_path, accession_no, comment |
 | `db/cninfo_reports.db` | A-share/HK report metadata: ticker, market, stock_code, period, form_type, local_path, comment |
-| `db/zsxq.db` | ZSXQ PDFs: file_id, name, topic, local_path, classification tags, tickers, rating, comment |
+| `db/zsxq.db` | ZSXQ PDFs: file_id, name, topic, local_path, classification tags, tickers, rating, comment, `ocr_text`. Plus the **retrieval/memory layer**: `pdf_files_fts` (trigram FTS5, BM25-ranked bilingual full-text — queried by `zsxq_fts.py`) and `pdf_cards` (agent-curated cards: covered tickers / theme / thesis / comparison-table page map — written by `zsxq_cards.py`). Both schema-owned by `zsxq_common.init_db`. |
 
 ---
 

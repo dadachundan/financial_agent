@@ -247,6 +247,8 @@ class TestFinagentDbDirOverride:
         ("market_cap_cache.py",    "_DB_PATH"),
         ("graph_mirror.py",        "_DEFAULT_MIRROR"),
         ("zsxq_common.py",         "DEFAULT_DB"),
+        ("zsxq_fts.py",            "DB_PATH"),
+        ("zsxq_cards.py",          "DB_PATH"),
         ("stock_price_target_db.py", "DB_PATH"),
     ])
     def test_module_honors_env(self, monkeypatch, tmp_path, module_path, attr):
