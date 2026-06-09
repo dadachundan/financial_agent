@@ -10,11 +10,11 @@
 
 中航光电科技股份有限公司 (Jonhon Optronic Technology / AVIC Jonhon, SZSE:002179) 是中国连接器 (connector) 行业的二号龙头, 仅次于立讯精密在消费电子领域的体量, 但在防务 (defense)、商业航天、轨道交通等高可靠性 (high-reliability) 细分市场具有近垄断的供应商地位, 并在 AI 数据中心 (AI data center) 液冷 (liquid cooling) 互连方案上具有显著先发优势 ([中航光电2025年年度报告 (2026-03-27)](https://static.cninfo.com.cn/finalpage/2026-03-28/1225044952.PDF))。公司 2025 年录得营业收入 RMB 213.86 亿元 (+3.39% YoY), 但归母净利润 RMB 21.62 亿元 (-35.56% YoY) — 这是公司自 2007 年上市以来净利润首次同比下滑, 主因防务行业周期性放缓、贵金属 (gold / silver / copper) 原材料价格上涨, 以及税收监管趋严带来的所得税补缴 ([中航光电2025年年度报告 致股东的一封信 p.2](https://static.cninfo.com.cn/finalpage/2026-03-28/1225044952.PDF))。
 
-**主题归属逻辑**: 公司是 ai-power-electrification 主题报告 ([reports/themes/ai-power-electrification_theme.md](../../themes/ai-power-electrification_theme.md)) 中以 *enabler / 启用方* 身份纳入的 "混合信号 / mixed signal" 标的 — Goldman Sachs 在 2026-05-28 将公司评级由 Buy 下调至 Neutral (12个月目标价 RMB 37.5, 对应 22x 2027E P/E), 理由是 "防务毛利率持续承压而数据中心机会刚刚显现" ([GS — AVIC Jonhon 2026-05-28 (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511454#page=1))。即便如此, Goldman 同时将 "液冷 (liquid cooling) 需求超预期" 列为该评级的 **#1 上行风险**, 反映数据中心拐点 (data-center inflection) 仍是公司未来 2-3 年的核心驱动。
+**主题归属逻辑**: 公司是 ai-power-electrification 主题报告 ([reports/themes/ai-power-electrification_theme.md](../../themes/ai-power-electrification_theme.md)) 中以 *enabler / 启用方* 身份纳入的 "混合信号 / mixed signal" 标的 — Goldman Sachs 在 2026-05-28 将公司评级由 Buy 下调至 Neutral (12个月目标价 RMB 37.5, 对应 22x 2027E P/E), 理由是 "防务毛利率持续承压而数据中心机会刚刚显现" ([GS — AVIC Jonhon 2026-05-28 (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511454/Goldman%20Sachs-AVIC%20Jonhon%20%EF%BC%88002179%EF%BC%89%EF%BC%9A%20Downgrade%20to%20Neutral%20on%20continued%20defense%20margin%20pressure%20despite%20emerging%20data%20center%20opportunities-260528.pdf#page=1))。即便如此, Goldman 同时将 "液冷 (liquid cooling) 需求超预期" 列为该评级的 **#1 上行风险**, 反映数据中心拐点 (data-center inflection) 仍是公司未来 2-3 年的核心驱动。
 
 **核心看点 (核心 thesis)**: (1) 防务首选互连方案提供商 — 在 GJB598、GJB599、D38999 等军标连接器谱系上占据国内主导地位, 沈阳兴华子公司获评 "国家级制造业单项冠军" ([中航光电2025年年度报告 第三节 p.13](https://static.cninfo.com.cn/finalpage/2026-03-28/1225044952.PDF)); (2) 数据中心 (data center) 液冷"电源+光纤+高速+液冷"整体解决方案能力 — 2025 年泰兴光电液冷源系列产品集成系统投产, 数据中心业务已 "持续融入国内外头部客户高效能计算基础设施供应链" ([中航光电2025年年度报告 第三节 p.15](https://static.cninfo.com.cn/finalpage/2026-03-28/1225044952.PDF)); (3) 新能源汽车 (NEV / EV / 电动车) 连接器市占率前列 — 国内销量前 15 新能源车型配套率持续攀升 ([中航光电2025年年度报告 第三节 p.16](https://static.cninfo.com.cn/finalpage/2026-03-28/1225044952.PDF)); (4) 50.52% 现金分红比例 + 1.5 亿元股份回购 — 大股东 (中航科工) 持股 36.76%, 治理结构清晰, 股东回报达上市以来最高 ([中航光电2025年年度报告 致股东的一封信 p.3](https://static.cninfo.com.cn/finalpage/2026-03-28/1225044952.PDF))。
 
-**主要风险**: 防务订单周期性波动持续 (2025 年防务领域收入同比下降较多)、贵金属 (黄金 / 白银 / 铜) 原材料价格波动对毛利率持续侵蚀、海外业务受出口管制 (export control) 影响、数据中心产品当前规模仍 "relatively small at this stage" ([GS — AVIC Jonhon 2026-05-28 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511454#page=1)), 实际 AIDC 拉动可能慢于预期。
+**主要风险**: 防务订单周期性波动持续 (2025 年防务领域收入同比下降较多)、贵金属 (黄金 / 白银 / 铜) 原材料价格波动对毛利率持续侵蚀、海外业务受出口管制 (export control) 影响、数据中心产品当前规模仍 "relatively small at this stage" ([GS — AVIC Jonhon 2026-05-28 p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511454/Goldman%20Sachs-AVIC%20Jonhon%20%EF%BC%88002179%EF%BC%89%EF%BC%9A%20Downgrade%20to%20Neutral%20on%20continued%20defense%20margin%20pressure%20despite%20emerging%20data%20center%20opportunities-260528.pdf#page=1)), 实际 AIDC 拉动可能慢于预期。
 
 ---
 
@@ -26,7 +26,7 @@
 
 2025 全年公司实现营业收入 RMB 21,386,059,440.13 元 (+3.39% YoY), 归属于上市公司股东的净利润 RMB 21.62 亿元 (-35.56% YoY), 扣非归母净利润 RMB 21.03 亿元 (-35.84% YoY), 经营活动产生的现金流量净额 RMB 15.62 亿元 (-27.36% YoY), 基本每股收益 RMB 1.0238 元 (-36.37% YoY), 加权平均净资产收益率 (ROE / 净资产收益率) 9.16% (较 2024 年的 15.67% 下降 6.51 个百分点)。总资产 RMB 425.27 亿元, 归母净资产 RMB 242.68 亿元 ([中航光电2025年年度报告 第二节 p.10](https://static.cninfo.com.cn/finalpage/2026-03-28/1225044952.PDF))。
 
-按截至 2026-05 的市值约 RMB 785 亿元、2025 年净利润 RMB 21.62 亿元计算, 静态市盈率 (P/E / Static PE) 约 36.3x, 市净率 (P/B) 约 3.2x ([中航光电年度价值洞察 (100est.com 2026-04)](https://www.100est.com/res/avi/002179sz2025/002179sz2025.html))。Goldman Sachs 2026-05-28 给出的 12 个月目标价 RMB 37.5 元 对应 22x 2027E P/E, 暗示一致预期 (consensus) 假设 2027 年净利润恢复至约 RMB 35 亿元区间 ([GS — AVIC Jonhon 2026-05-28 (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511454#page=1))。公司 2025 年度拟以未来实施权益分配方案时股权登记日的总股本为基数, 每 10 股派发现金红利 5.5 元 (含税), 预计现金分红总额 RMB 11.53 亿元, 占归母净利润比例 53.34%, 分红比例创历史新高 ([中航光电2025年年度报告 致股东的一封信 p.3](https://static.cninfo.com.cn/finalpage/2026-03-28/1225044952.PDF))。
+按截至 2026-05 的市值约 RMB 785 亿元、2025 年净利润 RMB 21.62 亿元计算, 静态市盈率 (P/E / Static PE) 约 36.3x, 市净率 (P/B) 约 3.2x ([中航光电年度价值洞察 (100est.com 2026-04)](https://www.100est.com/res/avi/002179sz2025/002179sz2025.html))。Goldman Sachs 2026-05-28 给出的 12 个月目标价 RMB 37.5 元 对应 22x 2027E P/E, 暗示一致预期 (consensus) 假设 2027 年净利润恢复至约 RMB 35 亿元区间 ([GS — AVIC Jonhon 2026-05-28 (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511454/Goldman%20Sachs-AVIC%20Jonhon%20%EF%BC%88002179%EF%BC%89%EF%BC%9A%20Downgrade%20to%20Neutral%20on%20continued%20defense%20margin%20pressure%20despite%20emerging%20data%20center%20opportunities-260528.pdf#page=1))。公司 2025 年度拟以未来实施权益分配方案时股权登记日的总股本为基数, 每 10 股派发现金红利 5.5 元 (含税), 预计现金分红总额 RMB 11.53 亿元, 占归母净利润比例 53.34%, 分红比例创历史新高 ([中航光电2025年年度报告 致股东的一封信 p.3](https://static.cninfo.com.cn/finalpage/2026-03-28/1225044952.PDF))。
 
 ---
 
@@ -285,7 +285,7 @@ xychart-beta
 
 ### 6.4 下游应用 - 国防军工连接器
 
-中国国防军工连接器市场约 RMB 200-300 亿元, 占国内连接器总市场的 8-12%, 但毛利率显著高于民用连接器 — 公司 2024 年防务毛利率约 45%, 2025 年防务毛利率约 35% ([GS — AVIC Jonhon 2026-05-28 (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511454#page=1))。军用连接器具有 *进入壁垒高 (国军标认证 + 国密资质 + 武器装备科研生产许可证, 通常需要 3-5 年)*、*客户黏性强 (主机厂供应商认证通过后通常长达 10-20 年)*、*单价高 (军标连接器单价是消费级的 10-100 倍)* 三大特点。中航光电与航天电器 (002025) 是国内军用连接器的双寡头, 合计市场份额估算超过 60%。
+中国国防军工连接器市场约 RMB 200-300 亿元, 占国内连接器总市场的 8-12%, 但毛利率显著高于民用连接器 — 公司 2024 年防务毛利率约 45%, 2025 年防务毛利率约 35% ([GS — AVIC Jonhon 2026-05-28 (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511454/Goldman%20Sachs-AVIC%20Jonhon%20%EF%BC%88002179%EF%BC%89%EF%BC%9A%20Downgrade%20to%20Neutral%20on%20continued%20defense%20margin%20pressure%20despite%20emerging%20data%20center%20opportunities-260528.pdf#page=1))。军用连接器具有 *进入壁垒高 (国军标认证 + 国密资质 + 武器装备科研生产许可证, 通常需要 3-5 年)*、*客户黏性强 (主机厂供应商认证通过后通常长达 10-20 年)*、*单价高 (军标连接器单价是消费级的 10-100 倍)* 三大特点。中航光电与航天电器 (002025) 是国内军用连接器的双寡头, 合计市场份额估算超过 60%。
 
 ### 6.5 行业政策环境
 
@@ -326,7 +326,7 @@ xychart-beta
 
 ### 7.5 与鼎通科技 (688668) / 意华股份 (002897) 的差异化
 
-鼎通科技 (688668) 与意华股份 (002897) 是国内数据中心高速连接器的纯纯专业玩家, 二者均在 2024-2025 年股价大幅上涨 — 鼎通 PE 已达 30-40x, 反映市场对其 *业绩纯度 (业绩与 AI 数据中心 100% 相关性)* 的高溢价。中航光电由于业务多元 (防务 / 汽车 / 民机 / 工业医疗 / 数据中心), AI 数据中心业务 *contribution 仅占合并营收的 5-10%*, 因此估值溢价相对较低 — 这是公司既是 "AI 数据中心标的" 又被 GS 评级为 Neutral 的核心原因 ([GS — AVIC Jonhon 2026-05-28 (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511454#page=1))。
+鼎通科技 (688668) 与意华股份 (002897) 是国内数据中心高速连接器的纯纯专业玩家, 二者均在 2024-2025 年股价大幅上涨 — 鼎通 PE 已达 30-40x, 反映市场对其 *业绩纯度 (业绩与 AI 数据中心 100% 相关性)* 的高溢价。中航光电由于业务多元 (防务 / 汽车 / 民机 / 工业医疗 / 数据中心), AI 数据中心业务 *contribution 仅占合并营收的 5-10%*, 因此估值溢价相对较低 — 这是公司既是 "AI 数据中心标的" 又被 GS 评级为 Neutral 的核心原因 ([GS — AVIC Jonhon 2026-05-28 (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511454/Goldman%20Sachs-AVIC%20Jonhon%20%EF%BC%88002179%EF%BC%89%EF%BC%9A%20Downgrade%20to%20Neutral%20on%20continued%20defense%20margin%20pressure%20despite%20emerging%20data%20center%20opportunities-260528.pdf#page=1))。
 
 ```mermaid
 quadrantChart
@@ -372,7 +372,7 @@ quadrantChart
 
 ### 8.2 数据中心液冷增量市场拆解
 
-液冷市场是公司未来 3-5 年的最大增量。按公司 2025 年报援引的中国信息通信研究院数据: 2024 年中国智算中心液冷市场规模 RMB 184 亿元, 2029 年预计突破 RMB 1,300 亿元, 5 年 CAGR 约 48% ([中航光电2025年年度报告 第三节 p.17](https://static.cninfo.com.cn/finalpage/2026-03-28/1225044952.PDF))。如果中航光电维持液冷连接器领域国内市占率第一 (假设 15-20% 份额), 2029 年液冷业务收入有望达到 RMB 200-260 亿元 — 相当于 2025 年公司总营收 (~RMB 214 亿) 的水平。这是 GS 评级中 "液冷需求超预期" 列为 *#1 上行风险* 的根本原因 ([GS — AVIC Jonhon 2026-05-28 (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511454#page=1))。
+液冷市场是公司未来 3-5 年的最大增量。按公司 2025 年报援引的中国信息通信研究院数据: 2024 年中国智算中心液冷市场规模 RMB 184 亿元, 2029 年预计突破 RMB 1,300 亿元, 5 年 CAGR 约 48% ([中航光电2025年年度报告 第三节 p.17](https://static.cninfo.com.cn/finalpage/2026-03-28/1225044952.PDF))。如果中航光电维持液冷连接器领域国内市占率第一 (假设 15-20% 份额), 2029 年液冷业务收入有望达到 RMB 200-260 亿元 — 相当于 2025 年公司总营收 (~RMB 214 亿) 的水平。这是 GS 评级中 "液冷需求超预期" 列为 *#1 上行风险* 的根本原因 ([GS — AVIC Jonhon 2026-05-28 (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511454/Goldman%20Sachs-AVIC%20Jonhon%20%EF%BC%88002179%EF%BC%89%EF%BC%9A%20Downgrade%20to%20Neutral%20on%20continued%20defense%20margin%20pressure%20despite%20emerging%20data%20center%20opportunities-260528.pdf#page=1))。
 
 ### 8.3 全球出海机会
 
@@ -386,9 +386,9 @@ quadrantChart
 
 ### 9.1 业务风险 (Business Risk)
 
-1. **防务订单周期性放缓持续** — 2025 年防务领域收入 "同比下降较多" (公司未具体披露数字, 但合并电连接器收入 -1.65% 的下滑主因便是防务), 防务毛利率从 2024 年的 ~45% 降至 2025 年的 ~35% ([GS — AVIC Jonhon 2026-05-28 (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511454#page=1))。如果 "十四五" 末 / "十五五" 初的军费分配模式继续转向 *客户端经济性要求不断提升*, 即主机厂压价、扩大集采、收紧应收账款政策, 公司防务利润率可能进一步承压。
+1. **防务订单周期性放缓持续** — 2025 年防务领域收入 "同比下降较多" (公司未具体披露数字, 但合并电连接器收入 -1.65% 的下滑主因便是防务), 防务毛利率从 2024 年的 ~45% 降至 2025 年的 ~35% ([GS — AVIC Jonhon 2026-05-28 (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511454/Goldman%20Sachs-AVIC%20Jonhon%20%EF%BC%88002179%EF%BC%89%EF%BC%9A%20Downgrade%20to%20Neutral%20on%20continued%20defense%20margin%20pressure%20despite%20emerging%20data%20center%20opportunities-260528.pdf#page=1))。如果 "十四五" 末 / "十五五" 初的军费分配模式继续转向 *客户端经济性要求不断提升*, 即主机厂压价、扩大集采、收紧应收账款政策, 公司防务利润率可能进一步承压。
 
-2. **数据中心业务规模仍小, 拐点不确定** — GS 在 2026-05-28 评级中明确指出 "in data-center applications, the company is currently supplying three categories of products ... while contribution remains relatively small at this stage"。如果 2026-2027 年 AI 数据中心液冷渗透率不及预期 (例如风冷仍占主导、海外厂商 Staubli / CPC 维持高份额), 公司数据中心收入难以快速放量 ([GS — AVIC Jonhon 2026-05-28 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511454#page=1))。
+2. **数据中心业务规模仍小, 拐点不确定** — GS 在 2026-05-28 评级中明确指出 "in data-center applications, the company is currently supplying three categories of products ... while contribution remains relatively small at this stage"。如果 2026-2027 年 AI 数据中心液冷渗透率不及预期 (例如风冷仍占主导、海外厂商 Staubli / CPC 维持高份额), 公司数据中心收入难以快速放量 ([GS — AVIC Jonhon 2026-05-28 p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511454/Goldman%20Sachs-AVIC%20Jonhon%20%EF%BC%88002179%EF%BC%89%EF%BC%9A%20Downgrade%20to%20Neutral%20on%20continued%20defense%20margin%20pressure%20despite%20emerging%20data%20center%20opportunities-260528.pdf#page=1))。
 
 3. **新能源汽车价格战传导** — 公司 2025 年新能源汽车 "全年累计实现项目定点 400 余项" 但 "客户端经济性要求不断提升", 整车厂压价直接传导至 Tier-1 与连接器供应商。瑞可达 (688800)、永贵电器 (300351) 等竞争对手在高压连接器上的低价竞争可能挤压公司份额与毛利率。
 
@@ -468,7 +468,7 @@ quadrantChart
 
 **Sell-side research**
 
-- [Goldman Sachs — AVIC Jonhon Downgrade to Neutral (2026-05-28) (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511454#page=1) — Downgrade from Buy, 12m TP RMB 37.5 (22x 2027E P/E), defense GPM ~35% vs 45% in 2024.
+- [Goldman Sachs — AVIC Jonhon Downgrade to Neutral (2026-05-28) (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511454/Goldman%20Sachs-AVIC%20Jonhon%20%EF%BC%88002179%EF%BC%89%EF%BC%9A%20Downgrade%20to%20Neutral%20on%20continued%20defense%20margin%20pressure%20despite%20emerging%20data%20center%20opportunities-260528.pdf#page=1) — Downgrade from Buy, 12m TP RMB 37.5 (22x 2027E P/E), defense GPM ~35% vs 45% in 2024.
 - [广发证券 - 中航光电 - 002179 - 我国连接器领先企业 (hibor 2024)](https://www.hibor.com.cn/data/d9e0f2719fa41546755635ea1622472e.html) — 公司深度报告 (历史)。
 - [华泰证券 - 中航光电 (002179) 业绩稳健增长 (dfcfw 2024-03)](https://pdf.dfcfw.com/pdf/H3_AP202403171626953298_1.pdf) — 公司深度。
 - [鼎通科技 (688668.SH) 公司动态点评 (dfcfw 2025-03)](https://pdf.dfcfw.com/pdf/H3_AP202503031644009179_1.pdf) — 同业对比。
@@ -530,7 +530,7 @@ quadrantChart
 - "中国大陆 91.59% / 海外 8.41% / +45.28% YoY" → ✓ 验证于同表分地区数据。
 - "研发投入 RMB 20.92 亿 / 9.78%" → ✓ 验证于第三节 p.22 研发投入表。
 - "现金分红比例 53.34%" → ✓ 验证于致股东的一封信第 3 页。
-- "GS 下调至 Neutral, TP RMB 37.5, 22x 2027E P/E" → ✓ 验证于 [GS — AVIC Jonhon 2026-05-28 (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511454#page=1) p.1 "Downgrade to Neutral from Buy"; "our 12-month TP remains at Rmb37.5"。
+- "GS 下调至 Neutral, TP RMB 37.5, 22x 2027E P/E" → ✓ 验证于 [GS — AVIC Jonhon 2026-05-28 (zsxq #585412224511454)](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511454/Goldman%20Sachs-AVIC%20Jonhon%20%EF%BC%88002179%EF%BC%89%EF%BC%9A%20Downgrade%20to%20Neutral%20on%20continued%20defense%20margin%20pressure%20despite%20emerging%20data%20center%20opportunities-260528.pdf#page=1) p.1 "Downgrade to Neutral from Buy"; "our 12-month TP remains at Rmb37.5"。
 - "防务 GPM 2024 ~45% vs 2025 ~35%" → ✓ 验证于同 GS 报告 p.1 "defense GPM remaining around 35%, below the 45% level seen in 2024"。
 - "2024 智算中心液冷市场 RMB 184 亿元 / +66.1%" → ✓ 验证于公司 2025 年报第三节 p.17 援引中国信息通信研究院数据。
 - "全球连接器市场 USD 991 亿 / 中国 USD 328 亿" → ✓ 验证于同位置。

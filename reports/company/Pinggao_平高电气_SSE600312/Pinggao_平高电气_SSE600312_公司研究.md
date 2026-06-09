@@ -271,7 +271,7 @@ Source: 根据公司年报口径及各竞争对手公开披露汇总 ([河南平
 
 **机会 2：HVDC / GIL / 直流场成套设备的国际化突破。** 公司 2025 年 ±800 千伏直流穿墙套管首次进入巴西特高压清洁能源外送工程，145 千伏环保组合电器、24 千伏中压充气柜首次进入欧洲市场，800 千伏 80 千安断路器和 550 千伏 C4 GIL 同时获得国际首台套地位 ([河南平高电气股份有限公司 2025 年年度报告, 第 13 页](https://static.cninfo.com.cn/finalpage/2026-04-11/1225093676.PDF))。如果 2026–2028 年国际板块能从当前 RMB 2.58 亿元 / -24.39% 毛利率扩大到 RMB 10–15 亿元 / 0%+ 毛利率，将贡献增量收入约 RMB 7–12 亿元，弥补国内电网投资减速的潜在缺口。
 
-**机会 3：AI 数据中心配套电网设备 (间接暴露)。** ai-power-electrification 主题报告显示，2026 年 4 月中国已批复约 90 个"绿电直连"项目，合计约 26.09 GW，其中 12 个与数据中心 / 算力中心相关 ([兴业证券 — 绿电直连, zsxq #585412224854524 p.2](http://xs-macbook-air.local:5001/zsxq-pdf/585412224854524#page=2); [ai-power-electrification 主题研究, reports/themes](https://github.com/jiongmumu/financial_agent/blob/main/reports/themes/ai-power-electrification_theme.md))。每 1 GW 数据中心需求大致对应 RMB 5–8 亿元的高压 + 配网开关与变电站设备投资。若平高能在"绿电直连"AIDC 项目中取得 10–15% 份额 (历史国家电网工程份额映射)，新增可触达 TAM 约 RMB 50–100 亿元 / 5 年——这是当前**未被市场充分定价**的潜在再加速点。
+**机会 3：AI 数据中心配套电网设备 (间接暴露)。** ai-power-electrification 主题报告显示，2026 年 4 月中国已批复约 90 个"绿电直连"项目，合计约 26.09 GW，其中 12 个与数据中心 / 算力中心相关 ([兴业证券 — 绿电直连, zsxq #585412224854524 p.2](http://xs-macbook-air.local:5001/zsxq/pdf/585412224854524/%E7%94%B5%E5%8A%9B%E8%AE%BE%E5%A4%87%E8%A1%8C%E4%B8%9A%EF%BC%9A%E7%BB%BF%E7%94%B5%E7%9B%B4%E8%BF%9E%E9%87%8D%E5%A1%91%E7%AE%97%E5%8A%9B%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%EF%BC%8C%E7%BB%BF%E7%94%B5%E5%88%87%E5%85%A5Colo%E6%89%93%E5%BC%80%E4%BC%B0%E5%80%BC%E6%8F%90%E5%8D%87%E7%A9%BA%E9%97%B4.pdf#page=2); [ai-power-electrification 主题研究, reports/themes](https://github.com/jiongmumu/financial_agent/blob/main/reports/themes/ai-power-electrification_theme.md))。每 1 GW 数据中心需求大致对应 RMB 5–8 亿元的高压 + 配网开关与变电站设备投资。若平高能在"绿电直连"AIDC 项目中取得 10–15% 份额 (历史国家电网工程份额映射)，新增可触达 TAM 约 RMB 50–100 亿元 / 5 年——这是当前**未被市场充分定价**的潜在再加速点。
 
 *分析师观点：* 三大机会中，机会 1 是"已经定价"的 beta，机会 2 是"小幅 alpha + 高执行风险"，机会 3 是"潜在大 alpha + 估值修复"。如果 2026–2027 年公司能在季度报告中独立披露 AIDC 相关订单或收入，估值或将向思源电气 (35–40x P/E) 靠拢；若不能，则估值将停留在国内电网 beta (20–25x P/E) 区间 ([平高电气 2026 年一季报点评, 小牛行研](https://www.hangyan.co/reports/3880692577267090496); [东吴证券平高电气深度](https://pdf.dfcfw.com/pdf/H3_AP202506121689587512_1.pdf?1749746350000.pdf=))。
 
@@ -396,8 +396,8 @@ Source: 根据公司年报口径及各竞争对手公开披露汇总 ([河南平
 
 - [ai-power-electrification 主题研究, reports/themes](https://github.com/jiongmumu/financial_agent/blob/main/reports/themes/ai-power-electrification_theme.md)
 - [State-Grid 4-trn tracker, 复盘网](https://600312.fupanwang.com/dsk/2026-01-19.html)
-- [兴业证券 — 绿电直连, zsxq #585412224854524](http://xs-macbook-air.local:5001/zsxq-pdf/585412224854524)
-- [国金证券 — SST AIDC, zsxq #212485811815581](http://xs-macbook-air.local:5001/zsxq-pdf/212485811815581)
+- [兴业证券 — 绿电直连, zsxq #585412224854524](http://xs-macbook-air.local:5001/zsxq/pdf/585412224854524/%E7%94%B5%E5%8A%9B%E8%AE%BE%E5%A4%87%E8%A1%8C%E4%B8%9A%EF%BC%9A%E7%BB%BF%E7%94%B5%E7%9B%B4%E8%BF%9E%E9%87%8D%E5%A1%91%E7%AE%97%E5%8A%9B%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%EF%BC%8C%E7%BB%BF%E7%94%B5%E5%88%87%E5%85%A5Colo%E6%89%93%E5%BC%80%E4%BC%B0%E5%80%BC%E6%8F%90%E5%8D%87%E7%A9%BA%E9%97%B4.pdf)
+- [国金证券 — SST AIDC, zsxq #212485811815581](http://xs-macbook-air.local:5001/zsxq/pdf/212485811815581/%E7%94%B5%E5%8A%9B%E8%AE%BE%E5%A4%87%E4%B8%8E%E6%96%B0%E8%83%BD%E6%BA%90%E8%A1%8C%E4%B8%9AAIDC%E7%B3%BB%E5%88%97%E6%B7%B1%E5%BA%A6%EF%BC%9ASST%E5%BC%80%E5%90%AFAIDC%E4%BE%9B%E7%94%B5%E2%80%9C%E7%A1%85%E8%BF%9B%E9%93%9C%E9%80%80%E2%80%9D%E6%96%B0%E5%91%A8%E6%9C%9F.pdf)
 
 ### 行情与估值
 

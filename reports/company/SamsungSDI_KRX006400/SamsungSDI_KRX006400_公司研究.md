@@ -29,13 +29,13 @@
 
 三星 SDI (Samsung SDI, KRX:006400) 是韩国三星集团 (Samsung Group) 旗下的电池与电子材料制造企业,**两大业务板块**: (1) **电池业务 (Batteries)** — 包括动力电池 (EV battery)、储能电池 (ESS battery)、小型电池 (Small Battery,含 IT 设备 / 电动工具 / BBU 数据中心后备) 三个子线;(2) **电子材料业务 (Electronic Materials)** — 半导体封装材料 (Semiconductor packaging materials, 含 EMC / SOH / SOD / Slurry)、显示器材料 (Display materials, 含 OLED 绿色磷光主体材料 PGH)、新一代材料(HBM 封装材料、可折叠手机膜)。FY2025 合并营收 KRW 13.27 万亿(同比 -20.0%),电池占 KRW 12.38 万亿 (93%)、电子材料占 KRW 883bn (7%) ([2025.4Q IR Final, p.3-4](https://www.samsungsdi.com/upload/download/ir/2025.4Q_IR_Final_En.pdf))。
 
-公司的**核心战略**是把动力电池 (EV battery) 单一驱动的产品组合,扩展为同时覆盖 **EV + ESS + BBU + 电子材料**的四条腿组合 — 2025 年 EV 电池受美国 EV 需求降温与库存调整影响,板块营业亏损 KRW -1.85 万亿;但同期储能电池在 Q4 创下"季度营收历史新高 (highest quarterly revenue on record)",BBU(数据中心后备电源,Battery Backup Unit)电芯按公司自有口径估算"2025 年全球 cell 市占约 50% (approximately 50% global BBU market share)",成为 EV 之外的第二增长曲线 ([UBS — Samsung SDI 2026 AIC, zsxq #585412224511884 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511884#page=1))。
+公司的**核心战略**是把动力电池 (EV battery) 单一驱动的产品组合,扩展为同时覆盖 **EV + ESS + BBU + 电子材料**的四条腿组合 — 2025 年 EV 电池受美国 EV 需求降温与库存调整影响,板块营业亏损 KRW -1.85 万亿;但同期储能电池在 Q4 创下"季度营收历史新高 (highest quarterly revenue on record)",BBU(数据中心后备电源,Battery Backup Unit)电芯按公司自有口径估算"2025 年全球 cell 市占约 50% (approximately 50% global BBU market share)",成为 EV 之外的第二增长曲线 ([UBS — Samsung SDI 2026 AIC, zsxq #585412224511884 p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511884/UBS-Samsung%20SDI%EF%BC%88006400.KS%EF%BC%892026%20AIC%EF%BC%9A%20turning%20around%20on%20ESS%20and%20BBU%20growth-260527.pdf#page=1))。
 
 **地理分布:** 公司在韩国 (Suwon 总部 + Cheonan / Ulsan 电池厂)、中国 (Tianjin / Wuxi / Xi'an)、马来西亚 (Seremban)、匈牙利 (Göd,目前年产能 40 GWh ,可供应约 60 万辆中型车)、美国 (Stellantis 合资 StarPlus Energy 印第安纳 Kokomo 厂 33 GWh + GM 合资 Synergy Cells 印第安纳 New Carlisle 厂规划 27–36 GWh) 拥有制造基地,是亚洲少数同时在欧美设有大规模电池厂的电池企业之一 ([electrive — Hungary plant, 2025-05-27](https://www.electrive.com/2025/05/27/samsung-sdi-paves-way-for-prismatic-batteries-at-hungary-plant/); [Manufacturing Dive — StarPlus Energy, 2023-10-11](https://www.manufacturingdive.com/news/samsung-sdi-stellantis-build-starplus-energy-3-2b-kokomo-indiana-battery-gigafactory/696242/))。
 
 **估值快照 (Valuation snapshot)** — 截止 2026-06-02 KST: 股价 KRW 609,000;市值 KRW 50.78 万亿;52 周区间 KRW 165,900 – 723,000 (区间幅度 4.4 倍,反映 2025 年下半年由"EV 仅剩库存"到"AI BBU / ESS 重估"的两次方向切换);流通股 78.69 百万股 ([Stockanalysis — Samsung SDI 006400](https://stockanalysis.com/quote/krx/006400/))。**TTM P/E 不可用** — 公司 TTM 净亏损 KRW -457bn,EPS = -5,788.82 KRW,负 P/E 约 -110×;原因是 (a) EV 客户(主要为 Stellantis / GM / Rivian)在 2025 年大幅削减提货,导致动力电池板块在 FY2025 录得营业亏损 KRW -1.85 万亿,(b) 同期为应对美国 IRA / AMPC 信用 + Stellantis 合资 + GM 合资美国厂建设,折旧与员工成本前置 ([2025.4Q IR Final, p.4](https://www.samsungsdi.com/upload/download/ir/2025.4Q_IR_Final_En.pdf))。**TTM P/S ≈ 3.72×** (50.78万亿 / 13.67万亿) — 显著高于行业 2025 年电池厂均值(LGES P/S ≈ 1.4×, CATL P/S ≈ 4.0× — 后者因 LFP 全球第一驱动溢价),反映市场对 SDI"BBU 50% 全球份额 + 奔驰长约 + ASB 固态电池路线图"的未来现金流预期 ([Stockanalysis financial ratios](https://stockanalysis.com/quote/krx/006400/financials/ratios/))。
 
-**为何 P/S 高于亏损规模本应允许的水平 —** 卖方共识把 FY2026–2027 视作"业绩谷底"年:24 家覆盖分析师给出平均 12 个月目标价 KRW 645,872,中位数 Buy,**UBS 在 2026 年 AIC 上重申 Buy 评级,目标价 KRW 850,000**,基于"ESS revenue will likely rise ~50% YoY" 在 2026 年、22GWh LFP 美国 ESS 产线 2026Q4 / 2027Q1 投产、以及 "direct supply agreement with Big Tech" 的 BESS 整机解决方案落地 ([UBS — Samsung SDI 2026 AIC, zsxq #585412224511884 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511884#page=1));分析师视角 (*分析师观点*) — 该多倍 P/S 不是当前 P&L 估值,而是把 SDI 从"EV 电池企业"重定价为"数据中心电力基础设施 + 高端 EV + 半导体材料"复合资产的远期再融合,核心条件是 BBU 50% 全球份额能否维持、Big Tech 直供合同能否兑现、以及 2027 年 ASB 量产是否按节奏推进。
+**为何 P/S 高于亏损规模本应允许的水平 —** 卖方共识把 FY2026–2027 视作"业绩谷底"年:24 家覆盖分析师给出平均 12 个月目标价 KRW 645,872,中位数 Buy,**UBS 在 2026 年 AIC 上重申 Buy 评级,目标价 KRW 850,000**,基于"ESS revenue will likely rise ~50% YoY" 在 2026 年、22GWh LFP 美国 ESS 产线 2026Q4 / 2027Q1 投产、以及 "direct supply agreement with Big Tech" 的 BESS 整机解决方案落地 ([UBS — Samsung SDI 2026 AIC, zsxq #585412224511884 p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511884/UBS-Samsung%20SDI%EF%BC%88006400.KS%EF%BC%892026%20AIC%EF%BC%9A%20turning%20around%20on%20ESS%20and%20BBU%20growth-260527.pdf#page=1));分析师视角 (*分析师观点*) — 该多倍 P/S 不是当前 P&L 估值,而是把 SDI 从"EV 电池企业"重定价为"数据中心电力基础设施 + 高端 EV + 半导体材料"复合资产的远期再融合,核心条件是 BBU 50% 全球份额能否维持、Big Tech 直供合同能否兑现、以及 2027 年 ASB 量产是否按节奏推进。
 
 ```mermaid
 xychart-beta
@@ -153,7 +153,7 @@ graph TD
 
 **中文释义 / Plain-language gloss:** SBB (Samsung Battery Box) 是 SDI 储能业务的标准化产品系列。SBB 1.5 / 1.7 用 NCA 三元化学,单元容量约 5.26 MWh,主要用于功率密度要求高的应用(如频率调节、容量备份);SBB 2.0 改用 LFP (磷酸铁锂) 化学,瞄准长时储能(grid-scale 4–8 小时放电)与数据中心 BESS 的成本敏感场景。三星 SDI 在 2025 Q4 IR 中明确把自己定位为 **"非中国(non-Chinese)的唯一棱柱形态 ESS 解决方案商"** —— 这个定位在 2025–2026 年的美国市场拥有特殊意义:美国 IRA(Inflation Reduction Act)的 ITC / AMPC / 国内含量要求 (domestic content) 在 2026 年起逐步对中国电芯设限,SDI 由韩国和美国本地产能可同时享受关税豁免与 AMPC 补贴 ([Energy-Storage News — 30 GWh US BESS](https://www.energy-storage.news/samsung-sdi-ramps-ess-battery-manufacturing-in-us-to-30gwh-tesla-deal-talks-reported/))。
 
-*分析师观点:* UBS 在 2026 年 AIC 后给出的关键判断 — "ESS revenue will likely rise ~50% YoY" 在 FY2026,带 mid-to-high single digit OPM;"a 22GWh LFP line [that] will start production in 26Q4 and 27Q1";"SDI is actively developing AC components to offer full turn-key BESS solutions"。这意味 **SDI 正在从"电芯供应商"升级为"BESS 整机解决方案商"**,直接对位 Tesla Megapack / Fluence / Sungrow 等系统级竞品;UBS 认为此路径 "could help pave the way to direct supply agreement with Big Tech" ([UBS — Samsung SDI 2026 AIC, zsxq #585412224511884 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511884#page=1))。该转型与 LG Energy Solution(也在做 BESS 整机)的竞争是 2026–2028 年关键看点;若 SDI 能拿下首个 Big Tech 直供 BESS 合约,P/S 倍数应当再上一个量级。
+*分析师观点:* UBS 在 2026 年 AIC 后给出的关键判断 — "ESS revenue will likely rise ~50% YoY" 在 FY2026,带 mid-to-high single digit OPM;"a 22GWh LFP line [that] will start production in 26Q4 and 27Q1";"SDI is actively developing AC components to offer full turn-key BESS solutions"。这意味 **SDI 正在从"电芯供应商"升级为"BESS 整机解决方案商"**,直接对位 Tesla Megapack / Fluence / Sungrow 等系统级竞品;UBS 认为此路径 "could help pave the way to direct supply agreement with Big Tech" ([UBS — Samsung SDI 2026 AIC, zsxq #585412224511884 p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511884/UBS-Samsung%20SDI%EF%BC%88006400.KS%EF%BC%892026%20AIC%EF%BC%9A%20turning%20around%20on%20ESS%20and%20BBU%20growth-260527.pdf#page=1))。该转型与 LG Energy Solution(也在做 BESS 整机)的竞争是 2026–2028 年关键看点;若 SDI 能拿下首个 Big Tech 直供 BESS 合约,P/S 倍数应当再上一个量级。
 
 ### 4.3 BBU / 小型电池 (Battery Backup Unit + Small Battery)
 
@@ -161,7 +161,7 @@ graph TD
 
 > "**BBU Sales Increased** — Reached **50% global M/S based on battery cell** (SDI Marketing)... **High-power Tab-less Cylindrical Cell** — Supplying for global powertool companies." ([2025.4Q IR Final, p.5](https://www.samsungsdi.com/upload/download/ir/2025.4Q_IR_Final_En.pdf))
 
-**中文释义 / Plain-language gloss:** BBU (Battery Backup Unit, 电池后备电源单元) 是 AI 数据中心 server rack 内部署的小型锂电池模组,在电网瞬断 (power outage) 与柴油备用发电机 (diesel genset) 启动之间提供数十秒到数分钟的"过桥电力",防止 GPU 训练任务中断与数据丢失。Google、Meta、Amazon、Microsoft 等超大规模云厂商 (hyperscaler) 在 2024–2026 年正在 rack 级大规模部署 BBU,因为 (a) AI 训练负载对电力中断极度敏感(单次 GPU cluster down 损失可达数百万美元),(b) 集中式 UPS(uninterruptible power supply)在 rack 数量翻倍的 AI DC 中已不经济,(c) 分布式 BBU 可与液冷 / 800VDC 等新一代 rack 架构集成。SDI 的 BBU 电芯是**高功率无极耳圆柱 (high-power tab-less cylindrical)** 形态,该结构通过取消极耳焊点降低内阻,瞄准 BBU / 高端电动工具 / HEV 共用平台,使产能可以在多个终端市场之间灵活切换。UBS 数据: "**approximately 50% global BBU market share in 2025**... global BBU market grows 70% YoY to 4 GWh... forecasted to reach 10 GWh by 2030" ([UBS — Samsung SDI 2026 AIC, zsxq #585412224511884 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511884#page=1))。
+**中文释义 / Plain-language gloss:** BBU (Battery Backup Unit, 电池后备电源单元) 是 AI 数据中心 server rack 内部署的小型锂电池模组,在电网瞬断 (power outage) 与柴油备用发电机 (diesel genset) 启动之间提供数十秒到数分钟的"过桥电力",防止 GPU 训练任务中断与数据丢失。Google、Meta、Amazon、Microsoft 等超大规模云厂商 (hyperscaler) 在 2024–2026 年正在 rack 级大规模部署 BBU,因为 (a) AI 训练负载对电力中断极度敏感(单次 GPU cluster down 损失可达数百万美元),(b) 集中式 UPS(uninterruptible power supply)在 rack 数量翻倍的 AI DC 中已不经济,(c) 分布式 BBU 可与液冷 / 800VDC 等新一代 rack 架构集成。SDI 的 BBU 电芯是**高功率无极耳圆柱 (high-power tab-less cylindrical)** 形态,该结构通过取消极耳焊点降低内阻,瞄准 BBU / 高端电动工具 / HEV 共用平台,使产能可以在多个终端市场之间灵活切换。UBS 数据: "**approximately 50% global BBU market share in 2025**... global BBU market grows 70% YoY to 4 GWh... forecasted to reach 10 GWh by 2030" ([UBS — Samsung SDI 2026 AIC, zsxq #585412224511884 p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511884/UBS-Samsung%20SDI%EF%BC%88006400.KS%EF%BC%892026%20AIC%EF%BC%9A%20turning%20around%20on%20ESS%20and%20BBU%20growth-260527.pdf#page=1))。
 
 *分析师观点:* BBU 50% 全球市占的来源,根据公司在 IR 中的口径是 "SDI Marketing" 自有口径估算,**非第三方独立数据,严格意义上应视为分析师视角下的口径** — 但与 UBS / Mirae Asset 等卖方研究的反推数据基本一致 ([Mirae Asset — Samsung SDI](https://securities.miraeasset.com/bbs/download/2137954.pdf?attachmentId=2139471))。竞争对手主要是日本 Panasonic、中国 EVE Energy / Sunwoda(蜂巢能源)、韩国 LG Energy Solution。SDI 的领先源自三个因素: (a) 高功率圆柱形态在 AI rack BBU 物理空间约束下最适配,(b) 韩国本土 + 美国近岸产能契合 hyperscaler 的"非中国供应链"政策要求,(c) 与 Google / Meta 工程团队的早期共建关系。Amazon 在 2026 年与 SDI 的"最终阶段"BBU UPS 谈判 ([UPI — Samsung SDI Amazon, 2026-04-28](https://www.upi.com/Top_News/World-News/2026/04/28/samsung-sdi-batterty-supply-agreement-amazon/1051777407238/)) 若签订,将是 BBU 业务从"渠道分销 + OEM 一体化集成"升级为"直供超大客户"的关键转折。
 
@@ -250,7 +250,7 @@ ESS 是 AI 数据中心电力建设的核心受益市场。**全球 BESS 在 202
 
 ### 6.3 BBU / 数据中心电力市场
 
-BBU 是 2024–2026 年增长最陡的细分市场。**UBS 数据: 全球 BBU 市场 2025 年 ~4 GWh,YoY +70%,预计 2030 年达 ~10 GWh** ([UBS — Samsung SDI 2026 AIC, zsxq #585412224511884 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511884#page=1))。Mirae Asset 与其他卖方对 CAGR 的估计在 ~14% 左右(2025–2030)。**驱动**: (a) AI 训练任务对电力中断零容忍,集中式 UPS 在 GPU rack 数量翻倍后已不经济; (b) 800 VDC rack 架构需要分布式 BBU 配套(NVIDIA 800VDC roadmap 2026–2027 出货); (c) hyperscaler 自建数据中心(Stargate 等项目)对 BBU 需求集中爆发。**SDI 在 BBU 50% 份额是公司自身估算 — 行业第三方数据(Yole / TrendForce)未独立验证,因此严格而言是分析师视角下的口径**。市场结构由 SDI、Panasonic、LG Energy Solution、中国 EVE Energy / 蜂巢能源 / 亿纬锂能等共同覆盖;美国本土与韩国制造的 BBU 在 hyperscaler"非中国电芯"采购指南下享受溢价。
+BBU 是 2024–2026 年增长最陡的细分市场。**UBS 数据: 全球 BBU 市场 2025 年 ~4 GWh,YoY +70%,预计 2030 年达 ~10 GWh** ([UBS — Samsung SDI 2026 AIC, zsxq #585412224511884 p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511884/UBS-Samsung%20SDI%EF%BC%88006400.KS%EF%BC%892026%20AIC%EF%BC%9A%20turning%20around%20on%20ESS%20and%20BBU%20growth-260527.pdf#page=1))。Mirae Asset 与其他卖方对 CAGR 的估计在 ~14% 左右(2025–2030)。**驱动**: (a) AI 训练任务对电力中断零容忍,集中式 UPS 在 GPU rack 数量翻倍后已不经济; (b) 800 VDC rack 架构需要分布式 BBU 配套(NVIDIA 800VDC roadmap 2026–2027 出货); (c) hyperscaler 自建数据中心(Stargate 等项目)对 BBU 需求集中爆发。**SDI 在 BBU 50% 份额是公司自身估算 — 行业第三方数据(Yole / TrendForce)未独立验证,因此严格而言是分析师视角下的口径**。市场结构由 SDI、Panasonic、LG Energy Solution、中国 EVE Energy / 蜂巢能源 / 亿纬锂能等共同覆盖;美国本土与韩国制造的 BBU 在 hyperscaler"非中国电芯"采购指南下享受溢价。
 
 ### 6.4 半导体材料市场
 
@@ -301,7 +301,7 @@ quadrantChart
 
 **SDI 的竞争弱点 (Competitive vulnerabilities) — 分析师视角:** (a) **EV 板块亏损规模仍大** — FY25 板块亏损 KRW -1.85 万亿,Stellantis 退出与 GM 暂停是切实的负面冲击; (b) **BBU 50% 份额来自公司自报口径,缺乏独立验证** — 一旦 LG / Panasonic / EVE 在 BBU 上加速,SDI 份额或快速下滑; (c) **LFP 起步晚** — 中国厂商在 LFP 上 5–7 年的技术积累与成本优势,SDI 的 LFP 美国 22 GWh 产线 2026Q4 才量产; (d) **集团内供应导致材料业务的"成长上限"由集团节奏决定** — 在 Samsung Electronics 半导体投资周期下行时,SDI 电子材料板块也会承压; (e) **CEO 频繁更替** — 自 2014 年合并 Cheil 以来已 5 任 CEO,平均任期 2–3 年,长期资本配置易受波动。
 
-**市场份额估算 (Market share estimates) — 分析师视角,非 SDI 直接披露:** (a) 全球 EV 电池(2024 年)CATL 37%、BYD 17%、LG ES 11%、Panasonic 6%、SK On 5%、**Samsung SDI ~4%** ([analyst estimate; not disclosed in 10-K]); (b) 全球 BBU 2025 年 SDI ~50%([SDI Marketing自报口径,UBS引用](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511884#page=1)); (c) 全球 BESS 2024 年 CATL ~36%、BYD ~16%、LG ES ~11%、**Samsung SDI ~6%** (analyst estimate); (d) 全球 OLED 绿色磷光主体材料:SDI 在 Samsung Display 供应链中接近独家。
+**市场份额估算 (Market share estimates) — 分析师视角,非 SDI 直接披露:** (a) 全球 EV 电池(2024 年)CATL 37%、BYD 17%、LG ES 11%、Panasonic 6%、SK On 5%、**Samsung SDI ~4%** ([analyst estimate; not disclosed in 10-K]); (b) 全球 BBU 2025 年 SDI ~50%([SDI Marketing自报口径,UBS引用](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511884/UBS-Samsung%20SDI%EF%BC%88006400.KS%EF%BC%892026%20AIC%EF%BC%9A%20turning%20around%20on%20ESS%20and%20BBU%20growth-260527.pdf#page=1)); (c) 全球 BESS 2024 年 CATL ~36%、BYD ~16%、LG ES ~11%、**Samsung SDI ~6%** (analyst estimate); (d) 全球 OLED 绿色磷光主体材料:SDI 在 Samsung Display 供应链中接近独家。
 
 ---
 
@@ -316,7 +316,7 @@ quadrantChart
 | 小型电池 (excl. EV, ESS) | n/a | n/a | n/a |
 | BBU 子市场(UBS 引用) | 4 GWh | 10 GWh (2030E) | ~14% |
 
-来源: [2025.4Q IR Final, p.6](https://www.samsungsdi.com/upload/download/ir/2025.4Q_IR_Final_En.pdf); [UBS — Samsung SDI 2026 AIC, zsxq #585412224511884 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511884#page=1)。
+来源: [2025.4Q IR Final, p.6](https://www.samsungsdi.com/upload/download/ir/2025.4Q_IR_Final_En.pdf); [UBS — Samsung SDI 2026 AIC, zsxq #585412224511884 p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511884/UBS-Samsung%20SDI%EF%BC%88006400.KS%EF%BC%892026%20AIC%EF%BC%9A%20turning%20around%20on%20ESS%20and%20BBU%20growth-260527.pdf#page=1)。
 
 **SAM (Serviceable Addressable Market) — SDI 实际可触达市场:** SDI 在 EV 上的 SAM 约为 $1,600 bn TAM 中的"高端三元 + 棱柱形态 + 非中国客户"切片,约 $200–300 bn 量级(分析师视角);在 ESS 上 SAM 约 $40–50 bn(美国 + 欧洲 + 中东大型 BESS 项目);在 BBU 上 SAM 接近 TAM(4–10 GWh)的全部,因 SDI 是行业领先者;在半导体 EMC 上 SAM 约 $1–1.5 bn(Samsung Electronics 半导体业务 + 海外存储厂)。
 
@@ -491,7 +491,7 @@ quadrantChart
 - [Investing.com Samsung SDI 006400 Live](https://www.investing.com/equities/samsung-sdi)
 
 ### 卖方研究 / zsxq 报告引用
-- [UBS — Samsung SDI 2026 AIC, zsxq #585412224511884, p.1, 2026-05-27](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511884#page=1)
+- [UBS — Samsung SDI 2026 AIC, zsxq #585412224511884, p.1, 2026-05-27](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511884/UBS-Samsung%20SDI%EF%BC%88006400.KS%EF%BC%892026%20AIC%EF%BC%9A%20turning%20around%20on%20ESS%20and%20BBU%20growth-260527.pdf#page=1)
 - [Mirae Asset — Samsung SDI Report, securities.miraeasset.com](https://securities.miraeasset.com/bbs/download/2137954.pdf?attachmentId=2139471)
 
 ### 行业新闻与第三方
@@ -552,7 +552,7 @@ quadrantChart
 - FY2025 营业亏损 KRW -1.72 万亿 ✓ (p.3)
 - 电池 FY25 营收 KRW 12.38 万亿, EM KRW 883bn ✓ (p.4)
 - Q1 2026 营收 KRW 3.58 万亿, 营业亏损 KRW -156bn ✓ ([2026.1Q IR Final, p.3](https://www.samsungsdi.com/upload/download/ir/2026.1Q_IR_Final_En.pdf))
-- BBU 50% 全球份额 ✓ ([UBS 2026 AIC, zsxq #585412224511884 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/585412224511884#page=1)) — 公司自报口径,UBS 直接引用,缺乏独立第三方验证。
+- BBU 50% 全球份额 ✓ ([UBS 2026 AIC, zsxq #585412224511884 p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585412224511884/UBS-Samsung%20SDI%EF%BC%88006400.KS%EF%BC%892026%20AIC%EF%BC%9A%20turning%20around%20on%20ESS%20and%20BBU%20growth-260527.pdf#page=1)) — 公司自报口径,UBS 直接引用,缺乏独立第三方验证。
 - 奔驰 USD 6.8bn 长约 ✓ ([Korea Herald, 2026-04](https://www.koreaherald.com/article/10721245))
 - Choi Joo-sun 2024-11-28 任命 ✓ ([Korea Times, 2024-11-28](https://www.koreatimes.co.kr/www/tech/2024/11/129_387236.html))
 

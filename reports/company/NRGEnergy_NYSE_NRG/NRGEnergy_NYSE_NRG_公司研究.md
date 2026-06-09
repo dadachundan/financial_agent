@@ -317,7 +317,7 @@ NRG 管理层在 Q4 2025 电话会与 PR 中明确使用 **"power demand supercy
 **核心数据点（业界共识，引用主题文档已审核的来源链）:**
 
 - 美国数据中心 2024 年电力消耗占全美总用电约 4.4%，预计 2028 年达 6.7-12.0%（按 LBNL 报告区间），是 2020-2025 期间 ~150-200 bps 的增长，但 2025-2028 期间预计 ~250-700 bps 的加速增长。
-- ERCOT 区域 2030 年负荷预测从 2023 年的 82 GW 提升至 2025 年的 152 GW，主因 (a) Permian Basin 油气电气化、(b) 数据中心、(c) 大型工业新负荷，且 ERCOT 同期 reserve margin 从 18% 升至 34%（即"高峰备用裕度大幅过剩"）—— 这是 HSBC / 高盛对"merchant power 价格升势是否真实"的核心质疑（[zsxq #812451114428542 主题文档引用](http://xs-macbook-air.local:5001/zsxq-pdf/812451114428542#page=1)，源自 HSBC 2025 研报，间接引用于 ai-power-electrification 主题文档）。
+- ERCOT 区域 2030 年负荷预测从 2023 年的 82 GW 提升至 2025 年的 152 GW，主因 (a) Permian Basin 油气电气化、(b) 数据中心、(c) 大型工业新负荷，且 ERCOT 同期 reserve margin 从 18% 升至 34%（即"高峰备用裕度大幅过剩"）—— 这是 HSBC / 高盛对"merchant power 价格升势是否真实"的核心质疑（[zsxq #812451114428542 主题文档引用](http://xs-macbook-air.local:5001/zsxq/pdf/812451114428542/HSBC-China%20Power%20Utilities%EF%BC%9AToo%20early%20to%20call%20a%20power%20price%20upcycle-260526.pdf#page=1)，源自 HSBC 2025 研报，间接引用于 ai-power-electrification 主题文档）。
 - **得州 SB 6 (2025-06-20 签署)** 是 NRG 业务环境的重大监管事件 — 规定 ≥75 MW 单点负荷在请求 interconnection 之前须做财务承诺、并立法要求 PUCT 制订 stranded-cost 分摊与共址电厂规则；**2025-09-01 之前已有的 stand-alone generator co-locate 大负荷被豁免**，2025-09-01 之后并网的新机组不享豁免（[2025 10-K, Senate Bill 6 段](https://www.sec.gov/Archives/edgar/data/1013871/000101387126000004/nrg-20251231.htm)）。**这条规则对 NRG 至关重要** — NRG 既有大量 2025-09 之前并网的德州机组（受豁免），又在通过 BYOP / 共址模式签数据中心客户；SB 6 的最终细则将决定 NRG 数据中心 PPA 项目的经济性。
 
 ### 6.3 PJM Capacity Market 改革

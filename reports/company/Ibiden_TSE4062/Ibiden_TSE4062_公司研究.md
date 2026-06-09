@@ -229,7 +229,7 @@ graph TD
 - NVIDIA B200 载板：每芯片功耗高达 1,000W、需支撑 8 stack HBM 内存；
 - 未来 CY2030+ 路径：130×130mm 尺寸、14-X-14 SAP 工艺，引入玻璃芯（Glass Core）以控制翘曲、铜柱互联（Cu pillar）、硅桥（Silicon Bridge）连接、光电转换（Optical-Electrical Conversion） ([Ibiden FY2025 财报说明会, 第 15 页 — Technological Advancement](https://www.ibiden.com/ir/items/en_kessannsetsumeiFY2025.pdf))。
 
-**ABF 用量倍数。** 高性能 AI 载板使用的 ABF 介质膜数量是 PC 载板的 **10× 以上**，这是味之素 (Ajinomoto, TSE:2802) ABF 业务 FY2026 涨价的关键驱动力 ([Nikhs Ibiden bottleneck](https://nikhs.substack.com/p/ibiden-the-hidden-bottleneck-beneath); [Bernstein — Ajinomoto, zsxq #585428585544584 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/585428585544584#page=1))。
+**ABF 用量倍数。** 高性能 AI 载板使用的 ABF 介质膜数量是 PC 载板的 **10× 以上**，这是味之素 (Ajinomoto, TSE:2802) ABF 业务 FY2026 涨价的关键驱动力 ([Nikhs Ibiden bottleneck](https://nikhs.substack.com/p/ibiden-the-hidden-bottleneck-beneath); [Bernstein — Ajinomoto, zsxq #585428585544584 p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585428585544584/%E4%BC%AF%E6%81%A9%E6%96%AF%E5%9D%A6%E2%80%94%E5%91%B3%E4%B9%8B%E7%B4%A0%E2%80%94%E5%91%B3%E4%B9%8B%E7%B4%A0%E7%9A%84%E6%96%B0%E5%AE%9A%E4%BB%B7%E8%8C%83%E5%BC%8F%EF%BC%9A%E4%B8%8A%E8%B0%83%E8%87%B3%E8%B7%91%E8%B5%A2%E5%A4%A7%E7%9B%98.pdf#page=1))。
 
 **战略意义。** 这是 Ibiden 当前最强 moat (护城河)：从公开来源汇总，目前 NVIDIA H100 / H200 / B200 等核心 AI GPU 的载板供应主要由 Ibiden 承担，公司是 NVIDIA AI GPU 载板的核心供应商之一（[Allelco — Ibiden 加速产能扩张, 2025](https://www.allelcoelec.com/news/nvidia-ai-chip-substrate-supplier-ibiden-accelerates-production-expansion-to-cope-with-surging-deman.html))。
 
@@ -249,7 +249,7 @@ ASIC 载板是 FY2025 Q4 业绩的新增亮点。管理层在 2025 年 10 月 Q&
 
 > *"For PC and general-purpose server, we are conservatively factoring in the risk of price declines due to the competitive environment. For AI server, where suppliers are limited, there may be positive factors."* — [Ibiden Interim FY2025 Q&A, p. 4](https://www.ibiden.com/ir/items/en_QY20251st.pdf)
 
-**战略意义：** 该业务是稳定基本盘，提供产能利用率和客户结构多元化；同时随着 Intel CPU 复兴（Bernstein 2026 年 5 月 *"Renaissance of CPU drives ABF shortage"* 论），FY2026-FY2027 可能贡献额外的上行 ([Bernstein — ABF, zsxq #184152242111442 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/184152242111442#page=1))。
+**战略意义：** 该业务是稳定基本盘，提供产能利用率和客户结构多元化；同时随着 Intel CPU 复兴（Bernstein 2026 年 5 月 *"Renaissance of CPU drives ABF shortage"* 论），FY2026-FY2027 可能贡献额外的上行 ([Bernstein — ABF, zsxq #184152242111442 p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184152242111442/Bernstein-ABF%20Substrate%EF%BC%9A%20Renaissance%20of%20CPU%20drives%20ABF%20shortage%EF%BC%9B%20Lifting%20Ibiden%20PT%20to%20%EF%BF%A523%EF%BC%8C900-260529.pdf#page=1))。
 
 #### 4.2.4 Switching IC 载板（小但高速增长）
 
@@ -332,7 +332,7 @@ graph LR
 2. **Intel — 历史上最大客户，至今仍重要。** Kawashima 在 Bloomberg 专访中明确：
    > *"Intel will forever be an important customer."* ([Taipei Times 引 Bloomberg, 2024-12-31](https://www.taipeitimes.com/News/biz/archives/2024/12/31/2003829378))
 
-   Nikhs 长文指出，Intel 在 1990s-2010s 高峰期一度占 Ibiden 载板营收 70-80% ([Nikhs Ibiden bottleneck](https://nikhs.substack.com/p/ibiden-the-hidden-bottleneck-beneath))。FY2026 Bernstein 看好"CPU Renaissance"主题对 Intel / AMD 载板需求的拉升 ([Bernstein — ABF, zsxq #184152242111442 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/184152242111442#page=1))。
+   Nikhs 长文指出，Intel 在 1990s-2010s 高峰期一度占 Ibiden 载板营收 70-80% ([Nikhs Ibiden bottleneck](https://nikhs.substack.com/p/ibiden-the-hidden-bottleneck-beneath))。FY2026 Bernstein 看好"CPU Renaissance"主题对 Intel / AMD 载板需求的拉升 ([Bernstein — ABF, zsxq #184152242111442 p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184152242111442/Bernstein-ABF%20Substrate%EF%BC%9A%20Renaissance%20of%20CPU%20drives%20ABF%20shortage%EF%BC%9B%20Lifting%20Ibiden%20PT%20to%20%EF%BF%A523%EF%BC%8C900-260529.pdf#page=1))。
 
 3. **AMD — Server CPU (EPYC) 与 GPU (Instinct MI300)。** 行业链梳理列入，但 Ibiden / AMD 均未正式披露。
 
@@ -440,7 +440,7 @@ Ibiden 公司层面的产能与销售网络遍布 15 个国家 30 个基地 ([In
 
 1. **AI 训练算力规模。** NVIDIA GB200 / Rubin / 未来路线对 AI server 载板需求按 5 年 5× 设计 ([Ibiden FY2025 财报说明会, 第 13 页 — SAP Demands forecast](https://www.ibiden.com/ir/items/en_kessannsetsumeiFY2025.pdf))。
 2. **ASIC inference 多元化。** Google TPU v5/v6、AWS Trainium2/3、Meta MTIA v1/v2、Microsoft Maia、Tesla Dojo 等定制 ASIC 项目均需 Ibiden 级载板 ([Ibiden Interim FY2025 Q&A, p. 3](https://www.ibiden.com/ir/items/en_QY20251st.pdf))。
-3. **CPU 复兴。** Bernstein 2026-05 报告 *"Renaissance of CPU drives ABF shortage; Lifting Ibiden PT to ¥23,900"* — AI agent / inference workloads 拉动通用 CPU 需求回升 ([Bernstein — ABF, zsxq #184152242111442 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/184152242111442#page=1))。
+3. **CPU 复兴。** Bernstein 2026-05 报告 *"Renaissance of CPU drives ABF shortage; Lifting Ibiden PT to ¥23,900"* — AI agent / inference workloads 拉动通用 CPU 需求回升 ([Bernstein — ABF, zsxq #184152242111442 p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184152242111442/Bernstein-ABF%20Substrate%EF%BC%9A%20Renaissance%20of%20CPU%20drives%20ABF%20shortage%EF%BC%9B%20Lifting%20Ibiden%20PT%20to%20%EF%BF%A523%EF%BC%8C900-260529.pdf#page=1))。
 4. **数据中心交换芯片。** 800G → 1.6T 升级路径推动 Switching IC 载板规格升级 ([Ibiden FY2025 财报说明会, 第 12 页](https://www.ibiden.com/ir/items/en_kessannsetsumeiFY2025.pdf))。
 5. **玻璃芯路径。** 2028 起进入商业化，技术周期重启 ([Electronics Weekly 引 Yole, 2025-07](https://www.electronicsweekly.com/news/business/substrate-market-to-be-worth-31bn-by-2030-2025-07/))。
 
@@ -513,7 +513,7 @@ quadrantChart
 ### 7.4 竞争脆弱性
 
 1. **NVIDIA 集中度过高（估）。** 若 NVIDIA 实际占 Ibiden 营收 25-35%，则任何 NVIDIA 库存调整 / 路线图延迟都会冲击 Ibiden ASP。
-2. **Unimicron 加速追赶。** 2026 年 5 月 BofA 上调 Unimicron / Nan Ya PCB / Kinsus 目标价，行业整体短缺背景下台湾三强是替代选择 ([BofA — Taiwan ABF Substrate, zsxq #212451458225151 p.1](http://xs-macbook-air.local:5001/zsxq-pdf/212451458225151#page=1))。
+2. **Unimicron 加速追赶。** 2026 年 5 月 BofA 上调 Unimicron / Nan Ya PCB / Kinsus 目标价，行业整体短缺背景下台湾三强是替代选择 ([BofA — Taiwan ABF Substrate, zsxq #212451458225151 p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212451458225151/BofA%20Securities-Technology%20Hardware%20~%20Taiwan%20ABF%20substrate%EF%BC%9A%20stay%20constructive%20on%20favorable%20supply%20demand%20ahead-260525.pdf#page=1))。
 3. **JIC + DNP + Mitsui 重组后的 Shinko 中期回归。** 2027-2029 时间窗。
 4. **玻璃芯技术路线的新进入者风险。** 康宁 (Corning) 等玻璃供应商在 2028+ 商业化窗口可能改变格局。
 
@@ -660,9 +660,9 @@ xychart-beta
 - [I-Connect007 — Ibiden Names New President (2024-02)](https://iconnect007.com/article/139764/ibiden-names-new-president-and-ceo/139761/flex) — Kawashima 履历背景。
 - [Nikhs — Ibiden: The Hidden Bottleneck Beneath AI (深度长文)](https://nikhs.substack.com/p/ibiden-the-hidden-bottleneck-beneath) — 行业链 + 三情景估值。
 - [Nikhs — Ibiden 4QFY25 Earnings: When Difficulty Starts to Pay (2026-05)](https://nikhs.substack.com/p/ibiden-4qfy25-earnings-when-difficulty) — FY2025 数据解读 + FY2026 桥梁。
-- [Bernstein — ABF Substrate: Renaissance of CPU Drives ABF Shortage; Lifting Ibiden PT to ¥23,900 (zsxq #184152242111442)](http://xs-macbook-air.local:5001/zsxq-pdf/184152242111442#page=1) — 卖方观点。
-- [BofA — Taiwan ABF Substrate (zsxq #212451458225151)](http://xs-macbook-air.local:5001/zsxq-pdf/212451458225151#page=1) — 台厂 ABF Buy。
-- [Bernstein — Ajinomoto Outperform (zsxq #585428585544584)](http://xs-macbook-air.local:5001/zsxq-pdf/585428585544584#page=1) — ABF 上游树脂涨价。
+- [Bernstein — ABF Substrate: Renaissance of CPU Drives ABF Shortage; Lifting Ibiden PT to ¥23,900 (zsxq #184152242111442)](http://xs-macbook-air.local:5001/zsxq/pdf/184152242111442/Bernstein-ABF%20Substrate%EF%BC%9A%20Renaissance%20of%20CPU%20drives%20ABF%20shortage%EF%BC%9B%20Lifting%20Ibiden%20PT%20to%20%EF%BF%A523%EF%BC%8C900-260529.pdf#page=1) — 卖方观点。
+- [BofA — Taiwan ABF Substrate (zsxq #212451458225151)](http://xs-macbook-air.local:5001/zsxq/pdf/212451458225151/BofA%20Securities-Technology%20Hardware%20~%20Taiwan%20ABF%20substrate%EF%BC%9A%20stay%20constructive%20on%20favorable%20supply%20demand%20ahead-260525.pdf#page=1) — 台厂 ABF Buy。
+- [Bernstein — Ajinomoto Outperform (zsxq #585428585544584)](http://xs-macbook-air.local:5001/zsxq/pdf/585428585544584/%E4%BC%AF%E6%81%A9%E6%96%AF%E5%9D%A6%E2%80%94%E5%91%B3%E4%B9%8B%E7%B4%A0%E2%80%94%E5%91%B3%E4%B9%8B%E7%B4%A0%E7%9A%84%E6%96%B0%E5%AE%9A%E4%BB%B7%E8%8C%83%E5%BC%8F%EF%BC%9A%E4%B8%8A%E8%B0%83%E8%87%B3%E8%B7%91%E8%B5%A2%E5%A4%A7%E7%9B%98.pdf#page=1) — ABF 上游树脂涨价。
 
 ### 11.3 行业 / 第三方
 
