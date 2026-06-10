@@ -52,3 +52,7 @@ End with **two explicit bulleted lists**, distinct from the body argument:
 ## Triggers (dated, falsifiable)
 
 Close with dated catalysts mapped to the case each confirms, split high-priority (real worry) vs low-priority (not yet) — the HSBC "What would make us bearish?" / Citi "Bear Market Checklist" template. Each trigger maps to an upgrade or downgrade condition.
+
+## Further viewing (separate from citations)
+
+- **Further viewing** — 1–3 validated explainer videos for hard-to-visualize concepts the debate hinges on, in their own slot, never a citation and never carrying a number (see SKILL.md `## Further viewing`).

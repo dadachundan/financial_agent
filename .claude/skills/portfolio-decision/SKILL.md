@@ -77,6 +77,17 @@ If `past_context` is non-empty, incorporate its lessons; otherwise rely solely o
 **Time Horizon**: <e.g. "12-month price target; 3-6 month holding horizon", with a target date — never open-ended>
 ```
 
+## Further viewing — explainer videos (optional, but default to including)
+
+If the final thesis hinges on a product or mechanism the reader may not be able to picture — a humanoid robot's actuators / harmonic reducers / force sensors, a chip-packaging or lithography step, an unfamiliar revenue model, a derivatives or market-structure construct the call depends on — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* the thing the rating turns on, not just read about it. Default to including them whenever the decision rests on such a concept; omit only when the call is purely numeric with nothing worth visualizing.
+
+**Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
+
+- **Where:** a `**Further viewing**` bullet list at the end of the section the concept lives in (typically beside the Investment Thesis paragraph that introduces it), or a single `📺` note beside the hard concept.
+- **Durable sources only:** the company's own product / IR / engineering channel, an OEM or reputable teardown / cutaway channel, or a well-known explainer channel — not a low-view re-upload that will be deleted or is clearly pirated.
+- **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
+- **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
+
 ## Learning from sell-side institutional research
 
 A study of how GS, Morgan Stanley, UBS, J.P. Morgan, Citi, Bernstein, and Nomura construct portfolio-decision notes. Apply these to sharpen the output above — they reinforce, never relax, the project's numerical-accuracy and citation rules.

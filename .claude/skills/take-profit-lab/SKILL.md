@@ -175,6 +175,17 @@ Save to `reports/take-profit/<TICKER>_<YYYY-MM-DD>.md` under the project root. T
 - Stop any test servers used during chart rendering.
 - Commit and push per the project's standard workflow.
 
+## Further viewing — explainer videos (optional, but default to including)
+
+When this report covers something a reader would struggle to picture from prose alone — how a trailing stop actually trails the peak, how a volatility-targeted (ATR-sized) exit widens and tightens with regime, how tiered scaling-out books partial profit while keeping a runner, or any other exit-discipline mechanic the reader may not know cold — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them on any topic; omit only when the report is purely numeric with nothing worth visualizing.
+
+**Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
+
+- **Where:** a `**Further viewing**` bullet list at the end of the section the concept lives in, or a single `📺` note beside the hard concept.
+- **Durable sources only:** the company's own product / IR / engineering channel, an OEM or reputable teardown / cutaway channel, or a well-known explainer channel — not a low-view re-upload that will be deleted or is clearly pirated.
+- **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
+- **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
+
 ## Output Format (mandatory blocks)
 
 Every report must contain:

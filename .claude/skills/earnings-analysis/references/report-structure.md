@@ -6,6 +6,8 @@ This document provides complete page-by-page templates and formatting requiremen
 
 **REPORT STRUCTURE:**
 
+> - **Further viewing / 延伸观看** — 1–3 validated explainer videos for hard-to-visualize concepts (the product / process / end-market driving the beat/miss), in their own slot, never a citation (see SKILL.md § "Further viewing — explainer videos").
+
 ---
 
 ## PAGE 1: EARNINGS SUMMARY

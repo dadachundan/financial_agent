@@ -217,6 +217,7 @@ revenue comes from enterprise hospital systems, suggesting strong product-market
 - Features and differentiation
 - Target customers
 - Pricing models
+- **Further viewing** — 1–3 validated explainer videos for hard-to-visualize concepts (the company's core product or production process), in their own slot, never a citation (see SKILL.md § Further viewing).
 
 **Customers & Go-to-Market (500-700 words)**
 - Customer segments

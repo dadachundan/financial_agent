@@ -104,3 +104,9 @@ WSTS / SIA (semis sales) · SEMI (WFE forecasts) · TrendForce / TSR (storage pr
 Channel checks & conference takeaways (COMPUTEX, GTC, SNEC, AIC, EU Auto Conf) are dated, attributed citations — date + venue + who — never unsourced "analyst view".
 
 Source series: *Bernstein WSTS Tracker*; *J.P. Morgan "Component Data" / TSR trackers*; *GS "SIA April data"*.
+
+---
+
+## 9. Further viewing / 延伸观看 (teaching aid, not a citation)
+
+- **延伸观看 / Further viewing** — 1–3 validated explainer videos for hard-to-visualize concepts (the sector's core technology or process), in their own slot, never a citation (see SKILL.md).

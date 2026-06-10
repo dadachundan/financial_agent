@@ -112,6 +112,17 @@ The orchestrator passes this transcript to the [[research-manager]] skill next.
 
 See [debate methodology](../../../references/debate_methodology.md) for additional guidance on tone and engagement.
 
+## Further viewing — explainer videos (optional, but default to including)
+
+When the debate hinges on something a reader would struggle to picture from prose alone — and an upstream analyst report did not already visualize it — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* the thing both sides are arguing over: a mechanical assembly (a humanoid robot's actuators / harmonic reducers / ball-screws / force sensors), the manufacturing or scientific process that drives the swing variable, a complex product architecture, an unfamiliar business model, or a market-structure concept. Default to including them whenever a hard concept is introduced in the debate or scorecard; omit only when the transcript is purely numeric with nothing worth visualizing.
+
+**Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
+
+- **Where:** a `**Further viewing**` bullet list at the end of the debate / scorecard, or a single `📺` note beside the hard concept.
+- **Durable sources only:** the company's own product / IR / engineering channel, an OEM or reputable teardown / cutaway channel, or a well-known explainer channel — not a low-view re-upload that will be deleted or is clearly pirated.
+- **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
+- **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
+
 ## Persist output
 
 Write the transcript to `<company-folder>/trading/<TRADE-DATE>/bull-bear-debate.md` — resolve `<company-folder>` per [`output_path.md`](../../../references/output_path.md). Consumed by [[trading-analysis]] when assembling `full_report.md`.

@@ -284,6 +284,17 @@ Save to `reports/market-status/market_status_<YYYY-MM-DD>.md`. Target 3,000–5,
    - **Paired 利好 / 利空 (catalysts vs downside-risks) bullet block** — mirror every GS regional Kickstart's closing pair: a compact, scannable two-column set of bullets, each **dated and carrying a deep-URL source** (satisfies paragraph-level citation). Replaces diffuse prose with the desk format.
 9. **`## Data Used / 数据来源清单`** — manifest of every source URL + the WebSearch citations.
 
+### Further viewing — explainer videos (optional, but default to including)
+
+When this report covers something a reader would struggle to picture from prose alone — what an exuberance indicator actually measures (how the GS Speculative Trading Indicator is constructed, what the CBOE equity put/call ratio captures, how net-of-buyback equity issuance is derived, how a momentum factor is built), a market-structure concept, an unfamiliar positioning measure, or any mechanism behind a number in the dashboard — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them on any topic; omit only when the report is purely numeric with nothing worth visualizing.
+
+**Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
+
+- **Where:** a `**Further viewing**` bullet list at the end of the section the concept lives in, or a single `📺` note beside the hard concept.
+- **Durable sources only:** the company's own product / IR / engineering channel, an OEM or reputable teardown / cutaway channel, or a well-known explainer channel — not a low-view re-upload that will be deleted or is clearly pirated.
+- **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
+- **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
+
 ### Step 5 — Verify and clean up
 
 - Spot-check ≥ 3 numbers in the report against the indicators CSV.

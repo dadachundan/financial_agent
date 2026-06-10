@@ -345,6 +345,17 @@ Mandatory blocks, in this order:
 
    **Mandatory chart styling — bear-market shading** (Citi BMC Figure 3+ style). Every time-series chart must have light-grey vertical bars (`axvspan(alpha=0.20, color="#888888")`) over the major US bear-market windows so the reader has visual context for "what was happening in those periods." The build script defines `BEAR_PERIODS` and `_shade_bears(ax)` helper that applies five reference windows: 1990-07/10 (Iraq/recession), 2000-03/2002-10 (dot-com), 2007-10/2009-03 (GFC), 2020-02/2020-03 (COVID), 2022-01/2022-10 (Fed pivot). Charts that are NOT time-series (per-indicator bars, precedents scatter, etc.) skip the shading.
 
+### Further viewing — explainer videos (optional, but default to including)
+
+When this report covers something a reader would struggle to picture from prose alone — how a market-structure indicator is actually constructed and what it implies (how the MOVE index is built from a yield-curve-weighted basket of Treasury-option implied vols, what CCC OAS measures and why the weakest credit tier widens first, how the CBOE SKEW index prices the cost of OTM-put crash protection, why a VIX term-structure in contango signals no near-term hedging demand) — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them on any topic; omit only when the report is purely numeric with nothing worth visualizing.
+
+**Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
+
+- **Where:** a `**Further viewing**` bullet list at the end of the section the concept lives in, or a single `📺` note beside the hard concept.
+- **Durable sources only:** the company's own product / IR / engineering channel, an OEM or reputable teardown / cutaway channel, or a well-known explainer channel — not a low-view re-upload that will be deleted or is clearly pirated.
+- **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
+- **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
+
 4. **`## Data Used / 数据来源清单`** — single source table grouping every indicator by category with its source URL. NO per-indicator paragraphs.
 
 The user has explicitly rejected (v9 user feedback) the following blocks as not useful:

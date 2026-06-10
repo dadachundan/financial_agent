@@ -112,6 +112,17 @@ Frame 2–4 named debates as **"the market believes X; the evidence shows Y"** (
 - **Scenario / timeline framing for the cycle** — dated milestones, not vague "long-term": "transition 2–3 years then inflection"; "risk-off until shaft-sinking de-risks ~mid-2027".
 - Catalysts that could change the sector narrative
 
+### 延伸观看 / Further viewing — explainer videos (optional, but default to including)
+
+When this report covers something a reader would struggle to picture from prose alone — the sector's core technology or process (how an EUV scanner exposes a wafer, how a GLP-1 drug acts on the gut–brain axis, how a data-center liquid-cooling loop removes heat, how a humanoid robot's actuators / harmonic reducers / force sensors work), a manufacturing or scientific process, a complex value-chain architecture, an unfamiliar business model, or a market-structure concept — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them on any topic; omit only when the report is purely numeric with nothing worth visualizing.
+
+**Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
+
+- **Where:** a `**延伸观看 / Further viewing**` bullet list at the end of the section the concept lives in, or a single `📺` note beside the hard concept. English-only reports use `**Further viewing**`.
+- **Durable sources only:** the company's own product / IR / engineering channel, an OEM or reputable teardown / cutaway channel, or a well-known explainer channel — not a low-view re-upload that will be deleted or is clearly pirated.
+- **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(B站，部分地区或需登录)`.
+- **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
+
 ### Step 6: Output
 
 **Save to** `reports/sector/<topic-slug>_<YYYY-MM-DD>.md` (relative to the project root — `/Users/x/projects/financial_agent/reports/sector/`). `<topic-slug>` is a short, descriptive slug for the sector or thematic angle (Chinese characters are allowed: e.g. `人形机器人传感器板块综述`, `ai-infrastructure-buildout`). Supplementary deliverables (Word, PowerPoint, Excel appendix) can sit next to the markdown using the same `<topic-slug>` prefix.

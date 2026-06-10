@@ -55,6 +55,19 @@ Thesis summary suitable for:
 
 Format: Concise markdown or Word doc with the scorecard, recent updates, and current conviction level.
 
+## Further viewing — explainer videos (optional, but default to including)
+
+When this thesis turns on something a reader would struggle to picture from prose alone — the product or mechanism central to the tracked thesis (a humanoid robot's actuators / harmonic reducers / ball-screws / force sensors, a chip-stacking or etch/deposition flow, a surgical-robot wrist, a drug's mechanism of action), a manufacturing or scientific process, a complex product architecture, an unfamiliar business model, or a market-structure concept — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them on any topic; omit only when the thesis note is purely numeric with nothing worth visualizing.
+
+**Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
+
+- **Where:** a `**Further viewing**` bullet list at the end of the section the concept lives in, or a single `📺` note beside the hard concept.
+- **Durable sources only:** the company's own product / IR / engineering channel, an OEM or reputable teardown / cutaway channel, or a well-known explainer channel — not a low-view re-upload that will be deleted or is clearly pirated.
+- **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
+- **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
+
+> Full spec: `references/citations.md` § "Further viewing — explainer videos".
+
 ## Learning from sell-side institutional research
 
 The "thesis-revisit" note is a mature sell-side report type (MS *Risk Reward Update*, GS *Beyond the Cycle / View intact*, Bernstein *LT thesis intact*, JPM single-stock revisits, Citi *On Track to Reach [milestone]*, GS *Conviction List – Directors' Cut*). Fold these into the steps above:

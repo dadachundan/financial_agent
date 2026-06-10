@@ -53,6 +53,17 @@ A markdown report providing **specific, actionable insights with supporting evid
 
 Bucket each ticker-news headline by inspecting its date in the fetcher output header (`### Title (source: Publisher, YYYY-MM-DD)`). If 30 days returned <5 articles total, say so and consolidate the two ticker subsections into one — don't pad either with overlap.
 
+## Further viewing — explainer videos (optional, but default to including)
+
+When this report covers something a reader would struggle to picture from prose alone — a newly launched product (a humanoid robot's actuators / a new chip package / an EV powertrain), a manufacturing or scientific process behind a headline, a complex deal or corporate-action mechanic (a spin-off, tender offer, or index reconstitution), an unfamiliar business model, or a market-structure concept (how a short squeeze or passive rebalance flow actually works) — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them on any topic; omit only when the report is purely numeric with nothing worth visualizing.
+
+**Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
+
+- **Where:** a `**Further viewing**` bullet list at the end of the section the concept lives in, or a single `📺` note beside the hard concept.
+- **Durable sources only:** the company's own product / IR / engineering channel, an OEM or reputable teardown / cutaway channel, or a well-known explainer channel — not a low-view re-upload that will be deleted or is clearly pirated.
+- **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
+- **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
+
 ## Learning from sell-side institutional research
 
 The macro/news-brief report type is built daily by JPM, GS, Morgan Stanley, Nomura, Bernstein, and others. The moves below are what separate an institutional brief from a headline dump — apply them on top of (never in place of) the rules above. All existing citation, numerical-accuracy, language, and section-numbering rules remain in force.

@@ -118,6 +118,19 @@ After the "accuracy over completeness" rule, this is the next-highest-priority i
 
 See `references/report_structure.md` § Section 4 for the per-row template, and `references/quality_checklist.md` for the pre-submit checklist.
 
+## 延伸观看 / Further viewing — explainer videos (optional, but default to including)
+
+When this report covers something a reader would struggle to picture from prose alone — a mechanical assembly (a humanoid robot's actuators / harmonic (strain-wave) reducers / ball-screws / force sensors), a semiconductor etch–deposition flow, HBM die-stacking, a surgical-robot wrist, a manufacturing or scientific process, a complex product architecture, an unfamiliar business model, or a market-structure concept — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them on any topic; omit only when the report is purely numeric with nothing worth visualizing. Section 4 is the natural home — it is where the report explains hard-to-visualize product mechanics.
+
+**Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
+
+- **Where:** a `**延伸观看 / Further viewing**` bullet list at the end of the section the concept lives in, or a single `📺` note beside the hard concept. English-only reports use `**Further viewing**`.
+- **Durable sources only:** the company's own product / IR / engineering channel, an OEM or reputable teardown / cutaway channel, or a well-known explainer channel — not a low-view re-upload that will be deleted or is clearly pirated.
+- **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(B站，部分地区或需登录)`.
+- **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
+
+> Full spec: `references/citations.md` § "Further viewing — explainer videos".
+
 ## Investor presentations are first-class primary sources — use exhaustively when available
 
 After 10-Ks / 年度报告 / Yuho, **investor-relations materials are the next-most-load-bearing source category** in a research report — often *more* informative than the formal filings for the specific things research readers care most about: segment-mix economics, TAM / SAM views the company itself endorses, customer-cohort disclosures the legal filings round off, capital-allocation roadmaps, capacity build-out plans, and management's own framing of the competitive moat. **Whenever IR materials exist, treat collecting them as a non-optional Step 1 task and cite them aggressively throughout the report.**

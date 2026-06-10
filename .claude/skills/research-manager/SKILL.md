@@ -67,6 +67,17 @@ This block becomes `investment_plan` for the downstream [[trader-plan]] and [[po
 
 **Citations:** carry over the citations from the upstream analyst reports (news-analyst, sentiment-analyst, company-research) verbatim — each report ends with a References section listing the URLs the debate quoted. Reuse those URLs inline as clickable markdown links whenever you reference a specific fact. Never fabricate a URL; if the supporting analyst report has no link for a claim, drop the specificity rather than guessing.
 
+## Further viewing — explainer videos (optional, but default to including)
+
+When this ResearchPlan leans on a product, technology, or mechanism the reader would struggle to picture from prose alone — and *only if it is introduced here* (the core thing a thesis pillar or the valuation basis hinges on: a humanoid robot's actuators / harmonic reducers / force sensors, a chip-packaging step, a drug's mechanism of action, an unfamiliar business model, or a market-structure concept) — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them whenever such a concept anchors the call; omit only when the plan is purely numeric with nothing worth visualizing.
+
+**Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
+
+- **Where:** a `**Further viewing**` bullet list at the end of the section the concept lives in (e.g. beside the thesis pillar it supports), or a single `📺` note beside the hard concept.
+- **Durable sources only:** the company's own product / IR / engineering channel, an OEM or reputable teardown / cutaway channel, or a well-known explainer channel — not a low-view re-upload that will be deleted or is clearly pirated.
+- **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
+- **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
+
 ## Learning from sell-side institutional research
 
 The fixed institutional rating note is a 5-block skeleton — **(1) rating + PT + %-upside headline, (2) titled thesis pillars, (3) valuation/methodology, (4) dated catalysts, (5) symmetric upside/downside risks** — assembled here from the closest bank analogs. Apply these surgically; they sharpen the schema above without loosening any citation, numerical-accuracy, or language rule.

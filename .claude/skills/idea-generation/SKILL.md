@@ -100,6 +100,17 @@ Lead with the action, mirroring the **MS "Three Actionable Ideas"** header (the 
 **Suggested Next Steps:**
 - Build full model? Deep-dive diligence? Expert call? Hand the ticker to [[company-research]] / [[trader-plan]].
 
+### Further viewing — explainer videos (optional, but default to including)
+
+When an idea card covers something a reader would struggle to picture from prose alone — the product or technology underlying a surfaced idea (e.g. a humanoid robot's actuators / harmonic reducers / force sensors, an advanced-packaging or lithography step, an unfamiliar SaaS / marketplace business model, or a market-structure concept) — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them on any topic; omit only when the idea is purely numeric with nothing worth visualizing.
+
+**Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
+
+- **Where:** a `**Further viewing**` bullet list at the end of the idea card the concept lives in, or a single `📺` note beside the hard concept.
+- **Durable sources only:** the company's own product / IR / engineering channel, an OEM or reputable teardown / cutaway channel, or a well-known explainer channel — not a low-view re-upload that will be deleted or is clearly pirated.
+- **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
+- **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
+
 ### Step 5: Output
 
 - Shortlist of 5-10 ideas with one-page summaries

@@ -97,3 +97,6 @@ never blended into a filing citation.
   so a number is never context-free.
 - Name dated catalysts / inflections (breakeven fiscal year, regulatory
   effective date) rather than "in the future".
+- **Further viewing** — 1–3 validated explainer videos for hard-to-visualize
+  concepts (the product / manufacturing process, an unfamiliar business model),
+  in their own slot, never a citation, never carrying a number (see SKILL.md).

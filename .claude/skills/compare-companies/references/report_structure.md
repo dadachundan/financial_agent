@@ -146,6 +146,8 @@ Then a paragraph that does three things, mirroring Deutsche Bank's Huayan Roboti
 
 **Required deliverable 1 (product overlap matrix)** sits inside this section as §5.1 or just before — see `references/product_overlap_matrix.md`.
 
+- **延伸观看 / Further viewing** — 1–3 validated explainer videos for hard-to-visualize concepts (e.g. the competing products' internal mechanics that decide whether they substitute), in their own slot, never a citation, never carrying a number (see SKILL.md). EN file uses the `## Further viewing` heading; the `_zh` file uses the bilingual `## 延伸观看 / Further viewing` heading.
+
 ### §6 — The big bet (400–600 words)
 
 What is each side doing *right now* to expand TAM beyond the moat? M&A, organic R&D, capital deployment, geographic expansion. A side-by-side table contrasting the strategy (e.g. "one mega-deal" vs "many bolt-ons"), plus narrative on what each is buying and what it implies for the next 24 months. Cite the M&A press releases, S-4s, 8-Ks, and the most recent 10-K language on integration risk.

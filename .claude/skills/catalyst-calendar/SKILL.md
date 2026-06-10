@@ -994,6 +994,19 @@ All numbers added under these patterns obey CLAUDE.md § "Numerical Accuracy" (e
 
 ---
 
+## Further viewing — explainer videos (optional, but default to including)
+
+When this report covers something a reader would struggle to picture from prose alone — a market-structure or event mechanic (how monthly OPEX / triple-witching gamma unwinds, how an index rebalance forces passive in/outflows, what a merger-arb spread actually is and how it converges, how a tender offer mechanically closes, how an HSR second request stalls a deal), a manufacturing or scientific process, a complex product architecture, or an unfamiliar business model — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them on any topic; omit only when the report is purely numeric with nothing worth visualizing.
+
+**Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
+
+- **Where:** a `**Further viewing**` bullet list at the end of the section the concept lives in, or a single `📺` note beside the hard concept.
+- **Durable sources only:** the company's own product / IR / engineering channel, an OEM or reputable teardown / cutaway channel, or a well-known explainer channel — not a low-view re-upload that will be deleted or is clearly pirated.
+- **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
+- **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
+
+> Full spec: `references/citations.md` § "Further viewing — explainer videos".
+
 ## Cross-cutting guardrails (all modes)
 
 - **Citation standard** — every substantive paragraph carries ≥1 inline markdown-link citation per the project's `.claude/skills/company-research/references/citations.md` spec. Day-of briefs are exempt from this for ephemeral macro-print numbers (consensus pulled from Bloomberg/Reuters terminals), but file-saved versions get inline links to the original release schedule (BLS, BEA, FRB, EIA, etc.).

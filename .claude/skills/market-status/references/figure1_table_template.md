@@ -5,6 +5,8 @@ Drop-in HTML template for the Figure 1 calibration table in
 Dot-Com Bubble / 2021 / Current columns; rows grouped by share-prices /
 trading-activity / investor-sentiment / corporate-sentiment.
 
+- **Further viewing** — 1–3 validated explainer videos for hard-to-visualize concepts, in their own slot, never a citation (see SKILL.md).
+
 **Cell-fill classes** (defined in the `<style>` block at the top of the
 report):
 

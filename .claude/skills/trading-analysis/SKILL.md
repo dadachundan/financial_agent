@@ -99,6 +99,10 @@ Write the assembled markdown to `<company-folder>/trading/<TRADE-DATE>/full_repo
 
 The PortfolioDecision step has already persisted the final decision to `memory/trading_memory.md` as well.
 
+### Further viewing — explainer videos (delegated convention)
+
+This orchestrator mainly delegates; it does not author prose of its own. Each constituent report skill it chains (company-research, news-analyst, sentiment-analyst, bull-bear-debate, etc.) follows the shared **Further viewing — explainer videos** convention: where a section covers something hard to picture from prose alone (a robot's actuators / reducers / force sensors, a manufacturing or scientific process, a complex product architecture or market-structure concept), it embeds **1–3 short validated explainer videos** (YouTube / Bilibili) in their own slot — never as a citation, never carrying a number. No action is required here in the orchestrator; just preserve those video blocks verbatim when assembling `full_report.md` (do not strip or renumber them). See each sub-skill's SKILL.md for the full block.
+
 ## Notes
 
 - **Parallelism for step 1** — issue the three Agent calls in a single response (multiple tool_use blocks) so they execute concurrently. Sequential analyst execution wastes wall-clock time.

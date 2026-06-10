@@ -143,6 +143,21 @@ See `references/product_overlap_matrix.md` for the full template, exhaustive exa
 
 The matrix is the single most-cited section of the final report — readers paste it into competitive-positioning decks. Build it carefully and exhaustively. **Bury or generalize it, and the rest of the report becomes opinion.**
 
+### 延伸观看 / Further viewing — explainer videos (optional, but default to including)
+
+When this report turns on whether two products *actually substitute* — and the answer lives in their **internal mechanics** the reader can't picture from prose (two robot joints — a harmonic-drive vs a cycloidal actuator; two lithography light-sources — DUV immersion vs EUV; two battery cell formats — prismatic LFP vs cylindrical 4680; two foundry transistor architectures — FinFET vs gate-all-around) — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* why the products do or don't compete, not just read the verdict. Default to including them whenever the overlap matrix (§5.1) hinges on a hard-to-visualize mechanism; omit only when the comparison is purely numeric with nothing worth visualizing.
+
+**This skill writes TWO files: the English `<A>_vs_<B>.md` uses the English heading `## Further viewing — explainer videos`; the Chinese `..._zh.md` uses the bilingual heading `## 延伸观看 / Further viewing`.** The video list itself is shared between both files (same URLs); only the heading and the caption language differ.
+
+**Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
+
+- **Where:** a `**延伸观看 / Further viewing**` bullet list at the end of the section the concept lives in (most naturally beside the §5.1 overlap matrix row whose mechanism is in question), or a single `📺` note beside the hard concept. English-only reports use `**Further viewing**`.
+- **Durable sources only:** the company's own product / IR / engineering channel, an OEM or reputable teardown / cutaway channel, or a well-known explainer channel — not a low-view re-upload that will be deleted or is clearly pirated.
+- **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(B站，部分地区或需登录)`.
+- **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
+
+> Full spec: `references/citations.md` § "Further viewing — explainer videos".
+
 ### Required deliverable 2 — Moat anatomy (§5.2–5.8)
 
 Seven subsections, each anchored to specific disclosed numbers, not adjectives. Proven structure from the SNPS-vs-CDNS rewrite (May 2026). **For N≥3, every subsection's tables grow to N columns; the analytical questions stay the same.** When a side doesn't disclose a number that others do, write `not disclosed` in that side's cell — don't estimate or omit the column.

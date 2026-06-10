@@ -211,6 +211,17 @@ Suggested 8-section structure:
 9. **Data Used** manifest (see block below).
 10. **References** — deep URLs to N-PORT filings, issuer holdings pages, yfinance snapshots.
 
+### Further viewing — explainer videos (optional, but default to including)
+
+When this report covers something a reader would struggle to picture from prose alone — how holdings overlap and overlapping weight work, how index weighting / methodology schemes (market-cap-weight vs equal-weight vs modified-cap) shape a fund's exposure, how N-PORT vs daily issuer holdings differ, or any fund-mechanics concept for a reader new to ETF structure — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them on any topic; omit only when the report is purely numeric with nothing worth visualizing.
+
+**Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
+
+- **Where:** a `**Further viewing**` bullet list at the end of the section the concept lives in, or a single `📺` note beside the hard concept.
+- **Durable sources only:** the issuer's own product / education channel, an index provider's explainer, or a well-known finance-education channel — not a low-view re-upload that will be deleted or is clearly pirated.
+- **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
+- **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, weight, expense ratio, or return figure is ever attributed to a video (a video can't be string-matched against its source).
+
 ### Step 9 — Verify and clean up
 
 - Re-run the script to confirm it's idempotent.
