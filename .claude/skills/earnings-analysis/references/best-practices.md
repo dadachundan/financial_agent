@@ -153,7 +153,7 @@ Before delivering earnings update, verify all items below:
 - [ ] Source citations include page numbers or slide numbers where applicable
 
 **Beat/Miss Citations:**
-- [ ] Beat/miss analysis cites consensus source (Bloomberg, FactSet, etc.)
+- [ ] Beat/miss analysis cites a named + dated consensus source from the project sources (zsxq broker note labeled `*Analyst view:*`, Yahoo Finance estimates — never "Bloomberg/FactSet"; see SKILL.md § "Consensus & sell-side sources in this project")
 - [ ] Consensus source includes "as of" date (pre-earnings close)
 - [ ] Company reported results cited to earnings release or 10-Q
 
@@ -170,8 +170,8 @@ Before delivering earnings update, verify all items below:
 **Hyperlinks:** ⭐⭐⭐ CRITICAL
 - [ ] ALL URLs are CLICKABLE HYPERLINKS (not plain text)
 - [ ] Hyperlinks formatted with meaningful display text
-- [ ] Blue, underlined hyperlink formatting in Word document
-- [ ] Hyperlinks tested and working (Ctrl+Click opens correct page)
+- [ ] **HTTP-check every URL before commit** with a Python one-liner (`urllib.request`, browser UA, timeout 15s; retry anti-bot 500s with a full Chrome UA; retry gov-site timeouts at 30s). `200 OK` is the only pass — drop any link that fails; never ship a guess
+- [ ] **A 200 URL that does not contain the claimed number is worse than a 404** — string-match the number, fix the paragraph if it's absent
 - [ ] All SEC filings hyperlinked to EDGAR viewer
 - [ ] All earnings materials hyperlinked (release, transcript, presentation)
 - [ ] Prior quarter materials hyperlinked for comparison
@@ -236,8 +236,8 @@ Run through this quick final check before sending report to user:
 3. **Citations**: Spot check 3-4 figures/tables - all have sources with clickable hyperlinks?
 4. **Estimates**: Old vs. new clearly shown? Changes explained?
 5. **Charts**: All 8-12 embedded? All numbered and captioned?
-6. **Length**: Is it 8-12 pages (not 6, not 15)?
-7. **Hyperlinks**: Test 3-4 hyperlinks - do they work with Ctrl+Click?
+6. **Length**: Is it 3,000-5,000 words (8-12 page equivalent — not shorter, not longer)?
+7. **Hyperlinks**: Every URL HTTP-checked (200 OK with browser UA), and 3-5 numbers string-matched against their cited URLs (per the in-report verification log, workflow.md Step 15)?
 8. **Timeliness**: Is this being published within 48 hours of earnings?
 
 If all items check out, the report is ready for delivery.
@@ -266,11 +266,12 @@ Rating: [MAINTAINED / RAISED / LOWERED] [RATING]
 Price Target: $XXX (prior: $XXX) - [+/-]XX% upside
 
 Deliverables:
-✓ 8-12 page earnings update report (DOCX)
-✓ 8-12 embedded charts
+✓ Markdown earnings update report (3,000-5,000 words) + _zh.md companion
+✓ 8-12 embedded charts (PNGs in reports/charts/)
 ✓ Updated estimates with old/new comparison
-✓ Complete sources section with clickable hyperlinks
-✓ [Optional: Updated XLS financial model]
+✓ Complete sources section with clickable hyperlinks + verification log
+✓ Committed and pushed (Conventional Commit)
+✓ [Optional: DOCX copy if explicitly requested; updated XLS financial model]
 
-File: [Company]_Q[X]_[Year]_Earnings_Update.docx
+File: reports/earnings/<TICKER>_Q<N>FY<YY>_earnings_update_<YYYY-MM-DD>.md
 ```

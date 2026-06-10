@@ -74,9 +74,9 @@ What gets extracted:
 
 The extractor lives in `scripts/sec_text.py` (skill-local) and imports
 only the HTML-cleaning + section-regex primitives from
-`ingest.graphiti_ingest`. The assembly (which items, how much) is owned
+`ingest.sec_extract`. The assembly (which items, how much) is owned
 by the skill — that's why this skill returns Item 7 even though
-graphiti's pipeline skips it.
+the shared extractor's default section set skips it.
 
 **When reading Item 7 (MD&A), specifically capture the "Outlook" / "Trends" /
 "Factors affecting future results" subsection** — it carries the filing's
@@ -152,7 +152,7 @@ When this report covers something a reader would struggle to picture from prose 
 - **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
 - **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
 
-> Full spec: `references/citations.md` § "Further viewing — explainer videos".
+> Full spec: [.claude/skills/company-research/references/citations.md](../company-research/references/citations.md) § "Further viewing — explainer videos" (this skill's own `references/` holds only `house_style.md`).
 
 ## Output format
 
@@ -165,21 +165,36 @@ then the "Changes over the years" section at the end. Title it
 Create the `reports/earnings/` directory if it doesn't exist. After writing the file,
 print its path in chat and inline the report content for the user to read.
 
+### Mandatory blocks — a report missing any of these without justification is not done
+
+1. **Thesis / What-changed box** (3–5 sentences, before any per-filing block).
+2. **Cross-year segment delta table** (spec below).
+3. **Per-filing blocks** newest → oldest, each with a clickable SEC EDGAR link and `ADDED` / `DROPPED` / `ESCALATED` risk-factor tags.
+4. **Section-3b guidance & capital-return delta block** (`OLD → NEW` for guidance, buyback/dividend, capex) — or an explicit one-liner `n/a: no guidance / capital-return / capex outlook disclosed in the filings reviewed` when genuinely absent. **Silent omission is a defect** (the RKLB 2026-06-09 run shipped without it).
+5. **Changes over the years** section, ranked by thesis impact.
+6. **2–4 Mermaid diagrams** (spec below).
+7. **Further viewing** block — or an explicit omission justification (purely numeric report).
+8. **Folded verification log** — `<details><summary>Verification log — YYYY-MM-DD</summary>` appendix recording the 3–5 delta spot-checks the numerical-traceability guardrail already requires, each as `"X = N from <filing>": ✓ string-matches / ✗ fixed`.
+
 ### Update-in-place rule — at most one SEC summary per ticker
 
 Reports under `reports/earnings/` are tracked in git and meant to be living documents. **Before writing, check whether a summary for this ticker already exists** and update it in place rather than creating a parallel dated copy.
 
 ```bash
-ls reports/earnings/ 2>/dev/null | grep -E "^<TICKER>_[0-9]+\.md$"
+ls reports/earnings/ 2>/dev/null | grep -Ei "^<TICKER>(_[0-9]+)?\.md$"
 ```
 
-- **Exactly one match** → overwrite it at the same path. Keep the existing filename even if its embedded date is stale — git history records the actual revision date. Update the document's title-line date range and any "as of" header to today.
+(The `(_[0-9]+)?` matters: legacy outputs like `QCOM.md` have no date suffix — a date-only regex returns zero matches and would create exactly the parallel copy this rule forbids.)
+
+- **Exactly one match** → overwrite it at the same path. Keep the existing filename even if its embedded date is stale or missing — git history records the actual revision date; do not rename `QCOM.md` to `QCOM_<date>.md`. Update the document's title-line date range and any "as of" header to today. **Before overwriting, read the file's first ~5 lines and confirm it is a sec-report-summary output** (title/header says "SEC filings summary" or "via the sec-report-summary skill"); if the matched file is a different report type sharing the namespace, do NOT overwrite — write the digest as `<TICKER>_SEC_<YYYYMMDD>.md` and tell the user about the collision.
 - **Multiple matches** (legacy state) → update the most recent by filename date, tell the user the older duplicates exist, do not auto-delete.
 - **Zero matches** → create a new file using today's `YYYYMMDD`.
 
-To view rendered (with charts): start `main.py` and open
-`http://localhost:5001/reports/`. The viewer renders Markdown with
-Mermaid + GitHub styling.
+To view rendered (with charts): the user's running viewer at
+`http://xs-macbook-air.local:5001/reports/` renders Markdown with
+Mermaid + GitHub styling. (The scripts' internal `API_BASE` probe stays
+`localhost` — it's a machine-local fallback — but any URL surfaced to
+the user uses the `.local` hostname per the project rule.)
 
 ### Always include a cross-year segment delta table
 
@@ -217,8 +232,10 @@ Mermaid syntax cheats that bite:
 - `timeline` — colons inside event text need escaping or rephrasing.
 
 Aim for charts that *summarize* a section, not duplicate the table just
-above. The QCOM report at `reports/earnings/QCOM_<date>.md` is a working
-reference if you need an example.
+above. The RKLB report at `reports/earnings/RKLB_20260609.md` is a working
+reference for the Mermaid usage if you need an example (note it predates
+the Section-3b / verification-log mandatory blocks — don't copy those
+omissions).
 
 ## Defaults & guardrails
 

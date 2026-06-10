@@ -85,7 +85,7 @@ When a Chinese companion is produced, use bilingual technical terms: `ETF / 交�
 
 - **Index-provider reconstitution announcements (FTSE Russell / S&P DJI)** — adds/deletes, effective dates, weight-change magnitude. Used to flag whether a shared top name sits in an index facing an *imminent* rebalance (a near-term concentration catalyst that passive ETFs mechanically trade). Cite the index-provider announcement with a deep URL; **never fabricate a passive-flow size** — if not published, state "reconstitution pending YYYY-MM-DD, flow size not estimated." Mirrors GS Index-Strategy "Rebalancing Review" framing.
 - **Index-weight rank / methodology fact sheets** — to establish that a shared name is top-ranked across the tracked indices (the crowded-shared-book signal). Deep URLs to the provider's fund/index page.
-- **Local zsxq broker library (`db/zsxq.db`, READ-ONLY)** — sell-side positioning language (`机构持仓拥挤`, record OW/UW, "consensus long") as a citable crowding-context source, with deep PDF URLs per the citation standard. Read-only Tier-1 safety rule — never write.
+- **Local zsxq broker library (`db/zsxq.db`, READ-ONLY)** — sell-side positioning language (`机构持仓拥挤`, record OW/UW, "consensus long") as a citable crowding-context source. Citation form: `[<broker> <title>, zsxq #<file_id> p.<N>](http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>#page=<N>)` — the direct-download `/zsxq/pdf/...` route only (paste `find_pdf.py`'s `pdf_url`); **never** the `/zsxq/pdf-viewer/<id>` HTML viewer (won't download on iPad) and **never** the dead `/zsxq-pdf/<id>` form. Read-only Tier-1 safety rule — never write.
 
 ### Profile / context data
 
@@ -156,6 +156,17 @@ For each ETF independently:
 - **Sector breakdown** (GICS or N-PORT-provided) side-by-side across all N.
 - **Country breakdown** for international funds; for US-equity funds compare cash + foreign sleeve.
 
+### Step 4.5 — Crowding & positioning context
+
+Sits between Step 4 (Concentration) and Step 6 (Verdict). For each shared top-10 name, annotate whether it is a **consensus crowded trade**, using:
+
+- **(a) Index-weight rank** — the name's weight rank across the major indices the N ETFs track (e.g. a name that is top-3 in both the Nasdaq-100 and the PHLX Semiconductor Index is a crowded shared book). Source: index-provider fact sheets / methodology pages with deep URLs.
+- **(b) Sell-side positioning language** — read the local zsxq library (`db/zsxq.db`, **read-only**) for crowding verdicts (`机构持仓拥挤`, record OW/UW, "consensus long"), cited as `[<broker> <title>, zsxq #<file_id> p.<N>](http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>#page=<N>)` — the direct-download `/zsxq/pdf/...` route only (paste `find_pdf.py`'s `pdf_url`), **not** the `/zsxq/pdf-viewer/<id>` HTML viewer and **not** the dead `/zsxq-pdf/<id>` form. The zsxq library is itself a citable positioning-context source.
+  **Sell-side view evolution (卖方观点演变)** — when **≥2 zsxq notes** cover the same shared holding or question: date every cited institute view (the filename's `-YYMMDD` suffix is the authoritative report date; sanity-check against `create_time`) and order each institute's takes chronologically — a broker revising its own crowding read or rating/PT (e.g. OW → EW, `PT raised X → Y`) is reported as a dated revision with its stated trigger, never silently replaced by the latest take. When institutes disagree (opposite crowding verdicts, PTs >20% apart), present both views dated side-by-side — never blend them into a fake consensus. A 2026-03 take and a 2026-06 take from the same institute are two different views, not duplicates; each carries (institute, report date, the `/zsxq/pdf/<file_id>/<urlencoded-name>` link).
+- **(c) Index-reconstitution / passive-flow check** *(near-term catalyst)* — for each ETF, identify the tracked index and flag whether shared top names sit in an index facing an **imminent FTSE Russell / S&P DJI reconstitution**. Mirror GS Index-Strategy framing: name the **effective date** and that passive ETFs mechanically trade it. Source from index-provider announcements with deep URLs. **Do not fabricate flow-size numbers** — if the passive flow isn't published, write "reconstitution pending YYYY-MM-DD, flow size not estimated."
+
+Report this as a short table annotating the shared top-10 (name | shared min-weight | index-weight rank | crowding verdict + source | reconstitution flag). The output is **not a new verdict bucket** — it is a one-line crowding flag feeding the Step 6 verdict (see below).
+
 ### Step 5 — Compute performance / valuation backdrop
 
 Pull 1Y / 3Y / 5Y total return for each ETF (yfinance, `auto_adjust=True`). Pull the stated benchmark from each prospectus and report tracking error vs benchmark. Pull expense ratio (yfinance `.info['annualReportExpenseRatio']` or issuer page). Compute net excess return after fees.
@@ -183,7 +194,7 @@ For N≥3, report the verdict pairwise (a 3-by-3 verdict matrix) and surface the
 
 Save under `reports/charts/etf_overlap_<A>_vs_<B>_*.png` (DPI 150, `bbox_inches="tight"`):
 
-1. **Overlap Venn (mermaid block when N=2 or N=3)** — areas approximated by overlapping weights.
+1. **Overlap Venn / heatmap PNG** — for N=2 or N=3, a `matplotlib-venn` figure (`pip install matplotlib-venn`; circle sizes from total weights, intersection sized by overlapping weight); for N=4, or if `matplotlib-venn` is unavailable, a pairwise overlapping-weight heatmap matrix instead. **Never a Mermaid block — Mermaid has no Venn diagram type**, so a "mermaid venn" cannot render.
 2. **Top-10 shared positions bar chart** — for each shared issuer, side-by-side bars showing weight in each ETF.
 3. **Sector breakdown stacked bars** — N stacked bars, GICS sector ordering.
 4. **Performance comparison** — 1Y / 3Y / 5Y total return + benchmark return + expense ratio in a single table.
@@ -191,7 +202,7 @@ Save under `reports/charts/etf_overlap_<A>_vs_<B>_*.png` (DPI 150, `bbox_inches=
 6. *(Optional)* **Country breakdown** for international comparisons.
 7. *(Optional)* **Historical co-movement** — rolling correlation line and/or rebased price series of the N ETFs over the trailing window, annotating the max common drawdown (the Step 5 historical-co-movement metric). Carries the in-chart source annotation like every other chart.
 
-Each chart's caption: `Source: SEC N-PORT (<as-of>); issuer holdings CSV (<as-of>); yfinance (<as-of>). Computed in oneoff/etf_overlap_<A>_vs_<B>.py.`
+Every PNG renders the source + as-of dates **inside the image** as a footer annotation (`fig.text(0.12, 0.02, ...)`): `Source: SEC N-PORT (<as-of>); issuer holdings CSV (<as-of>); yfinance (<as-of>). Computed in oneoff/etf_overlap_<A>_vs_<B>.py.` The markdown caption repeats it as a backup — the in-image footer is the primary mechanism (charts get viewed in isolation). For the chart-7 co-movement panel, clip the x-axis to the **intersection** of all N ETFs' valid price history (`first = max(s.index.min() for s in series)`) so a younger ETF doesn't leave an empty left region. Before saving any chart, confirm the rightmost data point is within a few days of today.
 
 ### Step 8 — Write the report
 
@@ -227,7 +238,11 @@ When this report covers something a reader would struggle to picture from prose 
 - Re-run the script to confirm it's idempotent.
 - Spot-check ≥3 weights in the report against the source holdings CSVs (`grep -F "<%>" oneoff/etf_holdings_<TICKER>_*.csv`).
 - Spot-check the verdict logic — does the pairwise overlap actually compute to the reported number?
+- HTTP-check every URL in the report (real-browser User-Agent, `200 OK` only; retry slow .gov sites with a 30s timeout before declaring them dead). Fix or drop any URL that fails — never ship a 404.
+- **If ≥2 zsxq notes were cited on the same shared holding or question**: confirm every institute view is dated, same-institute revisions are shown as old → new with trigger, and conflicting views appear side-by-side (per Step 4.5(b) *Sell-side view evolution*) — not blended.
+- Append a folded `<details><summary>Verification log — YYYY-MM-DD</summary>` block to the report listing the weight spot-checks, the verdict re-computation, and the URL-check results.
 - Stop any test servers used during chart rendering.
+- Commit and push per the project's standard workflow (Conventional Commit, e.g. `feat(reports/etf): …`).
 
 ## Output Format (mandatory blocks)
 
@@ -302,7 +317,7 @@ One English file and one Chinese file per ordered tuple. If `<A>_vs_<B>.md` alre
 
 The bank analog here is **flow / positioning notes, not holdings-overlap notes** — banks rarely publish a 2-vs-4-fund holdings join, so the report skeleton above stays (it is already strong and N-PORT-native). What transfers is the **crowding and passive-flow framing** that converts a mechanical holdings join into a *correlated-drawdown* verdict. The single most transferable idea: **two ETFs sharing the single most crowded consensus name co-drawdown harder than their headline overlap % implies.**
 
-**Add a crowding & positioning layer (mirror MS "Collision of Themes" / "AI Still Taking Center Stage").** Morgan Stanley flags concentration as *"this exposure is the consensus crowded trade"* (e.g. `算力板块估值偏高、机构持仓拥挤`; AI names >80% of the Taiwan index weight) — the qualitative crowding verdict the overlap skill lacks. See **Step 4.5** below. For each shared top-10 name, annotate whether it is the consensus crowded trade and cite the evidence; a crowding adjective ("crowded", "concentrated") must always carry a sourced number, never ship bare.
+**Add a crowding & positioning layer (mirror MS "Collision of Themes" / "AI Still Taking Center Stage").** Morgan Stanley flags concentration as *"this exposure is the consensus crowded trade"* (e.g. `算力板块估值偏高、机构持仓拥挤`; AI names >80% of the Taiwan index weight) — the qualitative crowding verdict the overlap skill lacks. See **Step 4.5** in the Workflow section above. For each shared top-10 name, annotate whether it is the consensus crowded trade and cite the evidence; a crowding adjective ("crowded", "concentrated") must always carry a sourced number, never ship bare.
 
 **Decompose, don't assert (mirror GS Index-Strategy rebalancing notes).** GS rebalancing notes cascade market-level flow → sector-level flow → named-stock winners/losers (`科技硬件与半导体板块遭遇全市场最大被动资金流出24亿美元`). The overlap report should never state a shared-weight number without immediately naming the **2–3 positions that dominate it** — pair every aggregate with its named drivers, the way GS pairs `韩国流出121亿美元` with the stocks that drove it.
 
@@ -312,15 +327,7 @@ The bank analog here is **flow / positioning notes, not holdings-overlap notes**
 
 All new numbers obey the project citation + numerical-accuracy standard: every figure traces to a source that **literally contains it** (deep URL, the computed oneoff script, or a `db/zsxq.db` PDF read), and the `db/zsxq.db` library is **read-only** (Tier-1 safety rule).
 
-### Step 4.5 — Crowding & positioning context
-
-Sits between Step 4 (Concentration) and Step 6 (Verdict). For each shared top-10 name, annotate whether it is a **consensus crowded trade**, using:
-
-- **(a) Index-weight rank** — the name's weight rank across the major indices the N ETFs track (e.g. a name that is top-3 in both the Nasdaq-100 and the PHLX Semiconductor Index is a crowded shared book). Source: index-provider fact sheets / methodology pages with deep URLs.
-- **(b) Sell-side positioning language** — read the local zsxq library (`db/zsxq.db`, **read-only**) for crowding verdicts (`机构持仓拥挤`, record OW/UW, "consensus long"), cited with deep PDF URLs per the project citation standard. The zsxq library is itself a citable positioning-context source.
-- **(c) Index-reconstitution / passive-flow check** *(near-term catalyst)* — for each ETF, identify the tracked index and flag whether shared top names sit in an index facing an **imminent FTSE Russell / S&P DJI reconstitution**. Mirror GS Index-Strategy framing: name the **effective date** and that passive ETFs mechanically trade it. Source from index-provider announcements with deep URLs. **Do not fabricate flow-size numbers** — if the passive flow isn't published, write "reconstitution pending YYYY-MM-DD, flow size not estimated."
-
-Report this as a short table annotating the shared top-10 (name | shared min-weight | index-weight rank | crowding verdict + source | reconstitution flag). The output is **not a new verdict bucket** — it is a one-line crowding flag feeding the Step 6 verdict (see below).
+*The concrete workflow implementation of this layer is **Step 4.5 — Crowding & positioning context**, defined in the Workflow section above (between Step 4 and Step 5).*
 
 ## What this skill does NOT do
 

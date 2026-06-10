@@ -11,6 +11,10 @@ and answer the question in-context. **You — Claude — do the analysis
 in-context.** The scripts only look up rows and extract text; do not
 call any external LLM (no MiniMax, no API).
 
+**Interpreter:** run all project scripts with `/opt/anaconda3/bin/python3`
+(per `feedback_anaconda_python_db_scripts` — bare `python3` has failed
+read-only DB opens and lacks deps like `yfinance` in some shells).
+
 ## Workflow
 
 ### 1. Parse the request
@@ -46,7 +50,11 @@ python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py \
 Output: JSON `{count, rows:[{file_id, name, topic_title, summary,
 local_path, file_size, page_count, create_time, tickers, tags, comment,
 ai_robotics_analysis, categories_analysis, bank, group_id, claude_rating,
-user_rating, local_exists}, ...]}`. Rows sort by `create_time DESC`.
+user_rating, local_exists, pdf_path, pdf_url}, ...]}`. Rows sort by
+`create_time DESC`. **`pdf_url` is the ready-to-paste direct-download
+citation URL** (`http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<urlencoded-name>`)
+— paste it verbatim; never hand-build the `/zsxq/pdf-viewer/<id>` HTML
+viewer URL (won't download on iPad) or the dead `/zsxq-pdf/<id>` route.
 
 Decision rules:
 
@@ -183,6 +191,12 @@ page numbers when you cite specific claims (e.g. "p. 12: …"). If the
 PDF doesn't contain an answer, say so — don't pad with general industry
 knowledge.
 
+When the answer will be saved to a file or quoted into any `reports/`
+markdown, cite specific claims with the
+[zsxq citation convention](../zsxq-ideas/SKILL.md#zsxq-citation-convention):
+`[<Bank> — <topic>, zsxq #<file_id> p.<N>](<pdf_url>#page=<N>)`, using
+the `pdf_url` from step 2 verbatim.
+
 When the user asked for stocks / tickers specifically:
 
 - Prefer the explicit list in the PDF.
@@ -259,14 +273,59 @@ Analyze-specific notes (the bits beyond the shared doc):
   if it's null. See
   [`reference/pt_extraction.md`](../../../reference/pt_extraction.md)
   § "Surfacing rule".
+- **Revision & dispersion context — the single-PDF case of the project's
+  "Sell-side view evolution (卖方观点演变)" convention.** After persisting,
+  SELECT prior rows for the same ticker(s) — STRICTLY read-only:
+  `sqlite3.connect('file:db/stock_price_target.db?mode=ro', uri=True)`,
+  table `price_targets` (columns `research_institute, rating, price_target,
+  target_currency, report_date, report_file_id, upside_pct`) — and report:
+  (a) the revision vs the SAME institute's prior call — `中金 PT 38→45,
+  +18% vs 2026-03 call` (or "first call on record"); (b) where this PT sits
+  vs other institutes' live PTs on the name — min / median / max + spread %.
+  Report dates come from the filename's `-YYMMDD` suffix (authoritative;
+  sanity-check against `create_time`); a 2026-03 and a 2026-06 PT from the
+  same institute are two different views, not duplicates. Writes to this DB
+  stay exclusively via `scripts/persist_pts.py`.
 
 Surface the script's stdout `inserted` and `total_in_db` in the final
 reply, e.g. `📈 PT inserts: 3 new (1 replaced), 148 total in /pt` — and
-list each call with its report-date price + upside per the rule above.
+list each call with its report-date price + upside per the rule above,
+plus the revision / dispersion context where prior rows exist.
+
+### 5b. Upsert a card into `pdf_cards` (free side-effect, like the PT persist)
+
+After any **full deep read** (full-text extraction of the PDF — not a
+narrow `--pages` question that didn't give you the report's overall
+thesis), write back one structured card via `zsxq_cards.py` (project
+root) — the sanctioned Tier-2 helper for `pdf_cards` (schema owned by
+`zsxq_common.init_db`; idempotent upsert by `file_id`):
+
+```bash
+python3 zsxq_cards.py <<'JSON'
+[{"file_id": 184124282514242, "primary_ticker": "ISRG",
+  "covered_tickers": ["ISRG","SYK","MDT"], "theme": "surgical-robotics",
+  "thesis": "<1-paragraph what-this-report-argues>",
+  "has_comparison_table": true,
+  "key_tables": "p.5 segment×player TAM grid; p.11 procedure-volume by company",
+  "key_figures": "p.4 da Vinci install-base CAGR",
+  "rating": "<broker call if any>"}]
+JSON
+```
+
+This is what makes `/zsxq-expert`'s `has_card` reuse work — `zsxq_fts.py`
+flags carded PDFs so the expert system reuses your digest instead of
+re-extracting the same PDF from scratch. Every deep read that skips this
+step leaves the library no smarter.
 
 ## Notes
 
-- DB is read-only here. Never write to `db/zsxq.db` from this skill.
+- DB writes from this skill go through the sanctioned Tier-2 helpers
+  only — `ocr_pdf.py` (OCR cache), `zsxq_cards.py` (cards),
+  `scripts/persist_pts.py` (PTs). Never raw SQL against any project DB.
+- All scripts here resolve `db/zsxq.db` via `db_paths.db_path()` so
+  `FINAGENT_DB_DIR` redirection works; any new script added under
+  `scripts/` must do the same in the same commit (CLAUDE.md DB-safety
+  rule).
 - Local paths typically live under
   `/Users/x/Downloads/zsxq_reports/YYYY_MM_DD/<file>.pdf`.
 - For Chinese PDFs, `fitz` usually returns clean UTF-8; if you see
@@ -279,6 +338,15 @@ list each call with its report-date price + upside per the rule above.
   tables, multi-column layouts.
 - `ocrmac` requires macOS (Apple Vision framework) — `pip install
   ocrmac` already done locally. On a non-Mac box, fall through to 3c.
-- This skill answers questions about **one** PDF per invocation. For
-  multi-file synthesis, run the skill per file and stitch the answers
-  yourself.
+- **Watermark gotcha:** if pages extract empty AND render blank in
+  `render_pdf_pages.py` while the file size looks normal, suspect a
+  per-recipient anti-piracy watermark applied as a PDF *incremental
+  update*. Run `scripts/strip_pdf_watermark.py <input.pdf>` (writes
+  `<input>.original.pdf` next to it), then re-extract from the stripped
+  copy. Do not overwrite the original file. This is not an OCR problem —
+  don't burn time on 3b/3c first.
+- This skill answers questions about **one named PDF** per invocation
+  (file_id / filename). Route everything else to the siblings: an
+  in-depth question or comparison across the library → `/zsxq-expert`;
+  a buy-list / idea scan → `/zsxq-ideas`; "what should I read" feed
+  triage → `/zsxq-recommend`.

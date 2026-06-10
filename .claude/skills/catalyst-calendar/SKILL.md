@@ -7,15 +7,19 @@ description: One unified catalyst & event lens with three modes. (A) **Day-of br
 
 A single skill covering three distinct "what's coming up" lenses. Pick the mode from the user's phrasing — the modes share the same data sources but produce very different deliverables.
 
+**Language default (all three modes): English only.** The Chinese companion is produced only on the explicit opt-in triggers listed under Mode C ("Report language (mode C)") — those triggers apply to Modes A and B too. A Chinese-language trigger phrase ("什么大事今天") does NOT by itself flip the output language.
+
 ## Mode dispatch
 
 | User phrasing | Mode | Deliverable | Length |
 |---|---|---|---|
 | "what's big today / tomorrow", "what's hitting the tape", "morning note", "key events tomorrow", "macro calendar today", "什么大事今天/明天" | **A. Day-of brief** | In-chat brief (saved to `reports/morning/<YYYY-MM-DD>_<topic-slug>.md` only when user says "save it" or "write it up") | 500–1,500 words |
-| "catalyst calendar", "upcoming events", "what's coming this week / next week / this month", "earnings calendar", "event calendar", "catalyst tracker" | **B. Week-ahead horizon** | Markdown calendar + weekly preview at `reports/calendar/<week-of-YYYY-MM-DD>.md` (or in chat if 1–2 day horizon) | 1,000–3,000 words |
+| "catalyst calendar", "upcoming events", "what's coming this week / next week / this month", "earnings calendar", "event calendar", "catalyst tracker" | **B. Week-ahead horizon** | Markdown calendar + weekly preview at `reports/calendar/<week-of-YYYY-MM-DD>.md` (or in chat if 1–2 day horizon) | 2,000–4,500 words for a full macro+earnings week; hard cap 5,000 |
 | "track the X-Y merger", "what's the deal spread on Z", "M&A status on <ticker>", "merger arb on X", "is the X-Y deal closing?", "break risk on the X deal" | **C. Single-deal M&A monitor** | Deep deal report at `reports/ma/<Target>_<Acquirer>_<YYYY-MM-DD>.md` | 3,000–6,000 words |
 
 If a request straddles modes (e.g. "what's big this week including any M&A votes?"), default to **B (week-ahead)** and surface the M&A votes inline in the milestone column — do not switch to mode C unless the user specifically asks for the single-deal deep dive.
+
+**Horizon dominates phrasing (dispatch tiebreaker).** If the deliverable covers ≥3 trading days, includes a week calendar table, or includes a multi-day lookback recap, it is **Mode B** and saves to `reports/calendar/` — even if the user literally said "morning note". A true Mode A brief is a single-session read; the moment it grows a "This Week's Calendar" table it has become a week-ahead and belongs in `reports/calendar/<YYYY-MM-DD>[_<universe-slug>].md`, not `reports/morning/`.
 
 ---
 
@@ -107,6 +111,8 @@ Default: **in-chat only**. Save to a file only when the user says "save it" / "w
 
 When saving: `reports/morning/<YYYY-MM-DD>_<topic-slug>.md` (matches existing `reports/morning/` directory convention — flat, no per-day sub-folder).
 
+**Pre-save checklist (saved Mode A briefs only):** horizon really is ≤2 sessions (else it's Mode B → `reports/calendar/`, per the dispatch tiebreaker); no fabricated consensus / house decimals; all newly added URLs HTTP-checked (including `xs-macbook-air.local`); verification log appended per the cross-cutting guardrail. Re-run on any in-place update.
+
 ---
 
 ## Mode B — Week-ahead horizon calendar
@@ -162,6 +168,11 @@ For each high-impact macro print or earnings name, capture the option / VIX / sp
 
 If the data is not pullable at write time (e.g. cron run on a closed market), say "implied move pending market open" rather than fabricating.
 
+**Completeness cross-check (mandatory before rendering Step 3).** A week-ahead that misses scheduled releases is worse than no calendar — past failure: a Monday was labelled "(quiet)" while the same-week Nomura weekly listed the NY Fed Survey of Consumer Expectations (directly on the report's own theme) plus five other releases, and the 3-yr Treasury auction was dropped even though the 10y/30y legs made the table. Before rendering the table:
+1. Pull a **full-week release schedule** — BLS release schedule + BEA release schedule + a consolidated economic calendar (e.g. Briefing.com) — and enumerate **every scheduled release as a table row**. Second-tier prints (NY Fed SCE, NFIB, trade balance, wholesale inventories, mortgage apps, budget statement, all Treasury auction legs) get one-line **L**-impact rows, not omission.
+2. When present in zsxq, cross-check against the latest **Nomura / GS week-ahead forecast table** (the Nomura weekly's "Forecasts for economic indicators released during the week of …" figure) and add anything it lists that the sweep missed.
+3. A day may be labelled **"(quiet)" only after this cross-check**, and its Notes cell must say what was checked: `no releases per BLS/BEA/Briefing.com sweep YYYY-MM-DD`.
+
 ### Step 3: Calendar view
 
 Render as a sortable table:
@@ -169,11 +180,11 @@ Render as a sortable table:
 ```markdown
 | Date | Day | Time (ET) | Event | Company/Sector | Type | Impact | Expectation | Notes |
 |------|-----|-----------|-------|----------------|------|--------|-------------|-------|
-| 2026-06-09 | Mon | 10:00 | ISM Services | Macro | Macro | M | downside-risk | Cons 53.0; our 51.5 — new-orders sub-index rolling; <50 = recession-concern flare |
-| 2026-06-10 | Tue | AMC | Q2 earnings | ORCL | Earn | H | meaningful beat possible | Cons rev $19.1B; our OCI ~$5.5B (+89% YoY) vs cons 92% — capacity-constrained = bullish demand |
+| 2026-06-09 | Mon | 10:00 | ISM Services | Macro | Macro | M | downside-risk | Cons 53.0; house per Nomura 51.5 [PDF link] — new-orders sub-index rolling; <50 = recession-concern flare |
+| 2026-06-10 | Tue | AMC | Q2 earnings | ORCL | Earn | H | meaningful beat possible | Cons rev $19.1B; DB models OCI ~$5.5B (+89% YoY) vs cons 92% [PDF link] — capacity-constrained = bullish demand |
 | 2026-06-11 | Wed | 14:00 | FOMC decision | Macro | Macro | H | binary | FedWatch 25bp cut ~70% priced; dots in focus |
 | 2026-06-11 | Wed | 14:30 | Powell presser | Macro | Macro | H | in-line | Tone on cut path |
-| 2026-06-12 | Thu | 08:30 | CPI | Macro | Macro | H | upside-surprise likely | Cons 0.2% MoM core; our 0.18% — shelter softening, IT-hardware tariff pass-through offsetting |
+| 2026-06-12 | Thu | 08:30 | CPI | Macro | Macro | H | upside-surprise likely | Cons 0.2% MoM core; house per Nomura 0.18% [PDF link] — shelter softening, IT-hardware tariff pass-through offsetting |
 | 2026-06-13 | Fri | — | Triple witching | Index | Other | M | n/a | $X notional |
 ```
 
@@ -182,7 +193,7 @@ Render as a sortable table:
 - **Importance** (optional desk-vocabulary tag inside Notes when distinct from Impact) — *does the thesis care?* "very important" / "high" — a name can be low-Impact but very-important to a specific coverage thesis.
 - **Expectation column** — *which way do WE lean?* One of `{in-line / upside-surprise likely / downside-risk / meaningful beat possible / binary / n/a}`. This is the analyst's surprise-direction view, NOT the index-impact rank.
 
-**Notes-cell convention for macro rows (high-priority broker pattern).** Mirror GS "US Week Ahead" and Nomura "US Economic Weekly": carry a committed **house forecast vs consensus PLUS the sub-component driver** inline, not just "Cons X." Wire in the [§ A sub-component watch list](#a-sub-component-watch-lists-for-major-macro-prints): e.g. `Cons 0.2% MoM core; our 0.18% — shelter softening, IT-hardware tariff pass-through offsetting`. The house number is the *analyst's own estimate* (label it "our …", not a citation); cite the **consensus** source it is compared against — never present an estimate as if a URL contained it. Any expectation tag quoting a number must cite a source containing that number, per CLAUDE.md § "Numerical Accuracy".
+**Notes-cell convention for macro rows (high-priority broker pattern).** Mirror GS "US Week Ahead" and Nomura "US Economic Weekly": carry a committed **house forecast vs consensus PLUS the sub-component driver** inline, not just "Cons X." Wire in the [§ A sub-component watch list](#a-sub-component-watch-lists-for-major-macro-prints): e.g. `Cons 0.2% MoM core; house per Nomura 0.18% [PDF link] — shelter softening, IT-hardware tariff pass-through offsetting`. **The house number must be one of two honest things**: (a) an **adopted, attributed broker forecast** — `house per Nomura: 0.183% [PDF link]` — taken from the freshest zsxq weekly, or (b) an **explicit inline derivation whose inputs are each cited** — `our ~0.2% = shelter trend [link] + energy fade [link]`. An unattributed bare `our X.XX%` decimal is **forbidden — Claude has no forecasting model, so an invented decimal is fabrication.** Cite the **consensus** source separately; never present any estimate as if a URL contained it. Any expectation tag quoting a number must cite a source containing that number, per CLAUDE.md § "Numerical Accuracy".
 
 ### Step 4: Weekly preview note
 
@@ -208,7 +219,7 @@ Markdown narrative companion to the table:
 
 For each H-impact release, structure the entry as:
 - **Release / time / consensus / prior** — the basics.
-- **House forecast vs consensus (committed to our own precision)** — the GS / Nomura product is the *house number next to Street*, never hidden behind "consensus 0.2%." Commit to the decimals the desk would: Nomura prints `core CPI MoM 0.183%`, GS prints `core CPI +0.31% / 2.67% YoY`. Write it as `our 0.18% vs cons 0.20%`. The house number is our estimate (not a citation); cite the **consensus** source it sits next to.
+- **House forecast vs consensus (adopted or derived — never invented)** — the GS / Nomura product is the *house number next to Street*, never hidden behind "consensus 0.2%." Get the decimals honestly: **adopt** the freshest zsxq broker forecast with attribution (`house per Nomura: 0.183% [PDF link] vs cons 0.20%`), or **derive** one inline with every input cited (`our ~0.2% = shelter trend [link] + energy fade [link]`). A bare unattributed `our 0.18%` is fabrication — forbidden. Cite the **consensus** source separately.
 - **Sub-component forecast with directional bias** — broker-grade: e.g. "core CPI MoM 0.18% (vs 0.30% prior); shelter softening, IT hardware tariff pass-through offsetting." Reference the [sub-component watch list](#a-sub-component-watch-lists-for-major-macro-prints).
 - **What would surprise** — the specific level + direction that moves the tape.
 - **Cross-asset confirmation** — does rates vol / credit / FX / inflation expectations agree? [§ C cross-asset framework](#c-cross-asset-confirmation-framework).
@@ -239,8 +250,10 @@ Apply the [Event positioning lens](#event-positioning-lens--option--vix--spread-
 ## Next week heads-up (forward-roll with our forecast vs consensus)
 
 Every GS "US Week Ahead" and Nomura weekly closes with an explicit forward-roll that states the bank's OWN forecast vs consensus on the headline upcoming print — not just "CPI is next week." Mirror it:
-- <One-line> on the biggest event already on the radar for the week after, with `our X vs cons Y` on the headline print.
+- <One-line> on the biggest event already on the radar for the week after, with `house per <broker> X [PDF link] vs cons Y` (or an inline cited derivation) on the headline print — same adopted-or-derived rule as the Macro block; never a bare invented `our X`.
 ```
+
+**Dedupe rule (one trade, one home).** Each trade decision gets ONE full statement, and the **Positioning implications** table is its single home. The TL;DR / key-takeaways block may carry a one-line version; every other section *references* it ("see Positioning implications") instead of restating the rationale. No section may re-derive a conclusion already derived elsewhere — past failure: the same sell-vol/IV-crush call restated ~10 times across one weekly. Benchmark broker weeklies (GS Kickstart, Nomura) are rigidly templated; each call appears once in its slot.
 
 ### Step 4b — Market/region preview (GS Kickstart template)
 
@@ -255,11 +268,42 @@ When the universe is an **index or region** (e.g. "what's coming for the S&P / T
 
 Every percentile / flow / target number traces to a source per CLAUDE.md § "Numerical Accuracy." Any flows or valuation-percentile **chart** carries the in-chart source annotation per the global chart rule. This template complements (does not replace) the ticker-level Step 3 table — use whichever matches the universe.
 
+### Step 4c — Exhibits (default for file-saved weeklies)
+
+Broker weeklies are exhibit-heavy (Nomura carries Figs 1–10 with in-chart "Source: BLS, Haver, Nomura" footers; GS Kickstart is ~24 pages of exhibits) — a file-saved Mode B weekly that quotes VIX/MOVE/HY-OAS levels in tables but renders zero charts under-delivers. Default: **2–4 matplotlib PNGs generated from `db/indicators.db` (read-only SELECTs only; `/opt/anaconda3/bin/python3`)**, e.g.:
+
+- Vol-complex panel — VIX / VIX1D / `vix_slope`, ~3-month window;
+- CPI core-MoM trend with the upcoming print date marked;
+- Claims 4-wk MA vs its band;
+- HY OAS vs VIX disagreement chart (the cross-asset dissenter visual).
+
+Save to `reports/charts/calendar_<week>_*.png` and embed. Every chart obeys the global chart rules: **in-chart source footer** ("Source: CBOE/FRED via db/indicators.db, as of YYYY-MM-DD"), data covering the full visible span, rightmost point fresh, x-axis clipped to the intersection of plotted series. Skip exhibits only when the deliverable is an in-chat 1–2-day horizon.
+
 ### Week-ahead output location
 
-`reports/calendar/<week-of-YYYY-MM-DD>.md` — Monday-of-week date. Create the directory if missing. Update in place if a previous pass for the same week exists.
+`reports/calendar/<YYYY-MM-DD>.md` where the date is the **literal Monday-of-week date** (e.g. `2026-06-08.md`). An optional universe slug keeps a sector week-ahead and the macro week-ahead from colliding under the update-in-place rule: `2026-06-08_semis.md`. Create the directory if missing. Update in place if a previous pass for the same week + universe exists.
 
 Short horizons (1–2 days) can stay in-chat; only save when the horizon is ≥3 days or the user says "write this up".
+
+### Pre-save checklist (Mode B — run before EVERY save, including in-place updates)
+
+Mandatory blocks accrete across skill commits and silently drop out of outputs — so the full list lives here, in one place. Tick every line before writing the file:
+
+- [ ] Step 3 table carries the **Expectation** column (Impact alone is not the spec).
+- [ ] Macro Notes cells carry **house-vs-cons + sub-component driver** (adopted/derived per the house-number rule — no bare `our X.XX%`).
+- [ ] **Completeness cross-check** done (Step 2); any "(quiet)" day names the sweep that cleared it.
+- [ ] **Fund flows + earnings revisions** block present (or explicit "flows pending").
+- [ ] **Forward-roll** ("Next week heads-up") states house-vs-cons on the headline upcoming print.
+- [ ] Every **borrowed broker PT** carries report-date price + implied upside per § M ("DB: Buy, PT $300" bare is a violation).
+- [ ] **If ≥2 zsxq notes were cited on the same name / print**: every institute view dated, same-institute revisions shown old → new with trigger, disagreements flagged side-by-side per § M *Sell-side view evolution (卖方观点演变)* — never blended.
+- [ ] **Exhibits** present per Step 4c (or the horizon is in-chat 1–2 days).
+- [ ] **Dedupe rule** honored — each trade decision stated fully once, in Positioning implications.
+- [ ] **Further viewing** block present, or an explicit "nothing to visualize this week" line.
+- [ ] **Verification log** appended per the cross-cutting guardrail.
+- [ ] All newly added URLs HTTP-checked — **including `xs-macbook-air.local` links** (see cross-cutting guardrails).
+- [ ] Word count within budget (hard cap 5,000).
+
+**Any in-place update to an existing `reports/calendar/` or `reports/ma/` report — even a link fix — re-runs this checklist before commit.** A touched report that still misses a mandatory block is a fresh violation, not grandfathered.
 
 ---
 
@@ -511,6 +555,8 @@ State the probability of close as a **range, not a point estimate**, with explic
 
 The probability range should sum to 100% and have a reasonable spread — single-point "92% likely" is overconfident; "70/20/10" is healthy for a mid-pipeline deal.
 
+**When zsxq broker notes handicap the deal (≥2 notes):** date every institute view (filename `-YYMMDD` suffix = report date) and flag disagreement on close probability explicitly — institute / date / implied probability or view / core argument, each citing its `/zsxq/pdf/<file_id>/<urlencoded-name>` link. An institute revising its own handicap as milestones pass is a dated What-to-Watch event, not a silent overwrite (per § M *Sell-side view evolution (卖方观点演变)*).
+
 #### Step 6 — Recent news scan (last 30 days)
 
 Web-search the last 30 days for:
@@ -548,6 +594,8 @@ Every mode-C report must contain:
 5. **Probability range** (not a point estimate) with named triggers.
 6. **`## Data Used / 数据来源清单`** manifest.
 7. **`## Guardrails for this tracking pass`** block.
+
+**Pre-save checklist (Mode C — run before every save, including in-place updates):** all 7 mandatory blocks above present; direction confirmed per Step 0; spread math shows all three inputs with as-of date; every newly added URL HTTP-checked (including `xs-macbook-air.local` zsxq links); when ≥2 zsxq notes handicap the deal, every institute view dated + same-institute revisions and disagreements flagged per Step 5 / § M *Sell-side view evolution (卖方观点演变)*; Further-viewing block present or explicit "nothing to visualize" line; verification log appended per the cross-cutting guardrail.
 
 #### Data Used / 数据来源清单 (mandatory)
 
@@ -615,7 +663,7 @@ For every binary event (macro print, earnings, FOMC, vote outcome), ask in order
 | Tool | Measures | Where to find | What it tells you |
 |---|---|---|---|
 | **CMEGroup FedWatch** | Implied probability of each FOMC outcome at each meeting through year-end | [cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html](https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html) | What's already priced into the rate path. If hike-odds-by-year-end are already 40%, a hot CPI only adds 5–10pp. |
-| **2y Treasury yield** | The cleanest mirror of FedWatch (front-end is fully Fed-driven) | [FRED — DGS2](https://fred.stlouisfed.org/series/DGS2) | If 2y is at 4.05% before CPI, hawkish positioning is in; bearish surprise gets a small move. If 2y is at 3.85%, dovish positioning is in; hot CPI gets a 10–15bp jump. |
+| **2y Treasury yield** | The cleanest mirror of FedWatch (front-end is fully Fed-driven) | `db/indicators.db` symbol `dgs2` (backup [FRED — DGS2](https://fred.stlouisfed.org/series/DGS2)) | If 2y is at 4.05% before CPI, hawkish positioning is in; bearish surprise gets a small move. If 2y is at 3.85%, dovish positioning is in; hot CPI gets a 10–15bp jump. |
 | **SPX 1DTE / 0DTE straddle** | The option market's literal $-value bet on the move in the next 24 hours | Bloomberg OMON, optionsalpha, spotgamma. Or compute: ATM call + ATM put expiring next session. | If SPX 5800 and the 5800 straddle expiring tomorrow is $50, implied move is ±0.86%. Compare to historical reactions at the indicator's bull/bear levels. |
 | **VIX (1-mo)** | 30-day implied SPX vol — the overall risk premium | `db/indicators.db` symbol `vix` (Tier-2 helper-ingested; backup [^VIX](https://www.cboe.com/tradable_products/vix/)) | Cheap vol entering CPI (VIX <14 when 3-yr CPI-day average is ~16) = lean long gamma. Rich vol (>20) = lean short gamma. |
 | **VIX1D** (true event-day vol) | 1-day SPX implied vol — spikes on CPI / NFP / FOMC days, crushes intraday post-event | `db/indicators.db` symbol `vix1d` (backup [CBOE VIX1D](https://www.cboe.com/us/indices/dashboard/VIX1D/)) | VIX1D > VIX = event fear priced today; if also VIX1D ≥ 25, downside tail is fat — sell premium with a tail hedge. |
@@ -624,7 +672,6 @@ For every binary event (macro print, earnings, FOMC, vote outcome), ask in order
 | **SKEW (CBOE)** | Tail-risk premium — 25-delta-put IV vs 25-delta-call IV | `db/indicators.db` symbol `skew` | Steep skew (>140) = downside is priced fat, asymmetric upside on a bull print. Flat skew (<120) = balanced bets. SKEW >145 + VIX <14 = "calm with a fat tail" — buy puts cheaply. |
 | **MOVE index** | Treasury vol — rates-vol equivalent of VIX | `db/indicators.db` symbol `move` | CPI weeks usually run 10–20% above 3-mo average. >120 = rates vol elevated; <80 = rates vol cheap. **Cross-check vs equity vol** — if VIX spikes but MOVE doesn't, the rates market hasn't confirmed the move (equity vol may mean-revert). |
 | **HY OAS / IG OAS** | Credit risk premium — cross-asset complacency check | `db/indicators.db` symbols `hy_oas` / `ig_oas` | If HY <300bp entering a hot CPI, the credit market is under-pricing recession risk and equity vol is the cleaner expression. If HY >400bp, credit already has growth fear in. |
-| **2y Treasury yield** | Front-end rates — cleanest mirror of FedWatch positioning | `db/indicators.db` symbol `dgs2` | If 2y at 4.05% before CPI, hawkish positioning is in; bearish surprise gets a small move. If 2y at 3.85%, dovish positioning in; hot CPI gets a 10–15bp jump. |
 | **5y5y forward inflation breakeven** | Forward inflation expectations from TIPS | `db/indicators.db` symbol `t5yifr` | If 5y5y >2.55% entering CPI, "expectations un-anchoring" is already priced — relief print delivers outsized rally. <2.30% = expectations well-anchored (the Fed's preferred read), hot print delivers larger shock. |
 | **Single-name ATM straddle** | Implied move on earnings | Bloomberg OMON; [marketchameleon.com](https://marketchameleon.com/Overview/<TICKER>/Earnings/Earnings-Dates/) — quotes consensus implied move | The ATM straddle expiring the Friday after earnings = expected gap magnitude. ORCL typical 5–7%; ADBE 6–9%; mega-cap (NVDA / META / AMZN) 6–10%. |
 
@@ -754,7 +801,7 @@ For each print, the brief should answer: **"if sub-component X comes in at level
 
 ### B. Fed speaker hawk / dove map (every Mode A brief)
 
-Every day brief covering a Fed-speaker calendar must include the speaker's stance + voting status + likely emphasis. Recurring pattern from broker notes:
+Every day brief covering a Fed-speaker calendar must include the speaker's stance + voting status + likely emphasis. **Build the map fresh at write time — do not copy stances from this file**: pull the current-year voter roster from [federalreserve.gov/monetarypolicy/fomccalendars.htm](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm) and tag each speaker's stance from their most recent public remarks (web search; cite the speech). The table below is a worked illustration of the format only (as written 2026-05) and goes stale silently:
 
 | Position | Speakers (recent stance) | Voting on current FOMC |
 |---|---|---|
@@ -801,14 +848,14 @@ Every Nomura weekly explicitly lists the upcoming data with directional bias —
 This week's key data:
 - Mon: ISM Services — likely above 50, supported by [services PMI from regional Feds]
 - Tue: NFIB small biz — flat; consistent with the K-shaped consumer signal
-- Wed 08:30: May CPI — core MoM 0.18% (vs 0.30% prior); shelter softening, energy fade post-ceasefire
+- Wed 08:30: May CPI — core MoM 0.18% per Nomura weekly [PDF link] (vs 0.30% prior); shelter softening, energy fade post-ceasefire
 - Wed AMC: ORCL Q4 FY26 — bull/bear OCI sub-metrics
 - Thu 08:30: May PPI — headline 0.4% (vs 1.4% prior); trade services cooling; jobless claims 220k
 - Thu AMC: ADBE Q2 FY26
 - Fri 10:00: U-Mich June prelim — 1y inflation expectations 4.3% (eased from 4.5%)
 ```
 
-The directional bias forces commitment. "Cons 0.2%" without direction is a calendar entry; "we expect 0.18% with the mechanism being shelter softening" is an analyst view.
+The directional bias forces commitment. "Cons 0.2%" without direction is a calendar entry; "0.18% per the Nomura weekly, mechanism shelter softening" is an analyst view — adopted with attribution, per the house-number rule in [Step 3](#step-3-calendar-view).
 
 ### F. Exuberance / regime check (two complementary frameworks)
 
@@ -844,9 +891,26 @@ Indicator categories the BMC tracks (with current readings as of the most recent
 - M&A volume (peak signals)
 - Commodity / FX hawkishness
 
-**Calibration:** Citi's BMC at ≈10 / 18 currently (US 11.5, Europe 5; post-2008 high). Historical peaks: 2000 dot-com ≈ 17.5; 2007 GFC ≈ 16. **Rule of thumb**: ≥10 = exuberance accumulating; ≥12 = dip-buying stops working; ≥14 = pre-top.
+**Calibration:** historical peaks: 2000 dot-com ≈ 17.5; 2007 GFC ≈ 16. **Rule of thumb**: ≥10 = exuberance accumulating; ≥12 = dip-buying stops working; ≥14 = pre-top. The *current* BMC score must be re-pulled at write time from the latest Citi BMC PDF in zsxq and cited to that PDF — do NOT quote a score from this file (any reading written here goes stale silently; the ≈10/18 reading once embedded here was as-of an early-2026 Citi update).
 
 **When to use which.** Goldman's 4-dim is the qualitative narrative (used to explain "we're 86th-percentile exuberant but not at a top"). Citi BMC is the calibrated score (used to put a number on it vs known historical tops). Both can appear in the same Mode B preview when the question is "is the rally getting late?"
+
+### G. Tariff / regulatory schedule tracking
+
+When tariff or regulatory dates are ticking within the window, list them explicitly as discrete events:
+- "Section 301 tariffs on 60 trade partners (10–12.5%) — already in effect post-Jul 22 expiry. Effective tariff rate now 7% → 8.5% per Nomura."
+- "FDA AdComm date Jun 23 — [ticker]"
+- "EU Commission Phase II decision deadline Jun 30 — [deal]"
+
+Brokers track these as the macro-political event calendar; they often dominate the tape on quiet macro weeks.
+
+### H. Fund flows + earnings revisions trackers (standard Mode B block)
+
+Goldman runs a standalone **Weekly Fund Flows / EM Weekly Fund Flows Monitor** product — this is a first-class weekly input, not "if available." Promote it to a standard Mode B block. The GS dollarized-by-region format:
+- **Fund flows** — equity-vs-bond inflows **by region ($)**, **sector skew**, **cross-border FX flows**, **retail margin / leverage**, **hedge-fund net-positioning deltas**, and **passive index-rebalance impact** (see the rebalance method below). "$23B global equity inflows last week, US drove, KR/TW outflows $14.5B" is the standard read — always dollarized and directional, never "flows were positive."
+- **Earnings revisions** — forward "FY EPS revised +X% YTD, leading sectors [list], lagging [list]." When revisions are leading the index, it's a healthy rally; when the index is leading revisions, it's late-cycle. Carry the **forward EPS-revision direction by sector** as a row.
+
+State the source (EPFR-style / GS flow tables) inline. If flows aren't pullable at write time, write "flows pending" — do not fabricate, consistent with the no-fabrication guardrail.
 
 ### I. Valuation-metric regime switch (Barclays "capex supercycle" pattern)
 
@@ -899,9 +963,9 @@ BofA / Bernstein / DB style: specific "if X then Y" rules from historical data, 
 
 | Rule | Threshold | Historical pattern (avg) |
 |---|---|---|
-| **CPI YoY > 4%** | (was 3.8% in April) | SPX −4% over next 3 months, −7% over 6 months |
+| **CPI YoY > 4%** | pull current CPI YoY from FRED / BLS at write time | SPX −4% over next 3 months, −7% over 6 months |
 | **Unemployment ≤ CPI YoY** | inflation-adjusted misery > 0 | Hike cycle imminent; equity returns negative for 12 months |
-| **NFP > 125k 3M MA** | (was 172k May) | 30y UST tests 5%; rates path stays hawkish |
+| **NFP > 125k 3M MA** | pull the current 3M MA from FRED / BLS at write time | 30y UST tests 5%; rates path stays hawkish |
 | **HY OAS < 300bp + VIX > 20** | "cross-asset disagreement" | Equity vol mean-reverts in 5 of 6 historical cases |
 | **VIX term backwardation + VVIX > 100** | event-driven fear priced | Vol crushes within 5 sessions in 7 of 8 historical cases when credit doesn't follow |
 | **AAII bull-bear > 30** | extreme retail bullish | SPX −2% / 4 weeks following (historical avg) |
@@ -913,6 +977,8 @@ BofA / Bernstein / DB style: specific "if X then Y" rules from historical data, 
 | **Goldman Financial Conditions Index (FCI) tightening 2 std dev** | financial-conditions shock | SPX vol +30%; downturn risk 18 months out |
 
 This is the "Bloomberg terminal tag" equivalent — when an indicator hits a calibrated threshold, the rule fires. Use these to flag setups in Mode A briefs without needing fresh historical analysis.
+
+**Sourcing rule for §K (mandatory).** The "Historical pattern" column above is a desk-heuristics compilation — the stats ("5 of 6 cases", "SPX −4%/3m") are NOT independently sourced in this file. Therefore: **any §K rule quoted in a report must either carry an inline citation, in the same table/paragraph, to a source that contains the stat (a specific broker PDF in zsxq or a named study), or be explicitly labelled `desk heuristic — unverified, qualitative only` with the precise percentages dropped** ("vol has historically crushed within days in most such cases", not "7 of 8"). Current readings ("at risk", "tripped") are pulled from `db/indicators.db` / FRED at write time, never copied from this file.
 
 ### L. LLM-as-tool scoring of qualitative Fed publications
 
@@ -940,6 +1006,7 @@ This is the structured way to track the Fed's qualitative tone across releases �
 
 **Broker header convention (prepend before the signal table).** Every sell-side earnings preview — DB's ORCL F4Q, MS's AVGO, Bernstein's ADBE — opens with the rating + price-target frame BEFORE the operational signals, so the reader knows the recommendation context first. Lead each earnings-preview entry with:
 - **Rating + 12-month price target** — e.g. "Buy, 12m PT $XXX **vs $YY @ <note date> → +ZZ%**." Always pair a borrowed broker PT with the stock's price on the note's date + the implied upside it fixed — a bare "12m PT $XXX" is uninterpretable without the level the analyst was targeting from. Pull the report-date price + upside from `stock_price_target_db` (`report_date_price` / `upside_pct`, shown at `/pt`), or a yfinance close on the note's date; `report-date price n/a` if unavailable, never today's spot as a stand-in. Label it `*Analyst view:*` per the project rule and keep it OUT of any filing citation (a PT is never sourced to a 10-K).
+- **Sell-side view evolution (卖方观点演变)** — when **≥2 zsxq notes** cover the same name or print: date every institute view (the filename's `-YYMMDD` suffix is the authoritative report date; sanity-check against `create_time`) and show same-institute revisions as old → new with the stated trigger (`PT $325 → $340 post-print`); when institutes disagree on the expected print or PT (opposite ratings, PTs >20% apart), flag the disagreement dated side-by-side — never average it into a fake consensus. A read-only pre-pass on the PT store (`/opt/anaconda3/bin/python3`, `sqlite3.connect('file:db/stock_price_target.db?mode=ro', uri=True)` → SELECT `research_institute, rating, price_target, report_date, report_file_id, upside_pct`) surfaces revisions + PT dispersion before any PDF re-read; writes stay exclusively via `scripts/persist_pts.py`. Each view cites its `/zsxq/pdf/<file_id>/<urlencoded-name>` link.
 - **Bull / bear PT scenario** — the multiple bridge to each, e.g. "bull 28× → $619 / bear 20× → $298." Show the multiple so the reader can re-derive.
 - **EPS-estimate trajectory** — `FYxxA / FYxxE / FYxxE` (last-actual + the next two estimate years), so the print is read against the estimate path, not in isolation.
 - **The single re-rating catalyst** — name the one thing that re-rates the stock ("show-me" / "prove-it" framing, Bernstein ADBE-style): the guide-raise math, the segment inflection, the buyback accretion — whatever moves the multiple.
@@ -958,23 +1025,6 @@ Then the operational signals — DB's ORCL preview is the template for going bey
 
 For each catalyst, the brief should populate at least 4 of these signal types. The consensus is the floor; the broker-grade preview adds the operational-detail signals that drive the actual stock reaction.
 
-### G. Tariff / regulatory schedule tracking
-
-When tariff or regulatory dates are ticking within the window, list them explicitly as discrete events:
-- "Section 301 tariffs on 60 trade partners (10–12.5%) — already in effect post-Jul 22 expiry. Effective tariff rate now 7% → 8.5% per Nomura."
-- "FDA AdComm date Jun 23 — [ticker]"
-- "EU Commission Phase II decision deadline Jun 30 — [deal]"
-
-Brokers track these as the macro-political event calendar; they often dominate the tape on quiet macro weeks.
-
-### H. Fund flows + earnings revisions trackers (standard Mode B block)
-
-Goldman runs a standalone **Weekly Fund Flows / EM Weekly Fund Flows Monitor** product — this is a first-class weekly input, not "if available." Promote it to a standard Mode B block. The GS dollarized-by-region format:
-- **Fund flows** — equity-vs-bond inflows **by region ($)**, **sector skew**, **cross-border FX flows**, **retail margin / leverage**, **hedge-fund net-positioning deltas**, and **passive index-rebalance impact** (see the rebalance method below). "$23B global equity inflows last week, US drove, KR/TW outflows $14.5B" is the standard read — always dollarized and directional, never "flows were positive."
-- **Earnings revisions** — forward "FY EPS revised +X% YTD, leading sectors [list], lagging [list]." When revisions are leading the index, it's a healthy rally; when the index is leading revisions, it's late-cycle. Carry the **forward EPS-revision direction by sector** as a row.
-
-State the source (EPFR-style / GS flow tables) inline. If flows aren't pullable at write time, write "flows pending" — do not fabricate, consistent with the no-fabrication guardrail.
-
 ---
 
 ## Learning from sell-side institutional research
@@ -982,7 +1032,7 @@ State the source (EPFR-style / GS flow tables) inline. If flows aren't pullable 
 A methodology pass over how Goldman, Morgan Stanley, UBS, J.P. Morgan, Bernstein, Nomura, Citi, BofA, Deutsche Bank, and HSBC build the catalyst-calendar / week-ahead report type. Each lesson below is wired into a specific section above — this section is the index plus the named-house-style rationale.
 
 - **Three separate dimensions per catalyst (MS "Catalyst Preview: What's Ahead?").** Brokers never collapse importance, index-impact, and surprise-direction into one column. The Mode B table now carries **Impact** ("does the index move?") + an optional **Importance** tag ("does the thesis care?") + an **Expectation** column ("which way do WE lean?": in-line / upside-surprise likely / downside-risk / meaningful beat possible / binary). See [Step 3](#step-3-calendar-view).
-- **House forecast vs Street, committed to our own precision (GS "US Week Ahead", Nomura "US Economic Weekly").** The product is the house number next to consensus — Nomura prints `core CPI MoM 0.183%`, GS `+0.31% / 2.67% YoY` — never hidden behind "consensus 0.2%." Macro rows carry `our X vs cons Y` + the sub-component driver inline; the house number is the analyst's estimate (not a citation), the consensus is the cited source. See [Step 3 Notes convention](#step-3-calendar-view) and the [§ Macro block](#macro).
+- **House forecast vs Street, adopted or derived (GS "US Week Ahead", Nomura "US Economic Weekly").** The product is the house number next to consensus — Nomura prints `core CPI MoM 0.183%`, GS `+0.31% / 2.67% YoY` — never hidden behind "consensus 0.2%." Macro rows carry `house per <broker> X [PDF link] vs cons Y` + the sub-component driver inline; the house number is an attributed broker adoption or an inline cited derivation, never an invented decimal; the consensus is the cited source. See [Step 3 Notes convention](#step-3-calendar-view) and the [§ Macro block](#macro).
 - **Close every weekly with a forward-roll stating our forecast vs consensus (GS / Nomura).** The "next week to watch" line carries `our X vs cons Y` on the headline upcoming print, not just a date. See [Next week heads-up](#next-week-heads-up-forward-roll-with-our-forecast-vs-consensus).
 - **Market/region universe → GS "Weekly Kickstart" skeleton.** When the universe is an index/region not a ticker list, use the rigid six-block template (index move → flows → EPS-revision direction → valuation percentile vs own 10y → 3/6/12m target with EPS+valuation bridge → OW/MW/UW grid). See [Step 4b](#step-4b--marketregion-preview-gs-kickstart-template).
 - **Fund flows + EPS revisions are a standalone GS product, not an afterthought.** Dollarized by region, directional, with sector skew + cross-border FX + retail leverage + HF net-positioning deltas. Promoted from "if available" to a standard Mode B block. See [§ H](#h-fund-flows--earnings-revisions-trackers-standard-mode-b-block).
@@ -1005,11 +1055,14 @@ When this report covers something a reader would struggle to picture from prose 
 - **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
 - **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
 
-> Full spec: `references/citations.md` § "Further viewing — explainer videos".
+> Full spec: `../company-research/references/citations.md` § "Further viewing — explainer videos" (this skill has no local `references/` dir; the shared spec lives in company-research).
 
 ## Cross-cutting guardrails (all modes)
 
 - **Citation standard** — every substantive paragraph carries ≥1 inline markdown-link citation per the project's `.claude/skills/company-research/references/citations.md` spec. Day-of briefs are exempt from this for ephemeral macro-print numbers (consensus pulled from Bloomberg/Reuters terminals), but file-saved versions get inline links to the original release schedule (BLS, BEA, FRB, EIA, etc.).
+- **NEVER link repo files outside `reports/` through the `/claude-reports/view/` route.** The viewer (`reports_viewer.py`) serves `reports/**` ONLY — a link like `http://xs-macbook-air.local:5001/claude-reports/view/.claude/skills/.../SKILL.md#...` or `.../view/CLAUDE.md` is structurally a 404. Reference this skill's own methodology sections as plain text ("per skill § K") with **no hyperlink**. (Past failure: one weekly shipped 6 such dead links, in two inconsistent path forms.)
+- **`xs-macbook-air.local` URLs get the same HTTP check as external URLs.** The project link-validation rule applies in full: `curl` each newly added local URL for `200` before saving — the server is always up on `:5001`, so there is no excuse to skip. zsxq PDF links use the direct-download route `/zsxq/pdf/<file_id>/<urlencoded-name>`.
+- **Verification log (every file-saved report — Mode B weekly, Mode C deal report, any saved Mode A brief).** End the file with a collapsed `<details><summary>Verification log — YYYY-MM-DD</summary>` block listing (a) the HTTP status of every newly added URL (external AND `xs-macbook-air.local`), and (b) 3–5 random number→source spot-checks in the `X = N from <URL>: ✓ string-matches / ✗ NOT in source — fixed` format.
 - **Numerical accuracy** — every number traces to a URL that literally contains it. Don't quote a "+185% QoQ" without sourcing it inline. See CLAUDE.md § "Numerical Accuracy".
 - **No destructive SQL against `db/*.db`** — read-only. See CLAUDE.md § "Database Safety".
 - **Filenames must start with English / pinyin** — even Chinese reports. `Anpeilong_安培龙_SZSE002050_*.md` good; `安培龙_SZSE002050_*.md` bad. See CLAUDE.md § "Research Report Filenames".

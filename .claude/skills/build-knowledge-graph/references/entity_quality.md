@@ -94,50 +94,6 @@ isolated; the graph is now 100% companies.
   appear *only* in the legal disclosure footer and are noise. Examples:
   `UBS Securities Australia Ltd`, `Macquarie Capital (USA) Inc.`.
 
-## FORBIDDEN — never extract these
-
-- **Human person names.** Ever. No CEO names, no CFO names, no analyst
-  names, no author names, no board members, no founders, no
-  politicians, no judges, no expert witnesses. Even if the person is
-  central to the report ("Jensen Huang's keynote"), extract NVIDIA, not
-  Jensen Huang.
-
-- **Dollar / currency amounts.** `$5.2bn`, `RMB 26.0bn`,
-  `US$100m upfront`, `$15 / share`. Strings that start with `$` or
-  contain a number plus a unit. Never an entity.
-
-- **Generic technology categories.** `AI`, `GPU`, `LLM`, `cloud`,
-  `quantum`, `EUV`, `5G`, `HBM`. These describe a *class* of thing, not
-  a branded entity. Exception: index inclusion (`AI产业ETF`) where the
-  whole name is the index identifier.
-
-- **Generic financial concepts.** `oncology drug`, `bill of materials`,
-  `OpEx`, `gross margin`, `convertible note`, `dividend`.
-
-- **Countries / regions.** `China`, `United States`, `EU`, `Taiwan`,
-  `Greater China`. They're scopes, not entities.
-
-- **Government bodies and trade orgs.** `IRS`, `SEC`, `FDA`, `MIIT`,
-  `WTO`, `IMF`, `OPEC`. These appear *in* reports but aren't subjects
-  of investment analysis. The exception: when the report is
-  specifically about a regulatory action (`FDA AdComm risk on X`), the
-  regulator is a relevant node — but use the
-  `regulatory-risk-monitor` skill for that, not this one.
-
-- **Legal / accounting framework names.** `GAAP`, `IFRS`, `Sarbanes-
-  Oxley`, `Reg FD`, `Rule 10b-5`, `Form 10-K`.
-
-- **Generic time periods.** `Q1 2025`, `FY24`, `2026 outlook`.
-
-- **Deal / transaction labels.** `Merger Agreement`,
-  `OxyChem Transaction`, `Series C round`. These name an event, not a
-  company.
-
-- **Disclaimer-page broker subsidiaries.** Pattern:
-  `<Bank> <Country/City> <Securities|Capital|Brokerage> Ltd`. They
-  appear *only* in the legal disclosure footer and are noise. Examples:
-  `UBS Securities Australia Ltd`, `Macquarie Capital (USA) Inc.`.
-
 - **Vague or single-use product mentions.** A widget that's mentioned
   once in passing with no buyer / supplier / competitor context. If the
   product doesn't connect to at least one other entity in the report,

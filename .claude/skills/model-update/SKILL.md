@@ -1,6 +1,9 @@
-# Model Update
-
+---
+name: model-update
 description: Update financial models with new data — quarterly earnings, management guidance, macro changes, or revised assumptions. Adjusts estimates, recalculates valuation, and flags material changes. Use after earnings, guidance updates, or when assumptions need refreshing. Triggers on "update model", "plug earnings", "refresh estimates", "update numbers for [company]", "new guidance", or "revise estimates".
+---
+
+# Model Update
 
 **Language:** English-only by default (this is a fast-turnaround, monitoring-style note, matching the project's tracking-skills English-default rule). Produce bilingual / Simplified-Chinese output only on explicit request (`in Chinese`, `bilingual`, `--lang zh`).
 
@@ -29,6 +32,8 @@ Determine the update trigger:
 - **Macro update**: Interest rates, FX, commodity prices changed
 - **Event-driven**: M&A, restructuring, new product, management change
 - **Mechanical / non-fundamental**: Bonus issue, stock split, share-count change, or FX-only translation. These scale EPS and TP **proportionally with no thesis change** — and the note must say so explicitly. Model on JPM Envicool "Model update for bonus issue" (EPS −23% from dilution, TP scaled proportionally, rating reiterated). Skip the Driver Bridge and Scenario blocks; state plainly that the revision is mechanical and the rating is reiterated.
+
+**Locate the prior baseline before touching numbers (MUST).** The Old column of the Step-3 revision grid must come from a real prior, located in this order: (a) the ticker's most recent model-update / earnings-analysis note under `reports/earnings/`, (b) the initiating-coverage model under `reports/company/<slug>/`, or (c) a dated zsxq broker note labelled *Analyst view:* (read back from `db/stock_price_target.db` / the `/pt` viewer via existing helpers — read-only). If NO prior house estimate exists, say so explicitly and either bootstrap a baseline labelled as new — printing `n/a (first note)` in the Old columns — or hand off to [[initiating-coverage]]. NEVER invent a prior.
 
 ### Step 2: Plug New Data
 
@@ -142,9 +147,18 @@ Mirror the asymmetry the analogs surface (UBS CAT "Key things to watch" + risks;
 
 ### Step 6: Output
 
-- Updated Excel model (if user provides the existing model)
-- Estimate change summary (markdown or Word)
-- Updated price target derivation
+- Primary deliverable: a markdown note at `reports/earnings/<TICKER>_model_update_<YYYY-MM-DD>.md` (English ticker first per the project filename rule) containing the estimate change summary and the updated price target derivation. Markdown only — no Word output (the report viewer surfaces `.md`).
+- Updated Excel model only if the user supplied an existing model to update.
+- Commit + push in the same task (Conventional Commit, e.g. `feat(reports/earnings): ...`). Successive model-update notes for the same ticker form the estimate-revision history the Important Notes tell you to track.
+
+### Step 7: Verify & log
+
+Before saving/committing:
+
+1. HTTP-check every URL with a real-browser User-Agent — `200 OK` only; drop or replace failures per the link-validation rule.
+2. Spot-check ≥5 numbers — including the consensus figure, the guidance quote, and at least one Driver-Bridge lever input — each must string-match the URL cited in the same paragraph.
+3. Re-derive the TP line arithmetic (base-year metric × multiple) and each Chg% cell in the revision grid.
+4. Append `<details><summary>Verification log — YYYY-MM-DD</summary>...</details>` listing each check. Spec: `.claude/skills/company-research/references/citations.md`.
 
 ### Further viewing — explainer videos (optional, but default to including)
 

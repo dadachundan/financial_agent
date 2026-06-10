@@ -11,7 +11,9 @@ Create institutional-quality equity research initiation reports through a struct
 
 This skill produces comprehensive first-time coverage reports following institutional standards (JPMorgan, Goldman Sachs, Morgan Stanley format). Tasks are executed individually, each verifying prerequisites before proceeding.
 
-**Default Font**: Times New Roman throughout all documents (unless user specifies otherwise).
+## Report language
+
+The single-name initiation report follows the Task-1 research document's language: **Simplified Chinese by default** (inheriting `company-research`'s default — technical / financial terms keep English alongside the Chinese gloss), English only on the same explicit opt-in triggers `company-research` uses (`in English`, `English only`, `--lang en`, `--en-only`). Tasks 2–4 artifacts (model tab labels, chart titles/labels, captions) follow the same language choice so the Task-5 assembly is consistent. The multi-name / sector initiation mode (see "Learning from sell-side institutional research") stays English-only by default.
 
 ---
 
@@ -264,13 +266,13 @@ Optional:
 
 ### Update-in-place rule — at most one financial model per company
 
-Before writing, check `reports/company/<Slug>/model/` for an existing model and update it in place rather than creating a parallel dated copy.
+Before writing, check the **whole slug folder** for an existing model and update it in place rather than creating a parallel dated copy. Real prior runs left models at the slug root (Hesai, Synopsys, Hengli, Cadence) or in legacy `Task2_Model/` dirs — a check scoped to `model/` alone returns zero matches and guarantees a duplicate.
 
 ```bash
-ls "reports/company/<Slug>/model/" 2>/dev/null | grep -E "_Financial_Model_.*\.xlsx$"
+find "reports/company/<Slug>" -maxdepth 2 -name "*_Financial_Model_*.xlsx" 2>/dev/null
 ```
 
-- **Exactly one match** → open that workbook (XLSX skill) and edit its tabs in place. Keep the filename even if its embedded date is stale — git history records the actual revision date. Update the cover/header cell that displays "As of <date>" to today.
+- **Exactly one match** → open that workbook (XLSX skill) and edit its tabs in place **at its current location** — even if that location is the slug root rather than the canonical `model/` subdir (or `git mv` it into `model/` once, noting the move). Never create a second copy because the canonical subdir was empty. Keep the filename even if its embedded date is stale — git history records the actual revision date. Update the cover/header cell that displays "As of <date>" to today.
 - **Multiple matches** (legacy state) → update the most recent by mtime, tell the user the older duplicates exist, do not auto-delete.
 - **Zero matches** → create a new workbook with today's date in the filename.
 
@@ -356,13 +358,13 @@ Required from model:
 
 ### Update-in-place rule — at most one valuation analysis per company
 
-Before writing, check `reports/company/<Slug>/valuation/` for an existing analysis and update it in place rather than creating a parallel dated copy.
+Before writing, check the **whole slug folder** for an existing analysis and update it in place rather than creating a parallel dated copy. Real prior runs left valuation files at the slug root and without a date suffix (e.g. `Hesai_NASDAQ_HSAI_Valuation_Analysis.md`) — a check scoped to `valuation/` with a `_<date>` pattern returns zero matches and guarantees a duplicate.
 
 ```bash
-ls "reports/company/<Slug>/valuation/" 2>/dev/null | grep -E "_Valuation_Analysis_.*\.md$"
+find "reports/company/<Slug>" -maxdepth 2 -name "*_Valuation_Analysis*.md" 2>/dev/null
 ```
 
-- **Exactly one match** → overwrite it at the same path. Keep the filename even if its embedded date is stale — git history records the actual revision date. Update the document's internal date / "as of" header to today.
+- **Exactly one match** (excluding `_zh` companions) → overwrite it at its current path — even if that location is the slug root rather than the canonical `valuation/` subdir (or `git mv` it into `valuation/` once, noting the move). Never create a second copy because the canonical subdir was empty. Keep the filename even if its embedded date is stale or missing — git history records the actual revision date. Update the document's internal date / "as of" header to today.
 - **Multiple matches** (legacy state) → update the most recent by mtime, tell the user the older duplicates exist, do not auto-delete.
 - **Zero matches** → create a new file using today's date.
 
@@ -381,7 +383,7 @@ The Excel tabs (DCF, Sensitivity, Comps, Valuation Summary) are added to the **e
 - ❌ Do not create simplified DCF without sensitivity
 
 **⚠️ SOURCE CITATIONS ARE MANDATORY** (see Citation Standards below):
-- ✅ Every peer multiple in the comps table has a source column (e.g. "FactSet, 2026-05-19" or "10-K FY2024")
+- ✅ Every peer multiple in the comps table has a source column (e.g. "Yahoo Finance, 2026-05-19" or "10-K FY2024") — naming only providers actually accessed (no FactSet/Bloomberg/CapitalIQ citations in this environment)
 - ✅ Every macro/market assumption (risk-free rate, ERP, beta, terminal growth) is cited inline
 - ✅ The Excel `Comparable Companies` tab includes a `Source` column per row
 - ✅ The Excel `DCF` tab's assumptions table includes a `Source` column per row (already required by Task 2 template)
@@ -830,7 +832,7 @@ A report without sources is not institutional-quality research — it is an opin
 
 **Source-chain labeling for third-party data.** When the analyst draws a number from a primary filing that itself cites a third party (e.g., Hesai's 6-K says "Yole estimates TAM at $X"), the inline label must make the chain explicit: `[FY2025 6-K 引用 Yole](rId45)` — not `[Yole](yolegroup.com)`. The click leads to the verifiable primary, not a marketing homepage.
 
-**Per-chart source mapping (Task 5 Phase D).** Do NOT use a generic "Yole + Frost" citation on every TAM chart. Walk the chart-generation script (e.g., `build_charts_zh.py` for Task 4 in this repo's reports) and read its `source_line()` calls — they list exactly which sources each chart actually used. Build a `chart_number → [(rId, label), …]` dictionary and cite each caption with the chart-specific list. Financial-model-only charts (DCF sensitivity, scenarios, valuation football field) get `(来源: 本报告财务模型)` without a hyperlink — honest about internal sourcing.
+**Per-chart source mapping (Task 5 Phase D).** Do NOT use a generic "Yole + Frost" citation on every TAM chart. Walk the chart-generation script (e.g., `build_charts_zh.py` for Task 4 in this repo's reports) and read its `source_line()` calls — they list exactly which sources each chart actually used. Build a `chart_number → [(rId, label), …]` dictionary and cite each caption with the chart-specific list. Financial-model-only charts (DCF sensitivity, scenarios, valuation football field) get **no source suffix on the caption at all** — the chart title plus the surrounding prose already make the analyst-projection nature clear, and the "model is not a source" rule below applies to captions too (see the decision tree's third bullet, which is canonical).
 
 **The analyst's own model is NOT a citable source.** Never write `(来源: 本报告模型估算)`, `(Source: our model)`, `(来源: 财务模型 DCF 标签页)`, or anything similar that points at the analyst's own workbook. The model is the analyst's view, not a source the reader can verify — labeling it as a source is functionally lying about provenance. The user's explicit rule: *"if model source, just remove it!! And it is not actual source !!"*
 
@@ -871,7 +873,7 @@ Decision tree for forward-looking / projection paragraphs:
   3. Company Materials (investor day decks, product pages, blog posts)
   4. Industry & Market Research (Gartner, IDC, McKinsey, BCG, market research firms — note "(subscription required)" where applicable)
   5. News & Trade Publications (WSJ, FT, Bloomberg, Reuters, trade press)
-  6. Data Providers (Yahoo Finance, FactSet, Bloomberg, Capital IQ — note source for prices/multiples)
+  6. Data Providers (Yahoo Finance, stockanalysis.com — note source for prices/multiples; cite only providers actually accessed)
 - Every entry: clickable hyperlink + date (YYYY-MM-DD) + 1-line description of what it sourced.
 - Minimum 20 entries. A report with fewer than 20 distinct sources cited has insufficient research depth.
 
@@ -893,7 +895,7 @@ A methodology study of 24 real initiation reports (Goldman Sachs, Morgan Stanley
 
 **Tie the price target to a named out-year and a target date.** Replace the bare "12-month PT" with the house form: `[Rating], 12-month PT [currency][X] = [multiple]× [FY+n]E [EPS/EBITDA], target date [Mon-YYYY], implying [Y]% upside vs [price] ([date])`. Examples: JPM "Dec-2027 target, 40x 2028E EPS"; Citi "36x avg 2027/28E EPS"; Bernstein A+H dual-PT "44x A / 56.4x H on 2BF EPS." The multiple is applied to FY+2 or FY+3, not FY+1.
 
-**Add an "Estimates vs Consensus" pillar — the spine of an initiation.** Table the analyst's out-year revenue / EPS / margin against sell-side consensus (FactSet/Bloomberg/Yahoo) for FY+1..FY+3, state the %-delta, and explain **why the Street is wrong** — that differentiated view is the reason to initiate. Mirror Bernstein Montage "2028E EPS Rmb6.25 vs consensus 4.49, +39%"; UBS Tao "+12-15% above consensus"; UBS Zhongfu per-year EPS-vs-consensus rows. Each consensus figure needs a dated data-provider citation; the analyst's own number is labelled an estimate, **never cited as a source** (honours the "model is not a source" rule).
+**Add an "Estimates vs Consensus" pillar — the spine of an initiation.** Table the analyst's out-year revenue / EPS / margin against sell-side consensus (Yahoo Finance analyst-estimates page; pro-terminal consensus only if the user supplied it) for FY+1..FY+3, state the %-delta, and explain **why the Street is wrong** — that differentiated view is the reason to initiate. Mirror Bernstein Montage "2028E EPS Rmb6.25 vs consensus 4.49, +39%"; UBS Tao "+12-15% above consensus"; UBS Zhongfu per-year EPS-vs-consensus rows. Each consensus figure needs a dated data-provider citation; the analyst's own number is labelled an estimate, **never cited as a source** (honours the "model is not a source" rule).
 
 **Page 1 is a fixed data block, not prose.** Add the desk identifier/header block (confirmed in the DB Huayan OCR): Rating | "Initiating Coverage" tag | report date | exchange:ticker (+ Reuters/Bloomberg codes) | current price (as-of date) | 12-month PT | implied upside/downside% | 52-week range | sector/industry | benchmark index level | analyst (+ CFA), plus a "Key indicators (FY1)" mini-table (ROE, net debt/equity, BVPS, P/B, operating margin) and a 1m/3m/12m absolute+relative performance row. Every figure carries an inline citation (price/52-wk/performance → dated Yahoo Finance link; ratios → the underlying filing). This extends — does not replace — the existing Page-1 rating box and investment bullets.
 
@@ -932,21 +934,20 @@ A methodology study of 24 real initiation reports (Goldman Sachs, Morgan Stanley
 
 ### File Organization
 
-Recommended structure during workflow:
+All deliverables live under the company's slug folder in the repo — never a scratch `ProjectFolder/` or `TaskN_*/` tree:
 ```
-ProjectFolder/
-├── Task1_Research/
-│   └── [Company]_Research_Document.md
-├── Task2_Model/
-│   └── [Company]_Financial_Model.xlsx
-├── Task3_Valuation/
-│   └── [Company]_Valuation_Analysis.pdf
-├── Task4_Charts/
-│   ├── chart_01.png
-│   └── ... (25-35 files)
-└── Task5_Report/
-    └── [Company]_Initiation_Report.md
+reports/company/<Slug>/
+├── <Slug>_Research_Document_<Date>.md       # Task 1 (or _公司研究_<Date>.md for Chinese)
+├── model/
+│   └── <Slug>_Financial_Model_<Date>.xlsx   # Task 2 (+ Task 3 tabs added in place)
+├── valuation/
+│   └── <Slug>_Valuation_Analysis_<Date>.md  # Task 3
+├── charts/
+│   ├── chart_01_….png                       # Task 4 (25-35 files)
+│   └── chart_index.txt
+└── <Slug>_Initiation_Report_<Date>.md       # Task 5 — slug root, so ![](charts/…) resolves
 ```
+Legacy runs left model / valuation files at the slug root (or in `Task2_Model/` / `Task3_Valuation/` dirs) — that is exactly why the Task 2/3 update-in-place checks search the whole slug folder.
 
 ### No End-to-End Execution
 

@@ -35,8 +35,18 @@ import sys
 import time
 from pathlib import Path
 
-PROJECT_ROOT = Path("/Users/x/projects/financial_agent")
-DB_PATH      = PROJECT_ROOT / "db" / "zsxq.db"
+# Walk up to the project root (the dir containing db_paths.py) and import it,
+# so FINAGENT_DB_DIR redirection reaches this script (CLAUDE.md DB-safety rule).
+# This script WRITES the OCR cache (pdf_files.ocr_text), so honouring the
+# sandbox redirect is load-bearing, not cosmetic.
+_here = Path(__file__).resolve()
+for _anc in _here.parents:
+    if (_anc / "db_paths.py").exists():
+        sys.path.insert(0, str(_anc))
+        break
+from db_paths import db_path  # noqa: E402
+
+DB_PATH = db_path("zsxq.db")
 
 
 def _ensure_columns(conn: sqlite3.Connection) -> None:

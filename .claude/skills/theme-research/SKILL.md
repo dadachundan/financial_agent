@@ -7,7 +7,7 @@ description: Build and maintain thematic equity baskets (e.g. humanoid-robotics-
 
 A theme = **named basket of tracked tickers + keywords**, written as a single markdown file. Themes are *living* artifacts — they get refreshed periodically as movers shift and the keyword set evolves. Distinct from [[sector-overview]] (one-shot essay on a sector landscape) and from a watchlist (no analytical depth, just price tracking).
 
-Adapted from the [LLMQuant theme research workflow](https://github.com/LLMQuant/skills/tree/master/skills/llmquant-portfolio/workflows/theme-research.md) (MIT), re-pointed at a markdown-file convention under `reports/themes/` instead of LLMQuant's hosted theme storage. The file format matches the rest of your `reports/` tree — pure markdown, no YAML, viewer-renderable at `localhost:5001/reports`.
+Adapted from the [LLMQuant theme research workflow](https://github.com/LLMQuant/skills/tree/master/skills/llmquant-portfolio/workflows/theme-research.md) (MIT), re-pointed at a markdown-file convention under `reports/themes/` instead of LLMQuant's hosted theme storage. The file format matches the rest of your `reports/` tree — pure markdown, no YAML, viewer-renderable at `http://xs-macbook-air.local:5001/reports`.
 
 ## When to use
 
@@ -102,7 +102,7 @@ humanoid robotics / 人形机器人 · force-torque sensor / 力矩传感器 · 
 
 ## Performance (since last refresh)
 
-<refresh-driven; replaced in place each refresh; benchmark required (S&P 500 / CSI 300 / sector ETF) with comparable window>
+<refresh-driven; replaced in place each refresh; benchmark required (S&P 500 / CSI 300 / sector ETF) with comparable window. On a CREATE pass the heading is `## Performance (entry context — tracked clock starts YYYY-MM-DD)` — see Step 4>
 
 ### Basket scorecard
 
@@ -231,13 +231,13 @@ Keep the ranking in `## Thesis` (a closing preference sentence) or as a one-line
 
 The skill persists sell-side PT / rating calls to `stock_price_target_db` — but the theme *file* (the thing the user actually reads) must also **show** them, or it is valuation-blind for every name. When ≥1 tracked name carries sell-side coverage, include a mandatory **`## Valuation snapshot`** table — **one row per tracked name**, rendered *separately* from the 5-column Tracked-tickers table (which stays a clean parse target — do NOT add valuation columns there). Columns:
 
-`Ticker · Rating · Px @ note date · PT · Upside% (vs note date) · current px · fwd multiple (P/E or sector-appropriate) · own ~10yr-avg multiple · FY1 / FY2 EPS (or the forward metric)`
+`Ticker · Rating · Px @ note date · PT · Upside% (vs note date) · current px · fwd multiple (P/E or sector-appropriate) · own ~10yr-avg multiple · FY1E · FY2E (numeric, same metric for both, the metric named in the header)`
 
 Rules:
 - **Populate from the helper, don't hand-transcribe** — read the rows back from `stock_price_target_db` so the table and the `/pt` viewer agree.
 - **The "Px @ note date" column is mandatory and is the load-bearing price, not today's spot.** It is `report_date_price` from `stock_price_target_db` (the **"Px @ Report"** column in `/pt`) — the stock's price on the day the note was published, which is what fixes the upside the analyst actually called. `Upside%` is `upside_pct` (PT vs that report-date price), matching `/pt` exactly. Keep a separate `current px` column for live context (how much of the move already happened); never collapse the two or let today's spot stand in for the report-date price. If `report_date_price` is null, write `n/a` in that cell — don't backfill it with the current price.
-- **Capture both forward years (FY1 AND FY2 multiple) — mandatory, not "where supplied".** The FY1→FY2 compression is the bull/bear pivot; if a note gives only one year, derive the other from its EPS estimate or state why the cell is blank. A single-forward-year snapshot is incomplete.
-- **Populate the own-history average multiple for EVERY covered name** (10yr or upcycle avg). A blank own-avg cell must say *why* (no coverage / pre-profit / pre-IPO), never be left empty for a subset of names — the priced-for-perfection read is only legible when the whole column is filled.
+- **Capture both forward years (FY1 AND FY2 multiple) — mandatory, not "where supplied".** The FY1→FY2 compression is the bull/bear pivot; if a note gives only one year, derive the other from its EPS estimate or write `n/a + reason`. A single-forward-year snapshot is incomplete. **The FY1E/FY2E cells are numeric only** — PT-derivation text, SOTP breakdowns, and commentary (`SOTP: FD HK$46 / in-store HK$26`, "loss-making; utilization ~43%") move to a footnote row beneath the table, never inside estimate cells. The density benchmark is the sell-side coverage ticker table (Bernstein-style: 2025A / 2026E / 2027E EPS + matching P/E per name) — a prose cell fails it.
+- **Populate the own-history average multiple for EVERY covered name** (10yr or upcycle avg). A blank own-avg cell must say *why* (no coverage / pre-profit / pre-IPO), never be left empty for a subset of names — the priced-for-perfection read is only legible when the whole column is filled. **Every own-avg cell states its derivation**: (a) *computed* — name the method + window (e.g. `median fwd P/E, monthly, 2016–2026, yfinance price ÷ trailing EPS`), (b) *a broker exhibit* — cite file_id + page, or (c) explicitly labelled `≈ Analyst view (this note), from historical trading range` so the approximation is on the record, not implied — the sized de-rates in Drift signals are computed off this column, so an unsourced own-avg poisons every flag downstream. **One metric type per column** — never a header offering two metrics (`P/E or P/B`); if the basket mixes metric types, split into two columns or use a per-row `metric (type)` cell format.
 - **Normalize the cross-section so the basket sorts cheap→dear like-for-like.** One stated forward year for the comparison column, **plus at least one growth-adjusted or cross-sectional metric (PEG, EPS-CAGR, or EV/EBITDA)** — a column of bare P/Es at mixed forward years (some FY1, some FY2, some SOTP) is not a peer-comp; flag SOTP-only names explicitly.
 - **Date every row and segregate stale PTs.** Each PT/rating row carries an **as-of date**; a PT older than the refresh window or visibly overtaken by price (current price through the target) is moved to a labelled *"stale — pending refresh"* sub-section, never blended into the live Upside% column where it implies a downside the analyst never called.
 - **Show PT derivation** where the source gives it (`PT = <multiple>× applied to <EPS / metric base>`), per the Conviction-ranking rule — at least for the names where the note states it.
@@ -245,6 +245,16 @@ Rules:
 - **Render the rating line at desk density** (HSBC/MS style): rating, the report-date price, PT, and computed upside% on one line (e.g. *Buy · TP 450k vs 349k @ 2026-05-20 = +29%*) — the `vs` price is the price on the note's date (`report_date_price`), so the +29% is the upside the analyst published; append `now NNNk` if you want to show the live spot too.
 - **On revision, show old→new in the cell** (`PT $340 (was $325)`); a revised PT/EPS is `## What's New` material.
 - Pre-profit names use P/S or EV/Sales and say so. Every rating / PT cites its originating note (deep-URL or zsxq `file_id`). If no tracked name has sell-side coverage, omit the section and note "no sell-side coverage" in Data Used.
+
+### Sell-side view evolution (卖方观点演变) — mandatory when ≥2 zsxq notes cover the same name or question
+
+When the mining pass draws on **≥2 zsxq broker notes covering the same tracked name (or the same theme question)**, render a compact **Sell-side view evolution (卖方观点演变)** block directly under the `## Valuation snapshot` table — never blend contradictory calls into a fake consensus:
+
+- **Mechanical pre-pass first (strictly read-only).** Before re-reading any PDF, pull every stored call for the ticker(s) from the PT store: `/opt/anaconda3/bin/python3` with `sqlite3.connect('file:db/stock_price_target.db?mode=ro', uri=True)` → `SELECT research_institute, rating, price_target, target_currency, report_date, report_file_id, upside_pct ...`. This detects same-institute revisions and yields per-name **PT dispersion (min / median / max, spread %)** — quote the dispersion alongside the Valuation-snapshot rows so the reader sees how contested each name is. Writes to this DB remain exclusively via `scripts/persist_pts.py` / `upsert_target` (the Tier-2 helper); this query never writes.
+- **Per-institute view timeline.** Order each institute's notes by **report date** — the filename's `-YYMMDD` suffix is the authoritative publication date (sanity-check against `create_time`). One line per view: institute · date · rating · PT · key estimates · one-line thesis. **Call out self-revisions explicitly** — upgrade/downgrade, `PT ¥96 → ¥120`, thesis pivot — plus the stated trigger (earnings print, policy change, channel checks, order data). This is the dated-sequence generalization of the snapshot's `PT $340 (was $325)` cell rule. A 2026-03 PT and a 2026-06 PT from the same institute are **two different views, not duplicates**.
+- **Cross-institute disagreement table** whenever institutes genuinely disagree (opposite ratings, PTs >20% apart, conflicting reads of the same datapoint): `Institute | Date | Rating / PT | Core argument | What evidence would prove them right`.
+- **Every view dated and cited** — each carries (institute, report date, `/zsxq/pdf/<file_id>/<urlencoded-name>` direct-download link) per the zsxq citation convention.
+- **Drift hook:** a same-institute downgrade / PT-cut wave on a tracked name IS a drift signal — surface it in `## Drift signals` (see Step 3) with the timeline as the evidence.
 
 ### Tracked tickers table — the source of truth
 
@@ -254,7 +264,11 @@ The table at the top of the file is the canonical ticker list. Every mutation (a
 - `mutate` mode runs `Edit` on a single row (or appends a new one).
 - `refresh` mode reads the ticker list, pulls data for each, then updates the data-driven sections below (Performance / Recent events / Drift signals).
 
+**Ticker format (canonical).** The Ticker cell is always `EXCHANGE:CODE`, one spelling per exchange repo-wide, with this fixed prefix set: `SSE` / `SZSE` / `HKEX` / `TSE` (Tokyo — never `TYO`) / `TWSE` (never `TPE`) / `KRX` (never `KS`) / `XTRA` (never `ETR`) / `NASDAQ` / `NYSE` / `ASX` / `SGX` — other exchanges use their standard short code, consistently. US names always carry the exchange prefix (`NASDAQ:PDD`, not `PDD`). yfinance-style symbols (`3690.HK`, `600309.SS`) live in the data-pull code and Data Used, **never** in the table or the snapshot sidecar's `tickers` array — both use the canonical form so cross-basket set operations (dedup, sibling-theme scans) work on string equality.
+
 The table columns are fixed: **Ticker | Name | Role | Justification | Added**. The Justification cell always contains at least one inline markdown link to a primary source naming the ticker as a theme participant. **Beyond proving participation, the cell must do two things:** (a) state the **moat** — the specific product niche / share / cost or IP edge that makes this name hard to displace (not "leader in X" but "sole supplier of Y, ~Z% share"), and (b) name the **threat** — the specific competitor, substitute, customer-insourcing, or policy shift that would erode that edge first (e.g. a mask-inspection name: "sole actinic supplier, ~50% share — threat = a rival's actinic launch in dev"). Where the dominant risk is **customer-insourcing** — the OEM / hyperscaler self-designing the component (the modal 2026 theme risk: BYD/NIO/XPeng/Li in-house ADAS chips vs Horizon; Google/Amazon/MS ASICs vs Nvidia) — name it explicitly *and* the incumbent's structural counter (e.g. Horizon's near-100%-margin BPU IP-licensing pivot; irreplaceability for sub-scale OEMs), not a generic competitor. Where the threat is on the public record, inline-cite it too. A cell that says "largest player, well positioned" with no named threat is a stub — rewrite it; if you can't name a threat, you don't understand the position well enough to size conviction in it. **Keep moat + threat INSIDE the Justification cell — never as new columns** — to preserve the fixed 5-column parse contract that `list`/`mutate`/`refresh` rely on. If you can't articulate a one-sentence role with a citation, the ticker doesn't belong in the basket yet.
+
+**Cross-theme membership.** At create and at every refresh, scan the *other* `reports/themes/*_theme.md` ticker tables for each tracked name (one grep per canonical `EXCHANGE:CODE` — another reason the format is fixed). Any shared name gets `(also tracked in: <slug>[, <slug>])` appended to its Justification cell and a Cross-coverage bullet in Data Used. Shared names' Valuation-snapshot rows come from `stock_price_target_db` per the populate-from-the-helper rule above — sibling files must never disagree on the same PT. When a refresh updates a shared name's PT or threat read, name the sibling slug(s) in `## What's New` so the user knows the other basket's row is now older.
 
 ## Language (English default; Chinese opt-in)
 
@@ -273,7 +287,7 @@ Once a Chinese companion exists for a theme, subsequent refreshes update both fi
 
 **Adding a Chinese companion to an existing English theme** (`build a Chinese version of <slug>`, `<slug> 主题中文版`, etc.): write the new `<slug>_主题研究.md` natively, copy the Tracked-tickers / Exclusions / Performance tables + all citation URLs verbatim from the EN file, and **in the same commit flip the EN file's `Languages tracked: en` → `en, zh`** so future refreshes know to update both. Source quotes inside Justification cells stay in their original PDF language regardless of the language wrapping them (an English broker quote stays English even inside Chinese prose).
 
-Target word count: **2,000–4,000 words per language** (less than [[sector-overview]]'s landscape essay — themes are focused, not exhaustive).
+Target word count: **~3,500–6,500 words per language**, measured on prose (tables, URLs, and the verification log excluded) — still well short of [[sector-overview]]'s landscape essay; themes are focused, not exhaustive. The mandatory blocks (auditable TAM build, valuation snapshot, scorecard, leading-indicator tables, catalysts-with-mechanism, manifests) set the floor. If a draft exceeds ~7,000 words, trim Recent-events bullets and Thesis exposition — never the tables, the scorecard, or the drift section.
 
 ## Data sources
 
@@ -352,7 +366,7 @@ The user's zsxq library is a **local cache of broker / sell-side PDFs** (`db/zsx
 
 **zsxq citation convention (mandatory for every zsxq-sourced claim):**
 
-- **file_id AND page:** `[<Bank> — <short topic>, zsxq #<file_id> p.<N>](http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>#page=<N>)`. `extract_pdf.py` marks pages as `===== Page N =====`, so every number has a known page. The **page in the link text (`p.N`) is the load-bearing part** — `p.N` is what reliably tells the reader where to look (a PDF downloaded to iPad may ignore the `#page=N` fragment); appending `#page=N` to the URL is harmless and is honored by native in-browser PDF viewers. **Route must be the direct-download `/zsxq/pdf/<file_id>/<filename>`** (paste `find_pdf.py`'s `pdf_url` field — it serves raw `application/pdf` so it opens/downloads natively on iPad) — **not** the `/zsxq/pdf-viewer/<file_id>` viewer page (returns HTML, won't download on iPad), and **not** the old `/zsxq-pdf/<file_id>` form (dead 404).
+- **file_id AND page:** `[<Bank> — <short topic>, zsxq #<file_id> p.<N>](http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>#page=<N>)`. `extract_pdf.py` marks pages as `===== Page N =====`, so every number has a known page. The **page in the link text (`p.N`) is the load-bearing part** — `p.N` is what reliably tells the reader where to look (a PDF downloaded to iPad may ignore the `#page=N` fragment); appending `#page=N` to the URL is harmless and is honored by native in-browser PDF viewers. **Route must be the direct-download `/zsxq/pdf/<file_id>/<filename>`** (paste `find_pdf.py`'s `pdf_url` field — it serves raw `application/pdf` so it opens/downloads natively on iPad) — **not** the `/zsxq/pdf-viewer/<file_id>` viewer page (returns HTML, won't download on iPad), and **not** the old `/zsxq-pdf/<file_id>` form (dead 404). The filename segment is the **VERBATIM `pdf_url` from `find_pdf.py`** — never hand-typed, abbreviated, or truncated mid-word: the route ignores the segment so a shortened name still resolves, but the verbatim filename is the reader-facing integrity check that the `file_id` points at the right PDF (the exact mis-attribution failure the citation audit exists to catch). Every `p.N` in link text carries the matching `#page=N` fragment on the URL.
 - **Quote the original-language source clause** carrying the number alongside the link (the printed English / Chinese / Japanese, NOT the summary's paraphrase). Match it verbatim to the extracted text; use `…` for elisions.
 - **Cite the number, not the headline.** "MS sees Asia energy capex doubling by 2030" with no link is a non-citation; the figure needs the page-anchored link + the source quote.
 
@@ -405,6 +419,7 @@ Drift detection is the value-add of refresh. Surface:
 - **Underperformer outliers** — tickers > 30% behind the basket median return over the refresh window. Surface the reason (idiosyncratic news, sector rotation, broken thesis).
 - **Stale justifications** — if a ticker's Justification cell references a source older than 12 months, flag for re-grounding in the next mutation.
 - **Valuation drift** — for each `core`/`adjacent` name, report the forward multiple (P/E, or the sector-appropriate one — EV/EBITDA, P/S for pre-profit) on **two relative axes**: vs the name's own ~10yr (or max-available) average, AND vs a stated sector/market benchmark — e.g. `<name> 37.5x fwd vs 10yr avg 17.7x; +36% vs <sector ETF>, +71% vs SPX`. When the **basket-median** multiple sits materially above its own history, raise an explicit **priced-for-perfection / air-pocket flag** and name the **specific demand assumption** — tied to the Thesis TAM anchor — whose disappointment would trigger a de-rate (a named line, not an abstract caveat: GLP-1 7–8mo avg therapy duration; memory price normalizing 2028; robotaxi federal-approval cap). A bare multiple with no own-history and benchmark context is a defect.
+- **Sell-side revision wave** — a same-institute downgrade / PT-cut sequence on a tracked name (detected by the read-only `stock_price_target.db` pre-pass — see *Sell-side view evolution (卖方观点演变)*). A broker walking back its **own** prior call is a stronger drift signal than a low PT from a never-owned-it skeptic; flag it here with the dated per-institute timeline as the evidence, and name the stated trigger for the cut.
 
 ### Step 4 (Refresh / Create) — Update the file's data-driven sections
 
@@ -413,7 +428,7 @@ Drift detection is the value-add of refresh. Surface:
 Rewrite the following sections of `<slug>_theme.md` in place:
 
 - **What's New** — **prepend** a dated block with the computed delta (tickers added/dropped/role-changed, biggest movers vs benchmark since last refresh, new broker calls/catalysts, **TAM revisions** (anchor old→new + named driver), thesis drift); roll the previous block into the `<details>` archive. Keep it to ~5–8 linked bullets.
-- **Performance** — movers / laggards / benchmark comparison for the refresh window, plus the **Basket scorecard** (MS *Three Actionable Ideas* style): batting average (% of names positive over the window, % beating the benchmark), best/worst named contributor with their return, and — where `snapshots.jsonl` has ≥2 lines — cumulative basket outperformance in bps since inception. All derived from yfinance + the snapshot history.
+- **Performance** — movers / laggards / benchmark comparison for the refresh window, plus the **Basket scorecard** (MS *Three Actionable Ideas* style): batting average (% of names positive over the window, % beating the benchmark), best/worst named contributor with their return, and — where `snapshots.jsonl` has ≥2 lines — cumulative basket outperformance in bps since inception. All derived from yfinance + the snapshot history. **On a CREATE pass** the heading is `## Performance (entry context — tracked clock starts YYYY-MM-DD)` and the first line states that the trailing returns are backward-looking context for names selected *today*, NOT a track record — a hindsight-selected basket looks good by construction. Never put an event date or a backtest window in the heading as if it were the creation date (the basket was created today, not at the shock onset it studies). The tracked record begins at the baseline snapshot line; cumulative bps starts from snapshot line 2.
 - **Recent events** — bulleted list of material press releases / filings since the previous refresh, each inline-cited.
 - **Drift signals** — output of Step 3.
 - **Leading indicators** — refresh the 2–4 upstream signals from Step 2.6 (incl. side-by-side member guidance on the shared forward metric); cross-reference any indicator that has rolled over while the basket still rises in **Drift signals**.
@@ -474,11 +489,16 @@ Charts (**required minimum set of ≥3** — see the **## Charts** section): ren
 ### Step 7 — Verify
 
 - Re-parse the top-of-file metadata line to confirm the format is intact (dates parse, languages-tracked field valid).
-- Re-parse the Tracked tickers table to confirm row count and column structure are intact.
+- Re-parse the Tracked tickers table to confirm row count and column structure are intact, and that **every Ticker cell (and snapshot `tickers` entry) matches the canonical `EXCHANGE:CODE` pattern** (see *Ticker format (canonical)* — no `TYO:`/`TPE:`/`KS:`/`ETR:`, no bare US symbols, no yfinance-style `3690.HK`).
 - Confirm the `## What's New` block has a new dated entry and the prior one rolled into the archive.
 - Confirm exactly one new line was appended to `<slug>_theme.snapshots.jsonl`, it is valid JSON, and its `tickers` set matches the current Tracked tickers table.
+- Audit the **Valuation snapshot against its column contract**: Px@note populated (or `n/a` with reason); FY1E AND FY2E numeric, one metric per column; every own-avg cell carries its derivation; stale PTs segregated.
+- **When ≥2 zsxq notes covered the same name or question**: confirm the *Sell-side view evolution (卖方观点演变)* block exists under the Valuation snapshot — per-institute dated timeline, self-revisions flagged with triggers, disagreement table where views conflict, every view dated + file_id-cited, PT dispersion from the read-only pre-pass.
 - Spot-check ≥3 ticker performance numbers in the Performance section vs yfinance.
-- Confirm all inline URLs in the file return HTTP 200 (sample 5).
+- Confirm all inline URLs in the file return HTTP 200 (sample 5). **Sample 2 zsxq citation URLs and diff their filename segment against `find_pdf.py`'s `pdf_url`** — any mismatch (abbreviated / truncated filename, missing `#page=N` for a `p.N` claim) = fix before commit.
+- Confirm a **Further viewing** block exists with ≥1 video URL checked 200 with a real-browser UA, OR the explicit `Further viewing: omitted — <reason>` notice is present in Data Used.
+- Confirm every `reports/charts/theme_<slug>_*.png` is (a) listed in the Data Used **Charts rendered** manifest with its path, and (b) **embedded exactly once, inline at its owning section** (anchor → `## Thesis`; performance → `## Performance`; valuation → `## Valuation snapshot` / Drift signals; S/D balance → the Thesis build). No end-of-file `## Charts` gallery — the Output Format block list is exhaustive.
+- **Close the file with the verification log**: `<details><summary>Verification log (Step 7) — YYYY-MM-DD</summary>` placed after `## History` — use exactly this label (no "Step 10" aliases). Record: metadata-line parse ✓; table parse ✓; snapshot-line validity + ticker-set match ✓; the ≥3 performance spot-checks vs yfinance; ≥5 number→URL string-matches of which ≥2 against extracted zsxq original text; ≥5 URL HTTP-200 checks of which ≥2 are zsxq direct-download routes; chart count + in-image source-footer confirmation; stores written; residual unknowns.
 - Stop any test servers used during chart rendering.
 
 ## Output Format (mandatory blocks in every theme file)
@@ -488,10 +508,10 @@ Every `<slug>_theme.md` must contain, in this order:
 1. **H1 title** with English name and (when relevant) Chinese name.
 2. **Top-of-file metadata line** (Created · Last refreshed · Last mutated · Refresh cadence · Languages tracked).
 3. **## What's New** (refresh/mutate-driven delta — newest block on top, older blocks in a `<details>` archive; the "what did I know before, what's new" surface).
-4. **## Thesis** (200–400 words) — **opens with the quantified TAM / spend anchor** (dated multi-year trajectory + sub-bucket decomposition + swing factor; see *Thesis — lead with a quantified anchor*).
+4. **## Thesis** (200–400 words) — **opens with the quantified TAM / spend anchor** (dated multi-year trajectory + sub-bucket decomposition + swing factor; see *Thesis — lead with a quantified anchor*), and **closes with the `**Further viewing**` block** (1–3 HTTP-validated explainer videos for the theme's hardest-to-picture concept — see *Further viewing*; if omitted, Data Used carries the explicit omission notice).
 5. **## Scope rules** (100–200 words).
 6. **## Tracked tickers** table (mandatory columns: Ticker | Name | Role | Justification | Added).
-7. **## Valuation snapshot** table (mandatory when ≥1 tracked name has sell-side coverage — per-name Rating / PT / Upside% / fwd multiple vs own ~10yr avg / FY1·FY2 EPS; a *separate* table, never new columns on Tracked tickers; the in-file mirror of `stock_price_target_db`).
+7. **## Valuation snapshot** table (mandatory when ≥1 tracked name has sell-side coverage — per-name Rating / PT / Upside% / fwd multiple vs own ~10yr avg / FY1·FY2 EPS; a *separate* table, never new columns on Tracked tickers; the in-file mirror of `stock_price_target_db`) — followed by the **Sell-side view evolution (卖方观点演变)** block when ≥2 zsxq notes cover the same name or question.
 8. **## Exclusions** table (optional but recommended — explicit "we considered this and rejected it").
 9. **## Keywords** — bilingual where natural.
 10. **## Performance** (refresh-driven) — includes the **## Basket scorecard** discipline: batting average (% of names positive, % beating benchmark), best/worst named contributor, and cumulative outperformance in bps where ≥2 snapshot lines exist (mirror MS *Three Actionable Ideas*; see *Learning from sell-side institutional research*).
@@ -502,14 +522,15 @@ Every `<slug>_theme.md` must contain, in this order:
 15. **## Data Used / 数据来源清单** (manifest — see block below).
 16. **## References** (every URL cited inline).
 17. **## History** (mutation log; append-only).
+18. **Verification log** — `<details><summary>Verification log (Step 7) — YYYY-MM-DD</summary>`-wrapped block after `## History` (exactly this label — see the Step 7 closing sub-step for the required contents).
 
 Plus a **required minimum set of ≥3 charts** (see the **## Charts** section) embedded in the file and listed in Data Used.
 
 Plus the **`<slug>_theme.snapshots.jsonl`** sidecar (one JSON line per create/refresh/mutate) — not part of the md, but mandatory and committed alongside it.
 
-### Further viewing — explainer videos (optional, but default to including)
+### Further viewing — explainer videos (default-on; omit only with a stated reason)
 
-When this theme covers something a reader would struggle to picture from prose alone — the theme's core technology (humanoid-robot tactile sensors, advanced-packaging (CoWoS) die stacking, solid-state battery construction, a GLP-1 mechanism), a manufacturing or scientific process, a complex product architecture, an unfamiliar business model, or a market-structure concept — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them on any theme; omit only when the theme is purely numeric with nothing worth visualizing.
+When this theme covers something a reader would struggle to picture from prose alone — the theme's core technology (humanoid-robot tactile sensors, advanced-packaging (CoWoS) die stacking, solid-state battery construction, a GLP-1 mechanism), a manufacturing or scientific process, a complex product architecture, an unfamiliar business model, or a market-structure concept — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. This block is **default-on for every theme**: include it unless the theme is purely numeric with nothing worth visualizing, and in that rare case record the omission in Data Used (`Further viewing: omitted — <one-line reason>`) so the skip is deliberate, not forgotten. Step 7 checks for one or the other.
 
 **Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
 
@@ -550,8 +571,12 @@ When this theme covers something a reader would struggle to picture from prose a
 **Stores written (Tier-2 helpers)**
 - `stock_price_target_db` — <N> sell-side PT / rating calls upserted for tracked names (idempotent on ticker × broker × file_id); surfaced at `/pt`. "none" if no new calls this refresh.
 
+**Charts rendered**
+- reports/charts/theme_<slug>_anchor.png — TAM trajectory + sub-bucket decomposition.
+- ... one line per PNG (path + what it shows). Every rendered chart appears here — Step 7 checks the manifest against `reports/charts/theme_<slug>_*.png`.
+
 **Stale notices / coverage gaps**
-- <bulleted list — ticker without recent IR refresh, missing third-party source for a candidate, or "none">.
+- <bulleted list — ticker without recent IR refresh, missing third-party source for a candidate, or "none">. `Further viewing: omitted — <reason>` goes here when the explainer-video block was skipped.
 ```
 
 ## Charts (required minimum set)
@@ -651,7 +676,7 @@ If the same theme conceptually exists under multiple slugs (e.g. `humanoid-robot
 - It does not produce a sized portfolio recommendation. A theme is *what to watch*, not *how much to hold* — sizing is [[trader-plan]] / [[portfolio-decision]] territory.
 - It does not predict the theme's outperformance vs benchmark. Performance is *reported*, not forecast.
 - It does not maintain alerts or notifications. The "Refresh cadence" in the top-of-file metadata is informational only; the user runs the refresh manually (or via [[loop]] for periodic automation).
-- It does not introduce YAML, TOML, or any non-markdown file format. Everything is markdown that renders natively at `localhost:5001/reports`.
+- It does not introduce YAML, TOML, or any non-markdown file format. Everything is markdown that renders natively at `http://xs-macbook-air.local:5001/reports`.
 
 ## Prerequisites
 

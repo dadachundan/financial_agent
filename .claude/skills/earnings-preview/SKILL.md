@@ -1,6 +1,11 @@
+---
+name: earnings-preview
+description: Build pre-earnings analysis with estimate models, scenario frameworks, and key metrics to watch. Use before a company reports quarterly earnings to prepare positioning notes, set up bull/bear scenarios, and identify what will move the stock. Triggers on "earnings preview", "what to watch for [company] earnings", "pre-earnings", "earnings setup", or "preview Q[X] for [company]".
+---
+
 # Earnings Preview
 
-description: Build pre-earnings analysis with estimate models, scenario frameworks, and key metrics to watch. Use before a company reports quarterly earnings to prepare positioning notes, set up bull/bear scenarios, and identify what will move the stock. Triggers on "earnings preview", "what to watch for [company] earnings", "pre-earnings", "earnings setup", or "preview Q[X] for [company]".
+**Language:** English-only by default (this is a fast-turnaround, monitoring-style note, matching the project's tracking-skills English-default rule). Produce bilingual / Simplified-Chinese output only on explicit request (`in Chinese`, `bilingual`, `--lang zh`).
 
 ## Workflow
 
@@ -44,7 +49,11 @@ For each scenario:
 - What management commentary would signal this
 - Historical context — how has the stock moved on similar prints?
 
-### Step 4: Catalyst Checklist
+### Step 4: Setup & Positioning
+
+Cover YTD / relative performance, valuation vs. the name's own 3–5yr history (forward P/E, EV/EBIT, PEG), crowdedness / short-interest / factor exposure where available, and an explicit statement of **the market bar** — what the buy-side already expects (the whisper) vs. published sell-side consensus. Close with the trade: what you would buy or sell into the print. (Sell-side analogs in the Learning section below.)
+
+### Step 5: Catalyst Checklist
 
 Identify the 3-5 things that will determine the stock's reaction:
 
@@ -52,15 +61,32 @@ Identify the 3-5 things that will determine the stock's reaction:
 2. [Guidance item] — what the buy-side expects to hear
 3. [Narrative shift] — any strategic changes, M&A, restructuring
 
-### Step 5: Output
+### Step 6: Output
 
-One-page earnings preview with:
-- Company, quarter, earnings date
-- Consensus estimates table
-- Key metrics to watch (ranked by importance)
-- Bull/base/bear scenario table
-- Catalyst checklist
-- Trading setup: recent stock performance, implied move from options
+A 1,000–2,500-word (2–4 page) into-the-print note. Required skeleton (the canonical layout per the Learning section below):
+
+- Header Data Block (rating | 12m PT | last price | implied move) + multi-year estimate strip
+- Bolded 3–5 sentence thesis — the call AND the setup
+- House vs. Consensus vs. Guide table with `vs Cons` delta column
+- Estimate Changes (Prev / Cur / % revision) table
+- Bull/base/bear scenario table with quantified reaction bands
+- Setup & Positioning (Step 4)
+- Sell-side view evolution (卖方观点演变) — required when ≥2 zsxq broker previews cover the name (who-expects-what table + into-the-print revisions; see the Learning section)
+- Upside / Downside risk lists + catalyst checklist
+
+A literal one-page quick preview is an explicit opt-in mode only (user says "quick preview" / "one-pager") — never the default.
+
+**File location (MUST):** save to `reports/earnings/<TICKER>_Q<X>FY<YY>_preview_<YYYY-MM-DD>.md` (English ticker first per the project filename rule; the `_preview` marker distinguishes it from post-print `earnings-analysis` updates in the same bucket). Commit + push in the same task (Conventional Commit, e.g. `feat(reports/earnings): ...`). The post-print scorecard (loop closure via `earnings-analysis`) reads this file back — an unsaved preview cannot be graded.
+
+### Step 7: Verify & log
+
+Before saving/committing:
+
+1. HTTP-check every URL with a real-browser User-Agent — `200 OK` only; drop or replace failures per the link-validation rule.
+2. Spot-check 3–5 numbers (consensus EPS/revenue, implied move, historical reaction stats) — each must string-match the URL cited in the same paragraph.
+3. Confirm every house figure is paired with its consensus / prior / guide counterpart.
+4. Conditional — when ≥2 zsxq broker previews covered the name: confirm the sell-side view-evolution block landed (every institute view dated + `/zsxq/pdf/` cited, into-the-print revisions arrow'd with triggers, no blended consensus across disagreeing notes).
+5. Append `<details><summary>Verification log — YYYY-MM-DD</summary>...</details>` listing each check. Spec: `.claude/skills/company-research/references/citations.md`.
 
 ## Further viewing — explainer videos (optional, but default to including)
 
@@ -77,27 +103,29 @@ When this preview turns on something a reader would struggle to picture from pro
 
 The patterns below are distilled from how Goldman Sachs, Morgan Stanley, UBS, J.P. Morgan, Bernstein, Deutsche Bank, Citi, BofA and Jefferies build into-the-print previews (Jefferies "[Ticker] [Quarter] Preview", MS "Into the Print", UBS "[Ticker] Preview · Evidence Lab inside", JPM "Key Changes", Bernstein "[Ticker] [Quarter] preview"). The single load-bearing differentiator vs. a generic preview is the **quantified gap — house vs. consensus vs. guide, shown line-by-line with a delta column.** Everything else hangs off that gap. Apply these on top of the workflow above; preserve every existing rule (citations, numerical-accuracy, chart source annotations, language defaults, file naming).
 
-**Lead with a Header Data Block, not prose (Step 5 / new lead element).** Mirror Jefferies/JPM/MS/UBS/Bernstein: open with a compact key-value block — **Rating | 12m Price Target (current vs. PRIOR) with % to PT | last price (as-of date) | 52-week high–low | market cap | ADV** — then a multi-year FY estimate strip (**Revenue / EBIT or EBITDA / Adj Net Profit / EPS for 2 actual + 2 estimate years**). State the valuation method on the PT line (e.g. "34x next-FY EPS", "SOTP", "DCF WACC 12%"). Keep the standing Rating/PT/upside line near the top so the reader sees the call without scrolling. The `% to PT` is computed against the dated `last price` above (today), which satisfies the report-date-price rule for *your own* PT — **but any *borrowed* PT you quote (consensus mean target, a named broker's PT) must show the price on *its* note's date + the upside it fixed** (`consensus $130 vs $96 @ 2026-05-20 → +35%`), not just vs today's last price.
+**Lead with a Header Data Block, not prose (Step 6 / new lead element).** Mirror Jefferies/JPM/MS/UBS/Bernstein: open with a compact key-value block — **Rating | 12m Price Target (current vs. PRIOR) with % to PT | last price (as-of date) | 52-week high–low | market cap | ADV** — then a multi-year FY estimate strip (**Revenue / EBIT or EBITDA / Adj Net Profit / EPS for 2 actual + 2 estimate years**). State the valuation method on the PT line (e.g. "34x next-FY EPS", "SOTP", "DCF WACC 12%"). Keep the standing Rating/PT/upside line near the top so the reader sees the call without scrolling. The `% to PT` is computed against the dated `last price` above (today), which satisfies the report-date-price rule for *your own* PT — **but any *borrowed* PT you quote (consensus mean target, a named broker's PT) must show the price on *its* note's date + the upside it fixed** (`consensus $130 vs $96 @ 2026-05-20 → +35%`), not just vs today's last price.
 
 **Open with a bolded 3–5 sentence thesis (the call AND the setup in one breath).** Jefferies/MS lead with a verdict like "meets reduced rev/GM cons but misses EBIT by ~35%; cons still too high, too early to bottom-fish, results May 26." State the call, the gap to consensus, and the trade into the print up front — do not bury it in a generic output list.
 
-**House vs. Consensus vs. Guide table with an explicit `vs Cons` delta column (Step 1 + Step 5).** This replaces the plain consensus table. Carry the delta on **every** line — revenue (total + by segment), gross margin (total + by segment), EBIT, EPS — plus a "vs guide range (low/mid/high)" note since institutions position forecasts against the company's own guide, not just consensus (Jefferies "JEFe vs Cons", JPM revenue "versus consensus"). Cite the named consensus source and its as-of date inline (e.g. "Source: Visible Alpha, [house] estimates"); each house number must be paired with its consensus/prior/guide counterpart per the numerical-accuracy rule.
+**House vs. Consensus vs. Guide table with an explicit `vs Cons` delta column (Step 1 + Step 6).** This replaces the plain consensus table. Carry the delta on **every** line — revenue (total + by segment), gross margin (total + by segment), EBIT, EPS — plus a "vs guide range (low/mid/high)" note since institutions position forecasts against the company's own guide, not just consensus (Jefferies "JEFe vs Cons", JPM revenue "versus consensus"). Consensus must be cited to a deep URL the agent actually fetched and that string-matches the figure — e.g. the Yahoo Finance analysis page, a stockanalysis.com forecast page, or a dated zsxq broker PDF labelled *Analyst view:* (cite via the `/zsxq/pdf/<file_id>/<name>` direct-download route). NEVER attribute a number to Visible Alpha / Bloomberg / FactSet unless quoting a secondary source that itself prints it (use a source-chain label). Always date-stamp the consensus snapshot; each house number must be paired with its consensus/prior/guide counterpart per the numerical-accuracy rule.
 
-**Add an Estimate Changes (Prev vs. Cur, % revision) table (Step 1 + Step 5).** A preview usually moves numbers — show before/after. Mirror JPM "Key Changes (Prev/Cur/%)" and Jefferies "Change to JEFe". Place it as a sibling to the House-vs-Cons table.
+**Sell-side view evolution (卖方观点演变) — mandatory when ≥2 zsxq broker previews cover the name (Step 4 + Step 6).** Pre-print disagreement IS the setup signal — never blend the notes into a fake consensus. Render a who-expects-what table next to Setup & Positioning: `| Institute | Date | Rating / PT | Estimate vs Cons | Swing factor they flag / what would prove them right |` — every row dated (the filename's `-YYMMDD` suffix is the authoritative pub date; sanity-check against `create_time`) and cited via the `/zsxq/pdf/<file_id>/<name>` direct-download route. Call out **into-the-print revisions** explicitly — an institute that updated numbers/PT within the last month is a signal; give the stated trigger (channel checks, order data, a peer's print) and render it as a dated arrow (`UBS $120 (26-05) → $135 (26-06, post-peer beat)`); a 2026-03 view and a 2026-06 view from the same institute are two different views, not duplicates. Detect revisions and PT dispersion (min/median/max, spread %) mechanically BEFORE re-reading any PDF — STRICTLY read-only pre-pass: `/opt/anaconda3/bin/python3` with `sqlite3.connect('file:db/stock_price_target.db?mode=ro', uri=True)`, `SELECT research_institute, rating, price_target, target_currency, report_date, report_file_id, upside_pct FROM price_targets WHERE company_ticker=? ORDER BY research_institute, report_date` (writes stay exclusively with `scripts/persist_pts.py`). Where institutes read the same datapoint oppositely (opposite ratings, PTs >20% apart), keep both rows and let the bull/bear scenario table say whose evidence resolves it.
+
+**Add an Estimate Changes (Prev vs. Cur, % revision) table (Step 1 + Step 6).** A preview usually moves numbers — show before/after. Mirror JPM "Key Changes (Prev/Cur/%)" and Jefferies "Change to JEFe". Place it as a sibling to the House-vs-Cons table.
 
 **Decompose any guide-change call into named $ and % contributions (Step 2).** Bernstein-Adobe pattern: "Q1 beat +$0.16, buyback +$0–3.50, M&A ~$0." Each input must trace to a source containing that number; label the summed figure as a derived calc per the numerical-accuracy rule.
 
 **Quantify the Stock Reaction column — make it a band, not an adjective (Step 3).** Tie each scenario row to (a) the **options-implied move** computed from the at-the-money straddle and (b) the **historical average 1-day post-print move** over the last 4–8 quarters, and anchor each row to the specific KPI threshold that triggers it. Templates: Bernstein Akeso ("HR 0.70–0.72 → +10–20%; HR > 0.75 → −10–20%"), UBS Canada Goose ("balanced upside/downside skew, historical ±11.7%"). Replace "stock could move" with a percentage band tied to a named scenario.
 
-**Add a Setup & Positioning section (new step between Step 3 and Step 4; renumber).** Cover YTD / relative performance, valuation vs. the name's own 3–5yr history (forward P/E, EV/EBIT, PEG), crowdedness / short-interest / factor exposure where available (JPM Style/Quant %-rank panel; UBS "crowdedness below sector average"), and an explicit statement of **the market bar** — what the buy-side already expects (the whisper) vs. published sell-side consensus, as a third column alongside house and consensus. Frame the deliverable as "what we would buy or sell into the print." This upgrades the thin one-line "Trading setup."
+**Setup & Positioning section (Step 4 in the workflow above).** Cover YTD / relative performance, valuation vs. the name's own 3–5yr history (forward P/E, EV/EBIT, PEG), crowdedness / short-interest / factor exposure where available (JPM Style/Quant %-rank panel; UBS "crowdedness below sector average"), and an explicit statement of **the market bar** — what the buy-side already expects (the whisper) vs. published sell-side consensus, as a third column alongside house and consensus. Frame the deliverable as "what we would buy or sell into the print." This upgrades the thin one-line "Trading setup."
 
 **Attempt named alt-data / channel checks before generic web search (Step 1).** Cite deep URLs: app/web panels (Sensor Tower, SimilarWeb), card-spend trackers, sector trackers (STR RevPar, Planespotters deliveries, semis: DRAM/NAND contract prices, WFE $), and the prior-quarter call transcript for guidance language. Broker proprietary labs (UBS Evidence Lab, Deutsche Bank DBDig survey, GS surveys) are the analog edge — when their reads come from the local `db/zsxq.db` library, label them `*Analyst view:*` and never blend them into a primary-filing citation.
 
-**Sector / multi-name catalyst-preview mode (second operating mode).** When previewing a coverage universe rather than a single name, produce a **dated catalyst/event grid** that rates each upcoming catalyst by importance (High / Very important) and expected surprise direction, plus a per-name **beat / in-line / miss** call with vs-cons deltas (MS "Catalyst Preview: What's Ahead?", GS sector "1Q results preview", UBS sector "Earnings Preview"). Respect the skill's English-default convention for this tracking-style output.
+**Sector / multi-name catalyst-preview mode (second operating mode).** When previewing a coverage universe rather than a single name, produce a **dated catalyst/event grid** that rates each upcoming catalyst by importance (High / Very important) and expected surprise direction, plus a per-name **beat / in-line / miss** call with vs-cons deltas (MS "Catalyst Preview: What's Ahead?", GS sector "1Q results preview", UBS sector "Earnings Preview"). Respect the skill's English-default convention for this tracking-style output. **Boundary with [[catalyst-calendar]]:** catalyst-calendar owns the calendar itself (dated grids across event types over a universe); this mode exists only for per-name into-the-print *calls* (beat / in-line / miss with vs-cons deltas and scenario bands) on names reporting in the window. Route pure scheduling requests to catalyst-calendar, and accept its handoffs for the names worth a call.
 
-**Split Risks into Upside vs. Downside bullet blocks (Step 4).** GS Moderna / MS Broadcom / Bernstein convention: two explicit lists rather than one catalyst checklist, each risk tied to its KPI and the scenario it would push the print toward.
+**Split Risks into Upside vs. Downside bullet blocks (Step 5).** GS Moderna / MS Broadcom / Bernstein convention: two explicit lists rather than one catalyst checklist, each risk tied to its KPI and the scenario it would push the print toward.
 
-**Title encodes the call and the hook (Step 5).** Not just ticker/quarter — e.g. "Memory Cost Pressure Not Yet Peaked; Cons Still Too High", "It's A Tricky One", "We See a Balanced Upside/Downside Skew", "Roadmap to Profitability". Numbers are always paired — every house figure shown next to consensus, prior, or guide ("PT raised 475→490", "EPS $3.05 vs cons $2.90"); a standalone number reads as incomplete. Date-stamp every estimate and consensus snapshot.
+**Title encodes the call and the hook (Step 6).** Not just ticker/quarter — e.g. "Memory Cost Pressure Not Yet Peaked; Cons Still Too High", "It's A Tricky One", "We See a Balanced Upside/Downside Skew", "Roadmap to Profitability". Numbers are always paired — every house figure shown next to consensus, prior, or guide ("PT raised 475→490", "EPS $3.05 vs cons $2.90"); a standalone number reads as incomplete. Date-stamp every estimate and consensus snapshot.
 
 **Build in loop closure (Important Notes).** Institutional previews are accountable — banks publish a post-print scorecard (JPM "As We Previewed, [Ticker] Delivered…") grading the call against the actual print. After results, chain to the `earnings-analysis` skill as the natural follow-up so the preview's calls get graded.
 

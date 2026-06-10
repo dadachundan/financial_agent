@@ -49,13 +49,13 @@ Plain (no class) — anything 30–60.
     <tr>
       <td class="indicator"><a href="https://www.ishares.com/us/products/251614/ishares-msci-usa-momentum-factor-etf">Momentum factor 3M return (MTUM − SPY proxy)</a></td>
       <td class="ms-red">100</td>
-      <td class="ms-amber">76</td>
+      <td class="ms-red">95</td>
       <td class="ms-now ms-red">{{ momentum_3m.exuberance_pct }}</td>
     </tr>
     <tr>
       <td class="indicator"><a href="https://www.bespokepremium.com/think-big-blog/">S&P 500 52-week market breadth</a> <em>(inverted — narrow = exuberant)</em></td>
       <td class="ms-red">100</td>
-      <td class="ms-red">95</td>
+      <td class="ms-amber">76</td>
       <td class="ms-now ms-red">{{ breadth_52w.exuberance_pct }}</td>
     </tr>
 
@@ -99,7 +99,10 @@ Plain (no class) — anything 30–60.
     <!-- GS nuance: split COUNT vs PROCEEDS (IPO proceeds can hit records while
          count is near average) and GROSS vs NET-of-buyback issuance (net stays
          low when buybacks exceed new supply). The count/value divergence is
-         what GS uses to say supply pressure is still contained — encode both. -->
+         what GS uses to say supply pressure is still contained — encode both.
+         GS Exhibit 3 carries anchors ONLY for "Number of US IPOs" and "Net US
+         equity issuance" — the proceeds / gross sub-rows have NO GS anchor, so
+         their historical cells stay em-dashes. Never invent one. -->
     <tr><td colspan="4" class="category">Corporate sentiment</td></tr>
     <tr>
       <td class="indicator"><a href="https://www.renaissancecapital.com/IPO-Center/Stats">Number of US IPOs (YTD annualised, > $25M) — <em>count</em></a></td>
@@ -108,39 +111,60 @@ Plain (no class) — anything 30–60.
       <td class="ms-now">{{ ipo_count.exuberance_pct }}</td>
     </tr>
     <tr>
-      <td class="indicator"><a href="https://www.renaissancecapital.com/IPO-Center/Stats">US IPO proceeds (YTD annualised, $bn) — <em>value</em></a></td>
-      <td class="ms-red">100</td>
-      <td class="ms-red">90</td>
+      <td class="indicator"><a href="https://www.renaissancecapital.com/IPO-Center/Stats">US IPO proceeds (YTD annualised, $bn) — <em>value</em> (no GS anchor — current-only sub-metric)</a></td>
+      <td>—</td>
+      <td>—</td>
       <td class="ms-now">{{ ipo_proceeds.exuberance_pct }}</td>
     </tr>
     <tr>
-      <td class="indicator"><a href="https://www.sifma.org/resources/research/us-equity-issuance-and-trading-volumes/">Gross US equity issuance (12m rolling, % of market cap)</a></td>
-      <td class="ms-red">100</td>
-      <td class="ms-red">99</td>
+      <td class="indicator"><a href="https://www.sifma.org/resources/research/us-equity-issuance-and-trading-volumes/">Gross US equity issuance (12m rolling, % of market cap)</a> (no GS anchor — current-only sub-metric)</td>
+      <td>—</td>
+      <td>—</td>
       <td class="ms-now ms-amber">{{ gross_issuance.exuberance_pct }}</td>
     </tr>
     <tr>
       <td class="indicator"><a href="https://www.sifma.org/resources/research/us-equity-issuance-and-trading-volumes/">Net US equity issuance (gross − buybacks, 12m rolling, % of market cap)</a></td>
       <td class="ms-red">100</td>
-      <td class="ms-red">99</td>
+      <td class="ms-red">96</td>
       <td class="ms-now ms-amber">{{ net_issuance.exuberance_pct }}</td>
     </tr>
 
-    <!-- Composite -->
+    <!-- Composite — mirror GS Exhibit 3's BOTH summary rows. The MEAN is the
+         tier-determining composite; the MEDIAN is the figure GS quotes. Both
+         must equal the recomputed values of the final Current column above
+         (Step 5 arithmetic gate) — never print two different tiers. -->
     <tr>
-      <td class="indicator"><strong>Median (composite)</strong></td>
+      <td class="indicator"><strong>Median</strong></td>
       <td><strong>100</strong></td>
       <td><strong>95</strong></td>
+      <td class="ms-now"><strong>{{ column_median }}</strong></td>
+    </tr>
+    <tr>
+      <td class="indicator"><strong>Average (composite — tier-determining)</strong></td>
+      <td><strong>99</strong></td>
+      <td><strong>92</strong></td>
       <td class="ms-now"><strong>{{ composite_score }}</strong></td>
     </tr>
   </tbody>
 </table>
+
+<p style="font-size:0.85em; color:#555;">Percentiles inverted for market breadth, CBOE put/call ratio, and short interest; put/call percentile base year 1997. Current-column basis tags: <strong>ᴳ</strong> = GS-published (Exhibit 3, since 1995); <strong>ᵖ</strong> = own proxy calc (window stated in section text). Anchors: GS US Weekly Kickstart Exhibit 3.</p>
 ```
 
 After filling in values, swap the `ms-red` / `ms-amber` / `ms-green` /
 empty classes on the Current column based on the actual computed percentile
 (see thresholds above). The pre-set classes in the template above are a
 guide based on the 2026-06-07 reference run — re-evaluate each run.
+
+**Anchor integrity:** the hardcoded Dot-Com / 2021 cells were last verified
+against the 2026-06-05 issue (zsxq file_id 412458845521488, Exhibit 3 read at
+300 dpi). Re-transcribe from the actual Exhibit 3 each run (SKILL.md Step 1.5)
+— if these cells disagree with the PDF, **the PDF wins** and this template must
+be corrected in the same commit. Sub-metric rows beyond GS Exhibit 3 keep
+em-dash historical cells — never back-fill them with invented "GS" numbers.
+Each Current cell carries its basis tag (`ᴳ` GS-published / `ᵖ` own proxy) and
+GS-divergent own-calc cells show both values (`20ᵖ / 88ᴳ`) coloured by the GS
+value — per SKILL.md "Per-indicator percentile mapping" item 6.
 
 ## Analog calibration sources
 

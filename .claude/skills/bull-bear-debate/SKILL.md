@@ -19,7 +19,7 @@ This skill needs three analyst reports in the conversation context as markdown b
 - `news_report` — from [[news-analyst]]
 - `company_research_report` — from [[company-research]] (deep institutional-grade coverage of business, management, products, customers, competition, TAM, risks)
 
-**If any report is missing**, run the corresponding analyst skill(s) first — invoke the missing ones in parallel (one Agent subagent per skill, single message with multiple tool calls) before starting the debate. The analyst skills have no further prerequisites.
+**If any report is missing**, run the corresponding analyst skill(s) first — invoke the missing ones sequentially, per the CLAUDE.md 16 GB memory-watch rules: [[company-research]] ALONE first if needed (it is the heavy 6–10k-word agent); [[sentiment-analyst]] + [[news-analyst]] may pair 2-wide only with `/tmp/mem-watch-16gb.sh` running and free RAM >60%. The analyst skills have no further prerequisites.
 
 **Before re-running [[company-research]]** (a 10–30 min, 6,000–10,000-word deep dive), check for a cached report first:
 
@@ -37,6 +37,21 @@ For a clean full-pipeline run from scratch, prefer [[trading-analysis]] over inv
 - `--asset-type` — `stock` or `crypto`.
 
 The company-research report searches `db/zsxq.db` for the sell-side view (price targets, FY+1/+2/+3 estimates, valuation multiples, bear case) and labels it `*Analyst view:*`. **This block is the primary source for the scenario forward estimates and multiples both sides will use below** — pull bull/base/bear EPS and the per-case multiple from it, and keep any company-guided or consensus number visually distinct from the analyst's own estimate (never blend them into one figure).
+
+**Fresh sell-side check (run before round 1):** the cached company-research `*Analyst view:*` block can be up to 30 days stale, and the local broker library often holds a fresher, richer primary note (PT derivation, segment estimates vs consensus, bear case). Search it read-only:
+
+```bash
+/opt/anaconda3/bin/python3 zsxq_fts.py --query "<ticker / company name>" --limit 10
+```
+
+Pull the 1–2 freshest notes' PT, multiple, forward EPS, and bear case into the swing-variable values and Scenario scorecard — labeled `*Analyst view:*` and cited with the direct-download URL the script prints (`http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<urlencoded-name>`; never the `/zsxq/pdf-viewer/` route). Fall back to the cached company-research block only when the library has nothing fresher than it.
+
+**Sell-side view evolution (卖方观点演变) — mandatory whenever ≥2 zsxq notes cover the ticker.** Extend the fresh sell-side check with a mechanical pre-pass BEFORE re-reading any PDF — STRICTLY read-only (`/opt/anaconda3/bin/python3`, `sqlite3.connect('file:db/stock_price_target.db?mode=ro', uri=True)`; writes stay exclusively with `scripts/persist_pts.py`): `SELECT research_institute, rating, price_target, target_currency, report_date, report_file_id, upside_pct FROM price_targets WHERE company_ticker=? ORDER BY research_institute, report_date`. It surfaces same-institute revisions and PT dispersion (min/median/max, spread %) cheaply. The disagreement is debate fuel, not garnish:
+
+- **Each side names WHICH institutes back its stance, dated** — and flags recent revisions toward or away from its case (a broker that just cut its own PT is bear ammunition even if the rating stayed Buy; state the note's trigger — earnings print, policy change, channel checks, order data). Order each institute's views by report date (the filename's `-YYMMDD` suffix is the authoritative pub date; sanity-check against `create_time`); a 2026-03 PT and a 2026-06 PT from the same institute are two different views, not duplicates.
+- **Contradictory institutes get named, never averaged into a fake consensus.** When they disagree (opposite ratings, PTs >20% apart, conflicting reads of the same datapoint), render the disagreement table — `| Institute | Date | Rating / PT | Core argument | What evidence would prove them right |` — the last column hands each debater its falsification test.
+- **Every cited view carries (institute, report date, `/zsxq/pdf/<file_id>/<urlencoded-name>` direct-download link)** — same citation route as above.
+- **Artifact:** a 6–12-line **Sell-side view evolution (卖方观点演变)** block (per-institute dated timeline + disagreement table where views conflict) placed directly after the Scenario scorecard, so [[research-manager]] sees where the street actually splits.
 
 ## Swing variables (set before round 1)
 
@@ -64,6 +79,10 @@ Focus on:
 Resources to leverage explicitly: sentiment report, news report, company-research report, the prior debate history, and the most recent bear argument.
 
 **Citations:** when you cite a specific data point, headline, post, or filing passage, reproduce the underlying URL from the analyst report's References section as a clickable markdown link inline — e.g. "the [Q1 results press release](https://...) confirms 85% YoY revenue growth" or "as one user put it on [StockTwits](https://stocktwits.com/...) — 'easy $260 from here'". Never invent URLs; if the underlying analyst report has no link for a claim, paraphrase generally instead of citing a specific source. **This extends to every number in the scenario scorecard** — each PT, multiple, forward-EPS, and swing-variable value must trace to a URL cited in the same paragraph/table cell where it appears, and derived numbers (EV-PT, upside %) must show their inputs.
+
+**A sec.gov (or any primary-filing) URL may only carry text/numbers that literally appear in that filing.** When the claim is the company-research document's own analysis or paraphrase, cite the document itself — a repo-root-relative link labeled `*Internal research:* [<Company> deep dive §N](reports/company/<folder>/<…>_Research_Document.md)` — never decorate it with a filing URL borrowed from the same paragraph (a past run quoted the deep-dive's own "20–30% multiple-compression event" sentence and cited it to the 10-K, which contains no such words). Before finishing, re-check every quoted sentence attributed to a filing for literal presence in that filing.
+
+**Unsourced quantitative assumptions must be tagged.** Any quantitative assumption a debater introduces (per-GW dollars, attach rates, share splits, conversion ratios, rules of thumb) must either string-match a cited source or be explicitly tagged `*unsourced debate assumption*` in-line — and tagged assumptions may NOT feed the Scenario scorecard or the probability-weighted PT.
 
 Prefix the turn with `Bull Analyst:` and append it to `debate_history`.
 
@@ -106,7 +125,7 @@ Close with a short list of **dated, falsifiable catalysts** that would flip the 
 
 ## Output
 
-Return the complete `debate_history` markdown — alternating `Bull Analyst:` and `Bear Analyst:` paragraphs, in order, for `2 × rounds` turns total — **followed by the Scenario scorecard and Triggers-to-watch blocks**.
+Return the complete `debate_history` markdown — alternating `Bull Analyst:` and `Bear Analyst:` paragraphs, in order, for `2 × rounds` turns total — **followed by the Scenario scorecard, the Sell-side view evolution (卖方观点演变) block (required when ≥2 zsxq notes were used), and Triggers-to-watch blocks**.
 
 The orchestrator passes this transcript to the [[research-manager]] skill next.
 

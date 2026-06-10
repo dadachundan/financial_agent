@@ -24,7 +24,6 @@ import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path("/Users/x/projects/financial_agent")
-DB_PATH      = PROJECT_ROOT / "db" / "financial_reports.db"
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
@@ -35,6 +34,9 @@ from sec_text import extract, DEFAULT_MAX_SECTION  # noqa: E402
 # PDF extraction reuses the deterministic helper extracted into ingest/sec_extract.py.
 sys.path.insert(0, str(PROJECT_ROOT))
 from ingest.sec_extract import extract_text as _extract_pdf_text  # noqa: E402
+from db_paths import db_path  # noqa: E402  (honors FINAGENT_DB_DIR redirection)
+
+DB_PATH = db_path("financial_reports.db")
 
 
 def _lookup_by_id(report_id: int) -> tuple[Path, str, dict]:
@@ -90,7 +92,7 @@ def main() -> None:
             deep=args.deep,
         )
     elif suffix == ".pdf":
-        # PDFs aren't section-extracted; use graphiti's paginated reader
+        # PDFs aren't section-extracted; use ingest.sec_extract's paginated reader
         text = _extract_pdf_text(path, max_chars=args.max_section * 4)
     else:
         text = path.read_text(encoding="utf-8", errors="replace")

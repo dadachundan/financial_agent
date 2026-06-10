@@ -12,11 +12,11 @@ Head-to-head deliverable: a **5,000–15,000 word** markdown report that does NO
 Throughout this spec, "A vs B" is the canonical 2-way framing; whenever you see it, mentally generalize to "A vs B vs C (vs D)". Where N-way (3+) requires a structurally different table or phrasing, the spec calls it out explicitly with an "**N-way:**" tag.
 
 0. **In 60 seconds, what are each side's advantages and disadvantages?** (TL;DR table right after the title — see §0.)
-1. **Do their products directly compete, or are they more complementary?** (Per-product overlap matrix — see §5.1.)
-2. **What is each company's actual moat — quantified, not asserted?** (Seven-subsection moat anatomy — see §5.2–5.7.)
-3. **Who are their customers, and where do those customer bases overlap?** (Customer concentration + named-win comparison — see §6.)
-4. **What advantage does each have over the others?** (Dimension-by-dimension scorecard — see §7. For N≥3, rows record per-pair edges or a 1st/2nd/3rd ranking.)
-5. **Which one should the reader bet on, and why?** (Synthesis — see §8. For N≥3, N strategic-posture paragraphs.)
+1. **Do their products directly compete, or are they more complementary?** (Per-product overlap matrix — see §5.0.)
+2. **What is each company's actual moat — quantified, not asserted?** (Seven-subsection moat anatomy — see §5.1–5.7.)
+3. **Who are their customers, and where do those customer bases overlap?** (Customer concentration + named-win comparison — see §5.1.)
+4. **What advantage does each have over the others?** (Dimension-by-dimension scorecard — see §9. For N≥3, rows record per-pair edges or a 1st/2nd/3rd ranking.)
+5. **Which one should the reader bet on, and why?** (Synthesis — see §10. For N≥3, N strategic-posture paragraphs.)
 6. **Who else matters in this space?** (3–7 other big players surveyed alongside, with their position vs. the focal set quantified — see §5.8. For N=2 the focal "set" is the pair; for N=3 or 4, §5.8 covers companies *beyond* the focal N.)
 
 A comparison report that only restates each company's pitch is a failure. The reader has already read both companies' marketing material; they came to you for the delta.
@@ -50,7 +50,7 @@ The accuracy rules from [[company-research]] apply verbatim — read its **Core 
 
 **Default behavior: ALWAYS produce both English AND Simplified Chinese (zh-CN).** Never Traditional Chinese, Japanese, or Korean for the prose. Same rule as [[company-research]] — read its "Report language" section before drafting.
 
-Each company pair gets **two separate, complete comparison reports** — one in English, one in Simplified Chinese. Both are produced in a single workflow run and saved to `reports/compare/`. Generate the English version first, then the Chinese version. Both files independently meet the 5,000–9,000 word target (Chinese counted in characters).
+Each company pair gets **two separate, complete comparison reports** — one in English, one in Simplified Chinese. Both are produced in a single workflow run and saved to `reports/compare/`. Generate the English version first, then the Chinese version. Both files independently meet the N-scaled target (5,000–9,000 for N=2; 7,000–12,000 for N=3; 10,000–15,000 for N=4 — Chinese counted in characters; see `references/report_structure.md`).
 
 **Explicit user override (highest priority).** The user can request a single language only with any of these phrasings; honor it without asking:
 
@@ -72,7 +72,7 @@ Examples:
 **Filename convention for the Chinese edition:** append `_zh` immediately before `.md`. Examples:
 - `reports/compare/SNPS_vs_CDNS.md` (English) + `reports/compare/SNPS_vs_CDNS_zh.md` (Chinese)
 - `reports/compare/LRCX_vs_AMAT.md` + `reports/compare/LRCX_vs_AMAT_zh.md`
-- `reports/compare/安集科技_SSE688019_vs_鼎龙股份_SZSE300054.md` already in Chinese — when generating the English companion, name it `Anjizhike_SSE688019_vs_Dinglong_SZSE300054.md` per the English/pinyin-in-filename rule.
+- China A-share pair: `Anjizhike_SSE688019_vs_Dinglong_SZSE300054.md` + `Anjizhike_SSE688019_vs_Dinglong_SZSE300054_zh.md` — **the Chinese edition also leads with the English/pinyin stem** (global filename rule: every report filename starts with an ASCII English/pinyin token, even when the prose is Chinese). A legacy all-Chinese filename like `安集科技_SSE688019_vs_鼎龙股份_SZSE300054.md` is non-compliant — consolidate it per the Update-in-place rule.
 
 **Language-specific instructions when drafting:**
 
@@ -119,7 +119,7 @@ A compare-companies report MUST contain deliverables 0–6 (the seven core deliv
 
 See [`reports/compare/SNPS_vs_CDNS.md`](../../../reports/compare/SNPS_vs_CDNS.md) for the canonical worked example.
 
-### Required deliverable 1 — Product overlap matrix (§5.1)
+### Required deliverable 1 — Product overlap matrix (§5.0 — opens the moat section, immediately before §5.1)
 
 An **(N+1)-column** matrix mapping every meaningfully-shipping product across all N sides to a status bucket. For N=2 the binary classification is enough (DIRECTLY COMPETE / DIRECTLY COMPETE w/ dominant / COMPLEMENTARY / NON-OVERLAPPING). **For N=3+, the Status column gains a row-pattern grammar** because direct-compete-ness varies by pair:
 
@@ -145,22 +145,22 @@ The matrix is the single most-cited section of the final report — readers past
 
 ### 延伸观看 / Further viewing — explainer videos (optional, but default to including)
 
-When this report turns on whether two products *actually substitute* — and the answer lives in their **internal mechanics** the reader can't picture from prose (two robot joints — a harmonic-drive vs a cycloidal actuator; two lithography light-sources — DUV immersion vs EUV; two battery cell formats — prismatic LFP vs cylindrical 4680; two foundry transistor architectures — FinFET vs gate-all-around) — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* why the products do or don't compete, not just read the verdict. Default to including them whenever the overlap matrix (§5.1) hinges on a hard-to-visualize mechanism; omit only when the comparison is purely numeric with nothing worth visualizing.
+When this report turns on whether two products *actually substitute* — and the answer lives in their **internal mechanics** the reader can't picture from prose (two robot joints — a harmonic-drive vs a cycloidal actuator; two lithography light-sources — DUV immersion vs EUV; two battery cell formats — prismatic LFP vs cylindrical 4680; two foundry transistor architectures — FinFET vs gate-all-around) — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* why the products do or don't compete, not just read the verdict. Default to including them whenever the overlap matrix (§5.0) hinges on a hard-to-visualize mechanism; omit only when the comparison is purely numeric with nothing worth visualizing.
 
 **This skill writes TWO files: the English `<A>_vs_<B>.md` uses the English heading `## Further viewing — explainer videos`; the Chinese `..._zh.md` uses the bilingual heading `## 延伸观看 / Further viewing`.** The video list itself is shared between both files (same URLs); only the heading and the caption language differ.
 
 **Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
 
-- **Where:** a `**延伸观看 / Further viewing**` bullet list at the end of the section the concept lives in (most naturally beside the §5.1 overlap matrix row whose mechanism is in question), or a single `📺` note beside the hard concept. English-only reports use `**Further viewing**`.
+- **Where:** a `**延伸观看 / Further viewing**` bullet list at the end of the section the concept lives in (most naturally beside the §5.0 overlap matrix row whose mechanism is in question), or a single `📺` note beside the hard concept. English-only reports use `**Further viewing**`.
 - **Durable sources only:** the company's own product / IR / engineering channel, an OEM or reputable teardown / cutaway channel, or a well-known explainer channel — not a low-view re-upload that will be deleted or is clearly pirated.
 - **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(B站，部分地区或需登录)`.
 - **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
 
-> Full spec: `references/citations.md` § "Further viewing — explainer videos".
+> Full spec: `.claude/skills/company-research/references/citations.md` § "Further viewing — explainer videos" (this skill has no local `references/citations.md` — the spec lives in the parent skill).
 
-### Required deliverable 2 — Moat anatomy (§5.2–5.8)
+### Required deliverable 2 — Moat anatomy (§5.1–5.7; §5.8 is Required deliverable 6)
 
-Seven subsections, each anchored to specific disclosed numbers, not adjectives. Proven structure from the SNPS-vs-CDNS rewrite (May 2026). **For N≥3, every subsection's tables grow to N columns; the analytical questions stay the same.** When a side doesn't disclose a number that others do, write `not disclosed` in that side's cell — don't estimate or omit the column.
+Seven analytical subsections (§5.1–§5.7), each anchored to specific disclosed numbers, not adjectives. Proven structure from the SNPS-vs-CDNS rewrite (May 2026). **For N≥3, every subsection's tables grow to N columns; the analytical questions stay the same.** When a side doesn't disclose a number that others do, write `not disclosed` in that side's cell — don't estimate or omit the column.
 
 1. **Customer concentration** — top-1 / top-5 / >10% disclosures from each 10-K (or 年度报告 / Yuho); geographic mix table side-by-side across all N companies; multi-year trend; **call out who is *most* exposed** (for N=3+, name the rank) and whether each side's diversification is genuine or driven by losing a major customer.
 2. **Backlog & recurring mix** — RPO / non-cancellable backlog $; backlog ÷ revenue ratio; duration ladder (<12mo / 13–36mo / >36mo); % recurring / ratable; typical contract length; multi-year trend.
@@ -172,9 +172,9 @@ Seven subsections, each anchored to specific disclosed numbers, not adjectives. 
 
 See `references/moat_anatomy.md` for the per-subsection content spec, what to grep for in each filing type, and the failure modes to avoid.
 
-### Required deliverable 3 — Customer comparison (§6)
+### Required deliverable 3 — Customer comparison (lives in §5.1 — do NOT improvise a §5.1b / §6.5 home for it)
 
-Not just "do they have the same customers" — quantify and overlap across all N sides:
+This deliverable is carried by the §5.1 customer-concentration subsection, expanded. Not just "do they have the same customers" — quantify and overlap across all N sides:
 
 - Top-1 / top-5 / >10% customer disclosures from each company, side-by-side (N columns)
 - Geographic mix table (N columns)
@@ -260,6 +260,7 @@ These are the disciplines a desk-grade relative-value note carries that the base
 - **Mirror Deutsche Bank's Huayan Robotics benchmark line:** DB justifies a target P/S of 12× by naming it against Dobot 15×, the HK-listed robot-peer average 12×, and the global cobot median 50× *in one breath* — not in isolation. The table is one row per name × columns for **forward PE / P/S / EV/EBITDA / PEG / div yield / FCF yield**, PLUS a **peer-median column** and a **3-yr-range column** so cheap/expensive reads like-for-like.
 - **Pick the right yardstick for the regime and say which (Barclays "Pricing a capex supercycle"):** Barclays argues EV/EBITDA / EV-EBIT beats PE in capex-heavy windows and shows the cross-sectional return evidence. State which multiple is the fair yardstick for *this* pair and why — EV/Sales pre-profit, EV/EBITDA capex-heavy, PEG high-growth, PE for stable cash compounders.
 - **Close the loop the moat table opens:** don't just report that A trades at a premium to B — say **whether the premium/discount is justified** by the moat/growth differential (DB: Huayan's 12× P/S is a *discount* to Dobot's 15× and that is wrong, because Dobot builds humanoids but isn't profitable while Huayan is). Moats are quantified in §5 but never reconciled against the multiple spread; this section does the reconciliation.
+- **Forward estimates strip (required — the levels behind the multiples):** directly below the multiples table, a second table of **FY+1 / FY+2 / FY+3 revenue and net profit (or net margin) per name** — the per-name multi-year estimate levels that anchor every broker comparison (mirror GS "China Surgical Robots" Exhibits 1–2: sales & NP 2023→2028E per name). A "49.5% CAGR" in prose with no estimates table to scan fails the sell-side bar. Each cell is sourced to company guidance (cite the filing / IR deck) or to a broker estimate labeled `*Analyst view:*` (cite the `/zsxq/pdf/<file_id>/` note or a public deep URL) — **never the analyst's own model.** Mismatched fiscal years disclosed in-cell; cells with no published estimate get `not published`, not an invention.
 - **Citation discipline (unchanged):** every multiple cites a deep URL that literally contains the number (Yahoo Finance / Eastmoney / Kabutan / Naver quote page) as of a stated date; the analyst's own model is never the source (cite the filing for the inputs, the quote page for the price); mismatched fiscal-period ends are disclosed in-cell.
 - **Borrowed PT discipline (this skill ships no sized PT of its own, but it *may quote* one as evidence):** when a broker / sell-side PT is cited to support a relative-value point, pair it with the stock's price on that note's date + the implied upside (`MS PT $288 vs $232 @ 2026-06-03 → +24%`), not today's spot — a bare borrowed PT with no report-date anchor is uninterpretable. The report-date price + upside live in `stock_price_target_db` (`report_date_price` / `upside_pct`, shown at `/pt`).
 
@@ -340,6 +341,16 @@ Then, exactly as in company-research:
 
 **Density bar:** at least **3–6 distinct `db/zsxq.db` citations per side** when a name has meaningful local coverage, plus **at least one cross-name / sector note** that ranks the set — every one labeled `*Analyst view:*` and cited to the `/zsxq/pdf/<file_id>/<filename>` route, never blended into a filing citation. **Top-up rule:** if `find_pdf.py` returns few or stale rows for a name (common for small / newly-listed / non-US issuers), top up from the web first — `python3 download/zsxq_downloader.py --count 100 --query "<name>"` (idempotent, dedups on `file_id`) — then re-run the searches. Note in the verification log how many zsxq notes you found vs fetched per side.
 
+### Sell-side view evolution (卖方观点演变) — mandatory whenever ≥2 zsxq notes cover any compared name
+
+Both language files carry the subsection (English file: "Sell-side view evolution"; Chinese file: 卖方观点演变), placed with the §4.5 borrowed-PT evidence or beside the §0 order-of-preference discussion. Requirements:
+
+1. **Mechanical pre-pass FIRST — read `db/stock_price_target.db` before re-reading any PDF.** STRICTLY READ-ONLY: `/opt/anaconda3/bin/python3` with `sqlite3.connect('file:db/stock_price_target.db?mode=ro', uri=True)`; SELECT all rows for **each compared ticker** (columns: `research_institute, rating, price_target, target_currency, report_date, report_file_id, upside_pct`) to detect same-institute revisions and compute per-name PT dispersion (min / median / max, spread %). Writes stay exclusively via `scripts/persist_pts.py` (the Tier-2 helper behind item 3 above).
+2. **Per-name, per-institute timeline.** For each compared name, order each institute's notes by report date — the filename's `-YYMMDD` suffix is the authoritative publication date (sanity-check against `create_time`). Per entry: institute, date, rating, PT, key estimates, one-line thesis. **Explicitly call out self-revisions** — upgrade / downgrade, PT raised / cut from X to Y, thesis pivot — and the stated trigger (earnings print, policy change, channel checks, order data). A 2026-03 PT and a 2026-06 PT from the same institute are two different views, not duplicates.
+3. **Cross-institute disagreement PER NAME — never blend contradictory views into a fake consensus.** When institutes disagree on a name (opposite ratings, PTs >20% apart, conflicting reads of the same datapoint), render a disagreement table: Institute | Date | Rating / PT | Core argument | What evidence would prove them right.
+4. **Cross-NAME preference calls (unique to this skill).** When the same institute ranks the compared set against each other ("GS prefers MedBot over EdgeMed"), those dated calls belong in the §0 order-of-preference discussion (Required deliverable 8) — and if an institute's preference order *changed* between notes, say so with both dates.
+5. **Every view dated and cited.** Each institute view carries (institute, report date, `/zsxq/pdf/<file_id>/<filename>` direct-download link) per the citation format above; the borrowed-PT report-date-price discipline (Required deliverable 7) applies to every PT in the timeline.
+
 ## Report structure (TL;DR + 10 sections)
 
 See `references/report_structure.md` for the full section-by-section spec, word-count targets, required tables and charts, and an example outline from SNPS_vs_CDNS.
@@ -351,14 +362,24 @@ Quick summary (every section's tables grow to N columns when N≥3):
 2. Strategic pillars side-by-side (timeline or pillar table; N tracks)
 3. AI narrative — tool vs. tailwind (N-column table)
 4. Segment structure & financial scoreboard (N-column scoreboard; mermaid xychart bar chart with N grouped bars per metric)
-4.5. **Relative-valuation scoreboard** (Required deliverable 7) — N-row multiples table (fwd PE / P/S / EV/EBITDA / PEG / div yield / FCF yield) + peer-median + 3-yr-range columns; fair-yardstick paragraph; premium-justified-or-not verdict. Placed up top with the TL;DR.
-5. **The moat anatomy** (8 subsections — Required deliverables 2 + 6; the longest section by word count). Subsections: 5.1 customer concentration · 5.2 backlog & recurring mix · 5.3 channel/foundry/distribution lock-in · 5.4 tool-level segment share · 5.5 IP/patent/data franchise share · 5.6 why a customer picks one over the other · 5.7 cracks worth naming · **5.8 other big players in this space** (players *beyond* the focal N)
+4.5. **Relative-valuation scoreboard** (Required deliverable 7) — N-row multiples table (fwd PE / P/S / EV/EBITDA / PEG / div yield / FCF yield) + peer-median + 3-yr-range columns; **forward-estimates strip** (FY+1/FY+2/FY+3 revenue & net profit per name); fair-yardstick paragraph; premium-justified-or-not verdict. Placed up top with the TL;DR.
+5. **The moat anatomy** (§5.0 + 8 subsections — Required deliverables 1 + 2 + 6; the longest section by word count). Subsections: **5.0 product overlap matrix** (Req. 1) · 5.1 customer concentration + full customer comparison (Req. 3) · 5.2 backlog & recurring mix · 5.3 channel/foundry/distribution lock-in · 5.4 tool-level segment share · 5.5 IP/patent/data franchise share · 5.6 why a customer picks one over the other · 5.7 cracks worth naming · **5.8 other big players in this space** (players *beyond* the focal N)
 6. The big bet (M&A, R&D, capital deployment — what each side is doing right now to expand TAM; N-column table)
 7. Capital allocation (debt, buyback, dividend, M&A optionality; N-column table)
 8. Distinctive risks (front-of-risk-factors comparison; what each 10-K leads with; N-column table)
 9. Side-by-side scorecard (Required deliverable 4) — for N=2 a 3-col Edge table; for N≥3 a (N+2)-col rank-or-checkmark table
 10. Bottom line — **N different bets** (Required deliverable 5) — N strategic-posture paragraphs (each with a "priced in?" line) + 1 catalyst paragraph + the **catalyst-differential table** (Required deliverable 9) + optional relative-positioning / pair-trade lens
 11. References block (every URL deduplicated, grouped: primary filings A / primary filings B / [primary filings C] / [primary filings D] / industry research / press / regulatory)
+
+## Chart rules (mandatory — every visual, both language files)
+
+The project-wide chart rules in `~/.claude/CLAUDE.md` § "Chart generation rules" apply verbatim. Compare-specific application:
+
+- **Visual count scales by N:** 4–8 for N=2; 6–10 for N=3; 8–14 for N=4 (mermaid blocks + matplotlib PNGs combined — see `references/report_structure.md`). A 2-visual N=3 report is a defect.
+- **Every matplotlib / Plotly PNG MUST render its data source as an in-image footer annotation** (e.g. `Source: ISRG FY2025 10-K · GS 2026-04-21`). Charts get screenshotted and iframe-embedded without their surrounding caption — the source must travel inside the image. The markdown caption below the image is a backup, never the primary mechanism. When writing/updating a chart helper, the source annotation is a **required** parameter, not optional.
+- **Every mermaid block gets an italic `*Source: …*` caption line immediately below the block** — the in-image mechanism isn't available in mermaid, so the caption is mandatory there.
+- **Never plot series differing by >20× on a shared linear axis** — it renders the smaller names invisible (e.g. ISRG $10,064.7M vs MedBot $77M on a 0→11,000 axis = two invisible bars). Use a log scale, an indexed/normalized series (e.g. rebased to 100), or split panels. mermaid `xychart-beta` has **no log axis** — for extreme gaps, split the chart or switch the metric (growth %, mix %) instead of flattening it.
+- **Verify the rightmost data point is fresh vs the report's dateline** before embedding; swap or drop stale series per the global no-stale-data rule.
 
 ## Citations
 
@@ -422,7 +443,7 @@ The relevant files inside each slug folder, by language:
 
 **Decision rules after the ls:**
 
-1. **Both research docs exist and are <12 months old** → read them in full; do NOT regenerate. The compare-companies report consumes them as structured input — Section 4 (Products), Section 5 (Customers), and Section 7 (Competitive Landscape) of each research doc become starting points for §5.1 (product matrix) and §6 (customer comparison) of the comparison.
+1. **Both research docs exist and are <12 months old** → read them in full; do NOT regenerate. The compare-companies report consumes them as structured input — Section 4 (Products), Section 5 (Customers), and Section 7 (Competitive Landscape) of each research doc become starting points for §5.0 (product matrix) and §5.1 (customer comparison) of the comparison.
 2. **One side exists, the other is missing** → invoke [[company-research]] on the missing side first. Do not draft the comparison without both deep dives in hand; an uncited compare-companies report will fail the citation density target.
 3. **Both exist but one or both are >12 months old** → invoke [[company-research]] on each stale side to refresh; the skill updates the existing file in place (no parallel copies).
 4. **Neither exists** → run [[company-research]] on both sides first, then proceed. Expect this path to take significantly longer than path (1) — flag the user at the start so they can decide whether to wait or split the work over multiple sessions.
@@ -541,6 +562,7 @@ Apply the same Step 10 verification flow from [[company-research]] — URL check
 - [ ] **Comparability caveat** flagged wherever two juxtaposed numbers aren't apples-to-apples (fiscal-end / GAAP-vs-non-GAAP / single-arm / organic-vs-M&A / segment-definition).
 - [ ] **Prior research consulted before drafting.** Ran `ls reports/company/` for each side; if a doc existed, read it before writing anything new. Did not duplicate work.
 - [ ] **Local zsxq library searched fresh for the comparison (Step 0.7).** Ran `find_pdf.py` per-name (all aliases) AND for cross-name / sector notes; pulled the Street's conviction ranking + borrowed PTs from `db/zsxq.db`. Body carries ≥3–6 `*Analyst view:*` zsxq citations per side (where coverage exists) plus ≥1 cross-name/sector note, each cited to the `/zsxq/pdf/<file_id>/<filename>` direct-download route and never blended into a filing citation. Verification log notes zsxq notes found vs fetched per side.
+- [ ] **When ≥2 zsxq notes cover any compared name:** the Sell-side view evolution (卖方观点演变) subsection is present in BOTH language files — `db/stock_price_target.db` read-only pre-pass ran first, per-name per-institute timeline ordered by the filename `-YYMMDD` date with self-revisions + triggers called out, disagreement table rendered per name where institutes conflict (no fake consensus), dated cross-name preference calls folded into the §0 order-of-preference discussion, every view dated + cited to its `/zsxq/pdf/<file_id>/<filename>` link (see § "Sell-side view evolution (卖方观点演变)").
 - [ ] The product overlap matrix uses the N-way status grammar (`ALL N COMPETE` / `A vs B compete, C absent` / `NON-OVERLAPPING (X only)` / etc.). Every row has been classified — no `unclear` or `mixed` rows. At least one row each is `ALL N COMPETE`, `NON-OVERLAPPING`, and at least one mid-state status (a side absent or a side dominant).
 - [ ] Every "share leader" claim in the moat anatomy has a third-party citation; none use a 10-K cite.
 - [ ] The customer-comparison section names ≥3 customers visible at *multiple* sides (the multi-vendor reality), backed by either each vendor's customer-page listing or a third-party article.
@@ -550,11 +572,20 @@ Apply the same Step 10 verification flow from [[company-research]] — URL check
 - [ ] **§5.8 names 3–7 other big players** (players *beyond* the focal N) in the focal set's space, classified as Primary competitor / Adjacent / Acquisition target / Domestic-market alternative. At least 3 Primary competitors get 100–300 word paragraphs. **No double-listing** — a company is either in the focal N or in §5.8, never both.
 - [ ] **§5.3, §5.4, §5.5 tables extended** with columns for each Primary competitor (§5.8 names) that materially affects the share picture. For an N=3 report that already covers most of the industry, this may mean only 1–2 additional columns; for an N=2 report it may mean 2–4.
 - [ ] **Every "other big player" named came from a verifiable source** — 10-K competitor list, IPnest / Gartner / IDC / IBISWorld / TrendForce / IQVIA leaderboard, or recent industry-research note. No inventions.
-- [ ] **(N≥3) Word count meets the scaled target** — 7,000–12,000 for N=3; 10,000–15,000 for N=4. Run `wc -w <file>` before declaring done.
+- [ ] **(N≥3) Word count meets the scaled target** — 7,000–12,000 for N=3; 10,000–15,000 for N=4. Run `wc -w <file>` (English) before declaring done. Chinese files are counted in CJK characters, not `wc -w` (which undercounts CJK ~4×): `python3 -c "import re,sys;print(len(re.findall(r'[一-鿿]',open(sys.argv[1]).read())))" <file>`.
+- [ ] **Visual count meets the per-N target** — 4–8 (N=2), 6–10 (N=3), 8–14 (N=4) mermaid blocks + PNGs combined (see § "Chart rules").
+- [ ] **Every PNG has an in-image source footer; every mermaid block has a `*Source: …*` caption line below it; no >20× scale gap plotted on a shared linear axis** (see § "Chart rules").
+- [ ] **§4.5 Forward estimates strip present** — FY+1/FY+2/FY+3 revenue and net profit (or margin) per name, every cell sourced to guidance or an `*Analyst view:*` broker estimate, none to "our model" (Required deliverable 7).
+- [ ] **Further-viewing block present** beside the §5.0 row whose mechanism is hard to visualize (1–3 videos, all HTTP-checked `200` with a real-browser UA, none carrying a number) — OR a one-line waiver in the verification log stating the comparison is purely numeric with nothing worth visualizing.
+- [ ] **Section numbering matches the canonical skeleton** (§5.0 overlap matrix · §5.1–5.7 moat · §5.8 other players · §6 big bet · §9 scorecard · §10 bottom line) — no improvised §N.5 / §Nb sections.
+- [ ] **Data Used / 数据来源清单 manifest present between §10 and References in BOTH language files** — enumerates all N sides' primary filings, the third-party share sources anchoring §5.4/§5.5, the market-data as-of date, the zsxq broker notes used, the prior research docs consumed as structured input, and stale notices / coverage gaps (or "none").
+- [ ] **Both output filenames start with an ASCII English/pinyin token** — verify with `[[ $(basename <file>) =~ ^[A-Za-z0-9] ]]`; a leading CJK character fails the report (global filename rule).
 
 **Bilingual-specific checks (skip when the user overrode to a single language):**
 
-- [ ] **Both files exist** — `reports/compare/<A>_vs_<B>.md` AND `reports/compare/<A>_vs_<B>_zh.md` are present at the canonical paths and each independently hits 5,000–9,000 words (Chinese counted in characters).
+- [ ] **Both files exist** — `reports/compare/<A>_vs_<B>.md` AND `reports/compare/<A>_vs_<B>_zh.md` are present at the canonical paths and each independently hits the N-scaled target (5,000–9,000 for N=2; 7,000–12,000 for N=3; 10,000–15,000 for N=4 — Chinese counted in CJK characters per the command above).
+- [ ] **Language mode recorded in the verification log** — every report's log states the mode (`bilingual default` / `EN-only` / `ZH-only`); when single-language, quote the user's override phrasing verbatim (e.g. `EN skipped per user request "用中文即可"`). A single-language report with no recorded override is a defect, not an override.
+- [ ] **Mechanical pair check pasted into the log** — run `ls reports/compare/<stem>*` after writing and paste the output, confirming either both files exist or the recorded override explains the missing one.
 - [ ] **Data parity between the two files** — TL;DR claims, scorecard verdicts, product-overlap rows, moat-anatomy numbers, named-customer overlaps, "other big players" classifications, and bottom-line catalysts are the same in both. Use `diff` on the table cells if needed.
 - [ ] **Prose is natively authored, not machine-translated** — the Chinese report flows naturally; section headers are translated; bilingual technical terms appear on first mention (`毛利率 (gross margin)`, `RPO (剩余履约义务)`).
 - [ ] **Citation URLs are identical between the two files**; only link titles preserve original language (a US `10-K` stays `10-K` in both files; a `年度报告` stays `年度报告` in both files).
@@ -562,7 +593,7 @@ Apply the same Step 10 verification flow from [[company-research]] — URL check
 
 ## Output location
 
-Save both reports under `reports/compare/` at the project root. Preserve the user's left-right ordering in both filenames — do not alphabetize. The viewer (http://localhost:5001/reports) surfaces files under `reports/compare/`.
+Save both reports under `reports/compare/` at the project root. Preserve the user's left-right ordering in both filenames — do not alphabetize. The viewer (http://xs-macbook-air.local:5001/reports) surfaces files under `reports/compare/`. (Any viewer or zsxq URL placed in a report or in the final user-facing summary must use the `xs-macbook-air.local` host, never `localhost` — `localhost` 404s on the user's iPad.)
 
 **Filename convention — no date suffix; `_zh` suffix marks the Chinese edition; N-way uses `_vs_` between each side:**
 
@@ -580,21 +611,23 @@ Save both reports under `reports/compare/` at the project root. Preserve the use
 **Examples:**
 
 - N=2 US pair: `SNPS_vs_CDNS.md` + `SNPS_vs_CDNS_zh.md`; `LRCX_vs_AMAT.md` + `LRCX_vs_AMAT_zh.md`; `AMD_vs_NVDA.md` + `AMD_vs_NVDA_zh.md`
-- N=2 China A-share pair: `Anjizhike_SSE688019_vs_Dinglong_SZSE300054.md` (English) + `安集科技_SSE688019_vs_鼎龙股份_SZSE300054_zh.md` (Chinese)
+- N=2 China A-share pair: `Anjizhike_SSE688019_vs_Dinglong_SZSE300054.md` (English) + `Anjizhike_SSE688019_vs_Dinglong_SZSE300054_zh.md` (Chinese — English/pinyin stem mandatory even for the `_zh` edition)
 - N=2 mixed-domicile: `BYD_HKEX1211_vs_TSLA_NASDAQ.md` + `BYD_HKEX1211_vs_TSLA_NASDAQ_zh.md`
 - N=3 mixed: `Databricks_vs_SNOW_vs_ORCL.md` + `Databricks_vs_SNOW_vs_ORCL_zh.md`
 - N=3 semicap: `LRCX_vs_AMAT_vs_ASML.md` + `LRCX_vs_AMAT_vs_ASML_zh.md`
 - N=4 hyperscaler infra: `AWS_vs_Azure_vs_GCP_vs_OCI.md` + ..._zh.md
 - N=5 or more: NOT SUPPORTED by this skill — split into multiple pairwise reports (or use `/sector-overview` for a survey).
 
-**Update-in-place rule** — at most one English file and one Chinese file per ordered tuple. If `<A>_vs_<B>_vs_<C>.md` (or `_zh.md`) exists, update it in place. If a file exists with the same tuple in a different order (e.g. `<C>_vs_<A>_vs_<B>.md`), ask the user which canonical order to keep before writing — preserving the user's left-right ordering from their request takes precedence. When a Chinese edition exists at a legacy path (e.g. an all-Chinese-slug filename from before this rule), consolidate it into the `<EnglishStem>_zh.md` canonical name and list the legacy file so the user can confirm deletion. Do not auto-delete.
+**Update-in-place rule** — at most one English file and one Chinese file per ordered tuple. If `<A>_vs_<B>_vs_<C>.md` (or `_zh.md`) exists, update it in place. If a file exists with the same tuple in a different order (e.g. `<C>_vs_<A>_vs_<B>.md`), ask the user which canonical order to keep before writing — preserving the user's left-right ordering from their request takes precedence. When a Chinese edition exists at a legacy path (e.g. an all-Chinese-slug filename from before this rule), consolidate it into the `<EnglishStem>_zh.md` canonical name and list the legacy file so the user can confirm deletion. Do not auto-delete. **The consolidation is not deferrable:** when any operation touches a tuple whose existing file has a pure-Chinese stem, the run MUST execute it in that run — write the English-stem file(s), carry the legacy content into `<EnglishStem>_zh.md`, list the legacy path for user-confirmed deletion — not note it for "later".
+
+**Legacy N≥5 files** — if an existing `reports/compare/` file covers N≥5 names (e.g. a 7-way), do NOT update it in place under this skill: it predates the N≤4 cap. Tell the user and offer (a) migration to `reports/sector/` via `/sector-overview`, or (b) splitting into 2–4-way reports. On migration, also strip any `reports/company/*.md` "Source documents" citations per the Numerical Accuracy rule.
 
 **Single-language override** — if the user requested `--en-only`, only the `<...>.md` file is written; if `--zh-only`, only `<...>_zh.md`. The default (no override) always produces both.
 
 ## Reference docs (read on demand)
 
 - `references/report_structure.md` — full 10-section template, word-count targets, required tables and charts, SNPS-vs-CDNS worked outline.
-- `references/moat_anatomy.md` — the 7-subsection moat template with per-subsection content spec, grep keywords, and failure modes.
+- `references/moat_anatomy.md` — the 8-subsection (§5.1–§5.8) moat template with per-subsection content spec, grep keywords, and failure modes.
 - `references/product_overlap_matrix.md` — how to build the directly-compete matrix, four-bucket classification rubric, sourcing rules, worked SNPS-vs-CDNS example.
 
 Also read on demand from the parent skill:

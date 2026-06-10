@@ -12,7 +12,7 @@ The final report has a TL;DR section + 10 numbered sections + a References block
 
 The moat anatomy (§5) is the longest section and the analytical centerpiece; if it ends up shorter than any other section, the priority is wrong.
 
-Embed Mermaid blocks + 1–2 matplotlib PNGs for quantitative trends. Every chart gets a citation directly below.
+Embed Mermaid blocks + 1–2 matplotlib PNGs for quantitative trends. **Every matplotlib/Plotly PNG renders its data source as an in-image footer annotation** (the chart travels without its caption — per the global mandatory chart rules, the source param is required, not optional); the markdown citation below the image is a backup only. **Every mermaid block carries an italic `*Source: …*` caption line immediately below it** (no in-image mechanism exists for mermaid). **Series differing by >20× never share a linear axis** — use log scale, indexed series, or split panels (mermaid `xychart-beta` has no log axis: split the chart or switch the metric instead). See SKILL.md § "Chart rules".
 
 **Bilingual reminder.** By default, the skill produces both English and Simplified Chinese editions (`<...>.md` + `<...>_zh.md`). This structure spec applies to **both** files — same skeleton, same word-count target, same chart count. The structural skeleton stays identical; only the prose language differs. Section headers translate (e.g. `## §5 The moat anatomy` ↔ `## §5 护城河剖析`); citation URLs are identical between files; link titles preserve original language (`10-K` stays `10-K` in both, `年度报告` stays `年度报告` in both). See the SKILL.md "Report language" section for the bilingual workflow rules.
 
@@ -125,6 +125,15 @@ Then a paragraph that does three things, mirroring Deutsche Bank's Huayan Roboti
 2. **Benchmarks each name against the others and the peer median in one breath** — DB justifies Huayan's target P/S 12× *against* Dobot 15× / HK-peer-avg 12× / global-cobot-median 50×, not in isolation.
 3. **Concludes whether the premium/discount is justified** by the moat/growth differential surfaced in §5 — the reconciliation the moat section opens but never closes ("A trades 30% above B on EV/EBITDA; given A's 8pp-higher recurring mix and 2× backlog coverage from §5.2, that premium is *deserved* / *not deserved*").
 
+**Forward estimates strip — required, directly below the multiples table.** The per-name multi-year estimate *levels* that anchor every broker comparison (mirror GS "China Surgical Robots" Exhibits 1–2: sales and net profit 2023→2028E per name, Rmb mn, yearly). A CAGR in prose is not a substitute for an estimates table the reader can scan:
+
+| Name | FY+1 revenue | FY+2 revenue | FY+3 revenue | FY+1 net profit | FY+2 net profit | FY+3 net profit | Source |
+|---|---|---|---|---|---|---|---|
+| **A (TICKER)** | ... | ... | ... | ... | ... | ... | company guidance ([link]) |
+| **B (TICKER)** | ... | ... | ... | ... | ... | ... | *Analyst view:* GS 2026-04-21 ([/zsxq/pdf/ link]) |
+
+Net margin may substitute for net profit where that is what the source publishes. Each cell sources to company guidance or a broker note labeled `*Analyst view:*` (cited to the `/zsxq/pdf/<file_id>/` route or a public deep URL) — never the analyst's own model. Mismatched fiscal years disclosed in-cell; `not published` where no estimate exists.
+
 **Citation discipline (the existing rules, applied here):**
 - Every multiple cites a **deep URL that literally contains the number** as of a stated date — Yahoo Finance / Eastmoney / Kabutan / Naver quote page. Not a homepage.
 - **The analyst's own model is never the source.** Cite the filing for the inputs (revenue, EBITDA, share count) and the quote page for the price; never "(our model)".
@@ -133,9 +142,10 @@ Then a paragraph that does three things, mirroring Deutsche Bank's Huayan Roboti
 
 ### §5 — The moat anatomy (1,800–3,000 words) — THE LONGEST SECTION
 
-**Eight** subsections. **See `references/moat_anatomy.md` for the per-subsection content spec.** Headline subsections (each ~200–400 words, except §5.8 which scales with the number of other players covered):
+**§5.0 + eight subsections.** **See `references/moat_anatomy.md` for the per-subsection content spec.** Headline subsections (each ~200–400 words, except §5.8 which scales with the number of other players covered):
 
-- 5.1 Customer concentration — both just diversified, but for opposite reasons
+- **5.0 Product overlap matrix (Required deliverable 1)** — opens the section, immediately before §5.1; see `references/product_overlap_matrix.md`
+- 5.1 Customer concentration — both just diversified, but for opposite reasons. **Carries the full customer comparison (Required deliverable 3):** concentration disclosures + geographic mix + named-win comparison + multi-vendor overlap analysis. Do not improvise a separate §5.1b / §6.5 home for it.
 - 5.2 Backlog and recurring mix — both fortress-grade
 - 5.3 Channel / foundry / distribution lock-in **(extend tables with columns for each Primary competitor)**
 - 5.4 Tool-level / sub-segment market share — where the de-facto monopolies live **(extend tables with columns for each Primary competitor that leads a sub-segment)**
@@ -144,7 +154,7 @@ Then a paragraph that does three things, mirroring Deutsche Bank's Huayan Roboti
 - 5.7 Cracks worth naming on each side
 - **5.8 Other big players in this space (NEW — Required deliverable 6)** — 3–7 other meaningful players named, each Primary competitor gets a 100–300 word paragraph; classified as Primary / Adjacent / Acquisition target / Domestic-market alternative.
 
-**Required deliverable 1 (product overlap matrix)** sits inside this section as §5.1 or just before — see `references/product_overlap_matrix.md`.
+**Required deliverable 1 (product overlap matrix)** opens this section as **§5.0**, immediately before §5.1 — see `references/product_overlap_matrix.md`. (It is never §5.1 — that number belongs to customer concentration.)
 
 - **延伸观看 / Further viewing** — 1–3 validated explainer videos for hard-to-visualize concepts (e.g. the competing products' internal mechanics that decide whether they substitute), in their own slot, never a citation, never carrying a number (see SKILL.md). EN file uses the `## Further viewing` heading; the `_zh` file uses the bilingual `## 延伸观看 / Further viewing` heading.
 
@@ -258,12 +268,13 @@ Every entry is a markdown link with a date in the title where the source has a p
 - [ ] **§0 "Who is each one for?" paragraph** — three sharp options, no both-sidesism
 - [ ] **§0 Order-of-preference line** — committed ordinal ranking (`A > C > B`), one-clause why per name, no hedge words (Required deliverable 8)
 - [ ] **§4.5 Relative-valuation scoreboard** — multiples table (fwd PE / P/S / EV/EBITDA / PEG / div yield / FCF yield) + peer-median + 3-yr-range columns, fair-yardstick paragraph, premium-justified-or-not verdict (Required deliverable 7)
+- [ ] **§4.5 Forward estimates strip** — FY+1/FY+2/FY+3 revenue + net profit (or margin) per name, sourced to guidance or `*Analyst view:*` broker notes, never "our model"
 - [ ] §1 framing table (verbatim 10-K language)
 - [ ] §2 mermaid timeline of strategic pillars
 - [ ] §3 AI side-by-side (tool / tailwind)
 - [ ] §4 revenue mermaid bar chart + scoreboard table
-- [ ] §5.1 product overlap matrix (DIRECTLY COMPETE / COMPLEMENTARY / NON-OVERLAPPING)
-- [ ] §5.1 customer concentration table side-by-side (top-1 / top-5 / >10%)
+- [ ] §5.0 product overlap matrix (DIRECTLY COMPETE / COMPLEMENTARY / NON-OVERLAPPING)
+- [ ] §5.1 customer concentration table side-by-side (top-1 / top-5 / >10%) + named-win / overlap tables (Required deliverable 3)
 - [ ] §5.2 backlog / recurring mix table
 - [ ] §5.3 foundry-node × vendor matrix (semis) OR channel matrix (consumer/SaaS) OR formulary matrix (pharma) **— with column for each Primary competitor**
 - [ ] §5.4 tool-level segment share table **— with column for each Primary competitor that leads a sub-segment**

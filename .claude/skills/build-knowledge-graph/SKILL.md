@@ -7,8 +7,11 @@ description: Mine entities and relationships from research reports under reports
 
 Mine high-quality entities and edges from research markdown under `reports/`
 and write them directly into the SQLite store at `db/graph_mirror.db`. The
-viewer at `localhost:5001/zep/` reads from that file, so additions show up
-on browser refresh.
+viewer at `http://xs-macbook-air.local:5001/zep/` reads from that file, so
+additions show up on browser refresh. (Any `/zep/` URL echoed to the user
+must use the `xs-macbook-air.local` host, never `localhost` — and per
+`feedback_no_server_reminder`, don't end a run with "refresh /zep/ to see
+the changes"; just report the deltas.)
 
 ## Where things live (paths the agent will need)
 
@@ -41,6 +44,10 @@ from manual_graph import (
 import graph_mirror as gm                  # for deprecate_edge / isolate_entity / update_edge
 ```
 
+Run all snippets with `/opt/anaconda3/bin/python3` (per
+`feedback_anaconda_python_db_scripts` — bare `python3` has failed
+read-only DB opens in some shells).
+
 ## Core principle: no LLM API, ever
 
 **This skill exists specifically because the user removed every automated
@@ -59,8 +66,8 @@ re-read this paragraph.
 These four rules are non-negotiable. They are why this skill exists.
 
 1. **Allowed relation types: `COMPETES_WITH` and `SUPPLIES` only.**
-   The graph currently has 5 stray minority types (12 edges) from earlier
-   ad-hoc curation. Don't add new edges with any other relation name.
+   The graph has 5 stray minority types (12 edges, as of 2026-06-02) from
+   earlier ad-hoc curation. Don't add new edges with any other relation name.
    - `MAKES`, `DEVELOPED`, `IS_COMPONENT_OF` → **map to `SUPPLIES`** when
      ingesting new reports (product is supplied by its maker).
    - `OUT_LICENSED_TO`, `LICENSED` → **map to `SUPPLIES`** for new edges
@@ -104,8 +111,10 @@ Ask the user (or infer from their phrasing) what they want covered:
 - "update the knowledge graph" → take the *newest unprocessed* reports
   (use `scripts/unprocessed_reports.py` to list them)
 - "mine relations from reports/company/X" → that specific folder
-- "rebuild the graph" → don't. The user has 177 entities + 311 edges that
-  cost real time to curate; never wipe without explicit per-table
+- "rebuild the graph" → don't. Run `manual_graph.stats()` first and quote
+  the live counts back to the user — hundreds of hand-curated entities /
+  edges are at stake (352 entities / 556 edges / 210 episodes as of
+  2026-06-10, and growing); never wipe without explicit per-table
   instructions
 - "from these tickers: A, B, C" → use those reports only
 
@@ -197,9 +206,17 @@ inside it; the underlying research is identical.
 | `reports/sector/半导体材料.md` | `sector_半导体材料` |
 | `reports/compare/SNPS_vs_CDNS.md` | `compare_SNPS_vs_CDNS` |
 | `reports/earnings/QCOM.md` | `earnings_QCOM` |
+| a zsxq PDF (`db/zsxq.db`, file_id `N`) | `pdf_<file_id>` |
 
 For single-file reports (sector/compare/earnings/themes) prefix with the
 subdirectory so slugs don't collide with company names.
+
+For zsxq-PDF-derived edges use
+`add_episode("pdf_<file_id>", name="<PDF title>", source_desc="zsxq #<file_id>")`
+— the convention [[zsxq-expert]] Step 6 writes. `graph_mirror._episode_url`
+special-cases the `pdf_` prefix so the episode renders as a clickable PDF
+link in `/zep/`. Keep this format exactly; don't invent ad-hoc slugs for
+PDF sources.
 
 Derive the slug deterministically from the path:
 

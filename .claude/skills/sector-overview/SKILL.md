@@ -1,12 +1,18 @@
+---
+name: sector-overview
+description: Create comprehensive industry and sector landscape reports covering market dynamics, competitive positioning, key players, and thematic trends. Use for client requests, sector initiations, thematic research pieces, or internal knowledge building. Triggers on "sector overview", "industry report", "market landscape", "sector analysis", "industry deep dive", or "thematic research".
+---
+
 # Sector Overview
 
-description: Create comprehensive industry and sector landscape reports covering market dynamics, competitive positioning, key players, and thematic trends. Use for client requests, sector initiations, thematic research pieces, or internal knowledge building. Triggers on "sector overview", "industry report", "market landscape", "sector analysis", "industry deep dive", or "thematic research".
+**Scope boundary:** this skill owns the *multi-company* industry/landscape essay. Distinct from `theme-research` (tracked, refreshed baskets → `reports/themes/`), `company-research` (one issuer → `reports/company/<Slug>/`), and `zsxq-analyze` (digest of one named broker PDF). If the deliverable is a single company's brief or a single PDF's digest, it does not belong in `reports/sector/`.
 
 ## Guardrails (at-a-glance — the rules with the worst failure modes)
 
 - **Do not invent TAM numbers or growth rates.** Every market-size figure traces to a specific named source — research firm + report title + publication date — with the URL. "TAM ~$X B" with no source is a defect. See § "Important Notes".
 - **Do not paraphrase a sell-side opinion as a primary-source fact.** "X is the share leader" is an analyst view unless a cited third-party leaderboard (IPnest, Gartner Magic Quadrant, IDC tracker, IBISWorld, IQVIA, TrendForce) says so at a specific URL. Label `*Analyst view:*` otherwise.
 - **Do not let "TAM" hide the difference between addressable, served, and obtainable.** Distinguish TAM / SAM / SOM in the market-size section; mixing them is the single most common failure of sector overviews.
+- **Do not cite content-farm reposts (CSDN / 知乎专栏 / 百度有驾 / 搜狐自媒体) for numbers.** Source hierarchy for any quantitative claim: (1) the primary filing or industry-body tracker release; (2) a broker PDF in the local zsxq library, cited via the direct-download route with a page pin (see Step 1.5); (3) reputable financial press with publication date. If only a repost is reachable, label the chain explicitly — `[GGII 2025 蓝皮书，经新浪转载](URL)` — and flag it under Stale notices / coverage gaps in the Data Used manifest.
 - **Do not skip the Data Used manifest** at the end of the report (see block below).
 - **Do not ignore freshness.** Sector reports age fast — discard web sources older than 12 months unless they're landmark research. Include publication dates in link titles.
 - **Do not run destructive SQL against `db/*.db`.** Read-only only. See [`CLAUDE.md`](../../../CLAUDE.md) § "Database Safety".
@@ -33,6 +39,19 @@ Keep ratings traceable: a sell-side firm's "Attractive" stays *Analyst view:* un
 - **Depth**: High-level overview (5-10 pages) or deep dive (20-30 pages)
 - **Angle**: Neutral landscape vs. thematic thesis (e.g., "AI infrastructure buildout")
 - **Universe**: Public companies only, or include private?
+
+### Step 1.5: Mine the zsxq broker library first (mandatory)
+
+Before web research, pull the sell-side view of the sector from the local library (`db/zsxq.db`, ~7,000 broker PDFs) — read-only:
+
+```bash
+cd /Users/x/projects/financial_agent
+/opt/anaconda3/bin/python3 zsxq_fts.py --query "<sector keywords — Chinese terms work best>" --limit 20
+```
+
+- Deep-read the 2–3 most relevant sector PDFs; use them for TAM anchors, supply/demand numbers, capacity roadmaps, sub-segment forecasts, and top-pick TPs (always labelled `*Analyst view:*`).
+- **Citation rule:** every zsxq-sourced claim links the PDF via the direct-download route printed by `zsxq_fts.py` as `pdf_url` — `http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<urlencoded-name>` — with a page pinpoint: `[Nomura 大中华半导体复兴指南, p. 13](pdf_url)`. Never `localhost`, never `/zsxq/pdf-viewer/<id>` (HTML viewer, won't download on iPad), never the dead `/zsxq-pdf/<id>`. A page reference like "(p. 4)" with no clickable PDF link is a citation defect.
+- **Boundary:** a chapter-by-chapter digest of ONE zsxq PDF is `/zsxq-analyze` territory, not a sector overview — this skill synthesizes across multiple sources.
 
 ### Step 2: Market Overview
 
@@ -112,6 +131,15 @@ Frame 2–4 named debates as **"the market believes X; the evidence shows Y"** (
 - **Scenario / timeline framing for the cycle** — dated milestones, not vague "long-term": "transition 2–3 years then inflection"; "risk-off until shaft-sinking de-risks ~mid-2027".
 - Catalysts that could change the sector narrative
 
+### Step 5.5: Charts (mandatory — 3–6 minimum per report)
+
+Charts are a numbered deliverable, not garnish — the sell-side benchmark packs dozens of exhibits per note, and a forecast table rendered as a fenced-code ASCII block is a defect.
+
+- **Pick 3–6 that fit the sector:** market-size build (by year × segment), sub-segment growth trajectories, valuation comp scatter (P/E vs growth), share/penetration trends, region/hub capacity-vs-demand bars, BOM-cost or build-cost decline path.
+- **Implementation:** matplotlib via `/opt/anaconda3/bin/python3`; save PNGs to `reports/charts/<topic-slug>_<chart>.png` (existing repo convention); embed with `![](../charts/<file>.png)`.
+- **Every chart carries the project's mandatory in-chart data-source footer annotation** and, for multi-series charts, an x-axis clipped to the intersection of all plotted series' valid data (global chart rules in `CLAUDE.md`).
+- A forecast sourced from multiple firms gets a grouped-bar chart — never an ASCII table.
+
 ### 延伸观看 / Further viewing — explainer videos (optional, but default to including)
 
 When this report covers something a reader would struggle to picture from prose alone — the sector's core technology or process (how an EUV scanner exposes a wafer, how a GLP-1 drug acts on the gut–brain axis, how a data-center liquid-cooling loop removes heat, how a humanoid robot's actuators / harmonic reducers / force sensors work), a manufacturing or scientific process, a complex value-chain architecture, an unfamiliar business model, or a market-structure concept — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them on any topic; omit only when the report is purely numeric with nothing worth visualizing.
@@ -125,7 +153,9 @@ When this report covers something a reader would struggle to picture from prose 
 
 ### Step 6: Output
 
-**Save to** `reports/sector/<topic-slug>_<YYYY-MM-DD>.md` (relative to the project root — `/Users/x/projects/financial_agent/reports/sector/`). `<topic-slug>` is a short, descriptive slug for the sector or thematic angle (Chinese characters are allowed: e.g. `人形机器人传感器板块综述`, `ai-infrastructure-buildout`). Supplementary deliverables (Word, PowerPoint, Excel appendix) can sit next to the markdown using the same `<topic-slug>` prefix.
+**Save to** `reports/sector/<topic-slug>_<YYYY-MM-DD>.md` (relative to the project root — `/Users/x/projects/financial_agent/reports/sector/`). `<topic-slug>` MUST start with an English or pinyin slug — the project-wide filename rule (`CLAUDE.md` § "Research Report Filenames"); pure-Chinese filenames are unsearchable and not acceptable. An optional Chinese component may follow the English one: e.g. `humanoid_robot_sensors_人形机器人传感器_2026-05-16.md`, `semiconductor_materials_半导体材料_2026-05-24.md`, `ai-infrastructure-buildout_2026-06-01.md`. Pre-save naming check: (1) first slug component is English/pinyin; (2) date suffix present on new files; (3) when refreshing a legacy pure-Chinese filename, `git mv` it to a compliant name in the same commit and note the rename in the What's-Changed box. Supplementary deliverables (Word, PowerPoint, Excel appendix) can sit next to the markdown using the same `<topic-slug>` prefix.
+
+**Folder scope:** `reports/sector/` holds multi-company industry/landscape reports produced by this skill ONLY. A single-company brief or valuation snapshot belongs in `reports/company/<Slug>/` next to the deep-dive; a digest of one named broker PDF follows the `/zsxq-analyze` output convention; tracked baskets live in `reports/themes/` (`theme-research`).
 
 Deliverables:
 - Markdown sector overview (primary, always)
@@ -136,6 +166,8 @@ Deliverables:
   - Valuation summary
   - Key charts: market growth, share trends, valuation history
 - Optional: Excel appendix with detailed company data
+
+**Language (default: bilingual).** Deep-research skills keep a bilingual default — English primary at `reports/sector/<topic-slug>_<YYYY-MM-DD>.md` plus a Simplified Chinese companion `<topic-slug>_<YYYY-MM-DD>_zh.md` (mirroring `compare-companies`). The Chinese file keeps technical / financial / industry terms in English alongside the Chinese gloss (e.g. `gross margin (毛利率)`). Produce a single language only when the user explicitly asks ("English only", "中文", `--lang …`); the language the user happens to phrase the request in does NOT silently override the default.
 
 ### Data Used / 数据来源清单 (mandatory at the end of every report)
 
@@ -190,10 +222,39 @@ If the user asks for a clearly different angle on the same sector (e.g. "China r
 | 12m TP (<name>) | … | … | … |
 ```
 
+### Step 7: Pre-save compliance gate & verification (mandatory — a report missing any item is not done)
+
+**Compliance checklist** — tick every box and echo the result into the verification log:
+
+- [ ] Verdict + Industry View header with 4–6 bolded lead-in bullets (Step 0)
+- [ ] Supply/demand-balance section (Step 2)
+- [ ] Ordered sub-segment ranking (Step 2)
+- [ ] Top-picks table — Rating / TP / Upside / valuation method / up- & down-risk, `*Analyst view:*` labels (Step 3)
+- [ ] 3–6 charts embedded (Step 5.5)
+- [ ] Filename starts with English/pinyin slug + date (Step 6)
+- [ ] Data Used manifest with stale-notices block
+- [ ] Verification log appended (below)
+
+**Verification — run before saving:**
+
+1. **HTTP-check every external URL** with a real-browser User-Agent; `200 OK` only, per the global link-validation rules in `CLAUDE.md`. Retry timeouts at 30s; drop any link that confirms 4xx/5xx.
+2. **Check every internal cross-report link resolves** with `ls` — sibling reports are linked by relative path (`../company/<Slug>/<file>.md`); never guess a sibling report's filename.
+3. **Spot-check 3–5 numbers per major section** — string-match each against the URL cited *in the same paragraph*. Derived/scenario tables (e.g. forward-PE premium ranges, interpolated sub-segment forecasts) either show the calc inline with both inputs cited, or get cut.
+4. **Append the verification log** at the end of the report (the "(Step 10)" label is the project-wide log convention from the company-research spec — keep it verbatim):
+
+```markdown
+<details><summary>Verification log (Step 10) — YYYY-MM-DD</summary>
+- URL checks: N external URLs checked, all 200 (list any dropped/replaced)
+- Internal links: N checked, all resolve
+- Number spot-checks: "X = N from <URL>": ✓ string-matches | ✗ NOT in source — fixed
+- Compliance gate: 8/8 items present
+</details>
+```
+
 ## Important Notes
 
 - Source all market size data — cite the research firm or methodology
 - Distinguish between TAM hype and realistic addressable market
 - Sector overviews age fast — note the date and flag data that may be stale
-- Charts are essential — market size waterfall, competitive positioning matrix, valuation scatter plot, **region/hub capacity-vs-demand bars** (where the sector splits by geography). Every chart carries the project's mandatory in-chart data-source footer annotation and, for multi-series charts, an x-axis clipped to the intersection of all plotted series (see global chart rules in `CLAUDE.md`).
+- Charts are mandatory — see Step 5.5 for the minimum set (3–6), tooling, save path, and the in-chart data-source footer / x-axis-intersection rules.
 - If for a client, tailor the "so what" to their specific situation (M&A target identification, competitive positioning, market entry)

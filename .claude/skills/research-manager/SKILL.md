@@ -15,7 +15,7 @@ This skill needs a completed bull/bear debate transcript:
 
 - `debate_history` — from [[bull-bear-debate]]
 
-**If `debate_history` is missing**, invoke [[bull-bear-debate]] first. That skill will cascade further and run the four analyst skills if their reports are also missing.
+**If `debate_history` is missing**, invoke [[bull-bear-debate]] first. That skill will cascade further and run the three analyst skills (sentiment-analyst, news-analyst, company-research) if their reports are also missing.
 
 For a clean full-pipeline run from scratch, prefer [[trading-analysis]] over invoking this skill standalone.
 
@@ -23,7 +23,7 @@ For a clean full-pipeline run from scratch, prefer [[trading-analysis]] over inv
 
 - `<ticker>` and `<asset_type>` (stock or crypto) — instrument context.
 - `debate_history` — full alternating Bull / Bear transcript from [[bull-bear-debate]].
-- Optionally the four analyst reports for direct evidence beyond what the debate cites.
+- Optionally the three analyst reports (sentiment, news, company-research) for direct evidence beyond what the debate cites.
 
 ## Rating scale (use exactly one)
 
@@ -51,6 +51,13 @@ Commit to a clear stance whenever the debate's strongest arguments warrant one; 
 - Bull: <target> — <one-sentence driver that produces it>.
 - Bear: <target> — <one-sentence driver that produces it>.
 
+**Estimates snapshot** (whose EPS number, for which year, vs what consensus — the earnings base the PT band stands on):
+
+| FY | Revenue | EPS | vs consensus |
+|---|---|---|---|
+| FY+1 | <…, cited> | <…, cited> | <±% or "consensus unsourced"> |
+| FY+2 | <…, cited> | <…, cited> | <±% or "consensus unsourced"> |
+
 **Rationale** (2–3 titled pillars):
 1. **<Pillar name>** — <one-line claim + its strongest cited evidence from the debate>.
 2. **<Pillar name>** — <…>.
@@ -64,6 +71,8 @@ Commit to a clear stance whenever the debate's strongest arguments warrant one; 
 ```
 
 This block becomes `investment_plan` for the downstream [[trader-plan]] and [[portfolio-decision]] skills.
+
+**Estimates-snapshot rules:** FY+3 row optional. Populate ONLY from sourced numbers — the company-research `*Analyst view:*` block, a zsxq broker note, or company guidance — with each cell cited inline. Where consensus is unavailable, print `consensus unsourced` rather than inventing one. The Bull/Bear PT legs must reference these EPS rows so `multiple × EPS` stays internally consistent with the band.
 
 **Citations:** carry over the citations from the upstream analyst reports (news-analyst, sentiment-analyst, company-research) verbatim — each report ends with a References section listing the URLs the debate quoted. Reuse those URLs inline as clickable markdown links whenever you reference a specific fact. Never fabricate a URL; if the supporting analyst report has no link for a claim, drop the specificity rather than guessing.
 

@@ -6,7 +6,7 @@ This is the analytical centerpiece of every compare-companies report. The user's
 
 **N-way reminder.** Every table in this section is "side-by-side" — that means **N-column** when N≥3. Every "both" / "neither" / "one side or the other" phrasing in the prose generalizes to "all three" / "two of the three" / "only A and C" — name the specific subset, do not pretend N=2 when N=3+.
 
-## Common discipline (applies to all seven subsections)
+## Common discipline (applies to all eight subsections, §5.1–§5.8)
 
 - **Every claim is a disclosed number or a third-party citation — not an adjective.** "Dominant" / "leader" / "strong" / "fortress-grade" can appear as section labels but must be backed by a specific number in the prose.
 - **When a number is not disclosed, write `not disclosed` — do not estimate to fill the cell.**

@@ -79,6 +79,18 @@ The trim decision here is reached via a **price-path backtest, not a forward-EPS
 
 - **Extension / richness percentile — mirror the Bernstein "near a 5-year P/E high" anchor.** Bernstein/UBS/MS never write "looks expensive"; richness is always quantified against a reference ("X turns vs peers at Y," "top of its 5-year band"). This skill has no fundamental valuation input, so anchor richness to the ticker's **own price-path history**: where the current price sits vs its history of (a) distance above the 200-day MA and (b) trailing drawdown-from-peak, each expressed as a **percentile**. Use it as the "how stretched" number so any "stretched" claim carries a figure and a reference (reinforcing the project's numerical-accuracy rule). Fold the optional `indicators.db` regime read (VIX / HY-OAS) into the same paragraph so regime context sits alongside the extension percentile.
 
+## Report language
+
+**Default behavior: English only.** This is a tracking / operational skill rather than a deep-research deliverable — most users want the English read every time. (The substantive research skills `company-research` / `compare-companies` / `earnings-analysis` / `sector-overview` still default bilingual; this skill does not.)
+
+**Chinese opt-in (any of these triggers a Chinese companion `reports/take-profit/<TICKER>_<YYYY-MM-DD>_zh.md` alongside the English):**
+- `also in Chinese` / `add Chinese` / `bilingual` / `both languages` / `--bilingual` / `--zh`
+- `用中文也输出一份` / `也输出中文版` / `中英双语`
+
+**Chinese-only (skip English):** `用中文即可` / `--zh-only` / `Chinese only`.
+
+When a Chinese companion is produced, use bilingual technical terms: `trailing stop / 移动止损`, `cost basis / 成本价`, `max drawdown / 最大回撤`, `CAGR / 年化复合收益率`, `win rate / 胜率`, `ATR / 平均真实波幅`. Keep ticker codes in original form.
+
 ## Data sources (project-specific)
 
 ### Required
@@ -119,8 +131,9 @@ Write a one-off Python script (under `oneoff/take_profit_<TICKER>.py`) that:
 
 1. Pulls `yfinance.Ticker("<SYMBOL>").history(period="10y", auto_adjust=True)`.
 2. Sanity-checks the result: ≥ 750 trading days, no obvious gaps, current price within 5% of latest close.
-3. Computes daily log returns, 30-day rolling realized volatility, 14-day Wilder's ATR, peak-to-trough drawdowns.
-4. Saves a clean DataFrame (CSV) under `oneoff/take_profit_<TICKER>_history.csv` for the backtest step.
+3. **Recent-listing / extreme-print check (documented 2026 yfinance quirk):** if the real listing or spin-off date is < 3 years ago (even when yfinance returns longer back-adjusted "history"), restrict entry cohorts to post-listing trading days, say so in Data Used, and do not award the **Holdable** verdict band on < 3 years of cohorts. If the trailing 1Y total return exceeds ~+300% (SNDK +4397% / SK Hynix +1045% class prints), treat it as a possible adjusted-price artifact: cross-check against a second source or benchmark-relative framing before using it, lead with the median cohort + benchmark-relative numbers, and never hand-edit a "corrected" return.
+4. Computes daily log returns, 30-day rolling realized volatility, 14-day Wilder's ATR, peak-to-trough drawdowns.
+5. Saves a clean DataFrame (CSV) under `oneoff/take_profit_<TICKER>_history.csv` for the backtest step.
 
 **Do not** mock or fabricate price data. If yfinance returns garbage (illiquid ticker, delisted, suspended), the right output is "cannot run — insufficient clean history; here's the regime context only."
 
@@ -150,7 +163,7 @@ Save under `reports/charts/take_profit_<TICKER>_*.png` (DPI 150, `bbox_inches="t
 9. *(Optional)* **Trailing-stop sweep** — CAGR vs stop width for X ∈ {10, 15, 20, 25, 30, 40}%.
 10. *(Optional)* **Vol-aware stop sweep** — CAGR vs k for k ∈ {2, 3, 4, 5} × ATR.
 
-Each chart's caption ends with: `Source: yfinance (adjusted, <YYYY-MM-DD>); strategy backtest in oneoff/take_profit_<TICKER>.py.`
+Render the source line **inside every PNG** as a small footer annotation (`fig.text(0.12, 0.02, ...)`): `Source: yfinance (adjusted, <YYYY-MM-DD>); backtest oneoff/take_profit_<TICKER>.py`. The markdown caption repeats it as a backup — the in-image footer is the primary mechanism, since charts get viewed in isolation (iframe, screenshot, paste into chat). Before saving each chart, confirm the rightmost data point is within a few days of today.
 
 ### Step 4 — Write the report
 
@@ -172,6 +185,8 @@ Save to `reports/take-profit/<TICKER>_<YYYY-MM-DD>.md` under the project root. T
 
 - Re-run the script to confirm it's idempotent.
 - Spot-check ≥3 numbers in the report against the strategies CSV (`grep -F "<number>" oneoff/take_profit_<TICKER>_strategies.csv`).
+- Confirm each chart's rightmost data point is within a few days of today (no stale series shipped).
+- Append the folded verification log (Output Format block 7) to the report **before** committing.
 - Stop any test servers used during chart rendering.
 - Commit and push per the project's standard workflow.
 
@@ -196,6 +211,7 @@ Every report must contain:
 4. **Action Plan** — concrete sell levels (if cost basis supplied) or a parameterized formula.
 5. **`## Data Used / 数据来源清单`** manifest — sources + dates + freshness, see block format below.
 6. **`## Guardrails for this verdict`** — what would invalidate the analysis.
+7. **Folded verification log** — `<details><summary>Verification log — YYYY-MM-DD</summary>` appendix listing (a) the ≥3 spot-checks against `oneoff/take_profit_<TICKER>_strategies.csv` with pass/fail, (b) the idempotency re-run result, (c) the price-data as-of date vs today.
 
 ### Data Used / 数据来源清单 (mandatory)
 
@@ -229,13 +245,14 @@ Every report must contain:
 - **Never overfit to the single best historical rule.** Report at least three strategies' results in the headline metrics; if only the "best" rule is shown, the reader sees in-sample optimization, not robust recommendation. The rollercoaster-rate metric exists precisely so the reader can see *path pain*, not just CAGR.
 - **Never use this skill for a sell *now* decision.** It outputs a *rule*, not a *trade*. If the user wants "should I sell today?" the answer is "set this rule, and you'll know when". Pointing them at [[trader-plan]] is the right move for a today-trade.
 - **The price history is the source of evidence; the rules are the source of opinion. Keep them separate.** Backtest results are facts; the Exit Verdict is an interpretation. The report's structure must visually distinguish the two.
+- **Recent spin-offs / IPOs and parabolic 1Y prints are a documented yfinance quirk, not signal.** In the 2026 window yfinance returns parabolic 1Y totals for recently spun-off / re-listed names (SNDK +4397%, SK Hynix +1045%) — sometimes on synthetic back-adjusted pre-listing history. Run cohorts on post-listing days only, refuse the "Holdable" band on < 3 years of cohorts, quote median cohort + benchmark-relative numbers instead of the raw print, and never fabricate a "corrected" return. An extreme recent leg also skews the 95th-percentile path of the Risk-Reward Ladder — flag this explicitly in the Regime Context section.
 - **Regime mismatch is a load-bearing failure mode.** A backtest spanning 2015–2025 has a base-rate VIX of ~21; if the current VIX is 14 the backtest base rate overweights calmer regimes than today (and vice versa). The Regime Context section must call this out — never silently assume the future looks like the average historical day.
 - **No "Source: our model" / "(estimate)" / "(本模型)"** anywhere. The model is the backtest script; cite the script path (`oneoff/take_profit_<TICKER>.py`) for the strategy numbers, the underlying yfinance for the price data.
 - **Never write to `db/*.db`.** This skill only reads from `indicators.db` and `market_cap_cache.db`. No `INSERT` / `UPDATE` / `DELETE`. See [`CLAUDE.md`](../../../CLAUDE.md) § "Database Safety".
 
 ## Output location
 
-Save to `reports/take-profit/<TICKER>_<YYYY-MM-DD>.md` under the project root (create the `reports/take-profit/` folder if missing — first report establishes the directory). The viewer at `http://localhost:5001/reports` will surface it under a new "TAKE-PROFIT" type (or as "OTHER" until the viewer's bucket map is updated).
+Save to `reports/take-profit/<TICKER>_<YYYY-MM-DD>.md` under the project root (create the `reports/take-profit/` folder if missing — first report establishes the directory). The viewer at `http://xs-macbook-air.local:5001/reports` will surface it under a new "TAKE-PROFIT" type (or as "OTHER" until the viewer's bucket map is updated).
 
 Supplementary deliverables sit in standard locations:
 - Charts: `reports/charts/take_profit_<TICKER>_*.png`.
@@ -243,7 +260,7 @@ Supplementary deliverables sit in standard locations:
 
 ### Update-in-place rule
 
-One report per ticker. If `reports/take-profit/<TICKER>_*.md` already exists, update it in place (refresh the as-of date, re-run the script, regenerate the charts). Do **not** create dated parallel copies — git history is the audit trail.
+One report per ticker. If `reports/take-profit/<TICKER>_*.md` already exists, update it in place (re-run the script, regenerate the charts). **Keep the existing filename even if its embedded date is stale** — git history records the actual revision date; update only the in-document as-of date. Multiple matches = legacy state: update the most recent by filename date, report the duplicates to the user, do not delete. Do **not** create dated parallel copies — git history is the audit trail.
 
 ## What this skill does NOT do
 

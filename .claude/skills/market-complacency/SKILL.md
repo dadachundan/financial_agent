@@ -1,6 +1,6 @@
 ---
 name: market-complacency
-description: Score how much risk the market is currently under-pricing — a composite "complacency dashboard" of credit spreads (HY/IG/CCC OAS), equity vol (VIX, VVIX, VIX term slope, SKEW), rate vol (MOVE), risk-premium compression (ERP, HYG/LQD), sentiment (AAII bull-bear, NAAIM exposure, put/call), breadth (% above 200dma), and valuation (Shiller CAPE). Each indicator gets a percentile rank vs its own 10-year history; a low percentile on a "low = risk under-priced" indicator counts as complacency. Produces a 3,000–5,000 word English markdown report with a one-line **Complacency Verdict** (Stretched / Elevated / Neutral / Cautious / Panicked), a composite 0–100 score, an indicator-by-indicator table with current vs decile context, 6–10 charts, and a list of historical precedents at similar score levels. Use when the user asks "is the market complacent?", "is risk under-priced right now?", "are credit spreads too tight?", "where are we vs 2007 / January 2018 / Q1 2020?", or anything in the under-priced-risk / late-cycle / euphoria family.
+description: Score how much risk the market is currently under-pricing — a composite "complacency dashboard" of credit spreads (HY/IG/CCC OAS), equity vol (VIX, VVIX, VIX term slope, SKEW), rate vol (MOVE), risk-premium compression (ERP, HYG/LQD), sentiment (AAII bull-bear, NAAIM exposure, put/call), breadth (% above 200dma), and valuation (Shiller CAPE). Each indicator gets a percentile rank vs its own 10-year history; a low percentile on a "low = risk under-priced" indicator counts as complacency. Produces an ~800–1,500 word English markdown report in Citi-BMC style: a headline **flag count** (X red + Y amber / N indicators), a historical-calibration table (Mar-00 / Oct-07 / Feb-20 / Dec-21 / Now), and 8–12 interactive charts. Use when the user asks "is the market complacent?", "is risk under-priced right now?", "are credit spreads too tight?", "where are we vs 2007 / January 2018 / Q1 2020?", or anything in the under-priced-risk / late-cycle / euphoria family.
 ---
 
 # Market Complacency
@@ -21,7 +21,7 @@ The user says any of:
 - "Should I add hedges?" (this skill informs the answer; it does not size the hedge)
 - "Complacency score" / "complacency dashboard" / "/market-complacency"
 
-The skill produces a **Complacency Verdict** (5-tier) backed by a composite percentile score and a per-indicator breakdown of which signals are flashing and which are not.
+The skill produces a Citi-BMC-style **flag count** headline (`X red + Y amber / N indicators`) backed by a per-indicator breakdown of which signals are flashing and which are not.
 
 ## When NOT to use
 
@@ -30,18 +30,21 @@ The skill produces a **Complacency Verdict** (5-tier) backed by a composite perc
 - The user wants the inverse — a *panic / capitulation* read. This skill handles both ends of the same axis: the verdict tier "Panicked" maps to the bottom decile of the same composite score. There is no separate "/market-fear" skill.
 - The question is about a single sector's stress (e.g. "are regional banks in trouble?") — use [[sector-overview]] with a stress lens; the macro complacency dashboard won't pick up sub-sector dislocation.
 - The user wants a forecast of *when* the regime turns — this skill is a **state read**, not a timing model. Complacency can persist for quarters; the dashboard tells you the regime, not the trigger.
+- The user asks about equity-market exuberance/froth through the GS Kickstart lens (Momentum factor returns, IPO counts, speculative-trading indicator, net equity issuance) — that is [[market-status]]. This skill is the cross-asset risk-UNDER-PRICING lens (credit spreads, vol, risk premia); the two are complementary, not interchangeable.
 
 ## Core methodology
 
-### The complacency axis
+### The complacency axis — flag count is the headline metric
 
-For each indicator, define a direction such that **lower percentile = more complacent** (risk under-priced). Then the composite score is a simple weighted average of complacency percentiles, mapped to a 0–100 scale where:
+For each indicator, define a direction such that **higher complacency percentile = more complacent** (risk under-priced). The headline metric is the Citi-BMC-style **flag count** (per `scripts/build_dashboard.py`):
 
-- **0–20**: Panicked (risk *over*-priced — capitulation regime, usually a contrarian buy signal)
-- **20–40**: Cautious (risk fairly priced; modest hedging)
-- **40–60**: Neutral
-- **60–80**: Elevated (risk under-priced on several axes; trim, add hedges)
-- **80–100**: Stretched (risk under-priced across the board; late-cycle euphoria signature)
+- **Red (full flag, 1.0)** — complacency percentile ≥ 80 (most-complacent quintile vs own 10y history)
+- **Amber (half flag, 0.5)** — complacency percentile ≥ 60
+- **Flag count = n_red + 0.5 × n_amber**, reported over the active flag-eligible denominator (`flag_max` in the indicators CSV)
+
+Empirically anchored flag-count bands (see § "Why flag count beats composite"): **0–4** quiet / **5–7** building / **8–9** elevated / **10–11** acceleration zone (lift 1.32–1.90× on 90d −10% drawdowns) / **12+** extreme. Citi's published heuristic: "once the count reaches double digits, it has historically tended to rise more rapidly."
+
+A weighted composite 0–100 is still computed internally by the build script (for backtest continuity and the historical CSV) but it is **never reported** — the backtest proved it statistically uninformative (max lift 0.68×; see § Output Format and § "Why flag count beats composite").
 
 ### Indicators (the dashboard)
 
@@ -90,9 +93,9 @@ For each indicator with at least 5 years of clean history (target: 10 years), co
 3. **Decile label** — "1st decile (most complacent)" / "5th (median)" / "10th (least complacent)".
 4. **Stretched flag** — true if the complacency percentile ≥ 90 (i.e. today is in the most-complacent decile vs the last 10 years for this indicator).
 
-### Composite score
+### Composite score (internal / backtest artifact — NEVER reported)
 
-Weighted average of complacency percentiles. Weights reflect the indicators' historical track record as cycle-turn signals (calibrated from 2000–2025, with weights summing to 1.0):
+The build script computes a weighted average of complacency percentiles for backtest continuity and the daily-history CSV only. **It must never appear in the report** (see § Output Format — "The composite score, anywhere" is forbidden). Weights, kept for script documentation (calibrated from 2000–2025, summing to 1.0):
 
 | Indicator | Weight |
 |---|---|
@@ -116,13 +119,9 @@ Weighted average of complacency percentiles. Weights reflect the indicators' his
 
 If an optional indicator is missing, re-normalize weights so the active set still sums to 1.0 — disclose in the Data Used manifest.
 
-The composite is a scalar 0–100. Map to the 5-tier verdict via the bands above.
+### Historical precedents (internal — NOT a report block)
 
-### Historical precedents
-
-After computing today's composite, look up the dates in the last 25 years when the composite was within ±5 points of today's level. List up to 8 precedents, each annotated with what happened in the *following* 6 / 12 / 24 months (SPY total return + max drawdown). This is the report's most valuable single block — it tells the reader "the last 5 times the dashboard read 78, here's what came next".
-
-This is **not** a forecast — it's a base-rate reference. Calibration must be explicit: "the dashboard predicted the path *0 of 5 times*; it described the regime *5 of 5 times*."
+The build script still computes composite-proximity precedents (dates within ±5 points, with SPY 6/12/24-month forward returns) into `oneoff/market_complacency_<DATE>_precedents.csv`. **The precedents table was removed from the report format in v9 (user-rejected — small sample, noisy, no clean takeaway; see § Output Format).** Use the CSV only as background context when writing the Take's base-rate line; never embed the table.
 
 ## Learning from sell-side institutional research
 
@@ -208,13 +207,13 @@ Run it from the project root:
 
 ```bash
 # As-of today (default)
-python3 .claude/skills/market-complacency/scripts/build_dashboard.py
+/opt/anaconda3/bin/python3 .claude/skills/market-complacency/scripts/build_dashboard.py
 
 # Specific date
-python3 .claude/skills/market-complacency/scripts/build_dashboard.py --date 2026-06-07
+/opt/anaconda3/bin/python3 .claude/skills/market-complacency/scripts/build_dashboard.py --date 2026-06-07
 
 # Different lookback window (default 10 years)
-python3 .claude/skills/market-complacency/scripts/build_dashboard.py --date 2026-06-07 --window-years 15
+/opt/anaconda3/bin/python3 .claude/skills/market-complacency/scripts/build_dashboard.py --date 2026-06-07 --window-years 15
 ```
 
 What it does:
@@ -250,7 +249,7 @@ Before writing the report, scan the indicator table for unexpected divergences. 
 
 The build script in Step 1 already wrote all 10 charts to `reports/charts/market_complacency_<DATE>_*.png` at DPI 150 with `bbox_inches="tight"`. The full inventory the report should embed:
 
-1. `*_composite.png` — composite, 2001–present, 5-tier bands shaded, today marked. **Headline chart.**
+1. ~~`*_composite.png`~~ — **BANNED from the report** (composite is forbidden anywhere; see § Output Format). The script currently still generates it — see Guardrails: remove or gate behind `--debug`; never embed.
 2. `*_hy_oas.png` — HY OAS, 25-year history with 5th / 50th / 95th 10y percentile reference lines.
 3. `*_ig_ccc.png` — IG vs CCC overlay (dual-axis). Credit-tier divergence is visible here when present.
 4. `*_vix_vvix.png` — VIX + VVIX overlay, last 10 years.
@@ -262,55 +261,40 @@ The build script in Step 1 already wrote all 10 charts to `reports/charts/market
 10. `*_cape.png` — Shiller CAPE, 2001–present, with reference line at CAPE 30.
 
 Each chart caption in the report should end with:
-`Source: <FRED series ID / yfinance ticker / multpl URL>, as of <YYYY-MM-DD>; composite computed in .claude/skills/market-complacency/scripts/build_dashboard.py.`
+`Source: <FRED series ID / yfinance ticker / multpl URL>, as of <YYYY-MM-DD>; flag count and percentiles computed in .claude/skills/market-complacency/scripts/build_dashboard.py.`
 
 ### Step 5 — Write the report
 
-Save to `reports/market-complacency/market_complacency_<YYYY-MM-DD>.md` under the project root. Target 3,000–5,000 words; structure:
+Save to `reports/market-complacency/market_complacency_<YYYY-MM-DD>.md` under the project root.
 
-1. **Complacency Verdict** — one-line bold verdict (e.g. **Stretched — composite 81 / 100, 95th percentile vs last 10 years**) + 50-word rationale naming the 2–3 most-stretched indicators.
-2. **Composite Score & Tier** — table summarizing today's value vs the 5-tier bands, with the headline chart inline.
-3. **Indicator-by-indicator table** — one row per indicator: current value, 10y min / median / max, complacency percentile, decile label, stretched flag (✓ / —).
-4. **Cross-asset signature** — narrative paragraph identifying which categories (credit / equity vol / rate vol / risk-premium / sentiment / valuation) are corroborating the headline read and which are *not*. **Divergence between categories is the most important diagnostic** — when all six categories agree the regime is unusually persistent; when they disagree, the dashboard is mid-cycle, not late-cycle. Cite the specific indicators (with their percentile ranks) that support each category's assessment.
-5. **Historical precedents** — table of up to 8 dates when the composite was within ±5 points of today, with SPY total return + max drawdown over the next 6 / 12 / 24 months. Closing paragraph: "the last *N* times the composite read X, the median 12m forward SPY return was Y%, with max drawdown Z%."
-6. **What this verdict is NOT** — explicit caveat block:
-   - Not a timing model — complacency can persist for quarters.
-   - Not a sector / single-name call — the dashboard is macro.
-   - Not a forecast — the precedents are base-rate reference, not prediction.
-   - Calibration note: the dashboard described the regime *N* of *N* historical times; it predicted the *path* *0* of *N* times.
-7. **Action implications** — what the verdict suggests for position sizing, hedge ratios, and cash levels. Concrete examples:
-   - Stretched (80+): consider trimming long beta, raising cash, adding put-spread or VIX-call hedges; do not short outright (timing risk too high).
-   - Elevated (60–80): tighten stops on the longest-duration positions; reduce CCC-rated credit exposure.
-   - Neutral (40–60): standard policy weights.
-   - Cautious (20–40): begin scaling into oversold long positions; reduce hedge ratios.
-   - Panicked (0–20): aggressive long-bias re-entry (the contrarian-buy regime).
-8. **What would invalidate this read** — concrete failure modes: regime-shift in monetary policy that re-rates the entire term structure (changes the meaning of the MOVE percentile), structural decline in CCC issuance shrinking the index (changes the CCC OAS distribution), persistent buyback bid distorting ERP. List the *specific* mechanical reasons the dashboard could mislead in the current macro context.
-9. **`## Data Used / 数据来源清单`** manifest — sources, dates, freshness, and any optional indicators that failed to fetch.
+**The single source of truth for the report's structure, length, and banned blocks is § "Output Format (mandatory blocks — Citi BMC style)" below.** Follow it exactly: Dashboard's Take → Figure 2 calibration table → Under the Hood charts → (optional Further viewing) → Data Used. Do NOT resurrect the pre-v7 9-block format (Complacency Verdict / Composite Score & Tier / Cross-asset signature / Historical precedents / Action implications / What-would-invalidate) — every one of those blocks was explicitly removed in the v7–v9 Citi-style rewrite and several were user-rejected by name.
 
 ### Step 6 — Verify and clean up
 
 - Re-run the script; confirm it is idempotent (same date input → identical output).
 - Spot-check ≥3 numbers in the report against the indicators CSV (`grep -F "<number>" oneoff/market_complacency_<DATE>_indicators.csv`).
 - Confirm every percentile in the indicator table matches the script's output exactly.
-- Confirm every precedent's forward-return numbers match the precedents CSV.
+- **Grep the Take's base-rate numbers against the backtest artifact before committing** (`grep -F "<number>" oneoff/backtest_flag_vs_composite_<DATE>.csv` or the linked backtest file) — an unsourced base-rate line violates the project's numerical-accuracy rule.
+- **Open ≥2 generated PNGs (one dashboard chart, one backtest chart) and confirm (a) the in-image source footer is present and (b) the title's stated time span matches the plotted data span.**
 - Stop any test servers used during chart rendering.
 - Commit and push per the project's standard workflow.
 
 ## Output Format (mandatory blocks — Citi BMC style)
 
-The report must mirror the structure of [Citi's Bear Market Checklist report](https://www.citivelocity.com) — punchy summary box up top, single historical-calibration table, "Under the Hood" charts grid, brief action box, data manifest. **Target length: ~800-1,500 words of prose plus 10-12 charts plus 2-3 tables. Previous iterations ran 4,000-5,500 words and readers complained "too noisy, too long."**
+The report must mirror the structure of Citi's Bear Market Checklist report (cite the current edition via the local zsxq library — see § "Comparison to Citi's Bear Market Checklist (BMC)"; **never link the citivelocity.com homepage**) — punchy summary box up top, single historical-calibration table, "Under the Hood" charts grid, brief action box, data manifest. **Target length: ~800-1,500 words of prose plus 10-12 charts plus 2-3 tables. Previous iterations ran 4,000-5,500 words and readers complained "too noisy, too long."**
 
 Mandatory blocks, in this order:
 
 1. **Dashboard's Take** — single bold blockquote at the top, ≤200 words. Mirrors Citi's "CITI'S TAKE" box. Structure:
-   - **First line must be the flag count.** Example: `**Flag count 8 / 21 — Citi-BMC style: 7 red + 2 amber + 12 off.**` Backtest-validated metric (lift 1.32× at T=10, 1.90× at T=11).
+   - **First line must be the flag count.** Example: `**Flag count 7.5 / 19 — Citi-BMC style: 7 red + 1 amber + 11 off.**` Backtest-validated metric (lift 1.32× at T=10, 1.90× at T=11). **The denominator is the number of active flag-eligible indicators on the run date — read it from the `flag_max` column of `oneoff/market_complacency_<DATE>_indicators.csv`, never hardcode it.** Always state the denominator, and never compare raw counts across dates with different denominators without noting the change.
+   - **One trajectory sentence** sourced from the flag-count history CSV (`oneoff/market_complacency_<DATE>_flag_count_history.csv`): where today's count sits vs its own history ("highest since <date>" or percentile since 2001) and the 1-month direction — Citi's house framing ("frothiest since the GFC, with flags rising steadily"). Name which indicators newly flagged or un-flagged vs the prior report date, linking the prior report file.
    - 1-2 sentences naming the most-stretched indicators with absolute levels (e.g., "CAPE 41.6, S&P 500 DY 1.06%, Moody's BAA−10Y 1.54pp at or past pre-bear levels"), not percentile ranks.
    - 1-2 sentences on what's contra (yield curve positive, SKEW already bid, etc.)
    - 1 line on action (3-5 verbs)
-   - 1 line on empirical base rate at this flag-count range (median fwd SPY, drawdown probability)
+   - 1 line on empirical base rate at this flag-count range (median fwd SPY, drawdown probability) — **must end with a markdown link to the backtest artifact that literally contains those numbers** (e.g. `[flag-count backtest](../../oneoff/backtest_flag_vs_composite_<DATE>.csv)` or the backtest report file). An unlinked base-rate number violates the numerical-accuracy rule; Step 6 greps it.
    - **One final line — the named invalidation / non-linear-widening trigger** (re-added in v11; see § "Learning from sell-side institutional research"). Mirror UBS Global Strategy's convention of naming a *specific, sourced threshold* that would flip the regime, e.g. `*Trigger to watch:* HY OAS re-rates if BB−B dispersion breaks its 90th pct or 10s2s re-inverts.` One sentence only — not a return of the multi-paragraph "what would invalidate" block. State the level, the indicator, and where to verify it.
    - **No prose outside this block until after Figure 2.**
-   - **Both the composite score and the flag-count chart are forbidden.** The composite is hand-weighted noise (backtest verified: max lift 0.68× at 90d / 0.98× at 180d). The flag-count chart was the proposed replacement (Figure 1 in v8) but the user rejected it in v9 as "inaccurate" — Plotly annotation positions drifted from the data, the "Now" arrow pointed off the actual data point, and the reference-line labels collided at the bottom of the chart. **Neither chart appears in the report.** The build script's `_make_composite_html` and `_make_flag_count_html` are no longer called.
+   - **Both the composite score and the flag-count chart are forbidden.** The composite is hand-weighted noise (backtest verified: max lift 0.68× at 90d / 0.98× at 180d). The flag-count chart was the proposed replacement (Figure 1 in v8) but the user rejected it in v9 as "inaccurate" — Plotly annotation positions drifted from the data, the "Now" arrow pointed off the actual data point, and the reference-line labels collided at the bottom of the chart. **Neither chart appears in the report.** Script state (verified 2026-06-10): `_make_flag_count_html` is commented out, but `_make_composite_html` and the `*_composite.png` savefig are **still wired in** — their outputs must never be embedded, and the calls should be removed or gated behind `--debug` (see Guardrails).
 
 2. **`## Figure 2. Bear Market Checklist — Historical Calibration`** — a SINGLE comparison table mirroring Citi BMC Figure 2. Columns: Mar-00, Oct-07, Feb-20, Dec-21, **Now**. Rows: indicators grouped by category (Valuations / Yield Curve / Sentiment / Corp Behaviour / Profitability / Credit / Vol).
 
@@ -322,7 +306,9 @@ Mandatory blocks, in this order:
    - `.bmc-na` — `color: #999` (n/a — data not available)
    - `.now` — `border-left: 2px solid #888` (column separator on the Now column)
 
-   Cells without a flag get no class (plain white). Markdown emoji dots (🔴 🟠 🟢) are FORBIDDEN in Figure 2 — they don't fill the cell, they crowd the value, and they render inconsistently across viewers.
+   Cells without a flag get no class (plain white). Markdown emoji dots (🔴 🟠 🟢) are FORBIDDEN in Figure 2 — including in the legend line — they don't fill the cell, they crowd the value, and they render inconsistently across viewers.
+
+   **The line under the table heading must state the flag rule in words, without emoji:** "Red (full flag) = indicator's complacency percentile ≥ 80 vs its own 10y history; amber (half flag) = ≥ 60; green = contra-signal; blank = off. Flag count = reds + 0.5 × ambers." This defines the colors in-report exactly as Citi does (their Figure 2 states the amber/red threshold mechanism explicitly).
 
    **Every indicator row must have a markdown link to the public source** for that indicator's historical chart: `[Indicator name](url)`. Reader should be able to click any row to verify the cited values against the canonical free chart (multpl, FRED, FINRA, Yahoo, Bain, Renaissance Capital, etc.).
 
@@ -345,13 +331,15 @@ Mandatory blocks, in this order:
 
    **Mandatory chart styling — bear-market shading** (Citi BMC Figure 3+ style). Every time-series chart must have light-grey vertical bars (`axvspan(alpha=0.20, color="#888888")`) over the major US bear-market windows so the reader has visual context for "what was happening in those periods." The build script defines `BEAR_PERIODS` and `_shade_bears(ax)` helper that applies five reference windows: 1990-07/10 (Iraq/recession), 2000-03/2002-10 (dot-com), 2007-10/2009-03 (GFC), 2020-02/2020-03 (COVID), 2022-01/2022-10 (Fed pivot). Charts that are NOT time-series (per-indicator bars, precedents scatter, etc.) skip the shading.
 
+   **Mandatory chart styling — in-image source footer on every PNG** (CLAUDE.md chart rule #1). Every matplotlib PNG — the static fallbacks, the per-indicator bar chart, and ALL backtest charts from `scripts/backtest_dashboard.py` — must render its data source inside the figure, e.g. `fig.text(0.99, 0.01, "Source: FRED BAMLH0A0HYM2 · yfinance ^VIX · multpl Shiller PE", ha="right", fontsize=7, color="#888")`. This is the same required-`sources`-parameter contract `_make_interactive_chart()` already enforces for the Plotly HTML charts — a markdown caption outside the image is a backup, not a substitute, because PNGs get viewed in isolation. **PNG titles must state the actual plotted data span, derived from the series' min/max dates — never hardcoded** (past bug: cape.png titled "2001–2026" over an 1871+ x-axis). Step 6 verifies both on ≥2 generated PNGs.
+
 ### Further viewing — explainer videos (optional, but default to including)
 
 When this report covers something a reader would struggle to picture from prose alone — how a market-structure indicator is actually constructed and what it implies (how the MOVE index is built from a yield-curve-weighted basket of Treasury-option implied vols, what CCC OAS measures and why the weakest credit tier widens first, how the CBOE SKEW index prices the cost of OTM-put crash protection, why a VIX term-structure in contango signals no near-term hedging demand) — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them on any topic; omit only when the report is purely numeric with nothing worth visualizing.
 
 **Videos are a teaching aid, NOT a citation — they live in their own slot, never enter the citation chain, and never carry a number.**
 
-- **Where:** a `**Further viewing**` bullet list at the end of the section the concept lives in, or a single `📺` note beside the hard concept.
+- **Where (this skill's Citi-style layout):** ONE compact `**Further viewing**` bullet list (1–3 links), placed immediately BEFORE the Data Used section. Never inside the Dashboard's Take, never between Under-the-Hood charts (the no-prose-between-charts rule wins), never after Data Used.
 - **Durable sources only:** the company's own product / IR / engineering channel, an OEM or reputable teardown / cutaway channel, or a well-known explainer channel — not a low-view re-upload that will be deleted or is clearly pirated.
 - **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
 - **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
@@ -364,7 +352,7 @@ The user has explicitly rejected (v9 user feedback) the following blocks as not 
 - ❌ Backtest validation — precision numbers (~22% at T=10) are too low to motivate action; the report shouldn't read like a justification
 - ❌ Caveats list — the bear-market shading on charts + the data-limitation italics in Figure 2 carry the necessary disclaimers; a separate prose section is redundant
 
-Do NOT add these sections back unless the user explicitly asks. The report must end at Data Used.
+Do NOT add these sections back unless the user explicitly asks. The report must end at Data Used, optionally preceded by the single Further-viewing block (see above — that is its only legal slot).
 
 ### What NOT to include in Citi-style mode
 
@@ -409,55 +397,40 @@ User feedback over multiple iterations: "too noisy, format messy, and too long; 
 
 The deeper analytical detail (per-indicator percentile context, composite weights, backtest stats) lives in `scripts/build_dashboard.py` and `oneoff/*.csv` for readers who want to dig in. The *report* is the daily-scan artifact.
 
-### Data Used / 数据来源清单 (mandatory)
+### Data Used / 数据来源清单 (mandatory — single source table, no per-indicator paragraphs)
 
 ```markdown
 ## Data Used / 数据来源清单
 
-**Credit (required)**
-- HY OAS — FRED `BAMLH0A0HYM2`, 10y history pulled via `indicators.data_fetcher._fetch_fred_range()`. As-of <YYYY-MM-DD>.
-- IG OAS — FRED `BAMLC0A0CM`, same provenance.
-- CCC OAS — FRED `BAMLH0A3HYC`, pulled directly in this script (not yet in the live dashboard).
+Flag count and indicator percentiles computed in [`.claude/skills/market-complacency/scripts/build_dashboard.py`](../../.claude/skills/market-complacency/scripts/build_dashboard.py). Sources:
 
-**Equity volatility (required)**
-- VIX (`^VIX`), VVIX (`^VVIX`), VIX9D (`^VIX9D`), VIX3M (`^VIX3M`), SKEW (`^SKEW`) — yfinance, 10y daily history (`auto_adjust=True`). As-of <YYYY-MM-DD>.
+| Category | Indicator | Source |
+|---|---|---|
+| Credit | HY / IG / CCC OAS, BAA10Y | FRED via API: [BAMLH0A0HYM2](https://fred.stlouisfed.org/series/BAMLH0A0HYM2), [BAMLC0A0CM](https://fred.stlouisfed.org/series/BAMLC0A0CM), [BAMLH0A3HYC](https://fred.stlouisfed.org/series/BAMLH0A3HYC), [BAA10Y](https://fred.stlouisfed.org/series/BAA10Y) |
+| Yield Curve | 10Y − 2Y | FRED [T10Y2Y](https://fred.stlouisfed.org/series/T10Y2Y) |
+| Valuation | CAPE, DY, Trailing PE | multpl monthly tables (Shiller PE / DY / PE) |
+| Risk Premium | ERP, HYG/LQD | derived: multpl trailing-PE E/P − `^TNX` (NEVER `yf.Ticker("SPY").info["trailingEps"]` — unreliable, see § Derived indicators) + Yahoo Finance closes |
+| Corp Behaviour | Capex YoY, IPO, M&A | FRED [PNFI](https://fred.stlouisfed.org/series/PNFI), Renaissance Capital / Bain → cached `.claude/skills/market-complacency/data/*.csv` |
+| Sentiment | Margin debt | FINRA margin-statistics.xlsx |
+| Equity / Rate Vol | VIX, VVIX, VIX9D, VIX3M, SKEW, MOVE | Yahoo Finance |
+| Backtest | Flag-count base rates | [flag-count backtest](../../oneoff/backtest_flag_vs_composite_<DATE>.csv) |
+| Cross-reference | Citi BMC | zsxq direct-download link to the current edition (see § Comparison to Citi's BMC) |
 
-**Rate volatility (required)**
-- MOVE Index (`^MOVE`) — yfinance, 10y daily history. Yahoo history starts ~2002.
-
-**Risk-premium (required)**
-- Equity Risk Premium — SPY trailing earnings yield (`yf.Ticker("SPY").info["trailingEps"]` ÷ current price) minus `^TNX/100`. As-of <YYYY-MM-DD>.
-- HYG/LQD ratio — derived from yfinance daily closes, 10y history.
-
-**Sentiment (optional)**
-- AAII Bull-Bear Spread — weekly survey CSV from aaii.com. <fetched ✓ / failed ✗ — reason>
-- NAAIM Exposure Index — weekly CSV from naaim.org. <fetched ✓ / failed ✗ — reason>
-
-**Valuation (optional)**
-- Shiller CAPE — monthly CSV from Robert Shiller's site (`http://www.econ.yale.edu/~shiller/data/ie_data.xls`). <fetched ✓ / failed ✗ — reason>
-
-**Composite + percentile methodology**
-- 10-year rolling percentile per indicator; complacency percentile inverted for "low = complacent" indicators (per the direction column).
-- Weighted composite per the SKILL.md weight table; re-normalized to the active indicator set when optional indicators are missing.
-
-**Historical precedents**
-- Daily composite score 2000-01-01 → today, computed by `.claude/skills/market-complacency/scripts/build_dashboard.py`.
-- Forward returns: SPY adjusted close (`auto_adjust=True`), 6 / 12 / 24 month windows.
-
-**Stale notices / coverage gaps**
-- <bulleted list — e.g. "AAII survey CSV returned 403, sentiment category dropped from composite; weights re-normalized">.
-- <e.g. "MOVE Index history begins 2002 — pre-2002 composite uses only the equity-vol indicators that have data">.
+<one-line stale notices / fetch failures, e.g. "AAII 403, NAAIM 404 — positioning rows degraded to n/a">
 ```
+
+Adapt rows to the run's active indicator set; every row keeps a clickable deep URL. No composite-methodology or precedents-methodology bullets — those are internal artifacts (see § Core methodology).
 
 ## Guardrails
 
 - **Stale data is forbidden — `eps_peak` indicator removed in v10.** Per the user's hard rule ("if the data is stale, you shouldn't use it"): [multpl.com/s-p-500-earnings](https://www.multpl.com/s-p-500-earnings) lags GAAP finalization by 6-12 months. As of June 2026 their latest data point is Sep 30, 2025 = $239.98 — 8 months stale. **The `eps_peak` indicator that depended on this page has been removed** from the INDICATORS catalog and from Figure 2. The CAPE indicator (which uses multpl's Shiller PE page, also updated within 2 days) already captures the cycle-peak signal. **Other multpl pages used by the dashboard are CURRENT** (within 2 days as of June 2026): Trailing PE, Dividend Yield, Shiller PE all just need current price ÷ trailing-finalized-earnings so they refresh daily. Only the raw Earnings page waits for the GAAP-finalized number. **Every report run must** spot-check each multpl page's latest date before using it. If any used multpl page is more than 60 days stale, that indicator must be removed from the active set (with re-normalization and a comment in INDICATORS) and the report must note the removal. Re-add an EPS-based indicator only when a free monthly current TTM EPS feed is identified.
 
+- **The build script must not emit artifacts for banned charts.** As of 2026-06-10 `build_dashboard.py` still calls `_make_composite_html` and saves `*_composite.png` even though the composite is forbidden in the report — on the next script touch, remove those calls (or gate behind a `--debug` flag) and replace the composite reference line/legend in the per-indicator bar chart with the amber=60 / red=80 flag-threshold lines (the reported metric). When a chart is removed from the report format, delete its generated HTML+PNG from `reports/charts/` in the same commit — no orphan artifacts (the rejected `flag_count.html` lingered as working-tree debris).
 - **Never call the Claude API or any LLM API.** Per [`CLAUDE.md`](../../../CLAUDE.md): the agent (Claude in this conversation) does the analysis directly; no `anthropic.Anthropic()`, no `openai`, no LLM client. The script is pure pandas + yfinance + urllib for the FRED / Shiller / AAII / NAAIM CSV fetches.
 - **Never write to any `db/*.db` file.** Read-only against `db/indicators.db`. New indicators added by this skill live in `oneoff/` CSV cache files, not the project database. See [`CLAUDE.md`](../../../CLAUDE.md) § "Database Safety".
 - **Never silently drop a required indicator from the composite.** If HY OAS, IG OAS, CCC OAS, VIX, VVIX, VIX term slope, SKEW, MOVE, ERP, or HYG/LQD fails to fetch, the script must error out and the report must not be written. (Optional indicators — AAII, NAAIM, CAPE — are the only ones the report may degrade gracefully on.)
-- **Never report a composite without disclosing the active indicator set.** If 3 of 13 indicators failed, the report must say "composite computed from 10 of 13 indicators" in the headline verdict and the Data Used block.
-- **Never claim the dashboard predicts the *timing* of a regime turn.** It is a state read. Complacency can persist for quarters — the 2017 dashboard ran 80+ for most of the year before the Feb 2018 vol shock. The "What this verdict is NOT" block is mandatory and must say this explicitly.
+- **Never report a flag count without disclosing the active denominator.** If indicators failed to fetch, the denominator (`flag_max`) shrinks — the Take's first line and the Data Used block must both carry the actual `N` and note the failures.
+- **Never claim the dashboard predicts the *timing* of a regime turn.** It is a state read. Complacency can persist for quarters — the dashboard flagged heavily through most of 2017 before the Feb 2018 vol shock. The Dashboard's Take must never phrase the flag count as a timing call (the old "What this verdict is NOT" prose block was removed in the Citi-style rewrite; the discipline lives in the Take's wording).
 - **Never extrapolate a single indicator into a regime call.** A low HY OAS alone is not "complacency" — it is *one* signal among twelve. The cross-asset signature paragraph is the report's load-bearing analysis; the headline verdict without it is misleading.
 - **Never use absolute thresholds without percentile context.** "VIX is 12" means nothing without "which is the 7th percentile of the last 10 years". The indicator table must show both. Absolute levels rot as the regime evolves; percentiles are self-calibrating.
 - **Never include indicators with <5y clean history in the composite.** Short-history indicators can be discussed narratively but cannot be weighted. CCC OAS itself was reconstructed by ICE in different eras; verify the FRED series goes back the full 10y before weighting it.
@@ -467,7 +440,7 @@ The deeper analytical detail (per-indicator percentile context, composite weight
 
 ## Output location
 
-Save to `reports/market-complacency/market_complacency_<YYYY-MM-DD>.md` under the project root (create the `reports/market-complacency/` folder if missing — first report establishes the directory). The viewer at `http://localhost:5001/reports` will surface it under a new "MARKET-COMPLACENCY" type (or as "OTHER" until the viewer's bucket map is updated).
+Save to `reports/market-complacency/market_complacency_<YYYY-MM-DD>.md` under the project root (create the `reports/market-complacency/` folder if missing — first report establishes the directory). The viewer at `http://xs-macbook-air.local:5001/reports` will surface it under a new "MARKET-COMPLACENCY" type (or as "OTHER" until the viewer's bucket map is updated).
 
 Supplementary deliverables sit in standard locations:
 
@@ -483,6 +456,14 @@ One report per date. If `reports/market-complacency/market_complacency_<YYYY-MM-
 
 Every report must include a cross-reference to Citi's BMC when a current edition is available (Citi publishes refreshes ~quarterly). The BMC is the institutional analog of this dashboard with 18 indicators across valuation / yield curve / sentiment / corporate behaviour / profitability / balance sheets-and-credit. The skill's `scripts/build_dashboard.py` outputs a Citi-BMC-style **flag count** (amber if complacency_pct ≥ 60, red if ≥ 80; total = 0.5 × n_amber + 1.0 × n_red) alongside the continuous composite, so cross-comparison is direct.
 
+**Citation rule (mandatory, each run):** resolve the current BMC edition from the user's local zsxq library —
+
+```bash
+/opt/anaconda3/bin/python3 zsxq_fts.py --query "Bear Market Checklist" --limit 5
+```
+
+— and cite it with the **direct-download route** printed as `pdf_url`: `http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<urlencoded-name>` (e.g. the 2026-06-05 edition is file_id `181245528155282`). NEVER `/zsxq/pdf-viewer/<id>` and NEVER the paywalled `citivelocity.com` homepage — a homepage link is a non-citation. If the edition is absent from zsxq, write a labeled, link-free reference: `Citi BMC (paywalled, edition YYYY-MM-DD)`.
+
 Citi historical reference flags (cite when relevant):
 
 | Date | Citi BMC flags / 18 | Note |
@@ -493,7 +474,7 @@ Citi historical reference flags (cite when relevant):
 | Dec 2021 | 8.5 | Post-COVID peak |
 | Jun 2026 | 10 (Global), 11.5 (US), 5 (Europe) | "Frothiest since GFC, not yet overexuberant" |
 
-Citi's explicit guidance: "once the count reaches double digits, it has historically tended to rise more rapidly." That heuristic should be quoted in any report whose flag count is approaching 10 (this dashboard's proportional equivalent is ~8.4/15).
+Citi's explicit guidance: "once the count reaches double digits, it has historically tended to rise more rapidly." That heuristic should be quoted in any report whose flag count is approaching 10. This dashboard's proportional equivalent to Citi's 18-flag denominator is `flag_count × 18 / flag_max` — compute it from the run's indicators CSV, never hardcode it (the denominator changes as indicators are added or fail to fetch).
 
 ### BMC indicators — what we have and what's still missing
 
@@ -510,12 +491,12 @@ Citi's explicit guidance: "once the count reaches double digits, it has historic
 
 | Citi BMC factor | This dashboard equivalent | Data source |
 |---|---|---|
-| IPO Activity (% of Mkt cap) | `ipo_pct`: annual US IPO proceeds / SPX level | [Renaissance Capital IPO Stats page](https://www.renaissancecapital.com/IPO-Center/Stats) → manually cached `oneoff/ipo_proceeds_annual.csv` |
-| M&A Activity (% of Mkt cap) | `ma_pct`: annual US M&A volume / SPX level | [Bain 2025 M&A report](https://www.bain.com/about/media-center/press-releases/20252/global-ma-stages-great-rebound-in-2025-with-$4.8-trillion-deal-value-to-mark-second-highest-total-on-record) + [S&P Global Q1 2026](https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/04/global-m-and-a-by-the-numbers-q1-2026) → manually cached `oneoff/ma_volume_annual.csv` |
+| IPO Activity (% of Mkt cap) | `ipo_pct`: annual US IPO proceeds / SPX level | [Renaissance Capital IPO Stats page](https://www.renaissancecapital.com/IPO-Center/Stats) → manually cached `.claude/skills/market-complacency/data/ipo_proceeds_annual.csv` |
+| M&A Activity (% of Mkt cap) | `ma_pct`: annual US M&A volume / SPX level | [Bain 2025 M&A report](https://www.bain.com/about/media-center/press-releases/20252/global-ma-stages-great-rebound-in-2025-with-$4.8-trillion-deal-value-to-mark-second-highest-total-on-record) + [S&P Global Q1 2026](https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/04/global-m-and-a-by-the-numbers-q1-2026) → manually cached `.claude/skills/market-complacency/data/ma_volume_annual.csv` |
 
 **Refresh workflow for v6 indicators**: each report run, the agent uses WebSearch to find:
-- "Renaissance Capital 2026 YTD IPO count proceeds" — update last row of `ipo_proceeds_annual.csv`
-- "Bain global M&A 2026 Q1 announced volume" — update last row of `ma_volume_annual.csv`
+- "Renaissance Capital 2026 YTD IPO count proceeds" — update last row of `.claude/skills/market-complacency/data/ipo_proceeds_annual.csv`
+- "Bain global M&A 2026 Q1 announced volume" — update last row of `.claude/skills/market-complacency/data/ma_volume_annual.csv`
 
 The annual data is forward-filled to monthly in the build script (`scripts/build_dashboard.py` `fetch_ipo_pct` / `fetch_ma_pct`). The percentile rank is computed against the trailing 10y monthly window so the indicator behaves like every other one in the composite. **Note that today's readings (IPO 7th decile, M&A 8th decile) are NOT complacent** — deal-making activity in 2026 is well below 2021 peaks despite valuation extremes.
 
@@ -543,22 +524,18 @@ When data sources are added in future versions, run the standard backtest discip
 
 ## Backtest discipline
 
-A backtest script lives at `.claude/skills/market-complacency/scripts/backtest_dashboard.py`. Run it against any composite history CSV to validate or invalidate dashboard changes:
+**The ONE canonical validation metric is flag-count lift** on the 90d/−10% and 180d/−15% SPY drawdown events, computed by `oneoff/backtest_flag_vs_composite.py` — the numbers the Output Format section relies on (1.32×/1.90× at T=10/11 on 90d; 1.78×/2.41× on 180d; see § "Why flag count beats composite"). Re-run it against the run's flag-count history:
 
 ```bash
-python3 .claude/skills/market-complacency/scripts/backtest_dashboard.py \
-  --composite-history oneoff/market_complacency_<DATE>_composite_history.csv \
-  --benchmark SPY \
-  --as-of <DATE>
+/opt/anaconda3/bin/python3 oneoff/backtest_flag_vs_composite.py
 ```
 
-The June 2026 backtest (see [`reports/market-complacency/backtest_2026-06-07.md`](../../../reports/market-complacency/backtest_2026-06-07.md)) found:
+**Any indicator add / remove / threshold change must be validated by re-running this flag-vs-composite backtest BEFORE shipping, quoting before/after flag-count lift at T=10/11.** Unvalidated candidates stay narrative-only (see § Indicators rows 14–16).
 
-- **The Stretched tier (80+) is the only tier with predictive lift** — precision 22% vs 20% base rate (lift 1.10) on the 90-day -10% drawdown event. The 60-80 Elevated tier is empirically indistinguishable from Neutral.
+**Superseded historical analysis — do not cite as governing:** the composite-tier threshold sweep in `scripts/backtest_dashboard.py` and the conclusions of [`reports/market-complacency/backtest_2026-06-07.md`](../../../reports/market-complacency/backtest_2026-06-07.md) (e.g. "Stretched tier lift 1.10", "keep v2 as the default") predate the v8/v9 flag-count pivot. The flag-vs-composite comparison showed the composite is worse than random at every threshold (max 0.68× at 90d), so composite-tier lift is no longer the bar for anything. Two lessons from that backtest remain valid and carry over:
+
 - **The dashboard hit 4 of 7 major SPY drawdowns at the peak; 8 of 11 on QQQ.** The structural misses (GFC, 2022 bear, COVID) were exogenous-shock events the dashboard cannot see by construction.
-- **The dashboard is a *regime descriptor*, not a *drawdown predictor*.** Report writeups must calibrate expectations accordingly — quote the empirical drawdown probabilities at today's tier from the backtest, not anecdotal "this looks like 2007" comparisons.
-
-Any change to the indicator set or weights must be validated by re-running the backtest BEFORE shipping. The v2 dashboard (adding CCC − HY OAS spread) was kept after the backtest showed it modestly improved the Stretched-tier lift (1.01 → 1.10) and produced a more accurate read on the 2026-06-07 regime (Neutral, not Elevated). Future indicator additions (% S&P above 200dma, composite rate-of-change, sentiment proxies) must clear the same bar.
+- **The dashboard is a *regime descriptor*, not a *drawdown predictor*.** Report writeups must calibrate expectations accordingly — quote the empirical drawdown probabilities at today's flag-count range from the flag-count backtest, not anecdotal "this looks like 2007" comparisons.
 
 ## What this skill does NOT do
 
@@ -566,10 +543,11 @@ Any change to the indicator set or weights must be validated by re-running the b
 - It does not size a hedge — the "Action implications" block names the *kind* of hedge (put spread vs VIX call vs cash raise) but not the *dollar amount*. Sizing depends on portfolio context outside this skill.
 - It does not forecast regime turns — see Guardrails.
 - It does not analyze a specific sector's stress — [[sector-overview]] with a stress lens does that.
-- It does not write the new indicators (CCC OAS, SKEW, MOVE, CAPE, AAII, NAAIM) into the live `indicators` dashboard at `localhost:5001`. That promotion is a separate engineering task; this skill keeps the additions scoped to the report run.
+- It does not write the new indicators (CCC OAS, SKEW, MOVE, CAPE, AAII, NAAIM) into the live `indicators` dashboard at `http://xs-macbook-air.local:5001`. That promotion is a separate engineering task; this skill keeps the additions scoped to the report run.
 
 ## Related skills
 
+- [[market-status]] — the sibling GS-Kickstart-style *equity exuberance* dashboard (momentum, IPOs, speculative trading, issuance). This skill owns cross-asset risk-under-pricing (credit / vol / risk premia); route froth-through-the-equity-lens questions there.
 - [[take-profit-lab]] — single-ticker exit discipline. The macro complacency read is one input to the per-ticker exit decision.
 - [[sector-overview]] — sub-sector stress; complements the macro dashboard.
 - [[idea-generation]] — turns a "complacency is high" read into specific short / hedge candidates.

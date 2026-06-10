@@ -1,6 +1,21 @@
+---
+name: thesis-tracker
+description: Maintain and update investment theses for portfolio positions and watchlist names. Track key data points, catalysts, and thesis milestones over time. Use when updating a thesis with new information, reviewing position rationale, or checking if a thesis is still intact. Triggers on "update thesis for [company]", "is my thesis still intact", "thesis check", "add data point to [company]", or "review my positions".
+---
+
 # Thesis Tracker
 
-description: Maintain and update investment theses for portfolio positions and watchlist names. Track key data points, catalysts, and thesis milestones over time. Use when updating a thesis with new information, reviewing position rationale, or checking if a thesis is still intact. Triggers on "update thesis for [company]", "is my thesis still intact", "thesis check", "add data point to [company]", or "review my positions".
+**Language:** English-only by default (this is a tracking / monitoring skill, matching the project's tracking-skills English-default rule). Produce bilingual / Simplified-Chinese output only on explicit request (`in Chinese`, `bilingual`, `--lang zh`).
+
+## Storage & persistence (MUST)
+
+Cross-session persistence lives in markdown — one living file per position at `reports/thesis/<TICKER>_thesis.md` (create `reports/thesis/` if missing; English ticker first per the project filename rule). NEVER store thesis state in any project DB. Fixed file layout:
+
+- **Thesis header block** — statement, pillars, risks, verdict-ladder definition, scenario grid, KPI-panel definition (Step 1)
+- **Update Log** — append-only dated entries, newest first (Step 2)
+- **Current scorecard + KPI panel** — re-printed in full on every check-in (Steps 3–5); consistency of the metric set is the whole value of the tracker
+
+Markdown only — no Word output (the report viewer surfaces `.md`). Commit + push after every check-in (Conventional Commit, e.g. `feat(reports/thesis): ...`). Portfolio mode = enumerate `reports/thesis/*.md`.
 
 ## Workflow
 
@@ -16,7 +31,7 @@ If creating a new thesis:
 - **Target price / valuation**: What's it worth if the thesis plays out
 - **Stop-loss trigger**: What would make you exit
 
-If updating an existing thesis, ask the user for the new data point or development.
+If updating an existing thesis, load it by Reading `reports/thesis/<TICKER>_thesis.md` — never ask the user to restate the thesis — then process the new data point or development from the request (ask only if none was given).
 
 ### Step 2: Update Log
 
@@ -53,7 +68,16 @@ Thesis summary suitable for:
 - Portfolio review
 - Risk committee presentation
 
-Format: Concise markdown or Word doc with the scorecard, recent updates, and current conviction level.
+Format: concise markdown (no Word) — each check-in updates `reports/thesis/<TICKER>_thesis.md` in place per the Storage & persistence rules above, re-printing the scorecard, recent updates, and current conviction level.
+
+### Step 6: Verify & log
+
+Before committing each check-in:
+
+1. HTTP-check every NEW URL with a real-browser User-Agent — `200 OK` only; drop or replace failures per the link-validation rule.
+2. Spot-check 3–5 KPI-panel / delta-table numbers — each must string-match its same-row citation.
+3. Re-derive each scenario value (multiple × scenario-EPS) and each upside/downside %.
+4. Append `<details><summary>Verification log — YYYY-MM-DD</summary>...</details>` to the Update Log entry. Spec: `.claude/skills/company-research/references/citations.md`.
 
 ## Further viewing — explainer videos (optional, but default to including)
 
@@ -66,7 +90,7 @@ When this thesis turns on something a reader would struggle to picture from pros
 - **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
 - **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
 
-> Full spec: `references/citations.md` § "Further viewing — explainer videos".
+> Full spec: `.claude/skills/company-research/references/citations.md` § "Further viewing — explainer videos".
 
 ## Learning from sell-side institutional research
 
@@ -94,4 +118,4 @@ The "thesis-revisit" note is a mature sell-side report type (MS *Risk Reward Upd
 - Track disconfirming evidence as rigorously as confirming evidence
 - Review theses at least quarterly, even when nothing dramatic has happened
 - If the user manages multiple positions, offer to do a full portfolio thesis review
-- Store thesis data in a structured format so it can be referenced across sessions
+- Store thesis data in `reports/thesis/<TICKER>_thesis.md` (see Storage & persistence above) so it can be referenced across sessions

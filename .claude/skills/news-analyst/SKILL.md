@@ -15,6 +15,12 @@ For `--asset-type stock` use the term "company" throughout; for `--asset-type cr
 
 Inputs: `<ticker>` and `<trade_date>` in YYYY-MM-DD form.
 
+0. **Reference price (mandatory first fetch — never from news prose)**:
+   ```bash
+   /opt/anaconda3/bin/python3 -c "import yfinance as yf, datetime as dt; h=yf.Ticker('<ticker>').history(period='1y'); h=h[h.index.date<=dt.date.fromisoformat('<trade_date>')]; print(round(h['Close'].iloc[-1],2), h.index[-1].date(), round(h['Close'].min(),2), round(h['Close'].max(),2))"
+   ```
+   Put the dated reference close + 52-week range in the report header, cited as `[Yahoo Finance quote](https://finance.yahoo.com/quote/<ticker>/)` with the as-of date. If `<trade_date>` is a non-trading day, the printed date is the last completed session — state both dates (`Trade date 2026-05-23 (Sat) · reference close 2026-05-22`). **The reference price must come from this fetch — never from a news article's prose**: every downstream upside % keys off this number, and a past run anchored it to an opaque Google-News redirect attributed to an unverifiable outlet.
+
 1. **Ticker-specific news (past 30 days, split into two horizons in the report)**:
    ```bash
    python scripts/get_news.py <ticker> <start_date> <trade_date>
@@ -53,6 +59,8 @@ A markdown report providing **specific, actionable insights with supporting evid
 
 Bucket each ticker-news headline by inspecting its date in the fetcher output header (`### Title (source: Publisher, YYYY-MM-DD)`). If 30 days returned <5 articles total, say so and consolidate the two ticker subsections into one — don't pad either with overlap.
 
+**Length budget (institutional brief, not exhaustive coverage):** body 2,500–4,500 words, References excluded. Cite each discrete story to **at most 2 URLs** (primary + one corroborating) and cut redundant syndicated duplicates of the same story. If the fetcher returns >150 articles, theme-group rather than enumerate. The broker daily/weekly briefs this skill mirrors are tight; an oversized report also bloats the context every downstream debate stage must carry.
+
 ## Further viewing — explainer videos (optional, but default to including)
 
 When this report covers something a reader would struggle to picture from prose alone — a newly launched product (a humanoid robot's actuators / a new chip package / an EV powertrain), a manufacturing or scientific process behind a headline, a complex deal or corporate-action mechanic (a spin-off, tender offer, or index reconstitution), an unfamiliar business model, or a market-structure concept (how a short squeeze or passive rebalance flow actually works) — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them on any topic; omit only when the report is purely numeric with nothing worth visualizing.
@@ -80,7 +88,7 @@ The macro/news-brief report type is built daily by JPM, GS, Morgan Stanley, Nomu
 
 - **Per-ticker analyst calls compress to a rated line** (mirror Morgan Stanley *Three Actionable Ideas*): when a broker action appears, render it as `ticker + rating + target price + one-line driver` (`maintain Buy, TP $190 on the GAA ramp`). Keep the company FACT separate from the house VIEW — label any analyst opinion `*Analyst view:*` per the project rule; never fold it into a filing citation.
 
-- **Catalysts on the calendar must be DATED and NAMED** (mirror Kickstart *后续重点关注* / FTSE-rebalance callouts): no vague "upcoming earnings/FOMC" — list specific events with dates (`Micron earnings 2026-06-25`, `Qualcomm investor day 2026-06-18`, `FTSE Russell reconstitution after close 2026-06-20`, `FOMC 2026-06-17`). Add **index rebalance / reconstitution** dates and their estimated passive-flow $ as a watched item type. Cite each dated event to a source URL.
+- **Catalysts on the calendar must be DATED and NAMED** (mirror Kickstart *后续重点关注* / FTSE-rebalance callouts): no vague "upcoming earnings/FOMC" — list specific events with dates (`Micron earnings 2026-06-25`, `Qualcomm investor day 2026-06-18`, `FTSE Russell reconstitution after close 2026-06-20`, `FOMC 2026-06-17`). Add **index rebalance / reconstitution** dates and their estimated passive-flow $ as a watched item type. Cite each dated event to a source URL. **Verify the next earnings date** via yfinance (`yf.Ticker('<ticker>').calendar`) or the company IR / press-release page and cite it; when only an approximate window is known, write it as a window with its source (`late-July per [Q3 FY26 release](…) cadence`) — never an uncited specific-sounding date. Downstream skills (trader-plan's Catalyst field, portfolio-decision's Time Horizon) reuse this verified date.
 
 - **Close the body with an explicit Bull vs Bear forward-risk block** (mirror the analogs' 利好/利空 close): before the Summary table, end with two short lists — upside catalysts vs downside risks for `<TICKER>` over the next 1–4 weeks. This sharpens the `Cross-cutting interactions` bullet into the institutional balanced-risk format; keep the cross-cutting synthesis (macro × insider × news reinforcing or conflicting) inside it.
 
@@ -125,6 +133,8 @@ If a section is consolidated (e.g. <5 articles total), keep the numeric prefix o
 Every claim grounded in a fetched headline or filing **must carry a clickable markdown-link citation** of the form `[Publisher · YYYY-MM-DD](url)` (or `[SEC Form 4](url)` for insider txns). Pull the URLs from the `Link:` lines in the fetcher output — never invent one, never just write `(source: Yahoo Finance)` without a URL.
 
 - For ticker / macro news: each headline block in the fetcher output has a `Link:` line; use that URL.
+- **Resolve Google News RSS redirect URLs before citing.** `news.google.com/rss/articles/CBMi…` links are opaque, fragile, and cannot be string-match spot-checked per the numerical-accuracy rule — follow the redirect once (real-browser UA) and cite the canonical publisher URL. If resolution fails, keep the redirect but append `via Google News` to the label.
+- **Label syndicated hosts honestly.** When the link target is an aggregator, the label must say so — `[Reuters via Yahoo Finance · 2026-05-22](https://finance.yahoo.com/...)`, never `[Reuters · 2026-05-22]` pointing at a Yahoo/Google URL. Downstream pipeline skills copy these citations verbatim, so fixing them at this stage fixes the whole chain.
 - For insider transactions: the `URL` column in the CSV often holds a SEC Form 4 link. If it's blank, cite the SEC EDGAR Form 4 listing for the ticker: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=<TICKER>&type=4`.
 - If the prose references a specific article, the link goes inline at the claim, not in a footnote.
 

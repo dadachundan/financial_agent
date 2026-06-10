@@ -68,11 +68,13 @@ simple weighted average of those percentiles, mapped to a 0–100 scale where:
 
 ### The 9 GS Kickstart indicators (Exhibit 3 of the source PDF)
 
+Anchor percentiles below were **last verified against the 2026-06-05 issue** (zsxq file_id 412458845521488, Exhibit 3 read visually at 300 dpi). They are a convenience copy only — see the transcription rule in [Historical anchors](#historical-anchors).
+
 | # | Indicator | GS direction | Public source | GS 2000 %tile | GS 2021 %tile |
 |---|---|---|---|---|---|
 | **Share prices** | | | | | |
-| 1 | **Momentum factor return** (3M rolling) | High = exuberant | yfinance `MTUM` (iShares MSCI USA Momentum Factor ETF) — rolling 3M total return vs SPY same window | 100 | 76 |
-| 2 | **S&P 500 52-week market breadth** | Narrow = exuberant (inverted) | Compute from yfinance SPX constituents — diff between SPX-distance-from-52wk-high and median-constituent-distance-from-52wk-high. Equivalent published series: NYSE breadth indices | 100 | 95 |
+| 1 | **Momentum factor return** (3M rolling) | High = exuberant | yfinance `MTUM` (iShares MSCI USA Momentum Factor ETF) — rolling 3M total return vs SPY same window | 100 | 95 |
+| 2 | **S&P 500 52-week market breadth** | Narrow = exuberant (inverted) | Compute from yfinance SPX constituents — diff between SPX-distance-from-52wk-high and median-constituent-distance-from-52wk-high. Equivalent published series: NYSE breadth indices | 100 | 76 |
 | **Trading activity** | | | | | |
 | 3 | **GS Speculative Trading Indicator** | High = exuberant | Proprietary — proxy: equal-weighted return of (ARKK + IPO + BUZZ + RNMC) ÷ SPY rolling 3M. When proxy diverges materially from the last published GS chart, the agent overrides with a WebSearch-sourced absolute level (the GS chart is published roughly monthly in the Kickstart) | 100 | 99 |
 | 4 | **CBOE Equity Put/Call ratio** (21-day MA) | Low = exuberant (inverted) | Cboe `equitypc.csv` is stale (Oct 2019). Live path: yfinance `^CPC` (CBOE Total Put/Call) — proxy for the equity series. Fallback: WebSearch for "CBOE equity put/call latest" weekly value | 100 | 97 |
@@ -82,7 +84,7 @@ simple weighted average of those percentiles, mapped to a 0–100 scale where:
 | 7 | **AAII Investor Sentiment** (Bull − Bear, 3-month MA) | High = exuberant | aaii.com weekly survey. CSV blocked (HTTP 403 since 2025) — WebSearch fallback for the latest weekly print | 99 | 92 |
 | **Corporate sentiment** | | | | | |
 | 8 | **Number of US IPOs (YTD annualised, > $25M deal value)** | High = exuberant | Renaissance Capital IPO Center stats — annual count. Reads via WebSearch (Renaissance refreshes weekly during the IPO window) | 100 | 87 |
-| 9 | **Net US public equity issuance** (12m rolling, % of market cap) | High = exuberant | SIFMA Quarterly Equity Issuance Survey. Substitute: FRED `IPONSUE`-style series do not exist — WebSearch for "SIFMA US equity issuance Q1 2026 quarterly" | 100 | 99 |
+| 9 | **Net US public equity issuance** (12m rolling, % of market cap) | High = exuberant | SIFMA Quarterly Equity Issuance Survey. Substitute: FRED `IPONSUE`-style series do not exist — WebSearch for "SIFMA US equity issuance Q1 2026 quarterly" | 100 | 96 |
 
 The composite is a **weighted average** of the nine indicators' exuberance percentiles. Weights default to equal (1/9 each) so the score remains a faithful average of GS's own categories — the only deviation is dropping an indicator if it cannot be sourced in a given run (with re-normalisation and a disclosure in Data Used).
 
@@ -115,10 +117,15 @@ For each indicator with ≥ 10 years of clean history (target: 30 years, matchin
 3. **Exuberance percentile** — for "low = exuberant" indicators, `100 − raw_pct`; otherwise `raw_pct`.
 4. **Decile label** — "1st (least exuberant)" through "10th (most exuberant)".
 5. **Top-decile flag** — true if exuberance percentile ≥ 90.
+6. **GS-divergence disclosure (mandatory, every headline-9 indicator).** When an own-calc percentile differs from the GS-published Current percentile (Exhibit 3, transcribed in Step 1.5) by **>15 points**, the Figure 1 cell MUST show both — e.g. `20 own-calc / 88 GS` — with the cell colour taken from the **GS value**, and the section narrative must explain the divergence (different underlying series, base year, or smoothing). Silently substituting an own-calc value that flips the signal direction is forbidden — the 2026-06-07 run printed put/call at 20 (green contra-signal) where GS prints 88 (red) and built a narrative thread on the wrong cell.
 
 ### Composite score
 
-Equal-weighted mean of the 9 headline indicators' exuberance percentiles (each 0–100). If an indicator cannot be sourced, drop it from the active set and disclose the count in the Data Used manifest. The composite tier bands are:
+Equal-weighted mean of the 9 headline indicators' exuberance percentiles (each 0–100). If an indicator cannot be sourced, drop it from the active set and disclose the count in the Data Used manifest.
+
+**Mean vs median — one tier, two numbers.** The **mean is the tier-determining composite** (it maps to the band table below). Wherever the composite is quoted (verdict box, Figure 1 footer row, Data Used), carry the GS-comparable **median** alongside it on the same line — e.g. "mean 66 → Stretched; median 86, the figure GS quotes" — and **never print two different tiers as the verdict**. Both numbers must be recomputed from the final Figure-1 Current column (Step 5 arithmetic gate); `merge_websearch.py` computes only the mean.
+
+The composite tier bands are:
 
 | Range | Verdict | What it means |
 |---|---|---|
@@ -139,6 +146,8 @@ The skill must explicitly anchor today's reading against three clean historical 
 - **Today**
 
 For each headline indicator, the calibration table shows the exuberance percentile at each anchor. **Historical anchors come from the GS PDF directly when the percentiles are unambiguous** — the script does not need to back-fill 1995 history for every indicator. When the script can compute the historical percentile from a long-history series (Momentum / VIX / put-call / 10Y), it does so; when only a current value is reliably fetchable (AAII / Yale / IPO count / net issuance), the script quotes the GS percentile for the historical columns and computes only the current column directly.
+
+**Transcription rule (hard).** Historical anchor percentiles MUST be transcribed from the actual GS Exhibit 3 each run (Step 1.5) — never trusted from this file, the Figure 1 template, or `build_status.py`'s `HEADLINE_INDICATORS` dict. The authoritative copy of each week's Kickstart is in `db/zsxq.db`. If the hardcoded values disagree with the PDF, **the PDF wins and the stale copies must be corrected in the same commit**. (Past failure: the Momentum and Breadth 2021 anchors sat transposed — 76↔95 — across all three hardcoded copies and flowed verbatim into the published 2026-06-07 report.)
 
 ## Learning from sell-side institutional research
 
@@ -246,6 +255,19 @@ Outputs (idempotent — same date → same outputs):
 - `oneoff/market_status_<DATE>_websearch_queue.json` — fallback queue for the agent.
 - `reports/charts/market_status_<DATE>_*.png` — 12-15 charts.
 
+### Step 1.5 — Resolve the source PDFs from the zsxq library
+
+The GS Kickstart is the report's **primary source** — read the real PDF; never cite a guessed external URL.
+
+1. **Locate** the latest issue (and the Citi BMC cross-check) in the local library — read-only against `db/zsxq.db`:
+   ```bash
+   /opt/anaconda3/bin/python3 zsxq_fts.py --query "Kickstart exuberance" --limit 5
+   /opt/anaconda3/bin/python3 zsxq_fts.py --query "Bear Market Checklist" --limit 5
+   ```
+2. **Render and read.** The Kickstart PDFs are image-only (`fitz.get_text()` returns empty) — render the Exhibit pages to `/tmp` PNGs with fitz (`page.get_pixmap(dpi=200-300)`) and Read them visually, per the project's three-tier OCR flow (never Tesseract; no DB writes needed for a read).
+3. **Transcribe Exhibit 3's full grid** — all 9 indicator rows × 3 columns PLUS the **Median and Average rows** and the **inversion footnote** ("Historical percentiles are inverted for market breadth, CBOE put/call ratio, and short interest. CBOE put/call ratio percentile rank is evaluated vs. history since 1997"). These transcribed values override the hardcoded copies in this file / the template / `build_status.py` (see the transcription rule under Historical anchors).
+4. **Citation rule.** Cite the GS issue via the zsxq direct-download URL — `http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<urlencoded-name>` (paste `find_pdf.py`'s `pdf_url`) — plus the issue date and lead author. An external gspublishing.com URL may be added ONLY if it HTTP-validates 200 with a real-browser UA; the guessed deep-URL pattern returns 403 (the 2026-06-07 report shipped it 4× before this rule).
+
 ### Step 2 — Resolve the WebSearch queue (the agent's job)
 
 The agent (Claude in this conversation) reads `_websearch_queue.json` and runs WebSearch for each entry. For each result, the agent:
@@ -264,6 +286,7 @@ Before writing the report, scan the calibration table and the broader panel for:
 2. **A single indicator carrying the composite** — if the composite is 78 but 8 of 9 indicators are mid-50s and one is 100, the composite is misleading.
 3. **Stale data on a WebSearch indicator** — if the WebSearch result is older than 30 days, prefer a more recent secondary source.
 4. **Earnings-led vs multiple-led diagnostic** — compute fwd-EPS revision % YTD against index price return YTD (the GS "rally is earnings-led, not theme-led" check). Label the froth: earnings-backed (EPS ≥ price) = more durable; multiple-driven (price ≫ EPS) = more fragile. This colors the verdict's *meaning*, not just its level — see the [Learning from sell-side institutional research](#learning-from-sell-side-institutional-research) section.
+5. **Colour-band disagreement with GS Exhibit 3** — any Figure 1 cell that disagrees in colour-band with the Step-1.5 transcription is a surprise that must be called out in the narrative, not absorbed.
 
 ### Step 4 — Write the report
 
@@ -273,6 +296,9 @@ Save to `reports/market-status/market_status_<YYYY-MM-DD>.md`. Target 3,000–5,
    - **Bull-market-ending triggers checklist** (mini-table, exempt from the ≤ 200-word prose limit — like Figure 1). Mirror the GS US Weekly Kickstart "Evaluating exuberance" lead-in and Citi's Bear Market Checklist: a 3-row table checking the three classic termination triggers, each marked **Not-yet / Marginal / Flagged** with its sourced metric: (a) **fundamentals/earnings weakening** (fwd-EPS revision breadth turning negative); (b) **surge in new equity supply** (IPO proceeds + net-of-buyback issuance); (c) **Fed / financial-conditions tightening** (NFCI + fed-funds path). GS's June-2026 read marks all three only "marginally elevated → not yet a systemic top" — the checklist makes the verdict a checklist, not just a score.
    - **Counter-signal line** (mandatory, one sentence). Mirror Citi BMC's "what is NOT yet flagged" and GS's note that median short interest sits at a multi-decade *high* (lots of money still short = not full euphoria): name the headline indicators currently in the bottom / mid decile so the read is never one-sided. Reinforces the existing "never assert this looks like 2000 / 2021" guardrail.
 2. **Figure 1. Kickstart-style 9-indicator calibration table** — exactly the layout of GS Exhibit 3. Columns: Dot-Com Bubble / 2021 / Current. Rows grouped by Share-prices / Trading-activity / Investor-sentiment / Corporate-sentiment. Cells coloured: red if exuberance pct ≥ 80, amber 60–80, green ≤ 30, plain otherwise. Cite the public source URL inline per row.
+   - **Basis tag per Current-column cell**: `98ᴳ` = GS-published (since-1995, from the Step-1.5 transcription); `100ᵖ` = own proxy calc (state the window — e.g. MTUM exists only since 2013, so a "10y proxy" tag, never bare under a "since 1995" header). Mixed-basis columns without tags are forbidden.
+   - **Mandatory table footnote** mirroring GS's: "Percentiles inverted for market breadth, CBOE put/call ratio, and short interest; put/call base year 1997; ᵖ rows computed vs own proxy history (window stated)."
+   - **Sub-metric rows added beyond GS Exhibit 3** (IPO proceeds, gross issuance) must leave their historical anchor cells blank (`—`) — GS publishes no anchor for them, and an invented anchor attributed to GS is a fabrication.
 3. **§ Share-price action** — narrative paragraph + Momentum chart (`*_momentum.png`) + Breadth chart (`*_breadth.png`). 200-300 words.
 4. **§ Trading activity** — narrative paragraph + Speculative Trading proxy chart + Put/Call chart + Short-interest chart. 300-400 words.
 5. **§ Investor sentiment** — narrative paragraph + AAII chart + Yale chart + GS Sentiment Indicator chart. 300-400 words.
@@ -299,7 +325,9 @@ When this report covers something a reader would struggle to picture from prose 
 
 - Spot-check ≥ 3 numbers in the report against the indicators CSV.
 - Confirm every percentile in the calibration table matches the script's output.
+- **Arithmetic gate (mandatory).** Recompute the mean AND median of the final Figure-1 Current column *after* all WebSearch patches (`merge_websearch.py` computes only the mean — do the median yourself). Every quoted composite (verdict box, Figure 1 footer row, Data Used) must equal those recomputed values exactly; any top-decile / bottom-decile COUNT stated in prose must be re-counted against the final column. (Past failure: the 2026-06-07 report quoted "median 88" against a column whose median was 68, and claimed "five of nine in the top decile" when only three cells were ≥ 90.)
 - Confirm every WebSearch citation has both a URL and a publication date.
+- **Append the verification log (mandatory — the report is incomplete without it).** End the report with `<details><summary>Verification log — YYYY-MM-DD</summary>…</details>` listing: (a) every Figure-1 cell vs the Step-1.5 GS Exhibit 3 transcription (not just vs the script CSV — the CSV can carry the error); (b) the recomputed mean/median consistency check; (c) 3–5 random number→URL string-matches; (d) the HTTP status of every new external URL; (e) charts rendered N of M planned, with reasons for misses.
 - Stop any test servers used during chart rendering.
 - Commit and push per the project's standard workflow (`fix:` / `feat:` Conventional Commits, no Co-authored-by footer).
 
@@ -317,7 +345,11 @@ Mandatory blocks, in order:
 6. **`## Corporate sentiment`** (narrative + 2 charts)
 7. **`## Macro & cross-asset panel`** (sub-sections + 4-6 charts)
 8. **`## Historical anchor`** (short close)
-9. **`## Data Used / 数据来源清单`**
+9. **Further viewing** — 1–3 validated explainer videos (optional, default-include; placed at the end of the section whose concept they explain — see [Further viewing](#further-viewing--explainer-videos-optional-but-default-to-including))
+10. **`## Data Used / 数据来源清单`** — must carry a `Charts rendered: N of M planned (missing: X, Y — reason)` line
+11. **Verification log** — `<details><summary>Verification log — YYYY-MM-DD</summary>` block per Step 5
+
+**Chart counts are conditional, not absolute.** The per-section counts above apply to hard-data indicators. For each WebSearch-only indicator, either (a) build a sparse chart from whatever history the fetched source provides (Cboe's downloadable daily put/call stats support a 21-day-MA series; Renaissance publishes annual IPO counts by year — a 9-bar chart beats no chart), or (b) state inline `*chart unavailable — indicator covered in Figure 1 only*` at the section opener. A section silently shipping zero charts against a mandated count is a spec violation. Every chart title carries an as-of date in the GS exhibit style ("as of May 31, 2026") — the source footers already do.
 
 ### Figure 1 styling
 
@@ -359,7 +391,8 @@ Forbidden blocks (rejected in prior similar skill iterations):
 - **Never assert "this looks like 2000 / 2021".** The calibration table does that work — let the reader pattern-match. Naming a specific historical analog in the verdict is over-confident.
 - **Always carry the counter-signal line.** The Verdict must include one sentence naming the headline indicators currently in the bottom / mid decile (the "not yet flagged" evidence — mirror Citi BMC and GS's multi-decade-high short-interest note). A one-sided read that lists only the stretched indicators is rejected.
 - **Never use absolute thresholds without percentile context.** "VIX is 18" means nothing without "which is the 32nd percentile of the last 10 years". The indicator tables must always carry both.
-- **Stale data — explicit removal rule.** Same as market-complacency: if any used multpl page is more than 60 days stale, the indicator is removed from the active set with re-normalization and a note. Every report run must spot-check the publication dates.
+- **Stale data — explicit removal rule (applies to EVERY table and chart, not just the composite set).** If any source (multpl or otherwise) is more than 60 days stale, the value is removed: composite indicators drop out of the active set with re-normalization and a note; a Macro-panel row whose source is >60 days stale must be replaced with a fresher equivalent (e.g. FactSet Earnings Insight forward 12-month P/E, which the WebSearch queue already fetches) or dropped — **a stale value with a parenthetical apology is still a stale value**. Every report run must spot-check the publication dates.
+- **Historical base rates ("N of N times since YYYY") may appear ONLY if** (a) computed by `build_status.py` with the output CSV path cited inline, or (b) carried by an external citation that contains the figure. The Historical anchor table may contain only anchor rows present in the cited source (GS Exhibit 3 = Dot-Com and 2021 only; adding 2007 requires a separate cited source). Forward 12-month SPX returns in that table must be computed from yfinance `^GSPC` and labeled as a calc (`= close[t+12m]/close[t] − 1`). Every paragraph quoting GS-exhibit numbers cites the zsxq PDF URL in that paragraph.
 - **No "Source: our model" anywhere.** Cite the script path for derived calcs, the underlying FRED / yfinance / multpl / Yale / AAII / Renaissance / SIFMA URLs for the inputs.
 - **Never claim the dashboard predicts the *timing* of a regime turn.** It is a state read. Exuberance can persist for quarters — GS quotes Greenspan's "irrational exuberance" speech of Dec 1996 as preceding the Dot-Com peak by more than 3 years.
 - **WebSearch citations must include the publication date.** A bare URL without a date is not a citation. The Data Used manifest lists each WebSearch result as `[Title, YYYY-MM-DD](URL)`.
@@ -367,7 +400,7 @@ Forbidden blocks (rejected in prior similar skill iterations):
 
 ## Output location
 
-Save to `reports/market-status/market_status_<YYYY-MM-DD>.md` under the project root (create the directory if missing — first report establishes it). The viewer at `http://localhost:5001/reports` will surface it under a new "MARKET-STATUS" type (or as "OTHER" until the viewer's bucket map is updated).
+Save to `reports/market-status/market_status_<YYYY-MM-DD>.md` under the project root (create the directory if missing — first report establishes it). The viewer at `http://xs-macbook-air.local:5001/reports` will surface it under a new "MARKET-STATUS" type (or as "OTHER" until the viewer's bucket map is updated).
 
 Supplementary deliverables:
 

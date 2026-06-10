@@ -636,7 +636,7 @@ Use XLSX skill to extract these tables:
 - Columns: Bull, Base, Bear
 
 **Estimates vs Consensus Table** (from Task 3 Step 3c, or build from the model + a consensus pull)
-- Extract the analyst's FY+1..FY+3 revenue / EPS / margin and the matching sell-side consensus (FactSet / Bloomberg / Yahoo Finance)
+- Extract the analyst's FY+1..FY+3 revenue / EPS / margin and the matching sell-side consensus (Yahoo Finance analyst-estimates page; pro-terminal consensus only if the user supplied it)
 - Render as a markdown table with explicit %-deltas per metric per year, plus a one-line "why the Street is wrong"
 - **Each consensus figure carries a dated data-provider citation; the analyst's own estimate is labelled as an estimate and is NEVER cited as a source** (project "model is not a source" rule)
 - This becomes a named **"Estimates vs Consensus"** subsection inside the Investment Thesis — it is the spine of an initiation, not an afterthought
@@ -1016,7 +1016,7 @@ Use Write/Edit to append the appendix sections to the .md file:
 
    ### Data Providers
    - [Yahoo Finance — historical price data](https://finance.yahoo.com/quote/TICKER/history) — accessed 2025-XX-XX
-   - FactSet — peer trading multiples as of [date] (subscription required)
+   - Yahoo Finance — peer trading multiples / statistics pages as of [date] (cite only providers actually accessed; no FactSet/Bloomberg in this environment)
    - …more entries
    ```
 
@@ -1165,7 +1165,7 @@ MANDATORY TABLES:
 - [ ] Additional 5-13 tables
 
 CITATIONS & HYPERLINKS ⭐⭐⭐ HARD FAIL IF MISSING:
-- [ ] Every figure has a source line directly under it (e.g. "Source: 10-K FY2024", "Source: FactSet, 2026-05-19")
+- [ ] Every figure has a source line directly under it (e.g. "Source: 10-K FY2024", "Source: Yahoo Finance, 2026-05-19")
 - [ ] Every table has a source line as its final row spanning all columns
 - [ ] Every substantive prose paragraph has an inline citation `(Source: <hyperlinked label>)` / `(来源: …)` at the end
 - [ ] **Body has ≥150 distinct inline markdown links outside the appendix** (FAIL → STOP DELIVERY). To verify:

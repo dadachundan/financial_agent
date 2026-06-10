@@ -44,7 +44,7 @@ This skill needs the trader's proposal plus the three analyst reports:
 
 **If `trader_investment_plan` is missing**, invoke [[trader-plan]] first; that will cascade up through [[research-manager]] and [[bull-bear-debate]] as needed (and the analyst reports along the way).
 
-**If only the analyst reports are missing** (e.g. you have a trader plan from a separate workflow), invoke the missing analyst skills in parallel.
+**If only the analyst reports are missing** (e.g. you have a trader plan from a separate workflow), invoke the missing analyst skills sequentially, per the CLAUDE.md 16 GB memory-watch rules: [[company-research]] ALONE first if needed (it is the heavy 6–10k-word agent); [[sentiment-analyst]] + [[news-analyst]] may pair 2-wide only with `/tmp/mem-watch-16gb.sh` running and free RAM >60%.
 
 For a clean full-pipeline run from scratch, prefer [[trading-analysis]] over invoking this skill standalone.
 

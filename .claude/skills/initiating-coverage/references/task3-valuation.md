@@ -34,7 +34,7 @@ The valuation feeds Task 5's report. Every external data point (peer multiples, 
 
 **Required:**
 - Inline citation after every macro/market assumption — risk-free rate, ERP, beta, terminal growth rate, WACC components — naming the data provider and date: e.g. `Risk-free rate of 4.3% ([US 10Y Treasury, FRED, 2026-05-19](https://fred.stlouisfed.org/series/DGS10))`.
-- The Excel `Comparable Companies` tab must include a `Source` column per row (e.g. "FactSet 2026-05-19", "10-K FY2024", "Yahoo Finance 2026-05-19").
+- The Excel `Comparable Companies` tab must include a `Source` column per row (e.g. "Yahoo Finance 2026-05-19", "10-K FY2024") — naming only providers actually accessed.
 - The Excel `DCF` assumption table must include a `Source` column per row.
 - The markdown ends with a `## Sources` section listing every distinct source with date + URL, organized into Task 5's six categories (SEC Filings / Earnings Materials / Company Materials / Industry & Market Research / News & Trade Publications / Data Providers).
 
@@ -142,7 +142,7 @@ For the deep recipe on each method (forward-target-multiple, SOTP, NAV-discount,
 
    Inputs:
    - Risk-Free Rate: [Current 10-year Treasury, e.g., 4.2%]
-   - Beta: [Company beta from Bloomberg/FactSet or peer average]
+   - Beta: [Company beta from a dated Yahoo Finance statistics page, or peer average]
    - Equity Risk Premium: 5-6% (historical average)
 
    Example:
@@ -336,10 +336,12 @@ Base Case: Rev CAGR = 25%, EBITDA Margin = 32% → $56
 - Revenue growth rate
 - EBITDA margin
 
-**Data sources:**
-- FactSet, CapitalIQ, Bloomberg (preferred)
-- Company 10-Ks/10-Qs for actuals
-- Consensus estimates from Yahoo Finance, Seeking Alpha (if pro tools unavailable)
+**Data sources (free, verifiable sources first — this environment has NO FactSet / Bloomberg / CapitalIQ subscriptions):**
+- Dated Yahoo Finance quote / statistics / analysis pages (preferred for market caps, multiples, consensus)
+- Company / peer 10-Ks and 10-Qs for actuals (SEC EDGAR deep URLs)
+- stockanalysis.com or similar free dated pages as secondary
+- Pro terminals (FactSet, CapitalIQ, Bloomberg) **only if the user supplies the data**
+- **Never cite a data provider you did not actually access** — a "FactSet 2026-05-19" label on a number pulled from Yahoo is a fabricated citation. In this environment that means no FactSet / Bloomberg / CapitalIQ citations.
 
 #### C. Calculate Valuation Multiples
 
@@ -359,15 +361,15 @@ COMPARABLE COMPANIES ANALYSIS
 
 Company      Ticker  Mkt Cap  EV/Rev  EV/Rev  EV/EBITDA  EV/EBITDA  P/E   Rev     EBITDA  Source
                      ($B)     LTM     NTM     LTM        NTM        NTM   Growth  Margin
-Peer A       PRA     45.2     3.5x    3.2x    15.2x      13.8x      25x   18%     23%     FactSet 2026-05-19
-Peer B       PRB     32.8     3.2x    2.9x    14.1x      12.5x      22x   15%     23%     FactSet 2026-05-19
-Peer C       PRC     28.5     2.8x    2.6x    12.8x      11.2x      20x   12%     22%     FactSet 2026-05-19
-Peer D       PRD     52.1     4.1x    3.7x    17.5x      15.2x      29x   22%     23%     FactSet 2026-05-19
-Peer E       PRE     38.9     3.6x    3.3x    15.8x      14.1x      25x   17%     23%     FactSet 2026-05-19
-Peer F       PRF     41.2     3.7x    3.4x    16.1x      13.9x      26x   19%     23%     FactSet 2026-05-19
-Peer G       PRG     35.5     3.3x    3.0x    14.5x      12.8x      23x   16%     22%     FactSet 2026-05-19
+Peer A       PRA     45.2     3.5x    3.2x    15.2x      13.8x      25x   18%     23%     Yahoo Finance 2026-05-19
+Peer B       PRB     32.8     3.2x    2.9x    14.1x      12.5x      22x   15%     23%     Yahoo Finance 2026-05-19
+Peer C       PRC     28.5     2.8x    2.6x    12.8x      11.2x      20x   12%     22%     10-K FY2025 + Yahoo 2026-05-19
+Peer D       PRD     52.1     4.1x    3.7x    17.5x      15.2x      29x   22%     23%     Yahoo Finance 2026-05-19
+Peer E       PRE     38.9     3.6x    3.3x    15.8x      14.1x      25x   17%     23%     Yahoo Finance 2026-05-19
+Peer F       PRF     41.2     3.7x    3.4x    16.1x      13.9x      26x   19%     23%     Yahoo Finance 2026-05-19
+Peer G       PRG     35.5     3.3x    3.0x    14.5x      12.8x      23x   16%     22%     Yahoo Finance 2026-05-19
 
-[Target]     TRGT    38.0     3.4x    3.1x    14.8x      13.0x      24x   17%     23%     Model + FactSet
+[Target]     TRGT    38.0     3.4x    3.1x    14.8x      13.0x      24x   17%     23%     Model + Yahoo Finance
 
 STATISTICAL SUMMARY
 Maximum              52.1     4.1x    3.7x    17.5x      15.2x      29x   22%     23%
@@ -377,7 +379,7 @@ Median               38.9     3.5x    3.2x    15.2x      13.8x      25x   17%   
 Minimum              28.5     2.8x    2.6x    12.8x      11.2x      20x   12%     22%
 
 Note: Market data as of [Date]. LTM = Last Twelve Months. NTM = Next Twelve Months.
-Source: [FactSet — peer trading multiples, 2026-05-19](https://...) (subscription required); peer 10-K filings for fiscal-year figures.
+Source: [Yahoo Finance — peer statistics pages, 2026-05-19](https://finance.yahoo.com/quote/PRA/key-statistics); peer 10-K filings (SEC EDGAR) for fiscal-year figures. Cite only providers actually accessed.
 ```
 
 **Source column is MANDATORY.** Carry it through to the DOCX table in Task 5. Replace the placeholder dates above with the actual access date when running the task.
@@ -464,8 +466,8 @@ Why the Street is wrong: [1-2 sentences naming the specific driver consensus
 under-models — e.g. "consensus underestimates MRDIMM penetration / overseas
 order intake / margin from the 2027 capacity ramp."]
 
-Source (consensus): [FactSet consensus, 2026-05-19](https://...) (subscription required)
-                    OR [Yahoo Finance analyst estimates](https://finance.yahoo.com/quote/TICKER/analysis), 2026-05-19
+Source (consensus): [Yahoo Finance analyst estimates](https://finance.yahoo.com/quote/TICKER/analysis), 2026-05-19
+                    (pro-terminal consensus only if the user supplies it — never cite a provider you did not access)
 Our estimates = analyst model (label as estimate; NOT a citable source).
 ```
 
@@ -496,7 +498,7 @@ Q1 2023  Comp E       PE Firm        $3.2B    3.5x    13.5x      25%      Carve-
 
 Median                                        4.0x    15.8x      32%
 
-Source: CapitalIQ, company filings, press releases.
+Source: deal press releases, acquirer/target SEC filings (8-K / S-4 / proxy), dated news coverage — name each specific document. No CapitalIQ in this environment.
 ```
 
 #### B. Apply to Target Company

@@ -48,8 +48,8 @@ Local sell-side notes from `db/zsxq.db` are the project's first stop for the ana
 **Section 4 carries more weight than any other section.** It is the analytical foundation for Sections 5–9; if it is generic or fabricated, the rest of the report is hand-waving. A report that under-invests here cannot be recovered by polishing the other chapters. See SKILL.md § "The Products & Services chapter is the most important section of the report" for the full rationale and the precise + explanatory criteria.
 
 **Precision checks (must pass):**
-- The issuer's own product table is **embedded as a rendered PNG image** at the top of Section 4 (use `.claude/skills/company-research/scripts/render_10k_section.py`), with a 10-K citation in the caption.
-- The same table is also reproduced as a markdown table immediately below the image (for searchability and link targets).
+- The issuer's own product table is **reproduced verbatim as a markdown table** at the top of Section 4 with the 10-K citation directly above it (searchable, linkable). This is mandatory.
+- *Optionally*, the original rendered table is also embedded as a PNG (via `.claude/skills/company-research/scripts/render_10k_section.py`, caption citing the 10-K) when visual proof adds value — the PNG never substitutes for the markdown reproduction.
 - For each row in the matrix, the issuer's own product-family description is **block-quoted verbatim** from the 10-K / 年度报告 / Yuho with the inline citation directly above the quote.
 - Every product name spelled exactly as the issuer spells it, including ® / ™ marks and platform-name prefixes (`ALTUS®`, `Sense.i®`, not `Altus` / `Sense-i`).
 - Every technical specification (depth, speed, resistance, layer count, throughput) comes verbatim from the issuer's filing or press release, with a citation. No invented numbers.
@@ -67,6 +67,7 @@ Local sell-side notes from `db/zsxq.db` are the project's first stop for the ana
 - Per-product **competitive-advantage verdict** (yes / partial / no) plus moat type — under the `*Analyst view:*` label.
 - **Flagship 1–3 products** clearly distinguished from long-tail.
 - **Last-12-month launches / sunsets** noted, each cited to a real press release URL.
+- **延伸观看 / Further viewing slot present** — 1–3 explainer-video links in their own `**延伸观看 / Further viewing**` block (Section 4 default), each HTTP-checked 200 with a real-browser UA, none carrying a number or entering the citation chain — OR the verification log states why the report has nothing worth visualizing.
 - Section 4 word count is in the upper half of section ranges (≥1,000 words) — *if Section 6 is longer than Section 4, the priority is wrong*; cut Section 6 and expand Section 4.
 
 ## Company Overview — Valuation Snapshot
@@ -81,9 +82,11 @@ Local sell-side notes from `db/zsxq.db` are the project's first stop for the ana
 The decision layer that mirrors institutional sell-side notes — see SKILL.md § "Learning from sell-side institutional research" and `report_structure.md` § "Investment summary header" + § 1A. **Guardrail running through every check below: the rating, the price target, the scenario PTs, and every projected estimate are the analyst's own forward view — labeled `*Analyst view:*` / `*分析师观点：*` and NEVER attached to a filing citation.** Checks:
 
 - [ ] **Investment-summary header present** at the very top (above TOC / banner): rating, 12-month PT, current price, implied upside / downside %, one-line valuation method, market cap, 52-week range, ticker/exchange, 2–4 thesis pillars — the whole block labeled `*Analyst view:*`.
+- [ ] **Forward valuation matrix present in the header** — at minimum P/E across last-actual / FY1E / FY2E, plus the 2–3 multiples that fit the business (PEG / EV/EBITDA / EV/FCF / EV/Sales / P/B for capital-heavy names); forward columns `*Analyst view:*`, the last-actual column sourced.
+- [ ] **Relative-performance line present in the header** — 1M / 6M / YTD / 12M absolute return + the same windows for the benchmark + the relative (stock − benchmark), with the price source cited.
 - [ ] **A defined rating** on one stated scale (`Buy/Hold/Sell` or `OW/N/UW`), not a vague verdict. (Private / un-targetable names: header states `Rating / PT: not applicable — <reason>`.)
 - [ ] **Section 1 opens with an investment-thesis lead paragraph** (call + why-now + pillars) before the descriptive overview.
-- [ ] **Forward financial-estimates table spans ≥3 years** (revenue / gross margin / operating-or-net margin / EPS, with YoY) — each projected cell `*Analyst view:*`; each driver's basis cited inline (filing segment data + guidance + an industry forecast). No `(Source: our model)` / `(模型估算)`.
+- [ ] **Forward financial-estimates table spans ≥3 years** (revenue / gross margin / operating-or-net margin / EPS, with YoY, **plus an FCF (or FCF yield) row and a net cash/(debt) row — and for loss-making names a cash-runway line (quarters, at current burn)**) — each projected cell `*Analyst view:*`; each driver's basis cited inline (filing segment data + balance sheet / cash-flow statement + guidance + an industry forecast). No `(Source: our model)` / `(模型估算)`.
 - [ ] **The price target's derivation is shown** — forward-EPS × target-multiple, or DCF, or SOTP, or rNPV — with the arithmetic from estimate to PT, not just a number.
 - [ ] **The target multiple is justified against 3–5 named comps** (the J.P. Morgan 40x-vs-Howmet-37x move). A multiple with no comp justification fails.
 - [ ] **DCF WACC's risk-free rate is sourced to `indicators.db`** (the 10Y), with the as-of date stated; terminal growth ≤ risk-free rate.
@@ -170,12 +173,14 @@ Required before declaring done:
 - [ ] Every named executive is confirmed in an 8-K or DEF 14A. Grep the cited filing for the exact name.
 - [ ] Internal consistency: Section 1's competitive framing matches Section 7's; Section 2 timeline matches Section 1 prose; restructuring counts in narrative match the timeline numbers; product classifications (e.g. "Akara conductor vs dielectric etch") are consistent across the mermaid graph, Section 4 subsections, and Section 5 references.
 - [ ] At least five 10-K-cited financial numbers spot-checked against the actual 10-K (revenue, gross margin, customer concentration, geographic mix, segment %, restructuring headcount, R&D as % of revenue, cash returned).
-- [ ] A `<details>`-folded verification log appended after the References section, listing what was checked and any residual unknowns.
+- [ ] **Step 0.5 sec-report-summary disposition recorded** (US issuers): the verification log states `ran (output: reports/earnings/<TICKER>_<date>.md)` or `skipped (<reason>)` — never silently omitted.
+- [ ] **Link-title ↔ URL consistency checked**: every link whose title names a source (indicators.db, FRED, Yahoo, a broker, a filing) resolves to that source's domain — a 200-OK URL paired with the wrong title (e.g. `[indicators.db 快照](https://www.sec.gov/...)`) is a fail.
+- [ ] A `<details>`-folded verification log appended after the References section, listing what was checked and any residual unknowns — with the `<summary>` line as the exact English string `Verification log (Step 10) — YYYY-MM-DD` (even in Chinese reports; tooling greps for it).
 
 ## Success Criteria — checklist before declaring done
 
 1. Total word count is 6,000–10,000 (verify with `wc -w`). Don't pad to hit a number — if the content runs lean, ship it; if it runs long with real substance, that's fine.
-2. **4–8 Mermaid diagrams embedded** — Mermaid only, no matplotlib PNGs (disabled 2026-06-03 for memory; see SKILL.md § Step 8). Use ` ```mermaid ` fences with `xychart-beta` (trends, bars), `pie`, `timeline`, `graph TD`, `quadrantChart`. Each chart has a markdown-link citation directly beneath it. (Legacy PNGs from before 2026-06-03 may be reused in their original reports.)
+2. **4–8 Mermaid diagrams embedded** — Mermaid only, no matplotlib PNGs (disabled 2026-06-03 for memory; see SKILL.md § Step 8). Use ` ```mermaid ` fences with `xychart-beta` (trends, bars), `pie`, `timeline`, `graph TD`, `quadrantChart`. Each chart has a markdown-link citation directly beneath it. **No Mermaid chart mixes units (%, currency, count) on one y-axis** — `xychart-beta` has a single axis; split revenue and margin into two stacked charts (see SKILL.md § Step 8). (Legacy PNGs from before 2026-06-03 may be reused in their original reports.)
 3. **Guidance-change banner present at the top of the report when applicable.** If the latest earnings release / 业绩预告 / 8-K shows a raise, cut, color-bearing reaffirmation, or initiation of full-year guidance, the report opens with a `> **Update:**` blockquote (old vs. new range, disclosure date as a markdown-link citation, one-sentence driver). Omit entirely if no change.
 2. All 9 sections present with their target word counts.
 3. Substantive analysis, not just description.

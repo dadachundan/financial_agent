@@ -81,16 +81,22 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
 
 # ── Indicator catalog ────────────────────────────────────────────────────────
 # Headline 9 from GS Exhibit 3. `gs_2000` and `gs_2021` are the percentiles
-# GS publishes in the Kickstart (taken from the OCR of the 2026-06-05 issue —
-# kept as anchors for the calibration table even when the script can't fully
-# back-fill 30y history for that indicator).
+# GS publishes in the Kickstart (last verified visually against the 2026-06-05
+# issue, zsxq file_id 412458845521488, Exhibit 3 rendered at 300 dpi — kept as
+# anchors for the calibration table even when the script can't fully back-fill
+# 30y history for that indicator).
+# NOT authoritative: per SKILL.md Step 1.5, transcribe the actual Exhibit 3
+# from the zsxq copy of the latest Kickstart each run — if these values
+# disagree with the PDF, the PDF wins and this dict must be corrected in the
+# same commit. (Past failure: momentum/breadth 2021 anchors sat transposed
+# 76<->95 here and shipped into the 2026-06-07 report.)
 HEADLINE_INDICATORS = [
     {
         "id": "momentum_3m",
         "category": "Share prices",
         "label": "Momentum factor 3M return",
         "direction": "high",
-        "gs_2000": 100, "gs_2021": 76,
+        "gs_2000": 100, "gs_2021": 95,
         "source_url": "https://www.ishares.com/us/products/251614/ishares-msci-usa-momentum-factor-etf",
         "requires_websearch": False,
     },
@@ -99,7 +105,7 @@ HEADLINE_INDICATORS = [
         "category": "Share prices",
         "label": "S&P 500 52-week market breadth",
         "direction": "low",
-        "gs_2000": 100, "gs_2021": 95,
+        "gs_2000": 100, "gs_2021": 76,
         "source_url": "https://www.bespokepremium.com/think-big-blog/",
         "requires_websearch": True,
     },
@@ -109,7 +115,10 @@ HEADLINE_INDICATORS = [
         "label": "GS Speculative Trading Indicator",
         "direction": "high",
         "gs_2000": 100, "gs_2021": 99,
-        "source_url": "https://www.gspublishing.com/content/research/en/reports/2026/06/05/uskickstart.html",
+        # zsxq direct-download URL for the source Kickstart issue (SKILL.md Step 1.5).
+        # Update the file_id/name to the latest issue each run; never cite a guessed
+        # gspublishing.com deep URL — the pattern returns 403 even with a browser UA.
+        "source_url": "http://xs-macbook-air.local:5001/zsxq/pdf/412458845521488/Goldman%20Sachs-US%20Weekly%20Kickstart%EF%BC%9AEvaluating%20exuberance-260605.pdf",
         "requires_websearch": True,
     },
     {
@@ -162,7 +171,7 @@ HEADLINE_INDICATORS = [
         "category": "Corporate sentiment",
         "label": "Net US equity issuance (12m rolling, % of market cap)",
         "direction": "high",
-        "gs_2000": 100, "gs_2021": 99,
+        "gs_2000": 100, "gs_2021": 96,
         "source_url": "https://www.sifma.org/resources/research/us-equity-issuance-and-trading-volumes/",
         "requires_websearch": True,
     },
@@ -673,7 +682,7 @@ def build(as_of: str, *, quick: bool = False) -> dict:
         "id": "spec_trade",
         "query": "Goldman Sachs Speculative Trading Indicator current level 2026 Kickstart",
         "needed_fields": ["current_value", "exuberance_pct", "source_url", "source_date"],
-        "hint": "GS Exhibit 6 — proprietary index. Current GS chart shows ~175-200 vs ~250 peak in Feb 2021 and Mar 2000. Use the GS read to override the open-source proxy.",
+        "hint": "GS Exhibit 6 — proprietary index. Do NOT trust a hardcoded level: read the current level and prior peaks off the Speculative Trading Indicator exhibit in the zsxq copy of the latest Kickstart (SKILL.md Step 1.5). Use the GS read to override the open-source proxy.",
     })
 
     # 1d. Put/Call (Cboe Total via ^CPC, 21-day MA) — Yahoo delisted ^CPC; queue WebSearch.

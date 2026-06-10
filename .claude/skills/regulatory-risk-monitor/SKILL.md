@@ -140,7 +140,8 @@ Resolve the case by:
 - WebSearch for the last 90 days on `<ticker> + <regulator> + <topic>` and `<docket-number>` and `<case-caption>`.
 - Sell-side commentary (Bloomberg, Reuters, WSJ, FT) for market-reaction interpretation — cite the article with a date in the link title.
 - Industry-specific trade press (RAPS for pharma, Mlex for antitrust, Politico for policy) for non-mainstream-press updates.
-- **Local zsxq broker-report library (`db/zsxq.db`, read-only)** — a permitted secondary source for the *sell-side framing* of a regulatory file (the exposed-vs-insulated peer split, the valuation-cushion read, broker price targets on the affected name). Surface any rating / PT pulled from it as `*Analyst view:*` with a deep URL per the company-research labeling rule — **never blended into a filing citation**. Read via the read-only zsxq helper scripts; never write to or run destructive SQL against the DB.
+- **Local zsxq broker-report library (`db/zsxq.db`, read-only)** — a permitted secondary source for the *sell-side framing* of a regulatory file (the exposed-vs-insulated peer split, the valuation-cushion read, broker price targets on the affected name). Surface any rating / PT pulled from it as `*Analyst view:*` with a deep URL per the company-research labeling rule — **never blended into a filing citation**. Citation form: `[<broker> <title>, zsxq #<file_id> p.<N>](http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>#page=<N>)` — the direct-download `/zsxq/pdf/...` route only (paste `find_pdf.py`'s `pdf_url`); **never** the `/zsxq/pdf-viewer/<id>` HTML viewer (won't download on iPad) and **never** the dead `/zsxq-pdf/<id>` form. Read via the read-only zsxq helper scripts; never write to or run destructive SQL against the DB.
+  **Sell-side view evolution (卖方观点演变)** — when **≥2 zsxq notes** take a view on the same regulatory file: institutes often **disagree on outcome probability** — date each cited view (the filename's `-YYMMDD` suffix is the authoritative report date; sanity-check against `create_time`) and present disagreeing reads side-by-side with each institute's core argument, never blended into a fake consensus. Track **self-revisions as the case evolves**: a broker flipping from "manageable" to "structural risk" (or cutting its PT on the affected name) is itself a **tracked event for the Evidence Timeline** — record it dated, with old → new view and the stated trigger (docket entry, agency statement, hearing outcome). A 2026-03 read and a 2026-06 read from the same institute are two different views, not duplicates; each carries (institute, report date, the `/zsxq/pdf/<file_id>/<urlencoded-name>` link). Where PTs on the affected name are involved, pre-pass the stored calls read-only — `/opt/anaconda3/bin/python3` with `sqlite3.connect('file:db/stock_price_target.db?mode=ro', uri=True)`, `SELECT research_institute, rating, price_target, report_date, report_file_id ...` — to detect same-institute revisions before re-reading any PDF (writes stay exclusively via `scripts/persist_pts.py`).
 
 ### Quantitative: market reaction
 
@@ -283,10 +284,13 @@ When this report covers something a reader would struggle to picture from prose 
 
 ### Step 8 — Verify
 
-- Confirm every dated event has a working URL (HTTP 200).
-- Confirm every quantitative exposure figure traces to a primary source (10-K, regulator filing, etc.).
+- Confirm every dated event has a working URL (HTTP 200, real-browser User-Agent; retry slow .gov sites with a 30s timeout before declaring them dead).
+- Confirm every quantitative exposure figure traces to a primary source (10-K, regulator filing, etc.) — string-match the chain inputs (`curl -s <URL> | grep -F "<number>"`).
 - Spot-check ≥3 stock-reaction numbers vs yfinance.
+- **If ≥2 zsxq notes were cited on the file**: confirm every institute view is dated + file_id-cited, disagreeing outcome reads appear side-by-side (not blended), and any same-institute flip / PT revision is recorded as a dated Evidence-Timeline event (per *Sell-side view evolution (卖方观点演变)* under Secondary sources).
+- Append the folded verification log (mandatory block #10) to the report recording the URL checks, the exposure-chain string-matches, and the stock-reaction spot-checks.
 - Stop any test servers used during chart rendering.
+- Commit and push per the project's standard workflow (Conventional Commit, e.g. `feat(reports/regulatory): …`).
 
 ## Output Format (mandatory blocks)
 
@@ -301,6 +305,7 @@ Every report must contain:
 7. **Watch List** with dated events, each naming the **resolving data series / document**.
 8. **`## Data Used / 数据来源清单`** manifest.
 9. **`## Guardrails for this monitor`** block.
+10. **Folded verification log** — `<details><summary>Verification log — YYYY-MM-DD</summary>` appendix listing every timeline-URL HTTP check, the exposure-chain input string-matches, and the yfinance stock-reaction spot-checks from Step 8.
 
 ### Data Used / 数据来源清单 (mandatory)
 
@@ -339,7 +344,7 @@ Every report must contain:
 - **Do not source agency outcomes to news articles when the actual filing is public.** Cite the docket / press release / court order URL.
 - **Do not confuse different regulators in adjacent jurisdictions.** Each has its own docket, timeline, and remedies.
 - **Do not quantify exposure from sell-side memory.** Revenue / cost / valuation exposure must come from company disclosure, third-party research with a real URL, or be labelled an analyst-built scenario.
-- **Do not blend a sell-side rating / price target into a filing citation.** Surface ratings / PTs (incl. anything from the read-only `db/zsxq.db` library) as `*Analyst view:*` with a deep URL — an overlay on the disclosure, never a substitute for it.
+- **Do not blend a sell-side rating / price target into a filing citation.** Surface ratings / PTs (incl. anything from the read-only `db/zsxq.db` library) as `*Analyst view:*` with a deep URL — an overlay on the disclosure, never a substitute for it. zsxq PDFs cite via the direct-download `/zsxq/pdf/<file_id>/<filename>#page=<N>` route on `xs-macbook-air.local:5001` — never the `/zsxq/pdf-viewer/<id>` viewer route, never the dead `/zsxq-pdf/<id>` form.
 - **Do not quote a derived EPS / valuation number without showing its inputs.** The exposure cell must carry the `(affected revenue share) × (margin / drop-through)` chain with both inputs cited, so a reader re-derives the figure.
 - **Do not call a probability with single-point confidence.** Three-path scenarios with named triggers replace "this is 80% likely to settle".
 - **Do not skip the prior-disclosure check.** The 10-K Risk Factors language on this category is the company's own framing; quoting it verbatim grounds the analysis.
@@ -351,7 +356,7 @@ Save to `reports/regulatory/<TICKER>_<topic-slug>_<YYYY-MM-DD>.md` (and `..._zh.
 
 Supplementary deliverables:
 - Filings cache: `oneoff/regulatory_<TICKER>_<topic-slug>/`.
-- Charts (optional): `reports/charts/regulatory_<TICKER>_<topic-slug>_*.png` — typically a price reaction chart on key event dates.
+- Charts (optional): `reports/charts/regulatory_<TICKER>_<topic-slug>_*.png` — typically a price reaction chart on key event dates. Every PNG follows the project chart rules: render `Source: yfinance (<as-of>); <regulator docket / event-list URL>` **inside the image** as a footer annotation (`fig.text(0.12, 0.02, ...)`); mark key regulatory dates as labeled vlines matching the Evidence Timeline rows; clip the x-axis to the actual price-data range (no empty axis regions); confirm the rightmost data point is within a few days of today before saving.
 
 ### Update-in-place rule
 

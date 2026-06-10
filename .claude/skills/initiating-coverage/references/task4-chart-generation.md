@@ -42,6 +42,18 @@ Do not attempt to create placeholder charts or skip charts due to missing data.
 
 ---
 
+## In-image source footers (MANDATORY — project chart rule)
+
+Every chart renders its data source **inside the image** as a footer annotation (`fig.text(0.12, 0.02, ...)`), naming the actual primary source + as-of date for every series plotted. Charts get viewed in isolation (iframe, screenshot, paste into chat), so the source must travel with the image:
+
+- **Historical-data charts**: `Source: <TICKER> FY2024 10-K Item 8 segment note; yfinance 2026-06-10` — the real filing / data pull, dated.
+- **Mixed historical + projection charts**: `Source: <TICKER> FY2024 10-K (historicals); analyst projections (E)` — and label projected years/series with an `E` suffix (and/or a divider line) so historical and estimated segments are visually distinguishable.
+- **Pure model charts** (DCF sensitivity, scenarios, valuation football field): `Source: analyst projections (Financial Model); inputs cited in the workbook's Source column`.
+
+**The literal strings `Company data` and `[Firm] estimates` are BANNED in footers** — the skill's Citation Standards list "Company data" as a non-citation, and "the analyst's own model is not a source" applies to chart footers too. Name the document, not the desk. The code templates below show the correct pattern; substitute the real ticker / filing / date when running the task.
+
+---
+
 ## Input Verification
 
 **BEFORE STARTING - CHECK ALL PREREQUISITES:**
@@ -324,7 +336,7 @@ def create_revenue_by_product_chart():
             fontsize=9, color='gray', ha='left')
 
     # Source line
-    fig.text(0.12, 0.02, 'Source: Company data, [Firm] estimates',
+    fig.text(0.12, 0.02, 'Source: <TICKER> FY2024 10-K Item 8 segment note (historicals); analyst projections (E)',
              fontsize=9, style='italic', color='gray')
 
     # Save
@@ -382,7 +394,7 @@ def create_revenue_by_geography_chart():
     ax.spines['right'].set_visible(False)
 
     # Source line
-    fig.text(0.12, 0.02, 'Source: Company data, [Firm] estimates',
+    fig.text(0.12, 0.02, 'Source: <TICKER> FY2024 10-K Item 8 segment note (historicals); analyst projections (E)',
              fontsize=9, style='italic', color='gray')
 
     # Save
@@ -424,7 +436,7 @@ def create_dcf_sensitivity_heatmap():
     plt.yticks(rotation=0)
 
     # Source line
-    fig.text(0.12, 0.02, 'Source: [Firm] estimates',
+    fig.text(0.12, 0.02, 'Source: analyst projections (Financial Model); inputs cited in workbook Source column',
              fontsize=9, style='italic', color='gray')
 
     # Save
@@ -489,7 +501,7 @@ def create_valuation_football_field():
     ax.legend(loc='upper right', frameon=False, fontsize=9)
 
     # Source line
-    fig.text(0.12, 0.02, 'Source: [Firm] estimates',
+    fig.text(0.12, 0.02, 'Source: analyst projections (Financial Model); inputs cited in workbook Source column',
              fontsize=9, style='italic', color='gray')
 
     # Save

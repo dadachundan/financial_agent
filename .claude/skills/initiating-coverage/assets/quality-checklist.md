@@ -5,29 +5,28 @@ Before delivering an initiation report, verify all items below are complete.
 ## Critical Minimums - Reports Must Meet These
 
 **CRITICAL DO NOT DELIVER IF:**
-- ❌ DOCX report fewer than 30 pages → INCOMPLETE
-- ❌ Fewer than 25 embedded charts → INCOMPLETE
+- ❌ Markdown report fewer than 10,000 words (`wc -w`) → INCOMPLETE
+- ❌ Fewer than 25 embedded chart references (`![](charts/…)`) → INCOMPLETE
 - ❌ Fewer than 12 comprehensive tables → INCOMPLETE
-- ❌ Fewer than 10,000 words → INCOMPLETE
 - ❌ No XLS financial model → MISSING DELIVERABLE
-- ❌ Charts are text descriptions, not actual PNG/JPG files → MAJOR FAILURE
+- ❌ Charts are text descriptions, not actual PNG/JPG files referenced from the .md → MAJOR FAILURE
+- ❌ Fewer than 150 inline markdown links in the body (see SKILL.md FAIL 2) → INCOMPLETE
 
 ## Deliverables Checklist
 
-- [ ] DOCX report file created
+- [ ] Markdown report file created at the slug root: `reports/company/<Slug>/[Company]_Initiation_Report_[Date].md`
 - [ ] XLS financial model file created
-- [ ] Both files named properly: `[Company]_Initiation_Report_[Date].docx` and `[Company]_Financial_Model_[Date].xlsx`
+- [ ] Both files named properly: `[Company]_Initiation_Report_[Date].md` and `[Company]_Financial_Model_[Date].xlsx`
 
-## DOCX Report - Length & Content
+## Markdown Report - Length & Content
 
 **Length Verification:**
-- [ ] Report is 30-50 pages (count pages in final document)
-- [ ] Word count is 10,000-15,000 words
-- [ ] If under 30 pages: STOP and add more content
+- [ ] Word count is 10,000-15,000 words (`wc -w reports/company/<Slug>/<Slug>_Initiation_Report_<Date>.md`)
+- [ ] If under 10,000 words: STOP and add more content
 
 **Visual Elements:**
-- [ ] 25-35 charts embedded (count them: _____ charts)
-- [ ] All charts are actual PNG/JPG image files (NOT text descriptions)
+- [ ] 25-35 charts referenced via `![caption](charts/…)` (count them: _____ charts)
+- [ ] All charts are actual PNG/JPG image files on disk in `charts/` (NOT text descriptions)
 - [ ] 12-20 comprehensive tables included (count them: _____ tables)
 - [ ] Charts and tables interspersed throughout, not grouped at end
 
@@ -51,7 +50,7 @@ Before delivering an initiation report, verify all items below are complete.
 - [ ] Two sensitivity tables
 - [ ] 2-3 additional financial/competitive tables
 
-## DOCX Report - Structure
+## Markdown Report - Structure
 
 **Page 1 Requirements:**
 - [ ] "INITIATING COVERAGE" header present (NOT "Company Update")
@@ -77,22 +76,20 @@ Before delivering an initiation report, verify all items below are complete.
 - [ ] Scenario Analysis (1,500-2,000 words with Bull/Base/Bear parameters)
 - [ ] Appendices including Data Sources & References page
 
-## DOCX Report - Formatting
+## Markdown Report - Formatting
 
 **Figure & Table Formatting:**
-- [ ] Every figure has caption above: "Figure X - [Company] [Descriptive Title]"
-- [ ] Every figure has source line below: "Source: [Specific sources with dates]"
+- [ ] Every figure has a caption line: `*图 N: [title].*` / `*Figure N: [title].*`
+- [ ] Every figure has a hyperlinked source line below: `*Source: [label](url), [date]*` (per SKILL.md Citation Standards)
 - [ ] Sequential figure numbering (Figure 1, 2, 3... no gaps)
-- [ ] Every table has header row with shading
-- [ ] Every table has source line at bottom
+- [ ] Every table is a proper markdown table with a header row
+- [ ] Every table has a hyperlinked source line directly under it
 - [ ] All years use "A" for actual, "E" for estimate notation
 
 **Professional Formatting:**
-- [ ] Consistent fonts throughout (Calibri, Arial, or similar)
-- [ ] Headers and footers with page numbers
-- [ ] Dense layout: 60-80% page coverage, minimal white space
-- [ ] Every page has both text AND visuals (charts or tables)
-- [ ] Professional business report template used
+- [ ] Consistent heading hierarchy (`#` / `##` / `###`) throughout
+- [ ] Dense layout: text, charts, and tables interleaved — roughly one visual per 200-300 words
+- [ ] Renders cleanly in the Claude Reports viewer (relative `charts/` image paths resolve)
 
 ## Citations & Sources ⭐⭐⭐ CRITICAL
 
@@ -109,9 +106,9 @@ Before delivering an initiation report, verify all items below are complete.
 - [ ] Press releases hyperlinked to company IR page
 - [ ] Presentations hyperlinked to PDF URLs
 - [ ] Industry reports hyperlinked (if publicly available)
-- [ ] Subscription data (Bloomberg, FactSet) noted as "(subscription required)"
-- [ ] No raw URLs displayed anywhere - all formatted as hyperlinks
-- [ ] Test 3-5 sample hyperlinks to ensure they work (Ctrl+Click)
+- [ ] No data provider cited that was not actually accessed (no FactSet / Bloomberg / CapitalIQ citations in this environment — use dated Yahoo Finance / SEC filing links)
+- [ ] No raw URLs displayed anywhere - all formatted as `[label](url)` markdown links
+- [ ] HTTP-check sample hyperlinks (200 OK with a real-browser User-Agent, per the project link-validation rule)
 
 **Reference Page:**
 - [ ] "Data Sources & References" page at end of report
@@ -161,7 +158,7 @@ Before delivering an initiation report, verify all items below are complete.
 
 ## Cross-File Consistency
 
-**CRITICAL**: Numbers must match EXACTLY between DOCX and XLS
+**CRITICAL**: Numbers must match EXACTLY between the .md report and XLS model
 
 - [ ] Revenue numbers match across both files
 - [ ] EPS numbers match across both files
@@ -170,7 +167,7 @@ Before delivering an initiation report, verify all items below are complete.
 - [ ] Price target matches across both files
 - [ ] All projected years match across both files
 
-**Verification Method**: Spot check 10-15 key numbers between DOCX report and XLS model.
+**Verification Method**: Spot check 10-15 key numbers between the .md report and XLS model.
 
 ## Content Quality
 
@@ -223,14 +220,14 @@ Before delivering an initiation report, verify all items below are complete.
 
 Run through this quick final review:
 
-1. **Deliverables**: Both DOCX and XLS files created ✓
-2. **Length**: DOCX is 30-50 pages ✓
-3. **Charts**: 25-35 actual PNG/JPG files embedded ✓
+1. **Deliverables**: Both .md report and XLS model created ✓
+2. **Length**: 10,000-15,000 words (`wc -w`) ✓
+3. **Charts**: 25-35 actual PNG/JPG files referenced via `![](charts/…)` ✓
 4. **Tables**: 12-20 comprehensive tables included ✓
-5. **Words**: 10,000-15,000 words ✓
-6. **Hyperlinks**: Test 3-5 hyperlinks - all work ✓
-7. **Cross-check**: Spot check 10 numbers match between DOCX and XLS ✓
-8. **Page 1**: "INITIATING COVERAGE" header present ✓
+5. **Links**: ≥150 inline markdown links in the body; sample HTTP-checked ✓
+6. **Cross-check**: Spot check 10 numbers match between .md and XLS ✓
+7. **Page 1**: "INITIATING COVERAGE" header present ✓
+8. **Verification log**: `<details>`-folded log appended after Sources & References ✓
 
 If ANY item fails, DO NOT DELIVER. Go back and fix.
 
@@ -238,11 +235,11 @@ If ANY item fails, DO NOT DELIVER. Go back and fix.
 
 **Before delivery, fill in actual counts:**
 
-DOCX Report:
-- Page count: _____ pages (MUST BE 30-50)
-- Chart count: _____ charts (MUST BE 25-35)
+Markdown Report:
+- Word count: _____ words (MUST BE 10,000-15,000 — `wc -w`)
+- Chart count: _____ `![](charts/…)` references (MUST BE 25-35)
 - Table count: _____ tables (MUST BE 12-20)
-- Word count: _____ words (MUST BE 10,000-15,000)
+- Inline body links: _____ (MUST BE ≥150)
 
 XLS Model:
 - Tab count: _____ tabs (SHOULD BE 15+)

@@ -23,8 +23,12 @@ import urllib.parse
 import urllib.error
 
 PROJECT_ROOT = Path("/Users/x/projects/financial_agent")
-DB_PATH      = PROJECT_ROOT / "db" / "financial_reports.db"
-API_BASE     = "http://localhost:5001/sec"
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+from db_paths import db_path  # noqa: E402  (honors FINAGENT_DB_DIR redirection)
+
+DB_PATH      = db_path("financial_reports.db")
+API_BASE     = "http://localhost:5001/sec"  # internal machine-local probe (NOT a user-facing URL)
 
 
 def _from_api(ticker: str, form: str | None, per_page: int = 200) -> list[dict] | None:

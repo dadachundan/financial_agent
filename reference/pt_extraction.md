@@ -1,11 +1,19 @@
 # PT Extraction — Shared Reference
 
-Both `/zsxq-recommend` (light: summary-only) and `/zsxq-analyze` (deep:
-full PDF text + optional OCR + page rendering) extract sell-side
-price-target calls and persist them into `db/stock_price_target.db`
-(surfaced via the `/pt` web viewer). This document is the **one shared
-rule book** the two skills follow so the persisted rows have identical
-shape and quality regardless of which path produced them.
+`/zsxq-recommend` (light: summary-only), `/zsxq-analyze` (deep:
+full PDF text + optional OCR + page rendering), and `/zsxq-ideas`
+(orchestrated extraction agents, aggregated once per run) extract
+sell-side price-target calls and persist them into
+`db/stock_price_target.db` (surfaced via the `/pt` web viewer). This
+document is the **one shared rule book** every persisting skill follows
+so the rows have identical shape and quality regardless of which path
+produced them. The same table is also the **read-only pre-pass** behind
+the project-wide "Sell-side view evolution (卖方观点演变)" convention:
+any zsxq-using skill SELECTs prior rows per ticker (columns
+`research_institute`, `rating`, `price_target`, `report_date`,
+`report_file_id`) to detect same-institute revisions and cross-institute
+PT dispersion before re-reading PDFs — writes remain exclusively via
+`scripts/persist_pts.py`.
 
 The downstream pipe is the same: a JSON array piped to
 [`scripts/persist_pts.py`](../scripts/persist_pts.py), which fills in

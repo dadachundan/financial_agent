@@ -113,16 +113,20 @@ This phase requires **zero PDF reads**. Cost = 0 agents.
 
 Auto-select the **top 2 themes by density** (most PDFs in the window).
 For each, pick the **top 3 PDFs** by `claude_rating` × bank quality ×
-recency. Total fan-out: up to 6 parallel `/zsxq-analyze` agents.
+recency. Total fan-out: up to 6 `/zsxq-analyze` extraction agents,
+batched per the F5 memory gate.
 
 If the user gave a direction hint ("long only", "no macro"), filter
 themes accordingly before picking.
 
 ### F5. Parallel per-PDF extraction (lite)
 
-Spawn one Agent per file_id in a **single message**, all in parallel,
-each with the [extraction-agent prompt](#extraction-agent-prompt)
-below.
+Spawn one Agent per file_id with the [extraction-agent prompt](#extraction-agent-prompt)
+below, subject to the same memory gate as
+[T3](#t3-parallel-per-pdf-extraction-full): watcher running before any
+≥2-wide fan-out, **≤4 concurrent** (6 file_ids = a batch of 4 then a
+batch of 2), one-at-a-time fallback when `/tmp/mem-watch.log` shows
+free RAM <25%.
 
 ### F6. Compact cross-theme shortlist
 
@@ -134,8 +138,18 @@ with:
 - 2 bullets of evidence (cited to file_ids)
 - 1 risk bullet
 
+If two cited PDFs disagree on the same name (opposite ratings, PTs >20%
+apart), say so in the evidence bullets — never blend into a fake
+consensus. The full [T4b](#t4b-sell-side-view-evolution-卖方观点演变--mandatory-when-2-pdfs-cover-a-name)
+treatment applies when the user picks the themed deep dive.
+
 Skip the full idea-generation Step 4 table — fishing mode is for
-triage, not for committing to a shortlist.
+triage, not for committing to a shortlist. (Fishing also omits
+**Further viewing** by design.) Lite verify before presenting:
+string-match 2-3 of the quoted numbers against
+`extract_pdf.py --file-id <fid>` output and confirm links use the
+`/zsxq/pdf/<file_id>/<name>#page=N` route — no appended log needed for
+an in-chat shortlist.
 
 ### F7. Offer the deep dive
 
@@ -187,15 +201,62 @@ with weak picks just to fill a quota.
 
 ### T3. Parallel per-PDF extraction (full)
 
-**SINGLE message, multiple Agent tool calls in parallel.** One agent
-per file_id. Use the [extraction-agent prompt](#extraction-agent-prompt)
-below. Cap at 12 concurrent (the project's parallel agent limit is
-already enforced by the orchestrator; just don't fan out more than 12
-in one message).
+One agent per file_id, using the [extraction-agent prompt](#extraction-agent-prompt)
+below — fanned out in **memory-watcher-gated batches** (this is a 16 GB
+machine; [CLAUDE.md § Workflow Memory Monitoring](../../../CLAUDE.md#workflow-memory-monitoring-mandatory-for-heavy-multi-agent-fan-outs)):
+
+- **Before any ≥2-wide fan-out:** `pgrep -lf 'mem-watch-16gb.sh'` — if
+  the watcher isn't running, start it first (recreate from CLAUDE.md if
+  the script is missing).
+- **Cap at 4 concurrent extraction agents** per message. They're
+  lightweight single-PDF reads, not full report builds, but they still
+  share RAM — 8-12 file_ids = 2-3 batches of ≤4, launching the next
+  batch only after the prior returns.
+- **Fall back to one-at-a-time sequential** if `tail -3
+  /tmp/mem-watch.log` shows free RAM <25% (`warn` or worse).
 
 ### T4. Aggregate by ticker
 
 Run the in-context [aggregation](#aggregation) procedure.
+
+### T4b. Sell-side view evolution (卖方观点演变) — mandatory when ≥2 PDFs cover a name
+
+Whenever **≥2 zsxq PDFs cover the same ticker / question**, run a
+mechanical PT pre-pass *before* building the T5/T6 tables — it surfaces
+same-institute revisions and PT dispersion without re-reading any PDF.
+STRICTLY read-only (writes stay with `scripts/persist_pts.py`,
+[Aggregation](#aggregation) step 6):
+
+```bash
+/opt/anaconda3/bin/python3 -c "
+import sqlite3
+con = sqlite3.connect('file:db/stock_price_target.db?mode=ro', uri=True)
+for r in con.execute('''SELECT research_institute, rating, price_target,
+    target_currency, report_date, report_file_id, upside_pct
+    FROM price_targets WHERE company_ticker=?
+    ORDER BY research_institute, report_date''', ('<TICKER>',)): print(r)"
+```
+
+Fold the result into the note:
+
+- **Revision arrows in the PT cells** (T5 metric table + T6 comp table):
+  when the same institute has ≥2 dated calls, render the evolution, not
+  just the latest — e.g. `UBS: Buy $120 (26-03) → $150 (26-06, post-Q1
+  beat)` — each leg keeping its own `zsxq #fid` cite and the stated
+  trigger (earnings print, policy change, channel checks). The filename
+  `-YYMMDD` suffix is the authoritative report date (see the
+  [citation convention](#zsxq-citation-convention)); a 2026-03 PT and a
+  2026-06 PT from the same institute are two different views, never
+  dedup'd into one.
+- **Disagreement row, never a fake consensus.** When institutes disagree
+  (opposite ratings, PTs >20% apart, conflicting reads of the same
+  datapoint), do NOT blend them — add a compact disagreement table under
+  the affected idea block —
+  `| Institute | Date | Rating / PT | Core argument | What evidence would prove them right |`
+  — and say in the thesis bullets that the idea's conviction rests on a
+  contested call (which side the bull/bear case takes, and why).
+- When ≥3 institutes have live PTs on a name, quote the dispersion
+  (min / median / max, spread %) next to its T6 comp row.
 
 ### T5. idea-generation Step 4 presentation
 
@@ -235,6 +296,29 @@ For multiples (Market cap / EV/EBITDA / P/E / etc.) — look them up
 quickly via yfinance if not in any of the cited PDFs. Otherwise mark
 "n/a — not in cited PDFs" rather than fabricating.
 
+Provenance is mandatory even inside tables — an uncited, undated
+market-data number violates the project Numerical Accuracy rule:
+
+- Put a one-line footer immediately under the shortlist heading:
+  `*Market data: yfinance, as of YYYY-MM-DD · PTs/estimates: cited zsxq
+  PDFs (file_id-linked) · n/a = in neither source*`
+- PT / estimate rows inside the metric table carry the same
+  `zsxq #<fid>` mini-cite used in thesis bullets.
+- When a cited PDF publishes scenario PTs (bull / base / bear), include
+  the triplet in the per-idea table — don't relegate the downside case
+  to a risk bullet.
+
+### T5b. Overview chart (optional, recommended)
+
+Render ONE chart for the whole shortlist — normalized 6-month relative
+performance of the top 5-8 tickers vs a relevant benchmark (yfinance) —
+saved to `reports/charts/zsxq_<slug>_<date>_perf.png` and embedded near
+the top of the note. Subject to the global chart rules in
+[CLAUDE.md](../../../CLAUDE.md#chart-generation-rules-mandatory-every-chart-producing-skill):
+in-image source footer with as-of date, x-axis clipped to the
+intersection of valid data, rightmost point fresh. Skip when more than
+half the shortlist lacks clean yfinance tickers.
+
 ### Further viewing — explainer videos (optional, but default to including)
 
 When an idea's thesis rests on something a reader would struggle to picture from prose alone — the technology underlying an idea: the thing that makes the thesis work but is hard to picture (a humanoid robot's actuators / harmonic reducers / ball-screws / force sensors, an advanced-packaging or lithography step, an HBM stacking process, a complex product architecture, an unfamiliar business model, or a market-structure concept) — attach **1–3 short explainer videos** (YouTube and/or Bilibili) so the reader can *see* it, not just read about it. Default to including them on any topic; omit only when the idea is purely numeric with nothing worth visualizing.
@@ -258,6 +342,16 @@ Path: `reports/ideas/zsxq_<theme-slug>_<YYYY-MM-DD>.md`
   - List of file_ids that fed the shortlist (so the user can re-run
     `/zsxq-analyze` on any of them)
 - Then the shortlist (Step-4 blocks).
+- Then a **PT & valuation comp** table for the whole shortlist — the
+  cross-ticker view the per-idea tables can't give (modeled on
+  theme-research's Valuation snapshot; this is the most-used exhibit in
+  any sell-side sector piece). Columns:
+
+  `| Ticker | Rating(s) | Broker PT(s) (each with zsxq #fid) | Px @ note
+  date (from the PDF) | Current px (yfinance, dated) | Upside % vs note
+  px | Fwd P/E | FY1/FY2 EPS (where the PDF states them) |`
+
+  Mark `n/a` where a cell is in neither a cited PDF nor yfinance.
 - Then a final "Sources" section listing all cited file_ids with
   `name`, `bank`, `create_time`.
 
@@ -265,6 +359,27 @@ The viewer at `http://xs-macbook-air.local:5001/claude-reports/` will surface
 this under its idea-generation bucket automatically (if `reports/ideas/`
 isn't yet a known bucket, the file still renders — flag it for a
 viewer update separately).
+
+### T7. Verify & log
+
+Before the note ships:
+
+1. Randomly pick 3–5 cited numbers and string-match each against the
+   extracted original text:
+   `python3 .claude/skills/zsxq-analyze/scripts/extract_pdf.py --file-id
+   <fid> | grep -F "<number>"`.
+2. Confirm every PT in the comp / metric tables literally appears in
+   its cited PDF.
+3. Confirm all zsxq links use the
+   `/zsxq/pdf/<file_id>/<name>#page=N` route.
+4. **View-evolution check (conditional — only when ≥2 PDFs covered the
+   same name):** confirm the [T4b](#t4b-sell-side-view-evolution-卖方观点演变--mandatory-when-2-pdfs-cover-a-name)
+   treatment landed — same-institute revisions arrow'd with dates,
+   contested calls in a disagreement table, no blended PT anywhere.
+5. Append `<details><summary>Verification log — YYYY-MM-DD</summary>`
+   to the report, listing each check as ✓ / ✗-fixed.
+
+Cheap to run — the extraction agents already returned page+quote pairs.
 
 ## Theme-build workflow
 
@@ -354,15 +469,27 @@ python3 .claude/skills/zsxq-analyze/scripts/extract_pdf.py \
 
 ### TB3. Build / refresh the basket via theme-research
 
-**Multi-theme parallel** (`build all 7`, `refresh 5 themes`): spawn one Agent
-per theme in a single message — per the
-[parallel-multi-report feedback](../../../.claude/projects/-Users-x-projects-financial-agent/memory/feedback_parallel_multi_report.md).
+**Multi-theme** (`build all 7`, `refresh 5 themes`): each theme agent runs
+a full [[theme-research]] build — a *heavy report skill* — so on this 16 GB
+machine run them **strictly sequential, concurrency 1**: one Agent-tool
+subagent at a time, launching the next only after the prior returns, with
+the memory watcher running (`pgrep -lf 'mem-watch-16gb.sh'`), per
+[CLAUDE.md § Workflow Memory Monitoring](../../../CLAUDE.md#workflow-memory-monitoring-mandatory-for-heavy-multi-agent-fan-outs).
+**Never spawn multiple theme agents in one message.**
 Each agent runs the [[theme-research]] create-or-refresh workflow on its
 slug and is handed: (a) the theme slug + confirmed ticker scope, (b) the
 extraction-manifest path from TB2, (c) the instruction to `extract_pdf`
 **every** report it cites (not just flagships) and read the original text —
-OCR'd first where the manifest says so, summary fallback-only, and (d) the
-[zsxq citation convention](#zsxq-citation-convention) below.
+OCR'd first where the manifest says so, summary fallback-only, (d) the
+[zsxq citation convention](#zsxq-citation-convention) below, (e) the
+**Further viewing** explainer-video convention (same rules as the
+Themed-workflow section above: durable channels only, browser-UA
+200-check, teaching aid never a citation — `theme-research` requires the
+block or an explicit omission notice and its Step 7 checks for it), and
+(f) the instruction to persist its PT calls via
+`scripts/persist_pts.py --replace` (see [Aggregation](#aggregation) step 6)
+and report the upserts in the basket's **What's New** block (e.g. "11 PTs
+upserted to `/pt`").
 
 **Single-theme (the user is doing them "1 by 1")**: do the edits **directly**
 in the main loop instead of delegating to an agent. The agent round-trip
@@ -441,6 +568,16 @@ content* to the source `file_id`, never the report title alone:
   the extracted text before citing it. No extrapolation. Numerical Accuracy rule.
 - **Preserve original-language report titles** in the link text (年度报告,
   有価証券報告書, 创新黎明 2.0) per the project citation standard.
+- **Bank publication date — the filename's `-YYMMDD` suffix is
+  authoritative.** Derive the pub date from the suffix; sanity-check that
+  the db `create_time` falls within suffix +0–3 days (the normal scan
+  lag). If the two disagree by >7 days, or the derived pub date postdates
+  the report's own date, do NOT silently print either — annotate the
+  source row inline (e.g. `(date fields conflict: filename 2026-06-05 vs
+  feed 2026-05-06)`) and prefer the filename suffix. A pub date after the
+  scan date is impossible; an unflagged anachronism shipped once
+  (Bernstein `-260605` printed as 2026-05-06 in a report dated
+  2026-05-31).
 
 ## Extraction-agent prompt
 
@@ -470,6 +607,12 @@ explanation) matching this shape:
     {"metric": "what it measures", "value": "the number with units",
      "page": 12, "quote": "verbatim original-language source text containing the number"}
   ],
+  "pt_calls": [
+    {"ticker": "MU", "company_name": "Micron", "broker": "UBS",
+     "rating": "Buy", "pt": 1625, "ccy": "USD",
+     "catalyst": "optional 1-line driver", "file_id": <N>,
+     "page": 1, "quote": "verbatim rating/PT text from the PDF"}
+  ],
   "catalysts": ["2-3 catalysts the PDF flags"],
   "risks": ["2-3 risks the PDF flags"],
   "theme_fit": "1 sentence on how this PDF fits the requested theme"
@@ -482,6 +625,15 @@ the 翻译精华 summary's paraphrase. String-match the quote to the extracted
 text. Downstream this becomes the page-anchored citation + source quote per
 the [zsxq citation convention](#zsxq-citation-convention).
 
+`pt_calls` is one record per (ticker × broker) EXPLICIT rating/PT call —
+page-1 rating boxes, ratings tables, "目标价Z元" phrasings with a number.
+Field names match scripts/persist_pts.py's record shape (ticker in
+yfinance form, `pt` numeric, `ccy` required when `pt` is set); `page` and
+`quote` ride along for citations and are ignored by the helper. Do NOT
+run persist_pts.py yourself — the orchestrator persists the union once
+after aggregation (SQLite write contention). Empty array if the PDF has
+no explicit broker calls.
+
 Tickers must use the same convention as the row's `tickers` column
 when present (e.g. AAPL, NVDA, SZSE:002050, HKEX:1211). If the PDF
 names a company without a ticker, include it as the company name
@@ -490,8 +642,8 @@ single-stock ideas, return an empty tickers array and put the macro
 view in theme_fit.
 ```
 
-Subagent_type: `general-purpose`. Each agent runs ~30-60s; 8-12 in
-parallel = 1-2 min wall-clock.
+Subagent_type: `general-purpose`. Each agent runs ~30-60s; 8-12
+file_ids in watcher-gated batches of ≤4 = 2-4 min wall-clock.
 
 ## Aggregation
 
@@ -512,17 +664,37 @@ In-context, after all extraction agents return:
 4. **Sort by score, keep top 5-10.**
 5. **Drop tickers that only appear once AND have no `claude_rating`
    on the source PDF** — that's signal-too-weak.
+6. **Persist PT calls (all modes — mandatory).** Concatenate every
+   agent's `pt_calls` into ONE JSON array and pipe it once, from the
+   orchestrator — never from the parallel extraction agents (SQLite
+   write contention) and never raw SQL (Tier-2 helper only, per
+   [CLAUDE.md DB safety](../../../CLAUDE.md#database-safety-mandatory--non-negotiable-zero-exceptions)):
 
-This is small JSON (8-12 PDFs × a few KB each = ~50 KB) — do it
+   ```bash
+   /opt/anaconda3/bin/python3 scripts/persist_pts.py --replace <<'JSON'
+   [ ...union of all pt_calls... ]
+   JSON
+   ```
+
+   `--replace` because these are deep-read extractions — the same
+   precedence `/zsxq-analyze` uses (they overwrite any summary-only row
+   from `/zsxq-recommend`). Schema / vocabulary / skip rules:
+   [`reference/pt_extraction.md`](../../../reference/pt_extraction.md).
+   Surface the script's stdout counts in the note/shortlist, e.g.
+   `📈 PT inserts: 9 new (2 replaced), 160 total in /pt`.
+
+Steps 1–5 are small JSON (8-12 PDFs × a few KB each = ~50 KB) — do them
 in-context, no script needed.
 
 ## Notes & guardrails
 
-- **Parallelism is mandatory.** Per-PDF extraction must fan out in a
-  SINGLE message with multiple Agent tool calls. Serializing 10 PDFs
-  is a 10-minute job vs 1-minute parallel. The project's [parallel-
-  multi-report feedback](../../../.claude/projects/-Users-x-projects-financial-agent/memory/feedback_parallel_multi_report.md)
-  applies here directly.
+- **Parallelism is memory-gated, not mandatory.** Per-PDF extraction
+  fans out in batches of ≤4 Agent calls with the memory watcher running
+  (T3/F5); theme-build's theme-research agents run strictly sequential
+  at concurrency 1 (TB3).
+  [CLAUDE.md § Workflow Memory Monitoring](../../../CLAUDE.md#workflow-memory-monitoring-mandatory-for-heavy-multi-agent-fan-outs)
+  (16 GB machine) overrides the older parallel-multi-report feedback:
+  **never launch a ≥2-wide fan-out without `mem-watch-16gb.sh` running.**
 - **The shortlist is idea sourcing, not a buy recommendation.** Every
   top name should suggest `/company-research <ticker>` as the next
   step. Do not call this output a "BUY rating" or "thesis confirmed".

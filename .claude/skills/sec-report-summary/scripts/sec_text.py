@@ -10,9 +10,9 @@ and do our own **assembly**. The reasons for not calling
 ``extract_html_text`` directly:
 
 1. It caps every section at 12,000 chars (``_MAX_SECTION``). That's the
-   right tradeoff for graphiti's token budget but too small for a
-   multi-year summary where the *changes* in Item 1A / MD&A across
-   filings are the whole story.
+   right tradeoff for the shared extractor's original token budget but
+   too small for a multi-year summary where the *changes* in Item 1A /
+   MD&A across filings are the whole story.
 2. Its 10-K assembly extracts only Item 1 (Business) + Item 1A (Risk
    Factors) — it skips **Item 7 (MD&A)**, which is exactly where
    management explains revenue mix, segment shifts, and capital
@@ -59,7 +59,7 @@ def _slice(full: str, start: int, end: int | None, cap: int) -> str:
     return chunk
 
 
-# Use graphiti's offset helpers — both accept ``full_text`` and filter out
+# Use ingest.sec_extract's offset helpers — both accept ``full_text`` and filter out
 # matches that aren't at the start of a line, so cross-references like
 # "see Part I, Item 2, MD&A" buried inside paragraphs don't get picked up
 # as section anchors.
@@ -74,7 +74,7 @@ def _first_after(offs: dict, name: str, after: int, full: str) -> int | None:
 def _extract_10k(full: str, cap: int) -> list[str]:
     """10-K: Item 1 (Business) + Item 1A (Risk Factors) + Item 7 (MD&A).
 
-    The MD&A — which graphiti's extractor skips — is where revenue mix,
+    The MD&A — which ingest.sec_extract's default assembly skips — is where revenue mix,
     segment shifts, and capital-allocation discussion live.
     """
     offs = _sec_offsets(full, _10K_PATTERNS)

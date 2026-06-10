@@ -30,8 +30,16 @@ import sqlite3
 import sys
 from pathlib import Path
 
-PROJECT_ROOT = Path("/Users/x/projects/financial_agent")
-DB_PATH      = PROJECT_ROOT / "db" / "zsxq.db"
+# Walk up to the project root (the dir containing db_paths.py) and import it,
+# so FINAGENT_DB_DIR redirection reaches this script (CLAUDE.md DB-safety rule).
+_here = Path(__file__).resolve()
+for _anc in _here.parents:
+    if (_anc / "db_paths.py").exists():
+        sys.path.insert(0, str(_anc))
+        break
+from db_paths import db_path  # noqa: E402
+
+DB_PATH = db_path("zsxq.db")
 
 COLUMNS = [
     "file_id", "name", "topic_title", "summary",

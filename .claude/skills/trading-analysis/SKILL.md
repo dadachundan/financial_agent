@@ -12,16 +12,22 @@ Run the complete TradingAgents pipeline: collect three analyst reports in parall
 ## Inputs
 
 - `<ticker>` — e.g. `NVDA`, `BTC-USD`.
-- `<trade_date>` — `YYYY-MM-DD`, the as-of date for the analysis.
+- `<trade_date>` — `YYYY-MM-DD`, the as-of date for the analysis. If `<trade_date>` is not a trading day, resolve the reference session to the last completed close and state both dates in every stage header (`Trade date 2026-05-23 (Sat) · reference close 2026-05-22`); pass the resolved reference date to all stages so they share one anchor price/date instead of each improvising its own.
 - `--asset-type` — `stock` (default) or `crypto`.
 - `--depth` — research depth controlling debate rounds. `1` = 1 round bull-bear + 1 round risk; `2` = 2 + 1; `3` = 3 + 2. Default `2`.
 - `--analysts` — comma-separated subset of `sentiment,news,company-research` to run. Default = all three.
 
 ## Pipeline
 
-### Step 1 — Analyst reports (in parallel)
+### Step 1 — Analyst reports (memory-safe scheduling)
 
-For each enabled analyst, spawn a subagent in parallel using the Agent tool with the matching skill prompt. Pass `<ticker>`, `<trade_date>`, and `<asset_type>` to each:
+For each enabled analyst, spawn an Agent-tool subagent with the matching skill prompt. Pass `<ticker>`, `<trade_date>`, and `<asset_type>` to each. **Scheduling MUST follow the CLAUDE.md 16 GB memory-watch rules:**
+
+- If the company-research cache (below) misses, run the [[company-research]] subagent **ALONE first** — it is the heavy 6,000–10,000-word skill and must never share a fan-out.
+- [[sentiment-analyst]] + [[news-analyst]] may run as a 2-wide pair ONLY if the memory watcher is running (`pgrep -lf mem-watch-16gb.sh` returns a PID) AND free RAM is >60% (`memory_pressure | grep -i 'free percentage'`); otherwise run them sequentially too.
+- Pre-flight for any 2-wide launch: start `/tmp/mem-watch-16gb.sh` first (script in CLAUDE.md); stop it (`pkill -f mem-watch-16gb.sh`) when Step 1 completes.
+
+The enabled analysts and their outputs:
 
 - [[sentiment-analyst]] → `sentiment_report`
 - [[news-analyst]] → `news_report`
@@ -99,12 +105,20 @@ Write the assembled markdown to `<company-folder>/trading/<TRADE-DATE>/full_repo
 
 The PortfolioDecision step has already persisted the final decision to `memory/trading_memory.md` as well.
 
+### Step 8 — Completion checklist (mandatory)
+
+A run that skips Step 7 or this checklist is an **incomplete task** — do not declare done until all three pass (a past AMD run shipped 7 stage files but no `full_report.md` because nothing verified completeness):
+
+1. `ls <company-folder>/trading/<TRADE-DATE>/` and confirm every enabled stage file **plus `full_report.md`** exists. If any is missing, re-run that stage before finishing.
+2. Confirm the memory log got the new entry: `python scripts/memory_log.py list` shows `[<TRADE-DATE> | <TICKER> | <Rating>] pending`.
+3. Stage, commit (Conventional Commit, e.g. `feat(trading): <TICKER> <TRADE-DATE> full pipeline — <Rating>`), and push to `main` — per the project-wide always-commit rule.
+
 ### Further viewing — explainer videos (delegated convention)
 
 This orchestrator mainly delegates; it does not author prose of its own. Each constituent report skill it chains (company-research, news-analyst, sentiment-analyst, bull-bear-debate, etc.) follows the shared **Further viewing — explainer videos** convention: where a section covers something hard to picture from prose alone (a robot's actuators / reducers / force sensors, a manufacturing or scientific process, a complex product architecture or market-structure concept), it embeds **1–3 short validated explainer videos** (YouTube / Bilibili) in their own slot — never as a citation, never carrying a number. No action is required here in the orchestrator; just preserve those video blocks verbatim when assembling `full_report.md` (do not strip or renumber them). See each sub-skill's SKILL.md for the full block.
 
 ## Notes
 
-- **Parallelism for step 1** — issue the three Agent calls in a single response (multiple tool_use blocks) so they execute concurrently. Sequential analyst execution wastes wall-clock time.
+- **Scheduling for step 1** — never issue a fan-out that includes [[company-research]]; run it alone first when its cache misses. sentiment + news may pair 2-wide only under the watcher + free-RAM conditions stated in Step 1; the default is sequential. A swapped-to-death 16 GB machine loses far more wall-clock time than sequential analysts ever do.
 - **Crypto specifics** — when `--asset-type crypto`, `company-research` will produce a thin/abbreviated report (the deep-dive structure assumes a corporate issuer); the downstream skills already handle this gracefully.
 - **Failure modes** — if a fetcher script returns an error string instead of data, the analyst skill surfaces it in its report. Continue the pipeline; do not abort.

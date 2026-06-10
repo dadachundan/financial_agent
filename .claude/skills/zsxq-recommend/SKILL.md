@@ -11,6 +11,20 @@ The user wants a curated pointer into the recent zsxq report feed —
 Do not extract or open PDFs. (If they want a deep dive on a specific
 report, the `zsxq-analyze` skill handles that.)
 
+## When to use vs the siblings
+
+- **`/zsxq-recommend`** (this) — reading-list triage from titles +
+  summaries; no PDF is opened.
+- **`/zsxq-ideas`** — "what should I buy" / "pitch me something" /
+  "scan my feed for ideas" → an idea *shortlist*.
+- **`/zsxq-expert`** — an in-depth question or comparison grounded in
+  the PDFs ("what do my reports say about X").
+- **`/zsxq-analyze`** — deep read of one named PDF (file_id / filename).
+
+**Interpreter:** run all project scripts with `/opt/anaconda3/bin/python3`
+(per `feedback_anaconda_python_db_scripts` — bare `python3` has failed
+read-only DB opens and lacks deps like `yfinance` in some shells).
+
 ## Workflow
 
 ### 1. Parse the request
@@ -80,6 +94,15 @@ inference economics", "robotics + autonomy", "energy & power",
 "China consumer slowdown", "geopolitics", …) with a one-line gist
 each. Then pick 2-3 standout reads under each theme.
 
+**Ranking rubric (after relevance filtering, all three modes).** Order
+picks by: (1) bank-quality tier — GS / MS / JPM / UBS / Bernstein /
+Nomura > other global > regional > unknown / `#代找`; (2) substance —
+`page_count` 12–80 is the sweet spot; down-rank 1–3-page flash notes
+unless the user asked for quick takes; (3) recency (`create_time`);
+(4) `claude_rating` / `user_rating` when populated. A 4-page
+regional-broker flyer must not outrank an 80-page GS deep-dive on
+topical match alone. Name the tier in each "why read this" line.
+
 ### 4. Persist any PT calls into `stock_price_target.db` (free side-effect)
 
 While reading the same summaries in step 3, the agent is already
@@ -133,6 +156,17 @@ Recommend-specific notes (the bits that don't live in the shared doc):
   `report_date_price` is null, write `report-date price n/a`. See
   [`reference/pt_extraction.md`](../../../reference/pt_extraction.md)
   § "Surfacing rule".
+- **Revision arrows & disagreement flags — the summary-level case of the
+  project's "Sell-side view evolution (卖方观点演变)" convention.** Before
+  composing the reply, SELECT prior rows for each PT'd ticker — STRICTLY
+  read-only: `sqlite3.connect('file:db/stock_price_target.db?mode=ro',
+  uri=True)`, table `price_targets`. If the same institute already has a
+  different PT on record for the name, annotate that PT line in step 6
+  with a revision arrow — `PT ↑ from 120 (2026-04)`. If the scanned feed
+  (or the live rows) carries contradictory calls on the same name —
+  opposite ratings, PTs >20% apart — flag the disagreement explicitly in
+  the read list (one line per side, each dated with its institute); never
+  average them into a fake consensus.
 - If the summary contains zero PT calls (pure macro, strategy notes,
   data dashboards), skip step 4 entirely — no harm, no pipe.
 
@@ -192,12 +226,17 @@ End the reply with two compact one-liners (only when non-empty):
    data: `<broker> <ticker> <rating>, TP <ccy><pt> vs <ccy><report_date_price>
    @ <report_date> → <±upside_pct>%`** — the report-date price is
    mandatory (surfacing rule); `report-date price n/a` if it's null.
+   Append the revision arrow when the step-4 read-only check found a
+   prior same-institute PT (`PT ↑ from 120 (2026-04)`).
 2. `🟡 <N> PT-mentioned tickers without a reports/company/ entry` —
    followed by the markdown table from step 5.
 
 ## Notes
 
 - DB is read-only here. Never write to `db/zsxq.db` from this skill.
+- `scripts/list_recent.py` resolves the DB via `db_paths.db_path()`
+  (honours `FINAGENT_DB_DIR`); any new script added under `scripts/`
+  must copy that pattern in the same commit (CLAUDE.md DB-safety rule).
 - Do **not** open the PDF files. Title + summary is the contract.
 - If `count == 0` (empty filter result), tell the user the filter and
   suggest relaxing it (drop the subject, widen `--since`).

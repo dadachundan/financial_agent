@@ -182,7 +182,8 @@ After SEARCHING FOR and confirming the latest quarter, collect the following:
   - From last earnings update or initiation report
   - Check what was estimated for this quarter's metrics
 
-- **Consensus estimates** - From Bloomberg, FactSet, Refinitiv, or Yahoo Finance
+- **Consensus estimates** - From the local zsxq broker library FIRST (preview/recap notes carry Street-by-segment, the whisper, and PT moves — see SKILL.md § "Consensus & sell-side sources in this project"), else Yahoo Finance analyst estimates or a named + dated press article that prints the figure
+  - NEVER cite "Bloomberg/FactSet consensus" — no terminal exists; every consensus number must trace to a reachable URL that contains it
   - CRITICAL: Use estimates from BEFORE earnings release
   - Look for "as of [date before earnings]" to ensure pre-announcement consensus
   - Needed for beat/miss analysis
@@ -399,6 +400,14 @@ Decide whether to change rating:
 
 Create charts focusing on QUARTERLY TRENDS and WHAT'S NEW.
 
+**Chart rules (mandatory — CLAUDE.md "Chart generation rules"):**
+1. **Save path**: matplotlib PNGs at `reports/charts/<TICKER>_earnings_<YYYY-MM-DD>_<slug>.png`, embedded in the markdown by relative path.
+2. **In-image source footer**: the data source is rendered INSIDE every image as a footer annotation (e.g. "Source: Q1 FY26 10-Q · Yahoo Finance") — a required parameter of the chart helper, not optional. The figure caption is a backup, not the mechanism.
+3. **No empty axis regions**: the x-axis spans only actual data; for multi-series charts clip to the INTERSECTION of all plotted series' valid ranges (`first = max(d.min())`, `last = min(d.max())`).
+4. **Freshness**: spot-check the rightmost data point's date against the report date before saving.
+5. **Derived charts plot their components**: P/E or EV/EBITDA bands, estimate-revision ratios, etc. must also show the source series (e.g. price + EPS line on a secondary axis), not the derived line alone.
+6. **Note-variant exception**: the fast "Note" variant may use mermaid `xychart` blocks instead of PNGs ONLY if a `Source: [name](URL)` line immediately follows each chart block (mermaid cannot carry an in-image footer).
+
 **REQUIRED CHARTS (8-12 total):**
 
 1. **Quarterly Revenue Progression** (Bar chart)
@@ -450,9 +459,9 @@ Create charts focusing on QUARTERLY TRENDS and WHAT'S NEW.
 
 ## Phase 4: Report Creation (2-3 hours)
 
-### Step 13: Create DOCX Report
+### Step 13: Write the Report (markdown default)
 
-Use DOCX skill to create 8-12 page report.
+Write the markdown report at `reports/earnings/<TICKER>_Q<N>FY<YY>_earnings_update_<YYYY-MM-DD>.md` (plus the `_zh.md` Chinese companion in the bilingual default). Use the DOCX skill ONLY if the user explicitly asked for a Word document — the markdown file is the canonical, committed copy either way.
 
 See [report-structure.md](report-structure.md) for complete page-by-page templates and formatting requirements.
 
@@ -474,7 +483,7 @@ If a full financial model exists for this company (from initiation), update it w
 - Revised estimates for future quarters
 - Updated valuation
 
-**Note**: For earnings updates, a full XLS file is OPTIONAL (not required like in initiation reports). The DOCX report is the primary deliverable.
+**Note**: For earnings updates, a full XLS file is OPTIONAL (not required like in initiation reports). The markdown report is the primary deliverable.
 
 If creating XLS, include:
 - Quarterly model tab
@@ -520,7 +529,7 @@ Before publishing, verify:
 - [ ] Key statistics have footnotes with specific page/slide references
 - [ ] Sources section lists all materials with URLs
 - [ ] ALL URLs are CLICKABLE HYPERLINKS (not plain text)
-- [ ] Hyperlinks tested and working (Ctrl+Click opens correct page)
+- [ ] **HTTP-check every URL before commit** with a Python one-liner (`urllib.request`, browser UA, timeout 15s; retry anti-bot 500s with a full Chrome UA string; retry gov-site timeouts at 30s). `200 OK` is the only pass. **A 200 URL that does not contain the claimed number is worse than a 404 — fix the paragraph.** Drop any link that fails; never ship a guess. (SEC EDGAR Archives deep URLs — the dominant source here — check cleanly with urllib.)
 - [ ] All SEC filings hyperlinked to EDGAR viewer
 - [ ] All earnings materials hyperlinked (release, transcript, presentation)
 - [ ] Prior guidance hyperlinked to prior quarter's materials
@@ -532,13 +541,30 @@ Before publishing, verify:
 - [ ] All data is from LATEST quarter
 - [ ] Consensus estimates are pre-earnings (not post-earnings)
 
+**Verification log (mandatory, appended to the report itself):**
+
+End the report with a `<details>` block — the `<summary>` string is exact (project tooling greps for it; same contract as company-research Step 10):
+
+```markdown
+<details>
+<summary>Verification log (Step 10) — YYYY-MM-DD</summary>
+
+- Spot-checks (3-5 randomly chosen numbers, string-matched against the URL cited in their paragraph):
+  - "+3% beat = $12.3B vs Street $12.2B" from <URL>: ✓ string-matches
+  - ...
+- URLs HTTP-checked: N total, all 200 OK (list any retried with browser UA / 30s timeout)
+- Residual unknowns: <e.g. "transcript not yet published", "segment break-out withheld", or "none">
+</details>
+```
+
 ### Step 16: Deliver Report
 
 Provide user with:
 
-1. **DOCX file**: `[Company]_Q[X]_[Year]_Earnings_Update.docx`
-2. **Chart files**: All PNG/JPG charts (for reference)
-3. **Optional XLS**: Updated financial model if maintained
+1. **Markdown report**: `reports/earnings/<TICKER>_Q<N>FY<YY>_earnings_update_<YYYY-MM-DD>.md` (+ `_zh.md` companion), committed and pushed per SKILL.md Phase 5 (Conventional Commit, no Co-authored-by footer, no asking)
+2. **Chart files**: PNGs under `reports/charts/` (committed alongside)
+3. **Optional DOCX**: `[Company]_Q[X]_[Year]_Earnings_Update.docx` only if explicitly requested
+4. **Optional XLS**: Updated financial model if maintained
 
 **Brief summary for user:**
 ```

@@ -2,18 +2,18 @@
 
 This template provides the structure for creating a comprehensive equity research initiation report. Use this as a guide when constructing the final report document.
 
-**NOTE:** The actual report MUST be created using the DOCX skill. DO NOT generate markdown content.
+**NOTE:** The final report is authored **directly as markdown** (`<Slug>_Initiation_Report_<Date>.md` at the slug root of `reports/company/<Slug>/`) with the Write/Edit tools — no DOCX skill, no python-docx, no Word document (see SKILL.md Task 5).
 
 **CRITICAL REQUIREMENTS:**
-1. **Generate 20-30+ chart images** using Python (matplotlib/plotly) BEFORE creating the Word document
-2. **Use DOCX skill**: Create professional report with proper styles, headers/footers, and formatting
-3. **Embed actual chart images**: Insert the generated PNG/JPG chart files into the Word document at appropriate locations
-4. **NO MARKDOWN**: Do not generate markdown content. Use DOCX skill to create a .docx file.
+1. **Generate 20-30+ chart images** using Python (matplotlib/plotly) BEFORE assembling the report (Task 4)
+2. **Author the report as a single `.md` file** — viewable in Claude Reports like every other skill's output
+3. **Embed actual chart images**: reference the PNG/JPG files inline via `![caption](charts/chart_XX_….png)` at appropriate locations
+4. **MARKDOWN ONLY**: do not produce a `.docx` — the viewer renders the `.md` with charts.
 
 **CRITICAL FORMATTING GUIDANCE:**
-- **MAXIMUM DENSITY**: Every page should be packed with information. Intersperse text, charts, and tables throughout.
-- **NO ORPHANED SECTIONS**: Never have a section header alone or a single chart on its own page.
-- **20-30+ ACTUAL CHART IMAGES**: Generate charts as image files, then embed within text sections using DOCX skill.
+- **MAXIMUM DENSITY**: Intersperse text, charts, and tables throughout — roughly one visual per 200-300 words.
+- **NO ORPHANED SECTIONS**: Never a section header with no content, or a chart with no surrounding discussion.
+- **20-30+ ACTUAL CHART IMAGES**: Generate charts as image files, then embed them inline in the markdown.
 
 ---
 
@@ -879,7 +879,7 @@ Catalysts:
    - **Financial performance trends** (multiple charts)
    - Charts should be embedded within text, not grouped separately
 
-5. **Use DOC Skill:** This outline should be converted to a professional Word document using the DOC skill, with proper formatting, styles, headers/footers, and page numbers
+5. **Author as Markdown:** This outline is realized as a single `.md` file written with the Write/Edit tools (see SKILL.md Task 5) — consistent heading levels, markdown tables, and inline `![](charts/…)` image references; no Word document
 
 6. **Intersplice Content:** Text paragraphs should have charts embedded inline. Each page should have 2-4 distinct elements (tables, charts, text blocks).
 

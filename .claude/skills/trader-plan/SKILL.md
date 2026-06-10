@@ -15,7 +15,7 @@ This skill needs a finalized investment plan:
 
 - `investment_plan` — from [[research-manager]]
 
-**If `investment_plan` is missing**, invoke [[research-manager]] first. That skill will cascade further (running [[bull-bear-debate]] and the four analyst skills if needed).
+**If `investment_plan` is missing**, invoke [[research-manager]] first. That skill will cascade further (running [[bull-bear-debate]] and the three analyst skills — sentiment-analyst, news-analyst, company-research — if needed).
 
 For a clean full-pipeline run from scratch, prefer [[trading-analysis]] over invoking this skill standalone.
 
@@ -35,6 +35,19 @@ The Research Manager's plan provides the directional view (using a 5-tier scale)
 (The nuanced Overweight/Underweight calls and final sizing happen later at the [[portfolio-decision]] step.)
 
 Pull the **dated catalyst** (event + date + expected estimate delta) and the **Bull/Base/Bear scenario targets** from the upstream research-manager / analyst reports. If they are absent there, mine the local broker library `db/zsxq.db` (~6,900 sell-side PDFs) for a sell-side scenario set, catalyst date, and conviction rank — label anything borrowed from it `*Analyst view:*` and keep it out of any primary-filing citation (per [company-research citation standard](../company-research/references/citations.md)). **Never invent a catalyst date, a scenario target, or a current price** — if no source supplies one, say so and fall back to the "No dated catalyst" / single-point wording.
+
+**Sell-side view evolution (卖方观点演变) — required whenever ≥2 zsxq notes cover the ticker.** Before setting the Risk-Reward levels, run the mechanical pre-pass — STRICTLY read-only (`/opt/anaconda3/bin/python3`, `sqlite3.connect('file:db/stock_price_target.db?mode=ro', uri=True)`; writes stay exclusively with `scripts/persist_pts.py`): `SELECT research_institute, rating, price_target, target_currency, report_date, report_file_id, upside_pct FROM price_targets WHERE company_ticker=? ORDER BY research_institute, report_date`. Use it two ways:
+
+- **PT dispersion (min / median / max, spread %) sanity-frames Entry / Targets / Stop** — a Bull Target above *every* institute's PT (or a Bear Target / Stop Loss below all of them) needs an explicit one-line justification in **Reasoning** (what does this plan see that the whole street missed?). Flag same-institute revisions — PT raised/cut X → Y with the note's stated trigger; a fresh self-revision toward the trade's direction is conviction evidence, one against it belongs in the opposing 利好/利空 bullets. The filename's `-YYMMDD` suffix is the authoritative pub date; a 2026-03 PT and a 2026-06 PT from the same institute are two different dated views, not duplicates — and conflicting institutes get named on each side, never averaged into a fake consensus.
+- **Artifact:** a 4–8-line **Sell-side view evolution (卖方观点演变)** note — the dispersion line + any dated revisions, each view cited as (institute, report date, `/zsxq/pdf/<file_id>/<urlencoded-name>` direct-download link) — inserted between **Risk-Reward** and **Reasoning**. Additive to the schema, like the conviction tag. Each borrowed PT still anchors to the report-date price per the "Anchor every number" rule below.
+
+Fetch the **Current Price** anchor yourself — dated close + 52-week range via yfinance, never from news-article prose (the Risk-Reward asymmetry math is only as good as this anchor):
+
+```bash
+/opt/anaconda3/bin/python3 -c "import yfinance as yf, datetime as dt; h=yf.Ticker('<ticker>').history(period='1y'); h=h[h.index.date<=dt.date.fromisoformat('<trade_date>')]; print(round(h['Close'].iloc[-1],2), h.index[-1].date(), round(h['Close'].min(),2), round(h['Close'].max(),2))"
+```
+
+Cite it as `[Yahoo Finance quote](https://finance.yahoo.com/quote/<ticker>/)` as of the printed date (the last completed session when the pipeline's `<trade_date>` is a non-trading day — state both dates). The schema's `**Current Price**` line must come from this fetch.
 
 Allowed conviction tags for the `**Action**` line: `high conviction`, `catalyst-driven`, `valuation`, or `on Positive Catalyst Watch into <date>`.
 
@@ -84,7 +97,7 @@ When this proposal hinges on something a reader would struggle to picture from p
 - **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
 - **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
 
-> Full spec: `references/citations.md` § "Further viewing — explainer videos".
+> Full spec: [`../company-research/references/citations.md`](../company-research/references/citations.md) § "Further viewing — explainer videos".
 
 ## Learning from sell-side institutional research
 

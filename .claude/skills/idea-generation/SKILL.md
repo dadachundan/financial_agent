@@ -1,12 +1,17 @@
+---
+name: idea-generation
+description: Systematic stock screening and investment idea sourcing. Combines quantitative screens, thematic research, and pattern recognition to surface new long and short ideas. Use when looking for new ideas, running screens, or conducting thematic sweeps. Triggers on "idea generation", "stock screen", "find ideas", "what looks interesting", "screen for", "new ideas", or "pitch me something".
+---
+
 # Idea Generation
 
-description: Systematic stock screening and investment idea sourcing. Combines quantitative screens, thematic research, and pattern recognition to surface new long and short ideas. Use when looking for new ideas, running screens, or conducting thematic sweeps. Triggers on "idea generation", "stock screen", "find ideas", "what looks interesting", "screen for", "new ideas", or "pitch me something".
+**Language:** English-only by default (fast-turnaround idea sourcing, matching the project's tracking-skills English-default rule). Produce bilingual / Simplified-Chinese output only on explicit request (`in Chinese`, `bilingual`, `--lang zh`).
 
 ## Workflow
 
 ### Step 1: Define Search Criteria
 
-Ask the user for parameters:
+Infer all six parameters from the request — do NOT interrogate the user. Apply defaults for anything unstated (Direction: Long · Sector: cross-sector · Geography: US + global · Market cap: no filter · Style: per theme) and declare every parameter + assumption in a header block at the top of the note (Date / Direction / Style / Market cap / Geography / Theme). Ask the user ONLY when long-vs-short direction is genuinely ambiguous. Flag any deliberate exception to a stated filter inline (e.g. "one mid-cap exception flagged"). The parameters:
 - **Direction**: Long ideas, short ideas, or both
 - **Market cap**: Large, mid, small, micro
 - **Sector**: Specific sector or cross-sector
@@ -72,7 +77,9 @@ For thematic ideas, research the theme and identify beneficiaries:
 
 For each idea that passes the screen, present:
 
-**[Long/Short] · [Conviction: High / Watchlist] · [Company Name] ([Ticker]) — [One-Line Thesis]**
+**[Long/Short] · [Conviction: High / Medium / Watchlist] · [Company Name] ([Ticker]) — [One-Line Thesis]**
+
+Conviction is a fixed three-level ladder — **High / Medium / Watchlist, nothing else** (no "Med-high", "High β", or other free-form grades).
 
 Lead with the action, mirroring the **MS "Three Actionable Ideas"** header (the recommendation comes first, not buried under the metric table). One decision-first line.
 
@@ -92,13 +99,23 @@ Lead with the action, mirroring the **MS "Three Actionable Ideas"** header (the 
 - What the market is missing
 - The single **dated** catalyst that re-rates it (next print / investor day / data read-out — give the date), plus the priced-in test (how much of the bear case is already in the price)
 
-**Asymmetry:** upside (to bull-case PT) vs downside (to bear-case PT) — an explicit `+X% / −Y%` skew vs last close, not a one-sided target.
+**Asymmetry:** upside (to bull-case PT) vs downside (to bear-case PT) — an explicit `+X% / −Y%` skew vs last close (dated), not a one-sided target. If no PT exists yet, write `n/a — watchlist, no PT yet` with a one-clause reason. Adjectives ("High", "Med (margins)", "High β") are NOT asymmetry values.
 
 **Key Risks:**
 - What would make this wrong (the falsifiable conditions)
 
 **Suggested Next Steps:**
 - Build full model? Deep-dive diligence? Expert call? Hand the ticker to [[company-research]] / [[trader-plan]].
+
+**Source quality bar (MUST):**
+
+1. Source hierarchy: company PR / IR / filings and exchange data first; then named broker notes from `db/zsxq.db` labelled *Analyst view:* (cite via the `/zsxq/pdf/<file_id>/<name>` direct-download route); then reputable trade press (Digitimes, Reuters, Nikkei). Aggregator / UGC pages (Bitget stock pages, SimplyWall.st community narratives, TIKR/GuruFocus blogs, Substack posts) may NEVER be the sole source for a load-bearing claim (market share %, TAM, backlog, guidance).
+2. Every bullet that carries a number counts as a paragraph for the project citation rule — it needs its own inline citation whose page string-matches the number.
+3. A trailing "Sources" / link-dump section is allowed only as a supplement — never as the citation mechanism (the forbidden "Source: A; B; C" bundle pattern).
+4. **Sell-side view evolution (卖方观点演变) — mandatory when ≥2 zsxq broker notes cover the same name.** First a mechanical pre-pass, STRICTLY read-only (`/opt/anaconda3/bin/python3`, `sqlite3.connect('file:db/stock_price_target.db?mode=ro', uri=True)`): `SELECT research_institute, rating, price_target, target_currency, report_date, report_file_id, upside_pct FROM price_targets WHERE company_ticker=? ORDER BY research_institute, report_date` — surfaces same-institute revisions and PT dispersion (min/median/max, spread %) before re-reading any PDF (writes stay exclusively with `scripts/persist_pts.py`). Then in the card:
+   - every zsxq-sourced PT cell (per-idea metric table AND the Step-5 comparison table) carries `(institute, report date)` — the filename's `-YYMMDD` suffix is the authoritative pub date (sanity-check against `create_time`); a 2026-03 PT and a 2026-06 PT from the same institute are two different views, not duplicates;
+   - same-institute revisions render as dated arrows with the stated trigger — `UBS Buy $120 (26-03) → $150 (26-06, post-Q1 beat)` — each leg keeping its own `/zsxq/pdf/<file_id>/<name>` cite;
+   - when institutes disagree (opposite ratings, PTs >20% apart, conflicting reads of the same datapoint), the idea card gets a disagreement table — `| Institute | Date | Rating / PT | Core argument | What evidence would prove them right |` — and **never a blended PT**; an idea whose conviction rests on a contested call must say so in the thesis/risk bullets.
 
 ### Further viewing — explainer videos (optional, but default to including)
 
@@ -114,9 +131,21 @@ When an idea card covers something a reader would struggle to picture from prose
 ### Step 5: Output
 
 - Shortlist of 5-10 ideas with one-page summaries
-- Screening criteria and methodology documented
-- Comparison table across all ideas
+- Screening criteria and methodology documented (the Step-1 header parameter block)
+- Comparison table across all ideas — MUST carry columns for 12m price target, implied upside %, and valuation basis (matching the per-idea metric table), so a shortlist can never ship with zero price targets; Conviction column uses only the pinned High / Medium / Watchlist ladder
 - Prioritized list: which ideas to research first
+
+**File location (MUST):** save to `reports/ideas/<theme-or-screen-slug>_<YYYY-MM-DD>.md` (English slug per the project filename rule; no `zsxq_` prefix — that prefix is reserved for [[zsxq-ideas]] outputs). NEVER write to `reports/oneoff/` — it is not an owned bucket. Commit + push in the same task (Conventional Commit, e.g. `feat(reports/ideas): ...`).
+
+### Step 6: Verify & log
+
+Before saving/committing:
+
+1. HTTP-check every URL with a real-browser User-Agent — `200 OK` only; drop or replace failures per the link-validation rule.
+2. Spot-check 3–5 numbers across different ideas — each must string-match its same-bullet citation.
+3. Confirm each idea card has PT + implied upside % + valuation basis (or an explicit `n/a — watchlist, no PT yet` label).
+4. Conditional — when ≥2 zsxq broker notes covered the same name: confirm the sell-side view-evolution treatment landed (PT cells dated with institute, same-institute revisions arrow'd, contested calls in a disagreement table, no blended PT). See Source quality bar item 4.
+5. Append `<details><summary>Verification log — YYYY-MM-DD</summary>...</details>` listing each check. Spec: `.claude/skills/company-research/references/citations.md`.
 
 ## Learning from sell-side institutional research
 

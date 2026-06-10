@@ -250,6 +250,14 @@ class TestFinagentDbDirOverride:
         ("zsxq_fts.py",            "DB_PATH"),
         ("zsxq_cards.py",          "DB_PATH"),
         ("stock_price_target_db.py", "DB_PATH"),
+        # Skill helper scripts migrated to db_paths (2026-06-10)
+        (".claude/skills/zsxq-analyze/scripts/find_pdf.py",          "DB_PATH"),
+        (".claude/skills/zsxq-analyze/scripts/extract_pdf.py",       "DB_PATH"),
+        (".claude/skills/zsxq-analyze/scripts/render_pdf_pages.py",  "DB_PATH"),
+        (".claude/skills/zsxq-analyze/scripts/ocr_pdf.py",           "DB_PATH"),
+        (".claude/skills/zsxq-recommend/scripts/list_recent.py",     "DB_PATH"),
+        (".claude/skills/sec-report-summary/scripts/list_reports.py", "DB_PATH"),
+        (".claude/skills/sec-report-summary/scripts/extract_report.py", "DB_PATH"),
     ])
     def test_module_honors_env(self, monkeypatch, tmp_path, module_path, attr):
         """Each DB-using module's path constant lands inside FINAGENT_DB_DIR."""

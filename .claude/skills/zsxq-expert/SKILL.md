@@ -1,6 +1,6 @@
 ---
 name: zsxq-expert
-description: Answer an in-depth question by grounding it in the local broker-PDF library (db/zsxq.db, ~7,000 institute reports) — the "PDF expert system". Resolves the focal company + its peers from the knowledge graph, retrieves the most relevant PDFs by ranked full-text search (zsxq_fts.py), deep-reads the top ones in parallel — pulling the actual comparison **tables** (extract_tables.py) and **figures/charts** (render_pdf_pages.py + vision) — and synthesizes a cited answer where every number traces to a specific PDF page. Each deep read is written back as a structured card (zsxq_cards.py) and as graph edges (manual_graph.py), so the library gets smarter with use. NO LLM API — Claude (the agent, in conversation) is the reader and synthesizer. Use when the user wants a deep, broker-grounded answer or comparison FROM THEIR OWN REPORTS rather than a web search — e.g. "how does ISRG compare with peers (using my reports)", "what do my broker reports say about HBM pricing", "compare Stryker vs Intuitive from zsxq", "deep dive X vs Y from my PDFs", "answer from my research library", "/zsxq-expert <question>". Distinct from /zsxq-ideas (idea shortlists) and /zsxq-analyze (one named PDF).
+description: Answer an in-depth question by grounding it in the local broker-PDF library (db/zsxq.db, ~7,000 institute reports) — the "PDF expert system". Resolves the focal company + its peers from the knowledge graph, retrieves the most relevant PDFs by ranked full-text search (zsxq_fts.py), deep-reads the top ones — pulling the actual comparison **tables** (extract_tables.py) and **figures/charts** (render_pdf_pages.py + vision) — and synthesizes a cited answer where every number traces to a specific PDF page. Each deep read is written back as a structured card (zsxq_cards.py) and as graph edges (manual_graph.py), so the library gets smarter with use. NO LLM API — Claude (the agent, in conversation) is the reader and synthesizer. Use when the user wants a deep, broker-grounded answer or comparison FROM THEIR OWN REPORTS rather than a web search — e.g. "how does ISRG compare with peers (using my reports)", "what do my broker reports say about HBM pricing", "compare Stryker vs Intuitive from zsxq", "deep dive X vs Y from my PDFs", "answer from my research library", "/zsxq-expert <question>". Distinct from /zsxq-ideas (idea shortlists) and /zsxq-analyze (one named PDF).
 ---
 
 # Answer In-Depth Questions from the zsxq PDF Library (the PDF expert system)
@@ -16,7 +16,7 @@ remembers what it read so the next question is faster.
 question ──▶ (1) resolve focal + peers      [graph_mirror: COMPETES_WITH / SUPPLIES]
           ──▶ (2) retrieve PDFs, ranked      [zsxq_fts.py  — BM25 over the corpus]
           ──▶ (3) cards vs fresh             [zsxq_cards.py — reuse what's digested]
-          ──▶ (4) parallel deep reads        [extract_tables.py + render_pdf_pages.py + OCR]
+          ──▶ (4) deep reads (sequential)    [extract_tables.py + render_pdf_pages.py + OCR]
           ──▶ (5) synthesize cited answer    [tables + figures, every number → a page]
           ──▶ (6) write back                 [cards + graph edges — the library learns]
 ```
@@ -24,6 +24,11 @@ question ──▶ (1) resolve focal + peers      [graph_mirror: COMPETES_WITH /
 **You — Claude — are the whole intelligence layer.** There is no embedding API,
 no vector DB, no LLM call (project rule). Retrieval is keyword + entity + graph;
 generation is your own reading and reasoning over the actual pages.
+
+**Interpreter:** run all project scripts with `/opt/anaconda3/bin/python3`
+(per `feedback_anaconda_python_db_scripts` — bare `python3` has failed
+`mode=ro` DB opens, the exact pattern `zsxq_fts.py` uses, and lacks deps
+in some shells).
 
 ## When to use vs the siblings
 
@@ -132,16 +137,44 @@ For each shortlisted file_id, check `has_card`:
 This is the compounding mechanism: the more you use the library, the fewer
 fresh reads each question needs.
 
-## Step 5 — Parallel deep reads (the tables + figures)
+### Step 4b — PT pre-pass (read-only, before any fresh read)
 
-Fan out **one Agent per fresh file_id, in a single message** (parallel). This is
-where the depth comes from — pull the *actual* tables and charts, not just prose.
+When ≥2 shortlisted PDFs cover the same company / theme / question, pull what
+the PT store already knows **before** re-reading any PDF — it mechanically
+exposes same-institute revisions and PT dispersion, and tells the deep-read
+agents which revisions to find the trigger for:
 
-> **Memory note (16 GB machine).** Extraction agents are lighter than report
-> agents, but cap the fan-out at **~6 concurrent** here and, for a larger
-> shortlist, run in waves of 6. For any fan-out ≥2 start the watcher first
-> (`/tmp/mem-watch-16gb.sh`) per [CLAUDE.md § Workflow Memory Monitoring].
-> Prefer Agent-tool subagents (separate processes, reclaimed on exit).
+```bash
+python3 - <<'PY'
+import sqlite3
+c = sqlite3.connect('file:db/stock_price_target.db?mode=ro', uri=True)  # STRICTLY read-only
+for r in c.execute("""SELECT research_institute, rating, price_target, target_currency,
+                             report_date, report_file_id, upside_pct
+                      FROM price_targets WHERE company_ticker IN ('ISRG','SYK')
+                      ORDER BY company_ticker, research_institute, report_date"""):
+    print(r)
+PY
+```
+
+The same institute appearing twice with a different PT / rating = a
+**self-revision** (two distinct views, not duplicates). Compute PT dispersion
+across institutes (min / median / max, spread %). Writes to this DB remain
+exclusively via `scripts/persist_pts.py` (Tier-2 helper) — never raw SQL.
+
+## Step 5 — Deep reads (the tables + figures)
+
+Launch **one Agent-tool subagent per fresh file_id**. This is where the depth
+comes from — pull the *actual* tables and charts, not just prose.
+
+> **Memory note (16 GB machine).** Default = **strictly sequential** — one
+> Agent-tool subagent at a time; launch the next only after the prior returns.
+> Go 2-wide ONLY when `pgrep -lf mem-watch-16gb.sh` shows the watcher running
+> AND free RAM is >60% AND the user's Flask `:5001` is the only other load.
+> **Never ≥3 concurrent** — the CLAUDE.md sizing table marks 3+ as OOM/thrash
+> on this box. Process the 6–12 shortlist sequentially and lean on cards
+> (Step 4) to keep fresh reads few. Watcher + thresholds:
+> [CLAUDE.md § Workflow Memory Monitoring]. Prefer Agent-tool subagents
+> (separate processes, fully reclaimed on exit) over in-process Workflow agents.
 
 Each agent runs the [extraction-agent prompt](#extraction-agent-prompt). Its job
 per PDF:
@@ -175,6 +208,26 @@ prose per dimension. Rules:
   page under each). Don't paraphrase a table into vague prose — show the grid.
 - **A broker's view is a broker's view**, not fact: attribute ("Goldman pegs the
   ortho-robotics TAM at US$2–3bn…"). Never present a sell-side target as truth.
+- **Sell-side view evolution (卖方观点演变) — mandatory whenever ≥2 zsxq reports
+  inform the answer.** Render a subsection with that exact title next to the
+  broker-view content, built from the Step-4b pre-pass + the deep reads:
+  1. *Per-institute timeline* — each institute's reports ordered by report date
+     (the filename's `-YYMMDD` suffix is the authoritative publication date;
+     sanity-check against `create_time`): institute, date, rating, PT, key
+     estimates, one-line thesis. Explicitly call out **self-revisions** —
+     upgrade/downgrade, PT raised/cut from X to Y, thesis pivot — and the stated
+     trigger (earnings print, policy change, channel checks, order data).
+  2. *Cross-institute disagreement* — never blend contradictory views into a
+     fake consensus. Opposite ratings, PTs >20% apart, or conflicting reads of
+     the same datapoint get a disagreement table:
+     `Institute | Date | Rating / PT | Core argument | What evidence would prove them right`.
+  3. *Every view dated and cited* — each view carries (institute, report date,
+     `/zsxq/pdf/<file_id>/<urlencoded-name>` direct-download link). A 2026-03 PT
+     and a 2026-06 PT from the same institute are two different views, not
+     duplicates.
+  Each PT in the timeline also carries the report-date price + implied upside
+  per the PT surfacing rule (Notes below) — the Step-4b rows already hold
+  `upside_pct`.
 - **Be honest about gaps.** If the library covers ISRG well but barely mentions
   a named peer, say so — don't fill the hole from general knowledge and pass it
   off as sourced. General-knowledge bridging is allowed but must be *labelled*
@@ -231,7 +284,10 @@ When this answer covers something a reader would struggle to picture from prose 
 Spot-check 3–5 numbers from the answer against their cited PDFs' extracted text
 (`extract_pdf.py --file-id <id> --pages <n>` then grep the figure). Any number
 that doesn't string-match its cited page gets fixed or dropped (Numerical
-Accuracy rule). Confirm every `pdf_url` is well-formed.
+Accuracy rule). Confirm every `pdf_url` is well-formed. If ≥2 zsxq reports
+informed the answer, confirm the **Sell-side view evolution (卖方观点演变)**
+subsection is present — per-institute timeline with dated/cited views, plus the
+disagreement table wherever institutes conflict.
 
 ## Output mode
 
@@ -316,6 +372,13 @@ appears, and quotes must be the ORIGINAL printed text (EN/中文/日本語), nev
   box and an expert system.
 - **Opportunistically persist PTs.** If a deep-read PDF states a price target,
   pipe it to `scripts/persist_pts.py --replace` (surfaces in `/pt`).
+- **PT surfacing rule applies here too.** Any broker rating / PT quoted in the
+  answer must carry the report-date price and implied upside from
+  `persist_pts.py`'s stdout `rows` (`report_date_price`, `upside_pct`), e.g.
+  `GS Buy, TP $1,159 vs $1,030 @ 2026-05-28 → +12.5%`. Write `report-date
+  price n/a` if it's null; never substitute today's spot. See
+  [`reference/pt_extraction.md`](../../../reference/pt_extraction.md)
+  § "Surfacing rule".
 
 ## Prerequisites
 
@@ -342,4 +405,5 @@ Cross-document layer:
 Conventions reused:
 
 - [[zsxq-ideas]] — the [zsxq citation convention](../zsxq-ideas/SKILL.md#zsxq-citation-convention)
-  (page-anchored link + verbatim source quote) and the parallel-fan-out pattern.
+  (page-anchored link + verbatim source quote) and the per-PDF extraction-agent
+  pattern (sequenced per the Step 5 memory note).

@@ -87,7 +87,7 @@ After the "accuracy over completeness" rule, this is the next-highest-priority i
 
 ### Precise
 
-- **Anchor to the issuer's own product matrix.** Most 10-Ks / 年度报告 / Yuho contain a Product matrix or Product Family table in Item 1 Business. **Embed the rendered original table as a PNG image** via the helper at `.claude/skills/company-research/scripts/render_10k_section.py`, *and* reproduce it as a markdown table immediately below. The image is the visual proof that Section 4 is anchored to primary disclosure; the markdown reproduction is the searchable copy. If the issuer does not publish such a table, build one from the company website (cited) and label it as analyst-constructed.
+- **Anchor to the issuer's own product matrix.** Most 10-Ks / 年度报告 / Yuho contain a Product matrix or Product Family table in Item 1 Business. **Reproduce it verbatim as a markdown table (MANDATORY)**, quoting the issuer's own row / column labels; optionally also embed the rendered original as a PNG via the helper at `.claude/skills/company-research/scripts/render_10k_section.py` when visual proof adds value. The markdown reproduction is the searchable, citable anchor and is required regardless; the PNG never substitutes for it. If the issuer does not publish such a table, build one from the company website (cited) and label it as analyst-constructed.
 - **Quote the issuer's own product descriptions verbatim** for each row of the matrix. Use `>` markdown block-quote syntax with the inline 10-K citation directly above the quote. Verbatim text from the issuer is by definition non-fabricated, and it gives the reader Lam's / 三星's / Pfizer's own explanation of what the product does in their words. **Do not paraphrase the 10-K — quote it.** Paraphrase is where fabrication enters.
 - **Every product name spelled exactly as the issuer spells it**, including trademark symbols (®, ™), capitalization conventions, and platform-name prefixes (e.g. `ALTUS®`, not `Altus`; `Sense.i®`, not `Sense-i`).
 - **Every technical specification** (e.g. "etches channels >10µm deep at <0.1% CD deviation and 2.5× faster", "delivers 50%+ reduction in word-line resistance", "100× faster plasma response") comes verbatim from the issuer's press release or 10-K, with a citation. Numbers without a source are deleted.
@@ -114,7 +114,7 @@ After the "accuracy over completeness" rule, this is the next-highest-priority i
 - Specific competitor product names (e.g. "AMAT's NOKOTA") attached to the subject's 10-K → wrong citation chain; cite competitor's own filing.
 - Marketing language from the company's homepage substituted for 10-K verbatim quotes ("delivers cutting-edge solutions for advanced manufacturing") → not what 10-K says; replace with verbatim quote.
 - A "synthesis" paragraph that just repeats the section structure rather than showing how products interact → re-write to show the actual customer workflow / cycle.
-- No image embed of the issuer's own product table → the section reads like analyst opinion without primary anchor; run `render_10k_section.py` to fix.
+- No verbatim markdown reproduction of the issuer's own product matrix → the section reads like analyst opinion without primary anchor; reproduce the table verbatim to fix (the optional PNG embed via `render_10k_section.py` does not substitute for it).
 
 See `references/report_structure.md` § Section 4 for the per-row template, and `references/quality_checklist.md` for the pre-submit checklist.
 
@@ -198,16 +198,18 @@ The lookup helper is `find_pdf.py` from the `zsxq-analyze` skill. Run a **separa
 ```bash
 cd /Users/x/projects/financial_agent
 # US ticker, English name, and Chinese name are DIFFERENT result sets — run all three.
-python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "NVDA"   --limit 60
-python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "NVIDIA" --limit 60
-python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "英伟达"  --limit 60
+/opt/anaconda3/bin/python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "NVDA"   --limit 60
+/opt/anaconda3/bin/python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "NVIDIA" --limit 60
+/opt/anaconda3/bin/python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "英伟达"  --limit 60
 # Also sweep supply-chain / competitor / theme terms — sector notes that don't name the
 # subject in the title often carry the most useful channel-check data in the summary:
-python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "Blackwell" --limit 40
-python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "AI server" --limit 40
+/opt/anaconda3/bin/python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "Blackwell" --limit 40
+/opt/anaconda3/bin/python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "AI server" --limit 40
 ```
 
 `--query` does a case-insensitive `LIKE` across `name / topic_title / summary / tags / comment`, sorted `create_time DESC`. Rows come back as JSON with `file_id, name, topic_title, summary, page_count, create_time, bank, local_path, local_exists`. Apply the **12-month freshness rule** (§ Citations): keep recent notes; ignore stale ones except for founding/structural facts. For a US name like NVDA this typically returns dozens of MS / GS / JPM / Bernstein notes — keep the 5–15 most relevant and most recent.
+
+**Interpreter & DB-lock fallback.** Always invoke these scripts with `/opt/anaconda3/bin/python3` — the bare `python3` on PATH lacks project deps (browser_cookie3, PyPDF2 / ocrmac) and fails read-only `mode=ro` DB opens (this exact failure derailed a real run mid-report; see project memory `feedback_anaconda_python_db_scripts.md`). If `find_pdf.py` still errors because the user's live `:5001` Flask holds `db/zsxq.db`, fall back to a SELECT-only immutable read for triage — `sqlite3.connect('file:db/zsxq.db?mode=ro&immutable=1', uri=True)` — which stays read-only and consistent with the project DB-safety tiers, and record the fallback in the Step 10 verification log.
 
 ### The library has two layers — triage on the summary, then READ THE PDF
 
@@ -215,11 +217,11 @@ python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "AI server" --li
 2. **Open and READ the PDF for any note that matters — image-only is NOT a blocker.** Many broker PDFs are scanned (every page returns empty text from `fitz`), but the content is fully recoverable; never skip a note because "the text is empty." Use the three-tier flow from the project CLAUDE.md / `zsxq-analyze` skill (ocrmac → Marker → vision-LM; never Tesseract):
    ```bash
    # Tier 1 — OCR image-only pages (Apple Vision / ocrmac, ~1s/page, cached to pdf_files.ocr_text; free on re-run)
-   python3 .claude/skills/zsxq-analyze/scripts/ocr_pdf.py     --file-id <id>
+   /opt/anaconda3/bin/python3 .claude/skills/zsxq-analyze/scripts/ocr_pdf.py     --file-id <id>
    # Then extract — auto-merges the OCR cache for empty pages
-   python3 .claude/skills/zsxq-analyze/scripts/extract_pdf.py --file-id <id> --header
+   /opt/anaconda3/bin/python3 .claude/skills/zsxq-analyze/scripts/extract_pdf.py --file-id <id> --header
    # Tier 3 — for charts / dense tables where meaning is visual: render the page, then READ the PNG yourself (you, Claude, are the extractor — no external API)
-   python3 .claude/skills/zsxq-analyze/scripts/render_pdf_pages.py --file-id <id> --pages 4-6
+   /opt/anaconda3/bin/python3 .claude/skills/zsxq-analyze/scripts/render_pdf_pages.py --file-id <id> --pages 4-6
    ```
    (Tier 2, Marker, is for scrambled multi-column reading order or tables-as-markdown — reach for it when ocrmac garbles a dense financial table.) **String-match every number you quote against the OCR'd / extracted / vision-read original text — no number enters the report that you have not seen as a literal string in the source PDF.** The summary alone is never sufficient sourcing for a hard number.
 
@@ -256,9 +258,9 @@ If `find_pdf.py` returns few or stale rows for the subject (common for small / n
 ```bash
 cd /Users/x/projects/financial_agent
 # Targeted: pull recent broker notes that mention the subject by ticker / name
-python3 download/zsxq_downloader.py --count 100 --query NVDA
+/opt/anaconda3/bin/python3 download/zsxq_downloader.py --count 100 --query NVDA
 # General top-up of the recent feed (the user's standing command):
-python3 download/zsxq_downloader.py --count 100 --query lite
+/opt/anaconda3/bin/python3 download/zsxq_downloader.py --count 100 --query lite
 ```
 
 The downloader is idempotent (records `query_term`, dedups on `file_id`), saves PDFs locally, and indexes them into `db/zsxq.db` so the next `find_pdf.py` sees them. Note in the verification log how many zsxq notes you found vs fetched.
@@ -269,6 +271,15 @@ The downloader is idempotent (records `query_term`, dedups on `file_id`), saves 
 - **At least one in Section 2 (the PT/consensus line) and one in Section 9 (the bear case)** whenever the notes support it.
 - **Every one labeled `*Analyst view:*` / `*分析师观点：*`** and cited to the `/zsxq/pdf/<file_id>/<filename>` direct-download route — never blended into a filing citation.
 - If the library genuinely has nothing on the subject even after a `--query` top-up, say so in the verification log; don't pad with web-searched analyst blogs in its place.
+
+### 卖方观点演变 (Sell-side view evolution) — mandatory when ≥2 zsxq notes cover the subject
+
+Whenever the report draws on **≥2 `db/zsxq.db` broker notes for the same company**, it MUST carry a `卖方观点演变 (Sell-side view evolution)` subsection — place it in Section 2 beside the consensus / PT benchmark line (or in Section 9.5 when the debate framing fits better). Four requirements:
+
+1. **Mechanical pre-pass FIRST — read `db/stock_price_target.db` before re-reading any PDF.** STRICTLY READ-ONLY: `/opt/anaconda3/bin/python3` with `sqlite3.connect('file:db/stock_price_target.db?mode=ro', uri=True)`; SELECT all rows for the ticker (columns: `research_institute, rating, price_target, target_currency, report_date, report_file_id, upside_pct`). This mechanically surfaces same-institute revisions and the PT dispersion (min / median / max, spread %) before any PDF work. Writes to this DB remain exclusively via `scripts/persist_pts.py` (Tier-2 helper).
+2. **Per-institute view timeline (按机构的观点时间线).** Order each institute's notes by report date — the filename's `-YYMMDD` suffix is the authoritative publication date (sanity-check against `create_time`). Per entry: institute, date, rating, PT, key estimates, one-line thesis. **Explicitly call out self-revisions** — upgrade / downgrade, PT raised / cut from X to Y, thesis pivot — and the stated trigger (earnings print, policy change, channel checks, order data). A 2026-03 PT and a 2026-06 PT from the same institute are two different views, not duplicates.
+3. **Cross-institute disagreement (机构间分歧) — never blend contradictory views into a fake consensus.** When institutes disagree (opposite ratings, PTs >20% apart, conflicting reads of the same datapoint), render a disagreement table: `机构 | 日期 | 评级 / 目标价 | 核心论点 | 什么证据能证明其正确` (Institute | Date | Rating / PT | Core argument | What evidence would prove them right).
+4. **Every view dated and cited.** Each institute view carries (institute, report date, `/zsxq/pdf/<file_id>/<filename>` direct-download link) per the citation format above, and the report-date-price pairing rule applies to every PT quoted in the timeline.
 
 ## Investor-lens scorecards (optional Section 10 of the report)
 
@@ -281,6 +292,7 @@ After Sections 1–9 establish the facts, named scoring rubrics give the reader 
 **Key inputs already in your tree:**
 - Sections 1–9 facts (re-use, do not introduce new inline citations inside Section 10).
 - `indicators.db` snapshot (VIX, 10Y Treasury via `^TNX`, HY OAS via FRED BAMLH0A0HYM2, IG OAS) for the cycle posture and Damodaran's risk-free rate. State the as-of date inline.
+- **Canonical citation form for the cycle snapshot (MANDATORY — it is local data, not a web source).** Cite as plain text: `（来源：indicators.db 本地快照（FRED BAMLH0A0HYM2 / ^TNX + yfinance），as of YYYY-MM-DD）` (English reports: `(Source: indicators.db local snapshot (FRED BAMLH0A0HYM2 / ^TNX + yfinance), as of YYYY-MM-DD)`). Optionally link each *series name* to its specific FRED series page (e.g. `https://fred.stlouisfed.org/series/BAMLH0A0HYM2`). **NEVER attach an `indicators.db` snapshot label to a filing URL** — a 200-OK 10-K that doesn't contain the quoted yield is worse than a 404 — **and NEVER link to `localhost`** (user-facing local URLs use `xs-macbook-air.local`, and the snapshot needs no local link at all).
 
 **See [`references/investor_lenses.md`](references/investor_lenses.md) for the nine rubrics in detail — scoring components, verdict bands, required-assumption blocks, failure modes, the routing rules for picking optional lenses by company type, and the guardrails that apply to all nine.**
 
@@ -382,7 +394,7 @@ See [`references/citations.md`](references/citations.md) for the full rules, per
 - `references/report_structure.md` — section-by-section word counts, per-section content spec, the investment-summary header block, the Section 2 "Valuation & Price Target" chapter (forward-estimates table + PT derivation + bull/base/bear), the Section 9.5 "Key debates & catalysts" block, and the full output template. **Read before writing.**
 - `references/citations.md` — inline-citation rules and example.
 - `references/risk_taxonomy.md` — the 8–12 risks across 4 buckets used in Section 9.
-- `references/investor_lenses.md` — the four optional Section 10 scorecards (Buffett, Munger, Damodaran, Howard Marks cycle).
+- `references/investor_lenses.md` — the nine Section-10 lenses (4 core: Buffett, Munger, Damodaran, Howard Marks cycle; 5 optional: Lynch, Fisher, Burry, Druckenmiller, Cathie Wood).
 - `references/quality_checklist.md` — quality standards and the pre-submit success checklist.
 
 ---
@@ -414,7 +426,7 @@ See [`references/citations.md`](references/citations.md) for the full rules, per
 
 ### Third-party research (THIRD, for market context and trends)
 
-- **Local institute-research library `db/zsxq.db` (START HERE among third-party sources).** ~6,900 broker PDFs (Morgan Stanley, Goldman, J.P. Morgan, Bernstein, UBS, Citi, Deutsche Bank, HSBC, Nomura, …). Search it BEFORE web-searching for analyst views: `python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "<ticker / name / 中文名>"`. The curated `summary` column often already carries broker + rating + price target + thesis (no PDF parsing needed); OCR + extract the body when you need verbatim quotes. **Sell-side — label `*Analyst view:*` and cite to `http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>`.** Full workflow in § "Local institute-research library" above; it is **Step 0.7** of the workflow.
+- **Local institute-research library `db/zsxq.db` (START HERE among third-party sources).** ~6,900 broker PDFs (Morgan Stanley, Goldman, J.P. Morgan, Bernstein, UBS, Citi, Deutsche Bank, HSBC, Nomura, …). Search it BEFORE web-searching for analyst views: `/opt/anaconda3/bin/python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "<ticker / name / 中文名>"`. The curated `summary` column often already carries broker + rating + price target + thesis (no PDF parsing needed); OCR + extract the body when you need verbatim quotes. **Sell-side — label `*Analyst view:*` and cite to `http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>`.** Full workflow in § "Local institute-research library" above; it is **Step 0.7** of the workflow.
 - **Industry research firms** (Gartner, IDC, Yole, TrendForce, TechInsights, Forrester) — used for market-sizing, competitive positioning, and industry benchmarks the company's filings don't provide.
 - **Sell-side analyst reports** (JPMorgan, Goldman, Bernstein, Needham, TechInsights) — for forward-looking commentary, peer comparisons, and thesis validation. **Note:** these are sell-side opinions, not primary facts. Check `db/zsxq.db` first (above); web-search only fills gaps the local library doesn't cover.
 - **Trade press and news** — for recent developments, confirmation, and context. Only as supporting evidence, not as primary claim sources.
@@ -426,7 +438,7 @@ See [`references/citations.md`](references/citations.md) for the full rules, per
 
 ## Prerequisites
 
-For **US issuers**, this skill runs [[sec-report-summary]] as a sub-step (Step 0.5 below). The multi-year SEC narrative it produces — per-filing highlights + a "Changes over the years" trajectory — becomes structured input for Section 4 (product evolution), Section 6 (industry trajectory), and Section 9 (risk-factor evolution). It is invoked automatically by the workflow; no user action needed.
+For **US issuers**, this skill runs [[sec-report-summary]] as a sub-step (Step 0.5 below). The multi-year SEC narrative it produces — per-filing highlights + a "Changes over the years" trajectory — becomes structured input for Section 4 (product evolution), Section 6 (industry trajectory), and Section 9 (risk-factor evolution). Run it for every initiation (first write for the ticker) when no fresh `reports/earnings/<TICKER>_*.md` exists; on a refresh of an existing report it may be skipped — but only with a stated reason recorded in the Step 10.6 verification log (see Step 0.5's run-or-log rule). Silent skipping is the failure mode.
 
 For **non-US issuers** (China A-share / HK / Taiwan / Japan / Korea), skip the sec-report-summary step — the `/sec/` infrastructure is US-only. Build the same historical-evolution threads directly from the domicile-portal filings synced in Step 0.
 
@@ -443,12 +455,12 @@ For **non-US issuers** (China A-share / HK / Taiwan / Japan / Korea), skip the s
 - **US issuers:**
   ```bash
   cd /Users/x/projects/financial_agent
-  python3 fetch_financial_report.py <TICKER>
+  /opt/anaconda3/bin/python3 fetch_financial_report.py <TICKER>
   ```
 - **China A-share / HK issuers:**
   ```bash
   cd /Users/x/projects/financial_agent
-  python3 -c "import fetch_cninfo_report as cr; cr.init_db(); [print(m) for m in cr._run_download('SZSE:002050', cr.ALL_CATEGORIES)]"
+  /opt/anaconda3/bin/python3 -c "import fetch_cninfo_report as cr; cr.init_db(); [print(m) for m in cr._run_download('SZSE:002050', cr.ALL_CATEGORIES)]"
   ```
   Run from the main project dir so files land in `cninfo_reports/<EXCHANGE>/<CODE>_<NAME>/` and not in a worktree.
 
@@ -480,6 +492,8 @@ Use that narrative as the **structured input** for:
 
 **Do not re-run sec-report-summary if a fresh report already exists** under `reports/earnings/<TICKER>_*.md` (mtime within the current session, or the filings on disk haven't changed since the existing report was written). Read the existing report instead.
 
+**Run-or-log rule (MANDATORY — silent skipping is the documented failure mode).** Run this step when no fresh `reports/earnings/<TICKER>_*.md` exists AND the report is an initiation (first write for the ticker). For a refresh of an existing research doc it may be skipped — it is a heavy multi-10-K pass on a 16 GB machine — but only with a stated reason. Either way, the Step 10.6 verification log MUST carry the line `**Step 0.5 sec-report-summary** — ran (output: reports/earnings/<TICKER>_<date>.md)` or `— skipped (<reason>)`. A US-issuer report whose log has neither is not done.
+
 **Skip this step entirely for non-US issuers** — sec-report-summary depends on the `/sec/` Flask service + `db/financial_reports.db`, which only cover SEC filings. For China A-share / HK / Taiwan / Japan / Korea, build the historical-evolution threads directly from the domicile-portal filings synced in Step 0.
 
 ### Step 0.7 — Search the local institute-research library (always run, all domiciles)
@@ -490,7 +504,7 @@ Before touching the website, **search `db/zsxq.db` for broker notes on the subje
 cd /Users/x/projects/financial_agent
 for q in "NVDA" "NVIDIA" "英伟达" "Blackwell" "AI server"; do
   echo "── $q ──"
-  python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "$q" --limit 40
+  /opt/anaconda3/bin/python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "$q" --limit 40
 done
 ```
 
@@ -499,8 +513,8 @@ Triage the JSON: keep the 5–15 most relevant + most recent rows (apply the 12-
 **If the library is thin or stale for this name**, top it up, then re-run the search:
 
 ```bash
-python3 download/zsxq_downloader.py --count 100 --query NVDA   # targeted by ticker/name
-python3 download/zsxq_downloader.py --count 100 --query lite   # general recent-feed top-up
+/opt/anaconda3/bin/python3 download/zsxq_downloader.py --count 100 --query NVDA   # targeted by ticker/name
+/opt/anaconda3/bin/python3 download/zsxq_downloader.py --count 100 --query lite   # general recent-feed top-up
 ```
 
 Everything from this step is **sell-side opinion** — carry the `file_id`s forward and cite them as `*Analyst view:*` / `*分析师观点：*` to `http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>` (never blended into a filing citation). Full search-and-cite rules: § "Local institute-research library" above. Record found-vs-fetched counts in the Step 10 verification log.
@@ -571,7 +585,7 @@ This is what turns a profile into a decision note — see § "Learning from sell
 1. **Forward financial-estimates table — project 3 years out** (5 if the model supports it): revenue, gross margin, operating-or-net margin, EPS, per year, with YoY growth. Each projected cell is labeled `*Analyst view:*`; cite each driver's external basis inline (filing segment data + guidance range + an industry-forecast number) — **never `(Source: our model)`**. Model the **segment mix shift** (each line its own path + margin trajectory, then summed) rather than a single blended top-line; tie each margin move to its driver (mix / operating leverage / pricing).
 2. **Derive the 12-month price target and show the arithmetic.** Pick the method that fits the business and state it explicitly:
    - **Forward-PE × target multiple** (most names): e.g. `2027E EPS × <target>x = <PT>`. **Justify the multiple against 3–5 named comps** (the JPM Yingliu-40x-vs-Howmet-37x move) — a multiple with no comp justification is not a derivation.
-   - **DCF** (stable cash generators): WACC = Rf + β × ERP, where **Rf is the 10Y from `indicators.db`** (reuse the Section-10 wiring; state the as-of date) and ERP is stated; terminal growth ≤ Rf.
+   - **DCF** (stable cash generators): WACC = Rf + β × ERP, where **Rf is the 10Y from `indicators.db`** (reuse the Section-10 wiring; state the as-of date — cite the snapshot per the canonical plain-text form in § "Investor-lens scorecards": never a filing URL, never localhost) and ERP is stated; terminal growth ≤ Rf.
    - **SOTP** (multi-segment / conglomerates): value each segment on its own multiple, then sum.
    - **rNPV** (biotech / binary pipelines): risk-adjust each asset's peak-sales by an explicit probability-of-success; state the PTS.
 3. **Bull / base / bear price targets**, each tied to its swing assumption (base = central estimates; bull = faster attach / penetration or higher multiple; bear = price war / margin compression), with upside / downside % on each. All three `*Analyst view:*`.
@@ -638,15 +652,17 @@ Identify 8–12 risks across 4 buckets (company-specific, industry/market, finan
 
 ### Step 8 — Charts and diagrams (Mermaid only — 4–8 blocks)
 
-A report this length needs visual anchors. **Add 4–8 Mermaid diagrams** across the document. Mermaid is markdown-native: the web viewer at `localhost:5001/claude-reports/` and GitHub render the diagrams inline at view time, so there is no PNG generation, no matplotlib subprocess, no committed binary assets, no per-chart bitmap buffer in the agent's V8 heap.
+A report this length needs visual anchors. **Add 4–8 Mermaid diagrams** across the document. Mermaid is markdown-native: the web viewer at `http://xs-macbook-air.local:5001/claude-reports/` and GitHub render the diagrams inline at view time, so there is no PNG generation, no matplotlib subprocess, no committed binary assets, no per-chart bitmap buffer in the agent's V8 heap.
 
-**Do NOT generate matplotlib PNG charts.** This was disabled project-wide on 2026-06-03 to cut per-agent memory footprint — every `import matplotlib.pyplot` + `savefig` held ~150-300 MB resident, and with 4-6 concurrent `/company-research` agents the cumulative load pushed the system past 90 GB and triggered OOM kills. **Mermaid covers every chart type a research report needs** — line, bar, pie, quadrant, timeline, tree, and multi-axis via `xychart-beta`. No exceptions; do not regress to matplotlib.
+**Do NOT generate matplotlib PNG charts.** This was disabled project-wide on 2026-06-03 to cut per-agent memory footprint — every `import matplotlib.pyplot` + `savefig` held ~150-300 MB resident, and with 4-6 concurrent `/company-research` agents the cumulative load pushed the system past 90 GB and triggered OOM kills. **Mermaid covers every chart type a research report needs** — line, bar, pie, quadrant, timeline, and tree, with quantitative trends via `xychart-beta`. No exceptions; do not regress to matplotlib.
+
+**`xychart-beta` has ONE y-axis — never mix units on it.** Do NOT plot a % series and a currency series on the same chart: the % line renders on the currency scale and reads as a money amount (a 19.5% operating-margin line on a `0 --> 30` US$bn axis reads as $19.5bn; a 70.9% gross-margin line on a `0 --> 300` ¥mn axis reads as ¥70.9M). The default fix is **two stacked `xychart-beta` blocks** — revenue bars in one, the margin line in its own chart with a % axis. If a combo is truly unavoidable, the caption MUST state the line's unit and that it shares the numeric scale — but split charts are the rule, the caption rescue is the exception.
 
 (Legacy chart PNGs in `reports/charts/` from before 2026-06-03 remain on disk and may be reused in the report via `![](charts/<file>.png)` markdown — do not delete them or regenerate them as Mermaid for old reports. The rule applies only to NEW chart generation going forward.)
 
 **Mermaid block types — pick the right one per use case:**
 
-- **Trend / time-series** (Section 1 revenue+margin, Section 2 valuation history, Section 8 TAM growth, latest 8–12 quarter print): `xychart-beta` — supports `line` and `bar`, multi-series, axis labels, customizable y-range. Wrap in ` ```mermaid` fence.
+- **Trend / time-series** (Section 1 revenue + margin as TWO stacked charts, Section 2 valuation history, Section 8 TAM growth, latest 8–12 quarter print): `xychart-beta` — supports `line` and `bar`, multi-series, axis labels, customizable y-range; single y-axis only (see the unit-mixing rule above). Wrap in ` ```mermaid` fence.
 - **Timeline** (Section 2 History): `timeline` block — founding → IPO → segment launches → recent milestones.
 - **Product portfolio tree** (Section 4 Products): `graph TD` mapping company → segments → product families → SKUs.
 - **Customer concentration** (Section 5): `pie title FY2024 revenue by top customers` with the top 3–5 customers + "All other". Use ONE denominator per pie (consolidated vs segment-level — never mix).
@@ -657,7 +673,7 @@ A report this length needs visual anchors. **Add 4–8 Mermaid diagrams** across
 **Placement summary** (echoed in `references/report_structure.md`):
 | Section | Mermaid block |
 |---|---|
-| 1 Overview | `xychart-beta` revenue + gross margin trend (3–5 yr) |
+| 1 Overview | `xychart-beta` revenue trend + a separate gross-margin chart (3–5 yr; two stacked blocks — never % and currency on one axis) |
 | 2 History | `timeline` block — founding → milestones |
 | 4 Products | `graph TD` product portfolio tree (the 10-K product *table* screenshot via `render_10k_section.py` is optional; markdown reproduction of the table is mandatory regardless) |
 | 5 Customers | `pie` — top-3-5 customer concentration (one denominator per chart) |
@@ -718,7 +734,7 @@ done | grep -v '^200 ' | grep -v '^301 ' | grep -v '^302 '
 
 Any 404 must be either fixed (find the real URL) or removed. 403 and 406 are usually anti-bot blocks (semi.org, Yahoo Finance, congress.gov, LinkedIn) — confirm those URLs work in a real browser before keeping them.
 
-**Local zsxq viewer URLs** (`http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>`) only resolve on the user's machine, so the loop above may report a connection failure if the server isn't reachable from where you run it. Verify them against the live route instead — `python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --file-id <file_id>` must return the row with `local_exists: true`, and its `pdf_url` is the citation URL to paste. The path must be `/zsxq/pdf/<file_id>/<filename>` (direct download); the `/zsxq/pdf-viewer/<id>` viewer page does not download on iPad and the old `/zsxq-pdf/<id>` form is a dead 404 — if any citation uses either, fix it.
+**Local zsxq viewer URLs** (`http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>`) only resolve on the user's machine, so the loop above may report a connection failure if the server isn't reachable from where you run it. Verify them against the live route instead — `/opt/anaconda3/bin/python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --file-id <file_id>` must return the row with `local_exists: true`, and its `pdf_url` is the citation URL to paste. The path must be `/zsxq/pdf/<file_id>/<filename>` (direct download); the `/zsxq/pdf-viewer/<id>` viewer page does not download on iPad and the old `/zsxq-pdf/<id>` form is a dead 404 — if any citation uses either, fix it.
 
 #### 10.2 — Verify SEC filenames came from the EDGAR submissions JSON
 
@@ -795,18 +811,24 @@ Before declaring done, confirm each line:
 - [ ] No fabricated executive names — every named exec is confirmed in an 8-K or DEF 14A
 - [ ] No `(Source: our model)` / `(Source: our analysis)` / `(模型估算)` self-references
 - [ ] Every `db/zsxq.db` citation is labeled `*Analyst view:*` / `*分析师观点：*`, uses the `/zsxq/pdf/<file_id>/<filename>` route (not the dead `/zsxq-pdf/` form), carries broker + date + page in the link text, and is never attached to a filing; every number quoted from a zsxq note string-matches the note's summary or OCR'd text
+- [ ] **When ≥2 zsxq notes were used:** the 卖方观点演变 (Sell-side view evolution) subsection is present — `db/stock_price_target.db` read-only pre-pass ran first, per-institute timeline ordered by the filename `-YYMMDD` date with self-revisions + triggers called out, disagreement table rendered where institutes conflict (no fake consensus), every view dated + cited to its `/zsxq/pdf/<file_id>/<filename>` link (see § "卖方观点演变 (Sell-side view evolution)")
 - [ ] Internal consistency: Section 1's competitive claim matches Section 7's; Section 2 timeline matches Section 1 prose; restructuring counts in narrative match the timeline
 - [ ] Numbers spot-checked against the 10-K (at least: revenue, gross margin, customer concentration, geographic mix, segment %, restructuring headcount)
+- [ ] Link-title ↔ URL consistency: every link whose title names a source (indicators.db, FRED, Yahoo, a broker, a filing, McKinsey/Yole/Gartner) resolves to that source's domain — scan `grep -oE '\[[^]]+\]\(http[^)]+\)' <report>.md` for titles paired with the wrong domain. A 200-OK URL that doesn't contain the claimed source/number (e.g. `[indicators.db 快照](https://www.sec.gov/...)`) is a FAIL even though the reachability check passes
 
 #### 10.6 — Append a verification log to each report
 
-After the References section in **every report produced** (the Chinese report by default; both Chinese and English in bilingual mode), append a `<details>` block listing what was checked. This makes verification visible to the reader and forces honesty about residual unknowns. The logs may differ slightly between languages (e.g., different filings checked) but follow the same structure:
+After the References section in **every report produced** (the Chinese report by default; both Chinese and English in bilingual mode), append a `<details>` block listing what was checked. This makes verification visible to the reader and forces honesty about residual unknowns. **The `<summary>` line MUST be the exact English string `Verification log (Step 10) — YYYY-MM-DD` even in Chinese reports** — project tooling greps for it; a translated summary (`验证日志…`) breaks the contract. Chinese annotation may follow inside the block body. The logs may differ slightly between languages (e.g., different filings checked) but follow the same structure:
 
 ```markdown
 <details>
 <summary>Verification log (Step 10) — YYYY-MM-DD</summary>
 
 **URL check** — all <N> URLs HTTP-checked YYYY-MM-DD; all return 200 / known-good 301.
+
+**Step 0.5 sec-report-summary** — ran (output: `reports/earnings/<TICKER>_<date>.md`) / skipped (<reason>) / n/a (non-US issuer).
+
+**Further-viewing URLs** — <N> links validated (200 with a browser UA) / omitted because <reason — e.g. "purely numeric report, nothing worth visualizing">.
 
 **SEC filenames** — resolved from EDGAR submissions JSON for CIK <padded>; primary docs: 10-K = `<filename>`, latest 10-Q = `<filename>`, DEF 14A = `<filename>`.
 
@@ -835,7 +857,7 @@ If the log shows residual unknowns the user cares about, fix them before declari
 
 ## Output location
 
-Save to **`reports/company/<Slug>/`** under the project root: `/Users/x/projects/financial_agent/reports/company/<Slug>/<filename>.md`. The viewer (http://localhost:5001/reports) groups by this folder structure. Create the folder if missing.
+Save to **`reports/company/<Slug>/`** under the project root: `/Users/x/projects/financial_agent/reports/company/<Slug>/<filename>.md`. The viewer (http://xs-macbook-air.local:5001/reports) groups by this folder structure. Create the folder if missing.
 
 **`<Slug>`** is everything that comes before `_Research_Document` / `_公司研究` / `_研究报告` in the filename — i.e. the company name plus primary ticker, joined with `_`. The filename itself is repeated inside the slug folder (one folder per company holds EN and / or ZH).
 
@@ -853,7 +875,7 @@ Examples:
 - `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Research_Document.md` (US, English)
 - `reports/company/Alibaba_HKEX9988/Alibaba_HKEX9988_Research_Document.md` (HK, English)
 - `reports/company/Toyota_TSE7203/Toyota_TSE7203_Research_Document.md` (Japan, English)
-- Tickerless private companies: use just the English / pinyin name as slug, e.g. `reports/company/Unitree/Unitree_Research_Document.md`.
+- Tickerless private companies: see § "Unlisted / private companies (`reports/unlisted/`)" below.
 
 EN and ZH versions of the same report share one slug folder — ZH adds the suffix `_zh` (preferred) or `_CN` before `.md`, e.g. `Tesla_NASDAQ_TSLA_Research_Document_zh.md`.
 
@@ -863,6 +885,14 @@ Other report types live in sibling folders the viewer also surfaces:
 - `reports/earnings/<TICKER>_<YYYYMMDD>.md` for quarterly earnings notes
 
 Always write under the main project's `reports/` directory — never to a worktree, `~/Downloads`, or any other location.
+
+### Unlisted / private companies (`reports/unlisted/`)
+
+The repo carries a dedicated tree for private-company research at **`reports/unlisted/`** (17+ existing folders — robotics startups, Huawei, etc.). Rules:
+
+1. **Canonical path: `reports/unlisted/<EnglishName>_<中文名>/<EnglishName>_<中文名>_公司研究.md`** — the English / pinyin component is **mandatory and comes first**, exactly as for listed names (e.g. `LimX_逐际动力/`, `MagicAtom_魔法原子/`, `Unitree_宇树科技/`). A pure-Chinese folder name (`魔法原子/`) fails the project filename rule — it cannot be found by an English search. Legacy pure-Chinese folders exist in the tree; do not replicate the pattern for new reports.
+2. **Every quality block applies identically to unlisted names:** the Chinese-only language default, the Step 10 verification log, the Data Used manifest, Further viewing, and the header rule `Rating / PT: not applicable — private` (per `report_structure.md` § "Investment summary header"). Private status waives the PT, not the verification pass.
+3. **Before creating a new unlisted report, check BOTH trees case-insensitively** — `ls reports/unlisted/ reports/company/ | grep -iE "<EnglishName>|<中文名>"` — a prior report may live under either convention (e.g. `reports/company/Unitree/`); update it in place rather than duplicating.
 
 ### Update-in-place rule — exactly one research doc per company per language
 
@@ -886,3 +916,5 @@ For **each language you're generating** (Chinese by default; Chinese + English w
 - **Zero matches** → create a new file at the canonical no-date path. Do **not** add a `_YYYY-MM-DD` suffix to the filename.
 
 **An existing English-language file from a prior run is NOT a trigger to refresh it.** If the user asks for "research X" today (no English opt-in), produce / refresh only the Chinese file — leave any pre-existing English file untouched, unless the user explicitly says `also refresh English` / `update bilingual` / `also in English`. Print the final path of every file produced so the user can confirm whether each was an update or a fresh create.
+
+**Retrofit clause — every touch of a vintage report triggers a block-presence audit.** Whenever an existing report file is opened for editing for ANY reason (refresh, link fix, citation backfill, mechanical route rewrite), run a 60-second presence check against the current mandatory-block list — investment-summary header (incl. forward valuation matrix + relative-performance line), Section 1A decision layer, Section 9.5 debates & catalysts, Data Used manifest, verification log, Further viewing — and either retrofit the missing blocks in the same pass or append a `**Spec gaps (vintage <date>):**` line to the verification log naming them. Reports written under older spec vintages must not keep circulating with invisible gaps just because the editing pass was mechanical.

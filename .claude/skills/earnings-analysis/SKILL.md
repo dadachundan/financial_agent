@@ -8,17 +8,18 @@ description: Create professional equity research earnings update reports (8-12 p
 Create professional **EARNINGS UPDATE REPORTS** analyzing quarterly results for companies already under coverage, following institutional standards (JPMorgan, Goldman Sachs, Morgan Stanley format).
 
 **Key Characteristics:**
-- **Length**: 8-12 pages
+- **Length**: 8-12 page equivalent
 - **Word Count**: 3,000-5,000 words
 - **Tables**: 1-3 summary tables (NOT comprehensive)
 - **Figures**: 8-12 charts
 - **Turnaround**: 1-2 days (within 24-48 hours of earnings)
 - **Audience**: Clients already familiar with the company
 - **Focus**: What's NEW - beat/miss, updated estimates, thesis impact
-- **Font**: Times New Roman throughout (unless user specifies otherwise)
+- **Format**: Markdown (default — see § "Output Specification"); DOCX only on explicit user request
+- **Language**: bilingual by default — English report plus a Simplified Chinese companion at `..._zh.md` (the Chinese text keeps financial / technical terms in English alongside the gloss, e.g. `gross margin (毛利率)`, matching the company-research convention; the Further-viewing heading becomes `**Further viewing / 延伸观看**`). Produce a single language only when the user explicitly asks ("English only", "中文即可").
 
 **Two format variants** (pick by turnaround need):
-- **Deep update (default)** — the 8-12 page DOCX described above.
+- **Deep update (default)** — the full-length (8-12 page equivalent) markdown report described above.
 - **Note** — a fast-turnaround ~2-4 page numbered note matching how GS / JPM / MS actually ship same-day reviews: **boxed tables, bulleted segment lines, numbered top-level sections (1 Results · 2 Forward visibility · 3 Guidance · 4 Valuation · 5 Risks)**, Action Header on line 1. Same rigor (every number triangulated, every claim cited) — just tighter. Use for same-day reactions; the deep variant for the full estimate/thesis re-cut.
 
 ## When to Use
@@ -31,8 +32,9 @@ Use when the user requests:
 
 **Do NOT use if:**
 - User requests "initiation report" → Use different skill
-- User requests "flash note" or "quick take" → Different format
 - Company is not already covered → Need initiation first
+
+**User requests "flash note" / "quick take" / same-day reaction → use the **Note** variant of this skill** (2-4 pages, numbered sections, Action Header on line 1 — see Key Characteristics). It is this skill, not a different one.
 
 **Matched-pair with earnings-preview.** This review is the back half of a JPM-style "As We Previewed → As [Co] Delivered" pair. If an `earnings-preview` note (or any prior estimate) exists for this quarter, **open the review by reconciling what was called vs what printed** (see references/workflow.md Step 3). Cross-link the preview in the Sources block.
 
@@ -41,13 +43,13 @@ Use when the user requests:
 Compact index of the load-bearing don't-dos enforced throughout this skill.
 
 - **Do not use earnings dates / numbers from training data.** Always search for the latest release and verify it's within 3 months of today. See Phase 1 "🚨 TRAINING DATA IS OUTDATED 🚨".
-- **Do not write a beat/miss number without citing the consensus source by name + date.** "Beat consensus" is meaningless without "Bloomberg consensus as of YYYY-MM-DD" or "FactSet, accessed YYYY-MM-DD". See § "Citations & Source Attribution".
+- **Do not write a beat/miss number without citing the consensus source by name + date.** "Beat consensus" is meaningless without "Bernstein FQ1-26 preview, 2026-02-02" or "Yahoo Finance analyst estimates, accessed YYYY-MM-DD". **Never write "Bloomberg/FactSet consensus" — no terminal exists in this project**; see § "Consensus & sell-side sources in this project".
 - **Do not invent 10-Q line items.** Every metric in the report traces to a specific page of the 10-Q, the earnings release, or the call transcript. If the company doesn't break out a metric (e.g. segment-by-region revenue), say so explicitly.
 - **Do not write a guidance change ("raised", "cut", "color-bearing reaffirmation") without citing both the old guide and the new guide.** Both must be linked to their respective primary sources, not paraphrased.
 - **Do not let a forward estimate update be ungrounded.** Every Old → New estimate line in the report must name the specific result that drove the change ("Q3 services margin came in 280 bp ahead; raised FY services margin estimate by 50 bp"). **No estimate revision without a result-driven reason clause — "our model" / "our analysis" is never a valid reason** (CLAUDE.md "Numerical Accuracy"; the reason must name the specific result).
 - **Do not bury the stock reaction.** A beat that sold off (or a miss that rallied) must be reconciled explicitly. See § "6. Reaction Reconciliation".
 - **Do not omit URLs.** Every source in the Sources block is a clickable hyperlink (SEC EDGAR for filings, IR site for the earnings release/deck/transcript). Plain text references are a defect.
-- **Do not skip the Data Used manifest** at the end of the report (Phase 4 output spec). The DOCX format already enforces the Sources block; the markdown handoff also gets a structured manifest so the data inventory is legible at a glance.
+- **Do not skip the Data Used manifest** at the end of the report (Phase 4 output spec). The markdown report carries both the Sources block and the structured manifest so the data inventory is legible at a glance.
 - **Do not run destructive SQL against `db/*.db`.** Read-only only. See [`CLAUDE.md`](../../../CLAUDE.md) § "Database Safety".
 
 ## Critical Requirements
@@ -106,8 +108,22 @@ Cite in every earnings update:
 - ✅ 10-Q filing (with filing date and EDGAR link)
 - ✅ Earnings call transcript (with date)
 - ✅ Investor presentation/supplemental materials (if available)
-- ✅ Consensus estimates source (Bloomberg/FactSet/etc. with date)
+- ✅ Consensus estimates source — named + dated, from the project sources below (NOT "Bloomberg/FactSet": no terminal exists)
 - ✅ Prior guidance (from previous quarter's materials)
+
+**Consensus & sell-side sources in this project** ⭐ (the only citable Street numbers):
+
+This project has no Bloomberg/FactSet terminal. **Never write "Bloomberg consensus" / "FactSet consensus" unless the figure traces to a reachable URL that literally contains it** (CLAUDE.md "Numerical Accuracy"). Source the Street in this order:
+
+1. **Search the local broker library FIRST (`db/zsxq.db` — read-only, Tier 2).** Broker **preview + recap** notes for the quarter carry Street-by-segment numbers, the whisper, PT moves, and the reaction explanation that feeds § "6. Reaction Reconciliation" (e.g. Bernstein QCOM FQ1-26 recap: "$12.3B/$3.50 vs Street at $12.2B/$3.41", "FQ2 guided $10.6B vs Street $11.2B and us $10.9B"):
+   ```bash
+   cd /Users/x/projects/financial_agent
+   /opt/anaconda3/bin/python3 zsxq_fts.py --query "<TICKER> recap" --limit 20
+   /opt/anaconda3/bin/python3 zsxq_fts.py --query "<中文名> 业绩" --limit 20
+   /opt/anaconda3/bin/python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --query "<TICKER>" --limit 40
+   ```
+   Read the matched preview/recap PDFs (OCR image-only pages via the `zsxq-analyze` `ocr_pdf.py` — ocrmac, never Tesseract). Cite them with the direct-download `pdf_url` that `find_pdf.py` prints (`http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<urlencoded-name>` — NEVER `/zsxq/pdf-viewer/<id>` or the dead `/zsxq-pdf/<id>`), **always labeled `*Analyst view:*` and never blended into a filing citation** (same convention as company-research).
+2. **If zsxq has no coverage:** the Yahoo Finance analyst-estimates page for the ticker, or a named + dated press article that literally prints the consensus figure.
 
 **REFERENCE SECTION WITH CLICKABLE HYPERLINKS:**
 
@@ -172,7 +188,7 @@ When this report covers something a reader would struggle to picture from prose 
 - **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
 - **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
 
-> Full spec: `references/citations.md` § "Further viewing — explainer videos".
+> Full spec: [.claude/skills/company-research/references/citations.md](../company-research/references/citations.md) § "Further viewing — explainer videos".
 
 ## Learning from sell-side institutional research
 
@@ -238,7 +254,7 @@ Create 8-12 charts focusing on quarterly trends and what's new:
 **See [references/workflow.md](references/workflow.md)** for chart specifications.
 
 ### Phase 4: Report Creation (2-3 hours)
-Create 8-12 page DOCX report with specific structure.
+Write the markdown report (8-12 page equivalent) with specific structure; DOCX only on explicit user request.
 
 **See [references/report-structure.md](references/report-structure.md)** for complete page-by-page templates and formatting requirements.
 
@@ -255,11 +271,21 @@ Verify content, formatting, accuracy, and timeliness before delivery.
 
 **See [references/best-practices.md](references/best-practices.md)** for quality checklist and common mistakes to avoid.
 
+**Then (mandatory, in order):**
+1. **Append the in-report verification log** — `<details><summary>Verification log (Step 10) — YYYY-MM-DD</summary>` block per workflow.md Step 15 (the `<summary>` string is exact — project tooling greps for it; same contract as company-research).
+2. **Commit without asking**: stage → commit (Conventional Commit, e.g. `feat(reports/earnings): QCOM FQ2-26 earnings update`; no Co-authored-by footer) → push to `main`.
+
 ## Output Specification
 
-**Primary Deliverable**: DOCX report (8-12 pages)
-**File Name**: `[Company]_Q[Quarter]_[Year]_Earnings_Update.docx`
-**Example**: `Nike_Q2_FY24_Earnings_Update.docx`
+**Primary Deliverable**: Markdown report (3,000-5,000 words ≈ 8-12 page equivalent)
+**File Path**: `reports/earnings/<TICKER>_Q<N>FY<YY>_earnings_update_<YYYY-MM-DD>.md`
+**Example**: `reports/earnings/QCOM_Q1FY26_earnings_update_2026-02-05.md`
+**Chinese companion** (bilingual default): same path with `_zh.md` suffix.
+
+- Ticker-first filename satisfies the project English-filename rule (CLAUDE.md "Research Report Filenames").
+- The `_earnings_update_` suffix is load-bearing: `reports/earnings/` is shared with `sec-report-summary`'s `<TICKER>_<YYYYMMDD>.md` living filing summaries — **never collide with or overwrite those files**.
+- Charts are matplotlib PNGs under `reports/charts/`, embedded by relative path (see workflow.md Step 12).
+- **DOCX is opt-in only** — produce `[Company]_Q[Quarter]_[Year]_Earnings_Update.docx` only when the user explicitly asks for a Word document; the markdown file remains the canonical, committed copy.
 
 **Contents:**
 - Page 1: Summary with rating, price target, key takeaways
@@ -271,6 +297,7 @@ Verify content, formatting, accuracy, and timeliness before delivery.
 - 8-12 embedded charts
 - 1-3 summary tables
 - Complete sources section with clickable hyperlinks
+- Verification log `<details>` block at the very end (see Phase 5)
 
 **Optional Deliverable**: XLS model update (optional for earnings updates)
 
@@ -288,10 +315,10 @@ A structured manifest of evidence categories + dates + freshness. Goes at the en
 - Q<N-1> FY<YY> release YYYY-MM-DD; Q<N> FY<YY-1> release YYYY-MM-DD; latest 10-K (FY filed YYYY-MM-DD).
 
 **Consensus + guidance**
-- Bloomberg / FactSet consensus snapshot as of YYYY-MM-DD (one trading day before release). Prior FY guide from Q<N-1> release / call (issued YYYY-MM-DD); new FY guide from Q<N> release / call (issued YYYY-MM-DD).
+- Consensus snapshot (zsxq broker preview/recap note with file_id, or Yahoo Finance analyst estimates) as of YYYY-MM-DD (pre-release). Prior FY guide from Q<N-1> release / call (issued YYYY-MM-DD); new FY guide from Q<N> release / call (issued YYYY-MM-DD).
 
 **Market data**
-- Closing price YYYY-MM-DD (before release); next-day reaction YYYY-MM-DD. TTM multiples as of YYYY-MM-DD. Source: Yahoo Finance / Bloomberg.
+- Closing price YYYY-MM-DD (before release); next-day reaction YYYY-MM-DD. TTM multiples as of YYYY-MM-DD. Source: Yahoo Finance (yfinance).
 
 **Cross-coverage context**
 - Latest [reports/company/<Slug>/<filename>.md](../../../reports/company/<Slug>/<filename>.md) (last updated YYYY-MM-DD) — read as structured input for thesis-impact section, not cited inline.
@@ -331,7 +358,7 @@ Examples of good/bad headlines, tips for success, common mistakes to avoid, and 
 
 **Required:**
 - Python (matplotlib, pandas, seaborn) for chart generation
-- DOCX skill for report creation
 
 **Optional:**
+- DOCX skill (only when the user explicitly requests a Word copy)
 - XLS skill for model updates (not required for earnings updates)

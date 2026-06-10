@@ -17,7 +17,7 @@ This skill needs three upstream artifacts:
 - `trader_investment_plan` — from [[trader-plan]]
 - `investment_plan` — from [[research-manager]]
 
-**If `risk_debate_history` is missing**, invoke [[risk-debate]] first. That will cascade through [[trader-plan]], [[research-manager]], [[bull-bear-debate]], and the four analyst skills as needed.
+**If `risk_debate_history` is missing**, invoke [[risk-debate]] first. That will cascade through [[trader-plan]], [[research-manager]], [[bull-bear-debate]], and the three analyst skills (sentiment-analyst, news-analyst, company-research) as needed.
 
 `past_context` is loaded by this skill itself from the memory log — no prerequisite skill needed, but the log file may be empty on first ever run.
 
@@ -33,6 +33,19 @@ For a clean full-pipeline run from scratch, prefer [[trading-analysis]] over inv
   ```bash
   python scripts/memory_log.py read --ticker <ticker>
   ```
+
+## Resolve stale pending entries (run BEFORE the past_context read)
+
+The track-record feature and the **Key estimate changes** block only work if pending entries ever get resolved — nothing else in the pipeline closes the loop. Check `python scripts/memory_log.py list --pending`; for any pending entry **on this ticker older than ~14 days**:
+
+1. Compute the raw return (yfinance close on the entry's trade date vs the latest close) and the alpha vs SPY over the same window.
+2. Write a 3–5 sentence reflection yourself, in conversation — what the call got right/wrong and why (no LLM API, per the project rule) — and save it to a temp file.
+3. Close the loop with the sanctioned helper (the log is a markdown file — no DB rules implicated):
+   ```bash
+   python scripts/memory_log.py resolve --ticker <TICKER> --trade-date <YYYY-MM-DD> \
+       --raw-return <X> --alpha-return <Y> --holding-days <N> --reflection-file <tmp>
+   ```
+Then fetch `past_context` — it will now carry resolved entries the rating can learn from.
 
 ## Rating scale (use exactly one)
 
@@ -76,6 +89,19 @@ If `past_context` is non-empty, incorporate its lessons; otherwise rely solely o
 
 **Time Horizon**: <e.g. "12-month price target; 3-6 month holding horizon", with a target date — never open-ended>
 ```
+
+**Link form — repo-root-relative only.** This report is duplicated verbatim into `memory/trading_memory.md`, so cross-artifact links must be repo-root-relative (`reports/company/<folder>/valuation/…`, `reports/company/<folder>/trading/<date>/sentiment-analyst.md`) or the viewer URL (`http://xs-macbook-air.local:5001/claude-reports/…`) — never directory-relative (`../../valuation/…`, `sentiment-analyst.md`), which dangle from memory/'s location.
+
+**In-repo model artifacts are not external sources.** An in-repo valuation / initiating-coverage doc may anchor the scenario math, but it must be labeled `*Internal research:*`, its derivation restated inline (`multiple × earnings base`), and the external inputs it is built on cited alongside — it never substitutes for an external citation (the analyst's own model is NOT a source).
+
+## Verification log (required — last block of the report)
+
+portfolio-decision is the artifact copied into the memory log and read by the user, so it carries the pipeline's verification gate. End the report with a compact `<details><summary>Verification log — YYYY-MM-DD</summary>…</details>` block listing:
+
+1. **PT derivation recomputed** — multiple × earnings base re-multiplied, and any averaging/midpoint math re-done (a shipped report once called $340 "midway between $331 and $385"; the midpoint is $358).
+2. **Every % vs current recomputed** off the dated reference close.
+3. **3 headline numbers re-checked** for literal presence in their cited upstream URLs/reports (`✓ string-matches` / `✗ NOT in source — fixed`).
+4. **All repo-relative links resolved** with `ls`.
 
 ## Further viewing — explainer videos (optional, but default to including)
 

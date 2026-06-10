@@ -132,7 +132,7 @@ Each row's status cell should be no more than one short sentence; the supporting
 The matrix is the deliverable. Below it, three short paragraphs:
 
 1. **The pattern.** Where do most rows fall? Mostly DIRECTLY COMPETE means the two companies are converging into a true head-to-head; lots of NON-OVERLAPPING means they're more like adjacencies that happen to be debated.
-2. **The "X dominant" rows.** Pull out the 2–5 sub-segments where one side has a real franchise. These will be referenced throughout §5.4 (sub-segment share) and §6 (scorecard).
+2. **The "X dominant" rows.** Pull out the 2–5 sub-segments where one side has a real franchise. These will be referenced throughout §5.4 (sub-segment share) and §9 (scorecard).
 3. **The most informative NON-OVERLAPPING rows.** Where one side ships and the other doesn't is often the most strategically interesting fact in the report. Sentaurus, Allegro X, and (now) Arm Artisan foundation IP are three examples from the SNPS-vs-CDNS matrix.
 
 ## Common failure modes

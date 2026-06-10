@@ -1,6 +1,6 @@
 # Report Structure and Templates
 
-This document provides complete page-by-page templates and formatting requirements for the earnings update DOCX report.
+This document provides complete page-by-page templates and formatting requirements for the earnings update report (markdown default; DOCX only on explicit user request — see SKILL.md § "Output Specification").
 
 ## Complete Report Structure
 
@@ -27,6 +27,21 @@ Price (as of [date]): $XX.XX          ← always date the price
 Prior PT: $XXX  →  New PT: $YYY        ← always show the move
 Implied upside: +ZZ% (vs dated close above)
 Valuation basis: [multiple × out-year EPS / SOTP / DCF]
+```
+
+**Top Section - Market Data box (compact, broker page-1 standard — all derivable from yfinance):**
+```
+MARKET DATA
+─────────────────────────────────────────────────
+Close (YYYY-MM-DD)        $XXX.XX
+52-wk range               $XX.XX – $XXX.XX
+Market cap                $XXXB
+Enterprise value          $XXXB
+Dividend yield            X.X%
+FYE                       [month]
+Perf abs / vs SPX         1M +X%/+X% · 6M +X%/+X% · 12M +X%/+X% · YTD +X%/+X%
+
+Source: Yahoo Finance (yfinance), as of YYYY-MM-DD
 ```
 
 **Top Section - Quick Summary Box:**
@@ -89,6 +104,7 @@ Gross Margin (%)     XX.X%          XX.X%          +XXbps  XX.X%
 EBITDA ($M)          X,XXX          X,XXX          +X%     X,XXX
 EBITDA Margin (%)    XX.X%          XX.X%          +XXbps  XX.X%
 Adj EPS ($)          X.XX           X.XX           +X%     X.XX
+FCF ($M)             X,XXX          X,XXX          +X%     X,XXX
 P/E (x)              XX.Xx          XX.Xx          -X%     XX.Xx
 
 Note: "E" = Estimate. Old estimates from [prior report date].
@@ -195,6 +211,19 @@ Source: Company reports / earnings call
 
 - **Path-to-normalized-profit bridge** — for loss-making / turnaround names, state the out-year normalized number with its build (UBS Meituan FY28 normalized Rmb42bn = delivery 27 + IHT 22 − new initiatives −7). See workflow.md Step 9.
 
+**Balance sheet & capital return (standing mini-block — NOT optional-appendix material; Bernstein keeps standing exhibits for buyback / inventory days / net debt every quarter):**
+```
+BALANCE SHEET & CAPITAL RETURN
+─────────────────────────────────────────────────────────────────
+                            Q[X-1]      Q[X]
+Buyback ($M)                XXX         XXX     (remaining authorization $X.XB)
+Dividend ($M / per share)   XXX / X.XX  XXX / X.XX
+Inventory ($M / days)       X,XXX / XXX X,XXX / XXX
+Net cash (debt) ($M)        X,XXX       X,XXX
+
+Source: 10-Q / earnings release
+```
+
 ### Guidance & Outlook — a CO-EQUAL block, not a footnote (1 page)
 
 **The forward guide is frequently the real story while the print is table stakes** (GS Dell, DB Oracle, Broadcom FQ3). Treat the guidance block as **co-equal with the print block** — and split it into **next-quarter** and **full-year**, each shown **three ways: vs prior guide, vs Street, AND vs our model**, with a one-line achievability take. This is the GS/DB standard the skill previously folded into a single table.
@@ -206,12 +235,16 @@ GUIDANCE vs PRIOR vs STREET vs OURS
                      New Guide       Prior Guide   vs Street   vs Ours
 NEXT-QTR Revenue     $XX-XXB (mid $X) $XX-XXB       +X% vs $X   +X% vs $X
 NEXT-QTR EPS         $X.XX-X.XX       n/a           +X% vs $X   +X% vs $X
+NEXT-QTR [Segment A] implied ~$X.XB   —             −X% vs $X   −X% vs $X   ← labeled calc
+NEXT-QTR [Segment B] implied ~$X.XB   —             +X% vs $X   in line
 FY Revenue           $XX-XXB (mid $X) $XX-XXB       +X% vs $X   +X% vs $X
 FY EPS               $X.XX-X.XX       $X.XX-X.XX    +X% vs $X   +X% vs $X
 
 Our Take (achievability): [one line — sandbag/stretch read vs track record;
   and, for up-cycle raises, the binding constraint: supply- vs demand-constrained]
 ```
+
+**Decompose the guide by segment where possible (Bernstein QCOM FQ1-26 standard).** Where the company guides a segment — or the total guide plus held-flat assumptions lets you imply one — derive the implied segment number, **label it as a calc with both inputs cited**, and show it vs Street and vs our model (Bernstein: "QCT guided $8.8-9.4B mid $9.1B well below consensus $9.8B; Handsets seen ~$6B well below the Street at ~$6.87B; Auto implied ~$1.3B above Street $1,158M"). The segment-implied decomposition is usually where the actual story lives. Cross-reference workflow.md Step 8.
 
 Note the explicit **guide-midpoint** column — beat/miss must be triangulated against YoY, our estimate, AND the guide midpoint (Bernstein/DB/GS lead with the midpoint). For the credibility / sandbag-vs-stretch and supply-vs-demand framing behind "Our Take", see workflow.md Step 8.
 
@@ -285,6 +318,8 @@ Given [rationale], we believe [premium/discount/inline] valuation is warranted.
 
 Do not merely "mention DCF/comps". Show an explicit build that reconciles to the printed PT.
 
+**Any PT change must be decomposed into multiple change vs estimate change** (Bernstein: "PT $200→$175 = de-rate 18x→17x, on FY27E EPS $11.15→$10.38") — never print just the new PT; the reader must see which lever moved and by how much.
+
 For **multi-segment names**, a SOTP build where each line is `EBIT × multiple → per-share value`, summing to the PT (UBS Meituan / Citi DiDi standard):
 ```
 SOTP → PRICE TARGET
@@ -334,6 +369,7 @@ Op Margin (%)        XX.X%    XX.X%    +XXbps    XX.X%
 Net Income ($B)      X.X      X.X      +X.X%     X.X
 EPS - Adjusted ($)   X.XX     X.XX     +X.X%     X.XX
 EPS - GAAP ($)       X.XX     X.XX     +X.X%     X.XX
+FCF ($B)             X.X      X.X      +X.X%     X.X
 
 P/E (x)              XX.Xx    XX.Xx              XX.Xx
 EV/EBITDA (x)        XX.Xx    XX.Xx              XX.Xx
@@ -409,9 +445,10 @@ Source: [Firm Name] estimates
 ```
 Revenue of $2.45B beat consensus of $2.39B by $60M (2.5%)¹
 
-¹ Bloomberg consensus as of market close November 6, 2024; Company earnings release November 7, 2024
-  [Hyperlink "earnings release" to: https://investor.company.com/news/q3-2024-earnings]
+¹ *Analyst view:* [Bernstein Q3 preview, 2024-11-02](http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<urlencoded-name>) (Street $2.39B);
+  Company [earnings release, November 7, 2024](https://investor.company.com/news/q3-2024-earnings)
 ```
+(Never "Bloomberg/FactSet consensus" — no terminal exists; the consensus figure must string-match a URL cited in the same paragraph. See SKILL.md § "Consensus & sell-side sources in this project".)
 
 ### For Guidance:
 ```

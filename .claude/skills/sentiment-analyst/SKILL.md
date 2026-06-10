@@ -31,7 +31,13 @@ Compute `start_date` as `trade_date` minus 7 days, then:
    python scripts/get_social_sentiment.py reddit <ticker>
    ```
 
-4. **Positioning & options layer (optional 4th source — what people DID).** Distinct from social posts: any **short-interest, put/call ratio, or institutional-ownership / flow** figures that surface in the news-fetcher output. Treat this as the *positioning* dimension. Institutions weight what people DID (flows, short interest, margin, options skew) above what they SAY (surveys/posts), because positioning is the cleaner contrarian signal — crowded longs precede pullbacks, capitulation outflows precede bottoms (GS Kickstart / Barclays "crowding" framing). Each number must be cited to the URL that literally contains it (numerical-accuracy rule). **This is an opportunistic layer** — there is no dedicated fetcher; pull only figures the news fetcher actually returned. If no positioning data is available, **say so explicitly** — no fabrication, same graceful-degradation rule as the other sources.
+4. **Positioning & options layer (4th source — what people DID).** Distinct from social posts: **short-interest, put/call ratio, or institutional-ownership / flow** figures. Treat this as the *positioning* dimension. Institutions weight what people DID (flows, short interest, margin, options skew) above what they SAY (surveys/posts), because positioning is the cleaner contrarian signal — crowded longs precede pullbacks, capitulation outflows precede bottoms (GS Kickstart / Barclays "crowding" framing). Each number must be cited to the URL that literally contains it (numerical-accuracy rule).
+
+   **Sanctioned short-interest read (run it every time — don't wait for a headline to surface it):**
+   ```bash
+   /opt/anaconda3/bin/python3 -c "import yfinance as yf; i=yf.Ticker('<ticker>').info; print('shortPctFloat:', i.get('shortPercentOfFloat'), '| sharesShort:', i.get('sharesShort'), '| shortRatio:', i.get('shortRatio'))"
+   ```
+   Cite these figures to the Yahoo Finance page that displays them: `[Yahoo Finance — <ticker> statistics](https://finance.yahoo.com/quote/<ticker>/key-statistics/)`. Put/call ratios and fund flows remain **opportunistic** — there is no dedicated fetcher for those; pull only figures the news fetcher actually returned. If a positioning datapoint is unavailable, **say so explicitly** — no fabrication, same graceful-degradation rule as the other sources.
 
 Each fetcher degrades gracefully and prints either real data or a clear `<unavailable>` placeholder. Do **not** synthesize content the fetchers didn't return — if a source is unavailable, say so explicitly in the report.
 
@@ -79,7 +85,7 @@ A markdown report covering, in order:
 2. **Source-by-source breakdown** — what each of news / StockTwits / Reddit is telling you, with specific evidence (cite message counts, ratios, notable posts).
 3. **Positioning read** — what the positioning/options layer (short interest, put/call, ownership/flows) shows people *DID*, contrasted with what retail *SAYS* (StockTwits/Reddit). State plainly that positioning is the cleaner contrarian signal. Each figure cited to the URL that contains it. **If no positioning data surfaced, write one line saying so** — do not fabricate.
 4. **Divergences, alignments, and key narratives** across sources. Lead with the sharpest divergence, quantified and percentile-anchored (GS "two sentiment series diverge" method) — e.g. "retail bull ratio at the 92nd percentile of its 90-day range while news tone is net-negative."
-5. **Calibration table** — modeled on the Kickstart / Citi BMC layout, one row per gauge: `Gauge | Today's reading | Recent-range percentile | Read (confirmatory / contrarian / neutral)`. Rows: StockTwits bull ratio, message volume, Reddit engagement, news tone, and any positioning figure. This forces every sentiment number to be expressed vs its own history. Keep each row's number tied to its fetcher-URL citation. Where the ~90-day history is unavailable, mark the percentile cell `n/a (insufficient history)` rather than guessing.
+5. **Calibration table** — modeled on the Kickstart / Citi BMC layout, one row per gauge: `Gauge | Today's reading | Recent-range percentile | Read (confirmatory / contrarian / neutral)`. Rows: StockTwits bull ratio, message volume, Reddit engagement, news tone, and any positioning figure. This forces every sentiment number to be expressed vs its own history. Keep each row's number tied to its fetcher-URL citation. **The percentiles come from this ticker's `_sentiment_gauges.csv` history (see "Persist gauge history" below)** — once it holds ≥5 rows for the ticker, compute each percentile from it; before that, mark the cell `n/a (insufficient history — run N of 5)` rather than guessing.
 6. **Catalysts (upside) vs Risks (downside)** — two parallel bulleted lists, mirroring the Kickstart 利好/利空 block: **Catalysts** (upcoming earnings, product launches, favorable macro) and **Risks** (competitive threats, adverse macro, crowded positioning unwind). Keep them as separate lists, not one blob.
 7. **Summary table** — `Signal | Direction | Source (link) | Supporting Evidence`. The `Source (link)` column must be a clickable markdown link, not a bare platform name.
 8. **References** — a bulleted list of every URL cited above, grouped into `### News`, `### StockTwits`, `### Reddit`. Each bullet: `- [@user / publisher · YYYY-MM-DD — short label](url)`.
@@ -106,6 +112,16 @@ Every quoted excerpt, named post, or specific message count tied to a single sou
 Aggregate stats (e.g. "Bullish 70 / Bearish 30 / Unlabeled 5 across 105 StockTwits messages") don't need a per-message URL — citing the summary line is enough, and the References section captures the underlying posts. Quoted post bodies always need the post's URL.
 
 If a source returned `<unavailable>` or no posts, say so explicitly — never fabricate a citation.
+
+## Persist gauge history (required — makes the percentile calibration self-bootstrapping)
+
+The fetchers return only point-in-time snapshots (latest ~30 StockTwits messages, 7-day Reddit search); no ~90-day history exists anywhere else, so the percentile discipline above can only ever fire if this skill builds its own history. At the end of every run, append **exactly one CSV row** to `<company-folder>/trading/_sentiment_gauges.csv` (plain file write — not a DB; create the file with this header on first run):
+
+```
+date,ticker,bull_count,bear_count,unlabeled,bull_ratio,message_volume,reddit_posts,reddit_top_engagement,news_tone
+```
+
+Use the run's `<trade_date>` as `date`; `news_tone` is a coarse `positive|negative|mixed|neutral` label. Never overwrite or re-sort existing rows; never fabricate back-history.
 
 ## Persist output
 

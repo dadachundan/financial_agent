@@ -6,7 +6,7 @@ Embed **4–8 Mermaid diagrams** across the report — **Mermaid only, no matplo
 
 | Section | Mermaid block | IR-deck slide that often anchors it |
 |---|---|---|
-| 1 Overview | `xychart-beta` revenue + gross margin trend (3–5 yr) | Latest earnings-deck "Revenue + Margin Bridge" slide |
+| 1 Overview | `xychart-beta` revenue trend + a separate gross-margin chart (3–5 yr; two stacked blocks — `xychart-beta` has one y-axis, never % and currency together) | Latest earnings-deck "Revenue + Margin Bridge" slide |
 | 2 History | `timeline` block — founding → milestones | Investor day "Our journey" slide (when present) |
 | 4 Products | `graph TD` product portfolio tree | Investor day product-portfolio slide |
 | 5 Customers | `pie` — top 3–5 customer concentration (one denominator) | Investor day customer-logo / cohort slide |
@@ -107,7 +107,7 @@ If there is **no recent guidance change** to highlight, omit the banner entirely
 
 A dedicated chapter, distinct from the Section 1 TTM snapshot (which is backward-looking). This is the forward, decision-grade analysis that mirrors every institutional analog. Built from Step 2b. **Everything in this chapter is the analyst's own forward view — every projected number, the PT, and the scenario PTs are labeled `*Analyst view:*` / `*分析师观点：*` and NEVER carry a filing citation.** Cite the *inputs* to each projection (filing segment data + management guidance + an industry forecast) inline; never write `(Source: our model)`.
 
-**(a) Forward financial-estimates table (REQUIRED) — 3 years out (5 if the model supports it).** Revenue, gross margin, operating-or-net margin, EPS, per year, with YoY growth. Model the **segment mix shift** — each business line its own revenue path + margin trajectory, then summed (the Tesla 6-way / Horizon licensing→hardware pattern) — not a single blended top-line. Tie each margin move to a driver (mix shift / operating leverage / pricing power). Template:
+**(a) Forward financial-estimates table (REQUIRED) — 3 years out (5 if the model supports it).** Revenue, gross margin, operating-or-net margin, EPS, per year, with YoY growth — **plus a cash-flow / balance-sheet layer: an FCF (or FCF yield) row and a net cash/(debt) row for all names, and for loss-making companies a cash-runway line (quarters, at current burn)**. Broker initiations always carry this layer (the GS Tinavi model forecasts FCF yield, net debt/equity, working-capital days alongside EPS) — for cash-burning names the decision variable IS the runway, not the EPS path. Cash/debt comes from the latest balance sheet and burn from the cash-flow statement (cited inline); projected cells stay `*Analyst view:*`. When the company guides quarterly, a next-4-quarters revenue/EPS path is recommended (not required). Model the **segment mix shift** — each business line its own revenue path + margin trajectory, then summed (the Tesla 6-way / Horizon licensing→hardware pattern) — not a single blended top-line. Tie each margin move to a driver (mix shift / operating leverage / pricing power). Template:
 
 ```
 | Metric (*Analyst view:*) | FY24A | FY25E | FY26E | FY27E | CAGR |
@@ -119,6 +119,9 @@ A dedicated chapter, distinct from the Section 1 TTM snapshot (which is backward
 | Net margin %             | 12%   | 14%   | 18%   | 22%    |      |
 | EPS                      | 0.35  | 0.62  | 1.40  | 2.90   | +102% |
 | ROIC %                   | 9%    | 11%   | 14%   | 17%    |      |
+| FCF (RMB mn) / FCF yield | −120  | −60   | 180   | 640    |      |
+| Net cash/(debt) (RMB mn) | 850   | 790   | 920   | 1,480  |      |
+| [loss-makers] Cash runway (qtrs @ current burn) | … | | | |  |
 ```
 (Each projected cell's basis cited inline: e.g. revenue ramp from the company's order-backlog disclosure + management's 2030 guidance + an industry-forecast number — all real, sourced inputs, with the projection labeled analyst view.) **Include a CAGR column and an ROIC row** — institutional models always carry both (Bernstein's ISRG model headlined Revenue/Operating-Earnings/Net-Earnings CAGRs + ROIC right on the cover).
 
@@ -182,13 +185,13 @@ The company-guide column cites the earnings release; the consensus column is `*A
 
 This is the section where reports most often degrade into either a flat product catalog or sell-side commentary dressed up as fact. Use the following structure to avoid both failure modes.
 
-**(a) Anchor to the issuer's own product matrix — and embed the original page image, not just a reproduction.**
+**(a) Anchor to the issuer's own product matrix.**
 
 Most semiconductor / industrial / hardware / pharma issuers publish a product matrix in the 10-K / 年度报告 / Yuho Item 1 Business section — typically organized as Market → Process/Application → Technology → Products (or an equivalent for the industry: Therapeutic Area → Indication → Modality → Product, etc.).
 
-**Two things must appear in 4.1:**
-  1. **The 10-K's actual rendered table as a PNG image**, embedded via markdown (`![…](charts/<ticker>_10k_products_table.png)`), with a caption citing the 10-K. Render it with the helper script below (`render_10k_section.py`). The image is what makes Section 4 look authoritative — the reader can see the original filing source.
-  2. **A markdown reproduction of the same table** below the image, so the content is searchable / accessible to screen-readers and so quoted product names can be linked.
+**What must appear in 4.1:**
+  1. **A verbatim markdown reproduction of the issuer's table (MANDATORY)**, with the 10-K citation directly above it — searchable, accessible to screen-readers, and quotable so product names can be linked.
+  2. ***Optionally*, the 10-K's actual rendered table as a PNG image** (`![…](charts/<ticker>_10k_products_table.png)`, rendered with the helper script below, caption citing the 10-K) when visual proof of the primary anchor adds value. The PNG never substitutes for the markdown reproduction.
 
 If the issuer does not publish such a table, build one from the website's product navigation (citing the website) and label it explicitly as analyst-constructed.
 
@@ -221,20 +224,20 @@ A reusable helper script lives at `.claude/skills/company-research/scripts/rende
 
 ```bash
 pip install playwright
-python3 -m playwright install chromium
+/opt/anaconda3/bin/python3 -m playwright install chromium
 ```
 
 **Usage:**
 
 ```bash
 # Default: anchor by a product name inside the target <table>
-python3 .claude/skills/company-research/scripts/render_10k_section.py \
+/opt/anaconda3/bin/python3 .claude/skills/company-research/scripts/render_10k_section.py \
     --html financial_reports/LRCX/<10-K-filename>.htm \
     --anchor SABRE \
     --output reports/company/<Slug>/charts/<ticker>_10k_products_table.png
 
 # Or: specify a CSS selector directly
-python3 .claude/skills/company-research/scripts/render_10k_section.py \
+/opt/anaconda3/bin/python3 .claude/skills/company-research/scripts/render_10k_section.py \
     --html financial_reports/<TICKER>/<10-K-filename>.htm \
     --selector "table.products" \
     --output reports/company/<Slug>/charts/<ticker>_10k_products_table.png \
@@ -375,6 +378,13 @@ Date: [YYYY-MM-DD]
 > *Analyst view:* INVESTMENT SUMMARY — Rating: [Buy/Hold/Sell or OW/N/UW] ·
 > 12-mo PT: [$X] ([+/−Y% vs spot]) · Method: [one-line] · Mkt cap [$] ·
 > 52-wk [range] · [TICKER:EXCH]
+>
+> | 倍数 / Multiple (*Analyst view:* fwd cols) | FY-1A | FY1E | FY2E |
+> |---|---|---|---|
+> | P/E | … | … | … |
+> | [+2–3 fitting: PEG / EV/EBITDA / EV/FCF / EV/Sales / P/B] | … | … | … |
+>
+> Rel. performance: 1M … · 6M … · YTD … · 12M … vs [benchmark] (relative: …) — [price source cited]
 > Thesis pillars — (1) … (2) … (3) … (4) …
 [Guidance-change banner here when applicable]
 
@@ -406,7 +416,7 @@ TABLE OF CONTENTS
  (d) Consensus benchmark (vs Street, when sourced).
  (e) The 1–2 swing variables the call hinges on.]
 
-2. COMPANY HISTORY (800–1,200 words)
+2. COMPANY HISTORY (400–700 words)
 [Content]
 
 3. MANAGEMENT TEAM (300–500 words)
@@ -415,7 +425,7 @@ TABLE OF CONTENTS
 [Current CEO name] — skip if same person as founder
 [200–300 word bio — prior roles, tenure, ownership, comp]
 
-4. PRODUCTS & SERVICES (700–1,200 words)
+4. PRODUCTS & SERVICES (700–1,500 words)
 [4.1 Verbatim product matrix from the issuer's 10-K / 年报 / Yuho
      (Market / Process-Application / Technology / Products), cited.
  4.2 Synthesis paragraph: how the categories interact in a customer workflow.
@@ -427,7 +437,10 @@ TABLE OF CONTENTS
      closest named competitor product (cited to competitor's filing or website,
      NOT the subject's 10-K).
  4.X Recurring / aftermarket / services group (CSBG-equivalent), if applicable.
- 4.Y Flagship 1-3 franchises + last-12-months launches.]
+ 4.Y Flagship 1-3 franchises + last-12-months launches.
+ 4.Z **延伸观看 / Further viewing** — 1–3 validated explainer-video links
+     (each HTTP-checked 200 with a browser UA, never carrying a number);
+     or omit, with the reason stated in the verification log.]
 
 5. CUSTOMERS & GO-TO-MARKET (500–700 words)
 [Content]
@@ -474,4 +487,14 @@ DATA USED / 数据来源清单
 REFERENCES
 [Consolidated, deduplicated list of every source cited inline above,
  organized by source type, each entry with date and URL/local path.]
+
+======================================
+
+<details>
+<summary>Verification log (Step 10) — YYYY-MM-DD</summary>
+[Step 10.6 log per SKILL.md — URL check · Step 0.5 disposition ·
+ Further-viewing URLs · SEC filenames · 10-K spot-checks · analyst-view
+ sentences · zsxq counts · residual unknowns. The <summary> line is the
+ exact English string above, even in Chinese reports.]
+</details>
 ```
