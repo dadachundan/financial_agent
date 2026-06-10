@@ -356,7 +356,7 @@ A short structured manifest of what data this report stands on — separate from
 - Gartner CDW Magic Quadrant YYYY (published YYYY-MM-DD); Yole Wafer Equipment Forecast YYYY (published YYYY-MM-DD); IPnest Design IP YYYY (published YYYY-MM-DD); etc.
 
 **Institute research (local `db/zsxq.db`)**
-- Searched N aliases (ticker / English / 中文); used M broker notes (Morgan Stanley / Goldman / J.P. Morgan / Bernstein / …) dated YYYY-MM-DD to YYYY-MM-DD. file_ids: `<id>`, `<id>`, … Source: local zsxq library (`/zsxq/pdf/<file_id>/<filename>`), labeled *Analyst view:* throughout. (Or: "no local coverage even after a `--query` top-up.")
+- Searched N aliases (ticker / English / 中文); used M broker notes (Morgan Stanley / Goldman / J.P. Morgan / Bernstein / …) dated YYYY-MM-DD to YYYY-MM-DD. **Each file_id is itself a clickable direct-download link** — one bullet per note, formatted `` [`<file_id>` — <broker>：<title>, <date>](<pdf_url>) `` (paste `find_pdf.py`'s `pdf_url`; never leave bare file_id numbers — user feedback 2026-06-10). Labeled *Analyst view:* throughout. (Or: "no local coverage even after a `--query` top-up.")
 
 **Macro / cycle inputs (Section 10 only)**
 - 10Y Treasury yield (`^TNX`) snapshot as of YYYY-MM-DD; HY OAS (FRED BAMLH0A0HYM2) snapshot as of YYYY-MM-DD; VIX snapshot as of YYYY-MM-DD. Source: `indicators.db` (FRED + yfinance).
@@ -486,7 +486,12 @@ DATA USED / 数据来源清单
 
 REFERENCES
 [Consolidated, deduplicated list of every source cited inline above,
- organized by source type, each entry with date and URL/local path.]
+ organized by source type, each entry with date and URL/local path.
+ Vertical bullet lists only — one source per line, never `·`-separated
+ run-on strings. Dated groups (news, broker notes) lead each bullet
+ with `YYYY-MM-DD ·` and sort newest-first; undated evergreen pages
+ (official site, wiki, market-data pages) carry an access date in the
+ group heading. See citations.md § "Final References Section".]
 
 ======================================
 

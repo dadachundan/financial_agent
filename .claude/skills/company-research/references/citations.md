@@ -145,6 +145,25 @@ When citing **web sources other than filings** (news articles, industry reports,
 
 At the end of the document, include a consolidated, deduplicated list of all sources used, organized by source type. Each entry is also a markdown link to the real URL, with publication date. This is **in addition to**, not a replacement for, the inline links.
 
+**Format rules (MANDATORY — user feedback 2026-06-10, KYEC report):**
+
+1. **Vertical bullet lists only — one source per line.** Never compress a source group into a single `·`- or `;`-separated run-on line; long horizontal strings are unreadable in the viewer.
+2. **Every entry carries a date — no exceptions.**
+   - Dated sources (news articles, broker notes, research-firm press releases, filings): lead each bullet with the **publication date** in the form `YYYY-MM-DD · [Title](URL)`. If the publication date isn't already known from collection, fetch the page and read it — don't ship an undated news entry.
+   - Evergreen / undated pages (official-site pages, wiki entries, market-data quote pages): put an access-date label in the **group heading** instead, e.g. `**公司官方（均访问于 2026-06-10）**` / `**Market data (all retrieved 2026-06-10)**`.
+3. **Sort dated groups by publication date, descending** (newest first). This applies at minimum to the 新闻/News group and the 本地机构研究/broker-notes group; undated groups keep a logical order (e.g. site navigation order).
+4. **Suggested group order:** 公司官方 → 本地机构研究 (zsxq) → 市场数据 → 行业研究 → 新闻 → 百科/词条 → 延伸观看. Split wiki-type pages out of 新闻 into their own access-dated group rather than leaving them undated among articles.
+
+**Example (news group):**
+
+```
+**新闻（按发布日期倒序）**
+
+- 2026-06-08 · [钜亨网 — 京元电子 5 月营收 37.77 亿元，年增 36.61%](https://news.cnyes.com/news/id/6488811)
+- 2026-05-29 · [自由财经 — 京元电董事长换谢其俊](https://ec.ltn.com.tw/article/breakingnews/5454002)
+- 2025-08-08 · [中央社 — 京元电资本支出扩至 370 亿元新高](https://www.cna.com.tw/news/afe/202508080190.aspx)
+```
+
 ## Full inline example (within a section)
 
 ```
