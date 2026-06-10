@@ -252,9 +252,9 @@ CATL 在全球及国内市场面对的竞争组合包括中国、韩国、日本
 
 **5. 中创新航（CALB，HKEX:3931）**——中国第 3 位（在 CATL/比亚迪之后），在国内 OEM 中长安、广汽埃安、吉利、小鹏端表现强势。**2025 年份额：约 3–4%**。差异化：激进定价。短板：利润率薄、海外布局弱。（[CALB 2024 Annual Report](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0428/2025042800615.pdf)）
 
-**6. 亿纬锂能（EVE Energy，SZSE:300014）**——中国厂商，在圆柱、储能与两轮领域较强。**2025 年份额：约 3%**。差异化：CATL 之外最宽的产品矩阵。短板：规模较小、客户基础较窄。（[亿纬锂能 2024 年年度报告, cninfo](https://static.cninfo.com.cn/finalpage/2025-04-23/1222950632.PDF)）
+**6. 亿纬锂能（EVE Energy，SZSE:300014）**——中国厂商，在圆柱、储能与两轮领域较强。**2025 年份额：约 3%**。差异化：CATL 之外最宽的产品矩阵。短板：规模较小、客户基础较窄。（[亿纬锂能 2024 年年度报告, cninfo](https://static.cninfo.com.cn/finalpage/2025-04-18/1223125812.PDF)）
 
-**7. 国轩高科（Gotion High-Tech，SZSE:002074）**——中国厂商，大众集团部分持股。**2025 年份额：约 3%**。差异化：与大众紧密整合。短板：大众电动车需求放缓构成直接逆风。（[国轩高科 2024 年年度报告, cninfo](https://static.cninfo.com.cn/finalpage/2025-04-30/1222998561.PDF)）
+**7. 国轩高科（Gotion High-Tech，SZSE:002074）**——中国厂商，大众集团部分持股。**2025 年份额：约 3%**。差异化：与大众紧密整合。短板：大众电动车需求放缓构成直接逆风。（[国轩高科 2024 年年度报告, cninfo](https://static.cninfo.com.cn/finalpage/2025-04-25/1223284129.PDF)）
 
 **8. SK On（SK Innovation 私有子公司，KRX:096770）**——韩国厂商，对现代-起亚敞口较重，加上美国福特 BlueOval 合资。**2025 年份额：约 5%**。差异化：软包电芯专长、IRA 合规。短板：持续亏损、母公司杠杆较高。（[SK Innovation 사업보고서 2024](https://englishdart.fss.or.kr/eng/main/main.do)）
 
@@ -369,8 +369,8 @@ CATL 在全球及国内市场面对的竞争组合包括中国、韩国、日本
 ### 竞争对手公开资料
 - [比亚迪 2024 年报 (HKEX), 2025-03-26](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0326/2025032600826.pdf)
 - [CALB 2024 Annual Report (HKEX), 2025-04-28](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0428/2025042800615.pdf)
-- [亿纬锂能 2024 年年度报告 (cninfo), 2025-04-23](https://static.cninfo.com.cn/finalpage/2025-04-23/1222950632.PDF)
-- [国轩高科 2024 年年度报告 (cninfo), 2025-04-30](https://static.cninfo.com.cn/finalpage/2025-04-30/1222998561.PDF)
+- [亿纬锂能 2024 年年度报告 (cninfo), 2025-04-17](https://static.cninfo.com.cn/finalpage/2025-04-18/1223125812.PDF)
+- [国轩高科 2024 年年度报告 (cninfo), 2025-04-24](https://static.cninfo.com.cn/finalpage/2025-04-25/1223284129.PDF)
 - [LG에너지솔루션 사업보고서 (DART)](https://englishdart.fss.or.kr/eng/main/main.do)
 - [Samsung SDI 사업보고서](https://www.samsungsdi.com/ir/audit-report.html)
 - [Panasonic 有価証券報告書 (EDINET)](https://disclosure2.edinet-fsa.go.jp/)

@@ -252,9 +252,9 @@ CATL competes globally and in its home market with a mix of Chinese, Korean and 
 
 **5. CALB (HKEX:3931)** — Chinese #3 (after CATL/BYD), strong with Chinese OEMs Changan, GAC Aion, Geely, XPeng. **2025 share: ~3–4%.** Differentiation: aggressive pricing. Vulnerabilities: thin margin, weak overseas footprint. ([CALB 2024 Annual Report](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0428/2025042800615.pdf))
 
-**6. EVE Energy (SZSE:300014)** — Chinese, strong in cylindrical, storage and 2-wheelers. **2025 share: ~3%.** Differentiation: broadest product mix outside CATL. Vulnerabilities: smaller scale, narrower customer base. ([亿纬锂能 2024 年年度报告, cninfo](https://static.cninfo.com.cn/finalpage/2025-04-23/1222950632.PDF))
+**6. EVE Energy (SZSE:300014)** — Chinese, strong in cylindrical, storage and 2-wheelers. **2025 share: ~3%.** Differentiation: broadest product mix outside CATL. Vulnerabilities: smaller scale, narrower customer base. ([亿纬锂能 2024 年年度报告, cninfo](https://static.cninfo.com.cn/finalpage/2025-04-18/1223125812.PDF))
 
-**7. Gotion High-Tech (SZSE:002074)** — Chinese, partially owned by VW Group. **2025 share: ~3%.** Differentiation: tight VW integration. Vulnerabilities: VW EV demand slowdown is a direct headwind. ([国轩高科 2024 年年度报告, cninfo](https://static.cninfo.com.cn/finalpage/2025-04-30/1222998561.PDF))
+**7. Gotion High-Tech (SZSE:002074)** — Chinese, partially owned by VW Group. **2025 share: ~3%.** Differentiation: tight VW integration. Vulnerabilities: VW EV demand slowdown is a direct headwind. ([国轩高科 2024 年年度报告, cninfo](https://static.cninfo.com.cn/finalpage/2025-04-25/1223284129.PDF))
 
 **8. SK On (private subsidiary of SK Innovation, KRX:096770)** — Korean, heavy Hyundai-Kia exposure plus US Ford BlueOval JV. **2025 share: ~5%.** Differentiation: pouch-cell expertise, IRA-eligible. Vulnerabilities: persistent losses, parent leverage. ([SK Innovation 사업보고서 2024](https://englishdart.fss.or.kr/eng/main/main.do))
 
@@ -369,8 +369,8 @@ CATL competes globally and in its home market with a mix of Chinese, Korean and 
 ### Competitor filings
 - [比亚迪 2024 年报 (HKEX), 2025-03-26](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0326/2025032600826.pdf)
 - [CALB 2024 Annual Report (HKEX), 2025-04-28](https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0428/2025042800615.pdf)
-- [亿纬锂能 2024 年年度报告 (cninfo), 2025-04-23](https://static.cninfo.com.cn/finalpage/2025-04-23/1222950632.PDF)
-- [国轩高科 2024 年年度报告 (cninfo), 2025-04-30](https://static.cninfo.com.cn/finalpage/2025-04-30/1222998561.PDF)
+- [亿纬锂能 2024 年年度报告 (cninfo), 2025-04-17](https://static.cninfo.com.cn/finalpage/2025-04-18/1223125812.PDF)
+- [国轩高科 2024 年年度报告 (cninfo), 2025-04-24](https://static.cninfo.com.cn/finalpage/2025-04-25/1223284129.PDF)
 - [LG에너지솔루션 사업보고서 (DART)](https://englishdart.fss.or.kr/eng/main/main.do)
 - [Samsung SDI 사업보고서](https://www.samsungsdi.com/ir/audit-report.html)
 - [Panasonic 有価証券報告書 (EDINET)](https://disclosure2.edinet-fsa.go.jp/)

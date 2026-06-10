@@ -476,11 +476,11 @@ quadrantChart
 
 - [澜起科技股份有限公司 2025 年年度报告（2026-03-30）](http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-30/688008_20260330_1.pdf) — 公司治理、产品技术、客户/供应商集中度、关键风险、财务报表全部权威源
 - [澜起科技 2026 年第一季度报告（2026-04-27）](http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-27/688008_20260427_2.pdf) — 2026Q1 营收 14.61 亿元、归母净利 8.47 亿元、新产品组合营收 2.69 亿元（+93.8% YoY）
-- [澜起科技 2024 年年度报告（2025-04-10）](https://static.cninfo.com.cn/finalpage/2025-04-10/) — 分产品 / 分地区营收明细 (互连 33.49 亿、津逮 2.80 亿)
-- [澜起科技 2025 年半年度报告（2025-08-29）](https://static.cninfo.com.cn/finalpage/2025-08-29/) — H 股上市进度与上半年数据
-- [澜起科技 2023 年年度报告（2024-04-09）](https://static.cninfo.com.cn/finalpage/2024-04-09/) — 2023 年低谷年财务数据
-- [澜起科技关于召开 2025 年度暨 2026 年第一季度业绩说明会的公告（2026-05-06）](https://static.cninfo.com.cn/finalpage/2026-05-06/) — 业绩说明会相关
-- [澜起科技 2025 年第一季度业绩预增的自愿性披露公告（2025-04-10）](https://static.cninfo.com.cn/finalpage/2025-04-10/) — Q1 业绩预告
+- [澜起科技 2024 年年度报告（2025-04-10）](https://static.cninfo.com.cn/finalpage/2025-04-11/1223058389.PDF) — 分产品 / 分地区营收明细 (互连 33.49 亿、津逮 2.80 亿)
+- [澜起科技 2025 年半年度报告（2025-08-29）](https://static.cninfo.com.cn/finalpage/2025-08-30/1224627769.PDF) — H 股上市进度与上半年数据
+- [澜起科技 2023 年年度报告（2024-04-09）](https://static.cninfo.com.cn/finalpage/2024-04-10/1219553327.PDF) — 2023 年低谷年财务数据
+- [澜起科技关于召开 2025 年度暨 2026 年第一季度业绩说明会的公告（2026-05-06）](https://static.cninfo.com.cn/finalpage/2026-05-07/1225280358.PDF) — 业绩说明会相关
+- [澜起科技 2025 年第一季度业绩预增的自愿性披露公告（2025-04-10）](https://static.cninfo.com.cn/finalpage/2025-04-11/1223058404.PDF) — Q1 业绩预告
 - 澜起科技 H 股招股说明书 (Hong Kong Stock Exchange listing prospectus, 6809.HK, 2026-01) — 详细的 Frost & Sullivan 行业数据（本研究未直接核实，仅引用为参考）
 
 ### 公司官网

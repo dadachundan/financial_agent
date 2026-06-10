@@ -574,8 +574,8 @@ quadrantChart
 - [苏州迈为科技股份有限公司 2024 年年度报告, 2025-04-28](https://static.cninfo.com.cn/finalpage/2025-04-29/1223370046.PDF)
 - [关于公司 2025 年第一季度计提资产减值准备的公告, 2025-04-28](https://static.cninfo.com.cn/finalpage/2025-04-29/1223370037.PDF)
 - [苏州迈为科技股份有限公司 2023 年年度报告（更新后）, 2024-05-10](https://static.cninfo.com.cn/finalpage/2024-05-10/1220034617.PDF)
-- [苏州迈为科技股份有限公司 2022 年年度报告, 2023-04-24](https://static.cninfo.com.cn/finalpage/2023-04-25/1216547040.PDF)（参考历史数据）
-- [苏州迈为科技股份有限公司 2021 年年度报告, 2022-03-10](https://static.cninfo.com.cn/finalpage/2022-03-11/1212732891.PDF)（参考历史数据）
+- [苏州迈为科技股份有限公司 2022 年年度报告, 2023-04-24](https://static.cninfo.com.cn/finalpage/2023-04-25/1216559910.PDF)（参考历史数据）
+- [苏州迈为科技股份有限公司 2021 年年度报告, 2022-03-10](https://static.cninfo.com.cn/finalpage/2022-03-11/1212540530.PDF)（参考历史数据）
 
 **官方网站：**
 - [迈为股份官网 (Maxwell Group)](https://www.maxwell-gp.com/)

@@ -44,7 +44,7 @@
 
 ![2020–2025 营业收入、归母净利润与综合毛利率](charts/tbea_revenue_profit_trend.png)
 
-数据来源：[特变电工 2025 年年度报告, 第 8 页](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-15/600089_20260415_PNB1.pdf)、[2024 年年度报告, 第 8 页](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-04-21/600089_20250421_5DRH.pdf)、[2022 年年度报告, 第 7 页](https://static.cninfo.com.cn/finalpage/2023-04-24/1216540533.PDF)。
+数据来源：[特变电工 2025 年年度报告, 第 8 页](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-15/600089_20260415_PNB1.pdf)、[2024 年年度报告, 第 8 页](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-04-21/600089_20250421_5DRH.pdf)、[2022 年年度报告, 第 7 页](https://static.cninfo.com.cn/finalpage/2023-04-25/1219211560.PDF)。
 
 ## 2. 公司历史 (Company History)
 
@@ -72,7 +72,7 @@ timeline
 
 - **2000–2003 年 "三厂合一"**：公司先后并购沈阳变压器厂 (沈变公司) 与衡阳变压器厂 (衡变公司)。这两家厂当时是国内三大变压器厂中的"东北系"与"中南系"领军企业，但都因为国企体制陷入亏损。整合后，公司形成 "沈变 (东北根据地，高端直流换流变压器)、衡变 (中南根据地，特高压交流变压器)、新变 (新疆基地，干式与配电变压器)" 三角格局，从此奠定全球变压器年产能 5 亿 kVA 以上、稳居全球第一的规模优势 [(2025 年年度报告, 第 27 页)](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-15/600089_20260415_PNB1.pdf)。
 - **2008 年新特能源成立 → 2015 年港交所 IPO**：公司预判光伏产业 "光伏组件成本下降 → 装机爆发" 的长期趋势，自上而下布局上游多晶硅。新特能源 2015 年 12 月在港交所上市 (1799.HK) ([新特能源股份有限公司官网 — 公司简介](https://www.specialenergy.com.cn/))，2018 年完成新疆 3 万吨/年多晶硅装置投产，2023 年完成第二期 10 万吨/年装置投产，跻身全球前五大多晶硅生产商 [(2025 年年度报告, 第 18 页)](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-15/600089_20260415_PNB1.pdf)。
-- **2022 年峰值与多晶硅周期性回调**：受光伏需求 + 多晶硅价格 (一度突破 RMB 30 万/吨) 双高带动，公司 2022 年归母净利润达到 RMB 158.83 亿元的历史峰值 ([2022 年年度报告, 第 7 页](https://static.cninfo.com.cn/finalpage/2023-04-24/1216540533.PDF))。2023–2024 年随着行业产能集中释放，多晶硅价格剧烈下行 (N 型复投料从 2025 年 1 月 RMB 4.15 万元/吨 进一步下跌至 6 月底 RMB 3.44 万元/吨)，2024 年归母净利润 RMB 41.35 亿元 同比 -61.37%，主因多晶硅 + 煤炭销售均价大幅下降 ([新华网：特变电工 2024 年归母净利润下滑 61.37%, 2025-04-22](http://www.news.cn/energy/20250422/877d141c461b4f90ad1f8235b9ebe1e3/c.html))。2025 年下半年多晶硅价格反弹至 RMB 5.39 万元/吨，全年新特能源大幅减亏，公司归母净利润同比反弹 43.7% [(2025 年年度报告, 第 18 页)](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-15/600089_20260415_PNB1.pdf)。
+- **2022 年峰值与多晶硅周期性回调**：受光伏需求 + 多晶硅价格 (一度突破 RMB 30 万/吨) 双高带动，公司 2022 年归母净利润达到 RMB 158.83 亿元的历史峰值 ([2022 年年度报告, 第 7 页](https://static.cninfo.com.cn/finalpage/2023-04-25/1219211560.PDF))。2023–2024 年随着行业产能集中释放，多晶硅价格剧烈下行 (N 型复投料从 2025 年 1 月 RMB 4.15 万元/吨 进一步下跌至 6 月底 RMB 3.44 万元/吨)，2024 年归母净利润 RMB 41.35 亿元 同比 -61.37%，主因多晶硅 + 煤炭销售均价大幅下降 ([新华网：特变电工 2024 年归母净利润下滑 61.37%, 2025-04-22](http://www.news.cn/energy/20250422/877d141c461b4f90ad1f8235b9ebe1e3/c.html))。2025 年下半年多晶硅价格反弹至 RMB 5.39 万元/吨，全年新特能源大幅减亏，公司归母净利润同比反弹 43.7% [(2025 年年度报告, 第 18 页)](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-15/600089_20260415_PNB1.pdf)。
 - **2024–2025 年并购补链**：报告期内公司完成对赛杰爱迪 (江苏，高压电气)、扬州曙光电缆 (核电与轨道交通用高端电缆) 的并购，补强 GIL、核电、轨交、高压电缆产品线，强化 "成套系统集成 + 高端零部件" 的全栈解决方案能力 [(2025 年年度报告, 第 24 页)](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-15/600089_20260415_PNB1.pdf)。
 
 **近 12 个月发展动态 (2025-05 ~ 2026-04)**：
@@ -384,7 +384,7 @@ pie title 特变电工 2025 年销售集中度 (按客户)
 
 - [特变电工股份有限公司 2025 年年度报告 (2026-04-15)](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-15/600089_20260415_PNB1.pdf) — cninfo 本地副本：`cninfo_reports/SSE/600089_特变电工/2026-04-15_年报_特变电工股份有限公司2025年年度报告.pdf` (387 页)
 - [特变电工股份有限公司 2024 年年度报告 (2025-04-21)](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-04-21/600089_20250421_5DRH.pdf) — 本地：`cninfo_reports/SSE/600089_特变电工/2025-04-21_年报_特变电工股份有限公司2024年年度报告.pdf`
-- [特变电工股份有限公司 2022 年年度报告 (2023-04-24)](https://static.cninfo.com.cn/finalpage/2023-04-24/1216540533.PDF) — 本地：`cninfo_reports/SSE/600089_特变电工/2023-04-24_年报_特变电工股份有限公司2022年年度报告.pdf`
+- [特变电工股份有限公司 2022 年年度报告 (2023-04-24)](https://static.cninfo.com.cn/finalpage/2023-04-25/1219211560.PDF) — 本地：`cninfo_reports/SSE/600089_特变电工/2023-04-24_年报_特变电工股份有限公司2022年年度报告.pdf`
 - [特变电工股份有限公司 2026 年第一季度报告 (2026-04-29)](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-29/600089_20260429_PMP1.pdf) — 本地：`cninfo_reports/SSE/600089_特变电工/2026-04-29_季报_特变电工股份有限公司2026年第一季度报告.pdf`
 - [特变电工股份有限公司 2025 年半年度报告 (2025-08-29)](https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-08-29/600089_20250829_5DRH.pdf) — 本地：`cninfo_reports/SSE/600089_特变电工/2025-08-29_半年报_特变电工股份有限公司2025年半年度报告.pdf`
 
