@@ -25,6 +25,13 @@ That folder-as-slug convention is what the skill recommends — see SKILL.md.
 The 1 grandfathered episode (CSPC) used a dated slug; this script tolerates
 both forms by reading the ``source_desc`` path instead of the slug.
 
+Single-file reports (themes / compare / sector / earnings) also come in
+EN + ZH companion pairs with *different stems* (``memory-upcycle_theme.md``
+vs ``memory-upcycle_主题研究.md``, ``A_vs_B.md`` vs ``A_vs_B_zh.md``).
+Companion suffixes are normalized away on both sides of the comparison, so
+mining the EN file marks the ZH twin as covered (and vice versa), and only
+one twin per pair is listed in the backlog.
+
 Usage::
 
     python3 .claude/skills/build-knowledge-graph/scripts/unprocessed_reports.py
@@ -66,6 +73,19 @@ def _cjk_score(p: Path) -> int:
     return len(re.findall(r"[一-鿿]", p.stem))
 
 
+# EN/ZH companion suffixes for single-file reports. Stripping these before
+# stem comparison makes `memory-upcycle_theme` and `memory-upcycle_主题研究`
+# (or `A_vs_B` and `A_vs_B_zh`) the same ingestion unit.
+_COMPANION_SUFFIXES = ("_主题研究", "_theme", "_zh", "_CN")
+
+
+def _normalize_stem(stem: str) -> str:
+    for suf in _COMPANION_SUFFIXES:
+        if stem.endswith(suf):
+            return stem[: -len(suf)]
+    return stem
+
+
 def _select_canonical(folder: Path) -> Path | None:
     """For a company folder, return the canonical markdown.
 
@@ -105,7 +125,15 @@ def collect_reports(subdir: str | None = None) -> list[Path]:
         for sd in targets:
             d = REPORTS / sd
             if d.exists():
-                selected.extend(sorted(d.glob("*.md")))
+                # One entry per EN/ZH companion pair: sorted() puts the ASCII
+                # (EN) twin first, so it wins as the canonical file.
+                seen_norm: set[str] = set()
+                for p in sorted(d.glob("*.md")):
+                    key = _normalize_stem(p.stem)
+                    if key in seen_norm:
+                        continue
+                    seen_norm.add(key)
+                    selected.append(p)
 
     return selected
 
@@ -142,11 +170,11 @@ def already_ingested() -> tuple[set[str], set[str]]:
         if len(parts) >= 3 and parts[0] == "reports" and parts[1] == "company":
             folders.add(parts[2])
         elif len(parts) >= 2 and parts[0] == "reports":
-            stems.add(p.stem)
+            stems.add(_normalize_stem(p.stem))
         else:
             # Defensive fallback: also accept a bare path / stem for any
             # source_desc that doesn't match the canonical layout.
-            stems.add(p.stem)
+            stems.add(_normalize_stem(p.stem))
     return folders, stems
 
 
@@ -159,8 +187,8 @@ def filter_unprocessed(reports: list[Path]) -> list[Path]:
         if len(rel_parts) >= 3 and rel_parts[0] == "reports" and rel_parts[1] == "company":
             if rel_parts[2] in folders:
                 continue
-        # Single-file report: match by stem.
-        elif p.stem in stems:
+        # Single-file report: match by companion-normalized stem.
+        elif _normalize_stem(p.stem) in stems:
             continue
         out.append(p)
     return out

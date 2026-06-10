@@ -63,7 +63,7 @@ re-read this paragraph.
 
 ## Hard constraints
 
-These four rules are non-negotiable. They are why this skill exists.
+These five rules are non-negotiable. They are why this skill exists.
 
 1. **Allowed relation types: `COMPETES_WITH` and `SUPPLIES` only.**
    The graph has 5 stray minority types (12 edges, as of 2026-06-02) from
@@ -89,6 +89,11 @@ These four rules are non-negotiable. They are why this skill exists.
        (uuid, uuid),
    ).fetchone()[0]
    ```
+   **Legacy over-cap hubs** (NVIDIA ~47, TSMC ~32, Tesla ~29, BYD, Xpeng,
+   SamsungElectronics, … — from pre-cap imports): do NOT add edges to them
+   and do NOT trim them unilaterally. Skip the edge and **log the lost
+   fact** in your session summary (e.g. "KYEC→NVIDIA exclusive GPU test —
+   blocked by cap") so the user can decide on a swap/prune policy.
 
 3. **Companies only.** Every entity must carry `labels=["Company"]`. No
    `Product`, no `Index`, no `Segment`, no `Person`, no anything else.
@@ -102,6 +107,24 @@ These four rules are non-negotiable. They are why this skill exists.
    [references/entity_quality.md](references/entity_quality.md) for the
    FORBIDDEN list. If in doubt, skip.
 
+5. **One entity per company — fragment-search before every `add_entity`.**
+   Duplicate rows ("SKHynix" vs "SK Hynix", "Meta" vs "Meta Platforms",
+   "Moons" vs "Mingzhi (鸣志电器)") split edges across two nodes and defeat
+   the edge cap — a 2026-06-11 critic pass had to merge **29** such pairs.
+   `add_entity` only matches the *exact* name case-insensitively; it will
+   NOT catch spelling variants. Before creating, search by English
+   fragment, Chinese fragment, AND ticker:
+   ```python
+   c.execute("SELECT name, ticker FROM entities WHERE name LIKE ? OR ticker LIKE ?",
+             (f"%{frag}%", f"%{frag}%")).fetchall()
+   ```
+   Reuse the EXACT existing name in edges. Dual-listed companies
+   (A-share + HKEX, ADR + home listing) are ONE entity. If a duplicate
+   pair is discovered after the fact, merge with
+   `graph_mirror.merge_entities(conn, source_uuid, target_uuid)` (re-points
+   all edges, deletes the source row), then deprecate any identical
+   (src, tgt, relation) edges the merge exposes.
+
 ## Workflow
 
 ### Step 1 — Pick the scope
@@ -113,8 +136,8 @@ Ask the user (or infer from their phrasing) what they want covered:
 - "mine relations from reports/company/X" → that specific folder
 - "rebuild the graph" → don't. Run `manual_graph.stats()` first and quote
   the live counts back to the user — hundreds of hand-curated entities /
-  edges are at stake (352 entities / 556 edges / 210 episodes as of
-  2026-06-10, and growing); never wipe without explicit per-table
+  edges are at stake (448 entities / 761 active edges / 259 episodes as of
+  2026-06-11, and growing); never wipe without explicit per-table
   instructions
 - "from these tickers: A, B, C" → use those reports only
 
@@ -133,8 +156,12 @@ The script compares `reports/**/*.md` against the **company folder**
 (or single-file stem) of each `episodes.source_desc` row in the mirror,
 and prints what's not yet covered, sorted by mtime (newest first).
 Curating one canonical .md per company covers the EN + ZH companion
-files automatically — they share the same folder. The script never
-modifies any DB.
+files automatically — they share the same folder. For single-file
+reports (themes / compare / sector / earnings) the script normalizes
+companion suffixes (`_zh`, `_CN`, `_theme`, `_主题研究`) on both sides,
+so mining `memory-upcycle_theme.md` also marks
+`memory-upcycle_主题研究.md` as covered. The script never modifies
+any DB.
 
 ### Step 3 — For each report
 
@@ -171,7 +198,17 @@ For each markdown file:
 5. **Write via `manual_graph.py`.** See "Reference write pattern" below.
 
 6. **Update todo list / move on.** Don't try to curate 50 reports in one
-   sitting — quality drops. 5–15 reports per session is realistic.
+   sitting — quality drops. 5–15 reports per session is realistic **in the
+   main thread**. For a larger batch (validated 2026-06-11: 49 reports),
+   fan out `Agent`-tool subagents, each owning a *cluster of 5–10 related
+   reports* (same sector — they share counterparties, so dedup decisions
+   stay coherent), and run the clusters **strictly sequentially, one
+   subagent at a time**: concurrent writers race the ≤10-edge-cap check
+   and contend on the SQLite file, and the 16 GB box can't fit two heavy
+   agents anyway. Each subagent prompt must restate the five hard
+   constraints plus the cap/dedup pre-check SQL, and must return a
+   structured summary (episodes / entities added / edges added / skipped
+   + reasons / anomalies) for the critic pass.
 
 ### Step 4 — Verify
 
@@ -186,6 +223,41 @@ print(manual_graph.stats())
 Spot-check one new edge in the viewer (`/zep/` → search for the focal
 company → confirm the new edges appear with the citation slug visible in
 the tooltip).
+
+### Step 5 — Critic review (mandatory after any multi-report batch)
+
+Spawn an **independent critic agent** (`Agent` tool, general-purpose) that
+did not write the edges. Give it the batch's episode slugs (edges carry
+them in `edges.episodes_json` — a JSON array; non-ASCII slugs are stored
+unicode-escaped, so `json.loads` each row rather than `LIKE`-matching).
+First thing it does: `cp db/graph_mirror.db /tmp/graph_mirror_backup_pre_critic.db`.
+It may only modify the DB via the sanctioned helpers
+(`graph_mirror.deprecate_edge` / `update_edge` / `merge_entities` /
+`isolate_entity`); SELECTs are unrestricted. Its checklist:
+
+1. **Relation whitelist** — every new edge is exactly `COMPETES_WITH` or
+   `SUPPLIES`; anything else → `deprecate_edge(..., reason="RELATION_NOT_ALLOWED")`.
+2. **SUPPLIES direction** — supplier/licensor/manufacturer → customer/
+   licensee. Verify suspicious ones against the source report before
+   deprecating.
+3. **Entity quality** — endpoints are companies only; a non-company that
+   slipped in → `isolate_entity` + deprecate its edges (`"ENTITY_QUALITY"`).
+4. **Duplicates** — identical (src, tgt, relation) rows, or both directions
+   of a symmetric `COMPETES_WITH` pair → keep the richer fact, deprecate
+   the other (`"DUPLICATE"`).
+5. **Fact spot-check (hallucination audit)** — sample ≥20 new edges across
+   all clusters, open each source report, confirm the counterparty really
+   appears there; fabrications → deprecate (`"FACT_NOT_IN_SOURCE"`).
+6. **Duplicate entities** — same ticker under two spellings →
+   `merge_entities` keeping the better-connected / canonical name, then
+   re-dedupe, and trim any entity the merge pushed over 10 active edges
+   (`"EDGE_BUDGET"` — weakest facts lose). Legacy over-cap hubs are
+   reported, never trimmed.
+
+Calibration from the 2026-06-11 run (49 reports, 246 new edges): 0 relation
+violations, 0 direction errors, 0 fabrications in 34 samples — but 29
+duplicate entity pairs and ~40 duplicate/stub edges. The critic pass earns
+its cost mostly on **entity hygiene**, so don't skip item 6.
 
 ## Reference write pattern
 
@@ -294,8 +366,8 @@ a duplicate edge after the fact, soft-delete it with
   write API. Open this file if you need to confirm a function signature
   or see how idempotency / casing is handled.
 - [graph_mirror.py](../../../graph_mirror.py) (project root) — schema
-  + read helpers + `deprecate_edge` / `isolate_entity` / `update_edge`
-  for surgical fixes.
+  + read helpers + `deprecate_edge` / `isolate_entity` / `update_edge` /
+  `merge_entities` for surgical fixes.
 
 ## What this skill is NOT for
 
