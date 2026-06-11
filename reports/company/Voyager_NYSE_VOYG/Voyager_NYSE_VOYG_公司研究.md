@@ -207,7 +207,7 @@ Voyager 的产品逻辑可概括为一条"**多用途技术（multi-use technolo
 
 **中文释义 / Plain-language gloss：** 可控固体推进（controllable solid propulsion / 可控固体火箭推进）是导弹"转向与定位"的动力来源。与液体（liquid）和冷气（cold-gas）系统相比，固体推进精度更高、可靠性更好、响应更快、操作更安全、成本更优——这正是高超声速（hypersonic / 高超音速）应用的硬要求。通过整合 Estes Energetics，公司从"推进子系统"垂直延伸到**含能材料制造（energetics manufacturing / 含能材料）**——涵盖推进剂配方、浇铸、发动机集成，乃至黑火药（black powder）等基础化学原料的本土生产（[Voyager FY2025 10-K, Defense Systems](https://www.sec.gov/Archives/edgar/data/1788060/000162828026016543/voyg-20251231.htm)）。战略意义在于"美国某些含能材料供应受限（supply-constrained），公司的制造产能强化了美国国防工业基地的韧性"——这把 VOYG 直接嵌入了"国防再工业化"的政策红利里。最具旗舰意义的锚点是 **洛克希德·马丁 NGI（Next Generation Interceptor，下一代拦截弹）项目** 的固体推进子系统供应。
 
-*分析师观点：* 在可控固体推进与含能材料领域，VOYG 面对的是 Northrop Grumman（其 Aerojet Rocketdyne 资产）等大型一体化承包商；VOYG 的差异化在于"小而专 + 垂直整合 + 速度"，但规模、产能与现有项目存量远不及巨头（竞争对手信息见 §8，引自竞争对手自身披露，非 VOYG 10-K）。
+*分析师观点：* 在可控固体推进与含能材料领域，VOYG 面对的是 Northrop Grumman（其固体火箭发动机资产源自 2018 年收购的 Orbital ATK，[NOC FY2025 10-K, Item 1 — History](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)）与 L3Harris（2023-07-28 完成对 Aerojet Rocketdyne 的收购，[L3Harris 8-K Item 2.01, 2023-07-28](https://www.sec.gov/Archives/edgar/data/202058/000110465923085075/tm2322078d1_8k.htm)）等大型一体化承包商；VOYG 的差异化在于"小而专 + 垂直整合 + 速度"，但规模、产能与现有项目存量远不及巨头（竞争对手信息见 §8，引自竞争对手自身披露，非 VOYG 10-K）。
 
 **(2) Signals Intelligence Systems（信号情报系统）。** 10-K 原文：
 
@@ -322,7 +322,7 @@ pie title FY2025 合并营收按客户（consolidated revenue）
 
 由此，竞争格局可分三层：
 
-**第一层——国防大厂（Defense primes）。** Northrop Grumman、RTX（Raytheon）、L3Harris 等。它们规模、产能、项目存量、政府关系远超 VOYG。*分析师观点：* 在可控固体推进/含能材料领域，Northrop Grumman（拥 Aerojet Rocketdyne）是规模最大的对手之一（信息引自行业常识与对手自身披露，非 VOYG 10-K——固体推进资产见 [Northrop Grumman 官网 Propulsion Systems](https://www.northropgrumman.com/space/propulsion-systems)）。VOYG 的差异化是"小、专、快 + 垂直整合"，但在量产规模上处于劣势。
+**第一层——国防大厂（Defense primes）。** Northrop Grumman、RTX（Raytheon）、L3Harris 等。它们规模、产能、项目存量、政府关系远超 VOYG。*分析师观点：* 在可控固体推进/含能材料领域，Northrop Grumman（固体火箭发动机资产源自 2018 年收购的 Orbital ATK，[NOC FY2025 10-K, Item 1 — History](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)；固体推进产品线见 [Northrop Grumman 官网 Propulsion Systems](https://www.northropgrumman.com/space/propulsion-systems)）与 L3Harris（2023-07-28 完成对 Aerojet Rocketdyne 的收购，[L3Harris 8-K Item 2.01, 2023-07-28](https://www.sec.gov/Archives/edgar/data/202058/000110465923085075/tm2322078d1_8k.htm)）是规模最大的两类对手（信息引自对手自身披露，非 VOYG 10-K）。VOYG 的差异化是"小、专、快 + 垂直整合"，但在量产规模上处于劣势。
 
 **第二层——太空部件/系统同行。** **Rocket Lab（RKLB）** 的空间系统与部件业务、**Redwire（RDW）** 以及其他专业子系统供应商，在制导导航、通信硬件与在轨推进上与 VOYG 直接竞争（[Voyager FY2025 10-K, Competition](https://www.sec.gov/Archives/edgar/data/1788060/000162828026016543/voyg-20251231.htm)）。*分析师观点：* RKLB 兼具发射能力，是更"全栈"的太空公司，市场给予其约 104× TTM P/S 的极高叙事溢价；RDW 则是更纯的太空基础设施/部件公司，约 10× TTM P/S，与 VOYG 在 Space Solutions 分部直接可比（[Yahoo Finance — RKLB / RDW, 2026-06-09](https://finance.yahoo.com/quote/RKLB/)）。
 
@@ -566,5 +566,9 @@ xychart-beta
 - 公司上市未满 1 年，无独立 Investor Day deck，IR 引用以 10-K/8-K/官网为主（IR sub-density 低于常规 8–12 条，因客观材料缺位，已在 Data Used 标注）。
 - WEF/McKinsey TAM 页对 curl 反爬；内容经 WebSearch 核实，链接保留为 landmark research。
 - 卖方个股目标价（Wedbush $60、Jefferies $60、Wolfe $55、JPM $39）来自公开汇总平台二手引用，未逐一回溯至原始券商报告（本地 zsxq 库无覆盖）。
+
+---
+
+**更正记录（2026-06-11）— Aerojet Rocketdyne 归属错误修正。** 原 §5.3 与 §8 两处将 Aerojet Rocketdyne 误归于 Northrop Grumman。事实为：**L3Harris 于 2023-07-28 完成对 Aerojet Rocketdyne Holdings 的收购**（8-K Item 2.01 原文："Merger Sub merged with and into Aerojet Rocketdyne… a wholly owned subsidiary of L3Harris"，[L3Harris 8-K Item 2.01, 2023-07-28](https://www.sec.gov/Archives/edgar/data/202058/000110465923085075/tm2322078d1_8k.htm)，HTTP 200 ✓，字符串匹配 ✓）；**Northrop Grumman 的固体火箭发动机业务源自 2018 年收购的 Orbital ATK**（10-K 原文："2018 - Acquired Orbital ATK, Inc. (OATK), developer and producer of satellites and other space systems, launch vehicles and missile products"，[NOC FY2025 10-K, Item 1 — History](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)，HTTP 200 ✓，字符串匹配 ✓）。两处均已改写并附上述引用；与本库 NorthropGrumman_NYSE_NOC 报告（"NOC 与 L3Harris（Aerojet Rocketdyne）共同主导美国战术与战略 SRM 供应"）交叉一致。原引用的 [Northrop Grumman 官网 Propulsion Systems](https://www.northropgrumman.com/space/propulsion-systems) 链接复检 HTTP 200 ✓，保留用于佐证 NOC 自有固体推进产品线。
 
 </details>
