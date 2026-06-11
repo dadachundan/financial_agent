@@ -90,7 +90,7 @@ Populated from `stock_price_target_db` (the rows surfaced at `/pt`). "Px @ note"
 | NASDAQ:ADI | Strong franchise but Bernstein groups it with TXN as a "Neutral, valuation full" Western analog IDM — overlaps TXN's role in the basket; held in reserve as a candidate-add if the industrial cycle broadens. |
 | NASDAQ:MCHP | MCU + analog recovery name (MS "tracking better"), but a less-differentiated profile than the held names; candidate-add on a clean inventory-normalization print. |
 | SSE:600703 | Sanan (三安) — SiC *substrate* leader, but JPMorgan is cautious: 8" substrate prices falling to Rmb3.0–4.0k by end-2026 with price hikes "basically not feasible," so substrate economics are the weak link, not the device makers ([JPM *SiC sector*, zsxq #415241248554518](http://xs-macbook-air.local:5001/zsxq/pdf/415241248554518/J.P.%20Morgan-Silicon%20carbide%20sector%EF%BC%9AUpdates%20on%20AI%20and%20auto%20applications%20~%20AI%20a%20positive%20factor%20but%20how%20meaningful%EF%BC%9F-260525.pdf)). |
-| TYO:6723 | Renesas — Bernstein's *top* analog pick, but a Japan IDM outside the stated Western-IDM / China-analog scope; noted as the conviction-rank reference, not tracked. |
+| TSE:6723 | Renesas — Bernstein's *top* analog pick, but a Japan IDM outside the stated Western-IDM / China-analog scope; noted as the conviction-rank reference, not tracked. |
 
 ## Keywords
 
