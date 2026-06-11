@@ -1,16 +1,41 @@
 # 高通公司 Qualcomm Incorporated (NASDAQ:QCOM) — 公司研究报告
 
-**日期:** 2026-05-20
-**分析师备注:** 启动覆盖。所有财务数据均来源于高通向 SEC 提交的文件 (10-K、10-Q、8-K) 并在正文中逐项标注引用。市场数据截至 2026 年 5 月中旬。
-**报告语言: 简体中文 (英文版同时存在于本目录)**
+**日期:** 2026-06-11 (前版 2026-05-20)
+**分析师备注:** 报告更新。所有财务数据均来源于高通向 SEC 提交的文件 (10-K、10-Q、8-K) 并在正文中逐项标注引用; 卖方观点引自本地 zsxq 研报库, 一律标注 *分析师观点:* 并与文件引用分离。市场数据截至 2026-06-11。
+**报告语言: 简体中文 (英文版同时存在于本目录, 本次未更新)**
 
 > **业绩更新 — 2026 财年 Q2 业绩验证全年指引框架, Q3 FY2026 指引显示中国手机市场触底 (2026-04-29):** 高通公布 2026 财年 Q2 营业收入 **106.0 亿美元 (同比 -3%)**, Non-GAAP 每股收益 **2.65 美元 (同比 -7%)**, 总体符合此前指引。管理层给出 2026 财年 Q3 营业收入指引区间为 **92–100 亿美元** (Non-GAAP EPS 2.10–2.30 美元), 下调区间反映 **内存供应紧张以及对部分手机 OEM 厂商造成的定价影响**; 管理层明确表示, QCT (高通 CDMA 技术) 来自中国客户的手机营业收入将于"第三季度触底, 并在随后季度回归环比增长"。同时, 董事会在已于 2026 财年上半年完成的 54 亿美元回购之上, 额外批准了一项 **200 亿美元股票回购计划**; 公司亦确认与超大规模数据中心 (hyperscaler) 客户的定制硅片合作仍按预期推进, 计划于 2026 日历年下半年实现初步出货。
 > 来源: [QCOM 2026 财年 Q2 业绩公告, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)。
+
+> **事件更新 — Computex 主题演讲发布数据中心品牌 "Dragonfly", 投资者日定档 6 月 24 日 (2026-06-01 / 2026-06-24):** CEO Cristiano Amon 在 2026 年 6 月 1 日 Computex 开幕主题演讲中公布数据中心产品品牌 **Dragonfly**, 覆盖服务器 CPU、AI 推理加速器与定制 ASIC 三类产品, 并表示更多细节将于 6 月 24 日纽约投资者日披露 ([The Elec — "Qualcomm Unveils 'Dragonfly' Brand for Data Center Business", 2026-06](https://www.thelec.net/news/articleView.html?idxno=10949); [Qualcomm Investor Day 2026 活动页](https://www.qualcomm.com/company/events/investor-day))。股价自 3 月 26 日低点 $130.06 一度涨至 6 月 2 日 $239.95 (+84%), 随后回落至 6 月 11 日 $202.96 — 数据中心叙事已成为该股定价主线 (收盘价: yfinance)。
+
+## 投资摘要 (Investment Summary)
+
+*分析师观点:* 下表为本报告自有前瞻判断 (评级体系: Buy / Hold / Sell), 不是高通公司或任何卖方机构的披露。
+
+| 项目 | 内容 |
+|---|---|
+| 评级 (Rating) | **Hold (中性)** |
+| 12 个月目标价 (PT) | **$190** (基准情形; 推导见第 1A 章) |
+| 现价 (2026-06-11 收盘) | **$202.96** ([Yahoo Finance — QCOM](https://finance.yahoo.com/quote/QCOM/), yfinance) |
+| 隐含空间 | **约 -6%** |
+| 估值方法 | 18x × FY2027E Non-GAAP EPS ~$10.5 (分析师估计) |
+| 情景目标价 | 牛市 **$265** (+31%) / 基准 **$190** (-6%) / 熊市 **$140** (-31%) |
+| 市值 | 约 $2,140 亿美元 (yfinance, 2026-06-11) |
+| 52 周区间 | $121.99 – $259.92 ([Yahoo Finance — QCOM](https://finance.yahoo.com/quote/QCOM/)) |
+
+**论点支柱 (Thesis pillars):**
+
+1. **数据中心从期权变为定价主线, 但收入仍未落地。** Alphawave 收购已于 2025-12-18 完成 ([Qualcomm 新闻稿, 2025-12-18](https://www.qualcomm.com/news/releases/2025/12/qualcomm-completes-acquisition-of-alphawave-semi)), 超大规模客户定制硅片 2026 日历年 H2 首批出货 (公司口径), Dragonfly 品牌已发布 — 6 月 24 日投资者日是下一个定价事件。
+2. **手机业务正穿越内存涨价引发的去库存底部。** 管理层口径: 中国客户手机收入 F3Q26 触底、F4Q26 回归环比增长 ([QCOM F2Q26 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm))。
+3. **汽车 + IoT 多元化按既定目标推进。** F2Q26 汽车收入 $13.26 亿创纪录 (+38% YoY), 汽车+IoT 合计 +20% YoY (同上)。
+4. **股价 3 个月自 $130 升至 $240 再回落 $203, 已部分计价数据中心成功; 风险回报趋于对称** — 牛熊情景上下行幅度几乎相等 (±31%), 故维持 Hold。
 
 ---
 
 ## 目录
 1. 公司概览
+1A. 估值与目标价 (Valuation & Price Target)
 2. 公司历史
 3. 管理团队
 4. 产品与服务
@@ -19,6 +44,7 @@
 7. 竞争格局
 8. 市场机会 (TAM)
 9. 风险评估
+9.5 核心分歧与催化剂 (Key debates & catalysts)
 
 ---
 
@@ -45,17 +71,104 @@
 
 ### 估值快照
 
-2026 年 5 月中旬, 高通股价约处于每股 **195–204 美元**区间, 对应市值约 **2,060–2,150 亿美元**, 2026 财年 Q2 末摊薄流通股本约 10.6 亿股 ([QCOM 2026 财年 Q2 业绩公告, Condensed Balance Sheet](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm); 价格参考 [Yahoo Finance, 2026 年 5 月](https://finance.yahoo.com/quote/QCOM/))。
+截至 **2026 年 6 月 11 日收盘**, 高通股价 **$202.96**, 对应市值约 **2,140 亿美元**, 2026 财年 Q2 末摊薄流通股本约 10.6 亿股 ([QCOM 2026 财年 Q2 业绩公告, Condensed Balance Sheet](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm); 价格参考 [Yahoo Finance — QCOM](https://finance.yahoo.com/quote/QCOM/), yfinance, 2026-06-11)。过去三个月该股经历了剧烈重估: 3 月 26 日收盘 $130.06 (Bernstein 下调评级当日) → 6 月 2 日收盘 $239.95 (+84%) → 6 月 11 日 $202.96 (较峰值 -15%; 各日收盘价: yfinance)。
 
-| 估值倍数 | QCOM (TTM, 2026 年 5 月中) | 三年区间 (约) | 备注 |
+| 估值倍数 | QCOM (2026-06-11) | 三年区间 (约) | 备注 |
 |---|---|---|---|
-| 市盈率 P/E (TTM, GAAP) | ~22x | 13x–28x | TTM EPS 受 2025 财年 57 亿美元税务费用及 2026 财年 Q2 释放共同扭曲; 在常态口径下接近 14–16 倍 ([fullratio.com QCOM P/E](https://fullratio.com/stocks/nasdaq-qcom/pe-ratio))。 |
-| 前瞻市盈率 (2026 财年 E) | ~12x | 10x–14x | 一致预期 2026 财年 Non-GAAP EPS 约 11–12 美元; 在大市值半导体股中处于最低前瞻倍数之列 ([24/7 Wall St, 2026-04-09](https://247wallst.com/investing/2026/04/09/broadcom-vs-qualcomm-buy-one-avoid-the-other/))。 |
-| 市销率 P/S (TTM) | ~4.5x | 3.0x–5.5x | 低于行业中位数; 远低于 AVGO (约 24x) 及 NVDA (约 28x) ([stockanalysis.com](https://stockanalysis.com/stocks/qcom/statistics/))。 |
-| EV/EBITDA | ~15x | 10x–17x | 对于高自由现金流的半导体标的属合理水平; 低于 AVGO (约 36x) ([gurufocus.com EV/EBITDA](https://www.gurufocus.com/term/enterprise-value-to-ebitda/QCOM))。 |
-| 股息率 | ~1.8% | 1.6%–2.5% | 季度股息 0.89 美元; 2025 财年总分红 38.36 亿美元 ([QCOM 2025 财年 10-K, Cash Flow Statement](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。 |
+| 市盈率 P/E (TTM, GAAP) | ~21.8x | 13x–28x | TTM EPS 仍受 2025 财年 57 亿美元税务费用及 2026 财年 Q2 释放共同扭曲 ([Yahoo Finance — QCOM](https://finance.yahoo.com/quote/QCOM/), yfinance, 2026-06-11)。 |
+| 前瞻市盈率 (FY2026E) | **~19x** | 10x–19x | yfinance 一致前瞻 EPS ~$10.7; 较 3 月时的约 10–12 倍已大幅重估, 目前处于三年区间上端 (yfinance, 2026-06-11)。 |
+| 市销率 P/S (TTM) | ~4.8x | 3.0x–5.5x | 仍远低于 AVGO (~24x) 及 NVDA (~20x), 但这两者的收入结构以 AI 数据中心为主, 可比性有限 (yfinance, 2026-06-11; [stockanalysis.com](https://stockanalysis.com/stocks/qcom/statistics/))。 |
+| EV/EBITDA | ~14–15x | 10x–17x | 对于高自由现金流的半导体标的属合理水平 ([gurufocus.com EV/EBITDA](https://www.gurufocus.com/term/enterprise-value-to-ebitda/QCOM))。 |
+| 股息率 | ~1.9% | 1.6%–2.5% | 季度股息 0.89 美元; 2025 财年总分红 38.36 亿美元 ([QCOM 2025 财年 10-K, Cash Flow Statement](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。 |
 
-**解读 — 为何 QCOM 相对其他大市值半导体股交易于显著折价?** 高通的前瞻市盈率 (约 10–12 倍) 仅为博通 (约 31–44 倍) 的三分之一, 不到英伟达的四分之一, 同时也明显低于联发科 (Stockopedia 与其他数据源给出的前瞻 P/E 区间约 25–43 倍) — 后者是一家终端市场相似但规模更小的竞争对手 ([Stockopedia MediaTek 2454.TW](https://www.stockopedia.com/share-prices/media-tek-TPE:2454/))。这一压缩反映了三个长期担忧: (i) **苹果调制解调器自研内化 (modem in-housing)**, 将在约两至三年的过渡期内导致高通失去三家 10%+ 客户之一; (ii) **中国手机需求的结构性不确定性**, 以及中国 OEM 厂商垂直整合到自研移动 SoC 的尾部风险 (小米已于 2025 年发布玄戒 O1 (XRing O1) 应用处理器); 及 (iii) 市场对 QTL 专利费收入的根深蒂固认知 — 即认为这是一项接近成熟年金现金流, 一旦 5G 渗透率正常化便缺乏明确再加速催化剂。多头逻辑 (即骁龙 X PC、骁龙数字底盘、骁龙 AR/VR, 加上经由 Alphawave 收购及超大规模客户定制硅片合作进入数据中心的可信路径, 共同将公司重估至非手机增长股的倍数) 尚未被市场充分定价。这一估值张力是该名标的的核心矛盾, 我们将在第 7、8、9 章中分别展开论述。
+**解读 — "大市值半导体最便宜标的"的折价叙事已经走完一半。** 本报告前一版 (2026 年 5 月) 的核心估值张力是: 高通以约 10–12 倍前瞻市盈率交易于大市值半导体最低档, 折价反映苹果调制解调器内化、中国 OEM 垂直整合与 QTL 年金化三重担忧。三个月后, 这一折价已被市场主动回补大半: 4 月 29 日财报电话会披露超大规模客户定制硅片合作后股价盘后大涨约 13% (*分析师观点:* [Bernstein — FQ226 recap, 2026-04-30, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf)), 6 月 1 日 Computex 发布 Dragonfly 数据中心品牌 ([The Elec, 2026-06](https://www.thelec.net/news/articleView.html?idxno=10949)), 前瞻市盈率从约 10–12 倍扩张至约 19 倍 — 已与博通的前瞻倍数 (~20x) 大体持平 (yfinance, 2026-06-11)。换言之, **市场已为"数据中心成功"预付了相当部分对价, 而对应收入要到 2026 日历年 H2 才开始出货**。原有的三重担忧 (苹果内化、中国 OEM 自研、QTL 年金化) 并未消失, 只是被新叙事覆盖。估值的下一步取决于 6 月 24 日投资者日能否把路线图变成可验证的数字 — 这正是第 1A 章目标价推导与情景分析的核心变量。
+
+---
+
+## 1A. 估值与目标价 (Valuation & Price Target)
+
+*分析师观点:* 本章全部前瞻估计、目标价与情景分析均为本报告自有判断, 不出现在高通的任何 SEC 文件中; 每项驱动假设的外部依据在行内标注。引用的卖方估计来自本地 zsxq 研报库, 均按报告日期与当日股价配对。
+
+### 前瞻估计 (FY2026E–FY2028E)
+
+| 财年 (9 月止) | 营业收入 | YoY | Non-GAAP EPS | 关键驱动 (外部依据) |
+|---|---|---|---|---|
+| FY2025A | $442.8 亿 | +14% | $12.03 | 实际值 ([QCOM FY2025 10-K](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm); 调整后 EPS 引自 *分析师观点:* [Bernstein 评级下调报告, 2026-03-26, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812224411854452/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89There%20goes%20the%20neighborhood%EF%BC%9F%20Downgrading%20to%20Market~Perform-260326.pdf) "F25A 12.03") |
+| FY2026E | ~$423 亿 | ~-4.5% | ~$10.6 | 内存涨价压制手机需求 + 苹果调制解调器份额递减; F3Q26 公司指引 $92–100 亿 ([F2Q26 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)); 锚定 *分析师观点:* Bernstein FY26E 营收 $423 亿 / EPS $10.64 ([FQ226 recap, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf)) |
+| FY2027E | ~$420 亿 | ~持平 | ~$10.5 | 手机收入恢复环比增长但苹果流失继续; 数据中心首次贡献"数十亿美元"收入且经营利润率为正 (*分析师观点:* [Bernstein SDC takeaways, 2026-05-27](http://xs-macbook-air.local:5001/zsxq/pdf/812451114422242/Bernstein-Qualcomm%20%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9A%20Key%20takeaways%20from%20Bernstein%E2%80%99s%20SDC-260527.pdf)); 本估计介于 Bernstein $9.77 与 J.P. Morgan $11.50 之间 |
+| FY2028E | ~$450 亿 | ~+7% | ~$11.5 | 数据中心定制硅片放量 + 手机常态化 + 汽车向 FY2029 $80 亿目标爬坡 (*分析师观点:* 汽车目标进度引自 [Bernstein SDC takeaways, 2026-05-27](http://xs-macbook-air.local:5001/zsxq/pdf/812451114422242/Bernstein-Qualcomm%20%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9A%20Key%20takeaways%20from%20Bernstein%E2%80%99s%20SDC-260527.pdf)) |
+
+利润率路径: QTL 维持 ~72% EBT 利润率的高利润年金 ([FY2025 10-K MD&A](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)); QCT 毛利率 FY2026 受内存成本与手机折扣压制, FY2027–28 随汽车/数据中心占比上升而修复 (*分析师观点:* 混合驱动逻辑)。
+
+**前瞻估值矩阵** (现价 $202.96, 2026-06-11; 倍数 = 现价 ÷ 各年 EPS 估计, 均为分析师推算):
+
+| 倍数 | FY2025A | FY2026E | FY2027E | FY2028E |
+|---|---|---|---|---|
+| Non-GAAP P/E | 16.9x | ~19.1x | ~19.3x | ~17.7x |
+
+注意 FY2027E 倍数不降反平 — 苹果调制解调器流失使 EPS 在数据中心放量前出现一个"增长空窗", 这是空方按现有盈利估值给出 $135–146 目标价的算术基础。
+
+### 目标价推导: 基准 $190
+
+**方法: 前瞻 P/E × 目标倍数。** 基准目标价 = **18x × FY2027E EPS ~$10.5 ≈ $190** (-6% vs 现价)。目标倍数 18x 的取法:
+
+- **高于高通自身三年历史区间 (10x–16x) 的上端** — 给予数据中心期权、汽车 450 亿美元+订单管线 (pipeline) 与 IoT 复合增长以溢价;
+- **低于纯 AI 数据中心标的** — 博通前瞻 ~19.9x、联发科 ~34x、AMD ~37x (yfinance, 2026-06-11), 因为高通的数据中心收入尚未出现在利润表上;
+- **介于卖方两端之间** — 空方按现有盈利给 12–15x (*分析师观点:* GS 12x × 常态化 EPS $11 ([First Take, 2026-04-29](http://xs-macbook-air.local:5001/zsxq/pdf/212212284452121/GS-Qualcomm%20Inc.%20%28QCOM%29_%20First%20Take_%20In-line%20quarter%20with%20weak%20guidance%2C%20driven%20by%20smartphone%20downside-260429.pdf)); Bernstein 14x × F27E $9.77 ([FQ226 recap](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf))), 多头为路线图给 23x (*分析师观点:* [J.P. Morgan, 2026-06-05](http://xs-macbook-air.local:5001/zsxq/pdf/814528851485152/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89Expect%20Strong%20Data%20Center%20Market%20Revenue%20Targets%20and%20Customer%20Pipeline%20at%20Investor%20Day%EF%BC%9B%20Place%20on%20Positive%20Catalyst%20Watch-260605.pdf))。
+
+### 情景分析 (牛市 / 基准 / 熊市)
+
+| 情景 | 12 个月目标价 | 空间 | 摇摆假设 |
+|---|---|---|---|
+| **牛市** | **$265** | **+31%** | 6/24 投资者日给出量化且具名的数据中心路线图 (FY2027 收入 >$30 亿、FY2031 ~$350 亿) 并兑现首批出货; 手机 F4Q26 如期环比回升。算术: 23x × FY2027E EPS $11.5 (*分析师观点:* 框架引自 [J.P. Morgan, 2026-06-05](http://xs-macbook-air.local:5001/zsxq/pdf/814528851485152/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89Expect%20Strong%20Data%20Center%20Market%20Revenue%20Targets%20and%20Customer%20Pipeline%20at%20Investor%20Day%EF%BC%9B%20Place%20on%20Positive%20Catalyst%20Watch-260605.pdf)) |
+| **基准** | **$190** | **-6%** | 投资者日给出方向性 (但非合同性) 目标; 手机触底如期但内存逆风延续到 FY2027; 数据中心 FY2027 贡献数十亿美元。算术: 18x × $10.5 |
+| **熊市** | **$140** | **-31%** | 内存涨价压制延续整个 FY2027, 数据中心披露缺乏具名客户与收入时间表, 苹果/三星份额流失加速。算术: 14x × $10.0 (*分析师观点:* 倍数框架引自 [Bernstein FQ226 recap, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf)) |
+
+### 与卖方一致预期的对比
+
+本报告 FY2027E EPS ~$10.5 较 Bernstein ($9.77) 高约 +7%, 较 J.P. Morgan 新估计 ($11.50) 低约 -9%。目标价 $190 高于当前卖方目标价中位数 (~$143, 本地 zsxq 库 4 家机构, 2026 年 4–6 月), 低于 J.P. Morgan $265; 高出中位数的部分对应本报告对手机 F3Q26 触底与数据中心 FY2027 首批收入的基准采信。
+
+### 卖方观点演变 (Sell-side view evolution)
+
+机械预扫描 (`db/stock_price_target.db`, 只读): 库内 QCOM 目标价记录 13 条 (2026-01 至 2026-06), **当前在档目标价离散度: 最低 $135 (GS) / 中位 ~$143 / 最高 $265 (JPM), 极差 ~96%** — 在大市值半导体覆盖中属罕见的分歧水平。
+
+**按机构的观点时间线:**
+
+**Bernstein (Stacy Rasgon) — 自我下调, 然后眼看股价反向而行:**
+- 2026-01-13 (CES 管理层会议纪要): **Outperform, PT $215** (当日收盘 $163.63, 隐含 +31%; 收盘价: yfinance) — *分析师观点:* ([Bernstein — CES takeaways, 2026-01-13](http://xs-macbook-air.local:5001/zsxq/pdf/184425218118812/Bernstein-Global%20Technology%EF%BC%9A%20What%20happened%20in%20Vegas%EF%BC%9F%20Takeaways%20from%20management%20meetings%20at%20CES-260113.pdf))
+- 2026-03-26: **下调 Outperform→Market-Perform, PT $175→$140** (当日收盘 $130.06)。报告首页原文: "Rating: Market-Perform (Outperform OLD); Price Target: 140.00 USD (175.00 OLD)"; 同时下修 F26E 调整后 EPS $10.87→$10.64、F27E $10.38→$9.74 — 触发因素是手机周期走弱与内存逆风 (*分析师观点:* [Bernstein — "There goes the neighborhood?", 2026-03-26, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812224411854452/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89There%20goes%20the%20neighborhood%EF%BC%9F%20Downgrading%20to%20Market~Perform-260326.pdf))
+- 2026-04-30 (FQ226 recap): **维持 MP, PT $140** = 14x F27E EPS $9.77 (报告自述现价 $156, 隐含约 -10%)。明确表态: 数据中心 ASIC "通常需要数年才能起量", 高通是迟到者, 须在 6 月分析师日"售卖梦想"; "若想布局数据中心逻辑, 买入英伟达 (NVDA) 或博通 (AVGO) 可能是更好选择" (*分析师观点:* [Bernstein — FQ226 recap, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf))
+- 2026-05-27 (Bernstein SDC 会议): **维持 MP, PT $140** (当日收盘 $232.54 — 隐含 **-40%**; 收盘价: yfinance)。立场未变但语气软化: 承认数据中心 FY2027 将实现"数十亿美元收入"且经营利润率为正, 主打推理市场、以 CPU 架构与无需 HBM 的内存方案差异化 (*分析师观点:* [Bernstein — SDC takeaways, 2026-05-27](http://xs-macbook-air.local:5001/zsxq/pdf/812451114422242/Bernstein-Qualcomm%20%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9A%20Key%20takeaways%20from%20Bernstein%E2%80%99s%20SDC-260527.pdf))
+
+**J.P. Morgan — 两个月内目标价 $140→$160→$265, 全程维持 Neutral:**
+- 2026-04-30 (F2Q26 review): **Neutral, PT $140→$160** = 15x F27E EPS $10.45 (报告自述现价 $156)。论点: 手机 F3Q 触底、F4Q 回升; 数据中心"三管齐下" (Agentic AI CPU + Alphawave 定制硅片 IP + 推理加速器) (*分析师观点:* [J.P. Morgan — F2Q26 Review, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484411841542/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89F2Q26%20Review%EF%BC%9A%20Finding%20the%20Bottom%20and%20Turning%20All%20Eyes%20to%20Investor%20Day%EF%BC%8C%20But%20Execution%20Will%20Be%20Watch%20Point%20Beyond%20the%20Strategy-260430.pdf))
+- 2026-06-05 (投资者日前瞻): **Neutral 但列入正面催化观察 (Positive Catalyst Watch), PT $160→$265** = 23x 上修后 F27E EPS $11.50 (此前 $10.45) (2026-06-05 收盘 $215.94, 隐含 +23%; 收盘价: `db/stock_price_target.db`)。预判投资者日将披露: FY2027 数据中心收入突破 $30 亿、FY2031 达 $350 亿 (定制 ASIC $200 亿 + 通用 AI 加速芯片 $50 亿 + 服务器 CPU $110 亿), FY2031 非手机收入占比升至 70%, 汽车 FY2031 $170 亿、IoT FY2031 $170 亿, 手机 FY2026–31 年增速仅 ~2% (*分析师观点:* [J.P. Morgan — Investor Day preview, 2026-06-05](http://xs-macbook-air.local:5001/zsxq/pdf/814528851485152/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89Expect%20Strong%20Data%20Center%20Market%20Revenue%20Targets%20and%20Customer%20Pipeline%20at%20Investor%20Day%EF%BC%9B%20Place%20on%20Positive%20Catalyst%20Watch-260605.pdf))。**注意: 这些 FY2031 数字是 JPM 对投资者日内容的预判, 不是高通已发布的指引。**
+
+**Goldman Sachs — 始终按现有盈利估值:**
+- 2026-04-29 (First Take): **Neutral, PT $135** = 12x × 常态化 EPS $11.00 (报告自述现价 $150, 隐含约 -10%)。手机下行与汽车/IoT 韧性互相平衡 (*分析师观点:* [GS — First Take, 2026-04-29](http://xs-macbook-air.local:5001/zsxq/pdf/212212284452121/GS-Qualcomm%20Inc.%20%28QCOM%29_%20First%20Take_%20In-line%20quarter%20with%20weak%20guidance%2C%20driven%20by%20smartphone%20downside-260429.pdf))
+
+**Morgan Stanley (Joseph Moore) — 全街最空:**
+- 2026-02-10 (恢复覆盖): **Underweight, PT $132** (报告自述 2026-02-09 收盘 $138.93)。报告原文: "Qualcomm has executed well under challenging circumstances, but may have maximized earnings power for now" — 内存短缺将使 2H 安卓环境恶化, 公司"个位数手机出货下滑"假设"may prove optimistic" (*分析师观点:* [Morgan Stanley — Resume coverage at UW, 2026-02-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184452551514412/Morgan%20Stanley-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Memory%20headwinds%20will%20create%20handset%20shortfall%EF%BC%9B%20Resume%20coverage%20at%20UW-260210.pdf))
+- 2026-05-19: **维持 UW, PT $132→$146** (当日收盘 $194.89, 隐含 **-25%**; 收盘价: yfinance) — 上调幅度远跟不上股价涨幅 (*分析师观点:* [MS — Large-Cap Institutional Ownership 1Q26, 2026-05-19](http://xs-macbook-air.local:5001/zsxq/pdf/585424552455544/MS-US%20Technology%20%20Large-Cap%20Institutional%20Ownership%201Q26%20Mega-Cap%20Tech%20Under-Ownership%20Narrows-260519.pdf))
+
+**UBS — 中性观望:**
+- 2025-11-06: Neutral, 报告标题即立场: "Data Center The New Angle, But Still Seems Far Out" (*分析师观点:* [UBS, 2025-11-06](http://xs-macbook-air.local:5001/zsxq/pdf/415854182115858/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Data%20Center%20The%20New%20Angle%EF%BC%8CBut%20Still%20Seems%20Far%20Out-251106.pdf)); 2026-02-05 回调后维持 Neutral ("Pullback Creates More Upside to Our PT, But We Remain Neutral", *分析师观点:* [UBS, 2026-02-05](http://xs-macbook-air.local:5001/zsxq/pdf/184428588114842/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Pullback%20Creates%20More%20Upside%20to%20Our%20PT%EF%BC%8C%20But%20We%20Remain%20Neutral-260205.pdf))
+
+**机构间分歧 (截至 2026-06-11 在档观点):**
+
+| 机构 | 日期 | 评级 / 目标价 | 核心论点 | 什么证据能证明其正确 |
+|---|---|---|---|---|
+| J.P. Morgan | 2026-06-05 | Neutral (正面催化观察) / $265 | 投资者日将给出 FY2031 数据中心 $350 亿路线图, 非手机占比 70%, 打开成长天花板 | 6/24 给出量化 FY2031 目标 + 具名客户; FY2027 数据中心收入兑现 >$30 亿 |
+| Bernstein | 2026-05-27 | Market-Perform / $140 | 数据中心是"售卖梦想", ASIC 起量需数年; 手机恶化是当下现实; 要 DC 敞口不如买 NVDA/AVGO | F4Q26 手机未如期环比回升; 投资者日缺乏具名客户与收入时间表 |
+| Morgan Stanley | 2026-05-19 | Underweight / $146 | 盈利能力已"最大化"; 内存短缺压制 2H 安卓; 数据中心期权未显现前股价跑输同业 | FY2026 H2 安卓出货/份额数据走弱; 投资者日后股价"卖事实" |
+| Goldman Sachs | 2026-04-29 | Neutral / $135 | 常态化 EPS $11 × 12x; 手机下行与汽车/IoT 上行互相平衡 | 手机营收持续低迷, 多元化增量不足以抵消 |
+
+分歧的真正轴线**不是**手机底部时点 (各家大体接受管理层的 F3Q26 触底口径), 而是**数据中心收入的可信度与应为其支付的倍数**: JPM 愿为尚未落地的 FY2031 路线图支付 23x 前瞻, Bernstein / GS / MS 只愿为利润表上已有的盈利支付 12–15x。同一事实集, 两套估值哲学 — 这也是本报告把投资者日列为头号摇摆变量的原因。
+
+### 关键摇摆变量 (Swing variables)
+
+1. **6 月 24 日投资者日的数据中心披露质量** — 是否具名客户、是否给出 FY2027/FY2031 量化收入目标、Dragonfly 三条产品线 (CPU / 推理加速器 / 定制 ASIC) 的出货时间表 ([Qualcomm Investor Day 2026 活动页](https://www.qualcomm.com/company/events/investor-day))。
+2. **内存涨价向手机 BOM 的传导深度与时长** — F4Q26 手机收入是否兑现管理层"环比回升"口径 ([F2Q26 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)); 若内存逆风延续整个 FY2027, 熊市情景的 $10.0 EPS 与 14x 倍数同时成立。
 
 ---
 
@@ -214,7 +327,11 @@ QCT 物联网业务在 2025 财年实现 **营业收入 66.17 亿美元 (同比 
 
 ### QCT — 数据中心 (新兴)
 
-继 2025 年 12 月以 24 亿美元收购 Alphawave Semi 后, 高通在 2018 年退出 Centriq 服务器 CPU 业务七年后, 事实上已重返数据中心。战略组合包含: (a) **Alphawave 的高速 SerDes / PCIe / CXL / 小芯片连接 IP** (用于 AI 加速器-CPU-内存互连的基础构件), (b) **高通的 Oryon CPU 与 Hexagon NPU 架构**, 针对推理负载进行扩展, 及 (c) 在 2026 财年 Q2 披露的 **与"一家领先的超大规模客户"的定制硅片合作, 计划在 2026 日历年下半年首批出货** ([QCOM 2026 财年 Q2 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm))。管理层已安排于 2026 年 6 月 24 日召开投资者日, 详述数据中心与具身 AI 路线图。**竞争结论: 当前判断尚早** — 高通在数据中心营业收入起点为零, 而当前市场由英伟达 (AI 加速器份额约 90%) 与博通 (面向谷歌、Meta 的定制 ASIC) 主导。但超大规模客户定制硅片模式, 与高通既有 OEM 客户化设计的纪律性高度契合。
+继 2025 年 12 月以 24 亿美元收购 Alphawave Semi 后, 高通在 2018 年退出 Centriq 服务器 CPU 业务七年后, 事实上已重返数据中心。战略组合包含: (a) **Alphawave 的高速 SerDes / PCIe / CXL / 小芯片连接 IP** (用于 AI 加速器-CPU-内存互连的基础构件), (b) **高通的 Oryon CPU 与 Hexagon NPU 架构**, 针对推理负载进行扩展, 及 (c) 在 2026 财年 Q2 披露的 **与"一家领先的超大规模客户"的定制硅片合作, 计划在 2026 日历年下半年首批出货** ([QCOM 2026 财年 Q2 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm))。2026 年 6 月 1 日, CEO Cristiano Amon 在 Computex 开幕主题演讲中将这一组合正式命名为 **Dragonfly** 数据中心产品品牌, 覆盖三类产品 — 服务器 CPU、AI 推理加速器与定制 ASIC, 并表示更多细节将于 6 月 24 日纽约投资者日披露 ([The Elec — "Qualcomm Unveils 'Dragonfly' Brand for Data Center Business", 2026-06](https://www.thelec.net/news/articleView.html?idxno=10949); [Qualcomm Investor Day 2026 活动页](https://www.qualcomm.com/company/events/investor-day))。**竞争结论: 当前判断尚早** — 高通在数据中心营业收入起点为零, 而当前市场由英伟达 (AI 加速器份额约 90%) 与博通 (面向谷歌、Meta 的定制 ASIC) 主导。但超大规模客户定制硅片模式, 与高通既有 OEM 客户化设计的纪律性高度契合; *分析师观点:* Bernstein 在 5 月底的会议纪要中转述, 高通数据中心业务主打推理 (inference) 市场, 以 CPU 架构与"无需 HBM 的内存方案"形成差异化, FY2027 将实现数十亿美元收入且经营利润率为正 ([Bernstein — SDC takeaways, 2026-05-27](http://xs-macbook-air.local:5001/zsxq/pdf/812451114422242/Bernstein-Qualcomm%20%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9A%20Key%20takeaways%20from%20Bernstein%E2%80%99s%20SDC-260527.pdf))。
+
+**延伸观看 / Further viewing**
+
+- [COMPUTEX 2026: Qualcomm CEO Cristiano Amon Keynote (YouTube) — Dragonfly 品牌发布与 "Year of the Agent" 完整主题演讲, 直观展示从终端到数据中心的统一算力架构叙事](https://www.youtube.com/watch?v=814lxJUPkAw)
 
 ### QTL — 专利授权
 
@@ -228,7 +345,7 @@ QTL 在全球向"数百家公司"授权高通的蜂窝 SEP 组合 (3G CDMA2000 /
 - **骁龙 X2 Elite / X2 Elite Extreme / X2 Plus** — CES 2026 上发布, 2026 日历年上半年开始出货 ([Neowin CES 2026 coverage](https://www.neowin.net/news/ces-2026-qualcomm-brings-snapdragon-x2-plus-to-mainstream-windows-11-copilot-pcs/))。
 - **骁龙 8 Elite Gen 5** — 预计 2026 日历年下半年发布, 与 Android 旗舰刷新周期对齐。
 - **骁龙 Ride Elite** — 2026 日历年内随已披露的 10 项项目设计中标进入量产爬坡。
-- **数据中心定制硅片** — 2026 日历年下半年首批出货。
+- **数据中心定制硅片** — 2026 日历年下半年首批出货; 品牌定名 **Dragonfly** (Computex 2026 发布, [The Elec, 2026-06](https://www.thelec.net/news/articleView.html?idxno=10949))。
 - **退役 / 重新定位:** 龙翼品牌重塑整合了多个历史工业 SKU。
 
 ---
@@ -506,7 +623,34 @@ PC: 设计导入到出货 12–18 个月, 传统上与微软 Surface 及联想�
 
 **14. 汇率与关税敞口。** 2025 财年约 92% 营业收入来自美国境外客户; 实质性人民币、韩元、新台币、印度卢比交易敞口。**缓释:** 主动外汇对冲; 在可行时以美元定价 ([QCOM 2025 财年 10-K, MD&A — Geographic Concentrations](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。
 
-**15. 估值 / 倍数压缩风险。** QCOM 交易于大市值半导体股中最低前瞻 P/E 倍数之一 (约 12 倍)。这一倍数虽对情绪冲击形成一定下行保护, 但也反映了市场对多元化逻辑的怀疑。如果苹果调制解调器替换加速、中国手机底部超出指引深度、或数据中心合作未能在 2026/2027 日历年提供可见营业收入, 倍数可能进一步压缩至个位数前瞻 P/E — 意味着在基本面稳定之前下行空间 25–35%。**缓释:** 200 亿美元回购授权提供买盘支撑; FCF 生成具有持久性; QTL 通过 2027–2031 财年合同条款保持黏性年金 ([24/7 Wall St — "Broadcom vs. Qualcomm", 2026-04-09](https://247wallst.com/investing/2026/04/09/broadcom-vs-qualcomm-buy-one-avoid-the-other/); [QCOM 2025 财年 10-K, Note 2 Concentrations](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。
+**16. 内存成本通胀 (新增, 2026-06)。** 这是当前周期里最直接的盈利压制项: 高通 F3Q26 指引明确把"内存供应紧张及相关定价对部分手机 OEM 需求的影响"写入展望 ([F2Q26 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm))。传导路径有二 — OEM 整机 BOM 中内存涨价挤占 SoC 预算 (压量), 与高端机型配置降级 (压 ASP/组合)。*分析师观点:* Morgan Stanley 在 2 月恢复覆盖时即以此为 UW 的首要论据 ("memory shortage is likely to create a tough Android environment 2h", [MS — Resume coverage at UW, 2026-02-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184452551514412/Morgan%20Stanley-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Memory%20headwinds%20will%20create%20handset%20shortfall%EF%BC%9B%20Resume%20coverage%20at%20UW-260210.pdf)); J.P. Morgan 在 6 月的上调报告中也把"存储涨价压制手机产业链景气"列为首位下行风险 ([J.P. Morgan, 2026-06-05](http://xs-macbook-air.local:5001/zsxq/pdf/814528851485152/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89Expect%20Strong%20Data%20Center%20Market%20Revenue%20Targets%20and%20Customer%20Pipeline%20at%20Investor%20Day%EF%BC%9B%20Place%20on%20Positive%20Catalyst%20Watch-260605.pdf))。**缓释:** 管理层口径为 F3Q26 触底; under-shipping (出货低于实际需求) 形成的渠道低库存会放大后续回补弹性。
+
+**15. 估值 / 期望落空风险 (方向已反转)。** 本报告前一版将此项列为"倍数压缩风险" — 当时 QCOM 以约 10–12 倍前瞻 P/E 交易于大市值半导体最低档。三个月后风险方向反转: 股价自 3 月 26 日 $130.06 一度涨至 6 月 2 日 $239.95, 前瞻 P/E 扩张至约 19 倍 (三年区间上端; yfinance, 2026-06-11), **市场已为尚未产生收入的数据中心业务预付了相当对价**。若 6 月 24 日投资者日的披露缺乏具名客户与量化收入时间表、或内存逆风超出 F3Q26 触底口径, 倍数回落至 14–15 倍 (空方对现有盈利的估值; *分析师观点:* [Bernstein FQ226 recap, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf)) 意味着 25–30% 下行 — 即本报告熊市情景 $140。**缓释:** 200 亿美元回购授权提供买盘支撑; FCF 生成具有持久性; QTL 通过 2027–2031 财年合同条款保持黏性年金 ([QCOM 2025 财年 10-K, Note 2 Concentrations](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。
+
+---
+
+## 9.5 核心分歧与催化剂 (Key debates & catalysts)
+
+与第 9 章的风险清单不同, 本节聚焦市场当下真正在交易的 2–3 个分歧, 并给出本报告的立场; 全部卖方立场引自第 1A 章的观点演变时间线。
+
+**分歧一: 数据中心是真实的第二增长曲线, 还是又一次 Centriq?**
+空方立场 (*分析师观点:* [Bernstein FQ226 recap, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf)): 定制 ASIC 缺乏产品定义、收入与时间表细节, 起量通常需数年, 高通是迟到者; 要数据中心敞口不如直接买 NVDA/AVGO。本报告的回应: 与 2018 年 Centriq 失败相比有三点实质不同 — (1) 本轮有 8-K 级披露的超大规模客户合作与 2026 H2 出货时间表 ([F2Q26 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)); (2) Alphawave 互连 IP 已并表、Oryon CPU 已在 PC 端量产验证 ([Qualcomm 新闻稿, 2025-12-18](https://www.qualcomm.com/news/releases/2025/12/qualcomm-completes-acquisition-of-alphawave-semi)); (3) 推理 (而非训练) 市场对每瓦性能 (performance-per-watt) 敏感, 与高通的结构性强项对口。但必须承认: 在收入落地之前, FY2031 路线图只是路线图 — 这正是基准情景只给 18x 而非 23x 的原因。
+
+**分歧二: 手机底部是 V 型还是 L 型?**
+空方立场 (*分析师观点:* [Morgan Stanley — Resume coverage at UW, 2026-02-10](http://xs-macbook-air.local:5001/zsxq/pdf/184452551514412/Morgan%20Stanley-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Memory%20headwinds%20will%20create%20handset%20shortfall%EF%BC%9B%20Resume%20coverage%20at%20UW-260210.pdf)): 内存短缺造成的 handset shortfall 是持续性的, 公司"个位数出货下滑"假设偏乐观。多方/管理层口径: 中国 OEM 的 under-shipping 在 F3Q26 结束, F4Q26 手机收入环比回升 ([F2Q26 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm); *分析师观点:* [J.P. Morgan F2Q26 Review, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484411841542/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89F2Q26%20Review%EF%BC%9A%20Finding%20the%20Bottom%20and%20Turning%20All%20Eyes%20to%20Investor%20Day%EF%BC%8C%20But%20Execution%20Will%20Be%20Watch%20Point%20Beyond%20the%20Strategy-260430.pdf))。本报告采信触底时点但不采信斜率 — 内存涨价是 2026 全年现实, F4Q26 的"环比回升"更可能温和而非 V 型, 故 FY2027E 营收取约持平而非反弹。
+
+**分歧三: ~19x 前瞻 P/E 是重估的起点还是终点?**
+JPM 的 23x 框架把数据中心当作"打开长期成长天花板"的事件 (*分析师观点:* [J.P. Morgan, 2026-06-05](http://xs-macbook-air.local:5001/zsxq/pdf/814528851485152/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89Expect%20Strong%20Data%20Center%20Market%20Revenue%20Targets%20and%20Customer%20Pipeline%20at%20Investor%20Day%EF%BC%9B%20Place%20on%20Positive%20Catalyst%20Watch-260605.pdf)); Bernstein/GS/MS 的 12–15x 框架只为利润表上已有的盈利付费。本报告取 18x: 高于历史区间上端 (给期权定价), 低于 AI 数据中心纯标的 (收入未落地)。隐含判断是 — 投资者日大概率给出方向性目标而非合同性承诺, 股价对"好但不惊艳"的披露反应中性偏负 (现价已计入大量预期)。
+
+**未来 12 个月催化剂日历:**
+
+| 日期 | 事件 | 关注点 |
+|---|---|---|
+| 2026-06-24 | **投资者日 (纽约)** ([Qualcomm Investor Day 2026](https://www.qualcomm.com/company/events/investor-day)) | 数据中心 FY2027/FY2031 收入目标是否量化、客户是否具名、Dragonfly 三条产品线出货时间表 |
+| 2026-07 下旬 | F3Q26 财报 | 落点在 $92–100 亿指引区间的位置; 手机触底口径验证; 数据中心更新 |
+| 2026 H2 | 数据中心定制硅片首批出货 (公司口径, [F2Q26 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)) | 是否如期、客户是否披露 |
+| 2026-09/10 | 骁龙峰会 (Snapdragon Summit) | 骁龙 8 Elite Gen 5 发布与安卓旗舰设计中标 |
+| 2026-11 初 | F4Q26 财报 + FY2027 框架 | 手机收入是否兑现环比回升; 内存成本对 QCT 毛利率的实际侵蚀 |
 
 ---
 
@@ -556,3 +700,76 @@ PC: 设计导入到出货 12–18 个月, 传统上与微软 Surface 及联想�
 - [Neowin — "CES 2026: Qualcomm brings Snapdragon X2 Plus", 2026-01-06](https://www.neowin.net/news/ces-2026-qualcomm-brings-snapdragon-x2-plus-to-mainstream-windows-11-copilot-pcs/)
 - [Edge AI and Vision Alliance — "Qualcomm Snapdragon Digital Chassis Momentum", 2026-01](https://www.edge-ai-vision.com/2026/01/qualcomm-drives-the-future-of-mobility-with-strong-snapdragon-digital-chassis-momentum-and-agentic-ai-for-major-global-automakers-worldwide/)
 - [TelecomLead — "Qualcomm Q1 FY2026 Results", 2026-02](https://telecomlead.com/telecom-chips/qualcomm-q1-fy2026-results-revenue-rises-5-as-automotive-and-iot-growth-offsets-smartphone-pressure-124412)
+- [Qualcomm 新闻稿 — "Qualcomm Completes Acquisition of Alphawave Semi", 2025-12-18](https://www.qualcomm.com/news/releases/2025/12/qualcomm-completes-acquisition-of-alphawave-semi)
+- [Qualcomm — Investor Day 2026 活动页 (2026-06-24, 纽约)](https://www.qualcomm.com/company/events/investor-day)
+- [The Elec — "Qualcomm Unveils 'Dragonfly' Brand for Data Center Business", 2026-06](https://www.thelec.net/news/articleView.html?idxno=10949)
+- [YouTube — COMPUTEX 2026: Qualcomm CEO Cristiano Amon Keynote](https://www.youtube.com/watch?v=814lxJUPkAw)
+
+### 机构研究 (本地 zsxq 研报库 — 全部标注 *分析师观点:*, 仅本机可访问)
+
+- [J.P. Morgan — Investor Day preview: Expect Strong Data Center Revenue Targets; Positive Catalyst Watch, 2026-06-05](http://xs-macbook-air.local:5001/zsxq/pdf/814528851485152/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89Expect%20Strong%20Data%20Center%20Market%20Revenue%20Targets%20and%20Customer%20Pipeline%20at%20Investor%20Day%EF%BC%9B%20Place%20on%20Positive%20Catalyst%20Watch-260605.pdf)
+- [J.P. Morgan — F2Q26 Review: Finding the Bottom, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484411841542/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89F2Q26%20Review%EF%BC%9A%20Finding%20the%20Bottom%20and%20Turning%20All%20Eyes%20to%20Investor%20Day%EF%BC%8C%20But%20Execution%20Will%20Be%20Watch%20Point%20Beyond%20the%20Strategy-260430.pdf)
+- [Bernstein — "There goes the neighborhood?" Downgrading to Market-Perform, 2026-03-26](http://xs-macbook-air.local:5001/zsxq/pdf/812224411854452/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89There%20goes%20the%20neighborhood%EF%BC%9F%20Downgrading%20to%20Market~Perform-260326.pdf)
+- [Bernstein — FQ226 recap: "We hope they put on a good show in June...", 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf)
+- [Bernstein — Key takeaways from Bernstein's SDC, 2026-05-27](http://xs-macbook-air.local:5001/zsxq/pdf/812451114422242/Bernstein-Qualcomm%20%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9A%20Key%20takeaways%20from%20Bernstein%E2%80%99s%20SDC-260527.pdf)
+- [Bernstein — CES management meetings takeaways, 2026-01-13](http://xs-macbook-air.local:5001/zsxq/pdf/184425218118812/Bernstein-Global%20Technology%EF%BC%9A%20What%20happened%20in%20Vegas%EF%BC%9F%20Takeaways%20from%20management%20meetings%20at%20CES-260113.pdf)
+- [Goldman Sachs — First Take: In-line quarter with weak guidance, 2026-04-29](http://xs-macbook-air.local:5001/zsxq/pdf/212212284452121/GS-Qualcomm%20Inc.%20%28QCOM%29_%20First%20Take_%20In-line%20quarter%20with%20weak%20guidance%2C%20driven%20by%20smartphone%20downside-260429.pdf)
+- [Morgan Stanley — Memory headwinds will create handset shortfall; Resume coverage at UW, 2026-02-10](http://xs-macbook-air.local:5001/zsxq/pdf/184452551514412/Morgan%20Stanley-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Memory%20headwinds%20will%20create%20handset%20shortfall%EF%BC%9B%20Resume%20coverage%20at%20UW-260210.pdf)
+- [Morgan Stanley — Large-Cap Institutional Ownership 1Q26 (QCOM PT $146), 2026-05-19](http://xs-macbook-air.local:5001/zsxq/pdf/585424552455544/MS-US%20Technology%20%20Large-Cap%20Institutional%20Ownership%201Q26%20Mega-Cap%20Tech%20Under-Ownership%20Narrows-260519.pdf)
+- [UBS — Data Center The New Angle, But Still Seems Far Out, 2025-11-06](http://xs-macbook-air.local:5001/zsxq/pdf/415854182115858/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Data%20Center%20The%20New%20Angle%EF%BC%8CBut%20Still%20Seems%20Far%20Out-251106.pdf)
+- [UBS — Pullback Creates More Upside to Our PT, But We Remain Neutral, 2026-02-05](http://xs-macbook-air.local:5001/zsxq/pdf/184428588114842/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Pullback%20Creates%20More%20Upside%20to%20Our%20PT%EF%BC%8C%20But%20We%20Remain%20Neutral-260205.pdf)
+- [Citi — China Technology & Communications: NVDA and Qualcomm Keynote Takeaways, 2026-06-01](http://xs-macbook-air.local:5001/zsxq/pdf/184152144482482/CITI-China%20Technology%20%26%20Communications%EF%BC%9ANVDA%20and%20Qualcomm%20Keynote%20Takeaways-260601.pdf)
+
+---
+
+## Data Used (数据清单)
+
+| 数据 | 来源 | 时点 / 范围 |
+|---|---|---|
+| SEC 文件 | FY2025 10-K、F2Q26 10-Q、F2Q26 业绩 8-K 等 (本地缓存 `financial_reports/QCOM/`, 经 `fetch_financial_report.py` 同步) | 截至 2026-04-29 申报 |
+| 市场数据 (现价 / 倍数 / 52 周区间 / 各日收盘) | yfinance ([Yahoo Finance — QCOM](https://finance.yahoo.com/quote/QCOM/)) | 2026-06-11 |
+| 同业前瞻倍数 (AVGO / NVDA / 2454.TW / AMD / MRVL) | yfinance | 2026-06-11 |
+| 卖方目标价时间线 | `db/stock_price_target.db` (只读; 13 条 QCOM 记录) + 上列 12 篇 zsxq 研报 PDF | 2025-11 至 2026-06 |
+| 公司事件 | [Qualcomm Investor Day 2026](https://www.qualcomm.com/company/events/investor-day); [Alphawave 收购完成新闻稿, 2025-12-18](https://www.qualcomm.com/news/releases/2025/12/qualcomm-completes-acquisition-of-alphawave-semi); [The Elec — Dragonfly, 2026-06](https://www.thelec.net/news/articleView.html?idxno=10949) | 2025-12 至 2026-06 |
+
+<details>
+<summary>Verification log (Step 10) — 2026-06-11</summary>
+
+本次为**报告更新** (前版 2026-05-20, 启动覆盖)。更新范围: 投资摘要头部 (新增)、第 1A 章估值与目标价 (新增, 含卖方观点演变)、估值快照重写 (June 11 数据)、Section 4 数据中心小节 (Dragonfly)、风险 #15 重写 + #16 新增、Section 9.5 (新增)、Data Used 清单 (新增)。未改动的存量章节 (2/3/5/6/7/8) 沿用前版验证结果。
+
+**URL check** — 本次新增的全部公开 URL 已于 2026-06-11 HTTP 验证 200: The Elec (Dragonfly)、Qualcomm Investor Day 活动页、Qualcomm Alphawave 完成新闻稿、YouTube Computex keynote (浏览器 UA)、stockanalysis.com、gurufocus、Yahoo Finance; SEC 两个文件 URL 以声明式 UA 验证 200 (浏览器 UA 对 SEC 返回 403, 属反爬而非死链)。
+
+**Step 0.5 sec-report-summary** — skipped (报告更新而非启动覆盖; `reports/earnings/QCOM.md` (2026-05-22) 已存在, 且自前版以来无新 10-K/10-Q 落地 — 最新文件仍为 2026-04-29 申报的 F2Q26 10-Q/8-K, 已并入正文)。
+
+**Further-viewing URLs** — 1 条 (YouTube Computex 2026 keynote), 浏览器 UA 验证 200。
+
+**SEC filenames** — 沿用前版自 EDGAR submissions JSON 解析的文件名; 本次新增引用均复用已验证的 `qcom032926erex991.htm` (F2Q26 8-K) 与 `qcom-20250928.htm` (FY2025 10-K)。
+
+**8-K / 市场数据 spot-checks (本次新增数字 → 来源):**
+- F2Q26 汽车收入 $1,326M (+38%) ✓ 8-K 原文 "Automotive 1,326 ... +38%"
+- 汽车+IoT 合计 +20% YoY ✓ 8-K 原文 "Combined QCT Automotive and IoT Revenues Grew 20% Year-Over-Year"
+- F3Q26 指引 $9.2B–$10.0B / Non-GAAP EPS $2.10–$2.30 ✓ 8-K Guidance 表
+- H1 FY26 回购 $5.4B + 新 $20B 授权 ✓ 8-K 标题行
+- 现价 $202.96 / 市值 ~$214B / TTM P/E 21.8x / 前瞻 P/E 19.0x / P/S 4.8x / 52 周 $121.99–259.92 / 股息率 1.92% ✓ yfinance 2026-06-11
+- 各日收盘 ($163.63 / $138.93 (MS 报告自述) / $130.06 / $194.89 / $232.54 / $239.95 / $215.94) ✓ yfinance 历史 + MS 报告原文 + `db/stock_price_target.db`
+- 目标价算术: 18×10.5=189≈190 ✓; 23×11.5=264.5≈265 ✓; 14×10=140 ✓; 空间 -6%/+31%/-31% ✓ (190/265/140 ÷ 202.96)
+
+**卖方数字 string-match (摘录 → 源 PDF):**
+- Bernstein 3/26 下调: "Market-Perform (Outperform OLD); 140.00 USD (175.00 OLD)"、F26E 10.64 (OLD 10.87)、F27E 9.74 (OLD 10.38)、F25A 12.03 ✓ `extract_pdf.py` 首页原文 (file_id 812224411854452)
+- MS 2/10: UW / PT $132 / Feb 9 收盘 $138.93、"may have maximized earnings power for now"、"the memory shortage is likely to create a tough Android environment 2h" ✓ 原文提取 (file_id 184452551514412)
+- JPM 6/5: PT $265 (原 $160)、23x、F27E EPS $11.50 (原 $10.45)、FY27 DC >$30 亿、FY31 $350 亿 (ASIC $200 亿 + 加速器 $50 亿 + CPU $110 亿)、非手机占比 70% ✓ 翻译精华 string-match (file_id 814528851485152)
+- Bernstein 4/30: 14x × F27E $9.77、现价 $156、FY26E 营收 $423 亿、"买入英伟达 (NVDA) 或博通 (AVGO) 可能是更好选择" ✓ 翻译精华 (file_id 184484414482182)
+- GS 4/29: Neutral / $135 = 12x × $11.00、现价 $150 ✓ 翻译精华 (file_id 212212284452121)
+- Bernstein SDC 5/27: "数十亿美元收入"、经营利润率为正、"无需 HBM 的内存方案"、订单储备超 450 亿美元 ✓ 翻译精华 (file_id 812451114422242)
+
+**Institute research (`db/zsxq.db`)** — 检索 5 个别名 (QCOM / Qualcomm / 高通 / Snapdragon / 骁龙), 命中 25+ 篇相关研报, 本次引用 12 篇 (J.P. Morgan ×2, Bernstein ×4, GS ×1, MS ×2, UBS ×2, Citi ×1), 全部 `find_pdf.py --file-id` 确认 `local_exists: true`, 引用一律走 `/zsxq/pdf/<file_id>/<filename>` 直下路由并标注 *分析师观点:*。卖方观点演变小节按规范完成 `db/stock_price_target.db` 只读预扫描 (13 条 QCOM 记录) — 离散度 min $135 / median ~$143 / max $265。
+
+**Analyst-view sentences** — 第 1A 章全部前瞻估计/目标价/情景、Bernstein CES PT $215 (provenance: `db/stock_price_target.db` 对该 note 的提取行)、JPM FY2031 各分部目标 (明确标注为 JPM 对投资者日的预判, 非公司指引) 均已标注。
+
+**Residual unknowns / Spec gaps (vintage 2026-05-20):**
+- Section 10 投资者视角记分卡 (Buffett / Munger / Damodaran / Marks) 尚未补齐 — 本次更新聚焦决策层 (1A + 9.5), 留待下次结构性重写。
+- 英文版 `Qualcomm_NASDAQ_QCOM_Research_Document.md` 本次未更新 (用户未要求双语), 其市场数据仍为 2026-05 时点。
+- Bernstein 在 1/13 ($215) 与 3/26 (OLD $175) 之间应存在一次未入库的 PT 下调 ($215→$175), 本地库未覆盖该篇, 时间线如实呈现两端点。
+- 存量章节 (2/3/5/6/7/8) 的 87 条既有 URL 未在本次重新全量扫描 (前版已验证); 本次仅验证新增及新内容引用的 URL。
+
+</details>
