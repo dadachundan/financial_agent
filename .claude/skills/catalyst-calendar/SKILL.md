@@ -1057,6 +1057,15 @@ When this report covers something a reader would struggle to picture from prose 
 
 > Full spec: `../company-research/references/citations.md` § "Further viewing — explainer videos" (this skill has no local `references/` dir; the shared spec lives in company-research).
 
+## AI / Robotics / Semiconductor — detailed-narrative rule (MANDATORY)
+
+When an AI, robotics, or semiconductor name (or a macro/event item that primarily moves those sectors — e.g., an NVDA print, a BIS export-control action, a memory-pricing datapoint, an OPEX heavy in semis) appears among the day's or week's key events, that entry gets the **deepest narrative on the page**:
+
+- Spell out what is priced in, the sector-cycle context (AI-capex trajectory, HBM/memory pricing, WFE orders, export controls), and the **second-order read-through** — which suppliers, customers, and peers move with the event and why.
+- Mode A may stretch toward its upper word bound to accommodate these entries, but the brief stays tight overall — the extra depth comes from cutting generic filler elsewhere, not from inflating the whole note.
+- Mode C deals in these sectors must detail the strategic/technology rationale (IP, roadmap, capacity) and regulatory chokepoints (CFIUS, SAMR, BIS) in narrative form, not one-line mentions.
+- Numbers obey the numerical-accuracy rule — every figure traces to a source cited in the same paragraph.
+
 ## Cross-cutting guardrails (all modes)
 
 - **Citation standard** — every substantive paragraph carries ≥1 inline markdown-link citation per the project's `.claude/skills/company-research/references/citations.md` spec. Day-of briefs are exempt from this for ephemeral macro-print numbers (consensus pulled from Bloomberg/Reuters terminals), but file-saved versions get inline links to the original release schedule (BLS, BEA, FRB, EIA, etc.).

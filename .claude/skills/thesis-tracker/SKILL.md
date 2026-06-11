@@ -112,6 +112,23 @@ The "thesis-revisit" note is a mature sell-side report type (MS *Risk Reward Upd
 
 - **Source every number in the delta table, KPI panel, scenario grid, and milestone reconciliation.** Each datapoint needs an inline deep-URL citation where the number literally appears (filing / press release / data provider); the analyst's own scenario model is **not** a source; every derived figure (YoY, % to spot, multiple × EPS) must show its inputs so it's re-derivable. Follows the project's paragraph-level citation and numerical-accuracy standards — see `.claude/skills/company-research/references/citations.md`.
 
+## AI / Robotics / Semiconductor — detailed-narrative rule (MANDATORY)
+
+When the subject of the output — the ticker, theme, sector, ETF holdings, deal, or any name that materially drives the analysis — sits in **AI** (foundation models, AI software/agents, AI infrastructure: datacenter compute, networking, power), **robotics** (humanoids, industrial automation, AMRs, actuators / reducers / sensors / end-effectors), or **semiconductors** (fabless, foundry, IDM, memory/HBM, equipment/WFE, materials, EDA/IP, advanced packaging), give those names a **detailed narrative treatment**, not summary bullets:
+
+- **Write full narrative prose** for the sector-relevant sections — mechanism and causality ("X drives Y because Z"), not headline restating. Bullets may organize the prose but never replace it.
+- **Cover the sector-specific dimensions that apply:**
+  - *Technology position & roadmap* — process node / architecture / model-capability cadence vs named competitors (e.g., N2 vs 18A, HBM3E→HBM4, GB200→Rubin, Optimus gen-3 vs Figure 03).
+  - *Supply-chain position* — key suppliers and customers up/down the chain, single-source chokepoints (TSMC/CoWoS, EUV, HBM), where pricing power sits, content-per-unit ($ per GPU / per robot / per vehicle).
+  - *AI demand linkage* — the explicit path from AI capex to this name's P&L (orders → backlog → revenue recognition) with the actual disclosed numbers, never a generic "AI beneficiary" label.
+  - *Robotics linkage* — design-win status, which platforms (Tesla Optimus, Figure, Unitree, domestic Chinese OEMs), volume and timeline realism vs the hype cycle.
+  - *Cycle context* — where the semi / memory-pricing / AI-capex cycle stands right now and what that implies for forward estimates.
+  - *Geopolitics & export controls* — US BIS rules, China localization, tariff exposure, entity-list status where relevant.
+- **Quantify the narrative.** Each dimension covered should carry at least one sourced number (TAM, ASP, capacity, units, share). All figures obey the project's numerical-accuracy rule — every number traces to a URL or PDF page cited in the same paragraph.
+- **Engage the sell-side view.** Where the zsxq library or other broker sources are in scope for this skill, the AI/robotics/semi narrative must engage the institute view (PTs, estimate revisions, cross-broker disagreement) rather than ignoring it.
+
+This rule **deepens** the skill's existing output format — it never replaces or shortens the required structure. For subjects outside these sectors, the skill's baseline depth applies unchanged.
+
 ## Important Notes
 
 - A thesis should be falsifiable — if nothing could disprove it, it's not a thesis

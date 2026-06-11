@@ -101,6 +101,10 @@ When this report covers something a reader would struggle to picture from prose 
 - **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
 - **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
 
+## AI / Robotics / Semiconductor — detailed-narrative rule (MANDATORY)
+
+When `<ticker>` is an AI, robotics, or semiconductor name, the report must identify **which sector narrative is driving sentiment** — AI-capex durability, HBM/memory cycle, humanoid-robot timelines, export-control fear, "bubble" discourse — and say in narrative prose whether retail/news positioning is consistent with where that sector cycle actually stands. Quote the specific posts/headlines carrying the narrative; don't reduce them to a score alone.
+
 ## Citations (required)
 
 Every quoted excerpt, named post, or specific message count tied to a single source **must carry a clickable markdown-link citation** of the form `[@user · platform · YYYY-MM-DD](url)` (or `[Publisher · YYYY-MM-DD](url)` for news). Pull the URLs from the `Link:` lines in the fetcher output — never invent one, never write `(source: StockTwits)` without a URL.

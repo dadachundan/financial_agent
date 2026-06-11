@@ -123,6 +123,10 @@ After the debate rounds, both sides converge to a single **Risk-Reward-style sco
 
 Close with a short list of **dated, falsifiable catalysts** that would flip the call, each mapped to the case it confirms — the JPM DiDi "turns positive if 2Q intl loss-rate keeps narrowing" trigger list, plus the HSBC/Citi high-priority (real worry) vs low-priority (not yet) split. Examples: next earnings date, investor day, lockup expiry, a named data read-out, a macro print. This gives [[research-manager]] a monitoring handle. Tie each trigger to an **upgrade** or **downgrade** condition.
 
+## AI / Robotics / Semiconductor — detailed-narrative rule (MANDATORY)
+
+When the ticker is an AI, robotics, or semiconductor name, both analysts must argue **sector-specific mechanisms**, not generic growth-vs-valuation lines: bull/bear on AI-demand durability and the capex cycle, supply-chain pricing power and chokepoints (TSMC/CoWoS, HBM, EUV), technology-roadmap risk vs named competitors, robotics design-win/timeline realism, and export-control exposure — each grounded in numbers from the three analyst reports. The scenario scorecard's swing variables should be sector-native (e.g., hyperscaler capex growth, HBM ASP, units shipped), not generic placeholders.
+
 ## Output
 
 Return the complete `debate_history` markdown — alternating `Bull Analyst:` and `Bear Analyst:` paragraphs, in order, for `2 × rounds` turns total — **followed by the Scenario scorecard, the Sell-side view evolution (卖方观点演变) block (required when ≥2 zsxq notes were used), and Triggers-to-watch blocks**.

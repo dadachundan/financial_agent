@@ -231,6 +231,10 @@ End the reply with two compact one-liners (only when non-empty):
 2. `🟡 <N> PT-mentioned tickers without a reports/company/ entry` —
    followed by the markdown table from step 5.
 
+## AI / Robotics / Semiconductor — detailed-narrative rule (MANDATORY)
+
+AI / robotics is already this skill's default focus — so the bar is higher than a title gloss. Every surfaced AI / robotics / semiconductor pick gets **3–5 sentences of real narrative** drawn from the summary text: the broker's actual thesis (mechanism, not topic), the key numbers present in the summary (PT, TAM, pricing, units), where the name sits in the supply chain, and why the report matters *now* (cycle position, catalyst, estimate revision). Theme groupings of AI/robotics/semi reports get a short narrative paragraph per theme — what the cluster of brokers collectively believes and where they disagree — not just a list of titles.
+
 ## Notes
 
 - DB is read-only here. Never write to `db/zsxq.db` from this skill.

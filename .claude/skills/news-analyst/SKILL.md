@@ -128,6 +128,10 @@ Canonical opening shape:
 
 If a section is consolidated (e.g. <5 articles total), keep the numeric prefix on whatever sections remain — re-number so the sequence stays contiguous (1, 2, 3, …), no gaps.
 
+## AI / Robotics / Semiconductor — detailed-narrative rule (MANDATORY)
+
+When `<ticker>` is an AI, robotics, or semiconductor name, Sections 2–3 must go beyond headline aggregation and give a **detailed narrative**: tie each material news item to the sector mechanism — AI-capex flow-through to this name's orders/backlog, supply-chain chokepoints (TSMC/CoWoS, HBM, EUV), memory/WFE cycle position, export-control exposure — and spell out the read-through to estimates and the stock. Macro items (Section 1) that primarily move these sectors (BIS rules, hyperscaler capex prints, memory pricing) get the same mechanism-level treatment. Every figure traces to a source cited in the same paragraph.
+
 ## Citations (required)
 
 Every claim grounded in a fetched headline or filing **must carry a clickable markdown-link citation** of the form `[Publisher · YYYY-MM-DD](url)` (or `[SEC Form 4](url)` for insider txns). Pull the URLs from the `Link:` lines in the fetcher output — never invent one, never just write `(source: Yahoo Finance)` without a URL.
