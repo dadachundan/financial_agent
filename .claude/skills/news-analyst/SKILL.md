@@ -128,6 +128,10 @@ Canonical opening shape:
 
 If a section is consolidated (e.g. <5 articles total), keep the numeric prefix on whatever sections remain — re-number so the sequence stays contiguous (1, 2, 3, …), no gaps.
 
+## Primary-source-first rule (MANDATORY, short form)
+
+When a headline summarizes a company document — an earnings release, an 8-K, a guidance change, an SEC filing — cite the original document alongside (or instead of) the news rewrite: the 8-K with Item/exhibit, the 10-Q with page, the IR press-release URL. English originals stay English. Where the item is a recurring disclosure (quarterly print, monthly metric), include the prior-period figure with its own source so the reader sees what's new vs. last time, not a bare snapshot.
+
 ## AI / Robotics / Semiconductor — detailed-narrative rule (MANDATORY)
 
 When `<ticker>` is an AI, robotics, or semiconductor name, Sections 2–3 must go beyond headline aggregation and give a **detailed narrative**: tie each material news item to the sector mechanism — AI-capex flow-through to this name's orders/backlog, supply-chain chokepoints (TSMC/CoWoS, HBM, EUV), memory/WFE cycle position, export-control exposure — and spell out the read-through to estimates and the stock. Macro items (Section 1) that primarily move these sectors (BIS rules, hyperscaler capex prints, memory pricing) get the same mechanism-level treatment. Every figure traces to a source cited in the same paragraph.

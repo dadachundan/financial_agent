@@ -1057,6 +1057,10 @@ When this report covers something a reader would struggle to picture from prose 
 
 > Full spec: `../company-research/references/citations.md` § "Further viewing — explainer videos" (this skill has no local `references/` dir; the shared spec lives in company-research).
 
+## Primary-source-first rule (MANDATORY, short form)
+
+When an event traces to a company document, cite the original — the 8-K (with Item number and exhibit, e.g. `8-K Item 2.02, Ex-99.1 press release`), the S-4 / DEFM14A (with page), the IR press release / deck (with slide) — never just a news rewrite of it. English originals are cited in English even when the surrounding output leans Chinese. For recurring events (an earnings print, a deal milestone), add one line on what's new vs. the prior period / prior milestone, each side sourced, so the reader sees development over time rather than an isolated datapoint.
+
 ## AI / Robotics / Semiconductor — detailed-narrative rule (MANDATORY)
 
 When an AI, robotics, or semiconductor name (or a macro/event item that primarily moves those sectors — e.g., an NVDA print, a BIS export-control action, a memory-pricing datapoint, an OPEX heavy in semis) appears among the day's or week's key events, that entry gets the **deepest narrative on the page**:

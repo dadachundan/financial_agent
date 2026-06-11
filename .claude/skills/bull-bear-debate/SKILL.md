@@ -123,6 +123,10 @@ After the debate rounds, both sides converge to a single **Risk-Reward-style sco
 
 Close with a short list of **dated, falsifiable catalysts** that would flip the call, each mapped to the case it confirms — the JPM DiDi "turns positive if 2Q intl loss-rate keeps narrowing" trigger list, plus the HSBC/Citi high-priority (real worry) vs low-priority (not yet) split. Examples: next earnings date, investor day, lockup expiry, a named data read-out, a macro print. This gives [[research-manager]] a monitoring handle. Tie each trigger to an **upgrade** or **downgrade** condition.
 
+## Primary-source-first rule (MANDATORY, short form)
+
+When either analyst quotes a company number, prefer the filing/IR-grounded evidence carried in the company-research report — 10-K / 10-Q with page, earnings deck with slide — over news paraphrases, and preserve those page/slide locators when re-quoting. Arguments about trajectory ("growth is decelerating", "margins are inflecting") must rest on at least two consecutive periods' filings, so the debate engages the company's development over time, not a single print. English originals stay English.
+
 ## AI / Robotics / Semiconductor — detailed-narrative rule (MANDATORY)
 
 When the ticker is an AI, robotics, or semiconductor name, both analysts must argue **sector-specific mechanisms**, not generic growth-vs-valuation lines: bull/bear on AI-demand durability and the capex cycle, supply-chain pricing power and chokepoints (TSMC/CoWoS, HBM, EUV), technology-roadmap risk vs named competitors, robotics design-win/timeline realism, and export-control exposure — each grounded in numbers from the three analyst reports. The scenario scorecard's swing variables should be sector-native (e.g., hyperscaler capex growth, HBM ASP, units shipped), not generic placeholders.
