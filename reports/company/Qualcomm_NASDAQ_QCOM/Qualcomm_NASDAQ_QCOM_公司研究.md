@@ -39,6 +39,7 @@
 2. 公司历史
 3. 管理团队
 4. 产品与服务
+4A. AI 全景: 从终端到数据中心 (AI deep-dive)
 5. 客户与上市策略
 6. 行业概览
 7. 竞争格局
@@ -134,7 +135,8 @@
 
 **按机构的观点时间线:**
 
-**Bernstein (Stacy Rasgon) — 自我下调, 然后眼看股价反向而行:**
+**Bernstein (Stacy Rasgon) — 从"最被低估的 AI 期权"多头到下调, 然后眼看股价反向而行:**
+- 2025-10-27 (AI200/AI250 发布日): **Outperform**。把高通比作"半导体界的 Rodney Dangerfield" (得不到尊重的喜剧演员), 指出 AI 产品"在我们模型中为零, (直到昨天) 对倍数的贡献也为零", 公司 FY2029 既有目标 ~$500 亿收入 / EPS $14–15 尚不含任何数据中心 — "别的股票都在受益于'大蛋糕切一小块'逻辑, 高通也该开始享受一点同等待遇" (*分析师观点:* [Bernstein — "Rodney Dangerfield gets a m(AI)keover?", 2025-10-27](http://xs-macbook-air.local:5001/zsxq/pdf/184558545222812/Bernstein-U.S.%20Semiconductors%EF%BC%9AQualcomm%20%EF%BC%88QCOM%EF%BC%89%EF%BC%9A%20Rodney%20Dangerfield%20gets%20a%20m%EF%BC%88AI%EF%BC%89keover%EF%BC%9F-251027.pdf))
 - 2026-01-13 (CES 管理层会议纪要): **Outperform, PT $215** (当日收盘 $163.63, 隐含 +31%; 收盘价: yfinance) — *分析师观点:* ([Bernstein — CES takeaways, 2026-01-13](http://xs-macbook-air.local:5001/zsxq/pdf/184425218118812/Bernstein-Global%20Technology%EF%BC%9A%20What%20happened%20in%20Vegas%EF%BC%9F%20Takeaways%20from%20management%20meetings%20at%20CES-260113.pdf))
 - 2026-03-26: **下调 Outperform→Market-Perform, PT $175→$140** (当日收盘 $130.06)。报告首页原文: "Rating: Market-Perform (Outperform OLD); Price Target: 140.00 USD (175.00 OLD)"; 同时下修 F26E 调整后 EPS $10.87→$10.64、F27E $10.38→$9.74 — 触发因素是手机周期走弱与内存逆风 (*分析师观点:* [Bernstein — "There goes the neighborhood?", 2026-03-26, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812224411854452/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89There%20goes%20the%20neighborhood%EF%BC%9F%20Downgrading%20to%20Market~Perform-260326.pdf))
 - 2026-04-30 (FQ226 recap): **维持 MP, PT $140** = 14x F27E EPS $9.77 (报告自述现价 $156, 隐含约 -10%)。明确表态: 数据中心 ASIC "通常需要数年才能起量", 高通是迟到者, 须在 6 月分析师日"售卖梦想"; "若想布局数据中心逻辑, 买入英伟达 (NVDA) 或博通 (AVGO) 可能是更好选择" (*分析师观点:* [Bernstein — FQ226 recap, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf))
@@ -151,7 +153,8 @@
 - 2026-02-10 (恢复覆盖): **Underweight, PT $132** (报告自述 2026-02-09 收盘 $138.93)。报告原文: "Qualcomm has executed well under challenging circumstances, but may have maximized earnings power for now" — 内存短缺将使 2H 安卓环境恶化, 公司"个位数手机出货下滑"假设"may prove optimistic" (*分析师观点:* [Morgan Stanley — Resume coverage at UW, 2026-02-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184452551514412/Morgan%20Stanley-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Memory%20headwinds%20will%20create%20handset%20shortfall%EF%BC%9B%20Resume%20coverage%20at%20UW-260210.pdf))
 - 2026-05-19: **维持 UW, PT $132→$146** (当日收盘 $194.89, 隐含 **-25%**; 收盘价: yfinance) — 上调幅度远跟不上股价涨幅 (*分析师观点:* [MS — Large-Cap Institutional Ownership 1Q26, 2026-05-19](http://xs-macbook-air.local:5001/zsxq/pdf/585424552455544/MS-US%20Technology%20%20Large-Cap%20Institutional%20Ownership%201Q26%20Mega-Cap%20Tech%20Under-Ownership%20Narrows-260519.pdf))
 
-**UBS — 中性观望:**
+**UBS — 中性观望, 始终提示 AI 反应过度:**
+- 2025-10-27 (AI200/AI250 发布日首读): **Neutral, PT $175** = ~16x C2022–2026E 平均 EPS $11.04。测算 HUMAIN 200 MW 全部部署仅对应 ~$20 亿收入 (~占其 C2026 收入预测 4%), 而当日市值增量约为隐含收入的 10 倍 — "股价对这则新闻本身的反应过度" (*分析师观点:* [UBS — Thoughts On New Inferencing AI Accelerators Roadmap, 2025-10-27, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585118115411414/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Thoughts%20On%20New%20Inferencing%20AI%20Accelerators%20Roadmap-251027.pdf))
 - 2025-11-06: Neutral, 报告标题即立场: "Data Center The New Angle, But Still Seems Far Out" (*分析师观点:* [UBS, 2025-11-06](http://xs-macbook-air.local:5001/zsxq/pdf/415854182115858/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Data%20Center%20The%20New%20Angle%EF%BC%8CBut%20Still%20Seems%20Far%20Out-251106.pdf)); 2026-02-05 回调后维持 Neutral ("Pullback Creates More Upside to Our PT, But We Remain Neutral", *分析师观点:* [UBS, 2026-02-05](http://xs-macbook-air.local:5001/zsxq/pdf/184428588114842/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Pullback%20Creates%20More%20Upside%20to%20Our%20PT%EF%BC%8C%20But%20We%20Remain%20Neutral-260205.pdf))
 
 **机构间分歧 (截至 2026-06-11 在档观点):**
@@ -347,6 +350,55 @@ QTL 在全球向"数百家公司"授权高通的蜂窝 SEP 组合 (3G CDMA2000 /
 - **骁龙 Ride Elite** — 2026 日历年内随已披露的 10 项项目设计中标进入量产爬坡。
 - **数据中心定制硅片** — 2026 日历年下半年首批出货; 品牌定名 **Dragonfly** (Computex 2026 发布, [The Elec, 2026-06](https://www.thelec.net/news/articleView.html?idxno=10949))。
 - **退役 / 重新定位:** 龙翼品牌重塑整合了多个历史工业 SKU。
+
+---
+
+## 4A. AI 全景: 从终端到数据中心 (AI deep-dive)
+
+本章把散布在产品、行业与估值各章的 AI 线索集中拆解为四层: 数据中心 AI (新叙事的主体)、端侧 AI (edge AI, 现金流的来源)、物理 AI (physical AI, 长期期权)、以及 AI 对财务模型的传导路径。除标注 SEC 文件或高通新闻稿者外, 本章的量化判断均为卖方估计, 一律标注 *分析师观点:*。
+
+### 4A.1 数据中心 AI: 高通不是从零开始 — 是此前无人买账
+
+一个被市场普遍忽略的事实: 高通卖 AI 推理加速器已经很多年了。*分析师观点:* Bernstein 在 2025 年 10 月的报告中原文写道: "Qualcomm has actually sold AI accelerators for years, but many investors seem unaware" — 第一代 **AI100** 于 2019 年发布、2021 年商用出货, 面向生成式 AI 的升级版 **Cloud AI 100 Ultra** 于 2023 年底发布, 但"前期努力几乎没有引起任何注意" ([Bernstein — "Rodney Dangerfield gets a m(AI)keover?", 2025-10-27, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184558545222812/Bernstein-U.S.%20Semiconductors%EF%BC%9AQualcomm%20%EF%BC%88QCOM%EF%BC%89%EF%BC%9A%20Rodney%20Dangerfield%20gets%20a%20m%EF%BC%88AI%EF%BC%89keover%EF%BC%9F-251027.pdf))。转折点是 2025 年 10 月 27 日: 高通发布 **AI200 / AI250** 机架级 (rack-scale) 推理方案, 当日股价盘中一度大涨近 20% (*分析师观点:* 同上, Bernstein 记录当日盘中 +15%, 峰值近 +20%)。
+
+**AI200 / AI250 产品事实 (高通新闻稿原文要点):** AI200 是面向大语言模型/多模态模型 (LLM / LMM) 推理的机架级方案, **每卡支持 768 GB LPDDR 内存**, 主打低总拥有成本 (TCO); AI250 采用**基于近存计算 (near-memory computing) 的创新内存架构**, 提供"超过 10 倍的有效内存带宽提升与显著更低的功耗"; 两者均为直接液冷 (direct liquid cooling)、PCIe scale-up、以太网 scale-out、支持机密计算 (confidential computing), **机架级功耗 160 kW**; 商用时间分别为 **2026 年 (AI200) 与 2027 年 (AI250)**, 此后按年度节奏迭代 ([Qualcomm 新闻稿 — "Qualcomm Unveils AI200 and AI250", 2025-10-27](https://www.qualcomm.com/news/releases/2025/10/qualcomm-unveils-ai200-and-ai250-redefining-rack-scale-data-cent))。
+
+**中文释义 / Plain-language gloss:** 训练 (training) 吃算力与内存带宽, 推理 (inference) 吃内存容量与单位 token 成本 — 大模型推理时须把 KV cache (键值缓存) 与模型权重整体驻留内存, 容量越大、可同时服务的并发与上下文越长。高通的差异化打法是**用 LPDDR (手机内存的衍生品, 容量大、每 GB 成本远低于 HBM) 替代 HBM (高带宽内存, 贵且供应紧张)**, 牺牲原生带宽、用近存计算架构补偿 — 等于把自己 30 年的移动端低功耗内存子系统积累搬进机房。这也回避了当前 AI 供应链最拥挤的 HBM 采购战 (*分析师观点:* "无需 HBM 的内存方案"差异化定位引自 [Bernstein — SDC takeaways, 2026-05-27](http://xs-macbook-air.local:5001/zsxq/pdf/812451114422242/Bernstein-Qualcomm%20%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9A%20Key%20takeaways%20from%20Bernstein%E2%80%99s%20SDC-260527.pdf))。代价同样真实: 160 kW/机架的功耗高于英伟达 Blackwell NVL72 的 120 kW/机架 (*分析师观点:* [UBS — Thoughts On New Inferencing AI Accelerators Roadmap, 2025-10-27, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585118115411414/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Thoughts%20On%20New%20Inferencing%20AI%20Accelerators%20Roadmap-251027.pdf), UBS 注明这可能源于每机架处理器数更多)。
+
+**首个具名客户 — HUMAIN (沙特):** 继 2025 年 5 月 13 日 MOU 后, 高通宣布与 HUMAIN 自 2026 年起部署 **200 MW** AI200/AI250 机架 (*分析师观点:* MOU 日期与部署规模引自 [UBS, 2025-10-27](http://xs-macbook-air.local:5001/zsxq/pdf/585118115411414/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Thoughts%20On%20New%20Inferencing%20AI%20Accelerators%20Roadmap-251027.pdf))。两家机构对该订单的独立测算高度一致: 按 160 kW/机架折算约 1,250–1,300 个机架, 全部部署对应收入约 **$20 亿** — UBS 按 AI 同业每 GW 收入折算 (约占其 C2026 收入预测 $446 亿的 4%), Bernstein 按每机架 ~$150 万 (约为英伟达机架价格的一半) 估算 (*分析师观点:* [UBS, 2025-10-27](http://xs-macbook-air.local:5001/zsxq/pdf/585118115411414/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Thoughts%20On%20New%20Inferencing%20AI%20Accelerators%20Roadmap-251027.pdf); [Bernstein, 2025-10-27](http://xs-macbook-air.local:5001/zsxq/pdf/184558545222812/Bernstein-U.S.%20Semiconductors%EF%BC%9AQualcomm%20%EF%BC%88QCOM%EF%BC%89%EF%BC%9A%20Rodney%20Dangerfield%20gets%20a%20m%EF%BC%88AI%EF%BC%89keover%EF%BC%9F-251027.pdf))。UBS 当时即警告股价反应"过度": 高通当日市值增量约为隐含部署收入的 **10 倍**, 而 AVGO (10 GW 订单) 仅 ~126%、AMD (6 GW) ~70%、NVDA (10 GW) ~50% (*分析师观点:* 同上 UBS)。
+
+此后的升级路径在第 4 章已述: 2025-12-18 Alphawave 并表 (互连 IP + Tony Pialis 出任数据中心业务负责人, [Qualcomm 新闻稿](https://www.qualcomm.com/news/releases/2025/12/qualcomm-completes-acquisition-of-alphawave-semi)) → 2026-04-29 披露与"一家领先超大规模客户"的定制硅片合作、2026 H2 首批出货 ([F2Q26 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)) → 2026-06-01 Computex 发布 **Dragonfly** 品牌, 整合服务器 CPU、推理加速器、定制 ASIC 三条产品线 ([The Elec, 2026-06](https://www.thelec.net/news/articleView.html?idxno=10949))。*分析师观点:* J.P. Morgan 对三条线 FY2031 的分项预判 — 定制 ASIC $200 亿 (对标博通式定制芯片赛道 ~60% 长期年化增速)、通用推理加速器 $50 亿 (从 HUMAIN 项目起步向各大云厂商推理解码场景渗透)、服务器 CPU $110 亿 (远期 $1,200 亿服务器 CPU 市场的 ~9% 份额, 参考高通 PC 端市占率) — 合计构成其 FY2031 数据中心 ~$350 亿收入预判的算术底座; JPM 同时给出联发科作为落地节奏参照 (谷歌定制 ASIC 业务 2026 年末起创收、2027 年收入有望破百亿美元) ([J.P. Morgan — Investor Day preview, 2026-06-05](http://xs-macbook-air.local:5001/zsxq/pdf/814528851485152/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89Expect%20Strong%20Data%20Center%20Market%20Revenue%20Targets%20and%20Customer%20Pipeline%20at%20Investor%20Day%EF%BC%9B%20Place%20on%20Positive%20Catalyst%20Watch-260605.pdf))。**这些都是 JPM 对 6 月 24 日投资者日内容的预判, 不是高通已发布的指引** — 投资者日的实际披露质量是第 1A 章头号摇摆变量。
+
+### 4A.2 端侧 AI (Edge AI): 智能体时代的 CPU 红利
+
+数据中心抢走了全部头条, 但高通 AI 故事里现金流更近的一半在端侧。逻辑链条 (*分析师观点:* [J.P. Morgan — F2Q26 Review, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484411841542/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89F2Q26%20Review%EF%BC%9A%20Finding%20the%20Bottom%20and%20Turning%20All%20Eyes%20to%20Investor%20Day%EF%BC%8C%20But%20Execution%20Will%20Be%20Watch%20Point%20Beyond%20the%20Strategy-260430.pdf)):
+
+- **智能体 AI (agentic AI) 工作负载是 CPU 密集型的** — 持续后台处理、传感器融合 (sensor fusion) 类任务主要消耗 CPU 而非 NPU, 利好高通在手机 (Oryon)、PC (骁龙 X)、汽车三个端口的自研 CPU 领导力 (JPM 4/30 核心论点)。
+- **端侧本地大模型抬升单机硅含量** — 安卓旗舰芯片受益于本地 LLM 落地带来的单机价值 (content per device) 提升, JPM 预计安卓手机芯片收入维持双位数增长 — 即便整体手机板块因苹果流失只有 ~2% 年增速 (*分析师观点:* [J.P. Morgan, 2026-06-05](http://xs-macbook-air.local:5001/zsxq/pdf/814528851485152/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89Expect%20Strong%20Data%20Center%20Market%20Revenue%20Targets%20and%20Customer%20Pipeline%20at%20Investor%20Day%EF%BC%9B%20Place%20on%20Positive%20Catalyst%20Watch-260605.pdf))。Bernstein 在 5 月底亦转述管理层"看好 AI 手机换机周期, 智能体 AI 将驱动算力升级" (*分析师观点:* [Bernstein — SDC takeaways, 2026-05-27](http://xs-macbook-air.local:5001/zsxq/pdf/812451114422242/Bernstein-Qualcomm%20%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9A%20Key%20takeaways%20from%20Bernstein%E2%80%99s%20SDC-260527.pdf))。
+- **OpenAI 专用 AI 手机 SoC 传闻** — *分析师观点:* JPM 转述媒体报道, OpenAI 正与高通/联发科合作开发专用 AI 手机 SoC (预计 2028 年量产), 高通有望拿下其中高端部分的大部分份额 ([J.P. Morgan, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484411841542/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89F2Q26%20Review%EF%BC%9A%20Finding%20the%20Bottom%20and%20Turning%20All%20Eyes%20to%20Investor%20Day%EF%BC%8C%20But%20Execution%20Will%20Be%20Watch%20Point%20Beyond%20the%20Strategy-260430.pdf)) — 注意这是"有报道称"级别的传闻, 未经任何一方确认。
+- **AI 眼镜与可穿戴是 IoT 增速拐点的主力** — *分析师观点:* Bernstein 转述管理层判断, 智能眼镜出货有望"从千万级跃升至亿级", 新款入门级骁龙 PC 芯片、AR/VR、可穿戴等个人 AI 硬件共同把 IoT 板块增速抬至近 20% ([Bernstein — SDC, 2026-05-27](http://xs-macbook-air.local:5001/zsxq/pdf/812451114422242/Bernstein-Qualcomm%20%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9A%20Key%20takeaways%20from%20Bernstein%E2%80%99s%20SDC-260527.pdf); IoT 增速引自 [J.P. Morgan, 2026-06-05](http://xs-macbook-air.local:5001/zsxq/pdf/814528851485152/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89Expect%20Strong%20Data%20Center%20Market%20Revenue%20Targets%20and%20Customer%20Pipeline%20at%20Investor%20Day%EF%BC%9B%20Place%20on%20Positive%20Catalyst%20Watch-260605.pdf))。
+- **平台层叙事** — *分析师观点:* Citi 在 Computex 纪要中的概括: 骁龙平台"正成为第三方 AI 智能体的原生运行层", 并向汽车、机器人、工业自动化与 6G 延伸; 英伟达与高通的两场主题演讲共同标志行业"从大模型问答时代进入智能体 AI 与具身智能 (embodied intelligence) 时代" ([Citi — NVDA and Qualcomm Keynote Takeaways, 2026-06-01](http://xs-macbook-air.local:5001/zsxq/pdf/184152144482482/CITI-China%20Technology%20%26%20Communications%EF%BC%9ANVDA%20and%20Qualcomm%20Keynote%20Takeaways-260601.pdf))。Amon 在 Computex 主题演讲中亦把 2026 称为 "Year of the Agent" (见第 4 章延伸观看视频)。
+
+**端侧与云侧的战略互锁**: 高通是极少数同时持有手机/PC/汽车端侧 NPU 装机量与数据中心推理路线图的厂商 — 若智能体 AI 的推理负载真的如管理层叙事在"端-边-云"间动态分配, 高通在两端都有收税点; 若负载继续向超大规模云集中, 则端侧故事退化为常规换机周期、云侧故事退化为与 NVDA/AVGO 的硬碰硬竞争。这个分叉是第 4A.4 节财务传导的核心不确定性。
+
+### 4A.3 物理 AI (Physical AI): 汽车、机器人与工业 — 期权, 不是基本盘
+
+- **汽车是物理 AI 中唯一已在利润表上的部分**: F2Q26 汽车收入 $13.26 亿创纪录 (+38% YoY, [F2Q26 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)); *分析师观点:* JPM 称 ADAS 相关出货 (单车算力与价值量远高于座舱) 已开始爬坡, 预计 FY2026 退出时汽车年化运行率达 $60 亿; 与宝马合作的全新平台方案已量产落地, 可向其他整车厂复制 ([J.P. Morgan, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484411841542/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89F2Q26%20Review%EF%BC%9A%20Finding%20the%20Bottom%20and%20Turning%20All%20Eyes%20to%20Investor%20Day%EF%BC%8C%20But%20Execution%20Will%20Be%20Watch%20Point%20Beyond%20the%20Strategy-260430.pdf); FY2031 汽车 $170 亿预判引自 [J.P. Morgan, 2026-06-05](http://xs-macbook-air.local:5001/zsxq/pdf/814528851485152/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89Expect%20Strong%20Data%20Center%20Market%20Revenue%20Targets%20and%20Customer%20Pipeline%20at%20Investor%20Day%EF%BC%9B%20Place%20on%20Positive%20Catalyst%20Watch-260605.pdf))。
+- **机器人 / 工业具身智能尚未进入任何人的基准模型**: *分析师观点:* JPM 明确"物理 AI 相关业务暂不纳入基准业绩, 但属于长期潜在增量" (同上 JPM 6/5); Citi 把工业机器人列为骁龙平台的延伸方向之一 ([Citi, 2026-06-01](http://xs-macbook-air.local:5001/zsxq/pdf/184152144482482/CITI-China%20Technology%20%26%20Communications%EF%BC%9ANVDA%20and%20Qualcomm%20Keynote%20Takeaways-260601.pdf))。本报告同样不为物理 AI 计入任何收入 — 它是免费期权, 不是论点支柱。
+
+### 4A.4 AI 对财务模型的传导: 何时从叙事变成数字?
+
+把 AI 各层映射到时间轴上 (公司口径与卖方预判分列):
+
+| 时点 | 已确认 (公司口径) | 卖方预判 (*分析师观点:*) |
+|---|---|---|
+| 2025-10 | AI200/AI250 发布, AI200 2026 商用 / AI250 2027 商用 ([Qualcomm 新闻稿](https://www.qualcomm.com/news/releases/2025/10/qualcomm-unveils-ai200-and-ai250-redefining-rack-scale-data-cent)) | HUMAIN 200 MW ≈ $20 亿收入潜力 (UBS / Bernstein, 2025-10-27) |
+| 2026 H2 | 超大规模客户定制硅片首批出货 ([F2Q26 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)) | — |
+| FY2027 | — | 数据中心收入"数十亿美元"且经营利润率为正 (Bernstein SDC, 2026-05-27); JPM 预期投资者日上调至 >$30 亿 (2026-06-05) |
+| FY2029 | — | 公司既有目标 ~$500 亿收入 / EPS $14–15 (不含苹果、**不含任何数据中心**; Bernstein 2025-10-27 转述) |
+| FY2031 | — | JPM 情景: 数据中心 ~$350 亿 (占总收入 ~35%), 非手机收入占比 70% (2026-06-05) |
+
+三个推论: **第一**, 2025 年 10 月 Bernstein 写下"AI 产品在我们模型中为零, 对倍数的贡献 (直到昨天) 也为零"时, 股价 $170 上下; 八个月后倍数已重估至 ~19 倍前瞻 — **"零期权价值"的修复已经完成, 现在市场定价的是执行**。**第二**, FY2027 是叙事与利润表的第一个交汇点 — 若届时数据中心收入未达"数十亿美元"量级, 19 倍前瞻缺乏支撑 (本报告熊市情景)。**第三**, 苹果流失 (~2% 手机年增速) 与数据中心爬坡在 FY2027–28 大致对冲, 这正是第 1A 章 FY2027E EPS 不增长、而牛熊分歧全部集中在倍数上的原因。
 
 ---
 
@@ -704,6 +756,7 @@ JPM 的 23x 框架把数据中心当作"打开长期成长天花板"的事件 (*
 - [Qualcomm — Investor Day 2026 活动页 (2026-06-24, 纽约)](https://www.qualcomm.com/company/events/investor-day)
 - [The Elec — "Qualcomm Unveils 'Dragonfly' Brand for Data Center Business", 2026-06](https://www.thelec.net/news/articleView.html?idxno=10949)
 - [YouTube — COMPUTEX 2026: Qualcomm CEO Cristiano Amon Keynote](https://www.youtube.com/watch?v=814lxJUPkAw)
+- [Qualcomm 新闻稿 — "Qualcomm Unveils AI200 and AI250 — Redefining Rack-Scale Data Center Inference", 2025-10-27](https://www.qualcomm.com/news/releases/2025/10/qualcomm-unveils-ai200-and-ai250-redefining-rack-scale-data-cent)
 
 ### 机构研究 (本地 zsxq 研报库 — 全部标注 *分析师观点:*, 仅本机可访问)
 
@@ -718,6 +771,8 @@ JPM 的 23x 框架把数据中心当作"打开长期成长天花板"的事件 (*
 - [Morgan Stanley — Large-Cap Institutional Ownership 1Q26 (QCOM PT $146), 2026-05-19](http://xs-macbook-air.local:5001/zsxq/pdf/585424552455544/MS-US%20Technology%20%20Large-Cap%20Institutional%20Ownership%201Q26%20Mega-Cap%20Tech%20Under-Ownership%20Narrows-260519.pdf)
 - [UBS — Data Center The New Angle, But Still Seems Far Out, 2025-11-06](http://xs-macbook-air.local:5001/zsxq/pdf/415854182115858/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Data%20Center%20The%20New%20Angle%EF%BC%8CBut%20Still%20Seems%20Far%20Out-251106.pdf)
 - [UBS — Pullback Creates More Upside to Our PT, But We Remain Neutral, 2026-02-05](http://xs-macbook-air.local:5001/zsxq/pdf/184428588114842/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Pullback%20Creates%20More%20Upside%20to%20Our%20PT%EF%BC%8C%20But%20We%20Remain%20Neutral-260205.pdf)
+- [UBS — Thoughts On New Inferencing AI Accelerators Roadmap, 2025-10-27](http://xs-macbook-air.local:5001/zsxq/pdf/585118115411414/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Thoughts%20On%20New%20Inferencing%20AI%20Accelerators%20Roadmap-251027.pdf)
+- [Bernstein — "Rodney Dangerfield gets a m(AI)keover?", 2025-10-27](http://xs-macbook-air.local:5001/zsxq/pdf/184558545222812/Bernstein-U.S.%20Semiconductors%EF%BC%9AQualcomm%20%EF%BC%88QCOM%EF%BC%89%EF%BC%9A%20Rodney%20Dangerfield%20gets%20a%20m%EF%BC%88AI%EF%BC%89keover%EF%BC%9F-251027.pdf)
 - [Citi — China Technology & Communications: NVDA and Qualcomm Keynote Takeaways, 2026-06-01](http://xs-macbook-air.local:5001/zsxq/pdf/184152144482482/CITI-China%20Technology%20%26%20Communications%EF%BC%9ANVDA%20and%20Qualcomm%20Keynote%20Takeaways-260601.pdf)
 
 ---
@@ -729,7 +784,7 @@ JPM 的 23x 框架把数据中心当作"打开长期成长天花板"的事件 (*
 | SEC 文件 | FY2025 10-K、F2Q26 10-Q、F2Q26 业绩 8-K 等 (本地缓存 `financial_reports/QCOM/`, 经 `fetch_financial_report.py` 同步) | 截至 2026-04-29 申报 |
 | 市场数据 (现价 / 倍数 / 52 周区间 / 各日收盘) | yfinance ([Yahoo Finance — QCOM](https://finance.yahoo.com/quote/QCOM/)) | 2026-06-11 |
 | 同业前瞻倍数 (AVGO / NVDA / 2454.TW / AMD / MRVL) | yfinance | 2026-06-11 |
-| 卖方目标价时间线 | `db/stock_price_target.db` (只读; 13 条 QCOM 记录) + 上列 12 篇 zsxq 研报 PDF | 2025-11 至 2026-06 |
+| 卖方目标价时间线 | `db/stock_price_target.db` (只读; 13 条 QCOM 记录) + 上列 14 篇 zsxq 研报 PDF | 2025-10 至 2026-06 |
 | 公司事件 | [Qualcomm Investor Day 2026](https://www.qualcomm.com/company/events/investor-day); [Alphawave 收购完成新闻稿, 2025-12-18](https://www.qualcomm.com/news/releases/2025/12/qualcomm-completes-acquisition-of-alphawave-semi); [The Elec — Dragonfly, 2026-06](https://www.thelec.net/news/articleView.html?idxno=10949) | 2025-12 至 2026-06 |
 
 <details>
@@ -765,6 +820,16 @@ JPM 的 23x 框架把数据中心当作"打开长期成长天花板"的事件 (*
 **Institute research (`db/zsxq.db`)** — 检索 5 个别名 (QCOM / Qualcomm / 高通 / Snapdragon / 骁龙), 命中 25+ 篇相关研报, 本次引用 12 篇 (J.P. Morgan ×2, Bernstein ×4, GS ×1, MS ×2, UBS ×2, Citi ×1), 全部 `find_pdf.py --file-id` 确认 `local_exists: true`, 引用一律走 `/zsxq/pdf/<file_id>/<filename>` 直下路由并标注 *分析师观点:*。卖方观点演变小节按规范完成 `db/stock_price_target.db` 只读预扫描 (13 条 QCOM 记录) — 离散度 min $135 / median ~$143 / max $265。
 
 **Analyst-view sentences** — 第 1A 章全部前瞻估计/目标价/情景、Bernstein CES PT $215 (provenance: `db/stock_price_target.db` 对该 note 的提取行)、JPM FY2031 各分部目标 (明确标注为 JPM 对投资者日的预判, 非公司指引) 均已标注。
+
+**Addendum — 2026-06-11 第二次编辑 (新增第 4A 章 AI 全景):**
+- 新增公开 URL: [Qualcomm AI200/AI250 新闻稿, 2025-10-27](https://www.qualcomm.com/news/releases/2025/10/qualcomm-unveils-ai200-and-ai250-redefining-rack-scale-data-cent) — 浏览器 UA 验证 200。
+- 新增 zsxq 引用 2 篇 (合计 14 篇): UBS 推理加速器首读 (file_id 585118115411414)、Bernstein m(AI)keover (file_id 184558545222812), 均 `find_pdf.py --file-id` 确认 `local_exists: true`; 两篇 summary 为空, 数字全部经 `extract_pdf.py` 原文 string-match:
+  - AI200/AI250: 768GB LPDDR、160 kW/机架、液冷、PCIe scale-up / Ethernet scale-out、2026/2027 商用 ✓ UBS p.1 原文 + 高通新闻稿交叉验证; "near-memory computing"、">10x 有效内存带宽" ✓ 新闻稿原文 (Bernstein p.1 同文转引)
+  - HUMAIN: 5/13/25 MOU、200 MW、~1,300 racks (UBS) / ~1,250 racks (Bernstein)、~$2B、~4% of C26 收入预测 $44.6B、市值增量 10x vs AVGO ~126% / AMD ~70% / NVDA ~50% ✓ UBS p.1 原文
+  - Bernstein: AI100 2019 发布 / 2021 商用、Cloud AI 100 Ultra 2023 年底、当日盘中 +15% (峰值近 20%)、FY2029 公司目标 ~$50B / EPS $14–15 不含数据中心、"zero in our model"、每机架 ~$1.5M ✓ p.1 原文
+  - UBS PT $175 = ~16x avg C2022–2026E EPS $11.04 ✓ p.1 原文
+- 第 4A 章中 JPM FY2031 分项 ($200 亿 ASIC / $50 亿加速器 / $110 亿 CPU、$1,200 亿服务器 CPU 市场 9% 份额、联发科参照) ✓ 已于首次编辑 string-match (file_id 814528851485152); OpenAI SoC 合作明确标注为"有报道称"级传闻。
+- 卖方观点演变时间线补充 2025-10-27 两条目 (Bernstein Outperform 语境、UBS Neutral $175)。
 
 **Residual unknowns / Spec gaps (vintage 2026-05-20):**
 - Section 10 投资者视角记分卡 (Buffett / Munger / Damodaran / Marks) 尚未补齐 — 本次更新聚焦决策层 (1A + 9.5), 留待下次结构性重写。
