@@ -75,10 +75,26 @@ These five rules are non-negotiable. They are why this skill exists.
    - See [references/allowed_relations.md](references/allowed_relations.md)
      for the decision tree.
 
-2. **≤ 10 active edges per entity.** Quality > coverage. Before writing
-   an edge whose source or target already has 10 edges (active, not
-   isolated/deprecated), drop the *least decision-relevant* existing edge
-   for that entity first. Pre-check counts with:
+2. **Tiered edge cap: ≤ 10 active edges per entity, ≤ 25 for >$1T
+   mega-caps.** Quality > coverage. The mega-cap exception (user decision
+   2026-06-11): a company whose **live market cap exceeds $1T USD** gets a
+   cap of 25, because trillion-dollar hubs genuinely carry more
+   decision-relevant relationships. Everything else — including unlisted
+   companies (Huawei, SpaceX: no market cap → standard tier) — is capped
+   at 10. Determine the tier at curation time via the Tier-2 helper:
+   ```python
+   from market_cap_cache import get_market_caps, to_usd
+   mc, cur = get_market_caps(["NASDAQ:NVDA"])["NASDAQ:NVDA"]
+   cap = 25 if (to_usd(mc, cur) or 0) > 1e12 else 10
+   ```
+   Don't churn on borderline drift (SK Hynix was $0.98T, Micron $1.01T on
+   2026-06-11): reclassify an already-curated entity only when its cap
+   clearly crosses the line (>10% beyond $1T either way).
+
+   Before writing an edge whose source or target is at its cap, drop the
+   *least decision-relevant* existing edge for that entity first
+   (`deprecate_edge(..., reason="EDGE_BUDGET")` — soft, reversible).
+   Never leave an entity above its cap. Pre-check counts with:
    ```python
    import graph_mirror as gm
    c = gm.get_conn()
@@ -89,11 +105,10 @@ These five rules are non-negotiable. They are why this skill exists.
        (uuid, uuid),
    ).fetchone()[0]
    ```
-   **Legacy over-cap hubs** (NVIDIA ~47, TSMC ~32, Tesla ~29, BYD, Xpeng,
-   SamsungElectronics, … — from pre-cap imports): do NOT add edges to them
-   and do NOT trim them unilaterally. Skip the edge and **log the lost
-   fact** in your session summary (e.g. "KYEC→NVIDIA exclusive GPU test —
-   blocked by cap") so the user can decide on a swap/prune policy.
+   The legacy pre-cap hubs were brought under this tiered policy on
+   2026-06-11 (NVIDIA 41→25; BYD/SK Hynix/AMAT/Xpeng/AMD pruned to 10)
+   via a rank-and-prune pass with adversarial verification — pruned edges
+   carry `deprecated_reason="EDGE_BUDGET"` and can be resurrected.
 
 3. **Companies only.** Every entity must carry `labels=["Company"]`. No
    `Product`, no `Index`, no `Segment`, no `Person`, no anything else.
@@ -186,10 +201,11 @@ For each markdown file:
      as a node — write the edge `TSMC SUPPLIES NVIDIA` and mention the
      product in the `fact` string instead.
 
-4. **Cap at ~10 per entity.** If the focal company is a hub
-   (Apple, NVIDIA, TSMC), you'll have more candidates than the budget
-   allows. Pick the **10 most decision-relevant** — the relationships an
-   investor would actually act on. Rules of thumb:
+4. **Cap at ~10 per entity (25 for >$1T mega-caps — see hard
+   constraint #2).** If the focal company is a hub (Apple, NVIDIA, TSMC),
+   you'll have more candidates than the budget allows. Pick the **most
+   decision-relevant within the cap** — the relationships an investor
+   would actually act on. Rules of thumb:
    - Direct cost of goods / revenue counterparty > brand association
    - Named in the report's competitive map > merely mentioned in passing
    - Distinct competitive dynamic > redundant (don't add 6 different EUV
@@ -250,9 +266,9 @@ It may only modify the DB via the sanctioned helpers
    appears there; fabrications → deprecate (`"FACT_NOT_IN_SOURCE"`).
 6. **Duplicate entities** — same ticker under two spellings →
    `merge_entities` keeping the better-connected / canonical name, then
-   re-dedupe, and trim any entity the merge pushed over 10 active edges
-   (`"EDGE_BUDGET"` — weakest facts lose). Legacy over-cap hubs are
-   reported, never trimmed.
+   re-dedupe, and trim any entity the merge pushed over its tiered cap
+   (10, or 25 for >$1T mega-caps — see hard constraint #2;
+   `"EDGE_BUDGET"` — weakest facts lose).
 
 Calibration from the 2026-06-11 run (49 reports, 246 new edges): 0 relation
 violations, 0 direction errors, 0 fabrications in 34 samples — but 29
