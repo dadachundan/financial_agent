@@ -490,6 +490,8 @@ _VIEWER_TMPL = r"""<!doctype html>
     .pic-card:focus{outline:none;box-shadow:0 2px 16px rgba(31,78,120,.45);
                     border-color:#1F4E78}
     .pic-card.orphan{background:#fffaee;border-color:#f0d8a6}
+    /* Body-less highlight cards: a yellow left rail to read as a highlight. */
+    .pic-card.highlight-only{border-left:3px solid #f0c14b}
     .pic-card.pending{border-color:#1F4E78;box-shadow:0 3px 14px rgba(31,78,120,.32);
                       cursor:default}
     .pic-page-tag{font-size:.68rem;color:#888;font-family:ui-monospace,Menlo,monospace;
@@ -1593,13 +1595,12 @@ _VIEWER_TMPL = r"""<!doctype html>
       if (c.page !== pageNum) continue;
       let anchored = false;
       const hasBody = !!(c.body && c.body.trim());
-      // A click on a body-bearing highlight activates its rail card; a
-      // body-less highlight has no rail card, so it pops a tiny [💬 🗑]
-      // toolbar instead.
+      // Every highlight (noted or bare) now has a rail card, so a click
+      // activates that card — its Delete button is always on-screen, unlike
+      // the inline popover which could land off-screen at high zoom.
       const onClick = (m) => (ev) => {
         ev.stopPropagation();
-        if (hasBody) setActive(c.id, false);
-        else         showHlPop(m, c.id);
+        setActive(c.id, false);
       };
       if (c.quote && c.quote.trim()) {
         const found = findInIndex(idx, c);
@@ -1641,39 +1642,23 @@ _VIEWER_TMPL = r"""<!doctype html>
   }
 
   function buildCardEl(c) {
+    const hasBody = !!(c.body && c.body.trim());
     const div = document.createElement('div');
-    div.className = 'pic-card' + (c.orphan ? ' orphan' : '');
+    div.className = 'pic-card' + (c.orphan ? ' orphan' : '') + (hasBody ? '' : ' highlight-only');
     div.dataset.id = c.id;
     div.dataset.anchored = c.orphan ? '0' : '1';
     div.tabIndex = -1;
 
     const tag = document.createElement('div');
     tag.className = 'pic-page-tag';
-    tag.textContent = 'Page ' + c.page + (c.orphan ? '  ⚠ orphan' : '');
+    tag.textContent = 'Page ' + c.page + (c.orphan ? '  ⚠ orphan' : '')
+                    + (hasBody ? '' : '  ·  🖍 highlight');
 
     const q = document.createElement('div');
     q.className = 'pic-quote' + (c.quote ? '' : ' empty');
     q.textContent = c.quote
       ? (c.quote.length > 140 ? c.quote.slice(0, 140) + '…' : c.quote)
       : '(region selection — no text)';
-
-    const b = document.createElement('div');
-    b.className = 'pic-body';
-    b.innerHTML = window.marked ? marked.parse(c.body || '') : (c.body || '');
-    if (window._renderMath) window._renderMath(b);
-
-    const viewBtn = document.createElement('button');
-    viewBtn.type = 'button';
-    viewBtn.className = 'pic-expand-btn';
-    viewBtn.innerHTML =
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
-      'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
-      '<path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>' +
-      '<span>Expand</span>';
-    viewBtn.addEventListener('click', (ev) => {
-      ev.stopPropagation();
-      openCommentModal(c);
-    });
 
     const meta = document.createElement('div');
     meta.className = 'pic-meta';
@@ -1682,7 +1667,7 @@ _VIEWER_TMPL = r"""<!doctype html>
     const actions = document.createElement('div');
     actions.className = 'pic-actions';
     const eBtn = document.createElement('button');
-    eBtn.type = 'button'; eBtn.textContent = 'Edit';
+    eBtn.type = 'button'; eBtn.textContent = hasBody ? 'Edit' : 'Add note';
     eBtn.addEventListener('click', (ev) => { ev.stopPropagation(); openEditCard(c); });
     const dBtn = document.createElement('button');
     dBtn.type = 'button'; dBtn.textContent = 'Delete'; dBtn.className = 'danger';
@@ -1692,7 +1677,29 @@ _VIEWER_TMPL = r"""<!doctype html>
     jBtn.addEventListener('click', (ev) => { ev.stopPropagation(); scrollToPage(c.page); });
     actions.append(jBtn, eBtn, dBtn);
 
-    div.append(tag, q, b, viewBtn, meta, actions);
+    // A body-less highlight has no note to render or expand — just the quote.
+    if (hasBody) {
+      const b = document.createElement('div');
+      b.className = 'pic-body';
+      b.innerHTML = window.marked ? marked.parse(c.body || '') : (c.body || '');
+      if (window._renderMath) window._renderMath(b);
+
+      const viewBtn = document.createElement('button');
+      viewBtn.type = 'button';
+      viewBtn.className = 'pic-expand-btn';
+      viewBtn.innerHTML =
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+        'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+        '<path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>' +
+        '<span>Expand</span>';
+      viewBtn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        openCommentModal(c);
+      });
+      div.append(tag, q, b, viewBtn, meta, actions);
+    } else {
+      div.append(tag, q, meta, actions);
+    }
     div.addEventListener('click', () => setActive(c.id, true));
     return div;
   }
@@ -2058,9 +2065,9 @@ _VIEWER_TMPL = r"""<!doctype html>
     });
     for (const c of items) {
       if (c.id === editingId) continue;
-      // Highlight-only rows (empty body) have no rail card; the mark on
-      // the page IS the entire UI. Click the mark for [💬 add comment / 🗑 delete].
-      if (!c.body || !c.body.trim()) continue;
+      // Every annotation — including body-less highlights — gets a rail card
+      // so it has an always-visible Delete button. (Clicking the highlight on
+      // the page still pops the inline [💬 Delete] toolbar too.)
       const card = buildCardEl(c);
       rail.appendChild(card);
     }
