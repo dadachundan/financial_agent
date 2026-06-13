@@ -1460,8 +1460,8 @@ def feed():
     inline_conn = sqlite3.connect(_pic.DB_PATH)
     inline_conn.row_factory = sqlite3.Row
     inline_rows = inline_conn.execute("""
-        SELECT id, source, file_id, page, quote, rect_json, body, origin,
-               COALESCE(updated_at, created_at) AS date
+        SELECT id, source, file_id, page, quote, prefix, suffix, rect_json,
+               body, origin, COALESCE(updated_at, created_at) AS date
         FROM   pdf_inline_comments
         ORDER BY page ASC, id ASC
     """).fetchall()
@@ -1751,9 +1751,13 @@ def feed():
     from urllib.parse import urlencode as _urlencode_h
 
     def _region_image_md(ann: dict, page: int) -> str:
-        # A region-style comment carries a rect; render an on-demand PNG crop
-        # of that box (served by pdf_viewer's /pdf-region-image route) so the
-        # feed shows an actual screenshot, not just the box's OCR text.
+        # A *drawn region* (Shift+drag box, OCR'd) becomes a screenshot. A
+        # text-selection highlight ALSO carries a bbox rect, but it anchors to
+        # the text layer via prefix/suffix context — those must keep showing
+        # their selected text, not an OCR image strip. So: only treat as a
+        # region when there's no text-layer anchor (both prefix & suffix empty).
+        if (ann.get("prefix") or "").strip() or (ann.get("suffix") or "").strip():
+            return ""
         rj = ann.get("rect_json")
         if not rj:
             return ""
