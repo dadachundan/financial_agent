@@ -1628,7 +1628,17 @@ _VIEWER_TMPL = r"""<!doctype html>
   }
 
   // ── Card rendering (clone of /claude-reports/view) ───────────────────
-  function fmtTime(s) { return (s || '').replace('T', ' ').replace('Z', ''); }
+  function fmtTime(s) {
+    // Timestamps are stored as UTC ISO (e.g. "2026-06-13T10:32:46Z").
+    // Render them in the viewer's LOCAL timezone — otherwise a UTC+2 user
+    // sees 10:32 for a comment they made at 12:32.
+    if (!s) return '';
+    const d = new Date(s);
+    if (isNaN(d.getTime())) return s.replace('T', ' ').replace('Z', '');
+    const p = n => String(n).padStart(2, '0');
+    return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) +
+           ' ' + p(d.getHours()) + ':' + p(d.getMinutes()) + ':' + p(d.getSeconds());
+  }
 
   function buildCardEl(c) {
     const div = document.createElement('div');
