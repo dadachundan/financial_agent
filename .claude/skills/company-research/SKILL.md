@@ -36,6 +36,7 @@ Compact index of the load-bearing don't-dos enforced throughout this skill. Each
 - **Do not present analyst-constructed verdicts as `Buffett would buy`, `巴菲特会买`, or `Damodaran's fair value is`.** Investor-lens scorecards (Section 10) use the lens *as a rubric*, not as an endorsement. See `references/investor_lenses.md`.
 - **Do not skip the Step 10 verification pass.** Every URL HTTP-checked, every SEC filename resolved, ≥5 10-K-cited numbers spot-checked, executive names confirmed against 8-K / DEF 14A. The verification log is the deliverable's contract with the reader. See Step 10.
 - **Do not write "(Source: our model)" / "(estimate, our analysis)" / "(本模型)" anywhere in the report.** Cite the external inputs the model is built on, not the model. See the project-wide Numerical Accuracy rule in [`CLAUDE.md`](../../../CLAUDE.md).
+- **Do not attribute the GF Score (Section 1B) to GuruFocus, and do not attach a filing citation to any GF sub-score.** The GF Score (GuruFocus-style) is the analyst's own rubric — label it `*Analyst view:*`, cite each underlying metric (margins / leverage / CAGR / multiples / returns) inline, and only carry a GuruFocus citation if you actually pulled their published number from `gurufocus.com/term/gf-score/<TICKER>` (shown separately). See `references/gf_score.md`.
 - **Do not skip the Data Used manifest** (see `references/report_structure.md` → "Data Used" block). A report that lists ≥40 inline citations but no data manifest is harder for the reader to triage — the manifest is one block, not duplication.
 - **Do not run destructive SQL against `db/*.db`.** Read-only — `SELECT`, `.schema`, `PRAGMA`. Test-writes go via `FINAGENT_DB_DIR=/tmp/...`. See [`CLAUDE.md`](../../../CLAUDE.md) § "Database Safety".
 
@@ -296,6 +297,14 @@ After Sections 1–9 establish the facts, named scoring rubrics give the reader 
 
 **See [`references/investor_lenses.md`](references/investor_lenses.md) for the nine rubrics in detail — scoring components, verdict bands, required-assumption blocks, failure modes, the routing rules for picking optional lenses by company type, and the guardrails that apply to all nine.**
 
+## GF Score (GuruFocus-style) fundamental scorecard — Section 1B
+
+A five-axis fundamental scorecard modelled on [GuruFocus's GF Score™](https://www.gurufocus.com/term/gf-score), placed as **Section 1B** (right after 1A Valuation & Price Target) so the decision layer — rating/PT → valuation → fundamental health — reads together near the top, mirroring the GuruFocus summary widget. **Include in every initiation-style report unless the user says "skip the GF Score".** The five axes, each ranked **0–10**, are **Financial Strength · Profitability · Growth · GF Value (valuation, higher = cheaper) · Momentum**; a transparent weighting maps them to a **0–100 composite** and GuruFocus's outperformance bands (91–100 highest … 0–50 worst). The signature visual is a **radar/pentagon** rendered as inline SVG by `scripts/gf_score.py` (stdlib-only, no matplotlib — safe for the memory budget; bakes the required source annotation into the image).
+
+**It is an analytical overlay, like the Section-10 lenses — not a new data source and not an endorsement.** The honesty discipline is load-bearing: the five sub-scores and the composite are the analyst's own rubric output, labeled `*Analyst view:*` / `*分析师观点：*` and **never** carrying a filing citation; every underlying metric (ROE, leverage, CAGR, multiples, price returns) carries its own inline citation; and the computed number is **never attributed to GuruFocus** unless you actually pulled their published figure from `gurufocus.com/term/gf-score/<TICKER>` (shown separately as a cross-check). Each axis gets a one-paragraph rationale stating WHY that score — the "reasons" are the part the reader most wants. Its inputs are already in your tree (financials from Step 1–2, Growth from the 1A model, GF Value from the 1A multiples/intrinsic range, Momentum from the header relative-performance line), so it adds little marginal work.
+
+**See [`references/gf_score.md`](references/gf_score.md) for the full spec — the 0–10 anchors per axis, the metric set behind each, the composite weights and band labels, the radar-helper usage, the multi-company overlay variant, and the honesty/citation guardrails. Read it before writing Section 1B.** Computed in Step 2c.
+
 ## Learning from sell-side institutional research
 
 A methodology study of 22 initiation / deep-dive notes from Goldman Sachs, Morgan Stanley, UBS, J.P. Morgan, Bernstein, Nomura, Citi, BofA, Deutsche Bank, and HSBC found one structural gap: **every institutional single-name note is a decision note built around a rating and a price target, while this skill produces a descriptive profile that stops at a TTM-multiple snapshot.** The lessons below close that gap. They are additive — every existing rule (no fabricated numbers, paragraph-level citations, `*Analyst view:*` labeling, language defaults, file-naming) holds unchanged. The defining discipline that makes this safe: **the rating, the price target, every projected estimate, and the scenario PTs are all the analyst's own forward view — they MUST be labeled `*Analyst view:*` / `*分析师观点：*` and NEVER attached to a filing citation.** A 10-K does not contain a price target; attaching one to a 10-K is the same misattribution failure the skill already forbids.
@@ -424,6 +433,7 @@ See [`references/citations.md`](references/citations.md) for the full rules, per
 - `references/citations.md` — inline-citation rules and example.
 - `references/risk_taxonomy.md` — the 8–12 risks across 4 buckets used in Section 9.
 - `references/investor_lenses.md` — the nine Section-10 lenses (4 core: Buffett, Munger, Damodaran, Howard Marks cycle; 5 optional: Lynch, Fisher, Burry, Druckenmiller, Cathie Wood).
+- `references/gf_score.md` — the GF Score (GuruFocus-style) Section-1B scorecard: five 0–10 axes (Financial Strength / Profitability / Growth / GF Value / Momentum), composite 0–100 + bands, the inline-SVG radar helper (`scripts/gf_score.py`), and the honesty/labeling rules.
 - `references/quality_checklist.md` — quality standards and the pre-submit success checklist.
 
 ---
@@ -622,6 +632,23 @@ This is what turns a profile into a decision note — see § "Learning from sell
 5. **Name the 1–2 swing variables** the call hinges on, so the reader knows which assumption to pressure-test.
 
 These five outputs populate the new **Section 2 "Valuation & Price Target" chapter** and the **top-of-report investment-summary header** (rating + PT + upside%). See `references/report_structure.md` § "Investment summary header" and the Section-2 spec for the table template and scenario block.
+
+#### Step 2c — GF Score (GuruFocus-style) fundamental scorecard
+
+With the financials (Step 1–2a), the forward model (Step 2b), and the header's relative-performance line in hand, you now have every input for the **Section 1B GF Score**. Score the five axes **0–10** from the metrics you've already cited, compute the **0–100 composite**, render the radar, and write the per-axis rationale:
+
+1. **Score the five axes** per the 0–10 anchors in [`references/gf_score.md`](references/gf_score.md): **Financial Strength** (cash/debt, Net Debt/EBITDA, interest coverage, Z-Score — from the balance sheet), **Profitability** (operating/net margin, ROE, ROIC vs WACC, consistency — from the income statement), **Growth** (3/5-yr revenue & EPS CAGR + the Step-2b forward estimate), **GF Value** (forward P/E vs own history + peers, PEG, MoS vs the 1A intrinsic range — *higher = cheaper*), **Momentum** (6/12-month return absolute + vs benchmark, vs 200dma — from the header relative-performance line).
+2. **Render the radar + table** with the helper (paste the `<svg>` un-fenced so it renders):
+   ```bash
+   cd /Users/x/projects/financial_agent
+   /opt/anaconda3/bin/python3 .claude/skills/company-research/scripts/gf_score.py \
+     --name <TICKER> --scores <fs>,<prof>,<growth>,<value>,<mom> \
+     --source "<TICKER> FY<NN> 10-K · Yahoo Finance · indicators.db, as of YYYY-MM-DD"
+   ```
+3. **Write the per-axis rationale** — one paragraph per axis stating WHY that score, naming the 2–4 driving metrics with their inline citations (re-use the citations from Step 1–2). The sub-scores and composite are `*Analyst view:*`; never attach a filing citation to a score, and never attribute the number to GuruFocus unless you pulled their published figure from `gurufocus.com/term/gf-score/<TICKER>` (then show it separately).
+4. **Keep it consistent** with the rest of the report — Growth ↔ the 1A forward model, GF Value ↔ the 1A multiples + PT upside, Momentum ↔ the header relative-performance line. A GF Score that contradicts the report's own numbers is a defect.
+
+Skip only if the user said "skip the GF Score". Total time: ~5–10 minutes (the inputs are already gathered). Full rubric, weights, bands, multi-company overlay, and guardrails: [`references/gf_score.md`](references/gf_score.md).
 
 ### Step 3 — Business model analysis
 

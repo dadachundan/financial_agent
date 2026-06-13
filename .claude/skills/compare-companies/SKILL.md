@@ -85,7 +85,7 @@ A Chinese reader should find the Chinese report as natural and fluent as an Engl
 
 ## The required deliverables
 
-A compare-companies report MUST contain deliverables 0–6 (the seven core deliverables below). Missing any one of them is a defect — the user has explicitly asked for each. Deliverables 7–9 (relative-valuation scoreboard, order-of-preference line, catalyst differential) are specified under "Learning from sell-side institutional research" further down and are also required; they were added to absorb sell-side relative-value rigor.
+A compare-companies report MUST contain deliverables 0–6 (the seven core deliverables below). Missing any one of them is a defect — the user has explicitly asked for each. Deliverables 7–9 (relative-valuation scoreboard, order-of-preference line, catalyst differential) are specified under "Learning from sell-side institutional research" further down and are also required; they were added to absorb sell-side relative-value rigor. Deliverable 10 (GF Score comparison scorecard, §4.6) is also specified there and is **included by default** (skip only on "skip the GF Score").
 
 ### Required deliverable 0 — TL;DR table at the top (§0)
 
@@ -279,6 +279,21 @@ Turn the prose-only "what to watch" into a **per-name dated catalyst table** so 
 - **Mirror JPM's "Positive Catalyst Watch" + DB Huayan's dated catalysts:** JPM names a dated catalyst per name (QCOM June 24 Investor Day); DB lists Huayan's "1H26 results Aug; Stock Connect inclusion early Sept". One column per name × rows for the next 2–3 dated catalysts: **next results date, investor/analyst day, index-inclusion window, product launch / data readout, regulatory decision**.
 - **Source each catalyst** to the company IR calendar or a dated filing (freshness + deep-URL rules apply). No undated "ongoing AI tailwind" entries — every row carries a date or a dated window.
 
+### Required deliverable 10 — GF Score comparison scorecard (§4.6)
+
+A GuruFocus-style **GF Score** per name, rendered as **one overlaid radar/pentagon** so the reader sees at a glance which name is the stronger fundamental composite across five axes. Placed at **§4.6**, immediately after the §4.5 relative-valuation scoreboard — §4.5 tabulates what each name *costs*; §4.6 shows its *fundamental health*, and the two together are the financial cluster a desk reads first. **Include by default; skip only on "skip the GF Score".** The full rubric, the 0–10 anchors per axis, the composite weights/bands, and the multi-company overlay spec live in the parent skill's [`.claude/skills/company-research/references/gf_score.md`](../company-research/references/gf_score.md) § "Multi-company variant" — read it before writing §4.6 (this skill has no local copy).
+
+- **Five axes, each 0–10:** Financial Strength · Profitability · Growth · GF Value (valuation, *higher = cheaper vs fair value*) · Momentum. A transparent weighting (default 20/25/25/15/15) maps them to a **0–100 composite** and the GuruFocus bands (91–100 highest … 0–50 worst).
+- **Render with the shared helper** (inline SVG, stdlib-only, bakes the required source annotation in):
+  ```bash
+  /opt/anaconda3/bin/python3 .claude/skills/company-research/scripts/gf_score.py \
+    --series "SNPS:9,9,8,4,7" --series "CDNS:9,9,8,3,8" \
+    --source "FY25 10-Ks · Yahoo Finance, as of YYYY-MM-DD"
+  ```
+  Paste the `<svg>` **un-fenced** (it must render), then the per-company column table the helper emits beneath it.
+- **A "who wins each axis" line** — for each of the five axes name the leader and the one-clause why (cited), then the composite ranking. This is the GF-Score analogue of the §9 side-by-side scorecard. **Keep it consistent with the §0 order-of-preference and the §10 bottom-line verdict** — if the GF ranking diverges from the preference call, say why (e.g. "A scores higher on fundamentals but B wins on valuation entry point").
+- **Honesty discipline (load-bearing, from gf_score.md):** the sub-scores and composite are `*Analyst view:*` / `*分析师观点：*` and **never** carry a filing citation; every underlying metric (margins, leverage, CAGR, multiples, returns) carries its own inline cite; the computed number is **never attributed to GuruFocus** unless you pulled the real one from `gurufocus.com/term/gf-score/<TICKER>` (shown separately). Apply the same comparability caveats as the moat tables (GAAP vs non-GAAP, organic vs M&A-inflated growth, different FY ends) before drawing an axis verdict.
+
 ### Optional lens — Relative-positioning / pair-trade (extends §10)
 
 When the N names are genuine substitutes, add one paragraph framing the preferred name as the long and the least-preferred as the funding leg.
@@ -363,6 +378,7 @@ Quick summary (every section's tables grow to N columns when N≥3):
 3. AI narrative — tool vs. tailwind (N-column table)
 4. Segment structure & financial scoreboard (N-column scoreboard; mermaid xychart bar chart with N grouped bars per metric)
 4.5. **Relative-valuation scoreboard** (Required deliverable 7) — N-row multiples table (fwd PE / P/S / EV/EBITDA / PEG / div yield / FCF yield) + peer-median + 3-yr-range columns; **forward-estimates strip** (FY+1/FY+2/FY+3 revenue & net profit per name); fair-yardstick paragraph; premium-justified-or-not verdict. Placed up top with the TL;DR.
+4.6. **GF Score comparison scorecard** (Required deliverable 10) — one **overlaid radar/pentagon** (Financial Strength / Profitability / Growth / GF Value / Momentum, each 0–10) + a per-company column table + composite 0–100 per name + a "who wins each axis" line. Rendered by `scripts/gf_score.py`; sub-scores `*Analyst view:*`. See `gf_score.md` § "Multi-company variant".
 5. **The moat anatomy** (§5.0 + 8 subsections — Required deliverables 1 + 2 + 6; the longest section by word count). Subsections: **5.0 product overlap matrix** (Req. 1) · 5.1 customer concentration + full customer comparison (Req. 3) · 5.2 backlog & recurring mix · 5.3 channel/foundry/distribution lock-in · 5.4 tool-level segment share · 5.5 IP/patent/data franchise share · 5.6 why a customer picks one over the other · 5.7 cracks worth naming · **5.8 other big players in this space** (players *beyond* the focal N)
 6. The big bet (M&A, R&D, capital deployment — what each side is doing right now to expand TAM; N-column table)
 7. Capital allocation (debt, buyback, dividend, M&A optionality; N-column table)
@@ -662,6 +678,7 @@ Save both reports under `reports/compare/` at the project root. Preserve the use
 Also read on demand from the parent skill:
 
 - `.claude/skills/company-research/references/citations.md` — citation rules apply verbatim.
+- `.claude/skills/company-research/references/gf_score.md` — the GF Score (GuruFocus-style) rubric (five 0–10 axes, composite 0–100 + bands, honesty rules) and the **§ "Multi-company variant"** for the §4.6 overlaid-radar comparison scorecard; rendered by `.claude/skills/company-research/scripts/gf_score.py`.
 - `.claude/skills/company-research/references/quality_checklist.md` — pre-submit checklist (compare-companies adds its own checks above, but the company-research base list still applies).
 
 ## What this skill does NOT do

@@ -115,6 +115,8 @@ e.g. *"raise 12m TP by 14.8% to Rmb146.3, based on 38.7x 2027E P/E (previously �
 
 **Justify the multiple against a reference** — the stock's own history in std-dev terms (Citi Yunnan "3.09x 2026E P/B, −0.4 s.d. below mean"), peers/sector (BofA "12x 2027E vs sector"), or PEG. Add an inline deep-URL citation to the source of that comparison (history series, peer comp table). Per the project rule, **do NOT write "Source: our model"** for the multiple — cite the external comp / history input the multiple is anchored to.
 
+**Optional — GF Score impact.** When the revision moves the fundamentals, note the **GF Score (GuruFocus-style)** shift alongside the TP move — which axes moved and why (e.g. "EPS +5% → Profitability 7→8; multiple held → GF Value flat; net GF Score 74 → 76"). It shows the revision's effect on fundamental health, not just the price target. Spec: [`.claude/skills/company-research/references/gf_score.md`](../company-research/references/gf_score.md); sub-scores are `*Analyst view:*`, the driving metrics cited, never attributed to GuruFocus.
+
 ### Step 4b: Scenario Analysis (Bull / Base / Bear)
 
 Attach **three price targets, each with its own multiple AND its own flexed estimate** — build bull/bear by flexing BOTH the estimate and the exit multiple, not one (MS Micron 1650/1050/675; UBS CAT 1173/900/626; Citi Yunnan optimistic/base/pessimistic). Show the implied up/downside to the current price for each:

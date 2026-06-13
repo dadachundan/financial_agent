@@ -161,6 +161,22 @@ The company-guide column cites the earnings release; the consensus column is `*A
 
 **IR / zsxq input:** the broker notes from Step 0.7 supply the Street's PT, valuation basis, and bull/bear to benchmark against — cite them `*Analyst view:*`. This is the Section 2 zsxq citation the SKILL density bar calls for.
 
+### 1B. GF Score (GuruFocus-style) fundamental scorecard (350–600 words) — the at-a-glance health read
+
+A compact five-axis scorecard — modelled on [GuruFocus's GF Score™](https://www.gurufocus.com/term/gf-score) — that distils the fundamentals into one **0–100 composite** plus a **radar/pentagon**. It sits here, right after 1A, so the whole decision layer (rating/PT → valuation → fundamental scorecard) reads together near the top, like the GuruFocus summary widget. **It is an analytical overlay on data already gathered, NOT a new data source and NOT an endorsement** — the five sub-scores and the composite are `*Analyst view:*` / `*分析师观点：*`; every underlying metric carries its own inline citation. Full rubric, the 0–10 anchors per axis, weights, band labels, and the honesty rules are in **[`references/gf_score.md`](gf_score.md) — read it before writing this section.** Include in every initiation-style report unless the user says "skip the GF Score".
+
+**The five axes (each 0–10):** Financial Strength (财务实力) · Profitability (盈利能力) · Growth (成长性) · GF Value / valuation (估值，*higher = cheaper vs fair value*) · Momentum (动量). Their inputs are already in your tree: Financial Strength + Profitability from the filings (Section 1 / Step 1–2), Growth from the Section-1A forward model, GF Value from the Section-1 multiples + Section-1A intrinsic range, Momentum from the header's relative-performance line.
+
+**Required content, in order:**
+1. **Verdict line** — `*Analyst view:* **GF Score (GuruFocus-style): NN/100 — <band>.**` Optionally append GuruFocus's real number as a *separate* cross-check if you actually pulled it from `gurufocus.com/term/gf-score/<TICKER>` (never merge the two).
+2. **The radar `<svg>`** from the helper (`scripts/gf_score.py`, inline SVG — paste it un-fenced so it renders) + the one-line how-to-read note (*farther from centre = better; bigger pentagon = higher score*).
+3. **The 5-row scorecard table** from the helper (per-axis 0–10 + composite row).
+4. **Per-dimension rationale — one short paragraph per axis stating WHY that score**, naming the 2–4 metrics that drove it, each with its inline citation (ROE / margins / leverage → filing page; multiples → market-data URL; price returns → yfinance / `indicators.db`). *A score with no reasons behind it is not acceptable — this is the part the reader most wants.*
+5. **Composite arithmetic line** — `(FS·20 + Prof·25 + Growth·25 + Value·15 + Mom·15)/100 → NN/100`, with the weights used (default 20/25/25/15/15; state any deviation).
+6. **One-line caveat** — the axis most likely to flip, and any `n/a` axis.
+
+**Consistency:** the Growth axis must agree with the Section-1A forward model, GF Value with the Section-1 multiples + the PT's implied upside, Momentum with the header relative-performance line. A GF Score that contradicts the report's own numbers is a defect. Generate the helper's `--source` from the same filings/market-data the rationale cites.
+
 ### 2. Company History (400–700 words)
 - Founding story (who, when, why, where) — 1 short paragraph
 - Mermaid `timeline` block covering 5–10 major milestones (replaces a prose recap of every dated event)
@@ -391,6 +407,7 @@ Date: [YYYY-MM-DD]
 TABLE OF CONTENTS
 1. Company Overview (incl. investment-thesis lead)
 1A. Valuation & Price Target (forward estimates · PT derivation · bull/base/bear)
+1B. GF Score (GuruFocus-style) fundamental scorecard (radar + 5-axis 0–10 + composite)
 2. Company History
 3. Management Team
 4. Products & Services
@@ -415,6 +432,15 @@ TABLE OF CONTENTS
  (c) Bull / base / bear PT table, each with its swing assumption + upside%.
  (d) Consensus benchmark (vs Street, when sourced).
  (e) The 1–2 swing variables the call hinges on.]
+
+1B. GF SCORE (GuruFocus-style) FUNDAMENTAL SCORECARD (350–600 words)
+[*Analyst view:* throughout — sub-scores + composite are the analyst's rubric, never a filing cite;
+ every underlying metric carries its own inline citation. See references/gf_score.md.
+ (1) Verdict line: GF Score NN/100 — <band> (optional separate GuruFocus-official cross-check).
+ (2) Radar <svg> from scripts/gf_score.py (paste un-fenced) + how-to-read note.
+ (3) 5-row scorecard table (Financial Strength / Profitability / Growth / GF Value / Momentum, each 0–10) + composite.
+ (4) Per-axis rationale — one paragraph each stating WHY that score, with the driving metrics cited inline.
+ (5) Composite arithmetic + weights (default 20/25/25/15/15). (6) One-line caveat / any n/a axis.]
 
 2. COMPANY HISTORY (400–700 words)
 [Content]

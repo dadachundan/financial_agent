@@ -534,6 +534,8 @@ Required from External Sources:
 
 **Purpose**: Write and assemble the comprehensive final markdown report.
 
+**GF Score scorecard (carry forward).** Task 1's company-research document includes a **Section 1B GF Score** — a GuruFocus-style five-axis fundamental scorecard (Financial Strength / Profitability / Growth / GF Value / Momentum, each 0–10) with a radar/pentagon and a 0–100 composite. Carry it into the final initiation report as a standalone scorecard alongside the valuation section; if Task 2/3 changed the inputs, **re-render the radar with the latest scores** via `.claude/skills/company-research/scripts/gf_score.py` (inline SVG, pasted un-fenced). Sub-scores and the composite are `*Analyst view:*`, every underlying metric carries its own citation, and the number is **never attributed to GuruFocus** unless the real one was pulled from `gurufocus.com/term/gf-score/<TICKER>`. Full spec: [`.claude/skills/company-research/references/gf_score.md`](../company-research/references/gf_score.md).
+
 **Prerequisites**: ⚠️ Verify before starting
 - **Required**: Company research from Task 1
   - All 6-8K words of content

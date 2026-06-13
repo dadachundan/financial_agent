@@ -53,6 +53,8 @@ Maintain a running scorecard:
 | Margin expansion | Behind | Margins flat YoY | Concerning |
 | New product launch | Pending | Delayed to Q2 | Watch |
 
+**Optional — GF Score health row.** Beneath the pillar scorecard, track a **GF Score (GuruFocus-style): prior → current** line (the five-axis fundamental composite, 0–100) so fundamental health is trended alongside the thesis pillars — e.g. "GF Score 65 → 72 (+7) since last check, driven by the Profitability + Momentum axes." Re-print the **same five axes every check-in** (metric-set consistency is the whole value of a tracker). Spec + radar helper: [`.claude/skills/company-research/references/gf_score.md`](../company-research/references/gf_score.md); sub-scores are `*Analyst view:*`, never attributed to GuruFocus.
+
 ### Step 4: Catalyst Calendar
 
 Track upcoming catalysts:

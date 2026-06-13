@@ -140,6 +140,22 @@ Net margin may substitute for net profit where that is what the source publishes
 - **Mismatched fiscal-period ends disclosed in-cell** (A's FY24 forward vs B's FY25 forward).
 - **Anchor the verdict on the forward path, not just trailing** — tie the relative multiple to each name's 1–3yr forward CAGR / margin trajectory (DB: Huayan 55% rev CAGR 2025-28E, NPM to ~10% by 2028E), each forward figure cited to the filing/guidance it came from.
 
+### §4.6 — GF Score comparison scorecard (250–500 words) — Required deliverable 10
+
+A GuruFocus-style **GF Score** per name as **one overlaid radar/pentagon**, so a reader sees at a glance which name is the stronger fundamental composite. §4.5 tabulates what each name *costs*; §4.6 shows its *fundamental health* — together they're the financial cluster a desk reads first. **Included by default; skip only on "skip the GF Score".** Full rubric + the multi-company overlay spec: parent skill's [`.claude/skills/company-research/references/gf_score.md`](../../company-research/references/gf_score.md) § "Multi-company variant" — read it before writing this section.
+
+**Five axes, each 0–10:** Financial Strength · Profitability · Growth · GF Value (*higher = cheaper vs fair value*) · Momentum. Default weights 20/25/25/15/15 → a 0–100 composite + GuruFocus bands.
+
+1. **The overlaid radar `<svg>`** from the helper — paste **un-fenced** so it renders:
+   ```bash
+   /opt/anaconda3/bin/python3 .claude/skills/company-research/scripts/gf_score.py \
+     --series "A:9,9,8,4,7" --series "B:9,9,8,3,8" \
+     --source "FY25 10-Ks · Yahoo Finance, as of YYYY-MM-DD"
+   ```
+   Then the **per-company column table** the helper emits beneath it (axes as rows, names as columns, composite row at bottom), and the one-line how-to-read note (*farther from centre = better; bigger pentagon = higher score*).
+2. **A "who wins each axis" line** — for each axis name the leader + one-clause why (cited), then the composite ranking. **Keep it consistent with the §0 order-of-preference and the §10 bottom-line** — if the GF ranking diverges from the conviction call, say why.
+3. **Honesty discipline (from gf_score.md):** sub-scores + composite are `*Analyst view:*`, never a filing cite; every underlying metric (margins, leverage, CAGR, multiples, returns) carries its own inline citation; never attribute the computed number to GuruFocus unless you pulled the real one from `gurufocus.com/term/gf-score/<TICKER>` (shown separately). Apply the moat-table comparability caveats (GAAP vs non-GAAP, organic vs M&A-inflated, different FY ends) before drawing an axis verdict.
+
 ### §5 — The moat anatomy (1,800–3,000 words) — THE LONGEST SECTION
 
 **§5.0 + eight subsections.** **See `references/moat_anatomy.md` for the per-subsection content spec.** Headline subsections (each ~200–400 words, except §5.8 which scales with the number of other players covered):
@@ -269,6 +285,7 @@ Every entry is a markdown link with a date in the title where the source has a p
 - [ ] **§0 Order-of-preference line** — committed ordinal ranking (`A > C > B`), one-clause why per name, no hedge words (Required deliverable 8)
 - [ ] **§4.5 Relative-valuation scoreboard** — multiples table (fwd PE / P/S / EV/EBITDA / PEG / div yield / FCF yield) + peer-median + 3-yr-range columns, fair-yardstick paragraph, premium-justified-or-not verdict (Required deliverable 7)
 - [ ] **§4.5 Forward estimates strip** — FY+1/FY+2/FY+3 revenue + net profit (or margin) per name, sourced to guidance or `*Analyst view:*` broker notes, never "our model"
+- [ ] **§4.6 GF Score overlaid radar** — one inline-SVG pentagon (from `scripts/gf_score.py`, pasted un-fenced) overlaying all N names + per-company column table + composite 0–100 per name + "who wins each axis" line; sub-scores `*Analyst view:*`, never attributed to GuruFocus (Required deliverable 10)
 - [ ] §1 framing table (verbatim 10-K language)
 - [ ] §2 mermaid timeline of strategic pillars
 - [ ] §3 AI side-by-side (tool / tailwind)

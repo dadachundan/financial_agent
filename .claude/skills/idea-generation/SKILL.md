@@ -94,6 +94,8 @@ Lead with the action, mirroring the **MS "Three Actionable Ideas"** header (the 
 | 12-month price target | | implied upside/downside % vs last close |
 | Valuation basis | | e.g. "2027E 24× P/E" / "DCF WACC 9%" |
 
+*Optional — GF Score:* for a high-conviction card, add a one-line **GF Score (GuruFocus-style): NN/100 — band** (the five-axis fundamental-health composite: Financial Strength / Profitability / Growth / GF Value / Momentum) so the reader sees quality at a glance. It is **our own transparent rubric, NOT GuruFocus's number** (their site/blog is an aggregator that can't be the sole source — see the source bar below): compute per [`.claude/skills/company-research/references/gf_score.md`](../company-research/references/gf_score.md), label `*Analyst view:*`, and cite each underlying metric. Skip for watchlist-only cards where a full five-axis score isn't worth the work.
+
 **Thesis (3-5 bullets):**
 - Why this is mispriced — frame as the **GS "free call option"** asymmetry: what the price *currently implies* and why that's wrong (GS on S-Oil: "price implies sub-mid-cycle diesel cracks → the duration of high cracks is a free option").
 - What the market is missing

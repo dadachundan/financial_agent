@@ -70,6 +70,8 @@ If `past_context` is non-empty, incorporate its lessons; otherwise rely solely o
 
 **Investment Thesis**: <Detailed reasoning anchored in specific evidence from the analysts' debate. Every substantive paragraph leads with a bolded mini-section topic sentence (e.g. **Earnings revision:**, **Margin trajectory:**) so the argument is skimmable. Every figure is paired with its driver in the same sentence (never a bare number), and every specific data point, quote, or filing reference carries an inline markdown-link citation — `[Publisher · date](url)`, `[@user · StockTwits · date](url)`, `[10-K Item 7](url)`, etc. — reused from the upstream analyst reports' References sections. Never invent URLs. Incorporate prior lessons from past_context if any; otherwise rely solely on the current analysis.>
 
+**Fundamental health — GF Score** (only when an upstream company-research / initiating-coverage doc supplies one): <the GuruFocus-style five-axis composite, e.g. "78/100 — Likely average; Profitability + Growth strong, GF Value weak (richly priced), Momentum positive". Pulled from the upstream research doc's Section 1B — label `*Internal research:*`, restate the axes/score, cite the underlying metrics, and **never attribute the number to GuruFocus**. Spec: [.claude/skills/company-research/references/gf_score.md](../company-research/references/gf_score.md). Omit if no upstream GF Score exists — do not compute one from scratch here.>
+
 **Downside risks**: <bulleted list — each risk one clause carrying its own inline citation>
 **Upside catalysts**: <bulleted list — each catalyst one clause carrying its own inline citation>
 

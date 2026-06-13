@@ -95,6 +95,20 @@ The decision layer that mirrors institutional sell-side notes — see SKILL.md �
 - [ ] **The 1–2 swing variables** the call hinges on are named.
 - [ ] **No filing citation is attached to the rating, the PT, or any projected number.** Format check: scan the header + Section 1A — every PT / estimate / scenario line carries `*Analyst view:*` / `*分析师观点：*`, none carries a 10-K / 年度报告 / Yuho link.
 
+## GF Score (GuruFocus-style) scorecard (Section 1B)
+
+See `references/gf_score.md` for the full rubric. Include in every initiation-style report unless the user said "skip the GF Score". Checks:
+
+- [ ] **Section 1B present**, right after Section 1A — verdict line (`GF Score NN/100 — <band>`), the radar, the 5-axis table, the per-axis rationale, the composite arithmetic.
+- [ ] **The radar renders** — the inline `<svg>` (from `scripts/gf_score.py`) is pasted **un-fenced** (not inside a ``` code block) so it displays as a chart, not source. The `--source` annotation is baked into the SVG footer.
+- [ ] **All five axes scored 0–10** (Financial Strength / Profitability / Growth / GF Value / Momentum), or explicitly `n/a` with a stated reason; the **composite 0–100** maps to the correct GuruFocus band (91–100 / 81–90 / 71–80 / 51–70 / 0–50).
+- [ ] **The composite arithmetic is shown** with the weights used (default 20/25/25/15/15); any deviation is stated.
+- [ ] **Each axis has a one-paragraph rationale stating WHY that score**, naming the 2–4 driving metrics, **each with an inline citation** (margins / leverage / ROIC → filing page; multiples → market-data URL; returns → yfinance / `indicators.db`). No axis scored without reasons.
+- [ ] **The sub-scores and composite are labeled `*Analyst view:*` / `*分析师观点：*`** and **no filing citation is attached to any score.** Format check: the GF Score table / verdict line carries no 10-K / 年度报告 / Yuho link.
+- [ ] **The computed score is NOT attributed to GuruFocus.** A GuruFocus citation appears only if the real published number was pulled from `gurufocus.com/term/gf-score/<TICKER>`, and then it's shown as a *separate* cross-check (not merged). The "not GuruFocus™ official number" disclosure in the SVG footer is intact.
+- [ ] **GF Value direction is stated** (`higher = cheaper vs fair value`) so a high GF-Value score isn't misread as "expensive".
+- [ ] **Internal consistency:** Growth ↔ the Section-1A forward model; GF Value ↔ the Section-1 multiples + PT implied upside; Momentum ↔ the header relative-performance line. No GF axis contradicts the report's own numbers.
+
 ## Key debates & catalysts (Section 9.5)
 
 Distinct from the Section 9 risk inventory — see `report_structure.md` § 9.5 and `risk_taxonomy.md`. Checks:

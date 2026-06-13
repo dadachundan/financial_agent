@@ -168,6 +168,10 @@ Earnings Materials (Q3 2024):
 - Explain what changed and why
 - **Lead with the headline magnitude**: state the estimate revision as one line with direction + magnitude + a **result-driven reason clause** before the Old/New table (GS-style "FY27/28/29 EPS raised an avg +41% on stronger AI-server scale and pricing pass-through"). **The reason must name the specific result that drove it — never "our model".**
 
+### 5b. GF Score refresh (optional, recommended when the print moves fundamentals)
+
+When the quarter materially shifts the fundamentals, refresh the **GF Score** (GuruFocus-style five-axis scorecard — Financial Strength / Profitability / Growth / GF Value / Momentum) and show **prior → new per axis** — e.g. "Profitability 7→8 on the gross-margin beat; Growth axis unchanged; net GF Score 74 → 77." A one-row delta plus the updated radar makes the quarter's impact on fundamental health legible at a glance. Render with `.claude/skills/company-research/scripts/gf_score.py`; sub-scores are `*Analyst view:*`, each driving metric is cited, and the number is never attributed to GuruFocus. Full rubric: [`.claude/skills/company-research/references/gf_score.md`](../company-research/references/gf_score.md).
+
 ### 6. Reaction Reconciliation ⭐ (why the stock moved)
 
 A required paragraph reconciling the **share-price reaction with the print** — the single most common real-world post-print question. Handle the counter-intuitive cases explicitly:
