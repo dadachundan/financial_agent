@@ -148,7 +148,8 @@ A GuruFocus-style **GF Score** per name as **one overlaid radar/pentagon**, so a
 
 1. **The overlaid radar `<svg>`** from the helper — paste **un-fenced** so it renders:
    ```bash
-   /opt/anaconda3/bin/python3 .claude/skills/company-research/scripts/gf_score.py \
+   cd /Users/x/projects/financial_agent
+   /opt/anaconda3/bin/python3 scripts/gf_score.py \
      --series "A:9,9,8,4,7" --series "B:9,9,8,3,8" \
      --source "FY25 10-Ks · Yahoo Finance, as of YYYY-MM-DD"
    ```

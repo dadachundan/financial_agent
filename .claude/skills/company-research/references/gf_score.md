@@ -177,12 +177,12 @@ Render the pentagon with the helper script — it emits **inline `<svg>`** (whic
 ```bash
 cd /Users/x/projects/financial_agent
 # Single company → filled pentagon + table
-/opt/anaconda3/bin/python3 .claude/skills/company-research/scripts/gf_score.py \
+/opt/anaconda3/bin/python3 scripts/gf_score.py \
   --name NVDA --scores 8,10,9,4,8 \
   --source "NVDA FY25 10-K · Yahoo Finance · indicators.db, as of 2026-06-13"
 
 # Compare (2–4 companies) → overlaid radar with a per-company legend
-/opt/anaconda3/bin/python3 .claude/skills/company-research/scripts/gf_score.py \
+/opt/anaconda3/bin/python3 scripts/gf_score.py \
   --series "NVDA:8,10,9,4,8" --series "AMD:6,7,8,6,5" --series "INTC:5,4,3,7,3" \
   --source "FY25 10-Ks · Yahoo Finance, as of 2026-06-13"
 ```

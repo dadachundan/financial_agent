@@ -170,7 +170,7 @@ Earnings Materials (Q3 2024):
 
 ### 5b. GF Score refresh (optional, recommended when the print moves fundamentals)
 
-When the quarter materially shifts the fundamentals, refresh the **GF Score** (GuruFocus-style five-axis scorecard — Financial Strength / Profitability / Growth / GF Value / Momentum) and show **prior → new per axis** — e.g. "Profitability 7→8 on the gross-margin beat; Growth axis unchanged; net GF Score 74 → 77." A one-row delta plus the updated radar makes the quarter's impact on fundamental health legible at a glance. Render with `.claude/skills/company-research/scripts/gf_score.py`; sub-scores are `*Analyst view:*`, each driving metric is cited, and the number is never attributed to GuruFocus. Full rubric: [`.claude/skills/company-research/references/gf_score.md`](../company-research/references/gf_score.md).
+When the quarter materially shifts the fundamentals, refresh the **GF Score** (GuruFocus-style five-axis scorecard — Financial Strength / Profitability / Growth / GF Value / Momentum) and show **prior → new per axis** — e.g. "Profitability 7→8 on the gross-margin beat; Growth axis unchanged; net GF Score 74 → 77." A one-row delta plus the updated radar makes the quarter's impact on fundamental health legible at a glance. Render with `scripts/gf_score.py`; sub-scores are `*Analyst view:*`, each driving metric is cited, and the number is never attributed to GuruFocus. Full rubric: [`.claude/skills/company-research/references/gf_score.md`](../company-research/references/gf_score.md).
 
 ### 6. Reaction Reconciliation ⭐ (why the stock moved)
 

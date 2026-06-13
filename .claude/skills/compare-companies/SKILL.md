@@ -286,7 +286,8 @@ A GuruFocus-style **GF Score** per name, rendered as **one overlaid radar/pentag
 - **Five axes, each 0–10:** Financial Strength · Profitability · Growth · GF Value (valuation, *higher = cheaper vs fair value*) · Momentum. A transparent weighting (default 20/25/25/15/15) maps them to a **0–100 composite** and the GuruFocus bands (91–100 highest … 0–50 worst).
 - **Render with the shared helper** (inline SVG, stdlib-only, bakes the required source annotation in):
   ```bash
-  /opt/anaconda3/bin/python3 .claude/skills/company-research/scripts/gf_score.py \
+  cd /Users/x/projects/financial_agent
+  /opt/anaconda3/bin/python3 scripts/gf_score.py \
     --series "SNPS:9,9,8,4,7" --series "CDNS:9,9,8,3,8" \
     --source "FY25 10-Ks · Yahoo Finance, as of YYYY-MM-DD"
   ```
@@ -678,7 +679,7 @@ Save both reports under `reports/compare/` at the project root. Preserve the use
 Also read on demand from the parent skill:
 
 - `.claude/skills/company-research/references/citations.md` — citation rules apply verbatim.
-- `.claude/skills/company-research/references/gf_score.md` — the GF Score (GuruFocus-style) rubric (five 0–10 axes, composite 0–100 + bands, honesty rules) and the **§ "Multi-company variant"** for the §4.6 overlaid-radar comparison scorecard; rendered by `.claude/skills/company-research/scripts/gf_score.py`.
+- `.claude/skills/company-research/references/gf_score.md` — the GF Score (GuruFocus-style) rubric (five 0–10 axes, composite 0–100 + bands, honesty rules) and the **§ "Multi-company variant"** for the §4.6 overlaid-radar comparison scorecard; rendered by `scripts/gf_score.py`.
 - `.claude/skills/company-research/references/quality_checklist.md` — pre-submit checklist (compare-companies adds its own checks above, but the company-research base list still applies).
 
 ## What this skill does NOT do

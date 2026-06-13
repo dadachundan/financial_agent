@@ -641,7 +641,7 @@ With the financials (Step 1–2a), the forward model (Step 2b), and the header's
 2. **Render the radar + table** with the helper (paste the `<svg>` un-fenced so it renders):
    ```bash
    cd /Users/x/projects/financial_agent
-   /opt/anaconda3/bin/python3 .claude/skills/company-research/scripts/gf_score.py \
+   /opt/anaconda3/bin/python3 scripts/gf_score.py \
      --name <TICKER> --scores <fs>,<prof>,<growth>,<value>,<mom> \
      --source "<TICKER> FY<NN> 10-K · Yahoo Finance · indicators.db, as of YYYY-MM-DD"
    ```
