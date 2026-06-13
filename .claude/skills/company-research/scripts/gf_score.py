@@ -70,11 +70,19 @@ DIMS = [
 ]
 
 PALETTE = ["#2e8b57", "#2563eb", "#d97706", "#7c3aed"]  # green, blue, amber, violet
-GRID = "#cdd5df"
-AXIS = "#9aa5b1"
+RING_BG = "#e9f5ec"   # light-green "target" backdrop, GuruFocus-style
+GRID = "#c5d3cb"      # concentric ring outlines
+AXIS = "#cfdad3"      # faint radial spokes
 INK = "#1f2933"
 MUTED = "#52606d"
 MAX_V = 10.0
+
+# Connect polygon vertices in clockwise angular order from the top — NOT the
+# canonical input order (fs, prof, growth, value, mom). Connecting in input
+# order makes the polygon self-intersect into a star (the "line across the
+# middle, Profitability→Financial Strength" bug). RENDER_ORDER sorts the five
+# axes by their on-screen angle so every edge joins adjacent rim vertices.
+RENDER_ORDER = sorted(range(len(DIMS)), key=lambda i: DIMS[i][3])
 
 
 def band_label(score100):
@@ -110,7 +118,9 @@ def _vertex(cx, cy, r_frac, angle_deg, radius):
 
 def _poly_points(cx, cy, values, radius):
     pts = []
-    for (_, _, _, ang), v in zip(DIMS, values):
+    for i in RENDER_ORDER:
+        ang = DIMS[i][3]
+        v = values[i]
         x, y = _vertex(cx, cy, max(0.0, min(MAX_V, v)) / MAX_V, ang, radius)
         pts.append(f"{_f(x)},{_f(y)}")
     return " ".join(pts)
@@ -148,7 +158,11 @@ def build_svg(series, source, composites, lang="bi"):
             f'GF Score (GuruFocus-style)</text>'
         )
 
-    # concentric pentagon gridlines at 2/4/6/8/10
+    # light-green "target" backdrop (outer pentagon) + concentric ring outlines
+    out.append(
+        f'<polygon points="{_poly_points(cx, cy, [MAX_V] * 5, R)}" '
+        f'fill="{RING_BG}" stroke="none"/>'
+    )
     for level in (2, 4, 6, 8, 10):
         pts = _poly_points(cx, cy, [level] * 5, R)
         sw = "1.3" if level == 10 else "1"
@@ -192,14 +206,14 @@ def build_svg(series, source, composites, lang="bi"):
             out.append(
                 f'<text x="{_f(sx)}" y="{_f(sy - 6)}" text-anchor="middle" '
                 f'font-family="Helvetica,Arial,sans-serif" font-size="10.5" '
-                f'font-weight="700" fill="{PALETTE[0]}">{_num(sv)}</text>'
+                f'font-weight="700" fill="{INK}">{_num(sv)}</text>'
             )
 
     # score polygons
     for i, (label, scores) in enumerate(series):
         color = PALETTE[i % len(PALETTE)]
         pts = _poly_points(cx, cy, scores, R)
-        op = "0.16" if not multi else "0.10"
+        op = "0.34" if not multi else "0.14"
         out.append(
             f'<polygon points="{pts}" fill="{color}" fill-opacity="{op}" '
             f'stroke="{color}" stroke-width="2"/>'
