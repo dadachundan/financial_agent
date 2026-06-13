@@ -47,6 +47,10 @@
      the scroll container so the outline can scroll within it. */
   .feed-card { background:#fff; border-radius:12px; box-shadow:0 1px 4px rgba(0,0,0,.08);
                padding:1.5rem 1.75rem;
+               /* A viewport of bottom slack so the outline can scroll even the
+                  LAST heading up to the top — without it, the final sections
+                  sit below max-scroll and their outline links appear dead. */
+               padding-bottom:90vh;
                height:100%; overflow-y:auto; box-sizing:border-box;
                display:none; }
   .feed-card.active { display:block; }
