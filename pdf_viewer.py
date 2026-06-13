@@ -443,16 +443,21 @@ _VIEWER_TMPL = r"""<!doctype html>
 
     /* Popover that appears when you click an existing highlight */
     .pic-hl-pop{position:fixed;z-index:1600;background:#fff;
-                border:1px solid #cfd6df;border-radius:22px;
-                padding:3px;display:none;align-items:center;gap:2px;
+                border:1px solid #cfd6df;border-radius:8px;
+                padding:4px;display:none;align-items:center;gap:3px;
                 box-shadow:0 3px 10px rgba(0,0,0,.24)}
     .pic-hl-pop.show{display:inline-flex}
+    /* Labelled pill buttons (icon + text) so the delete action is obvious —
+       a body-less highlight has no rail card, so this popover IS its only UI. */
     .pic-hl-pop button{background:none;border:none;cursor:pointer;
-                       width:32px;height:32px;border-radius:50%;
-                       display:flex;align-items:center;justify-content:center;
-                       color:#1F4E78;padding:0;font-size:.95rem;
+                       height:30px;border-radius:6px;
+                       display:inline-flex;align-items:center;gap:5px;
+                       color:#1F4E78;padding:0 11px 0 8px;
+                       font-size:.82rem;font-weight:600;
                        transition:background .12s}
+    .pic-hl-pop button svg{width:16px;height:16px;display:block;flex:none}
     .pic-hl-pop button:hover{background:#eef4fb}
+    .pic-hl-pop button.danger{color:#c0392b}
     .pic-hl-pop button.danger:hover{background:#fdecea;color:#c0392b}
 
     /* Comments rail — clone of /claude-reports/view comments-rail.
@@ -644,6 +649,7 @@ _VIEWER_TMPL = r"""<!doctype html>
                  8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0
                  0 1 8 8v.5z"/>
       </svg>
+      <span>Comment</span>
     </button>
     <button type="button" class="danger" id="picHlPopDelete" title="Delete highlight">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -651,6 +657,7 @@ _VIEWER_TMPL = r"""<!doctype html>
         <polyline points="3 6 5 6 21 6"/>
         <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
       </svg>
+      <span>Delete</span>
     </button>
   </div>
 
