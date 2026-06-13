@@ -389,9 +389,12 @@ _VIEWER_TMPL = r"""<!doctype html>
                            opacity:1;mix-blend-mode:multiply;
                            padding:0;display:inline}
     /* Rect-anchored highlights (drawn over the page; no text inside) */
+    /* pointer-events:none so a rect overlay never blocks selecting the text
+       underneath it. Click-to-activate is re-added via hit-testing on the
+       page (see the delegated click handler). */
     .pdf-page .rect-hl{position:absolute;background:rgba(255,225,80,.35);
                        border:1px solid rgba(220,170,30,.5);border-radius:2px;
-                       cursor:pointer;z-index:3;pointer-events:auto;
+                       cursor:pointer;z-index:3;pointer-events:none;
                        transition:background .15s}
     .pdf-page .rect-hl:hover{background:rgba(255,225,80,.55)}
     .pdf-page .rect-hl.active{background:rgba(255,205,30,.5);
@@ -1237,6 +1240,35 @@ _VIEWER_TMPL = r"""<!doctype html>
     hideHlPop();
   });
 
+  // rect-hl overlays are pointer-events:none (so they never block selecting
+  // the text beneath them), so their own click handler can't fire. Re-add
+  // click-to-activate by hit-testing on a PLAIN click: a text-selecting drag
+  // leaves a non-collapsed selection and is ignored; a simple click in a
+  // rect activates its comment (rail card for noted ones, [💬 🗑] popover for
+  // bare highlights). Marks stopPropagation on their own click, so a click on
+  // a text highlight never reaches here.
+  document.addEventListener('click', function(e) {
+    const sel = window.getSelection();
+    if (sel && !sel.isCollapsed) return;            // user was selecting text
+    if (fab.contains(e.target) || hlPop.contains(e.target) || rail.contains(e.target)) return;
+    let hit = null, hitArea = Infinity;
+    document.querySelectorAll('.rect-hl').forEach(r => {
+      const b = r.getBoundingClientRect();
+      if (e.clientX >= b.left && e.clientX <= b.right &&
+          e.clientY >= b.top  && e.clientY <= b.bottom) {
+        const area = b.width * b.height;            // prefer the smallest enclosing rect
+        if (area < hitArea) { hitArea = area; hit = r; }
+      }
+    });
+    if (!hit) return;
+    const cid = parseInt(hit.dataset.cid, 10);
+    if (!cid) return;
+    const c = comments.find(x => x.id === cid);
+    if (!c) return;
+    if (c.body && c.body.trim()) setActive(c.id, false);
+    else                         showHlPop(hit, c.id);
+  });
+
   // Prevent fab button mousedown from stealing focus / collapsing selection.
   // Without preventDefault, clicking the button can shift focus out of the
   // text layer and the browser drops the selection before our click handler
@@ -1470,6 +1502,40 @@ _VIEWER_TMPL = r"""<!doctype html>
       // we fall back to full.length.
       const origEnd = (nEnd < MAP.length) ? MAP[nEnd] : idx.full.length;
       return { start: origStart, end: origEnd };
+    }
+
+    // Endpoint fallback — the exact full-quote match failed. A long or
+    // multi-paragraph selection accumulates tiny text-layer differences
+    // (a missing inter-word space at a line break — "through a" + "series"
+    // rendered "aseries" — a ligature, a footnote superscript), and a
+    // single mismatched char anywhere breaks the contiguous indexOf. So
+    // anchor the span by its ENDPOINTS instead: find the quote's head and
+    // its tail and wrap everything between them. This keeps long text
+    // highlights as selectable marks instead of dropping to a rect overlay.
+    //
+    // Gate on prefix/suffix so this only fires for TEXT selections (which
+    // always carry text-layer context). A region comment (drawn box, OCR'd
+    // quote, empty prefix+suffix) must keep falling back to its rect overlay
+    // — otherwise its OCR text, if it happens to match native page text
+    // (e.g. a chart title), would wrongly re-anchor as a thin text mark.
+    if (quoteN.length >= 24 && (prefixN || suffixN)) {
+      const HEAD = quoteN.slice(0, 20);
+      const TAIL = quoteN.slice(-20);
+      const hi = NORM.indexOf(HEAD);
+      if (hi >= 0) {
+        const ti = NORM.indexOf(TAIL, hi + HEAD.length);
+        if (ti >= 0) {
+          const nStart = hi;
+          const nEnd   = ti + TAIL.length;
+          // Reject runaway matches (head and tail both common, far apart):
+          // the matched span must be close to the quote's own length.
+          if (nEnd - nStart <= quoteN.length * 1.3 + 8) {
+            const origStart = MAP[nStart];
+            const origEnd = (nEnd < MAP.length) ? MAP[nEnd] : idx.full.length;
+            return { start: origStart, end: origEnd };
+          }
+        }
+      }
     }
     return null;
   }
