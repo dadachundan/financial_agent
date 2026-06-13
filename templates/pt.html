@@ -96,7 +96,7 @@
     </div>
     <div class="d-flex flex-wrap gap-2 align-items-center mt-2">
       <input id="filter" type="text" class="form-control form-control-sm" style="max-width:340px"
-             placeholder="🔍 filter by ticker / name / 中文名 / broker / rating">
+             placeholder="🔍 exact ticker — MU, 3037, NVDA TSM (suffix optional)">
       <span class="pill-counts">
         <span id="count">{{ total }}</span> rows
         &nbsp;|&nbsp;
@@ -233,18 +233,19 @@
     if (rl.indexOf('neutral') >= 0)     return 'rating-neutral';
     return 'rating-neutral';
   }
-  function searchText(r){
-    // Cached on the row object; rebuilt on first access only.
-    // Only the fields advertised in the search-box placeholder are indexed —
-    // catalyst and pdf-filename used to leak in here, which caused "catl"
-    // to match Lead Intelligent (catalyst says "CATL sodium battery"). Keep
-    // this list aligned with the placeholder text.
-    if (r._search != null) return r._search;
-    r._search = [
-      r.company_ticker, r.company_name, r.research_institute,
-      r.rating, r.sector
-    ].filter(Boolean).join(' ').toLowerCase();
-    return r._search;
+  function tickerMatches(r, token){
+    // EXACT ticker match (case-insensitive), suffix-optional. The yfinance
+    // market suffix (".TW", ".HK", ".SS", …) is stripped to a base ticker so
+    // "3037" matches "3037.TW" without the reader having to type the suffix —
+    // but "micron" no longer matches Unimicron, because we compare against the
+    // ticker, not a substring of the company name. Cached on the row object.
+    var tk = r._tk;
+    if (tk == null) {
+      tk = (r.company_ticker || '').toLowerCase();
+      var base = tk.indexOf('.') >= 0 ? tk.substring(0, tk.lastIndexOf('.')) : tk;
+      tk = r._tk = { full: tk, base: base };
+    }
+    return token === tk.full || token === tk.base;
   }
 
   function rowHtml(r){
@@ -357,12 +358,17 @@
       s.ccyCount[ccy] = (s.ccyCount[ccy] || 0) + 1;
     });
 
-    // 3. Market + text filter applied on top.
+    // 3. Market + ticker filter applied on top.
+    //    EXACT ticker match (case-insensitive), with the yfinance market
+    //    suffix optional — so "MU" matches MU, "3037" matches 3037.TW, and
+    //    "1211" matches 1211.HK. This deliberately drops the old fuzzy
+    //    name/broker substring search: typing "micron" used to also pull in
+    //    Unimicron (3037.TW) because "micron" is a substring of the name.
+    //    Multiple space-separated tickers are OR'd, so "MU NVDA" shows both.
     var shown = statsBase;
     if (tokens.length > 0) {
       shown = shown.filter(function(r){
-        var txt = searchText(r);
-        return tokens.every(function(t){ return txt.indexOf(t) >= 0; });
+        return tokens.some(function(t){ return tickerMatches(r, t); });
       });
     } else {
       shown = shown.slice();
