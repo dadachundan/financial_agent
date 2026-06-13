@@ -300,8 +300,9 @@ def register(bp: Blueprint, *, source: str, path_provider) -> None:
             if x1 - x0 < 2 or y1 - y0 < 2:
                 abort(400, "rect too small")
             clip = fitz.Rect(x0, y0, x1, y1)
-            # 2× supersample for a crisp thumbnail.
-            pix = pg.get_pixmap(matrix=fitz.Matrix(2.0, 2.0), clip=clip)
+            # 3× supersample so the crop stays crisp when displayed at the
+            # full width of the comments column (charts are near page-width).
+            pix = pg.get_pixmap(matrix=fitz.Matrix(3.0, 3.0), clip=clip)
             png = pix.tobytes("png")
         finally:
             try:

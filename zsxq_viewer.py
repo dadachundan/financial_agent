@@ -1771,8 +1771,11 @@ def feed():
         fid = ann.get("file_id")
         if not prefix or not fid:
             return ""
+        # `dpi` is a cache-buster: the route ignores it, but bumping it when
+        # the server-side render scale changes forces browsers to refetch
+        # instead of serving a stale lower-res crop (Cache-Control is 1 day).
         qs = _urlencode_h({"page": page, "x": rect["x"], "y": rect["y"],
-                           "w": rect["w"], "h": rect["h"]})
+                           "w": rect["w"], "h": rect["h"], "dpi": 3})
         return f'![P{page} region screenshot]({prefix}/pdf-region-image/{fid}?{qs})'
 
     def _format_annotation(ann: dict) -> str:
