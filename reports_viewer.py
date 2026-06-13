@@ -1025,6 +1025,57 @@ _VIEW_TMPL = r"""<!doctype html>
       .rail-splitter{display:none}
       .layout{max-width:980px}
     }
+
+    /* ── Outline / table-of-contents rail (right side) ─────────────── */
+    #tocPanel{position:fixed;top:60px;right:10px;z-index:1200;
+              width:248px;max-height:calc(100vh - 80px);
+              display:flex;flex-direction:column;
+              background:#fff;border:1px solid #e0e4ea;border-radius:10px;
+              box-shadow:0 2px 12px rgba(0,0,0,.08);
+              font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+              transition:transform .18s ease, opacity .18s ease}
+    #tocPanel.collapsed{transform:translateX(calc(100% + 16px));
+                        opacity:0;pointer-events:none}
+    .toc-head{display:flex;align-items:center;justify-content:space-between;
+              padding:9px 12px;border-bottom:1px solid #eef1f4;flex:none}
+    .toc-head .toc-title{font-size:.72rem;font-weight:700;letter-spacing:.06em;
+                         text-transform:uppercase;color:#57606a}
+    .toc-head button{background:none;border:none;cursor:pointer;color:#8a929c;
+                     font-size:1.05rem;line-height:1;padding:2px 4px;border-radius:5px}
+    .toc-head button:hover{background:#f1f3f7;color:#1F4E78}
+    .toc-nav{overflow-y:auto;padding:6px 4px 10px;flex:1 1 auto}
+    .toc-nav a{display:block;color:#3a424d;text-decoration:none;
+               font-size:.82rem;line-height:1.32;padding:3px 10px 3px 12px;
+               border-left:2px solid transparent;border-radius:0 4px 4px 0;
+               white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+               transition:background .12s,color .12s,border-color .12s}
+    .toc-nav a:hover{background:#f3f6fa;color:#1F4E78}
+    .toc-nav a.lvl-1{font-weight:600;color:#222}
+    .toc-nav a.lvl-2{padding-left:24px}
+    .toc-nav a.lvl-3{padding-left:38px;font-size:.79rem;color:#586069}
+    .toc-nav a.lvl-4{padding-left:52px;font-size:.78rem;color:#6a737d}
+    .toc-nav a.active{background:#eaf2fb;color:#1F4E78;
+                      border-left-color:#1F4E78;font-weight:600}
+    /* Floating reopen tab (shown only when the panel is collapsed) */
+    #tocToggle{position:fixed;top:64px;right:10px;z-index:1199;
+               display:none;align-items:center;gap:6px;cursor:pointer;
+               background:#1F4E78;color:#fff;border:none;border-radius:16px;
+               padding:7px 13px;font-size:.78rem;font-weight:600;
+               font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+               box-shadow:0 2px 8px rgba(31,78,120,.28)}
+    #tocToggle:hover{background:#16395a}
+    #tocToggle svg{width:14px;height:14px}
+    #tocPanel.collapsed ~ #tocToggle{display:inline-flex}
+    .toc-empty{display:none !important}
+    /* When the outline is open, reserve room on the right so the fixed
+       panel never overlaps the document text. The doc (max 920px) simply
+       shifts left of centre — it isn't narrowed. */
+    @media (min-width: 901px){
+      body.toc-open .layout{margin-left:auto;margin-right:272px}
+    }
+    @media (max-width: 900px){
+      #tocPanel, #tocToggle{display:none !important}
+    }
   </style>
 </head>
 <body>
@@ -1050,6 +1101,123 @@ _VIEW_TMPL = r"""<!doctype html>
       <line x1="12" y1="8.5" x2="12" y2="14.5"/>
     </svg>
   </button>
+
+  <!-- Outline / table of contents (populated from the rendered headings) -->
+  <aside id="tocPanel" class="collapsed" aria-label="Outline">
+    <div class="toc-head">
+      <span class="toc-title">Outline</span>
+      <button id="tocClose" type="button" title="Hide outline">&times;</button>
+    </div>
+    <nav class="toc-nav" id="tocNav"></nav>
+  </aside>
+  <button id="tocToggle" type="button" title="Show outline">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
+      <line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/>
+      <line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>
+    </svg>
+    Outline
+  </button>
+
+  <script>
+  // ── Outline / TOC: built from the rendered headings ──────────────
+  (function(){
+    const panel  = document.getElementById('tocPanel');
+    const nav    = document.getElementById('tocNav');
+    const toggle = document.getElementById('tocToggle');
+    const closeB = document.getElementById('tocClose');
+    const content = document.getElementById('content');
+    const KEY = 'toc-open';
+    const OFFSET = 76;            // scroll offset so headings clear the top
+    let headings = [], links = [];
+
+    function slugify(text, used){
+      let base = (text || '').trim().toLowerCase()
+        .replace(/[^\w一-鿿 \-]+/g, '')
+        .replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+      if (!base) base = 'section';
+      let id = base, n = 2;
+      while (used.has(id)) { id = base + '-' + (n++); }
+      used.add(id);
+      return id;
+    }
+
+    function setOpen(open){
+      panel.classList.toggle('collapsed', !open);
+      document.body.classList.toggle('toc-open', open);
+      try { localStorage.setItem(KEY, open ? '1' : '0'); } catch(e){}
+    }
+
+    function build(){
+      const hs = Array.from(content.querySelectorAll('h1, h2, h3, h4'))
+                      .filter(h => (h.textContent || '').trim());
+      if (hs.length < 2) {           // nothing worth navigating
+        panel.style.display = 'none';
+        toggle.style.display = 'none';
+        return;
+      }
+      const used = new Set();
+      nav.innerHTML = ''; headings = []; links = [];
+      hs.forEach(h => {
+        const text = (h.textContent || '').trim();
+        if (h.id) used.add(h.id); else h.id = slugify(text, used);
+        const lvl = parseInt(h.tagName.slice(1), 10);
+        const a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.textContent = text;
+        a.className = 'lvl-' + lvl;
+        a.title = text;
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          const y = h.getBoundingClientRect().top + window.scrollY - OFFSET;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+          history.replaceState(null, '', '#' + h.id);
+        });
+        nav.appendChild(a);
+        headings.push(h); links.push(a);
+      });
+
+      let open;
+      try {
+        const s = localStorage.getItem(KEY);
+        open = (s !== null) ? (s === '1') : (window.innerWidth >= 1200);
+      } catch(e){ open = window.innerWidth >= 1200; }
+      setOpen(open);
+      updateActive();              // immediate initial highlight (no rAF dependency)
+      window.addEventListener('scroll', onScroll, { passive: true });
+    }
+
+    // Scroll-spy core: highlight whichever heading sits nearest the top.
+    function updateActive(){
+      const line = OFFSET + 12;
+      let idx = 0;
+      for (let i = 0; i < headings.length; i++){
+        if (headings[i].getBoundingClientRect().top <= line) idx = i; else break;
+      }
+      links.forEach((a, i) => a.classList.toggle('active', i === idx));
+      const act = links[idx];
+      if (act){                      // keep the active link visible in the rail
+        const nr = nav.getBoundingClientRect(), ar = act.getBoundingClientRect();
+        if (ar.top < nr.top) nav.scrollTop -= (nr.top - ar.top) + 8;
+        else if (ar.bottom > nr.bottom) nav.scrollTop += (ar.bottom - nr.bottom) + 8;
+      }
+    }
+    // Throttle scroll handling to one update per animation frame.
+    let ticking = false;
+    function onScroll(){
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => { ticking = false; updateActive(); });
+    }
+
+    toggle.addEventListener('click', () => setOpen(true));
+    closeB.addEventListener('click', () => setOpen(false));
+
+    if (window._ricDocReady) build();
+    else document.addEventListener('ric:doc-ready', build, { once: true });
+  })();
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
