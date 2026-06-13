@@ -253,6 +253,66 @@ def register(bp: Blueprint, *, source: str, path_provider) -> None:
                 pass
         return jsonify(text=text, source="ocr")
 
+    # ── On-demand region screenshot (PNG crop of a rect) ────────────────
+    @bp.route("/pdf-region-image/<int:file_id>")
+    def pdf_region_image(file_id: int):
+        """Render a rectangular crop of a PDF page as a PNG.
+
+        A region-style comment stores its box in `pdf_inline_comments.
+        rect_json` ({x,y,w,h} in PDF points). The /comments/ feed points an
+        <img> at this route to show a screenshot of the region instead of
+        just its OCR'd text. Stateless — nothing is persisted; the crop is
+        re-rendered from the PDF + rect on each request, so no write ever
+        touches the (Tier-1, read-only) comments DB.
+        """
+        try:
+            page = int(request.args.get("page") or 0)
+            x = float(request.args.get("x") or 0)
+            y = float(request.args.get("y") or 0)
+            w = float(request.args.get("w") or 0)
+            h = float(request.args.get("h") or 0)
+        except (TypeError, ValueError):
+            abort(400, "bad rect params")
+        if not page or w <= 1 or h <= 1:
+            abort(400, "page/rect required")
+        m = _meta(file_id)
+        if not m or not m["local_path"] or not Path(m["local_path"]).exists():
+            abort(404, "pdf not found")
+        try:
+            import fitz  # type: ignore
+        except ImportError:
+            abort(500, "PyMuPDF not installed")
+        try:
+            doc = fitz.open(m["local_path"])
+        except Exception as e:
+            abort(500, f"fitz open failed: {e}")
+        try:
+            if page < 1 or page > doc.page_count:
+                abort(400, "page out of range")
+            pg = doc[page - 1]
+            pw, ph = pg.rect.width, pg.rect.height
+            # A few points of padding so the crop isn't flush against the text.
+            pad = 3.0
+            x0 = max(0.0, min(pw, x - pad))
+            y0 = max(0.0, min(ph, y - pad))
+            x1 = max(0.0, min(pw, x + w + pad))
+            y1 = max(0.0, min(ph, y + h + pad))
+            if x1 - x0 < 2 or y1 - y0 < 2:
+                abort(400, "rect too small")
+            clip = fitz.Rect(x0, y0, x1, y1)
+            # 2× supersample for a crisp thumbnail.
+            pix = pg.get_pixmap(matrix=fitz.Matrix(2.0, 2.0), clip=clip)
+            png = pix.tobytes("png")
+        finally:
+            try:
+                doc.close()
+            except Exception:
+                pass
+        resp = send_file(io.BytesIO(png), mimetype="image/png")
+        # Deterministic for a given (file_id, page, rect) — cache aggressively.
+        resp.headers["Cache-Control"] = "public, max-age=86400"
+        return resp
+
 
 # ── Template ─────────────────────────────────────────────────────────────
 _VIEWER_TMPL = r"""<!doctype html>

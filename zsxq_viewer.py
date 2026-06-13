@@ -1460,7 +1460,7 @@ def feed():
     inline_conn = sqlite3.connect(_pic.DB_PATH)
     inline_conn.row_factory = sqlite3.Row
     inline_rows = inline_conn.execute("""
-        SELECT id, source, file_id, page, quote, body, origin,
+        SELECT id, source, file_id, page, quote, rect_json, body, origin,
                COALESCE(updated_at, created_at) AS date
         FROM   pdf_inline_comments
         ORDER BY page ASC, id ASC
@@ -1481,6 +1481,11 @@ def feed():
         "cn":     {"label": "CN",     "css": "bg-danger text-white"},
         "manual": {"label": "MANUAL", "css": "bg-secondary text-white"},
         "report": {"label": "REPORT", "css": "bg-warning text-dark"},
+    }
+    # url_prefix each PDF-viewer blueprint is mounted at (see main.py) —
+    # used to build the on-demand region-screenshot URL for region comments.
+    SOURCE_VIEWER_PREFIX = {
+        "zsxq": "/zsxq", "sec": "/sec", "cn": "/cn", "manual": "/manual-report",
     }
 
     def _load_zsxq() -> dict[int, dict]:
@@ -1742,6 +1747,30 @@ def feed():
         # with `##` nests under the annotation's own `##` heading.
         return _HEADING_RE.sub(r'#\1\2', text)
 
+    import json as _json_h
+    from urllib.parse import urlencode as _urlencode_h
+
+    def _region_image_md(ann: dict, page: int) -> str:
+        # A region-style comment carries a rect; render an on-demand PNG crop
+        # of that box (served by pdf_viewer's /pdf-region-image route) so the
+        # feed shows an actual screenshot, not just the box's OCR text.
+        rj = ann.get("rect_json")
+        if not rj:
+            return ""
+        try:
+            rect = _json_h.loads(rj)
+        except Exception:
+            return ""
+        if not isinstance(rect, dict) or not all(k in rect for k in ("x", "y", "w", "h")):
+            return ""
+        prefix = SOURCE_VIEWER_PREFIX.get(ann.get("source") or "")
+        fid = ann.get("file_id")
+        if not prefix or not fid:
+            return ""
+        qs = _urlencode_h({"page": page, "x": rect["x"], "y": rect["y"],
+                           "w": rect["w"], "h": rect["h"]})
+        return f'![P{page} region screenshot]({prefix}/pdf-region-image/{fid}?{qs})'
+
     def _format_annotation(ann: dict) -> str:
         page = ann.get("page") or 0
         quote_full = (ann.get("quote") or "").strip().replace("\n", " ")
@@ -1749,11 +1778,17 @@ def feed():
         label = (quote_full[:40].rstrip() + "…") if len(quote_full) > 40 else quote_full
         heading = f'## P{page} — "{label}"' if label else f"## P{page}"
         parts: list[str] = [heading]
-        if quote_full:
+        # Region comment → show the screenshot crop. The OCR'd `quote` is the
+        # text of that same box, so we skip the (often noisy) quote blockquote
+        # when an image is shown and keep just the screenshot + the note.
+        img_md = _region_image_md(ann, page)
+        if img_md:
+            parts.append(img_md)
+        if quote_full and not img_md:
             parts.append(f"> {quote_full}")
         if body:
             parts.append(_demote_headings(body))
-        if not quote_full and not body:
+        if not quote_full and not body and not img_md:
             parts.append("🖍 *(region highlight)*")
         return "\n\n".join(parts)
 
