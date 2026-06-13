@@ -5,7 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{{ feed_title }}</title>
 <link href="/static/vendor/bootstrap.min.css" rel="stylesheet">
+<link href="/static/vendor/katex.min.css" rel="stylesheet">
 <script src="/static/vendor/marked.min.js"></script>
+<script defer src="/static/vendor/katex.min.js"></script>
+<script defer src="/static/vendor/katex-auto-render.min.js"></script>
 <style>
   body { background:#f8f9fa; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
          overflow:hidden; }
@@ -196,6 +199,58 @@ __URLPATCH__
 <script>
 const _base = "{{ _base | default('') }}";
 
+// ── KaTeX math rendering ────────────────────────────────────────────
+// Comment bodies routinely carry inline LaTeX like $-183^\circ\text{C}$.
+// marked.parse() leaves it as literal text, so we post-process each
+// rendered body with KaTeX. Mirrors the reports-viewer pipeline: a
+// careful single-$ → \(...\) conversion that never bites real currency
+// ($500, $1.4B), then auto-render for \(...\), $$...$$, \[...\].
+window._katexOpts = {
+  delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "\\[", right: "\\]", display: true},
+    {left: "\\(", right: "\\)", display: false},
+  ],
+  throwOnError: false,
+  ignoredTags: ["script","noscript","style","textarea","pre","code"],
+};
+function _convertDollarLatex(root) {
+  const SKIP = new Set(["CODE","PRE","SCRIPT","STYLE","TEXTAREA","A"]);
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(n) {
+      let el = n.parentNode;
+      while (el && el !== root) {
+        if (SKIP.has(el.tagName)) return NodeFilter.FILTER_REJECT;
+        el = el.parentNode;
+      }
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  });
+  const nodes = [];
+  let n;
+  while ((n = walker.nextNode())) nodes.push(n);
+  // $...\X...$ → \(...\X...\): content must contain a backslash-letter
+  // LaTeX command so currency ($5.84B, $1.4 …) never matches. Admits
+  // digit-leading expressions like $-183^\circ\text{C}$. Lookarounds
+  // keep this from biting into a $$...$$ display pair.
+  const re = /(?<!\$)\$([^$\n]*?\\[A-Za-z]+[^$\n]*?)\$(?!\$)/g;
+  // $X$ → \(X\) for short single-identifier inline math ($CD$, $x_1$, $E$).
+  const reIdent = /(?<![\$\w])\$([A-Za-z][A-Za-z0-9_^{}]{0,15})\$(?![\$\w])/g;
+  for (const node of nodes) {
+    if (!node.nodeValue.includes("$")) continue;
+    let nv = node.nodeValue.replace(re, "\\($1\\)");
+    nv = nv.replace(reIdent, "\\($1\\)");
+    if (nv !== node.nodeValue) node.nodeValue = nv;
+  }
+}
+window._renderMath = function(el) {
+  if (!el) return;
+  try { _convertDollarLatex(el); } catch(_) {}
+  if (window.renderMathInElement) {
+    try { window.renderMathInElement(el, window._katexOpts); } catch(_) {}
+  }
+};
+
 // Sidebar collapse
 const tocSidebar = document.getElementById('tocSidebar');
 const tocToggle  = document.getElementById('tocToggle');
@@ -212,6 +267,17 @@ tocToggle.addEventListener('click', () => {
 document.querySelectorAll('.feed-body').forEach(el => {
   el.innerHTML = marked.parse(el.dataset.md || '');
 });
+
+// Render LaTeX in every body. The auto-render script is `defer`, so it
+// may not be ready on first paint — retry until it appears.
+(function renderAllMath(tries){
+  if (window.renderMathInElement) {
+    document.querySelectorAll('.feed-body').forEach(el => window._renderMath(el));
+    return;
+  }
+  if (tries > 50) return;
+  setTimeout(() => renderAllMath(tries + 1), 40);
+})(0);
 
 const cards    = Array.from(document.querySelectorAll('.feed-card'));
 const tocItems = Array.from(document.querySelectorAll('.toc-item'));
