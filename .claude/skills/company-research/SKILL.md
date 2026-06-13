@@ -305,6 +305,14 @@ A five-axis fundamental scorecard modelled on [GuruFocus's GF Score™](https://
 
 **See [`reference/gf_score.md`](reference/gf_score.md) for the full spec — the 0–10 anchors per axis, the metric set behind each, the composite weights and band labels, the radar-helper usage, the multi-company overlay variant, and the honesty/citation guardrails. Read it before writing Section 1B.** Computed in Step 2c.
 
+## Financial-statement visuals (Sankey / donut / DuPont) — `scripts/financial_charts.py`
+
+The stockanalysis.com-style financials charts a reader expects: an **income-statement Sankey** (revenue → COGS / gross profit → opex / operating income → tax / net income, with revenue sources on the left), **balance-sheet** and **cash-flow Sankeys**, a revenue **donut** (by segment / geography), **historical stacked revenue bars**, and a **5-step DuPont** ROE tree. Like the GF Score radar, these are rendered as **stdlib-only inline SVG** by `scripts/financial_charts.py` (imports just `math` / `argparse`, ~0 MB resident — safe on the memory budget, never matplotlib) and the viewer injects the raw `<svg>` verbatim. Paste the emitted `<svg>` **un-fenced**.
+
+**The defining discipline: every number you pass must come from the company's OWN statements that you read and cite** — the 10-K / 10-Q / 20-F / 年度报告 / IR-deck income statement, balance sheet, cash-flow statement, and segment note (ASC 280 / IFRS 8) for the segment / geography splits. The helper fetches nothing (no API, no XBRL auto-pull) — it only lays out the numbers you give it, so the project's "every figure traces to a source you read" rule holds. The required `--source` is baked into the image; the surrounding paragraph still carries the page-level citation. If a line item isn't disclosed, omit it — never invent it.
+
+**See [`references/financial_charts.md`](references/financial_charts.md) for the full spec — the six subcommands, the per-subcommand CLI with worked ISRG examples, the embedding form, the per-section placement bar, and the sourcing guardrails. Read it before generating these in Step 8.** Generated in Step 8.
+
 ## Learning from sell-side institutional research
 
 A methodology study of 22 initiation / deep-dive notes from Goldman Sachs, Morgan Stanley, UBS, J.P. Morgan, Bernstein, Nomura, Citi, BofA, Deutsche Bank, and HSBC found one structural gap: **every institutional single-name note is a decision note built around a rating and a price target, while this skill produces a descriptive profile that stops at a TTM-multiple snapshot.** The lessons below close that gap. They are additive — every existing rule (no fabricated numbers, paragraph-level citations, `*Analyst view:*` labeling, language defaults, file-naming) holds unchanged. The defining discipline that makes this safe: **the rating, the price target, every projected estimate, and the scenario PTs are all the analyst's own forward view — they MUST be labeled `*Analyst view:*` / `*分析师观点：*` and NEVER attached to a filing citation.** A 10-K does not contain a price target; attaching one to a 10-K is the same misattribution failure the skill already forbids.
@@ -436,6 +444,7 @@ See [`reference/citations.md`](reference/citations.md) for the full rules, per-s
 - `references/risk_taxonomy.md` — the 8–12 risks across 4 buckets used in Section 9.
 - `references/investor_lenses.md` — the nine Section-10 lenses (4 core: Buffett, Munger, Damodaran, Howard Marks cycle; 5 optional: Lynch, Fisher, Burry, Druckenmiller, Cathie Wood).
 - `reference/gf_score.md` — the GF Score (GuruFocus-style) Section-1B scorecard: five 0–10 axes (Financial Strength / Profitability / Growth / GF Value / Momentum), composite 0–100 + bands, the inline-SVG radar helper (`scripts/gf_score.py`), and the honesty/labeling rules.
+- `references/financial_charts.md` — the stockanalysis.com-style financial-statement visuals helper (`scripts/financial_charts.py`): income / balance / cash-flow **Sankey**, revenue **donut** (segment / geography), **historical stacked bars**, and **5-step DuPont** ROE tree — all stdlib inline SVG, with per-subcommand CLI, worked ISRG examples, placement, and sourcing guardrails. **Read before using in Step 8.**
 - `references/quality_checklist.md` — quality standards and the pre-submit success checklist.
 
 ---
@@ -708,11 +717,15 @@ Define the industry (NAICS/SIC, scope, adjacent industries). Size the market (TA
 
 Identify 8–12 risks across 4 buckets (company-specific, industry/market, financial, macro). See `references/risk_taxonomy.md` for the full taxonomy. 50–100 words per risk: describe, quantify, note mitigants.
 
-### Step 8 — Charts and diagrams (Mermaid only — 4–8 blocks)
+### Step 8 — Charts and diagrams (financial-statement SVG + Mermaid)
 
-A report this length needs visual anchors. **Add 4–8 Mermaid diagrams** across the document. Mermaid is markdown-native: the web viewer at `http://xs-macbook-air.local:5001/claude-reports/` and GitHub render the diagrams inline at view time, so there is no PNG generation, no matplotlib subprocess, no committed binary assets, no per-chart bitmap buffer in the agent's V8 heap.
+A report this length needs visual anchors, from two complementary, **memory-safe** systems — never matplotlib:
 
-**Do NOT generate matplotlib PNG charts.** This was disabled project-wide on 2026-06-03 to cut per-agent memory footprint — every `import matplotlib.pyplot` + `savefig` held ~150-300 MB resident, and with 4-6 concurrent `/company-research` agents the cumulative load pushed the system past 90 GB and triggered OOM kills. **Mermaid covers every chart type a research report needs** — line, bar, pie, quadrant, timeline, and tree, with quantitative trends via `xychart-beta`. No exceptions; do not regress to matplotlib.
+**(A) Financial-statement visuals — `scripts/financial_charts.py` (inline SVG).** The stockanalysis.com-style charts a reader expects of a financials section: an **income-statement Sankey** (revenue → COGS / gross profit → opex / operating income → tax / net income), **balance-sheet** and **cash-flow Sankeys**, a revenue **donut** (by segment / by geography), **historical stacked revenue bars**, and a **5-step DuPont** ROE tree. Like `scripts/gf_score.py`, it is **stdlib-only** (imports just `math` / `argparse`, ~0 MB resident) and emits raw `<svg>` that the viewer renders verbatim (`reports_viewer.py` → `marked.js`, no sanitization). **Every number you pass must come from the company's OWN 10-K / 10-Q / 20-F / 年度报告 / IR deck that you read and cite** — the income statement, balance sheet, cash-flow statement, and the segment note (ASC 280 / IFRS 8). The required `--source` is baked into the image; the surrounding paragraph still carries the page-level citation. **Read [`references/financial_charts.md`](references/financial_charts.md) before using it** — it has the per-subcommand CLI, the worked ISRG examples, placement, and the sourcing guardrails. Include at minimum the income-statement Sankey and one revenue donut; add balance / cashflow / revbars / dupont by company fit.
+
+**(B) Mermaid diagrams (markdown-native).** For the diagram types Mermaid does well — `timeline` (history), `graph TD` (product-portfolio tree, org chart), `quadrantChart` (competitive positioning), and simple `xychart-beta` trends. Mermaid is markdown-native: the viewer at `http://xs-macbook-air.local:5001/claude-reports/` and GitHub render it inline at view time. **Aim for 4–8 visuals total across (A) + (B).**
+
+**Do NOT generate matplotlib PNG charts.** This was disabled project-wide on 2026-06-03 to cut per-agent memory footprint — every `import matplotlib.pyplot` + `savefig` held ~150-300 MB resident, and with 4-6 concurrent `/company-research` agents the cumulative load pushed the system past 90 GB and triggered OOM kills. The **only** sanctioned chart paths are (A) the stdlib-SVG helpers (`financial_charts.py`, `gf_score.py`) and (B) Mermaid — both add ~0 MB. No exceptions; do not regress to matplotlib.
 
 **`xychart-beta` has ONE y-axis — never mix units on it.** Do NOT plot a % series and a currency series on the same chart: the % line renders on the currency scale and reads as a money amount (a 19.5% operating-margin line on a `0 --> 30` US$bn axis reads as $19.5bn; a 70.9% gross-margin line on a `0 --> 300` ¥mn axis reads as ¥70.9M). The default fix is **two stacked `xychart-beta` blocks** — revenue bars in one, the margin line in its own chart with a % axis. If a combo is truly unavoidable, the caption MUST state the line's unit and that it shares the numeric scale — but split charts are the rule, the caption rescue is the exception.
 
@@ -728,15 +741,18 @@ A report this length needs visual anchors. **Add 4–8 Mermaid diagrams** across
 - **Competitive positioning** (Section 7): `quadrantChart` (2×2) on price vs. feature-breadth, or `graph LR` for value-chain position.
 - **Org / governance** (Section 3, optional): `graph TD` for board / management reporting lines.
 
-**Placement summary** (echoed in `references/report_structure.md`):
-| Section | Mermaid block |
+**Placement summary** (echoed in `references/report_structure.md`). **SVG** = `financial_charts.py`; **MM** = Mermaid:
+| Section | Visual |
 |---|---|
-| 1 Overview | `xychart-beta` revenue trend + a separate gross-margin chart (3–5 yr; two stacked blocks — never % and currency on one axis) |
-| 2 History | `timeline` block — founding → milestones |
-| 4 Products | `graph TD` product portfolio tree (the 10-K product *table* screenshot via `render_10k_section.py` is optional; markdown reproduction of the table is mandatory regardless) |
-| 5 Customers | `pie` — top-3-5 customer concentration (one denominator per chart) |
-| 7 Competitive | `quadrantChart` **or** `xychart-beta` peer-comp bars |
-| 8 TAM | `xychart-beta` market-size growth |
+| 1 Overview | **SVG** income-statement Sankey (`income`) — the "how it makes money" anchor; **SVG** revenue `donut` (by segment) + `revbars` (history); **MM** `xychart-beta` revenue trend + a separate gross-margin chart (two stacked blocks — never % and currency on one axis) |
+| 1B GF Score | **SVG** `gf_score.py` radar (see Step 2c) |
+| 2 Valuation | **SVG** `dupont` ROE tree (return decomposition); peer-multiple `xychart-beta` bars |
+| 2 History | **MM** `timeline` block — founding → milestones |
+| 4 Products | **MM** `graph TD` product portfolio tree (the 10-K product *table* screenshot via `render_10k_section.py` is optional; markdown reproduction of the table is mandatory regardless) |
+| 5 Customers | **SVG** revenue `donut` (by geography); **MM** `pie` — top-3-5 customer concentration (one denominator per chart) |
+| 7 Competitive | **MM** `quadrantChart` **or** `xychart-beta` peer-comp bars |
+| 8 TAM | **MM** `xychart-beta` market-size growth |
+| 9 Risk / capital structure | **SVG** balance-sheet (`balance`) + cash-flow (`cashflow`) Sankeys, when leverage / FCF is part of the story |
 
 **Every chart gets a citation right below it** — same markdown-link format as prose, e.g. `Source: [安培龙 2024 年度报告, 第 32 页](https://static.cninfo.com.cn/...)`. No chart without a source.
 

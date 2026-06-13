@@ -2,16 +2,19 @@
 
 The final report has 9 sections plus a References block. Word counts are loose targets — verify with `wc -w` before declaring done. Total target: **6,000–10,000 words** (sections may run longer than the per-section ranges below if there's genuine substance; do not pad to hit a number).
 
-Embed **4–8 Mermaid diagrams** across the report — **Mermaid only, no matplotlib PNGs.** (Disabled project-wide 2026-06-03 to cut per-agent memory footprint; see SKILL.md § Step 8 for the rationale. Mermaid covers every chart type the report needs, including quantitative trends via `xychart-beta`.) Suggested placement:
+Embed **4–8 visuals** across the report from two **memory-safe** systems — **never matplotlib** (disabled project-wide 2026-06-03 to cut per-agent footprint; see SKILL.md § Step 8). **SVG** = `scripts/financial_charts.py` (stdlib inline SVG — income/balance/cash-flow Sankey, revenue donut, historical stacked bars, 5-step DuPont; see [`financial_charts.md`](financial_charts.md)). **MM** = Mermaid (markdown-native — timeline, product tree, quadrant, simple `xychart-beta` trends). Suggested placement:
 
-| Section | Mermaid block | IR-deck slide that often anchors it |
+| Section | Visual | IR-deck slide that often anchors it |
 |---|---|---|
-| 1 Overview | `xychart-beta` revenue trend + a separate gross-margin chart (3–5 yr; two stacked blocks — `xychart-beta` has one y-axis, never % and currency together) | Latest earnings-deck "Revenue + Margin Bridge" slide |
-| 2 History | `timeline` block — founding → milestones | Investor day "Our journey" slide (when present) |
-| 4 Products | `graph TD` product portfolio tree | Investor day product-portfolio slide |
-| 5 Customers | `pie` — top 3–5 customer concentration (one denominator) | Investor day customer-logo / cohort slide |
-| 7 Competitive | `quadrantChart` **or** `xychart-beta` peer-comp bars | Investor day "Why we win" / feature-matrix slide |
-| 8 TAM | `xychart-beta` market-size growth | Investor day TAM build slide (the single most useful IR slide) |
+| 1 Overview | **SVG** income-statement Sankey (`income`) + revenue `donut` (segment) + `revbars` (history); **MM** `xychart-beta` revenue trend + a separate gross-margin chart (two stacked blocks — `xychart-beta` has one y-axis, never % and currency together) | Latest earnings-deck "Revenue + Margin Bridge" / segment-mix slide |
+| 1B GF Score | **SVG** `gf_score.py` radar | — |
+| 2 Valuation | **SVG** `dupont` ROE tree; peer-multiple `xychart-beta` bars | — |
+| 2 History | **MM** `timeline` block — founding → milestones | Investor day "Our journey" slide (when present) |
+| 4 Products | **MM** `graph TD` product portfolio tree | Investor day product-portfolio slide |
+| 5 Customers | **SVG** revenue `donut` (geography); **MM** `pie` — top 3–5 customer concentration (one denominator) | Investor day customer-logo / cohort slide |
+| 7 Competitive | **MM** `quadrantChart` **or** `xychart-beta` peer-comp bars | Investor day "Why we win" / feature-matrix slide |
+| 8 TAM | **MM** `xychart-beta` market-size growth | Investor day TAM build slide (the single most useful IR slide) |
+| 9 Risk / capital structure | **SVG** balance-sheet (`balance`) + cash-flow (`cashflow`) Sankeys, when leverage / FCF is part of the story | — |
 
 Every chart needs a citation directly underneath in the same markdown-link format used in prose. **When an IR deck has the data behind a chart, embed the rendered IR slide as a PNG** (using `render_10k_section.py`-style page screenshot for PDFs, which is a one-shot playwright-chromium screenshot — not matplotlib chart-gen) **instead of rebuilding the chart from scratch** — the slide is the most authoritative form of the chart, the company endorses the numbers, and the reader can trace the source. Cite the slide directly underneath. Legacy per-chart PNGs in `reports/charts/` from before 2026-06-03 can be reused in their original reports; do not regenerate them as Mermaid.
 
