@@ -1055,7 +1055,7 @@ When this report covers something a reader would struggle to picture from prose 
 - **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
 - **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
 
-> Full spec: `../company-research/references/citations.md` § "Further viewing — explainer videos" (this skill has no local `references/` dir; the shared spec lives in company-research).
+> Full spec: `reference/citations.md` § "Further viewing — explainer videos" (the shared citation spec lives at repo-level `reference/citations.md`).
 
 ## Primary-source-first rule (MANDATORY, short form)
 
@@ -1072,7 +1072,7 @@ When an AI, robotics, or semiconductor name (or a macro/event item that primaril
 
 ## Cross-cutting guardrails (all modes)
 
-- **Citation standard** — every substantive paragraph carries ≥1 inline markdown-link citation per the project's `.claude/skills/company-research/references/citations.md` spec. Day-of briefs are exempt from this for ephemeral macro-print numbers (consensus pulled from Bloomberg/Reuters terminals), but file-saved versions get inline links to the original release schedule (BLS, BEA, FRB, EIA, etc.).
+- **Citation standard** — every substantive paragraph carries ≥1 inline markdown-link citation per the project's `reference/citations.md` spec. Day-of briefs are exempt from this for ephemeral macro-print numbers (consensus pulled from Bloomberg/Reuters terminals), but file-saved versions get inline links to the original release schedule (BLS, BEA, FRB, EIA, etc.).
 - **NEVER link repo files outside `reports/` through the `/claude-reports/view/` route.** The viewer (`reports_viewer.py`) serves `reports/**` ONLY — a link like `http://xs-macbook-air.local:5001/claude-reports/view/.claude/skills/.../SKILL.md#...` or `.../view/CLAUDE.md` is structurally a 404. Reference this skill's own methodology sections as plain text ("per skill § K") with **no hyperlink**. (Past failure: one weekly shipped 6 such dead links, in two inconsistent path forms.)
 - **`xs-macbook-air.local` URLs get the same HTTP check as external URLs.** The project link-validation rule applies in full: `curl` each newly added local URL for `200` before saving — the server is always up on `:5001`, so there is no excuse to skip. zsxq PDF links use the direct-download route `/zsxq/pdf/<file_id>/<urlencoded-name>`.
 - **Verification log (every file-saved report — Mode B weekly, Mode C deal report, any saved Mode A brief).** End the file with a collapsed `<details><summary>Verification log — YYYY-MM-DD</summary>` block listing (a) the HTTP status of every newly added URL (external AND `xs-macbook-air.local`), and (b) 3–5 random number→source spot-checks in the `X = N from <URL>: ✓ string-matches / ✗ NOT in source — fixed` format.

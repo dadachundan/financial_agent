@@ -163,7 +163,7 @@ The company-guide column cites the earnings release; the consensus column is `*A
 
 ### 1B. GF Score (GuruFocus-style) fundamental scorecard (350–600 words) — the at-a-glance health read
 
-A compact five-axis scorecard — modelled on [GuruFocus's GF Score™](https://www.gurufocus.com/term/gf-score) — that distils the fundamentals into one **0–100 composite** plus a **radar/pentagon**. It sits here, right after 1A, so the whole decision layer (rating/PT → valuation → fundamental scorecard) reads together near the top, like the GuruFocus summary widget. **It is an analytical overlay on data already gathered, NOT a new data source and NOT an endorsement** — the five sub-scores and the composite are `*Analyst view:*` / `*分析师观点：*`; every underlying metric carries its own inline citation. Full rubric, the 0–10 anchors per axis, weights, band labels, and the honesty rules are in **[`references/gf_score.md`](gf_score.md) — read it before writing this section.** Include in every initiation-style report unless the user says "skip the GF Score".
+A compact five-axis scorecard — modelled on [GuruFocus's GF Score™](https://www.gurufocus.com/term/gf-score) — that distils the fundamentals into one **0–100 composite** plus a **radar/pentagon**. It sits here, right after 1A, so the whole decision layer (rating/PT → valuation → fundamental scorecard) reads together near the top, like the GuruFocus summary widget. **It is an analytical overlay on data already gathered, NOT a new data source and NOT an endorsement** — the five sub-scores and the composite are `*Analyst view:*` / `*分析师观点：*`; every underlying metric carries its own inline citation. Full rubric, the 0–10 anchors per axis, weights, band labels, and the honesty rules are in **[`reference/gf_score.md`](gf_score.md) — read it before writing this section.** Include in every initiation-style report unless the user says "skip the GF Score".
 
 **The five axes (each 0–10):** Financial Strength (财务实力) · Profitability (盈利能力) · Growth (成长性) · GF Value / valuation (估值，*higher = cheaper vs fair value*) · Momentum (动量). Their inputs are already in your tree: Financial Strength + Profitability from the filings (Section 1 / Step 1–2), Growth from the Section-1A forward model, GF Value from the Section-1 multiples + Section-1A intrinsic range, Momentum from the header's relative-performance line.
 
@@ -230,7 +230,7 @@ For each product family in the matrix, follow this exact three-part pattern:
   - **Roadmap & recent launches.** Products launched, repositioned, or sunset in the last 12 months — with the company press release as the citation. If a new platform was launched (e.g. Akara, ALTUS Halo), block-quote the press release the same way you block-quote the 10-K.
   - **Recurring / aftermarket / services business.** Many issuers have a separate business group outside the product matrix (CSBG for Lam, Services for AMAT, etc.). Treat that as its own subsection — describe what it consists of, how it's reported in the financials, why it dampens cyclicality, and the recurring-revenue economics.
   - **IR primary input:** Section 4 should draw from the investor day deck's product / roadmap slides, the latest earnings deck's product-segment slides, and any industry-conference deck where the CEO walked product roadmap. **At least 2 IR-deck citations in Section 4** when the company publishes IR materials — typically the latest investor day deck (roadmap and TAM slides) plus the latest quarterly deck (segment-mix slide). Block-quote the slide text when the company's own framing is load-bearing, the same way you block-quote the 10-K.
-  - **延伸观看 / Further viewing** — 1–3 validated explainer videos for hard-to-visualize concepts (a humanoid robot's harmonic reducers, an etch–deposition flow, HBM die-stacking, a surgical-robot wrist), in their own slot at the end of the section, never a citation and never carrying a number (see SKILL.md § "延伸观看 / Further viewing" and `references/citations.md`).
+  - **延伸观看 / Further viewing** — 1–3 validated explainer videos for hard-to-visualize concepts (a humanoid robot's harmonic reducers, an etch–deposition flow, HBM die-stacking, a surgical-robot wrist), in their own slot at the end of the section, never a citation and never carrying a number (see SKILL.md § "延伸观看 / Further viewing" and `reference/citations.md`).
 
 **Rendering the issuer's product table as a PNG (for step (a))**
 
@@ -435,7 +435,7 @@ TABLE OF CONTENTS
 
 1B. GF SCORE (GuruFocus-style) FUNDAMENTAL SCORECARD (350–600 words)
 [*Analyst view:* throughout — sub-scores + composite are the analyst's rubric, never a filing cite;
- every underlying metric carries its own inline citation. See references/gf_score.md.
+ every underlying metric carries its own inline citation. See reference/gf_score.md.
  (1) Verdict line: GF Score NN/100 — <band> (optional separate GuruFocus-official cross-check).
  (2) Radar <svg> from scripts/gf_score.py (paste un-fenced) + how-to-read note.
  (3) 5-row scorecard table (Financial Strength / Profitability / Growth / GF Value / Momentum, each 0–10) + composite.

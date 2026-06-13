@@ -86,7 +86,7 @@ Before saving/committing:
 2. Spot-check 3–5 numbers (consensus EPS/revenue, implied move, historical reaction stats) — each must string-match the URL cited in the same paragraph.
 3. Confirm every house figure is paired with its consensus / prior / guide counterpart.
 4. Conditional — when ≥2 zsxq broker previews covered the name: confirm the sell-side view-evolution block landed (every institute view dated + `/zsxq/pdf/` cited, into-the-print revisions arrow'd with triggers, no blended consensus across disagreeing notes).
-5. Append `<details><summary>Verification log — YYYY-MM-DD</summary>...</details>` listing each check. Spec: `.claude/skills/company-research/references/citations.md`.
+5. Append `<details><summary>Verification log — YYYY-MM-DD</summary>...</details>` listing each check. Spec: `reference/citations.md`.
 
 ## Further viewing — explainer videos (optional, but default to including)
 

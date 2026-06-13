@@ -156,7 +156,7 @@ When this report turns on whether two products *actually substitute* — and the
 - **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(B站，部分地区或需登录)`.
 - **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
 
-> Full spec: `.claude/skills/company-research/references/citations.md` § "Further viewing — explainer videos" (this skill has no local `references/citations.md` — the spec lives in the parent skill).
+> Full spec: `reference/citations.md` § "Further viewing — explainer videos" (the shared citation spec lives at repo-level `reference/citations.md`, not inside any one skill).
 
 ### Required deliverable 2 — Moat anatomy (§5.1–5.7; §5.8 is Required deliverable 6)
 
@@ -281,7 +281,7 @@ Turn the prose-only "what to watch" into a **per-name dated catalyst table** so 
 
 ### Required deliverable 10 — GF Score comparison scorecard (§4.6)
 
-A GuruFocus-style **GF Score** per name, rendered as **one overlaid radar/pentagon** so the reader sees at a glance which name is the stronger fundamental composite across five axes. Placed at **§4.6**, immediately after the §4.5 relative-valuation scoreboard — §4.5 tabulates what each name *costs*; §4.6 shows its *fundamental health*, and the two together are the financial cluster a desk reads first. **Include by default; skip only on "skip the GF Score".** The full rubric, the 0–10 anchors per axis, the composite weights/bands, and the multi-company overlay spec live in the parent skill's [`.claude/skills/company-research/references/gf_score.md`](../company-research/references/gf_score.md) § "Multi-company variant" — read it before writing §4.6 (this skill has no local copy).
+A GuruFocus-style **GF Score** per name, rendered as **one overlaid radar/pentagon** so the reader sees at a glance which name is the stronger fundamental composite across five axes. Placed at **§4.6**, immediately after the §4.5 relative-valuation scoreboard — §4.5 tabulates what each name *costs*; §4.6 shows its *fundamental health*, and the two together are the financial cluster a desk reads first. **Include by default; skip only on "skip the GF Score".** The full rubric, the 0–10 anchors per axis, the composite weights/bands, and the multi-company overlay spec live in the parent skill's [`reference/gf_score.md`](reference/gf_score.md) § "Multi-company variant" — read it before writing §4.6 (this skill has no local copy).
 
 - **Five axes, each 0–10:** Financial Strength · Profitability · Growth · GF Value (valuation, *higher = cheaper vs fair value*) · Momentum. A transparent weighting (default 20/25/25/15/15) maps them to a **0–100 composite** and the GuruFocus bands (91–100 highest … 0–50 worst).
 - **Render with the shared helper** (inline SVG, stdlib-only, bakes the required source annotation in):
@@ -429,7 +429,7 @@ This rule **deepens** the skill's existing output format — it never replaces o
 
 ## Citations
 
-Same standard as [[company-research]]. Read its `references/citations.md` before drafting — those rules apply verbatim. Summary:
+Same standard as [[company-research]]. Read the shared `reference/citations.md` before drafting — those rules apply verbatim. Summary:
 
 - **Paragraph-level coverage.** Every substantive paragraph carries ≥1 inline markdown-link citation. Tables, captions, and TOC entries are exempt; nothing else is.
 - **Deep URLs only.** Link to the specific SEC EDGAR document, the specific cninfo PDF, the specific Yole / Gartner / IPnest report page. Never a homepage.
@@ -678,8 +678,8 @@ Save both reports under `reports/compare/` at the project root. Preserve the use
 
 Also read on demand from the parent skill:
 
-- `.claude/skills/company-research/references/citations.md` — citation rules apply verbatim.
-- `.claude/skills/company-research/references/gf_score.md` — the GF Score (GuruFocus-style) rubric (five 0–10 axes, composite 0–100 + bands, honesty rules) and the **§ "Multi-company variant"** for the §4.6 overlaid-radar comparison scorecard; rendered by `scripts/gf_score.py`.
+- `reference/citations.md` — citation rules apply verbatim.
+- `reference/gf_score.md` — the GF Score (GuruFocus-style) rubric (five 0–10 axes, composite 0–100 + bands, honesty rules) and the **§ "Multi-company variant"** for the §4.6 overlaid-radar comparison scorecard; rendered by `scripts/gf_score.py`.
 - `.claude/skills/company-research/references/quality_checklist.md` — pre-submit checklist (compare-companies adds its own checks above, but the company-research base list still applies).
 
 ## What this skill does NOT do

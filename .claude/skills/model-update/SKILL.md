@@ -115,7 +115,7 @@ e.g. *"raise 12m TP by 14.8% to Rmb146.3, based on 38.7x 2027E P/E (previously �
 
 **Justify the multiple against a reference** — the stock's own history in std-dev terms (Citi Yunnan "3.09x 2026E P/B, −0.4 s.d. below mean"), peers/sector (BofA "12x 2027E vs sector"), or PEG. Add an inline deep-URL citation to the source of that comparison (history series, peer comp table). Per the project rule, **do NOT write "Source: our model"** for the multiple — cite the external comp / history input the multiple is anchored to.
 
-**Optional — GF Score impact.** When the revision moves the fundamentals, note the **GF Score (GuruFocus-style)** shift alongside the TP move — which axes moved and why (e.g. "EPS +5% → Profitability 7→8; multiple held → GF Value flat; net GF Score 74 → 76"). It shows the revision's effect on fundamental health, not just the price target. Spec: [`.claude/skills/company-research/references/gf_score.md`](../company-research/references/gf_score.md); sub-scores are `*Analyst view:*`, the driving metrics cited, never attributed to GuruFocus.
+**Optional — GF Score impact.** When the revision moves the fundamentals, note the **GF Score (GuruFocus-style)** shift alongside the TP move — which axes moved and why (e.g. "EPS +5% → Profitability 7→8; multiple held → GF Value flat; net GF Score 74 → 76"). It shows the revision's effect on fundamental health, not just the price target. Spec: [`reference/gf_score.md`](reference/gf_score.md); sub-scores are `*Analyst view:*`, the driving metrics cited, never attributed to GuruFocus.
 
 ### Step 4b: Scenario Analysis (Bull / Base / Bear)
 
@@ -160,7 +160,7 @@ Before saving/committing:
 1. HTTP-check every URL with a real-browser User-Agent — `200 OK` only; drop or replace failures per the link-validation rule.
 2. Spot-check ≥5 numbers — including the consensus figure, the guidance quote, and at least one Driver-Bridge lever input — each must string-match the URL cited in the same paragraph.
 3. Re-derive the TP line arithmetic (base-year metric × multiple) and each Chg% cell in the revision grid.
-4. Append `<details><summary>Verification log — YYYY-MM-DD</summary>...</details>` listing each check. Spec: `.claude/skills/company-research/references/citations.md`.
+4. Append `<details><summary>Verification log — YYYY-MM-DD</summary>...</details>` listing each check. Spec: `reference/citations.md`.
 
 ### Further viewing — explainer videos (optional, but default to including)
 

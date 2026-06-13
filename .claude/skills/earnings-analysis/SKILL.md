@@ -156,7 +156,7 @@ Earnings Materials (Q3 2024):
 - [ ] ALL URLs are CLICKABLE HYPERLINKS (not plain text)
 - [ ] All SEC filings hyperlinked to EDGAR viewer
 
-**Project rules that also apply (markdown-output runs).** The hyperlink guidance above is DOCX-centric. When the output is markdown, the project-wide rules in [`CLAUDE.md`](../../../CLAUDE.md) and [.claude/skills/company-research/references/citations.md](../company-research/references/citations.md) govern — do not under-comply because this skill's examples are Word-shaped:
+**Project rules that also apply (markdown-output runs).** The hyperlink guidance above is DOCX-centric. When the output is markdown, the project-wide rules in [`CLAUDE.md`](../../../CLAUDE.md) and [reference/citations.md](reference/citations.md) govern — do not under-comply because this skill's examples are Word-shaped:
 - **Paragraph-level inline citations with deep URLs** — link the specific EDGAR document / IR release / deck / transcript, never a homepage.
 - **Every numerical beat/miss/guide figure string-matches a URL cited in the same paragraph** (CLAUDE.md "Numerical Accuracy"). A "+9% beat" must trace to a source that literally contains "9%".
 - **Every chart carries an in-image `Source:` footer annotation** (CLAUDE.md chart rules), in addition to the figure caption.
@@ -170,7 +170,7 @@ Earnings Materials (Q3 2024):
 
 ### 5b. GF Score refresh (optional, recommended when the print moves fundamentals)
 
-When the quarter materially shifts the fundamentals, refresh the **GF Score** (GuruFocus-style five-axis scorecard — Financial Strength / Profitability / Growth / GF Value / Momentum) and show **prior → new per axis** — e.g. "Profitability 7→8 on the gross-margin beat; Growth axis unchanged; net GF Score 74 → 77." A one-row delta plus the updated radar makes the quarter's impact on fundamental health legible at a glance. Render with `scripts/gf_score.py`; sub-scores are `*Analyst view:*`, each driving metric is cited, and the number is never attributed to GuruFocus. Full rubric: [`.claude/skills/company-research/references/gf_score.md`](../company-research/references/gf_score.md).
+When the quarter materially shifts the fundamentals, refresh the **GF Score** (GuruFocus-style five-axis scorecard — Financial Strength / Profitability / Growth / GF Value / Momentum) and show **prior → new per axis** — e.g. "Profitability 7→8 on the gross-margin beat; Growth axis unchanged; net GF Score 74 → 77." A one-row delta plus the updated radar makes the quarter's impact on fundamental health legible at a glance. Render with `scripts/gf_score.py`; sub-scores are `*Analyst view:*`, each driving metric is cited, and the number is never attributed to GuruFocus. Full rubric: [`reference/gf_score.md`](reference/gf_score.md).
 
 ### 6. Reaction Reconciliation ⭐ (why the stock moved)
 
@@ -192,7 +192,7 @@ When this report covers something a reader would struggle to picture from prose 
 - **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
 - **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
 
-> Full spec: [.claude/skills/company-research/references/citations.md](../company-research/references/citations.md) § "Further viewing — explainer videos".
+> Full spec: [reference/citations.md](reference/citations.md) § "Further viewing — explainer videos".
 
 ## Learning from sell-side institutional research
 

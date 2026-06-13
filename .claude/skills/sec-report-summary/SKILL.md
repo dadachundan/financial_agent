@@ -152,7 +152,7 @@ When this report covers something a reader would struggle to picture from prose 
 - **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
 - **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
 
-> Full spec: [.claude/skills/company-research/references/citations.md](../company-research/references/citations.md) § "Further viewing — explainer videos" (this skill's own `references/` holds only `house_style.md`).
+> Full spec: [reference/citations.md](reference/citations.md) § "Further viewing — explainer videos" (this skill's own `references/` holds only `house_style.md`).
 
 ## Output format
 
@@ -285,7 +285,7 @@ This rule **deepens** the skill's existing output format — it never replaces o
   *or* be labeled as a cross-year calc with both inputs sourced (e.g.
   `26% = 96.2 / 370 (both FY25 10-K)`). **Spot-check 3–5 deltas against the
   extracted filing text before writing the file.** Cross-link:
-  [.claude/skills/company-research/references/citations.md](../company-research/references/citations.md).
+  [reference/citations.md](reference/citations.md).
 - **Language default: English.** This skill digests US SEC filings, so it
   defaults to English headers / EDGAR links and does NOT inherit
   company-research's Chinese default. Produce Chinese only on explicit request.

@@ -142,7 +142,7 @@ Net margin may substitute for net profit where that is what the source publishes
 
 ### §4.6 — GF Score comparison scorecard (250–500 words) — Required deliverable 10
 
-A GuruFocus-style **GF Score** per name as **one overlaid radar/pentagon**, so a reader sees at a glance which name is the stronger fundamental composite. §4.5 tabulates what each name *costs*; §4.6 shows its *fundamental health* — together they're the financial cluster a desk reads first. **Included by default; skip only on "skip the GF Score".** Full rubric + the multi-company overlay spec: parent skill's [`.claude/skills/company-research/references/gf_score.md`](../../company-research/references/gf_score.md) § "Multi-company variant" — read it before writing this section.
+A GuruFocus-style **GF Score** per name as **one overlaid radar/pentagon**, so a reader sees at a glance which name is the stronger fundamental composite. §4.5 tabulates what each name *costs*; §4.6 shows its *fundamental health* — together they're the financial cluster a desk reads first. **Included by default; skip only on "skip the GF Score".** Full rubric + the multi-company overlay spec: parent skill's [`reference/gf_score.md`](reference/gf_score.md) § "Multi-company variant" — read it before writing this section.
 
 **Five axes, each 0–10:** Financial Strength · Profitability · Growth · GF Value (*higher = cheaper vs fair value*) · Momentum. Default weights 20/25/25/15/15 → a 0–100 composite + GuruFocus bands.
 

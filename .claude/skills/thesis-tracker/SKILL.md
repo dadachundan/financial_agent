@@ -53,7 +53,7 @@ Maintain a running scorecard:
 | Margin expansion | Behind | Margins flat YoY | Concerning |
 | New product launch | Pending | Delayed to Q2 | Watch |
 
-**Optional — GF Score health row.** Beneath the pillar scorecard, track a **GF Score (GuruFocus-style): prior → current** line (the five-axis fundamental composite, 0–100) so fundamental health is trended alongside the thesis pillars — e.g. "GF Score 65 → 72 (+7) since last check, driven by the Profitability + Momentum axes." Re-print the **same five axes every check-in** (metric-set consistency is the whole value of a tracker). Spec + radar helper: [`.claude/skills/company-research/references/gf_score.md`](../company-research/references/gf_score.md); sub-scores are `*Analyst view:*`, never attributed to GuruFocus.
+**Optional — GF Score health row.** Beneath the pillar scorecard, track a **GF Score (GuruFocus-style): prior → current** line (the five-axis fundamental composite, 0–100) so fundamental health is trended alongside the thesis pillars — e.g. "GF Score 65 → 72 (+7) since last check, driven by the Profitability + Momentum axes." Re-print the **same five axes every check-in** (metric-set consistency is the whole value of a tracker). Spec + radar helper: [`reference/gf_score.md`](reference/gf_score.md); sub-scores are `*Analyst view:*`, never attributed to GuruFocus.
 
 ### Step 4: Catalyst Calendar
 
@@ -79,7 +79,7 @@ Before committing each check-in:
 1. HTTP-check every NEW URL with a real-browser User-Agent — `200 OK` only; drop or replace failures per the link-validation rule.
 2. Spot-check 3–5 KPI-panel / delta-table numbers — each must string-match its same-row citation.
 3. Re-derive each scenario value (multiple × scenario-EPS) and each upside/downside %.
-4. Append `<details><summary>Verification log — YYYY-MM-DD</summary>...</details>` to the Update Log entry. Spec: `.claude/skills/company-research/references/citations.md`.
+4. Append `<details><summary>Verification log — YYYY-MM-DD</summary>...</details>` to the Update Log entry. Spec: `reference/citations.md`.
 
 ## Further viewing — explainer videos (optional, but default to including)
 
@@ -92,7 +92,7 @@ When this thesis turns on something a reader would struggle to picture from pros
 - **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(Bilibili — may require login/VPN outside CN)`.
 - **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
 
-> Full spec: `.claude/skills/company-research/references/citations.md` § "Further viewing — explainer videos".
+> Full spec: `reference/citations.md` § "Further viewing — explainer videos".
 
 ## Learning from sell-side institutional research
 
@@ -112,7 +112,7 @@ The "thesis-revisit" note is a mature sell-side report type (MS *Risk Reward Upd
 
 - **Portfolio mode = run the tracked book as an equal-weight set (GS *Conviction List – Directors' Cut*).** When reviewing multiple positions, report cumulative return vs a stated benchmark since each call's inception, an Add/Remove log this period, and 2–3 codified lessons ("stick with winners that beat on the first print; cut losers fast"). Any return chart must carry the in-chart data-source footer and clip the x-axis to the data range per the project chart rules. Optionally add a **consensus-positioning** line (house PT/rating vs Street mean PT and % buy/hold/sell) to contextualize a reaffirmed thesis against crowding — **when you cite that Street mean PT (a borrowed target), pair it with the price on the consensus's as-of date + the implied upside** (`Street mean $288 vs $232 @ 2026-06-03 → +24%`), not just vs today; your own tracked PT keeps its `upside/downside % to the current price`.
 
-- **Source every number in the delta table, KPI panel, scenario grid, and milestone reconciliation.** Each datapoint needs an inline deep-URL citation where the number literally appears (filing / press release / data provider); the analyst's own scenario model is **not** a source; every derived figure (YoY, % to spot, multiple × EPS) must show its inputs so it's re-derivable. Follows the project's paragraph-level citation and numerical-accuracy standards — see `.claude/skills/company-research/references/citations.md`.
+- **Source every number in the delta table, KPI panel, scenario grid, and milestone reconciliation.** Each datapoint needs an inline deep-URL citation where the number literally appears (filing / press release / data provider); the analyst's own scenario model is **not** a source; every derived figure (YoY, % to spot, multiple × EPS) must show its inputs so it's re-derivable. Follows the project's paragraph-level citation and numerical-accuracy standards — see `reference/citations.md`.
 
 ## Primary-source-first & development-over-time rule (MANDATORY)
 

@@ -94,7 +94,7 @@ Lead with the action, mirroring the **MS "Three Actionable Ideas"** header (the 
 | 12-month price target | | implied upside/downside % vs last close |
 | Valuation basis | | e.g. "2027E 24× P/E" / "DCF WACC 9%" |
 
-*Optional — GF Score:* for a high-conviction card, add a one-line **GF Score (GuruFocus-style): NN/100 — band** (the five-axis fundamental-health composite: Financial Strength / Profitability / Growth / GF Value / Momentum) so the reader sees quality at a glance. It is **our own transparent rubric, NOT GuruFocus's number** (their site/blog is an aggregator that can't be the sole source — see the source bar below): compute per [`.claude/skills/company-research/references/gf_score.md`](../company-research/references/gf_score.md), label `*Analyst view:*`, and cite each underlying metric. Skip for watchlist-only cards where a full five-axis score isn't worth the work.
+*Optional — GF Score:* for a high-conviction card, add a one-line **GF Score (GuruFocus-style): NN/100 — band** (the five-axis fundamental-health composite: Financial Strength / Profitability / Growth / GF Value / Momentum) so the reader sees quality at a glance. It is **our own transparent rubric, NOT GuruFocus's number** (their site/blog is an aggregator that can't be the sole source — see the source bar below): compute per [`reference/gf_score.md`](reference/gf_score.md), label `*Analyst view:*`, and cite each underlying metric. Skip for watchlist-only cards where a full five-axis score isn't worth the work.
 
 **Thesis (3-5 bullets):**
 - Why this is mispriced — frame as the **GS "free call option"** asymmetry: what the price *currently implies* and why that's wrong (GS on S-Oil: "price implies sub-mid-cycle diesel cracks → the duration of high cracks is a free option").
@@ -147,7 +147,7 @@ Before saving/committing:
 2. Spot-check 3–5 numbers across different ideas — each must string-match its same-bullet citation.
 3. Confirm each idea card has PT + implied upside % + valuation basis (or an explicit `n/a — watchlist, no PT yet` label).
 4. Conditional — when ≥2 zsxq broker notes covered the same name: confirm the sell-side view-evolution treatment landed (PT cells dated with institute, same-institute revisions arrow'd, contested calls in a disagreement table, no blended PT). See Source quality bar item 4.
-5. Append `<details><summary>Verification log — YYYY-MM-DD</summary>...</details>` listing each check. Spec: `.claude/skills/company-research/references/citations.md`.
+5. Append `<details><summary>Verification log — YYYY-MM-DD</summary>...</details>` listing each check. Spec: `reference/citations.md`.
 
 ## Learning from sell-side institutional research
 

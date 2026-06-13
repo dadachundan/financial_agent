@@ -20,7 +20,7 @@ This is the **single most important rule** and overrides every other instruction
 - **No "this is probably around X."** No back-of-envelope estimates dressed as facts. If you need to estimate, mark it explicitly (`est., based on [reasoning]`) and show the math.
 - **Cross-check every quantitative claim against its citation.** Before pasting "revenue grew 34% YoY" with a 10-K link, confirm the 10-K actually shows 34%. The citation must support the claim — not vaguely cover the topic.
 - **Page numbers and dates must be exact.** If you cite `2024 年度报告, 第 28 页`, page 28 must be where the figure actually lives. If unsure, drop the page reference and cite the document only.
-- **No fabricated URLs** (this echoes the citation rule). For SEC filings, always look up the real filename via the EDGAR submissions JSON API (`https://data.sec.gov/submissions/CIK<10-digit-padded>.json` — see `references/citations.md`); never invent synthetic filename patterns like `2025_10K_<accession>.htm` — those are 404s.
+- **No fabricated URLs** (this echoes the citation rule). For SEC filings, always look up the real filename via the EDGAR submissions JSON API (`https://data.sec.gov/submissions/CIK<10-digit-padded>.json` — see `reference/citations.md`); never invent synthetic filename patterns like `2025_10K_<accession>.htm` — those are 404s.
 - **Direct quotations must be verbatim.** If you can't quote exactly, paraphrase and drop the quote marks. When writing about official company website data or regulatory filings, **default to quoting the original text rather than paraphrasing.** This ensures readers can verify every claim against the source.
 - **Distinguish primary (filings, transcripts) from secondary (news, third-party) sources.** When two sources disagree, prefer the primary and note the discrepancy briefly.
 
@@ -36,7 +36,7 @@ Compact index of the load-bearing don't-dos enforced throughout this skill. Each
 - **Do not present analyst-constructed verdicts as `Buffett would buy`, `巴菲特会买`, or `Damodaran's fair value is`.** Investor-lens scorecards (Section 10) use the lens *as a rubric*, not as an endorsement. See `references/investor_lenses.md`.
 - **Do not skip the Step 10 verification pass.** Every URL HTTP-checked, every SEC filename resolved, ≥5 10-K-cited numbers spot-checked, executive names confirmed against 8-K / DEF 14A. The verification log is the deliverable's contract with the reader. See Step 10.
 - **Do not write "(Source: our model)" / "(estimate, our analysis)" / "(本模型)" anywhere in the report.** Cite the external inputs the model is built on, not the model. See the project-wide Numerical Accuracy rule in [`CLAUDE.md`](../../../CLAUDE.md).
-- **Do not attribute the GF Score (Section 1B) to GuruFocus, and do not attach a filing citation to any GF sub-score.** The GF Score (GuruFocus-style) is the analyst's own rubric — label it `*Analyst view:*`, cite each underlying metric (margins / leverage / CAGR / multiples / returns) inline, and only carry a GuruFocus citation if you actually pulled their published number from `gurufocus.com/term/gf-score/<TICKER>` (shown separately). See `references/gf_score.md`.
+- **Do not attribute the GF Score (Section 1B) to GuruFocus, and do not attach a filing citation to any GF sub-score.** The GF Score (GuruFocus-style) is the analyst's own rubric — label it `*Analyst view:*`, cite each underlying metric (margins / leverage / CAGR / multiples / returns) inline, and only carry a GuruFocus citation if you actually pulled their published number from `gurufocus.com/term/gf-score/<TICKER>` (shown separately). See `reference/gf_score.md`.
 - **Do not skip the Data Used manifest** (see `references/report_structure.md` → "Data Used" block). A report that lists ≥40 inline citations but no data manifest is harder for the reader to triage — the manifest is one block, not duplication.
 - **Do not run destructive SQL against `db/*.db`.** Read-only — `SELECT`, `.schema`, `PRAGMA`. Test-writes go via `FINAGENT_DB_DIR=/tmp/...`. See [`CLAUDE.md`](../../../CLAUDE.md) § "Database Safety".
 
@@ -130,7 +130,7 @@ When this report covers something a reader would struggle to picture from prose 
 - **Validate before committing — `200 OK` only.** YouTube / Bilibili return 403 to bare `urllib`, so HTTP-check each URL with a real-browser User-Agent; drop dead / private / region-gated links (a 404 link is worse than none). Flag Bilibili that may need login/VPN outside CN: `(B站，部分地区或需登录)`.
 - **Label honestly:** `[<what it shows> — <why it helps>](URL)`. No statistic, price target, share figure, or growth rate is ever attributed to a video (a video can't be string-matched against its source).
 
-> Full spec: `references/citations.md` § "Further viewing — explainer videos".
+> Full spec: `reference/citations.md` § "Further viewing — explainer videos".
 
 ## Investor presentations are first-class primary sources — use exhaustively when available
 
@@ -303,7 +303,7 @@ A five-axis fundamental scorecard modelled on [GuruFocus's GF Score™](https://
 
 **It is an analytical overlay, like the Section-10 lenses — not a new data source and not an endorsement.** The honesty discipline is load-bearing: the five sub-scores and the composite are the analyst's own rubric output, labeled `*Analyst view:*` / `*分析师观点：*` and **never** carrying a filing citation; every underlying metric (ROE, leverage, CAGR, multiples, price returns) carries its own inline citation; and the computed number is **never attributed to GuruFocus** unless you actually pulled their published figure from `gurufocus.com/term/gf-score/<TICKER>` (shown separately as a cross-check). Each axis gets a one-paragraph rationale stating WHY that score — the "reasons" are the part the reader most wants. Its inputs are already in your tree (financials from Step 1–2, Growth from the 1A model, GF Value from the 1A multiples/intrinsic range, Momentum from the header relative-performance line), so it adds little marginal work.
 
-**See [`references/gf_score.md`](references/gf_score.md) for the full spec — the 0–10 anchors per axis, the metric set behind each, the composite weights and band labels, the radar-helper usage, the multi-company overlay variant, and the honesty/citation guardrails. Read it before writing Section 1B.** Computed in Step 2c.
+**See [`reference/gf_score.md`](reference/gf_score.md) for the full spec — the 0–10 anchors per axis, the metric set behind each, the composite weights and band labels, the radar-helper usage, the multi-company overlay variant, and the honesty/citation guardrails. Read it before writing Section 1B.** Computed in Step 2c.
 
 ## Learning from sell-side institutional research
 
@@ -425,15 +425,17 @@ Every inline citation is a **clickable markdown link to the real source URL** �
 
 **Prefer recent web sources.** For non-filing web citations (news, industry reports, third-party rankings, analyst notes), default to sources from the **last 12 months**. Discard older web sources unless they're founding/historical facts or still-authoritative landmark research. Always include the publication date in the link title so vintage is visible: `[Reuters, 2025-08-12](https://...)`.
 
-See [`references/citations.md`](references/citations.md) for the full rules, per-source examples, freshness exceptions, and the final References-block format. **Read it before drafting.**
+See [`reference/citations.md`](reference/citations.md) for the full rules, per-source examples, freshness exceptions, and the final References-block format. **Read it before drafting.**
 
 ## Reference docs (read on demand)
 
+> Path note: **`reference/…`** (singular) = repo-level **shared** specs imported across skills (`citations.md`, `gf_score.md`); **`references/…`** (plural) = this skill's own local specs. They are different directories.
+
 - `references/report_structure.md` — section-by-section word counts, per-section content spec, the investment-summary header block, the Section 2 "Valuation & Price Target" chapter (forward-estimates table + PT derivation + bull/base/bear), the Section 9.5 "Key debates & catalysts" block, and the full output template. **Read before writing.**
-- `references/citations.md` — inline-citation rules and example.
+- `reference/citations.md` — inline-citation rules and example.
 - `references/risk_taxonomy.md` — the 8–12 risks across 4 buckets used in Section 9.
 - `references/investor_lenses.md` — the nine Section-10 lenses (4 core: Buffett, Munger, Damodaran, Howard Marks cycle; 5 optional: Lynch, Fisher, Burry, Druckenmiller, Cathie Wood).
-- `references/gf_score.md` — the GF Score (GuruFocus-style) Section-1B scorecard: five 0–10 axes (Financial Strength / Profitability / Growth / GF Value / Momentum), composite 0–100 + bands, the inline-SVG radar helper (`scripts/gf_score.py`), and the honesty/labeling rules.
+- `reference/gf_score.md` — the GF Score (GuruFocus-style) Section-1B scorecard: five 0–10 axes (Financial Strength / Profitability / Growth / GF Value / Momentum), composite 0–100 + bands, the inline-SVG radar helper (`scripts/gf_score.py`), and the honesty/labeling rules.
 - `references/quality_checklist.md` — quality standards and the pre-submit success checklist.
 
 ---
@@ -637,7 +639,7 @@ These five outputs populate the new **Section 2 "Valuation & Price Target" chapt
 
 With the financials (Step 1–2a), the forward model (Step 2b), and the header's relative-performance line in hand, you now have every input for the **Section 1B GF Score**. Score the five axes **0–10** from the metrics you've already cited, compute the **0–100 composite**, render the radar, and write the per-axis rationale:
 
-1. **Score the five axes** per the 0–10 anchors in [`references/gf_score.md`](references/gf_score.md): **Financial Strength** (cash/debt, Net Debt/EBITDA, interest coverage, Z-Score — from the balance sheet), **Profitability** (operating/net margin, ROE, ROIC vs WACC, consistency — from the income statement), **Growth** (3/5-yr revenue & EPS CAGR + the Step-2b forward estimate), **GF Value** (forward P/E vs own history + peers, PEG, MoS vs the 1A intrinsic range — *higher = cheaper*), **Momentum** (6/12-month return absolute + vs benchmark, vs 200dma — from the header relative-performance line).
+1. **Score the five axes** per the 0–10 anchors in [`reference/gf_score.md`](reference/gf_score.md): **Financial Strength** (cash/debt, Net Debt/EBITDA, interest coverage, Z-Score — from the balance sheet), **Profitability** (operating/net margin, ROE, ROIC vs WACC, consistency — from the income statement), **Growth** (3/5-yr revenue & EPS CAGR + the Step-2b forward estimate), **GF Value** (forward P/E vs own history + peers, PEG, MoS vs the 1A intrinsic range — *higher = cheaper*), **Momentum** (6/12-month return absolute + vs benchmark, vs 200dma — from the header relative-performance line).
 2. **Render the radar + table** with the helper (paste the `<svg>` un-fenced so it renders):
    ```bash
    cd /Users/x/projects/financial_agent
@@ -648,7 +650,7 @@ With the financials (Step 1–2a), the forward model (Step 2b), and the header's
 3. **Write the per-axis rationale** — one paragraph per axis stating WHY that score, naming the 2–4 driving metrics with their inline citations (re-use the citations from Step 1–2). The sub-scores and composite are `*Analyst view:*`; never attach a filing citation to a score, and never attribute the number to GuruFocus unless you pulled their published figure from `gurufocus.com/term/gf-score/<TICKER>` (then show it separately).
 4. **Keep it consistent** with the rest of the report — Growth ↔ the 1A forward model, GF Value ↔ the 1A multiples + PT upside, Momentum ↔ the header relative-performance line. A GF Score that contradicts the report's own numbers is a defect.
 
-Skip only if the user said "skip the GF Score". Total time: ~5–10 minutes (the inputs are already gathered). Full rubric, weights, bands, multi-company overlay, and guardrails: [`references/gf_score.md`](references/gf_score.md).
+Skip only if the user said "skip the GF Score". Total time: ~5–10 minutes (the inputs are already gathered). Full rubric, weights, bands, multi-company overlay, and guardrails: [`reference/gf_score.md`](reference/gf_score.md).
 
 ### Step 3 — Business model analysis
 
@@ -672,7 +674,7 @@ Capture: top-1 customer % of revenue, top-5 %, multi-year trend (3 years if avai
 3. **Pie charts of customer concentration must use only ONE denominator per chart.** A pie that mixes "Apple 18% (consolidated)" + "NVIDIA 22% (DS Memory share)" + "Samsung Mobile 12% (intra-group)" + "Other 48%" is meaningless arithmetic — slices don't share a denominator and can't sum to 100% of anything real. If you want to show segment customer mix and group customer mix, draw two separate charts, each with its own denominator stated in the title.
 4. **A top-5 customer disclosure overrides any reconstructed estimate.** When the filing names the consolidated top-5 (Samsung's 사업보고서 lists five alphabetically with ~14% in aggregate; A-share 年报 reports `前五名客户合计销售金额` exactly), that is the answer — do not append a sell-side / supply-chain composite that disagrees, do not extrapolate a different top-5 from segment-level customer reasoning. If a segment-level customer (e.g. NVIDIA in DS Memory) does NOT appear in the consolidated top-5, the correct interpretation is "that segment is too small relative to other divisions for its top customer to elevate to group-level top-5" — not "the filing's top-5 must be incomplete".
 5. **The non-naming of individual customer percentages is itself a disclosure fact.** Korean 사업보고서 commonly list major customers alphabetically without ranking; Japanese Yuho sometimes name customers but not their %; A-share 年报 give the aggregate top-5 % but rarely the per-customer split. When the filing does not give a per-customer %, the report MUST say so explicitly — never fill in a per-customer percentage from supply-chain inference and label it as if it were primary.
-6. **Paragraph-level inline citation applies to every customer figure.** Citing the source once in a Section 4 table or in the references block does NOT cover a Section 5 paragraph that re-states the number. Each paragraph that says "X% of revenue from customer Y" or "Samsung supplies >60% of Google's HBM" needs an inline link to the primary source *in that paragraph*, even if the same URL appears five other places in the report. (See [`citations.md`](references/citations.md) and the project-wide Numerical Accuracy rule in `/Users/x/projects/financial_agent/CLAUDE.md`.)
+6. **Paragraph-level inline citation applies to every customer figure.** Citing the source once in a Section 4 table or in the references block does NOT cover a Section 5 paragraph that re-states the number. Each paragraph that says "X% of revenue from customer Y" or "Samsung supplies >60% of Google's HBM" needs an inline link to the primary source *in that paragraph*, even if the same URL appears five other places in the report. (See [`citations.md`](reference/citations.md) and the project-wide Numerical Accuracy rule in `/Users/x/projects/financial_agent/CLAUDE.md`.)
 
 Before saving Section 5, spot-check: pick three customer-share numbers in the section and confirm each one (a) has its denominator labelled, (b) has an inline citation, (c) is not silently mixing segment- and group-level figures in the same chart / bullet / paragraph.
 
@@ -742,7 +744,7 @@ A report this length needs visual anchors. **Add 4–8 Mermaid diagrams** across
 
 **Default: write ONE complete Simplified Chinese (zh-CN) report.** Only produce an English report if the user explicitly opted in (`in English`, `English only`, `bilingual`, `also in English`, etc. — see the override table in the "Report language" section). When bilingual mode is on, write two complete independent reports — one Chinese, one English.
 
-Read `references/report_structure.md` for the 9-section spec and full output template. Read `references/citations.md` before drafting — inline citations are required in every section, not just at the end.
+Read `references/report_structure.md` for the 9-section spec and full output template. Read `reference/citations.md` before drafting — inline citations are required in every section, not just at the end.
 
 **Open with the decision layer, then the descriptive sections (BLUF — see § "Learning from sell-side institutional research").** Lead with the **investment-summary header** (rating + 12-month PT + upside% + valuation one-liner + 2–4 thesis pillars, all `*Analyst view:*`), then a thesis-first lead paragraph in Section 1 (the call + why-now + pillars) before the "what the company does" prose. The forward-estimates table, the PT derivation, and the bull/base/bear scenarios from Step 2b go in the **Section 2 "Valuation & Price Target"** chapter; the bear-vs-thesis rebuttals and dated catalysts go in the **Section 9.5 "Key debates & catalysts"** block. Keep all 9 descriptive sections intact — they feed the thesis; the decision layer sits on top of them, it does not replace them.
 

@@ -142,7 +142,7 @@ Before delivering earnings update, verify all items below:
 ### Citations & Sources Checklist ⭐⭐⭐ MANDATORY
 
 **Project rules that also apply (esp. for markdown-output runs — the checklist below is DOCX-hyperlink-centric):**
-- [ ] Paragraph-level inline citations with **deep URLs** (specific EDGAR document / IR release / deck / transcript — never a homepage) per [.claude/skills/company-research/references/citations.md](../../company-research/references/citations.md)
+- [ ] Paragraph-level inline citations with **deep URLs** (specific EDGAR document / IR release / deck / transcript — never a homepage) per [reference/citations.md](reference/citations.md)
 - [ ] **Every numerical beat/miss/guide figure string-matches a URL cited in the same paragraph** (CLAUDE.md "Numerical Accuracy" — a "+9% beat" traces to a source that literally contains "9%")
 - [ ] **Every chart carries an in-image `Source:` footer annotation** (CLAUDE.md chart rules), in addition to the figure caption
 - [ ] Estimate-revision reason clauses are **result-driven, never "our model"** (CLAUDE.md)

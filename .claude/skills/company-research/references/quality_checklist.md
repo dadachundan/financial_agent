@@ -97,7 +97,7 @@ The decision layer that mirrors institutional sell-side notes — see SKILL.md �
 
 ## GF Score (GuruFocus-style) scorecard (Section 1B)
 
-See `references/gf_score.md` for the full rubric. Include in every initiation-style report unless the user said "skip the GF Score". Checks:
+See `reference/gf_score.md` for the full rubric. Include in every initiation-style report unless the user said "skip the GF Score". Checks:
 
 - [ ] **Section 1B present**, right after Section 1A — verdict line (`GF Score NN/100 — <band>`), the radar, the 5-axis table, the per-axis rationale, the composite arithmetic.
 - [ ] **The radar renders** — the inline `<svg>` (from `scripts/gf_score.py`) is pasted **un-fenced** (not inside a ``` code block) so it displays as a chart, not source. The `--source` annotation is baked into the SVG footer.

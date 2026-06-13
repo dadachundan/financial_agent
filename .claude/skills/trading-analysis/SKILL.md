@@ -101,7 +101,7 @@ Assemble `full_report.md` as a single markdown document with these top-level sec
 8. `## Risk Debate` — contents of `risk-debate.md`.
 9. `## Portfolio Decision` — contents of `portfolio-decision.md`.
 
-The `## Company Research Report` section already carries the **Section 1B GF Score** (GuruFocus-style five-axis fundamental scorecard + radar) produced by company-research; the Portfolio Decision step may reference it as a fundamental-health input where relevant (spec: [`.claude/skills/company-research/references/gf_score.md`](../company-research/references/gf_score.md)). Do not recompute it here — it flows through with the embedded research doc.
+The `## Company Research Report` section already carries the **Section 1B GF Score** (GuruFocus-style five-axis fundamental scorecard + radar) produced by company-research; the Portfolio Decision step may reference it as a fundamental-health input where relevant (spec: [`reference/gf_score.md`](reference/gf_score.md)). Do not recompute it here — it flows through with the embedded research doc.
 
 Write the assembled markdown to `<company-folder>/trading/<TRADE-DATE>/full_report.md` using the Write tool, then print the full report to the user.
 
