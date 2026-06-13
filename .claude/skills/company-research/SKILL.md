@@ -265,6 +265,8 @@ The stockanalysis.com-style financials charts a reader expects: an **income-stat
 
 **The defining discipline: every number you pass must come from the company's OWN statements that you read and cite** — the 10-K / 10-Q / 20-F / 年度报告 / IR-deck income statement, balance sheet, cash-flow statement, and segment note (ASC 280 / IFRS 8) for the segment / geography splits. The helper fetches nothing (no API, no XBRL auto-pull) — it only lays out the numbers you give it, so the project's "every figure traces to a source you read" rule holds. The required `--source` is baked into the image; the surrounding paragraph still carries the page-level citation. If a line item isn't disclosed, omit it — never invent it.
 
+**Generate the full suite by default** (income / balance / cash-flow Sankeys + segment donut + geography donut + revbars + DuPont) — not just the income Sankey and one donut; omit a chart only when the underlying statement/disclosure truly doesn't exist, and note the omission in the Step 10 log.
+
 **See [`references/financial_charts.md`](references/financial_charts.md) for the full spec — the six subcommands, the per-subcommand CLI with worked ISRG examples, the embedding form, the per-section placement bar, and the sourcing guardrails. Read it before generating these in Step 8.** Generated in Step 8.
 
 ## Learning from sell-side institutional research
@@ -320,6 +322,16 @@ Examples:
 - `reports/company/Tesla_NASDAQ_TSLA/Tesla_NASDAQ_TSLA_Research_Document.md` (English)
 
 Both files share the same underlying research — citations, charts, data — but write the prose natively in each language; do not literal-translate one from the other.
+
+**Write natural Simplified Chinese — never word-for-word calques of English headers/terms (MANDATORY).** The Chinese prose must read as if written by a native Chinese equity analyst, NOT machine-translated. The failure mode to avoid: literally rendering an English label into a Chinese compound that no Chinese analyst would write. Concrete past offenders and their fixes — do not reproduce the left column:
+> - "house view" → ❌ `房观点` (房 = building!) → ✅ `本方观点` / `本报告观点`
+> - "Guidance banner" → ❌ `业绩更新横幅` (横幅 = a UI banner) → ✅ `业绩更新` / `业绩快报`
+> - "per-axis rationale / why these scores" → ❌ `逐轴理由` → ✅ `各维度评分理由`
+> - "swing variables" → ❌ `枢纽变量` → ✅ `最该盯紧的变量` / `关键变量`
+> - "multiple justification" → ❌ `倍数的辩护` (辩护 = legal defense) → ✅ `为什么用这个倍数` / `估值倍数依据`
+> - "vs consensus" → ❌ `对照市场一致` (incomplete) → ✅ `与市场一致预期的对比`
+>
+> Rule of thumb: an English *technical term* keeps its English form + a Chinese gloss (per the list below); but an English *section heading or rhetorical label* must be re-expressed in idiomatic Chinese, not transliterated morpheme-by-morpheme. When unsure whether a Chinese rendering sounds natural, prefer the plainer, more conversational phrasing a Chinese sell-side note would use. This applies to all report-producing skills.
 
 **Technical terms in Chinese reports — keep the English term alongside the Chinese gloss (MANDATORY).** Since most technical / industry / financial / regulatory terms originate in English (or have established English equivalents), the Chinese report **uses both languages**: English term first with the Chinese gloss in parentheses on first mention, then either form is fine thereafter. For specific named entities (products, ratings, indices, regulations), keep the English form throughout. Categories where this rule applies:
 
@@ -677,7 +689,7 @@ Identify 8–12 risks across 4 buckets (company-specific, industry/market, finan
 
 A report this length needs visual anchors, from two complementary, **memory-safe** systems — never matplotlib:
 
-**(A) Financial-statement visuals — `scripts/financial_charts.py` (inline SVG).** The stockanalysis.com-style charts a reader expects of a financials section: an **income-statement Sankey** (revenue → COGS / gross profit → opex / operating income → tax / net income), **balance-sheet** and **cash-flow Sankeys**, a revenue **donut** (by segment / by geography), **historical stacked revenue bars**, and a **5-step DuPont** ROE tree. Like `scripts/gf_score.py`, it is **stdlib-only** (imports just `math` / `argparse`, ~0 MB resident) and emits raw `<svg>` that the viewer renders verbatim (`reports_viewer.py` → `marked.js`, no sanitization). **Every number you pass must come from the company's OWN 10-K / 10-Q / 20-F / 年度报告 / IR deck that you read and cite** — the income statement, balance sheet, cash-flow statement, and the segment note (ASC 280 / IFRS 8). The required `--source` is baked into the image; the surrounding paragraph still carries the page-level citation. **Read [`references/financial_charts.md`](references/financial_charts.md) before using it** — it has the per-subcommand CLI, the worked ISRG examples, placement, and the sourcing guardrails. Include at minimum the income-statement Sankey and one revenue donut; add balance / cashflow / revbars / dupont by company fit.
+**(A) Financial-statement visuals — `scripts/financial_charts.py` (inline SVG).** The stockanalysis.com-style charts a reader expects of a financials section: an **income-statement Sankey** (revenue → COGS / gross profit → opex / operating income → tax / net income), **balance-sheet** and **cash-flow Sankeys**, a revenue **donut** (by segment / by geography), **historical stacked revenue bars**, and a **5-step DuPont** ROE tree. Like `scripts/gf_score.py`, it is **stdlib-only** (imports just `math` / `argparse`, ~0 MB resident) and emits raw `<svg>` that the viewer renders verbatim (`reports_viewer.py` → `marked.js`, no sanitization). **Every number you pass must come from the company's OWN 10-K / 10-Q / 20-F / 年度报告 / IR deck that you read and cite** — the income statement, balance sheet, cash-flow statement, and the segment note (ASC 280 / IFRS 8). The required `--source` is baked into the image; the surrounding paragraph still carries the page-level citation. **Read [`references/financial_charts.md`](references/financial_charts.md) before using it** — it has the per-subcommand CLI, the worked ISRG examples, placement, and the sourcing guardrails. **Always generate the full suite by default — income-statement Sankey, balance-sheet Sankey, cash-flow Sankey, a revenue donut by segment AND a second donut by geography, historical revbars, and the 5-step DuPont tree.** Drop a chart ONLY when the underlying statement / disclosure genuinely doesn't exist (e.g. a private company with no balance sheet, or a single-segment issuer with no geography split) — and when you drop one, say which and why in the Step 10 verification log. "By company fit" is **no longer** a license to ship just the income Sankey + one donut; that minimalist output is a defect for any issuer that files full statements.
 
 **(B) Mermaid diagrams (markdown-native).** For the diagram types Mermaid does well — `timeline` (history), `graph TD` (product-portfolio tree, org chart), `quadrantChart` (competitive positioning), and simple `xychart-beta` trends. Mermaid is markdown-native: the viewer at `http://xs-macbook-air.local:5001/claude-reports/` and GitHub render it inline at view time. **Aim for 4–8 visuals total across (A) + (B).**
 
@@ -708,7 +720,7 @@ A report this length needs visual anchors, from two complementary, **memory-safe
 | 5 Customers | **SVG** revenue `donut` (by geography); **MM** `pie` — top-3-5 customer concentration (one denominator per chart) |
 | 7 Competitive | **MM** `quadrantChart` **or** `xychart-beta` peer-comp bars |
 | 8 TAM | **MM** `xychart-beta` market-size growth |
-| 9 Risk / capital structure | **SVG** balance-sheet (`balance`) + cash-flow (`cashflow`) Sankeys, when leverage / FCF is part of the story |
+| 8 / 9 Capital allocation & structure | **SVG** cash-flow (`cashflow`) Sankey **(always)** — OCF → capex / FCF / dividends / buybacks / debt; **SVG** balance-sheet (`balance`) Sankey **(always)** — assets vs liabilities + equity |
 
 **Every chart gets a citation right below it** — same markdown-link format as prose, e.g. `Source: [安培龙 2024 年度报告, 第 32 页](https://static.cninfo.com.cn/...)`. No chart without a source.
 

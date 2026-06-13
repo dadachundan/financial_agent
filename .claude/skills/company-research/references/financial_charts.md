@@ -202,12 +202,20 @@ though the source is also baked in:
 
 ## Placement bar for a full report
 
-A 6,000–10,000-word initiation should carry, at minimum, the **income-statement
-Sankey** (the "how it makes money" anchor) and **one revenue donut** (segment or
-geography). Add the **balance** and **cashflow** Sankeys for capital-intensive /
-leverage-sensitive / cash-generation stories, the **revbars** for the
-development-over-time view, and **dupont** for return-quality framing (it complements the
-Section 1B GF Score). These are additive to — not a replacement for — the Mermaid
+A 6,000–10,000-word initiation **carries the full suite by default — all seven visuals:**
+the **income-statement Sankey** (the "how it makes money" anchor), the **balance-sheet
+Sankey**, the **cash-flow Sankey**, a revenue **donut by segment** AND a second **donut
+by geography**, the **revbars** (development-over-time view), and the **dupont** tree
+(return-quality framing, complements the Section 1B GF Score). This is **not** a "minimum
++ add-by-fit" menu — ship all seven for any issuer that files full statements.
+
+**The only sanctioned reasons to drop a chart** are that the underlying data genuinely
+isn't disclosed: a private company with no published balance sheet/cash-flow statement
+(skip those Sankeys + DuPont); a single-segment, single-geography issuer (skip the
+segment or geography donut that would have one slice); fewer than 2–3 comparable years
+(skip revbars). When you drop one, **name it and say why in the Step 10 verification
+log** — a financials section missing balance/cashflow/dupont on a normal public issuer is
+a defect, not a style choice. These are additive to — not a replacement for — the Mermaid
 diagrams (timeline, product tree, competitive quadrant) specified in SKILL.md Step 8.
 
 ## Guardrails

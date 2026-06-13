@@ -8,7 +8,7 @@
 **分析师说明 (Fiscal-year convention):** 财年截止日为最接近 8 月 31 日的星期四。2025 财年 (FY2025) 截至 2025 年 8 月 28 日；2026 财年 (FY2026) 自 2025 年 8 月 29 日起，FQ2-FY2026 截至 2026 年 2 月 26 日。本报告所有"$"均指美元 (USD)。
 
 > ### 投资摘要 (Investment Summary) — *分析师观点 (Analyst view)*
-> *(整块为本报告自身的房观点 (house view)，非任何申报文件内容；申报文件不含目标价。)*
+> *(以下整块均为本报告自身的观点（house view / 本方观点），不属于任何申报文件内容；申报文件本身不含目标价。)*
 >
 > | 项目 | 数值 |
 > |---|---|
@@ -29,7 +29,7 @@
 > 3. **但存储是半导体周期性最强的子行业，股价已涨至 ~$1.1 万亿、TTM P/S 19×（上市以来最高）——市场在峰值盈利 (peak earnings) 上定价。** 下行情景（CXMT 商品 DRAM 放量 + AI 资本开支见顶）隐含巨大回撤 ([Yahoo Finance, 2026-06-12](https://finance.yahoo.com/quote/MU/key-statistics))。
 > 4. **卖方极度分歧 (wide sell-side dispersion)：高盛中性 $900 ↔ 瑞银买入 $1,625。** 分歧点在"归一化 EPS 是多少"与"该给周期股倍数还是公用事业式 (utility-like) 倍数"（详见第 1A 节 卖方观点演变）。
 
-> ### 业绩更新横幅 (Guidance banner) — FQ2-FY2026 创纪录 + Q3 指引再上台阶 + 股息上调 30%
+> ### 业绩更新 (Guidance update) — FQ2-FY2026 创纪录、Q3 指引再上台阶、股息上调 30%
 > **2026-03-18 披露的 FQ2-FY2026 实际值（截至 2026-02-26）远超 2025 年 12 月给出的原指引（营收 $18.7bn ±0.4 / 非 GAAP 毛利率 68%）：**
 > - 营收 **$23.86bn**（环比 +75%、同比 +196%，对照 FQ1 $13.64bn / 去年同期 $8.05bn）；
 > - GAAP 毛利率 **74.4%**、营业利润率 **67.6%**；非 GAAP 摊薄 EPS **$12.20**（GAAP $12.07）；
@@ -287,11 +287,11 @@ Micron Technology, Inc. 是全球仅存的三家具规模的 **DRAM (Dynamic Ran
 - **牛市 PT $1,600 = ~15× × ~$110**（UBS 式结构性重定价：LTA 把存储变成准公用事业，EPS 在 2029 前维持 >$100）。隐含 +63%。
 - **熊市 PT $420 = ~15× × ~$28**（周期均值回归：2027 年 ASP 受 CXMT 商品 DRAM 放量 + AI 资本开支见顶冲击，归一化 EPS 回落至 ~$28，仍远高于 2023 年低谷因 HBM 占比提升）。隐含 **−57%**。
 
-**倍数的辩护 (multiple justification)。** 18× 高于 SK 海力士的前瞻 ~4.6×（但后者口径为峰值 EPS 且韩国披露不可比）、低于稳态大型半导体（NVDA/AVGO ~30×+）。整个目标价辩论真正的两个变量是**归一化 EPS 是多少**与**该用周期倍数还是公用事业倍数**——这恰是卖方分歧的根源（见下）。
+**为什么用这个倍数 (multiple justification)。** 18× 高于 SK 海力士的前瞻 ~4.6×（但后者口径为峰值 EPS 且韩国披露不可比）、低于稳态大型半导体（NVDA/AVGO ~30×+）。整个目标价辩论真正的两个变量是**归一化 EPS 是多少**与**该用周期倍数还是公用事业倍数**——这恰是卖方分歧的根源（见下）。
 
-**对照市场一致 (vs consensus)。** 我们的基准 FY2027 EPS ~$85 **低于** 市场一致 ~$112 ([Yahoo Finance, 2026-06-12](https://finance.yahoo.com/quote/MU/key-statistics)) 和 UBS 的 C2027 $155 ([UBS, 2026-05-26](http://xs-macbook-air.local:5001/zsxq/pdf/585428582552154/UBS-Micron%20Technology%20Inc%20LTAs%20Gain%20Traction%3B%20PT%20to%20%241%2C625%20with%20EPS%20Remaining%20Well%20-%24100-260526.pdf))，但**高于**高盛的归一化 $50 ([GS, 2026-06-08](http://xs-macbook-air.local:5001/zsxq/pdf/412458524148888/GS-Micron%20Technology%20Inc.%20%28MU%29_%203Q%20Preview_%20Another%20strong%20quarter%20reflects%20extension%20of%20tight%20supply_demand%20through%202027-260608.pdf))——我们刻意取中。
+**与市场一致预期的对比 (vs consensus)。** 我们的基准 FY2027 EPS ~$85 **低于** 市场一致预期 ~$112 ([Yahoo Finance, 2026-06-12](https://finance.yahoo.com/quote/MU/key-statistics)) 和 UBS 的 C2027 $155 ([UBS, 2026-05-26](http://xs-macbook-air.local:5001/zsxq/pdf/585428582552154/UBS-Micron%20Technology%20Inc%20LTAs%20Gain%20Traction%3B%20PT%20to%20%241%2C625%20with%20EPS%20Remaining%20Well%20-%24100-260526.pdf))，但**高于**高盛的归一化 $50 ([GS, 2026-06-08](http://xs-macbook-air.local:5001/zsxq/pdf/412458524148888/GS-Micron%20Technology%20Inc.%20%28MU%29_%203Q%20Preview_%20Another%20strong%20quarter%20reflects%20extension%20of%20tight%20supply_demand%20through%202027-260608.pdf))——我们刻意取中。
 
-**枢纽变量 (swing variables) —— 读者应重点压力测试：** (1) 增强型 LTA 是否真的结构性削弱了周期（→ 更高倍数 + 更高归一化 EPS）？(2) HBM4 世代 Micron 的份额相对三星/SK 海力士的走向；(3) CXMT 商品 DRAM 的放量时点。
+**最该盯紧的几个变量 (swing variables) —— 读者应重点压力测试：** (1) 增强型 LTA 是否真的结构性削弱了周期（→ 更高倍数 + 更高归一化 EPS）？(2) HBM4 世代 Micron 的份额相对三星/SK 海力士的走向；(3) CXMT 商品 DRAM 的放量时点。
 
 #### 卖方观点演变 (Sell-side view evolution) — *分析师观点*
 
@@ -378,7 +378,7 @@ Micron Technology, Inc. 是全球仅存的三家具规模的 **DRAM (Dynamic Ran
 
 *综合权重 (*分析师观点*)：财务实力 20% · 盈利能力 25% · 成长性 25% · GF Value 15% · 动量 15%（透明复刻，非 GuruFocus 专有权重）。*
 
-**逐轴理由 (why these scores)：**
+**各维度评分理由（为什么是这个分数）：**
 - **财务实力 8。** 现金/可销售/受限现金 $16.7bn、长期债务约 $14bn → 接近净现金；FQ2 单季经营性现金流 $11.9bn、调整后 FCF $6.9bn，利息覆盖率极高 ([FQ2-26 8-K](https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm))。唯一扣分项是资本密集度——PP&E 占资产负债表约 56%、未来数年绿地资本开支承诺逾 $1,000 亿 ([FY2025 10-K, Note 13](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm))。
 - **盈利能力 7。** 当前营业利润率 67.6%、净利率 57.8%、ROE/ROIC 居标普 500 顶尖 ([FQ2-26 8-K](https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm))；**但一致性 (consistency) 是硬伤**——FY2023 GAAP 毛利率 −9%、营业亏损 ([FY2025 10-K](https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm))。当下精彩，穿越周期波动巨大，故 7 而非 9。
 - **成长性 10。** FY2025 营收 +49%，FY2026 上半年同比近 3 倍 ([FQ2-26 8-K](https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm))；满分——但属周期性增长（自低谷反弹），非有机复利。
@@ -991,7 +991,7 @@ quadrantChart
 - **2026 下半年：FQ4-FY2026 指引**（市场预期环比再大幅增长；高盛预测 $48.8bn）。
 - **持续：HBM4 量产爬坡与 Rubin 平台认证**、CXMT 商品 DRAM 放量节奏、美中出口管制动向。建议用 `catalyst-calendar` 技能持续跟踪。
 
-**枢纽变量（call 取决于此）：** (1) 增强型 LTA 的结构性程度（决定归一化 EPS 与倍数）；(2) HBM4 份额轨迹。读者应重点压力测试这两点。
+**最该盯紧的变量（整个判断成立与否取决于此）：** (1) 增强型 LTA 的结构性程度（决定归一化 EPS 与倍数）；(2) HBM4 份额轨迹。读者应重点压力测试这两点。
 
 ---
 
@@ -1049,7 +1049,7 @@ quadrantChart
 | 类别 | 具体来源 | 用于 |
 |---|---|---|
 | 一手申报 | FY2025 10-K（mu-20250828.htm） | 业务/分部/客户/风险/地理/治理（第 1–9 节） |
-| 一手申报 | FQ2-FY2026 8-K Ex-99.1（2026-03-18） | Q2 实际值 + Q3 指引 + 业务部表 + 股息（横幅/第 1/1A/4/5 节） |
+| 一手申报 | FQ2-FY2026 8-K Ex-99.1（2026-03-18） | Q2 实际值 + Q3 指引 + 业务部表 + 股息（业绩更新块 / 第 1/1A/4/5 节） |
 | 一手申报 | FQ1-FY2026 8-K（2025-12-17） | Q1 对照值 |
 | 一手申报 | 8-K Björlin 董事任命（2026-06-09, accession 0001104659-26-071845） | 第 3 节治理 |
 | 市场数据 | Yahoo Finance MU Key Statistics（2026-06-12）；yfinance 收盘 $981.61 | 估值快照/header/矩阵 |
