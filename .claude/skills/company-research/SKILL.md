@@ -134,57 +134,11 @@ When this report covers something a reader would struggle to picture from prose 
 
 ## Investor presentations are first-class primary sources — use exhaustively when available
 
-After 10-Ks / 年度报告 / Yuho, **investor-relations materials are the next-most-load-bearing source category** in a research report — often *more* informative than the formal filings for the specific things research readers care most about: segment-mix economics, TAM / SAM views the company itself endorses, customer-cohort disclosures the legal filings round off, capital-allocation roadmaps, capacity build-out plans, and management's own framing of the competitive moat. **Whenever IR materials exist, treat collecting them as a non-optional Step 1 task and cite them aggressively throughout the report.**
+After 10-Ks / 年度报告 / Yuho, **investor-relations materials are the next-most-load-bearing source category** — often *more* informative than the formal filings for what research readers care most about: segment-mix economics, the TAM/SAM views the company itself endorses, customer-cohort disclosures, capital-allocation roadmaps, capacity build-out plans, and management's own framing of the moat. **Whenever IR materials exist, treat collecting them as a non-optional Step 1 task and cite them aggressively throughout the report** — quarterly earnings deck + transcript, the latest investor-day / capital-markets-day deck, conference presentations, the annual integrated report / ESG report / Mid-term Plan (especially for JP/KR/EU issuers), the shareholder letter, and the IPO prospectus / S-1 / 招股说明书 if within ~5–10 years.
 
-**What "IR materials" means — collect ALL of these when they exist:**
+**Density bar:** ≥8–12 distinct IR-material citations across the body when the company has a public IR program; ≥1 in each of Sections 1/4/6/8; the latest 2 quarterly decks AND the latest investor-day deck each cited at least once. Cite at the **slide level** (`[… Investor Day 2024 deck, Slide 23 — TAM build](url)`), chain-cite the underlying research when the deck credits Yole/Gartner/IDC, and keep transcript (CEO/CFO words) vs. deck (chart/number) as separate sources. If the company has effectively no IR program, say so in the verification log and lean on filings + third-party research.
 
-- **Quarterly earnings deck** (slides accompanying each earnings call, every quarter — usually filed as 8-K Exhibit 99.2 for US issuers, or posted on the IR site for non-US issuers). These contain the freshest segment-mix charts, geographic mix, customer cohort updates, and KPI bridges.
-- **Quarterly earnings call transcript** (or audio webcast if no transcript). The Q&A section in particular surfaces detail that doesn't appear anywhere else — competitor positioning, customer ramp dynamics, gross-margin drivers, capacity expansion timing.
-- **Annual investor day / capital markets day deck** (typically held every 1–3 years; 100+ slides; multi-year guidance and TAM build-up). Each annual / triennial Investor Day is its own goldmine — pull every one available going back ~3–5 years.
-- **Industry conference presentations** (JPMorgan Healthcare, SEMICON, OFC, CES, Bank of America Industrials, Goldman Sachs Communacopia, Morgan Stanley TMT, Citi Global Tech, etc.). Each major conference appearance typically has a deck on the IR site — these contain crisper strategy framings than the formal earnings deck.
-- **Industry / product event keynotes** (NVIDIA GTC, Apple WWDC, Tesla AI Day / Battery Day, Salesforce Dreamforce, Microsoft Ignite, AWS re:Invent product keynotes when the speaker is the CEO or CFO). For product-led companies these contain the most detailed product roadmaps.
-- **Annual integrated report / ESG report / corporate sustainability report** (especially for Japanese, European, and Asian issuers — these often contain TAM views, segment narratives, and customer-base detail that don't appear in the Yuho / annual report). Japanese issuers' "Integrated Report" / 統合報告書 is often the richest single document.
-- **Annual shareholder letter** (Buffett-style; for issuers that publish one — Amazon, Berkshire, JPMorgan, Klarna, etc.). Often contains the CEO's own framing of strategy and competitive moat in their own words.
-- **IPO prospectus / S-1 / 招股说明书 / F-1** (for any company that IPO'd in the last 5–10 years — the prospectus is often the most detailed business description ever published about the company, with TAM/SAM/SOM, customer concentration, technology architecture, and competitive landscape laid out in much more depth than subsequent annuals).
-- **Secondary offering / convertible offering decks** (when present — often contain refreshed business descriptions and forward-looking commentary).
-
-**Where to find them:**
-
-- **US issuers:** company IR website (`investors.<company>.com` or `ir.<company>.com`) → "Events & Presentations" / "Quarterly Results" / "Investor Day" pages. SEC EDGAR 8-K filings often attach the deck as Exhibit 99.2 (search the filing's `index.json` directory listing). S-1 / prospectus on EDGAR.
-- **China A-share / HK issuers:** company IR site (公司IR / 投资者关系页面), cninfo (巨潮资讯) attaches 业绩说明会 / 投资者交流活动记录, HKEX news room for HK issuers, and most large-cap A-share names publish 业绩说明会 PPTs at the same time as the 年度报告. Search cninfo for `投资者关系活动记录表` (formal Q&A logs are filed quarterly).
-- **Taiwan issuers:** MOPS (公開資訊觀測站) → 法人說明會 (analyst meeting decks) and 重大訊息 sections.
-- **Japan issuers:** company IR site → 「決算説明会資料」 (earnings call deck) + 「統合報告書」 (Integrated Report) + 「中期経営計画」 (Mid-term Plan / MTP — published every 3–5 years, contains multi-year revenue / margin / capex / ROIC targets and is by far the densest forward-looking source). TDnet (https://www.release.tdnet.info/) for the earnings-day press release; the deck is on the company site.
-- **Korea issuers:** company IR site → "Earnings Release" PDFs + investor relations presentation archives. DART for the formal filings.
-- **Private companies:** founder / CEO conference keynotes on YouTube, podcast transcripts (a16z, 20VC, Acquired, Stratechery, BG2, etc.), pitch decks if leaked to TechCrunch / The Information.
-
-**Where IR slides are particularly load-bearing — and what they unlock by section:**
-
-| Section | What IR slides typically contribute that's not in the 10-K |
-|---|---|
-| **1. Overview** | Latest-quarter revenue / margin chart with management's stated 1–2-yr guide; LTM KPI bridge (price × volume × mix); capital-allocation framework slide |
-| **4. Products** | Roadmap slides showing what's launching in 6 / 12 / 24 months; product-family TAM breakdown; "design wins" customer logos |
-| **5. Customers** | Customer-cohort retention / NRR cohort charts; named customer logos (10-Ks rarely name customers beyond the >10% threshold); geographic-mix Sankey |
-| **6. Industry** | Management's own TAM / SAM build-up (with assumptions); industry-growth waterfall (units × ASP × penetration) — often more granular than third-party research |
-| **7. Competitive** | Competitive-moat narrative slides ("Why we win"); side-by-side feature matrices; share-trajectory charts (handle with care — these are self-serving, but the data points are usually citable) |
-| **8. TAM** | The IR deck's TAM slide is **the single most-cited TAM source** in most reports — management has done the build-up work and the slide cites the underlying research firm. Cite the deck as primary; chain-cite the underlying research as secondary |
-| **9. Risks** | Management's own risk framing (which risks they're actively mitigating, capex plans for second-source supply, geographic-diversification roadmap) |
-
-**Citation discipline for IR materials:**
-
-- **Cite the deck at the slide level, not the deck level.** A 60-slide investor-day PDF is not a citation; "Slide 23" or "Slide 23 (TAM build)" is. Format: `[Lam Research Investor Day 2024 deck, Slide 23 — TAM build](https://ir.lamresearch.com/...)`.
-- **Pull the host page URL, not a redirect link.** IR sites use redirect tags (`/news/...`, `/events/...`); follow them to the PDF or hosted page and use the canonical URL. If the deck is hosted as a PDF on the IR site, link the PDF directly.
-- **Source-chain TAM citations.** When the IR deck cites Yole / Gartner / IDC for the TAM number, the citation is `[Company Investor Day 2024 deck, Slide 23 — TAM (citing Yole 2024)](https://ir.company.com/.../investor-day-2024-deck.pdf)`. The reader clicks through to the company's own deck and sees Yole credited there.
-- **Earnings call transcripts vs. earnings decks are separate sources.** Cite the transcript when quoting CEO / CFO language; cite the deck for any chart or numeric callout. They are often complementary on the same earnings event — cite both when both are used.
-- **Investor Day decks rarely get updated** — once you've cited one, lock the date and slide number in the title (the URL might rotate; SEC EDGAR is the most durable host for US issuers since the deck is filed as an 8-K exhibit). Re-verify the URL during Step 10.
-
-**The "density bar" for IR citations in a finished report:**
-
-- **At minimum 8–12 distinct IR-material citations** across the body (separate from filings, news, third-party research) when the company has a public IR program.
-- **At least 1 IR citation in each of Sections 1, 4, 6, 8** when slides exist that cover that ground.
-- **The latest 2 quarterly earnings decks AND the latest investor-day deck** should each be cited at least once. If only 1 of the 3 is cited, you have under-used IR materials — go back and find the right slide.
-- **For Japanese / Korean / European issuers with an Integrated Report or Mid-term Plan**, that single document should generate 5–10 citations on its own (TAM, segment KPIs, capex plan, ESG / climate plan, geographic strategy).
-
-If the company has effectively no IR program (small-cap, pre-IPO private, or genuinely doesn't host any deck publicly), note that fact explicitly in the verification log and lean harder on filings + third-party research instead. **Do not skip IR collection just because it's annoying — the absence is itself a data point worth flagging.**
+> **Full spec — what to collect, where to find it per domicile (US / China-HK / Taiwan / Japan / Korea / private), the per-section "what IR slides unlock" table, and the slide-level citation discipline: [`references/ir_materials.md`](references/ir_materials.md).**
 
 ## Local institute-research library (`db/zsxq.db`) — search it FIRST for any sell-side view
 
@@ -441,11 +395,13 @@ See [`reference/citations.md`](reference/citations.md) for the full rules, per-s
 
 - `references/report_structure.md` — section-by-section word counts, per-section content spec, the investment-summary header block, the Section 2 "Valuation & Price Target" chapter (forward-estimates table + PT derivation + bull/base/bear), the Section 9.5 "Key debates & catalysts" block, and the full output template. **Read before writing.**
 - `reference/citations.md` — inline-citation rules and example.
+- `references/ir_materials.md` — the full investor-relations collection bar: what to collect, where to find it per domicile (US / China-HK / TW / JP / KR / private), the per-section "what IR slides unlock" table, the slide-level citation discipline, and the IR-citation density bar.
 - `references/risk_taxonomy.md` — the 8–12 risks across 4 buckets used in Section 9.
 - `references/investor_lenses.md` — the nine Section-10 lenses (4 core: Buffett, Munger, Damodaran, Howard Marks cycle; 5 optional: Lynch, Fisher, Burry, Druckenmiller, Cathie Wood).
 - `reference/gf_score.md` — the GF Score (GuruFocus-style) Section-1B scorecard: five 0–10 axes (Financial Strength / Profitability / Growth / GF Value / Momentum), composite 0–100 + bands, the inline-SVG radar helper (`scripts/gf_score.py`), and the honesty/labeling rules.
 - `references/financial_charts.md` — the stockanalysis.com-style financial-statement visuals helper (`scripts/financial_charts.py`): income / balance / cash-flow **Sankey**, revenue **donut** (segment / geography), **historical stacked bars**, and **5-step DuPont** ROE tree — all stdlib inline SVG, with per-subcommand CLI, worked ISRG examples, placement, and sourcing guardrails. **Read before using in Step 8.**
 - `references/quality_checklist.md` — quality standards and the pre-submit success checklist.
+- `references/verification.md` — the Step-10 bash recipes (URL check, EDGAR submissions-JSON filename lookup, 10-K claim grep, exec-name check) and the verification-log template. Read before the Step 10 pass.
 
 ---
 
@@ -482,7 +438,7 @@ See [`reference/citations.md`](reference/citations.md) for the full rules, per-s
 - **Trade press and news** — for recent developments, confirmation, and context. Only as supporting evidence, not as primary claim sources.
 - **Competitor websites and filings** — when explaining competitive positioning; cite the competitor's own source, never the subject company's characterization.
 
-**See § "Investor presentations are first-class primary sources" above for the full IR-collection bar — every IR site listed above carries materials that should yield 8–12+ citations in the finished report.**
+**See [`references/ir_materials.md`](references/ir_materials.md) for the full IR-collection bar — every IR site listed above carries materials that should yield 8–12+ citations in the finished report.**
 
 ---
 
@@ -589,7 +545,7 @@ Everything from this step is **sell-side opinion** — carry the `file_id`s forw
    - For financials: filings are the definitive source (10-K GAAP financials are audited; website summary numbers are sometimes rounded or simplified). Pull revenue, margin, EPS, customer concentration figures **directly from the MD&A or financial statements**, not from the website's summary.
    - For risk: 10-K / 年度报告 / Yuho risk-factor sections are required reading; they detail legal, competitive, supply-chain, and macro risks the website downplays. **Quote risk factors verbatim** from the filing.
    
-3. **Earnings materials and investor presentations** — see the dedicated section above § "Investor presentations are first-class primary sources" for the full collection bar. **At minimum, pull every one of the following that exists; if any is missing, note it in the verification log:**
+3. **Earnings materials and investor presentations** — see [`references/ir_materials.md`](references/ir_materials.md) for the full collection bar. **At minimum, pull every one of the following that exists; if any is missing, note it in the verification log:**
    - **Latest 2 quarterly earnings call transcripts** (most-recent first).
    - **Latest 2 quarterly earnings decks** (PDF slides accompanying each earnings call — 8-K Exhibit 99.2 for US issuers, IR site for others).
    - **Most recent annual investor day / capital markets day deck**, plus the prior one if within the last 3 years.
@@ -796,82 +752,14 @@ Skip this step if the user said `no lens scorecards` / `skip Section 10` / simil
 
 Step 10 catches these before the report ships. **Run verification on every report file produced** (default: the Chinese report; bilingual mode: both Chinese and English). **Skip Step 10 only if the user has explicitly waived it.**
 
-#### 10.1 — Verify every URL resolves
+#### 10.1–10.4 — Mechanical checks (recipes in [`references/verification.md`](references/verification.md))
 
-```bash
-REPORT=reports/company/<Slug>/<filename>.md
-for url in $(grep -oE 'https?://[^)]+' "$REPORT" | sort -u); do
-  code=$(curl -sSL -A "Research Analyst <your-email>" --max-time 12 -o /dev/null -w "%{http_code}" "$url")
-  echo "$code  $url"
-done | grep -v '^200 ' | grep -v '^301 ' | grep -v '^302 '
-```
+Run all four; the bash recipes (curl/grep one-liners) live in the reference — read it before this pass:
 
-Any 404 must be either fixed (find the real URL) or removed. 403 and 406 are usually anti-bot blocks (semi.org, Yahoo Finance, congress.gov, LinkedIn) — confirm those URLs work in a real browser before keeping them.
-
-**Local zsxq viewer URLs** (`http://xs-macbook-air.local:5001/zsxq/pdf/<file_id>/<filename>`) only resolve on the user's machine, so the loop above may report a connection failure if the server isn't reachable from where you run it. Verify them against the live route instead — `/opt/anaconda3/bin/python3 .claude/skills/zsxq-analyze/scripts/find_pdf.py --file-id <file_id>` must return the row with `local_exists: true`, and its `pdf_url` is the citation URL to paste. The path must be `/zsxq/pdf/<file_id>/<filename>` (direct download); the `/zsxq/pdf-viewer/<id>` viewer page does not download on iPad and the old `/zsxq-pdf/<id>` form is a dead 404 — if any citation uses either, fix it.
-
-#### 10.2 — Verify SEC filenames came from the EDGAR submissions JSON
-
-For US issuers, every SEC URL has the form:
-`https://www.sec.gov/Archives/edgar/data/<CIK>/<accession-no-dashes>/<filename>`
-
-The `<filename>` is opaque — `lrcx-20250629.htm`, `tsla-20241231.htm`, `f43373e10vk.htm`, `ny20050572x2_def14a.htm`. **Never construct it by pattern.** Look it up via the EDGAR submissions API:
-
-```bash
-curl -sS -A "Research Analyst <email>" \
-  "https://data.sec.gov/submissions/CIK<10-digit-zero-padded-CIK>.json" \
-  | python3 -c "
-import json, sys
-d = json.load(sys.stdin)
-r = d['filings']['recent']
-for i, f in enumerate(r['form']):
-    if f in ('10-K', '10-Q', '8-K', 'DEF 14A', '20-F', '6-K'):
-        print(f, r['accessionNumber'][i], r['filingDate'][i], r['primaryDocument'][i])
-"
-```
-
-For 8-K *exhibits* (the cover doc is rarely the exhibit you want), fetch the filing's directory listing:
-
-```bash
-curl -sS -A "Research Analyst <email>" \
-  "https://www.sec.gov/Archives/edgar/data/<CIK>/<accession-no-dashes>/index.json"
-```
-
-If you cannot resolve a real filename, cite the filing index page (`.../index.html`) instead of inventing one.
-
-#### 10.3 — Verify 10-K-cited claims actually appear in the 10-K
-
-Spot-check every paragraph that cites the 10-K. Cache the 10-K once:
-
-```bash
-curl -sS -A "Research Analyst <email>" \
-  "https://www.sec.gov/Archives/edgar/data/<CIK>/<accession>/<primaryDoc>" > /tmp/10k.htm
-```
-
-For each cited number / fact, grep:
-
-```bash
-grep -ioE '.{40}<search-string>.{200}' /tmp/10k.htm | sed -E 's/<[^>]+>/ /g; s/&nbsp;/ /g; s/[[:space:]]+/ /g'
-```
-
-If the number / claim isn't in the 10-K, the citation is wrong. Either find the real source or drop the claim.
-
-**Specific patterns to grep for and check:**
-- `"primary competitor"` / `"主要竞争对手"` — verify the report's competitor list matches the 10-K Competition section verbatim
-- `"approximately X%"` for any percentage cited — make sure the actual percentage appears
-- Revenue line items (`Systems Revenue`, `Customer Support`) for segment % claims
-- Restructuring / headcount claims (`Note 20`, `restructuring`)
-- Customer concentration (`major customer`, `customer concentration`)
-
-#### 10.4 — Verify executive names against 8-Ks / DEF 14A
-
-Every named executive must appear by exactly that name in the cited filing. Grep the cached 8-K / DEF 14A:
-
-```bash
-curl -sS -A "..." "<8-K URL>" | sed -E 's/<[^>]+>/ /g' | grep -i "<executive name>"
-```
-
-If the name isn't in the filing, the citation is fabricated. Remove the claim or find the right filing.
+- **10.1 — Every URL resolves.** HTTP-check each URL; 404 must be fixed or removed; 403/406 are usually anti-bot (confirm in a browser). Local zsxq URLs are user-machine-only — verify via `find_pdf.py --file-id <id>` (`local_exists: true`), and the route must be `/zsxq/pdf/<file_id>/<filename>` (not the dead `/zsxq-pdf/` or the no-download `/zsxq/pdf-viewer/`).
+- **10.2 — SEC filenames came from the EDGAR submissions JSON.** The `<filename>` is opaque — never pattern-construct it; resolve it from `https://data.sec.gov/submissions/CIK<padded>.json` (8-K exhibits via the accession `index.json`). If unresolvable, cite the filing index page, not an invented filename.
+- **10.3 — 10-K-cited claims actually appear in the 10-K.** Cache the primary doc once and `grep` each cited number/fact; if it isn't there, the citation is wrong — fix or drop. Grep especially competitor lists, `approximately X%`, segment line items, restructuring/headcount, customer concentration.
+- **10.4 — Executive names appear verbatim in the cited 8-K / DEF 14A.** If the name isn't in the filing, the citation is fabricated — remove or re-source.
 
 #### 10.5 — Self-audit checklist
 
@@ -889,43 +777,13 @@ Before declaring done, confirm each line:
 - [ ] Internal consistency: Section 1's competitive claim matches Section 7's; Section 2 timeline matches Section 1 prose; restructuring counts in narrative match the timeline
 - [ ] Numbers spot-checked against the 10-K (at least: revenue, gross margin, customer concentration, geographic mix, segment %, restructuring headcount)
 - [ ] Link-title ↔ URL consistency: every link whose title names a source (indicators.db, FRED, Yahoo, a broker, a filing, McKinsey/Yole/Gartner) resolves to that source's domain — scan `grep -oE '\[[^]]+\]\(http[^)]+\)' <report>.md` for titles paired with the wrong domain. A 200-OK URL that doesn't contain the claimed source/number (e.g. `[indicators.db 快照](https://www.sec.gov/...)`) is a FAIL even though the reachability check passes
+- [ ] **Financial-statement charts (`financial_charts.py`):** every figure in each Sankey / donut / DuPont string-matches the cited statement; the chart is pasted **un-fenced** so it renders; the `--source` footer cites the exact statement; the surrounding paragraph carries the page-level citation; no chart contains a number not traceable to a cited filing
 
 #### 10.6 — Append a verification log to each report
 
-After the References section in **every report produced** (the Chinese report by default; both Chinese and English in bilingual mode), append a `<details>` block listing what was checked. This makes verification visible to the reader and forces honesty about residual unknowns. **The `<summary>` line MUST be the exact English string `Verification log (Step 10) — YYYY-MM-DD` even in Chinese reports** — project tooling greps for it; a translated summary (`验证日志…`) breaks the contract. Chinese annotation may follow inside the block body. The logs may differ slightly between languages (e.g., different filings checked) but follow the same structure:
+After the References section in **every report produced** (the Chinese report by default; both Chinese and English in bilingual mode), append a `<details>` block listing what was checked. This makes verification visible to the reader and forces honesty about residual unknowns. **The `<summary>` line MUST be the exact English string `Verification log (Step 10) — YYYY-MM-DD` even in Chinese reports** — project tooling greps for it; a translated summary (`验证日志…`) breaks the contract. Chinese annotation may follow inside the block body. The logs may differ slightly between languages (e.g., different filings checked) but follow the same structure.
 
-```markdown
-<details>
-<summary>Verification log (Step 10) — YYYY-MM-DD</summary>
-
-**URL check** — all <N> URLs HTTP-checked YYYY-MM-DD; all return 200 / known-good 301.
-
-**Step 0.5 sec-report-summary** — ran (output: `reports/earnings/<TICKER>_<date>.md`) / skipped (<reason>) / n/a (non-US issuer).
-
-**Further-viewing URLs** — <N> links validated (200 with a browser UA) / omitted because <reason — e.g. "purely numeric report, nothing worth visualizing">.
-
-**SEC filenames** — resolved from EDGAR submissions JSON for CIK <padded>; primary docs: 10-K = `<filename>`, latest 10-Q = `<filename>`, DEF 14A = `<filename>`.
-
-**10-K spot-checks** (claim → location in 10-K):
-- Revenue $XB ✓ (MD&A Results of Operations)
-- Gross margin XX% ✓ (MD&A)
-- Top customer concentration NN%/MM% ✓ (Note 19 / Segment Reporting)
-- Geographic mix ✓ (Results of Operations geographic table)
-- Restructuring headcount ✓ (Note 20)
-
-**Analyst-view sentences** (intentionally not cited to a primary source):
-- Section 1: "<paragraph fragment>" — uncited; supported by industry observation.
-- Section 4.1 / 4.2 / 4.3: share-leadership claims labeled `*Analyst view:*` / `*分析师观点：*` per skill rule.
-
-**Institute research (`db/zsxq.db`)** — searched N aliases (ticker / English / 中文); found M relevant notes, fetched K via downloader. Cited file_ids: `<id>`, `<id>`, … — each labeled *Analyst view:*, routed via `/zsxq/pdf/<file_id>/<filename>`, numbers string-matched to summary/OCR (e.g. "MS NVDA PT $288 / 2027E EPS $13.08 × 22×" ✓ matches `file_id 812488522252442` summary).
-
-**Residual unknowns / not yet verified:**
-- <bulleted list, or "none">
-
-</details>
-```
-
-If the log shows residual unknowns the user cares about, fix them before declaring done. Every report produced (Chinese always; English when bilingual) must be verified and signed off before final submission.
+**The full log template** (URL check · Step 0.5 status · further-viewing URLs · SEC filenames · 10-K spot-checks · financial-chart figure string-matches · analyst-view sentences · institute-research file_ids · residual unknowns) **lives in [`references/verification.md`](references/verification.md) § 10.6 — copy it from there.** If the log shows residual unknowns the user cares about, fix them before declaring done. Every report produced (Chinese always; English when bilingual) must be verified and signed off before final submission.
 
 ---
 

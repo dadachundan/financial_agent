@@ -10,7 +10,7 @@
 
 ## Investor-relations coverage (separate from the ≥40 inline-citation bar)
 
-IR materials are first-class primary sources — see SKILL.md § "Investor presentations are first-class primary sources" and citations.md § "Investor-relations materials — slide-level citation discipline" for the full rules.
+IR materials are first-class primary sources — see [`ir_materials.md`](ir_materials.md) (the full collection bar) and citations.md § "Investor-relations materials — slide-level citation discipline" for the full rules.
 
 - [ ] **At least 8–12 distinct IR-material citations** across the body when the company has a public IR program. Count via `grep -oE '\[[^]]*(deck|Slide|earnings deck|Investor Day|investor day|統合報告書|Integrated Report|Mid-term Plan|中期経営計画|业绩说明会|投资者关系活动|招股说明书|Shareholder Letter|Earnings Presentation|说明会 PPT)[^]]*\]\(http' <report>.md | wc -l`. Reports under 8 IR citations have under-used IR materials — go back and find the right slides.
 - [ ] **Section 1, 4, 6, 8 each contain at least 1 IR citation** when slides exist that cover that ground. Section 8 typically contains the heaviest IR citation density (2+) because the TAM build slide is the most-cited single source.
