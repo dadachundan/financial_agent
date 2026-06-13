@@ -2212,11 +2212,20 @@ _VIEWER_TMPL = r"""<!doctype html>
       return;
     }
     comments = (resp && resp.comments) || [];
-    // Anchor on any pages that are already rendered.
+    // Re-anchor pages that (a) have a comment in the new list, OR (b) still
+    // show a mark/rect in the DOM. (b) is essential: when you delete the only
+    // comment on a page, that page is absent from the new list, so without it
+    // the deleted highlight's mark would never get stripped and would linger
+    // on the page even though its rail card is gone.
     const renderedPages = new Set();
     for (const c of comments) {
       if (pageRendered[c.page - 1]) renderedPages.add(c.page);
     }
+    document.querySelectorAll('.pdf-page').forEach(div => {
+      if (div.querySelector('mark.pic-hl, .rect-hl')) {
+        renderedPages.add(parseInt(div.dataset.pageNum, 10));
+      }
+    });
     renderedPages.forEach(p => anchorCommentsOnPage(p));
     // Mark unanchored on unrendered pages as not-yet-orphan so the card
     // shows at the page placeholder; they get re-anchored when their page renders.
