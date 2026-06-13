@@ -357,6 +357,29 @@ def _episode_url(name: str) -> Optional[str]:
     return None
 
 
+def _source_url(name: str, source_desc: str) -> Optional[str]:
+    """Resolve a viewer URL for an episode, preferring the structured `name`
+    prefix but falling back to a raw `reports/…md` path stored in
+    `source_desc`.
+
+    Older episodes were seeded with a human-readable title as `name`
+    (e.g. `"CSPC (HKEX:1093) 公司研究 — 2026-06-02"`) and the relative file
+    path in `source_desc` (`"reports/company/CSPC_…/…公司研究.md"`). Those
+    don't match any `_episode_url` prefix, so their source badge rendered as
+    a dead `<span>`. When the name lookup misses, derive the markdown-viewer
+    URL from the path so the badge becomes clickable like the newer
+    `mdreport_`-prefixed episodes.
+    """
+    url = _episode_url(name)
+    if url:
+        return url
+    desc = (source_desc or "").strip()
+    if desc.startswith("reports/") and desc.endswith(".md"):
+        rel = _resolve_mdreport_rel(desc[len("reports/"):])
+        return f"/claude-reports/view/{rel}"
+    return None
+
+
 def resolve_edge_sources(conn: sqlite3.Connection,
                          episodes_json: str) -> list[dict]:
     """Return [{label, url}] for a JSON array of episode UUIDs.
@@ -374,7 +397,7 @@ def resolve_edge_sources(conn: sqlite3.Connection,
         f"SELECT name, source_desc FROM episodes WHERE uuid IN ({ph})", uuids
     ).fetchall()
     return [
-        {"label": r[1] or r[0], "url": _episode_url(r[0])}
+        {"label": r[1] or r[0], "url": _source_url(r[0], r[1])}
         for r in rows if (r[0] or r[1])
     ]
 
@@ -604,7 +627,7 @@ def search(conn: sqlite3.Connection, query: str,
         episodes = [
             {"uuid": r[0], "name": r[1] or "",
              "source_desc": r[2] or "",
-             "url": _episode_url(r[1] or "")}
+             "url": _source_url(r[1] or "", r[2] or "")}
             for r in ep_rows
         ]
 
