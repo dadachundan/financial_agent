@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Apple — 现金流向 / Cash-Flow Sankey (FY2025, US$M)</text>
+<path d="M 204.00,71.00 C 306.00,71.00 306.00,85.00 408.00,85.00 L 408.00,170.65 C 306.00,170.65 306.00,156.65 204.00,156.65 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 644.00,78.00 C 746.00,78.00 746.00,115.39 848.00,115.39 L 848.00,374.87 C 746.00,374.87 746.00,337.47 644.00,337.47 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,337.47 C 746.00,337.47 746.00,388.87 848.00,388.87 L 848.00,432.98 C 746.00,432.98 746.00,381.58 644.00,381.58 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,381.58 C 746.00,381.58 746.00,446.98 848.00,446.98 L 848.00,471.24 C 746.00,471.24 746.00,405.85 644.00,405.85 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,405.85 C 746.00,405.85 746.00,485.24 848.00,485.24 L 848.00,502.61 C 746.00,502.61 746.00,423.21 644.00,423.21 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,85.00 C 526.00,85.00 526.00,78.00 628.00,78.00 L 628.00,423.21 C 526.00,423.21 526.00,430.21 424.00,430.21 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,430.21 C 526.00,430.21 526.00,437.21 628.00,437.21 L 628.00,540.00 C 526.00,540.00 526.00,533.00 424.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,170.65 C 306.00,170.65 306.00,170.65 408.00,170.65 L 408.00,489.54 C 306.00,489.54 306.00,489.54 204.00,489.54 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,503.54 C 306.00,503.54 306.00,489.54 408.00,489.54 L 408.00,533.00 C 306.00,533.00 306.00,547.00 204.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="85.65" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="170.65" width="16" height="318.89" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="503.54" width="16" height="43.46" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="85.00" width="16" height="448.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="78.00" width="16" height="345.21" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="437.21" width="16" height="102.79" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="115.39" width="16" height="259.47" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="388.87" width="16" height="44.11" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="446.98" width="16" height="24.26" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="485.24" width="16" height="17.37" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="110.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="123.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$29.9B  (19.1%)</text>
+<rect x="207.00" y="152.65" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="164.65" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="177.65" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$111.5B  (71.2%)</text>
+<rect x="207.00" y="485.54" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="497.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="210.00" y="510.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$15.2B  (9.7%)</text>
+<rect x="427.00" y="67.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$156.6B  (100.0%)</text>
+<rect x="647.00" y="60.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$120.7B  (77.1%)</text>
+<text x="653.00" y="485.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="498.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$35.9B  (22.9%)</text>
+<text x="873.00" y="242.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">回购 Buybacks</text>
+<text x="873.00" y="255.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$90.7B  (57.9%)</text>
+<text x="873.00" y="407.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股息 Dividends</text>
+<text x="873.00" y="420.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$15.4B  (9.8%)</text>
+<text x="873.00" y="456.11" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">债务+商票净额 Debt/CP net</text>
+<text x="873.00" y="469.11" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.5B  (5.4%)</text>
+<text x="873.00" y="490.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">RSU税款 等 Other</text>
+<text x="873.00" y="503.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.1B  (3.9%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">FCF = CFO $111.5B − Capex $12.7B = $98.8B；融资净流出 $120.7B  ·  Free Cash Flow = CFO − CapEx = US$98.8B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Apple FY2025 Form 10-K, Consolidated Statements of Cash Flows p.33</text>
+</svg>
