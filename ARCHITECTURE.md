@@ -193,6 +193,8 @@ for ad-hoc tracing of one-off manual calls.
 | `db/cninfo_reports.db` | A-share/HK report metadata: ticker, market, stock_code, period, form_type, local_path, comment |
 | `db/zsxq.db` | ZSXQ PDFs: file_id, name, topic, local_path, classification tags, tickers, rating, comment, `ocr_text`. Plus the **retrieval/memory layer**: `pdf_files_fts` (trigram FTS5, BM25-ranked bilingual full-text — queried by `zsxq_fts.py`) and `pdf_cards` (agent-curated cards: covered tickers / theme / thesis / comparison-table page map — written by `zsxq_cards.py`). Both schema-owned by `zsxq_common.init_db`. |
 
+> **Backup / tracking note:** most `db/*.db` are git-ignored; `db/notes.db` is force-tracked (`!db/notes.db`). **`db/zsxq.db` is NO LONGER git-tracked** — at ~124 MB it exceeds GitHub's 100 MB hard file limit. It is backed up to **Google Cloud Storage** via [`scripts/backup_dbs_to_gcs.sh`](scripts/backup_dbs_to_gcs.sh) (SQLite Online-Backup API → integrity-check → gzip ~67 MB → timestamped + `latest` objects; read-only on the live DB, safe to run while `:5001` is up). Set `FINAGENT_GCS_BUCKET=gs://<bucket>` and run the script; restore instructions are in its header.
+
 ---
 
 ## File Storage
