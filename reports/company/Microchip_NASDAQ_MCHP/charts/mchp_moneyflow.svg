@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1058" width="1180" height="1058" role="img" aria-label="Microchip 的 COGS 与资本开支流向何方 (上游/支出视角)" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1058" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">嵌入式控制半导体 · 现金去向 · FY2025–FY2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">Microchip 的 COGS 与资本开支流向何方 (上游/支出视角)</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">MCHP 是一家 IDM：约 36% 产品来自自有晶圆厂、约 64% 来自外部代工 (主力为台湾 TSMC)；后道封测约 67% 在泰国/菲律宾自有厂内完成。营业成本与资本开支最终汇集到台积电、自有 Fab 4/5、以及亚洲后道产能这几个节点。</text>
+<ellipse cx="1031.00" cy="427.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="662.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="662.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱 / 收谁的钱</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">买什么 / 花在哪</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱最终汇集到哪</text>
+<path d="M 256.00 504.67 C 369.50 504.67, 369.50 264.17, 483.00 264.17" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 348.00 C 369.50 348.00, 369.50 241.50, 483.00 241.50" fill="none" stroke="url(#mfgold)" stroke-width="21.33" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 364.67 C 369.50 364.67, 369.50 380.50, 483.00 380.50" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 378.00 C 369.50 378.00, 369.50 499.00, 483.00 499.00" fill="none" stroke="url(#mfgold)" stroke-width="14.67" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 388.00 C 369.50 388.00, 369.50 609.00, 483.00 609.00" fill="none" stroke="url(#mfgold)" stroke-width="5.33" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 380.50 C 810.50 380.50, 810.50 369.33, 924.00 369.33" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 609.00 C 810.50 609.00, 810.50 378.00, 924.00 378.00" fill="none" stroke="url(#mfgold)" stroke-width="5.33" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 499.00 C 810.50 499.00, 810.50 482.00, 924.00 482.00" fill="none" stroke="url(#mfgold)" stroke-width="14.67" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 522.00 C 590.00 522.00, 590.00 592.00, 924.00 592.00" fill="none" stroke="url(#mfgold)" stroke-width="10.67" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 253.50 C 810.50 253.50, 810.50 262.00, 924.00 262.00" fill="none" stroke="url(#mfgold)" stroke-width="21.33" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="378.42" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">客户付款 → 营收</text>
+<text x="369.50" y="288.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">约 64% 代工</text>
+<text x="369.50" y="366.58" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">约 36% 自产</text>
+<text x="369.50" y="432.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">封测 COGS</text>
+<text x="369.50" y="492.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">FY25 $126M</text>
+<text x="590.00" y="551.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">分销渠道</text>
+<rect x="42.00" y="289.00" width="214" height="150.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="289.00" width="3" height="150.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="322.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">MICROCHIP</text>
+<text x="60.00" y="343.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">IDM·MCU+模拟+FPGA</text>
+<text x="60.00" y="360.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">FY26 营收 $4,713.1M</text>
+<text x="60.00" y="377.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">FY26 COGS $1,992.0M</text>
+<rect x="42.00" y="455.00" width="214" height="110.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="455.00" width="3" height="110.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="488.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">终端客户 + 分销</text>
+<text x="60.00" y="509.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">约 109,000 家终端客户</text>
+<text x="60.00" y="526.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">45% 经分销 / 55% 直销</text>
+<rect x="483.00" y="198.00" width="214" height="111.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="483.00" y="198.00" width="3" height="111.00" rx="2" fill="#34d399"/>
+<text x="501.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">外部代工晶圆</text>
+<text x="501.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">约 64% 产品输出</text>
+<text x="501.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">100% 的 300mm 需求</text>
+<text x="501.00" y="286.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">≤90nm 节点</text>
+<rect x="483.00" y="325.00" width="214" height="111.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="325.00" width="3" height="111.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="358.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">自有晶圆厂</text>
+<text x="501.00" y="379.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">约 36% 产品输出</text>
+<text x="501.00" y="396.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">Fab 4 (俄勒冈)·Fab 5 (科罗拉多)</text>
+<text x="501.00" y="413.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">≥110nm</text>
+<rect x="483.00" y="452.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="452.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="485.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">封装 / 测试</text>
+<text x="501.00" y="506.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">约 67% 内部完成</text>
+<text x="501.00" y="523.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">泰国 + 菲律宾后道厂</text>
+<rect x="483.00" y="562.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="562.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="595.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">资本开支</text>
+<text x="501.00" y="616.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">FY25 $126M·FY27E 约 $100M</text>
+<text x="501.00" y="633.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Fab 4/5 扩产已暂停</text>
+<rect x="924.00" y="215.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="215.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="248.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">TSMC + 亚洲代工</text>
+<text x="942.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">核心代工伙伴</text>
+<text x="942.00" y="286.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">台湾产能集中度风险</text>
+<rect x="924.00" y="325.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="325.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="358.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Fab 4 / Fab 5</text>
+<text x="942.00" y="379.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">Fab 2 已于 2025-05 关闭</text>
+<text x="942.00" y="396.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">工艺转移至 Fab 4/5</text>
+<rect x="924.00" y="435.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="435.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="468.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">泰国 / 菲律宾后道</text>
+<text x="942.00" y="489.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">自有封测产能</text>
+<text x="942.00" y="506.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">亚洲发货方案规避关税</text>
+<rect x="924.00" y="545.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="545.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="578.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">Arrow Electronics</text>
+<text x="942.00" y="599.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">最大分销商</text>
+<text x="942.00" y="616.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY25 占营收 10%</text>
+<rect x="42.00" y="682.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="686.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="684.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="684.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="684.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="684.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="686.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="686.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="677.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="747.00" y="686.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="821.40" y="677.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="840.40" y="686.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="979.60" y="677.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="998.60" y="686.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="42.00" y="697.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="61.00" y="706.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="185.80" y="697.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="204.80" y="706.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="722.00" x2="1138" y2="722.00" stroke="#222a3a"/>
+<text x="42.00" y="738.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">顺着钱看 MICROCHIP</text>
+<rect x="42.00" y="758.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="758.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="782.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">外部代工 · 买成品晶圆</text>
+<text x="58.00" y="800.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">约 64% 靠代工</text>
+<text x="58.00" y="824.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 约</tspan><tspan fill="#f4d58a" font-weight="700"> 64%</tspan><tspan fill="#9aa3b8" font-weight="400"> 的产品输出来自外部代工厂，且</tspan><tspan fill="#f4d58a" font-weight="700"> 100%</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#9aa3b8" font-weight="400"> 300mm</tspan></text>
+<text x="58.00" y="840.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">晶圆需求外包，核心伙伴为台湾</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan><tspan fill="#9aa3b8" font-weight="400"> ——这是</tspan><tspan fill="#9aa3b8" font-weight="400"> MCHP</tspan><tspan fill="#9aa3b8" font-weight="400"> 最大的单一上游成本与地缘集中度风险。</tspan></text>
+<rect x="412.00" y="758.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="758.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="782.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">自有晶圆 · 内部制造</text>
+<text x="428.00" y="800.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">约 36% 自产</text>
+<text x="428.00" y="824.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">其余约</tspan><tspan fill="#f4d58a" font-weight="700"> 36%</tspan><tspan fill="#9aa3b8" font-weight="400"> 来自自有</tspan><tspan fill="#f4d58a" font-weight="700"> Fab</tspan><tspan fill="#f4d58a" font-weight="700"> 4</tspan><tspan fill="#9aa3b8" font-weight="400"> (俄勒冈)</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#f4d58a" font-weight="700"> Fab</tspan><tspan fill="#f4d58a" font-weight="700"> 5</tspan><tspan fill="#9aa3b8" font-weight="400"> (科罗拉多)；</tspan><tspan fill="#f4d58a" font-weight="700"> Fab</tspan><tspan fill="#f4d58a" font-weight="700"> 2</tspan><tspan fill="#9aa3b8" font-weight="400"> 已于</tspan></text>
+<text x="428.00" y="840.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">2025-05</tspan><tspan fill="#9aa3b8" font-weight="400"> 关闭，工艺转移至</tspan><tspan fill="#9aa3b8" font-weight="400"> Fab</tspan><tspan fill="#9aa3b8" font-weight="400"> 4/5，年化节省约</tspan><tspan fill="#f4d58a" font-weight="700"> $90M</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="782.00" y="758.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="782.00" y="758.00" width="3" height="116.00" rx="2" fill="#d9a05b"/>
+<text x="798.00" y="782.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">后道 · 封装测试</text>
+<text x="798.00" y="800.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">约 67% 内部封测</text>
+<text x="798.00" y="824.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">后道封装与测试约</tspan><tspan fill="#f4d58a" font-weight="700"> 67%</tspan><tspan fill="#9aa3b8" font-weight="400"> 在</tspan><tspan fill="#f4d58a" font-weight="700"> 泰国</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#f4d58a" font-weight="700"> 菲律宾</tspan></text>
+<text x="798.00" y="840.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">的自有厂内完成，并用'亚洲发货方案'缓释关税——关税口径已从'封装地'转向'晶圆厂所在地'。</tspan></text>
+<rect x="42.00" y="888.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="888.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="912.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">资本纪律 · 现金留存</text>
+<text x="58.00" y="930.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">资本开支腰斩</text>
+<text x="58.00" y="954.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 资本开支仅</tspan><tspan fill="#f4d58a" font-weight="700"> $126M</tspan><tspan fill="#9aa3b8" font-weight="400"> 、FY2027E</tspan><tspan fill="#9aa3b8" font-weight="400"> 指引约</tspan><tspan fill="#f4d58a" font-weight="700"> $100M</tspan><tspan fill="#9aa3b8" font-weight="400"> (历史运行率</tspan><tspan fill="#f4d58a" font-weight="700"> $4–5亿</tspan></text>
+<text x="58.00" y="970.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">)；Fab</tspan><tspan fill="#9aa3b8" font-weight="400"> 4/5</tspan><tspan fill="#9aa3b8" font-weight="400"> 大扩产暂停，为偿债与派息保留现金。</tspan></text>
+<rect x="412.00" y="888.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="888.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="912.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">渠道 · 客户集中度低</text>
+<text x="428.00" y="930.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Arrow = 唯一 &gt;10%</text>
+<text x="428.00" y="954.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">约</tspan><tspan fill="#f4d58a" font-weight="700"> 45%</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收经分销渠道，</tspan><tspan fill="#f4d58a" font-weight="700"> Arrow</tspan><tspan fill="#f4d58a" font-weight="700"> Electronics</tspan><tspan fill="#9aa3b8" font-weight="400"> 是唯一占营收</tspan><tspan fill="#9aa3b8" font-weight="400"> ≥10%</tspan><tspan fill="#9aa3b8" font-weight="400"> 的对手方</tspan></text>
+<text x="428.00" y="970.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">(FY25</tspan><tspan fill="#f4d58a" font-weight="700"> 10%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，FY24</tspan><tspan fill="#f4d58a" font-weight="700"> 12%</tspan><tspan fill="#9aa3b8" font-weight="400"> )；终端客户集中度极低，与宽线模拟/MCU</tspan><tspan fill="#9aa3b8" font-weight="400"> 模式一致。</tspan></text>
+<rect x="782.00" y="888.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="888.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="912.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">毛利杠杆 · 钱回到哪</text>
+<text x="798.00" y="930.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">利用率回升 = 毛利回流</text>
+<text x="798.00" y="954.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">底部季度承担大量未吸收产能费用</tspan><tspan fill="#9aa3b8" font-weight="400"> (FY25</tspan><tspan fill="#f4d58a" font-weight="700"> $132.3M</tspan><tspan fill="#9aa3b8" font-weight="400"> )</tspan><tspan fill="#9aa3b8" font-weight="400"> 与库存准备金</tspan><tspan fill="#9aa3b8" font-weight="400"> (</tspan><tspan fill="#f4d58a" font-weight="700"> $87.7M</tspan></text>
+<text x="798.00" y="970.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">)；随利用率回升二者反转，复苏期非</tspan><tspan fill="#9aa3b8" font-weight="400"> GAAP</tspan><tspan fill="#9aa3b8" font-weight="400"> 增量毛利率</tspan><tspan fill="#f4d58a" font-weight="700"> 70%+</tspan><tspan fill="#9aa3b8" font-weight="400"> ，是估值重估的核心。</tspan></text>
+<text x="590.00" y="1040.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Microchip FY2025 10-K (制造章节/MD&amp;A) + FY2026 Q4 8-K Ex.99.1 (2026-05-07) + J.P. Morgan TMC 会议要点 (2026-05-22)</text>
+</svg>
