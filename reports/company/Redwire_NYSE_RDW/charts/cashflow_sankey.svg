@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">现金流 (Cash flow) · FY2025</text>
+<path d="M 204.00,63.52 C 306.00,63.52 306.00,78.00 408.00,78.00 L 408.00,128.68 C 306.00,128.68 306.00,114.20 204.00,114.20 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,64.00 628.00,64.00 L 628.00,247.00 C 526.00,247.00 526.00,261.00 424.00,261.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,261.00 C 526.00,261.00 526.00,261.00 628.00,261.00 L 628.00,441.74 C 526.00,441.74 526.00,441.74 424.00,441.74 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,441.74 C 526.00,441.74 526.00,455.74 628.00,455.74 L 628.00,554.00 C 526.00,554.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,128.20 C 306.00,128.20 306.00,128.68 408.00,128.68 L 408.00,538.97 C 306.00,538.97 306.00,538.48 204.00,538.48 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 644.00,261.00 C 746.00,261.00 746.00,204.63 848.00,204.63 L 848.00,361.32 C 746.00,361.32 746.00,417.69 644.00,417.69 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,417.69 C 746.00,417.69 746.00,375.32 848.00,375.32 L 848.00,389.25 C 746.00,389.25 746.00,431.62 644.00,431.62 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,431.62 C 746.00,431.62 746.00,403.25 848.00,403.25 L 848.00,413.37 C 746.00,413.37 746.00,441.74 644.00,441.74 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,552.48 C 306.00,552.48 306.00,538.97 408.00,538.97 L 408.00,540.97 C 306.00,540.97 306.00,554.48 204.00,554.48 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="63.52" width="16" height="50.68" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="128.20" width="16" height="410.29" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="552.48" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="64.00" width="16" height="183.00" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="261.00" width="16" height="180.73" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="455.74" width="16" height="98.26" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="204.63" width="16" height="156.68" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="375.32" width="16" height="13.93" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="403.25" width="16" height="10.12" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="85.86" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="98.86" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$49.1M  (11.0%)</text>
+<rect x="207.00" y="93.71" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="105.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="210.00" y="118.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$397.5M  (88.8%)</text>
+<rect x="207.00" y="518.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="210.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.0M  (0.22%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$447.6M  (100.0%)</text>
+<rect x="647.00" y="46.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="650.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$177.3M  (39.6%)</text>
+<rect x="647.00" y="243.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="255.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="268.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$175.1M  (39.1%)</text>
+<text x="653.00" y="501.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="514.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$95.2M  (21.3%)</text>
+<text x="873.00" y="279.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Edge acquisition</text>
+<text x="873.00" y="292.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$151.8M  (33.9%)</text>
+<text x="873.00" y="379.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Capex</text>
+<text x="873.00" y="392.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$13.5M  (3.0%)</text>
+<text x="873.00" y="405.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Intangibles</text>
+<text x="873.00" y="418.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$9.8M  (2.2%)</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Redwire FY2025 10-K, Consolidated Statements of Cash Flows</text>
+</svg>

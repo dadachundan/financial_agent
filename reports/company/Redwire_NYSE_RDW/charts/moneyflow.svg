@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1066" width="1180" height="1066" role="img" aria-label="钱从哪来、又去了哪 — Redwire 的现金来源与用途" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1066" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">REDWIRE 资金流向 · FY2025 SOURCES &amp; USES OF CASH</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱从哪来、又去了哪 — Redwire 的现金来源与用途</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">客户收入 $335.4M 远不足以支撑运营与扩张；真正的资金引擎是 $518.4M 的股权 / ATM 增发，用于并购 Edge Autonomy、偿还旧债与回购优先股——代价是持续摊薄。供应商未在 10-K 具名，故本图采用『现金来源与用途』口径，非上游供应链。</text>
+<ellipse cx="1031.00" cy="431.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="670.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="670.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">资金来源 / Sources</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Redwire</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">资金用途 / Uses</text>
+<path d="M 256.00 329.50 C 369.50 329.50, 369.50 414.00, 483.00 414.00" fill="none" stroke="url(#mfgold)" stroke-width="18.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 448.00 C 369.50 448.00, 369.50 435.00, 483.00 435.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 549.50 C 369.50 549.50, 369.50 452.00, 483.00 452.00" fill="none" stroke="url(#mfgold)" stroke-width="10.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 412.00 C 810.50 412.00, 810.50 245.00, 924.00 245.00" fill="none" stroke="url(#mfgold)" stroke-width="18.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 426.50 C 810.50 426.50, 810.50 346.50, 924.00 346.50" fill="none" stroke="url(#mfgold)" stroke-width="11.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 436.50 C 810.50 436.50, 810.50 439.50, 924.00 439.50" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 447.50 C 810.50 447.50, 810.50 532.50, 924.00 532.50" fill="none" stroke="url(#mfgold)" stroke-width="13.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 456.50 C 810.50 456.50, 810.50 625.50, 924.00 625.50" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<text x="369.50" y="365.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$335.4M</text>
+<text x="369.50" y="435.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$518.4M</text>
+<text x="369.50" y="494.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$191.1M</text>
+<text x="810.50" y="322.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$318.1M</text>
+<text x="810.50" y="380.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$191.0M</text>
+<text x="810.50" y="432.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$151.8M</text>
+<text x="810.50" y="484.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$234.2M</text>
+<text x="810.50" y="535.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$63.9M</text>
+<rect x="42.00" y="274.00" width="214" height="111.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="274.00" width="3" height="111.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="307.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">CUSTOMER REVENUE</text>
+<text x="60.00" y="328.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Nat security 46.9%</text>
+<text x="60.00" y="345.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Commercial 31.5%</text>
+<text x="60.00" y="362.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Civil 21.6%</text>
+<rect x="42.00" y="401.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="401.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="434.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">EQUITY / ATM</text>
+<text x="60.00" y="455.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">FY2025 issuance + ATM</text>
+<text x="60.00" y="472.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">new $500M ATM Jun-2026</text>
+<rect x="42.00" y="511.00" width="214" height="77.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="511.00" width="3" height="77.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="544.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">DEBT DRAWN</text>
+<text x="60.00" y="565.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">JPMorgan term loan + revolver</text>
+<rect x="483.00" y="356.00" width="214" height="150.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="356.00" width="3" height="150.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="389.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">REDWIRE</text>
+<text x="501.00" y="410.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Space $209.8M</text>
+<text x="501.00" y="427.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Defense Tech $125.6M</text>
+<text x="501.00" y="444.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Net loss $(226.6)M</text>
+<rect x="924.00" y="198.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="198.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">COST OF SALES</text>
+<text x="942.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">95% of revenue</text>
+<text x="942.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">gross margin 5.2%</text>
+<rect x="924.00" y="308.00" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="308.00" width="3" height="77.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="341.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">SG&amp;A + R&amp;D</text>
+<text x="942.00" y="362.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">incl $59.0M equity comp</text>
+<rect x="924.00" y="401.00" width="214" height="77.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="401.00" width="3" height="77.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="434.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">EDGE ACQUISITION</text>
+<text x="942.00" y="455.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">cash leg of $925M deal</text>
+<rect x="924.00" y="494.00" width="214" height="77.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="494.00" width="3" height="77.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="527.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">DEBT REPAID</text>
+<text x="942.00" y="548.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">cleared Adams Street + Seller Note</text>
+<rect x="924.00" y="587.00" width="214" height="77.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="587.00" width="3" height="77.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="620.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">PREFERRED BUYBACK</text>
+<text x="942.00" y="641.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Series A convertible</text>
+<rect x="42.00" y="690.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="692.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="692.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="692.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="692.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="685.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="747.00" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="871.80" y="685.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="890.80" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="972.40" y="685.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="991.40" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="42.00" y="705.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="61.00" y="714.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="128.20" y="705.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="147.20" y="714.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="264.80" y="705.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="283.80" y="714.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">buyer</text>
+<line x1="42" y1="730.00" x2="1138" y2="730.00" stroke="#222a3a"/>
+<text x="42.00" y="746.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — FY2025 现金来源与用途</text>
+<rect x="42.00" y="766.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="766.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="790.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">来源 · 股权</text>
+<text x="58.00" y="808.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">ATM 才是真正的资金引擎</text>
+<text x="58.00" y="832.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 股权增发</tspan><tspan fill="#f4d58a" font-weight="700"> $518.4M</tspan><tspan fill="#9aa3b8" font-weight="400"> 远超</tspan><tspan fill="#f4d58a" font-weight="700"> $335.4M</tspan><tspan fill="#9aa3b8" font-weight="400"> 客户收入；加权股本由</tspan><tspan fill="#f4d58a" font-weight="700"> 71.2M</tspan><tspan fill="#9aa3b8" font-weight="400"> 膨胀至</tspan></text>
+<text x="58.00" y="848.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">193.7M</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="412.00" y="766.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="766.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="790.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">新增 · 2026-06</text>
+<text x="428.00" y="808.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">$350M ATM 售罄、$500M 接棒</text>
+<text x="428.00" y="832.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> 5</tspan><tspan fill="#9aa3b8" font-weight="400"> 月的</tspan><tspan fill="#f4d58a" font-weight="700"> $350M</tspan><tspan fill="#9aa3b8" font-weight="400"> ATM</tspan><tspan fill="#9aa3b8" font-weight="400"> 已全部售出（</tspan><tspan fill="#f4d58a" font-weight="700"> $349,999,993.77</tspan><tspan fill="#9aa3b8" font-weight="400"> ）并于</tspan></text>
+<text x="428.00" y="848.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">2026-06-09</tspan><tspan fill="#9aa3b8" font-weight="400"> 终止，同日由新的</tspan><tspan fill="#f4d58a" font-weight="700"> $500M</tspan><tspan fill="#9aa3b8" font-weight="400"> ATM</tspan><tspan fill="#9aa3b8" font-weight="400"> 取代。</tspan></text>
+<rect x="782.00" y="766.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="782.00" y="766.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="798.00" y="790.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">瓶颈 · COGS</text>
+<text x="798.00" y="808.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">成本吞掉每一元收入的 95 分</text>
+<text x="798.00" y="832.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Cost</tspan><tspan fill="#9aa3b8" font-weight="400"> of</tspan><tspan fill="#9aa3b8" font-weight="400"> sales</tspan><tspan fill="#f4d58a" font-weight="700"> $318.1M</tspan><tspan fill="#9aa3b8" font-weight="400"> ，仅剩</tspan><tspan fill="#f4d58a" font-weight="700"> $17.3M</tspan><tspan fill="#9aa3b8" font-weight="400"> 毛利（GM</tspan><tspan fill="#f4d58a" font-weight="700"> 5.2%</tspan><tspan fill="#9aa3b8" font-weight="400"> ）；净</tspan><tspan fill="#9aa3b8" font-weight="400"> EAC</tspan></text>
+<text x="798.00" y="848.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">调整</tspan><tspan fill="#f4d58a" font-weight="700"> −$54.5M</tspan><tspan fill="#9aa3b8" font-weight="400"> 是关键摆动项。</tspan></text>
+<rect x="42.00" y="896.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="42.00" y="896.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="58.00" y="920.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">用途 · 并购</text>
+<text x="58.00" y="938.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Edge Autonomy 转型之钥</text>
+<text x="58.00" y="962.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$151.8M</tspan><tspan fill="#9aa3b8" font-weight="400"> 现金（净）+</tspan><tspan fill="#f4d58a" font-weight="700"> $775M</tspan><tspan fill="#9aa3b8" font-weight="400"> 股票完成</tspan><tspan fill="#f4d58a" font-weight="700"> $925M</tspan><tspan fill="#9aa3b8" font-weight="400"> 收购，催生</tspan><tspan fill="#9aa3b8" font-weight="400"> Defense</tspan><tspan fill="#9aa3b8" font-weight="400"> Tech</tspan></text>
+<text x="58.00" y="978.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">分部。</tspan></text>
+<rect x="412.00" y="896.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="412.00" y="896.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="428.00" y="920.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">用途 · 债务</text>
+<text x="428.00" y="938.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">债务是周转、非扩张</text>
+<text x="428.00" y="962.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">借入</tspan><tspan fill="#f4d58a" font-weight="700"> $191.1M</tspan><tspan fill="#9aa3b8" font-weight="400"> 、偿还</tspan><tspan fill="#f4d58a" font-weight="700"> $234.2M</tspan><tspan fill="#9aa3b8" font-weight="400"> ——清偿旧</tspan><tspan fill="#9aa3b8" font-weight="400"> Adams</tspan><tspan fill="#9aa3b8" font-weight="400"> Street</tspan><tspan fill="#9aa3b8" font-weight="400"> 贷款与</tspan><tspan fill="#9aa3b8" font-weight="400"> Seller</tspan></text>
+<text x="428.00" y="978.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Note；JPMorgan</tspan><tspan fill="#9aa3b8" font-weight="400"> 定期贷款</tspan><tspan fill="#f4d58a" font-weight="700"> $83.25M</tspan><tspan fill="#9aa3b8" font-weight="400"> 于</tspan><tspan fill="#9aa3b8" font-weight="400"> 2027</tspan><tspan fill="#9aa3b8" font-weight="400"> 年到期。</tspan></text>
+<text x="590.00" y="1048.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Redwire FY2025 10-K (cash-flow &amp; income statements, Note P) · June 2026 ATM 8-K + 424B5 (Reg. No. 333-289380)</text>
+</svg>
