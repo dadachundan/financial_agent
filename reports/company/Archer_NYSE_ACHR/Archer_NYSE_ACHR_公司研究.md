@@ -123,6 +123,143 @@
 
 来源 / Source：[ACHR FY2025 10-K — Consolidated Statements of Cash Flows](https://www.sec.gov/Archives/edgar/data/1824502/000182450226000019/achr-20251231.htm)。
 
+### 资产负债表结构 / Balance sheet —— 厚现金垫、近乎零杠杆（FY2025）
+
+与"烧钱"相对的，是 Archer **异常厚实、近乎零杠杆的资产负债表**：FY2025 年末总资产 $2,465.9M，其中 **84.2% 是流动资产**——现金及等价物 $1,021.5M + 短期投资 $943.2M（合计约 $1.96bn 的现金垫）是公司穿越取证前烧钱期的核心缓冲；非流动资产主要是 property & equipment（厂房设备）$253.6M（乔治亚 Covington 工厂）与无形资产 $80.2M。负债端总额仅 $263.1M（占总资产 **10.7%**），且无大额有息债务（长期债务仅 $79.5M），基本零杠杆。权益 $2,202.8M 看似很高，但它是 **paid-in capital（实收资本）$4,507.9M 减去 accumulated deficit（累计赤字）$2,303.8M** 的净额——后者正是公司自成立以来累计烧掉的现金（[ACHR FY2025 10-K — Consolidated Balance Sheets](https://www.sec.gov/Archives/edgar/data/1824502/000182450226000019/achr-20251231.htm)）。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Archer Aviation (ACHR) 资产负债表 / Balance Sheet — FY2025 (USD mn)</text>
+<path d="M 204.00,63.56 C 262.00,63.56 262.00,113.00 320.00,113.00 L 320.00,269.59 C 262.00,269.59 262.00,220.15 204.00,220.15 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,106.00 C 790.00,106.00 790.00,62.46 848.00,62.46 L 848.00,67.09 C 790.00,67.09 790.00,110.63 732.00,110.63 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,110.63 C 790.00,110.63 790.00,81.09 848.00,81.09 L 848.00,91.53 C 790.00,91.53 790.00,121.07 732.00,121.07 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,121.07 C 790.00,121.07 790.00,105.53 848.00,105.53 L 848.00,107.53 C 790.00,107.53 790.00,123.07 732.00,123.07 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,123.07 C 790.00,123.07 790.00,121.53 848.00,121.53 L 848.00,123.53 C 790.00,123.53 790.00,125.07 732.00,125.07 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,113.00 C 658.00,113.00 658.00,106.00 716.00,106.00 L 716.00,122.00 C 658.00,122.00 658.00,129.00 600.00,129.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 336.00,113.00 C 394.00,113.00 394.00,120.00 452.00,120.00 L 452.00,438.25 C 394.00,438.25 394.00,431.25 336.00,431.25 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 600.00,129.00 C 658.00,129.00 658.00,136.00 716.00,136.00 L 716.00,160.33 C 658.00,160.33 658.00,153.33 600.00,153.33 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,120.00 C 526.00,120.00 526.00,113.00 584.00,113.00 L 584.00,153.33 C 526.00,153.33 526.00,160.33 468.00,160.33 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,160.33 C 526.00,160.33 526.00,167.33 584.00,167.33 L 584.00,505.00 C 526.00,505.00 526.00,498.00 468.00,498.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,136.00 C 790.00,136.00 790.00,137.53 848.00,137.53 L 848.00,149.72 C 790.00,149.72 790.00,148.19 732.00,148.19 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,148.19 C 790.00,148.19 790.00,163.72 848.00,163.72 L 848.00,169.28 C 790.00,169.28 790.00,153.75 732.00,153.75 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,153.75 C 790.00,153.75 790.00,183.28 848.00,183.28 L 848.00,187.87 C 790.00,187.87 790.00,158.34 732.00,158.34 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,158.34 C 790.00,158.34 790.00,201.87 848.00,201.87 L 848.00,203.87 C 790.00,203.87 790.00,160.34 732.00,160.34 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,167.33 C 658.00,167.33 658.00,174.33 716.00,174.33 L 716.00,512.00 C 658.00,512.00 658.00,505.00 600.00,505.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,174.33 C 790.00,174.33 790.00,217.87 848.00,217.87 L 848.00,555.54 C 790.00,555.54 790.00,512.00 732.00,512.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,234.15 C 262.00,234.15 262.00,269.59 320.00,269.59 L 320.00,414.17 C 262.00,414.17 262.00,378.73 204.00,378.73 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,392.73 C 262.00,392.73 262.00,414.17 320.00,414.17 L 320.00,416.17 C 262.00,416.17 262.00,394.73 204.00,394.73 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,408.73 C 262.00,408.73 262.00,416.17 320.00,416.17 L 320.00,423.42 C 262.00,423.42 262.00,415.98 204.00,415.98 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,429.98 C 262.00,429.98 262.00,423.42 320.00,423.42 L 320.00,432.13 C 262.00,432.13 262.00,438.69 204.00,438.69 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 336.00,445.25 C 394.00,445.25 394.00,438.25 452.00,438.25 L 452.00,498.00 C 394.00,498.00 394.00,505.00 336.00,505.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,452.69 C 262.00,452.69 262.00,445.25 320.00,445.25 L 320.00,484.12 C 262.00,484.12 262.00,491.56 204.00,491.56 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,505.56 C 262.00,505.56 262.00,484.12 320.00,484.12 L 320.00,496.42 C 262.00,496.42 262.00,517.86 204.00,517.86 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,531.86 C 262.00,531.86 262.00,496.42 320.00,496.42 L 320.00,502.67 C 262.00,502.67 262.00,538.11 204.00,538.11 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,552.11 C 262.00,552.11 262.00,502.67 320.00,502.67 L 320.00,505.00 C 262.00,505.00 262.00,554.44 204.00,554.44 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="63.56" width="16" height="156.59" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="234.15" width="16" height="144.58" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="392.73" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="408.73" width="16" height="7.25" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="429.98" width="16" height="8.71" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="452.69" width="16" height="38.87" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="505.56" width="16" height="12.29" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="531.86" width="16" height="6.25" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="552.11" width="16" height="2.33" rx="1.5" fill="#2563eb"/>
+<rect x="320.00" y="113.00" width="16" height="318.25" rx="1.5" fill="#15803d"/>
+<rect x="320.00" y="445.25" width="16" height="59.75" rx="1.5" fill="#15803d"/>
+<rect x="452.00" y="120.00" width="16" height="378.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="584.00" y="113.00" width="16" height="40.33" rx="1.5" fill="#dc2626"/>
+<rect x="584.00" y="167.33" width="16" height="337.67" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="106.00" width="16" height="16.00" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="136.00" width="16" height="24.33" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="174.33" width="16" height="337.67" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="62.46" width="16" height="4.63" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="81.09" width="16" height="10.44" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="105.53" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="121.53" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="137.53" width="16" height="12.19" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="163.72" width="16" height="5.56" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="183.28" width="16" height="4.58" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="201.87" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="217.87" width="16" height="337.67" rx="1.5" fill="#15803d"/>
+<line x1="188.00" y1="141.85" x2="182.00" y2="107.14" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="110.14" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cash &amp; Equivalents</text>
+<text x="179.00" y="123.14" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.0B  (41.4%)</text>
+<line x1="188.00" y1="306.44" x2="182.00" y2="271.73" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="274.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Short-term Investments</text>
+<text x="179.00" y="287.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$943.2M  (38.2%)</text>
+<line x1="188.00" y1="393.73" x2="182.00" y2="359.02" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="362.02" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Restricted Cash</text>
+<text x="179.00" y="375.02" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$7.3M  (0.30%)</text>
+<line x1="188.00" y1="412.36" x2="182.00" y2="384.02" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="387.02" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Prepaid Expenses</text>
+<text x="179.00" y="400.02" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$47.3M  (1.9%)</text>
+<line x1="188.00" y1="434.33" x2="182.00" y2="409.02" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="412.02" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other Current</text>
+<text x="179.00" y="425.02" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$56.8M  (2.3%)</text>
+<line x1="188.00" y1="472.12" x2="182.00" y2="437.42" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="440.42" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Property &amp; Equipment, net</text>
+<text x="179.00" y="453.42" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$253.6M  (10.3%)</text>
+<line x1="188.00" y1="511.71" x2="182.00" y2="477.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="480.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Intangibles</text>
+<text x="179.00" y="493.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$80.2M  (3.3%)</text>
+<line x1="188.00" y1="534.98" x2="182.00" y2="502.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="505.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Right-of-Use Assets</text>
+<text x="179.00" y="518.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$40.8M  (1.7%)</text>
+<line x1="188.00" y1="553.28" x2="182.00" y2="527.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="530.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Goodwill &amp; Other LT</text>
+<text x="179.00" y="543.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$15.2M  (0.62%)</text>
+<rect x="339.00" y="95.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="107.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
+<text x="342.00" y="120.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.1B  (84.2%)</text>
+<rect x="339.00" y="427.25" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="439.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
+<text x="342.00" y="452.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$389.8M  (15.8%)</text>
+<rect x="471.00" y="102.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="474.00" y="114.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
+<text x="474.00" y="127.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.5B  (100.0%)</text>
+<rect x="603.00" y="95.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="107.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
+<text x="606.00" y="120.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$263.1M  (10.7%)</text>
+<rect x="603.00" y="149.33" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="161.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
+<text x="606.00" y="174.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.2B  (89.3%)</text>
+<rect x="735.00" y="88.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="100.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
+<text x="738.00" y="113.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$104.4M  (4.2%)</text>
+<rect x="735.00" y="118.00" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="130.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
+<text x="738.00" y="143.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$158.7M  (6.4%)</text>
+<rect x="735.00" y="156.33" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="168.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
+<text x="738.00" y="181.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.2B  (89.3%)</text>
+<text x="873.00" y="61.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Accounts Payable</text>
+<text x="873.00" y="74.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$30.2M  (1.2%)</text>
+<text x="873.00" y="86.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Accrued &amp; Other</text>
+<text x="873.00" y="99.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$68.1M  (2.8%)</text>
+<text x="873.00" y="111.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Lease (current)</text>
+<text x="873.00" y="124.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.3M  (0.21%)</text>
+<line x1="864.00" y1="122.53" x2="870.00" y2="133.78" stroke="#cbd5e1" stroke-width="1"/>
+<text x="873.00" y="136.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Debt (current)</text>
+<text x="873.00" y="149.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$800.0K  (0.03%)</text>
+<line x1="864.00" y1="143.63" x2="870.00" y2="158.78" stroke="#cbd5e1" stroke-width="1"/>
+<text x="873.00" y="161.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Debt (LT)</text>
+<text x="873.00" y="174.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$79.5M  (3.2%)</text>
+<line x1="864.00" y1="166.50" x2="870.00" y2="183.78" stroke="#cbd5e1" stroke-width="1"/>
+<text x="873.00" y="186.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Lease (LT)</text>
+<text x="873.00" y="199.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$36.3M  (1.5%)</text>
+<line x1="864.00" y1="185.58" x2="870.00" y2="208.78" stroke="#cbd5e1" stroke-width="1"/>
+<text x="873.00" y="211.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Warrant Liabilities</text>
+<text x="873.00" y="224.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$29.9M  (1.2%)</text>
+<line x1="864.00" y1="202.87" x2="870.00" y2="233.78" stroke="#cbd5e1" stroke-width="1"/>
+<text x="873.00" y="236.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other LT Liab</text>
+<text x="873.00" y="249.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$13.0M  (0.53%)</text>
+<text x="873.00" y="383.70" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Paid-in less deficit</text>
+<text x="873.00" y="396.70" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.2B  (89.3%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">厚现金垫、近乎零杠杆:总负债仅占总资产 10.7%;权益 = 实收资本 $4,507.9M − 累计赤字 $2,303.8M</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: ACHR FY2025 10-K, Consolidated Balance Sheets</text>
+</svg>
+
+来源 / Source：[ACHR FY2025 10-K — Consolidated Balance Sheets](https://www.sec.gov/Archives/edgar/data/1824502/000182450226000019/achr-20251231.htm)。
+
 **估值快照（valuation snapshot）。** 截至 2026-06-12，ACHR 收盘 $5.08，约 762.86M 流通股对应市值约 $3.9bn（[yfinance ACHR, 2026-06-12](https://finance.yahoo.com/quote/ACHR/)）。**传统倍数对一个 pre-revenue 公司基本失效**：TTM P/E 为负（FY2025 净亏 $618.2M，本质是「现金燃烧型成长」叠加取证前的纯研发投入，驱动亏损的科目是 R&D $493.9M + G&A $235.4M，见 [10-K 利润表](https://www.sec.gov/Archives/edgar/data/1824502/000182450226000019/achr-20251231.htm)）；P/S 因 FY2025 营收仅 $0.3M 而无意义。唯一有锚的倍数是 **P/B 1.76×**（市值 $3.9bn ÷ 账面权益 $2.2bn），以及把账面 $1.78bn 现金+短投扣除后的 **企业价值 EV≈$2.2bn**——即市场对「Archer 的技术、IP、取证进度与商业期权」的净定价约 $2.2bn。同业里，Joby（JOBY）市值约 $9.0bn（约 983.6M 股 × $9.15）、EHang（EH）市值约 $0.5bn（[yfinance JOBY/EH, 2026-06-12](https://finance.yahoo.com/quote/JOBY/)）——Archer 介于「美国取证领跑者 Joby」与「中国已取证商运的 EHang」之间，市值约为 Joby 的 0.4 倍。**这个高溢价（相对账面、相对营收）属于赛道叙事溢价（narrative / thematic premium）**：市场把它当作 eVTOL/低空经济（low-altitude economy）主题的美股代理之一，定价的是 2030 年代的 TAM，而非当期基本面（这一溢价的合理性见 §6/§8 TAM 与 §9 估值风险）。
 
 > *分析师观点：* 我们用「市值 ÷ 现金垫」框架看待此类标的：Archer 的 EV≈$2.2bn 隐含市场愿意为「尚未取证、尚未量产」的商业期权付约 1.2 倍账面现金的溢价——比 Joby 便宜（Joby EV 约为现金的数倍），但远谈不上「安全边际」。
@@ -352,6 +489,134 @@ Archer 的逻辑是**「一套核心电动航空技术，三个变现出口」**
 - [Real Engineering — eVTOL/air taxi 的工程原理与取证难点，帮助理解为何「能飞」与「能取证载客」是两件事](https://www.youtube.com/@RealEngineering)
 
 ---
+
+### 4.6 资金流向 / Follow the money —— 谁（将）付钱、现金又烧向谁
+
+把 Archer 的"价值链资金流"画给读者看最直观。**左侧是需求侧（未来的钱）**：United Airlines 有条件采购 up to $1.0bn 的飞机（另有 $500M 期权，均以 FAA 取证为前提）、美国国防部经与 Anduril 的战略合作采购国防两用机型、UAE / 阿布扎比 Launch Edition 先行市场（[ACHR FY2025 10-K — Item 1 Business（United Purchase Agreement & Anduril partnership）](https://www.sec.gov/Archives/edgar/data/1824502/000182450226000019/achr-20251231.htm)）。**右侧才是当期真正在流的现金**：对一家 pre-revenue 公司，最大的"供应商"其实是自己的工程团队（FY2025 研发 R&D $493.9M + 股权激励 SBC $223.5M），其次是与 Stellantis 合作的乔治亚 Covington 量产线（Stellantis 同时是 PIPE 战略投资人，既是制造瓶颈也是主要现金去向），以及电推进 / 飞控 / 复合材料等"已用于已取证机型"的航空系统供应商；IP 端则通过收购 Overair 专利组合与 Karem Aircraft 的 tiltrotor/rotor 技术授权补强（[ACHR FY2025 10-K — Manufacturing Operations & Supply Chain；Statements of Operations](https://www.sec.gov/Archives/edgar/data/1824502/000182450226000019/achr-20251231.htm)）。**这张图的关键提醒：需求侧几乎全部是"有条件 / 未实现"的承诺，真正的瓶颈在 FAA 取证与 Stellantis 量产爬坡——粗细仅为相对量级，不是美元金额。**
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1023" width="1180" height="1023" role="img" aria-label="钱怎么流 / Follow the money — 谁(将)付钱给 Archer，Archer 又把现金烧向谁" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1023" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">EVTOL 价值链 · MONEY FLOW · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱怎么流 / Follow the money — 谁(将)付钱给 Archer，Archer 又把现金烧向谁</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">Archer 当期几乎没有实收收入:左侧是有条件订单与战略合作(未来的钱),右侧才是当下真正在流的现金——主要烧向自己的工程团队、Stellantis 代工与航空供应链。粗细仅为相对量级。</text>
+<ellipse cx="1031.00" cy="401.50" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="611.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="611.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁(将)付钱 / demand</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Archer 的三条业务线</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">现金实际流向 / where it pools</text>
+<path d="M 256.00 280.50 C 369.50 280.50, 369.50 300.00, 483.00 300.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 411.50 C 369.50 411.50, 369.50 410.00, 483.00 410.00" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 532.50 C 369.50 532.50, 369.50 511.50, 483.00 511.50" fill="none" stroke="url(#mfgold)" stroke-width="9.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 283.86 C 810.50 283.86, 810.50 240.64, 924.00 240.64" fill="none" stroke="url(#mfgold)" stroke-width="19.64" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 301.32 C 810.50 301.32, 810.50 351.73, 924.00 351.73" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 314.95 C 810.50 314.95, 810.50 462.27, 924.00 462.27" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 407.27 C 810.50 407.27, 810.50 254.82, 924.00 254.82" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 414.36 C 810.50 414.36, 810.50 471.00, 924.00 471.00" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 511.50 C 810.50 511.50, 810.50 362.64, 924.00 362.64" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 323.45 C 810.50 323.45, 810.50 566.50, 924.00 566.50" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<text x="369.50" y="284.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">≤ $1.0B 有条件</text>
+<rect x="42.00" y="220.50" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="220.50" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="253.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">UNITED AIRLINES</text>
+<text x="60.00" y="274.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">商用 air taxi 客户</text>
+<text x="60.00" y="291.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">有条件订单 ≤ $1.0B (+$500M 期权)</text>
+<rect x="42.00" y="356.50" width="214" height="110.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="356.50" width="3" height="110.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="389.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">US DoD / ALLIES</text>
+<text x="60.00" y="410.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">经 Anduril 国防采购</text>
+<text x="60.00" y="427.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">hybrid VTOL 两用平台</text>
+<rect x="42.00" y="482.50" width="214" height="100.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="482.50" width="3" height="100.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="515.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">UAE / ABU DHABI</text>
+<text x="60.00" y="536.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Launch Edition 先行市场</text>
+<text x="60.00" y="553.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">与 GCAA 监管合作</text>
+<rect x="483.00" y="253.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="253.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="286.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">COMMERCIAL</text>
+<text x="501.00" y="307.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">售机 + 直营空中出租车</text>
+<text x="501.00" y="324.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">LA28 / eIPP 美国多城</text>
+<rect x="483.00" y="363.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="363.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="396.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">DEFENSE</text>
+<text x="501.00" y="417.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">与 Anduril 联合开发</text>
+<text x="501.00" y="434.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">国防两用机型</text>
+<rect x="483.00" y="473.00" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="473.00" width="3" height="77.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="506.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">LAUNCH EDITION</text>
+<text x="501.00" y="527.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">向海外政府售机+技术+服务</text>
+<rect x="924.00" y="198.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="198.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">ENGINEERING / R&amp;D</text>
+<text x="942.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">FY25 研发 $493.9M</text>
+<text x="942.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">+ 股权激励 SBC $223.5M</text>
+<rect x="924.00" y="308.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="308.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="341.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">STELLANTIS</text>
+<text x="942.00" y="362.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Covington GA 高产能量产</text>
+<text x="942.00" y="379.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">战略投资人 + 代工瓶颈</text>
+<rect x="924.00" y="418.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="418.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="451.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">航空系统供应商</text>
+<text x="942.00" y="472.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">电推进 / 飞控 / 复合材料</text>
+<text x="942.00" y="489.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">多为已取证机型在用供应商</text>
+<rect x="924.00" y="528.00" width="214" height="77.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="528.00" width="3" height="77.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="561.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">OVERAIR / KAREM IP</text>
+<text x="942.00" y="582.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">tiltrotor / rotor 技术授权</text>
+<rect x="42.00" y="631.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="635.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">资金流向 / money flow（粗细 ≈ 相对量级，非美元）</text>
+<rect x="332.40" y="626.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="351.40" y="635.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">(将)付钱的客户 / 需求</text>
+<rect x="469.00" y="626.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="488.00" y="635.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">Archer 业务线 / 航空供应商</text>
+<rect x="641.60" y="626.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="660.60" y="635.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">自有工程 / R&amp;D（最大现金去向）</text>
+<rect x="814.20" y="626.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="833.20" y="635.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">Stellantis 代工（量产瓶颈）</text>
+<rect x="994.00" y="626.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="1013.00" y="635.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">IP 授权</text>
+<line x1="42" y1="671.00" x2="1138" y2="671.00" stroke="#222a3a"/>
+<text x="42.00" y="687.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY / 资金流向解读</text>
+<rect x="42.00" y="707.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="707.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="731.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求侧 · 有条件订单</text>
+<text x="58.00" y="749.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">United / DoD / UAE</text>
+<text x="58.00" y="773.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Archer</tspan><tspan fill="#9aa3b8" font-weight="400"> 当期几乎没有实收收入——这些是</tspan><tspan fill="#f4d58a" font-weight="700"> 有条件</tspan><tspan fill="#9aa3b8" font-weight="400"> 订单与战略合作:United</tspan><tspan fill="#9aa3b8" font-weight="400"> 有条件采购</tspan><tspan fill="#f4d58a" font-weight="700"> up</tspan><tspan fill="#f4d58a" font-weight="700"> to</tspan></text>
+<text x="58.00" y="789.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$1.0B</tspan><tspan fill="#9aa3b8" font-weight="400"> (另有</tspan><tspan fill="#f4d58a" font-weight="700"> $500M</tspan><tspan fill="#9aa3b8" font-weight="400"> 期权,以</tspan><tspan fill="#9aa3b8" font-weight="400"> FAA</tspan><tspan fill="#9aa3b8" font-weight="400"> 取证为前提);国防经</tspan><tspan fill="#f4d58a" font-weight="700"> Anduril</tspan><tspan fill="#9aa3b8" font-weight="400"> 合作;UAE</tspan></text>
+<text x="58.00" y="805.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Launch</tspan><tspan fill="#f4d58a" font-weight="700"> Edition</tspan><tspan fill="#9aa3b8" font-weight="400"> 先行市场。</tspan></text>
+<rect x="412.00" y="707.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="707.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="731.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">现金主要去向 · 研发</text>
+<text x="428.00" y="749.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">工程师与 R&amp;D</text>
+<text x="428.00" y="773.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">对一家</tspan><tspan fill="#9aa3b8" font-weight="400"> pre-revenue</tspan><tspan fill="#9aa3b8" font-weight="400"> 公司,最大的'供应商'是自己的工程团队:FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> 研发</tspan><tspan fill="#f4d58a" font-weight="700"> $493.9M</tspan></text>
+<text x="428.00" y="789.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">、股权激励</tspan><tspan fill="#f4d58a" font-weight="700"> SBC</tspan><tspan fill="#f4d58a" font-weight="700"> $223.5M</tspan><tspan fill="#9aa3b8" font-weight="400"> ——现金主要烧在取证与工程上。</tspan></text>
+<rect x="782.00" y="707.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="707.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="731.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">制造瓶颈</text>
+<text x="798.00" y="749.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Stellantis 代工</text>
+<text x="798.00" y="773.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">乔治亚</tspan><tspan fill="#f4d58a" font-weight="700"> Covington</tspan><tspan fill="#9aa3b8" font-weight="400"> 高产能工厂由</tspan><tspan fill="#f4d58a" font-weight="700"> Stellantis</tspan><tspan fill="#9aa3b8" font-weight="400"> 合作量产,Stellantis</tspan><tspan fill="#9aa3b8" font-weight="400"> 同时是</tspan></text>
+<text x="798.00" y="789.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">PIPE</tspan><tspan fill="#9aa3b8" font-weight="400"> 战略投资人——量产爬坡的关键瓶颈与现金去向。</tspan></text>
+<rect x="42.00" y="853.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="42.00" y="853.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="58.00" y="877.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">外购 · 成品系统</text>
+<text x="58.00" y="895.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">航空系统供应商</text>
+<text x="58.00" y="919.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">电推进、飞控与复合材料多采购自'已用于已取证机型'的</tspan><tspan fill="#f4d58a" font-weight="700"> 领先航空供应商</tspan><tspan fill="#9aa3b8" font-weight="400"> (10-K</tspan></text>
+<text x="58.00" y="935.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">未逐一具名),以降低取证风险与开发时间。</tspan></text>
+<rect x="412.00" y="853.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="412.00" y="853.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="428.00" y="877.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">IP 授权</text>
+<text x="428.00" y="895.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Overair / Karem</text>
+<text x="428.00" y="919.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">通过收购</tspan><tspan fill="#f4d58a" font-weight="700"> Overair</tspan><tspan fill="#9aa3b8" font-weight="400"> 专利组合与</tspan><tspan fill="#f4d58a" font-weight="700"> Karem</tspan><tspan fill="#f4d58a" font-weight="700"> Aircraft</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#f4d58a" font-weight="700"> tiltrotor/rotor</tspan></text>
+<text x="428.00" y="935.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">技术授权补强知识产权。</tspan></text>
+<text x="590.00" y="1005.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: ACHR FY2025 10-K — Item 1 Business (Manufacturing Operations &amp; Supply Chain; United Purchase Agreement ≤$1.0B + $500M option; Anduril partnership; Overair/Karem IP) + Statements of Operations (R&amp;D $493.9M, SBC $223.5M)</text>
+</svg>
+
+*图：Archer 的"资金流向"价值链图——实线为资金流向，粗细仅为相对量级（非美元金额）。* 来源 / Source：[ACHR FY2025 10-K — Item 1 Business + Statements of Operations](https://www.sec.gov/Archives/edgar/data/1824502/000182450226000019/achr-20251231.htm)。
 
 ## 5. 客户与上市策略（go-to-market）
 
