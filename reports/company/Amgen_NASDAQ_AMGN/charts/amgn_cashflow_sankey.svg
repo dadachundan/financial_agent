@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">安进 FY2025 现金流 Sankey (US$M)</text>
+<path d="M 204.00,71.00 C 306.00,71.00 306.00,78.00 408.00,78.00 L 408.00,330.22 C 306.00,330.22 306.00,323.22 204.00,323.22 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,63.56 628.00,63.56 L 628.00,65.56 C 526.00,65.56 526.00,80.00 424.00,80.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,80.00 C 526.00,80.00 526.00,79.56 628.00,79.56 L 628.00,307.22 C 526.00,307.22 526.00,307.66 424.00,307.66 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,307.66 C 526.00,307.66 526.00,321.22 628.00,321.22 L 628.00,554.44 C 526.00,554.44 526.00,540.88 424.00,540.88 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 644.00,79.56 C 746.00,79.56 746.00,188.17 848.00,188.17 L 848.00,307.89 C 746.00,307.89 746.00,199.28 644.00,199.28 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,199.28 C 746.00,199.28 746.00,321.89 848.00,321.89 L 848.00,429.83 C 746.00,429.83 746.00,307.22 644.00,307.22 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,337.22 C 306.00,337.22 306.00,330.22 408.00,330.22 L 408.00,540.00 C 306.00,540.00 306.00,547.00 204.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="252.22" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="337.22" width="16" height="209.78" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="63.56" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="79.56" width="16" height="227.66" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="321.22" width="16" height="233.22" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="188.17" width="16" height="119.72" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="321.89" width="16" height="107.94" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="194.11" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="207.11" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$12.0B  (54.6%)</text>
+<rect x="207.00" y="319.22" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="331.22" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="344.22" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$10.0B  (45.4%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$21.9B  (100.0%)</text>
+<rect x="647.00" y="45.56" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="57.56" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="70.56" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$53.0M  (0.24%)</text>
+<rect x="647.00" y="70.56" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="82.56" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="95.56" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$10.8B  (49.3%)</text>
+<text x="653.00" y="434.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="447.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$11.1B  (50.5%)</text>
+<text x="873.00" y="245.03" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">偿还债务</text>
+<text x="873.00" y="258.03" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.7B  (25.9%)</text>
+<text x="873.00" y="372.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">派息</text>
+<text x="873.00" y="385.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.1B  (23.4%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = US$8.1B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Amgen FY2025 10-K Consolidated Statement of Cash Flows · as of 2026-06-14</text>
+</svg>
