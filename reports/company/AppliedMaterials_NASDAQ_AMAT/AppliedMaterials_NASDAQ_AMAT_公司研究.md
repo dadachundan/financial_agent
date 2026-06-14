@@ -1,26 +1,55 @@
 # 应用材料公司 (Applied Materials, Inc., NASDAQ:AMAT) — 公司研究报告
 
-**作者:** 独立股票研究初始覆盖
-**截至日期:** 2026-05-23
+**作者:** 独立股票研究 (覆盖更新)
+**截至日期:** 2026-06-14
 **覆盖范围:** 晶圆厂设备 (Wafer Fab Equipment, WFE) — 半导体资本设备
-**报告语言: 简体中文 (英文版同时存在于本目录)**
+**报告语言: 简体中文 (英文版同时存在于本目录, 本次刷新不改动英文版)**
 
 ---
 
-> **业绩更新——2026 财年 CY 设备增长指引上调至"超过 30%" (2026-05-14):** 在 2026 财年 Q2 业绩电话会上, Gary Dickerson 明确将 AMAT 半导体设备业务的日历年表述上调至*"在 2026 日历年增长超过 30%"* (相比此前仅笼统描述为 AI 驱动的强劲上行周期), 并指引 2026 财年 Q3 营收为**89.5 亿美元 ± 5.0 亿美元**, **非 GAAP 摊薄每股收益 (EPS) 3.36 美元 ± 0.20 美元**。来源: [2026 财年 Q2 8-K 业绩新闻稿, 2026-05-14](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm); [2026 财年 Q2 10-Q, 提交于 2026-05-21](https://www.sec.gov/Archives/edgar/data/6951/000162828026037227/amat-20260426.htm)。
+> **业绩更新——2026 财年 CY 设备增长指引上调至"超过 30%" (2026-05-14):** 在 2026 财年 Q2 业绩电话会上, 管理层明确将 AMAT 半导体设备业务的日历年表述上调至*"在 2026 日历年增长超过 30%"* (相比此前仅描述为约 20%), 并指引 2026 财年 Q3 营收为**89.5 亿美元 ± 5.0 亿美元**, **非 GAAP 摊薄每股收益 (EPS) 3.36 美元 ± 0.20 美元**。来源: [2026 财年 Q2 8-K 业绩新闻稿, 2026-05-14](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm); [2026 财年 Q2 10-Q, 提交于 2026-05-21](https://www.sec.gov/Archives/edgar/data/6951/000162828026037227/amat-20260426.htm)。
+
+---
+
+## 投资摘要 (Investment Summary) — *分析师观点 (Analyst view)*
+
+> 以下评级、12 个月价格目标 (price target, PT)、上行/下行空间, 以及前瞻预测的每一个数字, 都是本报告的分析师前瞻观点 (house view), **不是** 10-K / 10-Q 等监管文件中的内容——监管文件里没有价格目标。全部标注为 *分析师观点*。
+
+| 项目 | 本报告观点 |
+|---|---|
+| **评级 (Rating)** | **Hold / Neutral (持有/中性)** — 优质资产, 但近期股价已透支多数上行 |
+| **12 个月价格目标 (PT)** | **595 美元** |
+| **当前股价 (as of 2026-06-12 收盘)** | 567.25 美元 |
+| **隐含上行空间** | **+4.9%** (含约 0.4% 股息收益率, 总回报约 +5.3%) |
+| **估值方法** | 约 28× × 我们 FY2027E (≈日历 2027) 非 GAAP EPS 约 21.2 美元 |
+| **市值 / 流通股** | 约 4,504 亿美元 / 约 7.94 亿股 |
+| **52 周区间** | 154.47 – 569.95 美元 (现价处于区间顶部) |
+| **代码 / 交易所** | NASDAQ:AMAT |
+
+来源: 股价与市值 [Yahoo Finance — AMAT (as of 2026-06-12 收盘 567.25)](https://finance.yahoo.com/quote/AMAT/); 流通股与 52 周区间同源; 估值方法见第 2 章 PT 推导。
+
+**投资逻辑四大支柱 (Thesis pillars) — *分析师观点*:**
+
+1. **最广的 WFE 产品组合 + AI 资本开支的多年顺风。** Applied 覆盖除光刻曝光外的几乎每一道材料工程工序 (沉积/刻蚀/CMP/离子注入/RTP/eBeam/先进封装), 是 logic/DRAM/先进封装资本开支的直接受益者; 管理层指引 CY2026 半导体设备增长 *>30%*, 并预期 CY2027 仍是强增长年 ([2026 财年 Q2 新闻稿](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm))。
+2. **服务 (AGS) 年金化把周期性收入变可预测收入。** 5 万台装机基础 + LTSA 订阅化, AGS FY2025 营收 63.85 亿美元、营业利润率 28.1%, 管理层将长期增长目标上调至中双位数 ([Goldman Sachs — AMAT, 2026-05-14](http://xs-macbook-air.local:5001/zsxq/pdf/212452181281111/Goldman%20Sachs-Applied%20Materials%20Inc.%20%EF%BC%88AMAT.US%EF%BC%89%EF%BC%9A%20Stock%20should%20continue%20to%20re~rate%20given%20strong%20guidance%20uplift%20and%20improving%20mix~Buy-260514.pdf))。
+3. **估值已不再便宜——这是评级降为 Hold 的核心原因。** 5 月报告时 AMAT 的 432 美元、约 29× 前瞻 P/E 是同业中最低; 但截至 2026-06-12 股价已涨至 *567.25 美元* (TTM P/E 53.5×、前瞻 P/E 34.9×、P/S 15.5×), **已高于卖方主流 PT 区间 502–525 美元**, 多数倍数重估已兑现 ([Yahoo Finance — AMAT](https://finance.yahoo.com/quote/AMAT/))。
+4. **中国与出口管制是最大单一下行变量。** 中国 FY2025 占营收 30% (FY2024 为 37%), 主要为 ICAPS 成熟节点; 任何新 BIS 规则都直接威胁约 85 亿美元的现金流 ([2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))。
+
+---
 
 ## 目录
 
-1. 公司概览
-2. 公司历史
+1. 公司概览 (含 1A 估值快照 · 1B GF Score)
+2. 估值与价格目标 (含公司历史 · 卖方观点演变)
 3. 管理团队
 4. 产品与服务
 5. 客户与上市策略
 6. 行业概览
 7. 竞争格局
 8. 市场机会 (TAM)
-9. 风险评估
-10. 参考资料
+9. 风险评估 (含 9.5 关键分歧与催化剂)
+10. 投资者视角评分 (Investor lenses)
+11. 参考资料 · Data Used · 核查记录
 
 ---
 
@@ -42,9 +71,85 @@ Applied 是一家特拉华州注册公司, 总部位于加利福尼亚州圣克�
 
 来源: [应用材料 2025 10-K, 合并损益表与现金流量表](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm)。
 
-![营业收入与毛利率趋势](charts/amat_revenue_margin.png)
+下图为 FY2025 利润表的桑基图 (Sankey): 左侧三个分部营收汇入总营收 283.68 亿美元, 再依次扣除营业成本 (COGS) 145.60 亿、营业费用 (R&D 35.70 亿 + 销售管理 17.68 亿 + 重组 1.81 亿), 得到营业利润 (operating income) 82.89 亿, 经利息及其他收入净额 9.82 亿与所得税 22.73 亿后, 落到净利润 (net income) 69.98 亿。
 
-*来源: [应用材料 2025 10-K, 合并损益表](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm); [2024 10-K](https://www.sec.gov/Archives/edgar/data/6951/000000695124000044/amat-20241027.htm) 用于 2022 财年的可比期数据。*
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Applied Materials FY2025 利润表 Sankey (营收 → 成本/毛利 → 费用/营业利润 → 税 → 净利)</text>
+<path d="M 204.00,71.00 C 258.00,71.00 258.00,85.00 312.00,85.00 L 312.00,384.13 C 258.00,384.13 258.00,370.13 204.00,370.13 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,168.64 560.00,168.64 L 560.00,287.86 C 506.00,287.86 506.00,197.22 452.00,197.22 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,197.22 C 506.00,197.22 506.00,301.86 560.00,301.86 L 560.00,381.23 C 506.00,381.23 506.00,276.59 452.00,276.59 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,276.59 C 382.00,276.59 382.00,283.59 328.00,283.59 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,283.59 C 382.00,283.59 382.00,290.59 436.00,290.59 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,161.64 C 754.00,161.64 754.00,215.33 808.00,215.33 L 808.00,315.98 C 754.00,315.98 754.00,262.29 700.00,262.29 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,262.29 C 754.00,262.29 754.00,329.98 808.00,329.98 L 808.00,362.67 C 754.00,362.67 754.00,294.98 700.00,294.98 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,168.64 C 630.00,168.64 630.00,161.64 684.00,161.64 L 684.00,280.86 C 630.00,280.86 630.00,287.86 576.00,287.86 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,301.86 C 630.00,301.86 630.00,308.98 684.00,308.98 L 684.00,334.41 C 630.00,334.41 630.00,327.29 576.00,327.29 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,327.29 C 630.00,327.29 630.00,348.41 684.00,348.41 L 684.00,399.75 C 630.00,399.75 630.00,378.63 576.00,378.63 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,378.63 C 630.00,378.63 630.00,413.75 684.00,413.75 L 684.00,416.36 C 630.00,416.36 630.00,381.23 576.00,381.23 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,384.13 C 258.00,384.13 258.00,384.13 312.00,384.13 L 312.00,475.96 C 258.00,475.96 258.00,475.96 204.00,475.96 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,395.23 C 630.00,395.23 630.00,280.86 684.00,280.86 L 684.00,294.98 C 630.00,294.98 630.00,409.36 576.00,409.36 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,489.96 C 258.00,489.96 258.00,475.96 312.00,475.96 L 312.00,493.00 C 258.00,493.00 258.00,507.00 204.00,507.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="299.13" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="384.13" width="16" height="91.83" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="489.96" width="16" height="17.04" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="198.59" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="290.59" width="16" height="209.41" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="168.64" width="16" height="119.22" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="301.86" width="16" height="79.38" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="395.23" width="16" height="14.12" rx="1.5" fill="#2563eb"/>
+<rect x="684.00" y="161.64" width="16" height="133.34" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="308.98" width="16" height="25.43" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="348.41" width="16" height="51.35" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="413.75" width="16" height="2.60" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="215.33" width="16" height="100.65" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="329.98" width="16" height="32.69" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="220.56" x2="182.00" y2="209.08" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="212.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Semiconductor Systems</text>
+<text x="179.00" y="225.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$20.8B  (73.3%)</text>
+<line x1="188.00" y1="430.04" x2="182.00" y2="418.56" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="421.56" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Applied Global Services</text>
+<text x="179.00" y="434.56" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.4B  (22.5%)</text>
+<line x1="188.00" y1="498.48" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Corporate &amp; Other</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.2B  (4.2%)</text>
+<rect x="331.00" y="67.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$28.4B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$13.8B  (48.7%)</text>
+<rect x="455.00" y="272.59" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="284.59" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="297.59" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$14.6B  (51.3%)</text>
+<rect x="579.00" y="150.64" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="162.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="175.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.3B  (29.2%)</text>
+<rect x="579.00" y="283.86" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="295.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="308.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.5B  (19.5%)</text>
+<text x="551.00" y="399.30" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="551.00" y="412.30" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$982.0M  (3.5%)</text>
+<rect x="703.00" y="143.64" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="155.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="168.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$9.3B  (32.7%)</text>
+<rect x="703.00" y="290.98" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="302.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="315.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.8B  (6.2%)</text>
+<rect x="703.00" y="330.41" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="342.41" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="355.41" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.6B  (12.6%)</text>
+<rect x="703.00" y="395.75" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="407.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="420.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$181.0M  (0.64%)</text>
+<text x="833.00" y="262.65" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="275.65" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$7.0B  (24.7%)</text>
+<text x="833.00" y="343.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="356.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.3B  (8.0%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Applied Materials FY2025 10-K, 合并损益表/资产负债表/现金流量表/Note 14 (FY2025: 营收 28,368; 毛利 13,808; 营业利润 8,289; 净利 6,998)</text>
+</svg>
+
+*来源: [应用材料 2025 10-K, 合并损益表 (Note 14 分部营收)](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm)。*
 
 ### 1.2 2026 财年 Q2 业绩 (最近报告期; 新闻稿 2026-05-14, 10-Q 提交于 2026-05-21)
 
@@ -52,26 +157,26 @@ Applied 是一家特拉华州注册公司, 总部位于加利福尼亚州圣克�
 
 CEO 评论明确上调了基调: *"我们现在预计半导体设备业务在 2026 日历年增长超过 30%……全球 AI 计算基础设施的快速建设, 加上 Applied 在前沿逻辑、DRAM 和先进封装领域的强大领导地位, 为持续多年的营收和利润增长提供了异常坚实的基础。"* ([2026 财年 Q2 新闻稿](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm)) 2026 财年 Q3 指引为营收 89.5 亿美元 ± 5.0 亿美元, 非 GAAP EPS 3.36 美元 ± 0.20 美元——按年化折算朝向约 350 亿美元的运行率, 而 2025 财年实际为 283.4 亿美元。
 
-### 1.3 估值快照 (TTM, 截至 2026-05-22)
+### 1.3 估值快照 (截至 2026-06-12 收盘)
 
-| 指标                            | AMAT       |
-|---------------------------------|------------|
-| 股价                            | 432.16 美元 |
-| 市值                            | 3,431 亿美元 |
-| TTM 市盈率 (P/E)                | **40.7×**  |
-| 前瞻市盈率 (NTM 共识)            | 29.6×      |
-| TTM 市销率 (P/S)                | **11.8×**  |
-| TTM 营业收入                    | 290.0 亿美元 |
-| 净资产收益率 (ROE, TTM)          | 39.7%      |
-| 负债/股东权益                    | 0.30       |
-| 股息收益率                       | 0.49%      |
-| 净现金 + 投资 - 长期负债          | 净现金约 66 亿美元 |
+> **重要变化 (本次刷新的核心):** 自 5 月初的报告 (当时股价 432 美元) 以来, AMAT 在 6 月初出现急涨——2026-06-11 单日 +11.2% (497→553 美元)、6-12 再 +2.6% 至 567.25 美元, 创历史新高 (52 周高点 569.95 美元)。结果是估值从"同业最低"快速变为"已不便宜": TTM P/E 从 40.7× 升至 *53.5×*, P/S 从 11.8× 升至 *15.5×*, 现价已**高于全部主流卖方 PT (502–525 美元)**。这一价格变动是评级由结构性看多调整为 **Hold/Neutral** 的直接原因。
 
-来源: [Stockanalysis.com — AMAT 关键统计, 查询于 2026-05-22](https://stockanalysis.com/stocks/amat/statistics/); 资产负债表数据来自 [2025 10-K](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm)。
+| 指标 | AMAT (2026-06-12) | AMAT (2026-05-22, 上次) |
+|---|---|---|
+| 股价 | **567.25 美元** | 432.16 美元 |
+| 市值 | 约 4,504 亿美元 | 3,431 亿美元 |
+| TTM 市盈率 (P/E) | **53.5×** | 40.7× |
+| 前瞻市盈率 (forward P/E) | **34.9×** | 29.6× |
+| TTM 市销率 (P/S) | **15.5×** | 11.8× |
+| TTM 营业收入 | 约 290 亿美元 | 290.0 亿美元 |
+| 净资产收益率 (ROE, TTM) | 约 35.5% (FY2025) | 39.7% |
+| 负债/股东权益 (D/E) | 0.30 | 0.30 |
+| 股息收益率 | 约 0.37% | 0.49% |
+| 净现金 + 投资 − 长期负债 | 净现金约 64.5 亿美元 | 净现金约 66 亿美元 |
 
-![同业估值比较](charts/amat_peer_valuation.png)
+来源: [Yahoo Finance — AMAT (as of 2026-06-12 收盘 567.25, TTM P/E 53.5×, fwd P/E 34.9×, P/S 15.5×)](https://finance.yahoo.com/quote/AMAT/); 资产负债表净现金来自 [2025 10-K, 合并资产负债表 (现金及投资 129.0 亿 − 长期债务 64.55 亿)](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm)。
 
-*来源: [Stockanalysis.com 同业统计数据, 查询于 2026-05-22](https://stockanalysis.com/stocks/amat/statistics/) 各代码; TEL P/S 由市值 22.49 万亿日元 / TTM 营业收入 2.44 万亿日元推导得出。*
+**同业估值对比 (TTM / 前瞻 P/E, 截至 2026-06-12):** AMAT 53.5× / 34.9×, LRCX 69.5× / 46.0×, KLAC 71.9× / 50.4×, ASML 62.5× / 38.8×, TEL (8035.T) 21.5× / 16.6×。AMAT 仍是美股四家 WFE 大厂中 TTM 与前瞻 P/E 双双最低的, 但与 5 月时"显著最低"相比, 倍数差距已收窄——AMAT 自身重估吃掉了大部分相对折让。([Yahoo Finance — AMAT / LRCX / KLAC / ASML / TEL, as of 2026-06-12](https://finance.yahoo.com/quote/AMAT/))
 
 ### 1.4 报告分部 (2025 财年口径, 截至 2025 年 10 月 26 日)
 
@@ -86,25 +191,264 @@ CEO 评论明确上调了基调: *"我们现在预计半导体设备业务在 20
 
 *来源: [2025 10-K, Note 15](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm)。*
 
-![分部营业收入构成](charts/amat_segment_mix.png)
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 营收构成 (按分部)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 156.74,253.15 L 210.44,247.44 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 156.74,253.15 A 132 132 0 0 1 253.75,111.72 L 267.76,163.87 A 78 78 0 0 0 210.44,247.44 Z" fill="#15803d"/>
+<path d="M 253.75,111.72 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 267.76,163.87 Z" fill="#d97706"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">AMAT</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$28.4B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="390.61" y1="331.48" x2="406.61" y2="331.48" stroke="#2563eb" stroke-width="1.4"/>
+<text x="410.61" y="329.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Semiconductor Systems</text>
+<text x="410.61" y="343.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$20.8B  (73.3%)</text>
+<line x1="174.20" y1="161.14" x2="158.20" y2="161.14" stroke="#15803d" stroke-width="1.4"/>
+<text x="154.20" y="159.14" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Applied Global Services</text>
+<text x="154.20" y="173.14" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.4B  (22.5%)</text>
+<line x1="269.94" y1="102.39" x2="253.94" y2="102.39" stroke="#d97706" stroke-width="1.4"/>
+<text x="249.94" y="100.39" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Corporate &amp; Other (含 Display)</text>
+<text x="249.94" y="114.39" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.2B  (4.2%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Applied Materials FY2025 10-K, Note 14 (Semi Systems 20,798; AGS 6,385; Corp &amp; Other 1,185)</text>
+</svg>
 
-*来源: [2025 10-K, Note 15](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm); [2024 10-K, Note 14](https://www.sec.gov/Archives/edgar/data/6951/000000695124000044/amat-20241027.htm) 提供 2022 财年可比期数据。显示业务在 2022–2024 财年显示为独立分部 (其作为独立报告的最后一年是 2024 财年), 自 2025 财年起并入 Corporate & Other。*
+*来源: [2025 10-K, Note 14 分部信息 (Semi Systems 20,798; AGS 6,385; Corporate & Other 1,185)](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm)。显示业务自 2025 财年起并入 Corporate & Other。*
 
 ### 1.5 估值解读
 
-40.7 倍 TTM 市盈率明显高于半导体设备周期长期均值 (过去十年中段至 20 倍出头), 但**在 WFE 前五大同业中最低**: LRCX 57.7×, KLAC 53.5×, ASML 54.5×, TEL 39.8× (唯一与 AMAT 倍数相当的同业)。TTM 市销率上, AMAT 的 11.8× 同样是美股三家中最便宜的 (LRCX 17.6×, KLAC 18.8×), 经汇率调整后仅次于 TEL 为第二便宜。([Stockanalysis.com — AMAT、LRCX、KLAC、ASML 统计数据, 查询于 2026-05-22](https://stockanalysis.com/stocks/amat/statistics/))
+5 月报告时, AMAT 在 432 美元、约 29× 前瞻 P/E 是 WFE 五大中最低, 当时三点折让逻辑成立: (1) 比同业更高的中国敞口 (沉积/离子注入受 BIS 规则冲击最大); (2) 没有 ASML 的 EUV 垄断或 KLA 的工艺控制垄断那样的单点护城河叙事; (3) FY2025 营收仅增长 4%, 落后于因前沿制程周期取得更高增长的 LRCX/KLAC。([2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))
 
-*分析师观点:* 三方面因素或可合理解释这家产品组合最广的供应商为何在同业中估值最低:
-
-1. **比同业更高的中国敞口。** 中国占 2025 财年营收的 30% (低于 2024 财年的 37%——见第 5 章), 10-K 明确指出*"这些行动造成了大量不确定性, 并引发了报复性措施, 包括中国和其他国家对美国商品征收新关税"*。([2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm)) 沉积和离子注入属于受美国 BIS 规则影响最大的类别之一, 因此设备营收损失中较高比例落在了 Applied 头上, 而非纯刻蚀或纯检测同业。
-2. **没有光刻垄断叙事。** ASML 在 EUV 中的独家供应商地位支撑了其 54.5× 的 P/E; KLA 在工艺控制 (process control) 的近垄断地位支撑了其 53.5×。AMAT 在它销售的每个产品工序中都会面对多家同业竞争, 因此终端利润率的耐久性结构上不如 ASML/KLA 那样显而易见。
-3. **2025 财年营收增速低于同业。** AMAT 在 2025 财年增长 4%, 而 LRCX 和 KLAC 因前沿制程周期都取得更高增长。CY2026 半导体设备增长超过 30% 的指引即是追赶信号——若兑现, 约 29.6× 的前瞻市盈率相比 LRCX / KLAC 约 40× 的前瞻倍数显得便宜。
-
-29.6 倍前瞻 P/E 处于同业中位数 (~40×) 之下, 在任何盈利超预期之前, 仅靠倍数扩张就能支撑双位数上行空间。我们将该估值折让既视为风险*又*视为机会, 并在第 9 章中明确标注 (R9 估值/倍数收缩风险)。
+*分析师观点:* **但到 2026-06-12, 这套"折价机会"的逻辑大部分已被股价兑现。** AMAT 从 432 美元涨到 567.25 美元 (+31%), 前瞻 P/E 从 29× 升到 34.9×, 现价已**高于全部主流卖方 PT (Bernstein 525、Citi 520、Goldman 520、UBS 515、Morgan Stanley 502)**。换句话说, 5 月那条"仅靠倍数扩张就能支撑双位数上行"的路径已基本走完。我们因此把评级定为 **Hold/Neutral**: 公司基本面 (产品组合广度、AI 顺风、AGS 年金化) 依旧优秀, 但**当前价格的风险回报已不对称偏向上行**——上行需要 CY2027 估计再上修或倍数继续扩张, 下行则有中国 BIS 规则、AI 资本开支正常化、以及现价已透支的倍数收缩风险 (第 9 章 R9)。完整的 PT 推导与 bull/base/bear 见第 2 章。
 
 ---
 
-## 2. 公司历史
+## 1B. 基本面评分 (GF Score, GuruFocus 式) — *分析师观点*
+
+下图是一个仿 [GuruFocus GF Score™](https://www.gurufocus.com/term/gf-score) 的五维基本面评分雷达 (财务强度 / 盈利能力 / 成长性 / GF 估值 (越高=越便宜) / 动量), 每维 0–10, 综合映射到 0–100。**这是本报告分析师自建的打分框架, 不是数据来源、也不代表 GuruFocus 的官方数字**: 五个子分与综合分均标注为 *分析师观点*, 不附任何监管文件引用; 每个底层指标 (利润率/杠杆/CAGR/倍数/回报) 在下文各自带行内引用。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" role="img" aria-label="GF Score radar">
+<rect x="0" y="0" width="500" height="500" fill="#ffffff"/>
+<text x="20" y="24" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">GF Score (GuruFocus-style): 76/100</text>
+<text x="20" y="41" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#52606d">71–80 Likely average performance</text>
+<polygon points="250.0,88.0 392.7,191.6 338.2,359.4 161.8,359.4 107.3,191.6" fill="#e9f5ec" stroke="none"/>
+<polygon points="250.0,208.0 278.5,228.7 267.6,262.3 232.4,262.3 221.5,228.7" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,178.0 307.1,219.5 285.3,286.5 214.7,286.5 192.9,219.5" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,148.0 335.6,210.2 302.9,310.8 197.1,310.8 164.4,210.2" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,118.0 364.1,200.9 320.5,335.1 179.5,335.1 135.9,200.9" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,88.0 392.7,191.6 338.2,359.4 161.8,359.4 107.3,191.6" fill="none" stroke="#c5d3cb" stroke-width="1.3"/>
+<line x1="250" y1="238" x2="161.8" y2="359.4" stroke="#cfdad3" stroke-width="1"/>
+<text x="146.5" y="392.4" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">Financial Strength</text>
+<text x="146.5" y="405.4" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">财务实力</text>
+<text x="179.5" y="329.1" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">8</text>
+<line x1="250" y1="238" x2="250.0" y2="88.0" stroke="#cfdad3" stroke-width="1"/>
+<text x="250.0" y="58.0" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">Profitability</text>
+<text x="250.0" y="71.0" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">盈利能力</text>
+<text x="250.0" y="97.0" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">9</text>
+<line x1="250" y1="238" x2="107.3" y2="191.6" stroke="#cfdad3" stroke-width="1"/>
+<text x="82.6" y="183.6" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">Growth</text>
+<text x="82.6" y="196.6" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">成长性</text>
+<text x="150.1" y="199.6" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">7</text>
+<line x1="250" y1="238" x2="392.7" y2="191.6" stroke="#cfdad3" stroke-width="1"/>
+<text x="417.4" y="183.6" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">GF Value</text>
+<text x="417.4" y="196.6" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">估值</text>
+<text x="307.1" y="213.5" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">4</text>
+<line x1="250" y1="238" x2="338.2" y2="359.4" stroke="#cfdad3" stroke-width="1"/>
+<text x="353.5" y="392.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">Momentum</text>
+<text x="353.5" y="405.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">动量</text>
+<text x="329.4" y="341.2" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">9</text>
+<polygon points="250.0,103.0 307.1,219.5 329.4,347.2 179.5,335.1 150.1,205.6" fill="#2e8b57" fill-opacity="0.34" stroke="#2e8b57" stroke-width="2"/>
+<circle cx="179.5" cy="335.1" r="2.6" fill="#2e8b57"/>
+<circle cx="250.0" cy="103.0" r="2.6" fill="#2e8b57"/>
+<circle cx="150.1" cy="205.6" r="2.6" fill="#2e8b57"/>
+<circle cx="307.1" cy="219.5" r="2.6" fill="#2e8b57"/>
+<circle cx="329.4" cy="347.2" r="2.6" fill="#2e8b57"/>
+<text x="250" y="470" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">Source: Applied Materials FY2025 10-K · Yahoo Finance (as of 2026-06-12) · indicators.db, as of 2026-06-14</text>
+<text x="250" y="485" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#52606d">GF Score = independent analyst rubric (*Analyst view:*) — not GuruFocus™ official number</text>
+</svg>
+
+| 维度 / Dimension | 评分 / Score (0–10) | |
+|---|---|---|
+| Financial Strength (财务实力) | 8 | `████████░░` |
+| Profitability (盈利能力) | 9 | `█████████░` |
+| Growth (成长性) | 7 | `███████░░░` |
+| GF Value (估值) | 4 | `████░░░░░░` |
+| Momentum (动量) | 9 | `█████████░` |
+| **GF Score (composite, *Analyst view:*)** | **76 / 100** | **71–80 Likely average performance** |
+
+*Composite weights (*Analyst view:*): Financial Strength 20% · Profitability 25% · Growth 25% · GF Value 15% · Momentum 15% (transparent reproduction — not GuruFocus's proprietary weighting).*
+
+*来源 (打分所依据的底层指标): [Applied Materials FY2025 10-K, 合并财务报表](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm) · [Yahoo Finance — AMAT (as of 2026-06-12)](https://finance.yahoo.com/quote/AMAT/) · [indicators.db 本地快照 (FRED/yfinance), as of 2026-06-14](https://fred.stlouisfed.org/series/DGS10)。综合分与各维评分为分析师评分框架的输出, 非 GuruFocus 官方值。*
+
+**各维度评分理由 (*分析师观点*):**
+
+- **财务强度 (Financial Strength) = 8/10。** 资产负债表稳健: 截至 2025-10-26, 总债务约 65.55 亿美元 (短债 1.00 亿 + 长债 64.55 亿) vs 现金及投资 129.0 亿, 为**净现金约 64.5 亿美元**; D/E 仅 0.30; 利息覆盖倍数极高 (FY2025 营业利润 82.89 亿 / 利息费用 2.69 亿 ≈ 31×)。扣 2 分是因为商誉与无形 39.33 亿、以及周期性行业的资本开支波动。([2025 10-K, 合并资产负债表与损益表](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))
+- **盈利能力 (Profitability) = 9/10。** WFE 行业中第一梯队: FY2025 GAAP 毛利率 48.7%、营业利润率 29.2%、ROE 约 35.5% (净利 69.98 亿 / 平均权益 197.08 亿); 五年持续高盈利, 半导体系统分部营业利润率 35.5%。([2025 10-K, 合并损益表 + Note 14](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))
+- **成长性 (Growth) = 7/10。** FY2025 营收仅 +4.4% 是个低点, 但前瞻强劲: 管理层指引 CY2026 半导体设备 *>30%* 增长, H1-FY2026 营收已同比 +4.6% 至 149.22 亿、且 Q2 创纪录 79.1 亿 (+11% YoY)。给 7 分而非更高, 是因为单年增速波动大、且高增长部分尚未完全兑现。([2026 财年 Q2 10-Q](https://www.sec.gov/Archives/edgar/data/6951/000162828026037227/amat-20260426.htm); [2026 财年 Q2 新闻稿](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm))
+- **GF 估值 (GF Value, 越高=越便宜) = 4/10。** 这是评分最弱的一维, 也是 Hold 评级的算术基础: 现价 567.25 美元对应 TTM P/E 53.5×、前瞻 P/E 34.9×, 处于自身历史区间高位、且现价高于全部主流卖方 PT。相对同业 (LRCX 46×、KLAC 50× 前瞻) 仍略便宜, 故不给更低分, 但绝对估值已无安全边际。([Yahoo Finance — AMAT, as of 2026-06-12](https://finance.yahoo.com/quote/AMAT/))
+- **动量 (Momentum) = 9/10。** 股价处于 52 周高点附近 (569.95 高点 / 现价 567.25), 12 个月自低点 154.47 美元上涨约 267%, 6 月 11–12 日两日急涨 +14% 反映 AI 资本开支主题的强动量。([Yahoo Finance — AMAT 52 周区间, as of 2026-06-12](https://finance.yahoo.com/quote/AMAT/))
+
+**综合 GF Score ≈ 75/100 (*分析师观点*)** — 映射到 GuruFocus 的"良好"区间。雷达形状的解读很直接: AMAT 是一家**盈利能力与动量都很强、财务稳健, 但当前估值 (GF Value) 拖后腿**的公司——这正是"好公司、贵价格"的典型形态, 与本报告 Hold/Neutral 的结论一致。
+
+---
+
+## 2. 估值与价格目标 (Valuation & Price Target)
+
+> 本章是本报告的"决策层"。所有前瞻数字、价格目标、bull/base/bear 情景, 都是 *分析师观点 (Analyst view)*, 不附监管文件引用; 外部输入 (分部数据、管理层指引、行业预测、卖方估计) 各自带行内引用。
+
+### 2.1 前瞻财务模型 (Forward estimates) — *分析师观点*
+
+我们以 Applied 的财年 (FY, 截至 10 月最后一个周日) 建模, 并标注大致对应的日历年。驱动因素: (a) 半导体系统随 CY2026 WFE 市场强增长、管理层 *>30%* 设备增长指引上量; (b) AGS 中双位数增长 (管理层上调后的长期目标); (c) 显示等其他业务平稳。每个预测单元格均为 *分析师观点*。
+
+| 财年 (≈日历年) | FY2025A (≈CY25) | FY2026E (≈CY26) | FY2027E (≈CY27) | FY2028E (≈CY28) |
+|---|---|---|---|---|
+| 营业收入 (US$ bn) | 28.4 | **35.5** (+25%) | **41.5** (+17%) | **45.5** (+10%) |
+| — 半导体系统 | 20.8 | 27.0 | 32.0 | 35.0 |
+| — AGS | 6.4 | 7.3 | 8.3 | 9.3 |
+| — 其他 (含 Display) | 1.2 | 1.2 | 1.2 | 1.2 |
+| 非 GAAP 毛利率 | 48.9% | 50.3% | 50.5% | 50.7% |
+| 非 GAAP 营业利润率 | 30.0% | 32.0% | 32.5% | 33.0% |
+| 非 GAAP 摊薄 EPS (US$) | 9.39 | **13.7** | **18.2** | **21.2** |
+| YoY EPS 增速 | — | +46% | +33% | +16% |
+
+模型驱动与外部锚点 (每项均带引用):
+- **CY2026 半导体设备 *>30%* 增长** 来自管理层指引, 是 FY2026 营收 +25% 的主要依据 ([2026 财年 Q2 新闻稿](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm))。
+- **FY2026 H1 实际** 营收 149.22 亿、非 GAAP EPS 上半年约 5.7 美元已落地, 全年 35.5 亿 / 13.7 美元的预测与 Q3 指引 (营收 89.5 亿、非 GAAP EPS 3.36 美元) 一致 ([2026 财年 Q2 10-Q](https://www.sec.gov/Archives/edgar/data/6951/000162828026037227/amat-20260426.htm))。
+- **毛利率向上** 反映中国占比下降带来的产品组合改善 + 定价以每个项目 2–3 年逐步上行, 管理层指引 Q3 毛利率 50.1% ([Goldman Sachs — AMAT, 2026-05-14](http://xs-macbook-air.local:5001/zsxq/pdf/212452181281111/Goldman%20Sachs-Applied%20Materials%20Inc.%20%EF%BC%88AMAT.US%EF%BC%89%EF%BC%9A%20Stock%20should%20continue%20to%20re~rate%20given%20strong%20guidance%20uplift%20and%20improving%20mix~Buy-260514.pdf))。
+- **关键变量 (swing variables):** ① CY2027 WFE 是否如卖方所判断推向约 2,000 亿美元; ② 中国 ICAPS 营收的耐久性 (出口管制) ——这两个变量决定 FY2027–28 营收能否兑现。
+
+> **与卖方一致预期的对比 (vs consensus):** 我们 FY2027E 非 GAAP EPS 约 18.2 美元, 略低于 UBS 对 C2027 的更乐观估计、高于其更早版本; 与 Citi 的 CY2027 EPS 15.72 美元相比偏高 (口径差异: Citi 用更保守的营收路径)。整体我们的 CY2026 营收约 35.5 亿与 UBS 的 CY26E 36.7 亿、Citi 框架接近 ([UBS — AMAT, 2026-05-14](http://xs-macbook-air.local:5001/zsxq/pdf/415245155521428/UBS-Applied%20Materials%20Inc%EF%BC%88AMAT.US%EF%BC%89WFE%20Supercycle%20Underpins%20Multi~Year%20Visibility%20and%20a%20Path%20to%20~%2427%20EPS-260514.pdf); [Citi — AMAT, 2026-05-12](http://xs-macbook-air.local:5001/zsxq/pdf/212452281485851/CITI-Applied%20Materials%20Inc%20%EF%BC%88AMAT.US%EF%BC%89%20Lifting%20TP%20to%20%24520%20on%20Updated%20WFE%20Framework%EF%BC%9B%20Maintain%20Buy-260512.pdf))。
+
+### 2.2 价格目标推导 (PT derivation) — *分析师观点*
+
+**方法: 前瞻 P/E × 目标 EPS。**
+
+- 目标 EPS: FY2027E (≈CY2027) 非 GAAP 摊薄 EPS **约 21.2 美元** (注: 此处用我们更靠后的 FY2028E 口径作为 12 个月前瞻锚, 因为 12 个月后市场将定价 CY2027/28; 取约 21 美元的前瞻 EPS)。
+- 目标倍数: **约 28×**。依据是 AMAT 历史前瞻 P/E 区间 (周期中段约 18–22×, AI 周期高位约 30–35×) 的中高位, 但**低于** Citi 用的 33× 与 Bernstein 的约 30×——理由是现价已透支, 我们对倍数持更保守态度。
+- **PT = 21.2 × 28 ≈ 595 美元**, 较 2026-06-12 收盘 567.25 美元上行约 **+4.9%**。
+
+**为什么用约 28× 而非卖方的 30–33×:** 卖方 (Citi 33×、Bernstein 约 30×) 在 5 月给出更高倍数时, 股价还在 430–445 美元、隐含上行 20%+。现价已 567 美元, 用相同高倍数会得到与现价几乎持平甚至倒挂的 PT——这本身说明现价已计入乐观情形。我们用约 28× 在承认 AI 周期溢价的同时, 给倍数收缩留出安全边际。对比同业前瞻倍数: LRCX 46×、KLAC 50×、ASML 39× ([Yahoo Finance — AMAT/LRCX/KLAC/ASML, as of 2026-06-12](https://finance.yahoo.com/quote/AMAT/)) ——AMAT 28× 的目标倍数相对同业仍有折让, 与其"产品组合最广但单点护城河最弱"的定位一致。
+
+### 2.3 Bull / Base / Bear 情景 — *分析师观点*
+
+| 情景 | 关键假设 | FY2027E 非 GAAP EPS | 目标倍数 | 价格目标 | 相对现价 (567.25) |
+|---|---|---|---|---|---|
+| **Bull (乐观)** | CY2027 WFE 推向约 2,000 亿; 中国 ICAPS 维持; AI 资本开支不放缓; 倍数维持高位 | 约 23.5 | 32× | **约 750 美元** | **+32%** |
+| **Base (基准)** | 我们的中性估计; CY26 设备 +30% 后 CY27 仍强增长; 中国占比稳在约 25–30% | 约 21.2 | 28× | **595 美元** | **+4.9%** |
+| **Bear (悲观)** | 新一轮 BIS 规则削减中国营收; AI 资本开支正常化; WFE 周期见顶; 倍数收缩至历史均值 | 约 17.0 | 22× | **约 375 美元** | **−34%** |
+
+Bull 情景对应 UBS"路径到约 27 美元 EPS (CY2028)"与 Citi 的 Terafab 上行 (马斯克 *55–119 亿美元* 资本开支 → *30–70 亿美元* 增量 WFE) 所描绘的超级周期延续 ([UBS — AMAT, 2026-05-14](http://xs-macbook-air.local:5001/zsxq/pdf/415245155521428/UBS-Applied%20Materials%20Inc%EF%BC%88AMAT.US%EF%BC%89WFE%20Supercycle%20Underpins%20Multi~Year%20Visibility%20and%20a%20Path%20to%20~%2427%20EPS-260514.pdf); [Citi — AMAT, 2026-05-12](http://xs-macbook-air.local:5001/zsxq/pdf/212452281485851/CITI-Applied%20Materials%20Inc%20%EF%BC%88AMAT.US%EF%BC%89%20Lifting%20TP%20to%20%24520%20on%20Updated%20WFE%20Framework%EF%BC%9B%20Maintain%20Buy-260512.pdf))。Bear 情景的对称下行 (−34%) 大于 Base 的上行 (+4.9%), 这种**不对称的风险回报**正是 Hold 评级的量化理由。
+
+**回报拆解 (5 步 DuPont, FY2025):** 下图把 FY2025 ROE 约 35.5% 拆为净利率 (net margin)、资产周转率 (asset turnover)、权益乘数 (equity multiplier) 三层——AMAT 的高 ROE 主要由高净利率 (约 24.7%) 与适度的资产周转驱动, 而非靠加杠杆 (权益乘数仅约 1.8×), 这正是其资产负债表质量高的体现。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 540" width="1240" height="540" role="img" aria-label="DuPont ROE decomposition"><rect x="0" y="0" width="1240" height="540" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Applied Materials 5 步 DuPont ROE 拆解 (FY2025)</text>
+<rect x="545.00" y="56.00" width="150" height="56" rx="7" fill="#1e3a8a"/>
+<text x="620.00" y="76.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">ROE</text>
+<text x="620.00" y="94.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">35.51%</text>
+<text x="620.00" y="106.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">= Net Income / Avg Equity</text>
+<rect x="191.60" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="266.60" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Net Margin</text>
+<text x="266.60" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">24.67%</text>
+<text x="266.60" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Net Income / Revenue</text>
+<line x1="620.00" y1="112.00" x2="266.60" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="545.00" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="620.00" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Asset Turnover</text>
+<text x="620.00" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">0.80</text>
+<text x="620.00" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Revenue / Avg Assets</text>
+<line x1="620.00" y1="112.00" x2="620.00" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="898.40" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="973.40" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Equity Multiplier</text>
+<text x="973.40" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">1.79</text>
+<text x="973.40" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Avg Assets / Avg Equity</text>
+<line x1="620.00" y1="112.00" x2="973.40" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="443.30" cy="196.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="443.30" y="201.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<circle cx="796.70" cy="196.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="796.70" y="201.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<rect x="65.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="124.00" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Operating Margin</text>
+<text x="124.00" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">29.22%</text>
+<text x="124.00" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Op Inc / Revenue</text>
+<line x1="266.60" y1="224.00" x2="124.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="207.60" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="266.60" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Tax Burden</text>
+<text x="266.60" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">0.7548</text>
+<text x="266.60" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Net Inc / Pretax</text>
+<line x1="266.60" y1="224.00" x2="266.60" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="350.20" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="409.20" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Interest Burden</text>
+<text x="409.20" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">1.1185</text>
+<text x="409.20" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Pretax / Op Inc</text>
+<line x1="266.60" y1="224.00" x2="409.20" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="195.30" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="195.30" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<circle cx="337.90" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="337.90" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<rect x="479.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="538.00" y="326.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Revenue</text>
+<text x="538.00" y="342.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$28.4B</text>
+<line x1="620.00" y1="224.00" x2="538.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="643.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="702.00" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Assets</text>
+<text x="702.00" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$35.4B</text>
+<text x="702.00" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="620.00" y1="224.00" x2="702.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="620.00" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="620.00" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">÷</text>
+<rect x="832.40" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="891.40" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Assets</text>
+<text x="891.40" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$35.4B</text>
+<text x="891.40" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="973.40" y1="224.00" x2="891.40" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="996.40" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="1055.40" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Equity</text>
+<text x="1055.40" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$19.7B</text>
+<text x="1055.40" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="973.40" y1="224.00" x2="1055.40" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="967.20" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="967.20" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">÷</text>
+<rect x="69.00" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="124.00" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Operating Income</text>
+<text x="124.00" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$8.3B</text>
+<line x1="124.00" y1="356.00" x2="124.00" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="211.60" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="266.60" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Net Income</text>
+<text x="266.60" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$7.0B</text>
+<line x1="266.60" y1="356.00" x2="266.60" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="354.20" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="409.20" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Pretax Income</text>
+<text x="409.20" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$9.3B</text>
+<line x1="409.20" y1="356.00" x2="409.20" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<text x="620.00" y="524.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Applied Materials FY2025 10-K, 合并损益表与资产负债表 (净利 6,998; 营收 28,368; 期末权益 20,415)</text>
+</svg>
+
+*来源: [应用材料 2025 10-K, 合并损益表与资产负债表 (净利 6,998; 营收 28,368; 期末权益 20,415)](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm)。*
+
+### 2.4 卖方观点演变 (Sell-side view evolution) — *分析师观点*
+
+本报告引用了 ≥2 篇 `db/zsxq.db` 券商研报, 故按规范构建按机构的观点时间线与机构间分歧表。**机械预读:** 已只读查询 `db/stock_price_target.db`, AMAT 共 17 条 PT 记录、6 家机构, PT 区间为 **360–525 美元** (中位约 515–520, 最低 Barclays 360 为 1 月旧值, 剔除旧值后区间 502–525, 离散度约 5%)。**关键事实: 现价 567.25 美元已高于全部 6 家机构的 PT。**
+
+**按机构的观点时间线 (report-date 价格来自 `stock_price_target.db` 的 `report_date_price`):**
+
+| 机构 | 报告日 | 评级 | 目标价 | 报告日股价 → 当时隐含上行 | 核心论点 |
+|---|---|---|---|---|---|
+| **Bernstein** | 2026-05-28 | Outperform | **525 美元** | 449.68 → +16.7% | 约 30× × 平均 FY2027/28 非 GAAP EPS 17.12 美元; AI 驱动 logic/DRAM/先进封装占 2026 WFE 增量约 80%; 先进封装今年 +50%+; 中国降至约 mid-20s% ([Bernstein — AMAT SDC, 2026-05-28](http://xs-macbook-air.local:5001/zsxq/pdf/212485522841821/Bernstein-Applied%20Materials%20%EF%BC%88AMAT.US%EF%BC%89%EF%BC%9A%20Key%20takeaways%20from%20Bernstein%27s%20SDC-260528.pdf)) |
+| **Citi** | 2026-05-12 | Buy | **520 美元** (↑ from 420) | 430.66 → +20.7% | 33× × CY27 EPS 15.72 美元 (倍数由 30× 上调); WFE bull case 2026/27 = *1,450 亿 / 1,900 亿美元*; Terafab 增量 WFE *300–700 亿美元* ([Citi — AMAT, 2026-05-12](http://xs-macbook-air.local:5001/zsxq/pdf/212452281485851/CITI-Applied%20Materials%20Inc%20%EF%BC%88AMAT.US%EF%BC%89%20Lifting%20TP%20to%20%24520%20on%20Updated%20WFE%20Framework%EF%BC%9B%20Maintain%20Buy-260512.pdf)) |
+| **Goldman Sachs** | 2026-05-14 | Buy | **520 美元** | 440.01 → +18.2% | 重估逻辑: CY26 设备增长指引由 >20% 上调至 >30% 清除高门槛; AMAT >60% 营收敞口于沉积+刻蚀 (支出强度 2027 前上升); CY25 中国份额流失的误解将反转 ([Goldman Sachs — AMAT, 2026-05-14](http://xs-macbook-air.local:5001/zsxq/pdf/212452181281111/Goldman%20Sachs-Applied%20Materials%20Inc.%20%EF%BC%88AMAT.US%EF%BC%89%EF%BC%9A%20Stock%20should%20continue%20to%20re~rate%20given%20strong%20guidance%20uplift%20and%20improving%20mix~Buy-260514.pdf)) |
+| **UBS** | 2026-05-14 | Buy | **515 美元** (↑ from 480) | 440.01 → +17.0% | 22× × 混合 C2027/28E 非 GAAP EPS 23.51 美元; WFE 推向 *2,000 亿 (C2027) / 2,500 亿 (C2028)*; 路径到约 *27 美元 EPS (C2028)*; CY26E EPS 由 13.26 上调至 14.00 ([UBS — AMAT, 2026-05-14](http://xs-macbook-air.local:5001/zsxq/pdf/415245155521428/UBS-Applied%20Materials%20Inc%EF%BC%88AMAT.US%EF%BC%89WFE%20Supercycle%20Underpins%20Multi~Year%20Visibility%20and%20a%20Path%20to%20~%2427%20EPS-260514.pdf)) |
+| **Morgan Stanley** | 2026-05-15 → 05-19 | Overweight → **Equal-Weight** | 502 美元 | 436.08 / 406.40 | **自我调整**: 5/15 仍 Overweight, 5/18–19 下调至 Equal-Weight (PT 维持 502)——在卖方一片看多中相对谨慎的声音, 反映对估值已不便宜的担忧 (PT DB 记录) |
+
+**机构间分歧 (机构间分歧) — 不混为虚假共识:**
+
+| 机构 | 日期 | 评级 / PT | 核心论点 | 什么证据能证明其正确 |
+|---|---|---|---|---|
+| Citi | 2026-05-12 | Buy / 520 | 33× 高倍数 + WFE 超级周期 (CY27 1,900 亿) + Terafab 上行 | CY2027 WFE 实际突破 1,800 亿; 美国大型 Terafab 项目落地下单 |
+| UBS | 2026-05-14 | Buy / 515 | 仅 22× 但 EPS 基数更高 (C2028 约 27 美元) | C2028 WFE 达 2,500 亿; AMAT EPS 兑现约 27 美元 |
+| Morgan Stanley | 2026-05-19 | **Equal-Weight** / 502 | 估值已反映多数好消息, 风险回报趋于平衡 | 股价见顶回落或横盘; CY27 上修不及预期 |
+| **本报告** | 2026-06-14 | **Hold** / 595 | 现价 567 已高于全部卖方 PT, 多数倍数重估已兑现, 风险回报不对称 | 股价回落至 500 以下重现安全边际, 或 CY2027 估计显著再上修 |
+
+**解读:** 6 家机构里 5 家在 5 月给出 Buy/Outperform、PT 502–525——但这些 PT 都是在股价 405–450 美元时给出的, 当时隐含上行 16–27%。Morgan Stanley 5 月中旬由 Overweight 下调至 Equal-Weight 是第一个谨慎信号。到 6 月中, 股价 567.25 美元已**穿透全部 PT**, 卖方的看多目标已被市场提前实现——这正是我们给 Hold 而非追高的依据: 不是基本面转坏, 而是价格跑到了估值前面。
+
+### 2.5 公司历史 (沿革)
 
 ```mermaid
 timeline
@@ -221,7 +565,7 @@ graph LR
 
 **中文释义 / Plain-language gloss:** 外延 (Epitaxy / 外延) 通过逐原子的方式在晶圆表面沉积一层薄的单晶硅 (或 SiGe) 层, 使所生成的薄膜与下方的晶圆具有相同的晶格结构。它是晶体管的源极/漏极 (source/drain) 和沟道 (channel) 实际所在的层; 如果外延存在缺陷, 后续每一步都会继承该缺陷。外延与下一节金属沉积的区别在于: 它通过化学气相反应在高温下 (通常 600–1100°C) 生长*单晶*薄膜, 而金属沉积只是在已构建结构的顶部溅射或电镀一层金属薄膜。当前驱动需求的战略转折点是: 台积电 N2 与三星 SF2 上的**全栅极环绕 (gate-all-around, GAA, 栅极环绕)** 过渡, 需要多次选择性外延步骤来生长纳米片堆叠——每个晶体管通常需要 4–6 次外延配方, 而 FinFET 一代只需 1–2 次。
 
-*分析师观点:* Applied 在此与 ASM International (ASMI) 和 Hitachi-Kokusai 竞争。行业观察 (例如 [SEMI Equipment Market Statistics](https://www.semi.org/en/products-services/market-data/equipment-market-data-subscription)) 普遍将 AMAT 视为代工/逻辑外延领域的领导者, 但 Applied 并未在 10-K 中自我宣称——我们将任何"外延 #1"的表述重新标注为分析师观点。
+*分析师观点:* Applied 在此与 ASM International (ASMI) 和 Hitachi-Kokusai 竞争。行业观察 (例如 [SEMI Equipment Market Statistics](https://www.semi.org/en/products-services/market-data)) 普遍将 AMAT 视为代工/逻辑外延领域的领导者, 但 Applied 并未在 10-K 中自我宣称——我们将任何"外延 #1"的表述重新标注为分析师观点。
 
 **金属沉积——PVD (物理气相沉积, physical-vapor deposition) / ECD (电化学沉积, electrochemical deposition)。**
 
@@ -262,7 +606,7 @@ graph LR
 
 **中文释义 / Plain-language gloss:** 刻蚀*去除*晶圆表面的材料——通过与等离子体活化气体的化学反应 (等离子刻蚀, plasma etch) 或通过湿法化学。Applied 涉及的两种主要模式是**导体刻蚀** (切割金属和硅) 和**介质刻蚀** (切割二氧化硅、氮化硅和低 κ 薄膜)。刻蚀类中, 原子层刻蚀 (ALE) 是 ALD 在去除侧的对应物——每个循环去除一层原子。刻蚀与 CMP (下一节) 的区别在于刻蚀是*垂直*且图形定义的 (它精确在光刻定义孔位的位置切穿介质), 而 CMP 是*横向*且均匀去除材料至平整表面。战略转折点: 200+ 层 3D NAND 需要高深宽比 (high-aspect-ratio, HAR, 高纵横比) 刻蚀以切割深度 >10 μm、侧壁偏离 <0.1% 的通道; GAA 逻辑需要原子层刻蚀以定义纳米片释放窗口。
 
-*分析师观点:* 刻蚀被卖方和 SEMI 普遍理解为 Lam Research 与东京电子的双寡头, Applied 是强劲的第三。10-K 竞争章节笼统列出 Applied 的主要竞争对手: *"在半导体系统业务, 我们的主要竞争对手包括 ASM International, ASM Pacific Technology, Hitachi Kokusai Electric, KLA Corporation, Lam Research Corporation, Onto Innovation, SCREEN Holdings 和 Tokyo Electron Limited"*——相对份额未予披露, 我们引用 [SEMI 季度设备市场统计](https://www.semi.org/en/products-services/market-data/equipment-market-data-subscription) 作为份额排名来源。([2025 10-K, "Competition"](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))
+*分析师观点:* 刻蚀被卖方和 SEMI 普遍理解为 Lam Research 与东京电子的双寡头, Applied 是强劲的第三。10-K 竞争章节笼统列出 Applied 的主要竞争对手: *"在半导体系统业务, 我们的主要竞争对手包括 ASM International, ASM Pacific Technology, Hitachi Kokusai Electric, KLA Corporation, Lam Research Corporation, Onto Innovation, SCREEN Holdings 和 Tokyo Electron Limited"*——相对份额未予披露, 我们引用 [SEMI 季度设备市场统计](https://www.semi.org/en/products-services/market-data) 作为份额排名来源。([2025 10-K, "Competition"](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))
 
 **平坦化 (CMP——chemical-mechanical planarization, 化学机械抛光)。**
 
@@ -353,13 +697,24 @@ AGS 营收稳步以每年约 5–6% 复合增长:
 | 2024 财年 | 6,225 | 23% | 29.1% |
 | 2025 财年 | 6,385 | 23% | 28.1% |
 
-![AGS 营收与利润率](charts/amat_ags_trend.png)
+```mermaid
+xychart-beta
+    title "AGS 营业收入 (US$ m, FY2022→FY2025)"
+    x-axis ["FY2022", "FY2023", "FY2024", "FY2025"]
+    y-axis "营业收入 (US$ m)" 0 --> 7000
+    bar [5543, 5732, 6225, 6385]
+```
 
-*来源: [2025 10-K, Note 15](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm); [2024 10-K, Note 14](https://www.sec.gov/Archives/edgar/data/6951/000000695124000044/amat-20241027.htm)。*
+*AGS 营业利润率同期为 28.4% / 26.7% / 29.1% / 28.1% (单独列出, 因与营收金额单位不同, 不混在同一 y 轴)。来源: [2025 10-K, Note 14](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm); [2024 10-K, Note 14](https://www.sec.gov/Archives/edgar/data/6951/000000695124000044/amat-20241027.htm)。*
 
 **为什么 AGS 比分部营收所暗示的更重要。** 在 2025 年 10 月 26 日总积压订单 150 亿美元中, AGS 占 71.41 亿美元 (48%); 半导体系统为 71.05 亿美元 (47%); Corporate and Other 为 7.56 亿美元 (5%)。**AGS 积压订单现已超过半导体系统积压订单**——这是结构上有意义的转折点, 因为经常性服务比新工具订单的周期性更弱。在未来周期中, 这应能压缩盈利波动并部分支持更高估值倍数。([2025 10-K, "Backlog"](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))
 
-![积压订单](charts/amat_backlog.png)
+```mermaid
+pie title 2025 财年末积压订单构成 (总计 150.02 亿美元)
+    "AGS (71.41 亿, 48%)" : 7141
+    "半导体系统 (71.05 亿, 47%)" : 7105
+    "Corporate & Other (7.56 亿, 5%)" : 756
+```
 
 *来源: [2025 10-K, "Backlog"](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm); [2024 10-K, "Backlog"](https://www.sec.gov/Archives/edgar/data/6951/000000695124000044/amat-20241027.htm)。*
 
@@ -373,9 +728,15 @@ Applied 并未披露长期服务协议 (LTSA, long-term service agreement) 项�
 
 ### 4.10 季度运行率 (近期)
 
-![季度营收](charts/amat_quarterly_rev.png)
+```mermaid
+xychart-beta
+    title "季度营收 (US$ m, 近 5 个季度)"
+    x-axis ["Q1-FY25", "Q2-FY25", "Q3-FY25", "Q4-FY25", "Q1-FY26", "Q2-FY26"]
+    y-axis "营业收入 (US$ m)" 0 --> 9000
+    bar [7166, 7100, 7300, 7340, 7012, 7910]
+```
 
-*来源: [2026 财年 Q2 新闻稿, 2026-05-14](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm) 提供 2026 财年 Q2 (79.10 亿美元) 与 2025 财年 Q2 (71.00 亿美元) 数据; [2026 财年 Q2 10-Q 上半年合计](https://www.sec.gov/Archives/edgar/data/6951/000162828026037227/amat-20260426.htm) 推算 2026 财年 Q1 = 70.12 亿美元。*
+*2026 财年 Q2 创纪录营收 79.10 亿美元 (同比 +11%); Q3 指引中点 89.5 亿美元将再创新高。来源: [2026 财年 Q2 新闻稿, 2026-05-14](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm) 提供 Q2-FY26 (79.10 亿) 与 Q2-FY25 (71.00 亿); [2026 财年 Q2 10-Q 上半年合计 149.22 亿](https://www.sec.gov/Archives/edgar/data/6951/000162828026037227/amat-20260426.htm) 推算 Q1-FY26 = 70.12 亿; Q3/Q4-FY25 为各季约数。*
 
 ### 4.11 旗舰业务与过去 12 个月的新进展
 
@@ -385,6 +746,159 @@ Applied 并未披露长期服务协议 (LTSA, long-term service agreement) 项�
 - **近 12 个月新品——Trillium™ ALD。** 定位于 GAA 转折点的首个主要 ALD 平台发布。([2026 财年 Q2 新闻稿](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm))
 - **近 12 个月新品——ASMPT NEXX 收购。** 增加面板级封装沉积; 2026 年 5 月宣布, 整合时点待定。([2026 财年 Q2 新闻稿](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm))
 - **战略 R&D 平台——硅谷 EPIC Center。** 2025 财年开业; 在 2026 财年 Q2 中加入了台积电、三星电子、SK 海力士、美光、Advantest、亚利桑那州立大学、伦斯勒理工学院、斯坦福大学等具名研究与创新合作伙伴。([2026 财年 Q2 新闻稿](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm))
+
+### 4.12 资金流 (供应链) 图——钱从哪来、又流向谁
+
+下面这张"跟着钱走 (follow the money)"图采用**需求/营收视角** (适合 AMAT 这类设备供应商): 左列是付钱的终端客户 (foundry/逻辑、DRAM/HBM、NAND、中国 ICAPS 的 WFE 资本开支), 中列是 AMAT 的产品线, 右列是 AMAT 自己必须采购的关键子系统供应商——也就是 AMAT 营收链条上的瓶颈所在。实线 = 直接付款; 虚线 = 嵌在成品部件价格里的间接资金。ribbon 粗细只是粗略相对规模, 不是严格守恒的金额。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1050" width="1180" height="1050" role="img" aria-label="钱从哪来、又流向谁：Applied Materials 的需求—供给链" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1050" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">WFE 资金流 · FY2025 营收 283.7 亿美元</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱从哪来、又流向谁：Applied Materials 的需求—供给链</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">前沿逻辑/DRAM/先进封装的资本开支付钱给 AMAT 的材料工程设备；AMAT 再把成本花在真空、射频、光学等子系统供应商上——这些子系统是 AMAT 自身的瓶颈环节。</text>
+<ellipse cx="1031.00" cy="423.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="654.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="654.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁在付钱 (终端客户的 WFE 资本开支)</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">买什么 (AMAT 产品线)</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱最终流向谁 (AMAT 的关键供应商)</text>
+<path d="M 256.00 235.09 C 369.50 235.09, 369.50 246.55, 483.00 246.55" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 256.91 C 369.50 256.91, 369.50 368.91, 483.00 368.91" fill="none" stroke="url(#mfgold)" stroke-width="19.64" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 272.18 C 369.50 272.18, 369.50 486.00, 483.00 486.00" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 376.64 C 369.50 376.64, 369.50 265.09, 483.00 265.09" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 387.55 C 369.50 387.55, 369.50 383.09, 483.00 383.09" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 491.00 C 369.50 491.00, 369.50 390.18, 483.00 390.18" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 601.00 C 369.50 601.00, 369.50 276.55, 483.00 276.55" fill="none" stroke="url(#mfgold)" stroke-width="9.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 285.27 C 369.50 285.27, 369.50 596.00, 483.00 596.00" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 250.36 C 810.50 250.36, 810.50 254.18, 924.00 254.18" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 379.82 C 810.50 379.82, 810.50 372.36, 924.00 372.36" fill="none" stroke="url(#mfgold)" stroke-width="14.18" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 262.36 C 810.50 262.36, 810.50 360.91, 924.00 360.91" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 486.00 C 810.50 486.00, 810.50 478.00, 924.00 478.00" fill="none" stroke="url(#mfgold)" stroke-width="9.82" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 368.91 C 810.50 368.91, 810.50 265.64, 924.00 265.64" fill="none" stroke="url(#mfgold)" stroke-width="7.64" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 596.00 C 810.50 596.00, 810.50 591.27, 924.00 591.27" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 270.00 C 810.50 270.00, 810.50 583.64, 924.00 583.64" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="434.64" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">服务年金</text>
+<text x="810.50" y="370.09" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">等离子体电源</text>
+<rect x="42.00" y="198.00" width="214" height="120.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="42.00" y="198.00" width="3" height="120.00" rx="2" fill="#34d399"/>
+<text x="60.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">晶圆代工/逻辑</text>
+<text x="60.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">TSMC · Samsung Foundry · Intel</text>
+<text x="60.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">FY25 终端 67% 来自代工/逻辑</text>
+<rect x="42.00" y="334.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="42.00" y="334.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="60.00" y="367.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">DRAM/HBM</text>
+<text x="60.00" y="388.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">Samsung · SK Hynix · Micron</text>
+<text x="60.00" y="405.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">FY25 终端 26% 来自 DRAM</text>
+<rect x="42.00" y="444.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="42.00" y="444.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="60.00" y="477.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">NAND</text>
+<text x="60.00" y="498.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">Micron · SK Hynix · 长江存储</text>
+<text x="60.00" y="515.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">FY25 终端 7%</text>
+<rect x="42.00" y="554.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="554.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="587.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">中国成熟节点 ICAPS</text>
+<text x="60.00" y="608.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">中芯国际 · 长鑫存储</text>
+<text x="60.00" y="625.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">FY25 中国占营收 30%</text>
+<rect x="483.00" y="203.00" width="214" height="110.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="203.00" width="3" height="110.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="236.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">沉积 Deposition</text>
+<text x="501.00" y="257.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">PVD/CVD/ALD/Epi/ECD</text>
+<text x="501.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">Endura · Producer · Trillium</text>
+<rect x="483.00" y="329.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="329.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="362.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">刻蚀/CMP/注入</text>
+<text x="501.00" y="383.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Sym3 etch · Reflexion CMP</text>
+<text x="501.00" y="400.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Varian 离子注入</text>
+<rect x="483.00" y="439.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="439.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="472.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">工艺控制/封装</text>
+<text x="501.00" y="493.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">SEMVision eBeam</text>
+<text x="501.00" y="510.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">先进封装/混合键合</text>
+<rect x="483.00" y="549.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="549.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="582.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">全球服务 AGS</text>
+<text x="501.00" y="603.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">备件·升级·LTSA 订阅</text>
+<text x="501.00" y="620.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY25 63.85 亿美元</text>
+<rect x="924.00" y="211.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="211.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="244.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">真空泵/子系统</text>
+<text x="942.00" y="265.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">Edwards (Atlas Copco)</text>
+<text x="942.00" y="282.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">Ebara · Pfeiffer</text>
+<rect x="924.00" y="321.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="321.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="354.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">射频电源 RF</text>
+<text x="942.00" y="375.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Advanced Energy (AEIS)</text>
+<text x="942.00" y="392.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">MKS Instruments</text>
+<rect x="924.00" y="431.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="431.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="464.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">光学/精密机械</text>
+<text x="942.00" y="485.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">MKS · 蔡司光学</text>
+<text x="942.00" y="502.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">精密运动/对准</text>
+<rect x="924.00" y="541.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="541.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="574.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">代工与材料</text>
+<text x="942.00" y="595.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Celestica · Benchmark</text>
+<text x="942.00" y="612.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">靶材·特气·研磨液</text>
+<rect x="42.00" y="674.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="676.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="676.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="676.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="676.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="669.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="747.00" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="886.20" y="669.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="905.20" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="979.60" y="669.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="998.60" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="42.00" y="689.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="61.00" y="698.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="142.60" y="689.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="161.60" y="698.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="286.40" y="689.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="305.40" y="698.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<line x1="42" y1="714.00" x2="1138" y2="714.00" stroke="#222a3a"/>
+<text x="42.00" y="730.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — AMAT 资金链关键环节</text>
+<rect x="42.00" y="750.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="750.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="774.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">需求 · 代工/逻辑</text>
+<text x="58.00" y="792.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">前沿逻辑是最大金主</text>
+<text x="58.00" y="816.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 半导体系统终端结构中</tspan><tspan fill="#f4d58a" font-weight="700"> 67%</tspan><tspan fill="#9aa3b8" font-weight="400"> 来自</tspan><tspan fill="#9aa3b8" font-weight="400"> foundry/logic、</tspan><tspan fill="#f4d58a" font-weight="700"> 26%</tspan><tspan fill="#9aa3b8" font-weight="400"> 来自</tspan><tspan fill="#9aa3b8" font-weight="400"> DRAM、</tspan></text>
+<text x="58.00" y="832.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">7%</tspan><tspan fill="#9aa3b8" font-weight="400"> 来自</tspan><tspan fill="#9aa3b8" font-weight="400"> NAND；GAA</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#9aa3b8" font-weight="400"> backside-power</tspan><tspan fill="#9aa3b8" font-weight="400"> 过渡把每片晶圆的沉积/刻蚀工序步数推高。</tspan></text>
+<rect x="412.00" y="750.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="412.00" y="750.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="428.00" y="774.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">需求 · DRAM/HBM</text>
+<text x="428.00" y="792.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">HBM 与先进封装是增量引擎</text>
+<text x="428.00" y="816.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">卖方判断</tspan><tspan fill="#9aa3b8" font-weight="400"> logic/DRAM/先进封装合计驱动</tspan><tspan fill="#9aa3b8" font-weight="400"> 2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 年</tspan><tspan fill="#f4d58a" font-weight="700"> ~80%</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#9aa3b8" font-weight="400"> WFE</tspan></text>
+<text x="428.00" y="832.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">增量；advanced</tspan><tspan fill="#9aa3b8" font-weight="400"> packaging</tspan><tspan fill="#9aa3b8" font-weight="400"> 今年预计增长</tspan><tspan fill="#f4d58a" font-weight="700"> 50%+</tspan><tspan fill="#9aa3b8" font-weight="400"> （Bernstein</tspan><tspan fill="#9aa3b8" font-weight="400"> SDC）。</tspan></text>
+<rect x="782.00" y="750.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="782.00" y="750.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="798.00" y="774.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">需求 · 中国 ICAPS</text>
+<text x="798.00" y="792.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">中国成熟节点的现金流</text>
+<text x="798.00" y="816.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">中国</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 占营收</tspan><tspan fill="#f4d58a" font-weight="700"> 30%</tspan><tspan fill="#9aa3b8" font-weight="400"> （FY24</tspan><tspan fill="#9aa3b8" font-weight="400"> 为</tspan><tspan fill="#9aa3b8" font-weight="400"> 37%），主要是</tspan><tspan fill="#9aa3b8" font-weight="400"> ICAPS</tspan></text>
+<text x="798.00" y="832.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">成熟节点设备；出口管制是这条</tspan><tspan fill="#f4d58a" font-weight="700"> 85.29</tspan><tspan fill="#f4d58a" font-weight="700"> 亿美元</tspan><tspan fill="#9aa3b8" font-weight="400"> 现金流的核心风险。</tspan></text>
+<rect x="42.00" y="880.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="880.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="904.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">供给 · 子系统瓶颈</text>
+<text x="58.00" y="922.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">射频电源与真空是上游瓶颈</text>
+<text x="58.00" y="946.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">AMAT</tspan><tspan fill="#9aa3b8" font-weight="400"> 把</tspan><tspan fill="#9aa3b8" font-weight="400"> COGS</tspan><tspan fill="#9aa3b8" font-weight="400"> 花在</tspan><tspan fill="#f4d58a" font-weight="700"> Advanced</tspan><tspan fill="#f4d58a" font-weight="700"> Energy</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> MKS</tspan><tspan fill="#9aa3b8" font-weight="400"> （射频/真空）、</tspan><tspan fill="#f4d58a" font-weight="700"> Edwards</tspan></text>
+<text x="58.00" y="962.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">（真空泵）等子系统上——这些是设备整机的关键长交期件，也是</tspan><tspan fill="#9aa3b8" font-weight="400"> AMAT</tspan><tspan fill="#9aa3b8" font-weight="400"> 自己的供应链集中度风险。</tspan></text>
+<rect x="412.00" y="880.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="880.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="904.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">年金 · AGS</text>
+<text x="428.00" y="922.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">服务把周期性营收变年金</text>
+<text x="428.00" y="946.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">AGS</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2025</tspan><tspan fill="#f4d58a" font-weight="700"> 63.85</tspan><tspan fill="#f4d58a" font-weight="700"> 亿美元</tspan><tspan fill="#9aa3b8" font-weight="400"> 、营业利润率</tspan><tspan fill="#f4d58a" font-weight="700"> 28.1%</tspan><tspan fill="#9aa3b8" font-weight="400"> ；LTSA</tspan></text>
+<text x="428.00" y="962.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">订阅化把交易性、周期性的备件营收转为可预测的经常性收入（ARR）。</tspan></text>
+<text x="590.00" y="1032.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Applied Materials FY2025 10-K (Note 14 分部与终端结构、营收地区分布); 供应商名单来自 AMAT 10-K 供应链披露与公开拆解; Bernstein SDC 2026-05-28 (先进封装 +50%+)</text>
+</svg>
+
+**跟着钱走 (follow the money) — 链条解读 (引用):** FY2025 半导体系统终端结构为 foundry/logic *67%*、DRAM *26%*、NAND *7%* ([2025 10-K, MD&A 终端市场](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))。卖方判断 logic/DRAM/先进封装合计驱动 2026 年约 *80%* 的 WFE 增量、先进封装今年增长 *50%+* ([Bernstein — AMAT SDC, 2026-05-28](http://xs-macbook-air.local:5001/zsxq/pdf/212485522841821/Bernstein-Applied%20Materials%20%EF%BC%88AMAT.US%EF%BC%89%EF%BC%9A%20Key%20takeaways%20from%20Bernstein%27s%20SDC-260528.pdf))。中国 ICAPS 现金流约 *85.29 亿美元* (FY2025 占营收 30%) 是受出口管制威胁的核心环节 ([2025 10-K, 营收地区分布](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))。在供给侧, AMAT 把 COGS 花在 Advanced Energy / MKS (射频电源)、Edwards (真空泵) 等子系统上——这些长交期件是 AMAT 自身的供应链集中度瓶颈 (供应商名单来自 AMAT 10-K 供应链披露与公开拆解; 子系统厂商的具体采购金额未由 AMAT 披露, 故 ribbon 仅示相对规模)。
 
 ---
 
@@ -411,9 +925,100 @@ pie title 2025 财年营收集中度 (顶部 2 家 = 34%, 已披露; 名称为�
 
 10-K 确认: *"在 2025 财年, 我们约 89% 的营业收入来自美国以外地区的客户。"* 在亚太地区, 2024–25 年动态对比鲜明——中国同比下滑 16% (从 101.17 亿美元降至 85.29 亿美元), 美国出口管制开始生效, 而台湾增长 71%、韩国增长 25% 拾起接力棒。([2025 10-K, Note 15 "Concentrations"](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))
 
-![中国敞口](charts/amat_china_exposure.png)
+下图左为 FY2025 营收按地区的甜甜圈 (denominator = 合并营收), 右为 FY2023→FY2025 各地区营收的演变堆叠柱——清楚显示中国 FY2024 的 101 亿峰值 (37%) 如何在 FY2025 回落至 85 亿 (30%), 而台湾 (+71%) 与韩国 (+25%) 接力补位。
 
-*来源: [2025 10-K, Note 15 地理营收](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm); [2024 10-K, Note 14](https://www.sec.gov/Archives/edgar/data/6951/000000695124000044/amat-20241027.htm) 提供 2022 财年可比数据。*
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 营收构成 (按地区, 按客户工厂所在地)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 413.37,280.51 L 362.08,263.61 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 413.37,280.51 A 132 132 0 0 1 253.27,366.55 L 267.48,314.45 A 78 78 0 0 0 362.08,263.61 Z" fill="#15803d"/>
+<path d="M 253.27,366.55 A 132 132 0 0 1 156.26,247.44 L 210.15,244.07 A 78 78 0 0 0 267.48,314.45 Z" fill="#d97706"/>
+<path d="M 156.26,247.44 A 132 132 0 0 1 180.26,162.94 L 224.33,194.14 A 78 78 0 0 0 210.15,244.07 Z" fill="#7c3aed"/>
+<path d="M 180.26,162.94 A 132 132 0 0 1 230.42,120.42 L 253.97,169.01 A 78 78 0 0 0 224.33,194.14 Z" fill="#dc2626"/>
+<path d="M 230.42,120.42 A 132 132 0 0 1 260.09,110.19 L 271.51,162.96 A 78 78 0 0 0 253.97,169.01 Z" fill="#0891b2"/>
+<path d="M 260.09,110.19 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 271.51,162.96 Z" fill="#db2777"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">AMAT</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$28.4B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="399.81" y1="158.32" x2="415.81" y2="158.32" stroke="#2563eb" stroke-width="1.4"/>
+<text x="419.81" y="156.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">China 中国</text>
+<text x="419.81" y="170.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.5B  (30.1%)</text>
+<line x1="353.33" y1="360.76" x2="369.33" y2="360.76" stroke="#15803d" stroke-width="1.4"/>
+<text x="373.33" y="358.76" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Taiwan 台湾</text>
+<text x="373.33" y="372.76" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.9B  (24.2%)</text>
+<line x1="181.00" y1="326.35" x2="165.00" y2="326.35" stroke="#d97706" stroke-width="1.4"/>
+<text x="161.00" y="324.35" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Korea 韩国</text>
+<text x="161.00" y="338.35" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.6B  (19.8%)</text>
+<line x1="155.25" y1="201.49" x2="139.25" y2="201.49" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="135.25" y="199.49" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">United States 美国</text>
+<text x="135.25" y="213.49" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.1B  (10.8%)</text>
+<line x1="198.77" y1="133.93" x2="182.77" y2="133.93" stroke="#dc2626" stroke-width="1.4"/>
+<text x="178.77" y="131.93" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Japan 日本</text>
+<text x="178.77" y="145.93" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.3B  (8.0%)</text>
+<line x1="242.99" y1="108.75" x2="226.99" y2="108.75" stroke="#0891b2" stroke-width="1.4"/>
+<text x="222.99" y="106.75" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">SE Asia 东南亚</text>
+<text x="222.99" y="120.75" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.1B  (3.8%)</text>
+<line x1="273.33" y1="101.98" x2="257.33" y2="101.98" stroke="#db2777" stroke-width="1.4"/>
+<text x="253.33" y="99.98" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Europe 欧洲</text>
+<text x="253.33" y="113.98" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$962.0M  (3.4%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Applied Materials FY2025 10-K, 营收地区分布 (China 8,529; Taiwan 6,857; Korea 5,608; US 3,063)</text>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">营收按地区演变 (FY2023→FY2025, US$ m)</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">China 中国</text>
+<rect x="102.80" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="118.80" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Taiwan 台湾</text>
+<rect x="192.20" y="44" width="11" height="11" rx="2" fill="#d97706"/>
+<text x="208.20" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Korea 韩国</text>
+<rect x="275.00" y="44" width="11" height="11" rx="2" fill="#7c3aed"/>
+<text x="291.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">United States 美国</text>
+<rect x="410.60" y="44" width="11" height="11" rx="2" fill="#dc2626"/>
+<text x="426.60" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Japan 日本</text>
+<rect x="493.40" y="44" width="11" height="11" rx="2" fill="#0891b2"/>
+<text x="509.40" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">SE Asia 东南亚</text>
+<rect x="596.00" y="44" width="11" height="11" rx="2" fill="#db2777"/>
+<text x="612.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Europe 欧洲</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$6.1B</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$12.3B</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$18.4B</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$24.5B</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$30.6B</text>
+<rect x="123.48" y="333.00" width="147.71" height="79.00" fill="#2563eb"/>
+<rect x="123.48" y="271.18" width="147.71" height="61.81" fill="#15803d"/>
+<rect x="123.48" y="220.94" width="147.71" height="50.25" fill="#d97706"/>
+<rect x="123.48" y="177.26" width="147.71" height="43.67" fill="#7c3aed"/>
+<rect x="123.48" y="154.64" width="147.71" height="22.62" fill="#dc2626"/>
+<rect x="123.48" y="146.38" width="147.71" height="8.26" fill="#0891b2"/>
+<rect x="123.48" y="122.92" width="147.71" height="23.46" fill="#db2777"/>
+<text x="197.33" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY2023</text>
+<rect x="378.15" y="301.71" width="147.71" height="110.29" fill="#2563eb"/>
+<rect x="378.15" y="257.99" width="147.71" height="43.72" fill="#15803d"/>
+<rect x="378.15" y="209.01" width="147.71" height="48.98" fill="#d97706"/>
+<rect x="378.15" y="167.39" width="147.71" height="41.62" fill="#7c3aed"/>
+<rect x="378.15" y="143.91" width="147.71" height="23.48" fill="#dc2626"/>
+<rect x="378.15" y="131.47" width="147.71" height="12.44" fill="#0891b2"/>
+<rect x="378.15" y="115.74" width="147.71" height="15.73" fill="#db2777"/>
+<text x="452.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY2024</text>
+<rect x="632.81" y="319.02" width="147.71" height="92.98" fill="#2563eb"/>
+<rect x="632.81" y="244.27" width="147.71" height="74.75" fill="#15803d"/>
+<rect x="632.81" y="183.13" width="147.71" height="61.14" fill="#d97706"/>
+<rect x="632.81" y="149.74" width="147.71" height="33.39" fill="#7c3aed"/>
+<rect x="632.81" y="124.96" width="147.71" height="24.78" fill="#dc2626"/>
+<rect x="632.81" y="113.23" width="147.71" height="11.73" fill="#0891b2"/>
+<rect x="632.81" y="102.74" width="147.71" height="10.49" fill="#db2777"/>
+<text x="706.67" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY2025</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Applied Materials FY2025 10-K &amp; FY2024 10-K, 营收地区分布 (中国 FY24 37%→FY25 30%; 台湾 +71% YoY)</text>
+</svg>
+
+*来源: [2025 10-K, 营收地区分布 (China 8,529; Taiwan 6,857; Korea 5,608; US 3,063)](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm); [2024 10-K, 营收地区分布 (China FY24 10,117 / FY23 7,247)](https://www.sec.gov/Archives/edgar/data/6951/000000695124000044/amat-20241027.htm)。*
 
 2025 财年按地区营收 (百万美元, 占总收入百分比): 中国 8,529 (30%, 较 2024 财年的 37% 下降), 韩国 5,608 (20%), 台湾 6,857 (24%), 日本 2,273 (8%), 东南亚 1,076 (4%), 美国 3,063 (11%), 欧洲 962 (3%)。([2025 10-K, Note 15](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))
 
@@ -459,7 +1064,7 @@ Applied 主要服务 WFE, 加上日益增长的先进封装份额 (横跨 WFE �
 | CY2025 | 约 1,100 亿 (预估) | HBM, 前沿逻辑爬坡, NAND 重启 |
 | CY2026 | 1,200–1,350 亿 (卖方区间) | AI 驱动, AMAT 增长 >30% 指引 |
 
-WFE 市场规模估计的来源: [SEMI 设备市场统计 (订阅)](https://www.semi.org/en/products-services/market-data/equipment-market-data-subscription); CY26 区间基于 Applied 自身的 >30% 增长指引以及 Lam 和 KLA 在近期业绩电话会上的类似评论建立。
+WFE 市场规模估计的来源: [SEMI 设备市场统计 (订阅)](https://www.semi.org/en/products-services/market-data); CY26 区间基于 Applied 自身的 >30% 增长指引以及 Lam 和 KLA 在近期业绩电话会上的类似评论建立。
 
 Applied 管理层的*"半导体设备业务在 2026 日历年增长超过 30%"* (2026 年 5 月 14 日) 是来自最大产品组合供应商的最新前瞻指标, 表明 AI 驱动的上行周期延长, 而非典型的 1.5–2 年周期。([2026 财年 Q2 新闻稿](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm))
 
@@ -477,7 +1082,7 @@ Applied 管理层的*"半导体设备业务在 2026 日历年增长超过 30%"* 
 
 ### 6.4 行业结构
 
-WFE 是**高度集中的寡头垄断**, 五家公司——Applied Materials, ASML, Lam Research, 东京电子和 KLA——合计占全球 WFE 营收的大部分。在前五大之下, 市场分散到品类专家 (Hitachi High-Tech, Kokusai, SCREEN Holdings, ASM International, Onto Innovation, Camtek, Veeco, FormFactor, 北方华创, 中微, 拓荆)。"前五大占 WFE 份额"的确切数字取决于来源和年份——[SEMI 设备市场统计](https://www.semi.org/en/products-services/market-data/equipment-market-data-subscription) 和 [Gartner WFE 份额数据](https://www.gartner.com/) 通常将前五大合计放在 WFE 的约 75–80%。
+WFE 是**高度集中的寡头垄断**, 五家公司——Applied Materials, ASML, Lam Research, 东京电子和 KLA——合计占全球 WFE 营收的大部分。在前五大之下, 市场分散到品类专家 (Hitachi High-Tech, Kokusai, SCREEN Holdings, ASM International, Onto Innovation, Camtek, Veeco, FormFactor, 北方华创, 中微, 拓荆)。"前五大占 WFE 份额"的确切数字取决于来源和年份——[SEMI 设备市场统计](https://www.semi.org/en/products-services/market-data) 和 [Gartner WFE 份额数据](https://www.gartner.com/) 通常将前五大合计放在 WFE 的约 75–80%。
 
 进入壁垒极高:
 
@@ -491,17 +1096,17 @@ WFE 是**高度集中的寡头垄断**, 五家公司——Applied Materials, ASM
 
 ## 7. 竞争格局
 
-### 7.1 五大 WFE 地图 (TTM 数据, 2026-05-22)
+### 7.1 五大 WFE 地图 (TTM / 前瞻数据, 截至 2026-06-12)
 
-| 公司 | 主要类别 | TTM 营收 | TTM P/E | TTM P/S | 分析师主流观点 |
+| 公司 | 主要类别 | TTM P/E | 前瞻 P/E | TTM P/S | 分析师主流观点 |
 |---|---|---|---|---|---|
-| **AMAT** | 沉积, 刻蚀, CMP, RTP, 离子注入, eBeam, 先进封装 | 290.0 亿美元 | 40.7× | 11.8× | 最广产品组合; 同业中最低估值 |
-| **ASML** | 光刻 (EUV + DUV) | 388.0 亿美元 | 54.5× | 16.2× | 唯一 EUV 供应商; 近垄断经济 |
-| **LRCX** | 刻蚀, 沉积 (ALD/CVD) | 217.0 亿美元 | 57.7× | 17.6× | 刻蚀 + NAND 专家; 受 AI 存储驱动近期重估 |
-| **TEL (8035)** | 涂胶显影, 刻蚀, 沉积, 清洗 | 2.44 万亿日元 (约 157 亿美元) | 39.8× | 约 9.2× | 涂胶显影 #1; 最广的非美产品组合 |
-| **KLA** | 工艺控制 (光学/eBeam 检测 + 量测) | 131.0 亿美元 | 53.5× | 18.8× | 工艺控制近垄断; WFE 中最高利润率 |
+| **AMAT** | 沉积, 刻蚀, CMP, RTP, 离子注入, eBeam, 先进封装 | 53.5× | 34.9× | 15.5× | 最广产品组合; 6 月急涨后倍数已不再是同业最低位的"折价" |
+| **ASML** | 光刻 (EUV + DUV) | 62.5× | 38.8× | 21.3× | 唯一 EUV 供应商; 近垄断经济 |
+| **LRCX** | 刻蚀, 沉积 (ALD/CVD) | 69.5× | 46.0× | 21.2× | 刻蚀 + NAND 专家; 受 AI 存储驱动重估 |
+| **TEL (8035)** | 涂胶显影, 刻蚀, 沉积, 清洗 | 21.5× | 16.6× | 约 3.3× | 涂胶显影 #1; 最广的非美产品组合; 估值最低 |
+| **KLA** | 工艺控制 (光学/eBeam 检测 + 量测) | 71.9× | 50.4× | 25.4× | 工艺控制近垄断; WFE 中最高利润率 |
 
-*来源: [Stockanalysis.com 同业统计数据 (AMAT, LRCX, KLAC, ASML), 查询于 2026-05-22](https://stockanalysis.com/stocks/amat/statistics/); [Stockanalysis.com TEL 8035 统计](https://stockanalysis.com/quote/tyo/8035/) (TEL P/S 由市值 22.49 万亿日元 / TTM 营收 2.44 万亿日元推导)。*
+*来源: [Yahoo Finance — AMAT / ASML / LRCX / KLAC / TEL 关键统计 (as of 2026-06-12 收盘)](https://finance.yahoo.com/quote/AMAT/)。AMAT 53.5× / 34.9× 仍是美股四家中 TTM 与前瞻 P/E 双双最低, 但与 5 月相比折让已大幅收窄。*
 
 ```mermaid
 quadrantChart
@@ -524,13 +1129,13 @@ quadrantChart
 
 ### 7.2 vs. 每个主要同业的正面定位
 
-**vs. ASML。** 不直接竞争——ASML 的光刻是 Applied 从未参与过的类别, ASML 的 EUV 垄断被广泛视为最有价值的单一 WFE 业务。存在日益增长的**合作依赖**: ASML 的高数值孔径 EUV 系统需要精确沉积和刻蚀的掩模 (Applied) 与量测 (KLA), 因此整个堆栈一起移动。ASML 的市盈率为 54.5×, 市销率为 16.2×——远高于 AMAT 的 40.7× / 11.8×。([Stockanalysis.com ASML, 2026-05-22](https://stockanalysis.com/stocks/asml/statistics/))
+**vs. ASML。** 不直接竞争——ASML 的光刻是 Applied 从未参与过的类别, ASML 的 EUV 垄断被广泛视为最有价值的单一 WFE 业务。存在日益增长的**合作依赖**: ASML 的高数值孔径 EUV 系统需要精确沉积和刻蚀的掩模 (Applied) 与量测 (KLA), 因此整个堆栈一起移动。ASML 的 TTM 市盈率为 62.5×、市销率 21.3×——高于 AMAT 的 53.5× / 15.5×。([Yahoo Finance — ASML, as of 2026-06-12](https://finance.yahoo.com/quote/ASML/))
 
-**vs. Lam Research。** Applied 在沉积上结构更广 (PVD + CVD + ALD + 外延); Lam 结构更窄, 但在**刻蚀**上更强 (尤其是 NAND 的高深宽比介质刻蚀和 GAA 的选择性刻蚀), 并在 ALD/CVD 上有竞争力。Lam 拥有更强的 NAND 业务; Applied 拥有更强的 DRAM 业务 (HBM 相关沉积步骤)。LRCX 的市盈率为 57.7× vs. AMAT 的 40.7×——部分是因为 Lam 较小的营收基数 (217.0 亿美元 TTM vs. AMAT 290.0 亿美元) 在上行周期中给它带来更多的周期杠杆。([Stockanalysis.com LRCX, 2026-05-22](https://stockanalysis.com/stocks/lrcx/statistics/))
+**vs. Lam Research。** Applied 在沉积上结构更广 (PVD + CVD + ALD + 外延); Lam 结构更窄, 但在**刻蚀**上更强 (尤其是 NAND 的高深宽比介质刻蚀和 GAA 的选择性刻蚀), 并在 ALD/CVD 上有竞争力。Lam 拥有更强的 NAND 业务; Applied 拥有更强的 DRAM 业务 (HBM 相关沉积步骤)。LRCX 的 TTM 市盈率为 69.5× vs. AMAT 的 53.5×——部分是因为 Lam 较小的营收基数 (约 217 亿美元 TTM vs. AMAT 约 290 亿美元) 在上行周期中给它带来更多的周期杠杆。([Yahoo Finance — LRCX, as of 2026-06-12](https://finance.yahoo.com/quote/LRCX/))
 
-**vs. 东京电子 (8035.T)。** TEL 是 Applied 除光刻外最接近的产品组合类比——涂胶显影 (AMAT 不参与)、刻蚀、清洗、沉积 (PVD/CVD/ALD) 和测试机。TEL 的毛利率约为 46% (vs. AMAT 48.7%), 但其营业利润率较低, 因为较低利润率的涂胶显影营收占比较高。TEL 也有**比 AMAT 更强的日本和中国本土地位**, 这得益于历史上较少限制的日本出口管制 (虽然日本在 2024 年与美国限制对齐)。TEL 的 TTM 市盈率为 39.8×——WFE 五大中唯一与 AMAT 相当的倍数, 反映了类似的中国政策折让。([Stockanalysis.com TEL 8035, 2026-05-22](https://stockanalysis.com/quote/tyo/8035/))
+**vs. 东京电子 (8035.T)。** TEL 是 Applied 除光刻外最接近的产品组合类比——涂胶显影 (AMAT 不参与)、刻蚀、清洗、沉积 (PVD/CVD/ALD) 和测试机。TEL 的毛利率约为 46% (vs. AMAT 48.7%), 但其营业利润率较低, 因为较低利润率的涂胶显影营收占比较高。TEL 也有**比 AMAT 更强的日本和中国本土地位**, 这得益于历史上较少限制的日本出口管制 (虽然日本在 2024 年与美国限制对齐)。TEL 的 TTM 市盈率仅 21.5×——WFE 五大中估值最低, 反映了类似的中国政策折让与更低利润率的产品结构。([Yahoo Finance — TEL 8035, as of 2026-06-12](https://finance.yahoo.com/quote/8035.T/))
 
-**vs. KLA。** 除 eBeam 复查和检测 (AMAT 与 KLA 的光学检测平台竞争) 之外, 不直接竞争。KLA 在光学检测 / 量测堆栈上占主导地位, 结构性利润率更高 (毛利率约 61.5%, 营业利润率超过 40%)。KLA 的市盈率为 53.5×, 市销率为 18.8×——同业组中最高的倍数——因为工艺控制作为一个类别小、增长快, 结构上接近垄断。([Stockanalysis.com KLAC, 2026-05-22](https://stockanalysis.com/stocks/klac/statistics/))
+**vs. KLA。** 除 eBeam 复查和检测 (AMAT 与 KLA 的光学检测平台竞争) 之外, 不直接竞争。KLA 在光学检测 / 量测堆栈上占主导地位, 结构性利润率更高 (毛利率约 61.5%, 营业利润率超过 40%)。KLA 的 TTM 市盈率为 71.9×、市销率 25.4×——同业组中最高的倍数——因为工艺控制作为一个类别小、增长快, 结构上接近垄断。([Yahoo Finance — KLAC, as of 2026-06-12](https://finance.yahoo.com/quote/KLAC/))
 
 **vs. 中国本土 WFE (北方华创, 中微, 拓荆, 盛美 ACM Research)。** 竞争威胁是**先在落后节点, 然后逐步在前沿节点**。10-K 直接承认: *"由于地方政府激励和资金, 以及美国政府为限制某些技术向中国客户销售而建立的出口管制, 我们可能会看到来自中国本土设备制造商竞争的增强。"* ([2025 10-K, "Competition"](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm)) *分析师观点:* 北方华创 是中国晶圆厂成熟节点刻蚀和 PVD 中最具可信度的挑战者; 中微 AMEC 在介质刻蚀上竞争; 拓荆 在 CVD 上; 盛美 在清洗上。它们都还不能在 5nm 或以下竞争。这是最慢移动的竞争威胁——但在 5–10 年的复利累积中, 它是股票故事中最大的长期担忧。(公开竞争对手数据: [北方华创科技集团 (SZSE:002371) 2024 年度报告](http://www.cninfo.com.cn/) 以及对应的 ASML/KLA/LRCX 文件。)
 
@@ -551,7 +1156,7 @@ WFE 中的切换成本在任何工业市场中都是最高的:
 
 ### 8.1 WFE TAM 桥接
 
-应用 [SEMI 设备市场统计](https://www.semi.org/en/products-services/market-data/equipment-market-data-subscription) 和与 AMAT >30% CY26 半导体设备增长指引相符的卖方预测区间 ([2026 财年 Q2 新闻稿](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm)):
+应用 [SEMI 设备市场统计](https://www.semi.org/en/products-services/market-data) 和与 AMAT >30% CY26 半导体设备增长指引相符的卖方预测区间 ([2026 财年 Q2 新闻稿](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm)):
 
 - **CY2026E WFE:** 1,250–1,350 亿美元 (与 AMAT >30% 指引一致的共识)。
 - **CY2027–2030E WFE:** 取决于 AI 可持续性, 单位数到高单位数复合增长率——卖方区间为到 2030 年 1,350–1,650 亿美元。
@@ -566,9 +1171,143 @@ Applied 的**服务市场**约为 WFE 的 65–70% (除光刻曝光和大多数�
 
 服务 TAM 随装机基础机械式增长。在外有约 50,000 台工具, 平均每台工具在 8–12 年的寿命中产生 50,000–300,000 美元/年的备件 + 服务, AGS TAM 在假设当前装机基础增长继续的情况下, *分析师估计* 到 2030 年为 100–150 亿美元。通过订阅 LTSA 转型捕获更多 TAM 是故事中最易操作的耐久性杠杆。([2025 10-K, "Applied Global Services" + MD&A](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))
 
-![现金流与资本回报](charts/amat_cashflow.png)
+### 8.4 资本结构与现金流 (Sankey)
 
-*来源: [应用材料 2025 10-K, 合并现金流量表](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm)。*
+下方现金流桑基图展示 FY2025 经营现金流 (CFO) 79.58 亿美元的去向: 扣资本开支 (CapEx) 约 22.6 亿后得自由现金流 (FCF), 再通过回购 48.95 亿、派息 13.84 亿返还股东。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Applied Materials 现金流 Sankey (FY2025: 经营现金流 7,958 的去向)</text>
+<path d="M 534.00,71.00 C 691.00,71.00 691.00,64.00 848.00,64.00 L 848.00,421.63 C 691.00,421.63 691.00,428.63 534.00,428.63 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,71.00 C 361.00,71.00 361.00,71.00 518.00,71.00 L 518.00,547.00 C 361.00,547.00 361.00,547.00 204.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,428.63 C 691.00,428.63 691.00,435.63 848.00,435.63 L 848.00,554.00 C 691.00,554.00 691.00,547.00 534.00,547.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="476.00" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="71.00" width="16" height="476.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="357.63" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="435.63" width="16" height="118.37" rx="1.5" fill="#15803d"/>
+<rect x="207.00" y="53.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.0B  (100.0%)</text>
+<rect x="537.00" y="53.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.0B  (100.0%)</text>
+<rect x="867.00" y="46.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.0B  (75.1%)</text>
+<text x="873.00" y="491.81" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="504.81" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.0B  (24.9%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = US$5.7B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Applied Materials FY2025 10-K, 合并现金流量表 (CFO 7,958; CapEx 2.3bn; 回购 4,895; 派息 1,384)</text>
+</svg>
+
+*来源: [应用材料 2025 10-K, 合并现金流量表 (CFO 7,958; CapEx 2.3bn; 回购 4,895; 派息 1,384)](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm)。*
+
+资产负债表桑基图 (截至 2025-10-26): 总资产 362.99 亿美元 (流动资产 208.81 亿 + 非流动 154.18 亿) 由总负债 158.84 亿 + 股东权益 204.15 亿支撑, D/E 仅 0.30、净现金约 64.5 亿美元——为周期下行提供了厚实缓冲。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Applied Materials 资产负债表 Sankey (FY2025, 截至 2025-10-26)</text>
+<path d="M 204.00,64.00 C 262.00,64.00 262.00,106.00 320.00,106.00 L 320.00,198.58 C 262.00,198.58 262.00,156.58 204.00,156.58 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,99.00 C 790.00,99.00 790.00,84.54 848.00,84.54 L 848.00,86.54 C 790.00,86.54 790.00,101.00 732.00,101.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,101.00 C 790.00,101.00 790.00,100.54 848.00,100.54 L 848.00,185.84 C 790.00,185.84 790.00,186.30 732.00,186.30 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,106.00 C 658.00,106.00 658.00,99.00 716.00,99.00 L 716.00,185.38 C 658.00,185.38 658.00,192.38 600.00,192.38 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 336.00,106.00 C 394.00,106.00 394.00,113.00 452.00,113.00 L 452.00,338.50 C 394.00,338.50 394.00,331.50 336.00,331.50 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 600.00,192.38 C 658.00,192.38 658.00,199.38 716.00,199.38 L 716.00,284.53 C 658.00,284.53 658.00,277.53 600.00,277.53 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,113.00 C 526.00,113.00 526.00,106.00 584.00,106.00 L 584.00,277.53 C 526.00,277.53 526.00,284.53 468.00,284.53 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,284.53 C 526.00,284.53 526.00,291.53 584.00,291.53 L 584.00,512.00 C 526.00,512.00 526.00,505.00 468.00,505.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,170.58 C 262.00,170.58 262.00,198.58 320.00,198.58 L 320.00,254.58 C 262.00,254.58 262.00,226.58 204.00,226.58 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,199.38 C 790.00,199.38 790.00,199.84 848.00,199.84 L 848.00,269.55 C 790.00,269.55 790.00,269.09 732.00,269.09 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,269.09 C 790.00,269.09 790.00,283.55 848.00,283.55 L 848.00,298.99 C 790.00,298.99 790.00,284.53 732.00,284.53 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,240.58 C 262.00,240.58 262.00,254.58 320.00,254.58 L 320.00,318.45 C 262.00,318.45 262.00,304.45 204.00,304.45 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 600.00,291.53 C 658.00,291.53 658.00,298.53 716.00,298.53 L 716.00,519.00 C 658.00,519.00 658.00,512.00 600.00,512.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,298.53 C 790.00,298.53 790.00,312.99 848.00,312.99 L 848.00,533.46 C 790.00,533.46 790.00,519.00 732.00,519.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,318.45 C 262.00,318.45 262.00,318.45 320.00,318.45 L 320.00,331.50 C 262.00,331.50 262.00,331.50 204.00,331.50 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,345.50 C 262.00,345.50 262.00,345.50 320.00,345.50 L 320.00,392.23 C 262.00,392.23 262.00,392.23 204.00,392.23 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 336.00,345.50 C 394.00,345.50 394.00,338.50 452.00,338.50 L 452.00,505.00 C 394.00,505.00 394.00,512.00 336.00,512.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,406.23 C 262.00,406.23 262.00,392.23 320.00,392.23 L 320.00,442.01 C 262.00,442.01 262.00,456.01 204.00,456.01 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,470.01 C 262.00,470.01 262.00,442.01 320.00,442.01 L 320.00,484.48 C 262.00,484.48 262.00,512.48 204.00,512.48 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,526.48 C 262.00,526.48 262.00,484.48 320.00,484.48 L 320.00,512.00 C 262.00,512.00 262.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="92.58" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="170.58" width="16" height="55.99" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="240.58" width="16" height="63.88" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="318.45" width="16" height="13.05" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="345.50" width="16" height="46.73" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="406.23" width="16" height="49.78" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="470.01" width="16" height="42.47" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="526.48" width="16" height="27.52" rx="1.5" fill="#2563eb"/>
+<rect x="320.00" y="106.00" width="16" height="225.50" rx="1.5" fill="#15803d"/>
+<rect x="320.00" y="345.50" width="16" height="166.50" rx="1.5" fill="#15803d"/>
+<rect x="452.00" y="113.00" width="16" height="392.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="584.00" y="106.00" width="16" height="171.53" rx="1.5" fill="#dc2626"/>
+<rect x="584.00" y="291.53" width="16" height="220.47" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="99.00" width="16" height="86.38" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="199.38" width="16" height="85.15" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="298.53" width="16" height="220.47" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="84.54" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="100.54" width="16" height="85.30" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="199.84" width="16" height="69.71" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="283.55" width="16" height="15.44" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="312.99" width="16" height="220.47" rx="1.5" fill="#15803d"/>
+<line x1="188.00" y1="110.29" x2="182.00" y2="97.05" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="100.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">现金及短期投资 Cash &amp; ST inv</text>
+<text x="179.00" y="113.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.6B  (23.6%)</text>
+<line x1="188.00" y1="198.58" x2="182.00" y2="185.34" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="188.34" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">应收账款 Receivables</text>
+<text x="179.00" y="201.34" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.2B  (14.3%)</text>
+<line x1="188.00" y1="272.51" x2="182.00" y2="259.27" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="262.27" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">存货 Inventories</text>
+<text x="179.00" y="275.27" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.9B  (16.3%)</text>
+<line x1="188.00" y1="324.98" x2="182.00" y2="311.73" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="314.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他流动资产 Other current</text>
+<text x="179.00" y="327.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.2B  (3.3%)</text>
+<line x1="188.00" y1="368.86" x2="182.00" y2="355.62" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="358.62" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">长期投资 LT investments</text>
+<text x="179.00" y="371.62" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.3B  (11.9%)</text>
+<line x1="188.00" y1="431.12" x2="182.00" y2="417.88" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="420.88" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">厂房设备 PP&amp;E net</text>
+<text x="179.00" y="433.88" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.6B  (12.7%)</text>
+<line x1="188.00" y1="491.25" x2="182.00" y2="478.01" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="481.01" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">商誉与无形 Goodwill+intangibles</text>
+<text x="179.00" y="494.01" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.9B  (10.8%)</text>
+<line x1="188.00" y1="540.24" x2="182.00" y2="527.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="530.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">递延税与其他 Deferred &amp; other</text>
+<text x="179.00" y="543.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.5B  (7.0%)</text>
+<rect x="339.00" y="88.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="100.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
+<text x="342.00" y="113.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$20.9B  (57.5%)</text>
+<rect x="339.00" y="327.50" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="339.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
+<text x="342.00" y="352.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$15.4B  (42.5%)</text>
+<rect x="471.00" y="95.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="474.00" y="107.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
+<text x="474.00" y="120.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$36.3B  (100.0%)</text>
+<rect x="603.00" y="88.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="100.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
+<text x="606.00" y="113.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$15.9B  (43.8%)</text>
+<rect x="603.00" y="273.53" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="285.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
+<text x="606.00" y="298.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$20.4B  (56.2%)</text>
+<rect x="735.00" y="81.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="93.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
+<text x="738.00" y="106.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.0B  (22.0%)</text>
+<rect x="735.00" y="181.38" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="193.38" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
+<text x="738.00" y="206.38" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$7.9B  (21.7%)</text>
+<rect x="735.00" y="280.53" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="292.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
+<text x="738.00" y="305.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$20.4B  (56.2%)</text>
+<text x="873.00" y="82.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">短期债务 ST debt</text>
+<text x="873.00" y="95.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$100.0M  (0.28%)</text>
+<text x="873.00" y="140.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他流动负债 Other current</text>
+<text x="873.00" y="153.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$7.9B  (21.8%)</text>
+<text x="873.00" y="231.70" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">长期债务 LT debt</text>
+<text x="873.00" y="244.70" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.5B  (17.8%)</text>
+<text x="873.00" y="288.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他长期负债 Tax+other</text>
+<text x="873.00" y="301.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.4B  (3.9%)</text>
+<text x="873.00" y="420.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股东权益 Stockholders' equity</text>
+<text x="873.00" y="433.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$20.4B  (56.2%)</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Applied Materials FY2025 10-K, 合并资产负债表 (总资产 36,299; 总负债 15,884; 股东权益 20,415)</text>
+</svg>
+
+*来源: [应用材料 2025 10-K, 合并资产负债表 (总资产 36,299; 总负债 15,884; 股东权益 20,415)](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm)。*
 
 现金生成图景支持耐久性论点: 在 2023–25 财年累计, AMAT 产生约 253 亿美元的经营性现金流, 花费约 46 亿美元资本开支 (2025 财年资本开支随 EPIC Center 建设翻倍至 22.6 亿美元), 并向股东返还约 145 亿美元 (109 亿美元回购 + 36 亿美元股息)。净现金返还约占三年窗口经营性现金流的 80%。([2025 10-K, 现金流量表](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))
 
@@ -598,9 +1337,9 @@ Applied 的**服务市场**约为 WFE 的 65–70% (除光刻曝光和大多数�
 
 ### 9.3 财务风险
 
-**R8. 商誉 / 收购风险。** 2025 财年末商誉接近 37 亿美元; 10-K 指出商誉在 2025 财年因 2025 财年 Q4 的减值费用而减少。ASMPT NEXX 交易 (2026 财年 Q2 宣布) 和先进封装中可能的进一步 M&A 如果整合受挫, 可能产生额外的减值敞口。*缓解因素:* 商誉相对于 3,431 亿美元市值规模小; 减值周期往往是一次性非现金事件。([2025 10-K, 合并资产负债表 + Note 7 商誉](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))
+**R8. 商誉 / 收购风险。** 2025 财年末商誉接近 37 亿美元; 10-K 指出商誉在 2025 财年因 2025 财年 Q4 的减值费用而减少。ASMPT NEXX 交易 (2026 财年 Q2 宣布) 和先进封装中可能的进一步 M&A 如果整合受挫, 可能产生额外的减值敞口。*缓解因素:* 商誉相对于约 4,504 亿美元市值 (as of 2026-06-12) 规模小; 减值周期往往是一次性非现金事件。([2025 10-K, 合并资产负债表 + Note 7 商誉](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))
 
-**R9. 估值 / 倍数收缩。** TTM 市盈率 40.7× vs. 长期周期平均 (过去十年中段至 20 倍出头), TTM 市销率 11.8× 也高于周期平均, 如果增长不及预期, 倍数收缩风险是真实的。*缓解因素:* 29.6× 的前瞻市盈率已折算了 >30% 的 CY26 增长, 提供缓冲; AMAT 在同业组中 P/E 和 P/S 的最低位, 因此同业驱动的重估风险是非对称地偏向上行。重估的触发事件: 指引下调、超大规模公司 AI 支出暂停、对中国的进一步 BIS 规则, 或周期性板块轮动。([Stockanalysis.com — AMAT 统计, 2026-05-22](https://stockanalysis.com/stocks/amat/statistics/))
+**R9. 估值 / 倍数收缩 (本次刷新中风险等级上调)。** 截至 2026-06-12 收盘 567.25 美元, TTM 市盈率 **53.5×** (远高于过去十年中段至 20 倍出头的周期均值)、前瞻市盈率 34.9×、市销率 15.5×——估值已不再是 5 月时"同业最低"的安全垫, 现价更已**高于全部主流卖方 PT (502–525 美元)**。一旦增长不及预期或 AI 资本开支正常化, 倍数收缩的下行 (Bear 情景 −34%) 大于上行。*缓解因素:* AMAT 前瞻 P/E 仍低于 LRCX (46×) / KLAC (50×); 净现金资产负债表与 AGS 年金化可在下行周期托底每股收益。重估的触发事件: 指引下调、超大规模公司 AI 支出暂停、对中国的进一步 BIS 规则, 或周期性板块轮动。([Yahoo Finance — AMAT, as of 2026-06-12](https://finance.yahoo.com/quote/AMAT/))
 
 ### 9.4 宏观 / 监管风险
 
@@ -610,11 +1349,90 @@ Applied 的**服务市场**约为 WFE 的 65–70% (除光刻曝光和大多数�
 
 **R12. 网络安全和 IP 盗窃。** 一个有超过 23,500 项专利和工艺配方丰富的商业机密的复杂全球制造运营是网络威胁和 IP 挪用的持续目标。10-K 在 Item 1C 披露中涵盖网络安全。*缓解因素:* 成熟的 CISO 职能、董事会层面的网络安全监督、分层控制和事件响应框架。([2025 10-K, Item 1C "Cybersecurity"](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))
 
+### 9.5 关键分歧与催化剂 (Key debates & catalysts) — *分析师观点*
+
+风险清单 (R1–R12) 是下行的目录; 本节则是**多空双方真正在争论的焦点**, 以及未来 12 个月的具名催化剂。与第 2.4 节卖方观点演变互补: 那里看的是各家机构的评级/PT 轨迹, 这里逐条列出分歧并给出我们的反驳。
+
+**多空核心分歧 (我们逐条回应):**
+
+1. **"现价是否已透支?"** — *空方:* 股价 567 美元已穿透全部卖方 PT (502–525), 6 月两日急涨 +14% 带有追涨情绪。*多方:* AI 资本开支超级周期才进入第二年, CY2027 WFE 仍在上修。**我们的看法:** 这是 Hold 评级的核心——基本面支持长期持有, 但当前价格的 12 个月风险回报不对称 (Base +4.9% vs Bear −34%), 不是追高的好点位。
+2. **"中国营收会不会再被砍?"** — *空方:* 任何新 BIS 规则都能再削减约 85 亿美元中国营收的一部分。*多方:* 中国占比已从 37% 主动降到 30%, 剩余主要是受管制较少的 ICAPS 成熟节点, 卖方判断中国成熟节点 WFE 资本开支 2026–27 年每年 250–350 亿美元仍提供多年运行空间。**我们的看法:** 这是最大的单一下行变量, 已计入 Bear 情景, 但概率与幅度都难精确预测 ([2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm))。
+3. **"AMAT 在沉积+刻蚀的份额会被 Lam / 中国本土侵蚀吗?"** — *空方:* ALD 缺口 (Kokusai 收购失败) 与中国本土厂商 (北方华创/中微/拓荆) 在成熟节点的逼近。*多方:* Goldman 指出 AMAT >60% 营收敞口于沉积+刻蚀且支出强度 2027 前上升, 中国份额流失的"误解"将在 CY26 反转 ([Goldman Sachs — AMAT, 2026-05-14](http://xs-macbook-air.local:5001/zsxq/pdf/212452181281111/Goldman%20Sachs-Applied%20Materials%20Inc.%20%EF%BC%88AMAT.US%EF%BC%89%EF%BC%9A%20Stock%20should%20continue%20to%20re~rate%20given%20strong%20guidance%20uplift%20and%20improving%20mix~Buy-260514.pdf))。**我们的看法:** 前沿节点份额稳固, 但中国本土在落后节点的复利侵蚀是 5–10 年的慢风险。
+4. **"先进封装能不能成为真正的增量引擎?"** — *多方:* Bernstein 称先进封装今年 +50%+、是 HBM4/面板级封装的主力, ASMPT NEXX 收购深化敞口 ([Bernstein — AMAT SDC, 2026-05-28](http://xs-macbook-air.local:5001/zsxq/pdf/212485522841821/Bernstein-Applied%20Materials%20%EF%BC%88AMAT.US%EF%BC%89%EF%BC%9A%20Key%20takeaways%20from%20Bernstein%27s%20SDC-260528.pdf))。*空方:* 混合键合主导者仍是 BESI, AMAT 份额尚待证明。**我们的看法:** 这是 Bull 情景的关键上行期权, 执行风险见 R2。
+
+**未来 12 个月具名催化剂 (按时间):**
+
+- **2026 年 8 月中旬 — FY2026 Q3 业绩 (≈ 8 月)。** 验证 CY2026 设备 *>30%* 增长指引兑现度; 关注毛利率是否如指引向 50%+ 扩张、中国占比是否继续下行 ([2026 财年 Q2 新闻稿 Q3 指引](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm))。
+- **2026 年 11 月中旬 — FY2026 Q4 / 全年业绩 + 首次 CY2027 定调。** 管理层是否把 CY2027 也定性为"强增长年", 是 Bull/Base 分野的关键。
+- **ASMPT NEXX 交易交割 + 整合进度。** 整合时点待定, 交割与首批面板级封装订单是先进封装故事的验证点。
+- **美国 BIS 出口规则更新 (不定期)。** 任何新一轮对华限制都是即时的下行催化剂 (R10)。
+- **超大规模厂商资本开支指引 (季度滚动)。** 微软/谷歌/Meta/亚马逊/甲骨文的 AI 资本开支节奏直接传导至前沿晶圆需求 (R6)。
+
+> 持续跟踪可使用 catalyst-calendar 技能维护具名事件日历。
+
 ---
 
-## 10. 参考资料
+## 10. 投资者视角评分 (Investor lenses) — *视角观点 (Lens view)*
 
-### 主要监管文件——直接文档 URL (2026-05-23 已验证)
+以下用四个经典投资框架作为**评分量规 (rubric)**, 对前文已引用的事实给出第二意见——不是角色扮演, 也不是"巴菲特会买"式的背书。周期快照取自 `indicators.db` 本地数据 (FRED/yfinance): **VIX 21.5、10Y Treasury (^TNX) 4.54%、HY OAS (BAMLH0A0HYM2) 2.74%、IG OAS 0.74%、MOVE 75.2 (来源: indicators.db 本地快照 (FRED BAMLH0A0HYM2 / ^TNX + yfinance), as of 2026-06-05/06-14)** ——信用利差偏紧、波动率中性, 属于偏 risk-on 的市场环境。
+
+**10.1 Buffett 视角 (优质生意 + 合理价格, 0–100)。**
+
+| 维度 | 评分 | 依据 (复用前文引用) |
+|---|---|---|
+| 生意质量 (护城河) | 90 | WFE 寡头, 最广产品组合, 切换成本极高, 5 万台装机基础年金 (第 4/7 章) |
+| 盈利与回报 | 88 | GAAP 营业利润率 29.2%、ROE 约 35.5%、净现金 (第 1B 章) |
+| 资本配置 | 80 | FY2025 返还约 63 亿美元 (回购 49 亿 + 派息 14 亿), 连续 9 年提息 |
+| 价格 (安全边际) | 35 | 现价 567、TTM P/E 53.5×, 高于全部卖方 PT——无安全边际 (第 2 章) |
+
+*视角观点:* 这是一门 Buffett 会欣赏的"收费桥"式优质生意, 但**价格不符合 Buffett 的安全边际要求**——综合约 73/100, 结论与本报告 Hold 一致: 好生意, 等更好的价格。
+
+**10.2 Munger 视角 (质量加权 + 反向思考, 0–10)。** 评分约 **7.5/10**。正向: 不可替代的工艺位置、理性的资本配置、长任期管理层。反向思考 (Munger 的"反过来想"): 这门生意最可能怎么坏掉?——(a) 中国出口管制把 30% 营收的一部分永久切走; (b) AI 资本开支见顶使前沿晶圆需求骤降; (c) 现价已计入完美预期, 任何失望都会触发倍数收缩。*视角观点:* 质量高, 但当前价格把容错空间压到很薄。
+
+**10.3 Damodaran 视角 (故事 + 数字, DCF 安全边际)。** 用 WACC ≈ Rf 4.54% + β(约1.5) × ERP(约4.5%) ≈ 11.3%、终端增长 ≤ Rf 的框架, 我们 Base PT 595 美元对应现价 567 的安全边际仅约 +5%。*视角观点:* 故事 (AI 超级周期) 强, 但数字在现价上几乎没有安全边际; 必需假设 (CY2027 WFE 推向约 2,000 亿) 若兑现则 Bull 750 美元成立, 若不及则 Bear 375 美元。(周期快照来源: indicators.db 本地快照 (FRED ^TNX + yfinance), as of 2026-06-14。)
+
+**10.4 Howard Marks 周期视角 (市场温度, 0–100, 先算以校准其余视角)。** 评分约 **68/100 (偏进攻区, 接近过热)**。信用利差极紧 (HY OAS 2.74%、IG OAS 0.74%)、VIX 21.5 中性偏低、AMAT 自身处于 52 周高点 + 两日急涨——这些都是"市场在为乐观定价"的信号。*视角观点:* 周期位置偏热, 应**给上面 10.1–10.3 的乐观结论打折**: 在一个 risk-on、利差极紧的环境里追一只刚穿透全部卖方 PT 的强动量股, 防御性应高于进攻性——这进一步支持 Hold 而非 Buy。
+
+> 四个视角一致指向同一结论: **优质资产, 但当前价格 (and 偏热的周期) 不提供进场的不对称回报** ——与本报告 Hold/Neutral 评级自洽。
+
+---
+
+## 11. 参考资料 · Data Used · 核查记录
+
+### 11.1 Data Used — 数据来源清单
+
+**主要监管文件 (SEC EDGAR, 文件名经 EDGAR 提交 JSON 解析):**
+
+- [Applied Materials FY2025 10-K (截至 2025-10-26), 提交 2025-12-12](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm) — 业务、分部、财务报表、风险因素的主源
+- [Applied Materials FY2024 10-K (截至 2024-10-27), 提交 2024-12-13](https://www.sec.gov/Archives/edgar/data/6951/000000695124000044/amat-20241027.htm) — FY2023/2024 可比期数据
+- [Applied Materials FY2023 10-K (截至 2023-10-29), 提交 2023-12-15](https://www.sec.gov/Archives/edgar/data/6951/000000695123000041/amat-20231029.htm) — 多年演变
+- [Applied Materials FY2026 Q2 10-Q (截至 2026-04-26), 提交 2026-05-21](https://www.sec.gov/Archives/edgar/data/6951/000162828026037227/amat-20260426.htm) — 最近报告期
+- [Applied Materials FY2026 Q2 8-K 业绩新闻稿, 2026-05-14](https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/exhibit991q22026earningsre.htm) — Q2 业绩 + Q3 指引 + 产品发布
+- [Applied Materials 2026 DEF 14A 委托代理书, 提交 2026-01-28](https://www.sec.gov/Archives/edgar/data/6951/000119312526027307/d71992ddef14a.htm) — 管理层
+- [Lam Research FY2025 10-K (竞争对比)](https://www.sec.gov/Archives/edgar/data/707549/000070754925000075/lrcx-20250629.htm)
+
+**机构研报 (`db/zsxq.db`, 全部为 *分析师观点*, 仅供本机查阅):**
+
+- [Bernstein — AMAT: Key takeaways from Bernstein's SDC, 2026-05-28 (Outperform, PT 525)](http://xs-macbook-air.local:5001/zsxq/pdf/212485522841821/Bernstein-Applied%20Materials%20%EF%BC%88AMAT.US%EF%BC%89%EF%BC%9A%20Key%20takeaways%20from%20Bernstein%27s%20SDC-260528.pdf) — file_id 212485522841821
+- [Goldman Sachs — AMAT: Stock should continue to re-rate, 2026-05-14 (Buy, PT 520)](http://xs-macbook-air.local:5001/zsxq/pdf/212452181281111/Goldman%20Sachs-Applied%20Materials%20Inc.%20%EF%BC%88AMAT.US%EF%BC%89%EF%BC%9A%20Stock%20should%20continue%20to%20re~rate%20given%20strong%20guidance%20uplift%20and%20improving%20mix~Buy-260514.pdf) — file_id 212452181281111
+- [UBS — AMAT: WFE Supercycle, Path to ~$27 EPS, 2026-05-14 (Buy, PT 515)](http://xs-macbook-air.local:5001/zsxq/pdf/415245155521428/UBS-Applied%20Materials%20Inc%EF%BC%88AMAT.US%EF%BC%89WFE%20Supercycle%20Underpins%20Multi~Year%20Visibility%20and%20a%20Path%20to%20~%2427%20EPS-260514.pdf) — file_id 415245155521428
+- [Citi — AMAT: Lifting TP to $520 on Updated WFE Framework, 2026-05-12 (Buy, PT 520)](http://xs-macbook-air.local:5001/zsxq/pdf/212452281485851/CITI-Applied%20Materials%20Inc%20%EF%BC%88AMAT.US%EF%BC%89%20Lifting%20TP%20to%20%24520%20on%20Updated%20WFE%20Framework%EF%BC%9B%20Maintain%20Buy-260512.pdf) — file_id 212452281485851
+- Morgan Stanley PT (Equal-Weight/Overweight, PT 502) + Barclays/旧值 — 来自 `db/stock_price_target.db` 只读预读 (17 条记录, 6 家机构)
+
+**市场数据与本地快照:**
+
+- [Yahoo Finance — AMAT / LRCX / KLAC / ASML / TEL 关键统计 (as of 2026-06-12)](https://finance.yahoo.com/quote/AMAT/) — 股价、市值、TTM/前瞻 P/E、P/S、52 周区间
+- indicators.db 本地快照 (FRED ^TNX / BAMLH0A0HYM2 + yfinance, as of 2026-06-05/06-14) — 第 10 章周期快照
+- [SEMI 设备市场统计 (需订阅)](https://www.semi.org/en/products-services/market-data); [Yole Group 战略洞察](https://www.yolegroup.com/strategy-insights/); [US Census NAICS 333242](https://www.census.gov/naics/?input=333242&year=2022&details=333242)
+
+**延伸观看 / Further viewing (教学辅助, 非引用、不含数字):**
+
+- [How chips are made — semiconductor fab process (Applied Materials 官方频道) — 直观理解沉积/刻蚀/CMP 工艺流程](https://www.youtube.com/channel/UCRtDxSpmTncPvzBvXLurThA)
+- [HBM die-stacking & advanced packaging explainer — 理解混合键合与 TSV 的"垂直电梯井"比喻](https://www.youtube.com/results?search_query=HBM+advanced+packaging+hybrid+bonding+explained)
+
+### 11.2 参考资料明细
+
+**主要监管文件——直接文档 URL (2026-06-14 已验证)**
 
 - [应用材料 Form 10-K, 截至 2025 年 10 月 26 日的财年, 提交于 2025-12-12](https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm)
 - [应用材料 Form 10-K, 截至 2024 年 10 月 27 日的财年, 提交于 2024-12-13](https://www.sec.gov/Archives/edgar/data/6951/000000695124000044/amat-20241027.htm)
@@ -650,68 +1468,54 @@ Applied 的**服务市场**约为 WFE 的 65–70% (除光刻曝光和大多数�
 
 ### 行业背景 (二级)
 
-- [SEMI 设备市场统计 (需订阅)](https://www.semi.org/en/products-services/market-data/equipment-market-data-subscription)——季度 WFE 预测
+- [SEMI 设备市场统计 (需订阅)](https://www.semi.org/en/products-services/market-data)——季度 WFE 预测
 - [Yole Group 战略洞察 (需订阅)](https://www.yolegroup.com/strategy-insights/)——为 CMP 引用的设备市场份额评论
 - [美国人口普查 NAICS — 333242 半导体机械制造](https://www.census.gov/naics/?input=333242&year=2022&details=333242)
 
 ---
 
-*独立编制, 仅用于研究 / 教育目的。所有数据和引用均来自截至 2026-05-23 的公开文件和市场数据。文中内容不构成投资建议。在公司未披露数据的情况下, 将明确说明而非估算; 在提供估算的情况下, 将标注数据来源依据。*
+*独立编制, 仅用于研究 / 教育目的。所有数据和引用均来自截至 2026-06-14 的公开文件和市场数据。文中内容不构成投资建议。评级、价格目标与前瞻预测均为分析师观点, 非监管文件内容。在公司未披露数据的情况下, 将明确说明而非估算; 在提供估算的情况下, 将标注数据来源依据。*
 
 <details>
-<summary>核查记录 (Step 10) — 2026-05-23</summary>
+<summary>Verification log (Step 10) — 2026-06-14</summary>
 
-**URL 检查。** 本报告中的所有 URL 已于 2026-05-23 通过 HTTP 检查对 `data.sec.gov` 和等效端点。SEC 文件 URL 使用从 EDGAR 提交 JSON `https://data.sec.gov/submissions/CIK0000006951.json` 解析的实际 `primaryDocument` 文件名 (而非合成模式)。具体而言:
+**本次刷新范围 (2026-06-14)。** 本报告为既有简体中文报告的覆盖更新: 新增完整决策层 (投资摘要 header + 评级/PT + 第 1B 章 GF Score + 第 2 章估值与价格目标 + 卖方观点演变 + 第 9.5 章关键分歧与催化剂 + 第 10 章投资者视角), 把全部图表由旧 matplotlib PNG 换为 stdlib SVG (9 张) + Mermaid, 并将所有数字与估值更新至 as-of 2026-06-14 (股价 567.25)。英文版本未改动。
 
-- 2025 10-K — `amat-20251026.htm`, accession 0001628280-25-056742, 提交于 2025-12-12 → 200 OK
-- 2024 10-K — `amat-20241027.htm`, accession 0000006951-24-000044, 提交于 2024-12-13 → 200 OK (路径使用 18 位零填充 accession `000000695124000044`)
-- 2026 Q2 10-Q — `amat-20260426.htm`, accession 0001628280-26-037227, 提交于 2026-05-21 → 200 OK
-- 2026 Q1 10-Q — `amat-20260125.htm`, accession 0001628280-26-009694, 提交于 2026-02-19 → 200 OK
-- 2026 DEF 14A — `d71992ddef14a.htm`, accession 0001193125-26-027307, 提交于 2026-01-28 → 200 OK
-- 2026 财年 Q2 8-K 附件 — `exhibit991q22026earningsre.htm`, accession 0001628280-26-035071, 提交于 2026-05-14 → 200 OK
-- 2026 财年 Q1 8-K — `amat-20260212.htm`, accession 0001628280-26-007661, 提交于 2026-02-12 → 200 OK (封面文件; 附件也在文件索引中列为 `exhibit991q12026earningsre.htm`)
-- 2025 财年 Q4 8-K — `amat-20251113.htm`, accession 0001628280-25-051998, 提交于 2025-11-13 → 200 OK
+**Step 0.5 sec-report-summary** — ran (focused in-session multi-10-K diff, not persisted). 无既有 `reports/earnings/AMAT_*.md`, 故按规范运行多年 SEC 演变对比; 但鉴于既有报告已基于 FY2023–25 10-K 建立产品/行业/风险演变线, 且 16 GB 内存预算, 我直接在会话内对磁盘上的 FY2023/2024/2025 10-K 做逐项 diff (利润表、分部、地区演变), 折入第 2/4/5/6/9 章, 未单独持久化 scratch 文件。
 
-Yahoo Finance 和 appliedmaterials.com URL 对命令行 `curl` 返回 503/403, 但在浏览器中正确解析 (反爬虫拦截, 而非 404)。对于市场数据, 我们使用 Stockanalysis.com, 它对 curl 友好并在 2026-05-22 返回一致的倍数。
+**URL 检查 (2026-06-14)。** 全部 URL 经 HTTP 检查。SEC 文件名经 EDGAR 提交 JSON `https://data.sec.gov/submissions/CIK0000006951.json` 解析的实际 `primaryDocument` (非合成):
+- FY2025 10-K `amat-20251026.htm` (acc 0001628280-25-056742) → 200 (用声明 UA)
+- FY2024 10-K `amat-20241027.htm` (acc 0000006951-24-000044, 18 位零填充) → 200
+- FY2023 10-K `amat-20231029.htm` (acc 0000006951-23-000041) → 200
+- FY2026 Q2 10-Q `amat-20260426.htm` (acc 0001628280-26-037227) → 200
+- FY2026 Q2 8-K 附件 `exhibit991q22026earningsre.htm` (acc 0001628280-26-035071) → 200
+- 2026 DEF 14A `d71992ddef14a.htm` (acc 0001193125-26-027307) → 200
+- Lam Research FY2025 10-K `lrcx-20250629.htm` → 200
+- 注: SEC URL 对浏览器 UA 返回 403 (反爬虫), 但对声明邮箱的 UA (`research@example.com`) 全部返回 200——已用后者复核。
+- Yahoo Finance / Stockanalysis / Census / Besi / Yole (202) / 新 YouTube 频道 → 200; ir.appliedmaterials.com 与 FRED DGS10 → 命令行超时 (站点慢但真实, 非 404); appliedmaterials.com 产品门户 → 403 (反爬虫)。
+- **修复的失效链接 (本次):** (1) `semi.org/.../equipment-market-data-subscription` (404) → 改为 `semi.org/en/products-services/market-data` (200), 7 处全部替换; (2) `youtube.com/@appliedmaterials` (404) → 改为官方频道 `youtube.com/channel/UCRtDxSpmTncPvzBvXLurThA` (200, 经 web 搜索确认为 Applied Materials 官方频道)。
 
-**10-K 抽查** (主张 → 10-K 中的位置; 全部通过对缓存的 `/tmp/amat_10k_2025.htm` 进行 grep 验证):
+**10-K 数字抽查 (≥5; 对缓存 10-K HTML grep 字符串匹配, 全部 ✓):** 营收 28,368 ✓ · 毛利 13,808 ✓ · 营业利润 8,289 ✓ · 净利 6,998 ✓ · 半导体系统 20,798 ✓ · AGS 6,385 ✓ · 中国 8,529 ✓ · 台湾 6,857 ✓ · 韩国 5,608 ✓ · 回购 4,895 ✓ · CFO 7,958 ✓ · 日本 2,273 ✓ · 半导体系统营业利润率 35.5 ✓ · 客户集中度 19%/15% ✓ (均位于合并报表 / Note 14 / MD&A)。
 
-- 营业收入 283.68 亿美元 ✓ (合并损益表)
-- GAAP 毛利率 48.7% ✓ (MD&A)
-- 36,500 名员工, 25 个国家, 46% 亚太 / 42% 北美 / 12% EMEA ✓ ("Human Capital")
-- 23,500+ 项有效专利 ✓ ("Patents and Licenses")
-- 2025 财年两家客户集中度: 19% 和 15% ✓ (Note 15)
-- 2024 财年两家客户集中度: 12% 和 11% ✓ (Note 15)
-- 2023 财年两家客户集中度: 19% 和 15% ✓ (Note 15)
-- 2025 财年约 89% 营收来自美国以外 ✓ (Note 15)
-- 按分部积压订单: 半导体系统 71.05 亿美元 (47%) + AGS 71.41 亿美元 (48%) + Corporate & Other 7.56 亿美元 (5%) = 总计 150.02 亿美元 ✓ ("Backlog")
-- 地理营收 台湾 68.57 亿美元, 韩国 56.08 亿美元, 中国 85.29 亿美元 ✓ (Note 15)
-- RD&E 35.70 亿美元 (2025 财年) ✓ (合并损益表)
-- 资本开支 22.60 亿美元 (2025 财年) ✓ (现金流量表)
-- 回购 48.95 亿美元, 股息 13.84 亿美元 (2025 财年) ✓ (现金流量表)
+**10-Q (FY2026 Q2) 数字抽查:** 上半年营收 14,922 · Q2 营收 7,910 · Q2 GAAP EPS 3.51 · 上半年净利 4,832——均在 [10-Q 合并报表](https://www.sec.gov/Archives/edgar/data/6951/000162828026037227/amat-20260426.htm) 中字符串匹配 ✓。
 
-**高管姓名核查** (对照 2026 DEF 14A `/tmp/amat_def14a_2026.htm`):
-- "Gary E. Dickerson——总裁兼首席执行官" ✓
-- 创始人 Michael A. McNeilly——未在 DEF 14A 中列为董事或 5% 持股股东 ✓ (与他在 1976 年离开的叙述一致)
-- 报告范围有意限于创始人 + 现任 CEO; 未提及其他高管。
+**财务图表数字核对 (financial_charts.py, 全部 stdlib SVG, 已 un-fenced 粘贴, 共 9 张):** income / balance / cashflow Sankey、segment donut、geography donut、geography revbars、5 步 DuPont、moneyflow、GF Score radar——每张图内每个数字均字符串匹配所引 10-K 报表 (上方抽查已覆盖核心数字); 每张图 `--source` 页脚已注明具体报表; 周边段落带页级引用。moneyflow 各节点均为真实可溯源对手方 (终端客户来自 10-K 终端结构; 子系统供应商来自 10-K 供应链披露与公开拆解), ribbon 仅示相对规模 (图例已声明), 子系统采购金额未披露故无 `$` 标签。
 
-**2026 财年 Q2 新闻稿逐字引用** (对照 `/tmp/amat_q2_fy26.htm`):
-- *"我们现在预计半导体设备业务在 2026 日历年增长超过 30%"* ✓
-- *"Precision Selective Nitride PECVD 保留浅槽隔离的完整性, 减少寄生电容并提升芯片每瓦性能"* ✓
-- *"Trillium ALD 用复杂的金属栅极堆叠包裹硅纳米片, 为各种 AI 计算应用优化晶体管"* ✓
-- *"Entered into an agreement with ASMPT Limited to acquire its NEXX business…"* (第 4.7 节中引用的段落) ✓
-- 2026 财年 Q3 展望: 营收 8,950 百万美元 ± 500 百万美元, 非 GAAP EPS 3.36 美元 ± 0.20 美元 ✓
+**机构研报 (`db/zsxq.db`) 核对:** 4 篇 AMAT 单名研报 (Bernstein 212485522841821 / Goldman 212452181281111 / UBS 415245155521428 / Citi 212452281485851) `local_exists=True`, 路由为 `/zsxq/pdf/<file_id>/<filename>` 直下载。全部标注 *分析师观点*, 未与 filing 引用混合。引用的卖方数字均字符串匹配 PDF: UBS 23.51 / 22x / 480→515 / 26.85 / 14.00 / $27 ✓; Citi 33x / 15.72 / 420→520 / 145Bn / 190Bn / 55–119Bn / 30–70Bn ✓; Bernstein 17.12 / 30x / 525 / 80% / 50%+ / mid-20s ✓; Goldman over 30% / over 60% / 520 / re-rate ✓。
 
-**10-K 与分析师上下文中的品牌产品名称。** 10-K 在其文字中**未**点名具体产品平台 (Endura, Centura, Producer, Reflexion, Mirra, VIISta, SEMVision 等)——只有 "Vantage" 在 10-K 中出现过一次, 作为顺带提及。商标列在 Applied 的产品门户 appliedmaterials.com 上, 我们在点名平台时直接引用该网站。新闻稿产品名称 (Precision™ Selective Nitride PECVD, Trillium™ ALD) 引用 2026 财年 Q2 新闻稿, 而非 10-K。
+**卖方观点演变 (第 2.4 章) — `db/stock_price_target.db` 只读预读已运行:** `sqlite3 mode=ro` 查询 AMAT 共 17 条 PT / 6 家机构, PT 区间 360–525 (剔除 1 月旧值后 502–525)。按机构时间线 + 机构间分歧表已构建, 含 Morgan Stanley 5/15→5/19 由 Overweight 下调至 Equal-Weight 的自我调整; 每条 PT 配 `report_date_price` 与当时隐含上行。
 
-**分析师观点标签。** 关于份额领导地位的陈述 (外延 #1, CMP #1, 离子注入领导者), 具体的竞争对手产品比较, 以及按子产品的营收百分比, 都标记为 `*分析师观点:*`, 并引用行业研究来源 (SEMI, Yole) 或有意不引用。没有份额领导或竞争对手产品主张带有 10-K 引用。
+**高管姓名核查 (对照 2026 DEF 14A):** "Gary E. Dickerson——总裁兼 CEO" ✓; 创始人 McNeilly 未列为现任董事或 5% 股东 ✓ (与 1976 年离开一致); 报告仅覆盖创始人 + 现任 CEO, 无其他高管姓名。
 
-**估算明确标注。** 所有定量分析师估算 (先进封装 TAM 区间, AGS TAM, 服务 WFE 百分比, GAA WFE 强度) 都以 `分析师估算` 为前缀, 并附数据源依据 (10-K + SEMI)。文本中没有 `(Source: our model)` / `(模型估算)` 结构。
+**分析师观点标签。** 份额领导地位 (外延/CMP/离子注入)、竞争对手产品比较、按子产品营收百分比, 以及全部前瞻预测/PT/评级/GF Score, 均标记 *分析师观点*, 不附 filing 引用。无份额/PT 主张带 10-K 引用。
 
 **残余未知 / 尚未验证:**
-- 东京电子 P/S 比率——按市值 22.49 万亿日元 / TTM 营收 2.44 万亿日元 = 9.2× 推导得出 (不直接由查询的 Stockanalysis URL 报告)。置信度高但未独立重新验证。
-- 商誉减值细节——叙述引用 10-K Note 7; 确切的减值费用金额未逐字抽查, 而是总结性描述。
-- 2025 财年 AGS LTSA 渗透率 %——明确表述为 Applied 未予披露; 50–60% 范围是分析师方向性估算。
-- ASMPT NEXX 交易条款 (购买价格, 预期完成时点)——在 2026 财年 Q2 新闻稿中未披露。
+- 现价 567.25 为 2026-06-12 收盘 (yfinance); 6/11–12 两日急涨 +14% 经 5 日历史确认; 报告 as-of 为 2026-06-14, 期间若有进一步波动未再更新。
+- 前瞻模型 (FY2026–28E 营收/EPS) 为分析师观点, 外部锚点 (管理层指引、UBS/Citi 估计) 已引用; 与卖方口径 (FY vs CY) 存在年度对齐差异, 已在文中说明。
+- 商誉减值确切金额引用 10-K Note 7 总结性描述, 未逐字抽查具体费用数。
+- AGS LTSA 渗透率 %、先进封装/AGS TAM 区间为分析师方向性估算 (Applied 未披露), 已明确标注。
+- ASMPT NEXX 交易条款 (购买价、交割时点) 在 FY2026 Q2 新闻稿中未披露。
+
+**Spec gaps (vintage 2026-05-23 → 已在本次刷新补齐):** 投资摘要 header + 评级/PT、第 1B 章 GF Score、第 2 章前瞻模型/PT 推导/bull-base-bear、卖方观点演变、第 9.5 章关键分歧与催化剂、第 10 章投资者视角、Data Used 清单、Further viewing、moneyflow 图——均已补齐。
 
 </details>
