@@ -1,0 +1,42 @@
+{
+  "eyebrow": "Power-semiconductor money flow · 2026",
+  "title": "纳微 Navitas (NVTS) 的资金流向 — 谁付钱 → 买什么 → 钱最终流向哪条产业链",
+  "thesis": "AI 数据中心供电需求（经 NVIDIA 800V HVDC 生态、商用 PSU OEM 配套）与电网/EV 需求向上汇入 Navitas 的 GaN+SiC 产品线；Navitas 作为 fabless 设计公司，把这些收入的成本端外包，最终汇集到三家代工厂——TSMC（GaN 晶圆）、GlobalFoundries（美国 GaN）、X-FAB（SiC）——以及镓 epi-wafer 与亚洲 OSAT 封测。",
+  "stages": ["谁付钱（终端需求）", "买什么（Navitas 产品线）", "钱流向哪（Navitas 的供应链）"],
+  "nodes": [
+    {"id": "nvidia", "stage": 0, "label": "NVIDIA 生态", "kind": "compute", "sub": ["800V HVDC 机架平台", "Kyber/Rubin · 平台合作方", "实际采购方为 PSU OEM"], "h": 120},
+    {"id": "psu", "stage": 0, "label": "商用 PSU OEM", "kind": "buyer", "sub": ["Delta / Lite-On / Flex 等", "（未在 SEC 文件具名）", "经分销商汇聚下单"]},
+    {"id": "grid", "stage": 0, "label": "电网 / EV / 工业", "kind": "buyer2", "sub": ["SST · 储能逆变器", "OBC · 牵引 · 电机驱动", "DOE 资助项目"]},
+    {"id": "gan", "stage": 1, "label": "GaNFast / GaNSafe", "kind": "power", "sub": ["GaN 集成功率 IC", "15–700V · 1–22 kW", "旗舰高功率线"], "h": 120},
+    {"id": "sic", "stage": 1, "label": "GeneSiC SiC", "kind": "silicon", "sub": ["650V–6.5kV MOSFET", "高压差异化", "2022 收购"]},
+    {"id": "si", "stage": 1, "label": "Si IC + 参考设计", "kind": "neutral", "sub": ["硅控制器 · 隔离器", "12kW PSU / 250kW SST", "配套加售品"]},
+    {"id": "tsmc", "stage": 2, "label": "TSMC", "kind": "foundry", "sub": ["GaN-on-Si 晶圆代工", "台湾 · 主力 GaN 产能"], "h": 110},
+    {"id": "gfs", "stage": 2, "label": "GlobalFoundries", "kind": "foundry", "sub": ["美国佛蒙特 Burlington", "GaN · 2026H2 量产", "国家安全供应链"]},
+    {"id": "xfab", "stage": 2, "label": "X-FAB", "kind": "foundry", "sub": ["美国德州", "SiC 晶圆代工"]},
+    {"id": "epi", "stage": 2, "label": "镓 epi-wafer + OSAT", "kind": "neutral", "sub": ["非中国 epi 供应商", "亚洲封装测试分包商"]}
+  ],
+  "flows": [
+    {"from": "nvidia", "to": "gan", "weight": 22, "style": "embedded", "label": "经 PSU OEM 配套"},
+    {"from": "psu", "to": "gan", "weight": 20, "style": "direct"},
+    {"from": "psu", "to": "sic", "weight": 12, "style": "direct"},
+    {"from": "grid", "to": "sic", "weight": 16, "style": "direct"},
+    {"from": "grid", "to": "gan", "weight": 6, "style": "direct"},
+    {"from": "nvidia", "to": "si", "weight": 6, "style": "embedded"},
+    {"from": "gan", "to": "tsmc", "weight": 20, "style": "direct", "label": "GaN 晶圆"},
+    {"from": "gan", "to": "gfs", "weight": 8, "style": "direct", "label": "美国 GaN"},
+    {"from": "sic", "to": "xfab", "weight": 14, "style": "direct", "label": "SiC 晶圆"},
+    {"from": "gan", "to": "epi", "weight": 8, "style": "direct"},
+    {"from": "sic", "to": "epi", "weight": 6, "style": "direct"},
+    {"from": "si", "to": "tsmc", "weight": 5, "style": "direct"}
+  ],
+  "cards_title": "Follow the money — 资金流向关键判断",
+  "cards": [
+    {"kind": "compute", "tag": "需求 · AI 数据中心", "title": "NVIDIA 是平台方，不是直接买家", "body": "NVIDIA 在 *2025-05-21* 将 Navitas 选入 *800V HVDC* 生态，但所有 10-K/10-Q 均无任何与 NVIDIA 直接挂钩的供货协议或营收贡献——实际付款方是采用 Navitas 器件的商用 *PSU OEM*（Delta、Lite-On、Flex 等，未具名）。"},
+    {"kind": "buyer", "tag": "需求 · 渠道", "title": "收入高度依赖少数分销商", "body": "FY2025 两家分销商合计 *57%*（Distributor B *46%* + C *11%*）；*香港* 归属收入达 *57%*，反映需求经泛亚分销商向大陆商用电源厂汇聚。"},
+    {"kind": "power", "tag": "产品 · 旗舰", "title": "GaNSafe + GeneSiC 是高功率发动机", "body": "高功率市场（GaNSafe + GeneSiC + 参考设计拉动）已占 Q1 2026 收入 *绝大多数*，同比 *约 +35%*，部分抵消中国手机充电业务收缩。"},
+    {"kind": "foundry", "tag": "供应链 · 钥匙点", "title": "三家代工厂 = 真正的钱袋", "body": "作为 fabless 公司，Navitas 的 COGS 主要流向 *TSMC*（GaN）、*GlobalFoundries* 佛蒙特（美国 GaN，*2026H2* 量产）、*X-FAB* 德州（SiC）——GFS 合作是其国家安全供应链叙事的核心。"},
+    {"kind": "silicon", "tag": "供应链 · 投入", "title": "镓供应是长期尾部风险", "body": "中国 *2023 年 7 月* 对镓出口管制仍在生效；Navitas 估计其镓消耗到 *2026 年* 占全球供应 *<0.01%*，并通过非中国 epi-wafer 供应商分散采购缓释。"},
+    {"kind": "neutral", "tag": "结论", "title": "钱在哪里汇集", "body": "需求侧汇集到 *NVIDIA 生态 + PSU OEM*；成本侧汇集到 *三家代工厂 + 镓 epi + 亚洲 OSAT*。两端都尚未签约放量——估值押注的是 *2027+* NVIDIA 800V 机架落地。"}
+  ],
+  "source": "Navitas FY2025 10-K (Item 1 Business; Note 12) · Q1 2026 业绩新闻稿 2026-05-05 · NVIDIA 800V HVDC 8-K 2025-05-21 · GlobalFoundries 8-K 2025-11-20"
+}

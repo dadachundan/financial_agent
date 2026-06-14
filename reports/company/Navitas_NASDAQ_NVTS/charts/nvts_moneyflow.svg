@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1111" width="1180" height="1111" role="img" aria-label="纳微 Navitas (NVTS) 的资金流向 — 谁付钱 → 买什么 → 钱最终流向哪条产业链" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1111" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">POWER-SEMICONDUCTOR MONEY FLOW · 2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">纳微 Navitas (NVTS) 的资金流向 — 谁付钱 → 买什么 → 钱最终流向哪条产业链</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">AI 数据中心供电需求（经 NVIDIA 800V HVDC 生态、商用 PSU OEM 配套）与电网/EV 需求向上汇入 Navitas 的 GaN+SiC 产品线；Navitas 作为 fabless</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">设计公司，把这些收入的成本端外包，最终汇集到三家代工厂——TSMC（GaN 晶圆）、GlobalFoundries（美国 GaN）、X-FAB（SiC）——以及镓 epi-wafer 与亚洲 OSAT 封测。</text>
+<ellipse cx="1031.00" cy="448.50" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="683.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="683.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱（终端需求）</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">买什么（Navitas 产品线）</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱流向哪（Navitas 的供应链）</text>
+<path d="M 256.00 446.45 C 369.50 446.45, 369.50 330.23, 483.00 330.23" fill="none" stroke="url(#mfgold)" stroke-width="21.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 463.91 C 369.50 463.91, 369.50 444.27, 483.00 444.27" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 583.27 C 369.50 583.27, 369.50 459.55, 483.00 459.55" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 571.27 C 369.50 571.27, 369.50 344.41, 483.00 344.41" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 312.77 C 810.50 312.77, 810.50 272.27, 924.00 272.27" fill="none" stroke="url(#mfgold)" stroke-width="21.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 328.05 C 810.50 328.05, 810.50 401.50, 924.00 401.50" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 449.73 C 810.50 449.73, 810.50 520.00, 924.00 520.00" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 336.77 C 810.50 336.77, 810.50 626.73, 924.00 626.73" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 460.64 C 810.50 460.64, 810.50 634.36, 924.00 634.36" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 580.00 C 810.50 580.00, 810.50 285.91, 924.00 285.91" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 318.23 C 369.50 318.23, 369.50 307.32, 483.00 307.32" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 256.00 333.50 C 369.50 333.50, 369.50 580.00, 483.00 580.00" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="306.77" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">经 PSU OEM 配套</text>
+<text x="810.50" y="286.52" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">GaN 晶圆</text>
+<text x="810.50" y="358.77" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">美国 GaN</text>
+<text x="810.50" y="478.86" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">SiC 晶圆</text>
+<rect x="42.00" y="261.50" width="214" height="120.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="42.00" y="261.50" width="3" height="120.00" rx="2" fill="#56c6e6"/>
+<text x="60.00" y="294.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">NVIDIA 生态</text>
+<text x="60.00" y="315.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">800V HVDC 机架平台</text>
+<text x="60.00" y="332.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Kyber/Rubin · 平台合作方</text>
+<text x="60.00" y="349.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">实际采购方为 PSU OEM</text>
+<rect x="42.00" y="397.50" width="214" height="111.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="397.50" width="3" height="111.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="430.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">商用 PSU OEM</text>
+<text x="60.00" y="451.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Delta / Lite-On / Flex 等</text>
+<text x="60.00" y="468.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">（未在 SEC 文件具名）</text>
+<text x="60.00" y="485.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">经分销商汇聚下单</text>
+<rect x="42.00" y="524.50" width="214" height="111.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="524.50" width="3" height="111.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="557.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">电网 / EV / 工业</text>
+<text x="60.00" y="578.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">SST · 储能逆变器</text>
+<text x="60.00" y="595.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">OBC · 牵引 · 电机驱动</text>
+<text x="60.00" y="612.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">DOE 资助项目</text>
+<rect x="483.00" y="261.50" width="214" height="120.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="261.50" width="3" height="120.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="294.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">GaNFast / GaNSafe</text>
+<text x="501.00" y="315.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">GaN 集成功率 IC</text>
+<text x="501.00" y="332.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">15–700V · 1–22 kW</text>
+<text x="501.00" y="349.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">旗舰高功率线</text>
+<rect x="483.00" y="397.50" width="214" height="111.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="397.50" width="3" height="111.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="430.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">GeneSiC SiC</text>
+<text x="501.00" y="451.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">650V–6.5kV MOSFET</text>
+<text x="501.00" y="468.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">高压差异化</text>
+<text x="501.00" y="485.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">2022 收购</text>
+<rect x="483.00" y="524.50" width="214" height="111.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="524.50" width="3" height="111.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="557.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Si IC + 参考设计</text>
+<text x="501.00" y="578.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">硅控制器 · 隔离器</text>
+<text x="501.00" y="595.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">12kW PSU / 250kW SST</text>
+<text x="501.00" y="612.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">配套加售品</text>
+<rect x="924.00" y="220.00" width="214" height="110.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="220.00" width="3" height="110.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">TSMC</text>
+<text x="942.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">GaN-on-Si 晶圆代工</text>
+<text x="942.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">台湾 · 主力 GaN 产能</text>
+<rect x="924.00" y="346.00" width="214" height="111.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="346.00" width="3" height="111.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="379.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">GlobalFoundries</text>
+<text x="942.00" y="400.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">美国佛蒙特 Burlington</text>
+<text x="942.00" y="417.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">GaN · 2026H2 量产</text>
+<text x="942.00" y="434.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">国家安全供应链</text>
+<rect x="924.00" y="473.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="473.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="506.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">X-FAB</text>
+<text x="942.00" y="527.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">美国德州</text>
+<text x="942.00" y="544.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">SiC 晶圆代工</text>
+<rect x="924.00" y="583.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="583.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="616.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">镓 epi-wafer + OSAT</text>
+<text x="942.00" y="637.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">非中国 epi 供应商</text>
+<text x="942.00" y="654.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">亚洲封装测试分包商</text>
+<rect x="42.00" y="703.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="707.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="705.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="705.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="705.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="705.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="707.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="707.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="698.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="747.00" y="707.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="871.80" y="698.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="890.80" y="707.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="42.00" y="718.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="61.00" y="727.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="142.60" y="718.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="161.60" y="727.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<line x1="42" y1="743.00" x2="1138" y2="743.00" stroke="#222a3a"/>
+<text x="42.00" y="759.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 资金流向关键判断</text>
+<rect x="42.00" y="779.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="42.00" y="779.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="58.00" y="803.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">需求 · AI 数据中心</text>
+<text x="58.00" y="821.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">NVIDIA 是平台方，不是直接买家</text>
+<text x="58.00" y="845.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">NVIDIA</tspan><tspan fill="#9aa3b8" font-weight="400"> 在</tspan><tspan fill="#f4d58a" font-weight="700"> 2025-05-21</tspan><tspan fill="#9aa3b8" font-weight="400"> 将</tspan><tspan fill="#9aa3b8" font-weight="400"> Navitas</tspan><tspan fill="#9aa3b8" font-weight="400"> 选入</tspan><tspan fill="#f4d58a" font-weight="700"> 800V</tspan><tspan fill="#f4d58a" font-weight="700"> HVDC</tspan><tspan fill="#9aa3b8" font-weight="400"> 生态，但所有</tspan></text>
+<text x="58.00" y="861.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">10-K/10-Q</tspan><tspan fill="#9aa3b8" font-weight="400"> 均无任何与</tspan><tspan fill="#9aa3b8" font-weight="400"> NVIDIA</tspan><tspan fill="#9aa3b8" font-weight="400"> 直接挂钩的供货协议或营收贡献——实际付款方是采用</tspan></text>
+<text x="58.00" y="877.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Navitas</tspan><tspan fill="#9aa3b8" font-weight="400"> 器件的商用</tspan><tspan fill="#f4d58a" font-weight="700"> PSU</tspan><tspan fill="#f4d58a" font-weight="700"> OEM</tspan><tspan fill="#9aa3b8" font-weight="400"> （Delta、Lite-On、Flex</tspan><tspan fill="#9aa3b8" font-weight="400"> 等，未具名）。</tspan></text>
+<rect x="412.00" y="779.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="779.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="803.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求 · 渠道</text>
+<text x="428.00" y="821.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">收入高度依赖少数分销商</text>
+<text x="428.00" y="845.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 两家分销商合计</tspan><tspan fill="#f4d58a" font-weight="700"> 57%</tspan><tspan fill="#9aa3b8" font-weight="400"> （Distributor</tspan><tspan fill="#9aa3b8" font-weight="400"> B</tspan><tspan fill="#f4d58a" font-weight="700"> 46%</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> C</tspan><tspan fill="#f4d58a" font-weight="700"> 11%</tspan><tspan fill="#9aa3b8" font-weight="400"> ）；</tspan><tspan fill="#f4d58a" font-weight="700"> 香港</tspan></text>
+<text x="428.00" y="861.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">归属收入达</tspan><tspan fill="#f4d58a" font-weight="700"> 57%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，反映需求经泛亚分销商向大陆商用电源厂汇聚。</tspan></text>
+<rect x="782.00" y="779.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="782.00" y="779.00" width="3" height="132.00" rx="2" fill="#d9a05b"/>
+<text x="798.00" y="803.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">产品 · 旗舰</text>
+<text x="798.00" y="821.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">GaNSafe + GeneSiC 是高功率发动机</text>
+<text x="798.00" y="845.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">高功率市场（GaNSafe</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> GeneSiC</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> 参考设计拉动）已占</tspan><tspan fill="#9aa3b8" font-weight="400"> Q1</tspan><tspan fill="#9aa3b8" font-weight="400"> 2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 收入</tspan><tspan fill="#f4d58a" font-weight="700"> 绝大多数</tspan></text>
+<text x="798.00" y="861.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">，同比</tspan><tspan fill="#f4d58a" font-weight="700"> 约</tspan><tspan fill="#f4d58a" font-weight="700"> +35%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，部分抵消中国手机充电业务收缩。</tspan></text>
+<rect x="42.00" y="925.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="925.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="949.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">供应链 · 钥匙点</text>
+<text x="58.00" y="967.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">三家代工厂 = 真正的钱袋</text>
+<text x="58.00" y="991.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">作为</tspan><tspan fill="#9aa3b8" font-weight="400"> fabless</tspan><tspan fill="#9aa3b8" font-weight="400"> 公司，Navitas</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#9aa3b8" font-weight="400"> COGS</tspan><tspan fill="#9aa3b8" font-weight="400"> 主要流向</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan><tspan fill="#9aa3b8" font-weight="400"> （GaN）、</tspan></text>
+<text x="58.00" y="1007.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">GlobalFoundries</tspan><tspan fill="#9aa3b8" font-weight="400"> 佛蒙特（美国</tspan><tspan fill="#9aa3b8" font-weight="400"> GaN，</tspan><tspan fill="#f4d58a" font-weight="700"> 2026H2</tspan><tspan fill="#9aa3b8" font-weight="400"> 量产）、</tspan><tspan fill="#f4d58a" font-weight="700"> X-FAB</tspan></text>
+<text x="58.00" y="1023.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">德州（SiC）——GFS</tspan><tspan fill="#9aa3b8" font-weight="400"> 合作是其国家安全供应链叙事的核心。</tspan></text>
+<rect x="412.00" y="925.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="925.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="949.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">供应链 · 投入</text>
+<text x="428.00" y="967.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">镓供应是长期尾部风险</text>
+<text x="428.00" y="991.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">中国</tspan><tspan fill="#f4d58a" font-weight="700"> 2023</tspan><tspan fill="#f4d58a" font-weight="700"> 年</tspan><tspan fill="#f4d58a" font-weight="700"> 7</tspan><tspan fill="#f4d58a" font-weight="700"> 月</tspan><tspan fill="#9aa3b8" font-weight="400"> 对镓出口管制仍在生效；Navitas</tspan><tspan fill="#9aa3b8" font-weight="400"> 估计其镓消耗到</tspan><tspan fill="#f4d58a" font-weight="700"> 2026</tspan><tspan fill="#f4d58a" font-weight="700"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> 占全球供应</tspan></text>
+<text x="428.00" y="1007.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">&lt;0.01%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，并通过非中国</tspan><tspan fill="#9aa3b8" font-weight="400"> epi-wafer</tspan><tspan fill="#9aa3b8" font-weight="400"> 供应商分散采购缓释。</tspan></text>
+<rect x="782.00" y="925.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="782.00" y="925.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="798.00" y="949.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">结论</text>
+<text x="798.00" y="967.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">钱在哪里汇集</text>
+<text x="798.00" y="991.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">需求侧汇集到</tspan><tspan fill="#f4d58a" font-weight="700"> NVIDIA</tspan><tspan fill="#f4d58a" font-weight="700"> 生态</tspan><tspan fill="#f4d58a" font-weight="700"> +</tspan><tspan fill="#f4d58a" font-weight="700"> PSU</tspan><tspan fill="#f4d58a" font-weight="700"> OEM</tspan><tspan fill="#9aa3b8" font-weight="400"> ；成本侧汇集到</tspan><tspan fill="#f4d58a" font-weight="700"> 三家代工厂</tspan><tspan fill="#f4d58a" font-weight="700"> +</tspan><tspan fill="#f4d58a" font-weight="700"> 镓</tspan><tspan fill="#f4d58a" font-weight="700"> epi</tspan><tspan fill="#f4d58a" font-weight="700"> +</tspan><tspan fill="#f4d58a" font-weight="700"> 亚洲</tspan></text>
+<text x="798.00" y="1007.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">OSAT</tspan><tspan fill="#9aa3b8" font-weight="400"> 。两端都尚未签约放量——估值押注的是</tspan><tspan fill="#f4d58a" font-weight="700"> 2027+</tspan><tspan fill="#9aa3b8" font-weight="400"> NVIDIA</tspan><tspan fill="#9aa3b8" font-weight="400"> 800V</tspan><tspan fill="#9aa3b8" font-weight="400"> 机架落地。</tspan></text>
+<text x="590.00" y="1093.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Navitas FY2025 10-K (Item 1 Business; Note 12) · Q1 2026 业绩新闻稿 2026-05-05 · NVIDIA 800V HVDC 8-K 2025-05-21 · GlobalFoundries 8-K 2025-11-20</text>
+</svg>
