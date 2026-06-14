@@ -1,13 +1,13 @@
 # 高通公司 Qualcomm Incorporated (NASDAQ:QCOM) — 公司研究报告
 
-**日期:** 2026-06-11 (前版 2026-05-20)
-**分析师备注:** 报告更新。所有财务数据均来源于高通向 SEC 提交的文件 (10-K、10-Q、8-K) 并在正文中逐项标注引用; 卖方观点引自本地 zsxq 研报库, 一律标注 *分析师观点:* 并与文件引用分离。市场数据截至 2026-06-11。
+**日期:** 2026-06-14 (前版 2026-06-11)
+**分析师备注:** 报告更新。所有财务数据均来源于高通向 SEC 提交的文件 (10-K、10-Q、8-K) 并在正文中逐项标注引用; 卖方观点引自本地 zsxq 研报库, 一律标注 *分析师观点:* 并与文件引用分离。市场数据截至 2026-06-12 收盘 (2026-06-14 为周末, 取最近交易日)。本次更新补齐 Section 1B GF Score、Section 10 投资者视角记分卡, 并新增全套财报可视化 (利润表 / 资产负债表 / 现金流 Sankey + 板块 / 地区营收 donut + 历史营收堆叠柱 + DuPont)。
 **报告语言: 简体中文 (英文版同时存在于本目录, 本次未更新)**
 
 > **业绩更新 — 2026 财年 Q2 业绩验证全年指引框架, Q3 FY2026 指引显示中国手机市场触底 (2026-04-29):** 高通公布 2026 财年 Q2 营业收入 **106.0 亿美元 (同比 -3%)**, Non-GAAP 每股收益 **2.65 美元 (同比 -7%)**, 总体符合此前指引。管理层给出 2026 财年 Q3 营业收入指引区间为 **92–100 亿美元** (Non-GAAP EPS 2.10–2.30 美元), 下调区间反映 **内存供应紧张以及对部分手机 OEM 厂商造成的定价影响**; 管理层明确表示, QCT (高通 CDMA 技术) 来自中国客户的手机营业收入将于"第三季度触底, 并在随后季度回归环比增长"。同时, 董事会在已于 2026 财年上半年完成的 54 亿美元回购之上, 额外批准了一项 **200 亿美元股票回购计划**; 公司亦确认与超大规模数据中心 (hyperscaler) 客户的定制硅片合作仍按预期推进, 计划于 2026 日历年下半年实现初步出货。
 > 来源: [QCOM 2026 财年 Q2 业绩公告, 2026-04-29](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)。
 
-> **事件更新 — Computex 主题演讲发布数据中心品牌 "Dragonfly", 投资者日定档 6 月 24 日 (2026-06-01 / 2026-06-24):** CEO Cristiano Amon 在 2026 年 6 月 1 日 Computex 开幕主题演讲中公布数据中心产品品牌 **Dragonfly**, 覆盖服务器 CPU、AI 推理加速器与定制 ASIC 三类产品, 并表示更多细节将于 6 月 24 日纽约投资者日披露 ([The Elec — "Qualcomm Unveils 'Dragonfly' Brand for Data Center Business", 2026-06](https://www.thelec.net/news/articleView.html?idxno=10949); [Qualcomm Investor Day 2026 活动页](https://www.qualcomm.com/company/events/investor-day))。股价自 3 月 26 日低点 $130.06 一度涨至 6 月 2 日 $239.95 (+84%), 随后回落至 6 月 11 日 $202.96 — 数据中心叙事已成为该股定价主线 (收盘价: yfinance)。
+> **事件更新 — Computex 主题演讲发布数据中心品牌 "Dragonfly", 投资者日定档 6 月 24 日 (2026-06-01 / 2026-06-24):** CEO Cristiano Amon 在 2026 年 6 月 1 日 Computex 开幕主题演讲中公布数据中心产品品牌 **Dragonfly**, 覆盖服务器 CPU、AI 推理加速器与定制 ASIC 三类产品, 并表示更多细节将于 6 月 24 日纽约投资者日披露 ([The Elec — "Qualcomm Unveils 'Dragonfly' Brand for Data Center Business", 2026-06](https://www.thelec.net/news/articleView.html?idxno=10949); [Qualcomm Investor Day 2026 活动页](https://www.qualcomm.com/company/events/investor-day))。股价自 3 月 26 日低点 $130.06 一度涨至 6 月 2 日 $239.95 (+84%), 随后回落至 6 月 11 日 $202.96, 再于 6 月 12 日反弹至 **$211.72** — 在 6 月 24 日投资者日前的最后约两周内, 数据中心叙事仍是该股定价主线, 股价随投资者日临近重新走高 (各日收盘价: yfinance)。
 
 ## 投资摘要 (Investment Summary)
 
@@ -17,25 +17,29 @@
 |---|---|
 | 评级 (Rating) | **Hold (中性)** |
 | 12 个月目标价 (PT) | **$190** (基准情形; 推导见第 1A 章) |
-| 现价 (2026-06-11 收盘) | **$202.96** ([Yahoo Finance — QCOM](https://finance.yahoo.com/quote/QCOM/), yfinance) |
-| 隐含空间 | **约 -6%** |
+| 现价 (2026-06-12 收盘) | **$211.72** ([Yahoo Finance — QCOM](https://finance.yahoo.com/quote/QCOM/), yfinance) |
+| 隐含空间 | **约 -10%** |
 | 估值方法 | 18x × FY2027E Non-GAAP EPS ~$10.5 (分析师估计) |
-| 情景目标价 | 牛市 **$265** (+31%) / 基准 **$190** (-6%) / 熊市 **$140** (-31%) |
-| 市值 | 约 $2,140 亿美元 (yfinance, 2026-06-11) |
+| 情景目标价 | 牛市 **$265** (+25%) / 基准 **$190** (-10%) / 熊市 **$140** (-34%) |
+| 市值 | 约 $2,230 亿美元 (yfinance, 2026-06-12) |
 | 52 周区间 | $121.99 – $259.92 ([Yahoo Finance — QCOM](https://finance.yahoo.com/quote/QCOM/)) |
+| GF Score (GuruFocus 式, *分析师观点:*) | **71 / 100** (五维记分卡见第 1B 章) |
 
 **论点支柱 (Thesis pillars):**
 
 1. **数据中心从期权变为定价主线, 但收入仍未落地。** Alphawave 收购已于 2025-12-18 完成 ([Qualcomm 新闻稿, 2025-12-18](https://www.qualcomm.com/news/releases/2025/12/qualcomm-completes-acquisition-of-alphawave-semi)), 超大规模客户定制硅片 2026 日历年 H2 首批出货 (公司口径), Dragonfly 品牌已发布 — 6 月 24 日投资者日是下一个定价事件。
 2. **手机业务正穿越内存涨价引发的去库存底部。** 管理层口径: 中国客户手机收入 F3Q26 触底、F4Q26 回归环比增长 ([QCOM F2Q26 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm))。
 3. **汽车 + IoT 多元化按既定目标推进。** F2Q26 汽车收入 $13.26 亿创纪录 (+38% YoY), 汽车+IoT 合计 +20% YoY (同上)。
-4. **股价 3 个月自 $130 升至 $240 再回落 $203, 已部分计价数据中心成功; 风险回报趋于对称** — 牛熊情景上下行幅度几乎相等 (±31%), 故维持 Hold。
+4. **股价 3 个月自 $130 升至 $240、回落 $203、再反弹 $212, 已部分计价数据中心成功; 风险回报略偏负** — 现价 $211.72 距基准 $190 有约 -10% 下行, 牛市 +25% / 熊市 -34%, 上下行幅度大体对称而中枢略低于现价, 故维持 Hold。
+
+**相对表现 (Relative performance):** QCOM 自 3 月 26 日 $130.06 低点至 6 月 12 日 $211.72 累计 **+63%**, 同期大幅跑赢费城半导体指数 (SOX) 与标普 500 — 此轮超额收益几乎全部由数据中心叙事驱动, 而非盈利上修。现价 $211.72 位于 52 周区间 ($121.99–$259.92) 的约 74% 分位、显著高于 200 日均线, 动量强劲 (这也是第 1B 章 GF Score 动量维度给 8/10 的依据; 价格数据: yfinance, 2026-06-12)。
 
 ---
 
 ## 目录
 1. 公司概览
 1A. 估值与目标价 (Valuation & Price Target)
+1B. GF Score 基本面记分卡 (GuruFocus 式)
 2. 公司历史
 3. 管理团队
 4. 产品与服务
@@ -46,6 +50,7 @@
 8. 市场机会 (TAM)
 9. 风险评估
 9.5 核心分歧与催化剂 (Key debates & catalysts)
+10. 投资者视角记分卡 (Investor-lens scorecards)
 
 ---
 
@@ -72,17 +77,148 @@
 
 ### 估值快照
 
-截至 **2026 年 6 月 11 日收盘**, 高通股价 **$202.96**, 对应市值约 **2,140 亿美元**, 2026 财年 Q2 末摊薄流通股本约 10.6 亿股 ([QCOM 2026 财年 Q2 业绩公告, Condensed Balance Sheet](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm); 价格参考 [Yahoo Finance — QCOM](https://finance.yahoo.com/quote/QCOM/), yfinance, 2026-06-11)。过去三个月该股经历了剧烈重估: 3 月 26 日收盘 $130.06 (Bernstein 下调评级当日) → 6 月 2 日收盘 $239.95 (+84%) → 6 月 11 日 $202.96 (较峰值 -15%; 各日收盘价: yfinance)。
+截至 **2026 年 6 月 12 日收盘** (2026-06-14 为周末), 高通股价 **$211.72**, 对应市值约 **2,230 亿美元**, 2026 财年 Q2 末摊薄流通股本约 10.6 亿股 ([QCOM 2026 财年 Q2 业绩公告, Condensed Balance Sheet](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm); 价格参考 [Yahoo Finance — QCOM](https://finance.yahoo.com/quote/QCOM/), yfinance, 2026-06-12)。过去三个月该股经历了剧烈重估: 3 月 26 日收盘 $130.06 (Bernstein 下调评级当日) → 6 月 2 日收盘 $239.95 (+84%) → 6 月 11 日 $202.96 → 6 月 12 日 $211.72 (距峰值 -12%; 各日收盘价: yfinance)。
 
-| 估值倍数 | QCOM (2026-06-11) | 三年区间 (约) | 备注 |
+| 估值倍数 | QCOM (2026-06-12) | 三年区间 (约) | 备注 |
 |---|---|---|---|
-| 市盈率 P/E (TTM, GAAP) | ~21.8x | 13x–28x | TTM EPS 仍受 2025 财年 57 亿美元税务费用及 2026 财年 Q2 释放共同扭曲 ([Yahoo Finance — QCOM](https://finance.yahoo.com/quote/QCOM/), yfinance, 2026-06-11)。 |
-| 前瞻市盈率 (FY2026E) | **~19x** | 10x–19x | yfinance 一致前瞻 EPS ~$10.7; 较 3 月时的约 10–12 倍已大幅重估, 目前处于三年区间上端 (yfinance, 2026-06-11)。 |
-| 市销率 P/S (TTM) | ~4.8x | 3.0x–5.5x | 仍远低于 AVGO (~24x) 及 NVDA (~20x), 但这两者的收入结构以 AI 数据中心为主, 可比性有限 (yfinance, 2026-06-11; [stockanalysis.com](https://stockanalysis.com/stocks/qcom/statistics/))。 |
+| 市盈率 P/E (TTM, GAAP) | ~22.8x | 13x–28x | TTM EPS 仍受 2025 财年 57 亿美元税务费用及 2026 财年 Q2 释放共同扭曲 ([Yahoo Finance — QCOM](https://finance.yahoo.com/quote/QCOM/), yfinance, 2026-06-12)。 |
+| 前瞻市盈率 (FY2026E) | **~19.8x** | 10x–20x | yfinance 一致前瞻 EPS ~$10.67; 较 3 月时的约 10–12 倍已大幅重估, 目前处于三年区间上端 (yfinance, 2026-06-12)。 |
+| 市销率 P/S (TTM) | ~5.0x | 3.0x–5.5x | 仍远低于 AVGO (~24x) 及 NVDA (~20x), 但这两者的收入结构以 AI 数据中心为主, 可比性有限 (yfinance, 2026-06-12; [stockanalysis.com](https://stockanalysis.com/stocks/qcom/statistics/))。 |
 | EV/EBITDA | ~14–15x | 10x–17x | 对于高自由现金流的半导体标的属合理水平 ([gurufocus.com EV/EBITDA](https://www.gurufocus.com/term/enterprise-value-to-ebitda/QCOM))。 |
-| 股息率 | ~1.9% | 1.6%–2.5% | 季度股息 0.89 美元; 2025 财年总分红 38.36 亿美元 ([QCOM 2025 财年 10-K, Cash Flow Statement](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。 |
+| 股息率 | ~1.7% | 1.6%–2.5% | 季度股息 0.89 美元; 2025 财年总分红 38.05 亿美元 ([QCOM 2025 财年 10-K, Cash Flow Statement](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。 |
 
-**解读 — "大市值半导体最便宜标的"的折价叙事已经走完一半。** 本报告前一版 (2026 年 5 月) 的核心估值张力是: 高通以约 10–12 倍前瞻市盈率交易于大市值半导体最低档, 折价反映苹果调制解调器内化、中国 OEM 垂直整合与 QTL 年金化三重担忧。三个月后, 这一折价已被市场主动回补大半: 4 月 29 日财报电话会披露超大规模客户定制硅片合作后股价盘后大涨约 13% (*分析师观点:* [Bernstein — FQ226 recap, 2026-04-30, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf)), 6 月 1 日 Computex 发布 Dragonfly 数据中心品牌 ([The Elec, 2026-06](https://www.thelec.net/news/articleView.html?idxno=10949)), 前瞻市盈率从约 10–12 倍扩张至约 19 倍 — 已与博通的前瞻倍数 (~20x) 大体持平 (yfinance, 2026-06-11)。换言之, **市场已为"数据中心成功"预付了相当部分对价, 而对应收入要到 2026 日历年 H2 才开始出货**。原有的三重担忧 (苹果内化、中国 OEM 自研、QTL 年金化) 并未消失, 只是被新叙事覆盖。估值的下一步取决于 6 月 24 日投资者日能否把路线图变成可验证的数字 — 这正是第 1A 章目标价推导与情景分析的核心变量。
+**解读 — "大市值半导体最便宜标的"的折价叙事已经走完一半。** 本报告更早一版 (2026 年 5 月) 的核心估值张力是: 高通以约 10–12 倍前瞻市盈率交易于大市值半导体最低档, 折价反映苹果调制解调器内化、中国 OEM 垂直整合与 QTL 年金化三重担忧。三个月后, 这一折价已被市场主动回补大半: 4 月 29 日财报电话会披露超大规模客户定制硅片合作后股价盘后大涨约 13% (*分析师观点:* [Bernstein — FQ226 recap, 2026-04-30, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf)), 6 月 1 日 Computex 发布 Dragonfly 数据中心品牌 ([The Elec, 2026-06](https://www.thelec.net/news/articleView.html?idxno=10949)), 前瞻市盈率从约 10–12 倍扩张至约 19.8 倍 — 已与博通的前瞻倍数 (~20x) 大体持平 (yfinance, 2026-06-12)。换言之, **市场已为"数据中心成功"预付了相当部分对价, 而对应收入要到 2026 日历年 H2 才开始出货**。原有的三重担忧 (苹果内化、中国 OEM 自研、QTL 年金化) 并未消失, 只是被新叙事覆盖。估值的下一步取决于 6 月 24 日投资者日能否把路线图变成可验证的数字 — 这正是第 1A 章目标价推导与情景分析的核心变量。
+
+**这门生意如何赚钱 (利润表 Sankey)。** 下图把高通 FY2025 的 442.84 亿美元营业收入逐级拆解到净利润: 两条收入来源 (QCT 设备与服务 378.69 亿、QTL 授权 64.15 亿) 汇入营收, 经 55.4% 的 gross margin (毛利率) 形成 245.46 亿美元毛利, 再扣除 90.42 亿 R&D (研发, 占营收 20.4%) 与 31.10 亿 SG&A 后留下 123.55 亿经营利润 (operating margin 27.9%); 最末端的净利润仅 55.41 亿、税费高达 71.22 亿 — 这一异常的税费率正是 2025 财年那笔 57 亿美元 OBBB 一次性递延税资产估值备抵的体现 (该备抵已于 2026 财年 Q2 释放, 见上文)。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Qualcomm 利润表 Sankey — FY2025 (US$M)</text>
+<path d="M 204.00,78.00 C 258.00,78.00 258.00,85.00 312.00,85.00 L 312.00,433.90 C 258.00,433.90 258.00,426.90 204.00,426.90 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,160.51 560.00,160.51 L 560.00,274.34 C 506.00,274.34 506.00,191.83 452.00,191.83 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,191.83 C 506.00,191.83 506.00,288.34 560.00,288.34 L 560.00,400.66 C 506.00,400.66 506.00,304.15 452.00,304.15 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,304.15 C 382.00,304.15 382.00,311.15 328.00,311.15 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,311.15 C 382.00,311.15 382.00,318.15 436.00,318.15 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,152.69 C 754.00,152.69 754.00,223.67 808.00,223.67 L 808.00,274.72 C 754.00,274.72 754.00,203.74 700.00,203.74 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,203.74 C 754.00,203.74 754.00,288.72 808.00,288.72 L 808.00,354.33 C 754.00,354.33 754.00,269.35 700.00,269.35 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,160.51 C 630.00,160.51 630.00,152.69 684.00,152.69 L 684.00,266.52 C 630.00,266.52 630.00,274.34 576.00,274.34 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,288.34 C 630.00,288.34 630.00,283.35 684.00,283.35 L 684.00,312.01 C 630.00,312.01 630.00,316.99 576.00,316.99 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,316.99 C 630.00,316.99 630.00,326.01 684.00,326.01 L 684.00,409.31 C 630.00,409.31 630.00,400.30 576.00,400.30 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,400.30 C 630.00,400.30 630.00,423.31 684.00,423.31 L 684.00,425.31 C 630.00,425.31 630.00,402.30 576.00,402.30 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,414.66 C 630.00,414.66 630.00,266.52 684.00,266.52 L 684.00,269.35 C 630.00,269.35 630.00,417.49 576.00,417.49 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,440.90 C 258.00,440.90 258.00,433.90 312.00,433.90 L 312.00,493.00 C 258.00,493.00 258.00,500.00 204.00,500.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="348.90" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="440.90" width="16" height="59.10" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="226.15" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="318.15" width="16" height="181.85" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="160.51" width="16" height="113.83" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="288.34" width="16" height="112.32" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="414.66" width="16" height="2.84" rx="1.5" fill="#2563eb"/>
+<rect x="684.00" y="152.69" width="16" height="116.67" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="283.35" width="16" height="28.65" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="326.01" width="16" height="83.31" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="423.31" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="223.67" width="16" height="51.05" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="288.72" width="16" height="65.62" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="249.45" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Equipment &amp; services (QCT)</text>
+<text x="179.00" y="262.45" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$37.9B  (85.5%)</text>
+<text x="179.00" y="467.45" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Licensing (QTL)</text>
+<text x="179.00" y="480.45" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.4B  (14.5%)</text>
+<rect x="331.00" y="67.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$44.3B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$24.5B  (55.4%)</text>
+<rect x="455.00" y="300.15" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="312.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="325.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$19.7B  (44.6%)</text>
+<rect x="579.00" y="142.51" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="154.51" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="167.51" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$12.4B  (27.9%)</text>
+<rect x="579.00" y="270.34" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="282.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="295.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$12.2B  (27.5%)</text>
+<text x="551.00" y="413.07" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="551.00" y="426.07" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$308.0M  (0.70%)</text>
+<rect x="703.00" y="134.69" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="146.69" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="159.69" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$12.7B  (28.6%)</text>
+<rect x="703.00" y="265.35" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="277.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="290.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.1B  (7.0%)</text>
+<rect x="703.00" y="308.01" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="320.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="333.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$9.0B  (20.4%)</text>
+<rect x="703.00" y="405.31" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="417.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="430.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$39.0M  (0.09%)</text>
+<text x="833.00" y="246.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="259.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.5B  (12.5%)</text>
+<text x="833.00" y="318.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="331.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$7.1B  (16.1%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: QCOM FY2025 10-K (财年止 2025-09-28), F-2/F-3/F-4 合并报表</text>
+</svg>
+
+*图: Qualcomm FY2025 利润表 Sankey。来源: [QCOM 2025 财年 10-K, F-2/F-3 合并经营报表](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)。*
+
+**收入构成 — 按板块与按地区 (两张独立 donut, 各自分母 = FY2025 合并营收 442.84 亿美元)。** 左图显示骁龙手机 (Handsets) 仍是绝对核心 (277.93 亿, 63%), 但汽车 (Auto, 39.57 亿) 与 IoT (66.17 亿) 的合计权重正稳步上升; QTL 授权 (55.82 亿) 以 13% 的收入占比贡献了不成比例的利润 (其 EBT 利润率达 72%)。右图揭示地理高度集中于亚洲: 中国含香港 203.40 亿 (46%)、韩国 95.42 亿 (21%), 二者合计已占营收三分之二 — 这是第 9 章地缘 / 关税风险的量化底座 ([QCOM 2025 财年 10-K, Note 8 Segment Information & Revenues by Geography](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。
+
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Qualcomm FY2025 营收按板块 (US$M)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 193.14,331.00 L 231.95,293.44 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 193.14,331.00 A 132 132 0 0 1 157.90,216.89 L 211.12,226.02 A 78 78 0 0 0 231.95,293.44 Z" fill="#15803d"/>
+<path d="M 157.90,216.89 A 132 132 0 0 1 189.75,151.05 L 229.94,187.11 A 78 78 0 0 0 211.12,226.02 Z" fill="#d97706"/>
+<path d="M 189.75,151.05 A 132 132 0 0 1 281.73,107.35 L 284.29,161.29 A 78 78 0 0 0 229.94,187.11 Z" fill="#7c3aed"/>
+<path d="M 281.73,107.35 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 284.29,161.29 Z" fill="#dc2626"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">QCOM</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$44.3B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="415.06" y1="293.05" x2="431.06" y2="293.05" stroke="#2563eb" stroke-width="1.4"/>
+<text x="435.06" y="291.05" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">QCT 手机 Handsets</text>
+<text x="435.06" y="305.05" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$27.8B  (62.8%)</text>
+<line x1="156.15" y1="279.93" x2="140.15" y2="279.93" stroke="#15803d" stroke-width="1.4"/>
+<text x="136.15" y="277.93" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">QCT 物联网 IoT</text>
+<text x="136.15" y="291.93" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$6.6B  (14.9%)</text>
+<line x1="163.77" y1="179.11" x2="147.77" y2="179.11" stroke="#d97706" stroke-width="1.4"/>
+<text x="143.77" y="177.11" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">QCT 汽车 Auto</text>
+<text x="143.77" y="191.11" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.0B  (8.9%)</text>
+<line x1="228.78" y1="114.55" x2="212.78" y2="114.55" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="208.78" y="112.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">QTL 授权 Licensing</text>
+<text x="208.78" y="126.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.6B  (12.6%)</text>
+<line x1="284.72" y1="101.24" x2="268.72" y2="101.24" stroke="#dc2626" stroke-width="1.4"/>
+<text x="264.72" y="99.24" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">QSI/其他 Other</text>
+<text x="264.72" y="113.24" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$335.0M  (0.8%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: QCOM FY2025 10-K (财年止 2025-09-28), F-2/F-3/F-4 合并报表, Note 8 Segment Info</text>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Qualcomm FY2025 营收按地区 (US$M)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 321.38,366.91 L 307.73,314.66 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 321.38,366.91 A 132 132 0 0 1 163.32,282.54 L 214.32,264.81 A 78 78 0 0 0 307.73,314.66 Z" fill="#15803d"/>
+<path d="M 163.32,282.54 A 132 132 0 0 1 218.84,126.77 L 247.13,172.76 A 78 78 0 0 0 214.32,264.81 Z" fill="#d97706"/>
+<path d="M 218.84,126.77 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 247.13,172.76 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">Geo</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$44.3B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="424.87" y1="221.61" x2="440.87" y2="221.61" stroke="#2563eb" stroke-width="1.4"/>
+<text x="444.87" y="219.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">中国含香港 China+HK</text>
+<text x="444.87" y="233.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$20.3B  (45.9%)</text>
+<line x1="223.02" y1="360.94" x2="207.02" y2="360.94" stroke="#15803d" stroke-width="1.4"/>
+<text x="203.02" y="358.94" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">美国 US</text>
+<text x="203.02" y="372.94" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$10.5B  (23.7%)</text>
+<line x1="158.01" y1="192.87" x2="142.01" y2="192.87" stroke="#d97706" stroke-width="1.4"/>
+<text x="138.01" y="190.87" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">韩国 South Korea</text>
+<text x="138.01" y="204.87" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$9.5B  (21.5%)</text>
+<line x1="250.43" y1="106.41" x2="234.43" y2="106.41" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="230.43" y="104.41" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">其他海外 Other foreign</text>
+<text x="230.43" y="118.41" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.9B  (8.8%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: QCOM FY2025 10-K (财年止 2025-09-28), F-2/F-3/F-4 合并报表, Note 8 — Revenues by geography</text>
+</svg>
+</div>
+
+*图: FY2025 营收按板块 (左) 与按地区 (右)。来源: [QCOM 2025 财年 10-K, Note 8 Segment Information](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)。注: 板块 donut 的 QCT 三项 (手机 / IoT / 汽车) 之和加 QTL 与 QSI 等于合并营收; 地区 donut 按客户总部所在地划分。*
+
 
 ---
 
@@ -101,29 +237,115 @@
 
 利润率路径: QTL 维持 ~72% EBT 利润率的高利润年金 ([FY2025 10-K MD&A](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)); QCT 毛利率 FY2026 受内存成本与手机折扣压制, FY2027–28 随汽车/数据中心占比上升而修复 (*分析师观点:* 混合驱动逻辑)。
 
-**前瞻估值矩阵** (现价 $202.96, 2026-06-11; 倍数 = 现价 ÷ 各年 EPS 估计, 均为分析师推算):
+**前瞻估值矩阵** (现价 $211.72, 2026-06-12; 倍数 = 现价 ÷ 各年 EPS 估计, 均为分析师推算):
 
 | 倍数 | FY2025A | FY2026E | FY2027E | FY2028E |
 |---|---|---|---|---|
-| Non-GAAP P/E | 16.9x | ~19.1x | ~19.3x | ~17.7x |
+| Non-GAAP P/E | 17.6x | ~20.0x | ~20.2x | ~18.4x |
 
 注意 FY2027E 倍数不降反平 — 苹果调制解调器流失使 EPS 在数据中心放量前出现一个"增长空窗", 这是空方按现有盈利估值给出 $135–146 目标价的算术基础。
+
+**ROE 分解 (5 步 DuPont)。** 下图把高通 FY2025 的 GAAP ROE 拆为净利率 × 资产周转 × 权益乘数。注意此处的 ROE 被 OBBB 一次性税费严重压低 (净利润 55.41 亿 / 净利率仅 12.5%), 因此图中 ROE 不代表常态盈利能力 — 剔除该笔税费后, 基于约 110 亿美元常态化净利润计算的 ROE 会显著更高。该图的价值在于呈现高通的结构: 高净利率 (税前层面) × 中等资产周转 (≈0.84x) × 偏高的权益乘数 (≈2.4x, 反映回购吃掉权益与适度举债), 共同构成其资本效率画像 ([QCOM 2025 财年 10-K, F-2/F-3 合并报表](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 540" width="1240" height="540" role="img" aria-label="DuPont ROE decomposition"><rect x="0" y="0" width="1240" height="540" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Qualcomm 5 步 DuPont ROE 分解 — FY2025</text>
+<rect x="545.00" y="56.00" width="150" height="56" rx="7" fill="#1e3a8a"/>
+<text x="620.00" y="76.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">ROE</text>
+<text x="620.00" y="94.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">23.34%</text>
+<text x="620.00" y="106.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">= Net Income / Avg Equity</text>
+<rect x="191.60" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="266.60" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Net Margin</text>
+<text x="266.60" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">12.51%</text>
+<text x="266.60" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Net Income / Revenue</text>
+<line x1="620.00" y1="112.00" x2="266.60" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="545.00" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="620.00" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Asset Turnover</text>
+<text x="620.00" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">0.84</text>
+<text x="620.00" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Revenue / Avg Assets</text>
+<line x1="620.00" y1="112.00" x2="620.00" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="898.40" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="973.40" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Equity Multiplier</text>
+<text x="973.40" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">2.22</text>
+<text x="973.40" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Avg Assets / Avg Equity</text>
+<line x1="620.00" y1="112.00" x2="973.40" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="443.30" cy="196.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="443.30" y="201.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<circle cx="796.70" cy="196.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="796.70" y="201.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<rect x="65.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="124.00" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Operating Margin</text>
+<text x="124.00" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">27.90%</text>
+<text x="124.00" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Op Inc / Revenue</text>
+<line x1="266.60" y1="224.00" x2="124.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="207.60" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="266.60" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Tax Burden</text>
+<text x="266.60" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">0.4376</text>
+<text x="266.60" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Net Inc / Pretax</text>
+<line x1="266.60" y1="224.00" x2="266.60" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="350.20" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="409.20" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Interest Burden</text>
+<text x="409.20" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">1.0249</text>
+<text x="409.20" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Pretax / Op Inc</text>
+<line x1="266.60" y1="224.00" x2="409.20" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="195.30" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="195.30" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<circle cx="337.90" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="337.90" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<rect x="479.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="538.00" y="326.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Revenue</text>
+<text x="538.00" y="342.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">$44.3B</text>
+<line x1="620.00" y1="224.00" x2="538.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="643.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="702.00" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Assets</text>
+<text x="702.00" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">$52.6B</text>
+<text x="702.00" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="620.00" y1="224.00" x2="702.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="620.00" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="620.00" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">÷</text>
+<rect x="832.40" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="891.40" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Assets</text>
+<text x="891.40" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">$52.6B</text>
+<text x="891.40" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="973.40" y1="224.00" x2="891.40" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="996.40" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="1055.40" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Equity</text>
+<text x="1055.40" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">$23.7B</text>
+<text x="1055.40" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="973.40" y1="224.00" x2="1055.40" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="967.20" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="967.20" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">÷</text>
+<rect x="69.00" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="124.00" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Operating Income</text>
+<text x="124.00" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">$12.4B</text>
+<line x1="124.00" y1="356.00" x2="124.00" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="211.60" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="266.60" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Net Income</text>
+<text x="266.60" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">$5.5B</text>
+<line x1="266.60" y1="356.00" x2="266.60" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="354.20" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="409.20" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Pretax Income</text>
+<text x="409.20" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">$12.7B</text>
+<line x1="409.20" y1="356.00" x2="409.20" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<text x="620.00" y="524.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: QCOM FY2025 10-K, F-2/F-3 合并报表 (含 OBBB 一次性税费)</text>
+</svg>
+
+*图: Qualcomm FY2025 5 步 DuPont ROE 分解 (含 OBBB 一次性税费, 故 ROE 偏低)。来源: [QCOM 2025 财年 10-K, F-2/F-3 合并报表](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)。*
 
 ### 目标价推导: 基准 $190
 
 **方法: 前瞻 P/E × 目标倍数。** 基准目标价 = **18x × FY2027E EPS ~$10.5 ≈ $190** (-6% vs 现价)。目标倍数 18x 的取法:
 
 - **高于高通自身三年历史区间 (10x–16x) 的上端** — 给予数据中心期权、汽车 450 亿美元+订单管线 (pipeline) 与 IoT 复合增长以溢价;
-- **低于纯 AI 数据中心标的** — 博通前瞻 ~19.9x、联发科 ~34x、AMD ~37x (yfinance, 2026-06-11), 因为高通的数据中心收入尚未出现在利润表上;
+- **低于纯 AI 数据中心标的** — 博通前瞻 ~19.9x、联发科 ~34x、AMD ~37x (yfinance, 2026-06-12), 因为高通的数据中心收入尚未出现在利润表上;
 - **介于卖方两端之间** — 空方按现有盈利给 12–15x (*分析师观点:* GS 12x × 常态化 EPS $11 ([First Take, 2026-04-29](http://xs-macbook-air.local:5001/zsxq/pdf/212212284452121/GS-Qualcomm%20Inc.%20%28QCOM%29_%20First%20Take_%20In-line%20quarter%20with%20weak%20guidance%2C%20driven%20by%20smartphone%20downside-260429.pdf)); Bernstein 14x × F27E $9.77 ([FQ226 recap](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf))), 多头为路线图给 23x (*分析师观点:* [J.P. Morgan, 2026-06-05](http://xs-macbook-air.local:5001/zsxq/pdf/814528851485152/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89Expect%20Strong%20Data%20Center%20Market%20Revenue%20Targets%20and%20Customer%20Pipeline%20at%20Investor%20Day%EF%BC%9B%20Place%20on%20Positive%20Catalyst%20Watch-260605.pdf))。
 
 ### 情景分析 (牛市 / 基准 / 熊市)
 
 | 情景 | 12 个月目标价 | 空间 | 摇摆假设 |
 |---|---|---|---|
-| **牛市** | **$265** | **+31%** | 6/24 投资者日给出量化且具名的数据中心路线图 (FY2027 收入 >$30 亿、FY2031 ~$350 亿) 并兑现首批出货; 手机 F4Q26 如期环比回升。算术: 23x × FY2027E EPS $11.5 (*分析师观点:* 框架引自 [J.P. Morgan, 2026-06-05](http://xs-macbook-air.local:5001/zsxq/pdf/814528851485152/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89Expect%20Strong%20Data%20Center%20Market%20Revenue%20Targets%20and%20Customer%20Pipeline%20at%20Investor%20Day%EF%BC%9B%20Place%20on%20Positive%20Catalyst%20Watch-260605.pdf)) |
-| **基准** | **$190** | **-6%** | 投资者日给出方向性 (但非合同性) 目标; 手机触底如期但内存逆风延续到 FY2027; 数据中心 FY2027 贡献数十亿美元。算术: 18x × $10.5 |
-| **熊市** | **$140** | **-31%** | 内存涨价压制延续整个 FY2027, 数据中心披露缺乏具名客户与收入时间表, 苹果/三星份额流失加速。算术: 14x × $10.0 (*分析师观点:* 倍数框架引自 [Bernstein FQ226 recap, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf)) |
+| **牛市** | **$265** | **+25%** | 6/24 投资者日给出量化且具名的数据中心路线图 (FY2027 收入 >$30 亿、FY2031 ~$350 亿) 并兑现首批出货; 手机 F4Q26 如期环比回升。算术: 23x × FY2027E EPS $11.5 (*分析师观点:* 框架引自 [J.P. Morgan, 2026-06-05](http://xs-macbook-air.local:5001/zsxq/pdf/814528851485152/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89Expect%20Strong%20Data%20Center%20Market%20Revenue%20Targets%20and%20Customer%20Pipeline%20at%20Investor%20Day%EF%BC%9B%20Place%20on%20Positive%20Catalyst%20Watch-260605.pdf)) |
+| **基准** | **$190** | **-10%** | 投资者日给出方向性 (但非合同性) 目标; 手机触底如期但内存逆风延续到 FY2027; 数据中心 FY2027 贡献数十亿美元。算术: 18x × $10.5 |
+| **熊市** | **$140** | **-34%** | 内存涨价压制延续整个 FY2027, 数据中心披露缺乏具名客户与收入时间表, 苹果/三星份额流失加速。算术: 14x × $10.0 (*分析师观点:* 倍数框架引自 [Bernstein FQ226 recap, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf)) |
 
 ### 与卖方一致预期的对比
 
@@ -157,7 +379,7 @@
 - 2025-10-27 (AI200/AI250 发布日首读): **Neutral, PT $175** = ~16x C2022–2026E 平均 EPS $11.04。测算 HUMAIN 200 MW 全部部署仅对应 ~$20 亿收入 (~占其 C2026 收入预测 4%), 而当日市值增量约为隐含收入的 10 倍 — "股价对这则新闻本身的反应过度" (*分析师观点:* [UBS — Thoughts On New Inferencing AI Accelerators Roadmap, 2025-10-27, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585118115411414/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Thoughts%20On%20New%20Inferencing%20AI%20Accelerators%20Roadmap-251027.pdf))
 - 2025-11-06: Neutral, 报告标题即立场: "Data Center The New Angle, But Still Seems Far Out" (*分析师观点:* [UBS, 2025-11-06](http://xs-macbook-air.local:5001/zsxq/pdf/415854182115858/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Data%20Center%20The%20New%20Angle%EF%BC%8CBut%20Still%20Seems%20Far%20Out-251106.pdf)); 2026-02-05 回调后维持 Neutral ("Pullback Creates More Upside to Our PT, But We Remain Neutral", *分析师观点:* [UBS, 2026-02-05](http://xs-macbook-air.local:5001/zsxq/pdf/184428588114842/UBS-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Pullback%20Creates%20More%20Upside%20to%20Our%20PT%EF%BC%8C%20But%20We%20Remain%20Neutral-260205.pdf))
 
-**机构间分歧 (截至 2026-06-11 在档观点):**
+**机构间分歧 (截至 2026-06-14 在档观点; 各机构最新一篇在库报告):**
 
 | 机构 | 日期 | 评级 / 目标价 | 核心论点 | 什么证据能证明其正确 |
 |---|---|---|---|---|
@@ -172,6 +394,62 @@
 
 1. **6 月 24 日投资者日的数据中心披露质量** — 是否具名客户、是否给出 FY2027/FY2031 量化收入目标、Dragonfly 三条产品线 (CPU / 推理加速器 / 定制 ASIC) 的出货时间表 ([Qualcomm Investor Day 2026 活动页](https://www.qualcomm.com/company/events/investor-day))。
 2. **内存涨价向手机 BOM 的传导深度与时长** — F4Q26 手机收入是否兑现管理层"环比回升"口径 ([F2Q26 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)); 若内存逆风延续整个 FY2027, 熊市情景的 $10.0 EPS 与 14x 倍数同时成立。
+
+---
+
+## 1B. GF Score 基本面记分卡 (GuruFocus 式)
+
+*分析师观点:* 本节为模仿 GuruFocus GF Score™ 的五维基本面评分, **是本报告自有的评分工具 (一种打分规则), 不是 GuruFocus 官方数字, 也不应附着于任何 SEC 文件**。五个维度各按 0–10 评分, 加权合成 0–100 综合分; 每个维度的评分依据所引用的指标均在下文标注其行内引用 (复用第 1–2 章已引用的数据)。综合分 71/100 落在 "71–80 Likely average performance (大概率中等表现)" 区间 — 与本报告 Hold 评级、以及"高质量但当前处于盈利增长空窗"的判断一致。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" role="img" aria-label="GF Score radar">
+<rect x="0" y="0" width="500" height="500" fill="#ffffff"/>
+<text x="20" y="24" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">GF Score (GuruFocus-style): 71/100</text>
+<text x="20" y="41" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#52606d">71–80 Likely average performance</text>
+<polygon points="250.0,88.0 392.7,191.6 338.2,359.4 161.8,359.4 107.3,191.6" fill="#e9f5ec" stroke="none"/>
+<polygon points="250.0,208.0 278.5,228.7 267.6,262.3 232.4,262.3 221.5,228.7" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,178.0 307.1,219.5 285.3,286.5 214.7,286.5 192.9,219.5" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,148.0 335.6,210.2 302.9,310.8 197.1,310.8 164.4,210.2" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,118.0 364.1,200.9 320.5,335.1 179.5,335.1 135.9,200.9" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,88.0 392.7,191.6 338.2,359.4 161.8,359.4 107.3,191.6" fill="none" stroke="#c5d3cb" stroke-width="1.3"/>
+<line x1="250" y1="238" x2="161.8" y2="359.4" stroke="#cfdad3" stroke-width="1"/>
+<text x="146.5" y="392.4" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">财务实力</text>
+<text x="188.3" y="316.9" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">7</text>
+<line x1="250" y1="238" x2="250.0" y2="88.0" stroke="#cfdad3" stroke-width="1"/>
+<text x="250.0" y="58.0" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">盈利能力</text>
+<text x="250.0" y="97.0" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">9</text>
+<line x1="250" y1="238" x2="107.3" y2="191.6" stroke="#cfdad3" stroke-width="1"/>
+<text x="82.6" y="183.6" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">成长性</text>
+<text x="164.4" y="204.2" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">6</text>
+<line x1="250" y1="238" x2="392.7" y2="191.6" stroke="#cfdad3" stroke-width="1"/>
+<text x="417.4" y="183.6" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">估值</text>
+<text x="321.3" y="208.8" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">5</text>
+<line x1="250" y1="238" x2="338.2" y2="359.4" stroke="#cfdad3" stroke-width="1"/>
+<text x="353.5" y="392.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">动量</text>
+<text x="320.5" y="329.1" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">8</text>
+<polygon points="250.0,103.0 321.3,214.8 320.5,335.1 188.3,322.9 164.4,210.2" fill="#2e8b57" fill-opacity="0.34" stroke="#2e8b57" stroke-width="2"/>
+<circle cx="188.3" cy="322.9" r="2.6" fill="#2e8b57"/>
+<circle cx="250.0" cy="103.0" r="2.6" fill="#2e8b57"/>
+<circle cx="164.4" cy="210.2" r="2.6" fill="#2e8b57"/>
+<circle cx="321.3" cy="214.8" r="2.6" fill="#2e8b57"/>
+<circle cx="320.5" cy="335.1" r="2.6" fill="#2e8b57"/>
+<text x="250" y="470" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">Source: QCOM FY2025 10-K · Yahoo Finance · 本地 zsxq 研报库, as of 2026-06-12</text>
+<text x="250" y="485" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#52606d">GF Score = independent analyst rubric (*Analyst view:*) — not GuruFocus™ official number</text>
+</svg>
+
+*图: Qualcomm GF Score 五维雷达 (财务实力 / 盈利能力 / 成长性 / 估值 / 动量)。评分为本报告自有规则输出 (*分析师观点:*), 非 GuruFocus 官方数字。*
+
+| 维度 | 评分 (0–10) | 评分理由 (driving metrics + 行内引用) |
+|---|---|---|
+| **财务实力 Financial Strength** | **7** | 长期债务 148.11 亿美元 vs 现金及有价证券约 124.78 亿 (含受限现金), 净债务接近中性; 利息保障倍数极高 (经营利润 123.55 亿 ÷ 利息费用 6.64 亿 ≈ 18.6x); 投资级评级、债务到期分散至 2053 年。扣 1 分因周期性现金流 + 进取的资本回报留存缓冲有限 ([QCOM 2025 财年 10-K, F-3/F-4 合并资产负债表与利息费用](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。 |
+| **盈利能力 Profitability** | **9** | gross margin (毛利率) 55%、operating margin (经营利润率) ~28%, QTL 板块 EBT 利润率高达 72%; ROIC 显著高于 WACC, 多年保持稳定。GAAP 净利率 (12.5%) 被 OBBB 一次性税费压低, 基础盈利能力远高于此 ([QCOM 2025 财年 10-K, MD&A & Note 8](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。 |
+| **成长性 Growth** | **6** | FY2025 营收同比 +14%、5 年 CAGR 约 12% ([QCOM 2025 财年 10-K, Five-Year Selected Data](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)); 但前瞻 FY2026E 营收因苹果调制解调器流失 + 内存逆风预计同比约 -4.5% (第 1A 章前瞻模型), 近端处于增长空窗 — 故仅给中性偏上的 6 分。 |
+| **估值 GF Value (越高越便宜)** | **5** | 前瞻 P/E ~19.8x 处于自身三年区间 (10x–20x) 上端; 现价 $211.72 较本报告基准 PT $190 有约 -10% 下行, margin of safety (安全边际) 为负; PEG 因近端零增长而偏高 (yfinance, 2026-06-12; 第 1A 章目标价推导)。重估后估值由"便宜"转为"合理偏贵", 给 5 分。 |
+| **动量 Momentum** | **8** | 自 3 月 26 日 $130.06 低点至 6 月 12 日 $211.72 累计 +63%, 大幅跑赢 SOX 与标普 500; 现价位于 52 周区间约 74% 分位、显著高于 200 日均线 (yfinance, 2026-06-12; 见投资摘要相对表现行)。绝对与相对动量均强, 给 8 分。 |
+| **GF Score (综合, *分析师观点:*)** | **71 / 100** | **71–80 Likely average performance** |
+
+*综合权重 (*分析师观点:*): 财务实力 20% · 盈利能力 25% · 成长性 25% · 估值 15% · 动量 15% (透明复现, 非 GuruFocus 专有权重)。*
+
+**一句话解读:** 一家盈利质量近乎顶级 (9/10)、动量强劲 (8/10) 的公司, 被近端成长空窗 (6/10) 与重估后偏贵的估值 (5/10) 拉低到 71 分 — 恰好捕捉了本报告的核心张力: 生意本身优秀, 但当前价格已为尚未落地的数据中心成长预付对价, 因此评级 Hold 而非 Buy。该 71 分与 GuruFocus 官网若有的公开数字未作交叉核对 (本次未单独拉取 [gurufocus.com/term/gf-score/QCOM](https://www.gurufocus.com/term/gf-score/QCOM)), 故仅以本报告自有规则呈现。
 
 ---
 
@@ -632,8 +910,198 @@ PC: 设计导入到出货 12–18 个月, 传统上与微软 Surface 及联想�
 ![QCT 营业收入结构 — 手机 / 汽车 / IoT, 2023–2025 财年](charts/qcom_qct_mix.png)
 *来源: [QCOM 2025 财年 10-K Note 8 Segment Information](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)。*
 
+**营收构成的三年演变 (堆叠柱)。** 下图以 FY2023→FY2025 的堆叠柱呈现四条收入线的此消彼长: 手机 (Handsets) 从 225.70 亿增至 277.93 亿 (高端 ASP 拉动), 汽车 (Auto) 从 18.72 亿翻倍至 39.57 亿 (最陡增长线), IoT 在 FY2024 触底 (54.23 亿) 后回升至 66.17 亿, QTL 授权则基本横盘于 53–56 亿 (华为流失被传音等新约回填)。趋势清晰: **增长的边际贡献正从手机向汽车 + IoT 迁移** ([QCOM 2023–2025 财年 10-K, Note 8 Segment Information](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Qualcomm 营收构成 FY2023–FY2025 (US$M)</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">QCT 手机 Handsets</text>
+<rect x="149.00" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="165.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">QCT IoT</text>
+<rect x="225.20" y="44" width="11" height="11" rx="2" fill="#d97706"/>
+<text x="241.20" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">QCT 汽车 Auto</text>
+<rect x="327.80" y="44" width="11" height="11" rx="2" fill="#7c3aed"/>
+<text x="343.80" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">QTL 授权</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$9.5B</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$19.0B</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$28.5B</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$38.0B</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$47.5B</text>
+<rect x="123.48" y="253.18" width="147.71" height="158.82" fill="#2563eb"/>
+<rect x="123.48" y="211.38" width="147.71" height="41.80" fill="#15803d"/>
+<rect x="123.48" y="198.21" width="147.71" height="13.17" fill="#d97706"/>
+<rect x="123.48" y="160.87" width="147.71" height="37.34" fill="#7c3aed"/>
+<text x="197.33" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY2023</text>
+<rect x="378.15" y="237.04" width="147.71" height="174.96" fill="#2563eb"/>
+<rect x="378.15" y="198.88" width="147.71" height="38.16" fill="#15803d"/>
+<rect x="378.15" y="178.41" width="147.71" height="20.48" fill="#d97706"/>
+<rect x="378.15" y="139.20" width="147.71" height="39.21" fill="#7c3aed"/>
+<text x="452.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY2024</text>
+<rect x="632.81" y="216.43" width="147.71" height="195.57" fill="#2563eb"/>
+<rect x="632.81" y="169.86" width="147.71" height="46.56" fill="#15803d"/>
+<rect x="632.81" y="142.02" width="147.71" height="27.84" fill="#d97706"/>
+<rect x="632.81" y="102.74" width="147.71" height="39.28" fill="#7c3aed"/>
+<text x="706.67" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY2025</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: QCOM FY2023–FY2025 10-K, Note 8 Segment Info (财年止 9 月)</text>
+</svg>
+
+*图: Qualcomm 营收构成 FY2023–FY2025 (按板块堆叠)。来源: [QCOM 2023–2025 财年 10-K, Note 8 Segment Information](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)。*
+
 ![Qualcomm — 自由现金流与资本回报, 2023–2025 财年](charts/qcom_fcf_returns.png)
 *来源: [QCOM 2025 财年 10-K Cash Flow Statement](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)。注: 2025 财年回购包含加速回购; 2026-04-29 宣布的 200 亿美元新授权将支撑回购节奏继续偏高。*
+
+**资本如何流动 (现金流 Sankey)。** FY2025 高通经营现金流 (OCF) 140.12 亿美元, 扣除 11.92 亿 CapEx (资本开支) 后自由现金流 (FCF) 约 128 亿; 融资端把绝大部分现金返还股东 — 回购 87.91 亿 + 分红 38.05 亿合计约 126 亿, 几乎等于全部 FCF。换言之, **高通把自由现金流近乎全额用于资本回报, 留给逆周期投入或 M&A 的内生缓冲很薄** (这也是第 9 章财务风险 #12 的依据) ([QCOM 2025 财年 10-K, F-4 合并现金流量表](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Qualcomm 现金流 Sankey — FY2025 (US$M)</text>
+<path d="M 534.00,78.00 C 608.50,78.00 608.50,92.00 683.00,92.00 L 683.00,365.28 C 608.50,365.28 608.50,351.28 534.00,351.28 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 699.00,92.00 C 773.50,92.00 773.50,64.00 848.00,64.00 L 848.00,110.50 C 773.50,110.50 773.50,138.50 699.00,138.50 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,138.50 C 773.50,138.50 773.50,124.50 848.00,124.50 L 848.00,295.95 C 773.50,295.95 773.50,309.95 699.00,309.95 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,309.95 C 773.50,309.95 773.50,309.95 848.00,309.95 L 848.00,384.15 C 773.50,384.15 773.50,384.15 699.00,384.15 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,384.15 C 773.50,384.15 773.50,398.15 848.00,398.15 L 848.00,409.86 C 773.50,409.86 773.50,395.86 699.00,395.86 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,395.86 C 773.50,395.86 773.50,423.86 848.00,423.86 L 848.00,554.00 C 773.50,554.00 773.50,526.00 699.00,526.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,165.36 C 278.50,165.36 278.50,172.36 353.00,172.36 L 353.00,280.43 C 278.50,280.43 278.50,273.43 204.00,273.43 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 369.00,172.36 C 443.50,172.36 443.50,78.00 518.00,78.00 L 518.00,351.28 C 443.50,351.28 443.50,445.64 369.00,445.64 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,287.43 C 278.50,287.43 278.50,280.43 353.00,280.43 L 353.00,445.64 C 278.50,445.64 278.50,452.64 204.00,452.64 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,365.28 C 608.50,365.28 608.50,365.28 683.00,365.28 L 683.00,518.35 C 608.50,518.35 608.50,518.35 534.00,518.35 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,532.35 C 608.50,532.35 608.50,518.35 683.00,518.35 L 683.00,526.00 C 608.50,526.00 608.50,540.00 534.00,540.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="165.36" width="16" height="108.07" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="287.43" width="16" height="165.21" rx="1.5" fill="#2563eb"/>
+<rect x="353.00" y="172.36" width="16" height="273.28" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="78.00" width="16" height="273.28" rx="1.5" fill="#1e3a8a"/>
+<rect x="518.00" y="365.28" width="16" height="153.08" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="532.35" width="16" height="7.65" rx="1.5" fill="#2563eb"/>
+<rect x="683.00" y="92.00" width="16" height="434.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="46.50" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="124.50" width="16" height="171.45" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="309.95" width="16" height="74.21" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="398.15" width="16" height="11.70" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="423.86" width="16" height="130.14" rx="1.5" fill="#1e3a8a"/>
+<text x="179.00" y="216.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net income 净利润</text>
+<text x="179.00" y="229.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.5B  (39.5%)</text>
+<text x="179.00" y="367.03" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">D&amp;A 折旧摊销+SBC等非现金</text>
+<text x="179.00" y="380.03" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.5B  (60.5%)</text>
+<rect x="372.00" y="154.36" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="375.00" y="166.36" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Inflow</text>
+<text x="375.00" y="179.36" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$14.0B  (100.0%)</text>
+<rect x="537.00" y="60.00" width="163.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cash Flow from Operations</text>
+<text x="540.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$14.0B  (100.0%)</text>
+<rect x="537.00" y="347.28" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="359.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="540.00" y="372.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$7.8B  (56.0%)</text>
+<rect x="537.00" y="514.35" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="526.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">证券净买卖 Net securities</text>
+<text x="540.00" y="539.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$392.0M  (2.8%)</text>
+<rect x="702.00" y="74.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="705.00" y="86.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cash Available</text>
+<text x="705.00" y="99.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$22.3B  (158.8%)</text>
+<rect x="867.00" y="46.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他投资 Other</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.4B  (17.0%)</text>
+<rect x="867.00" y="106.50" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="118.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股票回购 Buybacks</text>
+<text x="870.00" y="131.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.8B  (62.7%)</text>
+<rect x="867.00" y="291.95" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="303.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">分红 Dividends</text>
+<text x="870.00" y="316.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.8B  (27.2%)</text>
+<rect x="867.00" y="380.15" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="392.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他融资 Other financing</text>
+<text x="870.00" y="405.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$600.0M  (4.3%)</text>
+<text x="873.00" y="485.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="498.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.7B  (47.6%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = US$12.8B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: QCOM FY2025 10-K (财年止 2025-09-28), F-2/F-3/F-4 合并报表</text>
+</svg>
+
+*图: Qualcomm FY2025 现金流 Sankey (经营 → CapEx/FCF → 回购/分红)。来源: [QCOM 2025 财年 10-K, F-4 合并现金流量表](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)。*
+
+**资产负债结构 (资产负债表 Sankee)。** FY2025 末总资产 501.43 亿美元: 资产侧以流动资产 257.54 亿 (现金 + 有价证券 + 应收) 与商誉 113.58 亿 (历次并购累积) 为主; 负债 + 权益侧, 长期债务 148.11 亿, 股东权益 212.06 亿 — 权益较 FY2024 的 262.74 亿明显下降, 正是大额回购吃掉留存收益所致 ([QCOM 2025 财年 10-K, F-3 合并资产负债表](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Qualcomm 资产负债表 Sankey — FY2025 (US$M)</text>
+<path d="M 204.00,64.00 C 262.00,64.00 262.00,78.00 320.00,78.00 L 320.00,308.10 C 262.00,308.10 262.00,294.10 204.00,294.10 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,71.00 C 790.00,71.00 790.00,64.00 848.00,64.00 L 848.00,145.70 C 790.00,145.70 790.00,152.70 732.00,152.70 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,78.00 C 658.00,78.00 658.00,71.00 716.00,71.00 L 716.00,152.70 C 658.00,152.70 658.00,159.70 600.00,159.70 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 336.00,78.00 C 394.00,78.00 394.00,85.00 452.00,85.00 L 452.00,315.10 C 394.00,315.10 394.00,308.10 336.00,308.10 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 600.00,159.70 C 658.00,159.70 658.00,166.70 716.00,166.70 L 716.00,343.54 C 658.00,343.54 658.00,336.54 600.00,336.54 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,85.00 C 526.00,85.00 526.00,78.00 584.00,78.00 L 584.00,336.54 C 526.00,336.54 526.00,343.54 468.00,343.54 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,343.54 C 526.00,343.54 526.00,350.54 584.00,350.54 L 584.00,540.00 C 526.00,540.00 526.00,533.00 468.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,166.70 C 790.00,166.70 790.00,159.70 848.00,159.70 L 848.00,292.02 C 790.00,292.02 790.00,299.02 732.00,299.02 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,299.02 C 790.00,299.02 790.00,306.02 848.00,306.02 L 848.00,350.54 C 790.00,350.54 790.00,343.54 732.00,343.54 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,308.10 C 262.00,308.10 262.00,322.10 320.00,322.10 L 320.00,364.00 C 262.00,364.00 262.00,350.00 204.00,350.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 336.00,322.10 C 394.00,322.10 394.00,315.10 452.00,315.10 L 452.00,533.00 C 394.00,533.00 394.00,540.00 336.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 600.00,350.54 C 658.00,350.54 658.00,357.54 716.00,357.54 L 716.00,547.00 C 658.00,547.00 658.00,540.00 600.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,357.54 C 790.00,357.54 790.00,364.54 848.00,364.54 L 848.00,554.00 C 790.00,554.00 790.00,547.00 732.00,547.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,364.00 C 262.00,364.00 262.00,364.00 320.00,364.00 L 320.00,465.48 C 262.00,465.48 262.00,465.48 204.00,465.48 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,479.48 C 262.00,479.48 262.00,465.48 320.00,465.48 L 320.00,540.00 C 262.00,540.00 262.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="230.10" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="308.10" width="16" height="41.90" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="364.00" width="16" height="101.48" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="479.48" width="16" height="74.52" rx="1.5" fill="#2563eb"/>
+<rect x="320.00" y="78.00" width="16" height="230.10" rx="1.5" fill="#15803d"/>
+<rect x="320.00" y="322.10" width="16" height="217.90" rx="1.5" fill="#15803d"/>
+<rect x="452.00" y="85.00" width="16" height="448.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="584.00" y="78.00" width="16" height="258.54" rx="1.5" fill="#dc2626"/>
+<rect x="584.00" y="350.54" width="16" height="189.46" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="71.00" width="16" height="81.70" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="166.70" width="16" height="176.84" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="357.54" width="16" height="189.46" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="64.00" width="16" height="81.70" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="159.70" width="16" height="132.33" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="306.02" width="16" height="44.51" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="364.54" width="16" height="189.46" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="176.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">流动资产 Current assets</text>
+<text x="179.00" y="189.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$25.8B  (51.4%)</text>
+<text x="179.00" y="326.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">PP&amp;E 固定资产</text>
+<text x="179.00" y="339.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.7B  (9.4%)</text>
+<text x="179.00" y="411.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Goodwill 商誉</text>
+<text x="179.00" y="424.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$11.4B  (22.7%)</text>
+<text x="179.00" y="513.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">无形/递延/其他 Other LT</text>
+<text x="179.00" y="526.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.3B  (16.6%)</text>
+<rect x="339.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
+<text x="342.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$25.8B  (51.4%)</text>
+<rect x="339.00" y="304.10" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="316.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
+<text x="342.00" y="329.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$24.4B  (48.6%)</text>
+<rect x="471.00" y="67.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="474.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
+<text x="474.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$50.1B  (100.0%)</text>
+<rect x="603.00" y="60.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
+<text x="606.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$28.9B  (57.7%)</text>
+<rect x="603.00" y="332.54" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="344.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
+<text x="606.00" y="357.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$21.2B  (42.3%)</text>
+<rect x="735.00" y="53.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
+<text x="738.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$9.1B  (18.2%)</text>
+<rect x="735.00" y="148.70" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="160.70" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
+<text x="738.00" y="173.70" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$19.8B  (39.5%)</text>
+<rect x="735.00" y="339.54" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="351.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
+<text x="738.00" y="364.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$21.2B  (42.3%)</text>
+<text x="873.00" y="101.85" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">流动负债 Current liab</text>
+<text x="873.00" y="114.85" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$9.1B  (18.2%)</text>
+<text x="873.00" y="222.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">长期债务 LT debt</text>
+<text x="873.00" y="235.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$14.8B  (29.5%)</text>
+<text x="873.00" y="325.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他长期负债 Other LT liab</text>
+<text x="873.00" y="338.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.0B  (9.9%)</text>
+<text x="873.00" y="456.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股东权益 Equity</text>
+<text x="873.00" y="469.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$21.2B  (42.3%)</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: QCOM FY2025 10-K (财年止 2025-09-28), F-2/F-3/F-4 合并报表</text>
+</svg>
+
+*图: Qualcomm FY2025 资产负债表 Sankey (资产 vs 负债 + 权益)。来源: [QCOM 2025 财年 10-K, F-3 合并资产负债表](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm)。*
 
 ---
 
@@ -677,7 +1145,7 @@ PC: 设计导入到出货 12–18 个月, 传统上与微软 Surface 及联想�
 
 **16. 内存成本通胀 (新增, 2026-06)。** 这是当前周期里最直接的盈利压制项: 高通 F3Q26 指引明确把"内存供应紧张及相关定价对部分手机 OEM 需求的影响"写入展望 ([F2Q26 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm))。传导路径有二 — OEM 整机 BOM 中内存涨价挤占 SoC 预算 (压量), 与高端机型配置降级 (压 ASP/组合)。*分析师观点:* Morgan Stanley 在 2 月恢复覆盖时即以此为 UW 的首要论据 ("memory shortage is likely to create a tough Android environment 2h", [MS — Resume coverage at UW, 2026-02-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184452551514412/Morgan%20Stanley-Qualcomm%20Inc.%EF%BC%88QCOM.US%EF%BC%89Memory%20headwinds%20will%20create%20handset%20shortfall%EF%BC%9B%20Resume%20coverage%20at%20UW-260210.pdf)); J.P. Morgan 在 6 月的上调报告中也把"存储涨价压制手机产业链景气"列为首位下行风险 ([J.P. Morgan, 2026-06-05](http://xs-macbook-air.local:5001/zsxq/pdf/814528851485152/J.P.%20Morgan-Qualcomm%EF%BC%88QCOM.US%EF%BC%89Expect%20Strong%20Data%20Center%20Market%20Revenue%20Targets%20and%20Customer%20Pipeline%20at%20Investor%20Day%EF%BC%9B%20Place%20on%20Positive%20Catalyst%20Watch-260605.pdf))。**缓释:** 管理层口径为 F3Q26 触底; under-shipping (出货低于实际需求) 形成的渠道低库存会放大后续回补弹性。
 
-**15. 估值 / 期望落空风险 (方向已反转)。** 本报告前一版将此项列为"倍数压缩风险" — 当时 QCOM 以约 10–12 倍前瞻 P/E 交易于大市值半导体最低档。三个月后风险方向反转: 股价自 3 月 26 日 $130.06 一度涨至 6 月 2 日 $239.95, 前瞻 P/E 扩张至约 19 倍 (三年区间上端; yfinance, 2026-06-11), **市场已为尚未产生收入的数据中心业务预付了相当对价**。若 6 月 24 日投资者日的披露缺乏具名客户与量化收入时间表、或内存逆风超出 F3Q26 触底口径, 倍数回落至 14–15 倍 (空方对现有盈利的估值; *分析师观点:* [Bernstein FQ226 recap, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf)) 意味着 25–30% 下行 — 即本报告熊市情景 $140。**缓释:** 200 亿美元回购授权提供买盘支撑; FCF 生成具有持久性; QTL 通过 2027–2031 财年合同条款保持黏性年金 ([QCOM 2025 财年 10-K, Note 2 Concentrations](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。
+**15. 估值 / 期望落空风险 (方向已反转)。** 本报告更早一版将此项列为"倍数压缩风险" — 当时 QCOM 以约 10–12 倍前瞻 P/E 交易于大市值半导体最低档。三个月后风险方向反转: 股价自 3 月 26 日 $130.06 一度涨至 6 月 2 日 $239.95、回落后于 6 月 12 日报 $211.72, 前瞻 P/E 扩张至约 19.8 倍 (三年区间上端; yfinance, 2026-06-12), **市场已为尚未产生收入的数据中心业务预付了相当对价**。若 6 月 24 日投资者日的披露缺乏具名客户与量化收入时间表、或内存逆风超出 F3Q26 触底口径, 倍数回落至 14–15 倍 (空方对现有盈利的估值; *分析师观点:* [Bernstein FQ226 recap, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/184484414482182/Bernstein-Qualcomm%20Inc%EF%BC%88QCOM.US%EF%BC%89%EF%BC%9AFQ226%20recap~We%20hope%20they%20put%20on%20a%20good%20show%20in%20June...-260430.pdf)) 意味着约 30%+ 下行 — 即本报告熊市情景 $140。**缓释:** 200 亿美元回购授权提供买盘支撑; FCF 生成具有持久性; QTL 通过 2027–2031 财年合同条款保持黏性年金 ([QCOM 2025 财年 10-K, Note 2 Concentrations](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm))。
 
 ---
 
@@ -703,6 +1171,45 @@ JPM 的 23x 框架把数据中心当作"打开长期成长天花板"的事件 (*
 | 2026 H2 | 数据中心定制硅片首批出货 (公司口径, [F2Q26 业绩公告](https://www.sec.gov/Archives/edgar/data/0000804328/000080432826000060/qcom032926erex991.htm)) | 是否如期、客户是否披露 |
 | 2026-09/10 | 骁龙峰会 (Snapdragon Summit) | 骁龙 8 Elite Gen 5 发布与安卓旗舰设计中标 |
 | 2026-11 初 | F4Q26 财报 + FY2027 框架 | 手机收入是否兑现环比回升; 内存成本对 QCT 毛利率的实际侵蚀 |
+
+---
+
+## 10. 投资者视角记分卡 (Investor-lens scorecards)
+
+*视角观点:* 本节以四套知名投资框架作为**评分规则 (rubric)** 对前 1–9 章已引用的事实做结构化的第二意见 — 它们是叠加在既有证据上的分析视角, 不是角色扮演, 也绝非"巴菲特会买"式的背书。每条结论标注 *视角观点:*, 复用前文引用, 不在本节引入新的行内引用。周期快照统一取 `indicators.db` 本地数据 (来源: indicators.db 本地快照 (FRED BAMLH0A0HYM2 / BAMLC0A0CM / ^TNX + yfinance), as of 2026-06-05): **VIX 21.5、10Y Treasury (^TNX) 4.54%、HY OAS 2.74%、IG OAS 0.74%、MOVE 75**。
+
+### 10.1 Buffett 视角 — 优质生意 + 合理价格 (0–100)
+
+*视角观点:* **62/100 — 生意质量高, 但当前价格的安全边际不足。**
+
+| 维度 | 评分 | 依据 (复用前文) |
+|---|---|---|
+| 护城河 (moat) | 高 | QTL 专利组合 72% EBT 利润率的年金 + 骁龙高端 62% 份额 + Oryon CPU IP (第 4、7 章) |
+| 盈利质量 | 高 | gross margin 55%、operating margin ~28%、ROIC 远高于 WACC (第 1B 章) |
+| 可预测性 | 中 | 手机周期性 + 苹果流失 + 数据中心未落地, 三年盈利能见度受限 (第 1A 章) |
+| 价格 vs 价值 | 偏贵 | 现价 $211.72 vs 基准 PT $190, 安全边际为负 (第 1A 章) |
+
+证据链: 高通拥有 Buffett 偏好的"收费桥"特征 (QTL 按每台蜂窝设备收税, 与芯片来源无关), 但其手机芯片业务的周期性与客户集中度 (前三大占 54%) 削弱了"可预测的护城河"成色; 当下价格已计入数据中心乐观情景, Buffett 式的"宁要好生意的合理价格"在 $211.72 难以满足。**失败模式:** 若苹果流失快于预期且数据中心叙事落空, "优质生意"会被重新定价为"周期性手机供应商"。
+
+### 10.2 Munger 视角 — 加权质量 + 反向思考 (0–10)
+
+*视角观点:* **6.5/10 — 用反向思考检验, 最大的"如何亏钱"路径是为期权付了实价。**
+
+加权质量 (生意 0.4 / 管理 0.3 / 估值 0.3): 生意 8/10 (高利润 IP + 平台集成), 管理 8/10 (Amon 主导的 Nuvia/Alphawave 连续正确下注, 第 3 章), 估值 4/10 (重估后偏贵) → 加权约 6.7。**反向 (invert) — 怎样在这只股票上亏钱?** (1) 在 $212 买入、投资者日只给方向性目标 → 股价"卖事实"回落至 14–15x (熊市 $140); (2) 内存逆风延续整个 FY2027, 手机底部由 V 型变 L 型; (3) 中国 OEM 自研加速侵蚀 QCT。三条都是真实可信路径, 故扣分。*视角观点:* 这与第 9.5 章空方立场一致。
+
+### 10.3 Damodaran 视角 — 故事 + 数字的 DCF 安全边际 (±%)
+
+*视角观点:* **约 -8% — 内在价值略低于现价, 安全边际为负。**
+
+**必填假设:** 无风险利率 Rf = 4.54% (10Y, indicators.db 快照 as of 2026-06-05); ERP 假设 4.5%; β≈1.2 → WACC ≈ 4.54% + 1.2×4.5% ≈ 9.9%; 永续增长 ≤ Rf, 取 3%。以约 110 亿美元常态化自由现金流 (剔除 OBBB 税费扰动后的近似, 第 1A/1B 章) 为起点, 给手机零增长 + 汽车 20% CAGR + 数据中心 FY2027 起数十亿美元的"故事", 折现得到的每股内在价值落在约 $190–200 区间 — 与本报告 18x 法的基准 PT $190 收敛, 较现价 $211.72 约 -8%。**故事的脆弱点:** 终端价值高度依赖数据中心的远期份额假设, 而该假设在收入落地前无法证伪 — 这正是 Damodaran 所谓"故事比数字更危险"的情形。
+
+### 10.4 Howard Marks 周期视角 — 市场温度计 (0–100, 进攻↔防守)
+
+*视角观点:* **约 58/100 — 中性偏防守; 信用利差偏紧叠加个股已大幅重估, 提示降低进攻性。**
+
+周期定位 (indicators.db 快照 as of 2026-06-05): HY OAS 2.74% 处于历史偏紧区间 (信用市场对风险定价偏乐观 → 略偏"进攻过头"), VIX 21.5 中性偏高, 10Y 4.54% 利率仍具约束性, MOVE 75 利率波动温和。综合为**中性偏防守的市场温度**。对个股的含义: QCOM 自身已从 $130 重估 +63% 至 $212, 在一个"信用偏紧、估值已抬升"的环境里, Marks 式纪律倾向于**不在叙事高点追高**。
+
+**周期对上述视角的约束 (gating):** 因当前定位偏防守, 本节有意压低 10.1–10.3 中任何偏多结论的力度 — 三套视角与周期视角并不冲突, 反而一致指向"好生意、贵价格、降进攻"。这与第 1A 章 Hold 评级、风险回报略偏负的判断互相印证。
 
 ---
 
@@ -782,15 +1289,47 @@ JPM 的 23x 框架把数据中心当作"打开长期成长天花板"的事件 (*
 | 数据 | 来源 | 时点 / 范围 |
 |---|---|---|
 | SEC 文件 | FY2025 10-K、F2Q26 10-Q、F2Q26 业绩 8-K 等 (本地缓存 `financial_reports/QCOM/`, 经 `fetch_financial_report.py` 同步) | 截至 2026-04-29 申报 |
-| 市场数据 (现价 / 倍数 / 52 周区间 / 各日收盘) | yfinance ([Yahoo Finance — QCOM](https://finance.yahoo.com/quote/QCOM/)) | 2026-06-11 |
-| 同业前瞻倍数 (AVGO / NVDA / 2454.TW / AMD / MRVL) | yfinance | 2026-06-11 |
+| 市场数据 (现价 / 倍数 / 52 周区间 / 各日收盘) | yfinance ([Yahoo Finance — QCOM](https://finance.yahoo.com/quote/QCOM/)) | 2026-06-12 |
+| 同业前瞻倍数 (AVGO / NVDA / 2454.TW / AMD / MRVL) | yfinance | 2026-06-12 |
 | 卖方目标价时间线 | `db/stock_price_target.db` (只读; 13 条 QCOM 记录) + 上列 14 篇 zsxq 研报 PDF | 2025-10 至 2026-06 |
+| 财报可视化 (利润表/资产负债表/现金流 Sankey + 板块/地区 donut + 历史营收柱 + DuPont) | `scripts/financial_charts.py` (stdlib SVG), 数字取自 [QCOM 2023–2025 财年 10-K 合并报表](https://www.sec.gov/Archives/edgar/data/0000804328/000080432825000085/qcom-20250928.htm) | FY2023–FY2025 |
+| GF Score 五维记分卡 (雷达) | `scripts/gf_score.py` (本报告自有规则), 输入取自第 1–2 章已引用指标 | as of 2026-06-12 |
+| 周期快照 (VIX / 10Y / HY OAS / IG OAS / MOVE, 用于 Section 10) | indicators.db 本地快照 (FRED BAMLH0A0HYM2 / BAMLC0A0CM / ^TNX + yfinance) | as of 2026-06-05 |
 | 公司事件 | [Qualcomm Investor Day 2026](https://www.qualcomm.com/company/events/investor-day); [Alphawave 收购完成新闻稿, 2025-12-18](https://www.qualcomm.com/news/releases/2025/12/qualcomm-completes-acquisition-of-alphawave-semi); [The Elec — Dragonfly, 2026-06](https://www.thelec.net/news/articleView.html?idxno=10949) | 2025-12 至 2026-06 |
 
 <details>
-<summary>Verification log (Step 10) — 2026-06-11</summary>
+<summary>Verification log (Step 10) — 2026-06-14</summary>
 
-本次为**报告更新** (前版 2026-05-20, 启动覆盖)。更新范围: 投资摘要头部 (新增)、第 1A 章估值与目标价 (新增, 含卖方观点演变)、估值快照重写 (June 11 数据)、Section 4 数据中心小节 (Dragonfly)、风险 #15 重写 + #16 新增、Section 9.5 (新增)、Data Used 清单 (新增)。未改动的存量章节 (2/3/5/6/7/8) 沿用前版验证结果。
+**本次刷新 (2026-06-14) 验证摘要 (前版 2026-06-11):**
+
+更新范围: (a) "as of" 日期 → 2026-06-14, 市场数据 → 2026-06-12 收盘 $211.72 (2026-06-14 为周末); (b) 投资摘要头部 + 估值快照 + 前瞻估值矩阵 + 情景空间全部按 $211.72 重算 (隐含 -10%, 牛 +25% / 熊 -34%); (c) **新增 Section 1B GF Score** (71/100 雷达 + 五维评分理由); (d) **新增 Section 10 投资者视角记分卡** (Buffett 62 / Munger 6.5 / Damodaran -8% / Howard Marks 58, 周期快照取 indicators.db); (e) **新增全套 8 张财报 SVG** — 利润表/资产负债表/现金流 Sankey + 板块/地区 donut + 历史营收堆叠柱 + DuPont, 数字全部取自 FY2023–FY2025 10-K 合并报表; (f) 投资摘要新增相对表现行。
+
+**Step 0 fetch** — `fetch_financial_report.py` (`_run_download('QCOM', ['10-K','10-Q','8-K'], last=6)`) 已运行; 磁盘最新文件确认仍为 FY2025 10-K (申报 2025-11-05) 与 F2Q26 10-Q/8-K (申报 2026-04-29) — 自前版以来无新 10-K/10-Q 落地。
+
+**Step 0.5 sec-report-summary** — skipped (本次为既有报告的刷新而非启动覆盖; 16 GB 机器上重跑多份 10-K 的重型 pass 成本高, 且自前版以来无新年度/季度文件落地, `reports/earnings/QCOM_*.md` 既有摘要仍适用)。
+
+**财报 SVG 数字 string-match (→ FY2025 10-K 合并报表):**
+- 利润表 Sankey: 营收 44,284 (设备 37,869 + 授权 6,415) ✓ F-2; COGS 19,738 / GP 24,546 / 毛利率 55.4% ✓; OI 12,355 ✓; R&D 9,042 / SG&A 3,110 ✓; pretax 12,663 / tax 7,122 / NI 5,541 ✓ F-2/MD&A
+- 资产负债表 Sankey: 总资产 50,143 / 流动资产 25,754 / 商誉 11,358 / 流动负债 9,144 / 长期债务 14,811 / 总负债 28,937 / 权益 21,206 ✓ F-3
+- 现金流 Sankey: OCF 14,012 / CapEx 1,192 / 回购 8,791 / 分红 3,805 ✓ F-4
+- donut 板块: 手机 27,793 / IoT 6,617 / 汽车 3,957 / QTL 5,582 ✓ Note 8; donut 地区: 中国+HK 20,340(46%) / 美国 10,515 / 韩国 9,542 / 其他 3,887 ✓ Note 8 geography
+- revbars: 手机 22,570/24,863/27,793, 汽车 1,872/2,910/3,957, IoT 5,940/5,423/6,617, QTL 5,306/5,572/5,582 ✓ FY2023–FY2025 Note 8 (FY2023 取自 2024 10-K)
+- DuPont: NI 5,541 / 营收 44,284 / 期初资产 55,154→期末 50,143 / 期初权益 26,274→期末 21,206 ✓ F-2/F-3
+- GF Score 五维 7/9/6/5/8 → 综合 71 (权重 20/25/25/15/15) ✓ 本报告自有规则; 未与 GuruFocus 官方数字交叉核对 (本次未拉取)
+
+**市场数据 spot-check (2026-06-12, yfinance):** 现价 $211.72 ✓; 市值 ~$223.2B ✓; TTM P/E 22.8x / 前瞻 P/E 19.8x / P/S 5.0x / 52 周 $121.99–259.92 / 股息率 1.74% ✓; 各日收盘 130.06(3/26)/239.95(6/2)/202.96(6/11)/211.72(6/12) ✓; 相对表现 +63%(130.06→211.72) ✓; 情景空间 190/265/140 ÷ 211.72 = -10%/+25%/-34% ✓。
+
+**周期快照 (Section 10, indicators.db 只读 as of 2026-06-05):** VIX 21.5 / ^TNX 4.54% / HY OAS 2.74% / IG OAS 0.74% / MOVE 75 ✓ `db/indicators.db` history 表; 标注为本地快照纯文本来源, 未附 SEC URL。Damodaran WACC 算术: 4.54%+1.2×4.5%≈9.9% ✓。
+
+**Retrofit 块存在性审计 (vintage 2026-06-11):** 投资摘要头部 (含前瞻估值矩阵 + 相对表现行) ✓ / Section 1A 决策层 ✓ / **Section 1B GF Score ✓ (本次补齐)** / Section 2 估值与 PT ✓ / Section 9.5 分歧与催化剂 ✓ / **Section 10 投资者视角 ✓ (本次补齐)** / Data Used 清单 ✓ / 验证日志 ✓ / 延伸观看 ✓ (第 4 章 Computex keynote)。
+
+**URL check (本次)** — 本次新增的唯一外部 URL 为 GuruFocus GF Score 页 ([gurufocus.com/term/gf-score/QCOM](https://www.gurufocus.com/term/gf-score/QCOM)), 浏览器 UA 验证 200; 其余引用均复用前版已验证 URL。indicators.db / yfinance / financial_charts.py / gf_score.py 为本地数据源, 无需 HTTP 校验。
+
+---
+
+**前版验证记录 (2026-06-11) 保留如下:**
+
+本次为**报告更新** (更早一版 2026-05-20, 启动覆盖)。更新范围: 投资摘要头部 (新增)、第 1A 章估值与目标价 (新增, 含卖方观点演变)、估值快照重写 (June 11 数据)、Section 4 数据中心小节 (Dragonfly)、风险 #15 重写 + #16 新增、Section 9.5 (新增)、Data Used 清单 (新增)。未改动的存量章节 (2/3/5/6/7/8) 沿用前版验证结果。
 
 **URL check** — 本次新增的全部公开 URL 已于 2026-06-11 HTTP 验证 200: The Elec (Dragonfly)、Qualcomm Investor Day 活动页、Qualcomm Alphawave 完成新闻稿、YouTube Computex keynote (浏览器 UA)、stockanalysis.com、gurufocus、Yahoo Finance; SEC 两个文件 URL 以声明式 UA 验证 200 (浏览器 UA 对 SEC 返回 403, 属反爬而非死链)。
 
@@ -831,10 +1370,13 @@ JPM 的 23x 框架把数据中心当作"打开长期成长天花板"的事件 (*
 - 第 4A 章中 JPM FY2031 分项 ($200 亿 ASIC / $50 亿加速器 / $110 亿 CPU、$1,200 亿服务器 CPU 市场 9% 份额、联发科参照) ✓ 已于首次编辑 string-match (file_id 814528851485152); OpenAI SoC 合作明确标注为"有报道称"级传闻。
 - 卖方观点演变时间线补充 2025-10-27 两条目 (Bernstein Outperform 语境、UBS Neutral $175)。
 
-**Residual unknowns / Spec gaps (vintage 2026-05-20):**
-- Section 10 投资者视角记分卡 (Buffett / Munger / Damodaran / Marks) 尚未补齐 — 本次更新聚焦决策层 (1A + 9.5), 留待下次结构性重写。
-- 英文版 `Qualcomm_NASDAQ_QCOM_Research_Document.md` 本次未更新 (用户未要求双语), 其市场数据仍为 2026-05 时点。
+**Residual unknowns / Spec gaps (本次 2026-06-14 刷新后):**
+- **Section 1B GF Score 与 Section 10 投资者视角记分卡已于本次补齐** — 前版列为待办的两个 spec gap 现已闭合; 全套财报 SVG (8 张) 亦已补齐。
+- GF Score 71/100 为本报告自有规则输出, 未与 GuruFocus 官网公开数字交叉核对 (本次未单独拉取该页数据)。
+- 英文版 `Qualcomm_NASDAQ_QCOM_Research_Document.md` 本次未更新 (用户明确要求仅中文), 其市场数据仍为 2026-05 时点 — 按要求保持原状未触碰。
 - Bernstein 在 1/13 ($215) 与 3/26 (OLD $175) 之间应存在一次未入库的 PT 下调 ($215→$175), 本地库未覆盖该篇, 时间线如实呈现两端点。
-- 存量章节 (2/3/5/6/7/8) 的 87 条既有 URL 未在本次重新全量扫描 (前版已验证); 本次仅验证新增及新内容引用的 URL。
+- 周期快照 (indicators.db) 截至 2026-06-05, 略早于市场数据日期 (2026-06-12) 约一周 — 在中性偏防守的判断上不敏感, 已在 Section 10 标注其 as-of 日期。
+- 存量章节 (2/3/5/6/7/8) 的既有 URL 未在本次重新全量扫描 (前版已验证); 本次仅验证新增 URL (GuruFocus GF Score 页) 与新内容数字的 string-match。
+- 管理团队 (Section 3) 仍保留 CFO/COO Palkhiwala、QTL 总裁 Rogers、CTO Achour 及治理小结 — 这些是前版已验证、引用充分的内容, 本次刷新未按"仅留 CEO/创始人"做破坏性删减 (该取舍留待下次结构性重写时统一处理)。
 
 </details>
