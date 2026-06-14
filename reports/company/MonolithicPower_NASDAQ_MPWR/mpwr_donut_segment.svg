@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">MPS FY2025 营收按终端市场 (revenue by end market)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 419.59,249.55 L 365.76,245.32 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 419.59,249.55 A 132 132 0 0 1 276.41,370.69 L 281.15,316.90 A 78 78 0 0 0 365.76,245.32 Z" fill="#15803d"/>
+<path d="M 276.41,370.69 A 132 132 0 0 1 157.46,258.77 L 210.86,250.76 A 78 78 0 0 0 281.15,316.90 Z" fill="#d97706"/>
+<path d="M 157.46,258.77 A 132 132 0 0 1 175.27,170.52 L 221.39,198.62 A 78 78 0 0 0 210.86,250.76 Z" fill="#7c3aed"/>
+<path d="M 175.27,170.52 A 132 132 0 0 1 230.71,120.28 L 254.14,168.93 A 78 78 0 0 0 221.39,198.62 Z" fill="#dc2626"/>
+<path d="M 230.71,120.28 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 254.14,168.93 Z" fill="#0891b2"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">US$2.79bn</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$2.8B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="389.34" y1="145.52" x2="405.34" y2="145.52" stroke="#2563eb" stroke-width="1.4"/>
+<text x="409.34" y="143.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Storage &amp; Computing</text>
+<text x="409.34" y="157.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$732.5M  (26.2%)</text>
+<line x1="377.13" y1="344.55" x2="393.13" y2="344.55" stroke="#15803d" stroke-width="1.4"/>
+<text x="397.13" y="342.55" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Enterprise Data</text>
+<text x="397.13" y="356.55" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$701.8M  (25.1%)</text>
+<line x1="193.43" y1="339.70" x2="177.43" y2="339.70" stroke="#d97706" stroke-width="1.4"/>
+<text x="173.43" y="337.70" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Automotive</text>
+<text x="173.43" y="351.70" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$592.5M  (21.2%)</text>
+<line x1="152.73" y1="211.89" x2="136.73" y2="211.89" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="132.73" y="209.89" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Communications</text>
+<text x="132.73" y="223.89" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$309.1M  (11.1%)</text>
+<line x1="195.33" y1="136.95" x2="179.33" y2="136.95" stroke="#dc2626" stroke-width="1.4"/>
+<text x="175.33" y="134.95" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Consumer</text>
+<text x="175.33" y="148.95" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$255.2M  (9.1%)</text>
+<line x1="257.28" y1="104.66" x2="241.28" y2="104.66" stroke="#0891b2" stroke-width="1.4"/>
+<text x="237.28" y="102.66" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Industrial</text>
+<text x="237.28" y="116.66" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$199.4M  (7.1%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: MPS FY2025 10-K (filed 2026-02-27), p.7 (End Market table)</text>
+</svg>
