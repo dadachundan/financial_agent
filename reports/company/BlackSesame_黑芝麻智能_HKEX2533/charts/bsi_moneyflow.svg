@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1066" width="1180" height="1066" role="img" aria-label="黑芝麻智能的钱从哪来、流向哪个上游 (demand / revenue 视角)" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1066" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">车规智驾 SOC 资金流 · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">黑芝麻智能的钱从哪来、流向哪个上游 (demand / revenue 视角)</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">FY2025 收入 8.22 亿元主要来自吉利、东风等国内 OEM 与 Tier-1；公司是 fabless 设计商，COGS 4.85 亿元最终汇集到台积电 (7nm/16nm 流片) 与 Arm / EDA / OSAT 等少数上游卡点。</text>
+<ellipse cx="1031.00" cy="423.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="654.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="654.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱 (客户/需求)</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">黑芝麻产品线</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱汇集到哪 (公司上游)</text>
+<path d="M 256.00 258.00 C 369.50 258.00, 369.50 298.82, 483.00 298.82" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 381.00 C 369.50 381.00, 369.50 320.64, 483.00 320.64" fill="none" stroke="url(#mfgold)" stroke-width="19.64" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 491.00 C 369.50 491.00, 369.50 441.00, 483.00 441.00" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 598.50 C 369.50 598.50, 369.50 334.82, 483.00 334.82" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 605.36 C 369.50 605.36, 369.50 551.00, 483.00 551.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 303.73 C 810.50 303.73, 810.50 310.27, 924.00 310.27" fill="none" stroke="url(#mfgold)" stroke-width="21.82" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 319.55 C 810.50 319.55, 810.50 436.00, 924.00 436.00" fill="none" stroke="url(#mfgold)" stroke-width="9.82" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 328.82 C 810.50 328.82, 810.50 543.27, 924.00 543.27" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 443.73 C 810.50 443.73, 810.50 550.36, 924.00 550.36" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 438.27 C 810.50 438.27, 810.50 323.91, 924.00 323.91" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="272.41" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">智驾芯片采购</text>
+<text x="369.50" y="460.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">0.96 亿元</text>
+<text x="810.50" y="301.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">晶圆流片 (COGS 主体)</text>
+<rect x="42.00" y="198.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="198.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">吉利系 / 亿咖通</text>
+<text x="60.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">最大客户群 ~9.1% 收入</text>
+<text x="60.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">千里浩瀚智驾 (A1000)</text>
+<rect x="42.00" y="334.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="334.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="367.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">东风 / 一汽 / 比亚迪</text>
+<text x="60.00" y="388.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">乘用车 + 商用车 OEM</text>
+<text x="60.00" y="405.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">A1000 量产 + C1200 定点</text>
+<rect x="42.00" y="444.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="444.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="477.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">机器人客户</text>
+<text x="60.00" y="498.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">傅利叶/宇树/联想/Geek+</text>
+<text x="60.00" y="515.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">SesameX 具身智能 0.96 亿</text>
+<rect x="42.00" y="554.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="42.00" y="554.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="60.00" y="587.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Tier-1 + L4 物流</text>
+<text x="60.00" y="608.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">安波福/均胜/德赛西威</text>
+<text x="60.00" y="625.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">无人物流车</text>
+<rect x="483.00" y="248.00" width="214" height="130.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="248.00" width="3" height="130.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="281.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">辅助驾驶 ADP&amp;S</text>
+<text x="501.00" y="302.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">华山 A1000/A2000 + 武当 C1200</text>
+<text x="501.00" y="319.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY2025 6.87 亿 · GM 37.4%</text>
+<rect x="483.00" y="394.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="394.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="427.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">具身智能 SesameX</text>
+<text x="501.00" y="448.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">Kalos/Aura/Liora 模块</text>
+<text x="501.00" y="465.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">FY2025 0.96 亿 · GM 48.7%</text>
+<rect x="483.00" y="504.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="504.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="537.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">智能影像 IP 授权</text>
+<text x="501.00" y="558.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">ISP 核 + AI 算法</text>
+<text x="501.00" y="575.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">FY2025 0.39 亿 · GM 84.7%</text>
+<rect x="924.00" y="253.00" width="214" height="120.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="253.00" width="3" height="120.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="286.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">TSMC 台积电</text>
+<text x="942.00" y="307.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">A2000 7nm / A1000 16nm 流片</text>
+<text x="942.00" y="324.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">最大单一卡点 (地缘风险)</text>
+<rect x="924.00" y="389.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="389.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="422.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">Arm / Synopsys / Cadence</text>
+<text x="942.00" y="443.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">CPU IP + EDA 工具链</text>
+<text x="942.00" y="460.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">美国 IP/EDA 出口许可敞口</text>
+<rect x="924.00" y="499.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="499.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="532.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">OSAT 封测 + 上游</text>
+<text x="942.00" y="553.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">五大供应商占采购 27.6%</text>
+<text x="942.00" y="570.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">最大供应商 8.5%</text>
+<rect x="42.00" y="674.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="676.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="676.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="676.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="676.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="669.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="747.00" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="821.40" y="669.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="840.40" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="979.60" y="669.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="998.60" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="42.00" y="689.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="61.00" y="698.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="135.40" y="689.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="154.40" y="698.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="221.60" y="689.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="240.60" y="698.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="714.00" x2="1138" y2="714.00" stroke="#222a3a"/>
+<text x="42.00" y="730.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 资金流要点</text>
+<rect x="42.00" y="750.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="750.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="774.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求端 · 最大客户</text>
+<text x="58.00" y="792.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">客户高度集中于国内 OEM</text>
+<text x="58.00" y="816.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 前五大客户占收入</tspan><tspan fill="#f4d58a" font-weight="700"> 38.1%</tspan><tspan fill="#9aa3b8" font-weight="400"> 、最大客户</tspan><tspan fill="#f4d58a" font-weight="700"> 9.1%</tspan></text>
+<text x="58.00" y="832.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">；吉利/东风为核心，海外定点尚处早期。Bernstein</tspan><tspan fill="#9aa3b8" font-weight="400"> 指</tspan><tspan fill="#9aa3b8" font-weight="400"> A1000</tspan><tspan fill="#9aa3b8" font-weight="400"> 出货已</tspan><tspan fill="#f4d58a" font-weight="700"> 连续三季度下滑</tspan></text>
+<text x="58.00" y="848.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">，吉利份额被地平线抢占。</tspan></text>
+<rect x="412.00" y="750.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="412.00" y="750.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="428.00" y="774.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">产品 · 现金牛</text>
+<text x="428.00" y="792.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">ADP&amp;S 是收入主体但毛利偏低</text>
+<text x="428.00" y="816.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">辅助驾驶分部</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 收入</tspan><tspan fill="#f4d58a" font-weight="700"> 6.87</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan><tspan fill="#9aa3b8" font-weight="400"> (占</tspan><tspan fill="#9aa3b8" font-weight="400"> 83.5%)，但</tspan><tspan fill="#9aa3b8" font-weight="400"> GM</tspan><tspan fill="#9aa3b8" font-weight="400"> 仅</tspan><tspan fill="#f4d58a" font-weight="700"> 37.4%</tspan></text>
+<text x="428.00" y="832.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">；1H2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 整体</tspan><tspan fill="#9aa3b8" font-weight="400"> GM</tspan><tspan fill="#9aa3b8" font-weight="400"> 一度跌至</tspan><tspan fill="#f4d58a" font-weight="700"> 24.8%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，价格战压力显性化。</tspan></text>
+<rect x="782.00" y="750.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="750.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="774.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">新引擎 · 高增</text>
+<text x="798.00" y="792.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">具身智能首年放量</text>
+<text x="798.00" y="816.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">SesameX</tspan><tspan fill="#9aa3b8" font-weight="400"> 平台</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 贡献</tspan><tspan fill="#f4d58a" font-weight="700"> 0.96</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan><tspan fill="#9aa3b8" font-weight="400"> 、GM</tspan><tspan fill="#f4d58a" font-weight="700"> 48.7%</tspan><tspan fill="#9aa3b8" font-weight="400"> ；客户含</tspan></text>
+<text x="798.00" y="832.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">傅利叶/宇树/联想/Geek+</tspan><tspan fill="#9aa3b8" font-weight="400"> ，是第二增长曲线但绝对体量仍小。</tspan></text>
+<rect x="42.00" y="896.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="896.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="920.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">上游卡点 · 地缘风险</text>
+<text x="58.00" y="938.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">钱最终汇集到台积电</text>
+<text x="58.00" y="962.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">公司为</tspan><tspan fill="#9aa3b8" font-weight="400"> fabless，COGS</tspan><tspan fill="#f4d58a" font-weight="700"> 4.85</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan><tspan fill="#9aa3b8" font-weight="400"> 主要流向</tspan><tspan fill="#f4d58a" font-weight="700"> 台积电</tspan><tspan fill="#9aa3b8" font-weight="400"> (A2000</tspan><tspan fill="#f4d58a" font-weight="700"> 7nm</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> A1000</tspan></text>
+<text x="58.00" y="978.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">16nm</tspan><tspan fill="#9aa3b8" font-weight="400"> )；先进制程出口管制是系统性风险。A2000</tspan><tspan fill="#9aa3b8" font-weight="400"> 已</tspan><tspan fill="#f4d58a" font-weight="700"> 通过相关美国审查</tspan><tspan fill="#9aa3b8" font-weight="400"> ，为海外车型铺路。</tspan></text>
+<rect x="412.00" y="896.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="412.00" y="896.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="428.00" y="920.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">上游卡点 · IP/EDA</text>
+<text x="428.00" y="938.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Arm / EDA 的隐性敞口</text>
+<text x="428.00" y="962.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">CPU</tspan><tspan fill="#9aa3b8" font-weight="400"> IP</tspan><tspan fill="#9aa3b8" font-weight="400"> 依赖</tspan><tspan fill="#f4d58a" font-weight="700"> Arm</tspan><tspan fill="#9aa3b8" font-weight="400"> ，设计依赖</tspan><tspan fill="#f4d58a" font-weight="700"> Synopsys/Cadence</tspan><tspan fill="#9aa3b8" font-weight="400"> EDA；任何</tspan><tspan fill="#9aa3b8" font-weight="400"> IP/EDA</tspan></text>
+<text x="428.00" y="978.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">出口许可收紧都会直接卡住流片节奏。</tspan></text>
+<rect x="782.00" y="896.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="782.00" y="896.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="798.00" y="920.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">现金消耗 · 烧钱</text>
+<text x="798.00" y="938.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">研发吞噬全部毛利</text>
+<text x="798.00" y="962.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 研发</tspan><tspan fill="#f4d58a" font-weight="700"> 14.17</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan><tspan fill="#9aa3b8" font-weight="400"> ≈</tspan><tspan fill="#9aa3b8" font-weight="400"> 收入</tspan><tspan fill="#f4d58a" font-weight="700"> 172%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，远超</tspan><tspan fill="#9aa3b8" font-weight="400"> 3.37</tspan><tspan fill="#9aa3b8" font-weight="400"> 亿元毛利；经营性现金净流出</tspan></text>
+<text x="798.00" y="978.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">9.85</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan><tspan fill="#9aa3b8" font-weight="400"> ，靠</tspan><tspan fill="#9aa3b8" font-weight="400"> 2</tspan><tspan fill="#9aa3b8" font-weight="400"> 月配售净筹</tspan><tspan fill="#f4d58a" font-weight="700"> 11.42</tspan><tspan fill="#f4d58a" font-weight="700"> 亿港元</tspan><tspan fill="#9aa3b8" font-weight="400"> 续命。</tspan></text>
+<text x="590.00" y="1048.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: 黑芝麻智能 2025 年度业绩公告 (HKEX, 2026-03-31)：分部收入/毛利、研发、现金流、五大客户/供应商占比；Bernstein 1Q26 智驾芯片追踪 (2026-05-11)。</text>
+</svg>

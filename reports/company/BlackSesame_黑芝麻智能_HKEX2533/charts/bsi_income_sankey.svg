@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">黑芝麻智能 FY2025 利润表 Sankey (RMB 百万)</text>
+<path d="M 700.00,-182.90 C 754.00,-182.90 754.00,288.00 808.00,288.00 L 808.00,290.00 C 754.00,290.00 754.00,-180.90 700.00,-180.90 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,-168.90 C 630.00,-168.90 630.00,-182.90 684.00,-182.90 L 684.00,-180.90 C 630.00,-180.90 630.00,-166.90 576.00,-166.90 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,-152.90 C 630.00,-152.90 630.00,-166.90 684.00,-166.90 L 684.00,24.73 C 630.00,24.73 630.00,38.73 576.00,38.73 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,38.73 C 630.00,38.73 630.00,38.73 684.00,38.73 L 684.00,741.99 C 630.00,741.99 630.00,741.99 576.00,741.99 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,741.99 C 630.00,741.99 630.00,755.99 684.00,755.99 L 684.00,760.90 C 630.00,760.90 630.00,746.90 576.00,746.90 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,71.00 C 258.00,71.00 258.00,85.00 312.00,85.00 L 312.00,425.80 C 258.00,425.80 258.00,411.80 204.00,411.80 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,-168.90 560.00,-168.90 L 560.00,-166.90 C 506.00,-166.90 506.00,80.00 452.00,80.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,80.00 C 506.00,80.00 506.00,-152.90 560.00,-152.90 L 560.00,746.90 C 506.00,746.90 506.00,979.79 452.00,979.79 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,245.25 C 382.00,245.25 382.00,252.25 328.00,252.25 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,252.25 C 382.00,252.25 382.00,259.25 436.00,259.25 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,425.80 C 258.00,425.80 258.00,425.80 312.00,425.80 L 312.00,473.57 C 258.00,473.57 258.00,473.57 204.00,473.57 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,487.57 C 258.00,487.57 258.00,473.57 312.00,473.57 L 312.00,493.00 C 258.00,493.00 258.00,507.00 204.00,507.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="340.80" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="425.80" width="16" height="47.77" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="487.57" width="16" height="19.43" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="167.25" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="259.25" width="16" height="240.75" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="-168.90" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="-152.90" width="16" height="899.79" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="-182.90" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="-166.90" width="16" height="191.63" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="38.73" width="16" height="703.26" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="755.99" width="16" height="4.91" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="288.00" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<line x1="188.00" y1="241.40" x2="182.00" y2="231.11" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="234.11" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">辅助驾驶产品及解决方案 ADP&amp;S</text>
+<text x="179.00" y="247.11" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB686.9M  (83.5%)</text>
+<line x1="188.00" y1="449.69" x2="182.00" y2="439.40" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="442.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">具身智能 Embodied AI</text>
+<text x="179.00" y="455.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB96.3M  (11.7%)</text>
+<line x1="188.00" y1="497.29" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">智能影像 Imaging</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB39.2M  (4.8%)</text>
+<rect x="331.00" y="67.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB822.3M  (100.0%)</text>
+<rect x="455.00" y="60.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB337.1M  (41.0%)</text>
+<rect x="455.00" y="241.25" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="253.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="266.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB485.2M  (59.0%)</text>
+<rect x="579.00" y="-186.90" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="-174.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="-161.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-RMB1.4B  (-176.1%)</text>
+<rect x="579.00" y="-161.90" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="-149.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="-136.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB1.8B  (220.5%)</text>
+<rect x="703.00" y="-200.90" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="-188.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="-175.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-RMB1.4B  (-176.1%)</text>
+<rect x="703.00" y="-175.90" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="-163.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="-150.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB386.2M  (47.0%)</text>
+<rect x="703.00" y="20.73" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="32.73" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="45.73" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB1.4B  (172.4%)</text>
+<rect x="703.00" y="737.99" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="749.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="762.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB9.9M  (1.2%)</text>
+<text x="833.00" y="286.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="299.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-RMB1.4B  (-173.3%)</text>
+<text x="500.00" y="530.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">R&amp;D 1,417 百万元 ≈ 收入 172%，是经营亏损的主因；FY2025 IFRS 净亏损 14.25 亿元</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 黑芝麻智能 2025 年度业绩公告 (HKEX, 2026-03-31) 合并损益表</text>
+</svg>
