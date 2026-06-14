@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">BlackSky 现金流 / Cash Flow — FY2025</text>
+<path d="M 204.00,71.00 C 306.00,71.00 306.00,78.00 408.00,78.00 L 408.00,119.97 C 306.00,119.97 306.00,112.97 204.00,112.97 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,64.00 628.00,64.00 L 628.00,146.49 C 526.00,146.49 526.00,160.49 424.00,160.49 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,160.49 C 526.00,160.49 526.00,160.49 628.00,160.49 L 628.00,412.62 C 526.00,412.62 526.00,412.62 424.00,412.62 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,412.62 C 526.00,412.62 526.00,426.62 628.00,426.62 L 628.00,554.00 C 526.00,554.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,126.97 C 306.00,126.97 306.00,119.97 408.00,119.97 L 408.00,540.00 C 306.00,540.00 306.00,547.00 204.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 644.00,160.49 C 746.00,160.49 746.00,175.93 848.00,175.93 L 848.00,311.47 C 746.00,311.47 746.00,296.03 644.00,296.03 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,296.03 C 746.00,296.03 746.00,325.47 848.00,325.47 L 848.00,442.07 C 746.00,442.07 746.00,412.62 644.00,412.62 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="41.97" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="126.97" width="16" height="420.03" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="64.00" width="16" height="82.49" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="160.49" width="16" height="252.13" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="426.62" width="16" height="127.38" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="175.93" width="16" height="135.54" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="325.47" width="16" height="116.59" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="88.99" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="101.99" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$14.4M  (9.1%)</text>
+<rect x="207.00" y="108.97" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="120.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="210.00" y="133.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$144.1M  (90.9%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$158.5M  (100.0%)</text>
+<rect x="647.00" y="46.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="650.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$28.3M  (17.9%)</text>
+<rect x="647.00" y="142.49" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="154.49" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="167.49" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$86.5M  (54.6%)</text>
+<text x="653.00" y="487.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="500.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$43.7M  (27.6%)</text>
+<text x="873.00" y="240.70" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Capex — Satellite + PP&amp;E</text>
+<text x="873.00" y="253.70" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$46.5M  (29.3%)</text>
+<text x="873.00" y="380.77" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net ST Investments</text>
+<text x="873.00" y="393.77" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$40.0M  (25.2%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">经营净流出（净亏损 −70.3 + 非现金加回 + 营运资本）；融资 +144.1 含 185.0 可转债、−84.5 偿债、40.8 ATM 股权  ·  Free Cash Flow = CFO − CapEx = -$74.8M</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: BKSY FY2025 10-K, Consolidated Statements of Cash Flows</text>
+</svg>

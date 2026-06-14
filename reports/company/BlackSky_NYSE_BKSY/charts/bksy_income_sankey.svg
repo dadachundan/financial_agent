@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">BlackSky 收入如何分配 / How BKSY Spends Its Revenue — FY2025</text>
+<path d="M 700.00,40.76 C 754.00,40.76 754.00,288.00 808.00,288.00 L 808.00,290.00 C 754.00,290.00 754.00,42.76 700.00,42.76 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,54.99 C 630.00,54.99 630.00,40.76 684.00,40.76 L 684.00,42.76 C 630.00,42.76 630.00,56.99 576.00,56.99 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,70.99 C 630.00,70.99 630.00,56.76 684.00,56.76 L 684.00,391.27 C 630.00,391.27 630.00,405.51 576.00,405.51 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,405.51 C 630.00,405.51 630.00,405.27 684.00,405.27 L 684.00,407.27 C 630.00,407.27 630.00,407.51 576.00,407.51 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,407.51 C 630.00,407.51 630.00,421.27 684.00,421.27 L 684.00,537.24 C 630.00,537.24 630.00,523.48 576.00,523.48 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,71.19 C 258.00,71.19 258.00,85.00 312.00,85.00 L 312.00,334.16 C 258.00,334.16 258.00,320.35 204.00,320.35 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,54.99 560.00,54.99 L 560.00,56.99 C 506.00,56.99 506.00,80.00 452.00,80.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,80.00 C 506.00,80.00 506.00,70.99 560.00,70.99 L 560.00,523.01 C 506.00,523.01 506.00,532.02 452.00,532.02 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,350.89 C 382.00,350.89 382.00,357.89 328.00,357.89 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,357.89 C 382.00,357.89 382.00,364.89 436.00,364.89 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,334.35 C 258.00,334.35 258.00,334.16 312.00,334.16 L 312.00,415.30 C 258.00,415.30 258.00,415.50 204.00,415.50 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,429.50 C 258.00,429.50 258.00,415.30 312.00,415.30 L 312.00,492.62 C 258.00,492.62 258.00,506.81 204.00,506.81 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.19" width="16" height="249.16" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="334.35" width="16" height="81.14" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="429.50" width="16" height="77.31" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="272.89" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="364.89" width="16" height="135.11" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="54.99" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="70.99" width="16" height="452.02" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="40.76" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="56.76" width="16" height="334.51" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="405.27" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="421.27" width="16" height="115.97" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="288.00" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="192.77" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Space-based intelligence &amp; AI</text>
+<text x="179.00" y="205.77" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$65.1M  (61.1%)</text>
+<text x="179.00" y="371.92" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Mission Solutions</text>
+<text x="179.00" y="384.92" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$21.2M  (19.9%)</text>
+<text x="179.00" y="465.15" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Advanced Technology</text>
+<text x="179.00" y="478.15" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$20.2M  (18.9%)</text>
+<rect x="331.00" y="67.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$106.6M  (100.0%)</text>
+<rect x="455.00" y="60.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$71.3M  (66.9%)</text>
+<rect x="455.00" y="346.89" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="358.89" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="371.89" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$35.3M  (33.1%)</text>
+<rect x="579.00" y="36.99" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="48.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="61.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$46.9M  (-44.0%)</text>
+<rect x="579.00" y="61.99" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="73.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="86.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$118.1M  (110.8%)</text>
+<rect x="703.00" y="22.76" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="34.76" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="47.76" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$46.9M  (-44.0%)</text>
+<rect x="703.00" y="47.76" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="59.76" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="72.76" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$87.4M  (82.0%)</text>
+<rect x="703.00" y="387.27" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="399.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="412.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$400.0K  (0.38%)</text>
+<rect x="703.00" y="412.27" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="424.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="437.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$30.3M  (28.4%)</text>
+<text x="833.00" y="286.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="299.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$70.3M  (-65.9%)</text>
+<text x="500.00" y="530.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">毛利为正，但 opex（含 D&amp;A 30.3）超过毛利，导致经营亏损 46.9；非现金项见现金流图</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: BKSY FY2025 10-K, Consolidated Statements of Operations</text>
+</svg>
