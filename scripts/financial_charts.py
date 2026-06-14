@@ -72,6 +72,7 @@ DuPont (annualized from 2026-Q1):
 """
 
 import argparse
+import json
 import math
 import sys
 
@@ -771,6 +772,308 @@ def render_dupont(a):
 
 
 # ── CLI ──────────────────────────────────────────────────────────────────────
+# ── money-flow (supply-chain) diagram ───────────────────────────────────────────
+# A 3-stage "follow the dollars" map in the dark gold-ribbon style: who pays →
+# what they buy → where the money pools. NOT a flow-conserving Sankey — ribbon
+# thickness is rough relative scale (as the legend states), so node heights are
+# text-driven and ribbons are stroked gold paths (solid = paid directly, dashed =
+# money embedded inside a finished part bought from someone else).
+MF_BG = "#0b0f1a"
+MF_PANEL = "#0e1320"
+MF_INK = "#e8ecf5"
+MF_MUT = "#8a93a8"
+MF_MUT2 = "#646d82"
+MF_GOLD = "#e9b658"
+MF_GOLD_SOFT = "#f4d58a"
+MF_GRID = "#222a3a"
+MF_MONO = "'JetBrains Mono',ui-monospace,Menlo,monospace"
+MF_SANS = "'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif"
+
+# kind → (accent stroke/bar, dark node fill, sub-label colour, legend label)
+MF_KIND = {
+    "buyer":   ("#f2655f", "#15101a", "#c98c87", "buyer"),
+    "buyer2":  ("#7fa8f5", "#0f1622", "#8ca6d6", "buyer"),
+    "compute": ("#56c6e6", "#141a2a", "#8a93a8", "compute"),
+    "silicon": ("#f2655f", "#15101a", "#d49b96", "in-house silicon"),
+    "inhouse": ("#f2655f", "#15101a", "#d49b96", "in-house silicon"),
+    "power":   ("#d9a05b", "#141a2a", "#bcae98", "power / analog"),
+    "rf":      ("#7fa8f5", "#0f1622", "#9bb3df", "RF / wireless"),
+    "custom":  ("#7fa8f5", "#0f1622", "#9bb3df", "custom modules"),
+    "foundry": ("#34d399", "#101d1a", "#7fd9bf", "foundry"),
+    "memory":  ("#a78bfa", "#15121f", "#b9a6f5", "memory"),
+    "neutral": ("#e9b658", "#141a2a", "#8a93a8", "supplier"),
+}
+
+
+def _mf_kind(n):
+    k = n.get("kind", "neutral")
+    acc, fill, sub, lbl = MF_KIND.get(k, MF_KIND["neutral"])
+    return (n.get("color", acc), n.get("fill", fill), n.get("sub_color", sub), lbl)
+
+
+def _mf_wrap(text, max_chars):
+    out, cur = [], ""
+    for w in str(text).split():
+        if cur and len(cur) + 1 + len(w) > max_chars:
+            out.append(cur)
+            cur = w
+        else:
+            cur = f"{cur} {w}".strip()
+    if cur:
+        out.append(cur)
+    return out
+
+
+def _mf_text(x, y, s, size, fill, *, weight="400", anchor="start", font=None,
+             ls=None, halo=None):
+    f = font or MF_SANS
+    extra = f' letter-spacing="{ls}"' if ls else ""
+    if halo:
+        extra += (f' paint-order="stroke" stroke="{halo}" stroke-width="3.2" '
+                  f'stroke-linejoin="round"')
+    return (f'<text x="{_f(x)}" y="{_f(y)}" text-anchor="{anchor}" '
+            f'font-family="{f}" font-size="{size}" font-weight="{weight}" '
+            f'fill="{fill}"{extra}>{_xml(s)}</text>')
+
+
+def render_moneyflow(spec, source=None, width=1180, note=None):
+    """spec: dict with keys
+        eyebrow, title, thesis (str), stages (list of stage labels),
+        nodes  (list of {id, stage, label, sub:[..], kind, color?, fill?, h?}),
+        flows  (list of {from, to, weight, style:'direct'|'embedded', label?}),
+        legend (optional list of {type:'direct'|'embedded'|'scale'|'chip', label, kind?}),
+        source.
+    Emits one self-contained dark inline <svg> for embedding un-fenced in a report."""
+    stages = spec.get("stages") or ["who pays", "what they buy", "where it pools"]
+    nodes = spec.get("nodes") or []
+    flows = spec.get("flows") or []
+    N = len(stages)
+    by_id = {n["id"]: n for n in nodes}
+
+    PAD = 42
+    W_NODE = 214
+    GAP = 16
+
+    # ── header (eyebrow + title + thesis) ──
+    title_lines = _mf_wrap(spec.get("title", ""), max(18, int((width - 2 * PAD) / 17)))
+    thesis_lines = _mf_wrap(spec.get("thesis", ""), max(40, int((width - 2 * PAD) / 8.3)))
+    y = 40
+    head = []
+    if spec.get("eyebrow"):
+        y += 16
+        head.append(_mf_text(PAD, y, spec["eyebrow"].upper(), 11.5, MF_GOLD,
+                             weight="600", font=MF_MONO, ls="3"))
+    ty = y + 44
+    for ln in title_lines:
+        head.append(_mf_text(PAD, ty, ln, 32, MF_INK, weight="700"))
+        ty += 38
+    thy = ty + 4
+    for ln in thesis_lines:
+        head.append(_mf_text(PAD, thy, ln, 15, MF_MUT, weight="400"))
+        thy += 22
+    flow_top = thy + 34
+
+    # ── column x positions (col0 left-aligned, last col right-aligned) ──
+    left0 = PAD
+    left_last = width - PAD - W_NODE
+    if N > 1:
+        step = (left_last - left0) / (N - 1)
+        col_x = [left0 + i * step for i in range(N)]
+    else:
+        col_x = [left0]
+
+    # ── node heights (text-driven) & per-column vertical layout ──
+    def node_h(n):
+        if n.get("h"):
+            return float(n["h"])
+        return 60 + 17 * len(n.get("sub") or [])
+
+    cols = [[n for n in nodes if n.get("stage", 0) == c] for c in range(N)]
+    col_total = []
+    for col in cols:
+        tot = sum(node_h(n) for n in col) + GAP * max(0, len(col) - 1)
+        col_total.append(tot)
+    flow_h = max(col_total) if col_total else 200
+
+    pos = {}  # id → (x, y, w, h, cy)
+    for c, col in enumerate(cols):
+        ys = flow_top + (flow_h - col_total[c]) / 2.0
+        for n in col:
+            h = node_h(n)
+            pos[n["id"]] = (col_x[c], ys, W_NODE, h, ys + h / 2.0)
+            ys += h + GAP
+
+    flow_bot = flow_top + flow_h
+    legend_y = flow_bot + 30
+    height = legend_y + 54
+
+    # ── ribbon thickness & per-node attach bands (centered bundles) ──
+    maxw = max((float(f.get("weight", 1)) for f in flows), default=1) or 1
+    wscale = 24.0 / maxw
+
+    def thick(f):
+        return max(5.0, float(f.get("weight", 1)) * wscale)
+
+    out_cur, in_cur = {}, {}
+    for nid in by_id:
+        outs = [f for f in flows if f["from"] == nid]
+        outs.sort(key=lambda f: pos.get(f["to"], (0, 0, 0, 0, 0))[4])
+        tot = sum(thick(f) for f in outs)
+        cy = pos[nid][4] - tot / 2.0
+        for f in outs:
+            t = thick(f)
+            out_cur[id(f)] = cy + t / 2.0
+            cy += t
+        ins = [f for f in flows if f["to"] == nid]
+        ins.sort(key=lambda f: pos.get(f["from"], (0, 0, 0, 0, 0))[4])
+        tot = sum(thick(f) for f in ins)
+        cy = pos[nid][4] - tot / 2.0
+        for f in ins:
+            t = thick(f)
+            in_cur[id(f)] = cy + t / 2.0
+            cy += t
+
+    # ── assemble SVG ──
+    o = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {int(height)}" '
+         f'width="{width}" height="{int(height)}" role="img" '
+         f'aria-label="{_xml(spec.get("title", "money flow diagram"))}" '
+         f'font-family="{MF_SANS}">']
+    o.append('<defs>'
+             f'<linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{width}" y2="0">'
+             '<stop offset="0" stop-color="#f6dc97"/>'
+             '<stop offset="0.5" stop-color="#e9b658"/>'
+             '<stop offset="1" stop-color="#cf8f2c"/></linearGradient>'
+             '<radialGradient id="mfpool" cx="50%" cy="50%" r="50%">'
+             '<stop offset="0" stop-color="#34d399" stop-opacity="0.16"/>'
+             '<stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient>'
+             '</defs>')
+    o.append(f'<rect x="0" y="0" width="{width}" height="{int(height)}" rx="16" fill="{MF_BG}"/>')
+    o += head
+
+    # gravity glow behind the last column
+    if N > 1 and cols[-1]:
+        gx = col_x[-1] + W_NODE / 2
+        gy = (pos[cols[-1][0]["id"]][1] + pos[cols[-1][-1]["id"]][1] + pos[cols[-1][-1]["id"]][3]) / 2
+        o.append(f'<ellipse cx="{_f(gx)}" cy="{_f(gy)}" rx="190" ry="150" fill="url(#mfpool)"/>')
+
+    # stage dividers + eyebrows
+    for c in range(N - 1):
+        dx = (col_x[c] + W_NODE + col_x[c + 1]) / 2
+        o.append(f'<line x1="{_f(dx)}" y1="{_f(flow_top - 10)}" x2="{_f(dx)}" '
+                 f'y2="{_f(flow_bot + 6)}" stroke="{MF_GRID}" stroke-dasharray="2 8"/>')
+    for c in range(N):
+        ex = col_x[c]
+        o.append(_mf_text(ex, flow_top - 26, f"STAGE {c + 1:02d}", 12, MF_GOLD,
+                          font=MF_MONO, ls="3"))
+        o.append(_mf_text(ex, flow_top - 10, stages[c], 11.5, MF_MUT2, font=MF_MONO))
+
+    # ribbons (under nodes): solid first, then dashed
+    for want_dashed in (False, True):
+        for f in flows:
+            dashed = f.get("style", "direct") == "embedded"
+            if dashed != want_dashed:
+                continue
+            if f["from"] not in pos or f["to"] not in pos:
+                continue
+            sx, _sy, sw, _sh, _scy = pos[f["from"]]
+            dx, _dy, _dw, _dh, _dcy = pos[f["to"]]
+            x0, y0 = sx + sw, out_cur[id(f)]
+            x1, y1 = dx, in_cur[id(f)]
+            gx = (x0 + x1) / 2
+            t = thick(f)
+            dash = ' stroke-dasharray="0.1 11"' if dashed else ""
+            op = "0.78" if dashed else "0.9"
+            o.append(f'<path d="M {_f(x0)} {_f(y0)} C {_f(gx)} {_f(y0)}, '
+                     f'{_f(gx)} {_f(y1)}, {_f(x1)} {_f(y1)}" fill="none" '
+                     f'stroke="url(#mfgold)" stroke-width="{_f(t)}" '
+                     f'stroke-linecap="round" opacity="{op}"{dash}/>')
+    # ribbon labels
+    for f in flows:
+        if not f.get("label") or f["from"] not in pos or f["to"] not in pos:
+            continue
+        sx, _a, sw, _b, _c2 = pos[f["from"]]
+        dx, _d, _e, _g, _h2 = pos[f["to"]]
+        gx = (sx + sw + dx) / 2
+        my = (out_cur[id(f)] + in_cur[id(f)]) / 2 - 6
+        o.append(_mf_text(gx, my, f["label"], 11.5, MF_GOLD_SOFT, anchor="middle",
+                          font=MF_MONO, halo=MF_BG))
+
+    # nodes
+    for n in nodes:
+        if n["id"] not in pos:
+            continue
+        x, ny, w, h, _cy = pos[n["id"]]
+        acc, fill, subc, _lbl = _mf_kind(n)
+        o.append(f'<rect x="{_f(x)}" y="{_f(ny)}" width="{w}" height="{_f(h)}" '
+                 f'rx="12" fill="{fill}" stroke="{acc}" stroke-opacity="0.5"/>')
+        o.append(f'<rect x="{_f(x)}" y="{_f(ny)}" width="3" height="{_f(h)}" rx="2" fill="{acc}"/>')
+        lsize = 21 if len(n.get("label", "")) <= 7 else (17 if len(n["label"]) <= 16 else 14)
+        o.append(_mf_text(x + 18, ny + 33, n.get("label", ""), lsize, "#ffffff", weight="700"))
+        sy = ny + 54
+        for s in (n.get("sub") or []):
+            o.append(_mf_text(x + 18, sy, s, 11, subc, font=MF_MONO))
+            sy += 17
+
+    # legend
+    legend = spec.get("legend")
+    if legend is None:
+        kinds_present = []
+        for n in nodes:
+            if n.get("stage", 0) == 0:
+                continue
+            k = n.get("kind", "neutral")
+            if k not in kinds_present:
+                kinds_present.append(k)
+        legend = [{"type": "direct", "label": "money paid directly"},
+                  {"type": "embedded", "label": "money embedded in a finished chip"},
+                  {"type": "scale", "label": "thickness ≈ rough scale"}]
+        for k in kinds_present:
+            legend.append({"type": "chip", "kind": k, "label": MF_KIND.get(k, MF_KIND["neutral"])[3]})
+    lx = PAD
+    ly = legend_y
+    for item in legend:
+        typ = item.get("type", "chip")
+        lbl = item.get("label", "")
+        if typ == "direct":
+            o.append(f'<rect x="{_f(lx)}" y="{_f(ly - 4)}" width="26" height="4" rx="2" fill="{MF_GOLD}"/>')
+            adv = 26 + 10
+        elif typ == "embedded":
+            for i in range(4):
+                o.append(f'<circle cx="{_f(lx + 4 + i * 7)}" cy="{_f(ly - 2)}" r="2" fill="{MF_GOLD}"/>')
+            adv = 28 + 10
+        elif typ == "scale":
+            adv = 0
+        else:  # chip
+            acc = MF_KIND.get(item.get("kind", "neutral"), MF_KIND["neutral"])[0]
+            o.append(f'<rect x="{_f(lx)}" y="{_f(ly - 9)}" width="11" height="11" rx="3" fill="{acc}"/>')
+            adv = 11 + 8
+        tx = lx + adv
+        o.append(_mf_text(tx, ly, lbl, 11.5, MF_MUT, font=MF_MONO))
+        lx = tx + len(lbl) * 7.2 + 24
+        if lx > width - PAD - 120:  # wrap to a second legend row
+            lx = PAD
+            ly += 20
+            height = max(height, ly + 40)
+
+    # footer
+    fy = ly + 30
+    if note:
+        o.append(_mf_text(width / 2, fy - 16, note, 10.5, MF_MUT2, anchor="middle"))
+    if source:
+        o.append(_mf_text(width / 2, fy, f"Source: {source}", 10.5, MF_MUT2,
+                          anchor="middle", font=MF_MONO))
+    height = max(height, fy + 18)
+
+    # patch viewBox/height now that legend wrap / footer may have grown it
+    o[0] = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {int(height)}" '
+            f'width="{width}" height="{int(height)}" role="img" '
+            f'aria-label="{_xml(spec.get("title", "money flow diagram"))}" '
+            f'font-family="{MF_SANS}">')
+    o[2] = f'<rect x="0" y="0" width="{width}" height="{int(height)}" rx="16" fill="{MF_BG}"/>'
+    o.append("</svg>")
+    return "\n".join(o)
+
+
 def _add_common(p):
     p.add_argument("--source", required=True, help="REQUIRED data-source footer baked into the SVG.")
     p.add_argument("--title", default="")
@@ -831,6 +1134,13 @@ def main(argv=None):
                     help="'Label:v1,v2,...' one per segment/region; values align to --years. Repeatable.")
     pr.add_argument("--mode", choices=["value", "pct"], default="value",
                     help="value = absolute stacked $; pct = 100%% stacked share.")
+
+    pm = sub.add_parser("moneyflow", help="3-stage supply-chain money-flow diagram (dark gold-ribbon)")
+    pm.add_argument("--spec", required=True, help="path to JSON spec ('-' for stdin). See references/money_flow.md.")
+    pm.add_argument("--source", default=None, help="overrides spec.source (one is required).")
+    pm.add_argument("--title", default=None, help="overrides spec.title.")
+    pm.add_argument("--note", default=None, help="optional italic caption above the source footer.")
+    pm.add_argument("--width", type=int, default=None)
 
     pdu = sub.add_parser("dupont", help="5-step DuPont ROE tree")
     _add_common(pdu)
@@ -893,6 +1203,17 @@ def main(argv=None):
             svg = render_revbars(years, series, a.title or "Historical Revenue",
                                  a.source, currency=a.currency, mode=a.mode, note=a.note,
                                  width=a.width or 860, height=a.height or 470)
+        elif a.cmd == "moneyflow":
+            raw = sys.stdin.read() if a.spec == "-" else open(a.spec, encoding="utf-8").read()
+            spec = json.loads(raw)
+            if a.title:
+                spec["title"] = a.title
+            src = a.source or spec.get("source")
+            if not src:
+                ap.error("moneyflow requires --source or spec.source")
+            svg = render_moneyflow(spec, source=src,
+                                   width=a.width or spec.get("width") or 1180,
+                                   note=a.note or spec.get("note"))
         elif a.cmd == "dupont":
             svg = render_dupont(a)
         else:

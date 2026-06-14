@@ -1,0 +1,45 @@
+{
+  "eyebrow": "Semiconductor money flow · 2026",
+  "title": "How Tesla & SpaceX pay for their chips",
+  "thesis": "Two of Elon Musk's companies spend at the very top of the chip market — yet follow the dollars and they fan out, then pool back onto a handful of fabs and memory makers. The gold is money; trace where it actually ends up.",
+  "stages": ["who pays", "chips & silicon they buy", "where the money pools"],
+  "nodes": [
+    {"id": "tesla",  "stage": 0, "label": "TESLA",  "kind": "buyer",  "sub": ["EV · AI · robots"], "h": 132},
+    {"id": "spacex", "stage": 0, "label": "SPACEX", "kind": "buyer2", "sub": ["rockets · Starlink"], "h": 118},
+
+    {"id": "nvidia",  "stage": 1, "label": "NVIDIA", "kind": "compute", "sub": ["H100 · H200 · Blackwell GPUs"]},
+    {"id": "amd",     "stage": 1, "label": "AMD",    "kind": "compute", "sub": ["Instinct MI300X accelerators"]},
+    {"id": "tsi",     "stage": 1, "label": "TESLA IN-HOUSE SILICON", "kind": "silicon", "sub": ["AI5 · AI6 · Dojo", "Tesla designs them,", "foundries build them →"]},
+    {"id": "power",   "stage": 1, "label": "POWER · ANALOG · MCU · SENSORS", "kind": "power", "sub": ["Infineon · STMicro · NXP", "Texas Instruments · onsemi", "Analog Devices · Renesas", "SiC inverters, battery mgmt,", "radar, power, image sensors"]},
+    {"id": "slrf",    "stage": 1, "label": "STARLINK RF SILICON", "kind": "rf", "sub": ["STMicroelectronics — phased", "array front-end (co-designed)"]},
+    {"id": "sxc",     "stage": 1, "label": "SPACEX CUSTOM MODULES", "kind": "custom", "sub": ["in-house RF multi-chip modules"]},
+
+    {"id": "tsmc",    "stage": 2, "label": "TSMC", "kind": "foundry", "sub": ["world's #1 foundry · ~67%", "fabs nearly everyone's logic"]},
+    {"id": "samf",    "stage": 2, "label": "SAMSUNG — FOUNDRY", "kind": "foundry", "sub": ["Taylor, Texas · AI6 (2nm)", "+ AI4 today, AI5 dual-source"]},
+    {"id": "skh",     "stage": 2, "label": "SK HYNIX", "kind": "memory", "sub": ["DRAM · HBM market leader", "primary HBM for Nvidia"]},
+    {"id": "samm",    "stage": 2, "label": "SAMSUNG — MEMORY", "kind": "memory", "sub": ["DRAM · LPDDR5X · HBM4", "\"Samsung is back\" on HBM"]},
+    {"id": "micron",  "stage": 2, "label": "MICRON", "kind": "memory", "sub": ["DRAM · NAND · HBM", "~3rd in HBM, custom orders"]}
+  ],
+  "flows": [
+    {"from": "tesla",  "to": "nvidia", "weight": 26, "style": "direct", "label": "$ billions / yr"},
+    {"from": "tesla",  "to": "amd",    "weight": 9,  "style": "direct"},
+    {"from": "tesla",  "to": "tsi",    "weight": 22, "style": "direct", "label": "designs in-house"},
+    {"from": "tesla",  "to": "power",  "weight": 16, "style": "direct"},
+    {"from": "spacex", "to": "slrf",   "weight": 16, "style": "direct"},
+    {"from": "spacex", "to": "sxc",    "weight": 8,  "style": "direct"},
+
+    {"from": "tsi", "to": "samf",   "weight": 20, "style": "direct", "label": "AI6 fab · $16.5B"},
+    {"from": "tsi", "to": "tsmc",   "weight": 12, "style": "direct"},
+    {"from": "tsi", "to": "skh",    "weight": 8,  "style": "direct"},
+    {"from": "tsi", "to": "samm",   "weight": 7,  "style": "direct"},
+
+    {"from": "nvidia", "to": "tsmc",   "weight": 14, "style": "embedded"},
+    {"from": "nvidia", "to": "skh",    "weight": 12, "style": "embedded"},
+    {"from": "nvidia", "to": "samm",   "weight": 7,  "style": "embedded"},
+    {"from": "nvidia", "to": "micron", "weight": 6,  "style": "embedded"},
+    {"from": "amd",    "to": "tsmc",   "weight": 7,  "style": "embedded"},
+    {"from": "amd",    "to": "micron", "weight": 6,  "style": "embedded"},
+    {"from": "power",  "to": "tsmc",   "weight": 6,  "style": "embedded"}
+  ],
+  "source": "CNN / Bloomberg / Reuters on the Samsung–Tesla $16.5B foundry deal · Tom's Hardware / TrendForce / DigiTimes on AI5/AI6 nodes & memory · DataCenterDynamics on Tesla AI capex · STMicro newsroom / SemiWiki on Starlink RF (paraphrased, through mid-2026)"
+}

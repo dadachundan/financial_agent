@@ -108,6 +108,8 @@ After the References section in **every report produced** (the Chinese report by
 
 **Financial-statement charts (`financial_charts.py`)** — figures in each Sankey / donut / DuPont string-matched to the cited statement (e.g. "Revenue $10.1B, COGS $3.4B, Net Income $2.9B" ✓ matches FY2025 Statements of Operations); `--source` footer present; surrounding paragraph carries the page-level citation.
 
+**Money-flow diagram (`financial_charts.py moneyflow`)** — every node is a real, sourced counterpart (no invented suppliers); each `$` in a ribbon label string-matched to a source cited in the surrounding paragraph (e.g. "AI6 fab · $16.5B" ✓ matches the cited deal announcement); `--source` footer present; the "follow the money" caption names the chokepoint(s) and cites each link. If dropped, the reason (chain not sourceable) is logged here.
+
 **Analyst-view sentences** (intentionally not cited to a primary source):
 - Section 1: "<paragraph fragment>" — uncited; supported by industry observation.
 - Section 4.1 / 4.2 / 4.3: share-leadership claims labeled `*Analyst view:*` / `*分析师观点：*` per skill rule.

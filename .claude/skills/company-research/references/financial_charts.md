@@ -12,6 +12,11 @@ directly in a research report. Six chart types, one helper, stdlib-only.
 | `revbars`  | **Historical stacked bars** — revenue by segment / geography over years | Section 1 / Section 6 (development-over-time) |
 | `dupont`   | **5-step DuPont** ROE tree (ROE = net-margin × asset-turnover × equity-multiplier) | Section 1B / Section 2 (return decomposition) |
 
+> The same helper has a **seventh** subcommand, `moneyflow` — the 3-stage supply-chain
+> "money-flow" diagram (who pays → what they buy → where the money pools). It is an
+> outward-looking value-chain map, not a financial-statement chart, so it lives in its
+> own spec: **[`money_flow.md`](money_flow.md). It is REQUIRED — one per report.**
+
 ## Why inline SVG (NOT matplotlib, NOT Mermaid for these)
 
 Same reasoning as `scripts/gf_score.py`:
