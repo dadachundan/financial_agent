@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1060" width="1180" height="1060" role="img" aria-label="钱从哪来、流向谁：Impulse Space 的价值链" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1060" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">IN-SPACE MOBILITY · 资金流向 · 2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱从哪来、流向谁：Impulse Space 的价值链</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">需求与资本从左侧流入 Impulse，再从右侧汇聚到少数节点——其中 SpaceX 的 Falcon 9 既是几乎全部任务的发射通道、也是其最大的潜在对手（the chokepoint）。</text>
+<ellipse cx="1031.00" cy="420.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="648.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="648.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁在付钱 / who pays</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Impulse 与产品线</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱最终汇向哪里 / where it pools</text>
+<path d="M 256.00 258.00 C 369.50 258.00, 369.50 407.00, 483.00 407.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 384.00 C 369.50 384.00, 369.50 424.50, 483.00 424.50" fill="none" stroke="url(#mfgold)" stroke-width="11.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 496.00 C 369.50 496.00, 369.50 434.50, 483.00 434.50" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 600.00 C 369.50 600.00, 369.50 442.00, 483.00 442.00" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 409.50 C 810.50 409.50, 810.50 306.00, 924.00 306.00" fill="none" stroke="url(#mfgold)" stroke-width="20.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 426.50 C 810.50 426.50, 810.50 442.00, 924.00 442.00" fill="none" stroke="url(#mfgold)" stroke-width="14.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 437.00 C 810.50 437.00, 810.50 556.00, 924.00 556.00" fill="none" stroke="url(#mfgold)" stroke-width="7.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="326.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$500M Series D</text>
+<text x="369.50" y="398.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">Space Force $34.5M</text>
+<text x="810.50" y="351.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">3 dedicated F9</text>
+<rect x="42.00" y="198.00" width="214" height="120.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="198.00" width="3" height="120.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">VENTURE CAPITAL</text>
+<text x="60.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">137 Ventures · Banner VC</text>
+<text x="60.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Founders Fund · Lux · Linse</text>
+<text x="60.00" y="286.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">&gt;$1B raised · $500M Series D</text>
+<rect x="42.00" y="334.00" width="214" height="100.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="334.00" width="3" height="100.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="367.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">美国政府 / 国防</text>
+<text x="60.00" y="388.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Space Force VICTUS $34.5M</text>
+<text x="60.00" y="405.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">SDA HALO · NASA · Golden Dome</text>
+<rect x="42.00" y="450.00" width="214" height="92.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="450.00" width="3" height="92.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="483.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">商业卫星运营商</text>
+<text x="60.00" y="504.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">SES 4-ton GEO</text>
+<text x="60.00" y="521.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Astranis · Infinite Orbits</text>
+<rect x="42.00" y="558.00" width="214" height="84.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="558.00" width="3" height="84.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="591.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">空间站 / 在轨服务</text>
+<text x="60.00" y="612.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Vast Haven-1 推进系统</text>
+<text x="60.00" y="629.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Orbit Fab 在轨加注</text>
+<rect x="483.00" y="345.00" width="214" height="150.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="345.00" width="3" height="150.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="378.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">IMPULSE SPACE</text>
+<text x="501.00" y="399.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">In-space mobility</text>
+<text x="501.00" y="416.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">Helios · Mira · Caravan</text>
+<text x="501.00" y="433.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">自研发动机 (Saiph/Deneb/Rigel)</text>
+<rect x="924.00" y="241.00" width="214" height="130.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="241.00" width="3" height="130.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="274.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">SPACEX FALCON 9</text>
+<text x="942.00" y="295.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">每次任务都搭 F9</text>
+<text x="942.00" y="312.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">已购 3 次专属 Falcon 9</text>
+<text x="942.00" y="329.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">发射通道=最大对手</text>
+<rect x="924.00" y="387.00" width="214" height="110.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="387.00" width="3" height="110.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="420.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">自研制造 / IN-HOUSE BUILD</text>
+<text x="942.00" y="441.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">发动机·COPV·航电</text>
+<text x="942.00" y="458.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">Redondo Beach + Mojave</text>
+<text x="942.00" y="475.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">vertical integration</text>
+<rect x="924.00" y="513.00" width="214" height="86.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="513.00" width="3" height="86.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="546.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">推进剂 / 组件 / 部署器</text>
+<text x="942.00" y="567.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">N2O/ethane · LOX/methane</text>
+<text x="942.00" y="584.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Exolaunch 部署器</text>
+<rect x="42.00" y="668.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="672.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="670.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="670.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="670.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="670.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="672.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="672.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="663.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="747.00" y="672.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="886.20" y="663.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="905.20" y="672.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="979.60" y="663.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="998.60" y="672.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="708.00" x2="1138" y2="708.00" stroke="#222a3a"/>
+<text x="42.00" y="724.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 看懂这张图</text>
+<rect x="42.00" y="744.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="744.00" width="3" height="132.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="768.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">CAPITAL IN · 风险资本</text>
+<text x="58.00" y="786.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">在收入规模化之前先被资本喂饱</text>
+<text x="58.00" y="810.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Impulse</tspan><tspan fill="#9aa3b8" font-weight="400"> 自</tspan><tspan fill="#9aa3b8" font-weight="400"> 2021</tspan><tspan fill="#9aa3b8" font-weight="400"> 年起累计融资</tspan><tspan fill="#f4d58a" font-weight="700"> over</tspan><tspan fill="#f4d58a" font-weight="700"> $1</tspan><tspan fill="#f4d58a" font-weight="700"> billion</tspan><tspan fill="#9aa3b8" font-weight="400"> ，含</tspan><tspan fill="#9aa3b8" font-weight="400"> 2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> 6</tspan><tspan fill="#9aa3b8" font-weight="400"> 月</tspan></text>
+<text x="58.00" y="826.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$500M</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#9aa3b8" font-weight="400"> Series</tspan><tspan fill="#9aa3b8" font-weight="400"> D、估值约</tspan><tspan fill="#f4d58a" font-weight="700"> $4.26B</tspan></text>
+<text x="58.00" y="842.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">（Reuters）——当下最大的现金流入来自资本，而非客户付款。</tspan></text>
+<rect x="412.00" y="744.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="744.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="768.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">DEMAND · 政府国防</text>
+<text x="428.00" y="786.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">国防订单撑起在手合同</text>
+<text x="428.00" y="810.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">截至</tspan><tspan fill="#9aa3b8" font-weight="400"> 2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> 6</tspan><tspan fill="#9aa3b8" font-weight="400"> 月，已签</tspan><tspan fill="#f4d58a" font-weight="700"> 30+</tspan><tspan fill="#9aa3b8" font-weight="400"> 份合同、总额</tspan><tspan fill="#f4d58a" font-weight="700"> ~$200M</tspan><tspan fill="#9aa3b8" font-weight="400"> ，以</tspan><tspan fill="#f4d58a" font-weight="700"> $34.5M</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#9aa3b8" font-weight="400"> Space</tspan></text>
+<text x="428.00" y="826.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Force</tspan><tspan fill="#9aa3b8" font-weight="400"> VICTUS</tspan><tspan fill="#9aa3b8" font-weight="400"> SURGO/SALO</tspan><tspan fill="#9aa3b8" font-weight="400"> 为代表，并加入</tspan><tspan fill="#9aa3b8" font-weight="400"> Anduril</tspan><tspan fill="#9aa3b8" font-weight="400"> 牵头的</tspan><tspan fill="#9aa3b8" font-weight="400"> Golden</tspan></text>
+<text x="428.00" y="842.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Dome</tspan><tspan fill="#9aa3b8" font-weight="400"> 在轨拦截器团队。</tspan></text>
+<rect x="782.00" y="744.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="782.00" y="744.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="798.00" y="768.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">DEMAND · 商业 GEO</text>
+<text x="798.00" y="786.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">SES 是 Helios 首个商业客户</text>
+<text x="798.00" y="810.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">SES</tspan><tspan fill="#9aa3b8" font-weight="400"> 签下多发协议，要把</tspan><tspan fill="#f4d58a" font-weight="700"> 4-ton</tspan><tspan fill="#9aa3b8" font-weight="400"> 级载荷在</tspan><tspan fill="#f4d58a" font-weight="700"> &lt;8</tspan><tspan fill="#f4d58a" font-weight="700"> hours</tspan><tspan fill="#9aa3b8" font-weight="400"> 内从</tspan><tspan fill="#9aa3b8" font-weight="400"> LEO</tspan><tspan fill="#9aa3b8" font-weight="400"> 直送</tspan><tspan fill="#9aa3b8" font-weight="400"> GEO；</tspan></text>
+<text x="798.00" y="826.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Astranis</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> Infinite</tspan><tspan fill="#f4d58a" font-weight="700"> Orbits</tspan><tspan fill="#9aa3b8" font-weight="400"> 紧随其后，2027</tspan><tspan fill="#9aa3b8" font-weight="400"> 年起飞。</tspan></text>
+<rect x="42.00" y="890.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="890.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="914.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">MONEY OUT · 发射</text>
+<text x="58.00" y="932.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">SpaceX 是绕不开的咽喉</text>
+<text x="58.00" y="956.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">三次</tspan><tspan fill="#9aa3b8" font-weight="400"> Mira</tspan><tspan fill="#9aa3b8" font-weight="400"> 任务全部搭乘</tspan><tspan fill="#f4d58a" font-weight="700"> Falcon</tspan><tspan fill="#f4d58a" font-weight="700"> 9</tspan><tspan fill="#9aa3b8" font-weight="400"> （Transporter-9/12/15）；Impulse</tspan></text>
+<text x="58.00" y="972.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">为</tspan><tspan fill="#9aa3b8" font-weight="400"> Caravan</tspan><tspan fill="#9aa3b8" font-weight="400"> 计划买下</tspan><tspan fill="#f4d58a" font-weight="700"> 3</tspan><tspan fill="#9aa3b8" font-weight="400"> 次专属</tspan><tspan fill="#9aa3b8" font-weight="400"> Falcon</tspan><tspan fill="#9aa3b8" font-weight="400"> 9——它的发射供应商同时是其最大的相邻对手。</tspan></text>
+<rect x="412.00" y="890.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="890.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="914.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">MONEY OUT · 制造</text>
+<text x="428.00" y="932.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">垂直整合把现金留在体内</text>
+<text x="428.00" y="956.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Impulse</tspan><tspan fill="#9aa3b8" font-weight="400"> 自研车辆的大部分——</tspan><tspan fill="#f4d58a" font-weight="700"> Saiph</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> Deneb</tspan><tspan fill="#9aa3b8" font-weight="400"> 发动机、COPV、航电——都在</tspan></text>
+<text x="428.00" y="972.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Redondo</tspan><tspan fill="#f4d58a" font-weight="700"> Beach</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#f4d58a" font-weight="700"> Mojave</tspan><tspan fill="#9aa3b8" font-weight="400"> 自制，复刻</tspan><tspan fill="#9aa3b8" font-weight="400"> Mueller</tspan><tspan fill="#9aa3b8" font-weight="400"> 在</tspan><tspan fill="#9aa3b8" font-weight="400"> SpaceX</tspan><tspan fill="#9aa3b8" font-weight="400"> 的打法。</tspan></text>
+<rect x="782.00" y="890.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="782.00" y="890.00" width="3" height="116.00" rx="2" fill="#d9a05b"/>
+<text x="798.00" y="914.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">PRODUCT · 推进</text>
+<text x="798.00" y="932.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">推进系统本身也是一条产品线</text>
+<text x="798.00" y="956.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Impulse</tspan><tspan fill="#9aa3b8" font-weight="400"> 为</tspan><tspan fill="#f4d58a" font-weight="700"> Vast</tspan><tspan fill="#f4d58a" font-weight="700"> Haven-1</tspan><tspan fill="#9aa3b8" font-weight="400"> 商业空间站提供整套推进系统，基于</tspan><tspan fill="#f4d58a" font-weight="700"> Saiph</tspan></text>
+<text x="798.00" y="972.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">（N2O/ethane）发动机——发动机既是投入，也是收入。</tspan></text>
+<text x="590.00" y="1042.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Impulse Space Series D PR (2026-06-03) · Reuters/KFGO (2026-06-02, $4.26B) · Series C PR (2025-06-03, 30+ contracts ~$200M) · Space Force $34.5M PR (2024-10-03) · SES multi-launch PR (2025-05-22) · BusinessWire 3× Falcon 9 (2024-11-14) · impulsespace.com/approach · Vast Haven-1 PR (2023-06-15)</text>
+</svg>
