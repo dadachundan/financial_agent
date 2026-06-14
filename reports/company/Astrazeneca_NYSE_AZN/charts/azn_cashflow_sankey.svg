@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">AstraZeneca FY2025 现金流量表 Sankey (Cash Flow)</text>
+<path d="M 204.00,70.51 C 306.00,70.51 306.00,85.00 408.00,85.00 L 408.00,206.31 C 306.00,206.31 306.00,191.82 204.00,191.82 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,85.00 C 526.00,85.00 526.00,71.00 628.00,71.00 L 628.00,93.41 C 526.00,93.41 526.00,107.41 424.00,107.41 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,107.41 C 526.00,107.41 526.00,107.41 628.00,107.41 L 628.00,275.98 C 526.00,275.98 526.00,275.98 424.00,275.98 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,275.98 C 526.00,275.98 526.00,289.98 628.00,289.98 L 628.00,547.00 C 526.00,547.00 526.00,533.00 424.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 644.00,107.41 C 746.00,107.41 746.00,203.72 848.00,203.72 L 848.00,314.79 C 746.00,314.79 746.00,218.48 644.00,218.48 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,218.48 C 746.00,218.48 746.00,328.79 848.00,328.79 L 848.00,365.66 C 746.00,365.66 746.00,255.35 644.00,255.35 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,255.35 C 746.00,255.35 746.00,379.66 848.00,379.66 L 848.00,391.30 C 746.00,391.30 746.00,266.99 644.00,266.99 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,266.99 C 746.00,266.99 746.00,405.30 848.00,405.30 L 848.00,414.28 C 746.00,414.28 746.00,275.98 644.00,275.98 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,205.82 C 306.00,205.82 306.00,206.31 408.00,206.31 L 408.00,531.97 C 306.00,531.97 306.00,531.49 204.00,531.49 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,545.49 C 306.00,545.49 306.00,531.97 408.00,531.97 L 408.00,533.97 C 306.00,533.97 306.00,547.49 204.00,547.49 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="70.51" width="16" height="121.31" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="205.82" width="16" height="325.67" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="545.49" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="85.00" width="16" height="448.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="71.00" width="16" height="22.41" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="107.41" width="16" height="168.56" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="289.98" width="16" height="257.02" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="203.72" width="16" height="111.07" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="328.79" width="16" height="36.87" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="379.66" width="16" height="11.64" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="405.30" width="16" height="8.98" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="128.17" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="141.17" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.4B  (27.1%)</text>
+<rect x="207.00" y="178.33" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="190.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="203.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$14.6B  (72.7%)</text>
+<rect x="207.00" y="518.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="210.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$46.0M  (0.23%)</text>
+<rect x="427.00" y="67.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$20.1B  (100.0%)</text>
+<rect x="647.00" y="53.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.0B  (5.0%)</text>
+<rect x="647.00" y="89.41" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="101.41" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="114.41" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$7.5B  (37.6%)</text>
+<text x="653.00" y="415.49" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="428.49" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$11.5B  (57.4%)</text>
+<text x="873.00" y="256.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Dividends paid</text>
+<text x="873.00" y="269.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.0B  (24.8%)</text>
+<text x="873.00" y="344.22" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net debt repaid</text>
+<text x="873.00" y="357.22" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.6B  (8.2%)</text>
+<text x="873.00" y="382.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Buybacks/EBT</text>
+<text x="873.00" y="395.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$521.0M  (2.6%)</text>
+<text x="873.00" y="407.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other financing</text>
+<text x="873.00" y="420.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$402.0M  (2.0%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = $8.7B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: AstraZeneca FY2025 results announcement (filed 2026-02-10) · SEC 6-K</text>
+</svg>

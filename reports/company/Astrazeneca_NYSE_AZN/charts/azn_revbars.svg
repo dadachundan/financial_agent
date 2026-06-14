@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">AstraZeneca 收入演变 FY2021–FY2025 (by Therapy Area, $m)</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Oncology</text>
+<rect x="102.80" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="118.80" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">CVRM</text>
+<rect x="159.20" y="44" width="11" height="11" rx="2" fill="#d97706"/>
+<text x="175.20" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">R&amp;I</text>
+<rect x="209.00" y="44" width="11" height="11" rx="2" fill="#7c3aed"/>
+<text x="225.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Rare Disease</text>
+<rect x="318.20" y="44" width="11" height="11" rx="2" fill="#dc2626"/>
+<text x="334.20" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">V&amp;I+Other</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$12.7B</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$25.4B</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$38.1B</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$50.8B</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$63.4B</text>
+<rect x="102.09" y="339.73" width="88.62" height="72.27" fill="#2563eb"/>
+<rect x="102.09" y="291.07" width="88.62" height="48.66" fill="#15803d"/>
+<rect x="102.09" y="261.65" width="88.62" height="29.42" fill="#d97706"/>
+<rect x="102.09" y="240.24" width="88.62" height="21.41" fill="#7c3aed"/>
+<rect x="102.09" y="215.37" width="88.62" height="24.87" fill="#dc2626"/>
+<text x="146.40" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2021</text>
+<rect x="254.89" y="329.92" width="88.62" height="82.08" fill="#2563eb"/>
+<rect x="254.89" y="275.21" width="88.62" height="54.72" fill="#15803d"/>
+<rect x="254.89" y="242.22" width="88.62" height="32.99" fill="#d97706"/>
+<rect x="254.89" y="204.43" width="88.62" height="37.78" fill="#7c3aed"/>
+<rect x="254.89" y="178.39" width="88.62" height="26.04" fill="#dc2626"/>
+<text x="299.20" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2022</text>
+<rect x="407.69" y="321.34" width="88.62" height="90.66" fill="#2563eb"/>
+<rect x="407.69" y="264.98" width="88.62" height="56.36" fill="#15803d"/>
+<rect x="407.69" y="230.86" width="88.62" height="34.12" fill="#d97706"/>
+<rect x="407.69" y="190.00" width="88.62" height="40.86" fill="#7c3aed"/>
+<rect x="407.69" y="171.00" width="88.62" height="19.00" fill="#dc2626"/>
+<text x="452.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2023</text>
+<rect x="560.49" y="297.96" width="88.62" height="114.04" fill="#2563eb"/>
+<rect x="560.49" y="233.79" width="88.62" height="64.17" fill="#15803d"/>
+<rect x="560.49" y="192.63" width="88.62" height="41.16" fill="#d97706"/>
+<rect x="560.49" y="146.95" width="88.62" height="45.68" fill="#7c3aed"/>
+<rect x="560.49" y="127.31" width="88.62" height="19.64" fill="#dc2626"/>
+<text x="604.80" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2024</text>
+<rect x="713.29" y="277.12" width="88.62" height="134.88" fill="#2563eb"/>
+<rect x="713.29" y="209.87" width="88.62" height="67.25" fill="#15803d"/>
+<rect x="713.29" y="163.19" width="88.62" height="46.68" fill="#d97706"/>
+<rect x="713.29" y="115.14" width="88.62" height="48.05" fill="#7c3aed"/>
+<rect x="713.29" y="102.74" width="88.62" height="12.40" fill="#dc2626"/>
+<text x="757.60" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2025</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: AstraZeneca FY2021–FY2025 results announcements · SEC 6-K filings</text>
+</svg>
