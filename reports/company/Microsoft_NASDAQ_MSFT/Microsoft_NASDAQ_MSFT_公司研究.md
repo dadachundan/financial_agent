@@ -1,12 +1,12 @@
 # Microsoft Corporation (NASDAQ:MSFT) — 公司研究报告
 
-**截至日期: 2026-06-13**
+**截至日期: 2026-06-14**
 **上市地: 纳斯达克全球精选市场 (NASDAQ Global Select Market), 代码 MSFT**
 **注册地: 美国华盛顿州雷德蒙德 (Redmond, Washington)**
 **报告语言: 简体中文 (本目录另存有英文版, 本次刷新仅更新中文版)**
 **分析师备注:** 深度公司画像 / 维持覆盖。除非另行注明, 所有金额均以美元计。Microsoft 财政年度于 6 月 30 日结束——"2025 财年 (FY2025)"指截至 2025 年 6 月 30 日止的十二个月; "2026 财年 Q3 (3Q FY26)"指截至 2026 年 3 月 31 日止的季度。
 
-> *分析师观点：* **评级：Buy（买入）· 12 个月目标价 US$500（较 2026-06-13 现价 US$390.74 上行 +28%）· 估值方法：FY2027E 非 GAAP EPS US$19.4 × 25.8× forward P/E · 市值约 2.90 万亿美元 · 52 周区间 US$356.28–US$555.45 · NASDAQ:MSFT**
+> *分析师观点：* **评级：Buy（买入）· 12 个月目标价 US$500（较 2026-06-14 现价 US$390.74 上行 +28%）· 估值方法：FY2027E 非 GAAP EPS US$19.4 × 25.8× forward P/E · 市值约 2.90 万亿美元 · 52 周区间 US$356.28–US$555.45 · NASDAQ:MSFT**
 >
 > | 倍数 / Multiple (*分析师观点：* 前瞻列) | FY2025A | FY2026E | FY2027E |
 > |---|---|---|---|
@@ -15,7 +15,7 @@
 > | P/S | 9.1× | 8.0× | 6.9× |
 > | EV/EBITDA | ~18× | ~16× | ~13× |
 >
-> **相对表现 (Relative performance):** MSFT 自 52 周高点 US$555.45 已回撤约 −30%; 过去 12 个月绝对回报约 −18%, 同期 S&P 500 约 +8%——相对基准跑输约 −26 个百分点 (price source: [Yahoo Finance — MSFT, as of 2026-06-13](https://finance.yahoo.com/quote/MSFT/)). 这是 Microsoft 近十年最深的一次相对回调, 也是当前投资逻辑的"为什么是现在 (why-now)"。
+> **相对表现 (Relative performance):** MSFT 自 52 周高点 US$555.45 已回撤约 −30%; 过去 12 个月绝对回报约 −18%, 同期 S&P 500 约 +8%——相对基准跑输约 −26 个百分点 (price source: [Yahoo Finance — MSFT, as of 2026-06-14](https://finance.yahoo.com/quote/MSFT/)). 这是 Microsoft 近十年最深的一次相对回调, 也是当前投资逻辑的"为什么是现在 (why-now)"。
 >
 > **核心论点 (thesis pillars)** ——(1) **AI 已是净增量而非蚕食**: AI 业务年化营收运行率 (annual revenue run rate) 突破 370 亿美元 (同比 +123%, 占总营收逾 11%), 而 M365 Copilot 付费席位破 2,000 万、营业利润率不降反升; (2) **6,270 亿美元已签约积压 (cRPO)** 锁定约 2.2 年云营收, 为超大市值科技股中最确定的前瞻底盘; (3) **当前 25× TTM / 20× forward P/E 已较自身三年均值 (~32×) 与同业 (GOOG/AMZN ~25–27×) 折价**, 计入了资本开支爬坡与 OpenAI 重组担忧——风险-回报偏正向; (4) **OpenAI 关系从"独家"转"非独家"反而对 Azure 利润率构成净利好** (取消版税与收入分成, 同时锁定 2,500 亿美元 Azure 增量合同至 2032 年)。
 >
@@ -46,7 +46,7 @@
 
 ## 1. 公司概览
 
-*分析师观点：* **维持 Buy（买入）评级, 12 个月目标价 US$500, 较 2026-06-13 现价 US$390.74 上行约 +28%。** 当前是介入 Microsoft 的一个不寻常窗口——这只超大市值科技股自 2025 年初约 US$555 的高点回撤约 30%, 创近十年最深的相对跑输, 而基本面在同期反而改善: AI 年化运行率破 370 亿美元、cRPO 破 6,270 亿美元、营业利润率不降反升。市场担心的三件事——资本开支爬坡、OpenAI 关系松动、Azure 未出现"决定性加速"——本报告认为前两者其实对 Microsoft 中期利润率构成净利好, 第三者只是时点问题而非趋势逆转。"为什么是现在": 估值折价 + 已签约积压可见度 + AI 从成本走向利润这三者的交汇 (详见第 1A、9.5 章)。
+*分析师观点：* **维持 Buy（买入）评级, 12 个月目标价 US$500, 较 2026-06-14 现价 US$390.74 上行约 +28%。** 当前是介入 Microsoft 的一个不寻常窗口——这只超大市值科技股自 2025 年初约 US$555 的高点回撤约 30%, 创近十年最深的相对跑输, 而基本面在同期反而改善: AI 年化运行率破 370 亿美元、cRPO 破 6,270 亿美元、营业利润率不降反升。市场担心的三件事——资本开支爬坡、OpenAI 关系松动、Azure 未出现"决定性加速"——本报告认为前两者其实对 Microsoft 中期利润率构成净利好, 第三者只是时点问题而非趋势逆转。"为什么是现在": 估值折价 + 已签约积压可见度 + AI 从成本走向利润这三者的交汇 (详见第 1A、9.5 章)。
 
 Microsoft Corporation 是一家总部位于美国华盛顿州雷德蒙德的软件与服务平台公司, 目前是**全球最大的企业级软件特许经营商 (enterprise-software franchise)**、**第二大公有云平台 (public-cloud platform) Azure 的运营者**、**全球最大的专业社交网络 (LinkedIn) 运营者**、**收购 Activision Blizzard 之后按营业收入计算最大的主机与 PC 游戏发行商**, 并且通过对 OpenAI 的经济权益成为**领先前沿 AI 实验室 (frontier-AI lab) 的最紧密商业伙伴**。公司由 Bill Gates 和 Paul Allen 于 1975 年创立, 1986 年公开上市 (IPO), 目前由董事长兼 CEO Satya Nadella (自 2014 年 2 月 4 日起任 CEO) 领导。([2025 财年 10-K——第 1 项, 业务](https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/0000950170-25-100235-index.htm); [Synergy Research——云市场份额 2026 年 Q1, 2026-05](https://www.srgresearch.com/articles/cloud-market-share-trends-big-three-together-hold-63-while-oracle-and-the-neoclouds-inch-higher))
 
@@ -268,7 +268,7 @@ Microsoft Corporation 是一家总部位于美国华盛顿州雷德蒙德的软�
 
 ### 估值快照 (TTM)
 
-通过 `yfinance` 数据源于 **2026-06-13** 自 Yahoo Finance 获取 (周末取最近一个交易日 2026-06-12 收盘):
+通过 `yfinance` 数据源于 **2026-06-14** 自 Yahoo Finance 获取 (周末取最近一个交易日 2026-06-12 收盘, 现价 US$390.74 与上次刷新一致):
 
 | 指标 | MSFT | GOOG | ORCL | AMZN | CRM |
 |---|---|---|---|---|---|
@@ -279,7 +279,7 @@ Microsoft Corporation 是一家总部位于美国华盛顿州雷德蒙德的软�
 | TTM 市销率 (P/S) | **9.1×** | 10.3× | 7.9× | 3.5× | 3.2× |
 | 52 周价格区间 | 356.28–555.45 美元 | 163.33–404.47 美元 | 134.57–345.72 美元 | 196.00–278.56 美元 | 161.40–276.80 美元 |
 
-来源: [Yahoo Finance——MSFT](https://finance.yahoo.com/quote/MSFT/key-statistics)、[GOOG](https://finance.yahoo.com/quote/GOOG/key-statistics)、[ORCL](https://finance.yahoo.com/quote/ORCL/key-statistics)、[AMZN](https://finance.yahoo.com/quote/AMZN/key-statistics)、[CRM](https://finance.yahoo.com/quote/CRM/key-statistics) (as of 2026-06-13)。
+来源: [Yahoo Finance——MSFT](https://finance.yahoo.com/quote/MSFT/key-statistics)、[GOOG](https://finance.yahoo.com/quote/GOOG/key-statistics)、[ORCL](https://finance.yahoo.com/quote/ORCL/key-statistics)、[AMZN](https://finance.yahoo.com/quote/AMZN/key-statistics)、[CRM](https://finance.yahoo.com/quote/CRM/key-statistics) (as of 2026-06-14)。
 
 **结论。** 以 23.3× TTM 盈利与 9.1× TTM 营业收入计, MSFT 在市盈率维度**相较超大市值软件 / 云同业群体存在折价** (GOOG/AMZN/ORCL 平均约 30×), 仅高于深度回调中的 CRM。两点解释这一相对便宜: (i) Microsoft 的分母比同业更具盈利能力——净利率约 36% 高于 Alphabet 约 28%、Amazon 约 8%——同样的市值"挣进"任何倍数都更快; (ii) 股价自 52 周高点 555.45 美元回撤约 30%, 反映投资者对 2026 财年资本开支爬坡 (capex ramp, 详见风险 #1) 以及 2025 年 10 月 OpenAI 重组 (详见第 4、9 章) 的担忧。当前 23.3× TTM / 20.2× forward 大致是 MSFT 自身三年均值约 32× 减去明显折价的水平。*分析师观点：* 卖方对此折价持类似看法——瑞银 (UBS) 指出公司虽以 2026 日历年约 49× 自由现金流 (FCF) 交易看似不便宜, 但考虑 AI 领导地位与 Azure 潜在加速, "估值仍属合理"; 高盛 (GS) 更直接称 3Q26 是"扭转多季度表现不佳的第一步"([UBS——MSFT: 对修订版 OpenAI 协议的解读, 2026-04-27, p.1, 报告日收盘 US$424.82](http://xs-macbook-air.local:5001/zsxq/pdf/212212585484141/UBS-Microsoft%20Corp.%EF%BC%88MSFT.US%EF%BC%89Our%20Take%20on%20the%20Revised%20OpenAI%20Agreement-260427.pdf); [Goldman Sachs——MSFT: 多个新里程碑驳斥空头论点, 2026-04-30, p.1, 报告日收盘 US$406.90](http://xs-macbook-air.local:5001/zsxq/pdf/812212244124212/Goldman%20Sachs-Microsoft%20Corp.%20%EF%BC%88MSFT.US%EF%BC%89%20Several%20new%20milestones%20to%20disprove%20the%20bear%20case-260430.pdf))。我们认为当前价位不存在估值泡沫风险; 倍数压缩风险仅在 Azure 急剧减速或 AI 资本开支增量回报率 (incremental ROIC) 跌破云业务现有毛利率门槛时才会触发。
 
@@ -317,7 +317,7 @@ Microsoft Corporation 是一家总部位于美国华盛顿州雷德蒙德的软�
 
 **方法: 前瞻市盈率 × 目标倍数。** US$500 = **FY2027E 非 GAAP EPS US$19.4 × 25.8× forward P/E**。
 
-为什么用约 26× 这个倍数: 同业前瞻市盈率锚——GOOG 24.7×、AMZN 24.2×、ORCL 16.9× (after AI 基础设施折旧拖累)、CRM 10.7× ([Yahoo Finance, 2026-06-13](https://finance.yahoo.com/quote/MSFT/key-statistics))。Microsoft 应享有相对 GOOG/AMZN 的小幅溢价, 因其 (i) 净利率最高 (~36%)、(ii) 已签约 cRPO 可见度最强、(iii) 营业利润率在 AI 周期中扩张而非压缩。26× 仍明显低于 MSFT 自身三年均值约 32×, 也低于大摩 30× 的 CY27 假设, 因此是一个"折价的合理倍数"而非乐观倍数。这一目标价**与最保守的卖方多头 (UBS US$510, 22× FY27 非 GAAP EPS) 大致对齐**, 系统性低于大摩 US$650、高盛 US$610、Bernstein US$646、HSBC US$667——我们刻意把锚定在偏保守一端, 以反映资本开支爬坡的 FCF 不确定性。
+为什么用约 26× 这个倍数: 同业前瞻市盈率锚——GOOG 24.7×、AMZN 24.2×、ORCL 16.9× (after AI 基础设施折旧拖累)、CRM 10.7× ([Yahoo Finance, 2026-06-14](https://finance.yahoo.com/quote/MSFT/key-statistics))。Microsoft 应享有相对 GOOG/AMZN 的小幅溢价, 因其 (i) 净利率最高 (~36%)、(ii) 已签约 cRPO 可见度最强、(iii) 营业利润率在 AI 周期中扩张而非压缩。26× 仍明显低于 MSFT 自身三年均值约 32×, 也低于大摩 30× 的 CY27 假设, 因此是一个"折价的合理倍数"而非乐观倍数。这一目标价**与最保守的卖方多头 (UBS US$510, 22× FY27 非 GAAP EPS) 大致对齐**, 系统性低于大摩 US$650、高盛 US$610、Bernstein US$646、HSBC US$667——我们刻意把锚定在偏保守一端, 以反映资本开支爬坡的 FCF 不确定性。
 
 ### (c) 牛 / 基准 / 熊情景 (bull / base / bear)
 
@@ -494,7 +494,7 @@ Microsoft Corporation 是一家总部位于美国华盛顿州雷德蒙德的软�
 <circle cx="135.9" cy="200.9" r="2.6" fill="#2e8b57"/>
 <circle cx="349.9" cy="205.6" r="2.6" fill="#2e8b57"/>
 <circle cx="285.3" cy="286.5" r="2.6" fill="#2e8b57"/>
-<text x="250" y="470" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">Source: MSFT FY2025 10-K · Yahoo Finance · indicators.db, as of 2026-06-13</text>
+<text x="250" y="470" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">Source: MSFT FY2025 10-K · Yahoo Finance · indicators.db, as of 2026-06-14</text>
 <text x="250" y="485" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#52606d">GF Score = independent analyst rubric (*Analyst view:*) — not GuruFocus™ official number</text>
 </svg>
 
@@ -515,9 +515,9 @@ Microsoft Corporation 是一家总部位于美国华盛顿州雷德蒙德的软�
 
 **Growth (成长性): 8/10。** 营收三年 CAGR 约 15% (211.9 亿→281.7 亿美元, FY23→FY25)、净利同步约两位数复合; 前瞻 (第 1A 章) FY25→FY28E 营收 CAGR 约 17%, AI 运行率同比 +123%。([2025 财年 10-K——损益表](https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/0000950170-25-100235-index.htm); [2026 财年 Q3 公告——AI ARR](https://www.sec.gov/Archives/edgar/data/789019/000119312526191457/msft-ex99_1.htm)) 不给 9–10 是因增速虽稳健但低于"25–30%+"的最高成长档。
 
-**GF Value (估值, 越高越便宜): 7/10。** TTM P/E 23.3×、forward 20.2× 双双**低于自身三年均值约 32× 与同业中位约 28×**; PEG 约 1.4 (大摩口径), 计入约 17% 的 EPS CAGR 后并不贵; 相对本报告 PT 区间隐含 +28% 上行 (基准) → 安全边际 (margin of safety) 中性偏正。([Yahoo Finance, 2026-06-13](https://finance.yahoo.com/quote/MSFT/key-statistics); [Morgan Stanley——PEG 约 1.4, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/415515552121218/MS-Microsoft%20North%20America%203Q26%20Results%20%E2%80%93%20Onto%20Newer%20and%20Better%20Things-260430.pdf))
+**GF Value (估值, 越高越便宜): 7/10。** TTM P/E 23.3×、forward 20.2× 双双**低于自身三年均值约 32× 与同业中位约 28×**; PEG 约 1.4 (大摩口径), 计入约 17% 的 EPS CAGR 后并不贵; 相对本报告 PT 区间隐含 +28% 上行 (基准) → 安全边际 (margin of safety) 中性偏正。([Yahoo Finance, 2026-06-14](https://finance.yahoo.com/quote/MSFT/key-statistics); [Morgan Stanley——PEG 约 1.4, 2026-04-30](http://xs-macbook-air.local:5001/zsxq/pdf/415515552121218/MS-Microsoft%20North%20America%203Q26%20Results%20%E2%80%93%20Onto%20Newer%20and%20Better%20Things-260430.pdf))
 
-**Momentum (动量): 4/10。** 这是唯一的弱项: 股价自 52 周高点 US$555.45 回撤约 30%、跌破 200 日均线、过去 12 个月绝对回报约 −18% 而同期 S&P 500 约 +8% (相对跑输约 −26pct)。([Yahoo Finance——MSFT, 2026-06-13](https://finance.yahoo.com/quote/MSFT/)) 价格动量是最差维度——但对一个估值折价的优质资产, 这恰是逆向介入点。
+**Momentum (动量): 4/10。** 这是唯一的弱项: 股价自 52 周高点 US$555.45 回撤约 30%、跌破 200 日均线、过去 12 个月绝对回报约 −18% 而同期 S&P 500 约 +8% (相对跑输约 −26pct)。([Yahoo Finance——MSFT, 2026-06-14](https://finance.yahoo.com/quote/MSFT/)) 价格动量是最差维度——但对一个估值折价的优质资产, 这恰是逆向介入点。
 
 **综合算术:** (FS·20 + Prof·25 + Growth·25 + Value·15 + Mom·15)/100 = (9·20 + 10·25 + 8·25 + 7·15 + 4·15)/100 = 7.95 → **80/100** (权重 20/25/25/15/15, 默认权重)。
 
@@ -765,6 +765,142 @@ Microsoft 在**四个汇聚于企业 IT 预算的行业**中竞争: 企业生产
 ### 行业结构
 
 IaaS + PaaS 是真正的寡头市场, 进入壁垒极高: 最低有效规模在数据中心容量上达数十吉瓦、年度资本开支达数百亿美元。前三家差异适中 (价格、服务广度、地理覆盖); 转换成本高 (出口费用、数据重力、监管合同); 仅前 50 大企业有较高买方议价权。GPU (Nvidia)、电力 (公用事业)、土地 (房地产) 供应商在供给紧张时议价权上升。监管是现有龙头主要的结构性风险来源——详见第 9 章。([英国 CMA——云服务市场调查, 2024-10-04](https://www.gov.uk/cma-cases/cloud-services-market-investigation))
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1062" width="1180" height="1062" role="img" aria-label="微软 ~$1,900 亿美元 AI 资本开支流向哪里 / Where Microsoft's ~$190B AI capex lands" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1062" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">HYPERSCALER AI CAPEX MONEY FLOW · CY2026E</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">微软 ~$1,900 亿美元 AI 资本开支流向哪里 / Where Microsoft's ~$190B AI capex</text>
+<text x="42.00" y="138.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">lands</text>
+<text x="42.00" y="180.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">数据中心建设支出从 Microsoft 流出，分散到 GPU、自研芯片、内存、电力与土地，最终回流并集中到少数几个上游卡点：Nvidia、TSMC/CoWoS 与 HBM 三巨头。</text>
+<ellipse cx="1031.00" cy="448.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="226.00" x2="369.50" y2="666.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="226.00" x2="810.50" y2="666.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="226.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱 / who pays</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="226.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">买什么 / what they buy</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="226.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱最终汇向哪里 / where it pools</text>
+<path d="M 256.00 433.50 C 369.50 433.50, 369.50 291.50, 483.00 291.50" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 449.00 C 369.50 449.00, 369.50 401.50, 483.00 401.50" fill="none" stroke="url(#mfgold)" stroke-width="7.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 460.50 C 369.50 460.50, 369.50 511.50, 483.00 511.50" fill="none" stroke="url(#mfgold)" stroke-width="16.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 471.50 C 369.50 471.50, 369.50 613.00, 483.00 613.00" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 278.50 C 810.50 278.50, 810.50 283.00, 924.00 283.00" fill="none" stroke="url(#mfgold)" stroke-width="22.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 613.00 C 810.50 613.00, 810.50 613.00, 924.00 613.00" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 296.50 C 810.50 296.50, 810.50 390.00, 924.00 390.00" fill="none" stroke="url(#mfgold)" stroke-width="14.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 309.50 C 810.50 309.50, 810.50 503.00, 924.00 503.00" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 401.50 C 810.50 401.50, 810.50 400.00, 924.00 400.00" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="356.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">外购 GPU (最大单项)</text>
+<text x="810.50" y="400.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">~$25B 元器件通胀含内存</text>
+<rect x="42.00" y="373.00" width="214" height="150.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="373.00" width="3" height="150.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="406.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">MICROSOFT</text>
+<text x="60.00" y="427.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">CY2026E capex ~$190B</text>
+<text x="60.00" y="444.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Azure / AI 数据中心建设</text>
+<rect x="483.00" y="244.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="244.50" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="277.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">GPU 加速器</text>
+<text x="501.00" y="298.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Nvidia GB200/GB300</text>
+<text x="501.00" y="315.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">AMD MI3xx</text>
+<rect x="483.00" y="354.50" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="354.50" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="387.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">自研芯片</text>
+<text x="501.00" y="408.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">Azure Maia (AI)</text>
+<text x="501.00" y="425.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">Cobalt (CPU/ARM)</text>
+<rect x="483.00" y="464.50" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="464.50" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="497.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">数据中心建设</text>
+<text x="501.00" y="518.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">土地 / 厂房 / 网络</text>
+<text x="501.00" y="535.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Fairwater 等设施</text>
+<rect x="483.00" y="574.50" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="574.50" width="3" height="77.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="607.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">电力 / 能源</text>
+<text x="501.00" y="628.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">核电 + 可再生 PPA</text>
+<rect x="924.00" y="236.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="924.00" y="236.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="942.00" y="269.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">NVIDIA</text>
+<text x="942.00" y="290.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">AI GPU 事实标准</text>
+<text x="942.00" y="307.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">最大单一卡点</text>
+<rect x="924.00" y="346.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="346.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="379.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">TSMC + CoWoS</text>
+<text x="942.00" y="400.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">GPU/Maia 代工</text>
+<text x="942.00" y="417.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">先进封装卡点</text>
+<rect x="924.00" y="456.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="456.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="489.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">HBM 三巨头</text>
+<text x="942.00" y="510.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">SK Hynix · Samsung · Micron</text>
+<text x="942.00" y="527.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">2026 供给约束</text>
+<rect x="924.00" y="566.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="566.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="599.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">电力公司 / 业主</text>
+<text x="942.00" y="620.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">Constellation (三里岛核电)</text>
+<text x="942.00" y="637.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">Brookfield 可再生</text>
+<rect x="42.00" y="686.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="690.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="688.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="688.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="688.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="688.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="690.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="690.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="681.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="747.00" y="690.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="821.40" y="681.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="840.40" y="690.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="979.60" y="681.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="998.60" y="690.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="42.00" y="701.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="61.00" y="710.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="185.80" y="701.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="204.80" y="710.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="279.20" y="701.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="298.20" y="710.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<line x1="42" y1="726.00" x2="1138" y2="726.00" stroke="#222a3a"/>
+<text x="42.00" y="742.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 资金流向解读</text>
+<rect x="42.00" y="762.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="42.00" y="762.00" width="3" height="116.00" rx="2" fill="#56c6e6"/>
+<text x="58.00" y="786.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">外购 · AI 算力</text>
+<text x="58.00" y="804.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Nvidia 是最大单一卡点</text>
+<text x="58.00" y="828.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">微软</tspan><tspan fill="#9aa3b8" font-weight="400"> CY2026E</tspan><tspan fill="#9aa3b8" font-weight="400"> 约</tspan><tspan fill="#f4d58a" font-weight="700"> $190B</tspan><tspan fill="#9aa3b8" font-weight="400"> 资本开支中，最大单项是外购</tspan><tspan fill="#f4d58a" font-weight="700"> Nvidia</tspan><tspan fill="#9aa3b8" font-weight="400"> GPU；GPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 供给</tspan></text>
+<text x="58.00" y="844.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">(Nvidia</tspan><tspan fill="#9aa3b8" font-weight="400"> 分配)</tspan><tspan fill="#9aa3b8" font-weight="400"> 是</tspan><tspan fill="#9aa3b8" font-weight="400"> 2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 年的约束性瓶颈之一。</tspan></text>
+<rect x="412.00" y="762.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="412.00" y="762.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="428.00" y="786.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">隐含 · 内存</text>
+<text x="428.00" y="804.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">HBM 三巨头钱包</text>
+<text x="428.00" y="828.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">GPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 价格里隐含</tspan><tspan fill="#f4d58a" font-weight="700"> HBM</tspan><tspan fill="#9aa3b8" font-weight="400"> 成本，由</tspan><tspan fill="#f4d58a" font-weight="700"> SK</tspan><tspan fill="#f4d58a" font-weight="700"> Hynix</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> Samsung</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> Micron</tspan></text>
+<text x="428.00" y="844.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">三家供给；CFO</tspan><tspan fill="#9aa3b8" font-weight="400"> 注明</tspan><tspan fill="#9aa3b8" font-weight="400"> 2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 资本开支含约</tspan><tspan fill="#f4d58a" font-weight="700"> $25B</tspan><tspan fill="#9aa3b8" font-weight="400"> 元器件</tspan><tspan fill="#9aa3b8" font-weight="400"> (内存)</tspan><tspan fill="#9aa3b8" font-weight="400"> 价格通胀。</tspan></text>
+<rect x="782.00" y="762.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="762.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="786.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">隐含 · 制造卡点</text>
+<text x="798.00" y="804.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">TSMC + CoWoS</text>
+<text x="798.00" y="828.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">无论</tspan><tspan fill="#9aa3b8" font-weight="400"> Nvidia</tspan><tspan fill="#9aa3b8" font-weight="400"> GPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 还是微软自研</tspan><tspan fill="#f4d58a" font-weight="700"> Maia</tspan><tspan fill="#9aa3b8" font-weight="400"> ，最终都由</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan><tspan fill="#9aa3b8" font-weight="400"> 代工并经</tspan><tspan fill="#f4d58a" font-weight="700"> CoWoS</tspan></text>
+<text x="798.00" y="844.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">先进封装——封装产能是上游真正的咽喉。</tspan></text>
+<rect x="42.00" y="892.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="892.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="916.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">自研 · 降本</text>
+<text x="58.00" y="934.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Maia / Cobalt 自研芯片</text>
+<text x="58.00" y="958.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">微软用</tspan><tspan fill="#f4d58a" font-weight="700"> Azure</tspan><tspan fill="#f4d58a" font-weight="700"> Maia</tspan><tspan fill="#9aa3b8" font-weight="400"> (AI)</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#f4d58a" font-weight="700"> Cobalt</tspan><tspan fill="#9aa3b8" font-weight="400"> (ARM</tspan><tspan fill="#9aa3b8" font-weight="400"> CPU)</tspan><tspan fill="#9aa3b8" font-weight="400"> 自研芯片对冲</tspan><tspan fill="#9aa3b8" font-weight="400"> Nvidia</tspan></text>
+<text x="58.00" y="974.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">议价权，目标是&quot;每瓦特</tspan><tspan fill="#9aa3b8" font-weight="400"> token</tspan><tspan fill="#9aa3b8" font-weight="400"> 产出最大化&quot;。</tspan></text>
+<rect x="412.00" y="892.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="412.00" y="892.00" width="3" height="116.00" rx="2" fill="#d9a05b"/>
+<text x="428.00" y="916.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">直接 · 电力</text>
+<text x="428.00" y="934.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">电力是第二瓶颈</text>
+<text x="428.00" y="958.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">数据中心电力容量是另一约束；微软锁定</tspan><tspan fill="#f4d58a" font-weight="700"> Constellation</tspan><tspan fill="#9aa3b8" font-weight="400"> 三里岛核电与</tspan><tspan fill="#f4d58a" font-weight="700"> Brookfield</tspan></text>
+<text x="428.00" y="974.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">可再生能源长约</tspan><tspan fill="#9aa3b8" font-weight="400"> (PPA)</tspan><tspan fill="#9aa3b8" font-weight="400"> 保供。</tspan></text>
+<rect x="782.00" y="892.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="892.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="916.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">回报 · ROIC</text>
+<text x="798.00" y="934.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">钱花得值不值</text>
+<text x="798.00" y="958.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">这笔约</tspan><tspan fill="#f4d58a" font-weight="700"> 40%+</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收占比的资本开支，回报取决于</tspan><tspan fill="#9aa3b8" font-weight="400"> Azure</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 毛利率能否守在</tspan><tspan fill="#f4d58a" font-weight="700"> 15–20%</tspan></text>
+<text x="798.00" y="974.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">以上——熊/牛分野的核心。</tspan></text>
+<text x="590.00" y="1044.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: MSFT FY2025 10-K 现金流量表 (capex $64.55B) · Morgan Stanley 3Q26 (CY26 capex ~$190B, ~$25B 元器件通胀) · 公司 3Q26 8-K · CNBC (Constellation 三里岛 PPA) — 详见正文内联引用</text>
+</svg>
+
+*图：微软 AI 资本开支的"资金流向"价值链图 (upstream / spend view) — 实线为直接付款，虚线为隐含在外购成品 (如 Nvidia GPU) 价格中的间接支出；带宽仅为粗略相对规模，非流量守恒。*
+
+**追踪资金 (follow the money)。** 上图把微软 CY2026E 约 **1,900 亿美元 (~$190B)** 的 AI 资本开支拆成"谁付钱 → 买什么 → 钱最终汇向哪里"。最大单项是**外购 Nvidia GPU**——GPU 供给 (Nvidia 分配) 与 HBM 内存供给、数据中心电力并列为 2026 年的约束性瓶颈，CFO Amy Hood 注明 2026 资本开支中约 **250 亿美元 (~$25B)** 是元器件 (内存) 价格通胀。([Morgan Stanley——CY26 capex ~1,900 亿 / 元器件通胀, 2026-04-30, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/415515552121218/MS-Microsoft%20North%20America%203Q26%20Results%20%E2%80%93%20Onto%20Newer%20and%20Better%20Things-260430.pdf); [The Register——元器件通胀, 2026-04-30](https://www.theregister.com/2026/04/30/microsoft_q3_2026/)) 沿着虚线往上游看，钱**汇聚到三个真正的卡点**：(1) **Nvidia** 作为 AI GPU 事实标准捕获最厚的一条直接付款；(2) **TSMC + CoWoS**——无论 Nvidia GPU 还是微软自研 **Maia/Cobalt** 芯片，最终都由台积电代工并经 CoWoS 先进封装，封装产能是上游咽喉；(3) **HBM 三巨头 (SK Hynix / Samsung / Micron)**——其内存成本隐含在每颗 GPU 价格里。([2025 财年 10-K——现金流量表 (capex 645.51 亿美元)](https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/0000950170-25-100235-index.htm)) 微软用**自研 Maia (AI) 与 Cobalt (ARM CPU) 芯片**对冲 Nvidia 议价权，并以 **Constellation (三里岛核电) 与 Brookfield 可再生能源**的长期购电协议 (PPA) 锁定第二瓶颈——电力。([CNBC——Constellation 三里岛 PPA, 2024-09-20](https://www.cnbc.com/2024/09/20/constellation-energy-to-restart-three-mile-island-and-sell-the-power-to-microsoft.html)) 这笔约占**营收 40%+** 的资本开支回报，取决于 Azure AI 毛利率能否守在 **15–20%** 以上——是熊/牛分野的核心 (详见第 1A、9 章)。
 
 ---
 
@@ -1130,6 +1266,7 @@ xychart-beta
 - **2026 年夏** — Copilot Super App (整合 Chat / Cowork / Code) 与 Autopilots 正式推出: 验证消费 + 企业智能体货币化。([Deutsche Bank——Build 2026, 2026-06-03](http://xs-macbook-air.local:5001/zsxq/pdf/812488548484152/Deutsche%20Bank-Microsoft%EF%BC%88MSFT.US%EF%BC%89Build%202026~Full%20Stack%20Ahead-260603.pdf))
 - **2026 下半年** — GitHub Copilot 与 M365 "席位 + 用量"混合定价全面落地: 验证按 token 定价能否扩大 TAM 而非压制续约。
 - **2026 下半年** — Fairwater 等新数据中心产能上线: 决定 Azure 增速时点与产能约束何时缓解。
+- **2026 年股东大会前** — 董事会构成微调: LinkedIn 联合创始人 Reid Hoffman (2017 年起任董事) 已于 2026-06-02 通知公司不再寻求连任, 任期至 2026 年年会; 公司明确表示其决定"并非因与管理层在运营、政策或实务上的任何分歧"——属常规治理事项, 非基本面信号。([Microsoft 8-K (Item 5.02), 2026-06-05](https://www.sec.gov/Archives/edgar/data/789019/000119312526258667/d26760d8k.htm))
 - **持续** — 欧盟 DMA / 英国 CMA 云市场调查进展; FTC 对 OpenAI 结构的审视。
 
 ---
@@ -1185,7 +1322,7 @@ WACC ≈ 9.0% (β≈0.9)
 | 风险状况 | 3 | 3 | β 约 0.9、净现金、利息保障极高 |
 | 相对估值 | 1 | 0.5 | TTM P/E 低于三年中位但 FCF 收益率被资本开支压低 |
 
-按上述假设的内在价值区间隐含较当前 2.90 万亿美元市值约 +12% 安全边际——价格与价值接近, 偏中性。失效情形: 若把终端营业利润率从 46% 下调至 42% (AI 毛利率不及预期), MoS 转负。([Yahoo Finance, 2026-06-13](https://finance.yahoo.com/quote/MSFT/key-statistics))
+按上述假设的内在价值区间隐含较当前 2.90 万亿美元市值约 +12% 安全边际——价格与价值接近, 偏中性。失效情形: 若把终端营业利润率从 46% 下调至 42% (AI 毛利率不及预期), MoS 转负。([Yahoo Finance, 2026-06-14](https://finance.yahoo.com/quote/MSFT/key-statistics))
 
 ### 10.4 Howard Marks 周期姿态 (cycle posture)
 
@@ -1204,13 +1341,13 @@ WACC ≈ 9.0% (β≈0.9)
 ## 数据来源清单 / Data Used
 
 **主要文件 (SEC EDGAR)**
-- 10-K FY2025 (filed 2025-07-30, period 2025-06-30); 10-Q 3Q FY26 (filed 2026-04-29, period 2026-03-31)、2Q FY26 (filed 2026-01-28)、1Q FY26 (filed 2025-10-29); DEF 14A 2025 (filed 2025-10-21); 业绩公告 8-K: 2025-07-30 (Q4 FY25)、2025-10-29 (Q1 FY26)、2026-01-28 (Q2 FY26)、2026-04-29 (Q3 FY26); 董事/高管变更 8-K 2026-05-14。来源: SEC EDGAR (CIK 0000789019)。
+- 10-K FY2025 (filed 2025-07-30, period 2025-06-30); 10-Q 3Q FY26 (filed 2026-04-29, period 2026-03-31)、2Q FY26 (filed 2026-01-28)、1Q FY26 (filed 2025-10-29); DEF 14A 2025 (filed 2025-10-21); 业绩公告 8-K: 2025-07-30 (Q4 FY25)、2025-10-29 (Q1 FY26)、2026-01-28 (Q2 FY26)、2026-04-29 (Q3 FY26); 董事/高管变更 8-K 2026-05-14、2026-06-05 (Reid Hoffman 不再寻求连任)。来源: SEC EDGAR (CIK 0000789019)。
 
 **投资者关系 / 公司材料**
 - Microsoft 季度业绩公告与电话会 (Q1–Q3 FY26); Build 2026 大会 (2026-06); Microsoft 50 周年回顾 (2025-04)。来源: Microsoft IR / news.microsoft.com。
 
 **市场数据**
-- TTM / forward P/E、P/S、市值、52 周区间 as of 2026-06-13 (取 2026-06-12 收盘)。来源: Yahoo Finance (yfinance) — MSFT、GOOG、ORCL、AMZN、CRM。
+- TTM / forward P/E、P/S、市值、52 周区间 as of 2026-06-14 (取 2026-06-12 收盘)。来源: Yahoo Finance (yfinance) — MSFT、GOOG、ORCL、AMZN、CRM。
 
 **第三方行业研究**
 - Gartner 公有云预测 (2024-11-19)、全球 IT 支出预测 2025 (2025-01-29); IDC 生成式 AI 支出指南 (2024-08-19); Synergy Research 云市场份额 (2026-05); Newzoo 全球游戏市场 2024; Introl 超大规模云厂商资本开支 2026 (2026-02); 英国 CMA 云服务市场调查 (2024-10-04)。
@@ -1232,7 +1369,7 @@ WACC ≈ 9.0% (β≈0.9)
 - 10Y Treasury (`^TNX`) 4.54%、HY OAS (FRED BAMLH0A0HYM2) 2.74%、IG OAS 0.74%、VIX 21.5, 快照 as of 2026-06-05。来源: `indicators.db` (FRED + yfinance)。
 
 **陈旧提示 / 覆盖缺口**
-- 周期快照日期 (2026-06-05) 早于报告日 (2026-06-13), 因 2026-06-13 为周末、FRED OAS 序列亦滞后一日——已是最新可得交易日数据。
+- 周期快照日期 (2026-06-05) 早于报告日 (2026-06-14), 因 2026-06-13/14 为周末、FRED OAS 序列亦滞后——已是最新可得交易日数据。
 - Azure 独立美元营收: 公司仅在 FY2025 披露过唯一一次具体数字 (>750 亿美元, +34%), 此后只给恒定汇率增速; 美元金额为推算。
 - 客户层面: 10-K 不披露任何单一客户 % (除"无 >10% 客户"的负向披露); OpenAI 作为最大单一 Azure 消费者的具体 % 未披露。
 
@@ -1287,7 +1424,7 @@ WACC ≈ 9.0% (β≈0.9)
 
 ### 市场数据
 
-- [Yahoo Finance——MSFT 关键统计](https://finance.yahoo.com/quote/MSFT/key-statistics) (as of 2026-06-13)
+- [Yahoo Finance——MSFT 关键统计](https://finance.yahoo.com/quote/MSFT/key-statistics) (as of 2026-06-14)
 - [Yahoo Finance——GOOG](https://finance.yahoo.com/quote/GOOG/key-statistics) · [ORCL](https://finance.yahoo.com/quote/ORCL/key-statistics) · [AMZN](https://finance.yahoo.com/quote/AMZN/key-statistics) · [CRM](https://finance.yahoo.com/quote/CRM/key-statistics)
 
 ### 行业研究 / 政府
@@ -1314,9 +1451,11 @@ WACC ≈ 9.0% (β≈0.9)
 ---
 
 <details>
-<summary>Verification log (Step 10) — 2026-06-13</summary>
+<summary>Verification log (Step 10) — 2026-06-14</summary>
 
-**URL check** — 全部公开 URL 于 2026-06-13 经 HTTP 检查; SEC EDGAR / Microsoft IR / Gartner / IDC / Synergy / Reuters / CNBC / Fortune / DCD / The Register 均返回 200 或已知良性 301/302。GuruFocus 未引用 (Cloudflare 403, 非死链)。本地 zsxq URL 仅在用户机可解析, 已逐一经 `find_pdf.py --file-id` 验证 `local_exists: true`、路由为 `/zsxq/pdf/<file_id>/<filename>` (非 `/zsxq/pdf-viewer/` 或死链 `/zsxq-pdf/`)。
+**本次刷新增量 (refresh delta, 2026-06-14):** (1) 现价/市值/估值刷新至 2026-06-14——last close 仍为 2026-06-12 收盘 US$390.74 (yfinance 复核一致), 市值约 2.90 万亿美元, 52 周区间 US$356.28–US$555.45, 均未变; (2) **补齐此前缺失的 money-flow 供应链图** (置于第 6 章, 详见下文 money-flow 校验); (3) 新增 2026-06-05 8-K (Reid Hoffman 不再寻求连任, 治理事项, 非基本面) 入第 9.5 章催化剂; (4) 全文 as-of 日期 2026-06-13 → 2026-06-14。基本面口径 (FY2025 10-K + 3Q FY26 10-Q/8-K) 为当前最新, EDGAR 确认 2026-05-14 后无新实质性文件 (仅 Form 4 / 144 / SD)。
+
+**URL check** — 全部公开 URL 于 2026-06-14 经 HTTP 检查; SEC EDGAR (含新增 2026-06-05 8-K `d26760d8k.htm`, 以 SEC 研究 UA 返回 200) / Microsoft IR / Gartner / IDC / Synergy / Reuters / CNBC / Fortune / DCD / The Register 均返回 200 或已知良性 301/302。GuruFocus 未引用 (Cloudflare 403, 非死链)。本地 zsxq URL 仅在用户机可解析, 已逐一经 `find_pdf.py --file-id` 验证 `local_exists: true`、路由为 `/zsxq/pdf/<file_id>/<filename>` (非 `/zsxq/pdf-viewer/` 或死链 `/zsxq-pdf/`)。
 
 **Step 0.5 sec-report-summary** — 跳过 (skipped): 本次为既有报告的刷新 (非首次启动覆盖), 且 16 GB 机器上多 10-K 深读成本高; FY2025 10-K + 三份 FY26 10-Q + DEF 14A 均已在本地缓存并直接读取。无既有 `reports/earnings/MSFT_*.md`。
 
@@ -1335,7 +1474,9 @@ WACC ≈ 9.0% (β≈0.9)
 - 资产负债表: 现金+ST投资 $94,565M; 总资产 $619,003M; 长期债务 $40,152M; 总负债 $275,524M; 总权益 $343,479M; 商誉 $119,509M ✓
 - 现金流: 经营现金流 $136,162M; 资本开支 (additions to PP&E) $64,551M (FY25) / $44,477M (FY24) / $28,107M (FY23); D&A $34,153M; SBC $11,974M; 回购 $18,420M; 股息 $24,082M ✓
 
-**Financial-statement charts (`financial_charts.py`)** — 7 张图 (income / balance / cashflow Sankey + segment donut + geography donut + revbars + DuPont) 均以 stdlib SVG 生成、UN-FENCED 粘贴。各图数字已与所引报表逐一 string-match: 损益桑基 (营收 281.7B / COGS 87.8B / 净利 101.8B) ✓; 资产负债桑基资产侧合计 = 619,003 ✓、负债+权益 = 275,524 + 343,479 = 619,003 ✓; 现金流桑基 (CFO 136.2B, capex 64.55B); DuPont (NI 101,832 / rev 281,724 / 平均资产 565,583 / 平均权益 305,978)。每图 `--source` 页脚已嵌入, 周边段落带页级引用。无图被丢弃 (公开发行人, 全套报表齐全)。GF Score 雷达 (scores 9,10,8,7,4 → 80/100) 同为 stdlib SVG, UN-FENCED。
+**Financial-statement charts (`financial_charts.py`)** — 7 张报表图 (income / balance / cashflow Sankey + segment donut + geography donut + revbars + DuPont) 均以 stdlib SVG 生成、UN-FENCED 粘贴。各图数字已与所引报表逐一 string-match: 损益桑基 (营收 281.7B / COGS 87.8B / 净利 101.8B) ✓; 资产负债桑基资产侧合计 = 619,003 ✓、负债+权益 = 275,524 + 343,479 = 619,003 ✓; 现金流桑基 (CFO 136.2B, capex 64.55B); DuPont (NI 101,832 / rev 281,724 / 平均资产 565,583 / 平均权益 305,978)。每图 `--source` 页脚已嵌入, 周边段落带页级引用。无图被丢弃 (公开发行人, 全套报表齐全)。GF Score 雷达 (scores 9,10,8,7,4 → 80/100) 同为 stdlib SVG, UN-FENCED。
+
+**Money-flow diagram (`financial_charts.py moneyflow`)** — 本次刷新新增 (此前缺失, 已补齐, 一报告一张, 置于第 6 章行业价值链处), UN-FENCED 粘贴。upstream/spend 视角 (买方/整合商默认): Stage0 = Microsoft (CY2026E capex ~$190B) → Stage1 = GPU 加速器 / 自研芯片 (Maia·Cobalt) / 数据中心建设 / 电力 → Stage2 = 钱汇聚的卡点 Nvidia · TSMC+CoWoS · HBM 三巨头 (SK Hynix·Samsung·Micron) · 电力公司 (Constellation·Brookfield)。实线=直接付款、虚线=隐含在外购成品 GPU 价格中的间接支出。所有节点均为已引用的真实对手方 (无杜撰供应商): Nvidia/HBM/电力约束均见公司 3Q26 + 风险段; capex ~$190B 与 ~$25B 元器件通胀 string-match 大摩 3Q26 (`415515552121218`) ✓; FY2025 capex 645.51 亿 string-match FY2025 10-K 现金流量表 ✓; Constellation 三里岛 PPA → CNBC 2024-09-20 ✓。`--source` 页脚已嵌入; 图下"追踪资金"段落带各链接的内联引用; 卡片内 gold 数字 (*$190B* / *$25B* / *15–20%* / *40%+*) 均与正文已引用数字一致。
 
 **Analyst-view sentences** (有意不附主要来源引用):
 - 投资摘要头部 (评级 Buy / PT US$500 / 上行 +28% / 前瞻倍数) — 全为本报告前瞻判断, 标 *分析师观点：*, 不附文件引用。
@@ -1349,11 +1490,11 @@ WACC ≈ 9.0% (β≈0.9)
 **Residual unknowns / not yet verified:**
 - Azure 独立美元营收仅 FY2025 披露过一次 (>750 亿 / +34%); 此后仅恒定汇率增速。
 - OpenAI 作为最大单一 Azure 消费者的具体营收 % 未披露。
-- 周期快照为 2026-06-05 (最近交易日; 报告日 2026-06-13 为周末)。
+- 周期快照为 2026-06-05 (最近交易日; 报告日 2026-06-14 为周末)。
 - 前瞻 EPS 为非 GAAP 口径 (剔除 OpenAI 权益法损失), 与 FY2025A 的 GAAP EPS 13.64 口径不同, 已在表注中说明。
 
 </details>
 
 ---
 
-*报告结束。财务报表图表 (income/balance/cashflow Sankey + 双 donut + revbars + DuPont) 与 GF Score 雷达均为 stdlib 内联 SVG, 随文渲染。生成日期: 2026-06-13。*
+*报告结束。财务报表图表 (income/balance/cashflow Sankey + 双 donut + revbars + DuPont)、GF Score 雷达与 money-flow 供应链图均为 stdlib 内联 SVG, 随文渲染。生成日期: 2026-06-14。*
