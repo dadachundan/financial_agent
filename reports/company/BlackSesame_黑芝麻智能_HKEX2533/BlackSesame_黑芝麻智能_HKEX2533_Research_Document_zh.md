@@ -92,22 +92,49 @@
 
 **收入怎么赚的 (利润表 Sankey)。** 下面的利润表 Sankey 直观展示了公司的盈利结构问题：8.22 亿元营收经 4.85 亿元 COGS 后留下 3.37 亿元毛利，但 14.17 亿元研发 + 3.86 亿元销售及管理费用，使经营性亏损达到 14.48 亿元 ([2025 年度业绩公告 合并损益表](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0331/2026033100746.pdf))。
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 640" width="1100" height="640" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1100" height="640" fill="#ffffff"/>
 <text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">黑芝麻智能 FY2025 利润表 Sankey (RMB 百万)</text>
-<rect x="40.00" y="74.83" width="14" height="153.93" fill="#2563eb" opacity="0.85"/><text x="58.00" y="147.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#1f2933">辅助驾驶产品及解决方案 ADP&amp;S 687</text>
-<rect x="40.00" y="232.76" width="14" height="21.58" fill="#2563eb" opacity="0.85"/><text x="58.00" y="241.55" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#1f2933">具身智能 Embodied AI 96</text>
-<rect x="40.00" y="258.34" width="14" height="8.77" fill="#2563eb" opacity="0.85"/><text x="58.00" y="260.73" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#1f2933">智能影像 Imaging 39</text>
-<rect x="300.00" y="74.83" width="14" height="184.31" fill="#16a34a" opacity="0.85"/><text x="318.00" y="163.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#1f2933">营收 822</text>
-<path d="M 314.00,99.50 C 407.00,99.50 407.00,131.96 500.00,131.96" stroke="#cbd5e1" stroke-width="108.71" fill="none" opacity="0.45"/>
-<path d="M 314.00,217.21 C 407.00,217.21 407.00,86.49 500.00,86.49" stroke="#cbd5e1" stroke-width="75.60" fill="none" opacity="0.45"/>
-<rect x="500.00" y="48.66" width="14" height="75.60" fill="#16a34a" opacity="0.85"/><text x="518.00" y="90.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#1f2933">毛利 337</text>
-<rect x="500.00" y="127.96" width="14" height="108.71" fill="#dc2626" opacity="0.8"/><text x="518.00" y="186.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#1f2933">COGS 485</text>
-<path d="M 514.00,86.49 C 607.00,86.49 607.00,86.49 700.00,86.49" stroke="#fca5a5" stroke-width="75.60" fill="none" opacity="0.4"/>
-<rect x="700.00" y="48.66" width="14" height="317.94" fill="#dc2626" opacity="0.8"/><text x="718.00" y="195.63" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#1f2933">经营亏损 −1448</text>
-<text x="500.00" y="300.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#52606d">研发 R&amp;D 1417 · 销售及管理 386 · 减值 10</text>
-<text x="500.00" y="318.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#dc2626">→ 经营亏损 −1448，净亏损 −1425 (FY2025)</text>
-<text x="20.00" y="535.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-style="italic" fill="#8a97a3">R&amp;D 1,417 百万元 ≈ 收入 172%，是经营亏损的主因；FY2025 IFRS 净亏损 14.25 亿元</text>
-<text x="20.00" y="549.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">Source: 黑芝麻智能 2025 年度业绩公告 (HKEX, 2026-03-31) 合并损益表</text>
+<text x="20.00" y="48.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" fill="#52606d">营业开支 1,814 由毛利 337 + 其他收入及收益 28 + 经营亏损 1,448 (缺口) 共同承担 — 研发独占 78%</text>
+<path d="M 165.0,84.0 C 257.5,84.0 257.5,89.0 350.0,89.0 L 350.0,225.0 C 257.5,225.0 257.5,220.0 165.0,220.0 Z" fill="#bfdbfe" fill-opacity="0.55"/>
+<path d="M 165.0,225.0 C 257.5,225.0 257.5,225.0 350.0,225.0 L 350.0,244.1 C 257.5,244.1 257.5,244.1 165.0,244.1 Z" fill="#bfdbfe" fill-opacity="0.55"/>
+<path d="M 165.0,249.1 C 257.5,249.1 257.5,244.1 350.0,244.1 L 350.0,251.8 C 257.5,251.8 257.5,256.8 165.0,256.8 Z" fill="#bfdbfe" fill-opacity="0.55"/>
+<path d="M 365.0,89.0 C 460.5,89.0 460.5,84.0 556.0,84.0 L 556.0,150.7 C 460.5,150.7 460.5,155.7 365.0,155.7 Z" fill="#86efac" fill-opacity="0.5"/>
+<path d="M 365.0,155.7 C 460.5,155.7 460.5,155.7 556.0,155.7 L 556.0,251.8 C 460.5,251.8 460.5,251.8 365.0,251.8 Z" fill="#fca5a5" fill-opacity="0.5"/>
+<path d="M 571.0,84.0 C 658.0,84.0 658.0,147.5 745.0,147.5 L 745.0,214.3 C 658.0,214.3 658.0,150.7 571.0,150.7 Z" fill="#86efac" fill-opacity="0.5"/>
+<path d="M 571.0,272.8 C 658.0,272.8 658.0,214.3 745.0,214.3 L 745.0,501.0 C 658.0,501.0 658.0,559.6 571.0,559.6 Z" fill="#fca5a5" fill-opacity="0.5"/>
+<path d="M 571.0,564.6 C 658.0,564.6 658.0,501.0 745.0,501.0 L 745.0,506.6 C 658.0,506.6 658.0,570.2 571.0,570.2 Z" fill="#86efac" fill-opacity="0.5"/>
+<path d="M 760.0,147.5 C 832.5,147.5 832.5,147.5 905.0,147.5 L 905.0,428.2 C 832.5,428.2 832.5,428.2 760.0,428.2 Z" fill="#fca5a5" fill-opacity="0.42"/>
+<path d="M 760.0,428.2 C 832.5,428.2 832.5,433.2 905.0,433.2 L 905.0,492.3 C 832.5,492.3 832.5,487.3 760.0,487.3 Z" fill="#fca5a5" fill-opacity="0.42"/>
+<path d="M 760.0,487.3 C 832.5,487.3 832.5,497.3 905.0,497.3 L 905.0,514.7 C 832.5,514.7 832.5,504.7 760.0,504.7 Z" fill="#fca5a5" fill-opacity="0.42"/>
+<path d="M 760.0,504.7 C 832.5,504.7 832.5,519.7 905.0,519.7 L 905.0,521.7 C 832.5,521.7 832.5,506.7 760.0,506.7 Z" fill="#fca5a5" fill-opacity="0.42"/>
+<rect x="150.0" y="84.0" width="15" height="136.0" rx="1.5" fill="#2563eb"/>
+<rect x="150.0" y="225.0" width="15" height="19.1" rx="1.5" fill="#2563eb"/>
+<rect x="150.0" y="249.1" width="15" height="7.8" rx="1.5" fill="#2563eb"/>
+<rect x="350.0" y="89.0" width="15" height="162.8" rx="1.5" fill="#15803d"/>
+<rect x="556.0" y="84.0" width="15" height="66.7" rx="1.5" fill="#15803d"/>
+<rect x="556.0" y="155.7" width="15" height="96.1" rx="1.5" fill="#dc2626"/>
+<rect x="556.0" y="272.8" width="15" height="286.8" rx="1.5" fill="#dc2626"/>
+<rect x="556.0" y="564.6" width="15" height="5.6" rx="1.5" fill="#15803d"/>
+<rect x="745.0" y="147.5" width="15" height="359.1" rx="1.5" fill="#dc2626"/>
+<rect x="905.0" y="147.5" width="15" height="280.6" rx="1.5" fill="#dc2626"/>
+<rect x="905.0" y="433.2" width="15" height="59.1" rx="1.5" fill="#dc2626"/>
+<rect x="905.0" y="497.3" width="15" height="17.4" rx="1.5" fill="#dc2626"/>
+<rect x="905.0" y="519.7" width="15" height="2.0" rx="1.5" fill="#dc2626"/>
+<text x="141.0" y="150.0" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">辅助驾驶 ADP&amp;S</text><text x="141.0" y="163.0" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 686.9M (83.5%)</text>
+<text x="141.0" y="225.5" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">具身智能 Embodied</text><text x="141.0" y="238.5" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 96.3M (11.7%)</text>
+<text x="141.0" y="258.9" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">智能影像 Imaging</text><text x="141.0" y="271.9" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 39.2M (4.8%)</text>
+<text x="348.0" y="80.0" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">营收 Revenue</text><text x="348.0" y="92.0" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 822.3M (100%)</text>
+<text x="579.0" y="115.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">毛利 Gross profit</text><text x="579.0" y="128.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 337.1M · 毛利率 41.0%</text>
+<text x="579.0" y="201.8" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">COGS 营业成本</text><text x="579.0" y="214.8" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 485.2M (59.0%)</text>
+<text x="579.0" y="410.2" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">经营亏损 Operating loss</text><text x="579.0" y="423.2" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">−RMB 1,448.3M (−176.1%) · 缺口</text>
+<text x="579.0" y="567.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他收入及收益 Other inc.</text><text x="579.0" y="580.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 28.1M</text>
+<text x="743.0" y="138.5" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">营业开支 Operating expenses</text><text x="743.0" y="150.5" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 1,813.5M (220.5%)</text>
+<text x="928.0" y="285.9" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">研发 R&amp;D</text><text x="928.0" y="298.9" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 1,417.4M (172.4%)</text>
+<text x="928.0" y="460.7" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">管理费用 G&amp;A</text><text x="928.0" y="473.7" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 298.3M</text>
+<text x="928.0" y="501.0" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">销售费用 Selling</text><text x="928.0" y="514.0" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 87.9M</text>
+<text x="928.0" y="533.7" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">金融资产减值 Impairment</text><text x="928.0" y="546.7" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 9.9M</text>
+<text x="20.00" y="614.0" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-style="italic" fill="#8a97a3">经营亏损 = 毛利 337 + 其他收入及收益 28 − 营业开支 1,814 = −1,448；R&amp;D 1,417 ≈ 收入 172%，为亏损主因。IFRS 净亏损 −1,425 (含财务净收入 +25、所得税 0)。</text>
+<text x="20.00" y="629.0" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">Source: 黑芝麻智能 2025 年度业绩公告 (HKEX, 2026-03-31) 综合损益表 p.6 / p.17</text>
 </svg>
 
 **地理分布。** 收入主要来自中国大陆 OEM 与商用车客户。FY2025 业绩公告明确 A1000 已 "begun to penetrate into global markets" 并成为芯片销售的主要贡献者，A2000 因 "passing relevant US reviews" 获得海外市场准入优势，但公司迄今未单独披露海外收入贡献占比，仍处于定点导入与首批出货的早期阶段 ([2025 年度业绩公告 业务回顾 / 业务展望](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0331/2026033100746.pdf))。
