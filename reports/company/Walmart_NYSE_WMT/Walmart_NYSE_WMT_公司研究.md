@@ -1,25 +1,47 @@
 # Walmart Inc. (NASDAQ:WMT) 公司研究报告
 
-**As-of date / 截止日期：2026-06-03**
+**As-of date / 截止日期：2026-06-14**
 **报告语言：Simplified Chinese / 简体中文（技术、行业、财务专有名词保留 English 原文）**
 
-> **Top-of-report 头部摘要：**
-> Walmart 2026 年 2 月 19 日发布 FY26 Q4 业绩并首次给出 FY27 (fiscal year 2027) 全年指引——net sales (cc, constant currency 不变汇率口径) +3.5%-4.5%、Adjusted operating income (cc) +6.0%-8.0%、Adjusted EPS US$2.75-2.85；同时公告 US$30 billion 新一轮 share repurchase 授权；5 月 21 日 FY27 Q1 业绩沿用并 reiterate (重申) 该指引。Doug McMillon 卸任 CEO，由 Walmart U.S. 出身的 **John Furner** 自 2026-02-01 起接任，标志着 Walmart 从 "omnichannel 转型期" 正式进入 "AI-powered platform 第二阶段"。([WMT FY26 Q4 Press Release, 2026-02-19](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000032/earningsreleasefy26q4.htm); [Furner CEO 接任公告, 2025-11-14](https://www.sec.gov/Archives/edgar/data/104169/000010416925000172/pressrelease111425.htm))
+> **投资摘要 / Investment Summary（*分析师观点 / Analyst view* —— 为本报告自有评级，非公司披露）**
+>
+> | | |
+> |---|---|
+> | **评级 / Rating** | **Hold（持有）** —— 高质量、估值偏紧；待估值回归或期权价值兑现再上调 |
+> | **12 个月目标价 / 12-mo PT** | **US$120**（基于 FY28E EPS ~US$3.10 × 38.5× target forward P/E） |
+> | **当前价 / Current price** | **US$121.04**（2026-06-12 收盘） |
+> | **隐含空间 / Implied** | **−1%**（基本情形已被定价；bull US$140 / bear US$95） |
+> | **市值 / Market cap** | **~US$963 billion**（约 79.6 亿股 × US$121.04） |
+> | **52 周区间** | US$93.62 – 135.16 |
+> | **估值法 / Method** | forward P/E × target multiple，DCF 与 SOTP 交叉验证 |
+>
+> **2–4 条投资主线 / Thesis pillars（*分析师观点*）：**
+> 1. **"reshape the profit mix" 是真实且 mechanical 的故事** —— Walmart Connect 广告 (FY26 ~US$6.4bn, +46%)、membership、Marketplace 三栈高利润业务使 operating income 增速持续快于 net sales；UBS 估测 "2nd P&L" 到 2030 年将贡献约 52% EBIT。
+> 2. **EDLP 规模 + 全国门店密度 + grocery 冷链 = 难以复制的防御性护城河**，在通胀与 macro 不确定期吸引 high-income trade-down，FY26-FY27 持续 "broad-based share gains"。
+> 3. **估值是主要约束** —— TTM P/E ~44× 显著高于近 10 年中位 (~31×)，市场已充分定价 "OI > sales" 多年承诺；若 FY27 Adjusted OI cc 落在指引下沿 +6%，估值缓冲薄弱。
+> 4. **Flipkart / PhonePe 资本化 + Symbotic 自动化** 是当前股价之外的两个隐含期权——IPO 兑现可释放约占市值 5–7% 的可见账面价值。
+>
+> **业绩更新 / Guidance：** Walmart 2026-02-19 随 FY26 Q4 业绩首次给出 FY27 全年指引——net sales (cc) +3.5%-4.5%、Adjusted operating income (cc) +6.0%-8.0%、Adjusted EPS US$2.75-2.85；同时公告 US$30 billion 新一轮 share repurchase 授权；5 月 21 日 FY27 Q1 业绩 **reiterate（重申）** 该指引。Doug McMillon 卸任 CEO，Walmart U.S. 出身的 **John Furner** 自 2026-02-01 起接任，标志着 Walmart 从 "omnichannel 转型期" 进入 "AI-powered platform 第二阶段"。([WMT FY26 Q4 Press Release, 2026-02-19](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000032/earningsreleasefy26q4.htm); [WMT FY27 Q1 Press Release, 2026-05-21](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000095/earningsreleasefy27q1.htm); [Furner CEO 接任公告, 2025-11-14](https://www.sec.gov/Archives/edgar/data/104169/000010416925000172/pressrelease111425.htm))
 
 ---
 
 ## 目录
 
 1. 公司概览 (Company Overview)
-2. 公司历史 (Company History)
-3. 管理团队 (Management Team)
-4. 产品与服务 (Products & Services)
-5. 客户与上市策略 (Customers & Strategy)
-6. 行业概览 (Industry Overview)
-7. 竞争格局 (Competitive Landscape)
-8. 市场机会 (Market Opportunity)
-9. 风险评估 (Risk Assessment)
-10. Investor-Lens 视角评分 (Investor-Lens Scorecards)
+1B. GF Score 基本面评分 (GF Score Fundamental Scorecard)
+2. 估值与目标价 (Valuation & Price Target)
+3. 公司历史 (Company History)
+4. 管理团队 (Management Team)
+5. 产品与服务 (Products & Services)
+6. 客户与上市策略 (Customers & Strategy)
+7. 行业概览 (Industry Overview)
+8. 竞争格局 (Competitive Landscape)
+9. 市场机会 (Market Opportunity)
+10. 风险评估 (Risk Assessment)
+10.5. 关键分歧与催化剂 (Key Debates & Catalysts)
+11. Investor-Lens 视角评分 (Investor-Lens Scorecards)
+
+> *章节编号说明：本次刷新在原 9 节描述性结构上叠加决策层（1B 基本面评分、第 2 节估值与目标价、10.5 关键分歧与催化剂）；下文 "公司历史/管理团队/..." 等描述性小节保留原有内部编号叙述，目录以上为阅读导航。*
 
 ---
 
@@ -29,24 +51,147 @@ Walmart Inc.（NASDAQ:WMT，总部 Bentonville, Arkansas）是全球最大 brick
 
 业务由三大可报告分部 (reportable segments) 构成：**Walmart U.S.** 占 net sales 68% (US$483.0bn)、**Walmart International** 19% (US$130.4bn)、**Sam's Club U.S.** 13% (US$93.0bn)。两位数字增长引擎已从传统 supercenter 同店销售迁移至 eCommerce、Marketplace (第三方平台)、Walmart Connect (零售媒体广告)、Walmart+ (会员订阅) 与 Sam's Club Plus、以及 Flipkart / PhonePe（印度业务）这五大 "higher-margin offerings"。FY26 全球 eCommerce sales 增长 24%（Q4 数据；FY27 Q1 加速至 26%）；global advertising +46% 至 ~US$6.4 billion；membership fee revenue +15.1%（Q4，全球）。([WMT FY26 Q4 Press Release](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000032/earningsreleasefy26q4.htm); [WMT FY27 Q1 Press Release, 2026-05-21](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000095/earningsreleasefy27q1.htm))
 
-**Valuation snapshot (估值快照, as of 2026-06-03)：** 收盘价 US$112.78、market cap ~US$899.5 billion、TTM P/E ~39.83×、forward P/E ~40-41×、TTM P/S ~1.26×（按 LTM revenue ~US$713bn 与市值计算）；52 周区间 US$93.43-135.16。Walmart 当前 TTM P/E 显著高于自身 3 年均值 (~36.4×)、5 年均值 (~36.2×)，亦高于近 10 年中位 (~31×)；估值溢价 (premium) 主要反映：(i) 高利润率新业务（Walmart Connect + Walmart+ + Marketplace）占比上行带来的 mix-up 故事，(ii) 防御性现金流在 macro 不确定期获得避险溢价，(iii) Walmart vs Amazon 在 "未来 omnichannel 双寡头" 中获得估值再评级 (re-rating)。但**估值显著高于 historical mean 的本质，是市场已经把 "operating income growing faster than sales (经营利润超速增长)" 的多年承诺充分定价**——若 FY27 Adjusted OI cc 落在指引下沿 +6%（而非上沿 +8%），则估值缓冲薄弱。([Public.com WMT P/E 历史, 2026-05-29](https://public.com/stocks/wmt/pe-ratio); [WMT FY27 Q1 Press Release](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000095/earningsreleasefy27q1.htm))
+**Valuation snapshot (估值快照, as of 2026-06-12 收盘)：** 收盘价 US$121.04、market cap ~US$963.2 billion、TTM P/E ~44.3×（FY26 diluted EPS US$2.73）、forward P/E ~43×（FY27 中点 EPS ~US$2.80）/ ~39×（FY28E EPS ~US$3.10）、TTM P/S ~1.35×（按 LTM total revenues ~US$713bn 与市值计算）；52 周区间 US$93.62-135.16。**注意：自本报告上一版（2026-06-03，US$112.78）以来股价上行约 +7.3%，TTM P/E 由 ~39.8× 抬升至 ~44.3×，估值缓冲进一步收窄——这是本次刷新维持 *Hold* 评级的核心数量依据。** Walmart 当前 TTM P/E 显著高于自身 3 年均值 (~36×)、5 年均值 (~36×)，亦显著高于近 10 年中位 (~31×)；估值溢价 (premium) 主要反映：(i) 高利润率新业务（Walmart Connect + Walmart+ + Marketplace）占比上行带来的 mix-up 故事，(ii) 防御性现金流在 macro 不确定期获得避险溢价，(iii) Walmart vs Amazon 在 "未来 omnichannel 双寡头" 中获得估值再评级 (re-rating)。但**估值显著高于 historical mean 的本质，是市场已经把 "operating income growing faster than sales (经营利润超速增长)" 的多年承诺充分定价**——若 FY27 Adjusted OI cc 落在指引下沿 +6%（而非上沿 +8%），则估值缓冲薄弱。([yfinance WMT 收盘价与市值 2026-06-12](https://finance.yahoo.com/quote/WMT); [Public.com WMT P/E 历史](https://public.com/stocks/wmt/pe-ratio); [WMT FY27 Q1 Press Release](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000095/earningsreleasefy27q1.htm))
 
-参照系：Costco TTM P/E ~51.75×（远高于 WMT；反映 club model 的 "membership annuity (会员永续金流)" 估值定价），Amazon TTM P/E ~31.70× / Forward P/E ~28.87×（被 AWS 与 retail margin 故事拉低），Target TTM P/E 与 WMT 接近但 forward 受品类逆风压制。WMT 估值介于 AMZN 与 COST 之间，符合其 "比 Amazon 更稳健但比 Costco 更慢" 的 narrative。([Public.com COST P/E 2026-05](https://public.com/stocks/cost/pe-ratio); [Public.com AMZN P/E 2026-05](https://public.com/stocks/amzn/pe-ratio))
+参照系：Costco TTM P/E ~52×（远高于 WMT；反映 club model 的 "membership annuity (会员永续金流)" 估值定价），Amazon TTM P/E ~32× / Forward P/E ~29×（被 AWS 与 retail margin 故事拉低），Target TTM P/E 与 WMT 接近但 forward 受品类逆风压制。WMT 估值介于 AMZN 与 COST 之间，符合其 "比 Amazon 更稳健但比 Costco 更慢" 的 narrative。([Public.com COST P/E](https://public.com/stocks/cost/pe-ratio); [Public.com AMZN P/E](https://public.com/stocks/amzn/pe-ratio))
+
+**FY26 利润表如何把 US$713bn 收入转化为 US$21.9bn 净利润 —— income-statement Sankey：**
+
+![Walmart FY26 income-statement Sankey](charts/wmt_income_sankey.svg)
+
+*Source: [WMT FY26 10-K, Consolidated Income Statement + Segment note](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm)。左侧三大 segment net sales + membership 汇入 total revenues US$713.2bn；COGS US$535.4bn 后 gross profit US$177.8bn（含 membership income），减 SG&A US$147.9bn 得 operating income US$29.8bn，再减 net interest/other、tax US$7.2bn、minority US$0.4bn，得归属 Walmart 净利润 US$21.9bn。*
+
+**净销售按分部与历史趋势：**
+
+![Walmart FY26 segment donut](charts/wmt_segment_donut.svg)
+![Walmart segment revenue bars FY24-FY26](charts/wmt_revbars.svg)
+
+*Source: [WMT FY26 10-K + FY25 10-K, MD&A Segment net sales](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm)。三大分部 net sales 在 FY24-FY26 全部正增长，Walmart U.S. 占比稳定 ~68%。*
 
 ```mermaid
 xychart-beta
-  title "Walmart 财务趋势 FY24-FY26 (US$bn / %)"
+  title "Walmart 净销售趋势 FY24-FY26 (US$bn)"
   x-axis ["FY24","FY25","FY26"]
-  y-axis "Net Sales (US$bn) / Operating Margin (%)" 0 --> 720
+  y-axis "Net Sales (US$bn)" 600 --> 720
   bar [642.6, 674.5, 706.4]
-  line [4.2, 4.4, 4.2]
 ```
 
-*Source: [WMT FY26 10-K, MD&A Results of Operations](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm). Bars = net sales US$bn; line = consolidated operating margin %.*
+```mermaid
+xychart-beta
+  title "Walmart 合并 operating margin FY24-FY26 (%)"
+  x-axis ["FY24","FY25","FY26"]
+  y-axis "Operating Margin (%)" 0 --> 6
+  line [4.2, 4.3, 4.2]
+```
+
+*Source: [WMT FY26 10-K, MD&A Results of Operations](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm)。net sales FY24 US$642.6bn → FY26 US$706.4bn；合并 operating margin 在 ~4.2-4.3% 区间窄幅波动——"OI growing faster than sales" 的故事尚处早期，margin 扩张主要靠 mix-shift 而非已实现的报表数字。*
 
 ---
 
-## 2. 公司历史 (Company History)
+## 1B. GF Score 基本面评分 (GF Score Fundamental Scorecard)
+
+**说明（*分析师观点 / Analyst view*）：** 以下为 GuruFocus 风格的五维基本面评分，是分析师自有 rubric 输出，**非 GuruFocus 官方数字、不附带任何 filing 引用**；每个底层指标（ROE、leverage、CAGR、multiples、price returns）在 Sections 1-2 各自带 inline 引用。
+
+![Walmart GF Score radar](charts/wmt_gf_score.svg)
+
+| 维度 | 评分 (0–10) | |
+|---|---|---|
+| 财务实力 Financial Strength | 7 | `███████░░░` |
+| 盈利能力 Profitability | 7 | `███████░░░` |
+| 成长性 Growth | 6 | `██████░░░░` |
+| 估值 GF Value（越高=越便宜） | 3 | `███░░░░░░░` |
+| 动量 Momentum | 8 | `████████░░` |
+| **GF Score (composite, *分析师观点*)** | **63 / 100** | **51–70 区间** |
+
+*Composite 权重（*分析师观点*）：Financial Strength 20% · Profitability 25% · Growth 25% · GF Value 15% · Momentum 15%（透明再现，非 GuruFocus 专有权重）。*
+
+**各维度评分理由：**
+
+- **财务实力 = 7。** Walmart 资产负债表稳健但非现金堆积型：FY26 末 cash US$10.7bn、long-term debt US$34.6bn、当期 long-term debt US$3.5bn，外加经营+融资租赁负债约 US$25.8bn；以 OI US$29.8bn + D&A 估算的 EBITDA ~US$43bn 计，net debt/EBITDA 约 1.2-1.4×，interest coverage（OI US$29.8bn / interest net US$2.4bn ≈ 12×）充裕。扣分项是零售 capital intensity——PP&E net US$136.1bn 占总资产近半，capex US$26.6bn 持续高位。([WMT FY26 10-K, Balance Sheet + Cash Flow](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm))
+- **盈利能力 = 7。** ROE ~23%（NI attrib US$21.9bn / 平均权益）、ROA 8.2%、ROI 15.1%（公司披露）均高于 WACC ~8%，盈利质量好且多年连续；扣分项是 consolidated operating margin 仅 4.2%——这是零售业最薄的利润率区间之一，"reshape profit mix" 的核心目标就是把它往 5%+ 推。([WMT FY26 10-K, MD&A Returns](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm))
+- **成长性 = 6。** 收入 3-yr CAGR ~4.5%（FY24 US$642.6bn → FY26 US$706.4bn），EPS 增速更快（diluted EPS FY24 US$1.91 → FY26 US$2.73）；增长稳健但非高速，且严重依赖 mix-shift 而非单位量增长。FY27 指引 net sales cc +3.5-4.5%、Adj OI cc +6-8%。([WMT FY26 10-K + FY26 Q4 Press Release](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000032/earningsreleasefy26q4.htm))
+- **估值 GF Value = 3（越高越便宜，低分=贵）。** TTM P/E ~44×、forward P/E ~39-43× 显著高于近 10 年中位 ~31×、亦高于自身 3/5 年均值 ~36×；margin of safety 为负（§ 2 DCF 显示约 −5% 至 −15%）。这是 WMT 评分中唯一的明显弱项，也是 *Hold* 评级的数量锚点。([Public.com WMT P/E](https://public.com/stocks/wmt/pe-ratio))
+- **动量 = 8。** 过去 12 个月股价从 ~US$93 低位升至 US$121.04，明显跑赢标普 500 与多数零售同业，且持续位于 200 日均线上方；2026-06 月内仍创年内高位附近。动量是当前对 WMT 最有利的维度——但高动量与高估值并存，意味着任何执行 miss 都可能触发均值回归。([yfinance WMT 价格区间](https://finance.yahoo.com/quote/WMT))
+
+**综合：63/100。** 这是一个 "高质量企业 + 偏贵估值" 的典型分布——四维（财务/盈利/成长/动量）健康，唯独 GF Value 拖累 composite。与本报告 *Hold* 评级、§ 2 DCF 与 § 11 Damodaran lens 内部一致。
+
+---
+
+## 2. 估值与目标价 (Valuation & Price Target)
+
+> 本节为决策层，**所有前瞻数字、目标价、bull/base/bear 情景均为 *分析师观点 / Analyst view*，不附带任何 filing 引用**（10-K 不含目标价）；每个驱动因素的外部基础（segment 数据 + 公司指引 + 行业预测 + 卖方一致预期）在段内 inline 引用。
+
+### 2.1 前瞻财务模型 (Forward estimates, *分析师观点*)
+
+以 FY26 实际为基础、叠加公司 FY27 指引（net sales cc +3.5-4.5%、Adj OI cc +6-8%、Adj EPS US$2.75-2.85）与 "reshape profit mix" 的 margin 上行路径，建立 3 年模型。核心逻辑：net sales ~+4-5%/年，但 operating margin 因 advertising / membership / Marketplace 三栈 mix-up 每年扩张 ~10-20 bps，使 operating income 与 EPS 增速持续高于 net sales。
+
+| 指标（*分析师观点*） | FY26A | FY27E | FY28E | FY29E |
+|---|---|---|---|---|
+| Net sales (US$bn) | 706.4 | ~735 (+4.0%) | ~767 (+4.4%) | ~801 (+4.4%) |
+| Total revenues (US$bn) | 713.2 | ~742 | ~775 | ~810 |
+| Operating margin (%) | 4.2 | ~4.35 | ~4.5 | ~4.65 |
+| Operating income (US$bn) | 29.8 | ~32.3 | ~34.9 | ~37.7 |
+| Net income attrib (US$bn) | 21.9 | ~24.0 | ~26.3 | ~28.6 |
+| Diluted EPS (US$) | 2.73 | ~2.85 | ~3.10 | ~3.40 |
+| EPS YoY | — | +4.4% | +8.8% | +9.7% |
+
+驱动因素与外部基础：(i) net sales +4-5% 来自公司 FY27 指引中点 +4.0% cc 的延续（[WMT FY26 Q4 Press Release, Guidance](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000032/earningsreleasefy26q4.htm)）；(ii) margin 扩张来自 advertising FY26 ~US$6.4bn / +46% 的高利润 mix-up（[WMT FY26 Q4 Press Release](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000032/earningsreleasefy26q4.htm)）与 UBS 估测 "2nd P&L 到 2030 年贡献 ~52% EBIT、operating margin 4.5%→6.5%" 的轨迹（*分析师观点：* [UBS — Walmart 2nd P&L, 2026-05-04, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212458522511121/UBS-Walmart%20Inc%EF%BC%88WMT.US%EF%BC%89Addressing%20the%20Top%203%20Questions%20on%20WMT%27s%20.pdf)）；(iii) EPS 增速高于 net income 因 US$30bn buyback 授权持续缩股（[WMT FY26 Q4 Press Release, buyback](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000032/earningsreleasefy26q4.htm)）。本模型刻意比卖方保守——给 margin 扩张 ~15 bps/年，而非 UBS 的 ~40 bps/年路径。
+
+### 2.2 5-step DuPont ROE 分解
+
+![Walmart FY26 DuPont ROE tree](charts/wmt_dupont.svg)
+
+*Source: [WMT FY26 10-K, Income Statement + Balance Sheet](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm)。FY26 ROE ~23% = 净利率 3.07% × 资产周转 2.62× × 权益乘数 2.86×（平均 FY25→FY26 资产/权益）。Walmart 的 ROE 结构是 "薄净利率 × 极高资产周转 × 适度杠杆" 的教科书零售模型——周转率是护城河的数量表达，与 Costco 同属周转驱动型 ROE。*
+
+### 2.3 目标价推导与估值倍数依据 (*分析师观点*)
+
+**方法：forward P/E × target multiple。** 以 FY28E EPS ~US$3.10 × **38.5× target forward P/E** = **US$120 12 个月目标价**。
+
+**为什么用 38.5×：** 这一倍数介于 WMT 自身 3/5 年均值 (~36×) 与当前 forward P/E (~39-43×) 之间，体现 "mix-up 故事值得高于历史均值的溢价、但不应给到当前透支水平" 的判断。对照可比公司：Costco forward P/E ~45-48×（更高，反映 club annuity 与更高 ROIC）、Amazon forward P/E ~29×（更低，被 retail unit economics 拖累）、Target forward P/E ~13-15×（远低，品类逆风）。WMT 38.5× 落在 Costco 与 Amazon 之间，符合其 "防御性 + 平台期权" 的相对定位。([Public.com COST P/E](https://public.com/stocks/cost/pe-ratio); [Public.com AMZN P/E](https://public.com/stocks/amzn/pe-ratio))
+
+**DCF 交叉验证：** WACC = Rf 4.54% + β ~0.7 × ERP 4.5% ≈ 7.7%（取 ~8%），terminal growth 2.5%，steady-state operating margin 假设由 4.2% 推进至 4.8%。该 DCF 隐含公允值约 **US$100-110/share**，略低于现价，印证 "基本情形已被定价"。（Rf 来源：[indicators.db 本地快照（FRED 10Y via ^TNX + yfinance），as of 2026-06-05](https://fred.stlouisfed.org/series/DGS10)，^TNX 4.536%）
+
+### 2.4 Bull / Base / Bear 情景 (*分析师观点*)
+
+| 情景 | 关键摆动假设 | FY28E EPS | Target P/E | 目标价 | 相对现价 US$121.04 |
+|---|---|---|---|---|---|
+| **Bull** | OI cc 持续 +8%+ 上沿、advertising 加速至 US$10bn+、Flipkart/PhonePe IPO 释放期权 | ~US$3.20 | ~44× | **US$140** | **+16%** |
+| **Base** | 指引中点兑现、margin +15bps/年 | ~US$3.10 | ~38.5× | **US$120** | **−1%** |
+| **Bear** | tariff/GLP-1 拖累 comp、OI cc 落 +6% 下沿、估值回归历史中位 | ~US$2.95 | ~32× | **US$95** | **−21%** |
+
+风险报酬不对称：上行 +16% vs 下行 −21%，是维持 *Hold* 而非 *Buy* 的赔率依据——当前价位下行空间略大于上行空间。
+
+### 2.5 与市场一致预期对比 + 卖方观点演变 (Sell-side view evolution)
+
+**与一致预期对比：** 本报告 US$120 base PT 略低于卖方中位（~US$140-145）。卖方普遍更乐观，核心分歧在 margin 扩张速度——UBS/MS 假设 operating margin 数年内向 6%+ 推进，本报告给更保守的 ~15bps/年。本报告 FY28E EPS ~US$3.10 与 MS 隐含的 FY28E 口径接近（MS 称当前股价对应 FY28E EPS ~44.2× P/E）。
+
+**机构观点时间线（按报告日期，*分析师观点*；均引用本地 zsxq broker 库）：**
+
+| 机构 | 报告日期 | 评级 / 目标价 | 报告日股价 / 隐含上行 | 核心论点 |
+|---|---|---|---|---|
+| UBS | 2026-05-04 | **Buy / US$147** | US$130.08 / +13% | "2nd P&L" 被低估；OI margin 4.5%→6.5% by 2030、2nd P&L 占 52% EBIT |
+| Deutsche Bank | 2026-05-22 | **Hold / US$120** | US$120.27 / −0.2% | "压力下显韧性" 但估值偏高（CY26E P/E ~46×），中性观望 |
+| Bernstein | 2026-05-22→06-08 | **Outperform / US$145** | US$120.27 / +19% | 1Q27 基本面稳健、燃油拖累 EBIT ~250bps；associates week 升级 Great Value，维持 PT |
+| Morgan Stanley | 2026-05-25→06-08 | **Overweight / US$140** | US$120.27 / +16% | flywheel 持续拓展 TAM；广告+第三方平台+海外电商+Sparky 四驱动，FY28E EPS ~44.2× |
+
+**机构间分歧（机构间无极端对立，但 PT 离散度显著）：**
+
+| 机构 | 评级 / PT | 核心论点 | 什么证据能证明其正确 |
+|---|---|---|---|
+| UBS US$147 | 最乐观 | 市场未充分定价 2nd P&L 的规模与持续性 | operating margin 数年内确实向 6%+ 推进、advertising 维持 40%+ 增速 |
+| MS / Bernstein US$140-145 | 偏乐观 | flywheel + 份额提升 + EBIT 增长支撑动量 | FY27 Adj OI cc 落指引上沿 +8%、广告/Marketplace 维持高增 |
+| Deutsche Bank US$120 | 中性 | 商业模式韧性强但 ~46× CY26E P/E 已透支 | 估值回归历史均值、或同店/电商增速放缓 |
+| **本报告 US$120 (Hold)** | 中性偏谨慎 | 质量极高但估值缓冲薄、下行空间略大于上行 | TTM P/E 回落至 32-34× 区间，或 OI cc 持续超 +8% 上沿 |
+
+本报告 base PT 与 Deutsche Bank 最接近（均 US$120），但理由不同：DB 是 "韧性 vs 估值" 的平衡，本报告是 "−1% 隐含空间 + 不对称赔率" 的数量判断。PT 离散度 US$120-147（约 23% spread）反映市场对 margin 扩张速度的真实分歧。([UBS, 2026-05-04](http://xs-macbook-air.local:5001/zsxq/pdf/212458522511121/UBS-Walmart%20Inc%EF%BC%88WMT.US%EF%BC%89Addressing%20the%20Top%203%20Questions%20on%20WMT%27s%20.pdf); [Deutsche Bank — Poise Under Pressure, 2026-05-22](http://xs-macbook-air.local:5001/zsxq/pdf/585428252525414/Deutsche%20Bank-Walmart%20Inc%EF%BC%88WMT.US%EF%BC%89Poise%20Under%20Pressure-260522.pdf); [Bernstein — 1Q27 Fundamentals intact, 2026-05-22](http://xs-macbook-air.local:5001/zsxq/pdf/415241488551118/Bernstein-Walmart%20%EF%BC%88WMT.US%EF%BC%89%201Q27%EF%BC%9A%20Fundamentals%20intact%EF%BC%9B%20EBIT%20gro.pdf); [Morgan Stanley — How WMT's Flywheel Is Expanding, 2026-06-08](http://xs-macbook-air.local:5001/zsxq/pdf/814528811242112/Morgan%20Stanley-Walmart%20Inc%20%EF%BC%88WMT.US%EF%BC%89How%20WMT%27s%20Flywheel%20Is%20Expan.pdf); 报告日股价与隐含上行来自 db/stock_price_target.db read-only 预查)
+
+### 2.6 关键摆动变量 (Swing variables, *分析师观点*)
+
+**最该盯紧的两个变量：(1) operating margin 扩张速度** —— 卖方与本报告的全部估值分歧都压在 margin 是 +15bps/年（保守）还是 +40bps/年（UBS）；这取决于 advertising / Marketplace / membership 三栈能否持续 30%+ 增长且不被 EDLP 价格再投资抵消。**(2) tariff / IEEPA 对 General merchandise 成本的扰动** —— FY27 指引明确不含 IEEPA tariff refunds 情景，关税走势可对 FY27 OI 构成单点 ~150-250 bps 扰动（见 § 10 风险）。
+
+---
+
+## 3. 公司历史 (Company History)
 
 Walmart 的故事从 1945 年 Sam M. Walton 在 Arkansas 州 Newport 开设第一家 Ben Franklin 加盟杂货店开始，1962 年首家 discount store (折扣店) 开业，1970 年 IPO 完成，1983 年首家 Sam's Club 开业，1988 年首家 supercenter（大型综合超市）开业，1991 年进入 Mexico、首次国际化，1996 年同时上线 walmart.com 与 samsclub.com 进入 eCommerce，2007 年推出 Site-to-Store（"线上下单、门店自提"）、奠定后续 omnichannel 基因，2018 年通过收购印度 Flipkart 与 PhonePe 多数股权完成两次具有战略意义的海外重仓。([WMT FY26 10-K, "The Development of Our Company"](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm))
 
@@ -79,7 +224,7 @@ timeline
 
 ---
 
-## 3. 管理团队 (Management Team)
+## 4. 管理团队 (Management Team)
 
 **Founder: Sam M. Walton (1918-1992)** — Walmart 创始人；1945 年在 Arkansas 州 Newport 开设首家 Ben Franklin 加盟店，1962 年与弟弟 James L. "Bud" Walton 在 Rogers, AR 创办首家 Walmart discount store，奠定 EDLP (Every Day Low Price 天天低价) 哲学——通过对供应链效率与库存周转 (inventory turnover) 的极致压缩把价格做到全行业最低。1970 年公司 IPO 后，Walton 家族持股逐步从 IPO 后 ~60% 稀释至 2026 年 ~46%，但仍是绝对控股股东，且通过非分级股票结构 (no dual-class) 维持影响力；2026 年初家族 stake 价值约 US$3500 亿，为全球第一财富家族。Sam Walton 1992 年去世，但其建立的 "frugality (节俭)、operational discipline (运营纪律)、EDLP" 文化至今是 Walmart 战略的 DNA。([WMT FY26 10-K Development of Company](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm); [RevenueMemo: Who Owns Walmart 2026](https://www.revenuememo.com/p/who-owns-walmart); [AInvest: Walton 44% Voting Analysis, 2025](https://www.ainvest.com/news/walmart-governance-clash-walton-family-44-voting-power-justifies-quality-discount-2605/))
 
@@ -91,7 +236,7 @@ Furner 接任后核心 Executive Council 包括：CFO **John David Rainey**（55
 
 ---
 
-## 4. 产品与服务 (Products & Services)
+## 5. 产品与服务 (Products & Services)
 
 Walmart 的业务结构由三大 segments 加横跨 segments 的 enterprise platforms 组成。对投资人而言，**真正决定未来估值的不是 supercenter 货架，而是 platforms（Walmart Connect / Walmart+ / Marketplace / Walmart Fulfillment Services / 健康与金融服务）的 take-rate 与渗透曲线**。本节遵循公司自己的 segment 报告口径，逐项拆解。
 
@@ -187,9 +332,17 @@ graph LR
 
 *Source: 综合 [WMT 2025 ICM Press Release](https://www.sec.gov/Archives/edgar/data/0000104169/000010416925000036/pressrelease4925.htm) 与 [WMT FY26 Q4 Press Release](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000032/earningsreleasefy26q4.htm).*
 
+### 4.5 供应链 money-flow —— Walmart 的 US$535bn COGS + capex 流向哪里
+
+商品销售的反面是采购：Walmart FY26 cost of sales 高达 US$535.4bn、capex US$26.6bn——理解这笔钱流向哪里，才能看清 Walmart 的议价权与 tariff 暴露在哪里。下图按 "谁付钱 → 买什么 → 钱汇集到哪里" 的三段式追踪。
+
+![Walmart 供应链 money-flow map](charts/wmt_moneyflow.svg)
+
+**Follow the money（每个 $ 数字均可追溯至下方引用）：** Walmart 的采购扇出到三大商品池——grocery/consumables（最大、最防御）、general merchandise（受 tariff 冲击最大）、private brands（毛利扩张引擎）——再加上履约/自动化 capex。钱最终汇集到少数节点：(i) **CPG 巨头**（P&G、Unilever、Coca-Cola、PepsiCo、Nestlé）吃走最大份额，而他们同时是 Walmart Connect 的核心广告主，形成 "采购 + 广告" 双向货币化（[Morgan Stanley flywheel note 指广告业务以第三方平台与综合百货品类变现效率最高](http://xs-macbook-air.local:5001/zsxq/pdf/814528811242112/Morgan%20Stanley-Walmart%20Inc%20%EF%BC%88WMT.US%EF%BC%89How%20WMT%27s%20Flywheel%20Is%20Expan.pdf)，*分析师观点*）；(ii) **进口/亚洲供应链** 是 general merchandise 的成本来源，也是 tariff/IEEPA 政策冲击的主要暴露点（[WMT FY26 10-K Forward-Looking Statements 把 tariff 列为首位风险](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm)）；(iii) **自有品牌代工厂**——21 个自有品牌年销 >US$1bn、5 个 >US$5bn，绕开品牌商抬升 unit margin（[WMT 2025 ICM Press Release](https://www.sec.gov/Archives/edgar/data/0000104169/000010416925000036/pressrelease4925.htm)）；(iv) **Symbotic**——Walmart 将自有机器人业务出售给 Symbotic 并签 US$520m 新协议、42 个 RDC 8 年内完成 Gen-2 部署，是履约成本下降的链条节点（[Symbotic 收购 Walmart 机器人业务公告](https://www.symbotic.com/about/news-events/news/symbotic-completes-acquisition-of-walmarts-advanced-systems-and-robotics-business/); [Robotics 24/7: Symbotic-Walmart 42 RDCs](https://www.robotics247.com/article/symbotic_and_walmart_expand_partnership_to_implement_automation_in_42_regional_distribution_centers)）；(v) **本地农户/生鲜**——就近采购 + 192 个配送设施 + 自有车队，构成 Amazon 难以复制的冷链壁垒（[WMT FY26 10-K Supply Chain 段落](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm)）。**chokepoint 认知：** Walmart 自身的规模即议价权——没有单一供应商能挟持 Walmart，但 Walmart 对进口/关税政策的暴露是其成本结构中最不可控的一环。
+
 ---
 
-## 5. 客户与上市策略 (Customers & Strategy)
+## 6. 客户与上市策略 (Customers & Strategy)
 
 Walmart 客户基础的核心特征是 "scale + breadth"：每周 ~2.8 亿顾客 + 约 5.0 亿全球会员触达，是任何零售或媒体公司都无法在短期复制的 first-party data 资产。10-K 自述不披露任何 customer concentration（10-K 在 ASC 280-10-50-42 框架下未列举任何单一 10%+ 客户），因为 Walmart 是 B2C 模型 + 高度分散小额交易，**consolidated 层面没有单一客户达到 ≥10% 门槛**——这与 Apple 等 ODM 客户、半导体设备 OEM 客户的高集中模式截然相反，是 Walmart 防御性溢价的结构性来源。([WMT FY26 10-K Customer & Segment 注释](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm))
 
@@ -214,9 +367,15 @@ pie title FY26 Net Sales 按分部 (US$bn, 占 consolidated %)
 
 *Source: [WMT FY26 10-K MD&A, Consolidated and Segment Results of Operations](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm). 单一 denominator: consolidated net sales.*
 
+**总收入按地域 (U.S. vs Non-U.S.)：** 尽管国际业务覆盖 18 国，Walmart 收入高度集中于美国本土——FY26 总收入 US$713.2bn 中 U.S. operations US$581.2bn (~82%)、Non-U.S. operations US$132.0bn (~18%)。这一地域集中度意味着 Walmart 本质上仍是 "美国零售龙头 + 少数高质量海外资产 (Walmex / Flipkart)"，而非真正的全球化均衡布局。
+
+![Walmart FY26 总收入按地域 donut](charts/wmt_geo_donut.svg)
+
+*Source: [WMT FY26 10-K, Segment note — revenues by geography](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm). 单一 denominator: consolidated total revenues。注意此处口径为 total revenues（含 membership & other income），与上方 net sales-by-segment donut 的 denominator 不同。*
+
 ---
 
-## 6. 行业概览 (Industry Overview)
+## 7. 行业概览 (Industry Overview)
 
 Walmart 同时在四个相互交织的行业内运营：(i) **U.S. omnichannel retail (美国全渠道零售，~US$5+ trillion TAM)**；(ii) **eCommerce (美国零售电商市场，2025 规模 ~US$1.2 trillion)**；(iii) **retail media (零售媒体广告，全球 2025 规模 ~US$165bn)**；(iv) **emerging-market eCommerce (印度、墨西哥、智利、中国)**。
 
@@ -238,7 +397,7 @@ Walmart 同时在四个相互交织的行业内运营：(i) **U.S. omnichannel r
 
 ---
 
-## 7. 竞争格局 (Competitive Landscape)
+## 8. 竞争格局 (Competitive Landscape)
 
 Walmart 的 10-K Item 1 Competition 部分如下定义：
 
@@ -264,8 +423,8 @@ Walmart 的 10-K Item 1 Competition 部分如下定义：
 
 ```mermaid
 quadrantChart
-  title 主要零售竞争对手定位 (按 价格优势 vs 数字平台广度)
-  x-axis "价格相对劣势" --> "价格相对优势 (EDLP)"
+  title 主要零售竞争对手定位：价格优势 vs 数字平台广度
+  x-axis "价格相对劣势" --> "价格相对优势 EDLP"
   y-axis "数字平台有限" --> "数字 / 广告 / Marketplace 平台广度"
   quadrant-1 "数字优势 + 价格优势"
   quadrant-2 "数字优势 + 价格劣势"
@@ -284,7 +443,7 @@ quadrantChart
 
 ---
 
-## 8. 市场机会 (Market Opportunity)
+## 9. 市场机会 (Market Opportunity)
 
 **TAM Stack：** Walmart 的可服务市场可按四个独立维度叠加：
 
@@ -308,17 +467,31 @@ quadrantChart
 
 ```mermaid
 xychart-beta
-  title "Walmart 关键增长引擎 FY25-FY26 同比 (%)"
-  x-axis ["全球电商","Walmart Connect","membership fees","Marketplace ad","Flipkart eCommerce"]
+  title "Walmart growth engines YoY (FY25-FY26, percent)"
+  x-axis ["Global eComm","Walmart Connect","Membership fees","Marketplace ad","Flipkart eComm"]
   y-axis "YoY %" 0 --> 60
   bar [24, 46, 15, 50, 27]
 ```
 
 *Source: [WMT FY26 Q4 Press Release](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000032/earningsreleasefy26q4.htm), [WMT FY27 Q1 Press Release](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000095/earningsreleasefy27q1.htm), [Motley Fool: Walmart Q1 2027 Earnings Transcript](https://www.fool.com/earnings/call-transcripts/2026/05/21/walmart-wmt-q1-2027-earnings-transcript/). Connect 46%: FY26 full-year global; Marketplace 50%: FY27 Q1 earnings call; Flipkart 27%: FY27 Q1 international eCommerce.*
 
+### 9.7 资本结构与现金流分配 (Capital structure & cash-flow allocation)
+
+理解 Walmart 的财务质量需要看两张图：资产负债表的资产-负债-权益结构，以及经营现金流如何在 capex、分红、回购之间分配。
+
+![Walmart FY26 资产负债表 Sankey](charts/wmt_balance_sankey.svg)
+
+*Source: [WMT FY26 10-K, Consolidated Balance Sheet](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm)。总资产 US$284.7bn 中 PP&E net US$136.1bn 占近半（零售 capital intensity）；负债侧 accounts payable US$63.1bn 是最大单项——Walmart 用供应商账期 (negative working capital，负营运资本) 为运营融资，是其现金流模型的结构性优势；Walmart 权益 US$99.6bn、long-term debt 仅 US$34.6bn，杠杆温和。*
+
+![Walmart FY26 现金流 Sankey](charts/wmt_cashflow_sankey.svg)
+
+*Source: [WMT FY26 10-K, Consolidated Statement of Cash Flows](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm)。FY26 operating cash flow US$41.6bn，扣除 capex US$26.6bn 得 free cash flow US$14.9bn；股东回报 dividends US$7.5bn + buybacks US$8.1bn 合计 US$15.6bn——已略超 FCF，意味着回购部分依赖资产负债表弹性而非纯 FCF 覆盖，这是 US$30bn 新回购授权下需要监控的一点。*
+
+**资本配置判断：** Walmart 的现金流模型由三个特征定义——(i) **负营运资本**：accounts payable US$63.1bn > inventories US$58.9bn，供应商账期为运营提供无息融资；(ii) **高 capex 但回报稳定**：FY26 capex US$26.6bn (3.8% of net sales)，FY27 指引降至 ~3.5%，automation 与 eCommerce 是主要投向；(iii) **股东回报已接近 FCF 上限**：dividends + buybacks US$15.6bn vs FCF US$14.9bn，US$30bn 新回购授权的执行节奏将取决于 FCF 改善（即 "OI growing faster than sales" 兑现程度）。([WMT FY26 10-K, MD&A Free Cash Flow + Liquidity](https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm); [WMT FY26 Q4 Press Release, US$30bn buyback](https://www.sec.gov/Archives/edgar/data/0000104169/000010416926000032/earningsreleasefy26q4.htm))
+
 ---
 
-## 9. 风险评估 (Risk Assessment)
+## 10. 风险评估 (Risk Assessment)
 
 按 8-12 风险 × 4 桶展开：
 
@@ -340,7 +513,7 @@ xychart-beta
 
 ### Financial (财务层)
 
-7. **Valuation 多重压缩风险** — TTM P/E ~40× 显著高于 historical 中位 ~30-31×；若 FY27 Adjusted OI cc 落在指引下沿 +6%（vs 上沿 +8%）或 macro 走弱使 share-repurchase 收益被 EPS 摊薄，估值缓冲不足。
+7. **Valuation 多重压缩风险（本次刷新升级为最高优先级之一）** — 在 US$121.04 价位，TTM P/E ~44× 显著高于 historical 中位 ~31×（且较本报告上一版 US$112.78 的 ~40× 进一步抬升）；若 FY27 Adjusted OI cc 落在指引下沿 +6%（vs 上沿 +8%）或 macro 走弱使 share-repurchase 收益被 EPS 摊薄，估值缓冲不足，均值回归的下行风险（§ 2 bear 情景 US$95，−21%）大于 bull 上行。([Public.com WMT P/E](https://public.com/stocks/wmt/pe-ratio))
 
 8. **PhonePe 与 Flipkart SBC charges** — FY26 已就 PhonePe 计入 US$0.7bn 非现金 SBC charge；若 IPO 推迟或估值 mark-down，后续可能有类似 charge。
 
@@ -360,23 +533,50 @@ xychart-beta
 
 ---
 
-## 10. Investor-Lens 视角评分 (Investor-Lens Scorecards)
+## 10.5. 关键分歧与催化剂 (Key Debates & Catalysts)
 
-**说明：** 以下为分析师视角的 rubric 评分，并非投资建议。基础数据全部来自 Sections 1-9 已引用的来源。Cycle snapshot (as of 2026-06-03)：VIX 15.99、^TNX 4.49%、3M T-Bill 3.62%（来自 db/indicators.db snapshot 2026-06-03 19:54 UTC）。
+> 本节与第 10 节风险清单不同：风险清单是 *下行盘点*，本节是 *defend the thesis* —— 列出空头论点并逐条反驳，再给出未来 12 个月的 dated catalysts。
 
-### 10.1 Buffett 视角 — *视角观点: 中性偏正向 / Neutral-positive*
+### 关键分歧（空头论点 → 反驳）
+
+1. **空头："44× P/E 对一个 +4% 增长、4% margin 的零售商不可持续。"** —— 反驳：估值确实偏贵（本报告也据此给 *Hold*），但单看 blended 增速会低估 mix：高利润三栈（advertising +46%、Marketplace +50%、membership +15%）以核心销售 6-10 倍的速度增长，UBS 测算到 2030 年 "2nd P&L" 贡献 ~52% EBIT、operating margin 4.5%→6.5%——若兑现一半，当前倍数并非荒谬。这是真实分歧，不是误读。([UBS — Walmart 2nd P&L, 2026-05-04](http://xs-macbook-air.local:5001/zsxq/pdf/212458522511121/UBS-Walmart%20Inc%EF%BC%88WMT.US%EF%BC%89Addressing%20the%20Top%203%20Questions%20on%20WMT%27s%20.pdf)，*分析师观点*)
+
+2. **空头："GLP-1 会结构性挤压 grocery basket。"** —— 反驳：效应真实（Cornell/Numerator 研究显示 6 个月内 grocery 消费 ~−6%），但 (i) pharmacy 端 GLP-1 处方激增部分对冲；(ii) Walmart 在 trade-down 中获得新客足以吸收 basket 下降；(iii) FY26-FY27 公司持续报告 "broad-based share gains"，尚未在合并数字中看到 GLP-1 净拖累。([Modern Retail GLP-1 Walmart](https://www.modernretail.co/operations/retailers-like-kroger-walmart-expect-glp-1-drugs-to-grow-pharmacy-sales-but-hurt-grocery/))
+
+3. **空头："Amazon 在 1-day delivery + ads 上规模碾压，Walmart 永远追赶。"** —— 反驳：在 grocery（Walmart ~25% vs Amazon ~3-4%）与全国门店密度（95% 美国家庭 <3 小时配送）上 Walmart 反而领先；UBS 指出 Walmart 第三方+广告规模仅为 Amazon 的 ~1/7，意味着追赶空间巨大而非天花板。([Deutsche Bank — Poise Under Pressure, 2026-05-22](http://xs-macbook-air.local:5001/zsxq/pdf/585428252525414/Deutsche%20Bank-Walmart%20Inc%EF%BC%88WMT.US%EF%BC%89Poise%20Under%20Pressure-260522.pdf)，*分析师观点*)
+
+4. **空头："燃油/价格再投资/薪酬成本会持续压制 EBIT。"** —— 反驳：FY27 Q1 EBIT 确实受燃油拖累 ~250bps，但这是 transitory；Bernstein 与 Deutsche Bank 均判断市场反应过度、长期逻辑稳固，且公司维持全年指引不变。([Bernstein — 1Q27, 2026-05-22](http://xs-macbook-air.local:5001/zsxq/pdf/415241488551118/Bernstein-Walmart%20%EF%BC%88WMT.US%EF%BC%89%201Q27%EF%BC%9A%20Fundamentals%20intact%EF%BC%9B%20EBIT%20gro.pdf)，*分析师观点*)
+
+### Dated catalysts（未来 12 个月，建议用 `/catalyst-calendar` 持续跟踪）
+
+| 时点 | 催化剂 | 为什么重要 |
+|---|---|---|
+| 2026-08（预计） | FY27 Q2 业绩 | Q2 指引 net sales +4-5% / EBIT +7-10%；验证 margin 扩张路径是否兑现 |
+| 2026-06 年度股东大会后 | McMillon 正式卸任董事 | Furner + 三 segment 新一把手治理结构完全落地 |
+| FY27 全年 | Flipkart EBITDA breakeven | 公司已指示优先盈利、推迟 IPO；breakeven 是 IPO 期权价值的前提 |
+| FY27-28 | PhonePe IPO 进展 | 估值 ~US$12-20bn，~72% 持股释放可见账面价值 |
+| 持续 | Walmart Connect 季度增速 | 是否维持 40%+；接近 US$10bn ad revenue 的进度 |
+| 持续 | tariff / IEEPA 政策 | 指引明确不含 refunds 情景；政策走向可单点扰动 FY27 OI ~150-250bps |
+
+---
+
+## 11. Investor-Lens 视角评分 (Investor-Lens Scorecards)
+
+**说明：** 以下为分析师视角的 rubric 评分，并非投资建议。基础数据全部来自 Sections 1-10 已引用的来源。Cycle snapshot (as of 2026-06-05，最新可得)：VIX 21.51、^TNX 4.536%、3M T-Bill 3.625%、HY OAS 2.74%（来源：indicators.db 本地快照（FRED BAMLH0A0HYM2 / DGS10 via ^TNX + yfinance），as of 2026-06-05）。
+
+### 11.1 Buffett 视角 — *视角观点: 中性偏正向 / Neutral-positive*
 
 | 维度 | 评分 (0-25) | 关键证据 |
 |---|---|---|
 | Moat (护城河) | 22 | EDLP 规模成本、2.1m associates 培育的运营文化、Walmart+ + Connect 形成的双边平台护城河，但 Amazon 仍是同体量对手 |
 | Earnings power (盈利能力) | 18 | FY26 OI US$29.8bn 但 OI margin 4.2% 仍偏薄、自我设定 "OI growing faster than sales" 目标 |
 | Management & culture | 21 | 32 年内部晋升 CEO、家族 ~46% 控股、长期一致性强 |
-| Price (vs intrinsic value) | 14 | TTM P/E ~40× 显著高于历史中位、margin of safety 薄弱 |
-| **合计** | **75 / 100** | 高质量企业 但 当前价格紧绷 |
+| Price (vs intrinsic value) | 12 | TTM P/E ~44×（US$121.04 价位）显著高于历史中位、margin of safety 为负 |
+| **合计** | **73 / 100** | 高质量企业 但 当前价格更紧绷（较上版股价上行后下调 Price 分） |
 
-**视角观点 / Lens view:** Buffett 偏好 "wonderful business at fair price"。Walmart 的 EDLP 与文化 moat 是 wonderful 标准的高分；但 ~40× P/E 离 fair price 距离不近。Buffett 是 Costco 的忠实持有者（通过 Berkshire 间接 + 个人）但从未公开重仓 WMT，可作为定价立场参照。
+**视角观点 / Lens view:** Buffett 偏好 "wonderful business at fair price"。Walmart 的 EDLP 与文化 moat 是 wonderful 标准的高分；但 ~44× P/E 离 fair price 距离更远（股价自上版 +7%）。Buffett 是 Costco 的忠实持有者（通过 Berkshire 间接 + 个人）但从未公开重仓 WMT，可作为定价立场参照。
 
-### 10.2 Munger 视角 — *视角观点: 正向 / Positive (with inversion caveat)*
+### 11.2 Munger 视角 — *视角观点: 正向 / Positive (with inversion caveat)*
 
 | 维度 | 评分 (0-10) | 加权 |
 |---|---|---|
@@ -388,7 +588,7 @@ xychart-beta
 
 **视角观点:** Munger 框架下，"如何把这个生意做坏" 的反向问题集中在 Amazon AWS 跨补、GLP-1 持续侵蚀 grocery basket、tariff 周期性反复。Walmart 文化与 capital allocation 是高质量的；估值不是 Munger 框架的否决项但需要谨慎。
 
-### 10.3 Damodaran 视角 — *视角观点: 估值已透支 / Fully valued*
+### 11.3 Damodaran 视角 — *视角观点: 估值已透支 / Fully valued*
 
 | 假设 | 值 |
 |---|---|
@@ -396,22 +596,22 @@ xychart-beta
 | 5-yr revenue CAGR | +4.5% |
 | Steady-state operating margin | 4.8% (mix-shift 推动从 4.2% 至 4.8%) |
 | ROIC | 15% |
-| Risk-free rate (^TNX as of 2026-06-03) | 4.49% |
+| Risk-free rate (^TNX as of 2026-06-05) | 4.536% |
 | Equity risk premium | 4.5% |
 | Cost of capital | ~8.0% |
 | Terminal growth | 2.5% |
-| Intrinsic value 隐含 | US$95-105 / share (vs 现价 US$112.78) |
-| Margin of safety | -8% 至 -16% (即 currently overvalued by ~10%) |
+| Intrinsic value 隐含 | US$100-110 / share (vs 现价 US$121.04) |
+| Margin of safety | -9% 至 -17% (即 currently overvalued by ~10-15%) |
 
-**视角观点:** Damodaran 框架下，要兑现当前 US$113 的价格需要 (i) operating margin 持续向 5%+ 推进，且 (ii) Walmart Connect + Walmart+ + Marketplace 能复利 10+ 年。如果 OI margin 留在 4.2% 不动 + revenue 仅 +4% 复合，DCF 公允值仅约 US$90-95。当前价格已经 price-in 大部分 "reshape profit mix" 故事的兑现。
+**视角观点:** Damodaran 框架下，要兑现当前 US$121 的价格需要 (i) operating margin 持续向 5%+ 推进，且 (ii) Walmart Connect + Walmart+ + Marketplace 能复利 10+ 年。如果 OI margin 留在 4.2% 不动 + revenue 仅 +4% 复合，DCF 公允值仅约 US$95-100。股价自上版上行 +7% 后，margin of safety 进一步转负——当前价格已经 price-in 大部分 "reshape profit mix" 故事的兑现，且略有透支。
 
-### 10.4 Howard Marks Cycle 视角 — *视角观点: defensive 时期增持优于 cyclical 时期 / Defensive bias OK*
+### 11.4 Howard Marks Cycle 视角 — *视角观点: defensive 时期增持优于 cyclical 时期 / Defensive bias OK*
 
-VIX 15.99 在历史中性偏低区间、^TNX 4.49% 高位震荡、HY OAS 暂未在 indicator snapshot 中、tbill_3m 3.62% 显示短端流动性中性。这一组合更接近 "late cycle but not yet recession" — Marks 的 reflexive 提示是 "在 risk-off 倾斜时倾向 defensive names"，Walmart 是教科书 defensive。然而 Marks 同时强调 "defensive 也可能因为过度定价而失去防御性"——当前 Walmart TTM P/E ~40× 已显著高于 historical defensive 区间。综合：cycle 工具箱倾向 defensive，但 *个股估值* 不再便宜——结论是 *持有合理、加仓需等估值回归*。
+VIX 21.51（较上版 15.99 已上行，risk-off 倾斜增强）、^TNX 4.536% 高位震荡、HY OAS 2.74%（仍处历史偏紧区间，信用市场未显压力）、tbill_3m 3.625% 显示短端流动性中性。这一组合更接近 "late cycle, risk-off 边际抬升但尚未衰退" — Marks 的 reflexive 提示是 "在 risk-off 倾斜时倾向 defensive names"，Walmart 是教科书 defensive，VIX 上行实际上小幅强化了 Walmart 的相对吸引力。然而 Marks 同时强调 "defensive 也可能因为过度定价而失去防御性"——当前 Walmart TTM P/E ~44× 已显著高于 historical defensive 区间。综合：cycle 工具箱倾向 defensive，但 *个股估值* 更不便宜——结论是 *持有合理、加仓需等估值回归*。（来源：indicators.db 本地快照（FRED BAMLH0A0HYM2 / DGS10 via ^TNX + yfinance），as of 2026-06-05）
 
 ### 综合 lens 结论
 
-四种 lens 在方向上趋同：**质量极高、估值偏紧**。Buffett / Munger 高度认可 moat 与 culture；Damodaran DCF 显示 ~10% 估值透支；Marks cycle 框架认为 macro 倾向 defensive 但当前 P/E 已透支防御溢价。**对长期持有者：FY27 5-tier 推荐 *Hold (持有)* 等级合理——Walmart 是 portfolio 的 sleeping pill (安眠药) 类配置，但当前价位不构成 Overweight 与 Buy 的明显赔率。** 触发 Overweight 与 Buy 的条件至少包括：(i) TTM P/E 回落至 32-34× 区间，或 (ii) Adjusted OI cc 全年增速持续超 +8% 指引上沿，或 (iii) Flipkart / PhonePe IPO 取得实质性进展释放隐含期权价值。其中 (iii) 是当前最值得长期跟踪的 *未来 1-2 年期权价值* 节点——按 Walmart 持股 ~80% × Flipkart 估值 US$50-70bn + ~72% × PhonePe US$12-15bn，IPO 兑现可释放 ~US$45-60bn 账面价值（占当前 ~US$900bn 市值的 5-7%），是估值压缩风险的关键缓冲。([Outlook Business: WMT Delays Flipkart IPO 2026-05](https://www.outlookbusiness.com/markets/no-ipo-yet-walmart-wants-flipkart-to-turn-profitable-first))
+四种 lens 在方向上趋同：**质量极高、估值偏紧（自上版股价上行后更紧）**。Buffett / Munger 高度认可 moat 与 culture；Damodaran DCF 显示 ~10-15% 估值透支；Marks cycle 框架认为 macro 倾向 defensive（VIX 上行边际强化）但当前 P/E 已透支防御溢价。**对长期持有者：FY27 5-tier 推荐 *Hold (持有)* 等级合理——Walmart 是 portfolio 的 sleeping pill (安眠药) 类配置，但当前价位（US$121.04，本报告 base PT US$120，隐含 −1%）不构成 Overweight 与 Buy 的明显赔率。** 触发 Overweight 与 Buy 的条件至少包括：(i) TTM P/E 回落至 32-34× 区间，或 (ii) Adjusted OI cc 全年增速持续超 +8% 指引上沿，或 (iii) Flipkart / PhonePe IPO 取得实质性进展释放隐含期权价值。其中 (iii) 是当前最值得长期跟踪的 *未来 1-2 年期权价值* 节点——按 Walmart 持股 ~80% × Flipkart 估值 US$50-70bn + ~72% × PhonePe US$12-15bn，IPO 兑现可释放 ~US$45-60bn 账面价值（占当前 ~US$963bn 市值的 5-6%），是估值压缩风险的关键缓冲。([Outlook Business: WMT Delays Flipkart IPO 2026-05](https://www.outlookbusiness.com/markets/no-ipo-yet-walmart-wants-flipkart-to-turn-profitable-first))
 
 ---
 
@@ -453,17 +653,30 @@ VIX 15.99 在历史中性偏低区间、^TNX 4.49% 高位震荡、HY OAS 暂未�
 - [AInvest: Walmart Streaming Perks Walmart+ Competitive](https://www.ainvest.com/news/walmart-strategic-expansion-streaming-perks-walmart-competitive-edge-retail-membership-wars-2509/)
 - [Trellis: Selling on Walmart vs Amazon Marketplaces 2026](https://gotrellis.com/resources/blog/selling-on-walmart-amazon/)
 
-**Data Used Manifest：** SEC EDGAR submissions JSON for CIK 0000104169 (Walmart) + cached 10-K / 10-Q / 8-K / DEF 14A under `/Users/x/projects/financial_agent/financial_reports/WMT/`；Walmart 公司 IR (`stock.walmart.com`、`corporate.walmart.com`)；Yahoo Finance、Public.com 估值数据；eMarketer / Marketing Dive / Modern Retail / mmCG Invest / Synctify 行业研究；db/indicators.db snapshot 2026-06-03 (VIX、TNX、tbill_3m)；Morgan Stanley Walmart+ 调研报告由 Yahoo Finance 二次引用。
+机构研究（sell-side，本地 db/zsxq.db 库，*分析师观点*）：
+
+- [UBS — Walmart: Addressing the Top 3 Questions on WMT's 2nd P&L, 2026-05-04](http://xs-macbook-air.local:5001/zsxq/pdf/212458522511121/UBS-Walmart%20Inc%EF%BC%88WMT.US%EF%BC%89Addressing%20the%20Top%203%20Questions%20on%20WMT%27s%20.pdf) — Buy / PT US$147
+- [Deutsche Bank — Walmart: Poise Under Pressure, 2026-05-22](http://xs-macbook-air.local:5001/zsxq/pdf/585428252525414/Deutsche%20Bank-Walmart%20Inc%EF%BC%88WMT.US%EF%BC%89Poise%20Under%20Pressure-260522.pdf) — Hold / PT US$120
+- [Bernstein — Walmart 1Q27: Fundamentals intact; EBIT growth, 2026-05-22](http://xs-macbook-air.local:5001/zsxq/pdf/415241488551118/Bernstein-Walmart%20%EF%BC%88WMT.US%EF%BC%89%201Q27%EF%BC%9A%20Fundamentals%20intact%EF%BC%9B%20EBIT%20gro.pdf) — Outperform / PT US$145
+- [Bernstein — Walmart: Takeaways from associates week, "Great Value" gets better, 2026-06-08](http://xs-macbook-air.local:5001/zsxq/pdf/214528288124441/Bernstein-Walmart%20Inc%EF%BC%88WMT.US%EF%BC%89Takeaways%20from%20associates%20week~_Great%20Value_%20gets%20better-260608.pdf) — 维持 Outperform / US$145
+- [Morgan Stanley — Walmart: How WMT's Flywheel Is Expanding, 2026-06-08](http://xs-macbook-air.local:5001/zsxq/pdf/814528811242112/Morgan%20Stanley-Walmart%20Inc%20%EF%BC%88WMT.US%EF%BC%89How%20WMT%27s%20Flywheel%20Is%20Expan.pdf) — Overweight / PT US$140
+
+**Data Used Manifest：** SEC EDGAR submissions JSON for CIK 0000104169 (Walmart) + cached 10-K / 10-Q / 8-K / DEF 14A under `/Users/x/projects/financial_agent/financial_reports/WMT/`（FY26 10-K `2026_10K_10-K_0000104169_26_000055.htm`、FY27 Q1 10-Q `2025Q4_10-Q...`、FY26 Q4 / FY27 Q1 earnings release 8-K）；Walmart 公司 IR (`stock.walmart.com`、`corporate.walmart.com`)；yfinance WMT 收盘价/市值 (2026-06-12)、Public.com 估值倍数；eMarketer / Marketing Dive / Modern Retail / mmCG Invest / Synctify 行业研究；**db/zsxq.db 本地 broker 库**（UBS / Deutsche Bank / Bernstein / Morgan Stanley 5 篇，file_id 见上）；**db/stock_price_target.db** read-only 预查（WMT PT 行：MS/DB/Bernstein/UBS，含 report_date_price 与 upside_pct）；db/indicators.db snapshot 2026-06-05 (VIX 21.51、^TNX 4.536、tbill_3m 3.625、hy_oas 2.74)；Morgan Stanley Walmart+ 调研报告由 Yahoo Finance 二次引用。图表由 `scripts/financial_charts.py` 与 `scripts/gf_score.py`（stdlib-only inline SVG）生成，数据全部来自 FY26 10-K 各报表。
 
 ---
 
 <details>
-<summary>Verification log (Step 10) — 2026-06-03</summary>
+<summary>Verification log (Step 10) — 2026-06-14</summary>
 
-**URL check (HTTP) —** 全报告 32 个 unique URLs 全部 HTTP-checked 2026-06-03（SEC URLs 用 "Research Analyst lx00617@gmail.com" UA 返回 200；其他 URLs 用 browser UA 返回 200 / 301 / 302）；pass rate **32/32**。
-- SEC EDGAR URLs (FY26 10-K, FY26 Q4 earnings release, FY27 Q1 earnings release, 2025 ICM press release, DEF 14A, CEO 接任公告) — 全部由 EDGAR submissions JSON (CIK 0000104169) 解析获取的真实 accession number 与 primary document filename，本地缓存的 FY26 10-K 大小 2.32 MB 验证存在；ICM2025 press release 缓存 25 KB，FY27 Q1 release 缓存 586 KB，Q4 FY26 release 47 KB 验证存在
-- corporate.walmart.com VIZIO 完成公告 URL 已在 web search 中确认有效
-- 第三方 URLs (Public.com、Marketing Dive、Synctify、Modern Retail、Grocery Dive、Unlistedzone、Retail Dive、Symbotic、Robotics 24/7、AInvest、RevenueMemo、mmCG Invest、Trellis、Outlook Business、Motley Fool transcript、Yahoo Finance Morgan Stanley note) 均返回 HTTP 200 / 301 (browser UA)。注：GuruFocus、Yahoo Finance Quote 与 Seeking Alpha 等强 Cloudflare anti-bot 站点不在最终引用列表中
+**本次刷新范围（2026-06-14）：** 在 2026-06-03 版基础上 (i) 更新价格 US$112.78→US$121.04 (2026-06-12 收盘)、市值 ~US$899bn→~US$963bn、TTM P/E ~39.8×→~44.3×；(ii) 新增 investment-summary 决策头部（Rating Hold / PT US$120 / bull-base-bear）；(iii) 新增 Section 1B GF Score 雷达 (63/100) + Section 2 估值与目标价（前瞻模型 + PT 推导 + 卖方观点演变 5 篇 zsxq broker notes）+ Section 10.5 关键分歧与催化剂；(iv) 新增 9 张 stdlib-SVG 图表（income/balance/cashflow Sankey、segment/geo donut、revbars、DuPont、GF radar、money-flow）；(v) 刷新 cycle snapshot 至 2026-06-05。
+
+**Step 0.5 sec-report-summary** — skipped（refresh of existing coverage；FY26 10-K 与 FY25/FY24 对比数据已直接从本地缓存 10-K 提取，多年趋势已并入 Sections 1/2/5/9/10；重型多 10-K pass 在 16 GB 机器上跳过，理由记录于此）。
+
+**URL check (HTTP) — 2026-06-14：**
+- SEC EDGAR URLs (FY26 10-K `wmt-20260131.htm`、FY26 Q4 release、FY27 Q1 release) 用 "Research Analyst lx00617@gmail.com" UA **实测返回 200**；FY27 Q1 total revenues US$177,751M (+7.3%) string-match 确认。
+- 5 篇 zsxq broker notes (UBS/DB/Bernstein×2/MS) 经 `find_pdf.py --file-id` 确认 `local_exists: true`，URL 用 `/zsxq/pdf/<file_id>/<filename>` direct-download 路由（非 dead `/zsxq-pdf/` 或 no-download `/zsxq/pdf-viewer/`）。
+- 第三方 URLs：Public.com WMT、Symbotic、Robotics 24/7、Outlook Business、Yahoo Finance quote 实测 200；Marketing Dive 返回 403（已知 anti-bot 阻断，非 dead link——上版已确认页面存活，按 CLAUDE.md anti-bot 规则保留）。其余第三方 URLs 沿用上版 2026-06-03 验证（11 天内，结构未变）。
+- GuruFocus / Seeking Alpha 等强 anti-bot 站点不在引用列表中。
 
 **SEC 文件名 —** 通过 `https://data.sec.gov/submissions/CIK0000104169.json` 解析获取的真实 primary documents：
 - FY26 10-K: `wmt-20260131.htm` (accession 0000104169-26-000055, filed 2026-03-13)
@@ -519,12 +732,31 @@ VIX 15.99 在历史中性偏低区间、^TNX 4.49% 高位震荡、HY OAS 暂未�
 - Seth Dallaire (EVP Chief Growth Officer, eff 2026-02-01) → ✓
 - 所有 named executives 均在 FY26 10-K Item 1 "Information About Our Executive Officers" 章节出现，姓名 / 头衔 / 任职日期 / 业务背景与 10-K 一致
 
+**财务图表 figure string-match (financial_charts.py) — 全部来自 FY26 10-K 报表：**
+- 利润表 Sankey: net sales segments US$482,975 + 130,423 + 93,015 + membership 6,750 = total revenues US$713,163M（精确求和，string-match 10-K segment note）；COGS 535,395、SG&A 147,943、OI 29,825、tax 7,199、NI attrib 21,893 → ✓ Consolidated Income Statement
+- 资产负债表 Sankey: total assets 284,668、PP&E net 136,083、goodwill 28,735、AP 63,061、accrued 31,187、LT debt 34,624、Walmart equity 99,617 → ✓ Consolidated Balance Sheet
+- 现金流 Sankey: OCF 41,565、capex 26,642、FCF 14,923、dividends 7,507、buybacks 8,088、begin cash 9,037 → ✓ Consolidated Statement of Cash Flows
+- segment donut: 483.0 / 130.4 / 93.0bn（net sales denominator）→ ✓；geo donut: U.S. ops 581.2 / non-U.S. 132.0bn（total revenues denominator，标注口径差异）→ ✓ Segment note geography
+- revbars FY24-FY26: 441.8/462.4/483.0(WUS)、114.6/121.9/130.4(Intl)、86.2/90.2/93.0(Sam's) → ✓ FY26+FY25 10-K
+- DuPont: NI 21,893 / pretax 29,469 / OI 29,825 / revenue 713,163 / assets 260,823→284,668 / equity 91,013→99,617 → ✓；ROE ~23% 与正文一致
+
+**Money-flow diagram (financial_charts.py moneyflow):** present (one per report)、pasted un-fenced；节点全部为真实可溯供应商/节点（CPG 巨头、Symbotic、本地农户——均来自 10-K supply chain 段 / Symbotic 公告 / Walmart Connect 广告主披露，无虚构供应商）；ribbon labels 中 capex US$27bn string-match 10-K capex US$26.6bn 四舍五入、US$520m string-match Symbotic 协议；`--source` footer 存在；caption 命名 chokepoint（进口/关税暴露）并逐条引用。
+
+**GF Score (Section 1B):** 63/100、五维 7/7/6/3/8，全部标注 *分析师观点*、无 filing 引用附在评分上；底层指标（ROE 23%、net debt/EBITDA、CAGR、forward P/E、12m 价格）各自带 inline 引用；未冒充 GuruFocus 官方数字。
+
+**zsxq 机构研究 (sell-side, *分析师观点*):**
+- 5 篇 broker notes (file_id 212458522511121 UBS / 585428252525414 DB / 415241488551118 Bernstein / 214528288124441 Bernstein / 814528811242112 MS) 全部 `local_exists: true`、标注 *分析师观点*、引用 `/zsxq/pdf/<file_id>/<filename>` 路由、never blended into filing citation
+- 卖方观点演变 (Sell-side view evolution) subsection 已建：先做 db/stock_price_target.db read-only 预查（WMT 8 行：MS OW US$140 / DB Hold US$120 / Bernstein OF US$145 / UBS Buy US$147，含 report_date_price 与 upside_pct），再建按机构时间线 + 机构间分歧表；PT 离散度 US$120-147 (~23% spread)；每个 borrowed PT 配报告日股价（UBS US$147 @ 2026-05-04 close US$130.08 +13% 等）
+- 数字 string-match: UBS "OI margin 4.5%→6.5% by 2030、2nd P&L 52% EBIT"、MS "FY28E EPS 44.2× P/E"、Bernstein "EBIT 燃油拖累 ~250bps"、DB "CY26E P/E ~46×" 均 string-match 各 note 的 summary/翻译精华
+
 **分析师观点句 (labelled, intentionally not cited to 10-K):**
-- § 7 "WMT vs AMZN 估值 gap 反映..." — 标注 *分析师观点：*
-- § 7 quadrantChart 坐标 — 标注 "*分析师观点*的定性映射"
-- § 10 各 lens scorecard — 全部标注 "*视角观点 / Lens view:*"，并明确为 rubric 评分
+- Investment-summary header（Rating/PT/thesis）、Section 1B GF Score、Section 2 全部前瞻数字与 bull/base/bear、Section 8 竞争定位、Section 10.5 分歧、Section 11 lens scorecards — 全部标注 *分析师观点 / 视角观点 / Lens view*，无一附 filing 引用
+- § 8 "WMT vs AMZN 估值 gap 反映..." — 标注 *分析师观点：*；§ 8 quadrantChart 坐标 — 标注 "*分析师观点*的定性映射"
 
 **Residual unknowns / 未独立验证:**
+- 价格/市值/倍数来自 yfinance 2026-06-12 收盘 (US$121.04 / ~US$963bn)；TTM P/E 由 FY26 EPS US$2.73 推算 ~44.3×；
+- 前瞻模型 FY27E-FY29E 与 PT US$120 为本报告自有 *分析师观点*，假设全部公开（指引中点 + advertising mix-up 路径），不构成投资建议；
+- 卖方 PT (US$140-147) 与 report-date price 来自 db/stock_price_target.db（Tier-2，persist_pts 写入），与 zsxq summary string-match；
 - Walmart+ 30.7m 估测数 来自 Morgan Stanley 4 月 survey 二次引用 (Yahoo Finance);
 - Flipkart US$40-70bn 与 PhonePe US$12bn 估值为 unlistedzone / Outlook Business 二次引用，未直接 Walmart 披露；
 - "household income >$100k 在 Walmart 渠道渗透加速" 为 ICM 2025 + 多份第三方分析的合成判断，未直接引用单一 Walmart 披露的 income cohort 数据；

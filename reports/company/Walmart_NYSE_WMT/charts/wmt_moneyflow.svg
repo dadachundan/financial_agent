@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1188" width="1180" height="1188" role="img" aria-label="Walmart 的 US$535bn COGS + US$27bn capex 流向哪里" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1188" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">WALMART RETAIL MONEY FLOW · FY26</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">Walmart 的 US$535bn COGS + US$27bn capex 流向哪里</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">Walmart 每年向供应商支付约 US$535bn 商品成本，扇出到全国品牌 CPG 巨头、自有品牌代工厂与生鲜本地农户；同时约 US$27bn capex 中越来越大份额流向 Symbotic 自动化。规模即议价权——钱最终汇集到少数 CPG</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">与物流/自动化节点。</text>
+<ellipse cx="1031.00" cy="487.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="760.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="760.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱 (Walmart)</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">买什么 (商品 + 履约)</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱汇集到哪里 (供应商/节点)</text>
+<path d="M 256.00 470.50 C 369.50 470.50, 369.50 330.50, 483.00 330.50" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 489.50 C 369.50 489.50, 369.50 440.50, 483.00 440.50" fill="none" stroke="url(#mfgold)" stroke-width="14.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 501.50 C 369.50 501.50, 369.50 550.50, 483.00 550.50" fill="none" stroke="url(#mfgold)" stroke-width="10.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 511.00 C 369.50 511.00, 369.50 652.00, 483.00 652.00" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 652.00 C 810.50 652.00, 810.50 597.00, 924.00 597.00" fill="none" stroke="url(#mfgold)" stroke-width="7.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 326.50 C 810.50 326.50, 810.50 267.00, 924.00 267.00" fill="none" stroke="url(#mfgold)" stroke-width="16.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 338.50 C 810.50 338.50, 810.50 707.00, 924.00 707.00" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 440.50 C 810.50 440.50, 810.50 377.00, 924.00 377.00" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 550.50 C 810.50 550.50, 810.50 487.00, 924.00 487.00" fill="none" stroke="url(#mfgold)" stroke-width="10.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="575.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">capex US$27bn</text>
+<text x="810.50" y="618.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">US$520m</text>
+<rect x="42.00" y="412.00" width="214" height="150.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="412.00" width="3" height="150.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="445.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">WALMART</text>
+<text x="60.00" y="466.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">FY26 COGS US$535bn</text>
+<text x="60.00" y="483.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">capex US$27bn</text>
+<rect x="483.00" y="283.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="283.50" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="316.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">GROCERY / CONSUMABLES</text>
+<text x="501.00" y="337.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">最大且最防御品类</text>
+<text x="501.00" y="354.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">~55%+ 美国销售</text>
+<rect x="483.00" y="393.50" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="393.50" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="426.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">GENERAL MERCHANDISE</text>
+<text x="501.00" y="447.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">电子/服装/家居</text>
+<text x="501.00" y="464.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">受 tariff 影响最大</text>
+<rect x="483.00" y="503.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="503.50" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="536.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">PRIVATE BRANDS</text>
+<text x="501.00" y="557.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Great Value/Equate/bettergoods</text>
+<text x="501.00" y="574.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">21 个品牌 &gt;US$1bn</text>
+<rect x="483.00" y="613.50" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="613.50" width="3" height="77.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="646.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">履约 + 自动化 capex</text>
+<text x="501.00" y="667.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">DC + 车队 + 机器人</text>
+<rect x="924.00" y="220.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="220.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">CPG 巨头</text>
+<text x="942.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">P&amp;G·Unilever·Coca-Cola</text>
+<text x="942.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">PepsiCo·Nestlé·Kraft Heinz</text>
+<rect x="924.00" y="330.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="330.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="363.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">进口/亚洲供应链</text>
+<text x="942.00" y="384.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">China/越南/印度代工</text>
+<text x="942.00" y="401.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">tariff 暴露点</text>
+<rect x="924.00" y="440.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="924.00" y="440.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="942.00" y="473.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">自有品牌代工厂</text>
+<text x="942.00" y="494.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">更高 unit margin</text>
+<text x="942.00" y="511.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">毛利扩张引擎</text>
+<rect x="924.00" y="550.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="550.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="583.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">SYMBOTIC</text>
+<text x="942.00" y="604.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">42 个 RDC 自动化</text>
+<text x="942.00" y="621.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">US$520m 新协议·链条节点</text>
+<rect x="924.00" y="660.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="660.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="693.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">本地农户/生鲜</text>
+<text x="942.00" y="714.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">就近采购生鲜</text>
+<text x="942.00" y="731.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Amazon 难复制的冷链</text>
+<rect x="42.00" y="780.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="782.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="782.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="782.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="782.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="775.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="747.00" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="828.60" y="775.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="847.60" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="972.40" y="775.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="991.40" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="42.00" y="795.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="61.00" y="804.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="185.80" y="795.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="204.80" y="804.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<line x1="42" y1="820.00" x2="1138" y2="820.00" stroke="#222a3a"/>
+<text x="42.00" y="836.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — WALMART 供应链</text>
+<rect x="42.00" y="856.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="42.00" y="856.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="58.00" y="880.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">买成品 · 全国品牌</text>
+<text x="58.00" y="898.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">CPG 巨头吃走最大份额</text>
+<text x="58.00" y="922.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Grocery</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#9aa3b8" font-weight="400"> consumables</tspan><tspan fill="#9aa3b8" font-weight="400"> 是最大采购池，钱汇集到</tspan><tspan fill="#f4d58a" font-weight="700"> P&amp;G</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> Unilever</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan></text>
+<text x="58.00" y="938.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Coca-Cola</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> PepsiCo</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> Nestlé</tspan><tspan fill="#9aa3b8" font-weight="400"> 等少数</tspan><tspan fill="#9aa3b8" font-weight="400"> CPG</tspan><tspan fill="#9aa3b8" font-weight="400"> 巨头——他们也是</tspan><tspan fill="#f4d58a" font-weight="700"> Walmart</tspan></text>
+<text x="58.00" y="954.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Connect</tspan><tspan fill="#9aa3b8" font-weight="400"> 的核心广告主，形成</tspan><tspan fill="#9aa3b8" font-weight="400"> '采购+广告'</tspan><tspan fill="#9aa3b8" font-weight="400"> 双向货币化。</tspan></text>
+<rect x="412.00" y="856.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="412.00" y="856.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="428.00" y="880.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">自有品牌 · 毛利引擎</text>
+<text x="428.00" y="898.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">私有品牌绕开品牌商</text>
+<text x="428.00" y="922.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">21</tspan><tspan fill="#9aa3b8" font-weight="400"> 个自有品牌年销</tspan><tspan fill="#9aa3b8" font-weight="400"> &gt;</tspan><tspan fill="#f4d58a" font-weight="700"> US$1bn</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> 5</tspan><tspan fill="#9aa3b8" font-weight="400"> 个</tspan><tspan fill="#9aa3b8" font-weight="400"> &gt;US$5bn；私有品牌由代工厂生产，unit</tspan></text>
+<text x="428.00" y="938.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">margin</tspan><tspan fill="#9aa3b8" font-weight="400"> 高于全国品牌，是</tspan><tspan fill="#f4d58a" font-weight="700"> gross</tspan><tspan fill="#f4d58a" font-weight="700"> margin</tspan><tspan fill="#9aa3b8" font-weight="400"> 持续扩张的核心引擎。</tspan></text>
+<rect x="782.00" y="856.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="782.00" y="856.00" width="3" height="132.00" rx="2" fill="#7fa8f5"/>
+<text x="798.00" y="880.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">进口 · TARIFF 暴露</text>
+<text x="798.00" y="898.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">General merchandise 的关税风险</text>
+<text x="798.00" y="922.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">电子/服装/家居大量来自</tspan><tspan fill="#f4d58a" font-weight="700"> China</tspan><tspan fill="#9aa3b8" font-weight="400"> 、越南、印度代工链，是</tspan><tspan fill="#f4d58a" font-weight="700"> tariff</tspan><tspan fill="#f4d58a" font-weight="700"> /</tspan><tspan fill="#f4d58a" font-weight="700"> IEEPA</tspan></text>
+<text x="798.00" y="938.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">政策冲击成本的主要暴露点，直接威胁</tspan><tspan fill="#9aa3b8" font-weight="400"> EDLP</tspan><tspan fill="#9aa3b8" font-weight="400"> 定价护城河。</tspan></text>
+<rect x="42.00" y="1002.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="42.00" y="1002.00" width="3" height="132.00" rx="2" fill="#d9a05b"/>
+<text x="58.00" y="1026.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">CAPEX · 自动化</text>
+<text x="58.00" y="1044.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Symbotic 是履约链条节点</text>
+<text x="58.00" y="1068.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">约</tspan><tspan fill="#9aa3b8" font-weight="400"> US$27bn</tspan><tspan fill="#9aa3b8" font-weight="400"> capex</tspan><tspan fill="#9aa3b8" font-weight="400"> 中越来越大份额流向自动化；Walmart</tspan><tspan fill="#9aa3b8" font-weight="400"> 将自有机器人业务出售给</tspan></text>
+<text x="58.00" y="1084.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Symbotic</tspan><tspan fill="#9aa3b8" font-weight="400"> 并签</tspan><tspan fill="#f4d58a" font-weight="700"> US$520m</tspan><tspan fill="#9aa3b8" font-weight="400"> 新协议，</tspan><tspan fill="#f4d58a" font-weight="700"> 42</tspan><tspan fill="#9aa3b8" font-weight="400"> 个</tspan><tspan fill="#9aa3b8" font-weight="400"> RDC</tspan><tspan fill="#9aa3b8" font-weight="400"> 8</tspan><tspan fill="#9aa3b8" font-weight="400"> 年内完成</tspan><tspan fill="#9aa3b8" font-weight="400"> Gen-2</tspan></text>
+<text x="58.00" y="1100.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">部署，单位履约成本进入下降通道。</tspan></text>
+<rect x="412.00" y="1002.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="412.00" y="1002.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="428.00" y="1026.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">生鲜 · 冷链护城河</text>
+<text x="428.00" y="1044.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">本地生鲜难被复制</text>
+<text x="428.00" y="1068.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Walmart</tspan><tspan fill="#9aa3b8" font-weight="400"> 就近向本地农户采购生鲜，配合</tspan><tspan fill="#f4d58a" font-weight="700"> 192</tspan><tspan fill="#9aa3b8" font-weight="400"> 个配送设施</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> 自有车队，构成</tspan><tspan fill="#9aa3b8" font-weight="400"> Amazon</tspan><tspan fill="#9aa3b8" font-weight="400"> 经</tspan></text>
+<text x="428.00" y="1084.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Whole</tspan><tspan fill="#9aa3b8" font-weight="400"> Foods/Fresh</tspan><tspan fill="#9aa3b8" font-weight="400"> 至今未能完整复制的</tspan><tspan fill="#f4d58a" font-weight="700"> grocery</tspan><tspan fill="#9aa3b8" font-weight="400"> 冷链壁垒。</tspan></text>
+<text x="590.00" y="1170.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: WMT FY26 10-K (COGS US$535.4bn · capex US$26.6bn · Item 1 supply chain) · Symbotic-Walmart 协议公告 · Walmart Connect 广告主披露</text>
+</svg>

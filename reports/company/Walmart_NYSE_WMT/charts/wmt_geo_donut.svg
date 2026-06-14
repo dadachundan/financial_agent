@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Walmart FY26 总收入按地域 (US$bn)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 166.83,186.84 L 216.40,208.26 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 166.83,186.84 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 216.40,208.26 Z" fill="#15803d"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">FY26</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$713.2B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="363.79" y1="354.52" x2="379.79" y2="354.52" stroke="#2563eb" stroke-width="1.4"/>
+<text x="383.79" y="352.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">U.S. operations</text>
+<text x="383.79" y="366.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$581.2B  (81.5%)</text>
+<line x1="212.21" y1="123.88" x2="196.21" y2="123.88" stroke="#15803d" stroke-width="1.4"/>
+<text x="192.21" y="121.88" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Non-U.S. operations</text>
+<text x="192.21" y="135.88" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$132.0B  (18.5%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: WMT FY26 10-K (period 2026-01-31) · SEC EDGAR · Segment note, revenues by geography</text>
+</svg>
