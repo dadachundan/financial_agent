@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">ADI 营业收入按终端市场 (FY2023–TTM, US$M)</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Industrial 工业</text>
+<rect x="135.80" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="151.80" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Automotive 汽车</text>
+<rect x="251.60" y="44" width="11" height="11" rx="2" fill="#d97706"/>
+<text x="267.60" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Communications 通信</text>
+<rect x="393.80" y="44" width="11" height="11" rx="2" fill="#7c3aed"/>
+<text x="409.80" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Consumer 消费</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$2.8B</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$5.5B</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$8.3B</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$11.0B</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$13.8B</text>
+<rect x="110.11" y="251.50" width="110.78" height="160.50" fill="#2563eb"/>
+<rect x="110.11" y="181.68" width="110.78" height="69.81" fill="#15803d"/>
+<rect x="110.11" y="142.70" width="110.78" height="38.99" fill="#d97706"/>
+<rect x="110.11" y="113.30" width="110.78" height="29.40" fill="#7c3aed"/>
+<text x="165.50" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY2023</text>
+<rect x="301.11" y="307.86" width="110.78" height="104.14" fill="#2563eb"/>
+<rect x="301.11" y="238.97" width="110.78" height="68.89" fill="#15803d"/>
+<rect x="301.11" y="212.49" width="110.78" height="26.48" fill="#d97706"/>
+<rect x="301.11" y="183.16" width="110.78" height="29.32" fill="#7c3aed"/>
+<text x="356.50" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY2024</text>
+<rect x="492.11" y="292.35" width="110.78" height="119.65" fill="#2563eb"/>
+<rect x="492.11" y="212.78" width="110.78" height="79.57" fill="#15803d"/>
+<rect x="492.11" y="179.33" width="110.78" height="33.45" fill="#d97706"/>
+<rect x="492.11" y="144.49" width="110.78" height="34.83" fill="#7c3aed"/>
+<text x="547.50" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY2025</text>
+<rect x="683.11" y="266.23" width="110.78" height="145.77" fill="#2563eb"/>
+<rect x="683.11" y="184.59" width="110.78" height="81.64" fill="#15803d"/>
+<rect x="683.11" y="141.46" width="110.78" height="43.14" fill="#d97706"/>
+<rect x="683.11" y="102.74" width="110.78" height="38.72" fill="#7c3aed"/>
+<text x="738.50" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">TTM 2Q26</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: ADI FY2025 10-K (FY ended 2025-11-01), SEC EDGAR + FY2024 10-K + Q2 FY2026 8-K — Revenue Trends by End Market; TTM 2Q26 = FY25 − 1H FY25 + 1H FY26</text>
+</svg>
