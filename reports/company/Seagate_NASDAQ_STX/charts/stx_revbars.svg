@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Seagate 营业收入构成 — FY21–FY25 (US$M)</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Mass Capacity 大容量</text>
+<rect x="162.20" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="178.20" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Legacy 传统</text>
+<rect x="251.60" y="44" width="11" height="11" rx="2" fill="#d97706"/>
+<text x="267.60" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Other 其他</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$2.5B</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$5.0B</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$7.6B</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$10.1B</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$12.6B</text>
+<rect x="102.09" y="256.27" width="88.62" height="155.73" fill="#2563eb"/>
+<rect x="102.09" y="162.82" width="88.62" height="93.45" fill="#15803d"/>
+<rect x="102.09" y="128.83" width="88.62" height="33.99" fill="#d97706"/>
+<text x="146.40" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY21</text>
+<rect x="254.89" y="217.17" width="88.62" height="194.83" fill="#2563eb"/>
+<rect x="254.89" y="136.76" width="88.62" height="80.41" fill="#15803d"/>
+<rect x="254.89" y="102.74" width="88.62" height="34.01" fill="#d97706"/>
+<text x="299.20" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY22</text>
+<rect x="407.69" y="296.51" width="88.62" height="115.49" fill="#2563eb"/>
+<rect x="407.69" y="235.83" width="88.62" height="60.69" fill="#15803d"/>
+<rect x="407.69" y="216.24" width="88.62" height="19.59" fill="#d97706"/>
+<text x="452.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY23</text>
+<rect x="560.49" y="286.94" width="88.62" height="125.06" fill="#2563eb"/>
+<rect x="560.49" y="255.69" width="88.62" height="31.26" fill="#15803d"/>
+<rect x="560.49" y="238.32" width="88.62" height="17.37" fill="#d97706"/>
+<text x="604.80" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY24</text>
+<rect x="713.29" y="216.64" width="88.62" height="195.36" fill="#2563eb"/>
+<rect x="713.29" y="187.68" width="88.62" height="28.95" fill="#15803d"/>
+<rect x="713.29" y="170.82" width="88.62" height="16.86" fill="#d97706"/>
+<text x="757.60" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY25</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Seagate 10-K FY2025 / FY2023 Item 7 MD&amp;A — Revenues by Market %；总额 FY21 $10,681M·FY22 $11,665M·FY23 $7,384M·FY24 $6,551M·FY25 $9,097M</text>
+</svg>

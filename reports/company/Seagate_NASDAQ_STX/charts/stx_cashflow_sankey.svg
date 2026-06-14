@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Seagate 现金流向 — FY2026 前九个月 (US$M)</text>
+<path d="M 204.00,64.00 C 306.00,64.00 306.00,71.00 408.00,71.00 L 408.00,201.10 C 306.00,201.10 306.00,194.10 204.00,194.10 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 644.00,64.00 C 746.00,64.00 746.00,174.53 848.00,174.53 L 848.00,361.13 C 746.00,361.13 746.00,250.60 644.00,250.60 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,250.60 C 746.00,250.60 746.00,375.13 848.00,375.13 L 848.00,443.47 C 746.00,443.47 746.00,318.94 644.00,318.94 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,71.00 C 526.00,71.00 526.00,64.00 628.00,64.00 L 628.00,318.94 C 526.00,318.94 526.00,325.94 424.00,325.94 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,325.94 C 526.00,325.94 526.00,332.94 628.00,332.94 L 628.00,554.00 C 526.00,554.00 526.00,547.00 424.00,547.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,208.10 C 306.00,208.10 306.00,201.10 408.00,201.10 L 408.00,547.00 C 306.00,547.00 306.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="130.10" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="208.10" width="16" height="345.90" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="71.00" width="16" height="476.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="64.00" width="16" height="254.94" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="332.94" width="16" height="221.06" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="174.53" width="16" height="186.60" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="375.13" width="16" height="68.33" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="126.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="139.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$891.0M  (27.3%)</text>
+<rect x="207.00" y="190.10" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="202.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="215.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.4B  (72.7%)</text>
+<rect x="427.00" y="53.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.3B  (100.0%)</text>
+<rect x="647.00" y="46.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.7B  (53.6%)</text>
+<text x="653.00" y="440.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="453.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.5B  (46.4%)</text>
+<text x="873.00" y="264.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Debt repayment 偿债</text>
+<text x="873.00" y="277.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.3B  (39.2%)</text>
+<text x="873.00" y="406.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Dividends 股息</text>
+<text x="873.00" y="419.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$468.0M  (14.4%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = US$2.0B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Seagate FQ3 FY2026 10-Q (截至 2026-04-03)，合并现金流量表(九个月)</text>
+</svg>
