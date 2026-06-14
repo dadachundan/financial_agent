@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Visa (V) 现金流 / Cash Flow — FY2025 (US$M)</text>
+<path d="M 204.00,64.00 C 361.00,64.00 361.00,78.00 518.00,78.00 L 518.00,232.79 C 361.00,232.79 361.00,218.79 204.00,218.79 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,78.00 C 691.00,78.00 691.00,71.00 848.00,71.00 L 848.00,316.12 C 691.00,316.12 691.00,323.12 534.00,323.12 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,323.12 C 691.00,323.12 691.00,330.12 848.00,330.12 L 848.00,547.00 C 691.00,547.00 691.00,540.00 534.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,232.79 C 361.00,232.79 361.00,232.79 518.00,232.79 L 518.00,530.85 C 361.00,530.85 361.00,530.85 204.00,530.85 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,544.85 C 361.00,544.85 361.00,530.85 518.00,530.85 L 518.00,540.00 C 361.00,540.00 361.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="154.79" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="232.79" width="16" height="298.06" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="544.85" width="16" height="9.15" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="71.00" width="16" height="245.12" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="330.12" width="16" height="216.88" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="138.39" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="151.39" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$12.0B  (33.5%)</text>
+<rect x="207.00" y="205.94" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="217.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="230.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$23.1B  (64.5%)</text>
+<rect x="207.00" y="518.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="210.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$708.0M  (2.0%)</text>
+<rect x="537.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$35.7B  (100.0%)</text>
+<rect x="867.00" y="53.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="870.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$19.0B  (53.1%)</text>
+<text x="873.00" y="435.56" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="448.56" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$16.8B  (46.9%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">CFO $23.1B − capex $1.5B = FCF ~$21.6B; $22.95B returned to shareholders (buybacks + dividends).  ·  Free Cash Flow = CFO − CapEx = $21.6B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Visa FY2025 10-K, Consolidated Statements of Cash Flows</text>
+</svg>
