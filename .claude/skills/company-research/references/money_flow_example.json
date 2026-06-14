@@ -41,5 +41,20 @@
     {"from": "amd",    "to": "micron", "weight": 6,  "style": "embedded"},
     {"from": "power",  "to": "tsmc",   "weight": 6,  "style": "embedded"}
   ],
+  "cards_title": "Follow the money",
+  "cards": [
+    {"kind": "compute", "tag": "Buy finished · AI compute", "title": "Nvidia & AMD GPUs",
+     "body": "Tesla's single biggest external chip line. Its Cortex cluster runs *~50,000* Nvidia H100s plus Tesla's own hardware; a 10k-GPU pod alone runs *$300M+*. 2024 capex topped *$11B*, largely AI compute, with AMD's Instinct as a second source."},
+    {"kind": "silicon", "tag": "Design in-house · pay the fab", "title": "AI5, AI6 & Dojo",
+     "body": "Tesla designs the chip, then pays a foundry to build it. *TSMC* makes AI5 (Taiwan to Arizona); *Samsung* makes today's AI4 and won AI6 in a *$16.5B* deal (Taylor, TX, through 2033). Dojo's custom team wound down in 2025, folding into AI5/AI6."},
+    {"kind": "memory", "tag": "Buy direct & embedded", "title": "Memory: SK Hynix, Samsung, Micron",
+     "body": "Tesla buys *SK Hynix* memory and *Samsung LPDDR5X* for AI5, plus DRAM/NAND for vehicles. The same three also supply the *HBM* inside every Nvidia/AMD GPU, so Tesla pays them twice over, directly and embedded."},
+    {"kind": "power", "tag": "The other chips", "title": "Power, analog, MCU & sensors",
+     "body": "The unglamorous bulk of a car: *Infineon*, *STMicro* (SiC inverter), *NXP* (radar, networking), *Texas Instruments* (power/analog), *onsemi* (cameras, SiC), *Analog Devices* (battery mgmt) and *Renesas* (MCUs)."},
+    {"kind": "buyer2", "tag": "SpaceX · Starlink", "title": "STMicro RF + custom silicon",
+     "body": "*STMicroelectronics* co-designs Starlink's phased-array front-end: over *5B* RF chips shipped in a decade, ~*$600M* of LEO revenue in 2025. As an IDM it builds them in its own fabs, so this money largely stops there. SpaceX is also designing its own RF modules."},
+    {"kind": "foundry", "tag": "Where it pools", "title": "TSMC + the memory three",
+     "body": "Nvidia and AMD are fabless, so your GPU dollars flow on to *TSMC* (logic) and *SK Hynix / Samsung / Micron* (HBM). Add Tesla's own-chip contracts and the convergence is stark: a handful of names catch most of the money, with *TSMC* the deepest well."}
+  ],
   "source": "CNN / Bloomberg / Reuters on the Samsung–Tesla $16.5B foundry deal · Tom's Hardware / TrendForce / DigiTimes on AI5/AI6 nodes & memory · DataCenterDynamics on Tesla AI capex · STMicro newsroom / SemiWiki on Starlink RF (paraphrased, through mid-2026)"
 }

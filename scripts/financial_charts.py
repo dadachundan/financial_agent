@@ -836,6 +836,77 @@ def _mf_text(x, y, s, size, fill, *, weight="400", anchor="start", font=None,
             f'fill="{fill}"{extra}>{_xml(s)}</text>')
 
 
+def _mf_emph(text):
+    """Tokenise a card body, treating *...* as an emphasis (gold) span.
+    Returns list of (word, emph_bool)."""
+    out, emph = [], False
+    for tok in str(text).replace("*", " * ").split():
+        if tok == "*":
+            emph = not emph
+        else:
+            out.append((tok, emph))
+    return out
+
+
+def _mf_wrap_runs(runs, max_chars):
+    """Word-wrap (word, emph) runs to max_chars per line, preserving emphasis."""
+    lines, cur, n = [], [], 0
+    for word, emph in runs:
+        add = len(word) + (1 if cur else 0)
+        if cur and n + add > max_chars:
+            lines.append(cur)
+            cur, n = [], 0
+            add = len(word)
+        cur.append((word, emph))
+        n += add
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def _mf_runs_line(x, y, line, size, base_fill, emph_fill, font=None):
+    f = font or MF_SANS
+    spans = []
+    for i, (word, emph) in enumerate(line):
+        txt = (" " if i else "") + word
+        fw = "700" if emph else "400"
+        spans.append(f'<tspan fill="{emph_fill if emph else base_fill}" '
+                     f'font-weight="{fw}">{_xml(txt)}</tspan>')
+    # xml:space="preserve" so the inter-word spaces (leading a <tspan>) aren't
+    # stripped by SVG's default whitespace collapsing.
+    return (f'<text x="{_f(x)}" y="{_f(y)}" font-family="{f}" font-size="{size}" '
+            f'xml:space="preserve">{"".join(spans)}</text>')
+
+
+def _mf_card_dims(w, card):
+    """Returns (title_lines, body_lines, height_px) for a 'Follow the money' card."""
+    tlines = _mf_wrap(card.get("title", ""), max(8, int((w - 32) / 8.6)))
+    blines = _mf_wrap_runs(_mf_emph(card.get("body", "")), max(10, int((w - 32) / 6.1)))
+    tag_h = 18 if card.get("tag") else 0
+    h = 24 + tag_h + len(tlines) * 20 + 4 + len(blines) * 16 + 18
+    return tlines, blines, h
+
+
+def _mf_card(x, y, w, h, card, tlines, blines):
+    acc = card.get("color") or MF_KIND.get(card.get("kind", "neutral"), MF_KIND["neutral"])[0]
+    o = [f'<rect x="{_f(x)}" y="{_f(y)}" width="{_f(w)}" height="{_f(h)}" rx="13" '
+         f'fill="{MF_PANEL}" stroke="{acc}" stroke-opacity="0.28"/>',
+         f'<rect x="{_f(x)}" y="{_f(y)}" width="3" height="{_f(h)}" rx="2" fill="{acc}"/>']
+    tx = x + 16
+    cy = y + 24
+    if card.get("tag"):
+        o.append(_mf_text(tx, cy, card["tag"].upper(), 10, acc, weight="600", font=MF_MONO, ls="1"))
+        cy += 18
+    for ln in tlines:
+        o.append(_mf_text(tx, cy, ln, 15.5, "#ffffff", weight="700"))
+        cy += 20
+    cy += 4
+    for ln in blines:
+        o.append(_mf_runs_line(tx, cy, ln, 12, "#9aa3b8", MF_GOLD_SOFT))
+        cy += 16
+    return o
+
+
 def render_moneyflow(spec, source=None, width=1180, note=None):
     """spec: dict with keys
         eyebrow, title, thesis (str), stages (list of stage labels),
@@ -1055,8 +1126,32 @@ def render_moneyflow(spec, source=None, width=1180, note=None):
             ly += 20
             height = max(height, ly + 40)
 
+    # ── "Follow the money" cards (optional, rendered as SVG below the flow) ──
+    cards = spec.get("cards") or []
+    cur_y = ly + 24
+    if cards:
+        o.append(f'<line x1="{PAD}" y1="{_f(cur_y - 8)}" x2="{width - PAD}" '
+                 f'y2="{_f(cur_y - 8)}" stroke="{MF_GRID}"/>')
+        o.append(_mf_text(PAD, cur_y + 8, spec.get("cards_title", "Follow the money").upper(),
+                          12, MF_MUT, weight="500", font=MF_MONO, ls="3"))
+        cur_y += 28
+        ncols = 3 if width >= 980 else 2
+        cgap = 14
+        card_w = (width - 2 * PAD - (ncols - 1) * cgap) / ncols
+        i = 0
+        while i < len(cards):
+            row = cards[i:i + ncols]
+            dims = [_mf_card_dims(card_w, c) for c in row]
+            row_h = max(d[2] for d in dims)
+            for j, c in enumerate(row):
+                cx = PAD + j * (card_w + cgap)
+                tlines, blines, _h = dims[j]
+                o += _mf_card(cx, cur_y, card_w, row_h, c, tlines, blines)
+            cur_y += row_h + cgap
+            i += ncols
+
     # footer
-    fy = ly + 30
+    fy = (cur_y + 22) if cards else (ly + 30)
     if note:
         o.append(_mf_text(width / 2, fy - 16, note, 10.5, MF_MUT2, anchor="middle"))
     if source:

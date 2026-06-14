@@ -78,6 +78,11 @@ blank line before and after, so the viewer renders it.
     {"from": "co",  "to": "gpu", "weight": 26, "style": "direct",   "label": "$ billions / yr"},
     {"from": "gpu", "to": "fab", "weight": 14, "style": "embedded"}
   ],
+  "cards_title": "Follow the money",
+  "cards": [
+    {"kind": "compute", "tag": "Buy finished · AI compute", "title": "GPUs",
+     "body": "One or two sentences. Wrap key numbers and names in *asterisks* to render them in gold, e.g. capex of *$11B*, *~50,000* GPUs."}
+  ],
   "source": "Exact, citable sources for the chain — same discipline as every chart footer."
 }
 ```
@@ -103,6 +108,14 @@ custom `color` and a custom `legend`.
 chip per `kind` present) — override with a `legend` array of
 `{"type":"direct|embedded|scale|chip","label":"…","kind":"…"}` when the auto labels
 don't fit the domain.
+
+### The "Follow the money" cards (recommended — they're half of what makes the reference readable)
+
+The reference's signature is the **"Follow the money" card grid beneath the flow** — short thesis cards that say, in words, what each ribbon means. Supply a `cards` array and the renderer draws them as a 3-up grid **inside the same SVG**, below the diagram (a `cards_title` overrides the "Follow the money" header). Without `cards`, only the flow + legend render.
+
+**Card fields:** `tag` (small uppercase eyebrow, coloured by the accent), `title` (the card headline), `body` (1–3 sentences), `kind` (drives the accent bar/tag colour) or an explicit `color`. **In the `body`, wrap key numbers and proper nouns in `*asterisks*`** to render them in **gold** (the reference's bolded-number effect) — e.g. `"capex topped *$11B*, with *Samsung* winning the *$16.5B* deal"`. Keep one card per flow theme (compute / in-house silicon / memory / power-analog / the supplier you want to spotlight / where-it-pools), 4–6 cards total.
+
+Because the cards live in the image, **every number in a card body is held to the same number→source rule as a ribbon label** — it must string-match a source cited in the report's surrounding prose. The cards are the *visual summary*; the report paragraph next to the diagram still carries the clickable markdown-link citations for each claim (the SVG `--source` footer is the within-image backup, exactly as for every other chart).
 
 A full worked spec — the Tesla/SpaceX reference reproduced — is committed at
 [`money_flow_example.json`](money_flow_example.json) next to this doc. Copy it, swap in
@@ -131,10 +144,13 @@ python scripts/financial_charts.py moneyflow \
 4. **`--source` / `spec.source` is REQUIRED and baked into the SVG footer**, per the
    project chart rule (the source travels inside the image). Cite the actual chain
    sources, not a homepage.
-5. **The surrounding report paragraph still carries inline page-level citations** for
-   the supply-chain narrative the diagram visualizes — the baked-in footer is a backup,
-   not a substitute. Write a short "follow the money" paragraph beneath the diagram that
-   names the chokepoint(s) and cites each link.
+5. **Card-body numbers are claims too** — every figure inside a "Follow the money" card
+   must string-match a source cited in the report's surrounding prose (the cards are in
+   the image and can't hold clickable links, so the prose carries them).
+6. **The surrounding report paragraph still carries inline page-level citations** for
+   the supply-chain narrative the diagram + cards visualize — the baked-in footer is a
+   backup, not a substitute. Write a short "follow the money" paragraph beneath the
+   diagram that names the chokepoint(s) and cites each link.
 
 ## Placement
 
@@ -147,8 +163,10 @@ chart.
 
 ## Embedding form
 
-Paste the emitted `<svg>` **un-fenced**, blank line before and after, then a one-line
-caption + the short sourced "follow the money" paragraph:
+The flow, the legend, and the "Follow the money" cards are all inside the one emitted
+`<svg>`. Paste it **un-fenced**, blank line before and after, then a one-line caption +
+the short sourced "follow the money" paragraph that carries the clickable citations the
+in-image cards can't:
 
 ```
 <svg ...> … </svg>
