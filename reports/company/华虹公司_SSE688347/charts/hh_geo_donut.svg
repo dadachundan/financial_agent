@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">华虹 2025 营收结构 by 地区 (revenue by geography, ¥M)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 169.22,181.61 L 217.81,205.17 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 169.22,181.61 A 132 132 0 0 1 227.55,121.86 L 252.28,169.86 A 78 78 0 0 0 217.81,205.17 Z" fill="#15803d"/>
+<path d="M 227.55,121.86 A 132 132 0 0 1 264.71,109.27 L 274.24,162.42 A 78 78 0 0 0 252.28,169.86 Z" fill="#d97706"/>
+<path d="M 264.71,109.27 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 274.24,162.42 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">地区</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">¥17.3B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="361.26" y1="356.15" x2="377.26" y2="356.15" stroke="#2563eb" stroke-width="1.4"/>
+<text x="381.26" y="354.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">中国大陆+香港 China+HK</text>
+<text x="381.26" y="368.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥14.2B  (82.2%)</text>
+<line x1="189.24" y1="142.81" x2="173.24" y2="142.81" stroke="#15803d" stroke-width="1.4"/>
+<text x="169.24" y="140.81" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">北美 N.America</text>
+<text x="169.24" y="154.81" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥1.8B  (10.2%)</text>
+<line x1="243.73" y1="108.49" x2="227.73" y2="108.49" stroke="#d97706" stroke-width="1.4"/>
+<text x="223.73" y="106.49" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">亚洲其他 Asia other</text>
+<text x="223.73" y="120.49" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥821.0M  (4.7%)</text>
+<line x1="275.78" y1="101.74" x2="259.78" y2="101.74" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="255.78" y="99.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">欧洲 Europe</text>
+<text x="255.78" y="113.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥488.0M  (2.8%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 华虹半导体 2025 年年度报告(修订版) 第26页 · cninfo · as of 2026-06-14</text>
+</svg>

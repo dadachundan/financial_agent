@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1156" width="1180" height="1156" role="img" aria-label="谁付钱给华虹 → 华虹做什么 → 华虹的钱又流向谁 (demand/revenue view)" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1156" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">华虹半导体 · 特色工艺代工资金流 · 2025–2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">谁付钱给华虹 → 华虹做什么 → 华虹的钱又流向谁 (demand/revenue view)</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">下游 fabless / 系统厂 / IDM 的订单流入华虹五大特色工艺平台，华虹再把约 ¥129 亿的 COGS 与 ¥129 亿的年度 CapEx 投向上游设备与材料——其中关键设备仍由 AMAT/Lam/KLA 把控（2026-04</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">已被美国出口管制波及），构成最硬的瓶颈。</text>
+<ellipse cx="1031.00" cy="487.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="760.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="760.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱 (下游需求)</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">华虹做什么 (五大平台)</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">华虹的钱流向谁 (上游瓶颈)</text>
+<path d="M 256.00 398.25 C 369.50 398.25, 369.50 263.25, 483.00 263.25" fill="none" stroke="url(#mfgold)" stroke-width="21.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 420.75 C 369.50 420.75, 369.50 374.00, 483.00 374.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 444.00 C 369.50 444.00, 369.50 487.00, 483.00 487.00" fill="none" stroke="url(#mfgold)" stroke-width="22.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 461.25 C 369.50 461.25, 369.50 597.00, 483.00 597.00" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 471.75 C 369.50 471.75, 369.50 707.00, 483.00 707.00" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 552.00 C 369.50 552.00, 369.50 277.50, 483.00 277.50" fill="none" stroke="url(#mfgold)" stroke-width="7.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 558.75 C 369.50 558.75, 369.50 389.00, 483.00 389.00" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 261.00 C 810.50 261.00, 810.50 314.50, 924.00 314.50" fill="none" stroke="url(#mfgold)" stroke-width="15.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 371.75 C 810.50 371.75, 810.50 329.50, 924.00 329.50" fill="none" stroke="url(#mfgold)" stroke-width="15.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 487.00 C 810.50 487.00, 810.50 445.25, 924.00 445.25" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 384.50 C 810.50 384.50, 810.50 434.00, 924.00 434.00" fill="none" stroke="url(#mfgold)" stroke-width="10.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 597.00 C 810.50 597.00, 810.50 550.00, 924.00 550.00" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 274.50 C 810.50 274.50, 810.50 657.00, 924.00 657.00" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 707.00 C 810.50 707.00, 810.50 666.00, 924.00 666.00" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="810.50" y="281.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">设备采购</text>
+<text x="810.50" y="460.12" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">国产替代</text>
+<text x="810.50" y="459.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">硅片/材料</text>
+<rect x="42.00" y="372.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="372.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="405.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">国产 FABLESS</text>
+<text x="60.00" y="426.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">兆易/卓胜微/汇顶/豪威</text>
+<text x="60.00" y="443.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">占营收 96.7%（系统+fabless）</text>
+<rect x="42.00" y="508.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="508.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="541.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">海外 IDM/系统厂</text>
+<text x="60.00" y="562.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">NXP/英飞凌/On Semi 等</text>
+<text x="60.00" y="579.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">China-for-China 转单</text>
+<rect x="483.00" y="220.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="220.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">功率器件 POWER</text>
+<text x="501.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">IGBT/SJ-MOS/GaN</text>
+<text x="501.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">¥47.6亿 · 占27.8%</text>
+<rect x="483.00" y="330.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="330.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="363.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">模拟/电源 BCD</text>
+<text x="501.00" y="384.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">PMIC/BCD/BCD+eFlash</text>
+<text x="501.00" y="401.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">¥45.6亿 · +42% YoY</text>
+<rect x="483.00" y="440.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="440.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="473.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">嵌入式NVM</text>
+<text x="501.00" y="494.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">eFlash MCU 40/55nm</text>
+<text x="501.00" y="511.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">¥43.6亿 · 占25.4%</text>
+<rect x="483.00" y="550.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="550.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="583.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">逻辑/射频/CIS</text>
+<text x="501.00" y="604.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">RFCMOS/RF SOI/CIS</text>
+<text x="501.00" y="621.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">¥21.2亿</text>
+<rect x="483.00" y="660.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="483.00" y="660.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="501.00" y="693.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">独立NVM NOR</text>
+<text x="501.00" y="714.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">48nm NOR Flash</text>
+<text x="501.00" y="731.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">¥13.4亿 · +44.5% YoY</text>
+<rect x="924.00" y="267.00" width="214" height="110.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="267.00" width="3" height="110.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="300.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">AMAT·LAM·KLA</text>
+<text x="942.00" y="321.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">刻蚀/薄膜/量检测</text>
+<text x="942.00" y="338.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">2026-04 部分断供瓶颈</text>
+<rect x="924.00" y="393.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="393.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="426.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">北方华创·中微·盛美</text>
+<text x="942.00" y="447.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">国产设备替代</text>
+<text x="942.00" y="464.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">FAB9B 提高国产化率</text>
+<rect x="924.00" y="503.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="503.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="536.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">ASML (DUV)</text>
+<text x="942.00" y="557.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">浸没式 DUV 光刻</text>
+<text x="942.00" y="574.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">不涉 EUV（成熟节点）</text>
+<rect x="924.00" y="613.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="613.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="646.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">硅片+材料</text>
+<text x="942.00" y="667.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">沪硅产业/江丰/安集</text>
+<text x="942.00" y="684.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">硅片/靶材/抛光液</text>
+<rect x="42.00" y="780.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="782.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="782.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="782.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="782.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="775.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="747.00" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="871.80" y="775.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="890.80" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="1015.60" y="775.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="1034.60" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="42.00" y="795.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="61.00" y="804.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="128.20" y="795.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="147.20" y="804.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="221.60" y="795.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="240.60" y="804.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="379.80" y="795.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="398.80" y="804.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="820.00" x2="1138" y2="820.00" stroke="#222a3a"/>
+<text x="42.00" y="836.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 资金流要点</text>
+<rect x="42.00" y="856.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="42.00" y="856.00" width="3" height="116.00" rx="2" fill="#d9a05b"/>
+<text x="58.00" y="880.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">需求侧 · AI周边电源</text>
+<text x="58.00" y="898.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">BCD/PMIC 是最强增量</text>
+<text x="58.00" y="922.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">模拟与电源平台</tspan><tspan fill="#9aa3b8" font-weight="400"> 2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 收入</tspan><tspan fill="#f4d58a" font-weight="700"> +42%</tspan><tspan fill="#f4d58a" font-weight="700"> YoY</tspan><tspan fill="#9aa3b8" font-weight="400"> 至</tspan><tspan fill="#f4d58a" font-weight="700"> ¥45.6亿</tspan><tspan fill="#9aa3b8" font-weight="400"> ，主因</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 服务器</tspan><tspan fill="#9aa3b8" font-weight="400"> PMIC/VRM</tspan></text>
+<text x="58.00" y="938.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">与手机快充需求；BCD</tspan><tspan fill="#9aa3b8" font-weight="400"> 是华虹相对通用代工最难复制的护城河。</tspan></text>
+<rect x="412.00" y="856.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="856.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="880.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求侧 · 客户结构</text>
+<text x="428.00" y="898.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">国产 fabless 占绝对主力</text>
+<text x="428.00" y="922.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">系统厂+fabless</tspan><tspan fill="#9aa3b8" font-weight="400"> 合计占主营收入</tspan><tspan fill="#f4d58a" font-weight="700"> 96.74%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，IDM</tspan><tspan fill="#9aa3b8" font-weight="400"> 仅</tspan><tspan fill="#f4d58a" font-weight="700"> 3.26%</tspan><tspan fill="#9aa3b8" font-weight="400"> ；前五大客户合计</tspan></text>
+<text x="428.00" y="938.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">34.18%</tspan><tspan fill="#9aa3b8" font-weight="400"> 、单一最大</tspan><tspan fill="#f4d58a" font-weight="700"> 8.56%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，集中度温和。</tspan></text>
+<rect x="782.00" y="856.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="856.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="880.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">供给侧 · 最硬瓶颈</text>
+<text x="798.00" y="898.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">美系设备三巨头</text>
+<text x="798.00" y="922.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">刻蚀/薄膜/量检测关键设备仍依赖</tspan><tspan fill="#f4d58a" font-weight="700"> AMAT/Lam/KLA</tspan><tspan fill="#9aa3b8" font-weight="400"> ；2026-04-28</tspan></text>
+<text x="798.00" y="938.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">美国商务部已要求三家暂停向</tspan><tspan fill="#f4d58a" font-weight="700"> Fab</tspan><tspan fill="#f4d58a" font-weight="700"> 6</tspan><tspan fill="#f4d58a" font-weight="700"> /</tspan><tspan fill="#f4d58a" font-weight="700"> Fab</tspan><tspan fill="#f4d58a" font-weight="700"> 8a</tspan><tspan fill="#9aa3b8" font-weight="400"> 发货——这是全链条最脆弱的一环。</tspan></text>
+<rect x="42.00" y="986.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="986.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="1010.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">供给侧 · 对冲</text>
+<text x="58.00" y="1028.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">国产设备加速上量</text>
+<text x="58.00" y="1052.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">北方华创/中微/盛美</tspan><tspan fill="#9aa3b8" font-weight="400"> 等本土设备在</tspan><tspan fill="#9aa3b8" font-weight="400"> 8</tspan><tspan fill="#9aa3b8" font-weight="400"> 英寸与成熟</tspan><tspan fill="#9aa3b8" font-weight="400"> 12</tspan><tspan fill="#9aa3b8" font-weight="400"> 英寸的渗透率上升；</tspan><tspan fill="#f4d58a" font-weight="700"> FAB9B</tspan></text>
+<text x="58.00" y="1068.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">明确以提高国产设备占比、主攻</tspan><tspan fill="#9aa3b8" font-weight="400"> 40nm</tspan><tspan fill="#9aa3b8" font-weight="400"> 特色工艺为目标。</tspan></text>
+<rect x="412.00" y="986.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="986.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="1010.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">资本开支强度</text>
+<text x="428.00" y="1028.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">年 CapEx 约 ¥129 亿</text>
+<text x="428.00" y="1052.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 购建固定/无形资产现金支出</tspan><tspan fill="#f4d58a" font-weight="700"> ¥129.3亿</tspan><tspan fill="#9aa3b8" font-weight="400"> ，远超</tspan><tspan fill="#f4d58a" font-weight="700"> ¥50.7亿</tspan><tspan fill="#9aa3b8" font-weight="400"> 的经营现金流——FCF</tspan><tspan fill="#9aa3b8" font-weight="400"> 为</tspan><tspan fill="#f4d58a" font-weight="700"> 约</tspan></text>
+<text x="428.00" y="1068.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">−¥79亿</tspan><tspan fill="#9aa3b8" font-weight="400"> ，靠</tspan><tspan fill="#f4d58a" font-weight="700"> ¥143.7亿</tspan><tspan fill="#9aa3b8" font-weight="400"> 新增借款与权益融资补足。</tspan></text>
+<text x="590.00" y="1138.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: 华虹半导体 2025 年年度报告(修订版) 合并利润表/现金流量表/第25-26页 · U.S. News 2026-04-28 出口管制 · as of 2026-06-14</text>
+</svg>

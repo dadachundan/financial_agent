@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">华虹 2025 营收结构 by 工艺平台 (revenue by platform, ¥M)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 417.98,262.23 L 364.80,252.81 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 417.98,262.23 A 132 132 0 0 1 252.04,366.21 L 266.75,314.25 A 78 78 0 0 0 364.80,252.81 Z" fill="#15803d"/>
+<path d="M 252.04,366.21 A 132 132 0 0 1 162.04,199.74 L 213.57,215.88 A 78 78 0 0 0 266.75,314.25 Z" fill="#d97706"/>
+<path d="M 162.04,199.74 A 132 132 0 0 1 225.80,122.77 L 251.24,170.40 A 78 78 0 0 0 213.57,215.88 Z" fill="#7c3aed"/>
+<path d="M 225.80,122.77 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 251.24,170.40 Z" fill="#dc2626"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">¥171亿</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">¥17.1B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="393.75" y1="150.54" x2="409.75" y2="150.54" stroke="#2563eb" stroke-width="1.4"/>
+<text x="413.75" y="148.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">功率器件 Power</text>
+<text x="413.75" y="162.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥4.8B  (27.8%)</text>
+<line x1="361.28" y1="356.14" x2="377.28" y2="356.14" stroke="#15803d" stroke-width="1.4"/>
+<text x="381.28" y="354.14" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">模拟/电源 Analog&amp;PMIC</text>
+<text x="381.28" y="368.14" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥4.6B  (26.6%)</text>
+<line x1="166.61" y1="304.83" x2="150.61" y2="304.83" stroke="#d97706" stroke-width="1.4"/>
+<text x="146.61" y="302.83" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">嵌入式NVM eNVM</text>
+<text x="146.61" y="316.83" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥4.4B  (25.4%)</text>
+<line x1="181.73" y1="151.16" x2="165.73" y2="151.16" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="161.73" y="149.16" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">逻辑射频 Logic&amp;RF</text>
+<text x="161.73" y="163.16" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥2.1B  (12.4%)</text>
+<line x1="254.48" y1="105.33" x2="238.48" y2="105.33" stroke="#dc2626" stroke-width="1.4"/>
+<text x="234.48" y="103.33" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">独立NVM NOR</text>
+<text x="234.48" y="117.33" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥1.3B  (7.8%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 华虹半导体 2025 年年度报告(修订版) 第26页 · cninfo · as of 2026-06-14</text>
+</svg>
