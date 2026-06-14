@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.finagent.weekly-db-commit</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/x/projects/financial_agent/scripts/weekly_db_commit.sh</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key><integer>0</integer>
+    <key>Hour</key><integer>18</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>/Users/x/projects/financial_agent/log/weekly_db_commit.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/x/projects/financial_agent/log/weekly_db_commit.log</string>
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>
