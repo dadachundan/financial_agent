@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">How Boeing (BA) Makes Its Money — FY2025</text>
+<path d="M 204.00,62.57 C 258.00,62.57 258.00,85.00 312.00,85.00 L 312.00,274.24 C 258.00,274.24 258.00,251.81 204.00,251.81 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,271.24 560.00,271.24 L 560.00,290.76 C 506.00,290.76 506.00,97.52 452.00,97.52 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,97.52 C 506.00,97.52 506.00,304.76 560.00,304.76 L 560.00,306.76 C 506.00,306.76 506.00,99.52 452.00,99.52 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,97.56 C 382.00,97.56 382.00,104.56 328.00,104.56 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,104.56 C 382.00,104.56 382.00,111.56 436.00,111.56 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,246.86 C 754.00,246.86 754.00,267.90 808.00,267.90 L 808.00,278.10 C 754.00,278.10 754.00,257.05 700.00,257.05 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,257.05 C 754.00,257.05 754.00,292.10 808.00,292.10 L 808.00,294.10 C 754.00,294.10 754.00,259.05 700.00,259.05 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,259.05 C 754.00,259.05 754.00,308.10 808.00,308.10 L 808.00,310.10 C 754.00,310.10 754.00,261.05 700.00,261.05 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,265.81 C 258.00,265.81 258.00,274.24 312.00,274.24 L 312.00,398.44 C 258.00,398.44 258.00,390.01 204.00,390.01 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,271.24 C 630.00,271.24 630.00,246.86 684.00,246.86 L 684.00,266.39 C 630.00,266.39 630.00,290.76 576.00,290.76 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,304.76 C 630.00,304.76 630.00,272.88 684.00,272.88 L 684.00,300.65 C 630.00,300.65 630.00,332.54 576.00,332.54 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,332.54 C 630.00,332.54 630.00,314.65 684.00,314.65 L 684.00,331.14 C 630.00,331.14 630.00,349.02 576.00,349.02 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,404.01 C 258.00,404.01 258.00,398.44 312.00,398.44 L 312.00,493.86 C 258.00,493.86 258.00,499.43 204.00,499.43 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,513.43 C 258.00,513.43 258.00,493.86 312.00,493.86 L 312.00,495.86 C 258.00,495.86 258.00,515.43 204.00,515.43 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="62.57" width="16" height="189.24" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="265.81" width="16" height="124.20" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="404.01" width="16" height="95.42" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="513.43" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="19.56" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="111.56" width="16" height="388.44" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="271.24" width="16" height="19.52" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="304.76" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="246.86" width="16" height="12.02" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="272.88" width="16" height="27.77" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="314.65" width="16" height="16.49" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="267.90" width="16" height="10.19" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="292.10" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="308.10" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="157.19" x2="182.00" y2="129.76" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="132.76" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Commercial Airplanes</text>
+<text x="179.00" y="145.76" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$41.5B  (46.4%)</text>
+<line x1="188.00" y1="327.91" x2="182.00" y2="300.48" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="303.48" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Defense, Space &amp; Security</text>
+<text x="179.00" y="316.48" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$27.2B  (30.4%)</text>
+<line x1="188.00" y1="451.72" x2="182.00" y2="424.29" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="427.29" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Global Services</text>
+<text x="179.00" y="440.29" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$20.9B  (23.4%)</text>
+<line x1="188.00" y1="514.43" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Unallocated/Elim</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$188.0M  (-0.21%)</text>
+<rect x="331.00" y="67.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$89.5B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="87.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.3B  (4.8%)</text>
+<rect x="455.00" y="93.56" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="105.56" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="118.56" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$85.2B  (95.2%)</text>
+<rect x="579.00" y="253.24" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="265.24" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="278.24" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.3B  (4.8%)</text>
+<rect x="579.00" y="286.76" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="298.76" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="311.76" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$23.0M  (0.03%)</text>
+<rect x="703.00" y="228.86" width="87.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="240.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="253.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.6B  (2.9%)</text>
+<rect x="703.00" y="254.88" width="87.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="266.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="279.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$6.1B  (6.8%)</text>
+<rect x="703.00" y="296.65" width="87.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="308.65" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="321.65" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.6B  (4.0%)</text>
+<text x="833.00" y="270.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="283.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.2B  (2.5%)</text>
+<text x="833.00" y="295.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="308.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$397.0M  (0.44%)</text>
+<line x1="824.00" y1="309.10" x2="830.00" y2="317.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="833.00" y="320.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Minority Interest</text>
+<text x="833.00" y="333.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.0M  (0.00%)</text>
+<text x="500.00" y="530.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">FY2025 operating income includes a one-time +$9,672M gain on dispositions (Digital Aviation Solutions divestiture)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: BA FY2025 10-K, Consolidated Statements of Operations + MD&amp;A Segment Results</text>
+</svg>

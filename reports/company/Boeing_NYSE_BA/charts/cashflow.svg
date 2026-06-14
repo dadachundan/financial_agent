@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Boeing (BA) Cash Flow — FY2025</text>
+<path d="M 204.00,63.64 C 361.00,63.64 361.00,78.00 518.00,78.00 L 518.00,522.66 C 361.00,522.66 361.00,508.30 204.00,508.30 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,78.00 C 691.00,78.00 691.00,64.00 848.00,64.00 L 848.00,94.08 C 691.00,94.08 691.00,108.08 534.00,108.08 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,108.08 C 691.00,108.08 691.00,108.08 848.00,108.08 L 848.00,229.14 C 691.00,229.14 691.00,229.14 534.00,229.14 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,229.14 C 691.00,229.14 691.00,243.14 848.00,243.14 L 848.00,554.00 C 691.00,554.00 691.00,540.00 534.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,522.30 C 361.00,522.30 361.00,522.66 518.00,522.66 L 518.00,538.71 C 361.00,538.71 361.00,538.36 204.00,538.36 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,552.36 C 361.00,552.36 361.00,538.71 518.00,538.71 L 518.00,540.71 C 361.00,540.71 361.00,554.36 204.00,554.36 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="63.64" width="16" height="444.66" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="522.30" width="16" height="16.05" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="552.36" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="30.08" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="108.08" width="16" height="121.06" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="243.14" width="16" height="310.86" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="282.97" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="295.97" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$13.8B  (96.2%)</text>
+<rect x="207.00" y="487.95" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="499.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="210.00" y="512.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$499.0M  (3.5%)</text>
+<rect x="207.00" y="518.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="210.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$40.0M  (0.28%)</text>
+<rect x="537.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$14.4B  (100.0%)</text>
+<rect x="867.00" y="46.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$935.0M  (6.5%)</text>
+<rect x="867.00" y="90.08" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="102.08" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="870.00" y="115.08" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.8B  (26.2%)</text>
+<text x="873.00" y="395.57" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="408.57" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$9.7B  (67.3%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">FCF = CFO 1,065 − capex 2,942 = −1,877 (still negative despite +2.2bn net earnings, which carry the non-cash 9,672 divestiture gain)  ·  Free Cash Flow = CFO − CapEx = -$3.9B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: BA FY2025 10-K, Consolidated Statements of Cash Flows</text>
+</svg>
