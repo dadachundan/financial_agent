@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Upstart (UPST) 收入与利润瀑布 — FY2025（单位：百万美元）</text>
+<path d="M 700.00,64.00 C 754.00,64.00 754.00,270.64 808.00,270.64 L 808.00,291.36 C 754.00,291.36 754.00,84.72 700.00,84.72 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,84.72 C 754.00,84.72 754.00,305.36 808.00,305.36 L 808.00,307.36 C 754.00,307.36 754.00,86.72 700.00,86.72 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,72.26 C 630.00,72.26 630.00,64.00 684.00,64.00 L 684.00,80.48 C 630.00,80.48 630.00,88.74 576.00,88.74 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,73.26 C 258.00,73.26 258.00,87.26 312.00,87.26 L 312.00,393.77 C 258.00,393.77 258.00,379.77 204.00,379.77 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,79.26 C 506.00,79.26 506.00,72.26 560.00,72.26 L 560.00,88.74 C 506.00,88.74 506.00,95.74 452.00,95.74 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,95.74 C 506.00,95.74 506.00,102.74 560.00,102.74 L 560.00,489.74 C 506.00,489.74 506.00,482.74 452.00,482.74 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,87.26 C 382.00,87.26 382.00,79.26 436.00,79.26 L 436.00,482.74 C 382.00,482.74 382.00,490.74 328.00,490.74 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,490.74 C 382.00,490.74 382.00,496.74 436.00,496.74 L 436.00,498.74 C 382.00,498.74 382.00,492.74 328.00,492.74 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,102.74 C 630.00,102.74 630.00,99.00 684.00,99.00 L 684.00,215.54 C 630.00,215.54 630.00,219.28 576.00,219.28 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,219.28 C 630.00,219.28 630.00,229.54 684.00,229.54 L 684.00,329.11 C 630.00,329.11 630.00,318.85 576.00,318.85 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,318.85 C 630.00,318.85 630.00,343.11 684.00,343.11 L 684.00,514.00 C 630.00,514.00 630.00,489.74 576.00,489.74 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,393.77 C 258.00,393.77 258.00,393.77 312.00,393.77 L 312.00,454.47 C 258.00,454.47 258.00,454.47 204.00,454.47 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,468.47 C 258.00,468.47 258.00,454.47 312.00,454.47 L 312.00,490.74 C 258.00,490.74 258.00,504.74 204.00,504.74 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,503.74 C 630.00,503.74 630.00,80.48 684.00,80.48 L 684.00,82.48 C 630.00,82.48 630.00,505.74 576.00,505.74 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="73.26" width="16" height="306.51" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="393.77" width="16" height="60.70" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="468.47" width="16" height="36.27" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="87.26" width="16" height="403.48" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="79.26" width="16" height="403.48" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="496.74" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="72.26" width="16" height="16.48" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="102.74" width="16" height="387.00" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="503.74" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="684.00" y="64.00" width="16" height="21.00" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="99.00" width="16" height="116.54" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="229.54" width="16" height="99.57" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="343.11" width="16" height="170.89" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="270.64" width="16" height="20.72" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="305.36" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="223.51" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Platform &amp; referral fees</text>
+<text x="179.00" y="236.51" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$793.0M  (76.0%)</text>
+<text x="179.00" y="421.12" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Servicing &amp; other fees</text>
+<text x="179.00" y="434.12" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$157.0M  (15.0%)</text>
+<text x="179.00" y="483.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net interest &amp; FV adj.</text>
+<text x="179.00" y="496.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$93.8M  (9.0%)</text>
+<rect x="331.00" y="69.26" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="81.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="94.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.0B  (100.0%)</text>
+<rect x="455.00" y="61.26" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="73.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="86.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.0B  (100.0%)</text>
+<rect x="455.00" y="478.74" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="490.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="503.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$0  (0.00%)</text>
+<rect x="579.00" y="54.26" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="66.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="79.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$42.6M  (4.1%)</text>
+<rect x="579.00" y="84.74" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="96.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="109.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.0B  (95.9%)</text>
+<line x1="560.00" y1="504.74" x2="554.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="551.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="551.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.5M  (0.43%)</text>
+<rect x="703.00" y="46.00" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$54.3M  (5.2%)</text>
+<rect x="703.00" y="81.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="93.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="106.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$301.5M  (28.9%)</text>
+<rect x="703.00" y="211.54" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="223.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="236.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$257.6M  (24.7%)</text>
+<rect x="703.00" y="325.11" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="337.11" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="350.11" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$442.1M  (42.4%)</text>
+<text x="833.00" y="278.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="291.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$53.6M  (5.1%)</text>
+<text x="833.00" y="303.36" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="316.36" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$728.0K  (0.07%)</text>
+<text x="500.00" y="530.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">营销 $301.5M + 工程 $257.6M + 客服$188.4M+G&amp;A$253.7M（合并为 opex）</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: UPST FY2025 10-K, Consolidated Statements of Operations + MD&amp;A revenue table</text>
+</svg>

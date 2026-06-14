@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 981" width="1180" height="981" role="img" aria-label="How Upstart's Marketplace Routes the Money / Upstart 的资金与风险流向" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="981" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">AI 借贷市场 · 资金流向 · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">How Upstart's Marketplace Routes the Money / Upstart 的资金与风险流向</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">借款人付息进入平台，UPST 抽取费率（take rate）后，把贷款本金与信用风险分发给三类资金方——这是其商业模式的命脉，也是其周期脆弱性的根源。</text>
+<ellipse cx="1031.00" cy="380.50" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="569.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="569.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱 (借款人需求)</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">平台与产品</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">资金/风险最终沉淀处</text>
+<path d="M 256.00 373.41 C 369.50 373.41, 369.50 270.50, 483.00 270.50" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 389.77 C 369.50 389.77, 369.50 380.50, 483.00 380.50" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 396.86 C 369.50 396.86, 369.50 490.50, 483.00 490.50" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 263.09 C 810.50 263.09, 810.50 251.00, 924.00 251.00" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 276.73 C 810.50 276.73, 810.50 378.00, 924.00 378.00" fill="none" stroke="url(#mfgold)" stroke-width="9.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 378.00 C 810.50 378.00, 810.50 385.41, 924.00 385.41" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 490.50 C 810.50 490.50, 810.50 262.23, 924.00 262.23" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 284.14 C 810.50 284.14, 810.50 505.00, 924.00 505.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 383.00 C 810.50 383.00, 810.50 510.00, 924.00 510.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="315.95" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">核心放量</text>
+<text x="810.50" y="251.05" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">64% 本金</text>
+<text x="810.50" y="321.36" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">26% 本金</text>
+<text x="810.50" y="388.57" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">10% 本金</text>
+<rect x="42.00" y="305.50" width="214" height="150.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="305.50" width="3" height="150.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="338.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">BORROWERS</text>
+<text x="60.00" y="359.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">1,497,149 笔 / FY25</text>
+<text x="60.00" y="376.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">付息 + 平台费</text>
+<text x="60.00" y="393.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">APR 上限 18%-35.99%</text>
+<rect x="483.00" y="223.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="223.50" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="256.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">PERSONAL LOANS</text>
+<text x="501.00" y="277.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">核心产品</text>
+<text x="501.00" y="294.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">$200-$75,000</text>
+<rect x="483.00" y="333.50" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="333.50" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="366.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">AUTO</text>
+<text x="501.00" y="387.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">retail/refi/secured</text>
+<text x="501.00" y="404.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">$3,000-$60,000</text>
+<rect x="483.00" y="443.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="443.50" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="476.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">HELOC</text>
+<text x="501.00" y="497.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">房屋净值额度</text>
+<text x="501.00" y="514.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">$26,000-$250,000</text>
+<rect x="924.00" y="198.00" width="214" height="111.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="198.00" width="3" height="111.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">INSTITUTIONAL</text>
+<text x="942.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">买走 64% 本金</text>
+<text x="942.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">&gt;50% 承诺资金</text>
+<text x="942.00" y="286.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">ABS / 整笔贷款</text>
+<rect x="924.00" y="325.00" width="214" height="111.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="325.00" width="3" height="111.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="358.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">BANKS &amp; CREDIT UNIONS</text>
+<text x="942.00" y="379.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">&gt;100 家伙伴</text>
+<text x="942.00" y="396.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">留存 26% 本金</text>
+<text x="942.00" y="413.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">前三大占放款 83%</text>
+<rect x="924.00" y="452.00" width="214" height="111.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="452.00" width="3" height="111.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="485.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">UPST BALANCE SHEET</text>
+<text x="942.00" y="506.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">持有 10% 本金</text>
+<text x="942.00" y="523.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">$984.6M 公允价值贷款</text>
+<text x="942.00" y="540.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">66% 为 R&amp;D Loans</text>
+<rect x="42.00" y="589.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="593.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="591.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="591.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="591.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="591.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="593.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="593.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="584.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="747.00" y="593.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="821.40" y="584.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="840.40" y="593.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="965.20" y="584.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="984.20" y="593.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="42.00" y="604.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="61.00" y="613.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="128.20" y="604.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="147.20" y="613.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="221.60" y="604.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="240.60" y="613.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<line x1="42" y1="629.00" x2="1138" y2="629.00" stroke="#222a3a"/>
+<text x="42.00" y="645.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY / 跟着钱走</text>
+<rect x="42.00" y="665.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="665.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="689.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求端 · 借款人</text>
+<text x="58.00" y="707.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">费率商业模式</text>
+<text x="58.00" y="731.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 平台促成</tspan><tspan fill="#f4d58a" font-weight="700"> $11.0B</tspan><tspan fill="#9aa3b8" font-weight="400"> 本金、</tspan><tspan fill="#f4d58a" font-weight="700"> 1,497,149</tspan><tspan fill="#9aa3b8" font-weight="400"> 笔贷款；UPST</tspan></text>
+<text x="58.00" y="747.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">不承担多数信用风险，只赚</tspan><tspan fill="#9aa3b8" font-weight="400"> platform</tspan><tspan fill="#9aa3b8" font-weight="400"> &amp;</tspan><tspan fill="#9aa3b8" font-weight="400"> referral</tspan><tspan fill="#9aa3b8" font-weight="400"> fees</tspan><tspan fill="#9aa3b8" font-weight="400"> (</tspan><tspan fill="#f4d58a" font-weight="700"> $793M</tspan><tspan fill="#9aa3b8" font-weight="400"> )</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan></text>
+<text x="58.00" y="763.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">servicing</tspan><tspan fill="#9aa3b8" font-weight="400"> fees</tspan><tspan fill="#9aa3b8" font-weight="400"> (</tspan><tspan fill="#f4d58a" font-weight="700"> $157M</tspan><tspan fill="#9aa3b8" font-weight="400"> )。</tspan></text>
+<rect x="412.00" y="665.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="412.00" y="665.00" width="3" height="132.00" rx="2" fill="#a78bfa"/>
+<text x="428.00" y="689.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">资金端 · 机构投资者</text>
+<text x="428.00" y="707.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">机构资金是主引擎</text>
+<text x="428.00" y="731.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">64%</tspan><tspan fill="#9aa3b8" font-weight="400"> 的本金被机构投资者买走；今日</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;50%</tspan><tspan fill="#9aa3b8" font-weight="400"> 的资金来自</tspan><tspan fill="#9aa3b8" font-weight="400"> committed</tspan></text>
+<text x="428.00" y="747.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">capital（承诺资金）与共同投资安排——2022</tspan><tspan fill="#9aa3b8" font-weight="400"> 年资金枯竭后管理层刻意构建的稳定性。</tspan></text>
+<rect x="782.00" y="665.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="665.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="689.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">资金端 · 银行</text>
+<text x="798.00" y="707.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">银行集中度是软肋</text>
+<text x="798.00" y="731.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">前三大</tspan><tspan fill="#9aa3b8" font-weight="400"> lending</tspan><tspan fill="#9aa3b8" font-weight="400"> partners</tspan><tspan fill="#9aa3b8" font-weight="400"> 促成了</tspan><tspan fill="#f4d58a" font-weight="700"> 83%</tspan><tspan fill="#9aa3b8" font-weight="400"> 的放款、贡献</tspan><tspan fill="#f4d58a" font-weight="700"> 61%</tspan><tspan fill="#9aa3b8" font-weight="400"> 总收入；虽有</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;100</tspan></text>
+<text x="798.00" y="747.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">家伙伴，收入仍高度集中在少数几家。</tspan></text>
+<rect x="42.00" y="811.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="811.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="835.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">资金端 · 自有资产</text>
+<text x="58.00" y="853.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">表内贷款=研发，也是风险</text>
+<text x="58.00" y="877.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">10%</tspan><tspan fill="#9aa3b8" font-weight="400"> 本金留在表内（</tspan><tspan fill="#f4d58a" font-weight="700"> $984.6M</tspan><tspan fill="#9aa3b8" font-weight="400"> 公允价值贷款），其中</tspan><tspan fill="#f4d58a" font-weight="700"> 66%</tspan><tspan fill="#9aa3b8" font-weight="400"> 为测试新产品/价格发现的</tspan><tspan fill="#9aa3b8" font-weight="400"> R&amp;D</tspan></text>
+<text x="58.00" y="893.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Loans——既是模型迭代燃料，也是利率与信用下行的直接损失敞口。</tspan></text>
+<text x="590.00" y="963.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: UPST FY2025 10-K, Item 1 Business (funding split, partner concentration, product specs) + Consolidated Balance Sheets</text>
+</svg>
