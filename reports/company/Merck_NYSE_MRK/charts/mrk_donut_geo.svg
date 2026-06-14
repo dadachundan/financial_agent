@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 营收地理分布 / Revenue by Geography</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 238.18,361.44 L 258.56,311.43 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 238.18,361.44 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 258.56,311.43 Z" fill="#15803d"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">MRK</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$65.0B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="423.42" y1="265.74" x2="439.42" y2="265.74" stroke="#2563eb" stroke-width="1.4"/>
+<text x="443.42" y="263.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">United States</text>
+<text x="443.42" y="277.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$36.5B  (56.2%)</text>
+<line x1="152.58" y1="212.66" x2="136.58" y2="212.66" stroke="#15803d" stroke-width="1.4"/>
+<text x="132.58" y="210.66" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Non-U.S.</text>
+<text x="132.58" y="224.66" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$28.5B  (43.8%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: MRK FY2025 10-K, Note 17 — Revenue by U.S./Non-U.S.</text>
+</svg>

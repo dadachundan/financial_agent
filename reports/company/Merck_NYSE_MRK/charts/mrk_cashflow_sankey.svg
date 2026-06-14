@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">默沙东 / Merck (MRK) Cash Flow — FY2025</text>
+<path d="M 204.00,64.00 C 361.00,64.00 361.00,78.00 518.00,78.00 L 518.00,280.71 C 361.00,280.71 361.00,266.71 204.00,266.71 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,78.00 C 691.00,78.00 691.00,64.00 848.00,64.00 L 848.00,273.15 C 691.00,273.15 691.00,287.15 534.00,287.15 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,287.15 C 691.00,287.15 691.00,287.15 848.00,287.15 L 848.00,316.40 C 691.00,316.40 691.00,316.40 534.00,316.40 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,316.40 C 691.00,316.40 691.00,330.40 848.00,330.40 L 848.00,554.00 C 691.00,554.00 691.00,540.00 534.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,280.71 C 361.00,280.71 361.00,280.71 518.00,280.71 L 518.00,531.43 C 361.00,531.43 361.00,531.43 204.00,531.43 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,545.43 C 361.00,545.43 361.00,531.43 518.00,531.43 L 518.00,540.00 C 361.00,540.00 361.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="202.71" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="280.71" width="16" height="250.72" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="545.43" width="16" height="8.57" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="209.15" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="287.15" width="16" height="29.25" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="330.40" width="16" height="223.60" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="162.36" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="175.36" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$13.3B  (43.9%)</text>
+<rect x="207.00" y="253.28" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="265.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="278.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$16.5B  (54.3%)</text>
+<rect x="207.00" y="518.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="210.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$563.0M  (1.9%)</text>
+<rect x="537.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$30.4B  (100.0%)</text>
+<rect x="867.00" y="46.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$13.7B  (45.3%)</text>
+<rect x="867.00" y="269.15" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="281.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="870.00" y="294.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.9B  (6.3%)</text>
+<text x="873.00" y="439.20" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="452.20" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$14.7B  (48.4%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = $12.4B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: MRK FY2025 10-K, Consolidated Statement of Cash Flows</text>
+</svg>
