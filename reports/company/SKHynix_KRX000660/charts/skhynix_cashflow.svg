@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">SK Hynix 现金流量 / Cash Flow — FY2025 (K-IFRS)</text>
+<path d="M 644.00,64.00 C 746.00,64.00 746.00,169.58 848.00,169.58 L 848.00,366.45 C 746.00,366.45 746.00,260.87 644.00,260.87 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,260.87 C 746.00,260.87 746.00,380.45 848.00,380.45 L 848.00,448.42 C 746.00,448.42 746.00,328.84 644.00,328.84 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,71.00 C 306.00,71.00 306.00,78.00 408.00,78.00 L 408.00,158.16 C 306.00,158.16 306.00,151.16 204.00,151.16 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,64.00 628.00,64.00 L 628.00,328.84 C 526.00,328.84 526.00,342.84 424.00,342.84 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,342.84 C 526.00,342.84 526.00,342.84 628.00,342.84 L 628.00,440.92 C 526.00,440.92 526.00,440.92 424.00,440.92 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,440.92 C 526.00,440.92 526.00,454.92 628.00,454.92 L 628.00,554.00 C 526.00,554.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,165.16 C 306.00,165.16 306.00,158.16 408.00,158.16 L 408.00,540.00 C 306.00,540.00 306.00,547.00 204.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="80.16" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="165.16" width="16" height="381.84" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="64.00" width="16" height="264.84" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="342.84" width="16" height="98.08" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="454.92" width="16" height="99.08" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="169.58" width="16" height="196.87" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="380.45" width="16" height="67.96" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="108.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="121.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩11.2T  (17.4%)</text>
+<rect x="207.00" y="147.16" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="159.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="172.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩53.4T  (82.6%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩64.6T  (100.0%)</text>
+<rect x="647.00" y="46.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩37.0T  (57.3%)</text>
+<rect x="647.00" y="324.84" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="336.84" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="349.84" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩13.7T  (21.2%)</text>
+<text x="653.00" y="501.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="514.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩13.8T  (21.4%)</text>
+<text x="873.00" y="265.02" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">资本开支 Capex</text>
+<text x="873.00" y="278.02" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩27.5T  (42.6%)</text>
+<text x="873.00" y="411.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他投资 Other Investing</text>
+<text x="873.00" y="424.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩9.5T  (14.7%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = ₩25.9T</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: stockanalysis.com — SK Hynix FY2025 合并现金流量表; 回购 ₩12.2tn 来自 SK Hynix FY25 公告</text>
+</svg>

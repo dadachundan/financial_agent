@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1018" width="1180" height="1018" role="img" aria-label="资金如何流经 SK Hynix / How money flows through SK Hynix" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1018" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">存储器价值链 · 资金流向 · 2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">资金如何流经 SK Hynix / How money flows through SK Hynix</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">AI 加速器需求 (英伟达 + 超大规模厂商) 流入 SK Hynix 的 HBM 与服务器 DRAM 产品线; 这些营业收入再以资本开支与采购形式向上游汇聚到少数瓶颈——ASML 的 EUV、TSMC 的 HBM4 基础裸片、以及晶圆设备与材料供应商。</text>
+<ellipse cx="1031.00" cy="407.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="622.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="622.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱 (需求)</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">SK Hynix 产品线</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱汇向哪里 (上游瓶颈)</text>
+<path d="M 256.00 258.00 C 369.50 258.00, 369.50 304.00, 483.00 304.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 495.00 C 369.50 495.00, 369.50 327.00, 483.00 327.00" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 377.50 C 369.50 377.50, 369.50 320.00, 483.00 320.00" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 388.50 C 369.50 388.50, 369.50 429.50, 483.00 429.50" fill="none" stroke="url(#mfgold)" stroke-width="14.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 400.00 C 369.50 400.00, 369.50 525.50, 483.00 525.50" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 583.50 C 369.50 583.50, 369.50 532.50, 483.00 532.50" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 578.50 C 369.50 578.50, 369.50 439.00, 483.00 439.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 301.00 C 810.50 301.00, 810.50 254.00, 924.00 254.00" fill="none" stroke="url(#mfgold)" stroke-width="16.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 325.00 C 810.50 325.00, 810.50 576.00, 924.00 576.00" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 426.00 C 810.50 426.00, 810.50 266.00, 924.00 266.00" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 436.00 C 810.50 436.00, 810.50 476.00, 924.00 476.00" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 528.00 C 810.50 528.00, 810.50 486.00, 924.00 486.00" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 315.00 C 810.50 315.00, 810.50 374.00, 924.00 374.00" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="275.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">HBM 多季度配额</text>
+<text x="369.50" y="342.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">自研加速器 HBM</text>
+<text x="369.50" y="403.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">DDR5 + eSSD</text>
+<text x="810.50" y="271.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">EUV 资本开支</text>
+<text x="810.50" y="338.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">HBM4 基础裸片</text>
+<text x="810.50" y="444.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">TCB/键合/封装</text>
+<text x="810.50" y="450.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">晶圆设备</text>
+<rect x="42.00" y="198.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="198.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">NVIDIA</text>
+<text x="60.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">~27% of 1H25 rev</text>
+<text x="60.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">HBM4 ~70% 份额</text>
+<rect x="42.00" y="334.00" width="214" height="110.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="334.00" width="3" height="110.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="367.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">超大规模厂商</text>
+<text x="60.00" y="388.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">AWS/Azure/Google/Meta</text>
+<text x="60.00" y="405.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">服务器 DDR5 + eSSD</text>
+<rect x="42.00" y="460.00" width="214" height="70.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="460.00" width="3" height="70.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="493.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">AMD</text>
+<text x="60.00" y="514.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">MI350 HBM3E</text>
+<rect x="42.00" y="546.00" width="214" height="70.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="42.00" y="546.00" width="3" height="70.00" rx="2" fill="#e9b658"/>
+<text x="60.00" y="579.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">手机/PC OEM</text>
+<text x="60.00" y="600.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">LPDDR5X / UFS / 消费 SSD</text>
+<rect x="483.00" y="246.00" width="214" height="130.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="483.00" y="246.00" width="3" height="130.00" rx="2" fill="#a78bfa"/>
+<text x="501.00" y="279.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">HBM3E/HBM4</text>
+<text x="501.00" y="300.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">旗舰; 营业利润占比最高</text>
+<text x="501.00" y="317.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">MR-MUF 封装护城河</text>
+<rect x="483.00" y="392.00" width="214" height="80.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="483.00" y="392.00" width="3" height="80.00" rx="2" fill="#a78bfa"/>
+<text x="501.00" y="425.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">服务器 DRAM</text>
+<text x="501.00" y="446.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">256GB DDR5 RDIMM</text>
+<rect x="483.00" y="488.00" width="214" height="80.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="488.00" width="3" height="80.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="521.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">NAND/Solidigm</text>
+<text x="501.00" y="542.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">企业级 SSD (QLC)</text>
+<rect x="924.00" y="203.00" width="214" height="110.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="203.00" width="3" height="110.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="236.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">ASML</text>
+<text x="942.00" y="257.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">唯一 EUV 供应方</text>
+<text x="942.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">₩11.9tn 两年订单</text>
+<rect x="924.00" y="329.00" width="214" height="90.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="329.00" width="3" height="90.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="362.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">TSMC</text>
+<text x="942.00" y="383.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">HBM4 基础裸片 N5/N3</text>
+<text x="942.00" y="400.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">瓶颈</text>
+<rect x="924.00" y="435.00" width="214" height="90.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="435.00" width="3" height="90.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="468.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">AMAT/Lam/TEL/KLA</text>
+<text x="942.00" y="489.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">薄膜/刻蚀/量测设备</text>
+<rect x="924.00" y="541.00" width="214" height="70.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="541.00" width="3" height="70.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="574.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">材料/TCB</text>
+<text x="942.00" y="595.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Hanmi 键合机, Soulbrain 电子材料</text>
+<rect x="42.00" y="642.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="646.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="644.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="644.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="644.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="644.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="646.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="646.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="637.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="747.00" y="646.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="814.20" y="637.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="833.20" y="646.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="972.40" y="637.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="991.40" y="646.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="42.00" y="657.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="61.00" y="666.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="185.80" y="657.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="204.80" y="666.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="682.00" x2="1138" y2="682.00" stroke="#222a3a"/>
+<text x="42.00" y="698.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">顺着钱看 / FOLLOW THE MONEY</text>
+<rect x="42.00" y="718.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="42.00" y="718.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="58.00" y="742.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">需求 · AI 加速器</text>
+<text x="58.00" y="760.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">英伟达是最大单一付款方</text>
+<text x="58.00" y="784.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">英伟达占</tspan><tspan fill="#f4d58a" font-weight="700"> 2025</tspan><tspan fill="#f4d58a" font-weight="700"> 上半年合并营业收入约</tspan><tspan fill="#f4d58a" font-weight="700"> 27%</tspan><tspan fill="#9aa3b8" font-weight="400"> ,</tspan><tspan fill="#9aa3b8" font-weight="400"> 并拿下</tspan><tspan fill="#f4d58a" font-weight="700"> Vera</tspan><tspan fill="#f4d58a" font-weight="700"> Rubin</tspan><tspan fill="#f4d58a" font-weight="700"> HBM4</tspan><tspan fill="#f4d58a" font-weight="700"> 约</tspan><tspan fill="#f4d58a" font-weight="700"> 70%</tspan></text>
+<text x="58.00" y="800.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">份额;</tspan><tspan fill="#9aa3b8" font-weight="400"> AMD</tspan><tspan fill="#9aa3b8" font-weight="400"> MI350</tspan><tspan fill="#9aa3b8" font-weight="400"> 与超大规模厂商自研加速器构成二级</tspan><tspan fill="#9aa3b8" font-weight="400"> HBM</tspan><tspan fill="#9aa3b8" font-weight="400"> 需求。</tspan></text>
+<rect x="412.00" y="718.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="412.00" y="718.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="428.00" y="742.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">瓶颈 · 光刻</text>
+<text x="428.00" y="760.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">ASML 接住最大一笔资本开支</text>
+<text x="428.00" y="784.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">SK</tspan><tspan fill="#9aa3b8" font-weight="400"> Hynix</tspan><tspan fill="#9aa3b8" font-weight="400"> 承诺两年内向</tspan><tspan fill="#9aa3b8" font-weight="400"> ASML</tspan><tspan fill="#9aa3b8" font-weight="400"> 采购</tspan><tspan fill="#f4d58a" font-weight="700"> ₩11.9tn</tspan><tspan fill="#9aa3b8" font-weight="400"> EUV</tspan><tspan fill="#9aa3b8" font-weight="400"> 设备</tspan><tspan fill="#9aa3b8" font-weight="400"> (约</tspan><tspan fill="#9aa3b8" font-weight="400"> 30</tspan><tspan fill="#9aa3b8" font-weight="400"> 台),</tspan><tspan fill="#9aa3b8" font-weight="400"> 是</tspan></text>
+<text x="428.00" y="800.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">ASML</tspan><tspan fill="#9aa3b8" font-weight="400"> 客户史上最大公开订单——1c</tspan><tspan fill="#9aa3b8" font-weight="400"> 纳米</tspan><tspan fill="#9aa3b8" font-weight="400"> DRAM</tspan><tspan fill="#9aa3b8" font-weight="400"> 与龙仁集群的关键路径。</tspan></text>
+<rect x="782.00" y="718.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="718.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="742.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">瓶颈 · 基础裸片</text>
+<text x="798.00" y="760.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">TSMC 嵌入 HBM4 里</text>
+<text x="798.00" y="784.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">HBM4</tspan><tspan fill="#9aa3b8" font-weight="400"> 的逻辑基础裸片改由</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan><tspan fill="#f4d58a" font-weight="700"> N5/N3</tspan><tspan fill="#9aa3b8" font-weight="400"> 制造</tspan><tspan fill="#9aa3b8" font-weight="400"> (而非</tspan><tspan fill="#9aa3b8" font-weight="400"> SK</tspan><tspan fill="#9aa3b8" font-weight="400"> Hynix</tspan><tspan fill="#9aa3b8" font-weight="400"> 自有产线),</tspan></text>
+<text x="798.00" y="800.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">这笔钱以成品形式隐含在</tspan><tspan fill="#9aa3b8" font-weight="400"> HBM4</tspan><tspan fill="#9aa3b8" font-weight="400"> 售价中——虚线即代表此间接支出。</tspan></text>
+<rect x="42.00" y="848.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="42.00" y="848.00" width="3" height="116.00" rx="2" fill="#d9a05b"/>
+<text x="58.00" y="872.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">瓶颈 · 晶圆设备</text>
+<text x="58.00" y="890.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">WFE 四强分走前道支出</text>
+<text x="58.00" y="914.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">AMAT/Lam/TEL/KLA</tspan><tspan fill="#9aa3b8" font-weight="400"> 分摊薄膜、刻蚀、量测设备采购;</tspan><tspan fill="#9aa3b8" font-weight="400"> 任何一家都卡不住存储</tspan><tspan fill="#9aa3b8" font-weight="400"> IDM,</tspan></text>
+<text x="58.00" y="930.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">但合计构成产能扩张的硬约束。</tspan></text>
+<rect x="412.00" y="848.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="848.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="872.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">后端 · 封装材料</text>
+<text x="428.00" y="890.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">TCB 与电子材料的韩国链</text>
+<text x="428.00" y="914.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">HBM</tspan><tspan fill="#9aa3b8" font-weight="400"> 堆叠瓶颈在</tspan><tspan fill="#9aa3b8" font-weight="400"> TSV+MR-MUF</tspan><tspan fill="#9aa3b8" font-weight="400"> 后端——</tspan><tspan fill="#f4d58a" font-weight="700"> Hanmi</tspan><tspan fill="#9aa3b8" font-weight="400"> 热压键合机、</tspan><tspan fill="#f4d58a" font-weight="700"> Soulbrain</tspan></text>
+<text x="428.00" y="930.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">电子材料等韩国供应商直接受益于</tspan><tspan fill="#9aa3b8" font-weight="400"> HBM</tspan><tspan fill="#9aa3b8" font-weight="400"> 产能爬坡。</tspan></text>
+<rect x="782.00" y="848.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="848.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="872.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">回流 · 利润池</text>
+<text x="798.00" y="890.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">钱最终汇向 HBM 利润池</text>
+<text x="798.00" y="914.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">HBM</tspan><tspan fill="#9aa3b8" font-weight="400"> ASP</tspan><tspan fill="#9aa3b8" font-weight="400"> 约为同面积普通</tspan><tspan fill="#9aa3b8" font-weight="400"> DDR5</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#f4d58a" font-weight="700"> 5–8</tspan><tspan fill="#f4d58a" font-weight="700"> 倍</tspan><tspan fill="#9aa3b8" font-weight="400"> ;</tspan><tspan fill="#9aa3b8" font-weight="400"> FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> 营业利润率</tspan><tspan fill="#f4d58a" font-weight="700"> 49%</tspan><tspan fill="#9aa3b8" font-weight="400"> ,</tspan><tspan fill="#9aa3b8" font-weight="400"> Q1-26</tspan></text>
+<text x="798.00" y="930.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">冲至</tspan><tspan fill="#f4d58a" font-weight="700"> 72%</tspan><tspan fill="#9aa3b8" font-weight="400"> ——价值池高度集中在</tspan><tspan fill="#9aa3b8" font-weight="400"> HBM</tspan><tspan fill="#9aa3b8" font-weight="400"> 这一条产品线。</tspan></text>
+<text x="590.00" y="1000.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: SK Hynix FY25 实绩公告 + DART 사업보고서; J.P. Morgan ADR/EUV 报告 (₩11.9tn); TrendForce (英伟达 27%); BofA 周报 (Hanmi/Soulbrain)</text>
+</svg>

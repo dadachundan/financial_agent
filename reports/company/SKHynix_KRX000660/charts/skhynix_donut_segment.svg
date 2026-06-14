@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 营业收入按业务分部 / Revenue by Segment (估算)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 156.26,230.91 L 210.15,234.30 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 156.26,230.91 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 210.15,234.30 Z" fill="#15803d"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">SK Hynix</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">₩97.1T</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="382.47" y1="339.80" x2="398.47" y2="339.80" stroke="#2563eb" stroke-width="1.4"/>
+<text x="402.47" y="337.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">DRAM 含 HBM</text>
+<text x="402.47" y="351.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩73.8T  (76.0%)</text>
+<line x1="193.53" y1="138.60" x2="177.53" y2="138.60" stroke="#15803d" stroke-width="1.4"/>
+<text x="173.53" y="136.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">NAND 含 Solidigm</text>
+<text x="173.53" y="150.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩23.3T  (24.0%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 分析师估算; 基于 Q4-25 披露 DRAM ₩24.9tn / NAND ₩7.6tn (Blocks &amp; Files, 2026-01-28)</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">SK Hynix 如何赚钱 / How SK Hynix Makes Its Money — FY2025 (K-IFRS)</text>
+<path d="M 204.00,71.00 C 258.00,71.00 258.00,78.00 312.00,78.00 L 312.00,398.72 C 258.00,398.72 258.00,391.72 204.00,391.72 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,71.00 C 506.00,71.00 506.00,142.44 560.00,142.44 L 560.00,347.50 C 506.00,347.50 506.00,276.06 452.00,276.06 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,276.06 C 506.00,276.06 506.00,361.50 560.00,361.50 L 560.00,407.41 C 506.00,407.41 506.00,321.97 452.00,321.97 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,78.00 C 382.00,78.00 382.00,71.00 436.00,71.00 L 436.00,325.95 C 382.00,325.95 382.00,332.95 328.00,332.95 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,332.95 C 382.00,332.95 382.00,339.95 436.00,339.95 L 436.00,507.00 C 382.00,507.00 382.00,500.00 328.00,500.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,142.44 C 630.00,142.44 630.00,142.44 684.00,142.44 L 684.00,347.50 C 630.00,347.50 630.00,347.50 576.00,347.50 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,142.44 C 754.00,142.44 754.00,172.39 808.00,172.39 L 808.00,358.95 C 754.00,358.95 754.00,329.00 700.00,329.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,329.00 C 754.00,329.00 754.00,372.95 808.00,372.95 L 808.00,405.61 C 754.00,405.61 754.00,361.66 700.00,361.66 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,361.50 C 630.00,361.50 630.00,375.66 684.00,375.66 L 684.00,393.48 C 630.00,393.48 630.00,379.32 576.00,379.32 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,379.32 C 630.00,379.32 630.00,407.48 684.00,407.48 L 684.00,435.56 C 630.00,435.56 630.00,407.41 576.00,407.41 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,405.72 C 258.00,405.72 258.00,398.72 312.00,398.72 L 312.00,500.00 C 258.00,500.00 258.00,507.00 204.00,507.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,421.41 C 630.00,421.41 630.00,347.50 684.00,347.50 L 684.00,361.66 C 630.00,361.66 630.00,435.56 576.00,435.56 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="320.72" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="405.72" width="16" height="101.28" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="78.00" width="16" height="422.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="71.00" width="16" height="254.95" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="339.95" width="16" height="167.05" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="142.44" width="16" height="205.06" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="361.50" width="16" height="45.91" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="421.41" width="16" height="14.16" rx="1.5" fill="#2563eb"/>
+<rect x="684.00" y="142.44" width="16" height="219.22" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="375.66" width="16" height="17.82" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="407.48" width="16" height="28.09" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="172.39" width="16" height="186.56" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="372.95" width="16" height="32.66" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="228.36" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">DRAM (含 HBM)</text>
+<text x="179.00" y="241.36" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩73.8T  (76.0%)</text>
+<text x="179.00" y="453.36" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">NAND (含 Solidigm)</text>
+<text x="179.00" y="466.36" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩23.3T  (24.0%)</text>
+<rect x="331.00" y="60.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩97.1T  (100.0%)</text>
+<rect x="455.00" y="53.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩58.7T  (60.4%)</text>
+<rect x="455.00" y="321.95" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="333.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="346.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩38.5T  (39.6%)</text>
+<rect x="579.00" y="124.44" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="136.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="149.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩47.2T  (48.6%)</text>
+<rect x="579.00" y="343.50" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="355.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="368.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩10.6T  (10.9%)</text>
+<text x="551.00" y="425.48" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="551.00" y="438.48" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩3.3T  (3.4%)</text>
+<rect x="703.00" y="124.44" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="136.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="149.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩50.5T  (51.9%)</text>
+<rect x="703.00" y="357.66" width="87.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="369.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="382.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩4.1T  (4.2%)</text>
+<rect x="703.00" y="389.48" width="87.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="401.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="414.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩6.5T  (6.7%)</text>
+<text x="833.00" y="262.67" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="275.67" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩42.9T  (44.2%)</text>
+<text x="833.00" y="386.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="399.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩7.5T  (7.7%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: SK Hynix FY2025 实绩公告 (K-IFRS) + stockanalysis.com 合并损益表; DRAM/NAND 拆分为分析师估算 (基于 Q4-25 披露)</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">SK Hynix 资产负债表 / Balance Sheet — FY2025 末 (K-IFRS)</text>
+<path d="M 204.00,64.00 C 262.00,64.00 262.00,78.00 320.00,78.00 L 320.00,115.96 C 262.00,115.96 262.00,101.96 204.00,101.96 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,71.00 C 790.00,71.00 790.00,71.00 848.00,71.00 L 848.00,166.09 C 790.00,166.09 790.00,166.09 732.00,166.09 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,78.00 C 658.00,78.00 658.00,71.00 716.00,71.00 L 716.00,166.09 C 658.00,166.09 658.00,173.09 600.00,173.09 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,173.09 C 658.00,173.09 658.00,180.09 716.00,180.09 L 716.00,226.04 C 658.00,226.04 658.00,219.04 600.00,219.04 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 336.00,78.00 C 394.00,78.00 394.00,85.00 452.00,85.00 L 452.00,261.69 C 394.00,261.69 394.00,254.69 336.00,254.69 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 468.00,85.00 C 526.00,85.00 526.00,78.00 584.00,78.00 L 584.00,219.04 C 526.00,219.04 526.00,226.04 468.00,226.04 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,226.04 C 526.00,226.04 526.00,233.04 584.00,233.04 L 584.00,540.00 C 526.00,540.00 526.00,533.00 468.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,115.96 C 262.00,115.96 262.00,115.96 320.00,115.96 L 320.00,254.69 C 262.00,254.69 262.00,254.69 204.00,254.69 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,180.09 C 790.00,180.09 790.00,180.09 848.00,180.09 L 848.00,226.04 C 790.00,226.04 790.00,226.04 732.00,226.04 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,233.04 C 658.00,233.04 658.00,240.04 716.00,240.04 L 716.00,547.00 C 658.00,547.00 658.00,540.00 600.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,240.04 C 790.00,240.04 790.00,240.04 848.00,240.04 L 848.00,547.00 C 790.00,547.00 790.00,547.00 732.00,547.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 336.00,268.69 C 394.00,268.69 394.00,261.69 452.00,261.69 L 452.00,533.00 C 394.00,533.00 394.00,540.00 336.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,268.69 C 262.00,268.69 262.00,268.69 320.00,268.69 L 320.00,492.56 C 262.00,492.56 262.00,492.56 204.00,492.56 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,506.56 C 262.00,506.56 262.00,492.56 320.00,492.56 L 320.00,540.00 C 262.00,540.00 262.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="37.96" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="115.96" width="16" height="138.73" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="268.69" width="16" height="223.86" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="506.56" width="16" height="47.44" rx="1.5" fill="#2563eb"/>
+<rect x="320.00" y="78.00" width="16" height="176.69" rx="1.5" fill="#15803d"/>
+<rect x="320.00" y="268.69" width="16" height="271.31" rx="1.5" fill="#15803d"/>
+<rect x="452.00" y="85.00" width="16" height="448.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="584.00" y="78.00" width="16" height="141.04" rx="1.5" fill="#dc2626"/>
+<rect x="584.00" y="233.04" width="16" height="306.96" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="71.00" width="16" height="95.09" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="180.09" width="16" height="45.95" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="240.04" width="16" height="306.96" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="71.00" width="16" height="95.09" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="180.09" width="16" height="45.95" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="240.04" width="16" height="306.96" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="79.98" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">现金及等价物 Cash</text>
+<text x="179.00" y="92.98" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩14.9T  (8.5%)</text>
+<text x="179.00" y="182.33" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">应收+存货+其他流动 Other Current</text>
+<text x="179.00" y="195.33" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩54.5T  (31.0%)</text>
+<text x="179.00" y="377.63" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">厂房设备 Net PP&amp;E + 在建</text>
+<text x="179.00" y="390.63" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩88.0T  (50.0%)</text>
+<text x="179.00" y="527.28" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">投资+无形+其他 Other LT</text>
+<text x="179.00" y="540.28" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩18.6T  (10.6%)</text>
+<rect x="339.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
+<text x="342.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩69.5T  (39.4%)</text>
+<rect x="339.00" y="250.69" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="262.69" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
+<text x="342.00" y="275.69" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩106.6T  (60.6%)</text>
+<rect x="471.00" y="67.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="474.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
+<text x="474.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩176.1T  (100.0%)</text>
+<rect x="603.00" y="60.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
+<text x="606.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩55.4T  (31.5%)</text>
+<rect x="603.00" y="215.04" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="227.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
+<text x="606.00" y="240.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩120.7T  (68.5%)</text>
+<rect x="735.00" y="53.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
+<text x="738.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩37.4T  (21.2%)</text>
+<rect x="735.00" y="162.09" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="174.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
+<text x="738.00" y="187.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩18.1T  (10.3%)</text>
+<rect x="735.00" y="222.04" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="234.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
+<text x="738.00" y="247.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩120.7T  (68.5%)</text>
+<text x="873.00" y="115.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">流动负债 Current Liab</text>
+<text x="873.00" y="128.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩37.4T  (21.2%)</text>
+<text x="873.00" y="200.06" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">长期借款+其他 LT Liab</text>
+<text x="873.00" y="213.06" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩18.1T  (10.3%)</text>
+<text x="873.00" y="390.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">留存收益+实收资本 Equity</text>
+<text x="873.00" y="403.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩120.7T  (68.5%)</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: stockanalysis.com — SK Hynix FY2025 合并资产负债表 (源自 DART 사업보고서)</text>
+</svg>

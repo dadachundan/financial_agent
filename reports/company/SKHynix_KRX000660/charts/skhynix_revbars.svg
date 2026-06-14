@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">历史营业收入按分部 / Historical Revenue by Segment (₩ 万亿)</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">DRAM 含 HBM</text>
+<rect x="116.00" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="132.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">NAND 含 Solidigm</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">₩0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">₩21.0B</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">₩41.9B</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">₩62.9B</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">₩83.9B</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">₩104.9B</text>
+<rect x="96.74" y="338.75" width="73.85" height="73.25" fill="#2563eb"/>
+<rect x="96.74" y="310.40" width="73.85" height="28.35" fill="#15803d"/>
+<text x="133.67" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2020</text>
+<rect x="224.07" y="311.67" width="73.85" height="100.33" fill="#2563eb"/>
+<rect x="224.07" y="275.05" width="73.85" height="36.63" fill="#15803d"/>
+<text x="261.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2021</text>
+<rect x="351.41" y="308.49" width="73.85" height="103.51" fill="#2563eb"/>
+<rect x="351.41" y="269.95" width="73.85" height="38.54" fill="#15803d"/>
+<text x="388.33" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2022</text>
+<rect x="478.74" y="337.15" width="73.85" height="74.85" fill="#2563eb"/>
+<rect x="478.74" y="307.53" width="73.85" height="29.62" fill="#15803d"/>
+<text x="515.67" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2023</text>
+<rect x="606.07" y="254.03" width="73.85" height="157.97" fill="#2563eb"/>
+<rect x="606.07" y="201.16" width="73.85" height="52.87" fill="#15803d"/>
+<text x="643.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2024</text>
+<rect x="733.41" y="176.95" width="73.85" height="235.05" fill="#2563eb"/>
+<rect x="733.41" y="102.74" width="73.85" height="74.21" fill="#15803d"/>
+<text x="770.33" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2025</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: SK Hynix FY2020–FY2025 实绩公告; 分部拆分为分析师估算</text>
+</svg>

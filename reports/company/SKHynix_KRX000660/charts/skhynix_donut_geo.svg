@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 营业收入按地区 / Revenue by Geography (估算)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 212.41,347.42 L 243.34,303.15 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 212.41,347.42 A 132 132 0 0 1 156.74,225.22 L 210.44,230.94 A 78 78 0 0 0 243.34,303.15 Z" fill="#15803d"/>
+<path d="M 156.74,225.22 A 132 132 0 0 1 191.67,148.95 L 231.08,185.87 A 78 78 0 0 0 210.44,230.94 Z" fill="#d97706"/>
+<path d="M 191.67,148.95 A 132 132 0 0 1 245.68,114.17 L 262.99,165.32 A 78 78 0 0 0 231.08,185.87 Z" fill="#7c3aed"/>
+<path d="M 245.68,114.17 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 262.99,165.32 Z" fill="#dc2626"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">SK Hynix</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">₩97.1T</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="419.64" y1="280.62" x2="435.64" y2="280.62" stroke="#2563eb" stroke-width="1.4"/>
+<text x="439.64" y="278.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">北美 North America</text>
+<text x="439.64" y="292.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩58.0T  (59.7%)</text>
+<line x1="162.42" y1="296.42" x2="146.42" y2="296.42" stroke="#15803d" stroke-width="1.4"/>
+<text x="142.42" y="294.42" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">中国 China</text>
+<text x="142.42" y="308.42" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩16.5T  (17.0%)</text>
+<line x1="162.53" y1="181.74" x2="146.53" y2="181.74" stroke="#d97706" stroke-width="1.4"/>
+<text x="142.53" y="179.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">其他亚洲 Rest of Asia</text>
+<text x="142.53" y="193.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩10.0T  (10.3%)</text>
+<line x1="213.28" y1="123.18" x2="197.28" y2="123.18" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="193.28" y="121.18" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">韩国 Korea</text>
+<text x="193.28" y="135.18" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩7.6T  (7.8%)</text>
+<line x1="265.58" y1="103.03" x2="249.58" y2="103.03" stroke="#dc2626" stroke-width="1.4"/>
+<text x="245.58" y="101.03" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">欧洲及其他 Europe/Other</text>
+<text x="245.58" y="115.03" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩5.0T  (5.2%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 分析师估算; 基于 DART 사업보고서地区披露 + AI 需求集中于美国超大规模厂商的结构判断</text>
+</svg>
