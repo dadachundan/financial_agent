@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1138" width="1180" height="1138" role="img" aria-label="钱怎么流到三星、又流向谁 (Who pays Samsung → what they buy → where the money pools)" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1138" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">半导体资金流 · SAMSUNG MONEY FLOW · 2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱怎么流到三星、又流向谁 (Who pays Samsung → what they buy → where the money</text>
+<text x="42.00" y="138.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">pools)</text>
+<text x="42.00" y="180.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">AI 资本开支(NVIDIA / Google / 云厂商)与消费电子需求付钱给三星的各产品线;三星再把利润中相当一部分以 CapEx 形式付给上游设备与材料商——其中 ASML 的 EUV 是全行业单点瓶颈。</text>
+<ellipse cx="1031.00" cy="470.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="226.00" x2="369.50" y2="710.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="226.00" x2="810.50" y2="710.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="226.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱给三星 (demand)</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="226.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">三星的产品线</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="226.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">三星的上游(钱最终汇聚处)</text>
+<path d="M 256.00 279.50 C 369.50 279.50, 369.50 309.00, 483.00 309.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 294.00 C 369.50 294.00, 369.50 434.00, 483.00 434.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 383.00 C 369.50 383.00, 369.50 328.00, 483.00 328.00" fill="none" stroke="url(#mfgold)" stroke-width="14.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 477.00 C 369.50 477.00, 369.50 343.00, 483.00 343.00" fill="none" stroke="url(#mfgold)" stroke-width="16.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 574.00 C 369.50 574.00, 369.50 527.50, 483.00 527.50" fill="none" stroke="url(#mfgold)" stroke-width="14.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 564.00 C 369.50 564.00, 369.50 354.00, 483.00 354.00" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 667.50 C 369.50 667.50, 369.50 624.00, 483.00 624.00" fill="none" stroke="url(#mfgold)" stroke-width="16.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 316.00 C 810.50 316.00, 810.50 371.00, 924.00 371.00" fill="none" stroke="url(#mfgold)" stroke-width="18.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 428.00 C 810.50 428.00, 810.50 385.00, 924.00 385.00" fill="none" stroke="url(#mfgold)" stroke-width="10.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 332.00 C 810.50 332.00, 810.50 473.50, 924.00 473.50" fill="none" stroke="url(#mfgold)" stroke-width="14.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 436.50 C 810.50 436.50, 810.50 484.00, 924.00 484.00" fill="none" stroke="url(#mfgold)" stroke-width="7.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 343.00 C 810.50 343.00, 810.50 568.50, 924.00 568.50" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 657.00 C 369.50 657.00, 369.50 537.00, 483.00 537.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 442.50 C 810.50 442.50, 810.50 575.00, 924.00 575.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="288.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">HBM4/HBM3E</text>
+<text x="369.50" y="349.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">TPU HBM &gt;60%</text>
+<text x="369.50" y="404.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">DDR5 + eSSD</text>
+<text x="369.50" y="544.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">iPhone OLED</text>
+<text x="369.50" y="639.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">Galaxy/TV</text>
+<text x="810.50" y="337.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">CapEx ₩47.5tn</text>
+<rect x="42.00" y="236.00" width="214" height="92.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="236.00" width="3" height="92.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="269.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">NVIDIA</text>
+<text x="60.00" y="290.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">HBM3E/HBM4 + GDDR</text>
+<text x="60.00" y="307.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Vera Rubin 平台高端 tier</text>
+<rect x="42.00" y="344.00" width="214" height="78.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="344.00" width="3" height="78.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="377.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">GOOGLE/BROADCOM</text>
+<text x="60.00" y="398.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">TPU HBM3E &gt;60% 供应</text>
+<rect x="42.00" y="438.00" width="214" height="78.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="438.00" width="3" height="78.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="471.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">云厂商 CSP</text>
+<text x="60.00" y="492.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">MSFT/AWS/Meta</text>
+<text x="60.00" y="509.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">服务器 DDR5 + eSSD</text>
+<rect x="42.00" y="532.00" width="214" height="78.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="42.00" y="532.00" width="3" height="78.00" rx="2" fill="#e9b658"/>
+<text x="60.00" y="565.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">APPLE</text>
+<text x="60.00" y="586.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">iPhone OLED 1.25 亿片</text>
+<text x="60.00" y="603.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">NAND/DRAM</text>
+<rect x="42.00" y="626.00" width="214" height="78.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="42.00" y="626.00" width="3" height="78.00" rx="2" fill="#e9b658"/>
+<text x="60.00" y="659.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">消费者 / 运营商</text>
+<text x="60.00" y="680.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Galaxy 2.35 亿部</text>
+<text x="60.00" y="697.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">TV / 家电</text>
+<rect x="483.00" y="277.00" width="214" height="100.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="483.00" y="277.00" width="3" height="100.00" rx="2" fill="#a78bfa"/>
+<text x="501.00" y="310.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">DS Memory/HBM</text>
+<text x="501.00" y="331.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">DRAM #1 / NAND #1</text>
+<text x="501.00" y="348.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">集团 ~80% 营业利润</text>
+<rect x="483.00" y="393.00" width="214" height="82.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="483.00" y="393.00" width="3" height="82.00" rx="2" fill="#34d399"/>
+<text x="501.00" y="426.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">DS Foundry</text>
+<text x="501.00" y="447.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">2nm GAA / 良率 55–60%</text>
+<text x="501.00" y="464.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">市占 7.1%</text>
+<rect x="483.00" y="491.00" width="214" height="78.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="491.00" width="3" height="78.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="524.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Samsung Display</text>
+<text x="501.00" y="545.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">OLED #1 (41%)</text>
+<text x="501.00" y="562.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">iPhone 面板</text>
+<rect x="483.00" y="585.00" width="214" height="78.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="585.00" width="3" height="78.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="618.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">MX Mobile</text>
+<text x="501.00" y="639.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Galaxy S/Z</text>
+<text x="501.00" y="656.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">纵向消化集团存储/面板</text>
+<rect x="924.00" y="330.00" width="214" height="92.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="330.00" width="3" height="92.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="363.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">ASML</text>
+<text x="942.00" y="384.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">EUV / High-NA 光刻机</text>
+<text x="942.00" y="401.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">全行业单点瓶颈</text>
+<rect x="924.00" y="438.00" width="214" height="78.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="438.00" width="3" height="78.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="471.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">AMAT/LAM/TEL</text>
+<text x="942.00" y="492.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">沉积/刻蚀/清洗设备</text>
+<rect x="924.00" y="532.00" width="214" height="78.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="532.00" width="3" height="78.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="565.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">硅片/材料/EDA</text>
+<text x="942.00" y="586.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">SUMCO/信越 wafer</text>
+<text x="942.00" y="603.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Synopsys/Cadence PDK</text>
+<rect x="42.00" y="730.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="734.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="732.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="732.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="732.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="732.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="734.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="734.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="725.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="747.00" y="734.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="814.20" y="725.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="833.20" y="734.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="907.60" y="725.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="926.60" y="734.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="42.00" y="745.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="61.00" y="754.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="178.60" y="745.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="197.60" y="754.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="336.80" y="745.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="355.80" y="754.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="480.60" y="745.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="499.60" y="754.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="770.00" x2="1138" y2="770.00" stroke="#222a3a"/>
+<text x="42.00" y="786.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 跟着钱走</text>
+<rect x="42.00" y="806.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="42.00" y="806.00" width="3" height="132.00" rx="2" fill="#a78bfa"/>
+<text x="58.00" y="830.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">AI 需求 · 存储</text>
+<text x="58.00" y="848.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AI 资本开支是主引擎</text>
+<text x="58.00" y="872.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">NVIDIA</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#f4d58a" font-weight="700"> Google</tspan><tspan fill="#9aa3b8" font-weight="400"> (TPU</tspan><tspan fill="#9aa3b8" font-weight="400"> HBM</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;60%</tspan><tspan fill="#9aa3b8" font-weight="400"> )</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> 云厂商付钱买</tspan><tspan fill="#f4d58a" font-weight="700"> HBM4</tspan><tspan fill="#9aa3b8" font-weight="400"> 、服务器</tspan></text>
+<text x="58.00" y="888.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">DDR5</tspan><tspan fill="#9aa3b8" font-weight="400"> 、企业级</tspan><tspan fill="#9aa3b8" font-weight="400"> SSD;DS</tspan><tspan fill="#9aa3b8" font-weight="400"> Memory</tspan><tspan fill="#9aa3b8" font-weight="400"> 在</tspan><tspan fill="#f4d58a" font-weight="700"> Q1'26</tspan><tspan fill="#9aa3b8" font-weight="400"> 贡献集团约</tspan><tspan fill="#f4d58a" font-weight="700"> 80%</tspan><tspan fill="#9aa3b8" font-weight="400"> 营业利润,是三星与</tspan></text>
+<text x="58.00" y="904.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 周期的直接连接点。</tspan></text>
+<rect x="412.00" y="806.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="412.00" y="806.00" width="3" height="132.00" rx="2" fill="#7fa8f5"/>
+<text x="428.00" y="830.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">APPLE · 面板</text>
+<text x="428.00" y="848.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">苹果既是客户也是对手</text>
+<text x="428.00" y="872.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Apple</tspan><tspan fill="#9aa3b8" font-weight="400"> 通过</tspan><tspan fill="#f4d58a" font-weight="700"> Samsung</tspan><tspan fill="#f4d58a" font-weight="700"> Display</tspan><tspan fill="#9aa3b8" font-weight="400"> 买</tspan><tspan fill="#f4d58a" font-weight="700"> 1.25</tspan><tspan fill="#f4d58a" font-weight="700"> 亿片</tspan><tspan fill="#9aa3b8" font-weight="400"> iPhone</tspan><tspan fill="#9aa3b8" font-weight="400"> OLED(约占</tspan><tspan fill="#9aa3b8" font-weight="400"> SDC</tspan></text>
+<text x="428.00" y="888.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">营收</tspan><tspan fill="#f4d58a" font-weight="700"> 50%+</tspan><tspan fill="#9aa3b8" font-weight="400"> ),同时买</tspan><tspan fill="#9aa3b8" font-weight="400"> NAND/DRAM——是</tspan><tspan fill="#9aa3b8" font-weight="400"> SDC</tspan><tspan fill="#9aa3b8" font-weight="400"> 的客户集中度暴露点。</tspan></text>
+<rect x="782.00" y="806.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="782.00" y="806.00" width="3" height="132.00" rx="2" fill="#7fa8f5"/>
+<text x="798.00" y="830.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">纵向一体化</text>
+<text x="798.00" y="848.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">MX 是周期缓冲垫</text>
+<text x="798.00" y="872.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Galaxy</tspan><tspan fill="#9aa3b8" font-weight="400"> 一年卖</tspan><tspan fill="#f4d58a" font-weight="700"> 2.35</tspan><tspan fill="#f4d58a" font-weight="700"> 亿部</tspan><tspan fill="#9aa3b8" font-weight="400"> ,在存储下行年消化集团自家</tspan><tspan fill="#f4d58a" font-weight="700"> DRAM/NAND/OLED</tspan><tspan fill="#9aa3b8" font-weight="400"> ——这是</tspan></text>
+<text x="798.00" y="888.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">SK</tspan><tspan fill="#9aa3b8" font-weight="400"> 海力士不具备的内需平滑机制。</tspan></text>
+<rect x="42.00" y="952.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="952.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="976.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">上游瓶颈 · EUV</text>
+<text x="58.00" y="994.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">钱最终汇聚到 ASML</text>
+<text x="58.00" y="1018.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">三星</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> CapEx</tspan><tspan fill="#f4d58a" font-weight="700"> ₩47.5tn</tspan><tspan fill="#9aa3b8" font-weight="400"> 中,先进制程严重依赖</tspan><tspan fill="#f4d58a" font-weight="700"> ASML</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#9aa3b8" font-weight="400"> EUV</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan></text>
+<text x="58.00" y="1034.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">High-NA</tspan><tspan fill="#9aa3b8" font-weight="400"> 光刻机——这是三星</tspan><tspan fill="#9aa3b8" font-weight="400"> 2nm</tspan><tspan fill="#9aa3b8" font-weight="400"> GAA</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#9aa3b8" font-weight="400"> HBM</tspan><tspan fill="#9aa3b8" font-weight="400"> 路线图共同的</tspan><tspan fill="#f4d58a" font-weight="700"> 单点瓶颈</tspan><tspan fill="#9aa3b8" font-weight="400"> ,与台积电、SK</tspan></text>
+<text x="58.00" y="1050.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">海力士争抢同一交期。</tspan></text>
+<rect x="412.00" y="952.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="412.00" y="952.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="428.00" y="976.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">代工 · 缺客户</text>
+<text x="428.00" y="994.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Foundry 的钱主要来自内部</text>
+<text x="428.00" y="1018.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">DS</tspan><tspan fill="#9aa3b8" font-weight="400"> Foundry</tspan><tspan fill="#9aa3b8" font-weight="400"> 市占仅</tspan><tspan fill="#f4d58a" font-weight="700"> 7.1%</tspan><tspan fill="#9aa3b8" font-weight="400"> ,先进节点几乎全靠自家</tspan><tspan fill="#f4d58a" font-weight="700"> Exynos</tspan><tspan fill="#f4d58a" font-weight="700"> 2600</tspan><tspan fill="#9aa3b8" font-weight="400"> 验证;没有外部</tspan></text>
+<text x="428.00" y="1034.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">N2/N3</tspan><tspan fill="#9aa3b8" font-weight="400"> 大客户承诺,CapEx</tspan><tspan fill="#9aa3b8" font-weight="400"> 回报存疑。</tspan></text>
+<rect x="782.00" y="952.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="782.00" y="952.00" width="3" height="132.00" rx="2" fill="#d9a05b"/>
+<text x="798.00" y="976.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">设备 · 材料</text>
+<text x="798.00" y="994.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">设备与材料商随扩产受益</text>
+<text x="798.00" y="1018.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">存储/代工激进扩产把订单送给</tspan><tspan fill="#f4d58a" font-weight="700"> AMAT/LAM/TEL</tspan><tspan fill="#9aa3b8" font-weight="400"> 设备商与</tspan><tspan fill="#f4d58a" font-weight="700"> 硅片/EDA</tspan></text>
+<text x="798.00" y="1034.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">供应商,其增长独立于比特增速。</tspan></text>
+<text x="590.00" y="1120.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Samsung FY2025 财报 (CapEx ₩47.5tn) + 客户/供应链:Samsung 2024 사업보고서、TrendForce、KED Global、OLED-Info(均见正文段落内引用)</text>
+</svg>

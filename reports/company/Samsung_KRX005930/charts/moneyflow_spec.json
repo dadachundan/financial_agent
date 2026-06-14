@@ -1,0 +1,55 @@
+{
+  "eyebrow": "半导体资金流 · Samsung money flow · 2026",
+  "title": "钱怎么流到三星、又流向谁 (Who pays Samsung → what they buy → where the money pools)",
+  "thesis": "AI 资本开支(NVIDIA / Google / 云厂商)与消费电子需求付钱给三星的各产品线;三星再把利润中相当一部分以 CapEx 形式付给上游设备与材料商——其中 ASML 的 EUV 是全行业单点瓶颈。",
+  "stages": ["谁付钱给三星 (demand)", "三星的产品线", "三星的上游(钱最终汇聚处)"],
+  "nodes": [
+    {"id": "nv",   "stage": 0, "label": "NVIDIA",        "kind": "buyer",  "sub": ["HBM3E/HBM4 + GDDR", "Vera Rubin 平台高端 tier"], "h": 92},
+    {"id": "goog", "stage": 0, "label": "GOOGLE/BROADCOM","kind": "buyer2", "sub": ["TPU HBM3E >60% 供应"], "h": 78},
+    {"id": "csp",  "stage": 0, "label": "云厂商 CSP",     "kind": "buyer2", "sub": ["MSFT/AWS/Meta", "服务器 DDR5 + eSSD"], "h": 78},
+    {"id": "aapl", "stage": 0, "label": "APPLE",          "kind": "neutral","sub": ["iPhone OLED 1.25 亿片", "NAND/DRAM"], "h": 78},
+    {"id": "cons", "stage": 0, "label": "消费者 / 运营商", "kind": "neutral","sub": ["Galaxy 2.35 亿部", "TV / 家电"], "h": 78},
+
+    {"id": "mem",  "stage": 1, "label": "DS Memory/HBM",  "kind": "memory", "sub": ["DRAM #1 / NAND #1", "集团 ~80% 营业利润"], "h": 100},
+    {"id": "fnd",  "stage": 1, "label": "DS Foundry",     "kind": "foundry","sub": ["2nm GAA / 良率 55–60%", "市占 7.1%"], "h": 82},
+    {"id": "sdc",  "stage": 1, "label": "Samsung Display","kind": "custom", "sub": ["OLED #1 (41%)", "iPhone 面板"], "h": 78},
+    {"id": "mx",   "stage": 1, "label": "MX Mobile",      "kind": "rf",     "sub": ["Galaxy S/Z", "纵向消化集团存储/面板"], "h": 78},
+
+    {"id": "asml", "stage": 2, "label": "ASML",           "kind": "silicon","sub": ["EUV / High-NA 光刻机", "全行业单点瓶颈"], "h": 92},
+    {"id": "equip","stage": 2, "label": "AMAT/LAM/TEL",   "kind": "power",  "sub": ["沉积/刻蚀/清洗设备"], "h": 78},
+    {"id": "mat",  "stage": 2, "label": "硅片/材料/EDA",   "kind": "neutral","sub": ["SUMCO/信越 wafer", "Synopsys/Cadence PDK"], "h": 78}
+  ],
+  "flows": [
+    {"from": "nv",   "to": "mem", "weight": 24, "style": "direct",   "label": "HBM4/HBM3E"},
+    {"from": "nv",   "to": "fnd", "weight": 5,  "style": "direct"},
+    {"from": "goog", "to": "mem", "weight": 14, "style": "direct",   "label": "TPU HBM >60%"},
+    {"from": "csp",  "to": "mem", "weight": 16, "style": "direct",   "label": "DDR5 + eSSD"},
+    {"from": "aapl", "to": "sdc", "weight": 14, "style": "direct",   "label": "iPhone OLED"},
+    {"from": "aapl", "to": "mem", "weight": 6,  "style": "direct"},
+    {"from": "cons", "to": "mx",  "weight": 16, "style": "direct",   "label": "Galaxy/TV"},
+    {"from": "cons", "to": "sdc", "weight": 4,  "style": "embedded"},
+
+    {"from": "mem",  "to": "asml","weight": 18, "style": "direct",   "label": "CapEx ₩47.5tn"},
+    {"from": "fnd",  "to": "asml","weight": 10, "style": "direct"},
+    {"from": "mem",  "to": "equip","weight": 14,"style": "direct"},
+    {"from": "fnd",  "to": "equip","weight": 7, "style": "direct"},
+    {"from": "mem",  "to": "mat", "weight": 8,  "style": "direct"},
+    {"from": "fnd",  "to": "mat", "weight": 4,  "style": "embedded"}
+  ],
+  "cards_title": "Follow the money — 跟着钱走",
+  "cards": [
+    {"kind": "memory", "tag": "AI 需求 · 存储", "title": "AI 资本开支是主引擎",
+     "body": "*NVIDIA* / *Google* (TPU HBM *>60%*) / 云厂商付钱买 *HBM4*、服务器 *DDR5*、企业级 SSD;DS Memory 在 *Q1'26* 贡献集团约 *80%* 营业利润,是三星与 AI 周期的直接连接点。"},
+    {"kind": "custom", "tag": "Apple · 面板", "title": "苹果既是客户也是对手",
+     "body": "*Apple* 通过 *Samsung Display* 买 *1.25 亿片* iPhone OLED(约占 SDC 营收 *50%+*),同时买 NAND/DRAM——是 SDC 的客户集中度暴露点。"},
+    {"kind": "rf", "tag": "纵向一体化", "title": "MX 是周期缓冲垫",
+     "body": "*Galaxy* 一年卖 *2.35 亿部*,在存储下行年消化集团自家 *DRAM/NAND/OLED*——这是 SK 海力士不具备的内需平滑机制。"},
+    {"kind": "silicon", "tag": "上游瓶颈 · EUV", "title": "钱最终汇聚到 ASML",
+     "body": "三星 FY2025 CapEx *₩47.5tn* 中,先进制程严重依赖 *ASML* 的 EUV / High-NA 光刻机——这是三星 2nm GAA 与 HBM 路线图共同的*单点瓶颈*,与台积电、SK 海力士争抢同一交期。"},
+    {"kind": "foundry", "tag": "代工 · 缺客户", "title": "Foundry 的钱主要来自内部",
+     "body": "DS Foundry 市占仅 *7.1%*,先进节点几乎全靠自家 *Exynos 2600* 验证;没有外部 N2/N3 大客户承诺,CapEx 回报存疑。"},
+    {"kind": "power", "tag": "设备 · 材料", "title": "设备与材料商随扩产受益",
+     "body": "存储/代工激进扩产把订单送给 *AMAT/LAM/TEL* 设备商与 *硅片/EDA* 供应商,其增长独立于比特增速。"}
+  ],
+  "source": "Samsung FY2025 财报 (CapEx ₩47.5tn) + 客户/供应链:Samsung 2024 사업보고서、TrendForce、KED Global、OLED-Info(均见正文段落内引用)"
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">三星电子 FY2025 现金流量表 (Cash-Flow Sankey) — KRW 万亿</text>
+<path d="M 534.00,78.00 C 691.00,78.00 691.00,64.00 848.00,64.00 L 848.00,177.74 C 691.00,177.74 691.00,191.74 534.00,191.74 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,78.00 C 361.00,78.00 361.00,78.00 518.00,78.00 L 518.00,540.00 C 361.00,540.00 361.00,540.00 204.00,540.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,191.74 C 691.00,191.74 691.00,191.74 848.00,191.74 L 848.00,264.86 C 691.00,264.86 691.00,264.86 534.00,264.86 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,264.86 C 691.00,264.86 691.00,278.86 848.00,278.86 L 848.00,554.00 C 691.00,554.00 691.00,540.00 534.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="113.74" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="191.74" width="16" height="73.12" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="278.86" width="16" height="275.14" rx="1.5" fill="#15803d"/>
+<rect x="207.00" y="60.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn85  (100.0%)</text>
+<rect x="537.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn85  (100.0%)</text>
+<rect x="867.00" y="46.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn21  (24.6%)</text>
+<rect x="867.00" y="173.74" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="185.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="870.00" y="198.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn14  (15.8%)</text>
+<text x="873.00" y="413.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="426.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn51  (59.6%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">CFO ₩85.3tn → CapEx ₩47.5tn + FCF ₩37.8tn;FY2025 分红 ₩9.9tn + 回购 ₩8.2tn。  ·  Free Cash Flow = CFO − CapEx = ₩tn38</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Samsung FY2025 合并现金流量表 (stockanalysis.com / Samsung Q4'25 IR)</text>
+</svg>

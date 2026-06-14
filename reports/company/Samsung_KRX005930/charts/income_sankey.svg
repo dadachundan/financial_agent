@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">三星电子 FY2025 利润表 (Income Statement Sankey) — KRW 万亿</text>
+<path d="M 204.00,66.51 C 258.00,66.51 258.00,85.00 312.00,85.00 L 312.00,298.91 C 258.00,298.91 258.00,280.41 204.00,280.41 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,191.10 560.00,191.10 L 560.00,244.42 C 506.00,244.42 506.00,131.32 452.00,131.32 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,131.32 C 506.00,131.32 506.00,258.42 560.00,258.42 L 560.00,365.68 C 506.00,365.68 506.00,238.58 452.00,238.58 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,238.71 C 382.00,238.71 382.00,245.71 328.00,245.71 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,245.71 C 382.00,245.71 382.00,252.71 436.00,252.71 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,191.10 C 630.00,191.10 630.00,191.10 684.00,191.10 L 684.00,244.42 C 630.00,244.42 630.00,244.42 576.00,244.42 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,191.10 C 754.00,191.10 754.00,252.28 808.00,252.28 L 808.00,306.46 C 754.00,306.46 754.00,245.28 700.00,245.28 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,245.28 C 754.00,245.28 754.00,320.46 808.00,320.46 L 808.00,325.72 C 754.00,325.72 754.00,250.54 700.00,250.54 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,258.42 C 630.00,258.42 630.00,265.64 684.00,265.64 L 684.00,326.79 C 630.00,326.79 630.00,319.58 576.00,319.58 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,319.58 C 630.00,319.58 630.00,340.79 684.00,340.79 L 684.00,386.90 C 630.00,386.90 630.00,365.68 576.00,365.68 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,294.41 C 258.00,294.41 258.00,298.91 312.00,298.91 L 312.00,434.78 C 258.00,434.78 258.00,430.29 204.00,430.29 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,379.68 C 630.00,379.68 630.00,244.42 684.00,244.42 L 684.00,251.64 C 630.00,251.64 630.00,386.90 576.00,386.90 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,444.29 C 258.00,444.29 258.00,434.78 312.00,434.78 L 312.00,470.50 C 258.00,470.50 258.00,480.00 204.00,480.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,494.00 C 258.00,494.00 258.00,470.50 312.00,470.50 L 312.00,487.99 C 258.00,487.99 258.00,511.49 204.00,511.49 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="66.51" width="16" height="213.91" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="294.41" width="16" height="135.88" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="444.29" width="16" height="35.71" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="494.00" width="16" height="17.49" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="160.71" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="252.71" width="16" height="247.29" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="191.10" width="16" height="53.32" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="258.42" width="16" height="107.26" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="379.68" width="16" height="7.22" rx="1.5" fill="#2563eb"/>
+<rect x="684.00" y="191.10" width="16" height="60.54" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="265.64" width="16" height="61.15" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="340.79" width="16" height="46.11" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="252.28" width="16" height="54.18" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="320.46" width="16" height="5.26" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="173.46" x2="182.00" y2="157.71" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="160.71" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">DX 设备体验</text>
+<text x="179.00" y="173.71" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn175  (52.4%)</text>
+<line x1="188.00" y1="362.35" x2="182.00" y2="346.60" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="349.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">DS 半导体</text>
+<text x="179.00" y="362.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn111  (33.3%)</text>
+<line x1="188.00" y1="462.15" x2="182.00" y2="446.40" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="449.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SDC 显示</text>
+<text x="179.00" y="462.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn29  (8.8%)</text>
+<line x1="188.00" y1="502.75" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Harman</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn14  (4.3%)</text>
+<rect x="331.00" y="67.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn334  (100.0%)</text>
+<rect x="455.00" y="60.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn131  (39.4%)</text>
+<rect x="455.00" y="234.71" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="246.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="259.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn202  (60.6%)</text>
+<rect x="579.00" y="173.10" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="185.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="198.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn44  (13.1%)</text>
+<rect x="579.00" y="240.42" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="252.42" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="265.42" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn88  (26.3%)</text>
+<text x="551.00" y="380.29" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="551.00" y="393.29" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn6  (1.8%)</text>
+<rect x="703.00" y="173.10" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="185.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="198.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn50  (14.8%)</text>
+<rect x="703.00" y="247.64" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="259.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="272.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn50  (15.0%)</text>
+<rect x="703.00" y="322.79" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="334.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="347.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn38  (11.3%)</text>
+<text x="833.00" y="276.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="289.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn44  (13.3%)</text>
+<text x="833.00" y="320.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="333.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">₩tn4  (1.3%)</text>
+<text x="500.00" y="530.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">FY2025 合并: 营收 ₩333.6tn → 营业利润 ₩43.6tn → 净利 ₩44.3tn。左侧分部为 FY2024 披露口径(抵销前)。</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Samsung FY2025 合并利润表 (stockanalysis.com / Samsung Q4'25 IR); 分部为 FY2024 사업보고서口径</text>
+</svg>
