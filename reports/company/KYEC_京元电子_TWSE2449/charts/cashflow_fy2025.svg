@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">京元电子 FY2025 现金流 Sankey（NT$mn）</text>
+<path d="M 204.00,64.00 C 361.00,64.00 361.00,85.00 518.00,85.00 L 518.00,262.09 C 361.00,262.09 361.00,241.09 204.00,241.09 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,85.00 C 691.00,85.00 691.00,85.00 848.00,85.00 L 848.00,533.00 C 691.00,533.00 691.00,533.00 534.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,255.09 C 361.00,255.09 361.00,262.09 518.00,262.09 L 518.00,359.13 C 361.00,359.13 361.00,352.13 204.00,352.13 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,366.13 C 361.00,366.13 361.00,359.13 518.00,359.13 L 518.00,501.37 C 361.00,501.37 361.00,508.37 204.00,508.37 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,522.37 C 361.00,522.37 361.00,501.37 518.00,501.37 L 518.00,533.00 C 361.00,533.00 361.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="177.09" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="255.09" width="16" height="97.04" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="366.13" width="16" height="142.24" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="522.37" width="16" height="31.63" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="85.00" width="16" height="448.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="85.00" width="16" height="448.00" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="149.54" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="162.54" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$24.0B  (39.5%)</text>
+<rect x="207.00" y="237.09" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="249.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="262.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$13.2B  (21.7%)</text>
+<rect x="207.00" y="348.13" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="360.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="210.00" y="373.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$19.3B  (31.7%)</text>
+<rect x="207.00" y="504.37" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="516.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="210.00" y="529.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$4.3B  (7.1%)</text>
+<rect x="537.00" y="67.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$60.7B  (100.0%)</text>
+<text x="873.00" y="306.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="319.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$60.7B  (100.0%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">CFO 13.2bn &lt; capex 32.4bn → FCF −19.2bn；缺口靠举债 9.9bn 与苏州处分收回 19.3bn 填补（CFI 净额 −13.1bn）  ·  Free Cash Flow = CFO − CapEx = -NT$19.2B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: KYEC FY2025 cash-flow per Goldman Sachs model (2026-05-08)</text>
+</svg>

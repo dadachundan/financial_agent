@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">京元电子营收按测试流程拆分（3Q25 法说会口径）</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 222.96,354.06 L 249.57,307.07 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 222.96,354.06 A 132 132 0 0 1 201.33,139.64 L 236.79,180.37 A 78 78 0 0 0 249.57,307.07 Z" fill="#15803d"/>
+<path d="M 201.33,139.64 A 132 132 0 0 1 268.17,108.70 L 276.28,162.09 A 78 78 0 0 0 236.79,180.37 Z" fill="#d97706"/>
+<path d="M 268.17,108.70 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 276.28,162.09 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">3Q25</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">%100</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="421.45" y1="274.36" x2="437.45" y2="274.36" stroke="#2563eb" stroke-width="1.4"/>
+<text x="441.45" y="272.36" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">成品测试 FT</text>
+<text x="441.45" y="286.36" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">%58  (58.2%)</text>
+<line x1="150.70" y1="253.05" x2="134.70" y2="253.05" stroke="#15803d" stroke-width="1.4"/>
+<text x="130.70" y="251.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">晶圆针测 CP</text>
+<text x="130.70" y="265.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">%30  (30.4%)</text>
+<line x1="230.03" y1="113.97" x2="214.03" y2="113.97" stroke="#d97706" stroke-width="1.4"/>
+<text x="210.03" y="111.97" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">预烧 Burn-in</text>
+<text x="210.03" y="125.97" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">%9  (9.0%)</text>
+<line x1="277.60" y1="101.59" x2="261.60" y2="101.59" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="257.60" y="99.59" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">封装/其他</text>
+<text x="257.60" y="113.59" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">%2  (2.4%)</text>
+<text x="360.00" y="430.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">京元已决定退出占比约 2% 的封装、聚焦纯测试</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 3Q25 法说会数据，经富果备忘录 (2025-12-03) 二手整理</text>
+</svg>
