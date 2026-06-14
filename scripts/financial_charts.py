@@ -457,68 +457,83 @@ def build_balance(a):
 
 
 def build_cashflow(a):
+    """Flow-CONSERVING cash-flow Sankey. Every node's value equals the sum of its
+    inbound ribbons (and, for hubs, its outbound ribbons too) — so nothing overflows
+    the node rectangle. Structure:
+        operating(+) items → Operating Inflow → working-capital uses + CFO
+        CFO + Beginning Cash + non-operating inflows → Cash Available
+        Cash Available → investing/financing uses + Ending Cash
+    The cash identity holds by construction: Begin + CFO + ΣInflows = ΣUses + End.
+    CapEx is just one investing use — pass it inside --investing as a negative item;
+    --capex is used ONLY to print the Free-Cash-Flow figure in the footer note, never
+    as a flow node (that double-counted capex and broke the balance in the old model)."""
     u = _unit_mult(a.unit)
-    op = _parse_pairs(a.operating, n_min=2, n_max=2) if a.operating else []
+    op  = _parse_pairs(a.operating, n_min=2, n_max=2) if a.operating else []
     inv = _parse_pairs(a.investing, n_min=2, n_max=2) if a.investing else []
     fin = _parse_pairs(a.financing, n_min=2, n_max=2) if a.financing else []
-    capex = (a.capex or 0) * u
-    begin_cash = (a.begin_cash or 0) * u
+    begin = (a.begin_cash or 0) * u
     fx = (a.fx or 0) * u
 
     cfo = sum(v for _, v, _ in op) * u
     cfi = sum(v for _, v, _ in inv) * u
     cff = sum(v for _, v, _ in fin) * u
-    net_change = cfo + cfi + cff + fx
-    end_cash = begin_cash + net_change
-    fcf = cfo - abs(capex)
-    ref = abs(cfo) if cfo else max(abs(net_change), 1)
+    net = cfo + cfi + cff + fx
+    end = begin + net
+    ref = abs(cfo) if cfo else max(abs(net), 1.0)
 
     cols = [[] for _ in range(5)]
     flows = []
 
-    def add_group(items, prefix, in_node, out_node, in_label, out_label, dst, dst_kind_in, dst_kind_out):
-        pos = sum(v for _, v, _ in items if v > 0) * u
-        neg = sum(-v for _, v, _ in items if v < 0) * u
-        for i, (lbl, v, _) in enumerate(items):
-            nid = f"{prefix}{i}"
-            kind = "in" if v > 0 else "cost"
-            cols[0].append(Node(nid, lbl, abs(v) * u, kind, 0))
-            flows.append((nid, in_node if v > 0 else out_node, abs(v) * u, kind))
-        if pos > 0:
-            cols[1].append(Node(in_node, in_label, pos, "in", 1, side="top"))
-            flows.append((in_node, dst, pos, dst_kind_in))
-        if neg > 0:
-            cols[1].append(Node(out_node, out_label, neg, "cost", 1, side="top"))
-            flows.append((out_node, dst, neg, dst_kind_out))
+    # ── Stage A — operating(+) items → Operating Inflow → working-capital uses + CFO
+    op_pos = [(lbl, v * u) for lbl, v, _ in op if v > 0]
+    op_neg = [(lbl, -v * u) for lbl, v, _ in op if v < 0]
+    opin = sum(v for _, v in op_pos)
+    for i, (lbl, v) in enumerate(op_pos):
+        cols[0].append(Node(f"op{i}", lbl, v, "in", 0))
+        flows.append((f"op{i}", "opin", v, "in"))
+    if op_pos:
+        cols[1].append(Node("opin", "Operating Inflow", opin, "in", 1, side="top"))
+        for j, (lbl, v) in enumerate(op_neg):     # working-capital / non-cash uses
+            cols[2].append(Node(f"opu{j}", lbl, v, "cost", 2, side="top"))
+            flows.append(("opin", f"opu{j}", v, "cost"))
+        cols[2].append(Node("cfo", "Cash Flow from Operations", abs(cfo), "hub", 2, side="top"))
+        flows.append(("opin", "cfo", abs(cfo), "in"))
+    else:
+        cols[2].append(Node("cfo", "Cash Flow from Operations", abs(cfo), "hub", 2, side="top"))
 
-    # operating
-    add_group(op, "op", "op_in", "op_out", "Operating Inflow", "Operating Outflow",
-              "cfo", "in", "cost")
-    cols[2].append(Node("cfo", "Cash Flow from Operations", abs(cfo), "hub", 2, side="top"))
-    # CFO → free cash flow + capex
-    if capex:
-        cols[3].append(Node("capex", "CapEx", abs(capex), "cost", 3, side="top"))
-        flows.append(("cfo", "capex", abs(capex), "cost"))
-    cols[3].append(Node("fcf", "Free Cash Flow", abs(fcf), "profit", 3, side="top"))
-    flows.append(("cfo", "fcf", abs(fcf), "profit"))
-    # investing
-    if inv:
-        add_group(inv, "inv", "inv_in", "inv_out", "Investing Inflow", "Investing Outflow",
-                  "cfi", "in", "cost")
-        cols[2].append(Node("cfi", "Cash Flow from Investing", abs(cfi),
-                            "profit" if cfi >= 0 else "cost", 2, side="top"))
-    # financing
-    if fin:
-        add_group(fin, "fin", "fin_in", "fin_out", "Financing Inflow", "Financing Outflow",
-                  "cff", "in", "cost")
-        cols[2].append(Node("cff", "Cash Flow from Financing", abs(cff),
-                            "profit" if cff >= 0 else "cost", 2, side="top"))
-    # ending-cash reconciliation column
-    if begin_cash:
-        cols[3].append(Node("begin", "Beginning Cash", begin_cash, "in", 3, side="top"))
-        cols[4].append(Node("end", "Ending Cash", abs(end_cash), "hub", 4, side="right"))
-        flows.append(("begin", "end", begin_cash, "in"))
-        flows.append(("fcf", "end", abs(fcf), "profit"))
+    # ── Stage B — CFO + Beginning Cash + non-operating inflows → Cash Available
+    avail = abs(cfo)
+    flows.append(("cfo", "avail", abs(cfo), "in"))
+    if begin > 0:
+        cols[2].append(Node("begin", "Beginning Cash", begin, "in", 2, side="top"))
+        flows.append(("begin", "avail", begin, "in")); avail += begin
+    inv_in  = [(lbl, v * u) for lbl, v, _ in inv if v > 0]
+    inv_use = [(lbl, -v * u) for lbl, v, _ in inv if v < 0]
+    fin_in  = [(lbl, v * u) for lbl, v, _ in fin if v > 0]
+    fin_use = [(lbl, -v * u) for lbl, v, _ in fin if v < 0]
+    for i, (lbl, v) in enumerate(inv_in):
+        cols[2].append(Node(f"ivin{i}", lbl, v, "in", 2, side="top"))
+        flows.append((f"ivin{i}", "avail", v, "in")); avail += v
+    for i, (lbl, v) in enumerate(fin_in):
+        cols[2].append(Node(f"fnin{i}", lbl, v, "in", 2, side="top"))
+        flows.append((f"fnin{i}", "avail", v, "in")); avail += v
+    if fx > 0:
+        cols[2].append(Node("fxin", "FX effect", fx, "in", 2, side="top"))
+        flows.append(("fxin", "avail", fx, "in")); avail += fx
+    cols[3].append(Node("avail", "Cash Available", avail, "hub", 3, side="top"))
+
+    # ── Stage C — Cash Available → investing/financing uses + Ending Cash
+    for i, (lbl, v) in enumerate(inv_use):
+        cols[4].append(Node(f"ivu{i}", lbl, v, "cost", 4, side="top"))
+        flows.append(("avail", f"ivu{i}", v, "cost"))
+    for i, (lbl, v) in enumerate(fin_use):
+        cols[4].append(Node(f"fnu{i}", lbl, v, "cost", 4, side="top"))
+        flows.append(("avail", f"fnu{i}", v, "cost"))
+    if fx < 0:
+        cols[4].append(Node("fxu", "FX effect", -fx, "cost", 4, side="top"))
+        flows.append(("avail", "fxu", -fx, "cost"))
+    cols[4].append(Node("end", "Ending Cash", abs(end), "hub", 4, side="right"))
+    flows.append(("avail", "end", abs(end), "profit"))
 
     cols = [c for c in cols if c]
     return cols, flows, ref
@@ -845,10 +860,18 @@ def main(argv=None):
                                 note=a.note, aria="balance sheet Sankey")
         elif a.cmd == "cashflow":
             cols, flows, ref = build_cashflow(a)
+            cf_note = a.note
+            if a.capex:
+                um = _unit_mult(a.unit)
+                cfo_v = (sum(v for _, v, _ in _parse_pairs(a.operating, n_min=2, n_max=2))
+                         * um) if a.operating else 0.0
+                fcf_txt = (f"Free Cash Flow = CFO − CapEx = "
+                           f"{fmt_money(cfo_v - abs(a.capex) * um, a.currency)}")
+                cf_note = f"{cf_note}  ·  {fcf_txt}" if cf_note else fcf_txt
             svg = render_sankey(cols, flows, ref, a.title or "Cash Flow Breakdown",
                                 a.source, currency=a.currency,
                                 width=a.width or 1040, height=a.height or 600,
-                                note=a.note, aria="cash flow Sankey")
+                                note=cf_note, aria="cash flow Sankey")
         elif a.cmd == "donut":
             slices = [(lbl, v) for lbl, v, _ in _parse_pairs(a.slice, n_min=2, n_max=2)]
             slices = [(lbl, v * _unit_mult(a.unit)) for lbl, v in slices]
