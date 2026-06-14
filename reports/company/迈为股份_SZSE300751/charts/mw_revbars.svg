@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">迈为股份 营收历史（分行业，FY2021–FY2025）</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">太阳能光伏 Solar PV</text>
+<rect x="142.40" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="158.40" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">半导体及显示 Semi&amp;Display</text>
+<rect x="297.80" y="44" width="11" height="11" rx="2" fill="#d97706"/>
+<text x="313.80" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">其他 Other</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">¥0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">¥2.1B</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">¥4.2B</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">¥6.4B</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">¥8.5B</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">¥10.6B</text>
+<rect x="102.09" y="315.35" width="88.62" height="96.65" fill="#2563eb"/>
+<rect x="102.09" y="315.20" width="88.62" height="0.16" fill="#15803d"/>
+<rect x="102.09" y="314.98" width="88.62" height="0.22" fill="#d97706"/>
+<text x="146.40" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2021</text>
+<rect x="254.89" y="282.13" width="88.62" height="129.87" fill="#2563eb"/>
+<rect x="254.89" y="281.75" width="88.62" height="0.38" fill="#15803d"/>
+<rect x="254.89" y="281.50" width="88.62" height="0.25" fill="#d97706"/>
+<text x="299.20" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2022</text>
+<rect x="407.69" y="159.37" width="88.62" height="252.63" fill="#2563eb"/>
+<rect x="407.69" y="158.11" width="88.62" height="1.26" fill="#15803d"/>
+<rect x="407.69" y="157.48" width="88.62" height="0.63" fill="#d97706"/>
+<text x="452.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2023</text>
+<rect x="560.49" y="105.82" width="88.62" height="306.18" fill="#2563eb"/>
+<rect x="560.49" y="103.72" width="88.62" height="2.11" fill="#15803d"/>
+<rect x="560.49" y="102.74" width="88.62" height="0.98" fill="#d97706"/>
+<text x="604.80" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2024</text>
+<rect x="713.29" y="177.62" width="88.62" height="234.38" fill="#2563eb"/>
+<rect x="713.29" y="156.79" width="88.62" height="20.83" fill="#15803d"/>
+<rect x="713.29" y="155.53" width="88.62" height="1.26" fill="#d97706"/>
+<text x="757.60" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2025</text>
+<text x="430.00" y="440.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">2022 营收采用 2024 年报追溯口径；2021–2023 半导体&amp;显示为微量估算</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 迈为股份 2025 年年度报告 (cninfo, 2026-04-27) 第28页 + 2021–2024 年度报告 (cninfo)</text>
+</svg>

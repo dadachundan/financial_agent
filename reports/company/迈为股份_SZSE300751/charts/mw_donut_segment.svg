@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">迈为股份 FY2025 营收构成（分行业）</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 220.01,126.06 L 247.83,172.34 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 220.01,126.06 A 132 132 0 0 1 283.93,107.26 L 285.60,161.24 A 78 78 0 0 0 247.83,172.34 Z" fill="#15803d"/>
+<path d="M 283.93,107.26 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 285.60,161.24 Z" fill="#d97706"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">光伏91%</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">¥8.2B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="324.88" y1="372.18" x2="340.88" y2="372.18" stroke="#2563eb" stroke-width="1.4"/>
+<text x="344.88" y="370.18" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">太阳能光伏 Solar PV</text>
+<text x="344.88" y="384.18" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥7.5B  (91.4%)</text>
+<line x1="249.07" y1="106.80" x2="233.07" y2="106.80" stroke="#15803d" stroke-width="1.4"/>
+<text x="229.07" y="104.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">半导体及显示 Semi&amp;Display</text>
+<text x="229.07" y="118.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥662.0M  (8.1%)</text>
+<line x1="285.87" y1="101.22" x2="269.87" y2="101.22" stroke="#d97706" stroke-width="1.4"/>
+<text x="265.87" y="99.22" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">其他 Other</text>
+<text x="265.87" y="113.22" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥40.0M  (0.5%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 迈为股份 2025 年年度报告 (cninfo, 2026-04-27), 第28页 营业收入构成</text>
+</svg>
